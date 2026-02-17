@@ -116,7 +116,7 @@ export default function MuntalkMain() {
 // 스타일 생략 (이전과 동일)
 const styles = {
   bg: { height: '100dvh', background: 'radial-gradient(circle at top, #F8F9FA 0%, #E9ECEF 100%)', display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: '-apple-system, sans-serif' },
-  card: { width: '90%', maxWidth: '400px', padding: '50px 40px', backgroundColor: '#FFFFFF', borderRadius: '32px', textAlign: 'center', boxShadow: '0 20px 50px rgba(0,0,0,0.01)', border: '1px solid #FFF' },
+  card: { width: '90%', maxWidth: '400px', padding: '50px 40px', backgroundColor: '#FFFFFF', borderRadius: '32px', textAlign: 'center' as const, boxShadow: '0 20px 50px rgba(0,0,0,0.01)', border: '1px solid #FFF' },
   badge: { display: 'inline-block', padding: '4px 12px', borderRadius: '20px', backgroundColor: '#FFF5F5', color: '#FF5252', fontSize: '11px', fontWeight: '800', marginBottom: '15px' },
   title: { color: '#000', fontSize: '32px', fontWeight: '900', margin: '0 0 10px 0' },
   subtitle: { color: '#6C757D', fontSize: '15px', lineHeight: '1.6', marginBottom: '30px' },
