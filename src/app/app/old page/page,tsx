@@ -1,0 +1,286 @@
+"use client";
+
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+// --- 1. 애니메이션 및 데이터 설정 ---
+const fadeInUp = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-100px" },
+  transition: { duration: 0.6, ease: "easeOut" }
+};
+
+const CHAT_MESSAGES = [
+  { role: "ai", text: "Bonjour! Ready for our 5-minute French practice?" },
+  { role: "user", text: "Oui! I want to practice ordering coffee." },
+  { role: "ai", text: "Perfect. 'Je voudrais 한 잔의 커피...' How do you say 'a cup of coffee'?" },
+  { role: "user", text: "un café?" },
+  { role: "ai", text: "Exactly! 'un café, s'il vous plaît.' You're doing great! ☕" },
+];
+
+export default function MuntalkHome() {
+  const [userInput, setUserInput] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [visibleMessages, setVisibleMessages] = useState<typeof CHAT_MESSAGES>([]);
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < CHAT_MESSAGES.length) {
+        const nextMsg = CHAT_MESSAGES[index];
+        if (nextMsg) {
+          setVisibleMessages((prev) => [...prev, nextMsg]);
+          index++;
+        }
+      } else {
+        setTimeout(() => {
+          setVisibleMessages([]);
+          index = 0;
+        }, 3000);
+      }
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) setIsSubmitted(true);
+  };
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <div className="bg-[#0b101a] min-h-screen text-white font-sans selection:bg-[#e5ff4d] overflow-x-hidden relative">
+      
+      {/* --- 2. 배경 조명 효과 --- */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div className="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] bg-[#e5ff4d]/10 blur-[120px] rounded-full" />
+        <div className="absolute top-[20%] -right-[5%] w-[40%] h-[40%] bg-[#f0c3ff]/5 blur-[100px] rounded-full" />
+        <div className="absolute -bottom-[10%] left-1/2 -translate-x-1/2 w-[60%] h-[40%] bg-[#e5ff4d]/5 blur-[150px] rounded-full" />
+      </div>
+
+      <style dangerouslySetInnerHTML={{ __html: `
+        @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Inter:wght@400;600&display=swap');
+        .bowl-font { font-family: 'Bowlby One SC', cursive !important; }
+        .inter-font { font-family: 'Inter', sans-serif; }
+        .responsive-grid { display: flex; flex-direction: column; gap: 40px; }
+        @media (min-width: 768px) {
+          .responsive-grid { flex-direction: row; justify-content: space-between; gap: 30px; }
+          .responsive-grid > div { flex: 1; }
+        }
+        .fixed-header-wrapper { position: fixed; top: 0; left: 0; width: 100%; height: 0px; z-index: 9999; pointer-events: none; }
+        .header-content-inner { pointer-events: auto; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+      `}} />
+      
+      {/* --- 3. 고정 헤더 --- */}
+      <div className="fixed-header-wrapper">
+        <header className="max-w-[1200px] mx-auto px-4 md:px-6 py-4 flex justify-between items-center relative header-content-inner">
+          <div className="flex gap-2">
+            {['Features', 'Pricing'].map((item) => (
+              <button key={item} onClick={() => scrollToSection(`${item.toLowerCase()}-section`)} className="text-white text-[9px] md:text-[10px] font-bold px-3 py-1 border border-white/10 rounded-full tracking-[0.2em] hover:bg-white/20 transition-all cursor-pointer">
+                {item}
+              </button>
+            ))}
+          </div>
+          <div className="absolute left-1/2 -translate-x-1/2 top-0">
+            <div onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="bg-white px-4 py-1 flex items-center gap-2 min-w-[140px] h-[34px] shadow-2xl rounded-b-lg cursor-pointer">
+              <div className="w-10 h-10 bg-[#0b101a] rounded-full flex items-center justify-center shrink-0 translate-y-2 border-2 border-white shadow-lg">
+                <span className="bowl-font text-[#FFD700] text-xl">M</span>
+              </div>
+              <div className="bowl-font text-[11px] flex translate-y-2 tracking-[0.15em]">
+                <span className="text-black">Mun</span><span className="text-[#FFD700]">talk</span>
+              </div>
+            </div>
+          </div>
+          <button onClick={() => scrollToSection('contact-section')} className="bg-[#f0c3ff] text-black font-black px-4 py-1.5 rounded-sm text-[10px] uppercase tracking-[0.25em] cursor-pointer">Join</button>
+        </header>
+      </div>
+
+      <main className="relative z-10 max-w-6xl mx-auto pt-40 md:pt-52 px-6 text-center">
+        {/* --- 4. 메인 헤드라인 --- */}
+        <motion.h1 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="bowl-font text-[40px] md:text-[90px] leading-[0.9] text-[#e5ff4d] uppercase italic mb-16 tracking-[0.05em]"
+        >
+          LEARN A LANGUAGE <br /> WITH AI
+        </motion.h1>
+
+        {/* --- 5. 메인 비주얼 & 채팅 시뮬레이션 (이미지 복구됨) --- */}
+        <div className="flex flex-col lg:flex-row gap-10 items-center mb-24">
+          <motion.div 
+            {...fadeInUp}
+            className="flex-1 relative w-full border border-white/10 rounded-[40px] overflow-hidden bg-[#111111]/80 backdrop-blur-sm z-2 shadow-2xl"
+          >
+            {/* 이미지 경로를 실제 파일명으로 수정하세요 */}
+            <img 
+              src="/mainrobot.jpg" 
+              className="w-full h-[350px] md:h-[500px] object-cover opacity-90" 
+              alt="Muntalk Hero" 
+            />
+          </motion.div>
+
+          {/* AI 채팅 카드 */}
+          <motion.div 
+            {...fadeInUp}
+            className="w-full lg:w-[380px] h-[500px] bg-[#161b22] border border-white/10 rounded-[32px] p-6 flex flex-col relative shadow-2xl"
+          >
+            <div className="flex items-center gap-3 mb-6 border-b border-white/5 pb-4">
+              <div className="w-8 h-8 bg-[#e5ff4d] rounded-full flex items-center justify-center text-black font-bold">M</div>
+              <div className="text-left">
+                <p className="text-[12px] bowl-font">AI Tutor</p>
+                <div className="flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+                  <span className="text-[10px] text-gray-500 uppercase tracking-widest">Online</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex-1 space-y-4 overflow-y-auto no-scrollbar pb-4">
+              <AnimatePresence initial={false}>
+                {visibleMessages.map((msg, idx) => (
+                  msg && (
+                    <motion.div
+                      key={`msg-${idx}`}
+                      initial={{ opacity: 0, x: msg.role === "ai" ? -20 : 20, y: 10 }}
+                      animate={{ opacity: 1, x: 0, y: 0 }}
+                      className={`flex ${msg.role === "ai" ? "justify-start" : "justify-end"}`}
+                    >
+                      <div className={`max-w-[85%] px-4 py-2.5 rounded-2xl text-[12px] leading-relaxed ${
+                        msg.role === "ai" 
+                        ? "bg-[#0b101a] border border-white/5 text-gray-200 rounded-tl-none" 
+                        : "bg-[#e5ff4d] text-black font-semibold rounded-tr-none"
+                      }`}>
+                        {msg.text}
+                      </div>
+                    </motion.div>
+                  )
+                ))}
+              </AnimatePresence>
+            </div>
+
+            <div className="mt-2 pt-4 border-t border-white/5">
+              <div className="w-full bg-[#0b101a] rounded-full px-4 py-3 flex justify-between items-center opacity-50">
+                <span className="text-[10px] text-gray-500">Practice now...</span>
+                <div className="w-5 h-5 bg-white/10 rounded-full" />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* --- 6. 특징 섹션 --- */}
+        <motion.div 
+          id="features-section" 
+          className="responsive-grid py-32 border-t border-white/5"
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true }}
+          variants={{ whileInView: { transition: { staggerChildren: 0.2 } } }}
+        >
+          {[
+            { title: "Real conversations", desc: "AI-powered practice sessions for real-world fluency.", icon: "M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z", color: "#e5ff4d" },
+            { title: "Feel confident", desc: "Learn without judgment in a safe environment.", icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", color: "#f0c3ff" },
+            { title: "24/7 Access", desc: "Available 24/7 on any device you choose.", icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", color: "#e5ff4d" }
+          ].map((feat, i) => (
+            <motion.div key={i} variants={fadeInUp} className="flex flex-col items-center md:items-start md:pl-6 md:first:pl-0 md:border-l md:first:border-0 border-white/5">
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ backgroundColor: `${feat.color}20`, color: feat.color }}>
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={feat.icon} /></svg>
+              </div>
+              <h3 className="bowl-font text-[14px] mb-2 uppercase text-white">{feat.title}</h3>
+              <p className="text-gray-500 text-[11px] leading-relaxed">{feat.desc}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* --- 7. 가격 섹션 --- */}
+        <section id="pricing-section" className="py-32 border-t border-white/5">
+          <motion.h2 {...fadeInUp} className="bowl-font text-[32px] md:text-[45px] mb-16 uppercase text-white">Choose Your <span className="text-[#f0c3ff]">Plan</span></motion.h2>
+          <motion.div 
+            className="responsive-grid"
+            initial="initial" whileInView="whileInView" viewport={{ once: true }}
+            variants={{ whileInView: { transition: { staggerChildren: 0.2 } } }}
+          >
+            <motion.div variants={fadeInUp} className="bg-[#161b22]/40 backdrop-blur-md p-8 rounded-[32px] border border-white/5 flex flex-col items-center">
+              <h3 className="bowl-font text-xl mb-2 uppercase text-white">Free Beta</h3>
+              <p className="bowl-font text-4xl text-[#e5ff4d] mb-6">$0</p>
+              <ul className="text-[12px] text-gray-400 space-y-3 mb-10 text-left w-full"><li>• 30 mins Daily Practice</li><li>• Basic AI Feedback</li><li>• 3 Languages</li></ul>
+              <button onClick={() => scrollToSection('contact-section')} className="w-full py-3 rounded-xl border border-white/10 bowl-font text-[10px] uppercase hover:bg-white hover:text-black transition-all">Start Free</button>
+            </motion.div>
+
+            <motion.div variants={fadeInUp} className="bg-[#161b22] p-8 rounded-[32px] border-2 border-[#f0c3ff] relative transform md:-translate-y-4 shadow-2xl flex flex-col items-center">
+              <span className="absolute -top-4 bg-[#f0c3ff] text-black bowl-font text-[9px] px-4 py-1 rounded-full uppercase">Most Popular</span>
+              <h3 className="bowl-font text-xl mb-2 uppercase text-white">Pro Learner</h3>
+              <p className="bowl-font text-4xl text-[#f0c3ff] mb-6">$19</p>
+              <ul className="text-[12px] text-gray-200 space-y-3 mb-10 text-left w-full font-bold"><li>★ Unlimited Conversations</li><li>★ Accent Correction</li><li>★ Priority Access</li></ul>
+              <button className="w-full py-3 rounded-xl bg-[#f0c3ff] text-black bowl-font text-[10px] uppercase hover:scale-105 transition-transform">Join Pro</button>
+            </motion.div>
+
+            <motion.div variants={fadeInUp} className="bg-[#161b22]/40 backdrop-blur-md p-8 rounded-[32px] border border-white/5 flex flex-col items-center">
+              <h3 className="bowl-font text-xl mb-2 uppercase text-white">Custom</h3>
+              <p className="bowl-font text-3xl text-white mb-6">Talk</p>
+              <p className="text-[11px] text-gray-500 mb-10 leading-relaxed">For organizations needing specialized AI agents.</p>
+              <button onClick={() => scrollToSection('contact-section')} className="w-full py-3 rounded-xl border border-white/10 bowl-font text-[10px] uppercase hover:border-white transition-all">Contact Us</button>
+            </motion.div>
+          </motion.div>
+        </section>
+
+        {/* --- 8. 가입 섹션 --- */}
+        <motion.section {...fadeInUp} id="contact-section" className="py-32 border-t border-white/5">
+          <div className="max-w-xs mx-auto">
+            <h2 className="bowl-font text-[28px] mb-10 uppercase text-white">Join Muntalk</h2>
+            <div className="min-h-[160px] flex items-center justify-center">
+              <AnimatePresence mode="wait">
+                {!isSubmitted ? (
+                  <motion.form key="f" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, scale: 0.9 }} onSubmit={handleSubscribe} className="w-full space-y-3">
+                    <input required type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="email@address.com" className="w-full bg-[#161b22]/50 border border-white/10 rounded-lg px-4 py-3 text-center text-[12px] text-white focus:outline-none focus:border-[#e5ff4d]" />
+                    <button type="submit" className="w-full bg-white text-black font-bold py-3 rounded-lg uppercase text-[10px] hover:bg-[#e5ff4d] transition-all cursor-pointer">Sign Up Now</button>
+                  </motion.form>
+                ) : (
+                  <motion.div key="s" initial={{scale:0.5, opacity:0}} animate={{scale:1, opacity:1}} className="text-center">
+                    <div className="w-16 h-16 bg-[#e5ff4d] rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_20px_rgba(229,255,77,0.4)]">
+                      <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="4"><path d="M5 13l4 4L19 7" /></svg>
+                    </div>
+                    <p className="bowl-font text-[#e5ff4d] text-xl uppercase tracking-widest">Welcome!</p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* --- 9. 푸터 --- */}
+        <motion.footer {...fadeInUp} className="py-12 border-t border-white/5 text-center md:text-left">
+          <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+            <div>
+              <div className="bowl-font text-lg mb-2">MUN<span className="text-[#FFD700]">TALK</span></div>
+              <p className="text-gray-600 text-[10px] uppercase tracking-widest">© 2026 Muntalk AI. All rights reserved.</p>
+            </div>
+            <div className="flex gap-10">
+              <div className="flex flex-col gap-2">
+                <span className="bowl-font text-[10px] text-white uppercase mb-2 text-left">Social</span>
+                <a href="#" className="text-gray-500 text-[10px] hover:text-[#e5ff4d] transition-colors text-left">Twitter</a>
+                <a href="#" className="text-gray-500 text-[10px] hover:text-[#e5ff4d] transition-colors text-left">Instagram</a>
+              </div>
+              <div className="flex flex-col gap-2">
+                <span className="bowl-font text-[10px] text-white uppercase mb-2 text-left">Legal</span>
+                <a href="#" className="text-gray-500 text-[10px] hover:text-[#e5ff4d] transition-colors text-left">Privacy</a>
+                <a href="#" className="text-gray-500 text-[10px] hover:text-[#e5ff4d] transition-colors text-left">Terms</a>
+              </div>
+            </div>
+          </div>
+        </motion.footer>
+      </main>
+    </div>
+  );
+}

@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 폰트가 적용 안 될 경우를 대비한 강제 설정 */
+.font-archivo {
+  font-family: var(--font-archivo), sans-serif !important;
+  font-weight: 900;
+}
+
+body {
+  background-color: #0b101a;
+  color: white;
+  margin: 0;
+}
+@layer base {
+  h1, h2, h3, .font-archivo {
+    font-family: var(--font-archivo), sans-serif !important;
+    font-weight: 900; /* 가장 굵게 */
+    letter-spacing: -0.05em; /* 글자 사이를 좁게 해서 더 묵직하게 */
+  }
+}
