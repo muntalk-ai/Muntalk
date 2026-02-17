@@ -120,7 +120,7 @@ const styles = {
   badge: { display: 'inline-block', padding: '4px 12px', borderRadius: '20px', backgroundColor: '#FFF5F5', color: '#FF5252', fontSize: '11px', fontWeight: '800', marginBottom: '15px' },
   title: { color: '#000', fontSize: '32px', fontWeight: '900', margin: '0 0 10px 0' },
   subtitle: { color: '#6C757D', fontSize: '15px', lineHeight: '1.6', marginBottom: '30px' },
-  input: { width: '100%', padding: '15px', borderRadius: '16px', border: '1px solid #E9ECEF', backgroundColor: '#F8F9FA', color: '#000', fontSize: '16px', textAlign: 'center', outline: 'none', marginBottom: '15px' },
+  input: { width: '100%', padding: '15px', borderRadius: '16px', border: '1px solid #E9ECEF', backgroundColor: '#F8F9FA', color: '#000', fontSize: '16px', textAlign: 'center' as const, outline: 'none', marginBottom: '15px' },
   mainBtn: { width: '100%', padding: '16px', backgroundColor: '#000', color: '#FFF', border: 'none', borderRadius: '16px', fontWeight: 'bold', fontSize: '16px', cursor: 'pointer' },
   linkBtn: { marginTop: '20px', backgroundColor: 'transparent', color: '#ADB5BD', border: 'none', fontSize: '13px', textDecoration: 'underline', cursor: 'pointer' }
 };
