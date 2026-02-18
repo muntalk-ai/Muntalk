@@ -3,8 +3,9 @@ import { useState, useRef, useEffect } from 'react';
 import { auth } from '../lib/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 
-const GEMINI_API_KEY = "AIzaSyCpYBpdsg4aXo3wVq_weCv69viDuDwF4Rw";
-const ADMIN_EMAIL = "muntalkofficial@gmail.com"; 
+// ✅ 하드코딩된 키를 지우고 환경변수에서 가져오도록 변경
+const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY; 
+const ADMIN_EMAIL = "muntalkofficial@gmail.com";
 
 const SUB_LANGS = [
   { id: 'ko-KR', name: 'Korean' }, { id: 'en-US', name: 'English' }, { id: 'ja-JP', name: 'Japanese' },

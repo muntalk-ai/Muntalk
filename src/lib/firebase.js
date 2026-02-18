@@ -1,18 +1,20 @@
-// src/lib/firebase.js
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// 하드코딩된 값을 모두 process.env 변수로 교체했습니다.
 const firebaseConfig = {
-  apiKey: "AIzaSyDdlkPmHlsTKz0mbpq3SID53dh8nX8gUvs",
-  authDomain: "muntalk-c03e6.firebaseapp.com",
-  projectId: "muntalk-c03e6",
-  storageBucket: "muntalk-c03e6.firebasestorage.app",
-  messagingSenderId: "703444894652",
-  appId: "1:703444894652:web:9e8aa04a28debf0ca121b9",
-  measurementId: "G-E7GXPE9HHP"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: "G-E7GXPE9HHP" // 이건 보안에 무관해서 그대로 두셔도 됩니다.
 };
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app); // 이 줄이 반드시 있어야 합니다.
+
+// 앱 초기화 로직
+const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+
 export const db = getFirestore(app);
+export const auth = getAuth(app);

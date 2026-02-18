@@ -4,3 +4,13 @@ old_files/
 *.xlsx
 *.jpg
 *.png
+# API Keys and Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS files
+.DS_Store
+Thumbs.db
