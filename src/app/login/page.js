@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react'; // useEffect 추가
+import React, { useState, useEffect } from 'react';
 import { auth, db } from '../../lib/firebase';
 import { 
   signInWithEmailAndPassword, 
   GoogleAuthProvider, 
-  signInWithRedirect, // Redirect 방식으로 변경
-  getRedirectResult    // 결과 확인을 위해 추가
+  signInWithRedirect,
+  getRedirectResult 
 } from 'firebase/auth';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { useRouter } from 'next/navigation';
@@ -17,14 +17,13 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const router = useRouter();
 
-  // 페이지 로드 시 리다이렉트 로그인 결과 처리
+  // 리다이렉트 로그인 결과 처리
   useEffect(() => {
     const checkRedirect = async () => {
       try {
         const result = await getRedirectResult(auth);
         if (result) {
           const user = result.user;
-          // Firestore 유저 저장 로직
           const userDoc = await getDoc(doc(db, "users", user.uid));
           if (!userDoc.exists()) {
             await setDoc(doc(db, "users", user.uid), {
@@ -44,18 +43,19 @@ export default function LoginPage() {
     checkRedirect();
   }, [router]);
 
-  // 1. Google 로그인 (Redirect 방식)
+  // Google 로그인 (계정 선택창 강제 활성화)
   const handleGoogleLogin = async () => {
     const provider = new GoogleAuthProvider();
+    provider.setCustomParameters({
+      prompt: 'select_account'
+    });
     try {
-      // 팝업 대신 리다이렉트 실행
       await signInWithRedirect(auth, provider);
     } catch (error) {
       alert("Google Login Error: " + error.message);
     }
   };
 
-  // 2. 일반 이메일 로그인 (기존과 동일)
   const handleEmailLogin = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
@@ -116,11 +116,11 @@ const styles = {
   title: { color: '#1C1E21', fontSize: '28px', fontWeight: 'bold', margin: '0 0 8px 0' },
   subtitle: { color: '#606770', fontSize: '15px', marginBottom: '24px' },
   googleBtn: { width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #DADCE0', backgroundColor: '#FFF', color: '#3C4043', fontWeight: '600', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px', borderStyle: 'solid' },
-  divider: { position: 'relative' as const, height: '1px', backgroundColor: '#DADCE0', margin: '20px 0', width: '100%' },
-  dividerText: { position: 'absolute' as const, top: '-10px', left: '50%', transform: 'translateX(-50%)', backgroundColor: '#FFF', padding: '0 10px', color: '#8D949E', fontSize: '13px' },
-  inputGroup: { display: 'flex', flexDirection: 'column' as const, gap: '12px', marginBottom: '20px' },
-  input: { width: '100%', padding: '14px', borderRadius: '8px', border: '1px solid #DDDFE2', backgroundColor: '#F5F6F7', color: '#1C1E21', fontSize: '15px', outline: 'none', boxSizing: 'border-box' as const },
-  mainBtn: { width: '100%', padding: '14px', backgroundColor: '#1877F2', color: '#FFF', border: 'none', borderRadius: '8px', fontWeight: 'bold' as const, fontSize: '17px', cursor: 'pointer' },
+  divider: { position: 'relative', height: '1px', backgroundColor: '#DADCE0', margin: '20px 0', width: '100%' },
+  dividerText: { position: 'absolute', top: '-10px', left: '50%', transform: 'translateX(-50%)', backgroundColor: '#FFF', padding: '0 10px', color: '#8D949E', fontSize: '13px' },
+  inputGroup: { display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '20px' },
+  input: { width: '100%', padding: '14px', borderRadius: '8px', border: '1px solid #DDDFE2', backgroundColor: '#F5F6F7', color: '#1C1E21', fontSize: '15px', outline: 'none', boxSizing: 'border-box' },
+  mainBtn: { width: '100%', padding: '14px', backgroundColor: '#1877F2', color: '#FFF', border: 'none', borderRadius: '8px', fontWeight: 'bold', fontSize: '17px', cursor: 'pointer' },
   footerText: { color: '#606770', marginTop: '20px', fontSize: '14px' },
   link: { color: '#1877F2', fontWeight: '600', textDecoration: 'none' }
 };
