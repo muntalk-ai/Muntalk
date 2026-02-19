@@ -1,56 +1,117 @@
 'use client';
-import { useEffect, useState } from 'react';
-import { db } from '../../lib/firebase'; 
-import { collection, getDocs } from 'firebase/firestore';
 
-export default function AdminPage() {
-  const [users, setUsers] = useState([]);
+import React, { useState, useEffect } from 'react';
+import { auth } from '../lib/firebase'; 
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { useRouter } from 'next/navigation';
+
+import Home from '../components/Home';
+import LangSelect from '../components/LangSelect';
+import LevelSelect from '../components/LevelSelect';
+import RoleSelect from '../components/RoleSelect';
+import TutorSelect from '../components/TutorSelect';
+import Conversation from '../components/Conversation';
+
+// 초대 코드 설정 (원하시는 4자리로 수정하세요)
+const BETA_PASSWORD = "7777"; 
+
+export default function MuntalkMain() {
+  const [isLocked, setIsLocked] = useState(true);
+  const [passInput, setPassInput] = useState('');
+  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const router = useRouter();
+
+  const [step, setStep] = useState('home');
+  const [selectedLangId, setSelectedLangId] = useState('en-US');
+  const [selectedLevel, setSelectedLevel] = useState('beginner');
+  const [selectedRole, setSelectedRole] = useState('cafe');
+  const [selectedTutor, setSelectedTutor] = useState(null);
 
   useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        const querySnapshot = await getDocs(collection(db, "users"));
-        const userList = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-        setUsers(userList);
-      } catch (error) {
-        console.error("데이터 로딩 에러:", error);
-      } finally {
+    if (auth) {
+      const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+        setUser(currentUser);
         setLoading(false);
-      }
-    };
-    fetchUsers();
+      });
+      return () => unsubscribe();
+    }
   }, []);
 
-  if (loading) return <div style={{ padding: '20px' }}>Loading user data...</div>;
+  const handleUnlock = () => {
+    if (passInput === BETA_PASSWORD) setIsLocked(false);
+    else alert("Invalid invitation code.");
+  };
 
+  if (loading) return null;
+
+  // 1단계: 초대 코드 잠금 화면
+  if (isLocked) {
+    return (
+      <div style={styles.bg}>
+        <div style={styles.card}>
+          <div style={styles.badge}>Private Beta</div>
+          <h1 style={styles.title}>MunTalk</h1>
+          <p style={styles.subtitle}>Please enter your invitation code.</p>
+          <input 
+            type="password" style={styles.input} 
+            onChange={(e) => setPassInput(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && handleUnlock()}
+            placeholder="Invite Code"
+          />
+          <button onClick={handleUnlock} style={styles.mainBtn}>Unlock</button>
+        </div>
+      </div>
+    );
+  }
+
+  // 2단계: 로그인 체크 (Firebase 유저라면 누구나 통과하도록 수정됨)
+  if (!user) {
+    return (
+      <div style={styles.bg}>
+        <div style={styles.card}>
+          <h1 style={styles.title}>Welcome</h1>
+          <p style={styles.subtitle}>Please login to continue.</p>
+          <button onClick={() => router.push('/login')} style={styles.mainBtn}>Go to Login</button>
+        </div>
+      </div>
+    );
+  }
+
+  // 3단계: 메인 앱 실행
   return (
-    <div style={{ padding: '20px' }}>
-      <h2 style={{ color: '#333' }}>User Management (PIPEDA Compliance)</h2>
-      <p>캐나다 현지 가입자 명단입니다.</p>
-      
-      <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
-        <thead>
-          <tr style={{ background: '#0070f3', color: 'white', textAlign: 'left' }}>
-            <th style={{ padding: '12px', border: '1px solid #ddd' }}>Email</th>
-            <th style={{ padding: '12px', border: '1px solid #ddd' }}>Role</th>
-            <th style={{ padding: '12px', border: '1px solid #ddd' }}>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map(user => (
-            <tr key={user.id}>
-              <td style={{ padding: '12px', border: '1px solid #ddd' }}>{user.email}</td>
-              <td style={{ padding: '12px', border: '1px solid #ddd' }}>
-                <span style={{ backgroundColor: user.role === 'admin' ? '#ffeeba' : '#e1f5fe', padding: '3px 8px', borderRadius: '4px' }}>
-                  {user.role}
-                </span>
-              </td>
-              <td style={{ padding: '12px', border: '1px solid #ddd' }}>Active</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <main>
+      {step === 'home' && <Home onStart={() => setStep('lang')} />}
+      {step === 'lang' && <LangSelect onNext={(id) => { setSelectedLangId(id); setStep('level'); }} />}
+      {step === 'level' && <LevelSelect onNext={(lv) => { setSelectedLevel(lv); setStep('role'); }} />}
+      {step === 'role' && <RoleSelect onNext={(r) => { setSelectedRole(r); setStep('tutor'); }} />}
+      {step === 'tutor' && (
+        <TutorSelect 
+          selectedLangId={selectedLangId} 
+          onNext={(t) => { setSelectedTutor(t); setStep('talk'); }} 
+          onBack={() => setStep('role')} 
+        />
+      )}
+      {step === 'talk' && (
+        <Conversation 
+          selectedLangId={selectedLangId}
+          selectedTutor={selectedTutor}
+          selectedLevel={selectedLevel}
+          selectedRole={selectedRole}
+          onBack={() => setStep('tutor')}
+        />
+      )}
+    </main>
   );
 }
+
+const styles = {
+  bg: { height: '100dvh', background: 'radial-gradient(circle at top, #F8F9FA 0%, #E9ECEF 100%)', display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: '-apple-system, sans-serif' },
+  card: { width: '90%', maxWidth: '400px', padding: '50px 40px', backgroundColor: '#FFFFFF', borderRadius: '32px', textAlign: 'center' as const, boxShadow: '0 20px 50px rgba(0,0,0,0.01)', border: '1px solid #FFF' },
+  badge: { display: 'inline-block', padding: '4px 12px', borderRadius: '20px', backgroundColor: '#FFF5F5', color: '#FF5252', fontSize: '11px', fontWeight: '800', marginBottom: '15px' },
+  title: { color: '#000', fontSize: '32px', fontWeight: '900', margin: '0 0 10px 0' },
+  subtitle: { color: '#6C757D', fontSize: '15px', lineHeight: '1.6', marginBottom: '30px' },
+  input: { width: '100%', padding: '15px', borderRadius: '16px', border: '1px solid #E9ECEF', backgroundColor: '#F8F9FA', color: '#000', fontSize: '16px', textAlign: 'center' as const, outline: 'none', marginBottom: '15px' },
+  mainBtn: { width: '100%', padding: '16px', backgroundColor: '#000', color: '#FFF', border: 'none', borderRadius: '16px', fontWeight: 'bold' as const, fontSize: '16px', cursor: 'pointer' },
+  linkBtn: { marginTop: '20px', backgroundColor: 'transparent', color: '#ADB5BD', border: 'none', fontSize: '13px', textDecoration: 'underline', cursor: 'pointer' }
+};
