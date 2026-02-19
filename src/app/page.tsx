@@ -12,7 +12,7 @@ import RoleSelect from '../components/RoleSelect';
 import TutorSelect from '../components/TutorSelect';
 import Conversation from '../components/Conversation';
 
-const BETA_PASSWORD = "7777"; 
+const BETA_PASSWORD = "muntalk77"; 
 
 export default function MuntalkMain() {
   const [isLocked, setIsLocked] = useState(true);
