@@ -19,7 +19,7 @@ export default function Home({ onStart }: { onStart: () => void }) {
       <img src="/logo.png" style={styles.megaLogoImg} alt="muntalk" />
       
       <h1 style={styles.subTitle}>
-        Learn languages for free <br />
+        Learn languages <br />
         <span style={styles.highlight}>with +150 AI tutors</span>
       </h1>
 
