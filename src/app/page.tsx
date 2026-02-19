@@ -12,11 +12,19 @@ import RoleSelect from '../components/RoleSelect';
 import TutorSelect from '../components/TutorSelect';
 import Conversation from '../components/Conversation';
 
-// 1. 여기에 지인분들의 이메일을 추가하세요 (예: "friend@gmail.com")
-const ALLOWED_USERS = [
-  "muntalkofficial@gmail.com",
-  "지인이메일@gmail.com" 
-];
+// 수정 후 (권한 리스트 체크 삭제)
+if (!user) {
+  // 로그인 안 된 상태면 로그인 페이지로
+  return (
+    <div style={styles.bg}>
+      <div style={styles.card}>
+        <h1 style={styles.title}>Welcome</h1>
+        <p style={styles.subtitle}>Please login to continue.</p>
+        <button onClick={() => router.push('/login')} style={styles.mainBtn}>Go to Login</button>
+      </div>
+    </div>
+  );
+}
 
 // 2. 초대 코드 수정 (현재 4자리: muntalk77의 뒷부분처럼 관리 가능)
 const BETA_PASSWORD = "muntalk77"; 
