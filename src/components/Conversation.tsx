@@ -232,12 +232,33 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
         </div>
 
         {/* 버튼 영역: 자막 내용과 상관없이 항상 하단에 고정됩니다 */}
+        {/* 버튼 영역: btnGroup으로 감싸서 두 버튼이 나란히 나오게 합니다 */}
         <div style={styles.btnGroup}>
-          <button onClick={() => { recognitionRef.current.lang = mainLang; isListening ? recognitionRef.current.stop() : recognitionRef.current.start(); }} 
-            style={{...styles.ctrlBtn, backgroundColor: isListening ? '#ff4b4b' : '#58CC02'}}>
+          <button 
+            onClick={() => { 
+              // 🚀 아이폰 잠금 해제 핵심 로직
+              const videos = document.querySelectorAll('video');
+              videos.forEach(v => {
+                v.play().catch(() => {}); 
+              });
+
+              if (audioRef.current) {
+                audioRef.current.play().catch(() => {});
+              }
+
+              // 그 다음에 음성 인식 시작
+              recognitionRef.current.lang = mainLang;
+              isListening ? recognitionRef.current.stop() : recognitionRef.current.start(); 
+            }} 
+            style={{...styles.ctrlBtn, backgroundColor: isListening ? '#ff4b4b' : '#58CC02'}}
+          >
             {isListening ? "Stop" : "Speak"}
           </button>
-          <button onClick={() => setShowReport(true)} style={styles.backBtn}>Finish</button>
+
+          {/* 👈 Finish 버튼이 꼭 있어야 리포트를 볼 수 있습니다! */}
+          <button onClick={() => setShowReport(true)} style={styles.backBtn}>
+            Finish
+          </button>
         </div>
       </div>
       {showReport && (
