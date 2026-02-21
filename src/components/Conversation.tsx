@@ -127,19 +127,26 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     }
   };
 
-  const speakResponse = async (text: string) => {
-  try {
-    // 🚀 아이폰용 비디오 강제 재생 코드 추가
-    const videos = document.querySelectorAll('video');
-    videos.forEach(v => {
-      v.muted = true; // 무음 확인
-      v.play().catch(e => console.log("Video Play Error:", e));
-    });
+const speakResponse = async (text: string) => {
+    try {
+      // 1. 기존 오디오 완전 초기화 (반복 버그 해결 핵심)
       if (audioRef.current) {
         audioRef.current.pause();
-        audioRef.current.currentTime = 0;
+        audioRef.current.onended = null; // 이벤트 리스너 제거
+        audioRef.current.src = "";       // 소스 비우기
+        audioRef.current.load();         // 강제 로드하여 버퍼 제거
+        audioRef.current = null;         // 참조 초기화
       }
+
+      // 2. 비디오 강제 재생 (기존 코드 유지)
+      const videos = document.querySelectorAll('video');
+      videos.forEach(v => {
+        v.muted = true;
+        v.play().catch(() => {});
+      });
+
       setIsTalking(true);
+
       const response = await fetch('/api/tts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -149,11 +156,20 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
           gender: selectedTutor.gender
         })
       });
+
       const data = await response.json();
+
       if (data.audioContent) {
+        // 3. 새로운 오디오 객체 생성
         const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
         audioRef.current = audio;
-        audio.onended = () => setIsTalking(false);
+        
+        audio.onended = () => {
+          setIsTalking(false);
+          // 재생 끝나면 소스 비우기 (메모리 정리)
+          audio.src = "";
+        };
+
         await audio.play();
       }
     } catch (error) {
