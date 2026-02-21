@@ -128,26 +128,24 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   };
 
 const speakResponse = async (text: string) => {
-    try {
-      // 1. 기존 오디오 완전 초기화 (반복 버그 해결 핵심)
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current.onended = null; // 이벤트 리스너 제거
-        audioRef.current.src = "";       // 소스 비우기
-        audioRef.current.load();         // 강제 로드하여 버퍼 제거
-        audioRef.current = null;         // 참조 초기화
-      }
+  try {
+    // 1. 기존 오디오 초기화 (반복 버그 해결)
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.src = "";
+    }
 
-      // 2. 비디오 강제 재생 (기존 코드 유지)
-      const videos = document.querySelectorAll('video');
-      videos.forEach(v => {
-        v.muted = true;
-        v.play().catch(() => {});
-      });
+    // 🚀 [아이폰 핵심] 말하기 시작 '전'에 두 비디오를 모두 play() 시켜야 함
+    const videos = document.querySelectorAll('video');
+    for (const v of Array.from(videos)) {
+      v.muted = true;
+      // 이미 재생 중일 수 있으므로 다시 한번 play() 호출
+      await v.play().catch(() => {}); 
+    }
 
-      setIsTalking(true);
+    setIsTalking(true); // 여기서 투명도(opacity)만 바뀜
 
-      const response = await fetch('/api/tts', {
+    const response = await fetch('/api/tts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -205,6 +203,7 @@ const speakResponse = async (text: string) => {
   loop 
   muted 
   playsInline  // 👈 필수
+  webkit-playsinline="true" // 👈 1. 구형 아이폰 대응
   controls={false}
   preload="auto"
   style={{
@@ -215,6 +214,7 @@ const speakResponse = async (text: string) => {
       zIndex: 1, // 밑에 깔림
       opacity: isTalking ? 0 : 1,
       transition: 'opacity 0.2s linear'
+      pointerEvents: 'none', // 👈 2. 비디오가 클릭 이벤트를 가로채지 않게 함
     }} 
   />
   {/* 2. Talking 비디오 */}
