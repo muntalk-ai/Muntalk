@@ -2,9 +2,13 @@
 import { useState, useRef, useEffect } from 'react';
 import { auth } from '../lib/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
-// 🚀 여기에 추가하시면 됩니다!
 import { getSystemPrompt } from '../lib/prompts';
-// ✅ 하드코딩된 키를 지우고 환경변수에서 가져오도록 변경
+
+// 분리한 컴포넌트 임포트
+import TutorVideo from './TutorVideo';
+import SubtitleArea from './SubtitleArea';
+import ReportModal from './ReportModal';
+
 const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY; 
 const ADMIN_EMAIL = "muntalkofficial@gmail.com";
 
@@ -28,8 +32,8 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   const [isTalking, setIsTalking] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [isThinking, setIsThinking] = useState(false);
-  const [timeLeft, setTimeLeft] = useState<number | null>(null);
-  const [isAdmin, setIsAdmin] = useState(false);
+  const [aiData, setAiData] = useState<any>({ reply: "", translation: "", correction: "", reason: "" });
+  const [analysisHistory, setAnalysisHistory] = useState<any[]>([]);
   const [showReport, setShowReport] = useState(false);
   
   const mainLang = selectedLangId || 'en-US'; 
@@ -171,177 +175,25 @@ const speakResponse = async (text: string) => {
 
   return (
     <div style={styles.container}>
-      <div style={styles.langSelectorBar}>
-        <div style={styles.roleInfo}>
-           <span style={styles.timerLabel}>{isAdmin ? "Admin" : `Time: ${Math.floor(timeLeft! / 60)}:${String(timeLeft! % 60).padStart(2, '0')}`}</span>
-           <span style={styles.levelLabel}>{selectedRole} | {selectedLevel}</span>
-        </div>
-        <div style={styles.selectorItem}>
-          <button onClick={() => setShowSubMenu(!showSubMenu)} style={styles.langBtn}>Subtitle: {subLangName} ▼</button>
-          {showSubMenu && (
-            <div style={styles.dropdown}>
-              {SUB_LANGS.map(l => (
-                <div key={l.id} onClick={() => {setSubLang(l.id); setShowSubMenu(false);}} style={styles.dropItem}>{l.name}</div>
-              ))}
-            </div>
-          )}
-        </div>
-      </div>
+      {/* 1. 상단 정보 바 */}
+      <Header isAdmin={isAdmin} timeLeft={timeLeft} role={selectedRole} level={selectedLevel} ... />
 
-      <div style={styles.videoArea}>
-  {/* 1. Idle 비디오 */}
- {/* 1. Idle 비디오 */}
-<video 
-  src={`/videos/${selectedTutor.id}_idle.mp4`} 
-  autoPlay loop muted playsInline 
-  webkit-playsinline="true" // 👈 iOS Safari 구형 대응
-  preload="auto"
-  style={{
-    ...styles.videoFit,
-    position: 'absolute',
-    top: 0, left: 0,
-    zIndex: 1,
-    opacity: isTalking ? 0 : 1,
-    pointerEvents: 'none' // 👈 비디오가 클릭을 방해하지 못하게
-  }} 
-/>
-
-{/* 2. Talking 비디오 */}
-<video 
-  src={`/videos/${selectedTutor.id}_talk.mp4`} 
-  autoPlay loop muted playsInline 
-  webkit-playsinline="true" // 👈 iOS 필수
-  preload="auto"
-  style={{
-    ...styles.videoFit,
-    position: 'absolute',
-    top: 0, left: 0,
-    zIndex: 2,
-    opacity: isTalking ? 1 : 0,
-    pointerEvents: 'none' // 👈 iOS에서 탭 가로채기 방지
-  }}
-  />
-</div>
+      {/* 2. 비디오 컴포넌트 */}
+      <TutorVideo tutorId={selectedTutor.id} isTalking={isTalking} />
 
       <div style={styles.talkArea}>
-        {/* 자막 영역: 내용이 많아지면 여기서만 스크롤이 생깁니다 */}
-        <div style={styles.subtitleSection}>
-          <div style={styles.targetText}>{isThinking ? "..." : aiData.reply}</div>
-          <div style={styles.subText}>{aiData.translation}</div>
-          {/* 자동 스크롤을 위한 위치 표시 */}
-          <div ref={messagesEndRef} />
-        </div>
+        {/* 3. 자막 컴포넌트 */}
+        <SubtitleArea reply={aiData.reply} translation={aiData.translation} isThinking={isThinking} />
 
-        {/* 버튼 영역: 자막 내용과 상관없이 항상 하단에 고정됩니다 */}
-        {/* 버튼 영역: btnGroup으로 감싸서 두 버튼이 나란히 나오게 합니다 */}
+        {/* 4. 하단 버튼 그룹 */}
         <div style={styles.btnGroup}>
-          <button 
-            onClick={() => { 
-              // 🚀 아이폰 잠금 해제 핵심 로직
-              const videos = document.querySelectorAll('video');
-              videos.forEach(v => {
-                v.muted = true;
-                v.play().catch(() => {}); 
-              });
-
-              if (audioRef.current) {
-                audioRef.current.play().catch(() => {});
-              }
-
-              // 그 다음에 음성 인식 시작
-              recognitionRef.current.lang = mainLang;
-              isListening ? recognitionRef.current.stop() : recognitionRef.current.start(); 
-            }} 
-            style={{...styles.ctrlBtn, backgroundColor: isListening ? '#ff4b4b' : '#58CC02'}}
-          >
-            {isListening ? "Stop" : "Speak"}
-          </button>
-
-          {/* 👈 Finish 버튼이 꼭 있어야 리포트를 볼 수 있습니다! */}
-          <button onClick={() => setShowReport(true)} style={styles.backBtn}>
-            Finish
-          </button>
+          <button onClick={handleSpeak} style={...}> {isListening ? "Stop" : "Speak"} </button>
+          <button onClick={() => setShowReport(true)} style={styles.backBtn}> Finish </button>
         </div>
       </div>
-      {showReport && (
-        <div style={styles.modalOverlay}>
-          <div style={styles.modalContent}>
-            <h2 style={{textAlign: 'center', marginBottom: '20px', color: '#333'}}>Learning Report</h2>
-            <div style={styles.reportList}>
-              {analysisHistory.length === 0 ? <p style={{textAlign: 'center', color: '#888'}}>No conversations recorded.</p> : 
-                analysisHistory.map((item, i) => (
-                <div key={i} style={styles.reportCard}>
-                  <div style={{color: '#ff4b4b', fontSize: '13px'}}>❌ {item.user}</div>
-                  <div style={{color: '#58CC02', fontWeight: 'bold', margin: '5px 0'}}>✅ {item.better}</div>
-                  <div style={styles.reasonBox}>💡 {item.reason}</div>
-                </div>
-              ))}
-            </div>
-            <button onClick={onBack} style={styles.closeBtn}>Exit Class</button>
-          </div>
-        </div>
-      )}
+
+      {/* 5. 리포트 모달 컴포넌트 */}
+      {showReport && <ReportModal history={analysisHistory} onBack={onBack} />}
     </div>
   );
 }
-
-const styles: any = {
-  container: { height: '100dvh', backgroundColor: '#000', display: 'flex', flexDirection: 'column', overflow: 'hidden' },
-  langSelectorBar: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px', backgroundColor: '#1a1a1a', borderBottom: '1px solid #333', zIndex: 100 },
-  roleInfo: { display: 'flex', flexDirection: 'column' },
-  timerLabel: { color: '#fff', fontSize: '13px', fontWeight: 'bold' },
-  levelLabel: { color: '#58CC02', fontSize: '10px' },
-  selectorItem: { position: 'relative' },
-  langBtn: { backgroundColor: '#333', color: '#fff', border: '1px solid #444', borderRadius: '5px', padding: '4px 10px', fontSize: '11px' },
-  dropdown: { position: 'absolute', top: '35px', right: 0, backgroundColor: '#fff', borderRadius: '8px', width: '120px', maxHeight: '200px', overflowY: 'auto', zIndex: 101 },
-  dropItem: { padding: '10px', color: '#333', fontSize: '12px', borderBottom: '1px solid #eee' },
-  videoArea: { 
-    height: '60dvh', // ✅ 정확한 높이를 지정
-    width: '100%',
-    position: 'relative', 
-    backgroundColor: '#000',
-    overflow: 'hidden' 
-  },
-  videoFit: { 
-    width: '100%', 
-    height: '100%', 
-    objectFit: 'contain'
-    // 💡 여기서 position: 'absolute'는 위 JSX 코드 안에서 직접 주는 게 더 확실합니다.
-  },
-  talkArea: { 
-    flex: 1, // ✅ 남은 공간을 채우도록 설정
-    backgroundColor: '#1a1a1a', 
-    display: 'flex', 
-    flexDirection: 'column'
-  },
-  subtitleSection: { 
-    flex: 1, 
-    backgroundColor: '#2a2a2a', 
-    borderRadius: '20px', 
-    padding: '15px', 
-    marginBottom: '15px', // 버튼과의 간격
-    border: '1px solid #444', 
-    textAlign: 'center', 
-    display: 'flex', 
-    flexDirection: 'column', 
-    justifyContent: 'center',
-    overflowY: 'auto', // 👈 핵심: 내용이 많으면 자막 영역 안에서만 스크롤 발생
-    minHeight: '0'     // 👈 flex 박스 안에서 스크롤이 작동하게 만드는 팁
-  },
-  targetText: { color: '#fff', fontSize: '16px', fontWeight: 'bold', marginBottom: '5px' },
-  subText: { color: '#58CC02', fontSize: '14px' },
-  btnGroup: { 
-    display: 'flex', 
-    gap: '10px', 
-    justifyContent: 'center',
-    paddingBottom: '10px' // 바닥에 너무 붙지 않게 여백
-  },
-  ctrlBtn: { width: '120px', padding: '12px', borderRadius: '25px', color: '#fff', fontWeight: 'bold', border: 'none' },
-  backBtn: { width: '120px', padding: '12px', borderRadius: '25px', backgroundColor: '#ff4b4b', color: '#fff', border: 'none' },
-  modalOverlay: { position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.8)', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1000 },
-  modalContent: { backgroundColor: '#fff', width: '90%', maxWidth: '450px', borderRadius: '25px', padding: '20px' },
-  reportList: { maxHeight: '60dvh', overflowY: 'auto', margin: '15px 0' },
-  reportCard: { backgroundColor: '#f9f9f9', padding: '12px', borderRadius: '15px', marginBottom: '10px', border: '1px solid #eee' },
-  reasonBox: { fontSize: '12px', color: '#666', borderTop: '1px solid #ddd', paddingTop: '5px', marginTop: '5px' },
-  closeBtn: { width: '100%', padding: '15px', backgroundColor: '#58CC02', color: '#fff', border: 'none', borderRadius: '15px', fontWeight: 'bold' }
-};
