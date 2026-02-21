@@ -22,8 +22,8 @@ export default function Home({ onStart }: { onStart: () => void }) {
       {/* 메인 타이틀 */}
       <h1 style={styles.subTitle}>
         <span style={styles.highlight}>Meet +150 AI tutors </span>
-        Start your first 7 min AI <br />
-        <span style={styles.highlight}>conversation for FREE</span>
+        <br />
+        <span style={styles.highlight}></span>
       </h1>
 
       

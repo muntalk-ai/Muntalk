@@ -128,7 +128,13 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   };
 
   const speakResponse = async (text: string) => {
-    try {
+  try {
+    // 🚀 아이폰용 비디오 강제 재생 코드 추가
+    const videos = document.querySelectorAll('video');
+    videos.forEach(v => {
+      v.muted = true; // 무음 확인
+      v.play().catch(e => console.log("Video Play Error:", e));
+    });
       if (audioRef.current) {
         audioRef.current.pause();
         audioRef.current.currentTime = 0;
@@ -178,9 +184,14 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
       <div style={styles.videoArea}>
   {/* 1. Idle 비디오 */}
   <video 
-    src={`/videos/${selectedTutor.id}_idle.mp4`} 
-    autoPlay loop muted playsInline preload="auto"
-    style={{
+  src={`/videos/${selectedTutor.id}_idle.mp4`} 
+  autoPlay 
+  loop 
+  muted 
+  playsInline  // 👈 필수
+  controls={false}
+  preload="auto"
+  style={{
       ...styles.videoFit,
       position: 'absolute',
       top: 0,
@@ -192,9 +203,14 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   />
   {/* 2. Talking 비디오 */}
   <video 
-    src={`/videos/${selectedTutor.id}_talk.mp4`} 
-    autoPlay loop muted playsInline preload="auto"
-    style={{
+  src={`/videos/${selectedTutor.id}_talk.mp4`} 
+  autoPlay 
+  loop 
+  muted 
+  playsInline  // 👈 필수
+  controls={false}
+  preload="auto"
+  style={{
       ...styles.videoFit,
       position: 'absolute',
       top: 0,
