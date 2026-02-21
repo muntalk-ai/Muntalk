@@ -213,7 +213,7 @@ const speakResponse = async (text: string) => {
       left: 0,
       zIndex: 1, // 밑에 깔림
       opacity: isTalking ? 0 : 1,
-      transition: 'opacity 0.2s linear'
+      transition: 'opacity 0.2s linear',
       pointerEvents: 'none', // 👈 2. 비디오가 클릭 이벤트를 가로채지 않게 함
     }} 
   />
@@ -224,6 +224,7 @@ const speakResponse = async (text: string) => {
   loop 
   muted 
   playsInline  // 👈 필수
+  webkit-playsinline="true" // 👈 1. 구형 아이폰 대
   controls={false}
   preload="auto"
   style={{
@@ -233,7 +234,8 @@ const speakResponse = async (text: string) => {
       left: 0,
       zIndex: 2, // 위에 겹침
       opacity: isTalking ? 1 : 0,
-      transition: 'opacity 0.2s linear'
+      transition: 'opacity 0.2s linear',
+      pointerEvents: 'none'
     }} 
   />
 </div>
@@ -255,6 +257,7 @@ const speakResponse = async (text: string) => {
               // 🚀 아이폰 잠금 해제 핵심 로직
               const videos = document.querySelectorAll('video');
               videos.forEach(v => {
+                v.muted = true;
                 v.play().catch(() => {}); 
               });
 
