@@ -96,8 +96,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     if (audioRef.current) audioRef.current.play().catch(() => {});
 
     // 🛠️ lib/prompts.ts에서 정리된 지시사항 가져오기
-    const systemPrompt = getSystemPrompt(selectedLevel, selectedRole, mainLangName!, subLangName!);
-
+    const systemPrompt = getSystemPrompt(selectedLevel, selectedRole, selectedRole, mainLangName!, subLangName!);
     try {
       // 🚀 이제 서버와 통신합니다. (위에서 play를 눌러놔서 권한이 유지됨)
       const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`, {
