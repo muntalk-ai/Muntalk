@@ -32,8 +32,8 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   const [isTalking, setIsTalking] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [isThinking, setIsThinking] = useState(false);
-  const [aiData, setAiData] = useState<any>({ reply: "", translation: "", correction: "", reason: "" });
-  const [analysisHistory, setAnalysisHistory] = useState<any[]>([]);
+  const [timeLeft, setTimeLeft] = useState<number | null>(null);
+  const [isAdmin, setIsAdmin] = useState(false);
   const [showReport, setShowReport] = useState(false);
   
   const mainLang = selectedLangId || 'en-US'; 
@@ -45,28 +45,22 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   
   const recognitionRef = useRef<any>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
   const hasGreetingPlayed = useRef(false);
 
   const mainLangName = SUB_LANGS.find(l => l.id === mainLang)?.name;
   const subLangName = SUB_LANGS.find(l => l.id === subLang)?.name;
- 
 
-  // 1. 유저 인증 및 타이머 설정
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user?.email === ADMIN_EMAIL) { setIsAdmin(true); setTimeLeft(9999); }
-      else { setTimeLeft(user ? 300 : 180); }
+      else { setTimeLeft(user ? 420 : 180); }
     });
-
     const timer = setInterval(() => {
       setTimeLeft((prev) => (prev && prev > 0 ? prev - 1 : prev));
     }, 1000);
-
     return () => { unsubscribe(); clearInterval(timer); };
   }, []);
 
-  // 2. 음성 인식 및 첫 대화 시작 (자막 언어 변경 시에도 반응)
   useEffect(() => {
     if (typeof window !== 'undefined' && (window as any).webkitSpeechRecognition) {
       const SpeechRecognition = (window as any).webkitSpeechRecognition;
@@ -75,54 +69,39 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
       recognitionRef.current.onresult = (e: any) => askGemini(e.results[0][0].transcript);
       recognitionRef.current.onend = () => setIsListening(false);
     }
-
     if (!hasGreetingPlayed.current) {
       askGemini("START_ROLEPLAY");
       hasGreetingPlayed.current = true;
-    } else {
-      // 자막 언어 변경 시 AI에게 지시 사항 업데이트
-      askGemini("SYSTEM: Update translation language to " + subLangName);
     }
-  }, [subLang]); // subLang이 바뀔 때마다 실행
+  }, []);
 
- const askGemini = async (prompt: string) => {
+  const askGemini = async (prompt: string) => {
+    if (!prompt) return;
     setIsThinking(true);
     const isStart = prompt === "START_ROLEPLAY";
-    const isLangUpdate = prompt.startsWith("SYSTEM:");
-
-    // 🚀 [아이폰 핵심] 서버 호출 전에 비디오/오디오 권한 사용 중임을 브라우저에 알림
-    // 이 코드가 fetch보다 먼저 실행되어야 아이폰이 잠기지 않습니다.
+    const cacheBuster = new Date().getTime();
+    
     const videos = document.querySelectorAll('video');
-    videos.forEach(v => {
-      v.muted = true;
-      v.play().catch(() => {}); 
-    });
-    if (audioRef.current) audioRef.current.play().catch(() => {});
+    videos.forEach(v => { v.muted = true; v.play().catch(() => {}); });
 
-    // 🛠️ lib/prompts.ts에서 정리된 지시사항 가져오기
     const systemPrompt = getSystemPrompt(selectedLevel, selectedRole, selectedRole, mainLangName!, subLangName!);
+
     try {
-      // 🚀 이제 서버와 통신합니다. (위에서 play를 눌러놔서 권한이 유지됨)
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`, {
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}&t=${cacheBuster}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           contents: [{ parts: [{ text: systemPrompt + "\nUser Input: " + prompt }] }]
         })
       });
-      
       const data = await response.json();
       const rawText = data.candidates[0].content.parts[0].text;
       const result = JSON.parse(rawText.match(/\{[\s\S]*\}/)[0]);
-      
       setAiData(result);
-
-      if (!isLangUpdate) {
-        if (!isStart) {
-          setAnalysisHistory(prev => [...prev, { user: prompt, better: result.correction, reason: result.reason }]);
-        }
-        speakResponse(result.reply);
+      if (!isStart) {
+        setAnalysisHistory(prev => [...prev, { user: prompt, better: result.correction, reason: result.reason }]);
       }
+      speakResponse(result.reply);
     } catch (e) { 
       console.error("Gemini Error:", e); 
     } finally { 
@@ -130,70 +109,98 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     }
   };
 
-const speakResponse = async (text: string) => {
-  try {
-    // 1. 기존 오디오 완전 초기화
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.src = "";
-    }
-
-    // 🚀 [아이폰 핵심] fetch(서버통신) 하러 가기 직전에 비디오를 미리 깨워둡니다.
-    // 이렇게 해야 AI 답변이 늦게와도 아이폰이 '재생 권한'을 회수하지 않습니다.
-    const videos = document.querySelectorAll('video');
-    videos.forEach(v => {
-      v.muted = true;
-      v.play().catch(() => {}); 
-    });
-
-    // 서버에 물어보기 전에 미리 "말하는 상태"로 비디오 전환 예약
-    setIsTalking(true); 
-
-    const response = await fetch('/api/tts', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text, lang: mainLang, gender: selectedTutor.gender })
-    });
-
-    const data = await response.json();
-    if (data.audioContent) {
-      const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
-      audioRef.current = audio;
-      audio.onended = () => setIsTalking(false);
-      
-      // 🚀 아이폰은 여기서도 거부할 수 있으므로 한 번 더 play()
-      await audio.play().catch(() => {
-        // 만약 소리가 안나면 수동 클릭이라도 유도해야함 (비디오는 일단 돌려둠)
-        setIsTalking(false);
+  const speakResponse = async (text: string) => {
+    try {
+      if (audioRef.current) { audioRef.current.pause(); audioRef.current.src = ""; }
+      const videos = document.querySelectorAll('video');
+      videos.forEach(v => { v.muted = true; v.play().catch(() => {}); });
+      setIsTalking(true); 
+      const response = await fetch('/api/tts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text, lang: mainLang, gender: selectedTutor.gender })
       });
+      const data = await response.json();
+      if (data.audioContent) {
+        const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
+        audioRef.current = audio;
+        audio.onended = () => setIsTalking(false);
+        await audio.play().catch(() => { setIsTalking(false); });
+      }
+    } catch (error) {
+      console.error("TTS Error:", error);
+      setIsTalking(false);
     }
-  } catch (error) {
-    console.error("TTS Error:", error);
-    setIsTalking(false);
-  }
-};
+  };
 
+  const handleSpeak = () => {
+    const videos = document.querySelectorAll('video');
+    videos.forEach(v => { v.muted = true; v.play().catch(() => {}); });
+    recognitionRef.current.lang = mainLang;
+    isListening ? recognitionRef.current.stop() : recognitionRef.current.start();
+  };
+
+  // ✅ 174번 줄 근처에서 닫혀있던 중괄호를 제거하고, 여기서 return을 시작합니다.
   return (
     <div style={styles.container}>
-      {/* 1. 상단 정보 바 */}
-      <Header isAdmin={isAdmin} timeLeft={timeLeft} role={selectedRole} level={selectedLevel} ... />
+      {/* 1. 상단 바 */}
+      <div style={styles.langSelectorBar}>
+        <div style={styles.roleInfo}>
+           <span style={styles.timerLabel}>{isAdmin ? "Admin" : `Time: ${Math.floor(timeLeft! / 60)}:${String(timeLeft! % 60).padStart(2, '0')}`}</span>
+           <span style={styles.levelLabel}>{selectedRole} | {selectedLevel}</span>
+        </div>
+        <div style={styles.selectorItem}>
+          <button onClick={() => setShowSubMenu(!showSubMenu)} style={styles.langBtn}>Subtitle: {subLangName} ▼</button>
+          {showSubMenu && (
+            <div style={styles.dropdown}>
+              {SUB_LANGS.map(l => (
+                <div key={l.id} onClick={() => {setSubLang(l.id); setShowSubMenu(false);}} style={styles.dropItem}>{l.name}</div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
 
       {/* 2. 비디오 컴포넌트 */}
       <TutorVideo tutorId={selectedTutor.id} isTalking={isTalking} />
 
+      {/* 3. 하단 영역 */}
       <div style={styles.talkArea}>
-        {/* 3. 자막 컴포넌트 */}
         <SubtitleArea reply={aiData.reply} translation={aiData.translation} isThinking={isThinking} />
 
-        {/* 4. 하단 버튼 그룹 */}
         <div style={styles.btnGroup}>
-          <button onClick={handleSpeak} style={...}> {isListening ? "Stop" : "Speak"} </button>
-          <button onClick={() => setShowReport(true)} style={styles.backBtn}> Finish </button>
+          <button 
+            onClick={handleSpeak} 
+            style={{...styles.ctrlBtn, backgroundColor: isListening ? '#ff4b4b' : '#58CC02'}}
+          >
+            {isListening ? "Stop" : "Speak"}
+          </button>
+          <button onClick={() => setShowReport(true)} style={styles.backBtn}>
+            Finish
+          </button>
         </div>
       </div>
 
-      {/* 5. 리포트 모달 컴포넌트 */}
-      {showReport && <ReportModal history={analysisHistory} onBack={onBack} />}
+      {/* 4. 리포트 모달 */}
+      {showReport && (
+        <ReportModal history={analysisHistory} onBack={onBack} />
+      )}
     </div>
   );
 }
+
+const styles: any = {
+  container: { height: '100dvh', backgroundColor: '#000', display: 'flex', flexDirection: 'column', overflow: 'hidden' },
+  langSelectorBar: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px', backgroundColor: '#1a1a1a', borderBottom: '1px solid #333', zIndex: 100 },
+  roleInfo: { display: 'flex', flexDirection: 'column' },
+  timerLabel: { color: '#fff', fontSize: '13px', fontWeight: 'bold' },
+  levelLabel: { color: '#58CC02', fontSize: '10px' },
+  selectorItem: { position: 'relative' },
+  langBtn: { backgroundColor: '#333', color: '#fff', border: '1px solid #444', borderRadius: '5px', padding: '4px 10px', fontSize: '11px' },
+  dropdown: { position: 'absolute', top: '35px', right: 0, backgroundColor: '#fff', borderRadius: '8px', width: '120px', maxHeight: '200px', overflowY: 'auto', zIndex: 101 },
+  dropItem: { padding: '10px', color: '#333', fontSize: '12px', borderBottom: '1px solid #eee' },
+  talkArea: { flex: 1, backgroundColor: '#1a1a1a', display: 'flex', flexDirection: 'column', padding: '15px' },
+  btnGroup: { display: 'flex', gap: '15px', justifyContent: 'center', paddingBottom: '10px' },
+  ctrlBtn: { width: '130px', padding: '14px', borderRadius: '30px', color: '#fff', fontWeight: 'bold', border: 'none', cursor: 'pointer' },
+  backBtn: { width: '130px', padding: '14px', borderRadius: '30px', backgroundColor: '#ff4b4b', color: '#fff', border: 'none', cursor: 'pointer' },
+};
