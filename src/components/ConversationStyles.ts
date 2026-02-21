@@ -1,0 +1,18 @@
+export const styles: any = {
+  container: { height: '100dvh', backgroundColor: '#000', display: 'flex', flexDirection: 'column', overflow: 'hidden' },
+  langSelectorBar: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px', backgroundColor: '#1a1a1a', borderBottom: '1px solid #333', zIndex: 100 },
+  roleInfo: { display: 'flex', flexDirection: 'column' },
+  timerLabel: { color: '#fff', fontSize: '13px', fontWeight: 'bold' },
+  levelLabel: { color: '#58CC02', fontSize: '10px' },
+  selectorItem: { position: 'relative' },
+  langBtn: { backgroundColor: '#333', color: '#fff', border: '1px solid #444', borderRadius: '5px', padding: '4px 10px', fontSize: '11px' },
+  dropdown: { position: 'absolute', top: '35px', right: 0, backgroundColor: '#fff', borderRadius: '8px', width: '120px', maxHeight: '200px', overflowY: 'auto', zIndex: 101 },
+  dropItem: { padding: '10px', color: '#333', fontSize: '12px', borderBottom: '1px solid #eee' },
+  talkArea: { flex: 1, backgroundColor: '#1a1a1a', display: 'flex', flexDirection: 'column', padding: '15px' },
+  subtitleSection: { flex: 1, backgroundColor: '#2a2a2a', borderRadius: '20px', padding: '20px', marginBottom: '15px', border: '1px solid #444', textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', overflowY: 'auto' },
+  targetText: { color: '#fff', fontSize: '18px', fontWeight: 'bold', marginBottom: '8px' },
+  subText: { color: '#58CC02', fontSize: '15px' },
+  btnGroup: { display: 'flex', gap: '15px', justifyContent: 'center', paddingBottom: '10px' },
+  ctrlBtn: { width: '130px', padding: '14px', borderRadius: '30px', color: '#fff', fontWeight: 'bold', border: 'none', cursor: 'pointer' },
+  backBtn: { width: '130px', padding: '14px', borderRadius: '30px', backgroundColor: '#ff4b4b', color: '#fff', border: 'none', cursor: 'pointer' },
+};
