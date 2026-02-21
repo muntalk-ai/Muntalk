@@ -129,52 +129,46 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
 
 const speakResponse = async (text: string) => {
   try {
-    // 1. 기존 오디오 초기화 (반복 버그 해결)
+    // 1. 기존 오디오 완전 초기화
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.src = "";
     }
 
-    // 🚀 [아이폰 핵심] 말하기 시작 '전'에 두 비디오를 모두 play() 시켜야 함
+    // 🚀 [아이폰 핵심] fetch(서버통신) 하러 가기 직전에 비디오를 미리 깨워둡니다.
+    // 이렇게 해야 AI 답변이 늦게와도 아이폰이 '재생 권한'을 회수하지 않습니다.
     const videos = document.querySelectorAll('video');
-    for (const v of Array.from(videos)) {
+    videos.forEach(v => {
       v.muted = true;
-      // 이미 재생 중일 수 있으므로 다시 한번 play() 호출
-      await v.play().catch(() => {}); 
-    }
+      v.play().catch(() => {}); 
+    });
 
-    setIsTalking(true); // 여기서 투명도(opacity)만 바뀜
+    // 서버에 물어보기 전에 미리 "말하는 상태"로 비디오 전환 예약
+    setIsTalking(true); 
 
     const response = await fetch('/api/tts', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          text: text,
-          lang: mainLang,
-          gender: selectedTutor.gender
-        })
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text, lang: mainLang, gender: selectedTutor.gender })
+    });
+
+    const data = await response.json();
+    if (data.audioContent) {
+      const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
+      audioRef.current = audio;
+      audio.onended = () => setIsTalking(false);
+      
+      // 🚀 아이폰은 여기서도 거부할 수 있으므로 한 번 더 play()
+      await audio.play().catch(() => {
+        // 만약 소리가 안나면 수동 클릭이라도 유도해야함 (비디오는 일단 돌려둠)
+        setIsTalking(false);
       });
-
-      const data = await response.json();
-
-      if (data.audioContent) {
-        // 3. 새로운 오디오 객체 생성
-        const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
-        audioRef.current = audio;
-        
-        audio.onended = () => {
-          setIsTalking(false);
-          // 재생 끝나면 소스 비우기 (메모리 정리)
-          audio.src = "";
-        };
-
-        await audio.play();
-      }
-    } catch (error) {
-      console.error("TTS Error:", error);
-      setIsTalking(false);
     }
-  };
+  } catch (error) {
+    console.error("TTS Error:", error);
+    setIsTalking(false);
+  }
+};
 
   return (
     <div style={styles.container}>
@@ -197,46 +191,36 @@ const speakResponse = async (text: string) => {
 
       <div style={styles.videoArea}>
   {/* 1. Idle 비디오 */}
-  <video 
+ {/* 1. Idle 비디오 */}
+<video 
   src={`/videos/${selectedTutor.id}_idle.mp4`} 
-  autoPlay 
-  loop 
-  muted 
-  playsInline  // 👈 필수
-  webkit-playsinline="true" // 👈 1. 구형 아이폰 대응
-  controls={false}
+  autoPlay loop muted playsInline 
+  webkit-playsinline="true" // 👈 iOS Safari 구형 대응
   preload="auto"
   style={{
-      ...styles.videoFit,
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      zIndex: 1, // 밑에 깔림
-      opacity: isTalking ? 0 : 1,
-      transition: 'opacity 0.2s linear',
-      pointerEvents: 'none', // 👈 2. 비디오가 클릭 이벤트를 가로채지 않게 함
-    }} 
-  />
-  {/* 2. Talking 비디오 */}
-  <video 
+    ...styles.videoFit,
+    position: 'absolute',
+    top: 0, left: 0,
+    zIndex: 1,
+    opacity: isTalking ? 0 : 1,
+    pointerEvents: 'none' // 👈 비디오가 클릭을 방해하지 못하게
+  }} 
+/>
+
+{/* 2. Talking 비디오 */}
+<video 
   src={`/videos/${selectedTutor.id}_talk.mp4`} 
-  autoPlay 
-  loop 
-  muted 
-  playsInline  // 👈 필수
-  webkit-playsinline="true" // 👈 1. 구형 아이폰 대
-  controls={false}
+  autoPlay loop muted playsInline 
+  webkit-playsinline="true" // 👈 iOS 필수
   preload="auto"
   style={{
-      ...styles.videoFit,
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      zIndex: 2, // 위에 겹침
-      opacity: isTalking ? 1 : 0,
-      transition: 'opacity 0.2s linear',
-      pointerEvents: 'none'
-    }} 
+    ...styles.videoFit,
+    position: 'absolute',
+    top: 0, left: 0,
+    zIndex: 2,
+    opacity: isTalking ? 1 : 0,
+    pointerEvents: 'none' // 👈 iOS에서 탭 가로채기 방지
+  }}
   />
 </div>
 
