@@ -2,7 +2,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { auth } from '../lib/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
-
+// 🚀 여기에 추가하시면 됩니다!
+import { getSystemPrompt } from '../lib/prompts';
 // ✅ 하드코딩된 키를 지우고 환경변수에서 가져오도록 변경
 const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY; 
 const ADMIN_EMAIL = "muntalkofficial@gmail.com";
@@ -80,31 +81,31 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     }
   }, [subLang]); // subLang이 바뀔 때마다 실행
 
-  const askGemini = async (prompt: string) => {
+ const askGemini = async (prompt: string) => {
     setIsThinking(true);
     const isStart = prompt === "START_ROLEPLAY";
     const isLangUpdate = prompt.startsWith("SYSTEM:");
 
-    try {
-      const systemPrompt = `
-        STRICT OPERATING INSTRUCTIONS:
-        1. Role: ${selectedRole}. Level: ${selectedLevel}.
-        2. AI Main Response (reply): MUST be in ${mainLangName}.
-        3. Translation & Reason Language: MUST be in ${subLangName}.
-        4. CRITICAL: Do NOT use Korean for translation or reason unless ${subLangName} is Korean.
-        
-        OUTPUT FORMAT (JSON ONLY):
-        {
-          "reply": "Message in ${mainLangName}",
-          "translation": "Perfect translation in ${subLangName}",
-          "correction": "Corrected user input in ${mainLangName}",
-          "reason": "Brief explanation in ${subLangName}"
-        }
-      `;
+    // 🚀 [아이폰 핵심] 서버 호출 전에 비디오/오디오 권한 사용 중임을 브라우저에 알림
+    // 이 코드가 fetch보다 먼저 실행되어야 아이폰이 잠기지 않습니다.
+    const videos = document.querySelectorAll('video');
+    videos.forEach(v => {
+      v.muted = true;
+      v.play().catch(() => {}); 
+    });
+    if (audioRef.current) audioRef.current.play().catch(() => {});
 
+    // 🛠️ lib/prompts.ts에서 정리된 지시사항 가져오기
+    const systemPrompt = getSystemPrompt(selectedLevel, selectedRole, mainLangName!, subLangName!);
+
+    try {
+      // 🚀 이제 서버와 통신합니다. (위에서 play를 눌러놔서 권한이 유지됨)
       const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`, {
-        method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ contents: [{ parts: [{ text: systemPrompt + "\nUser Input: " + prompt }] }] })
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: systemPrompt + "\nUser Input: " + prompt }] }]
+        })
       });
       
       const data = await response.json();
@@ -113,7 +114,6 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
       
       setAiData(result);
 
-      // 언어 설정 업데이트가 아닐 때만 음성 출력 및 히스토리 저장
       if (!isLangUpdate) {
         if (!isStart) {
           setAnalysisHistory(prev => [...prev, { user: prompt, better: result.correction, reason: result.reason }]);
