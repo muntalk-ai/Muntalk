@@ -54,10 +54,10 @@ export const getSystemPrompt = (level: string, topic: string, role: string, main
      2. ${subLang}로 번역과 학습 팁을 제공하세요.
      3. 출력은 반드시 아래 JSON 형식을 지키세요:
      {
-       "reply": "Teacher's message in ${mainLangName}",
-       "translation": "Translation in ${subLangName}",
+       "reply": "Teacher's message in ${mainLang}",
+       "translation": "Translation in ${subLang}",
        "correction": "Target sentence for the user",
-       "reason": "Grammar tip or encouragement in ${subLangName}"
+       "reason": "Grammar tip or encouragement in ${subLang}"
      }
   `;
 };
