@@ -5,7 +5,7 @@ import { useSpeechToText } from './useSpeechToText';
 import { useChatLogic } from './useChatLogic';
 
 export function useConversation(level: string, role: string, mainLang: string, mainLangName: string, subLangName: string, tutor: any) {
-  const { timeLeft, isAdmin } = useTimer("muntalkofficial@gmail.com");
+  const { timeLeft, isAdmin } = useTimer();
   const { aiData, analysisHistory, isThinking, isTalking, askGemini } = useChatLogic(level, role, mainLang, mainLangName, subLangName, tutor);
   const { isListening, startListening, stopListening } = useSpeechToText(mainLang, askGemini);
   
