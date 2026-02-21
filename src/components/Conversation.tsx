@@ -40,10 +40,12 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   
   const recognitionRef = useRef<any>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
   const hasGreetingPlayed = useRef(false);
 
   const mainLangName = SUB_LANGS.find(l => l.id === mainLang)?.name;
   const subLangName = SUB_LANGS.find(l => l.id === subLang)?.name;
+ 
 
   // 1. 유저 인증 및 타이머 설정
   useEffect(() => {
@@ -174,15 +176,46 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
       </div>
 
       <div style={styles.videoArea}>
-        <video key={isTalking ? 't' : 'i'} src={isTalking ? `/videos/${selectedTutor.id}_talk.mp4` : `/videos/${selectedTutor.id}_idle.mp4`} autoPlay loop muted playsInline style={styles.videoFit} />
-      </div>
+  {/* 1. Idle 비디오 */}
+  <video 
+    src={`/videos/${selectedTutor.id}_idle.mp4`} 
+    autoPlay loop muted playsInline preload="auto"
+    style={{
+      ...styles.videoFit,
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      zIndex: 1, // 밑에 깔림
+      opacity: isTalking ? 0 : 1,
+      transition: 'opacity 0.2s linear'
+    }} 
+  />
+  {/* 2. Talking 비디오 */}
+  <video 
+    src={`/videos/${selectedTutor.id}_talk.mp4`} 
+    autoPlay loop muted playsInline preload="auto"
+    style={{
+      ...styles.videoFit,
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      zIndex: 2, // 위에 겹침
+      opacity: isTalking ? 1 : 0,
+      transition: 'opacity 0.2s linear'
+    }} 
+  />
+</div>
 
       <div style={styles.talkArea}>
+        {/* 자막 영역: 내용이 많아지면 여기서만 스크롤이 생깁니다 */}
         <div style={styles.subtitleSection}>
           <div style={styles.targetText}>{isThinking ? "..." : aiData.reply}</div>
           <div style={styles.subText}>{aiData.translation}</div>
+          {/* 자동 스크롤을 위한 위치 표시 */}
+          <div ref={messagesEndRef} />
         </div>
 
+        {/* 버튼 영역: 자막 내용과 상관없이 항상 하단에 고정됩니다 */}
         <div style={styles.btnGroup}>
           <button onClick={() => { recognitionRef.current.lang = mainLang; isListening ? recognitionRef.current.stop() : recognitionRef.current.start(); }} 
             style={{...styles.ctrlBtn, backgroundColor: isListening ? '#ff4b4b' : '#58CC02'}}>
@@ -191,7 +224,6 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
           <button onClick={() => setShowReport(true)} style={styles.backBtn}>Finish</button>
         </div>
       </div>
-
       {showReport && (
         <div style={styles.modalOverlay}>
           <div style={styles.modalContent}>
@@ -224,13 +256,47 @@ const styles: any = {
   langBtn: { backgroundColor: '#333', color: '#fff', border: '1px solid #444', borderRadius: '5px', padding: '4px 10px', fontSize: '11px' },
   dropdown: { position: 'absolute', top: '35px', right: 0, backgroundColor: '#fff', borderRadius: '8px', width: '120px', maxHeight: '200px', overflowY: 'auto', zIndex: 101 },
   dropItem: { padding: '10px', color: '#333', fontSize: '12px', borderBottom: '1px solid #eee' },
-  videoArea: { height: '65dvh', position: 'relative', backgroundColor: '#000' },
-  videoFit: { width: '100%', height: '100%', objectFit: 'contain' },
-  talkArea: { height: '35dvh', backgroundColor: '#1a1a1a', borderTopLeftRadius: '30px', borderTopRightRadius: '30px', padding: '15px 20px', display: 'flex', flexDirection: 'column' },
-  subtitleSection: { flex: 1, backgroundColor: '#2a2a2a', borderRadius: '20px', padding: '15px', marginBottom: '10px', border: '1px solid #444', textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' },
+  videoArea: { 
+    height: '60dvh', // ✅ 정확한 높이를 지정
+    width: '100%',
+    position: 'relative', 
+    backgroundColor: '#000',
+    overflow: 'hidden' 
+  },
+  videoFit: { 
+    width: '100%', 
+    height: '100%', 
+    objectFit: 'contain'
+    // 💡 여기서 position: 'absolute'는 위 JSX 코드 안에서 직접 주는 게 더 확실합니다.
+  },
+  talkArea: { 
+    flex: 1, // ✅ 남은 공간을 채우도록 설정
+    backgroundColor: '#1a1a1a', 
+    display: 'flex', 
+    flexDirection: 'column'
+  },
+  subtitleSection: { 
+    flex: 1, 
+    backgroundColor: '#2a2a2a', 
+    borderRadius: '20px', 
+    padding: '15px', 
+    marginBottom: '15px', // 버튼과의 간격
+    border: '1px solid #444', 
+    textAlign: 'center', 
+    display: 'flex', 
+    flexDirection: 'column', 
+    justifyContent: 'center',
+    overflowY: 'auto', // 👈 핵심: 내용이 많으면 자막 영역 안에서만 스크롤 발생
+    minHeight: '0'     // 👈 flex 박스 안에서 스크롤이 작동하게 만드는 팁
+  },
   targetText: { color: '#fff', fontSize: '16px', fontWeight: 'bold', marginBottom: '5px' },
   subText: { color: '#58CC02', fontSize: '14px' },
-  btnGroup: { display: 'flex', gap: '10px', justifyContent: 'center' },
+  btnGroup: { 
+    display: 'flex', 
+    gap: '10px', 
+    justifyContent: 'center',
+    paddingBottom: '10px' // 바닥에 너무 붙지 않게 여백
+  },
   ctrlBtn: { width: '120px', padding: '12px', borderRadius: '25px', color: '#fff', fontWeight: 'bold', border: 'none' },
   backBtn: { width: '120px', padding: '12px', borderRadius: '25px', backgroundColor: '#ff4b4b', color: '#fff', border: 'none' },
   modalOverlay: { position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.8)', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1000 },

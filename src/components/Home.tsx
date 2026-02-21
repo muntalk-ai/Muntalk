@@ -16,16 +16,31 @@ export default function Home({ onStart }: { onStart: () => void }) {
         </button>
       </div>
 
+      {/* 메인 로고 */}
       <img src="/logo.png" style={styles.megaLogoImg} alt="muntalk" />
       
+      {/* 메인 타이틀 */}
       <h1 style={styles.subTitle}>
-        Learn languages <br />
-        <span style={styles.highlight}>with +150 AI tutors</span>
+        <span style={styles.highlight}>Meet +150 AI tutors </span>
+        Start your first 7 min AI <br />
+        <span style={styles.highlight}>conversation for FREE</span>
       </h1>
 
+      
+
+      
+
+      {/* 액션 버튼 영역 */}
       <div style={styles.actionArea}>
-        <button onClick={onStart} style={styles.compactBtn}>GET STARTED</button>
-        <p style={styles.hintText}></p>
+        <button onClick={onStart} style={styles.compactBtn}>
+          🚀 START FREE SESSION
+        </button>
+        <p style={styles.hintText}>Upgrade for unlimited access $8.88/mo</p>
+      </div>
+
+      {/* 결제 로고 */}
+      <div style={styles.cardLogos}>
+      
       </div>
     </div>
   );
@@ -48,15 +63,15 @@ const styles: any = {
     position: 'absolute',
     top: '20px',
     right: '20px',
-    display: 'flex', // 버튼 두 개를 나란히 배치
+    display: 'flex',
     gap: '10px'
   },
   loginLink: {
     padding: '8px 16px',
     borderRadius: '12px',
-    backgroundColor: 'transparent', // 배경 투명하게 변경
+    backgroundColor: 'transparent',
     color: '#7dd0de',
-    border: '2px solid #7dd0de', // 테두리 강조
+    border: '2px solid #7dd0de',
     fontSize: '14px',
     fontWeight: '700',
     cursor: 'pointer',
@@ -64,7 +79,7 @@ const styles: any = {
   signupBtn: {
     padding: '8px 16px',
     borderRadius: '12px',
-    backgroundColor: '#7dd0de', // 배경색 적용
+    backgroundColor: '#7dd0de',
     color: '#fff',
     border: '2px solid #7dd0de',
     fontSize: '14px',
@@ -72,31 +87,53 @@ const styles: any = {
     cursor: 'pointer',
   },
   megaLogoImg: { 
-    width: '300px', 
-    marginBottom: '20px' 
+    width: '280px', 
+    marginBottom: '10px' 
   },
   subTitle: {
-    fontSize: '22px',
-    color: '#4b4b4b',
-    fontWeight: '600',
-    lineHeight: '1.4',
-    marginBottom: '40px',
+    fontSize: '26px',
+    color: '#1f1f1f',
+    fontWeight: '900',
+    lineHeight: '1.2',
+    marginBottom: '10px',
     wordBreak: 'keep-all'
   },
   highlight: {
-    color: '#58CC02',
-    fontSize: '18px',
+    color: '#1877F2',
+    fontSize: '24px',
+    fontWeight: '800',
     display: 'block',
     marginTop: '5px'
+  },
+  description: {
+    fontSize: '15px',
+    color: '#666',
+    marginBottom: '25px',
+    lineHeight: '1.5',
+    fontWeight: '500'
+  },
+  previewBox: {
+    backgroundColor: '#f8f9fa',
+    padding: '15px 25px',
+    borderRadius: '20px',
+    marginBottom: '35px',
+    border: '1px solid #eee',
+    fontSize: '13px',
+    textAlign: 'left',
+    color: '#444'
+  },
+  previewItem: {
+    margin: '5px 0',
+    fontWeight: '600'
   },
   actionArea: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    gap: '15px'
+    gap: '10px'
   },
   compactBtn: { 
-    padding: '18px 80px', 
+    padding: '18px 60px', 
     borderRadius: '100px', 
     backgroundColor: '#58CC02', 
     color: '#fff', 
@@ -107,8 +144,15 @@ const styles: any = {
     boxShadow: '0 5px 0 #46a302',
   },
   hintText: {
-    fontSize: '13px',
+    fontSize: '12px',
     color: '#afafaf',
-    fontWeight: '500'
+    fontWeight: '600'
+  },
+  cardLogos: {
+    marginTop: '30px',
+    fontSize: '10px',
+    color: '#ddd',
+    letterSpacing: '1px',
+    textTransform: 'uppercase'
   }
-};
+}; // ✅ 여기서 닫는 중괄호가 빠져있던 것을 수정했습니다.
