@@ -3,50 +3,42 @@
 import { useEffect, useRef } from 'react';
 
 export default function TutorVideo({ tutorId, isTalking }: { tutorId: string, isTalking: boolean }) {
-  const videoRef = useRef<HTMLVideoElement>(null);
+  // 각 비디오를 직접 조절하기 위한 갈고리(Ref)
+  const idleRef = useRef<HTMLVideoElement>(null);
+  const talkRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    // 1. 상태에 따라 파일 경로 결정
-    const newSrc = isTalking ? `/videos/${tutorId}_talk.mp4` : `/videos/${tutorId}_idle.mp4`;
-    
-    // 2. 현재 재생 중인 파일과 다를 때만 교체
-    if (video.getAttribute('src') !== newSrc) {
-      video.src = newSrc;
-      video.load(); // 새로운 파일 로드
+    // [핵심] 대화가 시작될 때 talk 비디오의 음소거를 강제로 해제
+    if (isTalking && talkRef.current) {
+      talkRef.current.muted = false; // 소리 켜기
       
-      // 3. 아이폰/크롬 정책 대응: 음소거 설정 후 재생, 성공하면 음소거 해제
-      video.muted = !isTalking; 
-      
-      const playVideo = async () => {
-        try {
-          await video.play();
-          // 재생 성공 후, 대화 중이라면 소리를 켭니다.
-          if (isTalking) {
-            video.muted = false;
-          }
-        } catch (err) {
-          console.error("Playback failed:", err);
-          // 실패 시 무음으로라도 재생 시도 (아이폰 보안 통과용)
-          video.muted = true;
-          video.play();
-        }
-      };
-
-      playVideo();
+      // 혹시 브라우저가 소리 켜는 걸 보고 영상을 멈췄을까봐 다시 재생 명령
+      const playPromise = talkRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          console.log("아이폰 정책으로 무음 재생 중 - 터치 필요");
+        });
+      }
+    } else if (!isTalking && talkRef.current) {
+      talkRef.current.muted = true; // 대화 끝나면 다시 무음으로
     }
-  }, [isTalking, tutorId]);
+  }, [isTalking]);
 
   return (
     <div style={styles.videoArea}>
+      {/* 1. 대기 영상 (언제나 무음) */}
       <video 
-        ref={videoRef}
-        loop 
-        playsInline 
-        autoPlay
-        style={styles.videoFit}
+        ref={idleRef}
+        src={`/videos/${tutorId}_idle.mp4`} 
+        autoPlay loop muted playsInline 
+        style={{ ...styles.videoFit, position: 'absolute', zIndex: 1, opacity: isTalking ? 0 : 1 }} 
+      />
+      {/* 2. 대화 영상 (isTalking일 때 소리 해제 로직 작동) */}
+      <video 
+        ref={talkRef}
+        src={`/videos/${tutorId}_talk.mp4`} 
+        autoPlay loop muted playsInline 
+        style={{ ...styles.videoFit, position: 'absolute', zIndex: 2, opacity: isTalking ? 1 : 0 }}
       />
     </div>
   );
