@@ -4,18 +4,29 @@ import { useTimer } from './useTimer';
 import { useSpeechToText } from './useSpeechToText';
 import { useChatLogic } from './useChatLogic';
 
-// 인자에 topic(주제)을 추가하여 전달받도록 수정했습니다.
-export function useConversation(level: string, topic: string, role: string, mainLang: string, mainLangName: string, subLangName: string, tutor: any) {
+export function useConversation(
+  level: string, 
+  topic: string, 
+  role: string, 
+  mainLang: string, 
+  mainLangName: string, 
+  subLangName: string, 
+  tutor: any
+) {
   const { timeLeft, isAdmin } = useTimer();
 
-  // ✅ useChatLogic의 정의에 맞게 6개의 인자를 순서대로 전달합니다.
+  /**
+   * ✅ 수정 포인트: 인자 순서를 useChatLogic의 정의(7개)와 완벽히 맞췄습니다.
+   * 4번째 자리인 'mainLang'이 누락되어 음성이 안 나왔던 것입니다.
+   */
   const { aiData, analysisHistory, isThinking, isTalking, askGemini } = useChatLogic(
-    level, 
-    topic, 
-    role, 
-    mainLangName, // mainLangN 자리
-    subLangName,  // subLanN 자리
-    tutor
+    level,        // 1
+    topic,        // 2
+    role,         // 3
+    mainLang,     // 4. (추가) TTS용 언어 코드 ('en-US' 등)
+    mainLangName, // 5. 프롬프트용 언어 이름 ('English' 등)
+    subLangName,  // 6. 자막용 언어 이름 ('Korean' 등)
+    tutor         // 7. 튜터 객체
   );
 
   const { isListening, startListening, stopListening } = useSpeechToText(mainLang, askGemini);
