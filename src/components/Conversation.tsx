@@ -8,9 +8,7 @@ import TutorVideo from './TutorVideo';
 import SubtitleArea from './SubtitleArea';
 import ReportModal from './ReportModal';
 
-const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY; 
-const ADMIN_EMAIL = "muntalkofficial@gmail.com";
-
+// 필요한 상수 (ADMIN_EMAIL 등은 useTimer 내부에서 처리되므로 여기서 쓰지 않는다면 생략 가능)
 const SUB_LANGS = [
   { id: 'ko-KR', name: 'Korean' }, { id: 'en-US', name: 'English' }, { id: 'ja-JP', name: 'Japanese' },
   { id: 'zh-CN', name: 'Chinese' }, { id: 'es-ES', name: 'Spanish' }, { id: 'fr-FR', name: 'French' },
@@ -26,6 +24,7 @@ const SUB_LANGS = [
   { id: 'ne-NP', name: 'Nepali' }, { id: 'tg-TJ', name: 'Tajik' }, { id: 'ky-KG', name: 'Kyrgyz' },
   { id: 'hmn-CN', name: 'Hmong' }, { id: 'ro-MD', name: 'Moldovan' }, { id: 'yue-HK', name: 'Cantonese' }
 ];
+
 export default function Conversation({ selectedLangId, selectedTutor, selectedLevel, selectedRole, onBack }: any) {
   const [subLang, setSubLang] = useState('ko-KR');
   const [showSubMenu, setShowSubMenu] = useState(false);
@@ -34,9 +33,21 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   const mainLangName = SUB_LANGS.find(l => l.id === mainLang)?.name || "";
   const subLangName = SUB_LANGS.find(l => l.id === subLang)?.name || "";
 
-  // 🚀 관제센터 훅에서 모든 데이터 가져오기
+  /**
+   * ✅ 수정 포인트 1: useConversation 인자 수정
+   * 순서: (level, topic, role, mainLang, mainLangName, subLangName, tutor)
+   * 현재 selectedRole을 topic과 role 양쪽에 넣어 에러를 방지합니다.
+   */
   const { isTalking, isListening, isThinking, timeLeft, isAdmin, aiData, analysisHistory, handleSpeak } = 
-    useConversation(selectedLevel, selectedRole, mainLang, mainLangName, subLangName, selectedTutor.gender);
+    useConversation(
+      selectedLevel, 
+      selectedRole, // topic 자리 (추가됨)
+      selectedRole, // role 자리
+      mainLang, 
+      mainLangName, 
+      subLangName, 
+      selectedTutor // gender만 보냈던 것을 tutor 객체 전체로 변경 (TTS 언어 코드 대응)
+    );
 
   const [showReport, setShowReport] = useState(false);
 
@@ -45,7 +56,9 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
       {/* 상단 바 (Header) */}
       <div style={styles.langSelectorBar}>
         <div style={styles.roleInfo}>
-           <span style={styles.timerLabel}>{isAdmin ? "Admin" : `Time: ${Math.floor(timeLeft! / 60)}:${String(timeLeft! % 60).padStart(2, '0')}`}</span>
+           <span style={styles.timerLabel}>
+             {isAdmin ? "Admin" : `Time: ${Math.floor(timeLeft! / 60)}:${String(timeLeft! % 60).padStart(2, '0')}`}
+           </span>
            <span style={styles.levelLabel}>{selectedRole} | {selectedLevel}</span>
         </div>
         <div style={styles.selectorItem}>
@@ -53,7 +66,9 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
           {showSubMenu && (
             <div style={styles.dropdown}>
               {SUB_LANGS.map(l => (
-                <div key={l.id} onClick={() => {setSubLang(l.id); setShowSubMenu(false);}} style={styles.dropItem}>{l.name}</div>
+                <div key={l.id} onClick={() => {setSubLang(l.id); setShowSubMenu(false);}} style={styles.dropItem}>
+                  {l.name}
+                </div>
               ))}
             </div>
           )}
@@ -63,6 +78,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
       <TutorVideo tutorId={selectedTutor.id} isTalking={isTalking} />
 
       <div style={styles.talkArea}>
+        {/* aiData.translation이 제대로 전달되도록 확인 */}
         <SubtitleArea reply={aiData.reply} translation={aiData.translation} isThinking={isThinking} />
 
         <div style={styles.btnGroup}>
