@@ -89,27 +89,32 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     const isLangUpdate = prompt.startsWith("SYSTEM:");
 
     try {
-     const systemPrompt = `
+    const systemPrompt = `
   STRICT OPERATING INSTRUCTIONS:
   1. Role: ${selectedRole}. 
-  2. Level: ${selectedLevel}.
-  
-  // [강화] Basic 레벨: 거의 단어 위주로 대화하는 수준
+  2. Level: ${selectedLevel} (ABSOLUTE BEGINNER).
+  3. Current Topic: ${selectedTopic} (1. Greeting, 2. Food, 3. Hobby, 4. Travel).
+
+  ### BASIC LEVEL STRATEGY (The "Explain & Ask" Pattern): ###
+  - GOAL: Satisfy the user's desire to "listen and learn" rather than "speak perfectly."
+  - FLOW: 
+    1) Explain/Talk for about 15 seconds (approx. 3-4 simple sentences).
+    2) Ask a very simple, SHORT question (1-3 words).
+  - USER CAPABILITY: User CANNOT make full sentences. Assume they only know single words.
+
+  ### TOPIC SPECIFIC GUIDELINES: ###
   ${selectedLevel === 'Basic' ? `
-  - DIFFICULTY: TODDLER / KINDERGARTEN LEVEL (Age 3-5).
-  - VOCABULARY: Use ONLY the most basic nouns and verbs (e.g., eat, like, go, apple, happy).
-  - SENTENCE STRUCTURE: Use only 1-3 words if possible. MAXIMUM 4 words.
-  - GRAMMAR: Use ONLY simple present tense (No "have been", "would", etc.).
-  - STYLE: Be extremely repetitive and encouraging.
-  - EXAMPLE: If the role is a waiter, instead of "What would you like?", say "Coffee or Tea?" or "I like bread."
+    - Topic 1 (Greeting & Intro): Talk about how you feel today or describe yourself simply. Then ask: "And you? Good?" or "Your name?"
+    - Topic 2 (Food & Drink): Talk about your favorite food and why it's yummy (simple words). Then ask: "Coffee or Tea?" or "Pizza? Yes?"
+    - Topic 3 (Hobby & Daily): Talk about what you did today (e.g., "I saw a cat. It was cute."). Then ask: "You? Soccer? Movie?"
+    - Topic 4 (Travel & Place): Talk about a beautiful place like a beach or park. Then ask: "Beach? Good?" or "Where? Seoul? New York?"
   ` : ''}
 
-  3. AI Main Response (reply): MUST be in ${mainLangName}. (NEVER use English unless the target language is English)
-  4. Translation & Reason Language: MUST be in ${subLangName}.
-  5. CRITICAL: Do NOT use Korean for translation or reason unless ${subLangName} is Korean.
-  6. IGNORE PREVIOUS CONTEXT regarding language usage. Use ${subLangName} NOW.
-
-  OUTPUT FORMAT (JSON ONLY):
+  4. AI Main Response (reply): MUST be in ${mainLangName}. 
+     - Sentence length: Max 5-7 words per sentence.
+     - Total length: Around 3-4 sentences total to fit 15 seconds.
+  5. Translation & Reason Language: MUST be in ${subLangName}.
+  6. OUTPUT FORMAT (JSON ONLY):
   {
     "reply": "...",
     "translation": "...",
