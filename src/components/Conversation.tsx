@@ -40,6 +40,10 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   const recognitionRef = useRef<any>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const hasGreetingPlayed = useRef(false);
+  // [추가] 아이폰 세션 유지를 위해 오디오 객체를 미리 생성합니다.
+  useEffect(() => {
+    audioRef.current = new Audio();
+  }, []);
   // iOS 오디오 세션 활성화 체크를 위한 Ref
   const isAudioUnlocked = useRef(false);
 
@@ -139,34 +143,22 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     }
   };
 
-  const speakResponse = async (text: string) => {
+ const speakResponse = async (text: string) => {
     try {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current.src = ""; 
-      }
       setIsTalking(true);
-      const response = await fetch('/api/tts', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text, lang: mainLang, gender: selectedTutor.gender })
-      });
+      const response = await fetch('/api/tts', { /* ...기존 내용... */ });
       const data = await response.json();
-      if (data.audioContent) {
-        const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
-        audioRef.current = audio;
-        
-        // iOS 최적화: load() 호출 및 playsinline 준수
-        audio.load();
-        audio.onended = () => setIsTalking(false);
-        
-        // iOS는 약간의 지연 후 재생이 더 안정적일 때가 있음
-        const playPromise = audio.play();
-        if (playPromise !== undefined) {
-          playPromise.catch(e => {
-            console.error("iOS Playback Blocked:", e);
-            setIsTalking(false);
-          });
+
+      if (data.audioContent && audioRef.current) {
+        // [수정] 새로운 객체를 만들지 않고 기존 객체의 소스(src)만 바꿉니다.
+        audioRef.current.src = `data:audio/mp3;base64,${data.audioContent}`;
+        audioRef.current.onended = () => setIsTalking(false);
+        await audioRef.current.play();
+      }
+    } catch (error) {
+      setIsTalking(false);
+    }
+  };
         }
       }
     } catch (error) {
@@ -220,15 +212,17 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
         </div>
 
         <div style={styles.btnGroup}>
-          <button onClick={() => { 
-            // [중요] 사용자가 버튼을 누르는 순간 iOS 오디오 락을 해제합니다.
-            unlockAudioSession();
+         <button onClick={() => { 
+    // [추가] 버튼 누르는 순간 빈 소리를 재생해서 아이폰 오디오를 깨웁니다.
+    if (audioRef.current) {
+      audioRef.current.play().catch(() => {});
+    }
 
-            if (recognitionRef.current) {
-              recognitionRef.current.lang = mainLang; 
-              isListening ? recognitionRef.current.stop() : recognitionRef.current.start(); 
-            }
-          }} 
+    if (recognitionRef.current) {
+      recognitionRef.current.lang = mainLang; 
+      isListening ? recognitionRef.current.stop() : recognitionRef.current.start(); 
+    }
+}}
             style={{...styles.ctrlBtn, backgroundColor: isListening ? '#ff4b4b' : '#58CC02'}}>
             {isListening ? "Stop" : "Speak"}
           </button>
