@@ -159,12 +159,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
       setIsTalking(false);
     }
   };
-        }
-      }
-    } catch (error) {
-      setIsTalking(false);
-    }
-  };
+       
 
   return (
     <div style={styles.container}>
