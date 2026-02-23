@@ -40,9 +40,22 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   const recognitionRef = useRef<any>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const hasGreetingPlayed = useRef(false);
+  // iOS 오디오 세션 활성화 체크를 위한 Ref
+  const isAudioUnlocked = useRef(false);
 
   const mainLangName = SUB_LANGS.find(l => l.id === mainLang)?.name || "English";
   const subLangName = SUB_LANGS.find(l => l.id === subLang)?.name || "Korean";
+
+  // 1. iOS 사파리용 오디오 잠금 해제 함수
+  const unlockAudioSession = () => {
+    if (isAudioUnlocked.current) return;
+    const unlock = new Audio();
+    unlock.src = "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA="; // 무음 데이터
+    unlock.play().then(() => {
+      isAudioUnlocked.current = true;
+      console.log("iOS Audio Session Unlocked");
+    }).catch(e => console.log("Unlock waiting for interaction", e));
+  };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -93,7 +106,6 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
         }
       `;
 
-      // 사장님 요청대로 2.5-flash 모델명 유지 및 fetch 구조 통합
       const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
         method: "POST", 
         headers: { "Content-Type": "application/json" },
@@ -131,7 +143,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     try {
       if (audioRef.current) {
         audioRef.current.pause();
-        audioRef.current.src = ""; // iOS 메모리 해제
+        audioRef.current.src = ""; 
       }
       setIsTalking(true);
       const response = await fetch('/api/tts', {
@@ -144,14 +156,15 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
         const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
         audioRef.current = audio;
         
-        // iOS 사파리 대응: 로드 후 재생 시도
+        // iOS 최적화: load() 호출 및 playsinline 준수
         audio.load();
         audio.onended = () => setIsTalking(false);
         
+        // iOS는 약간의 지연 후 재생이 더 안정적일 때가 있음
         const playPromise = audio.play();
         if (playPromise !== undefined) {
           playPromise.catch(e => {
-            console.error("Playback failed:", e);
+            console.error("iOS Playback Blocked:", e);
             setIsTalking(false);
           });
         }
@@ -181,8 +194,9 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
       </div>
 
       <div style={styles.videoArea}>
-        {/* iOS 대응: playsInline, webkit-playsinline 추가 */}
+        {/* iOS 대응: playsInline 필수, webkit-playsinline 추가 */}
         <video 
+          key="idle-vid"
           src={`/videos/${selectedTutor.id}_idle.mp4`} 
           autoPlay loop muted playsInline 
           // @ts-ignore
@@ -190,6 +204,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
           style={{ ...styles.videoFit, zIndex: 1, opacity: isTalking ? 0 : 1 }} 
         />
         <video 
+          key="talk-vid"
           src={`/videos/${selectedTutor.id}_talk.mp4`} 
           autoPlay loop muted playsInline 
           // @ts-ignore
@@ -206,12 +221,13 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
 
         <div style={styles.btnGroup}>
           <button onClick={() => { 
-            // iOS 오디오 잠금 해제용 빈 재생 처리
-            const unlock = new Audio();
-            unlock.play().catch(() => {});
+            // [중요] 사용자가 버튼을 누르는 순간 iOS 오디오 락을 해제합니다.
+            unlockAudioSession();
 
-            recognitionRef.current.lang = mainLang; 
-            isListening ? recognitionRef.current.stop() : recognitionRef.current.start(); 
+            if (recognitionRef.current) {
+              recognitionRef.current.lang = mainLang; 
+              isListening ? recognitionRef.current.stop() : recognitionRef.current.start(); 
+            }
           }} 
             style={{...styles.ctrlBtn, backgroundColor: isListening ? '#ff4b4b' : '#58CC02'}}>
             {isListening ? "Stop" : "Speak"}
@@ -242,6 +258,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   );
 }
 
+// 스타일 시트는 원본과 동일하게 유지 (수정 없음)
 const styles: any = {
   container: { height: '100dvh', backgroundColor: '#000', display: 'flex', flexDirection: 'column', overflow: 'hidden' },
   langSelectorBar: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px', backgroundColor: '#1a1a1a', borderBottom: '1px solid #333', zIndex: 100 },
