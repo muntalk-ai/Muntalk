@@ -44,32 +44,27 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     );
 
   /**
-   * ✅ 배포 환경(muntalk.com)용 강력 권한 해제 로직
+   * ✅ 수정된 권한 해제 로직: 메인 로직 실행을 방해하지 않도록 설계
    */
-  const handleSpeakWithAudioUnlock = async () => {
-    // 1. 모든 비디오 태그 권한 획득 (Warm-up)
-    const videos = document.querySelectorAll('video');
-    videos.forEach((video) => {
-      video.muted = true; // 중복 방지를 위해 무음 고정
-      // 버튼 누른 순간 아주 잠깐 재생시켜 브라우저 승인을 받아냄
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.then(() => {
-          // 승인 완료되면 원래 로직이 제어하도록 둠
-        }).catch(err => console.log("Video prep failed:", err));
-      }
-    });
-
-    // 2. 오디오 엔진(TTS용) 깨우기
-    const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
+  const handleSpeakWithAudioUnlock = () => {
+    // 1. 오디오 엔진 깨우기 (동기적으로 즉시 실행)
+    const AudioContext = (window as any).AudioContext || (window as any).webkitAudioContext;
     if (AudioContext) {
       const audioCtx = new AudioContext();
       if (audioCtx.state === 'suspended') {
-        await audioCtx.resume();
+        audioCtx.resume();
       }
     }
 
-    // 3. 기존 대화 로직 실행
+    // 2. 비디오 권한 획득 (비동기로 실행하여 다음 로직을 막지 않음)
+    const videos = document.querySelectorAll('video');
+    videos.forEach((video) => {
+      video.muted = true;
+      // play() 결과가 나올 때까지 기다리지(await) 않고 그냥 던집니다.
+      video.play().catch(err => console.log("Video warming up..."));
+    });
+
+    // 3. 챗봇 대화 로직 즉시 실행 (핵심!)
     originalHandleSpeak();
   };
 
