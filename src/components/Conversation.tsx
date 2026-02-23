@@ -89,17 +89,19 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     const isLangUpdate = prompt.startsWith("SYSTEM:");
 
     try {
-      const systemPrompt = `
+     const systemPrompt = `
   STRICT OPERATING INSTRUCTIONS:
   1. Role: ${selectedRole}. 
   2. Level: ${selectedLevel}.
   
-  // [추가] Basic 레벨 전용 특수 지시사항
+  // [강화] Basic 레벨: 거의 단어 위주로 대화하는 수준
   ${selectedLevel === 'Basic' ? `
-  - DIFFICULTY: ABSOLUTE BEGINNER (Grade 1 level).
-  - SENTENCE LENGTH: MAXIMUM 5 WORDS per sentence.
-  - STYLE: Speak very slowly, clearly, and use the simplest words possible.
-  - EXAMPLE: Instead of "How can I assist you today?", say "Hi! How are you?"
+  - DIFFICULTY: TODDLER / KINDERGARTEN LEVEL (Age 3-5).
+  - VOCABULARY: Use ONLY the most basic nouns and verbs (e.g., eat, like, go, apple, happy).
+  - SENTENCE STRUCTURE: Use only 1-3 words if possible. MAXIMUM 4 words.
+  - GRAMMAR: Use ONLY simple present tense (No "have been", "would", etc.).
+  - STYLE: Be extremely repetitive and encouraging.
+  - EXAMPLE: If the role is a waiter, instead of "What would you like?", say "Coffee or Tea?" or "I like bread."
   ` : ''}
 
   3. AI Main Response (reply): MUST be in ${mainLangName}. (NEVER use English unless the target language is English)
@@ -115,7 +117,6 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     "reason": "..."
   }
 `;
-
       const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
         method: "POST", 
         headers: { "Content-Type": "application/json" },
