@@ -66,7 +66,6 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
       askGemini("START_ROLEPLAY");
       hasGreetingPlayed.current = true;
     } else {
-      // 며칠 전 성공했던 방식: 자막 언어 변경 시 직접 시스템 명령 전송
       askGemini("SYSTEM: Update translation language to " + subLangName);
     }
   }, [subLang]);
@@ -77,7 +76,6 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     const isLangUpdate = prompt.startsWith("SYSTEM:");
 
     try {
-      // 강력한 언어 고정 규칙과 이전 성공 프롬프트 결합
       const systemPrompt = `
         STRICT OPERATING INSTRUCTIONS:
         1. Role: ${selectedRole}. Level: ${selectedLevel}.
@@ -95,7 +93,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
         }
       `;
 
-      // 사장님께서 주신 며칠 전 성공한 fetch 구조 + 최신 지시문 주입
+      // 사장님 요청대로 2.5-flash 모델명 유지 및 fetch 구조 통합
       const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
         method: "POST", 
         headers: { "Content-Type": "application/json" },
@@ -116,7 +114,6 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
       
       setAiData(result);
 
-      // 며칠 전 코드 로직: 언어 설정 업데이트가 아닐 때만 음성 출력 및 히스토리 저장
       if (!isLangUpdate) {
         if (!isStart) {
           setAnalysisHistory(prev => [...prev, { user: prompt, better: result.correction, reason: result.reason }]);
@@ -134,7 +131,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     try {
       if (audioRef.current) {
         audioRef.current.pause();
-        audioRef.current.currentTime = 0;
+        audioRef.current.src = ""; // iOS 메모리 해제
       }
       setIsTalking(true);
       const response = await fetch('/api/tts', {
@@ -146,8 +143,18 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
       if (data.audioContent) {
         const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
         audioRef.current = audio;
+        
+        // iOS 사파리 대응: 로드 후 재생 시도
+        audio.load();
         audio.onended = () => setIsTalking(false);
-        await audio.play();
+        
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(e => {
+            console.error("Playback failed:", e);
+            setIsTalking(false);
+          });
+        }
       }
     } catch (error) {
       setIsTalking(false);
@@ -174,8 +181,21 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
       </div>
 
       <div style={styles.videoArea}>
-        <video src={`/videos/${selectedTutor.id}_idle.mp4`} autoPlay loop muted playsInline style={{ ...styles.videoFit, zIndex: 1, opacity: isTalking ? 0 : 1 }} />
-        <video src={`/videos/${selectedTutor.id}_talk.mp4`} autoPlay loop muted playsInline style={{ ...styles.videoFit, zIndex: 2, opacity: isTalking ? 1 : 0 }} />
+        {/* iOS 대응: playsInline, webkit-playsinline 추가 */}
+        <video 
+          src={`/videos/${selectedTutor.id}_idle.mp4`} 
+          autoPlay loop muted playsInline 
+          // @ts-ignore
+          webkit-playsinline="true" 
+          style={{ ...styles.videoFit, zIndex: 1, opacity: isTalking ? 0 : 1 }} 
+        />
+        <video 
+          src={`/videos/${selectedTutor.id}_talk.mp4`} 
+          autoPlay loop muted playsInline 
+          // @ts-ignore
+          webkit-playsinline="true" 
+          style={{ ...styles.videoFit, zIndex: 2, opacity: isTalking ? 1 : 0 }} 
+        />
       </div>
 
       <div style={styles.talkArea}>
@@ -185,7 +205,14 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
         </div>
 
         <div style={styles.btnGroup}>
-          <button onClick={() => { recognitionRef.current.lang = mainLang; isListening ? recognitionRef.current.stop() : recognitionRef.current.start(); }} 
+          <button onClick={() => { 
+            // iOS 오디오 잠금 해제용 빈 재생 처리
+            const unlock = new Audio();
+            unlock.play().catch(() => {});
+
+            recognitionRef.current.lang = mainLang; 
+            isListening ? recognitionRef.current.stop() : recognitionRef.current.start(); 
+          }} 
             style={{...styles.ctrlBtn, backgroundColor: isListening ? '#ff4b4b' : '#58CC02'}}>
             {isListening ? "Stop" : "Speak"}
           </button>
@@ -215,7 +242,6 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   );
 }
 
-// 사장님께서 주신 며칠 전 스타일 코드를 그대로 적용
 const styles: any = {
   container: { height: '100dvh', backgroundColor: '#000', display: 'flex', flexDirection: 'column', overflow: 'hidden' },
   langSelectorBar: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px', backgroundColor: '#1a1a1a', borderBottom: '1px solid #333', zIndex: 100 },
