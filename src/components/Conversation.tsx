@@ -8,7 +8,6 @@ import TutorVideo from './TutorVideo';
 import SubtitleArea from './SubtitleArea';
 import ReportModal from './ReportModal';
 
-// 필요한 상수 (ADMIN_EMAIL 등은 useTimer 내부에서 처리되므로 여기서 쓰지 않는다면 생략 가능)
 const SUB_LANGS = [
   { id: 'ko-KR', name: 'Korean' }, { id: 'en-US', name: 'English' }, { id: 'ja-JP', name: 'Japanese' },
   { id: 'zh-CN', name: 'Chinese' }, { id: 'es-ES', name: 'Spanish' }, { id: 'fr-FR', name: 'French' },
@@ -33,27 +32,45 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   const mainLangName = SUB_LANGS.find(l => l.id === mainLang)?.name || "";
   const subLangName = SUB_LANGS.find(l => l.id === subLang)?.name || "";
 
-  /**
-   * ✅ 수정 포인트 1: useConversation 인자 수정
-   * 순서: (level, topic, role, mainLang, mainLangName, subLangName, tutor)
-   * 현재 selectedRole을 topic과 role 양쪽에 넣어 에러를 방지합니다.
-   */
-  const { isTalking, isListening, isThinking, timeLeft, isAdmin, aiData, analysisHistory, handleSpeak } = 
+  const { isTalking, isListening, isThinking, timeLeft, isAdmin, aiData, analysisHistory, handleSpeak: originalHandleSpeak } = 
     useConversation(
       selectedLevel, 
-      selectedRole, // topic 자리 (추가됨)
-      selectedRole, // role 자리
+      selectedRole, 
+      selectedRole, 
       mainLang, 
       mainLangName, 
       subLangName, 
-      selectedTutor // gender만 보냈던 것을 tutor 객체 전체로 변경 (TTS 언어 코드 대응)
+      selectedTutor 
     );
+
+  /**
+   * ✅ 수정 포인트: 사운드 중복 방지 및 사파리 오디오 잠금 해제
+   */
+  const handleSpeakWithAudioUnlock = () => {
+    // 1. 영상 소리 중복 방지: 모든 비디오를 강제로 음소거(muted) 상태로 고정합니다.
+    const videos = document.querySelectorAll('video');
+    videos.forEach((video) => {
+      video.muted = true; // 영상 속 원본 소리는 나오지 않게 차단
+    });
+
+    // 2. 아이폰 사파리 TTS 잠금 해제: 
+    // 사용자가 버튼을 누르는 '이 시점'에 오디오 컨텍스트를 활성화해야 시스템 소리가 나옵/니다.
+    const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
+    if (AudioContext) {
+      const audioCtx = new AudioContext();
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+    }
+
+    // 기존 로직(음성 인식 및 대화 시작) 실행
+    originalHandleSpeak();
+  };
 
   const [showReport, setShowReport] = useState(false);
 
   return (
     <div style={styles.container}>
-      {/* 상단 바 (Header) */}
       <div style={styles.langSelectorBar}>
         <div style={styles.roleInfo}>
            <span style={styles.timerLabel}>
@@ -78,11 +95,13 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
       <TutorVideo tutorId={selectedTutor.id} isTalking={isTalking} />
 
       <div style={styles.talkArea}>
-        {/* aiData.translation이 제대로 전달되도록 확인 */}
         <SubtitleArea reply={aiData.reply} translation={aiData.translation} isThinking={isThinking} />
 
         <div style={styles.btnGroup}>
-          <button onClick={handleSpeak} style={{...styles.ctrlBtn, backgroundColor: isListening ? '#ff4b4b' : '#58CC02'}}>
+          <button 
+            onClick={handleSpeakWithAudioUnlock} 
+            style={{...styles.ctrlBtn, backgroundColor: isListening ? '#ff4b4b' : '#58CC02'}}
+          >
             {isListening ? "Stop" : "Speak"}
           </button>
           <button onClick={() => setShowReport(true)} style={styles.backBtn}>Finish</button>
