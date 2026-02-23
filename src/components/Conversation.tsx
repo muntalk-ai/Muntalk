@@ -90,21 +90,31 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
 
     try {
       const systemPrompt = `
-        STRICT OPERATING INSTRUCTIONS:
-        1. Role: ${selectedRole}. Level: ${selectedLevel}.
-        2. AI Main Response (reply): MUST be in ${mainLangName}.
-        3. Translation & Reason Language: MUST be in ${subLangName}.
-        4. CRITICAL: Do NOT use Korean for translation or reason unless ${subLangName} is Korean.
-        5. IGNORE PREVIOUS CONTEXT regarding language usage. Use ${subLangName} NOW.
+  STRICT OPERATING INSTRUCTIONS:
+  1. Role: ${selectedRole}. 
+  2. Level: ${selectedLevel}.
+  
+  // [추가] Basic 레벨 전용 특수 지시사항
+  ${selectedLevel === 'Basic' ? `
+  - DIFFICULTY: ABSOLUTE BEGINNER (Grade 1 level).
+  - SENTENCE LENGTH: MAXIMUM 5 WORDS per sentence.
+  - STYLE: Speak very slowly, clearly, and use the simplest words possible.
+  - EXAMPLE: Instead of "How can I assist you today?", say "Hi! How are you?"
+  ` : ''}
 
-        OUTPUT FORMAT (JSON ONLY):
-        {
-          "reply": "...",
-          "translation": "...",
-          "correction": "...",
-          "reason": "..."
-        }
-      `;
+  3. AI Main Response (reply): MUST be in ${mainLangName}. (NEVER use English unless the target language is English)
+  4. Translation & Reason Language: MUST be in ${subLangName}.
+  5. CRITICAL: Do NOT use Korean for translation or reason unless ${subLangName} is Korean.
+  6. IGNORE PREVIOUS CONTEXT regarding language usage. Use ${subLangName} NOW.
+
+  OUTPUT FORMAT (JSON ONLY):
+  {
+    "reply": "...",
+    "translation": "...",
+    "correction": "...",
+    "reason": "..."
+  }
+`;
 
       const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
         method: "POST", 
