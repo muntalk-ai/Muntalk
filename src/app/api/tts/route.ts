@@ -1,17 +1,21 @@
-// src/app/api/tts/route.ts
 import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
   try {
-    const { text, lang, gender } = await req.json();
+    // level 정보를 추가로 받습니다.
+    const { text, lang, gender, level } = await req.json();
     const apiKey = process.env.NEXT_PUBLIC_GOOGLE_CLOUD_API_KEY;
 
     if (!apiKey) {
       return NextResponse.json({ error: 'API Key not found' }, { status: 500 });
     }
 
-    // 성별에 따라 구글 TTS 목소리 매칭 (MALE / FEMALE)
+    // 성별 설정
     const ssmlGender = gender === 'male' ? 'MALE' : 'FEMALE';
+
+    // [핵심 로직] 레벨이 'Basic'이면 속도를 0.8로 늦추고, 아니면 정상 속도(1.0)
+    // 사장님 취향에 따라 0.85 정도로 조절하셔도 좋습니다.
+    const speakingRate = (level === 'Basic') ? 0.85 : 1.0;
 
     const response = await fetch(
       `https://texttospeech.googleapis.com/v1/text:synthesize?key=${apiKey}`,
@@ -21,12 +25,12 @@ export async function POST(req: Request) {
         body: JSON.stringify({
           input: { text },
           voice: { 
-            languageCode: lang, // 예: 'en-US' 또는 'ko-KR'
+            languageCode: lang, 
             ssmlGender: ssmlGender 
           },
           audioConfig: { 
             audioEncoding: 'MP3',
-            speakingRate: 1.0 // 말하기 속도
+            speakingRate: speakingRate // 결정된 속도 적용
           },
         }),
       }
@@ -34,7 +38,6 @@ export async function POST(req: Request) {
 
     const data = await response.json();
     
-    // Base64로 인코딩된 오디오 데이터 반환
     return NextResponse.json({ audioContent: data.audioContent });
   } catch (error) {
     console.error('TTS Error:', error);
