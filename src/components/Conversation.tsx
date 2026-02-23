@@ -44,26 +44,32 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     );
 
   /**
-   * ✅ 수정 포인트: 사운드 중복 방지 및 사파리 오디오 잠금 해제
+   * ✅ 배포 환경(muntalk.com)용 강력 권한 해제 로직
    */
-  const handleSpeakWithAudioUnlock = () => {
-    // 1. 영상 소리 중복 방지: 모든 비디오를 강제로 음소거(muted) 상태로 고정합니다.
+  const handleSpeakWithAudioUnlock = async () => {
+    // 1. 모든 비디오 태그 권한 획득 (Warm-up)
     const videos = document.querySelectorAll('video');
     videos.forEach((video) => {
-      video.muted = true; // 영상 속 원본 소리는 나오지 않게 차단
+      video.muted = true; // 중복 방지를 위해 무음 고정
+      // 버튼 누른 순간 아주 잠깐 재생시켜 브라우저 승인을 받아냄
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          // 승인 완료되면 원래 로직이 제어하도록 둠
+        }).catch(err => console.log("Video prep failed:", err));
+      }
     });
 
-    // 2. 아이폰 사파리 TTS 잠금 해제: 
-    // 사용자가 버튼을 누르는 '이 시점'에 오디오 컨텍스트를 활성화해야 시스템 소리가 나옵/니다.
+    // 2. 오디오 엔진(TTS용) 깨우기
     const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
     if (AudioContext) {
       const audioCtx = new AudioContext();
       if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
+        await audioCtx.resume();
       }
     }
 
-    // 기존 로직(음성 인식 및 대화 시작) 실행
+    // 3. 기존 대화 로직 실행
     originalHandleSpeak();
   };
 
