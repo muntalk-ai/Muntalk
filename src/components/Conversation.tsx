@@ -88,20 +88,24 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     const isStart = prompt === "START_ROLEPLAY";
     const isLangUpdate = prompt.startsWith("SYSTEM:");
 
-   try {
-    // 2. 여기서부터 systemPrompt 내용을 아래로 교체하세요!
-    const systemPrompt = `
-      STRICT OPERATING INSTRUCTIONS:
-      1. Role: ${selectedRole}. 
-      2. Level: ${selectedLevel} (ABSOLUTE BEGINNER LEVEL).
-      3. AI Main Response (reply): 
-         - USE ONLY GRADE 1 VOCABULARY.
-         - MAXIMUM 5 WORDS PER SENTENCE.
-         - BE EXTREMELY SIMPLE AND KIND.
-         - Example: "Hello! I am fine. And you?"
-      4. Translation & Reason Language: MUST be in ${subLangName}.
-      5. OUTPUT FORMAT: JSON ONLY { "reply": "...", "translation": "...", "correction": "...", "reason": "..." }
-    `;
+    try {
+      const systemPrompt = `
+        STRICT OPERATING INSTRUCTIONS:
+        1. Role: ${selectedRole}. Level: ${selectedLevel}.
+        2. AI Main Response (reply): MUST be in ${mainLangName}.
+        3. Translation & Reason Language: MUST be in ${subLangName}.
+        4. CRITICAL: Do NOT use Korean for translation or reason unless ${subLangName} is Korean.
+        5. IGNORE PREVIOUS CONTEXT regarding language usage. Use ${subLangName} NOW.
+
+        OUTPUT FORMAT (JSON ONLY):
+        {
+          "reply": "...",
+          "translation": "...",
+          "correction": "...",
+          "reason": "..."
+        }
+      `;
+
       const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
         method: "POST", 
         headers: { "Content-Type": "application/json" },
