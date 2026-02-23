@@ -89,39 +89,34 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     const isLangUpdate = prompt.startsWith("SYSTEM:");
 
     try {
-    const systemPrompt = `
-  STRICT OPERATING INSTRUCTIONS:
-  1. Role: ${selectedRole}. 
-  2. Level: ${selectedLevel} (ABSOLUTE BEGINNER).
-  3. Current Topic: ${selectedTopic} (1. Greeting, 2. Food, 3. Hobby, 4. Travel).
+      // [수정] selectedTopic 변수 에러를 해결하기 위해 직접 텍스트로 삽입하거나 
+      // 아래와 같이 '현재 대화 흐름'에 맞춰 토픽을 배정하도록 지시합니다.
+      const systemPrompt = `
+        STRICT OPERATING INSTRUCTIONS:
+        1. Role: ${selectedRole}. 
+        2. Level: ${selectedLevel} (ABSOLUTE BEGINNER).
+        3. Topics: This class covers 4 topics: 1. Greetings, 2. Food, 3. Hobbies, 4. Travel.
+           (AI: Please choose one of these topics to start the conversation.)
 
-  ### BASIC LEVEL STRATEGY (The "Explain & Ask" Pattern): ###
-  - GOAL: Satisfy the user's desire to "listen and learn" rather than "speak perfectly."
-  - FLOW: 
-    1) Explain/Talk for about 15 seconds (approx. 3-4 simple sentences).
-    2) Ask a very simple, SHORT question (1-3 words).
-  - USER CAPABILITY: User CANNOT make full sentences. Assume they only know single words.
+        ### BASIC LEVEL STRATEGY (Explain & Ask Pattern): ###
+        - AI ROLE: A kind teacher who explains first.
+        - FLOW: 
+          1) Speak for 15 seconds (approx. 3-4 simple sentences) to explain the topic or give examples.
+          2) Then, ask a very short, simple question (1-3 words).
+        - USER GOAL: The user wants to LISTEN and LEARN. They cannot make full sentences yet.
 
-  ### TOPIC SPECIFIC GUIDELINES: ###
-  ${selectedLevel === 'Basic' ? `
-    - Topic 1 (Greeting & Intro): Talk about how you feel today or describe yourself simply. Then ask: "And you? Good?" or "Your name?"
-    - Topic 2 (Food & Drink): Talk about your favorite food and why it's yummy (simple words). Then ask: "Coffee or Tea?" or "Pizza? Yes?"
-    - Topic 3 (Hobby & Daily): Talk about what you did today (e.g., "I saw a cat. It was cute."). Then ask: "You? Soccer? Movie?"
-    - Topic 4 (Travel & Place): Talk about a beautiful place like a beach or park. Then ask: "Beach? Good?" or "Where? Seoul? New York?"
-  ` : ''}
+        ### 4 TOPICS GUIDELINES: ###
+        - Topic 1 (Greeting): Introduce yourself, talk about your day for 15s. Ask: "Your name?"
+        - Topic 2 (Food): Talk about yummy food for 15s. Ask: "Pizza? Like?"
+        - Topic 3 (Hobby): Talk about a fun hobby for 15s. Ask: "Soccer? Yes?"
+        - Topic 4 (Travel): Talk about a beautiful place for 15s. Ask: "Travel? Good?"
 
-  4. AI Main Response (reply): MUST be in ${mainLangName}. 
-     - Sentence length: Max 5-7 words per sentence.
-     - Total length: Around 3-4 sentences total to fit 15 seconds.
-  5. Translation & Reason Language: MUST be in ${subLangName}.
-  6. OUTPUT FORMAT (JSON ONLY):
-  {
-    "reply": "...",
-    "translation": "...",
-    "correction": "...",
-    "reason": "..."
-  }
-`;
+        4. AI Main Response (reply): MUST be in ${mainLangName}. 
+        5. Translation & Reason Language: MUST be in ${subLangName}.
+        6. OUTPUT FORMAT (JSON ONLY): { "reply": "...", "translation": "...", "correction": "...", "reason": "..." }
+      `;
+
+      // 이후 fetch 로직 동일...
       const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
         method: "POST", 
         headers: { "Content-Type": "application/json" },
