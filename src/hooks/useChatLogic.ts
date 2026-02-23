@@ -2,28 +2,30 @@
 import { useState, useRef } from 'react';
 import { getSystemPrompt } from '../lib/prompts';
 
-// ✅ 핵심 수정: topic 인자를 추가하여 총 7개의 인자를 받도록 맞췄습니다.
 export function useChatLogic(level: string, topic: string, role: string, mainLang: string, mainLangName: string, subLangName: string, tutor: any) {
   const [aiData, setAiData] = useState<any>({ reply: "", translation: "", correction: "", reason: "" });
   const [analysisHistory, setAnalysisHistory] = useState<any[]>([]);
   const [isThinking, setIsThinking] = useState(false);
   const [isTalking, setIsTalking] = useState(false);
+  
+  // ✅ 핵심: 미리 생성된 오디오 객체를 사용합니다.
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const askGemini = async (prompt: string) => {
     if (!prompt) return;
     setIsThinking(true);
     const isStart = prompt === "START_ROLEPLAY";
-    const cacheBuster = new Date().getTime();
     
-    // 비디오 깨우기
-    document.querySelectorAll('video').forEach(v => { v.muted = true; v.play().catch(() => {}); });
+    // ✅ [배포 환경 필수] 1. 클릭과 동시에 비어있는 소리를 한 번 틀어 권한을 얻습니다.
+    if (!audioRef.current) {
+      audioRef.current = new Audio();
+    }
+    audioRef.current.play().catch(() => {}); 
 
-    // ✅ prompts.ts 정의 순서: (level, topic, role, mainLangName, subLangName)
     const systemPrompt = getSystemPrompt(level, topic, role, mainLangName, subLangName);
 
     try {
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.NEXT_PUBLIC_GEMINI_API_KEY}&t=${cacheBuster}`, {
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.NEXT_PUBLIC_GEMINI_API_KEY}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ contents: [{ parts: [{ text: systemPrompt + "\nUser Input: " + prompt }] }] })
@@ -37,25 +39,24 @@ export function useChatLogic(level: string, topic: string, role: string, mainLan
         setAnalysisHistory(prev => [...prev, { user: prompt, better: result.correction, reason: result.reason }]);
       }
 
-      // ✅ TTS 실행: lang에는 'en-US' 같은 코드(mainLang)를 정확히 전달
+      // 2. TTS 실행
       const ttsRes = await fetch('/api/tts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
           text: result.reply, 
-          lang: tutor?.langCode || mainLang, // 👈 여기가 올바른 언어코드를 찾아갑니다.
+          lang: tutor?.langCode || mainLang,
           gender: tutor?.gender || 'female' 
         })
       });
       const ttsData = await ttsRes.json();
       
-      if (ttsData.audioContent) {
-        if (audioRef.current) { audioRef.current.pause(); }
-        const audio = new Audio(`data:audio/mp3;base64,${ttsData.audioContent}`);
-        audioRef.current = audio;
+      if (ttsData.audioContent && audioRef.current) {
+        // ✅ [배포 환경 필수] 3. 이미 권한이 뚫린 audioRef에 소리 데이터만 주입
+        audioRef.current.src = `data:audio/mp3;base64,${ttsData.audioContent}`;
         setIsTalking(true);
-        audio.onended = () => setIsTalking(false);
-        await audio.play().catch(() => setIsTalking(false));
+        audioRef.current.onended = () => setIsTalking(false);
+        await audioRef.current.play();
       }
     } catch (e) {
       console.error("Chat Error:", e);

@@ -32,22 +32,31 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   const mainLangName = SUB_LANGS.find(l => l.id === mainLang)?.name || "";
   const subLangName = SUB_LANGS.find(l => l.id === subLang)?.name || "";
 
-  const { isTalking, isListening, isThinking, timeLeft, isAdmin, aiData, analysisHistory, handleSpeak: originalHandleSpeak } = 
-    useConversation(
-      selectedLevel, 
-      selectedRole, 
-      selectedRole, 
-      mainLang, 
-      mainLangName, 
-      subLangName, 
-      selectedTutor 
-    );
+  // useConversation 훅에서 필요한 모든 상태와 함수를 가져옵니다.
+  const { 
+    isTalking, 
+    isListening, 
+    isThinking, 
+    timeLeft, 
+    isAdmin, 
+    aiData, 
+    analysisHistory, 
+    handleSpeak 
+  } = useConversation(
+    selectedLevel, 
+    selectedRole, 
+    selectedRole, 
+    mainLang, 
+    mainLangName, 
+    subLangName, 
+    selectedTutor 
+  );
 
   /**
-   * ✅ 수정된 권한 해제 로직: 메인 로직 실행을 방해하지 않도록 설계
+   * ✅ 배포 환경(muntalk.com) 미디어 잠금 해제 통합 로직
    */
   const handleSpeakWithAudioUnlock = () => {
-    // 1. 오디오 엔진 깨우기 (동기적으로 즉시 실행)
+    // 1. 오디오 컨텍스트 깨우기 (시스템 TTS 권한 획득)
     const AudioContext = (window as any).AudioContext || (window as any).webkitAudioContext;
     if (AudioContext) {
       const audioCtx = new AudioContext();
@@ -56,22 +65,23 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
       }
     }
 
-    // 2. 비디오 권한 획득 (비동기로 실행하여 다음 로직을 막지 않음)
+    // 2. 비디오 엔진 Warm-up (비동기 실행으로 대화 로직 방해 금지)
     const videos = document.querySelectorAll('video');
-    videos.forEach((video) => {
-      video.muted = true;
-      // play() 결과가 나올 때까지 기다리지(await) 않고 그냥 던집니다.
-      video.play().catch(err => console.log("Video warming up..."));
+    videos.forEach((v) => {
+      v.muted = true;
+      // 클릭 시점에 play를 호출해야 나중에 AI가 말할 때 차단되지 않습니다.
+      v.play().catch(() => {}); 
     });
 
-    // 3. 챗봇 대화 로직 즉시 실행 (핵심!)
-    originalHandleSpeak();
+    // 3. 기존 대화/음성인식 로직 실행
+    handleSpeak();
   };
 
   const [showReport, setShowReport] = useState(false);
 
   return (
     <div style={styles.container}>
+      {/* 상단바: 타이머 및 언어 설정 */}
       <div style={styles.langSelectorBar}>
         <div style={styles.roleInfo}>
            <span style={styles.timerLabel}>
@@ -79,8 +89,11 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
            </span>
            <span style={styles.levelLabel}>{selectedRole} | {selectedLevel}</span>
         </div>
+        
         <div style={styles.selectorItem}>
-          <button onClick={() => setShowSubMenu(!showSubMenu)} style={styles.langBtn}>Subtitle: {subLangName} ▼</button>
+          <button onClick={() => setShowSubMenu(!showSubMenu)} style={styles.langBtn}>
+            Subtitle: {subLangName} ▼
+          </button>
           {showSubMenu && (
             <div style={styles.dropdown}>
               {SUB_LANGS.map(l => (
@@ -93,15 +106,20 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
         </div>
       </div>
 
+      {/* 튜터 비디오 영역 (isTalking에 따라 입모양 제어) */}
       <TutorVideo tutorId={selectedTutor.id} isTalking={isTalking} />
 
+      {/* 하단 대화창 및 제어 버튼 */}
       <div style={styles.talkArea}>
         <SubtitleArea reply={aiData.reply} translation={aiData.translation} isThinking={isThinking} />
 
         <div style={styles.btnGroup}>
           <button 
             onClick={handleSpeakWithAudioUnlock} 
-            style={{...styles.ctrlBtn, backgroundColor: isListening ? '#ff4b4b' : '#58CC02'}}
+            style={{
+              ...styles.ctrlBtn, 
+              backgroundColor: isListening ? '#ff4b4b' : '#58CC02'
+            }}
           >
             {isListening ? "Stop" : "Speak"}
           </button>
@@ -109,6 +127,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
         </div>
       </div>
 
+      {/* 리포트 모달 */}
       {showReport && <ReportModal history={analysisHistory} onBack={onBack} />}
     </div>
   );
