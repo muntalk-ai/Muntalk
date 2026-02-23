@@ -1,12 +1,10 @@
 'use client';
-import { useState } from 'react';
-import { useConversation } from '../hooks/useConversation';
-import { styles } from './ConversationStyles';
+import { useState, useRef, useEffect } from 'react';
+import { auth } from '../lib/firebase';
+import { onAuthStateChanged } from 'firebase/auth';
 
-// 분리한 컴포넌트들
-import TutorVideo from './TutorVideo';
-import SubtitleArea from './SubtitleArea';
-import ReportModal from './ReportModal';
+const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY; 
+const ADMIN_EMAIL = "muntalkofficial@gmail.com";
 
 const SUB_LANGS = [
   { id: 'ko-KR', name: 'Korean' }, { id: 'en-US', name: 'English' }, { id: 'ja-JP', name: 'Japanese' },
@@ -25,115 +23,222 @@ const SUB_LANGS = [
 ];
 
 export default function Conversation({ selectedLangId, selectedTutor, selectedLevel, selectedRole, onBack }: any) {
-  const [subLang, setSubLang] = useState('ko-KR');
-  const [showSubMenu, setShowSubMenu] = useState(false);
-  const mainLang = selectedLangId || 'en-US';
+  const [isTalking, setIsTalking] = useState(false);
+  const [isListening, setIsListening] = useState(false);
+  const [isThinking, setIsThinking] = useState(false);
+  const [timeLeft, setTimeLeft] = useState<number | null>(null);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [showReport, setShowReport] = useState(false);
   
-  const mainLangName = SUB_LANGS.find(l => l.id === mainLang)?.name || "";
-  const subLangName = SUB_LANGS.find(l => l.id === subLang)?.name || "";
+  const mainLang = selectedLangId || 'en-US'; 
+  const [subLang, setSubLang] = useState('ko-KR'); 
+  const [showSubMenu, setShowSubMenu] = useState(false);
 
-  // 1. useConversation 훅에서 unlockMedia를 추가로 가져옵니다.
-  const { 
-    isTalking, 
-    isListening, 
-    isThinking, 
-    timeLeft, 
-    isAdmin, 
-    aiData, 
-    analysisHistory, 
-    handleSpeak,
-    unlockMedia // ✅ useChatLogic에서 뚫고 올라온 함수
-  } = useConversation(
-    selectedLevel, 
-    selectedRole, 
-    selectedRole, 
-    mainLang, 
-    mainLangName, 
-    subLangName, 
-    selectedTutor 
-  );
+  const [aiData, setAiData] = useState<any>({ reply: "", translation: "", correction: "", reason: "" });
+  const [analysisHistory, setAnalysisHistory] = useState<any[]>([]); 
+  
+  const recognitionRef = useRef<any>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const hasGreetingPlayed = useRef(false);
 
-  /**
-   * ✅ 배포 환경(muntalk.com) 미디어 잠금 해제 통합 로직
-   */
-  const handleSpeakWithAudioUnlock = () => {
-    // A. 훅에 내장된 오디오/비디오 잠금 해제 즉시 실행 (클릭 시점 동기화)
-    if (unlockMedia) {
-      unlockMedia();
-    }
+  const mainLangName = SUB_LANGS.find(l => l.id === mainLang)?.name || "English";
+  const subLangName = SUB_LANGS.find(l => l.id === subLang)?.name || "Korean";
 
-    // B. 브라우저 오디오 엔진(AudioContext) 깨우기
-    const AudioContext = (window as any).AudioContext || (window as any).webkitAudioContext;
-    if (AudioContext) {
-      const audioCtx = new AudioContext();
-      if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-      }
-    }
-
-    // C. 비디오 태그 강제 Warm-up (한 번 더 확실하게)
-    const videos = document.querySelectorAll('video');
-    videos.forEach((v) => {
-      v.muted = true;
-      v.play().catch(() => {}); 
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user?.email === ADMIN_EMAIL) { setIsAdmin(true); setTimeLeft(9999); }
+      else { setTimeLeft(user ? 300 : 180); }
     });
+    const timer = setInterval(() => setTimeLeft((p) => (p && p > 0 ? p - 1 : p)), 1000);
+    return () => { unsubscribe(); clearInterval(timer); };
+  }, []);
 
-    // D. 기존 대화/음성인식 로직 실행
-    handleSpeak();
+  useEffect(() => {
+    if (typeof window !== 'undefined' && (window as any).webkitSpeechRecognition) {
+      const SpeechRecognition = (window as any).webkitSpeechRecognition;
+      recognitionRef.current = new SpeechRecognition();
+      recognitionRef.current.onstart = () => setIsListening(true);
+      recognitionRef.current.onresult = (e: any) => askGemini(e.results[0][0].transcript);
+      recognitionRef.current.onend = () => setIsListening(false);
+    }
+
+    if (!hasGreetingPlayed.current) {
+      askGemini("START_ROLEPLAY");
+      hasGreetingPlayed.current = true;
+    } else {
+      // 며칠 전 성공했던 방식: 자막 언어 변경 시 직접 시스템 명령 전송
+      askGemini("SYSTEM: Update translation language to " + subLangName);
+    }
+  }, [subLang]);
+
+  const askGemini = async (prompt: string) => {
+    setIsThinking(true);
+    const isStart = prompt === "START_ROLEPLAY";
+    const isLangUpdate = prompt.startsWith("SYSTEM:");
+
+    try {
+      // 강력한 언어 고정 규칙과 이전 성공 프롬프트 결합
+      const systemPrompt = `
+        STRICT OPERATING INSTRUCTIONS:
+        1. Role: ${selectedRole}. Level: ${selectedLevel}.
+        2. AI Main Response (reply): MUST be in ${mainLangName}.
+        3. Translation & Reason Language: MUST be in ${subLangName}.
+        4. CRITICAL: Do NOT use Korean for translation or reason unless ${subLangName} is Korean.
+        5. IGNORE PREVIOUS CONTEXT regarding language usage. Use ${subLangName} NOW.
+
+        OUTPUT FORMAT (JSON ONLY):
+        {
+          "reply": "...",
+          "translation": "...",
+          "correction": "...",
+          "reason": "..."
+        }
+      `;
+
+      // 사장님께서 주신 며칠 전 성공한 fetch 구조 + 최신 지시문 주입
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+        method: "POST", 
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ 
+          contents: [{ 
+            parts: [{ text: `### SYSTEM DIRECTIVE: ${systemPrompt}\n\nUser Input: ${prompt}` }] 
+          }],
+          generationConfig: { 
+            response_mime_type: "application/json",
+            temperature: 0.1 
+          }
+        })
+      });
+      
+      const data = await response.json();
+      const rawText = data.candidates[0].content.parts[0].text;
+      const result = JSON.parse(rawText.match(/\{[\s\S]*\}/)[0]);
+      
+      setAiData(result);
+
+      // 며칠 전 코드 로직: 언어 설정 업데이트가 아닐 때만 음성 출력 및 히스토리 저장
+      if (!isLangUpdate) {
+        if (!isStart) {
+          setAnalysisHistory(prev => [...prev, { user: prompt, better: result.correction, reason: result.reason }]);
+        }
+        speakResponse(result.reply);
+      }
+    } catch (e) { 
+      console.error("Gemini Error:", e); 
+    } finally { 
+      setIsThinking(false); 
+    }
   };
 
-  const [showReport, setShowReport] = useState(false);
+  const speakResponse = async (text: string) => {
+    try {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
+      setIsTalking(true);
+      const response = await fetch('/api/tts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text, lang: mainLang, gender: selectedTutor.gender })
+      });
+      const data = await response.json();
+      if (data.audioContent) {
+        const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
+        audioRef.current = audio;
+        audio.onended = () => setIsTalking(false);
+        await audio.play();
+      }
+    } catch (error) {
+      setIsTalking(false);
+    }
+  };
 
   return (
     <div style={styles.container}>
-      {/* 상단바: 타이머 및 언어 설정 */}
       <div style={styles.langSelectorBar}>
         <div style={styles.roleInfo}>
-           <span style={styles.timerLabel}>
-             {isAdmin ? "Admin" : `Time: ${Math.floor(timeLeft! / 60)}:${String(timeLeft! % 60).padStart(2, '0')}`}
-           </span>
+           <span style={styles.timerLabel}>{isAdmin ? "Admin" : `Time: ${timeLeft !== null ? Math.floor(timeLeft / 60) + ":" + String(timeLeft % 60).padStart(2, '0') : "0:00"}`}</span>
            <span style={styles.levelLabel}>{selectedRole} | {selectedLevel}</span>
         </div>
-        
         <div style={styles.selectorItem}>
-          <button onClick={() => setShowSubMenu(!showSubMenu)} style={styles.langBtn}>
-            Subtitle: {subLangName} ▼
-          </button>
+          <button onClick={() => setShowSubMenu(!showSubMenu)} style={styles.langBtn}>Subtitle: {subLangName} ▼</button>
           {showSubMenu && (
             <div style={styles.dropdown}>
               {SUB_LANGS.map(l => (
-                <div key={l.id} onClick={() => {setSubLang(l.id); setShowSubMenu(false);}} style={styles.dropItem}>
-                  {l.name}
-                </div>
+                <div key={l.id} onClick={() => {setSubLang(l.id); setShowSubMenu(false);}} style={styles.dropItem}>{l.name}</div>
               ))}
             </div>
           )}
         </div>
       </div>
 
-      {/* 튜터 비디오 영역 */}
-      <TutorVideo tutorId={selectedTutor.id} isTalking={isTalking} />
+      <div style={styles.videoArea}>
+        <video src={`/videos/${selectedTutor.id}_idle.mp4`} autoPlay loop muted playsInline style={{ ...styles.videoFit, zIndex: 1, opacity: isTalking ? 0 : 1 }} />
+        <video src={`/videos/${selectedTutor.id}_talk.mp4`} autoPlay loop muted playsInline style={{ ...styles.videoFit, zIndex: 2, opacity: isTalking ? 1 : 0 }} />
+      </div>
 
-      {/* 하단 대화창 및 제어 버튼 */}
       <div style={styles.talkArea}>
-        <SubtitleArea reply={aiData.reply} translation={aiData.translation} isThinking={isThinking} />
+        <div style={styles.subtitleSection}>
+          <div style={styles.targetText}>{isThinking ? "..." : aiData.reply}</div>
+          <div style={styles.subText}>{aiData.translation}</div>
+        </div>
 
         <div style={styles.btnGroup}>
-          <button 
-            onClick={handleSpeakWithAudioUnlock} 
-            style={{
-              ...styles.ctrlBtn, 
-              backgroundColor: isListening ? '#ff4b4b' : '#58CC02'
-            }}
-          >
+          <button onClick={() => { recognitionRef.current.lang = mainLang; isListening ? recognitionRef.current.stop() : recognitionRef.current.start(); }} 
+            style={{...styles.ctrlBtn, backgroundColor: isListening ? '#ff4b4b' : '#58CC02'}}>
             {isListening ? "Stop" : "Speak"}
           </button>
           <button onClick={() => setShowReport(true)} style={styles.backBtn}>Finish</button>
         </div>
       </div>
 
-      {/* 리포트 모달 */}
-      {showReport && <ReportModal history={analysisHistory} onBack={onBack} />}
+      {showReport && (
+        <div style={styles.modalOverlay}>
+          <div style={styles.modalContent}>
+            <h2 style={{textAlign: 'center', marginBottom: '20px', color: '#333'}}>Learning Report</h2>
+            <div style={styles.reportList}>
+              {analysisHistory.length === 0 ? <p style={{textAlign: 'center', color: '#888'}}>No records yet.</p> : 
+                analysisHistory.map((item, i) => (
+                <div key={i} style={styles.reportCard}>
+                  <div style={{color: '#ff4b4b', fontSize: '13px'}}>❌ {item.user}</div>
+                  <div style={{color: '#58CC02', fontWeight: 'bold', margin: '5px 0'}}>✅ {item.better}</div>
+                  <div style={styles.reasonBox}>💡 {item.reason}</div>
+                </div>
+              ))}
+            </div>
+            <button onClick={onBack} style={styles.closeBtn}>Exit Class</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
+
+// 사장님께서 주신 며칠 전 스타일 코드를 그대로 적용
+const styles: any = {
+  container: { height: '100dvh', backgroundColor: '#000', display: 'flex', flexDirection: 'column', overflow: 'hidden' },
+  langSelectorBar: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px', backgroundColor: '#1a1a1a', borderBottom: '1px solid #333', zIndex: 100 },
+  roleInfo: { display: 'flex', flexDirection: 'column' },
+  timerLabel: { color: '#fff', fontSize: '13px', fontWeight: 'bold' },
+  levelLabel: { color: '#58CC02', fontSize: '10px' },
+  selectorItem: { position: 'relative' },
+  langBtn: { backgroundColor: '#333', color: '#fff', border: '1px solid #444', borderRadius: '5px', padding: '4px 10px', fontSize: '11px' },
+  dropdown: { position: 'absolute', top: '35px', right: 0, backgroundColor: '#fff', borderRadius: '8px', width: '120px', maxHeight: '200px', overflowY: 'auto', zIndex: 101 },
+  dropItem: { padding: '10px', color: '#333', fontSize: '12px', borderBottom: '1px solid #eee' },
+  videoArea: { height: '60dvh', width: '100%', position: 'relative', backgroundColor: '#000', overflow: 'hidden' },
+  videoFit: { width: '100%', height: '100%', objectFit: 'contain', position: 'absolute', top: 0, left: 0, transition: 'opacity 0.2s linear' },
+  talkArea: { flex: 1, backgroundColor: '#1a1a1a', display: 'flex', flexDirection: 'column' },
+  subtitleSection: { flex: 1, backgroundColor: '#2a2a2a', borderRadius: '20px', padding: '15px', marginBottom: '15px', border: '1px solid #444', textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', overflowY: 'auto', minHeight: '0' },
+  targetText: { color: '#fff', fontSize: '16px', fontWeight: 'bold', marginBottom: '5px' },
+  subText: { color: '#58CC02', fontSize: '14px' },
+  btnGroup: { display: 'flex', gap: '10px', justifyContent: 'center', paddingBottom: '10px' },
+  ctrlBtn: { width: '120px', padding: '12px', borderRadius: '25px', color: '#fff', fontWeight: 'bold', border: 'none' },
+  backBtn: { width: '120px', padding: '12px', borderRadius: '25px', backgroundColor: '#ff4b4b', color: '#fff', border: 'none' },
+  modalOverlay: { position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.8)', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1000 },
+  modalContent: { backgroundColor: '#fff', width: '90%', maxWidth: '450px', borderRadius: '25px', padding: '20px' },
+  reportList: { maxHeight: '60dvh', overflowY: 'auto', margin: '15px 0' },
+  reportCard: { backgroundColor: '#f9f9f9', padding: '12px', borderRadius: '15px', marginBottom: '10px', border: '1px solid #eee' },
+  reasonBox: { fontSize: '12px', color: '#666', borderTop: '1px solid #ddd', paddingTop: '5px', marginTop: '5px' },
+  closeBtn: { width: '100%', padding: '15px', backgroundColor: '#58CC02', color: '#fff', border: 'none', borderRadius: '15px', fontWeight: 'bold' }
+};
