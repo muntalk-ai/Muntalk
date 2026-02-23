@@ -8,19 +8,31 @@ export function useChatLogic(level: string, topic: string, role: string, mainLan
   const [isThinking, setIsThinking] = useState(false);
   const [isTalking, setIsTalking] = useState(false);
   
-  // ✅ 핵심: 미리 생성된 오디오 객체를 사용합니다.
   const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  // ✅ [통합 추가] 사용자가 버튼을 누르는 "즉시" 호출하여 브라우저 권한을 따내는 함수
+  const unlockMedia = () => {
+    if (!audioRef.current) {
+      audioRef.current = new Audio();
+    }
+    // 빈 소리를 즉시 재생하여 "이 사이트는 소리를 써도 됨" 도장을 찍음
+    audioRef.current.play().catch(() => {}); 
+
+    // 모든 비디오 태그도 즉시 재생 가능 상태로 만듦
+    const videos = document.querySelectorAll('video');
+    videos.forEach(v => {
+      v.muted = true;
+      v.play().catch(() => {});
+    });
+  };
 
   const askGemini = async (prompt: string) => {
     if (!prompt) return;
     setIsThinking(true);
     const isStart = prompt === "START_ROLEPLAY";
     
-    // ✅ [배포 환경 필수] 1. 클릭과 동시에 비어있는 소리를 한 번 틀어 권한을 얻습니다.
-    if (!audioRef.current) {
-      audioRef.current = new Audio();
-    }
-    audioRef.current.play().catch(() => {}); 
+    // 오디오 객체 확보 확인
+    if (!audioRef.current) audioRef.current = new Audio();
 
     const systemPrompt = getSystemPrompt(level, topic, role, mainLangName, subLangName);
 
@@ -39,7 +51,6 @@ export function useChatLogic(level: string, topic: string, role: string, mainLan
         setAnalysisHistory(prev => [...prev, { user: prompt, better: result.correction, reason: result.reason }]);
       }
 
-      // 2. TTS 실행
       const ttsRes = await fetch('/api/tts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -52,7 +63,7 @@ export function useChatLogic(level: string, topic: string, role: string, mainLan
       const ttsData = await ttsRes.json();
       
       if (ttsData.audioContent && audioRef.current) {
-        // ✅ [배포 환경 필수] 3. 이미 권한이 뚫린 audioRef에 소리 데이터만 주입
+        // ✅ 이미 권한이 뚫린 audioRef에 소리만 갈아끼움 (배포 환경 핵심)
         audioRef.current.src = `data:audio/mp3;base64,${ttsData.audioContent}`;
         setIsTalking(true);
         audioRef.current.onended = () => setIsTalking(false);
@@ -65,5 +76,6 @@ export function useChatLogic(level: string, topic: string, role: string, mainLan
     }
   };
 
-  return { aiData, analysisHistory, isThinking, isTalking, askGemini };
+  // ✅ unlockMedia를 함께 반환합니다.
+  return { aiData, analysisHistory, isThinking, isTalking, askGemini, unlockMedia };
 }

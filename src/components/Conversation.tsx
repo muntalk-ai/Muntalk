@@ -32,7 +32,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   const mainLangName = SUB_LANGS.find(l => l.id === mainLang)?.name || "";
   const subLangName = SUB_LANGS.find(l => l.id === subLang)?.name || "";
 
-  // useConversation 훅에서 필요한 모든 상태와 함수를 가져옵니다.
+  // 1. useConversation 훅에서 unlockMedia를 추가로 가져옵니다.
   const { 
     isTalking, 
     isListening, 
@@ -41,7 +41,8 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     isAdmin, 
     aiData, 
     analysisHistory, 
-    handleSpeak 
+    handleSpeak,
+    unlockMedia // ✅ useChatLogic에서 뚫고 올라온 함수
   } = useConversation(
     selectedLevel, 
     selectedRole, 
@@ -56,7 +57,12 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
    * ✅ 배포 환경(muntalk.com) 미디어 잠금 해제 통합 로직
    */
   const handleSpeakWithAudioUnlock = () => {
-    // 1. 오디오 컨텍스트 깨우기 (시스템 TTS 권한 획득)
+    // A. 훅에 내장된 오디오/비디오 잠금 해제 즉시 실행 (클릭 시점 동기화)
+    if (unlockMedia) {
+      unlockMedia();
+    }
+
+    // B. 브라우저 오디오 엔진(AudioContext) 깨우기
     const AudioContext = (window as any).AudioContext || (window as any).webkitAudioContext;
     if (AudioContext) {
       const audioCtx = new AudioContext();
@@ -65,15 +71,14 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
       }
     }
 
-    // 2. 비디오 엔진 Warm-up (비동기 실행으로 대화 로직 방해 금지)
+    // C. 비디오 태그 강제 Warm-up (한 번 더 확실하게)
     const videos = document.querySelectorAll('video');
     videos.forEach((v) => {
       v.muted = true;
-      // 클릭 시점에 play를 호출해야 나중에 AI가 말할 때 차단되지 않습니다.
       v.play().catch(() => {}); 
     });
 
-    // 3. 기존 대화/음성인식 로직 실행
+    // D. 기존 대화/음성인식 로직 실행
     handleSpeak();
   };
 
@@ -106,7 +111,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
         </div>
       </div>
 
-      {/* 튜터 비디오 영역 (isTalking에 따라 입모양 제어) */}
+      {/* 튜터 비디오 영역 */}
       <TutorVideo tutorId={selectedTutor.id} isTalking={isTalking} />
 
       {/* 하단 대화창 및 제어 버튼 */}
