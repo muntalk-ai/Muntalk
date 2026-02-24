@@ -271,7 +271,7 @@ if ((navigator as any).audioSession) {
           </button>
 
           {/* 2. Finish(종료) 버튼 */}
-          <button 
+        <button 
             onPointerDown={(e) => {
               e.stopPropagation(); 
               setShowReport(true);
@@ -280,9 +280,9 @@ if ((navigator as any).audioSession) {
           >
             Finish
           </button>
-        </div>
-        </div> {/* talkArea 닫기 */}
-    </div> {/* container 닫기 */}
+        </div> {/* 1. btnGroup 닫기 (추가 또는 확인) */}
+      </div> {/* 2. talkArea 닫기 */}
+    </div> {/* 3. container 닫기 */}
   );
 }
 
