@@ -83,10 +83,10 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
         await audioRef.current.play();
         isAudioUnlocked.current = true;
         
-        // Safari에서 마이크 사용 시 출력이 튀는 것을 방지하기 위한 세션 설정
-        if (navigator.audioSession) {
-          navigator.audioSession.type = 'play-and-record';
-        }
+       // TO-BE (수정 코드: (navigator as any) 추가)
+if ((navigator as any).audioSession) {
+  (navigator as any).audioSession.type = 'play-and-record';
+}
       } catch (err) {
         console.error("Audio unlock failed:", err);
       }
