@@ -215,9 +215,11 @@ if ((navigator as any).audioSession) {
     <div style={styles.container}>
       <div style={styles.langSelectorBar}>
         <div style={styles.roleInfo}>
-           <span style={styles.timerLabel}>{isAdmin ? "Admin" : `Time: ${timeLeft !== null ? Math.floor(timeLeft / 60) + ":" + String(timeLeft % 60).padStart(2, '0') : "0:00"}`}</span>
-           <span style={styles.levelLabel}>{selectedRole} | {selectedLevel}</span>
-        </div>
+  <span style={styles.timerLabel}>
+    {isAdmin ? "Admin" : `Time: ${timeLeft !== null ? Math.floor(timeLeft / 60) + ":" + String(timeLeft % 60).padStart(2, '0') : "0:00"}`}
+  </span>
+  <span style={styles.levelLabel}>{selectedRole} | {selectedLevel}</span>
+</div>
         <div style={styles.selectorItem}>
           <button onClick={() => setShowSubMenu(!showSubMenu)} style={styles.langBtn}>Subtitle: {subLangName} ▼</button>
           {showSubMenu && (
