@@ -254,11 +254,14 @@ if ((navigator as any).audioSession) {
 
         <div style={styles.btnGroup}>
           <button 
-            onClick={toggleMic} 
-            style={{...styles.ctrlBtn, backgroundColor: isListening ? '#ff4b4b' : '#58CC02'}}>
-            {isListening ? "Stop" : "Speak"}
+            onPointerDown={(e) => {
+              e.stopPropagation(); 
+              setShowReport(true);
+            }} 
+            style={styles.backBtn}
+          >
+            Finish
           </button>
-          <button onClick={() => setShowReport(true)} style={styles.backBtn}>Finish</button>
         </div>
       </div>
 
