@@ -44,49 +44,35 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   const isAudioUnlocked = useRef(false);
   const hasGreetingPlayed = useRef(false);
 
-  // 1. 초기화 및 Safari 전용 설정
   useEffect(() => {
-    // 오디오 객체 싱글톤 유지 (메모리 누수 및 Safari 보안 통과용)
     const audio = new Audio();
     audioRef.current = audio;
-
-    // 장치 변경(에어팟 연결 등) 감지 시 비디오/오디오 동기화 재설정
     const handleDeviceChange = () => {
-      console.log("Device change detected. Syncing...");
       if (videoIdleRef.current) videoIdleRef.current.play().catch(() => {});
       if (videoTalkRef.current) videoTalkRef.current.play().catch(() => {});
     };
-
     navigator.mediaDevices.addEventListener('devicechange', handleDeviceChange);
-    
-    // iOS 저전력 모드에서도 비디오가 자동 재생되도록 터치 시점에 play() 호출
     const enableVideo = () => {
       videoIdleRef.current?.play().catch(() => {});
       videoTalkRef.current?.play().catch(() => {});
     };
     window.addEventListener('touchstart', enableVideo, { once: true });
-
     return () => {
       navigator.mediaDevices.removeEventListener('devicechange', handleDeviceChange);
       window.removeEventListener('touchstart', enableVideo);
     };
   }, []);
 
-  // 2. 오디오 잠금 해제 (사용자 제스처 내에서 호출)
   const unlockAudio = async () => {
     if (isAudioUnlocked.current) return;
-    
-    // 무음 파일을 재생하여 오디오 채널 확보
     if (audioRef.current) {
       audioRef.current.src = "data:audio/wav;base64,UklGRigAAABXQVZFRm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAAAP8A";
       try {
         await audioRef.current.play();
         isAudioUnlocked.current = true;
-        
-       // TO-BE (수정 코드: (navigator as any) 추가)
-if ((navigator as any).audioSession) {
-  (navigator as any).audioSession.type = 'play-and-record';
-}
+        if ((navigator as any).audioSession) {
+          (navigator as any).audioSession.type = 'play-and-record';
+        }
       } catch (err) {
         console.error("Audio unlock failed:", err);
       }
@@ -111,13 +97,11 @@ if ((navigator as any).audioSession) {
       recognitionRef.current = new SpeechRecognition();
       recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = false;
-
       recognitionRef.current.onstart = () => setIsListening(true);
       recognitionRef.current.onresult = (e: any) => askGemini(e.results[0][0].transcript);
       recognitionRef.current.onend = () => setIsListening(false);
       recognitionRef.current.onerror = () => setIsListening(false);
     }
-
     if (!hasGreetingPlayed.current) {
       askGemini("START_ROLEPLAY");
       hasGreetingPlayed.current = true;
@@ -130,8 +114,8 @@ if ((navigator as any).audioSession) {
     setIsThinking(true);
     const isStart = prompt === "START_ROLEPLAY";
     const isLangUpdate = prompt.startsWith("SYSTEM:");
-
     try {
+      // 프롬프트가 잘 보이게 다시 줄바꿈 처리했습니다.
       const systemPrompt = `
         STRICT OPERATING INSTRUCTIONS:
         1. Role: ${selectedRole}. Level: ${selectedLevel}.
@@ -148,24 +132,15 @@ if ((navigator as any).audioSession) {
           generationConfig: { response_mime_type: "application/json", temperature: 0.1 }
         })
       });
-      
       const data = await response.json();
       const rawText = data.candidates[0].content.parts[0].text;
       const result = JSON.parse(rawText.match(/\{[\s\S]*\}/)[0]);
-      
       setAiData(result);
-
       if (!isLangUpdate) {
-        if (!isStart) {
-          setAnalysisHistory(prev => [...prev, { user: prompt, better: result.correction, reason: result.reason }]);
-        }
+        if (!isStart) setAnalysisHistory(prev => [...prev, { user: prompt, better: result.correction, reason: result.reason }]);
         speakResponse(result.reply);
       }
-    } catch (e) { 
-      console.error("Gemini Error:", e); 
-    } finally { 
-      setIsThinking(false); 
-    }
+    } catch (e) { console.error("Gemini Error:", e); } finally { setIsThinking(false); }
   };
 
   const speakResponse = async (text: string) => {
@@ -179,35 +154,21 @@ if ((navigator as any).audioSession) {
       const data = await response.json();
       if (data.audioContent && audioRef.current) {
         const audio = audioRef.current;
-        // 기존 객체의 src만 교차하여 Safari의 재생 권한 유지
         audio.src = `data:audio/mp3;base64,${data.audioContent}`;
         audio.onended = () => setIsTalking(false);
-        
-        // VOD 기반이므로 재생 시점에 한 번 더 재생 시도
         await audio.play();
       }
-    } catch (error) {
-      console.error("TTS Play Error:", error);
-      setIsTalking(false);
-    }
+    } catch (error) { setIsTalking(false); }
   };
 
   const toggleMic = async () => {
-    // [중요] 사용자가 버튼을 누르는 즉시 오디오 잠금 해제 시도
     await unlockAudio();
-
     if (!recognitionRef.current) return;
-
     if (isListening) {
       recognitionRef.current.stop();
     } else {
-      // 마이크 시작 전 언어 설정 및 오디오 세션 재확인
       recognitionRef.current.lang = mainLang;
-      try {
-        recognitionRef.current.start();
-      } catch (e) {
-        console.error("Recognition Start Error:", e);
-      }
+      try { recognitionRef.current.start(); } catch (e) { console.error(e); }
     }
   };
 
@@ -215,11 +176,11 @@ if ((navigator as any).audioSession) {
     <div style={styles.container}>
       <div style={styles.langSelectorBar}>
         <div style={styles.roleInfo}>
-  <span style={styles.timerLabel}>
-    {isAdmin ? "Admin" : `Time: ${timeLeft !== null ? Math.floor(timeLeft / 60) + ":" + String(timeLeft % 60).padStart(2, '0') : "0:00"}`}
-  </span>
-  <span style={styles.levelLabel}>{selectedRole} | {selectedLevel}</span>
-</div>
+          <span style={styles.timerLabel}>
+            {isAdmin ? "Admin" : `Time: ${timeLeft !== null ? Math.floor(timeLeft / 60) + ":" + String(timeLeft % 60).padStart(2, '0') : "0:00"}`}
+          </span>
+          <span style={styles.levelLabel}>{selectedRole} | {selectedLevel}</span>
+        </div>
         <div style={styles.selectorItem}>
           <button onClick={() => setShowSubMenu(!showSubMenu)} style={styles.langBtn}>Subtitle: {subLangName} ▼</button>
           {showSubMenu && (
@@ -233,19 +194,8 @@ if ((navigator as any).audioSession) {
       </div>
 
       <div style={styles.videoArea}>
-        {/* playsInline과 muted를 유지하며 ref를 통해 직접 제어 */}
-        <video 
-          ref={videoIdleRef}
-          src={`/videos/${selectedTutor.id}_idle.mp4`} 
-          autoPlay loop muted playsInline 
-          style={{ ...styles.videoFit, zIndex: 1, opacity: isTalking ? 0 : 1 }} 
-        />
-        <video 
-          ref={videoTalkRef}
-          src={`/videos/${selectedTutor.id}_talk.mp4`} 
-          autoPlay loop muted playsInline 
-          style={{ ...styles.videoFit, zIndex: 2, opacity: isTalking ? 1 : 0 }} 
-        />
+        <video ref={videoIdleRef} src={`/videos/${selectedTutor.id}_idle.mp4`} autoPlay loop muted playsInline style={{ ...styles.videoFit, zIndex: 1, opacity: isTalking ? 0 : 1 }} />
+        <video ref={videoTalkRef} src={`/videos/${selectedTutor.id}_talk.mp4`} autoPlay loop muted playsInline style={{ ...styles.videoFit, zIndex: 2, opacity: isTalking ? 1 : 0 }} />
       </div>
 
       <div style={styles.talkArea}>
@@ -253,36 +203,17 @@ if ((navigator as any).audioSession) {
           <div style={styles.targetText}>{isThinking ? "..." : aiData.reply}</div>
           <div style={styles.subText}>{aiData.translation}</div>
         </div>
-
-     <div style={styles.btnGroup}>
-          {/* 1. Speak(마이크) 버튼 */}
-          <button 
-            onPointerDown={async (e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              await toggleMic();
-            }} 
-            style={{
-              ...styles.ctrlBtn, 
-              backgroundColor: isListening ? '#ff4b4b' : '#58CC02'
-            }}
-          >
+        <div style={styles.btnGroup}>
+          <button onPointerDown={async (e) => { e.preventDefault(); e.stopPropagation(); await toggleMic(); }} 
+            style={{ ...styles.ctrlBtn, backgroundColor: isListening ? '#ff4b4b' : '#58CC02' }}>
             {isListening ? "Stop" : "Speak"}
           </button>
-
-          {/* 2. Finish(종료) 버튼 */}
-        <button 
-            onPointerDown={(e) => {
-              e.stopPropagation(); 
-              setShowReport(true);
-            }} 
-            style={styles.backBtn}
-          >
+          <button onPointerDown={(e) => { e.stopPropagation(); setShowReport(true); }} style={styles.backBtn}>
             Finish
           </button>
-        </div> {/* 1. btnGroup 닫기 (추가 또는 확인) */}
-      </div> {/* 2. talkArea 닫기 */}
-    </div> {/* 3. container 닫기 */}
+        </div>
+      </div>
+    </div>
   );
 }
 
