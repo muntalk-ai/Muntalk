@@ -252,7 +252,23 @@ if ((navigator as any).audioSession) {
           <div style={styles.subText}>{aiData.translation}</div>
         </div>
 
-        <div style={styles.btnGroup}>
+     <div style={styles.btnGroup}>
+          {/* 1. Speak(마이크) 버튼 */}
+          <button 
+            onPointerDown={async (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              await toggleMic();
+            }} 
+            style={{
+              ...styles.ctrlBtn, 
+              backgroundColor: isListening ? '#ff4b4b' : '#58CC02'
+            }}
+          >
+            {isListening ? "Stop" : "Speak"}
+          </button>
+
+          {/* 2. Finish(종료) 버튼 */}
           <button 
             onPointerDown={(e) => {
               e.stopPropagation(); 
@@ -263,10 +279,6 @@ if ((navigator as any).audioSession) {
             Finish
           </button>
         </div>
-      </div>
-
-      {/* Report Modal 등의 컴포넌트 생략 (기존 유지) */}
-    </div>
   );
 }
 
