@@ -28,7 +28,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   const [isThinking, setIsThinking] = useState(false);
   const [timeLeft, setTimeLeft] = useState<number | null>(null);
   const [isAdmin, setIsAdmin] = useState(false);
-  const [showReport, setShowReport] = useState(false);
+  const [showReport, setShowReport] = useState(false); // 리포트 팝업 상태 추가
   
   const mainLang = selectedLangId || 'en-US'; 
   const [subLang, setSubLang] = useState('ko-KR'); 
@@ -44,7 +44,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   const isAudioUnlocked = useRef(false);
   const hasGreetingPlayed = useRef(false);
 
-  // 1. 초기화 및 Safari/iOS 최적화 (오디오 세션 및 비디오 자동재생)
+  // 1. 초기화 및 Safari/iOS 최적화
   useEffect(() => {
     const audio = new Audio();
     audioRef.current = audio;
@@ -64,7 +64,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     };
   }, []);
 
-  // 2. 오디오 잠금 해제 (유저 인터랙션 시 호출)
+  // 2. 오디오 잠금 해제
   const unlockAudio = async () => {
     if (isAudioUnlocked.current) return;
     if (audioRef.current) {
@@ -114,7 +114,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     }
   }, [subLang]);
 
-  // 5. Gemini API 호출 (프롬프트 가독성 유지)
+  // 5. Gemini API 호출
   const askGemini = async (prompt: string) => {
     setIsThinking(true);
     const isStart = prompt === "START_ROLEPLAY";
@@ -152,7 +152,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     } catch (e) { console.error("Gemini Error:", e); } finally { setIsThinking(false); }
   };
 
-  // 6. TTS 재생 (아이폰 대응)
+  // 6. TTS 재생
   const speakResponse = async (text: string) => {
     try {
       setIsTalking(true);
@@ -183,14 +183,13 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     }
   };
 
-  // 8. 종료 처리 (onBack 연결)
+  // 8. 종료 처리 (리포트 보여주기)
   const handleFinish = () => {
-    if (onBack) onBack();
+    setShowReport(true); // 바로 나가지 않고 리포트를 띄웁니다.
   };
 
   return (
     <div style={styles.container}>
-      {/* 헤더 바 */}
       <div style={styles.langSelectorBar}>
         <div style={styles.roleInfo}>
           <span style={styles.timerLabel}>
@@ -210,13 +209,11 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
         </div>
       </div>
 
-      {/* 비디오 영역 */}
       <div style={styles.videoArea}>
         <video ref={videoIdleRef} src={`/videos/${selectedTutor.id}_idle.mp4`} autoPlay loop muted playsInline style={{ ...styles.videoFit, zIndex: 1, opacity: isTalking ? 0 : 1 }} />
         <video ref={videoTalkRef} src={`/videos/${selectedTutor.id}_talk.mp4`} autoPlay loop muted playsInline style={{ ...styles.videoFit, zIndex: 2, opacity: isTalking ? 1 : 0 }} />
       </div>
 
-      {/* 하단 제어 및 자막 영역 */}
       <div style={styles.talkArea}>
         <div style={styles.subtitleSection}>
           <div style={styles.targetText}>{isThinking ? "..." : aiData.reply}</div>
@@ -238,6 +235,29 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
           </button>
         </div>
       </div>
+
+      {/* --- 통합된 러닝 리포트 팝업 --- */}
+      {showReport && (
+        <div style={styles.reportOverlay}>
+          <div style={styles.reportBox}>
+            <h2 style={styles.reportTitle}>Learning Report</h2>
+            <div style={styles.reportScroll}>
+              {analysisHistory.length === 0 ? (
+                <p style={{ textAlign: 'center', color: '#999', marginTop: '20px' }}>No conversation data yet.</p>
+              ) : (
+                analysisHistory.map((item, i) => (
+                  <div key={i} style={styles.reportItem}>
+                    <p style={styles.userTxt}>🗨️ Your: {item.user}</p>
+                    <p style={styles.betterTxt}>✅ Better: {item.better}</p>
+                    <p style={styles.reasonTxt}>💡 {item.reason}</p>
+                  </div>
+                ))
+              )}
+            </div>
+            <button onClick={() => onBack()} style={styles.reportCloseBtn}>Exit Conversation</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -260,5 +280,16 @@ const styles: any = {
   subText: { fontSize: '15px', color: '#888', lineHeight: '1.2' },
   btnGroup: { display: 'flex', gap: '12px', alignItems: 'center' },
   ctrlBtn: { flex: 2, height: '56px', borderRadius: '16px', border: 'none', color: '#fff', fontSize: '18px', fontWeight: 'bold', cursor: 'pointer', boxShadow: '0 4px 0 rgba(0,0,0,0.2)', transition: 'all 0.1s' },
-  backBtn: { flex: 1, height: '56px', borderRadius: '16px', border: '2px solid #e5e5e5', color: '#afafaf', fontSize: '16px', fontWeight: 'bold', backgroundColor: '#fff', cursor: 'pointer' }
+  backBtn: { flex: 1, height: '56px', borderRadius: '16px', border: '2px solid #e5e5e5', color: '#afafaf', fontSize: '16px', fontWeight: 'bold', backgroundColor: '#fff', cursor: 'pointer' },
+
+  // 리포트 팝업 스타일
+  reportOverlay: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0,0,0,0.8)', zIndex: 2000, display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' },
+  reportBox: { backgroundColor: '#fff', width: '100%', maxWidth: '450px', maxHeight: '80vh', borderRadius: '28px', padding: '25px', display: 'flex', flexDirection: 'column', boxShadow: '0 10px 30px rgba(0,0,0,0.2)' },
+  reportTitle: { fontSize: '24px', fontWeight: 'bold', marginBottom: '20px', textAlign: 'center', color: '#333' },
+  reportScroll: { flex: 1, overflowY: 'auto', marginBottom: '20px', paddingRight: '5px' },
+  reportItem: { marginBottom: '18px', padding: '15px', backgroundColor: '#f9f9f9', borderRadius: '16px' },
+  userTxt: { fontSize: '14px', color: '#666', marginBottom: '5px' },
+  betterTxt: { fontSize: '16px', fontWeight: 'bold', color: '#58CC02', marginBottom: '5px' },
+  reasonTxt: { fontSize: '13px', color: '#888', lineHeight: '1.4' },
+  reportCloseBtn: { height: '56px', borderRadius: '16px', backgroundColor: '#58CC02', color: '#fff', fontSize: '18px', fontWeight: 'bold', border: 'none', cursor: 'pointer', boxShadow: '0 4px 0 rgba(0,0,0,0.1)' }
 };
