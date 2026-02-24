@@ -44,6 +44,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   const isAudioUnlocked = useRef(false);
   const hasGreetingPlayed = useRef(false);
 
+  // 1. 초기화 및 Safari/iOS 최적화 (오디오 세션 및 비디오 자동재생)
   useEffect(() => {
     const audio = new Audio();
     audioRef.current = audio;
@@ -63,6 +64,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     };
   }, []);
 
+  // 2. 오디오 잠금 해제 (유저 인터랙션 시 호출)
   const unlockAudio = async () => {
     if (isAudioUnlocked.current) return;
     if (audioRef.current) {
@@ -82,6 +84,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
   const mainLangName = SUB_LANGS.find(l => l.id === mainLang)?.name || "English";
   const subLangName = SUB_LANGS.find(l => l.id === subLang)?.name || "Korean";
 
+  // 3. 타이머 및 관리자 설정
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user?.email === ADMIN_EMAIL) { setIsAdmin(true); setTimeLeft(9999); }
@@ -91,6 +94,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     return () => { unsubscribe(); clearInterval(timer); };
   }, []);
 
+  // 4. STT 설정 및 초기 인사
   useEffect(() => {
     if (typeof window !== 'undefined' && (window as any).webkitSpeechRecognition) {
       const SpeechRecognition = (window as any).webkitSpeechRecognition;
@@ -110,18 +114,23 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     }
   }, [subLang]);
 
+  // 5. Gemini API 호출 (프롬프트 가독성 유지)
   const askGemini = async (prompt: string) => {
     setIsThinking(true);
     const isStart = prompt === "START_ROLEPLAY";
     const isLangUpdate = prompt.startsWith("SYSTEM:");
     try {
-      // 프롬프트가 잘 보이게 다시 줄바꿈 처리했습니다.
       const systemPrompt = `
         STRICT OPERATING INSTRUCTIONS:
         1. Role: ${selectedRole}. Level: ${selectedLevel}.
         2. AI Main Response (reply): MUST be in ${mainLangName}.
         3. Translation & Reason Language: MUST be in ${subLangName}.
-        4. OUTPUT FORMAT: JSON ONLY { "reply": "...", "translation": "...", "correction": "...", "reason": "..." }
+        4. OUTPUT FORMAT: JSON ONLY { 
+           "reply": "AI response in ${mainLangName}", 
+           "translation": "Translation in ${subLangName}", 
+           "correction": "Corrected user sentence", 
+           "reason": "Why corrected (in ${subLangName})" 
+        }
       `;
 
       const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
@@ -143,6 +152,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     } catch (e) { console.error("Gemini Error:", e); } finally { setIsThinking(false); }
   };
 
+  // 6. TTS 재생 (아이폰 대응)
   const speakResponse = async (text: string) => {
     try {
       setIsTalking(true);
@@ -161,6 +171,7 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     } catch (error) { setIsTalking(false); }
   };
 
+  // 7. 마이크 제어
   const toggleMic = async () => {
     await unlockAudio();
     if (!recognitionRef.current) return;
@@ -172,8 +183,14 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
     }
   };
 
+  // 8. 종료 처리 (onBack 연결)
+  const handleFinish = () => {
+    if (onBack) onBack();
+  };
+
   return (
     <div style={styles.container}>
+      {/* 헤더 바 */}
       <div style={styles.langSelectorBar}>
         <div style={styles.roleInfo}>
           <span style={styles.timerLabel}>
@@ -193,22 +210,30 @@ export default function Conversation({ selectedLangId, selectedTutor, selectedLe
         </div>
       </div>
 
+      {/* 비디오 영역 */}
       <div style={styles.videoArea}>
         <video ref={videoIdleRef} src={`/videos/${selectedTutor.id}_idle.mp4`} autoPlay loop muted playsInline style={{ ...styles.videoFit, zIndex: 1, opacity: isTalking ? 0 : 1 }} />
         <video ref={videoTalkRef} src={`/videos/${selectedTutor.id}_talk.mp4`} autoPlay loop muted playsInline style={{ ...styles.videoFit, zIndex: 2, opacity: isTalking ? 1 : 0 }} />
       </div>
 
+      {/* 하단 제어 및 자막 영역 */}
       <div style={styles.talkArea}>
         <div style={styles.subtitleSection}>
           <div style={styles.targetText}>{isThinking ? "..." : aiData.reply}</div>
           <div style={styles.subText}>{aiData.translation}</div>
         </div>
         <div style={styles.btnGroup}>
-          <button onPointerDown={async (e) => { e.preventDefault(); e.stopPropagation(); await toggleMic(); }} 
-            style={{ ...styles.ctrlBtn, backgroundColor: isListening ? '#ff4b4b' : '#58CC02' }}>
+          <button 
+            onPointerDown={async (e) => { e.preventDefault(); e.stopPropagation(); await toggleMic(); }} 
+            style={{ ...styles.ctrlBtn, backgroundColor: isListening ? '#ff4b4b' : '#58CC02' }}
+          >
             {isListening ? "Stop" : "Speak"}
           </button>
-          <button onPointerDown={(e) => { e.stopPropagation(); setShowReport(true); }} style={styles.backBtn}>
+          
+          <button 
+            onClick={handleFinish}
+            style={styles.backBtn}
+          >
             Finish
           </button>
         </div>
