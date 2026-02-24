@@ -281,6 +281,8 @@ if ((navigator as any).audioSession) {
             Finish
           </button>
         </div>
+        </div> {/* talkArea 닫기 */}
+    </div> {/* container 닫기 */}
   );
 }
 
