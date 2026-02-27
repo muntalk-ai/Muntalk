@@ -4,11 +4,12 @@ import { useState } from 'react';
 // 1. 영어로 번역된 레벨별 주제 데이터
 const LEVEL_DATA: any = {
   Basic: [
-    { id: 'grammar', name: 'Basic Grammar\n(Lesson)', icon: '📖' },
-    { id: 'idioms', name: 'Must-know Idioms\n(Lesson)', icon: '💡' },
-    { id: 'intro', name: 'Self-Introduction\n(Lesson)', icon: '👋' },
-    { id: 'ordering', name: 'Ordering Food\n(Lesson)', icon: '☕' },
+    { id: 'verb1', name: 'Verbs Part 1\n(Lesson 1-25)', icon: '🏃' },
+    { id: 'adj', name: 'Adjectives\n(Lesson 1-50)', icon: '✨' },
+    { id: 'adv', name: 'Adverbs\n(Lesson 1-50)', icon: '🚀' },
+    { id: 'verb2', name: 'Verbs Part 2\n(Lesson 26-50)', icon: '🔥' },
   ],
+ 
   Intermediate: [
     { id: 'grammar_corr', name: 'Grammar Focus\n(Lesson)', icon: '✍️' },
     { id: 'idioms_int', name: 'Daily Idioms\n(Lesson)', icon: '🧠' },

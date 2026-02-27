@@ -10,7 +10,7 @@ import Home from '../components/Home';
 import LangSelect from '../components/LangSelect'; // 사장님의 국기 리스트 그대로 사용
 import RoleSelect from '../components/RoleSelect'; // 통합된 선택창
 import TutorSelect from '../components/TutorSelect';
-import Conversation from '../components/Conversation';
+import Conversation from '../components/conversation/page';
 
 const BETA_PASSWORD = "muntalk77"; 
 
