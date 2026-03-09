@@ -24,6 +24,6 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/signup/page.js", "src/app/login/page.js"  ],
-  "exclude": ["node_modules"]
+, "old_files/muntalk/src/app/signup/page.js", "old_files/muntalk/src/app/login/page.js"  ],
+  "exclude": ["old_files/muntalk/node_modules"]
 }

@@ -1,222 +1,123 @@
 'use client';
-import { useState, useRef, useEffect } from 'react';
 
-const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
-const GOOGLE_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_CLOUD_API_KEY;
+import React, { useState, useRef, useEffect } from 'react';
 
-// 1. 커리큘럼 데이터 구성 (파트당 50개)
-const PARTS = [
-  { id: 'V1', name: '동사 Part 1', words: ['Go', 'Eat', 'Drink', 'Sleep', 'Buy', 'Sell', 'Work', 'Study', 'Play', 'Read'] },
-  { id: 'ADJ', name: '형용사', words: ['Happy', 'Sad', 'Big', 'Small', 'Hot', 'Cold', 'Beautiful', 'Fast', 'Slow', 'Good'] },
-  { id: 'ADV', name: '부사', words: ['Always', 'Never', 'Fast', 'Slowly', 'Quietly', 'Early', 'Late', 'Often', 'Hard', 'Very'] },
-  { id: 'V2', name: '동사 Part 2', words: ['Understand', 'Believe', 'Remember', 'Forget', 'Think', 'Wait', 'Finish', 'Begin', 'Try', 'Help'] }
-];
+export default function LocalTestPage() {
+  const [tutor] = useState({
+    name: "Clara",
+    videoIdle: "/videos/t101_idle.mp4",
+    videoTalk: "/videos/t101_talk.mp4"
+  });
 
-const SUBJECTS = ['He', 'She', 'It', 'They', 'We', 'The Teacher', 'My Friend', 'The Cat', 'The Doctor', 'I'];
-
-const LECTURES = PARTS.flatMap((part, pIdx) => 
-  Array.from({ length: 50 }, (_, i) => ({
-    id: `${part.id}-${i + 1}`,
-    partName: part.name,
-    targetWord: part.words[i % part.words.length],
-    subject: SUBJECTS[i % SUBJECTS.length],
-    title: `${part.name} ${i + 1}강`
-  }))
-);
-
-const SUB_LANGS = [
-  { id: 'ko-KR', name: 'Korean' }, { id: 'en-US', name: 'English' }, { id: 'ja-JP', name: 'Japanese' },
-  { id: 'zh-CN', name: 'Chinese' }, { id: 'es-ES', name: 'Spanish' }, { id: 'fr-FR', name: 'French' }
-  // ... 나머지 50개 언어 유지
-];
-
-export default function VideoLecturePage() {
-  // 상태 관리
-  const [nativeLang, setNativeLang] = useState('ko-KR');
-  const [targetLang, setTargetLang] = useState('en-US');
-  const [currentLec, setCurrentLec] = useState(LECTURES[0]);
+  const [messages, setMessages] = useState([{ role: 'ai', text: "Hello! I'm Clara. 스피커를 켜고 대화를 시작해봐요!" }]);
+  const [input, setInput] = useState("");
   const [isTalking, setIsTalking] = useState(false);
-  const [isListening, setIsListening] = useState(false);
-  const [isThinking, setIsThinking] = useState(false);
-  const [aiData, setAiData] = useState({ reply: "강의 시작 버튼을 눌러주세요.", translation: "" });
-  const [showMenu, setShowMenu] = useState(false);
+  const [isMuted, setIsMuted] = useState(true); // 브라우저 정책상 처음엔 muted
 
-  // 참조 관리
-  const recognitionRef = useRef<any>(null);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  const stopSignal = useRef(false);
-  const videoIdleRef = useRef<HTMLVideoElement | null>(null);
-  const videoTalkRef = useRef<HTMLVideoElement | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const talkVideoRef = useRef<HTMLVideoElement>(null);
 
-  // 초기화: 오디오 및 STT
   useEffect(() => {
-    audioRef.current = new Audio();
-    if (typeof window !== 'undefined' && (window as any).webkitSpeechRecognition) {
-      const SpeechRecognition = (window as any).webkitSpeechRecognition;
-      recognitionRef.current = new SpeechRecognition();
-      recognitionRef.current.onresult = (e: any) => {
-        stopAll();
-        askGemini(e.results[0][0].transcript);
-      };
-      recognitionRef.current.onend = () => setIsListening(false);
-    }
-  }, [targetLang]);
+    if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+  }, [messages]);
 
-  const stopAll = () => {
-    stopSignal.current = true;
-    if (audioRef.current) { audioRef.current.pause(); audioRef.current.src = ""; }
-    setIsTalking(false);
+  // 음성 활성화 함수 (사용자 상호작용 후 호출 가능)
+  const enableAudio = () => {
+    setIsMuted(false);
+    if (talkVideoRef.current) talkVideoRef.current.muted = false;
   };
 
-  const getSystemPrompt = () => `
-    Identity: Compact Tutor. NO EMOJIS. NO GREETINGS.
-    Topic: "${currentLec.targetWord}" (Part: ${currentLec.partName}).
-    Constraint: 
-    1. Use ONLY subject "${currentLec.subject}" for ALL 10 examples.
-    2. Start directly with core explanation in ${nativeLang}.
-    3. List 10 simple sentences in ${targetLang}.
-    4. End with: "Any questions?" in ${targetLang}.
-    Format: JSON { "reply": "Full lecture text", "translation": "Summary in ${nativeLang}" }
-  `;
+  const handleSend = async (customText?: string) => {
+    const textToSend = customText || input;
+    if (!textToSend.trim()) return;
 
-  const askGemini = async (userText: string) => {
-    stopAll();
-    setIsThinking(true);
-    stopSignal.current = false;
-    const isStart = userText === "START_LECTURE";
-
-    try {
-      const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: getSystemPrompt() + (isStart ? "\nStart now." : "\nUser question: " + userText) }] }],
-          generationConfig: { response_mime_type: "application/json" }
-        })
-      });
-      const data = await resp.json();
-      const result = JSON.parse(data.candidates[0].content.parts[0].text);
-      setAiData(result);
-      await speakResponse(result.reply);
-    } catch (e) {
-      console.error(e);
-    } finally {
-      setIsThinking(false);
-    }
-  };
-
-  const speakResponse = async (text: string) => {
+    enableAudio(); // 첫 메시지 전송 시 음성 차단 해제
+    setMessages(prev => [...prev, { role: 'user', text: textToSend }]);
+    setInput("");
     setIsTalking(true);
+
     try {
-      const resp = await fetch(`https://texttospeech.googleapis.com/v1/text:synthesize?key=${GOOGLE_API_KEY}`, {
+      // 실제 API 호출
+      const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          input: { text },
-          voice: { languageCode: targetLang, ssmlGender: 'FEMALE' },
-          audioConfig: { audioEncoding: 'MP3' }
-        })
+        body: JSON.stringify({ message: textToSend, tutorName: tutor.name }),
       });
-      const data = await resp.json();
-      if (audioRef.current) {
-        audioRef.current.src = `data:audio/mp3;base64,${data.audioContent}`;
-        audioRef.current.onended = () => setIsTalking(false);
-        await audioRef.current.play();
-      }
-    } catch (e) {
+      
+      const data = await response.json();
+      const aiResponse = data.text || "미안해, 다시 말해줄래?";
+
+      setMessages(prev => [...prev, { role: 'ai', text: aiResponse }]);
+      
+      // 답변 길이에 비례해서 영상 재생 (문자당 약 200ms)
+      const playTime = Math.min(Math.max(aiResponse.length * 150, 2000), 8000);
+      setTimeout(() => setIsTalking(false), playTime);
+
+    } catch (error) {
+      console.error(error);
       setIsTalking(false);
     }
   };
 
-  const toggleMic = () => {
-    if (isListening) recognitionRef.current?.stop();
-    else {
-      recognitionRef.current.lang = targetLang;
-      recognitionRef.current.start();
-    }
-  };
-
   return (
-    <div style={styles.container}>
-      {/* 1. 상단 제어 바 */}
-      <div style={styles.topBar}>
-        <button onClick={() => setShowMenu(!showMenu)} style={styles.menuBtn}>
-          {currentLec.title} ▼
-        </button>
-        <div style={styles.langPair}>
-          <select value={nativeLang} onChange={e => setNativeLang(e.target.value)} style={styles.select}>
-            {SUB_LANGS.map(l => <option key={l.id} value={l.id}>{l.name}</option>)}
-          </select>
-          <select value={targetLang} onChange={e => setTargetLang(e.target.value)} style={styles.select}>
-            {SUB_LANGS.map(l => <option key={l.id} value={l.id}>{l.name}</option>)}
-          </select>
+    <main className="flex flex-col h-screen bg-gray-100 overflow-hidden">
+      {/* 1. 영상 섹션: 비율을 45%로 축소하여 가독성 높임 */}
+      <div className="relative flex-[4.5] bg-black overflow-hidden shadow-inner">
+        <div className="absolute top-6 left-4 z-30 bg-black/60 px-3 py-1.5 rounded-full text-white text-[10px] font-bold border border-white/20">
+          ● LIVE SESSION
         </div>
-      </div>
-
-      {/* 2. 동영상 영역 (Idle/Talk 교체) */}
-      <div style={styles.videoArea}>
-        <video ref={videoIdleRef} src="/videos/tutor_idle.mp4" autoPlay loop muted playsInline 
-          style={{ ...styles.video, opacity: isTalking ? 0 : 1 }} />
-        <video ref={videoTalkRef} src="/videos/tutor_talk.mp4" autoPlay loop muted playsInline 
-          style={{ ...styles.video, opacity: isTalking ? 1 : 0 }} />
         
-        {/* 자막 오버레이 */}
-        <div style={styles.subtitleOverlay}>
-          <p style={styles.mainSubtitle}>{isThinking ? "Thinking..." : aiData.reply}</p>
-          <p style={styles.subSubtitle}>{aiData.translation}</p>
-        </div>
-      </div>
-
-      {/* 3. 하단 컨트롤러 */}
-      <div style={styles.bottomArea}>
-        <button onClick={() => askGemini("START_LECTURE")} style={styles.startBtn} disabled={isTalking}>
-          강의 시작 (Core Only)
-        </button>
+        {/* 음성 상태 표시 */}
         <button 
-          onPointerDown={toggleMic} 
-          style={{ ...styles.micBtn, backgroundColor: isListening ? '#ff4b4b' : '#58CC02' }}
+          onClick={enableAudio}
+          className="absolute top-6 right-4 z-30 bg-blue-600 p-2 rounded-full text-white text-xs"
         >
-          {isListening ? "Listening..." : "Push to Talk"}
+          {isMuted ? "🔇 소리 켜기" : "🔊 소리 켜짐"}
         </button>
+
+        <video
+          src={tutor.videoIdle}
+          autoPlay loop muted playsInline
+          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${isTalking ? 'opacity-0' : 'opacity-100'}`}
+        />
+        <video
+          ref={talkVideoRef}
+          src={tutor.videoTalk}
+          autoPlay loop playsInline
+          muted={isMuted} // 상태에 따라 음소거 제어
+          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${isTalking ? 'opacity-100' : 'opacity-0'}`}
+        />
       </div>
 
-      {/* 4. 강좌 선택 사이드 메뉴 */}
-      {showMenu && (
-        <div style={styles.sideMenu}>
-          <div style={styles.menuHeader}>
-            <h3>Curriculum</h3>
-            <button onClick={() => setShowMenu(false)}>Close</button>
-          </div>
-          <div style={styles.menuList}>
-            {LECTURES.map(lec => (
-              <div key={lec.id} onClick={() => { setCurrentLec(lec); setShowMenu(false); stopAll(); }} 
-                style={{ ...styles.menuItem, backgroundColor: currentLec.id === lec.id ? '#eee' : 'transparent' }}>
-                {lec.title} <small>({lec.subject})</small>
+      {/* 2. 채팅 섹션: 55%로 확장하여 대화에 집중 */}
+      <div className="flex-[5.5] bg-white rounded-t-[30px] z-20 flex flex-col p-5 shadow-2xl -mt-6">
+        <div ref={scrollRef} className="flex-1 overflow-y-auto space-y-4 mb-4 pt-4">
+          {messages.map((msg, idx) => (
+            <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+              <div className={`max-w-[85%] px-4 py-2.5 rounded-2xl text-[14px] ${
+                msg.role === 'user' ? 'bg-blue-600 text-white rounded-br-none' : 'bg-gray-100 text-gray-800 rounded-bl-none'
+              }`}>
+                {msg.text}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      )}
-    </div>
+
+        {/* 하단 입력바 */}
+        <div className="flex items-center gap-2 bg-gray-50 p-2 rounded-full border border-gray-200 shadow-sm">
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+            placeholder={`${tutor.name}에게 말해보세요...`}
+            className="flex-1 bg-transparent px-4 py-1.5 outline-none text-sm"
+          />
+          <button onClick={() => handleSend()} className="w-9 h-9 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-md active:scale-90 transition-transform">
+            ↑
+          </button>
+        </div>
+      </div>
+    </main>
   );
 }
-
-const styles: any = {
-  container: { position: 'relative', width: '100%', height: '100dvh', backgroundColor: '#000', overflow: 'hidden', display: 'flex', flexDirection: 'column' },
-  topBar: { position: 'absolute', top: 0, width: '100%', zIndex: 100, display: 'flex', justifyContent: 'space-between', padding: '15px', background: 'linear-gradient(to bottom, rgba(0,0,0,0.5), transparent)' },
-  menuBtn: { padding: '8px 15px', borderRadius: '20px', border: 'none', backgroundColor: 'rgba(255,255,255,0.2)', color: '#fff', cursor: 'pointer' },
-  langPair: { display: 'flex', gap: '5px' },
-  select: { padding: '5px', borderRadius: '5px', border: 'none', backgroundColor: 'rgba(255,255,255,0.2)', color: '#fff', fontSize: '12px' },
-  videoArea: { flex: 1, position: 'relative' },
-  video: { position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', transition: 'opacity 0.3s' },
-  subtitleOverlay: { position: 'absolute', bottom: '120px', width: '100%', padding: '20px', textAlign: 'center', background: 'linear-gradient(to top, rgba(0,0,0,0.7), transparent)' },
-  mainSubtitle: { color: '#fff', fontSize: '18px', fontWeight: 'bold', margin: '0 0 5px 0' },
-  subSubtitle: { color: '#ccc', fontSize: '14px', margin: 0 },
-  bottomArea: { height: '100px', backgroundColor: '#fff', display: 'flex', alignItems: 'center', padding: '0 20px', gap: '15px', borderTopLeftRadius: '20px', borderTopRightRadius: '20px', zIndex: 10 },
-  startBtn: { flex: 1, height: '50px', borderRadius: '12px', border: 'none', backgroundColor: '#333', color: '#fff', fontWeight: 'bold', cursor: 'pointer' },
-  micBtn: { flex: 2, height: '50px', borderRadius: '12px', border: 'none', color: '#fff', fontSize: '16px', fontWeight: 'bold', cursor: 'pointer' },
-  sideMenu: { position: 'absolute', top: 0, left: 0, width: '80%', height: '100%', backgroundColor: '#fff', zIndex: 200, padding: '20px', display: 'flex', flexDirection: 'column' },
-  menuHeader: { display: 'flex', justifyContent: 'space-between', marginBottom: '20px' },
-  menuList: { flex: 1, overflowY: 'auto' },
-  menuItem: { padding: '12px', borderBottom: '1px solid #eee', cursor: 'pointer', fontSize: '14px' }
-};

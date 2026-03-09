@@ -1,10 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 1. 아래 줄이 있다면 무조건 지우세요! (가장 중요)
-  // output: 'export', 
+  async headers() {
+    return [
+      {
+        // Google OAuth Popup이 작동하려면 COOP를 same-origin-allow-popups로 설정
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'same-origin-allow-popups',
+          },
+        ],
+      },
+    ];
+  },
+};
 
-  reactStrictMode: true,
-  // 나머지 설정들...
-}
-
-module.exports = nextConfig
+module.exports = nextConfig;

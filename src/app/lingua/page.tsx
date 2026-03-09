@@ -1,5 +1,6 @@
+﻿'use client';
 import LevelHub from '@/components/LevelHub';
 
-export default function Home() {
+export default function LinguaPage() {
   return <LevelHub />;
 }
