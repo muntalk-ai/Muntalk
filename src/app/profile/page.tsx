@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { updateProfile, updateEmail, updatePassword, EmailAuthProvider, reauthenticateWithCredential, deleteUser } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
-import { useAuthGuard } from '@/hooks/useAuthGuard';
+
 import { updateUserProfile } from '@/lib/userProfile';
 import { requestPushPermission } from '@/lib/notifications';
 import { LEARN_LANGUAGES, UI_LANGUAGES } from '@/data/languages';

@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
-import { useAuthGuard } from '@/hooks/useAuthGuard';
+
 import { LEARN_LANGUAGES } from '@/data/languages';
 import { CURRICULUM } from '@/data/curriculum';
 
@@ -25,7 +25,7 @@ interface LeaderEntry { uid: string; displayName: string; xp: number; streak: nu
 
 export default function DashboardPage() {
   const router = useRouter();
-  const { user, profile, loading } = useAuthGuard();
+  const { user, profile, loading } = useAuth();
   const [leaderboard, setLeaderboard] = useState<LeaderEntry[]>([]);
   const [lbLoading, setLbLoading] = useState(true);
 
