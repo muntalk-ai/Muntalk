@@ -1,16 +1,9 @@
-// hooks/useAuthGuard.ts
-// 보호된 페이지 상단에서 호출 → 미로그인 시 /login으로 자동 이동
 'use client';
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 
-/**
- * 사용법:
- *   const { user, profile, loading } = useAuthGuard();
- *   if (loading) return <LoadingSpinner />;
- */
 export function useAuthGuard(redirectTo = '/login') {
   const { user, profile, loading } = useAuth();
   const router = useRouter();
@@ -23,3 +16,7 @@ export function useAuthGuard(redirectTo = '/login') {
 
   return { user, profile, loading };
 }
+```
+
+`D:\muntalk\src\hooks\useAuthGuard.ts` 파일을 만들고 위 코드 붙여넣고 저장 후:
+```
