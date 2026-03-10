@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
@@ -16,7 +16,3 @@ export function useAuthGuard(redirectTo = '/login') {
 
   return { user, profile, loading };
 }
-```
-
-`D:\muntalk\src\hooks\useAuthGuard.ts` 파일을 만들고 위 코드 붙여넣고 저장 후:
-```
