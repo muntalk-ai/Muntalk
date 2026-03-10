@@ -66,8 +66,8 @@ export async function POST(req: NextRequest) {
           uid, planId,
           session.customer as string,
           sub.id, 'active',
-          sub.current_period_end,
-          sub.cancel_at_period_end,
+          (sub as any).current_period_end,
+          (sub as any).cancel_at_period_end,
         );
         console.log(`✅ Subscription activated: ${uid} → ${planId}`);
         break;
@@ -85,8 +85,8 @@ export async function POST(req: NextRequest) {
           uid, planId,
           invoice.customer as string,
           sub.id, 'active',
-          sub.current_period_end,
-          sub.cancel_at_period_end,
+          (sub as any).current_period_end,
+          (sub as any).cancel_at_period_end,
         );
         break;
       }
@@ -126,8 +126,8 @@ export async function POST(req: NextRequest) {
           uid, planId,
           sub.customer as string,
           sub.id, sub.status,
-          sub.current_period_end,
-          sub.cancel_at_period_end,
+          (sub as any).current_period_end,
+          (sub as any).cancel_at_period_end,
         );
         break;
       }
