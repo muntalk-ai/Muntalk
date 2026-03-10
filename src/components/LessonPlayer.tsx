@@ -1,9 +1,17 @@
 'use client';
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
+import { useAuth } from '@/context/AuthContext';
 import { CURRICULUM } from '@/data/curriculum';
 import { getTutorById, getTutorForLang } from '@/data/tutors';
 import { LEARN_LANGUAGES } from '@/data/languages';
+import TrialTimerBar from '@/components/TrialTimerBar';
+import TrialExpiredModal from '@/components/TrialExpiredModal';
+import {
+  getGuestTrialStatus, saveGuestUsedSeconds,
+  getFreeTrialStatus, saveFreeTrialUsage,
+  TrialStatus,
+} from '@/lib/trialTimer';
 
 const hasStt = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.stt ?? false;
 const hasTts = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.tts ?? false;
@@ -32,6 +40,7 @@ export default function LessonPlayer({
   onComplete,
 }: LessonPlayerProps) {
   const router = useRouter();
+  const { user } = useAuth();
 
   // ── Data ────────────────────────────────────────────────────────────────────
   const level = CURRICULUM.find(l => l.id === levelId);
@@ -56,6 +65,11 @@ export default function LessonPlayer({
   const [translatedLesson, setTranslatedLesson] = useState<typeof lesson | null>(null);
   const [isTranslating, setIsTranslating] = useState(false);
 
+  // ── Trial timer ─────────────────────────────────────────────────────────────
+  const [trialStatus, setTrialStatus]     = useState<TrialStatus | null>(null);
+  const [trialExpired, setTrialExpired]   = useState(false);
+  const trialUsedRef = useRef(0); // running total of seconds used this session
+
   // ── Video / Speech ──────────────────────────────────────────────────────────
   const [isSpeaking,   setIsSpeaking]   = useState(false);
   const [isListening,  setIsListening]  = useState(false);
@@ -79,6 +93,39 @@ export default function LessonPlayer({
     rec.onend   = () => setIsListening(false);
     recognitionRef.current = rec;
   }, [langId]);
+
+  // ── Init trial status ───────────────────────────────────────────────────────
+  useEffect(() => {
+    async function initTrial() {
+      if (!user) {
+        // Guest
+        const status = getGuestTrialStatus();
+        setTrialStatus(status);
+        if (status.isExpired) setTrialExpired(true);
+        trialUsedRef.current = status.usedSeconds;
+      } else {
+        // Check subscription first
+        try {
+          const { db } = await import('@/lib/firebase');
+          const { doc, getDoc } = await import('firebase/firestore');
+          const snap = await getDoc(doc(db, 'subscriptions', user.uid));
+          const planId = snap.exists() ? (snap.data().planId || 'free') : 'free';
+          if (planId !== 'free') {
+            // Premium — no trial limit
+            setTrialStatus(null);
+            return;
+          }
+        } catch {}
+        // Free member
+        const status = await getFreeTrialStatus(user.uid);
+        setTrialStatus(status);
+        if (status.isExpired) setTrialExpired(true);
+        trialUsedRef.current = status.usedSeconds;
+      }
+    }
+    initTrial();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user?.uid]);
 
   // ── Translate lesson content when non-English ────────────────────────────────
   const [txError, setTxError] = useState<string | null>(null);
@@ -154,7 +201,8 @@ No markdown fences. Pure JSON only.`;
     fetch('/api/gemini', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ prompt, temperature: 0.3 }),
+      body: JSON.stringify({
+          uid: user?.uid, prompt, temperature: 0.3 }),
     })
       .then(async r => {
         const data = await r.json();
@@ -240,6 +288,7 @@ No markdown fences. Pure JSON only.`;
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          uid: user?.uid,
           prompt: `You are a translator. Translate the given text to ${getLangName(subLang)}. Reply with ONLY the translation, nothing else.\n\n${text}`,
           temperature: 0.3,
         }),
@@ -337,6 +386,7 @@ No markdown fences. Pure JSON only.`;
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          uid: user?.uid,
           prompt: `You are a friendly language tutor. Generate a short warm opening message (2 sentences max) to start a conversation practice session in ${langId} language at ${levelId.toUpperCase()} level (${levelId.startsWith('a') ? 'beginner' : levelId.startsWith('b') ? 'intermediate' : 'advanced'}). 
 IMPORTANT: Write ONLY in ${langId}. Use very simple words for beginners. Be encouraging. End with a simple question or task for the student.`,
           temperature: 0.7,
@@ -374,6 +424,7 @@ IMPORTANT: Write ONLY in ${langId}. Use very simple words for beginners. Be enco
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          uid: user?.uid,
           prompt: [
             `You are a friendly language tutor. The student is learning ${langId} at ${levelId.toUpperCase()} level (${levelId.startsWith('a') ? 'beginner — use very simple words only' : levelId.startsWith('b') ? 'intermediate — use everyday vocabulary' : 'advanced — use natural expressions'}).
 CRITICAL RULES:
@@ -390,6 +441,25 @@ CRITICAL RULES:
         }),
       });
       const data = await res.json();
+
+      // 제한 에러 처리
+      if (!res.ok) {
+        if (data.error === 'CHAT_LIMIT_REACHED') {
+          setChatMsgs(prev => [...prev, {
+            role: 'tutor',
+            text: `오늘의 무료 AI 대화 ${data.limit}회를 모두 사용했어요 😢 프리미엄으로 업그레이드하면 무제한으로 대화할 수 있어요!`,
+          }]);
+          return;
+        }
+        if (data.error === 'LOGIN_REQUIRED') {
+          setChatMsgs(prev => [...prev, {
+            role: 'tutor',
+            text: '🔒 AI 튜터를 사용하려면 로그인이 필요해요.',
+          }]);
+          return;
+        }
+      }
+
       const replyText = data.text?.trim() || "That's great! Keep going!";
       const replyMsg: ChatMessage = { role: 'tutor', text: replyText };
 
@@ -426,6 +496,31 @@ CRITICAL RULES:
     return <div style={{ color: '#fff', padding: 40, textAlign: 'center' }}>Lesson not found.</div>;
   }
 
+  // ── Trial timer callbacks ───────────────────────────────────────────────────
+  const handleTrialTick = useCallback((remaining: number, elapsed: number) => {
+    trialUsedRef.current = (trialStatus?.usedSeconds || 0) + elapsed;
+    // Save every 15 seconds
+    if (elapsed % 15 === 0) {
+      if (!user) {
+        saveGuestUsedSeconds(trialUsedRef.current);
+      } else {
+        saveFreeTrialUsage(user.uid, trialUsedRef.current).catch(() => {});
+      }
+    }
+  }, [user, trialStatus?.usedSeconds]);
+
+  const handleTrialExpire = useCallback(() => {
+    // Save final usage
+    if (!user) {
+      saveGuestUsedSeconds(trialUsedRef.current);
+    } else {
+      saveFreeTrialUsage(user.uid, trialUsedRef.current).catch(() => {});
+    }
+    setTrialExpired(true);
+  }, [user]);
+
+  const langInfo = LEARN_LANGUAGES.find(l => l.code === langId);
+
   // ─────────────────────────────────────────────────────────────────────────────
   // RENDER
   // ─────────────────────────────────────────────────────────────────────────────
@@ -437,6 +532,26 @@ CRITICAL RULES:
         @keyframes blink { 0%,60%,100%{opacity:.2} 30%{opacity:1} }
         @keyframes progressSlide { 0%{transform:translateX(-100%)} 100%{transform:translateX(400%)} }
       `}</style>
+
+      {/* ── Trial timer bar (only for guest / free) ─────────────────────── */}
+      {trialStatus && !trialExpired && (
+        <TrialTimerBar
+          initialRemaining={trialStatus.remainingSeconds}
+          onExpire={handleTrialExpire}
+          onTick={handleTrialTick}
+        />
+      )}
+
+      {/* ── Trial expired overlay ───────────────────────────────────────── */}
+      {trialExpired && (
+        <TrialExpiredModal
+          isGuest={!user}
+          langFlag={langInfo?.flag}
+          langLabel={langInfo?.native || langInfo?.label}
+          onClose={() => router.push('/lingua')}
+        />
+      )}
+
       {/* Translation loading overlay */}
       {isTranslating && (
         <div style={{ position: 'fixed', inset: 0, background: 'rgba(255,255,255,0.92)', zIndex: 9999, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16 }}>

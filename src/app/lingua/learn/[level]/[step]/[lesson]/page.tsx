@@ -1,11 +1,14 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import LessonPlayer from '@/components/LessonPlayer';
 import { useAuth } from '@/context/AuthContext';
 import { updateUserProfile } from '@/lib/userProfile';
 import { addWeeklyXp, ensureLeague } from '@/lib/league';
 import { addCardToSRS } from '@/lib/spacedRepetition';
+
+// 비로그인 허용 레슨 (A1 첫 레슨만)
+const GUEST_ALLOWED_LESSON = 'a1-1-1';
 
 export default function LessonPage({
   params,
@@ -14,7 +17,8 @@ export default function LessonPage({
 }) {
   const { level, step, lesson } = params;
   const searchParams = useSearchParams();
-  const { user, refreshProfile } = useAuth();
+  const router = useRouter();
+  const { user, loading: authLoading, refreshProfile } = useAuth();
 
   const langId  = searchParams.get('lang')    || 'en-US';
   const subLang = searchParams.get('subLang') || 'ko-KR';
@@ -22,6 +26,14 @@ export default function LessonPage({
   const [xp, setXp] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [tutorId, setTutorId] = useState<string | undefined>(undefined);
+
+  // 비로그인 게스트 접근 제한 — a1-1-1 외 모든 레슨 차단
+  useEffect(() => {
+    if (authLoading) return;
+    if (!user && lesson !== GUEST_ALLOWED_LESSON) {
+      router.replace('/login');
+    }
+  }, [user, authLoading, lesson]);
 
   useEffect(() => {
     try {
@@ -47,24 +59,36 @@ export default function LessonPage({
         localStorage.setItem('mt_done', JSON.stringify(doneParsed));
       }
 
-      // Firestore + 리그 + SRS 업데이트 (로그인 시)
+      // Firestore 저장 (로그인 시)
       if (user) {
         const displayName = user.displayName || 'Learner';
         const photoURL    = user.photoURL || '';
 
-        await Promise.all([
-          // XP & 진도 저장
-          updateUserProfile(user.uid, { xp: next, completedLessons: doneParsed }),
-          // 주간 리그 XP 추가
-          ensureLeague(user.uid, displayName, photoURL)
-            .then(() => addWeeklyXp(user.uid, xpEarned)),
-        ]);
+        try {
+          // XP & 완료 레슨 저장 (setDoc merge 방식 — 필드 없어도 안전)
+          await updateUserProfile(user.uid, {
+            xp: next,
+            completedLessons: doneParsed,
+          });
+          console.log('[lesson] Firestore saved — xp:', next, 'lessons:', doneParsed.length);
+        } catch (e) {
+          console.error('[lesson] Firestore save FAILED:', e);
+        }
 
-        // 레슨의 핵심 단어들을 SRS에 자동 추가 (예시 — 실제로는 LessonPlayer에서 단어 목록 받아야 함)
-        // 여기서는 레슨 ID 기반으로 나중에 LessonPlayer의 vocabulary 연결
-        await refreshProfile();
+        // 리그 XP (실패해도 레슨에 영향 없음)
+        try {
+          await ensureLeague(user.uid, displayName, photoURL);
+          await addWeeklyXp(user.uid, xpEarned);
+        } catch (e) {
+          console.warn('[lesson] league update failed:', e);
+        }
+
+        // 프로필 갱신
+        try { await refreshProfile(); } catch { /* ignore */ }
       }
-    } catch { /* ignore */ }
+    } catch (e) {
+      console.error('[lesson] handleComplete error:', e);
+    }
   };
 
   if (!loaded) return null;

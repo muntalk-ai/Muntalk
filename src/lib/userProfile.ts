@@ -19,6 +19,9 @@ export interface UserProfile {
   lastActive:   string;   // YYYY-MM-DD
   activityDates: string[]; // 출석 날짜 배열
   completedLessons: string[];
+  // 진단
+  placementDone?:  boolean;
+  placementLevel?: string;
   // 메타
   createdAt:    any;
   updatedAt:    any;
@@ -60,12 +63,12 @@ export async function createUserProfile(
   return profile;
 }
 
-/** 프로필 부분 업데이트 */
+/** 프로필 부분 업데이트 — setDoc merge 사용으로 필드 없어도 안전하게 저장 */
 export async function updateUserProfile(uid: string, data: Partial<UserProfile>) {
-  await updateDoc(doc(db, 'users', uid), {
+  await setDoc(doc(db, 'users', uid), {
     ...data,
     updatedAt: serverTimestamp(),
-  });
+  }, { merge: true });
 }
 
 /** 오늘 활동 기록 + 스트릭 계산 후 저장 */

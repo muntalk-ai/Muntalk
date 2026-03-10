@@ -47,6 +47,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           );
           await migrateFromLocalStorage(u.uid);
           p = (await getUserProfile(u.uid)) || p;
+        } else {
+          // 기존 유저인데 xp/completedLessons 필드가 없는 경우 보완
+          const needsPatch = p.xp === undefined || p.completedLessons === undefined;
+          if (needsPatch) {
+            const lsXp   = parseInt(localStorage.getItem('mt_xp') || '0', 10);
+            const lsDone = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
+            await import('@/lib/userProfile').then(({ updateUserProfile }) =>
+              updateUserProfile(u.uid, {
+                xp:               lsXp  || 0,
+                completedLessons: lsDone.length ? lsDone : (p!.completedLessons || []),
+              })
+            );
+            p = (await getUserProfile(u.uid)) || p;
+            console.log('[auth] patched missing fields for existing user');
+          }
         }
         // 오늘 활동 기록
         await recordActivity(u.uid, p);

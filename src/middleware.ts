@@ -1,36 +1,44 @@
-// middleware.ts (프로젝트 루트 src/ 또는 루트에 위치)
-// 미로그인 사용자가 보호된 페이지에 접근하면 /login으로 리디렉션
-
+// middleware.ts
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-// 로그인 없이 접근 가능한 경로
-const PUBLIC_PATHS = [
-  '/login',
-  '/signup',
-  '/lingua',        // 게스트도 메인 허용
-  '/',
-];
+// 완전 공개 경로
+const PUBLIC_PATHS = ['/', '/login', '/signup', '/pricing', '/lingua'];
 
-// 로그인 필요 경로 (prefix 매칭)
+// 비로그인 허용 — 단, A1 첫 레슨(a1-1-1)만
+// /lingua/learn/a1/a1-1/a1-1-1 형태만 허용, 나머지 learn/* 는 로그인 필요
+const GUEST_LESSON_PATTERN = /^\/lingua\/learn\/a1\/a1-1\/a1-1-1(\/.*)?(\?.*)?$/;
+
+// 로그인 필요 경로 prefix
 const PROTECTED_PREFIXES = [
   '/profile',
   '/lingua/dashboard',
-  '/lingua/learn',
+  '/lingua/learn',   // 기본은 차단 — 위 패턴 예외 처리
   '/lingua/words',
   '/lingua/tutors',
+  '/lingua/league',
+  '/lingua/review',
+  '/admin',
 ];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // 공개 경로 → 통과
+  if (PUBLIC_PATHS.some(p => pathname === p || pathname.startsWith(p + '?'))) {
+    return NextResponse.next();
+  }
+
   const needsAuth = PROTECTED_PREFIXES.some(p => pathname.startsWith(p));
   if (!needsAuth) return NextResponse.next();
 
-  // Firebase Auth는 클라이언트 사이드 → 쿠키 기반 체크
-  // Firebase Auth Session Cookie (선택): 서버사이드 완전 보호는
-  // firebase-admin + session cookie 필요. 여기서는 클라이언트 가드 사용.
-  // → 각 페이지의 useAuth()에서 !user 시 /login으로 redirect
+  // /lingua/learn/* 중 게스트 허용 레슨 예외 처리
+  if (pathname.startsWith('/lingua/learn') && GUEST_LESSON_PATTERN.test(pathname)) {
+    return NextResponse.next();
+  }
+
+  // Firebase Auth는 클라이언트 사이드 → 쿠키로 완전 보호 불가
+  // 각 페이지의 useAuthGuard() / useAuth()에서 !user 시 /login redirect
   return NextResponse.next();
 }
 

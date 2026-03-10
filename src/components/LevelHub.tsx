@@ -104,6 +104,56 @@ export default function LevelHub() {
     } catch { setStreak(0); }
   };
 
+  // ── 진단 테스트 리다이렉트 ────────────────────────────────────────────────
+  useEffect(() => {
+    if (authLoading) return; // 아직 auth 확인 중 → 대기
+
+    if (!user) {
+      // ── 비로그인 게스트 ──────────────────────────────────────────────────
+      // localStorage 기준으로 판단 (계정 무관)
+      const lsPlaced = localStorage.getItem('mt_placement_done');
+      if (!lsPlaced) {
+        // 한 번도 테스트 안 함 → 언어 먼저 선택하게
+        const lang = localStorage.getItem('mt_learn_lang') || '';
+        if (!lang || lang === 'en-US') {
+          // 언어 미선택 → 언어 선택 모달 먼저
+          setShowLangModal(true);
+          setLangStep('learn');
+        } else {
+          router.push(`/lingua/placement?lang=${lang}`);
+        }
+      }
+      // lsPlaced 있으면 → 그대로 LevelHub 표시
+      return;
+    }
+
+    // ── 로그인 유저 ────────────────────────────────────────────────────────
+    if (!profile) return; // profile 아직 로딩 중 → 대기
+
+    const firestoreDone = (profile as any).placementDone === true;
+
+    if (firestoreDone) {
+      // Firestore에 완료 기록 있음 → localStorage도 맞춰주고 그대로
+      localStorage.setItem('mt_placement_done', 'true');
+      return;
+    }
+
+    // Firestore에 기록 없음 → 이 계정은 아직 테스트 미완료
+    // (다른 계정의 localStorage 값은 무시)
+    localStorage.removeItem('mt_placement_done'); // 이전 계정 흔적 제거
+    localStorage.setItem('mt_placement_done', 'pending');
+    const lang = profile.learnLang || localStorage.getItem('mt_learn_lang') || '';
+    if (!lang || lang === 'en-US') {
+      // 언어가 아직 선택 안 됐거나 기본값 → 언어 선택 모달 먼저
+      // 모달 확인 후 handleConfirmLang → placement로 이동
+      setShowLangModal(true);
+      setLangStep('learn');
+    } else {
+      router.push(`/lingua/placement?lang=${lang}`);
+    }
+
+  }, [user, authLoading, profile]);
+
   // Firestore 프로필 우선, 없으면 localStorage fallback
   useEffect(() => {
     if (profile) {
@@ -216,8 +266,17 @@ export default function LevelHub() {
     setNativeLang(native);
     setShowLangModal(false);
     const savedTutor = localStorage.getItem('mt_tutor_id') || 't01';
+
     if (pendingLevelId) {
+      // 레슨 선택 후 언어 고른 경우 → 레슨으로
       router.push(`/lingua/learn/${pendingLevelId}?lang=${learn}&subLang=${native}&tutor=${savedTutor}`);
+      return;
+    }
+
+    // placement가 아직 안 됐으면 → 언어 확정 후 placement로
+    const placed = localStorage.getItem('mt_placement_done');
+    if (!placed || placed === 'pending') {
+      router.push(`/lingua/placement?lang=${learn}`);
     }
   };
 
@@ -351,6 +410,7 @@ export default function LevelHub() {
           {([
             { label: '📚 Learn',      action: () => router.push('/lingua') },
             { label: '🏠 Home',       action: () => router.push('/lingua') },
+            { label: '🎯 Placement Test', action: () => router.push(`/lingua/placement?lang=${learnLang}`) },
             { label: '🌐 Languages',  action: () => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); } },
             { label: '🏆 League',     action: () => router.push('/lingua/league') },
             { label: '🔁 Review',     action: () => router.push('/lingua/review') },
