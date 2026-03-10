@@ -12,7 +12,7 @@ import { LEARN_LANGUAGES, UI_LANGUAGES } from '@/data/languages';
 
 export default function ProfilePage() {
   const router = useRouter();
-  const { user, profile, loading, refreshProfile } = useAuthGuard() as any;
+  const { user, profile, loading, refreshProfile } = useAuth();
 
   const [displayName, setDisplayName] = useState(user?.displayName || '');
   const [learnLang,   setLearnLang]   = useState(profile?.learnLang || 'en-US');
