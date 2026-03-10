@@ -69,7 +69,7 @@ export async function ensureLeague(uid: string, displayName: string, photoURL: s
     // 새 주가 시작됐으면 XP 리셋
     if (data.weekStart !== weekStart) {
       const updated: UserLeague = { ...data, weeklyXp: 0, weekStart, lastUpdated: serverTimestamp() };
-      await updateDoc(ref, updated);
+      await updateDoc(ref, updated as any);
       // 리그 멤버 XP도 리셋
       await setDoc(doc(db, 'leagues', data.leagueId, 'members', uid), {
         uid, displayName, photoURL, weeklyXp: 0, tier: data.tier, leagueId: data.leagueId,
