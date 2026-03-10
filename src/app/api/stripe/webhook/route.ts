@@ -76,7 +76,7 @@ export async function POST(req: NextRequest) {
       // 갱신 성공
       case 'invoice.paid': {
         const invoice = event.data.object as Stripe.Invoice;
-        const sub     = await stripe.subscriptions.retrieve(invoice.subscription as string);
+        const sub     = await stripe.subscriptions.retrieve((invoice as any).subscription as string);
         const uid     = sub.metadata?.uid;
         const planId  = sub.metadata?.planId;
         if (!uid || !planId) break;
@@ -94,7 +94,7 @@ export async function POST(req: NextRequest) {
       // 결제 실패
       case 'invoice.payment_failed': {
         const invoice = event.data.object as Stripe.Invoice;
-        const sub     = await stripe.subscriptions.retrieve(invoice.subscription as string);
+        const sub     = await stripe.subscriptions.retrieve((invoice as any).subscription as string);
         const uid     = sub.metadata?.uid;
         if (!uid) break;
         await db.collection('subscriptions').doc(uid).update({
