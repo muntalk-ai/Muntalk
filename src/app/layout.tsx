@@ -32,10 +32,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-```
-
-저장 후:
-```
-git add -A
-git commit -m "fix: viewport meta mobile"
-git push origin main --force
