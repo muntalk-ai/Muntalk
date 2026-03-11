@@ -62,7 +62,7 @@ interface Question {
   q: string; options: string[]; answer: number;
 }
 
-type Phase = 'intro' | 'track' | 'loading' | 'cefr' | 'result';
+type Phase = 'intro' | 'track' | 'loading' | 'cefr' | 'result' | 'error';
 
 function buildGeminiPrompt(langLabel: string, nativeLabel: string): string {
   return `You are a language assessment expert. Generate exactly 10 multiple-choice CEFR placement questions for a student learning ${langLabel}. The student's native language is ${nativeLabel}.
