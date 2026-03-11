@@ -13,7 +13,6 @@ import {
   TrialStatus,
 } from '@/lib/trialTimer';
 import { getTrialData, isTrialExpired, isPremium, TRIAL_MAX_UNITS } from '@/lib/trialPolicy';
-import TrialExpiredModal from '@/components/TrialExpiredModal';
 
 const hasStt = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.stt ?? false;
 const hasTts = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.tts ?? false;
