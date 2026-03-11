@@ -9,6 +9,9 @@ import { CURRICULUM, getCurrentLevel } from '@/data/curriculum';
 import { LEARN_LANGUAGES, UI_LANGUAGES } from '@/data/languages';
 import { getSubscription, getHearts, getLocalHearts, isLevelLocked, PlanId, Hearts } from '@/lib/subscription';
 import PaywallModal from '@/components/PaywallModal';
+import TrialBanner from '@/components/TrialBanner';
+import TrialExpiredModal from '@/components/TrialExpiredModal';
+import { getTrialData, isTrialExpired, trialDaysRemaining, addTrialLanguage, TRIAL_MAX_LANGUAGES, TrialData } from '@/lib/trialPolicy';
 
 // 언어코드 → 국가코드 매핑 (flagcdn.com 사용)
 const LANG_TO_COUNTRY: Record<string, string> = {
@@ -61,6 +64,13 @@ export default function LevelHub() {
   const [hearts, setHearts] = useState<Hearts>({ count: 5 });
   const [showPaywall, setShowPaywall] = useState(false);
   const [paywallReason, setPaywallReason] = useState<'level_locked'|'no_hearts'|'chat_limit'|'general'>('general');
+
+  // ── Trial state ────────────────────────────────────────────────────────────
+  const [trialData, setTrialData]       = useState<TrialData | null>(null);
+  const [trialExpired, setTrialExpired] = useState(false);
+  const [trialDaysLeft, setTrialDaysLeft] = useState(14);
+  const [trialBannerDismissed, setTrialBannerDismissed] = useState(false);
+  const [langBlockedModal, setLangBlockedModal] = useState(false);
 
   // Auto-clear toast
   useEffect(() => {
@@ -205,6 +215,17 @@ export default function LevelHub() {
     loadSub();
   }, [user]);
 
+  // ── Load trial data ────────────────────────────────────────────────────────
+  useEffect(() => {
+    if (!user) return;
+    getTrialData(user.uid).then(data => {
+      if (!data) return;
+      setTrialData(data);
+      setTrialDaysLeft(trialDaysRemaining(data));
+      if (isTrialExpired(data)) setTrialExpired(true);
+    }).catch(() => {});
+  }, [user?.uid]);
+
   const saveLangPrefs = (learn: string, native: string) => {
     try {
       localStorage.setItem('mt_learn_lang', learn);
@@ -260,7 +281,25 @@ export default function LevelHub() {
   };
 
   // 언어 확정 후 이동
-  const handleConfirmLang = (learn: string, native: string) => {
+  const handleConfirmLang = async (learn: string, native: string) => {
+    // ── 체험 언어 제한 체크 ──────────────────────────────────────────────────
+    if (user && trialData && !isTrialExpired(trialData)) {
+      const alreadyAdded = trialData.languages.includes(learn);
+      if (!alreadyAdded && trialData.languages.length >= TRIAL_MAX_LANGUAGES) {
+        // planId가 premium이면 통과
+        if (planId === 'free') {
+          setShowLangModal(false);
+          setLangBlockedModal(true);
+          return;
+        }
+      }
+      // 언어 추가 기록
+      if (!alreadyAdded) {
+        await addTrialLanguage(user.uid, learn).catch(() => {});
+        setTrialData(prev => prev ? { ...prev, languages: [...prev.languages, learn] } : prev);
+      }
+    }
+
     saveLangPrefs(learn, native);
     setLearnLang(learn);
     setNativeLang(native);
@@ -268,12 +307,10 @@ export default function LevelHub() {
     const savedTutor = localStorage.getItem('mt_tutor_id') || 't01';
 
     if (pendingLevelId) {
-      // 레슨 선택 후 언어 고른 경우 → 레슨으로
       router.push(`/lingua/learn/${pendingLevelId}?lang=${learn}&subLang=${native}&tutor=${savedTutor}`);
       return;
     }
 
-    // placement가 아직 안 됐으면 → 언어 확정 후 placement로
     const placed = localStorage.getItem('mt_placement_done');
     if (!placed || placed === 'pending') {
       router.push(`/lingua/placement?lang=${learn}`);
@@ -292,6 +329,30 @@ export default function LevelHub() {
         .mt-nav-tab.active{background:#EFF6FF;color:#38BDF8;}
         .mt-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.45);backdrop-filter:blur(4px);z-index:1000;display:flex;align-items:center;justify-content:center;}
       `}</style>
+
+      {/* ── Trial: 만료 모달 ── */}
+      {trialExpired && planId === 'free' && (
+        <TrialExpiredModal
+          reason="expired"
+          onClose={() => router.push('/pricing')}
+        />
+      )}
+
+      {/* ── Trial: 언어 제한 모달 ── */}
+      {langBlockedModal && (
+        <TrialExpiredModal
+          reason="language_limit"
+          onClose={() => setLangBlockedModal(false)}
+        />
+      )}
+
+      {/* ── Trial: 상단 배너 ── */}
+      {!trialExpired && trialData && planId === 'free' && !trialBannerDismissed && (
+        <TrialBanner
+          daysLeft={trialDaysLeft}
+          onDismiss={() => setTrialBannerDismissed(true)}
+        />
+      )}
 
       {/* ── 언어 선택 모달 ── */}
       {showLangModal && (
@@ -515,7 +576,7 @@ export default function LevelHub() {
               <span style={styles.newTag}>NEW</span>
             </div>
           </div>
-          <h1 style={styles.heroTitle}>Every language in the world<br />Meet +150 tutors</h1>
+          <h1 style={styles.heroTitle}>Every language in the world<br />starts with one conversation.</h1>
           <p style={styles.heroDesc}>No judgment. No pressure. Your pace, your rules.<br />Our AI tutors get total beginners talking in under 10 minutes.</p>
           <div style={styles.heroBtnRow}>
             <button style={styles.heroBtn1} onClick={() => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); }}>

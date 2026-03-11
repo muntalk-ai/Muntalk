@@ -4,9 +4,10 @@ import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 const MODELS = [
   'gemini-2.5-flash',
+  'gemini-1.5-flash',
 ];
 const RETRY_DELAYS = [800, 2000, 4000];
-const FREE_DAILY_CHAT_LIMIT = 3;
+const FREE_DAILY_CHAT_LIMIT = 5; // 14일 체험: 5회/일
 
 async function callGemini(apiKey: string, model: string, prompt: string, temperature: number) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
@@ -82,7 +83,7 @@ export async function POST(req: NextRequest) {
           return NextResponse.json(
             {
               error: 'CHAT_LIMIT_REACHED',
-              message: `Free plan allows ${FREE_DAILY_CHAT_LIMIT} AI chats per day. Upgrade to Premium for unlimited chats.`,
+              message: `Free trial allows ${FREE_DAILY_CHAT_LIMIT} AI chats per day. Upgrade to Premium for unlimited chats.`,
               used: todayCount,
               limit: FREE_DAILY_CHAT_LIMIT,
             },

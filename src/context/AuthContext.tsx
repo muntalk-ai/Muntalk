@@ -46,6 +46,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             u.photoURL || '',
           );
           await migrateFromLocalStorage(u.uid);
+          // 첫 로그인 → 14일 체험 자동 시작
+          await import('@/lib/trialPolicy').then(({ initTrial }) => initTrial(u.uid)).catch(() => {});
           p = (await getUserProfile(u.uid)) || p;
         } else {
           // 기존 유저인데 xp/completedLessons 필드가 없는 경우 보완

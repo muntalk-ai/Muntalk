@@ -12,6 +12,8 @@ import {
   getFreeTrialStatus, saveFreeTrialUsage,
   TrialStatus,
 } from '@/lib/trialTimer';
+import { getTrialData, isTrialExpired, isPremium, TRIAL_MAX_UNITS } from '@/lib/trialPolicy';
+import TrialExpiredModal from '@/components/TrialExpiredModal';
 
 const hasStt = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.stt ?? false;
 const hasTts = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.tts ?? false;
@@ -68,6 +70,7 @@ export default function LessonPlayer({
   // ── Trial timer ─────────────────────────────────────────────────────────────
   const [trialStatus, setTrialStatus]     = useState<TrialStatus | null>(null);
   const [trialExpired, setTrialExpired]   = useState(false);
+  const [trialExpireReason, setTrialExpireReason] = useState<'expired'|'lesson_limit'|'chat_limit'>('expired');
   const trialUsedRef = useRef(0); // running total of seconds used this session
 
   // ── Video / Speech ──────────────────────────────────────────────────────────
@@ -139,6 +142,7 @@ export default function LessonPlayer({
     console.log('[translate] langId:', langId, 'lesson:', lsn?.title);
 
     if (!lsn) { console.warn('[translate] lesson not found'); return; }
+    if (!user) { console.log('[translate] waiting for user auth...'); return; }
     if (langId === 'en-US' || langId === 'en-GB') {
       setTranslatedLesson(null);
       return;
@@ -221,7 +225,7 @@ No markdown fences. Pure JSON only.`;
       })
       .finally(() => setIsTranslating(false));
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lessonId, langId, subLang]);
+  }, [lessonId, langId, subLang, user?.uid]);
 
   // ── Auto-scroll chat ────────────────────────────────────────────────────────
   useEffect(() => {
@@ -545,7 +549,7 @@ CRITICAL RULES:
       {/* ── Trial expired overlay ───────────────────────────────────────── */}
       {trialExpired && (
         <TrialExpiredModal
-          isGuest={!user}
+          reason={trialExpireReason}
           langFlag={langInfo?.flag}
           langLabel={langInfo?.native || langInfo?.label}
           onClose={() => router.push('/lingua')}
