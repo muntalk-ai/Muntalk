@@ -484,6 +484,15 @@ CRITICAL RULES:
 
   const langInfo = LEARN_LANGUAGES.find(l => l.code === langId);
 
+  // ── Mobile detection ─────────────────────────────────────────────────────
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 640);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
   // ─────────────────────────────────────────────────────────────────────────────
   // RENDER
   // ─────────────────────────────────────────────────────────────────────────────
@@ -677,84 +686,150 @@ CRITICAL RULES:
 
       {/* ── CHAT ──────────────────────────────────────────────────────── */}
       {phase === 'chat' && (
-        <div style={styles.chatLayout} className="chat-layout">
-          {/* Video tutor */}
-          <div style={styles.videoCol} className="video-col">
-            <div style={styles.videoWrap} className="video-wrap">
-              <video
-                key={isSpeaking || isListening ? 'talk' : 'idle'}
-                src={isSpeaking || isListening ? tutor.videoTalk : tutor.videoIdle}
-                autoPlay loop muted playsInline
-                style={styles.video}
-                onError={e => console.warn('Video load error', e)}
-              />
-              {isListening && (
-                <div style={styles.listeningBadge}>
-                  <span style={styles.pulse} />
-                  Listening…
-                </div>
-              )}
-              {isSpeaking && (
-                <div style={{ ...styles.listeningBadge, background: level.accent }}>
-                  🔊 Speaking…
-                </div>
-              )}
-            </div>
-            <div style={{ ...styles.tutorLabel, color: level.accent }}>{tutor.name}</div>
-            <div style={styles.tutorSubLabel}>AI Tutor · {lesson.icon} {lesson.title}</div>
+        <div style={{
+          display: 'flex',
+          flexDirection: isMobile ? 'column' : 'row',
+          height: isMobile ? 'auto' : 'calc(100vh - 110px)',
+          minHeight: isMobile ? 'calc(100vh - 110px)' : undefined,
+          overflow: isMobile ? 'visible' : 'hidden',
+        }}>
 
-            {/* Chat controls */}
-            <div style={styles.controls}>
-              {hasStt(langId) ? (
-                <button
-                  style={{ ...styles.micBtn, background: isListening ? '#E11D48' : level.accent }}
-                  onClick={isListening ? stopAll : startListening}
-                  disabled={isSpeaking || isChatThinking}
-                >
-                  {isListening ? '⏹ Stop' : '🎤 Speak'}
-                </button>
-              ) : (
-                <div style={{ display: 'flex', gap: 8, flex: 1 }}>
-                  <input
-                    type="text"
-                    placeholder="Type your answer…"
-                    style={{
-                      flex: 1, padding: '10px 14px', borderRadius: 12,
-                      border: '2px solid #E2E8F0', fontSize: 15, outline: 'none',
-                      fontFamily: 'inherit',
-                    }}
-                    onKeyDown={e => {
-                      if (e.key === 'Enter' && e.currentTarget.value.trim()) {
-                        handleUserMessage(e.currentTarget.value.trim());
-                        e.currentTarget.value = '';
-                      }
-                    }}
-                    disabled={isSpeaking || isChatThinking}
+          {/* ── Tutor panel ── */}
+          {isMobile ? (
+            /* MOBILE: 상단 가로 바 (영상 작게 + 이름/버튼 옆에) */
+            <div style={{ background: '#F3F4F6', borderBottom: '1px solid #E9ECEF', padding: '12px 16px' }}>
+              {/* 영상 + 이름 가로 배치 */}
+              <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start', marginBottom: 10 }}>
+                <div style={{ position: 'relative', width: 90, height: 120, background: '#E5E7EB', borderRadius: 10, overflow: 'hidden', flexShrink: 0 }}>
+                  <video
+                    key={isSpeaking || isListening ? 'talk' : 'idle'}
+                    src={isSpeaking || isListening ? tutor.videoTalk : tutor.videoIdle}
+                    autoPlay loop muted playsInline
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }}
+                    onError={e => console.warn('Video load error', e)}
                   />
-                  <button
-                    style={{ ...styles.micBtn, background: level.accent }}
-                    onClick={e => {
-                      const input = (e.currentTarget.previousSibling as HTMLInputElement);
-                      if (input?.value.trim()) {
-                        handleUserMessage(input.value.trim());
-                        input.value = '';
-                      }
-                    }}
-                    disabled={isSpeaking || isChatThinking}
-                  >
-                    Send ➤
-                  </button>
+                  {isListening && (
+                    <div style={{ ...styles.listeningBadge, fontSize: 10, padding: '4px 8px' }}>
+                      <span style={styles.pulse} /> Listening
+                    </div>
+                  )}
+                  {isSpeaking && (
+                    <div style={{ ...styles.listeningBadge, background: level.accent, fontSize: 10, padding: '4px 8px' }}>
+                      🔊
+                    </div>
+                  )}
                 </div>
-              )}
-              <button style={styles.doneBtn} onClick={handleFinishLesson}>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ fontSize: 15, fontWeight: 900, color: level.accent, marginBottom: 2 }}>{tutor.name}</div>
+                  <div style={{ fontSize: 11, color: '#9CA3AF', marginBottom: 10 }}>AI Tutor · {lesson.icon} {lesson.title}</div>
+                  {/* 버튼 */}
+                  {hasStt(langId) ? (
+                    <button
+                      style={{ ...styles.micBtn, padding: '10px', fontSize: 13 , background: isListening ? '#E11D48' : level.accent }}
+                      onClick={isListening ? stopAll : startListening}
+                      disabled={isSpeaking || isChatThinking}
+                    >
+                      {isListening ? '⏹ Stop' : '🎤 Speak'}
+                    </button>
+                  ) : (
+                    <div style={{ display: 'flex', gap: 6 }}>
+                      <input
+                        type="text"
+                        placeholder="Type answer…"
+                        style={{ flex: 1, padding: '8px 10px', borderRadius: 10, border: '2px solid #E2E8F0', fontSize: 13, outline: 'none', fontFamily: 'inherit' }}
+                        onKeyDown={e => {
+                          if (e.key === 'Enter' && e.currentTarget.value.trim()) {
+                            handleUserMessage(e.currentTarget.value.trim());
+                            e.currentTarget.value = '';
+                          }
+                        }}
+                        disabled={isSpeaking || isChatThinking}
+                      />
+                      <button
+                        style={{ ...styles.micBtn, padding: '8px 12px', fontSize: 13, background: level.accent }}
+                        onClick={e => {
+                          const input = (e.currentTarget.previousSibling as HTMLInputElement);
+                          if (input?.value.trim()) { handleUserMessage(input.value.trim()); input.value = ''; }
+                        }}
+                        disabled={isSpeaking || isChatThinking}
+                      >➤</button>
+                    </div>
+                  )}
+                </div>
+              </div>
+              <button style={{ ...styles.doneBtn, width: '100%' }} onClick={handleFinishLesson}>
                 Finish Lesson ✓
               </button>
             </div>
-          </div>
+          ) : (
+            /* DESKTOP: 좌측 세로 패널 */
+            <div style={styles.videoCol}>
+              <div style={styles.videoWrap}>
+                <video
+                  key={isSpeaking || isListening ? 'talk' : 'idle'}
+                  src={isSpeaking || isListening ? tutor.videoTalk : tutor.videoIdle}
+                  autoPlay loop muted playsInline
+                  style={styles.video}
+                  onError={e => console.warn('Video load error', e)}
+                />
+                {isListening && (
+                  <div style={styles.listeningBadge}>
+                    <span style={styles.pulse} /> Listening…
+                  </div>
+                )}
+                {isSpeaking && (
+                  <div style={{ ...styles.listeningBadge, background: level.accent }}>
+                    🔊 Speaking…
+                  </div>
+                )}
+              </div>
+              <div style={{ ...styles.tutorLabel, color: level.accent }}>{tutor.name}</div>
+              <div style={styles.tutorSubLabel}>AI Tutor · {lesson.icon} {lesson.title}</div>
+              <div style={styles.controls}>
+                {hasStt(langId) ? (
+                  <button
+                    style={{ ...styles.micBtn, background: isListening ? '#E11D48' : level.accent }}
+                    onClick={isListening ? stopAll : startListening}
+                    disabled={isSpeaking || isChatThinking}
+                  >
+                    {isListening ? '⏹ Stop' : '🎤 Speak'}
+                  </button>
+                ) : (
+                  <div style={{ display: 'flex', gap: 8, flex: 1 }}>
+                    <input
+                      type="text"
+                      placeholder="Type your answer…"
+                      style={{ flex: 1, padding: '10px 14px', borderRadius: 12, border: '2px solid #E2E8F0', fontSize: 15, outline: 'none', fontFamily: 'inherit' }}
+                      onKeyDown={e => {
+                        if (e.key === 'Enter' && e.currentTarget.value.trim()) {
+                          handleUserMessage(e.currentTarget.value.trim());
+                          e.currentTarget.value = '';
+                        }
+                      }}
+                      disabled={isSpeaking || isChatThinking}
+                    />
+                    <button
+                      style={{ ...styles.micBtn, background: level.accent }}
+                      onClick={e => {
+                        const input = (e.currentTarget.previousSibling as HTMLInputElement);
+                        if (input?.value.trim()) { handleUserMessage(input.value.trim()); input.value = ''; }
+                      }}
+                      disabled={isSpeaking || isChatThinking}
+                    >
+                      Send ➤
+                    </button>
+                  </div>
+                )}
+                <button style={styles.doneBtn} onClick={handleFinishLesson}>
+                  Finish Lesson ✓
+                </button>
+              </div>
+            </div>
+          )}
 
-          {/* Chat messages */}
-          <div style={styles.chatCol}>
-            <div style={styles.chatArea} ref={chatAreaRef}>
+          {/* ── Chat messages ── */}
+          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: isMobile ? 'visible' : 'hidden', background: '#fff' }}>
+            <div style={{ flex: 1, overflowY: 'auto', padding: '16px', display: 'flex', flexDirection: 'column', gap: 14 }} ref={chatAreaRef}>
               {chatMsgs.map((msg, i) => (
                 <div key={i} style={msg.role === 'tutor' ? { ...styles.tutorBubble, background: level.color } : styles.userBubble}>
                   <div style={{ fontWeight: 700, color: msg.role === 'tutor' ? level.dark : '#000', fontSize: 14 }}>{msg.text}</div>
@@ -778,6 +853,7 @@ CRITICAL RULES:
               )}
             </div>
           </div>
+
         </div>
       )}
 
