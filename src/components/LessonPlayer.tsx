@@ -500,11 +500,6 @@ CRITICAL RULES:
     <div style={styles.page}>
       <style suppressHydrationWarning>{`
         @keyframes fadeUp { 0%{opacity:0;transform:translateY(16px)} 20%{opacity:1;transform:translateY(0)} 80%{opacity:1} 100%{opacity:0;transform:translateY(-16px)} }
-        @media (max-width: 640px) {
-          .chat-layout { flex-direction: column !important; height: auto !important; min-height: calc(100vh - 110px); overflow-y: auto !important; }
-          .video-col { width: 100% !important; border-right: none !important; border-bottom: 1px solid #E9ECEF; padding: 12px 16px !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; }
-          .video-wrap { width: 120px !important; height: 160px !important; flex-shrink: 0 !important; }
-        }
         @keyframes ringPulse { 0%,100%{opacity:0.6;transform:scale(1)} 50%{opacity:0.2;transform:scale(1.12)} }
         @keyframes blink { 0%,60%,100%{opacity:.2} 30%{opacity:1} }
         @keyframes progressSlide { 0%{transform:translateX(-100%)} 100%{transform:translateX(400%)} }
