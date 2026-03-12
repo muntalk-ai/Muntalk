@@ -5,14 +5,8 @@ import { useAuth } from '@/context/AuthContext';
 import { CURRICULUM } from '@/data/curriculum';
 import { getTutorById, getTutorForLang } from '@/data/tutors';
 import { LEARN_LANGUAGES } from '@/data/languages';
-import TrialTimerBar from '@/components/TrialTimerBar';
 import TrialExpiredModal from '@/components/TrialExpiredModal';
-import {
-  getGuestTrialStatus, saveGuestUsedSeconds,
-  getFreeTrialStatus, saveFreeTrialUsage,
-  TrialStatus,
-} from '@/lib/trialTimer';
-import { getTrialData, isTrialExpired, isPremium, TRIAL_MAX_UNITS } from '@/lib/trialPolicy';
+import { getTrialData, initTrial, isTrialExpired, isPremium, TRIAL_MAX_UNITS, canAccessChat } from '@/lib/trialPolicy';
 
 const hasStt = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.stt ?? false;
 const hasTts = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.tts ?? false;
@@ -67,10 +61,8 @@ export default function LessonPlayer({
   const [isTranslating, setIsTranslating] = useState(false);
 
   // ── Trial timer ─────────────────────────────────────────────────────────────
-  const [trialStatus, setTrialStatus]     = useState<TrialStatus | null>(null);
   const [trialExpired, setTrialExpired]   = useState(false);
   const [trialExpireReason, setTrialExpireReason] = useState<'expired'|'lesson_limit'|'chat_limit'>('expired');
-  const trialUsedRef = useRef(0); // running total of seconds used this session
 
   // ── Video / Speech ──────────────────────────────────────────────────────────
   const [isSpeaking,   setIsSpeaking]   = useState(false);
@@ -96,36 +88,24 @@ export default function LessonPlayer({
     recognitionRef.current = rec;
   }, [langId]);
 
-  // ── Init trial status ───────────────────────────────────────────────────────
+  // ── Init trial status (14일 정책 기반) ─────────────────────────────────────
   useEffect(() => {
-    async function initTrial() {
-      if (!user) {
-        // Guest
-        const status = getGuestTrialStatus();
-        setTrialStatus(status);
-        if (status.isExpired) setTrialExpired(true);
-        trialUsedRef.current = status.usedSeconds;
-      } else {
-        // Check subscription first
-        try {
-          const { db } = await import('@/lib/firebase');
-          const { doc, getDoc } = await import('firebase/firestore');
-          const snap = await getDoc(doc(db, 'subscriptions', user.uid));
-          const planId = snap.exists() ? (snap.data().planId || 'free') : 'free';
-          if (planId !== 'free') {
-            // Premium — no trial limit
-            setTrialStatus(null);
-            return;
-          }
-        } catch {}
-        // Free member
-        const status = await getFreeTrialStatus(user.uid);
-        setTrialStatus(status);
-        if (status.isExpired) setTrialExpired(true);
-        trialUsedRef.current = status.usedSeconds;
-      }
+    if (!user) return; // 게스트는 trial 제한 없음
+    async function checkTrial() {
+      try {
+        // 프리미엄이면 패스
+        if (await isPremium(user!.uid)) return;
+        // trial 데이터 읽기 (없으면 자동 생성)
+        let trial = await getTrialData(user!.uid);
+        if (!trial) trial = await initTrial(user!.uid);
+        if (!trial) return;
+        if (isTrialExpired(trial)) {
+          setTrialExpireReason('expired');
+          setTrialExpired(true);
+        }
+      } catch { /* Firestore 오류 시 제한 없이 허용 */ }
     }
-    initTrial();
+    checkTrial();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user?.uid]);
 
@@ -500,28 +480,7 @@ CRITICAL RULES:
     return <div style={{ color: '#fff', padding: 40, textAlign: 'center' }}>Lesson not found.</div>;
   }
 
-  // ── Trial timer callbacks ───────────────────────────────────────────────────
-  const handleTrialTick = useCallback((remaining: number, elapsed: number) => {
-    trialUsedRef.current = (trialStatus?.usedSeconds || 0) + elapsed;
-    // Save every 15 seconds
-    if (elapsed % 15 === 0) {
-      if (!user) {
-        saveGuestUsedSeconds(trialUsedRef.current);
-      } else {
-        saveFreeTrialUsage(user.uid, trialUsedRef.current).catch(() => {});
-      }
-    }
-  }, [user, trialStatus?.usedSeconds]);
-
-  const handleTrialExpire = useCallback(() => {
-    // Save final usage
-    if (!user) {
-      saveGuestUsedSeconds(trialUsedRef.current);
-    } else {
-      saveFreeTrialUsage(user.uid, trialUsedRef.current).catch(() => {});
-    }
-    setTrialExpired(true);
-  }, [user]);
+  // ── Trial timer removed — using 14-day policy ───────────────────────────────
 
   const langInfo = LEARN_LANGUAGES.find(l => l.code === langId);
 
@@ -538,13 +497,6 @@ CRITICAL RULES:
       `}</style>
 
       {/* ── Trial timer bar (only for guest / free) ─────────────────────── */}
-      {trialStatus && !trialExpired && (
-        <TrialTimerBar
-          initialRemaining={trialStatus.remainingSeconds}
-          onExpire={handleTrialExpire}
-          onTick={handleTrialTick}
-        />
-      )}
 
       {/* ── Trial expired overlay ───────────────────────────────────────── */}
       {trialExpired && (
