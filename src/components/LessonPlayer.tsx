@@ -351,7 +351,7 @@ No markdown fences. Pure JSON only.`;
     if (quizIdx < activeLesson.quiz.length - 1) {
       setQuizIdx(q => q + 1);
     } else {
-      // Quiz done → enter chat
+      // Quiz done -> enter chat
       setPhase('chat');
       startChat();
     }
@@ -410,7 +410,7 @@ IMPORTANT: Write ONLY in ${langId}. Use very simple words for beginners. Be enco
         body: JSON.stringify({
           uid: user?.uid,
           prompt: [
-            `You are a friendly language tutor. The student is learning ${langId} at ${levelId.toUpperCase()} level (${levelId.startsWith('a') ? 'beginner — use very simple words only' : levelId.startsWith('b') ? 'intermediate — use everyday vocabulary' : 'advanced — use natural expressions'}).
+            `You are a friendly language tutor. The student is learning ${langId} at ${levelId.toUpperCase()} level (${levelId.startsWith('a') ? 'beginner -- use very simple words only' : levelId.startsWith('b') ? 'intermediate -- use everyday vocabulary' : 'advanced -- use natural expressions'}).
 CRITICAL RULES:
 - ALWAYS write your reply in ${langId} (the target language), never in English unless langId is en-US/en-GB
 - Match vocabulary strictly to ${levelId.toUpperCase()} level
@@ -489,7 +489,7 @@ CRITICAL RULES:
     return <div style={{ color: '#fff', padding: 40, textAlign: 'center' }}>Lesson not found.</div>;
   }
 
-  // -- Trial timer removed — using 14-day policy -------------------------------
+  // -- Trial timer removed -- using 14-day policy -------------------------------
 
   const langInfo = LEARN_LANGUAGES.find(l => l.code === langId);
 
@@ -516,7 +516,7 @@ CRITICAL RULES:
       {isTranslating && (
         <div style={{ position: 'fixed', inset: 0, background: 'rgba(255,255,255,0.92)', zIndex: 9999, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16 }}>
           <div style={{ fontSize: 48 }}>🌐</div>
-          <div style={{ fontSize: 18, fontWeight: 800, color: '#0F172A' }}>Preparing lesson…</div>
+          <div style={{ fontSize: 18, fontWeight: 800, color: '#0F172A' }}>Preparing lesson...</div>
           <div style={{ fontSize: 14, color: '#6B7280' }}>Preparing lesson content in your language</div>
           <div style={{ width: 200, height: 4, background: '#E9ECEF', borderRadius: 99, overflow: 'hidden' }}>
             <div style={{ height: '100%', background: '#38BDF8', borderRadius: 99, animation: 'progressSlide 1.5s ease-in-out infinite' }} />
@@ -526,7 +526,7 @@ CRITICAL RULES:
       {/* Translation error banner */}
       {txError && !isTranslating && (
         <div style={{ background: '#FFF7ED', border: '1px solid #FED7AA', padding: '12px 20px', fontSize: 13, color: '#C2410C', fontWeight: 700, textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-          <span>⚠️ AI translation unavailable — showing in English.</span>
+          <span>⚠️ AI translation unavailable -- showing in English.</span>
           <button
             onClick={() => { setTxError(null); setIsTranslating(true); }}
             style={{ background: '#EA580C', border: 'none', borderRadius: 8, color: '#fff', fontSize: 12, fontWeight: 800, padding: '5px 14px', cursor: 'pointer' }}>
@@ -542,7 +542,7 @@ CRITICAL RULES:
 
       {/* Header */}
       <header style={styles.header}>
-        <button style={styles.backBtn} onClick={() => { stopAll(); router.back(); }}>← Back</button>
+        <button style={styles.backBtn} onClick={() => { stopAll(); router.back(); }}><- Back</button>
         <div style={styles.lessonMeta}>
           <span style={{ ...styles.levelTag, background: level.accent }}>{level.label}</span>
           <span style={styles.lessonTitle}>{lesson.icon} {lesson.title}</span>
@@ -578,29 +578,30 @@ CRITICAL RULES:
           {/* -- Tutor panel -- */}
           {isMobile ? (
             /* MOBILE: 영상 상단 전체 너비로 크게 */
-            <div style={{ display: 'flex', justifyContent: 'center', background: '#F3F4F6', padding: '12px 0 0', borderBottom: '1px solid #E9ECEF' }}>
-              <div style={{ position: 'relative', width: 160, height: 220, borderRadius: 16, overflow: 'hidden', background: '#1a1a2e', flexShrink: 0 }}>
-              <video
-                key={`vocab-${isSpeaking ? 'talk' : 'idle'}`}
-                src={isSpeaking ? tutor.videoTalk : tutor.videoIdle}
-                autoPlay loop muted playsInline
-                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center', display: 'block' }}
-                onError={e => console.warn('Video load error', e)}
-              />
-              {/* 하단 그라디언트 오버레이 */}
-              <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 60,
-                background: 'linear-gradient(transparent, rgba(0,0,0,0.5))' }} />
-              {isSpeaking && (
-                <div style={{ position: 'absolute', top: 8, left: '50%', transform: 'translateX(-50%)', background: level.accent,
-                  padding: '4px 10px', borderRadius: 20, color: '#fff', fontSize: 11, fontWeight: 800, whiteSpace: 'nowrap' }}>
-                  🔊 Speaking…
+            <div style={{ background: '#F3F4F6', borderBottom: '1px solid #E9ECEF', paddingBottom: 10 }}>
+              <div style={{ display: 'flex', justifyContent: 'center', padding: '12px 0 0' }}>
+                <div style={{ position: 'relative', width: 160, height: 220, borderRadius: 16, overflow: 'hidden', background: '#1a1a2e', flexShrink: 0 }}>
+                  <video
+                    key={`vocab-${isSpeaking ? 'talk' : 'idle'}`}
+                    src={isSpeaking ? tutor.videoTalk : tutor.videoIdle}
+                    autoPlay loop muted playsInline
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center', display: 'block' }}
+                    onError={e => console.warn('Video load error', e)}
+                  />
+                  <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 60,
+                    background: 'linear-gradient(transparent, rgba(0,0,0,0.5))' }} />
+                  {isSpeaking && (
+                    <div style={{ position: 'absolute', top: 8, left: '50%', transform: 'translateX(-50%)', background: level.accent,
+                      padding: '4px 10px', borderRadius: 20, color: '#fff', fontSize: 11, fontWeight: 800, whiteSpace: 'nowrap' }}>
+                      Speaking...
+                    </div>
+                  )}
                 </div>
-              )}
-              </div>{/* inner video box */}
-            </div>{/* outer center wrapper */}
-            <div style={{ textAlign: 'center', paddingBottom: 10 }}>
-              <div style={{ fontSize: 14, fontWeight: 900, color: level.accent, marginTop: 6 }}>{tutor.name}</div>
-              <div style={{ fontSize: 11, color: '#9CA3AF' }}>AI Tutor · {lesson.icon} {lesson.title}</div>
+              </div>
+              <div style={{ textAlign: 'center', paddingTop: 8 }}>
+                <div style={{ fontSize: 14, fontWeight: 900, color: level.accent }}>{tutor.name}</div>
+                <div style={{ fontSize: 11, color: '#9CA3AF' }}>AI Tutor · {lesson.icon} {lesson.title}</div>
+              </div>
             </div>
           ) : (
             /* DESKTOP: 좌측 세로 패널 */
@@ -614,7 +615,7 @@ CRITICAL RULES:
                   onError={e => console.warn('Video load error', e)}
                 />
                 {isSpeaking && (
-                  <div style={{ ...styles.listeningBadge, background: level.accent }}>🔊 Speaking…</div>
+                  <div style={{ ...styles.listeningBadge, background: level.accent }}>🔊 Speaking...</div>
                 )}
               </div>
               <div style={{ ...styles.tutorLabel, color: level.accent }}>{tutor.name}</div>
@@ -635,7 +636,7 @@ CRITICAL RULES:
               {subLang && subLang !== langId && (
                 <div style={styles.txLine}>
                   {loadingTx[`vocab-ex-${vocabIdx}`]
-                    ? '⏳ 번역 중…'
+                    ? '⏳ 번역 중...'
                     : translations[`vocab-ex-${vocabIdx}`] || ''}
                 </div>
               )}
@@ -649,15 +650,15 @@ CRITICAL RULES:
                 onClick={hasTts(langId) ? handleSpeakVocab : undefined}
                 disabled={isSpeaking || !hasTts(langId)}
               >
-                {isSpeaking ? '🔊 Playing…' : hasTts(langId) ? '🔊 Hear example' : '🔇 Voice unavailable'}
+                {isSpeaking ? '🔊 Playing...' : hasTts(langId) ? '🔊 Hear example' : '🔇 Voice unavailable'}
               </button>
             </div>
             <div style={styles.btnRow}>
               {vocabIdx > 0 && (
-                <button style={styles.prevBtn} onClick={() => setVocabIdx(v => v - 1)}>← Prev</button>
+                <button style={styles.prevBtn} onClick={() => setVocabIdx(v => v - 1)}><- Prev</button>
               )}
               <button style={{ ...styles.nextBtn, background: level.accent }} onClick={handleNextVocab}>
-                {vocabIdx < activeLesson!.vocab.length - 1 ? 'Next →' : 'Start Quiz →'}
+                {vocabIdx < activeLesson!.vocab.length - 1 ? 'Next ->' : 'Start Quiz ->'}
               </button>
             </div>
           </div>
@@ -702,7 +703,7 @@ CRITICAL RULES:
           {selectedOpt !== null && (
             <div style={styles.btnRow}>
               <button style={{ ...styles.nextBtn, background: level.accent }} onClick={handleNextQuiz}>
-                {quizIdx < activeLesson!.quiz.length - 1 ? 'Next Question →' : 'Start Chat Practice →'}
+                {quizIdx < activeLesson!.quiz.length - 1 ? 'Next Question ->' : 'Start Chat Practice ->'}
               </button>
             </div>
           )}
@@ -736,13 +737,13 @@ CRITICAL RULES:
               {isListening && (
                 <div style={{ position: 'absolute', top: 8, left: '50%', transform: 'translateX(-50%)', background: '#E11D48',
                   padding: '4px 10px', borderRadius: 20, color: '#fff', fontSize: 11, fontWeight: 800, display: 'flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap' }}>
-                  <span style={styles.pulse} /> Listening…
+                  <span style={styles.pulse} /> Listening...
                 </div>
               )}
               {isSpeaking && (
                 <div style={{ position: 'absolute', top: 8, left: '50%', transform: 'translateX(-50%)', background: level.accent,
                   padding: '4px 10px', borderRadius: 20, color: '#fff', fontSize: 11, fontWeight: 800, whiteSpace: 'nowrap' }}>
-                  🔊 Speaking…
+                  🔊 Speaking...
                 </div>
               )}
               </div>{/* inner video box */}
@@ -765,7 +766,7 @@ CRITICAL RULES:
                   <>
                     <input
                       type="text"
-                      placeholder="Type your answer…"
+                      placeholder="Type your answer..."
                       style={{ flex: 1, padding: '10px 14px', borderRadius: 12, border: '2px solid #E2E8F0', fontSize: 14, outline: 'none', fontFamily: 'inherit' }}
                       onKeyDown={e => {
                         if (e.key === 'Enter' && e.currentTarget.value.trim()) {
@@ -803,12 +804,12 @@ CRITICAL RULES:
                 />
                 {isListening && (
                   <div style={styles.listeningBadge}>
-                    <span style={styles.pulse} /> Listening…
+                    <span style={styles.pulse} /> Listening...
                   </div>
                 )}
                 {isSpeaking && (
                   <div style={{ ...styles.listeningBadge, background: level.accent }}>
-                    🔊 Speaking…
+                    🔊 Speaking...
                   </div>
                 )}
               </div>
@@ -827,7 +828,7 @@ CRITICAL RULES:
                   <div style={{ display: 'flex', gap: 8, flex: 1 }}>
                     <input
                       type="text"
-                      placeholder="Type your answer…"
+                      placeholder="Type your answer..."
                       style={{ flex: 1, padding: '10px 14px', borderRadius: 12, border: '2px solid #E2E8F0', fontSize: 15, outline: 'none', fontFamily: 'inherit' }}
                       onKeyDown={e => {
                         if (e.key === 'Enter' && e.currentTarget.value.trim()) {
@@ -877,7 +878,7 @@ CRITICAL RULES:
               ))}
               {isChatThinking && (
                 <div style={{ ...styles.tutorBubble, background: level.color }}>
-                  <div style={{ color: '#888', fontSize: 13 }}>Thinking…</div>
+                  <div style={{ color: '#888', fontSize: 13 }}>Thinking...</div>
                 </div>
               )}
             </div>
@@ -899,7 +900,7 @@ CRITICAL RULES:
             )}
             <div style={styles.completeBtns}>
               <button style={{ ...styles.nextLessonBtn, background: level.accent }} onClick={() => router.back()}>
-                ← Back to Level
+                <- Back to Level
               </button>
               <button style={styles.homeBtn} onClick={() => router.push('/lingua')}>
                 🏠 Home
