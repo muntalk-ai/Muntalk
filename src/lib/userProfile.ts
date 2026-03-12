@@ -20,10 +20,9 @@ export interface UserProfile {
   activityDates: string[]; // 출석 날짜 배열
   completedLessons: string[];
   // 진단
-  placementDone?: boolean;
-  emailNotifications?: boolean;
-  pushNotifications?: boolean;
+  placementDone?:  boolean;
   placementLevel?: string;
+  placementTrack?: string;
   // 메타
   createdAt:    any;
   updatedAt:    any;
