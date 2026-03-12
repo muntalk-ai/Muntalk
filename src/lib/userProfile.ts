@@ -23,6 +23,8 @@ export interface UserProfile {
   placementDone?:  boolean;
   placementLevel?: string;
   placementTrack?: string;
+  emailNotifications?: boolean;
+  pushNotifications?:  boolean;
   // 메타
   createdAt:    any;
   updatedAt:    any;
