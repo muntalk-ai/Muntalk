@@ -498,12 +498,14 @@ CRITICAL RULES:
   // ─────────────────────────────────────────────────────────────────────────────
   return (
     <div style={styles.page}>
-      <style suppressHydrationWarning>{`
+      <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
         @keyframes fadeUp { 0%{opacity:0;transform:translateY(16px)} 20%{opacity:1;transform:translateY(0)} 80%{opacity:1} 100%{opacity:0;transform:translateY(-16px)} }
         @keyframes ringPulse { 0%,100%{opacity:0.6;transform:scale(1)} 50%{opacity:0.2;transform:scale(1.12)} }
         @keyframes blink { 0%,60%,100%{opacity:.2} 30%{opacity:1} }
         @keyframes progressSlide { 0%{transform:translateX(-100%)} 100%{transform:translateX(400%)} }
-      `}</style>
+        @keyframes spin { to{transform:rotate(360deg)} }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+      ` }} />
 
       {/* ── Trial timer bar (only for guest / free) ─────────────────────── */}
 
