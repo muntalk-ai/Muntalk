@@ -576,7 +576,7 @@ export default function LevelHub() {
               <span style={styles.newTag}>NEW</span>
             </div>
           </div>
-          <h1 style={styles.heroTitle}>Every language in the world<br />starts with one conversation.</h1>
+          <h1 style={styles.heroTitle}>Every language in the world<br />Meet +150 tutors</h1>
           <p style={styles.heroDesc}>No judgment. No pressure. Your pace, your rules.<br />Our AI tutors get total beginners talking in under 10 minutes.</p>
           <div style={styles.heroBtnRow}>
             <button style={styles.heroBtn1} onClick={() => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); }}>

@@ -41,7 +41,7 @@ export default function LessonPlayer({
   onComplete,
 }: LessonPlayerProps) {
   const router = useRouter();
-  const { user } = useAuth();
+  const { user, loading: authLoading } = useAuth();
 
   // ── Data ────────────────────────────────────────────────────────────────────
   const level = CURRICULUM.find(l => l.id === levelId);
@@ -141,7 +141,8 @@ export default function LessonPlayer({
     console.log('[translate] langId:', langId, 'lesson:', lsn?.title);
 
     if (!lsn) { console.warn('[translate] lesson not found'); return; }
-    if (!user) { console.log('[translate] waiting for user auth...'); return; }
+    if (authLoading) { console.log('[translate] waiting for auth to load...'); return; }
+    if (!user) { console.log('[translate] no user, skipping translate'); return; }
     if (langId === 'en-US' || langId === 'en-GB') {
       setTranslatedLesson(null);
       return;
@@ -224,7 +225,7 @@ No markdown fences. Pure JSON only.`;
       })
       .finally(() => setIsTranslating(false));
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lessonId, langId, subLang, user?.uid]);
+  }, [lessonId, langId, subLang, user?.uid, authLoading]);
 
   // ── Auto-scroll chat ────────────────────────────────────────────────────────
   useEffect(() => {
