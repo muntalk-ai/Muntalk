@@ -476,15 +476,7 @@ CRITICAL RULES:
   // -----------------------------------------------------------------------------
   // Guard
   // -----------------------------------------------------------------------------
-  if (!level || !step || !lesson) {
-    return <div style={{ color: '#fff', padding: 40, textAlign: 'center' }}>Lesson not found.</div>;
-  }
-
-  // -- Trial timer removed — using 14-day policy -------------------------------
-
-  const langInfo = LEARN_LANGUAGES.find(l => l.code === langId);
-
-  // -- Mobile detection -----------------------------------------------------
+  // -- Mobile detection (must be before any early return) ---------------------
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth <= 640);
@@ -492,6 +484,14 @@ CRITICAL RULES:
     window.addEventListener('resize', check);
     return () => window.removeEventListener('resize', check);
   }, []);
+
+  if (!level || !step || !lesson) {
+    return <div style={{ color: '#fff', padding: 40, textAlign: 'center' }}>Lesson not found.</div>;
+  }
+
+  // -- Trial timer removed — using 14-day policy -------------------------------
+
+  const langInfo = LEARN_LANGUAGES.find(l => l.code === langId);
 
   // -----------------------------------------------------------------------------
   // RENDER
