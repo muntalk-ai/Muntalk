@@ -37,13 +37,13 @@ export default function LessonPlayer({
   const router = useRouter();
   const { user, loading: authLoading } = useAuth();
 
-  // ── Data ────────────────────────────────────────────────────────────────────
+  // -- Data --------------------------------------------------------------------
   const level = CURRICULUM.find(l => l.id === levelId);
   const step  = level?.steps.find(s => s.id === stepId);
   const lesson = step?.lessons.find(l => l.id === lessonId);
   const tutor = tutorId ? getTutorById(tutorId) : getTutorForLang(langId);
 
-  // ── State ───────────────────────────────────────────────────────────────────
+  // -- State -------------------------------------------------------------------
   const [phase, setPhase]       = useState<Phase>('vocab');
   const [vocabIdx, setVocabIdx] = useState(0);
   const [quizIdx, setQuizIdx]   = useState(0);
@@ -60,17 +60,17 @@ export default function LessonPlayer({
   const [translatedLesson, setTranslatedLesson] = useState<typeof lesson | null>(null);
   const [isTranslating, setIsTranslating] = useState(false);
 
-  // ── Trial timer ─────────────────────────────────────────────────────────────
+  // -- Trial timer -------------------------------------------------------------
   const [trialExpired, setTrialExpired]   = useState(false);
   const [trialExpireReason, setTrialExpireReason] = useState<'expired'|'lesson_limit'|'chat_limit'>('expired');
 
-  // ── Video / Speech ──────────────────────────────────────────────────────────
+  // -- Video / Speech ----------------------------------------------------------
   const [isSpeaking,   setIsSpeaking]   = useState(false);
   const [isListening,  setIsListening]  = useState(false);
   const recognitionRef   = useRef<any>(null);
   const chatAreaRef      = useRef<HTMLDivElement | null>(null);
 
-  // ── STT setup ───────────────────────────────────────────────────────────────
+  // -- STT setup ---------------------------------------------------------------
   useEffect(() => {
     const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
     if (!SR) return;
@@ -88,7 +88,7 @@ export default function LessonPlayer({
     recognitionRef.current = rec;
   }, [langId]);
 
-  // ── Init trial status (14일 정책 기반) ─────────────────────────────────────
+  // -- Init trial status (14일 정책 기반) -------------------------------------
   useEffect(() => {
     if (!user) return; // 게스트는 trial 제한 없음
     async function checkTrial() {
@@ -109,7 +109,7 @@ export default function LessonPlayer({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user?.uid]);
 
-  // ── Translate lesson content when non-English ────────────────────────────────
+  // -- Translate lesson content when non-English --------------------------------
   const [txError, setTxError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -207,14 +207,14 @@ No markdown fences. Pure JSON only.`;
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lessonId, langId, subLang, user?.uid, authLoading]);
 
-  // ── Auto-scroll chat ────────────────────────────────────────────────────────
+  // -- Auto-scroll chat --------------------------------------------------------
   useEffect(() => {
     if (chatAreaRef.current) {
       chatAreaRef.current.scrollTop = chatAreaRef.current.scrollHeight;
     }
   }, [chatMsgs]);
 
-  // ── Stop all audio ──────────────────────────────────────────────────────────
+  // -- Stop all audio ----------------------------------------------------------
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const stopAll = useCallback(() => {
@@ -224,7 +224,7 @@ No markdown fences. Pure JSON only.`;
     setIsListening(false);
   }, []);
 
-  // ── TTS (Google Cloud TTS) ───────────────────────────────────────────────────
+  // -- TTS (Google Cloud TTS) ---------------------------------------------------
   const speakText = async (text: string, onEnd?: () => void): Promise<void> => {
     // TTS 미지원 언어면 바로 콜백만 실행
     if (!hasTts(langId)) { onEnd?.(); return; }
@@ -250,7 +250,7 @@ No markdown fences. Pure JSON only.`;
     }
   };
 
-  // ── Translation ─────────────────────────────────────────────────────────────
+  // -- Translation -------------------------------------------------------------
   const getLangName = (code: string) => {
     const map: Record<string, string> = {
       'ko-KR': 'Korean', 'ja-JP': 'Japanese', 'zh-CN': 'Chinese (Simplified)',
@@ -284,7 +284,7 @@ No markdown fences. Pure JSON only.`;
     finally { setLoadingTx(prev => ({ ...prev, [key]: false })); }
   };
 
-  // ── STT start ───────────────────────────────────────────────────────────────
+  // -- STT start ---------------------------------------------------------------
   const startListening = () => {
     if (!recognitionRef.current || isListening) return;
     stopAll();
@@ -292,16 +292,16 @@ No markdown fences. Pure JSON only.`;
     setIsListening(true);
   };
 
-  // ── XP pop ──────────────────────────────────────────────────────────────────
+  // -- XP pop ------------------------------------------------------------------
   const popXP = (val: number) => {
     setXpPopVal(val);
     setShowXPPop(true);
     setTimeout(() => setShowXPPop(false), 1600);
   };
 
-  // ─────────────────────────────────────────────────────────────────────────────
+  // -----------------------------------------------------------------------------
   // VOCAB PHASE
-  // ─────────────────────────────────────────────────────────────────────────────
+  // -----------------------------------------------------------------------------
   // Use translated lesson if available
   const activeLesson = translatedLesson ?? lesson;
   const vocabItem = activeLesson?.vocab[vocabIdx];
@@ -329,9 +329,9 @@ No markdown fences. Pure JSON only.`;
     await speakText(vocabItem.example);
   };
 
-  // ─────────────────────────────────────────────────────────────────────────────
+  // -----------------------------------------------------------------------------
   // QUIZ PHASE
-  // ─────────────────────────────────────────────────────────────────────────────
+  // -----------------------------------------------------------------------------
   const quizItem = activeLesson?.quiz[quizIdx];
 
   const handleSelectOpt = (idx: number) => {
@@ -357,9 +357,9 @@ No markdown fences. Pure JSON only.`;
     }
   };
 
-  // ─────────────────────────────────────────────────────────────────────────────
+  // -----------------------------------------------------------------------------
   // CHAT PHASE
-  // ─────────────────────────────────────────────────────────────────────────────
+  // -----------------------------------------------------------------------------
   const startChat = async () => {
     if (!lesson) return;
 
@@ -473,18 +473,18 @@ CRITICAL RULES:
     onComplete?.(totalXP);
   };
 
-  // ─────────────────────────────────────────────────────────────────────────────
+  // -----------------------------------------------------------------------------
   // Guard
-  // ─────────────────────────────────────────────────────────────────────────────
+  // -----------------------------------------------------------------------------
   if (!level || !step || !lesson) {
     return <div style={{ color: '#fff', padding: 40, textAlign: 'center' }}>Lesson not found.</div>;
   }
 
-  // ── Trial timer removed — using 14-day policy ───────────────────────────────
+  // -- Trial timer removed — using 14-day policy -------------------------------
 
   const langInfo = LEARN_LANGUAGES.find(l => l.code === langId);
 
-  // ── Mobile detection ─────────────────────────────────────────────────────
+  // -- Mobile detection -----------------------------------------------------
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth <= 640);
@@ -493,16 +493,16 @@ CRITICAL RULES:
     return () => window.removeEventListener('resize', check);
   }, []);
 
-  // ─────────────────────────────────────────────────────────────────────────────
+  // -----------------------------------------------------------------------------
   // RENDER
-  // ─────────────────────────────────────────────────────────────────────────────
+  // -----------------------------------------------------------------------------
   return (
     <div style={styles.page}>
 
 
-      {/* ── Trial timer bar (only for guest / free) ─────────────────────── */}
+      {/* -- Trial timer bar (only for guest / free) ----------------------- */}
 
-      {/* ── Trial expired overlay ───────────────────────────────────────── */}
+      {/* -- Trial expired overlay ----------------------------------------- */}
       {trialExpired && (
         <TrialExpiredModal
           reason={trialExpireReason}
@@ -564,7 +564,7 @@ CRITICAL RULES:
         ))}
       </div>
 
-      {/* ── VOCAB ─────────────────────────────────────────────────────── */}
+      {/* -- VOCAB ------------------------------------------------------- */}
       {phase === 'vocab' && vocabItem && (
         <div style={{
           display: 'flex',
@@ -575,7 +575,7 @@ CRITICAL RULES:
           background: '#fff',
         }}>
 
-          {/* ── Tutor panel ── */}
+          {/* -- Tutor panel -- */}
           {isMobile ? (
             /* MOBILE: 영상 상단 전체 너비로 크게 */
             <div style={{ display: 'flex', justifyContent: 'center', background: '#F3F4F6', padding: '12px 0 0', borderBottom: '1px solid #E9ECEF' }}>
@@ -622,7 +622,7 @@ CRITICAL RULES:
             </div>
           )}
 
-          {/* ── Vocab 카드 ── */}
+          {/* -- Vocab 카드 -- */}
           <div style={{ flex: 1, overflowY: 'auto', padding: isMobile ? '20px 16px 40px' : '32px 40px', display: 'flex', flexDirection: 'column' }}>
             <div style={styles.vocabCounter}>{vocabIdx + 1} / {activeLesson!.vocab.length}</div>
             <div style={{ ...styles.vocabCard, background: level.color, border: `2px solid ${level.accent}30` }}>
@@ -665,7 +665,7 @@ CRITICAL RULES:
         </div>
       )}
 
-      {/* ── QUIZ ──────────────────────────────────────────────────────── */}
+      {/* -- QUIZ -------------------------------------------------------- */}
       {phase === 'quiz' && quizItem && (
         <div style={styles.phaseContent}>
           <div style={styles.vocabCounter}>Question {quizIdx + 1} / {activeLesson!.quiz.length}</div>
@@ -709,7 +709,7 @@ CRITICAL RULES:
         </div>
       )}
 
-      {/* ── CHAT ──────────────────────────────────────────────────────── */}
+      {/* -- CHAT -------------------------------------------------------- */}
       {phase === 'chat' && (
         <div style={{
           display: 'flex',
@@ -720,7 +720,7 @@ CRITICAL RULES:
           background: '#fff',
         }}>
 
-          {/* ── Tutor panel ── */}
+          {/* -- Tutor panel -- */}
           {isMobile ? (
             /* MOBILE: 영상 상단 전체 너비로 크게 + 버튼 오버레이 */
             <div style={{ background: '#F3F4F6', borderBottom: '1px solid #E9ECEF', flexShrink: 0 }}>
@@ -856,7 +856,7 @@ CRITICAL RULES:
             </div>
           )}
 
-          {/* ── Chat messages ── */}
+          {/* -- Chat messages -- */}
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: isMobile ? 'visible' : 'hidden', background: '#fff' }}>
             <div style={{ flex: 1, overflowY: 'auto', padding: '16px 16px 40px', display: 'flex', flexDirection: 'column', gap: 14 }} ref={chatAreaRef}>
               {chatMsgs.map((msg, i) => (
@@ -886,7 +886,7 @@ CRITICAL RULES:
         </div>
       )}
 
-      {/* ── COMPLETE ─────────────────────────────────────────────────── */}
+      {/* -- COMPLETE --------------------------------------------------- */}
       {phase === 'complete' && (
         <div style={styles.completeWrap}>
           <div style={{ ...styles.completeCard, background: level.color, border: `2px solid ${level.accent}` }}>
@@ -912,7 +912,7 @@ CRITICAL RULES:
   );
 }
 
-// ─── Styles ───────────────────────────────────────────────────────────────────
+// --- Styles -------------------------------------------------------------------
 const styles: Record<string, React.CSSProperties> = {
   page: { minHeight: '100vh', background: '#F8F9FA', color: '#111', fontFamily: "'Nunito', sans-serif", position: 'relative' },
   xpPop: { position: 'fixed', top: 80, right: 30, background: 'linear-gradient(135deg,#FFD700,#FFA500)', color: '#000', fontWeight: 900, fontSize: 18, padding: '10px 20px', borderRadius: 30, zIndex: 9999, boxShadow: '0 4px 20px #FFD70060', animation: 'fadeUp 1.4s ease forwards', pointerEvents: 'none' },
