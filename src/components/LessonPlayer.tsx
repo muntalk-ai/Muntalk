@@ -6,7 +6,7 @@ import { CURRICULUM } from '@/data/curriculum';
 import { getTutorById, getTutorForLang } from '@/data/tutors';
 import { LEARN_LANGUAGES } from '@/data/languages';
 import TrialExpiredModal from '@/components/TrialExpiredModal';
-import { getTrialData, initTrial, isTrialExpired, isPremium, TRIAL_MAX_UNITS, canAccessChat } from '@/lib/trialPolicy';
+import { getTrialData, initTrial, isTrialExpired, isPremium, TRIAL_MAX_UNITS } from '@/lib/trialPolicy';
 
 const hasStt = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.stt ?? false;
 const hasTts = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.tts ?? false;
