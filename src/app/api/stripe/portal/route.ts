@@ -1,4 +1,4 @@
-// app/api/stripe/portal/route.ts
+﻿// app/api/stripe/portal/route.ts
 // Stripe 고객 포털 — 구독 취소/플랜 변경
 
 import { NextRequest, NextResponse } from 'next/server';

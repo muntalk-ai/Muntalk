@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+﻿import { NextResponse } from 'next/server';
 
 // Gemini API proxy
 // Request body: { prompt: string, temperature?: number }

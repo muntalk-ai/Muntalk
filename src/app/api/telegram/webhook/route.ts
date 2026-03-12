@@ -1,4 +1,4 @@
-// app/api/telegram/webhook/route.ts
+﻿// app/api/telegram/webhook/route.ts
 // 텔레그램 봇 webhook — 유저가 /start 보내면 chat_id 저장
 
 import { NextRequest, NextResponse } from 'next/server';

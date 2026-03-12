@@ -1,4 +1,4 @@
-// app/api/send-email/route.ts
+﻿// app/api/send-email/route.ts
 // Resend로 이메일 발송 API
 // npm install resend
 

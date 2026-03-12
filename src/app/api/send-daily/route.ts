@@ -1,4 +1,4 @@
-// app/api/send-daily/route.ts
+﻿// app/api/send-daily/route.ts
 // 매일 09:00 KST (00:00 UTC) 실행 — 이메일 + 텔레그램 동시 발송
 // vercel.json: { "crons": [{ "path": "/api/send-daily", "schedule": "0 0 * * *" }] }
 

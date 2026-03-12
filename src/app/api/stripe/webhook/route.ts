@@ -1,4 +1,4 @@
-// app/api/stripe/webhook/route.ts
+﻿// app/api/stripe/webhook/route.ts
 // Stripe 웹훅 — 결제 완료/취소/갱신 처리
 // Stripe CLI로 로컬 테스트: stripe listen --forward-to localhost:3000/api/stripe/webhook
 

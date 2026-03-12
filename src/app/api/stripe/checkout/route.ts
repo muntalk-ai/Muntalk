@@ -1,4 +1,4 @@
-// app/api/stripe/checkout/route.ts
+﻿// app/api/stripe/checkout/route.ts
 // Stripe 결제 세션 생성
 // npm install stripe
 
