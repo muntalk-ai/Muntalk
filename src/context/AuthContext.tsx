@@ -32,6 +32,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, async (u) => {
+      // Firestore auth token이 준비될 때까지 대기 (권한 에러 방지)
+      if (u) await u.getIdToken().catch(() => {});
       setUser(u);
       setLoading(false); // ← user 확정 즉시 loading 해제 (UI flicker 방지)
       if (u) {

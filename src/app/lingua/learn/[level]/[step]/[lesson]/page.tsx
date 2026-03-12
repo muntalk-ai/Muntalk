@@ -20,8 +20,8 @@ export default function LessonPage({
   const router = useRouter();
   const { user, loading: authLoading, refreshProfile } = useAuth();
 
-  const langId  = searchParams.get('lang')    || 'en-US';
-  const subLang = searchParams.get('subLang') || 'ko-KR';
+  const [langId,  setLangId]  = useState(searchParams.get('lang')    || 'en-US');
+  const [subLang, setSubLang] = useState(searchParams.get('subLang') || 'ko-KR');
 
   const [xp, setXp] = useState(0);
   const [loaded, setLoaded] = useState(false);
@@ -41,6 +41,15 @@ export default function LessonPage({
       setXp(saved);
       const urlTutor = searchParams.get('tutor');
       setTutorId(urlTutor || localStorage.getItem('mt_tutor_id') || 't01');
+      // URL에 lang 없으면 localStorage fallback (게스트 포함)
+      if (!searchParams.get('lang')) {
+        const lsLang = localStorage.getItem('mt_learn_lang');
+        if (lsLang) setLangId(lsLang);
+      }
+      if (!searchParams.get('subLang')) {
+        const lsNative = localStorage.getItem('mt_native_lang');
+        if (lsNative) setSubLang(lsNative);
+      }
     } catch { /* ignore */ }
     setLoaded(true);
   }, []);

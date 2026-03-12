@@ -21,7 +21,8 @@ export default function ReviewPage() {
   const [flipping,   setFlipping]   = useState(false);
 
   useEffect(() => {
-    if (!user) return;
+    if (authLoading) return;
+    if (!user) { setLoading(false); return; }
     const load = async () => {
       setLoading(true);
       try {
@@ -35,7 +36,7 @@ export default function ReviewPage() {
       finally { setLoading(false); }
     };
     load();
-  }, [user]);
+  }, [user, authLoading]);
 
   const card = cards[current];
   const progress = cards.length > 0 ? (current / cards.length) * 100 : 0;
@@ -100,8 +101,7 @@ export default function ReviewPage() {
   return (
     <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito',sans-serif" }}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
-        * { box-sizing: border-box; }
+* { box-sizing: border-box; }
         @keyframes spin   { to { transform: rotate(360deg); } }
         @keyframes fadeUp { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
         @keyframes flip   { 0% { transform:rotateY(0deg); } 50% { transform:rotateY(90deg); } 100% { transform:rotateY(0deg); } }

@@ -491,6 +491,11 @@ CRITICAL RULES:
     <div style={styles.page}>
       <style suppressHydrationWarning>{`
         @keyframes fadeUp { 0%{opacity:0;transform:translateY(16px)} 20%{opacity:1;transform:translateY(0)} 80%{opacity:1} 100%{opacity:0;transform:translateY(-16px)} }
+        @media (max-width: 640px) {
+          .chat-layout { flex-direction: column !important; height: auto !important; min-height: calc(100vh - 110px); overflow-y: auto !important; }
+          .video-col { width: 100% !important; border-right: none !important; border-bottom: 1px solid #E9ECEF; padding: 12px 16px !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; }
+          .video-wrap { width: 120px !important; height: 160px !important; flex-shrink: 0 !important; }
+        }
         @keyframes ringPulse { 0%,100%{opacity:0.6;transform:scale(1)} 50%{opacity:0.2;transform:scale(1.12)} }
         @keyframes blink { 0%,60%,100%{opacity:.2} 30%{opacity:1} }
         @keyframes progressSlide { 0%{transform:translateX(-100%)} 100%{transform:translateX(400%)} }
@@ -672,10 +677,10 @@ CRITICAL RULES:
 
       {/* ── CHAT ──────────────────────────────────────────────────────── */}
       {phase === 'chat' && (
-        <div style={styles.chatLayout}>
+        <div style={styles.chatLayout} className="chat-layout">
           {/* Video tutor */}
-          <div style={styles.videoCol}>
-            <div style={styles.videoWrap}>
+          <div style={styles.videoCol} className="video-col">
+            <div style={styles.videoWrap} className="video-wrap">
               <video
                 key={isSpeaking || isListening ? 'talk' : 'idle'}
                 src={isSpeaking || isListening ? tutor.videoTalk : tutor.videoIdle}
@@ -836,7 +841,7 @@ const styles: Record<string, React.CSSProperties> = {
   feedback: { marginTop: 16, fontWeight: 800, fontSize: 15, textAlign: 'center' },
   chatLayout: { display: 'flex', height: 'calc(100vh - 110px)', overflow: 'hidden' },
   videoCol: { width: 300, flexShrink: 0, background: '#F3F4F6', borderRight: '1px solid #E9ECEF', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px 16px', gap: 12, overflowY: 'auto' as const },
-  videoWrap: { position: 'relative', width: '100%', height: 340, background: '#E5E7EB', borderRadius: 16, overflow: 'hidden', flexShrink: 0 },
+  videoWrap: { position: 'relative', width: '100%', height: 280, background: '#E5E7EB', borderRadius: 16, overflow: 'hidden', flexShrink: 0 },
   video: { width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center', borderRadius: 16 },
   listeningBadge: { position: 'absolute', top: 12, left: 12, background: '#E11D48', padding: '6px 12px', borderRadius: 20, color: '#fff', fontSize: 12, fontWeight: 800, display: 'flex', alignItems: 'center', gap: 6 },
   pulse: { width: 8, height: 8, background: '#fff', borderRadius: 99, animation: 'pulse 1s infinite' },
