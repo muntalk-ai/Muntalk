@@ -197,6 +197,19 @@ function PlacementInner() {
   };
 
   // ── CEFR: answer handler ─────────────────────────────────────────────────
+  // ── Skip 공통 핸들러 ────────────────────────────────────────────────────
+  const handleSkip = () => {
+    localStorage.setItem('mt_placement_done', 'true');
+    localStorage.setItem('mt_placement_level', 'a1');
+    // Firestore는 백그라운드 (await 없이)
+    if (user) {
+      updateUserProfile(user.uid, {
+        placementDone: true, placementLevel: 'a1', placementTrack: 'travel',
+      }).catch(() => {});
+    }
+    router.push('/lingua');
+  };
+
   const handleCefrAnswer = (optIdx: number) => {
     if (cefrRevealed) return;
     setCefrSelected(optIdx);
@@ -308,16 +321,7 @@ function PlacementInner() {
           🔄 Try Again
         </button>
         <button
-          onClick={async () => {
-            localStorage.setItem('mt_placement_done', 'true');
-            localStorage.setItem('mt_placement_level', 'a1');
-            if (user) {
-              await updateUserProfile(user.uid, {
-                placementDone: true, placementLevel: 'a1', placementTrack: 'travel',
-              }).catch(() => {});
-            }
-            router.push('/lingua');
-          }}
+          onClick={handleSkip}
           style={{ background:'#1E293B', color:'#94A3B8', border:'1px solid #334155', borderRadius:12, padding:'12px 28px', fontWeight:800, fontSize:15, cursor:'pointer' }}
         >
           Skip Test
@@ -387,16 +391,7 @@ function PlacementInner() {
           style={{ width:'100%', padding:'15px', borderRadius:14, border:'none', background:'linear-gradient(135deg,#6366F1,#8B5CF6)', color:'#fff', fontSize:16, fontWeight:900, cursor:'pointer', fontFamily:"'Nunito',sans-serif", boxShadow:'0 8px 24px rgba(99,102,241,0.4)', marginBottom:12, animation:'pulse 2.5s infinite' }}>
           Start Placement →
         </button>
-        <button onClick={async () => {
-            localStorage.setItem('mt_placement_done', 'true');
-            localStorage.setItem('mt_placement_level', 'a1');
-            if (user) {
-              await updateUserProfile(user.uid, {
-                placementDone: true, placementLevel: 'a1', placementTrack: 'travel',
-              }).catch(() => {});
-            }
-            router.push('/lingua');
-          }}
+        <button onClick={handleSkip}
           style={{ background:'none', border:'none', color:'#475569', fontSize:13, fontWeight:700, cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>
           Skip — start from A1
         </button>
