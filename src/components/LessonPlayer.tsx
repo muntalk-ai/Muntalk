@@ -542,7 +542,7 @@ CRITICAL RULES:
 
       {/* Header */}
       <header style={styles.header}>
-        <button style={styles.backBtn} onClick={() => { stopAll(); router.back(); }}><- Back</button>
+        <button style={styles.backBtn} onClick={() => { stopAll(); router.back(); }}>← Back</button>
         <div style={styles.lessonMeta}>
           <span style={{ ...styles.levelTag, background: level.accent }}>{level.label}</span>
           <span style={styles.lessonTitle}>{lesson.icon} {lesson.title}</span>
@@ -655,7 +655,7 @@ CRITICAL RULES:
             </div>
             <div style={styles.btnRow}>
               {vocabIdx > 0 && (
-                <button style={styles.prevBtn} onClick={() => setVocabIdx(v => v - 1)}><- Prev</button>
+                <button style={styles.prevBtn} onClick={() => setVocabIdx(v => v - 1)}>← Prev</button>
               )}
               <button style={{ ...styles.nextBtn, background: level.accent }} onClick={handleNextVocab}>
                 {vocabIdx < activeLesson!.vocab.length - 1 ? 'Next ->' : 'Start Quiz ->'}
@@ -900,7 +900,7 @@ CRITICAL RULES:
             )}
             <div style={styles.completeBtns}>
               <button style={{ ...styles.nextLessonBtn, background: level.accent }} onClick={() => router.back()}>
-                <- Back to Level
+                ← Back to Level
               </button>
               <button style={styles.homeBtn} onClick={() => router.push('/lingua')}>
                 🏠 Home
