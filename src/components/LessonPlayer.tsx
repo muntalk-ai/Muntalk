@@ -588,27 +588,29 @@ CRITICAL RULES:
           {/* ── Tutor panel ── */}
           {isMobile ? (
             /* MOBILE: 영상 상단 전체 너비로 크게 */
-            <div style={{ position: 'relative', width: '100%', background: '#1a1a2e' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', background: '#F3F4F6', padding: '12px 0 0', borderBottom: '1px solid #E9ECEF' }}>
+              <div style={{ position: 'relative', width: 160, height: 220, borderRadius: 16, overflow: 'hidden', background: '#1a1a2e', flexShrink: 0 }}>
               <video
                 key={`vocab-${isSpeaking ? 'talk' : 'idle'}`}
                 src={isSpeaking ? tutor.videoTalk : tutor.videoIdle}
                 autoPlay loop muted playsInline
-                style={{ width: '100%', height: 260, objectFit: 'cover', objectPosition: 'top center', display: 'block' }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center', display: 'block' }}
                 onError={e => console.warn('Video load error', e)}
               />
               {/* 하단 그라디언트 오버레이 */}
-              <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 80,
-                background: 'linear-gradient(transparent, rgba(0,0,0,0.5))',
-                display: 'flex', alignItems: 'flex-end', padding: '0 16px 10px', gap: 8 }}>
-                <div style={{ fontSize: 14, fontWeight: 900, color: '#fff' }}>{tutor.name}</div>
-                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.7)' }}>· {lesson.icon} {lesson.title}</div>
-              </div>
+              <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 60,
+                background: 'linear-gradient(transparent, rgba(0,0,0,0.5))' }} />
               {isSpeaking && (
-                <div style={{ position: 'absolute', top: 12, right: 12, background: level.accent,
-                  padding: '6px 12px', borderRadius: 20, color: '#fff', fontSize: 12, fontWeight: 800 }}>
+                <div style={{ position: 'absolute', top: 8, left: '50%', transform: 'translateX(-50%)', background: level.accent,
+                  padding: '4px 10px', borderRadius: 20, color: '#fff', fontSize: 11, fontWeight: 800, whiteSpace: 'nowrap' }}>
                   🔊 Speaking…
                 </div>
               )}
+              </div>{/* inner video box */}
+            </div>{/* outer center wrapper */}
+            <div style={{ textAlign: 'center', paddingBottom: 10 }}>
+              <div style={{ fontSize: 14, fontWeight: 900, color: level.accent, marginTop: 6 }}>{tutor.name}</div>
+              <div style={{ fontSize: 11, color: '#9CA3AF' }}>AI Tutor · {lesson.icon} {lesson.title}</div>
             </div>
           ) : (
             /* DESKTOP: 좌측 세로 패널 */
@@ -731,35 +733,36 @@ CRITICAL RULES:
           {/* ── Tutor panel ── */}
           {isMobile ? (
             /* MOBILE: 영상 상단 전체 너비로 크게 + 버튼 오버레이 */
-            <div style={{ position: 'relative', width: '100%', background: '#1a1a2e', flexShrink: 0 }}>
+            <div style={{ background: '#F3F4F6', borderBottom: '1px solid #E9ECEF', flexShrink: 0 }}>
+              <div style={{ display: 'flex', justifyContent: 'center', padding: '12px 0 0' }}>
+              <div style={{ position: 'relative', width: 160, height: 220, borderRadius: 16, overflow: 'hidden', background: '#1a1a2e' }}>
               <video
                 key={isSpeaking || isListening ? 'talk' : 'idle'}
                 src={isSpeaking || isListening ? tutor.videoTalk : tutor.videoIdle}
                 autoPlay loop muted playsInline
-                style={{ width: '100%', height: 240, objectFit: 'cover', objectPosition: 'top center', display: 'block' }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center', display: 'block' }}
                 onError={e => console.warn('Video load error', e)}
               />
-              {/* 하단 그라디언트 오버레이: 이름 + 상태 */}
-              <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 80,
-                background: 'linear-gradient(transparent, rgba(0,0,0,0.6))',
-                display: 'flex', alignItems: 'flex-end', padding: '0 16px 10px', gap: 8 }}>
-                <div style={{ fontSize: 14, fontWeight: 900, color: '#fff' }}>{tutor.name}</div>
-                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.7)' }}>· {lesson.icon} {lesson.title}</div>
-              </div>
               {isListening && (
-                <div style={{ position: 'absolute', top: 12, left: 12, background: '#E11D48',
-                  padding: '6px 12px', borderRadius: 20, color: '#fff', fontSize: 12, fontWeight: 800, display: 'flex', alignItems: 'center', gap: 6 }}>
+                <div style={{ position: 'absolute', top: 8, left: '50%', transform: 'translateX(-50%)', background: '#E11D48',
+                  padding: '4px 10px', borderRadius: 20, color: '#fff', fontSize: 11, fontWeight: 800, display: 'flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap' }}>
                   <span style={styles.pulse} /> Listening…
                 </div>
               )}
               {isSpeaking && (
-                <div style={{ position: 'absolute', top: 12, left: 12, background: level.accent,
-                  padding: '6px 12px', borderRadius: 20, color: '#fff', fontSize: 12, fontWeight: 800 }}>
+                <div style={{ position: 'absolute', top: 8, left: '50%', transform: 'translateX(-50%)', background: level.accent,
+                  padding: '4px 10px', borderRadius: 20, color: '#fff', fontSize: 11, fontWeight: 800, whiteSpace: 'nowrap' }}>
                   🔊 Speaking…
                 </div>
               )}
+              </div>{/* inner video box */}
+              </div>{/* center wrapper */}
+              <div style={{ textAlign: 'center', padding: '6px 0 8px' }}>
+                <div style={{ fontSize: 14, fontWeight: 900, color: level.accent }}>{tutor.name}</div>
+                <div style={{ fontSize: 11, color: '#9CA3AF' }}>AI Tutor · {lesson.icon} {lesson.title}</div>
+              </div>
               {/* 버튼 바 */}
-              <div style={{ background: '#F3F4F6', borderBottom: '1px solid #E9ECEF', padding: '10px 16px', display: 'flex', gap: 8 }}>
+              <div style={{ padding: '0 16px 10px', display: 'flex', gap: 8 }}>
                 {hasStt(langId) ? (
                   <button
                     style={{ ...styles.micBtn, flex: 1, padding: '11px', fontSize: 14, background: isListening ? '#E11D48' : level.accent }}
