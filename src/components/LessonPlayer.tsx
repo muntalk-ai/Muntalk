@@ -122,7 +122,7 @@ export default function LessonPlayer({
 
     if (!lsn) { console.warn('[translate] lesson not found'); return; }
     if (authLoading) { console.log('[translate] waiting for auth to load...'); return; }
-    if (!user) { console.log('[translate] no user, skipping translate'); return; }
+    // 게스트도 번역 허용 (uid 없이 API 호출)
     if (langId === 'en-US' || langId === 'en-GB') {
       setTranslatedLesson(null);
       return;
@@ -186,7 +186,7 @@ No markdown fences. Pure JSON only.`;
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-          uid: user?.uid, prompt, temperature: 0.3 }),
+          uid: user?.uid ?? null, prompt, temperature: 0.3 }),
     })
       .then(async r => {
         const data = await r.json();
@@ -205,7 +205,7 @@ No markdown fences. Pure JSON only.`;
       })
       .finally(() => setIsTranslating(false));
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lessonId, langId, subLang, user?.uid, authLoading]);
+  }, [lessonId, langId, subLang, user?.uid]);
 
   // -- Auto-scroll chat --------------------------------------------------------
   useEffect(() => {
