@@ -620,7 +620,7 @@ export default function LevelHub() {
               🌐 Choose a Language
             </button>
             <button style={styles.heroBtn2} onClick={() => router.push('/lingua/words')}>📚 Word Bank</button>
-            <button style={styles.heroBtn2} onClick={() => setShowPlacementModal(true)}>🎯 Placement Test</button>
+            <button style={styles.heroBtn2} onClick={() => router.push('/lingua/tutors')}>👩‍🏫 Meet +150 AI Tutors</button>
           </div>
         </div>
       </div>
