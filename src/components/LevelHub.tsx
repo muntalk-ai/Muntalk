@@ -607,20 +607,20 @@ export default function LevelHub() {
         <div style={styles.heroInner}>
           <div style={styles.heroBadgeRow}>
             <div style={styles.heroBadge52}>🌐 52 Languages</div>
-            <div style={{ ...styles.heroBadgeTutors, cursor: 'pointer' }} onClick={() => router.push('/lingua/tutors')}>
-              <span style={{ fontSize: 15 }}>👩‍🏫</span>
-              <span>Meet <strong>+150</strong> AI Tutors</span>
-              <span style={styles.newTag}>NEW</span>
+            <div style={{ ...styles.heroBadgeTutors, cursor: 'pointer' }} onClick={() => setShowPlacementModal(true)}>
+              <span style={{ fontSize: 15 }}>🎯</span>
+              <span>Take <strong>Placement</strong> Test</span>
+              <span style={styles.newTag}>FREE</span>
             </div>
           </div>
-          <h1 style={styles.heroTitle}>Every language in the world<br />starts with one conversation.</h1>
+          <h1 style={styles.heroTitle}>Every language in the world<br />Meet +150 AI tutors</h1>
           <p style={styles.heroDesc}>No judgment. No pressure. Your pace, your rules.<br />Our AI tutors get total beginners talking in under 10 minutes.</p>
           <div style={styles.heroBtnRow}>
             <button style={styles.heroBtn1} onClick={() => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); }}>
               🌐 Choose a Language
             </button>
             <button style={styles.heroBtn2} onClick={() => router.push('/lingua/words')}>📚 Word Bank</button>
-            <button style={styles.heroBtn2} onClick={() => router.push('/lingua/tutors')}>👩‍🏫 Browse All Tutors</button>
+            <button style={styles.heroBtn2} onClick={() => setShowPlacementModal(true)}>🎯 Placement Test</button>
           </div>
         </div>
       </div>
@@ -774,7 +774,7 @@ const styles: Record<string, React.CSSProperties> = {
   heroInner: { position: 'relative', maxWidth: 580 },
   heroBadgeRow: { display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 18 },
   heroBadge52: { display: 'inline-flex', alignItems: 'center', gap: 6, background: 'rgba(255,255,255,0.18)', borderRadius: 20, padding: '5px 14px', fontSize: 12, fontWeight: 800, letterSpacing: 0.8, backdropFilter: 'blur(6px)' },
-  heroBadgeTutors: { display: 'inline-flex', alignItems: 'center', gap: 7, background: 'rgba(255,255,255,0.95)', borderRadius: 20, padding: '5px 16px', fontSize: 12, fontWeight: 900, color: '#7C3AED', cursor: 'pointer', boxShadow: '0 4px 16px rgba(0,0,0,0.15)' },
+  heroBadgeTutors: { display: 'inline-flex', alignItems: 'center', gap: 7, background: '#ffffff', borderRadius: 20, padding: '8px 18px', fontSize: 13, fontWeight: 900, color: '#7C3AED', cursor: 'pointer', boxShadow: '0 4px 20px rgba(0,0,0,0.2)', border: '2px solid rgba(124,58,237,0.15)', transition: 'transform 0.15s, box-shadow 0.15s' },
   newTag: { background: '#7C3AED', color: '#fff', borderRadius: 12, padding: '1px 8px', fontSize: 10 },
   heroTitle: { fontSize: 36, fontWeight: 900, lineHeight: 1.25, marginBottom: 14, color: '#fff' },
   heroDesc: { opacity: 0.9, fontSize: 15, lineHeight: 1.75, marginBottom: 32, color: '#fff' },
