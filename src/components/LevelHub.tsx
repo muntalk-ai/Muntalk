@@ -86,6 +86,7 @@ export default function LevelHub() {
   const [showLangModal, setShowLangModal]   = useState(false);
   const [pendingLevelId, setPendingLevelId] = useState<string | null>(null);
   const [langStep, setLangStep]             = useState<'learn' | 'native'>('learn');
+  const [showPlacementModal, setShowPlacementModal] = useState(false);
 
   // -- 스트릭 계산 --------------------------------------------------------------
   const calcStreak = () => {
@@ -123,14 +124,13 @@ export default function LevelHub() {
       // localStorage 기준으로 판단 (계정 무관)
       const lsPlaced = localStorage.getItem('mt_placement_done');
       if (!lsPlaced) {
-        // 한 번도 테스트 안 함 → 언어 먼저 선택하게
+        // 한 번도 테스트 안 함 → 언어 선택됐으면 placement 팝업, 아니면 언어 먼저
         const lang = localStorage.getItem('mt_learn_lang') || '';
         if (!lang || lang === 'en-US') {
-          // 언어 미선택 → 언어 선택 모달 먼저
           setShowLangModal(true);
           setLangStep('learn');
         } else {
-          router.push(`/lingua/placement?lang=${lang}`);
+          setShowPlacementModal(true);
         }
       }
       // lsPlaced 있으면 → 그대로 LevelHub 표시
@@ -152,12 +152,10 @@ export default function LevelHub() {
     localStorage.setItem('mt_placement_done', 'pending');
     const lang = profile.learnLang || localStorage.getItem('mt_learn_lang') || '';
     if (!lang || lang === 'en-US') {
-      // 언어가 아직 선택 안 됐거나 기본값 → 언어 선택 모달 먼저
-      // 모달 확인 후 handleConfirmLang → placement로 이동
       setShowLangModal(true);
       setLangStep('learn');
     } else {
-      router.push(`/lingua/placement?lang=${lang}`);
+      setShowPlacementModal(true);
     }
 
   }, [user, authLoading, profile]);
@@ -311,7 +309,7 @@ export default function LevelHub() {
 
     const placed = localStorage.getItem('mt_placement_done');
     if (!placed || placed === 'pending') {
-      router.push(`/lingua/placement?lang=${learn}`);
+      setShowPlacementModal(true);
     }
   };
 
@@ -350,6 +348,47 @@ export default function LevelHub() {
           daysLeft={trialDaysLeft}
           onDismiss={() => setTrialBannerDismissed(true)}
         />
+      )}
+
+      {/* -- Placement Test 안내 모달 -- */}
+      {showPlacementModal && (
+        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(6px)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 20px' }}
+          onClick={() => setShowPlacementModal(false)}>
+          <div style={{ background: '#fff', borderRadius: 28, padding: '40px 32px', maxWidth: 460, width: '100%', textAlign: 'center', boxShadow: '0 24px 60px rgba(0,0,0,0.2)', position: 'relative' }}
+            onClick={e => e.stopPropagation()}>
+            {/* 닫기 버튼 */}
+            <button onClick={() => setShowPlacementModal(false)}
+              style={{ position: 'absolute', top: 16, right: 16, background: '#F3F4F6', border: 'none', borderRadius: 99, width: 32, height: 32, cursor: 'pointer', fontSize: 16, color: '#6B7280', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Nunito',sans-serif" }}>
+              ✕
+            </button>
+            <div style={{ fontSize: 56, marginBottom: 16 }}>🎯</div>
+            <div style={{ fontSize: 22, fontWeight: 900, color: '#0F172A', marginBottom: 10, fontFamily: "'Nunito',sans-serif" }}>
+              What's your level?
+            </div>
+            <div style={{ fontSize: 14, color: '#64748B', lineHeight: 1.7, marginBottom: 28, fontFamily: "'Nunito',sans-serif", fontWeight: 600 }}>
+              Take a quick 5-minute placement test so we can put you in the right level. No pressure — it's just to personalize your journey!
+            </div>
+            {/* 통계 뱃지 */}
+            <div style={{ display: 'flex', gap: 12, justifyContent: 'center', marginBottom: 28 }}>
+              {[['⚡', '5 min'], ['🎯', 'Auto-place'], ['🆓', 'Free']].map(([icon, label]) => (
+                <div key={label} style={{ background: '#F8FAFC', borderRadius: 14, padding: '10px 16px', fontSize: 13, fontWeight: 800, color: '#475569', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, fontFamily: "'Nunito',sans-serif" }}>
+                  <span style={{ fontSize: 20 }}>{icon}</span>
+                  {label}
+                </div>
+              ))}
+            </div>
+            <button
+              onClick={() => { setShowPlacementModal(false); router.push(`/lingua/placement?lang=${learnLang}`); }}
+              style={{ width: '100%', padding: '15px', borderRadius: 16, border: 'none', background: 'linear-gradient(135deg,#38BDF8,#818CF8)', color: '#fff', fontSize: 16, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito',sans-serif", marginBottom: 10 }}>
+              Start Placement Test 🚀
+            </button>
+            <button
+              onClick={() => { setShowPlacementModal(false); localStorage.setItem('mt_placement_done', 'skip'); }}
+              style={{ width: '100%', padding: '12px', borderRadius: 16, border: 'none', background: 'transparent', color: '#94A3B8', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+              Skip for now, start from A1
+            </button>
+          </div>
+        </div>
       )}
 
       {/* -- 언어 선택 모달 -- */}
