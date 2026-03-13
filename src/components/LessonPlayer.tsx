@@ -70,7 +70,7 @@ export default function LessonPlayer({
   const recognitionRef   = useRef<any>(null);
   const chatAreaRef      = useRef<HTMLDivElement | null>(null);
 
-  // -- STT setup ---------------------------------------------------------------
+  // -- STT setup + 마이크 권한 미리 요청 -------------------------------------
   useEffect(() => {
     const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
     if (!SR) return;
@@ -86,6 +86,19 @@ export default function LessonPlayer({
     rec.onerror = () => setIsListening(false);
     rec.onend   = () => setIsListening(false);
     recognitionRef.current = rec;
+
+    // 마이크 권한 미리 요청 (한 번만) — 이후 매번 팝업 방지
+    if (navigator.permissions) {
+      navigator.permissions.query({ name: 'microphone' as PermissionName })
+        .then(status => {
+          if (status.state === 'prompt') {
+            // 아직 허용 안 됨 → getUserMedia로 미리 요청
+            navigator.mediaDevices?.getUserMedia({ audio: true })
+              .then(stream => stream.getTracks().forEach(t => t.stop()))
+              .catch(() => {}); // 거부해도 무시
+          }
+        }).catch(() => {});
+    }
   }, [langId]);
 
   // -- Init trial status (14일 정책 기반) -------------------------------------
