@@ -743,7 +743,19 @@ export default function LevelHub() {
         })}
       </section>
 
-      <footer style={styles.footer}>🌐 MunTalk · {totalLessonsCount} lessons · A1 → C2 · 150+ AI Tutors</footer>
+      <footer style={styles.footer}>
+        <div style={{ marginBottom: 12 }}>🌐 MunTalk · {totalLessonsCount} lessons · A1 to C2 · 150+ AI Tutors</div>
+        <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 10 }}>
+          <a href="/privacy" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>Privacy Policy</a>
+          <a href="/terms" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>Terms of Service</a>
+          <a href="/refund" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>Refund Policy</a>
+          <a href="/cookies" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>Cookie Policy</a>
+        </div>
+        <div style={{ fontSize: 11, color: '#CBD5E1' }}>
+          &copy; {new Date().getFullYear()} MunTalk. All rights reserved. | British Columbia, Canada |{' '}
+          <a href="mailto:muntalkofficial@gmail.com" style={{ color: '#94A3B8', textDecoration: 'none' }}>muntalkofficial@gmail.com</a>
+        </div>
+      </footer>
     </div>
   );
 }

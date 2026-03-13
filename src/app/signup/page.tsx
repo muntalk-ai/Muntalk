@@ -102,8 +102,7 @@ export default function SignupPage() {
   return (
     <div style={styles.page}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
-        * { box-sizing: border-box; }
+* { box-sizing: border-box; }
         @keyframes spin { to { transform: rotate(360deg); } }
         .auth-input { width:100%; padding:14px 16px; border:2px solid #E5E7EB; border-radius:12px; font-size:15px; font-family:'Nunito',sans-serif; outline:none; transition:border .15s; background:#fff; color:#0F172A; }
         .auth-input:focus { border-color:#6366F1; }
@@ -127,7 +126,7 @@ export default function SignupPage() {
           <p style={{ fontSize: 14, color: '#94A3B8', margin: '6px 0 0', fontWeight: 600 }}>Start learning a new language today — it's free</p>
         </div>
 
-        {/* ── Google ── */}
+        {/* -- Google -- */}
         <button className="auth-btn-google" onClick={handleGoogle} disabled={googleLoading}>
           {googleLoading ? (
             <>
@@ -201,13 +200,26 @@ export default function SignupPage() {
 
         {error && <div style={styles.error}>⚠️ {error}</div>}
 
-        <button className="auth-btn-primary" onClick={handleSignup} disabled={emailLoading}>
+        <button className="auth-btn-primary" onClick={handleSignup} disabled={emailLoading || !agreed}>
           {emailLoading ? 'Creating account…' : 'Create Account 🚀'}
         </button>
 
-        <p style={{ textAlign: 'center', fontSize: 11, color: '#94A3B8', marginTop: 12, lineHeight: 1.6 }}>
-          By signing up you agree to our Terms of Service and Privacy Policy.
-        </p>
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10, marginTop: 14, padding: '12px 16px', background: '#F8FAFC', borderRadius: 12, border: agreed ? '1.5px solid #6366F1' : '1.5px solid #E2E8F0' }}>
+          <input
+            type="checkbox"
+            id="agree-terms"
+            checked={agreed}
+            onChange={e => setAgreed(e.target.checked)}
+            style={{ marginTop: 2, width: 16, height: 16, cursor: 'pointer', accentColor: '#6366F1', flexShrink: 0 }}
+          />
+          <label htmlFor="agree-terms" style={{ fontSize: 12, color: '#475569', lineHeight: 1.6, cursor: 'pointer', fontFamily: "'Nunito', sans-serif" }}>
+            I agree to the{' '}
+            <a href="/terms" target="_blank" style={{ color: '#6366F1', fontWeight: 700 }}>Terms of Service</a>,{' '}
+            <a href="/privacy" target="_blank" style={{ color: '#6366F1', fontWeight: 700 }}>Privacy Policy</a>, and{' '}
+            <a href="/refund" target="_blank" style={{ color: '#6366F1', fontWeight: 700 }}>Refund Policy</a>.
+            I confirm I am at least 13 years of age.
+          </label>
+        </div>
 
         <p style={{ textAlign: 'center', marginTop: 16, fontSize: 14, color: '#64748B', fontWeight: 600 }}>
           Already have an account?{' '}
