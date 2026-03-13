@@ -898,6 +898,30 @@ CRITICAL RULES:
             {quizScore === lesson.quiz.length && (
               <div style={styles.perfectBadge}>⭐ Perfect Quiz!</div>
             )}
+            {/* 게스트(a1-1-1 완료) 업셀 안내 */}
+            {!user && (
+              <div style={{ margin: '20px 0', padding: '20px', background: 'linear-gradient(135deg,#6366F120,#8B5CF620)', borderRadius: 18, border: '2px solid #6366F140' }}>
+                <div style={{ fontSize: 22, marginBottom: 8 }}>🚀</div>
+                <div style={{ fontSize: 15, fontWeight: 900, color: '#0F172A', marginBottom: 6 }}>
+                  Great job! Ready for more?
+                </div>
+                <div style={{ fontSize: 13, color: '#475569', lineHeight: 1.6, marginBottom: 16 }}>
+                  Sign up free to unlock all A1 lessons and track your progress!
+                </div>
+                <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
+                  <button
+                    onClick={() => router.push('/signup')}
+                    style={{ padding: '11px 22px', borderRadius: 14, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 900, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                    Sign Up Free 🎉
+                  </button>
+                  <button
+                    onClick={() => router.push('/pricing')}
+                    style={{ padding: '11px 22px', borderRadius: 14, border: '2px solid #6366F1', background: '#fff', color: '#6366F1', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                    View Plans
+                  </button>
+                </div>
+              </div>
+            )}
             <div style={styles.completeBtns}>
               <button style={{ ...styles.nextLessonBtn, background: level.accent }} onClick={() => router.back()}>
                 ← Back to Level

@@ -4,7 +4,7 @@
 import { doc, getDoc, setDoc, updateDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from './firebase';
 
-// ─── 플랜 정의 ─────────────────────────────────────────────────────────────
+// --- 플랜 정의 -------------------------------------------------------------
 export type PlanId = 'free' | 'monthly' | 'biannual' | 'annual';
 
 export const PLANS: Record<PlanId, {
@@ -26,8 +26,8 @@ export const PLANS: Record<PlanId, {
     features: [
       'A1 level — all 12 lessons',
       'AI tutor chat — 3 sessions/day',
-      'Word Bank — 20 words',
-      'Basic streak tracking',
+      'Placement test',
+      'Basic streak & XP tracking',
     ],
   },
   monthly: {
@@ -67,7 +67,7 @@ export const PLANS: Record<PlanId, {
   },
 };
 
-// ─── 구독 상태 ──────────────────────────────────────────────────────────────
+// --- 구독 상태 --------------------------------------------------------------
 export interface Subscription {
   planId:      PlanId;
   status:      'active' | 'canceled' | 'past_due' | 'trialing';
@@ -90,7 +90,7 @@ export async function isPremium(uid: string): Promise<boolean> {
   return sub.planId !== 'free' && sub.status === 'active';
 }
 
-// ─── 레벨 잠금 ──────────────────────────────────────────────────────────────
+// --- 레벨 잠금 --------------------------------------------------------------
 // Free: A1만 해금, Premium: 전체 해금
 export function isLevelLocked(levelId: string, planId: PlanId): boolean {
   if (planId !== 'free') return false;
@@ -101,7 +101,7 @@ export function isLessonLocked(levelId: string, planId: PlanId): boolean {
   return isLevelLocked(levelId, planId);
 }
 
-// ─── AI 대화 제한 (무료: 하루 3회) ─────────────────────────────────────────
+// --- AI 대화 제한 (무료: 하루 3회) -----------------------------------------
 export const FREE_DAILY_CHAT_LIMIT = 3;
 
 export interface ChatUsage {
@@ -139,7 +139,7 @@ export async function canChat(uid: string, planId: PlanId): Promise<boolean> {
   return usage.date !== today || usage.count < FREE_DAILY_CHAT_LIMIT;
 }
 
-// ─── 하트 시스템 (Free 유저만) ───────────────────────────────────────────────
+// --- 하트 시스템 (Free 유저만) -----------------------------------------------
 export const MAX_HEARTS = 5;
 export const HEART_REFILL_HOURS = 4; // 4시간마다 1개 회복
 
@@ -196,7 +196,7 @@ export async function refillHearts(uid: string): Promise<Hearts> {
   return full;
 }
 
-// ─── localStorage 기반 하트 (비로그인) ──────────────────────────────────────
+// --- localStorage 기반 하트 (비로그인) --------------------------------------
 export function getLocalHearts(): Hearts {
   try {
     const raw = localStorage.getItem('mt_hearts');
