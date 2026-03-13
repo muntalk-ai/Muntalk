@@ -5,7 +5,7 @@ import { doc, getDoc, setDoc } from 'firebase/firestore';
 const MODELS = [
   'gemini-2.5-flash',
   'gemini-1.5-flash',
-];
+  ];
 const RETRY_DELAYS = [800, 2000, 4000];
 const FREE_DAILY_CHAT_LIMIT = 5; // 14일 체험: 5회/일
 
@@ -27,7 +27,7 @@ function sleep(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// ── Chat usage helpers (서버사이드 Firestore 직접 접근) ──────────────────────
+// -- Chat usage helpers (서버사이드 Firestore 직접 접근) ----------------------
 async function getChatUsage(uid: string): Promise<{ date: string; count: number }> {
   try {
     const snap = await getDoc(doc(db, 'chat_usage', uid));
@@ -57,16 +57,17 @@ async function getPlanId(uid: string): Promise<string> {
   return 'free';
 }
 
-// ────────────────────────────────────────────────────────────────────────────
+// ----------------------------------------------------------------------------
 export async function POST(req: NextRequest) {
   try {
     const { prompt, temperature = 0.7, uid, purpose } = await req.json();
 
-    // ── placement 테스트는 로그인/제한 없이 허용 ───────────────────────────
+    // -- placement 테스트는 로그인/제한 없이 허용 ---------------------------
     const isPlacement = purpose === 'placement';
 
-    // ── 채팅 제한 체크 (placement 제외) ────────────────────────────────────
-    if (!isPlacement) {
+    // -- 채팅 제한 체크 (placement, 게스트 제외) ---------------------------
+    const isGuest = !uid;
+    if (!isPlacement && !isGuest) {
       if (!uid) {
         return NextResponse.json(
           { error: 'LOGIN_REQUIRED', message: 'Please log in to use the AI tutor.' },
@@ -92,7 +93,7 @@ export async function POST(req: NextRequest) {
         }
       }
     }
-    // ────────────────────────────────────────────────────────────────────────
+    // ------------------------------------------------------------------------
 
     const apiKey = process.env.GEMINI_API_KEY
       || process.env.NEXT_PUBLIC_GEMINI_API_KEY
