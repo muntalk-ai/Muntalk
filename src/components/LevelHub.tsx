@@ -65,7 +65,7 @@ export default function LevelHub() {
   const [showPaywall, setShowPaywall] = useState(false);
   const [paywallReason, setPaywallReason] = useState<'level_locked'|'no_hearts'|'chat_limit'|'general'>('general');
 
-  // ── Trial state ────────────────────────────────────────────────────────────
+  // -- Trial state ------------------------------------------------------------
   const [trialData, setTrialData]       = useState<TrialData | null>(null);
   const [trialExpired, setTrialExpired] = useState(false);
   const [trialDaysLeft, setTrialDaysLeft] = useState(14);
@@ -87,7 +87,7 @@ export default function LevelHub() {
   const [pendingLevelId, setPendingLevelId] = useState<string | null>(null);
   const [langStep, setLangStep]             = useState<'learn' | 'native'>('learn');
 
-  // ── 스트릭 계산 ──────────────────────────────────────────────────────────────
+  // -- 스트릭 계산 --------------------------------------------------------------
   const calcStreak = () => {
     try {
       const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
@@ -114,12 +114,12 @@ export default function LevelHub() {
     } catch { setStreak(0); }
   };
 
-  // ── 진단 테스트 리다이렉트 ────────────────────────────────────────────────
+  // -- 진단 테스트 리다이렉트 ------------------------------------------------
   useEffect(() => {
     if (authLoading) return; // 아직 auth 확인 중 → 대기
 
     if (!user) {
-      // ── 비로그인 게스트 ──────────────────────────────────────────────────
+      // -- 비로그인 게스트 --------------------------------------------------
       // localStorage 기준으로 판단 (계정 무관)
       const lsPlaced = localStorage.getItem('mt_placement_done');
       if (!lsPlaced) {
@@ -137,20 +137,18 @@ export default function LevelHub() {
       return;
     }
 
-    // ── 로그인 유저 ────────────────────────────────────────────────────────
+    // -- 로그인 유저 --------------------------------------------------------
     if (!profile) return; // profile 아직 로딩 중 → 대기
 
     const firestoreDone = (profile as any).placementDone === true;
+    const localDone     = localStorage.getItem('mt_placement_done') === 'true';
 
-    if (firestoreDone) {
-      // Firestore에 완료 기록 있음 → localStorage도 맞춰주고 그대로
+    // Firestore 또는 localStorage 둘 중 하나라도 완료면 통과
+    if (firestoreDone || localDone) {
       localStorage.setItem('mt_placement_done', 'true');
       return;
     }
 
-    // Firestore에 기록 없음 → 이 계정은 아직 테스트 미완료
-    // (다른 계정의 localStorage 값은 무시)
-    localStorage.removeItem('mt_placement_done'); // 이전 계정 흔적 제거
     localStorage.setItem('mt_placement_done', 'pending');
     const lang = profile.learnLang || localStorage.getItem('mt_learn_lang') || '';
     if (!lang || lang === 'en-US') {
@@ -215,7 +213,7 @@ export default function LevelHub() {
     loadSub();
   }, [user]);
 
-  // ── Load trial data ────────────────────────────────────────────────────────
+  // -- Load trial data --------------------------------------------------------
   useEffect(() => {
     if (!user) return;
     getTrialData(user.uid).then(data => {
@@ -282,7 +280,7 @@ export default function LevelHub() {
 
   // 언어 확정 후 이동
   const handleConfirmLang = async (learn: string, native: string) => {
-    // ── 체험 언어 제한 체크 ──────────────────────────────────────────────────
+    // -- 체험 언어 제한 체크 --------------------------------------------------
     if (user && trialData && !isTrialExpired(trialData)) {
       const alreadyAdded = trialData.languages.includes(learn);
       if (!alreadyAdded && trialData.languages.length >= TRIAL_MAX_LANGUAGES) {
@@ -330,7 +328,7 @@ export default function LevelHub() {
         .mt-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.45);backdrop-filter:blur(4px);z-index:1000;display:flex;align-items:center;justify-content:center;}
       `}</style>
 
-      {/* ── Trial: 만료 모달 ── */}
+      {/* -- Trial: 만료 모달 -- */}
       {trialExpired && planId === 'free' && (
         <TrialExpiredModal
           reason="expired"
@@ -338,7 +336,7 @@ export default function LevelHub() {
         />
       )}
 
-      {/* ── Trial: 언어 제한 모달 ── */}
+      {/* -- Trial: 언어 제한 모달 -- */}
       {langBlockedModal && (
         <TrialExpiredModal
           reason="language_limit"
@@ -346,7 +344,7 @@ export default function LevelHub() {
         />
       )}
 
-      {/* ── Trial: 상단 배너 ── */}
+      {/* -- Trial: 상단 배너 -- */}
       {!trialExpired && trialData && planId === 'free' && !trialBannerDismissed && (
         <TrialBanner
           daysLeft={trialDaysLeft}
@@ -354,7 +352,7 @@ export default function LevelHub() {
         />
       )}
 
-      {/* ── 언어 선택 모달 ── */}
+      {/* -- 언어 선택 모달 -- */}
       {showLangModal && (
         <div className="mt-modal-overlay" onClick={() => setShowLangModal(false)}>
           <div style={styles.modal} onClick={e => e.stopPropagation()}>
@@ -366,7 +364,7 @@ export default function LevelHub() {
                 <div style={styles.modalSub}>Select the language you want to study</div>
                 <div style={styles.langGrid}>
                   {[
-                    // ── 최다 학습자 순 ──────────────────────────────
+                    // -- 최다 학습자 순 ------------------------------
                     'en-US','en-GB','es-ES','fr-FR','de-DE','ja-JP',
                     'zh-CN','ko-KR','pt-BR','it-IT','ru-RU','ar-XA',
                     'hi-IN','zh-TW','vi-VN','tr-TR','pl-PL','nl-NL',
@@ -408,7 +406,7 @@ export default function LevelHub() {
               </>
             ) : (
               <>
-                {/* ── 모국어 선택 — 완전히 다른 배경/디자인 ── */}
+                {/* -- 모국어 선택 — 완전히 다른 배경/디자인 -- */}
                 <div style={{ margin: '-32px -28px 24px', padding: '24px 28px', background: 'linear-gradient(135deg, #0F172A 0%, #1E3A5F 100%)', borderRadius: '24px 24px 0 0' }}>
                   <button
                     onClick={() => setLangStep('learn')}
@@ -460,7 +458,7 @@ export default function LevelHub() {
         </div>
       )}
 
-      {/* ── NAV ── */}
+      {/* -- NAV -- */}
       <nav style={styles.nav}>
         <div style={styles.navLogo} onClick={() => router.push('/')}>
           <div style={styles.navLogoIcon}>🌍</div>
@@ -499,7 +497,7 @@ export default function LevelHub() {
             </button>
           )}
 
-          {/* ── User Avatar / Login ── */}
+          {/* -- User Avatar / Login -- */}
           {user ? (
             <div style={{ position: 'relative' }}>
               <button
@@ -564,7 +562,7 @@ export default function LevelHub() {
         />
       )}
 
-      {/* ── Hero Banner ── */}
+      {/* -- Hero Banner -- */}
       <div style={styles.heroBanner}>
         <div style={styles.heroBubble1} /><div style={styles.heroBubble2} />
         <div style={styles.heroInner}>
@@ -576,7 +574,7 @@ export default function LevelHub() {
               <span style={styles.newTag}>NEW</span>
             </div>
           </div>
-          <h1 style={styles.heroTitle}>Every language in the world<br />Meet +150 tutors</h1>
+          <h1 style={styles.heroTitle}>Every language in the world<br />starts with one conversation.</h1>
           <p style={styles.heroDesc}>No judgment. No pressure. Your pace, your rules.<br />Our AI tutors get total beginners talking in under 10 minutes.</p>
           <div style={styles.heroBtnRow}>
             <button style={styles.heroBtn1} onClick={() => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); }}>
@@ -588,7 +586,7 @@ export default function LevelHub() {
         </div>
       </div>
 
-      {/* ── Stats ── */}
+      {/* -- Stats -- */}
       <div style={styles.statsWrap}>
         {([
           ['150+','AI Tutors','🤖','#EFF6FF','#2563EB'],
@@ -604,7 +602,7 @@ export default function LevelHub() {
         ))}
       </div>
 
-      {/* ── Current Level ── */}
+      {/* -- Current Level -- */}
       <section style={styles.currentSection}>
         <p style={styles.currentSub}>YOUR LEARNING PATH</p>
         <h2 style={styles.currentTitle}>
@@ -620,7 +618,7 @@ export default function LevelHub() {
         </div>
       </section>
 
-      {/* ── Level Grid ── */}
+      {/* -- Level Grid -- */}
       <section style={styles.grid}>
         {CURRICULUM.map((level) => {
           const unlocked    = isLevelUnlocked(level.id);
