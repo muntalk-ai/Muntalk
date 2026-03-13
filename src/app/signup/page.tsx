@@ -28,6 +28,7 @@ export default function SignupPage() {
   }, [user, authLoading]);
   const [emailLoading,  setEmailLoading]  = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
+  const [agreed, setAgreed] = useState(false);
   const [showPw,   setShowPw]   = useState(false);
 
   const friendlyError = (code: string) => {

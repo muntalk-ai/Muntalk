@@ -115,8 +115,7 @@ export default function LoginPage() {
     <div style={styles.page}>
       {/* suppressHydrationWarning: SSR/CSR 따옴표 인코딩 불일치 방지 */}
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
-        * { box-sizing: border-box; }
+* { box-sizing: border-box; }
         @keyframes spin { to { transform: rotate(360deg); } }
         .auth-input { width:100%; padding:14px 16px; border:2px solid #E5E7EB; border-radius:12px; font-size:15px; font-family:'Nunito',sans-serif; outline:none; transition:border .15s; background:#fff; color:#0F172A; }
         .auth-input:focus { border-color:#6366F1; }
@@ -140,7 +139,7 @@ export default function LoginPage() {
           <p style={{ fontSize: 14, color: '#94A3B8', margin: '6px 0 0', fontWeight: 600 }}>Continue your language journey</p>
         </div>
 
-        {/* ── Google ── */}
+        {/* -- Google -- */}
         <button className="auth-btn-google" onClick={handleGoogle} disabled={googleLoading}>
           {googleLoading ? (
             <>
@@ -210,6 +209,12 @@ export default function LoginPage() {
         </p>
         <p style={{ textAlign: 'center', marginTop: 8 }}>
           <button className="auth-link" style={{ fontSize: 13, color: '#94A3B8' }} onClick={() => router.push('/lingua')}>Continue as guest →</button>
+        </p>
+        <p style={{ textAlign: 'center', marginTop: 20, fontSize: 12, color: '#CBD5E1', lineHeight: 1.6, borderTop: '1px solid #F1F5F9', paddingTop: 16 }}>
+          Can&apos;t access your account?{' '}
+          <a href="mailto:muntalkofficial@gmail.com" style={{ color: '#6366F1', fontWeight: 700, textDecoration: 'none' }}>
+            muntalkofficial@gmail.com
+          </a>
         </p>
       </div>
     </div>
