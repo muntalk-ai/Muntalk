@@ -3,10 +3,9 @@ import { db } from '@/lib/firebase';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 const MODELS = [
+  'gemini-2.5-flash',
   'gemini-1.5-flash',
-  'gemini-1.5-flash-8b',
-  'gemini-1.5-pro',
-];
+ ];
 const RETRY_DELAYS = [800, 2000, 4000];
 const FREE_DAILY_CHAT_LIMIT = 5; // 14일 체험: 5회/일
 
