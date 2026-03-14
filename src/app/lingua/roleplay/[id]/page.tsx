@@ -123,7 +123,6 @@ export default function RoleplaySession() {
     setPhase('playing');
     setIsThinking(true);
 
-    let pendingSpeech = '';
 
     try {
       const res = await fetch('/api/gemini', {
@@ -160,6 +159,7 @@ Write ONLY the NPC's opening dialogue — nothing else. No stage directions. No 
   // Handle user turn
   const handleUserTurn = async (userText: string) => {
     if (!userText.trim() || isThinking || !scenario) return;
+    let pendingSpeech = '';
     if (audioRef.current) { audioRef.current.pause(); }
 
     const userMsg: Message = { role: 'user', text: userText, timestamp: Date.now() };
