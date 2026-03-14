@@ -395,14 +395,82 @@ export const CURRICULUM: Level[] = [
     badge: '💼', persona: 'City Dweller', xpMin: 1400, xpRange: '1,400 – 2,400',
     desc: 'Navigate work, discuss the news, express complex emotions and debate opinions.',
     steps: [
-      { id: 'b1-1', label: 'B1 · Step 1', persona: '🏢 Work & Career', color: '#FDF2F8', accent: '#DB2777', dark: '#831843', badge: '🏢', xpReward: 280, tagline: 'Talk like a professional', desc: 'Job interviews, office communication and workplace problems.', lessons: [{ id: 'b1-1-1', title: 'Job Interviews', icon: '👔', xp: 85, vocab: [{ word: 'I have experience in…', phonetic: 'aɪ hæv ɪkˈspɪriəns ɪn', meaning: 'Describe work background', example: 'I have experience in marketing and sales.' }, { word: 'My greatest strength is…', phonetic: 'maɪ ˈɡreɪtɪst strɛŋθ ɪz', meaning: 'Highlight a skill', example: 'My greatest strength is problem-solving.' }, { word: "I'm a quick learner", phonetic: 'aɪm ə kwɪk ˈlɜːrnər', meaning: 'Learn fast', example: "I'm a quick learner and love new challenges." }, { word: 'In five years, I hope to…', phonetic: 'ɪn faɪv jɪrz aɪ hoʊp tə', meaning: 'Career goals', example: 'In five years, I hope to lead a team.' }, { word: "I'm passionate about…", phonetic: 'aɪm ˈpæʃənɪt əˈbaʊt', meaning: 'Show enthusiasm', example: "I'm passionate about data and innovation." }], quiz: [{ q: "'My greatest strength is creativity' answers:", options: ['Why do you want this job?', 'What is your weakness?', 'What are you good at?', 'What are your goals?'], answer: 2 }, { q: "'Could you tell me more about the role?' shows you are:", options: ['Rude', 'Not interested', 'Curious and engaged', 'Confused'], answer: 2 }, { q: "'I'm passionate about design' means:", options: ['I studied design', 'I am very enthusiastic about design', 'Design is okay', 'I used to like design'], answer: 1 }], tutorPrompt: "You are a professional English tutor. Topic: job interview English — experience, strengths, \"quick learner\", career goals, passion. RULES: English only. Professional but friendly. Simulate a real interview. Start: \"Let's practise a job interview! 👔 I'm the interviewer. First question: 'Tell me about yourself and your experience.' Take your time — answer in 3–4 sentences!\"" }, { id: 'b1-1-2', title: 'Office Communication', icon: '📧', xp: 90, vocab: { 
-  word: 'agenda',   phonetic: 'əˈdʒɛndə',   meaning: 'A list of items to discuss in a meeting',   example: "The agenda for today's meeting has five points." 
-},
+  { 
+        id: 'b1-1', 
+        label: 'B1 · Step 1', 
+        persona: '🏢 Work & Career', 
+        color: '#FDF2F8', 
+        accent: '#DB2777', 
+        dark: '#831843', 
+        badge: '🏢', 
+        xpReward: 280, 
+        tagline: 'Talk like a professional', 
+        desc: 'Job interviews, office communication and workplace problems.', 
+        lessons: [
+          { 
+            id: 'b1-1-1', 
+            title: 'Job Interviews', 
+            icon: '👔', 
+            xp: 85, 
+            vocab: [
+              { word: 'I have experience in…', phonetic: 'aɪ hæv ɪkˈspɪriəns ɪn', meaning: 'Describe work background', example: 'I have experience in marketing and sales.' }, 
+              { word: 'My greatest strength is…', phonetic: 'maɪ ˈɡreɪtɪst strɛŋθ ɪz', meaning: 'Highlight a skill', example: 'My greatest strength is problem-solving.' }, 
+              { word: "I'm a quick learner", phonetic: 'aɪm ə kwɪk ˈlɜːrnər', meaning: 'Learn fast', example: "I'm a quick learner and love new challenges." }, 
+              { word: 'In five years, I hope to…', phonetic: 'ɪn faɪv jɪrz aɪ hoʊp tə', meaning: 'Career goals', example: 'In five years, I hope to lead a team.' }, 
+              { word: "I'm passionate about…", phonetic: 'aɪm ˈpæʃənɪt əˈbaʊt', meaning: 'Show enthusiasm', example: "I'm passionate about data and innovation." }
+            ], 
+            quiz: [
+              { q: "'My greatest strength is creativity' answers:", options: ['Why do you want this job?', 'What is your weakness?', 'What are you good at?', 'What are your goals?'], answer: 2 }, 
+              { q: "'Could you tell me more about the role?' shows you are:", options: ['Rude', 'Not interested', 'Curious and engaged', 'Confused'], answer: 2 }, 
+              { q: "'I'm passionate about design' means:", options: ['I studied design', 'I am very enthusiastic about design', 'Design is okay', 'I used to like design'], answer: 1 }
+            ], 
+            tutorPrompt: "You are a professional English tutor. Topic: job interview English — experience, strengths, \"quick learner\", career goals, passion. RULES: English only. Professional but friendly. Simulate a real interview. Start: \"Let's practise a job interview! 👔 I'm the interviewer. First question: 'Tell me about yourself and your experience.' Take your time — answer in 3–4 sentences!\"" 
+          }, 
+          { 
+            id: 'b1-1-2', 
+            title: 'Office Communication', 
+            icon: '📧', 
+            xp: 90, 
+            vocab: [
+              { word: 'agenda', phonetic: 'əˈdʒɛndə', meaning: 'A list of items to discuss in a meeting', example: "The agenda for today's meeting has five points." },
               { word: 'deadline', phonetic: 'ˈdɛdlaɪn', meaning: 'The latest time by which something must be done', example: 'The deadline for this report is Friday at 5 PM.' },
               { word: 'delegate', phonetic: 'ˈdɛlɪɡeɪt', meaning: 'To assign a task to someone else', example: 'I will delegate this task to my assistant.' },
               { word: 'update', phonetic: 'ˈʌpdeɪt', meaning: 'To give the latest information', example: 'Could you update me on the project status?' },
               { word: 'action item', phonetic: 'ˈækʃən ˈaɪtəm', meaning: 'A specific task assigned after a meeting', example: 'Your action item is to send the report by Monday.' },
-              { word: "I'll follow up on that", phonetic: 'aɪl ˈfɒloʊ ʌp ɒn ðæt', meaning: 'Take action on sth', example: "I'll follow up on that email tomorrow." }, { word: "Let's circle back", phonetic: 'lɛts ˈsɜːrkl bæk', meaning: 'Return to this topic', example: "Let's circle back to the budget issue." }, { word: 'Could we reschedule?', phonetic: 'kʊd wiː riːˈʃɛdjuːl', meaning: 'Change meeting time', example: "I'm busy Friday — could we reschedule?" }, { word: "To be honest…", phonetic: 'tə biː ˈɒnɪst', meaning: 'Introduce frank view', example: "To be honest, the deadline is too tight." }, { word: "I'll get back to you", phonetic: 'aɪl ɡɛt bæk tə juː', meaning: 'Will respond later', example: "I'll get back to you by end of day." }], quiz: [{ q: "'Let's circle back' means:", options: ['Leave the topic forever', 'Return to discuss it later', 'Start a new topic', 'End the meeting'], answer: 1 }, { q: "'I'll get back to you' means:", options: ["I'll call you now", "I'll respond later", "I don't know", "I don't want to answer"], answer: 1 }, { q: "'To be honest' signals:", options: ['A lie', 'A sincere or frank comment', 'A question', 'A command'], answer: 1 }], tutorPrompt: "You are a professional English tutor. Topic: office communication — follow up, circle back, reschedule, \"to be honest\", \"I'll get back to you\". RULES: English only. Roleplay as colleague or manager. Start: \"Welcome to the office! 🏢 It's Monday morning. I'm your manager: 'Did you finish the report?' — How do you respond using office English?\"" }, { id: 'b1-1-3', title: 'Work Problems', icon: '⚠️', xp: 105, vocab: [{ word: "We're behind schedule", phonetic: 'wɪər bɪˈhaɪnd ˈʃɛdjuːl', meaning: 'Late on a project', example: "We're two weeks behind schedule." }, { word: 'The issue is that…', phonetic: 'ðə ˈɪʃuː ɪz ðæt', meaning: 'Identify problem', example: 'The issue is that we lack the budget.' }, { word: 'I suggest we…', phonetic: 'aɪ səˈdʒɛst wiː', meaning: 'Propose a solution', example: 'I suggest we extend the deadline.' }, { word: 'Moving forward…', phonetic: 'ˈmuːvɪŋ ˈfɔːrwərd', meaning: 'Future action plan', example: "Moving forward, let's have weekly check-ins." }, { word: "Who is responsible for…?", phonetic: 'huː ɪz rɪˈspɒnsɪbl fər', meaning: 'Assign responsibility', example: 'Who is responsible for the client meeting?' }], quiz: [{ q: "'We're behind schedule' means:", options: ['We finished early', "We're on time", "We're late", 'We cancelled the project'], answer: 2 }, { q: "'I suggest we meet tomorrow' is:", options: ['A command', 'A suggestion', 'A complaint', 'A question'], answer: 1 }, { q: "'Moving forward' is used when:", options: ['Discussing the past', 'Talking about what happens next', 'Describing a problem', 'Asking a question'], answer: 1 }], tutorPrompt: "You are a direct English tutor. Topic: workplace problem language — behind schedule, \"the issue is\", suggestions, urgency, \"moving forward\". RULES: English only. Simulate a team problem-solving meeting. Start: \"It's Monday and a project is going wrong! 🚨 I'm your project manager: 'The client presentation is tomorrow and we're behind schedule. What do you suggest?'\"" }] },
+              { word: "I'll follow up on that", phonetic: 'aɪl ˈfɒloʊ ʌp ɒn ðæt', meaning: 'Take action on sth', example: "I'll follow up on that email tomorrow." }, 
+              { word: "Let's circle back", phonetic: 'lɛts ˈsɜːrkl bæk', meaning: 'Return to this topic', example: "Let's circle back to the budget issue." }, 
+              { word: 'Could we reschedule?', phonetic: 'kʊd wiː riːˈʃɛdjuːl', meaning: 'Change meeting time', example: "I'm busy Friday — could we reschedule?" }, 
+              { word: "To be honest…", phonetic: 'tə biː ˈɒnɪst', meaning: 'Introduce frank view', example: "To be honest, the deadline is too tight." }, 
+              { word: "I'll get back to you", phonetic: 'aɪl ɡɛt bæk tə juː', meaning: 'Will respond later', example: "I'll get back to you by end of day." }
+            ], 
+            quiz: [
+              { q: "'Let's circle back' means:", options: ['Leave the topic forever', 'Return to discuss it later', 'Start a new topic', 'End the meeting'], answer: 1 }, 
+              { q: "'I'll get back to you' means:", options: ["I'll call you now", "I'll respond later", "I don't know", "I don't want to answer"], answer: 1 }, 
+              { q: "'To be honest' signals:", options: ['A lie', 'A sincere or frank comment', 'A question', 'A command'], answer: 1 }
+            ], 
+            tutorPrompt: "You are a professional English tutor. Topic: office communication — follow up, circle back, reschedule, \"to be honest\", \"I'll get back to you\". RULES: English only. Roleplay as colleague or manager. Start: \"Welcome to the office! 🏢 It's Monday morning. I'm your manager: 'Did you finish the report?' — How do you respond using office English?\"" 
+          }, 
+          { 
+            id: 'b1-1-3', 
+            title: 'Work Problems', 
+            icon: '⚠️', 
+            xp: 105, 
+            vocab: [
+              { word: "We're behind schedule", phonetic: 'wɪər bɪˈhaɪnd ˈʃɛdjuːl', meaning: 'Late on a project', example: "We're two weeks behind schedule." }, 
+              { word: 'The issue is that…', phonetic: 'ðə ˈɪʃuː ɪz ðæt', meaning: 'Identify problem', example: 'The issue is that we lack the budget.' }, 
+              { word: 'I suggest we…', phonetic: 'aɪ səˈdʒɛst wiː', meaning: 'Propose a solution', example: 'I suggest we extend the deadline.' }, 
+              { word: 'Moving forward…', phonetic: 'ˈmuːvɪŋ ˈfɔːrwərd', meaning: 'Future action plan', example: "Moving forward, let's have weekly check-ins." }, 
+              { word: "Who is responsible for…?", phonetic: 'huː ɪz rɪˈspɒnsɪbl fər', meaning: 'Assign responsibility', example: 'Who is responsible for the client meeting?' }
+            ], 
+            quiz: [
+              { q: "'We're behind schedule' means:", options: ['We finished early', "We're on time", "We're late", 'We cancelled the project'], answer: 2 }, 
+              { q: "'I suggest we meet tomorrow' is:", options: ['A command', 'A suggestion', 'A complaint', 'A question'], answer: 1 }, 
+              { q: "'Moving forward' is used when:", options: ['Discussing the past', 'Talking about what happens next', 'Describing a problem', 'Asking a question'], answer: 1 }
+            ], 
+            tutorPrompt: "You are a direct English tutor. Topic: workplace problem language — behind schedule, \"the issue is\", suggestions, urgency, \"moving forward\". RULES: English only. Simulate a team problem-solving meeting. Start: \"It's Monday and a project is going wrong! 🚨 I'm your project manager: 'The client presentation is tomorrow and we're behind schedule. What do you suggest?'\"" 
+          }
+        ] 
+      },
       { id: 'b1-2', label: 'B1 · Step 2', persona: '📰 News & Media', color: '#F1F5F9', accent: '#475569', dark: '#1E293B', badge: '📰', xpReward: 300, tagline: 'Understand and discuss the world', desc: 'News vocabulary, strong opinions and cause & effect language.', lessons: [{ id: 'b1-2-1', title: 'News Vocabulary', icon: '🗞️', xp: 90, vocab: [{ word: 'According to reports…', phonetic: 'əˈkɔːrdɪŋ tə rɪˈpɔːrts', meaning: 'Cite a source', example: 'According to reports, the economy is growing.' }, { word: 'It is believed that…', phonetic: 'ɪt ɪz bɪˈliːvd ðæt', meaning: 'Unconfirmed info', example: 'It is believed that a deal was reached.' }, { word: 'Breaking news', phonetic: 'ˈbreɪkɪŋ njuːz', meaning: 'Latest urgent news', example: 'Breaking news: a major earthquake has hit.' }, { word: 'The situation remains…', phonetic: 'ðə ˌsɪtʃuˈeɪʃən rɪˈmeɪnz', meaning: 'Ongoing status', example: 'The situation remains unclear at this time.' }, { word: 'To be confirmed', phonetic: 'tə biː kənˈfɜːrmd', meaning: 'Not yet verified', example: 'The details are yet to be confirmed.' }], quiz: [{ q: "'According to reports' is used to:", options: ['Share your opinion', 'Cite a source', 'Disagree', 'Give advice'], answer: 1 }, { q: "'Breaking news' refers to:", options: ['Old stories', 'Very recent urgent events', 'Sports results', 'Entertainment'], answer: 1 }, { q: "'The details are yet to be confirmed' means:", options: ["It's confirmed", "It's false", "We don't know for sure yet", "It's a rumour"], answer: 2 }], tutorPrompt: "You are an analytical English tutor. Topic: news language — \"according to reports\", \"it is believed\", \"breaking news\", \"situation remains\", \"to be confirmed\". RULES: English only. Discuss a fictional news story. Start: \"Let's read the news together! 📰 Here's a fictional headline: 'Authorities have confirmed a new environmental policy — details yet to be released.' What do you know and not know from this headline?\"" }, { id: 'b1-2-2', title: 'Strong Opinions', icon: '💥', xp: 95, vocab: [              { word: 'opinion', phonetic: 'əˈpɪnjən', meaning: 'A personal view or judgement', example: 'In my opinion, remote work is more productive.' },
               { word: 'argue', phonetic: 'ˈɑːrɡjuː', meaning: 'To give reasons to support a view', example: 'She argued that the policy was unfair.' },
               { word: 'convince', phonetic: 'kənˈvɪns', meaning: 'To persuade someone to believe something', example: 'I could not convince him to change his mind.' },
