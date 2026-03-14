@@ -5,6 +5,15 @@ import { doc, getDoc, setDoc, updateDoc, serverTimestamp } from 'firebase/firest
 import { db } from './firebase';
 
 // --- 플랜 정의 -------------------------------------------------------------
+
+// --- 관리자 설정 -----------------------------------------------------------
+export const ADMIN_EMAIL = 'muntalkofficial@gmail.com';
+
+/** 관리자 이메일 여부 확인 */
+export function isAdminEmail(email: string | null | undefined): boolean {
+  return email === ADMIN_EMAIL;
+}
+
 export type PlanId = 'free' | 'monthly' | 'biannual' | 'annual';
 
 export const PLANS: Record<PlanId, {
@@ -85,15 +94,31 @@ export async function getSubscription(uid: string): Promise<Subscription> {
   return { planId: 'free', status: 'active' };
 }
 
-export async function isPremium(uid: string): Promise<boolean> {
+export async function isPremium(uid: string, email?: string | null): Promise<boolean> {
+  // 관리자는 항상 프리미엄
+  if (isAdminEmail(email)) return true;
   const sub = await getSubscription(uid);
   return sub.planId !== 'free' && sub.status === 'active';
 }
 
 // --- 레벨 잠금 --------------------------------------------------------------
 // Free: A1만 해금, Premium: 전체 해금
-export function isLevelLocked(levelId: string, planId: PlanId): boolean {
+export function isLevelLocked(levelId: string, planId: PlanId, isAdmin = false, placementLevel?: string): boolean {
+  // 관리자는 모든 레벨 접근 가능
+  if (isAdmin) return false;
+  // 프리미엄은 모두 오픈
   if (planId !== 'free') return false;
+
+  // 레벨테스트 배정 결과: 배정 레벨까지는 Free도 접근 허용
+  // 예) B1 배정 → A1, A2, B1 접근 가능
+  if (placementLevel) {
+    const ORDER = ['a1','a2','b1','b2','c1','c2'];
+    const placedIdx = ORDER.indexOf(placementLevel.toLowerCase());
+    const targetIdx = ORDER.indexOf(levelId.toLowerCase());
+    if (placedIdx >= 0 && targetIdx >= 0 && targetIdx <= placedIdx) return false;
+  }
+
+  // Free 기본: A1만 허용
   return levelId !== 'a1';
 }
 

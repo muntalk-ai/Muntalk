@@ -1,11 +1,12 @@
-﻿import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/firebase';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 const MODELS = [
-  'gemini-2.5-flash',
   'gemini-1.5-flash',
-  ];
+  'gemini-1.5-flash-8b',
+  'gemini-1.5-pro',
+];
 const RETRY_DELAYS = [800, 2000, 4000];
 const FREE_DAILY_CHAT_LIMIT = 5; // 14일 체험: 5회/일
 
@@ -76,7 +77,13 @@ export async function POST(req: NextRequest) {
       }
 
       const planId = await getPlanId(uid);
-      if (planId === 'free') {
+      // 관리자(muntalkofficial@gmail.com) 무제한 접근
+      const ADMIN_UID_KEY = process.env.ADMIN_EMAIL || 'muntalkofficial@gmail.com';
+      const profileSnap2 = await getDoc(doc(db, 'users', uid));
+      const userEmailFromProfile = profileSnap2.data()?.email as string | undefined;
+      if (userEmailFromProfile === ADMIN_UID_KEY) {
+        // admin → 제한 없이 통과
+      } else if (planId === 'free') {
         const usage = await getChatUsage(uid);
         const today = new Date().toISOString().slice(0, 10);
         const todayCount = usage.date === today ? usage.count : 0;
@@ -91,7 +98,7 @@ export async function POST(req: NextRequest) {
             { status: 429 }
           );
         }
-      }
+      } // end else if (planId === 'free')
     }
     // ------------------------------------------------------------------------
 

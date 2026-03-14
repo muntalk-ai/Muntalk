@@ -1,9 +1,10 @@
-﻿'use client';
+'use client';
 
 import { useEffect, useState, Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import { POS_META, POS_SET_COUNT, PartOfSpeech } from '@/data/wordSets';
 import { useAuth } from '@/context/AuthContext';
+import { isAdminEmail } from '@/lib/subscription';
 import { getSubscription } from '@/lib/subscription';
 
 const POS_LIST: PartOfSpeech[] = ['Verbs', 'Adjectives', 'Adverbs', 'Phrases'];
@@ -45,7 +46,7 @@ function WordsContent() {
   );
 
   // Paywall — not premium
-  if (!isPremium) return (
+  if (!isPremium && !isAdminEmail(user?.email)) return (
     <div style={{ minHeight:'100vh', background:'#fff', fontFamily:"'Nunito',sans-serif", display:'flex', alignItems:'center', justifyContent:'center', padding:24 }}>
       <div style={{ maxWidth:440, textAlign:'center' }}>
         <div style={{ fontSize:64, marginBottom:16 }}>📚</div>

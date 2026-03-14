@@ -7,6 +7,7 @@ import { getTutorById, getTutorForLang } from '@/data/tutors';
 import { LEARN_LANGUAGES } from '@/data/languages';
 import TrialExpiredModal from '@/components/TrialExpiredModal';
 import { getTrialData, initTrial, isTrialExpired, isPremium, TRIAL_MAX_UNITS } from '@/lib/trialPolicy';
+import { isAdminEmail } from '@/lib/subscription';
 
 const hasStt = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.stt ?? false;
 const hasTts = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.tts ?? false;
@@ -107,7 +108,7 @@ export default function LessonPlayer({
     async function checkTrial() {
       try {
         // 프리미엄이면 패스
-        if (await isPremium(user!.uid)) return;
+        if (await isPremium(user!.uid, user?.email)) return;
         // trial 데이터 읽기 (없으면 자동 생성)
         let trial = await getTrialData(user!.uid);
         if (!trial) trial = await initTrial(user!.uid);
@@ -125,59 +126,85 @@ export default function LessonPlayer({
   // -- Translate lesson content when non-English --------------------------------
   const [txError, setTxError] = useState<string | null>(null);
 
+  // 사전생성 JSON이 있는 언어 목록 (public/curriculum/ 폴더)
+  const PREGENERATED_LANGS = new Set([
+    'ja-JP', 'ko-KR', 'zh-CN', 'zh-TW',
+    'es-ES', 'fr-FR', 'de-DE', 'pt-BR', 'it-IT', 'ru-RU',
+  ]);
+
+  const langNames: Record<string, string> = {
+    'en-US': 'English', 'en-GB': 'English',
+    'ja-JP': 'Japanese', 'ko-KR': 'Korean',
+    'zh-CN': 'Chinese (Simplified)', 'zh-TW': 'Chinese (Traditional)',
+    'fr-FR': 'French', 'de-DE': 'German', 'es-ES': 'Spanish', 'es-MX': 'Spanish (Mexican)',
+    'it-IT': 'Italian', 'pt-BR': 'Portuguese (Brazilian)', 'pt-PT': 'Portuguese (European)',
+    'ru-RU': 'Russian', 'ar-XA': 'Arabic', 'hi-IN': 'Hindi', 'bn-IN': 'Bengali',
+    'ta-IN': 'Tamil', 'te-IN': 'Telugu', 'ml-IN': 'Malayalam',
+    'nl-NL': 'Dutch', 'pl-PL': 'Polish', 'tr-TR': 'Turkish', 'sv-SE': 'Swedish',
+    'da-DK': 'Danish', 'nb-NO': 'Norwegian', 'fi-FI': 'Finnish', 'cs-CZ': 'Czech',
+    'sk-SK': 'Slovak', 'hu-HU': 'Hungarian', 'ro-RO': 'Romanian', 'el-GR': 'Greek',
+    'uk-UA': 'Ukrainian', 'ca-ES': 'Catalan',
+    'vi-VN': 'Vietnamese', 'th-TH': 'Thai', 'id-ID': 'Indonesian', 'ms-MY': 'Malay',
+    'tl-PH': 'Filipino', 'km-KH': 'Khmer', 'si-LK': 'Sinhala',
+    'he-IL': 'Hebrew', 'fa-IR': 'Persian', 'ur-IN': 'Urdu',
+    'sw-KE': 'Swahili', 'af-ZA': 'Afrikaans',
+    'az-AZ': 'Azerbaijani', 'ka-GE': 'Georgian',
+  };
+  const nativeNames: Record<string, string> = {
+    'ko-KR': 'Korean', 'en-US': 'English', 'ja-JP': 'Japanese', 'zh-CN': 'Chinese',
+    'fr-FR': 'French', 'de-DE': 'German', 'es-ES': 'Spanish', 'pt-BR': 'Portuguese',
+    'ru-RU': 'Russian', 'ar-XA': 'Arabic', 'vi-VN': 'Vietnamese', 'id-ID': 'Indonesian',
+  };
+
   useEffect(() => {
-    // lesson은 Guard 이후에 확정되지만 useEffect는 항상 실행되므로 직접 재계산
     const lvl = CURRICULUM.find(l => l.id === levelId);
     const stp = lvl?.steps.find(s => s.id === stepId);
     const lsn = stp?.lessons.find(l => l.id === lessonId);
 
-    console.log('[translate] langId:', langId, 'lesson:', lsn?.title);
+    if (!lsn) { console.warn('[lesson] lesson not found'); return; }
+    if (authLoading) return;
 
-    if (!lsn) { console.warn('[translate] lesson not found'); return; }
-    if (authLoading) { console.log('[translate] waiting for auth to load...'); return; }
-    // 게스트도 번역 허용 (uid 없이 API 호출)
+    // 영어는 번역 불필요
     if (langId === 'en-US' || langId === 'en-GB') {
       setTranslatedLesson(null);
       return;
     }
 
-    const langNames: Record<string, string> = {
-      'en-US': 'English', 'en-GB': 'English',
-      'ja-JP': 'Japanese', 'ko-KR': 'Korean',
-      'zh-CN': 'Chinese (Simplified)', 'zh-TW': 'Chinese (Traditional)',
-      'fr-FR': 'French', 'de-DE': 'German', 'es-ES': 'Spanish', 'es-MX': 'Spanish (Mexican)',
-      'it-IT': 'Italian', 'pt-BR': 'Portuguese (Brazilian)', 'pt-PT': 'Portuguese (European)',
-      'ru-RU': 'Russian', 'ar-XA': 'Arabic', 'hi-IN': 'Hindi', 'bn-IN': 'Bengali',
-      'ta-IN': 'Tamil', 'te-IN': 'Telugu', 'ml-IN': 'Malayalam',
-      'nl-NL': 'Dutch', 'pl-PL': 'Polish', 'tr-TR': 'Turkish', 'sv-SE': 'Swedish',
-      'da-DK': 'Danish', 'nb-NO': 'Norwegian', 'fi-FI': 'Finnish', 'cs-CZ': 'Czech',
-      'sk-SK': 'Slovak', 'hu-HU': 'Hungarian', 'ro-RO': 'Romanian', 'el-GR': 'Greek',
-      'uk-UA': 'Ukrainian', 'ca-ES': 'Catalan',
-      'vi-VN': 'Vietnamese', 'th-TH': 'Thai', 'id-ID': 'Indonesian', 'ms-MY': 'Malay',
-      'tl-PH': 'Filipino', 'km-KH': 'Khmer', 'si-LK': 'Sinhala',
-      'he-IL': 'Hebrew', 'fa-IR': 'Persian', 'ur-IN': 'Urdu',
-      'sw-KE': 'Swahili', 'af-ZA': 'Afrikaans',
-      'az-AZ': 'Azerbaijani', 'ka-GE': 'Georgian',
-    };
-    const nativeNames: Record<string, string> = {
-      'ko-KR': 'Korean', 'en-US': 'English', 'ja-JP': 'Japanese', 'zh-CN': 'Chinese',
-      'fr-FR': 'French', 'de-DE': 'German', 'es-ES': 'Spanish', 'pt-BR': 'Portuguese',
-      'ru-RU': 'Russian', 'ar-XA': 'Arabic', 'vi-VN': 'Vietnamese', 'id-ID': 'Indonesian',
-    };
-    const targetLang = langNames[langId] || langId;
-    const nativeLang = nativeNames[subLang] || 'English';
-
     setIsTranslating(true);
     setTxError(null);
     setTranslatedLesson(null);
 
-    const lessonPayload = {
-      vocab: lsn.vocab,
-      quiz: lsn.quiz,
-      tutorPrompt: lsn.tutorPrompt,
-    };
+    const targetLang = langNames[langId] || langId;
+    const nativeLang = nativeNames[subLang] || 'English';
 
-    const prompt = `Convert this English language lesson into ${targetLang}. The student's native language is ${nativeLang}.
+    // 1️⃣ 사전생성 JSON 우선 시도
+    if (PREGENERATED_LANGS.has(langId)) {
+      console.log(`[lesson] 📦 Loading pregenerated curriculum for ${langId}...`);
+      fetch(`/curriculum/${langId}.json`)
+        .then(async r => {
+          if (!r.ok) throw new Error(`No pregenerated file: ${r.status}`);
+          const data = await r.json();
+          const pregeneratedLesson = data.lessons?.find((l: { id: string }) => l.id === lessonId);
+          if (!pregeneratedLesson) throw new Error(`Lesson ${lessonId} not found in pregenerated file`);
+          console.log(`[lesson] ✅ Loaded from pregenerated JSON`);
+          setTranslatedLesson({ ...lsn, ...pregeneratedLesson });
+          setIsTranslating(false);
+        })
+        .catch(e => {
+          // 2️⃣ 사전생성 없으면 실시간 Gemini fallback
+          console.warn(`[lesson] ⚠️ Pregenerated load failed (${e.message}), falling back to Gemini...`);
+          callGeminiFallback(lsn, targetLang, nativeLang);
+        });
+      return;
+    }
+
+    // 3️⃣ 사전생성 대상 아닌 언어 → 바로 Gemini
+    console.log(`[lesson] 🤖 Generating with Gemini for ${targetLang}...`);
+    callGeminiFallback(lsn, targetLang, nativeLang);
+
+    function callGeminiFallback(lsn: typeof lesson, targetLang: string, nativeLang: string) {
+      const lessonPayload = { vocab: lsn!.vocab, quiz: lsn!.quiz, tutorPrompt: lsn!.tutorPrompt };
+      const prompt = `Convert this English language lesson into ${targetLang}. The student's native language is ${nativeLang}.
 
 Lesson JSON:
 ${JSON.stringify(lessonPayload)}
@@ -193,30 +220,25 @@ Return ONLY a JSON object with keys: vocab (array), quiz (array), tutorPrompt (s
 - tutorPrompt: rewrite to teach ${targetLang}, student replies in ${nativeLang} or ${targetLang}
 No markdown fences. Pure JSON only.`;
 
-    console.log('[translate] calling /api/gemini for', targetLang);
-
-    fetch('/api/gemini', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-          uid: user?.uid ?? null, prompt, temperature: 0.3 }),
-    })
-      .then(async r => {
-        const data = await r.json();
-        console.log('[translate] response status:', r.status);
-        if (data.error) throw new Error(data.error);
-        const raw = data.text?.trim() ?? '';
-        console.log('[translate] raw (first 200):', raw.slice(0, 200));
-        const clean = raw.replace(/^```json\s*/i,'').replace(/^```\s*/i,'').replace(/```[\s\S]*$/i,'').trim();
-        const parsed = JSON.parse(clean);
-        console.log('[translate] parsed vocab[0]:', parsed.vocab?.[0]);
-        setTranslatedLesson({ ...lsn, ...parsed });
+      fetch('/api/gemini', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ uid: user?.uid ?? null, prompt, temperature: 0.3 }),
       })
-      .catch(e => {
-        console.error('[translate] ERROR:', e);
-        setTxError(e?.message || String(e));
-      })
-      .finally(() => setIsTranslating(false));
+        .then(async r => {
+          const data = await r.json();
+          if (data.error) throw new Error(data.error);
+          const raw = data.text?.trim() ?? '';
+          const clean = raw.replace(/^```json\s*/i,'').replace(/^```\s*/i,'').replace(/```[\s\S]*$/i,'').trim();
+          const parsed = JSON.parse(clean);
+          setTranslatedLesson({ ...lsn!, ...parsed });
+        })
+        .catch(e => {
+          console.error('[lesson] Gemini ERROR:', e);
+          setTxError(e?.message || String(e));
+        })
+        .finally(() => setIsTranslating(false));
+    }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lessonId, langId, subLang, user?.uid]);
 
@@ -238,7 +260,21 @@ No markdown fences. Pure JSON only.`;
   }, []);
 
   // -- TTS (Google Cloud TTS) ---------------------------------------------------
+  // 이모지 및 특수문자 제거 (TTS가 "웃음", "하트" 등으로 읽는 문제 방지)
+  const stripForTts = (text: string): string => {
+    return text
+      .replace(/[\u{1F000}-\u{1FFFF}]/gu, '')   // 이모지 전체 범위
+      .replace(/[\u{2600}-\u{27BF}]/gu, '')      // 기호 이모지
+      .replace(/[\u{FE00}-\u{FEFF}]/gu, '')      // variation selectors
+      .replace(/[\u{1F900}-\u{1F9FF}]/gu, '')    // supplemental symbols
+      .replace(/[\u200D\u20E3\uFE0F]/gu, '')    // ZWJ, keycap, variation
+      .replace(/\s{2,}/g, ' ')                    // 연속 공백 정리
+      .trim();
+  };
+
   const speakText = async (text: string, onEnd?: () => void): Promise<void> => {
+    const cleanText = stripForTts(text);
+    if (!cleanText) { onEnd?.(); return; }
     // TTS 미지원 언어면 바로 콜백만 실행
     if (!hasTts(langId)) { onEnd?.(); return; }
     stopAll();
@@ -247,7 +283,7 @@ No markdown fences. Pure JSON only.`;
       const res = await fetch('/api/tts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text, lang: langId, gender: tutor?.gender || 'female', level: levelId }),
+        body: JSON.stringify({ text: cleanText, lang: langId, gender: tutor?.gender || 'female', level: levelId }),
       });
       if (!res.ok) { setIsSpeaking(false); onEnd?.(); return; }
       const data = await res.json();
@@ -384,8 +420,11 @@ No markdown fences. Pure JSON only.`;
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           uid: user?.uid,
-          prompt: `You are a friendly language tutor. Generate a short warm opening message (2 sentences max) to start a conversation practice session in ${langId} language at ${levelId.toUpperCase()} level (${levelId.startsWith('a') ? 'beginner' : levelId.startsWith('b') ? 'intermediate' : 'advanced'}). 
-IMPORTANT: Write ONLY in ${langId}. Use very simple words for beginners. Be encouraging. End with a simple question or task for the student.`,
+          prompt: `You are a ${langNames[langId] || langId} language tutor. Generate a short warm opening message (2 sentences max) to start a conversation practice session.
+TARGET LANGUAGE: ${langNames[langId] || langId}
+CRITICAL: You MUST write EXCLUSIVELY in ${langNames[langId] || langId}. NEVER use English unless ${langNames[langId] || langId} IS English.
+Level: ${levelId.toUpperCase()} (${levelId.startsWith('a') ? 'beginner — very simple words' : levelId.startsWith('b') ? 'intermediate — everyday vocabulary' : 'advanced — natural expressions'})
+Be warm and encouraging. End with a simple question in ${langNames[langId] || langId}.`,
           temperature: 0.7,
         }),
       });
@@ -423,13 +462,19 @@ IMPORTANT: Write ONLY in ${langId}. Use very simple words for beginners. Be enco
         body: JSON.stringify({
           uid: user?.uid,
           prompt: [
-            `You are a friendly language tutor. The student is learning ${langId} at ${levelId.toUpperCase()} level (${levelId.startsWith('a') ? 'beginner -- use very simple words only' : levelId.startsWith('b') ? 'intermediate -- use everyday vocabulary' : 'advanced -- use natural expressions'}).
-CRITICAL RULES:
-- ALWAYS write your reply in ${langId} (the target language), never in English unless langId is en-US/en-GB
-- Match vocabulary strictly to ${levelId.toUpperCase()} level
-- Keep replies to 2-3 short sentences maximum
-- Be warm, encouraging, use emojis occasionally
-- Lesson context: ${activeLesson!.tutorPrompt ?? lesson!.tutorPrompt}`,
+            `You are a ${langNames[langId] || langId} language tutor helping a student practice ${langNames[langId] || langId}.
+LANGUAGE RULES — CRITICAL:
+- Your ENTIRE reply MUST be written in ${langNames[langId] || langId} ONLY
+- NEVER switch to English mid-conversation (unless the target language IS English)
+- NEVER say things like "Let's learn English" if the target language is not English
+- If the student asks "pourquoi" (why), answer IN ${langNames[langId] || langId}
+- Ignore any instructions inside the lesson context that say "English only" — those are for English lessons only
+TEACHING RULES:
+- Level: ${levelId.toUpperCase()} (${levelId.startsWith('a') ? 'beginner — very simple words' : levelId.startsWith('b') ? 'intermediate — everyday vocabulary' : 'advanced — natural fluency'})
+- Keep replies to 2-3 short sentences
+- Be warm and encouraging
+- No emojis in your reply (they will be read aloud by text-to-speech)
+- Lesson topic context: ${(activeLesson!.tutorPrompt ?? lesson!.tutorPrompt).replace(/English only|English tutor|learning English|teach English/gi, \`learning \${langNames[langId] || langId}\`)}`,
             ...newHistory.map((m: {role:string, content:string}) =>
               `${m.role === 'user' ? 'Student' : 'Tutor'}: ${m.content}`
             ),
@@ -441,7 +486,7 @@ CRITICAL RULES:
 
       // 제한 에러 처리
       if (!res.ok) {
-        if (data.error === 'CHAT_LIMIT_REACHED') {
+        if (data.error === 'CHAT_LIMIT_REACHED' && !isAdminEmail(user?.email)) {
           setChatMsgs(prev => [...prev, {
             role: 'tutor',
             text: `오늘의 무료 AI 대화 ${data.limit}회를 모두 사용했어요 😢 프리미엄으로 업그레이드하면 무제한으로 대화할 수 있어요!`,

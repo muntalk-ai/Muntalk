@@ -1,0 +1,87 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── 헬퍼 함수 ────────────────────────────────────────────────
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+    function isAdmin() {
+      return isSignedIn() && request.auth.token.email == 'muntalkofficial@gmail.com';
+    }
+    // 쓰기 요청에서 허용된 필드만 사용하는지 검사
+    function onlyAllowedFields(allowed) {
+      return request.resource.data.keys().hasOnly(allowed);
+    }
+
+    // ── users ────────────────────────────────────────────────────
+    // 본인만 읽기/쓰기, 관리자는 읽기만
+    match /users/{uid} {
+      allow read:  if isOwner(uid) || isAdmin();
+      allow write: if isOwner(uid) || isAdmin();
+    }
+
+    // ── SRS 카드 ──────────────────────────────────────────────────
+    match /users/{uid}/srs_cards/{cardId} {
+      allow read, write: if isOwner(uid);
+    }
+
+    // ── 구독 정보 ─────────────────────────────────────────────────
+    // 본인은 읽기만, 쓰기는 관리자 또는 서버(webhook)에서만
+    match /subscriptions/{uid} {
+      allow read:  if isOwner(uid) || isAdmin();
+      allow write: if isAdmin(); // Stripe webhook은 서버에서 Admin SDK로 처리
+    }
+
+    // ── 트라이얼 ──────────────────────────────────────────────────
+    match /trials/{uid} {
+      allow read:  if isOwner(uid) || isAdmin();
+      allow write: if isOwner(uid) || isAdmin();
+    }
+
+    match /trial_usage/{uid} {
+      allow read:  if isOwner(uid) || isAdmin();
+      allow write: if isOwner(uid) || isAdmin();
+    }
+
+    // ── 채팅 사용량 ───────────────────────────────────────────────
+    match /chat_usage/{uid} {
+      allow read, write: if isOwner(uid);
+    }
+
+    // ── 하트 ──────────────────────────────────────────────────────
+    match /hearts/{uid} {
+      allow read, write: if isOwner(uid);
+    }
+
+    // ── 리그 ──────────────────────────────────────────────────────
+    match /user_leagues/{uid} {
+      allow read, write: if isOwner(uid);
+    }
+
+    match /leagues/{leagueId} {
+      allow read: if isSignedIn();
+      allow write: if isAdmin(); // 리그 생성/수정은 관리자만
+    }
+
+    match /leagues/{leagueId}/members/{uid} {
+      allow read:  if isSignedIn();
+      allow write: if isOwner(uid); // 본인 점수만 업데이트 가능
+    }
+
+    // ── FCM 토큰 ──────────────────────────────────────────────────
+    match /fcm_tokens/{uid} {
+      allow read, write: if isOwner(uid);
+    }
+
+    // ── 관리자 로그 ───────────────────────────────────────────────
+    // 관리자만 읽기/쓰기 (기존: 모든 인증유저 허용 → 취약점)
+    match /admin_logs/{docId} {
+      allow read, write: if isAdmin();
+    }
+
+  }
+}

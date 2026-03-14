@@ -7,7 +7,7 @@ import { useAuth } from '@/context/AuthContext';
 import { updateUserProfile } from '@/lib/userProfile';
 import { CURRICULUM, getCurrentLevel } from '@/data/curriculum';
 import { LEARN_LANGUAGES, UI_LANGUAGES } from '@/data/languages';
-import { getSubscription, getHearts, getLocalHearts, isLevelLocked, PlanId, Hearts } from '@/lib/subscription';
+import { getSubscription, getHearts, getLocalHearts, isLevelLocked, isAdminEmail, PlanId, Hearts } from '@/lib/subscription';
 import PaywallModal from '@/components/PaywallModal';
 import TrialBanner from '@/components/TrialBanner';
 import TrialExpiredModal from '@/components/TrialExpiredModal';
@@ -60,6 +60,8 @@ export default function LevelHub() {
   const [streak, setStreak] = useState(0);
   const [toast, setToast] = useState<string | null>(null);
   const [showUserMenu, setShowUserMenu] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [planId, setPlanId] = useState<PlanId>('free');
   const [hearts, setHearts] = useState<Hearts>({ count: 5 });
   const [showPaywall, setShowPaywall] = useState(false);
@@ -80,6 +82,7 @@ export default function LevelHub() {
 
   // 언어 설정 (localStorage 저장)
   const [learnLang, setLearnLang]   = useState('en-US');
+  const [placementLevel, setPlacementLevel] = useState<string>('');
   const [nativeLang, setNativeLang] = useState('ko-KR');
 
   // 언어 선택 모달
@@ -166,6 +169,7 @@ export default function LevelHub() {
       setXp(profile.xp || 0);
       setStreak(profile.streak || 0);
       setLearnLang(profile.learnLang || 'en-US');
+      setPlacementLevel((profile as any).placementLevel || localStorage.getItem('mt_placement_level') || '');
       setNativeLang(profile.nativeLang || 'ko-KR');
       setCompletedLessons(new Set(profile.completedLessons || []));
       localStorage.setItem('mt_learn_lang', profile.learnLang || 'en-US');
@@ -201,6 +205,8 @@ export default function LevelHub() {
       if (user) {
         const sub = await getSubscription(user.uid);
         setPlanId(sub.planId);
+        // 관리자 체크
+        setIsAdmin(isAdminEmail(user?.email));
         const h = await getHearts(user.uid);
         setHearts(h);
       } else {
@@ -253,13 +259,13 @@ export default function LevelHub() {
   const handleLevelClick = (levelId: string, unlocked: boolean) => {
     if (!unlocked) return;
     // 구독 레벨 잠금 체크
-    if (isLevelLocked(levelId, planId)) {
+    if (!isAdmin && isLevelLocked(levelId, planId, false, placementLevel)) {
       setPaywallReason('level_locked');
       setShowPaywall(true);
       return;
     }
     // 하트 체크 (Free 유저)
-    if (planId === 'free' && hearts.count === 0) {
+    if (!isAdmin && planId === 'free' && hearts.count === 0) {
       setPaywallReason('no_hearts');
       setShowPaywall(true);
       return;
@@ -283,7 +289,7 @@ export default function LevelHub() {
       const alreadyAdded = trialData.languages.includes(learn);
       if (!alreadyAdded && trialData.languages.length >= TRIAL_MAX_LANGUAGES) {
         // planId가 premium이면 통과
-        if (planId === 'free') {
+        if (!isAdmin && planId === 'free') {
           setShowLangModal(false);
           setLangBlockedModal(true);
           return;
@@ -323,11 +329,20 @@ export default function LevelHub() {
         .mt-nav-tab{padding:8px 16px;border-radius:10px;border:none;background:transparent;font-weight:700;font-size:13px;cursor:pointer;color:#64748B;transition:all .15s;font-family:'Nunito',sans-serif;}
         .mt-nav-tab:hover{color:#38BDF8;}
         .mt-nav-tab.active{background:#EFF6FF;color:#38BDF8;}
+        @media(max-width:768px){
+          .mt-desktop-tabs{display:none !important;}
+          .mt-hamburger{display:flex !important;}
+          .mt-nav-streak-xp{display:none !important;}
+        }
+        @media(min-width:769px){
+          .mt-hamburger{display:none !important;}
+          .mt-mobile-menu{display:none !important;}
+        }
         .mt-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.45);backdrop-filter:blur(4px);z-index:1000;display:flex;align-items:center;justify-content:center;}
       `}</style>
 
       {/* -- Trial: 만료 모달 -- */}
-      {trialExpired && planId === 'free' && (
+      {trialExpired && planId === 'free' && !isAdmin && (
         <TrialExpiredModal
           reason="expired"
           onClose={() => router.push('/pricing')}
@@ -343,7 +358,7 @@ export default function LevelHub() {
       )}
 
       {/* -- Trial: 상단 배너 -- */}
-      {!trialExpired && trialData && planId === 'free' && !trialBannerDismissed && (
+      {!trialExpired && trialData && planId === 'free' && !isAdmin && !trialBannerDismissed && (
         <TrialBanner
           daysLeft={trialDaysLeft}
           onDismiss={() => setTrialBannerDismissed(true)}
@@ -504,21 +519,33 @@ export default function LevelHub() {
           <span style={styles.navLogoText}>MunTalk</span>
           <span style={styles.navBeta}>BETA</span>
         </div>
-        <div style={{ display: 'flex', gap: 2 }}>
+        {/* Desktop tabs — visible only on desktop */}
+        <div className="mt-desktop-tabs" style={{ display: 'flex', gap: 2 }}>
           {([
-            { label: '📚 Learn',      action: () => router.push('/lingua') },
-            { label: '🏠 Home',       action: () => router.push('/lingua') },
-            { label: '🎯 Placement Test', action: () => router.push(`/lingua/placement?lang=${learnLang}`) },
-            { label: '🌐 Languages',  action: () => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); } },
-            { label: '🏆 League',     action: () => router.push('/lingua/league') },
-            { label: '🔁 Review',     action: () => router.push('/lingua/review') },
-            { label: '👩‍🏫 Tutors',   action: () => router.push('/lingua/tutors') },
-            { label: '📊 Dashboard',  action: () => router.push('/lingua/dashboard') },
+            { label: '📚 Learn',     action: () => router.push('/lingua') },
+            { label: '🎯 Placement', action: () => router.push(`/lingua/placement?lang=${learnLang}`) },
+            { label: '🧠 Coach',     action: () => router.push('/lingua/coach') },
+            { label: '🎭 Roleplay',  action: () => router.push('/lingua/roleplay') },
+            { label: '🏆 League',    action: () => router.push('/lingua/league') },
+            { label: '🔁 Review',    action: () => router.push('/lingua/review') },
+            { label: '👩‍🏫 Tutors', action: () => router.push('/lingua/tutors') },
+            { label: '📊 Dashboard', action: () => router.push('/lingua/dashboard') },
           ]).map(({ label, action }, i) => (
             <button key={label} className={`mt-nav-tab${i === 0 ? ' active' : ''}`}
               onClick={action}>{label}</button>
           ))}
         </div>
+
+        {/* Mobile hamburger — visible only on mobile */}
+        <button
+          className="mt-hamburger"
+          onClick={() => setShowMobileMenu(m => !m)}
+          style={{ flexDirection: 'column', justifyContent: 'center', gap: 5, background: 'none',
+            border: 'none', cursor: 'pointer', padding: 8, display: 'none' }}>
+          <span style={{ display: 'block', width: 22, height: 2.5, background: '#64748B', borderRadius: 2 }} />
+          <span style={{ display: 'block', width: 22, height: 2.5, background: '#64748B', borderRadius: 2 }} />
+          <span style={{ display: 'block', width: 22, height: 2.5, background: '#64748B', borderRadius: 2 }} />
+        </button>
         <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
           {/* 현재 언어 표시 + 변경 버튼 */}
           <button style={styles.langPill} onClick={() => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); }}>
@@ -526,10 +553,10 @@ export default function LevelHub() {
             <span style={{ fontWeight: 800, fontSize: 12, color: '#2563EB' }}>{learnLangInfo?.label ?? 'English'}</span>
             <span style={{ fontSize: 10, color: '#9CA3AF' }}>▾</span>
           </button>
-          <div style={styles.navStreak}><span>🔥</span><span style={{ fontWeight: 800, color: '#EA580C', fontSize: 13 }}>{streak} {streak === 1 ? 'day' : 'days'}</span></div>
-          <div style={styles.navXp}><span>⭐</span><span style={{ fontWeight: 800, color: '#2563EB', fontSize: 13 }}>{xp} XP</span></div>
+          <div className="mt-nav-streak-xp" style={styles.navStreak}><span>🔥</span><span style={{ fontWeight: 800, color: '#EA580C', fontSize: 13 }}>{streak} {streak === 1 ? 'day' : 'days'}</span></div>
+          <div className="mt-nav-streak-xp" style={styles.navXp}><span>⭐</span><span style={{ fontWeight: 800, color: '#2563EB', fontSize: 13 }}>{xp} XP</span></div>
           {/* 하트바 + Upgrade — auth 로딩 완료 후에만 표시 */}
-          {!authLoading && planId === 'free' && user && (
+          {!authLoading && planId === 'free' && !isAdmin && user && (
             <button onClick={() => router.push('/pricing')}
               style={{ padding:'6px 14px', borderRadius:20, border:'none', background:'linear-gradient(135deg,#F59E0B,#F97316)', color:'#fff', fontSize:11, fontWeight:900, cursor:'pointer', fontFamily:"'Nunito',sans-serif", letterSpacing:0.3 }}>
               ⭐ Upgrade
@@ -586,6 +613,77 @@ export default function LevelHub() {
         </div>
       </nav>
 
+      {/* -- Mobile Menu Dropdown -- */}
+      {showMobileMenu && (
+        <div className="mt-mobile-menu" style={{
+          position: 'fixed', top: 62, left: 0, right: 0, zIndex: 199,
+          background: '#fff', borderBottom: '1px solid #F1F5F9',
+          boxShadow: '0 8px 24px rgba(0,0,0,0.08)', padding: '8px 0',
+        }}>
+          {/* 언어 + 스트릭 + XP 요약 */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 20px',
+            borderBottom: '1px solid #F8FAFC', marginBottom: 4 }}>
+            <button style={styles.langPill} onClick={() => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); setShowMobileMenu(false); }}>
+              <span>{learnLang ? <FlagImg code={learnLang} size={18} /> : '🌐'}</span>
+              <span style={{ fontWeight: 800, fontSize: 12, color: '#2563EB' }}>{learnLangInfo?.label ?? 'English'}</span>
+              <span style={{ fontSize: 10, color: '#9CA3AF' }}>▾</span>
+            </button>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 4, background: '#FFF7ED',
+              padding: '5px 10px', borderRadius: 16, fontSize: 13, fontWeight: 800, color: '#EA580C' }}>
+              🔥 {streak}
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 4, background: '#EFF6FF',
+              padding: '5px 10px', borderRadius: 16, fontSize: 13, fontWeight: 800, color: '#2563EB' }}>
+              ⭐ {xp}
+            </div>
+          </div>
+
+          {/* 메뉴 항목 */}
+          {([
+            { emoji: '📚', label: 'Learn',       action: () => router.push('/lingua') },
+            { emoji: '🎯', label: 'Placement Test', action: () => router.push(`/lingua/placement?lang=${learnLang}`) },
+            { emoji: '🧠', label: 'AI Coach',     action: () => router.push('/lingua/coach') },
+            { emoji: '🎭', label: 'AI Roleplay',  action: () => router.push('/lingua/roleplay') },
+            { emoji: '🏆', label: 'League',       action: () => router.push('/lingua/league') },
+            { emoji: '🔁', label: 'Review',       action: () => router.push('/lingua/review') },
+            { emoji: '📚', label: 'Word Bank',    action: () => router.push('/lingua/words') },
+            { emoji: '👩‍🏫', label: 'Tutors', action: () => router.push('/lingua/tutors') },
+            { emoji: '📊', label: 'Dashboard',    action: () => router.push('/lingua/dashboard') },
+            { emoji: '🌐', label: 'Languages',    action: () => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); setShowMobileMenu(false); } },
+          ]).map(({ emoji, label, action }) => (
+            <button key={label}
+              onClick={() => { action(); setShowMobileMenu(false); }}
+              style={{ width: '100%', padding: '13px 24px', background: 'none', border: 'none',
+                textAlign: 'left', cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
+                fontWeight: 700, fontSize: 15, color: '#1E293B',
+                display: 'flex', alignItems: 'center', gap: 14,
+                borderBottom: '1px solid #F8FAFC' }}>
+              <span style={{ fontSize: 20, width: 28, textAlign: 'center' }}>{emoji}</span>
+              {label}
+            </button>
+          ))}
+
+          {/* 프리미엄 업그레이드 */}
+          {!authLoading && planId === 'free' && !isAdmin && user && (
+            <div style={{ padding: '12px 20px' }}>
+              <button onClick={() => { router.push('/pricing'); setShowMobileMenu(false); }}
+                style={{ width: '100%', padding: '13px', borderRadius: 14, border: 'none',
+                  background: 'linear-gradient(135deg,#F59E0B,#F97316)', color: '#fff',
+                  fontWeight: 900, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                ⭐ Upgrade to Premium
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Mobile menu backdrop */}
+      {showMobileMenu && (
+        <div className="mt-mobile-menu"
+          onClick={() => setShowMobileMenu(false)}
+          style={{ position: 'fixed', inset: 0, zIndex: 198, background: 'rgba(0,0,0,0.3)', top: 62 }} />
+      )}
+
       {/* Toast */}
       {toast && (
         <div style={{ position: 'fixed', bottom: 32, left: '50%', transform: 'translateX(-50%)', background: '#1E293B', color: '#F8FAFC', padding: '12px 24px', borderRadius: 14, fontSize: 13, fontWeight: 700, zIndex: 999, boxShadow: '0 4px 24px rgba(0,0,0,0.18)', animation: 'fadeIn .2s ease' }}>
@@ -613,12 +711,14 @@ export default function LevelHub() {
               <span style={styles.newTag}>FREE</span>
             </div>
           </div>
-          <h1 style={styles.heroTitle}>Every language in the world<br />Meet +150 AI tutors</h1>
+          <h1 style={styles.heroTitle}>Every language in the world<br />starts with one conversation.</h1>
           <p style={styles.heroDesc}>No judgment. No pressure. Your pace, your rules.<br />Our AI tutors get total beginners talking in under 10 minutes.</p>
           <div style={styles.heroBtnRow}>
             <button style={styles.heroBtn1} onClick={() => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); }}>
               🌐 Choose a Language
             </button>
+            <button style={{...styles.heroBtn2, background: 'linear-gradient(135deg,#10B981,#059669)', color:'#fff', border:'none'}} onClick={() => router.push('/lingua/coach')}>🧠 AI Coach</button>
+            <button style={{...styles.heroBtn2, background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color:'#fff', border:'none'}} onClick={() => router.push('/lingua/roleplay')}>🎭 AI Roleplay</button>
             <button style={styles.heroBtn2} onClick={() => router.push('/lingua/words')}>📚 Word Bank</button>
             <button style={styles.heroBtn2} onClick={() => router.push('/lingua/tutors')}>👩‍🏫 Meet +150 AI Tutors</button>
           </div>
@@ -661,7 +761,7 @@ export default function LevelHub() {
       <section style={styles.grid}>
         {CURRICULUM.map((level) => {
           const unlocked    = isLevelUnlocked(level.id);
-          const subLocked   = isLevelLocked(level.id, planId); // 구독 잠금
+          const subLocked   = !isAdmin && isLevelLocked(level.id, planId, false, placementLevel); // 구독 잠금
           const completed   = isLevelCompleted(level.id);
           const active      = level.id === currentLevel.id;
           const progress    = getLevelProgress(level.id);
@@ -746,6 +846,7 @@ export default function LevelHub() {
       <footer style={styles.footer}>
         <div style={{ marginBottom: 12 }}>🌐 MunTalk · {totalLessonsCount} lessons · A1 to C2 · 150+ AI Tutors</div>
         <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 10 }}>
+          <a href="/faq" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>💬 Help & FAQ</a>
           <a href="/privacy" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>Privacy Policy</a>
           <a href="/terms" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>Terms of Service</a>
           <a href="/refund" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>Refund Policy</a>
