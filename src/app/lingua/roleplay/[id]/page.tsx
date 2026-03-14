@@ -123,6 +123,8 @@ export default function RoleplaySession() {
     setPhase('playing');
     setIsThinking(true);
 
+    let pendingSpeech = '';
+
     try {
       const res = await fetch('/api/gemini', {
         method: 'POST',
@@ -198,7 +200,8 @@ Your NPC reply first, then the feedback block. Keep NPC reply in character.`,
 
       // Parse NPC reply + feedback
       const feedbackMatch = fullText.match(/\|\|\|FEEDBACK\|\|\|([\s\S]*?)\|\|\|END\|\|\|/);
-      let npcText = fullText.replace(/\|\|\|FEEDBACK\|\|\|[\s\S]*?\|\|\|END\|\|\|/, '').trim();
+      pendingSpeech = fullText.replace(/\|\|\|FEEDBACK\|\|\|[\s\S]*?\|\|\|END\|\|\|/, '').trim();
+      const npcText = pendingSpeech;
       let feedbackData: { score?: number; tip?: string; translation?: string } = {};
 
       if (feedbackMatch) {
@@ -226,10 +229,10 @@ Your NPC reply first, then the feedback block. Keep NPC reply in character.`,
     } catch (e) {
       console.error(e);
     } finally {
-      // Unblock input BEFORE speaking so user can type while AI speaks
       setIsThinking(false);
     }
-    if (npcText) speak(npcText);
+    // Speak after unblocking input so user can type while AI speaks
+    if (pendingSpeech) speak(pendingSpeech);
   };
 
   // End session
