@@ -474,7 +474,7 @@ TEACHING RULES:
 - Keep replies to 2-3 short sentences
 - Be warm and encouraging
 - No emojis in your reply (they will be read aloud by text-to-speech)
-- Lesson topic context: ${(activeLesson!.tutorPrompt ?? lesson!.tutorPrompt).replace(/English only|English tutor|learning English|teach English/gi, \`learning \${langNames[langId] || langId}\`)}`,
+- Lesson topic context: ${(activeLesson!.tutorPrompt ?? lesson!.tutorPrompt)}`,
             ...newHistory.map((m: {role:string, content:string}) =>
               `${m.role === 'user' ? 'Student' : 'Tutor'}: ${m.content}`
             ),
