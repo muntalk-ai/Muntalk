@@ -44,7 +44,7 @@ export default function RoleplaySession() {
   const [popXpText, setPopXpText] = useState<string | null>(null);
 
   const chatRef    = useRef<HTMLDivElement>(null);
-  const recRef     = useRef<SpeechRecognition | null>(null);
+  const recRef     = useRef<any>(null);
   const audioRef   = useRef<HTMLAudioElement | null>(null);
   const historyRef = useRef<{ role: 'user' | 'assistant'; content: string }[]>([]);
 
@@ -101,8 +101,7 @@ export default function RoleplaySession() {
 
   // STT
   const startListening = useCallback(() => {
-    const SR = (window as { SpeechRecognition?: typeof SpeechRecognition; webkitSpeechRecognition?: typeof SpeechRecognition }).SpeechRecognition
-            || (window as { SpeechRecognition?: typeof SpeechRecognition; webkitSpeechRecognition?: typeof SpeechRecognition }).webkitSpeechRecognition;
+    const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
     if (!SR) return;
     const rec = new SR();
     rec.lang = langId;

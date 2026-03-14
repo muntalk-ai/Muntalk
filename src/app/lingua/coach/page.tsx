@@ -79,7 +79,7 @@ export default function CoachPage() {
   const [activeTurn,  setActiveTurn]  = useState<number | null>(null);
   const [sessionStats, setSessionStats] = useState({ grammar: 0, pronunciation: 0, fluency: 0, turns: 0 });
 
-  const recRef   = useRef<SpeechRecognition | null>(null);
+  const recRef   = useRef<any>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const chatRef  = useRef<HTMLDivElement>(null);
   const turnId   = useRef(0);
@@ -104,8 +104,7 @@ export default function CoachPage() {
 
   // Init STT
   useEffect(() => {
-    const SR = (window as { SpeechRecognition?: typeof SpeechRecognition; webkitSpeechRecognition?: typeof SpeechRecognition }).SpeechRecognition
-            || (window as { SpeechRecognition?: typeof SpeechRecognition; webkitSpeechRecognition?: typeof SpeechRecognition }).webkitSpeechRecognition;
+    const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
     if (!SR || !hasStt(langId)) return;
 
     const rec = new SR();
