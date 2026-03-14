@@ -64,16 +64,16 @@ export default function RoleplayLobby() {
           Real Situations.<br/>Real Conversations.
         </h1>
         <p style={{ fontSize: 15, color: '#64748B', fontWeight: 600, maxWidth: 480, margin: '0 auto 32px', lineHeight: 1.7 }}>
-          AI가 실제 상황을 연기합니다. 공항, 병원, 면접, 협상 —<br/>
-          실제처럼 대화하고 즉각적인 피드백을 받으세요.
+          AI plays the other person. Airport, hospital, interview, negotiation —<br/>
+          Practise real conversations and get instant AI feedback.
         </p>
 
         {/* Stats */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: 32, flexWrap: 'wrap' }}>
           {[
-            { n: ROLEPLAY_SCENARIOS.length, label: '시나리오' },
-            { n: 5, label: 'CEFR 레벨' },
-            { n: '∞', label: 'AI 반응' },
+            { n: ROLEPLAY_SCENARIOS.length, label: 'Scenarios' },
+            { n: 5, label: 'CEFR Levels' },
+            { n: '∞', label: 'AI Responses' },
           ].map(s => (
             <div key={s.label} style={{ textAlign: 'center' }}>
               <div style={{ fontSize: 28, fontWeight: 800, color: '#6366F1' }}>{s.n}</div>
@@ -179,7 +179,7 @@ export default function RoleplayLobby() {
                   </div>
                   <div style={{ flex: 1, padding: '8px 10px', borderRadius: 8,
                     background: 'rgba(99,102,241,0.1)', color: '#818CF8' }}>
-                    🙋 <strong>나:</strong> {s.userRole}
+                    🙋 <strong>You:</strong> {s.userRole}
                   </div>
                 </div>
 
@@ -190,7 +190,7 @@ export default function RoleplayLobby() {
                     color: isHovered ? '#fff' : '#818CF8',
                     fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Sora',sans-serif",
                     backdropFilter: 'blur(4px)' }}>
-                  시작하기 →
+                  Start →
                 </button>
               </div>
             </div>

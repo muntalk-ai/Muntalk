@@ -10,7 +10,7 @@ interface Message {
   role: 'npc' | 'user' | 'system';
   text: string;
   translation?: string;
-  feedback?: string;      // AI가 주는 언어 피드백
+  feedback?: string;      // AI language feedback
   score?: number;         // 0~100
   timestamp: number;
 }
@@ -219,8 +219,6 @@ Your NPC reply first, then the feedback block. Keep NPC reply in character.`,
 
       if (feedbackData.score && feedbackData.score >= 80) showXP(10);
 
-      await speak(npcText);
-
       // Auto-end after 10 turns
       if (newTurn >= 10) {
         setTimeout(() => endSession(), 1500);
@@ -228,8 +226,10 @@ Your NPC reply first, then the feedback block. Keep NPC reply in character.`,
     } catch (e) {
       console.error(e);
     } finally {
+      // Unblock input BEFORE speaking so user can type while AI speaks
       setIsThinking(false);
     }
+    if (npcText) speak(npcText);
   };
 
   // End session
@@ -310,7 +310,7 @@ Return ONLY valid JSON:
           style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.1)',
             borderRadius: 10, padding: '8px 16px', color: '#64748B', fontSize: 13,
             fontWeight: 700, cursor: 'pointer', fontFamily: "'Sora',sans-serif", marginBottom: 24 }}>
-          ← 시나리오 목록
+          ← Scenarios
         </button>
 
         {/* Card */}
@@ -336,18 +336,18 @@ Return ONLY valid JSON:
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 16 }}>
             <div style={{ background: 'rgba(0,0,0,0.3)', borderRadius: 12, padding: 14 }}>
-              <div style={{ fontSize: 11, color: '#475569', fontWeight: 700, marginBottom: 6 }}>🤖 AI 역할</div>
+              <div style={{ fontSize: 11, color: '#475569', fontWeight: 700, marginBottom: 6 }}>🤖 AI Role</div>
               <div style={{ fontSize: 13, color: '#E2E8F0', fontWeight: 600 }}>{scenario.npcRole}</div>
             </div>
             <div style={{ background: 'rgba(99,102,241,0.15)', borderRadius: 12, padding: 14 }}>
-              <div style={{ fontSize: 11, color: '#6366F1', fontWeight: 700, marginBottom: 6 }}>🙋 내 역할</div>
+              <div style={{ fontSize: 11, color: '#6366F1', fontWeight: 700, marginBottom: 6 }}>🙋 Your Role</div>
               <div style={{ fontSize: 13, color: '#E2E8F0', fontWeight: 600 }}>{scenario.userRole}</div>
             </div>
           </div>
 
           <div style={{ background: 'rgba(99,102,241,0.1)', borderRadius: 12, padding: 14,
             border: '1px solid rgba(99,102,241,0.2)' }}>
-            <div style={{ fontSize: 11, color: '#818CF8', fontWeight: 800, marginBottom: 6 }}>🎯 목표</div>
+            <div style={{ fontSize: 11, color: '#818CF8', fontWeight: 800, marginBottom: 6 }}>🎯 Mission</div>
             <div style={{ fontSize: 14, color: '#C7D2FE', fontWeight: 600, lineHeight: 1.6 }}>
               {scenario.goalKo}
             </div>
@@ -358,7 +358,7 @@ Return ONLY valid JSON:
         <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: 16, padding: 16,
           border: '1px solid rgba(255,255,255,0.06)', marginBottom: 20 }}>
           <div style={{ fontSize: 11, fontWeight: 800, color: '#F59E0B', letterSpacing: 1,
-            marginBottom: 12 }}>💡 핵심 표현 힌트</div>
+            marginBottom: 12 }}>💡 Key Phrases</div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
             {scenario.successHints.map(h => (
               <span key={h} style={{ padding: '6px 12px', borderRadius: 8, fontSize: 12,
@@ -372,7 +372,7 @@ Return ONLY valid JSON:
 
         {/* Rules */}
         <div style={{ fontSize: 12, color: '#475569', marginBottom: 24, lineHeight: 1.7, textAlign: 'center' }}>
-          대화는 최대 10턴 · 매 발화마다 AI 피드백 · 마이크 또는 타이핑 사용 가능
+          Up to 10 turns · AI feedback every turn · Mic or typing
         </div>
 
         {/* Start */}
@@ -382,7 +382,7 @@ Return ONLY valid JSON:
             color: '#fff', fontWeight: 800, fontSize: 18, cursor: 'pointer',
             fontFamily: "'Sora',sans-serif", boxShadow: '0 8px 32px rgba(99,102,241,0.4)',
             animation: 'pulse 2s infinite' }}>
-          🎭 롤플레이 시작
+          🎭 Start Roleplay
         </button>
       </div>
     </div>
@@ -396,7 +396,7 @@ Return ONLY valid JSON:
         {isThinking ? (
           <div style={{ textAlign: 'center', color: '#64748B' }}>
             <div style={{ fontSize: 40, marginBottom: 16, animation: 'pulse 1s infinite' }}>🤖</div>
-            <div style={{ fontWeight: 700 }}>피드백 분석 중...</div>
+            <div style={{ fontWeight: 700 }}>Analysing feedback...</div>
           </div>
         ) : sessionResult && (
           <>
@@ -405,7 +405,7 @@ Return ONLY valid JSON:
                 {sessionResult.avgScore >= 80 ? '🏆' : sessionResult.avgScore >= 60 ? '🎯' : '💪'}
               </div>
               <div style={{ fontSize: 28, fontWeight: 800, color: '#fff', marginBottom: 8 }}>
-                롤플레이 완료!
+                Roleplay Complete!
               </div>
               <div style={{ fontSize: 48, fontWeight: 800,
                 background: sessionResult.avgScore >= 80
@@ -414,10 +414,10 @@ Return ONLY valid JSON:
                   ? 'linear-gradient(135deg, #6366F1, #8B5CF6)'
                   : 'linear-gradient(135deg, #10B981, #34D399)',
                 WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                {sessionResult.avgScore}점
+                {sessionResult.avgScore} pts
               </div>
               <div style={{ fontSize: 13, color: '#475569', fontWeight: 700 }}>
-                {sessionResult.totalMessages}턴 완료 · +{xpEarned} XP 획득
+                {sessionResult.totalMessages} turns · +{xpEarned} XP earned
               </div>
             </div>
 
@@ -426,7 +426,7 @@ Return ONLY valid JSON:
               <div style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.2)',
                 borderRadius: 16, padding: 18 }}>
                 <div style={{ fontSize: 11, color: '#10B981', fontWeight: 800, marginBottom: 12, letterSpacing: 1 }}>
-                  ✅ 잘한 점
+                  ✅ Strengths
                 </div>
                 {sessionResult.strongPoints?.map((p, i) => (
                   <div key={i} style={{ fontSize: 13, color: '#A7F3D0', lineHeight: 1.6,
@@ -438,7 +438,7 @@ Return ONLY valid JSON:
               <div style={{ background: 'rgba(245,158,11,0.08)', border: '1px solid rgba(245,158,11,0.2)',
                 borderRadius: 16, padding: 18 }}>
                 <div style={{ fontSize: 11, color: '#F59E0B', fontWeight: 800, marginBottom: 12, letterSpacing: 1 }}>
-                  📈 개선할 점
+                  📈 Improvements
                 </div>
                 {sessionResult.improvements?.map((p, i) => (
                   <div key={i} style={{ fontSize: 13, color: '#FDE68A', lineHeight: 1.6,
@@ -452,7 +452,7 @@ Return ONLY valid JSON:
             <div style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)',
               borderRadius: 16, padding: 20, marginBottom: 24 }}>
               <div style={{ fontSize: 11, color: '#818CF8', fontWeight: 800, marginBottom: 10, letterSpacing: 1 }}>
-                💬 종합 피드백
+                💬 Overall Feedback
               </div>
               <div style={{ fontSize: 14, color: '#C7D2FE', lineHeight: 1.7, fontWeight: 600 }}>
                 {sessionResult.overallFeedback}
@@ -464,14 +464,14 @@ Return ONLY valid JSON:
                 style={{ padding: '16px', borderRadius: 14, border: '1px solid rgba(255,255,255,0.1)',
                   background: 'transparent', color: '#94A3B8', fontWeight: 700, fontSize: 14,
                   cursor: 'pointer', fontFamily: "'Sora',sans-serif" }}>
-                🔄 다시 하기
+                🔄 Try Again
               </button>
               <button onClick={() => router.push('/lingua/roleplay')}
                 style={{ padding: '16px', borderRadius: 14, border: 'none',
                   background: 'linear-gradient(135deg, #6366F1, #8B5CF6)',
                   color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer',
                   fontFamily: "'Sora',sans-serif" }}>
-                다른 시나리오 →
+                Other Scenarios →
               </button>
             </div>
           </>
@@ -503,7 +503,7 @@ Return ONLY valid JSON:
           style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.1)',
             borderRadius: 10, padding: '7px 14px', color: '#64748B', fontSize: 12,
             fontWeight: 700, cursor: 'pointer', fontFamily: "'Sora',sans-serif' " }}>
-          ✕ 종료
+          ✕ End
         </button>
 
         <div style={{ flex: 1, textAlign: 'center' }}>
@@ -511,7 +511,7 @@ Return ONLY valid JSON:
             {scenario.emoji} {scenario.title}
           </div>
           <div style={{ fontSize: 11, color: '#475569', fontWeight: 700 }}>
-            {turnCount}/10턴 · {scenario.difficulty}
+            {turnCount}/10 turns · {scenario.difficulty}
           </div>
         </div>
 
@@ -523,7 +523,7 @@ Return ONLY valid JSON:
               border: `1px solid ${showHints ? 'rgba(245,158,11,0.4)' : 'rgba(255,255,255,0.1)'}`,
               borderRadius: 10, padding: '7px 12px', color: showHints ? '#FCD34D' : '#64748B',
               fontSize: 12, fontWeight: 700, cursor: 'pointer', fontFamily: "'Sora',sans-serif" }}>
-            💡 힌트
+            💡 Hints
           </button>
         </div>
       </div>
@@ -539,7 +539,7 @@ Return ONLY valid JSON:
         <div style={{ padding: '12px 16px', background: 'rgba(245,158,11,0.06)',
           borderBottom: '1px solid rgba(245,158,11,0.15)', flexShrink: 0 }}>
           <div style={{ fontSize: 11, color: '#F59E0B', fontWeight: 800, marginBottom: 8 }}>
-            💡 핵심 표현
+            💡 Key phrases
           </div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {scenario.successHints.map(h => (
@@ -569,7 +569,7 @@ Return ONLY valid JSON:
             <div style={{ fontSize: 11, color: '#475569', fontWeight: 700, marginBottom: 5,
               paddingLeft: msg.role === 'npc' ? 4 : 0,
               paddingRight: msg.role === 'user' ? 4 : 0 }}>
-              {msg.role === 'npc' ? `🤖 ${scenario.npcRole}` : '🙋 나'}
+              {msg.role === 'npc' ? `🤖 ${scenario.npcRole}` : '🙋 You'}
             </div>
 
             {/* Bubble */}
@@ -604,7 +604,7 @@ Return ONLY valid JSON:
                 display: 'flex', gap: 8, alignItems: 'center', fontWeight: 600 }}>
                 <span style={{ fontSize: 14, fontWeight: 800,
                   color: msg.score && msg.score >= 80 ? '#10B981' : '#F59E0B' }}>
-                  {msg.score}점
+                  {msg.score} pts
                 </span>
                 {msg.feedback}
               </div>
@@ -658,7 +658,7 @@ Return ONLY valid JSON:
             value={input}
             onChange={e => setInput(e.target.value)}
             onKeyDown={e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleUserTurn(input); } }}
-            placeholder={`${scenario.difficulty} 레벨로 대답하세요...`}
+            placeholder={`${scenario.difficulty} level — speak or type...`}
             disabled={isThinking || isSpeaking}
             style={{ flex: 1, padding: '14px 18px', borderRadius: 14,
               background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.1)',
@@ -687,7 +687,7 @@ Return ONLY valid JSON:
               border: '1px solid rgba(99,102,241,0.3)', background: 'rgba(99,102,241,0.1)',
               color: '#818CF8', fontWeight: 700, fontSize: 13, cursor: 'pointer',
               fontFamily: "'Sora',sans-serif" }}>
-            대화 마무리 & 피드백 받기 →
+            End conversation & get feedback →
           </button>
         )}
       </div>
