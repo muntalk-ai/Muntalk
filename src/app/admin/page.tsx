@@ -50,7 +50,8 @@ function extendExpiry(current: string, p: PlanId) {
 export default function AdminPage() {
   const { user, loading } = useAuth();
   const router = useRouter();
-
+// 53행 부근 추가
+  const [dataSourceMode, setDataSourceMode] = useState<'json' | 'api'>('json');
   const [tab, setTab] = useState<Tab>('users');
   const [users, setUsers] = useState<UserRow[]>([]);
   const [logs, setLogs] = useState<LogEntry[]>([]);
@@ -138,7 +139,23 @@ export default function AdminPage() {
       })));
     } catch(e) { console.error(e); }
   }, []);
+// 135행 부근 추가
+  useEffect(() => {
+    (async () => {
+      const docSnap = await getDoc(doc(db, 'app_settings', 'global'));
+      if (docSnap.exists()) setDataSourceMode(docSnap.data().dataSourceMode || 'json');
+    })();
+  }, []);
 
+  const toggleDataSource = async (mode: 'json' | 'api') => {
+    try {
+      await setDoc(doc(db, 'app_settings', 'global'), { dataSourceMode: mode }, { merge: true });
+      setDataSourceMode(mode);
+      showToast(`🚀 모드 변경: ${mode.toUpperCase()}`);
+      await logAction('settings', 'all', `Data source changed to ${mode}`);
+    } catch (e: any) { showToast('❌ ' + e.message); }
+  };
+  
   useEffect(() => { if (tab==='logs') fetchLogs(); }, [tab]);
 
   const openGrant = (u: UserRow) => {
@@ -258,6 +275,24 @@ export default function AdminPage() {
       </nav>
 
       <div style={{maxWidth:1080,margin:'0 auto',padding:'24px 20px'}}>
+        
+{/* 238행: Stats 섹션 바로 위에 추가 */}
+        <div style={{background: '#fff', padding: '16px 20px', borderRadius: 16, marginBottom: 20, border: '1px solid #F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'space-between', animation: 'su .3s ease'}}>
+          <div>
+            <div style={{fontSize: 14, fontWeight: 900, color: '#0F172A'}}>🌐 데이터 소스 제어 (Admin 전용)</div>
+            <div style={{fontSize: 11, color: '#94A3B8', fontWeight: 700, marginTop: 2}}>
+              {dataSourceMode === 'json' ? '📦 내부 JSON 데이터 우선 사용' : '✨ 실시간 Gemini API 강제 사용'}
+            </div>
+          </div>
+          <div style={{display: 'flex', gap: 6, background: '#F1F5F9', padding: 4, borderRadius: 12}}>
+            {(['json', 'api'] as const).map(m => (
+              <button key={m} onClick={() => toggleDataSource(m)}
+                style={{padding: '7px 16px', borderRadius: 9, border: 'none', background: dataSourceMode === m ? '#fff' : 'transparent', color: dataSourceMode === m ? '#6366F1' : '#94A3B8', fontSize: 12, fontWeight: 900, cursor: 'pointer', boxShadow: dataSourceMode === m ? '0 2px 4px rgba(0,0,0,0.05)' : 'none', transition: 'all .2s'}}>
+                {m.toUpperCase()}
+              </button>
+            ))}
+          </div>
+        </div>
 
         {/* Stats */}
         <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:10,marginBottom:24}}>
