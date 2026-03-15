@@ -1,0 +1,1285 @@
+{
+  "langCode": "lv-LV",
+  "langLabel": "Latvian",
+  "langNative": "Latviešu",
+  "generatedAt": "2026-03-15T07:55:40.102Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Labdien",
+          "phonetic": "lahb-dee-ehn",
+          "meaning": "Good day / Hello",
+          "example": "Labdien! Kā jums klājas?"
+        },
+        {
+          "word": "Paldies",
+          "phonetic": "pahl-dee-ehs",
+          "meaning": "Thank you",
+          "example": "Paldies par palīdzību!"
+        },
+        {
+          "word": "Lūdzu",
+          "phonetic": "loo-dzoo",
+          "meaning": "Please / Here you go",
+          "example": "Lūdzu, sēdieties."
+        },
+        {
+          "word": "Jā",
+          "phonetic": "yah",
+          "meaning": "Yes",
+          "example": "Jā, es saprotu."
+        },
+        {
+          "word": "Nē",
+          "phonetic": "neh",
+          "meaning": "No",
+          "example": "Nē, paldies."
+        },
+        {
+          "word": "Uz redzēšanos",
+          "phonetic": "ooz reh-dzeh-shah-nohs",
+          "meaning": "Goodbye (literally \"until we see each other again\")",
+          "example": "Uz redzēšanos rīt!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Latvian word for \"Hello\"?",
+          "options": [
+            "Labdien",
+            "Paldies",
+            "Lūdzu",
+            "Jā"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say \"Thank you\" in Latvian?",
+          "options": [
+            "Nē",
+            "Uz redzēšanos",
+            "Paldies",
+            "Jā"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Latvian word for \"Please\".",
+          "options": [
+            "Jā",
+            "Lūdzu",
+            "Labdien",
+            "Nē"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Sveiki! Esmu jūsu latviešu valodas pasniedzējs. Šodien mēs sāksim ar dažām ļoti svarīgām frāzēm, kas palīdzēs jums sazināties latviski. Mēs iemācīsimies, kā pateikt \"Labdien\" (Hello), \"Paldies\" (Thank you) un \"Lūdzu\" (Please). Es izrunāšu katru vārdu, un jūs mēģiniet atkārtot. Sāksim ar \"Labdien\". Klausieties: \"Labdien\". Tagad mēģiniet jūs!"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Labdien",
+          "phonetic": "Lahb-dee-en",
+          "meaning": "Good day / Hello",
+          "example": "Labdien! Kā jums klājas?"
+        },
+        {
+          "word": "Paldies",
+          "phonetic": "Pahl-dee-ess",
+          "meaning": "Thank you",
+          "example": "Paldies par palīdzību!"
+        },
+        {
+          "word": "Lūdzu",
+          "phonetic": "Loo-dzoo",
+          "meaning": "Please / Here you are",
+          "example": "Lūdzu, sēdieties."
+        },
+        {
+          "word": "Jā",
+          "phonetic": "Yah",
+          "meaning": "Yes",
+          "example": "Jā, es saprotu."
+        },
+        {
+          "word": "Nē",
+          "phonetic": "Neh",
+          "meaning": "No",
+          "example": "Nē, paldies."
+        },
+        {
+          "word": "Uz redzēšanos",
+          "phonetic": "Ooz red-zeh-shah-nohs",
+          "meaning": "Goodbye",
+          "example": "Uz redzēšanos, rīt!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Latvian?",
+          "options": [
+            "Paldies",
+            "Labdien",
+            "Lūdzu",
+            "Nē"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means 'Thank you'?",
+          "options": [
+            "Jā",
+            "Uz redzēšanos",
+            "Paldies",
+            "Sveiki"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If you want to say 'Please', what Latvian word would you use?",
+          "options": [
+            "Lūdzu",
+            "Jā",
+            "Nē",
+            "Labdien"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Latvian word for 'Yes'?",
+          "options": [
+            "Nē",
+            "Paldies",
+            "Jā",
+            "Uz redzēšanos"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Sveiki! Esmu jūsu latviešu valodas skolotājs. Šodien mēs iemācīsimies dažas ļoti svarīgas frāzes, kas palīdzēs jums sākt runāt latviski. Mēs apskatīsim \"Labdien\" (Hello), \"Paldies\" (Thank you), \"Lūdzu\" (Please), \"Jā\" (Yes), \"Nē\" (No) un \"Uz redzēšanos\" (Goodbye). Sāksim ar \"Labdien\". Vai variet mēģināt to izrunāt?"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Sveiki",
+          "phonetic": "svei-kee",
+          "meaning": "Hello (formal/plural)",
+          "example": "Sveiki! Kā jums klājas?"
+        },
+        {
+          "word": "Mani sauc",
+          "phonetic": "mah-nee saowts",
+          "meaning": "My name is",
+          "example": "Mani sauc Anna."
+        },
+        {
+          "word": "Kā tevi sauc?",
+          "phonetic": "kaa teh-vee saowts?",
+          "meaning": "What is your name? (informal)",
+          "example": "Sveiki! Kā tevi sauc?"
+        },
+        {
+          "word": "Prieks iepazīties",
+          "phonetic": "pree-eks ee-eh-pah-zee-tee-es",
+          "meaning": "Nice to meet you",
+          "example": "Mani sauc Jānis. Prieks iepazīties!"
+        },
+        {
+          "word": "Uz redzēšanos",
+          "phonetic": "ooz red-zeh-shah-nos",
+          "meaning": "Goodbye",
+          "example": "Uz redzēšanos! Tiekamies rīt!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal/plural) in Latvian?",
+          "options": [
+            "Sveiki",
+            "Labrīt",
+            "Labdien",
+            "Labvakar"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How would you say \"My name is Anna\" in Latvian?",
+          "options": [
+            "Esmu Anna",
+            "Mani sauc Anna",
+            "Man ir Anna",
+            "Esmu sauc Anna"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"What is your name?\" (informal)?",
+          "options": [
+            "Kā jums klājas?",
+            "Kas tu esi?",
+            "Kā tevi sauc?",
+            "Ko tu dari?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Nice to meet you\" in Latvian?",
+          "options": [
+            "Labi, paldies",
+            "Prieks iepazīties",
+            "Esmu priecīgs",
+            "Liels paldies"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct way to say \"Goodbye\" in Latvian?",
+          "options": [
+            "Labdien",
+            "Sveiki",
+            "Uz redzēšanos",
+            "Paldies"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Sveiki! Welcome to your first Latvian lesson! Today, we're going to learn some essential greetings and how to introduce yourself. We'll cover phrases like \"Sveiki\" (Hello), \"Mani sauc...\" (My name is...), \"Kā tevi sauc?\" (What is your name?), \"Prieks iepazīties\" (Nice to meet you), and \"Uz redzēšanos\" (Goodbye). I'll guide you through each one, help you with pronunciation, and show you how to use them in simple conversations. Let's start with \"Sveiki\"!"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Sveiki",
+          "phonetic": "SVEH-ee-kee",
+          "meaning": "Hello (formal/plural)",
+          "example": "Sveiki! Kā jums klājas?"
+        },
+        {
+          "word": "Paldies",
+          "phonetic": "PAL-dee-es",
+          "meaning": "Thank you",
+          "example": "Paldies par palīdzību!"
+        },
+        {
+          "word": "Lūdzu",
+          "phonetic": "LOO-dzoo",
+          "meaning": "Please / You're welcome",
+          "example": "Lūdzu, dodiet man ūdeni."
+        },
+        {
+          "word": "Jā",
+          "phonetic": "YAA",
+          "meaning": "Yes",
+          "example": "Jā, es saprotu."
+        },
+        {
+          "word": "Nē",
+          "phonetic": "NEH",
+          "meaning": "No",
+          "example": "Nē, es negribu."
+        },
+        {
+          "word": "Kā jums klājas?",
+          "phonetic": "KAA yooms KLAAY-ahs?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "Sveiki! Kā jums klājas šodien?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal/plural) in Latvian?",
+          "options": [
+            "Paldies",
+            "Sveiki",
+            "Lūdzu",
+            "Nē"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Paldies\" mean in English?",
+          "options": [
+            "Please",
+            "Yes",
+            "Thank you",
+            "No"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Latvian word for \"Yes\".",
+          "options": [
+            "Nē",
+            "Jā",
+            "Lūdzu",
+            "Sveiki"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"How are you?\" (formal/plural) in Latvian?",
+          "options": [
+            "Esmu labi",
+            "Kā jums klājas?",
+            "Paldies",
+            "Lūdzu, palīdziet"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone says \"Paldies\", what is a common response in Latvian?",
+          "options": [
+            "Jā",
+            "Nē",
+            "Lūdzu",
+            "Sveiki"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Lieliski! Šajā nodarbībā mēs apgūsim dažus bieži lietotus latviešu sveicienus un frāzes. Mēs praktizēsim teikt \"Sveiki,\" \"Paldies,\" un \"Kā jums klājas?\" Sāksim ar \"Sveiki.\" Tas ir veids, kā sveicināt cilvēkus latviešu valodā. Vai varat atkārtot \"Sveiki\" pēc manis?"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Labdien!",
+          "phonetic": "lahb-dee-en",
+          "meaning": "Good day! (formal, common greeting)",
+          "example": "Labdien! Kā jums iet?"
+        },
+        {
+          "word": "Sveiki!",
+          "phonetic": "svehy-kee",
+          "meaning": "Hello! (informal, plural, or to a group)",
+          "example": "Sveiki, draugi!"
+        },
+        {
+          "word": "Kā iet?",
+          "phonetic": "kaa ee-et",
+          "meaning": "How are you? / How's it going?",
+          "example": "Sveiki! Kā iet?"
+        },
+        {
+          "word": "Man iet labi.",
+          "phonetic": "mun ee-et lah-bee",
+          "meaning": "I'm doing well.",
+          "example": "Man iet labi, paldies!"
+        },
+        {
+          "word": "Paldies!",
+          "phonetic": "pahl-dee-es",
+          "meaning": "Thank you!",
+          "example": "Paldies par palīdzību!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Good day!\" in Latvian?",
+          "options": [
+            "Sveiki!",
+            "Labdien!",
+            "Uz redzēšanos!",
+            "Lūdzu!"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Latvian phrase means \"How are you?\"",
+          "options": [
+            "Man iet labi.",
+            "Paldies!",
+            "Kā iet?",
+            "Labrīt!"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct response to \"Kā iet?\" if you are doing well?",
+          "options": [
+            "Paldies!",
+            "Labdien!",
+            "Man iet labi.",
+            "Sveiki!"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"Thank you!\" in Latvian?",
+          "options": [
+            "Lūdzu!",
+            "Paldies!",
+            "Atvainojiet!",
+            "Jā!"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Sveiki! Esmu tavs latviešu valodas skolotājs. Šodien mēs mācīsimies dažas ļoti noderīgas frāzes, lai sveicinātu cilvēkus un jautātu, kā viņiem iet. Mēs apskatīsim \"Labdien!\", \"Sveiki!\", \"Kā iet?\", \"Man iet labi.\" un \"Paldies!\". Es teikšu katru frāzi, un tu vari to atkārtot. Pēc tam mēģināsim tās izmantot īsās sarunās. Sāksim ar \"Labdien!\"."
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Sveiki",
+          "phonetic": "sveɪ̯ki",
+          "meaning": "Hello",
+          "example": "Sveiki! Kā jums iet?"
+        },
+        {
+          "word": "Paldies",
+          "phonetic": "paldiɛs",
+          "meaning": "Thank you",
+          "example": "Paldies par palīdzību!"
+        },
+        {
+          "word": "Lūdzu",
+          "phonetic": "luːdzu",
+          "meaning": "Please / You're welcome",
+          "example": "Lūdzu, dodiet man ūdeni."
+        },
+        {
+          "word": "Jā",
+          "phonetic": "jaː",
+          "meaning": "Yes",
+          "example": "Jā, es saprotu."
+        },
+        {
+          "word": "Nē",
+          "phonetic": "neː",
+          "meaning": "No",
+          "example": "Nē, paldies."
+        },
+        {
+          "word": "Atvainojiet",
+          "phonetic": "atvai̯nɔjɪɛt",
+          "meaning": "Excuse me / Sorry",
+          "example": "Atvainojiet, kur ir tualete?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Latvian?",
+          "options": [
+            "Paldies",
+            "Sveiki",
+            "Lūdzu",
+            "Nē"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Paldies\" mean in English?",
+          "options": [
+            "Please",
+            "Yes",
+            "Thank you",
+            "No"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Latvian word for \"Please\".",
+          "options": [
+            "Jā",
+            "Nē",
+            "Lūdzu",
+            "Sveiki"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"Yes\" in Latvian?",
+          "options": [
+            "Nē",
+            "Jā",
+            "Atvainojiet",
+            "Paldies"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Lieliski padarīts! Tagad, praktizēsim dažas būtiskas latviešu frāzes. Es teikšu frāzi, un jūs varat to atkārtot pēc manis. Sāksim ar 'Hello'. Latviski mēs sakām 'Sveiki'. Vai varat mēģināt teikt 'Sveiki'? Pēc tam mēs mācīsimies 'Thank you', kas ir 'Paldies'. Pēc tam mēs apskatīsim 'Please' ('Lūdzu'), 'Yes' ('Jā'), 'No' ('Nē') un 'Excuse me' ('Atvainojiet'). Es jūs vadīšu cauri katrai frāzei, sniedzot izrunas padomus un piemēru teikumus. Sāksim!"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Labdien",
+          "phonetic": "Lahb-dee-ehn",
+          "meaning": "Good day",
+          "example": "Labdien! Kā jums iet?"
+        },
+        {
+          "word": "Sveiki",
+          "phonetic": "Sveh-ee-kee",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Sveiki! Prieks tevi redzēt."
+        },
+        {
+          "word": "Paldies",
+          "phonetic": "Pahl-dee-ehs",
+          "meaning": "Thank you",
+          "example": "Paldies par palīdzību!"
+        },
+        {
+          "word": "Lūdzu",
+          "phonetic": "Loo-dzoo",
+          "meaning": "Please / You're welcome",
+          "example": "Paldies! - Lūdzu!"
+        },
+        {
+          "word": "Kā iet?",
+          "phonetic": "Kah ee-eht?",
+          "meaning": "How are you? / How's it going?",
+          "example": "Sveiki, kā iet?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Good day\" in Latvian?",
+          "options": [
+            "Labrīt",
+            "Labdien",
+            "Labvakar",
+            "Ardievas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does the Latvian word \"Paldies\" mean in English?",
+          "options": [
+            "Hello",
+            "Please",
+            "Thank you",
+            "Goodbye"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the most appropriate informal greeting in Latvian.",
+          "options": [
+            "Labdien",
+            "Sveiki",
+            "Uz redzēšanos",
+            "Lūdzu"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Latvian word can mean both \"Please\" and \"You're welcome\"?",
+          "options": [
+            "Paldies",
+            "Jā",
+            "Nē",
+            "Lūdzu"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Sveiki! Today we're going to dive into some essential Latvian phrases for greetings and basic interactions. We'll learn how to say \"Labdien\" (Good day), \"Sveiki\" (Hi/Hello), \"Paldies\" (Thank you), and \"Lūdzu\" (Please/You're welcome). These are super useful for starting conversations in Latvian! Let's begin with \"Labdien\". Can you try saying \"Labdien\" out loud?"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Sveiki",
+          "phonetic": "SVEI-ki",
+          "meaning": "Hello / Hi",
+          "example": "Sveiki! Kā jums iet?"
+        },
+        {
+          "word": "Paldies",
+          "phonetic": "PAL-dies",
+          "meaning": "Thank you",
+          "example": "Paldies par palīdzību."
+        },
+        {
+          "word": "Lūdzu",
+          "phonetic": "LŪ-dzu",
+          "meaning": "Please / You're welcome",
+          "example": "Lūdzu, sēdieties."
+        },
+        {
+          "word": "Jā",
+          "phonetic": "YAH",
+          "meaning": "Yes",
+          "example": "Jā, es saprotu."
+        },
+        {
+          "word": "Nē",
+          "phonetic": "NEH",
+          "meaning": "No",
+          "example": "Nē, es negribu."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Latvian?",
+          "options": [
+            "Paldies",
+            "Sveiki",
+            "Lūdzu",
+            "Nē"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct Latvian word for \"Thank you\"?",
+          "options": [
+            "Sveiki",
+            "Paldies",
+            "Jā",
+            "Lūdzu"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct response to \"Thank you\" in Latvian.",
+          "options": [
+            "Sveiki",
+            "Jā",
+            "Lūdzu",
+            "Nē"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Sveiki! Šajā nodarbībā mēs apgūsim dažus pamata latviešu valodas sveicienus un frāzes. Mēs apskatīsim \"Sveiki\", \"Paldies\" un \"Lūdzu\". Sāksim ar \"Sveiki\". Vai vari atkārtot pēc manis: \"Sveiki\"?"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Sveiki",
+          "phonetic": "SVEH-kee",
+          "meaning": "Hello (formal/plural)",
+          "example": "Sveiki! Kā jums klājas?"
+        },
+        {
+          "word": "Labrīt",
+          "phonetic": "LAH-breet",
+          "meaning": "Good morning",
+          "example": "Labrīt! Esmu gatavs dienai."
+        },
+        {
+          "word": "Paldies",
+          "phonetic": "PAL-dee-es",
+          "meaning": "Thank you",
+          "example": "Paldies par palīdzību!"
+        },
+        {
+          "word": "Lūdzu",
+          "phonetic": "LOO-dzoo",
+          "meaning": "Please / You're welcome",
+          "example": "Lūdzu, apsēdieties."
+        },
+        {
+          "word": "Jā",
+          "phonetic": "YAH",
+          "meaning": "Yes",
+          "example": "Jā, es saprotu."
+        },
+        {
+          "word": "Nē",
+          "phonetic": "NEH",
+          "meaning": "No",
+          "example": "Nē, paldies."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal/plural) in Latvian?",
+          "options": [
+            "Labrīt",
+            "Paldies",
+            "Sveiki",
+            "Lūdzu"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"Paldies\" mean?",
+          "options": [
+            "Yes",
+            "No",
+            "Thank you",
+            "Please"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Latvian word for \"Good morning\".",
+          "options": [
+            "Sveiki",
+            "Labrīt",
+            "Jā",
+            "Nē"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone says \"Paldies\", how might you respond with \"You're welcome\"?",
+          "options": [
+            "Jā",
+            "Nē",
+            "Lūdzu",
+            "Sveiki"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Yes\" in Latvian?",
+          "options": [
+            "Nē",
+            "Jā",
+            "Sveiki",
+            "Lūdzu"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Sveiki! Welcome to your first Latvian lesson! Today, we're going to learn some essential greetings and polite phrases. We'll cover words like \"Sveiki\" (Hello), \"Paldies\" (Thank you), \"Lūdzu\" (Please/You're welcome), \"Jā\" (Yes), \"Nē\" (No), and \"Labrīt\" (Good morning). I'll say each word, and I encourage you to repeat after me. Don't worry about perfection, just try your best! Let's start with \"Sveiki\". Can you say \"Sveiki\"?"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "runāt",
+          "phonetic": "roo-naht",
+          "meaning": "to speak",
+          "example": "Es runāju latviski."
+        },
+        {
+          "word": "dzert",
+          "phonetic": "dzer-t",
+          "meaning": "to drink",
+          "example": "Viņš dzer ūdeni."
+        },
+        {
+          "word": "ēst",
+          "phonetic": "ehst",
+          "meaning": "to eat",
+          "example": "Mēs ēdam brokastis."
+        },
+        {
+          "word": "lasīt",
+          "phonetic": "lah-seet",
+          "meaning": "to read",
+          "example": "Tu lasi grāmatu."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Latvian word means 'to speak'?",
+          "options": [
+            "dzert",
+            "runāt",
+            "ēst",
+            "lasīt"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Translate 'I drink water' into Latvian.",
+          "options": [
+            "Es ēdu ūdeni.",
+            "Es lasu ūdeni.",
+            "Es dzeru ūdeni.",
+            "Es runāju ūdeni."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct verb for 'We eat breakfast'.",
+          "options": [
+            "Mēs lasām brokastis.",
+            "Mēs dzeram brokastis.",
+            "Mēs ēdam brokastis.",
+            "Mēs runājam brokastis."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Sveiki! Šodien mēs mācīsimies par biežāk lietotajiem darbības vārdiem latviešu valodā. Mēs apskatīsim vārdus \"runāt\", \"dzert\", \"ēst\" un \"lasīt\". Sāksim ar \"runāt\". Vai vari mēģināt to izrunāt?"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Labdien",
+          "phonetic": "Lahb-dee-en",
+          "meaning": "Hello (good day)",
+          "example": "Labdien! Kā jums iet?"
+        },
+        {
+          "word": "Kā iet?",
+          "phonetic": "Kah ee-et?",
+          "meaning": "How are you? / How's it going?",
+          "example": "Labdien, Anna! Kā iet?"
+        },
+        {
+          "word": "Man iet labi.",
+          "phonetic": "Mahn ee-et lah-bee",
+          "meaning": "I am fine. / I'm doing well.",
+          "example": "Man iet labi, paldies!"
+        },
+        {
+          "word": "Paldies",
+          "phonetic": "Pahl-dee-es",
+          "meaning": "Thank you",
+          "example": "Paldies par palīdzību!"
+        },
+        {
+          "word": "Uz redzēšanos",
+          "phonetic": "Ooz red-zeh-shah-nohs",
+          "meaning": "Goodbye (until we see each other again)",
+          "example": "Uz redzēšanos rīt!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Latvian?",
+          "options": [
+            "Uz redzēšanos",
+            "Labdien",
+            "Paldies",
+            "Kā iet?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Paldies\" mean in English?",
+          "options": [
+            "Goodbye",
+            "How are you?",
+            "Thank you",
+            "I am fine."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the most appropriate response to \"Kā iet?\"",
+          "options": [
+            "Uz redzēšanos",
+            "Labdien",
+            "Paldies",
+            "Man iet labi."
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Sveiki un laipni lūgti jūsu latviešu valodas nodarbībā! Šodien mēs iedziļināsimies svarīgākajos latviešu valodas sveicienos un frāzēs. Mēs apgūsim, kā teikt 'Labdien' (Hello), jautāt 'Kā iet?' (How are you?), atbildēt 'Man iet labi' (I am fine), teikt 'Paldies' (Thank you) un 'Uz redzēšanos' (Goodbye). Es iepazīstināšu ar katru frāzi, izskaidrošu tās nozīmi un sniegšu piemērus. Pēc tam mēs kopā praktizēsimies tās izrunāt. Gatavojieties sākt runāt latviski!"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Labdien",
+          "phonetic": "lahb-dee-en",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Labdien! Kā jums klājas?"
+        },
+        {
+          "word": "Sveiki",
+          "phonetic": "svey-kee",
+          "meaning": "Hi / Hello (informal, plural, or to a group)",
+          "example": "Sveiki, draugi!"
+        },
+        {
+          "word": "Paldies",
+          "phonetic": "pahl-dee-es",
+          "meaning": "Thank you",
+          "example": "Paldies par palīdzību!"
+        },
+        {
+          "word": "Lūdzu",
+          "phonetic": "loo-dzoo",
+          "meaning": "Please / You're welcome",
+          "example": "Lūdzu, sēdieties."
+        },
+        {
+          "word": "Jā",
+          "phonetic": "yah",
+          "meaning": "Yes",
+          "example": "Jā, es saprotu."
+        },
+        {
+          "word": "Nē",
+          "phonetic": "neh",
+          "meaning": "No",
+          "example": "Nē, es nesaprotu."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the formal way to say \"Hello\" or \"Good day\" in Latvian?",
+          "options": [
+            "Labdien",
+            "Sveiki",
+            "Paldies",
+            "Lūdzu"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say \"Thank you\" in Latvian?",
+          "options": [
+            "Jā",
+            "Nē",
+            "Paldies",
+            "Sveiki"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Latvian word for \"Please\" or \"You're welcome\".",
+          "options": [
+            "Labdien",
+            "Lūdzu",
+            "Jā",
+            "Nē"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"Yes\" in Latvian?",
+          "options": [
+            "Nē",
+            "Paldies",
+            "Jā",
+            "Sveiki"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Sveiki! Esmu jūsu latviešu valodas skolotājs. Šodien mēs sāksim ar dažiem ļoti svarīgiem vārdiem un frāzēm, kas palīdzēs jums sazināties latviski. Mēs mācīsimies, kā pateikt \"Labdien\" (Hello/Good day), \"Sveiki\" (Hi/Hello), \"Paldies\" (Thank you), \"Lūdzu\" (Please/You're welcome), \"Jā\" (Yes) un \"Nē\" (No). Sāksim ar \"Labdien\". Tas ir formāls sveiciens. Mēģiniet atkārtot pēc manis: \"Labdien\"."
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "gribēt",
+          "phonetic": "gree-bet",
+          "meaning": "to want",
+          "example": "Es gribu kafiju."
+        },
+        {
+          "word": "zināt",
+          "phonetic": "zee-naht",
+          "meaning": "to know",
+          "example": "Vai tu zini atbildi?"
+        },
+        {
+          "word": "varēt",
+          "phonetic": "vah-ret",
+          "meaning": "to be able to / can",
+          "example": "Es varu palīdzēt."
+        },
+        {
+          "word": "laiks",
+          "phonetic": "laiks",
+          "meaning": "time / weather",
+          "example": "Cik ir pulkstenis?"
+        },
+        {
+          "word": "jautājums",
+          "phonetic": "yau-tah-yums",
+          "meaning": "question",
+          "example": "Man ir jautājums."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"I want\" in Latvian?",
+          "options": [
+            "Es gribi",
+            "Es gribu",
+            "Es gribam",
+            "Es gribat"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct verb for \"She knows the answer.\"",
+          "options": [
+            "Viņa zinu atbildi",
+            "Viņa zina atbildi",
+            "Viņa zinām atbildi",
+            "Viņa zināt atbildi"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"time\" or \"weather\"?",
+          "options": [
+            "Jautājums",
+            "Atbilde",
+            "Laiks",
+            "Vārds"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Sveiki! Esmu jūsu AI pasniedzējs. Šodien mēs sāksim ar jauniem latviešu vārdiem un frāzēm. Mēs mācīsimies, kā izrunāt vārdus, sapratīsim to nozīmi un izmantosim tos teikumos. Mēs aplūkosim tādus vārdus kā \"gribēt\" (to want), \"zināt\" (to know) un \"varēt\" (to be able to). Esmu gatavs palīdzēt jums apgūt latviešu valodu! Sāksim!"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "runāt",
+          "phonetic": "roo-naht",
+          "meaning": "to speak, to talk",
+          "example": "Es gribu runāt latviski. (I want to speak Latvian.)"
+        },
+        {
+          "word": "lasīt",
+          "phonetic": "lah-seet",
+          "meaning": "to read",
+          "example": "Viņa lasa grāmatu. (She is reading a book.)"
+        },
+        {
+          "word": "rakstīt",
+          "phonetic": "rahk-steet",
+          "meaning": "to write",
+          "example": "Mēs rakstām vēstuli. (We are writing a letter.)"
+        },
+        {
+          "word": "ēst",
+          "phonetic": "ehst",
+          "meaning": "to eat",
+          "example": "Es gribu ēst pusdienas. (I want to eat lunch.)"
+        },
+        {
+          "word": "dzert",
+          "phonetic": "dzert",
+          "meaning": "to drink",
+          "example": "Viņi dzer ūdeni. (They are drinking water.)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does the Latvian verb \"runāt\" mean?",
+          "options": [
+            "to read",
+            "to speak",
+            "to write",
+            "to eat"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Latvian word means \"to read\"?",
+          "options": [
+            "rakstīt",
+            "dzert",
+            "lasīt",
+            "ēst"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Latvian word for \"to write\".",
+          "options": [
+            "runāt",
+            "rakstīt",
+            "lasīt",
+            "dzert"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If you are hungry, which verb would you use?",
+          "options": [
+            "dzert",
+            "runāt",
+            "lasīt",
+            "ēst"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Sveiki! Šodien mēs iemācīsimies dažus svarīgus darbības vārdus latviešu valodā. Mēs apskatīsim vārdus, kas apraksta ikdienas darbības.\n\nVispirms, apskatīsim vārdu \"runāt\". Ko tas nozīmē? Tas nozīmē \"to speak\" vai \"to talk\". Mēģiniet atkārtot: \"runāt\". Lieliski! Tagad mēģiniet teikt: \"Es gribu runāt latviski.\" (I want to speak Latvian.)\n\nNākamais vārds ir \"lasīt\", kas nozīmē \"to read\". Atkārtojiet: \"lasīt\". Vai varat izveidot teikumu ar \"lasīt\"? Piemēram, \"Viņa lasa grāmatu.\" (She is reading a book.)\n\nPēc tam mums ir \"rakstīt\", kas nozīmē \"to write\". Mēģiniet teikt: \"Mēs rakstām vēstuli.\" (We are writing a letter.)\n\nUn, protams, mums ir \"ēst\" (to eat) un \"dzert\" (to drink). Vai varat pateikt: \"Es gribu ēst pusdienas.\" (I want to eat lunch.) un \"Viņi dzer ūdeni.\" (They are drinking water.)?\n\nLieliski! Tagad, lai pārbaudītu jūsu izpratni, es jums uzdošu dažus jautājumus. Vai esat gatavs?"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "labs",
+          "phonetic": "lahbs",
+          "meaning": "good",
+          "example": "Tas ir labs auto."
+        },
+        {
+          "word": "skaists",
+          "phonetic": "skai-sts",
+          "meaning": "beautiful",
+          "example": "Viņa ir skaista sieviete."
+        },
+        {
+          "word": "liels",
+          "phonetic": "lee-els",
+          "meaning": "big, large",
+          "example": "Mums ir liels dārzs."
+        },
+        {
+          "word": "jauns",
+          "phonetic": "yau-ns",
+          "meaning": "new, young",
+          "example": "Es nopirku jaunu grāmatu."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Latvian word means \"good\"?",
+          "options": [
+            "liels",
+            "labs",
+            "jauns",
+            "skaists"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct adjective for \"a new house\" (māja is feminine).",
+          "options": [
+            "jauns māja",
+            "jauna māja",
+            "jauni māja",
+            "jauno māja"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Sveiki! Labdien! Today, we're going to learn some useful Latvian adjectives to describe things and people. Adjectives are words like 'good', 'big', or 'beautiful'. In Latvian, adjectives change their endings depending on the gender and number of the noun they describe. Don't worry, we'll start with the basics!\n\nLet's begin with our first word: **labs**. Can you say 'labs'? It means 'good'. For example, 'Tas ir labs auto' means 'That is a good car'. 'Auto' is masculine, so we use 'labs'.\n\nNext, we have **skaists**. Try saying 'skaists'. This means 'beautiful'. If we're talking about a beautiful woman, we'd say 'skaista sieviete'. Notice how 'skaists' changed to 'skaista' because 'sieviete' (woman) is feminine.\n\nOur third word is **liels**. Repeat after me: 'liels'. It means 'big' or 'large'. For a big house, which is feminine ('māja'), we would say 'liela māja'. So, 'liels' becomes 'liela' for feminine nouns.\n\nAnd finally, **jauns**. Can you say 'jauns'? It means 'new' or 'young'. If you bought a new book, you'd say 'Es nopirku jaunu grāmatu'. 'Grāmata' (book) is feminine, so 'jauns' becomes 'jauna'.\n\nSo, remember:\n- Masculine nouns often take adjectives ending in -s (like 'labs auto').\n- Feminine nouns often take adjectives ending in -a (like 'laba māja', 'skaista sieviete', 'liela māja', 'jauna grāmata').\n\nPractice saying these words and try to form simple phrases. How would you say 'a good woman' or 'a big car'?"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Es",
+          "phonetic": "[es]",
+          "meaning": "I",
+          "example": "Es esmu Anna."
+        },
+        {
+          "word": "Tu",
+          "phonetic": "[tu]",
+          "meaning": "You (singular, informal)",
+          "example": "Tu esi Jānis."
+        },
+        {
+          "word": "Esmu",
+          "phonetic": "[es-moo]",
+          "meaning": "Am (I am)",
+          "example": "Es esmu students."
+        },
+        {
+          "word": "Esi",
+          "phonetic": "[es-ee]",
+          "meaning": "Are (You are - singular, informal)",
+          "example": "Tu esi skolotājs."
+        },
+        {
+          "word": "Students",
+          "phonetic": "[stoo-dents]",
+          "meaning": "Student (masculine)",
+          "example": "Viņš ir students."
+        },
+        {
+          "word": "Studente",
+          "phonetic": "[stoo-den-te]",
+          "meaning": "Student (feminine)",
+          "example": "Viņa ir studente."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'I' in Latvian?",
+          "options": [
+            "Tu",
+            "Es",
+            "Viņš",
+            "Mēs"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means 'am' (as in 'I am')?",
+          "options": [
+            "Esi",
+            "Ir",
+            "Esmu",
+            "Būt"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct word for 'student' if the person is female.",
+          "options": [
+            "Students",
+            "Skolotājs",
+            "Studente",
+            "Skolēns"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Sveiki! Šodien mēs iemācīsimies dažus ļoti svarīgus vārdus latviešu valodā. Mēs runāsim par personvārdiem, piemēram, \"Es\" (I) un \"Tu\" (you, singular informal). Mēs arī apgūsim darbības vārda \"būt\" (to be) formas \"Esmu\" (I am) un \"Esi\" (you are). Visbeidzot, mēs uzzināsim, kā pateikt \"students\" (student) vīriešu un sieviešu dzimtē: \"students\" un \"studente\". Sāksim ar \"Es\" un \"Esmu\"!"
+    }
+  ]
+}

@@ -1,0 +1,1175 @@
+{
+  "langCode": "th-TH",
+  "langLabel": "Thai",
+  "langNative": "ไทย",
+  "generatedAt": "2026-03-15T05:17:36.618Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "สวัสดี",
+          "phonetic": "sà-wàt-dee",
+          "meaning": "Hello/Hi",
+          "example": "สวัสดีค่ะ คุณสบายดีไหมคะ"
+        },
+        {
+          "word": "ฉัน",
+          "phonetic": "chăn",
+          "meaning": "I (female speaker)",
+          "example": "ฉันชื่อเจนค่ะ"
+        },
+        {
+          "word": "ผม",
+          "phonetic": "pǒm",
+          "meaning": "I (male speaker)",
+          "example": "ผมชื่อจอห์นครับ"
+        },
+        {
+          "word": "ชื่อ",
+          "phonetic": "chêuu",
+          "meaning": "name; to be named",
+          "example": "คุณชื่ออะไรคะ"
+        },
+        {
+          "word": "อะไร",
+          "phonetic": "à-rai",
+          "meaning": "what",
+          "example": "นี่คืออะไรครับ"
+        },
+        {
+          "word": "ค่ะ",
+          "phonetic": "kâ",
+          "meaning": "polite particle (female speaker)",
+          "example": "ขอบคุณค่ะ"
+        },
+        {
+          "word": "ครับ",
+          "phonetic": "kráp",
+          "meaning": "polite particle (male speaker)",
+          "example": "ขอโทษครับ"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Thai?",
+          "options": [
+            "สวัสดี",
+            "ขอบคุณ",
+            "ขอโทษ",
+            "ไม่เป็นไร"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "If you are a female speaker, which pronoun do you use for \"I\"?",
+          "options": [
+            "ผม",
+            "ฉัน",
+            "คุณ",
+            "เขา"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"ชื่อ\" mean?",
+          "options": [
+            "กิน (To eat)",
+            "ไป (To go)",
+            "ชื่อ (To be named)",
+            "ดู (To see)"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which polite particle would a male speaker use at the end of a sentence?",
+          "options": [
+            "ค่ะ",
+            "คะ",
+            "ครับ",
+            "นะ"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "สวัสดีครับ/ค่ะ! ยินดีต้อนรับสู่บทเรียนภาษาไทยบทแรกของคุณครับ/ค่ะ วันนี้เราจะมาเรียนรู้คำทักทายที่จำเป็นและวิธีแนะนำตัวเองกันครับ/ค่ะ เราจะเริ่มต้นด้วยคำว่า \"สวัสดี\" (sà-wàt-dee) ซึ่งหมายถึง \"Hello\" หรือ \"Hi\" จากนั้น เราจะเรียนรู้วิธีพูดว่า \"ฉันชื่อ...\" (chăn chêuu...) สำหรับผู้หญิง และ \"ผมชื่อ...\" (pǒm chêuu...) สำหรับผู้ชาย นอกจากนี้ เราจะครอบคลุมคำลงท้ายสุภาพ \"ค่ะ\" (kâ) สำหรับผู้หญิง และ \"ครับ\" (kráp) สำหรับผู้ชายครับ/ค่ะ มาเริ่มกันเลย!"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "สวัสดี",
+          "phonetic": "sà-wàt-dee",
+          "meaning": "Hello / Hi / Goodbye",
+          "example": "สวัสดีครับ/ค่ะ คุณสบายดีไหม"
+        },
+        {
+          "word": "ขอบคุณ",
+          "phonetic": "kòp-kun",
+          "meaning": "Thank you",
+          "example": "ขอบคุณมากครับ/ค่ะ สำหรับความช่วยเหลือ"
+        },
+        {
+          "word": "ใช่",
+          "phonetic": "châi",
+          "meaning": "Yes / Correct",
+          "example": "ใช่ครับ/ค่ะ นั่นถูกต้องแล้ว"
+        },
+        {
+          "word": "ไม่",
+          "phonetic": "mâi",
+          "meaning": "No / Not",
+          "example": "ไม่ครับ/ค่ะ ผม/ฉันไม่เข้าใจ"
+        },
+        {
+          "word": "ขอโทษ",
+          "phonetic": "kɔ̌ɔ-tôot",
+          "meaning": "Excuse me / Sorry",
+          "example": "ขอโทษครับ/ค่ะ ผม/ฉันมาสาย"
+        },
+        {
+          "word": "กรุณา",
+          "phonetic": "grà-rú-naa",
+          "meaning": "Please",
+          "example": "กรุณารอตรงนี้ครับ/ค่ะ"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Goodbye\" in Thai?",
+          "options": [
+            "สวัสดี",
+            "ขอบคุณ",
+            "ขอโทษ",
+            "ใช่"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Thai word means \"Thank you\"?",
+          "options": [
+            "ไม่",
+            "ใช่",
+            "ขอบคุณ",
+            "กรุณา"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If you want to say \"Yes\" in Thai, what word would you use?",
+          "options": [
+            "ไม่",
+            "ใช่",
+            "ขอโทษ",
+            "สวัสดี"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct Thai word for \"Excuse me\" or \"Sorry\"?",
+          "options": [
+            "กรุณา",
+            "ขอบคุณ",
+            "สวัสดี",
+            "ขอโทษ"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "Choose the Thai word that means \"Please\".",
+          "options": [
+            "ใช่",
+            "ไม่",
+            "กรุณา",
+            "ขอบคุณ"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "สวัสดีครับ/ค่ะ [Name]! ยินดีต้อนรับสู่บทเรียนภาษาไทยบทแรกของเรา! วันนี้เราจะมาเรียนรู้คำทักทายและคำพื้นฐานที่ใช้บ่อยในภาษาไทยกันนะครับ/คะ เราจะเริ่มต้นด้วยคำว่า 'สวัสดี' (sà-wàt-dee) ซึ่งเป็นคำที่ใช้ได้ทั้ง 'Hello', 'Hi' และ 'Goodbye' ครับ/ค่ะ ลองพูดตามผม/ฉันดูนะครับ/คะ: สวัสดี"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "สวัสดี",
+          "phonetic": "sa-wat-dee",
+          "meaning": "Hello/Hi",
+          "example": "สวัสดีครับ/ค่ะ"
+        },
+        {
+          "word": "สบายดีไหม",
+          "phonetic": "sa-bai-dee mai",
+          "meaning": "How are you?",
+          "example": "คุณสบายดีไหมครับ/คะ"
+        },
+        {
+          "word": "สบายดี",
+          "phonetic": "sa-bai-dee",
+          "meaning": "I'm fine.",
+          "example": "ฉันสบายดีค่ะ"
+        },
+        {
+          "word": "ขอบคุณ",
+          "phonetic": "kob-kun",
+          "meaning": "Thank you.",
+          "example": "ขอบคุณมากครับ"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Thai?",
+          "options": [
+            "สวัสดี",
+            "ขอบคุณ",
+            "สบายดี",
+            "ไม่เป็นไร"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which phrase means \"How are you?\"",
+          "options": [
+            "สบายดี",
+            "สบายดีไหม",
+            "ขอบคุณ",
+            "สวัสดี"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"สบายดีไหม?\", how would you respond if you are fine?",
+          "options": [
+            "สวัสดี",
+            "ขอบคุณ",
+            "สบายดี",
+            "ไม่เป็นไร"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct way to say \"Thank you\" in Thai?",
+          "options": [
+            "สวัสดี",
+            "สบายดี",
+            "ขอบคุณ",
+            "ไม่เป็นไร"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "สวัสดีครับ/ค่ะ! ยินดีต้อนรับสู่บทเรียนภาษาไทยของเราในวันนี้ครับ/ค่ะ! วันนี้เราจะมาเรียนรู้คำทักทายและวลีภาษาไทยที่ใช้บ่อยๆ กันนะครับ/คะ เราจะมาดูคำว่า 'สวัสดี' (Hello), 'สบายดีไหม' (How are you?), 'สบายดี' (I'm fine), และ 'ขอบคุณ' (Thank you) ครับ/ค่ะ ตั้งใจฟังการออกเสียงให้ดีนะครับ/คะ แล้วลองพูดตามผม/ดิฉันดูนะครับ/คะ มาเริ่มกันที่คำว่า 'สวัสดี' กันเลยครับ/ค่ะ"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "สวัสดี",
+          "phonetic": "sa-wat-dee",
+          "meaning": "Hello / Hi (polite)",
+          "example": "สวัสดีครับ ผมชื่อจอห์น"
+        },
+        {
+          "word": "สบายดีไหม",
+          "phonetic": "sa-bai dee mai",
+          "meaning": "How are you?",
+          "example": "สวัสดีค่ะ สบายดีไหมคะ"
+        },
+        {
+          "word": "สบายดี",
+          "phonetic": "sa-bai dee",
+          "meaning": "I am fine / I am well",
+          "example": "ผมสบายดีครับ ขอบคุณครับ"
+        },
+        {
+          "word": "ชื่ออะไร",
+          "phonetic": "cheu a-rai",
+          "meaning": "What is your name?",
+          "example": "คุณชื่ออะไรครับ"
+        },
+        {
+          "word": "ชื่อ...",
+          "phonetic": "cheu...",
+          "meaning": "My name is...",
+          "example": "ฉันชื่อแอนนาค่ะ"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Thai?",
+          "options": [
+            "สวัสดี",
+            "ขอบคุณ",
+            "ลาก่อน",
+            "ใช่"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which phrase means \"How are you?\" in Thai?",
+          "options": [
+            "สบายดี",
+            "สบายดีไหม",
+            "ชื่ออะไร",
+            "ไม่เป็นไร"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"คุณชื่ออะไรครับ?\", how would you respond if your name is Anna?",
+          "options": [
+            "ผมสบายดีครับ",
+            "ฉันชื่อแอนนาค่ะ",
+            "สวัสดีค่ะ",
+            "ไม่เป็นไรค่ะ"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "สวัสดีครับ/ค่ะ! ยินดีต้อนรับสู่บทเรียนภาษาไทยของเราในวันนี้! วันนี้เราจะมาเรียนรู้เกี่ยวกับการทักทายและการแนะนำตัวเองในภาษาไทยกันนะครับ/คะ ซึ่งเป็นพื้นฐานสำคัญในการสื่อสารเลยครับ/ค่ะ เราจะมาดูคำศัพท์และวลีที่ใช้บ่อย เช่น 'สวัสดี' (sa-wat-dee), 'สบายดีไหม' (sa-bai dee mai), และ 'ชื่ออะไร' (cheu a-rai) พร้อมฝึกใช้ในประโยคจริงกันครับ/ค่ะ พร้อมที่จะเริ่มกันหรือยังครับ/คะ? ถ้าพร้อมแล้ว เรามาเริ่มกันที่คำว่า 'สวัสดี' กันเลยนะครับ/คะ!"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "สวัสดี",
+          "phonetic": "sa-wat-dee",
+          "meaning": "Hello / Goodbye",
+          "example": "สวัสดีครับ คุณสบายดีไหม"
+        },
+        {
+          "word": "สบายดีไหม",
+          "phonetic": "sa-bai-dee mai",
+          "meaning": "How are you?",
+          "example": "สวัสดีครับ สบายดีไหมครับ"
+        },
+        {
+          "word": "สบายดี",
+          "phonetic": "sa-bai-dee",
+          "meaning": "I'm fine / I'm good",
+          "example": "ผมสบายดีครับ ขอบคุณครับ"
+        },
+        {
+          "word": "ขอบคุณ",
+          "phonetic": "kob-kun",
+          "meaning": "Thank you",
+          "example": "ขอบคุณมากครับสำหรับความช่วยเหลือ"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Goodbye\" in Thai?",
+          "options": [
+            "สวัสดี",
+            "ขอบคุณ",
+            "สบายดี",
+            "ไม่เป็นไร"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Thai phrase means \"How are you?\"",
+          "options": [
+            "ฉันชื่อ...",
+            "คุณชื่ออะไร",
+            "สบายดีไหม",
+            "ขอบคุณ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks you \"สบายดีไหม?\" (How are you?), and you want to say \"I'm fine,\" what would you say?",
+          "options": [
+            "สวัสดี",
+            "สบายดี",
+            "ขอบคุณ",
+            "ไม่เป็นไร"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "สวัสดีครับ/ค่ะ! ยินดีต้อนรับสู่บทเรียนภาษาไทยของเรานะครับ/คะ! วันนี้เราจะมาเรียนรู้คำทักทายและประโยคพื้นฐานที่ใช้บ่อยในชีวิตประจำวันกันครับ/ค่ะ เราจะเริ่มจากคำว่า 'สวัสดี' (sa-wat-dee) ที่แปลว่า 'Hello' หรือ 'Goodbye' จากนั้นเราจะเรียนรู้วิธีถามและตอบว่า 'สบายดีไหม' (sa-bai-dee mai) และ 'สบายดี' (sa-bai-dee) สุดท้าย เราจะมาดูคำว่า 'ขอบคุณ' (kob-kun) ที่ใช้บ่อยมากๆ ครับ/ค่ะ พร้อมที่จะเริ่มเรียนรู้คำศัพท์ใหม่ๆ และฝึกพูดภาษาไทยแล้วหรือยังครับ/คะ? ถ้าพร้อมแล้ว เรามาเริ่มกันเลย!"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "สวัสดี",
+          "phonetic": "sà-wàt-dee",
+          "meaning": "Hello / Hi",
+          "example": "สวัสดีครับ คุณสบายดีไหม"
+        },
+        {
+          "word": "ขอบคุณ",
+          "phonetic": "kòp-kun",
+          "meaning": "Thank you",
+          "example": "ขอบคุณมากครับสำหรับความช่วยเหลือ"
+        },
+        {
+          "word": "ครับ / ค่ะ",
+          "phonetic": "kráp / kâ",
+          "meaning": "Polite particle (male speaker / female speaker)",
+          "example": "ใช่ครับ / ไม่ใช่ค่ะ"
+        },
+        {
+          "word": "ขอโทษ",
+          "phonetic": "kŏr-tôht",
+          "meaning": "Sorry / Excuse me",
+          "example": "ขอโทษครับ ผมมาสาย"
+        },
+        {
+          "word": "สบายดีไหม",
+          "phonetic": "sà-baai-dee măi",
+          "meaning": "How are you?",
+          "example": "สวัสดีครับ คุณสบายดีไหม"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Thai?",
+          "options": [
+            "ขอบคุณ",
+            "สวัสดี",
+            "ขอโทษ",
+            "สบายดี"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If you are a female speaker, how do you say \"Thank you\"?",
+          "options": [
+            "ขอบคุณครับ",
+            "ขอบคุณค่ะ",
+            "สวัสดีค่ะ",
+            "ขอโทษค่ะ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"สบายดีไหม\" mean?",
+          "options": [
+            "Thank you",
+            "Excuse me",
+            "How are you?",
+            "Yes"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"Sorry\" or \"Excuse me\"?",
+          "options": [
+            "สวัสดี",
+            "ขอบคุณ",
+            "ขอโทษ",
+            "สบายดี"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "สวัสดีครับ/ค่ะ! Welcome to your first Thai lesson. Today, we're going to learn some essential greetings and polite phrases. We'll cover how to say \"Hello\" (สวัสดี), \"Thank you\" (ขอบคุณ), \"Excuse me\" (ขอโทษ), and how to ask \"How are you?\" (สบายดีไหม). We'll also learn about the polite particles \"ครับ\" (kráp) for male speakers and \"ค่ะ\" (kâ) for female speakers, which are crucial in Thai. Let's start by practicing \"สวัสดี\" (sà-wàt-dee). Try saying it!"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [],
+      "quiz": [],
+      "tutorPrompt": "สวัสดีครับ/ค่ะ (Sawasdee krab/ka)! Welcome to your Thai lesson! I'm excited to help you learn and practice speaking Thai today. In this lesson, we'll explore some useful new vocabulary and phrases. We'll focus on pronunciation, meaning, and how to use them in everyday conversations. For example, we might learn how to say \"thank you\" which is \"ขอบคุณ\" (khop khun). Get ready to expand your Thai skills! Let's begin!"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "สวัสดี",
+          "phonetic": "sa-wat-dee",
+          "meaning": "Hello / Hi",
+          "example": "สวัสดีครับ/ค่ะ"
+        },
+        {
+          "word": "สบายดีไหม",
+          "phonetic": "sa-bai-dee mai",
+          "meaning": "How are you? (Are you well?)",
+          "example": "คุณสบายดีไหมครับ/คะ"
+        },
+        {
+          "word": "สบายดี",
+          "phonetic": "sa-bai-dee",
+          "meaning": "I'm fine / well",
+          "example": "ผม/ฉันสบายดีครับ/ค่ะ"
+        },
+        {
+          "word": "แล้วคุณล่ะ",
+          "phonetic": "laew kun la",
+          "meaning": "And you?",
+          "example": "ผมสบายดี แล้วคุณล่ะครับ"
+        },
+        {
+          "word": "ขอบคุณ",
+          "phonetic": "kob-koon",
+          "meaning": "Thank you",
+          "example": "ขอบคุณมากครับ/ค่ะ"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Thai?",
+          "options": [
+            "สบายดี",
+            "ขอบคุณ",
+            "สวัสดี",
+            "แล้วคุณล่ะ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct response to \"สบายดีไหม?\" if you are well?",
+          "options": [
+            "ขอบคุณ",
+            "สวัสดี",
+            "สบายดี",
+            "แล้วคุณล่ะ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"Thank you\"?",
+          "options": [
+            "สบายดีไหม",
+            "ขอบคุณ",
+            "สวัสดี",
+            "แล้วคุณล่ะ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"And you?\" in Thai?",
+          "options": [
+            "สวัสดีครับ",
+            "สบายดีไหมคะ",
+            "แล้วคุณล่ะครับ",
+            "ขอบคุณมากค่ะ"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hello! In this lesson, we're going to learn some essential Thai greetings and phrases for asking how someone is. We'll cover 'สวัสดี' (sa-wat-dee) for 'Hello,' 'สบายดีไหม' (sa-bai-dee mai) for 'How are you?', and 'สบายดี' (sa-bai-dee) for 'I'm fine.' We'll also learn 'แล้วคุณล่ะ' (laew kun la) for 'And you?' and 'ขอบคุณ' (kob-koon) for 'Thank you.' Pay close attention to the polite particles 'ครับ' (krap) for male speakers and 'ค่ะ' (ka) for female speakers. Let's practice saying these phrases together and try using them in simple conversations!"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "สวัสดี",
+          "phonetic": "sà-wàt-dee",
+          "meaning": "Hello / Hi",
+          "example": "สวัสดีครับ คุณสบายดีไหมครับ"
+        },
+        {
+          "word": "ขอบคุณ",
+          "phonetic": "kòp-kun",
+          "meaning": "Thank you",
+          "example": "ขอบคุณมากครับสำหรับความช่วยเหลือ"
+        },
+        {
+          "word": "ขอโทษ",
+          "phonetic": "kǎw-tôht",
+          "meaning": "Excuse me / Sorry",
+          "example": "ขอโทษครับ ผมมาสาย"
+        },
+        {
+          "word": "ครับ / ค่ะ",
+          "phonetic": "kráp / kâ",
+          "meaning": "Politeness particle (male / female speaker)",
+          "example": "ใช่ครับ / ไม่ใช่ค่ะ"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Thai?",
+          "options": [
+            "สวัสดี",
+            "ขอบคุณ",
+            "ขอโทษ",
+            "ใช่"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Thai word means \"Thank you\"?",
+          "options": [
+            "ครับ",
+            "ค่ะ",
+            "ขอบคุณ",
+            "สวัสดี"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "A woman wants to say \"Excuse me\". Which phrase should she use?",
+          "options": [
+            "ขอบคุณค่ะ",
+            "สวัสดีครับ",
+            "ขอโทษค่ะ",
+            "ใช่ครับ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which politeness particle is used by a male speaker?",
+          "options": [
+            "ค่ะ",
+            "ครับ",
+            "นะ",
+            "จ้ะ"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "สวัสดีครับ/ค่ะ! ยินดีต้อนรับสู่บทเรียนภาษาไทยของเราในวันนี้ครับ/ค่ะ วันนี้เราจะมาเรียนรู้คำทักทายและคำสุภาพที่สำคัญกันนะครับ/คะ เราจะเริ่มต้นด้วยคำว่า 'สวัสดี' (Hello), 'ขอบคุณ' (Thank you), และ 'ขอโทษ' (Excuse me/Sorry) รวมถึงคำลงท้ายสุภาพ 'ครับ' (สำหรับผู้ชาย) และ 'ค่ะ' (สำหรับผู้หญิง) ครับ/ค่ะ ตั้งใจฟังการออกเสียงและวิธีการใช้ในประโยคกันนะครับ/คะ มาฝึกไปพร้อมกันเลย!"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "สวัสดี",
+          "phonetic": "sà-wàt-dee",
+          "meaning": "Hello / Hi",
+          "example": "สวัสดีครับ/ค่ะ คุณสบายดีไหมครับ/คะ"
+        },
+        {
+          "word": "สบายดีไหม",
+          "phonetic": "sà-baai-dee măi",
+          "meaning": "How are you?",
+          "example": "สวัสดีครับ/ค่ะ คุณสบายดีไหมครับ/คะ"
+        },
+        {
+          "word": "สบายดี",
+          "phonetic": "sà-baai-dee",
+          "meaning": "I'm fine / I'm well",
+          "example": "ผม/ฉันสบายดีครับ/ค่ะ ขอบคุณครับ/ค่ะ"
+        },
+        {
+          "word": "ขอบคุณ",
+          "phonetic": "kòp-kun",
+          "meaning": "Thank you",
+          "example": "ขอบคุณมากครับ/ค่ะ สำหรับความช่วยเหลือ"
+        },
+        {
+          "word": "คุณชื่ออะไร",
+          "phonetic": "kun chêu à-rai",
+          "meaning": "What is your name?",
+          "example": "สวัสดีครับ/ค่ะ คุณชื่ออะไรครับ/คะ"
+        },
+        {
+          "word": "ฉันชื่อ",
+          "phonetic": "chăn chêu",
+          "meaning": "My name is...",
+          "example": "ฉันชื่อเจนครับ/ค่ะ ยินดีที่ได้รู้จักครับ/ค่ะ"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Thai?",
+          "options": [
+            "ขอบคุณ",
+            "สวัสดี",
+            "สบายดี",
+            "ไม่เป็นไร"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means 'How are you?'",
+          "options": [
+            "คุณชื่ออะไร",
+            "ฉันชื่อ...",
+            "สบายดีไหม",
+            "สวัสดี"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks 'สบายดีไหม?', how would you respond if you are fine?",
+          "options": [
+            "ขอบคุณ",
+            "สวัสดี",
+            "สบายดี",
+            "ไม่เป็นไร"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct way to say 'Thank you' in Thai?",
+          "options": [
+            "สวัสดี",
+            "สบายดี",
+            "ขอบคุณ",
+            "คุณชื่ออะไร"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "สวัสดีครับ/ค่ะ ยินดีต้อนรับสู่บทเรียนภาษาไทยบทแรกของคุณ! วันนี้เราจะมาเรียนรู้คำทักทายและแนะนำตัวพื้นฐานกันนะครับ/คะ\n\nมาเริ่มกันที่คำว่า 'สวัสดี' (sà-wàt-dee) ซึ่งแปลว่า 'Hello' หรือ 'Hi' ในภาษาไทย เป็นคำทักทายที่ใช้ได้ตลอดทั้งวันเลยครับ/ค่ะ ลองพูดตามผม/ฉันดูนะครับ/คะ: 'สวัสดี'\n\nยอดเยี่ยมมากครับ/ค่ะ! ต่อไป เราจะเรียนรู้วิธีถามว่า 'สบายดีไหม' (sà-baai-dee măi) ซึ่งแปลว่า 'How are you?' ลองพูดตามนะครับ/คะ: 'คุณสบายดีไหม'\n\nถ้าคุณสบายดี คุณสามารถตอบว่า 'สบายดี' (sà-baai-dee) ซึ่งแปลว่า 'I'm fine' และอย่าลืมพูด 'ขอบคุณ' (kòp-kun) ที่แปลว่า 'Thank you' ด้วยนะครับ/คะ\n\nสุดท้าย เราจะเรียนรู้วิธีถามชื่อกันครับ/ค่ะ 'คุณชื่ออะไร' (kun chêu à-rai) แปลว่า 'What is your name?' และถ้าจะตอบว่า 'My name is...' ให้พูดว่า 'ฉันชื่อ...' (chăn chêu...) แล้วตามด้วยชื่อของคุณครับ/ค่ะ\n\nเรามาลองฝึกบทสนทนาสั้นๆ กันนะครับ/คะ: 'สวัสดีครับ/ค่ะ คุณสบายดีไหมครับ/คะ?' แล้วคุณก็ตอบว่า 'สบายดีครับ/ค่ะ ขอบคุณครับ/ค่ะ คุณชื่ออะไรครับ/คะ?'\n\nดีมากครับ/ค่ะ! การฝึกพูดบ่อยๆ จะช่วยให้คุณจำได้เร็วขึ้นนะครับ/คะ"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "อยู่ที่ไหน",
+          "phonetic": "yòo têe năi",
+          "meaning": "Where is?",
+          "example": "ห้องน้ำอยู่ที่ไหนครับ/คะ?"
+        },
+        {
+          "word": "ข้างหน้า",
+          "phonetic": "kâang nâa",
+          "meaning": "in front of",
+          "example": "รถอยู่ข้างหน้าบ้าน"
+        },
+        {
+          "word": "ข้างหลัง",
+          "phonetic": "kâang lăng",
+          "meaning": "behind",
+          "example": "แมวอยู่ข้างหลังต้นไม้"
+        },
+        {
+          "word": "ตรงนี้",
+          "phonetic": "trong née",
+          "meaning": "here",
+          "example": "คุณนั่งตรงนี้ได้เลย"
+        },
+        {
+          "word": "ตรงนั้น",
+          "phonetic": "trong nán",
+          "meaning": "there",
+          "example": "หนังสืออยู่ตรงนั้น"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you ask \"Where is the market?\" in Thai?",
+          "options": [
+            "ตลาดอยู่ที่ไหนครับ?",
+            "ตลาดอยู่ตรงนี้ครับ?",
+            "ตลาดอยู่ข้างหน้าครับ?",
+            "ตลาดอยู่ข้างหลังครับ?"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Thai word means \"in front of\"?",
+          "options": [
+            "ข้างหลัง",
+            "ข้างหน้า",
+            "ตรงนี้",
+            "ตรงนั้น"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone says \"ห้องน้ำอยู่ตรงนี้\" (hông náam yòo trong née), what does it mean?",
+          "options": [
+            "The restroom is behind.",
+            "The restroom is in front.",
+            "The restroom is here.",
+            "The restroom is there."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say \"The dog is behind the car\" in Thai?",
+          "options": [
+            "หมาอยู่ข้างหน้าบ้าน",
+            "หมาอยู่ข้างหลังรถ",
+            "หมาอยู่ตรงนี้รถ",
+            "หมาอยู่ตรงนั้นรถ"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "สวัสดีครับ/ค่ะ! วันนี้เราจะมาเรียนรู้วิธีถามว่า \"อยู่ที่ไหน?\" (yòo têe năi) และใช้คำบอกตำแหน่งพื้นฐาน เช่น \"ข้างหน้า\" (kâang nâa) และ \"ข้างหลัง\" (kâang lăng) กันนะครับ/คะ เราจะฝึกพูดประโยคต่างๆ เช่น \"หนังสืออยู่ข้างหน้าโต๊ะ\" (năng sǔe yòo kâang nâa dtó) พร้อมแล้วมาเริ่มกันเลย!"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "สวัสดี",
+          "phonetic": "sa-wat-dee",
+          "meaning": "Hello / Hi / Goodbye",
+          "example": "สวัสดีครับ/ค่ะ"
+        },
+        {
+          "word": "สบายดีไหม",
+          "phonetic": "sa-bai-dee mai",
+          "meaning": "How are you?",
+          "example": "คุณสบายดีไหมครับ/คะ"
+        },
+        {
+          "word": "สบายดี",
+          "phonetic": "sa-bai-dee",
+          "meaning": "I'm fine / I'm well",
+          "example": "ฉันสบายดีค่ะ"
+        },
+        {
+          "word": "ขอบคุณ",
+          "phonetic": "khop-khun",
+          "meaning": "Thank you",
+          "example": "ขอบคุณมากครับ"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Thai?",
+          "options": [
+            "ขอบคุณ",
+            "สบายดี",
+            "สวัสดี",
+            "ขอโทษ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means 'How are you?'",
+          "options": [
+            "สบายดี",
+            "สบายดีไหม",
+            "สวัสดี",
+            "ขอบคุณ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone says 'ขอบคุณ' to you, what are they doing?",
+          "options": [
+            "Saying hello",
+            "Asking how you are",
+            "Saying thank you",
+            "Saying goodbye"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "สวัสดีครับ/ค่ะ! วันนี้เราจะมาเรียนรู้คำทักทายภาษาไทยพื้นฐานกันนะครับ/คะ เราจะเรียนคำว่า 'สวัสดี' (sa-wat-dee), 'สบายดีไหม' (sa-bai-dee mai), และ 'ขอบคุณ' (khop-khun) ผม/ดิฉันจะพูดแต่ละวลี แล้วคุณสามารถพูดตามได้เลยครับ/ค่ะ จากนั้นเราจะฝึกใช้คำเหล่านี้ในการสนทนาสั้นๆ กันนะครับ/คะ มาเริ่มกันที่คำว่า 'สวัสดี' กันเลยครับ/ค่ะ คุณจะพูดว่า 'Hello' ในภาษาไทยว่าอย่างไรครับ/คะ?"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ชอบ",
+          "phonetic": "châwp",
+          "meaning": "to like",
+          "example": "ฉันชอบกินอาหารไทย"
+        },
+        {
+          "word": "ไม่ชอบ",
+          "phonetic": "mâi châwp",
+          "meaning": "to dislike, not like",
+          "example": "เขาไม่ชอบอากาศร้อน"
+        },
+        {
+          "word": "รัก",
+          "phonetic": "rák",
+          "meaning": "to love",
+          "example": "เรารักครอบครัวของเรา"
+        },
+        {
+          "word": "อะไร",
+          "phonetic": "à-rai",
+          "meaning": "what",
+          "example": "คุณชอบอะไร?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How would you say \"I like coffee\" in Thai?",
+          "options": [
+            "ฉันไม่ชอบกาแฟ",
+            "ฉันชอบกาแฟ",
+            "ฉันรักกาแฟ",
+            "ฉันเกลียดกาแฟ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"to dislike\" or \"not like\"?",
+          "options": [
+            "ชอบ",
+            "รัก",
+            "ไม่ชอบ",
+            "อะไร"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct question to ask \"What do you like?\"",
+          "options": [
+            "คุณรักอะไร?",
+            "คุณชอบอะไร?",
+            "คุณไม่ชอบอะไร?",
+            "คุณชอบกาแฟ?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "สวัสดีครับ/ค่ะ! ยินดีต้อนรับสู่บทเรียนภาษาไทยของเราในวันนี้ครับ/ค่ะ! วันนี้เราจะมาเรียนรู้วิธีการแสดงความชอบและไม่ชอบในภาษาไทยกันนะครับ/คะ เราจะมาดูคำศัพท์ใหม่ๆ เช่น \"ชอบ\" (châwp) ที่แปลว่า \"to like\" และ \"ไม่ชอบ\" (mâi châwp) ที่แปลว่า \"to dislike\" รวมถึง \"รัก\" (rák) ที่แปลว่า \"to love\" และ \"อะไร\" (à-rai) ที่แปลว่า \"what\" ด้วยครับ/ค่ะ เราจะฝึกใช้คำเหล่านี้ในประโยคกันนะครับ/คะ เมื่อจบบทเรียนนี้ คุณจะสามารถพูดได้ว่าคุณชอบหรือไม่ชอบอะไรในภาษาไทยได้ครับ/ค่ะ พร้อมแล้ว เรามาเริ่มกันเลย!"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ชอบ",
+          "phonetic": "chôp",
+          "meaning": "to like",
+          "example": "ฉันชอบกินอาหารไทย"
+        },
+        {
+          "word": "ไม่ชอบ",
+          "phonetic": "mâi chôp",
+          "meaning": "to dislike",
+          "example": "เขาไม่ชอบอากาศร้อน"
+        },
+        {
+          "word": "อร่อย",
+          "phonetic": "a-ròi",
+          "meaning": "delicious",
+          "example": "อาหารจานนี้อร่อยมาก"
+        },
+        {
+          "word": "แพง",
+          "phonetic": "paeng",
+          "meaning": "expensive",
+          "example": "รถคันนี้แพงไปหน่อย"
+        },
+        {
+          "word": "ถูก",
+          "phonetic": "thùuk",
+          "meaning": "cheap; correct",
+          "example": "เสื้อตัวนี้ราคาถูกมาก"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Thai word means \"to like\"?",
+          "options": [
+            "ไม่ชอบ",
+            "ชอบ",
+            "อร่อย",
+            "แพง"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"delicious\" in Thai?",
+          "options": [
+            "ถูก",
+            "แพง",
+            "อร่อย",
+            "ชอบ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct word to complete the sentence: \"ฉัน ____ กินผลไม้\" (I ____ eat fruit).",
+          "options": [
+            "ไม่ชอบ",
+            "แพง",
+            "ชอบ",
+            "ถูก"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the opposite of \"แพง\" (expensive)?",
+          "options": [
+            "อร่อย",
+            "ชอบ",
+            "ถูก",
+            "ไม่ชอบ"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "สวัสดีครับ/ค่ะ! วันนี้เราจะมาเรียนรู้คำศัพท์ภาษาไทยใหม่ๆ ที่จะช่วยให้คุณแสดงความรู้สึกและความคิดเห็นได้ดีขึ้นนะครับ/คะ\n\nเราจะมาดูคำว่า \"ชอบ\" (chôp) ที่แปลว่า 'to like' และ \"ไม่ชอบ\" (mâi chôp) ที่แปลว่า 'to dislike' ลองใช้คำเหล่านี้เพื่อบอกว่าคุณชอบหรือไม่ชอบอะไรบ้างสิครับ/คะ เช่น \"ฉันชอบกินอาหารไทย\" (I like to eat Thai food) หรือ \"เขาไม่ชอบอากาศร้อน\" (He doesn't like hot weather).\n\nนอกจากนี้ เรายังมีคำว่า \"อร่อย\" (a-ròi) ที่แปลว่า 'delicious' ใช้พูดถึงอาหารที่รสชาติดีมากๆ ครับ/คะ และคำว่า \"แพง\" (paeng) ที่แปลว่า 'expensive' กับ \"ถูก\" (thùuk) ที่แปลว่า 'cheap' หรือ 'correct' ซึ่งเป็นคำตรงข้ามกัน ใช้พูดถึงราคาของสิ่งของต่างๆ ครับ/คะ\n\nลองฝึกแต่งประโยคของคุณเองดูสิครับ/คะ คุณชอบอะไรบ้าง? อาหารอะไรอร่อยสำหรับคุณ? หรือมีอะไรที่คุณคิดว่าแพงหรือถูกบ้างไหมครับ/คะ? มาเริ่มกันเลย!"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "กิน",
+          "phonetic": "gin",
+          "meaning": "to eat",
+          "example": "ฉันกินข้าวทุกวัน"
+        },
+        {
+          "word": "ดื่ม",
+          "phonetic": "deum",
+          "meaning": "to drink",
+          "example": "เขาชอบดื่มน้ำผลไม้"
+        },
+        {
+          "word": "ไป",
+          "phonetic": "bpai",
+          "meaning": "to go",
+          "example": "พรุ่งนี้เราจะไปตลาด"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Thai word means \"to eat\"?",
+          "options": [
+            "ดื่ม",
+            "กิน",
+            "ไป",
+            "นอน"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"I drink water\" in Thai?",
+          "options": [
+            "ฉันกินน้ำ",
+            "ฉันไปน้ำ",
+            "ฉันดื่มน้ำ",
+            "ฉันนอนน้ำ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Complete the sentence: \"พรุ่งนี้ฉันจะ___โรงเรียน\" (Tomorrow I will ___ school)",
+          "options": [
+            "กิน",
+            "ดื่ม",
+            "ไป",
+            "นอน"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hi there! Today we're going to learn some common Thai verbs that you can use in your daily conversations. Let's dive in!\n\nFirst up, we have **กิน** (gin), which means \"to eat.\" For example, you can say \"ฉันกินข้าว\" (chan gin kâao) meaning \"I eat rice.\" Try saying \"กิน\" out loud!\n\nNext, we have **ดื่ม** (deum), meaning \"to drink.\" So, if you want to say \"I drink water,\" you'd say \"ฉันดื่มน้ำ\" (chan deum nám). Can you say \"ดื่ม\"?\n\nAnd finally, we have **ไป** (bpai), which means \"to go.\" If you want to say \"I go to the market,\" you'd say \"ฉันไปตลาด\" (chan bpai dtà-làat). Let's try \"ไป\"!\n\nGreat job! Now you know how to say \"to eat,\" \"to drink,\" and \"to go\" in Thai. Let's practice using them in sentences. What do you like to 'กิน' or 'ดื่ม'? Where do you like to 'ไป'? I'm excited to hear your examples!"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "สวัสดีครับ/ค่ะ",
+          "phonetic": "sà-wàt-dee kráp/kâ",
+          "meaning": "Hello / Hi (male/female speaker)",
+          "example": "สวัสดีครับ คุณสบายดีไหมครับ?"
+        },
+        {
+          "word": "สบายดีไหมครับ/คะ",
+          "phonetic": "sà-baai dee mái kráp/ká",
+          "meaning": "How are you? (male/female speaker)",
+          "example": "สวัสดีค่ะ คุณสบายดีไหมคะ?"
+        },
+        {
+          "word": "สบายดีครับ/ค่ะ",
+          "phonetic": "sà-baai dee kráp/kâ",
+          "meaning": "I'm fine (male/female speaker)",
+          "example": "ผมสบายดีครับ ขอบคุณครับ"
+        },
+        {
+          "word": "ขอบคุณครับ/ค่ะ",
+          "phonetic": "kòp-kun kráp/kâ",
+          "meaning": "Thank you (male/female speaker)",
+          "example": "ขอบคุณครับสำหรับความช่วยเหลือ"
+        },
+        {
+          "word": "ผม/ดิฉัน ชื่อ...",
+          "phonetic": "pǒm/dì-chǎn chêu...",
+          "meaning": "My name is... (male/female speaker)",
+          "example": "ผมชื่อจอห์นครับ"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the correct way for a male speaker to say \"Hello\" in Thai?",
+          "options": [
+            "สวัสดีค่ะ",
+            "สวัสดีครับ",
+            "ขอบคุณครับ",
+            "สบายดีไหมคะ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would a female speaker ask \"How are you?\" in Thai?",
+          "options": [
+            "สบายดีครับ",
+            "สวัสดีครับ",
+            "สบายดีไหมคะ",
+            "ขอบคุณค่ะ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"สบายดีไหมครับ?\", how would a male speaker respond \"I'm fine, thank you\"?",
+          "options": [
+            "สบายดีค่ะ ขอบคุณค่ะ",
+            "สบายดีครับ ขอบคุณครับ",
+            "สวัสดีครับ",
+            "ผมชื่อจอห์นครับ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"ขอบคุณค่ะ\" mean?",
+          "options": [
+            "Hello (female)",
+            "How are you? (female)",
+            "Thank you (female)",
+            "My name is... (female)"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "สวัสดีครับ/ค่ะ! ยินดีต้อนรับสู่บทเรียนภาษาไทยของคุณ! วันนี้เราจะมาเรียนรู้เกี่ยวกับ 'การทักทายและการแนะนำตัวเบื้องต้น' เราจะมาดูคำศัพท์สำคัญเช่น 'สวัสดีครับ/ค่ะ' (Hello), 'สบายดีไหมครับ/คะ' (How are you?), 'สบายดีครับ/ค่ะ' (I'm fine), 'ขอบคุณครับ/ค่ะ' (Thank you), และ 'ผม/ดิฉัน ชื่อ...' (My name is...). เมื่อจบบทเรียนนี้ คุณจะสามารถทักทายและแนะนำตัวเองเบื้องต้นเป็นภาษาไทยได้ มาเริ่มกันที่คำแรกของเราเลยครับ/ค่ะ: 'สวัสดีครับ/ค่ะ'"
+    }
+  ]
+}

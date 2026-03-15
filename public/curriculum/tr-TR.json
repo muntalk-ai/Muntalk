@@ -1,0 +1,1333 @@
+{
+  "langCode": "tr-TR",
+  "langLabel": "Turkish",
+  "langNative": "Türkçe",
+  "generatedAt": "2026-03-15T05:20:48.941Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Merhaba",
+          "phonetic": "mehr-hah-BAH",
+          "meaning": "Hello / Hi",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "Nasılsın?",
+          "phonetic": "nah-SUHL-suhn",
+          "meaning": "How are you? (singular, informal)",
+          "example": "Merhaba, nasılsın? Ben iyiyim."
+        },
+        {
+          "word": "İyiyim",
+          "phonetic": "ee-YEE-yim",
+          "meaning": "I am fine / I am good",
+          "example": "Nasılsın? İyiyim, teşekkür ederim."
+        },
+        {
+          "word": "Teşekkür ederim",
+          "phonetic": "teh-shek-KOOR eh-DEH-rim",
+          "meaning": "Thank you",
+          "example": "İyiyim, teşekkür ederim. Sen nasılsın?"
+        },
+        {
+          "word": "Adın ne?",
+          "phonetic": "ah-DUHN neh",
+          "meaning": "What is your name? (singular, informal)",
+          "example": "Merhaba, adın ne? Benim adım Ayşe."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Turkish?",
+          "options": [
+            "Merhaba",
+            "Güle güle",
+            "Evet",
+            "Hayır"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the most common response to \"Nasılsın?\" (How are you?)",
+          "options": [
+            "Teşekkür ederim",
+            "İyiyim",
+            "Adın ne?",
+            "Merhaba"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you ask \"What is your name?\" in Turkish?",
+          "options": [
+            "Nasılsın?",
+            "Adın ne?",
+            "İyiyim",
+            "Teşekkür ederim"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "The student is starting their first Turkish lesson. Begin by greeting them in Turkish: \"Merhaba!\" Then, introduce the phrase \"Nasılsın?\" (How are you?) and teach them how to respond with \"İyiyim\" (I'm fine) and \"Teşekkür ederim\" (Thank you). Encourage them to practice these phrases. Next, introduce \"Adın ne?\" (What is your name?) and guide them to say \"Benim adım [their name].\" Practice a short dialogue using all the new vocabulary. Focus on pronunciation and encourage repetition. Provide positive reinforcement throughout the lesson."
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Merhaba",
+          "phonetic": "mer-ha-BAH",
+          "meaning": "Hello",
+          "example": "Merhaba! Nasılsın?"
+        },
+        {
+          "word": "Nasılsın?",
+          "phonetic": "NAH-sul-sun",
+          "meaning": "How are you? (informal)",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "İyiyim, teşekkür ederim.",
+          "phonetic": "ee-YEE-yim, te-shek-KYUR eh-DE-rim",
+          "meaning": "I'm fine, thank you.",
+          "example": "İyiyim, teşekkür ederim. Sen nasılsın?"
+        },
+        {
+          "word": "Benim adım...",
+          "phonetic": "be-NIM ah-DUHM...",
+          "meaning": "My name is...",
+          "example": "Merhaba, benim adım Ayşe."
+        },
+        {
+          "word": "Memnun oldum.",
+          "phonetic": "mem-NOON ol-DOOM",
+          "meaning": "Nice to meet you.",
+          "example": "Benim adım Can. Memnun oldum."
+        },
+        {
+          "word": "Güle güle.",
+          "phonetic": "gyu-LEH gyu-LEH",
+          "meaning": "Goodbye.",
+          "example": "Şimdilik güle güle!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Turkish?",
+          "options": [
+            "Merhaba",
+            "Teşekkür ederim",
+            "Güle güle",
+            "Nasılsın?"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct response to \"Nasılsın?\" (How are you?)",
+          "options": [
+            "Benim adım...",
+            "Memnun oldum.",
+            "İyiyim, teşekkür ederim.",
+            "Güle güle."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"My name is...\" in Turkish?",
+          "options": [
+            "Nasılsın?",
+            "Benim adım...",
+            "Memnun oldum.",
+            "Merhaba!"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"Nice to meet you\"?",
+          "options": [
+            "Güle güle",
+            "İyiyim",
+            "Memnun oldum",
+            "Teşekkür ederim"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Merhaba! Ben senin Türkçe öğretmeninim. Bu derste, Türkçe'de temel selamlaşmaları ve kendini tanıtmayı öğreneceğiz. \"Merhaba\" (Hello) ile başlayacağız ve \"Nasılsın?\" (How are you?) gibi soruları ve \"İyiyim, teşekkür ederim.\" (I'm fine, thank you.) gibi yanıtları keşfedeceğiz. Ayrıca \"Benim adım...\" (My name is...) diyerek kendini nasıl tanıtacağını ve \"Memnun oldum.\" (Nice to meet you.) diyerek nasıl karşılık vereceğini de göreceğiz. Hadi pratik yapalım ve yeni kelimeleri öğrenelim! Hazır mısın?"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Merhaba",
+          "phonetic": "mer-ha-ba",
+          "meaning": "Hello",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "Nasılsın?",
+          "phonetic": "na-sıl-sın",
+          "meaning": "How are you?",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "İyiyim",
+          "phonetic": "i-yi-yim",
+          "meaning": "I'm good",
+          "example": "İyiyim, teşekkür ederim."
+        },
+        {
+          "word": "Teşekkür ederim",
+          "phonetic": "te-şek-kür e-de-rim",
+          "meaning": "Thank you",
+          "example": "Çok teşekkür ederim!"
+        },
+        {
+          "word": "Adın ne?",
+          "phonetic": "a-dın ne",
+          "meaning": "What's your name?",
+          "example": "Merhaba, adın ne?"
+        },
+        {
+          "word": "Benim adım...",
+          "phonetic": "be-nim a-dım",
+          "meaning": "My name is...",
+          "example": "Benim adım Ayşe."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Turkish?",
+          "options": [
+            "Teşekkür ederim",
+            "Merhaba",
+            "Nasılsın?",
+            "İyiyim"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Nasılsın?\" mean?",
+          "options": [
+            "Thank you",
+            "What's your name?",
+            "How are you?",
+            "My name is..."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you respond to \"Nasılsın?\" if you are good?",
+          "options": [
+            "Merhaba",
+            "Teşekkür ederim",
+            "İyiyim",
+            "Adın ne?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"Thank you\"?",
+          "options": [
+            "Adın ne?",
+            "Teşekkür ederim",
+            "Benim adım...",
+            "Nasılsın?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Türkçe dersinize hoş geldiniz! Bugün temel selamlaşmaları ve tanışma ifadelerini öğreneceğiz. Ben bir kelime söyleyeceğim, siz tekrar edeceksiniz. Sonra basit bir sohbet pratiği yapacağız. 'Merhaba' ile başlayalım. 'Merhaba' diyebilir misiniz?"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Merhaba",
+          "phonetic": "mehr-hah-bah",
+          "meaning": "Hello",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "Nasılsın?",
+          "phonetic": "nah-suhl-suhn",
+          "meaning": "How are you? (informal singular)",
+          "example": "Merhaba, nasılsın? Ben iyiyim."
+        },
+        {
+          "word": "İyiyim",
+          "phonetic": "ee-yee-yim",
+          "meaning": "I am good/fine",
+          "example": "Nasılsın? İyiyim, teşekkür ederim."
+        },
+        {
+          "word": "Teşekkür ederim",
+          "phonetic": "teh-shek-kyoor eh-deh-rim",
+          "meaning": "Thank you",
+          "example": "İyiyim, teşekkür ederim. Sen nasılsın?"
+        },
+        {
+          "word": "Güle güle",
+          "phonetic": "gyoo-leh gyoo-leh",
+          "meaning": "Goodbye (said by the person staying)",
+          "example": "Görüşürüz, güle güle!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Turkish?",
+          "options": [
+            "Merhaba",
+            "Güle güle",
+            "Teşekkür ederim",
+            "Nasılsın?"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct response to \"Nasılsın?\" if you are feeling good?",
+          "options": [
+            "Güle güle",
+            "Merhaba",
+            "İyiyim",
+            "Evet"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"Thank you\"?",
+          "options": [
+            "Nasılsın?",
+            "Güle güle",
+            "Merhaba",
+            "Teşekkür ederim"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Türkçe dersinize hoş geldiniz! Bugün, bazı temel selamlaşma ifadelerini öğreneceğiz. Ben bir kelime söyleyeceğim, siz de tekrar edeceksiniz. Sonra, bunları basit cümlelerde kullanmayı pratik yapacağız. 'Merhaba' ile başlayalım!"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Merhaba",
+          "phonetic": "mer-ha-BAH",
+          "meaning": "Hello",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "Nasılsın?",
+          "phonetic": "NAH-sul-sun",
+          "meaning": "How are you? (informal singular)",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "İyiyim",
+          "phonetic": "ee-YEE-yim",
+          "meaning": "I'm fine / I'm good",
+          "example": "İyiyim, teşekkür ederim."
+        },
+        {
+          "word": "Teşekkür ederim",
+          "phonetic": "te-shek-KYUR eh-DE-rim",
+          "meaning": "Thank you",
+          "example": "Teşekkür ederim, sen nasılsın?"
+        },
+        {
+          "word": "Adın ne?",
+          "phonetic": "AH-dun ne",
+          "meaning": "What's your name? (informal singular)",
+          "example": "Merhaba, adın ne?"
+        },
+        {
+          "word": "Benim adım...",
+          "phonetic": "be-NIM AH-dum",
+          "meaning": "My name is...",
+          "example": "Benim adım Ayşe."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Turkish?",
+          "options": [
+            "Nasılsın?",
+            "Merhaba",
+            "Teşekkür ederim",
+            "Adın ne?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"How are you?\" in Turkish?",
+          "options": [
+            "İyiyim",
+            "Merhaba",
+            "Nasılsın?",
+            "Benim adım"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"Nasılsın?\", what is a common response if you are well?",
+          "options": [
+            "Adın ne?",
+            "Teşekkür ederim",
+            "İyiyim",
+            "Merhaba"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you express \"Thank you\" in Turkish?",
+          "options": [
+            "Nasılsın?",
+            "İyiyim",
+            "Teşekkür ederim",
+            "Benim adım"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Merhaba! Ben senin yapay zeka öğretmenin. Bugün Türkçe'deki en temel selamlaşma ve tanışma ifadelerinden bazılarını öğreneceğiz. \"Merhaba\" (Hello), \"Nasılsın?\" (How are you?), \"İyiyim\" (I'm fine), \"Teşekkür ederim\" (Thank you), \"Adın ne?\" (What's your name?) ve \"Benim adım...\" (My name is...) gibi ifadeleri ele alacağız. Bu ifadeleri öğrenmek, Türkçe konuşmaya başlamak için harika bir başlangıç noktasıdır. Ben kelimeleri ve cümleleri söyleyeceğim, sen de benden sonra tekrar edebilirsin. Hazır mısın? \"Merhaba\" ile başlayalım..."
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Merhaba",
+          "phonetic": "mer-ha-BA",
+          "meaning": "Hello",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "Nasılsın?",
+          "phonetic": "na-SİL-sın",
+          "meaning": "How are you? (informal singular)",
+          "example": "Merhaba Ayşe, nasılsın?"
+        },
+        {
+          "word": "İyiyim",
+          "phonetic": "ee-YEE-yim",
+          "meaning": "I'm fine / I'm good",
+          "example": "İyiyim, teşekkür ederim."
+        },
+        {
+          "word": "Adın ne?",
+          "phonetic": "a-DİN ne",
+          "meaning": "What's your name? (informal singular)",
+          "example": "Merhaba, adın ne?"
+        },
+        {
+          "word": "Benim adım...",
+          "phonetic": "be-NİM a-DİM",
+          "meaning": "My name is...",
+          "example": "Benim adım Can."
+        },
+        {
+          "word": "Memnun oldum",
+          "phonetic": "mem-NUN ol-DUM",
+          "meaning": "Nice to meet you",
+          "example": "Tanıştığımıza memnun oldum."
+        },
+        {
+          "word": "Güle güle",
+          "phonetic": "gü-LE gü-LE",
+          "meaning": "Goodbye (said by the person staying)",
+          "example": "Güle güle, yarın görüşürüz!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Turkish?",
+          "options": [
+            "Güle güle",
+            "Merhaba",
+            "Teşekkür ederim",
+            "Evet"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to \"Nasılsın?\" (How are you?)",
+          "options": [
+            "Benim adım...",
+            "İyiyim",
+            "Adın ne?",
+            "Memnun oldum"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"What's your name?\" to a friend?",
+          "options": [
+            "Nasılsın?",
+            "Memnun oldum",
+            "Adın ne?",
+            "Güle güle"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct phrase for \"My name is Ayşe.\"",
+          "options": [
+            "Adın Ayşe.",
+            "Ayşe benim.",
+            "Benim adım Ayşe.",
+            "Ayşe nasılsın?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Merhaba! Türkçe dersinize hoş geldiniz! Ben sizin Türkçe öğretmeninizim. Bugün çok temel ve önemli bir konu olan 'Selamlaşma ve Tanışma' ifadelerini öğreneceğiz. İlk olarak 'Merhaba' ve 'Nasılsın?' gibi kelimelere bakacağız. Daha sonra 'Adın ne?' diye sormayı ve 'Benim adım...' diyerek kendinizi tanıtmayı öğreneceğiz. Bu ifadeleri günlük hayatta nasıl kullanacağımızı pratik edeceğiz. Hazır mısınız? Başlayalım!"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Merhaba",
+          "phonetic": "mer-ha-BA",
+          "meaning": "Hello",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "Nasılsın?",
+          "phonetic": "na-SİL-sın",
+          "meaning": "How are you? (informal, singular)",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "İyiyim",
+          "phonetic": "ee-YEE-yim",
+          "meaning": "I'm good / I'm fine",
+          "example": "İyiyim, teşekkür ederim."
+        },
+        {
+          "word": "Teşekkür ederim",
+          "phonetic": "te-shek-KÜR e-DE-rim",
+          "meaning": "Thank you",
+          "example": "Teşekkür ederim, sen nasılsın?"
+        },
+        {
+          "word": "Adın ne?",
+          "phonetic": "a-DİN ne",
+          "meaning": "What's your name? (informal, singular)",
+          "example": "Merhaba, adın ne?"
+        },
+        {
+          "word": "Benim adım...",
+          "phonetic": "be-NİM a-DİM",
+          "meaning": "My name is...",
+          "example": "Benim adım Ayşe."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Turkish?",
+          "options": [
+            "Nasılsın?",
+            "Merhaba",
+            "Teşekkür ederim",
+            "İyiyim"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Turkish phrase for \"How are you?\" (informal, singular)",
+          "options": [
+            "Adın ne?",
+            "Benim adım",
+            "Nasılsın?",
+            "Teşekkür ederim"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you respond if someone asks \"Nasılsın?\" and you are good?",
+          "options": [
+            "Merhaba",
+            "Teşekkür ederim",
+            "İyiyim",
+            "Adın ne?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Turkish?",
+          "options": [
+            "İyiyim",
+            "Merhaba",
+            "Teşekkür ederim",
+            "Nasılsın?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"What's your name?\" (informal, singular)",
+          "options": [
+            "Benim adım",
+            "Nasılsın?",
+            "Adın ne?",
+            "Teşekkür ederim"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you introduce your name, saying \"My name is [your name]\"?",
+          "options": [
+            "Adın ne?",
+            "Benim adım...",
+            "Nasılsın?",
+            "Merhaba"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Merhaba! Ben senin Türkçe öğretmeninim. Bu derste, temel Türkçe selamlaşmaları ve kendini tanıtmayı öğreneceğiz. Ben kelimeyi veya ifadeyi söyleyeceğim, sen de benden sonra tekrar et. 'Merhaba', 'Nasılsın?', 'İyiyim', 'Teşekkür ederim', 'Adın ne?' ve 'Benim adım...' gibi ifadeleri pratik yapacağız. Hazır mısın? Hadi başlayalım!"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Merhaba",
+          "phonetic": "mer-ha-ba",
+          "meaning": "Hello",
+          "example": "Merhaba! Nasılsın?"
+        },
+        {
+          "word": "Nasılsın?",
+          "phonetic": "na-sıl-sın?",
+          "meaning": "How are you?",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "İyiyim, teşekkür ederim.",
+          "phonetic": "iy-y-im, te-şek-kür e-de-rim",
+          "meaning": "I'm fine, thank you.",
+          "example": "Nasılsın? İyiyim, teşekkür ederim."
+        },
+        {
+          "word": "Adın ne?",
+          "phonetic": "a-dın ne?",
+          "meaning": "What's your name?",
+          "example": "Merhaba, adın ne?"
+        },
+        {
+          "word": "Benim adım...",
+          "phonetic": "be-nim a-dım...",
+          "meaning": "My name is...",
+          "example": "Benim adım Ayşe."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Turkish?",
+          "options": [
+            "Güle güle",
+            "Merhaba",
+            "Teşekkür ederim",
+            "Evet"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to 'Nasılsın?' (How are you?)",
+          "options": [
+            "Merhaba",
+            "İyiyim, teşekkür ederim",
+            "Adın ne?",
+            "Hayır"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you ask 'What's your name?' in Turkish?",
+          "options": [
+            "Nasılsın?",
+            "Benim adım...",
+            "Adın ne?",
+            "Evet"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Merhaba! Türkçe öğrenmeye hazır mısın? Bugün 'Merhaba' ve 'Nasılsın?' gibi temel selamlaşmaları öğreneceğiz. Ben kelimeyi söyleyeceğim, sen de benden sonra tekrar et. Ayrıca basit cümleler kurmayı da pratik yapacağız. Haydi başlayalım!"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Merhaba",
+          "phonetic": "mer-ha-ba",
+          "meaning": "Hello",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "Nasılsın?",
+          "phonetic": "na-sıl-sın",
+          "meaning": "How are you? (informal)",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "İyiyim",
+          "phonetic": "ee-yee-yim",
+          "meaning": "I'm good / I'm fine",
+          "example": "İyiyim, teşekkür ederim."
+        },
+        {
+          "word": "Teşekkür ederim",
+          "phonetic": "te-shek-kür e-de-rim",
+          "meaning": "Thank you",
+          "example": "Teşekkür ederim, sen nasılsın?"
+        },
+        {
+          "word": "Görüşürüz",
+          "phonetic": "gö-rü-şü-rüz",
+          "meaning": "See you / Goodbye (informal)",
+          "example": "Görüşürüz, iyi günler!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Turkish word for \"Hello\"?",
+          "options": [
+            "Merhaba",
+            "Güle güle",
+            "Evet",
+            "Hayır"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How would you respond to \"Nasılsın?\" (How are you?) if you are feeling good?",
+          "options": [
+            "Hayır",
+            "İyiyim",
+            "Teşekkür ederim",
+            "Görüşürüz"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"Thank you\" in Turkish?",
+          "options": [
+            "Nasılsın?",
+            "Görüşürüz",
+            "Teşekkür ederim",
+            "Merhaba"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"See you\" in Turkish?",
+          "options": [
+            "Merhaba",
+            "Nasılsın?",
+            "İyiyim",
+            "Görüşürüz"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Merhaba! Ben senin Türkçe öğretmeninim. Bu derste, Türkçe'deki temel selamlaşmaları ve vedalaşmaları öğreneceğiz. \"Merhaba\" (Hello), \"Nasılsın?\" (How are you?), \"İyiyim\" (I'm good), \"Teşekkür ederim\" (Thank you) ve \"Görüşürüz\" (See you) gibi ifadeleri inceleyeceğiz. Bu ifadeleri nasıl kullanacağımızı ve telaffuz edeceğimizi pratik edeceğiz. Hazır mısın? Hadi başlayalım!"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Merhaba",
+          "phonetic": "mer-ha-BAH",
+          "meaning": "Hello",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "Nasılsın?",
+          "phonetic": "NAH-sıl-sın",
+          "meaning": "How are you? (informal, singular)",
+          "example": "Merhaba, nasılsın? Ben iyiyim."
+        },
+        {
+          "word": "İyiyim",
+          "phonetic": "ee-YEE-yim",
+          "meaning": "I'm fine / I'm good",
+          "example": "Nasılsın? İyiyim, teşekkür ederim."
+        },
+        {
+          "word": "Teşekkür ederim",
+          "phonetic": "te-shek-KÜR eh-DE-rim",
+          "meaning": "Thank you",
+          "example": "Çok teşekkür ederim!"
+        },
+        {
+          "word": "Adın ne?",
+          "phonetic": "AH-dın ne",
+          "meaning": "What's your name? (informal, singular)",
+          "example": "Merhaba, adın ne?"
+        },
+        {
+          "word": "Benim adım...",
+          "phonetic": "be-NIM AH-dım",
+          "meaning": "My name is...",
+          "example": "Benim adım Ayşe."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Turkish?",
+          "options": [
+            "Teşekkür ederim",
+            "Merhaba",
+            "Nasılsın?",
+            "İyiyim"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"How are you?\" (informal)?",
+          "options": [
+            "Adın ne?",
+            "Benim adım...",
+            "Nasılsın?",
+            "İyiyim"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say \"Thank you\" in Turkish?",
+          "options": [
+            "Merhaba",
+            "İyiyim",
+            "Teşekkür ederim",
+            "Adın ne?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks you \"Nasılsın?\", and you are fine, how would you respond?",
+          "options": [
+            "Teşekkür ederim",
+            "Merhaba",
+            "İyiyim",
+            "Adın ne?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"Adın ne?\" mean?",
+          "options": [
+            "How are you?",
+            "My name is...",
+            "What's your name?",
+            "Thank you"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Merhaba! Bu derste, temel Türkçe selamlaşmaları ve kendini tanıtma ifadelerini öğreneceğiz. \"Merhaba\" gibi basit bir selamlaşma ile başlayıp, \"Nasılsın?\" diye nasıl sorulacağını ve \"İyiyim, teşekkür ederim\" diyerek nasıl yanıt verileceğini öğreneceğiz. Ayrıca \"Adın ne?\" diyerek birinin adını nasıl soracağımızı ve \"Benim adım...\" diyerek kendi adımızı nasıl söyleyeceğimizi de keşfedeceğiz. Haydi başlayalım!"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Merhaba",
+          "phonetic": "mer-ha-BA",
+          "meaning": "Hello",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "Nasılsın?",
+          "phonetic": "na-SİL-sın",
+          "meaning": "How are you? (informal singular)",
+          "example": "Merhaba, nasılsın? Ben iyiyim, teşekkür ederim."
+        },
+        {
+          "word": "İyiyim",
+          "phonetic": "ee-YEE-yim",
+          "meaning": "I'm fine / I'm good",
+          "example": "Nasılsın? İyiyim, teşekkür ederim."
+        },
+        {
+          "word": "Teşekkür ederim",
+          "phonetic": "te-shek-KÜR e-de-RİM",
+          "meaning": "Thank you",
+          "example": "Yardımınız için teşekkür ederim."
+        },
+        {
+          "word": "Adın ne?",
+          "phonetic": "a-DİN ne",
+          "meaning": "What is your name? (informal singular)",
+          "example": "Merhaba, adın ne?"
+        },
+        {
+          "word": "Benim adım...",
+          "phonetic": "be-NİM a-DİM...",
+          "meaning": "My name is...",
+          "example": "Benim adım Ayşe."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Turkish?",
+          "options": [
+            "Merhaba",
+            "Güle güle",
+            "Afiyet olsun",
+            "Hoşça kal"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct response to \"Nasılsın?\" (How are you?)",
+          "options": [
+            "Benim adım...",
+            "İyiyim",
+            "Teşekkür ederim",
+            "Adın ne?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"What is your name?\" in Turkish?",
+          "options": [
+            "Nasılsın?",
+            "Teşekkür ederim",
+            "Adın ne?",
+            "Merhaba"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Complete the sentence: \"Benim adım ____.\" (My name is ____.)",
+          "options": [
+            "Nasılsın",
+            "İyiyim",
+            "Teşekkür ederim",
+            "Ayşe"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Merhaba! Türkçe dersine hoş geldin! Bugün, temel selamlaşma ve tanışma ifadelerini öğreneceğiz. Ben bir kelime veya ifade söyleyeceğim, sen de benden sonra tekrar et. Sonra, bu kelimeyi basit bir cümlede kullanmaya çalışacağız. \"Merhaba\" ile başlayalım!"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Merhaba",
+          "phonetic": "mer-ha-ba",
+          "meaning": "Hello / Hi",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "Nasılsın?",
+          "phonetic": "na-sıl-sın",
+          "meaning": "How are you?",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "İyiyim, teşekkür ederim.",
+          "phonetic": "i-yi-yim, te-şek-kür e-de-rim",
+          "meaning": "I'm fine, thank you.",
+          "example": "Nasılsın? İyiyim, teşekkür ederim."
+        },
+        {
+          "word": "Adın ne?",
+          "phonetic": "a-dın ne",
+          "meaning": "What's your name?",
+          "example": "Merhaba, adın ne?"
+        },
+        {
+          "word": "Memnun oldum.",
+          "phonetic": "mem-nun ol-dum",
+          "meaning": "Nice to meet you.",
+          "example": "Adım Ayşe, memnun oldum."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Turkish?",
+          "options": [
+            "Güle güle",
+            "Merhaba",
+            "Teşekkür ederim",
+            "Nasılsın?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to \"Nasılsın?\" (How are you?)",
+          "options": [
+            "Adın ne?",
+            "Memnun oldum.",
+            "İyiyim, teşekkür ederim.",
+            "Merhaba."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you ask \"What's your name?\" in Turkish?",
+          "options": [
+            "Nasılsın?",
+            "Memnun oldum.",
+            "Adın ne?",
+            "Güle güle."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"Nice to meet you\"?",
+          "options": [
+            "Merhaba",
+            "İyiyim",
+            "Memnun oldum",
+            "Teşekkür ederim"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Merhaba! Ben senin Türkçe öğretmeninim. Bugün A1 seviyesinde temel selamlaşma ve tanışma ifadelerini öğreneceğiz. Dersimize 'Merhaba' kelimesiyle başlayacağız. Bu, 'Hello' veya 'Hi' anlamına gelir. Benimle birlikte tekrar et: **Merhaba**. Harika! Şimdi, birine nasıl olduğunu sormak için 'Nasılsın?' deriz. Bu da 'How are you?' demektir. Tekrar et: **Nasılsın?**. Çok güzel! Eğer iyiysen, 'İyiyim, teşekkür ederim' diyebilirsin. Bu, 'I'm fine, thank you' demek. Hadi tekrar edelim: **İyiyim, teşekkür ederim**. Birinin adını sormak için 'Adın ne?' deriz. Bu da 'What's your name?' anlamına gelir. Benimle tekrar et: **Adın ne?**. Son olarak, biriyle tanıştığında 'Memnun oldum' dersin, bu da 'Nice to meet you' anlamına gelir. Benimle tekrar et: **Memnun oldum**. Şimdi bu ifadeleri kullanarak pratik yapmaya hazır mısın?"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "kalkmak",
+          "phonetic": "kal-MAK",
+          "meaning": "to get up, to wake up",
+          "example": "Her sabah saat yedide kalkarım."
+        },
+        {
+          "word": "kahvaltı yapmak",
+          "phonetic": "kah-val-TUH yap-MAK",
+          "meaning": "to have breakfast",
+          "example": "Genellikle evde kahvaltı yaparım."
+        },
+        {
+          "word": "işe gitmek",
+          "phonetic": "i-SHEH git-MEK",
+          "meaning": "to go to work",
+          "example": "Otobüsle işe giderim."
+        },
+        {
+          "word": "yemek yemek",
+          "phonetic": "ye-MEK ye-MEK",
+          "meaning": "to eat (a meal)",
+          "example": "Akşam yemeğini ailemle yerim."
+        },
+        {
+          "word": "uyumak",
+          "phonetic": "u-yu-MAK",
+          "meaning": "to sleep",
+          "example": "Genellikle gece on birde uyurum."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How would you say \"I get up\" in Turkish?",
+          "options": [
+            "Kalkarım",
+            "Giderim",
+            "Yaparım",
+            "Yerim"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Turkish phrase means \"to have breakfast\"?",
+          "options": [
+            "İşe gitmek",
+            "Kahvaltı yapmak",
+            "Yemek yemek",
+            "Uyumak"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Complete the sentence: \"Ben her gün ______.\" (I ______ every day.)",
+          "options": [
+            "işe giderim",
+            "kahvaltı yapar",
+            "uyur",
+            "kalkmak"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "Merhaba! Bugün 'Günlük Aktiviteler' dersimize hoş geldiniz! Bu derste günlük rutinlerimizle ilgili temel Türkçe fiilleri öğreneceğiz. İlk olarak, yeni kelimelerimize bakalım:\n1.  **kalkmak** (to get up)\n2.  **kahvaltı yapmak** (to have breakfast)\n3.  **işe gitmek** (to go to work)\n4.  **yemek yemek** (to eat)\n5.  **uyumak** (to sleep)\n\nBu kelimeleri benimle birlikte tekrar edebilir misiniz? Sonra, her birini kullanarak basit birer cümle kurmaya çalışalım. Örneğin, \"Sen ne zaman kalkarsın?\" diye sorabilirim. Cevabınızı \"Ben saat yedide kalkarım.\" gibi verebilirsiniz. Cümle kurarken fiil çekimlerine dikkat edelim, özellikle 'Ben' ve 'Sen' için. Hazır olduğunuzda, öğrendiklerimizi pekiştirmek için kısa bir teste geçeceğiz. Takıldığınız yerlerde veya sorularınız olduğunda çekinmeden sorun lütfen. Başlayalım mı?"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Gelecek",
+          "phonetic": "geh-leh-JEK",
+          "meaning": "Future",
+          "example": "Gelecek hafta sonu ne yapacaksın?"
+        },
+        {
+          "word": "Planlamak",
+          "phonetic": "plahn-LAH-mak",
+          "meaning": "To plan",
+          "example": "Tatilimi planlamak istiyorum."
+        },
+        {
+          "word": "Buluşmak",
+          "phonetic": "boo-LOOSH-mak",
+          "meaning": "To meet",
+          "example": "Yarın arkadaşlarla buluşacağız."
+        },
+        {
+          "word": "Hafta sonu",
+          "phonetic": "hahf-TAH soh-NOO",
+          "meaning": "Weekend",
+          "example": "Hafta sonu sinemaya gideceğim."
+        },
+        {
+          "word": "Ne zaman?",
+          "phonetic": "neh zah-MAHN",
+          "meaning": "When?",
+          "example": "Parti ne zaman başlayacak?"
+        },
+        {
+          "word": "Yapacağım",
+          "phonetic": "yah-pah-JAH-yım",
+          "meaning": "I will do/make",
+          "example": "Ödevimi bu akşam yapacağım."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does 'gelecek' mean?",
+          "options": [
+            "Past",
+            "Present",
+            "Future",
+            "Yesterday"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means 'weekend'?",
+          "options": [
+            "Hafta içi",
+            "Hafta sonu",
+            "Ay",
+            "Yıl"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say 'I will go' in Turkish?",
+          "options": [
+            "Gidiyorum",
+            "Gittim",
+            "Gideceğim",
+            "Giderim"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct word to complete the sentence: 'Yarın arkadaşlarımla ______ (I will meet).'",
+          "options": [
+            "buluşuyorum",
+            "buluştum",
+            "buluşacağım",
+            "buluşurum"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Türkçe dersinize hoş geldiniz! Bugün, 'gelecek zaman' (future tense) konusunu ve 'plan yapma' (making plans) ile ilgili kelimeleri keşfedeceğiz. Yeni kelimeler ve gelecek zamanı kullanarak cümleler kurma pratiği yapacağız. Örneğin, 'gelecek' (future) ve 'planlamak' (to plan) gibi kelimeleri öğreneceğiz. Haydi başlayalım!"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Güzel",
+          "phonetic": "goo-zel",
+          "meaning": "beautiful, nice",
+          "example": "Bu çiçek çok güzel."
+        },
+        {
+          "word": "Yakışıklı",
+          "phonetic": "ya-kuh-shuhk-luh",
+          "meaning": "handsome (for men)",
+          "example": "O çok yakışıklı bir adam."
+        },
+        {
+          "word": "Uzun",
+          "phonetic": "oo-zoon",
+          "meaning": "tall, long",
+          "example": "Benim saçlarım uzun."
+        },
+        {
+          "word": "Kısa",
+          "phonetic": "kuh-sah",
+          "meaning": "short",
+          "example": "Bu etek çok kısa."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which word means \"beautiful\" or \"nice\"?",
+          "options": [
+            "Güzel",
+            "Uzun",
+            "Kısa",
+            "Yakışıklı"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How would you describe a handsome man in Turkish?",
+          "options": [
+            "O güzel bir adam.",
+            "O yakışıklı bir adam.",
+            "O uzun bir adam.",
+            "O kısa bir adam."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the opposite of \"uzun\" (tall/long).",
+          "options": [
+            "Güzel",
+            "Yakışıklı",
+            "Kısa",
+            "Büyük"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Merhaba! Ben senin Türkçe öğretmeninim. Bugün seninle birlikte yeni ve ilginç kelimeler öğreneceğiz. Özellikle insanları ve nesneleri tanımlamak için kullandığımız sıfatlara odaklanacağız. Örneğin, \"güzel\" (beautiful) ve \"yakışıklı\" (handsome) gibi kelimeleri ele alacağız. Bu kelimelerin nasıl kullanıldığını örnek cümlelerle açıklayacağım ve ardından birlikte kendi cümlelerimizi kuracağız. Hazır mısın?"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Merhaba",
+          "phonetic": "mer-ha-BAH",
+          "meaning": "Hello",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "Nasılsın?",
+          "phonetic": "nah-SUHL-suhn",
+          "meaning": "How are you? (informal)",
+          "example": "Merhaba, nasılsın?"
+        },
+        {
+          "word": "İyiyim, teşekkür ederim.",
+          "phonetic": "ee-YEE-yim, teh-shek-kyoor eh-deh-RIM",
+          "meaning": "I'm fine, thank you.",
+          "example": "İyiyim, teşekkür ederim. Sen nasılsın?"
+        },
+        {
+          "word": "Adın ne?",
+          "phonetic": "ah-DUHN neh",
+          "meaning": "What's your name? (informal)",
+          "example": "Merhaba, adın ne?"
+        },
+        {
+          "word": "Memnun oldum.",
+          "phonetic": "mem-NOON ol-DOOM",
+          "meaning": "Nice to meet you.",
+          "example": "Benim adım Ayşe. Memnun oldum."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Turkish?",
+          "options": [
+            "Merhaba",
+            "Teşekkür ederim",
+            "Nasılsın",
+            "Güle güle"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does \"Nasılsın?\" mean?",
+          "options": [
+            "Thank you",
+            "How are you?",
+            "My name is...",
+            "Goodbye"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you respond to \"Nasılsın?\" if you are fine?",
+          "options": [
+            "Adın ne?",
+            "Memnun oldum.",
+            "İyiyim, teşekkür ederim.",
+            "Merhaba."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"What's your name?\"",
+          "options": [
+            "Nasılsın?",
+            "Memnun oldum.",
+            "Adın ne?",
+            "Merhaba."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Merhaba! Welcome to your Turkish lesson! Today, we're going to learn some essential Turkish greetings and introductions. We'll cover phrases like \"Merhaba\" (Hello), \"Nasılsın?\" (How are you?), and \"Adın ne?\" (What's your name?). These are crucial for starting conversations in Turkish. Let's practice saying them out loud and understanding when to use each one. Are you ready to begin your journey into Turkish?"
+    }
+  ]
+}

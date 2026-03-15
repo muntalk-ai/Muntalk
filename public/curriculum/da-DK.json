@@ -1,0 +1,1311 @@
+{
+  "langCode": "da-DK",
+  "langLabel": "Danish",
+  "langNative": "Dansk",
+  "generatedAt": "2026-03-15T05:24:49.565Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "hai",
+          "meaning": "Hi, Hello",
+          "example": "Hej, hvordan går det?"
+        },
+        {
+          "word": "Jeg hedder",
+          "phonetic": "yai heh-ther",
+          "meaning": "My name is",
+          "example": "Jeg hedder Anna."
+        },
+        {
+          "word": "Hvad hedder du?",
+          "phonetic": "vad heh-ther doo",
+          "meaning": "What is your name?",
+          "example": "Hej, hvad hedder du?"
+        },
+        {
+          "word": "Rart at møde dig",
+          "phonetic": "rart at moh-the dai",
+          "meaning": "Nice to meet you",
+          "example": "Rart at møde dig, Peter."
+        },
+        {
+          "word": "Tak",
+          "phonetic": "tak",
+          "meaning": "Thank you",
+          "example": "Tak for hjælpen."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Danish?",
+          "options": [
+            "Hej",
+            "Tak",
+            "Ja",
+            "Nej"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Complete the sentence: \"Jeg ______ Peter.\" (My name is Peter.)",
+          "options": [
+            "er",
+            "hedder",
+            "har",
+            "bor"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Hvad hedder du?\" mean?",
+          "options": [
+            "How are you?",
+            "Where are you from?",
+            "What is your name?",
+            "How old are you?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Nice to meet you\" in Danish?",
+          "options": [
+            "Goddag",
+            "Farvel",
+            "Rart at møde dig",
+            "Undskyld"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor teaching Danish. Your goal is to introduce the learner to basic Danish greetings and self-introductions. \n1. Start by saying 'Hej!' (Hello!) and ask the learner to repeat it. \n2. Introduce the phrase 'Jeg hedder...' (My name is...) and explain its meaning. Ask the learner to say 'Jeg hedder [their name]'. \n3. Then, introduce 'Hvad hedder du?' (What is your name?) and explain its meaning. Ask the learner to ask you 'Hvad hedder du?' \n4. Respond with 'Jeg hedder [your AI tutor name, e.g., TutorBot]'. \n5. Finally, introduce 'Rart at møde dig' (Nice to meet you) and encourage the learner to use it in a short practice dialogue with you."
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "[hai]",
+          "meaning": "Hello / Hi",
+          "example": "Hej, hvordan går det?"
+        },
+        {
+          "word": "Tak",
+          "phonetic": "[tak]",
+          "meaning": "Thank you",
+          "example": "Tak for hjælpen."
+        },
+        {
+          "word": "Ja",
+          "phonetic": "[ja]",
+          "meaning": "Yes",
+          "example": "Ja, det er rigtigt."
+        },
+        {
+          "word": "Nej",
+          "phonetic": "[nai]",
+          "meaning": "No",
+          "example": "Nej, det er det ikke."
+        },
+        {
+          "word": "Undskyld",
+          "phonetic": "[ˈɔnˌskylˀ]",
+          "meaning": "Excuse me / Sorry",
+          "example": "Undskyld, hvor er toilettet?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Danish?",
+          "options": [
+            "Tak",
+            "Hej",
+            "Ja",
+            "Nej"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Danish word for \"Thank you\"?",
+          "options": [
+            "Undskyld",
+            "Ja",
+            "Tak",
+            "Hej"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Danish word means \"Yes\"?",
+          "options": [
+            "Nej",
+            "Ja",
+            "Tak",
+            "Undskyld"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Velkommen til din dansklektion! I dag skal vi lære nogle vigtige danske hilsner og høflighedsfraser. Vi vil dække, hvordan man siger 'hej', 'tak', 'ja', 'nej' og 'undskyld'. Lyt godt til udtalen og prøv at gentage efter mig. Lad os starte med 'hej' – på dansk siger vi 'Hej'. Kan du prøve at sige 'Hej'?"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "Hai",
+          "meaning": "Hi / Hello",
+          "example": "Hej, hvordan går det?"
+        },
+        {
+          "word": "Godmorgen",
+          "phonetic": "Go-mor-gen",
+          "meaning": "Good morning",
+          "example": "Godmorgen, Peter!"
+        },
+        {
+          "word": "Farvel",
+          "phonetic": "Far-vel",
+          "meaning": "Goodbye",
+          "example": "Farvel, vi ses i morgen!"
+        },
+        {
+          "word": "Tak",
+          "phonetic": "Tak",
+          "meaning": "Thanks / Thank you",
+          "example": "Tak for hjælpen!"
+        },
+        {
+          "word": "Jeg hedder...",
+          "phonetic": "Yai heh-der",
+          "meaning": "My name is...",
+          "example": "Hej, jeg hedder Anna."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" or \"Hello\" in Danish?",
+          "options": [
+            "Hej",
+            "Farvel",
+            "Tak",
+            "Godmorgen"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Danish word for \"Good morning\"?",
+          "options": [
+            "Godnat",
+            "Godaften",
+            "Godmorgen",
+            "Goddag"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If you want to say \"Goodbye\" in Danish, what do you say?",
+          "options": [
+            "Hej",
+            "Farvel",
+            "Tak",
+            "Undskyld"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"My name is...\" in Danish?",
+          "options": [
+            "Jeg er...",
+            "Jeg har...",
+            "Jeg hedder...",
+            "Jeg kan..."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hej! I denne lektion skal vi lære nogle grundlæggende danske hilsner. Vi vil dække 'Hej', 'Godmorgen' og 'Farvel'. Jeg vil hjælpe dig med at øve udtale og bruge dem i enkle sætninger. Lad os starte med 'Hej'. Kan du gentage efter mig: 'Hej'?"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "[haɪ̯]",
+          "meaning": "Hello / Hi",
+          "example": "Hej, hvordan går det?"
+        },
+        {
+          "word": "Farvel",
+          "phonetic": "[ˈfɑːˌvɛl]",
+          "meaning": "Goodbye",
+          "example": "Farvel, vi ses!"
+        },
+        {
+          "word": "Tak",
+          "phonetic": "[tɑk]",
+          "meaning": "Thank you",
+          "example": "Tak for hjælpen."
+        },
+        {
+          "word": "Ja",
+          "phonetic": "[jæ]",
+          "meaning": "Yes",
+          "example": "Ja, det er rigtigt."
+        },
+        {
+          "word": "Nej",
+          "phonetic": "[naɪ̯]",
+          "meaning": "No",
+          "example": "Nej, det er det ikke."
+        },
+        {
+          "word": "Undskyld",
+          "phonetic": "[ˈunˌskylˀd]",
+          "meaning": "Excuse me / Sorry",
+          "example": "Undskyld, hvor er toilettet?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Danish?",
+          "options": [
+            "Farvel",
+            "Tak",
+            "Hej",
+            "Nej"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Danish word means 'Thank you'?",
+          "options": [
+            "Ja",
+            "Tak",
+            "Undskyld",
+            "Hej"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If you want to say 'Goodbye' in Danish, what do you say?",
+          "options": [
+            "Hej",
+            "Ja",
+            "Farvel",
+            "Nej"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hej! Jeg er din AI-tutor. I dag skal vi lære nogle grundlæggende danske hilsner. Vi vil dække 'Hej', 'Farvel' og 'Tak'. Lad os starte med 'Hej'. Kan du prøve at sige 'Hej'?"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "at spise",
+          "phonetic": "ahd SPEE-seh",
+          "meaning": "to eat",
+          "example": "Jeg kan godt lide at spise morgenmad."
+        },
+        {
+          "word": "at drikke",
+          "phonetic": "ahd DREK-keh",
+          "meaning": "to drink",
+          "example": "Vil du have noget at drikke?"
+        },
+        {
+          "word": "at sove",
+          "phonetic": "ahd SOH-veh",
+          "meaning": "to sleep",
+          "example": "Jeg skal sove nu."
+        },
+        {
+          "word": "at læse",
+          "phonetic": "ahd LAY-seh",
+          "meaning": "to read",
+          "example": "Hun elsker at læse bøger."
+        },
+        {
+          "word": "at arbejde",
+          "phonetic": "ahd AR-bye-deh",
+          "meaning": "to work",
+          "example": "Jeg skal arbejde i morgen."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Danish verb means \"to eat\"?",
+          "options": [
+            "at drikke",
+            "at spise",
+            "at sove",
+            "at læse"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Danish verb for \"to drink\".",
+          "options": [
+            "at spise",
+            "at arbejde",
+            "at drikke",
+            "at sove"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Complete the sentence: \"Jeg skal ____ nu.\" (I need to sleep now.)",
+          "options": [
+            "spise",
+            "drikke",
+            "læse",
+            "sove"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "What does the Danish verb \"at læse\" mean in English?",
+          "options": [
+            "to work",
+            "to read",
+            "to sleep",
+            "to eat"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Hej! Velkommen til din danske lektion! I dag skal vi dykke ned i nogle af de mest almindelige danske verber. Vi vil lære at sige og bruge ord som 'at spise' (to eat), 'at drikke' (to drink), 'at sove' (to sleep), 'at læse' (to read) og 'at arbejde' (to work). Jeg vil guide dig gennem udtalen og vise dig, hvordan du kan bruge dem i simple sætninger. Mit mål er, at du føler dig mere sikker på at tale om dine daglige aktiviteter på dansk. Lad os begynde!"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "[hai]",
+          "meaning": "Hello / Hi",
+          "example": "Hej, hvordan går det?"
+        },
+        {
+          "word": "God morgen",
+          "phonetic": "[goð ˈmɔɐ̯n]",
+          "meaning": "Good morning",
+          "example": "God morgen! Har du sovet godt?"
+        },
+        {
+          "word": "God aften",
+          "phonetic": "[goð ˈɑːfdn̩]",
+          "meaning": "Good evening",
+          "example": "God aften, velkommen hjem."
+        },
+        {
+          "word": "Tak",
+          "phonetic": "[tʰɑk]",
+          "meaning": "Thank you",
+          "example": "Tak for hjælpen!"
+        },
+        {
+          "word": "Selv tak",
+          "phonetic": "[sɛl ˈtʰɑk]",
+          "meaning": "You're welcome",
+          "example": "\"Tak for kaffen.\" \"Selv tak!\""
+        },
+        {
+          "word": "Ja",
+          "phonetic": "[jæ]",
+          "meaning": "Yes",
+          "example": "Ja, jeg vil gerne have en kop kaffe."
+        },
+        {
+          "word": "Nej",
+          "phonetic": "[nɑj]",
+          "meaning": "No",
+          "example": "Nej, tak. Jeg er mæt."
+        },
+        {
+          "word": "Undskyld",
+          "phonetic": "[ˈunˌskylˀ]",
+          "meaning": "Excuse me / Sorry",
+          "example": "Undskyld, må jeg spørge om noget?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Danish?",
+          "options": [
+            "Hej",
+            "Tak",
+            "Ja",
+            "Nej"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does \"God morgen\" mean?",
+          "options": [
+            "Good evening",
+            "Good morning",
+            "Thank you",
+            "Excuse me"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Danish word for \"Yes\".",
+          "options": [
+            "Nej",
+            "Undskyld",
+            "Ja",
+            "Tak"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Tak\" to you, how would you respond with \"You're welcome\"?",
+          "options": [
+            "Hej",
+            "Selv tak",
+            "God aften",
+            "Undskyld"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Super! Lad os lære nogle grundlæggende danske hilsner og høflige fraser. Vi vil dække ord som 'Hej', 'Tak' og 'Undskyld'. Jeg vil sige hvert ord på dansk, og du kan gentage efter mig. For eksempel, jeg siger 'Hej', og du siger 'Hej'. Derefter vil vi øve os i at bruge dem i enkle sætninger. Klar til at starte?"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "hej",
+          "phonetic": "hai",
+          "meaning": "hello / hi",
+          "example": "Hej, hvordan går det?"
+        },
+        {
+          "word": "tak",
+          "phonetic": "tak",
+          "meaning": "thank you",
+          "example": "Tak for hjælpen."
+        },
+        {
+          "word": "ja",
+          "phonetic": "ya",
+          "meaning": "yes",
+          "example": "Ja, det er rigtigt."
+        },
+        {
+          "word": "nej",
+          "phonetic": "nai",
+          "meaning": "no",
+          "example": "Nej, det er det ikke."
+        },
+        {
+          "word": "undskyld",
+          "phonetic": "un-skyl",
+          "meaning": "excuse me / sorry",
+          "example": "Undskyld, hvor er toilettet?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'hello' in Danish?",
+          "options": [
+            "Tak",
+            "Hej",
+            "Ja",
+            "Nej"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Danish word means 'thank you'?",
+          "options": [
+            "Undskyld",
+            "Hej",
+            "Tak",
+            "Ja"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If you want to say 'yes' in Danish, what word would you use?",
+          "options": [
+            "Nej",
+            "Undskyld",
+            "Tak",
+            "Ja"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "What does 'nej' mean in English?",
+          "options": [
+            "Yes",
+            "No",
+            "Thank you",
+            "Excuse me"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Danish word for 'excuse me' or 'sorry'.",
+          "options": [
+            "Hej",
+            "Tak",
+            "Undskyld",
+            "Ja"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Velkommen til din første dansklektion! Jeg er din AI-tutor, og jeg er her for at hjælpe dig med at lære dansk. I dag skal vi fokusere på nogle meget vigtige grundlæggende ord og udtryk, som du kan bruge hver dag. Vi starter med hilsner og høflighedsfraser. Jeg vil sige et ord eller en sætning, og jeg vil gerne have, at du gentager det efter mig for at øve din udtale. Er du klar? Lad os begynde med det mest almindelige danske ord for 'hello': 'Hej'. Kan du sige 'Hej'?"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "stor",
+          "phonetic": "stoh-r",
+          "meaning": "big, large",
+          "example": "Huset er stort."
+        },
+        {
+          "word": "lille",
+          "phonetic": "lil-leh",
+          "meaning": "small, little",
+          "example": "Jeg har en lille hund."
+        },
+        {
+          "word": "gammel",
+          "phonetic": "gam-mel",
+          "meaning": "old",
+          "example": "Min bil er gammel."
+        },
+        {
+          "word": "ny",
+          "phonetic": "ny",
+          "meaning": "new",
+          "example": "De har en ny cykel."
+        },
+        {
+          "word": "smuk",
+          "phonetic": "smook",
+          "meaning": "beautiful",
+          "example": "Hun er en smuk kvinde."
+        },
+        {
+          "word": "grim",
+          "phonetic": "grim",
+          "meaning": "ugly",
+          "example": "Det er en grim farve."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Danish word means 'big'?",
+          "options": [
+            "lille",
+            "stor",
+            "gammel",
+            "ny"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Translate 'The car is new.' into Danish.",
+          "options": [
+            "Bilen er gammel.",
+            "Bilen er ny.",
+            "Bilen er lille.",
+            "Bilen er stor."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct adjective to complete the sentence: 'Huset er _____' (The house is old).",
+          "options": [
+            "ny",
+            "smuk",
+            "gammel",
+            "grim"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the opposite of 'lille' (small)?",
+          "options": [
+            "grim",
+            "ny",
+            "stor",
+            "gammel"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hej! Velkommen til din danske lektion. I dag skal vi lære om adjektiver og hvordan man bruger dem til at beskrive ting og mennesker. Vi vil dække ord som \"stor\" (big), \"lille\" (small), \"gammel\" (old), \"ny\" (new), \"smuk\" (beautiful) og \"grim\" (ugly). Lad os starte med \"stor\". Kan du sige \"stor\" højt? Hvad betyder \"stor\" på engelsk?"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "Hi (like English \"hi\")",
+          "meaning": "Hi, Hello",
+          "example": "Hej, hvordan går det?"
+        },
+        {
+          "word": "Goddag",
+          "phonetic": "Go-day (stress on 'dag')",
+          "meaning": "Good day",
+          "example": "Goddag, jeg hedder Peter."
+        },
+        {
+          "word": "Tak",
+          "phonetic": "Tack (like English \"tack\")",
+          "meaning": "Thank you",
+          "example": "Tak for hjælpen!"
+        },
+        {
+          "word": "Undskyld",
+          "phonetic": "Oon-skyl (stress on 'oon')",
+          "meaning": "Excuse me, Sorry",
+          "example": "Undskyld, hvor er toilettet?"
+        },
+        {
+          "word": "Ja",
+          "phonetic": "Yah (like English \"yah\")",
+          "meaning": "Yes",
+          "example": "Ja, det er rigtigt."
+        },
+        {
+          "word": "Nej",
+          "phonetic": "Nigh (like English \"nigh\")",
+          "meaning": "No",
+          "example": "Nej, det er det ikke."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Danish word for \"Hello\"?",
+          "options": [
+            "Tak",
+            "Hej",
+            "Nej",
+            "Undskyld"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Danish?",
+          "options": [
+            "Ja",
+            "Goddag",
+            "Tak",
+            "Hej"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Danish word for \"Yes\".",
+          "options": [
+            "Nej",
+            "Ja",
+            "Undskyld",
+            "Tak"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Danish word means \"Excuse me\" or \"Sorry\"?",
+          "options": [
+            "Goddag",
+            "Hej",
+            "Undskyld",
+            "Nej"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hej! Velkommen til din danske lektion! I dag skal vi lære nogle grundlæggende hilsner og udtryk på dansk. Vi starter med 'Hej', som betyder 'Hi' eller 'Hello'. Prøv at sige 'Hej' højt. Godt! En anden almindelig hilsen er 'Goddag', der betyder 'Good day'. Og hvis du vil sige 'Thank you', siger du 'Tak'. Kan du prøve at sige 'Tak'? Fantastisk! Lad os øve os lidt mere. Hvordan vil du hilse på nogen på dansk?"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Jeg",
+          "phonetic": "yai",
+          "meaning": "I",
+          "example": "Jeg er glad."
+        },
+        {
+          "word": "Du",
+          "phonetic": "doo",
+          "meaning": "You (singular, informal)",
+          "example": "Du er sød."
+        },
+        {
+          "word": "at være",
+          "phonetic": "at ve-uh",
+          "meaning": "to be",
+          "example": "Jeg vil gerne være her."
+        },
+        {
+          "word": "er",
+          "phonetic": "ehr",
+          "meaning": "am/is/are (present tense of 'at være')",
+          "example": "Han er min ven."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"I\" in Danish?",
+          "options": [
+            "Du",
+            "Jeg",
+            "Vi",
+            "De"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Danish word means \"to be\"?",
+          "options": [
+            "at have",
+            "at spise",
+            "at være",
+            "at drikke"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Fill in the blank: \"Du ___ min ven.\" (You ___ my friend.)",
+          "options": [
+            "er",
+            "har",
+            "spiser",
+            "drikker"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "Okay, velkommen til din danske lektion! I dag skal vi dykke ned i nogle af de mest grundlæggende byggesten i det danske sprog: personlige pronominer og verbet 'at være' (to be). Vi vil fokusere på 'jeg' (I) og 'du' (you), og hvordan 'at være' bruges i nutid som 'er'. Jeg vil guide dig igennem, hvordan du kan bruge disse ord til at danne simple sætninger. Lad os begynde med 'jeg'. Kan du sige 'Jeg er glad' (I am happy)?"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "[hai]",
+          "meaning": "Hi/Hello",
+          "example": "Hej, hvordan går det?"
+        },
+        {
+          "word": "Godmorgen",
+          "phonetic": "[go-mor-gen]",
+          "meaning": "Good morning",
+          "example": "Godmorgen, sov godt?"
+        },
+        {
+          "word": "Tak",
+          "phonetic": "[tak]",
+          "meaning": "Thank you",
+          "example": "Tak for hjælpen!"
+        },
+        {
+          "word": "Ja",
+          "phonetic": "[ya]",
+          "meaning": "Yes",
+          "example": "Ja, det er rigtigt."
+        },
+        {
+          "word": "Nej",
+          "phonetic": "[nai]",
+          "meaning": "No",
+          "example": "Nej, det er det ikke."
+        },
+        {
+          "word": "Undskyld",
+          "phonetic": "[un-skyl]",
+          "meaning": "Excuse me/Sorry",
+          "example": "Undskyld, hvor er toilettet?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" or \"Hello\" in Danish?",
+          "options": [
+            "Tak",
+            "Hej",
+            "Ja",
+            "Nej"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Danish word for \"Thank you\"?",
+          "options": [
+            "Undskyld",
+            "Godmorgen",
+            "Tak",
+            "Farvel"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Godmorgen\" to you, what time of day is it?",
+          "options": [
+            "Aften",
+            "Nat",
+            "Morgen",
+            "Eftermiddag"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Excuse me\" or \"Sorry\" in Danish?",
+          "options": [
+            "Værsgo",
+            "Undskyld",
+            "Ja",
+            "Nej"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Hej! Jeg er din AI-tutor. I dag skal vi lære nogle grundlæggende danske hilsner og udtryk. Vi vil dække 'Hej', 'Godmorgen', 'Tak' og 'Undskyld'. Jeg vil sige ordet, og du kan gentage efter mig. Derefter øver vi os i at bruge dem i enkle sætninger. Lad os starte med 'Hej'!"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "[hai]",
+          "meaning": "Hello / Hi",
+          "example": "Hej, hvordan går det?"
+        },
+        {
+          "word": "Farvel",
+          "phonetic": "[faʁˈvɛl]",
+          "meaning": "Goodbye",
+          "example": "Farvel, vi ses!"
+        },
+        {
+          "word": "Tak",
+          "phonetic": "[tˢɑk]",
+          "meaning": "Thank you",
+          "example": "Tak for hjælpen."
+        },
+        {
+          "word": "Værsgo",
+          "phonetic": "[vɛɐ̯sˈkɔˀ]",
+          "meaning": "Please / Here you go",
+          "example": "Værsgo, her er din kaffe."
+        },
+        {
+          "word": "Undskyld",
+          "phonetic": "[ˈɔnˌskylˀ]",
+          "meaning": "Excuse me / Sorry",
+          "example": "Undskyld, kan du gentage det?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Danish?",
+          "options": [
+            "Farvel",
+            "Tak",
+            "Hej",
+            "Undskyld"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does the Danish word \"Tak\" mean?",
+          "options": [
+            "Goodbye",
+            "Thank you",
+            "Please",
+            "Excuse me"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Danish word for \"Goodbye\".",
+          "options": [
+            "Hej",
+            "Værsgo",
+            "Farvel",
+            "Tak"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If you want to offer something to someone, what Danish word might you use?",
+          "options": [
+            "Undskyld",
+            "Tak",
+            "Værsgo",
+            "Hej"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Danish word means \"Excuse me\" or \"Sorry\"?",
+          "options": [
+            "Tak",
+            "Farvel",
+            "Hej",
+            "Undskyld"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Velkommen til din danske lektion! I dag skal vi lære nogle grundlæggende hilsner og høflighedsfraser på dansk. Disse ord er meget nyttige i hverdagen. Lad os starte med 'Hej'. Kan du sige 'Hej'? Det betyder 'Hello'. Prøv at sige 'Hej' til mig. Godt! Nu har vi 'Farvel', som betyder 'Goodbye'. Kan du sige 'Farvel'? Fremragende! Når du vil sige 'Thank you', siger du 'Tak'. Prøv at sige 'Tak'. Og hvis du vil sige 'Please' eller 'Here you go', bruger du 'Værsgo'. Kan du sige 'Værsgo'? Til sidst har vi 'Undskyld', der betyder 'Excuse me' eller 'Sorry'. Prøv at sige 'Undskyld'. Nu, lad os øve os lidt. Hvordan ville du hilse på nogen på dansk? Og hvad ville du sige, hvis du ville takke mig?"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "at spise",
+          "phonetic": "[at spee-seh]",
+          "meaning": "to eat",
+          "example": "Jeg kan godt lide at spise dansk mad."
+        },
+        {
+          "word": "at drikke",
+          "phonetic": "[at drig-keh]",
+          "meaning": "to drink",
+          "example": "Vil du drikke vand eller kaffe?"
+        },
+        {
+          "word": "mad",
+          "phonetic": "[mad]",
+          "meaning": "food",
+          "example": "Maden er klar."
+        },
+        {
+          "word": "vand",
+          "phonetic": "[van]",
+          "meaning": "water",
+          "example": "Jeg vil gerne have et glas vand."
+        },
+        {
+          "word": "lækkert",
+          "phonetic": "[leg-kert]",
+          "meaning": "delicious, tasty",
+          "example": "Det smager meget lækkert!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Translate: 'I eat food.'",
+          "options": [
+            "Jeg spiser mad.",
+            "Jeg drikker mad.",
+            "Du spiser mad.",
+            "Jeg spiser vand."
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means 'water'?",
+          "options": [
+            "Mad",
+            "Vand",
+            "Kaffe",
+            "Te"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Fill in the blank: 'Vi ______ vand.' (We drink water.)",
+          "options": [
+            "spiser",
+            "drikker",
+            "drikke",
+            "spise"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Hej! Velkommen til din danske lektion. I dag skal vi lære om 'mad og drikke' (food and drink) på dansk. Vi vil fokusere på nogle vigtige ord som 'at spise' (to eat), 'at drikke' (to drink), 'mad' (food), 'vand' (water) og 'lækkert' (delicious). Vi starter med at øve udtalen, derefter bygger vi sætninger, og til sidst tester vi din viden med en lille quiz. Er du klar til at lære nogle nye danske ord og udtryk? Lad os komme i gang!"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "at spise",
+          "phonetic": "at spee-seh",
+          "meaning": "to eat",
+          "example": "Jeg kan godt lide at spise æbler."
+        },
+        {
+          "word": "at drikke",
+          "phonetic": "at drik-keh",
+          "meaning": "to drink",
+          "example": "Vil du drikke kaffe eller te?"
+        },
+        {
+          "word": "at læse",
+          "phonetic": "at lay-seh",
+          "meaning": "to read",
+          "example": "Hun elsker at læse bøger."
+        },
+        {
+          "word": "at bo",
+          "phonetic": "at bo",
+          "meaning": "to live (reside)",
+          "example": "Vi bor i en lejlighed i København."
+        },
+        {
+          "word": "at arbejde",
+          "phonetic": "at ar-bide-yeh",
+          "meaning": "to work",
+          "example": "Han arbejder på et kontor."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Danish verb means 'to eat'?",
+          "options": [
+            "at drikke",
+            "at spise",
+            "at læse",
+            "at bo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct form of 'to drink' for 'Jeg ___ vand.' (I ___ water.)",
+          "options": [
+            "drikker",
+            "drikke",
+            "drak",
+            "drikket"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say 'She reads a book' in Danish?",
+          "options": [
+            "Hun læser en bog.",
+            "Hun læse en bog.",
+            "Hun læste en bog.",
+            "Hun læser en bøger."
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Danish verb means 'to live' (reside)?",
+          "options": [
+            "at arbejde",
+            "at spise",
+            "at bo",
+            "at tale"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hej! Velkommen til denne lektion! I dag skal vi lære om nogle almindelige danske verber. Vi vil øve os i, hvordan man bruger verber som \"at spise\" (to eat), \"at drikke\" (to drink) og \"at læse\" (to read) i sætninger. Vi skal også se på \"at bo\" (to live/reside) og \"at arbejde\" (to work). Lad os starte med at se på vores nye ordforråd, og derefter vil vi lave nogle øvelser. Er du klar til at begynde?"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "glad",
+          "phonetic": "[glað]",
+          "meaning": "happy",
+          "example": "Jeg er glad i dag."
+        },
+        {
+          "word": "træt",
+          "phonetic": "[træt]",
+          "meaning": "tired",
+          "example": "Han er meget træt efter arbejde."
+        },
+        {
+          "word": "sulten",
+          "phonetic": "[sultn]",
+          "meaning": "hungry",
+          "example": "Er du sulten? Vi kan spise nu."
+        },
+        {
+          "word": "tørstig",
+          "phonetic": "[tørsti]",
+          "meaning": "thirsty",
+          "example": "Jeg er tørstig, jeg vil gerne have vand."
+        },
+        {
+          "word": "ked af det",
+          "phonetic": "[keð a dɛ]",
+          "meaning": "sad",
+          "example": "Hun er ked af det, fordi hendes kat er syg."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"I am happy\" in Danish?",
+          "options": [
+            "Jeg er træt",
+            "Jeg er glad",
+            "Jeg er sulten",
+            "Jeg er ked af det"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Danish word means \"tired\"?",
+          "options": [
+            "glad",
+            "sulten",
+            "træt",
+            "tørstig"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct word to complete the sentence: \"Jeg er _____, jeg vil gerne have noget at spise.\" (I am _____, I would like something to eat.)",
+          "options": [
+            "glad",
+            "træt",
+            "sulten",
+            "tørstig"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does the Danish phrase \"ked af det\" mean?",
+          "options": [
+            "Happy",
+            "Tired",
+            "Hungry",
+            "Sad"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Hej! I denne lektion skal vi dykke ned i nogle vigtige danske adjektiver, der beskriver, hvordan du har det. Vi vil lære at udtrykke følelser som 'glad' (happy), 'træt' (tired), 'sulten' (hungry), 'tørstig' (thirsty) og 'ked af det' (sad). Jeg vil guide dig gennem udtalen og give dig eksempler på, hvordan du kan bruge dem i sætninger. Er du klar til at udvide dit danske ordforråd? Lad os komme i gang!"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "at glæde sig til",
+          "phonetic": "a gleh-deh sai til",
+          "meaning": "to look forward to",
+          "example": "Jeg glæder mig til weekenden."
+        },
+        {
+          "word": "hyggelig",
+          "phonetic": "hoo-guh-lee",
+          "meaning": "cozy, pleasant, nice",
+          "example": "Det var en hyggelig aften."
+        },
+        {
+          "word": "at savne",
+          "phonetic": "a sow-nuh",
+          "meaning": "to miss (someone/something)",
+          "example": "Jeg savner min familie."
+        },
+        {
+          "word": "at beslutte sig for",
+          "phonetic": "a buh-sloot-uh sai for",
+          "meaning": "to decide on/to",
+          "example": "Vi har besluttet os for at rejse til Danmark."
+        },
+        {
+          "word": "en mulighed",
+          "phonetic": "en moo-lee-hayd",
+          "meaning": "a possibility, an opportunity",
+          "example": "Der er mange muligheder."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Danish word describes a cozy or pleasant atmosphere?",
+          "options": [
+            "kedelig",
+            "hyggelig",
+            "travl",
+            "svær"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say 'I am looking forward to the party' in Danish?",
+          "options": [
+            "Jeg savner festen.",
+            "Jeg beslutter mig for festen.",
+            "Jeg glæder mig til festen.",
+            "Jeg har en mulighed for festen."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Danish verb for 'to miss (someone/something)'.",
+          "options": [
+            "at beslutte",
+            "at glæde",
+            "at savne",
+            "at huske"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "The student is ready for a Danish lesson. Introduce the lesson by saying 'Velkommen til din dansklektion!'. Explain that today's focus is on common Danish expressions and verbs related to feelings and decisions, and how to use them in sentences. Start by introducing the phrase 'at glæde sig til' (to look forward to). Ask the student to repeat it and then provide an example sentence like 'Jeg glæder mig til weekenden.' (I'm looking forward to the weekend.). Encourage the student to try using it in their own sentence."
+    }
+  ]
+}

@@ -1,0 +1,1315 @@
+{
+  "langCode": "cs-CZ",
+  "langLabel": "Czech",
+  "langNative": "Čeština",
+  "generatedAt": "2026-03-15T06:55:39.130Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ahoj",
+          "phonetic": "[a-hoy]",
+          "meaning": "Hello (informal), Hi",
+          "example": "Ahoj, jak se máš?"
+        },
+        {
+          "word": "Děkuji",
+          "phonetic": "[dye-koo-yee]",
+          "meaning": "Thank you",
+          "example": "Děkuji za pomoc."
+        },
+        {
+          "word": "Prosím",
+          "phonetic": "[pro-seem]",
+          "meaning": "Please / You're welcome",
+          "example": "Prosím, posaďte se. / Děkuji! – Prosím."
+        },
+        {
+          "word": "Ano",
+          "phonetic": "[a-no]",
+          "meaning": "Yes",
+          "example": "Ano, rozumím."
+        },
+        {
+          "word": "Ne",
+          "phonetic": "[ne]",
+          "meaning": "No",
+          "example": "Ne, to není pravda."
+        },
+        {
+          "word": "Na shledanou",
+          "phonetic": "[na shle-da-noh]",
+          "meaning": "Goodbye (formal)",
+          "example": "Na shledanou, uvidíme se zítra."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Czech?",
+          "options": [
+            "Ahoj",
+            "Děkuji",
+            "Prosím",
+            "Ano"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Czech word for \"Thank you\"?",
+          "options": [
+            "Ne",
+            "Ano",
+            "Děkuji",
+            "Na shledanou"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word can mean both \"Please\" and \"You're welcome\" in Czech?",
+          "options": [
+            "Ahoj",
+            "Prosím",
+            "Ne",
+            "Ano"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Goodbye\" (formal) in Czech?",
+          "options": [
+            "Ahoj",
+            "Děkuji",
+            "Na shledanou",
+            "Ano"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Ahoj! Jsem tvůj AI lektor a jsem tu, abych ti pomohl/a s češtinou. V této lekci se zaměříme na základní české pozdravy a zdvořilostní fráze, které jsou klíčové pro každodenní komunikaci. Projdeme si slova jako \"Ahoj\", \"Děkuji\", \"Prosím\", \"Ano\", \"Ne\" a \"Na shledanou\". Ukážu ti, jak je správně vyslovovat, co znamenají a jak je použít v jednoduchých větách. Začneme s neformálním pozdravem \"Ahoj\". Zkusíš po mně zopakovat: \"Ahoj\"?"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ahoj",
+          "phonetic": "[a-hoy]",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Ahoj, jak se máš?"
+        },
+        {
+          "word": "Dobrý den",
+          "phonetic": "[dob-ree den]",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Dobrý den, pane Novák."
+        },
+        {
+          "word": "Na shledanou",
+          "phonetic": "[na shle-da-noh]",
+          "meaning": "Goodbye (formal)",
+          "example": "Na shledanou zítra!"
+        },
+        {
+          "word": "Jak se máš?",
+          "phonetic": "[yak se maash]",
+          "meaning": "How are you? (informal)",
+          "example": "Ahoj, Jak se máš?"
+        },
+        {
+          "word": "Mám se dobře.",
+          "phonetic": "[maam se dob-zhe]",
+          "meaning": "I'm fine. / I'm doing well.",
+          "example": "Mám se dobře, děkuji."
+        },
+        {
+          "word": "Těší mě.",
+          "phonetic": "[tyesh-ee myeh]",
+          "meaning": "Nice to meet you.",
+          "example": "Jmenuji se Anna. Těší mě."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" (informal) in Czech?",
+          "options": [
+            "Dobrý den",
+            "Ahoj",
+            "Na shledanou",
+            "Děkuji"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the formal way to say \"Good day\" in Czech?",
+          "options": [
+            "Ahoj",
+            "Dobrý den",
+            "Jak se máš?",
+            "Mám se dobře."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"How are you?\" (informal) in Czech?",
+          "options": [
+            "Mám se dobře.",
+            "Jak se jmenuješ?",
+            "Jak se máš?",
+            "Těší mě."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Ahoj, jak se máš?\", how might you respond if you are fine?",
+          "options": [
+            "Na shledanou.",
+            "Dobrý den.",
+            "Mám se dobře.",
+            "Těší mě."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Ahoj! Vítejte u naší první lekce češtiny! Dnes se naučíme základní pozdravy a jak se představit. Začneme s neformálním \"Ahoj\" a formálním \"Dobrý den\". Také se naučíme, jak se zeptat \"Jak se máš?\" a odpovědět \"Mám se dobře.\". A na závěr si řekneme \"Těší mě\", když někoho potkáme. Pojďme si to všechno procvičit! Jste připraveni? Tak jdeme na to!"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ahoj",
+          "phonetic": "ah-hoy",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Ahoj, jak se máš?"
+        },
+        {
+          "word": "Dobrý den",
+          "phonetic": "doh-bree den",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Dobrý den, pane Nováku."
+        },
+        {
+          "word": "Jak se máš?",
+          "phonetic": "yak seh maash",
+          "meaning": "How are you? (informal)",
+          "example": "Ahoj, Petře, jak se máš?"
+        },
+        {
+          "word": "Jak se máte?",
+          "phonetic": "yak seh maa-teh",
+          "meaning": "How are you? (formal/plural)",
+          "example": "Dobrý den, paní učitelko, jak se máte?"
+        },
+        {
+          "word": "Mám se dobře",
+          "phonetic": "maam seh doh-brzheh",
+          "meaning": "I'm doing well",
+          "example": "Děkuji, mám se dobře."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" (informal) in Czech?",
+          "options": [
+            "Dobrý den",
+            "Ahoj",
+            "Na shledanou",
+            "Děkuji"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the formal way to say \"Hello\" in Czech?",
+          "options": [
+            "Ahoj",
+            "Mám se dobře",
+            "Dobrý den",
+            "Jak se máš?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask a friend \"How are you?\" in Czech?",
+          "options": [
+            "Jak se máte?",
+            "Mám se dobře",
+            "Jak se máš?",
+            "Dobrý den"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks you \"Jak se máš?\" and you are doing well, how would you respond?",
+          "options": [
+            "Ahoj",
+            "Dobrý den",
+            "Mám se dobře",
+            "Na shledanou"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Ahoj! Vítejte u lekce číslo 3! Dnes se naučíme základní české pozdravy a fráze pro zeptání se \"Jak se máš?\". Začneme s \"Ahoj\" (informální 'Hi') a \"Dobrý den\" (formální 'Hello'). Poté se podíváme na \"Jak se máš?\" (informální 'How are you?') a \"Jak se máte?\" (formální/množné 'How are you?'). Nakonec se naučíme odpovědět \"Mám se dobře\" ('I'm doing well'). Jste připraveni procvičit si tyto fráze a začít konverzaci v češtině? Pojďme na to!"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Dobrý den",
+          "phonetic": "doh-bree den",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Dobrý den, jak se máte?"
+        },
+        {
+          "word": "Ahoj",
+          "phonetic": "ah-hoy",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Ahoj, jak se máš?"
+        },
+        {
+          "word": "Děkuji",
+          "phonetic": "dyeh-koo-yee",
+          "meaning": "Thank you",
+          "example": "Děkuji za pomoc."
+        },
+        {
+          "word": "Prosím",
+          "phonetic": "proh-seem",
+          "meaning": "Please / You're welcome",
+          "example": "Prosím, sedněte si."
+        },
+        {
+          "word": "Ano",
+          "phonetic": "ah-noh",
+          "meaning": "Yes",
+          "example": "Ano, rozumím."
+        },
+        {
+          "word": "Ne",
+          "phonetic": "neh",
+          "meaning": "No",
+          "example": "Ne, nerozumím."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the formal way to say \"Hello\" in Czech?",
+          "options": [
+            "Ahoj",
+            "Dobrý den",
+            "Děkuji",
+            "Prosím"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Czech?",
+          "options": [
+            "Ano",
+            "Ne",
+            "Děkuji",
+            "Ahoj"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Czech word means \"Yes\"?",
+          "options": [
+            "Ne",
+            "Ano",
+            "Prosím",
+            "Dobrý den"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the informal way to say \"Hi\" in Czech?",
+          "options": [
+            "Dobrý den",
+            "Děkuji",
+            "Ahoj",
+            "Prosím"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Ahoj! Jsem tvůj AI lektor češtiny. Dnes se ponoříme do základních českých frází, které ti pomohou začít mluvit. Probereme si 'Dobrý den' (formální pozdrav), 'Ahoj' (neformální pozdrav), 'Děkuji' (poděkování), 'Prosím' (prosba/odpověď na poděkování), 'Ano' (souhlas) a 'Ne' (nesouhlas). Budu ti představovat každou frázi, vysvětlím její použití a dám ti příležitost si ji procvičit. Začneme s 'Dobrý den'. Jsi připraven/a?"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Dobrý den",
+          "phonetic": "Dob-ree den",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Dobrý den, jak se máte?"
+        },
+        {
+          "word": "Na shledanou",
+          "phonetic": "Na skhleh-dah-noh",
+          "meaning": "Goodbye (formal)",
+          "example": "Na shledanou, uvidíme se zítra."
+        },
+        {
+          "word": "Prosím",
+          "phonetic": "Pro-seem",
+          "meaning": "Please / You're welcome / Here you go",
+          "example": "Prosím, dejte mi vodu."
+        },
+        {
+          "word": "Děkuji",
+          "phonetic": "Dyeh-koo-yee",
+          "meaning": "Thank you (formal)",
+          "example": "Děkuji za pomoc."
+        },
+        {
+          "word": "Ano",
+          "phonetic": "Ah-noh",
+          "meaning": "Yes",
+          "example": "Ano, rozumím."
+        },
+        {
+          "word": "Ne",
+          "phonetic": "Neh",
+          "meaning": "No",
+          "example": "Ne, to není pravda."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' (formal) in Czech?",
+          "options": [
+            "Ahoj",
+            "Dobrý den",
+            "Na shledanou",
+            "Děkuji"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Czech word means 'Thank you'?",
+          "options": [
+            "Prosím",
+            "Ano",
+            "Děkuji",
+            "Ne"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Czech response to 'Děkuji' (Thank you).",
+          "options": [
+            "Ano",
+            "Ne",
+            "Prosím",
+            "Dobrý den"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Výborně! (Excellent!) In this lesson, we learned some essential Czech greetings and polite phrases. We covered \"Dobrý den\" (Hello/Good day), \"Na shledanou\" (Goodbye), \"Prosím\" (Please/You're welcome), \"Děkuji\" (Thank you), \"Ano\" (Yes), and \"Ne\" (No). Can you tell me, in your own words, how you would use \"Prosím\" and \"Děkuji\" in a simple Czech sentence?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ahoj",
+          "phonetic": "[a-hoy]",
+          "meaning": "Hello (informal), Hi",
+          "example": "Ahoj, jak se máš?"
+        },
+        {
+          "word": "Děkuji",
+          "phonetic": "[dye-koo-yee]",
+          "meaning": "Thank you",
+          "example": "Děkuji za pomoc."
+        },
+        {
+          "word": "Prosím",
+          "phonetic": "[pro-seem]",
+          "meaning": "Please / You're welcome / I beg your pardon",
+          "example": "Prosím, pomoz mi."
+        },
+        {
+          "word": "Ano",
+          "phonetic": "[a-no]",
+          "meaning": "Yes",
+          "example": "Ano, rozumím."
+        },
+        {
+          "word": "Ne",
+          "phonetic": "[ne]",
+          "meaning": "No",
+          "example": "Ne, nemám čas."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Czech?",
+          "options": [
+            "Ahoj",
+            "Dobrý den",
+            "Na shledanou",
+            "Děkuji"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does \"Děkuji\" mean?",
+          "options": [
+            "Prosím",
+            "Ano",
+            "Thank you",
+            "Ne"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct word for \"Yes\".",
+          "options": [
+            "Ne",
+            "Ano",
+            "Prosím",
+            "Ahoj"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word can mean \"Please\" or \"You're welcome\"?",
+          "options": [
+            "Děkuji",
+            "Ne",
+            "Ano",
+            "Prosím"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Ahoj! Jsem tvůj AI lektor češtiny. V této lekci se ponoříme do základních českých frází, které ti pomohou začít konverzovat. Naučíme se, jak říct \"Ahoj\" (Hello), \"Děkuji\" (Thank you), \"Prosím\" (Please/You're welcome), \"Ano\" (Yes) a \"Ne\" (No). Budu říkat české slovo nebo frázi a ty ji můžeš zopakovat. Poslouchej pozorně a zkus napodobit výslovnost. Jsme připraveni? Začneme s \"Ahoj\". Můžeš říct \"Ahoj\"?"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Dobrý den",
+          "phonetic": "DOB-ree den",
+          "meaning": "Good day (formal greeting)",
+          "example": "Dobrý den, jak se máte?"
+        },
+        {
+          "word": "Ahoj",
+          "phonetic": "A-hoy",
+          "meaning": "Hi / Hello (informal greeting)",
+          "example": "Ahoj, Petře!"
+        },
+        {
+          "word": "Jak se máš?",
+          "phonetic": "Yak seh MAASH?",
+          "meaning": "How are you? (informal)",
+          "example": "Ahoj, Jak se máš?"
+        },
+        {
+          "word": "Mám se dobře.",
+          "phonetic": "MAAM seh DOB-rzheh.",
+          "meaning": "I'm fine.",
+          "example": "Mám se dobře, děkuji."
+        },
+        {
+          "word": "Děkuji",
+          "phonetic": "DYEH-koo-yee",
+          "meaning": "Thank you",
+          "example": "Děkuji za pomoc."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Good day\" in Czech (formal)?",
+          "options": [
+            "Ahoj",
+            "Dobrý den",
+            "Děkuji",
+            "Prosím"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the informal way to say \"Hello\" in Czech?",
+          "options": [
+            "Dobrý den",
+            "Nashledanou",
+            "Ahoj",
+            "Jak se máš?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"How are you?\" to a friend?",
+          "options": [
+            "Jak se máte?",
+            "Jak se máš?",
+            "Děkuji",
+            "Mám se dobře."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"Jak se máš?\" and you want to say \"I'm fine.\", what do you say?",
+          "options": [
+            "Děkuji",
+            "Prosím",
+            "Mám se dobře.",
+            "Dobrý den."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Vítejte v naší lekci češtiny! Dnes se zaměříme na základní pozdravy a fráze pro každodenní komunikaci. Naučíme se slova jako \"Dobrý den\", \"Ahoj\", \"Jak se máš?\" a \"Mám se dobře.\". Budeme procvičovat jejich výslovnost a používat je v jednoduchých větách. Jsem tu, abych vás provedl/a příklady a cvičeními. Jste připraveni začít?"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ahoj",
+          "phonetic": "ah-hoy",
+          "meaning": "Hello (informal/hi)",
+          "example": "Ahoj, jak se máš?"
+        },
+        {
+          "word": "Dobrý den",
+          "phonetic": "doh-bree dehn",
+          "meaning": "Good day (formal hello)",
+          "example": "Dobrý den, pane Nováku."
+        },
+        {
+          "word": "Děkuji",
+          "phonetic": "dyehk-oo-yee",
+          "meaning": "Thank you",
+          "example": "Děkuji za pomoc."
+        },
+        {
+          "word": "Prosím",
+          "phonetic": "proh-seem",
+          "meaning": "Please / You're welcome",
+          "example": "Prosím, posaďte se."
+        },
+        {
+          "word": "Ano",
+          "phonetic": "ah-noh",
+          "meaning": "Yes",
+          "example": "Ano, rozumím."
+        },
+        {
+          "word": "Ne",
+          "phonetic": "neh",
+          "meaning": "No",
+          "example": "Ne, to není pravda."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" informally in Czech?",
+          "options": [
+            "Ahoj",
+            "Dobrý den",
+            "Na shledanou",
+            "Děkuji"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means \"Thank you\" in Czech?",
+          "options": [
+            "Prosím",
+            "Ano",
+            "Děkuji",
+            "Ne"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Czech word for \"Yes\"?",
+          "options": [
+            "Ne",
+            "Ano",
+            "Prosím",
+            "Ahoj"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Please\" or \"You're welcome\" in Czech?",
+          "options": [
+            "Děkuji",
+            "Ahoj",
+            "Prosím",
+            "Dobrý den"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Ahoj! Jsem tvůj AI lektor. Dnes se ponoříme do základních českých frází, které ti pomohou začít mluvit česky! Zaměříme se na pozdravy jako \"Ahoj\" a \"Dobrý den\", poděkování \"Děkuji\", a také \"Prosím\", \"Ano\" a \"Ne\". Budu ti říkat každou frázi a ty ji můžeš zopakovat. Potom si procvičíme, jak je použít v jednoduchých větách. Jsi připraven/a? Začneme s \"Ahoj\". Zopakuj po mně: \"Ahoj\"."
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "být",
+          "phonetic": "beet",
+          "meaning": "to be",
+          "example": "Já jsem student."
+        },
+        {
+          "word": "mít",
+          "phonetic": "meet",
+          "meaning": "to have",
+          "example": "Ty máš knihu."
+        },
+        {
+          "word": "chtít",
+          "phonetic": "kh-teet (kh as in Scottish \"loch\")",
+          "meaning": "to want",
+          "example": "On chce jablko."
+        },
+        {
+          "word": "mluvit",
+          "phonetic": "mloo-vit",
+          "meaning": "to speak",
+          "example": "My mluvíme česky."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Fill in the blank with the correct form of \"být\" (to be): \"Já ____ student.\"",
+          "options": [
+            "jsem",
+            "jsi",
+            "je",
+            "jsme"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Czech word means \"to have\"?",
+          "options": [
+            "být",
+            "chtít",
+            "mít",
+            "mluvit"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Translate the sentence: \"She wants coffee.\"",
+          "options": [
+            "Ona chce kávu.",
+            "Ona má kávu.",
+            "Ona je káva.",
+            "Ona mluví kávu."
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "Ahoj! Vítejte u další lekce češtiny! Dnes se zaměříme na velmi důležitá základní slovesa: \"být\" (to be), \"mít\" (to have) a \"chtít\" (to want). Naučíme se, jak je správně používat v jednoduchých větách a jak je časovat pro různé osoby. Připravte se na procvičování a brzy budete mluvit jako rodilý mluvčí! Pojďme na to!"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ahoj",
+          "phonetic": "[ˈaɦɔj]",
+          "meaning": "Hi/Hello (informal)",
+          "example": "Ahoj, jak se máš?"
+        },
+        {
+          "word": "Dobrý den",
+          "phonetic": "[ˈdɔbriː dɛn]",
+          "meaning": "Good day/Hello (formal)",
+          "example": "Dobrý den, jmenuji se Petr."
+        },
+        {
+          "word": "Jak se máš?",
+          "phonetic": "[jak sɛ maːʃ]",
+          "meaning": "How are you? (informal)",
+          "example": "Ahoj, Jak se máš?"
+        },
+        {
+          "word": "Mám se dobře.",
+          "phonetic": "[maːm sɛ ˈdɔbr̝ɛ]",
+          "meaning": "I'm fine.",
+          "example": "Mám se dobře, děkuji."
+        },
+        {
+          "word": "Děkuji.",
+          "phonetic": "[ˈɟɛkujɪ]",
+          "meaning": "Thank you.",
+          "example": "Mám se dobře, děkuji."
+        },
+        {
+          "word": "Jmenuji se...",
+          "phonetic": "[ˈjmɛnujɪ sɛ]",
+          "meaning": "My name is...",
+          "example": "Jmenuji se Anna."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" (informal) in Czech?",
+          "options": [
+            "Dobrý den",
+            "Ahoj",
+            "Děkuji",
+            "Na shledanou"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the formal way to say \"Good day\" or \"Hello\" in Czech?",
+          "options": [
+            "Ahoj",
+            "Jak se máš?",
+            "Dobrý den",
+            "Mám se dobře."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"How are you?\" (informal) in Czech?",
+          "options": [
+            "Jmenuji se...",
+            "Děkuji",
+            "Jak se máš?",
+            "Mám se dobře."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"Jak se máš?\" and you want to say \"I'm fine,\" what would you say?",
+          "options": [
+            "Ahoj",
+            "Děkuji",
+            "Jmenuji se...",
+            "Mám se dobře."
+          ],
+          "answer": 3
+        },
+        {
+          "q": "How do you say \"Thank you\" in Czech?",
+          "options": [
+            "Ahoj",
+            "Děkuji",
+            "Dobrý den",
+            "Mám se dobře."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Ahoj! Jsem tvůj AI lektor češtiny. Dnes se ponoříme do základních českých pozdravů a představení. Naučíme se, jak říct \"Ahoj\", \"Dobrý den\", \"Jak se máš?\", \"Mám se dobře.\" a \"Děkuji.\". Budeme si procvičovat výslovnost a pochopíme, kdy kterou frázi použít. Jsi připraven/a začít? Začneme s \"Ahoj\" a \"Dobrý den\"!"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Dobrý den",
+          "phonetic": "DOH-bree den",
+          "meaning": "Good day / Hello",
+          "example": "Dobrý den, jak se máte?"
+        },
+        {
+          "word": "Děkuji",
+          "phonetic": "DYEH-koo-yee",
+          "meaning": "Thank you",
+          "example": "Děkuji za pomoc."
+        },
+        {
+          "word": "Prosím",
+          "phonetic": "PROH-seem",
+          "meaning": "Please / You're welcome",
+          "example": "Můžu dostat kávu, prosím?"
+        },
+        {
+          "word": "Ano",
+          "phonetic": "AH-noh",
+          "meaning": "Yes",
+          "example": "Ano, rozumím."
+        },
+        {
+          "word": "Ne",
+          "phonetic": "Neh",
+          "meaning": "No",
+          "example": "Ne, to není pravda."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Czech?",
+          "options": [
+            "Dobrý den",
+            "Děkuji",
+            "Prosím",
+            "Na shledanou"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does the Czech word \"Děkuji\" mean in English?",
+          "options": [
+            "Please",
+            "Thank you",
+            "Yes",
+            "No"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Czech word means \"Yes\"?",
+          "options": [
+            "Ne",
+            "Prosím",
+            "Ano",
+            "Dobrý den"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Děkuji\" to you, what is a common polite response in Czech?",
+          "options": [
+            "Ne",
+            "Ano",
+            "Dobrý den",
+            "Prosím"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Ahoj! Vítejte na naší lekci češtiny. Dnes se naučíme několik základních českých slov a frází, které vám pomohou začít mluvit česky. Budeme si procvičovat výslovnost, význam a použití slov jako \"Dobrý den\", \"Děkuji\", \"Prosím\", \"Ano\" a \"Ne\". Jsem tu, abych vám pomohl/a s jakýmikoli otázkami ohledně gramatiky nebo výslovnosti. Jste připraveni začít?"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ahoj",
+          "phonetic": "[a-hoy]",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Ahoj, jak se máš?"
+        },
+        {
+          "word": "Dobrý den",
+          "phonetic": "[dob-ree den]",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Dobrý den, paní Nováková."
+        },
+        {
+          "word": "Děkuji",
+          "phonetic": "[dye-koo-yee]",
+          "meaning": "Thank you",
+          "example": "Děkuji za pomoc."
+        },
+        {
+          "word": "Prosím",
+          "phonetic": "[pro-seem]",
+          "meaning": "Please / You're welcome",
+          "example": "Můžu dostat kávu, prosím?"
+        },
+        {
+          "word": "Ano",
+          "phonetic": "[a-no]",
+          "meaning": "Yes",
+          "example": "Ano, rozumím."
+        },
+        {
+          "word": "Ne",
+          "phonetic": "[ne]",
+          "meaning": "No",
+          "example": "Ne, to není pravda."
+        },
+        {
+          "word": "Jak se máš?",
+          "phonetic": "[yak se mash]",
+          "meaning": "How are you? (informal)",
+          "example": "Ahoj, Jak se máš?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" or \"Hello\" informally in Czech?",
+          "options": [
+            "Ahoj",
+            "Dobrý den",
+            "Děkuji",
+            "Prosím"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Czech word for \"Thank you\"?",
+          "options": [
+            "Ano",
+            "Ne",
+            "Děkuji",
+            "Jak se máš?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Czech word means both \"Please\" and \"You're welcome\"?",
+          "options": [
+            "Ahoj",
+            "Prosím",
+            "Dobrý den",
+            "Ano"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"How are you?\" to a friend in Czech?",
+          "options": [
+            "Dobrý den",
+            "Děkuji",
+            "Jak se máš?",
+            "Ano"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor helping a student learn Czech. Start by greeting the student with \"Ahoj!\" or \"Dobrý den!\" and introducing today's lesson on basic Czech greetings and common phrases. Explain that we will cover 7 new vocabulary words, such as \"Děkuji\" (Thank you) and \"Prosím\" (Please/You're welcome), and then practice with some quiz questions. Encourage the student to ask questions at any point. Speak some of the new vocabulary words in Czech during the lesson, for example, when introducing them or giving examples."
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "jít",
+          "phonetic": "yeet",
+          "meaning": "to go (on foot)",
+          "example": "Jdu do práce."
+        },
+        {
+          "word": "dělat",
+          "phonetic": "dyeh-lat",
+          "meaning": "to do, to make",
+          "example": "Co děláš?"
+        },
+        {
+          "word": "mít",
+          "phonetic": "meet",
+          "meaning": "to have",
+          "example": "Mám hlad."
+        },
+        {
+          "word": "jíst",
+          "phonetic": "yeest",
+          "meaning": "to eat",
+          "example": "Rád jím ovoce."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How would you say \"I am going to the store\" in Czech?",
+          "options": [
+            "Jdu do obchodu.",
+            "Dělám obchod.",
+            "Mám obchod.",
+            "Jím obchod."
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Czech verb means \"to do\" or \"to make\"?",
+          "options": [
+            "jít",
+            "mít",
+            "dělat",
+            "jíst"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Complete the sentence: \"Já ______ knihu.\" (I ______ a book.)",
+          "options": [
+            "jdu",
+            "dělám",
+            "mám",
+            "jím"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"Co děláš?\" mean?",
+          "options": [
+            "Where are you going?",
+            "What are you doing?",
+            "Do you have time?",
+            "Are you eating?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Ahoj! Jsem tvůj AI lektor češtiny. Dnes se ponoříme do tématu \"Denní aktivity a slovesa\". Naučíme se novou slovní zásobu, procvičíme výslovnost a budeme společně tvořit věty. Začněme prvním slovem: \"jít\". Zkusíš ho vyslovit?"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "jít",
+          "phonetic": "yeet",
+          "meaning": "to go, to walk",
+          "example": "Musím jít domů."
+        },
+        {
+          "word": "mluvit",
+          "phonetic": "mloo-vit",
+          "meaning": "to speak, to talk",
+          "example": "Mluvíš česky?"
+        },
+        {
+          "word": "rozumět",
+          "phonetic": "roh-zoo-myet",
+          "meaning": "to understand",
+          "example": "Nerozumím této otázce."
+        },
+        {
+          "word": "chtít",
+          "phonetic": "kh-teet",
+          "meaning": "to want",
+          "example": "Chci kávu, prosím."
+        },
+        {
+          "word": "mít",
+          "phonetic": "meet",
+          "meaning": "to have",
+          "example": "Mám hlad."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Czech verb means \"to speak\"?",
+          "options": [
+            "jít",
+            "mluvit",
+            "rozumět",
+            "chtít"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Complete the sentence: \"Já ______ česky.\" (I speak Czech.)",
+          "options": [
+            "mluvím",
+            "jdu",
+            "mám",
+            "chci"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does \"Nerozumím\" mean?",
+          "options": [
+            "I want",
+            "I don't understand",
+            "I have",
+            "I go"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct verb to complete the sentence: \"______ kávu, prosím.\" (I want coffee, please.)",
+          "options": [
+            "Mám",
+            "Jdu",
+            "Chci",
+            "Mluvím"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Ahoj! Vítej v lekci češtiny. Jsem tvůj AI tutor a dnes se naučíme pět velmi důležitých českých sloves, která ti pomohou v každodenní komunikaci. Jsou to: 'jít' (to go/walk), 'mluvit' (to speak), 'rozumět' (to understand), 'chtít' (to want) a 'mít' (to have). Projdeme si každé sloveso, ukážeme si příklady a procvičíme si, jak je používat ve větách. Začneme se slovesem 'jít'. Jsi připraven/a začít?"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ráno",
+          "phonetic": "RAH-noh",
+          "meaning": "morning",
+          "example": "Dobré ráno! Vstávám brzy ráno."
+        },
+        {
+          "word": "snídaně",
+          "phonetic": "SNEE-dah-nyeh",
+          "meaning": "breakfast",
+          "example": "Co máš k snídani?"
+        },
+        {
+          "word": "pracovat",
+          "phonetic": "PRAH-tsoh-vaht",
+          "meaning": "to work",
+          "example": "Musím dnes pracovat."
+        },
+        {
+          "word": "večeře",
+          "phonetic": "VEH-cheh-rzheh",
+          "meaning": "dinner",
+          "example": "Kdy je večeře?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does \"ráno\" mean?",
+          "options": [
+            "evening",
+            "morning",
+            "afternoon",
+            "night"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"breakfast\"?",
+          "options": [
+            "oběd",
+            "večeře",
+            "snídaně",
+            "svačina"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"to work\" in Czech?",
+          "options": [
+            "studovat",
+            "číst",
+            "pracovat",
+            "spát"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Ahoj! Vítejte u naší lekce češtiny. Dnes se podíváme na každodenní aktivity a naučíme se nová slovíčka. Budeme se učit, jak mluvit o tom, co děláte ráno, v poledne a večer. Začneme se slovem \"ráno\" (morning). Poslechněte si a opakujte: \"ráno\". Skvěle! Teď si zkusíme říct, co děláme ráno. Například: \"Vstávám brzy ráno.\" (I wake up early in the morning.) Dále se podíváme na \"snídaně\" (breakfast). Co obvykle jíte k snídani? A pak se naučíme sloveso \"pracovat\" (to work). Jak byste řekli \"Musím pracovat\"? Pojďme na to!"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "myslet",
+          "phonetic": "mis-let",
+          "meaning": "to think",
+          "example": "Myslím, že to je dobrý nápad."
+        },
+        {
+          "word": "doufat",
+          "phonetic": "dou-fat",
+          "meaning": "to hope",
+          "example": "Doufám, že se brzy uvidíme."
+        },
+        {
+          "word": "možná",
+          "phonetic": "mozh-nah",
+          "meaning": "maybe, perhaps",
+          "example": "Možná půjdeme zítra do kina."
+        },
+        {
+          "word": "určitě",
+          "phonetic": "oor-chi-tye",
+          "meaning": "certainly, definitely",
+          "example": "Určitě to zvládneš!"
+        },
+        {
+          "word": "souhlasit",
+          "phonetic": "sou-hla-sit",
+          "meaning": "to agree",
+          "example": "Souhlasím s tebou."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'I think' in Czech?",
+          "options": [
+            "Myslím",
+            "Doufám",
+            "Souhlasím",
+            "Určitě"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means 'to hope'?",
+          "options": [
+            "Myslet",
+            "Doufat",
+            "Souhlasit",
+            "Možná"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct word: '_______ půjdeme zítra na výlet.' (Maybe we'll go on a trip tomorrow.)",
+          "options": [
+            "Určitě",
+            "Souhlasím",
+            "Možná",
+            "Myslím"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Czech word for 'to agree'?",
+          "options": [
+            "Myslet",
+            "Doufat",
+            "Souhlasit",
+            "Určitě"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Ahoj! Vítej v naší lekci češtiny. Dnes se ponoříme do světa vyjadřování názorů, naděje a jistoty v češtině. Naučíme se pět velmi užitečných slovíček a frází: 'myslet' (to think), 'doufat' (to hope), 'možná' (maybe), 'určitě' (certainly) a 'souhlasit' (to agree). Budeme je procvičovat v kontextu, abychom pochopili, jak je správně používat v každodenní komunikaci. Jsi připraven/a začít? Začneme se slovem 'myslet'. Můžeš zkusit říct 'myslet' a pak mi říct, co si o tom myslíš?"
+    }
+  ]
+}

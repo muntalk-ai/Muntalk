@@ -26,7 +26,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const CURRICULUM_TS = path.join(__dirname, '../src/data/curriculum.ts');
 const OUTPUT_DIR    = path.join(__dirname, '../public/curriculum');
 
-// ── 상위 10개 학습 언어 ────────────────────────────────────────────────────
+// ── 상위 60개 학습 언어 확장 ────────────────────────────────────────────────────
 const TOP_LANGUAGES = [
   { code: 'ja-JP', label: 'Japanese',           native: '日本語'           },
   { code: 'ko-KR', label: 'Korean',              native: '한국어'           },
@@ -38,7 +38,58 @@ const TOP_LANGUAGES = [
   { code: 'pt-BR', label: 'Portuguese',          native: 'Português'       },
   { code: 'it-IT', label: 'Italian',             native: 'Italiano'        },
   { code: 'ru-RU', label: 'Russian',             native: 'Русский'         },
+  { code: 'en-US', label: 'English (US)',        native: 'English (US)'    },
+  { code: 'en-GB', label: 'English (UK)',        native: 'English (UK)'    },
+  { code: 'vi-VN', label: 'Vietnamese',          native: 'Tiếng Việt'      },
+  { code: 'th-TH', label: 'Thai',                native: 'ไทย'             },
+  { code: 'id-ID', label: 'Indonesian',          native: 'Bahasa Indonesia'},
+  { code: 'ms-MY', label: 'Malay',               native: 'Bahasa Melayu'   },
+  { code: 'hi-IN', label: 'Hindi',               native: 'हिन्दी'             },
+  { code: 'ar-SA', label: 'Arabic',              native: 'العربية'          },
+  { code: 'tr-TR', label: 'Turkish',             native: 'Türkçe'          },
+  { code: 'nl-NL', label: 'Dutch',               native: 'Nederlands'      },
+  { code: 'pl-PL', label: 'Polish',              native: 'Polski'          },
+  { code: 'sv-SE', label: 'Swedish',             native: 'Svenska'         },
+  { code: 'da-DK', label: 'Danish',              native: 'Dansk'           },
+  { code: 'fi-FI', label: 'Finnish',             native: 'Suomi'           },
+  { code: 'no-NO', label: 'Norwegian',           native: 'Norsk'           },
+  { code: 'cs-CZ', label: 'Czech',               native: 'Čeština'         },
+  { code: 'hu-HU', label: 'Hungarian',           native: 'Magyar'          },
+  { code: 'ro-RO', label: 'Romanian',            native: 'Română'          },
+  { code: 'uk-UA', label: 'Ukrainian',           native: 'Українська'      },
+  { code: 'el-GR', label: 'Greek',               native: 'Ελληνικά'        },
+  { code: 'he-IL', label: 'Hebrew',              native: 'עברית'           },
+  { code: 'fa-IR', label: 'Persian',             native: 'فارسی'           },
+  { code: 'ur-PK', label: 'Urdu',                native: 'اردو'            },
+  { code: 'bn-BD', label: 'Bengali',             native: 'বাংলা'            },
+  { code: 'pa-IN', label: 'Punjabi',             native: 'ਪੰਜਾਬੀ'           },
+  { code: 'ta-IN', label: 'Tamil',               native: 'தமிழ்'            },
+  { code: 'te-IN', label: 'Telugu',              native: 'తెలుగు'           },
+  { code: 'kn-IN', label: 'Kannada',             native: 'ಕನ್ನಡ'           },
+  { code: 'ml-IN', label: 'Malayalam',           native: 'മലയാളം'          },
+  { code: 'mr-IN', label: 'Marathi',             native: 'मराठी'           },
+  { code: 'gu-IN', label: 'Gujarati',            native: 'ગુજરાતી'         },
+  { code: 'fil-PH', label: 'Filipino',           native: 'Filipino'        },
+  { code: 'sw-KE', label: 'Swahili',             native: 'Kiswahili'       },
+  { code: 'am-ET', label: 'Amharic',             native: 'አማርኛ'           },
+  { code: 'yo-NG', label: 'Yoruba',              native: 'Yorùbá'          },
+  { code: 'ig-NG', label: 'Igbo',                native: 'Asụsụ Igbo'      },
+  { code: 'af-ZA', label: 'Afrikaans',           native: 'Afrikaans'       },
+  { code: 'zu-ZA', label: 'Zulu',                native: 'isiZulu'         },
+  { code: 'sk-SK', label: 'Slovak',              native: 'Slovenčina'      },
+  { code: 'bg-BG', label: 'Bulgarian',           native: 'Български'       },
+  { code: 'hr-HR', label: 'Croatian',            native: 'Hrvatski'        },
+  { code: 'sr-RS', label: 'Serbian',             native: 'Српски'          },
+  { code: 'sl-SI', label: 'Slovenian',           native: 'Slovenščina'     },
+  { code: 'et-EE', label: 'Estonian',            native: 'Eesti'           },
+  { code: 'lv-LV', label: 'Latvian',             native: 'Latviešu'        },
+  { code: 'lt-LT', label: 'Lithuanian',          native: 'Lietuvių'        },
+  { code: 'ka-GE', label: 'Georgian',            native: 'ქართული'         },
+  { code: 'hy-AM', label: 'Armenian',            native: 'Հայերեն'         },
+  { code: 'az-AZ', label: 'Azerbaijani',         native: 'Azərbaycan'      },
+  { code: 'kk-KZ', label: 'Kazakh',              native: 'Қазақ тілі'      }
 ];
+
 
 // ── 환경변수 체크 ──────────────────────────────────────────────────────────
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || process.env.NEXT_PUBLIC_GEMINI_API_KEY;
@@ -58,7 +109,7 @@ const forceRegen = args.includes('--force');
 function parseCurriculum() {
   const content = fs.readFileSync(CURRICULUM_TS, 'utf-8');
 
-  const lessonIds = [...content.matchAll(/id: '([a-z]\d+-\d+-\d+)'/g)].map(m => m[1]);
+  const lessonIds = [...content.matchAll(/id:\s*['"]([a-z]\d+-\d+-\d+)['"]/g)].map(m => m[1]);
   const positions = lessonIds.map(lid => ({ pos: content.indexOf(`id: '${lid}'`), lid }))
                               .sort((a, b) => a.pos - b.pos);
 
@@ -69,8 +120,9 @@ function parseCurriculum() {
     const block = content.slice(pos, end);
 
     // title, icon, xp
-    const title = (block.match(/title: ['"]([^'"]+)['"]/)  || [])[1] || '';
-    const icon  = (block.match(/icon: ['"]([^'"]+)['"]/)   || [])[1] || '📚';
+    // 수정 후 (공백 및 따옴표 유연성 확보)
+const title = (block.match(/title:\s*['"]([^'"]+)['"]/)  || [])[1] || '';
+const icon  = (block.match(/icon:\s*['"]([^'"]+)['"]/)   || [])[1] || '📚';
     const xp    = parseInt((block.match(/xp: (\d+)/)       || [])[1] || '30');
 
     // vocab
@@ -101,7 +153,7 @@ function parseCurriculum() {
 
 // ── Gemini 호출 ────────────────────────────────────────────────────────────
 async function callGemini(prompt, maxTokens = 3000) {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
   const res = await fetch(url, {
     method:  'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -147,7 +199,17 @@ Your task:
    - Keep the same teaching style and structure
    - The tutor should speak ${langLabel} words/phrases during the lesson
 
-Return ONLY valid JSON, no markdown:
+IMPORTANT RULES:
+1. Return ONLY a valid JSON object.
+2. Do not use markdown code blocks (no \`\`\`json).
+3. Ensure all strings are properly escaped, especially double quotes inside sentences.
+4. Do not leave any trailing commas.
+5. Make sure the JSON is complete and not truncated.
+
+Lesson to translate:
+${JSON.stringify(lesson)}
+
+Required JSON Structure:
 {
   "vocab": [{"word":"...","phonetic":"...","meaning":"...","example":"..."}],
   "quiz": [{"q":"...","options":["...","...","...","..."],"answer":0}],
@@ -205,9 +267,10 @@ async function generateForLanguage(lang, lessons) {
   }
 
   // 특정 레슨만 생성하는 경우
-  const targets = lessonArg
-    ? lessons.filter(l => l.id === lessonArg)
-    : lessons.filter(l => !existing[l.id] || forceRegen);
+ // 수정 후: 데이터가 없거나, 이전에 실패(_fallback)했거나, force 옵션이 있을 때 동작
+const targets = lessonArg 
+  ? lessons.filter(l => l.id === lessonArg) 
+  : lessons.filter(l => !existing[l.id] || existing[l.id]._fallback === true || forceRegen);
 
   if (targets.length === 0) {
     console.log(`  ✅ Already complete — skipping`);

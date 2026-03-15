@@ -1,0 +1,1287 @@
+{
+  "langCode": "mr-IN",
+  "langLabel": "Marathi",
+  "langNative": "मराठी",
+  "generatedAt": "2026-03-15T07:07:38.171Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्कार",
+          "phonetic": "Namaskar",
+          "meaning": "Hello / Hi",
+          "example": "नमस्कार! कसे आहात?"
+        },
+        {
+          "word": "माझे नाव ... आहे",
+          "phonetic": "Mājhe nāv ... āhe",
+          "meaning": "My name is ...",
+          "example": "माझे नाव प्रिया आहे."
+        },
+        {
+          "word": "तुमचे नाव काय आहे?",
+          "phonetic": "Tumche nāv kāy āhe?",
+          "meaning": "What is your name? (formal/plural)",
+          "example": "तुमचे नाव काय आहे?"
+        },
+        {
+          "word": "मी ठीक आहे",
+          "phonetic": "Mī ṭhīk āhe",
+          "meaning": "I am fine",
+          "example": "मी ठीक आहे, धन्यवाद."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Marathi?",
+          "options": [
+            "नमस्कार",
+            "धन्यवाद",
+            "शुभ प्रभात",
+            "शुभ रात्री"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How would you say \"My name is Priya\" in Marathi?",
+          "options": [
+            "तुमचे नाव प्रिया आहे.",
+            "माझे नाव प्रिया आहे.",
+            "मी प्रिया आहे.",
+            "प्रिया नाव आहे."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct Marathi phrase for \"How are you?\" (formal/plural)?",
+          "options": [
+            "कसे आहेस?",
+            "कसे आहात?",
+            "काय आहे?",
+            "कोण आहे?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "नमस्कार! मी तुमचा मराठी शिक्षक आहे. आजच्या धड्यात आपण मराठीतील काही महत्त्वाचे अभिवादन आणि स्वतःची ओळख करून देणारे वाक्य शिकणार आहोत. आपण 'नमस्कार' (Namaskar) या शब्दाने सुरुवात करूया, ज्याचा अर्थ 'Hello' किंवा 'Hi' असा होतो. तुम्ही 'नमस्कार' म्हणून मला अभिवादन करू शकता का?"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्कार",
+          "phonetic": "Namaskar",
+          "meaning": "Hello / Greetings",
+          "example": "नमस्कार! तुम्ही कसे आहात?"
+        },
+        {
+          "word": "कसे आहात?",
+          "phonetic": "Kase aahat?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "नमस्कार, तुम्ही कसे आहात?"
+        },
+        {
+          "word": "मी ठीक आहे",
+          "phonetic": "Mi theek aahe",
+          "meaning": "I am fine.",
+          "example": "मी ठीक आहे, धन्यवाद."
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyavaad",
+          "meaning": "Thank you.",
+          "example": "मदतीसाठी धन्यवाद."
+        },
+        {
+          "word": "तुमचं नाव काय आहे?",
+          "phonetic": "Tumcha naav kaay aahe?",
+          "meaning": "What is your name?",
+          "example": "तुमचं नाव काय आहे? माझं नाव रिया आहे."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Greetings\" in Marathi?",
+          "options": [
+            "नमस्कार",
+            "धन्यवाद",
+            "माफ करा",
+            "शुभ रात्री"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct Marathi phrase for \"How are you?\" (formal/plural)?",
+          "options": [
+            "मी ठीक आहे",
+            "कसे आहात?",
+            "तुमचं नाव काय आहे?",
+            "होय"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"कसे आहात?\", how would you respond with \"I am fine\"?",
+          "options": [
+            "धन्यवाद",
+            "नमस्कार",
+            "मी ठीक आहे",
+            "माझं नाव रिया आहे"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Marathi?",
+          "options": [
+            "मी ठीक आहे",
+            "नमस्कार",
+            "कसे आहात?",
+            "धन्यवाद"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "नमस्कार! मराठीच्या तुमच्या पहिल्या धड्यात स्वागत आहे. आज आपण काही मूलभूत अभिवादन आणि परिचय शिकणार आहोत. मी नवीन मराठी शब्द आणि वाक्ये सादर करेन, त्यांचे अर्थ समजावून सांगेन आणि उदाहरणे देईन. त्यानंतर, मी तुम्हाला ती बोलण्याचा सराव करण्यास सांगेन. आपण 'नमस्कार' (Namaskar) म्हणजे 'Hello' किंवा 'Greetings' पासून सुरुवात करूया. त्यानंतर, आपण 'तुम्ही कसे आहात?' (Tumhi kase aahat?) म्हणजे 'How are you?' आणि 'मी ठीक आहे' (Mi theek aahe) म्हणजे 'I am fine' शिकू. मी तुम्हाला 'धन्यवाद' (Dhanyavaad) म्हणजे 'Thank you' आणि 'तुमचं नाव काय आहे?' (Tumcha naav kaay aahe?) म्हणजे 'What is your name?' हे देखील शिकवेन. चला 'नमस्कार' चा सराव करून सुरुवात करूया. तुम्ही 'नमस्कार' म्हणू शकता का?"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्कार",
+          "phonetic": "Namaskar",
+          "meaning": "Hello / Hi (a respectful greeting)",
+          "example": "नमस्कार, तुम्ही कसे आहात?"
+        },
+        {
+          "word": "कसे आहात?",
+          "phonetic": "Kase aahat?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "नमस्कार, तुम्ही कसे आहात?"
+        },
+        {
+          "word": "मी ठीक आहे.",
+          "phonetic": "Mee theek aahe.",
+          "meaning": "I am fine.",
+          "example": "मी ठीक आहे, धन्यवाद."
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyavaad",
+          "meaning": "Thank you",
+          "example": "तुमच्या मदतीबद्दल धन्यवाद."
+        },
+        {
+          "word": "तुमचं नाव काय आहे?",
+          "phonetic": "Tumcha naav kaay aahe?",
+          "meaning": "What is your name? (formal)",
+          "example": "नमस्कार, तुमचं नाव काय आहे?"
+        },
+        {
+          "word": "माझं नाव... आहे.",
+          "phonetic": "Maazha naav... aahe.",
+          "meaning": "My name is...",
+          "example": "माझं नाव प्रिया आहे."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Marathi?",
+          "options": [
+            "धन्यवाद",
+            "नमस्कार",
+            "मी ठीक आहे",
+            "कसे आहात?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means 'How are you?' (formal) in Marathi?",
+          "options": [
+            "माझं नाव... आहे",
+            "धन्यवाद",
+            "कसे आहात?",
+            "मी ठीक आहे"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say 'Thank you' in Marathi?",
+          "options": [
+            "नमस्कार",
+            "मी ठीक आहे",
+            "धन्यवाद",
+            "तुमचं नाव काय आहे?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks 'तुमचं नाव काय आहे?' (What is your name?), how would you respond saying 'My name is [Your Name]?'",
+          "options": [
+            "मी ठीक आहे.",
+            "नमस्कार.",
+            "माझं नाव... आहे.",
+            "धन्यवाद."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "उत्तम काम! आज आपण काही मूलभूत मराठी अभिवादन आणि परिचय शिकणार आहोत. आपण 'नमस्कार' (Namaskar - Hello), 'कसे आहात?' (Kase aahat? - How are you?), आणि 'माझं नाव... आहे' (Maazha naav... aahe - My name is...) यांसारख्या वाक्यांचा अभ्यास करू. मी प्रत्येक वाक्य म्हणेल आणि तुम्ही माझ्यामागे ते पुन्हा म्हणू शकता. त्यानंतर, आपण त्यांचा साध्या संभाषणात वापर करण्याचा सराव करूया. 'नमस्कार' पासून सुरुवात करूया. तुम्ही 'नमस्कार' म्हणू शकता का?"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्कार",
+          "phonetic": "Namaskar",
+          "meaning": "Hello / Greetings",
+          "example": "नमस्कार! तुम्ही कसे आहात?"
+        },
+        {
+          "word": "कसे आहात?",
+          "phonetic": "Kase aahat?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "शुभ प्रभात! तुम्ही कसे आहात?"
+        },
+        {
+          "word": "मी ठीक आहे.",
+          "phonetic": "Mee theek aahe.",
+          "meaning": "I am fine.",
+          "example": "मी ठीक आहे, धन्यवाद."
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyavaad",
+          "meaning": "Thank you",
+          "example": "तुमच्या मदतीबद्दल धन्यवाद."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Marathi?",
+          "options": [
+            "धन्यवाद",
+            "नमस्कार",
+            "मी ठीक आहे",
+            "पुन्हा भेटूया"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Marathi phrase for \"How are you?\" (formal/plural)?",
+          "options": [
+            "मी ठीक आहे",
+            "धन्यवाद",
+            "कसे आहात?",
+            "शुभ प्रभात"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "छान काम! आज आपण मराठीतील काही मूलभूत अभिवादन आणि परिचय शिकणार आहोत. आपण 'नमस्कार' (Namaskar) या शब्दापासून सुरुवात करूया, ज्याचा अर्थ 'Hello' किंवा 'Greetings' आहे. माझ्यामागे 'नमस्कार' असे म्हणू शकता का? त्यानंतर आपण 'कसे आहात?' (Kase aahat?) म्हणजे 'How are you?' (formal/plural) आणि त्याचे उत्तर 'मी ठीक आहे, धन्यवाद' (Mee theek aahe, dhanyavaad) म्हणजे 'I am fine, thank you' हे शिकू. आपण या शब्दांचा वापर करून छोटे संभाषण कसे करायचे याचा सराव करूया. चला, सुरुवात करूया!"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्कार",
+          "phonetic": "Namaskar",
+          "meaning": "Hello / Greetings",
+          "example": "नमस्कार, तुम्ही कसे आहात?"
+        },
+        {
+          "word": "तुम्ही कसे आहात?",
+          "phonetic": "Tumhi kase aahat?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "नमस्कार, तुम्ही कसे आहात?"
+        },
+        {
+          "word": "मी ठीक आहे.",
+          "phonetic": "Mi theek aahe.",
+          "meaning": "I am fine.",
+          "example": "मी ठीक आहे, धन्यवाद."
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyawad",
+          "meaning": "Thank you",
+          "example": "तुमच्या मदतीबद्दल धन्यवाद."
+        },
+        {
+          "word": "कृपया",
+          "phonetic": "Krupaya",
+          "meaning": "Please",
+          "example": "कृपया मला पाणी द्या."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Marathi word for 'Hello' or 'Greetings'?",
+          "options": [
+            "धन्यवाद",
+            "नमस्कार",
+            "कृपया",
+            "मी"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you ask 'How are you?' (formal/plural) in Marathi?",
+          "options": [
+            "मी ठीक आहे",
+            "तुम्ही कसे आहात?",
+            "धन्यवाद",
+            "कृपया"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Marathi translation for 'I am fine.'",
+          "options": [
+            "तुम्ही कसे आहात?",
+            "धन्यवाद",
+            "मी ठीक आहे.",
+            "नमस्कार"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Marathi word means 'Thank you'?",
+          "options": [
+            "कृपया",
+            "नमस्कार",
+            "धन्यवाद",
+            "मी ठीक आहे."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Marathi word for 'Please'?",
+          "options": [
+            "धन्यवाद",
+            "नमस्कार",
+            "कृपया",
+            "मी ठीक आहे."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "नमस्कार! आज आपण काही मूलभूत मराठी शब्द आणि वाक्ये शिकणार आहोत. आपण 'नमस्कार' (Namaskar), 'तुम्ही कसे आहात?' (Tumhi kase aahat?), 'मी ठीक आहे.' (Mi theek aahe.), 'धन्यवाद' (Dhanyawad) आणि 'कृपया' (Krupaya) यांसारखे शब्द पाहू. या शब्दांचा वापर करून आपण सोपी वाक्ये कशी बनवायची हे देखील शिकूया. चला, सुरुवात करूया!"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "पुस्तक",
+          "phonetic": "Pustak",
+          "meaning": "Book",
+          "example": "हे माझे पुस्तक आहे."
+        },
+        {
+          "word": "पाणी",
+          "phonetic": "Pāṇī",
+          "meaning": "Water",
+          "example": "मला पाणी पाहिजे."
+        },
+        {
+          "word": "जेवण",
+          "phonetic": "Jevaṇ",
+          "meaning": "Food / Meal",
+          "example": "जेवण तयार आहे."
+        },
+        {
+          "word": "जाणे",
+          "phonetic": "Jāṇe",
+          "meaning": "To go",
+          "example": "मला घरी जायचे आहे."
+        },
+        {
+          "word": "येणे",
+          "phonetic": "Yeṇe",
+          "meaning": "To come",
+          "example": "तुम्ही कधी येणार?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Marathi word for \"book\"?",
+          "options": [
+            "पुस्तक",
+            "पाणी",
+            "जेवण",
+            "जाणे"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say \"water\" in Marathi?",
+          "options": [
+            "जेवण",
+            "पाणी",
+            "पुस्तक",
+            "येणे"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Marathi word means \"to go\"?",
+          "options": [
+            "येणे",
+            "पाणी",
+            "जाणे",
+            "पुस्तक"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Translate \"I want food.\"",
+          "options": [
+            "मला पाणी पाहिजे.",
+            "मला पुस्तक पाहिजे.",
+            "मला जेवण पाहिजे.",
+            "मला जाणे पाहिजे."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "नमस्कार! मी तुमचा AI शिक्षक आहे. आज आपण काही नवीन मराठी शब्द आणि वाक्ये शिकणार आहोत. आपण त्यांचा उच्चार, अर्थ आणि वाक्यांमध्ये वापर कसा करायचा हे पाहू. चला 'पुस्तक' या शब्दाने सुरुवात करूया. 'पुस्तक' म्हणजे 'book'. तुम्ही 'पुस्तक' असे म्हणण्याचा प्रयत्न करा."
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्कार",
+          "phonetic": "Namaskar",
+          "meaning": "Hello / Greetings",
+          "example": "नमस्कार! कसे आहात?"
+        },
+        {
+          "word": "शुभ प्रभात",
+          "phonetic": "Shubh Prabhat",
+          "meaning": "Good morning",
+          "example": "शुभ प्रभात! आजचा दिवस चांगला असो."
+        },
+        {
+          "word": "कसे आहात?",
+          "phonetic": "Kase aahat?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "नमस्कार, कसे आहात?"
+        },
+        {
+          "word": "मी ठीक आहे.",
+          "phonetic": "Mi theek aahe.",
+          "meaning": "I am fine.",
+          "example": "मी ठीक आहे, धन्यवाद."
+        },
+        {
+          "word": "आपले नाव काय आहे?",
+          "phonetic": "Aaple naav kaay aahe?",
+          "meaning": "What is your name? (formal)",
+          "example": "आपले नाव काय आहे?"
+        },
+        {
+          "word": "माझे नाव ... आहे.",
+          "phonetic": "Maajhe naav ... aahe.",
+          "meaning": "My name is ...",
+          "example": "माझे नाव प्रिया आहे."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Greetings\" in Marathi?",
+          "options": [
+            "शुभ प्रभात",
+            "नमस्कार",
+            "धन्यवाद",
+            "माफ करा"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct Marathi phrase for asking \"How are you?\" (formal)?",
+          "options": [
+            "मी ठीक आहे.",
+            "कसे आहात?",
+            "आपले नाव काय आहे?",
+            "शुभ रात्री."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"आपले नाव काय आहे?\" (What is your name?), how would you respond with \"My name is [Your Name]\"?",
+          "options": [
+            "मी ठीक आहे.",
+            "नमस्कार.",
+            "माझे नाव ... आहे.",
+            "शुभ प्रभात."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "मराठीच्या धड्यात आपले स्वागत आहे! (Marathi-chya dhadyat aaple swagat aahe!) आज आपण काही सामान्य मराठी अभिवादन आणि परिचय शिकणार आहोत. आपण 'नमस्कार' (Namaskar), 'शुभ प्रभात' (Shubh Prabhat), 'कसे आहात?' (Kase aahat?) आणि 'माझे नाव ... आहे.' (Maajhe naav ... aahe.) यांसारखे महत्त्वाचे शब्द आणि वाक्ये शिकू. मी तुम्हाला प्रत्येक शब्द आणि वाक्य शिकवेन, त्याचा अर्थ सांगेन आणि ते कसे वापरायचे ते दाखवेन. उच्चाराकडे लक्ष द्या आणि माझ्या मागे म्हणण्याचा प्रयत्न करा. चला तर मग, सुरुवात करूया! सर्वात आधी, 'नमस्कार' (Namaskar) या शब्दाने सुरुवात करूया. याचा अर्थ 'Hello' किंवा 'Greetings' असा होतो. तुम्ही 'नमस्कार' म्हणण्याचा प्रयत्न करू शकता का?"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्कार",
+          "phonetic": "Namaskār",
+          "meaning": "Hello / Greetings",
+          "example": "नमस्कार, तुम्ही कसे आहात?"
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyavād",
+          "meaning": "Thank you",
+          "example": "तुमच्या मदतीबद्दल धन्यवाद."
+        },
+        {
+          "word": "कृपया",
+          "phonetic": "Kṛpayā",
+          "meaning": "Please",
+          "example": "कृपया मला पाणी द्या."
+        },
+        {
+          "word": "होय",
+          "phonetic": "Hoy",
+          "meaning": "Yes",
+          "example": "होय, मी तयार आहे."
+        },
+        {
+          "word": "नाही",
+          "phonetic": "Nāhī",
+          "meaning": "No",
+          "example": "नाही, मला ते नको आहे."
+        },
+        {
+          "word": "कसे आहात?",
+          "phonetic": "Kase āhāt?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "नमस्कार, तुम्ही कसे आहात?"
+        },
+        {
+          "word": "मी ठीक आहे.",
+          "phonetic": "Mī ṭhīk āhe.",
+          "meaning": "I am fine.",
+          "example": "मी ठीक आहे, धन्यवाद."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which of these Marathi words means 'Hello' or 'Greetings'?",
+          "options": [
+            "धन्यवाद",
+            "नमस्कार",
+            "कृपया",
+            "नाही"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say 'Thank you' in Marathi?",
+          "options": [
+            "होय",
+            "नाही",
+            "धन्यवाद",
+            "नमस्कार"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Marathi word for 'Please'?",
+          "options": [
+            "मी ठीक आहे.",
+            "कृपया",
+            "कसे आहात?",
+            "होय"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks you 'तुम्ही कसे आहात?' (How are you?), what is an appropriate response?",
+          "options": [
+            "धन्यवाद",
+            "नमस्कार",
+            "मी ठीक आहे.",
+            "नाही"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Marathi word means 'Yes'?",
+          "options": [
+            "नाही",
+            "होय",
+            "कृपया",
+            "धन्यवाद"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "नमस्कार! (Namaskār!) Welcome to your Marathi lesson. Today, we're going to learn some essential Marathi greetings and phrases. We'll start with 'नमस्कार' (Namaskār) which means 'Hello' or 'Greetings'. Then we'll learn 'धन्यवाद' (Dhanyavād) for 'Thank you', and 'कृपया' (Kṛpayā) for 'Please'. We'll also cover how to ask 'कसे आहात?' (Kase āhāt?) - 'How are you?' and respond with 'मी ठीक आहे.' (Mī ṭhīk āhe.) - 'I am fine.' Let's get started!"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्कार",
+          "phonetic": "Namaskar",
+          "meaning": "Hello / Hi (a respectful greeting)",
+          "example": "नमस्कार! तुम्ही कसे आहात?"
+        },
+        {
+          "word": "कसे आहात?",
+          "phonetic": "Kase aahat?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "तुम्ही कसे आहात? मी ठीक आहे."
+        },
+        {
+          "word": "मी ठीक आहे.",
+          "phonetic": "Mee theek aahe.",
+          "meaning": "I am fine.",
+          "example": "मी ठीक आहे, धन्यवाद."
+        },
+        {
+          "word": "तुमचं नाव काय आहे?",
+          "phonetic": "Tumcha naav kaay aahe?",
+          "meaning": "What is your name? (formal/plural)",
+          "example": "तुमचं नाव काय आहे? माझं नाव सारा आहे."
+        },
+        {
+          "word": "माझं नाव... आहे.",
+          "phonetic": "Maazha naav... aahe.",
+          "meaning": "My name is...",
+          "example": "माझं नाव जॉन आहे."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Marathi?",
+          "options": [
+            "नमस्कार",
+            "धन्यवाद",
+            "माफ करा",
+            "हो"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which phrase means \"How are you?\" (formal)?",
+          "options": [
+            "मी ठीक आहे",
+            "तुमचं नाव काय आहे?",
+            "कसे आहात?",
+            "धन्यवाद"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"तुमचं नाव काय आहे?\", what would be an appropriate response?",
+          "options": [
+            "मी ठीक आहे",
+            "माझं नाव जॉन आहे",
+            "नमस्कार",
+            "हो"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "नमस्कार! (Namaskar!) तुमच्या पुढील मराठी धड्यासाठी तयार आहात का? (Tumchya pudhil Marathi dhadyasathi tayar aahat ka?) आज आपण 'मूलभूत अभिवादन आणि ओळख' (Basic Greetings and Introductions) शिकणार आहोत. आपण 'नमस्कार' (Namaskar), 'कसे आहात?' (Kase aahat?), आणि 'तुमचं नाव काय आहे?' (Tumcha naav kaay aahe?) यांसारखे काही नवीन शब्द आणि वाक्ये शिकू. त्यानंतर, आपण त्यांचा वाक्यांमध्ये वापर करण्याचा सराव करू. चला, सुरुवात करूया! (Chala, suruvaat karuya!)"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्कार",
+          "phonetic": "Namaskār",
+          "meaning": "Hello / Greetings",
+          "example": "नमस्कार, तुम्ही कसे आहात?"
+        },
+        {
+          "word": "तुम्ही कसे आहात?",
+          "phonetic": "Tumhī kase āhāt?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "मी ठीक आहे, तुम्ही कसे आहात?"
+        },
+        {
+          "word": "मी ठीक आहे",
+          "phonetic": "Mī ṭhīk āhe",
+          "meaning": "I am fine",
+          "example": "मी ठीक आहे, धन्यवाद."
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyavād",
+          "meaning": "Thank you",
+          "example": "मदत केल्याबद्दल धन्यवाद."
+        },
+        {
+          "word": "कृपया",
+          "phonetic": "Kṛpayā",
+          "meaning": "Please",
+          "example": "कृपया मला पाणी द्या."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Marathi word for \"Hello\"?",
+          "options": [
+            "धन्यवाद",
+            "नमस्कार",
+            "कृपया",
+            "मी ठीक आहे"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"I am fine\" in Marathi?",
+          "options": [
+            "तुम्ही कसे आहात?",
+            "धन्यवाद",
+            "मी ठीक आहे",
+            "कृपया"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Marathi word for \"Thank you\".",
+          "options": [
+            "नमस्कार",
+            "कृपया",
+            "मी ठीक आहे",
+            "धन्यवाद"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "नमस्कार! (Namaskār!) आज आपण मराठीतील काही मूलभूत अभिवादन शिकणार आहोत. या धड्यात आपण 'नमस्कार' (Namaskār - Hello), 'तुम्ही कसे आहात?' (Tumhī kase āhāt? - How are you?) आणि 'मी ठीक आहे' (Mī ṭhīk āhe - I am fine) यांसारखे महत्त्वाचे शब्द आणि वाक्ये शिकू. चला, 'नमस्कार' या शब्दापासून सुरुवात करूया. हा शब्द मराठीमध्ये 'Hello' किंवा 'Greetings' यासाठी वापरला जातो. माझ्यामागे म्हणा: 'नमस्कार'. खूप छान! आता 'तुम्ही कसे आहात?' याचा अर्थ 'How are you?' असा होतो. हे वाक्य तुम्ही एखाद्याला भेटल्यावर विचारू शकता. माझ्यामागे पुन्हा म्हणा: 'तुम्ही कसे आहात?'. उत्तम! आणि जर तुम्हाला उत्तर द्यायचे असेल की 'I am fine', तर तुम्ही 'मी ठीक आहे' असे म्हणू शकता. माझ्यामागे म्हणा: 'मी ठीक आहे'. खूप छान! आता आपण 'धन्यवाद' (Dhanyavād - Thank you) आणि 'कृपया' (Kṛpayā - Please) हे शब्द देखील शिकूया. 'धन्यवाद' म्हणजे 'Thank you'. माझ्यामागे म्हणा: 'धन्यवाद'. आणि 'कृपया' म्हणजे 'Please'. माझ्यामागे म्हणा: 'कृपया'. या शब्दांचा सराव करा आणि पुढील क्विझसाठी तयार रहा!"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्कार",
+          "phonetic": "Namaskar",
+          "meaning": "Hello / Greetings",
+          "example": "नमस्कार, तुम्ही कसे आहात?"
+        },
+        {
+          "word": "कसे आहात?",
+          "phonetic": "Kase aahat?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "शुभ प्रभात! तुम्ही कसे आहात?"
+        },
+        {
+          "word": "मी ठीक आहे.",
+          "phonetic": "Mee theek aahe.",
+          "meaning": "I am fine.",
+          "example": "मी ठीक आहे, धन्यवाद."
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyawad",
+          "meaning": "Thank you",
+          "example": "मदतीसाठी धन्यवाद."
+        },
+        {
+          "word": "कृपया",
+          "phonetic": "Krupaya",
+          "meaning": "Please",
+          "example": "कृपया मला पाणी द्या."
+        },
+        {
+          "word": "हो",
+          "phonetic": "Ho",
+          "meaning": "Yes",
+          "example": "हो, मला ते आवडते."
+        },
+        {
+          "word": "नाही",
+          "phonetic": "Naahi",
+          "meaning": "No",
+          "example": "नाही, मला ते नको."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Marathi?",
+          "options": [
+            "नमस्कार",
+            "धन्यवाद",
+            "कृपया",
+            "नाही"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Marathi word for \"Thank you\"?",
+          "options": [
+            "हो",
+            "नाही",
+            "धन्यवाद",
+            "कसे आहात?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Marathi phrase for \"How are you?\"",
+          "options": [
+            "मी ठीक आहे",
+            "कसे आहात?",
+            "कृपया",
+            "हो"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"कसे आहात?\", how would you respond with \"I am fine\"?",
+          "options": [
+            "धन्यवाद",
+            "नाही",
+            "मी ठीक आहे",
+            "कृपया"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "नमस्कार! मी तुमचा AI मराठी शिक्षक आहे. आज आपण काही आवश्यक मराठी अभिवादन आणि वाक्ये शिकणार आहोत. आपण 'नमस्कार' (Namaskar) या शब्दापासून सुरुवात करूया, ज्याचा अर्थ 'Hello' किंवा 'Greetings' आहे. त्यानंतर आपण 'कसे आहात?' (Kase aahat?) शिकू, ज्याचा अर्थ 'How are you?' आहे, आणि 'मी ठीक आहे' (Mee theek aahe), म्हणजे 'I am fine'. आपण 'धन्यवाद' (Dhanyawad) म्हणजे 'Thank you', 'कृपया' (Krupaya) म्हणजे 'Please', आणि 'हो' (Ho) व 'नाही' (Naahi) म्हणजे 'Yes' व 'No' हे देखील शिकू. चला 'नमस्कार' चा सराव करून सुरुवात करूया. तुम्ही 'नमस्कार' म्हणण्याचा प्रयत्न कराल का?"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्कार",
+          "phonetic": "namaskār",
+          "meaning": "Hello / Greetings",
+          "example": "नमस्कार, तुम्ही कसे आहात?"
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "dhanyavād",
+          "meaning": "Thank you",
+          "example": "तुमच्या मदतीसाठी धन्यवाद."
+        },
+        {
+          "word": "होय",
+          "phonetic": "hoy",
+          "meaning": "Yes",
+          "example": "होय, मला मराठी आवडते."
+        },
+        {
+          "word": "नाही",
+          "phonetic": "nāhī",
+          "meaning": "No",
+          "example": "नाही, मला ते नको आहे."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does \"नमस्कार\" mean in English?",
+          "options": [
+            "धन्यवाद",
+            "नमस्कार",
+            "माफ करा",
+            "शुभ रात्री"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Marathi?",
+          "options": [
+            "होय",
+            "नाही",
+            "धन्यवाद",
+            "नमस्कार"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Marathi word means \"Yes\"?",
+          "options": [
+            "नाही",
+            "होय",
+            "कसे आहात?",
+            "मी"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "नमस्कार! आज आपण काही नवीन मराठी शब्द शिकणार आहोत. आपण ते कसे बोलायचे आणि वाक्यांमध्ये कसे वापरायचे याचा सराव करूया. 'नमस्कार' या शब्दाने सुरुवात करूया. तुम्ही 'नमस्कार' म्हणू शकता का? खूप छान! आता 'धन्यवाद' म्हणण्याचा प्रयत्न करा. याचा अर्थ 'Thank you' असा होतो. चला, 'होय' आणि 'नाही' हे शब्दही शिकूया. 'होय' म्हणजे 'Yes' आणि 'नाही' म्हणजे 'No'. या शब्दांचा वापर करून काही वाक्ये बनवूया. तुम्ही 'होय' किंवा 'नाही' वापरून मला उत्तर देऊ शकता का?"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्कार",
+          "phonetic": "Namaskar",
+          "meaning": "Hello / Greetings",
+          "example": "नमस्कार! तुम्ही कसे आहात?"
+        },
+        {
+          "word": "तुम्ही कसे आहात?",
+          "phonetic": "Tumhi kase aahat?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "नमस्कार, तुम्ही कसे आहात?"
+        },
+        {
+          "word": "मी ठीक आहे.",
+          "phonetic": "Mi theek aahe.",
+          "meaning": "I am fine / I am good.",
+          "example": "मी ठीक आहे, धन्यवाद."
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyawad",
+          "meaning": "Thank you",
+          "example": "मदतीसाठी धन्यवाद."
+        },
+        {
+          "word": "कृपया",
+          "phonetic": "Krupaya",
+          "meaning": "Please",
+          "example": "कृपया मला मदत करा."
+        },
+        {
+          "word": "हो",
+          "phonetic": "Ho",
+          "meaning": "Yes",
+          "example": "हो, मला ते आवडते."
+        },
+        {
+          "word": "नाही",
+          "phonetic": "Nahi",
+          "meaning": "No",
+          "example": "नाही, मला ते नको."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Marathi word for \"Hello\" or \"Greetings\"?",
+          "options": [
+            "धन्यवाद",
+            "नमस्कार",
+            "नाही",
+            "हो"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Marathi?",
+          "options": [
+            "मी ठीक आहे",
+            "कृपया",
+            "धन्यवाद",
+            "तुम्ही कसे आहात?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Marathi phrase means \"How are you?\" (formal/plural)",
+          "options": [
+            "मी ठीक आहे",
+            "तुम्ही कसे आहात?",
+            "नमस्कार",
+            "कृपया"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Marathi word for \"Yes\"?",
+          "options": [
+            "नाही",
+            "कृपया",
+            "हो",
+            "धन्यवाद"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "नमस्कार! आज आपण काही नवीन मराठी शब्द शिकणार आहोत. या धड्यात, आपण 'नमस्कार', 'तुम्ही कसे आहात?', 'मी ठीक आहे', 'धन्यवाद', 'कृपया', 'हो' आणि 'नाही' यांसारख्या सामान्य मराठी वाक्यांशांचा सराव करणार आहोत. मी तुम्हाला प्रत्येक शब्दाचा उच्चार कसा करायचा आणि तो वाक्यांमध्ये कसा वापरायचा हे शिकवेन. चला तर मग, सुरुवात करूया!"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "आवडणे",
+          "phonetic": "āvaḍṇe",
+          "meaning": "to like",
+          "example": "मला मराठी शिकायला आवडते."
+        },
+        {
+          "word": "जास्त",
+          "phonetic": "jāsta",
+          "meaning": "more, a lot",
+          "example": "मला जास्त पाणी पाहिजे."
+        },
+        {
+          "word": "कमी",
+          "phonetic": "kamī",
+          "meaning": "less, a little",
+          "example": "मला कमी साखर हवी आहे."
+        },
+        {
+          "word": "नेहमी",
+          "phonetic": "nemhī",
+          "meaning": "always",
+          "example": "तो नेहमी सकाळी लवकर उठतो."
+        },
+        {
+          "word": "कधीकधी",
+          "phonetic": "kadhīkadhī",
+          "meaning": "sometimes",
+          "example": "मी कधीकधी चित्रपट पाहतो."
+        },
+        {
+          "word": "आज",
+          "phonetic": "āj",
+          "meaning": "today",
+          "example": "आज हवामान चांगले आहे."
+        },
+        {
+          "word": "उद्या",
+          "phonetic": "udyā",
+          "meaning": "tomorrow",
+          "example": "मी उद्या मुंबईला जाईन."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Marathi word means \"to like\"?",
+          "options": [
+            "शिकणे",
+            "आवडणे",
+            "करणे",
+            "जाणे"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct word to complete the sentence: \"मला ___ पाणी पाहिजे.\" (I want ___ water.)",
+          "options": [
+            "कमी",
+            "नेहमी",
+            "जास्त",
+            "कधीकधी"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"always\" in Marathi?",
+          "options": [
+            "आज",
+            "उद्या",
+            "नेहमी",
+            "काल"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"tomorrow\"?",
+          "options": [
+            "आज",
+            "काल",
+            "उद्या",
+            "आता"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "नमस्कार! तुमच्या पुढच्या मराठी धड्यात तुमचे स्वागत आहे. मी तुमचा AI मराठी शिक्षक आहे. आज आपण काही नवीन आणि महत्त्वाचे मराठी शब्द शिकणार आहोत, जे तुम्हाला रोजच्या संवादात खूप मदत करतील. आपण 'आवडणे' (to like), 'जास्त' (more), 'कमी' (less), 'नेहमी' (always), आणि 'कधीकधी' (sometimes) यांसारख्या शब्दांवर लक्ष केंद्रित करूया. या शब्दांचा वापर करून वाक्ये कशी बनवायची तेही आपण पाहू. चला, मराठी शिकण्याच्या या प्रवासात पुढे जाऊया!"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "खाणे",
+          "phonetic": "khāṇe",
+          "meaning": "to eat",
+          "example": "मी जेवण खातो."
+        },
+        {
+          "word": "पिणे",
+          "phonetic": "piṇe",
+          "meaning": "to drink",
+          "example": "ती पाणी पिते."
+        },
+        {
+          "word": "जाणे",
+          "phonetic": "jāṇe",
+          "meaning": "to go",
+          "example": "आम्ही शाळेत जातो."
+        },
+        {
+          "word": "येणे",
+          "phonetic": "yeṇe",
+          "meaning": "to come",
+          "example": "तो घरी येतो."
+        },
+        {
+          "word": "पाणी",
+          "phonetic": "pāṇī",
+          "meaning": "water",
+          "example": "मला पाणी पाहिजे."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Marathi word for \"to eat\"?",
+          "options": [
+            "पिणे",
+            "खाणे",
+            "जाणे",
+            "येणे"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Marathi word means \"water\"?",
+          "options": [
+            "जेवण",
+            "पाणी",
+            "घर",
+            "मित्र"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct verb to complete the sentence: \"मी ______ शाळेत.\" (I ______ to school.)",
+          "options": [
+            "खातो",
+            "पितो",
+            "जातो",
+            "येतो"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the meaning of \"पिणे\"?",
+          "options": [
+            "to eat",
+            "to drink",
+            "to go",
+            "to come"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "छान काम! आज आपण काही नवीन मराठी शब्द आणि क्रियापदे शिकणार आहोत. आपण 'खाणे' (khāṇe), 'पिणे' (piṇe), 'जाणे' (jāṇe), 'येणे' (yeṇe) आणि 'पाणी' (pāṇī) या शब्दांचा अभ्यास करू. चला, 'खाणे' या क्रियापदापासून सुरुवात करूया. 'खाणे' म्हणजे 'to eat'. माझ्या मागे 'खाणे' असे म्हणा."
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्कार",
+          "phonetic": "Namaskār",
+          "meaning": "Hello / Hi",
+          "example": "नमस्कार, तुम्ही कसे आहात?"
+        },
+        {
+          "word": "शुभ प्रभात",
+          "phonetic": "Śubh Prabhāt",
+          "meaning": "Good morning",
+          "example": "शुभ प्रभात! आजचा दिवस चांगला असो."
+        },
+        {
+          "word": "मी ठीक आहे.",
+          "phonetic": "Mī ṭhīk āhe.",
+          "meaning": "I am fine.",
+          "example": "मी ठीक आहे, धन्यवाद."
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyavād",
+          "meaning": "Thank you",
+          "example": "तुमच्या मदतीबद्दल धन्यवाद."
+        },
+        {
+          "word": "शुभ रात्री",
+          "phonetic": "Śubh Rātrī",
+          "meaning": "Good night",
+          "example": "आता मी झोपायला जातो, शुभ रात्री!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How would you say \"Hello\" in Marathi?",
+          "options": [
+            "शुभ प्रभात",
+            "नमस्कार",
+            "धन्यवाद",
+            "मी ठीक आहे."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"तुम्ही कसे आहात?\" (How are you?), how would you reply if you are fine?",
+          "options": [
+            "धन्यवाद",
+            "शुभ प्रभात",
+            "मी ठीक आहे.",
+            "शुभ रात्री"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"धन्यवाद\" (Dhanyavād) mean?",
+          "options": [
+            "Good morning",
+            "Thank you",
+            "Good night",
+            "I am fine"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "तुम्ही एक मराठी भाषेचे शिक्षक आहात. या धड्यात, विद्यार्थ्याला मराठीतील काही मूलभूत अभिवादन आणि सामान्य वाक्ये शिकवा. 'नमस्कार', 'शुभ प्रभात', 'मी ठीक आहे', 'धन्यवाद' आणि 'शुभ रात्री' या शब्दांचा वापर करून त्यांना उच्चार आणि अर्थ समजावून सांगा. विद्यार्थ्यांना हे शब्द मोठ्याने बोलण्याचा सराव करण्यास प्रोत्साहित करा. प्रत्येक शब्दासाठी एक सोपे उदाहरण वाक्य द्या आणि त्यांना स्वतःची वाक्ये बनवण्यास किंवा तुमच्यासोबत संवाद साधण्यास प्रवृत्त करा. चला, 'नमस्कार' पासून सुरुवात करूया!"
+    }
+  ]
+}

@@ -1,0 +1,1333 @@
+{
+  "langCode": "af-ZA",
+  "langLabel": "Afrikaans",
+  "langNative": "Afrikaans",
+  "generatedAt": "2026-03-15T07:54:17.239Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "HAH-loh",
+          "meaning": "Hello",
+          "example": "Hallo, hoe gaan dit?"
+        },
+        {
+          "word": "Goeiemôre",
+          "phonetic": "KHOO-ee-uh-MOR-uh",
+          "meaning": "Good morning",
+          "example": "Goeiemôre, Mevrou Botha."
+        },
+        {
+          "word": "Dankie",
+          "phonetic": "DAHN-kee",
+          "meaning": "Thank you",
+          "example": "Dankie vir die hulp."
+        },
+        {
+          "word": "Asseblief",
+          "phonetic": "AH-suh-BLEEF",
+          "meaning": "Please / You're welcome",
+          "example": "Kan ek asseblief 'n koppie koffie kry?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Afrikaans?",
+          "options": [
+            "Goeiemôre",
+            "Dankie",
+            "Hallo",
+            "Asseblief"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does 'Dankie' mean?",
+          "options": [
+            "Please",
+            "Thank you",
+            "Good morning",
+            "Yes"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct greeting for the morning.",
+          "options": [
+            "Hallo",
+            "Dankie",
+            "Goeiemôre",
+            "Asseblief"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Haai daar! Is jy gereed om Afrikaans te leer? Ek is jou Afrikaanse tutor en ek is hier om jou te help. In hierdie les gaan ons 'n paar baie nuttige Afrikaanse woorde leer. Ons sal begin met groete soos \"Hallo\" (Hello) en \"Goeiemôre\" (Good morning), en ook hoe om \"Dankie\" (Thank you) en \"Asseblief\" (Please) te sê. Ek sal jou help met die uitspraak en jou wys hoe om hierdie woorde in eenvoudige sinne te gebruik. Kom ons begin!"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "HAH-loh",
+          "meaning": "Hello",
+          "example": "Hallo, hoe gaan dit?"
+        },
+        {
+          "word": "Goeiemôre",
+          "phonetic": "KHOO-ee-uh-MOR-uh",
+          "meaning": "Good morning",
+          "example": "Goeiemôre, Mevrou Botha."
+        },
+        {
+          "word": "Dankie",
+          "phonetic": "DAHN-kee",
+          "meaning": "Thank you",
+          "example": "Dankie vir die hulp."
+        },
+        {
+          "word": "Asseblief",
+          "phonetic": "AH-suh-BLEEF",
+          "meaning": "Please / You're welcome",
+          "example": "Kan ek asseblief 'n koppie koffie kry?"
+        },
+        {
+          "word": "Ja",
+          "phonetic": "YAH",
+          "meaning": "Yes",
+          "example": "Ja, ek verstaan."
+        },
+        {
+          "word": "Nee",
+          "phonetic": "NEE-uh",
+          "meaning": "No",
+          "example": "Nee, dankie."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Afrikaans?",
+          "options": [
+            "Goeiemôre",
+            "Dankie",
+            "Hallo",
+            "Asseblief"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Afrikaans word for \"Thank you\"?",
+          "options": [
+            "Ja",
+            "Nee",
+            "Dankie",
+            "Hallo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"Please\" or \"You're welcome\" in Afrikaans?",
+          "options": [
+            "Goeiemôre",
+            "Asseblief",
+            "Ja",
+            "Nee"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If you want to say \"Yes\" in Afrikaans, what word would you use?",
+          "options": [
+            "Nee",
+            "Ja",
+            "Dankie",
+            "Hallo"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Hallo! Welkom to your first Afrikaans lesson. Today, we're diving into some essential greetings and polite phrases. We'll cover words like 'Hallo' (Hello), 'Goeiemôre' (Good morning), 'Dankie' (Thank you), and 'Asseblief' (Please/You're welcome). I'll say each Afrikaans word, and you can repeat after me to practice your pronunciation. Then, we'll put them into simple sentences. Are you excited to start speaking Afrikaans?"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Goeie dag",
+          "phonetic": "Khoo-ee-uh dakh",
+          "meaning": "Good day / Hello",
+          "example": "Goeie dag! Hoe gaan dit?"
+        },
+        {
+          "word": "Hoe gaan dit?",
+          "phonetic": "Hoo khaan dit?",
+          "meaning": "How are you? / How's it going?",
+          "example": "Goeie dag, Jan. Hoe gaan dit?"
+        },
+        {
+          "word": "Dit gaan goed, dankie.",
+          "phonetic": "Dit khaan khoot, dan-kee.",
+          "meaning": "I am fine, thank you.",
+          "example": "Dit gaan goed, dankie. En met jou?"
+        },
+        {
+          "word": "En met jou?",
+          "phonetic": "En met yoh?",
+          "meaning": "And you? (informal)",
+          "example": "Dit gaan goed, dankie. En met jou?"
+        },
+        {
+          "word": "Wat is jou naam?",
+          "phonetic": "Vat is yoh naam?",
+          "meaning": "What is your name?",
+          "example": "Goeie dag. Wat is jou naam?"
+        },
+        {
+          "word": "My naam is...",
+          "phonetic": "My naam is...",
+          "meaning": "My name is...",
+          "example": "My naam is Sarah."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Good day\" in Afrikaans?",
+          "options": [
+            "Goeie nag",
+            "Goeie dag",
+            "Goeie aand",
+            "Goeie môre"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to \"Hoe gaan dit?\" if you are fine?",
+          "options": [
+            "Ek is honger",
+            "Dit gaan sleg",
+            "Dit gaan goed, dankie",
+            "Ek is moeg"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you ask \"What is your name?\" in Afrikaans?",
+          "options": [
+            "Hoe oud is jy?",
+            "Wat is jou naam?",
+            "Waar bly jy?",
+            "Wat doen jy?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Hallo! Welkom by jou Afrikaanse les! Vandag gaan ons leer hoe om mense te groet en jouself voor te stel. Kom ons begin met die heel basiese groet: **Goeie dag**. Dit beteken 'Good day' of 'Hello'. Probeer dit sê: **Goeie dag**. Onthou die 'g' klink soos die 'ch' in 'loch'. Volgende, as jy wil vra 'How are you?', sê jy **Hoe gaan dit?**. Die 'oe' klink soos die 'oo' in 'moon'. 'Dit' is soos 'dit' in Engels. 'Gaan' is soos 'khaan'. Die algemene antwoord as jy goed voel, is **Dit gaan goed, dankie**. 'Goed' is soos 'khoot'. En as jy wil terugvra 'And you?', sê jy **En met jou?**. Laastens, om jou naam te vra, sê jy **Wat is jou naam?** en om jou naam te gee, sê jy **My naam is...**. Kom ons oefen! Sê vir my, **Wat is jou naam?**"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "HAH-loh",
+          "meaning": "Hello",
+          "example": "Hallo, hoe gaan dit?"
+        },
+        {
+          "word": "Goeiemôre",
+          "phonetic": "KHOO-ee-uh-MOR-uh",
+          "meaning": "Good morning",
+          "example": "Goeiemôre! Slaap lekker?"
+        },
+        {
+          "word": "Dankie",
+          "phonetic": "DAHN-kee",
+          "meaning": "Thank you",
+          "example": "Baie dankie vir die hulp."
+        },
+        {
+          "word": "Asseblief",
+          "phonetic": "AH-suh-BLEEF",
+          "meaning": "Please",
+          "example": "Kan jy my asseblief help?"
+        },
+        {
+          "word": "Hoe gaan dit?",
+          "phonetic": "HOO KHAHN dit?",
+          "meaning": "How are you?",
+          "example": "Hallo, hoe gaan dit met jou?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Afrikaans word for \"Hello\"?",
+          "options": [
+            "Goeiemôre",
+            "Dankie",
+            "Hallo",
+            "Asseblief"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Good morning\" in Afrikaans?",
+          "options": [
+            "Goeienaand",
+            "Goeiemôre",
+            "Goeiemiddag",
+            "Goeie nag"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Afrikaans word means \"Thank you\"?",
+          "options": [
+            "Asseblief",
+            "Jammer",
+            "Dankie",
+            "Lekker"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If you want to ask \"How are you?\" in Afrikaans, what would you say?",
+          "options": [
+            "Wat is jou naam?",
+            "Hoe oud is jy?",
+            "Hoe gaan dit?",
+            "Waar kom jy vandaan?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Welkom by jou eerste Afrikaanse les! Vandag gaan ons 'n paar basiese groete leer. Ons sal woorde soos 'Hallo', 'Goeiemôre', 'Dankie', 'Asseblief' en die vraag 'Hoe gaan dit?' dek. Ek sal die woorde sê, en jy kan dit herhaal. Dan sal ons oefen om dit in eenvoudige sinne te gebruik. Kom ons begin met 'Hallo'. Kan jy 'Hallo' sê?"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "HAH-loh",
+          "meaning": "Hello",
+          "example": "Hallo, hoe gaan dit?"
+        },
+        {
+          "word": "Goeiemôre",
+          "phonetic": "HOO-ee-uh-MOR-uh",
+          "meaning": "Good morning",
+          "example": "Goeiemôre, Mevrou Botha."
+        },
+        {
+          "word": "Goeiemiddag",
+          "phonetic": "HOO-ee-uh-MID-akh",
+          "meaning": "Good afternoon",
+          "example": "Goeiemiddag, almal!"
+        },
+        {
+          "word": "Goeienaand",
+          "phonetic": "HOO-ee-uh-NAHNT",
+          "meaning": "Good evening",
+          "example": "Goeienaand, meneer."
+        },
+        {
+          "word": "Hoe gaan dit?",
+          "phonetic": "HOO KHAHN dit?",
+          "meaning": "How are you? / How's it going?",
+          "example": "Hallo, Jan. Hoe gaan dit?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Afrikaans?",
+          "options": [
+            "Hallo",
+            "Totsiens",
+            "Dankie",
+            "Asseblief"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Afrikaans phrase means \"Good morning\"?",
+          "options": [
+            "Goeienaand",
+            "Goeiemôre",
+            "Goeiemiddag",
+            "Hoe gaan dit?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"Hoe gaan dit?\", what are they asking?",
+          "options": [
+            "What is your name?",
+            "Where are you from?",
+            "How are you?",
+            "Can I help you?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hallo! Ek is jou KI-tutor. Vandag gaan ons 'n paar basiese Afrikaanse groete leer. Ons sal 'Hallo,' 'Goeiemôre,' 'Goeiemiddag,' en 'Goeienaand' behandel. Ons sal ook leer hoe om te vra 'Hoe gaan dit?' en hoe om te antwoord. Kom ons begin met 'Hallo.' Kan jy 'Hallo' ná my herhaal?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Goeie môre",
+          "phonetic": "hoo-ee-uh maw-ruh",
+          "meaning": "Good morning",
+          "example": "Goeie môre! Hoe gaan dit?"
+        },
+        {
+          "word": "Goeie middag",
+          "phonetic": "hoo-ee-uh mid-dagh",
+          "meaning": "Good afternoon",
+          "example": "Goeie middag, Mevrou."
+        },
+        {
+          "word": "Goeie aand",
+          "phonetic": "hoo-ee-uh ahnt",
+          "meaning": "Good evening",
+          "example": "Goeie aand almal!"
+        },
+        {
+          "word": "Hallo",
+          "phonetic": "hah-loh",
+          "meaning": "Hello",
+          "example": "Hallo, my naam is Jan."
+        },
+        {
+          "word": "Totsiens",
+          "phonetic": "tot-see-ens",
+          "meaning": "Goodbye",
+          "example": "Totsiens, sien jou môre!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How would you say \"Good morning\" in Afrikaans?",
+          "options": [
+            "Goeie aand",
+            "Goeie môre",
+            "Goeie middag",
+            "Totsiens"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Totsiens\" mean?",
+          "options": [
+            "Hello",
+            "Good evening",
+            "Goodbye",
+            "Good afternoon"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "You meet someone in the afternoon. How do you greet them?",
+          "options": [
+            "Goeie môre",
+            "Goeie aand",
+            "Hallo",
+            "Goeie middag"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Welkom by jou Afrikaanse les! Vandag gaan ons leer hoe om mense in Afrikaans te groet. Ons sal begin met 'n paar algemene groete soos \"Goeie môre\" (Good morning), \"Goeie middag\" (Good afternoon), \"Goeie aand\" (Good evening), \"Hallo\" (Hello) en \"Totsiens\" (Goodbye). Luister mooi na die uitspraak en probeer dit self sê. Ek sal jou help om die klanke reg te kry. Kom ons begin!"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "HAH-loh",
+          "meaning": "Hello",
+          "example": "Hallo, hoe gaan dit met jou?"
+        },
+        {
+          "word": "Totsiens",
+          "phonetic": "TOT-seens",
+          "meaning": "Goodbye",
+          "example": "Totsiens, sien jou môre!"
+        },
+        {
+          "word": "Asseblief",
+          "phonetic": "AH-suh-bleef",
+          "meaning": "Please",
+          "example": "Kan ek asseblief 'n koppie tee kry?"
+        },
+        {
+          "word": "Dankie",
+          "phonetic": "DAHN-kee",
+          "meaning": "Thank you",
+          "example": "Dankie vir die hulp."
+        },
+        {
+          "word": "Ja",
+          "phonetic": "YAH",
+          "meaning": "Yes",
+          "example": "Ja, ek verstaan."
+        },
+        {
+          "word": "Nee",
+          "phonetic": "NEE-uh",
+          "meaning": "No",
+          "example": "Nee, ek is nie honger nie."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Afrikaans?",
+          "options": [
+            "Totsiens",
+            "Dankie",
+            "Hallo",
+            "Asseblief"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Afrikaans word for \"Thank you\".",
+          "options": [
+            "Nee",
+            "Dankie",
+            "Ja",
+            "Totsiens"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Afrikaans word for \"Please\"?",
+          "options": [
+            "Hallo",
+            "Ja",
+            "Nee",
+            "Asseblief"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "Which word means \"Goodbye\"?",
+          "options": [
+            "Dankie",
+            "Totsiens",
+            "Hallo",
+            "Ja"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Hallo! Welkom by jou Afrikaanse les. Ek is jou AI-tutor en ek is hier om jou te help om Afrikaans te leer. Vandag gaan ons fokus op 'n paar baie nuttige woorde wat jy elke dag kan gebruik. Ons sal leer hoe om 'Hallo' (Hello), 'Totsiens' (Goodbye), 'Asseblief' (Please), en 'Dankie' (Thank you) te sê. Ek sal elke woord vir jou sê, en dan kan jy dit na my herhaal. Daarna sal ons kyk hoe ons hierdie woorde in eenvoudige sinne kan gebruik. Is jy reg om te begin?"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "is",
+          "phonetic": "is",
+          "meaning": "is, am, are (to be)",
+          "example": "Ek is bly."
+        },
+        {
+          "word": "het",
+          "phonetic": "het",
+          "meaning": "have, has (to have)",
+          "example": "Sy het 'n boek."
+        },
+        {
+          "word": "gaan",
+          "phonetic": "ghaan",
+          "meaning": "go, going (to go)",
+          "example": "Ons gaan huis toe."
+        },
+        {
+          "word": "praat",
+          "phonetic": "praht",
+          "meaning": "speak, talk (to speak)",
+          "example": "Hulle praat Afrikaans."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Choose the correct word to complete the sentence: \"Ek ___ 'n student.\" (I ___ a student.)",
+          "options": [
+            "is",
+            "het",
+            "gaan",
+            "praat"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means \"have\" or \"has\"?",
+          "options": [
+            "is",
+            "het",
+            "gaan",
+            "praat"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"We are going to the shop\" in Afrikaans?",
+          "options": [
+            "Ons is die winkel toe.",
+            "Ons het die winkel toe.",
+            "Ons gaan die winkel toe.",
+            "Ons praat die winkel toe."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Complete the sentence: \"Hy ___ Engels.\" (He ___ English.)",
+          "options": [
+            "is",
+            "het",
+            "gaan",
+            "praat"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Hallo! Welkom by jou Afrikaanse les! Vandag gaan ons vier baie nuttige werkwoorde leer: \"is\", \"het\", \"gaan\", en \"praat\".\n\n\"Is\" beteken 'to be' (is, am, are). Byvoorbeeld, 'Ek is bly' beteken 'I am happy'.\n\"Het\" beteken 'to have' (have, has). Byvoorbeeld, 'Sy het 'n boek' beteken 'She has a book'.\n\"Gaan\" beteken 'to go' (go, going). Byvoorbeeld, 'Ons gaan huis toe' beteken 'We are going home'.\n\"Praat\" beteken 'to speak' (speak, talk). Byvoorbeeld, 'Hulle praat Afrikaans' beteken 'They speak Afrikaans'.\n\nKan jy probeer om 'n sin te maak met een van hierdie woorde? Byvoorbeeld, sê vir my wat jy 'het' of waarheen jy 'gaan'."
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Goeiedag",
+          "phonetic": "HOO-ee-uh-dakh",
+          "meaning": "Good day / Hello",
+          "example": "Goeiedag, hoe gaan dit?"
+        },
+        {
+          "word": "Dankie",
+          "phonetic": "DUNG-kee",
+          "meaning": "Thank you",
+          "example": "Dankie vir die hulp."
+        },
+        {
+          "word": "Asseblief",
+          "phonetic": "UH-suh-bleef",
+          "meaning": "Please",
+          "example": "Kan ek asseblief 'n koffie kry?"
+        },
+        {
+          "word": "Hoe gaan dit?",
+          "phonetic": "HOO khahn dit?",
+          "meaning": "How are you?",
+          "example": "Goeiedag, hoe gaan dit?"
+        },
+        {
+          "word": "Goed",
+          "phonetic": "KHOOT",
+          "meaning": "Good / Fine",
+          "example": "Dit gaan goed, dankie."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Good day\" in Afrikaans?",
+          "options": [
+            "Goeiedag",
+            "Dankie",
+            "Asseblief",
+            "Totsiens"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Afrikaans word for \"Thank you\"?",
+          "options": [
+            "Goed",
+            "Nee",
+            "Dankie",
+            "Ja"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"Hoe gaan dit?\", what is a common positive response?",
+          "options": [
+            "Asseblief",
+            "Goed",
+            "Totsiens",
+            "Nee"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"Please\" in Afrikaans?",
+          "options": [
+            "Dankie",
+            "Goeiedag",
+            "Asseblief",
+            "Hoe gaan dit?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Goeiedag! Ek is jou KI-tutor. Welkom by ons Afrikaanse les! Vandag gaan ons fokus op 'n paar baie nuttige Afrikaanse groete en algemene frases. Ons sal leer hoe om 'Goeiedag' (Good day/Hello), 'Dankie' (Thank you), 'Asseblief' (Please), en 'Hoe gaan dit?' (How are you?) te sê, en ook hoe om te antwoord met 'Goed' (Good/Fine). Ek sal elke woord en frase vir jou sê, en ek wil hê jy moet dit hardop na my herhaal. Daarna sal ons kyk hoe ons dit in eenvoudige gesprekke kan gebruik. Is jy reg om te begin? Kom ons begin met die eerste een: 'Goeiedag'. Herhaal asseblief na my: Goeiedag."
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "HAH-loh",
+          "meaning": "Hello",
+          "example": "Hallo, hoe gaan dit?"
+        },
+        {
+          "word": "Goeiemôre",
+          "phonetic": "KHOO-ee-uh-MOH-ruh",
+          "meaning": "Good morning",
+          "example": "Goeiemôre! Lekker dag vir jou."
+        },
+        {
+          "word": "Goeienaand",
+          "phonetic": "KHOO-ee-uh-NAHNT",
+          "meaning": "Good evening",
+          "example": "Goeienaand, almal!"
+        },
+        {
+          "word": "Hoe gaan dit?",
+          "phonetic": "HOO KHAHN dit?",
+          "meaning": "How are you? / How is it going?",
+          "example": "Hallo, Jan. Hoe gaan dit met jou?"
+        },
+        {
+          "word": "Dit gaan goed.",
+          "phonetic": "Dit KHAHN khoot.",
+          "meaning": "I am fine. / It is going well.",
+          "example": "Dit gaan goed, dankie. En met jou?"
+        },
+        {
+          "word": "Dankie",
+          "phonetic": "DAHN-kee",
+          "meaning": "Thank you",
+          "example": "Dankie vir die hulp."
+        },
+        {
+          "word": "Wat is jou naam?",
+          "phonetic": "VAHT is YOH naam?",
+          "meaning": "What is your name?",
+          "example": "Hallo, wat is jou naam?"
+        },
+        {
+          "word": "My naam is...",
+          "phonetic": "MEYE naam is...",
+          "meaning": "My name is...",
+          "example": "My naam is Sarah."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Afrikaans word for \"Good morning\"?",
+          "options": [
+            "Goeienaand",
+            "Goeiemôre",
+            "Goeiemiddag",
+            "Goeienag"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"How are you?\" in Afrikaans?",
+          "options": [
+            "Wat is jou naam?",
+            "Hoe oud is jy?",
+            "Hoe gaan dit?",
+            "Waar bly jy?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Dankie\", what are they saying?",
+          "options": [
+            "Asseblief",
+            "Verskoon my",
+            "Dankie",
+            "Dis 'n plesier"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does the Afrikaans phrase \"My naam is...\" mean in English?",
+          "options": [
+            "My name is...",
+            "My age is...",
+            "My house is...",
+            "My friend is..."
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "Hallo! Welkom by ons Afrikaans les! Today, we're going to learn some essential Afrikaans greetings and introductions. We'll cover phrases like \"Hallo\", \"Goeiemôre\", \"Hoe gaan dit?\", and \"Wat is jou naam?\". These are great for starting conversations in Afrikaans. Let's begin with \"Hallo\". Can you try saying \"Hallo\"?"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "[ˈɦalɔ]",
+          "meaning": "Hello",
+          "example": "Hallo, hoe gaan dit?"
+        },
+        {
+          "word": "Goeiemôre",
+          "phonetic": "[ˌχuɪəˈmɔːrə]",
+          "meaning": "Good morning",
+          "example": "Goeiemôre, almal!"
+        },
+        {
+          "word": "Goeienaand",
+          "phonetic": "[ˌχuɪəˈnaːnt]",
+          "meaning": "Good evening",
+          "example": "Goeienaand, Mevrou."
+        },
+        {
+          "word": "Dankie",
+          "phonetic": "[ˈdaŋki]",
+          "meaning": "Thank you",
+          "example": "Dankie vir die hulp."
+        },
+        {
+          "word": "Asseblief",
+          "phonetic": "[aˈsəblif]",
+          "meaning": "Please",
+          "example": "Kan ek asseblief 'n koppie koffie kry?"
+        },
+        {
+          "word": "Ja",
+          "phonetic": "[jaː]",
+          "meaning": "Yes",
+          "example": "Ja, ek verstaan."
+        },
+        {
+          "word": "Nee",
+          "phonetic": "[neə]",
+          "meaning": "No",
+          "example": "Nee, dankie."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Afrikaans?",
+          "options": [
+            "Goeiemôre",
+            "Hallo",
+            "Dankie",
+            "Nee"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Goeienaand\" mean?",
+          "options": [
+            "Good morning",
+            "Good afternoon",
+            "Good evening",
+            "Good night"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Dankie\", what are they saying?",
+          "options": [
+            "Please",
+            "Yes",
+            "No",
+            "Thank you"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "Which word means \"Please\"?",
+          "options": [
+            "Ja",
+            "Asseblief",
+            "Nee",
+            "Hallo"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor teaching Afrikaans. Introduce the lesson's vocabulary, focusing on pronunciation and usage. Ask the learner to repeat Afrikaans words and create simple sentences in Afrikaans. Encourage them to ask questions and provide positive feedback. Start by saying: 'Hallo! Welkom by ons Afrikaanse les. Vandag gaan ons basiese groete en beleefde frases leer.'"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Goeiedag",
+          "phonetic": "hoo-ee-uh-DAKH",
+          "meaning": "Good day / Hello",
+          "example": "Goeiedag, hoe gaan dit?"
+        },
+        {
+          "word": "Dankie",
+          "phonetic": "DUNK-ee",
+          "meaning": "Thank you",
+          "example": "Dankie vir die hulp."
+        },
+        {
+          "word": "Asseblief",
+          "phonetic": "uh-SUH-bleef",
+          "meaning": "Please",
+          "example": "Kan ek asseblief 'n koppie koffie kry?"
+        },
+        {
+          "word": "Ja",
+          "phonetic": "YAH",
+          "meaning": "Yes",
+          "example": "Ja, ek verstaan."
+        },
+        {
+          "word": "Nee",
+          "phonetic": "NEE-uh",
+          "meaning": "No",
+          "example": "Nee, dankie."
+        },
+        {
+          "word": "Totsiens",
+          "phonetic": "TOT-seen-s",
+          "meaning": "Goodbye",
+          "example": "Totsiens, sien jou môre!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Afrikaans word for \"Thank you\"?",
+          "options": [
+            "Goeiedag",
+            "Dankie",
+            "Asseblief",
+            "Totsiens"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Afrikaans word means \"Please\"?",
+          "options": [
+            "Ja",
+            "Nee",
+            "Asseblief",
+            "Dankie"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Goodbye\" in Afrikaans?",
+          "options": [
+            "Goeiedag",
+            "Ja",
+            "Totsiens",
+            "Nee"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hello! Welkom by ons Afrikaanse les! (Welcome to our Afrikaans lesson!) Today, we're going to learn some essential Afrikaans words and phrases. We'll start with greetings and polite expressions like 'Goeiedag' (Good day), 'Dankie' (Thank you), and 'Asseblief' (Please). I'll say an Afrikaans word or phrase, and I'd like you to repeat it after me. Then, we'll practice using it in a simple sentence. Are you ready to begin? Kom ons begin!"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "[ˈɦalɔ]",
+          "meaning": "Hello / Hi",
+          "example": "Hallo, hoe gaan dit?"
+        },
+        {
+          "word": "Goeiemôre",
+          "phonetic": "[ˌχujəˈmɔːrə]",
+          "meaning": "Good morning",
+          "example": "Goeiemôre, Mevrou Botha."
+        },
+        {
+          "word": "Hoe gaan dit?",
+          "phonetic": "[ɦu ˌχaːn dət]",
+          "meaning": "How are you?",
+          "example": "Hallo, Jan. Hoe gaan dit met jou?"
+        },
+        {
+          "word": "Dit gaan goed, dankie.",
+          "phonetic": "[dət ˌχaːn ˌχut ˈdaŋki]",
+          "meaning": "I am fine, thank you.",
+          "example": "Dit gaan goed, dankie. En met jou?"
+        },
+        {
+          "word": "Wat is jou naam?",
+          "phonetic": "[vat ɪs jɔu naːm]",
+          "meaning": "What is your name?",
+          "example": "Ekskuus, wat is jou naam?"
+        },
+        {
+          "word": "My naam is...",
+          "phonetic": "[məi naːm ɪs]",
+          "meaning": "My name is...",
+          "example": "My naam is Pieter."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Translate \"Good morning\" into Afrikaans.",
+          "options": [
+            "Goeienaand",
+            "Goeiemôre",
+            "Goeiemiddag",
+            "Hallo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"How are you?\" in Afrikaans?",
+          "options": [
+            "Wat is jou naam?",
+            "Hoe laat is dit?",
+            "Hoe gaan dit?",
+            "Waar is die badkamer?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct response to \"Hoe gaan dit?\"",
+          "options": [
+            "My naam is...",
+            "Dit gaan goed, dankie.",
+            "Ek is jammer.",
+            "Lekker slaap."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Wat is jou naam?\" mean?",
+          "options": [
+            "Where are you from?",
+            "What is your name?",
+            "How old are you?",
+            "What time is it?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Haai daar! Welkom by jou eerste les in Afrikaans! Ek is jou AI-tutor en ek is hier om jou te help om Afrikaans te leer. Vandag gaan ons fokus op 'n paar noodsaaklike Afrikaanse groete en hoe om jouself voor te stel. Ons sal woorde en frases soos \"Hallo\", \"Goeiemôre\", \"Hoe gaan dit?\" en \"My naam is...\" leer. Teen die einde van hierdie les sal jy in staat wees om mense in Afrikaans te groet en jou naam te sê. Kom ons begin met die heel basiese: \"Hallo\". Kan jy na my herhaal: \"Hallo\"?"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "altyd",
+          "phonetic": "AHL-tait",
+          "meaning": "always",
+          "example": "Ek drink altyd koffie in die oggend."
+        },
+        {
+          "word": "soms",
+          "phonetic": "SOMS",
+          "meaning": "sometimes",
+          "example": "Soms reën dit in die somer."
+        },
+        {
+          "word": "nooit",
+          "phonetic": "NOO-it",
+          "meaning": "never",
+          "example": "Sy eet nooit vleis nie."
+        },
+        {
+          "word": "gewoonlik",
+          "phonetic": "ge-VOON-lik",
+          "meaning": "usually",
+          "example": "Ons gaan gewoonlik na die strand op 'n Saterdag."
+        },
+        {
+          "word": "dikwels",
+          "phonetic": "DIK-vels",
+          "meaning": "often",
+          "example": "Hulle besoek dikwels hul familie."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Afrikaans word means 'always'?",
+          "options": [
+            "Soms",
+            "Nooit",
+            "Altyd",
+            "Dikwels"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct word to complete the sentence: 'Ek ___ laat vir werk.' (I am never late for work.)",
+          "options": [
+            "altyd",
+            "nooit",
+            "gewoonlik",
+            "soms"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Afrikaans word means 'usually'?",
+          "options": [
+            "Soms",
+            "Gewoonlik",
+            "Altyd",
+            "Nooit"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Fill in the blank: 'Hulle ___ hul familie besoek.' (They often visit their family.)",
+          "options": [
+            "altyd",
+            "soms",
+            "nooit",
+            "dikwels"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Hallo daar! Vandag gaan ons leer oor bywoorde van frekwensie in Afrikaans. Dit is woorde wat ons help om te beskryf hoe gereeld iets gebeur. Ons sal nuwe woordeskat dek en oefen om dit in sinne te gebruik. Kom ons begin met ons eerste woord: \"altyd\". Luister en herhaal: \"altyd\". Dit beteken 'always'. Probeer dit in 'n sin: \"Ek drink altyd koffie in die oggend.\" Kan jy dit herhaal? Uitstekend!"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "HAH-loh",
+          "meaning": "Hello",
+          "example": "Hallo! Hoe gaan dit?"
+        },
+        {
+          "word": "Goeiemôre",
+          "phonetic": "KHOO-ee-uh-MOR-uh",
+          "meaning": "Good morning",
+          "example": "Goeiemôre, juffrou."
+        },
+        {
+          "word": "Goeienaand",
+          "phonetic": "KHOO-ee-uh-NAHNT",
+          "meaning": "Good evening",
+          "example": "Goeienaand, almal."
+        },
+        {
+          "word": "Hoe gaan dit?",
+          "phonetic": "HOO KHAHN dit?",
+          "meaning": "How are you?",
+          "example": "Hallo, Piet. Hoe gaan dit?"
+        },
+        {
+          "word": "Dit gaan goed, dankie.",
+          "phonetic": "Dit KHAHN khoot, DAHN-kee.",
+          "meaning": "I'm fine, thank you.",
+          "example": "Dit gaan goed, dankie. En met jou?"
+        },
+        {
+          "word": "Wat is jou naam?",
+          "phonetic": "VAHT is YOH NAHM?",
+          "meaning": "What is your name?",
+          "example": "Hallo, wat is jou naam?"
+        },
+        {
+          "word": "My naam is...",
+          "phonetic": "MEYE NAHM is...",
+          "meaning": "My name is...",
+          "example": "My naam is Anja."
+        },
+        {
+          "word": "Totsiens",
+          "phonetic": "TOT-seens",
+          "meaning": "Goodbye",
+          "example": "Totsiens, sien jou môre!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Translate \"Hello\" into Afrikaans.",
+          "options": [
+            "Goeiemôre",
+            "Hallo",
+            "Totsiens",
+            "Dankie"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Good morning\" in Afrikaans?",
+          "options": [
+            "Goeienaand",
+            "Goeiemôre",
+            "Hoe gaan dit?",
+            "Dankie"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Afrikaans phrase means \"How are you?\"",
+          "options": [
+            "Wat is jou naam?",
+            "Totsiens",
+            "Hoe gaan dit?",
+            "Dankie"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Afrikaans response to \"Hoe gaan dit?\".",
+          "options": [
+            "My naam is...",
+            "Dit gaan goed, dankie.",
+            "Goeiemôre",
+            "Totsiens"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Jy is 'n KI-tutor wat Afrikaans onderrig. Jou doel is om basiese groete en voorstellings bekend te stel. Begin deur 'Hallo!' te sê en verduidelik dan dat vandag se les oor 'groete en voorstellings' (greetings and introductions) gaan. Stel die frase 'Goeiemôre' (Good morning) bekend, verduidelik die betekenis daarvan, en gee 'n voorbeeldsin soos 'Goeiemôre, hoe gaan dit?' (Good morning, how are you?). Stel dan 'Goeienaand' (Good evening) op 'n soortgelyke wyse bekend. Vra die leerder om hierdie frases te oefen. Stel vervolgens 'Hoe gaan dit?' (How are you?) en die algemene antwoord 'Dit gaan goed, dankie.' (I'm fine, thank you.) bekend. Moedig die leerder aan om 'n kort dialoog te probeer. Stel laastens 'Wat is jou naam?' (What is your name?) en 'My naam is...' (My name is...) bekend. Sluit af deur die leerder te vra om hulself voor te stel deur die nuwe frases te gebruik."
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "HAH-loh",
+          "meaning": "Hello",
+          "example": "Hallo, hoe gaan dit?"
+        },
+        {
+          "word": "Goeiemôre",
+          "phonetic": "KHOO-ee-uh-MOR-uh",
+          "meaning": "Good morning",
+          "example": "Goeiemôre, Mevrou Botha."
+        },
+        {
+          "word": "Goeienaand",
+          "phonetic": "KHOO-ee-uh-NAHNT",
+          "meaning": "Good evening",
+          "example": "Goeienaand, almal."
+        },
+        {
+          "word": "Hoe gaan dit?",
+          "phonetic": "HOO KHAHN dit?",
+          "meaning": "How are you? / How's it going?",
+          "example": "Hallo, Jan. Hoe gaan dit?"
+        },
+        {
+          "word": "Dit gaan goed, dankie.",
+          "phonetic": "Dit KHAHN khoot, DAHN-kee.",
+          "meaning": "I'm fine, thank you.",
+          "example": "Dit gaan goed, dankie. En met jou?"
+        },
+        {
+          "word": "Wat is jou naam?",
+          "phonetic": "VAHT is yoh NAHM?",
+          "meaning": "What is your name?",
+          "example": "Verskoon my, wat is jou naam?"
+        },
+        {
+          "word": "My naam is...",
+          "phonetic": "My NAHM is...",
+          "meaning": "My name is...",
+          "example": "My naam is Sarah."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Good morning\" in Afrikaans?",
+          "options": [
+            "Goeie middag",
+            "Goeiemôre",
+            "Goeienaand",
+            "Goeie nag"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct Afrikaans phrase for \"How are you?\"",
+          "options": [
+            "Wat is jou naam?",
+            "Hoe gaan dit?",
+            "Dit gaan goed, dankie.",
+            "Totsiens."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the most appropriate response to \"Hoe gaan dit?\"",
+          "options": [
+            "Goeiemôre",
+            "My naam is...",
+            "Dit gaan goed, dankie.",
+            "Hallo."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"My name is...\"?",
+          "options": [
+            "Wat is jou naam?",
+            "My naam is...",
+            "Ek is...",
+            "Wie is jy?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Hallo! Welkom by ons Afrikaanse les. Vandag gaan ons leer hoe om mense te groet en jouself voor te stel in Afrikaans. Ons sal kyk na frases soos 'Hallo', 'Goeiemôre', 'Hoe gaan dit?' en 'Wat is jou naam?'. Luister mooi en probeer die woorde saam met my sê. Kom ons begin met 'Hallo'. Kan jy dit sê?"
+    }
+  ]
+}

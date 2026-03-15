@@ -1,0 +1,1297 @@
+{
+  "langCode": "ta-IN",
+  "langLabel": "Tamil",
+  "langNative": "தமிழ்",
+  "generatedAt": "2026-03-15T05:48:12.890Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "வணக்கம்",
+          "phonetic": "Vanakkam",
+          "meaning": "Hello / Greetings",
+          "example": "வணக்கம், நீங்கள் எப்படி இருக்கிறீர்கள்?"
+        },
+        {
+          "word": "நன்றி",
+          "phonetic": "Nandri",
+          "meaning": "Thank you",
+          "example": "உங்கள் உதவிக்கு நன்றி."
+        },
+        {
+          "word": "ஆமாம்",
+          "phonetic": "Aamaam",
+          "meaning": "Yes",
+          "example": "ஆமாம், எனக்குப் புரியும்."
+        },
+        {
+          "word": "இல்லை",
+          "phonetic": "Illai",
+          "meaning": "No",
+          "example": "இல்லை, எனக்குத் தெரியாது."
+        },
+        {
+          "word": "தயவுசெய்து",
+          "phonetic": "Dhayaavuseidhu",
+          "meaning": "Please",
+          "example": "தயவுசெய்து எனக்கு உதவுங்கள்."
+        },
+        {
+          "word": "மன்னிக்கவும்",
+          "phonetic": "Mannikkavum",
+          "meaning": "Excuse me / Sorry",
+          "example": "மன்னிக்கவும், நான் தாமதமாகிவிட்டேன்."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Greetings\" in Tamil?",
+          "options": [
+            "வணக்கம்",
+            "நன்றி",
+            "ஆமாம்",
+            "இல்லை"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Tamil word means \"Thank you\"?",
+          "options": [
+            "இல்லை",
+            "வணக்கம்",
+            "நன்றி",
+            "ஆமாம்"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Tamil word for \"Yes\"?",
+          "options": [
+            "மன்னிக்கவும்",
+            "ஆமாம்",
+            "தயவுசெய்து",
+            "இல்லை"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the Tamil word that means \"No\".",
+          "options": [
+            "நன்றி",
+            "வணக்கம்",
+            "ஆமாம்",
+            "இல்லை"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "How would you say \"Please\" in Tamil?",
+          "options": [
+            "மன்னிக்கவும்",
+            "தயவுசெய்து",
+            "ஆமாம்",
+            "நன்றி"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"Excuse me\" or \"Sorry\" in Tamil?",
+          "options": [
+            "இல்லை",
+            "வணக்கம்",
+            "மன்னிக்கவும்",
+            "தயவுசெய்து"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "வணக்கம்! (Vanakkam!) Welcome to your Tamil lesson. Today, we're going to learn some essential greetings and basic phrases. We'll start with 'வணக்கம்' (Vanakkam) for 'Hello' and 'நன்றி' (Nandri) for 'Thank you'. We'll also cover 'ஆமாம்' (Aamaam) for 'Yes', 'இல்லை' (Illai) for 'No', 'தயவுசெய்து' (Dhayaavuseidhu) for 'Please', and 'மன்னிக்கவும்' (Mannikkavum) for 'Excuse me' or 'Sorry'. I'll introduce each word, explain its meaning, and provide an example sentence. Then, I'll ask you to practice saying them and use them in simple conversations. Let's begin with 'வணக்கம்'. Are you ready to learn?"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "வணக்கம்",
+          "phonetic": "Vanakkam",
+          "meaning": "Hello / Greetings",
+          "example": "வணக்கம்! நீங்கள் எப்படி இருக்கிறீர்கள்?"
+        },
+        {
+          "word": "எப்படி இருக்கிறீர்கள்?",
+          "phonetic": "Eppadi irukkiṟīrkaḷ?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "நீங்கள் எப்படி இருக்கிறீர்கள்?"
+        },
+        {
+          "word": "நான் நலமாக இருக்கிறேன்.",
+          "phonetic": "Naan nalamāka irukkiṟēn.",
+          "meaning": "I am fine.",
+          "example": "நான் நலமாக இருக்கிறேன், நன்றி."
+        },
+        {
+          "word": "நன்றி",
+          "phonetic": "Nandri",
+          "meaning": "Thank you",
+          "example": "உங்கள் உதவிக்கு நன்றி."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Tamil?",
+          "options": [
+            "நன்றி",
+            "வணக்கம்",
+            "நான்",
+            "ஆம்"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"How are you?\" in Tamil?",
+          "options": [
+            "நான் நலமாக இருக்கிறேன்.",
+            "உங்கள் பெயர் என்ன?",
+            "எப்படி இருக்கிறீர்கள்?",
+            "காலை வணக்கம்."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"எப்படி இருக்கிறீர்கள்?\", how would you respond to say \"I am fine\"?",
+          "options": [
+            "நன்றி",
+            "வணக்கம்",
+            "நான் நலமாக இருக்கிறேன்.",
+            "ஆம்"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hello! Welcome to your first Tamil lesson! Today, we're going to learn some essential greetings and how to introduce yourself. We'll start with 'வணக்கம்' (Vanakkam), which means 'Hello' or 'Greetings'. Then we'll learn 'எப்படி இருக்கிறீர்கள்?' (Eppadi irukkiṟīrkaḷ?), which means 'How are you?'. You can respond with 'நான் நலமாக இருக்கிறேன்.' (Naan nalamāka irukkiṟēn.), meaning 'I am fine.' And finally, we'll cover 'நன்றி' (Nandri) for 'Thank you'. Let's practice these phrases together. Try saying 'வணக்கம்' out loud. Great! Now, let's move on to the next phrase. Feel free to ask any questions you have about pronunciation or usage."
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "வணக்கம்",
+          "phonetic": "Vanakkam",
+          "meaning": "Hello / Greetings",
+          "example": "வணக்கம், நீங்கள் எப்படி இருக்கிறீர்கள்? (Vanakkam, neengal eppadi irukkireergal?)"
+        },
+        {
+          "word": "நன்றி",
+          "phonetic": "Nandri",
+          "meaning": "Thank you",
+          "example": "உங்கள் உதவிக்கு நன்றி. (Ungal udhavikku nandri.)"
+        },
+        {
+          "word": "ஆம்",
+          "phonetic": "Aam",
+          "meaning": "Yes",
+          "example": "ஆம், நான் தயாராக இருக்கிறேன். (Aam, naan thayaaraaga irukkiren.)"
+        },
+        {
+          "word": "இல்லை",
+          "phonetic": "Illai",
+          "meaning": "No",
+          "example": "இல்லை, எனக்கு அது வேண்டாம். (Illai, enakku adhu vendaam.)"
+        },
+        {
+          "word": "தயவுசெய்து",
+          "phonetic": "Dhayaavuseidhu",
+          "meaning": "Please",
+          "example": "தயவுசெய்து எனக்கு உதவுங்கள். (Dhayaavuseidhu enakku udhavungal.)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Tamil word for \"Hello\"?",
+          "options": [
+            "நன்றி",
+            "வணக்கம்",
+            "ஆம்",
+            "இல்லை"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Tamil?",
+          "options": [
+            "தயவுசெய்து",
+            "ஆம்",
+            "நன்றி",
+            "வணக்கம்"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Tamil word for \"Yes\".",
+          "options": [
+            "இல்லை",
+            "ஆம்",
+            "நன்றி",
+            "தயவுசெய்து"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "வணக்கம்! (Vanakkam!) Welcome to your first Tamil lesson! Today, we'll learn some basic greetings and essential phrases to help you start communicating in Tamil. Let's begin with 'Hello'. In Tamil, we say 'வணக்கம்' (Vanakkam). Can you try saying 'வணக்கம்' (Vanakkam)? Great job! Now, how about 'Thank you'? That's 'நன்றி' (Nandri). Try it: 'நன்றி' (Nandri). Excellent! We also have 'ஆம்' (Aam) for 'Yes' and 'இல்லை' (Illai) for 'No'. And finally, 'Please' is 'தயவுசெய்து' (Dhayaavuseidhu). Let's practice these together and make sure you're comfortable with them!"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "வணக்கம்",
+          "phonetic": "Vanakkam",
+          "meaning": "Hello / Greetings",
+          "example": "வணக்கம், நீங்கள் எப்படி இருக்கிறீர்கள்?"
+        },
+        {
+          "word": "நன்றி",
+          "phonetic": "Nandri",
+          "meaning": "Thank you",
+          "example": "உதவிக்கு நன்றி."
+        },
+        {
+          "word": "ஆம்",
+          "phonetic": "Aam",
+          "meaning": "Yes",
+          "example": "ஆம், நான் வருகிறேன்."
+        },
+        {
+          "word": "இல்லை",
+          "phonetic": "Illai",
+          "meaning": "No",
+          "example": "இல்லை, அது தவறு."
+        },
+        {
+          "word": "தயவுசெய்து",
+          "phonetic": "Thayavu seidhu",
+          "meaning": "Please",
+          "example": "தயவுசெய்து எனக்கு உதவுங்கள்."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Tamil word for 'Hello'?",
+          "options": [
+            "நன்றி",
+            "வணக்கம்",
+            "ஆம்",
+            "இல்லை"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say 'Thank you' in Tamil?",
+          "options": [
+            "ஆம்",
+            "இல்லை",
+            "நன்றி",
+            "வணக்கம்"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Tamil word for 'Yes'.",
+          "options": [
+            "இல்லை",
+            "ஆம்",
+            "தயவுசெய்து",
+            "வணக்கம்"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Tamil word means 'No'?",
+          "options": [
+            "ஆம்",
+            "நன்றி",
+            "இல்லை",
+            "தயவுசெய்து"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "சிறப்பான வேலை! இன்று நாம் சில பொதுவான தமிழ் சொற்களையும் சொற்றொடர்களையும் கற்கப் போகிறோம். நாம் 'வணக்கம்' (Vanakkam - Hello), 'நன்றி' (Nandri - Thank you), மற்றும் 'ஆம்' (Aam - Yes) போன்ற சொற்களைப் பார்ப்போம். நான் ஒவ்வொரு சொல்லையும் சொல்வேன், நீங்கள் எனக்குப் பின்னால் சொல்லலாம். பிறகு அவற்றை எளிய வாக்கியங்களில் பயன்படுத்தப் பயிற்சி செய்வோம். 'வணக்கம்' என்பதிலிருந்து ஆரம்பிப்போம்."
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "வணக்கம்",
+          "phonetic": "Vanakkam",
+          "meaning": "Hello / Greetings",
+          "example": "வணக்கம்! நீங்கள் எப்படி இருக்கிறீர்கள்?"
+        },
+        {
+          "word": "நன்றி",
+          "phonetic": "Nandri",
+          "meaning": "Thank you",
+          "example": "உதவிக்கு நன்றி."
+        },
+        {
+          "word": "ஆம்",
+          "phonetic": "Aam",
+          "meaning": "Yes",
+          "example": "ஆம், எனக்குத் தெரியும்."
+        },
+        {
+          "word": "இல்லை",
+          "phonetic": "Illai",
+          "meaning": "No",
+          "example": "இல்லை, அது சரியில்லை."
+        },
+        {
+          "word": "எப்படி இருக்கிறீர்கள்?",
+          "phonetic": "Eppadi irukkireergal?",
+          "meaning": "How are you?",
+          "example": "நீங்கள் எப்படி இருக்கிறீர்கள்?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Tamil word for \"Hello\" or \"Greetings\"?",
+          "options": [
+            "நன்றி",
+            "ஆம்",
+            "வணக்கம்",
+            "இல்லை"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Tamil?",
+          "options": [
+            "ஆம்",
+            "நன்றி",
+            "இல்லை",
+            "வணக்கம்"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Tamil word means \"Yes\"?",
+          "options": [
+            "இல்லை",
+            "ஆம்",
+            "எப்படி",
+            "என்ன"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the Tamil word for \"No\".",
+          "options": [
+            "ஆம்",
+            "வணக்கம்",
+            "இல்லை",
+            "நன்றி"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"How are you?\" in Tamil?",
+          "options": [
+            "நன்றி!",
+            "வணக்கம்!",
+            "எப்படி இருக்கிறீர்கள்?",
+            "ஆம்!"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "வணக்கம்! (Vanakkam!) Today, we're going to dive into some fundamental Tamil words and phrases. We'll focus on pronunciation, understanding their meanings, and using them in simple sentences. Let's begin with a very common and essential greeting: 'வணக்கம்' (Vanakkam). This means 'Hello' or 'Greetings'. Can you try saying 'வணக்கம்' (Vanakkam)?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "வணக்கம்",
+          "phonetic": "Vanakkam",
+          "meaning": "Hello / Hi",
+          "example": "வணக்கம், நீங்கள் எப்படி இருக்கிறீர்கள்?"
+        },
+        {
+          "word": "நன்றி",
+          "phonetic": "Nandri",
+          "meaning": "Thank you",
+          "example": "உங்கள் உதவிக்கு நன்றி."
+        },
+        {
+          "word": "ஆம்",
+          "phonetic": "Aam",
+          "meaning": "Yes",
+          "example": "ஆம், நான் வருகிறேன்."
+        },
+        {
+          "word": "இல்லை",
+          "phonetic": "Illai",
+          "meaning": "No",
+          "example": "இல்லை, எனக்கு வேண்டாம்."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Tamil?",
+          "options": [
+            "வணக்கம்",
+            "நன்றி",
+            "ஆம்",
+            "இல்லை"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Tamil word for \"Thank you\"?",
+          "options": [
+            "ஆம்",
+            "வணக்கம்",
+            "நன்றி",
+            "இல்லை"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Tamil word means \"Yes\"?",
+          "options": [
+            "இல்லை",
+            "ஆம்",
+            "நன்றி",
+            "வணக்கம்"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "வணக்கம்! (Vanakkam!) உங்கள் முதல் தமிழ் பாடத்திற்கு வரவேற்கிறோம்! (Ungal mudhal Tamil paadaththeerku varaverkirom!) நான் உங்கள் தமிழ் ஆசிரியர். இன்று, நாம் சில அடிப்படை தமிழ் வாழ்த்துக்களையும் சொற்றொடர்களையும் கற்றுக்கொள்வோம். நாம் 'வணக்கம்' (Vanakkam) என்ற வார்த்தையுடன் தொடங்குவோம். இது 'Hello' அல்லது 'Hi' என்று பொருள்படும். என்னைப் பின்தொடர்ந்து 'வணக்கம்' என்று சொல்ல முடியுமா? அருமை! இப்போது, 'நன்றி' (Nandri) என்ற வார்த்தையைப் பார்ப்போம். இது 'Thank you' என்று பொருள்படும். என்னைப் பின்தொடர்ந்து சொல்லுங்கள்: 'நன்றி'. நாம் 'ஆம்' (Aam) - 'Yes' மற்றும் 'இல்லை' (Illai) - 'No' ஆகியவற்றையும் கற்றுக்கொள்வோம். இந்த பாடத்தின் முடிவில், நீங்கள் தமிழில் எளிமையான உரையாடல்களைத் தொடங்க முடியும்!"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "வணக்கம்",
+          "phonetic": "Vanakkam",
+          "meaning": "Hello / Greetings",
+          "example": "வணக்கம், எப்படி இருக்கிறீர்கள்?"
+        },
+        {
+          "word": "எப்படி இருக்கிறீர்கள்?",
+          "phonetic": "Eppadi irukkeergal?",
+          "meaning": "How are you?",
+          "example": "நீங்கள் எப்படி இருக்கிறீர்கள்?"
+        },
+        {
+          "word": "நான் நலமாக இருக்கிறேன்.",
+          "phonetic": "Naan nalamaga irukkiren.",
+          "meaning": "I am fine.",
+          "example": "நான் நலமாக இருக்கிறேன், நன்றி."
+        },
+        {
+          "word": "நன்றி",
+          "phonetic": "Nandri",
+          "meaning": "Thank you",
+          "example": "உங்கள் உதவிக்கு நன்றி."
+        },
+        {
+          "word": "உங்கள் பெயர் என்ன?",
+          "phonetic": "Ungal peyar enna?",
+          "meaning": "What is your name?",
+          "example": "உங்கள் பெயர் என்ன, நண்பரே?"
+        },
+        {
+          "word": "என் பெயர்...",
+          "phonetic": "En peyar...",
+          "meaning": "My name is...",
+          "example": "என் பெயர் ஆனந்த்."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Tamil word for \"Hello\" or \"Greetings\"?",
+          "options": [
+            "நன்றி",
+            "வணக்கம்",
+            "எப்படி",
+            "நான்"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you ask \"How are you?\" in Tamil?",
+          "options": [
+            "உங்கள் பெயர் என்ன?",
+            "நான் நலமாக இருக்கிறேன்.",
+            "எப்படி இருக்கிறீர்கள்?",
+            "நன்றி"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"நன்றி\" (Nandri) mean?",
+          "options": [
+            "My name is",
+            "Thank you",
+            "How are you",
+            "I am fine"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Tamil phrase for \"My name is...\".",
+          "options": [
+            "உங்கள் பெயர் என்ன?",
+            "என் பெயர்...",
+            "நான் நலமாக இருக்கிறேன்.",
+            "வணக்கம்"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "வணக்கம்! (Vanakkam!) இன்று நாம் தமிழ் மொழியில் அடிப்படை வாழ்த்துக்களையும் அறிமுகங்களையும் கற்றுக்கொள்ளப் போகிறோம். முதலில், 'வணக்கம்' (Vanakkam) என்ற சொல்லைப் பார்ப்போம். இதன் பொருள் 'Hello' அல்லது 'Greetings' என்பதாகும். அடுத்து, 'எப்படி இருக்கிறீர்கள்?' (Eppadi irukkeergal?) என்ற சொற்றொடரைக் கற்றுக்கொள்வோம், இதன் பொருள் 'How are you?' என்பதாகும். இறுதியாக, 'உங்கள் பெயர் என்ன?' (Ungal peyar enna?) மற்றும் 'என் பெயர்...' (En peyar...) ஆகியவற்றைப் பயன்படுத்தி நம்மை எப்படி அறிமுகப்படுத்துவது என்று பயிற்சி செய்வோம். 'வணக்கம்' என்று சொல்லிப் பயிற்சி செய்வதன் மூலம் ஆரம்பிக்கலாம். நீங்கள் முயற்சி செய்யலாமா?"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "வணக்கம்",
+          "phonetic": "Vanakkam",
+          "meaning": "Hello / Greetings",
+          "example": "வணக்கம், நீங்கள் எப்படி இருக்கிறீர்கள்?"
+        },
+        {
+          "word": "எப்படி இருக்கிறீர்கள்?",
+          "phonetic": "Eppadi irukkiṟīrkaḷ?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "வணக்கம், நீங்கள் எப்படி இருக்கிறீர்கள்?"
+        },
+        {
+          "word": "நான்",
+          "phonetic": "Naan",
+          "meaning": "I / Me",
+          "example": "நான் ஒரு மாணவன்."
+        },
+        {
+          "word": "நீங்கள்",
+          "phonetic": "Nīṅkaḷ",
+          "meaning": "You (formal/plural)",
+          "example": "நீங்கள் யார்?"
+        },
+        {
+          "word": "பெயர்",
+          "phonetic": "Peyar",
+          "meaning": "Name",
+          "example": "உங்கள் பெயர் என்ன?"
+        },
+        {
+          "word": "என்ன?",
+          "phonetic": "Enna?",
+          "meaning": "What?",
+          "example": "இது என்ன?"
+        },
+        {
+          "word": "என் பெயர்...",
+          "phonetic": "En peyar...",
+          "meaning": "My name is...",
+          "example": "என் பெயர் அலி."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Tamil?",
+          "options": [
+            "வணக்கம்",
+            "நன்றி",
+            "மன்னிக்கவும்",
+            "ஆம்"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the correct Tamil phrase for \"How are you?\" (formal).",
+          "options": [
+            "நீங்கள் யார்?",
+            "எப்படி இருக்கிறீர்கள்?",
+            "என்ன செய்கிறீர்கள்?",
+            "எங்கே இருக்கிறீர்கள்?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"My name is Priya\" in Tamil?",
+          "options": [
+            "நான் பிரியா.",
+            "என் பெயர் பிரியா.",
+            "பிரியா பெயர்.",
+            "இது பிரியா."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Tamil word for \"What?\"",
+          "options": [
+            "யார்?",
+            "எங்கே?",
+            "என்ன?",
+            "எப்படி?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "சிறந்த வேலை! இன்று, நாம் சில அடிப்படை தமிழ் வாழ்த்துக்களையும் அறிமுகங்களையும் கற்றுக்கொள்ளப் போகிறோம். நாம் 'வணக்கம்' (Vanakkam), 'எப்படி இருக்கிறீர்கள்?' (Eppadi irukkiṟīrkaḷ?), மற்றும் 'என் பெயர்...' (En peyar...) போன்ற வார்த்தைகளையும் வாக்கியங்களையும் கற்றுக்கொள்வோம். நான் ஒவ்வொரு வார்த்தையையும் அல்லது வாக்கியத்தையும் சொல்வேன், நீங்கள் எனக்குப் பின்னால் சொல்லலாம். நாம் 'வணக்கம்' என்பதிலிருந்து தொடங்குவோம். தமிழில், நாம் ஒருவரைச் சந்திக்கும்போது 'வணக்கம்' என்று சொல்கிறோம். நீங்கள் 'வணக்கம்' என்று சொல்ல முடியுமா?"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "வணக்கம்",
+          "phonetic": "Vanakkam",
+          "meaning": "Hello / Hi / Greetings",
+          "example": "வணக்கம், நீங்கள் எப்படி இருக்கிறீர்கள்?"
+        },
+        {
+          "word": "நீங்கள் எப்படி இருக்கிறீர்கள்?",
+          "phonetic": "Neengal eppadi irukkeereergal?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "வணக்கம், நீங்கள் எப்படி இருக்கிறீர்கள்?"
+        },
+        {
+          "word": "நான் நலமாக இருக்கிறேன்",
+          "phonetic": "Naan nalamaga irukkeeren",
+          "meaning": "I am good / I am well",
+          "example": "நான் நலமாக இருக்கிறேன், நன்றி."
+        },
+        {
+          "word": "நன்றி",
+          "phonetic": "Nandri",
+          "meaning": "Thank you",
+          "example": "உங்கள் உதவிக்கு நன்றி."
+        },
+        {
+          "word": "தயவுசெய்து",
+          "phonetic": "Dhayavuseidhu",
+          "meaning": "Please",
+          "example": "தயவுசெய்து எனக்கு உதவுங்கள்."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Tamil?",
+          "options": [
+            "அம்மா",
+            "நன்றி",
+            "வணக்கம்",
+            "நீர்"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Tamil phrase means \"Thank you\"?",
+          "options": [
+            "நான் நலமாக இருக்கிறேன்",
+            "நன்றி",
+            "நீங்கள் எப்படி இருக்கிறீர்கள்?",
+            "தயவுசெய்து"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Translate the phrase \"I am good\" into Tamil.",
+          "options": [
+            "வணக்கம்",
+            "தயவுசெய்து",
+            "நான் நலமாக இருக்கிறேன்",
+            "நீங்கள் எப்படி இருக்கிறீர்கள்?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hello! I'm your AI Tamil tutor. Today, we're going to learn some essential Tamil phrases. We'll start with greetings like 'வணக்கம்' (Vanakkam) and 'நீங்கள் எப்படி இருக்கிறீர்கள்?' (Neengal eppadi irukkeereergal?). Then, we'll learn how to respond with 'நான் நலமாக இருக்கிறேன்' (Naan nalamaga irukkeeren) and express gratitude with 'நன்றி' (Nandri). We'll also cover 'தயவுசெய்து' (Dhayavuseidhu) for politeness. After we cover these, we'll practice using them in simple sentences and have a short conversation. I'll help you with Tamil pronunciation and make sure you understand everything. Let's begin our Tamil journey!"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "வணக்கம்",
+          "phonetic": "Vanakkam",
+          "meaning": "Hello / Greetings",
+          "example": "வணக்கம்! நீங்கள் எப்படி இருக்கிறீர்கள்?"
+        },
+        {
+          "word": "எப்படி இருக்கிறீர்கள்?",
+          "phonetic": "Eppadi irukkireergal?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "நீங்கள் எப்படி இருக்கிறீர்கள்? நான் நலமாக இருக்கிறேன்."
+        },
+        {
+          "word": "நான் நலமாக இருக்கிறேன்.",
+          "phonetic": "Naan nalamaga irukkiren.",
+          "meaning": "I am fine.",
+          "example": "நீங்கள் எப்படி இருக்கிறீர்கள்? நான் நலமாக இருக்கிறேன்."
+        },
+        {
+          "word": "நன்றி",
+          "phonetic": "Nandri",
+          "meaning": "Thank you",
+          "example": "உதவிக்கு நன்றி."
+        },
+        {
+          "word": "உங்கள் பெயர் என்ன?",
+          "phonetic": "Ungal peyar enna?",
+          "meaning": "What is your name? (formal/plural)",
+          "example": "உங்கள் பெயர் என்ன? என் பெயர் ஆனந்த்."
+        },
+        {
+          "word": "என் பெயர் ...",
+          "phonetic": "En peyar ...",
+          "meaning": "My name is ...",
+          "example": "என் பெயர் மீனா."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' or 'Greetings' in Tamil?",
+          "options": [
+            "நன்றி",
+            "வணக்கம்",
+            "எப்படி இருக்கிறீர்கள்?",
+            "ஆம்"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Tamil phrase means 'How are you?' (formal/plural)?",
+          "options": [
+            "நான் நலமாக இருக்கிறேன்.",
+            "உங்கள் பெயர் என்ன?",
+            "எப்படி இருக்கிறீர்கள்?",
+            "நன்றி"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say 'Thank you' in Tamil?",
+          "options": [
+            "வணக்கம்",
+            "நன்றி",
+            "என் பெயர்",
+            "இல்லை"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks 'உங்கள் பெயர் என்ன?' (Ungal peyar enna?), how would you respond with 'My name is [Your Name]'?",
+          "options": [
+            "நான் நலமாக இருக்கிறேன்.",
+            "நன்றி",
+            "என் பெயர் ...",
+            "வணக்கம்"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Excellent work! Today, we're going to learn some basic Tamil greetings and introductions. We'll cover essential words and phrases like 'வணக்கம்' (Vanakkam - Hello/Greetings), 'எப்படி இருக்கிறீர்கள்?' (Eppadi irukkireergal? - How are you?), and 'நன்றி' (Nandri - Thank you). We'll also practice using them in simple sentences to help you start conversations in Tamil. Let's begin with 'வணக்கம்' (Vanakkam)."
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "வணக்கம்",
+          "phonetic": "Vanakkam",
+          "meaning": "Hello / Greetings",
+          "example": "வணக்கம்! நீங்கள் எப்படி இருக்கிறீர்கள்?"
+        },
+        {
+          "word": "நன்றி",
+          "phonetic": "Nandri",
+          "meaning": "Thank you",
+          "example": "உங்கள் உதவிக்கு நன்றி."
+        },
+        {
+          "word": "எப்படி இருக்கிறீர்கள்?",
+          "phonetic": "Eppadi irukkiṟīrkaḷ?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "நீங்கள் எப்படி இருக்கிறீர்கள்? நான் நலமாக இருக்கிறேன்."
+        },
+        {
+          "word": "நான் நலமாக இருக்கிறேன்",
+          "phonetic": "Naan nalamāka irukkiṟēṉ",
+          "meaning": "I am good / I am fine",
+          "example": "நீங்கள் எப்படி இருக்கிறீர்கள்? நான் நலமாக இருக்கிறேன்."
+        },
+        {
+          "word": "தயவுசெய்து",
+          "phonetic": "Thayavuseythu",
+          "meaning": "Please",
+          "example": "தயவுசெய்து எனக்கு உதவுங்கள்."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Tamil word for \"Hello\" or \"Greetings\"?",
+          "options": [
+            "நன்றி",
+            "வணக்கம்",
+            "ஆம்",
+            "இல்லை"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"Thank you\" in Tamil?",
+          "options": [
+            "எப்படி இருக்கிறீர்கள்?",
+            "நான் நலமாக இருக்கிறேன்",
+            "நன்றி",
+            "தயவுசெய்து"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Tamil phrase for \"How are you?\" (formal/plural).",
+          "options": [
+            "நான் நலமாக இருக்கிறேன்",
+            "தயவுசெய்து",
+            "எப்படி இருக்கிறீர்கள்?",
+            "வணக்கம்"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Welcome to your Tamil lesson! Today we'll learn some common Tamil phrases for greetings and basic interactions. We'll practice saying 'வணக்கம்' (Vanakkam - Hello), 'நன்றி' (Nandri - Thank you), and 'எப்படி இருக்கிறீர்கள்?' (Eppadi irukkiṟīrkaḷ? - How are you?). Let's start with 'வணக்கம்'. This is a versatile greeting you can use in many situations. Can you try saying 'வணக்கம்'?"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "என்ன?",
+          "phonetic": "Enna?",
+          "meaning": "What?",
+          "example": "இது என்ன?"
+        },
+        {
+          "word": "எங்கே?",
+          "phonetic": "Engē?",
+          "meaning": "Where?",
+          "example": "நீங்கள் எங்கே இருக்கிறீர்கள்?"
+        },
+        {
+          "word": "யார்?",
+          "phonetic": "Yār?",
+          "meaning": "Who?",
+          "example": "அவர் யார்?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Tamil word for 'What'?",
+          "options": [
+            "என்ன",
+            "எங்கே",
+            "யார்",
+            "எப்படி"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the correct Tamil word for 'Where'.",
+          "options": [
+            "என்ன",
+            "எங்கே",
+            "யார்",
+            "ஏன்"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say 'Who' in Tamil?",
+          "options": [
+            "எப்போது",
+            "எப்படி",
+            "யார்",
+            "எது"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "வணக்கம்! (Vanakkam!) Welcome to your Tamil lesson! Today, we're going to explore some essential Tamil question words. These words will help you ask questions and understand more about the world around you in Tamil. Let's start with our first word: 'What'. In Tamil, we say **என்ன?** (Enna?). Try saying it after me: **என்ன?** Great! Now, let's learn 'Where'. In Tamil, it's **எங்கே?** (Engē?). Can you try saying **எங்கே?** Excellent! Finally, for 'Who', we use **யார்?** (Yār?). Repeat after me: **யார்?** Fantastic! Now, let's practice using these words in simple sentences."
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "வணக்கம்",
+          "phonetic": "Vanakkam",
+          "meaning": "Hello / Greetings",
+          "example": "வணக்கம், நீங்கள் எப்படி இருக்கிறீர்கள்?"
+        },
+        {
+          "word": "நன்றி",
+          "phonetic": "Nandri",
+          "meaning": "Thank you",
+          "example": "உங்கள் உதவிக்கு நன்றி."
+        },
+        {
+          "word": "ஆம்",
+          "phonetic": "Aam",
+          "meaning": "Yes",
+          "example": "ஆம், நான் வருகிறேன்."
+        },
+        {
+          "word": "இல்லை",
+          "phonetic": "Illai",
+          "meaning": "No",
+          "example": "இல்லை, எனக்கு அது வேண்டாம்."
+        },
+        {
+          "word": "எப்படி இருக்கிறீர்கள்?",
+          "phonetic": "Eppadi irukkeergal?",
+          "meaning": "How are you?",
+          "example": "வணக்கம், நீங்கள் எப்படி இருக்கிறீர்கள்?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Tamil?",
+          "options": [
+            "நன்றி",
+            "வணக்கம்",
+            "ஆம்",
+            "இல்லை"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"நன்றி\" mean in English?",
+          "options": [
+            "Yes",
+            "No",
+            "Thank you",
+            "Hello"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Tamil word means \"Yes\"?",
+          "options": [
+            "இல்லை",
+            "ஆம்",
+            "வணக்கம்",
+            "எப்படி இருக்கிறீர்கள்?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"How are you?\" in Tamil?",
+          "options": [
+            "வணக்கம்",
+            "நன்றி",
+            "ஆம்",
+            "எப்படி இருக்கிறீர்கள்?"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "சிறந்த வேலை! இன்று, நாம் சில அத்தியாவசிய தமிழ் சொற்றொடர்களைக் கற்கப் போகிறோம். நாம் 'வணக்கம்' (Vanakkam), 'நன்றி' (Nandri), 'ஆம்' (Aam), மற்றும் 'இல்லை' (Illai) ஆகியவற்றைப் பார்ப்போம். நான் ஒவ்வொரு வார்த்தையையும் சொல்வேன், நீங்கள் எனக்குப் பிறகு மீண்டும் சொல்லலாம். பின்னர், நாம் அவற்றை எளிய வாக்கியங்களில் பயன்படுத்தப் பயிற்சி செய்வோம். 'வணக்கம்' உடன் தொடங்குவோம். தமிழில், நாம் 'வணக்கம்' என்று சொல்கிறோம். நீங்கள் 'வணக்கம்' என்று மீண்டும் சொல்ல முடியுமா?"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "வேண்டும்",
+          "phonetic": "vēṇṭum",
+          "meaning": "to want / is needed",
+          "example": "எனக்கு ஒரு புத்தகம் வேண்டும். (Eṉakku oru puttakām vēṇṭum.)"
+        },
+        {
+          "word": "பிடிக்கும்",
+          "phonetic": "piṭikkum",
+          "meaning": "to like (literally \"it is pleasing to me\")",
+          "example": "எனக்கு காபி பிடிக்கும். (Eṉakku kāpi piṭikkum.)"
+        },
+        {
+          "word": "தேவை",
+          "phonetic": "tēvai",
+          "meaning": "need / necessary",
+          "example": "எனக்கு உதவி தேவை. (Eṉakku utavi tēvai.)"
+        },
+        {
+          "word": "இருக்கிறது",
+          "phonetic": "irukkiṟatu",
+          "meaning": "to have / there is / it is",
+          "example": "என்னிடம் ஒரு பேனா இருக்கிறது. (Eṉṉiṭam oru pēṉā irukkiṟatu.)"
+        },
+        {
+          "word": "ஏனென்றால்",
+          "phonetic": "ēṉeṉṟāl",
+          "meaning": "because",
+          "example": "நான் சோர்வாக இருக்கிறேன் ஏனென்றால் நான் நேற்று இரவு தூங்கவில்லை. (Nāṉ cōrvāka irukkiṟēṉ ēṉeṉṟāl nāṉ nēṟṟu iravu tūṅkavillai.)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Tamil word means \"to want\" or \"is needed\"?",
+          "options": [
+            "வேண்டும்",
+            "பிடிக்கும்",
+            "தேவை",
+            "இருக்கிறது"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the correct Tamil word to complete the sentence: \"எனக்கு காபி ______.\" (I like coffee.)",
+          "options": [
+            "வேண்டும்",
+            "பிடிக்கும்",
+            "தேவை",
+            "இருக்கிறது"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"I need help\" in Tamil?",
+          "options": [
+            "எனக்கு உதவி வேண்டும்.",
+            "எனக்கு உதவி பிடிக்கும்.",
+            "எனக்கு உதவி தேவை.",
+            "எனக்கு உதவி இருக்கிறது."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"ஏனென்றால்\" mean?",
+          "options": [
+            "And",
+            "But",
+            "Because",
+            "Or"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "வணக்கம்! நான் உங்கள் AI ஆசிரியர். இன்று நாம் \"விருப்பங்கள், விருப்பங்கள் மற்றும் தேவைகளை வெளிப்படுத்துதல்\" பற்றி கற்றுக்கொள்வோம். இந்த பாடத்தில், \"வேண்டும்\" (vēṇṭum), \"பிடிக்கும்\" (piṭikkum), \"தேவை\" (tēvai), \"இருக்கிறது\" (irukkiṟatu) மற்றும் \"ஏனென்றால்\" (ēṉeṉṟāl) போன்ற முக்கியமான சொற்களைப் பார்ப்போம். முதலில் சில புதிய சொற்களைப் பார்ப்போம். பிறகு சில கேள்விகளுடன் பயிற்சி செய்வோம். உங்களுக்கு ஏதேனும் கேள்விகள் இருந்தால் தயவுசெய்து கேளுங்கள்!"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "வணக்கம்",
+          "phonetic": "Vanakkam",
+          "meaning": "Hello / Greetings",
+          "example": "வணக்கம்! நீங்கள் எப்படி இருக்கிறீர்கள்?"
+        },
+        {
+          "word": "எப்படி இருக்கிறீர்கள்?",
+          "phonetic": "Eppadi irukkeergal?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "நீங்கள் எப்படி இருக்கிறீர்கள்? நான் நன்றாக இருக்கிறேன்."
+        },
+        {
+          "word": "நன்றாக இருக்கிறேன்",
+          "phonetic": "Nandraaga irukkiren",
+          "meaning": "I am fine / I am well",
+          "example": "நான் நன்றாக இருக்கிறேன், நன்றி."
+        },
+        {
+          "word": "நன்றி",
+          "phonetic": "Nandri",
+          "meaning": "Thank you",
+          "example": "உங்கள் உதவிக்கு நன்றி."
+        },
+        {
+          "word": "ஆம்",
+          "phonetic": "Aam",
+          "meaning": "Yes",
+          "example": "நீங்கள் தமிழ் பேசுவீர்களா? ஆம், நான் பேசுவேன்."
+        },
+        {
+          "word": "இல்லை",
+          "phonetic": "Illai",
+          "meaning": "No",
+          "example": "இது உங்கள் புத்தகமா? இல்லை, இது என்னுடையது இல்லை."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Tamil?",
+          "options": [
+            "வணக்கம்",
+            "நன்றி",
+            "ஆம்",
+            "இல்லை"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the meaning of \"நன்றி\"?",
+          "options": [
+            "Yes",
+            "No",
+            "Thank you",
+            "Hello"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Tamil phrase for \"I am fine.\"",
+          "options": [
+            "வணக்கம்",
+            "நன்றாக இருக்கிறேன்",
+            "எப்படி இருக்கிறீர்கள்?",
+            "ஆம்"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"No\" in Tamil?",
+          "options": [
+            "ஆம்",
+            "நன்றி",
+            "இல்லை",
+            "வணக்கம்"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "வணக்கம்! இன்று நாம் சில அத்தியாவசிய தமிழ் சொற்றொடர்கள் மற்றும் சொற்களஞ்சியத்தைப் பற்றிப் பார்க்கப் போகிறோம். மக்களை எப்படி வாழ்த்துவது, அவர்கள் எப்படி இருக்கிறார்கள் என்று கேட்பது, மற்றும் பதிலளிப்பது எப்படி என்று கற்றுக்கொள்வோம். \"வணக்கம்\" (Vanakkam - Hello), \"எப்படி இருக்கிறீர்கள்?\" (Eppadi irukkeergal? - How are you?), மற்றும் \"நன்றாக இருக்கிறேன்\" (Nandraaga irukkiren - I am fine) போன்ற சொற்களைப் பற்றிப் பார்ப்போம். மேலும், எளிய வாக்கியங்களை உருவாக்குவதையும் பயிற்சி செய்வோம். உங்கள் தமிழ் பயணத்தைத் தொடங்க நீங்கள் தயாரா?"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "வணக்கம்",
+          "phonetic": "Vanakkam",
+          "meaning": "Hello / Greetings",
+          "example": "வணக்கம்! நீங்கள் எப்படி இருக்கிறீர்கள்?"
+        },
+        {
+          "word": "நன்றி",
+          "phonetic": "Nandri",
+          "meaning": "Thank you",
+          "example": "உங்கள் உதவிக்கு நன்றி."
+        },
+        {
+          "word": "ஆம்",
+          "phonetic": "Aam",
+          "meaning": "Yes",
+          "example": "ஆம், நான் வருகிறேன்."
+        },
+        {
+          "word": "இல்லை",
+          "phonetic": "Illai",
+          "meaning": "No / Not",
+          "example": "இல்லை, அது சரியில்லை."
+        },
+        {
+          "word": "என்ன",
+          "phonetic": "Enna",
+          "meaning": "What",
+          "example": "உங்கள் பெயர் என்ன?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Tamil?",
+          "options": [
+            "நன்றி",
+            "வணக்கம்",
+            "ஆம்",
+            "இல்லை"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Tamil word for \"Thank you\"?",
+          "options": [
+            "என்ன",
+            "ஆம்",
+            "நன்றி",
+            "வணக்கம்"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Tamil word means \"Yes\"?",
+          "options": [
+            "இல்லை",
+            "என்ன",
+            "ஆம்",
+            "நன்றி"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"இல்லை\" mean in English?",
+          "options": [
+            "Yes",
+            "What",
+            "No",
+            "Thank you"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If you want to ask \"What is your name?\", which Tamil word would you use for \"What\"?",
+          "options": [
+            "ஆம்",
+            "இல்லை",
+            "நன்றி",
+            "என்ன"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Hello! Today, we're going to dive into some essential Tamil phrases. We'll learn how to say \"Hello\" (வணக்கம்), \"Thank you\" (நன்றி), \"Yes\" (ஆம்), \"No\" (இல்லை), and \"What\" (என்ன). I'll explain each word's meaning, pronunciation, and give you examples of how to use them in simple sentences. By the end of this lesson, you'll be able to greet people, express gratitude, and ask basic questions in Tamil. Let's start with 'வணக்கம்'!"
+    }
+  ]
+}

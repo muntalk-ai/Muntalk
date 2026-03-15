@@ -1,0 +1,1323 @@
+{
+  "langCode": "sl-SI",
+  "langLabel": "Slovenian",
+  "langNative": "Slovenščina",
+  "generatedAt": "2026-03-15T03:57:01.486Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Živjo",
+          "phonetic": "ZHEEV-yoh",
+          "meaning": "Hello (informal)",
+          "example": "Živjo, kako si?"
+        },
+        {
+          "word": "Dobro jutro",
+          "phonetic": "DOH-bro YOO-tro",
+          "meaning": "Good morning",
+          "example": "Dobro jutro, gospa Novak!"
+        },
+        {
+          "word": "Dober dan",
+          "phonetic": "DOH-ber DAHN",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Dober dan, kako ste?"
+        },
+        {
+          "word": "Dober večer",
+          "phonetic": "DOH-ber veh-CHAIR",
+          "meaning": "Good evening",
+          "example": "Dober večer, prijatelji!"
+        },
+        {
+          "word": "Lahko noč",
+          "phonetic": "LAH-khoh NOCH",
+          "meaning": "Good night",
+          "example": "Lahko noč in sladke sanje!"
+        },
+        {
+          "word": "Nasvidenje",
+          "phonetic": "NAHS-vee-DEH-nyeh",
+          "meaning": "Goodbye",
+          "example": "Nasvidenje, se vidimo jutri!"
+        },
+        {
+          "word": "Kako si?",
+          "phonetic": "KAH-koh SEE",
+          "meaning": "How are you? (informal singular)",
+          "example": "Živjo, Marko, kako si?"
+        },
+        {
+          "word": "Dobro sem",
+          "phonetic": "DOH-bro SEHM",
+          "meaning": "I am fine",
+          "example": "Dobro sem, hvala."
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "HVAH-lah",
+          "meaning": "Thank you",
+          "example": "Hvala za pomoč!"
+        },
+        {
+          "word": "Prosim",
+          "phonetic": "PROH-seem",
+          "meaning": "Please / You're welcome",
+          "example": "Prosim, izvolite."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' informally in Slovenian?",
+          "options": [
+            "Dober dan",
+            "Živjo",
+            "Nasvidenje",
+            "Hvala"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Slovenian phrase means 'Good morning'?",
+          "options": [
+            "Dober večer",
+            "Dobro jutro",
+            "Dober dan",
+            "Lahko noč"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks you 'Kako si?' and you are fine, how would you respond?",
+          "options": [
+            "Hvala",
+            "Nasvidenje",
+            "Dobro sem",
+            "Prosim"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Slovenian word for 'Thank you'?",
+          "options": [
+            "Prosim",
+            "Hvala",
+            "Živjo",
+            "Nasvidenje"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase would you use to say 'Goodbye'?",
+          "options": [
+            "Dober dan",
+            "Živjo",
+            "Nasvidenje",
+            "Dobro jutro"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Živjo! Vesel sem, da ti bom danes pomagal pri učenju slovenskih pozdravov in osnovnih fraz. To je odličen začetek za tvoje potovanje v slovenščino! Pozorno poslušaj, ko izgovorim vsako besedo, in poskusi ponoviti za mano. Ne skrbi, če ne bo popolno takoj – vaja dela mojstra! Začnimo z 'Živjo'!"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Živjo",
+          "phonetic": "[ʒiˈvjo]",
+          "meaning": "Hello / Hi",
+          "example": "Živjo, kako si?"
+        },
+        {
+          "word": "Moje ime je...",
+          "phonetic": "[ˈmɔjɛ iˈmɛ jɛ]",
+          "meaning": "My name is...",
+          "example": "Moje ime je Ana."
+        },
+        {
+          "word": "Kako ti je ime?",
+          "phonetic": "[ˈkakɔ ti jɛ iˈmɛ]",
+          "meaning": "What is your name? (informal)",
+          "example": "Živjo, kako ti je ime?"
+        },
+        {
+          "word": "Me veseli",
+          "phonetic": "[mɛ vɛˈsɛli]",
+          "meaning": "Nice to meet you / Pleased to meet you",
+          "example": "Me veseli, da te spoznam."
+        },
+        {
+          "word": "Nasvidenje",
+          "phonetic": "[nasʋiˈdɛnjɛ]",
+          "meaning": "Goodbye",
+          "example": "Nasvidenje, se vidimo jutri!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Slovenian?",
+          "options": [
+            "Živjo",
+            "Hvala",
+            "Prosim",
+            "Dober dan"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct Slovenian phrase for \"My name is Ana\"?",
+          "options": [
+            "Jaz sem Ana",
+            "Moje ime je Ana",
+            "Ana je moje ime",
+            "Ime je Ana"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct response to \"Kako ti je ime?\"",
+          "options": [
+            "Živjo",
+            "Moje ime je Marko",
+            "Hvala",
+            "Nasvidenje"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"Goodbye\" in Slovenian?",
+          "options": [
+            "Živjo",
+            "Dober dan",
+            "Nasvidenje",
+            "Prosim"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Odlično delo! V tej lekciji smo se naučili osnovnih slovenskih pozdravov in predstavitev. Spoznali smo besede in fraze kot so \"Živjo\" (Hello), \"Moje ime je...\" (My name is...), \"Kako ti je ime?\" (What is your name?), \"Me veseli\" (Nice to meet you) in \"Nasvidenje\" (Goodbye). Vadili smo jih z vprašanji in odgovori. Poskusi uporabiti te fraze v pogovoru s prijatelji ali družino! Se vidimo naslednjič!"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Zdravo",
+          "phonetic": "ZDRAH-voh",
+          "meaning": "Hello (informal)",
+          "example": "Zdravo, kako si?"
+        },
+        {
+          "word": "Dober dan",
+          "phonetic": "DOH-ber dahn",
+          "meaning": "Good day (formal Hello)",
+          "example": "Dober dan, gospa Novak."
+        },
+        {
+          "word": "Nasvidenje",
+          "phonetic": "nah-svee-DEN-yeh",
+          "meaning": "Goodbye (formal)",
+          "example": "Nasvidenje, se vidimo jutri."
+        },
+        {
+          "word": "Prosim",
+          "phonetic": "PROH-seem",
+          "meaning": "Please / You're welcome",
+          "example": "Prosim, pomagajte mi."
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "HVAH-lah",
+          "meaning": "Thank you",
+          "example": "Hvala za pomoč."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the informal way to say \"Hello\" in Slovenian?",
+          "options": [
+            "Dober dan",
+            "Zdravo",
+            "Nasvidenje",
+            "Hvala"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Slovenian?",
+          "options": [
+            "Prosim",
+            "Zdravo",
+            "Hvala",
+            "Dober dan"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Slovenian word for \"Goodbye\" (formal).",
+          "options": [
+            "Prosim",
+            "Nasvidenje",
+            "Zdravo",
+            "Hvala"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means both \"Please\" and \"You're welcome\"?",
+          "options": [
+            "Hvala",
+            "Dober dan",
+            "Prosim",
+            "Zdravo"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Odlično! Danes se bomo potopili v osnove slovenskih pozdravov in vljudnostnih fraz. Naučili se bomo, kako reči 'Zdravo' (neformalni pozdrav), 'Dober dan' (formalni pozdrav), 'Nasvidenje' (poslovilni pozdrav), 'Prosim' (prošnja ali odgovor na hvalo) in 'Hvala' (zahvala). Pripravljen? Začnimo z 'Zdravo'. Poslušaj in ponovi: 'Zdravo'. Ali lahko rečeš 'Zdravo'?"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Dober dan",
+          "phonetic": "[ˈdɔbɛr dan]",
+          "meaning": "Good day",
+          "example": "Dober dan, kako ste?"
+        },
+        {
+          "word": "Živjo",
+          "phonetic": "[ʒiˈvjɔ]",
+          "meaning": "Hi/Hello (informal)",
+          "example": "Živjo, sem Ana."
+        },
+        {
+          "word": "Kako si?",
+          "phonetic": "[ˈkakɔ si]",
+          "meaning": "How are you? (informal)",
+          "example": "Živjo, Marko! Kako si?"
+        },
+        {
+          "word": "Sem",
+          "phonetic": "[sɛm]",
+          "meaning": "I am",
+          "example": "Sem študent."
+        },
+        {
+          "word": "Moje ime je",
+          "phonetic": "[ˈmɔjɛ ˈimɛ jɛ]",
+          "meaning": "My name is",
+          "example": "Moje ime je Luka."
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "[ˈxʋala]",
+          "meaning": "Thank you",
+          "example": "Hvala za pomoč."
+        },
+        {
+          "word": "Prosim",
+          "phonetic": "[ˈprɔsim]",
+          "meaning": "Please / You're welcome",
+          "example": "Prosim, sedite."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the informal way to say \"Hello\" in Slovenian?",
+          "options": [
+            "Dober dan",
+            "Adijo",
+            "Živjo",
+            "Lahko noč"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Slovenian?",
+          "options": [
+            "Prosim",
+            "Hvala",
+            "Živjo",
+            "Dober dan"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Slovenian phrase for \"My name is Ana.\"",
+          "options": [
+            "Sem Ana.",
+            "Moje ime je Ana.",
+            "Kako si Ana?",
+            "Hvala Ana."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"How are you?\" (informal) in Slovenian?",
+          "options": [
+            "Dober dan",
+            "Sem dobro",
+            "Kako si?",
+            "Prosim"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Živjo! Dobrodošli v naši lekciji slovenščine. Danes se bomo naučili, kako se pozdravimo in predstavimo v slovenščini. Spoznali bomo ključne fraze, kot so 'Dober dan' (Good day), 'Živjo' (Hi/Hello), 'Kako si?' (How are you?) in 'Moje ime je...' (My name is...). Pomembno je, da poslušate in ponavljate za mano, da boste izboljšali svojo izgovorjavo. Ste pripravljeni? Začnimo!"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Živjo",
+          "phonetic": "ZHEEV-yoh",
+          "meaning": "Hello (informal)",
+          "example": "Živjo! Kako si?"
+        },
+        {
+          "word": "Kako si?",
+          "phonetic": "KAH-koh see",
+          "meaning": "How are you? (informal, singular)",
+          "example": "Živjo, Ana! Kako si?"
+        },
+        {
+          "word": "Dobro sem.",
+          "phonetic": "DOH-broh sem",
+          "meaning": "I am good.",
+          "example": "Kako si? Dobro sem, hvala."
+        },
+        {
+          "word": "Hvala.",
+          "phonetic": "HVAH-lah",
+          "meaning": "Thank you.",
+          "example": "Hvala za pomoč!"
+        },
+        {
+          "word": "Prosim.",
+          "phonetic": "PROH-seem",
+          "meaning": "Please / You're welcome.",
+          "example": "Lahko dobim vodo, prosim?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Slovenian?",
+          "options": [
+            "Adijo",
+            "Živjo",
+            "Dober dan",
+            "Lahko noč"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Hvala\" mean in English?",
+          "options": [
+            "Please",
+            "Excuse me",
+            "Thank you",
+            "Goodbye"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"How are you?\" (informal, singular) in Slovenian?",
+          "options": [
+            "Kdo si?",
+            "Kaj delaš?",
+            "Kako si?",
+            "Kje si?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct response to \"Kako si?\"",
+          "options": [
+            "Adijo.",
+            "Dobro sem.",
+            "Hvala.",
+            "Prosim."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Živjo! Sem tvoj učitelj za to lekcijo slovenščine. Danes se bomo naučili nekaj osnovnih slovenskih pozdravov in fraz. Začnimo z 'Živjo'. To je neformalen način, kako reči 'Hello'. Poskusi ponoviti: 'Živjo'. Odlično! Zdaj pa se naučimo vprašati 'Kako si?', kar pomeni 'How are you?'. Poskusi izgovoriti: 'Kako si?'. Ko ti nekdo reče 'Kako si?', lahko odgovoriš 'Dobro sem.', kar pomeni 'I am good.'. In seveda, ne pozabimo na 'Hvala' (Thank you) in 'Prosim' (Please/You're welcome). Ali imaš kakšno vprašanje o teh besedah?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Živjo",
+          "phonetic": "zhee-VYOH",
+          "meaning": "Hello (informal), Hi",
+          "example": "Živjo, kako si?"
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "HVAH-lah",
+          "meaning": "Thank you",
+          "example": "Hvala za pomoč."
+        },
+        {
+          "word": "Prosim",
+          "phonetic": "PROH-seem",
+          "meaning": "Please / You're welcome / I beg your pardon",
+          "example": "Prosim, sedite."
+        },
+        {
+          "word": "Da",
+          "phonetic": "DAH",
+          "meaning": "Yes",
+          "example": "Da, razumem."
+        },
+        {
+          "word": "Ne",
+          "phonetic": "NEH",
+          "meaning": "No",
+          "example": "Ne, hvala."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Slovenian?",
+          "options": [
+            "Hvala",
+            "Živjo",
+            "Prosim",
+            "Ne"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Hvala\" mean in English?",
+          "options": [
+            "Please",
+            "Yes",
+            "Thank you",
+            "No"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Slovenian word for \"Yes\".",
+          "options": [
+            "Ne",
+            "Da",
+            "Živjo",
+            "Prosim"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Odlično delo! V tej lekciji se bomo naučili nekaj osnovnih slovenskih besed in fraz. Začeli bomo z 'Živjo' (Hi), 'Hvala' (Thank you) in 'Prosim' (Please). Bodite pozorni na izgovorjavo in poskusite ponoviti za mano. Pripravljeni? Začnimo!"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Živjo",
+          "phonetic": "zhee-VYOH",
+          "meaning": "Hello / Hi",
+          "example": "Živjo! Kako si?"
+        },
+        {
+          "word": "Kako si?",
+          "phonetic": "KAH-koh see?",
+          "meaning": "How are you? (informal singular)",
+          "example": "Živjo, Ana! Kako si?"
+        },
+        {
+          "word": "Sem dobro",
+          "phonetic": "sem DOH-broh",
+          "meaning": "I am good",
+          "example": "Sem dobro, hvala. Ti?"
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "HVAH-lah",
+          "meaning": "Thank you",
+          "example": "Hvala za pomoč!"
+        },
+        {
+          "word": "Prosim",
+          "phonetic": "PROH-seem",
+          "meaning": "Please / You're welcome",
+          "example": "Prosim, sedite. / Hvala! Prosim."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Slovenian?",
+          "options": [
+            "Adijo",
+            "Živjo",
+            "Hvala",
+            "Prosim"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct translation for 'Thank you'.",
+          "options": [
+            "Prosim",
+            "Kako si?",
+            "Hvala",
+            "Sem dobro"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask 'How are you?' (informal singular) in Slovenian?",
+          "options": [
+            "Sem dobro?",
+            "Kako si?",
+            "Kdo si?",
+            "Kaj je to?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does 'Sem dobro' mean?",
+          "options": [
+            "I am bad",
+            "I am good",
+            "Who are you?",
+            "What is this?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "The student is ready to learn basic Slovenian greetings. Start by introducing \"Živjo\" (Hello/Hi). Ask the student to repeat it. Then, introduce \"Kako si?\" (How are you? - informal singular) and \"Sem dobro\" (I am good). Encourage them to practice a short dialogue using these phrases. Finally, introduce \"Hvala\" (Thank you) and \"Prosim\" (Please/You're welcome) and explain their dual meaning. Ask the student to use \"Hvala\" and \"Prosim\" in a simple exchange."
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Živjo",
+          "phonetic": "zhi-VYOH",
+          "meaning": "Hi, Hello (informal)",
+          "example": "Živjo! Kako si?"
+        },
+        {
+          "word": "Dober dan",
+          "phonetic": "DOH-ber dahn",
+          "meaning": "Good day, Hello (formal/general)",
+          "example": "Dober dan, gospa Novak."
+        },
+        {
+          "word": "Kako si?",
+          "phonetic": "KAH-koh see",
+          "meaning": "How are you? (informal)",
+          "example": "Živjo, Marko! Kako si?"
+        },
+        {
+          "word": "Sem dobro.",
+          "phonetic": "sem DOH-broh",
+          "meaning": "I am fine.",
+          "example": "Sem dobro, hvala."
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "HVAH-lah",
+          "meaning": "Thank you",
+          "example": "Hvala za pomoč."
+        },
+        {
+          "word": "Prosim",
+          "phonetic": "PROH-seem",
+          "meaning": "Please / You're welcome",
+          "example": "Prosim, sedite."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" (informal) in Slovenian?",
+          "options": [
+            "Dober dan",
+            "Živjo",
+            "Hvala",
+            "Prosim"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to \"Kako si?\" if you are fine?",
+          "options": [
+            "Hvala",
+            "Prosim",
+            "Sem dobro",
+            "Dober dan"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Slovenian word for \"Thank you\".",
+          "options": [
+            "Prosim",
+            "Hvala",
+            "Živjo",
+            "Sem dobro"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"Good day\" (formal)?",
+          "options": [
+            "Živjo",
+            "Kako si?",
+            "Dober dan",
+            "Sem dobro"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Živjo! Danes se bomo naučili nekaj pogostih slovenskih pozdravov in fraz. Vadili bomo, kako reči \"Živjo\", \"Dober dan\", \"Kako si?\", \"Sem dobro\", \"Hvala\" in \"Prosim\". Začnimo z \"Živjo\". Ali lahko ponoviš \"Živjo\"?"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Dober dan",
+          "phonetic": "DOH-ber dahn",
+          "meaning": "Good day",
+          "example": "Dober dan, kako ste?"
+        },
+        {
+          "word": "Kako si?",
+          "phonetic": "KAH-koh see",
+          "meaning": "How are you? (informal)",
+          "example": "Živjo, Kako si danes?"
+        },
+        {
+          "word": "Sem dobro",
+          "phonetic": "Sem DOH-broh",
+          "meaning": "I am good",
+          "example": "Sem dobro, hvala."
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "HVAH-lah",
+          "meaning": "Thank you",
+          "example": "Hvala za pomoč."
+        },
+        {
+          "word": "Prosim",
+          "phonetic": "PROH-seem",
+          "meaning": "Please / You're welcome",
+          "example": "Prosim, sedite."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most common way to say \"Good day\" in Slovenian?",
+          "options": [
+            "Dober dan",
+            "Lahko noč",
+            "Adijo",
+            "Živjo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you ask \"How are you?\" informally in Slovenian?",
+          "options": [
+            "Kako ste?",
+            "Kdo si?",
+            "Kako si?",
+            "Kaj delaš?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Hvala\" to you, what are they saying?",
+          "options": [
+            "Hello",
+            "Goodbye",
+            "Thank you",
+            "Please"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Slovenian phrase means \"I am good\"?",
+          "options": [
+            "Sem slabo",
+            "Sem dobro",
+            "Sem utrujen",
+            "Sem lačen"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Prosim\" mean in English?",
+          "options": [
+            "Excuse me",
+            "Sorry",
+            "Please / You're welcome",
+            "No problem"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Živjo! Danes se bomo naučili nekaj osnovnih slovenskih pozdravov in fraz. Spoznali bomo, kako reči \"Dober dan\", vprašati \"Kako si?\" in izraziti \"Hvala\". Predstavil ti bom vsako frazo, razložil njen pomen in ti dal primer. Nato bomo skupaj vadili njihovo uporabo. Si pripravljen/a začeti s slovenščino?"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Zdravo",
+          "phonetic": "zdra-vo",
+          "meaning": "Hello / Hi",
+          "example": "Zdravo, kako si?"
+        },
+        {
+          "word": "Dobro jutro",
+          "phonetic": "do-bro yoo-tro",
+          "meaning": "Good morning",
+          "example": "Dobro jutro, gospa Novak."
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "hva-la",
+          "meaning": "Thank you",
+          "example": "Hvala za pomoč."
+        },
+        {
+          "word": "Kako si?",
+          "phonetic": "ka-ko see",
+          "meaning": "How are you? (informal singular)",
+          "example": "Kako si danes?"
+        },
+        {
+          "word": "Dobro sem",
+          "phonetic": "do-bro sem",
+          "meaning": "I am good",
+          "example": "Dobro sem, hvala."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Slovenian?",
+          "options": [
+            "Zdravo",
+            "Hvala",
+            "Prosim",
+            "Ne"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does \"Dobro jutro\" mean?",
+          "options": [
+            "Good evening",
+            "Good morning",
+            "Good afternoon",
+            "Good night"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you respond to \"Kako si?\" if you are feeling good?",
+          "options": [
+            "Ne",
+            "Hvala",
+            "Dobro sem",
+            "Prosim"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Odlično! Danes se bomo naučili nekaj osnovnih slovenskih pozdravov in fraz. Začeli bomo z \"Zdravo\". To pomeni \"Hello\" ali \"Hi\". Ponovite za mano: \"Zdravo\".\n\nNato imamo \"Dobro jutro\", kar pomeni \"Good morning\". Poskusite: \"Dobro jutro\".\n\nKo se želite zahvaliti, rečete \"Hvala\". To je \"Thank you\". Povejte: \"Hvala\".\n\nČe želite vprašati \"How are you?\", rečete \"Kako si?\". Ponovite: \"Kako si?\".\n\nIn če ste dobro, odgovorite \"Dobro sem\". To pomeni \"I am good\". Poskusite: \"Dobro sem\".\n\nAli imate kakšna vprašanja o teh frazah?"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Živjo",
+          "phonetic": "[ʒiˈʋjɔ]",
+          "meaning": "Hello / Hi",
+          "example": "Živjo, kako si?"
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "[ˈxʋaːla]",
+          "meaning": "Thank you",
+          "example": "Hvala za pomoč."
+        },
+        {
+          "word": "Sem",
+          "phonetic": "[sɛm]",
+          "meaning": "I am",
+          "example": "Jaz sem študent."
+        },
+        {
+          "word": "Imam",
+          "phonetic": "[ˈiːmam]",
+          "meaning": "I have",
+          "example": "Imam knjigo."
+        },
+        {
+          "word": "Grem",
+          "phonetic": "[ɡrɛm]",
+          "meaning": "I go",
+          "example": "Grem domov."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Slovenian?",
+          "options": [
+            "Hvala",
+            "Živjo",
+            "Prosim",
+            "Adijo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Hvala\" mean?",
+          "options": [
+            "Please",
+            "Excuse me",
+            "Thank you",
+            "Sorry"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Slovenian word means \"I am\"?",
+          "options": [
+            "Imam",
+            "Grem",
+            "Sem",
+            "Si"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Slovenian word for \"I have\".",
+          "options": [
+            "Sem",
+            "Imam",
+            "Grem",
+            "Imaš"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Odlično delo! Danes se bomo naučili nekaj bistvenih slovenskih besed in fraz. Začeli bomo s pozdravom \"Živjo\" in izrazom hvaležnosti \"Hvala\". Nato bomo spoznali tudi tri zelo pomembne glagole: \"sem\" (jaz sem), \"imam\" (jaz imam) in \"grem\" (jaz grem). Povedal bom vsako besedo, ti pa lahko ponoviš za mano. Pripravljen/a?"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Dober dan",
+          "phonetic": "DOH-ber dahn",
+          "meaning": "Good day",
+          "example": "Dober dan, kako ste?"
+        },
+        {
+          "word": "Prosim",
+          "phonetic": "PROH-sim",
+          "meaning": "Please / You're welcome",
+          "example": "Prosim, pomagajte mi."
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "HVAH-lah",
+          "meaning": "Thank you",
+          "example": "Hvala za pomoč."
+        },
+        {
+          "word": "Da",
+          "phonetic": "dah",
+          "meaning": "Yes",
+          "example": "Da, razumem."
+        },
+        {
+          "word": "Ne",
+          "phonetic": "neh",
+          "meaning": "No",
+          "example": "Ne, ne govorim slovensko dobro."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Good day' in Slovenian?",
+          "options": [
+            "Hvala",
+            "Dober dan",
+            "Prosim",
+            "Ne"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Slovenian word means 'Thank you'?",
+          "options": [
+            "Da",
+            "Prosim",
+            "Hvala",
+            "Ne"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Slovenian word for 'Yes'?",
+          "options": [
+            "Ne",
+            "Dober dan",
+            "Da",
+            "Prosim"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Pozdravljeni! Danes se bomo naučili nekaj zelo pomembnih slovenskih besed in fraz, ki jih boste uporabljali vsak dan. Začeli bomo z 'Dober dan' (Good day), 'Hvala' (Thank you) in 'Prosim' (Please/You're welcome). Naučili se bomo tudi, kako reči 'Da' (Yes) in 'Ne' (No). Predstavil vam bom vsako besedo, jo izgovoril in vam dal primer, kako jo uporabiti. Ne skrbite, če bo na začetku težko; šli bomo korak za korakom in vadili skupaj!"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "iti",
+          "phonetic": "[ˈiːti]",
+          "meaning": "to go",
+          "example": "Jaz grem domov."
+        },
+        {
+          "word": "jesti",
+          "phonetic": "[ˈjɛsti]",
+          "meaning": "to eat",
+          "example": "Rad jem jabolka."
+        },
+        {
+          "word": "piti",
+          "phonetic": "[ˈpiːti]",
+          "meaning": "to drink",
+          "example": "Ali piješ vodo?"
+        },
+        {
+          "word": "hiša",
+          "phonetic": "[ˈxiːʃa]",
+          "meaning": "house",
+          "example": "To je moja hiša."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Slovenian word means \"to go\"?",
+          "options": [
+            "jesti",
+            "piti",
+            "iti",
+            "hiša"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Slovenian word for \"to eat\".",
+          "options": [
+            "piti",
+            "jesti",
+            "iti",
+            "knjiga"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"house\" in Slovenian?",
+          "options": [
+            "knjiga",
+            "voda",
+            "hiša",
+            "avto"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Živjo! Dobrodošli v novi lekciji slovenščine. Danes se bomo naučili nekaj zelo uporabnih besed: 'iti' (to go), 'jesti' (to eat), 'piti' (to drink) in 'hiša' (house). Te besede so ključne za vsakodnevno komunikacijo. Povedal vam bom, kako jih pravilno izgovoriti in uporabiti v preprostih stavkih. Bodite pozorni na primere in se pripravite na vajo! Začnimo!"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "iti",
+          "phonetic": "ee-tee",
+          "meaning": "to go",
+          "example": "Jaz grem v trgovino."
+        },
+        {
+          "word": "priti",
+          "phonetic": "pree-tee",
+          "meaning": "to come",
+          "example": "Ali lahko prideš jutri?"
+        },
+        {
+          "word": "videti",
+          "phonetic": "vee-deh-tee",
+          "meaning": "to see",
+          "example": "Vidim te!"
+        },
+        {
+          "word": "zraven",
+          "phonetic": "zrah-ven",
+          "meaning": "next to, beside",
+          "example": "Sedim zraven tebe."
+        },
+        {
+          "word": "pred",
+          "phonetic": "prehd",
+          "meaning": "in front of, before",
+          "example": "Avto je parkiran pred hišo."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Choose the correct form of \"iti\" (to go) for \"Jaz ___ v šolo.\" (I ___ to school.)",
+          "options": [
+            "grem",
+            "greš",
+            "gre",
+            "gredo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means \"next to\"?",
+          "options": [
+            "pod",
+            "nad",
+            "zraven",
+            "za"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Complete the sentence: \"On ___ knjigo.\" (He ___ a book.)",
+          "options": [
+            "vidim",
+            "vidiš",
+            "vidi",
+            "vidimo"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Živjo! Sem tvoj AI učitelj slovenščine. Danes se bomo poglobili v nekaj uporabnih slovenskih besed in fraz, ki ti bodo pomagale pri vsakodnevni komunikaciji. Pripravljen/a? Začnimo z glagolom \"iti\", kar pomeni \"to go\". To je zelo pogost glagol! Poglejmo primer: \"Jaz grem v trgovino.\" (I am going to the store.) Ali lahko poskusiš sestaviti svoj stavek z \"iti\"? Ne skrbi, če ne bo popolno, pomembno je, da vadiš! Če imaš kakršnakoli vprašanja, sem tukaj, da ti pomagam razumeti."
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Knjiga",
+          "phonetic": "KNYEE-gah",
+          "meaning": "Book",
+          "example": "To je zanimiva knjiga."
+        },
+        {
+          "word": "Jesti",
+          "phonetic": "YEH-stee",
+          "meaning": "To eat",
+          "example": "Rad/a jem sadje."
+        },
+        {
+          "word": "Voda",
+          "phonetic": "VOH-dah",
+          "meaning": "Water",
+          "example": "Prosim, prinesi mi kozarec vode."
+        },
+        {
+          "word": "Danes",
+          "phonetic": "DAH-nes",
+          "meaning": "Today",
+          "example": "Danes je lep dan."
+        },
+        {
+          "word": "Prijatelj",
+          "phonetic": "PREE-yah-tel",
+          "meaning": "Friend (masculine)",
+          "example": "Moj prijatelj prihaja na obisk."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Slovenian word for 'book'?",
+          "options": [
+            "Voda",
+            "Knjiga",
+            "Jesti",
+            "Danes"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means 'to eat'?",
+          "options": [
+            "Piti",
+            "Spati",
+            "Jesti",
+            "Delati"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Slovenian word for 'today'.",
+          "options": [
+            "Jutri",
+            "Včeraj",
+            "Danes",
+            "Nikoli"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say 'I eat' in Slovenian?",
+          "options": [
+            "Jem",
+            "Ješ",
+            "Jemo",
+            "Jeste"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "Živjo! Pripravljen/a si na pregled naše lekcije? Danes se bomo osredotočili na nekaj novih besed in preprosto glagolsko spregatev. Spoznali bomo besede kot so \"knjiga\" (book), \"jesti\" (to eat) in \"danes\" (today). Povedal ti bom tudi, kako se glagol \"jesti\" spregne v prvi osebi ednine: \"jem\" (I eat). Pripravljen/a? Začnimo!"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Živjo",
+          "phonetic": "ZHEEV-yoh",
+          "meaning": "Hello (informal)",
+          "example": "Živjo, kako si?"
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "HVAH-lah",
+          "meaning": "Thank you",
+          "example": "Hvala za pomoč."
+        },
+        {
+          "word": "Prosim",
+          "phonetic": "PROH-seem",
+          "meaning": "Please / You're welcome / I beg your pardon?",
+          "example": "Prosim, sedite."
+        },
+        {
+          "word": "Da",
+          "phonetic": "DAH",
+          "meaning": "Yes",
+          "example": "Da, razumem."
+        },
+        {
+          "word": "Ne",
+          "phonetic": "NEH",
+          "meaning": "No",
+          "example": "Ne, hvala."
+        },
+        {
+          "word": "Kako si?",
+          "phonetic": "KAH-koh see?",
+          "meaning": "How are you? (informal, singular)",
+          "example": "Živjo, kako si danes?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Slovenian?",
+          "options": [
+            "Hvala",
+            "Živjo",
+            "Prosim",
+            "Ne"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does the Slovenian word \"Hvala\" mean in English?",
+          "options": [
+            "Please",
+            "Yes",
+            "Thank you",
+            "No"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Slovenian word for \"Yes\".",
+          "options": [
+            "Ne",
+            "Da",
+            "Kako si?",
+            "Živjo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone says \"Hvala\", how would you respond with \"You're welcome\" or \"Please\"?",
+          "options": [
+            "Da",
+            "Ne",
+            "Živjo",
+            "Prosim"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Odlično delo! Zdaj pa vadimo nekaj pogostih slovenskih fraz. Jaz bom izgovoril frazo, ti pa jo lahko ponoviš za mano. Na primer, jaz bom rekel 'Živjo,' ti pa lahko rečeš 'Živjo' nazaj. Začnimo z 'Živjo.' Si pripravljen/a?"
+    }
+  ]
+}

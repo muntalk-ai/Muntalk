@@ -1,0 +1,1305 @@
+{
+  "langCode": "sr-RS",
+  "langLabel": "Serbian",
+  "langNative": "Српски",
+  "generatedAt": "2026-03-15T06:15:28.428Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Zdravo",
+          "phonetic": "ZDRAH-voh",
+          "meaning": "Hello, Hi",
+          "example": "Zdravo! Kako ste danas?"
+        },
+        {
+          "word": "Dobro jutro",
+          "phonetic": "DOH-broh YOO-troh",
+          "meaning": "Good morning",
+          "example": "Dobro jutro svima!"
+        },
+        {
+          "word": "Kako ste?",
+          "phonetic": "KAH-koh steh?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "Zdravo, kako ste?"
+        },
+        {
+          "word": "Dobro sam",
+          "phonetic": "DOH-broh sahm",
+          "meaning": "I am good",
+          "example": "Dobro sam, hvala."
+        },
+        {
+          "word": "Zovem se...",
+          "phonetic": "ZOH-vem seh...",
+          "meaning": "My name is...",
+          "example": "Zovem se Ana."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Serbian?",
+          "options": [
+            "Zdravo",
+            "Hvala",
+            "Molim",
+            "Doviđenja"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Serbian phrase for \"Good morning\"?",
+          "options": [
+            "Dobar dan",
+            "Dobro veče",
+            "Dobro jutro",
+            "Laku noć"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"Kako ste?\", how would you respond if you are good?",
+          "options": [
+            "Loše sam",
+            "Hvala",
+            "Dobro sam",
+            "Molim"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you introduce your name, saying \"My name is Ana\"?",
+          "options": [
+            "Ja sam Ana",
+            "Moje ime je Ana",
+            "Zovem se Ana",
+            "Ana sam"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Zdravo! Dobrodošli na vašu prvu lekciju srpskog jezika! Ja sam vaš AI tutor i danas ćemo učiti osnovne pozdrave i kako da se predstavite. Cilj ove lekcije je da naučite da kažete \"Zdravo\", \"Dobro jutro\", \"Kako ste?\", \"Dobro sam\" i \"Zovem se...\" na srpskom. Slušajte pažljivo i ponavljajte za mnom. Spremni? Hajde da počnemo!"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Zdravo",
+          "phonetic": "ZDRAH-voh",
+          "meaning": "Hello / Hi",
+          "example": "Zdravo! Kako ste?"
+        },
+        {
+          "word": "Dobro jutro",
+          "phonetic": "DOH-broh YOO-troh",
+          "meaning": "Good morning",
+          "example": "Dobro jutro, komšija!"
+        },
+        {
+          "word": "Dobar dan",
+          "phonetic": "DOH-bar dahn",
+          "meaning": "Good day / Good afternoon",
+          "example": "Dobar dan svima!"
+        },
+        {
+          "word": "Dobro veče",
+          "phonetic": "DOH-broh VEH-cheh",
+          "meaning": "Good evening",
+          "example": "Dobro veče, prijatelji."
+        },
+        {
+          "word": "Kako ste?",
+          "phonetic": "KAH-koh steh?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "Zdravo, gospođo Petrović, kako ste?"
+        },
+        {
+          "word": "Dobro sam",
+          "phonetic": "DOH-broh sahm",
+          "meaning": "I am fine / I am well",
+          "example": "Hvala, dobro sam."
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "HVAH-lah",
+          "meaning": "Thank you",
+          "example": "Hvala na pomoći."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Serbian?",
+          "options": [
+            "Dobar dan",
+            "Zdravo",
+            "Dobro jutro",
+            "Hvala"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct Serbian greeting for the morning?",
+          "options": [
+            "Dobar dan",
+            "Dobro veče",
+            "Dobro jutro",
+            "Kako ste?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"Kako ste?\", what is a common response meaning \"I am fine\"?",
+          "options": [
+            "Hvala",
+            "Zdravo",
+            "Dobro sam",
+            "Dobar dan"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Serbian word for \"Thank you\".",
+          "options": [
+            "Zdravo",
+            "Hvala",
+            "Dobro",
+            "Jutro"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Zdravo! Dobrodošli na vašu prvu lekciju srpskog jezika! Danas ćemo naučiti neke osnovne pozdrave. Počnimo sa \"Zdravo\". To znači \"Hello\" ili \"Hi\". Pokušajte da kažete: Zdravo. Odlično! Sada, za \"Good morning\" kažemo \"Dobro jutro\". Ponovite: Dobro jutro. Za \"Good day\" ili \"Good afternoon\" koristimo \"Dobar dan\". Recite: Dobar dan. Kada je veče, kažemo \"Dobro veče\" za \"Good evening\". Pokušajte: Dobro veče. Da pitate \"How are you?\" (formalno), kažete \"Kako ste?\". Ponovite: Kako ste? A da odgovorite \"I am fine\", kažete \"Dobro sam\". Recite: Dobro sam. Na kraju, za \"Thank you\" kažemo \"Hvala\". Ponovite: Hvala. Sada, pokušajte da pozdravite nekoga sa \"Zdravo\" i pitate ga \"Kako ste?\". Ja ću vam odgovoriti \"Dobro sam, hvala!\". Hajde da vežbamo!"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Zdravo",
+          "phonetic": "ZDRAH-voh",
+          "meaning": "Hello / Hi",
+          "example": "Zdravo! Kako ste?"
+        },
+        {
+          "word": "Dobar dan",
+          "phonetic": "DOH-bar dahn",
+          "meaning": "Good day / Good afternoon",
+          "example": "Dobar dan svima!"
+        },
+        {
+          "word": "Dobro jutro",
+          "phonetic": "DOH-broh YOO-troh",
+          "meaning": "Good morning",
+          "example": "Dobro jutro, komšija!"
+        },
+        {
+          "word": "Dobro veče",
+          "phonetic": "DOH-broh VEH-cheh",
+          "meaning": "Good evening",
+          "example": "Dobro veče, prijatelji!"
+        },
+        {
+          "word": "Laku noć",
+          "phonetic": "LAH-koo noć",
+          "meaning": "Good night",
+          "example": "Laku noć i lepo spavajte."
+        },
+        {
+          "word": "Doviđenja",
+          "phonetic": "doh-vee-JEH-nyah",
+          "meaning": "Goodbye",
+          "example": "Doviđenja, vidimo se sutra!"
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "HVAH-lah",
+          "meaning": "Thank you",
+          "example": "Hvala na pomoći!"
+        },
+        {
+          "word": "Molim",
+          "phonetic": "MOH-leem",
+          "meaning": "Please / You're welcome",
+          "example": "Molim vas, sedite. / Molim, nema na čemu."
+        },
+        {
+          "word": "Da",
+          "phonetic": "dah",
+          "meaning": "Yes",
+          "example": "Da, razumeo sam."
+        },
+        {
+          "word": "Ne",
+          "phonetic": "neh",
+          "meaning": "No",
+          "example": "Ne, hvala."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Serbian?",
+          "options": [
+            "Doviđenja",
+            "Zdravo",
+            "Hvala",
+            "Molim"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Serbian phrase means 'Good morning'?",
+          "options": [
+            "Dobar dan",
+            "Dobro veče",
+            "Dobro jutro",
+            "Laku noć"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct way to say 'Thank you'?",
+          "options": [
+            "Ne",
+            "Da",
+            "Hvala",
+            "Molim"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says 'Hvala' to you, how can you respond with 'You're welcome'?",
+          "options": [
+            "Zdravo",
+            "Molim",
+            "Doviđenja",
+            "Da"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Zdravo! Dobrodošli na vašu prvu lekciju srpskog jezika! Danas ćemo naučiti neke osnovne pozdrave i izraze. Počnimo sa 'Zdravo', što znači 'Hello' ili 'Hi'. Možete li ponoviti: 'Zdravo'? Odlično! Sada, za 'Good day' ili 'Good afternoon', kažemo 'Dobar dan'. Pokušajte: 'Dobar dan'. Sjajno! Za 'Good morning' koristimo 'Dobro jutro', a za 'Good evening' kažemo 'Dobro veče'. 'Laku noć' je za 'Good night'. Kada želite da se pozdravite, kažete 'Doviđenja'. Možete li da ponovite 'Doviđenja'? Vrlo dobro! Da bismo rekli 'Thank you', koristimo reč 'Hvala'. A za 'Please' ili 'You're welcome', kažemo 'Molim'. Pokušajte da kažete 'Hvala' i 'Molim'. Za kraj, 'Da' znači 'Yes', a 'Ne' znači 'No'. Vežbajte ove reči i fraze, i uskoro ćete ih koristiti sa lakoćom! Imate li pitanja?"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Zdravo",
+          "phonetic": "ZDRAH-voh",
+          "meaning": "Hello / Hi",
+          "example": "Zdravo, kako si?"
+        },
+        {
+          "word": "Dobar dan",
+          "phonetic": "DOH-bar dahn",
+          "meaning": "Good day",
+          "example": "Dobar dan, ja sam Ana."
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "HVAH-lah",
+          "meaning": "Thank you",
+          "example": "Hvala na pomoći."
+        },
+        {
+          "word": "Molim",
+          "phonetic": "MOH-leem",
+          "meaning": "Please / You're welcome",
+          "example": "Molim te, pomozi mi."
+        },
+        {
+          "word": "Doviđenja",
+          "phonetic": "doh-vee-DJEH-nyah",
+          "meaning": "Goodbye",
+          "example": "Doviđenja, vidimo se sutra."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Serbian?",
+          "options": [
+            "Doviđenja",
+            "Hvala",
+            "Zdravo",
+            "Molim"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct response to \"Hvala\" (Thank you)?",
+          "options": [
+            "Zdravo",
+            "Dobar dan",
+            "Molim",
+            "Doviđenja"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct greeting for \"Good day\".",
+          "options": [
+            "Doviđenja",
+            "Dobar dan",
+            "Hvala",
+            "Molim"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Zdravo! Ja sam tvoj AI tutor. Danas ćemo naučiti neke nove srpske reči. Počnimo sa 'Zdravo'. Možeš li da kažeš 'Zdravo'?"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Zdravo",
+          "phonetic": "ZDRAH-voh",
+          "meaning": "Hello (informal)",
+          "example": "Zdravo, kako si?"
+        },
+        {
+          "word": "Dobar dan",
+          "phonetic": "DOH-bar dahn",
+          "meaning": "Good day",
+          "example": "Dobar dan, gospodine Petroviću."
+        },
+        {
+          "word": "Kako ste?",
+          "phonetic": "KAH-koh steh",
+          "meaning": "How are you? (formal/plural)",
+          "example": "Kako ste danas?"
+        },
+        {
+          "word": "Ja sam dobro.",
+          "phonetic": "yah sahm DOH-broh",
+          "meaning": "I am well.",
+          "example": "Ja sam dobro, hvala."
+        },
+        {
+          "word": "Hvala.",
+          "phonetic": "HVAH-lah",
+          "meaning": "Thank you.",
+          "example": "Hvala na pomoći."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" informally in Serbian?",
+          "options": [
+            "Dobar dan",
+            "Zdravo",
+            "Laku noć",
+            "Doviđenja"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Serbian phrase means \"Good day\"?",
+          "options": [
+            "Dobro jutro",
+            "Doviđenja",
+            "Dobar dan",
+            "Laku noć"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you respond if someone asks you \"Kako ste?\" and you are well?",
+          "options": [
+            "Ja sam loše.",
+            "Ja sam dobro.",
+            "Hvala.",
+            "Molim."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Zdravo! Dobrodošli na čas srpskog jezika! U ovoj lekciji ćemo naučiti neke od najčešćih pozdrava i fraza za predstavljanje. Razgovaraćemo o tome kako da kažete \"Zdravo\", \"Dobar dan\", \"Kako ste?\" i kako da odgovorite. Obratite pažnju na razlike u formalnosti. Spremni? Počnimo sa \"Zdravo\". Možete li ponoviti za mnom: \"Zdravo\"?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Zdravo",
+          "phonetic": "ZDRAH-voh",
+          "meaning": "Hello",
+          "example": "Zdravo, kako ste?"
+        },
+        {
+          "word": "Doviđenja",
+          "phonetic": "doh-vee-DJEH-nyah",
+          "meaning": "Goodbye",
+          "example": "Doviđenja, vidimo se uskoro!"
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "HVAH-lah",
+          "meaning": "Thank you",
+          "example": "Hvala vam puno!"
+        },
+        {
+          "word": "Molim",
+          "phonetic": "MOH-leem",
+          "meaning": "Please / You're welcome",
+          "example": "Molim vas, pomozite mi."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Serbian?",
+          "options": [
+            "Doviđenja",
+            "Hvala",
+            "Zdravo",
+            "Molim"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Serbian word for \"Thank you\"?",
+          "options": [
+            "Da",
+            "Ne",
+            "Hvala",
+            "Zdravo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Doviđenja\", what does it mean?",
+          "options": [
+            "Hello",
+            "Please",
+            "Goodbye",
+            "Yes"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Odlično! Danas ćemo naučiti neke osnovne srpske pozdrave i učtive fraze. Pokrićemo reči kao što su 'Zdravo' (Hello), 'Doviđenja' (Goodbye), 'Hvala' (Thank you) i 'Molim' (Please / You're welcome). Ja ću izgovoriti svaku reč, objasniti njeno značenje i dati vam primer rečenice. Zatim je vaš red da vežbate! Počnimo sa 'Zdravo'. Slušajte pažljivo: [Zdravo]. Možete li ponoviti 'Zdravo' posle mene? Šta mislite, šta znači?"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Zdravo",
+          "phonetic": "zdra-vo",
+          "meaning": "Hello/Hi",
+          "example": "Zdravo! Kako si?"
+        },
+        {
+          "word": "Kako si?",
+          "phonetic": "ka-ko si",
+          "meaning": "How are you? (informal, singular)",
+          "example": "Zdravo, Marko! Kako si?"
+        },
+        {
+          "word": "Dobro sam.",
+          "phonetic": "do-bro sam",
+          "meaning": "I am fine.",
+          "example": "Dobro sam, hvala."
+        },
+        {
+          "word": "Kako se zoveš?",
+          "phonetic": "ka-ko se zo-vesh",
+          "meaning": "What is your name? (informal, singular)",
+          "example": "Zdravo! Kako se zoveš?"
+        },
+        {
+          "word": "Zovem se...",
+          "phonetic": "zo-vem se",
+          "meaning": "My name is...",
+          "example": "Zovem se Ana."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Serbian?",
+          "options": [
+            "Zdravo",
+            "Hvala",
+            "Molim",
+            "Dobro"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does \"Kako si?\" mean?",
+          "options": [
+            "What is your name?",
+            "How are you?",
+            "Where are you from?",
+            "I am fine."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct response to \"Kako si?\"",
+          "options": [
+            "Zovem se",
+            "Dobro sam",
+            "Zdravo",
+            "Hvala"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you ask \"What is your name?\" (informal singular) in Serbian?",
+          "options": [
+            "Kako ste?",
+            "Kako si?",
+            "Kako se zoveš?",
+            "Ko si?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Zdravo! Dobrodošli na čas srpskog jezika. Danas ćemo naučiti neke osnovne fraze za pozdrave i predstavljanje. Ovo su ključne rečenice za početak svakog razgovora na srpskom. Obratite pažnju na izgovor i pokušajte da ponavljate za mnom. Počnimo sa \"Zdravo\"..."
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Zdravo",
+          "phonetic": "Zdra-vo",
+          "meaning": "Hello (informal)",
+          "example": "Zdravo, kako si?"
+        },
+        {
+          "word": "Dobar dan",
+          "phonetic": "Do-bar dan",
+          "meaning": "Good day (formal hello)",
+          "example": "Dobar dan, gospodine Petroviću."
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "Hva-la",
+          "meaning": "Thank you",
+          "example": "Hvala na pomoći."
+        },
+        {
+          "word": "Molim",
+          "phonetic": "Mo-lim",
+          "meaning": "Please / You're welcome",
+          "example": "Molim vas, sedite. / Hvala! - Molim!"
+        },
+        {
+          "word": "Izvinite",
+          "phonetic": "Iz-vi-ni-te",
+          "meaning": "Excuse me / Sorry (formal)",
+          "example": "Izvinite, gde je toalet?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Serbian?",
+          "options": [
+            "Dobar dan",
+            "Hvala",
+            "Zdravo",
+            "Molim"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"Hvala\" mean in English?",
+          "options": [
+            "Please",
+            "You're welcome",
+            "Thank you",
+            "Excuse me"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Serbian word for \"Please\" or \"You're welcome\".",
+          "options": [
+            "Zdravo",
+            "Izvinite",
+            "Molim",
+            "Dobar dan"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you formally say \"Excuse me\" or \"Sorry\" in Serbian?",
+          "options": [
+            "Hvala",
+            "Izvinite",
+            "Zdravo",
+            "Molim"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Zdravo! Dobrodošli na čas srpskog jezika. Danas ćemo se fokusirati na neke veoma korisne osnovne reči i fraze. Naučićemo kako da kažete \"Zdravo\" (Hello), \"Dobar dan\" (Good day), \"Hvala\" (Thank you), \"Molim\" (Please/You're welcome) i \"Izvinite\" (Excuse me/Sorry). Ja ću izgovoriti svaku reč ili frazu, a vi pokušajte da ponovite za mnom. Zatim ćemo vežbati kako da ih koristite u kratkim dijalozima. Spremni? Hajde da počnemo!"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Zdravo",
+          "phonetic": "ZDRAH-voh",
+          "meaning": "Hello / Hi",
+          "example": "Zdravo! Kako si?"
+        },
+        {
+          "word": "Dobar dan",
+          "phonetic": "DOH-bar dahn",
+          "meaning": "Good day",
+          "example": "Dobar dan, ja sam Ana."
+        },
+        {
+          "word": "Kako si?",
+          "phonetic": "KAH-koh see",
+          "meaning": "How are you? (informal)",
+          "example": "Zdravo, Marko! Kako si?"
+        },
+        {
+          "word": "Ja sam...",
+          "phonetic": "Yah sahm",
+          "meaning": "I am...",
+          "example": "Ja sam Petar."
+        },
+        {
+          "word": "Drago mi je",
+          "phonetic": "DRAH-goh mee yeh",
+          "meaning": "Nice to meet you",
+          "example": "Drago mi je, ja sam Marija."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Serbian?",
+          "options": [
+            "Dobro jutro",
+            "Zdravo",
+            "Laku noć",
+            "Doviđenja"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Ja sam...\" mean?",
+          "options": [
+            "You are...",
+            "We are...",
+            "I am...",
+            "They are..."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"Nice to meet you\"?",
+          "options": [
+            "Hvala",
+            "Molim",
+            "Drago mi je",
+            "Izvinite"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Zdravo! Welcome to our Serbian lesson. Today, we're going to learn some essential Serbian greetings and how to introduce yourself. We'll cover phrases like \"Zdravo\" (Hello), \"Dobar dan\" (Good day), \"Kako si?\" (How are you?), \"Ja sam...\" (I am...), and \"Drago mi je\" (Nice to meet you). Let's start with \"Zdravo\". It's a versatile greeting you can use at any time of day. Can you try saying \"Zdravo\"?"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Zdravo",
+          "phonetic": "zdrah-voh",
+          "meaning": "Hello (informal), Hi",
+          "example": "Zdravo, kako si?"
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "hvah-lah",
+          "meaning": "Thank you",
+          "example": "Hvala na pomoći!"
+        },
+        {
+          "word": "Molim",
+          "phonetic": "moh-leem",
+          "meaning": "Please / You're welcome",
+          "example": "Molim te, daj mi vodu. / Hvala! - Molim!"
+        },
+        {
+          "word": "Da",
+          "phonetic": "dah",
+          "meaning": "Yes",
+          "example": "Da, želim kafu."
+        },
+        {
+          "word": "Ne",
+          "phonetic": "neh",
+          "meaning": "No",
+          "example": "Ne, hvala."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does \"Zdravo\" mean in English?",
+          "options": [
+            "Doviđenja",
+            "Zdravo",
+            "Izvini",
+            "Molim"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Serbian?",
+          "options": [
+            "Molim",
+            "Da",
+            "Hvala",
+            "Ne"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Serbian word for \"Yes\".",
+          "options": [
+            "Ne",
+            "Molim",
+            "Hvala",
+            "Da"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Zdravo! Dobrodošli na vašu prvu lekciju srpskog jezika. Danas ćemo naučiti neke osnovne pozdrave i izraze koji su veoma korisni. Počećemo sa \"Zdravo\", što znači \"Hello\" ili \"Hi\". Zatim ćemo preći na \"Hvala\" za \"Thank you\", i \"Molim\" koje može značiti \"Please\" ili \"You're welcome\". Slušajte pažljivo dok izgovaram ove reči, a zatim pokušajte da ih ponovite. Spremni? Hajde da počnemo!"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Zdravo",
+          "phonetic": "ZDRAH-voh",
+          "meaning": "Hello (informal)",
+          "example": "Zdravo, kako si?"
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "HVAH-lah",
+          "meaning": "Thank you",
+          "example": "Hvala na pomoći."
+        },
+        {
+          "word": "Molim",
+          "phonetic": "MOH-leem",
+          "meaning": "Please / You're welcome / I beg your pardon",
+          "example": "Molim vas, dajte mi vodu."
+        },
+        {
+          "word": "Da",
+          "phonetic": "Dah",
+          "meaning": "Yes",
+          "example": "Da, razumem."
+        },
+        {
+          "word": "Ne",
+          "phonetic": "Neh",
+          "meaning": "No",
+          "example": "Ne, ne želim."
+        },
+        {
+          "word": "Doviđenja",
+          "phonetic": "doh-vee-DJEH-nyah",
+          "meaning": "Goodbye",
+          "example": "Doviđenja, vidimo se sutra."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Serbian?",
+          "options": [
+            "Doviđenja",
+            "Hvala",
+            "Zdravo",
+            "Molim"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"Hvala\" mean?",
+          "options": [
+            "Yes",
+            "No",
+            "Thank you",
+            "Please"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Serbian word for \"Yes\".",
+          "options": [
+            "Ne",
+            "Da",
+            "Molim",
+            "Zdravo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"Goodbye\"?",
+          "options": [
+            "Hvala",
+            "Molim",
+            "Doviđenja",
+            "Ne"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Zdravo! Dobrodošli na čas srpskog jezika. Danas ćemo se fokusirati na neke od najvažnijih reči koje će vam pomoći da započnete razgovor i budete pristojni u Srbiji. Naučićemo kako da kažete 'Zdravo' (Hello), 'Hvala' (Thank you), 'Molim' (Please/You're welcome), 'Da' (Yes), 'Ne' (No) i 'Doviđenja' (Goodbye). Obratićemo pažnju na pravilan izgovor i videćemo kako se ove reči koriste u svakodnevnim situacijama. Spremni da počnemo sa učenjem srpskog?"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Zdravo",
+          "phonetic": "ZDRAH-voh",
+          "meaning": "Hello / Hi",
+          "example": "Zdravo! Kako ste danas?"
+        },
+        {
+          "word": "Kako ste?",
+          "phonetic": "KAH-koh steh",
+          "meaning": "How are you? (formal/plural)",
+          "example": "Zdravo, gospodine Petroviću! Kako ste?"
+        },
+        {
+          "word": "Dobro sam.",
+          "phonetic": "DOH-broh sahm",
+          "meaning": "I am fine.",
+          "example": "Dobro sam, hvala. A vi?"
+        },
+        {
+          "word": "Hvala.",
+          "phonetic": "HVAH-lah",
+          "meaning": "Thank you.",
+          "example": "Hvala na pomoći!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Serbian?",
+          "options": [
+            "Doviđenja",
+            "Zdravo",
+            "Molim",
+            "Izvinite"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to \"Kako ste?\" if you are fine?",
+          "options": [
+            "Nema na čemu",
+            "Dobro sam",
+            "Zovem se",
+            "Žao mi je"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the Serbian word for \"Thank you\".",
+          "options": [
+            "Molim",
+            "Izvinite",
+            "Hvala",
+            "Doviđenja"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"How are you?\" (formal)?",
+          "options": [
+            "Kako si?",
+            "Kako ste?",
+            "Ko ste?",
+            "Šta ste?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor teaching Serbian. Your goal is to introduce new vocabulary related to basic greetings and check the learner's understanding. Start by saying \"Zdravo!\" and asking \"Kako ste danas?\" (How are you today?). Then, introduce the word \"Zdravo\" (Hello/Hi). Explain its meaning and usage. Next, introduce \"Kako ste?\" (How are you? - formal/plural) and \"Kako si?\" (How are you? - informal/singular). Explain the difference. Then, introduce \"Dobro sam\" (I am fine). Finally, introduce \"Hvala\" (Thank you). For each word, provide its Serbian form, its English meaning, and an example sentence in Serbian. Encourage the learner to repeat the words and phrases after you. Ask the learner to form a simple dialogue using these phrases, for example: \"Zdravo! Kako ste?\" and \"Dobro sam, hvala. A vi?\". Provide feedback on pronunciation and grammar. End the lesson by saying \"Doviđenja!\" (Goodbye!)."
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Zdravo",
+          "phonetic": "ZDRAH-voh",
+          "meaning": "Hello / Hi (informal)",
+          "example": "Zdravo! Kako si danas?"
+        },
+        {
+          "word": "Dobar dan",
+          "phonetic": "DOH-bar dahn",
+          "meaning": "Good day (formal Hello)",
+          "example": "Dobar dan, gospodine Petroviću."
+        },
+        {
+          "word": "Kako si?",
+          "phonetic": "KAH-koh see",
+          "meaning": "How are you? (informal)",
+          "example": "Zdravo, Marko! Kako si?"
+        },
+        {
+          "word": "Ja sam...",
+          "phonetic": "yah sahm",
+          "meaning": "I am...",
+          "example": "Ja sam Ana. Drago mi je."
+        },
+        {
+          "word": "Hvala",
+          "phonetic": "HVAH-lah",
+          "meaning": "Thank you",
+          "example": "Hvala na pomoći!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Serbian, in a general, informal way?",
+          "options": [
+            "Dobar dan",
+            "Zdravo",
+            "Laku noć",
+            "Doviđenja"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does the Serbian phrase \"Kako si?\" mean in English?",
+          "options": [
+            "What is your name?",
+            "Where are you from?",
+            "How are you?",
+            "Goodbye"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Serbian word for \"Thank you\".",
+          "options": [
+            "Molim",
+            "Izvini",
+            "Hvala",
+            "Da"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you introduce yourself by saying \"I am [Your Name]\" in Serbian?",
+          "options": [
+            "Ti si...",
+            "On je...",
+            "Ja sam...",
+            "Mi smo..."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Zdravo! Dobrodošli na vaš prvi čas srpskog jezika! Danas ćemo naučiti neke osnovne pozdrave i predstavljanje. Počećemo sa 'Zdravo' (Hello). Možete li pokušati da izgovorite 'Zdravo'? Odlično! To je neformalan pozdrav. Zatim ćemo naučiti 'Dobar dan' (Good day), što je formalniji pozdrav. Pokušajte: 'Dobar dan'. Super! Sada, kako da pitamo 'Kako si?' (How are you?) - to je neformalno. Pokušajte da kažete 'Kako si?'. Sjajno! Za predstavljanje, reći ćemo 'Ja sam...' (I am...). Na primer, 'Ja sam Ana'. I na kraju, 'Hvala' (Thank you). Pokušajte da kažete 'Hvala'. Vežbajte ove fraze i uskoro ćete moći da vodite osnovne razgovore na srpskom! Srećno!"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "probuditi se",
+          "phonetic": "pro-BOO-dee-tee seh",
+          "meaning": "to wake up",
+          "example": "Ja se probudim rano svakog jutra."
+        },
+        {
+          "word": "ustati",
+          "phonetic": "OO-sta-tee",
+          "meaning": "to get up",
+          "example": "On ustaje u sedam sati."
+        },
+        {
+          "word": "doručkovati",
+          "phonetic": "do-ROOCH-ko-va-tee",
+          "meaning": "to have breakfast",
+          "example": "Mi doručkujemo zajedno vikendom."
+        },
+        {
+          "word": "ići na posao/u školu",
+          "phonetic": "EE-chee na PO-sao/oo SHKO-loo",
+          "meaning": "to go to work/school",
+          "example": "Ona ide na posao autobusom."
+        },
+        {
+          "word": "ručati",
+          "phonetic": "ROO-cha-tee",
+          "meaning": "to have lunch",
+          "example": "Gde obično ručate?"
+        },
+        {
+          "word": "večerati",
+          "phonetic": "VE-che-ra-tee",
+          "meaning": "to have dinner",
+          "example": "Hoćemo li večerati kod kuće?"
+        },
+        {
+          "word": "ići na spavanje",
+          "phonetic": "EE-chee na SPA-va-nye",
+          "meaning": "to go to bed",
+          "example": "Deca idu na spavanje u devet."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"to wake up\" in Serbian?",
+          "options": [
+            "ustati",
+            "probuditi se",
+            "spavati",
+            "jesti"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct verb for \"to have breakfast\":",
+          "options": [
+            "ručati",
+            "večerati",
+            "doručkovati",
+            "piti"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Complete the sentence: \"Ona ____ na posao autobusom.\" (She goes to work by bus.)",
+          "options": [
+            "ide",
+            "spava",
+            "jede",
+            "pije"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "Zdravo! Danas ćemo učiti o svakodnevnim aktivnostima i glagolima koji ih opisuju. Naučićemo reči kao što su \"probuditi se\", \"ustati\", \"doručkovati\", \"ručati\", \"večerati\", \"ići na posao/u školu\" i \"ići na spavanje\". Vežbaćemo kako da ih koristimo u rečenicama. Spremni? Hajde da počnemo sa \"probuditi se\"!"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "putovati",
+          "phonetic": "poo-TOH-vah-tee",
+          "meaning": "to travel",
+          "example": "Volim da putujem po svetu."
+        },
+        {
+          "word": "destinacija",
+          "phonetic": "des-tee-NAH-tsee-yah",
+          "meaning": "destination",
+          "example": "Koja je tvoja omiljena destinacija?"
+        },
+        {
+          "word": "prtljag",
+          "phonetic": "PRT-lyag",
+          "meaning": "luggage",
+          "example": "Molim vas, ponesite svoj prtljag."
+        },
+        {
+          "word": "rezervisati",
+          "phonetic": "re-zer-VEE-sah-tee",
+          "meaning": "to book / to reserve",
+          "example": "Moram da rezervišem hotel."
+        },
+        {
+          "word": "pasoš",
+          "phonetic": "PAH-shosh",
+          "meaning": "passport",
+          "example": "Gde mi je pasoš?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Serbian word means 'to travel'?",
+          "options": [
+            "putovati",
+            "čitati",
+            "spavati",
+            "jesti"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say 'destination' in Serbian?",
+          "options": [
+            "stanica",
+            "destinacija",
+            "ulica",
+            "kuća"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Serbian word for 'luggage'.",
+          "options": [
+            "torba",
+            "kofer",
+            "prtljag",
+            "ranac"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means 'to book' or 'to reserve'?",
+          "options": [
+            "kupiti",
+            "prodati",
+            "rezervisati",
+            "tražiti"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Zdravo! Danas ćemo učiti o putovanjima i korisnim rečima za putovanje na srpskom jeziku. Pokrićemo reči kao što su \"putovati\", \"destinacija\", \"prtljag\", \"rezervisati\" i \"pasoš\". Naučićemo kako da ih koristimo u rečenicama i kako da pričamo o svojim putovanjima. Počnimo sa rečju \"putovati\"."
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Slažem se",
+          "phonetic": "Sla-zhem se",
+          "meaning": "I agree",
+          "example": "Slažem se s tobom, to je dobra ideja."
+        },
+        {
+          "word": "Ne slažem se",
+          "phonetic": "Ne sla-zhem se",
+          "meaning": "I disagree",
+          "example": "Ne slažem se s tim mišljenjem."
+        },
+        {
+          "word": "Mislim da...",
+          "phonetic": "Mis-lim da...",
+          "meaning": "I think that...",
+          "example": "Mislim da je važno učiti nove jezike."
+        },
+        {
+          "word": "Po mom mišljenju",
+          "phonetic": "Po mom mish-lye-nyu",
+          "meaning": "In my opinion",
+          "example": "Po mom mišljenju, najbolji način za učenje je praksa."
+        },
+        {
+          "word": "Više volim...",
+          "phonetic": "Vi-she vo-lim...",
+          "meaning": "I prefer... (literally: I like more...)",
+          "example": "Više volim kafu nego čaj."
+        },
+        {
+          "word": "Šta misliš o...?",
+          "phonetic": "Shta mis-lish o...?",
+          "meaning": "What do you think about...?",
+          "example": "Šta misliš o novom filmu?"
+        },
+        {
+          "word": "Smatram da...",
+          "phonetic": "Sma-tram da...",
+          "meaning": "I consider that... / I believe that...",
+          "example": "Smatram da je iskrenost ključna u svakom odnosu."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How would you say \"I agree\" in Serbian?",
+          "options": [
+            "Ne slažem se",
+            "Slažem se",
+            "Mislim da",
+            "Više volim"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct phrase to complete the sentence: \"_____, učenje jezika je zabavno.\" (_____, learning a language is fun.)",
+          "options": [
+            "Ne slažem se",
+            "Šta misliš o",
+            "Po mom mišljenju",
+            "Više volim"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"I prefer...\"?",
+          "options": [
+            "Smatram da",
+            "Mislim da",
+            "Više volim",
+            "Ne slažem se"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"What do you think about the book?\"",
+          "options": [
+            "Slažem se s knjigom?",
+            "Šta misliš o knjizi?",
+            "Više volim knjigu?",
+            "Po mom mišljenju knjiga?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Zdravo! Danas ćemo vežbati izražavanje mišljenja i preferencija na srpskom jeziku. Ovo je veoma korisno za svakodnevnu komunikaciju i pomaže ti da zvučiš prirodnije. Naučili smo fraze poput \"Slažem se\", \"Ne slažem se\", \"Mislim da...\", \"Po mom mišljenju\" i \"Više volim...\". Hajde da ih iskoristimo!\n\nDa počnemo, reci mi, šta misliš o učenju stranih jezika? Da li više voliš da učiš jezike online ili u učionici? Koristi bar jednu od novih fraza u svom odgovoru. Jedva čekam da čujem tvoje mišljenje!"
+    }
+  ]
+}

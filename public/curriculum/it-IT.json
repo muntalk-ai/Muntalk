@@ -1,0 +1,1355 @@
+{
+  "langCode": "it-IT",
+  "langLabel": "Italian",
+  "langNative": "Italiano",
+  "generatedAt": "2026-03-14T23:24:57.589Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ciao",
+          "phonetic": "chao",
+          "meaning": "Hello / Goodbye (informal)",
+          "example": "Ciao, come stai?"
+        },
+        {
+          "word": "Buongiorno",
+          "phonetic": "bwon-JOR-no",
+          "meaning": "Good morning / Good day",
+          "example": "Buongiorno, signora Rossi."
+        },
+        {
+          "word": "Buonasera",
+          "phonetic": "bwo-na-SEH-ra",
+          "meaning": "Good evening",
+          "example": "Buonasera, è un piacere."
+        },
+        {
+          "word": "Buonanotte",
+          "phonetic": "bwo-na-NOT-te",
+          "meaning": "Good night",
+          "example": "Buonanotte, a domani!"
+        },
+        {
+          "word": "Come stai?",
+          "phonetic": "KO-me STAI",
+          "meaning": "How are you? (informal)",
+          "example": "Ciao Marco, come stai?"
+        },
+        {
+          "word": "Sto bene, grazie.",
+          "phonetic": "sto BEH-ne, GRAHT-see-e",
+          "meaning": "I'm fine, thank you.",
+          "example": "Sto bene, grazie. E tu?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the informal way to say \"Hello\" or \"Goodbye\" in Italian?",
+          "options": [
+            "Buongiorno",
+            "Ciao",
+            "Buonasera",
+            "Buonanotte"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you greet someone in the morning?",
+          "options": [
+            "Buonasera",
+            "Buonanotte",
+            "Buongiorno",
+            "Ciao"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"Come stai?\", how would you respond if you are fine?",
+          "options": [
+            "Ciao",
+            "Buongiorno",
+            "Sto bene, grazie.",
+            "Buonanotte"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Sei un tutor AI che aiuta uno studente a imparare l'italiano. Il tuo obiettivo è introdurre il vocabolario e i concetti della lezione, fornire esempi e incoraggiare lo studente a praticare la conversazione. Inizia salutando lo studente e introducendo l'argomento della lezione. Poi, esamina ogni parola del vocabolario, spiegandone il significato e la pronuncia, e chiedendo allo studente di ripeterla. Incoraggialo a usare le parole in frasi semplici.\n\nEsempio di interazione:\nTutor: \"Ciao! Benvenuto alla nostra lezione di italiano. Oggi impareremo i saluti di base. Iniziamo con la parola 'Ciao'. Significa 'Hello' o 'Goodbye' in modo informale. Puoi ripeterla? 'Ciao'.\"\nStudente: \"Ciao.\"\nTutor: \"Ottimo! Ora prova a dire 'Ciao, come stai?'\"\nStudente: \"Ciao, come stai?\"\nTutor: \"Fantastico! Passiamo a 'Buongiorno'...\""
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ciao",
+          "phonetic": "chah-oh",
+          "meaning": "Hello / Goodbye (informal)",
+          "example": "Ciao, come stai?"
+        },
+        {
+          "word": "Buongiorno",
+          "phonetic": "bwohn-JOR-noh",
+          "meaning": "Good morning",
+          "example": "Buongiorno, signora Rossi."
+        },
+        {
+          "word": "Grazie",
+          "phonetic": "GRAHT-see-eh",
+          "meaning": "Thank you",
+          "example": "Grazie mille per l'aiuto."
+        },
+        {
+          "word": "Prego",
+          "phonetic": "PREH-goh",
+          "meaning": "You're welcome / Please",
+          "example": "\"Grazie!\" \"Prego!\""
+        },
+        {
+          "word": "Sì",
+          "phonetic": "see",
+          "meaning": "Yes",
+          "example": "Sì, voglio un caffè."
+        },
+        {
+          "word": "No",
+          "phonetic": "noh",
+          "meaning": "No",
+          "example": "No, non ho fame."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Italian?",
+          "options": [
+            "Buongiorno",
+            "Ciao",
+            "Grazie",
+            "Prego"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Italian word for \"Thank you\"?",
+          "options": [
+            "No",
+            "Sì",
+            "Grazie",
+            "Buongiorno"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Grazie!\", how would you respond with \"You're welcome\"?",
+          "options": [
+            "Ciao",
+            "Sì",
+            "Prego",
+            "No"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"Yes\" in Italian?",
+          "options": [
+            "No",
+            "Sì",
+            "Ciao",
+            "Buongiorno"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Ciao! Sono il tuo tutor AI di italiano. Benvenuto/a alla nostra lezione di base! Oggi impareremo alcune espressioni di saluto e frasi di cortesia molto utili in italiano. Ci concentreremo su parole come \"Ciao\", \"Buongiorno\", \"Grazie\", \"Prego\", \"Sì\" e \"No\". Inizieremo ascoltando la pronuncia di ogni parola e poi ti chiederò di ripeterla. Dopo, useremo queste parole in frasi semplici per aiutarti a memorizzarle. Sei pronto/a? Iniziamo con \"Ciao\"!"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ciao",
+          "phonetic": "CHAH-oh",
+          "meaning": "Hello / Hi / Bye (informal)",
+          "example": "Ciao, come stai?"
+        },
+        {
+          "word": "Buongiorno",
+          "phonetic": "Bwohn-JOR-noh",
+          "meaning": "Good morning",
+          "example": "Buongiorno, signora Rossi."
+        },
+        {
+          "word": "Come stai?",
+          "phonetic": "KOH-meh STAH-ee?",
+          "meaning": "How are you? (informal singular)",
+          "example": "Ciao Marco, come stai?"
+        },
+        {
+          "word": "Sto bene, grazie.",
+          "phonetic": "STOH BEH-neh, GRAHT-see-eh.",
+          "meaning": "I'm fine, thank you.",
+          "example": "Sto bene, grazie. E tu?"
+        },
+        {
+          "word": "Piacere",
+          "phonetic": "Pee-ah-CHEH-reh",
+          "meaning": "Nice to meet you",
+          "example": "Piacere, mi chiamo Anna."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Hi\" in Italian, used informally?",
+          "options": [
+            "Buongiorno",
+            "Ciao",
+            "Arrivederci",
+            "Buonanotte"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct Italian phrase for \"Good morning\"?",
+          "options": [
+            "Buonanotte",
+            "Buonasera",
+            "Buongiorno",
+            "Ciao"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"Come stai?\", how would you respond if you are fine?",
+          "options": [
+            "Piacere",
+            "Arrivederci",
+            "Sto bene, grazie.",
+            "Buonanotte"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Italian word means \"Nice to meet you\"?",
+          "options": [
+            "Grazie",
+            "Prego",
+            "Piacere",
+            "Scusa"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Lo studente sta imparando l'italiano. Inizia ripassando il vocabolario di questa lezione. Ad esempio, potresti dire: \"Oggi impareremo saluti e presentazioni. Ripetiamo insieme: 'Ciao', 'Buongiorno', 'Come stai?', 'Sto bene, grazie' e 'Piacere'.\" Poi, chiedi allo studente di usare le nuove parole in frasi. Ad esempio: \"Ora prova tu a usare 'Buongiorno' in una frase. Oppure, come risponderesti a 'Come stai?'?\" Infine, coinvolgilo in una conversazione usando il nuovo vocabolario, magari chiedendo: \"Ciao! Come stai oggi?\" e incoraggiando una risposta completa."
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ciao",
+          "phonetic": "CHAH-oh",
+          "meaning": "Hello / Goodbye (informal)",
+          "example": "Ciao, come stai?"
+        },
+        {
+          "word": "Buongiorno",
+          "phonetic": "BWON-jor-noh",
+          "meaning": "Good morning / Good day",
+          "example": "Buongiorno, signora Rossi!"
+        },
+        {
+          "word": "Come stai?",
+          "phonetic": "KOH-meh STAH-ee",
+          "meaning": "How are you? (informal singular)",
+          "example": "Ciao Marco, come stai oggi?"
+        },
+        {
+          "word": "Grazie",
+          "phonetic": "GRAHT-see-eh",
+          "meaning": "Thank you",
+          "example": "Grazie per l'aiuto!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Goodbye\" informally in Italian?",
+          "options": [
+            "Arrivederci",
+            "Buongiorno",
+            "Ciao",
+            "Buonanotte"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Italian phrase means \"Good morning\"?",
+          "options": [
+            "Buonasera",
+            "Buongiorno",
+            "Buonanotte",
+            "Ciao"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"How are you?\" to a friend in Italian?",
+          "options": [
+            "Come va?",
+            "Come stai?",
+            "Come state?",
+            "Stai bene?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Italian word for \"Thank you\"?",
+          "options": [
+            "Prego",
+            "Scusa",
+            "Grazie",
+            "Per favore"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Ciao! In questa lezione, impareremo alcune espressioni essenziali per salutare e frasi di cortesia in italiano. Inizierò introducendo ogni nuova parola o frase. Per esempio, dirò \"Ciao\", spiegherò che significa \"Hello\" o \"Goodbye\", e ti darò un esempio come \"Ciao, come stai?\". Poi ti chiederò di ripetere e useremo la parola in una frase. Faremo lo stesso per \"Buongiorno\", \"Come stai?\" e \"Grazie\". Sei pronto/a per iniziare?"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ciao",
+          "phonetic": "/tʃa.o/",
+          "meaning": "Hello / Hi / Goodbye (informal)",
+          "example": "Ciao, come stai?"
+        },
+        {
+          "word": "Buongiorno",
+          "phonetic": "/bwɔnˈdʒor.no/",
+          "meaning": "Good morning",
+          "example": "Buongiorno, signora Rossi."
+        },
+        {
+          "word": "Buonasera",
+          "phonetic": "/bwɔ.naˈse.ra/",
+          "meaning": "Good evening",
+          "example": "Buonasera, dottore."
+        },
+        {
+          "word": "Buonanotte",
+          "phonetic": "/bwɔ.naˈnɔt.te/",
+          "meaning": "Good night (when going to bed)",
+          "example": "Buonanotte, a domani!"
+        },
+        {
+          "word": "Come stai?",
+          "phonetic": "/ˈko.me ˈstaj/",
+          "meaning": "How are you? (informal singular)",
+          "example": "Ciao Marco, come stai?"
+        },
+        {
+          "word": "Sto bene, grazie.",
+          "phonetic": "/sto ˈbɛ.ne ˈɡrat.tsje/",
+          "meaning": "I'm fine, thank you.",
+          "example": "Come stai? Sto bene, grazie."
+        },
+        {
+          "word": "Piacere",
+          "phonetic": "/pjaˈtʃe.re/",
+          "meaning": "Nice to meet you",
+          "example": "Piacere, mi chiamo Anna."
+        },
+        {
+          "word": "Mi chiamo...",
+          "phonetic": "/mi ˈkja.mo/",
+          "meaning": "My name is...",
+          "example": "Piacere, mi chiamo Luca."
+        },
+        {
+          "word": "Arrivederci",
+          "phonetic": "/ar.ri.veˈder.tʃi/",
+          "meaning": "Goodbye (formal or plural)",
+          "example": "Arrivederci, signor Bianchi."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Good morning\" in Italian?",
+          "options": [
+            "Buonanotte",
+            "Buongiorno",
+            "Buonasera",
+            "Ciao"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the informal way to say \"How are you?\"",
+          "options": [
+            "Mi chiamo?",
+            "Piacere?",
+            "Come stai?",
+            "Sto bene?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct response to \"Come stai?\"",
+          "options": [
+            "Piacere",
+            "Buongiorno",
+            "Sto bene, grazie.",
+            "Arrivederci"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Nice to meet you\" in Italian?",
+          "options": [
+            "Ciao",
+            "Buonasera",
+            "Piacere",
+            "Mi chiamo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"Arrivederci\" mean?",
+          "options": [
+            "Hello",
+            "Good evening",
+            "My name is",
+            "Goodbye"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Ottimo lavoro! Oggi impareremo i saluti e le presentazioni in italiano. È fondamentale per iniziare qualsiasi conversazione! Tratteremo parole e frasi essenziali come \"Ciao\", \"Buongiorno\", \"Come stai?\" e \"Mi chiamo...\". Iniziamo con il saluto più comune: \"Ciao\". Puoi ripeterlo dopo di me? \"Ciao\". Ottimo! \"Ciao\" può significare sia \"ciao\" che \"arrivederci\" in contesti informali. Poi abbiamo \"Buongiorno\" per la mattina e \"Buonasera\" per la sera. Prova a dire \"Buongiorno\". Molto bene! E per chiedere come sta qualcuno, usiamo \"Come stai?\". Come risponderesti se stessi bene? Diresti \"Sto bene, grazie.\". Infine, per presentarti, puoi dire \"Mi chiamo...\" seguito dal tuo nome. E per dire \"Piacere di conoscerti\", diciamo semplicemente \"Piacere\". Sei pronto a provare a presentarti?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ciao",
+          "phonetic": "chah-oh",
+          "meaning": "Hello / Goodbye (informal)",
+          "example": "Ciao, come stai?"
+        },
+        {
+          "word": "Grazie",
+          "phonetic": "grah-tsee-eh",
+          "meaning": "Thank you",
+          "example": "Grazie per l'aiuto!"
+        },
+        {
+          "word": "Prego",
+          "phonetic": "preh-goh",
+          "meaning": "You're welcome / Please / Go ahead",
+          "example": "\"Grazie!\" \"Prego!\""
+        },
+        {
+          "word": "Sì",
+          "phonetic": "see",
+          "meaning": "Yes",
+          "example": "Sì, voglio un caffè."
+        },
+        {
+          "word": "No",
+          "phonetic": "noh",
+          "meaning": "No",
+          "example": "No, non ho fame."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the informal Italian word for \"Hello\" or \"Goodbye\"?",
+          "options": [
+            "Grazie",
+            "Prego",
+            "Ciao",
+            "Sì"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Italian?",
+          "options": [
+            "No",
+            "Grazie",
+            "Sì",
+            "Prego"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone says \"Grazie\" to you, what is a common Italian response meaning \"You're welcome\"?",
+          "options": [
+            "Ciao",
+            "Sì",
+            "No",
+            "Prego"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "Which Italian word means \"Yes\"?",
+          "options": [
+            "No",
+            "Sì",
+            "Ciao",
+            "Grazie"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Ciao! Benvenuto alla nostra lezione di italiano! Oggi impareremo alcune delle parole più utili e comuni per iniziare a parlare italiano. Ci concentreremo su saluti come \"Ciao\", espressioni di gratitudine come \"Grazie\" e \"Prego\", e le risposte semplici \"Sì\" e \"No\". Queste parole sono fondamentali per le conversazioni quotidiane. Iniziamo con \"Ciao\". Questa parola è molto versatile e significa sia \"Hello\" che \"Goodbye\" in situazioni informali. Puoi provare a dire \"Ciao\" ad alta voce?"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ciao",
+          "phonetic": "chah-oh",
+          "meaning": "Hi/Hello/Bye",
+          "example": "Ciao, come stai?"
+        },
+        {
+          "word": "Buongiorno",
+          "phonetic": "bwon-johr-noh",
+          "meaning": "Good morning/Good day",
+          "example": "Buongiorno, signora Rossi."
+        },
+        {
+          "word": "Buonasera",
+          "phonetic": "bwoh-nah-seh-rah",
+          "meaning": "Good evening",
+          "example": "Buonasera, è un piacere conoscerla."
+        },
+        {
+          "word": "Buonanotte",
+          "phonetic": "bwoh-nah-noht-teh",
+          "meaning": "Good night",
+          "example": "Buonanotte, a domani!"
+        },
+        {
+          "word": "Come stai?",
+          "phonetic": "koh-meh stah-ee",
+          "meaning": "How are you? (informal)",
+          "example": "Ciao Marco, come stai?"
+        },
+        {
+          "word": "Come sta?",
+          "phonetic": "koh-meh stah",
+          "meaning": "How are you? (formal)",
+          "example": "Buongiorno, signor Bianchi, come sta?"
+        },
+        {
+          "word": "Piacere",
+          "phonetic": "pyah-cheh-reh",
+          "meaning": "Nice to meet you / Pleasure",
+          "example": "Piacere, mi chiamo Anna."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Good morning\" in Italian?",
+          "options": [
+            "Buonanotte",
+            "Buongiorno",
+            "Buonasera",
+            "Ciao"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which greeting can be used for both \"Hi\" and \"Bye\"?",
+          "options": [
+            "Buongiorno",
+            "Buonasera",
+            "Ciao",
+            "Piacere"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If you want to ask \"How are you?\" to a friend, which phrase would you use?",
+          "options": [
+            "Come sta?",
+            "Buonasera",
+            "Come stai?",
+            "Piacere"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What would you say when meeting someone for the first time?",
+          "options": [
+            "Buonanotte",
+            "Ciao",
+            "Piacere",
+            "Buongiorno"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "The student is learning basic Italian greetings and introductions. Start by introducing \"Ciao\" and explain its dual use for \"hi\" and \"bye\". Then, move on to \"Buongiorno\", \"Buonasera\", and \"Buonanotte\", explaining when to use each. Practice pronunciation with the student. Next, introduce \"Come stai?\" (informal) and \"Come sta?\" (formal) for asking \"How are you?\", emphasizing the difference. Conclude by teaching \"Piacere\" for \"Nice to meet you\". Encourage the student to form simple sentences using these phrases. Ask them to introduce themselves or greet you using the new vocabulary."
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ciao",
+          "phonetic": "CHAH-oh",
+          "meaning": "Hello / Hi / Goodbye",
+          "example": "Ciao, come stai?"
+        },
+        {
+          "word": "Buongiorno",
+          "phonetic": "BWON-jor-noh",
+          "meaning": "Good morning",
+          "example": "Buongiorno, signora Rossi!"
+        },
+        {
+          "word": "Come stai?",
+          "phonetic": "KOH-meh STAH-ee?",
+          "meaning": "How are you? (informal singular)",
+          "example": "Ciao Marco, come stai?"
+        },
+        {
+          "word": "Sto bene",
+          "phonetic": "STOH BEH-neh",
+          "meaning": "I'm fine",
+          "example": "Sto bene, grazie."
+        },
+        {
+          "word": "Grazie",
+          "phonetic": "GRAH-tsee-eh",
+          "meaning": "Thank you",
+          "example": "Grazie per l'aiuto!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Hi\" in Italian?",
+          "options": [
+            "Buongiorno",
+            "Ciao",
+            "Grazie",
+            "Arrivederci"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to \"Come stai?\" if you are fine?",
+          "options": [
+            "Ciao",
+            "Buonanotte",
+            "Sto bene",
+            "Prego"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Italian?",
+          "options": [
+            "Prego",
+            "Grazie",
+            "Buonasera",
+            "Piacere"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Benvenuto alla tua lezione di italiano! Oggi impareremo alcuni saluti essenziali e frasi di base in italiano. Ci eserciteremo a dire \"ciao\", a chiedere \"come stai?\" e a rispondere. Iniziamo con \"Ciao\". Sai cosa significa \"Ciao\" in inglese?"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ciao",
+          "phonetic": "chah-oh",
+          "meaning": "Hi / Hello / Bye",
+          "example": "Ciao, come stai?"
+        },
+        {
+          "word": "Buongiorno",
+          "phonetic": "bwon-JOR-noh",
+          "meaning": "Good morning / Good day",
+          "example": "Buongiorno, signora Rossi."
+        },
+        {
+          "word": "Buonasera",
+          "phonetic": "bwoh-nah-SEH-rah",
+          "meaning": "Good evening",
+          "example": "Buonasera, a tutti!"
+        },
+        {
+          "word": "Arrivederci",
+          "phonetic": "ah-ree-veh-DER-chee",
+          "meaning": "Goodbye (formal/general)",
+          "example": "Arrivederci, ci vediamo domani."
+        },
+        {
+          "word": "Grazie",
+          "phonetic": "GRAH-tsee-eh",
+          "meaning": "Thank you",
+          "example": "Grazie per l'aiuto!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" or \"Bye\" informally in Italian?",
+          "options": [
+            "Buongiorno",
+            "Ciao",
+            "Buonanotte",
+            "Arrivederci"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What would you say to greet someone in the morning?",
+          "options": [
+            "Buonasera",
+            "Ciao",
+            "Buongiorno",
+            "Arrivederci"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Italian?",
+          "options": [
+            "Prego",
+            "Scusa",
+            "Grazie",
+            "Per favore"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Ciao! Oggi impareremo alcuni saluti e congedi essenziali in italiano. Tratteremo parole come \"Ciao\", \"Buongiorno\", \"Buonasera\", \"Arrivederci\" e \"Grazie\". Ti presenterò ogni parola, ti spiegherò quando usarla e ti darò la possibilità di fare pratica. Cominciamo con \"Ciao\". È una parola versatile! Riesci a indovinare cosa significa in inglese?"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "essere",
+          "phonetic": "/ˈɛssere/",
+          "meaning": "to be",
+          "example": "Io sono italiano."
+        },
+        {
+          "word": "avere",
+          "phonetic": "/aˈveːre/",
+          "meaning": "to have",
+          "example": "Tu hai un libro."
+        },
+        {
+          "word": "ciao",
+          "phonetic": "/tʃaːo/",
+          "meaning": "hello/goodbye (informal)",
+          "example": "Ciao, come stai?"
+        },
+        {
+          "word": "grazie",
+          "phonetic": "/ˈɡrattsje/",
+          "meaning": "thank you",
+          "example": "Grazie mille!"
+        },
+        {
+          "word": "per favore",
+          "phonetic": "/per faˈvoːre/",
+          "meaning": "please",
+          "example": "Puoi aiutarmi, per favore?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"hello\" (informal) in Italian?",
+          "options": [
+            "Arrivederci",
+            "Ciao",
+            "Buongiorno",
+            "Scusa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Italian verb means \"to be\"?",
+          "options": [
+            "Avere",
+            "Parlare",
+            "Essere",
+            "Mangiare"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Italian word for \"thank you\"?",
+          "options": [
+            "Prego",
+            "Scusa",
+            "Grazie",
+            "Per favore"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Italian phrase for \"please\".",
+          "options": [
+            "Mi dispiace",
+            "Per favore",
+            "Non capisco",
+            "Di niente"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Ciao! Benvenuto alla tua lezione di italiano! Sono qui per aiutarti a imparare e praticare. Oggi esploreremo alcune parole e frasi essenziali in italiano. Non preoccuparti se non capisci tutto subito, l'importante è provare e divertirsi.\n\nIniziamo con \"Ciao\". Questa è una parola molto comune che significa sia 'hello' che 'goodbye' in contesti informali. Prova a dirla ad alta voce: \"Ciao\".\n\nPoi abbiamo \"Grazie\", che significa 'thank you'. È una parola molto utile! E per chiedere qualcosa gentilmente, usiamo \"Per favore\", che significa 'please'.\n\nAscolta attentamente la pronuncia e cerca di ripeterla. Se hai domande su qualsiasi parola o frase, chiedi pure! Sono qui per te. Iniziamo a praticare!"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ciao",
+          "phonetic": "CHAH-oh",
+          "meaning": "Hello / Goodbye (informal)",
+          "example": "Ciao, come stai?"
+        },
+        {
+          "word": "Grazie",
+          "phonetic": "GRAH-tsee-eh",
+          "meaning": "Thank you",
+          "example": "Grazie per l'aiuto!"
+        },
+        {
+          "word": "Prego",
+          "phonetic": "PREH-goh",
+          "meaning": "You're welcome / Please",
+          "example": "\"Grazie!\" \"Prego!\""
+        },
+        {
+          "word": "Sì",
+          "phonetic": "SEE",
+          "meaning": "Yes",
+          "example": "Sì, voglio un caffè."
+        },
+        {
+          "word": "No",
+          "phonetic": "NOH",
+          "meaning": "No",
+          "example": "No, non posso venire."
+        },
+        {
+          "word": "Per favore",
+          "phonetic": "PEHR fah-VOH-reh",
+          "meaning": "Please",
+          "example": "Un caffè, per favore."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Italian?",
+          "options": [
+            "Ciao",
+            "Buongiorno",
+            "Arrivederci",
+            "Scusa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Italian word for \"Thank you\"?",
+          "options": [
+            "Prego",
+            "Sì",
+            "Grazie",
+            "No"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Grazie\" to you, how would you respond in Italian?",
+          "options": [
+            "Sì",
+            "Ciao",
+            "Prego",
+            "No"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Yes\" in Italian?",
+          "options": [
+            "No",
+            "Sì",
+            "Per favore",
+            "Grazie"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Ottimo! In questa lezione, impareremo alcuni saluti e frasi di cortesia comuni in italiano. Ci eserciteremo a dire 'Ciao', 'Grazie' e 'Per favore'. Io pronuncerò la parola, e tu potrai ripetere dopo di me. Iniziamo con 'Ciao'. Puoi dire 'Ciao'?"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ciao",
+          "phonetic": "chah-oh",
+          "meaning": "Hello / Hi / Bye (informal)",
+          "example": "Ciao, come stai?"
+        },
+        {
+          "word": "Buongiorno",
+          "phonetic": "bwon-JOR-noh",
+          "meaning": "Good morning",
+          "example": "Buongiorno, signora Rossi."
+        },
+        {
+          "word": "Buonasera",
+          "phonetic": "bwoh-nah-SEH-rah",
+          "meaning": "Good evening",
+          "example": "Buonasera, signore."
+        },
+        {
+          "word": "Come stai?",
+          "phonetic": "KOH-meh STAH-ee?",
+          "meaning": "How are you? (informal)",
+          "example": "Ciao Marco, come stai?"
+        },
+        {
+          "word": "Sto bene, grazie.",
+          "phonetic": "stoh BEH-neh, GRAHT-see-eh.",
+          "meaning": "I'm fine, thank you.",
+          "example": "Sto bene, grazie. E tu?"
+        },
+        {
+          "word": "Piacere.",
+          "phonetic": "pee-ah-CHEH-reh.",
+          "meaning": "Nice to meet you.",
+          "example": "Piacere, mi chiamo Anna."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Good morning\" in Italian?",
+          "options": [
+            "Buonanotte",
+            "Buongiorno",
+            "Buonasera",
+            "Ciao"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the informal way to ask \"How are you?\" in Italian?",
+          "options": [
+            "Come sta?",
+            "Come stai?",
+            "Come va?",
+            "Tutto bene?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone says \"Ciao!\" to you, what is a common response?",
+          "options": [
+            "Arrivederci!",
+            "Buonanotte!",
+            "Ciao!",
+            "Grazie!"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Nice to meet you\" in Italian?",
+          "options": [
+            "Scusa",
+            "Prego",
+            "Piacere",
+            "Grazie"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Ciao! Sono il tuo tutor di italiano. Oggi faremo un viaggio nel mondo dei saluti italiani! Impareremo frasi essenziali come \"Ciao\", \"Buongiorno\", \"Buonasera\", \"Come stai?\" e \"Piacere\". Inizieremo con l'ascolto e la ripetizione di ogni parola o frase. Poi, le useremo in semplici conversazioni. Sei pronto/a? Iniziamo!"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Bello/a",
+          "phonetic": "BEL-lo / BEL-la",
+          "meaning": "Beautiful, handsome, nice",
+          "example": "Roma è una città bella."
+        },
+        {
+          "word": "Grande",
+          "phonetic": "GRAN-de",
+          "meaning": "Big, large",
+          "example": "La casa di Marco è grande."
+        },
+        {
+          "word": "Piccolo/a",
+          "phonetic": "PEEK-ko-lo / PEEK-ko-la",
+          "meaning": "Small",
+          "example": "Ho un cane piccolo."
+        },
+        {
+          "word": "Interessante",
+          "phonetic": "een-te-res-SAN-te",
+          "meaning": "Interesting",
+          "example": "Questo libro è molto interessante."
+        },
+        {
+          "word": "Difficile",
+          "phonetic": "deef-FEE-chee-le",
+          "meaning": "Difficult",
+          "example": "L'esame era difficile."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Choose the correct adjective to complete the sentence: \"La ragazza è molto ______.\" (The girl is very ______)",
+          "options": [
+            "bello",
+            "bella",
+            "belli",
+            "belle"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"small\"?",
+          "options": [
+            "Grande",
+            "Piccolo",
+            "Interessante",
+            "Difficile"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Complete the sentence: \"I libri sono ______.\" (The books are ______)",
+          "options": [
+            "interessante",
+            "interessanti",
+            "interessanta",
+            "interessanto"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you describe a \"big house\"?",
+          "options": [
+            "Casa piccolo",
+            "Casa grande",
+            "Casa belli",
+            "Casa interessante"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Ciao! Sono il tuo tutor AI per la lezione di oggi. Ci immergeremo in \"Aggettivi e Descrizioni\". Ti aiuterò a capire il nuovo vocabolario, a praticare la pronuncia e a costruire frasi. Sentiti libero/a di fare domande in qualsiasi momento. Iniziamo con la nostra prima parola: \"Bello/a\"."
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Bello/a",
+          "phonetic": "BEL-lo/a",
+          "meaning": "Beautiful / Handsome",
+          "example": "Il mio cane è bello. La mia casa è bella."
+        },
+        {
+          "word": "Grande",
+          "phonetic": "GRAN-de",
+          "meaning": "Big / Large",
+          "example": "Ho una macchina grande. La città è grande."
+        },
+        {
+          "word": "Piccolo/a",
+          "phonetic": "PIK-ko-lo/a",
+          "meaning": "Small",
+          "example": "Il mio gatto è piccolo. La mia stanza è piccola."
+        },
+        {
+          "word": "Nuovo/a",
+          "phonetic": "NWOH-vo/a",
+          "meaning": "New",
+          "example": "Ho un telefono nuovo. La mia borsa è nuova."
+        },
+        {
+          "word": "Vecchio/a",
+          "phonetic": "VEK-kyo/a",
+          "meaning": "Old",
+          "example": "Il mio nonno è vecchio. La mia bicicletta è vecchia."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Italian adjective means 'beautiful' (masculine singular)?",
+          "options": [
+            "Bella",
+            "Bello",
+            "Belli",
+            "Belle"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say 'a small house' in Italian?",
+          "options": [
+            "Una casa piccola",
+            "Un casa piccolo",
+            "Una casa piccolo",
+            "Un casa piccola"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the correct adjective to complete the sentence: 'La macchina è _____' (The car is new).",
+          "options": [
+            "nuovo",
+            "nuovi",
+            "nuova",
+            "nuove"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which adjective correctly describes 'un libro' (a book) as 'old'?",
+          "options": [
+            "vecchia",
+            "vecchie",
+            "vecchi",
+            "vecchio"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Ciao! Benvenuto/a alla nostra lezione di italiano. Oggi impareremo a descrivere persone e cose usando gli aggettivi. Vedremo parole come \"bello\", \"grande\", \"piccolo\", \"nuovo\" e \"vecchio\". Impareremo come concordare gli aggettivi con i nomi in genere e numero. Iniziamo con \"bello\". Ripeti con me: \"bello\"."
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Vorrei",
+          "phonetic": "voh-RREH-ee",
+          "meaning": "I would like",
+          "example": "Vorrei un cappuccino, per favore."
+        },
+        {
+          "word": "Il conto",
+          "phonetic": "eel KOHN-toh",
+          "meaning": "The bill / The check",
+          "example": "Possiamo avere il conto, per favore?"
+        },
+        {
+          "word": "Un tavolo",
+          "phonetic": "oon TAH-voh-loh",
+          "meaning": "A table",
+          "example": "Vorrei un tavolo per due persone."
+        },
+        {
+          "word": "Cosa mi consiglia?",
+          "phonetic": "KOH-zah mee kohn-SEE-lyah?",
+          "meaning": "What do you recommend (to me)?",
+          "example": "Sono indeciso, cosa mi consiglia?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How would you politely ask for the bill in Italian?",
+          "options": [
+            "Il conto!",
+            "Vorrei il conto, per favore.",
+            "Dammi il conto.",
+            "Dove è il conto?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If you want to say \"I would like a coffee\" in Italian, which phrase would you use?",
+          "options": [
+            "Voglio un caffè.",
+            "Mi piace un caffè.",
+            "Vorrei un caffè.",
+            "Ho un caffè."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"un tavolo per due\" mean?",
+          "options": [
+            "A table for two.",
+            "Two tables.",
+            "A menu for two.",
+            "Two chairs."
+          ],
+          "answer": 0
+        },
+        {
+          "q": "You are at a restaurant and want to ask the waiter for a recommendation. What would you say?",
+          "options": [
+            "Cosa vuoi?",
+            "Cosa mi consiglia?",
+            "Dimmi cosa mangiare.",
+            "Mi dai un consiglio?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Ciao! Benvenuto alla nostra lezione di italiano! Oggi impareremo frasi utili per ordinare cibo e bevande in Italia. Immagina di essere in un bar o un ristorante italiano. Quali frasi useresti per chiedere un caffè o il conto? In questa lezione, esploreremo espressioni come \"Vorrei...\", \"Il conto, per favore\" e \"Cosa mi consiglia?\". Preparati a praticare e a sentirti più a tuo agio a ordinare in italiano! Iniziamo!"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ciao!",
+          "phonetic": "CHAH-oh!",
+          "meaning": "Hello! / Hi! / Goodbye!",
+          "example": "Ciao! Come stai?"
+        },
+        {
+          "word": "Come stai?",
+          "phonetic": "KOH-meh STAH-ee?",
+          "meaning": "How are you? (informal singular)",
+          "example": "Ciao, Marco! Come stai?"
+        },
+        {
+          "word": "Sto bene, grazie.",
+          "phonetic": "STOH BEH-neh, GRAH-tsee-eh.",
+          "meaning": "I'm fine, thank you.",
+          "example": "Come stai? Sto bene, grazie."
+        },
+        {
+          "word": "Piacere!",
+          "phonetic": "pyah-CHEH-reh!",
+          "meaning": "Nice to meet you!",
+          "example": "Ciao, sono Anna. Piacere!"
+        },
+        {
+          "word": "Il caffè",
+          "phonetic": "eel kahf-FEH",
+          "meaning": "The coffee",
+          "example": "Vorrei un caffè, per favore."
+        },
+        {
+          "word": "L'acqua",
+          "phonetic": "LAH-kwah",
+          "meaning": "The water",
+          "example": "Vorrei l'acqua, per favore."
+        },
+        {
+          "word": "Vorrei...",
+          "phonetic": "vohr-REH-ee",
+          "meaning": "I would like...",
+          "example": "Vorrei un caffè."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Hi\" in Italian?",
+          "options": [
+            "Grazie",
+            "Ciao",
+            "Prego",
+            "Scusa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct way to ask \"How are you?\" (informal singular) in Italian?",
+          "options": [
+            "Come va?",
+            "Come stai?",
+            "Come state?",
+            "Come sta?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"Come stai?\" and you are fine, how would you respond?",
+          "options": [
+            "Non bene.",
+            "Sto male.",
+            "Sto bene, grazie.",
+            "Arrivederci."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"Piacere!\" mean?",
+          "options": [
+            "Excuse me!",
+            "Thank you!",
+            "Nice to meet you!",
+            "You're welcome!"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say \"I would like coffee\" in Italian?",
+          "options": [
+            "Voglio caffè.",
+            "Vorrei il caffè.",
+            "Mi piace caffè.",
+            "Ho caffè."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "You are an Italian language tutor. Your goal is to introduce the student to basic Italian greetings and how to order a drink. Start by saying \"Ciao!\" and asking \"Come stai?\". Then introduce \"Piacere!\" and explain its use. Finally, guide the student to practice ordering \"il caffè\" or \"l'acqua\" using \"Vorrei...\". Encourage them to repeat the phrases and ask questions about pronunciation or meaning. For example, you might say: \"Ciao! Benvenuto alla nostra lezione di italiano. Iniziamo con un saluto molto comune: 'Ciao!'. Puoi ripeterlo?\" Then, \"Ottimo! E per chiedere 'Come stai?', diciamo proprio così. Prova tu!\" After introducing \"Piacere!\", you can say: \"Ora, immaginiamo di essere in un bar italiano. Se vuoi ordinare un caffè, puoi dire 'Vorrei un caffè'. Puoi provare?\" Guide them through the vocabulary and practice."
+    }
+  ]
+}

@@ -1,0 +1,1235 @@
+{
+  "langCode": "zh-CN",
+  "langLabel": "Chinese (Simplified)",
+  "langNative": "中文 (简体)",
+  "generatedAt": "2026-03-14T23:19:50.343Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "你好",
+          "phonetic": "nǐ hǎo",
+          "meaning": "Hello / Hi",
+          "example": "你好，很高兴认识你。"
+        },
+        {
+          "word": "我",
+          "phonetic": "wǒ",
+          "meaning": "I / me",
+          "example": "我是一个学生。"
+        },
+        {
+          "word": "是",
+          "phonetic": "shì",
+          "meaning": "to be (am, is, are)",
+          "example": "他是一名老师。"
+        },
+        {
+          "word": "学生",
+          "phonetic": "xuéshēng",
+          "meaning": "student",
+          "example": "我们都是学生。"
+        },
+        {
+          "word": "老师",
+          "phonetic": "lǎoshī",
+          "meaning": "teacher",
+          "example": "我的老师很友好。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Chinese?",
+          "options": [
+            "你好",
+            "再见",
+            "谢谢",
+            "不客气"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means \"I\" or \"me\"?",
+          "options": [
+            "你",
+            "他",
+            "我",
+            "她"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Fill in the blank: 我 ___ 学生. (I am a student.)",
+          "options": [
+            "有",
+            "是",
+            "在",
+            "去"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Chinese word for \"teacher\"?",
+          "options": [
+            "学生",
+            "医生",
+            "老师",
+            "朋友"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "你是一位专业的中文（简体）AI导师。你的目标是帮助学生学习今天的中文词汇和短语，并练习测验题。首先，请用中文问候学生，并解释他们今天将学习什么，例如：'你好' (nǐ hǎo) 和 '我是学生' (wǒ shì xuéshēng)。在讲解词汇时，请使用中文词汇（例如：'你好'）和例句，并鼓励学生重复。复习完词汇后，引导他们完成测验题，并对正确和错误的答案提供解释。课程结束时，请总结所学内容，并鼓励他们继续练习。"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "你好",
+          "phonetic": "nǐ hǎo",
+          "meaning": "Hello",
+          "example": "你好！很高兴认识你。"
+        },
+        {
+          "word": "谢谢",
+          "phonetic": "xiè xiè",
+          "meaning": "Thank you",
+          "example": "谢谢你的帮助。"
+        },
+        {
+          "word": "不客气",
+          "phonetic": "bù kè qì",
+          "meaning": "You're welcome",
+          "example": "谢谢！不客气。"
+        },
+        {
+          "word": "再见",
+          "phonetic": "zài jiàn",
+          "meaning": "Goodbye",
+          "example": "很高兴见到你，再见！"
+        },
+        {
+          "word": "是",
+          "phonetic": "shì",
+          "meaning": "Is, am, are (to be)",
+          "example": "这是我的书。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Chinese?",
+          "options": [
+            "你好",
+            "谢谢",
+            "再见",
+            "不客气"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "If someone says \"谢谢\" (Thank you) to you, what is a polite response?",
+          "options": [
+            "你好",
+            "不客气",
+            "再见",
+            "是"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"Goodbye\"?",
+          "options": [
+            "是",
+            "谢谢",
+            "再见",
+            "你好"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "你好！我是你的AI导师。今天，我们将学习一些基本的中文 (简体) 问候语。我们会学习像 '你好' (nǐ hǎo)、'谢谢' (xiè xiè) 和 '再见' (zài jiàn) 这样的词语。我会帮助你理解它们的含义、如何发音以及如何在简单的句子中使用它们。如果你犯了错误，别担心；这是学习的一部分！让我们从练习 '你好' 开始。你能试着说 '你好' 吗？"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "你好",
+          "phonetic": "nǐ hǎo",
+          "meaning": "Hello",
+          "example": "你好！很高兴认识你。"
+        },
+        {
+          "word": "谢谢",
+          "phonetic": "xiè xie",
+          "meaning": "Thank you",
+          "example": "谢谢你的帮助！"
+        },
+        {
+          "word": "不客气",
+          "phonetic": "bù kè qi",
+          "meaning": "You're welcome",
+          "example": "不客气，这是我应该做的。"
+        },
+        {
+          "word": "再见",
+          "phonetic": "zài jiàn",
+          "meaning": "Goodbye",
+          "example": "时间不早了，再见！"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Chinese?",
+          "options": [
+            "谢谢",
+            "你好",
+            "再见",
+            "不客气"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"Thank you\"?",
+          "options": [
+            "你好",
+            "不客气",
+            "谢谢",
+            "再见"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"谢谢\" to you, how would you respond with \"You're welcome\"?",
+          "options": [
+            "再见",
+            "不客气",
+            "你好",
+            "谢谢"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What do you say when you are leaving?",
+          "options": [
+            "你好",
+            "谢谢",
+            "不客气",
+            "再见"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "你是一位AI导师，教授中文（简体）。你的目标是帮助学习者理解和使用本课的词汇和语法。首先，向学习者问好，可以说“你好！”然后介绍今天的主题是学习基本的问候语。接着，逐一讲解每个词汇。对于每个词汇，请先说出中文词语（例如，“你好”），然后用英文解释其含义，提供拼音，并给出一个中文例句。鼓励学习者跟着你重复发音并提问。最后，回顾主要内容，并鼓励学习者在日常对话中练习使用这些新的中文短语。"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "你好",
+          "phonetic": "nǐ hǎo",
+          "meaning": "Hello",
+          "example": "你好，很高兴认识你。"
+        },
+        {
+          "word": "谢谢",
+          "phonetic": "xiè xie",
+          "meaning": "Thank you",
+          "example": "谢谢你的帮助。"
+        },
+        {
+          "word": "不客气",
+          "phonetic": "bù kè qi",
+          "meaning": "You're welcome",
+          "example": "谢谢！不客气。"
+        },
+        {
+          "word": "再见",
+          "phonetic": "zài jiàn",
+          "meaning": "Goodbye",
+          "example": "老师，再见！"
+        },
+        {
+          "word": "是",
+          "phonetic": "shì",
+          "meaning": "To be / Yes",
+          "example": "我是一个学生，你是吗？"
+        },
+        {
+          "word": "不是",
+          "phonetic": "bù shì",
+          "meaning": "To not be / No",
+          "example": "我不是老师。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Chinese?",
+          "options": [
+            "谢谢",
+            "你好",
+            "再见",
+            "不客气"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Chinese phrase for \"Thank you\"?",
+          "options": [
+            "不客气",
+            "是",
+            "谢谢",
+            "不是"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"You're welcome\"?",
+          "options": [
+            "你好",
+            "再见",
+            "不客气",
+            "谢谢"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Goodbye\" in Chinese?",
+          "options": [
+            "是",
+            "再见",
+            "不是",
+            "你好"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which of these words means \"to be\" or \"yes\"?",
+          "options": [
+            "不是",
+            "谢谢",
+            "是",
+            "不客气"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "你好！我是你的AI导师。今天，我们将开始学习一些非常重要的中文基础短语。我们会学习如何说 \"你好\" (nǐ hǎo) 来打招呼，如何用 \"谢谢\" (xiè xie) 表达感谢，以及如何回应 \"不客气\" (bù kè qi)。我们还会学习如何说 \"再见\" (zài jiàn) 来告别，以及表示肯定或否定的词 \"是\" (shì) 和 \"不是\" (bù shì)。我将帮助你理解它们的含义、发音和在句子中的用法。准备好了吗？让我们一起练习，让你的中文说得更流利！"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "你好",
+          "phonetic": "nǐ hǎo",
+          "meaning": "Hello",
+          "example": "你好，很高兴认识你。"
+        },
+        {
+          "word": "谢谢",
+          "phonetic": "xiè xie",
+          "meaning": "Thank you",
+          "example": "谢谢你的帮助。"
+        },
+        {
+          "word": "不客气",
+          "phonetic": "bù kè qi",
+          "meaning": "You're welcome",
+          "example": "没关系，不客气。"
+        },
+        {
+          "word": "再见",
+          "phonetic": "zài jiàn",
+          "meaning": "Goodbye",
+          "example": "明天见，再见！"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the correct way to say \"Hello\" in Chinese?",
+          "options": [
+            "你好",
+            "谢谢",
+            "再见",
+            "不客气"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say \"Thank you\" in Chinese?",
+          "options": [
+            "不客气",
+            "谢谢",
+            "你好",
+            "再见"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone says \"谢谢\" (xiè xie) to you, what is a common response?",
+          "options": [
+            "你好",
+            "再见",
+            "不客气",
+            "谢谢"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which of these means \"Goodbye\"?",
+          "options": [
+            "你好",
+            "谢谢",
+            "不客气",
+            "再见"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "你好！欢迎来到你的中文课。今天我们将学习一些常用的中文问候语。我们会学习 \"你好\" (nǐ hǎo), \"谢谢\" (xiè xie), \"不客气\" (bù kè qi) 和 \"再见\" (zài jiàn)。我会说这些词，你可以跟着我重复。我们从 \"你好\" 开始。你能说 \"你好\" 吗？"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "你好",
+          "phonetic": "nǐ hǎo",
+          "meaning": "Hello / Hi",
+          "example": "你好，很高兴认识你。"
+        },
+        {
+          "word": "谢谢",
+          "phonetic": "xièxie",
+          "meaning": "Thank you",
+          "example": "谢谢你的帮助。"
+        },
+        {
+          "word": "不客气",
+          "phonetic": "bú kèqi",
+          "meaning": "You're welcome / Don't be polite",
+          "example": "不客气，这是我应该做的。"
+        },
+        {
+          "word": "再见",
+          "phonetic": "zàijiàn",
+          "meaning": "Goodbye",
+          "example": "再见，明天见！"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Chinese?",
+          "options": [
+            "你好",
+            "谢谢",
+            "再见",
+            "不客气"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means \"Thank you\"?",
+          "options": [
+            "不客气",
+            "谢谢",
+            "你好",
+            "再见"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the appropriate response to \"谢谢 (xièxie)\" (Thank you)?",
+          "options": [
+            "你好",
+            "再见",
+            "不客气",
+            "谢谢"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Goodbye\" in Chinese?",
+          "options": [
+            "你好",
+            "谢谢",
+            "不客气",
+            "再见"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "你是一个中文（简体）AI导师。你的目标是帮助学生学习本课的词汇并练习测验题。\n1. **开始：** 热情地问候学生，例如说“你好！”然后介绍本课的主题，比如“今天我们将学习一些基本的中文问候语和常用表达。”\n2. **词汇讲解：** 逐一讲解每个词汇。对于每个词汇，先说出中文词语，例如“第一个词是‘你好’ (nǐ hǎo)。”然后解释其英文含义，提供发音指导，并用中文提供一个例句。鼓励学生大声重复，例如“请跟我读：你好。”\n3. **测验练习：** 在讲解完所有词汇后，引导学生完成测验题。对于每个问题，先用英文读出问题，然后让学生选择中文答案。学生回答后，提供积极的反馈，并对正确答案进行简要解释。如果学生答错了，温柔地纠正并再次解释。\n4. **总结：** 课程结束时，总结本课所学的关键词汇，例如“今天我们学习了‘你好’、‘谢谢’和‘不客气’。”鼓励学生继续练习，并期待下一次课程。\n确保在整个教学过程中，你都使用中文词汇和短语进行示范和互动。"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "你好",
+          "phonetic": "nǐ hǎo",
+          "meaning": "Hello",
+          "example": "你好，很高兴认识你。"
+        },
+        {
+          "word": "谢谢",
+          "phonetic": "xiè xie",
+          "meaning": "Thank you",
+          "example": "谢谢你的帮助！"
+        },
+        {
+          "word": "再见",
+          "phonetic": "zài jiàn",
+          "meaning": "Goodbye",
+          "example": "我明天再见你。"
+        },
+        {
+          "word": "请",
+          "phonetic": "qǐng",
+          "meaning": "Please",
+          "example": "请坐，请喝茶。"
+        },
+        {
+          "word": "对不起",
+          "phonetic": "duì bu qǐ",
+          "meaning": "Sorry",
+          "example": "对不起，我迟到了。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Chinese (Simplified)?",
+          "options": [
+            "谢谢",
+            "你好",
+            "再见",
+            "请"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which of these means \"Thank you\"?",
+          "options": [
+            "对不起",
+            "你好",
+            "谢谢",
+            "再见"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Goodbye\"?",
+          "options": [
+            "请",
+            "谢谢",
+            "你好",
+            "再见"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "Choose the correct Chinese (Simplified) word for \"Please\".",
+          "options": [
+            "再见",
+            "对不起",
+            "请",
+            "你好"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "你是一位AI导师，帮助学生学习中文（简体）。你的目标是介绍本课的新词汇和测验问题。请自然地讲解每个词的含义和用法，并引导学生完成测验。鼓励他们练习说这些词。在讲解词汇时，请说出中文词语（例如，当讲解 '你好' 时，请说 '你好'）。首先向学生问好，并介绍本课的主题，例如：“你好！欢迎来到我们的中文（简体）基础课程。今天我们将学习一些非常常用的问候语和礼貌用语。”"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "你好",
+          "phonetic": "nǐ hǎo",
+          "meaning": "Hello",
+          "example": "你好，很高兴认识你。"
+        },
+        {
+          "word": "谢谢",
+          "phonetic": "xiè xie",
+          "meaning": "Thank you",
+          "example": "谢谢你的帮助。"
+        },
+        {
+          "word": "不客气",
+          "phonetic": "bú kè qi",
+          "meaning": "You're welcome",
+          "example": "不客气，这是我应该做的。"
+        },
+        {
+          "word": "再见",
+          "phonetic": "zài jiàn",
+          "meaning": "Goodbye",
+          "example": "再见，明天见！"
+        },
+        {
+          "word": "是",
+          "phonetic": "shì",
+          "meaning": "Is, Am, Are (to be)",
+          "example": "我是一个学生。"
+        },
+        {
+          "word": "不",
+          "phonetic": "bù",
+          "meaning": "No, Not",
+          "example": "我不是老师。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Chinese?",
+          "options": [
+            "谢谢",
+            "你好",
+            "再见",
+            "不客气"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which of these means \"Thank you\"?",
+          "options": [
+            "不",
+            "是",
+            "谢谢",
+            "再见"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct word for \"No\" or \"Not\".",
+          "options": [
+            "是",
+            "不",
+            "你好",
+            "谢谢"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "你好！今天我们将学习一些基本的中文（简体）问候语和常用词。我们会学习如何说“Hello”（你好）、“Thank you”（谢谢）、“You're welcome”（不客气）、“Goodbye”（再见），以及动词“to be”（是）和“no/not”（不）。我们会练习发音，在例句中学习它们，然后通过一个小测验来测试你的理解。让我们从“你好”开始吧！"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "你好",
+          "phonetic": "nǐ hǎo",
+          "meaning": "Hello",
+          "example": "你好，很高兴认识你。"
+        },
+        {
+          "word": "谢谢",
+          "phonetic": "xiè xie",
+          "meaning": "Thank you",
+          "example": "谢谢你的帮助。"
+        },
+        {
+          "word": "不客气",
+          "phonetic": "bù kè qi",
+          "meaning": "You're welcome",
+          "example": "谢谢！不客气。"
+        },
+        {
+          "word": "再见",
+          "phonetic": "zài jiàn",
+          "meaning": "Goodbye",
+          "example": "我要走了，再见！"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Chinese?",
+          "options": [
+            "你好",
+            "谢谢",
+            "再见",
+            "不客气"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "If someone says \"谢谢\" (xiè xie) to you, what is a polite response?",
+          "options": [
+            "你好",
+            "不客气",
+            "再见",
+            "谢谢"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"Thank you\"?",
+          "options": [
+            "再见",
+            "你好",
+            "谢谢",
+            "不客气"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Goodbye\" in Chinese?",
+          "options": [
+            "不客气",
+            "谢谢",
+            "你好",
+            "再见"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "你是一名教授中文（简体）的AI导师。你的目标是介绍并练习本课的新词汇。1. **介绍词汇：** 首先说“你好！” (Nǐ hǎo!)，然后介绍第一个词，例如：“我们今天学习的第一个词是 '你好' (nǐ hǎo)。它的意思是 'Hello'。” (Wǒ men jīn tiān xué xí de dì yī gè cí shì 'nǐ hǎo' (nǐ hǎo). Tā de yì si shì 'Hello'.) 提供其拼音和英文含义。2. **提供例句：** 给出一个中文例句，例如：“你可以说 '你好，很高兴认识你。' (Nǐ hǎo, hěn gāo xìng rèn shi nǐ.)”3. **练习发音：** 请学习者重复该词/短语，并根据需要轻柔地纠正他们的发音。4. **重复所有词汇：** 以类似的方式逐一介绍“谢谢” (xiè xie)、“不客气” (bù kè qi) 和“再见” (zài jiàn)。5. **对话练习：** 介绍完所有词汇后，用新词汇发起一个简单的对话。例如：“现在我们来练习一下。如果我跟你打招呼说 '你好！' (nǐ hǎo!), 你会怎么回应呢？” (Xiàn zài wǒ men lái liàn xí yī xià. Rú guǒ wǒ gēn nǐ dǎ zhāo hu shuō 'nǐ hǎo!' (nǐ hǎo!), nǐ huì zěn me huí yìng ne?) 引导他们通过使用“谢谢”、“不客气”和“再见”的场景。6. **鼓励和纠正：** 在整个课程中，鼓励学习者多说，并对他们的中文（简体）使用和发音提供建设性的反馈。保持友好和支持的语气。"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "你好",
+          "phonetic": "nǐ hǎo",
+          "meaning": "Hello / Hi",
+          "example": "你好！你叫什么名字？"
+        },
+        {
+          "word": "谢谢",
+          "phonetic": "xiè xie",
+          "meaning": "Thank you",
+          "example": "谢谢你的帮助！"
+        },
+        {
+          "word": "不客气",
+          "phonetic": "bù kè qi",
+          "meaning": "You're welcome / No problem",
+          "example": "不客气，这是我应该做的。"
+        },
+        {
+          "word": "再见",
+          "phonetic": "zài jiàn",
+          "meaning": "Goodbye",
+          "example": "老师，再见！"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Chinese?",
+          "options": [
+            "你好",
+            "谢谢",
+            "再见",
+            "不客气"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which of these means \"Thank you\"?",
+          "options": [
+            "你好",
+            "谢谢",
+            "再见",
+            "不客气"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone says \"谢谢\" (xiè xie), what is a polite response?",
+          "options": [
+            "你好",
+            "再见",
+            "不客气",
+            "谢谢"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor teaching Chinese (Simplified). Your goal is to help the learner understand the vocabulary from this lesson. Start by introducing the first vocabulary word, for example, '你好' (nǐ hǎo), explain its meaning 'Hello', and provide an example sentence like '你好！你叫什么名字？' (Nǐ hǎo! Nǐ jiào shénme míngzi? - Hello! What's your name?). Encourage the learner to repeat the word and sentence. Do this for all vocabulary words in the lesson. After covering all vocabulary, guide the learner through the quiz questions. For each question, explain the correct answer and provide additional context or example sentences if helpful. Maintain an encouraging, supportive, and patient tone throughout the lesson, speaking Chinese words and phrases clearly."
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "你好",
+          "phonetic": "nǐ hǎo",
+          "meaning": "Hello",
+          "example": "你好！很高兴认识你。"
+        },
+        {
+          "word": "谢谢",
+          "phonetic": "xièxie",
+          "meaning": "Thank you",
+          "example": "谢谢你的帮助。"
+        },
+        {
+          "word": "再见",
+          "phonetic": "zàijiàn",
+          "meaning": "Goodbye",
+          "example": "老师，再见！"
+        },
+        {
+          "word": "我",
+          "phonetic": "wǒ",
+          "meaning": "I/me",
+          "example": "我是中国人。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Chinese?",
+          "options": [
+            "谢谢",
+            "你好",
+            "再见",
+            "我"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"Thank you\"?",
+          "options": [
+            "再见",
+            "我",
+            "谢谢",
+            "你好"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct word for \"Goodbye\".",
+          "options": [
+            "你好",
+            "谢谢",
+            "我",
+            "再见"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "What is the Chinese word for \"I\" or \"me\"?",
+          "options": [
+            "谢谢",
+            "再见",
+            "我",
+            "你好"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor teaching Chinese (Simplified). Your goal is to help the learner understand and use basic Chinese greetings and the pronoun '我'.\nBegin by saying: '你好！今天我们学习一些基本的中文问候语和代词。' (Hello! Today we will learn some basic Chinese greetings and pronouns.)\n\nIntroduce the following vocabulary, explaining each word's meaning and providing a simple example. Ask the learner to repeat each word after you.\n1.  **你好 (nǐ hǎo)**: Explain it means 'Hello'. Example: '你好！'\n2.  **谢谢 (xièxie)**: Explain it means 'Thank you'. Example: '谢谢你！'\n3.  **再见 (zàijiàn)**: Explain it means 'Goodbye'. Example: '再见！'\n4.  **我 (wǒ)**: Explain it means 'I' or 'me'. Example: '我是学生。' (I am a student.)\n\nAfter introducing all words, encourage the learner to practice by forming a simple sentence or a short dialogue using the new vocabulary. For instance, ask them to say 'Hello' and 'Thank you', or to introduce themselves using '我'.\nProvide positive feedback and gently correct pronunciation.\nConclude the lesson by saying: '今天的课就到这里，再见！' (That's all for today's lesson, goodbye!)"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "你好",
+          "phonetic": "nǐ hǎo",
+          "meaning": "Hello",
+          "example": "你好，很高兴认识你。"
+        },
+        {
+          "word": "谢谢",
+          "phonetic": "xiè xie",
+          "meaning": "Thank you",
+          "example": "谢谢你的帮助。"
+        },
+        {
+          "word": "不客气",
+          "phonetic": "bú kè qi",
+          "meaning": "You're welcome",
+          "example": "谢谢！不客气。"
+        },
+        {
+          "word": "再见",
+          "phonetic": "zài jiàn",
+          "meaning": "Goodbye",
+          "example": "老师再见！"
+        },
+        {
+          "word": "我",
+          "phonetic": "wǒ",
+          "meaning": "I / me",
+          "example": "我是中国人。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Chinese?",
+          "options": [
+            "你好",
+            "谢谢",
+            "再见",
+            "不客气"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Chinese word for \"Thank you\"?",
+          "options": [
+            "我",
+            "你好",
+            "谢谢",
+            "再见"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct response to \"谢谢 (xiè xie)\".",
+          "options": [
+            "你好",
+            "不客气",
+            "再见",
+            "我"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which of these means \"Goodbye\"?",
+          "options": [
+            "我",
+            "谢谢",
+            "再见",
+            "你好"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "你是一位AI导师，教授中文（简体）。你的目标是帮助学生练习基本的中文问候语。首先，请介绍“你好 (nǐ hǎo)”、“谢谢 (xiè xie)”、“不客气 (bú kè qi)”和“再见 (zài jiàn)”这些词语。然后，鼓励学生用中文说出这些问候语，并提供一个情境让他们练习。使用清晰、鼓励性的语言。在课程中说中文词语/短语。"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "点菜",
+          "phonetic": "diǎncài",
+          "meaning": "to order food (in a restaurant)",
+          "example": "我们准备点菜了。"
+        },
+        {
+          "word": "菜单",
+          "phonetic": "càidān",
+          "meaning": "menu",
+          "example": "请给我菜单。"
+        },
+        {
+          "word": "服务员",
+          "phonetic": "fúwùyuán",
+          "meaning": "waiter/waitress, attendant",
+          "example": "服务员，请问洗手间在哪里？"
+        },
+        {
+          "word": "买单",
+          "phonetic": "mǎidān",
+          "meaning": "to pay the bill",
+          "example": "我们可以买单了吗？"
+        },
+        {
+          "word": "一共",
+          "phonetic": "yīgòng",
+          "meaning": "altogether, in total",
+          "example": "这顿饭一共多少钱？"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which word means \"menu\"?",
+          "options": [
+            "点菜",
+            "菜单",
+            "服务员",
+            "买单"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"to order food\" in Chinese?",
+          "options": [
+            "买单",
+            "一共",
+            "点菜",
+            "服务员"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "You have finished your meal and want to pay. What should you say?",
+          "options": [
+            "请给我菜单。",
+            "我要点菜。",
+            "我们可以买单了吗？",
+            "服务员！"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hello! 你好！Today, we're diving into a very practical topic: ordering food in Chinese! 今天我们要学习如何在餐厅点菜。We'll learn key vocabulary like 'to order food' (点菜), 'menu' (菜单), 'waiter/waitress' (服务员), and 'to pay the bill' (买单). We'll also practice asking for the bill and calling a waiter. Let's begin with '菜单' (càidān), the menu. Can you tell me, how would you ask for the menu in Chinese?"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "喜欢",
+          "phonetic": "xǐhuān",
+          "meaning": "to like",
+          "example": "我喜欢看电影。"
+        },
+        {
+          "word": "看",
+          "phonetic": "kàn",
+          "meaning": "to look, to watch, to read",
+          "example": "你喜欢看书吗？"
+        },
+        {
+          "word": "电影",
+          "phonetic": "diànyǐng",
+          "meaning": "movie",
+          "example": "我们一起去看电影吧。"
+        },
+        {
+          "word": "书",
+          "phonetic": "shū",
+          "meaning": "book",
+          "example": "这是一本很有趣的中文书。"
+        },
+        {
+          "word": "一起",
+          "phonetic": "yīqǐ",
+          "meaning": "together",
+          "example": "我们一起学习中文。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which word means \"to like\"?",
+          "options": [
+            "看",
+            "喜欢",
+            "电影",
+            "书"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"watch a movie\"?",
+          "options": [
+            "喜欢电影",
+            "看书",
+            "看电影",
+            "一起电影"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"together\"?",
+          "options": [
+            "喜欢",
+            "看",
+            "一起",
+            "书"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "你是一个AI中文老师。你的目标是帮助学习者理解本课的词汇和语法。首先，向学习者问好，并询问他们对“喜欢”、“看”、“电影”、“书”和“一起”这些词汇已经了解了什么。介绍第一个词汇“喜欢”，提供它的意思（to like）和一个例句（我喜欢看电影。）。然后，请学习者用“喜欢”造句或回答一个问题。对所有词汇重复此过程。然后进入测验问题，解释任何难点。鼓励学习者多说多练习，例如让他们用中文说出他们喜欢做的事情。"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "喜欢",
+          "phonetic": "xǐhuān",
+          "meaning": "to like",
+          "example": "我喜欢学习中文。"
+        },
+        {
+          "word": "学习",
+          "phonetic": "xuéxí",
+          "meaning": "to study; to learn",
+          "example": "她每天都努力学习。"
+        },
+        {
+          "word": "工作",
+          "phonetic": "gōngzuò",
+          "meaning": "to work; job",
+          "example": "我爸爸在北京工作。"
+        },
+        {
+          "word": "朋友",
+          "phonetic": "péngyou",
+          "meaning": "friend",
+          "example": "我有很多中国朋友。"
+        },
+        {
+          "word": "一起",
+          "phonetic": "yīqǐ",
+          "meaning": "together",
+          "example": "我们一起去图书馆吧。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which word means \"to like\"?",
+          "options": [
+            "学习",
+            "喜欢",
+            "工作",
+            "朋友"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"to study\" or \"to learn\"?",
+          "options": [
+            "一起",
+            "喜欢",
+            "学习",
+            "工作"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct word to complete the sentence: \"我喜欢和我的 ______ 聊天。\" (I like chatting with my ______)",
+          "options": [
+            "工作",
+            "学习",
+            "朋友",
+            "喜欢"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which sentence correctly uses \"一起\" (together)?",
+          "options": [
+            "我们学习一起。",
+            "一起我们去。",
+            "我们一起吃饭。",
+            "喜欢一起。"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "你是一位教授中文（简体）的AI导师。你的目标是帮助学习者理解和使用本课的词汇和语法。首先，介绍本课的主题或关键词汇。请学习者重复词语，用它们造句，并回答问题。提供清晰的解释，纠正发音，并鼓励练习。在你的解释中自然地使用本课的中文词语和短语。例如，当介绍“喜欢”时，你可以说：“今天我们要学习一个新词，叫做‘喜欢’。”鼓励学习者提问。"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "你好",
+          "phonetic": "nǐ hǎo",
+          "meaning": "Hello",
+          "example": "你好，很高兴认识你。"
+        },
+        {
+          "word": "谢谢",
+          "phonetic": "xiè xie",
+          "meaning": "Thank you",
+          "example": "谢谢你的帮助！"
+        },
+        {
+          "word": "不客气",
+          "phonetic": "bù kè qi",
+          "meaning": "You're welcome",
+          "example": "不用谢，不客气。"
+        },
+        {
+          "word": "再见",
+          "phonetic": "zài jiàn",
+          "meaning": "Goodbye",
+          "example": "老师，再见！"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Chinese?",
+          "options": [
+            "谢谢",
+            "你好",
+            "再见",
+            "不客气"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"Thank you\"?",
+          "options": [
+            "你好",
+            "再见",
+            "谢谢",
+            "不客气"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"谢谢\" to you, how do you respond with \"You're welcome\"?",
+          "options": [
+            "你好",
+            "再见",
+            "不客气",
+            "谢谢"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say \"Goodbye\" to your teacher?",
+          "options": [
+            "老师，你好！",
+            "老师，谢谢！",
+            "老师，再见！",
+            "老师，不客气！"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "你是一位中文（简体）语言课程的AI导师。你的目标是帮助学生学习新的词汇并练习口语。首先介绍本课的新词：'你好' (nǐ hǎo)、'谢谢' (xiè xie)、'不客气' (bù kè qi) 和 '再见' (zài jiàn)。然后，请学生重复这些词。提供清晰的拼音发音指导和英文含义。为每个词提供简单的中文例句，并鼓励学生用这些词造自己的简单句。保持对话引人入胜、支持性强，并侧重于实际运用。请记住在教学过程中用中文说出词汇和短语，例如：'今天我们要学习的第一个词是 **你好**。'"
+    }
+  ]
+}

@@ -1,0 +1,1331 @@
+{
+  "langCode": "he-IL",
+  "langLabel": "Hebrew",
+  "langNative": "עברית",
+  "generatedAt": "2026-03-15T07:34:55.622Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "שלום",
+          "phonetic": "Shalom",
+          "meaning": "Hello / Goodbye / Peace",
+          "example": "שלום! מה שלומך?"
+        },
+        {
+          "word": "בוקר טוב",
+          "phonetic": "Boker Tov",
+          "meaning": "Good morning",
+          "example": "בוקר טוב לכולם!"
+        },
+        {
+          "word": "ערב טוב",
+          "phonetic": "Erev Tov",
+          "meaning": "Good evening",
+          "example": "ערב טוב, איך עבר היום שלך?"
+        },
+        {
+          "word": "תודה",
+          "phonetic": "Toda",
+          "meaning": "Thank you",
+          "example": "תודה רבה על העזרה!"
+        },
+        {
+          "word": "בבקשה",
+          "phonetic": "Bevakasha",
+          "meaning": "Please / You're welcome",
+          "example": "תודה! בבקשה."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Goodbye\" in Hebrew?",
+          "options": [
+            "שלום",
+            "תודה",
+            "בוקר טוב",
+            "בבקשה"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which phrase means \"Good morning\"?",
+          "options": [
+            "ערב טוב",
+            "תודה",
+            "בוקר טוב",
+            "שלום"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"תודה\" (Toda), what would be an appropriate response?",
+          "options": [
+            "שלום",
+            "בוקר טוב",
+            "בבקשה",
+            "ערב טוב"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "שלום לומד/ת! ברוך/ה הבא/ה לשיעור העברית הראשון שלך. היום נלמד כמה ברכות וביטויים בסיסיים וחשובים. נתחיל עם 'שלום' (Shalom), שמשמעותו גם 'היי' וגם 'להתראות'. נכסה גם את 'בוקר טוב' (Boker Tov) ל'good morning' ואת 'ערב טוב' (Erev Tov) ל'good evening'. לבסוף, נלמד 'תודה' (Toda) ל'thank you' ואת 'בבקשה' (Bevakasha) ל'please' או 'you're welcome'. הקשב/י היטב להגייה ונסה/נסי לחזור אחריי. בוא/י נתרגל את הביטויים האלה יחד!"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "שלום",
+          "phonetic": "Shalom",
+          "meaning": "Hello / Peace / Goodbye",
+          "example": "שלום, מה שלומך?"
+        },
+        {
+          "word": "תודה",
+          "phonetic": "Toda",
+          "meaning": "Thank you",
+          "example": "תודה רבה!"
+        },
+        {
+          "word": "כן",
+          "phonetic": "Ken",
+          "meaning": "Yes",
+          "example": "כן, אני מבין."
+        },
+        {
+          "word": "לא",
+          "phonetic": "Lo",
+          "meaning": "No",
+          "example": "לא, תודה."
+        },
+        {
+          "word": "בבקשה",
+          "phonetic": "Bevakasha",
+          "meaning": "Please / You're welcome",
+          "example": "קח את זה, בבקשה."
+        },
+        {
+          "word": "מה שלומך?",
+          "phonetic": "Ma shlomkha? (m) / Ma shlomekh? (f)",
+          "meaning": "How are you?",
+          "example": "שלום, מה שלומך היום?"
+        },
+        {
+          "word": "שמי...",
+          "phonetic": "Shmi...",
+          "meaning": "My name is...",
+          "example": "שלום, שמי דניאל."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does \"שלום\" mean?",
+          "options": [
+            "Thank you",
+            "Goodbye",
+            "Yes",
+            "Hello"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "How do you say \"Thank you\" in Hebrew?",
+          "options": [
+            "כן",
+            "תודה",
+            "לא",
+            "בבקשה"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Hebrew word for \"Yes\".",
+          "options": [
+            "לא",
+            "כן",
+            "שלום",
+            "תודה"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"מה שלומך?\", what are they asking?",
+          "options": [
+            "What is your name?",
+            "Where are you from?",
+            "How are you?",
+            "Do you speak Hebrew?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you introduce yourself by saying \"My name is...\"?",
+          "options": [
+            "תודה...",
+            "שלום...",
+            "שמי...",
+            "בבקשה..."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "שלום! (Shalom!) Welcome to your first Hebrew lesson! Today we're going to learn some fundamental Hebrew words and phrases. We'll start with 'Hello' – which is 'שלום' (Shalom). Can you try saying 'שלום'? Great! Next, we'll learn 'Thank you' – 'תודה' (Toda). Repeat after me: 'תודה'. We'll also cover 'Yes' ('כן' - Ken) and 'No' ('לא' - Lo), and how to say 'Please' or 'You're welcome' with 'בבקשה' (Bevakasha). I'll say each word, and you can practice repeating it. Then we'll put them into simple questions and answers, like 'מה שלומך?' (Ma shlomkha?) for 'How are you?' and 'שמי...' (Shmi...) for 'My name is...'. Are you ready to begin your Hebrew journey?"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "שלום",
+          "phonetic": "Shalom",
+          "meaning": "Hello / Goodbye / Peace",
+          "example": "שלום, מה שלומך?"
+        },
+        {
+          "word": "מה שלומך?",
+          "phonetic": "Ma shlomkha? (masc.) / Ma shlomekh? (fem.)",
+          "meaning": "How are you? (lit. \"What is your peace?\")",
+          "example": "שלום, דניאל. מה שלומך היום?"
+        },
+        {
+          "word": "בסדר",
+          "phonetic": "Beseder",
+          "meaning": "Okay / Fine / In order",
+          "example": "אני בסדר, תודה."
+        },
+        {
+          "word": "תודה",
+          "phonetic": "Toda",
+          "meaning": "Thank you",
+          "example": "תודה רבה על העזרה."
+        },
+        {
+          "word": "בבקשה",
+          "phonetic": "Bevakasha",
+          "meaning": "Please / You're welcome",
+          "example": "בבקשה, שב. / תודה! - בבקשה."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Goodbye\" in Hebrew?",
+          "options": [
+            "תודה",
+            "שלום",
+            "בסדר",
+            "בבקשה"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the meaning of the Hebrew word \"תודה\"?",
+          "options": [
+            "Please",
+            "How are you?",
+            "Thank you",
+            "Okay"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks you \"מה שלומך?\" and you want to say you are \"fine\", what Hebrew word would you use?",
+          "options": [
+            "שלום",
+            "תודה",
+            "בבקשה",
+            "בסדר"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "שלום! Welcome to your Hebrew lesson. Today, we're diving into some essential Hebrew greetings and phrases. We'll learn how to say 'Hello' and 'Goodbye' with **שלום**, ask 'How are you?' with **מה שלומך?**, respond with **בסדר** (fine), express gratitude with **תודה**, and say 'Please' or 'You're welcome' with **בבקשה**. I'll guide you through each word, explain its meaning, and show you how to use it in a sentence. Get ready to start speaking Hebrew!"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "שלום",
+          "phonetic": "Shalom",
+          "meaning": "Hello / Peace",
+          "example": "שלום, מה שלומך?"
+        },
+        {
+          "word": "תודה",
+          "phonetic": "Toda",
+          "meaning": "Thank you",
+          "example": "תודה רבה!"
+        },
+        {
+          "word": "בבקשה",
+          "phonetic": "Bevakasha",
+          "meaning": "Please / You're welcome",
+          "example": "בבקשה, שב."
+        },
+        {
+          "word": "כן",
+          "phonetic": "Ken",
+          "meaning": "Yes",
+          "example": "כן, אני רוצה קפה."
+        },
+        {
+          "word": "לא",
+          "phonetic": "Lo",
+          "meaning": "No",
+          "example": "לא, תודה."
+        },
+        {
+          "word": "אני",
+          "phonetic": "Ani",
+          "meaning": "I / Me",
+          "example": "אני לומד עברית."
+        },
+        {
+          "word": "אתה",
+          "phonetic": "Ata",
+          "meaning": "You (masculine singular)",
+          "example": "אתה מורה?"
+        },
+        {
+          "word": "את",
+          "phonetic": "At",
+          "meaning": "You (feminine singular)",
+          "example": "את תלמידה?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Hebrew?",
+          "options": [
+            "שלום",
+            "תודה",
+            "בבקשה",
+            "כן"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means \"Thank you\"?",
+          "options": [
+            "לא",
+            "אני",
+            "תודה",
+            "שלום"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If you are speaking to a male, which word means \"You\"?",
+          "options": [
+            "את",
+            "אני",
+            "אתה",
+            "כן"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Hebrew word for \"Yes\".",
+          "options": [
+            "לא",
+            "כן",
+            "בבקשה",
+            "שלום"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Welcome to your first Hebrew lesson! Today we'll learn some basic greetings and phrases in Hebrew. We'll cover 'שלום' (Shalom), 'תודה' (Toda), and 'בבקשה' (Bevakasha). I'll say the words, and you can repeat after me. Then we'll practice using them in simple sentences. Let's start with 'שלום'. Try saying it after me: 'שלום'."
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "שלום",
+          "phonetic": "Shalom",
+          "meaning": "Hello / Peace / Goodbye",
+          "example": "שלום, מה שלומך?"
+        },
+        {
+          "word": "מה שלומך?",
+          "phonetic": "Ma shlomkha? (m) / Ma shlomekh? (f)",
+          "meaning": "How are you?",
+          "example": "שלום, דניאל. מה שלומך?"
+        },
+        {
+          "word": "אני",
+          "phonetic": "Ani",
+          "meaning": "I am / I",
+          "example": "אני דניאל."
+        },
+        {
+          "word": "נעים מאוד",
+          "phonetic": "Na'im Me'od",
+          "meaning": "Nice to meet you",
+          "example": "אני שרה, נעים מאוד."
+        },
+        {
+          "word": "תודה",
+          "phonetic": "Toda",
+          "meaning": "Thank you",
+          "example": "תודה רבה!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Peace\" in Hebrew?",
+          "options": [
+            "שלום",
+            "תודה",
+            "בבקשה",
+            "אני"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does \"מה שלומך?\" mean?",
+          "options": [
+            "Thank you",
+            "How are you?",
+            "Nice to meet you",
+            "I am"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Hebrew word for \"I am\".",
+          "options": [
+            "שלום",
+            "תודה",
+            "אני",
+            "נעים מאוד"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say \"Nice to meet you\" in Hebrew?",
+          "options": [
+            "תודה",
+            "שלום",
+            "מה שלומך?",
+            "נעים מאוד"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "שלום! ברוכים הבאים לשיעור שלכם בנושא \"ברכות והיכרות בסיסיות\". היום, נלמד כמה ברכות וביטויי היכרות חיוניים בעברית. בואו נתחיל עם המילה הראשונה שלנו: \"שלום\". האם אתם יכולים לנסות לומר אותה? נהדר! עכשיו, בואו נסתכל על המשמעות שלה ועל משפט לדוגמה. נעבור על כל מילה, נתרגל הגייה ונבין את השימוש בה. בסיום השיעור, תוכלו להציג את עצמכם ולברך אחרים בעברית! מוכנים להתחיל? בואו נצלול פנימה!"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "שלום",
+          "phonetic": "Shalom",
+          "meaning": "Hello / Goodbye / Peace",
+          "example": "שלום! מה שלומך?"
+        },
+        {
+          "word": "בוקר טוב",
+          "phonetic": "Boker tov",
+          "meaning": "Good morning",
+          "example": "בוקר טוב, אמא!"
+        },
+        {
+          "word": "ערב טוב",
+          "phonetic": "Erev tov",
+          "meaning": "Good evening",
+          "example": "ערב טוב, חברים!"
+        },
+        {
+          "word": "לילה טוב",
+          "phonetic": "Laila tov",
+          "meaning": "Good night",
+          "example": "לילה טוב, חלומות פז."
+        },
+        {
+          "word": "מה שלומך?",
+          "phonetic": "Ma shlomcha? (m) / Ma shlomech? (f)",
+          "meaning": "How are you?",
+          "example": "מה שלומך היום?"
+        },
+        {
+          "word": "בסדר גמור",
+          "phonetic": "Beseder gamur",
+          "meaning": "Very good / Fine",
+          "example": "אני בסדר גמור, תודה."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Hebrew phrase for \"Good morning\"?",
+          "options": [
+            "לילה טוב",
+            "בוקר טוב",
+            "ערב טוב",
+            "שלום"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"How are you?\" (to a male) in Hebrew?",
+          "options": [
+            "מה שלומך?",
+            "מה שלומך?",
+            "מה שמך?",
+            "מה נשמע?"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Hebrew phrase means \"Good night\"?",
+          "options": [
+            "בוקר טוב",
+            "לילה טוב",
+            "ערב טוב",
+            "שלום"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone says \"שלום\" to you, what could it mean?",
+          "options": [
+            "Good morning",
+            "Good night",
+            "Hello",
+            "How are you?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "שלום! אני המורה שלך ללימוד עברית. בשיעור הזה נתמקד בברכות נפוצות בעברית. נלמד איך לומר \"שלום\", \"בוקר טוב\", \"ערב טוב\", \"לילה טוב\" ו\"מה שלומך?\". נתרגל את ההגייה של כל ביטוי, נבין את המשמעות שלו ונראה איך להשתמש בו במשפטים. אל תהסס/י לשאול שאלות בכל שלב! בוא/י נתחיל!"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "שלום",
+          "phonetic": "shalom",
+          "meaning": "Hello / Peace",
+          "example": "שלום, מה שלומך?"
+        },
+        {
+          "word": "תודה",
+          "phonetic": "toda",
+          "meaning": "Thank you",
+          "example": "תודה רבה על העזרה!"
+        },
+        {
+          "word": "כן",
+          "phonetic": "ken",
+          "meaning": "Yes",
+          "example": "כן, אני רוצה ללמוד עברית."
+        },
+        {
+          "word": "לא",
+          "phonetic": "lo",
+          "meaning": "No",
+          "example": "לא, אני לא מבין/ה."
+        },
+        {
+          "word": "בבקשה",
+          "phonetic": "bevakasha",
+          "meaning": "Please / You're welcome",
+          "example": "בבקשה, שב/י כאן."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Hebrew word for 'Hello'?",
+          "options": [
+            "תודה",
+            "שלום",
+            "כן",
+            "לא"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say 'Thank you' in Hebrew?",
+          "options": [
+            "בבקשה",
+            "שלום",
+            "תודה",
+            "כן"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Hebrew word means 'Yes'?",
+          "options": [
+            "לא",
+            "כן",
+            "בבקשה",
+            "תודה"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone says 'תודה' to you, how would you respond with 'You're welcome'?",
+          "options": [
+            "שלום",
+            "כן",
+            "לא",
+            "בבקשה"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "The learner has completed the previous lesson. Start by greeting them warmly in Hebrew, for example, by saying \"שלום!\" (Shalom!). Introduce the topic: learning basic Hebrew greetings and common phrases. Present the first vocabulary word, 'שלום' (shalom), explain its meaning ('hello'/'peace'), and ask the learner to repeat it. Then, introduce 'תודה' (toda), explain its meaning ('thank you'), and ask them to use it in a simple context. Continue with 'כן' (ken - yes), 'לא' (lo - no), and 'בבקשה' (bevakasha - please/you're welcome), following the same pattern of introduction, meaning, and practice. Encourage the learner to ask questions throughout the lesson, and be prepared to provide additional examples and cultural context for each phrase."
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "שלום",
+          "phonetic": "Shalom",
+          "meaning": "Hello / Peace",
+          "example": "שלום, מה שלומך?"
+        },
+        {
+          "word": "תודה",
+          "phonetic": "Toda",
+          "meaning": "Thank you",
+          "example": "תודה רבה על העזרה."
+        },
+        {
+          "word": "כן",
+          "phonetic": "Ken",
+          "meaning": "Yes",
+          "example": "כן, אני רוצה קפה."
+        },
+        {
+          "word": "לא",
+          "phonetic": "Lo",
+          "meaning": "No",
+          "example": "לא, אני לא מבין."
+        },
+        {
+          "word": "בבקשה",
+          "phonetic": "Bevakasha",
+          "meaning": "Please / You're welcome",
+          "example": "בבקשה, שב כאן."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Hebrew?",
+          "options": [
+            "אהבה",
+            "שלום",
+            "מים",
+            "שמש"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does the Hebrew word \"תודה\" mean?",
+          "options": [
+            "Please",
+            "Yes",
+            "Thank you",
+            "No"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Hebrew word means \"Yes\"?",
+          "options": [
+            "לא",
+            "כן",
+            "מחר",
+            "היום"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Hebrew word for \"Please\" or \"You're welcome\".",
+          "options": [
+            "תודה",
+            "שלום",
+            "בבקשה",
+            "סליחה"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "שלום! אני המורה שלך לעברית. ברוך/ברוכה הבא/ה לשיעור הראשון שלנו! היום נתחיל ללמוד כמה מילים וביטויים בסיסיים שיעזרו לך לתקשר בעברית. נתחיל עם ברכת שלום. בעברית, אנחנו אומרים 'שלום' (Shalom) כדי להגיד 'היי' או 'שלום'. האם תוכל/י לחזור אחריי? 'שלום'. מצוין! עכשיו, איך אומרים 'תודה' בעברית? אנחנו אומרים 'תודה' (Toda). נסה/נסי לומר 'תודה רבה' (Toda raba) שזה 'תודה רבה'. יש לך שאלות?"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ללכת",
+          "phonetic": "lalechet",
+          "meaning": "to go, to walk",
+          "example": "אני הולך לבית הספר כל בוקר."
+        },
+        {
+          "word": "לאכול",
+          "phonetic": "le'echol",
+          "meaning": "to eat",
+          "example": "היא אוכלת תפוח עץ."
+        },
+        {
+          "word": "לשתות",
+          "phonetic": "lishtot",
+          "meaning": "to drink",
+          "example": "אנחנו שותים מים קרים."
+        },
+        {
+          "word": "לקרוא",
+          "phonetic": "likro",
+          "meaning": "to read",
+          "example": "הוא קורא ספר מעניין."
+        },
+        {
+          "word": "לכתוב",
+          "phonetic": "lichtov",
+          "meaning": "to write",
+          "example": "אני כותב מכתב לחבר."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Hebrew word means 'to eat'?",
+          "options": [
+            "לשתות",
+            "לאכול",
+            "ללכת",
+            "לקרוא"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say 'I drink water' in Hebrew (masculine form)?",
+          "options": [
+            "אני אוכל מים",
+            "אני שותה מים",
+            "אני קורא מים",
+            "אני הולך מים"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct verb to complete the sentence: 'She _____ a book.'",
+          "options": [
+            "כותבת",
+            "קוראת",
+            "שותה",
+            "אוכלת"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which sentence means 'He walks to the park'?",
+          "options": [
+            "הוא אוכל בפארק",
+            "הוא שותה בפארק",
+            "הוא הולך לפארק",
+            "הוא קורא בפארק"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "ברוך הבא לשיעור העברית שלך! היום נתמקד בפעלים בסיסיים ובפעולות יומיומיות. נלמד מילים חדשות כמו \"ללכת\" (lalechet - to go/walk), \"לאכול\" (le'echol - to eat), ו\"לשתות\" (lishtot - to drink). נתרגל את ההגייה שלהם ונעבוד על בניית משפטים פשוטים. אל תהסס לשאול כל שאלה שיש לך!"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "שלום",
+          "phonetic": "Shalom",
+          "meaning": "Hello / Peace",
+          "example": "שלום! מה שלומך?"
+        },
+        {
+          "word": "קוראים לי...",
+          "phonetic": "Kor'im li...",
+          "meaning": "My name is... (lit. \"They call me...\")",
+          "example": "שלום, קוראים לי דניאל."
+        },
+        {
+          "word": "מה שמך?",
+          "phonetic": "Ma shimkha? (m) / Ma shmekh? (f)",
+          "meaning": "What is your name?",
+          "example": "שלום, קוראים לי שרה. מה שמך?"
+        },
+        {
+          "word": "נעים מאוד",
+          "phonetic": "Na'im me'od",
+          "meaning": "Nice to meet you",
+          "example": "נעים מאוד להכיר אותך!"
+        },
+        {
+          "word": "תודה",
+          "phonetic": "Toda",
+          "meaning": "Thank you",
+          "example": "תודה רבה על העזרה!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Hebrew?",
+          "options": [
+            "תודה",
+            "שלום",
+            "בבקשה",
+            "לילה טוב"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"My name is...\" in Hebrew?",
+          "options": [
+            "מה שלומך?",
+            "קוראים לי...",
+            "איפה אתה?",
+            "אני אוהב"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"Nice to meet you\" in Hebrew?",
+          "options": [
+            "בוקר טוב",
+            "להתראות",
+            "נעים מאוד",
+            "סליחה"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Hebrew word for \"Thank you\"?",
+          "options": [
+            "בבקשה",
+            "סליחה",
+            "תודה",
+            "כן"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "שלום! ברוכים הבאים לשיעור העברית הראשון שלכם! אני המורה שלכם לעברית, ואני נרגש/ה לעזור לכם להתחיל את המסע שלכם בשפה העברית. היום נלמד כמה ביטויים בסיסיים וחשובים מאוד: איך לומר \"שלום\", איך להציג את עצמכם עם \"קוראים לי...\", ואיך לומר \"נעים מאוד\" כשאתם פוגשים מישהו חדש. אנחנו גם נלמד את המילה \"תודה\". אני אגיד כל ביטוי, ואתם תוכלו לחזור אחריי. מוכנים? בואו נתחיל עם \"שלום\". נסו לומר: שלום."
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "לאכול",
+          "phonetic": "la'akhol",
+          "meaning": "to eat",
+          "example": "אני אוכל תפוח."
+        },
+        {
+          "word": "לשתות",
+          "phonetic": "lishtot",
+          "meaning": "to drink",
+          "example": "היא שותה מים."
+        },
+        {
+          "word": "ללכת",
+          "phonetic": "lalekhet",
+          "meaning": "to go/walk",
+          "example": "אנחנו הולכים לבית הספר."
+        },
+        {
+          "word": "לישון",
+          "phonetic": "lishon",
+          "meaning": "to sleep",
+          "example": "הוא ישן הרבה."
+        },
+        {
+          "word": "לקרוא",
+          "phonetic": "likro",
+          "meaning": "to read",
+          "example": "אתם קוראים ספרים."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Hebrew verb for \"to eat\"?",
+          "options": [
+            "לשתות",
+            "לאכול",
+            "לישון",
+            "לקרוא"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Hebrew word means \"to drink\"?",
+          "options": [
+            "לישון",
+            "ללכת",
+            "לשתות",
+            "לאכול"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"to sleep\" in Hebrew?",
+          "options": [
+            "לקרוא",
+            "ללכת",
+            "לאכול",
+            "לישון"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "Choose the correct Hebrew verb for \"to read\".",
+          "options": [
+            "לקרוא",
+            "לשתות",
+            "ללכת",
+            "לאכול"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "שלום! (Shalom!) Welcome to lesson a1-4-2. Today, we're diving into some essential Hebrew verbs for daily activities. We'll learn how to say \"to eat\" (לאכול), \"to drink\" (לשתות), \"to sleep\" (לישון), \"to go/walk\" (ללכת), and \"to read\" (לקרוא). These are super useful! Pay close attention to the pronunciation and try to repeat the words after me. For example, can you try saying \"לאכול\" (la'akhol)? Great! Now, let's look at how we use them in simple sentences. Ready to start?"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "שלום",
+          "phonetic": "Shalom",
+          "meaning": "Hello, Goodbye, Peace",
+          "example": "שלום, מה שלומך?"
+        },
+        {
+          "word": "בוקר טוב",
+          "phonetic": "Boker tov",
+          "meaning": "Good morning",
+          "example": "בוקר טוב לכולם!"
+        },
+        {
+          "word": "תודה",
+          "phonetic": "Toda",
+          "meaning": "Thank you",
+          "example": "תודה רבה על העזרה."
+        },
+        {
+          "word": "בבקשה",
+          "phonetic": "Bevakasha",
+          "meaning": "Please, You're welcome",
+          "example": "תודה! בבקשה."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does \"שלום\" mean?",
+          "options": [
+            "Good morning",
+            "Thank you",
+            "Hello / Goodbye",
+            "Please"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Good morning\" in Hebrew?",
+          "options": [
+            "שלום",
+            "בוקר טוב",
+            "תודה",
+            "לילה טוב"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone says \"תודה\" (Thank you), how would you respond?",
+          "options": [
+            "שלום",
+            "בוקר טוב",
+            "בבקשה",
+            "לילה טוב"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Welcome to your Hebrew lesson! Today, we're going to learn some basic Hebrew greetings and polite phrases. Let's start with \"שלום\" (Shalom). This is a very versatile word in Hebrew. It means 'hello', 'goodbye', and 'peace'. Can you try saying \"שלום\"? Next, we have \"בוקר טוב\" (Boker tov), which means 'Good morning'. Try saying \"בוקר טוב\". Then, we have \"תודה\" (Toda) for 'Thank you'. And finally, \"בבקשה\" (Bevakasha) which can mean 'Please' or 'You're welcome'. Let's practice using these words in simple sentences. I'll say a phrase, and you try to respond or repeat. For example, I'll say \"בוקר טוב!\", and you can respond with \"בוקר טוב!\". Or, I'll say \"תודה\", and you can say \"בבקשה\". We can also try simple role-plays. I'll start: \"שלום! מה שלומך?\" (Shalom! Ma shlomcha? - Hello! How are you?). How would you respond? Let's make sure you understand the nuances of \"שלום\" and \"בבקשה\". We'll also cover the quiz questions to reinforce your learning."
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "שלום",
+          "phonetic": "Shalom",
+          "meaning": "Hello / Peace",
+          "example": "שלום, מה שלומך?"
+        },
+        {
+          "word": "תודה",
+          "phonetic": "Toda",
+          "meaning": "Thank you",
+          "example": "תודה רבה על העזרה!"
+        },
+        {
+          "word": "בבקשה",
+          "phonetic": "Bevakasha",
+          "meaning": "Please / You're welcome",
+          "example": "אפשר לקבל מים, בבקשה?"
+        },
+        {
+          "word": "כן",
+          "phonetic": "Ken",
+          "meaning": "Yes",
+          "example": "כן, אני רוצה קפה."
+        },
+        {
+          "word": "לא",
+          "phonetic": "Lo",
+          "meaning": "No",
+          "example": "לא, תודה."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Hebrew?",
+          "options": [
+            "שלום",
+            "תודה",
+            "בבקשה",
+            "כן"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does \"תודה\" mean in English?",
+          "options": [
+            "Yes",
+            "No",
+            "Thank you",
+            "Please"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Hebrew word means \"Please\" or \"You're welcome\"?",
+          "options": [
+            "לא",
+            "כן",
+            "שלום",
+            "בבקשה"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "How would you politely decline something by saying \"No, thank you\" in Hebrew?",
+          "options": [
+            "כן, תודה",
+            "לא, בבקשה",
+            "לא, תודה",
+            "שלום, תודה"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Welcome to your first Hebrew lesson! In this lesson, we'll learn some essential greetings and basic phrases to help you start communicating in Hebrew. We'll cover words like \"שלום\" (Shalom) for \"Hello,\" \"תודה\" (Toda) for \"Thank you,\" and \"בבקשה\" (Bevakasha) for \"Please\" or \"You're welcome.\" Pay close attention to the pronunciation and try to repeat the words after me. Let's begin our exciting journey into the Hebrew language!"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "בבקשה",
+          "phonetic": "b'vakasha",
+          "meaning": "please / you're welcome",
+          "example": "בבקשה, תן לי מים."
+        },
+        {
+          "word": "תודה",
+          "phonetic": "toda",
+          "meaning": "thank you",
+          "example": "תודה רבה על העזרה שלך."
+        },
+        {
+          "word": "סליחה",
+          "phonetic": "slicha",
+          "meaning": "excuse me / sorry",
+          "example": "סליחה, איפה השירותים?"
+        },
+        {
+          "word": "איפה",
+          "phonetic": "eifo",
+          "meaning": "where",
+          "example": "איפה אתה גר?"
+        },
+        {
+          "word": "כמה",
+          "phonetic": "kama",
+          "meaning": "how much / how many",
+          "example": "כמה זה עולה?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"please\" or \"you're welcome\" in Hebrew?",
+          "options": [
+            "תודה",
+            "בבקשה",
+            "סליחה",
+            "איפה"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Hebrew word means \"thank you\"?",
+          "options": [
+            "כמה",
+            "איפה",
+            "תודה",
+            "בבקשה"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If you want to apologize or get someone's attention, which word would you use?",
+          "options": [
+            "בבקשה",
+            "תודה",
+            "סליחה",
+            "כמה"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"where\" something is in Hebrew?",
+          "options": [
+            "כמה",
+            "איפה",
+            "סליחה",
+            "תודה"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Hebrew word for \"how much\" or \"how many\"?",
+          "options": [
+            "תודה",
+            "בבקשה",
+            "איפה",
+            "כמה"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "שלום! אני המורה שלך לעברית. בשיעור הזה נלמד אוצר מילים חדש בעברית ונתרגל להשתמש בו. נכסה את המילים: בבקשה, תודה, סליחה, איפה וכמה. בואו נתחיל עם המילה הראשונה: בבקשה. האם תוכל/י לנסות לומר אותה?"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ללמוד",
+          "phonetic": "lilmod",
+          "meaning": "to learn",
+          "example": "אני לומד עברית כל יום."
+        },
+        {
+          "word": "לדבר",
+          "phonetic": "ledaber",
+          "meaning": "to speak",
+          "example": "היא מדברת עברית מצוין."
+        },
+        {
+          "word": "לכתוב",
+          "phonetic": "likhtov",
+          "meaning": "to write",
+          "example": "אנחנו כותבים מכתב לחברים."
+        },
+        {
+          "word": "לקרוא",
+          "phonetic": "likro",
+          "meaning": "to read",
+          "example": "הוא קורא ספר מעניין."
+        },
+        {
+          "word": "מורה",
+          "phonetic": "moreh/morah",
+          "meaning": "teacher (m/f)",
+          "example": "המורה שלנו מלמד טוב מאוד."
+        },
+        {
+          "word": "תלמיד/ה",
+          "phonetic": "talmid/talmidah",
+          "meaning": "student (m/f)",
+          "example": "התלמידים בכיתה חרוצים."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Hebrew word means 'to learn'?",
+          "options": [
+            "לכתוב",
+            "לקרוא",
+            "ללמוד",
+            "לדבר"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say 'teacher' (male) in Hebrew?",
+          "options": [
+            "תלמיד",
+            "מורה",
+            "ספר",
+            "חבר"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Complete the sentence: 'אני ______ עברית כל יום.' (I _______ Hebrew every day.)",
+          "options": [
+            "לומדת",
+            "לומד",
+            "לומדים",
+            "ללמוד"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which verb fits best: 'היא ______ ספר מעניין.' (She _______ an interesting book.)",
+          "options": [
+            "קוראת",
+            "כותבת",
+            "מדברת",
+            "לומדת"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "שלום! ברוך/ברוכה הבא/ה לשיעור העברית שלנו! היום נתמקד בפעלים חשובים ובשמות עצם שיעזרו לך לתאר פעולות יומיומיות. נלמד מילים כמו 'ללמוד' (lilmod), 'לדבר' (ledaber), 'לכתוב' (likhtov), 'לקרוא' (likro), וגם 'מורה' (moreh/morah) ו'תלמיד/ה' (talmid/talmidah). נתרגל את המילים האלה במשפטים ונראה איך הן משתלבות בשיחה. מוכן/מוכנה להתחיל? יאללה, בוא/בואי נתחיל!"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "שלום",
+          "phonetic": "Shalom",
+          "meaning": "Hello / Peace",
+          "example": "שלום! מה שלומך היום?"
+        },
+        {
+          "word": "תודה",
+          "phonetic": "Toda",
+          "meaning": "Thank you",
+          "example": "תודה רבה על העזרה שלך."
+        },
+        {
+          "word": "בבקשה",
+          "phonetic": "Bevakasha",
+          "meaning": "Please / You're welcome",
+          "example": "אפשר לקבל מים, בבקשה?"
+        },
+        {
+          "word": "כן",
+          "phonetic": "Ken",
+          "meaning": "Yes",
+          "example": "כן, אני רוצה ללמוד עברית."
+        },
+        {
+          "word": "לא",
+          "phonetic": "Lo",
+          "meaning": "No",
+          "example": "לא, תודה, אני לא רעב."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Hebrew?",
+          "options": [
+            "תודה",
+            "שלום",
+            "כן",
+            "לא"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Hebrew word for \"Thank you\"?",
+          "options": [
+            "כן",
+            "שלום",
+            "תודה",
+            "בבקשה"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Hebrew word means \"Yes\"?",
+          "options": [
+            "לא",
+            "כן",
+            "תודה",
+            "שלום"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone says \"תודה\" to you, how would you respond with \"You're welcome\"?",
+          "options": [
+            "כן",
+            "לא",
+            "שלום",
+            "בבקשה"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "שלום! אני המורה שלך לעברית. בשיעור הזה, נלמד כמה מילים וביטויים חיוניים לתקשורת יומיומית בעברית. נתמקד בברכות, הבעת תודה, ואישורים בסיסיים. בואו נתחיל עם 'שלום'. 'שלום' (Shalom) פירושו 'היי' או 'שלום' באנגלית. נסה לומר 'שלום'!"
+    }
+  ]
+}

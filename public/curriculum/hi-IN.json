@@ -1,0 +1,1237 @@
+{
+  "langCode": "hi-IN",
+  "langLabel": "Hindi",
+  "langNative": "हिन्दी",
+  "generatedAt": "2026-03-15T00:05:13.559Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्ते",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Greetings",
+          "example": "नमस्ते, आप कैसे हैं?"
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyavaad",
+          "meaning": "Thank you",
+          "example": "आपका बहुत-बहुत धन्यवाद।"
+        },
+        {
+          "word": "हाँ",
+          "phonetic": "Haan",
+          "meaning": "Yes",
+          "example": "हाँ, मैं ठीक हूँ।"
+        },
+        {
+          "word": "नहीं",
+          "phonetic": "Nahin",
+          "meaning": "No",
+          "example": "नहीं, यह मेरा नहीं है।"
+        },
+        {
+          "word": "आप कैसे हैं?",
+          "phonetic": "Aap kaise hain?",
+          "meaning": "How are you?",
+          "example": "मैं ठीक हूँ, आप कैसे हैं?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Hindi?",
+          "options": [
+            "धन्यवाद",
+            "नमस्ते",
+            "हाँ",
+            "नहीं"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does 'धन्यवाद' mean?",
+          "options": [
+            "Yes",
+            "No",
+            "Thank you",
+            "Hello"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means 'Yes'?",
+          "options": [
+            "नहीं",
+            "हाँ",
+            "नमस्ते",
+            "आप"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask 'How are you?' in Hindi?",
+          "options": [
+            "मैं ठीक हूँ",
+            "आप कौन हैं?",
+            "आप कैसे हैं?",
+            "यह क्या है?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "नमस्ते! आज की हिंदी कक्षा में आपका स्वागत है! मैं आपका AI हिंदी ट्यूटर हूँ। आज हम कुछ बहुत ही उपयोगी हिंदी शब्द और वाक्यांश सीखेंगे जो आपको अपनी हिंदी यात्रा शुरू करने में मदद करेंगे। हम 'नमस्ते' (Hello), 'धन्यवाद' (Thank you), 'हाँ' (Yes), 'नहीं' (No), और 'आप कैसे हैं?' (How are you?) जैसे महत्वपूर्ण अभिव्यक्तियों पर ध्यान देंगे। क्या आप इन नए शब्दों को सीखने के लिए उत्साहित हैं?"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्ते",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Hi",
+          "example": "नमस्ते, आप कैसे हैं?"
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyavaad",
+          "meaning": "Thank you",
+          "example": "आपके मदद के लिए धन्यवाद।"
+        },
+        {
+          "word": "हाँ",
+          "phonetic": "Haan",
+          "meaning": "Yes",
+          "example": "हाँ, मैं सहमत हूँ।"
+        },
+        {
+          "word": "नहीं",
+          "phonetic": "Nahin",
+          "meaning": "No",
+          "example": "नहीं, यह सही नहीं है।"
+        },
+        {
+          "word": "कृपया",
+          "phonetic": "Kripaya",
+          "meaning": "Please",
+          "example": "कृपया मेरी मदद करें।"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Hindi?",
+          "options": [
+            "नमस्ते",
+            "धन्यवाद",
+            "हाँ",
+            "नहीं"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means \"Thank you\" in Hindi?",
+          "options": [
+            "कृपया",
+            "हाँ",
+            "धन्यवाद",
+            "नहीं"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Hindi word for \"Yes\"?",
+          "options": [
+            "नहीं",
+            "हाँ",
+            "कृपया",
+            "नमस्ते"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "नमस्ते! मैं आपका AI हिंदी ट्यूटर हूँ। इस पाठ में, हम कुछ ज़रूरी हिंदी शब्दावली और वाक्यांश सीखेंगे। हम 'नमस्ते' (Namaste) जैसे सामान्य अभिवादन और 'धन्यवाद' (Dhanyavaad) जैसे शब्दों से शुरुआत करेंगे। मैं आपको इनके अर्थ, उच्चारण और सरल वाक्यों में इनका उपयोग कैसे करें, यह समझने में मदद करूँगा। किसी भी समय प्रश्न पूछने में संकोच न करें। आइए, हिंदी सीखने की अपनी यात्रा शुरू करें!"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्ते",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Hi",
+          "example": "नमस्ते, आप कैसे हैं?"
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyavaad",
+          "meaning": "Thank you",
+          "example": "आपका धन्यवाद।"
+        },
+        {
+          "word": "हाँ",
+          "phonetic": "Haan",
+          "meaning": "Yes",
+          "example": "हाँ, मैं सहमत हूँ।"
+        },
+        {
+          "word": "नहीं",
+          "phonetic": "Nahin",
+          "meaning": "No",
+          "example": "नहीं, यह सही नहीं है।"
+        },
+        {
+          "word": "कृपया",
+          "phonetic": "Kripya",
+          "meaning": "Please",
+          "example": "कृपया मेरी मदद करें।"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Hi\" in Hindi?",
+          "options": [
+            "नमस्ते",
+            "धन्यवाद",
+            "हाँ",
+            "नहीं"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Hindi word for \"Thank you\"?",
+          "options": [
+            "हाँ",
+            "कृपया",
+            "धन्यवाद",
+            "नमस्ते"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Hindi word means \"Yes\"?",
+          "options": [
+            "नहीं",
+            "हाँ",
+            "कृपया",
+            "धन्यवाद"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If you want to say \"Please\" in Hindi, which word would you use?",
+          "options": [
+            "नहीं",
+            "हाँ",
+            "कृपया",
+            "नमस्ते"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "बहुत अच्छे! इस पाठ में, हमने कुछ बहुत ही सामान्य हिंदी शब्द सीखे हैं। हमने 'नमस्ते' (Namaste) जैसे अभिवादन, 'धन्यवाद' (Dhanyavaad) जैसे आभार व्यक्त करने वाले शब्द, और 'हाँ' (Haan) व 'नहीं' (Nahin) जैसे बुनियादी उत्तर सीखे। क्या आप मुझे 'नमस्ते' का अर्थ बता सकते हैं?"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्ते",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Hi (a respectful greeting)",
+          "example": "नमस्ते, आप कैसे हैं?"
+        },
+        {
+          "word": "आप",
+          "phonetic": "Aap",
+          "meaning": "You (formal/plural)",
+          "example": "आप कहाँ जा रहे हैं?"
+        },
+        {
+          "word": "कैसे हैं?",
+          "phonetic": "Kaise hain?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "नमस्ते, आप कैसे हैं?"
+        },
+        {
+          "word": "मैं",
+          "phonetic": "Main",
+          "meaning": "I",
+          "example": "मैं खुश हूँ।"
+        },
+        {
+          "word": "ठीक हूँ",
+          "phonetic": "Theek hoon",
+          "meaning": "I am fine / I am good",
+          "example": "मैं ठीक हूँ, धन्यवाद।"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Hindi?",
+          "options": [
+            "नमस्ते",
+            "धन्यवाद",
+            "कृपया",
+            "हाँ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the formal way to say \"You\" in Hindi?",
+          "options": [
+            "तुम",
+            "तू",
+            "आप",
+            "वह"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you respond if someone asks \"आप कैसे हैं?\" (How are you?) and you are fine?",
+          "options": [
+            "मैं खुश हूँ",
+            "मैं ठीक हूँ",
+            "मैं बुरा हूँ",
+            "मैं सो रहा हूँ"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "नमस्ते! इस पाठ में, हम हिंदी में कुछ महत्वपूर्ण अभिवादन और सामान्य वाक्यांश सीखेंगे। हम 'नमस्ते' (Hello), 'आप कैसे हैं?' (How are you?), और 'मैं ठीक हूँ' (I am fine) जैसे शब्दों और वाक्यांशों पर ध्यान देंगे। मैं आपको सही उच्चारण और उपयोग सिखाऊंगा। मेरे बाद दोहराने और अभ्यास करने के लिए तैयार रहें। आइए शुरू करें!"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्ते",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Greetings",
+          "example": "नमस्ते, आप कैसे हैं?"
+        },
+        {
+          "word": "आप कैसे हैं?",
+          "phonetic": "Aap kaise hain?",
+          "meaning": "How are you? (formal/polite)",
+          "example": "नमस्ते, आप कैसे हैं? मैं ठीक हूँ।"
+        },
+        {
+          "word": "मैं ठीक हूँ।",
+          "phonetic": "Main theek hoon.",
+          "meaning": "I am fine.",
+          "example": "आप कैसे हैं? मैं ठीक हूँ, धन्यवाद।"
+        },
+        {
+          "word": "धन्यवाद।",
+          "phonetic": "Dhanyavaad.",
+          "meaning": "Thank you.",
+          "example": "आपकी मदद के लिए धन्यवाद।"
+        },
+        {
+          "word": "हाँ।",
+          "phonetic": "Haan.",
+          "meaning": "Yes.",
+          "example": "क्या आप हिंदी बोलते हैं? हाँ, मैं थोड़ी हिंदी बोलता हूँ।"
+        },
+        {
+          "word": "नहीं।",
+          "phonetic": "Nahin.",
+          "meaning": "No.",
+          "example": "क्या आप थके हुए हैं? नहीं, मैं थका हुआ नहीं हूँ।"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Hindi?",
+          "options": [
+            "नमस्ते",
+            "धन्यवाद",
+            "हाँ",
+            "नहीं"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Hindi phrase for \"How are you?\" (formal)?",
+          "options": [
+            "मैं ठीक हूँ",
+            "आप कैसे हैं?",
+            "धन्यवाद",
+            "हाँ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"आप कैसे हैं?\" (Aap kaise hain?), what is a common response meaning \"I am fine\"?",
+          "options": [
+            "नमस्ते",
+            "नहीं",
+            "मैं ठीक हूँ",
+            "धन्यवाद"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"Thank you\" in Hindi?",
+          "options": [
+            "हाँ",
+            "नहीं",
+            "नमस्ते",
+            "धन्यवाद"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "नमस्ते! इस पाठ में, हम कुछ बहुत ही उपयोगी हिंदी अभिवादन और वाक्यांश सीखेंगे। हम 'नमस्ते' (Hello), 'आप कैसे हैं?' (How are you?), और 'मैं ठीक हूँ' (I am fine) जैसे शब्दों पर ध्यान देंगे। मैं प्रत्येक वाक्यांश को बोलूँगा और आप मेरे बाद दोहरा सकते हैं। तैयार हैं? आइए 'नमस्ते' से शुरू करें। क्या आप 'नमस्ते' कह सकते हैं?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्ते",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Greetings",
+          "example": "नमस्ते! आप कैसे हैं?"
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyavaad",
+          "meaning": "Thank you",
+          "example": "मदद के लिए धन्यवाद।"
+        },
+        {
+          "word": "हाँ",
+          "phonetic": "Haan",
+          "meaning": "Yes",
+          "example": "हाँ, मैं ठीक हूँ।"
+        },
+        {
+          "word": "नहीं",
+          "phonetic": "Nahin",
+          "meaning": "No",
+          "example": "नहीं, यह मेरा नहीं है।"
+        },
+        {
+          "word": "आप कैसे हैं?",
+          "phonetic": "Aap kaise hain?",
+          "meaning": "How are you? (formal)",
+          "example": "नमस्ते, आप कैसे हैं?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Hindi word for \"Hello\" or \"Greetings\"?",
+          "options": [
+            "हाँ",
+            "नमस्ते",
+            "नहीं",
+            "धन्यवाद"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Hindi?",
+          "options": [
+            "आप कैसे हैं?",
+            "हाँ",
+            "धन्यवाद",
+            "नहीं"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Hindi word means \"Yes\"?",
+          "options": [
+            "नहीं",
+            "नमस्ते",
+            "हाँ",
+            "धन्यवाद"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Hindi phrase for \"How are you?\" (formal)?",
+          "options": [
+            "हाँ",
+            "नहीं",
+            "नमस्ते",
+            "आप कैसे हैं?"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "नमस्ते! आपकी हिंदी की क्लास में आपका स्वागत है! आज हम कुछ बहुत ही उपयोगी हिंदी शब्द और वाक्यांश सीखेंगे। हम 'नमस्ते' (Hello), 'धन्यवाद' (Thank you), 'हाँ' (Yes), 'नहीं' (No) और 'आप कैसे हैं?' (How are you?) जैसे शब्दों का उच्चारण करना सीखेंगे और उन्हें वाक्यों में कैसे उपयोग करें, यह भी जानेंगे। तैयार हो जाइए, यह बहुत मज़ेदार होने वाला है!"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्ते",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Hi",
+          "example": "नमस्ते, आप कैसे हैं?"
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyavaad",
+          "meaning": "Thank you",
+          "example": "आपकी मदद के लिए धन्यवाद।"
+        },
+        {
+          "word": "कृपया",
+          "phonetic": "Kripaya",
+          "meaning": "Please",
+          "example": "कृपया मुझे पानी दें।"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Hindi?",
+          "options": [
+            "नमस्ते",
+            "धन्यवाद",
+            "कृपया",
+            "हाँ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Hindi word means \"Thank you\"?",
+          "options": [
+            "नहीं",
+            "हाँ",
+            "धन्यवाद",
+            "नमस्ते"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Hindi word for \"Please\".",
+          "options": [
+            "हाँ",
+            "नहीं",
+            "कृपया",
+            "नमस्ते"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "नमस्ते! आपकी पहली हिंदी कक्षा में आपका स्वागत है! आज हम कुछ बहुत ही उपयोगी हिंदी शब्द सीखेंगे जो आपको बातचीत शुरू करने में मदद करेंगे। हम 'नमस्ते' (Hello), 'धन्यवाद' (Thank you), और 'कृपया' (Please) जैसे शब्दों पर ध्यान देंगे। मैं प्रत्येक शब्द कहूँगा/कहुँगी, और आप मेरे बाद दोहरा सकते हैं। तैयार हैं? चलिए 'नमस्ते' से शुरू करते हैं। क्या आप 'नमस्ते' कह सकते हैं?"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्ते",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Greetings (a respectful greeting used at any time of day)",
+          "example": "नमस्ते! आप कैसे हैं?"
+        },
+        {
+          "word": "आप कैसे हैं?",
+          "phonetic": "Aap kaise hain?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "नमस्ते, राहुल। आप कैसे हैं?"
+        },
+        {
+          "word": "मैं ठीक हूँ।",
+          "phonetic": "Main theek hoon.",
+          "meaning": "I am fine.",
+          "example": "मैं ठीक हूँ, धन्यवाद।"
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyavaad",
+          "meaning": "Thank you",
+          "example": "आपकी मदद के लिए धन्यवाद।"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Greetings\" in Hindi?",
+          "options": [
+            "नमस्ते",
+            "धन्यवाद",
+            "अलविदा",
+            "शुभ प्रभात"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct Hindi phrase for \"How are you?\" (formal)?",
+          "options": [
+            "मैं ठीक हूँ",
+            "आप कैसे हैं?",
+            "क्या हाल है?",
+            "आपका नाम क्या है?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"आप कैसे हैं?\", how would you respond with \"I am fine, thank you\"?",
+          "options": [
+            "नमस्ते",
+            "धन्यवाद",
+            "मैं ठीक हूँ, धन्यवाद।",
+            "आप कौन हैं?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "आपकी हिंदी क्लास में आपका स्वागत है! आज हम कुछ बुनियादी हिंदी अभिवादन सीखेंगे। हम 'नमस्ते', 'आप कैसे हैं?' और 'मैं ठीक हूँ' सीखेंगे, और उन्हें वाक्यों में इस्तेमाल करने का अभ्यास करेंगे। चलिए 'नमस्ते' से शुरू करते हैं। क्या आप इसे कहने की कोशिश कर सकते हैं?"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्ते",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Hi (a respectful greeting)",
+          "example": "नमस्ते, आप कैसे हैं?"
+        },
+        {
+          "word": "आप कैसे हैं?",
+          "phonetic": "Aap kaise hain?",
+          "meaning": "How are you? (formal, for male)",
+          "example": "नमस्ते, आप कैसे हैं?"
+        },
+        {
+          "word": "आप कैसी हैं?",
+          "phonetic": "Aap kaisi hain?",
+          "meaning": "How are you? (formal, for female)",
+          "example": "नमस्ते, आप कैसी हैं?"
+        },
+        {
+          "word": "मैं ठीक हूँ।",
+          "phonetic": "Main theek hoon.",
+          "meaning": "I am fine.",
+          "example": "मैं ठीक हूँ, धन्यवाद।"
+        },
+        {
+          "word": "आपका नाम क्या है?",
+          "phonetic": "Aapka naam kya hai?",
+          "meaning": "What is your name? (formal)",
+          "example": "नमस्ते, आपका नाम क्या है?"
+        },
+        {
+          "word": "मेरा नाम ... है।",
+          "phonetic": "Mera naam ... hai.",
+          "meaning": "My name is...",
+          "example": "मेरा नाम राहुल है।"
+        },
+        {
+          "word": "आपसे मिलकर खुशी हुई।",
+          "phonetic": "Aapse milkar khushi hui.",
+          "meaning": "Nice to meet you.",
+          "example": "मेरा नाम प्रिया है। आपसे मिलकर खुशी हुई।"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most common greeting in Hindi?",
+          "options": [
+            "नमस्ते",
+            "धन्यवाद",
+            "कृपया",
+            "अलविदा"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How would you ask \"How are you?\" to a male in a formal way?",
+          "options": [
+            "आप कौन हैं?",
+            "आप कैसे हैं?",
+            "आप कहाँ हैं?",
+            "आप क्या कर रहे हैं?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"I am fine, thank you\" in Hindi?",
+          "options": [
+            "मैं ठीक हूँ, धन्यवाद।",
+            "मैं बुरा हूँ, धन्यवाद।",
+            "मैं खुश हूँ, धन्यवाद।",
+            "मैं उदास हूँ, धन्यवाद।"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How would you say \"My name is [name]\"?",
+          "options": [
+            "आपका नाम ... है।",
+            "मेरा नाम ... है।",
+            "उसका नाम ... है।",
+            "हमारा नाम ... है।"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "नमस्ते! आज हम हिंदी में कुछ बुनियादी अभिवादन और परिचय सीखेंगे। यह बहुत मज़ेदार होगा! हम 'नमस्ते' (Hello), 'आप कैसे हैं?' (How are you?), और 'मेरा नाम ... है।' (My name is...) जैसे वाक्यांशों पर ध्यान देंगे। मैं प्रत्येक वाक्यांश को स्पष्ट रूप से बोलूँगा/बोलूँगी, और आप मेरे बाद दोहरा सकते हैं। फिर हम इन वाक्यांशों का उपयोग करके छोटी-छोटी बातचीत का अभ्यास करेंगे। क्या आप तैयार हैं? तो, आइए 'नमस्ते' से शुरू करें!"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्ते",
+          "phonetic": "Namaste",
+          "meaning": "Hello/Hi",
+          "example": "नमस्ते, आप कैसे हैं?"
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyavaad",
+          "meaning": "Thank you",
+          "example": "आपकी मदद के लिए धन्यवाद।"
+        },
+        {
+          "word": "कृपया",
+          "phonetic": "Kripaya",
+          "meaning": "Please",
+          "example": "कृपया मुझे पानी दीजिए।"
+        },
+        {
+          "word": "हाँ",
+          "phonetic": "Haan",
+          "meaning": "Yes",
+          "example": "क्या आप हिंदी बोलते हैं? हाँ, मैं बोलता हूँ।"
+        },
+        {
+          "word": "नहीं",
+          "phonetic": "Nahin",
+          "meaning": "No",
+          "example": "क्या आप थके हुए हैं? नहीं, मैं नहीं हूँ।"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Hi\" in Hindi?",
+          "options": [
+            "नमस्ते",
+            "धन्यवाद",
+            "कृपया",
+            "हाँ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Hindi word means \"Thank you\"?",
+          "options": [
+            "नहीं",
+            "हाँ",
+            "धन्यवाद",
+            "नमस्ते"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does the Hindi word \"कृपया\" mean in English?",
+          "options": [
+            "Yes",
+            "No",
+            "Please",
+            "Hello"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say \"Yes\" in Hindi?",
+          "options": [
+            "नहीं",
+            "हाँ",
+            "कृपया",
+            "धन्यवाद"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "नमस्ते! आज हम कुछ बहुत ही उपयोगी हिंदी शब्द सीखेंगे। हम 'नमस्ते' (Hello), 'धन्यवाद' (Thank you), 'कृपया' (Please), 'हाँ' (Yes), और 'नहीं' (No) जैसे शब्दों पर ध्यान देंगे। मैं इन शब्दों को बोलूँगा और उनके उदाहरण दूँगा। आप मेरे बाद दोहराने का प्रयास करें और फिर हम इन्हें कुछ वाक्यों में उपयोग करेंगे। चलो शुरू करते हैं!"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्ते",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Hi (a respectful greeting used at any time of day)",
+          "example": "नमस्ते, आप कैसे हैं?"
+        },
+        {
+          "word": "आप कैसे हैं?",
+          "phonetic": "Aap kaise hain?",
+          "meaning": "How are you? (formal)",
+          "example": "नमस्ते, मैं ठीक हूँ। आप कैसे हैं?"
+        },
+        {
+          "word": "मैं ठीक हूँ",
+          "phonetic": "Main theek hoon",
+          "meaning": "I am good / I am fine",
+          "example": "मैं ठीक हूँ, धन्यवाद।"
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyavaad",
+          "meaning": "Thank you",
+          "example": "मदद के लिए धन्यवाद।"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Hindi?",
+          "options": [
+            "धन्यवाद",
+            "नमस्ते",
+            "मैं ठीक हूँ",
+            "आप कैसे हैं?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does the Hindi phrase \"आप कैसे हैं?\" mean in English?",
+          "options": [
+            "I am good.",
+            "Thank you.",
+            "How are you?",
+            "Yes."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Hindi phrase for \"I am good.\"",
+          "options": [
+            "आप कैसे हैं?",
+            "नमस्ते",
+            "मैं ठीक हूँ",
+            "धन्यवाद"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "नमस्ते! आपकी हिन्दी की क्लास में आपका स्वागत है। आज हम कुछ सामान्य अभिवादन सीखेंगे। हम 'नमस्ते', 'आप कैसे हैं?' और 'मैं ठीक हूँ' जैसे वाक्यांशों का अभ्यास करेंगे। चलिए 'नमस्ते' से शुरू करते हैं। 'नमस्ते' का अर्थ है 'Hello' या 'Hi'। क्या आप 'नमस्ते' कहने की कोशिश कर सकते हैं?"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्ते",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Hi (a respectful greeting)",
+          "example": "नमस्ते, आप कैसे हैं?"
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyavaad",
+          "meaning": "Thank you",
+          "example": "आपके मदद के लिए धन्यवाद।"
+        },
+        {
+          "word": "हाँ",
+          "phonetic": "Haan",
+          "meaning": "Yes",
+          "example": "क्या आप ठीक हैं? हाँ, मैं ठीक हूँ।"
+        },
+        {
+          "word": "नहीं",
+          "phonetic": "Nahin",
+          "meaning": "No",
+          "example": "क्या आप भूखे हैं? नहीं, मैं भूखा नहीं हूँ।"
+        },
+        {
+          "word": "कृपया",
+          "phonetic": "Kripya",
+          "meaning": "Please",
+          "example": "कृपया मेरी मदद करें।"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Hindi?",
+          "options": [
+            "नमस्ते",
+            "धन्यवाद",
+            "हाँ",
+            "नहीं"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does \"धन्यवाद\" mean?",
+          "options": [
+            "Yes",
+            "No",
+            "Thank you",
+            "Please"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"Yes\"?",
+          "options": [
+            "नहीं",
+            "हाँ",
+            "कृपया",
+            "नमस्ते"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"Please help me\" in Hindi?",
+          "options": [
+            "नमस्ते मेरी मदद करें",
+            "धन्यवाद मेरी मदद करें",
+            "हाँ मेरी मदद करें",
+            "कृपया मेरी मदद करें"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "नमस्ते! आपकी हिंदी पाठ में आपका स्वागत है! आज हम कुछ सामान्य हिंदी अभिवादन और उपयोगी वाक्यांश सीखेंगे। हम 'नमस्ते' (Namaste), 'धन्यवाद' (Dhanyavaad), 'हाँ' (Haan), 'नहीं' (Nahin), और 'कृपया' (Kripya) जैसे शब्दों को कवर करेंगे। आइए उनका उच्चारण करने और उन्हें वाक्यों में उपयोग करने का अभ्यास करें। अंत तक, आप लोगों का अभिवादन करने, आभार व्यक्त करने और हिंदी में सरलता से जवाब देने में सक्षम होंगे। क्या आप तैयार हैं?"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ज़रूरी",
+          "phonetic": "zaroori",
+          "meaning": "important",
+          "example": "यह काम बहुत ज़रूरी है।"
+        },
+        {
+          "word": "शायद",
+          "phonetic": "shaayad",
+          "meaning": "perhaps, maybe",
+          "example": "शायद वह आज नहीं आएगा।"
+        },
+        {
+          "word": "कोशिश करना",
+          "phonetic": "koshish karnaa",
+          "meaning": "to try",
+          "example": "मुझे हिंदी सीखने की कोशिश करनी चाहिए।"
+        },
+        {
+          "word": "लगभग",
+          "phonetic": "lagbhag",
+          "meaning": "approximately, almost",
+          "example": "हम लगभग एक घंटे में पहुँच जाएँगे।"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Hindi word means \"important\"?",
+          "options": [
+            "सुंदर",
+            "ज़रूरी",
+            "आसान",
+            "मुश्किल"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Hindi word for \"maybe\".",
+          "options": [
+            "हमेशा",
+            "कभी-कभी",
+            "शायद",
+            "अक्सर"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say \"to try\" in Hindi?",
+          "options": [
+            "सोचना",
+            "देखना",
+            "कोशिश करना",
+            "पूछना"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which sentence correctly uses \"लगभग\" (approximately)?",
+          "options": [
+            "मैं लगभग खुश हूँ।",
+            "यह लगभग पाँच बजे है।",
+            "वह लगभग दौड़ता है।",
+            "हम लगभग खाते हैं।"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "नमस्ते! आज की क्लास में आपका स्वागत है! इस पाठ में, हम कुछ बहुत ही उपयोगी हिंदी शब्द सीखेंगे जो आपकी बातचीत को और भी बेहतर बनाएंगे। हम 'ज़रूरी' (important), 'शायद' (maybe), 'कोशिश करना' (to try), और 'लगभग' (approximately) जैसे शब्दों पर ध्यान देंगे। मैं आपको इन शब्दों का सही उच्चारण और उपयोग सिखाऊंगा, और हम इन्हें वाक्यों में कैसे इस्तेमाल करते हैं, यह भी देखेंगे। क्या आप तैयार हैं? चलिए शुरू करते हैं!"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्ते",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Greetings",
+          "example": "नमस्ते, आप कैसे हैं?"
+        },
+        {
+          "word": "आप कैसे हैं?",
+          "phonetic": "Aap kaise hain?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "मैं ठीक हूँ, आप कैसे हैं?"
+        },
+        {
+          "word": "मैं ठीक हूँ।",
+          "phonetic": "Main theek hoon.",
+          "meaning": "I am fine.",
+          "example": "नमस्ते! मैं ठीक हूँ।"
+        },
+        {
+          "word": "आपका नाम क्या है?",
+          "phonetic": "Aapka naam kya hai?",
+          "meaning": "What is your name? (formal)",
+          "example": "मेरा नाम राहुल है। आपका नाम क्या है?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Hindi?",
+          "options": [
+            "नमस्ते",
+            "धन्यवाद",
+            "अलविदा",
+            "शुभ प्रभात"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which phrase means \"How are you?\" (formal) in Hindi?",
+          "options": [
+            "आप कौन हैं?",
+            "आप कैसे हैं?",
+            "आप कहाँ हैं?",
+            "आप क्या कर रहे हैं?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you respond with \"I am fine.\" in Hindi?",
+          "options": [
+            "मैं ठीक नहीं हूँ।",
+            "मैं ठीक हूँ।",
+            "मैं खुश हूँ।",
+            "मैं व्यस्त हूँ।"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you ask \"What is your name?\" (formal) in Hindi?",
+          "options": [
+            "आप कहाँ से हैं?",
+            "आप क्या करते हैं?",
+            "आपका नाम क्या है?",
+            "आप कितने साल के हैं?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "नमस्ते! आपकी हिंदी पाठ में आपका स्वागत है। (Namaste! Aapki Hindi paath mein aapka swagat hai.) Today, we're going to learn some essential Hindi greetings and introductions. We'll cover new vocabulary words like 'नमस्ते' (Namaste - Hello), 'आप कैसे हैं?' (Aap kaise hain? - How are you?), 'मैं ठीक हूँ।' (Main theek hoon. - I am fine.), and 'आपका नाम क्या है?' (Aapka naam kya hai? - What is your name?). We'll practice using these phrases in simple conversations. By the end of this lesson, you'll be able to greet people and introduce yourself in Hindi. चलो शुरू करते हैं! (Chalo shuru karte hain! - Let's get started!)"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्ते",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Greetings",
+          "example": "नमस्ते! आप कैसे हैं?"
+        },
+        {
+          "word": "धन्यवाद",
+          "phonetic": "Dhanyavaad",
+          "meaning": "Thank you",
+          "example": "आपके मदद के लिए धन्यवाद।"
+        },
+        {
+          "word": "हाँ",
+          "phonetic": "Haan",
+          "meaning": "Yes",
+          "example": "हाँ, मैं तैयार हूँ।"
+        },
+        {
+          "word": "नहीं",
+          "phonetic": "Nahin",
+          "meaning": "No",
+          "example": "नहीं, यह मेरा नहीं है।"
+        },
+        {
+          "word": "कृपया",
+          "phonetic": "Kripya",
+          "meaning": "Please",
+          "example": "कृपया, मेरी मदद करें।"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Greetings\" in Hindi?",
+          "options": [
+            "धन्यवाद",
+            "नमस्ते",
+            "हाँ",
+            "नहीं"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Hindi word for \"Thank you\"?",
+          "options": [
+            "हाँ",
+            "नहीं",
+            "धन्यवाद",
+            "कृपया"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Hindi word for \"Yes\".",
+          "options": [
+            "नहीं",
+            "हाँ",
+            "कृपया",
+            "नमस्ते"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Hindi word means \"No\"?",
+          "options": [
+            "हाँ",
+            "नमस्ते",
+            "नहीं",
+            "धन्यवाद"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"कृपया\" mean in English?",
+          "options": [
+            "Thank you",
+            "Yes",
+            "No",
+            "Please"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "नमस्ते! इस पाठ में, हम हिंदी के कुछ बहुत ही उपयोगी और सामान्य शब्द सीखेंगे। हम 'नमस्ते' (Hello), 'धन्यवाद' (Thank you), 'हाँ' (Yes), 'नहीं' (No), और 'कृपया' (Please) जैसे शब्दों पर ध्यान देंगे। मैं इन शब्दों को बोलूँगा/बोलूँगी और उनके अर्थ समझाऊँगा/समझाऊँगी। फिर आप मेरे बाद दोहराने का अभ्यास कर सकते हैं। क्या आप तैयार हैं? आइए 'नमस्ते' से शुरू करें। 'नमस्ते' का अर्थ है 'Hello' या 'Greetings'। अब आप कोशिश करें, 'नमस्ते'।"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "नमस्ते",
+          "phonetic": "namaste",
+          "meaning": "Hello / Greetings",
+          "example": "नमस्ते! आप कैसे हैं?"
+        },
+        {
+          "word": "आप कैसे हैं?",
+          "phonetic": "aap kaise hain?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "नमस्ते, राहुल। आप कैसे हैं?"
+        },
+        {
+          "word": "मैं ठीक हूँ।",
+          "phonetic": "main theek hoon.",
+          "meaning": "I am fine.",
+          "example": "मैं ठीक हूँ, धन्यवाद।"
+        },
+        {
+          "word": "मेरा नाम... है।",
+          "phonetic": "mera naam... hai.",
+          "meaning": "My name is...",
+          "example": "मेरा नाम प्रिया है।"
+        },
+        {
+          "word": "आपका नाम क्या है?",
+          "phonetic": "aapka naam kya hai?",
+          "meaning": "What is your name? (formal/plural)",
+          "example": "नमस्ते। आपका नाम क्या है?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Hindi?",
+          "options": [
+            "नमस्ते",
+            "धन्यवाद",
+            "हाँ",
+            "नहीं"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does \"आप कैसे हैं?\" mean?",
+          "options": [
+            "What is your name?",
+            "How are you?",
+            "Where are you from?",
+            "I am fine."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"My name is [name]\" in Hindi?",
+          "options": [
+            "मेरा नाम... है।",
+            "आपका नाम क्या है?",
+            "मैं ठीक हूँ।",
+            "धन्यवाद।"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "नमस्ते! आपकी पहली हिंदी क्लास में आपका स्वागत है! आज हम कुछ बुनियादी अभिवादन और अपना परिचय देना सीखेंगे। हम 'नमस्ते' से शुरुआत करेंगे, जिसका मतलब है 'Hello' या 'Greetings'। क्या आप 'नमस्ते' कहने की कोशिश करेंगे? बहुत अच्छे! अब, 'मेरा नाम... है।' का मतलब है 'My name is...'. उदाहरण के लिए, 'मेरा नाम प्रिया है।'। क्या आप अपना नाम बताकर 'मेरा नाम... है।' कहने की कोशिश करेंगे? बहुत बढ़िया! हम इस पाठ में इनका और अभ्यास करेंगे।"
+    }
+  ]
+}

@@ -1,0 +1,1357 @@
+{
+  "langCode": "bg-BG",
+  "langLabel": "Bulgarian",
+  "langNative": "Български",
+  "generatedAt": "2026-03-15T06:13:57.772Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравейте",
+          "phonetic": "Zdraveyte",
+          "meaning": "Hello (formal/plural)",
+          "example": "Здравейте, как сте?"
+        },
+        {
+          "word": "Здравей",
+          "phonetic": "Zdravey",
+          "meaning": "Hello (informal/singular)",
+          "example": "Здравей, как си?"
+        },
+        {
+          "word": "Добро утро",
+          "phonetic": "Dobro utro",
+          "meaning": "Good morning",
+          "example": "Добро утро на всички!"
+        },
+        {
+          "word": "Благодаря",
+          "phonetic": "Blagodarya",
+          "meaning": "Thank you",
+          "example": "Благодаря за помощта!"
+        },
+        {
+          "word": "Моля",
+          "phonetic": "Molya",
+          "meaning": "Please / You're welcome",
+          "example": "Моля, седнете."
+        },
+        {
+          "word": "Да",
+          "phonetic": "Da",
+          "meaning": "Yes",
+          "example": "Да, разбира се."
+        },
+        {
+          "word": "Не",
+          "phonetic": "Ne",
+          "meaning": "No",
+          "example": "Не, благодаря."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal or to a group) in Bulgarian?",
+          "options": [
+            "Здравей",
+            "Добро утро",
+            "Здравейте",
+            "Благодаря"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"Thank you\" in Bulgarian?",
+          "options": [
+            "Моля",
+            "Да",
+            "Не",
+            "Благодаря"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "What does \"Добро утро\" mean?",
+          "options": [
+            "Good evening",
+            "Good morning",
+            "Good afternoon",
+            "Good night"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Здравейте! Добре дошли в първия си урок по български език. Днес ще започнем с някои основни поздрави, които ще ви помогнат да общувате в България. Първата дума, която ще научим, е \"Здравейте\". Това е официалният начин да кажете \"Hello\" или да поздравите група хора. Можете ли да опитате да кажете \"Здравейте\"?"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравейте",
+          "phonetic": "Zdra-vey-teh",
+          "meaning": "Hello (formal/plural)",
+          "example": "Здравейте, как сте?"
+        },
+        {
+          "word": "Довиждане",
+          "phonetic": "Do-vee-zh-dah-neh",
+          "meaning": "Goodbye",
+          "example": "Довиждане, до утре!"
+        },
+        {
+          "word": "Моля",
+          "phonetic": "Moh-lya",
+          "meaning": "Please / You're welcome",
+          "example": "Моля, седнете."
+        },
+        {
+          "word": "Благодаря",
+          "phonetic": "Blah-goh-dah-rya",
+          "meaning": "Thank you",
+          "example": "Благодаря за помощта!"
+        },
+        {
+          "word": "Да",
+          "phonetic": "Dah",
+          "meaning": "Yes",
+          "example": "Да, разбира се."
+        },
+        {
+          "word": "Не",
+          "phonetic": "Neh",
+          "meaning": "No",
+          "example": "Не, не искам."
+        },
+        {
+          "word": "Извинете",
+          "phonetic": "Eez-vee-neh-teh",
+          "meaning": "Excuse me / Sorry (formal/plural)",
+          "example": "Извинете, къде е тоалетната?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal or plural) in Bulgarian?",
+          "options": [
+            "Довиждане",
+            "Благодаря",
+            "Здравейте",
+            "Моля"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Bulgarian word means \"Thank you\"?",
+          "options": [
+            "Да",
+            "Не",
+            "Благодаря",
+            "Извинете"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct translation for \"Yes\".",
+          "options": [
+            "Не",
+            "Да",
+            "Моля",
+            "Довиждане"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Bulgarian equivalent for \"Excuse me\" or \"Sorry\" (formal)?",
+          "options": [
+            "Благодаря",
+            "Извинете",
+            "Здравейте",
+            "Не"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Здравейте! Днес ще научим някои основни български думи и фрази. Аз ще казвам всяка дума или фраза, а вие ще я повтаряте. След това ще я използваме в кратко изречение. Ще започнем с поздрави, учтиви изрази и основни утвърждения. Готови ли сте да започнем с 'Здравейте' (Hello)?"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравейте",
+          "phonetic": "ZDRA-vey-teh",
+          "meaning": "Hello (formal/plural)",
+          "example": "Здравейте, как сте?"
+        },
+        {
+          "word": "Добро утро",
+          "phonetic": "doh-BROH OO-troh",
+          "meaning": "Good morning",
+          "example": "Добро утро на всички!"
+        },
+        {
+          "word": "Как сте?",
+          "phonetic": "kak steh?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "Здравейте, госпожо Петрова, как сте?"
+        },
+        {
+          "word": "Добре съм.",
+          "phonetic": "doh-BREH suhm",
+          "meaning": "I am fine.",
+          "example": "Добре съм, благодаря."
+        },
+        {
+          "word": "Благодаря.",
+          "phonetic": "blah-goh-DAH-ryah",
+          "meaning": "Thank you.",
+          "example": "Благодаря за помощта!"
+        },
+        {
+          "word": "Довиждане.",
+          "phonetic": "doh-VEEZH-dah-neh",
+          "meaning": "Goodbye.",
+          "example": "Довиждане и до скоро!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does \"Здравейте\" mean?",
+          "options": [
+            "Good morning",
+            "Goodbye",
+            "Hello",
+            "Thank you"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Good morning\" in Bulgarian?",
+          "options": [
+            "Добър ден",
+            "Добро утро",
+            "Лека нощ",
+            "Здравейте"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"How are you?\" (formal/plural) in Bulgarian?",
+          "options": [
+            "Как си?",
+            "Какво правиш?",
+            "Как сте?",
+            "Кой си?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"Как сте?\", how might you reply that you are fine?",
+          "options": [
+            "Аз съм добре",
+            "Добре съм",
+            "Аз съм добре съм",
+            "Добре"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Bulgarian word for \"Thank you\"?",
+          "options": [
+            "Моля",
+            "Извинете",
+            "Благодаря",
+            "Довиждане"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"Goodbye\" in Bulgarian?",
+          "options": [
+            "Здравейте",
+            "Довиждане",
+            "Добър ден",
+            "Лека нощ"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Здравейте! Добре дошли в първия ни урок по български език. Днес ще научим някои основни поздрави и фрази за запознанство. Ще започнем с \"Здравейте\", което означава \"Hello\" (formal/plural). След това ще разгледаме \"Добро утро\" за \"Good morning\", \"Как сте?\" за \"How are you?\" (formal/plural), \"Добре съм.\" за \"I am fine.\", \"Благодаря.\" за \"Thank you.\" и \"Довиждане.\" за \"Goodbye.\". Готови ли сте да започнем?"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравейте",
+          "phonetic": "ZDRA-vey-te",
+          "meaning": "Hello (formal/plural)",
+          "example": "Здравейте, как сте?"
+        },
+        {
+          "word": "Аз съм",
+          "phonetic": "Az sum",
+          "meaning": "I am",
+          "example": "Аз съм Мария."
+        },
+        {
+          "word": "Приятно ми е",
+          "phonetic": "PREE-yat-no mee e",
+          "meaning": "Nice to meet you",
+          "example": "Приятно ми е да се запознаем."
+        },
+        {
+          "word": "Довиждане",
+          "phonetic": "Do-VEEZH-da-ne",
+          "meaning": "Goodbye",
+          "example": "Довиждане, до скоро!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal or plural) in Bulgarian?",
+          "options": [
+            "Здравей",
+            "Здравейте",
+            "Довиждане",
+            "Как си?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you introduce yourself by saying \"I am [Name]\"?",
+          "options": [
+            "Как си?",
+            "Приятно ми е.",
+            "Аз съм.",
+            "Довиждане."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What do you say when you meet someone for the first time?",
+          "options": [
+            "Довиждане.",
+            "Как сте?",
+            "Приятно ми е.",
+            "Здравей."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor teaching Bulgarian. This lesson covers basic greetings and introductions.\n1.  **Greeting:** Start by saying \"Здравейте!\" (Hello!) and \"Как сте?\" (How are you?).\n2.  **Vocabulary Introduction:**\n    *   Introduce \"Здравейте\" (Hello - formal/plural). Explain its use and provide the example: \"Здравейте, как сте?\" Ask the learner to repeat.\n    *   Introduce \"Аз съм\" (I am). Explain how to use it for self-introduction, e.g., \"Аз съм [learner's name].\" Ask the learner to introduce themselves.\n    *   Introduce \"Приятно ми е\" (Nice to meet you). Explain its usage and provide the example: \"Приятно ми е да се запознаем.\" Encourage the learner to use it.\n    *   Introduce \"Довиждане\" (Goodbye). Provide the example: \"Довиждане, до скоро!\"\n3.  **Practice & Reinforcement:** Encourage the learner to practice pronunciation and use the phrases in simple exchanges. Ask them to try a short conversation using the new vocabulary.\n4.  **Closing:** End the lesson by saying \"Довиждане!\"."
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравейте",
+          "phonetic": "Zdraveyte",
+          "meaning": "Hello",
+          "example": "Здравейте, как сте?"
+        },
+        {
+          "word": "Как сте?",
+          "phonetic": "Kak ste?",
+          "meaning": "How are you?",
+          "example": "Здравейте, как сте днес?"
+        },
+        {
+          "word": "Добре съм.",
+          "phonetic": "Dobre sum.",
+          "meaning": "I am fine.",
+          "example": "Добре съм, благодаря."
+        },
+        {
+          "word": "Благодаря.",
+          "phonetic": "Blagodarya.",
+          "meaning": "Thank you.",
+          "example": "Благодаря за помощта."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Bulgarian?",
+          "options": [
+            "Довиждане",
+            "Здравейте",
+            "Моля",
+            "Благодаря"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"How are you?\" in Bulgarian?",
+          "options": [
+            "Добре съм",
+            "Благодаря",
+            "Как сте?",
+            "Моля"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you respond with \"I am fine\" in Bulgarian?",
+          "options": [
+            "Здравейте",
+            "Добре съм",
+            "Благодаря",
+            "Довиждане"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Bulgarian word for \"Thank you\"?",
+          "options": [
+            "Моля",
+            "Как сте?",
+            "Благодаря",
+            "Довиждане"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Здравейте! Днес ще научим някои основни поздрави на български език. Ще започнем с \"Здравейте\" (Hello). Можете ли да повторите след мен? След това ще научим как да попитаме \"Как сте?\" (How are you?) и как да отговорим \"Добре съм\" (I am fine). Накрая ще добавим и \"Благодаря\" (Thank you). Готови ли сте да започнем?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравейте",
+          "phonetic": "Zdraveyte",
+          "meaning": "Hello (formal/plural)",
+          "example": "Здравейте, как сте?"
+        },
+        {
+          "word": "Довиждане",
+          "phonetic": "Dovizhdane",
+          "meaning": "Goodbye",
+          "example": "Довиждане, до скоро!"
+        },
+        {
+          "word": "Моля",
+          "phonetic": "Molya",
+          "meaning": "Please / You're welcome",
+          "example": "Моля, помогнете ми."
+        },
+        {
+          "word": "Благодаря",
+          "phonetic": "Blagodarya",
+          "meaning": "Thank you",
+          "example": "Благодаря за помощта!"
+        },
+        {
+          "word": "Да",
+          "phonetic": "Da",
+          "meaning": "Yes",
+          "example": "Да, разбирам."
+        },
+        {
+          "word": "Не",
+          "phonetic": "Ne",
+          "meaning": "No",
+          "example": "Не, не искам."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Bulgarian word for \"Hello\" (formal/plural)?",
+          "options": [
+            "Довиждане",
+            "Моля",
+            "Здравейте",
+            "Благодаря"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Bulgarian?",
+          "options": [
+            "Не",
+            "Да",
+            "Моля",
+            "Благодаря"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "Choose the correct Bulgarian word for \"Yes\".",
+          "options": [
+            "Не",
+            "Да",
+            "Моля",
+            "Довиждане"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"Goodbye\" in Bulgarian?",
+          "options": [
+            "Здравейте",
+            "Моля",
+            "Довиждане",
+            "Благодаря"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Здравейте! Аз съм вашият AI учител по български език. В този урок ще научим някои основни български поздрави и учтиви фрази. Ще разгледаме думи като \"Здравейте\" (Hello), \"Довиждане\" (Goodbye), \"Моля\" (Please/You're welcome) и \"Благодаря\" (Thank you). Аз ще казвам всяка дума, а вие можете да практикувате да я повтаряте. Ще ги използваме и в прости изречения. Нека започнем със \"Здравейте\". Можете ли да опитате да кажете \"Здравейте\"?"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравейте!",
+          "phonetic": "Zdraveyte!",
+          "meaning": "Hello! (formal/plural)",
+          "example": "Здравейте! Как сте днес?"
+        },
+        {
+          "word": "Как сте?",
+          "phonetic": "Kak ste?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "Здравейте, Мария! Как сте?"
+        },
+        {
+          "word": "Добре съм.",
+          "phonetic": "Dobre sum.",
+          "meaning": "I am well. / I am fine.",
+          "example": "Добре съм, благодаря."
+        },
+        {
+          "word": "Благодаря.",
+          "phonetic": "Blagodarya.",
+          "meaning": "Thank you.",
+          "example": "Благодаря за помощта!"
+        },
+        {
+          "word": "А вие?",
+          "phonetic": "A vie?",
+          "meaning": "And you? (formal/plural)",
+          "example": "Добре съм, благодаря. А вие?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello!\" (formal/plural) in Bulgarian?",
+          "options": [
+            "Довиждане",
+            "Здравейте",
+            "Моля",
+            "Извинете"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to \"Как сте?\" if you are well?",
+          "options": [
+            "Довиждане",
+            "Добре съм",
+            "Моля",
+            "Благодаря"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you.\" in Bulgarian?",
+          "options": [
+            "Моля",
+            "Извинете",
+            "Благодаря",
+            "Довиждане"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"Как сте?\" and you reply \"Добре съм, благодаря.\", what would you ask next to return the question?",
+          "options": [
+            "Довиждане?",
+            "Моля?",
+            "А вие?",
+            "Извинете?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Чудесна работа! Днес ще научим някои основни български поздрави и фрази. Ще разгледаме как да казваме \"Здравейте!\", да питаме \"Как сте?\" и да отговаряме, че сме \"Добре съм.\". Ще научим също как да казваме \"Благодаря.\" и да питаме \"А вие?\". Нека започнем със \"Здравейте!\". Ще го кажа аз, а вие повторете след мен. След това ще научим \"Как сте?\". След това ще упражним отговора с \"Добре съм.\" и \"Благодаря.\". И накрая ще добавим \"А вие?\". Ще ви напътствам през всяка фраза, ще давам примери и ще проведем кратък разговор. Готови ли сте да започнем?"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравейте!",
+          "phonetic": "Zdra-VEY-te!",
+          "meaning": "Hello! (formal/plural)",
+          "example": "Здравейте! Как сте?"
+        },
+        {
+          "word": "Как сте?",
+          "phonetic": "Kak ste?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "Здравейте, госпожо Петрова! Как сте?"
+        },
+        {
+          "word": "Добре съм.",
+          "phonetic": "Do-BREh sum.",
+          "meaning": "I am well.",
+          "example": "Аз съм добре. Благодаря!"
+        },
+        {
+          "word": "Моля.",
+          "phonetic": "MOH-lya.",
+          "meaning": "Please. / You're welcome.",
+          "example": "Моля, седнете. / Благодаря! Моля."
+        },
+        {
+          "word": "Благодаря.",
+          "phonetic": "Bla-go-da-RYA.",
+          "meaning": "Thank you.",
+          "example": "Благодаря за помощта!"
+        },
+        {
+          "word": "Аз съм...",
+          "phonetic": "Az sum...",
+          "meaning": "I am...",
+          "example": "Аз съм Мария."
+        },
+        {
+          "word": "Ти си...",
+          "phonetic": "Ti si...",
+          "meaning": "You are... (informal singular)",
+          "example": "Ти си студент."
+        },
+        {
+          "word": "Довиждане!",
+          "phonetic": "Do-vee-ZHDA-ne!",
+          "meaning": "Goodbye!",
+          "example": "Довиждане! До скоро!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal/plural) in Bulgarian?",
+          "options": [
+            "Здравейте",
+            "Довиждане",
+            "Моля",
+            "Благодаря"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which phrase means \"How are you?\" (formal/plural)?",
+          "options": [
+            "Добре съм.",
+            "Как сте?",
+            "Аз съм...",
+            "Ти си..."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Translate \"Thank you\" into Bulgarian.",
+          "options": [
+            "Моля.",
+            "Добре съм.",
+            "Благодаря.",
+            "Довиждане!"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Fill in the blank: \"____ съм.\" (I am well.)",
+          "options": [
+            "Моля",
+            "Благодаря",
+            "Добре",
+            "Здравейте"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say \"I am [your name]\" in Bulgarian?",
+          "options": [
+            "Ти си...",
+            "Аз съм...",
+            "Как сте?",
+            "Довиждане!"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "You are a friendly Bulgarian language tutor. Your goal is to teach the student basic greetings and self-introduction in Bulgarian. Start by greeting the student with \"Здравейте!\" and ask \"Как сте?\". Introduce the phrase \"Добре съм.\" and explain its meaning. Then, introduce \"Моля.\" and \"Благодаря.\" with examples of their usage. Next, teach the structure \"Аз съм...\" for self-introduction, encouraging the student to say \"Аз съм [тяхното име].\" (I am [their name]). Briefly introduce \"Ти си...\" for informal singular \"you are\". Conclude the lesson by practicing \"Довиждане!\". Throughout the lesson, use the Bulgarian phrases and encourage the student to repeat and practice. Provide positive reinforcement."
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравейте",
+          "phonetic": "Zdraveite",
+          "meaning": "Hello (formal/plural)",
+          "example": "Здравейте, как сте?"
+        },
+        {
+          "word": "Здрасти",
+          "phonetic": "Zdrasti",
+          "meaning": "Hi (informal)",
+          "example": "Здрасти, какво правиш?"
+        },
+        {
+          "word": "Добро утро",
+          "phonetic": "Dobro utro",
+          "meaning": "Good morning",
+          "example": "Добро утро на всички!"
+        },
+        {
+          "word": "Как си?",
+          "phonetic": "Kak si?",
+          "meaning": "How are you? (informal)",
+          "example": "Здрасти, как си?"
+        },
+        {
+          "word": "Добре съм.",
+          "phonetic": "Dobre sŭm.",
+          "meaning": "I am fine.",
+          "example": "Добре съм, благодаря."
+        },
+        {
+          "word": "Благодаря.",
+          "phonetic": "Blagodarya.",
+          "meaning": "Thank you.",
+          "example": "Благодаря за помощта!"
+        },
+        {
+          "word": "Довиждане.",
+          "phonetic": "Dovizhdane.",
+          "meaning": "Goodbye.",
+          "example": "Довиждане и до скоро!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal/plural) in Bulgarian?",
+          "options": [
+            "Здрасти",
+            "Добро утро",
+            "Здравейте",
+            "Довиждане"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct Bulgarian phrase for \"Good morning\"?",
+          "options": [
+            "Добър ден",
+            "Добър вечер",
+            "Добро утро",
+            "Лека нощ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you respond to \"Как си?\" (How are you?) if you are fine?",
+          "options": [
+            "Благодаря",
+            "Довиждане",
+            "Добре съм",
+            "Здрасти"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Здравейте! Днес ще научим някои често срещани български поздрави. Ще разгледаме \"Здравейте\", \"Добро утро\" и \"Как си?\". Аз ще казвам всяка фраза, а вие можете да повтаряте след мен. Нека започнем със \"Здравейте\"."
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравейте",
+          "phonetic": "Zdraveyte",
+          "meaning": "Hello (formal/plural)",
+          "example": "Здравейте, как сте?"
+        },
+        {
+          "word": "Благодаря",
+          "phonetic": "Blagodarya",
+          "meaning": "Thank you",
+          "example": "Благодаря за помощта!"
+        },
+        {
+          "word": "Моля",
+          "phonetic": "Molya",
+          "meaning": "Please / You're welcome",
+          "example": "Моля, седнете."
+        },
+        {
+          "word": "Да",
+          "phonetic": "Da",
+          "meaning": "Yes",
+          "example": "Да, разбира се."
+        },
+        {
+          "word": "Не",
+          "phonetic": "Ne",
+          "meaning": "No",
+          "example": "Не, благодаря."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal/plural) in Bulgarian?",
+          "options": [
+            "Благодаря",
+            "Моля",
+            "Здравейте",
+            "Да"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Bulgarian word means \"Thank you\"?",
+          "options": [
+            "Не",
+            "Благодаря",
+            "Моля",
+            "Да"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Здравейте! Аз съм вашият AI учител за днес. Добре дошли в урока по български език! Днес ще научим някои основни български фрази, които ще ви помогнат да започнете да общувате. Ще се фокусираме върху поздрави, учтиви изрази и основни отговори. Слушайте внимателно и се опитайте да повтаряте след мен. Нека започнем с \"Hello\" на български: Здравейте! Можете ли да опитате да кажете това?"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравейте",
+          "phonetic": "Zdraveyte",
+          "meaning": "Hello (formal/plural)",
+          "example": "Здравейте, как сте?"
+        },
+        {
+          "word": "Как сте?",
+          "phonetic": "Kak ste?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "Здравейте, господине, как сте?"
+        },
+        {
+          "word": "Добре съм, благодаря.",
+          "phonetic": "Dobre sum, blagodarya.",
+          "meaning": "I am fine, thank you.",
+          "example": "Добре съм, благодаря. А вие?"
+        },
+        {
+          "word": "А вие?",
+          "phonetic": "A vie?",
+          "meaning": "And you? (formal/plural)",
+          "example": "Добре съм, благодаря. А вие?"
+        },
+        {
+          "word": "Добро утро",
+          "phonetic": "Dobro utro",
+          "meaning": "Good morning",
+          "example": "Добро утро! Как сте днес?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal/plural) in Bulgarian?",
+          "options": [
+            "Здравейте",
+            "Довиждане",
+            "Моля",
+            "Благодаря"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct response to \"Как сте?\" if you are fine?",
+          "options": [
+            "Аз съм",
+            "Добре съм, благодаря.",
+            "Моля.",
+            "Довиждане."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you ask \"And you?\" (formal/plural) in Bulgarian?",
+          "options": [
+            "Как сте?",
+            "Кой сте?",
+            "А вие?",
+            "Къде сте?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct greeting for the morning.",
+          "options": [
+            "Добър вечер",
+            "Добър ден",
+            "Добро утро",
+            "Лека нощ"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Здравейте! Аз съм вашият AI учител. Днес ще се потопим в света на българските поздрави и основни фрази. Ще научим как да казваме \"Здравейте\", \"Как сте?\" и как да отговаряме. Готови ли сте да разгледаме новите думи и изрази в секцията \"Речник\"?"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "книга",
+          "phonetic": "kniga",
+          "meaning": "book",
+          "example": "Аз чета книга."
+        },
+        {
+          "word": "маса",
+          "phonetic": "masa",
+          "meaning": "table",
+          "example": "Това е голяма маса."
+        },
+        {
+          "word": "стол",
+          "phonetic": "stol",
+          "meaning": "chair",
+          "example": "Седни на стола."
+        },
+        {
+          "word": "химикалка",
+          "phonetic": "himikalka",
+          "meaning": "pen",
+          "example": "Имам нова химикалка."
+        },
+        {
+          "word": "вода",
+          "phonetic": "voda",
+          "meaning": "water",
+          "example": "Искам вода, моля."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Bulgarian word for \"book\"?",
+          "options": [
+            "маса",
+            "книга",
+            "стол",
+            "вода"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which of these words means \"table\"?",
+          "options": [
+            "химикалка",
+            "книга",
+            "маса",
+            "стол"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"pen\" in Bulgarian?",
+          "options": [
+            "вода",
+            "химикалка",
+            "маса",
+            "книга"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Bulgarian word for \"water\".",
+          "options": [
+            "стол",
+            "маса",
+            "вода",
+            "книга"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Здравейте! Добре дошли в урока по български език. Днес ще научим някои основни думи за предмети, които използваме всеки ден. Ще се фокусираме върху произношението и значението им. Слушайте внимателно, повтаряйте след мен и се опитайте да използвате новите думи в прости изречения. Например, ако кажа \"книга\", опитайте се да кажете \"Аз чета книга\". Готови ли сте да започнем? Нека да разгледаме първата дума: \"книга\"."
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "да чета",
+          "phonetic": "da cheta",
+          "meaning": "to read",
+          "example": "Аз обичам да чета книги."
+        },
+        {
+          "word": "да слушам музика",
+          "phonetic": "da slusham muzika",
+          "meaning": "to listen to music",
+          "example": "Всяка сутрин слушам музика."
+        },
+        {
+          "word": "да спортувам",
+          "phonetic": "da sportuvam",
+          "meaning": "to do sports / to exercise",
+          "example": "Той обича да спортува през уикенда."
+        },
+        {
+          "word": "да готвя",
+          "phonetic": "da gotvya",
+          "meaning": "to cook",
+          "example": "Тя често готви вкусна храна."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does 'да чета' mean?",
+          "options": [
+            "да пиша",
+            "да чета",
+            "да ям",
+            "да спя"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means 'to listen to music'?",
+          "options": [
+            "да гледам филм",
+            "да слушам музика",
+            "да играя игри",
+            "да говоря по телефон"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say 'I like to exercise'?",
+          "options": [
+            "Аз обичам да ям.",
+            "Аз обичам да спя.",
+            "Аз обичам да спортувам.",
+            "Аз обичам да пиша."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Здравейте! Днес ще научим как да говорим за ежедневни дейности и хобита на български език. Ще разгледаме няколко полезни глагола. Първо, имаме \"да чета\" (to read). Например, \"Аз обичам да чета книги.\" Следва \"да слушам музика\" (to listen to music). Можете да кажете \"Всяка сутрин слушам музика.\" Също така, \"да спортувам\" (to do sports/exercise). Например, \"Той обича да спортува през уикенда.\" И накрая, \"да готвя\" (to cook). Като \"Тя често готви вкусна храна.\" Сега, бихте ли ми казали какво обичате да правите през свободното си време, използвайки някой от тези глаголи?"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "красив",
+          "phonetic": "krasiv",
+          "meaning": "beautiful",
+          "example": "Този град е много красив."
+        },
+        {
+          "word": "голям",
+          "phonetic": "golyam",
+          "meaning": "big, large",
+          "example": "Имам голяма къща."
+        },
+        {
+          "word": "малък",
+          "phonetic": "malak",
+          "meaning": "small, little",
+          "example": "Тя има малко куче."
+        },
+        {
+          "word": "вкусен",
+          "phonetic": "vkusen",
+          "meaning": "delicious, tasty",
+          "example": "Тази храна е много вкусна."
+        },
+        {
+          "word": "интересен",
+          "phonetic": "interesen",
+          "meaning": "interesting",
+          "example": "Филмът беше много интересен."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Bulgarian word means \"beautiful\"?",
+          "options": [
+            "красив",
+            "голям",
+            "малък",
+            "вкусен"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the correct Bulgarian word for \"big\" or \"large\".",
+          "options": [
+            "малък",
+            "вкусен",
+            "голям",
+            "интересен"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does the Bulgarian word \"вкусен\" mean in English?",
+          "options": [
+            "small",
+            "interesting",
+            "delicious",
+            "beautiful"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Fill in the blank with the most appropriate word: \"Това е много _____ филм.\" (This is a very _____ film.)",
+          "options": [
+            "красива",
+            "голяма",
+            "малък",
+            "интересен"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "Which word means \"small\"?",
+          "options": [
+            "голям",
+            "малък",
+            "вкусен",
+            "красив"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Здравейте! Днес ще научим няколко нови български думи: красив, голям, малък, вкусен и интересен. Ще практикуваме произношението им, значението им и ще ги използваме в изречения. Готови ли сте да започнем?"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "красив",
+          "phonetic": "krasiv",
+          "meaning": "beautiful",
+          "example": "Тя е много красива жена."
+        },
+        {
+          "word": "грозен",
+          "phonetic": "grozen",
+          "meaning": "ugly",
+          "example": "Тази стара сграда е грозна."
+        },
+        {
+          "word": "голям",
+          "phonetic": "golyam",
+          "meaning": "big, large",
+          "example": "Имам голяма къща."
+        },
+        {
+          "word": "малък",
+          "phonetic": "malak",
+          "meaning": "small",
+          "example": "Купих си малка кола."
+        },
+        {
+          "word": "интересен",
+          "phonetic": "interesen",
+          "meaning": "interesting",
+          "example": "Филмът беше много интересен."
+        },
+        {
+          "word": "скучен",
+          "phonetic": "skuchen",
+          "meaning": "boring",
+          "example": "Лекцията беше скучна."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which word means 'beautiful'?",
+          "options": [
+            "красив",
+            "грозен",
+            "голям",
+            "малък"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the opposite of 'голям' (big).",
+          "options": [
+            "красив",
+            "малък",
+            "интересен",
+            "скучен"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Complete the sentence: 'Тази книга е много ______.' (This book is very ______.)",
+          "options": [
+            "грозен",
+            "малък",
+            "интересен",
+            "голям"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means 'boring'?",
+          "options": [
+            "красив",
+            "интересен",
+            "скучен",
+            "голям"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Здравейте! Днес ще учим как да описваме хора и предмети на български език. Ще научим нови прилагателни като \"красив\", \"голям\" и \"интересен\". Готови ли сте да разширим речника си? Нека започнем с няколко нови думи, а след това ще проверим знанията ви с кратък тест. Опитайте се да използвате новите думи в изречения, докато ги учим."
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравейте",
+          "phonetic": "Zdraveyte",
+          "meaning": "Hello (formal/plural)",
+          "example": "Здравейте, как сте?"
+        },
+        {
+          "word": "Здравей",
+          "phonetic": "Zdravey",
+          "meaning": "Hello (informal/singular)",
+          "example": "Здравей, как си?"
+        },
+        {
+          "word": "Довиждане",
+          "phonetic": "Dovidzhdane",
+          "meaning": "Goodbye",
+          "example": "Довиждане, до скоро!"
+        },
+        {
+          "word": "Моля",
+          "phonetic": "Molya",
+          "meaning": "Please / You're welcome",
+          "example": "Моля, седнете. / Благодаря! – Моля!"
+        },
+        {
+          "word": "Благодаря",
+          "phonetic": "Blagodarya",
+          "meaning": "Thank you",
+          "example": "Благодаря за помощта!"
+        },
+        {
+          "word": "Да",
+          "phonetic": "Da",
+          "meaning": "Yes",
+          "example": "Да, разбира се."
+        },
+        {
+          "word": "Не",
+          "phonetic": "Ne",
+          "meaning": "No",
+          "example": "Не, не искам."
+        },
+        {
+          "word": "Извинете",
+          "phonetic": "Izvinete",
+          "meaning": "Excuse me / Sorry",
+          "example": "Извинете, къде е тоалетната?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does \"Здравейте\" mean?",
+          "options": [
+            "Довиждане",
+            "Моля",
+            "Здравейте",
+            "Благодаря"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Bulgarian?",
+          "options": [
+            "Моля",
+            "Довиждане",
+            "Благодаря",
+            "Да"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct word for \"Yes\".",
+          "options": [
+            "Не",
+            "Да",
+            "Моля",
+            "Извинете"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Bulgarian word for \"Please\" (or \"You're welcome\")?",
+          "options": [
+            "Благодаря",
+            "Здравей",
+            "Моля",
+            "Довиждане"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Здравейте! Добре дошли в първия ни урок по български език. Днес ще научим някои основни фрази, които ще ви помогнат да започнете да говорите български. Ще започнем с поздрави. Първата ни фраза е \"Здравейте\". Това е учтив начин да кажете \"Hello\" на български. Можете ли да повторите \"Здравейте\"?"
+    }
+  ]
+}

@@ -1,0 +1,1257 @@
+{
+  "langCode": "pl-PL",
+  "langLabel": "Polish",
+  "langNative": "Polski",
+  "generatedAt": "2026-03-15T07:30:05.712Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Cześć",
+          "phonetic": "cheshch",
+          "meaning": "Hi / Hello (informal) / Bye (informal)",
+          "example": "Cześć, jak się masz?"
+        },
+        {
+          "word": "Dzień dobry",
+          "phonetic": "jen DOH-brih",
+          "meaning": "Good morning / Good day (formal Hello)",
+          "example": "Dzień dobry, pani Anno."
+        },
+        {
+          "word": "Do widzenia",
+          "phonetic": "doh vee-DZEN-yah",
+          "meaning": "Goodbye (formal)",
+          "example": "Do widzenia, do jutra!"
+        },
+        {
+          "word": "Dziękuję",
+          "phonetic": "jen-KOO-yeh",
+          "meaning": "Thank you",
+          "example": "Dziękuję za pomoc."
+        },
+        {
+          "word": "Proszę",
+          "phonetic": "PROH-sheh",
+          "meaning": "Please / You're welcome / Here you are",
+          "example": "Proszę, usiądź. / Proszę bardzo."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" or \"Hello\" informally in Polish?",
+          "options": [
+            "Dzień dobry",
+            "Cześć",
+            "Do widzenia",
+            "Dziękuję"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Polish word for \"Thank you\"?",
+          "options": [
+            "Proszę",
+            "Tak",
+            "Dziękuję",
+            "Nie"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"Goodbye\" (formal) in Polish?",
+          "options": [
+            "Cześć",
+            "Dzień dobry",
+            "Do widzenia",
+            "Proszę"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word can mean \"Please\" or \"You're welcome\" in Polish?",
+          "options": [
+            "Dziękuję",
+            "Cześć",
+            "Proszę",
+            "Tak"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Witaj na lekcji polskiego! (Welcome to your Polish lesson!) Jestem Twoim nauczycielem AI i pomogę Ci opanować podstawy języka polskiego. (I am your AI tutor and I will help you master the basics of the Polish language.) Dziś skupimy się na kilku kluczowych słowach i zwrotach, które przydadzą Ci się w codziennych rozmowach. (Today we'll focus on a few key words and phrases that will be useful in daily conversations.) Będę wprowadzać nowe słowa, wyjaśniać ich wymowę i znaczenie, a także pokazywać, jak używać ich w zdaniach. (I will introduce new words, explain their pronunciation and meaning, and show you how to use them in sentences.) Pamiętaj, aby powtarzać za mną i nie krępuj się zadawać pytań! (Remember to repeat after me and don't hesitate to ask questions!) Zaczniemy od \"Cześć\". Gotowy/gotowa?"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Cześć",
+          "phonetic": "cheshch",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Cześć! Jak się masz?"
+        },
+        {
+          "word": "Dzień dobry",
+          "phonetic": "jen DOH-brih",
+          "meaning": "Good morning / Good day (formal)",
+          "example": "Dzień dobry, panie Kowalski."
+        },
+        {
+          "word": "Dobry wieczór",
+          "phonetic": "DOH-brih VYEH-choor",
+          "meaning": "Good evening",
+          "example": "Dobry wieczór wszystkim!"
+        },
+        {
+          "word": "Do widzenia",
+          "phonetic": "doh vee-DZEH-nyah",
+          "meaning": "Goodbye (formal and informal)",
+          "example": "Do widzenia, do jutra!"
+        },
+        {
+          "word": "Jak się masz?",
+          "phonetic": "yahk shyeh mahsh",
+          "meaning": "How are you? (informal)",
+          "example": "Cześć, Ania! Jak się masz?"
+        },
+        {
+          "word": "Dziękuję",
+          "phonetic": "jen-KOO-yeh",
+          "meaning": "Thank you",
+          "example": "Dziękuję za pomoc."
+        },
+        {
+          "word": "Proszę",
+          "phonetic": "PROH-sheh",
+          "meaning": "Please / You're welcome",
+          "example": "Proszę, usiądź. / Proszę bardzo!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in an informal way in Polish?",
+          "options": [
+            "Dzień dobry",
+            "Cześć",
+            "Dobranoc",
+            "Do widzenia"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the formal way to say 'Good day' or 'Good morning' in Polish?",
+          "options": [
+            "Cześć",
+            "Jak się masz?",
+            "Dzień dobry",
+            "Dziękuję"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say 'Thank you' in Polish?",
+          "options": [
+            "Do widzenia",
+            "Proszę",
+            "Dziękuję",
+            "Cześć"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means 'Goodbye' in Polish?",
+          "options": [
+            "Cześć",
+            "Dzień dobry",
+            "Jak się masz?",
+            "Do widzenia"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Cześć! Dziś nauczymy się podstawowych polskich powitań i zwrotów. Omówimy słowa takie jak \"Cześć\", \"Dzień dobry\", \"Dobry wieczór\", \"Do widzenia\", \"Jak się masz?\", \"Dziękuję\" i \"Proszę\". Powiem każde słowo, a Ty możesz powtórzyć. Następnie poćwiczymy używanie ich w prostych zdaniach. Gotowy? Zacznijmy od \"Cześć\"!"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Cześć",
+          "phonetic": "cheshch",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Cześć, jak się masz?"
+        },
+        {
+          "word": "Dzień dobry",
+          "phonetic": "jen dob-ri",
+          "meaning": "Good morning / Good day (formal)",
+          "example": "Dzień dobry, panie Kowalski."
+        },
+        {
+          "word": "Do widzenia",
+          "phonetic": "do vee-dzeh-nya",
+          "meaning": "Goodbye",
+          "example": "Do widzenia, miłego dnia!"
+        },
+        {
+          "word": "Jak się masz?",
+          "phonetic": "yak shyeh mash",
+          "meaning": "How are you? (informal)",
+          "example": "Cześć, Ania! Jak się masz?"
+        },
+        {
+          "word": "Nazywam się...",
+          "phonetic": "na-zy-vam shyeh",
+          "meaning": "My name is...",
+          "example": "Nazywam się Anna."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the informal way to say \"Hello\" in Polish?",
+          "options": [
+            "Dzień dobry",
+            "Cześć",
+            "Do widzenia",
+            "Jak się masz?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Goodbye\" in Polish?",
+          "options": [
+            "Cześć",
+            "Dzień dobry",
+            "Do widzenia",
+            "Nazywam się"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"How are you?\" (informal) in Polish?",
+          "options": [
+            "Nazywam się",
+            "Dzień dobry",
+            "Jak się masz?",
+            "Do widzenia"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Witaj! Cieszę się, że jesteś tutaj, aby uczyć się polskiego. W tej lekcji skupimy się na podstawowych powitaniach i pożegnaniach. Nauczymy się, jak powiedzieć \"Cześć\" (Hi/Hello), \"Dzień dobry\" (Good morning/Good day) i \"Do widzenia\" (Goodbye). Zaczniemy od \"Cześć\". Czy możesz spróbować powiedzieć \"Cześć\"?"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Cześć",
+          "phonetic": "cheshch",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Cześć, jak się masz?"
+        },
+        {
+          "word": "Dzień dobry",
+          "phonetic": "jen doh-bri",
+          "meaning": "Good morning / Good day",
+          "example": "Dzień dobry, pani Anno."
+        },
+        {
+          "word": "Do widzenia",
+          "phonetic": "doh vee-jen-yah",
+          "meaning": "Goodbye",
+          "example": "Do widzenia, do jutra!"
+        },
+        {
+          "word": "Dziękuję",
+          "phonetic": "jen-koo-yeh",
+          "meaning": "Thank you",
+          "example": "Dziękuję za pomoc."
+        },
+        {
+          "word": "Proszę",
+          "phonetic": "pro-sheh",
+          "meaning": "Please / You're welcome",
+          "example": "Proszę, usiądź. / Proszę bardzo!"
+        },
+        {
+          "word": "Jak się masz?",
+          "phonetic": "yak syeh mash?",
+          "meaning": "How are you? (informal)",
+          "example": "Jak się masz dzisiaj?"
+        },
+        {
+          "word": "Mam się dobrze",
+          "phonetic": "mam syeh doh-bzheh",
+          "meaning": "I'm fine",
+          "example": "Mam się dobrze, dziękuję."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Polish (informal)?",
+          "options": [
+            "Cześć",
+            "Dzień dobry",
+            "Do widzenia",
+            "Dziękuję"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Polish equivalent for \"Thank you\"?",
+          "options": [
+            "Proszę",
+            "Cześć",
+            "Dziękuję",
+            "Jak się masz?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"Goodbye\"?",
+          "options": [
+            "Dzień dobry",
+            "Do widzenia",
+            "Mam się dobrze",
+            "Proszę"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"How are you?\" in Polish (informal)?",
+          "options": [
+            "Dziękuję",
+            "Mam się dobrze",
+            "Jak się masz?",
+            "Cześć"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Witaj! Dziś nauczymy się podstawowych powitań i zwrotów w języku polskim. Zaczniemy od \"Cześć\" (cheshch), co oznacza \"Hi\" lub \"Hello\" w nieformalnych sytuacjach. Powtórz za mną: \"Cześć\". Świetnie! Następnie mamy \"Dzień dobry\" (jen doh-bri), używane na powitanie w ciągu dnia. Spróbuj: \"Dzień dobry\". Doskonale! Kiedy chcesz się pożegnać, powiesz \"Do widzenia\" (doh vee-jen-yah). A jak podziękować? Użyj \"Dziękuję\" (jen-koo-yeh). Jeśli chcesz powiedzieć \"Proszę\" (pro-sheh) lub \"You're welcome\", również użyjesz \"Proszę\". Na koniec, żeby zapytać \"Jak się masz?\" (yak syeh mash?), a odpowiedzieć \"Mam się dobrze\" (mam syeh doh-bzheh). Czy masz jakieś pytania?"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Cześć",
+          "phonetic": "cheshch",
+          "meaning": "Hello (informal), Hi, Bye (informal)",
+          "example": "Cześć, jak się masz?"
+        },
+        {
+          "word": "Dzień dobry",
+          "phonetic": "jen DOH-brih",
+          "meaning": "Good morning, Good day",
+          "example": "Dzień dobry, pani Anno."
+        },
+        {
+          "word": "Dziękuję",
+          "phonetic": "jen-KOO-yeh",
+          "meaning": "Thank you",
+          "example": "Dziękuję za pomoc."
+        },
+        {
+          "word": "Proszę",
+          "phonetic": "PROH-sheh",
+          "meaning": "Please, You're welcome, Here you go",
+          "example": "Proszę, usiądź. / Dziękuję! - Proszę!"
+        },
+        {
+          "word": "Przepraszam",
+          "phonetic": "psheh-PRAH-sham",
+          "meaning": "Excuse me, I'm sorry",
+          "example": "Przepraszam, czy to wolne?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Polish?",
+          "options": [
+            "Dzień dobry",
+            "Cześć",
+            "Do widzenia",
+            "Dobranoc"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct Polish word for \"Thank you\"?",
+          "options": [
+            "Proszę",
+            "Tak",
+            "Dziękuję",
+            "Nie"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Dziękuję!\", how would you respond with \"You're welcome\" in Polish?",
+          "options": [
+            "Cześć",
+            "Przepraszam",
+            "Proszę",
+            "Dzień dobry"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Witaj! Jestem Twoim nauczycielem języka polskiego. W tej lekcji skupimy się na kluczowych zwrotach grzecznościowych, które pomogą Ci rozpocząć rozmowę po polsku. Nauczymy się mówić 'Cześć' (Hi/Hello), 'Dzień dobry' (Good morning/Good day), 'Dziękuję' (Thank you), 'Proszę' (Please/You're welcome) oraz 'Przepraszam' (Excuse me/Sorry). Będę wyjaśniać każde słowo, podawać przykłady i pomagać Ci w wymowie. Czy jesteś gotowy, aby zacząć naszą przygodę z językiem polskim?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Cześć",
+          "phonetic": "Cheshch",
+          "meaning": "Hello / Hi (informal)",
+          "example": "Cześć, jak się masz?"
+        },
+        {
+          "word": "Dzień dobry",
+          "phonetic": "Jen dob-rih",
+          "meaning": "Good morning / Good day (formal)",
+          "example": "Dzień dobry, pani Anno."
+        },
+        {
+          "word": "Dziękuję",
+          "phonetic": "Jen-koo-yeh",
+          "meaning": "Thank you",
+          "example": "Dziękuję za pomoc."
+        },
+        {
+          "word": "Proszę",
+          "phonetic": "Pro-sheh",
+          "meaning": "Please / You're welcome",
+          "example": "Proszę, usiądź."
+        },
+        {
+          "word": "Przepraszam",
+          "phonetic": "Pshe-pra-sham",
+          "meaning": "Excuse me / I'm sorry",
+          "example": "Przepraszam, czy to wolne?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Polish?",
+          "options": [
+            "Dzień dobry",
+            "Dziękuję",
+            "Cześć",
+            "Proszę"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Polish phrase means \"Thank you\"?",
+          "options": [
+            "Tak",
+            "Nie",
+            "Dziękuję",
+            "Proszę"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"Przepraszam\" mean in English?",
+          "options": [
+            "Thank you",
+            "Please",
+            "Excuse me / I'm sorry",
+            "Good morning"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Witaj! Jestem Twoim nauczycielem polskiego. Dziś zanurkujemy w świat podstawowych polskich zwrotów grzecznościowych. Nauczymy się, jak powiedzieć \"Cześć\", \"Dzień dobry\", \"Dziękuję\", \"Proszę\" i \"Przepraszam\". Będziemy ćwiczyć wymowę i użycie w zdaniach. Gotowi na naukę? Zaczynajmy!"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Dzień dobry",
+          "phonetic": "jen DOH-brih",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Dzień dobry, jak się masz?"
+        },
+        {
+          "word": "Cześć",
+          "phonetic": "cheshch",
+          "meaning": "Hi / Hello / Bye (informal)",
+          "example": "Cześć, co słychać?"
+        },
+        {
+          "word": "Nazywam się...",
+          "phonetic": "nah-ZIH-vahm shyeh",
+          "meaning": "My name is...",
+          "example": "Nazywam się Anna."
+        },
+        {
+          "word": "Jak się nazywasz?",
+          "phonetic": "yahk shyeh nah-ZIH-vahsh",
+          "meaning": "What is your name? (informal)",
+          "example": "Cześć, jak się nazywasz?"
+        },
+        {
+          "word": "Miło mi cię poznać.",
+          "phonetic": "MEE-woh mee cheh POHZ-nahtch",
+          "meaning": "Nice to meet you (informal)",
+          "example": "Miło mi cię poznać, Piotr."
+        },
+        {
+          "word": "Do widzenia",
+          "phonetic": "doh vee-DZEN-yah",
+          "meaning": "Goodbye",
+          "example": "Do widzenia, do jutra!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal) in Polish?",
+          "options": [
+            "Cześć",
+            "Dzień dobry",
+            "Do widzenia",
+            "Dziękuję"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"My name is...\"?",
+          "options": [
+            "Jak się masz?",
+            "Nazywam się...",
+            "Miło mi",
+            "Jestem"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct informal way to ask \"What is your name?\"",
+          "options": [
+            "Jak się nazywasz?",
+            "Jak się pan nazywa?",
+            "Co to jest?",
+            "Kto to jest?"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "Witaj! W tej lekcji zanurkujemy w świat polskich powitań i przedstawiania się. Poznamy kluczowe zwroty, takie jak \"Dzień dobry\", \"Nazywam się...\" oraz \"Miło mi cię poznać\". Gotowi? Zaczynamy od \"Dzień dobry\". Spróbuj powtórzyć za mną: \"Dzień dobry\"."
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Cześć",
+          "phonetic": "cheshch",
+          "meaning": "Hello / Hi (informal) / Goodbye (informal)",
+          "example": "Cześć, jak się masz?"
+        },
+        {
+          "word": "Dzień dobry",
+          "phonetic": "jen dob-ri",
+          "meaning": "Good morning / Good day (formal)",
+          "example": "Dzień dobry, pani Anno."
+        },
+        {
+          "word": "Do widzenia",
+          "phonetic": "do vee-dze-nya",
+          "meaning": "Goodbye (formal)",
+          "example": "Do widzenia, do jutra!"
+        },
+        {
+          "word": "Dziękuję",
+          "phonetic": "jen-koo-ye",
+          "meaning": "Thank you",
+          "example": "Dziękuję za pomoc."
+        },
+        {
+          "word": "Proszę",
+          "phonetic": "pro-she",
+          "meaning": "Please / You're welcome / Here you are",
+          "example": "Proszę, usiądź. / Proszę bardzo!"
+        },
+        {
+          "word": "Przepraszam",
+          "phonetic": "pshe-pra-sham",
+          "meaning": "Excuse me / Sorry",
+          "example": "Przepraszam, czy to wolne miejsce?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' informally in Polish?",
+          "options": [
+            "Dzień dobry",
+            "Cześć",
+            "Do widzenia",
+            "Dziękuję"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does 'Dziękuję' mean?",
+          "options": [
+            "Please",
+            "Goodbye",
+            "Thank you",
+            "Excuse me"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Polish word can mean both 'Please' and 'You're welcome'?",
+          "options": [
+            "Dziękuję",
+            "Przepraszam",
+            "Proszę",
+            "Cześć"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you formally say 'Goodbye' to someone in Polish?",
+          "options": [
+            "Cześć",
+            "Dzień dobry",
+            "Do widzenia",
+            "Proszę"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Witaj! Dziś nauczymy się podstawowych zwrotów grzecznościowych i powitań po polsku. Gotowy/gotowa? Zaczynajmy! Nasze pierwsze słowo to \"Cześć\". Powiedz \"Cześć\". To nieformalne powitanie i pożegnanie, używane wśród znajomych. Następnie mamy \"Dzień dobry\". Powtórz: \"Dzień dobry\". Używamy tego rano i w ciągu dnia w bardziej formalnych sytuacjach. Kolejne to \"Do widzenia\". Spróbuj powiedzieć \"Do widzenia\". To formalne pożegnanie. Teraz \"Dziękuję\". Powiedz \"Dziękuję\". To znaczy \"thank you\". A co z \"Proszę\"? Powtórz: \"Proszę\". To bardzo przydatne słowo, bo może oznaczać \"please\", \"you're welcome\" lub \"here you are\". Na koniec, \"Przepraszam\". Spróbuj: \"Przepraszam\". Używamy tego, żeby przeprosić lub zwrócić czyjąś uwagę. Świetnie! Teraz spróbujmy użyć tych słów w krótkich zdaniach. Jak powiesz \"Thank you\" po polsku? A jak powiesz \"Hello\" do znajomego? Pamiętaj, praktyka czyni mistrza! Powtarzaj te słowa często."
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Dzień dobry",
+          "phonetic": "jen DOH-brih",
+          "meaning": "Good morning/day",
+          "example": "Dzień dobry, jak się masz?"
+        },
+        {
+          "word": "Do widzenia",
+          "phonetic": "doh vee-DZEN-yah",
+          "meaning": "Goodbye",
+          "example": "Do widzenia, miłego dnia!"
+        },
+        {
+          "word": "Proszę",
+          "phonetic": "PROH-sheh",
+          "meaning": "Please / You're welcome / Here you go",
+          "example": "Dziękuję! - Proszę!"
+        },
+        {
+          "word": "Dziękuję",
+          "phonetic": "jen-KOO-yeh",
+          "meaning": "Thank you",
+          "example": "Dziękuję za pomoc."
+        },
+        {
+          "word": "Przepraszam",
+          "phonetic": "psheh-PRAH-sham",
+          "meaning": "Excuse me / I'm sorry",
+          "example": "Przepraszam, czy to miejsce jest wolne?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Good morning\" in Polish?",
+          "options": [
+            "Do widzenia",
+            "Dzień dobry",
+            "Dziękuję",
+            "Przepraszam"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct Polish phrase for \"Thank you\"?",
+          "options": [
+            "Proszę",
+            "Do widzenia",
+            "Dziękuję",
+            "Dzień dobry"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Dziękuję\", how would you respond with \"You're welcome\"?",
+          "options": [
+            "Przepraszam",
+            "Dzień dobry",
+            "Proszę",
+            "Do widzenia"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Witaj! Jestem Twoim nauczycielem języka polskiego. Dziś zanurzymy się w podstawowe polskie powitania i zwroty grzecznościowe. Nauczymy się, jak powiedzieć 'Dzień dobry' (Good morning/day), 'Do widzenia' (Goodbye), 'Dziękuję' (Thank you), 'Proszę' (Please/You're welcome) i 'Przepraszam' (Excuse me/I'm sorry). Będę wymawiać każde słowo i frazę, a Ty możesz powtórzyć je na głos, aby poćwiczyć wymowę. Następnie przećwiczymy je w prostych zdaniach. Gotowy/Gotowa? Zaczynajmy!"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Cześć",
+          "phonetic": "Cheshch",
+          "meaning": "Hello (informal), Hi",
+          "example": "Cześć, jak się masz?"
+        },
+        {
+          "word": "Dziękuję",
+          "phonetic": "Jen-koo-yeh",
+          "meaning": "Thank you",
+          "example": "Dziękuję za pomoc."
+        },
+        {
+          "word": "Proszę",
+          "phonetic": "Pro-sheh",
+          "meaning": "Please / You're welcome",
+          "example": "Proszę, usiądź. / Dziękuję! - Proszę."
+        },
+        {
+          "word": "Tak",
+          "phonetic": "Tak",
+          "meaning": "Yes",
+          "example": "Czy mówisz po polsku? Tak."
+        },
+        {
+          "word": "Nie",
+          "phonetic": "Nye",
+          "meaning": "No",
+          "example": "Czy jesteś zmęczony? Nie."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Polish?",
+          "options": [
+            "Cześć",
+            "Dzień dobry",
+            "Do widzenia",
+            "Dobranoc"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means \"Thank you\" in Polish?",
+          "options": [
+            "Proszę",
+            "Tak",
+            "Dziękuję",
+            "Nie"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Polish word for \"Yes\".",
+          "options": [
+            "Nie",
+            "Tak",
+            "Proszę",
+            "Cześć"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Witaj! Jestem Twoim nauczycielem polskiego. Dziś zanurzymy się w podstawy języka polskiego, zaczynając od kluczowych zwrotów. Będziemy ćwiczyć wymowę, poznawać znaczenia i budować proste zdania. Pamiętaj, że praktyka czyni mistrza! Zaczniemy od słowa \"Cześć\". Powtórz za mną: \"Cześć\"."
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Dzień dobry",
+          "phonetic": "Jen dob-ri",
+          "meaning": "Good morning/afternoon/day (Hello)",
+          "example": "Dzień dobry, jak się masz?"
+        },
+        {
+          "word": "Dziękuję",
+          "phonetic": "Jen-koo-yeh",
+          "meaning": "Thank you",
+          "example": "Dziękuję za pomoc."
+        },
+        {
+          "word": "Proszę",
+          "phonetic": "Pro-sheh",
+          "meaning": "Please / You're welcome / Here you go",
+          "example": "Proszę usiąść."
+        },
+        {
+          "word": "Przepraszam",
+          "phonetic": "Psheh-pra-sham",
+          "meaning": "Excuse me / Sorry",
+          "example": "Przepraszam, czy to miejsce jest wolne?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Thank you\" in Polish?",
+          "options": [
+            "Dzień dobry",
+            "Dziękuję",
+            "Proszę",
+            "Przepraszam"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Polish word can mean \"Please\" or \"You're welcome\"?",
+          "options": [
+            "Dzień dobry",
+            "Dziękuję",
+            "Proszę",
+            "Tak"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "You want to greet someone politely in the morning. What do you say?",
+          "options": [
+            "Cześć",
+            "Dzień dobry",
+            "Do widzenia",
+            "Dobranoc"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Witaj! Dziś nauczymy się kilku podstawowych polskich zwrotów grzecznościowych. Poznamy słowa takie jak \"Dzień dobry\", \"Dziękuję\", \"Proszę\" i \"Przepraszam\". Powiem każde słowo, a Ty możesz powtórzyć. Następnie poćwiczymy używanie ich w prostych zdaniach. Czy jesteś gotowy, aby zacząć naukę polskiego?"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Cześć",
+          "phonetic": "Cheshch",
+          "meaning": "Hi / Hello (informal) / Bye (informal)",
+          "example": "Cześć, jak się masz?"
+        },
+        {
+          "word": "Dzień dobry",
+          "phonetic": "Jen doh-brih",
+          "meaning": "Good morning / Good day (formal)",
+          "example": "Dzień dobry, pani Kowalska."
+        },
+        {
+          "word": "Do widzenia",
+          "phonetic": "Doh vee-jen-yah",
+          "meaning": "Goodbye (formal)",
+          "example": "Do widzenia, miłego dnia!"
+        },
+        {
+          "word": "Jak się masz?",
+          "phonetic": "Yak shyeh mahsh?",
+          "meaning": "How are you? (informal)",
+          "example": "Cześć, Ania! Jak się masz?"
+        },
+        {
+          "word": "Dziękuję",
+          "phonetic": "Jen-koo-yeh",
+          "meaning": "Thank you",
+          "example": "Dziękuję za pomoc."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most common way to say \"Good morning\" or \"Good day\" in Polish?",
+          "options": [
+            "Cześć",
+            "Dzień dobry",
+            "Do widzenia",
+            "Dziękuję"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Polish?",
+          "options": [
+            "Jak się masz?",
+            "Cześć",
+            "Dziękuję",
+            "Dzień dobry"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Polish phrase is an informal way to say both \"Hello\" and \"Goodbye\"?",
+          "options": [
+            "Do widzenia",
+            "Dzień dobry",
+            "Jak się masz?",
+            "Cześć"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Cześć! Gotowi na naukę nowych polskich słów? Dziś skupimy się na **Podstawowych Powitaniach**. Będziemy ćwiczyć ich wymowę, rozumieć ich znaczenia i używać ich w zdaniach. Zacznijmy od naszego pierwszego słowa: **Cześć**. Powtórz za mną: \"Cześć\". Świetnie! Teraz spróbujmy użyć go w zdaniu. Gotowi? Zaczynajmy!"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "jeść",
+          "phonetic": "yestch",
+          "meaning": "to eat",
+          "example": "Ja lubię jeść owoce."
+        },
+        {
+          "word": "pić",
+          "phonetic": "peech",
+          "meaning": "to drink",
+          "example": "Chcesz pić wodę?"
+        },
+        {
+          "word": "czytać",
+          "phonetic": "chih-tatch",
+          "meaning": "to read",
+          "example": "Ona lubi czytać książki."
+        },
+        {
+          "word": "pracować",
+          "phonetic": "prah-tso-vatch",
+          "meaning": "to work",
+          "example": "Muszę pracować jutro."
+        },
+        {
+          "word": "spać",
+          "phonetic": "spatch",
+          "meaning": "to sleep",
+          "example": "Dziecko śpi w łóżku."
+        },
+        {
+          "word": "dom",
+          "phonetic": "dom",
+          "meaning": "house/home",
+          "example": "Mój dom jest duży."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Polish word for \"to sleep\"?",
+          "options": [
+            "jeść",
+            "pić",
+            "spać",
+            "czytać"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Polish word for \"house\".",
+          "options": [
+            "książka",
+            "dom",
+            "kawa",
+            "praca"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Complete the sentence: \"Ja lubię ___ książki.\" (I like ___ books.)",
+          "options": [
+            "jeść",
+            "pić",
+            "czytać",
+            "spać"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Cześć! Witaj na naszej lekcji polskiego. Dziś poznamy kilka podstawowych czasowników i rzeczowników, które pomogą Ci opisać codzienne czynności. Zaczniemy od czasownika \"jeść\". Czy możesz powtórzyć: \"jeść\"? Świetnie! \"Jeść\" oznacza \"to eat\". Na przykład: \"Ja lubię jeść owoce.\" (I like to eat fruit.) Teraz spróbujmy z \"pić\". \"Pić\" to \"to drink\". Powtórz: \"pić\". Doskonale! Przejdziemy przez więcej słów i przykładów. Gotowy/gotowa?"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "rozumieć",
+          "phonetic": "roh-ZOO-myets",
+          "meaning": "to understand",
+          "example": "Czy rozumiesz, co mówię po polsku?"
+        },
+        {
+          "word": "wiedzieć",
+          "phonetic": "VYE-dzyets",
+          "meaning": "to know (a fact, information)",
+          "example": "Wiem, że jutro będzie słonecznie."
+        },
+        {
+          "word": "znać",
+          "phonetic": "ZNACH",
+          "meaning": "to know (a person, place, language, etc.)",
+          "example": "Znam tę piosenkę bardzo dobrze."
+        },
+        {
+          "word": "chcieć",
+          "phonetic": "HTCHYETS",
+          "meaning": "to want",
+          "example": "Chcę kupić nowy samochód."
+        },
+        {
+          "word": "lubić",
+          "phonetic": "LOO-bitch",
+          "meaning": "to like",
+          "example": "Lubię czytać książki w wolnym czasie."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Polish verb means \"to understand\"?",
+          "options": [
+            "wiedzieć",
+            "znać",
+            "rozumieć",
+            "chcieć"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say \"I know this city\" in Polish, referring to a place?",
+          "options": [
+            "Wiem to miasto.",
+            "Znam to miasto.",
+            "Lubię to miasto.",
+            "Chcę to miasto."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct verb to complete the sentence: \"Ja ______ herbatę.\" (I want tea.)",
+          "options": [
+            "lubię",
+            "wiem",
+            "chcę",
+            "znam"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which verb would you use if you want to say \"I know that she is from Poland\"?",
+          "options": [
+            "znać",
+            "chcieć",
+            "rozumieć",
+            "wiedzieć"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Witaj! W tej lekcji skupimy się na kilku bardzo przydatnych polskich czasownikach, które pomogą Ci wyrażać swoje myśli i potrzeby. Nauczymy się, jak używać \"rozumieć\" (to understand), \"wiedzieć\" (to know a fact), \"znać\" (to know a person/place), \"chcieć\" (to want) i \"lubić\" (to like). Zwróć uwagę na różnice między \"wiedzieć\" a \"znać\" – to częsty punkt, w którym uczący się popełniają błędy. Będziemy ćwiczyć ich koniugację i użycie w zdaniach. Gotowy/gotowa, aby poszerzyć swoje słownictwo i pewność siebie w mówieniu po polsku? Zaczynajmy!"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "często",
+          "phonetic": "CHEN-sto",
+          "meaning": "often",
+          "example": "Często chodzę do kina."
+        },
+        {
+          "word": "rzadko",
+          "phonetic": "ZHAHD-ko",
+          "meaning": "rarely",
+          "example": "Rzadko jem fast food."
+        },
+        {
+          "word": "zawsze",
+          "phonetic": "ZAHF-sheh",
+          "meaning": "always",
+          "example": "Zawsze piję kawę rano."
+        },
+        {
+          "word": "nigdy",
+          "phonetic": "NEEG-dih",
+          "meaning": "never",
+          "example": "Nigdy nie byłem w Japonii."
+        },
+        {
+          "word": "czasami",
+          "phonetic": "chah-SAH-mee",
+          "meaning": "sometimes",
+          "example": "Czasami pada deszcz w lecie."
+        },
+        {
+          "word": "zwykle",
+          "phonetic": "ZVIK-leh",
+          "meaning": "usually",
+          "example": "Zwykle wstaję wcześnie."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How would you say \"I often read books\" in Polish?",
+          "options": [
+            "Rzadko czytam książki.",
+            "Często czytam książki.",
+            "Nigdy nie czytam książek.",
+            "Zawsze czytam książki."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Polish word for \"never\".",
+          "options": [
+            "Zawsze",
+            "Czasami",
+            "Nigdy",
+            "Często"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which sentence means \"She rarely visits her family\"?",
+          "options": [
+            "Ona często odwiedza rodzinę.",
+            "Ona zawsze odwiedza rodzinę.",
+            "Ona rzadko odwiedza rodzinę.",
+            "Ona nigdy nie odwiedza rodziny."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say \"I usually drink tea, but sometimes coffee\"?",
+          "options": [
+            "Zawsze piję herbatę, ale nigdy kawę.",
+            "Zwykle piję herbatę, ale czasami kawę.",
+            "Rzadko piję herbatę, ale często kawę.",
+            "Nigdy nie piję herbaty, ale zawsze kawę."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Witaj! Jestem Twoim nauczycielem polskiego. Dziś zanurzymy się w świat przysłówków częstotliwości. To bardzo przydatne słowa, które pomogą Ci opowiadać o tym, jak często coś robisz. Poznamy takie wyrażenia jak \"często\", \"rzadko\", \"zawsze\", \"nigdy\", \"czasami\" i \"zwykle\". Będziemy je ćwiczyć w zdaniach, abyś mógł/mogła swobodnie ich używać. Zacznijmy od pierwszego słowa: \"często\". Czy wiesz, co ono znaczy?"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "chcieć",
+          "phonetic": "h-chyehch",
+          "meaning": "to want",
+          "example": "Ja chcę kawę."
+        },
+        {
+          "word": "lubić",
+          "phonetic": "loo-beech",
+          "meaning": "to like",
+          "example": "Lubię czytać książki."
+        },
+        {
+          "word": "potrzebować",
+          "phonetic": "pot-sheh-BOH-vatch",
+          "meaning": "to need",
+          "example": "Potrzebuję twojej pomocy."
+        },
+        {
+          "word": "mieć",
+          "phonetic": "myech",
+          "meaning": "to have",
+          "example": "Mam psa i kota."
+        },
+        {
+          "word": "móc",
+          "phonetic": "moots",
+          "meaning": "to be able to, can",
+          "example": "Nie mogę teraz rozmawiać."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"I want\" in Polish?",
+          "options": [
+            "Chcę",
+            "Lubię",
+            "Mam",
+            "Mogę"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Polish word means \"to like\"?",
+          "options": [
+            "Chcieć",
+            "Lubić",
+            "Potrzebować",
+            "Mieć"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct translation for \"I need help.\"",
+          "options": [
+            "Chcę pomocy.",
+            "Lubię pomoc.",
+            "Potrzebuję pomocy.",
+            "Mam pomoc."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Complete the sentence: \"Ja ____ psa.\" (I have a dog.)",
+          "options": [
+            "chcę",
+            "lubię",
+            "potrzebuję",
+            "mam"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Cześć! W tej lekcji nauczymy się kilku bardzo przydatnych polskich czasowników. Skupimy się na \"chcieć\" (to want), \"lubić\" (to like), \"potrzebować\" (to need), \"mieć\" (to have) i \"móc\" (to be able to/can). To podstawowe słowa, które pomogą Ci budować proste zdania. Zacznijmy od \"chcieć\". Czy możesz spróbować powiedzieć \"Ja chcę\" (I want) po polsku?"
+    }
+  ]
+}

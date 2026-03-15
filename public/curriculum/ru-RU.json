@@ -1,0 +1,1367 @@
+{
+  "langCode": "ru-RU",
+  "langLabel": "Russian",
+  "langNative": "Русский",
+  "generatedAt": "2026-03-14T23:29:32.900Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравствуйте",
+          "phonetic": "Zdravstvuyte",
+          "meaning": "Hello (formal/plural)",
+          "example": "Здравствуйте, как дела?"
+        },
+        {
+          "word": "Привет",
+          "phonetic": "Privet",
+          "meaning": "Hi (informal)",
+          "example": "Привет! Меня зовут Анна."
+        },
+        {
+          "word": "Меня зовут...",
+          "phonetic": "Menya zovut...",
+          "meaning": "My name is...",
+          "example": "Меня зовут Иван."
+        },
+        {
+          "word": "Как вас зовут?",
+          "phonetic": "Kak vas zovut?",
+          "meaning": "What is your name? (formal)",
+          "example": "Здравствуйте, как вас зовут?"
+        },
+        {
+          "word": "Очень приятно",
+          "phonetic": "Ochen' priyatno",
+          "meaning": "Nice to meet you",
+          "example": "Меня зовут Мария. Очень приятно!"
+        },
+        {
+          "word": "До свидания",
+          "phonetic": "Do svidaniya",
+          "meaning": "Goodbye",
+          "example": "До свидания, до завтра!"
+        },
+        {
+          "word": "Спасибо",
+          "phonetic": "Spasibo",
+          "meaning": "Thank you",
+          "example": "Спасибо за помощь."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal) in Russian?",
+          "options": [
+            "Привет",
+            "Здравствуйте",
+            "До свидания",
+            "Спасибо"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Меня зовут...\" mean?",
+          "options": [
+            "How are you?",
+            "My name is...",
+            "Nice to meet you",
+            "Goodbye"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Russian phrase for \"Thank you\".",
+          "options": [
+            "Как вас зовут?",
+            "Очень приятно",
+            "Спасибо",
+            "Привет"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Меня зовут Анна\", how would you respond to ask their name (formally)?",
+          "options": [
+            "Очень приятно",
+            "Как дела?",
+            "Как вас зовут?",
+            "До свидания"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Привет! Добро пожаловать на наш урок русского языка! Сегодня мы погрузимся в мир русских приветствий и фраз для знакомства. Я помогу вам научиться говорить \"Здравствуйте\", \"Меня зовут...\" и \"Очень приятно\". Мы вместе поработаем над правильным произношением и попробуем использовать эти фразы в диалогах. Готовы начать?"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравствуйте",
+          "phonetic": "zdravstvuyte",
+          "meaning": "Hello (formal)",
+          "example": "Здравствуйте, как ваши дела?"
+        },
+        {
+          "word": "Привет",
+          "phonetic": "privet",
+          "meaning": "Hi (informal)",
+          "example": "Привет, как дела?"
+        },
+        {
+          "word": "Спасибо",
+          "phonetic": "spasibo",
+          "meaning": "Thank you",
+          "example": "Спасибо за помощь!"
+        },
+        {
+          "word": "Пожалуйста",
+          "phonetic": "pozhaluysta",
+          "meaning": "Please / You're welcome",
+          "example": "Дайте, пожалуйста, книгу."
+        },
+        {
+          "word": "Извините",
+          "phonetic": "izvinite",
+          "meaning": "Excuse me / Sorry",
+          "example": "Извините, где находится вокзал?"
+        },
+        {
+          "word": "Меня зовут...",
+          "phonetic": "menya zovut...",
+          "meaning": "My name is...",
+          "example": "Меня зовут Анна."
+        },
+        {
+          "word": "До свидания",
+          "phonetic": "do svidaniya",
+          "meaning": "Goodbye (formal/neutral)",
+          "example": "До свидания, увидимся завтра."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal) in Russian?",
+          "options": [
+            "Привет",
+            "Спасибо",
+            "Здравствуйте",
+            "Пожалуйста"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Russian word means \"Thank you\"?",
+          "options": [
+            "Извините",
+            "До свидания",
+            "Спасибо",
+            "Меня зовут"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you introduce yourself by saying \"My name is...\"?",
+          "options": [
+            "Привет",
+            "Меня зовут...",
+            "Пожалуйста",
+            "До свидания"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Привет! Добро пожаловать на ваш первый урок русского языка. Сегодня мы выучим несколько очень важных базовых фраз, которые помогут вам начать общаться. Мы рассмотрим, как сказать \"Здравствуйте\" (Hello), \"Спасибо\" (Thank you), \"Извините\" (Excuse me/Sorry) и \"Меня зовут...\" (My name is...). Постарайтесь повторять за мной, чтобы улучшить свое произношение. Готовы? Давайте начнем!"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравствуйте",
+          "phonetic": "Zdravstvuyte",
+          "meaning": "Hello (formal)",
+          "example": "Здравствуйте, как дела?"
+        },
+        {
+          "word": "Привет",
+          "phonetic": "Privet",
+          "meaning": "Hi (informal)",
+          "example": "Привет, как тебя зовут?"
+        },
+        {
+          "word": "До свидания",
+          "phonetic": "Do svidaniya",
+          "meaning": "Goodbye (formal)",
+          "example": "До свидания, до завтра!"
+        },
+        {
+          "word": "Пока",
+          "phonetic": "Poka",
+          "meaning": "Bye (informal)",
+          "example": "Пока, увидимся позже!"
+        },
+        {
+          "word": "Спасибо",
+          "phonetic": "Spasibo",
+          "meaning": "Thank you",
+          "example": "Спасибо за помощь!"
+        },
+        {
+          "word": "Пожалуйста",
+          "phonetic": "Pozhaluysta",
+          "meaning": "Please / You're welcome",
+          "example": "Пожалуйста, возьмите. / Спасибо! – Пожалуйста!"
+        },
+        {
+          "word": "Да",
+          "phonetic": "Da",
+          "meaning": "Yes",
+          "example": "Да, я согласен."
+        },
+        {
+          "word": "Нет",
+          "phonetic": "Net",
+          "meaning": "No",
+          "example": "Нет, это не так."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal) in Russian?",
+          "options": [
+            "Привет",
+            "До свидания",
+            "Здравствуйте",
+            "Спасибо"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Russian word means \"Thank you\"?",
+          "options": [
+            "Да",
+            "Нет",
+            "Спасибо",
+            "Пожалуйста"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the informal way to say \"Bye\" in Russian?",
+          "options": [
+            "До свидания",
+            "Пока",
+            "Привет",
+            "Да"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the Russian word for \"Yes\".",
+          "options": [
+            "Нет",
+            "Пожалуйста",
+            "Да",
+            "Спасибо"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Спасибо!\" to you, how can you respond with \"You're welcome!\"?",
+          "options": [
+            "Привет!",
+            "До свидания!",
+            "Пожалуйста!",
+            "Нет!"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Привет! Я очень рад(а) помочь тебе начать изучение русского языка сегодня. Мы сосредоточимся на базовых приветствиях и вежливых фразах. Сначала мы выучим, как сказать \"Здравствуйте\" (Hello, formal) и \"Привет\" (Hi, informal). Попробуй произнести их за мной. Затем мы перейдем к \"Спасибо\" (Thank you) и \"Пожалуйста\" (Please/You're welcome). Мы также узнаем, как говорить \"Да\" (Yes) и \"Нет\" (No), а также \"До свидания\" (Goodbye, formal) и \"Пока\" (Bye, informal). Я предложу тебе несколько ситуаций для практики. Давай начнем!"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравствуйте",
+          "phonetic": "Zdravstvuyte",
+          "meaning": "Hello (formal)",
+          "example": "Здравствуйте! Как дела?"
+        },
+        {
+          "word": "Привет",
+          "phonetic": "Privet",
+          "meaning": "Hi (informal)",
+          "example": "Привет! Меня зовут Анна."
+        },
+        {
+          "word": "Меня зовут...",
+          "phonetic": "Menya zovut...",
+          "meaning": "My name is...",
+          "example": "Меня зовут Иван."
+        },
+        {
+          "word": "Как дела?",
+          "phonetic": "Kak dela?",
+          "meaning": "How are you? / How are things?",
+          "example": "Привет! Как дела?"
+        },
+        {
+          "word": "Хорошо",
+          "phonetic": "Khorosho",
+          "meaning": "Good / Well",
+          "example": "Спасибо, хорошо."
+        },
+        {
+          "word": "Спасибо",
+          "phonetic": "Spasibo",
+          "meaning": "Thank you",
+          "example": "Спасибо за помощь."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' (formal) in Russian?",
+          "options": [
+            "Привет",
+            "Здравствуйте",
+            "До свидания",
+            "Извините"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does the phrase 'Меня зовут...' mean?",
+          "options": [
+            "I am from...",
+            "My name is...",
+            "How old are you?",
+            "I like..."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the most appropriate response to 'Как дела?'",
+          "options": [
+            "Меня зовут...",
+            "Спасибо",
+            "Хорошо",
+            "До свидания"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say 'Thank you' in Russian?",
+          "options": [
+            "Пожалуйста",
+            "Извините",
+            "Спасибо",
+            "Привет"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Привет! Добро пожаловать на ваш первый урок русского языка. Сегодня мы выучим основные приветствия и научимся представляться. Мы рассмотрим такие фразы, как \"Здравствуйте\" (Hello), \"Меня зовут...\" (My name is...), и \"Как дела?\" (How are you?). Я буду произносить каждое слово или фразу, и я призываю вас повторять за мной, чтобы попрактиковаться в произношении. Мы также посмотрим, как использовать их в простых диалогах. Вы готовы начать изучать русский язык?"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравствуйте",
+          "phonetic": "Zdravstvuyte",
+          "meaning": "Hello (formal)",
+          "example": "Здравствуйте! Как ваши дела?"
+        },
+        {
+          "word": "Привет",
+          "phonetic": "Privet",
+          "meaning": "Hi (informal)",
+          "example": "Привет! Как дела?"
+        },
+        {
+          "word": "Спасибо",
+          "phonetic": "Spasibo",
+          "meaning": "Thank you",
+          "example": "Спасибо за помощь!"
+        },
+        {
+          "word": "Пожалуйста",
+          "phonetic": "Pozhaluysta",
+          "meaning": "Please / You're welcome",
+          "example": "Дайте мне, пожалуйста, воды."
+        },
+        {
+          "word": "Да",
+          "phonetic": "Da",
+          "meaning": "Yes",
+          "example": "Да, я согласен."
+        },
+        {
+          "word": "Нет",
+          "phonetic": "Net",
+          "meaning": "No",
+          "example": "Нет, спасибо."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' (formal) in Russian?",
+          "options": [
+            "Привет",
+            "Здравствуйте",
+            "Спасибо",
+            "Пожалуйста"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means 'Thank you'?",
+          "options": [
+            "Да",
+            "Нет",
+            "Спасибо",
+            "Привет"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct word for 'Yes'.",
+          "options": [
+            "Нет",
+            "Пожалуйста",
+            "Да",
+            "Здравствуйте"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Russian word for 'Please' or 'You're welcome'?",
+          "options": [
+            "Спасибо",
+            "Пожалуйста",
+            "Привет",
+            "Да"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor for Russian language learners. Your goal is to introduce the new vocabulary from this lesson. Start by greeting the student in Russian and English. Then, introduce each new word/phrase from the lesson. For each word: pronounce it clearly, ask the student to repeat it, and provide its English meaning. After introducing all words, ask the student to try using one or two of the new words in a simple sentence or respond to a simple prompt using the new vocabulary. Encourage them and provide positive feedback. For example, you might say: \"Привет! Hello! Я твой AI-репетитор. Сегодня мы выучим новые русские слова. Начнем со слова 'Здравствуйте'. Повтори за мной: 'Здравствуйте'. Это значит 'Hello' (formal).\""
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравствуйте",
+          "phonetic": "Zdravstvuyte",
+          "meaning": "Hello (formal/plural)",
+          "example": "Здравствуйте! Как дела?"
+        },
+        {
+          "word": "Привет",
+          "phonetic": "Privet",
+          "meaning": "Hi (informal)",
+          "example": "Привет! Как ты?"
+        },
+        {
+          "word": "Меня зовут...",
+          "phonetic": "Menya zovut...",
+          "meaning": "My name is...",
+          "example": "Меня зовут Анна."
+        },
+        {
+          "word": "Как вас зовут?",
+          "phonetic": "Kak vas zovut?",
+          "meaning": "What is your name? (formal)",
+          "example": "Здравствуйте, как вас зовут?"
+        },
+        {
+          "word": "Очень приятно",
+          "phonetic": "Ochen' priyatno",
+          "meaning": "Nice to meet you",
+          "example": "Меня зовут Иван. Очень приятно!"
+        },
+        {
+          "word": "До свидания",
+          "phonetic": "Do svidaniya",
+          "meaning": "Goodbye",
+          "example": "До свидания, до завтра!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal) in Russian?",
+          "options": [
+            "Привет",
+            "Здравствуйте",
+            "До свидания",
+            "Меня зовут"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Russian phrase for \"My name is...\".",
+          "options": [
+            "Как вас зовут?",
+            "Очень приятно",
+            "Меня зовут...",
+            "До свидания"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"What is your name?\" (formal) in Russian?",
+          "options": [
+            "Привет",
+            "Как вас зовут?",
+            "Очень приятно",
+            "До свидания"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Russian equivalent for \"Nice to meet you\"?",
+          "options": [
+            "Здравствуйте",
+            "Привет",
+            "Очень приятно",
+            "До свидания"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Добро пожаловать на ваш урок! Сегодня мы изучим основные русские приветствия и фразы для знакомства. Мы рассмотрим \"Здравствуйте\", \"Привет\", \"Меня зовут...\", \"Как вас зовут?\" и \"Очень приятно\". Мы попрактикуем произношение и использование этих фраз в простых предложениях. Давайте начнем!"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравствуйте",
+          "phonetic": "ZDRAS-tvooy-tye",
+          "meaning": "Hello (formal)",
+          "example": "Здравствуйте! Как ваши дела?"
+        },
+        {
+          "word": "Привет",
+          "phonetic": "pree-VET",
+          "meaning": "Hi (informal)",
+          "example": "Привет! Как дела?"
+        },
+        {
+          "word": "Спасибо",
+          "phonetic": "spah-SEE-bah",
+          "meaning": "Thank you",
+          "example": "Спасибо за помощь."
+        },
+        {
+          "word": "Пожалуйста",
+          "phonetic": "pah-ZHAH-loostah",
+          "meaning": "Please / You're welcome",
+          "example": "Дайте мне, пожалуйста, воды."
+        },
+        {
+          "word": "Да",
+          "phonetic": "DAH",
+          "meaning": "Yes",
+          "example": "Да, я готов."
+        },
+        {
+          "word": "Нет",
+          "phonetic": "NYET",
+          "meaning": "No",
+          "example": "Нет, спасибо."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' (formal) in Russian?",
+          "options": [
+            "Привет",
+            "Спасибо",
+            "Здравствуйте",
+            "Пожалуйста"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does 'Спасибо' mean?",
+          "options": [
+            "Hello",
+            "Thank you",
+            "Please",
+            "Yes"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Russian word for 'Yes'.",
+          "options": [
+            "Нет",
+            "Да",
+            "Привет",
+            "Пожалуйста"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word can mean both 'Please' and 'You're welcome'?",
+          "options": [
+            "Спасибо",
+            "Здравствуйте",
+            "Да",
+            "Пожалуйста"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Привет! В этом уроке мы выучим несколько основных русских приветствий и фраз. Мы рассмотрим \"Здравствуйте\" (Hello, formal), \"Привет\" (Hi, informal), \"Спасибо\" (Thank you), \"Пожалуйста\" (Please/You're welcome), \"Да\" (Yes) и \"Нет\" (No). Давайте попрактикуемся произносить их и использовать в простых предложениях. Готовы?"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравствуйте",
+          "phonetic": "zdravstvuyte",
+          "meaning": "Hello (formal/plural)",
+          "example": "Здравствуйте, как ваши дела?"
+        },
+        {
+          "word": "Привет",
+          "phonetic": "privet",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Привет, как дела?"
+        },
+        {
+          "word": "Как дела?",
+          "phonetic": "kak dela?",
+          "meaning": "How are you? / How are things?",
+          "example": "Привет, Саша! Как дела?"
+        },
+        {
+          "word": "Хорошо",
+          "phonetic": "khorosho",
+          "meaning": "Good / Fine",
+          "example": "У меня всё хорошо, спасибо."
+        },
+        {
+          "word": "Меня зовут...",
+          "phonetic": "menya zovut...",
+          "meaning": "My name is... (literally: \"Me they call...\")",
+          "example": "Меня зовут Анна. А вас?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Russian?",
+          "options": [
+            "Здравствуйте",
+            "Привет",
+            "Как дела?",
+            "Хорошо"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Russian phrase means \"How are you?\"",
+          "options": [
+            "Меня зовут...",
+            "Хорошо",
+            "Как дела?",
+            "Привет"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you respond if someone asks \"Как дела?\" and you are doing well?",
+          "options": [
+            "Привет",
+            "Меня зовут...",
+            "Хорошо",
+            "Здравствуйте"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does the phrase \"Меня зовут...\" mean in English?",
+          "options": [
+            "My name is...",
+            "How are you?",
+            "Hello",
+            "Good"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "Привет! Сегодня мы погрузимся в мир русского языка и научимся основным приветствиям и фразам для знакомства. Мы изучим, как сказать 'Hello' (формально и неформально), 'How are you?', 'I'm good/fine' и 'My name is...'. Я буду произносить слова и фразы, а вы постарайтесь повторять за мной. Готовы? Отлично! Начнем с 'Здравствуйте' – это формальное 'Hello'. Повторите: 'Здравствуйте'."
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "книга",
+          "phonetic": "kniga",
+          "meaning": "book",
+          "example": "Это книга."
+        },
+        {
+          "word": "стол",
+          "phonetic": "stol",
+          "meaning": "table",
+          "example": "Где стол?"
+        },
+        {
+          "word": "стул",
+          "phonetic": "stul",
+          "meaning": "chair",
+          "example": "У меня есть стул."
+        },
+        {
+          "word": "большой",
+          "phonetic": "bol'shoy",
+          "meaning": "big",
+          "example": "Это большой стол."
+        },
+        {
+          "word": "маленький",
+          "phonetic": "malen'kiy",
+          "meaning": "small",
+          "example": "Это маленькая книга."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is \"книга\" in English?",
+          "options": [
+            "book",
+            "table",
+            "chair",
+            "window"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say \"table\" in Russian?",
+          "options": [
+            "стул",
+            "книга",
+            "стол",
+            "окно"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Russian word means \"big\"?",
+          "options": [
+            "маленький",
+            "новый",
+            "большой",
+            "старый"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Translate: \"This is a small chair.\"",
+          "options": [
+            "Это большой стул.",
+            "Это маленькая книга.",
+            "Это маленький стул.",
+            "Это большой стол."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Привет! Сегодня мы изучим несколько полезных русских существительных и прилагательных. Готовы? Начнем с существительных. Первое слово: \"книга\". Повторите, пожалуйста: *книга*. Это значит 'book'. Например, 'Это книга.' (This is a book.) Следующее слово: \"стол\". Повторите: *стол*. Это 'table'. Например, 'Где стол?' (Where is the table?) И еще одно: \"стул\". Повторите: *стул*. Это 'chair'. Например, 'У меня есть стул.' (I have a chair.) Теперь давайте добавим прилагательные, чтобы описывать эти предметы. Первое прилагательное: \"большой\". Повторите: *большой*. Это значит 'big'. Обратите внимание, что прилагательные меняются по родам. Для мужского рода, как 'стол', мы скажем 'большой стол'. И последнее слово: \"маленький\". Повторите: *маленький*. Это 'small'. Если мы говорим о женском роде, например, 'книга', то будет 'маленькая книга'. Попробуйте сказать: 'Это большой стул.' Отлично! Как вы скажете 'small book' по-русски? Замечательно! Продолжайте практиковаться, и скоро вы сможете описывать много разных вещей!"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравствуйте",
+          "phonetic": "ZDRA-stvooy-tye",
+          "meaning": "Hello (formal/plural)",
+          "example": "Здравствуйте, как дела?"
+        },
+        {
+          "word": "Привет",
+          "phonetic": "pree-VET",
+          "meaning": "Hi (informal)",
+          "example": "Привет! Как тебя зовут?"
+        },
+        {
+          "word": "Как вас зовут?",
+          "phonetic": "kak vas za-VOOT",
+          "meaning": "What is your name? (formal/plural)",
+          "example": "Здравствуйте, как вас зовут?"
+        },
+        {
+          "word": "Меня зовут...",
+          "phonetic": "mee-NYA za-VOOT",
+          "meaning": "My name is...",
+          "example": "Меня зовут Анна."
+        },
+        {
+          "word": "Очень приятно",
+          "phonetic": "O-chen' pree-YAT-na",
+          "meaning": "Nice to meet you",
+          "example": "Очень приятно, Анна."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Russian?",
+          "options": [
+            "Привет",
+            "Здравствуйте",
+            "До свидания",
+            "Спасибо"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct response to \"Как вас зовут?\" if your name is Ivan?",
+          "options": [
+            "Привет",
+            "Меня зовут Иван",
+            "Очень приятно",
+            "Спасибо"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Nice to meet you\" in Russian?",
+          "options": [
+            "Как дела?",
+            "Меня зовут",
+            "Очень приятно",
+            "До свидания"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"Hello\" (formal/plural)?",
+          "options": [
+            "Привет",
+            "Пока",
+            "Здравствуйте",
+            "Спасибо"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Привет! Сегодня мы с вами изучим основные русские приветствия и фразы для знакомства. Мы узнаем, как сказать \"Здравствуйте\", \"Привет\", \"Как вас зовут?\", \"Меня зовут...\" и \"Очень приятно\". Я буду произносить слова, а вы можете повторять за мной.\n\nНачнем с формального приветствия: \"Здравствуйте\". Это используется, когда вы обращаетесь к незнакомому человеку, к старшему или к группе людей. Попробуйте сказать \"Здравствуйте\".\n\nТеперь, для неформального приветствия, мы используем \"Привет\". Это для друзей и знакомых. Повторите: \"Привет\".\n\nЧтобы спросить чье-то имя (формально), мы говорим: \"Как вас зовут?\". Повторите: \"Как вас зовут?\".\n\nА чтобы представиться, скажите: \"Меня зовут...\" и добавьте свое имя. Например, \"Меня зовут Анна\". Попробуйте сказать: \"Меня зовут [Ваше имя]\".\n\nИ когда вы рады познакомиться, вы можете сказать: \"Очень приятно\". Повторите: \"Очень приятно\".\n\nОтлично! Теперь давайте попробуем использовать эти фразы в коротком диалоге."
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Привет",
+          "phonetic": "Privet",
+          "meaning": "Hello (informal)",
+          "example": "Привет, как дела?"
+        },
+        {
+          "word": "Как дела?",
+          "phonetic": "Kak dela?",
+          "meaning": "How are you? / How are things?",
+          "example": "Привет! Как дела?"
+        },
+        {
+          "word": "Спасибо",
+          "phonetic": "Spasibo",
+          "meaning": "Thank you",
+          "example": "Спасибо за помощь!"
+        },
+        {
+          "word": "Пожалуйста",
+          "phonetic": "Pozhaluysta",
+          "meaning": "Please / You're welcome",
+          "example": "Вот ваш кофе, пожалуйста."
+        },
+        {
+          "word": "Меня зовут...",
+          "phonetic": "Menya zovut...",
+          "meaning": "My name is...",
+          "example": "Привет! Меня зовут Анна."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Russian?",
+          "options": [
+            "До свидания",
+            "Привет",
+            "Пока",
+            "Доброе утро"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct way to ask \"How are you?\" in Russian?",
+          "options": [
+            "Как ты?",
+            "Что это?",
+            "Как дела?",
+            "Кто это?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Russian?",
+          "options": [
+            "Извините",
+            "Пожалуйста",
+            "Спасибо",
+            "До свидания"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you introduce yourself by saying \"My name is...\" in Russian?",
+          "options": [
+            "Я есть...",
+            "Меня зовут...",
+            "Моё имя...",
+            "Я называюсь..."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Привет! Сегодня мы будем изучать некоторые распространённые русские приветствия и фразы. Мы попрактикуемся говорить \"Привет\", \"Как дела?\", \"Спасибо\", \"Пожалуйста\" и \"Меня зовут...\". Я произнесу каждое слово или фразу, а затем вы сможете повторить за мной. Давайте начнём с \"Привет\"! Повторите: \"Привет\"."
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Привет",
+          "phonetic": "Privet",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Привет! Как дела?"
+        },
+        {
+          "word": "Как дела?",
+          "phonetic": "Kak dela?",
+          "meaning": "How are you? / How are things?",
+          "example": "Привет, Анна! Как дела?"
+        },
+        {
+          "word": "Спасибо",
+          "phonetic": "Spasibo",
+          "meaning": "Thank you",
+          "example": "Спасибо за помощь!"
+        },
+        {
+          "word": "Пожалуйста",
+          "phonetic": "Pozhaluysta",
+          "meaning": "Please / You're welcome",
+          "example": "Можно мне воды, пожалуйста?"
+        },
+        {
+          "word": "Извините",
+          "phonetic": "Izvinite",
+          "meaning": "Excuse me / Sorry",
+          "example": "Извините, где здесь туалет?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Russian word means 'Hi' or 'Hello' (informal)?",
+          "options": [
+            "Пожалуйста",
+            "Привет",
+            "Спасибо",
+            "Извините"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask 'How are you?' in Russian?",
+          "options": [
+            "Спасибо",
+            "Привет",
+            "Как дела?",
+            "Пожалуйста"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Russian word for 'Thank you'?",
+          "options": [
+            "Извините",
+            "Привет",
+            "Пожалуйста",
+            "Спасибо"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "Which word can mean both 'Please' and 'You're welcome'?",
+          "options": [
+            "Как дела?",
+            "Пожалуйста",
+            "Привет",
+            "Извините"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If you want to say 'Excuse me' or 'Sorry', which Russian word would you use?",
+          "options": [
+            "Спасибо",
+            "Пожалуйста",
+            "Извините",
+            "Привет"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Привет! Добро пожаловать на наш урок русского языка! Сегодня мы изучим несколько очень важных и полезных фраз для повседневного общения. Мы научимся здороваться, спрашивать \"Как дела?\", благодарить и извиняться. Эти фразы помогут вам начать говорить по-русски и чувствовать себя увереннее. Давайте начнем с \"Привет\" – это неформальное \"приветствие\". Повторите за мной: \"Привет\". Отлично! Теперь давайте узнаем, как спросить \"Как дела?\". Это очень распространенный вопрос. Готовы? Поехали!"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "просыпаться",
+          "phonetic": "pra-sy-PAHT-sya",
+          "meaning": "to wake up",
+          "example": "Я обычно просыпаюсь в семь утра."
+        },
+        {
+          "word": "завтракать",
+          "phonetic": "ZAHV-trah-kaht'",
+          "meaning": "to have breakfast",
+          "example": "Мы завтракаем всей семьёй."
+        },
+        {
+          "word": "работать",
+          "phonetic": "rah-BOH-taht'",
+          "meaning": "to work",
+          "example": "Мой папа работает в офисе."
+        },
+        {
+          "word": "ложиться спать",
+          "phonetic": "lah-ZHEET-sya spaht'",
+          "meaning": "to go to bed",
+          "example": "Я ложусь спать поздно."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How would you say \"I wake up at 7 AM\" in Russian?",
+          "options": [
+            "Я просыпаюсь в семь утра.",
+            "Я сплю в семь утра.",
+            "Я ем в семь утра.",
+            "Я иду в семь утра."
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the correct verb for \"to have breakfast\":",
+          "options": [
+            "работать",
+            "завтракать",
+            "ужинать",
+            "обедать"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"to go to bed\"?",
+          "options": [
+            "идти домой",
+            "читать книгу",
+            "ложиться спать",
+            "смотреть телевизор"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Привет! Сегодня мы поговорим о твоём распорядке дня. Это очень полезная тема для повседневного общения. Мы выучим несколько новых глаголов. Например, как сказать \"to wake up\" по-русски? Это \"просыпаться\". А \"to have breakfast\"? Это \"завтракать\". Ещё у нас есть \"работать\" – \"to work\" и \"ложиться спать\" – \"to go to bed\". Попробуй рассказать мне, во сколько ты обычно просыпаешься и что ты делаешь утром, используя эти слова. Например: \"Я просыпаюсь в...\" или \"Я завтракаю...\""
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "красивый",
+          "phonetic": "krasivyy",
+          "meaning": "beautiful",
+          "example": "Она очень красивая девушка."
+        },
+        {
+          "word": "умный",
+          "phonetic": "umnyy",
+          "meaning": "smart, intelligent",
+          "example": "Мой брат очень умный."
+        },
+        {
+          "word": "высокий",
+          "phonetic": "vysokiy",
+          "meaning": "tall, high",
+          "example": "Этот дом очень высокий."
+        },
+        {
+          "word": "интересный",
+          "phonetic": "interesnyy",
+          "meaning": "interesting",
+          "example": "Это была очень интересная книга."
+        },
+        {
+          "word": "добрый",
+          "phonetic": "dobryy",
+          "meaning": "kind, good-natured",
+          "example": "Моя бабушка очень добрая."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Russian word means \"beautiful\"?",
+          "options": [
+            "умный",
+            "высокий",
+            "красивый",
+            "добрый"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct adjective form for \"interesting\" in the sentence: \"Эта _____ книга.\" (This _____ book.)",
+          "options": [
+            "интересный",
+            "интересная",
+            "интересное",
+            "интересные"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word best describes someone who is \"intelligent\"?",
+          "options": [
+            "высокий",
+            "добрый",
+            "умный",
+            "красивый"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the opposite of \"высокий\" (tall)?",
+          "options": [
+            "низкий",
+            "широкий",
+            "длинный",
+            "короткий"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "Привет! Сегодня мы будем изучать новые русские слова, которые помогут нам описывать людей и предметы. Мы попрактикуемся использовать их в предложениях и обратим внимание на согласование прилагательных с существительными по роду и числу. Например, как сказать \"красивая девушка\" или \"красивый дом\". Давайте начнем со слова \"красивый\" (krasivyy), что означает \"beautiful\". Затем мы рассмотрим \"умный\" (umnyy), \"высокий\" (vysokiy), \"интересный\" (interesnyy) и \"добрый\" (dobryy). Я помогу вам понять их значения, произношение и правильное использование в разных контекстах. Готовы начать?"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "читать",
+          "phonetic": "chee-TAT'",
+          "meaning": "to read",
+          "example": "Я люблю читать книги."
+        },
+        {
+          "word": "писать",
+          "phonetic": "pee-SAT'",
+          "meaning": "to write",
+          "example": "Он пишет письмо другу."
+        },
+        {
+          "word": "говорить",
+          "phonetic": "gah-vah-REET'",
+          "meaning": "to speak, to talk",
+          "example": "Вы говорите по-русски?"
+        },
+        {
+          "word": "понимать",
+          "phonetic": "pah-nee-MAT'",
+          "meaning": "to understand",
+          "example": "Я понимаю немного по-русски."
+        },
+        {
+          "word": "учить",
+          "phonetic": "oo-CHEET'",
+          "meaning": "to learn, to teach",
+          "example": "Мы учим новые слова."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Choose the correct form of \"читать\" (to read) for \"I\".",
+          "options": [
+            "читаю",
+            "читаешь",
+            "читает",
+            "читаем"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which verb means \"to speak\"?",
+          "options": [
+            "писать",
+            "читать",
+            "говорить",
+            "понимать"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Complete the sentence: \"Она ______ письмо.\" (She ______ a letter.)",
+          "options": [
+            "читает",
+            "пишет",
+            "говорит",
+            "понимает"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Привет! Добро пожаловать на ваш урок. Сегодня мы будем изучать некоторые распространенные русские глаголы, такие как \"читать\" (to read), \"писать\" (to write) и \"говорить\" (to speak). Мы рассмотрим новую лексику, посмотрим на примеры предложений, а затем проверим ваши знания с помощью небольшого теста. Я здесь, чтобы помочь вам практиковаться и всё понять. Готовы начать?"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Здравствуйте",
+          "phonetic": "zdra-stvooy-tye",
+          "meaning": "Hello (formal)",
+          "example": "Здравствуйте, как ваши дела?"
+        },
+        {
+          "word": "Привет",
+          "phonetic": "pree-vyet",
+          "meaning": "Hi (informal)",
+          "example": "Привет! Как дела?"
+        },
+        {
+          "word": "Как дела?",
+          "phonetic": "kak dye-LA?",
+          "meaning": "How are you? / How are things?",
+          "example": "Привет! Как дела?"
+        },
+        {
+          "word": "У меня всё хорошо",
+          "phonetic": "oo my-NYA vsyo ha-ra-SHO",
+          "meaning": "I'm fine / Everything is good with me",
+          "example": "Как дела? – У меня всё хорошо, спасибо!"
+        },
+        {
+          "word": "Спасибо",
+          "phonetic": "spa-SEE-ba",
+          "meaning": "Thank you",
+          "example": "Спасибо за помощь!"
+        },
+        {
+          "word": "Пожалуйста",
+          "phonetic": "pa-ZHAL-oo-sta",
+          "meaning": "Please / You're welcome",
+          "example": "Можно мне воды, пожалуйста? – Пожалуйста!"
+        },
+        {
+          "word": "До свидания",
+          "phonetic": "da svee-DA-nee-ya",
+          "meaning": "Goodbye",
+          "example": "До свидания, до завтра!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the formal way to say \"Hello\" in Russian?",
+          "options": [
+            "Здравствуйте",
+            "Привет",
+            "Спасибо",
+            "Пожалуйста"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you ask \"How are you?\" in Russian?",
+          "options": [
+            "До свидания",
+            "Как дела?",
+            "У меня всё хорошо",
+            "Спасибо"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Russian word for \"Thank you.\"",
+          "options": [
+            "Привет",
+            "Пожалуйста",
+            "Спасибо",
+            "Здравствуйте"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"I'm fine\" or \"Everything is good with me\"?",
+          "options": [
+            "Как дела?",
+            "До свидания",
+            "Пожалуйста",
+            "У меня всё хорошо"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Привет! Готовы начать наш урок русского языка? Сегодня мы изучим основные приветствия и полезные фразы, которые помогут вам начать общение на русском. Мы узнаем, как сказать \"Здравствуйте\" (Hello), \"Спасибо\" (Thank you) и \"Как дела?\" (How are you?). После этого мы проверим ваши знания в коротком тесте. Не стесняйтесь задавать вопросы! Давайте начнем!"
+    }
+  ]
+}

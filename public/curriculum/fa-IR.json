@@ -1,0 +1,1273 @@
+{
+  "langCode": "fa-IR",
+  "langLabel": "Persian",
+  "langNative": "فارسی",
+  "generatedAt": "2026-03-15T05:42:55.056Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "Salām",
+          "meaning": "Hello / Hi",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "حال شما چطور است؟",
+          "phonetic": "Hāl-e shomā chetor ast?",
+          "meaning": "How are you? (formal)",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "خوبم",
+          "phonetic": "Khūbam",
+          "meaning": "I am good / I am fine",
+          "example": "خوبم، ممنون."
+        },
+        {
+          "word": "اسم شما چیست؟",
+          "phonetic": "Esm-e shomā chist?",
+          "meaning": "What is your name? (formal)",
+          "example": "اسم شما چیست؟ اسم من سارا است."
+        },
+        {
+          "word": "اسم من ... است",
+          "phonetic": "Esm-e man ... ast",
+          "meaning": "My name is ...",
+          "example": "اسم من علی است."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Persian?",
+          "options": [
+            "خوبم",
+            "سلام",
+            "ممنون",
+            "بله"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct Persian phrase for \"How are you?\"",
+          "options": [
+            "اسم شما چیست؟",
+            "خوبم",
+            "حال شما چطور است؟",
+            "بله"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"حال شما چطور است؟\", how would you respond if you are fine?",
+          "options": [
+            "سلام",
+            "اسم من...",
+            "خوبم",
+            "ممنون"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you ask \"What is your name?\" in Persian?",
+          "options": [
+            "خوبم",
+            "اسم شما چیست؟",
+            "سلام",
+            "ممنون"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "The learner is starting their first Persian lesson. Begin by greeting them in Persian and English. Introduce the phrase \"سلام\" (Salām) for \"Hello\" and have them repeat it. Then, introduce \"حال شما چطور است؟\" (Hāl-e shomā chetor ast?) for \"How are you?\" and \"خوبم\" (Khūbam) for \"I am good.\" Practice a short dialogue where the learner greets you, asks how you are, and you respond. Finally, introduce \"اسم شما چیست؟\" (Esm-e shomā chist?) for \"What is your name?\" and \"اسم من ... است\" (Esm-e man ... ast) for \"My name is...\". Encourage the learner to introduce themselves. Provide phonetic guides and English translations for all new Persian phrases. Keep the pace slow and encouraging."
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "salām",
+          "meaning": "Hello / Hi",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "متشکرم",
+          "phonetic": "motashakkeram",
+          "meaning": "Thank you",
+          "example": "متشکرم برای کمک شما."
+        },
+        {
+          "word": "بله",
+          "phonetic": "bale",
+          "meaning": "Yes",
+          "example": "آیا شما فارسی صحبت می‌کنید؟ بله."
+        },
+        {
+          "word": "نه",
+          "phonetic": "na",
+          "meaning": "No",
+          "example": "آیا شما انگلیسی صحبت می‌کنید؟ نه، من فارسی صحبت می‌کنم."
+        },
+        {
+          "word": "حال شما چطور است؟",
+          "phonetic": "hāl-e shomā chetor ast?",
+          "meaning": "How are you? (formal)",
+          "example": "سلام، حال شما چطور است؟"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Persian?",
+          "options": [
+            "متشکرم",
+            "سلام",
+            "بله",
+            "نه"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Persian word means \"Thank you\"?",
+          "options": [
+            "بله",
+            "نه",
+            "متشکرم",
+            "سلام"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Persian word for \"Yes\"?",
+          "options": [
+            "نه",
+            "سلام",
+            "بله",
+            "متشکرم"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"How are you?\" (formal) in Persian?",
+          "options": [
+            "سلام",
+            "متشکرم",
+            "حال شما چطور است؟",
+            "بله"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Welcome to your Persian lesson! Today we'll learn some basic greetings and essential phrases. We'll cover vocabulary like 'سلام' (salām) for 'hello', 'متشکرم' (motashakkeram) for 'thank you', 'بله' (bale) for 'yes', and 'نه' (na) for 'no'. We'll also learn how to ask 'حال شما چطور است؟' (hāl-e shomā chetor ast?) meaning 'How are you?'. After reviewing these words, we'll practice with some interactive questions. Let's begin with 'سلام'!"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "Salām",
+          "meaning": "Hello",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "حال شما چطور است؟",
+          "phonetic": "Hāl-e shomā chetor ast?",
+          "meaning": "How are you? (formal)",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "من خوبم",
+          "phonetic": "Man khubam",
+          "meaning": "I am good/well",
+          "example": "من خوبم، ممنون."
+        },
+        {
+          "word": "ممنون",
+          "phonetic": "Mamnun",
+          "meaning": "Thank you",
+          "example": "ممنون از شما."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Persian?",
+          "options": [
+            "ممنون",
+            "سلام",
+            "من خوبم",
+            "چطور است؟"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"How are you?\" (formal)?",
+          "options": [
+            "من خوبم",
+            "ممنون",
+            "حال شما چطور است؟",
+            "سلام"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you respond if someone asks \"How are you?\" and you are well?",
+          "options": [
+            "سلام",
+            "ممنون",
+            "من خوبم",
+            "حال شما چطور است؟"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "سلام! Welcome to your Persian lesson. Today, we'll learn essential greetings and phrases to start a conversation in Persian. We'll cover how to say \"Hello\" (سلام), \"How are you?\" (حال شما چطور است؟), \"I am good\" (من خوبم), and \"Thank you\" (ممنون). I'll guide you through the pronunciation and usage of each phrase. Let's start with \"سلام\". I'll say it, and you can repeat after me. Then we'll move on to \"حال شما چطور است؟\". We'll practice these in simple dialogues. Feel free to ask any questions as we go. Are you ready to begin?"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "salām",
+          "meaning": "Hello",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "حال شما چطور است؟",
+          "phonetic": "hāl-e shomā chetor ast?",
+          "meaning": "How are you? (formal)",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "من خوبم",
+          "phonetic": "man khūbam",
+          "meaning": "I am good / I am fine",
+          "example": "من خوبم، ممنون."
+        },
+        {
+          "word": "ممنون",
+          "phonetic": "mamnūn",
+          "meaning": "Thank you",
+          "example": "ممنون از شما."
+        },
+        {
+          "word": "خواهش می‌کنم",
+          "phonetic": "khāhesh mikonam",
+          "meaning": "You're welcome / Please",
+          "example": "خواهش می‌کنم."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Persian?",
+          "options": [
+            "سلام",
+            "ممنون",
+            "خوبم",
+            "بله"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which phrase means \"How are you?\" (formal) in Persian?",
+          "options": [
+            "من خوبم",
+            "حال شما چطور است؟",
+            "خواهش می‌کنم",
+            "صبح بخیر"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Persian word for \"Thank you\"?",
+          "options": [
+            "بله",
+            "نه",
+            "ممنون",
+            "لطفاً"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you respond to \"How are you?\" if you are good?",
+          "options": [
+            "سلام",
+            "من خوبم",
+            "خواهش می‌کنم",
+            "شب بخیر"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Great! Welcome to our Persian lesson. Today, we're going to learn some essential Persian greetings. We'll cover how to say 'Hello' (سلام), 'How are you?' (حال شما چطور است؟), 'I am good' (من خوبم), and 'Thank you' (ممنون). Let's start with 'سلام'. Can you try saying 'سلام'?"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "Salam",
+          "meaning": "Hello / Hi",
+          "example": "سلام، حال شما چطوره؟"
+        },
+        {
+          "word": "خوب",
+          "phonetic": "Khoob",
+          "meaning": "Good / Well",
+          "example": "من خوبم، ممنون."
+        },
+        {
+          "word": "ممنون",
+          "phonetic": "Mamnoon",
+          "meaning": "Thank you",
+          "example": "ممنون از شما."
+        },
+        {
+          "word": "لطفاً",
+          "phonetic": "Lotfan",
+          "meaning": "Please",
+          "example": "لطفاً یک چای."
+        },
+        {
+          "word": "بله",
+          "phonetic": "Bale",
+          "meaning": "Yes",
+          "example": "بله، من ایرانی هستم."
+        },
+        {
+          "word": "نه",
+          "phonetic": "Na",
+          "meaning": "No",
+          "example": "نه، من گرسنه نیستم."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Persian?",
+          "options": [
+            "سلام",
+            "ممنون",
+            "لطفاً",
+            "بله"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means \"Good\"?",
+          "options": [
+            "نه",
+            "خوب",
+            "ممنون",
+            "سلام"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"Thank you\" in Persian?",
+          "options": [
+            "بله",
+            "نه",
+            "ممنون",
+            "لطفاً"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct word for \"Yes\".",
+          "options": [
+            "نه",
+            "خوب",
+            "سلام",
+            "بله"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "آفرین! در این درس، ما روی سلام و احوالپرسی‌های اولیه در فارسی تمرکز خواهیم کرد. ما واژگان جدیدی مانند **سلام** (hello)، **خوب** (good)، **ممنون** (thank you)، **لطفاً** (please)، **بله** (yes) و **نه** (no) را یاد می‌گیریم. همچنین نحوه استفاده از این کلمات را در جملات ساده تمرین خواهیم کرد. در پایان، شما قادر خواهید بود به فارسی سلام و احوالپرسی کنید و پاسخ‌های ساده بدهید. شروع کنیم!"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "salām",
+          "meaning": "Hello / Hi",
+          "example": "سلام، حالت چطوره؟"
+        },
+        {
+          "word": "حالت چطوره؟",
+          "phonetic": "hālet chetore?",
+          "meaning": "How are you? (informal)",
+          "example": "سلام، حالت چطوره؟"
+        },
+        {
+          "word": "من خوبم",
+          "phonetic": "man khubam",
+          "meaning": "I am good / I am fine",
+          "example": "من خوبم، ممنون."
+        },
+        {
+          "word": "ممنون",
+          "phonetic": "mamnun",
+          "meaning": "Thank you",
+          "example": "ممنون که کمک کردی."
+        },
+        {
+          "word": "بله",
+          "phonetic": "bale",
+          "meaning": "Yes",
+          "example": "بله، من آماده‌ام."
+        },
+        {
+          "word": "نه",
+          "phonetic": "na",
+          "meaning": "No",
+          "example": "نه، من گرسنه نیستم."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Persian?",
+          "options": [
+            "خداحافظ",
+            "ممنون",
+            "سلام",
+            "بله"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Persian phrase means \"How are you?\" (informal)?",
+          "options": [
+            "من خوبم",
+            "حالت چطوره؟",
+            "ممنون",
+            "نه"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Persian word for \"Thank you\"?",
+          "options": [
+            "بله",
+            "نه",
+            "ممنون",
+            "سلام"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the Persian word that means \"Yes\".",
+          "options": [
+            "نه",
+            "بله",
+            "من خوبم",
+            "حالت چطوره؟"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor helping a student learn Persian. Your goal is to introduce the vocabulary and concepts from this lesson in a conversational and encouraging way. Start by greeting the student in Persian with \"سلام\" (salām) and asking them how they are with \"حالت چطوره؟\" (hālet chetore?). Then, introduce the first vocabulary word, explain its meaning, and provide an example sentence. Encourage the student to repeat the word and try using it in a simple sentence. Continue this process for all vocabulary words, making sure to check for understanding and provide positive reinforcement. Conclude by summarizing what was learned and encouraging them to practice."
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "salām",
+          "meaning": "Hello / Hi",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "ممنون",
+          "phonetic": "mamnūn",
+          "meaning": "Thank you",
+          "example": "ممنون از کمک شما."
+        },
+        {
+          "word": "بله",
+          "phonetic": "bale",
+          "meaning": "Yes",
+          "example": "آیا شما ایرانی هستید؟ بله، من ایرانی هستم."
+        },
+        {
+          "word": "نه",
+          "phonetic": "na",
+          "meaning": "No",
+          "example": "آیا شما خسته هستید؟ نه، من خسته نیستم."
+        },
+        {
+          "word": "آب",
+          "phonetic": "āb",
+          "meaning": "Water",
+          "example": "من یک لیوان آب می‌خواهم."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Persian?",
+          "options": [
+            "ممنون",
+            "سلام",
+            "بله",
+            "نه"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Persian word for \"Thank you\"?",
+          "options": [
+            "آب",
+            "بله",
+            "ممنون",
+            "سلام"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Persian word means \"Yes\"?",
+          "options": [
+            "نه",
+            "آب",
+            "سلام",
+            "بله"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "How do you say \"Water\" in Persian?",
+          "options": [
+            "آب",
+            "ممنون",
+            "نه",
+            "سلام"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "Hello! Today we're going to learn some essential Persian words. We'll start with greetings and common responses. First, let's learn how to say 'Hello' in Persian: 'سلام' (salām). I'll say it, and then you can repeat it after me. Great! Now, let's learn 'Thank you': 'ممنون' (mamnūn). Try saying that. Excellent! We'll also cover 'Yes': 'بله' (bale) and 'No': 'نه' (na). Finally, a useful word: 'Water' which is 'آب' (āb). We'll practice using these words in simple sentences. Are you ready to begin?"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "Salām",
+          "meaning": "Hello",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "حال شما چطور است؟",
+          "phonetic": "Hāl-e shomā chetor ast?",
+          "meaning": "How are you?",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "من خوبم",
+          "phonetic": "Man khūbam",
+          "meaning": "I am fine.",
+          "example": "حال شما چطور است؟ من خوبم، ممنون."
+        },
+        {
+          "word": "ممنون",
+          "phonetic": "Mamnoon",
+          "meaning": "Thank you.",
+          "example": "ممنون برای کمک شما."
+        },
+        {
+          "word": "خواهش می‌کنم",
+          "phonetic": "Khāhesh mikonam",
+          "meaning": "You're welcome. / Please.",
+          "example": "ممنون. خواهش می‌کنم."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Persian?",
+          "options": [
+            "ممنون",
+            "سلام",
+            "شب بخیر",
+            "من خوبم"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"حال شما چطور است؟\" mean?",
+          "options": [
+            "I am fine.",
+            "Thank you.",
+            "How are you?",
+            "Good morning."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct response to \"حال شما چطور است؟\"",
+          "options": [
+            "سلام",
+            "ممنون",
+            "من خوبم",
+            "خواهش می‌کنم"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Welcome to our Persian lesson! Today, we're going to learn some essential Persian greetings and phrases. We'll cover how to say 'Hello' (سلام), 'How are you?' (حال شما چطور است؟), and 'I am fine' (من خوبم). We'll also learn 'Thank you' (ممنون) and 'You're welcome' (خواهش می‌کنم). By the end of this lesson, you'll be able to greet people and have a very basic conversation in Persian. Let's begin!"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "Salām",
+          "meaning": "Hello",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "حال شما چطور است؟",
+          "phonetic": "Hāl-e shomā chetor ast?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "من خوبم",
+          "phonetic": "Man khūbam",
+          "meaning": "I am good.",
+          "example": "حال شما چطور است؟ من خوبم، ممنون."
+        },
+        {
+          "word": "ممنون",
+          "phonetic": "Mamnun",
+          "meaning": "Thank you.",
+          "example": "ممنون از کمک شما."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Persian?",
+          "options": [
+            "خداحافظ",
+            "سلام",
+            "صبح بخیر",
+            "شب بخیر"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Persian phrase means \"How are you?\" (formal/plural)?",
+          "options": [
+            "من خوبم",
+            "شما کی هستید؟",
+            "حال شما چطور است؟",
+            "خوش آمدید"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"حال شما چطور است؟\", how would you respond with \"I am good\"?",
+          "options": [
+            "ممنون",
+            "من خوبم",
+            "بله",
+            "نه"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Persian word for \"Thank you\"?",
+          "options": [
+            "لطفا",
+            "ببخشید",
+            "ممنون",
+            "خواهش می‌کنم"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "به درس فارسی خوش آمدید! امروز می‌خواهیم چند عبارت احوالپرسی پایه را یاد بگیریم. ما 'سلام'، 'حال شما چطور است؟' و 'من خوبم' را پوشش خواهیم داد. گوش کنید و بعد از من تکرار کنید. سپس استفاده از آنها را در مکالمات ساده تمرین خواهیم کرد. بیایید با 'سلام' شروع کنیم. آیا می‌توانید 'سلام' بگویید؟"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "salām",
+          "meaning": "Hello / Hi",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "حال شما چطور است؟",
+          "phonetic": "hāl-e shomā chetor ast?",
+          "meaning": "How are you? (formal)",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "خوبم",
+          "phonetic": "khūbam",
+          "meaning": "I am good / I am fine",
+          "example": "من خوبم، متشکرم."
+        },
+        {
+          "word": "متشکرم",
+          "phonetic": "moteshakkeram",
+          "meaning": "Thank you",
+          "example": "متشکرم که به من کمک کردید."
+        },
+        {
+          "word": "اسم من ... است",
+          "phonetic": "esm-e man ... ast",
+          "meaning": "My name is ...",
+          "example": "اسم من سارا است."
+        },
+        {
+          "word": "خوشوقتم",
+          "phonetic": "khoshvaqtam",
+          "meaning": "Nice to meet you",
+          "example": "خوشوقتم که با شما آشنا شدم."
+        },
+        {
+          "word": "خداحافظ",
+          "phonetic": "khodāhāfez",
+          "meaning": "Goodbye",
+          "example": "خداحافظ، تا فردا."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Persian?",
+          "options": [
+            "ممنون",
+            "سلام",
+            "خداحافظ",
+            "بله"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to \"حال شما چطور است؟\" if you are good?",
+          "options": [
+            "متشکرم",
+            "اسم من است",
+            "خوبم",
+            "خوشوقتم"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"متشکرم\" mean?",
+          "options": [
+            "Hello",
+            "Thank you",
+            "Goodbye",
+            "My name is"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you introduce yourself by saying \"My name is Ali\"?",
+          "options": [
+            "خوشوقتم علی",
+            "اسم من علی است",
+            "سلام علی",
+            "خوبم علی"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "عالیه! در این درس، ما چند سلام و احوالپرسی اولیه فارسی را یاد می‌گیریم. با 'سلام' و 'حال شما چطور است؟' شروع می‌کنیم و پاسخ دادن را تمرین می‌کنیم. سپس به 'اسم من ... است' و 'خوشوقتم' می‌پردازیم. بیایید شروع کنیم!"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "Salām",
+          "meaning": "Hello / Hi",
+          "example": "سلام، حال شما چطوره؟"
+        },
+        {
+          "word": "خوبم",
+          "phonetic": "Khūbam",
+          "meaning": "I am fine",
+          "example": "من خوبم، ممنون."
+        },
+        {
+          "word": "ممنون",
+          "phonetic": "Mamnoon",
+          "meaning": "Thank you",
+          "example": "ممنون از کمکتان."
+        },
+        {
+          "word": "اسمت چیه؟",
+          "phonetic": "Esmet chiye?",
+          "meaning": "What is your name? (informal)",
+          "example": "سلام، اسمت چیه؟"
+        },
+        {
+          "word": "اسم من ... است.",
+          "phonetic": "Esme man ... ast.",
+          "meaning": "My name is ...",
+          "example": "اسم من سارا است."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Persian?",
+          "options": [
+            "سلام",
+            "ممنون",
+            "خوبم",
+            "بله"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the correct response to \"How are you?\" (حالت چطوره؟)",
+          "options": [
+            "اسم من سارا است",
+            "خوبم، ممنون",
+            "بله",
+            "نه"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you ask \"What is your name?\" (informal) in Persian?",
+          "options": [
+            "ممنون",
+            "سلام",
+            "اسمت چیه؟",
+            "بله"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Complete the sentence: \"اسم من ____ است.\" (My name is ____.)",
+          "options": [
+            "خوبم",
+            "ممنون",
+            "سارا",
+            "سلام"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "سلام! خوش آمدید به درس امروز فارسی. امروز می‌خواهیم چند عبارت و کلمه پایه برای سلام و احوالپرسی و معرفی خودتان را یاد بگیریم. ما روی کلماتی مثل 'سلام' (Salām) به معنی 'Hello'، 'خوبم' (Khūbam) به معنی 'I am fine' و 'اسمت چیه؟' (Esmet chiye?) به معنی 'What is your name?' تمرکز خواهیم کرد. من هر کلمه یا عبارت را می‌گویم و شما می‌توانید بعد از من تکرار کنید. سپس یک مکالمه کوتاه را با هم تمرین می‌کنیم. آماده‌اید؟ بیایید شروع کنیم!"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "Salām",
+          "meaning": "Hello / Hi",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "حال شما چطور است؟",
+          "phonetic": "Hāl-e shomā chetor ast?",
+          "meaning": "How are you? (formal)",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "خوبم",
+          "phonetic": "Khūbam",
+          "meaning": "I am fine / I am good",
+          "example": "من خوبم، ممنون."
+        },
+        {
+          "word": "ممنون",
+          "phonetic": "Mamnūn",
+          "meaning": "Thank you",
+          "example": "خوبم، ممنون."
+        },
+        {
+          "word": "و شما؟",
+          "phonetic": "Va shomā?",
+          "meaning": "And you? (formal)",
+          "example": "من خوبم، ممنون. و شما؟"
+        },
+        {
+          "word": "خداحافظ",
+          "phonetic": "Khodāhāfez",
+          "meaning": "Goodbye",
+          "example": "خداحافظ، به امید دیدار."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Persian?",
+          "options": [
+            "خداحافظ",
+            "ممنون",
+            "سلام",
+            "خوبم"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"How are you?\" (formal) in Persian?",
+          "options": [
+            "و شما؟",
+            "خوبم",
+            "حال شما چطور است؟",
+            "سلام"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"حال شما چطور است؟\" and you want to say \"I am fine, thank you\", what would you say?",
+          "options": [
+            "خداحافظ",
+            "خوبم، ممنون",
+            "و شما؟",
+            "سلام"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Persian word for \"Goodbye\"?",
+          "options": [
+            "سلام",
+            "ممنون",
+            "خداحافظ",
+            "خوبم"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "سلام! به درس امروز خوش آمدید. امروز می‌خواهیم با هم چند عبارت بسیار مهم و کاربردی را در زبان فارسی یاد بگیریم: سلام و احوالپرسی! ما کلماتی مثل 'سلام'، 'حال شما چطور است؟'، 'خوبم، ممنون' و 'خداحافظ' را بررسی خواهیم کرد. آماده‌اید شروع کنیم؟ بیایید با 'سلام' شروع کنیم. آیا می‌توانید بگویید 'سلام'؟"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "Salam",
+          "meaning": "Hello",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "حال شما چطور است؟",
+          "phonetic": "Hâl-e shomâ chetor ast?",
+          "meaning": "How are you? (formal)",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "من خوبم",
+          "phonetic": "Man khubam",
+          "meaning": "I am fine.",
+          "example": "من خوبم، ممنون."
+        },
+        {
+          "word": "ممنون",
+          "phonetic": "Mamnun",
+          "meaning": "Thank you.",
+          "example": "ممنون از شما."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Persian?",
+          "options": [
+            "صبح بخیر",
+            "شب بخیر",
+            "سلام",
+            "خداحافظ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct response to \"حال شما چطور است؟\" (How are you?) if you are fine?",
+          "options": [
+            "من خوب نیستم",
+            "من خوبم",
+            "من خسته ام",
+            "من گرسنه ام"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the Persian word for \"Thank you.\"",
+          "options": [
+            "لطفاً",
+            "بله",
+            "نه",
+            "ممنون"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Welcome to your first Persian lesson! Today, we're going to learn some essential greetings and phrases to start a conversation in Persian. We'll begin with the most common greeting: 'سلام' (Salam), which means 'Hello'. Listen carefully and try to repeat after me: 'سلام'. Excellent! Now, let's learn how to ask 'How are you?' in a formal way: 'حال شما چطور است؟' (Hâl-e shomâ chetor ast?). Try saying that. And if someone asks you, you can reply with 'من خوبم' (Man khubam), meaning 'I am fine'. Finally, to express gratitude, we use 'ممنون' (Mamnun) for 'Thank you'. We'll practice these phrases and more in our lesson. Are you ready to begin?"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "خواستن",
+          "phonetic": "khāstan",
+          "meaning": "to want",
+          "example": "من می‌خواهم فارسی یاد بگیرم."
+        },
+        {
+          "word": "توانستن",
+          "phonetic": "tavānestan",
+          "meaning": "to be able to, can",
+          "example": "شما می‌توانید این کار را انجام دهید."
+        },
+        {
+          "word": "رفتن",
+          "phonetic": "raftan",
+          "meaning": "to go",
+          "example": "ما فردا به بازار می‌رویم."
+        },
+        {
+          "word": "آمدن",
+          "phonetic": "āmadan",
+          "meaning": "to come",
+          "example": "او دیروز به خانه آمد."
+        },
+        {
+          "word": "حالا",
+          "phonetic": "hālā",
+          "meaning": "now",
+          "example": "حالا وقت ناهار است."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "\"I want to drink water.\" How would you say \"I want\" in Persian?",
+          "options": [
+            "می‌خواهم",
+            "می‌توانم",
+            "می‌روم",
+            "می‌آیم"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the correct verb to complete the sentence: \"She ___ speak Persian.\" (She can speak Persian.)",
+          "options": [
+            "می‌خواهد",
+            "می‌تواند",
+            "می‌رود",
+            "می‌آید"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"now\"?",
+          "options": [
+            "دیروز",
+            "فردا",
+            "حالا",
+            "همیشه"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "سلام! به درس فارسی ما خوش آمدید. امروز، می‌خواهیم چند فعل بسیار کاربردی فارسی و یک قید زمان رایج را یاد بگیریم. ما نحوه استفاده از افعالی مانند \"خواستن\" (to want)، \"توانستن\" (to be able to)، \"رفتن\" (to go)، و \"آمدن\" (to come)، و کلمه \"حالا\" (now) را تمرین خواهیم کرد. همچنین به نحوه تغییر این افعال در زمان‌های مختلف نگاه خواهیم کرد. آیا برای شروع یادگیری فارسی آماده‌اید؟ شروع کنیم!"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سرگرمی",
+          "phonetic": "sargarmī",
+          "meaning": "hobby",
+          "example": "سرگرمی من کتاب خواندن است."
+        },
+        {
+          "word": "اوقات فراغت",
+          "phonetic": "owqāt-e farāghat",
+          "meaning": "free time",
+          "example": "در اوقات فراغت چه کار می‌کنی؟"
+        },
+        {
+          "word": "کتاب خواندن",
+          "phonetic": "ketāb khāndan",
+          "meaning": "reading books",
+          "example": "او دوست دارد کتاب بخواند."
+        },
+        {
+          "word": "فیلم دیدن",
+          "phonetic": "film didan",
+          "meaning": "watching movies",
+          "example": "ما جمعه‌ها فیلم می‌بینیم."
+        },
+        {
+          "word": "ورزش کردن",
+          "phonetic": "varzesh kardan",
+          "meaning": "playing sports / exercising",
+          "example": "آیا شما ورزش می‌کنید؟"
+        },
+        {
+          "word": "موسیقی گوش دادن",
+          "phonetic": "mūsīqī gūsh dādan",
+          "meaning": "listening to music",
+          "example": "من هر روز موسیقی گوش می‌دهم."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Persian word for \"hobby\"?",
+          "options": [
+            "اوقات فراغت",
+            "سرگرمی",
+            "ورزش",
+            "کتاب"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"reading books\" in Persian?",
+          "options": [
+            "فیلم دیدن",
+            "موسیقی گوش دادن",
+            "کتاب خواندن",
+            "ورزش کردن"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which activity means \"watching movies\"?",
+          "options": [
+            "فیلم دیدن",
+            "ورزش کردن",
+            "سرگرمی",
+            "اوقات فراغت"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Complete the sentence: \"I like to ______ in my free time.\" (I like to listen to music in my free time.)",
+          "options": [
+            "فیلم دیدن",
+            "موسیقی گوش دادن",
+            "کتاب خواندن",
+            "ورزش کردن"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "سلام! در این درس، ما می‌خواهیم درباره سرگرمی‌ها و فعالیت‌های اوقات فراغت یاد بگیریم. ما چند واژه جدید را پوشش خواهیم داد و تمرین می‌کنیم که چگونه آنها را در جملات استفاده کنیم. در پایان این درس، شما قادر خواهید بود درباره سرگرمی‌ها و کارهایی که در اوقات فراغت انجام می‌دهید صحبت کنید. بیایید شروع کنیم!"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "salām",
+          "meaning": "Hello",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "حال شما چطور است؟",
+          "phonetic": "hāl-e shomā chetor ast?",
+          "meaning": "How are you?",
+          "example": "سلام، حال شما چطور است؟"
+        },
+        {
+          "word": "خوبم",
+          "phonetic": "khūbam",
+          "meaning": "I am good/fine",
+          "example": "من خوبم، ممنون."
+        },
+        {
+          "word": "ممنون",
+          "phonetic": "mamnūn",
+          "meaning": "Thank you",
+          "example": "ممنون از کمک شما."
+        },
+        {
+          "word": "اسم شما چیست؟",
+          "phonetic": "esm-e shomā chist?",
+          "meaning": "What is your name?",
+          "example": "سلام، اسم شما چیست؟"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Persian?",
+          "options": [
+            "ممنون",
+            "سلام",
+            "خوبم",
+            "بله"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Persian phrase for \"How are you?\".",
+          "options": [
+            "اسم شما چیست؟",
+            "من خوبم.",
+            "حال شما چطور است؟",
+            "متشکرم."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Persian word for \"Thank you\"?",
+          "options": [
+            "خداحافظ",
+            "لطفاً",
+            "ممنون",
+            "نه"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor helping a student learn Persian. Today we'll focus on basic greetings in Persian. I'll introduce some new vocabulary, we'll practice pronunciation, and then we'll try some simple conversations. Let's start with 'سلام' (salām)."
+    }
+  ]
+}

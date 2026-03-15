@@ -1,0 +1,1273 @@
+{
+  "langCode": "ja-JP",
+  "langLabel": "Japanese",
+  "langNative": "日本語",
+  "generatedAt": "2026-03-14T23:19:18.062Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "こんにちは",
+          "phonetic": "Konnichiwa",
+          "meaning": "Hello / Good afternoon",
+          "example": "こんにちは、お元気ですか？"
+        },
+        {
+          "word": "ありがとう",
+          "phonetic": "Arigatō",
+          "meaning": "Thank you",
+          "example": "ありがとう、助かりました。"
+        },
+        {
+          "word": "わたし",
+          "phonetic": "Watashi",
+          "meaning": "I / Me",
+          "example": "わたしは学生です。"
+        },
+        {
+          "word": "です",
+          "phonetic": "Desu",
+          "meaning": "is / am / are (copula)",
+          "example": "これはペンです。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Japanese word for \"Hello\"?",
+          "options": [
+            "ありがとう",
+            "こんにちは",
+            "さようなら",
+            "すみません"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"I am a student\" in Japanese?",
+          "options": [
+            "わたしは先生です。",
+            "あなたは学生です。",
+            "わたしは学生です。",
+            "これは学生です。"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "日本語の最初のレッスンへようこそ！今日は、いくつかの基本的な挨拶と自己紹介の表現を学びましょう。「こんにちは」（Hello/Good afternoon）、「ありがとう」（Thank you）、そして「わたし」（I/Me）と「です」（is/am/are）を使って簡単な文を作る練習をします。さあ、始めましょう！"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "こんにちは",
+          "phonetic": "konnichiwa",
+          "meaning": "Hello / Good day",
+          "example": "こんにちは、お元気ですか？"
+        },
+        {
+          "word": "ありがとう",
+          "phonetic": "arigatou",
+          "meaning": "Thank you",
+          "example": "ありがとう、助かりました。"
+        },
+        {
+          "word": "はい",
+          "phonetic": "hai",
+          "meaning": "Yes",
+          "example": "はい、そうです。"
+        },
+        {
+          "word": "いいえ",
+          "phonetic": "iie",
+          "meaning": "No",
+          "example": "いいえ、違います。"
+        },
+        {
+          "word": "すみません",
+          "phonetic": "sumimasen",
+          "meaning": "Excuse me / Sorry",
+          "example": "すみません、道を教えてください。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Japanese?",
+          "options": [
+            "ありがとう",
+            "はい",
+            "こんにちは",
+            "いいえ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Japanese word means \"Thank you\"?",
+          "options": [
+            "すみません",
+            "ありがとう",
+            "はい",
+            "こんにちは"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Japanese word for \"Yes\"?",
+          "options": [
+            "いいえ",
+            "すみません",
+            "はい",
+            "ありがとう"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"No\" in Japanese?",
+          "options": [
+            "こんにちは",
+            "はい",
+            "いいえ",
+            "ありがとう"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"Excuse me\" or \"Sorry\"?",
+          "options": [
+            "はい",
+            "すみません",
+            "いいえ",
+            "こんにちは"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "皆さん、こんにちは！AIチューターです。今日は、日本語の基本的な挨拶とフレーズをいくつか学びましょう。まずは「こんにちは」(konnichiwa)です。これは「Hello」や「Good day」という意味ですね。次に、「ありがとう」(arigatou)を学びます。これは「Thank you」です。それから、「はい」(hai)は「Yes」を、「いいえ」(iie)は「No」を意味します。最後に、「すみません」(sumimasen)を学びましょう。これは「Excuse me」や「Sorry」という意味で使われます。さあ、一緒に練習しましょう！"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "こんにちは",
+          "phonetic": "Konnichiwa",
+          "meaning": "Hello / Good afternoon",
+          "example": "こんにちは、お元気ですか？"
+        },
+        {
+          "word": "ありがとう",
+          "phonetic": "Arigatou",
+          "meaning": "Thank you",
+          "example": "ありがとう、助かりました。"
+        },
+        {
+          "word": "すみません",
+          "phonetic": "Sumimasen",
+          "meaning": "Excuse me / Sorry",
+          "example": "すみません、お手洗いどこですか？"
+        },
+        {
+          "word": "はい",
+          "phonetic": "Hai",
+          "meaning": "Yes",
+          "example": "はい、そうです。"
+        },
+        {
+          "word": "いいえ",
+          "phonetic": "Iie",
+          "meaning": "No",
+          "example": "いいえ、違います。"
+        },
+        {
+          "word": "私",
+          "phonetic": "Watashi",
+          "meaning": "I / Me",
+          "example": "私は学生です。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Good afternoon\" in Japanese?",
+          "options": [
+            "ありがとう",
+            "こんにちは",
+            "すみません",
+            "はい"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Japanese word means \"Thank you\"?",
+          "options": [
+            "いいえ",
+            "私",
+            "ありがとう",
+            "すみません"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks you a question in Japanese and you want to say \"Yes\", which word should you use?",
+          "options": [
+            "いいえ",
+            "はい",
+            "私",
+            "こんにちは"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "こんにちは！Today, we're going to learn some essential Japanese greetings and responses. These phrases are super useful for daily conversations in Japan. We'll start with 「こんにちは」 (Konnichiwa), which means \"Hello\" or \"Good afternoon\". You can use it to greet almost anyone. Next, we'll learn 「ありがとう」 (Arigatou) for \"Thank you\", and 「すみません」 (Sumimasen) for \"Excuse me\" or \"Sorry\". Finally, we'll cover 「はい」 (Hai) for \"Yes\" and 「いいえ」 (Iie) for \"No\". Let's practice saying them together and understand when to use each one. Are you ready to dive into Japanese?"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "こんにちは",
+          "phonetic": "Konnichiwa",
+          "meaning": "Hello / Good afternoon",
+          "example": "こんにちは、お元気ですか？"
+        },
+        {
+          "word": "ありがとう",
+          "phonetic": "Arigatou",
+          "meaning": "Thank you",
+          "example": "ありがとう、助かりました！"
+        },
+        {
+          "word": "はい",
+          "phonetic": "Hai",
+          "meaning": "Yes",
+          "example": "はい、そうです。"
+        },
+        {
+          "word": "いいえ",
+          "phonetic": "Iie",
+          "meaning": "No",
+          "example": "いいえ、違います。"
+        },
+        {
+          "word": "すみません",
+          "phonetic": "Sumimasen",
+          "meaning": "Excuse me / Sorry",
+          "example": "すみません、道を教えてください。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Good afternoon\" in Japanese?",
+          "options": [
+            "さようなら",
+            "ありがとう",
+            "こんにちは",
+            "おやすみ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Japanese word for \"Thank you\"?",
+          "options": [
+            "ごめんなさい",
+            "ありがとう",
+            "どういたしまして",
+            "すみません"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"Yes\" in Japanese?",
+          "options": [
+            "いいえ",
+            "はい",
+            "どうぞ",
+            "またね"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If you want to apologize or get someone's attention, what do you say in Japanese?",
+          "options": [
+            "おめでとう",
+            "いただきます",
+            "すみません",
+            "ごちそうさま"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "こんにちは！今日は基本的な日本語の挨拶を学びましょう。「こんにちは」、「ありがとう」、「はい」、「いいえ」、そして「すみません」をカバーします。これらの言葉は、日常会話でとても役立ちますよ。一緒に発音を練習して、簡単な文で使ってみましょう。準備はいいですか？始めましょう！"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "食べる",
+          "phonetic": "taberu",
+          "meaning": "to eat",
+          "example": "私はパンを食べる。"
+        },
+        {
+          "word": "飲む",
+          "phonetic": "nomu",
+          "meaning": "to drink",
+          "example": "水を飲む。"
+        },
+        {
+          "word": "行く",
+          "phonetic": "iku",
+          "meaning": "to go",
+          "example": "学校へ行く。"
+        },
+        {
+          "word": "見る",
+          "phonetic": "miru",
+          "meaning": "to see, to watch",
+          "example": "テレビを見る。"
+        },
+        {
+          "word": "本",
+          "phonetic": "hon",
+          "meaning": "book",
+          "example": "これは私の本です。"
+        },
+        {
+          "word": "水",
+          "phonetic": "mizu",
+          "meaning": "water",
+          "example": "水をください。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Japanese word means \"to eat\"?",
+          "options": [
+            "飲む",
+            "食べる",
+            "見る",
+            "行く"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"to drink\" in Japanese?",
+          "options": [
+            "食べる",
+            "行く",
+            "飲む",
+            "見る"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Japanese word for \"book\"?",
+          "options": [
+            "水",
+            "本",
+            "食べる",
+            "行く"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Japanese sentence for \"I drink water.\"",
+          "options": [
+            "私は水を食べる。",
+            "私は水を飲む。",
+            "私は本を飲む。",
+            "私は水を食べる。"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "こんにちは！今日のレッスンへようこそ。このレッスンでは、いくつかの新しい日本語の動詞と名詞を学びます。例えば、「食べる」(taberu - to eat) や「飲む」(nomu - to drink) などです。これらの単語を使って、簡単な文を作る練習もします。準備はいいですか？始めましょう！"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "こんにちは",
+          "phonetic": "Konnichiwa",
+          "meaning": "Hello / Good afternoon",
+          "example": "こんにちは。お元気ですか？"
+        },
+        {
+          "word": "はじめまして",
+          "phonetic": "Hajimemashite",
+          "meaning": "Nice to meet you (first time greeting)",
+          "example": "はじめまして。田中です。"
+        },
+        {
+          "word": "どうぞよろしくおねがいします",
+          "phonetic": "Douzo yoroshiku onegaishimasu",
+          "meaning": "Pleased to meet you / Best regards (polite closing after introduction)",
+          "example": "はじめまして。どうぞよろしくおねがいします。"
+        },
+        {
+          "word": "です",
+          "phonetic": "desu",
+          "meaning": "is / am / are (copula)",
+          "example": "わたしは学生です。"
+        },
+        {
+          "word": "わたし",
+          "phonetic": "watashi",
+          "meaning": "I / me",
+          "example": "わたしは日本人です。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Japanese greeting for \"Hello\" or \"Good afternoon\"?",
+          "options": [
+            "おはようございます",
+            "こんばんは",
+            "こんにちは",
+            "さようなら"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Nice to meet you\" when meeting someone for the first time?",
+          "options": [
+            "ありがとう",
+            "すみません",
+            "はじめまして",
+            "どうも"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"I\" or \"me\"?",
+          "options": [
+            "あなた",
+            "わたし",
+            "かれ",
+            "かのじょ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Complete the sentence: \"My name is [Your Name].\" (e.g., \"I am Tanaka.\")",
+          "options": [
+            "わたしは田中です。",
+            "田中わたしはです。",
+            "ですわたしは田中。",
+            "田中ですわたしは。"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "ようこそ、初めての日本語レッスンへ！今日は、自己紹介に役立つ基本的な挨拶とフレーズを学びましょう。\n\nまず、日中の挨拶「こんにちは」から始めます。これは「Hello」や「Good afternoon」という意味です。私に続いて言ってみましょう：「こんにちは」\n\n素晴らしいです！次に、初めて会う人に使う「はじめまして」です。これは「Nice to meet you」という意味ですね。言ってみましょう：「はじめまして」\n\nとても良いですね！自己紹介の最後に使う丁寧なフレーズ「どうぞよろしくおねがいします」を学びましょう。これは「Pleased to meet you」という気持ちを伝える表現です。言ってみましょう：「どうぞよろしくおねがいします」\n\n最後に、自分の名前を言うときに使う「わたしは〜です」という形です。「わたし」は「I」や「me」という意味で、「〜です」は「am/is/are」にあたります。例えば、「わたしは[あなたの名前]です」と言います。では、あなたの名前を使って言ってみましょう：「わたしは[あなたの名前]です」\n\nこれで、基本的な自己紹介ができますね！"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "こんにちは",
+          "phonetic": "Konnichiwa",
+          "meaning": "Hello / Good afternoon",
+          "example": "こんにちは、お元気ですか？"
+        },
+        {
+          "word": "ありがとうございます",
+          "phonetic": "Arigatō gozaimasu",
+          "meaning": "Thank you (polite)",
+          "example": "助けてくれてありがとうございます。"
+        },
+        {
+          "word": "すみません",
+          "phonetic": "Sumimasen",
+          "meaning": "Excuse me / I'm sorry",
+          "example": "すみません、道を教えていただけますか？"
+        },
+        {
+          "word": "はい",
+          "phonetic": "Hai",
+          "meaning": "Yes",
+          "example": "はい、そうです。"
+        },
+        {
+          "word": "いいえ",
+          "phonetic": "Iie",
+          "meaning": "No",
+          "example": "いいえ、違います。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Good afternoon\" in Japanese?",
+          "options": [
+            "ありがとう",
+            "すみません",
+            "こんにちは",
+            "さようなら"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Japanese phrase means \"Thank you\"?",
+          "options": [
+            "はい",
+            "いいえ",
+            "ありがとうございます",
+            "ごめんなさい"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Japanese word for \"Excuse me\" or \"I'm sorry\".",
+          "options": [
+            "おやすみ",
+            "すみません",
+            "いただきます",
+            "ごちそうさま"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Japanese word for \"Yes\"?",
+          "options": [
+            "いいえ",
+            "はい",
+            "どうぞ",
+            "もしもし"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"No\" in Japanese?",
+          "options": [
+            "はい",
+            "いいえ",
+            "どうぞ",
+            "もしもし"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "皆さん、こんにちは！今日はいくつかの基本的な日本語のフレーズを学びましょう。特に「こんにちは」、「ありがとうございます」、そして「すみません」に焦点を当てます。\n\nまずは「こんにちは」から始めましょう。これは「Hello」や「Good afternoon」という意味で、日中に人に会ったときに使います。発音してみてください：「**こんにちは**」。\n\n次に「ありがとうございます」です。これは「Thank you」という意味で、感謝を伝えるときに使います。少し長いですが、ゆっくり言ってみましょう：「**ありがとうございます**」。\n\n最後に「すみません」です。これは「Excuse me」や「I'm sorry」という意味で、人に呼びかけたり、謝ったりするときに使います。発音は：「**すみません**」。\n\nこれらのフレーズを使って、簡単な会話を練習してみましょう！"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "国",
+          "phonetic": "kuni",
+          "meaning": "country",
+          "example": "どこの国から来ましたか？"
+        },
+        {
+          "word": "〜人",
+          "phonetic": "~jin",
+          "meaning": "suffix for nationality (e.g., 日本人 - Japanese person)",
+          "example": "私は日本人です。"
+        },
+        {
+          "word": "学生",
+          "phonetic": "gakusei",
+          "meaning": "student",
+          "example": "彼は学生です。"
+        },
+        {
+          "word": "会社員",
+          "phonetic": "kaishain",
+          "meaning": "company employee",
+          "example": "彼女は会社員です。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"country\" in Japanese?",
+          "options": [
+            "学生",
+            "会社員",
+            "国",
+            "人"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which suffix is used to indicate nationality, like \"Japanese person\"?",
+          "options": [
+            "〜国",
+            "〜人",
+            "〜学生",
+            "〜会社員"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone is a \"student\", which word would you use?",
+          "options": [
+            "会社員",
+            "学生",
+            "日本人",
+            "国"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"company employee\" in Japanese?",
+          "options": [
+            "学生",
+            "国",
+            "会社員",
+            "日本人"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "皆さん、こんにちは！今日は「国籍」 (kokuseki - nationality) と「職業」 (shokugyō - profession) について話す練習をしましょう。\n「国」 (kuni - country) や「〜人」 (〜jin - suffix for nationality)、そして「学生」 (gakusei - student) や「会社員」 (kaishain - company employee) といった言葉を学びます。\nこれらの言葉を使って、自分の出身や仕事について紹介したり、相手に尋ねたりできるようになりますよ。\nさあ、始めましょう！"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "こんにちは",
+          "phonetic": "Konnichiwa",
+          "meaning": "Hello / Good afternoon",
+          "example": "こんにちは、お元気ですか？"
+        },
+        {
+          "word": "ありがとうございます",
+          "phonetic": "Arigatou gozaimasu",
+          "meaning": "Thank you (polite)",
+          "example": "手伝ってくれて、ありがとうございます。"
+        },
+        {
+          "word": "すみません",
+          "phonetic": "Sumimasen",
+          "meaning": "Excuse me / Sorry",
+          "example": "すみません、道を聞いてもいいですか？"
+        },
+        {
+          "word": "はい",
+          "phonetic": "Hai",
+          "meaning": "Yes",
+          "example": "はい、そうです。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the polite way to say \"Thank you\" in Japanese?",
+          "options": [
+            "こんにちは",
+            "ありがとうございます",
+            "すみません",
+            "はい"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Excuse me\" or \"Sorry\" in Japanese?",
+          "options": [
+            "はい",
+            "こんにちは",
+            "すみません",
+            "ありがとうございます"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which of these means \"Yes\" in Japanese?",
+          "options": [
+            "いいえ",
+            "はい",
+            "こんばんは",
+            "おはようございます"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "皆さん、こんにちは！日本語のレッスンへようこそ！\n今日は、いくつかの基本的な日本の挨拶と表現を学びます。\nまず、「こんにちは」から始めましょう。これは英語の「Hello」や「Good afternoon」に相当し、一日を通して使える一般的な挨拶です。\n次に、「ありがとうございます」です。これは「Thank you」の丁寧な言い方で、感謝の気持ちを伝えるときに使います。\nそして、「すみません」。「Excuse me」や「Sorry」という意味で、道を尋ねたり、謝ったりする際に非常に役立ちます。\n最後に、「はい」。「Yes」という意味で、肯定の返事をするときに使います。\n\nさあ、これらの言葉を一緒に練習しましょう！\nまずは「こんにちは」と言ってみてください。\n次に、感謝の気持ちを込めて「ありがとうございます」と言ってみましょう。\n誰かに話しかけたい時や、軽く謝りたい時に「すみません」を使ってみましょう。\n最後に、質問に対して「はい」と答える練習をしましょう。\n\nこれらの表現を使って、日本語でのコミュニケーションの第一歩を踏み出しましょう！"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "こんにちは",
+          "phonetic": "Konnichiwa",
+          "meaning": "Hello / Good afternoon",
+          "example": "こんにちは、お元気ですか？"
+        },
+        {
+          "word": "ありがとう",
+          "phonetic": "Arigatou",
+          "meaning": "Thank you",
+          "example": "ありがとう、助かりました！"
+        },
+        {
+          "word": "はい",
+          "phonetic": "Hai",
+          "meaning": "Yes",
+          "example": "はい、そうです。"
+        },
+        {
+          "word": "いいえ",
+          "phonetic": "Iie",
+          "meaning": "No",
+          "example": "いいえ、違います。"
+        },
+        {
+          "word": "すみません",
+          "phonetic": "Sumimasen",
+          "meaning": "Excuse me / Sorry",
+          "example": "すみません、道を教えてください。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Japanese?",
+          "options": [
+            "さようなら",
+            "ありがとう",
+            "こんにちは",
+            "おやすみ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Japanese word means \"Thank you\"?",
+          "options": [
+            "はい",
+            "いいえ",
+            "ありがとう",
+            "すみません"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Japanese word for \"Yes\".",
+          "options": [
+            "いいえ",
+            "はい",
+            "ごめんなさい",
+            "またね"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "こんにちは！日本語のレッスンへようこそ！私はあなたのAI日本語チューターです。今日は、日本語でよく使う基本的な挨拶をいくつか学びましょう。例えば、「こんにちは」や「ありがとう」などです。私が単語を言いますので、ぜひ声に出して繰り返してみてくださいね。準備はいいですか？では、まず「こんにちは」から始めましょう。どうぞ、言ってみてください！"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "こんにちは",
+          "phonetic": "Konnichiwa",
+          "meaning": "Hello / Good afternoon",
+          "example": "こんにちは、お元気ですか？"
+        },
+        {
+          "word": "ありがとう",
+          "phonetic": "Arigatou",
+          "meaning": "Thank you",
+          "example": "ありがとう、助かりました。"
+        },
+        {
+          "word": "はい",
+          "phonetic": "Hai",
+          "meaning": "Yes",
+          "example": "はい、そうです。"
+        },
+        {
+          "word": "いいえ",
+          "phonetic": "Iie",
+          "meaning": "No",
+          "example": "いいえ、違います。"
+        },
+        {
+          "word": "すみません",
+          "phonetic": "Sumimasen",
+          "meaning": "Excuse me / Sorry",
+          "example": "すみません、道を教えてください。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Good afternoon\" in Japanese?",
+          "options": [
+            "はい",
+            "ありがとう",
+            "こんにちは",
+            "いいえ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Japanese word means \"Thank you\"?",
+          "options": [
+            "すみません",
+            "ありがとう",
+            "こんにちは",
+            "はい"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Japanese word for \"Yes\"?",
+          "options": [
+            "いいえ",
+            "すみません",
+            "はい",
+            "こんにちは"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the Japanese word that means \"Excuse me\" or \"Sorry\".",
+          "options": [
+            "ありがとう",
+            "いいえ",
+            "すみません",
+            "はい"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "こんにちは！私はあなたのAI日本語チューターです。今日は、いくつかの基本的な日本語の挨拶とフレーズを学びましょう。「Hello」、「Thank you」、「Yes」、「No」、「Excuse me/Sorry」の言い方をカバーします。それぞれのフレーズを紹介し、その使い方を説明し、練習する機会を提供します。では、「こんにちは」から始めましょう！"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "こんにちは",
+          "phonetic": "Konnichiwa",
+          "meaning": "Hello / Good day",
+          "example": "こんにちは、お元気ですか？"
+        },
+        {
+          "word": "おはようございます",
+          "phonetic": "Ohayō gozaimasu",
+          "meaning": "Good morning (polite)",
+          "example": "おはようございます、先生！"
+        },
+        {
+          "word": "こんばんは",
+          "phonetic": "Konbanwa",
+          "meaning": "Good evening",
+          "example": "こんばんは、おやすみなさい。"
+        },
+        {
+          "word": "ありがとうございます",
+          "phonetic": "Arigatō gozaimasu",
+          "meaning": "Thank you (polite)",
+          "example": "手伝ってくれて、ありがとうございます。"
+        },
+        {
+          "word": "すみません",
+          "phonetic": "Sumimasen",
+          "meaning": "Excuse me / Sorry",
+          "example": "すみません、お手洗いどこですか？"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most common way to say \"Hello\" or \"Good day\" in Japanese?",
+          "options": [
+            "おはようございます",
+            "こんばんは",
+            "こんにちは",
+            "ありがとうございます"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you politely say \"Thank you\" in Japanese?",
+          "options": [
+            "すみません",
+            "ありがとうございます",
+            "こんにちは",
+            "お元気ですか"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which of these phrases means \"Good morning\" (polite)?",
+          "options": [
+            "こんばんは",
+            "こんにちは",
+            "おはようございます",
+            "すみません"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If you want to say \"Excuse me\" or \"Sorry\" in Japanese, what would you say?",
+          "options": [
+            "ありがとうございます",
+            "すみません",
+            "こんにちは",
+            "おやすみなさい"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "素晴らしいですね！今日は、いくつかの一般的な日本語の挨拶を学びましょう。 「こんにちは」、「おはようございます」、そして「ありがとうございます」をカバーします。私がそれぞれの言葉を言うので、皆さんは私の後に繰り返してください。それから、簡単な文でそれらを使う練習をしましょう。まずは「こんにちは」から始めましょう。"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "名前",
+          "phonetic": "namae",
+          "meaning": "name",
+          "example": "あなたの名前は何ですか？"
+        },
+        {
+          "word": "趣味",
+          "phonetic": "shumi",
+          "meaning": "hobby",
+          "example": "私の趣味は読書です。"
+        },
+        {
+          "word": "どんな",
+          "phonetic": "donna",
+          "meaning": "what kind of, what sort of",
+          "example": "どんな音楽が好きですか？"
+        },
+        {
+          "word": "好き",
+          "phonetic": "suki",
+          "meaning": "like, favorite",
+          "example": "私は猫が好きです。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How would you ask someone \"What is your name?\" in Japanese?",
+          "options": [
+            "あなたの名前は何ですか？",
+            "あなたの趣味は何ですか？",
+            "あなたの国はどこですか？",
+            "あなたの仕事は何ですか？"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means 'hobby'?",
+          "options": [
+            "名前",
+            "趣味",
+            "仕事",
+            "家族"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say 'What kind of sports do you like?'?",
+          "options": [
+            "どんな食べ物が好きですか？",
+            "どんな本が好きですか？",
+            "どんなスポーツが好きですか？",
+            "どんな映画が好きですか？"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "こんにちは！今日は、日本語で自分の趣味について話したり、相手に趣味を尋ねたりする方法を学びましょう。私たちは「趣味 (shumi)」という言葉や、「どんな (donna)」という「what kind of」を意味する言葉、そして「好き (suki)」という「to like」を意味する言葉など、役立つ単語やフレーズを学びます。いくつか例文を挙げた後、趣味について質問したり答えたりする練習をしましょう。例えば、「私の趣味は読書です。」(Watashi no shumi wa dokusho desu.) は「My hobby is reading.」という意味です。また、「どんなスポーツが好きですか？」(Donna supōtsu ga suki desu ka?) は「What kind of sports do you like?」という意味です。日本語の趣味について学ぶ準備はできましたか？"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "まっすぐ",
+          "phonetic": "massugu",
+          "meaning": "straight",
+          "example": "ここをまっすぐ行ってください。"
+        },
+        {
+          "word": "右に曲がる",
+          "phonetic": "migi ni magaru",
+          "meaning": "turn right",
+          "example": "次の角を右に曲がってください。"
+        },
+        {
+          "word": "左に曲がる",
+          "phonetic": "hidari ni magaru",
+          "meaning": "turn left",
+          "example": "銀行の前で左に曲がります。"
+        },
+        {
+          "word": "交差点",
+          "phonetic": "kousaten",
+          "meaning": "intersection",
+          "example": "あの交差点を渡ります。"
+        },
+        {
+          "word": "～の隣に",
+          "phonetic": "~ no tonari ni",
+          "meaning": "next to ~",
+          "example": "郵便局は駅の隣にあります。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"straight\" in Japanese?",
+          "options": [
+            "まっすぐ",
+            "右",
+            "左",
+            "前"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which phrase means \"turn left\"?",
+          "options": [
+            "右に曲がる",
+            "まっすぐ行く",
+            "左に曲がる",
+            "止まる"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If a building is \"next to the station,\" which particle and word would you use?",
+          "options": [
+            "駅の前に",
+            "駅の隣に",
+            "駅の後ろに",
+            "駅の中に"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "こんにちは！今日は「道案内」について学びましょう。新しい単語「まっすぐ」、「右に曲がる」、「左に曲がる」、「交差点」、「～の隣に」を覚え、道案内の表現を練習します。始めましょう！"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "行く",
+          "phonetic": "iku",
+          "meaning": "to go",
+          "example": "私は学校に行きます。"
+        },
+        {
+          "word": "食べる",
+          "phonetic": "taberu",
+          "meaning": "to eat",
+          "example": "毎日、ご飯を食べます。"
+        },
+        {
+          "word": "飲む",
+          "phonetic": "nomu",
+          "meaning": "to drink",
+          "example": "水を飲みましょう。"
+        },
+        {
+          "word": "見る",
+          "phonetic": "miru",
+          "meaning": "to see/watch",
+          "example": "テレビを見ますか？"
+        },
+        {
+          "word": "聞く",
+          "phonetic": "kiku",
+          "meaning": "to listen/hear",
+          "example": "音楽を聞くのが好きです。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Japanese verb means \"to go\"?",
+          "options": [
+            "食べる",
+            "飲む",
+            "行く",
+            "見る"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"to eat\" in Japanese?",
+          "options": [
+            "聞く",
+            "食べる",
+            "行く",
+            "飲む"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Japanese verb for \"to drink\".",
+          "options": [
+            "見る",
+            "聞く",
+            "飲む",
+            "食べる"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "皆さん、こんにちは！今日の日本語レッスンへようこそ！今日は、日常生活でよく使う大切な動詞をいくつか学びましょう。例えば、「行く (iku) - to go」、「食べる (taberu) - to eat」、「飲む (nomu) - to drink」などです。これらの単語を使って、簡単な文を作る練習をしていきますよ。まずは「行く」という動詞から始めましょう。これは「to go」という意味です。私に続いて発音してみてください。「行く」。"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "こんにちは",
+          "phonetic": "Konnichiwa",
+          "meaning": "Hello / Good afternoon",
+          "example": "こんにちは、お元気ですか？"
+        },
+        {
+          "word": "ありがとう",
+          "phonetic": "Arigatou",
+          "meaning": "Thank you (casual)",
+          "example": "ありがとう、助かりました。"
+        },
+        {
+          "word": "すみません",
+          "phonetic": "Sumimasen",
+          "meaning": "Excuse me / Sorry",
+          "example": "すみません、道を教えてください。"
+        },
+        {
+          "word": "はい",
+          "phonetic": "Hai",
+          "meaning": "Yes",
+          "example": "はい、そうです。"
+        },
+        {
+          "word": "いいえ",
+          "phonetic": "Iie",
+          "meaning": "No",
+          "example": "いいえ、違います。"
+        },
+        {
+          "word": "どうぞ",
+          "phonetic": "Douzo",
+          "meaning": "Please / Here you go",
+          "example": "どうぞ、お入りください。"
+        },
+        {
+          "word": "おはようございます",
+          "phonetic": "Ohayou gozaimasu",
+          "meaning": "Good morning (polite)",
+          "example": "おはようございます、先生。"
+        },
+        {
+          "word": "こんばんは",
+          "phonetic": "Konbanwa",
+          "meaning": "Good evening",
+          "example": "こんばんは、お食事はいかがですか？"
+        },
+        {
+          "word": "おやすみなさい",
+          "phonetic": "Oyasuminasai",
+          "meaning": "Good night (polite)",
+          "example": "おやすみなさい、また明日。"
+        },
+        {
+          "word": "さようなら",
+          "phonetic": "Sayounara",
+          "meaning": "Goodbye",
+          "example": "さようなら、また会いましょう。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Good afternoon\" in Japanese?",
+          "options": [
+            "ありがとう",
+            "こんにちは",
+            "すみません",
+            "さようなら"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Japanese word means \"Thank you\" (casual)?",
+          "options": [
+            "はい",
+            "いいえ",
+            "ありがとう",
+            "どうぞ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Japanese translation for \"Excuse me / Sorry\".",
+          "options": [
+            "こんばんは",
+            "おやすみなさい",
+            "すみません",
+            "おはようございます"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Japanese word for \"Yes\"?",
+          "options": [
+            "いいえ",
+            "はい",
+            "どうぞ",
+            "ありがとう"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which of these words means \"Good morning\" (polite)?",
+          "options": [
+            "こんにちは",
+            "こんばんは",
+            "おやすみなさい",
+            "おはようございます"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "こんにちは！日本語のレッスンへようこそ！\n\nこのレッスンでは、基本的な日本語の挨拶を学びます。まずは新しい単語を見て、それぞれの発音と意味を確認しましょう。例えば、「こんにちは」は「Hello」や「Good afternoon」という意味ですね。\n\n次に、これらの単語を使った例文を練習します。例えば、「ありがとう」を使って「ありがとう、助かりました。」と言ってみましょう。\n\n最後に、学んだことを確認するためのクイズがあります。心配しないでください、間違えても大丈夫です！\n\n準備はいいですか？始めましょう！"
+    }
+  ]
+}

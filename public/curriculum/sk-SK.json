@@ -1,0 +1,1293 @@
+{
+  "langCode": "sk-SK",
+  "langLabel": "Slovak",
+  "langNative": "Slovenčina",
+  "generatedAt": "2026-03-15T06:12:52.989Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ahoj",
+          "phonetic": "ah-hoy",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Ahoj, ako sa máš?"
+        },
+        {
+          "word": "Dobrý deň",
+          "phonetic": "doh-bree dyen",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Dobrý deň, pán Novák."
+        },
+        {
+          "word": "Ako sa máš?",
+          "phonetic": "ah-koh sah maash",
+          "meaning": "How are you? (informal)",
+          "example": "Ahoj, Jano, ako sa máš?"
+        },
+        {
+          "word": "Mám sa dobre",
+          "phonetic": "maam sah doh-breh",
+          "meaning": "I'm doing well",
+          "example": "Mám sa dobre, ďakujem."
+        },
+        {
+          "word": "Ďakujem",
+          "phonetic": "jyah-koo-yem",
+          "meaning": "Thank you",
+          "example": "Ďakujem za pomoc."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" (informal) in Slovak?",
+          "options": [
+            "Ahoj",
+            "Dobrý deň",
+            "Dovidenia",
+            "Prosím"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the formal way to say \"Hello\" in Slovak?",
+          "options": [
+            "Ahoj",
+            "Dobrý deň",
+            "Ako sa máš?",
+            "Dovidenia"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"How are you?\" (informal) in Slovak?",
+          "options": [
+            "Mám sa dobre",
+            "Ďakujem",
+            "Ako sa máš?",
+            "Dovidenia"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"Ako sa máš?\", how can you respond that you are doing well?",
+          "options": [
+            "Ahoj",
+            "Dobrý deň",
+            "Mám sa dobre",
+            "Ďakujem"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Vitajte na vašej prvej lekcii slovenčiny! Dnes sa naučíme základné pozdravy a ako sa opýtať a odpovedať na otázku \"Ako sa máš?\". Prejdeme si frázy ako \"Ahoj\" (Hi), \"Dobrý deň\" (Good day), \"Ako sa máš?\" (How are you?), a \"Mám sa dobre\" (I'm doing well). Poďme si tieto frázy precvičiť nahlas. Skúste ich po mne zopakovať."
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Dobrý deň",
+          "phonetic": "DOH-bree dyen",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Dobrý deň, ako sa máte?"
+        },
+        {
+          "word": "Ahoj",
+          "phonetic": "AH-hoy",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Ahoj, ako sa máš?"
+        },
+        {
+          "word": "Ďakujem",
+          "phonetic": "JAH-koo-yem",
+          "meaning": "Thank you",
+          "example": "Ďakujem za pomoc."
+        },
+        {
+          "word": "Prosím",
+          "phonetic": "PROH-seem",
+          "meaning": "Please / You're welcome",
+          "example": "Prosím, sadnite si. / \"Ďakujem!\" \"Prosím.\""
+        },
+        {
+          "word": "Áno",
+          "phonetic": "AH-noh",
+          "meaning": "Yes",
+          "example": "Áno, rozumiem."
+        },
+        {
+          "word": "Nie",
+          "phonetic": "NYEE-eh",
+          "meaning": "No",
+          "example": "Nie, nerozumiem."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal) in Slovak?",
+          "options": [
+            "Ahoj",
+            "Dobrý deň",
+            "Ďakujem",
+            "Prosím"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Ďakujem\" mean in English?",
+          "options": [
+            "Please",
+            "Yes",
+            "Thank you",
+            "No"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Slovak word for \"Yes\".",
+          "options": [
+            "Nie",
+            "Prosím",
+            "Áno",
+            "Ahoj"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Slovak word can mean both \"Please\" and \"You're welcome\"?",
+          "options": [
+            "Ďakujem",
+            "Dobrý deň",
+            "Áno",
+            "Prosím"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Ahoj! Som tvoj AI tútor. Dnes sa naučíme základné slovenské pozdravy a zdvorilostné frázy. Prejdeme si slová ako 'Dobrý deň,' 'Ahoj,' 'Ďakujem,' a 'Prosím.' Pomôžem ti pochopiť ich výslovnosť a ako ich použiť v jednoduchých vetách. Priprav sa na to, že budeme precvičovať aj 'Áno' a 'Nie'. Začnime!"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ahoj",
+          "phonetic": "[a-hoy]",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Ahoj, ako sa máš?"
+        },
+        {
+          "word": "Dobrý deň",
+          "phonetic": "[doh-bree dyen]",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Dobrý deň, pán Novák."
+        },
+        {
+          "word": "Ďakujem",
+          "phonetic": "[dya-koo-yem]",
+          "meaning": "Thank you",
+          "example": "Ďakujem za pomoc."
+        },
+        {
+          "word": "Dovidenia",
+          "phonetic": "[doh-vee-dye-nya]",
+          "meaning": "Goodbye (formal)",
+          "example": "Dovidenia, zajtra!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" (informal) in Slovak?",
+          "options": [
+            "Dobrý deň",
+            "Ahoj",
+            "Dovidenia",
+            "Ďakujem"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the formal way to say \"Hello\" in Slovak?",
+          "options": [
+            "Ahoj",
+            "Dovidenia",
+            "Dobrý deň",
+            "Ďakujem"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Slovak?",
+          "options": [
+            "Dovidenia",
+            "Ahoj",
+            "Ďakujem",
+            "Dobrý deň"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Študent sa učí slovenčinu. Začni lekciu pozdravom v slovenčine. Predstav nové slovíčka z lekcie: 'Ahoj', 'Dobrý deň', 'Ďakujem', 'Dovidenia'. Pre každé slovíčko:\n1. Povedz slovíčko a jeho anglický preklad.\n2. Požiadaj študenta, aby ho zopakoval.\n3. Poskytni príkladovú vetu v slovenčine a požiadaj študenta, aby vytvoril vlastnú vetu.\nPoskytni opravy výslovnosti a gramatiky a povzbudenie. Uisti sa, že počas lekcie používaš slovenské frázy a slová na posilnenie učenia."
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ahoj",
+          "phonetic": "[a-hoy]",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Ahoj, ako sa máš?"
+        },
+        {
+          "word": "Dobrý deň",
+          "phonetic": "[dob-ree dyen]",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Dobrý deň, pani Nováková."
+        },
+        {
+          "word": "Ako sa máš?",
+          "phonetic": "[a-ko sa maash]",
+          "meaning": "How are you? (informal)",
+          "example": "Ahoj, Peter, ako sa máš?"
+        },
+        {
+          "word": "Volám sa...",
+          "phonetic": "[vo-laam sa]",
+          "meaning": "My name is...",
+          "example": "Volám sa Anna."
+        },
+        {
+          "word": "Teší ma",
+          "phonetic": "[tye-shee ma]",
+          "meaning": "Nice to meet you",
+          "example": "Volám sa Ján. Teší ma."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" informally in Slovak?",
+          "options": [
+            "Ahoj",
+            "Dobrý deň",
+            "Dovidenia",
+            "Ďakujem"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the formal way to say \"Hello\" in Slovak?",
+          "options": [
+            "Ahoj",
+            "Dobrý deň",
+            "Dovidenia",
+            "Prosím"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"How are you?\" to a friend?",
+          "options": [
+            "Ako sa máte?",
+            "Ako sa máš?",
+            "Čo robíš?",
+            "Kto si?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"My name is...\" in Slovak?",
+          "options": [
+            "Som...",
+            "Mám...",
+            "Volám sa...",
+            "Si..."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What do you say when you meet someone for the first time?",
+          "options": [
+            "Dobrú noc",
+            "Teší ma",
+            "Dovidenia",
+            "Prepáčte"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Ahoj! Vitaj v lekcii o slovenských pozdravoch a predstavení. Dnes sa naučíme základné frázy ako **Ahoj**, **Dobrý deň**, **Ako sa máš?**, **Volám sa...** a **Teší ma**. Začnime s **Ahoj**. Skús to zopakovať. Výborne! Teraz si predstav, že stretávaš niekoho nového. Ako by si sa predstavil/a? Povedz \"Volám sa [tvoje meno]\". Potom sa opýtaj \"Ako sa máš?\" a nakoniec povedz \"Teší ma\". Si pripravený/á precvičiť si tieto frázy so mnou?"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ahoj",
+          "phonetic": "[a-hoy]",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Ahoj, ako sa máš?"
+        },
+        {
+          "word": "Dobrý deň",
+          "phonetic": "[dob-ree dyen]",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Dobrý deň, pán Novák."
+        },
+        {
+          "word": "Ako sa máš?",
+          "phonetic": "[a-ko sa maash]",
+          "meaning": "How are you? (informal, singular)",
+          "example": "Ahoj, Peter, ako sa máš?"
+        },
+        {
+          "word": "Mám sa dobre",
+          "phonetic": "[maam sa dob-re]",
+          "meaning": "I'm doing well / I'm fine",
+          "example": "Mám sa dobre, ďakujem."
+        },
+        {
+          "word": "Ďakujem",
+          "phonetic": "[dya-koo-yem]",
+          "meaning": "Thank you",
+          "example": "Ďakujem za pomoc."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" or \"Hello\" informally in Slovak?",
+          "options": [
+            "Dobrý deň",
+            "Ahoj",
+            "Dovidenia",
+            "Prosím"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the formal way to say \"Good day\" or \"Hello\" in Slovak?",
+          "options": [
+            "Ahoj",
+            "Čau",
+            "Dobrý deň",
+            "Ďakujem"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"How are you?\" to a friend in Slovak?",
+          "options": [
+            "Ako sa máš?",
+            "Ako sa máte?",
+            "Čo robíš?",
+            "Kto si?"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "If someone asks \"Ako sa máš?\" and you want to say \"I'm doing well,\" what would you say?",
+          "options": [
+            "Som smutný",
+            "Mám sa dobre",
+            "Som unavený",
+            "Mám sa zle"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you express \"Thank you\" in Slovak?",
+          "options": [
+            "Prosím",
+            "Prepáčte",
+            "Ďakujem",
+            "Dovidenia"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Ahoj! Vitaj v tvojej lekcii slovenčiny! Dnes sa naučíme základné slovenské pozdravy a frázy. Začneme s neformálnym pozdravom \"Ahoj\" (Hi/Hello). Skús to povedať nahlas: \"Ahoj\". Potom prejdeme na formálnejší pozdrav \"Dobrý deň\" (Good day). Povedz: \"Dobrý deň\". Naučíme sa aj ako sa opýtať \"Ako sa máš?\" (How are you? - neformálne) a ako odpovedať \"Mám sa dobre\" (I'm doing well). Nakoniec sa pozrieme na \"Ďakujem\" (Thank you). Si pripravený začať?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ahoj",
+          "phonetic": "ah-hoy",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Ahoj, ako sa máš?"
+        },
+        {
+          "word": "Dobrý deň",
+          "phonetic": "doh-bree dyen",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Dobrý deň, pán Novák."
+        },
+        {
+          "word": "Ako sa máš?",
+          "phonetic": "ah-koh sah maash",
+          "meaning": "How are you? (informal)",
+          "example": "Ahoj, Jano, ako sa máš?"
+        },
+        {
+          "word": "Mám sa dobre.",
+          "phonetic": "maam sah doh-breh",
+          "meaning": "I'm fine. / I'm doing well.",
+          "example": "Mám sa dobre, ďakujem."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the informal way to say \"Hi\" in Slovak?",
+          "options": [
+            "Dobrý deň",
+            "Ahoj",
+            "Ďakujem",
+            "Prosím"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you ask \"How are you?\" to a friend in Slovak?",
+          "options": [
+            "Mám sa dobre?",
+            "Dobrý deň?",
+            "Ako sa máš?",
+            "Kto si?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks you \"Ako sa máš?\" and you are doing well, how would you respond?",
+          "options": [
+            "Ahoj",
+            "Mám sa dobre.",
+            "Dobrý deň.",
+            "Dovidenia."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Vitajte na vašej prvej lekcii slovenčiny! Som váš AI tútor a som tu, aby som vám pomohol naučiť sa tento krásny jazyk. Dnes sa zameriame na základné pozdravy a frázy, ktoré môžete použiť každý deň. Začneme s \"Ahoj\" (ah-hoy), čo je neformálny pozdrav ako \"Hi\". Potom sa pozrieme na \"Dobrý deň\" (doh-bree dyen), čo je formálnejší pozdrav, ktorý znamená \"Good day\". Naučíme sa aj, ako sa opýtať \"Ako sa máš?\" (ah-koh sah maash), čo znamená \"How are you?\" (neformálne), a ako odpovedať \"Mám sa dobre.\" (maam sah doh-breh), čo znamená \"I'm fine.\". Poďme si to precvičiť! Skúste povedať \"Ahoj\" a \"Dobrý deň\". Aký je medzi nimi rozdiel? A ako by ste sa opýtali kamaráta, ako sa má?"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ahoj",
+          "phonetic": "Ah-hoy",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Ahoj, ako sa máš?"
+        },
+        {
+          "word": "Ako sa máš?",
+          "phonetic": "Ah-koh sah maash?",
+          "meaning": "How are you? (informal)",
+          "example": "Ahoj, ako sa máš? Ja sa mám dobre."
+        },
+        {
+          "word": "Ďakujem",
+          "phonetic": "Jah-koo-yem",
+          "meaning": "Thank you",
+          "example": "Ďakujem za pomoc!"
+        },
+        {
+          "word": "Prosím",
+          "phonetic": "Proh-seem",
+          "meaning": "Please / You're welcome",
+          "example": "Môžem dostať vodu, prosím? / Ďakujem! - Prosím!"
+        },
+        {
+          "word": "Dobrý deň",
+          "phonetic": "Doh-bree dyen",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Dobrý deň, pán Novák."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" or \"Hello\" informally in Slovak?",
+          "options": [
+            "Dobrý deň",
+            "Ahoj",
+            "Ďakujem",
+            "Prosím"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"How are you?\" (informal) in Slovak?",
+          "options": [
+            "Dobrý deň",
+            "Ďakujem",
+            "Ako sa máš?",
+            "Prosím"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Slovak word for \"Thank you\"?",
+          "options": [
+            "Prosím",
+            "Ahoj",
+            "Ďakujem",
+            "Dobrý deň"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Slovak word can mean both \"Please\" and \"You're welcome\"?",
+          "options": [
+            "Ahoj",
+            "Ďakujem",
+            "Dobrý deň",
+            "Prosím"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Vitajte na vašej lekcii slovenčiny! Som váš AI tútor a som tu, aby som vám pomohol učiť sa. Dnes sa zameriame na základné slovenské pozdravy a frázy. Začnime s neformálnym pozdravom 'Ahoj'. Skúste to povedať nahlas: 'Ahoj'. Výborne! Teraz sa naučíme, ako sa opýtať 'Ako sa máš?' a ako povedať 'Ďakujem' a 'Prosím'. Ste pripravení začať?"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ahoj",
+          "phonetic": "ah-hoy",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Ahoj, ako sa máš?"
+        },
+        {
+          "word": "Dobrý deň",
+          "phonetic": "doh-bree dyen",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Dobrý deň, pán Novák."
+        },
+        {
+          "word": "Ako sa máš?",
+          "phonetic": "ah-koh sah maash?",
+          "meaning": "How are you? (informal)",
+          "example": "Ahoj, Peter, ako sa máš?"
+        },
+        {
+          "word": "Mám sa dobre.",
+          "phonetic": "maam sah doh-breh",
+          "meaning": "I'm fine.",
+          "example": "Mám sa dobre, ďakujem."
+        },
+        {
+          "word": "Ďakujem",
+          "phonetic": "jyah-koo-yem",
+          "meaning": "Thank you",
+          "example": "Ďakujem za pomoc."
+        },
+        {
+          "word": "Prosím",
+          "phonetic": "proh-seem",
+          "meaning": "Please / You're welcome",
+          "example": "Môžem dostať vodu, prosím?"
+        },
+        {
+          "word": "Volám sa...",
+          "phonetic": "voh-laam sah...",
+          "meaning": "My name is...",
+          "example": "Volám sa Anna."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hi' (informal) in Slovak?",
+          "options": [
+            "Dobrý deň",
+            "Ahoj",
+            "Ďakujem",
+            "Prosím"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct way to ask 'How are you?' (informal) in Slovak?",
+          "options": [
+            "Mám sa dobre?",
+            "Volám sa?",
+            "Ako sa máš?",
+            "Dobrý deň?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say 'Thank you' in Slovak?",
+          "options": [
+            "Prosím",
+            "Ahoj",
+            "Ďakujem",
+            "Mám sa dobre"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks 'Ako sa máš?', how would you respond with 'I'm fine.'?",
+          "options": [
+            "Volám sa...",
+            "Mám sa dobre.",
+            "Ahoj.",
+            "Prosím."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Poďme sa naučiť bežné slovenské pozdravy a predstavenia! Prejdeme si frázy ako 'Ahoj,' 'Dobrý deň,' 'Ako sa máš?' a 'Volám sa...' Precvičte si ich nahlas a použijeme ich v jednoduchej konverzácii. Pripravte sa na to, že budete hovoriť po slovensky!"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ahoj",
+          "phonetic": "[ˈaɦɔj]",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Ahoj, ako sa máš?"
+        },
+        {
+          "word": "Dobrý deň",
+          "phonetic": "[ˈdɔbriː ˈdɛɲ]",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Dobrý deň, pán Novák."
+        },
+        {
+          "word": "Ako sa máš?",
+          "phonetic": "[ˈakɔ sa ˈmaːʃ]",
+          "meaning": "How are you? (informal)",
+          "example": "Ahoj, Jano, ako sa máš?"
+        },
+        {
+          "word": "Mám sa dobre.",
+          "phonetic": "[ˈmaːm sa ˈdɔbrɛ]",
+          "meaning": "I am good / I am fine.",
+          "example": "Mám sa dobre, ďakujem."
+        },
+        {
+          "word": "Ďakujem.",
+          "phonetic": "[ˈɟakujɛm]",
+          "meaning": "Thank you.",
+          "example": "Ďakujem za pomoc."
+        },
+        {
+          "word": "Dovidenia.",
+          "phonetic": "[ˈdɔvidɛɲɪa]",
+          "meaning": "Goodbye (formal)",
+          "example": "Dovidenia, zajtra!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" (informal) in Slovak?",
+          "options": [
+            "Ahoj",
+            "Dobrý deň",
+            "Dovidenia",
+            "Ďakujem"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct response to \"Ako sa máš?\" if you are feeling good?",
+          "options": [
+            "Dovidenia",
+            "Mám sa dobre",
+            "Ďakujem",
+            "Prosím"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the formal greeting for \"Good day\" in Slovak.",
+          "options": [
+            "Ahoj",
+            "Čau",
+            "Dobrý deň",
+            "Mám sa dobre"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Slovak?",
+          "options": [
+            "Prosím",
+            "Dovidenia",
+            "Ahoj",
+            "Ďakujem"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Ahoj! Vitaj na našej lekcii slovenčiny. Dnes sa naučíme základné slovenské pozdravy a frázy, ktoré ti pomôžu začať konverzáciu. Prejdeme si slová ako 'Ahoj', 'Dobrý deň', 'Ako sa máš?', 'Mám sa dobre' a 'Ďakujem'. Budem ti hovoriť každé slovo a frázu, a ty ich, prosím, opakuj. Potom si precvičíme, ako ich použiť v jednoduchej konverzácii. Si pripravený/pripravená začať?"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ahoj",
+          "phonetic": "[a-hoy]",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Ahoj, ako sa máš?"
+        },
+        {
+          "word": "Ďakujem",
+          "phonetic": "[dya-koo-yem]",
+          "meaning": "Thank you",
+          "example": "Ďakujem za pomoc."
+        },
+        {
+          "word": "Prosím",
+          "phonetic": "[pro-seem]",
+          "meaning": "Please / You're welcome",
+          "example": "Môžem si to prosím pozrieť?"
+        },
+        {
+          "word": "Ako sa máš?",
+          "phonetic": "[a-ko sa maash]",
+          "meaning": "How are you? (informal)",
+          "example": "Ahoj, ako sa máš dnes?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the informal way to say \"Hello\" in Slovak?",
+          "options": [
+            "Dobrý deň",
+            "Ahoj",
+            "Dovidenia",
+            "Ďakujem"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Slovak?",
+          "options": [
+            "Prosím",
+            "Ahoj",
+            "Ďakujem",
+            "Dobrú noc"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Slovak translation for \"How are you?\" (informal).",
+          "options": [
+            "Kto si?",
+            "Ako sa voláš?",
+            "Ako sa máš?",
+            "Čo robíš?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Ahoj! Som tvoj AI tútor. Dnes sa budeme učiť základné slovenské pozdravy a frázy. Prejdeme si \"Ahoj\", \"Ďakujem\", \"Prosím\" a \"Ako sa máš?\". Začnime s \"Ahoj\". Skús povedať \"Ahoj\"!"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ahoj",
+          "phonetic": "Ah-hoy",
+          "meaning": "Hi / Hello (informal)",
+          "example": "Ahoj, ako sa máš?"
+        },
+        {
+          "word": "Dobrý deň",
+          "phonetic": "Doh-bree dyen",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Dobrý deň, pán Novák."
+        },
+        {
+          "word": "Ako sa máš?",
+          "phonetic": "Ah-koh sah maash?",
+          "meaning": "How are you? (informal)",
+          "example": "Ahoj, Jano, ako sa máš?"
+        },
+        {
+          "word": "Mám sa dobre, ďakujem.",
+          "phonetic": "Maam sah doh-breh, dya-koo-yem.",
+          "meaning": "I'm fine, thank you.",
+          "example": "Mám sa dobre, ďakujem. A ty?"
+        },
+        {
+          "word": "Teší ma.",
+          "phonetic": "Tyeh-shee mah.",
+          "meaning": "Nice to meet you.",
+          "example": "Volám sa Anna. Teší ma."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" or \"Hello\" in an informal way in Slovak?",
+          "options": [
+            "Dobrý deň",
+            "Ahoj",
+            "Dovidenia",
+            "Ďakujem"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the formal way to say \"Good day\" or \"Hello\" in Slovak?",
+          "options": [
+            "Ahoj",
+            "Dobrú noc",
+            "Dobrý deň",
+            "Dobrý večer"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"How are you?\" to a friend in Slovak?",
+          "options": [
+            "Ako sa máte?",
+            "Čo robíš?",
+            "Ako sa máš?",
+            "Kto si?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Slovak response for \"I'm fine, thank you.\"",
+          "options": [
+            "Prosím.",
+            "Mám sa dobre, ďakujem.",
+            "Nič sa nedeje.",
+            "Dovidenia."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does the Slovak phrase \"Teší ma.\" mean?",
+          "options": [
+            "Thank you.",
+            "Goodbye.",
+            "Nice to meet you.",
+            "How are you?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Vitajte na vašej lekcii slovenčiny! Som váš AI tútor a dnes sa ponoríme do základných slovenských pozdravov a fráz. Naučíme sa, ako sa predstaviť a opýtať sa, ako sa niekto má. Budeme precvičovať výslovnosť a používanie fráz ako \"Ahoj\", \"Dobrý deň\", \"Ako sa máš?\", \"Mám sa dobre, ďakujem.\" a \"Teší ma.\". Pripravte sa na zábavné učenie! Začnime s prvým slovom: \"Ahoj\"."
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Dobrý deň",
+          "phonetic": "DOH-bree dyen",
+          "meaning": "Good day / Hello (formal)",
+          "example": "Dobrý deň, ako sa máte?"
+        },
+        {
+          "word": "Ďakujem",
+          "phonetic": "DYAH-koo-yem",
+          "meaning": "Thank you",
+          "example": "Ďakujem za pomoc."
+        },
+        {
+          "word": "Prosím",
+          "phonetic": "PROH-seem",
+          "meaning": "Please / You're welcome",
+          "example": "Prosím, sadnite si. / Tu je vaša káva. Prosím."
+        },
+        {
+          "word": "Áno",
+          "phonetic": "AH-noh",
+          "meaning": "Yes",
+          "example": "Áno, rozumiem."
+        },
+        {
+          "word": "Nie",
+          "phonetic": "NYEE",
+          "meaning": "No",
+          "example": "Nie, ďakujem."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the formal way to say \"Hello\" in Slovak?",
+          "options": [
+            "Ahoj",
+            "Dobrý deň",
+            "Dovidenia",
+            "Dobrú noc"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Slovak?",
+          "options": [
+            "Prosím",
+            "Áno",
+            "Ďakujem",
+            "Nie"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Slovak word means both \"Please\" and \"You're welcome\"?",
+          "options": [
+            "Áno",
+            "Nie",
+            "Prosím",
+            "Dobrý deň"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Yes\" in Slovak?",
+          "options": [
+            "Nie",
+            "Áno",
+            "Dobrý",
+            "Ahoj"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Ahoj! Vitaj v tvojej lekcii slovenčiny. Dnes sa naučíme základné pozdravy a užitočné frázy. Priprav sa na to, že budeš hovoriť po slovensky!\n\nZačnime s \"Dobrý deň\". To znamená 'Good day' alebo 'Hello' a je to formálny spôsob pozdravu. Skús to povedať: \"Dobrý deň\".\n\nĎalej máme \"Ďakujem\", čo znamená 'Thank you'. Je to veľmi dôležité slovo! Povedz: \"Ďakujem\".\n\nPotom je tu \"Prosím\". Toto slovo je super, pretože môže znamenať 'Please' aj 'You're welcome'. Skús to: \"Prosím\".\n\nA nakoniec, \"Áno\" pre 'Yes' a \"Nie\" pre 'No'. Sú to krátke a jednoduché slová. Povedz: \"Áno\" a \"Nie\".\n\nVýborne! Teraz skús použiť tieto slová v jednoduchej vete. Napríklad, ak ti niekto niečo podá, môžeš povedať \"Ďakujem\". Alebo ak chceš niečo poprosiť, povieš \"Prosím\".\n\nMáš nejaké otázky? Skúsme si precvičiť tieto frázy spolu!"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "chcieť",
+          "phonetic": "kh-tsee-et",
+          "meaning": "to want",
+          "example": "Ja chcem kávu."
+        },
+        {
+          "word": "mať",
+          "phonetic": "mah-ty",
+          "meaning": "to have",
+          "example": "Ty máš vodu."
+        },
+        {
+          "word": "káva",
+          "phonetic": "kaa-va",
+          "meaning": "coffee",
+          "example": "Chcem kávu, prosím."
+        },
+        {
+          "word": "čaj",
+          "phonetic": "chai",
+          "meaning": "tea",
+          "example": "Piješ čaj?"
+        },
+        {
+          "word": "voda",
+          "phonetic": "vo-da",
+          "meaning": "water",
+          "example": "Chcem vodu."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'I want' in Slovak?",
+          "options": [
+            "chcem",
+            "chceš",
+            "chce",
+            "chceme"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the correct word to complete the sentence: 'Ja ____ kávu.' (I have coffee.)",
+          "options": [
+            "mám",
+            "máš",
+            "má",
+            "máme"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means 'water'?",
+          "options": [
+            "káva",
+            "čaj",
+            "voda",
+            "mlieko"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Ahoj! Vitaj na tvojej prvej lekcii slovenčiny. Dnes sa pozrieme na dôležité slovesá \"chcieť\" (to want) a \"mať\" (to have), a tiež sa naučíme užitočné podstatné mená ako \"káva\" (coffee), \"čaj\" (tea) a \"voda\" (water). Budeme precvičovať, ako ich použiť v jednoduchých vetách. Si pripravený/á začať?"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "krásny",
+          "phonetic": "KRAH-snee",
+          "meaning": "beautiful",
+          "example": "To je krásny deň!"
+        },
+        {
+          "word": "drahý",
+          "phonetic": "DRAH-hee",
+          "meaning": "expensive; dear",
+          "example": "Tento telefón je veľmi drahý."
+        },
+        {
+          "word": "lacný",
+          "phonetic": "LAHTS-nee",
+          "meaning": "cheap, inexpensive",
+          "example": "Chcem kúpiť lacné auto."
+        },
+        {
+          "word": "veľmi",
+          "phonetic": "VEL-mee",
+          "meaning": "very",
+          "example": "Je veľmi milá."
+        },
+        {
+          "word": "chcieť",
+          "phonetic": "HTSYET",
+          "meaning": "to want",
+          "example": "Chcem kávu, prosím."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Choose the correct adjective to complete the sentence: \"Ten dom je veľmi _______.\" (That house is very _______.)",
+          "options": [
+            "krásny",
+            "krásna",
+            "krásne",
+            "krásni"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say \"I want\" in Slovak?",
+          "options": [
+            "Chcem",
+            "Chceš",
+            "Chce",
+            "Chceme"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means \"expensive\"?",
+          "options": [
+            "lacný",
+            "veľmi",
+            "drahý",
+            "krásny"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Ahoj! Vitaj na lekcii slovenčiny! Dnes sa naučíme opisovať veci a vyjadrovať, čo \"chceme\". Začneme s piatimi novými slovíčkami. Prvé je \"krásny\" (KRAH-snee), čo znamená \"beautiful\". Môžeš povedať \"To je krásny deň!\" (It is a beautiful day!). Potom máme \"drahý\" (DRAH-hee), čo znamená \"expensive\" alebo \"dear\", a jeho opak \"lacný\" (LAHTS-nee), čo znamená \"cheap\". Napríklad, \"Tento telefón je veľmi drahý.\" (This phone is very expensive.) alebo \"Chcem kúpiť lacné auto.\" (I want to buy a cheap car.). Slovo \"veľmi\" (VEL-mee) znamená \"very\", ako v \"Je veľmi milá.\" (She is very kind.). A nakoniec, dôležité sloveso \"chcieť\" (HTSYET), čo znamená \"to want\". Skús povedať \"Chcem kávu, prosím.\" (I want coffee, please.). Poďme si to precvičiť v kvíze!"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "pekný",
+          "phonetic": "pek-nee",
+          "meaning": "nice, beautiful (masculine singular)",
+          "example": "To je pekný dom."
+        },
+        {
+          "word": "veľký",
+          "phonetic": "vel-kee",
+          "meaning": "big, large (masculine singular)",
+          "example": "Máme veľký byt."
+        },
+        {
+          "word": "malý",
+          "phonetic": "mah-lee",
+          "meaning": "small, little (masculine singular)",
+          "example": "Toto je malý pes."
+        },
+        {
+          "word": "starý",
+          "phonetic": "stah-ree",
+          "meaning": "old (masculine singular)",
+          "example": "Môj otec je starý."
+        },
+        {
+          "word": "nový",
+          "phonetic": "noh-vee",
+          "meaning": "new (masculine singular)",
+          "example": "Kúpil som si nový telefón."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Slovak word means \"big\"?",
+          "options": [
+            "malý",
+            "starý",
+            "veľký",
+            "pekný"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct adjective to complete the sentence: \"To je ___ auto.\" (It is a ___ car.) (The car is new.)",
+          "options": [
+            "nový",
+            "nová",
+            "nové",
+            "noví"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say \"The house is beautiful\" in Slovak?",
+          "options": [
+            "Dom je pekná.",
+            "Dom je pekný.",
+            "Dom je pekné.",
+            "Dom je pekní."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"old\"?",
+          "options": [
+            "nový",
+            "malý",
+            "starý",
+            "veľký"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Ahoj! Dnes sa ponoríme do sveta slovenských prídavných mien, ktoré nám pomôžu opísať svet okolo nás. Naučíme sa slová ako 'pekný' (beautiful/nice), 'veľký' (big), 'malý' (small), 'starý' (old) a 'nový' (new). V slovenčine je dôležité pamätať, že prídavné mená sa zhodujú s podstatnými menami v rode, čísle a páde. Pre začiatok sa zameriame na rod. Napríklad, ak opisujeme 'dom' (mužský rod), povieme \"pekný dom\". Ak by sme opisovali 'žena' (ženský rod), povedali by sme \"pekná žena\". A pre 'auto' (stredný rod), by to bolo \"pekné auto\". Poďme si precvičiť tieto nové slová a ich správne použitie v kontexte!"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ahoj",
+          "phonetic": "ah-hoy",
+          "meaning": "Hello (informal)",
+          "example": "Ahoj, ako sa máš?"
+        },
+        {
+          "word": "Ako sa máš?",
+          "phonetic": "ah-koh sah mahsh",
+          "meaning": "How are you? (informal)",
+          "example": "Ahoj, ako sa máš?"
+        },
+        {
+          "word": "Mám sa dobre.",
+          "phonetic": "mahm sah doh-breh",
+          "meaning": "I am fine.",
+          "example": "Mám sa dobre, ďakujem."
+        },
+        {
+          "word": "Ďakujem.",
+          "phonetic": "jah-koo-yem",
+          "meaning": "Thank you.",
+          "example": "Mám sa dobre, ďakujem."
+        },
+        {
+          "word": "Prosím.",
+          "phonetic": "proh-seem",
+          "meaning": "Please / You're welcome.",
+          "example": "Prosím, tu je vaša káva."
+        },
+        {
+          "word": "Áno.",
+          "phonetic": "ah-noh",
+          "meaning": "Yes.",
+          "example": "Áno, rozumiem."
+        },
+        {
+          "word": "Nie.",
+          "phonetic": "nyee",
+          "meaning": "No.",
+          "example": "Nie, nerozumiem."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Slovak?",
+          "options": [
+            "Ahoj",
+            "Dobrý deň",
+            "Dovidenia",
+            "Ďakujem"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct response to \"Ako sa máš?\" if you are fine?",
+          "options": [
+            "Nie",
+            "Prosím",
+            "Mám sa dobre",
+            "Áno"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"Thank you\" in Slovak?",
+          "options": [
+            "Áno",
+            "Nie",
+            "Prosím",
+            "Ďakujem"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Ahoj! Vitaj v tvojej prvej lekcii slovenčiny! Dnes sa naučíme základné pozdravy a frázy, aby si mohol začať komunikovať po slovensky. Začneme s \"Ahoj\" a \"Ako sa máš?\". Pripravený/á? Poďme na to!"
+    }
+  ]
+}

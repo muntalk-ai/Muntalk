@@ -1,0 +1,1383 @@
+{
+  "langCode": "es-ES",
+  "langLabel": "Spanish",
+  "langNative": "Español",
+  "generatedAt": "2026-03-14T23:22:01.978Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hola",
+          "phonetic": "OH-lah",
+          "meaning": "Hello",
+          "example": "Hola, ¿cómo estás?"
+        },
+        {
+          "word": "Buenos días",
+          "phonetic": "BWEH-nohs DEE-ahs",
+          "meaning": "Good morning",
+          "example": "Buenos días, señor."
+        },
+        {
+          "word": "Buenas tardes",
+          "phonetic": "BWEH-nahs TAR-dehs",
+          "meaning": "Good afternoon/evening",
+          "example": "Buenas tardes, ¿puedo ayudarte?"
+        },
+        {
+          "word": "¿Cómo estás?",
+          "phonetic": "KOH-moh es-TAHS",
+          "meaning": "How are you? (informal)",
+          "example": "Hola, Juan, ¿cómo estás?"
+        },
+        {
+          "word": "Estoy bien, gracias.",
+          "phonetic": "es-TOY BYEN, GRAH-syahs",
+          "meaning": "I am well, thank you.",
+          "example": "Estoy bien, gracias. ¿Y tú?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Spanish?",
+          "options": [
+            "Hola",
+            "Adiós",
+            "Por favor",
+            "Gracias"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does \"Buenos días\" mean?",
+          "options": [
+            "Good night",
+            "Good morning",
+            "Good afternoon",
+            "Good evening"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Spanish phrase for \"How are you?\" (informal).",
+          "options": [
+            "¿Qué hora es?",
+            "¿Cómo estás?",
+            "¿Cuánto cuesta?",
+            "¿Dónde está?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you respond to \"¿Cómo estás?\" if you are well?",
+          "options": [
+            "De nada",
+            "Lo siento",
+            "Estoy bien, gracias.",
+            "Por favor."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "¡Hola! ¡Bienvenidos a nuestra lección de español! Hoy vamos a aprender algunas frases y saludos básicos para empezar a comunicarnos en español.\n\nPrimero, vamos a practicar la pronunciación. Yo diré cada palabra o frase, y tú puedes repetirla después de mí.\n\nEmpecemos con \"Hola\". ¿Puedes decir \"Hola\"?\nExcelente. \"Hola\" significa \"Hello\" en inglés.\n\nAhora, \"Buenos días\". Intenta decir \"Buenos días\".\nMuy bien. \"Buenos días\" significa \"Good morning\".\n\nLuego tenemos \"Buenas tardes\". Repite \"Buenas tardes\".\nPerfecto. \"Buenas tardes\" se usa para \"Good afternoon\" o \"Good evening\".\n\nPara preguntar cómo está alguien, decimos \"¿Cómo estás?\". ¿Puedes decir \"¿Cómo estás?\"?\nFantástico. \"¿Cómo estás?\" significa \"How are you?\" (informal).\n\nY para responder que estás bien, decimos \"Estoy bien, gracias.\". Intenta decir \"Estoy bien, gracias.\".\n¡Genial! \"Estoy bien, gracias.\" significa \"I am well, thank you.\".\n\nAhora, vamos a practicar un poco con estas frases. Imagina que te encuentras con alguien. ¿Cómo lo saludarías por la mañana? Dirías \"Buenos días\". Y si te preguntan \"¿Cómo estás?\", ¿cómo responderías? Dirías \"Estoy bien, gracias.\".\n\n¡Muy buen trabajo! ¡Ya sabes cómo saludar y preguntar cómo está alguien en español! ¿Tienes alguna pregunta?"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hola",
+          "phonetic": "OH-lah",
+          "meaning": "Hello",
+          "example": "Hola, ¿cómo estás?"
+        },
+        {
+          "word": "Adiós",
+          "phonetic": "ah-dee-OHS",
+          "meaning": "Goodbye",
+          "example": "Adiós, hasta mañana."
+        },
+        {
+          "word": "Por favor",
+          "phonetic": "por fah-VOR",
+          "meaning": "Please",
+          "example": "¿Me puedes ayudar, por favor?"
+        },
+        {
+          "word": "Gracias",
+          "phonetic": "GRAH-see-ahs",
+          "meaning": "Thank you",
+          "example": "Gracias por tu ayuda."
+        },
+        {
+          "word": "Sí",
+          "phonetic": "SEE",
+          "meaning": "Yes",
+          "example": "¿Quieres café? Sí, por favor."
+        },
+        {
+          "word": "No",
+          "phonetic": "NOH",
+          "meaning": "No",
+          "example": "¿Tienes tiempo? No, lo siento."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Spanish?",
+          "options": [
+            "Adiós",
+            "Hola",
+            "Gracias",
+            "Por favor"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does the Spanish word \"Gracias\" mean in English?",
+          "options": [
+            "Please",
+            "Goodbye",
+            "Thank you",
+            "Yes"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Spanish word for \"Please\".",
+          "options": [
+            "Sí",
+            "No",
+            "Por favor",
+            "Hola"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"Yes\" in Spanish?",
+          "options": [
+            "No",
+            "Sí",
+            "Adiós",
+            "Gracias"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "¡Hola! Soy tu tutor de español. ¡Bienvenido a tu primera lección! Hoy vamos a aprender algunas palabras esenciales para empezar a comunicarte en español.\n\nEmpecemos con los saludos. Para decir \"Hello\" en español, usamos la palabra **Hola**. Es muy sencilla, ¿verdad? Intenta decirla conmigo: **Hola**.\n\nY cuando te despidas, dirás **Adiós**, que significa \"Goodbye\". Repite: **Adiós**.\n\nAhora, para ser educado, es fundamental saber decir \"Please\", que en español es **Por favor**. Y para expresar gratitud, decimos \"Thank you\", que es **Gracias**. ¡Son muy útiles!\n\nFinalmente, para responder \"Yes\" o \"No\", simplemente usamos **Sí** y **No**.\n\nDurante esta lección, practicaremos la pronunciación de estas palabras y aprenderemos a usarlas en frases básicas. ¡Estoy aquí para ayudarte en cada paso del camino! ¿Listo para empezar?"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hola",
+          "phonetic": "OH-lah",
+          "meaning": "Hello",
+          "example": "Hola, ¿cómo estás?"
+        },
+        {
+          "word": "Buenos días",
+          "phonetic": "BWEH-nohs DEE-ahs",
+          "meaning": "Good morning",
+          "example": "Buenos días, profesor."
+        },
+        {
+          "word": "Buenas tardes",
+          "phonetic": "BWEH-nahs TAR-dehs",
+          "meaning": "Good afternoon / Good evening",
+          "example": "Buenas tardes, señora García."
+        },
+        {
+          "word": "Buenas noches",
+          "phonetic": "BWEH-nahs NOH-chehs",
+          "meaning": "Good night",
+          "example": "Buenas noches, hasta mañana."
+        },
+        {
+          "word": "¿Cómo estás?",
+          "phonetic": "KOH-moh es-TAHS",
+          "meaning": "How are you? (informal)",
+          "example": "Hola, Juan, ¿cómo estás?"
+        },
+        {
+          "word": "Estoy bien, gracias.",
+          "phonetic": "es-TOY bee-EN, GRAH-syahs",
+          "meaning": "I am fine, thank you.",
+          "example": "Estoy bien, gracias. ¿Y tú?"
+        },
+        {
+          "word": "¿Cómo te llamas?",
+          "phonetic": "KOH-moh teh YAH-mahs",
+          "meaning": "What is your name? (informal)",
+          "example": "¿Hola, cómo te llamas?"
+        },
+        {
+          "word": "Me llamo...",
+          "phonetic": "meh YAH-moh",
+          "meaning": "My name is...",
+          "example": "Me llamo Ana."
+        },
+        {
+          "word": "Mucho gusto.",
+          "phonetic": "MOO-choh GOOS-toh",
+          "meaning": "Nice to meet you.",
+          "example": "Mucho gusto, soy Carlos."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Spanish?",
+          "options": [
+            "Adiós",
+            "Hola",
+            "Por favor",
+            "Gracias"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does 'Buenos días' mean in English?",
+          "options": [
+            "Good night",
+            "Good afternoon",
+            "Good morning",
+            "Goodbye"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase would you use to ask 'How are you?' (informally) in Spanish?",
+          "options": [
+            "¿Qué hora es?",
+            "¿Cómo estás?",
+            "¿Cuánto cuesta?",
+            "¿Dónde está?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks you '¿Cómo te llamas?', how would you respond with 'My name is Sofia'?",
+          "options": [
+            "Soy Sofia.",
+            "Me llamo Sofia.",
+            "Tengo Sofia.",
+            "Sofia es mi nombre."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "¡Hola! ¡Bienvenidos a su primera lección de español! Estoy muy emocionado/a de ayudarles a empezar su viaje en este hermoso idioma. Hoy nos centraremos en los saludos y presentaciones básicas. Aprenderemos frases como \"Hola\", \"Buenos días\", \"¿Cómo estás?\" y \"Me llamo...\". Empecemos con \"Hola\". ¿Puedes repetir después de mí: \"Hola\"?"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hola",
+          "phonetic": "OH-lah",
+          "meaning": "Hello / Hi",
+          "example": "Hola, ¿cómo estás?"
+        },
+        {
+          "word": "Adiós",
+          "phonetic": "ah-DYOHS",
+          "meaning": "Goodbye",
+          "example": "Adiós, ¡hasta mañana!"
+        },
+        {
+          "word": "Gracias",
+          "phonetic": "GRAH-syahs",
+          "meaning": "Thank you",
+          "example": "Gracias por tu ayuda."
+        },
+        {
+          "word": "Por favor",
+          "phonetic": "por fah-VOR",
+          "meaning": "Please",
+          "example": "¿Puedes pasarme la sal, por favor?"
+        },
+        {
+          "word": "Sí",
+          "phonetic": "SEE",
+          "meaning": "Yes",
+          "example": "¿Quieres café? Sí, por favor."
+        },
+        {
+          "word": "No",
+          "phonetic": "NOH",
+          "meaning": "No",
+          "example": "¿Tienes tiempo? No, lo siento."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Spanish?",
+          "options": [
+            "Adiós",
+            "Gracias",
+            "Hola",
+            "Por favor"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Spanish word means 'Thank you'?",
+          "options": [
+            "Sí",
+            "No",
+            "Gracias",
+            "Hola"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct way to say 'Please' in Spanish?",
+          "options": [
+            "Por favor",
+            "Por bueno",
+            "Por gusto",
+            "Por ahora"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "If someone asks you '¿Quieres agua?' (Do you want water?) and you want to say 'Yes', what would you say?",
+          "options": [
+            "No",
+            "Adiós",
+            "Gracias",
+            "Sí"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "¡Hola! Welcome to your Spanish lesson. Today, we're going to learn some essential Spanish greetings and polite phrases. We'll cover words like \"Hola\" (Hello), \"Gracias\" (Thank you), and \"Por favor\" (Please). I'll help you understand their meanings and how to use them in simple sentences. Are you ready to start learning and practicing your Spanish?"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "leer",
+          "phonetic": "leh-EHR",
+          "meaning": "to read",
+          "example": "Me gusta leer libros en mi tiempo libre."
+        },
+        {
+          "word": "escuchar música",
+          "phonetic": "es-koo-CHAR MOO-see-kah",
+          "meaning": "to listen to music",
+          "example": "Ella siempre escucha música cuando corre."
+        },
+        {
+          "word": "ver películas",
+          "phonetic": "vehr peh-LEE-koo-las",
+          "meaning": "to watch movies",
+          "example": "¿Te gusta ver películas de acción?"
+        },
+        {
+          "word": "jugar videojuegos",
+          "phonetic": "hoo-GAR bee-deh-oh-HWEH-gos",
+          "meaning": "to play video games",
+          "example": "Mis amigos y yo jugamos videojuegos los fines de semana."
+        },
+        {
+          "word": "cocinar",
+          "phonetic": "koh-see-NAR",
+          "meaning": "to cook",
+          "example": "A mi padre le encanta cocinar para toda la familia."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does the Spanish verb 'leer' mean in English?",
+          "options": [
+            "To read",
+            "To write",
+            "To speak",
+            "To listen"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Spanish phrase means 'to listen to music'?",
+          "options": [
+            "Escuchar música",
+            "Ver películas",
+            "Jugar videojuegos",
+            "Cocinar"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How would you say 'I like to watch movies' in Spanish?",
+          "options": [
+            "Me gusta ver películas.",
+            "Me gusta leer libros.",
+            "Me gusta cocinar.",
+            "Me gusta jugar videojuegos."
+          ],
+          "answer": 0
+        },
+        {
+          "q": "If you want to say 'to cook' in Spanish, what verb would you use?",
+          "options": [
+            "Cocinar",
+            "Comer",
+            "Cantar",
+            "Correr"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct Spanish phrase for 'to play video games'?",
+          "options": [
+            "Jugar videojuegos",
+            "Jugar deportes",
+            "Ver juegos",
+            "Escuchar juegos"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "¡Hola! ¡Bienvenido a tu lección de español! Hoy vamos a hablar sobre \"Mis Pasatiempos Favoritos\". Aprenderemos a describir actividades que nos gusta hacer en nuestro tiempo libre. Empecemos con la primera palabra de vocabulario: 'leer'. ¿Puedes repetir 'leer' y decirme qué crees que significa?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hola",
+          "phonetic": "OH-lah",
+          "meaning": "Hello",
+          "example": "¡Hola! ¿Cómo estás?"
+        },
+        {
+          "word": "Gracias",
+          "phonetic": "GRAH-syahs",
+          "meaning": "Thank you",
+          "example": "Muchas gracias por tu ayuda."
+        },
+        {
+          "word": "Por favor",
+          "phonetic": "por fah-VOR",
+          "meaning": "Please",
+          "example": "¿Puedes pasarme la sal, por favor?"
+        },
+        {
+          "word": "Soy",
+          "phonetic": "SOY",
+          "meaning": "I am (from \"ser\")",
+          "example": "Yo soy estudiante."
+        },
+        {
+          "word": "Eres",
+          "phonetic": "EH-res",
+          "meaning": "You are (from \"ser\", informal singular)",
+          "example": "Tú eres muy amable."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Spanish?",
+          "options": [
+            "Adiós",
+            "Hola",
+            "Gracias",
+            "Por favor"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Gracias\" mean in English?",
+          "options": [
+            "Hello",
+            "Thank you",
+            "Please",
+            "Yes"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Spanish word for \"Please\".",
+          "options": [
+            "Sí",
+            "No",
+            "Por favor",
+            "De nada"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Spanish word means \"I am\"?",
+          "options": [
+            "Eres",
+            "Es",
+            "Soy",
+            "Somos"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "¡Hola! ¡Bienvenido a tu lección de español! En esta sesión, vamos a aprender algunas frases y palabras muy útiles para empezar a comunicarte. Cubriremos saludos como \"Hola\", expresiones de cortesía como \"Gracias\" y \"Por favor\", y las formas básicas del verbo \"ser\" como \"Soy\" y \"Eres\".\n\nPara empezar, intenta repetir después de mí: \"Hola\". ¡Excelente! Ahora, ¿cómo dirías \"Thank you\" en español? Es \"Gracias\". Y para pedir algo amablemente, usamos \"Por favor\".\n\nFinalmente, vamos a ver cómo presentarte. Si quieres decir \"I am\", dirías \"Soy\". Por ejemplo, \"Soy estudiante\". Y para decir \"You are\" (informal), usamos \"Eres\". Por ejemplo, \"Tú eres muy amable\".\n\n¡Vamos a practicar estas frases en la lección! ¡Estoy aquí para ayudarte en cada paso!"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hola",
+          "phonetic": "OH-lah",
+          "meaning": "Hello / Hi",
+          "example": "Hola, ¿cómo estás?"
+        },
+        {
+          "word": "Buenos días",
+          "phonetic": "BWEH-nohs DEE-ahs",
+          "meaning": "Good morning",
+          "example": "Buenos días, señor."
+        },
+        {
+          "word": "Buenas tardes",
+          "phonetic": "BWEH-nahs TAR-dehs",
+          "meaning": "Good afternoon / Good evening",
+          "example": "Buenas tardes, ¿necesita ayuda?"
+        },
+        {
+          "word": "Buenas noches",
+          "phonetic": "BWEH-nahs NOH-chehs",
+          "meaning": "Good night / Good evening (when leaving or going to bed)",
+          "example": "Buenas noches, que descanses."
+        },
+        {
+          "word": "¿Cómo estás?",
+          "phonetic": "KOH-moh es-TAHS",
+          "meaning": "How are you? (informal)",
+          "example": "Hola María, ¿cómo estás?"
+        },
+        {
+          "word": "Estoy bien",
+          "phonetic": "es-TOY BYEN",
+          "meaning": "I am fine / I am well",
+          "example": "Estoy bien, gracias."
+        },
+        {
+          "word": "Gracias",
+          "phonetic": "GRAH-syahs",
+          "meaning": "Thank you",
+          "example": "Gracias por tu ayuda."
+        },
+        {
+          "word": "De nada",
+          "phonetic": "deh NAH-dah",
+          "meaning": "You're welcome",
+          "example": "De nada, fue un placer."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Spanish word for \"Hello\"?",
+          "options": [
+            "Adiós",
+            "Hola",
+            "Por favor",
+            "Gracias"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Good morning\" in Spanish?",
+          "options": [
+            "Buenas noches",
+            "Buenas tardes",
+            "Buenos días",
+            "Hasta luego"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Spanish phrase for \"How are you?\" (informal).",
+          "options": [
+            "¿Qué hora es?",
+            "¿Cómo estás?",
+            "¿Quién eres?",
+            "¿Cuánto cuesta?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Gracias\" mean in English?",
+          "options": [
+            "Please",
+            "Excuse me",
+            "Thank you",
+            "Sorry"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Gracias\" to you, how would you respond with \"You're welcome\"?",
+          "options": [
+            "Lo siento",
+            "De nada",
+            "Por favor",
+            "Adiós"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "¡Hola! Soy tu tutor de español. Hoy vamos a aprender algunas frases esenciales para saludar y presentarnos en español. Estas frases te ayudarán a iniciar conversaciones y a interactuar de forma educada. Empecemos con \"Hola\". ¿Puedes intentar decir \"Hola\" en voz alta? Luego, exploraremos \"Buenos días\", \"Buenas tardes\" y \"Buenas noches\". ¿Qué crees que significa \"Buenos días\"?"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hola",
+          "phonetic": "OH-lah",
+          "meaning": "Hello",
+          "example": "Hola, ¿cómo estás?"
+        },
+        {
+          "word": "Adiós",
+          "phonetic": "ah-dee-OHS",
+          "meaning": "Goodbye",
+          "example": "Adiós, ¡hasta mañana!"
+        },
+        {
+          "word": "Por favor",
+          "phonetic": "por fah-VOR",
+          "meaning": "Please",
+          "example": "¿Me puedes pasar la sal, por favor?"
+        },
+        {
+          "word": "Gracias",
+          "phonetic": "GRAH-see-ahs",
+          "meaning": "Thank you",
+          "example": "Gracias por tu ayuda."
+        },
+        {
+          "word": "De nada",
+          "phonetic": "deh NAH-dah",
+          "meaning": "You're welcome",
+          "example": "Gracias por el regalo. - De nada."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Spanish?",
+          "options": [
+            "Adiós",
+            "Gracias",
+            "Hola",
+            "Por favor"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Spanish word for \"Thank you\"?",
+          "options": [
+            "De nada",
+            "Adiós",
+            "Gracias",
+            "Hola"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Gracias\" to you, what is a polite response in Spanish?",
+          "options": [
+            "Hola",
+            "Adiós",
+            "Por favor",
+            "De nada"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "Which phrase would you use to politely ask for something?",
+          "options": [
+            "Adiós",
+            "Por favor",
+            "Gracias",
+            "Hola"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "¡Hola! ¡Bienvenidos a nuestra lección de español! Hoy vamos a aprender algunas de las frases más útiles y comunes para empezar a comunicarte en español. Cubriremos cómo saludar, despedirte, dar las gracias y pedir cosas con cortesía.\n\nEmpecemos con el saludo más básico: \"Hola\". Intenta decir \"Hola\".\n\nLuego, para despedirte, decimos \"Adiós\". ¿Puedes practicar \"Adiós\"?\n\nCuando alguien te ayuda, es importante decir \"Gracias\". ¿Puedes decir \"Gracias\"?\n\nY si alguien te da las gracias, la respuesta común es \"De nada\". Intenta decir \"De nada\".\n\nFinalmente, para pedir algo amablemente, usamos \"Por favor\". ¿Puedes decir \"Por favor\"?\n\n¡Excelente! Ahora, ¿estás listo para practicar estas frases en una conversación?"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hola",
+          "phonetic": "OH-lah",
+          "meaning": "Hello",
+          "example": "Hola, ¿cómo estás?"
+        },
+        {
+          "word": "Adiós",
+          "phonetic": "ah-dee-OHS",
+          "meaning": "Goodbye",
+          "example": "Adiós, hasta mañana."
+        },
+        {
+          "word": "Por favor",
+          "phonetic": "por fah-VOR",
+          "meaning": "Please",
+          "example": "¿Puedes ayudarme, por favor?"
+        },
+        {
+          "word": "Gracias",
+          "phonetic": "GRAH-see-ahs",
+          "meaning": "Thank you",
+          "example": "Gracias por tu ayuda."
+        },
+        {
+          "word": "De nada",
+          "phonetic": "deh NAH-dah",
+          "meaning": "You're welcome",
+          "example": "Gracias. - De nada."
+        },
+        {
+          "word": "Sí",
+          "phonetic": "SEE",
+          "meaning": "Yes",
+          "example": "¿Quieres café? Sí, por favor."
+        },
+        {
+          "word": "No",
+          "phonetic": "NOH",
+          "meaning": "No",
+          "example": "¿Tienes tiempo? No, lo siento."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Spanish?",
+          "options": [
+            "Adiós",
+            "Hola",
+            "Gracias",
+            "Por favor"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct Spanish word for \"Thank you\"?",
+          "options": [
+            "De nada",
+            "Sí",
+            "Gracias",
+            "No"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Gracias\" to you, how would you respond in Spanish?",
+          "options": [
+            "Hola",
+            "Adiós",
+            "Por favor",
+            "De nada"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "Choose the Spanish word for \"Please\":",
+          "options": [
+            "Sí",
+            "Por favor",
+            "No",
+            "Hola"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "¡Hola! Hoy vamos a aprender algunas de las frases de cortesía más importantes en español. Son muy útiles para empezar cualquier conversación. Cubriremos 'Hola' (Hello), 'Adiós' (Goodbye), 'Por favor' (Please), 'Gracias' (Thank you), 'De nada' (You're welcome), 'Sí' (Yes) y 'No' (No). Yo diré cada palabra o frase, y tú puedes repetirla para practicar la pronunciación. Luego, veremos cómo usarlas en situaciones cotidianas. ¿Listo para empezar a hablar español?"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hola",
+          "phonetic": "OH-lah",
+          "meaning": "Hello",
+          "example": "Hola, ¿cómo estás?"
+        },
+        {
+          "word": "Gracias",
+          "phonetic": "GRAH-syahs",
+          "meaning": "Thank you",
+          "example": "Gracias por tu ayuda."
+        },
+        {
+          "word": "Por favor",
+          "phonetic": "por fah-VOR",
+          "meaning": "Please",
+          "example": "¿Puedes pasarme la sal, por favor?"
+        },
+        {
+          "word": "Sí",
+          "phonetic": "SEE",
+          "meaning": "Yes",
+          "example": "Sí, quiero un café."
+        },
+        {
+          "word": "No",
+          "phonetic": "NOH",
+          "meaning": "No",
+          "example": "No, no tengo tiempo."
+        },
+        {
+          "word": "Yo soy",
+          "phonetic": "YOH soy",
+          "meaning": "I am",
+          "example": "Yo soy estudiante."
+        },
+        {
+          "word": "Tú eres",
+          "phonetic": "TOO EH-res",
+          "meaning": "You are (informal singular)",
+          "example": "Tú eres muy amable."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Spanish?",
+          "options": [
+            "Adiós",
+            "Hola",
+            "Gracias",
+            "Por favor"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct way to say \"Thank you\" in Spanish.",
+          "options": [
+            "Sí",
+            "No",
+            "Gracias",
+            "De nada"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Spanish word for \"Yes\"?",
+          "options": [
+            "No",
+            "Sí",
+            "Quizás",
+            "Siempre"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"I am\" in Spanish?",
+          "options": [
+            "Tú eres",
+            "Él es",
+            "Yo soy",
+            "Nosotros somos"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "¡Hola! ¡Bienvenidos a nuestra lección de español! Hoy vamos a aprender algunas palabras y frases esenciales para empezar a comunicarnos. Nos enfocaremos en saludos básicos como \"Hola\", expresiones de cortesía como \"Gracias\" y \"Por favor\", y cómo decir \"Sí\" y \"No\". También veremos cómo presentarte con \"Yo soy\" y cómo referirte a alguien más con \"Tú eres\". Practicaremos la pronunciación de cada palabra y veremos ejemplos de cómo usarlas en oraciones. ¡Estoy aquí para guiarte en cada paso! ¿Estás listo para empezar?"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ser",
+          "phonetic": "/ser/",
+          "meaning": "to be (permanent characteristics, origin, time)",
+          "example": "Yo soy estudiante."
+        },
+        {
+          "word": "estar",
+          "phonetic": "/esˈtar/",
+          "meaning": "to be (temporary states, location, feelings)",
+          "example": "Ella está feliz."
+        },
+        {
+          "word": "tener",
+          "phonetic": "/teˈner/",
+          "meaning": "to have",
+          "example": "Nosotros tenemos un perro."
+        },
+        {
+          "word": "agua",
+          "phonetic": "/ˈa.ɣwa/",
+          "meaning": "water",
+          "example": "¿Quieres un vaso de agua?"
+        },
+        {
+          "word": "comer",
+          "phonetic": "/koˈmer/",
+          "meaning": "to eat",
+          "example": "Me gusta comer frutas."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Choose the correct verb to complete the sentence: \"Ella ___ de España.\" (She ___ from Spain.)",
+          "options": [
+            "es",
+            "está",
+            "tiene",
+            "come"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means \"to have\"?",
+          "options": [
+            "Ser",
+            "Estar",
+            "Tener",
+            "Comer"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Complete the sentence: \"Yo ___ mucha sed.\" (I ___ very thirsty.)",
+          "options": [
+            "soy",
+            "estoy",
+            "tengo",
+            "como"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Spanish word for \"water\"?",
+          "options": [
+            "El pan",
+            "La leche",
+            "El café",
+            "El agua"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "¡Hola! ¡Bienvenido a tu lección de español! Hoy vamos a aprender algunas palabras y verbos muy importantes.\n\nPrimero, vamos a ver dos verbos que significan 'to be' en inglés: 'ser' y 'estar'.\n'Ser' (S-E-R) se usa para cosas permanentes, como tu identidad, tu profesión o de dónde eres. Por ejemplo, \"Yo soy estudiante\" (I am a student) o \"Ella es de México\" (She is from Mexico).\n'Estar' (E-S-T-A-R) se usa para cosas temporales, como tu ubicación o cómo te sientes. Por ejemplo, \"Yo estoy en casa\" (I am at home) o \"Él está cansado\" (He is tired).\n\nTambién aprenderemos el verbo 'tener' (T-E-N-E-R), que significa 'to have'. Por ejemplo, \"Nosotros tenemos un coche\" (We have a car).\nY dos palabras útiles: 'comer' (C-O-M-E-R), que significa 'to eat', y 'agua' (A-G-U-A), que significa 'water'.\n\n¿Estás listo para practicar? ¡Vamos a empezar!"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hola",
+          "phonetic": "OH-lah",
+          "meaning": "Hello / Hi",
+          "example": "Hola, ¿cómo estás?"
+        },
+        {
+          "word": "Adiós",
+          "phonetic": "ah-DYOHS",
+          "meaning": "Goodbye",
+          "example": "Adiós, nos vemos mañana."
+        },
+        {
+          "word": "Por favor",
+          "phonetic": "por fah-VOR",
+          "meaning": "Please",
+          "example": "¿Puedes ayudarme, por favor?"
+        },
+        {
+          "word": "Gracias",
+          "phonetic": "GRAH-syahs",
+          "meaning": "Thank you",
+          "example": "Gracias por tu ayuda."
+        },
+        {
+          "word": "¿Cómo estás?",
+          "phonetic": "KOH-moh es-TAHS",
+          "meaning": "How are you?",
+          "example": "Hola, ¿cómo estás hoy?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Spanish word for \"Hello\"?",
+          "options": [
+            "Adiós",
+            "Por favor",
+            "Hola",
+            "Gracias"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Spanish?",
+          "options": [
+            "Sí",
+            "No",
+            "Gracias",
+            "Estoy bien"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Spanish phrase for \"How are you?\".",
+          "options": [
+            "¿Qué hora es?",
+            "¿Cómo estás?",
+            "¿Dónde está?",
+            "¿Quién eres?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Spanish phrase means \"Please\"?",
+          "options": [
+            "De nada",
+            "Lo siento",
+            "Por favor",
+            "Hasta luego"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "¡Hola! Soy tu tutor de español. Hoy vamos a aprender algunas frases básicas para saludar, despedirse y ser cortés. ¿Estás listo para empezar? Primero, veremos la palabra \"Hola\", que significa \"Hello\" o \"Hi\". Luego, aprenderemos \"Adiós\" para decir \"Goodbye\". Después, practicaremos \"Por favor\" para \"Please\" y \"Gracias\" para \"Thank you\". Y finalmente, una pregunta muy útil: \"¿Cómo estás?\" para preguntar \"How are you?\". ¡Vamos a practicar la pronunciación y a usarlas en contexto!"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "querer",
+          "phonetic": "keh-RER",
+          "meaning": "to want, to love (people)",
+          "example": "Yo quiero un café, por favor."
+        },
+        {
+          "word": "poder",
+          "phonetic": "poh-DER",
+          "meaning": "to be able to, can",
+          "example": "¿Puedes ayudarme?"
+        },
+        {
+          "word": "ir",
+          "phonetic": "eer",
+          "meaning": "to go",
+          "example": "Vamos al parque mañana."
+        },
+        {
+          "word": "la tienda",
+          "phonetic": "lah TYEN-dah",
+          "meaning": "the store, shop",
+          "example": "La tienda abre a las nueve."
+        },
+        {
+          "word": "comprar",
+          "phonetic": "kohm-PRAR",
+          "meaning": "to buy",
+          "example": "Necesito comprar pan."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"I want\" in Spanish?",
+          "options": [
+            "Yo quiero",
+            "Tú quieres",
+            "Él quiere",
+            "Nosotros queremos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the correct form of the verb \"ir\" (to go) for \"We go\".",
+          "options": [
+            "vamos",
+            "van",
+            "vas",
+            "voy"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Spanish word means \"to buy\"?",
+          "options": [
+            "comprar",
+            "vender",
+            "comer",
+            "beber"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "¡Hola! ¡Bienvenido/a a tu lección de español! Hoy vamos a aprender algunos verbos muy útiles y cómo expresar deseos y habilidades. Empecemos con el vocabulario clave.\n\nPrimero, repite después de mí: \"querer\". Esta palabra significa 'to want' o 'to love' (para personas). Intenta decir \"Yo quiero un café\". ¡Excelente!\n\nAhora, probemos con \"poder\". Significa 'to be able to' o 'can'. ¿Puedes decir \"¿Puedes ayudarme?\"? ¡Muy bien!\n\nLuego tenemos \"ir\", que significa 'to go'. ¿Puedes repetir \"Vamos al parque\"? ¡Perfecto!\n\nTambién aprenderemos \"la tienda\", que es 'the store', y \"comprar\", que significa 'to buy'. Por ejemplo, \"Necesito comprar pan en la tienda\".\n\nDespués de practicar estas palabras, haremos un pequeño cuestionario para ver cuánto has aprendido. ¡Vamos a empezar!"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "desayunar",
+          "phonetic": "deh-sah-yoo-NAHR",
+          "meaning": "to have breakfast",
+          "example": "Me gusta desayunar tostadas con café."
+        },
+        {
+          "word": "almorzar",
+          "phonetic": "ahl-mor-SAHR",
+          "meaning": "to have lunch",
+          "example": "¿Quieres almorzar conmigo mañana?"
+        },
+        {
+          "word": "cenar",
+          "phonetic": "seh-NAHR",
+          "meaning": "to have dinner",
+          "example": "Vamos a cenar en un restaurante italiano esta noche."
+        },
+        {
+          "word": "trabajar",
+          "phonetic": "trah-bah-HAHR",
+          "meaning": "to work",
+          "example": "Necesito trabajar mucho para terminar el proyecto."
+        },
+        {
+          "word": "estudiar",
+          "phonetic": "es-too-DYAR",
+          "meaning": "to study",
+          "example": "Ella prefiere estudiar en la biblioteca."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which verb means 'to have breakfast'?",
+          "options": [
+            "Almorzar",
+            "Cenar",
+            "Desayunar",
+            "Trabajar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct verb to complete the sentence: 'Yo ______ en una oficina todos los días.'",
+          "options": [
+            "desayuno",
+            "almuerzo",
+            "trabajo",
+            "estudio"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does 'estudiar' mean?",
+          "options": [
+            "To eat",
+            "To sleep",
+            "To study",
+            "To travel"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which of these means 'to have dinner'?",
+          "options": [
+            "Desayunar",
+            "Almorzar",
+            "Cenar",
+            "Comer"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "¡Hola! En esta lección, vamos a aprender y practicar algunos verbos comunes en español relacionados con las actividades diarias. Nos enfocaremos en verbos como \"desayunar\", \"almorzar\", \"cenar\", \"trabajar\" y \"estudiar\". ¡Prepárate para usarlos en oraciones y mejorar tu fluidez! ¿Estás listo para empezar?"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ir",
+          "phonetic": "eer",
+          "meaning": "to go",
+          "example": "Voy a la escuela todos los días."
+        },
+        {
+          "word": "venir",
+          "phonetic": "veh-NEER",
+          "meaning": "to come",
+          "example": "¿Puedes venir a mi casa mañana?"
+        },
+        {
+          "word": "querer",
+          "phonetic": "keh-RER",
+          "meaning": "to want",
+          "example": "Quiero un café, por favor."
+        },
+        {
+          "word": "poder",
+          "phonetic": "poh-DER",
+          "meaning": "to be able to, can",
+          "example": "No puedo ir contigo hoy."
+        },
+        {
+          "word": "la tienda",
+          "phonetic": "lah tee-EN-dah",
+          "meaning": "the store",
+          "example": "Vamos a la tienda a comprar pan."
+        },
+        {
+          "word": "el mercado",
+          "phonetic": "el mer-KAH-doh",
+          "meaning": "the market",
+          "example": "Compro frutas frescas en el mercado."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which verb means 'to go'?",
+          "options": [
+            "venir",
+            "ir",
+            "querer",
+            "poder"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say 'I want' in Spanish?",
+          "options": [
+            "Yo voy",
+            "Yo vengo",
+            "Yo quiero",
+            "Yo puedo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Spanish word for 'the store'.",
+          "options": [
+            "el mercado",
+            "la casa",
+            "la tienda",
+            "el banco"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "¡Hola! Soy tu tutor de español. Hoy vamos a aprender vocabulario muy útil para hablar de ir y venir a lugares. Exploraremos verbos como \"ir\" (to go), \"venir\" (to come), \"querer\" (to want) y \"poder\" (to be able to/can). También veremos sustantivos como \"la tienda\" (the store) y \"el mercado\" (the market). Prepárate para practicar cómo usar estas palabras en oraciones. ¡Empecemos!"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ir",
+          "phonetic": "eer",
+          "meaning": "to go",
+          "example": "Voy al supermercado cada sábado."
+        },
+        {
+          "word": "hacer",
+          "phonetic": "ah-SER",
+          "meaning": "to do, to make",
+          "example": "¿Qué vas a hacer este fin de semana?"
+        },
+        {
+          "word": "tener",
+          "phonetic": "teh-NER",
+          "meaning": "to have",
+          "example": "Tengo dos hermanos y una hermana."
+        },
+        {
+          "word": "querer",
+          "phonetic": "keh-RER",
+          "meaning": "to want, to love",
+          "example": "Quiero aprender a bailar salsa."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"to go\" in Spanish?",
+          "options": [
+            "hacer",
+            "ir",
+            "tener",
+            "querer"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct translation for \"I want a coffee.\"",
+          "options": [
+            "Tengo un café.",
+            "Voy un café.",
+            "Quiero un café.",
+            "Hago un café."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which verb means \"to do\" or \"to make\"?",
+          "options": [
+            "ir",
+            "tener",
+            "hacer",
+            "querer"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Translate: \"Do you have a book?\"",
+          "options": [
+            "¿Quieres un libro?",
+            "¿Vas un libro?",
+            "¿Haces un libro?",
+            "¿Tienes un libro?"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "¡Hola! Hoy vamos a aprender vocabulario nuevo en español. Nos centraremos en verbos muy comunes como \"ir\", \"hacer\", \"tener\" y \"querer\". Te ayudaré a entender sus significados, cómo pronunciarlos correctamente y cómo usarlos en diferentes oraciones. ¡Empecemos a practicar tu español!"
+    }
+  ]
+}

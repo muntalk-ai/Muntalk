@@ -1,0 +1,1265 @@
+{
+  "langCode": "ur-PK",
+  "langLabel": "Urdu",
+  "langNative": "اردو",
+  "generatedAt": "2026-03-15T05:44:23.798Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "السلام علیکم",
+          "phonetic": "Assalam-o-Alaikum",
+          "meaning": "Hello / Peace be upon you",
+          "example": "السلام علیکم، آپ کیسے ہیں؟"
+        },
+        {
+          "word": "آپ کیسے ہیں؟",
+          "phonetic": "Aap kaisay hain?",
+          "meaning": "How are you? (masculine)",
+          "example": "احمد، آپ کیسے ہیں؟"
+        },
+        {
+          "word": "میں ٹھیک ہوں",
+          "phonetic": "Main theek hoon",
+          "meaning": "I am fine.",
+          "example": "میں ٹھیک ہوں، شکریہ۔"
+        },
+        {
+          "word": "شکریہ",
+          "phonetic": "Shukriya",
+          "meaning": "Thank you.",
+          "example": "آپ کی مدد کا شکریہ۔"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Urdu?",
+          "options": [
+            "شکریہ",
+            "السلام علیکم",
+            "میں ٹھیک ہوں",
+            "آپ کیسے ہیں؟"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the most common response to \"آپ کیسے ہیں؟\" (How are you?)",
+          "options": [
+            "شکریہ",
+            "السلام علیکم",
+            "میں ٹھیک ہوں",
+            "آپ کا نام کیا ہے؟"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Urdu word for \"Thank you.\"",
+          "options": [
+            "میں ٹھیک ہوں",
+            "آپ کیسے ہیں؟",
+            "شکریہ",
+            "السلام علیکم"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "بہت اچھے! آج ہم کچھ بنیادی اردو آداب سیکھیں گے۔ ہم 'السلام علیکم'، 'آپ کیسے ہیں؟' اور 'میں ٹھیک ہوں' جیسے جملے سیکھیں گے۔ میں ہر جملہ کہوں گا، اور آپ میرے بعد دہرائیں گے۔ آئیے 'السلام علیکم' سے شروع کرتے ہیں۔ غور سے سنیں: 'السلام علیکم'۔ اب آپ کوشش کریں!"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "السلام علیکم",
+          "phonetic": "Assalam-o-Alaikum",
+          "meaning": "Peace be upon you (Common Islamic greeting, equivalent to \"Hello\")",
+          "example": "السلام علیکم، میرا نام علی ہے۔"
+        },
+        {
+          "word": "وعلیکم السلام",
+          "phonetic": "Wa-Alaikum-us-Salam",
+          "meaning": "And peace be upon you (Response to Assalam-o-Alaikum)",
+          "example": "وعلیکم السلام، آپ کیسے ہیں؟"
+        },
+        {
+          "word": "آپ کیسے ہیں؟",
+          "phonetic": "Aap kaise hain?",
+          "meaning": "How are you? (Formal, for a male or mixed group)",
+          "example": "السلام علیکم، آپ کیسے ہیں؟"
+        },
+        {
+          "word": "آپ کیسی ہیں؟",
+          "phonetic": "Aap kaisi hain?",
+          "meaning": "How are you? (Formal, for a female)",
+          "example": "وعلیکم السلام، آپ کیسی ہیں؟"
+        },
+        {
+          "word": "میں ٹھیک ہوں، شکریہ۔",
+          "phonetic": "Main theek hoon, shukriya.",
+          "meaning": "I am fine, thank you.",
+          "example": "میں ٹھیک ہوں، شکریہ۔ اور آپ؟"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Urdu?",
+          "options": [
+            "میں ٹھیک ہوں",
+            "السلام علیکم",
+            "شکریہ",
+            "آپ کیسے ہیں؟"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to \"السلام علیکم\"?",
+          "options": [
+            "میں ٹھیک ہوں",
+            "شکریہ",
+            "وعلیکم السلام",
+            "آپ کیسے ہیں؟"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"How are you?\" (formally, to a male) in Urdu?",
+          "options": [
+            "میں ٹھیک ہوں",
+            "السلام علیکم",
+            "آپ کیسے ہیں؟",
+            "شکریہ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say \"I am fine, thank you\" in Urdu?",
+          "options": [
+            "وعلیکم السلام",
+            "میں ٹھیک ہوں، شکریہ۔",
+            "آپ کیسے ہیں؟",
+            "السلام علیکم"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "ہیلو! اس سبق میں، ہم اردو کے کچھ ضروری آداب سیکھیں گے۔ ہم سب سے عام سلام، \"السلام علیکم\" (Assalam-o-Alaikum)، اور اس کے جواب، \"وعلیکم السلام\" (Wa-Alaikum-us-Salam) سے شروع کریں گے۔ میں آپ کو بتاؤں گا کہ انہیں کب اور کیسے استعمال کرنا ہے۔ پھر، ہم سیکھیں گے کہ \"آپ کیسے ہیں؟\" (Aap kaise hain?) کہہ کر حال احوال کیسے پوچھتے ہیں اور \"میں ٹھیک ہوں، شکریہ۔\" (Main theek hoon, shukriya.) کہہ کر جواب کیسے دیتے ہیں۔ آئیے ان جملوں کو ایک ساتھ کہنے کی مشق کریں!"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "السلام علیکم",
+          "phonetic": "Assalam-o-Alaikum",
+          "meaning": "Hello / Peace be upon you",
+          "example": "السلام علیکم، آپ کیسے ہیں؟"
+        },
+        {
+          "word": "شکریہ",
+          "phonetic": "Shukriya",
+          "meaning": "Thank you",
+          "example": "آپ کی مدد کا شکریہ۔"
+        },
+        {
+          "word": "جی ہاں",
+          "phonetic": "Ji haan",
+          "meaning": "Yes",
+          "example": "کیا آپ کو چائے پسند ہے؟ جی ہاں۔"
+        },
+        {
+          "word": "نہیں",
+          "phonetic": "Nahin",
+          "meaning": "No",
+          "example": "کیا آپ کو کافی پسند ہے؟ نہیں، مجھے چائے پسند ہے۔"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Urdu?",
+          "options": [
+            "شکریہ",
+            "السلام علیکم",
+            "جی ہاں",
+            "نہیں"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Urdu word means 'Thank you'?",
+          "options": [
+            "شکریہ",
+            "السلام علیکم",
+            "جی ہاں",
+            "نہیں"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How would you respond 'Yes' in Urdu?",
+          "options": [
+            "شکریہ",
+            "السلام علیکم",
+            "جی ہاں",
+            "نہیں"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Welcome to your first Urdu lesson! I'm excited to help you start your journey in learning Urdu. Today, we'll focus on essential greetings and common phrases. We'll learn how to say 'Hello' (السلام علیکم), 'Thank you' (شکریہ), 'Yes' (جی ہاں), and 'No' (نہیں). I'll guide you through pronunciation and help you use these words in simple sentences. Let's begin by practicing 'السلام علیکم' (Assalam-o-Alaikum). Are you ready?"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "السلام علیکم",
+          "phonetic": "Assalam-o-Alaikum",
+          "meaning": "Hello / Peace be upon you (a common Islamic greeting)",
+          "example": "السلام علیکم! آپ کیسے ہیں؟"
+        },
+        {
+          "word": "آپ کیسے ہیں؟",
+          "phonetic": "Aap kaisay hain?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "آپ کیسے ہیں؟ میں ٹھیک ہوں۔"
+        },
+        {
+          "word": "میں ٹھیک ہوں",
+          "phonetic": "Main theek hoon",
+          "meaning": "I am fine / I am good",
+          "example": "آپ کیسے ہیں؟ میں ٹھیک ہوں۔"
+        },
+        {
+          "word": "شکریہ",
+          "phonetic": "Shukriya",
+          "meaning": "Thank you",
+          "example": "آپ کی مدد کا شکریہ۔"
+        },
+        {
+          "word": "خدا حافظ",
+          "phonetic": "Khuda Hafiz",
+          "meaning": "Goodbye",
+          "example": "خدا حافظ! کل ملیں گے۔"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most common way to say \"Hello\" in Urdu?",
+          "options": [
+            "شکریہ",
+            "خدا حافظ",
+            "السلام علیکم",
+            "میں ٹھیک ہوں"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you ask \"How are you?\" to someone formally in Urdu?",
+          "options": [
+            "میں ٹھیک ہوں؟",
+            "آپ کیسے ہیں؟",
+            "شکریہ؟",
+            "خدا حافظ؟"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"آپ کیسے ہیں؟\" and you want to say \"I am fine,\" what would you say?",
+          "options": [
+            "شکریہ",
+            "خدا حافظ",
+            "السلام علیکم",
+            "میں ٹھیک ہوں"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "Which Urdu word means \"Thank you\"?",
+          "options": [
+            "السلام علیکم",
+            "شکریہ",
+            "خدا حافظ",
+            "میں ٹھیک ہوں"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Urdu phrase for \"Goodbye\"?",
+          "options": [
+            "میں ٹھیک ہوں",
+            "شکریہ",
+            "خدا حافظ",
+            "آپ کیسے ہیں؟"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hi there! I'm your AI tutor. Today, we're going to learn some new Urdu words and phrases. We'll start with common greetings and basic responses. For example, to say 'Hello' in Urdu, you can use 'السلام علیکم' (Assalam-o-Alaikum). To ask 'How are you?', you'd say 'آپ کیسے ہیں؟' (Aap kaisay hain?). And if you're 'fine', you can respond with 'میں ٹھیک ہوں' (Main theek hoon). We'll also cover 'Thank you' which is 'شکریہ' (Shukriya), and 'Goodbye' which is 'خدا حافظ' (Khuda Hafiz). Let's practice these together!"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "Salām",
+          "meaning": "Hello / Peace",
+          "example": "سلام، آپ کیسے ہیں؟"
+        },
+        {
+          "word": "آپ کیسے ہیں؟",
+          "phonetic": "Āp kaise hain?",
+          "meaning": "How are you? (formal/masculine/plural)",
+          "example": "سلام، آپ کیسے ہیں؟"
+        },
+        {
+          "word": "آپ کیسی ہیں؟",
+          "phonetic": "Āp kaisī hain?",
+          "meaning": "How are you? (formal/feminine)",
+          "example": "سلام، آپ کیسی ہیں؟"
+        },
+        {
+          "word": "میں ٹھیک ہوں",
+          "phonetic": "Main ṭhīk hūn",
+          "meaning": "I am fine.",
+          "example": "میں ٹھیک ہوں، شکریہ۔"
+        },
+        {
+          "word": "شکریہ",
+          "phonetic": "Shukriya",
+          "meaning": "Thank you.",
+          "example": "آپ کا شکریہ۔"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Urdu?",
+          "options": [
+            "شکریہ",
+            "سلام",
+            "نہیں",
+            "میں ٹھیک ہوں"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to \"آپ کیسے ہیں؟\" (How are you?)",
+          "options": [
+            "شکریہ",
+            "سلام",
+            "میں ٹھیک ہوں",
+            "جی ہاں"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Urdu?",
+          "options": [
+            "جی ہاں",
+            "سلام",
+            "شکریہ",
+            "نہیں"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"I am fine\"?",
+          "options": [
+            "آپ کیسے ہیں؟",
+            "میں ٹھیک ہوں",
+            "شکریہ",
+            "سلام"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "ہیلو! اردو کے سبق میں خوش آمدید۔ آج ہم کچھ ضروری اردو آداب سیکھیں گے۔ آئیے 'ہیلو' سے شروع کرتے ہیں، جو اردو میں **سلام** (Salām) ہے۔ کیا آپ **سلام** کہنے کی کوشش کر سکتے ہیں؟ بہت اچھے! اب، شائستگی سے 'آپ کیسے ہیں؟' پوچھنے کے لیے ہم کہتے ہیں **آپ کیسے ہیں؟** (Āp kaise hain?) اگر آپ مرد ہیں یا رسمی طور پر بات کر رہے ہیں۔ اگر آپ خاتون ہیں تو کہیں گے **آپ کیسی ہیں؟** (Āp kaisī hain?)۔ اور اس کا ایک عام جواب ہے **میں ٹھیک ہوں** (Main ṭhīk hūn)، جس کا مطلب ہے 'میں ٹھیک ہوں۔' آئیے مشق کرتے ہیں: میں کہوں گا **آپ کیسے ہیں؟** اور آپ جواب دیں **میں ٹھیک ہوں**۔"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "Salam",
+          "meaning": "Hello / Peace",
+          "example": "سلام، آپ کیسے ہیں؟"
+        },
+        {
+          "word": "کیسے ہیں؟",
+          "phonetic": "Kaise hain?",
+          "meaning": "How are you? (formal/plural masculine)",
+          "example": "آپ کیسے ہیں؟ میں ٹھیک ہوں۔"
+        },
+        {
+          "word": "میں ٹھیک ہوں",
+          "phonetic": "Main theek hoon",
+          "meaning": "I am fine",
+          "example": "میں ٹھیک ہوں، شکریہ۔"
+        },
+        {
+          "word": "آپ کا نام کیا ہے؟",
+          "phonetic": "Aap ka naam kya hai?",
+          "meaning": "What is your name? (formal)",
+          "example": "آپ کا نام کیا ہے؟ میرا نام علی ہے۔"
+        },
+        {
+          "word": "شکریہ",
+          "phonetic": "Shukriya",
+          "meaning": "Thank you",
+          "example": "آپ کی مدد کا شکریہ۔"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Urdu?",
+          "options": [
+            "شکریہ",
+            "سلام",
+            "کیسے ہیں؟",
+            "جی ہاں"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the formal way to ask \"How are you?\" in Urdu?",
+          "options": [
+            "میں ٹھیک ہوں",
+            "آپ کا نام کیا ہے؟",
+            "کیسے ہیں؟",
+            "سلام"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks you \"کیسے ہیں؟\" (How are you?), what is a common response meaning \"I am fine\"?",
+          "options": [
+            "شکریہ",
+            "سلام",
+            "میں ٹھیک ہوں",
+            "آپ کا نام کیا ہے؟"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Urdu?",
+          "options": [
+            "شکریہ",
+            "سلام",
+            "کیسے ہیں؟",
+            "جی نہیں"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "ہیلو! میں آپ کا AI ٹیوٹر ہوں۔ اس سبق میں، ہم اردو میں بنیادی سلام اور تعارف سیکھیں گے۔ ہم 'سلام' (Hello)، 'کیسے ہیں؟' (How are you?) اور 'میں ٹھیک ہوں' (I am fine) جیسے اہم الفاظ اور جملوں کا احاطہ کریں گے۔ میرے ساتھ مشق کرنے کے لیے تیار ہو جائیں! آئیے شروع کرتے ہیں!"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "السلام علیکم",
+          "phonetic": "Assalam-o-Alaikum",
+          "meaning": "Hello / Peace be upon you",
+          "example": "السلام علیکم، آپ کیسے ہیں؟"
+        },
+        {
+          "word": "آپ کیسے ہیں؟",
+          "phonetic": "Aap kaisay hain?",
+          "meaning": "How are you? (masculine/general, formal)",
+          "example": "ہیلو، آپ کیسے ہیں؟"
+        },
+        {
+          "word": "آپ کیسی ہیں؟",
+          "phonetic": "Aap kaisi hain?",
+          "meaning": "How are you? (feminine, formal)",
+          "example": "السلام علیکم، آپ کیسی ہیں؟"
+        },
+        {
+          "word": "میں ٹھیک ہوں",
+          "phonetic": "Main theek hoon",
+          "meaning": "I am fine",
+          "example": "میں ٹھیک ہوں، شکریہ۔"
+        },
+        {
+          "word": "شکریہ",
+          "phonetic": "Shukriya",
+          "meaning": "Thank you",
+          "example": "آپ کی مدد کا شکریہ۔"
+        },
+        {
+          "word": "مہربانی کر کے",
+          "phonetic": "Meherbani kar kay",
+          "meaning": "Please",
+          "example": "مہربانی کر کے میری مدد کریں۔"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Urdu?",
+          "options": [
+            "شکریہ",
+            "السلام علیکم",
+            "مہربانی کر کے",
+            "میں ٹھیک ہوں"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Urdu phrase for 'Thank you'?",
+          "options": [
+            "آپ کیسے ہیں؟",
+            "میں ٹھیک ہوں",
+            "شکریہ",
+            "السلام علیکم"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks 'آپ کیسے ہیں؟' (How are you?), how would you respond if you are fine?",
+          "options": [
+            "شکریہ",
+            "مہربانی کر کے",
+            "میں ٹھیک ہوں",
+            "السلام علیکم"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does 'مہربانی کر کے' mean in English?",
+          "options": [
+            "Thank you",
+            "Please",
+            "How are you?",
+            "I am fine"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "ہیلو! میں آپ کا AI ٹیوٹر ہوں۔ آج ہم کچھ بنیادی اردو آداب اور جملے سیکھیں گے۔ ہم 'السلام علیکم' (Hello)، 'آپ کیسے ہیں؟' (How are you? - masculine/general)، 'آپ کیسی ہیں؟' (How are you? - feminine)، 'میں ٹھیک ہوں' (I am fine)، 'شکریہ' (Thank you)، اور 'مہربانی کر کے' (Please) کا احاطہ کریں گے۔ میں ہر جملے کا تعارف کراؤں گا، اس کا تلفظ بتاؤں گا، اور پھر آپ کو ایک مثال دوں گا۔ اس کے بعد، میں آپ سے مشق کرنے کو کہوں گا۔ آئیے 'السلام علیکم' سے شروع کرتے ہیں۔ کیا آپ 'السلام علیکم' کہنے کی کوشش کر سکتے ہیں؟"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "السلام و علیکم",
+          "phonetic": "Assalam-o-Alaikum",
+          "meaning": "Hello / Peace be upon you",
+          "example": "السلام و علیکم! آپ کیسے ہیں؟"
+        },
+        {
+          "word": "شکریہ",
+          "phonetic": "Shukriya",
+          "meaning": "Thank you",
+          "example": "آپ کا شکریہ۔"
+        },
+        {
+          "word": "جی ہاں",
+          "phonetic": "Ji haan",
+          "meaning": "Yes (polite)",
+          "example": "جی ہاں، میں تیار ہوں۔"
+        },
+        {
+          "word": "نہیں",
+          "phonetic": "Nahin",
+          "meaning": "No",
+          "example": "نہیں، یہ میرا نہیں ہے۔"
+        },
+        {
+          "word": "میں",
+          "phonetic": "Main",
+          "meaning": "I",
+          "example": "میں طالب علم ہوں۔"
+        },
+        {
+          "word": "آپ",
+          "phonetic": "Aap",
+          "meaning": "You (formal/plural)",
+          "example": "آپ کہاں سے ہیں؟"
+        },
+        {
+          "word": "وہ",
+          "phonetic": "Woh",
+          "meaning": "He/She/It/They (far)",
+          "example": "وہ میرا دوست ہے۔"
+        },
+        {
+          "word": "ہے",
+          "phonetic": "Hai",
+          "meaning": "Is (for singular, informal 'you', he/she/it)",
+          "example": "یہ ایک کتاب ہے۔"
+        },
+        {
+          "word": "ہیں",
+          "phonetic": "Hain",
+          "meaning": "Are (for plural, formal 'you', we)",
+          "example": "ہم دوست ہیں۔"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Urdu?",
+          "options": [
+            "شکریہ",
+            "جی ہاں",
+            "السلام و علیکم",
+            "نہیں"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Urdu word for \"Thank you\"?",
+          "options": [
+            "میں",
+            "شکریہ",
+            "وہ",
+            "ہے"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Urdu word for \"Yes (polite)\".",
+          "options": [
+            "نہیں",
+            "جی ہاں",
+            "آپ",
+            "ہیں"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Urdu word means \"I\"?",
+          "options": [
+            "وہ",
+            "آپ",
+            "میں",
+            "ہے"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"You\" (formal/plural) in Urdu?",
+          "options": [
+            "میں",
+            "تم",
+            "آپ",
+            "وہ"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "اردو کے پہلے سبق میں خوش آمدید! آج ہم اردو میں کچھ بنیادی سلام اور ضروری جملے سیکھیں گے۔ ہم 'السلام و علیکم' (Assalam-o-Alaikum)، 'شکریہ' (Shukriya)، اور 'جی ہاں' (Ji haan) کا احاطہ کریں گے۔ میں الفاظ کہوں گا، اور آپ میرے بعد دہرا سکتے ہیں۔ آئیے 'السلام و علیکم' سے شروع کرتے ہیں۔ کیا آپ 'السلام و علیکم' کہہ سکتے ہیں؟"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "Salam",
+          "meaning": "Hello / Peace",
+          "example": "سلام، آپ کیسے ہیں؟"
+        },
+        {
+          "word": "آپ کیسے ہیں؟",
+          "phonetic": "Aap kaisay hain?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "سلام، آپ کیسے ہیں؟"
+        },
+        {
+          "word": "میں ٹھیک ہوں",
+          "phonetic": "Main theek hoon",
+          "meaning": "I am fine.",
+          "example": "میں ٹھیک ہوں، شکریہ۔"
+        },
+        {
+          "word": "شکریہ",
+          "phonetic": "Shukriya",
+          "meaning": "Thank you.",
+          "example": "آپ کا شکریہ۔"
+        },
+        {
+          "word": "آپ کا نام کیا ہے؟",
+          "phonetic": "Aap ka naam kya hai?",
+          "meaning": "What is your name?",
+          "example": "سلام، آپ کا نام کیا ہے؟"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Urdu?",
+          "options": [
+            "شکریہ",
+            "سلام",
+            "ٹھیک",
+            "کیا"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"How are you?\" in Urdu?",
+          "options": [
+            "میں ٹھیک ہوں",
+            "آپ کا نام کیا ہے؟",
+            "آپ کیسے ہیں؟",
+            "شکریہ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you respond if someone asks \"آپ کیسے ہیں؟\" (Aap kaisay hain?) and you are fine?",
+          "options": [
+            "سلام",
+            "آپ کا نام کیا ہے؟",
+            "میں ٹھیک ہوں",
+            "شکریہ"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "ہیلو! آج ہم اردو کے کچھ بنیادی آداب اور تعارف سیکھیں گے۔ ہم 'سلام' (Salam)، 'آپ کیسے ہیں؟' (Aap kaisay hain?) اور 'میں ٹھیک ہوں' (Main theek hoon) جیسے اہم جملے سیکھیں گے۔\n\nسب سے پہلے، 'سلام' (Salam) سیکھتے ہیں۔ یہ اردو میں 'ہیلو' یا 'ہائے' کہنے کا ایک عام طریقہ ہے۔ یہ امن کا پیغام بھی دیتا ہے۔\nکیا آپ 'سلام' کہنے کی کوشش کر سکتے ہیں؟\n\nاس کے بعد، جب آپ کسی سے پوچھنا چاہیں کہ وہ کیسا ہے، تو آپ کہتے ہیں 'آپ کیسے ہیں؟' (Aap kaisay hain?)۔ یہ رسمی اور احترام والا طریقہ ہے۔\nکیا آپ 'آپ کیسے ہیں؟' دہرائیں گے؟\n\nاور اگر آپ ٹھیک ہیں، تو آپ جواب میں کہتے ہیں 'میں ٹھیک ہوں' (Main theek hoon)۔\nکیا آپ 'میں ٹھیک ہوں' کہنے کی مشق کر سکتے ہیں؟\n\nبہت اچھے! اب ہم ان جملوں کو ایک ساتھ استعمال کرنے کی مشق کریں گے۔"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "کھانا",
+          "phonetic": "khana",
+          "meaning": "to eat",
+          "example": "میں کھانا کھاتا ہوں۔"
+        },
+        {
+          "word": "پینا",
+          "phonetic": "peena",
+          "meaning": "to drink",
+          "example": "وہ پانی پیتا ہے۔"
+        },
+        {
+          "word": "جانا",
+          "phonetic": "jana",
+          "meaning": "to go",
+          "example": "ہم سکول جاتے ہیں۔"
+        },
+        {
+          "word": "آنا",
+          "phonetic": "aana",
+          "meaning": "to come",
+          "example": "وہ گھر آتی ہے۔"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Urdu word means 'to eat'?",
+          "options": [
+            "پینا",
+            "کھانا",
+            "جانا",
+            "آنا"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Complete the sentence: 'میں پانی ____۔' (I water ____.)",
+          "options": [
+            "کھاتا ہوں",
+            "پیتا ہوں",
+            "جاتا ہوں",
+            "آتا ہوں"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Urdu word for 'to go'?",
+          "options": [
+            "آنا",
+            "کھانا",
+            "جانا",
+            "پینا"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "السلام علیکم! (Assalam-o-Alaikum!) Welcome to your Urdu lesson! Today, we're going to learn some essential Urdu verbs. We'll cover 'کھانا' (khana), meaning 'to eat', 'پینا' (peena), meaning 'to drink', 'جانا' (jana), meaning 'to go', and 'آنا' (aana), meaning 'to come'. We'll also practice using these verbs in simple sentences. Are you ready to begin? چلو شروع کرتے ہیں! (Chalo shuru karte hain!)"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "Salam",
+          "meaning": "Hello / Peace",
+          "example": "سلام، آپ کیسے ہیں؟"
+        },
+        {
+          "word": "شکریہ",
+          "phonetic": "Shukriya",
+          "meaning": "Thank you",
+          "example": "آپ کی مدد کا شکریہ۔"
+        },
+        {
+          "word": "جی ہاں",
+          "phonetic": "Jee haan",
+          "meaning": "Yes",
+          "example": "کیا آپ اردو بولتے ہیں؟ جی ہاں۔"
+        },
+        {
+          "word": "نہیں",
+          "phonetic": "Nahin",
+          "meaning": "No",
+          "example": "کیا آپ کو کافی پسند ہے؟ نہیں، مجھے چائے پسند ہے۔"
+        },
+        {
+          "word": "مہربانی",
+          "phonetic": "Meherbani",
+          "meaning": "Please / Kindness",
+          "example": "ایک گلاس پانی، مہربانی۔"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Urdu?",
+          "options": [
+            "شکریہ",
+            "سلام",
+            "نہیں",
+            "جی ہاں"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Urdu word means \"Thank you\"?",
+          "options": [
+            "مہربانی",
+            "سلام",
+            "شکریہ",
+            "جی ہاں"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Urdu word for \"Yes\"?",
+          "options": [
+            "نہیں",
+            "جی ہاں",
+            "سلام",
+            "مہربانی"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks you if you like something and you want to say \"No\", which word would you use?",
+          "options": [
+            "جی ہاں",
+            "شکریہ",
+            "نہیں",
+            "سلام"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "خوش آمدید! آج کے اردو سبق میں، ہم کچھ ضروری اردو الفاظ اور جملے سیکھیں گے۔ ہم 'سلام' (Hello)، 'شکریہ' (Thank you)، 'جی ہاں' (Yes)، اور 'نہیں' (No) جیسے الفاظ پر توجہ دیں گے۔ میں آپ کو ان الفاظ کا تلفظ سکھاؤں گا اور آپ کو انہیں دہرانے کی ترغیب دوں گا۔ آئیے 'سلام' سے شروع کرتے ہیں۔ کیا آپ تیار ہیں؟"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "سلام",
+          "phonetic": "Salam",
+          "meaning": "Hello / Peace",
+          "example": "سلام، آپ کیسے ہیں؟"
+        },
+        {
+          "word": "شکریہ",
+          "phonetic": "Shukriya",
+          "meaning": "Thank you",
+          "example": "آپ کی مدد کا شکریہ۔"
+        },
+        {
+          "word": "جی ہاں",
+          "phonetic": "Ji haan",
+          "meaning": "Yes (polite)",
+          "example": "جی ہاں، میں تیار ہوں۔"
+        },
+        {
+          "word": "نہیں",
+          "phonetic": "Nahin",
+          "meaning": "No",
+          "example": "نہیں، یہ میرا نہیں ہے۔"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Urdu?",
+          "options": [
+            "سلام",
+            "شکریہ",
+            "نہیں",
+            "جی ہاں"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means \"Thank you\"?",
+          "options": [
+            "نہیں",
+            "سلام",
+            "شکریہ",
+            "جی ہاں"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the polite way to say \"Yes\"?",
+          "options": [
+            "نہیں",
+            "جی ہاں",
+            "شکریہ",
+            "سلام"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "You are an AI Urdu tutor. Your goal is to teach the student the following Urdu vocabulary: 'سلام' (Salam), 'شکریہ' (Shukriya), 'جی ہاں' (Ji haan), and 'نہیں' (Nahin).\nStart by greeting the student in Urdu and English.\nFor each vocabulary word:\n1.  Introduce the Urdu word and its English meaning. For example: \"آج ہم 'سلام' سیکھیں گے، جس کا مطلب ہے 'Hello' یا 'Peace'.\" (Today we will learn 'Salam', which means 'Hello' or 'Peace'.)\n2.  Provide the Urdu example sentence from the vocabulary list.\n3.  Ask the student to repeat the word and try to use it in a simple sentence.\n4.  Offer encouragement and correct pronunciation if needed.\nAfter covering all words, ask the student to practice using them in a short conversation or by answering simple questions. Conclude by encouraging them to review the lesson."
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "السلام علیکم",
+          "phonetic": "Assalam-o-Alaikum",
+          "meaning": "Hello / Peace be upon you",
+          "example": "السلام علیکم، آپ کیسے ہیں؟"
+        },
+        {
+          "word": "آپ کیسے ہیں؟",
+          "phonetic": "Aap kaise hain?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "میں ٹھیک ہوں، آپ کیسے ہیں؟"
+        },
+        {
+          "word": "میں ٹھیک ہوں",
+          "phonetic": "Main theek hoon",
+          "meaning": "I am fine",
+          "example": "میں ٹھیک ہوں، شکریہ۔"
+        },
+        {
+          "word": "شکریہ",
+          "phonetic": "Shukriya",
+          "meaning": "Thank you",
+          "example": "آپ کی مدد کا شکریہ۔"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Urdu?",
+          "options": [
+            "شکریہ",
+            "آپ کیسے ہیں؟",
+            "السلام علیکم",
+            "میں ٹھیک ہوں"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct response to \"آپ کیسے ہیں؟\" (How are you?)",
+          "options": [
+            "شکریہ",
+            "میں ٹھیک ہوں",
+            "السلام علیکم",
+            "کیا حال ہے؟"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"Thank you\" in Urdu?",
+          "options": [
+            "سلام",
+            "معاف کیجئے",
+            "شکریہ",
+            "خدا حافظ"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor specializing in Urdu. Your goal is to help the learner understand basic Urdu greetings and responses. Start by introducing the common greeting 'السلام علیکم' (Assalam-o-Alaikum) and its meaning. Then, teach how to ask 'آپ کیسے ہیں؟' (Aap kaise hain?) and respond with 'میں ٹھیک ہوں' (Main theek hoon). Conclude by teaching 'شکریہ' (Shukriya) for 'thank you'. Use clear, simple Urdu examples and encourage the learner to repeat and practice these phrases. Ask the learner to try saying a greeting and asking how someone is."
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "خوبصورت",
+          "phonetic": "khoobsurat",
+          "meaning": "beautiful",
+          "example": "یہ پھول بہت خوبصورت ہے۔"
+        },
+        {
+          "word": "لمبا",
+          "phonetic": "lamba",
+          "meaning": "tall / long",
+          "example": "وہ ایک لمبا آدمی ہے۔"
+        },
+        {
+          "word": "چھوٹا",
+          "phonetic": "chhota",
+          "meaning": "small / short",
+          "example": "یہ ایک چھوٹی کتاب ہے۔"
+        },
+        {
+          "word": "بڑا",
+          "phonetic": "bara",
+          "meaning": "big / large",
+          "example": "ہمارا گھر بہت بڑا ہے۔"
+        },
+        {
+          "word": "اچھا",
+          "phonetic": "achha",
+          "meaning": "good",
+          "example": "یہ ایک اچھا خیال ہے۔"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Urdu word for \"beautiful\"?",
+          "options": [
+            "لمبا",
+            "خوبصورت",
+            "چھوٹا",
+            "اچھا"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"tall\" or \"long\"?",
+          "options": [
+            "بڑا",
+            "اچھا",
+            "لمبا",
+            "چھوٹا"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say \"This is a small book\" in Urdu?",
+          "options": [
+            "یہ ایک بڑی کتاب ہے۔",
+            "یہ ایک لمبی کتاب ہے۔",
+            "یہ ایک چھوٹی کتاب ہے۔",
+            "یہ ایک اچھی کتاب ہے۔"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the opposite of \"بڑا\" (bara - big)?",
+          "options": [
+            "لمبا",
+            "اچھا",
+            "خوبصورت",
+            "چھوٹا"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "السلام علیکم! آج ہم \"صفتیں\" (sifatain) کے بارے میں سیکھیں گے، جس کا مطلب اردو میں 'adjectives' ہے۔ صفتیں وہ الفاظ ہوتے ہیں جو اسموں (nouns) کی وضاحت کرتے ہیں، جیسے لوگ، جگہیں یا چیزیں۔ مثال کے طور پر، اگر آپ کہنا چاہتے ہیں 'beautiful flower'، تو آپ کہیں گے 'خوبصورت پھول' (khoobsurat phool)۔ یہاں 'خوبصورت' وہ صفت ہے جو 'پھول' (flower) کو بیان کر رہی ہے۔ ہم 'لمبا' (lamba - tall/long)، 'چھوٹا' (chhota - small/short)، 'بڑا' (bara - big) اور 'اچھا' (achha - good) جیسے الفاظ بھی دیکھیں گے۔ اس بات پر توجہ دیں کہ یہ الفاظ اسم کے معنی کو کیسے بدلتے ہیں۔ ذخیرہ الفاظ اور مثالوں کا جائزہ لینے کے بعد، ان صفتوں کا استعمال کرتے ہوئے اپنے جملے بنانے کی کوشش کریں۔ مثال کے طور پر، آپ اپنے گھر کو 'بڑا' یا 'چھوٹا' کہہ کر کیسے بیان کریں گے؟ چلیں مشق کرتے ہیں!"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "جانا",
+          "phonetic": "jaana",
+          "meaning": "to go",
+          "example": "میں سکول جاتا ہوں۔"
+        },
+        {
+          "word": "کھانا",
+          "phonetic": "khaana",
+          "meaning": "to eat",
+          "example": "وہ سیب کھاتا ہے۔"
+        },
+        {
+          "word": "پینا",
+          "phonetic": "peena",
+          "meaning": "to drink",
+          "example": "ہم پانی پیتے ہیں۔"
+        },
+        {
+          "word": "گھر",
+          "phonetic": "ghar",
+          "meaning": "house",
+          "example": "یہ میرا گھر ہے۔"
+        },
+        {
+          "word": "سکول",
+          "phonetic": "school",
+          "meaning": "school",
+          "example": "بچے سکول جاتے ہیں۔"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Urdu word for \"to go\"?",
+          "options": [
+            "کھانا",
+            "جانا",
+            "پینا",
+            "گھر"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Urdu word means \"house\"?",
+          "options": [
+            "سکول",
+            "کھانا",
+            "گھر",
+            "پینا"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Urdu verb for \"to eat\".",
+          "options": [
+            "جانا",
+            "پینا",
+            "کھانا",
+            "گھر"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"to drink\" in Urdu?",
+          "options": [
+            "پینا",
+            "جانا",
+            "سکول",
+            "کھانا"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "ہیلو! آج ہم کچھ عام اردو افعال (verbs) اور اسم (nouns) سیکھیں گے۔ ہم انہیں سادہ جملوں میں استعمال کرنے کی مشق کریں گے۔ آئیے 'جانا' (jaana) سے شروع کرتے ہیں، جس کا مطلب ہے 'to go'۔ کیا آپ اس لفظ کو ایک جملے میں استعمال کر سکتے ہیں؟"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "السلام علیکم",
+          "phonetic": "Assalam-o-Alaikum",
+          "meaning": "Hello / Peace be upon you (a common Islamic greeting)",
+          "example": "السلام علیکم! آپ کیسے ہیں؟"
+        },
+        {
+          "word": "آپ کیسے ہیں؟",
+          "phonetic": "Aap kaisay hain?",
+          "meaning": "How are you? (masculine)",
+          "example": "السلام علیکم، آپ کیسے ہیں؟"
+        },
+        {
+          "word": "آپ کیسی ہیں؟",
+          "phonetic": "Aap kaisi hain?",
+          "meaning": "How are you? (feminine)",
+          "example": "السلام علیکم، آپ کیسی ہیں؟"
+        },
+        {
+          "word": "میں ٹھیک ہوں",
+          "phonetic": "Main theek hoon",
+          "meaning": "I am fine / I am good",
+          "example": "میں ٹھیک ہوں، شکریہ۔"
+        },
+        {
+          "word": "شکریہ",
+          "phonetic": "Shukriya",
+          "meaning": "Thank you",
+          "example": "آپ کا شکریہ۔"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most common Urdu greeting for 'Hello'?",
+          "options": [
+            "السلام علیکم",
+            "شکریہ",
+            "میں ٹھیک ہوں",
+            "اور آپ؟"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you ask 'How are you?' to a male in Urdu?",
+          "options": [
+            "میں ٹھیک ہوں",
+            "شکریہ",
+            "آپ کیسے ہیں؟",
+            "اور آپ؟"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks 'آپ کیسی ہیں؟' (How are you? - to a female), how would you respond if you are fine?",
+          "options": [
+            "شکریہ",
+            "السلام علیکم",
+            "میں ٹھیک ہوں",
+            "اور آپ؟"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Urdu word means 'Thank you'?",
+          "options": [
+            "میں ٹھیک ہوں",
+            "شکریہ",
+            "السلام علیکم",
+            "آپ کیسے ہیں؟"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "السلام علیکم! آج ہم اردو کے کچھ بنیادی جملے سیکھیں گے۔ یہ جملے آپ کو لوگوں سے ملنے اور حال پوچھنے میں مدد دیں گے۔\n\nسب سے پہلے، 'السلام علیکم' (Assalam-o-Alaikum) کا مطلب ہے 'ہیلو' یا 'آپ پر سلامتی ہو'۔ یہ اردو میں سب سے عام سلام ہے۔ جب آپ کسی سے ملیں تو آپ کہہ سکتے ہیں: 'السلام علیکم!'\n\nپھر، اگر آپ کسی کا حال پوچھنا چاہتے ہیں تو آپ کہیں گے: 'آپ کیسے ہیں؟' (Aap kaisay hain?) اگر آپ کسی مرد سے بات کر رہے ہیں، اور 'آپ کیسی ہیں؟' (Aap kaisi hain?) اگر آپ کسی عورت سے بات کر رہی ہیں۔ اس کا مطلب ہے 'آپ کیسی ہیں؟'\n\nاس کے جواب میں، اگر آپ ٹھیک ہیں تو آپ کہہ سکتے ہیں: 'میں ٹھیک ہوں' (Main theek hoon) جس کا مطلب ہے 'میں ٹھیک ہوں۔'\n\nاور آخر میں، 'شکریہ' (Shukriya) کا مطلب ہے 'تھینک یو'۔\n\nآئیے ان جملوں کی مشق کریں! میں آپ سے پوچھوں گا 'آپ کیسے ہیں؟' اور آپ 'میں ٹھیک ہوں، شکریہ' میں جواب دینے کی کوشش کریں۔"
+    }
+  ]
+}

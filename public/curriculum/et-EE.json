@@ -1,0 +1,1339 @@
+{
+  "langCode": "et-EE",
+  "langLabel": "Estonian",
+  "langNative": "Eesti",
+  "generatedAt": "2026-03-15T06:17:05.082Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Tere",
+          "phonetic": "Teh-reh",
+          "meaning": "Hello",
+          "example": "Tere! Kuidas läheb?"
+        },
+        {
+          "word": "Aitäh",
+          "phonetic": "Eye-tah",
+          "meaning": "Thank you",
+          "example": "Aitäh abi eest!"
+        },
+        {
+          "word": "Palun",
+          "phonetic": "Pah-loon",
+          "meaning": "Please / You're welcome",
+          "example": "Palun anna mulle raamat."
+        },
+        {
+          "word": "Jah",
+          "phonetic": "Yah",
+          "meaning": "Yes",
+          "example": "Jah, ma saan aru."
+        },
+        {
+          "word": "Ei",
+          "phonetic": "Eh-ee",
+          "meaning": "No",
+          "example": "Ei, see pole õige."
+        },
+        {
+          "word": "Ma olen",
+          "phonetic": "Mah oh-len",
+          "meaning": "I am",
+          "example": "Ma olen õpilane."
+        },
+        {
+          "word": "Sa oled",
+          "phonetic": "Sah oh-led",
+          "meaning": "You are (singular informal)",
+          "example": "Sa oled tore inimene."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Estonian?",
+          "options": [
+            "Aitäh",
+            "Tere",
+            "Palun",
+            "Jah"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Estonian word means \"Thank you\"?",
+          "options": [
+            "Ei",
+            "Palun",
+            "Aitäh",
+            "Tere"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Estonian translation for \"Yes\".",
+          "options": [
+            "Ei",
+            "Jah",
+            "Palun",
+            "Aitäh"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"I am a student\" in Estonian?",
+          "options": [
+            "Sa oled õpilane",
+            "Ma olen õpilane",
+            "Ma olen tore",
+            "Sa oled tore"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Tere! Mina olen sinu AI õpetaja. Selles tunnis sukeldume eesti keele põhitõdedesse! 🇪🇪 Õpime, kuidas öelda \"Tere\" (Hello), \"Aitäh\" (Thank you) ja \"Palun\" (Please/You're welcome). Lisaks vaatame, kuidas moodustada lihtsaid lauseid nagu \"Ma olen...\" (I am...) ja \"Sa oled...\" (You are...). Aitan sind hääldusega ja annan praktilisi näpunäiteid, et saaksid neid sõnu kohe igapäevastes vestlustes kasutada. Oled valmis? Hakkame pihta!"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Tere",
+          "phonetic": "/ˈtɛrɛ/",
+          "meaning": "Hello",
+          "example": "Tere! Kuidas läheb?"
+        },
+        {
+          "word": "Hommikust",
+          "phonetic": "/ˈhomːikust/",
+          "meaning": "Good morning",
+          "example": "Hommikust! Kas sa magasid hästi?"
+        },
+        {
+          "word": "Päevast",
+          "phonetic": "/ˈpæːvast/",
+          "meaning": "Good day",
+          "example": "Päevast! Ilus ilm täna."
+        },
+        {
+          "word": "Õhtust",
+          "phonetic": "/ˈɤhtust/",
+          "meaning": "Good evening",
+          "example": "Õhtust! Mida sa täna tegid?"
+        },
+        {
+          "word": "Kuidas läheb?",
+          "phonetic": "/ˈkujdɑs ˈlæhɛb/",
+          "meaning": "How are you? / How's it going?",
+          "example": "Tere, Mari! Kuidas läheb?"
+        },
+        {
+          "word": "Hästi, aitäh!",
+          "phonetic": "/ˈhæsti ˈɑitæh/",
+          "meaning": "Fine, thank you!",
+          "example": "Kuidas läheb? – Hästi, aitäh!"
+        },
+        {
+          "word": "Aitäh",
+          "phonetic": "/ˈɑitæh/",
+          "meaning": "Thank you",
+          "example": "Aitäh abi eest!"
+        },
+        {
+          "word": "Nägemist",
+          "phonetic": "/ˈnæɡɛmist/",
+          "meaning": "Goodbye",
+          "example": "Nägemist, homme näeme!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Estonian word for \"Hello\"?",
+          "options": [
+            "Tere",
+            "Aitäh",
+            "Nägemist",
+            "Hommikust"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say \"Good morning\" in Estonian?",
+          "options": [
+            "Päevast",
+            "Õhtust",
+            "Hommikust",
+            "Tere"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Estonian phrase for \"How are you?\".",
+          "options": [
+            "Aitäh",
+            "Kuidas läheb?",
+            "Nägemist",
+            "Hästi"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone says \"Kuidas läheb?\", what is a common response?",
+          "options": [
+            "Hommikust",
+            "Nägemist",
+            "Hästi, aitäh!",
+            "Tere"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Tere tulemast! Olen sinu eesti keele õpetaja. Selles tunnis õpime esimesi olulisi eestikeelseid tervitusi ja fraase. Sa õpid ütlema \"Tere\" (Hello), \"Hommikust\" (Good morning) ja küsima \"Kuidas läheb?\" (How are you?). Pööra tähelepanu hääldusele ja proovi minuga kaasa rääkida. Alustame! Esimene sõna on \"Tere\". Kas sa saad öelda \"Tere\"?"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Tere",
+          "phonetic": "Teh-reh",
+          "meaning": "Hello",
+          "example": "Tere! Kuidas sul läheb?"
+        },
+        {
+          "word": "Aitäh",
+          "phonetic": "Ai-täh",
+          "meaning": "Thank you",
+          "example": "Aitäh abi eest!"
+        },
+        {
+          "word": "Palun",
+          "phonetic": "Pah-loon",
+          "meaning": "Please / You're welcome",
+          "example": "Palun anna mulle vett. / Aitäh! – Palun!"
+        },
+        {
+          "word": "Jah",
+          "phonetic": "Yah",
+          "meaning": "Yes",
+          "example": "Jah, ma saan aru."
+        },
+        {
+          "word": "Ei",
+          "phonetic": "Eh-ee",
+          "meaning": "No",
+          "example": "Ei, ma ei taha."
+        },
+        {
+          "word": "Kuidas läheb?",
+          "phonetic": "Koo-ee-das lä-heb?",
+          "meaning": "How are you? / How's it going?",
+          "example": "Tere! Kuidas läheb?"
+        },
+        {
+          "word": "Hästi",
+          "phonetic": "Häs-tee",
+          "meaning": "Well / Good",
+          "example": "Mul läheb hästi, aitäh!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Estonian?",
+          "options": [
+            "Aitäh",
+            "Tere",
+            "Palun",
+            "Jah"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Estonian word means \"Thank you\"?",
+          "options": [
+            "Ei",
+            "Hästi",
+            "Aitäh",
+            "Kuidas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"Kuidas läheb?\" and you are doing well, how would you respond?",
+          "options": [
+            "Ei",
+            "Palun",
+            "Hästi",
+            "Tere"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Estonian word for \"Yes\".",
+          "options": [
+            "Ei",
+            "Palun",
+            "Jah",
+            "Aitäh"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Tere! Täna õpime mõned olulised eestikeelsed fraasid tervitamiseks ja põhilisteks suhtlusteks. Vaatame, kuidas öelda \"Tere\", \"Aitäh\" ja \"Palun\", ja palju muud. Alustame tervitusega. Eestis ütleme \"Tere\". Kas sa saad proovida öelda \"Tere\"?"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Tere!",
+          "phonetic": "Teh-reh",
+          "meaning": "Hello!",
+          "example": "Tere! Kuidas läheb?"
+        },
+        {
+          "word": "Kuidas läheb?",
+          "phonetic": "Koo-ee-dahs lah-heb",
+          "meaning": "How are you? / How's it going?",
+          "example": "Tere, Mari! Kuidas läheb?"
+        },
+        {
+          "word": "Mul läheb hästi.",
+          "phonetic": "Mool lah-heb hahs-tee",
+          "meaning": "I'm doing well.",
+          "example": "Mul läheb hästi, aitäh!"
+        },
+        {
+          "word": "Mis su nimi on?",
+          "phonetic": "Miss soo nee-mee on",
+          "meaning": "What is your name?",
+          "example": "Tere! Mis su nimi on?"
+        },
+        {
+          "word": "Minu nimi on...",
+          "phonetic": "Mee-noo nee-mee on",
+          "meaning": "My name is...",
+          "example": "Minu nimi on Anna."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello!\" in Estonian?",
+          "options": [
+            "Tere!",
+            "Aitäh!",
+            "Palun!",
+            "Nägemist!"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct response to \"Kuidas läheb?\" if you are doing well?",
+          "options": [
+            "Mis su nimi on?",
+            "Mul läheb hästi.",
+            "Tere!",
+            "Nägemist!"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"What is your name?\" in Estonian?",
+          "options": [
+            "Kuidas läheb?",
+            "Mul läheb hästi.",
+            "Mis su nimi on?",
+            "Tere!"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Complete the sentence: \"Minu nimi ____ Anna.\"",
+          "options": [
+            "on",
+            "läheb",
+            "tere",
+            "su"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "Tere! Olen sinu eesti keele õpetaja. Selles tunnis õpime põhilisi tervitusi ja tutvustusi eesti keeles. Me vaatame fraase nagu \"Tere!\", \"Kuidas läheb?\", \"Mul läheb hästi\" ja \"Mis su nimi on?\". Harjutame nende hääldamist ja kasutamist igapäevastes vestlustes. Kas oled valmis alustama? Ütle \"jah\", kui oled!"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Tere",
+          "phonetic": "teh-reh",
+          "meaning": "Hello",
+          "example": "Tere! Kuidas sul läheb?"
+        },
+        {
+          "word": "Mina olen",
+          "phonetic": "mee-nah oh-len",
+          "meaning": "I am",
+          "example": "Mina olen Mari."
+        },
+        {
+          "word": "Kuidas läheb?",
+          "phonetic": "koo-ee-dahs lah-heb",
+          "meaning": "How are you? (lit. How goes it?)",
+          "example": "Tere, Kuidas läheb?"
+        },
+        {
+          "word": "Hästi",
+          "phonetic": "hahs-tee",
+          "meaning": "Well / Good",
+          "example": "Mul läheb hästi, aitäh!"
+        },
+        {
+          "word": "Aitäh",
+          "phonetic": "ai-tah",
+          "meaning": "Thank you",
+          "example": "Aitäh abi eest!"
+        },
+        {
+          "word": "Nägemist",
+          "phonetic": "nah-geh-mist",
+          "meaning": "Goodbye",
+          "example": "Nägemist! Kohtumiseni!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Estonian?",
+          "options": [
+            "Tere",
+            "Aitäh",
+            "Nägemist",
+            "Mina olen"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Estonian phrase means 'I am'?",
+          "options": [
+            "Kuidas läheb?",
+            "Mina olen",
+            "Hästi",
+            "Tere"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is a common response to 'Kuidas läheb?' (How are you?)",
+          "options": [
+            "Tere",
+            "Aitäh",
+            "Hästi",
+            "Nägemist"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say 'Thank you' in Estonian?",
+          "options": [
+            "Nägemist",
+            "Tere",
+            "Mina olen",
+            "Aitäh"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Tere! Olen sinu eesti keele õpetaja. Täna õpime olulisi tervitusi ja enesetutvustust. Meie sõnavaras on täna \"Tere\" (Hello), \"Mina olen\" (I am), \"Kuidas läheb?\" (How are you?), \"Hästi\" (Well/Good), \"Aitäh\" (Thank you) ja \"Nägemist\" (Goodbye). Ma aitan sul neid sõnu õigesti hääldada ja lausetes kasutada. Pärast õpime ka, kuidas küsida ja vastata küsimusele \"Kuidas läheb?\". Oled valmis alustama?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Tere",
+          "phonetic": "TEH-reh",
+          "meaning": "Hello",
+          "example": "Tere! Kuidas läheb?"
+        },
+        {
+          "word": "Jah",
+          "phonetic": "YAH",
+          "meaning": "Yes",
+          "example": "Jah, ma olen eestlane."
+        },
+        {
+          "word": "Ei",
+          "phonetic": "AY",
+          "meaning": "No",
+          "example": "Ei, ma ei ole näljane."
+        },
+        {
+          "word": "Palun",
+          "phonetic": "PAH-loon",
+          "meaning": "Please / You're welcome",
+          "example": "Palun aita mind. / Aitäh! Palun!"
+        },
+        {
+          "word": "Aitäh",
+          "phonetic": "AI-tah",
+          "meaning": "Thank you",
+          "example": "Aitäh abi eest!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Estonian?",
+          "options": [
+            "Tere",
+            "Aitäh",
+            "Palun",
+            "Jah"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Estonian word means \"Yes\"?",
+          "options": [
+            "Ei",
+            "Palun",
+            "Jah",
+            "Tere"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Estonian word for \"Thank you\"?",
+          "options": [
+            "Ei",
+            "Aitäh",
+            "Tere",
+            "Palun"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Tere! Olen sinu eesti keele õpetaja ja täna sukeldume eesti keele põhitõdedesse. Õpime mõned olulised sõnad, mis aitavad sul igapäevaselt suhelda. Keskendume tervitustele ja viisakusväljenditele nagu \"Tere\", \"Jah\", \"Ei\", \"Palun\" ja \"Aitäh\". Kuula hoolikalt ja proovi minuga kaasa rääkida. Alustame sõnaga \"Tere\" – see on suurepärane viis vestlust alustada! Pärast seda harjutame neid sõnu lausetes ja vaatame, kuidas sa neid meeles pead meie lühikese viktoriiniga. Oled valmis?"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Tere",
+          "phonetic": "teh-reh",
+          "meaning": "Hello",
+          "example": "Tere! Kuidas sul läheb?"
+        },
+        {
+          "word": "Aitäh",
+          "phonetic": "eye-tah",
+          "meaning": "Thank you",
+          "example": "Aitäh abi eest!"
+        },
+        {
+          "word": "Palun",
+          "phonetic": "pah-loon",
+          "meaning": "Please / You're welcome",
+          "example": "Palun, istu maha. / Aitäh! – Palun!"
+        },
+        {
+          "word": "Jah",
+          "phonetic": "yah",
+          "meaning": "Yes",
+          "example": "Jah, ma saan aru."
+        },
+        {
+          "word": "Ei",
+          "phonetic": "ay",
+          "meaning": "No",
+          "example": "Ei, see ei ole õige."
+        },
+        {
+          "word": "Kuidas läheb?",
+          "phonetic": "koo-ee-das lah-heb",
+          "meaning": "How are you? (lit. How goes it?)",
+          "example": "Tere! Kuidas läheb?"
+        },
+        {
+          "word": "Hästi",
+          "phonetic": "hah-stee",
+          "meaning": "Well / Good",
+          "example": "Mul läheb hästi, aitäh!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Estonian?",
+          "options": [
+            "Tere",
+            "Aitäh",
+            "Palun",
+            "Jah"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Estonian word means \"Thank you\"?",
+          "options": [
+            "Ei",
+            "Tere",
+            "Aitäh",
+            "Hästi"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Estonian word for \"Yes\"?",
+          "options": [
+            "Ei",
+            "Jah",
+            "Palun",
+            "Kuidas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"How are you?\" in Estonian?",
+          "options": [
+            "Tere!",
+            "Aitäh!",
+            "Kuidas läheb?",
+            "Hästi!"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Tere tulemast oma esimesse eesti keele tundi! Ma olen sinu AI-õpetaja ja aitan sul eesti keelt õppida. Täna alustame mõnede põhiliste tervituste ja viisakusväljenditega. Esimene sõna on 'Tere'. See tähendab 'Hello'. Proovi öelda 'Tere'. Suurepärane! Nüüd õpime 'Aitäh', mis tähendab 'Thank you'. Kas sa saad öelda 'Aitäh'? Väga hea! Ja kui keegi ütleb sulle 'Aitäh', võid vastata 'Palun', mis tähendab 'You're welcome' või ka 'Please'. Proovi öelda 'Palun'. Lõpetuseks, õpime küsimuse 'Kuidas läheb?' ('How are you?') ja vastuse 'Hästi' ('Well/Good'). Korda minuga: 'Kuidas läheb?' ja 'Hästi'. Kas sul on küsimusi nende sõnade kohta?"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Tere",
+          "phonetic": "TEH-reh",
+          "meaning": "Hello",
+          "example": "Tere! Kuidas sul läheb?"
+        },
+        {
+          "word": "Kuidas sul läheb?",
+          "phonetic": "KOO-ee-das sool LAH-heb?",
+          "meaning": "How are you? (informal)",
+          "example": "Tere, Mari! Kuidas sul läheb?"
+        },
+        {
+          "word": "Mul läheb hästi.",
+          "phonetic": "Mool LAH-heb HUS-tee",
+          "meaning": "I am fine.",
+          "example": "Mul läheb hästi, aitäh!"
+        },
+        {
+          "word": "Aitäh",
+          "phonetic": "EYE-tah",
+          "meaning": "Thank you",
+          "example": "Aitäh abi eest!"
+        },
+        {
+          "word": "Ja sul?",
+          "phonetic": "Yah sool?",
+          "meaning": "And you? (informal)",
+          "example": "Mul läheb hästi. Ja sul?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Estonian?",
+          "options": [
+            "Tere",
+            "Head aega",
+            "Palun",
+            "Jah"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does \"Aitäh\" mean?",
+          "options": [
+            "Please",
+            "Thank you",
+            "Excuse me",
+            "Goodbye"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Estonian phrase for \"How are you?\" (informal).",
+          "options": [
+            "Kuidas teil läheb?",
+            "Kuidas sul läheb?",
+            "Mis kell on?",
+            "Kus sa elad?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you respond to \"Kuidas sul läheb?\" if you are fine?",
+          "options": [
+            "Head aega",
+            "Mul läheb hästi",
+            "Palun",
+            "Tere"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Tere! Täna sukeldume eesti keele põhitõdedesse ja õpime, kuidas tervitada ja ennast tutvustada. Meie fookuses on fraasid nagu \"Tere\" (Hello), \"Kuidas sul läheb?\" (How are you?), \"Mul läheb hästi\" (I am fine), \"Aitäh\" (Thank you) ja \"Ja sul?\" (And you?). Püüa neid uusi sõnu ja väljendeid meelde jätta ning proovi neid oma vastustes kasutada. Olen siin, et sind aidata! Alustame!"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Tere",
+          "phonetic": "te-re",
+          "meaning": "Hello / Hi",
+          "example": "Tere! Kuidas sul läheb?"
+        },
+        {
+          "word": "Kuidas sul läheb?",
+          "phonetic": "kui-das sul lä-heb",
+          "meaning": "How are you? (informal)",
+          "example": "Tere, Mari! Kuidas sul läheb?"
+        },
+        {
+          "word": "Mul läheb hästi, aitäh.",
+          "phonetic": "mul lä-heb häs-ti, ai-täh",
+          "meaning": "I am fine, thank you.",
+          "example": "Mul läheb hästi, aitäh. Ja sinul?"
+        },
+        {
+          "word": "Mis su nimi on?",
+          "phonetic": "mis su ni-mi on",
+          "meaning": "What is your name? (informal)",
+          "example": "Tere! Mis su nimi on?"
+        },
+        {
+          "word": "Minu nimi on...",
+          "phonetic": "mi-nu ni-mi on",
+          "meaning": "My name is...",
+          "example": "Minu nimi on Anna."
+        },
+        {
+          "word": "Meeldiv tutvuda.",
+          "phonetic": "mee-l-div tut-vu-da",
+          "meaning": "Nice to meet you.",
+          "example": "Minu nimi on Peeter. Meeldiv tutvuda!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Estonian?",
+          "options": [
+            "Tere",
+            "Aitäh",
+            "Head aega",
+            "Palun"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the correct response to \"Kuidas sul läheb?\"",
+          "options": [
+            "Mis su nimi on?",
+            "Minu nimi on...",
+            "Mul läheb hästi, aitäh.",
+            "Meeldiv tutvuda."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"What is your name?\" informally in Estonian?",
+          "options": [
+            "Kuidas sul läheb?",
+            "Mis su nimi on?",
+            "Minu nimi on...",
+            "Meeldiv tutvuda."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Tere! Olen sinu eesti keele õpetaja. Selles tunnis sukeldume eesti keele põhitervitustesse. Õpime, kuidas öelda \"Tere\" (Hello), \"Kuidas sul läheb?\" (How are you?) ja \"Minu nimi on...\" (My name is...). Proovi iga fraasi minu järel korrata, et harjutada hääldust. Alustame kõige lihtsamast: \"Tere\". Korda palun: \"Tere\"."
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Tere",
+          "phonetic": "teh-reh",
+          "meaning": "Hello",
+          "example": "Tere! Kuidas sul läheb?"
+        },
+        {
+          "word": "Aitäh",
+          "phonetic": "ai-tah",
+          "meaning": "Thank you",
+          "example": "Aitäh abi eest!"
+        },
+        {
+          "word": "Palun",
+          "phonetic": "pah-loon",
+          "meaning": "Please / You're welcome",
+          "example": "Palun anna mulle vett. / Aitäh! Palun!"
+        },
+        {
+          "word": "Jah",
+          "phonetic": "yah",
+          "meaning": "Yes",
+          "example": "Jah, ma saan aru."
+        },
+        {
+          "word": "Ei",
+          "phonetic": "ey",
+          "meaning": "No",
+          "example": "Ei, ma ei taha."
+        },
+        {
+          "word": "Kuidas läheb?",
+          "phonetic": "koo-ee-das lah-heb",
+          "meaning": "How are you? / How's it going?",
+          "example": "Tere! Kuidas läheb?"
+        },
+        {
+          "word": "Hästi",
+          "phonetic": "has-tee",
+          "meaning": "Well / Good",
+          "example": "Mul läheb hästi, aitäh!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Estonian?",
+          "options": [
+            "Aitäh",
+            "Tere",
+            "Palun",
+            "Jah"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Estonian word for \"Thank you\"?",
+          "options": [
+            "Ei",
+            "Hästi",
+            "Aitäh",
+            "Kuidas läheb?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Aitäh\" to you, how can you respond with \"You're welcome\"?",
+          "options": [
+            "Jah",
+            "Tere",
+            "Palun",
+            "Ei"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Tere! Olen sinu tehisintellektist õpetaja. Selles tunnis õpime mõned põhilised eesti keele fraasid, nagu 'tere' ja 'aitäh'. Harjutame hääldust ja kasutame neid lausetes. Alustame!"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Tere",
+          "phonetic": "teh-reh",
+          "meaning": "Hello / Hi",
+          "example": "Tere! Kuidas sul läheb?"
+        },
+        {
+          "word": "Aitäh",
+          "phonetic": "ai-tah",
+          "meaning": "Thank you",
+          "example": "Aitäh abi eest!"
+        },
+        {
+          "word": "Palun",
+          "phonetic": "pah-loon",
+          "meaning": "Please / You're welcome",
+          "example": "Palun anna mulle raamat."
+        },
+        {
+          "word": "Jah",
+          "phonetic": "yah",
+          "meaning": "Yes",
+          "example": "Kas sa tuled? – Jah, ma tulen."
+        },
+        {
+          "word": "Ei",
+          "phonetic": "ey",
+          "meaning": "No",
+          "example": "Kas sa oled väsinud? – Ei, ma ei ole."
+        },
+        {
+          "word": "Vabandust",
+          "phonetic": "vah-bahn-doost",
+          "meaning": "Excuse me / Sorry",
+          "example": "Vabandust, kas see koht on vaba?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Estonian?",
+          "options": [
+            "Aitäh",
+            "Tere",
+            "Palun",
+            "Jah"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Estonian word means \"Thank you\"?",
+          "options": [
+            "Tere",
+            "Palun",
+            "Aitäh",
+            "Ei"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Estonian word for \"Please\" or \"You're welcome\"?",
+          "options": [
+            "Jah",
+            "Ei",
+            "Vabandust",
+            "Palun"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "If someone says \"Aitäh\", how would you typically respond in Estonian to mean \"You're welcome\"?",
+          "options": [
+            "Tere",
+            "Jah",
+            "Palun",
+            "Ei"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Excuse me\" or \"Sorry\" in Estonian?",
+          "options": [
+            "Jah",
+            "Ei",
+            "Vabandust",
+            "Tere"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Tere! Selles tunnis õpime mõned põhilised eesti keele tervitused ja viisakusväljendid. Keskendume sõnadele nagu 'Tere', 'Aitäh', 'Palun', 'Jah', 'Ei' ja 'Vabandust'. Pööra tähelepanu hääldusele ja proovi neid näitelausetes kasutada. Alustame!"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Tere",
+          "phonetic": "teh-reh",
+          "meaning": "Hello",
+          "example": "Tere! Kuidas läheb?"
+        },
+        {
+          "word": "Aitäh",
+          "phonetic": "ai-tah",
+          "meaning": "Thank you",
+          "example": "Aitäh abi eest!"
+        },
+        {
+          "word": "Palun",
+          "phonetic": "pah-loon",
+          "meaning": "Please / You're welcome",
+          "example": "Palun istu."
+        },
+        {
+          "word": "Jah",
+          "phonetic": "yah",
+          "meaning": "Yes",
+          "example": "Jah, ma saan aru."
+        },
+        {
+          "word": "Ei",
+          "phonetic": "ey",
+          "meaning": "No",
+          "example": "Ei, ma ei taha."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Estonian word for 'Hello'?",
+          "options": [
+            "Aitäh",
+            "Tere",
+            "Palun",
+            "Jah"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say 'Thank you' in Estonian?",
+          "options": [
+            "Ei",
+            "Palun",
+            "Aitäh",
+            "Tere"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Estonian word can mean 'Please' or 'You're welcome'?",
+          "options": [
+            "Jah",
+            "Ei",
+            "Tere",
+            "Palun"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "Choose the correct Estonian word for 'Yes'.",
+          "options": [
+            "Ei",
+            "Jah",
+            "Tere",
+            "Aitäh"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Tere tulemast oma eesti keele tundi! Täna sukeldume olulistesse eesti tervitustesse ja viisakusväljenditesse. Õpime sõnu nagu \"Tere\" (Hello), \"Aitäh\" (Thank you) ja \"Palun\" (Please/You're welcome). Juhendan sind nende häälduses ja näitan, kuidas neid igapäevastes lausetes kasutada. Alustame sõnaga \"Tere\". Kas sa proovid öelda \"Tere\"?"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "raamat",
+          "phonetic": "raa-mat",
+          "meaning": "book",
+          "example": "See on minu raamat."
+        },
+        {
+          "word": "lugema",
+          "phonetic": "lu-ge-ma",
+          "meaning": "to read",
+          "example": "Mulle meeldib raamatuid lugeda."
+        },
+        {
+          "word": "kohv",
+          "phonetic": "kohv",
+          "meaning": "coffee",
+          "example": "Kas sa tahad kohvi?"
+        },
+        {
+          "word": "jooma",
+          "phonetic": "joo-ma",
+          "meaning": "to drink",
+          "example": "Ma tahan kohvi juua."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Estonian word means 'book'?",
+          "options": [
+            "kohv",
+            "raamat",
+            "lugema",
+            "jooma"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Estonian verb for 'to drink'.",
+          "options": [
+            "lugema",
+            "tegema",
+            "jooma",
+            "sööma"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Tere tulemast! Welcome to your Estonian lesson. Today, we're diving into some useful vocabulary. Let's start with the word for 'book'. In Estonian, it's **raamat**. Can you repeat that? 'Raamat'. Excellent! Now, how about the verb 'to read'? That's **lugema**. So, if you want to say 'I like to read', you'd say 'Mulle meeldib lugeda'. Moving on, let's learn 'coffee'. It's **kohv**. And the verb 'to drink' is **jooma**. So, to say 'I want to drink coffee', you'd say 'Ma tahan kohvi juua'. Don't worry if it feels a bit fast, we'll practice these words and phrases together. Let's try some examples and then we'll check your understanding with a short quiz. Are you ready?"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "lugema",
+          "phonetic": "[ˈluɡemɑ]",
+          "meaning": "to read",
+          "example": "Ma armastan raamatuid lugema."
+        },
+        {
+          "word": "kirjutama",
+          "phonetic": "[ˈkirjutɑmɑ]",
+          "meaning": "to write",
+          "example": "Kas sa oskad eesti keeles kirjutada?"
+        },
+        {
+          "word": "rääkima",
+          "phonetic": "[ˈrɑːkʲimɑ]",
+          "meaning": "to speak",
+          "example": "Ma räägin natuke eesti keelt."
+        },
+        {
+          "word": "õppima",
+          "phonetic": "[ˈɤpːimɑ]",
+          "meaning": "to learn/study",
+          "example": "Ma õpin iga päev uusi sõnu."
+        },
+        {
+          "word": "mõistma",
+          "phonetic": "[ˈmɤistmɑ]",
+          "meaning": "to understand",
+          "example": "Ma mõistan sind hästi."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Estonian verb means 'to read'?",
+          "options": [
+            "kirjutama",
+            "lugema",
+            "rääkima",
+            "õppima"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Estonian translation for 'I speak a little Estonian'.",
+          "options": [
+            "Ma räägin natuke eesti keelt.",
+            "Eesti keelt ma räägin natuke.",
+            "Natuke eesti keelt ma räägin.",
+            "Ma natuke räägin eesti keelt."
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say 'I learn new words every day' in Estonian?",
+          "options": [
+            "Ma õpin iga päev uusi sõnu.",
+            "Uusi sõnu ma õpin iga päev.",
+            "Iga päev ma õpin uusi sõnu.",
+            "Ma iga päev õpin uusi sõnu."
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor for Estonian. Your goal is to teach the student common Estonian verbs and how to use them in simple sentences. Start by greeting the student in Estonian: \"Tere! Olen sinu eesti keele õpetaja.\" Then, introduce the topic: \"Täna õpime olulisi tegusõnu.\" (Today we will learn important verbs.) Introduce each vocabulary word one by one, providing its Estonian form, English meaning, and an example sentence in Estonian. After presenting a word, ask the student to create their own sentence using that verb, or ask a question that prompts them to use it. For example, after \"lugema\" (to read), you could ask: \"Mida sa armastad lugema?\" (What do you love to read?). Encourage them to speak and write. Provide constructive feedback and correct any mistakes gently. Ensure they understand the meaning and usage of each verb before moving on. Let's begin with \"lugema\"."
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ilus",
+          "phonetic": "ee-loos",
+          "meaning": "beautiful",
+          "example": "See lill on väga ilus."
+        },
+        {
+          "word": "kole",
+          "phonetic": "koh-leh",
+          "meaning": "ugly",
+          "example": "See vana maja on natuke kole."
+        },
+        {
+          "word": "pikk",
+          "phonetic": "peekk",
+          "meaning": "tall, long",
+          "example": "Minu sõber on väga pikk."
+        },
+        {
+          "word": "lühike",
+          "phonetic": "lü-hee-keh",
+          "meaning": "short",
+          "example": "Tal on lühikesed juuksed."
+        },
+        {
+          "word": "vana",
+          "phonetic": "vah-nah",
+          "meaning": "old",
+          "example": "See on vana raamat."
+        },
+        {
+          "word": "uus",
+          "phonetic": "oohs",
+          "meaning": "new",
+          "example": "Ma ostsin uue auto."
+        },
+        {
+          "word": "mulle meeldib",
+          "phonetic": "moo-leh mel-deeb",
+          "meaning": "I like",
+          "example": "Mulle meeldib eesti keel."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which word means \"beautiful\"?",
+          "options": [
+            "ilus",
+            "kole",
+            "pikk",
+            "lühike"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How would you say \"short\" (referring to length)?",
+          "options": [
+            "pikk",
+            "vana",
+            "lühike",
+            "uus"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct word for \"old\".",
+          "options": [
+            "uus",
+            "vana",
+            "ilus",
+            "kole"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"I like Estonian food\"?",
+          "options": [
+            "Ma armastan eesti toitu",
+            "Mulle meeldib eesti toit",
+            "Ma tahan eesti toitu",
+            "Ma söön eesti toitu"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Tere! Täna õpime eesti keeles kirjeldama asju ja väljendama meeldimist. Vaatame uusi sõnu nagu \"ilus\", \"kole\", \"pikk\", \"lühike\", \"vana\", \"uus\" ja õpime kasutama fraasi \"mulle meeldib\". Alustame sõnaga \"ilus\". Kas oled valmis?"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "tere",
+          "phonetic": "TEH-reh",
+          "meaning": "hello",
+          "example": "Tere! Kuidas sul läheb?"
+        },
+        {
+          "word": "ma olen",
+          "phonetic": "mah OH-len",
+          "meaning": "I am",
+          "example": "Ma olen õpilane."
+        },
+        {
+          "word": "mul on",
+          "phonetic": "mool on",
+          "meaning": "I have (literally \"to me is\")",
+          "example": "Mul on raamat."
+        },
+        {
+          "word": "rääkima",
+          "phonetic": "RAA-kee-mah",
+          "meaning": "to speak",
+          "example": "Ma räägin eesti keelt."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"hello\" in Estonian?",
+          "options": [
+            "Head aega",
+            "Aitäh",
+            "Tere",
+            "Palun"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Estonian phrase means \"I am\"?",
+          "options": [
+            "Ma olen",
+            "Sa oled",
+            "Ta on",
+            "Me oleme"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the correct Estonian phrase for \"I have a car.\"",
+          "options": [
+            "Ma olen auto.",
+            "Mul on auto.",
+            "Ma omama auto.",
+            "Auto on mul."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which verb means \"to speak\" in Estonian?",
+          "options": [
+            "minema",
+            "tulema",
+            "rääkima",
+            "lugema"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Tere! Oled sa valmis sukelduma meie järgmisesse eesti keele tundi? Täna hakkame uurima **põhilisi tervitusi ja enesetutvustust**. Õpime uut sõnavara, harjutame hääldust ja paneme kõik kokku lõbusates harjutustes. Alustame!\n\nEsiteks, õpime ütlema 'tere', mis tähendab 'hello'. Proovi öelda: **Tere** [TEH-reh]. Väga hea!\n\nJärgmisena vaatame, kuidas öelda 'Ma olen' [mah OH-len], mis tähendab 'I am'. Näiteks, kui tahad öelda 'Ma olen õpilane' (I am a student), siis kasutad seda.\n\nJa lõpuks, kuidas öelda 'Mul on' [mool on], mis tähendab 'I have'. Näiteks 'Mul on raamat' (I have a book).\n\nKas oled valmis harjutama? Küsi minult midagi eesti keeles!"
+    }
+  ]
+}

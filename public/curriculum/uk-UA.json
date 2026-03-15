@@ -1,0 +1,1313 @@
+{
+  "langCode": "uk-UA",
+  "langLabel": "Ukrainian",
+  "langNative": "Українська",
+  "generatedAt": "2026-03-15T05:33:31.710Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Привіт",
+          "phonetic": "Pryvit",
+          "meaning": "Hello / Hi",
+          "example": "Привіт! Як справи?"
+        },
+        {
+          "word": "Дякую",
+          "phonetic": "Dyakuyu",
+          "meaning": "Thank you",
+          "example": "Дякую за допомогу."
+        },
+        {
+          "word": "Будь ласка",
+          "phonetic": "Budʹ laska",
+          "meaning": "Please / You're welcome",
+          "example": "Передайте, будь ласка, сіль."
+        },
+        {
+          "word": "Так",
+          "phonetic": "Tak",
+          "meaning": "Yes",
+          "example": "Так, я розумію."
+        },
+        {
+          "word": "Ні",
+          "phonetic": "Ni",
+          "meaning": "No",
+          "example": "Ні, це не так."
+        },
+        {
+          "word": "Як справи?",
+          "phonetic": "Yak spravy?",
+          "meaning": "How are you? / How are things?",
+          "example": "Привіт! Як справи?"
+        },
+        {
+          "word": "Добре",
+          "phonetic": "Dobrè",
+          "meaning": "Good / Well / Fine",
+          "example": "У мене все добре."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Ukrainian word for 'Hello'?",
+          "options": [
+            "Привіт",
+            "Дякую",
+            "Ні",
+            "Так"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say 'Thank you' in Ukrainian?",
+          "options": [
+            "Як справи?",
+            "Будь ласка",
+            "Дякую",
+            "Добре"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Ukrainian word for 'Yes'.",
+          "options": [
+            "Ні",
+            "Так",
+            "Привіт",
+            "Добре"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means 'How are you?' in Ukrainian?",
+          "options": [
+            "Дякую",
+            "Будь ласка",
+            "Як справи?",
+            "Привіт"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Вітаємо на вашому першому уроці української мови! Сьогодні ми вивчимо кілька базових привітань та фраз. Ми почнемо зі слова \"Привіт\". Це неформальне привітання, схоже на англійське \"Hi\" або \"Hello\". Спробуйте сказати \"Привіт\" за мною. Чудово! Тепер давайте вивчимо \"Дякую\", що означає \"Thank you\". Повторіть: \"Дякую\". Дуже добре! І наостанок, \"Будь ласка\" – це може означати \"Please\" або \"You're welcome\". Спробуйте сказати \"Будь ласка\". Молодці! Ми розглянули \"Привіт\", \"Дякую\" та \"Будь ласка\". Чи є у вас запитання?"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Привіт",
+          "phonetic": "Pryvit",
+          "meaning": "Hello (informal)",
+          "example": "Привіт, як справи?"
+        },
+        {
+          "word": "Я",
+          "phonetic": "Ya",
+          "meaning": "I",
+          "example": "Я студент."
+        },
+        {
+          "word": "Ви",
+          "phonetic": "Vy",
+          "meaning": "You (formal/plural)",
+          "example": "Ви вчитель?"
+        },
+        {
+          "word": "Він",
+          "phonetic": "Vin",
+          "meaning": "He",
+          "example": "Він лікар."
+        },
+        {
+          "word": "Вона",
+          "phonetic": "Vona",
+          "meaning": "She",
+          "example": "Вона студентка."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Ukrainian?",
+          "options": [
+            "Привіт",
+            "Дякую",
+            "Будь ласка",
+            "До побачення"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which pronoun means \"I\" in Ukrainian?",
+          "options": [
+            "Ви",
+            "Він",
+            "Я",
+            "Вона"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Ukrainian word for \"She\".",
+          "options": [
+            "Він",
+            "Ви",
+            "Я",
+            "Вона"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "Complete the sentence: \"____ студент.\" (I am a student.)",
+          "options": [
+            "Ви",
+            "Вона",
+            "Я",
+            "Він"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"Ви\" mean?",
+          "options": [
+            "He",
+            "She",
+            "I",
+            "You (formal/plural)"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Чудова робота! У цьому уроці ми вивчимо деякі основні українські слова та фрази. Ми зосередимося на займенниках \"Я\", \"Ви\", \"Він\", \"Вона\" та привітанні \"Привіт\". Готуйтеся практикувати їх у реченнях!"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Привіт",
+          "phonetic": "Pryvit",
+          "meaning": "Hello / Hi",
+          "example": "Привіт! Як справи?"
+        },
+        {
+          "word": "Добрий день",
+          "phonetic": "Dobryi den'",
+          "meaning": "Good day",
+          "example": "Добрий день, пані та панове!"
+        },
+        {
+          "word": "Як справи?",
+          "phonetic": "Yak spravy?",
+          "meaning": "How are you? / How are things?",
+          "example": "Привіт, Олено! Як справи?"
+        },
+        {
+          "word": "Дякую",
+          "phonetic": "Dyakuyu",
+          "meaning": "Thank you",
+          "example": "Дякую за допомогу!"
+        },
+        {
+          "word": "Мене звати...",
+          "phonetic": "Mene zvaty...",
+          "meaning": "My name is...",
+          "example": "Привіт, мене звати Анна."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Ukrainian (informal)?",
+          "options": [
+            "Привіт",
+            "Дякую",
+            "Будь ласка",
+            "Добрий день"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Ukrainian phrase means \"How are you?\"",
+          "options": [
+            "Дякую",
+            "Як справи?",
+            "Привіт",
+            "Мене звати"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Complete the sentence: \"Привіт, ______ звати Олег.\"",
+          "options": [
+            "Дякую",
+            "Як",
+            "Мене",
+            "Справи"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Чудова робота! У цьому уроці ми вивчимо деякі базові українські привітання та способи знайомства. Ми розглянемо фрази, такі як \"Привіт,\" \"Як справи?\" та \"Мене звати...\" До кінця уроку ви зможете вітатися з людьми та представлятися українською. Почнімо!"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Привіт",
+          "phonetic": "Pryvit",
+          "meaning": "Hello (informal)",
+          "example": "Привіт! Як справи?"
+        },
+        {
+          "word": "Як справи?",
+          "phonetic": "Yak spravy?",
+          "meaning": "How are you?",
+          "example": "Привіт, Олено! Як справи?"
+        },
+        {
+          "word": "Добре",
+          "phonetic": "Dobre",
+          "meaning": "Good, Fine",
+          "example": "Добре, дякую!"
+        },
+        {
+          "word": "Мене звати...",
+          "phonetic": "Mene zvaty...",
+          "meaning": "My name is...",
+          "example": "Привіт! Мене звати Анна."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the informal way to say \"Hello\" in Ukrainian?",
+          "options": [
+            "Привіт",
+            "Доброго ранку",
+            "До побачення",
+            "Дякую"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you ask \"How are you?\" in Ukrainian?",
+          "options": [
+            "Що це?",
+            "Як справи?",
+            "Де ти?",
+            "Хто це?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"Як справи?\", how would you respond if you are \"Fine\"?",
+          "options": [
+            "Будь ласка",
+            "Вибачте",
+            "Добре",
+            "Ні"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"My name is...\" in Ukrainian?",
+          "options": [
+            "Я є...",
+            "Мене звати...",
+            "Моє ім'я...",
+            "Я маю..."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Привіт! Я ваш AI-репетитор з української мови. Сьогодні ми почнемо з дуже важливих фраз: привітань та представлення себе. Ми вивчимо, як сказати \"Привіт\" (Hello), \"Як справи?\" (How are you?), \"Добре\" (Fine/Good) та \"Мене звати...\" (My name is...). Я буду вимовляти кожну фразу, а ви спробуйте повторити за мною. Потім ми потренуємося використовувати їх у простих діалогах. Готові почати? Давайте почнемо з \"Привіт\". Спробуйте сказати \"Привіт\"!"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Привіт",
+          "phonetic": "Pryvit",
+          "meaning": "Hello (informal)",
+          "example": "Привіт! Як справи?"
+        },
+        {
+          "word": "Як справи?",
+          "phonetic": "Yak spravy?",
+          "meaning": "How are you?",
+          "example": "Привіт, Олено! Як справи?"
+        },
+        {
+          "word": "Дякую",
+          "phonetic": "Dyakuyu",
+          "meaning": "Thank you",
+          "example": "Дякую за допомогу!"
+        },
+        {
+          "word": "Будь ласка",
+          "phonetic": "Bud' laska",
+          "meaning": "Please / You're welcome",
+          "example": "Можна мені води, будь ласка?"
+        },
+        {
+          "word": "Так",
+          "phonetic": "Tak",
+          "meaning": "Yes",
+          "example": "Ти говориш українською? – Так."
+        },
+        {
+          "word": "Ні",
+          "phonetic": "Ni",
+          "meaning": "No",
+          "example": "Ти втомився? – Ні, я не втомився."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Ukrainian?",
+          "options": [
+            "До побачення",
+            "Привіт",
+            "Дякую",
+            "Будь ласка"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct Ukrainian phrase for \"How are you?\"",
+          "options": [
+            "Добраніч",
+            "Як справи?",
+            "Мене звати...",
+            "Смачного!"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the Ukrainian word for \"Thank you.\"",
+          "options": [
+            "Вибачте",
+            "Будь ласка",
+            "Дякую",
+            "До зустрічі"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you respond \"Yes\" in Ukrainian?",
+          "options": [
+            "Ні",
+            "Так",
+            "Можливо",
+            "Добре"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Привіт! Ласкаво просимо на наш урок української мови. Сьогодні ми зосередимося на ключових фразах для початку розмови та вираження вдячності. Ми вивчимо, як сказати \"Привіт\" (Pryvit), \"Як справи?\" (Yak spravy?), \"Дякую\" (Dyakuyu), \"Будь ласка\" (Bud' laska), а також \"Так\" (Tak) і \"Ні\" (Ni). Слухайте уважно, повторюйте за мною і не бійтеся використовувати ці слова! Почнімо!"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Привіт",
+          "phonetic": "Pryvit",
+          "meaning": "Hello (informal)",
+          "example": "Привіт! Як справи?"
+        },
+        {
+          "word": "Мене звати...",
+          "phonetic": "Mene zvaty...",
+          "meaning": "My name is...",
+          "example": "Мене звати Анна."
+        },
+        {
+          "word": "Як тебе звати?",
+          "phonetic": "Yak tebe zvaty?",
+          "meaning": "What is your name? (informal)",
+          "example": "Привіт! Як тебе звати?"
+        },
+        {
+          "word": "Дуже приємно",
+          "phonetic": "Duzhe pryyemno",
+          "meaning": "Nice to meet you",
+          "example": "Мене звати Олег. Дуже приємно."
+        },
+        {
+          "word": "До побачення",
+          "phonetic": "Do pobachennya",
+          "meaning": "Goodbye",
+          "example": "До побачення! Гарного дня!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Ukrainian?",
+          "options": [
+            "Привіт",
+            "До побачення",
+            "Дякую",
+            "Будь ласка"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct Ukrainian phrase for \"My name is Anna\"?",
+          "options": [
+            "Як тебе звати Анна?",
+            "Мене звати Анна",
+            "Ти Анна?",
+            "Я Анна"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"Nice to meet you\"?",
+          "options": [
+            "Як справи?",
+            "До побачення",
+            "Дуже приємно",
+            "Дякую"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say \"Goodbye\" in Ukrainian?",
+          "options": [
+            "Привіт",
+            "Мене звати",
+            "До побачення",
+            "Як тебе звати?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Привіт! Я твій репетитор української мови. Сьогодні ми почнемо з основних привітань та фраз для знайомства. Це дуже важливо для початку спілкування українською! Ми вивчимо, як сказати \"Привіт\" (Hello), \"Мене звати...\" (My name is...), \"Як тебе звати?\" (What is your name?), \"Дуже приємно\" (Nice to meet you) та \"До побачення\" (Goodbye). Готовий почати? Давай спробуємо сказати перше слово: \"Привіт\". Це неформальне привітання. Можеш повторити за мною?"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "стіл",
+          "phonetic": "stil",
+          "meaning": "table",
+          "example": "Це стіл."
+        },
+        {
+          "word": "стілець",
+          "phonetic": "stilets'",
+          "meaning": "chair",
+          "example": "Там стілець."
+        },
+        {
+          "word": "книга",
+          "phonetic": "knyha",
+          "meaning": "book",
+          "example": "Це цікава книга."
+        },
+        {
+          "word": "ручка",
+          "phonetic": "ruchka",
+          "meaning": "pen",
+          "example": "Де моя ручка?"
+        },
+        {
+          "word": "телефон",
+          "phonetic": "telefon",
+          "meaning": "phone",
+          "example": "Мій телефон новий."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is 'table' in Ukrainian?",
+          "options": [
+            "стілець",
+            "стіл",
+            "книга",
+            "ручка"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means 'book'?",
+          "options": [
+            "телефон",
+            "стіл",
+            "книга",
+            "стілець"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Ukrainian word for 'pen'.",
+          "options": [
+            "стілець",
+            "ручка",
+            "телефон",
+            "стіл"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Complete the sentence: 'Це ____.' (This is a chair.)",
+          "options": [
+            "стіл",
+            "книга",
+            "стілець",
+            "ручка"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Привіт! Я твій AI-репетитор з української мови. У цьому уроці ми вивчимо та попрактикуємося з деякими основними українськими іменниками. Ми зосередимося на тому, як їх вимовляти та використовувати в простих реченнях. Готовий? Почнімо зі слова 'стіл' (table). Спробуй повторити за мною: 'стіл'."
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "мати",
+          "phonetic": "ma-ty",
+          "meaning": "to have",
+          "example": "Я маю книгу."
+        },
+        {
+          "word": "бути",
+          "phonetic": "bu-ty",
+          "meaning": "to be",
+          "example": "Він є студентом."
+        },
+        {
+          "word": "хотіти",
+          "phonetic": "kho-ti-ty",
+          "meaning": "to want",
+          "example": "Вона хоче спати."
+        },
+        {
+          "word": "робити",
+          "phonetic": "ro-by-ty",
+          "meaning": "to do, to make",
+          "example": "Що ти робиш?"
+        },
+        {
+          "word": "говорити",
+          "phonetic": "ho-vo-ry-ty",
+          "meaning": "to speak, to talk",
+          "example": "Я говорю українською."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Ukrainian verb means \"to have\"?",
+          "options": [
+            "бути",
+            "мати",
+            "хотіти",
+            "робити"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Ukrainian word for \"to want\".",
+          "options": [
+            "говорити",
+            "бути",
+            "хотіти",
+            "мати"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Complete the sentence: \"Він ___ (He is) лікар.\"",
+          "options": [
+            "має",
+            "хоче",
+            "робить",
+            "є"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "Which verb would you use to say \"to do\" or \"to make\"?",
+          "options": [
+            "говорити",
+            "бути",
+            "робити",
+            "мати"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"I speak Ukrainian\" using one of the learned verbs?",
+          "options": [
+            "Я маю українську.",
+            "Я хочу українську.",
+            "Я роблю українську.",
+            "Я говорю українською."
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Привіт! Сьогодні ми вивчатимемо базові українські дієслова. Ми розглянемо дієслова \"мати\" (to have), \"бути\" (to be), \"хотіти\" (to want), \"робити\" (to do/make) та \"говорити\" (to speak/talk). Ми також попрактикуємося з ними в простих реченнях. Почнімо!"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Привіт",
+          "phonetic": "Pryvit",
+          "meaning": "Hello / Hi",
+          "example": "Привіт! Як справи?"
+        },
+        {
+          "word": "Як справи?",
+          "phonetic": "Yak spravy?",
+          "meaning": "How are you?",
+          "example": "Привіт! Як справи?"
+        },
+        {
+          "word": "Добре",
+          "phonetic": "Dobré",
+          "meaning": "Good / Well",
+          "example": "Добре, дякую."
+        },
+        {
+          "word": "Дякую",
+          "phonetic": "Dyakuyu",
+          "meaning": "Thank you",
+          "example": "Дякую за допомогу."
+        },
+        {
+          "word": "Будь ласка",
+          "phonetic": "Bud' laska",
+          "meaning": "Please / You're welcome",
+          "example": "Можна мені води, будь ласка?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Ukrainian?",
+          "options": [
+            "Привіт",
+            "До побачення",
+            "Дякую",
+            "Будь ласка"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct way to ask \"How are you?\" in Ukrainian?",
+          "options": [
+            "Як ти?",
+            "Як справи?",
+            "Що це?",
+            "Хто це?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Дякую\" mean?",
+          "options": [
+            "Hello",
+            "Good",
+            "Thank you",
+            "Please"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the best response to \"Як справи?\" (How are you?)",
+          "options": [
+            "Привіт",
+            "Добре, дякую",
+            "Будь ласка",
+            "До побачення"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Привіт! Сьогодні ми вивчимо кілька поширених українських привітань та фраз. Ми потренуємося говорити 'Привіт' (Hello), 'Як справи?' (How are you?), 'Добре' (Good/Well), 'Дякую' (Thank you) та 'Будь ласка' (Please/You're welcome). Давайте почнемо з 'Привіт'. Чи можете ви повторити 'Привіт'?"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Привіт",
+          "phonetic": "Pryvit",
+          "meaning": "Hello / Hi",
+          "example": "Привіт! Як справи?"
+        },
+        {
+          "word": "Як справи?",
+          "phonetic": "Yak spravy?",
+          "meaning": "How are you?",
+          "example": "Привіт! Як справи?"
+        },
+        {
+          "word": "Добре",
+          "phonetic": "Dobre",
+          "meaning": "Good / Fine",
+          "example": "Добре, дякую."
+        },
+        {
+          "word": "Дякую",
+          "phonetic": "Dyakuyu",
+          "meaning": "Thank you",
+          "example": "Дякую за допомогу."
+        },
+        {
+          "word": "Будь ласка",
+          "phonetic": "Budʹ laska",
+          "meaning": "Please / You're welcome",
+          "example": "Будь ласка, сядьте."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Ukrainian?",
+          "options": [
+            "До побачення",
+            "Привіт",
+            "Дякую",
+            "Вибачте"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Ukrainian phrase for 'How are you?'",
+          "options": [
+            "Добре",
+            "Будь ласка",
+            "Як справи?",
+            "Привіт"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks 'Як справи?' and you are fine, how would you respond?",
+          "options": [
+            "Дякую",
+            "Привіт",
+            "Добре",
+            "Будь ласка"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does 'Дякую' mean in English?",
+          "options": [
+            "Hello",
+            "Please",
+            "Thank you",
+            "Good"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Чудова робота! У цьому уроці ми вивчимо деякі поширені українські привітання та фрази. Ми розглянемо такі фрази, як 'Привіт,' 'Як справи?' та 'Дякую.' Давайте почнемо з 'Привіт.' Це означає 'Hello.' Спробуйте сказати: 'Привіт.' Чудово! Тепер перейдемо до 'Як справи?' Це означає 'How are you?' Спробуйте: 'Як справи?' І наостанок, 'Дякую.' Це означає 'Thank you.' Повторіть: 'Дякую.' Молодці! Ми також розглянемо 'Добре' (Good/Fine) та 'Будь ласка' (Please/You're welcome). Готові практикуватися?"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Привіт",
+          "phonetic": "Pryvit",
+          "meaning": "Hello / Hi",
+          "example": "Привіт! Як справи?"
+        },
+        {
+          "word": "Як справи?",
+          "phonetic": "Yak spravy?",
+          "meaning": "How are you?",
+          "example": "Привіт, Олено! Як справи?"
+        },
+        {
+          "word": "Добре",
+          "phonetic": "Dobre",
+          "meaning": "Good / Well",
+          "example": "Дякую, добре."
+        },
+        {
+          "word": "Мене звати...",
+          "phonetic": "Mene zvaty...",
+          "meaning": "My name is...",
+          "example": "Привіт! Мене звати Анна."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Ukrainian?",
+          "options": [
+            "Привіт",
+            "Дякую",
+            "Будь ласка",
+            "До побачення"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct Ukrainian phrase for 'How are you?'",
+          "options": [
+            "Як справи?",
+            "Мене звати?",
+            "Де ти?",
+            "Що це?"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means 'Good' or 'Well'?",
+          "options": [
+            "Добре",
+            "Погано",
+            "Так",
+            "Ні"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Complete the sentence: '____ звати Олег.'",
+          "options": [
+            "Мене",
+            "Я",
+            "Ти",
+            "Він"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "Чудова робота! У цьому уроці ми вивчили деякі базові українські привітання, такі як 'Привіт' та 'Як справи?'. Ми також навчилися представлятися за допомогою фрази 'Мене звати...'. Тепер давайте повторимо ці фрази і спробуємо використати їх у короткій розмові. Я почну: 'Привіт! Мене звати [Ім'я репетитора]. Як справи?'"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Привіт",
+          "phonetic": "Pryvit",
+          "meaning": "Hello",
+          "example": "Привіт! Як справи?"
+        },
+        {
+          "word": "Як справи?",
+          "phonetic": "Yak spravy?",
+          "meaning": "How are you?",
+          "example": "Привіт, Олено! Як справи?"
+        },
+        {
+          "word": "Добре",
+          "phonetic": "Dobrе",
+          "meaning": "Good / Well",
+          "example": "Дякую, добре."
+        },
+        {
+          "word": "Дякую",
+          "phonetic": "Dyakuyu",
+          "meaning": "Thank you",
+          "example": "Дякую за допомогу!"
+        },
+        {
+          "word": "Будь ласка",
+          "phonetic": "Bud' laska",
+          "meaning": "Please / You're welcome",
+          "example": "Дайте, будь ласка, води. / \"Дякую!\" - \"Будь ласка!\""
+        },
+        {
+          "word": "Вибачте",
+          "phonetic": "Vybach'te",
+          "meaning": "Excuse me / Sorry",
+          "example": "Вибачте, де тут туалет?"
+        },
+        {
+          "word": "Так",
+          "phonetic": "Tak",
+          "meaning": "Yes",
+          "example": "Так, я розумію."
+        },
+        {
+          "word": "Ні",
+          "phonetic": "Ni",
+          "meaning": "No",
+          "example": "Ні, дякую."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Ukrainian?",
+          "options": [
+            "До побачення",
+            "Привіт",
+            "Дякую",
+            "Вибачте"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Дякую\" mean in English?",
+          "options": [
+            "Please",
+            "Excuse me",
+            "Thank you",
+            "Yes"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Ukrainian word for \"Yes\".",
+          "options": [
+            "Ні",
+            "Добре",
+            "Так",
+            "Будь ласка"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"How are you?\" in Ukrainian?",
+          "options": [
+            "Як справи?",
+            "Привіт!",
+            "Добре?",
+            "Вибачте?"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "If someone says \"Дякую\", how can you respond with \"You're welcome\"?",
+          "options": [
+            "Ні",
+            "Так",
+            "Будь ласка",
+            "Добре"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Привіт! Я ваш AI-репетитор з української мови. Сьогодні ми вивчимо базові українські привітання та фрази, які допоможуть вам розпочати розмову. Я познайомлю вас з новими словами, такими як \"Привіт\" (Hello), \"Як справи?\" (How are you?) та \"Дякую\" (Thank you), поясню їх значення та покажу, як використовувати їх у реченнях. Ми потренуємося у вимові та пройдемо короткий тест наприкінці, щоб закріпити ваші знання. Не соромтеся ставити запитання, якщо щось незрозуміло. Почнемо!"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "читати",
+          "phonetic": "chy-TA-ty",
+          "meaning": "to read",
+          "example": "Я люблю читати книги."
+        },
+        {
+          "word": "писати",
+          "phonetic": "py-SA-ty",
+          "meaning": "to write",
+          "example": "Вона пише листа."
+        },
+        {
+          "word": "говорити",
+          "phonetic": "ho-vo-RY-ty",
+          "meaning": "to speak",
+          "example": "Ми говоримо українською."
+        },
+        {
+          "word": "розуміти",
+          "phonetic": "ro-zu-MI-ty",
+          "meaning": "to understand",
+          "example": "Ви розумієте мене?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which word means 'to read'?",
+          "options": [
+            "писати",
+            "читати",
+            "говорити",
+            "розуміти"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct verb to complete the sentence: 'Я ______ листа.'",
+          "options": [
+            "читаю",
+            "пишу",
+            "говорю",
+            "розумію"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say 'We speak Ukrainian'?",
+          "options": [
+            "Ми читаємо українською.",
+            "Ми пишемо українською.",
+            "Ми говоримо українською.",
+            "Ми розуміємо українською."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Привіт! Сьогодні ми вивчимо нові українські слова. Ми потренуємо такі слова, як \"читати\", \"писати\", \"говорити\" та \"розуміти\". Я скажу слово, а потім ти повториш його. Ми також використаємо їх у реченнях. Почнімо!"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "щодня",
+          "phonetic": "shchodnya",
+          "meaning": "every day",
+          "example": "Я щодня ходжу на роботу."
+        },
+        {
+          "word": "зазвичай",
+          "phonetic": "zazvychay",
+          "meaning": "usually",
+          "example": "Ми зазвичай вечеряємо о сьомій."
+        },
+        {
+          "word": "прокидатися",
+          "phonetic": "prokydatysya",
+          "meaning": "to wake up",
+          "example": "О котрій годині ти прокидаєшся?"
+        },
+        {
+          "word": "вільний час",
+          "phonetic": "vil'nyy chas",
+          "meaning": "free time",
+          "example": "У мене багато вільного часу у вихідні."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Ukrainian word means \"every day\"?",
+          "options": [
+            "щотижня",
+            "щомісяця",
+            "щодня",
+            "щороку"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the most appropriate word to complete the sentence: \"Я ______ читаю книги ввечері.\" (I ______ read books in the evening.)",
+          "options": [
+            "ніколи",
+            "зазвичай",
+            "рідко",
+            "завжди"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"She wakes up at 7 AM\" in Ukrainian?",
+          "options": [
+            "Вона прокидається о 7 ранку.",
+            "Вона прокидатися о 7 ранку.",
+            "Вона прокидаюся о 7 ранку.",
+            "Вона прокидаємося о 7 ранку."
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "Привіт! У цьому уроці ми вивчимо нові українські слова та фрази, які допоможуть тобі розповідати про свій щоденний розклад та звички. Ми зосередимося на таких словах, як 'щодня', 'зазвичай', 'прокидатися' та 'вільний час'. Я поясню кожне слово, наведу приклад, а потім попрошу тебе скласти власне речення. Після цього ми потренуємося використовувати їх у короткій розмові. Давай почнемо з першого слова: 'щодня'. Готовий/готова?"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Сніданок",
+          "phonetic": "Sni-da-nok",
+          "meaning": "Breakfast",
+          "example": "Я люблю їсти легкий сніданок."
+        },
+        {
+          "word": "Обід",
+          "phonetic": "O-bid",
+          "meaning": "Lunch",
+          "example": "Ми зустрінемося на обіді о першій."
+        },
+        {
+          "word": "Вечеря",
+          "phonetic": "Ve-che-rya",
+          "meaning": "Dinner",
+          "example": "Що ми будемо готувати на вечерю?"
+        },
+        {
+          "word": "Їжа",
+          "phonetic": "Yi-zha",
+          "meaning": "Food",
+          "example": "Ця їжа дуже смачна."
+        },
+        {
+          "word": "Напій",
+          "phonetic": "Na-piy",
+          "meaning": "Drink",
+          "example": "Який твій улюблений напій?"
+        },
+        {
+          "word": "Смачний",
+          "phonetic": "Sma-chny",
+          "meaning": "Tasty / Delicious",
+          "example": "Цей борщ дуже смачний."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Ukrainian word for \"breakfast\"?",
+          "options": [
+            "Обід",
+            "Вечеря",
+            "Сніданок",
+            "Напій"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct word to complete the sentence: \"Я люблю ______ смачну їжу.\" (I like ______ tasty food.)",
+          "options": [
+            "їсти",
+            "пити",
+            "спати",
+            "читати"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means \"tasty\" or \"delicious\"?",
+          "options": [
+            "Холодний",
+            "Великий",
+            "Смачний",
+            "Швидкий"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What meal is typically eaten in the evening?",
+          "options": [
+            "Сніданок",
+            "Обід",
+            "Вечеря",
+            "Перекус"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Привіт! Сьогодні ми зануримося у світ української мови і вивчимо нові слова, пов'язані з їжею та прийомами їжі. Ми будемо практикувати вимову, розуміння значення та використання цих слів у реченнях. Готові дізнатися щось нове? Давайте почнемо!\n\nНаше перше слово – **сніданок**. Це українське слово для 'breakfast'. Зверніть увагу на наголос: Сні-да-нок. Повторіть за мною: **сніданок**.\n\nЧудово! Тепер давайте подивимося на приклад речення: 'Я люблю їсти легкий сніданок.' (I like to eat a light breakfast.) Чи можете ви сказати, що ви зазвичай їсте на сніданок, використовуючи слово **сніданок**?"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Привіт",
+          "phonetic": "Pryvit",
+          "meaning": "Hello",
+          "example": "Привіт, як справи?"
+        },
+        {
+          "word": "Дякую",
+          "phonetic": "Dyakuyu",
+          "meaning": "Thank you",
+          "example": "Дякую за допомогу."
+        },
+        {
+          "word": "Будь ласка",
+          "phonetic": "Budʹ laska",
+          "meaning": "Please / You're welcome",
+          "example": "Можна мені води, будь ласка?"
+        },
+        {
+          "word": "Так",
+          "phonetic": "Tak",
+          "meaning": "Yes",
+          "example": "Так, я розумію."
+        },
+        {
+          "word": "Ні",
+          "phonetic": "Ni",
+          "meaning": "No",
+          "example": "Ні, це неправда."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Ukrainian?",
+          "options": [
+            "До побачення",
+            "Привіт",
+            "Вибачте",
+            "Будь ласка"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Ukrainian word means \"Thank you\"?",
+          "options": [
+            "Ні",
+            "Так",
+            "Дякую",
+            "Привіт"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Ukrainian word for \"Yes\".",
+          "options": [
+            "Ні",
+            "Так",
+            "Будь ласка",
+            "Вибачте"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Привіт! Я твій AI-репетитор. Сьогодні ми вивчимо кілька базових українських фраз. Ми розглянемо \"привіт\", \"дякую\" та \"будь ласка\". Почнемо з \"привіт\". Можеш спробувати сказати \"привіт\"?"
+    }
+  ]
+}

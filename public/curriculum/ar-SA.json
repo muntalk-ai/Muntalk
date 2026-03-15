@@ -1,0 +1,1167 @@
+{
+  "langCode": "ar-SA",
+  "langLabel": "Arabic",
+  "langNative": "العربية",
+  "generatedAt": "2026-03-15T05:19:52.762Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "مرحباً",
+          "phonetic": "marḥaban",
+          "meaning": "Hello / Hi",
+          "example": "مرحباً، كيف حالك؟"
+        },
+        {
+          "word": "شكراً",
+          "phonetic": "shukran",
+          "meaning": "Thank you",
+          "example": "شكراً جزيلاً على مساعدتك."
+        },
+        {
+          "word": "نعم",
+          "phonetic": "naʿam",
+          "meaning": "Yes",
+          "example": "هل أنت مستعد؟ نعم، أنا مستعد."
+        },
+        {
+          "word": "لا",
+          "phonetic": "lā",
+          "meaning": "No",
+          "example": "هل تريد المزيد؟ لا، شكراً."
+        },
+        {
+          "word": "من فضلك",
+          "phonetic": "min faḍlik",
+          "meaning": "Please (to a male)",
+          "example": "من فضلك، ساعدني."
+        },
+        {
+          "word": "من فضلكِ",
+          "phonetic": "min faḍliki",
+          "meaning": "Please (to a female)",
+          "example": "من فضلكِ، اجلسي هنا."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Arabic word for \"Hello\"?",
+          "options": [
+            "شكراً",
+            "مرحباً",
+            "نعم",
+            "لا"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Arabic?",
+          "options": [
+            "لا",
+            "من فضلك",
+            "شكراً",
+            "نعم"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the Arabic word for \"Yes\".",
+          "options": [
+            "نعم",
+            "لا",
+            "مرحباً",
+            "شكراً"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means \"No\"?",
+          "options": [
+            "شكراً",
+            "نعم",
+            "مرحباً",
+            "لا"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "How do you say \"Please\" to a male?",
+          "options": [
+            "من فضلكِ",
+            "شكراً",
+            "من فضلك",
+            "نعم"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "You are an AI Arabic tutor. Your goal is to help the learner understand and practice the new vocabulary. Start by greeting the learner in Arabic and English. Then, introduce each new word one by one. For each word, say the Arabic word clearly, provide its English meaning, and use it in a simple Arabic sentence. Encourage the learner to repeat the word and the sentence. Pay special attention to the difference between 'من فضلك' (min faḍlik) for a male and 'من فضلكِ' (min faḍliki) for a female. After going through all the words, ask the learner to try using some of the new words in a simple conversation. Be encouraging and provide corrections as needed. Remember to speak Arabic words and phrases during the lesson."
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "السلام عليكم",
+          "phonetic": "As-salamu alaykum",
+          "meaning": "Peace be upon you (common Islamic greeting, equivalent to \"Hello\")",
+          "example": "السلام عليكم يا أصدقائي."
+        },
+        {
+          "word": "كيف حالك؟",
+          "phonetic": "Kayfa haluk? (m)",
+          "meaning": "How are you? (masculine singular)",
+          "example": "كيف حالك يا أحمد؟"
+        },
+        {
+          "word": "أنا بخير، شكراً",
+          "phonetic": "Ana bikhayr, shukran",
+          "meaning": "I'm fine, thank you",
+          "example": "أنا بخير، شكراً لك."
+        },
+        {
+          "word": "صباح الخير",
+          "phonetic": "Sabah al-khayr",
+          "meaning": "Good morning",
+          "example": "صباح الخير يا معلمي."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Arabic?",
+          "options": [
+            "صباح الخير",
+            "مساء الخير",
+            "السلام عليكم",
+            "مع السلامة"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct response to \"كيف حالك؟\" (How are you?)",
+          "options": [
+            "شكراً",
+            "أنا بخير، شكراً",
+            "صباح الخير",
+            "مع السلامة"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Good morning\" in Arabic?",
+          "options": [
+            "مساء الخير",
+            "صباح الخير",
+            "كيف حالك؟",
+            "أهلاً وسهلاً"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "أهلاً بك في درسك الأول في اللغة العربية! أنا متحمس جداً لمساعدتك في رحلتك لتعلم هذه اللغة الجميلة. اليوم، سنركز على بعض التحيات الأساسية التي ستساعدك على بدء المحادثات. سنتعلم كيف تقول \"السلام عليكم\" (Hello/Peace be upon you)، وكيف تسأل \"كيف حالك؟\" (How are you?)، وكيف تجيب بـ \"أنا بخير، شكراً\" (I'm fine, thank you). لنبدأ بـ \"السلام عليكم\". هذه هي الطريقة الأكثر شيوعاً للتحية في العالم العربي. هل يمكنك محاولة قول \"السلام عليكم\"؟"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "مرحباً",
+          "phonetic": "Marhaban",
+          "meaning": "Hello / Welcome",
+          "example": "مرحباً يا صديقي."
+        },
+        {
+          "word": "كيف حالك؟",
+          "phonetic": "Kayfa ḥāluk?",
+          "meaning": "How are you? (masculine/general)",
+          "example": "كيف حالك اليوم؟"
+        },
+        {
+          "word": "أنا بخير، شكراً",
+          "phonetic": "Anā bi-khayr, shukran",
+          "meaning": "I'm fine, thank you",
+          "example": "أنا بخير، شكراً لسؤالك."
+        },
+        {
+          "word": "ما اسمك؟",
+          "phonetic": "Mā ismuk?",
+          "meaning": "What's your name? (masculine/general)",
+          "example": "ما اسمك؟ اسمي أحمد."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Arabic?",
+          "options": [
+            "شكراً",
+            "مرحباً",
+            "مع السلامة",
+            "صباح الخير"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"How are you?\"",
+          "options": [
+            "ما اسمك؟",
+            "أنا بخير",
+            "كيف حالك؟",
+            "إلى اللقاء"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "مرحباً! أهلاً بك في درسك الأول للغة العربية. اليوم، سنتعلم التحيات والتعارف الأساسية. لنبدأ بـ \"Hello\". في اللغة العربية، نقول \"مرحباً\" (Marhaban). حاول أن تقول \"مرحباً\" بصوت عالٍ. بعد ذلك، لسؤال \"How are you?\"، نقول \"كيف حالك؟\" (Kayfa ḥāluk?). إذا كنت بخير، يمكنك الرد بـ \"أنا بخير، شكراً\" (Anā bi-khayr, shukran). أخيراً، لسؤال \"What's your name?\"، نقول \"ما اسمك؟\" (Mā ismuk?). هيا بنا نتدرب على هذه العبارات معاً. سأقول عبارة، وأنت كررها. تذكر أن تنتبه للنطق. هل لديك أي أسئلة حول هذه التحيات؟"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "مرحباً",
+          "phonetic": "Marhaban",
+          "meaning": "Hello",
+          "example": "مرحباً يا صديقي."
+        },
+        {
+          "word": "كيف حالك؟",
+          "phonetic": "Kayfa ḥāluk?",
+          "meaning": "How are you? (masculine singular)",
+          "example": "كيف حالك اليوم؟"
+        },
+        {
+          "word": "أنا بخير",
+          "phonetic": "Anā bikhayr",
+          "meaning": "I am fine.",
+          "example": "أنا بخير، شكراً لك."
+        },
+        {
+          "word": "شكراً",
+          "phonetic": "Shukran",
+          "meaning": "Thank you.",
+          "example": "شكراً جزيلاً على مساعدتك."
+        },
+        {
+          "word": "عفواً",
+          "phonetic": "Afwan",
+          "meaning": "You're welcome / Excuse me.",
+          "example": "عفواً، لا مشكلة."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Arabic?",
+          "options": [
+            "مرحباً",
+            "شكراً",
+            "عفواً",
+            "أنا بخير"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which phrase means \"How are you?\" (to a male)?",
+          "options": [
+            "أنا بخير",
+            "كيف حالك؟",
+            "شكراً",
+            "عفواً"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you respond to \"كيف حالك؟\" if you are fine?",
+          "options": [
+            "شكراً",
+            "عفواً",
+            "أنا بخير",
+            "مرحباً"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Arabic word for \"Thank you\"?",
+          "options": [
+            "مرحباً",
+            "أنا بخير",
+            "شكراً",
+            "عفواً"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "أهلاً بك في درسك الأول في اللغة العربية! اليوم سنتعلم بعض التحيات والتعابير الأساسية. سنتناول عبارات مثل 'مرحباً' (Hello)، 'كيف حالك؟' (How are you?)، و'شكراً' (Thank you). لنبدأ بـ 'Hello'. في اللغة العربية، نقول 'مرحباً'. هل يمكنك محاولة نطقها؟"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "أهلاً",
+          "phonetic": "Ahlan",
+          "meaning": "Hello / Welcome",
+          "example": "أهلاً بك في درس اللغة العربية."
+        },
+        {
+          "word": "كيف حالك؟",
+          "phonetic": "Kayfa ḥāluk?",
+          "meaning": "How are you? (to a male)",
+          "example": "صباح الخير، كيف حالك اليوم؟"
+        },
+        {
+          "word": "أنا بخير، الحمد لله",
+          "phonetic": "Anā bikhayr, al-ḥamdu lillāh",
+          "meaning": "I'm fine, thank God",
+          "example": "عندما سألني، قلت: أنا بخير، الحمد لله."
+        },
+        {
+          "word": "ما اسمك؟",
+          "phonetic": "Mā ismuk?",
+          "meaning": "What's your name? (to a male)",
+          "example": "عفواً، ما اسمك؟"
+        },
+        {
+          "word": "اسمي...",
+          "phonetic": "Ismī...",
+          "meaning": "My name is...",
+          "example": "اسمي أحمد."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Welcome\" in Arabic?",
+          "options": [
+            "شكراً",
+            "أهلاً",
+            "مع السلامة",
+            "صباح الخير"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to \"كيف حالك؟\" (How are you?)",
+          "options": [
+            "اسمي...",
+            "أنا بخير، الحمد لله",
+            "ما اسمك؟",
+            "أهلاً"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you ask \"What's your name?\" (to a male) in Arabic?",
+          "options": [
+            "كيف حالك؟",
+            "ما اسمك؟",
+            "شكراً",
+            "مع السلامة"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "أهلاً بك! في هذا الدرس، سنتعلم بعض التحيات والعبارات الشائعة في اللغة العربية. سنتدرب على قول \"أهلاً\" و \"كيف حالك؟\" و \"ما اسمك؟\". هل أنت مستعد للبدء؟"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "مرحباً",
+          "phonetic": "Marhaban",
+          "meaning": "Hello / Hi",
+          "example": "مرحباً، كيف حالك؟"
+        },
+        {
+          "word": "اسمي",
+          "phonetic": "Ismi",
+          "meaning": "My name is...",
+          "example": "اسمي سارة."
+        },
+        {
+          "word": "ما اسمك؟",
+          "phonetic": "Mā ismuk? (m.) / Mā ismuki? (f.)",
+          "meaning": "What is your name?",
+          "example": "ما اسمك يا صديقي؟"
+        },
+        {
+          "word": "تشرفنا",
+          "phonetic": "Tasharrafnā",
+          "meaning": "Nice to meet you",
+          "example": "تشرفنا يا أحمد."
+        },
+        {
+          "word": "شكراً",
+          "phonetic": "Shukran",
+          "meaning": "Thank you",
+          "example": "شكراً جزيلاً لك."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Arabic?",
+          "options": [
+            "شكراً",
+            "مرحباً",
+            "مع السلامة",
+            "صباح الخير"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"My name is...\"?",
+          "options": [
+            "أنا",
+            "اسمي",
+            "أنت",
+            "هو"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you ask \"What is your name?\" in Arabic?",
+          "options": [
+            "كيف حالك؟",
+            "من أنت؟",
+            "ما اسمك؟",
+            "أين أنت؟"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "أهلاً بك في درس اللغة العربية! في هذا الدرس، سنتعلم التحيات الأساسية وكيفية التعريف بنفسك. سنركز على كلمات وعبارات مثل 'مرحباً' (Marhaban) لـ 'Hello'، و'اسمي' (Ismi) لـ 'My name is...'، و'ما اسمك؟' (Mā ismuk?) لـ 'What is your name?'. لا تتردد في تكرار الكلمات بصوت عالٍ معي. بعد ذلك، سنختبر فهمك ببعض الأسئلة. هيا بنا نبدأ!"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "أهلاً",
+          "phonetic": "Ahlan",
+          "meaning": "Hello / Welcome",
+          "example": "أهلاً بك! كيف حالك؟"
+        },
+        {
+          "word": "كيف حالك؟",
+          "phonetic": "Kayfa haluk?",
+          "meaning": "How are you?",
+          "example": "أهلاً، كيف حالك اليوم؟"
+        },
+        {
+          "word": "أنا بخير",
+          "phonetic": "Ana bikhair",
+          "meaning": "I am fine",
+          "example": "أنا بخير، شكراً لك."
+        },
+        {
+          "word": "شكراً",
+          "phonetic": "Shukran",
+          "meaning": "Thank you",
+          "example": "شكراً جزيلاً على مساعدتك."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Arabic?",
+          "options": [
+            "أهلاً",
+            "شكراً",
+            "أنا بخير",
+            "كيف حالك؟"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does \"كيف حالك؟\" mean?",
+          "options": [
+            "Thank you",
+            "I am fine",
+            "How are you?",
+            "What is your name?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you respond to \"كيف حالك؟\" if you are fine?",
+          "options": [
+            "شكراً",
+            "أهلاً",
+            "أنا بخير",
+            "ما اسمك؟"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "مرحباً! في هذا الدرس، سنتعلم بعض التحيات الأساسية في اللغة العربية. سنبدأ بكلمة \"أهلاً\" (Ahlan)، والتي تعني \"مرحباً\" أو \"أهلاً وسهلاً\". هل يمكنك أن تقول \"أهلاً\" بصوت عالٍ؟ بعد ذلك، سنتعلم كيف نسأل عن الحال بـ \"كيف حالك؟\" (Kayfa haluk?). وكيف نجيب بـ \"أنا بخير\" (Ana bikhair) إذا كنا بخير. وأخيراً، سنتعلم كلمة \"شكراً\" (Shukran) لقول \"شكراً لك\". هيا بنا نبدأ!"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "مرحباً",
+          "phonetic": "marhaban",
+          "meaning": "Hello",
+          "example": "مرحباً يا صديقي!"
+        },
+        {
+          "word": "كيف حالك؟",
+          "phonetic": "kayfa ḥāluk?",
+          "meaning": "How are you? (masculine/general)",
+          "example": "كيف حالك اليوم؟"
+        },
+        {
+          "word": "أنا بخير",
+          "phonetic": "anā bikhayr",
+          "meaning": "I am fine",
+          "example": "أنا بخير، شكراً لك."
+        },
+        {
+          "word": "شكراً",
+          "phonetic": "shukran",
+          "meaning": "Thank you",
+          "example": "شكراً جزيلاً!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Arabic?",
+          "options": [
+            "مرحباً",
+            "شكراً",
+            "أنا بخير",
+            "مع السلامة"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct response to \"كيف حالك؟\" (How are you?)",
+          "options": [
+            "شكراً",
+            "أنا بخير",
+            "مرحباً",
+            "صباح الخير"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"Thank you\" in Arabic?",
+          "options": [
+            "أنا بخير",
+            "كيف حالك؟",
+            "شكراً",
+            "مرحباً"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "مرحباً بك في درس اللغة العربية! اليوم سنتعلم بعض التحيات والعبارات الأساسية. لنبدأ بـ 'مرحباً' (marhaban)، والتي تعني 'Hello'. حاول أن تقولها بصوت عالٍ. ممتاز! الآن لنسأل عن الحال، نقول 'كيف حالك؟' (kayfa ḥāluk?). هذه تعني 'How are you?'. وللإجابة، يمكنك أن تقول 'أنا بخير' (anā bikhayr)، أي 'I am fine'. وأخيراً، لقول 'Thank you'، نقول 'شكراً' (shukran). هل أنت مستعد لممارسة هذه العبارات في بعض التمارين؟"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "أهلاً",
+          "phonetic": "Ahlan",
+          "meaning": "Hello / Welcome",
+          "example": "أهلاً بك في درس اللغة العربية."
+        },
+        {
+          "word": "كيف حالك؟",
+          "phonetic": "Kayfa haluk?",
+          "meaning": "How are you? (masculine singular)",
+          "example": "كيف حالك اليوم يا صديقي؟"
+        },
+        {
+          "word": "أنا بخير",
+          "phonetic": "Ana bi-khayr",
+          "meaning": "I am fine",
+          "example": "أنا بخير، شكراً لك."
+        },
+        {
+          "word": "شكراً",
+          "phonetic": "Shukran",
+          "meaning": "Thank you",
+          "example": "شكراً جزيلاً على مساعدتك."
+        },
+        {
+          "word": "ما اسمك؟",
+          "phonetic": "Ma ismuk?",
+          "meaning": "What is your name? (masculine singular)",
+          "example": "ما اسمك؟ اسمي أحمد."
+        },
+        {
+          "word": "اسمي...",
+          "phonetic": "Ismi...",
+          "meaning": "My name is...",
+          "example": "اسمي سارة."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Arabic?",
+          "options": [
+            "أهلاً",
+            "شكراً",
+            "أنا بخير",
+            "ما اسمك؟"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the correct Arabic phrase for \"How are you?\" (masculine singular).",
+          "options": [
+            "أنا بخير",
+            "كيف حالك؟",
+            "ما اسمك؟",
+            "شكراً"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"كيف حالك؟\", how would you respond \"I am fine\"?",
+          "options": [
+            "شكراً",
+            "أهلاً",
+            "أنا بخير",
+            "ما اسمك؟"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "أهلاً بك في درس اللغة العربية! اليوم سنتعلم بعض العبارات الأساسية للمحادثة. سنتناول كلمات مثل 'أهلاً' (Ahlan) للتحية، و 'كيف حالك؟' (Kayfa haluk?) للسؤال عن الحال، وكيفية الرد بـ 'أنا بخير' (Ana bi-khayr). سنتعلم أيضاً كيف تسأل عن الاسم بـ 'ما اسمك؟' (Ma ismuk?) وكيف تجيب بـ 'اسمي...' (Ismi...). هيا بنا نبدأ!"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "السلام عليكم",
+          "phonetic": "As-salāmu ʿalaykum",
+          "meaning": "Peace be upon you (Hello)",
+          "example": "السلام عليكم، كيف حالك؟"
+        },
+        {
+          "word": "كيف حالك؟",
+          "phonetic": "Kayfa ḥāluk?",
+          "meaning": "How are you? (to a male)",
+          "example": "أنا بخير، شكراً. كيف حالك أنت؟"
+        },
+        {
+          "word": "أنا بخير",
+          "phonetic": "Anā bi-khayr",
+          "meaning": "I am fine",
+          "example": "أنا بخير، شكراً لك."
+        },
+        {
+          "word": "ما اسمك؟",
+          "phonetic": "Mā ismuk?",
+          "meaning": "What is your name? (to a male)",
+          "example": "ما اسمك؟ اسمي أحمد."
+        },
+        {
+          "word": "اسمي...",
+          "phonetic": "Ismī...",
+          "meaning": "My name is...",
+          "example": "اسمي سارة."
+        },
+        {
+          "word": "تشرفنا",
+          "phonetic": "Tasharrafnā",
+          "meaning": "Nice to meet you",
+          "example": "تشرفنا، أنا سعيد بلقائك."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Arabic?",
+          "options": [
+            "صباح الخير",
+            "السلام عليكم",
+            "مع السلامة",
+            "شكراً"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to \"كيف حالك؟\" (How are you?)",
+          "options": [
+            "اسمي...",
+            "أنا بخير",
+            "تشرفنا",
+            "مع السلامة"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you ask \"What is your name?\" in Arabic?",
+          "options": [
+            "كيف حالك؟",
+            "ما اسمك؟",
+            "من أنت؟",
+            "أين أنت؟"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "مرحباً بك في درس اللغة العربية! اليوم سنتعلم التحيات الأساسية وكيفية تقديم نفسك. سنتناول عبارات مثل \"السلام عليكم\" (As-salāmu ʿalaykum) التي تعني \"Hello\" أو \"Peace be upon you\"، و \"كيف حالك؟\" (Kayfa ḥāluk?) للسؤال عن الحال، و \"اسمي...\" (Ismī...) لتقديم اسمك. لنبدأ بـ \"السلام عليكم\". هل يمكنك تكرارها؟"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "كتاب",
+          "phonetic": "kitaab",
+          "meaning": "book",
+          "example": "هذا كتاب."
+        },
+        {
+          "word": "قلم",
+          "phonetic": "qalam",
+          "meaning": "pen",
+          "example": "هذا قلم أزرق."
+        },
+        {
+          "word": "أحمر",
+          "phonetic": "aḥmar",
+          "meaning": "red",
+          "example": "اللون أحمر."
+        },
+        {
+          "word": "أزرق",
+          "phonetic": "azraq",
+          "meaning": "blue",
+          "example": "هذا قلم أزرق."
+        },
+        {
+          "word": "كبير",
+          "phonetic": "kabīr",
+          "meaning": "big / large",
+          "example": "هذا كتاب كبير."
+        },
+        {
+          "word": "صغير",
+          "phonetic": "ṣaghīr",
+          "meaning": "small",
+          "example": "هذا قلم صغير."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Arabic word for \"book\"?",
+          "options": [
+            "قلم",
+            "كتاب",
+            "كبير",
+            "أحمر"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means \"red\" in Arabic?",
+          "options": [
+            "أزرق",
+            "صغير",
+            "أحمر",
+            "كتاب"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"small\" in Arabic?",
+          "options": [
+            "كبير",
+            "قلم",
+            "صغير",
+            "أزرق"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Translate: \"This is a blue pen.\"",
+          "options": [
+            "هذا كتاب كبير.",
+            "هذا قلم أزرق.",
+            "هذا قلم أحمر.",
+            "هذا كتاب صغير."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "مرحباً بك! اليوم سنتعلم عن \"الأشياء والألوان\". سنتناول بعض المفردات الجديدة ونتدرب على استخدامها في الجمل. سأقول الكلمات ويمكنك تكرارها بعدي. لنبدأ بكلمة \"كتاب\" (kitaab) والتي تعني \"book\". هل يمكنك قول \"كتاب\"؟"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "مرحباً",
+          "phonetic": "Marhaban",
+          "meaning": "Hello",
+          "example": "مرحباً، كيف حالك؟"
+        },
+        {
+          "word": "كيف حالك؟",
+          "phonetic": "Kayfa ḥāluk?",
+          "meaning": "How are you? (to a male)",
+          "example": "صباح الخير، كيف حالك؟"
+        },
+        {
+          "word": "أنا بخير",
+          "phonetic": "Anā bikhayr",
+          "meaning": "I am fine",
+          "example": "أنا بخير، شكراً لك."
+        },
+        {
+          "word": "شكراً",
+          "phonetic": "Shukran",
+          "meaning": "Thank you",
+          "example": "شكراً جزيلاً على مساعدتك."
+        },
+        {
+          "word": "عفواً",
+          "phonetic": "Afwan",
+          "meaning": "You're welcome / Excuse me",
+          "example": "عفواً، لا مشكلة."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Arabic?",
+          "options": [
+            "شكراً",
+            "مرحباً",
+            "أنا بخير",
+            "عفواً"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to \"كيف حالك؟\" (How are you?)?",
+          "options": [
+            "مرحباً",
+            "أنا بخير",
+            "شكراً",
+            "عفواً"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Arabic?",
+          "options": [
+            "أنا بخير",
+            "مرحباً",
+            "شكراً",
+            "كيف حالك؟"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "مرحباً بك! في هذا الدرس، سنتعلم بعض التحيات والعبارات الأساسية في اللغة العربية. سنتعرف على كلمات جديدة مثل \"مرحباً\" (Hello) و \"كيف حالك؟\" (How are you?) و \"أنا بخير\" (I am fine) و \"شكراً\" (Thank you). سنتدرب أيضاً على استخدامها في جمل بسيطة. هيا بنا نبدأ!"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "السلام عليكم",
+          "phonetic": "As-salāmu ʿalaykum",
+          "meaning": "Peace be upon you (common greeting)",
+          "example": "السلام عليكم يا أصدقائي."
+        },
+        {
+          "word": "كيف حالك؟",
+          "phonetic": "Kayfa ḥāluk?",
+          "meaning": "How are you? (to a male)",
+          "example": "كيف حالك اليوم يا أحمد؟"
+        },
+        {
+          "word": "أنا بخير، الحمد لله",
+          "phonetic": "Anā bi-khayr, al-ḥamdu lillāh",
+          "meaning": "I am fine, thank God",
+          "example": "أنا بخير، الحمد لله، وأنت؟"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Arabic?",
+          "options": [
+            "شكراً",
+            "السلام عليكم",
+            "مع السلامة",
+            "صباح الخير"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to \"كيف حالك؟\" (How are you?)",
+          "options": [
+            "أهلاً وسهلاً",
+            "أنا بخير، الحمد لله",
+            "إلى اللقاء",
+            "لا أعرف"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "مرحباً بك في درسك الأول! اليوم، سنتعلم عن التحيات والتعارف في اللغة العربية. سنتناول بعض المفردات الجديدة ونتدرب على استخدامها في الجمل. لا تقلق إذا بدا الأمر صعباً في البداية؛ أنا هنا لمساعدتك في كل خطوة. لنبدأ بالنظر إلى كلمتنا الأولى: \"السلام عليكم\". حاول أن تكررها بعدي."
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "جميل",
+          "phonetic": "jameel",
+          "meaning": "beautiful, handsome",
+          "example": "هذه الزهرة جميلة جداً."
+        },
+        {
+          "word": "كبير",
+          "phonetic": "kabeer",
+          "meaning": "big, large",
+          "example": "بيتنا كبير وواسع."
+        },
+        {
+          "word": "صغير",
+          "phonetic": "sagheer",
+          "meaning": "small, young",
+          "example": "لدي قطة صغيرة ولطيفة."
+        },
+        {
+          "word": "طويل",
+          "phonetic": "taweel",
+          "meaning": "tall, long",
+          "example": "هو رجل طويل جداً."
+        },
+        {
+          "word": "قصير",
+          "phonetic": "qaseer",
+          "meaning": "short",
+          "example": "شعرها قصير وجميل."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which word means 'beautiful' or 'handsome'?",
+          "options": [
+            "جميل",
+            "كبير",
+            "صغير",
+            "طويل"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the opposite of 'كبير' (big).",
+          "options": [
+            "طويل",
+            "قصير",
+            "صغير",
+            "جميل"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Complete the sentence: 'هذا الكتاب ____ جداً.' (This book is ____ very much.)",
+          "options": [
+            "قصير",
+            "جميل",
+            "طويل",
+            "صغير"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word describes something 'short'?",
+          "options": [
+            "طويل",
+            "قصير",
+            "كبير",
+            "جميل"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "أهلاً بك! اليوم سنتعلم بعض الصفات الشائعة في اللغة العربية. سنتناول كلمات مثل \"جميل\" و\"كبير\" و\"صغير\" و\"طويل\" و\"قصير\"، ونتدرب على استخدامها في جمل. لنبدأ بكلمة \"جميل\". هل يمكنك تكرارها بعدي؟"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "السلام عليكم",
+          "phonetic": "As-salamu alaykum",
+          "meaning": "Hello / Peace be upon you",
+          "example": "السلام عليكم يا صديقي."
+        },
+        {
+          "word": "كيف حالك؟",
+          "phonetic": "Kayfa haluk?",
+          "meaning": "How are you? (masculine)",
+          "example": "كيف حالك يا أحمد؟"
+        },
+        {
+          "word": "أنا بخير، شكراً لك.",
+          "phonetic": "Ana bikhair, shukran lak.",
+          "meaning": "I'm fine, thank you. (to a male)",
+          "example": "أنا بخير، شكراً لك على السؤال."
+        },
+        {
+          "word": "ما اسمك؟",
+          "phonetic": "Ma ismuk?",
+          "meaning": "What's your name? (masculine)",
+          "example": "ما اسمك؟ أنا سارة."
+        },
+        {
+          "word": "اسمي...",
+          "phonetic": "Ismi...",
+          "meaning": "My name is...",
+          "example": "اسمي محمد."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Arabic?",
+          "options": [
+            "السلام عليكم",
+            "شكراً لك",
+            "كيف حالك؟",
+            "مع السلامة"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which phrase means \"How are you?\" (to a male)?",
+          "options": [
+            "ما اسمك؟",
+            "أنا بخير",
+            "كيف حالك؟",
+            "اسمي محمد"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you respond to \"ما اسمك؟\" (Ma ismuk? - What's your name?) if your name is Layla?",
+          "options": [
+            "أنا بخير",
+            "اسمي ليلى",
+            "السلام عليكم",
+            "شكراً لك"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "أهلاً بك في درس اليوم! اليوم سنتعلم بعض التحيات والعبارات الأساسية في اللغة العربية. سنتناول \"السلام عليكم\"، \"كيف حالك؟\"، \"أنا بخير، شكراً لك\"، \"ما اسمك؟\"، و\"اسمي...\". سأقول كل عبارة، ويمكنك التكرار من بعدي لممارسة النطق. ثم سنتدرب على استخدامها في محادثات بسيطة. لنبدأ بـ \"السلام عليكم\". هل يمكنك قول \"السلام عليكم\"؟"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "السلام عليكم",
+          "phonetic": "As-salamu alaykum",
+          "meaning": "Hello / Peace be upon you",
+          "example": "السلام عليكم، كيف حالك؟"
+        },
+        {
+          "word": "كيف حالك؟",
+          "phonetic": "Kayfa haluk?",
+          "meaning": "How are you?",
+          "example": "السلام عليكم، كيف حالك اليوم؟"
+        },
+        {
+          "word": "أنا بخير",
+          "phonetic": "Ana bi-khayr",
+          "meaning": "I am fine",
+          "example": "أنا بخير، شكراً لك."
+        },
+        {
+          "word": "شكراً",
+          "phonetic": "Shukran",
+          "meaning": "Thank you",
+          "example": "شكراً جزيلاً على مساعدتك."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Arabic?",
+          "options": [
+            "السلام عليكم",
+            "شكراً",
+            "أنا بخير",
+            "كيف حالك؟"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Arabic phrase means 'How are you?'",
+          "options": [
+            "أنا بخير",
+            "شكراً",
+            "كيف حالك؟",
+            "السلام عليكم"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks 'كيف حالك؟' (How are you?), how would you respond if you are fine?",
+          "options": [
+            "شكراً",
+            "أنا بخير",
+            "السلام عليكم",
+            "ما اسمك؟"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does the Arabic word 'شكراً' mean?",
+          "options": [
+            "Hello",
+            "Thank you",
+            "I am fine",
+            "What is your name?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "أهلاً بك في درسك الأول في اللغة العربية! أنا معلمك الافتراضي، ومتحمس جداً لمساعدتك في رحلتك لتعلم هذه اللغة الجميلة. اليوم سنتعلم بعض التحيات الأساسية التي ستساعدك على بدء المحادثات. سنبدأ بعبارة \"السلام عليكم\" (As-salamu alaykum)، وهي تحية شائعة جداً وتعني \"السلام عليكم\" أو \"مرحباً\". هل يمكنك محاولة قول \"السلام عليكم\"؟"
+    }
+  ]
+}

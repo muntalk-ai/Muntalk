@@ -1,0 +1,365 @@
+{
+  "languages": {
+    "ja-JP": {
+      "langLabel": "Japanese",
+      "langNative": "日本語",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-14T23:19:18.062Z"
+    },
+    "ko-KR": {
+      "langLabel": "Korean",
+      "langNative": "한국어",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-14T23:14:17.501Z"
+    },
+    "zh-CN": {
+      "langLabel": "Chinese (Simplified)",
+      "langNative": "中文 (简体)",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-14T23:19:50.343Z"
+    },
+    "zh-TW": {
+      "langLabel": "Chinese (Traditional)",
+      "langNative": "中文 (繁體)",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-14T23:21:20.495Z"
+    },
+    "es-ES": {
+      "langLabel": "Spanish",
+      "langNative": "Español",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-14T23:22:01.978Z"
+    },
+    "fr-FR": {
+      "langLabel": "French",
+      "langNative": "Français",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-14T22:40:23.927Z"
+    },
+    "de-DE": {
+      "langLabel": "German",
+      "langNative": "Deutsch",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-14T23:28:18.572Z"
+    },
+    "pt-BR": {
+      "langLabel": "Portuguese",
+      "langNative": "Português",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-14T23:28:47.217Z"
+    },
+    "it-IT": {
+      "langLabel": "Italian",
+      "langNative": "Italiano",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-14T23:24:57.589Z"
+    },
+    "ru-RU": {
+      "langLabel": "Russian",
+      "langNative": "Русский",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-14T23:29:32.900Z"
+    },
+    "en-US": {
+      "langLabel": "English (US)",
+      "langNative": "English (US)",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T14:51:45.940Z"
+    },
+    "en-GB": {
+      "langLabel": "English (UK)",
+      "langNative": "English (UK)",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T06:52:24.185Z"
+    },
+    "vi-VN": {
+      "langLabel": "Vietnamese",
+      "langNative": "Tiếng Việt",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T05:15:11.017Z"
+    },
+    "th-TH": {
+      "langLabel": "Thai",
+      "langNative": "ไทย",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T05:17:36.618Z"
+    },
+    "id-ID": {
+      "langLabel": "Indonesian",
+      "langNative": "Bahasa Indonesia",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-14T23:57:29.887Z"
+    },
+    "ms-MY": {
+      "langLabel": "Malay",
+      "langNative": "Bahasa Melayu",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T05:17:55.095Z"
+    },
+    "hi-IN": {
+      "langLabel": "Hindi",
+      "langNative": "हिन्दी",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T00:05:13.559Z"
+    },
+    "ar-SA": {
+      "langLabel": "Arabic",
+      "langNative": "العربية",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T05:19:52.762Z"
+    },
+    "tr-TR": {
+      "langLabel": "Turkish",
+      "langNative": "Türkçe",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T05:20:48.941Z"
+    },
+    "nl-NL": {
+      "langLabel": "Dutch",
+      "langNative": "Nederlands",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T05:21:03.502Z"
+    },
+    "pl-PL": {
+      "langLabel": "Polish",
+      "langNative": "Polski",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T07:30:05.712Z"
+    },
+    "sv-SE": {
+      "langLabel": "Swedish",
+      "langNative": "Svenska",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T00:35:56.866Z"
+    },
+    "da-DK": {
+      "langLabel": "Danish",
+      "langNative": "Dansk",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T05:24:49.565Z"
+    },
+    "fi-FI": {
+      "langLabel": "Finnish",
+      "langNative": "Suomi",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T00:47:21.895Z"
+    },
+    "no-NO": {
+      "langLabel": "Norwegian",
+      "langNative": "Norsk",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T07:30:50.477Z"
+    },
+    "cs-CZ": {
+      "langLabel": "Czech",
+      "langNative": "Čeština",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T06:55:39.130Z"
+    },
+    "hu-HU": {
+      "langLabel": "Hungarian",
+      "langNative": "Magyar",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T07:32:19.112Z"
+    },
+    "ro-RO": {
+      "langLabel": "Romanian",
+      "langNative": "Română",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T07:32:59.804Z"
+    },
+    "uk-UA": {
+      "langLabel": "Ukrainian",
+      "langNative": "Українська",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T05:33:31.710Z"
+    },
+    "el-GR": {
+      "langLabel": "Greek",
+      "langNative": "Ελληνικά",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T07:40:26.882Z"
+    },
+    "he-IL": {
+      "langLabel": "Hebrew",
+      "langNative": "עברית",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T07:34:55.622Z"
+    },
+    "fa-IR": {
+      "langLabel": "Persian",
+      "langNative": "فارسی",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T05:42:55.056Z"
+    },
+    "ur-PK": {
+      "langLabel": "Urdu",
+      "langNative": "اردو",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T05:44:23.798Z"
+    },
+    "bn-BD": {
+      "langLabel": "Bengali",
+      "langNative": "বাংলা",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T05:45:03.987Z"
+    },
+    "pa-IN": {
+      "langLabel": "Punjabi",
+      "langNative": "ਪੰਜਾਬੀ",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T14:54:25.546Z"
+    },
+    "ta-IN": {
+      "langLabel": "Tamil",
+      "langNative": "தமிழ்",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T05:48:12.890Z"
+    },
+    "te-IN": {
+      "langLabel": "Telugu",
+      "langNative": "తెలుగు",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T07:06:24.209Z"
+    },
+    "kn-IN": {
+      "langLabel": "Kannada",
+      "langNative": "ಕನ್ನಡ",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T07:06:50.321Z"
+    },
+    "ml-IN": {
+      "langLabel": "Malayalam",
+      "langNative": "മലയാളം",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T05:54:58.092Z"
+    },
+    "mr-IN": {
+      "langLabel": "Marathi",
+      "langNative": "मराठी",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T07:07:38.171Z"
+    },
+    "gu-IN": {
+      "langLabel": "Gujarati",
+      "langNative": "ગુજરાતી",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T07:07:52.678Z"
+    },
+    "fil-PH": {
+      "langLabel": "Filipino",
+      "langNative": "Filipino",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T02:43:37.419Z"
+    },
+    "sw-KE": {
+      "langLabel": "Swahili",
+      "langNative": "Kiswahili",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T05:56:56.576Z"
+    },
+    "am-ET": {
+      "langLabel": "Amharic",
+      "langNative": "አማርኛ",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T14:55:49.342Z"
+    },
+    "yo-NG": {
+      "langLabel": "Yoruba",
+      "langNative": "Yorùbá",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T14:56:38.112Z"
+    },
+    "ig-NG": {
+      "langLabel": "Igbo",
+      "langNative": "Asụsụ Igbo",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T06:09:34.398Z"
+    },
+    "af-ZA": {
+      "langLabel": "Afrikaans",
+      "langNative": "Afrikaans",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T07:54:17.239Z"
+    },
+    "zu-ZA": {
+      "langLabel": "Zulu",
+      "langNative": "isiZulu",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T07:16:24.416Z"
+    },
+    "sk-SK": {
+      "langLabel": "Slovak",
+      "langNative": "Slovenčina",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T06:12:52.989Z"
+    },
+    "bg-BG": {
+      "langLabel": "Bulgarian",
+      "langNative": "Български",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T06:13:57.772Z"
+    },
+    "hr-HR": {
+      "langLabel": "Croatian",
+      "langNative": "Hrvatski",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T07:54:45.447Z"
+    },
+    "sr-RS": {
+      "langLabel": "Serbian",
+      "langNative": "Српски",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T06:15:28.428Z"
+    },
+    "sl-SI": {
+      "langLabel": "Slovenian",
+      "langNative": "Slovenščina",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T03:57:01.486Z"
+    },
+    "et-EE": {
+      "langLabel": "Estonian",
+      "langNative": "Eesti",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T06:17:05.082Z"
+    },
+    "lv-LV": {
+      "langLabel": "Latvian",
+      "langNative": "Latviešu",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T07:55:40.102Z"
+    },
+    "lt-LT": {
+      "langLabel": "Lithuanian",
+      "langNative": "Lietuvių",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T06:21:41.661Z"
+    },
+    "ka-GE": {
+      "langLabel": "Georgian",
+      "langNative": "ქართული",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T06:23:24.177Z"
+    },
+    "hy-AM": {
+      "langLabel": "Armenian",
+      "langNative": "Հայերեն",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T14:59:04.159Z"
+    },
+    "az-AZ": {
+      "langLabel": "Azerbaijani",
+      "langNative": "Azərbaycan",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T07:24:31.696Z"
+    },
+    "kk-KZ": {
+      "langLabel": "Kazakh",
+      "langNative": "Қазақ тілі",
+      "totalLessons": 16,
+      "generatedAt": "2026-03-15T07:25:08.018Z"
+    }
+  },
+  "updatedAt": "2026-03-15T14:59:14.364Z"
+}

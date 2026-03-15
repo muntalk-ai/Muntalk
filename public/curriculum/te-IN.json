@@ -1,0 +1,1259 @@
+{
+  "langCode": "te-IN",
+  "langLabel": "Telugu",
+  "langNative": "తెలుగు",
+  "generatedAt": "2026-03-15T07:06:24.209Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "నమస్కారం",
+          "phonetic": "Namaskāram",
+          "meaning": "Hello / Namaste (a respectful greeting)",
+          "example": "నమస్కారం, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "మీరు ఎలా ఉన్నారు?",
+          "phonetic": "Mīru elā unnāru?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "నమస్కారం, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "నేను బాగున్నాను.",
+          "phonetic": "Nēnu bāgunnānu.",
+          "meaning": "I am good/fine.",
+          "example": "నేను బాగున్నాను, ధన్యవాదాలు."
+        },
+        {
+          "word": "ధన్యవాదాలు",
+          "phonetic": "Dhanyavādālu",
+          "meaning": "Thank you",
+          "example": "సహాయం చేసినందుకు ధన్యవాదాలు."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Telugu?",
+          "options": [
+            "నమస్కారం",
+            "ధన్యవాదాలు",
+            "నేను బాగున్నాను",
+            "మీరు ఎలా ఉన్నారు?"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does \"మీరు ఎలా ఉన్నారు?\" mean?",
+          "options": [
+            "I am good",
+            "Thank you",
+            "How are you?",
+            "Goodbye"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Telugu phrase for \"I am good.\"",
+          "options": [
+            "ధన్యవాదాలు",
+            "నేను బాగున్నాను",
+            "నమస్కారం",
+            "మీరు ఎలా ఉన్నారు?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Hello! Welcome to your first Telugu lesson. Today, we'll learn some essential greetings. We'll start with 'Hello' which is **నమస్కారం (Namaskāram)**. Try saying it with me: నమస్కారం. Great! Next, to ask 'How are you?', we say **మీరు ఎలా ఉన్నారు? (Mīru elā unnāru?)**. This is a polite way to ask. Can you repeat: మీరు ఎలా ఉన్నారు? Wonderful! And if someone asks you, you can reply 'I am good' with **నేను బాగున్నాను (Nēnu bāgunnānu)**. Let's practice: నేను బాగున్నాను. Finally, to express gratitude, we say 'Thank you' as **ధన్యవాదాలు (Dhanyavādālu)**. Say it aloud: ధన్యవాదాలు. Now, let's try putting them together! I'll say 'నమస్కారం, మీరు ఎలా ఉన్నారు?' and you can respond with 'నేను బాగున్నాను, ధన్యవాదాలు'. Ready? Let's begin!"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "నమస్కారం",
+          "phonetic": "Namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "నమస్కారం, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "మీరు ఎలా ఉన్నారు?",
+          "phonetic": "Mīru elā unnāru?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "నమస్కారం, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "నేను బాగున్నాను.",
+          "phonetic": "Nēnu bāgunnānu.",
+          "meaning": "I am good.",
+          "example": "మీరు ఎలా ఉన్నారు? నేను బాగున్నాను."
+        },
+        {
+          "word": "ధన్యవాదాలు",
+          "phonetic": "Dhan'yavādālu",
+          "meaning": "Thank you.",
+          "example": "మీ సహాయానికి ధన్యవాదాలు."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Greetings\" in Telugu?",
+          "options": [
+            "నమస్కారం",
+            "ధన్యవాదాలు",
+            "అవును",
+            "కాదు"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct way to ask \"How are you?\" (formal/plural) in Telugu?",
+          "options": [
+            "నేను బాగున్నాను",
+            "మీరు ఎలా ఉన్నారు?",
+            "ధన్యవాదాలు",
+            "అవును"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"మీరు ఎలా ఉన్నారు?\", how would you respond if you are good?",
+          "options": [
+            "ధన్యవాదాలు",
+            "నమస్కారం",
+            "నేను బాగున్నాను",
+            "కాదు"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "నమస్కారం! (Namaskāram!) ఈరోజు మనం తెలుగులో కొన్ని ముఖ్యమైన శుభాకాంక్షలు మరియు పరిచయాలను నేర్చుకుందాం. (Īrōju manaṁ Telugulō konni mukhyamaina śubhākāṅkṣalu mariyu paricayālanu nērcukundām.) మనం 'నమస్కారం' (Namaskāram), 'మీరు ఎలా ఉన్నారు?' (Mīru elā unnāru?), మరియు 'నేను బాగున్నాను' (Nēnu bāgunnānu) వంటి పదబంధాలను చూద్దాం. (Manaṁ 'Namaskāram', 'Mīru elā unnāru?', mariyu 'Nēnu bāgunnānu' vaṇṭi padabandhālanu cūddām.) నేను చెప్పిన తర్వాత మీరు కూడా చెప్పడానికి ప్రయత్నించండి. (Nēnu ceppina taruvāta mīru kūḍā ceppaḍāniki prayatnin̄caṇḍi.) మొదట, 'నమస్కారం' తో ప్రారంభిద్దాం. (Modaṭa, 'Namaskāram' tō prārambhid'dām.) మీరు 'నమస్కారం' అని చెప్పగలరా?"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "నమస్కారం",
+          "phonetic": "Namaskāram",
+          "meaning": "Hello / Greetings (formal, respectful)",
+          "example": "నమస్కారం, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "ఎలా ఉన్నారు?",
+          "phonetic": "Elā unnāru?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "మీరు ఎలా ఉన్నారు? నేను బాగున్నాను."
+        },
+        {
+          "word": "నేను బాగున్నాను",
+          "phonetic": "Nēnu bāgunnānu",
+          "meaning": "I am good / I am fine",
+          "example": "మీరు ఎలా ఉన్నారు? నేను బాగున్నాను."
+        },
+        {
+          "word": "ధన్యవాదాలు",
+          "phonetic": "Dhanyavādālu",
+          "meaning": "Thank you",
+          "example": "మీ సహాయానికి ధన్యవాదాలు."
+        },
+        {
+          "word": "అవును",
+          "phonetic": "Avunu",
+          "meaning": "Yes",
+          "example": "మీరు తెలుగు నేర్చుకుంటున్నారా? అవును."
+        },
+        {
+          "word": "కాదు",
+          "phonetic": "Kādu",
+          "meaning": "No / It is not",
+          "example": "ఇది మీ పుస్తకమా? కాదు."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Greetings\" in a respectful way in Telugu?",
+          "options": [
+            "ధన్యవాదాలు",
+            "నమస్కారం",
+            "ఎలా ఉన్నారు?",
+            "కాదు"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Telugu phrase means \"How are you?\" (formal/plural)?",
+          "options": [
+            "నేను బాగున్నాను",
+            "అవును",
+            "ఎలా ఉన్నారు?",
+            "ధన్యవాదాలు"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct Telugu translation for \"Thank you\"?",
+          "options": [
+            "నమస్కారం",
+            "కాదు",
+            "ధన్యవాదాలు",
+            "అవును"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say \"Yes\" in Telugu?",
+          "options": [
+            "కాదు",
+            "అవును",
+            "నేను బాగున్నాను",
+            "ఎలా ఉన్నారు?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "నమస్కారం! నేను మీ AI ట్యూటర్. ఈరోజు మనం కొన్ని ప్రాథమిక తెలుగు శుభాకాంక్షలు మరియు సాధారణ పదాలను నేర్చుకుందాం. మనం 'నమస్కారం' (Namaskāram), 'ఎలా ఉన్నారు?' (Elā unnāru?), 'నేను బాగున్నాను' (Nēnu bāgunnānu), 'ధన్యవాదాలు' (Dhanyavādālu), 'అవును' (Avunu), మరియు 'కాదు' (Kādu) వంటి పదాలను చూద్దాం. 'నమస్కారం' తో ప్రారంభిద్దాం. ఇది తెలుగులో 'హలో' లేదా 'శుభాకాంక్షలు' అని అర్థం. మీరు 'నమస్కారం' అని చెప్పగలరా? ప్రయత్నించండి!"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "నమస్కారం",
+          "phonetic": "Namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "నమస్కారం, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "మీరు ఎలా ఉన్నారు?",
+          "phonetic": "Mīru elā unnāru?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "టీచర్, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "నేను బాగున్నాను.",
+          "phonetic": "Nēnu bāgunnānu.",
+          "meaning": "I am fine.",
+          "example": "నేను బాగున్నాను, ధన్యవాదాలు."
+        },
+        {
+          "word": "మీ పేరు ఏమిటి?",
+          "phonetic": "Mī pēru ēmiṭi?",
+          "meaning": "What is your name? (formal/plural)",
+          "example": "క్షమించండి, మీ పేరు ఏమిటి?"
+        },
+        {
+          "word": "నా పేరు...",
+          "phonetic": "Nā pēru...",
+          "meaning": "My name is...",
+          "example": "నా పేరు రాము."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Telugu?",
+          "options": [
+            "నమస్కారం",
+            "ధన్యవాదాలు",
+            "క్షమించండి",
+            "వీడ్కోలు"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the correct Telugu phrase for \"How are you?\"",
+          "options": [
+            "మీరు ఎవరు?",
+            "మీరు ఎక్కడ ఉన్నారు?",
+            "మీరు ఎలా ఉన్నారు?",
+            "మీరు ఏమి చేస్తున్నారు?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you respond to \"మీరు ఎలా ఉన్నారు?\" (How are you?) if you are fine?",
+          "options": [
+            "నా పేరు...",
+            "నేను బాగున్నాను.",
+            "ధన్యవాదాలు.",
+            "క్షమించండి."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "నమస్కారం! (Namaskāram!) Welcome to your Telugu lesson! Today, we're going to learn some essential phrases for greetings and introductions. We'll cover how to say 'Hello' with 'నమస్కారం' (Namaskāram), ask 'How are you?' with 'మీరు ఎలా ఉన్నారు?' (Mīru elā unnāru?), and respond with 'నేను బాగున్నాను' (Nēnu bāgunnānu). We'll also learn how to ask 'What is your name?' with 'మీ పేరు ఏమిటి?' (Mī pēru ēmiṭi?) and introduce yourself using 'నా పేరు...' (Nā pēru...). Pay close attention to the pronunciation and try to repeat after me. Let's start practicing these fundamental Telugu phrases!"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "నమస్కారం",
+          "phonetic": "Namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "నమస్కారం, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "మీరు ఎలా ఉన్నారు?",
+          "phonetic": "Mīru elā unnāru?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "నమస్కారం, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "నేను బాగున్నాను",
+          "phonetic": "Nēnu bāgunnānu",
+          "meaning": "I am good / I am fine",
+          "example": "నేను బాగున్నాను, ధన్యవాదాలు."
+        },
+        {
+          "word": "ధన్యవాదాలు",
+          "phonetic": "Dhanyavādālu",
+          "meaning": "Thank you",
+          "example": "సహాయం చేసినందుకు ధన్యవాదాలు."
+        },
+        {
+          "word": "దయచేసి",
+          "phonetic": "Dayacēsi",
+          "meaning": "Please",
+          "example": "దయచేసి నాకు సహాయం చేయగలరా?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Greetings\" in Telugu?",
+          "options": [
+            "ధన్యవాదాలు",
+            "నమస్కారం",
+            "దయచేసి",
+            "నేను బాగున్నాను"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Telugu phrase means \"How are you?\" (formal/plural)?",
+          "options": [
+            "నేను బాగున్నాను",
+            "ధన్యవాదాలు",
+            "మీరు ఎలా ఉన్నారు?",
+            "దయచేసి"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"మీరు ఎలా ఉన్నారు?\" and you want to say \"I am good,\" what would you say?",
+          "options": [
+            "ధన్యవాదాలు",
+            "నమస్కారం",
+            "నేను బాగున్నాను",
+            "దయచేసి"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Telugu word for \"Thank you\"?",
+          "options": [
+            "దయచేసి",
+            "నమస్కారం",
+            "నేను బాగున్నాను",
+            "ధన్యవాదాలు"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "చాలా బాగుంది! ఈరోజు మనం కొన్ని సాధారణ తెలుగు పలకరింపులు మరియు ప్రాథమిక పదబంధాలు నేర్చుకుందాం. నేను ప్రతి పదాన్ని లేదా పదబంధాన్ని చెబుతాను, మీరు నా తర్వాత చెప్పండి. ఆ తర్వాత, మనం వాటిని సంభాషణలో ఉపయోగించడం సాధన చేద్దాం. సిద్ధంగా ఉన్నారా?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "నమస్కారం",
+          "phonetic": "Namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "నమస్కారం, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "ధన్యవాదాలు",
+          "phonetic": "Dhanyavādālu",
+          "meaning": "Thank you",
+          "example": "సహాయం చేసినందుకు ధన్యవాదాలు."
+        },
+        {
+          "word": "అవును",
+          "phonetic": "Avunu",
+          "meaning": "Yes",
+          "example": "అవును, ఇది నిజం."
+        },
+        {
+          "word": "కాదు",
+          "phonetic": "Kādu",
+          "meaning": "No / Not",
+          "example": "అది కాదు, ఇది."
+        },
+        {
+          "word": "దయచేసి",
+          "phonetic": "Dayacēsi",
+          "meaning": "Please",
+          "example": "దయచేసి నాకు సహాయం చేయండి."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Telugu?",
+          "options": [
+            "నమస్కారం",
+            "ధన్యవాదాలు",
+            "అవును",
+            "కాదు"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means \"Thank you\"?",
+          "options": [
+            "దయచేసి",
+            "అవును",
+            "ధన్యవాదాలు",
+            "కాదు"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Telugu word for \"Yes\"?",
+          "options": [
+            "కాదు",
+            "అవును",
+            "దయచేసి",
+            "నమస్కారం"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the word that means \"No\".",
+          "options": [
+            "అవును",
+            "ధన్యవాదాలు",
+            "కాదు",
+            "నమస్కారం"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Please\" in Telugu?",
+          "options": [
+            "అవును",
+            "కాదు",
+            "ధన్యవాదాలు",
+            "దయచేసి"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor teaching an A1 Telugu lesson. Start by greeting the student in Telugu: 'నమస్కారం!'. Introduce the lesson's goal: learning common Telugu greetings and polite phrases. Specifically mention the words: 'నమస్కారం' (Hello), 'ధన్యవాదాలు' (Thank you), 'అవును' (Yes), 'కాదు' (No), and 'దయచేసి' (Please). For each vocabulary word: 1. Say the Telugu word clearly. 2. Ask the student to repeat it. 3. Provide its English meaning. 4. Give a simple example sentence in Telugu and its English translation. Encourage the student to practice using these words in context. Start the lesson by introducing 'నమస్కారం'."
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "నమస్కారం",
+          "phonetic": "Namaskāram",
+          "meaning": "Hello / Namaste (a respectful greeting)",
+          "example": "నమస్కారం, మీరు ఎలా ఉన్నారు? (Namaskāram, mīru elā unnāru?)"
+        },
+        {
+          "word": "మీరు",
+          "phonetic": "Mīru",
+          "meaning": "You (formal/plural)",
+          "example": "మీరు ఎక్కడికి వెళ్తున్నారు? (Mīru ekkaḍiki veḷtunnāru?)"
+        },
+        {
+          "word": "ఎలా ఉన్నారు?",
+          "phonetic": "Elā unnāru?",
+          "meaning": "How are you?",
+          "example": "నమస్కారం, మీరు ఎలా ఉన్నారు? (Namaskāram, mīru elā unnāru?)"
+        },
+        {
+          "word": "నేను బాగున్నాను",
+          "phonetic": "Nēnu bāgunnānu",
+          "meaning": "I am fine / I am good",
+          "example": "మీరు ఎలా ఉన్నారు? నేను బాగున్నాను. (Mīru elā unnāru? Nēnu bāgunnānu.)"
+        },
+        {
+          "word": "ధన్యవాదాలు",
+          "phonetic": "Dhan'yavādālu",
+          "meaning": "Thank you",
+          "example": "సహాయం చేసినందుకు ధన్యవాదాలు. (Sahāyaṁ cēsinanduku dhan'yavādālu.)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Namaste\" in Telugu?",
+          "options": [
+            "ధన్యవాదాలు",
+            "నమస్కారం",
+            "నేను బాగున్నాను",
+            "మీరు"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Telugu phrase for \"How are you?\" (formal)?",
+          "options": [
+            "నేను బాగున్నాను",
+            "ధన్యవాదాలు",
+            "మీరు ఎలా ఉన్నారు?",
+            "నమస్కారం"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"నేను బాగున్నాను\" mean in English?",
+          "options": [
+            "Thank you",
+            "You are welcome",
+            "I am fine",
+            "Hello"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Telugu word for \"Thank you\".",
+          "options": [
+            "నమస్కారం",
+            "మీరు",
+            "నేను బాగున్నాను",
+            "ధన్యవాదాలు"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "నమస్కారం! (Namaskāram!) ఈ రోజు మనం కొన్ని ప్రాథమిక తెలుగు శుభాకాంక్షలు నేర్చుకుందాం. (Ī rōju manaṁ konni prāthamika Telugu śubhākāṅkṣalu nērcukundāṁ.) We'll cover 'నమస్కారం' (Namaskāram), 'మీరు ఎలా ఉన్నారు?' (Mīru elā unnāru?), and 'ధన్యవాదాలు' (Dhan'yavādālu). Let's start with 'నమస్కారం'. This is a common and respectful way to say 'Hello' or 'Namaste' in Telugu. Can you try saying 'నమస్కారం'?"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "నమస్కారం",
+          "phonetic": "Namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "నమస్కారం, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "ఎలా ఉన్నారు?",
+          "phonetic": "Elā unnāru?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "మీరు ఎలా ఉన్నారు? నేను బాగున్నాను."
+        },
+        {
+          "word": "బాగున్నాను",
+          "phonetic": "Bāgunnānu",
+          "meaning": "I am good / I am fine",
+          "example": "నేను బాగున్నాను, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "మీ పేరు ఏమిటి?",
+          "phonetic": "Mī pēru ēmiṭi?",
+          "meaning": "What is your name? (formal/plural)",
+          "example": "నమస్కారం, మీ పేరు ఏమిటి?"
+        },
+        {
+          "word": "నా పేరు ...",
+          "phonetic": "Nā pēru ...",
+          "meaning": "My name is ...",
+          "example": "నా పేరు ఆనంద్."
+        },
+        {
+          "word": "ధన్యవాదాలు",
+          "phonetic": "Dhanyavādālu",
+          "meaning": "Thank you",
+          "example": "సహాయం చేసినందుకు ధన్యవాదాలు."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Telugu?",
+          "options": [
+            "నమస్కారం",
+            "ధన్యవాదాలు",
+            "బాగున్నాను",
+            "ఎమిటి"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct response to \"మీరు ఎలా ఉన్నారు?\" (How are you?)",
+          "options": [
+            "నా పేరు",
+            "ధన్యవాదాలు",
+            "బాగున్నాను",
+            "ఎమిటి"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you ask \"What is your name?\" in Telugu?",
+          "options": [
+            "ధన్యవాదాలు",
+            "మీ పేరు ఏమిటి?",
+            "ఎలా ఉన్నారు?",
+            "నమస్కారం"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone helps you, what should you say?",
+          "options": [
+            "నా పేరు",
+            "బాగున్నాను",
+            "ధన్యవాదాలు",
+            "నమస్కారం"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Great job! In this lesson, we learned some basic Telugu greetings and introductions. We covered phrases like 'నమస్కారం' (Namaskāram) for 'Hello', 'మీరు ఎలా ఉన్నారు?' (Mīru elā unnāru?) for 'How are you?', and 'నా పేరు...' (Nā pēru...) for 'My name is...'. We also learned 'ధన్యవాదాలు' (Dhanyavādālu) for 'Thank you'. To practice, can you tell me what you remember about saying 'Hello' in Telugu? Try to use the word 'నమస్కారం' in your answer!"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "నమస్కారం",
+          "phonetic": "Namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "నమస్కారం, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "మీరు ఎలా ఉన్నారు?",
+          "phonetic": "Mīru elā unnāru?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "నమస్కారం, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "నేను బాగున్నాను.",
+          "phonetic": "Nēnu bāgunnānu.",
+          "meaning": "I am fine.",
+          "example": "నేను బాగున్నాను, ధన్యవాదాలు."
+        },
+        {
+          "word": "ధన్యవాదాలు",
+          "phonetic": "Dhanyavādālu",
+          "meaning": "Thank you",
+          "example": "సహాయం చేసినందుకు ధన్యవాదాలు."
+        },
+        {
+          "word": "దయచేసి",
+          "phonetic": "Dayacēsi",
+          "meaning": "Please",
+          "example": "దయచేసి నాకు సహాయం చేయగలరా?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Telugu?",
+          "options": [
+            "ధన్యవాదాలు",
+            "నమస్కారం",
+            "నేను బాగున్నాను",
+            "దయచేసి"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the meaning of \"మీరు ఎలా ఉన్నారు?\"?",
+          "options": [
+            "I am fine.",
+            "Thank you.",
+            "How are you?",
+            "Please."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Telugu word for \"Thank you\".",
+          "options": [
+            "నమస్కారం",
+            "నేను బాగున్నాను",
+            "ధన్యవాదాలు",
+            "మీరు ఎలా ఉన్నారు?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "నమస్కారం! (Namaskāram!) Today we're going to learn some basic Telugu greetings and common phrases. We'll cover 'నమస్కారం' (Namaskāram), 'మీరు ఎలా ఉన్నారు?' (Mīru elā unnāru?), 'నేను బాగున్నాను' (Nēnu bāgunnānu), 'ధన్యవాదాలు' (Dhanyavādālu), and 'దయచేసి' (Dayacēsi). Let's start with 'నమస్కారం'. This means 'Hello' or 'Greetings'. Can you try saying 'నమస్కారం'?"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "నమస్కారం",
+          "phonetic": "Namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "నమస్కారం! మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "ఎలా ఉన్నారు?",
+          "phonetic": "Elā unnāru?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "మీరు ఎలా ఉన్నారు? నేను బాగున్నాను."
+        },
+        {
+          "word": "నేను బాగున్నాను.",
+          "phonetic": "Nēnu bāgunnānu.",
+          "meaning": "I am good.",
+          "example": "మీరు ఎలా ఉన్నారు? నేను బాగున్నాను, ధన్యవాదాలు."
+        },
+        {
+          "word": "మీ పేరు ఏమిటి?",
+          "phonetic": "Mī pēru ēmiṭi?",
+          "meaning": "What is your name? (formal/plural)",
+          "example": "నమస్కారం, మీ పేరు ఏమిటి?"
+        },
+        {
+          "word": "నా పేరు...",
+          "phonetic": "Nā pēru...",
+          "meaning": "My name is...",
+          "example": "నా పేరు రాము."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Greetings\" in Telugu?",
+          "options": [
+            "నమస్కారం",
+            "ధన్యవాదాలు",
+            "అవును",
+            "కాదు"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Telugu phrase means \"How are you?\" (formal/plural)?",
+          "options": [
+            "నా పేరు",
+            "ఎలా ఉన్నారు?",
+            "నేను బాగున్నాను",
+            "ఏమిటి?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"ఎలా ఉన్నారు?\" (How are you?), how would you respond if you are good?",
+          "options": [
+            "మీ పేరు ఏమిటి?",
+            "నా పేరు",
+            "నేను బాగున్నాను",
+            "నమస్కారం"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you ask \"What is your name?\" (formal/plural) in Telugu?",
+          "options": [
+            "నేను బాగున్నాను",
+            "నా పేరు",
+            "మీ పేరు ఏమిటి?",
+            "ఎలా ఉన్నారు?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "నమస్కారం! ఈరోజు మనం తెలుగులో కొన్ని ముఖ్యమైన పలకరింపులు మరియు పరిచయాలు నేర్చుకుందాం. ఈ పాఠంలో, మీరు 'నమస్కారం' (Hello), 'ఎలా ఉన్నారు?' (How are you?), మరియు 'నా పేరు...' (My name is...) వంటి పదబంధాలను నేర్చుకుంటారు. నేను చెప్పిన తర్వాత మీరు వినండి మరియు పునరావృతం చేయండి. మనం 'నమస్కారం' తో ప్రారంభిద్దాం. ఇది తెలుగులో 'హలో' లేదా 'గ్రీటింగ్స్' అని అర్థం. మీరు 'నమస్కారం' అని చెప్పగలరా? అద్భుతం! ఇప్పుడు, ఎవరైనా మిమ్మల్ని 'ఎలా ఉన్నారు?' అని అడిగితే, మీరు 'నేను బాగున్నాను' అని ఎలా సమాధానం చెబుతారో చూద్దాం. ప్రయత్నించండి! చివరగా, మీ పేరు చెప్పడానికి 'నా పేరు...' ఎలా ఉపయోగించాలో నేర్చుకుందాం. ఉదాహరణకు, 'నా పేరు [మీ పేరు]'. మీరు మీ పేరు చెప్పగలరా? చాలా బాగుంది! ఈ పదబంధాలను ఉపయోగించి సంభాషణను ప్రాక్టీస్ చేద్దాం."
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "నమస్కారం",
+          "phonetic": "Namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "నమస్కారం, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "ధన్యవాదాలు",
+          "phonetic": "Dhanyavādālu",
+          "meaning": "Thank you",
+          "example": "మీ సహాయానికి ధన్యవాదాలు."
+        },
+        {
+          "word": "అవును",
+          "phonetic": "Avunu",
+          "meaning": "Yes",
+          "example": "అవును, నేను వస్తాను."
+        },
+        {
+          "word": "లేదు",
+          "phonetic": "Lēdu",
+          "meaning": "No / Not available / Don't have",
+          "example": "నాకు సమయం లేదు."
+        },
+        {
+          "word": "దయచేసి",
+          "phonetic": "Dayacēsi",
+          "meaning": "Please",
+          "example": "దయచేసి నాకు సహాయం చేయండి."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Telugu word for \"Hello\"?",
+          "options": [
+            "నమస్కారం",
+            "ధన్యవాదాలు",
+            "అవును",
+            "లేదు"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say \"Thank you\" in Telugu?",
+          "options": [
+            "దయచేసి",
+            "నమస్కారం",
+            "ధన్యవాదాలు",
+            "అవును"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Telugu word for \"Yes\".",
+          "options": [
+            "లేదు",
+            "అవును",
+            "కాదు",
+            "దయచేసి"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Telugu word means \"No\" (in the sense of not having or not available)?",
+          "options": [
+            "కాదు",
+            "అవును",
+            "లేదు",
+            "దయచేసి"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Telugu equivalent for \"Please\"?",
+          "options": [
+            "ధన్యవాదాలు",
+            "అవును",
+            "నమస్కారం",
+            "దయచేసి"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "నమస్కారం! నేను మీ AI ట్యూటర్. ఈరోజు మనం కొన్ని ప్రాథమిక తెలుగు పదబంధాలను నేర్చుకుందాం. మనం 'నమస్కారం' (Namaskāram), 'ధన్యవాదాలు' (Dhanyavādālu), 'అవును' (Avunu), 'లేదు' (Lēdu), మరియు 'దయచేసి' (Dayacēsi) వంటి పదాలను చూద్దాం. నేను పదం చెబుతాను, మీరు నా తర్వాత పునరావృతం చేయవచ్చు. మనం 'నమస్కారం' తో ప్రారంభిద్దాం. తెలుగులో, ఎవరినైనా పలకరించడానికి 'నమస్కారం' అని అంటాము. మీరు 'నమస్కారం' అని చెప్పడానికి ప్రయత్నిస్తారా?"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "నమస్కారం",
+          "phonetic": "Namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "నమస్కారం, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "ధన్యవాదాలు",
+          "phonetic": "Dhanyavādālu",
+          "meaning": "Thank you",
+          "example": "సహాయం చేసినందుకు ధన్యవాదాలు."
+        },
+        {
+          "word": "క్షమించండి",
+          "phonetic": "Kṣamin̄caṇḍi",
+          "meaning": "Excuse me / Sorry",
+          "example": "క్షమించండి, నేను ఆలస్యంగా వచ్చాను."
+        },
+        {
+          "word": "అవును",
+          "phonetic": "Avunu",
+          "meaning": "Yes",
+          "example": "అవును, ఇది నిజం."
+        },
+        {
+          "word": "కాదు",
+          "phonetic": "Kādu",
+          "meaning": "No",
+          "example": "కాదు, అది తప్పు."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Telugu word for \"Hello\"?",
+          "options": [
+            "నమస్కారం",
+            "ధన్యవాదాలు",
+            "క్షమించండి",
+            "అవును"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say \"Thank you\" in Telugu?",
+          "options": [
+            "కాదు",
+            "అవును",
+            "ధన్యవాదాలు",
+            "నమస్కారం"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Telugu word for \"Yes\".",
+          "options": [
+            "క్షమించండి",
+            "కాదు",
+            "అవును",
+            "నమస్కారం"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Telugu word means \"Sorry\" or \"Excuse me\"?",
+          "options": [
+            "ధన్యవాదాలు",
+            "క్షమించండి",
+            "కాదు",
+            "అవును"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "నమస్కారం! (Namaskāram!) ఈ రోజు మనం తెలుగులో కొన్ని ముఖ్యమైన పదబంధాలను నేర్చుకుందాం. (Ī rōju manaṁ Telugulō konni mukhyamaina padabandhālanu nērcukundāṁ.) మనం 'నమస్కారం' (Namaskāram - Hello), 'ధన్యవాదాలు' (Dhanyavādālu - Thank you), 'క్షమించండి' (Kṣamin̄caṇḍi - Excuse me/Sorry), 'అవును' (Avunu - Yes), మరియు 'కాదు' (Kādu - No) వంటి పదాలను నేర్చుకుంటాము. (Manaṁ 'Namaskāram' (Hello), 'Dhanyavādālu' (Thank you), 'Kṣamin̄caṇḍi' (Excuse me/Sorry), 'Avunu' (Yes), mariyu 'Kādu' (No) vaṇṭi padālānu nērcukuṇṭāmu.) ఈ పదాలను ఎలా పలకాలో మరియు వాక్యాలలో ఎలా ఉపయోగించాలో చూద్దాం. (Ī padālānu elā palakālō mariyu vākyālallō elā upayōgin̄cālō cūddāṁ.) మనం 'నమస్కారం' (Namaskāram) తో మొదలుపెడదాం. (Manaṁ 'Namaskāram' tō modalupeḍadāṁ.) మీరు నా తర్వాత చెప్పగలరా? (Mīru nā tarvāta ceppagalarā?)"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "పెద్ద",
+          "phonetic": "pedda",
+          "meaning": "big",
+          "example": "ఇది పెద్ద ఇల్లు."
+        },
+        {
+          "word": "చిన్న",
+          "phonetic": "chinna",
+          "meaning": "small",
+          "example": "అది చిన్న కుక్క."
+        },
+        {
+          "word": "అందమైన",
+          "phonetic": "andamaina",
+          "meaning": "beautiful",
+          "example": "ఆమె అందమైన అమ్మాయి."
+        },
+        {
+          "word": "పొడవైన",
+          "phonetic": "poḍavaina",
+          "meaning": "tall / long",
+          "example": "ఇది పొడవైన చెట్టు."
+        },
+        {
+          "word": "పొట్టి",
+          "phonetic": "poṭṭi",
+          "meaning": "short",
+          "example": "అతను పొట్టి మనిషి."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Telugu word means \"big\"?",
+          "options": [
+            "పెద్ద",
+            "చిన్న",
+            "అందమైన",
+            "పొట్టి"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say \"small\" in Telugu?",
+          "options": [
+            "పొడవైన",
+            "పెద్ద",
+            "చిన్న",
+            "అందమైన"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Telugu word for \"beautiful\".",
+          "options": [
+            "పొట్టి",
+            "అందమైన",
+            "పెద్ద",
+            "చిన్న"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word would you use to describe something \"tall\" or \"long\"?",
+          "options": [
+            "పొట్టి",
+            "చిన్న",
+            "పెద్ద",
+            "పొడవైన"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "నమస్కారం! ఈరోజు మనం వస్తువులను, వ్యక్తులను ఎలా వర్ణించాలో నేర్చుకుందాం. కొన్ని ముఖ్యమైన తెలుగు విశేషణాలను చూద్దాం.\n\nమొదట, 'పెద్ద' (pedda) అంటే 'big'. ఉదాహరణకు, 'ఇది పెద్ద ఇల్లు' (Idi pedda illu) అంటే 'This is a big house'.\nతరువాత, 'చిన్న' (chinna) అంటే 'small'. ఉదాహరణకు, 'అది చిన్న కుక్క' (Adi chinna kukka) అంటే 'That is a small dog'.\nఇప్పుడు, 'అందమైన' (andamaina) అంటే 'beautiful'. 'ఆమె అందమైన అమ్మాయి' (Aame andamaina ammayi) అంటే 'She is a beautiful girl'.\nతరువాత, 'పొడవైన' (poḍavaina) అంటే 'tall' లేదా 'long'. 'ఇది పొడవైన చెట్టు' (Idi poḍavaina cheṭṭu) అంటే 'This is a tall tree'.\nచివరగా, 'పొట్టి' (poṭṭi) అంటే 'short'. 'అతను పొట్టి మనిషి' (Atanu poṭṭi manishi) అంటే 'He is a short person'.\n\nఈ పదాలను ఉపయోగించి మీరు కొన్ని వాక్యాలు చెప్పగలరా? ఉదాహరణకు, మీ ఇంట్లో పెద్ద వస్తువు ఏమిటి? లేదా మీకు తెలిసిన ఒక అందమైన ప్రదేశం గురించి చెప్పండి."
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "తినడం",
+          "phonetic": "tinadam",
+          "meaning": "to eat",
+          "example": "నేను అన్నం తింటాను."
+        },
+        {
+          "word": "త్రాగడం",
+          "phonetic": "tragadam",
+          "meaning": "to drink",
+          "example": "ఆమె నీళ్లు తాగుతుంది."
+        },
+        {
+          "word": "వెళ్ళడం",
+          "phonetic": "velladam",
+          "meaning": "to go",
+          "example": "వాళ్ళు బడికి వెళ్తారు."
+        },
+        {
+          "word": "రావడం",
+          "phonetic": "ravadam",
+          "meaning": "to come",
+          "example": "అతను ఇంటికి వస్తాడు."
+        },
+        {
+          "word": "మాట్లాడటం",
+          "phonetic": "matladatam",
+          "meaning": "to speak / to talk",
+          "example": "మేము తెలుగు మాట్లాడతాము."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Telugu word means 'to eat'?",
+          "options": [
+            "త్రాగడం",
+            "తినడం",
+            "వెళ్ళడం",
+            "రావడం"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say 'to drink' in Telugu?",
+          "options": [
+            "మాట్లాడటం",
+            "త్రాగడం",
+            "తినడం",
+            "వెళ్ళడం"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Telugu word for 'go' in the sentence: 'I want to ___ home.'",
+          "options": [
+            "వెళ్ళాలి",
+            "తినాలి",
+            "త్రాగాలి",
+            "మాట్లాడాలి"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "నమస్కారం! ఈరోజు మనం కొన్ని ముఖ్యమైన తెలుగు క్రియలను నేర్చుకుందాం. మనం 'తినడం' (tinadam), 'త్రాగడం' (tragadam), 'వెళ్ళడం' (velladam), 'రావడం' (ravadam), మరియు 'మాట్లాడటం' (matladatam) వంటి పదాలను చూద్దాం. వీటిని వాక్యాలలో ఎలా ఉపయోగించాలో కూడా నేర్చుకుందాం.\n\nమొదట, 'తినడం' (tinadam) అనే పదం నుండి ప్రారంభిద్దాం. దీని అర్థం 'to eat'. ఉదాహరణకు, 'నేను పండు తింటాను' (Nenu pandu tintanu) అంటే 'I eat fruit'.\n\nతరువాత, 'త్రాగడం' (tragadam). దీని అర్థం 'to drink'. 'ఆమె నీళ్లు తాగుతుంది' (Aame neellu tagutundi) అంటే 'She drinks water'.\n\nఇప్పుడు, 'వెళ్ళడం' (velladam). దీని అర్థం 'to go'. 'వాళ్ళు బడికి వెళ్తారు' (Vaallu badiki veltaaru) అంటే 'They go to school'.\n\nతరువాత, 'రావడం' (ravadam). దీని అర్థం 'to come'. 'అతను ఇంటికి వస్తాడు' (Atanu intiki vastaadu) అంటే 'He comes home'.\n\nచివరగా, 'మాట్లాడటం' (matladatam). దీని అర్థం 'to speak' లేదా 'to talk'. 'మేము తెలుగు మాట్లాడతాము' (Memu Telugu matladatam) అంటే 'We speak Telugu'.\n\nఈ పదాలను ఉపయోగించి కొన్ని వాక్యాలు చెప్పడానికి మీరు సిద్ధంగా ఉన్నారా? మనం 'తినడం' తో మొదలుపెడదాం. మీరు 'నేను టిఫిన్ తింటాను' (Nenu tiffin tintanu) అని చెప్పగలరా?"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "మీరు ఎలా ఉన్నారు?",
+          "phonetic": "Meeru elā unnāru?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "మీరు ఎలా ఉన్నారు? నేను బాగున్నాను."
+        },
+        {
+          "word": "నేను బాగున్నాను.",
+          "phonetic": "Nēnu bāgunnānu.",
+          "meaning": "I am fine.",
+          "example": "మీరు ఎలా ఉన్నారు? నేను బాగున్నాను, ధన్యవాదాలు."
+        },
+        {
+          "word": "ధన్యవాదాలు",
+          "phonetic": "Dhanyavādālu",
+          "meaning": "Thank you",
+          "example": "సహాయం చేసినందుకు ధన్యవాదాలు."
+        },
+        {
+          "word": "దయచేసి",
+          "phonetic": "Dayacēsi",
+          "meaning": "Please",
+          "example": "దయచేసి నాకు ఒక గ్లాసు నీళ్ళు ఇవ్వండి."
+        },
+        {
+          "word": "క్షమించండి",
+          "phonetic": "Kṣamin̄caṇḍi",
+          "meaning": "Sorry / Excuse me",
+          "example": "ఆలస్యమైనందుకు క్షమించండి."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you ask \"How are you?\" to an elder or in a formal setting in Telugu?",
+          "options": [
+            "నేను బాగున్నాను",
+            "మీరు ఎలా ఉన్నారు?",
+            "ధన్యవాదాలు",
+            "దయచేసి"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct Telugu phrase for \"I am fine\"?",
+          "options": [
+            "క్షమించండి",
+            "దయచేసి",
+            "నేను బాగున్నాను",
+            "మీరు ఎవరు?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the Telugu word that means \"Thank you\".",
+          "options": [
+            "ధన్యవాదాలు",
+            "క్షమించండి",
+            "దయచేసి",
+            "నమస్కారం"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "If you want to say \"Please\" in Telugu, which word would you use?",
+          "options": [
+            "క్షమించండి",
+            "ధన్యవాదాలు",
+            "దయచేసి",
+            "ఎలా ఉన్నారు?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "నమస్కారం! ఈరోజు మనం తెలుగులో కొన్ని ముఖ్యమైన సంభాషణ పదబంధాలను నేర్చుకుందాం. మనం 'మీరు ఎలా ఉన్నారు?' (How are you?), 'నేను బాగున్నాను' (I am fine), 'ధన్యవాదాలు' (Thank you), 'దయచేసి' (Please), మరియు 'క్షమించండి' (Sorry/Excuse me) వంటి పదాలను చూద్దాం. ఈ పదాలను ఉపయోగించి మనం ఎలా మాట్లాడాలో మరియు సంభాషణలలో వాటిని ఎలా వాడాలో నేర్చుకుందాం. మీరు సిద్ధంగా ఉన్నారా? ప్రారంభిద్దామా!"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "నమస్కారం",
+          "phonetic": "Namaskaram",
+          "meaning": "Hello / Greetings",
+          "example": "నమస్కారం, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "మీరు ఎలా ఉన్నారు?",
+          "phonetic": "Meeru ela unnaru?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "నమస్కారం, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "నేను బాగున్నాను.",
+          "phonetic": "Nenu baagunnaanu.",
+          "meaning": "I am good/fine.",
+          "example": "నేను బాగున్నాను, మీరు ఎలా ఉన్నారు?"
+        },
+        {
+          "word": "ధన్యవాదాలు",
+          "phonetic": "Dhanyavaadaalu",
+          "meaning": "Thank you.",
+          "example": "సహాయం చేసినందుకు ధన్యవాదాలు."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Greetings\" in Telugu?",
+          "options": [
+            "నమస్కారం",
+            "ధన్యవాదాలు",
+            "నేను బాగున్నాను",
+            "మీరు ఎలా ఉన్నారు?"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the meaning of \"మీరు ఎలా ఉన్నారు?\"",
+          "options": [
+            "I am good.",
+            "Thank you.",
+            "How are you?",
+            "Yes."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Telugu phrase means \"I am good/fine\"?",
+          "options": [
+            "ధన్యవాదాలు",
+            "నేను బాగున్నాను",
+            "నమస్కారం",
+            "కాదు"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "నమస్కారం! ఈరోజు మనం తెలుగులో కొన్ని ప్రాథమిక పదబంధాలను నేర్చుకుందాం. మనం 'నమస్కారం', 'మీరు ఎలా ఉన్నారు?', 'నేను బాగున్నాను', 'ధన్యవాదాలు' వంటి పదాలను చూద్దాం. ఈ పదాలను ఎలా ఉపయోగించాలో చూద్దాం. మొదలుపెడదామా!"
+    }
+  ]
+}

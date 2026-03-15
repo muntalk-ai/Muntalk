@@ -1,0 +1,1249 @@
+{
+  "langCode": "kk-KZ",
+  "langLabel": "Kazakh",
+  "langNative": "Қазақ тілі",
+  "generatedAt": "2026-03-15T07:25:08.018Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Сәлем",
+          "phonetic": "Sälem",
+          "meaning": "Hello (informal)",
+          "example": "Сәлем, досым! Қалың қалай?"
+        },
+        {
+          "word": "Қалың қалай?",
+          "phonetic": "Qalyñ qalay?",
+          "meaning": "How are you? (informal)",
+          "example": "Сәлем, Асқар! Қалың қалай?"
+        },
+        {
+          "word": "Жақсымын",
+          "phonetic": "Zhaqsymyn",
+          "meaning": "I am fine / I am good",
+          "example": "Рахмет, жақсымын."
+        },
+        {
+          "word": "Рахмет",
+          "phonetic": "Rakhmet",
+          "meaning": "Thank you",
+          "example": "Көмегіңізге рахмет."
+        },
+        {
+          "word": "Сау бол",
+          "phonetic": "Sau bol",
+          "meaning": "Goodbye (informal, singular)",
+          "example": "Сау бол, ертең кездесейік!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Kazakh?",
+          "options": [
+            "Сау бол",
+            "Рахмет",
+            "Сәлем",
+            "Жақсымын"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct Kazakh phrase for \"How are you?\" (informal)?",
+          "options": [
+            "Жақсымын",
+            "Қалың қалай?",
+            "Сау бол",
+            "Рахмет"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"Қалың қалай?\", how would you respond if you are fine?",
+          "options": [
+            "Сау бол",
+            "Рахмет",
+            "Сәлем",
+            "Жақсымын"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Сәлем! Мен сіздің қазақ тілі мұғаліміңіз. Бүгін біз қазақ тіліндегі ең қарапайым амандасу сөздерін үйренеміз. Бұл сөздер сізге қазақша сөйлесуді бастауға көмектеседі. Біз 'Сәлем' (Hello), 'Қалың қалай?' (How are you?), 'Жақсымын' (I am fine), 'Рахмет' (Thank you) және 'Сау бол' (Goodbye) деген сөздерді қарастырамыз. Алдымен, 'Сәлем' сөзінен бастайық. Бұл – бейресми амандасу. 'Сәлем' деп айтып көріңізші."
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Сәлеметсіз бе?",
+          "phonetic": "Sälemetsiz be?",
+          "meaning": "Hello (formal)",
+          "example": "Сәлеметсіз бе? Қалыңыз қалай?"
+        },
+        {
+          "word": "Менің атым...",
+          "phonetic": "Meniñ atym...",
+          "meaning": "My name is...",
+          "example": "Сәлеметсіз бе! Менің атым Айгүл."
+        },
+        {
+          "word": "Қалыңыз қалай?",
+          "phonetic": "Qalyñyz qalai?",
+          "meaning": "How are you? (formal)",
+          "example": "Сәлеметсіз бе, Нұрлан! Қалыңыз қалай?"
+        },
+        {
+          "word": "Жақсы, рахмет.",
+          "phonetic": "Jaqsy, rahmet.",
+          "meaning": "Fine, thank you.",
+          "example": "Қалыңыз қалай? – Жақсы, рахмет."
+        },
+        {
+          "word": "Сау болыңыз!",
+          "phonetic": "Sau bolyñyz!",
+          "meaning": "Goodbye (formal)",
+          "example": "Сау болыңыз! Ертең кездескенше."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal) in Kazakh?",
+          "options": [
+            "Сау болыңыз!",
+            "Қалыңыз қалай?",
+            "Сәлеметсіз бе?",
+            "Рахмет."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"My name is...\"?",
+          "options": [
+            "Жақсы, рахмет.",
+            "Менің атым...",
+            "Сау болыңыз!",
+            "Қалыңыз қалай?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to \"Қалыңыз қалай?\" (How are you?)",
+          "options": [
+            "Сәлеметсіз бе!",
+            "Менің атым Айгүл.",
+            "Жақсы, рахмет.",
+            "Сау болыңыз!"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Goodbye\" (formal) in Kazakh?",
+          "options": [
+            "Сәлеметсіз бе!",
+            "Сау болыңыз!",
+            "Рахмет!",
+            "Қалыңыз қалай?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Керемет жұмыс! Бүгін біз қазақ тіліндегі қарапайым амандасу сөздерін үйрендік. Енді маған қазақша \"Сәлеметсіз бе?\" дегенді қалай айтатыныңызды көрсетіңізші. Ал өзіңізді таныстырғанда, \"Менің атым...\" тіркесін қалай қолданасыз? \"Қалыңыз қалай?\" деген сұраққа қалай жауап бересіз? Соңында, қоштасқанда \"Сау болыңыз!\" деп қалай айтатыныңызды айтып беріңізші."
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Сәлем!",
+          "phonetic": "Sälem!",
+          "meaning": "Hello! (informal)",
+          "example": "Сәлем! Қалың қалай?"
+        },
+        {
+          "word": "Қалың қалай?",
+          "phonetic": "Qalıñ qalay?",
+          "meaning": "How are you? (informal, singular)",
+          "example": "Сәлем! Қалың қалай?"
+        },
+        {
+          "word": "Жақсы.",
+          "phonetic": "Jaqsı.",
+          "meaning": "Good. / Fine.",
+          "example": "Мен жақсымын, рахмет."
+        },
+        {
+          "word": "Рахмет.",
+          "phonetic": "Rahmet.",
+          "meaning": "Thank you.",
+          "example": "Көмегіңізге рахмет."
+        },
+        {
+          "word": "Сау бол!",
+          "phonetic": "Saw bol!",
+          "meaning": "Goodbye! (informal, singular)",
+          "example": "Сау бол! Ертең кездесейік."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Kazakh?",
+          "options": [
+            "Сәлем",
+            "Рахмет",
+            "Сау бол",
+            "Жақсы"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does \"Рахмет\" mean?",
+          "options": [
+            "Hello",
+            "Goodbye",
+            "Thank you",
+            "How are you?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"How are you?\" in Kazakh?",
+          "options": [
+            "Жақсы",
+            "Сау бол",
+            "Қалың қалай?",
+            "Сәлем"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "You are an AI Kazakh tutor. Your goal is to help the learner understand and use the new vocabulary and phrases from this lesson. Start by greeting the learner and asking them to practice saying \"Сәлем\" (Hello) and \"Сау бол\" (Goodbye) in Kazakh. Then, introduce the new phrases \"Қалың қалай?\" (How are you?) and \"Жақсы\" (I'm good) and guide them through a short conversation using all the new vocabulary. Encourage them to ask questions and provide positive feedback."
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Сәлем",
+          "phonetic": "Sälem",
+          "meaning": "Hello (informal)",
+          "example": "Сәлем, қалайсың?"
+        },
+        {
+          "word": "Қалайсың?",
+          "phonetic": "Qalaysyñ?",
+          "meaning": "How are you? (informal, to one person)",
+          "example": "Сәлем, Азат! Қалайсың?"
+        },
+        {
+          "word": "Рахмет",
+          "phonetic": "Rahmet",
+          "meaning": "Thank you",
+          "example": "Көмегіңізге рахмет!"
+        },
+        {
+          "word": "Иә",
+          "phonetic": "Ïä",
+          "meaning": "Yes",
+          "example": "Иә, мен келемін."
+        },
+        {
+          "word": "Жоқ",
+          "phonetic": "Joq",
+          "meaning": "No",
+          "example": "Жоқ, мен бармаймын."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (informal) in Kazakh?",
+          "options": [
+            "Рахмет",
+            "Сәлем",
+            "Қалайсың?",
+            "Жоқ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Kazakh word for \"Thank you\"?",
+          "options": [
+            "Иә",
+            "Жоқ",
+            "Рахмет",
+            "Сәлем"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Kazakh word means \"Yes\"?",
+          "options": [
+            "Жоқ",
+            "Қалайсың?",
+            "Иә",
+            "Сәлем"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"How are you?\" (informal, to one person) in Kazakh?",
+          "options": [
+            "Рахмет",
+            "Иә",
+            "Жоқ",
+            "Қалайсың?"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Сәлем! Бүгінгі сабақта қазақ тіліндегі негізгі сәлемдесу және қарапайым жауаптарды үйрендік. Біз \"Сәлем\" (Hello), \"Қалайсың?\" (How are you?), \"Рахмет\" (Thank you), \"Иә\" (Yes) және \"Жоқ\" (No) сияқты маңызды сөздерді қарастырдық. Енді осы сөздерді қолданып, бірнеше сөйлем құрастырып көрейік. Мысалы, біреумен кездескенде қалай сәлемдесер едің? \"Сәлем\" деп бастап, оған \"Қалайсың?\" деп сұрақ қойып көр."
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Сәлеметсіз бе?",
+          "phonetic": "Sälemetsiz be?",
+          "meaning": "Hello (formal)",
+          "example": "Сәлеметсіз бе? Қалыңыз қалай?"
+        },
+        {
+          "word": "Қалыңыз қалай?",
+          "phonetic": "Qalyñyz qalay?",
+          "meaning": "How are you? (formal)",
+          "example": "Сәлеметсіз бе, Айгүл! Қалыңыз қалай?"
+        },
+        {
+          "word": "Жақсы",
+          "phonetic": "Jaqsy",
+          "meaning": "Good, fine",
+          "example": "Мен жақсымын, рахмет."
+        },
+        {
+          "word": "Сіздің атыңыз кім?",
+          "phonetic": "Sızdıñ atyñyz kım?",
+          "meaning": "What is your name? (formal)",
+          "example": "Сәлеметсіз бе! Сіздің атыңыз кім?"
+        },
+        {
+          "word": "Менің атым...",
+          "phonetic": "Menıñ atym...",
+          "meaning": "My name is...",
+          "example": "Менің атым Айжан."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal) in Kazakh?",
+          "options": [
+            "Сәлеметсіз бе?",
+            "Сәлем!",
+            "Қош келдіңіз!",
+            "Сау болыңыз!"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct way to ask \"How are you?\" (formal) in Kazakh?",
+          "options": [
+            "Сенің қалың қалай?",
+            "Қалыңыз қалай?",
+            "Қалайсың?",
+            "Не істеп жатырсың?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you respond to \"Қалыңыз қалай?\" if you are fine?",
+          "options": [
+            "Менің атым...",
+            "Жақсымын, рахмет.",
+            "Сау болыңыз.",
+            "Иә."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Welcome to your first Kazakh lesson! Today, we're going to learn some essential greetings and introductions. We'll start with \"Сәлеметсіз бе?\" (Hello, formal) and \"Қалыңыз қалай?\" (How are you?, formal). Pay close attention to the pronunciation and try to repeat the phrases out loud. Don't worry if it's not perfect at first – practice makes perfect! Let's begin by looking at the new vocabulary."
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Сәлем",
+          "phonetic": "Sälem",
+          "meaning": "Hello",
+          "example": "Сәлем, қалайсың?"
+        },
+        {
+          "word": "Қалайсың?",
+          "phonetic": "Qalaisyń?",
+          "meaning": "How are you? (informal)",
+          "example": "Сәлем, Қалайсың?"
+        },
+        {
+          "word": "Жақсы",
+          "phonetic": "Jaqsy",
+          "meaning": "Good",
+          "example": "Мен жақсымын, рахмет."
+        },
+        {
+          "word": "Рахмет",
+          "phonetic": "Rakhmet",
+          "meaning": "Thank you",
+          "example": "Көмегіңізге рахмет!"
+        },
+        {
+          "word": "Мен",
+          "phonetic": "Men",
+          "meaning": "I",
+          "example": "Мен қазақ тілін үйреніп жатырмын."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Kazakh?",
+          "options": [
+            "Сәлем",
+            "Рахмет",
+            "Жақсы",
+            "Мен"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means \"Good\" in Kazakh?",
+          "options": [
+            "Мен",
+            "Сәлем",
+            "Жақсы",
+            "Рахмет"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Kazakh word for \"I\"?",
+          "options": [
+            "Жақсы",
+            "Мен",
+            "Рахмет",
+            "Сәлем"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Сәлем! Бүгін сіздің қазақ тілі мұғаліміңіз мен боламын. Біз бүгін бірнеше қарапайым қазақ тілі тіркестерін үйренеміз. Сәлемдесуден бастайық. Қазақша \"Hello\" сөзі – **Сәлем**. Сіз **Сәлем** деп айтып көресіз бе? Тамаша! Енді, бейресми түрде \"How are you?\" деп сұрау үшін **Қалайсың?** дейміз. Ал \"I am good\" немесе жай ғана \"Good\" дегенге жауап ретінде **Жақсы** сөзін қолданамыз. Соңында, \"Thank you\" деу үшін **Рахмет** дейміз. Жаттығайық! Сіз біреумен қалай сәлемдесіп, оның қалай екенін сұрайсыз?"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Сәлеметсіз бе",
+          "phonetic": "Sälemetsiz be",
+          "meaning": "Hello (formal)",
+          "example": "Сәлеметсіз бе, менің атым Айгүл."
+        },
+        {
+          "word": "Қалыңыз қалай?",
+          "phonetic": "Qalyńyz qalai?",
+          "meaning": "How are you? (formal)",
+          "example": "Сәлеметсіз бе! Қалыңыз қалай?"
+        },
+        {
+          "word": "Жақсымын",
+          "phonetic": "Jaqsymyn",
+          "meaning": "I am good.",
+          "example": "Рахмет, мен жақсымын."
+        },
+        {
+          "word": "Рахмет",
+          "phonetic": "Rakhmet",
+          "meaning": "Thank you.",
+          "example": "Көмегіңізге рахмет!"
+        },
+        {
+          "word": "Сау болыңыз",
+          "phonetic": "Sau bolyńyz",
+          "meaning": "Goodbye (formal)",
+          "example": "Сау болыңыз, ертең кездескенше!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal) in Kazakh?",
+          "options": [
+            "Сәлеметсіз бе",
+            "Рахмет",
+            "Сау болыңыз",
+            "Жақсымын"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Kazakh phrase means \"How are you?\" (formal)?",
+          "options": [
+            "Жақсымын",
+            "Қалыңыз қалай?",
+            "Рахмет",
+            "Сәлеметсіз бе"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"Қалыңыз қалай?\", how would you respond if you are good?",
+          "options": [
+            "Сау болыңыз",
+            "Рахмет",
+            "Жақсымын",
+            "Сәлеметсіз бе"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hello! Today, we're going to dive into some essential Kazakh greetings and basic phrases. We'll learn how to say 'Hello' with 'Сәлеметсіз бе' (Sälemetsiz be), ask 'How are you?' with 'Қалыңыз қалай?' (Qalyńyz qalai?), respond with 'Жақсымын' (Jaqsymyn) for 'I am good', express gratitude with 'Рахмет' (Rakhmet) for 'Thank you', and say 'Goodbye' with 'Сау болыңыз' (Sau bolyńyz). Get ready to practice these phrases and use them in simple conversational contexts!"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Сәлем",
+          "phonetic": "Sälem",
+          "meaning": "Hello (informal)",
+          "example": "Сәлем, қалың қалай?"
+        },
+        {
+          "word": "Сәлеметсіз бе?",
+          "phonetic": "Sälemetsiz be?",
+          "meaning": "Hello (formal), How are you?",
+          "example": "Сәлеметсіз бе, мұғалім!"
+        },
+        {
+          "word": "Менің атым...",
+          "phonetic": "Meniñ atım...",
+          "meaning": "My name is...",
+          "example": "Менің атым Айгүл."
+        },
+        {
+          "word": "Қалайсың?",
+          "phonetic": "Qalaysıñ?",
+          "meaning": "How are you? (informal)",
+          "example": "Сәлем, досым, қалайсың?"
+        },
+        {
+          "word": "Жақсы",
+          "phonetic": "Jaqsı",
+          "meaning": "Good, well",
+          "example": "Мен жақсымын, рахмет."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' (informal) in Kazakh?",
+          "options": [
+            "Сәлеметсіз бе?",
+            "Сәлем",
+            "Рахмет",
+            "Кеш жарық"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means 'My name is...'?",
+          "options": [
+            "Менің атым...",
+            "Сенің атың...",
+            "Оның аты...",
+            "Біздің атымыз..."
+          ],
+          "answer": 0
+        },
+        {
+          "q": "If someone asks 'Қалайсың?', how would you respond that you are 'good'?",
+          "options": [
+            "Жаман",
+            "Жақсы",
+            "Керемет",
+            "Әдемі"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the formal greeting for 'Hello'.",
+          "options": [
+            "Сәлем",
+            "Қайырлы таң",
+            "Сәлеметсіз бе?",
+            "Сау бол"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Сәлеметсіз бе! Бүгін біз қазақ тіліндегі күнделікті қолданылатын маңызды сөздер мен тіркестерді үйренеміз. Біз олардың дұрыс айтылуын, мағынасын және әртүрлі жағдайларда қалай қолданылатынын бірге қарастырамыз. Дайынсыз ба? Онда \"Сәлем\" сөзінен бастайық!"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Сәлем!",
+          "phonetic": "Salem!",
+          "meaning": "Hello! (informal)",
+          "example": "Сәлем! Қалың қалай?"
+        },
+        {
+          "word": "Сәлеметсіз бе?",
+          "phonetic": "Sälemetsiz be?",
+          "meaning": "Hello! / How are you? (formal)",
+          "example": "Сәлеметсіз бе? Менің атым Айгүл."
+        },
+        {
+          "word": "Менің атым...",
+          "phonetic": "Meniñ atym...",
+          "meaning": "My name is...",
+          "example": "Сәлеметсіз бе? Менің атым Азамат."
+        },
+        {
+          "word": "Қалың қалай?",
+          "phonetic": "Qalyñ qalay?",
+          "meaning": "How are you? (informal)",
+          "example": "Сәлем, Асқар! Қалың қалай?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello!\" informally in Kazakh?",
+          "options": [
+            "Сәлеметсіз бе?",
+            "Қалың қалай?",
+            "Сәлем!",
+            "Рахмет."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"My name is...\"?",
+          "options": [
+            "Қалың қалай?",
+            "Менің атым...",
+            "Сәлеметсіз бе?",
+            "Сау болыңыз."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you ask \"How are you?\" informally in Kazakh?",
+          "options": [
+            "Сәлеметсіз бе?",
+            "Менің атым...",
+            "Қалың қалай?",
+            "Рахмет."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Welcome to our lesson on Kazakh greetings! Today we're diving into essential phrases for saying hello and introducing yourself. We'll cover \"Сәлем!\", \"Сәлеметсіз бе?\", \"Менің атым...\", and \"Қалың қалай?\". I'll guide you through each phrase, help with pronunciation, and then we'll practice using them in simple sentences. Are you ready to start with \"Сәлем!\"?"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Сәлем",
+          "phonetic": "Sälem",
+          "meaning": "Hello",
+          "example": "Сәлем, досым! (Hello, my friend!)"
+        },
+        {
+          "word": "Рахмет",
+          "phonetic": "Rakhmet",
+          "meaning": "Thank you",
+          "example": "Көмегіңізге рахмет. (Thank you for your help.)"
+        },
+        {
+          "word": "Иә",
+          "phonetic": "Iä",
+          "meaning": "Yes",
+          "example": "Иә, мен келісемін. (Yes, I agree.)"
+        },
+        {
+          "word": "Жоқ",
+          "phonetic": "Zhoq",
+          "meaning": "No",
+          "example": "Жоқ, мен бармаймын. (No, I am not going.)"
+        },
+        {
+          "word": "Қалайсың?",
+          "phonetic": "Qalaysyń?",
+          "meaning": "How are you? (informal)",
+          "example": "Сәлем, қалайсың? (Hello, how are you?)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Kazakh word for \"Hello\"?",
+          "options": [
+            "Сәлем",
+            "Рахмет",
+            "Иә",
+            "Жоқ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say \"Thank you\" in Kazakh?",
+          "options": [
+            "Иә",
+            "Жоқ",
+            "Рахмет",
+            "Сәлем"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Kazakh word means \"Yes\"?",
+          "options": [
+            "Жоқ",
+            "Иә",
+            "Қалайсың?",
+            "Рахмет"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Kazakh translation for \"No\".",
+          "options": [
+            "Сәлем",
+            "Иә",
+            "Жоқ",
+            "Қалайсың?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"Қалайсың?\" mean in English?",
+          "options": [
+            "Hello",
+            "Thank you",
+            "Yes",
+            "How are you?"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Бүгін біз жаңа қазақ сөздерін үйренеміз! Today we're going to learn some new Kazakh words! We'll cover **Сәлем** (Hello), **Рахмет** (Thank you), **Иә** (Yes), **Жоқ** (No), and **Қалайсың?** (How are you?). Listen carefully to the pronunciation and try to repeat them. Don't be afraid to make mistakes! After we go through them, try to use these words in simple sentences. For example, you can say \"Сәлем!\" to greet someone, or \"Рахмет!\" to show gratitude. Let's start!"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Сәлем!",
+          "phonetic": "Salem!",
+          "meaning": "Hello! (informal)",
+          "example": "Сәлем, досым! Қалың қалай?"
+        },
+        {
+          "word": "Қалыңыз қалай?",
+          "phonetic": "Qalyńyz qalai?",
+          "meaning": "How are you? (formal)",
+          "example": "Сәлеметсіз бе? Қалыңыз қалай?"
+        },
+        {
+          "word": "Жақсы.",
+          "phonetic": "Jaqsy.",
+          "meaning": "Good. / Fine.",
+          "example": "Мен жақсымын, рахмет."
+        },
+        {
+          "word": "Рахмет.",
+          "phonetic": "Rahmet.",
+          "meaning": "Thank you.",
+          "example": "Көмегіңізге рахмет!"
+        },
+        {
+          "word": "Кешіріңіз.",
+          "phonetic": "Keshirińiz.",
+          "meaning": "Excuse me. / Sorry.",
+          "example": "Кешіріңіз, бұл жер бос па?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the informal way to say \"Hello\" in Kazakh?",
+          "options": [
+            "Сәлеметсіз бе?",
+            "Сәлем!",
+            "Қалыңыз қалай?",
+            "Рахмет."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you ask \"How are you?\" (formal) in Kazakh?",
+          "options": [
+            "Жақсы.",
+            "Рахмет.",
+            "Қалыңыз қалай?",
+            "Кешіріңіз."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"Жақсы\" mean in English?",
+          "options": [
+            "Thank you.",
+            "Excuse me.",
+            "Good.",
+            "Hello."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Kazakh?",
+          "options": [
+            "Сәлем!",
+            "Жақсы.",
+            "Рахмет.",
+            "Кешіріңіз."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"Excuse me\" or \"Sorry\"?",
+          "options": [
+            "Рахмет.",
+            "Кешіріңіз.",
+            "Жақсы.",
+            "Сәлем!"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Бүгін біз жаңа қазақ сөздерін үйренеміз! Біз 'сәлем', 'қалыңыз қалай?', 'рахмет' сияқты сөздерді айтуды жаттығамыз. Мен сөзді айтамын, сіз қайталаңыз. Содан кейін оларды сөйлемде қолданамыз. Дайынсыз ба? Бастайық!"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Сәлем",
+          "phonetic": "Salem",
+          "meaning": "Hello",
+          "example": "Сәлем, қалайсың?"
+        },
+        {
+          "word": "Қалайсың?",
+          "phonetic": "Kalaysyń?",
+          "meaning": "How are you? (informal)",
+          "example": "Сәлем, қалайсың?"
+        },
+        {
+          "word": "Рахмет",
+          "phonetic": "Rakhmet",
+          "meaning": "Thank you",
+          "example": "Көмегіңізге рахмет."
+        },
+        {
+          "word": "Менің атым...",
+          "phonetic": "Meniń atym...",
+          "meaning": "My name is...",
+          "example": "Сәлем, менің атым Айгүл."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Kazakh word for \"Hello\"?",
+          "options": [
+            "Рахмет",
+            "Сәлем",
+            "Жоқ",
+            "Иә"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you ask \"How are you?\" informally in Kazakh?",
+          "options": [
+            "Менің атым кім?",
+            "Қалайсың?",
+            "Рахмет",
+            "Сәлем"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Рахмет\" mean?",
+          "options": [
+            "Yes",
+            "No",
+            "Thank you",
+            "Hello"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say \"My name is...\" in Kazakh?",
+          "options": [
+            "Сәлем",
+            "Қалайсың?",
+            "Менің атым...",
+            "Рахмет"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Сәлем! (Salem!) Welcome to your first Kazakh lesson. Today we're going to learn some basic greetings and introductions. We'll start with 'Сәлем' (Salem), which means 'Hello'. Then we'll learn how to ask 'How are you?' with 'Қалайсың?' (Kalaysyń?). We'll also cover 'Рахмет' (Rakhmet) for 'Thank you' and how to introduce yourself with 'Менің атым...' (Meniń atym...). Let's get started!"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Сәлем",
+          "phonetic": "Sälem",
+          "meaning": "Hello",
+          "example": "Сәлем, қалайсың?"
+        },
+        {
+          "word": "Қалайсың?",
+          "phonetic": "Qalaysyñ?",
+          "meaning": "How are you? (informal)",
+          "example": "Сәлем, Асқар! Қалайсың?"
+        },
+        {
+          "word": "Менің атым...",
+          "phonetic": "Meniñ atym...",
+          "meaning": "My name is...",
+          "example": "Сәлем, менің атым Айдана."
+        },
+        {
+          "word": "Қайдансың?",
+          "phonetic": "Qaydansyñ?",
+          "meaning": "Where are you from? (informal)",
+          "example": "Сен қайдансың? Мен Алматыданмын."
+        },
+        {
+          "word": "Рахмет",
+          "phonetic": "Rakhmet",
+          "meaning": "Thank you",
+          "example": "Көмегіңізге рахмет!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Kazakh?",
+          "options": [
+            "Сәлем",
+            "Рахмет",
+            "Кешіріңіз",
+            "Иә"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which of these Kazakh phrases means \"How are you?\" (informal)?",
+          "options": [
+            "Сау бол",
+            "Қалайсың?",
+            "Не істеп жатырсың?",
+            "Қайырлы таң"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you introduce yourself by saying \"My name is Ali\" in Kazakh?",
+          "options": [
+            "Менің атым Али.",
+            "Мен Алимін.",
+            "Мен Али.",
+            "Атым Али."
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the English meaning of the Kazakh phrase \"Қайдансың?\"?",
+          "options": [
+            "What is your name?",
+            "Where are you from?",
+            "How old are you?",
+            "What do you do?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Great job! In this lesson, we'll learn some basic Kazakh greetings and introductions. We'll cover phrases like 'Сәлем' (Hello), 'Қалайсың?' (How are you?), and 'Менің атым...' (My name is...). Pay close attention to pronunciation and try to repeat after me. Let's start with 'Сәлем!'"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Сәлем",
+          "phonetic": "Sälem",
+          "meaning": "Hello",
+          "example": "Сәлем, қалайсың?"
+        },
+        {
+          "word": "Қалайсың?",
+          "phonetic": "Qalaysyñ?",
+          "meaning": "How are you? (informal)",
+          "example": "Сәлем, қалайсың? Мен жақсымын."
+        },
+        {
+          "word": "Рахмет",
+          "phonetic": "Rakhmet",
+          "meaning": "Thank you",
+          "example": "Көмегіңізге рахмет!"
+        },
+        {
+          "word": "Иә",
+          "phonetic": "Ïä",
+          "meaning": "Yes",
+          "example": "Иә, мен келісемін."
+        },
+        {
+          "word": "Жоқ",
+          "phonetic": "Joq",
+          "meaning": "No",
+          "example": "Жоқ, мен бармаймын."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Kazakh word for 'Hello'?",
+          "options": [
+            "Рахмет",
+            "Сәлем",
+            "Жоқ",
+            "Иә"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say 'Thank you' in Kazakh?",
+          "options": [
+            "Қалайсың?",
+            "Сәлем",
+            "Рахмет",
+            "Жоқ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Kazakh word means 'Yes'?",
+          "options": [
+            "Жоқ",
+            "Иә",
+            "Қалайсың?",
+            "Сәлем"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the informal way to ask 'How are you?' in Kazakh?",
+          "options": [
+            "Рахмет",
+            "Иә",
+            "Қалайсың?",
+            "Жоқ"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Тамаша жұмыс! Бұл сабақта біз қазақ тіліндегі кейбір қарапайым сөздерді үйрендік. Мысалы, 'Сәлем' (Sälem) – 'Hello', 'Рахмет' (Rakhmet) – 'Thank you' және 'Қалайсың?' (Qalaysyñ?) – 'How are you?'. Осы сөздерді бірге айтып көрейік. Алдымен, 'Сәлем' деп айта аласың ба?"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Сәлеметсіз бе?",
+          "phonetic": "Sälemetsiz be?",
+          "meaning": "Hello (formal/plural)",
+          "example": "Сәлеметсіз бе, мұғалім!"
+        },
+        {
+          "word": "Қалыңыз қалай?",
+          "phonetic": "Qalyñyz qalay?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "Сәлеметсіз бе! Қалыңыз қалай?"
+        },
+        {
+          "word": "Мен жақсымын.",
+          "phonetic": "Men jaqsymin.",
+          "meaning": "I am good.",
+          "example": "Қалыңыз қалай? Мен жақсымын, рахмет."
+        },
+        {
+          "word": "Рахмет.",
+          "phonetic": "Rahmet.",
+          "meaning": "Thank you.",
+          "example": "Көмегіңізге рахмет!"
+        },
+        {
+          "word": "Мархабат.",
+          "phonetic": "Marhabat.",
+          "meaning": "Please / You're welcome",
+          "example": "Мархабат, отырыңыз."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the formal way to say \"Hello\" in Kazakh?",
+          "options": [
+            "Сәлеметсіз бе?",
+            "Сәлем!",
+            "Қайырлы таң!",
+            "Қош келдіңіз!"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How would you ask \"How are you?\" formally in Kazakh?",
+          "options": [
+            "Қалың қалай?",
+            "Қалыңыз қалай?",
+            "Не істеп жатырсыз?",
+            "Қайда барасыз?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Kazakh phrase for \"Thank you.\"",
+          "options": [
+            "Кешіріңіз.",
+            "Өтінемін.",
+            "Рахмет.",
+            "Иә."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"I am good\" in Kazakh?",
+          "options": [
+            "Мен жаманмын.",
+            "Мен жақсымын.",
+            "Мен шаршадым.",
+            "Мен ашпын."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Керемет! Бүгін біз қазақ тіліндегі жиі қолданылатын сәлемдесу сөздері мен қарапайым тіркестерді үйренеміз. Алдымен, \"Сәлеметсіз бе?\" деген сөзден бастайық. Бұл – қазақ тілінде \"Hello\" дегенді білдіретін ресми сәлемдесу. \"Сәлеметсіз бе?\" деп айтып көріңізші?"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Сәлеметсіз бе?",
+          "phonetic": "Sálemetsiz be?",
+          "meaning": "Hello (formal)",
+          "example": "Сәлеметсіз бе? Қалыңыз қалай?"
+        },
+        {
+          "word": "Менің атым...",
+          "phonetic": "Meniń atym...",
+          "meaning": "My name is...",
+          "example": "Сәлеметсіз бе! Менің атым Айгүл."
+        },
+        {
+          "word": "Қалайсыз?",
+          "phonetic": "Qalaısyz?",
+          "meaning": "How are you? (polite/informal)",
+          "example": "Сәлеметсіз бе, Қалайсыз?"
+        },
+        {
+          "word": "Рахмет",
+          "phonetic": "Rakhmet",
+          "meaning": "Thank you",
+          "example": "Көмегіңізге рахмет!"
+        },
+        {
+          "word": "Иә",
+          "phonetic": "Iá",
+          "meaning": "Yes",
+          "example": "Иә, мен келісемін."
+        },
+        {
+          "word": "Жоқ",
+          "phonetic": "Joq",
+          "meaning": "No",
+          "example": "Жоқ, мен шаршамадым."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' (formal) in Kazakh?",
+          "options": [
+            "Рахмет",
+            "Сәлеметсіз бе?",
+            "Қалайсыз?",
+            "Жоқ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means 'My name is...'?",
+          "options": [
+            "Иә",
+            "Қалайсыз?",
+            "Менің атым...",
+            "Рахмет"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Kazakh word for 'Thank you'?",
+          "options": [
+            "Жоқ",
+            "Иә",
+            "Сәлеметсіз бе?",
+            "Рахмет"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Сәлеметсіз бе! Today, we're going to learn some basic greetings and introductions in Kazakh. We'll start with 'Сәлеметсіз бе?' (Hello, formal) and 'Менің атым...' (My name is...). We'll also cover 'Қалайсыз?' (How are you?), 'Рахмет' (Thank you), 'Иә' (Yes), and 'Жоқ' (No). I'll guide you through pronunciation and usage. Let's begin by practicing 'Сәлеметсіз бе?'. Try saying it out loud!"
+    }
+  ]
+}

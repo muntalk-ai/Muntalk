@@ -1,0 +1,1237 @@
+{
+  "langCode": "kn-IN",
+  "langLabel": "Kannada",
+  "langNative": "ಕನ್ನಡ",
+  "generatedAt": "2026-03-15T07:06:50.321Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ನಮಸ್ಕಾರ",
+          "phonetic": "Namaskāra",
+          "meaning": "Hello / Greetings",
+          "example": "ನಮಸ್ಕಾರ, ನೀವು ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಹೇಗಿದ್ದೀರಾ?",
+          "phonetic": "Hēgiddīrā?",
+          "meaning": "How are you? (polite)",
+          "example": "ನೀವು ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+          "phonetic": "Cennāgiddēne",
+          "meaning": "I am fine.",
+          "example": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ."
+        },
+        {
+          "word": "ಧನ್ಯವಾದಗಳು",
+          "phonetic": "Dhanyavādagaḷu",
+          "meaning": "Thank you.",
+          "example": "ನಿಮ್ಮ ಸಹಾಯಕ್ಕೆ ಧನ್ಯವಾದಗಳು."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Kannada?",
+          "options": [
+            "ನಮಸ್ಕಾರ",
+            "ಧನ್ಯವಾದಗಳು",
+            "ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ಕ್ಷಮಿಸಿ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Kannada phrase means \"How are you?\" (polite)",
+          "options": [
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ನಿಮ್ಮ ಹೆಸರೇನು?",
+            "ಶುಭರಾತ್ರಿ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"ಹೇಗಿದ್ದೀರಾ?\", how would you respond to say \"I am fine\"?",
+          "options": [
+            "ನಮಸ್ಕಾರ",
+            "ಧನ್ಯವಾದಗಳು",
+            "ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ಹೌದು"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "ಕನ್ನಡ ಪಾಠಕ್ಕೆ ಸ್ವಾಗತ! (Kannada pāṭhakke svāgata!) Welcome to your Kannada lesson! Today, we're going to learn some essential Kannada greetings and phrases. We'll start with 'Hello' which is **ನಮಸ್ಕಾರ (Namaskāra)**. Try saying **ನಮಸ್ಕಾರ** after me. (Pause for learner to repeat) Excellent! Now, let's learn how to ask 'How are you?' in Kannada: it's **ಹೇಗಿದ್ದೀರಾ? (Hēgiddīrā?)**. Can you try saying **ಹೇಗಿದ್ದೀರಾ?**? (Pause) Very good! And to respond with 'I am fine', you can say **ಚೆನ್ನಾಗಿದ್ದೇನೆ (Cennāgiddēne)**. Let's practice these together. I'll say a phrase, and you repeat it. Ready? **ನಮಸ್ಕಾರ**... (Pause) **ಹೇಗಿದ್ದೀರಾ?**... (Pause) **ಚೆನ್ನಾಗಿದ್ದೇನೆ**... (Pause) Fantastic! We'll also cover 'Thank you', which is **ಧನ್ಯವಾದಗಳು (Dhanyavādagaḷu)**. Try saying **ಧನ್ಯವಾದಗಳು**. (Pause) You're doing great! Let's continue practicing these phrases in different contexts."
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ನಮಸ್ಕಾರ",
+          "phonetic": "Namaskāra",
+          "meaning": "Hello / Greetings / Namaste",
+          "example": "ನಮಸ್ಕಾರ, ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಹೇಗಿದ್ದೀರಾ?",
+          "phonetic": "Hēgiddīrā?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "ನೀವು ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+          "phonetic": "Nānu cennāgiddēne",
+          "meaning": "I am fine / I am good",
+          "example": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ, ಧನ್ಯವಾದಗಳು."
+        },
+        {
+          "word": "ಧನ್ಯವಾದಗಳು",
+          "phonetic": "Dhan'yavādagaḷu",
+          "meaning": "Thank you",
+          "example": "ನಿಮ್ಮ ಸಹಾಯಕ್ಕೆ ಧನ್ಯವಾದಗಳು."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Greetings\" in Kannada?",
+          "options": [
+            "ಧನ್ಯವಾದಗಳು",
+            "ನಮಸ್ಕಾರ",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Kannada phrase means \"How are you?\" (formal/plural)?",
+          "options": [
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ಧನ್ಯವಾದಗಳು",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ನಮಸ್ಕಾರ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Kannada translation for \"I am fine.\"",
+          "options": [
+            "ನಮಸ್ಕಾರ",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ಧನ್ಯವಾದಗಳು",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "ನಮಸ್ಕಾರ! (Namaskāra!) Welcome to your first Kannada lesson! Today, we're going to dive into some essential greetings and basic phrases. We'll learn how to say 'Hello' with 'ನಮಸ್ಕಾರ' (Namaskāra), ask 'How are you?' using 'ಹೇಗಿದ್ದೀರಾ?' (Hēgiddīrā?), and respond with 'I am fine' using 'ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ' (Nānu cennāgiddēne). We'll also cover 'ಧನ್ಯವಾದಗಳು' (Dhan'yavādagaḷu) for 'Thank you'. Get ready to practice these phrases and start speaking Kannada!"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ನಮಸ್ಕಾರ",
+          "phonetic": "Namaskāra",
+          "meaning": "Hello / Greetings",
+          "example": "ನಮಸ್ಕಾರ, ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಹೇಗಿದ್ದೀರಾ?",
+          "phonetic": "Hēgiddīrā?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "ನೀವು ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+          "phonetic": "Cennāgiddēne",
+          "meaning": "I am fine.",
+          "example": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ, ಧನ್ಯವಾದಗಳು."
+        },
+        {
+          "word": "ಧನ್ಯವಾದಗಳು",
+          "phonetic": "Dhanyavādagaḷu",
+          "meaning": "Thank you.",
+          "example": "ನಿಮ್ಮ ಸಹಾಯಕ್ಕೆ ಧನ್ಯವಾದಗಳು."
+        },
+        {
+          "word": "ಮತ್ತೆ ಸಿಗೋಣ",
+          "phonetic": "Matte sigōṇa",
+          "meaning": "See you again / Goodbye.",
+          "example": "ಮತ್ತೆ ಸಿಗೋಣ, ನಾಳೆ ಭೇಟಿಯಾಗೋಣ."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Kannada?",
+          "options": [
+            "ನಮಸ್ಕಾರ",
+            "ಧನ್ಯವಾದಗಳು",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ಚೆನ್ನಾಗಿದ್ದೇನೆ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does \"ಹೇಗಿದ್ದೀರಾ?\" mean?",
+          "options": [
+            "I am fine.",
+            "Thank you.",
+            "How are you?",
+            "Goodbye."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Kannada phrase for \"I am fine.\"",
+          "options": [
+            "ಧನ್ಯವಾದಗಳು",
+            "ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ನಮಸ್ಕಾರ",
+            "ಮತ್ತೆ ಸಿಗೋಣ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"Thank you\" in Kannada?",
+          "options": [
+            "ಮತ್ತೆ ಸಿಗೋಣ",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ಧನ್ಯವಾದಗಳು",
+            "ಚೆನ್ನಾಗಿದ್ದೇನೆ"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "ನಮಸ್ಕಾರ! ಈ ಪಾಠದಲ್ಲಿ, ನಾವು ಕನ್ನಡದಲ್ಲಿ ಮೂಲಭೂತ ಶುಭಾಶಯಗಳ ಬಗ್ಗೆ ಕಲಿಯಲಿದ್ದೇವೆ. ನಾವು 'ನಮಸ್ಕಾರ' (Namaskāra), 'ಹೇಗಿದ್ದೀರಾ?' (Hēgiddīrā?), ಮತ್ತು 'ಚೆನ್ನಾಗಿದ್ದೇನೆ' (Cennāgiddēne) ಎಂಬ ಪದಗಳನ್ನು ಕಲಿಯುತ್ತೇವೆ. ಪಾಠದ ಕೊನೆಗೆ, ನೀವು ಕನ್ನಡದಲ್ಲಿ ಜನರನ್ನು ಅಭಿನಂದಿಸಲು ಮತ್ತು ಅವರ ಯೋಗಕ್ಷೇಮವನ್ನು ಕೇಳಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ. ಶುರು ಮಾಡೋಣ!"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ನಮಸ್ಕಾರ",
+          "phonetic": "Namaskāra",
+          "meaning": "Hello / Greetings",
+          "example": "ನಮಸ್ಕಾರ, ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಹೇಗಿದ್ದೀರಾ?",
+          "phonetic": "Hēgiddīrā?",
+          "meaning": "How are you? (polite)",
+          "example": "ನೀವು ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ.",
+          "phonetic": "Nānu cennāgiddēne.",
+          "meaning": "I am fine.",
+          "example": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ, ಧನ್ಯವಾದಗಳು."
+        },
+        {
+          "word": "ಧನ್ಯವಾದಗಳು",
+          "phonetic": "Dhan'yavādagaḷu",
+          "meaning": "Thank you",
+          "example": "ನಿಮ್ಮ ಸಹಾಯಕ್ಕೆ ಧನ್ಯವಾದಗಳು."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Kannada?",
+          "options": [
+            "ನಮಸ್ಕಾರ",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ಧನ್ಯವಾದಗಳು",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ."
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the meaning of \"ಹೇಗಿದ್ದೀರಾ?\" (Hēgiddīrā?)?",
+          "options": [
+            "I am fine.",
+            "Thank you.",
+            "How are you?",
+            "What is your name?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Kannada phrase for \"I am fine.\"",
+          "options": [
+            "ಧನ್ಯವಾದಗಳು",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ.",
+            "ನಮಸ್ಕಾರ",
+            "ಹೇಗಿದ್ದೀರಾ?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Great job! Now, let's practice what you've learned. I'll say a word or phrase in English, and you try to say it in Kannada. For example, if I say 'Hello', you would say 'ನಮಸ್ಕಾರ' (Namaskāra). Ready? Let's start with 'Thank you', which is 'ಧನ್ಯವಾದಗಳು' (Dhan'yavādagaḷu) in Kannada."
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ನಮಸ್ತೆ",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Namaste",
+          "example": "ನಮಸ್ತೆ, ನೀವು ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಹೇಗೆ",
+          "phonetic": "Hēge",
+          "meaning": "How",
+          "example": "ನೀವು ಹೇಗೆ ಇದ್ದೀರಾ?"
+        },
+        {
+          "word": "ನೀವು",
+          "phonetic": "Nīvu",
+          "meaning": "You (formal/plural)",
+          "example": "ನೀವು ಚೆನ್ನಾಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಇದ್ದೀರಾ?",
+          "phonetic": "Iddīrā?",
+          "meaning": "Are you? (formal, question ending)",
+          "example": "ನೀವು ಚೆನ್ನಾಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+          "phonetic": "Cennāgiddēne",
+          "meaning": "I am good/fine",
+          "example": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ."
+        },
+        {
+          "word": "ಧನ್ಯವಾದಗಳು",
+          "phonetic": "Dhanyavādagaḷu",
+          "meaning": "Thank you",
+          "example": "ನಿಮ್ಮ ಸಹಾಯಕ್ಕೆ ಧನ್ಯವಾದಗಳು."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Kannada?",
+          "options": [
+            "ನಮಸ್ತೆ",
+            "ಧನ್ಯವಾದಗಳು",
+            "ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ಹೇಗೆ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Kannada phrase means \"How are you?\" (formal)?",
+          "options": [
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ನೀವು ಹೇಗಿದ್ದೀರಾ?",
+            "ಧನ್ಯವಾದಗಳು",
+            "ನಮಸ್ತೆ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you respond with \"I am good\" in Kannada?",
+          "options": [
+            "ನಮಸ್ತೆ",
+            "ಧನ್ಯವಾದಗಳು",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ನೀವು"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"ಧನ್ಯವಾದಗಳು\" mean?",
+          "options": [
+            "Hello",
+            "How",
+            "Thank you",
+            "You"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "ನಮಸ್ತೆ! ಇಂದು ನಾವು ಕೆಲವು ಅಗತ್ಯ ಕನ್ನಡ ಶುಭಾಶಯಗಳನ್ನು ಮತ್ತು 'ನೀವು ಹೇಗಿದ್ದೀರಾ?' ಎಂದು ಕೇಳುವುದು ಹೇಗೆ ಎಂದು ಕಲಿಯಲಿದ್ದೇವೆ. 'Hello' ಗಾಗಿ 'ನಮಸ್ತೆ' (Namaste), 'How are you?' (formal) ಗಾಗಿ 'ನೀವು ಹೇಗಿದ್ದೀರಾ?' (Nīvu hēgiddīrā?), ಮತ್ತು 'I am good' ಗಾಗಿ 'ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ' (Nānu cennāgiddēne) ಕಲಿಯುತ್ತೇವೆ. 'Thank you' ಗಾಗಿ 'ಧನ್ಯವಾದಗಳು' (Dhanyavādagaḷu) ಸಹ ಕಲಿಯೋಣ. 'ನಮಸ್ತೆ' ಯಿಂದ ಪ್ರಾರಂಭಿಸೋಣ. ನೀವು 'ನಮಸ್ತೆ' ಎಂದು ಹೇಳಲು ಪ್ರಯತ್ನಿಸಬಹುದೇ?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ನಮಸ್ಕಾರ",
+          "phonetic": "Namaskāra",
+          "meaning": "Hello / Greetings",
+          "example": "ನಮಸ್ಕಾರ, ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಹೇಗಿದ್ದೀರಾ?",
+          "phonetic": "Hēgiddīrā?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "ನೀವು ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+          "phonetic": "Cennāgiddēne",
+          "meaning": "I am good.",
+          "example": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ, ಧನ್ಯವಾದಗಳು."
+        },
+        {
+          "word": "ಧನ್ಯವಾದಗಳು",
+          "phonetic": "Dhanyavādagaḷu",
+          "meaning": "Thank you.",
+          "example": "ನಿಮ್ಮ ಸಹಾಯಕ್ಕೆ ಧನ್ಯವಾದಗಳು."
+        },
+        {
+          "word": "ದಯವಿಟ್ಟು",
+          "phonetic": "Dayaviṭṭu",
+          "meaning": "Please.",
+          "example": "ದಯವಿಟ್ಟು ನನಗೆ ಸಹಾಯ ಮಾಡಿ."
+        },
+        {
+          "word": "ಹೌದು",
+          "phonetic": "Haudu",
+          "meaning": "Yes.",
+          "example": "ಹೌದು, ಇದು ಸರಿ."
+        },
+        {
+          "word": "ಇಲ್ಲ",
+          "phonetic": "Illa",
+          "meaning": "No.",
+          "example": "ಇಲ್ಲ, ಅದು ಸರಿಯಲ್ಲ."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' or 'Greetings' in Kannada?",
+          "options": [
+            "ಧನ್ಯವಾದಗಳು",
+            "ನಮಸ್ಕಾರ",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ಚೆನ್ನಾಗಿದ್ದೇನೆ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Kannada phrase for 'I am good.'?",
+          "options": [
+            "ಹೌದು",
+            "ಇಲ್ಲ",
+            "ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ದಯವಿಟ್ಟು"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which of these means 'Thank you.' in Kannada?",
+          "options": [
+            "ನಮಸ್ಕಾರ",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ಧನ್ಯವಾದಗಳು",
+            "ಹೌದು"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you ask 'How are you?' (formal/plural) in Kannada?",
+          "options": [
+            "ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ದಯವಿಟ್ಟು",
+            "ಇಲ್ಲ"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "ನಮಸ್ಕಾರ! I'm your AI tutor for today. We're going to learn some essential Kannada phrases. We'll start with greetings and basic responses. I'll say the phrase, and you can repeat after me. Let's begin with 'Hello' in Kannada: **ನಮಸ್ಕಾರ** (Namaskāra). Try saying it! Then we'll learn 'How are you?' which is **ಹೇಗಿದ್ದೀರಾ?** (Hēgiddīrā?) and 'I am good.' which is **ಚೆನ್ನಾಗಿದ್ದೇನೆ** (Cennāgiddēne). Let's make learning Kannada fun!"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ನಮಸ್ತೆ",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Greetings",
+          "example": "ನಮಸ್ತೆ, ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಹೇಗಿದ್ದೀರಾ?",
+          "phonetic": "Hēgiddīrā?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "ನೀವು ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ.",
+          "phonetic": "Nānu cennāgiddēne.",
+          "meaning": "I am fine / good.",
+          "example": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ, ಧನ್ಯವಾದಗಳು."
+        },
+        {
+          "word": "ಧನ್ಯವಾದಗಳು",
+          "phonetic": "Dhanyavādagaḷu",
+          "meaning": "Thank you",
+          "example": "ನಿಮ್ಮ ಸಹಾಯಕ್ಕೆ ಧನ್ಯವಾದಗಳು."
+        },
+        {
+          "word": "ಹೌದು",
+          "phonetic": "Haudu",
+          "meaning": "Yes",
+          "example": "ಹೌದು, ಇದು ಸರಿ."
+        },
+        {
+          "word": "ಇಲ್ಲ",
+          "phonetic": "Illa",
+          "meaning": "No",
+          "example": "ಇಲ್ಲ, ಅದು ಸರಿಯಲ್ಲ."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Kannada?",
+          "options": [
+            "ನಮಸ್ತೆ",
+            "ಧನ್ಯವಾದಗಳು",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ಇಲ್ಲ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Kannada word for \"Thank you\"?",
+          "options": [
+            "ಹೌದು",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ಧನ್ಯವಾದಗಳು",
+            "ಹೇಗಿದ್ದೀರಾ?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"ಹೇಗಿದ್ದೀರಾ?\" (How are you?), what is a common response?",
+          "options": [
+            "ಇಲ್ಲ",
+            "ನಮಸ್ತೆ",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ಹೌದು"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "ನಮಸ್ತೆ! ಇಂದು ನಾವು ಕನ್ನಡದಲ್ಲಿ ಕೆಲವು ಮೂಲಭೂತ ಶುಭಾಶಯಗಳು ಮತ್ತು ಸಾಮಾನ್ಯ ಪದಗಳನ್ನು ಕಲಿಯೋಣ. ನಾವು 'ನಮಸ್ತೆ' (Hello), 'ಹೇಗಿದ್ದೀರಾ?' (How are you?), 'ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ' (I am fine), 'ಧನ್ಯವಾದಗಳು' (Thank you), 'ಹೌದು' (Yes), ಮತ್ತು 'ಇಲ್ಲ' (No) ಪದಗಳನ್ನು ಕಲಿಯುತ್ತೇವೆ. ಈ ಪದಗಳನ್ನು ಬಳಸಿಕೊಂಡು ಸರಳ ಸಂಭಾಷಣೆಗಳನ್ನು ಹೇಗೆ ಮಾಡಬೇಕೆಂದು ಅಭ್ಯಾಸ ಮಾಡೋಣ. ಪ್ರಾರಂಭಿಸೋಣ!"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ನಮಸ್ತೆ",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Greetings",
+          "example": "ನಮಸ್ತೆ, ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಹೇಗಿದ್ದೀರಾ?",
+          "phonetic": "Hēgiddīrā?",
+          "meaning": "How are you?",
+          "example": "ನೀವು ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+          "phonetic": "Nānu cennāgiddēne",
+          "meaning": "I am fine",
+          "example": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ, ಧನ್ಯವಾದಗಳು."
+        },
+        {
+          "word": "ಧನ್ಯವಾದಗಳು",
+          "phonetic": "Dhanyavādagaḷu",
+          "meaning": "Thank you",
+          "example": "ನಿಮ್ಮ ಸಹಾಯಕ್ಕೆ ಧನ್ಯವಾದಗಳು."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Kannada word for \"Hello\"?",
+          "options": [
+            "ನಮಸ್ತೆ",
+            "ಧನ್ಯವಾದಗಳು",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say \"How are you?\" in Kannada?",
+          "options": [
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ಧನ್ಯವಾದಗಳು",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ನಮಸ್ತೆ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Kannada phrase means \"I am fine\"?",
+          "options": [
+            "ಧನ್ಯವಾದಗಳು",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ನಮಸ್ತೆ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Kannada word for \"Thank you\"?",
+          "options": [
+            "ನಮಸ್ತೆ",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ಧನ್ಯವಾದಗಳು",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hello! In this lesson, we'll learn some essential Kannada greetings and phrases. We'll cover \"ನಮಸ್ತೆ\" (Namaste) for 'Hello', \"ಹೇಗಿದ್ದೀರಾ?\" (Hēgiddīrā?) for 'How are you?', \"ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ\" (Nānu cennāgiddēne) for 'I am fine', and \"ಧನ್ಯವಾದಗಳು\" (Dhanyavādagaḷu) for 'Thank you'. I'll explain when and how to use each phrase. Let's practice saying them and try to form simple conversations. Ready to begin your Kannada journey?"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ನಮಸ್ತೆ",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Greetings",
+          "example": "ನಮಸ್ತೆ, ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಹೇಗಿದ್ದೀರಾ?",
+          "phonetic": "Hēgiddīrā?",
+          "meaning": "How are you? (polite)",
+          "example": "ನೀವು ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ.",
+          "phonetic": "Nānu cennāgiddēne.",
+          "meaning": "I am fine.",
+          "example": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ, ನೀವು ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ನಿಮ್ಮ ಹೆಸರೇನು?",
+          "phonetic": "Nimma hesarēnu?",
+          "meaning": "What is your name? (polite)",
+          "example": "ನಮಸ್ತೆ, ನಿಮ್ಮ ಹೆಸರೇನು?"
+        },
+        {
+          "word": "ನನ್ನ ಹೆಸರು...",
+          "phonetic": "Nanna hesaru...",
+          "meaning": "My name is...",
+          "example": "ನನ್ನ ಹೆಸರು ಅಮಿತ್."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Kannada?",
+          "options": [
+            "ನಮಸ್ತೆ",
+            "ಧನ್ಯವಾದ",
+            "ಕ್ಷಮಿಸಿ",
+            "ಹೌದು"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does \"ಹೇಗಿದ್ದೀರಾ?\" mean?",
+          "options": [
+            "Thank you",
+            "How are you?",
+            "What is your name?",
+            "I am fine"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Kannada phrase for \"My name is...\"",
+          "options": [
+            "ನಿಮ್ಮ ಹೆಸರೇನು?",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ.",
+            "ನನ್ನ ಹೆಸರು...",
+            "ಹೇಗಿದ್ದೀರಾ?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "ನಮಸ್ತೆ! (Namaste!) ಇವತ್ತು ನಾವು ಕನ್ನಡದಲ್ಲಿ ಮೂಲಭೂತ ಶುಭಾಶಯಗಳು ಮತ್ತು ಪರಿಚಯಗಳನ್ನು ಕಲಿಯೋಣ. (Ivattu nāvu kannaḍadalli mūlabhūta śubhāśayagaḷu mattu paricayagaḷannu kaliyōṇa.) ನಾವು 'ನಮಸ್ತೆ' (Namaste), 'ಹೇಗಿದ್ದೀರಾ?' (Hēgiddīrā?), 'ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ.' (Nānu cennāgiddēne.), 'ನಿಮ್ಮ ಹೆಸರೇನು?' (Nimma hesarēnu?), ಮತ್ತು 'ನನ್ನ ಹೆಸರು...' (Nanna hesaru...) ನಂತಹ ಪದಗಳನ್ನು ಕಲಿಯುತ್ತೇವೆ. (Nāvu 'Namaste', 'Hēgiddīrā?', 'Nānu cennāgiddēne.', 'Nimma hesarēnu?', mattu 'Nanna hesaru...' nantaha padagaḷannu kaliyuttēve.) ಅವುಗಳನ್ನು ವಾಕ್ಯಗಳಲ್ಲಿ ಹೇಗೆ ಬಳಸಬೇಕೆಂದು ಅಭ್ಯಾಸ ಮಾಡೋಣ. (Avugaḷannu vākyagaḷalli hēge baḷasabēkendu abhyāsa māḍōṇa.) 'ನಮಸ್ತೆ' (Namaste) ಪದದಿಂದ ಪ್ರಾರಂಭಿಸೋಣ."
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ನಮಸ್ತೆ",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Greetings",
+          "example": "ನಮಸ್ತೆ, ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಹೇಗಿದ್ದೀರಾ?",
+          "phonetic": "Hēgiddīrā?",
+          "meaning": "How are you? (polite/plural)",
+          "example": "ನೀವು ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ.",
+          "phonetic": "Nānu cennāgiddēne.",
+          "meaning": "I am good/fine.",
+          "example": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ, ಧನ್ಯವಾದಗಳು."
+        },
+        {
+          "word": "ಧನ್ಯವಾದಗಳು",
+          "phonetic": "Dhanyavādagaḷu",
+          "meaning": "Thank you",
+          "example": "ನಿಮ್ಮ ಸಹಾಯಕ್ಕೆ ಧನ್ಯವಾದಗಳು."
+        },
+        {
+          "word": "ಹೌದು",
+          "phonetic": "Houdu",
+          "meaning": "Yes",
+          "example": "ಹೌದು, ನನಗೆ ಕನ್ನಡ ಗೊತ್ತು."
+        },
+        {
+          "word": "ಇಲ್ಲ",
+          "phonetic": "Illa",
+          "meaning": "No",
+          "example": "ಇಲ್ಲ, ನನಗೆ ಅದು ಬೇಡ."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Kannada?",
+          "options": [
+            "ನಮಸ್ತೆ",
+            "ಧನ್ಯವಾದಗಳು",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Kannada phrase for \"Thank you\"?",
+          "options": [
+            "ಹೌದು",
+            "ಧನ್ಯವಾದಗಳು",
+            "ಇಲ್ಲ",
+            "ನಮಸ್ತೆ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"ಹೇಗಿದ್ದೀರಾ?\" (Hēgiddīrā?), how would you respond if you are good?",
+          "options": [
+            "ಇಲ್ಲ",
+            "ಧನ್ಯವಾದಗಳು",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ಹೌದು"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "ಚೆನ್ನಾಗಿ ಮಾಡಿದ್ದೀರಿ! ಈ ಪಾಠದಲ್ಲಿ, ನಾವು ಕೆಲವು ಮೂಲಭೂತ ಕನ್ನಡ ಶುಭಾಶಯಗಳು ಮತ್ತು ಪದಗುಚ್ಛಗಳನ್ನು ಕಲಿಯುತ್ತೇವೆ. ನಾವು 'ನಮಸ್ತೆ' (Namaste), 'ಹೇಗಿದ್ದೀರಾ?' (Hēgiddīrā?), ಮತ್ತು 'ಧನ್ಯವಾದಗಳು' (Dhanyavādagaḷu) ಇವುಗಳನ್ನು ಕಲಿಯುತ್ತೇವೆ. 'ನಮಸ್ತೆ' ಯಿಂದ ಪ್ರಾರಂಭಿಸೋಣ. ಕನ್ನಡದಲ್ಲಿ, ನಾವು 'ನಮಸ್ತೆ' ಎಂದು ಹೇಳುತ್ತೇವೆ. ನೀವು 'ನಮಸ್ತೆ' ಎಂದು ಹೇಳಲು ಪ್ರಯತ್ನಿಸಬಹುದೇ?"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ಪುಸ್ತಕ",
+          "phonetic": "pustaka",
+          "meaning": "book",
+          "example": "ಇದು ಒಂದು ಪುಸ್ತಕ."
+        },
+        {
+          "word": "ಪೇನಾ",
+          "phonetic": "pēnā",
+          "meaning": "pen",
+          "example": "ನನ್ನ ಬಳಿ ಒಂದು ಪೇನಾ ಇದೆ."
+        },
+        {
+          "word": "ನೀರು",
+          "phonetic": "nīru",
+          "meaning": "water",
+          "example": "ನನಗೆ ನೀರು ಬೇಕು."
+        },
+        {
+          "word": "ತಿನ್ನು",
+          "phonetic": "tinnu",
+          "meaning": "to eat",
+          "example": "ನಾನು ಊಟ ತಿನ್ನುತ್ತೇನೆ."
+        },
+        {
+          "word": "ಕುಡಿ",
+          "phonetic": "kuḍi",
+          "meaning": "to drink",
+          "example": "ಅವನು ನೀರು ಕುಡಿಯುತ್ತಾನೆ."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Kannada word for \"book\"?",
+          "options": [
+            "ಪೇನಾ",
+            "ನೀರು",
+            "ಪುಸ್ತಕ",
+            "ತಿನ್ನು"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Kannada word means \"to drink\"?",
+          "options": [
+            "ತಿನ್ನು",
+            "ಕುಡಿ",
+            "ಪುಸ್ತಕ",
+            "ಪೇನಾ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Translate \"water\" into Kannada.",
+          "options": [
+            "ಪೇನಾ",
+            "ನೀರು",
+            "ಪುಸ್ತಕ",
+            "ಕುಡಿ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which of these is a verb in Kannada?",
+          "options": [
+            "ಪುಸ್ತಕ",
+            "ನೀರು",
+            "ಕುಡಿ",
+            "ಪೇನಾ"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hi there! I'm your AI tutor for today. We're going to learn some essential Kannada vocabulary. We'll cover nouns like 'ಪುಸ್ತಕ' (pustaka - book), 'ಪೇನಾ' (pēnā - pen), 'ನೀರು' (nīru - water), and verbs like 'ತಿನ್ನು' (tinnu - to eat) and 'ಕುಡಿ' (kuḍi - to drink). I'll help you understand their meanings, how to pronounce them correctly, and how to use them in simple Kannada sentences. Let's start with 'ಪುಸ್ತಕ'. Can you try saying 'ಪುಸ್ತಕ'?"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ನಮಸ್ತೆ",
+          "phonetic": "Namaste",
+          "meaning": "Hello / Greetings",
+          "example": "ನಮಸ್ತೆ, ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಹೇಗಿದ್ದೀರಾ?",
+          "phonetic": "Hēgiddīrā?",
+          "meaning": "How are you? (polite/plural)",
+          "example": "ನೀವು ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ.",
+          "phonetic": "Nānu cennāgiddēne.",
+          "meaning": "I am good.",
+          "example": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ, ಧನ್ಯವಾದಗಳು."
+        },
+        {
+          "word": "ಧನ್ಯವಾದಗಳು.",
+          "phonetic": "Dhanyavādagaḷu.",
+          "meaning": "Thank you.",
+          "example": "ನಿಮ್ಮ ಸಹಾಯಕ್ಕೆ ಧನ್ಯವಾದಗಳು."
+        },
+        {
+          "word": "ಹೌದು",
+          "phonetic": "Haudu",
+          "meaning": "Yes",
+          "example": "ಹೌದು, ಇದು ಸರಿ."
+        },
+        {
+          "word": "ಇಲ್ಲ",
+          "phonetic": "Illa",
+          "meaning": "No",
+          "example": "ಇಲ್ಲ, ಅದು ಸರಿಯಲ್ಲ."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Kannada?",
+          "options": [
+            "ನಮಸ್ತೆ",
+            "ಧನ್ಯವಾದಗಳು",
+            "ಹೇಗಿದ್ದೀರಾ",
+            "ಹೌದು"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Kannada phrase means \"Thank you\"?",
+          "options": [
+            "ಇಲ್ಲ",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ಧನ್ಯವಾದಗಳು",
+            "ಹೇಗಿದ್ದೀರಾ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"ಹೇಗಿದ್ದೀರಾ?\" (Hēgiddīrā?), what is a common response meaning \"I am good\"?",
+          "options": [
+            "ಹೌದು",
+            "ಇಲ್ಲ",
+            "ನಮಸ್ತೆ",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Hello! Welcome to your Kannada lesson. Today, we're going to learn some essential Kannada greetings and basic phrases. By the end of this lesson, you'll be able to greet people, ask how they are, and respond simply.\n\nLet's start with the most common greeting: **ನಮಸ್ತೆ** (Namaste). This means 'Hello' or 'Greetings' and can be used in most situations. Can you try saying **ನಮಸ್ತೆ**?"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ನಮಸ್ಕಾರ",
+          "phonetic": "Namaskāra",
+          "meaning": "Hello / Greetings",
+          "example": "ನಮಸ್ಕಾರ, ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಹೇಗಿದ್ದೀರಾ?",
+          "phonetic": "Hēgiddīrā?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "ನೀವು ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+          "phonetic": "Cennāgiddēne",
+          "meaning": "I am good / I am fine",
+          "example": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ, ನೀವು?"
+        },
+        {
+          "word": "ಧನ್ಯವಾದ",
+          "phonetic": "Dhanyavāda",
+          "meaning": "Thank you",
+          "example": "ನಿಮ್ಮ ಸಹಾಯಕ್ಕೆ ಧನ್ಯವಾದ."
+        },
+        {
+          "word": "ಹೌದು",
+          "phonetic": "Haudu",
+          "meaning": "Yes",
+          "example": "ಹೌದು, ನಾನು ಬರುತ್ತೇನೆ."
+        },
+        {
+          "word": "ಇಲ್ಲ",
+          "phonetic": "Illa",
+          "meaning": "No",
+          "example": "ಇಲ್ಲ, ನನಗೆ ಬೇಡ."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' or 'Greetings' in Kannada?",
+          "options": [
+            "ಧನ್ಯವಾದ",
+            "ನಮಸ್ಕಾರ",
+            "ಹೌದು",
+            "ಇಲ್ಲ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Kannada phrase for 'How are you?' (formal/plural)?",
+          "options": [
+            "ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ನಮಸ್ಕಾರ",
+            "ಧನ್ಯವಾದ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Kannada word for 'Thank you'.",
+          "options": [
+            "ಹೌದು",
+            "ಇಲ್ಲ",
+            "ಧನ್ಯವಾದ",
+            "ಚೆನ್ನಾಗಿದ್ದೇನೆ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks 'Hēgiddīrā?', what is a common response meaning 'I am good'?",
+          "options": [
+            "ಇಲ್ಲ",
+            "ನಮಸ್ಕಾರ",
+            "ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ಹೌದು"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hello! Welcome to your first Kannada lesson. Today, we're going to learn some essential greetings and basic phrases that will help you start conversations in Kannada. We'll cover how to say 'Hello' (ನಮಸ್ಕಾರ), ask 'How are you?' (ಹೇಗಿದ್ದೀರಾ?), respond with 'I am good' (ಚೆನ್ನಾಗಿದ್ದೇನೆ), and express 'Thank you' (ಧನ್ಯವಾದ). We'll also learn the simple words for 'Yes' (ಹೌದು) and 'No' (ಇಲ್ಲ). Let's dive in and practice these fundamental Kannada phrases!"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ನಮಸ್ತೆ",
+          "phonetic": "namaste",
+          "meaning": "Hello / Namaste",
+          "example": "ನಮಸ್ತೆ, ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಹೇಗಿದ್ದೀರಾ?",
+          "phonetic": "hēgiddīrā?",
+          "meaning": "How are you? (polite)",
+          "example": "ನೀವು ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+          "phonetic": "nānu cennāgiddēne",
+          "meaning": "I am fine",
+          "example": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ, ಧನ್ಯವಾದಗಳು."
+        },
+        {
+          "word": "ಧನ್ಯವಾದಗಳು",
+          "phonetic": "dhanyavādagaḷu",
+          "meaning": "Thank you",
+          "example": "ನಿಮ್ಮ ಸಹಾಯಕ್ಕೆ ಧನ್ಯವಾದಗಳು."
+        },
+        {
+          "word": "ದಯವಿಟ್ಟು",
+          "phonetic": "dayaviṭṭu",
+          "meaning": "Please",
+          "example": "ದಯವಿಟ್ಟು ನನಗೆ ಸಹಾಯ ಮಾಡಿ."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Kannada?",
+          "options": [
+            "ನಮಸ್ತೆ",
+            "ಧನ್ಯವಾದಗಳು",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ದಯವಿಟ್ಟು"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does 'ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ' mean?",
+          "options": [
+            "How are you?",
+            "Thank you",
+            "I am fine",
+            "Please"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Kannada phrase means 'Thank you'?",
+          "options": [
+            "ನಮಸ್ತೆ",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ದಯವಿಟ್ಟು",
+            "ಧನ್ಯವಾದಗಳು"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "If someone asks 'ಹೇಗಿದ್ದೀರಾ?', what is a common response?",
+          "options": [
+            "ಧನ್ಯವಾದಗಳು",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ದಯವಿಟ್ಟು",
+            "ನಮಸ್ತೆ"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "ನಮಸ್ತೆ (namaste) learner! Today, we're diving into some essential Kannada phrases that will help you start conversations and express politeness. We'll cover greetings, asking how someone is, and expressing gratitude. Let's begin! First, to say 'Hello' or 'Namaste' in Kannada, we use 'ನಮಸ್ತೆ' (namaste). Can you try saying 'ನಮಸ್ತೆ'? Excellent! Next, to ask 'How are you?' (in a polite way), you say 'ಹೇಗಿದ್ದೀರಾ?' (hēgiddīrā?). Try repeating that. And when someone asks you, a common reply for 'I am fine' is 'ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ' (nānu cennāgiddēne). Practice saying 'ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ'. We also have 'Thank you', which is 'ಧನ್ಯವಾದಗಳು' (dhanyavādagaḷu). And finally, for 'Please', we use 'ದಯವಿಟ್ಟು' (dayaviṭṭu). Let's practice these phrases together!"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ತಿನ್ನು",
+          "phonetic": "tinnu",
+          "meaning": "to eat",
+          "example": "ನಾನು ಅನ್ನ ತಿನ್ನುತ್ತೇನೆ."
+        },
+        {
+          "word": "ಕುಡಿ",
+          "phonetic": "kuḍi",
+          "meaning": "to drink",
+          "example": "ಅವಳು ನೀರು ಕುಡಿಯುತ್ತಾಳೆ."
+        },
+        {
+          "word": "ಹೋಗು",
+          "phonetic": "hōgu",
+          "meaning": "to go",
+          "example": "ನಾವು ಶಾಲೆಗೆ ಹೋಗುತ್ತೇವೆ."
+        },
+        {
+          "word": "ಮಾಡು",
+          "phonetic": "māḍu",
+          "meaning": "to do/make",
+          "example": "ಅವನು ಕೆಲಸ ಮಾಡುತ್ತಾನೆ."
+        },
+        {
+          "word": "ಬಾ",
+          "phonetic": "bā",
+          "meaning": "to come",
+          "example": "ನೀನು ಇಲ್ಲಿ ಬಾ."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Kannada word means \"to eat\"?",
+          "options": [
+            "ಕುಡಿ",
+            "ತಿನ್ನು",
+            "ಹೋಗು",
+            "ಮಾಡು"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"I drink water\" in Kannada?",
+          "options": [
+            "ನಾನು ಅನ್ನ ತಿನ್ನುತ್ತೇನೆ.",
+            "ನಾನು ನೀರು ಕುಡಿಯುತ್ತೇನೆ.",
+            "ನಾನು ಶಾಲೆಗೆ ಹೋಗುತ್ತೇನೆ.",
+            "ನಾನು ಕೆಲಸ ಮಾಡುತ್ತೇನೆ."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct verb to complete the sentence: \"ಅವನು ____ ಕೆಲಸ.\" (He ____ work.)",
+          "options": [
+            "ತಿನ್ನುತ್ತಾನೆ",
+            "ಕುಡಿಯುತ್ತಾನೆ",
+            "ಮಾಡು",
+            "ಹೋಗುತ್ತಾನೆ"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "ನಮಸ್ಕಾರ! (Namaskāra!) Today we're going to learn about basic verb conjugations in Kannada. We'll cover how to use common verbs like 'ತಿನ್ನು' (tinnu - to eat), 'ಕುಡಿ' (kuḍi - to drink), and 'ಮಾಡು' (māḍu - to do) with different pronouns. Let's start with some examples. For instance, 'ನಾನು ತಿನ್ನುತ್ತೇನೆ' (nānu tinnuttēne) means 'I eat'. Do you have any questions before we begin?"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ನಮಸ್ಕಾರ",
+          "phonetic": "Namaskāra",
+          "meaning": "Hello / Namaste",
+          "example": "ನಮಸ್ಕಾರ, ನೀವು ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ಹೇಗಿದ್ದೀರಾ?",
+          "phonetic": "Hēgiddīrā?",
+          "meaning": "How are you?",
+          "example": "ನಮಸ್ಕಾರ, ಹೇಗಿದ್ದೀರಾ?"
+        },
+        {
+          "word": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+          "phonetic": "Nānu cennāgiddēne",
+          "meaning": "I am fine",
+          "example": "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ, ಧನ್ಯವಾದಗಳು."
+        },
+        {
+          "word": "ಧನ್ಯವಾದಗಳು",
+          "phonetic": "Dhanyavādagaḷu",
+          "meaning": "Thank you",
+          "example": "ನಿಮ್ಮ ಸಹಾಯಕ್ಕೆ ಧನ್ಯವಾದಗಳು."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Kannada?",
+          "options": [
+            "ಧನ್ಯವಾದಗಳು",
+            "ನಮಸ್ಕಾರ",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Kannada phrase for 'How are you?'",
+          "options": [
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ಧನ್ಯವಾದಗಳು",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ನಮಸ್ಕಾರ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Kannada translation for 'I am fine'.",
+          "options": [
+            "ಧನ್ಯವಾದಗಳು",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ",
+            "ನಮಸ್ಕಾರ",
+            "ಹೇಗಿದ್ದೀರಾ?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Kannada word means 'Thank you'?",
+          "options": [
+            "ನಮಸ್ಕಾರ",
+            "ಹೇಗಿದ್ದೀರಾ?",
+            "ಧನ್ಯವಾದಗಳು",
+            "ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Great job on your last lesson! Today, we're going to learn some essential Kannada greetings. We'll start with 'Hello', 'How are you?', 'I am fine', and 'Thank you'. I'll say each word, and you can repeat after me. Let's begin with 'ನಮಸ್ಕಾರ' (Namaskāra), which means 'Hello'. Try saying it! Then we'll move to 'ಹೇಗಿದ್ದೀರಾ?' (Hēgiddīrā?) for 'How are you?' and 'ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ' (Nānu cennāgiddēne) for 'I am fine'. Finally, we'll learn 'ಧನ್ಯವಾದಗಳು' (Dhanyavādagaḷu) for 'Thank you'. We'll practice using these in simple conversations. Ready to start?"
+    }
+  ]
+}

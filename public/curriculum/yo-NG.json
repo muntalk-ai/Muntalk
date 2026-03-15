@@ -1,0 +1,1256 @@
+{
+  "langCode": "yo-NG",
+  "langLabel": "Yoruba",
+  "langNative": "Yorùbá",
+  "generatedAt": "2026-03-15T14:56:38.112Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ẹ káàárọ̀",
+          "phonetic": "eh-kaa-ah-roh (with tones: Ẹ́ káàárọ̀)",
+          "meaning": "Good morning / Hello (in the morning)",
+          "example": "Ẹ káàárọ̀, bàbá. (Good morning, father.)"
+        },
+        {
+          "word": "Ṣe dáadáa ni?",
+          "phonetic": "sheh daa-daa-ah nee (with tones: Ṣé dáadáa ni?)",
+          "meaning": "How are you? / Are you well?",
+          "example": "Ṣe dáadáa ni? Mo dáadáa. (How are you? I am well.)"
+        },
+        {
+          "word": "Mo dáadáa",
+          "phonetic": "moh daa-daa-ah (with tones: Mo dáadáa)",
+          "meaning": "I am well / I am fine",
+          "example": "Mo dáadáa, o ṣeun. (I am well, thank you.)"
+        },
+        {
+          "word": "O ṣeun",
+          "phonetic": "oh sheh-oon (with tones: O ṣeun)",
+          "meaning": "Thank you",
+          "example": "O ṣeun fún ìrànlọ́wọ́ rẹ. (Thank you for your help.)"
+        },
+        {
+          "word": "Kí ni orúkọ rẹ?",
+          "phonetic": "kee nee oh-roo-koh reh (with tones: Kí ni orúkọ rẹ?)",
+          "meaning": "What is your name?",
+          "example": "Kí ni orúkọ rẹ? Orúkọ mi ni Tunde. (What is your name? My name is Tunde.)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How would you greet someone in the morning in Yoruba?",
+          "options": [
+            "O dabọ",
+            "Ẹ káàárọ̀",
+            "Ẹ kú irọ̀lẹ́",
+            "Oruko mi ni"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"Ṣe dáadáa ni?\", how would you respond if you are well?",
+          "options": [
+            "Mo dáadáa",
+            "Kí ni orúkọ rẹ?",
+            "O ṣeun",
+            "O dabọ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Yoruba word for \"Thank you\"?",
+          "options": [
+            "Ẹ káàárọ̀",
+            "Mo dáadáa",
+            "O ṣeun",
+            "Kí ni orúkọ rẹ?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Káàárọ̀! Ẹ kú àbọ̀ sí ẹ̀kọ́ Yorùbá wa lónìí. Lónìí, a ó kọ́ nípa \"Kíkéde àti Ìfihàn Ara Ẹni\" – ìyẹn ni bí a ṣe ń kíra ẹni àti bí a ṣe ń sọ orúkọ wa. Àwọn gbólóhùn wọ̀nyí ṣe pàtàkì gan-an fún ìbágbépọ̀ ní Yorùbá. A ó kọ́ bí a ṣe ń sọ 'Ẹ káàárọ̀' (Good morning), 'Ṣe dáadáa ni?' (How are you?), 'Mo dáadáa' (I am well), 'O ṣeun' (Thank you), àti 'Kí ni orúkọ rẹ?' (What is your name?). Gbìyànjú láti sọ wọ́n jáde pẹ̀lú ohùn tó tọ́, nítorí ohùn ṣe pàtàkì nínú èdè Yorùbá. Jẹ́ ká bẹ̀rẹ̀!"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ẹ káàárọ̀",
+          "phonetic": "eh-kaa-ah-roh",
+          "meaning": "Good morning",
+          "example": "Ẹ káàárọ̀, bàbá."
+        },
+        {
+          "word": "Báwo ni?",
+          "phonetic": "bah-woh nee",
+          "meaning": "How are you?",
+          "example": "Báwo ni, ọ̀rẹ́ mi?"
+        },
+        {
+          "word": "Mo wà dáadáa.",
+          "phonetic": "moh wah dah-dah-ah",
+          "meaning": "I am fine.",
+          "example": "Mo wà dáadáa, o ṣeun."
+        },
+        {
+          "word": "O ṣeun.",
+          "phonetic": "oh sheh-oon",
+          "meaning": "Thank you.",
+          "example": "O ṣeun fún ìrànlọ́wọ́ rẹ."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Good morning\" in Yoruba?",
+          "options": [
+            "Ẹ káàárọ̀",
+            "O dabọ",
+            "Ẹ kú àṣálẹ́",
+            "Mo wà dáadáa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Yoruba phrase for \"How are you?\"",
+          "options": [
+            "O ṣeun",
+            "Báwo ni?",
+            "Kí ni orúkọ rẹ?",
+            "Ẹ káàárọ̀"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"Báwo ni?\", how would you respond with \"I am fine\"?",
+          "options": [
+            "O ṣeun",
+            "Ẹ káàárọ̀",
+            "Mo wà dáadáa",
+            "O dabọ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Yoruba phrase means \"Thank you\"?",
+          "options": [
+            "Kí ni?",
+            "O ṣeun",
+            "Ẹ kú àṣálẹ́",
+            "Mo wà dáadáa"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Ẹ káàárọ̀! (Good morning!) Mo ni inú dídùn láti kọ́ yín lédè Yorùbá lónìí. (I am happy to teach you Yoruba today.)\nLónìí, a ó kọ́ àwọn ìkíni tó wọ́pọ̀ ní èdè Yorùbá. (Today, we will learn common greetings in Yoruba.)\nA ó kọ́ 'Ẹ káàárọ̀' (Good morning), 'Báwo ni?' (How are you?), àti 'Mo wà dáadáa' (I am fine).\nẸ jẹ́ ká bẹ̀rẹ̀ pẹ̀lú 'Ẹ káàárọ̀'. (Let's start with 'Ẹ káàárọ̀'.)\n'Ẹ káàárọ̀' túmọ̀ sí 'Good morning' ní èdè Gẹ̀ẹ́sì. (Ẹ káàárọ̀ means 'Good morning' in English.)\nṢé ẹ lè gbìyànjú láti sọ 'Ẹ káàárọ̀'? (Can you try saying 'Ẹ káàárọ̀'?)"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ẹ káàárọ̀",
+          "phonetic": "eh kaah-ah-roh (tones: low-high-high-low)",
+          "meaning": "Good morning / Hello",
+          "example": "Ẹ káàárọ̀, bàbá mi."
+        },
+        {
+          "word": "Báwo ni?",
+          "phonetic": "bah-woh nee (tones: high-low-mid)",
+          "meaning": "How are you?",
+          "example": "Báwo ni? Ṣé dáadáa ni gbogbo nǹkan?"
+        },
+        {
+          "word": "Mo wà dáadáa",
+          "phonetic": "moh wah dah-dah-ah (tones: mid-low-high-high)",
+          "meaning": "I am fine / I am well",
+          "example": "Mo wà dáadáa, o ṣeun."
+        },
+        {
+          "word": "Ẹ ṣé",
+          "phonetic": "eh sheh (tones: low-high)",
+          "meaning": "Thank you (plural/respectful)",
+          "example": "Ẹ ṣé fún ìrànlọ́wọ́ yín."
+        },
+        {
+          "word": "Jọ̀wọ́",
+          "phonetic": "joh-woh (tones: low-low)",
+          "meaning": "Please",
+          "example": "Jọ̀wọ́, fún mi ní omi."
+        },
+        {
+          "word": "Bẹ́ẹ̀ni",
+          "phonetic": "beh-eh-nee (tones: high-high-mid)",
+          "meaning": "Yes",
+          "example": "Ṣé o lọ sí ọjà? Bẹ́ẹ̀ni, mo lọ."
+        },
+        {
+          "word": "Rárá",
+          "phonetic": "rah-rah (tones: high-high)",
+          "meaning": "No",
+          "example": "Ṣé o fẹ́ jẹun? Rárá, ebi kò pa mí."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Good morning' in Yoruba?",
+          "options": [
+            "Ẹ káàárọ̀",
+            "Ẹ kú àṣálẹ́",
+            "Ẹ káàsán",
+            "O dabọ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Yoruba phrase means 'How are you?'",
+          "options": [
+            "Mo wà dáadáa",
+            "Báwo ni?",
+            "Ẹ ṣé",
+            "Jọ̀wọ́"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Translate 'I am fine' into Yoruba.",
+          "options": [
+            "Rárá",
+            "Bẹ́ẹ̀ni",
+            "Mo wà dáadáa",
+            "Ẹ káàárọ̀"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Yoruba word for 'Thank you' (respectful/plural)?",
+          "options": [
+            "Jọ̀wọ́",
+            "Báwo ni?",
+            "Ẹ ṣé",
+            "Rárá"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the Yoruba word for 'Please'.",
+          "options": [
+            "Bẹ́ẹ̀ni",
+            "Jọ̀wọ́",
+            "Mo wà dáadáa",
+            "Ẹ káàárọ̀"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Káàárọ̀! Hello! Today, we're going to learn some essential Yoruba greetings and phrases. These are very useful for starting conversations and showing politeness. We'll cover how to say 'Good morning', ask 'How are you?', and respond with 'I am fine', among others. Let's start with 'Ẹ káàárọ̀' (eh kaah-ah-roh), which means 'Good morning' or 'Hello'. Try saying 'Ẹ káàárọ̀' out loud. Next, to ask 'How are you?', we say 'Báwo ni?' (bah-woh nee). Can you repeat 'Báwo ni?'? And if you want to say 'I am fine', you'd say 'Mo wà dáadáa' (moh wah dah-dah-ah). Practice saying 'Mo wà dáadáa'. We'll also learn 'Ẹ ṣé' (eh sheh) for 'Thank you', 'Jọ̀wọ́' (joh-woh) for 'Please', 'Bẹ́ẹ̀ni' (beh-eh-nee) for 'Yes', and 'Rárá' (rah-rah) for 'No'. Listen carefully to the tones as they are very important in Yoruba. Don't worry if it's challenging at first; practice makes perfect! Are you ready to try some exercises?"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ẹ káàárọ̀",
+          "phonetic": "eh kah-ah-roh (with tones: Ẹ́ káàárọ̀)",
+          "meaning": "Good morning / Hello (in the morning)",
+          "example": "Ẹ káàárọ̀, bàbá."
+        },
+        {
+          "word": "Báwo ni?",
+          "phonetic": "bah-woh nee (with tones: Báwo ni?)",
+          "meaning": "How are you?",
+          "example": "Báwo ni, ọ̀rẹ́ mi?"
+        },
+        {
+          "word": "Mo wà dáadáa.",
+          "phonetic": "moh wah dah-dah-ah (with tones: Mo wà dáadáa.)",
+          "meaning": "I am fine.",
+          "example": "Mo wà dáadáa, o ṣeun."
+        },
+        {
+          "word": "O ṣeun.",
+          "phonetic": "oh sheh-oon (with tones: O ṣeun.)",
+          "meaning": "Thank you.",
+          "example": "O ṣeun fún ìrànlọ́wọ́ rẹ."
+        },
+        {
+          "word": "Jọ̀wọ́.",
+          "phonetic": "joh-woh (with tones: Jọ̀wọ́.)",
+          "meaning": "Please.",
+          "example": "Jọ̀wọ́, fún mi ní omi."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Yoruba word for \"Good morning\"?",
+          "options": [
+            "O ṣeun",
+            "Ẹ káàárọ̀",
+            "Báwo ni?",
+            "Jọ̀wọ́"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"How are you?\" in Yoruba?",
+          "options": [
+            "Mo wà dáadáa.",
+            "Omi ni.",
+            "Báwo ni?",
+            "Ẹ káàárọ̀."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"Báwo ni?\", how would you respond with \"I am fine.\"?",
+          "options": [
+            "O ṣeun.",
+            "Mo wà dáadáa.",
+            "Jọ̀wọ́.",
+            "Ẹ káàárọ̀."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Yoruba word means \"Thank you\"?",
+          "options": [
+            "Jọ̀wọ́",
+            "Báwo ni?",
+            "O ṣeun",
+            "Ẹ káàárọ̀"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Ẹ káàárọ̀! (Good morning!) Lónìí, a ó kọ́ àwọn ìkíni tó wọ́pọ̀ ní èdè Yorùbá. A ó kọ́ 'Ẹ káàárọ̀' (Good morning), 'Báwo ni?' (How are you?), 'Mo wà dáadáa' (I am fine), 'O ṣeun' (Thank you), àti 'Jọ̀wọ́' (Please). Èmi yóò sọ gbogbo ọ̀rọ̀ náà, ìwọ náà sì lè tún un sọ lẹ́yìn mi. Lẹ́yìn náà, a ó ṣe ìdánilẹ́kọ̀ọ́ lílo wọn nínú àwọn gbólóhùn kékeré. Jẹ́ ká bẹ̀rẹ̀ pẹ̀lú 'Ẹ káàárọ̀'..."
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "jẹ",
+          "phonetic": "/d͡ʒɛ/",
+          "meaning": "to eat",
+          "example": "Mo fẹ́ jẹun."
+        },
+        {
+          "word": "mu",
+          "phonetic": "/mu/",
+          "meaning": "to drink",
+          "example": "O fẹ́ mu omi?"
+        },
+        {
+          "word": "omi",
+          "phonetic": "/ɔ̄.mī/",
+          "meaning": "water",
+          "example": "Mo fẹ́ mu omi."
+        },
+        {
+          "word": "oúnjẹ",
+          "phonetic": "/ō.ú.ɲ͡d͡ʒɛ/",
+          "meaning": "food",
+          "example": "Oúnjẹ náà dùn."
+        },
+        {
+          "word": "fẹ́",
+          "phonetic": "/fɛ́/",
+          "meaning": "to want, to like",
+          "example": "Mo fẹ́ lọ."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'to eat' in Yoruba?",
+          "options": [
+            "mu",
+            "jẹ",
+            "lọ",
+            "sùn"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means 'water'?",
+          "options": [
+            "oúnjẹ",
+            "omi",
+            "ṣe",
+            "wá"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Translate 'I want to drink water.'",
+          "options": [
+            "Mo fẹ́ jẹ oúnjẹ.",
+            "Mo fẹ́ mu omi.",
+            "O fẹ́ lọ.",
+            "Mo fẹ́ sùn."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does 'oúnjẹ' mean?",
+          "options": [
+            "drink",
+            "sleep",
+            "food",
+            "go"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Ẹ kú iṣẹ́! Ó dára gan-an! Lónìí, a ó kọ́ àwọn ọ̀rọ̀ Yorùbá tuntun tí ó ṣe pàtàkì. A ó máa sọ wọ́n, a ó sì máa lò wọ́n nínú àwọn gbólóhùn. A ó bẹ̀rẹ̀ pẹ̀lú àwọn ọ̀rọ̀ bíi 'jẹ' (to eat), 'mu' (to drink), 'omi' (water), àti 'oúnjẹ' (food). Ṣé ẹ ti múra tán láti bẹ̀rẹ̀?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ẹ n lẹ",
+          "phonetic": "Eh-n leh",
+          "meaning": "Hello (formal, general greeting)",
+          "example": "Ẹ n lẹ, bawo ni?"
+        },
+        {
+          "word": "Bawo ni?",
+          "phonetic": "Bah-woh nee?",
+          "meaning": "How are you?",
+          "example": "Bawo ni? Ṣe o wa daadaa?"
+        },
+        {
+          "word": "Mo wa daadaa",
+          "phonetic": "Moh wah dah-dah-ah",
+          "meaning": "I am fine",
+          "example": "Mo wa daadaa, ẹ ṣeun."
+        },
+        {
+          "word": "Ẹ ṣeun",
+          "phonetic": "Eh sheh-oon",
+          "meaning": "Thank you",
+          "example": "Ẹ ṣeun fun iranlọwọ rẹ."
+        },
+        {
+          "word": "Bẹẹni",
+          "phonetic": "Beh-eh-nee",
+          "meaning": "Yes",
+          "example": "Bẹẹni, mo fẹ́ lọ."
+        },
+        {
+          "word": "Rárá",
+          "phonetic": "Rah-rah",
+          "meaning": "No",
+          "example": "Rárá, mi ò fẹ́."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (formal) in Yoruba?",
+          "options": [
+            "Ẹ n lẹ",
+            "Bawo ni",
+            "Mo wa daadaa",
+            "Ẹ ṣeun"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Yoruba phrase for \"How are you?\"",
+          "options": [
+            "Rárá",
+            "Bẹẹni",
+            "Bawo ni?",
+            "Mo wa daadaa"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Yoruba translation for \"I am fine.\"",
+          "options": [
+            "Ẹ ṣeun",
+            "Mo wa daadaa",
+            "Bẹẹni",
+            "Rárá"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Yoruba?",
+          "options": [
+            "Bawo ni?",
+            "Ẹ n lẹ",
+            "Ẹ ṣeun",
+            "Bẹẹni"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Kaabo! Loni, a yoo kọ diẹ ninu awọn ikini Yoruba ti o wọpọ. A yoo wo 'Ẹ n lẹ,' 'Bawo ni?,' ati 'Mo wa daadaa.' San ifojusi si bi a ṣe n pe wọn, ki o si gbiyanju lati tun sọ lẹhin mi. Jẹ ki a bẹrẹ pẹlu 'Ẹ n lẹ.' Ṣe o le sọ 'Ẹ n lẹ'?"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ẹ kú àárọ̀",
+          "phonetic": "eh koo ah-ah-roh (tones: high-high, low-low-high)",
+          "meaning": "Good morning",
+          "example": "Ẹ kú àárọ̀, bàbá. (Good morning, father.)"
+        },
+        {
+          "word": "Ẹ ṣeun",
+          "phonetic": "eh sheh-oon (tones: high-high, low-high)",
+          "meaning": "Thank you",
+          "example": "Ẹ ṣeun fún ìrànlọ́wọ́ yín. (Thank you for your help.)"
+        },
+        {
+          "word": "Jọ̀wọ́",
+          "phonetic": "joh-woh (tones: low-high)",
+          "meaning": "Please",
+          "example": "Jọ̀wọ́, fún mi ní omi. (Please, give me water.)"
+        },
+        {
+          "word": "Omi",
+          "phonetic": "oh-mee (tones: low-high)",
+          "meaning": "Water",
+          "example": "Mo fẹ́ omi. (I want water.)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Good morning\" in Yoruba?",
+          "options": [
+            "Ẹ káàbọ̀",
+            "Ẹ kú àárọ̀",
+            "Ẹ káàsán",
+            "Ẹ kú irọ̀lẹ́"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Yoruba word means \"Thank you\"?",
+          "options": [
+            "Omi",
+            "Jọ̀wọ́",
+            "Ẹ ṣeun",
+            "Bẹ́ẹ̀ ni"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Yoruba word for \"Please\".",
+          "options": [
+            "Rárá",
+            "Jọ̀wọ́",
+            "Oúnjẹ",
+            "Ẹ kú àárọ̀"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Omi\" mean in English?",
+          "options": [
+            "Food",
+            "Water",
+            "Book",
+            "House"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "The tutor should greet the student in Yoruba, for example, \"Káàbọ̀! Ẹ kú àárọ̀!\". Then, introduce the lesson by saying something like, \"Lónìí, a ó kọ́ àwọn ọ̀rọ̀ Yorùbá tuntun. A ó máa dárí wọn, a ó sì máa lò wọ́n nínú gbólóhùn. Ṣé ẹ ti múra tán?\" (Today, we will learn new Yoruba words. We will practice their pronunciation and use them in sentences. Are you ready?). The tutor should then present the first vocabulary word, \"Ẹ kú àárọ̀\", explain its meaning, and ask the student to repeat it."
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Báwo ni?",
+          "phonetic": "bah-woh nee",
+          "meaning": "How are you?",
+          "example": "Báwo ni? Mo wa dáadáa."
+        },
+        {
+          "word": "Ẹ káàárọ̀",
+          "phonetic": "eh kah-ah-roh",
+          "meaning": "Good morning",
+          "example": "Ẹ káàárọ̀, olùkọ́."
+        },
+        {
+          "word": "Ẹ ṣeun",
+          "phonetic": "eh sheh-oon",
+          "meaning": "Thank you",
+          "example": "Ẹ ṣeun fún ìrànlọ́wọ́ rẹ."
+        },
+        {
+          "word": "Jọ̀wọ́",
+          "phonetic": "joh-woh",
+          "meaning": "Please",
+          "example": "Jọ̀wọ́, fún mi ní omi."
+        },
+        {
+          "word": "Orúkọ mi ni...",
+          "phonetic": "oh-roo-koh mee nee",
+          "meaning": "My name is...",
+          "example": "Orúkọ mi ni Àlàbí."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"How are you?\" in Yoruba?",
+          "options": [
+            "Ẹ ṣeun",
+            "Báwo ni?",
+            "Jọ̀wọ́",
+            "Orúkọ mi ni"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Ẹ káàárọ̀\" mean in English?",
+          "options": [
+            "Good afternoon",
+            "Good evening",
+            "Good morning",
+            "Thank you"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Yoruba word for \"Thank you\".",
+          "options": [
+            "Jọ̀wọ́",
+            "Báwo ni?",
+            "Ẹ ṣeun",
+            "Rárá"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Fill in the blank: \"____ mi ni Tunde.\" (My name is Tunde.)",
+          "options": [
+            "Ẹ káàárọ̀",
+            "Orúkọ",
+            "Báwo",
+            "Jọ̀wọ́"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Ẹ káàárọ̀! (Good morning!) Today, we're diving into some essential Yoruba phrases that will help you greet people and introduce yourself. We'll learn how to ask \"How are you?\", say \"Good morning\", express \"Thank you\", and politely ask \"Please\". We'll also cover how to say \"My name is...\".\n\nLet's start with a common greeting: \"Báwo ni?\" (How are you?). Try saying it with me: \"Báwo ni?\" Excellent! Now, for a morning greeting, we have \"Ẹ káàárọ̀\" (Good morning). Can you repeat \"Ẹ káàárọ̀\"? Fantastic!\n\nWe'll also learn \"Ẹ ṣeun\" for \"Thank you\" and \"Jọ̀wọ́\" for \"Please\". These are very important for polite conversation. Finally, to introduce yourself, you can say \"Orúkọ mi ni...\" followed by your name. For example, if your name is Sarah, you'd say: \"Orúkọ mi ni Sarah.\"\n\nAfter we practice these, we'll have a quick quiz to test your new Yoruba skills. Are you ready to begin? Jẹ́ ká bẹ̀rẹ̀! (Let's begin!) "
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ẹ káàárọ̀",
+          "phonetic": "eh kah-ah-roh",
+          "meaning": "Good morning",
+          "example": "Ẹ káàárọ̀, bàbá mi."
+        },
+        {
+          "word": "Ẹ káàsán",
+          "phonetic": "eh kah-ah-sahn",
+          "meaning": "Good afternoon",
+          "example": "Ẹ káàsán, olùkọ́."
+        },
+        {
+          "word": "Ẹ káàlẹ́",
+          "phonetic": "eh kah-ah-leh",
+          "meaning": "Good evening",
+          "example": "Ẹ káàlẹ́, àbúrò mi."
+        },
+        {
+          "word": "Orukọ mi ni...",
+          "phonetic": "oh-roo-koh mee nee...",
+          "meaning": "My name is...",
+          "example": "Orukọ mi ni Ayọ̀."
+        },
+        {
+          "word": "Kí ni orúkọ rẹ?",
+          "phonetic": "kee nee oh-roo-koh reh?",
+          "meaning": "What is your name?",
+          "example": "Kí ni orúkọ rẹ? Orukọ mi ni Dúpẹ́."
+        },
+        {
+          "word": "Ṣe dáadáa ni?",
+          "phonetic": "sheh dah-dah-ah nee?",
+          "meaning": "Are you well? / How are you?",
+          "example": "Ẹ káàárọ̀, Ṣe dáadáa ni?"
+        },
+        {
+          "word": "Mo wà dáadáa",
+          "phonetic": "moh wah dah-dah-ah",
+          "meaning": "I am well",
+          "example": "Mo wà dáadáa, o ṣeun."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Good morning' in Yoruba?",
+          "options": [
+            "Ẹ káàsán",
+            "Ẹ káàárọ̀",
+            "Ẹ káàlẹ́",
+            "O ṣeun"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means 'My name is...'?",
+          "options": [
+            "Kí ni orúkọ rẹ?",
+            "Mo wà dáadáa",
+            "Orukọ mi ni...",
+            "Ẹ káàárọ̀"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks you 'Ṣe dáadáa ni?', how would you respond to say 'I am well'?",
+          "options": [
+            "Ẹ káàlẹ́",
+            "Mo wà dáadáa",
+            "Orukọ mi ni...",
+            "O ṣeun"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct way to ask 'What is your name?' in Yoruba?",
+          "options": [
+            "Orukọ mi ni?",
+            "Kí ni orúkọ rẹ?",
+            "Ṣe dáadáa ni?",
+            "Ẹ káàsán?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Ẹ jẹ́ ká kọ́ àwọn ọ̀rọ̀ Yorùbá tuntun lónìí! A ó máa ṣe àṣàrò lórí bí a ṣe ń pè wọ́n, ìtumọ̀ wọn, àti bí a ṣe lè lò wọ́n nínú gbólóhùn. Èmi yóò máa tọ́ yín sọ́nà nípa ọ̀rọ̀ kọ̀ọ̀kan, a ó sì ṣe ìdánwò kékeré kan ní ìparí. Ṣe ẹ ti múra tán láti bẹ̀rẹ̀? A ó bẹ̀rẹ̀ pẹ̀lú 'Ẹ káàárọ̀'."
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ẹ káàárọ̀",
+          "phonetic": "eh kah-ah-roh",
+          "meaning": "Good morning / Hello",
+          "example": "Ẹ káàárọ̀, olùkọ́."
+        },
+        {
+          "word": "Báwo ni?",
+          "phonetic": "bah-woh nee",
+          "meaning": "How are you?",
+          "example": "Báwo ni? Ṣe dáadáa ni gbogbo rẹ?"
+        },
+        {
+          "word": "Mo wà dáadáa",
+          "phonetic": "moh wah dah-dah-ah",
+          "meaning": "I am fine",
+          "example": "Mo wà dáadáa, o ṣeun."
+        },
+        {
+          "word": "Ẹ ṣeun",
+          "phonetic": "eh sheh-oon",
+          "meaning": "Thank you",
+          "example": "Ẹ ṣeun fún ìrànlọ́wọ́ rẹ."
+        },
+        {
+          "word": "Jọ̀wọ́",
+          "phonetic": "joh-woh",
+          "meaning": "Please",
+          "example": "Jọ̀wọ́, fún mi ní omi."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Good morning' in Yoruba?",
+          "options": [
+            "Ẹ káàárọ̀",
+            "O dabọ",
+            "Ẹ n lẹ",
+            "Mo wà dáadáa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct way to ask 'How are you?' in Yoruba?",
+          "options": [
+            "Ẹ ṣeun",
+            "Báwo ni?",
+            "Jọ̀wọ́",
+            "Orukọ mi ni"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks you 'Báwo ni?', how would you respond that you are fine?",
+          "options": [
+            "Ẹ káàárọ̀",
+            "Mo wà dáadáa",
+            "Ẹ ṣeun",
+            "Jọ̀wọ́"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does 'Ẹ ṣeun' mean in English?",
+          "options": [
+            "Please",
+            "How are you?",
+            "Thank you",
+            "Good morning"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Káàbọ̀ sí ẹ̀kọ́ Yorùbá àkọ́kọ́ rẹ! Lónìí, a ó kọ́ àwọn ìkíni tó wọ́pọ̀. A ó kọ́ 'Ẹ káàárọ̀' (Good morning), 'Báwo ni?' (How are you?), àti 'Mo wà dáadáa' (I am fine). A ó tún kọ́ 'Ẹ ṣeun' (Thank you) àti 'Jọ̀wọ́' (Please). Ṣe o ti ṣetán láti bẹ̀rẹ̀? Jẹ́ ká gbìyànjú láti sọ wọ́n papọ̀."
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ẹ n lẹ",
+          "phonetic": "ehn leh",
+          "meaning": "Hello / Greetings (formal)",
+          "example": "Ẹ n lẹ, àwọn èèyàn."
+        },
+        {
+          "word": "Bawo ni?",
+          "phonetic": "bah-woh nee",
+          "meaning": "How are you?",
+          "example": "Ẹ n lẹ, Bawo ni?"
+        },
+        {
+          "word": "Mo wa daadaa",
+          "phonetic": "moh wah dah-dah-ah",
+          "meaning": "I am fine / I am well",
+          "example": "Mo wa daadaa, ẹ ṣeun."
+        },
+        {
+          "word": "Ẹ ṣeun",
+          "phonetic": "eh sheh-oon",
+          "meaning": "Thank you",
+          "example": "Ẹ ṣeun fún ìrànlọ́wọ́ rẹ."
+        },
+        {
+          "word": "Jọ̀wọ́",
+          "phonetic": "joh-woh",
+          "meaning": "Please",
+          "example": "Jọ̀wọ́, fún mi ní omi."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in formal Yoruba?",
+          "options": [
+            "Ẹ ṣeun",
+            "Bawo ni?",
+            "Ẹ n lẹ",
+            "Jọ̀wọ́"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does 'Bawo ni?' mean?",
+          "options": [
+            "I am fine",
+            "Thank you",
+            "How are you?",
+            "Please"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct response to 'Bawo ni?'",
+          "options": [
+            "Ẹ n lẹ",
+            "Mo wa daadaa",
+            "Ẹ ṣeun",
+            "Jọ̀wọ́"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say 'Thank you' in Yoruba?",
+          "options": [
+            "Jọ̀wọ́",
+            "Mo wa daadaa",
+            "Ẹ ṣeun",
+            "Bawo ni?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Káàbọ̀ sí ẹ̀kọ́ Yorùbá wa! Welcome to our Yoruba lesson! Today, we're going to learn some essential Yoruba greetings and polite phrases. These will help you start conversations and show respect when speaking with Yoruba speakers. Let's begin with 'Ẹ n lẹ'. This is a formal way to say 'Hello' or 'Greetings'. Can you try saying 'Ẹ n lẹ'? Excellent! Next, we have 'Bawo ni?'. This means 'How are you?'. It's a common way to ask about someone's well-being. Try saying 'Bawo ni?'. Wonderful! When someone asks 'Bawo ni?', a good response is 'Mo wa daadaa', which means 'I am fine' or 'I am well'. Practice saying 'Mo wa daadaa'. Fantastic! To express gratitude, we use 'Ẹ ṣeun'. This means 'Thank you'. It's very important to use this! Say 'Ẹ ṣeun'. Perfect! Finally, 'Jọ̀wọ́' means 'Please'. It's used to make requests politely. Can you say 'Jọ̀wọ́'? Great job! Now, let's practice putting these together. Try greeting someone and asking how they are: 'Ẹ n lẹ, bawo ni?' Then, imagine they respond, and you say 'Ẹ ṣeun'. Keep practicing these phrases, and you'll be speaking Yoruba in no time! O daaro!"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [],
+      "quiz": [],
+      "tutorPrompt": "",
+      "_fallback": true
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ẹ káàárọ̀",
+          "phonetic": "eh-kaa-ah-roh (with high-low-mid tones)",
+          "meaning": "Good morning",
+          "example": "Ẹ káàárọ̀, bàbá. (Good morning, father.)"
+        },
+        {
+          "word": "Báwo ni?",
+          "phonetic": "bah-woh nee (with mid-mid-high tones)",
+          "meaning": "How are you?",
+          "example": "Báwo ni, ọ̀rẹ́ mi? (How are you, my friend?)"
+        },
+        {
+          "word": "Mo wà dáadáa.",
+          "phonetic": "moh wah dah-dah-ah (with mid-mid-high-high tones)",
+          "meaning": "I am fine.",
+          "example": "Mo wà dáadáa, o ṣeun. (I am fine, thank you.)"
+        },
+        {
+          "word": "O ṣeun.",
+          "phonetic": "oh sheh-oon (with mid-high tones)",
+          "meaning": "Thank you.",
+          "example": "O ṣeun fún ìrànlọ́wọ́ rẹ. (Thank you for your help.)"
+        },
+        {
+          "word": "Jọ̀wọ́.",
+          "phonetic": "joh-woh (with low-high tones)",
+          "meaning": "Please.",
+          "example": "Jọ̀wọ́, fún mi ní omi. (Please, give me water.)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Yoruba word for \"Good morning\"?",
+          "options": [
+            "Ẹ káàárọ̀",
+            "Ẹ káàsán",
+            "Ẹ kúùrọ̀",
+            "Ẹ káalẹ́"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How would you ask \"How are you?\" in Yoruba?",
+          "options": [
+            "Mo wà dáadáa?",
+            "Báwo ni?",
+            "O ṣeun?",
+            "Jọ̀wọ́?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"Báwo ni?\", what is a common response meaning \"I am fine\"?",
+          "options": [
+            "O ṣeun",
+            "Jọ̀wọ́",
+            "Mo wà dáadáa",
+            "Ẹ káàárọ̀"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Yoruba word for \"Thank you\".",
+          "options": [
+            "Jọ̀wọ́",
+            "Báwo ni",
+            "Mo wà dáadáa",
+            "O ṣeun"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Ẹ káàárọ̀! (Good morning!) Lónìí, a ó kọ́ àwọn ìkíni ìpilẹ̀ṣẹ̀ ní èdè Yorùbá. (Today, we will learn basic greetings in Yoruba.) A ó wo 'Ẹ káàárọ̀' (Good morning), 'Báwo ni?' (How are you?), àti 'Mo wà dáadáa' (I am fine). (We will look at 'Ẹ káàárọ̀', 'Báwo ni?', and 'Mo wà dáadáa'.) Ẹ tẹ́tí sílẹ̀ dáadáa, kí ẹ sì gbìyànjú láti tún un sọ lẹ́yìn mi. (Listen carefully, and try to repeat after me.) Jẹ́ ká bẹ̀rẹ̀ pẹ̀lú 'Ẹ káàárọ̀'. (Let's start with 'Ẹ káàárọ̀'.)"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Ẹ káàárọ̀",
+          "phonetic": "eh kaah-ah-roh",
+          "meaning": "Good morning",
+          "example": "Ẹ káàárọ̀, bàbá mi."
+        },
+        {
+          "word": "Báwo ni?",
+          "phonetic": "bah-woh nee",
+          "meaning": "How are you?",
+          "example": "Báwo ni? Ṣe dáadáa ni?"
+        },
+        {
+          "word": "Mo wà dáadáa",
+          "phonetic": "moh wah dah-dah-ah",
+          "meaning": "I am fine",
+          "example": "Mo wà dáadáa, oúnjẹ sì dùn."
+        },
+        {
+          "word": "Ẹ ṣé",
+          "phonetic": "eh sheh",
+          "meaning": "Thank you",
+          "example": "Ẹ ṣé fún ìrànlọ́wọ́ yín."
+        },
+        {
+          "word": "Jọ̀wọ́",
+          "phonetic": "joh-woh",
+          "meaning": "Please",
+          "example": "Jọ̀wọ́, fún mi ní omi."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Good morning' in Yoruba?",
+          "options": [
+            "Ẹ káàárọ̀",
+            "Ẹ káàsán",
+            "Ẹ káalẹ́",
+            "O dabọ̀"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Yoruba phrase means 'Thank you'?",
+          "options": [
+            "Mo wà dáadáa",
+            "Ẹ ṣé",
+            "Jọ̀wọ́",
+            "Báwo ni?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Complete the sentence: 'Mo wà _____' (I am fine).",
+          "options": [
+            "káàárọ̀",
+            "ṣé",
+            "dáadáa",
+            "jọ̀wọ́"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks 'Báwo ni?', what is a common response?",
+          "options": [
+            "Ẹ káàárọ̀",
+            "Jọ̀wọ́",
+            "Ẹ ṣé",
+            "Mo wà dáadáa"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Kábíyèsí! Welcome to our Yoruba lesson. Today, we're going to dive into some essential Yoruba greetings and polite phrases. We'll learn how to say 'Good morning', 'How are you?', 'I am fine', 'Thank you', and 'Please'. I'll introduce each phrase, explain its meaning, and give you an example. Then, it'll be your turn to practice saying them. Don't worry about making mistakes; that's how we learn! Let's start with 'Ẹ káàárọ̀' (Good morning). Can you try saying 'Ẹ káàárọ̀'?"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "dára",
+          "phonetic": "/dá.ra/",
+          "meaning": "good, fine",
+          "example": "Ìwé yìí dára."
+        },
+        {
+          "word": "tóbi",
+          "phonetic": "/tó.bí/",
+          "meaning": "big, large",
+          "example": "Ilé náà tóbi."
+        },
+        {
+          "word": "kékeré",
+          "phonetic": "/ké.ké.ré/",
+          "meaning": "small, little",
+          "example": "Ọmọdé náà kékeré."
+        },
+        {
+          "word": "lẹ́wà",
+          "phonetic": "/lɛ́.wà/",
+          "meaning": "beautiful, pretty",
+          "example": "Obìnrin náà lẹ́wà."
+        },
+        {
+          "word": "tuntun",
+          "phonetic": "/tún.tún/",
+          "meaning": "new",
+          "example": "Mò ń ra bàtà tuntun."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How would you say \"This car is good\" in Yoruba?",
+          "options": [
+            "Ọkọ̀ yìí dára.",
+            "Ọkọ̀ yìí tóbi.",
+            "Ọkọ̀ yìí kékeré.",
+            "Ọkọ̀ yìí lẹ́wà."
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means \"big\"?",
+          "options": [
+            "dára",
+            "tóbi",
+            "kékeré",
+            "tuntun"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Yoruba translation for \"The dog is small.\"",
+          "options": [
+            "Ajá náà tóbi.",
+            "Ajá náà dára.",
+            "Ajá náà kékeré.",
+            "Ajá náà tuntun."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"lẹ́wà\" mean?",
+          "options": [
+            "good",
+            "big",
+            "small",
+            "beautiful"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "Complete the sentence: \"Mò ń ra bàtà ____.\" (I am buying new shoes.)",
+          "options": [
+            "dára",
+            "tóbi",
+            "kékeré",
+            "tuntun"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Ẹ n lẹ! Lónìí, a ó kọ́ bí a ṣe ń ṣàpèjúwe àwọn nǹkan àti ènìyàn ní èdè Yorùbá nípa lílo àwọn ọ̀rọ̀-àpèjúwe. A ó wo àwọn ọ̀rọ̀ bíi 'dára' (good), 'tóbi' (big), àti 'lẹ́wà' (beautiful). Ẹ fiyè sí bí a ṣe ń lo àwọn ọ̀rọ̀ wọ̀nyí lẹ́yìn orúkọ tí wọ́n ń ṣàpèjúwe. Fún àpẹẹrẹ, 'ilé dára' túmọ̀ sí 'the house is good'. Ẹ jẹ́ ká máa lo àwọn ọ̀rọ̀ tuntun wọ̀nyí nínú àwọn gbólóhùn. Ṣé ẹ ti múra tán?"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "dara",
+          "phonetic": "da-ra (low-low tone)",
+          "meaning": "good, beautiful",
+          "example": "Ìwé yìí dára."
+        },
+        {
+          "word": "burúkú",
+          "phonetic": "bu-ru-ku (low-high-high tone)",
+          "meaning": "bad, ugly",
+          "example": "Ọkùnrin náà burúkú."
+        },
+        {
+          "word": "ńlá",
+          "phonetic": "n-la (high-high tone)",
+          "meaning": "big, large",
+          "example": "Ilé náà ńlá."
+        },
+        {
+          "word": "kékeré",
+          "phonetic": "ke-ke-re (high-high-high tone)",
+          "meaning": "small, little",
+          "example": "Ọmọdé náà kékeré."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which word means \"good\" or \"beautiful\"?",
+          "options": [
+            "burúkú",
+            "dara",
+            "ńlá",
+            "kékeré"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"The house is big\" in Yoruba?",
+          "options": [
+            "Ilé náà kékeré.",
+            "Ilé náà dara.",
+            "Ilé náà ńlá.",
+            "Ilé náà burúkú."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the word that means \"small\".",
+          "options": [
+            "ńlá",
+            "dara",
+            "kékeré",
+            "burúkú"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which sentence means \"The man is bad/ugly\"?",
+          "options": [
+            "Ọkùnrin náà dara.",
+            "Ọkùnrin náà burúkú.",
+            "Ọkùnrin náà ńlá.",
+            "Ọkùnrin náà kékeré."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Káàárọ̀/Káàsán/Káalẹ́! (Good morning/afternoon/evening!) Ẹ kú àbọ̀ sí ẹ̀kọ́ wa lónìí. Lónìí, a ó kọ́ nípa \"Àpèjúwe Ènìyàn àti Ohun\" (Describing People and Things). A ó kọ́ àwọn ọ̀rọ̀ tuntun díẹ̀ tí a fi ń ṣàpèjúwe, a ó sì ṣe ìdánilẹ́kọ̀ọ́ bí a ṣe lè lò wọ́n nínú gbólóhùn. Èmi yóò tọ́ yín sọ́nà lórí ọ̀rọ̀ kọ̀ọ̀kan, yóò fún yín ní ìtumọ̀ rẹ̀, yóò sì fi hàn yín bí a ṣe lè lò ó. Ẹ jẹ́ ká bẹ̀rẹ̀!"
+    }
+  ]
+}

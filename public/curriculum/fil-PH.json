@@ -1,0 +1,1295 @@
+{
+  "langCode": "fil-PH",
+  "langLabel": "Filipino",
+  "langNative": "Filipino",
+  "generatedAt": "2026-03-15T02:43:37.419Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Kumusta",
+          "phonetic": "koo-MOOS-tah",
+          "meaning": "Hello / How are you?",
+          "example": "Kumusta ka?"
+        },
+        {
+          "word": "Salamat",
+          "phonetic": "sah-LAH-mat",
+          "meaning": "Thank you",
+          "example": "Salamat sa tulong mo."
+        },
+        {
+          "word": "Oo",
+          "phonetic": "OH-oh",
+          "meaning": "Yes",
+          "example": "Oo, gusto ko iyan."
+        },
+        {
+          "word": "Hindi",
+          "phonetic": "HIN-dee",
+          "meaning": "No / Not",
+          "example": "Hindi ako gutom."
+        },
+        {
+          "word": "Magandang umaga",
+          "phonetic": "mah-GAN-dang oo-MAH-gah",
+          "meaning": "Good morning",
+          "example": "Magandang umaga sa inyong lahat!"
+        },
+        {
+          "word": "Ako",
+          "phonetic": "AH-koh",
+          "meaning": "I / Me",
+          "example": "Ako si Maria."
+        },
+        {
+          "word": "Ikaw",
+          "phonetic": "EE-kow",
+          "meaning": "You (singular, informal)",
+          "example": "Ikaw ba si Juan?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Filipino word for \"Hello\" or \"How are you?\"",
+          "options": [
+            "Salamat",
+            "Kumusta",
+            "Oo",
+            "Hindi"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Filipino?",
+          "options": [
+            "Oo",
+            "Salamat",
+            "Hindi",
+            "Magandang umaga"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Filipino word means \"Yes\"?",
+          "options": [
+            "Hindi",
+            "Salamat",
+            "Oo",
+            "Kumusta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"Magandang umaga\" mean in English?",
+          "options": [
+            "Good afternoon",
+            "Good morning",
+            "Good evening",
+            "Goodbye"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"I am Maria\" in Filipino, using \"Ako\"?",
+          "options": [
+            "Ikaw si Maria.",
+            "Salamat Maria.",
+            "Ako si Maria.",
+            "Hindi si Maria."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Magaling! Ngayon, matututunan natin ang ilang pangunahing pagbati at parirala sa Filipino. Sasaklawin natin ang mga salitang tulad ng 'Kumusta,' 'Salamat,' at 'Magandang umaga.' Tutulungan kitang bigkasin ang mga ito at bibigyan kita ng mga halimbawa kung paano gamitin ang mga ito sa pangungusap. Simulan natin sa 'Kumusta.' Maaari mo bang subukang sabihin ang 'Kumusta'?"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Kumusta",
+          "phonetic": "koo-MOOS-tah",
+          "meaning": "Hello / Hi / How are you?",
+          "example": "Kumusta ka? (How are you?)"
+        },
+        {
+          "word": "Magandang umaga",
+          "phonetic": "mah-GAHN-dang oo-MAH-gah",
+          "meaning": "Good morning",
+          "example": "Magandang umaga po! (Good morning, sir/ma'am!)"
+        },
+        {
+          "word": "Salamat",
+          "phonetic": "sah-LAH-mat",
+          "meaning": "Thank you",
+          "example": "Salamat sa tulong mo. (Thank you for your help.)"
+        },
+        {
+          "word": "Oo",
+          "phonetic": "OH-oh",
+          "meaning": "Yes",
+          "example": "Oo, pupunta ako. (Yes, I will go.)"
+        },
+        {
+          "word": "Hindi",
+          "phonetic": "HIN-dee",
+          "meaning": "No / Not",
+          "example": "Hindi ako gutom. (I am not hungry.)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Good morning\" in Filipino?",
+          "options": [
+            "Magandang umaga",
+            "Magandang gabi",
+            "Magandang hapon",
+            "Kumusta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Filipino word for \"Thank you\"?",
+          "options": [
+            "Paalam",
+            "Salamat",
+            "Pakiusap",
+            "Walang anuman"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Filipino word means \"Yes\"?",
+          "options": [
+            "Hindi",
+            "Siguro",
+            "Oo",
+            "Baka"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you greet someone informally in Filipino, also asking \"How are you?\"?",
+          "options": [
+            "Magandang araw",
+            "Kumusta ka?",
+            "Anong pangalan mo?",
+            "Saan ka pupunta?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Kumusta! Ako ang iyong tutor. Ngayon, matututo tayo ng mga pangunahing pagbati at ekspresyon sa Filipino. Sasaklawin natin ang mga salitang tulad ng 'Kumusta', 'Magandang umaga', at 'Salamat'. Handa ka na ba? Simulan natin!"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Kumusta",
+          "phonetic": "koo-MOOS-tah",
+          "meaning": "Hello / How are you?",
+          "example": "Kumusta ka? (How are you?)"
+        },
+        {
+          "word": "Salamat",
+          "phonetic": "sah-LAH-mat",
+          "meaning": "Thank you",
+          "example": "Salamat sa tulong mo. (Thank you for your help.)"
+        },
+        {
+          "word": "Oo",
+          "phonetic": "OH-oh",
+          "meaning": "Yes",
+          "example": "Oo, gusto ko. (Yes, I like it.)"
+        },
+        {
+          "word": "Hindi",
+          "phonetic": "HIN-dee",
+          "meaning": "No / Not",
+          "example": "Hindi ako gutom. (I am not hungry.)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"How are you?\" in Filipino?",
+          "options": [
+            "Salamat",
+            "Kumusta",
+            "Oo",
+            "Hindi"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Filipino word means \"Thank you\"?",
+          "options": [
+            "Oo",
+            "Hindi",
+            "Salamat",
+            "Kumusta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If you want to express \"Yes\" in Filipino, what word would you use?",
+          "options": [
+            "Hindi",
+            "Oo",
+            "Salamat",
+            "Kumusta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Filipino word for \"No\" or \"Not\"?",
+          "options": [
+            "Kumusta",
+            "Oo",
+            "Salamat",
+            "Hindi"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Kumusta! Maligayang pagdating sa iyong unang aralin sa Filipino. Ngayon, matututunan natin ang ilang pangunahing pagbati at sagot. Simulan natin sa 'Kumusta'. Ito ang paraan para sabihing 'Hello' o 'How are you?' sa Filipino. Subukan mong sabihin: 'Kumusta'. Mahusay! Ngayon, paano naman sabihin ang 'Thank you'? Sa Filipino, sinasabi natin ang 'Salamat'. Pakiulit: 'Salamat'. Magaling! Para sa 'Yes', ang salitang Filipino ay 'Oo'. At para sa 'No' o 'Not', ito ay 'Hindi'. Subukan mong sabihin: 'Oo', 'Hindi'. Napakagaling! Ngayon, handa ka na ba para sa isang mabilis na pagsasanay?"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Kumusta",
+          "phonetic": "koo-MOOS-tah",
+          "meaning": "Hello; How are you?",
+          "example": "Kumusta ka? (How are you?)"
+        },
+        {
+          "word": "Salamat",
+          "phonetic": "sah-LAH-mat",
+          "meaning": "Thank you",
+          "example": "Salamat sa tulong mo. (Thank you for your help.)"
+        },
+        {
+          "word": "Oo",
+          "phonetic": "OH-oh",
+          "meaning": "Yes",
+          "example": "Oo, gusto ko 'yan. (Yes, I like that.)"
+        },
+        {
+          "word": "Hindi",
+          "phonetic": "HIN-dee",
+          "meaning": "No; Not",
+          "example": "Hindi ako gutom. (I am not hungry.)"
+        },
+        {
+          "word": "Magandang umaga",
+          "phonetic": "mah-GAHN-dang oo-MAH-gah",
+          "meaning": "Good morning",
+          "example": "Magandang umaga sa inyong lahat! (Good morning everyone!)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most common way to say \"Hello\" or \"How are you?\" in Filipino?",
+          "options": [
+            "Salamat",
+            "Kumusta",
+            "Paalam",
+            "Magandang gabi"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you express \"Thank you\" in Filipino?",
+          "options": [
+            "Oo",
+            "Hindi",
+            "Salamat",
+            "Pakiusap"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Filipino word means \"Yes\"?",
+          "options": [
+            "Hindi",
+            "Oo",
+            "Baka",
+            "Wala"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If you want to say \"Good morning\" in Filipino, what phrase would you use?",
+          "options": [
+            "Magandang hapon",
+            "Magandang gabi",
+            "Magandang umaga",
+            "Kumusta"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Kumusta! Welcome to your first Filipino lesson! Today, we're going to learn some essential greetings and basic phrases. We'll cover how to say 'Hello' or 'How are you?' with 'Kumusta,' express gratitude with 'Salamat,' and use 'Oo' for 'Yes' and 'Hindi' for 'No.' We'll also learn 'Magandang umaga' for 'Good morning.' Listen carefully to the pronunciation and try to repeat after me. Don't worry if it's not perfect right away; practice makes perfect! After we go through the vocabulary, we'll have a quick quiz to test your understanding. Are you ready to start learning Filipino?"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Kumusta",
+          "phonetic": "koo-MOOS-tah",
+          "meaning": "Hello / Hi / How are you?",
+          "example": "Kumusta ka? (How are you?)"
+        },
+        {
+          "word": "Salamat",
+          "phonetic": "sah-LAH-mat",
+          "meaning": "Thank you",
+          "example": "Salamat sa tulong mo. (Thank you for your help.)"
+        },
+        {
+          "word": "Magandang umaga",
+          "phonetic": "mah-GAN-dang oo-MAH-gah",
+          "meaning": "Good morning",
+          "example": "Magandang umaga po! (Good morning, sir/ma'am!)"
+        },
+        {
+          "word": "Oo",
+          "phonetic": "OH-oh",
+          "meaning": "Yes",
+          "example": "Oo, gusto ko 'yan. (Yes, I like that.)"
+        },
+        {
+          "word": "Hindi",
+          "phonetic": "HIN-dee",
+          "meaning": "No / Not",
+          "example": "Hindi ako gutom. (I am not hungry.)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"How are you?\" in Filipino?",
+          "options": [
+            "Salamat",
+            "Kumusta",
+            "Magandang umaga",
+            "Oo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Filipino phrase means \"Thank you\"?",
+          "options": [
+            "Hindi",
+            "Oo",
+            "Salamat",
+            "Pakiusap"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct way to greet someone in the morning in Filipino?",
+          "options": [
+            "Magandang gabi",
+            "Magandang hapon",
+            "Magandang umaga",
+            "Magandang araw"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If you want to say \"Yes\" in Filipino, what word would you use?",
+          "options": [
+            "Hindi",
+            "Oo",
+            "Salamat",
+            "Kumusta"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Kumusta! Ngayon, matututo tayo ng ilang karaniwang pagbati at ekspresyon sa Filipino. Sasaklawin natin ang \"Kumusta\" (Hello/How are you?), \"Salamat\" (Thank you), \"Magandang umaga\" (Good morning), \"Oo\" (Yes), at \"Hindi\" (No).\n\nPara magsimula, subukang sabihin ang \"Kumusta\" pagkatapos ko.\n[pause]\nMagaling! Ngayon, paano mo sasabihin ang \"Thank you\" sa Filipino? Ito ay \"Salamat\". Subukang sabihin ito.\n[pause]\nMahusay! Tandaan, ang pagsasanay ay susi sa pag-aaral ng bagong wika. Huwag kang mag-atubiling magtanong kung mayroon kang anumang katanungan. Simulan na natin ang ating aralin!"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Kumusta",
+          "phonetic": "koo-MOOS-tah",
+          "meaning": "Hello / How are you?",
+          "example": "Kumusta ka? (How are you?)"
+        },
+        {
+          "word": "Salamat",
+          "phonetic": "sah-LAH-mat",
+          "meaning": "Thank you",
+          "example": "Salamat sa tulong mo. (Thank you for your help.)"
+        },
+        {
+          "word": "Oo",
+          "phonetic": "OH-oh",
+          "meaning": "Yes",
+          "example": "Oo, gusto ko 'yan. (Yes, I like that.)"
+        },
+        {
+          "word": "Hindi",
+          "phonetic": "hin-DEE",
+          "meaning": "No / Not",
+          "example": "Hindi ako pupunta. (I am not going.)"
+        },
+        {
+          "word": "Pakiusap",
+          "phonetic": "pah-kee-OO-sap",
+          "meaning": "Please / Request",
+          "example": "Pakiusap, tulungan mo ako. (Please, help me.)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' or 'How are you?' in Filipino?",
+          "options": [
+            "Salamat",
+            "Kumusta",
+            "Paalam",
+            "Oo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Filipino word for 'Thank you'?",
+          "options": [
+            "Pakiusap",
+            "Hindi",
+            "Salamat",
+            "Magandang umaga"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which of these means 'Yes' in Filipino?",
+          "options": [
+            "Hindi",
+            "Oo",
+            "Salamat",
+            "Kumusta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If you want to say 'No' in Filipino, what word would you use?",
+          "options": [
+            "Oo",
+            "Sige",
+            "Hindi",
+            "Marahil"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Kumusta! Maligayang pagdating sa ating aralin sa Filipino! Ngayon, tutuklasin natin ang ilang mahahalagang salita at parirala na magagamit mo sa pang-araw-araw. Pag-uusapan natin ang 'Kumusta' (Hello), 'Salamat' (Thank you), 'Oo' (Yes), at 'Hindi' (No). Handa ka na ba? Simulan na natin!"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Kumusta",
+          "phonetic": "koo-MOOS-tah",
+          "meaning": "Hello; How are you?",
+          "example": "Kumusta ka? (How are you?)"
+        },
+        {
+          "word": "Salamat",
+          "phonetic": "sah-LAH-maht",
+          "meaning": "Thank you",
+          "example": "Salamat sa tulong mo. (Thank you for your help.)"
+        },
+        {
+          "word": "Oo",
+          "phonetic": "OH-oh",
+          "meaning": "Yes",
+          "example": "Oo, gusto ko 'yan. (Yes, I like that.)"
+        },
+        {
+          "word": "Hindi",
+          "phonetic": "HEEN-dee",
+          "meaning": "No; Not",
+          "example": "Hindi ako gutom. (I am not hungry.)"
+        },
+        {
+          "word": "Magandang umaga",
+          "phonetic": "mah-GAHN-dang oo-MAH-gah",
+          "meaning": "Good morning",
+          "example": "Magandang umaga sa inyong lahat! (Good morning everyone!)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"How are you?\" in Filipino?",
+          "options": [
+            "Salamat",
+            "Kumusta",
+            "Oo",
+            "Hindi"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Filipino word for \"Thank you\"?",
+          "options": [
+            "Kumusta",
+            "Oo",
+            "Salamat",
+            "Hindi"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Filipino word means \"Yes\"?",
+          "options": [
+            "Hindi",
+            "Salamat",
+            "Oo",
+            "Magandang umaga"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Good morning\" in Filipino?",
+          "options": [
+            "Magandang gabi",
+            "Magandang umaga",
+            "Magandang hapon",
+            "Kumusta"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Magaling! Sa araling ito, matututunan natin ang ilang pangunahing pagbati at sagot sa Filipino. Sasaklawin natin ang \"Kumusta\" (Hello/How are you?), \"Salamat\" (Thank you), \"Oo\" (Yes), \"Hindi\" (No), at \"Magandang umaga\" (Good morning). Handa ka na ba? Subukang sabihin ang \"Kumusta\" sa akin!"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Kumusta",
+          "phonetic": "Koo-moos-TAH",
+          "meaning": "Hello / How are you?",
+          "example": "Kumusta ka? (How are you?)"
+        },
+        {
+          "word": "Magandang umaga",
+          "phonetic": "Ma-gan-DANG oo-MAH-gah",
+          "meaning": "Good morning",
+          "example": "Magandang umaga sa inyong lahat! (Good morning to all of you!)"
+        },
+        {
+          "word": "Salamat",
+          "phonetic": "Sah-LAH-mat",
+          "meaning": "Thank you",
+          "example": "Salamat sa tulong mo. (Thank you for your help.)"
+        },
+        {
+          "word": "Walang anuman",
+          "phonetic": "Wah-LANG ah-noo-MAN",
+          "meaning": "You're welcome / It's nothing",
+          "example": "\"Salamat!\" \"Walang anuman.\" (\"Thank you!\" \"You're welcome.\")"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"How are you?\" in Filipino?",
+          "options": [
+            "Salamat",
+            "Kumusta",
+            "Magandang umaga",
+            "Walang anuman"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct Filipino phrase for \"Good morning\"?",
+          "options": [
+            "Magandang gabi",
+            "Magandang hapon",
+            "Magandang umaga",
+            "Magandang araw"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Salamat\" to you, what is an appropriate response in Filipino?",
+          "options": [
+            "Kumusta ka?",
+            "Walang anuman.",
+            "Oo.",
+            "Hindi."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Kumusta! Maligayang pagdating sa iyong aralin sa Filipino. Ngayon, sisimulan natin ang ating paglalakbay sa wikang Filipino sa pamamagitan ng pag-aaral ng mga pangunahing pagbati at mahahalagang ekspresyon. Tutuklasin natin ang mga bagong salita at kung paano gamitin ang mga ito sa simpleng pangungusap. Handa ka na bang matuto? Simulan na natin!"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Magandang umaga",
+          "phonetic": "mah-GANN-dang oo-MAH-gah",
+          "meaning": "Good morning",
+          "example": "Magandang umaga po sa inyong lahat!"
+        },
+        {
+          "word": "Kumusta ka?",
+          "phonetic": "koo-MOOS-tah kah",
+          "meaning": "How are you? (informal)",
+          "example": "Kumusta ka, kaibigan?"
+        },
+        {
+          "word": "Ako si...",
+          "phonetic": "AH-koh see",
+          "meaning": "I am... (introducing oneself)",
+          "example": "Ako si Maria."
+        },
+        {
+          "word": "Salamat",
+          "phonetic": "sah-LAH-mat",
+          "meaning": "Thank you",
+          "example": "Salamat sa tulong mo."
+        },
+        {
+          "word": "Walang anuman",
+          "phonetic": "WAH-lang ah-NOO-man",
+          "meaning": "You're welcome / No problem",
+          "example": "Walang anuman, masaya akong tumulong."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How would you say 'Good morning' in Filipino?",
+          "options": [
+            "Magandang gabi",
+            "Magandang hapon",
+            "Magandang umaga",
+            "Magandang araw"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct way to ask 'How are you?' (informal) in Filipino.",
+          "options": [
+            "Kumusta po kayo?",
+            "Kumusta ka?",
+            "Sino ka?",
+            "Ano ito?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If you want to say 'I am John' in Filipino, which phrase would you use?",
+          "options": [
+            "Ikaw si John",
+            "Ako si John",
+            "Si John ito",
+            "Kami si John"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Filipino word for 'Thank you'?",
+          "options": [
+            "Paalam",
+            "Salamat",
+            "Oo",
+            "Hindi"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Kumusta! Maligayang pagdating sa iyong aralin sa Filipino. Ngayon, tutuklasin natin ang mga pangunahing pagbati at ekspresyon na magagamit mo sa pang-araw-araw na pakikipag-usap. Matututunan mo kung paano sabihin ang \"Magandang umaga\" (Good morning), \"Kumusta ka?\" (How are you?), at \"Salamat\" (Thank you). Handa ka na bang magsimula? Makinig nang mabuti sa pagbigkas at subukang ulitin ang mga parirala. Tara na!"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Kumusta",
+          "phonetic": "koo-MOOS-tah",
+          "meaning": "Hello / Hi / How are you?",
+          "example": "Kumusta ka?"
+        },
+        {
+          "word": "Salamat",
+          "phonetic": "sah-LAH-mat",
+          "meaning": "Thank you",
+          "example": "Salamat sa tulong mo."
+        },
+        {
+          "word": "Oo",
+          "phonetic": "OH-oh",
+          "meaning": "Yes",
+          "example": "Oo, gusto ko 'yan."
+        },
+        {
+          "word": "Hindi",
+          "phonetic": "HIN-dee",
+          "meaning": "No / Not",
+          "example": "Hindi ako gutom."
+        },
+        {
+          "word": "Pakiusap",
+          "phonetic": "pah-kee-OO-sap",
+          "meaning": "Please / Request",
+          "example": "Pakiusap, tulungan mo ako."
+        },
+        {
+          "word": "Magandang umaga",
+          "phonetic": "mah-GAN-dang oo-MAH-gah",
+          "meaning": "Good morning",
+          "example": "Magandang umaga sa inyong lahat!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"How are you?\" in Filipino?",
+          "options": [
+            "Salamat",
+            "Kumusta",
+            "Oo",
+            "Hindi"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Filipino word for \"Thank you\"?",
+          "options": [
+            "Oo",
+            "Salamat",
+            "Kumusta",
+            "Pakiusap"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Filipino word for \"Yes\".",
+          "options": [
+            "Hindi",
+            "Pakiusap",
+            "Oo",
+            "Magandang umaga"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Filipino word means \"No\" or \"Not\"?",
+          "options": [
+            "Oo",
+            "Salamat",
+            "Hindi",
+            "Kumusta"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Kumusta! Maligayang pagdating sa iyong unang aralin sa Filipino. Ngayon, matututo tayo ng ilang pangunahing pagbati at salita tulad ng 'Kumusta' (Hello/How are you?), 'Salamat' (Thank you), 'Oo' (Yes), at 'Hindi' (No). Sasabihin ko ang salita, at maaari mo itong ulitin pagkatapos ko. Simulan natin sa 'Kumusta'. Maaari mo bang sabihin ang 'Kumusta'?"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Kumusta",
+          "phonetic": "koo-MOOS-tah",
+          "meaning": "Hello / How are you?",
+          "example": "Kumusta ka? Magandang umaga!"
+        },
+        {
+          "word": "Salamat",
+          "phonetic": "sah-LAH-mat",
+          "meaning": "Thank you",
+          "example": "Salamat sa tulong mo."
+        },
+        {
+          "word": "Oo",
+          "phonetic": "OH-oh",
+          "meaning": "Yes",
+          "example": "Oo, gusto ko 'yan."
+        },
+        {
+          "word": "Hindi",
+          "phonetic": "HIN-dee",
+          "meaning": "No / Not",
+          "example": "Hindi ako gutom."
+        },
+        {
+          "word": "Pakiusap",
+          "phonetic": "pah-kee-OO-sap",
+          "meaning": "Please / Request",
+          "example": "Pakiusap, tulungan mo ako."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' or 'How are you?' in Filipino?",
+          "options": [
+            "Salamat",
+            "Kumusta",
+            "Paalam",
+            "Oo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Filipino word for 'Thank you'?",
+          "options": [
+            "Oo",
+            "Hindi",
+            "Salamat",
+            "Pakiusap"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Filipino word means 'Yes'?",
+          "options": [
+            "Hindi",
+            "Oo",
+            "Kumusta",
+            "Salamat"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If you want to say 'No' or 'Not' in Filipino, which word would you use?",
+          "options": [
+            "Oo",
+            "Salamat",
+            "Hindi",
+            "Pakiusap"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Kumusta! Ako ang iyong AI tutor. Ngayon, sisimulan natin ang iyong paglalakbay sa pag-aaral ng Filipino! Tutuon tayo sa mga pangunahing pagbati at mahahalagang parirala. Matututo ka ng mga salitang tulad ng 'Kumusta' (Hello/How are you?), 'Salamat' (Thank you), at 'Oo' (Yes). Tutulungan kitang magsanay sa pagbigkas at gamitin ang mga ito sa pang-araw-araw na pag-uusap. Handa ka na bang matuto ng Filipino? Simulan na natin!"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Kumusta",
+          "phonetic": "koo-MOOS-tah",
+          "meaning": "Hello / How are you?",
+          "example": "Kumusta ka? (How are you?)"
+        },
+        {
+          "word": "Salamat",
+          "phonetic": "sah-LAH-mat",
+          "meaning": "Thank you",
+          "example": "Salamat sa tulong mo. (Thank you for your help.)"
+        },
+        {
+          "word": "Oo",
+          "phonetic": "OH-oh",
+          "meaning": "Yes",
+          "example": "Oo, gusto ko 'yan. (Yes, I like that.)"
+        },
+        {
+          "word": "Hindi",
+          "phonetic": "HIN-dee",
+          "meaning": "No / Not",
+          "example": "Hindi ako gutom. (I am not hungry.)"
+        },
+        {
+          "word": "Pakiusap",
+          "phonetic": "pah-kee-OO-sap",
+          "meaning": "Please / Request",
+          "example": "Pakiusap, tulungan mo ako. (Please, help me.)"
+        },
+        {
+          "word": "Magandang umaga",
+          "phonetic": "mah-GAN-dang oo-MAH-gah",
+          "meaning": "Good morning",
+          "example": "Magandang umaga sa inyong lahat! (Good morning everyone!)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"How are you?\" in Filipino?",
+          "options": [
+            "Salamat",
+            "Kumusta",
+            "Oo",
+            "Hindi"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Filipino word for \"Thank you\"?",
+          "options": [
+            "Pakiusap",
+            "Magandang umaga",
+            "Salamat",
+            "Oo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Filipino word for \"Yes\".",
+          "options": [
+            "Hindi",
+            "Oo",
+            "Kumusta",
+            "Salamat"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"Good morning\" in Filipino?",
+          "options": [
+            "Magandang gabi",
+            "Magandang hapon",
+            "Magandang umaga",
+            "Magandang araw"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Magaling! Sa araling ito, matututunan natin ang ilang karaniwang pagbati at parirala sa Filipino. Tatalakayin natin ang mga salitang tulad ng 'Kumusta,' 'Salamat,' at 'Oo.' Tutulungan kitang maunawaan ang kanilang mga kahulugan at kung paano gamitin ang mga ito sa pangungusap. Simulan na natin!"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Kumain",
+          "phonetic": "koo-mah-in",
+          "meaning": "to eat",
+          "example": "Kumain ako ng kanin."
+        },
+        {
+          "word": "Uminom",
+          "phonetic": "oo-mee-nom",
+          "meaning": "to drink",
+          "example": "Uminom siya ng tubig."
+        },
+        {
+          "word": "Ako",
+          "phonetic": "ah-koh",
+          "meaning": "I, me",
+          "example": "Ako si Juan."
+        },
+        {
+          "word": "Ikaw",
+          "phonetic": "ee-kow",
+          "meaning": "you (singular, informal)",
+          "example": "Ikaw ba si Maria?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Filipino word for \"to eat\"?",
+          "options": [
+            "Uminom",
+            "Kumain",
+            "Magbasa",
+            "Magsulat"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"I\" or \"me\" in Filipino?",
+          "options": [
+            "Ikaw",
+            "Siya",
+            "Ako",
+            "Sila"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Filipino word means \"to drink\"?",
+          "options": [
+            "Kumain",
+            "Uminom",
+            "Matulog",
+            "Maglakad"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Filipino pronoun for \"you\" (singular, informal).",
+          "options": [
+            "Ako",
+            "Siya",
+            "Ikaw",
+            "Tayo"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Magaling! Sa araling ito, matututo tayo ng ilang karaniwang pandiwa (verbs) at panghalip (pronouns) sa Filipino. Magsasanay tayo sa paggamit ng mga ito sa pangungusap. Simulan natin sa \"kumain\" (to eat) at \"ako\" (I). Kaya mo bang subukang sabihin ang \"Kumain ako\" (I ate) sa Filipino?"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Kumain",
+          "phonetic": "koo-mah-in",
+          "meaning": "To eat",
+          "example": "Gusto kong kumain ng adobo."
+        },
+        {
+          "word": "Uminom",
+          "phonetic": "oo-mee-nom",
+          "meaning": "To drink",
+          "example": "Kailangan kong uminom ng tubig."
+        },
+        {
+          "word": "Pumunta",
+          "phonetic": "poo-moon-tah",
+          "meaning": "To go",
+          "example": "Pumunta tayo sa palengke bukas."
+        },
+        {
+          "word": "Bahay",
+          "phonetic": "bah-hahy",
+          "meaning": "House",
+          "example": "Malaki ang aming bahay."
+        },
+        {
+          "word": "Paaralan",
+          "phonetic": "pah-ah-rah-lan",
+          "meaning": "School",
+          "example": "Nag-aaral ako sa paaralan."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Filipino word for 'to eat'?",
+          "options": [
+            "Uminom",
+            "Kumain",
+            "Pumunta",
+            "Bahay"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means 'house'?",
+          "options": [
+            "Paaralan",
+            "Uminom",
+            "Bahay",
+            "Kumain"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Filipino translation for 'I will go to school.'",
+          "options": [
+            "Kumain ako sa paaralan.",
+            "Uminom ako sa paaralan.",
+            "Pumunta ako sa paaralan.",
+            "Pupunta ako sa paaralan."
+          ],
+          "answer": 3
+        },
+        {
+          "q": "What is the Filipino word for 'to drink'?",
+          "options": [
+            "Uminom",
+            "Kumain",
+            "Pumunta",
+            "Bahay"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "Magandang araw! (Good day!) Welcome to your Filipino lesson. Today, we're going to learn some basic Filipino verbs and nouns that are essential for everyday conversations. We'll cover words like \"kumain\" (to eat), \"uminom\" (to drink), and \"bahay\" (house). I'll help you with pronunciation, meaning, and how to use them in simple sentences. Don't worry if it feels a bit challenging at first; we'll take it step by step. Are you ready to start learning Filipino? Tara na! (Let's go!)"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Maganda",
+          "phonetic": "Ma-gan-da",
+          "meaning": "Beautiful, pretty, good (for things/situations)",
+          "example": "Ang bulaklak ay maganda."
+        },
+        {
+          "word": "Masarap",
+          "phonetic": "Ma-sa-rap",
+          "meaning": "Delicious, tasty",
+          "example": "Masarap ang adobo na niluto mo."
+        },
+        {
+          "word": "Gusto",
+          "phonetic": "Gus-to",
+          "meaning": "Like, want",
+          "example": "Gusto ko ng kape tuwing umaga."
+        },
+        {
+          "word": "Salamat",
+          "phonetic": "Sa-la-mat",
+          "meaning": "Thank you",
+          "example": "Salamat sa tulong mo sa akin."
+        },
+        {
+          "word": "Paalam",
+          "phonetic": "Pa-a-lam",
+          "meaning": "Goodbye",
+          "example": "Paalam! Magkita tayo bukas."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"beautiful\" in Filipino?",
+          "options": [
+            "Masarap",
+            "Maganda",
+            "Mabilis",
+            "Mabait"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Filipino word means \"delicious\"?",
+          "options": [
+            "Malaki",
+            "Maliit",
+            "Masarap",
+            "Malungkot"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Filipino phrase for \"I like coffee.\"",
+          "options": [
+            "Gusto ko ng tubig.",
+            "Gusto ko ng kape.",
+            "Ayaw ko ng kape.",
+            "Gusto ko ng gatas."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Magaling! Maligayang pagdating sa ating aralin sa Filipino! Ngayon, matututo tayo ng ilang bagong salita at parirala. Tutulungan kitang bigkasin ang mga ito nang tama at gamitin sa mga pangungusap. Handa ka na ba? Simulan natin sa salitang \"Maganda\". Ulitin mo pagkatapos ko: \"Maganda\". Pagkatapos, gagamitin natin ito sa isang pangungusap. Handa ka na bang magsimula?"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Kumusta",
+          "phonetic": "[koo-MOOS-tah]",
+          "meaning": "Hello / How are you?",
+          "example": "Kumusta ka? (How are you?)"
+        },
+        {
+          "word": "Magandang umaga",
+          "phonetic": "[mah-GAHN-dang oo-MAH-gah]",
+          "meaning": "Good morning",
+          "example": "Magandang umaga po! (Good morning, sir/ma'am!)"
+        },
+        {
+          "word": "Salamat",
+          "phonetic": "[sah-LAH-mat]",
+          "meaning": "Thank you",
+          "example": "Salamat sa tulong mo. (Thank you for your help.)"
+        },
+        {
+          "word": "Ano ang pangalan mo?",
+          "phonetic": "[AH-noh ahng pah-NGAH-lahn moh]",
+          "meaning": "What is your name?",
+          "example": "Ano ang pangalan mo? Ako si Maria. (What is your name? I am Maria.)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"How are you?\" in Filipino?",
+          "options": [
+            "Magandang umaga",
+            "Salamat",
+            "Kumusta",
+            "Paalam"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct Filipino phrase for \"Good morning\"?",
+          "options": [
+            "Magandang gabi",
+            "Magandang hapon",
+            "Magandang umaga",
+            "Magandang araw"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone helps you, what should you say in Filipino?",
+          "options": [
+            "Kumusta",
+            "Salamat",
+            "Paalam",
+            "Opo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you ask \"What is your name?\" in Filipino?",
+          "options": [
+            "Sino ka?",
+            "Ano ang edad mo?",
+            "Ano ang pangalan mo?",
+            "Saan ka nakatira?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Kumusta! Maligayang pagdating sa ating aralin sa Filipino. Ngayon, matututo tayo ng ilang mahahalagang pagbati at parirala na magagamit mo sa pang-araw-araw na pakikipag-usap. Sasaklawin natin ang \"Kumusta\" (Hello/How are you?), \"Magandang umaga\" (Good morning), at \"Salamat\" (Thank you). Sasabihin ko ang bawat salita, at maaari kang sumunod. Pagkatapos, magsanay tayo sa paggamit ng mga ito sa simpleng pangungusap. Handa ka na ba? Simulan natin sa \"Kumusta.\" Maaari mo bang sabihin ang \"Kumusta\"?"
+    }
+  ]
+}

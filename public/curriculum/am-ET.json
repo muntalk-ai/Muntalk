@@ -1,0 +1,1194 @@
+{
+  "langCode": "am-ET",
+  "langLabel": "Amharic",
+  "langNative": "አማርኛ",
+  "generatedAt": "2026-03-15T14:55:49.342Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [],
+      "quiz": [],
+      "tutorPrompt": "",
+      "_fallback": true
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ሰላም",
+          "phonetic": "selam",
+          "meaning": "Hello / Peace",
+          "example": "ሰላም! እንዴት ነህ?"
+        },
+        {
+          "word": "እንዴት ነህ? / እንዴት ነሽ?",
+          "phonetic": "indet neh? / indet nesh?",
+          "meaning": "How are you? (m/f)",
+          "example": "ሰላም! እንዴት ነህ?"
+        },
+        {
+          "word": "ደህና ነኝ",
+          "phonetic": "dehina negn",
+          "meaning": "I am fine.",
+          "example": "ደህና ነኝ፣ አመሰግናለሁ።"
+        },
+        {
+          "word": "አመሰግናለሁ",
+          "phonetic": "amesegnalehu",
+          "meaning": "Thank you.",
+          "example": "አመሰግናለሁ!"
+        },
+        {
+          "word": "ደህና ሁን! / ደህና ሁኚ!",
+          "phonetic": "dehina hun! / dehina huni!",
+          "meaning": "Goodbye! (m/f)",
+          "example": "ደህና ሁን! ነገ እንገናኝ።"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Amharic?",
+          "options": [
+            "ሰላም",
+            "አመሰግናለሁ",
+            "ደህና ነኝ",
+            "እንዴት ነህ?"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct response to \"እንዴት ነህ?\" (How are you?)",
+          "options": [
+            "ሰላም",
+            "ደህና ነኝ",
+            "አመሰግናለሁ",
+            "ደህና ሁን!"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Amharic?",
+          "options": [
+            "ደህና ነኝ",
+            "ሰላም",
+            "አመሰግናለሁ",
+            "ደህና ሁኚ!"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "ሰላም! (Selam!) Welcome to your first Amharic lesson! Today, we're going to learn some essential Amharic greetings and phrases. We'll cover how to say 'Hello' (ሰላም - selam), 'How are you?' (እንዴት ነህ? / እንዴት ነሽ? - indet neh? / indet nesh?), 'I am fine' (ደህና ነኝ - dehina negn), 'Thank you' (አመሰግናለሁ - amesegnalehu), and 'Goodbye' (ደህና ሁን! / ደህና ሁኚ! - dehina hun! / dehina huni!). I'll say each phrase, and you can repeat after me. Let's start with 'Hello' – ሰላም. Can you try saying 'ሰላም'?"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ሰላም",
+          "phonetic": "selam",
+          "meaning": "Hello / Peace",
+          "example": "ሰላም! እንዴት ነህ?"
+        },
+        {
+          "word": "እንደምን ነህ?",
+          "phonetic": "endemin neh?",
+          "meaning": "How are you? (masculine)",
+          "example": "ሰላም! እንደምን ነህ?"
+        },
+        {
+          "word": "ደህና ነኝ",
+          "phonetic": "dehna negn",
+          "meaning": "I am fine.",
+          "example": "ደህና ነኝ፣ አንተስ?"
+        },
+        {
+          "word": "አመሰግናለሁ",
+          "phonetic": "amesegnalehu",
+          "meaning": "Thank you.",
+          "example": "በጣም አመሰግናለሁ።"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Amharic word for \"Hello\"?",
+          "options": [
+            "ደህና ነኝ",
+            "ሰላም",
+            "አመሰግናለሁ",
+            "እንደምን ነህ?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"How are you?\" to a male in Amharic?",
+          "options": [
+            "ደህና ነኝ",
+            "ሰላም",
+            "እንደምን ነህ?",
+            "አመሰግናለሁ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct response to \"እንደምን ነህ?\" if you are fine?",
+          "options": [
+            "አመሰግናለሁ",
+            "ሰላም",
+            "ደህና ነኝ",
+            "እሺ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Amharic phrase means \"Thank you\"?",
+          "options": [
+            "እንደምን ነህ?",
+            "ደህና ነኝ",
+            "አመሰግናለሁ",
+            "እባክህ"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "ሰላም! እኔ የእርስዎ AI አስተማሪ ነኝ። ዛሬ አንዳንድ አስፈላጊ የአማርኛ ሀረጎችን እንማራለን። በተለይ 'ሰላም' (selam)፣ 'እንደምን ነህ?' (endemin neh?)፣ 'ደህና ነኝ' (dehna negn) እና 'አመሰግናለሁ' (amesegnalehu) የሚሉትን እንመለከታለን። በአነባበብ፣ ትርጉም እና በአረፍተ ነገር ውስጥ እንዴት መጠቀም እንደሚችሉ እረዳዎታለሁ። እንጀምር!"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ሰላም",
+          "phonetic": "Selam",
+          "meaning": "Hello / Peace",
+          "example": "ሰላም! እንደምን ነህ?"
+        },
+        {
+          "word": "እንደምን ነህ?",
+          "phonetic": "Indemin neh?",
+          "meaning": "How are you? (to a male)",
+          "example": "ሰላም! እንደምን ነህ?"
+        },
+        {
+          "word": "እንደምን ነሽ?",
+          "phonetic": "Indemin nesh?",
+          "meaning": "How are you? (to a female)",
+          "example": "ሰላም! እንደምን ነሽ?"
+        },
+        {
+          "word": "አመሰግናለሁ",
+          "phonetic": "Ameseginalehu",
+          "meaning": "Thank you",
+          "example": "አመሰግናለሁ! ደህና ነኝ።"
+        },
+        {
+          "word": "አዎ",
+          "phonetic": "Awo",
+          "meaning": "Yes",
+          "example": "አዎ፣ ደህና ነኝ።"
+        },
+        {
+          "word": "አይ",
+          "phonetic": "Ay",
+          "meaning": "No",
+          "example": "አይ፣ አልችልም።"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Amharic?",
+          "options": [
+            "ሰላም",
+            "አመሰግናለሁ",
+            "እንደምን ነህ",
+            "አዎ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Amharic phrase means \"Thank you\"?",
+          "options": [
+            "አይ",
+            "አመሰግናለሁ",
+            "ሰላም",
+            "እንደምን ነሽ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Amharic word for \"Yes\"?",
+          "options": [
+            "አይ",
+            "ሰላም",
+            "አዎ",
+            "እንደምን ነህ"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor helping a student learn Amharic. Your goal is to introduce new vocabulary, explain grammar points, and encourage practice. Start by greeting the student in Amharic with \"ሰላም!\" (Selam!) and introduce the topic of basic Amharic greetings and responses. Use the vocabulary from this lesson: 'ሰላም' (Selam), 'እንደምን ነህ/ነሽ?' (Indemin neh/nesh?), 'አመሰግናለሁ' (Ameseginalehu), 'አዎ' (Awo), and 'አይ' (Ay). Explain the difference between 'እንደምን ነህ?' and 'እንደምን ነሽ?'. Ask the student to repeat after you and form simple Amharic phrases using these words. Encourage them to practice saying these words aloud."
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ሰላም",
+          "phonetic": "Selam",
+          "meaning": "Hello / Peace",
+          "example": "ሰላም! እንዴት ነህ?"
+        },
+        {
+          "word": "አመሰግናለሁ",
+          "phonetic": "Amesegnalehu",
+          "meaning": "Thank you",
+          "example": "ስለረዱኝ አመሰግናለሁ።"
+        },
+        {
+          "word": "አዎ",
+          "phonetic": "Awo",
+          "meaning": "Yes",
+          "example": "አዎ፣ እፈልጋለሁ።"
+        },
+        {
+          "word": "አይደለም",
+          "phonetic": "Aydelem",
+          "meaning": "No / It is not",
+          "example": "አይደለም፣ እዚህ የለም።"
+        },
+        {
+          "word": "እባክህ",
+          "phonetic": "Ebakih",
+          "meaning": "Please (to a male)",
+          "example": "እባክህ፣ ውሃ ስጠኝ።"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Amharic?",
+          "options": [
+            "አመሰግናለሁ",
+            "ሰላም",
+            "አዎ",
+            "አይደለም"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Amharic word for \"Thank you\"?",
+          "options": [
+            "አዎ",
+            "አመሰግናለሁ",
+            "እባክህ",
+            "ሰላም"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Amharic word means \"Yes\"?",
+          "options": [
+            "አይደለም",
+            "እባክህ",
+            "አዎ",
+            "ሰላም"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"አይደለም\", what do they mean?",
+          "options": [
+            "Yes",
+            "Thank you",
+            "No",
+            "Please"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Great job! In this lesson, we'll learn some essential Amharic phrases to help you start conversations. We'll cover greetings like 'ሰላም' (Selam), expressing gratitude with 'አመሰግናለሁ' (Amesegnalehu), and simple responses like 'አዎ' (Awo) and 'አይደለም' (Aydelem). Let's start by practicing 'ሰላም'. Can you repeat after me: 'ሰላም'?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ሰላም",
+          "phonetic": "Selam",
+          "meaning": "Hello / Peace",
+          "example": "ሰላም! እንዴት ነህ?"
+        },
+        {
+          "word": "እንዴት ነህ?",
+          "phonetic": "Indet neh?",
+          "meaning": "How are you? (to a male)",
+          "example": "ሰላም፣ እንዴት ነህ?"
+        },
+        {
+          "word": "ደህና ነኝ",
+          "phonetic": "Dehna negn",
+          "meaning": "I am good / I am fine",
+          "example": "እንዴት ነህ? ደህና ነኝ።"
+        },
+        {
+          "word": "አመሰግናለሁ",
+          "phonetic": "Amesegnallehu",
+          "meaning": "Thank you",
+          "example": "ስለረዱኝ አመሰግናለሁ።"
+        },
+        {
+          "word": "ደህና ሁን",
+          "phonetic": "Dehna hun",
+          "meaning": "Goodbye (to a male)",
+          "example": "ደህና ሁን! ነገ እንገናኝ።"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Amharic word for \"Hello\"?",
+          "options": [
+            "አመሰግናለሁ",
+            "ሰላም",
+            "ደህና ነኝ",
+            "እንዴት ነህ?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Amharic?",
+          "options": [
+            "ደህና ሁን",
+            "እንዴት ነህ?",
+            "አመሰግናለሁ",
+            "ሰላም"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"እንዴት ነህ?\" (How are you?), and you want to say \"I am good,\" which Amharic phrase would you use?",
+          "options": [
+            "ሰላም",
+            "ደህና ነኝ",
+            "አመሰግናለሁ",
+            "ደህና ሁን"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Amharic phrase means \"Goodbye\" (to a male)?",
+          "options": [
+            "ደህና ነኝ",
+            "ሰላም",
+            "እንዴት ነህ?",
+            "ደህና ሁን"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor teaching Amharic. Your goal is to help the learner understand the Amharic vocabulary and practice using it. Start by introducing the new Amharic words like \"ሰላም\" (Selam), \"እንዴት ነህ?\" (Indet neh?), \"ደህና ነኝ\" (Dehna negn), \"አመሰግናለሁ\" (Amesegnallehu), and \"ደህና ሁን\" (Dehna hun). Explain their meaning in English and provide example sentences in Amharic. Then, engage the learner in a conversation using these Amharic words. Encourage them to ask questions and provide feedback on their pronunciation and usage of Amharic."
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ሰላም",
+          "phonetic": "Selam",
+          "meaning": "Hello / Peace",
+          "example": "ሰላም! እንዴት ነህ?"
+        },
+        {
+          "word": "እንዴት ነዎት?",
+          "phonetic": "Indet newot?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "ሰላም፣ እንዴት ነዎት?"
+        },
+        {
+          "word": "ደህና ነኝ።",
+          "phonetic": "Dehna negn.",
+          "meaning": "I am fine.",
+          "example": "ደህና ነኝ፣ አመሰግናለሁ።"
+        },
+        {
+          "word": "ስሜ ... ነው።",
+          "phonetic": "Simey ... new.",
+          "meaning": "My name is...",
+          "example": "ስሜ ጆን ነው።"
+        },
+        {
+          "word": "ስምዎ ማን ነው?",
+          "phonetic": "Simwo man new?",
+          "meaning": "What is your name? (formal/plural)",
+          "example": "ሰላም፣ ስምዎ ማን ነው?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Amharic?",
+          "options": [
+            "ሰላም",
+            "ደህና ነኝ",
+            "አመሰግናለሁ",
+            "እባክዎን"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which phrase means \"I am fine\" in Amharic?",
+          "options": [
+            "እንዴት ነዎት?",
+            "ስሜ ጆን ነው",
+            "ደህና ነኝ",
+            "ሰላም"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"እንዴት ነዎት?\" (How are you?), what is a common response?",
+          "options": [
+            "ስሜ ጆን ነው",
+            "ደህና ነኝ",
+            "ሰላም",
+            "አመሰግናለሁ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"What is your name?\" (formal) in Amharic?",
+          "options": [
+            "ስሜ ጆን ነው?",
+            "ስምዎ ማን ነው?",
+            "እንዴት ነዎት?",
+            "ደህና ነኝ?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "ሰላም! I'm your Amharic tutor. Today, we're going to learn some basic Amharic greetings and introductions. We'll cover phrases like 'ሰላም' (Selam) for 'Hello', 'እንዴት ነዎት?' (Indet newot?) for 'How are you?', and 'ስሜ ... ነው' (Simey ... new) for 'My name is...'. Let's start by practicing 'ሰላም'. Can you try saying 'ሰላም'?"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "መብላት",
+          "phonetic": "meblat",
+          "meaning": "to eat",
+          "example": "እኔ ምግብ እበላለሁ።"
+        },
+        {
+          "word": "መጠጣት",
+          "phonetic": "met'et'at",
+          "meaning": "to drink",
+          "example": "እሷ ውሃ ትጠጣለች።"
+        },
+        {
+          "word": "መሄድ",
+          "phonetic": "mehed",
+          "meaning": "to go",
+          "example": "እኛ ወደ ቤት እንሄዳለን።"
+        },
+        {
+          "word": "ምግብ",
+          "phonetic": "migib",
+          "meaning": "food",
+          "example": "ይህ ጣፋጭ ምግብ ነው።"
+        },
+        {
+          "word": "ውሃ",
+          "phonetic": "wuha",
+          "meaning": "water",
+          "example": "እባክህ ውሃ ስጠኝ።"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Amharic word means \"to eat\"?",
+          "options": [
+            "መጠጣት",
+            "መብላት",
+            "መሄድ",
+            "መተኛት"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"water\" in Amharic?",
+          "options": [
+            "ምግብ",
+            "ቡና",
+            "ውሃ",
+            "ወተት"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Amharic word for \"to go\".",
+          "options": [
+            "መሮጥ",
+            "መምጣት",
+            "መሄድ",
+            "መቆም"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "You are an Amharic tutor. Your goal is to help the student practice new Amharic vocabulary and simple sentence structures related to daily actions. Introduce the first vocabulary word, \"መብላት\" (meblat), and ask the student to repeat it. Then, guide them to form a simple sentence using it, such as \"እኔ ምግብ እበላለሁ\" (Ene migib ebelalehu), explaining the meaning and structure. Continue this process for the other vocabulary words, encouraging the student to create their own sentences and providing corrections and encouragement."
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ሰላም",
+          "phonetic": "Selam",
+          "meaning": "Hello / Peace",
+          "example": "ሰላም! እንዴት ነህ?"
+        },
+        {
+          "word": "አመሰግናለሁ",
+          "phonetic": "Amesegnalehu",
+          "meaning": "Thank you",
+          "example": "አመሰግናለሁ! በጣም ደስ ብሎኛል።"
+        },
+        {
+          "word": "እባክህ / እባክሽ",
+          "phonetic": "Ebakih / Ebakish",
+          "meaning": "Please (to a male / to a female)",
+          "example": "እባክህ ውሃ ስጠኝ።"
+        },
+        {
+          "word": "አዎ",
+          "phonetic": "Awo",
+          "meaning": "Yes",
+          "example": "አዎ፣ እችላለሁ።"
+        },
+        {
+          "word": "አይደለም",
+          "phonetic": "Aydelem",
+          "meaning": "No / It is not",
+          "example": "አይደለም፣ አልፈልግም።"
+        },
+        {
+          "word": "ይቅርታ",
+          "phonetic": "Yikerta",
+          "meaning": "Excuse me / Sorry / Forgiveness",
+          "example": "ይቅርታ፣ አልሰማሁም።"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Amharic word for \"Hello\"?",
+          "options": [
+            "አመሰግናለሁ",
+            "ሰላም",
+            "አዎ",
+            "ይቅርታ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Amharic?",
+          "options": [
+            "አይደለም",
+            "እባክህ",
+            "አመሰግናለሁ",
+            "ሰላም"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Amharic word means \"No\"?",
+          "options": [
+            "አዎ",
+            "አይደለም",
+            "እባክሽ",
+            "ይቅርታ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If you want to say \"Please\" to a woman, which word would you use?",
+          "options": [
+            "እባክህ",
+            "አመሰግናለሁ",
+            "እባክሽ",
+            "ሰላም"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor teaching Amharic. Introduce the new Amharic vocabulary: 'ሰላም' (Selam), 'አመሰግናለሁ' (Amesegnalehu), 'እባክህ/እባክሽ' (Ebakih/Ebakish), 'አዎ' (Awo), 'አይደለም' (Aydelem), and 'ይቅርታ' (Yikerta). Explain their meanings and provide example sentences in Amharic. Encourage the student to practice pronunciation of these Amharic words and phrases, and to ask any questions they have. Use a friendly, encouraging, and clear tone, speaking some Amharic words/phrases during the lesson."
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ሰላም",
+          "phonetic": "Selam",
+          "meaning": "Hello (informal), Peace",
+          "example": "ሰላም! እንዴት ነህ?"
+        },
+        {
+          "word": "እንደምን ነህ?",
+          "phonetic": "Endemin neh?",
+          "meaning": "How are you? (to a male)",
+          "example": "እንደምን ነህ? ደህና ነህ?"
+        },
+        {
+          "word": "እንደምን ነሽ?",
+          "phonetic": "Endemin nesh?",
+          "meaning": "How are you? (to a female)",
+          "example": "እንደምን ነሽ? ስራ እንዴት ነው?"
+        },
+        {
+          "word": "ደህና ነኝ።",
+          "phonetic": "Dehna negn.",
+          "meaning": "I am fine.",
+          "example": "ደህና ነኝ፣ አንተስ?"
+        },
+        {
+          "word": "አመሰግናለሁ።",
+          "phonetic": "Amesegnalehu.",
+          "meaning": "Thank you.",
+          "example": "ስለረዱኝ አመሰግናለሁ።"
+        },
+        {
+          "word": "ምንም አይደለም።",
+          "phonetic": "Minim aydelem.",
+          "meaning": "You're welcome. / It's nothing.",
+          "example": "አመሰግናለሁ። - ምንም አይደለም።"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Amharic?",
+          "options": [
+            "ሰላም",
+            "እንደምን ነህ?",
+            "አመሰግናለሁ",
+            "ደህና ነኝ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Amharic phrase means \"Thank you\"?",
+          "options": [
+            "ደህና ነኝ",
+            "ምንም አይደለም",
+            "አመሰግናለሁ",
+            "እንደምን ነሽ?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks a male, \"እንደምን ነህ?\" (How are you?), and you are fine, how would you respond?",
+          "options": [
+            "አመሰግናለሁ",
+            "ምንም አይደለም",
+            "ሰላም",
+            "ደህና ነኝ"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "ሰላም! እኔ የአማርኛ አስተማሪህ ነኝ። ዛሬ አንዳንድ መሰረታዊ የአማርኛ ሰላምታዎችን እና ሀረጎችን እንማራለን። 'ሰላም'፣ 'እንደምን ነህ/ነሽ?'፣ 'ደህና ነኝ' እና 'አመሰግናለሁ' እንዴት እንደሚባሉ እንመለከታለን። 'ሰላም' (Selam) በሚለው እንጀምር። ከእኔ ጋር ለመናገር ሞክር: ሰላም! በጣም ጥሩ! አሁን 'እንደምን ነህ?' (Endemin neh?) ወይም 'እንደምን ነሽ?' (Endemin nesh?) ብሎ መጠየቅስ?"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ሰላም",
+          "phonetic": "selam",
+          "meaning": "Hello / Peace",
+          "example": "ሰላም! እንዴት ነህ?"
+        },
+        {
+          "word": "እንዴት ነህ/ነሽ?",
+          "phonetic": "indet neh/nesh?",
+          "meaning": "How are you? (m/f)",
+          "example": "ሰላም! እንዴት ነሽ?"
+        },
+        {
+          "word": "ደህና ነኝ",
+          "phonetic": "dehina negn",
+          "meaning": "I am fine.",
+          "example": "እንዴት ነህ? ደህና ነኝ።"
+        },
+        {
+          "word": "አመሰግናለሁ",
+          "phonetic": "ameseginalehu",
+          "meaning": "Thank you.",
+          "example": "አመሰግናለሁ! ደህና ነኝ።"
+        },
+        {
+          "word": "እባክህ/እባክሽ",
+          "phonetic": "ibakih/ibakish",
+          "meaning": "Please (m/f)",
+          "example": "እባክህ ውሃ ስጠኝ።"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Amharic?",
+          "options": [
+            "ሰላም",
+            "አመሰግናለሁ",
+            "ደህና ነኝ",
+            "አዎ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the appropriate response to 'እንዴት ነሽ?' (How are you? - female) in Amharic?",
+          "options": [
+            "ሰላም",
+            "ደህና ነኝ",
+            "አመሰግናለሁ",
+            "እባክሽ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which of these Amharic phrases means 'Thank you'?",
+          "options": [
+            "አዎ",
+            "አይደለም",
+            "አመሰግናለሁ",
+            "እባክህ"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor helping a student learn Amharic. Start by introducing the lesson's topic: basic Amharic greetings and polite phrases. Begin by saying something like, \"ሰላም! (Selam!) Welcome to our Amharic lesson! Today, we'll learn some essential phrases to greet people and be polite.\" Then, go through the vocabulary words one by one. For each word, explain its meaning in English, provide the Amharic word and its phonetic pronunciation, and then give an example sentence in Amharic. Encourage the student to repeat after you. For instance, say, \"Our first word is 'ሰላም' (selam), which means 'Hello' or 'Peace'. An example sentence is 'ሰላም! እንዴት ነህ?' (Selam! Indet neh? - Hello! How are you?). Can you try saying 'ሰላም'?\" Do this for all vocabulary items. After covering all vocabulary, introduce the quiz by saying, \"Great job with the vocabulary! Now, let's test your understanding with a quick quiz. Read the questions in English and choose the best Amharic option.\" Finally, offer to review any difficult concepts or practice more Amharic phrases, asking, \"Do you want to review any of these phrases, or would you like to practice more Amharic conversations?\""
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ሰላም",
+          "phonetic": "Selam",
+          "meaning": "Hello / Peace",
+          "example": "ሰላም! እንዴት ነህ?"
+        },
+        {
+          "word": "እንዴት ነህ?",
+          "phonetic": "Indet neh?",
+          "meaning": "How are you? (to a male)",
+          "example": "ሰላም ዮሐንስ፣ እንዴት ነህ?"
+        },
+        {
+          "word": "እንዴት ነሽ?",
+          "phonetic": "Indet nesh?",
+          "meaning": "How are you? (to a female)",
+          "example": "ሰላም ፋጡማ፣ እንዴት ነሽ?"
+        },
+        {
+          "word": "ደህና ነኝ",
+          "phonetic": "Dehna negn",
+          "meaning": "I am fine.",
+          "example": "እንዴት ነህ? - ደህና ነኝ፣ አመሰግናለሁ።"
+        },
+        {
+          "word": "አመሰግናለሁ",
+          "phonetic": "Amesegnalehu",
+          "meaning": "Thank you.",
+          "example": "ለእርዳታህ አመሰግናለሁ።"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Amharic?",
+          "options": [
+            "ደህና ነኝ",
+            "ሰላም",
+            "አመሰግናለሁ",
+            "እንዴት ነህ?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means 'How are you?' when speaking to a male?",
+          "options": [
+            "እንዴት ነሽ?",
+            "ደህና ነኝ",
+            "እንዴት ነህ?",
+            "አመሰግናለሁ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks 'እንዴት ነሽ?' (How are you? - female) and you are fine, how would you respond?",
+          "options": [
+            "ሰላም",
+            "አመሰግናለሁ",
+            "ደህና ነኝ",
+            "እንዴት ነሽ?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor helping a student learn Amharic. Today we'll learn basic Amharic greetings and introductions. We'll cover words and phrases like 'ሰላም' (hello), 'እንዴት ነህ?' (how are you? - male), 'እንዴት ነሽ?' (how are you? - female), 'ደህና ነኝ' (I am fine), and 'አመሰግናለሁ' (thank you). Let's start with 'ሰላም'. Can you repeat it after me?"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ሰላም",
+          "phonetic": "Selam",
+          "meaning": "Hello / Peace",
+          "example": "ሰላም! እንዴት ነህ?"
+        },
+        {
+          "word": "እንደምን ነህ?",
+          "phonetic": "Endemin neh?",
+          "meaning": "How are you? (to a male)",
+          "example": "እንደምን ነህ? ደህና ነህ?"
+        },
+        {
+          "word": "እንደምን ነሽ?",
+          "phonetic": "Endemin nesh?",
+          "meaning": "How are you? (to a female)",
+          "example": "እንደምን ነሽ? ደህና ነሽ?"
+        },
+        {
+          "word": "ደህና ነኝ",
+          "phonetic": "Dehna negn",
+          "meaning": "I am fine",
+          "example": "ደህና ነኝ፣ አመሰግናለሁ።"
+        },
+        {
+          "word": "አመሰግናለሁ",
+          "phonetic": "Amesegnalehu",
+          "meaning": "Thank you",
+          "example": "አመሰግናለሁ ስለረዱኝ።"
+        },
+        {
+          "word": "ደህና ሁን",
+          "phonetic": "Dehna hun",
+          "meaning": "Goodbye (to a male)",
+          "example": "ደህና ሁን! ነገ እንገናኝ።"
+        },
+        {
+          "word": "ደህና ሁኚ",
+          "phonetic": "Dehna hugni",
+          "meaning": "Goodbye (to a female)",
+          "example": "ደህና ሁኚ! መልካም ቀን።"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Amharic word for \"Hello\"?",
+          "options": [
+            "ደህና ነኝ",
+            "ሰላም",
+            "አመሰግናለሁ",
+            "እንደምን ነህ?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Amharic?",
+          "options": [
+            "ደህና ሁን",
+            "ሰላም",
+            "አመሰግናለሁ",
+            "እንደምን ነሽ?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"እንደምን ነህ?\" (How are you? to a male), how would you respond if you are fine?",
+          "options": [
+            "አመሰግናለሁ",
+            "ደህና ነኝ",
+            "ሰላም",
+            "ደህና ሁን"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"Goodbye\" when speaking to a female?",
+          "options": [
+            "ደህና ሁን",
+            "ሰላም",
+            "ደህና ሁኚ",
+            "እንደምን ነህ?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "ሰላም! (Selam!) Welcome to your first Amharic lesson! Today, we're diving into essential greetings and basic phrases. We'll learn how to say 'Hello', ask 'How are you?', respond with 'I am fine', express 'Thank you', and say 'Goodbye'. Our vocabulary for today includes: 'ሰላም' (Selam), 'እንደምን ነህ/ነሽ?' (Endemin neh/nesh?), 'ደህና ነኝ' (Dehna negn), 'አመሰግናለሁ' (Amesegnalehu), and 'ደህና ሁን/ሁኚ' (Dehna hun/hugni). Let's start with the most common greeting: 'ሰላም'. This means 'Hello' or 'Peace'. Can you try saying 'ሰላም'?"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "መብላት",
+          "phonetic": "meblat",
+          "meaning": "to eat",
+          "example": "እኔ ምግብ መብላት እፈልጋለሁ።"
+        },
+        {
+          "word": "መጠጣት",
+          "phonetic": "met'et'at",
+          "meaning": "to drink",
+          "example": "ውሃ መጠጣት አለብህ።"
+        },
+        {
+          "word": "መሄድ",
+          "phonetic": "mehed",
+          "meaning": "to go",
+          "example": "ወደ ቤት መሄድ እፈልጋለሁ።"
+        },
+        {
+          "word": "መተኛት",
+          "phonetic": "metenyat",
+          "meaning": "to sleep",
+          "example": "አሁን መተኛት አለብኝ።"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Amharic word means 'to eat'?",
+          "options": [
+            "መብላት",
+            "መጠጣት",
+            "መሄድ",
+            "መተኛት"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say 'to drink' in Amharic?",
+          "options": [
+            "መሄድ",
+            "መብላት",
+            "መጠጣት",
+            "መተኛት"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Amharic word for 'to go'.",
+          "options": [
+            "መተኛት",
+            "መሄድ",
+            "መብላት",
+            "መጠጣት"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Amharic word for 'to sleep'?",
+          "options": [
+            "መጠጣት",
+            "መሄድ",
+            "መብላት",
+            "መተኛት"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "You are an AI Amharic tutor. Your goal is to help the user learn Amharic. Begin by introducing the new Amharic vocabulary for this lesson: 'መብላት' (meblat - to eat), 'መጠጣት' (met'et'at - to drink), 'መሄድ' (mehed - to go), and 'መተኛት' (metenyat - to sleep). For each word, clearly pronounce it in Amharic, explain its English meaning, and then provide the Amharic example sentence. Encourage the user to repeat the Amharic words after you and try to form their own simple sentences using the new vocabulary. After reviewing all the vocabulary, introduce the quiz questions. Read each question in English, present the Amharic options, and guide the user to choose the correct answer. Provide positive reinforcement and clear explanations for both correct and incorrect answers. Maintain a supportive and encouraging tone throughout the lesson, using simple and clear language."
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "መብላት",
+          "phonetic": "meblat",
+          "meaning": "to eat",
+          "example": "እኔ ምግብ መብላት እወዳለሁ።"
+        },
+        {
+          "word": "መጠጣት",
+          "phonetic": "met'et'at'",
+          "meaning": "to drink",
+          "example": "ውሃ መጠጣት አለብኝ።"
+        },
+        {
+          "word": "መሄድ",
+          "phonetic": "mehed",
+          "meaning": "to go",
+          "example": "ወደ ገበያ መሄድ እፈልጋለሁ።"
+        },
+        {
+          "word": "መምጣት",
+          "phonetic": "memt'at'",
+          "meaning": "to come",
+          "example": "እሱ ነገ መምጣት ይችላል።"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Amharic word for \"to eat\"?",
+          "options": [
+            "መሄድ",
+            "መብላት",
+            "መጠጣት",
+            "መምጣት"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Amharic word means \"to drink\"?",
+          "options": [
+            "መምጣት",
+            "መብላት",
+            "መጠጣት",
+            "መሄድ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"to go\" in Amharic?",
+          "options": [
+            "መሄድ",
+            "መምጣት",
+            "መብላት",
+            "መጠጣት"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "ሰላም! ዛሬ አዲስ የአማርኛ ቃላትን እንማራለን። እንደ \"መብላት\" (meblat), \"መጠጣት\" (met'et'at'), እና \"መሄድ\" (mehed) ያሉ ቃላትን እንመለከታለን። እኔ ቃሉን እላለሁ፣ እናንተም ትደግማላችሁ። በአረፍተ ነገር ውስጥ እንዴት እንደምንጠቀምባቸውም እንለማመዳለን። እስቲ በ \"መብላት\" (meblat) እንጀምር።"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ሰላም",
+          "phonetic": "Selam",
+          "meaning": "Hello / Peace",
+          "example": "ሰላም! እንዴት ነህ?"
+        },
+        {
+          "word": "እንዴት ነህ?",
+          "phonetic": "Indet neh?",
+          "meaning": "How are you? (to a male)",
+          "example": "ሰላም፣ እንዴት ነህ? ደህና ነኝ።"
+        },
+        {
+          "word": "እንዴት ነሽ?",
+          "phonetic": "Indet nesh?",
+          "meaning": "How are you? (to a female)",
+          "example": "ሰላም፣ እንዴት ነሽ? ደህና ነኝ።"
+        },
+        {
+          "word": "ደህና ነኝ",
+          "phonetic": "Dehna negn",
+          "meaning": "I am fine",
+          "example": "እንዴት ነህ? ደህና ነኝ።"
+        },
+        {
+          "word": "አመሰግናለሁ",
+          "phonetic": "Amesegnalew",
+          "meaning": "Thank you",
+          "example": "አመሰግናለሁ! በጣም ጥሩ ነው።"
+        },
+        {
+          "word": "ስምህ ማነው?",
+          "phonetic": "Simih manew?",
+          "meaning": "What is your name? (to a male)",
+          "example": "ሰላም፣ ስምህ ማነው?"
+        },
+        {
+          "word": "ስምሽ ማነው?",
+          "phonetic": "Simish manew?",
+          "meaning": "What is your name? (to a female)",
+          "example": "ሰላም፣ ስምሽ ማነው?"
+        },
+        {
+          "word": "ስሜ ... ነው",
+          "phonetic": "Sme ... new",
+          "meaning": "My name is ...",
+          "example": "ስሜ ዮሐንስ ነው።"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Amharic?",
+          "options": [
+            "ሰላም",
+            "አመሰግናለሁ",
+            "ደህና ነኝ",
+            "ስሜ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which phrase means 'How are you?' when speaking to a male?",
+          "options": [
+            "ስምህ ማነው?",
+            "እንዴት ነህ?",
+            "ደህና ነኝ",
+            "አመሰግናለሁ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks 'እንዴት ነሽ?', how would a female typically respond?",
+          "options": [
+            "ስሜ ... ነው",
+            "አመሰግናለሁ",
+            "ሰላም",
+            "ደህና ነኝ"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "What does 'አመሰግናለሁ' mean?",
+          "options": [
+            "Hello",
+            "My name is...",
+            "Thank you",
+            "How are you?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "ሰላም! ወደ መጀመሪያው የአማርኛ ትምህርት እንኳን ደህና መጣህ/መጣሽ! ዛሬ መሰረታዊ የሰላምታ እና የትውውቅ ቃላትን እንማራለን። 'ሰላም' (Hello), 'እንዴት ነህ/ነሽ?' (How are you?), 'ደህና ነኝ' (I am fine), እና 'አመሰግናለሁ' (Thank you) እንዴት እንደሚባሉ እናያለን። እንዲሁም ስምህን/ስምሽን እንዴት መጠየቅ እና መናገር እንደምትችል/እንደምትችይ እንማራለን። እኔ ቃላቱን እላለሁ፣ አንተ/አንቺም መድገም ትችላለህ/ትችያለሽ። እንጀምር!"
+    }
+  ]
+}

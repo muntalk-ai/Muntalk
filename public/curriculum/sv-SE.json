@@ -1,0 +1,1345 @@
+{
+  "langCode": "sv-SE",
+  "langLabel": "Swedish",
+  "langNative": "Svenska",
+  "generatedAt": "2026-03-15T00:35:56.866Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "hey",
+          "meaning": "Hello",
+          "example": "Hej, hur mår du?"
+        },
+        {
+          "word": "Ja",
+          "phonetic": "yah",
+          "meaning": "Yes",
+          "example": "Ja, det stämmer."
+        },
+        {
+          "word": "Nej",
+          "phonetic": "nay",
+          "meaning": "No",
+          "example": "Nej, jag kan inte."
+        },
+        {
+          "word": "Tack",
+          "phonetic": "tahk",
+          "meaning": "Thank you",
+          "example": "Tack för hjälpen!"
+        },
+        {
+          "word": "Varsågod",
+          "phonetic": "var-saw-good",
+          "meaning": "Please / You're welcome",
+          "example": "Varsågod, här är din kaffe."
+        },
+        {
+          "word": "Ursäkta",
+          "phonetic": "oor-shek-tah",
+          "meaning": "Excuse me / Sorry",
+          "example": "Ursäkta, var ligger toaletten?"
+        },
+        {
+          "word": "God morgon",
+          "phonetic": "good mor-gon",
+          "meaning": "Good morning",
+          "example": "God morgon, solen skiner!"
+        },
+        {
+          "word": "God kväll",
+          "phonetic": "good kvel",
+          "meaning": "Good evening",
+          "example": "God kväll, hur har du haft det?"
+        },
+        {
+          "word": "Hej då",
+          "phonetic": "hey daw",
+          "meaning": "Goodbye",
+          "example": "Hej då, vi ses snart!"
+        },
+        {
+          "word": "Jag heter...",
+          "phonetic": "yahg het-er",
+          "meaning": "My name is...",
+          "example": "Jag heter Anna."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Swedish?",
+          "options": [
+            "Hej",
+            "Tack",
+            "Ja",
+            "Nej"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What does \"Tack\" mean in English?",
+          "options": [
+            "Yes",
+            "No",
+            "Thank you",
+            "Goodbye"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Swedish phrase for \"Excuse me\".",
+          "options": [
+            "God morgon",
+            "Hej då",
+            "Ursäkta",
+            "Varsågod"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say \"My name is [your name]\" in Swedish?",
+          "options": [
+            "Jag är [your name]",
+            "Jag heter [your name]",
+            "Mitt namn är [your name]",
+            "Jag kallas [your name]"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Utmärkt! Välkommen till din första lektion i svenska! Idag ska vi lära oss några grundläggande hälsningsfraser och artighetsuttryck som du kan använda i vardagen. Vi börjar med \"Hej\", det vanligaste sättet att säga \"Hello\". Kan du upprepa \"Hej\"?"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "hey",
+          "meaning": "Hello / Hi",
+          "example": "Hej, hur mår du?"
+        },
+        {
+          "word": "Jag heter...",
+          "phonetic": "yahg HEH-ter",
+          "meaning": "My name is...",
+          "example": "Jag heter Anna."
+        },
+        {
+          "word": "Vad heter du?",
+          "phonetic": "vahd HEH-ter doo",
+          "meaning": "What is your name?",
+          "example": "Hej, jag heter Erik. Vad heter du?"
+        },
+        {
+          "word": "Tack",
+          "phonetic": "tahk",
+          "meaning": "Thank you",
+          "example": "Tack för hjälpen!"
+        },
+        {
+          "word": "Varsågod",
+          "phonetic": "var-SAW-good",
+          "meaning": "You're welcome / Here you go",
+          "example": "Tack! – Varsågod!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Swedish?",
+          "options": [
+            "Hej",
+            "Tack",
+            "Ja",
+            "Nej"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which phrase means \"My name is...\"?",
+          "options": [
+            "Jag är",
+            "Jag har",
+            "Jag heter",
+            "Jag gillar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"What is your name?\" in Swedish?",
+          "options": [
+            "Hur mår du?",
+            "Vad är det?",
+            "Vad heter du?",
+            "Vem är du?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Tack\", what is a common response?",
+          "options": [
+            "Hej",
+            "Varsågod",
+            "Ja",
+            "Nej"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Välkommen till din första svenskalektion! Idag ska vi lära oss några grundläggande hälsningsfraser och hur man presenterar sig. Vi börjar med \"Hej\". Lyssna på hur det låter, försök sedan att säga det själv. Därefter lär vi oss \"Jag heter...\" och \"Vad heter du?\". Vi kommer att öva på att presentera oss och fråga andra vad de heter. I slutet av den här lektionen kommer du att kunna hälsa på folk och presentera dig på svenska! Nu kör vi!"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "hey",
+          "meaning": "Hello / Hi",
+          "example": "Hej, hur mår du?"
+        },
+        {
+          "word": "God morgon",
+          "phonetic": "good mor-gon",
+          "meaning": "Good morning",
+          "example": "God morgon, vad trevligt att se dig!"
+        },
+        {
+          "word": "Tack",
+          "phonetic": "tahk",
+          "meaning": "Thank you",
+          "example": "Tack för hjälpen!"
+        },
+        {
+          "word": "Ja",
+          "phonetic": "yah",
+          "meaning": "Yes",
+          "example": "Ja, jag förstår."
+        },
+        {
+          "word": "Nej",
+          "phonetic": "nay",
+          "meaning": "No",
+          "example": "Nej, det är inte sant."
+        },
+        {
+          "word": "Ursäkta",
+          "phonetic": "oor-shek-tah",
+          "meaning": "Excuse me / Sorry",
+          "example": "Ursäkta, var ligger toaletten?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' or 'Hi' in Swedish?",
+          "options": [
+            "God morgon",
+            "Hej",
+            "Tack",
+            "Nej"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does the Swedish word 'Tack' mean?",
+          "options": [
+            "Yes",
+            "No",
+            "Thank you",
+            "Excuse me"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Swedish phrase means 'Good morning'?",
+          "options": [
+            "Hej",
+            "God morgon",
+            "Ja",
+            "Ursäkta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say 'Excuse me' or 'Sorry' in Swedish?",
+          "options": [
+            "Ja",
+            "Nej",
+            "Tack",
+            "Ursäkta"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "What is the Swedish word for 'Yes'?",
+          "options": [
+            "Nej",
+            "Tack",
+            "Ja",
+            "Hej"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Välkommen till din första lektion i svenska! Idag ska vi lära oss några av de mest grundläggande och användbara fraserna för att hälsa och svara på svenska. Vi kommer att fokusera på ord som 'Hej', 'God morgon', 'Tack', 'Ja', 'Nej' och 'Ursäkta'. Lyssna noga på uttalet och försök att upprepa efter mig. Det är viktigt att öva högt! Låt oss börja med 'Hej', som betyder 'Hello'."
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "[hej]",
+          "meaning": "Hello / Hi",
+          "example": "Hej! Hur mår du?"
+        },
+        {
+          "word": "Tack",
+          "phonetic": "[tak]",
+          "meaning": "Thank you",
+          "example": "Tack för hjälpen!"
+        },
+        {
+          "word": "Ja",
+          "phonetic": "[ja]",
+          "meaning": "Yes",
+          "example": "Ja, jag förstår."
+        },
+        {
+          "word": "Nej",
+          "phonetic": "[nej]",
+          "meaning": "No",
+          "example": "Nej, det är inte sant."
+        },
+        {
+          "word": "Jag heter...",
+          "phonetic": "[jag heh-ter]",
+          "meaning": "My name is...",
+          "example": "Jag heter Anna."
+        },
+        {
+          "word": "Ursäkta",
+          "phonetic": "[oor-shek-ta]",
+          "meaning": "Excuse me / Sorry",
+          "example": "Ursäkta, var ligger toaletten?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Swedish?",
+          "options": [
+            "Tack",
+            "Hej",
+            "Ja",
+            "Nej"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does the Swedish word \"Tack\" mean in English?",
+          "options": [
+            "Yes",
+            "No",
+            "Thank you",
+            "Excuse me"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase would you use to say \"My name is Erik\" in Swedish?",
+          "options": [
+            "Jag är Erik",
+            "Jag heter Erik",
+            "Jag har Erik",
+            "Jag bor Erik"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If you want to politely get someone's attention or apologize, which Swedish word would you use?",
+          "options": [
+            "Ja",
+            "Nej",
+            "Hej",
+            "Ursäkta"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Välkommen till din första spännande lektion i svenska! Idag dyker vi in i några av de mest användbara fraserna för att hälsa och presentera dig själv. Vi kommer att utforska ord som \"Hej\" (Hello), \"Tack\" (Thank you), och den viktiga frasen \"Jag heter...\" (My name is...). Jag kommer att guida dig genom uttal, ge dig praktiska exempel och svara på alla dina frågor. Efter att vi har gått igenom vokabulären får du chansen att öva med mig. Är du redo att börja med \"Hej\"?"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "hey",
+          "meaning": "Hello / Hi",
+          "example": "Hej, hur mår du?"
+        },
+        {
+          "word": "God morgon",
+          "phonetic": "good mor-gon",
+          "meaning": "Good morning",
+          "example": "God morgon, solen skiner!"
+        },
+        {
+          "word": "Tack",
+          "phonetic": "tahk",
+          "meaning": "Thank you",
+          "example": "Tack för hjälpen!"
+        },
+        {
+          "word": "Ja",
+          "phonetic": "yah",
+          "meaning": "Yes",
+          "example": "Ja, jag förstår."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Swedish?",
+          "options": [
+            "Hej",
+            "Hej då",
+            "God natt",
+            "Tack"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Swedish word means 'Thank you'?",
+          "options": [
+            "Ja",
+            "Nej",
+            "Tack",
+            "Hej"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Translate 'Good morning' into Swedish.",
+          "options": [
+            "God kväll",
+            "God natt",
+            "God morgon",
+            "Hej"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Välkommen till din första lektion i svenska! Idag ska vi lära oss några grundläggande hälsningsfraser och artighetsuttryck. Vi börjar med 'Hej'. 'Hej' betyder 'Hello' och är det vanligaste sättet att hälsa på någon i Sverige. Kan du försöka säga 'Hej'? Utmärkt! Nästa ord är 'God morgon', som betyder 'Good morning'. Det används på morgonen, precis som på engelska. Försök att säga 'God morgon'. Bra jobbat! Nu till 'Tack'. 'Tack' betyder 'Thank you'. Det är ett viktigt ord att kunna för att vara artig. Kan du säga 'Tack'? Sist men inte minst, 'Ja'. 'Ja' betyder 'Yes'. Det är ett enkelt men mycket användbart ord. Kan du säga 'Ja'? Fantastiskt! Vi har nu gått igenom 'Hej' (Hello), 'God morgon' (Good morning), 'Tack' (Thank you) och 'Ja' (Yes). Låt oss öva lite mer. Kan du säga 'Tack'?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "hey",
+          "meaning": "Hi / Hello",
+          "example": "Hej, hur mår du?"
+        },
+        {
+          "word": "Tack",
+          "phonetic": "tahk",
+          "meaning": "Thank you",
+          "example": "Tack för hjälpen!"
+        },
+        {
+          "word": "Ja",
+          "phonetic": "yah",
+          "meaning": "Yes",
+          "example": "Ja, det stämmer."
+        },
+        {
+          "word": "Nej",
+          "phonetic": "nay",
+          "meaning": "No",
+          "example": "Nej, tyvärr inte."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Swedish?",
+          "options": [
+            "Tack",
+            "Hej",
+            "Ja",
+            "Nej"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does the Swedish word \"Tack\" mean in English?",
+          "options": [
+            "Yes",
+            "No",
+            "Thank you",
+            "Excuse me"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Swedish word means \"Yes\"?",
+          "options": [
+            "Nej",
+            "Hej",
+            "Ja",
+            "Tack"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hej! Välkommen till din första lektion i svenska! Idag ska vi lära oss några grundläggande ord och fraser. Jag kommer att presentera ett ord, dess betydelse och hur man uttalar det. Sedan vill jag att du upprepar det. Låt oss börja med 'Hej'. 'Hej' betyder 'Hi' eller 'Hello' på engelska och uttalas som 'hey'. Kan du säga 'Hej'? Utmärkt! Nästa ord är 'Tack'. 'Tack' betyder 'Thank you' och uttalas som 'tahk'. Försök att säga 'Tack'. Bra jobbat! Nu till 'Ja'. 'Ja' betyder 'Yes' och uttalas som 'yah'. Kan du upprepa 'Ja'? Perfekt! Och slutligen, 'Nej'. 'Nej' betyder 'No' och uttalas som 'nay'. Säg 'Nej'. Fantastiskt! Nu har du lärt dig 'Hej', 'Tack', 'Ja' och 'Nej'. Vi kan nu öva på att använda dem i korta meningar. Är du redo att fortsätta öva?"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "[hej]",
+          "meaning": "Hello",
+          "example": "Hej! Hur mår du?"
+        },
+        {
+          "word": "Jag",
+          "phonetic": "[jaːɡ]",
+          "meaning": "I",
+          "example": "Jag är en student."
+        },
+        {
+          "word": "är",
+          "phonetic": "[æːr]",
+          "meaning": "am/is/are (to be)",
+          "example": "Du är snäll."
+        },
+        {
+          "word": "en",
+          "phonetic": "[ɛn]",
+          "meaning": "a/an (common gender)",
+          "example": "Jag har en bok."
+        },
+        {
+          "word": "student",
+          "phonetic": "[stɵˈdɛnt]",
+          "meaning": "student",
+          "example": "Är du en student?"
+        },
+        {
+          "word": "och",
+          "phonetic": "[ɔk]",
+          "meaning": "and",
+          "example": "Jag och du."
+        },
+        {
+          "word": "du",
+          "phonetic": "[dʉː]",
+          "meaning": "you (singular informal)",
+          "example": "Vad heter du?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Swedish?",
+          "options": [
+            "Hej",
+            "God morgon",
+            "Adjö",
+            "Tack"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Swedish word means \"I\"?",
+          "options": [
+            "Du",
+            "Vi",
+            "Jag",
+            "Ni"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Translate \"I am a student.\"",
+          "options": [
+            "Du är en student.",
+            "Jag är en student.",
+            "Vi är studenter.",
+            "Jag har en student."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does the Swedish word \"och\" mean in English?",
+          "options": [
+            "or",
+            "but",
+            "and",
+            "if"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hej! Välkommen till din svenskalektion. Idag ska vi lära oss grundläggande hälsningsfraser och hur man presenterar sig själv på svenska. Vi kommer att titta på ord som \"Hej\" (Hello), \"Jag\" (I), \"är\" (am/is/are), \"en\" (a/an), \"student\" (student), \"och\" (and) samt \"du\" (you). Låt oss börja med \"Hej\". Kan du prova att säga \"Hej\"? Utmärkt! Sedan går vi vidare till att säga \"Jag är en student\" (I am a student). Vi kommer också att öva på att fråga \"Och du?\" (And you?). Målet är att du ska kunna säga \"Hej, jag är en student, och du?\" i slutet av lektionen. Jag kommer att guida dig genom uttal och användning av dessa fraser. Låt oss öva tillsammans!"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "äta",
+          "phonetic": "eh-tah",
+          "meaning": "to eat",
+          "example": "Jag vill äta mat."
+        },
+        {
+          "word": "dricka",
+          "phonetic": "drik-kah",
+          "meaning": "to drink",
+          "example": "De vill dricka vatten."
+        },
+        {
+          "word": "vatten",
+          "phonetic": "vat-ten",
+          "meaning": "water",
+          "example": "Kan jag få lite vatten?"
+        },
+        {
+          "word": "mat",
+          "phonetic": "maht",
+          "meaning": "food",
+          "example": "Maten är god."
+        },
+        {
+          "word": "vill ha",
+          "phonetic": "vill hah",
+          "meaning": "want to have / would like",
+          "example": "Jag vill ha kaffe, tack."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Swedish word for 'to eat'?",
+          "options": [
+            "dricka",
+            "äta",
+            "vatten",
+            "mat"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say 'water' in Swedish?",
+          "options": [
+            "mat",
+            "dricka",
+            "vatten",
+            "äta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means 'I want' or 'would like'?",
+          "options": [
+            "jag äter",
+            "jag dricker",
+            "jag vill ha",
+            "jag har"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hej! Idag ska vi lära oss några vanliga svenska ord och fraser. Vi kommer att titta på ord som \"äta\" (to eat), \"dricka\" (to drink), \"vatten\" (water), \"mat\" (food) och frasen \"vill ha\" (want to have / would like). Vi övar med exempelmeningar och ser hur vi kan använda dem i vardagen. Låt oss börja!"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "hey",
+          "meaning": "Hello",
+          "example": "Hej! Hur mår du?"
+        },
+        {
+          "word": "Jag heter",
+          "phonetic": "yahg HEH-ter",
+          "meaning": "My name is",
+          "example": "Jag heter Anna."
+        },
+        {
+          "word": "Vad heter du?",
+          "phonetic": "vahd HEH-ter doo?",
+          "meaning": "What is your name?",
+          "example": "Hej, jag heter Erik. Vad heter du?"
+        },
+        {
+          "word": "Trevligt att träffas",
+          "phonetic": "TREV-ligt aht TREHF-fahs",
+          "meaning": "Nice to meet you",
+          "example": "Trevligt att träffas, Anna!"
+        },
+        {
+          "word": "Hur mår du?",
+          "phonetic": "hoor mohr doo?",
+          "meaning": "How are you?",
+          "example": "Hej, hur mår du idag?"
+        },
+        {
+          "word": "Jag mår bra, tack",
+          "phonetic": "yahg mohr brah, tahk",
+          "meaning": "I'm fine, thanks",
+          "example": "Jag mår bra, tack. Och du?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Swedish?",
+          "options": [
+            "Hej",
+            "Hejdå",
+            "God morgon",
+            "Tack"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which phrase means \"My name is...\"?",
+          "options": [
+            "Jag är",
+            "Jag heter",
+            "Jag har",
+            "Jag gillar"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to \"Hur mår du?\" (How are you?)",
+          "options": [
+            "Vad heter du?",
+            "Trevligt att träffas",
+            "Jag mår bra, tack",
+            "Hej"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct phrase for \"Nice to meet you.\"",
+          "options": [
+            "God natt",
+            "Jag älskar dig",
+            "Trevligt att träffas",
+            "Varsågod"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Välkommen till den här lektionen! Idag ska vi lära oss grundläggande hälsningsfraser och hur man presenterar sig på svenska. Vi kommer att gå igenom fraser som \"Hej\", \"Jag heter...\" och \"Hur mår du?\". Du kommer att få öva på att hälsa och presentera dig själv. Låt oss börja!"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "hey",
+          "meaning": "Hello, Hi",
+          "example": "Hej, hur mår du?"
+        },
+        {
+          "word": "Tack",
+          "phonetic": "tahk",
+          "meaning": "Thank you",
+          "example": "Tack för hjälpen!"
+        },
+        {
+          "word": "Ja",
+          "phonetic": "yah",
+          "meaning": "Yes",
+          "example": "Ja, det stämmer."
+        },
+        {
+          "word": "Nej",
+          "phonetic": "nay",
+          "meaning": "No",
+          "example": "Nej, tyvärr inte."
+        },
+        {
+          "word": "Ursäkta",
+          "phonetic": "oor-SEK-tah",
+          "meaning": "Excuse me, Sorry",
+          "example": "Ursäkta, var ligger toaletten?"
+        },
+        {
+          "word": "Snälla",
+          "phonetic": "SNEH-lah",
+          "meaning": "Please",
+          "example": "Kan du hjälpa mig, snälla?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Swedish?",
+          "options": [
+            "Tack",
+            "Hej",
+            "Ja",
+            "Nej"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does the Swedish word \"Tack\" mean?",
+          "options": [
+            "Yes",
+            "No",
+            "Thank you",
+            "Please"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Swedish word means \"Yes\"?",
+          "options": [
+            "Nej",
+            "Ja",
+            "Hej",
+            "Ursäkta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"Excuse me\" or \"Sorry\" in Swedish?",
+          "options": [
+            "Snälla",
+            "Tack",
+            "Ursäkta",
+            "Nej"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If you want to say \"Please\" in Swedish, which word would you use?",
+          "options": [
+            "Ja",
+            "Snälla",
+            "Hej",
+            "Tack"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Välkommen till din första lektion i svenska! Idag ska vi lära oss några grundläggande hälsningsfraser och artighetsuttryck. Vi kommer att titta på ord som 'Hej', 'Tack', 'Ja', 'Nej', 'Ursäkta' och 'Snälla'. Jag kommer att säga varje ord, och du kan upprepa efter mig. Sedan övar vi på att använda dem i enkla meningar. Låt oss börja!"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "att vara",
+          "phonetic": "at vah-rah",
+          "meaning": "to be",
+          "example": "Jag är glad."
+        },
+        {
+          "word": "att ha",
+          "phonetic": "at hah",
+          "meaning": "to have",
+          "example": "Vi har en katt."
+        },
+        {
+          "word": "att gå",
+          "phonetic": "at goh",
+          "meaning": "to go, to walk",
+          "example": "Jag vill gå hem."
+        },
+        {
+          "word": "att äta",
+          "phonetic": "at eh-tah",
+          "meaning": "to eat",
+          "example": "Vad vill du äta?"
+        },
+        {
+          "word": "att dricka",
+          "phonetic": "at drik-kah",
+          "meaning": "to drink",
+          "example": "Jag dricker vatten."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Fill in the blank: 'Jag ___ glad.' (I am happy.)",
+          "options": [
+            "har",
+            "är",
+            "äter",
+            "dricker"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means 'to have'?",
+          "options": [
+            "att vara",
+            "att gå",
+            "att ha",
+            "att äta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Complete the sentence: 'Jag ___ en smörgås.' (I eat a sandwich.)",
+          "options": [
+            "dricker",
+            "går",
+            "äter",
+            "har"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hej! Välkommen till en ny svenskalektion! Idag ska vi fokusera på några av de viktigaste verben i svenska: **att vara** (to be), **att ha** (to have), **att gå** (to go), **att äta** (to eat) och **att dricka** (to drink). Vi kommer att titta på hur man använder dem i enkla meningar och öva på deras betydelse. Låt oss börja med att utforska dessa grundläggande verb. Är du redo att lära dig?"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "hus",
+          "phonetic": "hoos",
+          "meaning": "house",
+          "example": "Jag bor i ett hus."
+        },
+        {
+          "word": "lägenhet",
+          "phonetic": "leh-gen-het",
+          "meaning": "apartment",
+          "example": "Hon har en fin lägenhet."
+        },
+        {
+          "word": "rum",
+          "phonetic": "room",
+          "meaning": "room",
+          "example": "Det finns tre rum i lägenheten."
+        },
+        {
+          "word": "kök",
+          "phonetic": "shörk",
+          "meaning": "kitchen",
+          "example": "Vi äter frukost i köket."
+        },
+        {
+          "word": "vardagsrum",
+          "phonetic": "var-dahgs-room",
+          "meaning": "living room",
+          "example": "Vi tittar på TV i vardagsrummet."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Swedish word for \"house\"?",
+          "options": [
+            "hus",
+            "kök",
+            "rum",
+            "lägenhet"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which word means \"apartment\"?",
+          "options": [
+            "hus",
+            "lägenhet",
+            "rum",
+            "vardagsrum"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Translate \"kitchen\" into Swedish.",
+          "options": [
+            "sovrum",
+            "badrum",
+            "kök",
+            "vardagsrum"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Bra jobbat! Idag ska vi lära oss några nya svenska ord relaterade till hemmet och olika rum. Vi kommer att öva på att säga dem, använda dem i meningar och förstå deras betydelse. Låt oss börja med ordet \"hus\". Kan du säga \"hus\"?"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "att vakna",
+          "phonetic": "at VAK-na",
+          "meaning": "to wake up",
+          "example": "Jag vaknar klockan sju varje morgon."
+        },
+        {
+          "word": "att äta frukost",
+          "phonetic": "at EH-ta FROO-kost",
+          "meaning": "to eat breakfast",
+          "example": "Vi äter frukost tillsammans på helgerna."
+        },
+        {
+          "word": "att arbeta",
+          "phonetic": "at AR-beh-ta",
+          "meaning": "to work",
+          "example": "Hon arbetar på ett kontor i stan."
+        },
+        {
+          "word": "att träna",
+          "phonetic": "at TREH-na",
+          "meaning": "to exercise, to train",
+          "example": "Jag gillar att träna på gymmet."
+        },
+        {
+          "word": "att sova",
+          "phonetic": "at SOH-va",
+          "meaning": "to sleep",
+          "example": "Barnen sover åtta timmar varje natt."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Swedish phrase means \"to eat breakfast\"?",
+          "options": [
+            "att sova",
+            "att äta frukost",
+            "att vakna",
+            "att arbeta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"I work\" in Swedish?",
+          "options": [
+            "Jag sover",
+            "Jag tränar",
+            "Jag arbetar",
+            "Jag vaknar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Swedish word for \"to sleep\".",
+          "options": [
+            "att träna",
+            "att vakna",
+            "att sova",
+            "att äta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"Jag vaknar klockan sju\" mean?",
+          "options": [
+            "I eat breakfast at seven",
+            "I work at seven",
+            "I wake up at seven",
+            "I sleep at seven"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Välkommen till din första A2-lektion i svenska! Idag ska vi lära oss nya svenska ord och fraser relaterade till dagliga rutiner. Vi kommer att öva på att använda dessa ord i meningar. Låt oss börja med verbet \"att vakna\". Kan du säga \"att vakna\" högt? Bra! Det betyder \"to wake up\". Sedan har vi \"att äta frukost\", vilket betyder \"to eat breakfast\". Efter det kanske man \"att arbeta\" (\"to work\") eller \"att träna\" (\"to exercise\"). Och till sist, efter en lång dag, är det dags att \"att sova\" (\"to sleep\"). Låt oss nu öva på att använda dessa ord i några enkla meningar!"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "hej",
+          "meaning": "Hi / Hello",
+          "example": "Hej, hur mår du?"
+        },
+        {
+          "word": "Tack",
+          "phonetic": "tak",
+          "meaning": "Thank you",
+          "example": "Tack för hjälpen!"
+        },
+        {
+          "word": "Ja",
+          "phonetic": "ja",
+          "meaning": "Yes",
+          "example": "Ja, det stämmer."
+        },
+        {
+          "word": "Nej",
+          "phonetic": "nej",
+          "meaning": "No",
+          "example": "Nej, jag kan inte."
+        },
+        {
+          "word": "Ursäkta",
+          "phonetic": "oor-SEK-tah",
+          "meaning": "Excuse me / Sorry",
+          "example": "Ursäkta, var ligger toaletten?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" or \"Hello\" in Swedish?",
+          "options": [
+            "Hej",
+            "Hejdå",
+            "God dag",
+            "Hallå"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Swedish word for \"Thank you\"?",
+          "options": [
+            "Snälla",
+            "Tack",
+            "Varsågod",
+            "Förlåt"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"Yes\" in Swedish?",
+          "options": [
+            "Nej",
+            "Kanske",
+            "Ja",
+            "Aldrig"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"Excuse me\" or \"Sorry\" in Swedish?",
+          "options": [
+            "Tack",
+            "Snälla",
+            "Ursäkta",
+            "Förlåt"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Bra jobbat! I den här lektionen ska vi lära oss några vanliga svenska ord och fraser. Vi ska öva på att säga 'Hej', 'Tack', 'Ja', 'Nej' och 'Ursäkta'. Jag hjälper dig med uttalet och ger dig några exempelmeningar. Låt oss börja med 'Hej'. Kan du försöka säga 'Hej'?"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "att äta",
+          "phonetic": "aht EH-tah",
+          "meaning": "to eat",
+          "example": "Jag gillar att äta frukost."
+        },
+        {
+          "word": "att dricka",
+          "phonetic": "aht DREEK-kah",
+          "meaning": "to drink",
+          "example": "Vill du dricka kaffe?"
+        },
+        {
+          "word": "bra",
+          "phonetic": "brah",
+          "meaning": "good",
+          "example": "Det är en bra bok."
+        },
+        {
+          "word": "dålig",
+          "phonetic": "DOH-lig",
+          "meaning": "bad",
+          "example": "Vädret är dåligt idag."
+        },
+        {
+          "word": "stor",
+          "phonetic": "stoor",
+          "meaning": "big, large",
+          "example": "Huset är stort."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which verb means 'to eat'?",
+          "options": [
+            "att dricka",
+            "att läsa",
+            "att äta",
+            "att sova"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say 'good' in Swedish?",
+          "options": [
+            "dålig",
+            "bra",
+            "liten",
+            "stor"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct verb to complete the sentence: 'Jag vill ______ vatten.'",
+          "options": [
+            "äta",
+            "sova",
+            "dricka",
+            "läsa"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means 'big'?",
+          "options": [
+            "liten",
+            "dålig",
+            "stor",
+            "bra"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Du är en AI-lärare som hjälper en elev att lära sig svenska. I den här lektionen kommer vi att fokusera på grundläggande verb och adjektiv. Vi kommer att gå igenom ord som \"att äta\", \"att dricka\", \"bra\", \"dålig\" och \"stor\", och öva på att använda dem i meningar. Låt oss börja med \"att äta\". Kan du upprepa det efter mig?"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hej",
+          "phonetic": "hey",
+          "meaning": "Hello / Hi",
+          "example": "Hej, hur mår du?"
+        },
+        {
+          "word": "Jag",
+          "phonetic": "yahg",
+          "meaning": "I",
+          "example": "Jag är från Sverige."
+        },
+        {
+          "word": "är",
+          "phonetic": "air",
+          "meaning": "am / is / are (to be)",
+          "example": "Hon är min vän."
+        },
+        {
+          "word": "från",
+          "phonetic": "frohn",
+          "meaning": "from",
+          "example": "Var kommer du från?"
+        },
+        {
+          "word": "en",
+          "phonetic": "ehn",
+          "meaning": "a / an (common gender article)",
+          "example": "Jag har en bok."
+        },
+        {
+          "word": "ett",
+          "phonetic": "eht",
+          "meaning": "a / an (neuter gender article)",
+          "example": "Det är ett hus."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Swedish?",
+          "options": [
+            "Hej",
+            "Tack",
+            "Ursäkta",
+            "Adjö"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Complete the sentence: \"___ är från Tyskland.\" (I am from Germany.)",
+          "options": [
+            "Du",
+            "Vi",
+            "Jag",
+            "Han"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"am / is / are\" in Swedish?",
+          "options": [
+            "har",
+            "är",
+            "vill",
+            "kan"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct article for \"___ bil\" (a car).",
+          "options": [
+            "ett",
+            "en",
+            "det",
+            "den"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct article for \"___ äpple\" (an apple).",
+          "options": [
+            "en",
+            "det",
+            "ett",
+            "den"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Bra jobbat! I den här lektionen ska vi lära oss några grundläggande svenska hälsningsfraser och hur man presenterar sig själv. Vi kommer att gå igenom ord som 'Hej' (Hello/Hi), 'Jag' (I), 'är' (am/is/are) och 'från' (from). Vi kommer också att titta på de obestämda artiklarna 'en' och 'ett'. Låt oss öva på att säga dem tillsammans och bygga enkla meningar!"
+    }
+  ]
+}

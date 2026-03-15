@@ -1,0 +1,1373 @@
+{
+  "langCode": "ka-GE",
+  "langLabel": "Georgian",
+  "langNative": "ქართული",
+  "generatedAt": "2026-03-15T06:23:24.177Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "გამარჯობა",
+          "phonetic": "gamarjoba",
+          "meaning": "Hello",
+          "example": "გამარჯობა, როგორ ხარ?"
+        },
+        {
+          "word": "მადლობა",
+          "phonetic": "madloba",
+          "meaning": "Thank you",
+          "example": "დიდი მადლობა დახმარებისთვის."
+        },
+        {
+          "word": "დიახ",
+          "phonetic": "diax",
+          "meaning": "Yes (formal)",
+          "example": "დიახ, მე მესმის."
+        },
+        {
+          "word": "კი",
+          "phonetic": "ki",
+          "meaning": "Yes (informal)",
+          "example": "კი, ყველაფერი კარგადაა."
+        },
+        {
+          "word": "არა",
+          "phonetic": "ara",
+          "meaning": "No",
+          "example": "არა, მე არ მინდა."
+        },
+        {
+          "word": "გთხოვთ",
+          "phonetic": "gtkhovt",
+          "meaning": "Please / You're welcome",
+          "example": "გთხოვთ, დამეხმარეთ."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in Georgian?",
+          "options": [
+            "მადლობა",
+            "გამარჯობა",
+            "არა",
+            "დიახ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Georgian word means 'Thank you'?",
+          "options": [
+            "კი",
+            "გთხოვთ",
+            "მადლობა",
+            "არა"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the informal Georgian word for 'Yes'.",
+          "options": [
+            "არა",
+            "დიახ",
+            "კი",
+            "გამარჯობა"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Georgian word for 'No'?",
+          "options": [
+            "დიახ",
+            "მადლობა",
+            "არა",
+            "გთხოვთ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word can mean both 'Please' and 'You're welcome'?",
+          "options": [
+            "გამარჯობა",
+            "კი",
+            "არა",
+            "გთხოვთ"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "გამარჯობა! მე ვარ თქვენი AI მასწავლებელი. დღეს ჩვენ ვისწავლით ქართულ ძირითად მისალმებებსა და თავაზიან სიტყვებს. ეს არის შესანიშნავი დასაწყისი ქართული ენის შესასწავლად! ჩვენ განვიხილავთ სიტყვებს, როგორიცაა 'გამარჯობა' (Hello), 'მადლობა' (Thank you), 'დიახ' (Yes, formal), 'კი' (Yes, informal), 'არა' (No) და 'გთხოვთ' (Please / You're welcome). მოდით დავიწყოთ 'გამარჯობა'-თი. შეგიძლიათ სცადოთ თქვათ 'გამარჯობა'?"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "გამარჯობა",
+          "phonetic": "gamarjoba",
+          "meaning": "Hello / Hi",
+          "example": "გამარჯობა! როგორ ხარ?"
+        },
+        {
+          "word": "როგორ ხარ?",
+          "phonetic": "rogor khar?",
+          "meaning": "How are you? (informal, singular)",
+          "example": "გამარჯობა! როგორ ხარ?"
+        },
+        {
+          "word": "კარგად ვარ",
+          "phonetic": "kargad var",
+          "meaning": "I am good / well",
+          "example": "კარგად ვარ, მადლობა."
+        },
+        {
+          "word": "მადლობა",
+          "phonetic": "madloba",
+          "meaning": "Thank you",
+          "example": "მადლობა დახმარებისთვის."
+        },
+        {
+          "word": "ნახვამდის",
+          "phonetic": "nakhvamdis",
+          "meaning": "Goodbye",
+          "example": "ნახვამდის! ხვალამდე!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Georgian word for \"Hello\"?",
+          "options": [
+            "ნახვამდის",
+            "მადლობა",
+            "გამარჯობა",
+            "კარგად ვარ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"How are you?\" in Georgian (informal, singular)?",
+          "options": [
+            "მადლობა",
+            "როგორ ხარ?",
+            "ნახვამდის",
+            "კარგად ვარ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"როგორ ხარ?\", how would you respond if you are well?",
+          "options": [
+            "მადლობა",
+            "ნახვამდის",
+            "გამარჯობა",
+            "კარგად ვარ"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "What is the Georgian word for \"Thank you\"?",
+          "options": [
+            "ნახვამდის",
+            "მადლობა",
+            "გამარჯობა",
+            "როგორ ხარ?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "You are an AI Georgian tutor. Your goal is to help the learner practice the lesson's vocabulary and grammar. Start by greeting the learner in Georgian, for example, say \"გამარჯობა!\" (Gamarjoba!) and then ask them \"როგორ ხარ?\" (Rogor khar?) and encourage them to introduce themselves. Introduce the lesson's topic, which is basic Georgian greetings and phrases. Present the new vocabulary words like \"გამარჯობა\", \"როგორ ხარ?\", \"კარგად ვარ\", \"მადლობა\", and \"ნახვამდის\". Encourage the learner to use these new Georgian words in sentences and ask questions to check their understanding. Provide positive feedback and correct mistakes gently. Keep the conversation engaging and supportive."
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "გამარჯობა",
+          "phonetic": "gamarjoba",
+          "meaning": "Hello",
+          "example": "გამარჯობა, როგორ ხარ?"
+        },
+        {
+          "word": "მადლობა",
+          "phonetic": "madloba",
+          "meaning": "Thank you",
+          "example": "მადლობა დახმარებისთვის."
+        },
+        {
+          "word": "კი",
+          "phonetic": "ki",
+          "meaning": "Yes",
+          "example": "კი, მინდა ყავა."
+        },
+        {
+          "word": "არა",
+          "phonetic": "ara",
+          "meaning": "No",
+          "example": "არა, არ მინდა ჩაი."
+        },
+        {
+          "word": "როგორ ხარ?",
+          "phonetic": "rogor khar?",
+          "meaning": "How are you? (informal)",
+          "example": "გამარჯობა, როგორ ხარ?"
+        },
+        {
+          "word": "კარგად ვარ",
+          "phonetic": "kargad var",
+          "meaning": "I am good/well",
+          "example": "კარგად ვარ, მადლობა."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is \"Hello\" in Georgian?",
+          "options": [
+            "მადლობა",
+            "გამარჯობა",
+            "კი",
+            "არა"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Georgian?",
+          "options": [
+            "არა",
+            "კი",
+            "მადლობა",
+            "კარგად ვარ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Georgian word means \"Yes\"?",
+          "options": [
+            "არა",
+            "კი",
+            "გამარჯობა",
+            "როგორ ხარ?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Georgian equivalent for \"How are you?\" (informal)?",
+          "options": [
+            "კარგად ვარ",
+            "მადლობა",
+            "როგორ ხარ?",
+            "გამარჯობა"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "გამარჯობა! (Gamarjoba!) Today we're diving into basic Georgian greetings. We'll learn how to say 'Hello', 'Thank you', and ask 'How are you?'. Let's start with 'Hello'. In Georgian, we say **გამარჯობა** (gamarjoba). Can you try saying **გამარჯობა**? Great! Next, to say 'Thank you', we use **მადლობა** (madloba). Repeat after me: **მადლობა**. Excellent! Now, to ask 'How are you?' informally, we say **როგორ ხარ?** (rogor khar?). Try it: **როგორ ხარ?**. And if someone asks you, you can reply 'I am good' with **კარგად ვარ** (kargad var). Let's practice: How would you greet me and ask how I am? Use **გამარჯობა** and **როგორ ხარ?**."
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "გამარჯობა",
+          "phonetic": "gamarjoba",
+          "meaning": "Hello",
+          "example": "გამარჯობა! როგორ ხარ?"
+        },
+        {
+          "word": "ნახვამდის",
+          "phonetic": "nakhvamdis",
+          "meaning": "Goodbye",
+          "example": "ნახვამდის, მალე შევხვდებით!"
+        },
+        {
+          "word": "მადლობა",
+          "phonetic": "madloba",
+          "meaning": "Thank you",
+          "example": "მადლობა დახმარებისთვის."
+        },
+        {
+          "word": "გთხოვთ",
+          "phonetic": "gtkhovt",
+          "meaning": "Please",
+          "example": "გთხოვთ, მომეცით წყალი."
+        },
+        {
+          "word": "კი",
+          "phonetic": "ki",
+          "meaning": "Yes",
+          "example": "კი, მინდა."
+        },
+        {
+          "word": "არა",
+          "phonetic": "ara",
+          "meaning": "No",
+          "example": "არა, არ მინდა."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Georgian word for \"Hello\"?",
+          "options": [
+            "მადლობა",
+            "ნახვამდის",
+            "გამარჯობა",
+            "არა"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Georgian?",
+          "options": [
+            "კი",
+            "მადლობა",
+            "გთხოვთ",
+            "გამარჯობა"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Georgian word means \"Goodbye\"?",
+          "options": [
+            "კი",
+            "არა",
+            "ნახვამდის",
+            "გთხოვთ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Georgian word for \"Yes\"?",
+          "options": [
+            "არა",
+            "კი",
+            "მადლობა",
+            "გამარჯობა"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"No\" in Georgian?",
+          "options": [
+            "კი",
+            "გთხოვთ",
+            "არა",
+            "ნახვამდის"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Welcome to your Georgian lesson! Today we'll be learning some essential Georgian greetings and polite phrases. We'll cover words like 'გამარჯობა' (gamarjoba), which means 'hello', 'მადლობა' (madloba) for 'thank you', and 'ნახვამდის' (nakhvamdis) for 'goodbye'. We'll also learn 'კი' (ki) for 'yes', 'არა' (ara) for 'no', and 'გთხოვთ' (gtkhovt) for 'please'. Let's start with 'გამარჯობა' (gamarjoba). Can you try saying 'გამარჯობა'?"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "გამარჯობა",
+          "phonetic": "gamardjoba",
+          "meaning": "Hello",
+          "example": "გამარჯობა, როგორ ხარ?"
+        },
+        {
+          "word": "მადლობა",
+          "phonetic": "madloba",
+          "meaning": "Thank you",
+          "example": "მადლობა დახმარებისთვის."
+        },
+        {
+          "word": "კი",
+          "phonetic": "ki",
+          "meaning": "Yes (informal)",
+          "example": "კი, მინდა."
+        },
+        {
+          "word": "არა",
+          "phonetic": "ara",
+          "meaning": "No",
+          "example": "არა, არ მინდა."
+        },
+        {
+          "word": "გთხოვთ",
+          "phonetic": "gtkhovt",
+          "meaning": "Please / You're welcome",
+          "example": "გთხოვთ, მომეცით წყალი."
+        },
+        {
+          "word": "ბოდიში",
+          "phonetic": "bodishi",
+          "meaning": "Excuse me / Sorry",
+          "example": "ბოდიში, დამაგვიანდა."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Georgian?",
+          "options": [
+            "გამარჯობა",
+            "მადლობა",
+            "კი",
+            "არა"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Georgian word means \"Thank you\"?",
+          "options": [
+            "არა",
+            "ბოდიში",
+            "მადლობა",
+            "გთხოვთ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Georgian word for \"Yes\".",
+          "options": [
+            "არა",
+            "კი",
+            "ბოდიში",
+            "გამარჯობა"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Georgian word for \"No\"?",
+          "options": [
+            "კი",
+            "მადლობა",
+            "არა",
+            "გთხოვთ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Please\" or \"You're welcome\" in Georgian?",
+          "options": [
+            "ბოდიში",
+            "გამარჯობა",
+            "კი",
+            "გთხოვთ"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "If you want to apologize or get someone's attention, you would say:",
+          "options": [
+            "მადლობა",
+            "ბოდიში",
+            "არა",
+            "კი"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "გამარჯობა! Welcome to our Georgian lesson. Today, we're going to learn some essential Georgian greetings and polite phrases. These are super useful for starting conversations and showing respect. We'll cover words like 'გამარჯობა' (Hello), 'მადლობა' (Thank you), 'კი' (Yes), 'არა' (No), 'გთხოვთ' (Please/You're welcome), and 'ბოდიში' (Excuse me/Sorry). Let's start by practicing 'გამარჯობა'. Can you try saying 'გამარჯობა'?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "გამარჯობა",
+          "phonetic": "gamarjoba",
+          "meaning": "Hello (general/formal)",
+          "example": "გამარჯობა! როგორ ხარ?"
+        },
+        {
+          "word": "მადლობა",
+          "phonetic": "madloba",
+          "meaning": "Thank you",
+          "example": "მადლობა დახმარებისთვის."
+        },
+        {
+          "word": "ბოდიში",
+          "phonetic": "bodishi",
+          "meaning": "Excuse me / Sorry",
+          "example": "ბოდიში, გვიან ვარ."
+        },
+        {
+          "word": "კი",
+          "phonetic": "ki",
+          "meaning": "Yes",
+          "example": "კი, მინდა ყავა."
+        },
+        {
+          "word": "არა",
+          "phonetic": "ara",
+          "meaning": "No",
+          "example": "არა, არ მინდა."
+        },
+        {
+          "word": "როგორ ხარ?",
+          "phonetic": "rogor khar?",
+          "meaning": "How are you? (informal)",
+          "example": "გამარჯობა, როგორ ხარ?"
+        },
+        {
+          "word": "კარგად ვარ",
+          "phonetic": "kargad var",
+          "meaning": "I am good.",
+          "example": "კარგად ვარ, მადლობა."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" (general/formal) in Georgian?",
+          "options": [
+            "მადლობა",
+            "გამარჯობა",
+            "ბოდიში",
+            "არა"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"მადლობა\" mean?",
+          "options": [
+            "Yes",
+            "No",
+            "Thank you",
+            "Excuse me"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct response to \"როგორ ხარ?\" (How are you?)",
+          "options": [
+            "მადლობა",
+            "კარგად ვარ",
+            "კი",
+            "არა"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Yes\" in Georgian?",
+          "options": [
+            "არა",
+            "ბოდიში",
+            "კი",
+            "გამარჯობა"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "გამარჯობა! მე ვარ თქვენი AI მასწავლებელი. დღეს ჩვენ ვისწავლით ქართულ მისალმებებსა და ძირითად ფრაზებს. ჩვენ განვიხილავთ ისეთ სიტყვებს, როგორიცაა 'გამარჯობა' (hello) და 'მადლობა' (thank you). მოდით დავიწყოთ 'გამარჯობა'-თი. შეგიძლიათ სცადოთ თქვათ 'გამარჯობა'?"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "გამარჯობა",
+          "phonetic": "gamarjoba",
+          "meaning": "Hello",
+          "example": "გამარჯობა, როგორ ხარ?"
+        },
+        {
+          "word": "როგორ ხარ?",
+          "phonetic": "rogor khar?",
+          "meaning": "How are you? (informal)",
+          "example": "გამარჯობა, როგორ ხარ?"
+        },
+        {
+          "word": "კარგად ვარ",
+          "phonetic": "kargad var",
+          "meaning": "I am fine.",
+          "example": "კარგად ვარ, მადლობა."
+        },
+        {
+          "word": "მადლობა",
+          "phonetic": "madloba",
+          "meaning": "Thank you.",
+          "example": "მადლობა დახმარებისთვის."
+        },
+        {
+          "word": "ნახვამდის",
+          "phonetic": "nakhvamdis",
+          "meaning": "Goodbye.",
+          "example": "ნახვამდის, მალე შევხვდებით!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Georgian?",
+          "options": [
+            "გამარჯობა",
+            "მადლობა",
+            "ნახვამდის",
+            "კარგად ვარ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the correct Georgian phrase for \"How are you?\"",
+          "options": [
+            "კარგად ვარ",
+            "ნახვამდის",
+            "როგორ ხარ?",
+            "მადლობა"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Georgian word means \"Thank you\"?",
+          "options": [
+            "გამარჯობა",
+            "მადლობა",
+            "ნახვამდის",
+            "კარგად ვარ"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "გამარჯობა! მე ვარ შენი ქართული ენის მასწავლებელი. დღეს ჩვენ ვისწავლით რამდენიმე ძირითად ქართულ ფრაზას, რომელსაც ყოველდღიურ საუბარში გამოიყენებ. ჩვენ განვიხილავთ, თუ როგორ ვთქვათ \"Hello\", \"How are you?\", \"I am fine\", \"Thank you\" და \"Goodbye\" ქართულად. მზად ხარ, რომ დავიწყოთ? მოდი, დავიწყოთ სიტყვით **გამარჯობა**."
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "გამარჯობა",
+          "phonetic": "gamarjoba",
+          "meaning": "Hello / Hi",
+          "example": "გამარჯობა! როგორ ხარ?"
+        },
+        {
+          "word": "როგორ ხარ?",
+          "phonetic": "rogor khar?",
+          "meaning": "How are you? (informal)",
+          "example": "როგორ ხარ, ნინო?"
+        },
+        {
+          "word": "კარგად ვარ",
+          "phonetic": "kargad var",
+          "meaning": "I am fine / I am good",
+          "example": "კარგად ვარ, მადლობა."
+        },
+        {
+          "word": "მადლობა",
+          "phonetic": "madloba",
+          "meaning": "Thank you",
+          "example": "მადლობა დახმარებისთვის."
+        },
+        {
+          "word": "რა გქვია?",
+          "phonetic": "ra gkvia?",
+          "meaning": "What is your name? (informal)",
+          "example": "რა გქვია? მე მქვია ლაშა."
+        },
+        {
+          "word": "მე მქვია...",
+          "phonetic": "me mkvia...",
+          "meaning": "My name is...",
+          "example": "მე მქვია ანა."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Georgian?",
+          "options": [
+            "ნახვამდის",
+            "დილა მშვიდობისა",
+            "გამარჯობა",
+            "ღამე მშვიდობისა"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct response to \"როგორ ხარ?\" (How are you?)",
+          "options": [
+            "მადლობა",
+            "კარგად ვარ",
+            "დიახ",
+            "არა"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Georgian?",
+          "options": [
+            "გთხოვთ",
+            "ბოდიში",
+            "მადლობა",
+            "ნახვამდის"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"რა გქვია?\" (What is your name?), how would you respond saying \"My name is [Your Name]\"?",
+          "options": [
+            "მე ვარ...",
+            "მე მქვია...",
+            "მე მიყვარს...",
+            "მე მინდა..."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "გამარჯობა! მე ვარ თქვენი AI მასწავლებელი. დღეს ჩვენ ვისწავლით ქართულ მისალმებებს და მარტივ ფრაზებს. ჩვენ განვიხილავთ 'გამარჯობა', 'როგორ ხარ?' და 'მადლობა'. დავიწყოთ 'გამარჯობა'-თი. შეგიძლიათ გაიმეოროთ ჩემს შემდეგ: 'გამარჯობა'?"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "გამარჯობა",
+          "phonetic": "gamarjoba",
+          "meaning": "Hello",
+          "example": "გამარჯობა, როგორ ხარ?"
+        },
+        {
+          "word": "როგორ ხარ?",
+          "phonetic": "rogor khar?",
+          "meaning": "How are you? (informal, to one person)",
+          "example": "გამარჯობა, როგორ ხარ?"
+        },
+        {
+          "word": "კარგად ვარ",
+          "phonetic": "kargad var",
+          "meaning": "I am fine.",
+          "example": "კარგად ვარ, მადლობა."
+        },
+        {
+          "word": "მადლობა",
+          "phonetic": "madloba",
+          "meaning": "Thank you.",
+          "example": "მადლობა დახმარებისთვის."
+        },
+        {
+          "word": "არაფრის",
+          "phonetic": "arapris",
+          "meaning": "You're welcome / Please (in response to thank you)",
+          "example": "მადლობა! - არაფრის!"
+        },
+        {
+          "word": "კი",
+          "phonetic": "ki",
+          "meaning": "Yes",
+          "example": "კი, მინდა."
+        },
+        {
+          "word": "არა",
+          "phonetic": "ara",
+          "meaning": "No",
+          "example": "არა, არ მინდა."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Georgian?",
+          "options": [
+            "კარგად ვარ",
+            "მადლობა",
+            "გამარჯობა",
+            "არა"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"მადლობა\" mean in English?",
+          "options": [
+            "Hello",
+            "Thank you",
+            "I am fine",
+            "No"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks you \"როგორ ხარ?\" (How are you?) and you are fine, how would you respond?",
+          "options": [
+            "არა",
+            "მადლობა",
+            "კარგად ვარ",
+            "არაფრის"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Georgian word means \"Yes\"?",
+          "options": [
+            "არა",
+            "კი",
+            "მადლობა",
+            "გამარჯობა"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "გამარჯობა! მოხარული ვარ, რომ ქართულის სწავლას იწყებ. ამ გაკვეთილში ჩვენ ვისწავლით რამდენიმე მნიშვნელოვან ქართულ მისალმებას და ძირითად ფრაზას. დავიწყოთ სიტყვით 'გამარჯობა' (gamarjoba), რაც ნიშნავს 'Hello'. შემდეგ ვისწავლით, როგორ ვკითხოთ ვინმეს 'როგორ ხარ?' (rogor khar?), რაც ნიშნავს 'How are you?'. ასევე გავიგებთ, როგორ ვუპასუხოთ 'კარგად ვარ' (kargad var) ('I am fine') და როგორ ვთქვათ 'მადლობა' (madloba) ('Thank you'). მზად ხარ, რომ დავიწყოთ?"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "გამარჯობა",
+          "phonetic": "gamarjoba",
+          "meaning": "Hello",
+          "example": "გამარჯობა, როგორ ხარ?"
+        },
+        {
+          "word": "როგორ ხარ?",
+          "phonetic": "rogor khar?",
+          "meaning": "How are you? (informal, singular)",
+          "example": "გამარჯობა, როგორ ხარ?"
+        },
+        {
+          "word": "კარგად ვარ",
+          "phonetic": "kargad var",
+          "meaning": "I am fine",
+          "example": "კარგად ვარ, მადლობა."
+        },
+        {
+          "word": "მადლობა",
+          "phonetic": "madloba",
+          "meaning": "Thank you",
+          "example": "მადლობა დახმარებისთვის."
+        },
+        {
+          "word": "ნახვამდის",
+          "phonetic": "nakhvamdis",
+          "meaning": "Goodbye",
+          "example": "ნახვამდის, ხვალამდე!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does \"გამარჯობა\" mean in English?",
+          "options": [
+            "Goodbye",
+            "Thank you",
+            "Hello",
+            "I am fine"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Georgian?",
+          "options": [
+            "ნახვამდის",
+            "მადლობა",
+            "გამარჯობა",
+            "კარგად ვარ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Georgian phrase means \"How are you?\" (informal, singular)?",
+          "options": [
+            "კარგად ვარ",
+            "ნახვამდის",
+            "როგორ ხარ?",
+            "მადლობა"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the best response to \"როგორ ხარ?\"",
+          "options": [
+            "გამარჯობა",
+            "ნახვამდის",
+            "მადლობა",
+            "კარგად ვარ"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "შესანიშნავია! დღეს ჩვენ ვისწავლით ქართულ მისალმებებსა და გამომშვიდობებას. ჩვენ განვიხილავთ სიტყვებს \"გამარჯობა\", \"როგორ ხარ?\", \"კარგად ვარ\", \"მადლობა\" და \"ნახვამდის\". მე ვიტყვი თითოეულ სიტყვას, თქვენ კი შეგიძლიათ გაიმეოროთ ჩემს შემდეგ. შემდეგ მათ მარტივ წინადადებებში ვივარჯიშებთ. მზად ხართ? დავიწყოთ სიტყვით \"გამარჯობა\"..."
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "გამარჯობა",
+          "phonetic": "gamarjoba",
+          "meaning": "Hello / Hi",
+          "example": "გამარჯობა, როგორ ხარ?"
+        },
+        {
+          "word": "მადლობა",
+          "phonetic": "madloba",
+          "meaning": "Thank you",
+          "example": "მადლობა დახმარებისთვის."
+        },
+        {
+          "word": "როგორ ხართ?",
+          "phonetic": "rogor khart?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "გამარჯობა, როგორ ხართ?"
+        },
+        {
+          "word": "კარგად ვარ",
+          "phonetic": "kargad var",
+          "meaning": "I am fine.",
+          "example": "კარგად ვარ, თქვენ როგორ ხართ?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Georgian?",
+          "options": [
+            "მადლობა",
+            "გამარჯობა",
+            "ნახვამდის",
+            "დიახ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Georgian word for \"Thank you\"?",
+          "options": [
+            "არა",
+            "კარგად ვარ",
+            "მადლობა",
+            "როგორ ხართ?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"How are you?\" (formal) in Georgian?",
+          "options": [
+            "გამარჯობა",
+            "კარგად ვარ",
+            "როგორ ხართ?",
+            "დიახ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"როგორ ხართ?\" and you want to say \"I am fine,\" what would you say?",
+          "options": [
+            "მადლობა",
+            "კარგად ვარ",
+            "არა",
+            "გამარჯობა"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "გამარჯობა! (Gamarjoba!) Today we're going to learn some essential Georgian greetings. We'll start with \"Hello\" – which is \"გამარჯობა\" (gamarjoba). Try saying it with me: \"გამარჯობა\". Great! Next, let's learn how to say \"Thank you\": \"მადლობა\" (madloba). Can you repeat \"მადლობა\"? Excellent! We'll also cover how to ask \"How are you?\" – \"როგორ ხართ?\" (rogor khart?) and respond with \"I am fine\" – \"კარგად ვარ\" (kargad var). Let's practice these phrases together. Are you ready to begin?"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "გამარჯობა",
+          "phonetic": "gamarjoba",
+          "meaning": "Hello",
+          "example": "გამარჯობა! როგორ ხარ?"
+        },
+        {
+          "word": "მადლობა",
+          "phonetic": "madloba",
+          "meaning": "Thank you",
+          "example": "მადლობა დახმარებისთვის."
+        },
+        {
+          "word": "გთხოვთ",
+          "phonetic": "gtkhovt",
+          "meaning": "Please / You're welcome",
+          "example": "გთხოვთ, მომეცით წყალი."
+        },
+        {
+          "word": "ბოდიში",
+          "phonetic": "bodishi",
+          "meaning": "Excuse me / Sorry",
+          "example": "ბოდიში, დამაგვიანდა."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Georgian?",
+          "options": [
+            "მადლობა",
+            "გამარჯობა",
+            "გთხოვთ",
+            "ბოდიში"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Georgian word means \"Thank you\"?",
+          "options": [
+            "ბოდიში",
+            "გთხოვთ",
+            "მადლობა",
+            "დიახ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Georgian word for \"Please\"?",
+          "options": [
+            "არა",
+            "გთხოვთ",
+            "გამარჯობა",
+            "კარგად"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "You are an AI tutor teaching a beginner Georgian lesson. Start by greeting the student in Georgian: \"გამარჯობა!\" (Gamarjoba!). Introduce the topic: basic Georgian greetings and polite phrases. Explain that today's lesson will cover \"გამარჯობა\" (hello), \"მადლობა\" (thank you), and \"გთხოვთ\" (please). Begin by teaching \"გამარჯობა\". Ask the student to repeat it and practice its pronunciation. Then move on to \"მადლობა\" and \"გთხოვთ\", following the same pattern of explanation, repetition, and practice. Encourage the student to use these phrases in simple contexts, asking them to form a sentence or respond to a prompt using the new vocabulary."
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "გამარჯობა",
+          "phonetic": "ga-mar-jo-ba",
+          "meaning": "Hello / Hi",
+          "example": "გამარჯობა, როგორ ხართ?"
+        },
+        {
+          "word": "მადლობა",
+          "phonetic": "mad-lo-ba",
+          "meaning": "Thank you",
+          "example": "მადლობა დახმარებისთვის."
+        },
+        {
+          "word": "როგორ ხართ?",
+          "phonetic": "ro-gor khart?",
+          "meaning": "How are you? (formal/plural)",
+          "example": "გამარჯობა, როგორ ხართ დღეს?"
+        },
+        {
+          "word": "კარგად ვარ",
+          "phonetic": "kar-gad var",
+          "meaning": "I am fine / I am well",
+          "example": "მადლობა, კარგად ვარ."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Georgian?",
+          "options": [
+            "მადლობა",
+            "გამარჯობა",
+            "ნახვამდის",
+            "ბოდიში"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Georgian word for \"Thank you\"?",
+          "options": [
+            "დიახ",
+            "არა",
+            "მადლობა",
+            "გთხოვთ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"How are you?\" (formal/plural) in Georgian?",
+          "options": [
+            "კარგად ვარ",
+            "როგორ ხართ?",
+            "რა გქვიათ?",
+            "სად ხართ?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "გამარჯობა! კეთილი იყოს თქვენი მობრძანება ქართული ენის პირველ გაკვეთილზე. დღეს ჩვენ ვისწავლით რამდენიმე ძირითად მისალმებასა და ფრაზას. ჩვენ განვიხილავთ 'გამარჯობა', 'მადლობა' და 'როგორ ხართ?'. დავიწყოთ 'გამარჯობა'-თი. ქართულად ამბობთ 'გამარჯობა'. შეგიძლიათ სცადოთ მისი თქმა?"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "მინდა",
+          "phonetic": "minda",
+          "meaning": "I want",
+          "example": "მე მინდა წყალი. (Me minda ts'q'ali.)"
+        },
+        {
+          "word": "წასვლა",
+          "phonetic": "ts'asvla",
+          "meaning": "to go (infinitive)",
+          "example": "მინდა სახლში წასვლა. (Minda sakhlshi ts'asvla.)"
+        },
+        {
+          "word": "მოსვლა",
+          "phonetic": "mosvla",
+          "meaning": "to come (infinitive)",
+          "example": "მინდა აქ მოსვლა. (Minda ak mosvla.)"
+        },
+        {
+          "word": "ქალაქი",
+          "phonetic": "kalaki",
+          "meaning": "city",
+          "example": "თბილისი დიდი ქალაქია. (Tbilisi didi kalakia.)"
+        },
+        {
+          "word": "ლამაზი",
+          "phonetic": "lamazi",
+          "meaning": "beautiful",
+          "example": "ეს ლამაზი ყვავილია. (Es lamazi q'vavilila.)"
+        },
+        {
+          "word": "აქ",
+          "phonetic": "ak",
+          "meaning": "here",
+          "example": "მოდი აქ! (Modi ak!)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'I want' in Georgian?",
+          "options": [
+            "მინდა",
+            "მოდი",
+            "წადი",
+            "ჭამე"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the Georgian word for 'city'?",
+          "options": [
+            "სოფელი",
+            "სახლი",
+            "ქალაქი",
+            "მთა"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct word to complete the sentence: 'ეს არის ______ ქალაქი.' (This is a ______ city.)",
+          "options": [
+            "დიდი",
+            "ლამაზი",
+            "ძველი",
+            "პატარა"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which word means 'to go'?",
+          "options": [
+            "მოსვლა",
+            "წასვლა",
+            "ჭამა",
+            "დალევა"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "გამარჯობა! (Hello!) I'm excited to help you learn Georgian today. In this lesson, we'll focus on some essential Georgian words and phrases that will help you express basic needs and describe things. We'll cover vocabulary like **მინდა** (I want), **წასვლა** (to go), **მოსვლა** (to come), **ქალაქი** (city), **ლამაზი** (beautiful), and **აქ** (here). We'll learn how to use them in simple sentences. Let's start with **მინდა**. Do you know what **მინდა** means?"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "ჭამა",
+          "phonetic": "ch'ama",
+          "meaning": "to eat",
+          "example": "მე მიყვარს ხაჭაპურის ჭამა."
+        },
+        {
+          "word": "დალევა",
+          "phonetic": "daleva",
+          "meaning": "to drink",
+          "example": "გინდა წყლის დალევა?"
+        },
+        {
+          "word": "წასვლა",
+          "phonetic": "ts'asvla",
+          "meaning": "to go",
+          "example": "სად მიდიხარ?"
+        },
+        {
+          "word": "კითხვა",
+          "phonetic": "k'itkhva",
+          "meaning": "to read",
+          "example": "მე მიყვარს წიგნების კითხვა."
+        },
+        {
+          "word": "ძილი",
+          "phonetic": "dzili",
+          "meaning": "to sleep",
+          "example": "ბავშვს სძინავს."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Georgian word means 'to eat'?",
+          "options": [
+            "ჭამა",
+            "დალევა",
+            "კითხვა",
+            "ძილი"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say 'to drink' in Georgian?",
+          "options": [
+            "წასვლა",
+            "დალევა",
+            "ჭამა",
+            "ძილი"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Georgian word for 'to read'.",
+          "options": [
+            "ძილი",
+            "წასვლა",
+            "კითხვა",
+            "დალევა"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which sentence means 'I like to read books'?",
+          "options": [
+            "მე მიყვარს ხაჭაპურის ჭამა.",
+            "გინდა წყლის დალევა?",
+            "მე მიყვარს წიგნების კითხვა.",
+            "ბავშვს სძინავს."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "გამარჯობა! მე ვარ თქვენი AI მასწავლებელი დღევანდელი ქართული გაკვეთილისთვის. ჩვენ შევისწავლით რამდენიმე მნიშვნელოვან ქართულ ზმნას. ჩვენ ვისწავლით, თუ როგორ ვთქვათ 'to eat' (ჭამა), 'to drink' (დალევა), 'to go' (წასვლა), 'to read' (კითხვა) და 'to sleep' (ძილი). მე აგიხსნით თითოეულ სიტყვას, მოგცემთ მაგალით წინადადებებს ქართულად და შემდეგ ვივარჯიშებთ მათ გამოყენებაში საუბრისას. მზად ხართ ამ სასარგებლო ზმნების შესასწავლად? დავიწყოთ 'ჭამა'-თი!"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "გამარჯობა",
+          "phonetic": "ga-mar-JO-ba",
+          "meaning": "Hello / Hi",
+          "example": "გამარჯობა, როგორ ხარ?"
+        },
+        {
+          "word": "მადლობა",
+          "phonetic": "mad-LO-ba",
+          "meaning": "Thank you",
+          "example": "მადლობა დახმარებისთვის."
+        },
+        {
+          "word": "გთხოვთ",
+          "phonetic": "gtkhovt",
+          "meaning": "Please",
+          "example": "გთხოვთ, მომეცით წყალი."
+        },
+        {
+          "word": "კი",
+          "phonetic": "ki",
+          "meaning": "Yes",
+          "example": "კი, მინდა."
+        },
+        {
+          "word": "არა",
+          "phonetic": "a-RA",
+          "meaning": "No",
+          "example": "არა, არ მინდა."
+        },
+        {
+          "word": "დილა მშვიდობისა",
+          "phonetic": "DI-la mshvi-DO-bi-sa",
+          "meaning": "Good morning",
+          "example": "დილა მშვიდობისა, როგორ ხართ?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Georgian word for \"Hello\"?",
+          "options": [
+            "გამარჯობა",
+            "მადლობა",
+            "გთხოვთ",
+            "დიახ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "How do you say \"Thank you\" in Georgian?",
+          "options": [
+            "არა",
+            "კი",
+            "მადლობა",
+            "დილა მშვიდობისა"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"Please\"?",
+          "options": [
+            "გამარჯობა",
+            "გთხოვთ",
+            "არა",
+            "კი"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Georgian equivalent of \"Yes\"?",
+          "options": [
+            "მადლობა",
+            "გთხოვთ",
+            "კი",
+            "არა"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Georgian word for \"No\".",
+          "options": [
+            "დიახ",
+            "კი",
+            "არა",
+            "გამარჯობა"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "შესანიშნავია! ამ გაკვეთილზე ჩვენ ვისწავლით რამდენიმე ძირითად ქართულ მისალმებასა და ფრაზას. ჩვენ განვიხილავთ სიტყვებს: 'გამარჯობა', 'მადლობა', 'გთხოვთ', 'კი', 'არა' და 'დილა მშვიდობისა'. მე ვიტყვი თითოეულ სიტყვას, თქვენ კი შეგიძლიათ გაიმეოროთ ჩემს შემდეგ. შემდეგ ვივარჯიშებთ მათ გამოყენებას მარტივ წინადადებებში. დავიწყოთ 'გამარჯობა'-თი. ქართულად ვამბობთ 'გამარჯობა'. შეგიძლიათ გაიმეოროთ 'გამარჯობა'?"
+    }
+  ]
+}

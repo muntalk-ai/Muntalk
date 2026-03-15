@@ -1,0 +1,1247 @@
+{
+  "langCode": "ml-IN",
+  "langLabel": "Malayalam",
+  "langNative": "മലയാളം",
+  "generatedAt": "2026-03-15T05:54:58.092Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "നമസ്കാരം",
+          "phonetic": "Namaskaram",
+          "meaning": "Hello / Namaste",
+          "example": "നമസ്കാരം, സുഖമാണോ?"
+        },
+        {
+          "word": "സുഖമാണോ?",
+          "phonetic": "Sugamano?",
+          "meaning": "How are you? (Are you fine?)",
+          "example": "നിങ്ങൾക്ക് സുഖമാണോ?"
+        },
+        {
+          "word": "സുഖമാണ്",
+          "phonetic": "Sugamanu",
+          "meaning": "I am fine. (It is fine.)",
+          "example": "എനിക്ക് സുഖമാണ്."
+        },
+        {
+          "word": "നന്ദി",
+          "phonetic": "Nanni",
+          "meaning": "Thank you.",
+          "example": "സഹായത്തിന് നന്ദി."
+        },
+        {
+          "word": "അതെ",
+          "phonetic": "Athe",
+          "meaning": "Yes",
+          "example": "അതെ, എനിക്ക് പോകണം."
+        },
+        {
+          "word": "ഇല്ല",
+          "phonetic": "Illa",
+          "meaning": "No",
+          "example": "ഇല്ല, എനിക്ക് വേണ്ട."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Malayalam?",
+          "options": [
+            "നന്ദി",
+            "സുഖമാണോ?",
+            "നമസ്കാരം",
+            "ഇല്ല"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"സുഖമാണോ?\" (Sugamano?) mean?",
+          "options": [
+            "Thank you",
+            "I am fine",
+            "How are you?",
+            "Yes"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Malayalam word for \"Thank you\".",
+          "options": [
+            "അതെ",
+            "നന്ദി",
+            "സുഖമാണ്",
+            "നമസ്കാരം"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "നമസ്കാരം! (Namaskaram!) Welcome to your first Malayalam lesson! I'm excited to help you start your journey in learning this beautiful language. Today, we'll focus on some essential greetings and basic phrases. We'll learn how to say 'Hello' with 'നമസ്കാരം' (Namaskaram), ask 'How are you?' using 'സുഖമാണോ?' (Sugamano?), and express 'Thank you' with 'നന്ദി' (Nanni). Listen carefully to the pronunciation and try to repeat each phrase after me. Let's begin with 'നമസ്കാരം' (Namaskaram). Can you try saying 'നമസ്കാരം' (Namaskaram)?"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "നമസ്കാരം",
+          "phonetic": "namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "നമസ്കാരം, നിങ്ങൾക്കെങ്ങനെയിരിക്കുന്നു?"
+        },
+        {
+          "word": "സുഖമാണോ?",
+          "phonetic": "sukhamāṇō?",
+          "meaning": "Are you fine? / How are you?",
+          "example": "ഹായ്, സുഖമാണോ?"
+        },
+        {
+          "word": "എനിക്ക് സുഖമാണ്",
+          "phonetic": "enikkŭ sukhamāṇŭ",
+          "meaning": "I am fine",
+          "example": "എനിക്ക് സുഖമാണ്, നന്ദി."
+        },
+        {
+          "word": "പേര്",
+          "phonetic": "pērŭ",
+          "meaning": "Name",
+          "example": "എന്റെ പേര് രാഹുൽ."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Malayalam?",
+          "options": [
+            "നമസ്കാരം",
+            "നന്ദി",
+            "ക്ഷമിക്കണം",
+            "വരൂ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which phrase means \"Are you fine?\" or \"How are you?\"",
+          "options": [
+            "എന്റെ പേര്",
+            "സുഖമാണോ?",
+            "എവിടെയാണ്?",
+            "എന്താണ്?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you respond if someone asks \"സുഖമാണോ?\" and you are fine?",
+          "options": [
+            "നന്ദി",
+            "എനിക്ക് സുഖമാണ്",
+            "ക്ഷമിക്കണം",
+            "എന്താണ്?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does the word \"പേര്\" mean?",
+          "options": [
+            "Hello",
+            "Thank you",
+            "Name",
+            "Fine"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "നിങ്ങളുടെ മലയാളം പാഠത്തിലേക്ക് സ്വാഗതം! (Niṅṅaḷuṭe malayāḷaṁ pāṭhattilekkŭ svāgataṁ!) ഇന്ന് നമ്മൾ സാധാരണ അഭിവാദ്യങ്ങളും പരിചയപ്പെടുത്തലുകളും പഠിക്കാൻ പോകുന്നു. (Innu nammaḷ sādhāraṇa abhivādyanṅaḷuṁ paricayappeṭuttalukaḷuṁ paṭhikkān pōkunnu.) നമ്മൾ \"നമസ്കാരം\" (Namaskāram), \"സുഖമാണോ?\" (Sukhamāṇō?), \"എന്റെ പേര്...\" (Enṟe pērŭ...) പോലുള്ള ശൈലികൾ പഠിക്കും. (Nammaḷ \"Namaskāram\", \"Sukhamāṇō?\", \"Enṟe pērŭ...\" pōlulla śailikaḷ paṭhikkum.) ഞാൻ ഉച്ചാരണത്തിലും ഉപയോഗത്തിലും നിങ്ങളെ നയിക്കും. (Ñān uccāraṇattiluṁ upayōgattiluṁ niṅṅaḷe nayikkum.) \"നമസ്കാരം\" (Namaskāram) എന്ന വാക്കിൽ നിന്ന് തുടങ്ങാം. ( \"Namaskāram\" enna vākkil ninnŭ tuṭaṅṅāṁ.) നിങ്ങൾക്ക് \"നമസ്കാരം\" (Namaskāram) എന്ന് പറയാൻ ശ്രമിക്കാമോ?"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "നമസ്കാരം",
+          "phonetic": "Namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "നമസ്കാരം, സുഖമാണോ?"
+        },
+        {
+          "word": "സുഖം",
+          "phonetic": "Sukham",
+          "meaning": "Good / Well-being",
+          "example": "എനിക്ക് സുഖമാണ്."
+        },
+        {
+          "word": "പേര്",
+          "phonetic": "Pēru",
+          "meaning": "Name",
+          "example": "നിങ്ങളുടെ പേരെന്താണ്?"
+        },
+        {
+          "word": "എന്റെ",
+          "phonetic": "Ente",
+          "meaning": "My",
+          "example": "എന്റെ പേര് രാഹുൽ ആണ്."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Malayalam?",
+          "options": [
+            "നമസ്കാരം",
+            "നന്ദി",
+            "ദയവായി",
+            "ക്ഷമിക്കണം"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which phrase means \"How are you?\"",
+          "options": [
+            "എന്റെ പേര്",
+            "സുഖമാണോ?",
+            "എനിക്ക് വിശക്കുന്നു",
+            "എവിടെയാണ്?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"My name is [your name]\"?",
+          "options": [
+            "നിങ്ങളുടെ പേര്",
+            "എന്റെ പേര്",
+            "ഇത് എന്റെ",
+            "എനിക്ക് പേരുണ്ട്"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "നമസ്കാരം! (Namaskāram!) ഈ പാഠത്തിൽ നമ്മൾ മലയാളത്തിലെ ചില അടിസ്ഥാനപരമായ അഭിവാദ്യങ്ങളും പരിചയപ്പെടുത്തലുകളും പഠിക്കും. 'നമസ്കാരം' (Namaskāram), 'സുഖമാണോ?' (Sukhamāṇō?), 'എന്റെ പേര്...' (Ente pēru...) എന്നിവയാണ് നമ്മൾ ഇന്ന് പഠിക്കാൻ പോകുന്നത്. നമുക്ക് 'നമസ്കാരം' (Namaskāram) എന്ന വാക്കിൽ നിന്ന് തുടങ്ങാം. ഇത് 'Hello' അല്ലെങ്കിൽ 'Greetings' എന്ന് അർത്ഥമാക്കുന്നു. നിങ്ങൾക്കൊന്ന് 'നമസ്കാരം' (Namaskāram) എന്ന് പറഞ്ഞു നോക്കാമോ? ഞാൻ കേൾക്കാൻ തയ്യാറാണ്!"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "നമസ്കാരം",
+          "phonetic": "namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "നമസ്കാരം, നിങ്ങൾക്കെങ്ങനെയിരിക്കുന്നു?"
+        },
+        {
+          "word": "സുഖമാണോ?",
+          "phonetic": "sukhamāṇō?",
+          "meaning": "How are you? (Are you fine?)",
+          "example": "ഹായ്, സുഖമാണോ?"
+        },
+        {
+          "word": "എനിക്ക് സുഖമാണ്.",
+          "phonetic": "enikk sukhamāṇ.",
+          "meaning": "I am fine.",
+          "example": "എനിക്ക് സുഖമാണ്, നന്ദി."
+        },
+        {
+          "word": "നന്ദി",
+          "phonetic": "nandi",
+          "meaning": "Thank you",
+          "example": "സഹായത്തിന് നന്ദി."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Malayalam word for 'Hello' or 'Greetings'?",
+          "options": [
+            "നന്ദി",
+            "സുഖമാണോ?",
+            "നമസ്കാരം",
+            "എനിക്ക് സുഖമാണ്"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask 'How are you?' in Malayalam?",
+          "options": [
+            "നമസ്കാരം",
+            "സുഖമാണോ?",
+            "നന്ദി",
+            "എനിക്ക് സുഖമാണ്"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct Malayalam phrase for 'I am fine.'",
+          "options": [
+            "നന്ദി",
+            "സുഖമാണോ?",
+            "നമസ്കാരം",
+            "എനിക്ക് സുഖമാണ്"
+          ],
+          "answer": 3
+        },
+        {
+          "q": "Which Malayalam word means 'Thank you'?",
+          "options": [
+            "നമസ്കാരം",
+            "സുഖമാണോ?",
+            "നന്ദി",
+            "എനിക്ക് സുഖമാണ്"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "ഹലോ! നിങ്ങളുടെ മലയാളം പാഠത്തിലേക്ക് സ്വാഗതം. ഇന്ന് നമ്മൾ ചില പ്രധാനപ്പെട്ട മലയാളം ആശംസകളും വാക്യങ്ങളും പഠിക്കാൻ പോകുന്നു. 'ഹലോ' എന്നതിന് നമസ്കാരം (namaskāram), 'സുഖമാണോ?' എന്നതിന് സുഖമാണോ? (sukhamāṇō?), 'നന്ദി' എന്നതിന് നന്ദി (nandi) എന്നിങ്ങനെയുള്ള വാക്കുകൾ നമ്മൾ പഠിക്കും. ഉച്ചാരണത്തിൽ ശ്രദ്ധിക്കുകയും എന്റെ പിന്നാലെ ആവർത്തിക്കാൻ ശ്രമിക്കുകയും ചെയ്യുക. നമുക്ക് നമസ്കാരം (namaskāram) എന്ന് പറഞ്ഞ് തുടങ്ങാം. നിങ്ങൾക്ക് നമസ്കാരം (namaskāram) എന്ന് പറയാമോ?"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "നമസ്കാരം",
+          "phonetic": "Namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "നമസ്കാരം, നിങ്ങൾക്കെങ്ങനെയുണ്ട്?"
+        },
+        {
+          "word": "സുഖമാണോ?",
+          "phonetic": "Sukhamāṇō?",
+          "meaning": "How are you? (Literally: Is it comfortable/well?)",
+          "example": "നിങ്ങൾക്ക് സുഖമാണോ?"
+        },
+        {
+          "word": "എനിക്ക് സുഖമാണ്",
+          "phonetic": "Enikk sukhamāṇ",
+          "meaning": "I am fine / I am well",
+          "example": "എനിക്ക് സുഖമാണ്, നന്ദി."
+        },
+        {
+          "word": "നന്ദി",
+          "phonetic": "Nandi",
+          "meaning": "Thank you",
+          "example": "നിങ്ങളുടെ സഹായത്തിന് നന്ദി."
+        },
+        {
+          "word": "ദയവായി",
+          "phonetic": "Dayavāyi",
+          "meaning": "Please",
+          "example": "ദയവായി എനിക്കൊരു ചായ തരൂ."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Malayalam?",
+          "options": [
+            "നന്ദി",
+            "സുഖമാണോ?",
+            "നമസ്കാരം",
+            "ദയവായി"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"How are you?\"",
+          "options": [
+            "എനിക്ക് സുഖമാണ്",
+            "നന്ദി",
+            "സുഖമാണോ?",
+            "നമസ്കാരം"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Malayalam word for \"Thank you\"?",
+          "options": [
+            "ദയവായി",
+            "നന്ദി",
+            "സുഖമാണോ?",
+            "എനിക്ക് സുഖമാണ്"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"സുഖമാണോ?\", how would you respond if you are fine?",
+          "options": [
+            "നന്ദി",
+            "ദയവായി",
+            "നമസ്കാരം",
+            "എനിക്ക് സുഖമാണ്"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Hello! In this lesson, we're going to learn some essential Malayalam greetings and phrases. We'll start with \"നമസ്കാരം\" (Namaskāram), which means \"Hello\" or \"Greetings\". Try saying \"നമസ്കാരം\" out loud. Then we'll learn how to ask \"How are you?\" using \"സുഖമാണോ?\" (Sukhamāṇō?) and how to respond with \"എനിക്ക് സുഖമാണ്\" (Enikk sukhamāṇ), meaning \"I am fine\". We'll also cover \"നന്ദി\" (Nandi) for \"Thank you\" and \"ദയവായി\" (Dayavāyi) for \"Please\". Let's practice these useful Malayalam വാക്കുകൾ (vākkaḷ) and വാക്യങ്ങൾ (vākyangaḷ) together!"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "നമസ്കാരം",
+          "phonetic": "namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "നമസ്കാരം! നിങ്ങൾക്കെങ്ങനെയിരിക്കുന്നു?"
+        },
+        {
+          "word": "സുഖമാണോ?",
+          "phonetic": "sukhamāṇō?",
+          "meaning": "How are you? (Are you fine?)",
+          "example": "ഹായ്, സുഖമാണോ?"
+        },
+        {
+          "word": "സുഖമാണ്",
+          "phonetic": "sukhamāṇ",
+          "meaning": "I am fine.",
+          "example": "എനിക്ക് സുഖമാണ്, നന്ദി."
+        },
+        {
+          "word": "എന്താണ് പേര്?",
+          "phonetic": "entāṇ pēru?",
+          "meaning": "What is your name?",
+          "example": "നിങ്ങളുടെ പേര് എന്താണ്?"
+        },
+        {
+          "word": "എൻ്റെ പേര്...",
+          "phonetic": "enṟe pēru...",
+          "meaning": "My name is...",
+          "example": "എൻ്റെ പേര് ആനന്ദ്."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Malayalam?",
+          "options": [
+            "നമസ്കാരം",
+            "നന്ദി",
+            "ക്ഷമിക്കണം",
+            "വരൂ"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the most common way to ask \"How are you?\" in Malayalam?",
+          "options": [
+            "എന്താണ്?",
+            "സുഖമാണോ?",
+            "എവിടെ?",
+            "ആരാണ്?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks you \"സുഖമാണോ?\" (sukhamāṇō?), how would you respond to say \"I am fine\"?",
+          "options": [
+            "എന്താണ് പേര്?",
+            "നന്ദി",
+            "സുഖമാണ്",
+            "വരൂ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase means \"What is your name?\" in Malayalam?",
+          "options": [
+            "എൻ്റെ പേര്",
+            "സുഖമാണോ?",
+            "എന്താണ് പേര്?",
+            "നന്ദി"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "നമസ്കാരം! ഇന്ന് നമ്മൾ മലയാളത്തിലെ ചില അടിസ്ഥാനപരമായ അഭിവാദ്യങ്ങളും പരിചയപ്പെടുത്തലുകളും പഠിച്ചു. 'നമസ്കാരം', 'സുഖമാണോ?', 'എൻ്റെ പേര്...' തുടങ്ങിയ വാക്കുകളും ശൈലികളും നമ്മൾ കണ്ടു. നിങ്ങൾക്ക് പഠിച്ച ഒരു പുതിയ മലയാളം വാക്ക് പറയാമോ, അത് ഒരു വാക്യത്തിൽ ഉപയോഗിച്ച് കാണിക്കാമോ? ഉദാഹരണത്തിന്, 'എനിക്ക് സുഖമാണ്' എന്ന് പറയാം."
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "നമസ്കാരം",
+          "phonetic": "Namaskaram",
+          "meaning": "Hello / Greetings",
+          "example": "നമസ്കാരം, നിങ്ങൾക്ക് സുഖമാണോ?"
+        },
+        {
+          "word": "സുഖമാണോ?",
+          "phonetic": "Sukhamano?",
+          "meaning": "How are you? (Are you fine?)",
+          "example": "നിങ്ങൾക്ക് സുഖമാണോ?"
+        },
+        {
+          "word": "എനിക്ക് സുഖമാണ്",
+          "phonetic": "Enikku sukhamanu",
+          "meaning": "I am fine",
+          "example": "എനിക്ക് സുഖമാണ്, നന്ദി."
+        },
+        {
+          "word": "നന്ദി",
+          "phonetic": "Nandi",
+          "meaning": "Thank you",
+          "example": "സഹായത്തിന് നന്ദി."
+        },
+        {
+          "word": "അതെ",
+          "phonetic": "Athe",
+          "meaning": "Yes",
+          "example": "അതെ, എനിക്ക് പോകണം."
+        },
+        {
+          "word": "ഇല്ല",
+          "phonetic": "Illa",
+          "meaning": "No",
+          "example": "ഇല്ല, എനിക്ക് വേണ്ട."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Malayalam?",
+          "options": [
+            "നന്ദി",
+            "സുഖമാണോ?",
+            "നമസ്കാരം",
+            "ഇല്ല"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does the Malayalam phrase \"സുഖമാണോ?\" mean?",
+          "options": [
+            "I am fine",
+            "Thank you",
+            "How are you?",
+            "Yes"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Malayalam phrase for \"I am fine\".",
+          "options": [
+            "നമസ്കാരം",
+            "എനിക്ക് സുഖമാണ്",
+            "നന്ദി",
+            "അതെ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Malayalam?",
+          "options": [
+            "അതെ",
+            "നന്ദി",
+            "ഇല്ല",
+            "സുഖമാണോ?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Malayalam word for \"Yes\"?",
+          "options": [
+            "ഇല്ല",
+            "അതെ",
+            "നന്ദി",
+            "നമസ്കാരം"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "നമസ്കാരം! (Namaskaram!) Welcome to your Malayalam lesson! Today, we're going to dive into some essential Malayalam greetings and basic phrases that will help you start conversations. We'll cover 'Hello' (നമസ്കാരം), 'How are you?' (സുഖമാണോ?), 'I am fine' (എനിക്ക് സുഖമാണ്), 'Thank you' (നന്ദി), 'Yes' (അതെ), and 'No' (ഇല്ല). Let's begin with 'Hello'. In Malayalam, we say 'നമസ്കാരം' (Namaskaram). Can you try saying 'നമസ്കാരം' (Namaskaram)?"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "നമസ്കാരം",
+          "phonetic": "Namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "നമസ്കാരം, നിങ്ങൾക്കെന്തുണ്ട് വിശേഷം?"
+        },
+        {
+          "word": "സുഖമാണോ?",
+          "phonetic": "Sukhamāṇō?",
+          "meaning": "How are you? (Literally: Is it comfortable/well?)",
+          "example": "നിങ്ങൾക്ക് സുഖമാണോ?"
+        },
+        {
+          "word": "എനിക്ക് സുഖമാണ്.",
+          "phonetic": "Enikk sukhamāṇ.",
+          "meaning": "I am good. / I am well.",
+          "example": "എനിക്ക് സുഖമാണ്, നന്ദി."
+        },
+        {
+          "word": "നന്ദി",
+          "phonetic": "Nandi",
+          "meaning": "Thank you",
+          "example": "നിങ്ങളുടെ സഹായത്തിന് നന്ദി."
+        },
+        {
+          "word": "അതെ",
+          "phonetic": "Ate",
+          "meaning": "Yes",
+          "example": "അതെ, എനിക്ക് പോകണം."
+        },
+        {
+          "word": "ഇല്ല",
+          "phonetic": "Illa",
+          "meaning": "No",
+          "example": "ഇല്ല, എനിക്ക് വേണ്ട."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Malayalam?",
+          "options": [
+            "നമസ്കാരം",
+            "നന്ദി",
+            "സുഖമാണോ",
+            "ഇല്ല"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct Malayalam phrase for \"How are you?\"",
+          "options": [
+            "എനിക്ക് സുഖമാണ്",
+            "നന്ദി",
+            "സുഖമാണോ?",
+            "അതെ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the Malayalam word for \"Thank you.\"",
+          "options": [
+            "അതെ",
+            "ഇല്ല",
+            "നന്ദി",
+            "നമസ്കാരം"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you respond to \"സുഖമാണോ?\" (Sukhamāṇō?) if you are well?",
+          "options": [
+            "ഇല്ല",
+            "അതെ",
+            "എനിക്ക് സുഖമാണ്",
+            "നന്ദി"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "നമസ്കാരം! (Namaskāram!) ഇന്ന് നമ്മൾ കുറച്ച് അടിസ്ഥാനപരമായ മലയാളം അഭിവാദ്യങ്ങൾ പഠിക്കാൻ പോകുന്നു. 'നമസ്കാരം' (Namaskāram), 'സുഖമാണോ?' (Sukhamāṇō?), 'നന്ദി' (Nandi) എന്നിവ നമ്മൾ പഠിക്കും. നമുക്ക് 'നമസ്കാരം' (Namaskāram) എന്ന വാക്കിൽ നിന്ന് തുടങ്ങാം. നിങ്ങൾക്കൊന്ന് 'നമസ്കാരം' (Namaskāram) എന്ന് പറയാമോ?"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "നമസ്കാരം",
+          "phonetic": "Namaskaram",
+          "meaning": "Hello / Greetings",
+          "example": "നമസ്കാരം, നിങ്ങൾക്കെങ്ങനെയിരിക്കുന്നു?"
+        },
+        {
+          "word": "സുഖമാണോ?",
+          "phonetic": "Sukhamāṇō?",
+          "meaning": "How are you? (Are you fine?)",
+          "example": "നിങ്ങൾക്ക് സുഖമാണോ?"
+        },
+        {
+          "word": "എനിക്ക് സുഖമാണ്",
+          "phonetic": "Enikk sukhamāṇ",
+          "meaning": "I am fine.",
+          "example": "എനിക്ക് സുഖമാണ്, നന്ദി."
+        },
+        {
+          "word": "നന്ദി",
+          "phonetic": "Nandi",
+          "meaning": "Thank you.",
+          "example": "നിങ്ങളുടെ സഹായത്തിന് നന്ദി."
+        },
+        {
+          "word": "ദയവായി",
+          "phonetic": "Dayavāyi",
+          "meaning": "Please.",
+          "example": "ദയവായി എനിക്കൊരു ചായ തരൂ."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Malayalam?",
+          "options": [
+            "നന്ദി",
+            "സുഖമാണോ?",
+            "നമസ്കാരം",
+            "ദയവായി"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does the Malayalam phrase \"സുഖമാണോ?\" mean?",
+          "options": [
+            "Thank you",
+            "I am fine",
+            "How are you?",
+            "Please"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Malayalam phrase for \"I am fine.\"",
+          "options": [
+            "നമസ്കാരം",
+            "എനിക്ക് സുഖമാണ്",
+            "ദയവായി",
+            "നന്ദി"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"Thank you\" in Malayalam?",
+          "options": [
+            "സുഖമാണോ?",
+            "നമസ്കാരം",
+            "നന്ദി",
+            "എനിക്ക് സുഖമാണ്"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "നമസ്കാരം! (Namaskaram!) Welcome to your Malayalam lesson! Today, we're going to learn some essential greetings and polite phrases. We'll start with 'നമസ്കാരം' (Namaskaram), which means 'Hello' or 'Greetings'. Try saying 'നമസ്കാരം' out loud. Next, we'll learn how to ask 'How are you?' using 'സുഖമാണോ?' (Sukhamāṇō?). And how to reply 'I am fine' with 'എനിക്ക് സുഖമാണ്' (Enikk sukhamāṇ). We'll also cover 'നന്ദി' (Nandi) for 'Thank you' and 'ദയവായി' (Dayavāyi) for 'Please'. Let's practice these together! Are you ready to begin?"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "നമസ്കാരം",
+          "phonetic": "namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "നമസ്കാരം, നിങ്ങൾക്കെങ്ങനെയുണ്ട്?"
+        },
+        {
+          "word": "എങ്ങനെയുണ്ട്?",
+          "phonetic": "eṅṅaneyuṇṭ?",
+          "meaning": "How are you?",
+          "example": "നിങ്ങൾക്ക് ഇന്ന് എങ്ങനെയുണ്ട്?"
+        },
+        {
+          "word": "സുഖമാണ്",
+          "phonetic": "sukhamāṇu",
+          "meaning": "I am good / fine",
+          "example": "എനിക്ക് സുഖമാണ്, നന്ദി."
+        },
+        {
+          "word": "നന്ദി",
+          "phonetic": "nandi",
+          "meaning": "Thank you",
+          "example": "നിങ്ങളുടെ സഹായത്തിന് നന്ദി."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Greetings\" in Malayalam?",
+          "options": [
+            "നന്ദി",
+            "സുഖമാണ്",
+            "നമസ്കാരം",
+            "എങ്ങനെയുണ്ട്?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Malayalam phrase means \"How are you?\"",
+          "options": [
+            "നമസ്കാരം",
+            "എങ്ങനെയുണ്ട്?",
+            "സുഖമാണ്",
+            "നന്ദി"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"എങ്ങനെയുണ്ട്?\", what is a common response meaning \"I am good\" or \"I am fine\"?",
+          "options": [
+            "നന്ദി",
+            "നമസ്കാരം",
+            "സുഖമാണ്",
+            "ക്ഷമിക്കണം"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the Malayalam word for \"Thank you\"?",
+          "options": [
+            "നമസ്കാരം",
+            "സുഖമാണ്",
+            "നന്ദി",
+            "എങ്ങനെയുണ്ട്?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "നമസ്കാരം! (namaskāram!) ഇന്ന് നമ്മൾ ചില അടിസ്ഥാന മലയാളം അഭിവാദ്യങ്ങളും സാധാരണ പദപ്രയോഗങ്ങളും പഠിക്കാൻ പോകുന്നു. നമ്മൾ 'നമസ്കാരം' (namaskāram) എന്ന വാക്കിൽ നിന്ന് തുടങ്ങും, അതിനർത്ഥം 'ഹലോ' അല്ലെങ്കിൽ 'അഭിവാദ്യങ്ങൾ' എന്നാണ്. ഞാൻ പറഞ്ഞതിന് ശേഷം നിങ്ങൾ ഇത് പറയാൻ ശ്രമിക്കുക: 'നമസ്കാരം'. തുടർന്ന്, 'എങ്ങനെയുണ്ട്?' (eṅṅaneyuṇṭ?) എന്നതിനെക്കുറിച്ച് നമ്മൾ പഠിക്കും, അതിനർത്ഥം 'നിങ്ങൾക്ക് എങ്ങനെയുണ്ട്?' എന്നാണ്. ഒരു സാധാരണ മറുപടി 'സുഖമാണ്' (sukhamāṇu) എന്നതാണ്, അതിനർത്ഥം 'എനിക്ക് സുഖമാണ്' എന്നാണ്. അവസാനമായി, 'നന്ദി' (nandi) എന്ന വാക്ക് നമ്മൾ പഠിക്കും, അതിനർത്ഥം 'നന്ദി' എന്നാണ്. ഓരോ വാക്യത്തിലൂടെയും ഞാൻ നിങ്ങളെ നയിക്കും, ഉച്ചാരണത്തിൽ സഹായിക്കും, ലളിതമായ സംഭാഷണങ്ങളിൽ അവ ഉപയോഗിക്കാൻ നിങ്ങൾക്ക് അവസരങ്ങൾ നൽകും. 'നമസ്കാരം' എന്നതിൽ നിന്ന് നമുക്ക് തുടങ്ങാം!"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "നമസ്കാരം",
+          "phonetic": "namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "നമസ്കാരം, എന്റെ പേര് രാധിക."
+        },
+        {
+          "word": "സുഖമാണോ?",
+          "phonetic": "sukhamāṇō?",
+          "meaning": "How are you? (Are you well?)",
+          "example": "സുഖമാണോ, രാമു?"
+        },
+        {
+          "word": "സുഖമാണ്",
+          "phonetic": "sukhamāṇ",
+          "meaning": "I am fine / It is well",
+          "example": "അതെ, സുഖമാണ്."
+        },
+        {
+          "word": "നന്ദി",
+          "phonetic": "nandi",
+          "meaning": "Thank you",
+          "example": "സഹായത്തിന് നന്ദി."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" or \"Greetings\" in Malayalam?",
+          "options": [
+            "നന്ദി",
+            "സുഖമാണോ",
+            "നമസ്കാരം",
+            "ദയവായി"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct way to ask \"How are you?\" in Malayalam?",
+          "options": [
+            "നന്ദി",
+            "സുഖമാണോ?",
+            "നമസ്കാരം",
+            "അതെ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks \"സുഖമാണോ?\" (Sukhamāṇō?) and you are fine, how would you respond?",
+          "options": [
+            "നന്ദി",
+            "ഇല്ല",
+            "സുഖമാണ്",
+            "നമസ്കാരം"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Malayalam?",
+          "options": [
+            "സുഖമാണ്",
+            "നന്ദി",
+            "നമസ്കാരം",
+            "അതെ"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "നന്നായി ചെയ്തു! ഇന്ന് നമ്മൾ ചില സാധാരണ മലയാളം അഭിവാദ്യങ്ങളും ലളിതമായ സംഭാഷണങ്ങളും പഠിക്കും. നമ്മൾ 'നമസ്കാരം' എന്ന വാക്കിൽ തുടങ്ങും. ഇത് 'Hello' അല്ലെങ്കിൽ 'Greetings' എന്ന് അർത്ഥമാക്കുന്നു. എനിക്ക് ശേഷം 'നമസ്കാരം' (Namaskāram) എന്ന് പറയാമോ?\n\nഅടുത്തതായി, 'സുഖമാണോ?' (Sukhamāṇō?) എന്ന് പഠിക്കാം. ഇത് 'How are you?' എന്ന് ചോദിക്കാൻ ഉപയോഗിക്കുന്നു. ഇതിന് മറുപടിയായി 'സുഖമാണ്' (Sukhamāṇ) എന്ന് പറയാം, അതിനർത്ഥം 'I am fine' എന്നാണ്. നമുക്ക് ഒരു ചെറിയ സംഭാഷണം പരിശീലിക്കാം:\nട്യൂട്ടർ: സുഖമാണോ? (Sukhamāṇō?)\nനിങ്ങൾ: സുഖമാണ്. (Sukhamāṇ.)\n\nഅവസാനമായി, 'നന്ദി' (Nandi) എന്ന വാക്ക് പഠിക്കാം, അതിനർത്ഥം 'Thank you' എന്നാണ്.\n\nഈ വാക്കുകൾ ഉപയോഗിച്ച് ഒരു ചെറിയ സംഭാഷണം നടത്താൻ തയ്യാറാണോ? നമുക്ക് തുടങ്ങാം!"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "നമസ്കാരം",
+          "phonetic": "Namaskaram",
+          "meaning": "Hello / Greetings",
+          "example": "നമസ്കാരം, സുഖമാണോ?"
+        },
+        {
+          "word": "സുഖമാണോ?",
+          "phonetic": "Sukhamano?",
+          "meaning": "How are you? (Are you fine?)",
+          "example": "നിങ്ങൾക്ക് സുഖമാണോ?"
+        },
+        {
+          "word": "സുഖമാണ്",
+          "phonetic": "Sukhamanu",
+          "meaning": "I am fine / It is fine",
+          "example": "എനിക്ക് സുഖമാണ്."
+        },
+        {
+          "word": "നന്ദി",
+          "phonetic": "Nandi",
+          "meaning": "Thank you",
+          "example": "നിങ്ങളുടെ സഹായത്തിന് നന്ദി."
+        },
+        {
+          "word": "ദയവായി",
+          "phonetic": "Dayavayi",
+          "meaning": "Please",
+          "example": "ദയവായി എനിക്ക് ഒരു ഗ്ലാസ് വെള്ളം തരുമോ?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Malayalam word for \"Hello\" or \"Greetings\"?",
+          "options": [
+            "നന്ദി",
+            "സുഖമാണ്",
+            "നമസ്കാരം",
+            "ദയവായി"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you ask \"How are you?\" in Malayalam?",
+          "options": [
+            "സുഖമാണ്",
+            "നന്ദി",
+            "സുഖമാണോ?",
+            "നമസ്കാരം"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Malayalam phrase means \"I am fine\"?",
+          "options": [
+            "നമസ്കാരം",
+            "സുഖമാണ്",
+            "ദയവായി",
+            "നന്ദി"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Malayalam word for \"Thank you\"?",
+          "options": [
+            "ദയവായി",
+            "നമസ്കാരം",
+            "നന്ദി",
+            "സുഖമാണോ?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Malayalam word for \"Please\".",
+          "options": [
+            "സുഖമാണ്",
+            "ദയവായി",
+            "നന്ദി",
+            "നമസ്കാരം"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "നമസ്കാരം! (Namaskaram!) Today, we're going to dive into the beautiful world of Malayalam and learn some essential phrases for everyday conversations. We'll start with greetings and how to ask and respond about well-being.\n\nOur first word is 'നമസ്കാരം' (Namaskaram), which means 'Hello' or 'Greetings'. It's a versatile word you can use in many situations. Can you try saying 'നമസ്കാരം' (Namaskaram) out loud?\n\nNext, we'll learn how to ask 'How are you?'. In Malayalam, we say 'സുഖമാണോ?' (Sukhamano?). Try repeating 'സുഖമാണോ?' (Sukhamano?).\n\nAnd to respond with 'I am fine', you can say 'സുഖമാണ്' (Sukhamanu). Let's practice: 'സുഖമാണ്' (Sukhamanu).\n\nFinally, two very important words: 'നന്ദി' (Nandi) for 'Thank you' and 'ദയവായി' (Dayavayi) for 'Please'. Can you try saying 'നന്ദി' (Nandi) and then 'ദയവായി' (Dayavayi)?\n\nGreat job! Now, let's try putting them together. I'll say a phrase, and you can try to respond or repeat. Ready?"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "നമസ്കാരം",
+          "phonetic": "namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "നമസ്കാരം, നിങ്ങൾക്കെങ്ങനെയിരിക്കുന്നു?"
+        },
+        {
+          "word": "സുഖമാണോ?",
+          "phonetic": "sukhamāṇō?",
+          "meaning": "How are you? (Are you fine?)",
+          "example": "നിങ്ങൾക്ക് സുഖമാണോ?"
+        },
+        {
+          "word": "എനിക്ക് സുഖമാണ്",
+          "phonetic": "enikk sukhamāṇ",
+          "meaning": "I am fine.",
+          "example": "എനിക്ക് സുഖമാണ്, നന്ദി."
+        },
+        {
+          "word": "നന്ദി",
+          "phonetic": "nandi",
+          "meaning": "Thank you.",
+          "example": "നിങ്ങളുടെ സഹായത്തിന് നന്ദി."
+        },
+        {
+          "word": "അതെ",
+          "phonetic": "ate",
+          "meaning": "Yes.",
+          "example": "അതെ, എനിക്ക് പോകണം."
+        },
+        {
+          "word": "അല്ല",
+          "phonetic": "alla",
+          "meaning": "No.",
+          "example": "അല്ല, എനിക്ക് വേണ്ട."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Malayalam?",
+          "options": [
+            "നന്ദി",
+            "സുഖമാണോ?",
+            "നമസ്കാരം",
+            "അല്ല"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"നന്ദി\" (nandi) mean?",
+          "options": [
+            "Yes",
+            "No",
+            "Thank you",
+            "How are you?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Malayalam phrase for \"I am fine.\"",
+          "options": [
+            "നിങ്ങൾക്ക് സുഖമാണോ?",
+            "എനിക്ക് സുഖമാണ്",
+            "നമസ്കാരം",
+            "അതെ"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "നമസ്കാരം! (Namaskāram!) ഇന്ന് നമ്മൾ കുറച്ച് അടിസ്ഥാന മലയാളം അഭിവാദ്യങ്ങളും സാധാരണ ഉപയോഗിക്കുന്ന വാക്കുകളും പഠിക്കാൻ പോകുന്നു. 'നമസ്കാരം', 'സുഖമാണോ?', 'എനിക്ക് സുഖമാണ്', 'നന്ദി', 'അതെ', 'അല്ല' എന്നിവ നമ്മൾ പഠിക്കും. നമുക്ക് 'നമസ്കാരം' എന്നതിൽ നിന്ന് തുടങ്ങാം. 'നമസ്കാരം' എന്ന് പറയാൻ ശ്രമിക്കാമോ?"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "നമസ്കാരം",
+          "phonetic": "namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "നമസ്കാരം, സുഖമാണോ?"
+        },
+        {
+          "word": "സുഖമാണോ?",
+          "phonetic": "sukhamāṇō?",
+          "meaning": "How are you? (Are you well?)",
+          "example": "നിങ്ങൾക്ക് സുഖമാണോ?"
+        },
+        {
+          "word": "സുഖമാണ്",
+          "phonetic": "sukhamāṇu",
+          "meaning": "I am fine / It is well",
+          "example": "എനിക്ക് സുഖമാണ്."
+        },
+        {
+          "word": "നന്ദി",
+          "phonetic": "nandi",
+          "meaning": "Thank you",
+          "example": "നിങ്ങളുടെ സഹായത്തിന് നന്ദി."
+        },
+        {
+          "word": "എന്റെ പേര്...",
+          "phonetic": "enṟe pēru...",
+          "meaning": "My name is...",
+          "example": "എന്റെ പേര് രാഹുൽ."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Malayalam?",
+          "options": [
+            "നന്ദി",
+            "സുഖമാണോ?",
+            "നമസ്കാരം",
+            "എന്റെ പേര്"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct way to ask \"How are you?\" in Malayalam?",
+          "options": [
+            "നന്ദി?",
+            "സുഖമാണോ?",
+            "നമസ്കാരം?",
+            "എന്റെ പേര്?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If someone asks you \"സുഖമാണോ?\", how would you respond to say \"I am fine\"?",
+          "options": [
+            "നന്ദി",
+            "നമസ്കാരം",
+            "സുഖമാണ്",
+            "എന്റെ പേര്"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "നമസ്കാരം! (Namaskāram!) Welcome to your first Malayalam lesson! I'm excited to help you learn this beautiful language. Let's start with a common greeting: നമസ്കാരം (namaskāram). This means 'Hello' or 'Greetings'. Can you try saying നമസ്കാരം? Great! Now, how do you ask 'How are you?' In Malayalam, we say സുഖമാണോ? (sukhamāṇō?). The word 'സുഖം' means 'well-being' or 'comfort', and 'ആണോ?' makes it a question. Try saying സുഖമാണോ? Excellent! And if you want to reply 'I am fine' or 'It is well', you say സുഖമാണ് (sukhamāṇu). Notice the difference between 'ആണോ?' for a question and 'ആണ്' for a statement. Can you say സുഖമാണ്? Perfect! Now, a very useful word: നന്ദി (nandi). This means 'Thank you'. It's simple and polite. Try saying നന്ദി. Finally, let's learn how to introduce yourself. To say 'My name is...', you say എന്റെ പേര്... (enṟe pēru...). For example, എന്റെ പേര് [Your Name]. Can you try saying 'എന്റെ പേര്' followed by your name? Fantastic job today! You've learned some essential Malayalam greetings and phrases. Keep practicing these, and I look forward to our next lesson. നമസ്കാരം!"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "നമസ്കാരം",
+          "phonetic": "namaskāram",
+          "meaning": "Hello / Greetings",
+          "example": "നമസ്കാരം, നിങ്ങൾക്കെങ്ങനെയുണ്ട്?"
+        },
+        {
+          "word": "എങ്ങനെയുണ്ട്?",
+          "phonetic": "eṅṅaneyuṇṭ?",
+          "meaning": "How are you?",
+          "example": "നിങ്ങൾക്ക് എങ്ങനെയുണ്ട്?"
+        },
+        {
+          "word": "സുഖമാണ്",
+          "phonetic": "sukhamāṇ",
+          "meaning": "I am fine / It is good",
+          "example": "എനിക്ക് സുഖമാണ്, നന്ദി."
+        },
+        {
+          "word": "നന്ദി",
+          "phonetic": "nandi",
+          "meaning": "Thank you",
+          "example": "നിങ്ങളുടെ സഹായത്തിന് നന്ദി."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Malayalam?",
+          "options": [
+            "നന്ദി",
+            "നമസ്കാരം",
+            "സുഖമാണ്",
+            "ക്ഷമിക്കണം"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct Malayalam phrase for \"How are you?\"",
+          "options": [
+            "എനിക്ക് സുഖമാണ്",
+            "നന്ദി",
+            "എങ്ങനെയുണ്ട്?",
+            "നമസ്കാരം"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone helps you, what would you say in Malayalam?",
+          "options": [
+            "സുഖമാണ്",
+            "നമസ്കാരം",
+            "നന്ദി",
+            "ക്ഷമിക്കണം"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "ഹായ്! ഇന്ന് നമ്മൾ മലയാളത്തിലെ ചില സാധാരണ സംഭാഷണ ശൈലികൾ പഠിക്കാൻ പോകുന്നു. നമ്മൾ 'നമസ്കാരം' (Hello), 'എങ്ങനെയുണ്ട്?' (How are you?), 'സുഖമാണ്' (I am fine), 'നന്ദി' (Thank you) എന്നീ വാക്കുകളും വാക്യങ്ങളും പഠിക്കും. ഈ വാക്കുകൾ നിങ്ങളുടെ ദൈനംദിന സംഭാഷണങ്ങളിൽ എങ്ങനെ ഉപയോഗിക്കാമെന്ന് നോക്കാം. നമുക്ക് 'നമസ്കാരം' എന്ന വാക്കിൽ നിന്ന് തുടങ്ങാം. നിങ്ങൾക്കത് പറയാൻ കഴിയുമോ? അതിൻ്റെ അർത്ഥം എന്താണ്?"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "നമസ്കാരം",
+          "phonetic": "Namaskaram",
+          "meaning": "Hello / Greetings",
+          "example": "നമസ്കാരം, സുഖമാണോ?"
+        },
+        {
+          "word": "സുഖമാണോ?",
+          "phonetic": "Sukhamāṇō?",
+          "meaning": "How are you? (Are you well?)",
+          "example": "എനിക്ക് സുഖമാണ്, നിങ്ങൾക്ക് സുഖമാണോ?"
+        },
+        {
+          "word": "നന്ദി",
+          "phonetic": "Nandi",
+          "meaning": "Thank you",
+          "example": "സഹായത്തിന് നന്ദി."
+        },
+        {
+          "word": "അതെ",
+          "phonetic": "Athe",
+          "meaning": "Yes",
+          "example": "അതെ, എനിക്ക് പോകണം."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Malayalam?",
+          "options": [
+            "നന്ദി",
+            "അതെ",
+            "നമസ്കാരം",
+            "ഇല്ല"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What does \"സുഖമാണോ?\" mean?",
+          "options": [
+            "Thank you",
+            "Yes",
+            "How are you?",
+            "No"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"Yes\" in Malayalam?",
+          "options": [
+            "നമസ്കാരം",
+            "അതെ",
+            "നന്ദി",
+            "ഇല്ല"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "നമസ്കാരം! (Namaskaram!) Welcome to your Malayalam lesson! I'm excited to help you start your journey with this beautiful language. Today, we'll learn some essential greetings and phrases. We'll begin with how to say 'Hello' in Malayalam: അത് 'നമസ്കാരം' (Namaskaram) ആണ്. Can you try saying 'നമസ്കാരം' (Namaskaram)? Great! Next, we'll learn how to ask 'How are you?' which is 'സുഖമാണോ?' (Sukhamāṇō?). And we'll also cover 'Thank you' – 'നന്ദി' (Nandi), and 'Yes' – 'അതെ' (Athe). Let's practice these together!"
+    }
+  ]
+}

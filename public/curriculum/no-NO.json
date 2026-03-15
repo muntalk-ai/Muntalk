@@ -1,0 +1,1343 @@
+{
+  "langCode": "no-NO",
+  "langLabel": "Norwegian",
+  "langNative": "Norsk",
+  "generatedAt": "2026-03-15T07:30:50.477Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hei",
+          "phonetic": "/hæɪ/",
+          "meaning": "Hello / Hi",
+          "example": "Hei, hvordan går det?"
+        },
+        {
+          "word": "Jeg heter...",
+          "phonetic": "/jæɪ heːtər/",
+          "meaning": "My name is...",
+          "example": "Jeg heter Anna."
+        },
+        {
+          "word": "Hva heter du?",
+          "phonetic": "/vɑː heːtər dʉː/",
+          "meaning": "What is your name?",
+          "example": "Hva heter du? Jeg heter Per."
+        },
+        {
+          "word": "Hyggelig å møte deg",
+          "phonetic": "/hʏɡəlɪɡ ɔː møːtə dæɪ/",
+          "meaning": "Nice to meet you",
+          "example": "Hyggelig å møte deg, Anna."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Norwegian?",
+          "options": [
+            "Takk",
+            "Hei",
+            "Vær så snill",
+            "Unnskyld"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"My name is...\"?",
+          "options": [
+            "Jeg er",
+            "Jeg har",
+            "Jeg heter",
+            "Jeg spiser"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"What is your name?\" in Norwegian?",
+          "options": [
+            "Hvor er du?",
+            "Hva gjør du?",
+            "Hva heter du?",
+            "Hvem er du?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Norwegian phrase for \"Nice to meet you\".",
+          "options": [
+            "God dag",
+            "Hyggelig å møte deg",
+            "Takk for maten",
+            "Vær så god"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Hei der! I dag skal vi lære noen grunnleggende norske hilsener og introduksjoner. Vi skal dekke 'Hei', 'Jeg heter...' og 'Hva heter du?'. Jeg sier hver frase, og du kan gjenta etter meg. Deretter skal vi øve på å bruke dem i enkle samtaler. La oss starte med 'Hei'!"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hei",
+          "phonetic": "hæɪ",
+          "meaning": "Hi, Hello",
+          "example": "Hei, hvordan går det?"
+        },
+        {
+          "word": "God morgen",
+          "phonetic": "guː mɔrn",
+          "meaning": "Good morning",
+          "example": "God morgen! Har du sovet godt?"
+        },
+        {
+          "word": "Hva heter du?",
+          "phonetic": "vɑː heːtər dʉː",
+          "meaning": "What is your name?",
+          "example": "Hei, jeg heter Anna. Hva heter du?"
+        },
+        {
+          "word": "Jeg heter...",
+          "phonetic": "jæɪ heːtər",
+          "meaning": "My name is... / I am called...",
+          "example": "Jeg heter Per. Hyggelig å møte deg."
+        },
+        {
+          "word": "Hvordan går det?",
+          "phonetic": "vurdɑn gɔːr deː",
+          "meaning": "How are you? / How is it going?",
+          "example": "Hei, Per! Hvordan går det?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Norwegian?",
+          "options": [
+            "Hei",
+            "Ha det",
+            "Takk",
+            "Ja"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct Norwegian phrase for \"Good morning\"?",
+          "options": [
+            "God kveld",
+            "God dag",
+            "God morgen",
+            "God natt"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"Hva heter du?\", what is a typical response?",
+          "options": [
+            "Jeg er bra",
+            "Jeg heter...",
+            "Det går bra",
+            "Takk"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct question for \"How are you?\"",
+          "options": [
+            "Hva er det?",
+            "Hvem er du?",
+            "Hvordan går det?",
+            "Hvor er du?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Velkommen til din første norskleksjon! I dag skal vi lære noen grunnleggende hilsener og introduksjoner. Vi skal se på \"Hei\", \"God morgen\", \"Hva heter du?\" og \"Hvordan går det?\". Jeg sier ordene og frasene, og du kan gjenta dem etter meg. Deretter skal vi øve på å bruke dem i enkle samtaler. La oss starte med \"Hei\". Kan du si \"Hei\"?"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hei",
+          "phonetic": "hai",
+          "meaning": "Hello",
+          "example": "Hei, hvordan går det?"
+        },
+        {
+          "word": "Jeg heter",
+          "phonetic": "yai heh-ter",
+          "meaning": "My name is",
+          "example": "Jeg heter Anna."
+        },
+        {
+          "word": "Hva heter du?",
+          "phonetic": "vah heh-ter doo?",
+          "meaning": "What is your name?",
+          "example": "Hei, hva heter du?"
+        },
+        {
+          "word": "Jeg er fra",
+          "phonetic": "yai air frah",
+          "meaning": "I am from",
+          "example": "Jeg er fra Norge."
+        },
+        {
+          "word": "Takk",
+          "phonetic": "tahk",
+          "meaning": "Thank you",
+          "example": "Takk for hjelpen!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Norwegian?",
+          "options": [
+            "Ha det",
+            "Hei",
+            "God natt",
+            "Ja"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"My name is...\"?",
+          "options": [
+            "Jeg er",
+            "Du er",
+            "Jeg heter",
+            "Hva er"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you ask \"What is your name?\" in Norwegian?",
+          "options": [
+            "Hvem er du?",
+            "Hvor er du?",
+            "Hva heter du?",
+            "Hvordan går det?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Complete the sentence: \"Jeg ____ fra Tyskland.\" (I am from Germany.)",
+          "options": [
+            "heter",
+            "er",
+            "har",
+            "snakker"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Norwegian word for \"Thank you\"?",
+          "options": [
+            "Vær så snill",
+            "Unnskyld",
+            "Takk",
+            "Ja"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Flott jobbet! I dag skal vi lære noen grunnleggende norske hilsener og hvordan du kan presentere deg selv. Vi starter med \"Hei\", som betyr \"Hello\". Kan du si \"Hei\"? Deretter lærer vi \"Jeg heter\", som betyr \"My name is\". Prøv å si \"Jeg heter [ditt navn]\". Så skal vi lære å spørre \"Hva heter du?\" for å spørre om noens navn. Til slutt lærer vi \"Jeg er fra\" for å si hvor du kommer fra, og \"Takk\" for å si \"Thank you\". La oss begynne!"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hei",
+          "phonetic": "[hai]",
+          "meaning": "Hi / Hello",
+          "example": "Hei, hvordan går det?"
+        },
+        {
+          "word": "Ja",
+          "phonetic": "[ya]",
+          "meaning": "Yes",
+          "example": "Ja, jeg forstår."
+        },
+        {
+          "word": "Nei",
+          "phonetic": "[nai]",
+          "meaning": "No",
+          "example": "Nei, det er ikke riktig."
+        },
+        {
+          "word": "Takk",
+          "phonetic": "[tak]",
+          "meaning": "Thank you",
+          "example": "Takk for hjelpen!"
+        },
+        {
+          "word": "Vær så snill",
+          "phonetic": "[vair soh snill]",
+          "meaning": "Please",
+          "example": "Kan du hjelpe meg, vær så snill?"
+        },
+        {
+          "word": "Unnskyld",
+          "phonetic": "[unn-shyld]",
+          "meaning": "Excuse me / Sorry",
+          "example": "Unnskyld, hvor er toalettet?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" or \"Hello\" in Norwegian?",
+          "options": [
+            "Hei",
+            "Ja",
+            "Nei",
+            "Takk"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which Norwegian word means \"Yes\"?",
+          "options": [
+            "Nei",
+            "Ja",
+            "Vær så snill",
+            "Unnskyld"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the Norwegian word for \"Thank you\"?",
+          "options": [
+            "Unnskyld",
+            "Hei",
+            "Takk",
+            "Nei"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If you want to say \"Please\" in Norwegian, which phrase would you use?",
+          "options": [
+            "Ja",
+            "Takk",
+            "Vær så snill",
+            "Unnskyld"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Flott jobbet! I denne leksjonen skal vi lære noen grunnleggende norske hilsener og høflighetsfraser. Vi skal dekke ord som 'Hei', 'Takk' og 'Vær så snill'. Jeg hjelper deg med uttale og viser deg hvordan du bruker dem i enkle setninger. La oss starte med 'Hei'. Kan du prøve å si 'Hei'?"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hei",
+          "phonetic": "[hai]",
+          "meaning": "Hi / Hello",
+          "example": "Hei, hvordan går det?"
+        },
+        {
+          "word": "God morgen",
+          "phonetic": "[gu: mu:rn]",
+          "meaning": "Good morning",
+          "example": "God morgen! Har du sovet godt?"
+        },
+        {
+          "word": "Hvordan går det?",
+          "phonetic": "[vurd-dan go:r de?]",
+          "meaning": "How are you? / How's it going?",
+          "example": "Hei, hvordan går det med deg i dag?"
+        },
+        {
+          "word": "Det går bra, takk.",
+          "phonetic": "[de: go:r bra:, tak]",
+          "meaning": "I'm fine, thank you. / It's going well, thanks.",
+          "example": "Det går bra, takk. Og med deg?"
+        },
+        {
+          "word": "Jeg heter...",
+          "phonetic": "[yai he:t-er]",
+          "meaning": "My name is... / I am called...",
+          "example": "Jeg heter Anna. Hva heter du?"
+        },
+        {
+          "word": "Hyggelig å møte deg.",
+          "phonetic": "[hyg-ge-lig o: mø:t-e dai]",
+          "meaning": "Nice to meet you.",
+          "example": "Hyggelig å møte deg, Peter."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" or \"Hello\" in Norwegian?",
+          "options": [
+            "Hei",
+            "Ha det",
+            "Takk",
+            "Ja"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "What is the correct Norwegian phrase for \"Good morning\"?",
+          "options": [
+            "God kveld",
+            "God natt",
+            "God morgen",
+            "God dag"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"Hvordan går det?\", how would you respond if you are fine?",
+          "options": [
+            "Jeg er sulten",
+            "Det går bra, takk",
+            "Jeg er trøtt",
+            "Jeg er glad"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you introduce your name, saying \"My name is [name]\"?",
+          "options": [
+            "Jeg er [name]",
+            "Jeg heter [name]",
+            "Jeg liker [name]",
+            "Jeg har [name]"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Hei! Velkommen til dagens norskleksjon! I dag skal vi lære om grunnleggende hilsener og introduksjoner på norsk. Vi skal se på ord som \"hei\", \"god morgen\", \"hvordan går det?\", \"det går bra, takk\", \"jeg heter...\" og \"hyggelig å møte deg\". Vi vil også øve på å bruke disse frasene i enkle samtaler. Er du klar til å begynne?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hei",
+          "phonetic": "[hæi]",
+          "meaning": "Hello",
+          "example": "Hei, hvordan går det?"
+        },
+        {
+          "word": "Ja",
+          "phonetic": "[jɑː]",
+          "meaning": "Yes",
+          "example": "Ja, jeg forstår."
+        },
+        {
+          "word": "Nei",
+          "phonetic": "[næi]",
+          "meaning": "No",
+          "example": "Nei, det er ikke riktig."
+        },
+        {
+          "word": "Takk",
+          "phonetic": "[tɑk]",
+          "meaning": "Thank you",
+          "example": "Takk for hjelpen!"
+        },
+        {
+          "word": "Vær så snill",
+          "phonetic": "[væːr sɔ snɪl]",
+          "meaning": "Please",
+          "example": "Kan du hjelpe meg, vær så snill?"
+        },
+        {
+          "word": "Unnskyld",
+          "phonetic": "[ˈʉnːʃʏld]",
+          "meaning": "Excuse me / Sorry",
+          "example": "Unnskyld, hvor er toalettet?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Norwegian?",
+          "options": [
+            "Takk",
+            "Hei",
+            "Ja",
+            "Nei"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Takk\" mean in English?",
+          "options": [
+            "Yes",
+            "No",
+            "Thank you",
+            "Please"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Norwegian word for \"Yes\".",
+          "options": [
+            "Nei",
+            "Ja",
+            "Unnskyld",
+            "Hei"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you politely ask for something, meaning \"Please\"?",
+          "options": [
+            "Takk",
+            "Unnskyld",
+            "Vær så snill",
+            "Ja"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Velkommen til din første norskleksjon! I dag skal vi lære noen grunnleggende ord og uttrykk som er veldig nyttige når du skal hilse, svare ja eller nei, takke, be pent om noe, og si unnskyld. Disse er perfekte for å starte samtaler og være høflig. La oss begynne med 'Hei' (Hello). Prøv å si 'Hei' høyt. Bra! Deretter går vi videre til 'Ja' (Yes) og 'Nei' (No). Etterpå skal vi se på 'Takk' (Thank you), 'Vær så snill' (Please), og 'Unnskyld' (Excuse me/Sorry). Jeg vil veilede deg gjennom uttalen og gi deg eksempler. Er du klar til å dykke inn i Norsk?"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hei",
+          "phonetic": "hey",
+          "meaning": "Hi / Hello",
+          "example": "Hei, hvordan går det?"
+        },
+        {
+          "word": "Jeg heter",
+          "phonetic": "yai het-ter",
+          "meaning": "My name is (literally \"I am called\")",
+          "example": "Jeg heter Anna."
+        },
+        {
+          "word": "Hva heter du?",
+          "phonetic": "vah het-ter doo?",
+          "meaning": "What is your name?",
+          "example": "Hei, hva heter du?"
+        },
+        {
+          "word": "Jeg er",
+          "phonetic": "yai air",
+          "meaning": "I am",
+          "example": "Jeg er student."
+        },
+        {
+          "word": "Fra",
+          "phonetic": "frah",
+          "meaning": "from",
+          "example": "Jeg er fra Norge."
+        },
+        {
+          "word": "Hvor er du fra?",
+          "phonetic": "voor air doo frah?",
+          "meaning": "Where are you from?",
+          "example": "Hvor er du fra, Peter?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hi\" or \"Hello\" in Norwegian?",
+          "options": [
+            "Hei",
+            "Takk",
+            "Ja",
+            "Nei"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which phrase means \"My name is...\"?",
+          "options": [
+            "Jeg er",
+            "Jeg heter",
+            "Jeg liker",
+            "Jeg snakker"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "If you want to ask \"What is your name?\", what would you say?",
+          "options": [
+            "Hvor er du?",
+            "Hva gjør du?",
+            "Hva heter du?",
+            "Hvem er du?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"Where are you from?\" in Norwegian?",
+          "options": [
+            "Hva er du fra?",
+            "Hvor er du fra?",
+            "Hvem er du fra?",
+            "Hvorfor er du fra?"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Velkommen! I dag skal vi lære noen grunnleggende norske fraser for å introdusere deg selv. Vi skal dekke 'Hei', 'Jeg heter...', 'Hva heter du?', 'Jeg er...', 'fra' og 'Hvor er du fra?'. La oss øve på å si dem!"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "en bok",
+          "phonetic": "[en book]",
+          "meaning": "a book",
+          "example": "Jeg leser en bok."
+        },
+        {
+          "word": "et bord",
+          "phonetic": "[et boor]",
+          "meaning": "a table",
+          "example": "Det står et bord i stuen."
+        },
+        {
+          "word": "en stol",
+          "phonetic": "[en stool]",
+          "meaning": "a chair",
+          "example": "Jeg sitter på en stol."
+        },
+        {
+          "word": "rød",
+          "phonetic": "[røhd]",
+          "meaning": "red",
+          "example": "Bilen er rød."
+        },
+        {
+          "word": "blå",
+          "phonetic": "[bloh]",
+          "meaning": "blue",
+          "example": "Himmelen er blå."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is \"a book\" in Norwegian?",
+          "options": [
+            "en stol",
+            "et bord",
+            "en bok",
+            "rød"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means \"red\"?",
+          "options": [
+            "blå",
+            "rød",
+            "bok",
+            "stol"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say \"a table\" in Norwegian?",
+          "options": [
+            "en stol",
+            "et bord",
+            "en bok",
+            "blå"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Complete the sentence: \"Himmelen er ____.\" (The sky is ____.)",
+          "options": [
+            "rød",
+            "bok",
+            "blå",
+            "stol"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hei! Velkommen til en ny norskleksjon! I dag skal vi lære noen nyttige norske ord for vanlige gjenstander og farger. Vi skal øve på uttale, forstå betydningen, og se hvordan vi bruker dem i setninger. Er du klar? La oss starte med ordet \"en bok\"."
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "å være",
+          "phonetic": "oh VAI-reh",
+          "meaning": "to be",
+          "example": "Jeg er glad."
+        },
+        {
+          "word": "å ha",
+          "phonetic": "oh HAH",
+          "meaning": "to have",
+          "example": "Vi har en katt."
+        },
+        {
+          "word": "å spise",
+          "phonetic": "oh SPEE-seh",
+          "meaning": "to eat",
+          "example": "De spiser middag."
+        },
+        {
+          "word": "å drikke",
+          "phonetic": "oh DREEK-keh",
+          "meaning": "to drink",
+          "example": "Jeg drikker vann."
+        },
+        {
+          "word": "å gå",
+          "phonetic": "oh GOH",
+          "meaning": "to go / to walk",
+          "example": "Vi går til butikken."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'I am' in Norwegian?",
+          "options": [
+            "Jeg er",
+            "Jeg har",
+            "Jeg spiser",
+            "Jeg går"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which verb means 'to have'?",
+          "options": [
+            "å spise",
+            "å drikke",
+            "å ha",
+            "å være"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Norwegian translation for 'They eat bread'.",
+          "options": [
+            "De drikker brød.",
+            "De spiser brød.",
+            "De har brød.",
+            "De går brød."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Fill in the blank: 'Jeg ______ vann og vi ______ til parken.' (I ______ water and we ______ to the park.)",
+          "options": [
+            "drikker, går",
+            "spiser, har",
+            "er, drikker",
+            "går, spiser"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "Flott jobbet! I denne leksjonen skal vi fokusere på **grunnleggende verb** på norsk. Vi skal lære å bruke verb som **å være** (to be), **å ha** (to have), **å spise** (to eat), **å drikke** (to drink), og **å gå** (to go/walk). La oss starte med **å være**. Vet du hva det betyr, eller har du noen spørsmål før vi begynner?"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hei",
+          "phonetic": "hay",
+          "meaning": "Hi / Hello",
+          "example": "Hei, hvordan går det?"
+        },
+        {
+          "word": "Takk",
+          "phonetic": "tahk",
+          "meaning": "Thank you",
+          "example": "Takk for hjelpen!"
+        },
+        {
+          "word": "Vær så snill",
+          "phonetic": "vair soh snill",
+          "meaning": "Please",
+          "example": "Kan du hjelpe meg, vær så snill?"
+        },
+        {
+          "word": "Ja",
+          "phonetic": "yah",
+          "meaning": "Yes",
+          "example": "Ja, jeg forstår."
+        },
+        {
+          "word": "Nei",
+          "phonetic": "nye",
+          "meaning": "No",
+          "example": "Nei, det er ikke riktig."
+        },
+        {
+          "word": "Unnskyld",
+          "phonetic": "oon-shool",
+          "meaning": "Excuse me / Sorry",
+          "example": "Unnskyld, hvor er toalettet?"
+        },
+        {
+          "word": "Hvordan går det?",
+          "phonetic": "voor-dahn gohr deh",
+          "meaning": "How are you?",
+          "example": "Hei, hvordan går det med deg?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Norwegian?",
+          "options": [
+            "Takk",
+            "Hei",
+            "Ja",
+            "Nei"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Norwegian word means \"Thank you\"?",
+          "options": [
+            "Vær så snill",
+            "Unnskyld",
+            "Takk",
+            "Hvordan går det?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"Hvordan går det?\", what is a common positive response?",
+          "options": [
+            "Nei",
+            "Jeg er lei meg",
+            "Bare bra, takk",
+            "Unnskyld"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Please\" in Norwegian?",
+          "options": [
+            "Ja",
+            "Takk",
+            "Vær så snill",
+            "Nei"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Velkommen til din første norskleksjon! I dag skal vi lære noen grunnleggende hilsener og introduksjoner. Vi skal dekke ord som 'Hei', 'Takk' og 'Hvordan går det?'. Jeg vil si ordene, og du kan gjenta etter meg. Deretter skal vi øve på å bruke dem i enkle setninger. Er du klar til å begynne?"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hei",
+          "phonetic": "hæɪ",
+          "meaning": "Hi / Hello",
+          "example": "Hei, hvordan går det?"
+        },
+        {
+          "word": "Hvordan går det?",
+          "phonetic": "vɔrdɑn gɔr dɛt",
+          "meaning": "How are you? / How's it going?",
+          "example": "Hei, hvordan går det med deg?"
+        },
+        {
+          "word": "Det går bra.",
+          "phonetic": "dɛt gɔr brɑː",
+          "meaning": "I am good. / It's going well.",
+          "example": "Det går bra, takk!"
+        },
+        {
+          "word": "Takk.",
+          "phonetic": "tɑk",
+          "meaning": "Thank you.",
+          "example": "Takk for hjelpen!"
+        },
+        {
+          "word": "Vær så snill.",
+          "phonetic": "vɛr sɔ snɪl",
+          "meaning": "Please.",
+          "example": "Kan du hjelpe meg, vær så snill?"
+        },
+        {
+          "word": "Ja.",
+          "phonetic": "jɑː",
+          "meaning": "Yes.",
+          "example": "Ja, jeg forstår."
+        },
+        {
+          "word": "Nei.",
+          "phonetic": "næɪ",
+          "meaning": "No.",
+          "example": "Nei, det er ikke riktig."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the Norwegian word for \"Hello\"?",
+          "options": [
+            "Ha det",
+            "God morgen",
+            "Hei",
+            "Takk"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say \"Thank you\" in Norwegian?",
+          "options": [
+            "Ja",
+            "Nei",
+            "Takk",
+            "Vær så snill"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct Norwegian phrase for \"How are you?\"",
+          "options": [
+            "Jeg er bra",
+            "Det går bra",
+            "Hvordan går det?",
+            "Hva er det?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone asks \"Hvordan går det?\", what is a common positive response?",
+          "options": [
+            "Nei",
+            "Ja",
+            "Det går bra",
+            "Takk"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Velkommen til leksjonen din! I dag skal vi lære noen grunnleggende norske hilsener og fraser. Vi skal dekke ord som \"hei\", \"hvordan går det?\" og \"takk\". Lytt nøye til uttalen og prøv å gjenta etter meg. Vi skal øve på å bruke disse frasene i enkle samtaler. La oss starte med \"hei\"!"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hei",
+          "phonetic": "hay",
+          "meaning": "Hello / Hi",
+          "example": "Hei, hvordan går det?"
+        },
+        {
+          "word": "Hvordan går det?",
+          "phonetic": "vohr-dahn gohr deh?",
+          "meaning": "How are you?",
+          "example": "Hei, hvordan går det med deg?"
+        },
+        {
+          "word": "Det går bra.",
+          "phonetic": "deh gohr brah",
+          "meaning": "I am good. / It's going well.",
+          "example": "Det går bra, takk."
+        },
+        {
+          "word": "Takk",
+          "phonetic": "tahk",
+          "meaning": "Thank you",
+          "example": "Takk for hjelpen!"
+        },
+        {
+          "word": "Vær så snill",
+          "phonetic": "vair soh snil",
+          "meaning": "Please",
+          "example": "Kan du hjelpe meg, vær så snill?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Norwegian?",
+          "options": [
+            "Takk",
+            "Hei",
+            "Ja",
+            "Nei"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to \"Hvordan går det?\" if you are doing well?",
+          "options": [
+            "Jeg er lei meg.",
+            "Det går bra.",
+            "Jeg er sulten.",
+            "Ha det."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does the Norwegian word \"Takk\" mean in English?",
+          "options": [
+            "Please",
+            "Yes",
+            "Thank you",
+            "No"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the Norwegian phrase for \"Please\".",
+          "options": [
+            "Unnskyld",
+            "Vær så snill",
+            "Gratulerer",
+            "Beklager"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Velkommen til din norskleksjon! I dag skal vi lære noen grunnleggende hilsener og fraser på norsk. Vi starter med litt nytt ordforråd. Jeg sier ordet eller frasen, og du gjentar etter meg. Deretter ser vi på et eksempel. Er du klar? La oss begynne med \"Hei\", som betyr \"Hello\" eller \"Hi\". Gjenta: Hei. Bra! Neste er \"Hvordan går det?\", som betyr \"How are you?\". Prøv å si det. Utmerket! Så har vi svaret \"Det går bra.\", som betyr \"I am good.\" eller \"It's going well.\". Kan du si \"Det går bra.\"? Fantastisk! Til slutt, \"Takk\" for \"Thank you\" og \"Vær så snill\" for \"Please\". La oss øve på disse!"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Jeg",
+          "phonetic": "yai",
+          "meaning": "I",
+          "example": "Jeg er en student."
+        },
+        {
+          "word": "er",
+          "phonetic": "air",
+          "meaning": "am/is/are",
+          "example": "Du er snill."
+        },
+        {
+          "word": "en",
+          "phonetic": "ehn",
+          "meaning": "a/an (masculine/feminine indefinite article)",
+          "example": "Jeg har en katt."
+        },
+        {
+          "word": "et",
+          "phonetic": "eht",
+          "meaning": "a/an (neuter indefinite article)",
+          "example": "Det er et hus."
+        },
+        {
+          "word": "og",
+          "phonetic": "oog",
+          "meaning": "and",
+          "example": "Jeg liker kaffe og te."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Norwegian word means 'I'?",
+          "options": [
+            "Du",
+            "Jeg",
+            "Vi",
+            "Han"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct indefinite article for 'eple' (apple).",
+          "options": [
+            "en",
+            "et",
+            "ei",
+            "de"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say 'and' in Norwegian?",
+          "options": [
+            "eller",
+            "men",
+            "og",
+            "fordi"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hei! Velkommen til dagens norskleksjon. I dag skal vi utforske noen grunnleggende byggeklosser i norsk: personlige pronomen og ubestemte artikler. Vi starter med \"jeg\" (I) og verbet \"er\" (am/is/are). Deretter ser vi på \"en\" og \"et\", som betyr \"a/an\" på engelsk, men brukes forskjellig avhengig av substantivets kjønn. Jeg vil forklare reglene og gi deg mange eksempler. Til slutt skal vi sette det sammen i enkle setninger. La oss begynne!"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "å like",
+          "phonetic": "o: 'li:kə",
+          "meaning": "to like",
+          "example": "Jeg liker å lese bøker."
+        },
+        {
+          "word": "å spise",
+          "phonetic": "o: 'spi:sə",
+          "meaning": "to eat",
+          "example": "Vi spiser middag klokka seks."
+        },
+        {
+          "word": "å drikke",
+          "phonetic": "o: 'drikə",
+          "meaning": "to drink",
+          "example": "Hun drikker kaffe hver morgen."
+        },
+        {
+          "word": "god",
+          "phonetic": "gu:d",
+          "meaning": "good",
+          "example": "Det er en god idé."
+        },
+        {
+          "word": "dårlig",
+          "phonetic": "'do:rli",
+          "meaning": "bad",
+          "example": "Været er dårlig i dag."
+        },
+        {
+          "word": "en bok",
+          "phonetic": "en bu:k",
+          "meaning": "a book",
+          "example": "Jeg leser en interessant bok."
+        },
+        {
+          "word": "en kopp",
+          "phonetic": "en kop",
+          "meaning": "a cup",
+          "example": "Kan jeg få en kopp te?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'to like' in Norwegian?",
+          "options": [
+            "å spise",
+            "å drikke",
+            "å like",
+            "å sove"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which word means 'to eat'?",
+          "options": [
+            "å lese",
+            "å spise",
+            "å snakke",
+            "å skrive"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct adjective for 'good'.",
+          "options": [
+            "dårlig",
+            "stor",
+            "god",
+            "liten"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is 'a book' in Norwegian?",
+          "options": [
+            "en kopp",
+            "et hus",
+            "en bok",
+            "en bil"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hei! Velkommen til norsktimen. I dag skal vi fokusere på noen vanlige verb og adjektiver, samt noen nyttige substantiver. Vi skal lære å si \"å like\" (to like), \"å spise\" (to eat), \"å drikke\" (to drink), \"god\" (good), \"dårlig\" (bad), \"en bok\" (a book) og \"en kopp\" (a cup). Jeg vil si ordene og uttrykkene på norsk, og du kan gjenta dem etter meg. Vi skal også bruke dem i enkle setninger for å forstå hvordan de fungerer. Er du klar til å starte?"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "å like",
+          "phonetic": "oh LEE-keh",
+          "meaning": "to like",
+          "example": "Jeg liker å lese bøker."
+        },
+        {
+          "word": "å ville",
+          "phonetic": "oh VIL-leh",
+          "meaning": "to want (modal verb)",
+          "example": "Jeg vil ha kaffe."
+        },
+        {
+          "word": "å ha",
+          "phonetic": "oh HAH",
+          "meaning": "to have",
+          "example": "Har du en bil?"
+        },
+        {
+          "word": "å gå",
+          "phonetic": "oh GOH",
+          "meaning": "to go, to walk",
+          "example": "Vi går til butikken."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"to like\" in Norwegian?",
+          "options": [
+            "å ha",
+            "å gå",
+            "å like",
+            "å ville"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which Norwegian verb means \"to want\"?",
+          "options": [
+            "å spise",
+            "å ville",
+            "å se",
+            "å drikke"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct translation for \"to have\".",
+          "options": [
+            "å ha",
+            "å sove",
+            "å lese",
+            "å skrive"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Complete the sentence: \"Jeg ___ til parken.\" (I ___ to the park.)",
+          "options": [
+            "liker",
+            "vil",
+            "har",
+            "går"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Flott jobbet! I denne leksjonen skal vi lære om noen vanlige norske verb. Vi skal dekke hvordan man bruker verb som \"å like\", \"å ville\", \"å ha\" og \"å gå\" i setninger. La oss starte med verbet \"å like\". Kan du gjenta \"å like\" for meg?"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hei",
+          "phonetic": "[hai]",
+          "meaning": "Hi, Hello",
+          "example": "Hei, hvordan går det?"
+        },
+        {
+          "word": "Takk",
+          "phonetic": "[tak]",
+          "meaning": "Thank you",
+          "example": "Takk for hjelpen!"
+        },
+        {
+          "word": "Vær så snill",
+          "phonetic": "[vair saw snil]",
+          "meaning": "Please",
+          "example": "Kan du hjelpe meg, vær så snill?"
+        },
+        {
+          "word": "Ja",
+          "phonetic": "[ya]",
+          "meaning": "Yes",
+          "example": "Ja, jeg forstår."
+        },
+        {
+          "word": "Nei",
+          "phonetic": "[nai]",
+          "meaning": "No",
+          "example": "Nei, det er ikke riktig."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in Norwegian?",
+          "options": [
+            "Takk",
+            "Hei",
+            "Ja",
+            "Nei"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which Norwegian word means \"Thank you\"?",
+          "options": [
+            "Nei",
+            "Ja",
+            "Takk",
+            "Vær så snill"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct Norwegian word for \"Please\"?",
+          "options": [
+            "Ja",
+            "Nei",
+            "Hei",
+            "Vær så snill"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Hei og velkommen til din norskleksjon! Jeg er din AI-lærer, og jeg gleder meg til å hjelpe deg med å lære norsk. I dag skal vi fokusere på noen veldig nyttige ord og uttrykk som du kan bruke hver dag. Vi skal lære ord som \"Hei\" (Hello), \"Takk\" (Thank you), \"Vær så snill\" (Please), \"Ja\" (Yes) og \"Nei\" (No). Vi vil øve på uttale og se hvordan vi kan bruke dem i enkle setninger. Ikke vær redd for å stille spørsmål! La oss starte med \"Hei\". Kan du si \"Hei\"?"
+    }
+  ]
+}

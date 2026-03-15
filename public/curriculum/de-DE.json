@@ -1,0 +1,1305 @@
+{
+  "langCode": "de-DE",
+  "langLabel": "German",
+  "langNative": "Deutsch",
+  "generatedAt": "2026-03-14T23:28:18.572Z",
+  "totalLessons": 16,
+  "lessons": [
+    {
+      "id": "a1-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "HAH-loh",
+          "meaning": "Hello",
+          "example": "Hallo, wie geht es dir?"
+        },
+        {
+          "word": "Guten Tag",
+          "phonetic": "GOO-ten TAHK",
+          "meaning": "Good day",
+          "example": "Guten Tag, Herr Müller!"
+        },
+        {
+          "word": "Wie geht es Ihnen?",
+          "phonetic": "VEE GAYT es EE-nen?",
+          "meaning": "How are you? (formal)",
+          "example": "Guten Morgen, Frau Schmidt. Wie geht es Ihnen?"
+        },
+        {
+          "word": "Mir geht es gut.",
+          "phonetic": "MEER GAYT es GOOT.",
+          "meaning": "I am fine.",
+          "example": "Mir geht es gut, danke."
+        },
+        {
+          "word": "Ich heiße...",
+          "phonetic": "IKH HEYE-seh...",
+          "meaning": "My name is... / I am called...",
+          "example": "Ich heiße Anna."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in German?",
+          "options": [
+            "Auf Wiedersehen",
+            "Guten Tag",
+            "Hallo",
+            "Tschüss"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the formal way to ask \"How are you?\" in German?",
+          "options": [
+            "Wie geht's?",
+            "Wie geht es Ihnen?",
+            "Wie bist du?",
+            "Was machst du?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you say \"My name is Max\" in German?",
+          "options": [
+            "Ich bin Max",
+            "Ich heiße Max",
+            "Ich habe Max",
+            "Ich mache Max"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Hallo! Willkommen zu deiner ersten Deutschstunde! Heute lernen wir, wie man sich auf Deutsch begrüßt und vorstellt. Das ist sehr wichtig, wenn du neue Leute triffst.\n\nZuerst schauen wir uns die Begrüßungen an. Der einfachste Weg, \"Hello\" zu sagen, ist \"Hallo\". Sag es mal: \"Hallo\".\n\nEine weitere häufige Begrüßung ist \"Guten Tag\". Das bedeutet \"Good day\" und kann den ganzen Tag über verwendet werden. Sprich es nach: \"Guten Tag\".\n\nWenn du jemanden fragen möchtest, \"How are you?\" auf eine höfliche, formelle Weise, sagst du \"Wie geht es Ihnen?\". Versuche es: \"Wie geht es Ihnen?\".\n\nDie Antwort darauf könnte \"Mir geht es gut.\" sein, was \"I am fine.\" bedeutet. Wiederhole: \"Mir geht es gut.\"\n\nUnd schließlich, um dich vorzustellen und zu sagen \"My name is...\", sagst du \"Ich heiße...\". Zum Beispiel: \"Ich heiße [dein Name]\".\n\nLass uns das üben! Stell dir vor, du triffst mich zum ersten Mal. Wie würdest du mich begrüßen und dich vorstellen?"
+    },
+    {
+      "id": "a1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "HAH-loh",
+          "meaning": "Hello",
+          "example": "Hallo, wie geht es dir?"
+        },
+        {
+          "word": "Guten Tag",
+          "phonetic": "GOO-ten TAHG",
+          "meaning": "Good day (formal, common greeting)",
+          "example": "Guten Tag, Herr Schmidt."
+        },
+        {
+          "word": "Auf Wiedersehen",
+          "phonetic": "OUF VEE-der-zay-en",
+          "meaning": "Goodbye (formal)",
+          "example": "Auf Wiedersehen! Bis morgen."
+        },
+        {
+          "word": "Tschüss",
+          "phonetic": "CHOOSS",
+          "meaning": "Bye (informal)",
+          "example": "Tschüss, bis später!"
+        },
+        {
+          "word": "Wie heißt du?",
+          "phonetic": "VEE heist doo?",
+          "meaning": "What is your name? (informal)",
+          "example": "Hallo, wie heißt du?"
+        },
+        {
+          "word": "Ich heiße...",
+          "phonetic": "IKH HY-seh...",
+          "meaning": "My name is...",
+          "example": "Ich heiße Anna."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in German?",
+          "options": [
+            "Guten Morgen",
+            "Hallo",
+            "Auf Wiedersehen",
+            "Tschüss"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the formal way to say \"Goodbye\"?",
+          "options": [
+            "Tschüss",
+            "Hallo",
+            "Auf Wiedersehen",
+            "Guten Tag"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"What is your name?\" informally?",
+          "options": [
+            "Wie geht es Ihnen?",
+            "Ich heiße...",
+            "Wie heißt du?",
+            "Guten Abend"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Guten Tag\" to you, what is an appropriate response?",
+          "options": [
+            "Tschüss",
+            "Auf Wiedersehen",
+            "Guten Tag",
+            "Ich heiße..."
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hallo! Willkommen zu deiner Deutschstunde! Heute lernen wir wichtige Begrüßungen und Verabschiedungen auf Deutsch. Wir beginnen mit 'Hallo'. Das ist wie 'Hello' auf Englisch und kann in fast jeder Situation verwendet werden. Sag mal: 'Hallo'.\n\nAls Nächstes haben wir 'Guten Tag'. Das bedeutet 'Good day' und ist etwas formeller als 'Hallo'. Es wird oft tagsüber verwendet. Versuche es: 'Guten Tag'.\n\nWenn du dich verabschiedest, kannst du 'Auf Wiedersehen' sagen. Das ist die formelle Art, 'Goodbye' zu sagen. Sprich es nach: 'Auf Wiedersehen'.\n\nFür informelle Situationen gibt es 'Tschüss'. Das ist wie 'Bye'. Sag: 'Tschüss'.\n\nZum Schluss lernen wir, wie man nach dem Namen fragt und sich vorstellt. 'Wie heißt du?' bedeutet 'What is your name?' (informell). Und um zu antworten, sagst du 'Ich heiße...' gefolgt von deinem Namen.\n\nLass uns üben! Stell dir vor, du triffst eine neue Person. Wie würdest du sie begrüßen und nach ihrem Namen fragen? Und wie würdest du antworten, wenn sie dich fragt?"
+    },
+    {
+      "id": "a1-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "HAH-loh",
+          "meaning": "Hello",
+          "example": "Hallo, wie geht es dir?"
+        },
+        {
+          "word": "Guten Tag",
+          "phonetic": "GOO-ten TAHG",
+          "meaning": "Good day (formal greeting)",
+          "example": "Guten Tag, Herr Müller!"
+        },
+        {
+          "word": "Wie geht es Ihnen?",
+          "phonetic": "VEE geht es EE-nen?",
+          "meaning": "How are you? (formal)",
+          "example": "Guten Morgen, Frau Schmidt. Wie geht es Ihnen heute?"
+        },
+        {
+          "word": "Mir geht es gut.",
+          "phonetic": "MEER geht es GOOT.",
+          "meaning": "I am fine.",
+          "example": "Mir geht es gut, danke der Nachfrage."
+        },
+        {
+          "word": "Danke",
+          "phonetic": "DANK-uh",
+          "meaning": "Thank you",
+          "example": "Danke für Ihre Hilfe!"
+        },
+        {
+          "word": "Bitte",
+          "phonetic": "BIT-tuh",
+          "meaning": "Please / You're welcome",
+          "example": "Kannst du mir bitte helfen? – Ja, bitte schön!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in German?",
+          "options": [
+            "Guten Morgen",
+            "Hallo",
+            "Auf Wiedersehen",
+            "Danke"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the formal way to ask \"How are you?\" in German?",
+          "options": [
+            "Wie geht's?",
+            "Was machst du?",
+            "Wie geht es Ihnen?",
+            "Woher kommst du?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "If someone says \"Danke\" (Thank you) to you, how can you respond with \"You're welcome\"?",
+          "options": [
+            "Hallo",
+            "Bitte",
+            "Ja",
+            "Nein"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Willkommen zu deiner Deutschstunde! Ich bin dein KI-Tutor und helfe dir heute, einige grundlegende deutsche Begrüßungen und Ausdrücke zu lernen. Wir beginnen mit dem Wort \"Hallo\". Das bedeutet \"Hello\". Kannst du es nachsprechen? Sehr gut! Als Nächstes lernen wir \"Guten Tag\", eine formelle Begrüßung, die \"Good day\" bedeutet. Versuche, \"Guten Tag\" zu sagen. Ausgezeichnet! Jetzt üben wir, wie man fragt: \"Wie geht es Ihnen?\". Das ist die formelle Art, \"How are you?\" zu fragen. Kannst du es versuchen? Wunderbar! Und um zu antworten, sagen wir \"Mir geht es gut.\", was \"I am fine.\" bedeutet. Versuche es selbst zu sagen. Zum Schluss lernen wir \"Danke\" (\"Thank you\") und \"Bitte\" (\"Please\" oder \"You're welcome\"). Lass uns nun dein Wissen mit ein paar Fragen testen!"
+    },
+    {
+      "id": "a1-2-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "HAH-loh",
+          "meaning": "Hello",
+          "example": "Hallo! Wie geht es dir?"
+        },
+        {
+          "word": "Guten Tag",
+          "phonetic": "GOO-ten TAHK",
+          "meaning": "Good day",
+          "example": "Guten Tag, Herr Müller!"
+        },
+        {
+          "word": "Wie geht es Ihnen?",
+          "phonetic": "VEE geyt es EE-nen?",
+          "meaning": "How are you? (formal)",
+          "example": "Guten Morgen! Wie geht es Ihnen heute?"
+        },
+        {
+          "word": "Ich heiße...",
+          "phonetic": "IKH HYS-uh...",
+          "meaning": "My name is...",
+          "example": "Ich heiße Anna."
+        },
+        {
+          "word": "Danke schön",
+          "phonetic": "DANK-uh shurn",
+          "meaning": "Thank you very much",
+          "example": "Danke schön für Ihre Hilfe!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'Hello' in German?",
+          "options": [
+            "Auf Wiedersehen",
+            "Hallo",
+            "Bitte",
+            "Ja"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does 'Guten Tag' mean?",
+          "options": [
+            "Good night",
+            "Good morning",
+            "Good day",
+            "Goodbye"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase would you use to formally ask 'How are you?'",
+          "options": [
+            "Wie geht es dir?",
+            "Wie geht es Ihnen?",
+            "Was ist das?",
+            "Woher kommst du?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say 'My name is...' in German?",
+          "options": [
+            "Ich bin...",
+            "Ich heiße...",
+            "Ich habe...",
+            "Ich mache..."
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Hallo! Willkommen zu deiner Deutschstunde! Heute lernen wir einige grundlegende Begrüßungen und Vorstellungen auf Deutsch. Wir beginnen mit wichtigen Vokabeln wie \"Hallo\" (Hello), \"Guten Tag\" (Good day), \"Wie geht es Ihnen?\" (How are you? - formal), \"Ich heiße...\" (My name is...) und \"Danke schön\" (Thank you very much). Achte besonders auf die Aussprache und versuche, die Wörter laut auszusprechen. Danach testen wir dein Wissen mit ein paar Fragen. Viel Erfolg!"
+    },
+    {
+      "id": "a1-2-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "HAH-loh",
+          "meaning": "Hello",
+          "example": "Hallo, wie geht es dir?"
+        },
+        {
+          "word": "Guten Tag",
+          "phonetic": "GOO-ten TAHK",
+          "meaning": "Good day",
+          "example": "Guten Tag, Herr Schmidt."
+        },
+        {
+          "word": "Wie geht es Ihnen?",
+          "phonetic": "VEE geet es EE-nen?",
+          "meaning": "How are you? (formal)",
+          "example": "Guten Morgen, Frau Müller. Wie geht es Ihnen?"
+        },
+        {
+          "word": "Mir geht es gut.",
+          "phonetic": "MEER geet es goot.",
+          "meaning": "I am fine.",
+          "example": "Mir geht es gut, danke."
+        },
+        {
+          "word": "Ich heiße...",
+          "phonetic": "IKH HY-seh...",
+          "meaning": "My name is... / I am called...",
+          "example": "Ich heiße Anna."
+        },
+        {
+          "word": "Freut mich.",
+          "phonetic": "FROYT mikh.",
+          "meaning": "Nice to meet you.",
+          "example": "Ich heiße Max. Freut mich."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in German?",
+          "options": [
+            "Guten Abend",
+            "Hallo",
+            "Auf Wiedersehen",
+            "Danke"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which phrase means \"How are you?\" (formal)?",
+          "options": [
+            "Ich bin müde",
+            "Wie spät ist es?",
+            "Wie geht es Ihnen?",
+            "Was ist das?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you say \"My name is Anna\" in German?",
+          "options": [
+            "Ich bin Anna",
+            "Ich heiße Anna",
+            "Ich mag Anna",
+            "Ich habe Anna"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Hallo! Willkommen zu unserer heutigen Deutschstunde. Heute lernen wir, wie man sich auf Deutsch begrüßt und vorstellt. Wir werden uns wichtige Ausdrücke wie \"Hallo\", \"Guten Tag\", \"Wie geht es Ihnen?\" und \"Ich heiße...\" ansehen. Ich zeige dir, wie man diese Sätze ausspricht und in einfachen Gesprächen verwendet. Lass uns gemeinsam üben, damit du dich bald sicher auf Deutsch vorstellen kannst. Bist du bereit?"
+    },
+    {
+      "id": "a1-2-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "HAH-loh",
+          "meaning": "Hello",
+          "example": "Hallo! Wie geht es dir?"
+        },
+        {
+          "word": "Ich heiße...",
+          "phonetic": "ikh HEY-seh",
+          "meaning": "My name is...",
+          "example": "Ich heiße Anna."
+        },
+        {
+          "word": "Wie heißt du?",
+          "phonetic": "vee HEYST doo",
+          "meaning": "What is your name? (informal)",
+          "example": "Hallo, ich bin Max. Wie heißt du?"
+        },
+        {
+          "word": "Ich komme aus...",
+          "phonetic": "ikh KOM-eh ows",
+          "meaning": "I am from...",
+          "example": "Ich komme aus Deutschland."
+        },
+        {
+          "word": "Wie geht es dir?",
+          "phonetic": "vee GEYT es deer",
+          "meaning": "How are you? (informal)",
+          "example": "Hallo, Max! Wie geht es dir?"
+        },
+        {
+          "word": "Mir geht es gut.",
+          "phonetic": "meer GEYT es goot",
+          "meaning": "I am good.",
+          "example": "Danke, mir geht es gut."
+        },
+        {
+          "word": "Danke schön.",
+          "phonetic": "DANK-eh shurn",
+          "meaning": "Thank you very much.",
+          "example": "Danke schön für deine Hilfe."
+        },
+        {
+          "word": "Auf Wiedersehen.",
+          "phonetic": "owf VEE-der-zey-en",
+          "meaning": "Goodbye.",
+          "example": "Auf Wiedersehen! Bis bald!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in German?",
+          "options": [
+            "Hallo",
+            "Tschüss",
+            "Bitte",
+            "Ja"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the correct way to say \"My name is Anna.\"",
+          "options": [
+            "Ich bin Anna",
+            "Ich heiße Anna",
+            "Ich komme Anna",
+            "Ich gehe Anna"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask \"Where are you from?\" (informal)",
+          "options": [
+            "Wo bist du?",
+            "Wo wohnst du?",
+            "Woher kommst du?",
+            "Woher bist du?"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you respond to \"Wie geht es dir?\" if you are doing well?",
+          "options": [
+            "Es ist gut",
+            "Mir geht es gut",
+            "Ich bin gut",
+            "Gut mir"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the German word for \"Thank you\"?",
+          "options": [
+            "Bitte",
+            "Entschuldigung",
+            "Danke",
+            "Gern geschehen"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hallo! Willkommen zu deiner Deutschstunde! Heute lernen wir wichtige Begrüßungen und wie man sich auf Deutsch vorstellt. Das ist super nützlich, wenn du neue Leute triffst! Wir werden Sätze wie \"Hallo\", \"Ich heiße...\" und \"Wie geht es dir?\" üben. Ich zeige dir die Aussprache und wir schauen uns ein paar Beispielsätze an. Danach kannst du dein Wissen in einem kurzen Quiz testen. Bist du bereit, Deutsch zu sprechen? Los geht's!"
+    },
+    {
+      "id": "a1-3-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "HAH-loh",
+          "meaning": "Hello",
+          "example": "Hallo! Wie geht es dir?"
+        },
+        {
+          "word": "Guten Tag",
+          "phonetic": "GOO-ten TAHG",
+          "meaning": "Good day",
+          "example": "Guten Tag, Herr Müller!"
+        },
+        {
+          "word": "Wie geht es Ihnen?",
+          "phonetic": "VEE geet es EE-nen?",
+          "meaning": "How are you? (formal)",
+          "example": "Guten Tag! Wie geht es Ihnen heute?"
+        },
+        {
+          "word": "Mir geht es gut, danke.",
+          "phonetic": "MEER geet es GOOT, DAHN-keh",
+          "meaning": "I am fine, thank you.",
+          "example": "Wie geht es Ihnen? Mir geht es gut, danke."
+        },
+        {
+          "word": "Auf Wiedersehen",
+          "phonetic": "OWF VEE-der-zay-en",
+          "meaning": "Goodbye (formal)",
+          "example": "Auf Wiedersehen! Bis morgen!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in German?",
+          "options": [
+            "Tschüss",
+            "Hallo",
+            "Bitte",
+            "Danke"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What does \"Guten Tag\" mean in English?",
+          "options": [
+            "Good morning",
+            "Good evening",
+            "Good day",
+            "Good night"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Which phrase is used to ask \"How are you?\" formally in German?",
+          "options": [
+            "Wie geht es dir?",
+            "Wie geht es Ihnen?",
+            "Wie bist du?",
+            "Wie geht's?"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you respond with \"I am fine, thank you.\"?",
+          "options": [
+            "Ich bin gut.",
+            "Mir geht es gut, danke.",
+            "Es ist gut.",
+            "Ich bin danke."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the formal way to say \"Goodbye\" in German?",
+          "options": [
+            "Tschüss",
+            "Bis bald",
+            "Auf Wiedersehen",
+            "Ciao"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hallo! Ich bin dein KI-Deutschlehrer. Heute lernen wir einige grundlegende deutsche Begrüßungen und Verabschiedungen. Wir beginnen mit \"Hallo\" (Hello) und \"Guten Tag\" (Good day). Dann üben wir, wie man \"Wie geht es Ihnen?\" (How are you? - formal) fragt und mit \"Mir geht es gut, danke.\" (I am fine, thank you.) antwortet. Zum Schluss lernen wir \"Auf Wiedersehen\" (Goodbye - formal). Ich helfe dir bei der Aussprache und erkläre, wann du welche Phrase verwendest. Lass uns anfangen!"
+    },
+    {
+      "id": "a1-3-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "[ˈhalo]",
+          "meaning": "Hello",
+          "example": "Hallo, wie geht es dir?"
+        },
+        {
+          "word": "Guten Tag",
+          "phonetic": "[ˌɡuːtn̩ ˈtaːk]",
+          "meaning": "Good day",
+          "example": "Guten Tag, Herr Schmidt!"
+        },
+        {
+          "word": "Wie geht es Ihnen?",
+          "phonetic": "[viː ɡeːt ɛs ˈiːnən]",
+          "meaning": "How are you? (formal)",
+          "example": "Guten Morgen, Frau Müller. Wie geht es Ihnen?"
+        },
+        {
+          "word": "Mir geht es gut.",
+          "phonetic": "[miːɐ̯ ɡeːt ɛs ˈɡuːt]",
+          "meaning": "I am fine.",
+          "example": "Mir geht es gut, danke."
+        },
+        {
+          "word": "Auf Wiedersehen",
+          "phonetic": "[aʊ̯f ˈviːdɐˌzeːən]",
+          "meaning": "Goodbye",
+          "example": "Auf Wiedersehen, bis morgen!"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in German?",
+          "options": [
+            "Hallo",
+            "Tschüss",
+            "Danke",
+            "Bitte"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which phrase means \"How are you?\" (formal) in German?",
+          "options": [
+            "Ich bin gut",
+            "Wie geht es Ihnen?",
+            "Auf Wiedersehen",
+            "Guten Morgen"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the correct response to \"Wie geht es dir?\" if you are fine?",
+          "options": [
+            "Ich bin müde",
+            "Mir geht es gut",
+            "Ich habe Hunger",
+            "Es ist kalt"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Hallo! Willkommen zu deiner Lektion über Begrüßungen und Verabschiedungen auf Deutsch! Heute werden wir lernen, wie man Menschen auf Deutsch begrüßt und sich verabschiedet. Wir werden uns wichtige Ausdrücke wie \"Hallo\", \"Guten Tag\" und \"Auf Wiedersehen\" ansehen. Außerdem üben wir, wie man fragt \"Wie geht es Ihnen?\" und darauf antwortet \"Mir geht es gut\". Lass uns gleich mit den Begrüßungen beginnen!"
+    },
+    {
+      "id": "a1-3-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "haben",
+          "phonetic": "HAH-ben",
+          "meaning": "to have",
+          "example": "Ich habe einen Hund. (I have a dog.)"
+        },
+        {
+          "word": "sein",
+          "phonetic": "ZYNE",
+          "meaning": "to be",
+          "example": "Du bist nett. (You are nice.)"
+        },
+        {
+          "word": "gehen",
+          "phonetic": "GAY-en",
+          "meaning": "to go",
+          "example": "Wir gehen nach Hause. (We go home.)"
+        },
+        {
+          "word": "essen",
+          "phonetic": "ES-sen",
+          "meaning": "to eat",
+          "example": "Ich esse Pizza. (I eat pizza.)"
+        },
+        {
+          "word": "trinken",
+          "phonetic": "TRINK-en",
+          "meaning": "to drink",
+          "example": "Er trinkt Wasser. (He drinks water.)"
+        },
+        {
+          "word": "das Haus",
+          "phonetic": "das HOWSS",
+          "meaning": "the house",
+          "example": "Das ist mein Haus. (That is my house.)"
+        },
+        {
+          "word": "die Familie",
+          "phonetic": "dee fah-MEE-lee-uh",
+          "meaning": "the family",
+          "example": "Meine Familie ist groß. (My family is big.)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"I am\" in German?",
+          "options": [
+            "Ich habe",
+            "Ich bin",
+            "Ich gehe",
+            "Ich esse"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct form of \"haben\" for \"He has\".",
+          "options": [
+            "Er hat",
+            "Er haben",
+            "Er hast",
+            "Er bin"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Which sentence means \"We go home\"?",
+          "options": [
+            "Wir essen zu Hause.",
+            "Wir trinken Wasser.",
+            "Wir gehen nach Hause.",
+            "Wir haben ein Haus."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the German word for \"the family\"?",
+          "options": [
+            "Das Haus",
+            "Die Familie",
+            "Der Mann",
+            "Die Frau"
+          ],
+          "answer": 1
+        }
+      ],
+      "tutorPrompt": "Hallo! Willkommen zu unserer Deutschstunde! Heute tauchen wir in einige der wichtigsten deutschen Verben ein: \"haben\" (to have), \"sein\" (to be), \"gehen\" (to go), \"essen\" (to eat) und \"trinken\" (to drink). Diese Verben sind superwichtig für den Alltag. Wir werden lernen, wie man sie konjugiert und in einfachen Sätzen verwendet. Lass uns mit \"haben\" beginnen. Kannst du versuchen, \"Ich habe\" (I have) zu sagen?"
+    },
+    {
+      "id": "a1-4-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "[ˈhalo]",
+          "meaning": "Hello",
+          "example": "Hallo, wie geht es dir?"
+        },
+        {
+          "word": "Ich heiße...",
+          "phonetic": "[ɪç ˈhaɪ̯sə]",
+          "meaning": "My name is...",
+          "example": "Ich heiße Anna."
+        },
+        {
+          "word": "Wie heißt du?",
+          "phonetic": "[viː haɪ̯st duː]",
+          "meaning": "What is your name? (informal)",
+          "example": "Hallo, wie heißt du?"
+        },
+        {
+          "word": "Ich komme aus...",
+          "phonetic": "[ɪç ˈkɔmə aʊ̯s]",
+          "meaning": "I am from...",
+          "example": "Ich komme aus Deutschland."
+        },
+        {
+          "word": "Woher kommst du?",
+          "phonetic": "[voːˈheːɐ̯ kɔmst duː]",
+          "meaning": "Where are you from? (informal)",
+          "example": "Woher kommst du, Peter?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in German?",
+          "options": [
+            "Guten Tag",
+            "Hallo",
+            "Auf Wiedersehen",
+            "Danke"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which German phrase means \"My name is...\"?",
+          "options": [
+            "Ich bin",
+            "Ich habe",
+            "Ich heiße",
+            "Ich mag"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How would you ask \"Where are you from?\" (informal) in German?",
+          "options": [
+            "Wo bist du?",
+            "Wo wohnst du?",
+            "Woher kommst du?",
+            "Was machst du?"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hallo! Herzlich willkommen zu unserer Lektion über grundlegende deutsche Begrüßungen und Vorstellungen. Heute konzentrieren wir uns auf wichtige Sätze wie \"Hallo\", \"Ich heiße...\" und \"Woher kommst du?\". Ich werde dir helfen, die korrekte Aussprache zu üben und zu verstehen, wie du diese Ausdrücke in alltäglichen Gesprächen anwenden kannst. Bereit, dein Deutsch zu verbessern? Lass uns loslegen!"
+    },
+    {
+      "id": "a1-4-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "Hallo",
+          "phonetic": "HAH-loh",
+          "meaning": "Hello",
+          "example": "Hallo! Wie geht es dir?"
+        },
+        {
+          "word": "Guten Tag",
+          "phonetic": "GOO-ten TAHG",
+          "meaning": "Good day",
+          "example": "Guten Tag, Herr Müller!"
+        },
+        {
+          "word": "Wie geht es Ihnen?",
+          "phonetic": "VEE GAYT es EE-nen?",
+          "meaning": "How are you? (formal)",
+          "example": "Guten Morgen, Frau Schmidt. Wie geht es Ihnen?"
+        },
+        {
+          "word": "Mir geht es gut.",
+          "phonetic": "MEER GAYT es GOOT",
+          "meaning": "I am fine.",
+          "example": "Mir geht es gut, danke."
+        },
+        {
+          "word": "Ich heiße...",
+          "phonetic": "IKH HY-seh...",
+          "meaning": "My name is... / I am called...",
+          "example": "Ich heiße Anna."
+        },
+        {
+          "word": "Woher kommen Sie?",
+          "phonetic": "VOH-her KOM-men ZEE?",
+          "meaning": "Where are you from? (formal)",
+          "example": "Woher kommen Sie, Herr Meier?"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say \"Hello\" in German?",
+          "options": [
+            "Guten Tag",
+            "Auf Wiedersehen",
+            "Hallo",
+            "Danke"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "What is the correct response to \"Wie geht es Ihnen?\" if you are fine?",
+          "options": [
+            "Ich heiße...",
+            "Mir geht es gut.",
+            "Woher kommen Sie?",
+            "Auf Wiedersehen."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How would you ask someone \"What is your name?\" (formal) in German?",
+          "options": [
+            "Wie geht es Ihnen?",
+            "Woher kommen Sie?",
+            "Ich heiße...",
+            "Wie heißen Sie?"
+          ],
+          "answer": 3
+        }
+      ],
+      "tutorPrompt": "Hallo! Willkommen zu deiner Deutschstunde! Heute lernen wir, wie man sich auf Deutsch begrüßt und vorstellt. Das Thema ist \"Begrüßungen und persönliche Informationen\".\n\nZuerst lernen wir einige Begrüßungen. Sag mal: \"Hallo\". Das ist wie \"Hello\" auf Englisch. Eine andere gebräuchliche Begrüßung ist \"Guten Tag\", was \"Good day\" bedeutet.\n\nAls Nächstes fragen wir, wie es jemandem geht. Die formelle Frage ist: \"Wie geht es Ihnen?\". Kannst du das wiederholen? Und wenn es dir gut geht, sagst du: \"Mir geht es gut.\". Versuche es mal!\n\nUm deinen Namen zu sagen, benutzt du: \"Ich heiße...\". Zum Beispiel: \"Ich heiße Anna.\". Wie würdest du deinen Namen sagen?\n\nUnd wenn du fragen möchtest, woher jemand kommt, sagst du: \"Woher kommen Sie?\". Die Antwort wäre: \"Ich komme aus...\".\n\nLass uns diese Sätze üben. Ich sage einen Satz, und du antwortest. Bist du bereit?"
+    },
+    {
+      "id": "a1-4-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "essen",
+          "phonetic": "ES-sen",
+          "meaning": "to eat",
+          "example": "Ich esse gerne Pizza."
+        },
+        {
+          "word": "trinken",
+          "phonetic": "TRIN-ken",
+          "meaning": "to drink",
+          "example": "Was möchtest du trinken?"
+        },
+        {
+          "word": "schlafen",
+          "phonetic": "SHLAF-en",
+          "meaning": "to sleep",
+          "example": "Ich muss jetzt schlafen."
+        },
+        {
+          "word": "lesen",
+          "phonetic": "LEH-zen",
+          "meaning": "to read",
+          "example": "Sie liest ein Buch."
+        },
+        {
+          "word": "schreiben",
+          "phonetic": "SHRY-ben",
+          "meaning": "to write",
+          "example": "Wir schreiben eine E-Mail."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which is the correct conjugation of 'essen' (to eat) for 'ich' (I)?",
+          "options": [
+            "isst",
+            "esse",
+            "esst",
+            "essen"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you say 'He drinks water' in German?",
+          "options": [
+            "Er trinkt Wasser.",
+            "Er trinken Wasser.",
+            "Er trinkst Wasser.",
+            "Er trinke Wasser."
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Choose the correct verb to complete the sentence: 'Ich ____ gerne lange am Wochenende.' (I like to ____ long on the weekend.)",
+          "options": [
+            "esse",
+            "trinke",
+            "schlafe",
+            "lese"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hallo! Willkommen zu deiner Deutschstunde! Heute konzentrieren wir uns auf einige sehr nützliche deutsche Verben, die du im Alltag verwenden kannst. Verben sind \"Tun-Wörter\" oder \"Aktionswörter\", die beschreiben, was jemand tut oder was passiert.\n\nWir werden uns Verben wie \"essen\" (to eat), \"trinken\" (to drink) und \"schlafen\" (to sleep) ansehen. Es ist wichtig, wie man diese Verben konjugiert, also an das Subjekt anpasst. Zum Beispiel sagen wir \"ich esse\" (I eat), aber \"du isst\" (you eat).\n\nBist du bereit, diese Verben zu lernen und zu üben? Versuche doch mal, einen Satz mit einem der Verben zu bilden, zum Beispiel mit \"trinken\". Was trinkst du gerne?"
+    },
+    {
+      "id": "a2-1-1",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "sprechen",
+          "phonetic": "SHPREH-khen",
+          "meaning": "to speak",
+          "example": "Ich spreche Deutsch."
+        },
+        {
+          "word": "lernen",
+          "phonetic": "LEHR-nen",
+          "meaning": "to learn",
+          "example": "Wir lernen zusammen Deutsch."
+        },
+        {
+          "word": "verstehen",
+          "phonetic": "fer-SHTEH-en",
+          "meaning": "to understand",
+          "example": "Verstehst du, was ich sage?"
+        },
+        {
+          "word": "die Sprache",
+          "phonetic": "dee SHPRAH-kheh",
+          "meaning": "the language",
+          "example": "Deutsch ist eine schöne Sprache."
+        },
+        {
+          "word": "Deutsch",
+          "phonetic": "DOYCH",
+          "meaning": "German (language/nationality)",
+          "example": "Ich lerne Deutsch."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you say 'to speak' in German?",
+          "options": [
+            "lernen",
+            "sprechen",
+            "verstehen",
+            "schreiben"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which German verb means 'to learn'?",
+          "options": [
+            "lesen",
+            "lernen",
+            "hören",
+            "sehen"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct article for 'Sprache'.",
+          "options": [
+            "der",
+            "das",
+            "die",
+            "ein"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Complete the sentence: 'Ich ______ Deutsch.'",
+          "options": [
+            "lerne",
+            "lernt",
+            "lernst",
+            "lernen"
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "Hallo! Herzlich willkommen zu deiner Deutschstunde. Heute werden wir einige wichtige deutsche Verben und Sätze lernen. Wir üben die Aussprache, verstehen ihre Bedeutungen und sehen sie in Beispielsätzen. Mach dir keine Sorgen, wenn es am Anfang schwierig erscheint; eine neue Sprache zu lernen braucht Zeit und Übung. Ich bin hier, um dir bei jedem Schritt zu helfen. Fangen wir mit unserem ersten Wort an: 'sprechen'. Bist du bereit anzufangen?"
+    },
+    {
+      "id": "a2-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "die Vergangenheit",
+          "phonetic": "dee fer-GAH-gen-heit",
+          "meaning": "the past",
+          "example": "In der Vergangenheit war alles anders."
+        },
+        {
+          "word": "die Zukunft",
+          "phonetic": "dee TSOO-kunft",
+          "meaning": "the future",
+          "example": "Ich freue mich auf die Zukunft."
+        },
+        {
+          "word": "sich erinnern (an + Akk.)",
+          "phonetic": "zikh er-IN-nern (an)",
+          "meaning": "to remember (something/someone)",
+          "example": "Ich erinnere mich gut an diesen Tag."
+        },
+        {
+          "word": "vergessen",
+          "phonetic": "fer-GESS-en",
+          "meaning": "to forget",
+          "example": "Vergiss nicht, deine Hausaufgaben zu machen!"
+        },
+        {
+          "word": "planen",
+          "phonetic": "PLAH-nen",
+          "meaning": "to plan",
+          "example": "Wir planen unseren nächsten Urlaub."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which German word means 'the future'?",
+          "options": [
+            "die Vergangenheit",
+            "die Gegenwart",
+            "die Zukunft",
+            "die Erinnerung"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Complete the sentence: 'Ich _______ mich an meinen Urlaub.' (I _______ my vacation.)",
+          "options": [
+            "vergesse",
+            "erinnere",
+            "plane",
+            "erlebe"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct translation for 'Don't forget!'",
+          "options": [
+            "Erinnere dich nicht!",
+            "Vergiss nicht!",
+            "Plane nicht!",
+            "Erlebe nicht!"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Which verb means 'to plan'?",
+          "options": [
+            "vergessen",
+            "erinnern",
+            "planen",
+            "erleben"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hallo! Ich bin dein persönlicher Deutschlehrer. Heute tauchen wir in das Thema 'Zeit und Erinnerungen' ein. Wir lernen, wie man über die Vergangenheit, die Zukunft spricht und wie man sich an Dinge erinnert oder sie vergisst. Bist du bereit?\n\nFangen wir mit 'die Vergangenheit' an. Das bedeutet 'the past'. Kannst du 'die Vergangenheit' nachsprechen? (Pause) Sehr gut! Ein Beispielsatz ist: 'In der Vergangenheit war alles anders.' Das heißt 'In the past, everything was different.'\n\nAls Nächstes haben wir 'die Zukunft', was 'the future' bedeutet. Versuche mal: 'die Zukunft'. (Pause) Ausgezeichnet! Ein Satz dazu: 'Ich freue mich auf die Zukunft.' Das bedeutet 'I look forward to the future.'\n\nJetzt kommen wir zu zwei wichtigen Verben: 'sich erinnern an' und 'vergessen'. 'Sich erinnern an' bedeutet 'to remember (something/someone)'. Es ist reflexiv, also brauchst du 'sich' und die Präposition 'an'. Zum Beispiel: 'Ich erinnere mich an meinen ersten Schultag.' ('I remember my first day of school.') Kannst du das versuchen?\n\nUnd schließlich 'vergessen', was 'to forget' bedeutet. Zum Beispiel: 'Vergiss nicht, deine Hausaufgaben zu machen!' ('Don't forget to do your homework!')\n\nWir haben auch 'planen' gelernt, was 'to plan' bedeutet. Ein Beispiel: 'Wir planen unseren nächsten Urlaub.' ('We are planning our next vacation.')\n\nHast du Fragen zu diesen Wörtern oder möchtest du eigene Sätze bilden? Lass uns üben!"
+    },
+    {
+      "id": "a2-1-3",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "gehen",
+          "phonetic": "GEH-en",
+          "meaning": "to go",
+          "example": "Ich gehe heute ins Kino."
+        },
+        {
+          "word": "sprechen",
+          "phonetic": "SHPRECH-en",
+          "meaning": "to speak",
+          "example": "Wir sprechen Deutsch im Kurs."
+        },
+        {
+          "word": "lesen",
+          "phonetic": "LEH-zen",
+          "meaning": "to read",
+          "example": "Sie liest jeden Abend ein Buch."
+        },
+        {
+          "word": "das Buch",
+          "phonetic": "das BOOCH",
+          "meaning": "the book",
+          "example": "Das ist ein interessantes Buch."
+        },
+        {
+          "word": "gern",
+          "phonetic": "GERN",
+          "meaning": "gladly, with pleasure (often used to express liking an activity)",
+          "example": "Ich trinke gern Kaffee."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which is the correct conjugation of 'gehen' for 'du'?",
+          "options": [
+            "gehe",
+            "gehst",
+            "geht",
+            "gehen"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Choose the correct article for 'Buch'.",
+          "options": [
+            "der",
+            "die",
+            "das",
+            "ein"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "How do you say 'I like to read' in German?",
+          "options": [
+            "Ich lese gern.",
+            "Ich mag lesen.",
+            "Ich lese gut.",
+            "Ich lese Freude."
+          ],
+          "answer": 0
+        }
+      ],
+      "tutorPrompt": "Willkommen zu deiner Deutschstunde! Heute lernen wir einige nützliche deutsche Wörter und Sätze. Wir werden uns Vokabeln wie \"gehen\", \"sprechen\" und \"das Buch\" ansehen und üben, wie man sie in Sätzen verwendet. Bist du bereit, Deutsch zu lernen? Lass uns anfangen!"
+    },
+    {
+      "id": "b1-1-2",
+      "title": "",
+      "icon": "📚",
+      "xp": 30,
+      "vocab": [
+        {
+          "word": "werden",
+          "phonetic": "VEHR-den",
+          "meaning": "to become, will (auxiliary for future tense)",
+          "example": "Ich werde morgen ins Kino gehen."
+        },
+        {
+          "word": "planen",
+          "phonetic": "PLAH-nen",
+          "meaning": "to plan",
+          "example": "Wir planen eine Reise nach Berlin."
+        },
+        {
+          "word": "die Zukunft",
+          "phonetic": "dee TSOO-kunft",
+          "meaning": "the future",
+          "example": "Was wirst du in der Zukunft machen?"
+        },
+        {
+          "word": "vorhaben",
+          "phonetic": "FOR-hah-ben",
+          "meaning": "to intend, to plan to do",
+          "example": "Ich habe vor, am Wochenende zu entspannen."
+        },
+        {
+          "word": "bestimmen",
+          "phonetic": "be-SHTIM-men",
+          "meaning": "to determine, to decide",
+          "example": "Du wirst deine eigene Zukunft bestimmen."
+        },
+        {
+          "word": "wahrscheinlich",
+          "phonetic": "vah-SHINE-lich",
+          "meaning": "probably",
+          "example": "Es wird wahrscheinlich regnen."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which German word means \"to plan\"?",
+          "options": [
+            "werden",
+            "planen",
+            "bestimmen",
+            "vorhaben"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "How do you form the future tense (Futur I) in German with \"werden\"?",
+          "options": [
+            "werden + past participle",
+            "haben + infinitive",
+            "werden + infinitive",
+            "sein + infinitive"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Choose the correct German sentence for: \"I will read a book.\"",
+          "options": [
+            "Ich lese ein Buch.",
+            "Ich werde ein Buch lesen.",
+            "Ich habe ein Buch gelesen.",
+            "Ich bin ein Buch lesen."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "What is the German word for \"the future\"?",
+          "options": [
+            "die Vergangenheit",
+            "die Gegenwart",
+            "die Zukunft",
+            "die Zeit"
+          ],
+          "answer": 2
+        }
+      ],
+      "tutorPrompt": "Hallo! Herzlich willkommen zu unserer Lektion über die Zukunft und wie man Pläne auf Deutsch ausdrückt. Heute konzentrieren wir uns auf das Futur I, das wir mit dem Hilfsverb 'werden' bilden. Es ist ganz einfach: Du nimmst die konjugierte Form von 'werden' und stellst den Infinitiv des Hauptverbs ans Ende des Satzes. Zum Beispiel: 'Ich werde morgen ins Kino gehen.' (I will go to the cinema tomorrow.) Oder: 'Wir werden nächste Woche Deutsch lernen.' (We will learn German next week.) Dieses Futur I verwenden wir, um zukünftige Handlungen, Absichten oder Vermutungen auszudrücken. Bist du bereit, es auszuprobieren? Erzähl mir doch mal: Was wirst du dieses Wochenende machen? Versuch, einen Satz mit 'werden' zu bilden!"
+    }
+  ]
+}
