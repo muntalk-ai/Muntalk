@@ -47,7 +47,7 @@ function WordLessonContent() {
   const tutor = getTutorById(tutorId);
   const ttsAvailable = hasTts(lang);
 
-  // ── State ──────────────────────────────────────────────────────────────────
+  // -- State ------------------------------------------------------------------
   const [words, setWords]               = useState<string[]>([]);
   const [wordDataMap, setWordDataMap]   = useState<Record<string, WordData>>({});
   const [currentWordIdx, setCurrentWordIdx] = useState(0);
@@ -73,7 +73,7 @@ function WordLessonContent() {
   const [chatLoading, setChatLoading]   = useState(false);
   const chatEndRef                      = useRef<HTMLDivElement>(null);
 
-  // ── STT setup ──────────────────────────────────────────────────────────────
+  // -- STT setup --------------------------------------------------------------
   useEffect(() => {
     const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
     if (!SR) return;
@@ -88,7 +88,7 @@ function WordLessonContent() {
     recognitionRef.current = rec;
   }, [lang]);
 
-  // ── TTS ────────────────────────────────────────────────────────────────────
+  // -- TTS --------------------------------------------------------------------
   const stopAudio = () => {
     if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; }
     setIsSpeaking(false);
@@ -118,15 +118,17 @@ function WordLessonContent() {
     recognitionRef.current.start();
   };
 
-  // ── Load words ─────────────────────────────────────────────────────────────
+  // -- Load words -------------------------------------------------------------
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch('/data/result.json');
+        const res = await fetch('/result.json');
         const data = await res.json();
         const langData = data[lang] || data['en-US'];
         const key = getSetKey(pos, setIdx);
-        const allWords: string[] = langData[key] || [];
+        // Support both 'Phrases2' (new) and 'phrases2' (legacy lowercase keys)
+        const keyLower = key.charAt(0).toLowerCase() + key.slice(1);
+        const allWords: string[] = langData[key] || langData[keyLower] || [];
         const start = (lessonIdx - 1) * 10;
         const lessonWords = allWords.slice(start, start + 10);
         setWords(lessonWords);
@@ -140,7 +142,7 @@ function WordLessonContent() {
   // Load first word
   useEffect(() => { if (words.length > 0) loadWordData(words[0]); }, [words]);
 
-  // ── Load word data ─────────────────────────────────────────────────────────
+  // -- Load word data ---------------------------------------------------------
   const loadWordData = async (word: string) => {
     if (wordDataMap[word]?.sentences.length > 0) return;
     setWordDataMap(prev => ({ ...prev, [word]: { ...prev[word], loading: true } }));
@@ -172,7 +174,7 @@ Respond ONLY in this JSON (no markdown):
     if (words[idx]) loadWordData(words[idx]);
   };
 
-  // ── Quiz ───────────────────────────────────────────────────────────────────
+  // -- Quiz -------------------------------------------------------------------
   const generateQuiz = async () => {
     setQuizLoading(true);
     try {
@@ -197,7 +199,7 @@ Respond ONLY in JSON (no markdown):
     }, 900);
   };
 
-  // ── Chat ───────────────────────────────────────────────────────────────────
+  // -- Chat -------------------------------------------------------------------
   const initChat = async () => {
     setChatLoading(true);
     try {
@@ -243,12 +245,12 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
   // accent colour from POS meta
   const accent = meta?.accent || '#2563EB';
 
-  // ── UI ─────────────────────────────────────────────────────────────────────
+  // -- UI ---------------------------------------------------------------------
   return (
     <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito', sans-serif" }}>
-      <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');` }} />
+      
 
-      {/* ── Nav ── */}
+      {/* -- Nav -- */}
       <nav style={{ background: '#fff', borderBottom: '1px solid #F1F5F9', height: 62, display: 'flex', alignItems: 'center', padding: '0 24px', gap: 12, position: 'sticky', top: 0, zIndex: 200 }}>
         <button onClick={() => { stopAudio(); router.push('/lingua/words'); }} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 20, color: '#64748B' }}>←</button>
         <div>
@@ -272,67 +274,83 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
         </div>
       </nav>
 
-      <div style={{ maxWidth: 860, margin: '0 auto', padding: '28px 24px', display: 'grid', gridTemplateColumns: '200px 1fr', gap: 24, alignItems: 'start' }}>
+      <div style={{ maxWidth: 760, margin: '0 auto', padding: '20px 24px 60px' }}>
 
-        {/* ── LEFT: Tutor panel ── */}
-        <div style={{ position: 'sticky', top: 80 }}>
-          {/* Tutor video */}
-          <div style={{ borderRadius: 20, overflow: 'hidden', background: '#fff', border: '1.5px solid #F1F5F9', boxShadow: '0 2px 12px rgba(0,0,0,0.06)', marginBottom: 12 }}>
-            <video
-              key={isSpeaking ? 'talk' : 'idle'}
-              src={isSpeaking ? tutor.videoTalk : tutor.videoIdle}
-              autoPlay loop muted playsInline
-              style={{ width: '100%', display: 'block', aspectRatio: '3/4', objectFit: 'cover' }}
-            />
-          </div>
-          <div style={{ textAlign: 'center', background: '#fff', borderRadius: 14, border: '1.5px solid #F1F5F9', padding: '12px 16px' }}>
-            <div style={{ fontWeight: 800, fontSize: 15, color: '#0F172A' }}>{tutor.name}</div>
-            <div style={{ fontSize: 11, color: '#94A3B8', marginTop: 2 }}>AI Tutor · {meta?.icon} {pos.replace(/\d/g,'')}</div>
-            {phase === 'vocab' && currentWord && (
-              ttsAvailable ? (
-                <button
-                  onClick={() => speakText(currentWord)}
-                  disabled={isSpeaking}
-                  style={{ marginTop: 10, width: '100%', padding: '8px', borderRadius: 10, border: 'none', background: isSpeaking ? '#E5E7EB' : accent, color: isSpeaking ? '#9CA3AF' : '#fff', fontFamily: "'Nunito',sans-serif", fontWeight: 700, fontSize: 12, cursor: isSpeaking ? 'default' : 'pointer' }}
-                >{isSpeaking ? '🔊 Playing…' : '🔊 Hear word'}</button>
-              ) : (
-                <div style={{ marginTop: 10, padding: '7px', borderRadius: 10, background: '#FEF3C7', border: '1px solid #FDE68A', textAlign: 'center', fontSize: 11, color: '#92400E', fontWeight: 700 }}>
-                  🔇 Voice not available
+        {/* -- TOP: Tutor bar (horizontal) -- */}
+        <div style={{ background: '#fff', borderRadius: 20, border: '1.5px solid #F1F5F9',
+          boxShadow: '0 2px 12px rgba(0,0,0,0.06)', marginBottom: 24, overflow: 'hidden' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 0 }}>
+            {/* Video — compact horizontal */}
+            <div style={{ flexShrink: 0, width: 180, overflow: 'hidden' }}>
+              <video
+                key={isSpeaking ? 'talk' : 'idle'}
+                src={isSpeaking ? tutor.videoTalk : tutor.videoIdle}
+                autoPlay loop muted playsInline
+                style={{ width: '100%', display: 'block', aspectRatio: '3/4', objectFit: 'cover' }}
+              />
+            </div>
+            {/* Tutor info */}
+            <div style={{ flex: 1, padding: '16px 20px' }}>
+              <div style={{ fontWeight: 800, fontSize: 16, color: '#0F172A', marginBottom: 2 }}>{tutor.name}</div>
+              <div style={{ fontSize: 12, color: '#94A3B8', marginBottom: 10 }}>AI Tutor · {meta?.icon} {pos.replace(/\d/g,'')}</div>
+              {phase === 'vocab' && currentWord && (
+                ttsAvailable ? (
+                  <button
+                    onClick={() => speakText(currentWord)}
+                    disabled={isSpeaking}
+                    style={{ padding: '8px 20px', borderRadius: 10, border: 'none',
+                      background: isSpeaking ? '#E5E7EB' : accent,
+                      color: isSpeaking ? '#9CA3AF' : '#fff',
+                      fontFamily: "'Nunito',sans-serif", fontWeight: 700, fontSize: 13,
+                      cursor: isSpeaking ? 'default' : 'pointer' }}
+                  >{isSpeaking ? '🔊 Playing…' : '🔊 Hear word'}</button>
+                ) : (
+                  <div style={{ padding: '7px 14px', borderRadius: 10, display: 'inline-block',
+                    background: '#FEF3C7', border: '1px solid #FDE68A', fontSize: 11, color: '#92400E', fontWeight: 700 }}>
+                    🔇 Voice not available
+                  </div>
+                )
+              )}
+            </div>
+            {/* Word list — horizontal scroll chips */}
+            {phase === 'vocab' && (
+              <div style={{ padding: '0 16px', flexShrink: 0, maxWidth: 200 }}>
+                <div style={{ fontSize: 10, fontWeight: 800, color: '#94A3B8', letterSpacing: 2,
+                  textTransform: 'uppercase', marginBottom: 6 }}>Words</div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+                  {words.map((w, i) => (
+                    <button key={i} onClick={() => phase === 'vocab' && goToWord(i)} style={{
+                      padding: '3px 8px', borderRadius: 6, border: 'none', cursor: 'pointer',
+                      fontSize: 10, fontWeight: i === currentWordIdx ? 800 : 600,
+                      background: i === currentWordIdx ? accent : '#F1F5F9',
+                      color: i === currentWordIdx ? '#fff' : '#64748B',
+                      fontFamily: "'Nunito',sans-serif",
+                      maxWidth: 60, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                    }} title={w}>{w}</button>
+                  ))}
                 </div>
-              )
+              </div>
             )}
-          </div>
-
-          {/* Word list */}
-          <div style={{ marginTop: 12, background: '#fff', borderRadius: 14, border: '1.5px solid #F1F5F9', padding: '12px' }}>
-            <div style={{ fontSize: 11, fontWeight: 800, color: '#94A3B8', letterSpacing: 2, textTransform: 'uppercase', marginBottom: 8 }}>Words</div>
-            {words.map((w, i) => (
-              <button key={i} onClick={() => phase === 'vocab' && goToWord(i)} style={{
-                display: 'block', width: '100%', textAlign: 'left', padding: '6px 10px',
-                borderRadius: 8, border: 'none', marginBottom: 2, cursor: 'pointer',
-                background: i === currentWordIdx && phase === 'vocab' ? `${accent}18` : 'transparent',
-                color: i === currentWordIdx && phase === 'vocab' ? accent : '#475569',
-                fontFamily: "'Nunito',sans-serif", fontWeight: i === currentWordIdx ? 800 : 600, fontSize: 13,
-              }}>{i+1}. {w}</button>
-            ))}
           </div>
         </div>
 
-        {/* ── RIGHT: Main content ── */}
+        {/* -- MAIN: Full-width content -- */}
         <div>
 
-          {/* ── VOCAB ── */}
+          {/* -- VOCAB -- */}
           {phase === 'vocab' && (
             <div>
               {/* Progress */}
               <div style={{ display: 'flex', gap: 6, marginBottom: 20, flexWrap: 'wrap' }}>
                 {words.map((w, i) => (
-                  <button key={i} onClick={() => goToWord(i)} style={{
-                    width: 32, height: 32, borderRadius: '50%', border: `2px solid ${i === currentWordIdx ? accent : '#E5E7EB'}`,
-                    background: i === currentWordIdx ? accent : wordDataMap[w]?.sentences.length > 0 ? '#DCFCE7' : '#fff',
-                    color: i === currentWordIdx ? '#fff' : '#64748B',
-                    fontSize: 11, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
-                  }}>{i+1}</button>
+                  <button key={i} onClick={() => goToWord(i)}
+                    title={w}
+                    style={{
+                      width: 32, height: 32, borderRadius: '50%', border: `2px solid ${i === currentWordIdx ? accent : '#E5E7EB'}`,
+                      background: i === currentWordIdx ? accent : wordDataMap[w]?.sentences.length > 0 ? '#DCFCE7' : '#fff',
+                      color: i === currentWordIdx ? '#fff' : '#64748B',
+                      fontSize: 11, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
+                    }}>{i+1}</button>
                 ))}
               </div>
 
@@ -362,7 +380,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
                       <div key={i} style={{ background: '#F8FAFC', borderRadius: 14, padding: '14px 16px', borderLeft: `4px solid ${accent}` }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8 }}>
                           <div>
-                            <span style={{ fontSize: 11, fontWeight: 700, color: '#94A3B8', marginRight: 8 }}>{i+1}.</span>
+                            <span style={{ fontSize: 11, fontWeight: 700, color: '#94A3B8', marginRight: 8 }}>·</span>
                             <span style={{ fontSize: 14, color: '#1E293B', lineHeight: 1.6 }}>{s}</span>
                           </div>
                           <button
@@ -402,7 +420,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
             </div>
           )}
 
-          {/* ── QUIZ ── */}
+          {/* -- QUIZ -- */}
           {phase === 'quiz' && (
             <div>
               {quizLoading ? (
@@ -461,7 +479,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
             </div>
           )}
 
-          {/* ── CHAT ── */}
+          {/* -- CHAT -- */}
           {phase === 'chat' && (
             <div>
               <div style={{ background: '#fff', borderRadius: 24, border: '1.5px solid #F1F5F9', padding: '28px', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
@@ -525,7 +543,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
             </div>
           )}
 
-          {/* ── COMPLETE ── */}
+          {/* -- COMPLETE -- */}
           {phase === 'complete' && (
             <div style={{ textAlign: 'center', padding: '60px 40px', background: '#fff', borderRadius: 24, border: '1.5px solid #F1F5F9', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
               <div style={{ fontSize: 64, marginBottom: 16 }}>🎉</div>

@@ -11,7 +11,7 @@ import {
 
 const ADMIN_EMAILS = ['muntalkofficial@gmail.com'];
 type PlanId = 'free' | 'monthly' | 'biannual' | 'annual';
-type Tab = 'users' | 'email' | 'logs';
+type Tab = 'users' | 'email' | 'logs' | 'settings';
 
 interface UserRow {
   uid: string; email: string; displayName: string;
@@ -50,9 +50,11 @@ function extendExpiry(current: string, p: PlanId) {
 export default function AdminPage() {
   const { user, loading } = useAuth();
   const router = useRouter();
-// 53행 부근 추가
-  const [dataSourceMode, setDataSourceMode] = useState<'json' | 'api'>('json');
+
   const [tab, setTab] = useState<Tab>('users');
+  const [curriculumMode, setCurriculumMode] = useState<'api'|'json'>(
+    typeof window !== 'undefined' ? ((localStorage.getItem('mt_curriculum_mode') || 'api') as 'api'|'json') : 'api'
+  );
   const [users, setUsers] = useState<UserRow[]>([]);
   const [logs, setLogs] = useState<LogEntry[]>([]);
   const [fetching, setFetching] = useState(true);
@@ -139,23 +141,7 @@ export default function AdminPage() {
       })));
     } catch(e) { console.error(e); }
   }, []);
-// 135행 부근 추가
-  useEffect(() => {
-    (async () => {
-      const docSnap = await getDoc(doc(db, 'app_settings', 'global'));
-      if (docSnap.exists()) setDataSourceMode(docSnap.data().dataSourceMode || 'json');
-    })();
-  }, []);
 
-  const toggleDataSource = async (mode: 'json' | 'api') => {
-    try {
-      await setDoc(doc(db, 'app_settings', 'global'), { dataSourceMode: mode }, { merge: true });
-      setDataSourceMode(mode);
-      showToast(`🚀 모드 변경: ${mode.toUpperCase()}`);
-      await logAction('settings', 'all', `Data source changed to ${mode}`);
-    } catch (e: any) { showToast('❌ ' + e.message); }
-  };
-  
   useEffect(() => { if (tab==='logs') fetchLogs(); }, [tab]);
 
   const openGrant = (u: UserRow) => {
@@ -275,24 +261,6 @@ export default function AdminPage() {
       </nav>
 
       <div style={{maxWidth:1080,margin:'0 auto',padding:'24px 20px'}}>
-        
-{/* 238행: Stats 섹션 바로 위에 추가 */}
-        <div style={{background: '#fff', padding: '16px 20px', borderRadius: 16, marginBottom: 20, border: '1px solid #F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'space-between', animation: 'su .3s ease'}}>
-          <div>
-            <div style={{fontSize: 14, fontWeight: 900, color: '#0F172A'}}>🌐 데이터 소스 제어 (Admin 전용)</div>
-            <div style={{fontSize: 11, color: '#94A3B8', fontWeight: 700, marginTop: 2}}>
-              {dataSourceMode === 'json' ? '📦 내부 JSON 데이터 우선 사용' : '✨ 실시간 Gemini API 강제 사용'}
-            </div>
-          </div>
-          <div style={{display: 'flex', gap: 6, background: '#F1F5F9', padding: 4, borderRadius: 12}}>
-            {(['json', 'api'] as const).map(m => (
-              <button key={m} onClick={() => toggleDataSource(m)}
-                style={{padding: '7px 16px', borderRadius: 9, border: 'none', background: dataSourceMode === m ? '#fff' : 'transparent', color: dataSourceMode === m ? '#6366F1' : '#94A3B8', fontSize: 12, fontWeight: 900, cursor: 'pointer', boxShadow: dataSourceMode === m ? '0 2px 4px rgba(0,0,0,0.05)' : 'none', transition: 'all .2s'}}>
-                {m.toUpperCase()}
-              </button>
-            ))}
-          </div>
-        </div>
 
         {/* Stats */}
         <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:10,marginBottom:24}}>
@@ -306,7 +274,7 @@ export default function AdminPage() {
 
         {/* Tabs */}
         <div style={{display:'flex',gap:6,marginBottom:20,background:'#fff',padding:6,borderRadius:14,border:'1px solid #F1F5F9',width:'fit-content'}}>
-          {([['users','👥 Users'],['email','✉️ Email'],['logs','📋 Logs']] as [Tab,string][]).map(([t,label])=>(
+          {([['users','👥 Users'],['email','✉️ Email'],['logs','📋 Logs'],['settings','⚙️ Settings']] as [Tab,string][]).map(([t,label])=>(
             <button key={t} className="tab-btn" onClick={()=>setTab(t)}
               style={{padding:'8px 20px',borderRadius:10,border:'none',background:tab===t?'#EEF2FF':'transparent',color:tab===t?'#6366F1':'#64748B',fontWeight:tab===t?900:700,fontSize:13,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
               {label}
@@ -314,7 +282,7 @@ export default function AdminPage() {
           ))}
         </div>
 
-        {/* ── USERS TAB ── */}
+        {/* -- USERS TAB -- */}
         {tab==='users'&&(
           <>
             <input value={search} onChange={e=>setSearch(e.target.value)}
@@ -355,7 +323,7 @@ export default function AdminPage() {
           </>
         )}
 
-        {/* ── EMAIL TAB ── */}
+        {/* -- EMAIL TAB -- */}
         {tab==='email'&&(
           <div style={{background:'#fff',borderRadius:16,border:'1px solid #F1F5F9',padding:'28px'}}>
             <h2 style={{fontSize:16,fontWeight:900,color:'#0F172A',margin:'0 0 20px'}}>✉️ Send Email to Users</h2>
@@ -439,7 +407,7 @@ export default function AdminPage() {
           </div>
         )}
 
-        {/* ── LOGS TAB ── */}
+        {/* -- LOGS TAB -- */}
         {tab==='logs'&&(
           <div>
             <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:14}}>
@@ -511,6 +479,65 @@ export default function AdminPage() {
                 style={{flex:2,padding:'11px',borderRadius:11,border:'none',background:saving===modal.uid?'#C7D2FE':'linear-gradient(135deg,#6366F1,#8B5CF6)',color:'#fff',fontWeight:900,fontSize:13,cursor:saving===modal.uid?'default':'pointer',fontFamily:"'Nunito',sans-serif"}}>
                 {saving===modal.uid?'Saving...':`${modalMode==='extend'?'Extend':'Grant'} ${PLAN_LABELS[selPlan]}`}
               </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {tab==='settings'&&(
+        <div style={{padding:24}}>
+          <div style={{fontSize:18,fontWeight:900,color:'#0F172A',marginBottom:8}}>System Settings</div>
+          <div style={{fontSize:13,color:'#64748B',marginBottom:24,fontWeight:600}}>Configure how lesson content is generated for learners.</div>
+
+          <div style={{background:'#fff',borderRadius:16,border:'1px solid #E9ECEF',padding:24,marginBottom:20}}>
+            <div style={{fontSize:15,fontWeight:800,color:'#0F172A',marginBottom:4}}>Lesson Content Source</div>
+            <div style={{fontSize:13,color:'#64748B',marginBottom:20,lineHeight:1.7,fontWeight:600}}>
+              <strong>API Mode:</strong> Gemini AI generates content in real-time. Falls back to JSON if unavailable.<br/>
+              <strong>JSON Mode:</strong> Uses pre-generated JSON files first. Falls back to Gemini if file not found.
+            </div>
+            <div style={{display:'flex',gap:12,flexWrap:'wrap'}}>
+              <button
+                onClick={()=>{ setCurriculumMode('api'); localStorage.setItem('mt_curriculum_mode','api'); }}
+                style={{padding:'13px 28px',borderRadius:12,border:'none',cursor:'pointer',
+                  fontFamily:"'Nunito',sans-serif",fontWeight:900,fontSize:14,
+                  background:curriculumMode==='api'?'linear-gradient(135deg,#6366F1,#8B5CF6)':'#F1F5F9',
+                  color:curriculumMode==='api'?'#fff':'#64748B',
+                  boxShadow:curriculumMode==='api'?'0 4px 14px rgba(99,102,241,0.3)':'none',
+                  transition:'all .2s'}}>
+                🤖 API Mode (Gemini First)
+              </button>
+              <button
+                onClick={()=>{ setCurriculumMode('json'); localStorage.setItem('mt_curriculum_mode','json'); }}
+                style={{padding:'13px 28px',borderRadius:12,border:'none',cursor:'pointer',
+                  fontFamily:"'Nunito',sans-serif",fontWeight:900,fontSize:14,
+                  background:curriculumMode==='json'?'linear-gradient(135deg,#10B981,#059669)':'#F1F5F9',
+                  color:curriculumMode==='json'?'#fff':'#64748B',
+                  boxShadow:curriculumMode==='json'?'0 4px 14px rgba(16,185,129,0.3)':'none',
+                  transition:'all .2s'}}>
+                📦 JSON Mode (Pre-generated First)
+              </button>
+            </div>
+
+            <div style={{marginTop:16,padding:'12px 16px',borderRadius:10,
+              background:curriculumMode==='api'?'#EEF2FF':'#ECFDF5',
+              border:'1.5px solid '+(curriculumMode==='api'?'#C7D2FE':'#A7F3D0')}}>
+              <div style={{fontSize:13,fontWeight:800,color:curriculumMode==='api'?'#6366F1':'#10B981',marginBottom:4}}>
+                {curriculumMode==='api'
+                  ? '🤖 Active: API Mode — Gemini AI generates lessons, JSON is fallback'
+                  : '📦 Active: JSON Mode — Pre-generated files load first, Gemini is fallback'}
+              </div>
+              <div style={{fontSize:11,color:'#64748B',fontWeight:600}}>
+                Stored in browser localStorage. Applies immediately to all new lesson sessions on this device.
+              </div>
+            </div>
+          </div>
+
+          <div style={{background:'#FFF7ED',borderRadius:12,border:'1px solid #FED7AA',padding:16}}>
+            <div style={{fontSize:12,fontWeight:800,color:'#EA580C',marginBottom:8}}>When to use each mode</div>
+            <div style={{fontSize:12,color:'#78350F',lineHeight:1.9,fontWeight:600}}>
+              Use <strong>API Mode</strong> when Gemini is working well and you want real-time personalised content<br/>
+              Use <strong>JSON Mode</strong> when Gemini is slow, rate-limited, or pre-generated files are ready<br/>
+              JSON files must exist in <code style={{background:'#FEF3C7',padding:'1px 4px',borderRadius:4}}>/public/curriculum/</code> for JSON mode to work
             </div>
           </div>
         </div>

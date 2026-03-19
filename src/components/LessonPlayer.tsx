@@ -102,7 +102,7 @@ export default function LessonPlayer({
     }
   }, [langId]);
 
-  // -- Init trial status (14일 정책 기반) -------------------------------------
+  // -- Init trial status (7일 정책 기반) --------------------------------------
   useEffect(() => {
     if (!user) return; // 게스트는 trial 제한 없음
     async function checkTrial() {
@@ -177,48 +177,47 @@ export default function LessonPlayer({
     const targetLang = langNames[langId] || langId;
     const nativeLang = nativeNames[subLang] || 'English';
 
-    // 1️⃣ 사전생성 JSON 우선 시도
-    if (PREGENERATED_LANGS.has(langId)) {
-      console.log(`[lesson] 📦 Loading pregenerated curriculum for ${langId}...`);
+    // 관리자 설정: localStorage의 curriculum_mode 확인
+    // 'api' = Gemini 우선 (기본), 'json' = JSON 우선
+    const curriculumMode = typeof window !== 'undefined'
+      ? (localStorage.getItem('mt_curriculum_mode') || 'api')
+      : 'api';
+
+    if (curriculumMode === 'json' && PREGENERATED_LANGS.has(langId)) {
+      // JSON 우선 모드
+      console.log(`[lesson] 📦 JSON mode: loading pregenerated for ${langId}...`);
       fetch(`/curriculum/${langId}.json`)
         .then(async r => {
           if (!r.ok) throw new Error(`No pregenerated file: ${r.status}`);
           const data = await r.json();
           const pregeneratedLesson = data.lessons?.find((l: { id: string }) => l.id === lessonId);
-          if (!pregeneratedLesson) throw new Error(`Lesson ${lessonId} not found in pregenerated file`);
-          console.log(`[lesson] ✅ Loaded from pregenerated JSON`);
+          if (!pregeneratedLesson) throw new Error(`Lesson ${lessonId} not found`);
+          console.log(`[lesson] ✅ Loaded from JSON`);
           setTranslatedLesson({ ...lsn, ...pregeneratedLesson });
           setIsTranslating(false);
         })
         .catch(e => {
-          // 2️⃣ 사전생성 없으면 실시간 Gemini fallback
-          console.warn(`[lesson] ⚠️ Pregenerated load failed (${e.message}), falling back to Gemini...`);
+          console.warn(`[lesson] ⚠️ JSON failed (${e.message}), falling back to Gemini...`);
           callGeminiFallback(lsn, targetLang, nativeLang);
         });
       return;
     }
 
-    // 3️⃣ 사전생성 대상 아닌 언어 → 바로 Gemini
-    console.log(`[lesson] 🤖 Generating with Gemini for ${targetLang}...`);
-    callGeminiFallback(lsn, targetLang, nativeLang);
+    // 1️⃣ Gemini 우선 (기본 모드)
+    console.log(`[lesson] 🤖 Gemini mode: generating for ${targetLang}...`);
+    callGeminiFallback(lsn, targetLang, nativeLang, true);
 
-    function callGeminiFallback(lsn: typeof lesson, targetLang: string, nativeLang: string) {
-      const lessonPayload = { vocab: lsn!.vocab, quiz: lsn!.quiz, tutorPrompt: lsn!.tutorPrompt };
-      const prompt = `Convert this English language lesson into ${targetLang}. The student's native language is ${nativeLang}.
+    function callGeminiFallback(lsn: typeof lesson, targetLang: string, nativeLang: string, tryJsonOnFail = false) {
+      // Slim payload — exclude tutorPrompt to reduce token count ~40%
+      const vocabOnly = (lsn!.vocab || []).map((v: any) => ({ word: v.word, meaning: v.meaning }));
+      const quizOnly  = (lsn!.quiz  || []).map((q: any) => ({ q: q.q, options: q.options, answer: q.answer }));
+      const lessonPayload = { vocab: vocabOnly, quiz: quizOnly };
+      const prompt = `Translate this English lesson to ${targetLang}. Native language: ${nativeLang}.
 
-Lesson JSON:
 ${JSON.stringify(lessonPayload)}
 
-Return ONLY a JSON object with keys: vocab (array), quiz (array), tutorPrompt (string).
-- vocab[i].word: the word/phrase in ${targetLang}
-- vocab[i].phonetic: pronunciation guide (romanization)
-- vocab[i].meaning: 1-4 word meaning in ${nativeLang}
-- vocab[i].example: simple ${targetLang} sentence
-- quiz[i].q: question text in ${nativeLang}
-- quiz[i].options: array of ${targetLang} answer choices
-- quiz[i].answer: keep same index as original
-- tutorPrompt: rewrite to teach ${targetLang}, student replies in ${nativeLang} or ${targetLang}
-No markdown fences. Pure JSON only.`;
+Return ONLY compact JSON (no markdown):
+{"vocab":[{"word":"<${targetLang} word>","phonetic":"<pronunciation>","meaning":"<1-3 words in ${nativeLang}>","example":"<short ${targetLang} sentence>"}],"quiz":[{"q":"<question in ${nativeLang}>","options":["<${targetLang} option>"],"answer":<index>}]}`;
 
       fetch('/api/gemini', {
         method: 'POST',
@@ -235,9 +234,27 @@ No markdown fences. Pure JSON only.`;
         })
         .catch(e => {
           console.error('[lesson] Gemini ERROR:', e);
-          setTxError(e?.message || String(e));
+          // Gemini 실패 시 JSON fallback 시도
+          if (tryJsonOnFail && PREGENERATED_LANGS.has(langId)) {
+            console.warn('[lesson] Gemini failed, trying JSON fallback...');
+            fetch(`/curriculum/${langId}.json`)
+              .then(async r => {
+                if (!r.ok) throw new Error('JSON also unavailable');
+                const data = await r.json();
+                const pre = data.lessons?.find((l: { id: string }) => l.id === lessonId);
+                if (!pre) throw new Error('Lesson not in JSON');
+                setTranslatedLesson({ ...lsn!, ...pre });
+              })
+              .catch(() => setTxError(e?.message || String(e)))
+              .finally(() => setIsTranslating(false));
+          } else {
+            setTxError(e?.message || String(e));
+            setIsTranslating(false);
+          }
         })
-        .finally(() => setIsTranslating(false));
+        .finally(() => {
+          // finally는 JSON fallback이 없을 때만 실행
+        });
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lessonId, langId, subLang, user?.uid]);
@@ -547,7 +564,7 @@ TEACHING RULES:
     return <div style={{ color: '#fff', padding: 40, textAlign: 'center' }}>Lesson not found.</div>;
   }
 
-  // -- Trial timer removed -- using 14-day policy -------------------------------
+  // -- Trial timer removed -- using 7-day policy --------------------------------
 
   const langInfo = LEARN_LANGUAGES.find(l => l.code === langId);
 

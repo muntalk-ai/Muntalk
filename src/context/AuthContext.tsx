@@ -48,23 +48,31 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             u.photoURL || '',
           );
           await migrateFromLocalStorage(u.uid);
-          // 첫 로그인 → 14일 체험 자동 시작
+          // 첫 로그인 → 7일 체험 자동 시작
           await import('@/lib/trialPolicy').then(({ initTrial }) => initTrial(u.uid)).catch(() => {});
           p = (await getUserProfile(u.uid)) || p;
         } else {
-          // 기존 유저인데 xp/completedLessons 필드가 없는 경우 보완
-          const needsPatch = p.xp === undefined || p.completedLessons === undefined;
-          if (needsPatch) {
+          // 기존 유저 — email/displayName/photoURL 항상 최신 Firebase Auth 값으로 동기화
+          const needsEmailSync = !p.email || p.email !== (u.email || '');
+          const needsPatch     = p.xp === undefined || p.completedLessons === undefined;
+          if (needsEmailSync || needsPatch) {
             const lsXp   = parseInt(localStorage.getItem('mt_xp') || '0', 10);
             const lsDone = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
             await import('@/lib/userProfile').then(({ updateUserProfile }) =>
               updateUserProfile(u.uid, {
-                xp:               lsXp  || 0,
-                completedLessons: lsDone.length ? lsDone : (p!.completedLessons || []),
+                // 항상 최신 Auth 값으로 덮어씀
+                email:       u.email       || p!.email       || '',
+                displayName: u.displayName || p!.displayName || 'Learner',
+                photoURL:    u.photoURL    || p!.photoURL    || '',
+                // xp/lessons 보완
+                ...(needsPatch ? {
+                  xp:               lsXp  || 0,
+                  completedLessons: lsDone.length ? lsDone : (p!.completedLessons || []),
+                } : {}),
               })
             );
             p = (await getUserProfile(u.uid)) || p;
-            console.log('[auth] patched missing fields for existing user');
+            if (needsEmailSync) console.log('[auth] synced email for existing user:', u.email);
           }
         }
         // 오늘 활동 기록

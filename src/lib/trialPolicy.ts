@@ -1,16 +1,16 @@
 /**
  * trialPolicy.ts
- * 14일 무료 체험 정책 관리
+ * 7일 무료 체험 정책 관리
  * 
  * ┌---------------------------------------------------------┐
- * │  FREE TRIAL (14일)          │  PREMIUM                  │
+ * │  FREE TRIAL (7일)           │  PREMIUM                  │
  * ├-----------------------------┼---------------------------┤
- * │  언어       최대 3개        │  65개 전체                │
- * │  AI 채팅    5회/일          │  무제한                   │
- * │  단원       언어당 첫 3단원  │  전체                     │
- * │  트랙진단   무제한          │  무제한                   │
- * │  레벨진단   1회             │  무제한                   │
- * │  학습기록   7일             │  전체                     │
+ * │  언어       최대 3개          │  65개 전체                │
+ * │  AI 채팅    5회/일           │  무제한                   │
+ * │  단원       언어당 첫 3단원   │  전체                     │
+ * │  트랙진단   무제한            │  무제한                   │
+ * │  레벨진단   1회              │  무제한                   │
+ * │  학습기록   7일              │  전체                     │
  * │  오프라인   ❌              │  ✅                       │
  * │  시험대비   ❌              │  ✅                       │
  * └-----------------------------┴---------------------------┘
@@ -21,7 +21,7 @@ import { isAdminEmail } from './subscription';
 import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
 
 // -- 상수 ----------------------------------------------------
-export const TRIAL_DAYS          = 14;
+export const TRIAL_DAYS          = 7;
 export const TRIAL_MAX_LANGUAGES = 3;
 export const TRIAL_MAX_UNITS     = 3;   // 언어당 첫 N단원
 export const TRIAL_DAILY_CHATS   = 5;
@@ -30,7 +30,7 @@ export const TRIAL_STATS_DAYS    = 7;   // 학습기록 보관 일수
 // -- Firestore 문서 타입 --------------------------------------
 export interface TrialData {
   startedAt:    string;   // ISO — 첫 로그인 시각
-  expiresAt:    string;   // ISO — startedAt + 14일
+  expiresAt:    string;   // ISO — startedAt + 7일
   languages:    string[]; // 선택한 언어 코드 목록 (최대 3)
   chatUsage:    { date: string; count: number };
   levelTestDone: boolean; // 레벨 진단 1회 사용 여부

@@ -524,8 +524,7 @@ export default function LevelHub() {
           {([
             { label: '📚 Learn',     action: () => router.push('/lingua') },
             { label: '🎯 Placement', action: () => router.push(`/lingua/placement?lang=${learnLang}`) },
-            { label: '🧠 Coach',     action: () => router.push('/lingua/coach') },
-            { label: '🎭 Roleplay',  action: () => router.push('/lingua/roleplay') },
+{ label: '🎭 Roleplay',  action: () => router.push('/lingua/roleplay') },
             { label: '🏆 League',    action: () => router.push('/lingua/league') },
             { label: '🔁 Review',    action: () => router.push('/lingua/review') },
             { label: '👩‍🏫 Tutors', action: () => router.push('/lingua/tutors') },
@@ -642,8 +641,7 @@ export default function LevelHub() {
           {([
             { emoji: '📚', label: 'Learn',       action: () => router.push('/lingua') },
             { emoji: '🎯', label: 'Placement Test', action: () => router.push(`/lingua/placement?lang=${learnLang}`) },
-            { emoji: '🧠', label: 'AI Coach',     action: () => router.push('/lingua/coach') },
-            { emoji: '🎭', label: 'AI Roleplay',  action: () => router.push('/lingua/roleplay') },
+{ emoji: '🎭', label: 'AI Roleplay',  action: () => router.push('/lingua/roleplay') },
             { emoji: '🏆', label: 'League',       action: () => router.push('/lingua/league') },
             { emoji: '🔁', label: 'Review',       action: () => router.push('/lingua/review') },
             { emoji: '📚', label: 'Word Bank',    action: () => router.push('/lingua/words') },
@@ -717,8 +715,7 @@ export default function LevelHub() {
             <button style={styles.heroBtn1} onClick={() => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); }}>
               🌐 Choose a Language
             </button>
-            <button style={{...styles.heroBtn2, background: 'linear-gradient(135deg,#10B981,#059669)', color:'#fff', border:'none'}} onClick={() => router.push('/lingua/coach')}>🧠 AI Coach</button>
-            <button style={{...styles.heroBtn2, background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color:'#fff', border:'none'}} onClick={() => router.push('/lingua/roleplay')}>🎭 AI Roleplay</button>
+<button style={{...styles.heroBtn2, background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color:'#fff', border:'none'}} onClick={() => router.push('/lingua/roleplay')}>🎭 AI Roleplay</button>
             <button style={styles.heroBtn2} onClick={() => router.push('/lingua/words')}>📚 Word Bank</button>
             <button style={styles.heroBtn2} onClick={() => router.push('/lingua/tutors')}>👩‍🏫 Meet +150 AI Tutors</button>
           </div>

@@ -250,8 +250,8 @@ We recommend Chrome for the best experience. Internet Explorer is not supported.
 
   // ── 트라이얼/플랜 ───────────────────────────────────────────
   {
-    q: 'What happens after my 14-day free trial ends?',
-    a: `After 14 days, your account automatically switches to the Free plan. You keep access to all A1 lessons and 3 AI chats per day — forever, for free. To continue learning beyond A1 and access all features, you can upgrade to a Premium plan at any time from the Pricing page.`,
+    q: 'What happens after my 7-day free trial ends?',
+    a: `After 7 days, your account automatically switches to the Free plan. You keep access to all A1 lessons and 3 AI chats per day — forever, for free. To continue learning beyond A1 and access all features, you can upgrade to a Premium plan at any time from the Pricing page.`,
     tags: ['trial'],
   },
   {

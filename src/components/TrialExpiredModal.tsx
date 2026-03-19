@@ -1,6 +1,6 @@
 'use client';
 /**
- * TrialExpiredModal — 14일 체험 만료 모달
+ * TrialExpiredModal — 7일 체험 만료 모달
  * reason별로 다른 메시지 표시
  */
 

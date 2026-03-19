@@ -35,7 +35,7 @@ export const POS_SET_COUNT: Record<PartOfSpeech, number> = {
   Verbs: 9,
   Adjectives: 8,
   Adverbs: 8,
-  Phrases: 1,
+  Phrases: 9,
 };
 
 // Get all 50 words for a given lang + POS + setIndex
