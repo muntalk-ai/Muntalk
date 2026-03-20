@@ -1,11 +1,24 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { db } from '@/lib/firebase';
-import { doc, getDoc, setDoc } from 'firebase/firestore';
+
+// Firebase를 lazy import로 변경 — 초기화 실패 시 route 전체 crash 방지
+let _db: any = null;
+async function getDb() {
+  if (_db) return _db;
+  try {
+    const { db } = await import('@/lib/firebase');
+    const { getFirestore } = await import('firebase/firestore');
+    _db = db;
+    return _db;
+  } catch(e) {
+    console.warn('[gemini] Firebase init failed:', e);
+    return null;
+  }
+}
 
 const MODELS = [
-  'gemini-2.5-flash',       // fastest, try first
-  'gemini-2.0-flash',
+  'gemini-2.5-flash',       // most reliable
   'gemini-1.5-flash',
+  'gemini-1.5-flash-8b',
 ];
 const RETRY_DELAYS = [300, 800];  // reduced: was [800, 2000, 4000]
 const REQUEST_TIMEOUT_MS = 20000; // 20s hard timeout per attempt
@@ -42,6 +55,9 @@ function sleep(ms: number) {
 // -- Chat usage helpers (서버사이드 Firestore 직접 접근) ----------------------
 async function getChatUsage(uid: string): Promise<{ date: string; count: number }> {
   try {
+    const db = await getDb();
+    if (!db) return { date: new Date().toISOString().slice(0, 10), count: 0 };
+    const { doc, getDoc } = await import('firebase/firestore');
     const snap = await getDoc(doc(db, 'chat_usage', uid));
     const today = new Date().toISOString().slice(0, 10);
     if (snap.exists()) {
@@ -53,8 +69,11 @@ async function getChatUsage(uid: string): Promise<{ date: string; count: number 
 }
 
 async function incrementChatUsage(uid: string): Promise<void> {
+  const db = await getDb();
+  if (!db) return;
   const today = new Date().toISOString().slice(0, 10);
   const current = await getChatUsage(uid);
+  const { doc, setDoc } = await import('firebase/firestore');
   await setDoc(doc(db, 'chat_usage', uid), {
     date:  today,
     count: current.date === today ? current.count + 1 : 1,
@@ -63,6 +82,9 @@ async function incrementChatUsage(uid: string): Promise<void> {
 
 async function getPlanId(uid: string): Promise<string> {
   try {
+    const db = await getDb();
+    if (!db) return 'free';
+    const { doc, getDoc } = await import('firebase/firestore');
     const snap = await getDoc(doc(db, 'subscriptions', uid));
     if (snap.exists()) return snap.data().planId || 'free';
   } catch {}
@@ -88,11 +110,19 @@ export async function POST(req: NextRequest) {
       }
 
       // Parallel Firestore reads — was sequential (2× latency)
-      const [planId, profileSnap2, usage] = await Promise.all([
+      const [planId, usage] = await Promise.all([
         getPlanId(uid),
-        getDoc(doc(db, 'users', uid)),
         getChatUsage(uid),
       ]);
+      // profile fetch for admin check
+      let profileSnap2: any = null;
+      try {
+        const db2 = await getDb();
+        if (db2) {
+          const { doc, getDoc } = await import('firebase/firestore');
+          profileSnap2 = await getDoc(doc(db2, 'users', uid));
+        }
+      } catch(e) {}
       const ADMIN_UID_KEY = process.env.ADMIN_EMAIL || 'muntalkofficial@gmail.com';
       const userEmailFromProfile = profileSnap2.data()?.email as string | undefined;
       if (userEmailFromProfile === ADMIN_UID_KEY) {
