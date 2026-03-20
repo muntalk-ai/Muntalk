@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 import { useAuth } from '@/context/AuthContext';
 import { getUserProfile } from '@/lib/userProfile';
 import { getTutorById } from '@/data/tutors';
@@ -33,7 +34,7 @@ const LANG_NAMES: Record<string,string> = {
 
 // ── Main Page ─────────────────────────────────────────────────────────────────
 
-export default function DreamStudioPage() {
+function DreamStudioContent() {
   const router      = useRouter();
   const searchParams = useSearchParams();
   const { user, loading: authLoading } = useAuth();
@@ -787,5 +788,13 @@ function GenreCard({ genre, index, onSelect, locked = false }: {
         </div>
       )}
     </div>
+  );
+}
+
+export default function DreamStudioPage() {
+  return (
+    <Suspense fallback={<div style={{ minHeight:'100vh', background:'#08080F' }}/>}>
+      <DreamStudioContent />
+    </Suspense>
   );
 }

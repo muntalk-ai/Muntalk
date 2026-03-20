@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { getUserProfile } from '@/lib/userProfile';
@@ -111,7 +111,7 @@ const STORY_OPENINGS = [
 
 // ── Main Component ─────────────────────────────────────────────────────────────
 
-export default function DiscoverPage() {
+function DiscoverContent() {
   const router = useRouter();
   const { user, loading: authLoading } = useAuth();
 
@@ -650,5 +650,13 @@ export default function DiscoverPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function DiscoverPage() {
+  return (
+    <Suspense fallback={<div style={{ minHeight:'100vh', background:'#08080F' }}/>}>
+      <DiscoverContent />
+    </Suspense>
   );
 }
