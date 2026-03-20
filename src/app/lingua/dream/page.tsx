@@ -36,7 +36,7 @@ const LANG_NAMES: Record<string,string> = {
 export default function DreamStudioPage() {
   const router      = useRouter();
   const searchParams = useSearchParams();
-  const { user, loading } = useAuth();
+  const { user, loading: authLoading } = useAuth();
 
   // User settings
   const [langId,     setLangId]     = useState('en-US');
@@ -283,7 +283,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
 
   // ── Auth & Premium gate ─────────────────────────────────────────────────────
   // Not logged in → redirect to signup
-  if (!user && !loading) {
+  if (!user && !authLoading) {
     return (
       <div style={{ minHeight:'100vh', background:'#08080F',
         fontFamily:"'Nunito',sans-serif", color:'#F1F5F9',
