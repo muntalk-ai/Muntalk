@@ -3,8 +3,8 @@ import { db } from '@/lib/firebase';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 const MODELS = [
-  'gemini-2.0-flash',       // fastest, try first
-  'gemini-2.5-flash',
+  'gemini-2.5-flash',       // fastest, try first
+  'gemini-2.0-flash',
   'gemini-1.5-flash',
 ];
 const RETRY_DELAYS = [300, 800];  // reduced: was [800, 2000, 4000]
