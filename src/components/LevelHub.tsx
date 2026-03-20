@@ -715,6 +715,8 @@ export default function LevelHub() {
             <button style={styles.heroBtn1} onClick={() => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); }}>
               🌐 Choose a Language
             </button>
+<button style={{...styles.heroBtn2, background: 'linear-gradient(135deg,#F59E0B,#EF4444)', color:'#fff', border:'none'}} onClick={() => router.push('/lingua/discover')}>✨ Discover</button>
+<button style={{...styles.heroBtn2, background: 'linear-gradient(135deg,#fbbf24,#f59e0b)', color:'#fff', border:'none'}} onClick={() => router.push('/lingua/dream')}>🌟 Dream Studio</button>
 <button style={{...styles.heroBtn2, background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color:'#fff', border:'none'}} onClick={() => router.push('/lingua/roleplay')}>🎭 AI Roleplay</button>
             <button style={styles.heroBtn2} onClick={() => router.push('/lingua/words')}>📚 Word Bank</button>
             <button style={styles.heroBtn2} onClick={() => router.push('/lingua/tutors')}>👩‍🏫 Meet +150 AI Tutors</button>
@@ -738,6 +740,66 @@ export default function LevelHub() {
         ))}
       </div>
 
+      {/* -- Discover Banner -- */}
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px 8px' }}>
+        <div
+          onClick={() => router.push('/lingua/discover')}
+          style={{ borderRadius: 20, overflow: 'hidden', cursor: 'pointer',
+            background: 'linear-gradient(135deg, #0f0c29 0%, #1a1040 50%, #302b63 100%)',
+            padding: '20px 24px', position: 'relative', display: 'flex',
+            alignItems: 'center', gap: 16,
+            boxShadow: '0 4px 24px rgba(99,102,241,0.25)',
+            transition: 'transform .2s, box-shadow .2s' }}
+          onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform='translateY(-3px)'; (e.currentTarget as HTMLDivElement).style.boxShadow='0 8px 32px rgba(99,102,241,0.35)'; }}
+          onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform='translateY(0)'; (e.currentTarget as HTMLDivElement).style.boxShadow='0 4px 24px rgba(99,102,241,0.25)'; }}>
+          <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.2)' }}/>
+          <div style={{ fontSize: 40, flexShrink: 0, position: 'relative' }}>✨</div>
+          <div style={{ position: 'relative', flex: 1 }}>
+            <div style={{ fontSize: 16, fontWeight: 900, color: '#fff', marginBottom: 3 }}>
+              Discover — AI that talks like a human
+            </div>
+            <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', fontWeight: 600 }}>
+              Daily Spark · Today's News · My World · English Mirror · The Character · Finish My Story
+            </div>
+          </div>
+          <div style={{ position: 'relative', padding: '8px 18px', borderRadius: 12,
+            background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff',
+            fontSize: 13, fontWeight: 800, flexShrink: 0 }}>
+            Explore →
+          </div>
+        </div>
+      </div>
+
+
+      {/* -- Dream Studio Banner -- */}
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px 8px' }}>
+        <div
+          onClick={() => router.push('/lingua/dream')}
+          style={{ borderRadius: 20, overflow: 'hidden', cursor: 'pointer',
+            background: 'linear-gradient(135deg, #1a0a00 0%, #3d2000 50%, #5c3800 100%)',
+            padding: '20px 24px', position: 'relative', display: 'flex',
+            alignItems: 'center', gap: 16,
+            boxShadow: '0 4px 24px rgba(251,191,36,0.2)',
+            transition: 'transform .2s, box-shadow .2s' }}
+          onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform='translateY(-3px)'; }}
+          onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform='translateY(0)'; }}>
+          <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.2)' }}/>
+          <div style={{ fontSize: 40, flexShrink: 0, position: 'relative' }}>🌟</div>
+          <div style={{ position: 'relative', flex: 1 }}>
+            <div style={{ fontSize: 16, fontWeight: 900, color: '#fff', marginBottom: 3 }}>
+              Dream Studio — Create something that lasts
+            </div>
+            <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', fontWeight: 600 }}>
+              Novel · Screenplay · Lyrics · Poetry · Art direction — 100% your copyright
+            </div>
+          </div>
+          <div style={{ position: 'relative', padding: '8px 18px', borderRadius: 12,
+            background: 'linear-gradient(135deg,#fbbf24,#f59e0b)', color: '#0F172A',
+            fontSize: 13, fontWeight: 900, flexShrink: 0 }}>
+            Create →
+          </div>
+        </div>
+      </div>
       {/* -- Current Level -- */}
       <section style={styles.currentSection}>
         <p style={styles.currentSub}>YOUR LEARNING PATH</p>

@@ -1,208 +1,66 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-// Firebase를 lazy import로 변경 — 초기화 실패 시 route 전체 crash 방지
-let _db: any = null;
-async function getDb() {
-  if (_db) return _db;
-  try {
-    const { db } = await import('@/lib/firebase');
-    const { getFirestore } = await import('firebase/firestore');
-    _db = db;
-    return _db;
-  } catch(e) {
-    console.warn('[gemini] Firebase init failed:', e);
-    return null;
-  }
-}
+// 완전히 단순화된 Gemini route
+// Firebase 의존성 제거 — API 키만 있으면 작동
 
-const MODELS = [
-  'gemini-2.5-flash',       // most reliable
-  'gemini-1.5-flash',
-  'gemini-1.5-flash-8b',
-];
-const RETRY_DELAYS = [300, 800];  // reduced: was [800, 2000, 4000]
-const REQUEST_TIMEOUT_MS = 20000; // 20s hard timeout per attempt
-const FREE_DAILY_CHAT_LIMIT = 5; // 14일 체험: 5회/일
+const MODELS = ['gemini-2.5-flash', 'gemini-1.5-flash'];
 
-async function callGemini(apiKey: string, model: string, prompt: string, temperature: number) {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
-  try {
-    const res = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }],
-        generationConfig: { temperature, maxOutputTokens: 2048 },
-      }),
-      signal: controller.signal,
-    });
-    clearTimeout(timer);
-    const data = await res.json();
-    return { res, data };
-  } catch (e: any) {
-    clearTimeout(timer);
-    if (e.name === 'AbortError') throw new Error('TIMEOUT');
-    throw e;
-  }
-}
-
-function sleep(ms: number) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-// -- Chat usage helpers (서버사이드 Firestore 직접 접근) ----------------------
-async function getChatUsage(uid: string): Promise<{ date: string; count: number }> {
-  try {
-    const db = await getDb();
-    if (!db) return { date: new Date().toISOString().slice(0, 10), count: 0 };
-    const { doc, getDoc } = await import('firebase/firestore');
-    const snap = await getDoc(doc(db, 'chat_usage', uid));
-    const today = new Date().toISOString().slice(0, 10);
-    if (snap.exists()) {
-      const d = snap.data() as { date: string; count: number };
-      if (d.date === today) return d;
-    }
-  } catch {}
-  return { date: new Date().toISOString().slice(0, 10), count: 0 };
-}
-
-async function incrementChatUsage(uid: string): Promise<void> {
-  const db = await getDb();
-  if (!db) return;
-  const today = new Date().toISOString().slice(0, 10);
-  const current = await getChatUsage(uid);
-  const { doc, setDoc } = await import('firebase/firestore');
-  await setDoc(doc(db, 'chat_usage', uid), {
-    date:  today,
-    count: current.date === today ? current.count + 1 : 1,
-  });
-}
-
-async function getPlanId(uid: string): Promise<string> {
-  try {
-    const db = await getDb();
-    if (!db) return 'free';
-    const { doc, getDoc } = await import('firebase/firestore');
-    const snap = await getDoc(doc(db, 'subscriptions', uid));
-    if (snap.exists()) return snap.data().planId || 'free';
-  } catch {}
-  return 'free';
-}
-
-// ----------------------------------------------------------------------------
 export async function POST(req: NextRequest) {
   try {
-    const { prompt, temperature = 0.7, uid, purpose } = await req.json();
+    const body = await req.json();
+    const { prompt, temperature = 0.7 } = body;
 
-    // -- placement 테스트는 로그인/제한 없이 허용 ---------------------------
-    const isPlacement = purpose === 'placement';
-
-    // -- 채팅 제한 체크 (placement, 게스트 제외) ---------------------------
-    const isGuest = !uid;
-    if (!isPlacement && !isGuest) {
-      if (!uid) {
-        return NextResponse.json(
-          { error: 'LOGIN_REQUIRED', message: 'Please log in to use the AI tutor.' },
-          { status: 401 }
-        );
-      }
-
-      // Parallel Firestore reads — was sequential (2× latency)
-      const [planId, usage] = await Promise.all([
-        getPlanId(uid),
-        getChatUsage(uid),
-      ]);
-      // profile fetch for admin check
-      let profileSnap2: any = null;
-      try {
-        const db2 = await getDb();
-        if (db2) {
-          const { doc, getDoc } = await import('firebase/firestore');
-          profileSnap2 = await getDoc(doc(db2, 'users', uid));
-        }
-      } catch(e) {}
-      const ADMIN_UID_KEY = process.env.ADMIN_EMAIL || 'muntalkofficial@gmail.com';
-      const userEmailFromProfile = profileSnap2.data()?.email as string | undefined;
-      if (userEmailFromProfile === ADMIN_UID_KEY) {
-        // admin → unlimited
-      } else if (planId === 'free') {
-        const today = new Date().toISOString().slice(0, 10);
-        const todayCount = usage.date === today ? usage.count : 0;
-        if (todayCount >= FREE_DAILY_CHAT_LIMIT) {
-          return NextResponse.json(
-            {
-              error: 'CHAT_LIMIT_REACHED',
-              message: `Free trial allows ${FREE_DAILY_CHAT_LIMIT} AI chats per day. Upgrade to Premium for unlimited chats.`,
-              used: todayCount,
-              limit: FREE_DAILY_CHAT_LIMIT,
-            },
-            { status: 429 }
-          );
-        }
-      } // end else if (planId === 'free')
-    }
-    // ------------------------------------------------------------------------
-
-    const apiKey = process.env.GEMINI_API_KEY
-      || process.env.NEXT_PUBLIC_GEMINI_API_KEY
-      || process.env.GOOGLE_GEMINI_API_KEY
-      || '';
+    const apiKey = process.env.GEMINI_API_KEY || '';
 
     if (!apiKey) {
-      return NextResponse.json({ error: 'GEMINI_API_KEY not set in .env.local' }, { status: 500 });
+      console.error('[gemini] GEMINI_API_KEY is not set');
+      return NextResponse.json(
+        { error: 'GEMINI_API_KEY not configured' },
+        { status: 500 }
+      );
     }
 
-    // Try each model with retries
     for (const model of MODELS) {
-      for (let attempt = 0; attempt < 2; attempt++) {  // max 2 attempts per model
-        try {
-          const { res, data } = await callGemini(apiKey, model, prompt, temperature);
+      try {
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: prompt }] }],
+            generationConfig: { temperature, maxOutputTokens: 2048 },
+          }),
+        });
 
-          if (res.ok) {
-            const text = data?.candidates?.[0]?.content?.parts?.[0]?.text ?? '';
-            // 성공 시 사용 횟수 증가 (placement 제외)
-            if (!isPlacement && uid) {
-              // Fire-and-forget — don't await usage increment (saves ~500ms)
-              getPlanId(uid).then(p2 => {
-                if (p2 === 'free') incrementChatUsage(uid).catch(() => {});
-              }).catch(() => {});
-            }
-            if (attempt > 0 || model !== MODELS[0]) {
-              console.log(`[/api/gemini] success model=${model} attempt=${attempt + 1}`);
-            }
-            return NextResponse.json({ text });
-          }
-
-          const status = res.status;
-          const errMsg = data?.error?.message || 'Gemini API error';
-
-          if (status === 503 || status === 429) {
-            console.warn(`[/api/gemini] ${status} model=${model} attempt=${attempt + 1}: ${errMsg}`);
-            if (attempt < 2) { await sleep(RETRY_DELAYS[attempt] ?? 800); continue; }
-            console.warn(`[/api/gemini] giving up on model=${model}`);
-            break;
-          }
-
-          console.error(`[/api/gemini] fatal model=${model}: ${status} ${errMsg}`);
-          return NextResponse.json({ error: errMsg }, { status });
-
-        } catch (fetchErr: any) {
-          console.error(`[/api/gemini] fetch error model=${model} attempt=${attempt + 1}:`, fetchErr.message);
-          if (attempt < 2) { await sleep(RETRY_DELAYS[attempt]); continue; }
-          break;
+        if (res.ok) {
+          const data = await res.json();
+          const text = data?.candidates?.[0]?.content?.parts?.[0]?.text ?? '';
+          return NextResponse.json({ text });
         }
+
+        const errData = await res.json().catch(() => ({}));
+        console.warn(`[gemini] ${model} failed: ${res.status}`, errData);
+
+        // API key invalid — no point trying other models
+        if (res.status === 400 || res.status === 403) {
+          return NextResponse.json(
+            { error: `Gemini API error: ${res.status} — check GEMINI_API_KEY in Vercel` },
+            { status: 500 }
+          );
+        }
+
+      } catch (e: any) {
+        console.error(`[gemini] ${model} exception:`, e.message);
       }
     }
 
     return NextResponse.json(
-      { error: 'Gemini is temporarily overloaded. Please try again in a moment.' },
+      { error: 'All Gemini models failed' },
       { status: 503 }
     );
 
   } catch (err: any) {
-    console.error('/api/gemini error:', err);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    console.error('[gemini] route error:', err);
+    return NextResponse.json({ error: err.message }, { status: 500 });
   }
 }
