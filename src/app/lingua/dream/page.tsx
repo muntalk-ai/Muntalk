@@ -382,7 +382,6 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
           <PaywallModal
             reason="general"
             onClose={() => setShowPaywall(false)}
-            onUpgrade={() => router.push('/pricing')}
           />
         )}
 

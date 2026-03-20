@@ -379,7 +379,6 @@ export default function DiscoverPage() {
           <PaywallModal
             reason="general"
             onClose={() => setShowPaywall(false)}
-            onUpgrade={() => router.push('/pricing')}
           />
         )}
 
