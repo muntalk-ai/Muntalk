@@ -403,96 +403,89 @@ Reply as ${npc.name} in ${targetLang}:`;
       </div>
     </div>
   );
-
-  // ── RESULT ────────────────────────────────────────────────────────────────
-  if (phase==='result') return (
-    <div style={{minHeight:'100vh',background:'#F8FAFC',fontFamily:"'Nunito',sans-serif",
-      display:'flex',alignItems:'center',justifyContent:'center',padding:24}}>
-      <style dangerouslySetInnerHTML={{__html:`@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');`}}/>
-      <div style={{maxWidth:520,width:'100%'}}>
+// ── RESULT ────────────────────────────────────────────────────────────────
+  if (phase === 'result') return (
+    <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito',sans-serif", display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24 }}>
+      <style dangerouslySetInnerHTML={{ __html: `@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');` }} />
+      <div style={{ maxWidth: 520, width: '100%' }}>
         {!result ? (
-          <div style={{textAlign:'center',color:'#94A3B8'}}>
-            <div style={{fontSize:40,marginBottom:12}}>🤖</div>
-            <div style={{fontWeight:700}}>Analysing your performance...</div>
+          <div style={{ textAlign: 'center', color: '#94A3B8' }}>
+            <div style={{ fontSize: 40, marginBottom: 12 }}>🤖</div>
+            <div style={{ fontWeight: 700 }}>Analysing your performance...</div>
           </div>
-        ) :(
+        ) : (
           <>
-            <div style={{textAlign:'center',marginBottom:24}}>
+            <div style={{ textAlign: 'center', marginBottom: 24 }}>
               {result.overallFeedback === '__NO_RESPONSE__' ? (
                 <>
-                  <div style={{fontSize:52,marginBottom:8}}>💤</div>
-                  <div style={{fontSize:22,fontWeight:900,color:'#0F172A',marginBottom:8}}>No response recorded</div>
-                  <div style={{fontSize:14,color:'#64748B',fontWeight:600,lineHeight:1.6}}>
-                    You ended the session without speaking.<br/>Try again and practice with the AI tutor!
+                  <div style={{ fontSize: 52, marginBottom: 8 }}>💤</div>
+                  <div style={{ fontSize: 22, fontWeight: 900, color: '#0F172A', marginBottom: 8 }}>No response recorded</div>
+                  <div style={{ fontSize: 14, color: '#64748B', fontWeight: 600, lineHeight: 1.6 }}>
+                    You ended the session without speaking.<br />Try again and practice with the AI tutor!
                   </div>
                 </>
               ) : (
                 <>
-                  <div style={{fontSize:52,marginBottom:8}}>{result.avgScore>=80?'🏆':result.avgScore>=65?'🎯':'💪'}</div>
-                  <div style={{fontSize:24,fontWeight:900,color:'#0F172A',marginBottom:4}}>Scene Complete!</div>
-                  <div style={{fontSize:48,fontWeight:900,color:accentColor}}>{result.avgScore}</div>
-                  <div style={{fontSize:12,color:'#94A3B8',fontWeight:700}}>{result.turns} turns · +{sessionXP} XP</div>
+                  <div style={{ fontSize: 52, marginBottom: 8 }}>{result.avgScore >= 80 ? '🏆' : result.avgScore >= 65 ? '🎯' : '💪'}</div>
+                  <div style={{ fontSize: 24, fontWeight: 900, color: '#0F172A', marginBottom: 4 }}>Scene Complete!</div>
+                  <div style={{ fontSize: 48, fontWeight: 900, color: accentColor }}>{result.avgScore}</div>
+                  <div style={{ fontSize: 12, color: '#94A3B8', fontWeight: 700 }}>{result.turns} turns · +{sessionXP} XP</div>
                 </>
               )}
             </div>
+
+            {/* ✅ 여기에 있던 잘못 닫힌 </div>를 제거하고 조건을 하나로 묶었습니다 */}
             {result.overallFeedback !== '__NO_RESPONSE__' && result.strongPoints?.length > 0 && (
-             
-              <> {/* ✅✅✅ FIX: Fragment 추가 시작 */}
-
-             <div style={{display:'flex',justifyContent:'center',gap:10,marginBottom:20}}>
-              {npcs.map((npc,i) => { const t=getTutorById(npc.tutorId); return (
-                <div key={i} style={{textAlign:'center'}}>
-                  <img src={t.thumbnail} alt={npc.name} style={{width:44,height:44,borderRadius:'50%',
-                    objectFit:'cover',objectPosition:'center 20%',border:`2px solid ${accentColor}`}}/>
-                  <div style={{fontSize:10,color:'#94A3B8',fontWeight:700,marginTop:3}}>{npc.name}</div>
+              <>
+                <div style={{ display: 'flex', justifyContent: 'center', gap: 10, marginBottom: 20 }}>
+                  {npcs.map((npc, i) => {
+                    const t = getTutorById(npc.tutorId);
+                    return (
+                      <div key={i} style={{ textAlign: 'center' }}>
+                        <img src={t.thumbnail} alt={npc.name} style={{ width: 44, height: 44, borderRadius: '50%', objectFit: 'cover', objectPosition: 'center 20%', border: `2px solid ${accentColor}` }} />
+                        <div style={{ fontSize: 10, color: '#94A3B8', fontWeight: 700, marginTop: 3 }}>{npc.name}</div>
+                      </div>
+                    );
+                  })}
                 </div>
-              );})}
-            </div>
 
-            <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:12,marginBottom:14}}>
-              <div style={{background:'#ECFDF5',border:'1px solid #A7F3D0',borderRadius:14,padding:16}}>
-                <div style={{fontSize:10,fontWeight:800,color:'#059669',marginBottom:8,letterSpacing:1}}>STRENGTHS</div>
-                {result.strongPoints?.map((p: string,i: number)=>(
-                  <div key={i} style={{fontSize:12,color:'#065F46',lineHeight:1.6,marginBottom:4,paddingLeft:8,borderLeft:'2px solid #10B981'}}>{p}</div>
-                ))}
-              </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 14 }}>
+                  <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 14, padding: 16 }}>
+                    <div style={{ fontSize: 10, fontWeight: 800, color: '#059669', marginBottom: 8, letterSpacing: 1 }}>STRENGTHS</div>
+                    {result.strongPoints?.map((p: string, i: number) => (
+                      <div key={i} style={{ fontSize: 12, color: '#065F46', lineHeight: 1.6, marginBottom: 4, paddingLeft: 8, borderLeft: '2px solid #10B981' }}>{p}</div>
+                    ))}
+                  </div>
+                  <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 14, padding: 16 }}>
+                    <div style={{ fontSize: 10, fontWeight: 800, color: '#D97706', marginBottom: 8, letterSpacing: 1 }}>TO IMPROVE</div>
+                    {result.improvements?.map((p: string, i: number) => (
+                      <div key={i} style={{ fontSize: 12, color: '#92400E', lineHeight: 1.6, marginBottom: 4, paddingLeft: 8, borderLeft: '2px solid #F59E0B' }}>{p}</div>
+                    ))}
+                  </div>
+                </div>
 
-              <div style={{background:'#FFFBEB',border:'1px solid #FDE68A',borderRadius:14,padding:16}}>
-                <div style={{fontSize:10,fontWeight:800,color:'#D97706',marginBottom:8,letterSpacing:1}}>TO IMPROVE</div>
-                {result.improvements?.map((p: string,i: number)=>(
-                  <div key={i} style={{fontSize:12,color:'#92400E',lineHeight:1.6,marginBottom:4,paddingLeft:8,borderLeft:'2px solid #F59E0B'}}>{p}</div>
-                ))}
-              </div>
-            </div>
+                <div style={{ background: '#EEF2FF', border: '1px solid #C7D2FE', borderRadius: 14, padding: 16, marginBottom: 20 }}>
+                  <div style={{ fontSize: 10, fontWeight: 800, color: '#6366F1', marginBottom: 6, letterSpacing: 1 }}>OVERALL</div>
+                  <div style={{ fontSize: 13, color: '#3730A3', lineHeight: 1.7, fontWeight: 600 }}>{result.overallFeedback}</div>
+                </div>
 
-            <div style={{background:'#EEF2FF',border:'1px solid #C7D2FE',borderRadius:14,padding:16,marginBottom:20}}>
-              <div style={{fontSize:10,fontWeight:800,color:'#6366F1',marginBottom:6,letterSpacing:1}}>OVERALL</div>
-              <div style={{fontSize:13,color:'#3730A3',lineHeight:1.7,fontWeight:600}}>{result.overallFeedback}</div>
-            </div>
-
-            <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:10}}>
-              <button onClick={()=>{setPhase('playing');setMessages([]);setTurnCount(0);historyRef.current=[];startedRef.current=false;setOpeningDone(false);setActiveChoice(null);setChoiceSteer('');}}
-                style={{padding:'13px',borderRadius:13,border:'1.5px solid #E5E7EB',background:'#fff',
-                  color:'#475569',fontWeight:700,fontSize:14,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
-                Replay
-              </button>
-
-              <button onClick={()=>router.push('/lingua/roleplay')}
-                style={{padding:'13px',borderRadius:13,border:'none',
-                  background:`linear-gradient(135deg,${accentColor},${accentColor}cc)`,
-                  color:'#fff',fontWeight:800,fontSize:14,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
-                More Worlds →
-              </button>
-           </div>
-
-            </>  {/* ✅✅✅ FIX: Fragment 추가 끝 */}
-
-          )}
-        </>
-      )}
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+                  <button onClick={() => { setPhase('playing'); setMessages([]); setTurnCount(0); historyRef.current = []; startedRef.current = false; setOpeningDone(false); setActiveChoice(null); setChoiceSteer(''); }}
+                    style={{ padding: '13px', borderRadius: 13, border: '1.5px solid #E5E7EB', background: '#fff', color: '#475569', fontWeight: 700, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                    Replay
+                  </button>
+                  <button onClick={() => router.push('/lingua/roleplay')}
+                    style={{ padding: '13px', borderRadius: 13, border: 'none', background: `linear-gradient(135deg,${accentColor},${accentColor}cc)`, color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                    More Worlds →
+                  </button>
+                </div>
+              </>
+            )}
+          </>
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
   // ── PLAYING ───────────────────────────────────────────────────────────────
   return (
     <div style={{height:'100dvh',background:'#F8FAFC',fontFamily:"'Nunito',sans-serif",
