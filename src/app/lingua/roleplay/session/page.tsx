@@ -356,22 +356,28 @@ Reply as ${npc.name} in ${targetLang}:`;
 
   const endSession = useCallback(async () => {
     setPhase('result');
-    const scores = messages.filter(m=>m.score!==undefined).map(m=>m.score!);
-    const avg = scores.length ? Math.round(scores.reduce((a,b)=>a+b,0)/scores.length) : 70;
+    const userMsgs = messages.filter(m => m.from === 'user');
+    const scores   = messages.filter(m => m.score !== undefined).map(m => m.score!);
+    const avg      = scores.length ? Math.round(scores.reduce((a,b)=>a+b,0)/scores.length) : 0;
+
+    // No user responses → skip AI analysis entirely
+    if (userMsgs.length === 0) {
+      setResult({ avgScore: 0, turns: 0,
+        strongPoints: [], improvements: [],
+        overallFeedback: '__NO_RESPONSE__' });
+      return;
+    }
+
     try {
       const res = await fetch('/api/gemini', { method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ uid:user?.uid??null, temperature:0.4,
-          prompt:`Analyse this English conversation. Reply in ${nativeLang}. Return ONLY JSON:
-{"strongPoints":["s1","s2"],"improvements":["i1","i2"],"overallFeedback":"2-3 encouraging sentences in ${nativeLang}"}
-Conversation:
-${historyRef.current.map(m=>`${m.npcId==='user'?'Learner':'NPC'}: ${m.content}`).join('\n')}` })
-      });
+          prompt:`Analyse this language learning conversation. Reply in ${nativeLang}. Return ONLY JSON:\n{"strongPoints":["s1","s2"],"improvements":["i1","i2"],"overallFeedback":"2-3 sentences in ${nativeLang}"}\nConversation:\n${historyRef.current.map(m=>(m.npcId==='user'?'Learner':'NPC')+': '+m.content).join('\n')}` })      });
       const data = await res.json();
       const parsed = JSON.parse(data.text?.replace(/```json\s*/gi,'').replace(/```\s*/g,'').trim()||'{}');
-      setResult({ avgScore:avg, turns:turnCount, ...parsed });
+      setResult({ avgScore: avg||70, turns: turnCount, ...parsed });
       popXP(avg>=80?80:avg>=60?50:30);
     } catch {
-      setResult({ avgScore:avg, turns:turnCount,
+      setResult({ avgScore: avg||70, turns: turnCount,
         strongPoints:['Scene completed!'], improvements:['Keep practising!'],
         overallFeedback:'Great effort! Consistent practice builds real fluency.' });
     }
@@ -412,11 +418,24 @@ ${historyRef.current.map(m=>`${m.npcId==='user'?'Learner':'NPC'}: ${m.content}`)
         ) : (
           <>
             <div style={{textAlign:'center',marginBottom:24}}>
-              <div style={{fontSize:52,marginBottom:8}}>{result.avgScore>=80?'🏆':result.avgScore>=65?'🎯':'💪'}</div>
-              <div style={{fontSize:24,fontWeight:900,color:'#0F172A',marginBottom:4}}>Scene Complete!</div>
-              <div style={{fontSize:48,fontWeight:900,color:accentColor}}>{result.avgScore}</div>
-              <div style={{fontSize:12,color:'#94A3B8',fontWeight:700}}>{result.turns} turns · +{sessionXP} XP</div>
+              {result.overallFeedback === '__NO_RESPONSE__' ? (
+                <>
+                  <div style={{fontSize:52,marginBottom:8}}>💤</div>
+                  <div style={{fontSize:22,fontWeight:900,color:'#0F172A',marginBottom:8}}>No response recorded</div>
+                  <div style={{fontSize:14,color:'#64748B',fontWeight:600,lineHeight:1.6}}>
+                    You ended the session without speaking.<br/>Try again and practice with the AI tutor!
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div style={{fontSize:52,marginBottom:8}}>{result.avgScore>=80?'🏆':result.avgScore>=65?'🎯':'💪'}</div>
+                  <div style={{fontSize:24,fontWeight:900,color:'#0F172A',marginBottom:4}}>Scene Complete!</div>
+                  <div style={{fontSize:48,fontWeight:900,color:accentColor}}>{result.avgScore}</div>
+                  <div style={{fontSize:12,color:'#94A3B8',fontWeight:700}}>{result.turns} turns · +{sessionXP} XP</div>
+                </>
+              )}
             </div>
+            {result.overallFeedback !== '__NO_RESPONSE__' && result.strongPoints?.length > 0 && (
             <div style={{display:'flex',justifyContent:'center',gap:10,marginBottom:20}}>
               {npcs.map((npc,i) => { const t=getTutorById(npc.tutorId); return (
                 <div key={i} style={{textAlign:'center'}}>
@@ -513,8 +532,17 @@ ${historyRef.current.map(m=>`${m.npcId==='user'?'Learner':'NPC'}: ${m.content}`)
           const vidH = npcs.length === 1 ? 220 : 170;
           return (
             <div key={npc.id} style={{
-              flex:1,position:'relative',height:vidH,overflow:'hidden',minWidth:0,
-              borderLeft:ni>0?`1px solid ${accentColor}30`:'none',background:'#111'}}>
+              display:'flex',alignItems:'center',justifyContent:'center',
+              padding:'12px 8px',
+              borderLeft:ni>0?`1px solid ${accentColor}30`:'none',
+              background:'#0a0a0a', flex:1, minWidth:0}}>
+              <div style={{position:'relative',
+                width: npcs.length===1 ? 120 : 90,
+                height: npcs.length===1 ? 120 : 90,
+                borderRadius:'50%', overflow:'hidden', flexShrink:0,
+                border:`3px solid ${isActive ? accentColor : '#333'}`,
+                boxShadow: isActive ? `0 0 0 4px ${accentColor}30` : 'none',
+                transition:'border-color .3s, box-shadow .3s'}}>
               {/* IDLE — visible when not speaking */}
               <video src={t.videoIdle} autoPlay loop muted playsInline style={{
                 position:'absolute',inset:0,width:'100%',height:'100%',

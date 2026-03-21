@@ -131,6 +131,8 @@ function StarterContent() {
 
   const audioRef   = useRef<HTMLAudioElement|null>(null);
   const chatEndRef = useRef<HTMLDivElement>(null);
+  const recRef     = useRef<any>(null);
+  const [isListening, setIsListening] = useState(false);
 
   const langId  = params.get('lang')    || (typeof window !== 'undefined' ? localStorage.getItem('mt_learn_lang') : null) || 'en-US';
   const subLang = params.get('subLang') || (typeof window !== 'undefined' ? localStorage.getItem('mt_native_lang') : null) || 'en-US';
@@ -144,8 +146,29 @@ function StarterContent() {
 
   // Stop audio on unmount
   useEffect(() => {
-    return () => { audioRef.current?.pause(); };
+    return () => {
+      audioRef.current?.pause();
+      if (recRef.current) { try { recRef.current.stop(); } catch {} }
+    };
   }, []);
+
+  // STT setup for chat
+  useEffect(() => {
+    const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (!SR) return;
+    const rec = new SR();
+    rec.lang = langId;
+    rec.continuous = false;
+    rec.interimResults = false;
+    rec.onresult = (e: any) => {
+      const transcript = e.results[0][0].transcript.trim();
+      setIsListening(false);
+      if (transcript) setChatInput(transcript);
+    };
+    rec.onend = () => setIsListening(false);
+    rec.onerror = () => setIsListening(false);
+    recRef.current = rec;
+  }, [langId]);
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -400,18 +423,26 @@ Rules:
     setChatStarted(false);
     setChatLoading(true);
     const unitWords = words.map(w => w.word).join(', ');
-    const prompt = `You are a very warm and encouraging language tutor for a complete beginner learning ${langId.split('-')[0].toUpperCase()} as their first language.
-
-The student just learned these words: ${unitWords}
+    const LANG_NAMES: Record<string,string> = {
+      'en-US':'English','ko-KR':'Korean','ja-JP':'Japanese','zh-CN':'Chinese',
+      'fr-FR':'French','de-DE':'German','es-ES':'Spanish','it-IT':'Italian',
+      'pt-BR':'Portuguese','ru-RU':'Russian','ar-XA':'Arabic','hi-IN':'Hindi',
+      'vi-VN':'Vietnamese','th-TH':'Thai','id-ID':'Indonesian','tr-TR':'Turkish',
+    };
+    const targetLangName = LANG_NAMES[langId] || langId.split('-')[0];
+    const nativeLangName = LANG_NAMES[subLang] || 'English';
+    const isEnglishTarget = langId.startsWith('en');
+    const prompt = `You are a warm and encouraging tutor for a complete beginner.
+The student just learned these ${targetLangName} words: ${unitWords}
 Unit topic: "${unit.title}"
 
-STRICT RULES:
-- Keep your message to MAX 2 short sentences
-- Use ONLY the words they just learned + "you", "very", "good", "great", "!"
-- Ask them to say just ONE word from their lesson (pick the easiest one)
-- Be enthusiastic and warm
-- Do NOT use any complex vocabulary
-- Example style: "Great job! 🎉 Can you say '${words[0].word}'?"`;
+LANGUAGE RULES:
+- If the student's native language (${nativeLangName}) is different from ${targetLangName}: write your message FIRST in ${targetLangName}, then add a short translation in ${nativeLangName} in parentheses
+- If both are the same language: use only ${targetLangName}
+- STRICT: Keep to MAX 2 short sentences total
+- Ask them to say or type just ONE word from the lesson
+- Be enthusiastic with emoji 🎉
+- Example: "${words[0].word}! Can you say this? (Can you say this?)"`;
     const text = await callGemini(prompt).catch(() => `Great work! 🎉 Can you say "${words[0].word}"?`);
     setChatMsgs([{ role: 'tutor', text }]);
     speak(text);
@@ -431,18 +462,25 @@ STRICT RULES:
       .map(m => `${m.role === 'user' ? 'Student' : 'Tutor'}: ${m.text}`).join('\n');
 
     const unitWords = words.map(w => w.word).join(', ');
-    const prompt = `You are a warm tutor for a COMPLETE BEGINNER learning their very first words.
-Known words: ${unitWords}
+    const CHAT_LANG_NAMES: Record<string,string> = {
+      'en-US':'English','ko-KR':'Korean','ja-JP':'Japanese','zh-CN':'Chinese',
+      'fr-FR':'French','de-DE':'German','es-ES':'Spanish','it-IT':'Italian',
+      'pt-BR':'Portuguese','ru-RU':'Russian','ar-XA':'Arabic','hi-IN':'Hindi',
+      'vi-VN':'Vietnamese','th-TH':'Thai','id-ID':'Indonesian','tr-TR':'Turkish',
+    };
+    const tLang = CHAT_LANG_NAMES[langId] || langId.split('-')[0];
+    const nLang = CHAT_LANG_NAMES[subLang] || 'English';
+    const prompt = `You are a warm tutor for a COMPLETE BEGINNER learning their very first ${tLang} words.
+Known ${tLang} words: ${unitWords}
 Conversation so far:
 ${history}
 
-STRICT RULES:
-- Max 2 sentences
-- Encourage them warmly no matter what they wrote
-- Only use words from their lesson + "good", "great", "yes", "perfect", "wow"
-- If they got it right, celebrate loudly 🎉
-- If wrong, gently say the correct word once
-- End with asking them to say one more word from the list`;
+LANGUAGE RULES:
+- Write responses in ${tLang} + add a brief ${nLang} translation in parentheses if they differ
+- Max 2 short sentences
+- If correct: celebrate loudly 🎉
+- If wrong: gently say the correct ${tLang} word once
+- End by asking them to say one more word from the list`;
 
     const reply = await callGemini(prompt).catch(() => `Good try! 🌟 You're doing great!`);
     setChatMsgs(prev => [...prev, { role: 'tutor', text: reply }]);
@@ -673,8 +711,14 @@ STRICT RULES:
           <div style={{ fontSize: 42, fontWeight: 900, color: '#0F172A',
             marginBottom: 6, letterSpacing: -1 }}>{w.word}</div>
           <div style={{ fontSize: 16, color: '#94A3B8', fontWeight: 700,
-            marginBottom: 16, fontStyle: 'italic' }}>{w.phonetic}</div>
-          <div style={{ fontSize: 14, color: ACCENT, fontWeight: 800 }}>
+            marginBottom: 8, fontStyle: 'italic' }}>{w.phonetic}</div>
+          {/* Original English word (if translated) */}
+          {(w as any).original && (w as any).original !== w.word && (
+            <div style={{ fontSize: 13, color: '#94A3B8', marginBottom: 6, fontWeight: 600 }}>
+              {(w as any).original}
+            </div>
+          )}
+          <div style={{ fontSize: 14, color: ACCENT, fontWeight: 800, marginBottom: 0 }}>
             🔊 Tap to hear
           </div>
         </div>
@@ -1037,22 +1081,38 @@ STRICT RULES:
 
       {/* Input */}
       <div style={{ padding: '12px 16px', background: 'white',
-        borderTop: '1px solid #F1F5F9', display: 'flex', gap: 10 }}>
+        borderTop: '1px solid #F1F5F9', display: 'flex', gap: 8 }}>
         <input
           value={chatInput}
           onChange={e => setChatInput(e.target.value)}
           onKeyDown={e => e.key === 'Enter' && handleChatSend()}
-          placeholder="Type a word..."
+          placeholder="Type or tap mic..."
           disabled={chatLoading || !chatStarted}
-          style={{ flex: 1, padding: '14px 18px', borderRadius: 14,
-            border: '2px solid #E2E8F0', fontSize: 17, fontFamily: "'Nunito',sans-serif",
+          style={{ flex: 1, padding: '14px 16px', borderRadius: 14,
+            border: '2px solid #E2E8F0', fontSize: 16, fontFamily: "'Nunito',sans-serif",
             fontWeight: 700, outline: 'none', background: '#F8FAFC' }}
         />
+        {/* Mic button */}
+        <button
+          onMouseDown={() => {
+            if (!recRef.current || isListening || chatLoading || !chatStarted) return;
+            try { recRef.current.start(); setIsListening(true); } catch {}
+          }}
+          disabled={chatLoading || !chatStarted}
+          style={{ ...btnBase, padding: '14px 16px', fontSize: 18,
+            background: isListening ? '#EF4444' : '#F1F5F9',
+            color: isListening ? 'white' : '#64748B',
+            border: isListening ? 'none' : '2px solid #E2E8F0',
+            animation: isListening ? 'pulse 1s infinite' : 'none',
+            flexShrink: 0 }}>
+          {isListening ? '⏹' : '🎤'}
+        </button>
         <button onClick={handleChatSend}
           disabled={!chatInput.trim() || chatLoading || !chatStarted}
-          style={{ ...btnBase, padding: '14px 20px', fontSize: 20,
+          style={{ ...btnBase, padding: '14px 18px', fontSize: 18,
             background: chatInput.trim() && !chatLoading ? ACCENT : '#E2E8F0',
-            color: chatInput.trim() && !chatLoading ? 'white' : '#94A3B8' }}>
+            color: chatInput.trim() && !chatLoading ? 'white' : '#94A3B8',
+            flexShrink: 0 }}>
           →
         </button>
       </div>
