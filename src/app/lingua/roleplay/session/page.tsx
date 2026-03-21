@@ -415,7 +415,7 @@ Reply as ${npc.name} in ${targetLang}:`;
             <div style={{fontSize:40,marginBottom:12}}>🤖</div>
             <div style={{fontWeight:700}}>Analysing your performance...</div>
           </div>
-        ) : (
+        ) :(
           <>
             <div style={{textAlign:'center',marginBottom:24}}>
               {result.overallFeedback === '__NO_RESPONSE__' ? (
@@ -436,7 +436,10 @@ Reply as ${npc.name} in ${targetLang}:`;
               )}
             </div>
             {result.overallFeedback !== '__NO_RESPONSE__' && result.strongPoints?.length > 0 && (
-            <div style={{display:'flex',justifyContent:'center',gap:10,marginBottom:20}}>
+             
+              <> {/* ✅✅✅ FIX: Fragment 추가 시작 */}
+
+             <div style={{display:'flex',justifyContent:'center',gap:10,marginBottom:20}}>
               {npcs.map((npc,i) => { const t=getTutorById(npc.tutorId); return (
                 <div key={i} style={{textAlign:'center'}}>
                   <img src={t.thumbnail} alt={npc.name} style={{width:44,height:44,borderRadius:'50%',
@@ -445,6 +448,7 @@ Reply as ${npc.name} in ${targetLang}:`;
                 </div>
               );})}
             </div>
+
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:12,marginBottom:14}}>
               <div style={{background:'#ECFDF5',border:'1px solid #A7F3D0',borderRadius:14,padding:16}}>
                 <div style={{fontSize:10,fontWeight:800,color:'#059669',marginBottom:8,letterSpacing:1}}>STRENGTHS</div>
@@ -452,6 +456,7 @@ Reply as ${npc.name} in ${targetLang}:`;
                   <div key={i} style={{fontSize:12,color:'#065F46',lineHeight:1.6,marginBottom:4,paddingLeft:8,borderLeft:'2px solid #10B981'}}>{p}</div>
                 ))}
               </div>
+
               <div style={{background:'#FFFBEB',border:'1px solid #FDE68A',borderRadius:14,padding:16}}>
                 <div style={{fontSize:10,fontWeight:800,color:'#D97706',marginBottom:8,letterSpacing:1}}>TO IMPROVE</div>
                 {result.improvements?.map((p: string,i: number)=>(
@@ -459,29 +464,35 @@ Reply as ${npc.name} in ${targetLang}:`;
                 ))}
               </div>
             </div>
+
             <div style={{background:'#EEF2FF',border:'1px solid #C7D2FE',borderRadius:14,padding:16,marginBottom:20}}>
               <div style={{fontSize:10,fontWeight:800,color:'#6366F1',marginBottom:6,letterSpacing:1}}>OVERALL</div>
               <div style={{fontSize:13,color:'#3730A3',lineHeight:1.7,fontWeight:600}}>{result.overallFeedback}</div>
             </div>
+
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:10}}>
               <button onClick={()=>{setPhase('playing');setMessages([]);setTurnCount(0);historyRef.current=[];startedRef.current=false;setOpeningDone(false);setActiveChoice(null);setChoiceSteer('');}}
                 style={{padding:'13px',borderRadius:13,border:'1.5px solid #E5E7EB',background:'#fff',
                   color:'#475569',fontWeight:700,fontSize:14,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
                 Replay
               </button>
+
               <button onClick={()=>router.push('/lingua/roleplay')}
                 style={{padding:'13px',borderRadius:13,border:'none',
                   background:`linear-gradient(135deg,${accentColor},${accentColor}cc)`,
                   color:'#fff',fontWeight:800,fontSize:14,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
                 More Worlds →
               </button>
-            </div>
-          </>
-        )}
-      </div>
-    </div>
-  );
+           </div>
 
+            </>  {/* ✅✅✅ FIX: Fragment 추가 끝 */}
+
+          )}
+        </>
+      )}
+    </div>
+  </div>
+);
   // ── PLAYING ───────────────────────────────────────────────────────────────
   return (
     <div style={{height:'100dvh',background:'#F8FAFC',fontFamily:"'Nunito',sans-serif",
