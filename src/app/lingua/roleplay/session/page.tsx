@@ -403,95 +403,96 @@ Reply as ${npc.name} in ${targetLang}:`;
       </div>
     </div>
   );
-// ── RESULT ────────────────────────────────────────────────────────────────
-  if (phase === 'result') return (
-    <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito',sans-serif", display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24 }}>
-      <style dangerouslySetInnerHTML={{ __html: `@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');` }} />
-      <div style={{ maxWidth: 520, width: '100%' }}>
-        {!result ? (
-          <div style={{ textAlign: 'center', color: '#94A3B8' }}>
-            <div style={{ fontSize: 40, marginBottom: 12 }}>🤖</div>
-            <div style={{ fontWeight: 700 }}>Analysing your performance...</div>
-          </div>
-        ) : (
-          <>
-            <div style={{ textAlign: 'center', marginBottom: 24 }}>
-              {result.overallFeedback === '__NO_RESPONSE__' ? (
+
+  // ── RESULT ────────────────────────────────────────────────────────────────
+  if (phase === 'result') {
+    return (
+      <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito',sans-serif", display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24 }}>
+        <style dangerouslySetInnerHTML={{ __html: `@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');` }} />
+        <div style={{ maxWidth: 520, width: '100%' }}>
+          {!result ? (
+            <div style={{ textAlign: 'center', color: '#94A3B8' }}>
+              <div style={{ fontSize: 40, marginBottom: 12 }}>🤖</div>
+              <div style={{ fontWeight: 700 }}>Analysing your performance...</div>
+            </div>
+          ) : (
+            <>
+              <div style={{ textAlign: 'center', marginBottom: 24 }}>
+                {result.overallFeedback === '__NO_RESPONSE__' ? (
+                  <>
+                    <div style={{ fontSize: 52, marginBottom: 8 }}>💤</div>
+                    <div style={{ fontSize: 22, fontWeight: 900, color: '#0F172A', marginBottom: 8 }}>No response recorded</div>
+                    <div style={{ fontSize: 14, color: '#64748B', fontWeight: 600, lineHeight: 1.6 }}>
+                      You ended the session without speaking.<br />Try again and practice with the AI tutor!
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div style={{ fontSize: 52, marginBottom: 8 }}>{result.avgScore >= 80 ? '🏆' : result.avgScore >= 65 ? '🎯' : '💪'}</div>
+                    <div style={{ fontSize: 24, fontWeight: 900, color: '#0F172A', marginBottom: 4 }}>Scene Complete!</div>
+                    <div style={{ fontSize: 48, fontWeight: 900, color: accentColor }}>{result.avgScore}</div>
+                    <div style={{ fontSize: 12, color: '#94A3B8', fontWeight: 700 }}>{result.turns} turns · +{sessionXP} XP</div>
+                  </>
+                )}
+              </div>
+
+              {result.overallFeedback !== '__NO_RESPONSE__' && (result.strongPoints?.length ?? 0) > 0 && (
                 <>
-                  <div style={{ fontSize: 52, marginBottom: 8 }}>💤</div>
-                  <div style={{ fontSize: 22, fontWeight: 900, color: '#0F172A', marginBottom: 8 }}>No response recorded</div>
-                  <div style={{ fontSize: 14, color: '#64748B', fontWeight: 600, lineHeight: 1.6 }}>
-                    You ended the session without speaking.<br />Try again and practice with the AI tutor!
+                  <div style={{ display: 'flex', justifyContent: 'center', gap: 10, marginBottom: 20 }}>
+                    {npcs.map((npc, i) => {
+                      const t = getTutorById(npc.tutorId);
+                      return (
+                        <div key={i} style={{ textAlign: 'center' }}>
+                          <img src={t?.thumbnail} alt={npc.name} style={{ width: 44, height: 44, borderRadius: '50%', objectFit: 'cover', objectPosition: 'center 20%', border: `2px solid ${accentColor}` }} />
+                          <div style={{ fontSize: 10, color: '#94A3B8', fontWeight: 700, marginTop: 3 }}>{npc.name}</div>
+                        </div>
+                      );
+                    })}
                   </div>
-                </>
-              ) : (
-                <>
-                  <div style={{ fontSize: 52, marginBottom: 8 }}>{result.avgScore >= 80 ? '🏆' : result.avgScore >= 65 ? '🎯' : '💪'}</div>
-                  <div style={{ fontSize: 24, fontWeight: 900, color: '#0F172A', marginBottom: 4 }}>Scene Complete!</div>
-                  <div style={{ fontSize: 48, fontWeight: 900, color: accentColor }}>{result.avgScore}</div>
-                  <div style={{ fontSize: 12, color: '#94A3B8', fontWeight: 700 }}>{result.turns} turns · +{sessionXP} XP</div>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 14 }}>
+                    <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 14, padding: 16 }}>
+                      <div style={{ fontSize: 10, fontWeight: 800, color: '#059669', marginBottom: 8, letterSpacing: 1 }}>STRENGTHS</div>
+                      {result.strongPoints?.map((p: string, i: number) => (
+                        <div key={i} style={{ fontSize: 12, color: '#065F46', lineHeight: 1.6, marginBottom: 4, paddingLeft: 8, borderLeft: '2px solid #10B981' }}>{p}</div>
+                      ))}
+                    </div>
+                    <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 14, padding: 16 }}>
+                      <div style={{ fontSize: 10, fontWeight: 800, color: '#D97706', marginBottom: 8, letterSpacing: 1 }}>TO IMPROVE</div>
+                      {result.improvements?.map((p: string, i: number) => (
+                        <div key={i} style={{ fontSize: 12, color: '#92400E', lineHeight: 1.6, marginBottom: 4, paddingLeft: 8, borderLeft: '2px solid #F59E0B' }}>{p}</div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ background: '#EEF2FF', border: '1px solid #C7D2FE', borderRadius: 14, padding: 16, marginBottom: 20 }}>
+                    <div style={{ fontSize: 10, fontWeight: 800, color: '#6366F1', marginBottom: 6, letterSpacing: 1 }}>OVERALL</div>
+                    <div style={{ fontSize: 13, color: '#3730A3', lineHeight: 1.7, fontWeight: 600 }}>{result.overallFeedback}</div>
+                  </div>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+                    <button onClick={() => { setPhase('playing'); setMessages([]); setTurnCount(0); historyRef.current = []; startedRef.current = false; setOpeningDone(false); setActiveChoice(null); setChoiceSteer(''); }}
+                      style={{ padding: '13px', borderRadius: 13, border: '1.5px solid #E5E7EB', background: '#fff', color: '#475569', fontWeight: 700, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                      Replay
+                    </button>
+                    <button onClick={() => router.push('/lingua/roleplay')}
+                      style={{ padding: '13px', borderRadius: 13, border: 'none', background: `linear-gradient(135deg,${accentColor},${accentColor}cc)`, color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                      More Worlds →
+                    </button>
+                  </div>
                 </>
               )}
-            </div>
-
-            {/* ✅ 여기에 있던 잘못 닫힌 </div>를 제거하고 조건을 하나로 묶었습니다 */}
-            {result.overallFeedback !== '__NO_RESPONSE__' && result.strongPoints?.length > 0 && (
-              <>
-                <div style={{ display: 'flex', justifyContent: 'center', gap: 10, marginBottom: 20 }}>
-                  {npcs.map((npc, i) => {
-                    const t = getTutorById(npc.tutorId);
-                    return (
-                      <div key={i} style={{ textAlign: 'center' }}>
-                        <img src={t.thumbnail} alt={npc.name} style={{ width: 44, height: 44, borderRadius: '50%', objectFit: 'cover', objectPosition: 'center 20%', border: `2px solid ${accentColor}` }} />
-                        <div style={{ fontSize: 10, color: '#94A3B8', fontWeight: 700, marginTop: 3 }}>{npc.name}</div>
-                      </div>
-                    );
-                  })}
-                </div>
-
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 14 }}>
-                  <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 14, padding: 16 }}>
-                    <div style={{ fontSize: 10, fontWeight: 800, color: '#059669', marginBottom: 8, letterSpacing: 1 }}>STRENGTHS</div>
-                    {result.strongPoints?.map((p: string, i: number) => (
-                      <div key={i} style={{ fontSize: 12, color: '#065F46', lineHeight: 1.6, marginBottom: 4, paddingLeft: 8, borderLeft: '2px solid #10B981' }}>{p}</div>
-                    ))}
-                  </div>
-                  <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 14, padding: 16 }}>
-                    <div style={{ fontSize: 10, fontWeight: 800, color: '#D97706', marginBottom: 8, letterSpacing: 1 }}>TO IMPROVE</div>
-                    {result.improvements?.map((p: string, i: number) => (
-                      <div key={i} style={{ fontSize: 12, color: '#92400E', lineHeight: 1.6, marginBottom: 4, paddingLeft: 8, borderLeft: '2px solid #F59E0B' }}>{p}</div>
-                    ))}
-                  </div>
-                </div>
-
-                <div style={{ background: '#EEF2FF', border: '1px solid #C7D2FE', borderRadius: 14, padding: 16, marginBottom: 20 }}>
-                  <div style={{ fontSize: 10, fontWeight: 800, color: '#6366F1', marginBottom: 6, letterSpacing: 1 }}>OVERALL</div>
-                  <div style={{ fontSize: 13, color: '#3730A3', lineHeight: 1.7, fontWeight: 600 }}>{result.overallFeedback}</div>
-                </div>
-
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
-                  <button onClick={() => { setPhase('playing'); setMessages([]); setTurnCount(0); historyRef.current = []; startedRef.current = false; setOpeningDone(false); setActiveChoice(null); setChoiceSteer(''); }}
-                    style={{ padding: '13px', borderRadius: 13, border: '1.5px solid #E5E7EB', background: '#fff', color: '#475569', fontWeight: 700, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
-                    Replay
-                  </button>
-                  <button onClick={() => router.push('/lingua/roleplay')}
-                    style={{ padding: '13px', borderRadius: 13, border: 'none', background: `linear-gradient(135deg,${accentColor},${accentColor}cc)`, color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
-                    More Worlds →
-                  </button>
-                </div>
-              </>
-            )}
-          </>
-        )}
+            </>
+          )}
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
+
   // ── PLAYING ───────────────────────────────────────────────────────────────
   return (
-    <div style={{height:'100dvh',background:'#F8FAFC',fontFamily:"'Nunito',sans-serif",
-      display:'flex',flexDirection:'column',overflow:'hidden',color:'#0F172A'}}>
-      <style dangerouslySetInnerHTML={{__html:`
+    <div style={{ height: '100dvh', background: '#F8FAFC', fontFamily: "'Nunito',sans-serif", display: 'flex', flexDirection: 'column', overflow: 'hidden', color: '#0F172A' }}>
+      <style dangerouslySetInnerHTML={{ __html: `
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
         @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
         @keyframes xpPop{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-36px)}}
@@ -499,194 +500,131 @@ Reply as ${npc.name} in ${targetLang}:`;
         @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,.5)}70%{box-shadow:0 0 0 10px rgba(239,68,68,0)}}
         @keyframes glow{0%,100%{opacity:.5}50%{opacity:1}}
         @keyframes choiceIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-      `}}/>
+      ` }} />
 
       {/* TOP BAR */}
-      <div style={{display:'flex',alignItems:'center',gap:10,padding:'10px 14px',
-        background:'#fff',borderBottom:'1px solid #F1F5F9',flexShrink:0,
-        boxShadow:'0 1px 4px rgba(0,0,0,0.04)'}}>
-        <button onClick={()=>{if(audioRef.current){audioRef.current.pause();audioRef.current=null;}endSession();}}
-          style={{background:'#F1F5F9',border:'none',borderRadius:10,padding:'7px 12px',
-            color:'#64748B',fontSize:12,fontWeight:700,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', background: '#fff', borderBottom: '1px solid #F1F5F9', flexShrink: 0, boxShadow: '0 1px 4px rgba(0,0,0,0.04)' }}>
+        <button onClick={() => { if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; } endSession(); }}
+          style={{ background: '#F1F5F9', border: 'none', borderRadius: 10, padding: '7px 12px', color: '#64748B', fontSize: 12, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
           ✕ End
         </button>
-        <div style={{flex:1,textAlign:'center'}}>
-          <div style={{fontSize:14,fontWeight:900}}>
-            {(everyday?.emoji||world?.emoji)} {everyday?.title||world?.title}
+        <div style={{ flex: 1, textAlign: 'center' }}>
+          <div style={{ fontSize: 14, fontWeight: 900 }}>
+            {(everyday?.emoji || world?.emoji)} {everyday?.title || world?.title}
           </div>
-          <div style={{fontSize:10,color:'#94A3B8',fontWeight:700}}>
+          <div style={{ fontSize: 10, color: '#94A3B8', fontWeight: 700 }}>
             Turn {turnCount}/10 · {difficulty}
             {showNative ? ' · Subtitles ON' : ''}
           </div>
         </div>
-        <div style={{fontSize:12,fontWeight:800,color:accentColor}}>+{sessionXP} XP</div>
+        <div style={{ fontSize: 12, fontWeight: 800, color: accentColor }}>+{sessionXP} XP</div>
       </div>
 
       {/* Progress */}
-      <div style={{height:3,background:'#F1F5F9',flexShrink:0}}>
-        <div style={{height:'100%',width:`${(turnCount/10)*100}%`,
-          background:accentColor,transition:'width .5s ease'}}/>
+      <div style={{ height: 3, background: '#F1F5F9', flexShrink: 0 }}>
+        <div style={{ height: '100%', width: `${(turnCount / 10) * 100}%`, background: accentColor, transition: 'width .5s ease' }} />
       </div>
 
-      {/* TUTOR VIDEOS — opacity swap idle↔talk, full width */}
-      <div style={{display:'flex',flexShrink:0,background:'#0a0a0a',
-        borderBottom:`2px solid ${accentColor}30`}}>
-        {npcs.map((npc,ni) => {
+      {/* TUTOR VIDEOS */}
+      <div style={{ display: 'flex', flexShrink: 0, background: '#0a0a0a', borderBottom: `2px solid ${accentColor}30` }}>
+        {npcs.map((npc, ni) => {
           const t = getTutorById(npc.tutorId);
           const isActive = speakingId === npc.tutorId;
-          const vidH = npcs.length === 1 ? 220 : 170;
           return (
             <div key={npc.id} style={{
-              display:'flex',alignItems:'center',justifyContent:'center',
-              padding:'12px 8px',
-              borderLeft:ni>0?`1px solid ${accentColor}30`:'none',
-              background:'#0a0a0a', flex:1, minWidth:0}}>
-              <div style={{position:'relative',
-                width: npcs.length===1 ? 120 : 90,
-                height: npcs.length===1 ? 120 : 90,
-                borderRadius:'50%', overflow:'hidden', flexShrink:0,
-                border:`3px solid ${isActive ? accentColor : '#333'}`,
-                boxShadow: isActive ? `0 0 0 4px ${accentColor}30` : 'none',
-                transition:'border-color .3s, box-shadow .3s'}}>
-              {/* IDLE — visible when not speaking */}
-              <video src={t.videoIdle} autoPlay loop muted playsInline style={{
-                position:'absolute',inset:0,width:'100%',height:'100%',
-                objectFit:'cover',objectPosition:'center top',display:'block',
-                opacity:isActive?0:1,filter:'brightness(0.72)',transition:'opacity .25s'}}/>
-              {/* TALK — visible when speaking */}
-              <video src={t.videoTalk} autoPlay loop muted playsInline style={{
-                position:'absolute',inset:0,width:'100%',height:'100%',
-                objectFit:'cover',objectPosition:'center top',display:'block',
-                opacity:isActive?1:0,filter:'brightness(1.08)',transition:'opacity .25s'}}/>
-              {/* Gradient + name */}
-              <div style={{position:'absolute',bottom:0,left:0,right:0,
-                padding:'20px 10px 8px',pointerEvents:'none',
-                background:'linear-gradient(to top,rgba(0,0,0,0.88),transparent)'}}>
-                <div style={{display:'flex',alignItems:'center',gap:5}}>
-                  {isActive&&[0,1,2].map(i=>(
-                    <div key={i} style={{width:3,borderRadius:2,background:accentColor,
-                      height:4+i*3,animation:`glow .5s ${i*.15}s infinite`}}/>
-                  ))}
-                  <span style={{fontSize:12,fontWeight:800,color:isActive?accentColor:'#94A3B8'}}>{npc.name}</span>
-                  <span style={{fontSize:9,color:'#475569'}}>· {npc.role}</span>
+              display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '12px 8px',
+              borderLeft: ni > 0 ? `1px solid ${accentColor}30` : 'none', background: '#0a0a0a', flex: 1, minWidth: 0
+            }}>
+              <div style={{
+                position: 'relative', width: npcs.length === 1 ? 120 : 90, height: npcs.length === 1 ? 120 : 90,
+                borderRadius: '50%', overflow: 'hidden', flexShrink: 0, border: `3px solid ${isActive ? accentColor : '#333'}`,
+                boxShadow: isActive ? `0 0 0 4px ${accentColor}30` : 'none', transition: 'border-color .3s, box-shadow .3s'
+              }}>
+                <video src={t.videoIdle} autoPlay loop muted playsInline style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block', opacity: isActive ? 0 : 1, filter: 'brightness(0.72)', transition: 'opacity .25s' }} />
+                <video src={t.videoTalk} autoPlay loop muted playsInline style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block', opacity: isActive ? 1 : 0, filter: 'brightness(1.08)', transition: 'opacity .25s' }} />
+                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '20px 10px 8px', pointerEvents: 'none', background: 'linear-gradient(to top,rgba(0,0,0,0.88),transparent)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                    {isActive && [0, 1, 2].map(i => (
+                      <div key={i} style={{ width: 3, borderRadius: 2, background: accentColor, height: 4 + i * 3, animation: `glow .5s ${i * .15}s infinite` }} />
+                    ))}
+                    <span style={{ fontSize: 12, fontWeight: 800, color: isActive ? accentColor : '#94A3B8' }}>{npc.name}</span>
+                    <span style={{ fontSize: 9, color: '#475569' }}>· {npc.role}</span>
+                  </div>
                 </div>
+                {isActive && <div style={{ position: 'absolute', inset: 0, outline: `3px solid ${accentColor}`, pointerEvents: 'none' }} />}
               </div>
-              {isActive&&<div style={{position:'absolute',inset:0,outline:`3px solid ${accentColor}`,pointerEvents:'none'}}/>}
             </div>
           );
         })}
       </div>
 
-            {/* CHAT */}
-      <div ref={chatRef} style={{flex:1,overflowY:'auto',padding:'14px',
-        display:'flex',flexDirection:'column',gap:10}}>
-
+      {/* CHAT */}
+      <div ref={chatRef} style={{ flex: 1, overflowY: 'auto', padding: '14px', display: 'flex', flexDirection: 'column', gap: 10 }}>
         {!openingDone && (
-          <div style={{textAlign:'center',padding:'20px',color:'#94A3B8'}}>
-            <div style={{display:'flex',justifyContent:'center',gap:5,alignItems:'center'}}>
-              {[0,1,2].map(d=>(
-                <div key={d} style={{width:7,height:7,borderRadius:'50%',background:accentColor,
-                  animation:`thinking .9s ${d*.2}s infinite`}}/>
+          <div style={{ textAlign: 'center', padding: '20px', color: '#94A3B8' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: 5, alignItems: 'center' }}>
+              {[0, 1, 2].map(d => (
+                <div key={d} style={{ width: 7, height: 7, borderRadius: '50%', background: accentColor, animation: `thinking .9s ${d * .2}s infinite` }} />
               ))}
-              <span style={{fontSize:12,fontWeight:700,marginLeft:8}}>Setting the scene...</span>
+              <span style={{ fontSize: 12, fontWeight: 700, marginLeft: 8 }}>Setting the scene...</span>
             </div>
           </div>
         )}
 
         {messages.map(msg => {
-          if (msg.from==='choice') return (
-            <div key={msg.id} style={{textAlign:'center',animation:'fadeUp .3s ease'}}>
-              <span style={{display:'inline-block',padding:'4px 14px',borderRadius:99,fontSize:12,
-                fontWeight:800,background:`${accentColor}15`,color:accentColor,
-                border:`1px solid ${accentColor}30`}}>{msg.text}</span>
+          if (msg.from === 'choice') return (
+            <div key={msg.id} style={{ textAlign: 'center', animation: 'fadeUp .3s ease' }}>
+              <span style={{ display: 'inline-block', padding: '4px 14px', borderRadius: 99, fontSize: 12, fontWeight: 800, background: `${accentColor}15`, color: accentColor, border: `1px solid ${accentColor}30` }}>{msg.text}</span>
             </div>
           );
-
-          const isUser = msg.from==='user';
-          const npc = npcs.find(n=>n.id===msg.npcId);
+          const isUser = msg.from === 'user';
+          const npc = npcs.find(n => n.id === msg.npcId);
           const t = npc ? getTutorById(npc.tutorId) : null;
-
           return (
-            <div key={msg.id} style={{display:'flex',flexDirection:'column',
-              alignItems:isUser?'flex-end':'flex-start',animation:'fadeUp .3s ease'}}>
-              {/* Name + avatar */}
-              <div style={{display:'flex',alignItems:'center',gap:5,marginBottom:3,
-                flexDirection:isUser?'row-reverse':'row'}}>
+            <div key={msg.id} style={{ display: 'flex', flexDirection: 'column', alignItems: isUser ? 'flex-end' : 'flex-start', animation: 'fadeUp .3s ease' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 5, marginBottom: 3, flexDirection: isUser ? 'row-reverse' : 'row' }}>
                 {!isUser && t && (
-                  <img src={t.thumbnail} alt={npc?.name}
-                    style={{width:20,height:20,borderRadius:'50%',objectFit:'cover',objectPosition:'center 20%'}}/>
+                  <img src={t.thumbnail} alt={npc?.name} style={{ width: 20, height: 20, borderRadius: '50%', objectFit: 'cover', objectPosition: 'center 20%' }} />
                 )}
-                <div style={{fontSize:10,fontWeight:700,color:'#94A3B8'}}>
-                  {isUser?'You':msg.npcName}
-                </div>
+                <div style={{ fontSize: 10, fontWeight: 700, color: '#94A3B8' }}>{isUser ? 'You' : msg.npcName}</div>
               </div>
-
-              {/* Bubble */}
-              <div style={{maxWidth:'82%',padding:'11px 15px',
-                borderRadius:isUser?'16px 16px 4px 16px':'16px 16px 16px 4px',
-                background:isUser?accentColor:'#fff',
-                border:isUser?'none':'1.5px solid #F1F5F9',
-                boxShadow:isUser?'none':'0 2px 6px rgba(0,0,0,0.05)',
-                color:isUser?'#fff':'#0F172A',fontSize:15,fontWeight:600,lineHeight:1.65}}>
+              <div style={{ maxWidth: '82%', padding: '11px 15px', borderRadius: isUser ? '16px 16px 4px 16px' : '16px 16px 16px 4px', background: isUser ? accentColor : '#fff', border: isUser ? 'none' : '1.5px solid #F1F5F9', boxShadow: isUser ? 'none' : '0 2px 6px rgba(0,0,0,0.05)', color: isUser ? '#fff' : '#0F172A', fontSize: 15, fontWeight: 600, lineHeight: 1.65 }}>
                 {msg.text}
               </div>
-
-              {/* Native subtitle */}
               {!isUser && showNative && msg.nativeText && (
-                <div style={{fontSize:11,color:'#64748B',fontWeight:600,
-                  marginTop:2,paddingLeft:4,fontStyle:'italic',maxWidth:'82%',lineHeight:1.4}}>
-                  {msg.nativeText}
-                </div>
+                <div style={{ fontSize: 11, color: '#64748B', fontWeight: 600, marginTop: 2, paddingLeft: 4, fontStyle: 'italic', maxWidth: '82%', lineHeight: 1.4 }}>{msg.nativeText}</div>
               )}
-
-              {/* Score badge */}
-              {isUser && msg.score!==undefined && (
-                <div style={{marginTop:4,display:'flex',alignItems:'center',gap:6,
-                  padding:'3px 10px',borderRadius:8,
-                  background:`${scoreColor(msg.score)}12`,
-                  border:`1px solid ${scoreColor(msg.score)}30`}}>
-                  <span style={{fontSize:12,fontWeight:900,color:scoreColor(msg.score)}}>{msg.score}</span>
-                  {msg.tip && <span style={{fontSize:10,color:'#64748B',fontWeight:600}}>{msg.tip}</span>}
+              {isUser && msg.score !== undefined && (
+                <div style={{ marginTop: 4, display: 'flex', alignItems: 'center', gap: 6, padding: '3px 10px', borderRadius: 8, background: `${scoreColor(msg.score)}12`, border: `1px solid ${scoreColor(msg.score)}30` }}>
+                  <span style={{ fontSize: 12, fontWeight: 900, color: scoreColor(msg.score) }}>{msg.score}</span>
+                  {msg.tip && <span style={{ fontSize: 10, color: '#64748B', fontWeight: 600 }}>{msg.tip}</span>}
                 </div>
               )}
             </div>
           );
         })}
 
-        {/* Thinking indicator */}
         {isThinking && (
-          <div style={{display:'flex',alignItems:'center',gap:8}}>
-            {npcs[npcRotation%npcs.length] && (() => {
-              const t = getTutorById(npcs[npcRotation%npcs.length].tutorId);
-              return <img src={t.thumbnail} alt="" style={{width:20,height:20,borderRadius:'50%',objectFit:'cover',objectPosition:'center 20%'}}/>;
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            {npcs[npcRotation % npcs.length] && (() => {
+              const t = getTutorById(npcs[npcRotation % npcs.length].tutorId);
+              return <img src={t.thumbnail} alt="" style={{ width: 20, height: 20, borderRadius: '50%', objectFit: 'cover', objectPosition: 'center 20%' }} />;
             })()}
-            <div style={{padding:'10px 14px',borderRadius:'14px 14px 14px 4px',
-              background:'#fff',border:'1.5px solid #F1F5F9',
-              display:'flex',gap:4,alignItems:'center'}}>
-              {[0,1,2].map(d=>(
-                <div key={d} style={{width:7,height:7,borderRadius:'50%',background:accentColor,
-                  animation:`thinking .9s ${d*.2}s infinite`}}/>
+            <div style={{ padding: '10px 14px', borderRadius: '14px 14px 14px 4px', background: '#fff', border: '1.5px solid #F1F5F9', display: 'flex', gap: 4, alignItems: 'center' }}>
+              {[0, 1, 2].map(d => (
+                <div key={d} style={{ width: 7, height: 7, borderRadius: '50%', background: accentColor, animation: `thinking .9s ${d * .2}s infinite` }} />
               ))}
             </div>
           </div>
         )}
 
-        {/* Story choice */}
         {activeChoice && !activeChoice.chosen && (
-          <div style={{background:'#fff',border:`1.5px solid ${accentColor}40`,borderRadius:16,
-            padding:16,animation:'choiceIn .4s ease',boxShadow:`0 4px 20px ${accentColor}20`}}>
-            <div style={{fontSize:12,fontWeight:800,color:accentColor,marginBottom:10,letterSpacing:.5}}>
-              🔀 {activeChoice.beat.prompt}
-            </div>
-            <div style={{display:'flex',flexDirection:'column',gap:8}}>
+          <div style={{ background: '#fff', border: `1.5px solid ${accentColor}40`, borderRadius: 16, padding: 16, animation: 'choiceIn .4s ease', boxShadow: `0 4px 20px ${accentColor}20` }}>
+            <div style={{ fontSize: 12, fontWeight: 800, color: accentColor, marginBottom: 10, letterSpacing: .5 }}>🔀 {activeChoice.beat.prompt}</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
               {activeChoice.beat.choices.map(c => (
-                <button key={c.id} onClick={()=>handleChoiceSelect(c)}
-                  style={{padding:'10px 14px',borderRadius:12,border:`1.5px solid ${accentColor}30`,
-                    background:`${accentColor}08`,color:accentColor,fontWeight:700,fontSize:13,
-                    cursor:'pointer',textAlign:'left',fontFamily:"'Nunito',sans-serif",
-                    transition:'all .15s'}}
-                  onMouseEnter={e=>{ (e.currentTarget as HTMLButtonElement).style.background=`${accentColor}18`; }}
-                  onMouseLeave={e=>{ (e.currentTarget as HTMLButtonElement).style.background=`${accentColor}08`; }}>
+                <button key={c.id} onClick={() => handleChoiceSelect(c)}
+                  style={{ padding: '10px 14px', borderRadius: 12, border: `1.5px solid ${accentColor}30`, background: `${accentColor}08`, color: accentColor, fontWeight: 700, fontSize: 13, cursor: 'pointer', textAlign: 'left', fontFamily: "'Nunito',sans-serif", transition: 'all .15s' }}>
                   {c.label}
                 </button>
               ))}
@@ -695,59 +633,35 @@ Reply as ${npc.name} in ${targetLang}:`;
         )}
       </div>
 
-      {/* XP pop */}
-      {xpPop && (
-        <div style={{position:'fixed',bottom:86,right:16,fontSize:15,fontWeight:900,
-          color:accentColor,animation:'xpPop .8s ease forwards',pointerEvents:'none',zIndex:999}}>
-          {xpPop}
-        </div>
-      )}
-
       {/* INPUT */}
-      <div style={{padding:'10px 12px 12px',background:'#fff',
-        borderTop:'1px solid #F1F5F9',flexShrink:0}}>
-        <div style={{display:'flex',gap:8,alignItems:'flex-end'}}>
-          <button onMouseDown={startListening} onTouchStart={startListening}
-            disabled={isThinking||isSpeaking||!openingDone}
-            style={{width:46,height:46,borderRadius:'50%',border:'none',flexShrink:0,cursor:'pointer',
-              background:isListening?'linear-gradient(135deg,#EF4444,#DC2626)':'#F1F5F9',
-              color:isListening?'#fff':'#64748B',fontSize:20,
-              animation:isListening?'pulse .8s infinite':'none',
-              opacity:isThinking||isSpeaking||!openingDone?0.35:1}}>
-            {isListening?'⏹':'🎤'}
+      <div style={{ padding: '10px 12px 12px', background: '#fff', borderTop: '1px solid #F1F5F9', flexShrink: 0 }}>
+        <div style={{ display: 'flex', gap: 8, alignItems: 'flex-end' }}>
+          <button onMouseDown={startListening} onTouchStart={startListening} disabled={isThinking || isSpeaking || !openingDone}
+            style={{ width: 46, height: 46, borderRadius: '50%', border: 'none', flexShrink: 0, cursor: 'pointer', background: isListening ? 'linear-gradient(135deg,#EF4444,#DC2626)' : '#F1F5F9', color: isListening ? '#fff' : '#64748B', fontSize: 20, animation: isListening ? 'pulse .8s infinite' : 'none', opacity: isThinking || isSpeaking || !openingDone ? 0.35 : 1 }}>
+            {isListening ? '⏹' : '🎤'}
           </button>
-          <input value={input} onChange={e=>setInput(e.target.value)}
-            onKeyDown={e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();handleUserTurn(input);}}}
-            placeholder={`Reply in ${targetLang}...`}
-            disabled={isThinking||!openingDone}
-            style={{flex:1,padding:'12px 16px',borderRadius:14,background:'#F8FAFC',
-              border:'1.5px solid #E5E7EB',color:'#0F172A',fontSize:14,
-              fontFamily:"'Nunito',sans-serif",outline:'none',fontWeight:600,
-              opacity:isThinking||!openingDone?0.5:1}}/>
-          <button onClick={()=>handleUserTurn(input)} disabled={!input.trim()||isThinking||!openingDone}
-            style={{width:46,height:46,borderRadius:'50%',border:'none',flexShrink:0,
-              background:input.trim()&&!isThinking?accentColor:'#E5E7EB',
-              color:input.trim()&&!isThinking?'#fff':'#94A3B8',fontSize:18,
-              cursor:input.trim()?'pointer':'default',transition:'all .15s'}}>➤</button>
+          <input value={input} onChange={e => setInput(e.target.value)} onKeyDown={e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleUserTurn(input); } }}
+            placeholder={`Reply in ${targetLang}...`} disabled={isThinking || !openingDone}
+            style={{ flex: 1, padding: '12px 16px', borderRadius: 14, background: '#F8FAFC', border: '1.5px solid #E5E7EB', color: '#0F172A', fontSize: 14, fontFamily: "'Nunito',sans-serif", outline: 'none', fontWeight: 600, opacity: isThinking || !openingDone ? 0.5 : 1 }} />
+          <button onClick={() => handleUserTurn(input)} disabled={!input.trim() || isThinking || !openingDone}
+            style={{ width: 46, height: 46, borderRadius: '50%', border: 'none', flexShrink: 0, background: input.trim() && !isThinking ? accentColor : '#E5E7EB', color: input.trim() && !isThinking ? '#fff' : '#94A3B8', fontSize: 18, cursor: input.trim() ? 'pointer' : 'default', transition: 'all .15s' }}>➤</button>
         </div>
-        {turnCount>=4 && (
+        {turnCount >= 4 && (
           <button onClick={endSession}
-            style={{width:'100%',marginTop:8,padding:'9px',borderRadius:11,
-              border:`1px solid ${accentColor}30`,background:`${accentColor}10`,
-              color:accentColor,fontWeight:700,fontSize:12,cursor:'pointer',
-              fontFamily:"'Nunito',sans-serif"}}>
+            style={{ width: '100%', marginTop: 8, padding: '9px', borderRadius: 11, border: `1px solid ${accentColor}30`, background: `${accentColor}10`, color: accentColor, fontWeight: 700, fontSize: 12, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
             End scene & get feedback →
           </button>
         )}
       </div>
     </div>
   );
-}
+} // <── SessionContent 함수 종료
 
+// ── EXPORT ──────────────────────────────────────────────────────────────────
 export default function SessionPage() {
   return (
-    <Suspense fallback={<div style={{minHeight:'100vh',background:'#F8FAFC'}}/>}>
-      <SessionContent/>
+    <Suspense fallback={<div style={{ minHeight: '100vh', background: '#F8FAFC' }} />}>
+      <SessionContent />
     </Suspense>
   );
 }
