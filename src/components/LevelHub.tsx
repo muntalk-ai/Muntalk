@@ -709,7 +709,7 @@ export default function LevelHub() {
               <span style={styles.newTag}>FREE</span>
             </div>
           </div>
-          <h1 style={styles.heroTitle}>Every language in the world<br />Meet +150 AI tutors</h1>
+          <h1 style={styles.heroTitle}>Every language in the world<br />starts with one conversation.</h1>
           <p style={styles.heroDesc}>No judgment. No pressure. Your pace, your rules.<br />Our AI tutors get total beginners talking in under 10 minutes.</p>
           <div style={styles.heroBtnRow}>
             <button style={styles.heroBtn1} onClick={() => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); }}>
@@ -818,6 +818,33 @@ export default function LevelHub() {
 
       {/* -- Level Grid -- */}
       <section style={styles.grid}>
+
+        {/* Pre-A1 Starter Card */}
+        <div
+          onClick={() => router.push(`/lingua/starter?lang=${learnLang}&subLang=${nativeLang}`)}
+          style={{ ...styles.card,
+            background: 'linear-gradient(135deg, #EEF2FF, #F0FDF4)',
+            border: '2px solid #A5B4FC',
+            cursor: 'pointer',
+            boxShadow: '0 4px 20px rgba(99,102,241,0.10)',
+            gridColumn: '1 / -1',
+          }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            <div style={{ fontSize: 36 }}>🌱</div>
+            <div style={{ flex: 1 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
+                <span style={{ fontSize: 18, fontWeight: 900, color: '#3730A3' }}>Pre-A1</span>
+                <span style={{ fontSize: 11, fontWeight: 800, padding: '2px 8px',
+                  borderRadius: 99, background: '#6366F1', color: 'white' }}>STARTER</span>
+              </div>
+              <div style={{ fontSize: 12, color: '#4338CA', fontWeight: 700, lineHeight: 1.5 }}>
+                Complete beginner? Start here — picture matching, listening &amp; pronunciation. No experience needed.
+              </div>
+            </div>
+            <div style={{ fontSize: 18, color: '#6366F1', fontWeight: 900 }}>→</div>
+          </div>
+        </div>
+
         {CURRICULUM.map((level) => {
           const unlocked    = isLevelUnlocked(level.id);
           const subLocked   = !isAdmin && isLevelLocked(level.id, planId, false, placementLevel); // 구독 잠금

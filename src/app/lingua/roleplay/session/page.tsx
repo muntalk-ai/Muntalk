@@ -236,7 +236,7 @@ Reply as ${npc.name} in ${targetLang}:`;
       addMsg({ from:'npc', npcId:firstNpc.id, npcName:firstNpc.name, text, nativeText });
       historyRef.current = [{ role:'assistant', npcId:firstNpc.id, content:text }];
       setOpeningDone(true);
-      speak(text, firstNpc.voiceGender, firstNpc.id);
+      speak(text, firstNpc.voiceGender, firstNpc.tutorId);  // use tutorId not npc.id
     }).catch(() => setOpeningDone(true));
   }, [scenario]); // eslint-disable-line
 
@@ -306,7 +306,7 @@ Reply as ${npc.name} in ${targetLang}:`;
       };
 
       const { npcText:primaryText, fb:primaryFb } = parseNpcResponse(jsons[0].text?.trim()||'');
-      pendingRef.current = { text:primaryText, gender:primaryNpc.voiceGender, npcId:primaryNpc.id };
+      pendingRef.current = { text:primaryText, gender:primaryNpc.voiceGender, npcId:primaryNpc.tutorId };
 
       // Update user message with feedback score
       if (primaryFb.score !== undefined) {
@@ -324,10 +324,12 @@ Reply as ${npc.name} in ${targetLang}:`;
 
       // Add primary NPC message with live subtitle
       const primaryNativeText = await translateToNative(primaryText);
-      addMsg({ from:'npc', npcId:primaryNpc.id, npcName:primaryNpc.name,
+      addMsg({ from:'npc', npcId:primaryNpc.tutorId, npcName:primaryNpc.name,
         text:primaryText, nativeText:primaryNativeText });
       historyRef.current = [...historyRef.current,
-        { role:'assistant', npcId:primaryNpc.id, content:primaryText }];
+        { role:'assistant', npcId:primaryNpc.tutorId, content:primaryText }];
+      // Start speaking primary NPC immediately
+      speak(primaryText, primaryNpc.voiceGender, primaryNpc.tutorId);
 
       // Secondary NPC response (slight delay for natural feel)
       if (secondaryNpc && jsons[1]) {
@@ -335,10 +337,10 @@ Reply as ${npc.name} in ${targetLang}:`;
         if (secondaryText) {
           await new Promise(r=>setTimeout(r,800)); // brief pause before secondary speaks
           const secondaryNativeText = await translateToNative(secondaryText);
-          addMsg({ from:'npc', npcId:secondaryNpc.id, npcName:secondaryNpc.name,
+          addMsg({ from:'npc', npcId:secondaryNpc.tutorId, npcName:secondaryNpc.name,
             text:secondaryText, nativeText:secondaryNativeText });
           historyRef.current = [...historyRef.current,
-            { role:'assistant', npcId:secondaryNpc.id, content:secondaryText }];
+            { role:'assistant', npcId:secondaryNpc.tutorId, content:secondaryText }];
         }
       }
 
@@ -349,9 +351,7 @@ Reply as ${npc.name} in ${targetLang}:`;
     } catch(e) { console.error(e); }
     finally { setIsThinking(false); }
 
-    if (pendingRef.current.text) {
-      speak(pendingRef.current.text, pendingRef.current.gender, pendingRef.current.npcId);
-    }
+    // speak is called inline above; pendingRef used as fallback only
   }, [isThinking, turnCount, npcs, npcRotation, buildNpcPrompt, translateToNative, speak, scenario, checkStoryBeats, user]); // eslint-disable-line
 
   const endSession = useCallback(async () => {
@@ -481,7 +481,7 @@ ${historyRef.current.map(m=>`${m.npcId==='user'?'Learner':'NPC'}: ${m.content}`)
       <div style={{display:'flex',alignItems:'center',gap:10,padding:'10px 14px',
         background:'#fff',borderBottom:'1px solid #F1F5F9',flexShrink:0,
         boxShadow:'0 1px 4px rgba(0,0,0,0.04)'}}>
-        <button onClick={endSession}
+        <button onClick={()=>{if(audioRef.current){audioRef.current.pause();audioRef.current=null;}endSession();}}
           style={{background:'#F1F5F9',border:'none',borderRadius:10,padding:'7px 12px',
             color:'#64748B',fontSize:12,fontWeight:700,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
           ✕ End
@@ -504,43 +504,47 @@ ${historyRef.current.map(m=>`${m.npcId==='user'?'Learner':'NPC'}: ${m.content}`)
           background:accentColor,transition:'width .5s ease'}}/>
       </div>
 
-      {/* TUTOR VIDEOS */}
-      <div style={{display:'flex',flexShrink:0,borderBottom:'1px solid #F1F5F9',background:'#111'}}>
-        {npcs.map(npc => {
+      {/* TUTOR VIDEOS — opacity swap idle↔talk, full width */}
+      <div style={{display:'flex',flexShrink:0,background:'#0a0a0a',
+        borderBottom:`2px solid ${accentColor}30`}}>
+        {npcs.map((npc,ni) => {
           const t = getTutorById(npc.tutorId);
           const isActive = speakingId === npc.tutorId;
-          const vidH = npcs.length === 1 ? 200 : 160;
-          const vidW = npcs.length === 1 ? 150 : undefined;
+          const vidH = npcs.length === 1 ? 220 : 170;
           return (
-            <div key={npc.id} style={{position:'relative',height:vidH,
-              width:vidW, flex:vidW?'none':1,overflow:'hidden',
-              outline:isActive?`3px solid ${accentColor}`:'none',
-              transition:'outline .2s',background:'#0a0a0a'}}>
-              <video key={isActive?'talk':'idle'}
-                src={isActive?t.videoTalk:t.videoIdle}
-                autoPlay loop muted playsInline
-                style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'center top',
-                  display:'block',filter:isActive?'brightness(1.1)':'brightness(0.7)',transition:'filter .3s'}}/>
+            <div key={npc.id} style={{
+              flex:1,position:'relative',height:vidH,overflow:'hidden',minWidth:0,
+              borderLeft:ni>0?`1px solid ${accentColor}30`:'none',background:'#111'}}>
+              {/* IDLE — visible when not speaking */}
+              <video src={t.videoIdle} autoPlay loop muted playsInline style={{
+                position:'absolute',inset:0,width:'100%',height:'100%',
+                objectFit:'cover',objectPosition:'center top',display:'block',
+                opacity:isActive?0:1,filter:'brightness(0.72)',transition:'opacity .25s'}}/>
+              {/* TALK — visible when speaking */}
+              <video src={t.videoTalk} autoPlay loop muted playsInline style={{
+                position:'absolute',inset:0,width:'100%',height:'100%',
+                objectFit:'cover',objectPosition:'center top',display:'block',
+                opacity:isActive?1:0,filter:'brightness(1.08)',transition:'opacity .25s'}}/>
+              {/* Gradient + name */}
               <div style={{position:'absolute',bottom:0,left:0,right:0,
-                padding:'16px 10px 6px',
-                background:'linear-gradient(to top,rgba(0,0,0,0.85) 0%,transparent 100%)'}}>
-                <div style={{fontSize:11,fontWeight:800,color:isActive?accentColor:'#94A3B8'}}>{npc.name}</div>
-                <div style={{fontSize:9,color:'#64748B',fontWeight:600}}>{npc.role}</div>
-              </div>
-              {isActive && (
-                <div style={{position:'absolute',top:6,right:6,display:'flex',gap:2}}>
-                  {[0,1,2].map(i=>(
-                    <div key={i} style={{width:3,background:accentColor,borderRadius:2,
-                      height:5+i*3,animation:`glow .5s ${i*.15}s infinite`}}/>
+                padding:'20px 10px 8px',pointerEvents:'none',
+                background:'linear-gradient(to top,rgba(0,0,0,0.88),transparent)'}}>
+                <div style={{display:'flex',alignItems:'center',gap:5}}>
+                  {isActive&&[0,1,2].map(i=>(
+                    <div key={i} style={{width:3,borderRadius:2,background:accentColor,
+                      height:4+i*3,animation:`glow .5s ${i*.15}s infinite`}}/>
                   ))}
+                  <span style={{fontSize:12,fontWeight:800,color:isActive?accentColor:'#94A3B8'}}>{npc.name}</span>
+                  <span style={{fontSize:9,color:'#475569'}}>· {npc.role}</span>
                 </div>
-              )}
+              </div>
+              {isActive&&<div style={{position:'absolute',inset:0,outline:`3px solid ${accentColor}`,pointerEvents:'none'}}/>}
             </div>
           );
         })}
       </div>
 
-      {/* CHAT */}
+            {/* CHAT */}
       <div ref={chatRef} style={{flex:1,overflowY:'auto',padding:'14px',
         display:'flex',flexDirection:'column',gap:10}}>
 

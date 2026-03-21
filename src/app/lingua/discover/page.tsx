@@ -126,6 +126,7 @@ function DiscoverContent() {
   const [isAdmin,    setIsAdmin]    = useState(false);
   const [chatMode,   setChatMode]   = useState<ChatMode>('target');
   const [showPaywall,setShowPaywall]= useState(false);
+  const [subChecked, setSubChecked] = useState(false);
   const [selChannel, setSelChannel] = useState<string|null>(null);
   const [sessionId,  setSessionId]  = useState(''); // for mirror/story state
   const [mirrorDone, setMirrorDone] = useState(false);
@@ -150,14 +151,24 @@ function DiscoverContent() {
         if (p?.tutorId) setTutorId(p.tutorId);
       });
       // Check plan
-      getSubscription(user.uid).then(sub => setPlanId(sub.planId));
+      getSubscription(user.uid).then(sub => {
+        setPlanId(sub.planId);
+        setSubChecked(true);
+      });
       setIsAdmin(isAdminEmail(user.email));
+    } else if (!authLoading) {
+      setSubChecked(true);
     }
-  }, [user]);
+  }, [user, authLoading]);
 
   useEffect(() => {
     chatRef.current?.scrollTo({ top: chatRef.current.scrollHeight, behavior:'smooth' });
   }, [messages, loading]);
+
+  // Stop audio on page unmount
+  useEffect(() => {
+    return () => { if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; } };
+  }, []);
 
   // STT
   useEffect(() => {
@@ -346,6 +357,77 @@ function DiscoverContent() {
   const todayQuestion = SPARK_QUESTIONS[todayDayIdx % SPARK_QUESTIONS.length];
 
   // ── RENDER: Feature Card Grid ────────────────────────────────────────────────
+
+  // ── 로딩 중 ────────────────────────────────────────────────────────────────
+  if (!subChecked) return (
+    <div style={{ minHeight:'100vh', background:'#08080F', display:'flex',
+      alignItems:'center', justifyContent:'center' }}>
+      <div style={{ width:40, height:40, border:'4px solid #1e293b',
+        borderTopColor:'#6366F1', borderRadius:'50%', animation:'spin .8s linear infinite' }}/>
+      <style dangerouslySetInnerHTML={{ __html:'@keyframes spin{to{transform:rotate(360deg)}}' }}/>
+    </div>
+  );
+
+  // ── 미로그인 / 비프리미엄 차단 ──────────────────────────────────────────────
+  if (!isPremiumUser) return (
+    <div style={{ minHeight:'100vh', background:'#08080F',
+      fontFamily:"'Nunito',sans-serif", color:'#F1F5F9',
+      display:'flex', alignItems:'center', justifyContent:'center', padding:24 }}>
+      <style dangerouslySetInnerHTML={{ __html:`
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
+      `}}/>
+      <div style={{ maxWidth:440, textAlign:'center' }}>
+        <div style={{ fontSize:64, marginBottom:16 }}>✨</div>
+        <h1 style={{ fontSize:26, fontWeight:900, marginBottom:10, letterSpacing:-0.5 }}>
+          Discover is Premium
+        </h1>
+        <p style={{ fontSize:14, color:'#64748B', lineHeight:1.7, marginBottom:8, fontWeight:600 }}>
+          Daily Spark · News debates · English Mirror · My World channels ·
+          The Character · Finish My Story — all in your language.
+        </p>
+        <p style={{ fontSize:13, color:'#475569', marginBottom:32, fontWeight:600 }}>
+          {!user ? 'Sign in or upgrade to access Discover.' : 'Upgrade to Premium to unlock Discover.'}
+        </p>
+        <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
+          {!user ? (
+            <>
+              <button onClick={() => router.push('/login')}
+                style={{ padding:'13px 28px', borderRadius:14, border:'none',
+                  background:'linear-gradient(135deg,#6366F1,#8B5CF6)',
+                  color:'#fff', fontSize:14, fontWeight:900, cursor:'pointer',
+                  fontFamily:"'Nunito',sans-serif" }}>
+                Sign In
+              </button>
+              <button onClick={() => router.push('/signup')}
+                style={{ padding:'13px 20px', borderRadius:14,
+                  border:'1.5px solid rgba(255,255,255,0.15)',
+                  background:'transparent', color:'#94A3B8',
+                  fontSize:14, fontWeight:800, cursor:'pointer',
+                  fontFamily:"'Nunito',sans-serif" }}>
+                Create Account
+              </button>
+            </>
+          ) : (
+            <button onClick={() => router.push('/pricing')}
+              style={{ padding:'13px 28px', borderRadius:14, border:'none',
+                background:'linear-gradient(135deg,#F59E0B,#EF4444)',
+                color:'#fff', fontSize:14, fontWeight:900, cursor:'pointer',
+                fontFamily:"'Nunito',sans-serif" }}>
+              ⭐ Upgrade to Premium
+            </button>
+          )}
+          <button onClick={() => router.push('/lingua')}
+            style={{ padding:'13px 20px', borderRadius:14,
+              border:'1.5px solid rgba(255,255,255,0.1)',
+              background:'transparent', color:'#64748B',
+              fontSize:14, fontWeight:800, cursor:'pointer',
+              fontFamily:"'Nunito',sans-serif" }}>
+            ← Go Back
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 
   if (!active) return (
     <div style={{ minHeight:'100vh', background:'#08080F', fontFamily:"'Nunito',sans-serif",

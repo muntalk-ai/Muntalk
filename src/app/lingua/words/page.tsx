@@ -45,6 +45,73 @@ function WordsContent() {
     </div>
   );
 
+  // Word Bank 미지원 언어 목록
+  const WORDBANK_UNSUPPORTED = new Set([
+    'sq-AL','am-ET','hy-AM','az-AZ','eu-ES','be-BY','bs-BA','ca-ES',
+    'ny-MW','eo-XX','gl-ES','ka-GE','ht-HT','ha-NG','is-IS','ig-NG',
+    'ga-IE','jv-ID','ku-TR','la-XX','mk-MK','mg-MG','mt-MT','ne-NP',
+    'st-ZA','si-LK','so-SO','su-ID','tk-TM','cy-GB','xh-ZA','yo-NG','zu-ZA',
+  ]);
+
+  // 미지원 언어 안내
+  if (WORDBANK_UNSUPPORTED.has(lang)) {
+    const LANG_LABELS: Record<string,string> = {
+      'sq-AL':'Albanian','am-ET':'Amharic','hy-AM':'Armenian',
+      'az-AZ':'Azerbaijani','eu-ES':'Basque','be-BY':'Belarusian',
+      'bs-BA':'Bosnian','ca-ES':'Catalan','ny-MW':'Chichewa',
+      'eo-XX':'Esperanto','gl-ES':'Galician','ka-GE':'Georgian',
+      'ht-HT':'Haitian Creole','ha-NG':'Hausa','is-IS':'Icelandic',
+      'ig-NG':'Igbo','ga-IE':'Irish','jv-ID':'Javanese',
+      'ku-TR':'Kurdish','la-XX':'Latin','mk-MK':'Macedonian',
+      'mg-MG':'Malagasy','mt-MT':'Maltese','ne-NP':'Nepali',
+      'st-ZA':'Sesotho','si-LK':'Sinhala','so-SO':'Somali',
+      'su-ID':'Sundanese','tk-TM':'Turkmen','cy-GB':'Welsh',
+      'xh-ZA':'Xhosa','yo-NG':'Yoruba','zu-ZA':'Zulu',
+    };
+    const langName = LANG_LABELS[lang] || lang;
+    return (
+      <div style={{ minHeight:'100vh', background:'#F8FAFC',
+        fontFamily:"'Nunito',sans-serif",
+        display:'flex', alignItems:'center', justifyContent:'center', padding:24 }}>
+        <div style={{ maxWidth:440, textAlign:'center' }}>
+          <div style={{ fontSize:64, marginBottom:16 }}>🌱</div>
+          <h1 style={{ fontSize:24, fontWeight:900, color:'#0F172A',
+            marginBottom:10, letterSpacing:-0.5 }}>
+            {langName} Word Bank Coming Soon
+          </h1>
+          <p style={{ fontSize:14, color:'#64748B', lineHeight:1.7,
+            marginBottom:8, fontWeight:600 }}>
+            We're currently building the <strong>{langName}</strong> vocabulary
+            library. Check back soon — new languages are added regularly!
+          </p>
+          <p style={{ fontSize:13, color:'#94A3B8', marginBottom:32, fontWeight:600 }}>
+            In the meantime, you can use AI Lessons, Roleplay, and Discover
+            — all fully support {langName}.
+          </p>
+          <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
+            <button onClick={() => router.push('/lingua')}
+              style={{ padding:'13px 28px', borderRadius:14, border:'none',
+                background:'linear-gradient(135deg,#6366F1,#8B5CF6)',
+                color:'#fff', fontSize:14, fontWeight:900, cursor:'pointer',
+                fontFamily:"'Nunito',sans-serif" }}>
+              ← Back to Learning
+            </button>
+            <button onClick={() => router.push('/lingua/roleplay')}
+              style={{ padding:'13px 20px', borderRadius:14,
+                border:'1.5px solid #E5E7EB', background:'#fff',
+                color:'#374151', fontSize:14, fontWeight:800, cursor:'pointer',
+                fontFamily:"'Nunito',sans-serif" }}>
+              Try Roleplay →
+            </button>
+          </div>
+          <p style={{ fontSize:11, color:'#CBD5E1', marginTop:24, fontWeight:600 }}>
+            Currently supporting 67 languages in Word Bank
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   // Paywall — not premium
   if (!isPremium && !isAdminEmail(user?.email)) return (
     <div style={{ minHeight:'100vh', background:'#fff', fontFamily:"'Nunito',sans-serif", display:'flex', alignItems:'center', justifyContent:'center', padding:24 }}>

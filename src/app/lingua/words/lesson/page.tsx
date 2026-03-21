@@ -124,7 +124,23 @@ function WordLessonContent() {
       try {
         const res = await fetch('/result.json');
         const data = await res.json();
-        const langData = data[lang] || data['en-US'];
+        // Normalize language code — result.json uses different keys for some languages
+        const LANG_CODE_MAP: Record<string, string> = {
+          'ar-XA': 'ar-SA',   // Arabic: Google TTS code → result.json key
+          'pt-BR': 'pt-PT',   // Portuguese Brazil → Portugal data
+          'nb-NO': 'no-NO',   // Norwegian Bokmål
+          'zh-TW': 'zh-HK',   // Chinese Traditional
+          'bn-IN': 'bn-BD',   // Bengali India → Bangladesh data
+          'ur-IN': 'ur-PK',   // Urdu India → Pakistan data
+          'en-GB': 'en-US',   // English UK → US data
+          'en-AU': 'en-US',   // English Australia → US data
+          'en-CA': 'en-US',   // English Canada → US data
+          'es-MX': 'es-ES',   // Spanish Mexico → Spain data
+          'fr-CA': 'fr-FR',   // French Canada → France data
+          'yue-HK': 'zh-HK',  // Cantonese → zh-HK data
+        };
+        const normalizedLang = LANG_CODE_MAP[lang] || lang;
+        const langData = data[normalizedLang] || data['en-US'];
         const key = getSetKey(pos, setIdx);
         // Support both 'Phrases2' (new) and 'phrases2' (legacy lowercase keys)
         const keyLower = key.charAt(0).toLowerCase() + key.slice(1);

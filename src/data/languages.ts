@@ -79,6 +79,54 @@ export const LEARN_LANGUAGES: LangOption[] = [
   // -- 기타 -----------------------------------------------------------
   { code: 'az-AZ', label: 'Azerbaijani',     flag: '🇦🇿', native: 'Azərbaycan',         stt: false, tts: true },
   { code: 'ka-GE', label: 'Georgian',        flag: '🇬🇪', native: 'ქართული',             stt: false, tts: true },
+  // ── 추가 38개 (총 100개 완성) ────────────────────────────────────────────
+  // 남아시아
+  { code: 'ne-NP', label: 'Nepali',           flag: '🇳🇵', native: 'नेपाली',         stt: false, tts: true },
+  // 중앙아시아
+  { code: 'kk-KZ', label: 'Kazakh',           flag: '🇰🇿', native: 'Қазақша',        stt: false, tts: true },
+  { code: 'ky-KG', label: 'Kyrgyz',           flag: '🇰🇬', native: 'Кыргызча',       stt: false, tts: true },
+  { code: 'uz-UZ', label: 'Uzbek',            flag: '🇺🇿', native: 'Oʻzbekcha',      stt: false, tts: true },
+  { code: 'tg-TJ', label: 'Tajik',            flag: '🇹🇯', native: 'Тоҷикӣ',         stt: false, tts: true },
+  { code: 'tk-TM', label: 'Turkmen',          flag: '🇹🇲', native: 'Türkmençe',      stt: false, tts: true },
+  { code: 'hy-AM', label: 'Armenian',         flag: '🇦🇲', native: 'Հայերեն',        stt: false, tts: true },
+  // 동유럽·발칸
+  { code: 'mn-MN', label: 'Mongolian',        flag: '🇲🇳', native: 'Монгол',          stt: false, tts: true },
+  { code: 'mk-MK', label: 'Macedonian',       flag: '🇲🇰', native: 'Македонски',      stt: false, tts: true },
+  { code: 'sq-AL', label: 'Albanian',         flag: '🇦🇱', native: 'Shqip',           stt: false, tts: true },
+  { code: 'bs-BA', label: 'Bosnian',          flag: '🇧🇦', native: 'Bosanski',        stt: false, tts: true },
+  { code: 'be-BY', label: 'Belarusian',       flag: '🇧🇾', native: 'Беларуская',      stt: false, tts: true },
+  // 서유럽 소수언어
+  { code: 'gl-ES', label: 'Galician',         flag: '🇪🇸', native: 'Galego',          stt: false, tts: true },
+  { code: 'eu-ES', label: 'Basque',           flag: '🇪🇸', native: 'Euskara',         stt: false, tts: true },
+  { code: 'cy-GB', label: 'Welsh',            flag: '🏴󠁧󠁢󠁷󠁬󠁳󠁿', native: 'Cymraeg',   stt: true,  tts: true },
+  { code: 'mt-MT', label: 'Maltese',          flag: '🇲🇹', native: 'Malti',           stt: false, tts: true },
+  { code: 'is-IS', label: 'Icelandic',        flag: '🇮🇸', native: 'Íslenska',        stt: false, tts: true },
+  { code: 'ga-IE', label: 'Irish',            flag: '🇮🇪', native: 'Gaeilge',         stt: false, tts: true },
+  // 아프리카
+  { code: 'am-ET', label: 'Amharic',          flag: '🇪🇹', native: 'አማርኛ',           stt: false, tts: true },
+  { code: 'zu-ZA', label: 'Zulu',             flag: '🇿🇦', native: 'isiZulu',         stt: false, tts: true },
+  { code: 'xh-ZA', label: 'Xhosa',            flag: '🇿🇦', native: 'isiXhosa',        stt: false, tts: true },
+  { code: 'st-ZA', label: 'Sesotho',          flag: '🇿🇦', native: 'Sesotho',         stt: false, tts: true },
+  { code: 'yo-NG', label: 'Yoruba',           flag: '🇳🇬', native: 'Yorùbá',          stt: false, tts: true },
+  { code: 'ig-NG', label: 'Igbo',             flag: '🇳🇬', native: 'Igbo',            stt: false, tts: true },
+  { code: 'ha-NG', label: 'Hausa',            flag: '🇳🇬', native: 'Hausa',           stt: false, tts: true },
+  { code: 'so-SO', label: 'Somali',           flag: '🇸🇴', native: 'Soomaali',        stt: false, tts: true },
+  { code: 'ny-MW', label: 'Chichewa',         flag: '🇲🇼', native: 'Chichewa',        stt: false, tts: true },
+  { code: 'mg-MG', label: 'Malagasy',         flag: '🇲🇬', native: 'Malagasy',        stt: false, tts: true },
+  // 동남아시아
+  { code: 'jv-ID', label: 'Javanese',         flag: '🇮🇩', native: 'Basa Jawa',       stt: false, tts: true },
+  { code: 'su-ID', label: 'Sundanese',        flag: '🇮🇩', native: 'Basa Sunda',      stt: false, tts: true },
+  // 중동·기타
+  { code: 'ps-AF', label: 'Pashto',           flag: '🇦🇳', native: 'پښتو',            stt: false, tts: true },
+  { code: 'ku-TR', label: 'Kurdish',          flag: '🏳️', native: 'Kurdî',            stt: false, tts: true },
+  // 영어 변형
+  { code: 'en-AU', label: 'English (AU)',      flag: '🇦🇺', native: 'English (AU)',    stt: true,  tts: true },
+  { code: 'en-CA', label: 'English (CA)',      flag: '🇨🇦', native: 'English (CA)',    stt: true,  tts: true },
+  { code: 'fr-CA', label: 'French (Canada)',   flag: '🇨🇦', native: 'Français (Canada)', stt: true, tts: true },
+  // 기타
+  { code: 'eo-XX', label: 'Esperanto',         flag: '🌍', native: 'Esperanto',        stt: false, tts: true },
+  { code: 'la-XX', label: 'Latin',             flag: '🏛️', native: 'Latina',           stt: false, tts: true },
+  { code: 'ht-HT', label: 'Haitian Creole',   flag: '🇭🇹', native: 'Kreyòl ayisyen',  stt: false, tts: true },
 ];
 
 // 모국어(UI) 선택용 — 인기순 100개 (Google Translate 지원)
@@ -156,10 +204,10 @@ export const UI_LANGUAGES: LangOption[] = [
   { code: 'mk-MK', label: 'Macedonian',             flag: '🇲🇰', native: 'Македонски',           stt: false, tts: true },
   { code: 'sq-AL', label: 'Albanian',               flag: '🇦🇱', native: 'Shqip',                stt: false, tts: true },
   { code: 'bs-BA', label: 'Bosnian',                flag: '🇧🇦', native: 'Bosanski',             stt: false, tts: true },
-  { code: 'ca-ES', label: 'Catalan',                flag: '🇪🇸', native: 'Català',               stt: true,  tts: true },
   { code: 'gl-ES', label: 'Galician',               flag: '🇪🇸', native: 'Galego',               stt: false, tts: true },
   { code: 'eu-ES', label: 'Basque',                 flag: '🇪🇸', native: 'Euskara',              stt: false, tts: true },
   { code: 'cy-GB', label: 'Welsh',                  flag: '🏴󠁧󠁢󠁷󠁬󠁳󠁿', native: 'Cymraeg',              stt: true,  tts: true },
+  { code: 'ca-ES', label: 'Catalan',                flag: '🇪🇸', native: 'Català',               stt: true,  tts: true },
   // 71-80
   { code: 'mt-MT', label: 'Maltese',                flag: '🇲🇹', native: 'Malti',                stt: false, tts: true },
   { code: 'is-IS', label: 'Icelandic',              flag: '🇮🇸', native: 'Íslenska',             stt: false, tts: true },
