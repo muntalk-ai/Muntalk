@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
+import { getTutorForLang } from '@/data/tutors';
 
 // ─── Unit Data ───────────────────────────────────────────────────────────────
 const UNITS = [
@@ -80,6 +81,7 @@ const UNITS = [
 
 type Phase = 'lobby' | 'learn' | 'listen' | 'match' | 'speak' | 'chat' | 'complete';
 type Word = { word: string; emoji: string; phonetic: string };
+type TranslatedUnit = { word: string; emoji: string; phonetic: string; original: string }[];
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 function StarterContent() {
@@ -91,6 +93,13 @@ function StarterContent() {
   const [unitIdx, setUnitIdx]     = useState(0);
   const [wordIdx, setWordIdx]     = useState(0);
   const [learnDone, setLearnDone] = useState(false);
+
+  // Translated words for current unit
+  const [translatedWords, setTranslatedWords] = useState<TranslatedUnit | null>(null);
+  const [isTranslating, setIsTranslating]     = useState(false);
+
+  // Tutor video
+  const [isSpeaking, setIsSpeaking] = useState(false);
 
   // Listen phase
   const [listenWord, setListenWord]   = useState<Word | null>(null);
@@ -120,14 +129,18 @@ function StarterContent() {
   const [xp, setXp]       = useState(0);
   const [xpPop, setXpPop] = useState(false);
 
-  const audioRef = useRef<HTMLAudioElement|null>(null);
+  const audioRef   = useRef<HTMLAudioElement|null>(null);
   const chatEndRef = useRef<HTMLDivElement>(null);
 
-  const langId  = params.get('lang')    || localStorage.getItem('mt_learn_lang') || 'en-US';
-  const subLang = params.get('subLang') || localStorage.getItem('mt_native_lang') || 'en-US';
+  const langId  = params.get('lang')    || (typeof window !== 'undefined' ? localStorage.getItem('mt_learn_lang') : null) || 'en-US';
+  const subLang = params.get('subLang') || (typeof window !== 'undefined' ? localStorage.getItem('mt_native_lang') : null) || 'en-US';
+
+  // Tutor for this language
+  const tutor = getTutorForLang(langId);
 
   const unit  = UNITS[unitIdx];
-  const words = unit.words;
+  // Use translated words if available, otherwise fall back to English
+  const words: Word[] = translatedWords ?? unit.words;
 
   // Stop audio on unmount
   useEffect(() => {
@@ -141,19 +154,23 @@ function StarterContent() {
   // ── TTS ────────────────────────────────────────────────────────────────────
   const speak = useCallback(async (text: string) => {
     audioRef.current?.pause();
+    setIsSpeaking(false);
     try {
       const res = await fetch('/api/tts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text, lang: langId, gender: 'female', speed: 0.78 }),
+        body: JSON.stringify({ text, lang: langId, gender: tutor.gender, speed: 0.78 }),
       });
       const data = await res.json();
       if (!data.audioContent) return;
       const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
       audioRef.current = audio;
-      audio.play().catch(() => {});
-    } catch {}
-  }, [langId]);
+      setIsSpeaking(true);
+      audio.onended = () => { setIsSpeaking(false); audioRef.current = null; };
+      audio.onerror = () => { setIsSpeaking(false); audioRef.current = null; };
+      audio.play().catch(() => { setIsSpeaking(false); });
+    } catch { setIsSpeaking(false); }
+  }, [langId, tutor.gender]);
 
   // ── Gemini ─────────────────────────────────────────────────────────────────
   const callGemini = useCallback(async (prompt: string) => {
@@ -166,7 +183,79 @@ function StarterContent() {
     return data.text?.trim() || '';
   }, [user]);
 
-  // ── Translate word ──────────────────────────────────────────────────────────
+  // ── Translate unit words into target language on unit change ────────────────
+  useEffect(() => {
+    // English stays as-is
+    if (langId === 'en-US' || langId === 'en-GB' || langId === 'en-AU' || langId === 'en-CA') {
+      setTranslatedWords(null);
+      return;
+    }
+    setIsTranslating(true);
+    setTranslatedWords(null);
+
+    const LANG_NAMES: Record<string,string> = {
+      'ko-KR':'Korean','ja-JP':'Japanese','zh-CN':'Chinese (Simplified)',
+      'zh-TW':'Chinese (Traditional)','fr-FR':'French','de-DE':'German',
+      'es-ES':'Spanish','it-IT':'Italian','pt-BR':'Portuguese','ru-RU':'Russian',
+      'ar-XA':'Arabic','hi-IN':'Hindi','vi-VN':'Vietnamese','th-TH':'Thai',
+      'id-ID':'Indonesian','ms-MY':'Malay','tr-TR':'Turkish','nl-NL':'Dutch',
+      'pl-PL':'Polish','sv-SE':'Swedish','da-DK':'Danish','fi-FI':'Finnish',
+      'he-IL':'Hebrew','uk-UA':'Ukrainian','cs-CZ':'Czech','hu-HU':'Hungarian',
+      'ro-RO':'Romanian','el-GR':'Greek','bg-BG':'Bulgarian','hr-HR':'Croatian',
+      'sk-SK':'Slovak','bn-IN':'Bengali','ta-IN':'Tamil','te-IN':'Telugu',
+      'ml-IN':'Malayalam','kn-IN':'Kannada','gu-IN':'Gujarati','mr-IN':'Marathi',
+      'pa-IN':'Punjabi','ur-IN':'Urdu','sw-KE':'Swahili','af-ZA':'Afrikaans',
+      'am-ET':'Amharic','ha-NG':'Hausa','yo-NG':'Yoruba','ig-NG':'Igbo',
+      'zu-ZA':'Zulu','km-KH':'Khmer','my-MM':'Burmese','lo-LA':'Lao',
+      'kk-KZ':'Kazakh','uz-UZ':'Uzbek','mn-MN':'Mongolian','az-AZ':'Azerbaijani',
+      'hy-AM':'Armenian','ka-GE':'Georgian','ne-NP':'Nepali','si-LK':'Sinhala',
+      'ps-AF':'Pashto','mk-MK':'Macedonian','sq-AL':'Albanian','is-IS':'Icelandic',
+      'cy-GB':'Welsh','ca-ES':'Catalan','nb-NO':'Norwegian','lt-LT':'Lithuanian',
+      'lv-LV':'Latvian','et-EE':'Estonian','sr-RS':'Serbian','sl-SI':'Slovenian',
+    };
+
+    const targetLang = LANG_NAMES[langId] || langId;
+    const currentUnit = UNITS[unitIdx];
+    const wordList = currentUnit.words.map(w => w.word).join(', ');
+
+    const prompt = `Translate these ${currentUnit.words.length} words into ${targetLang} for a complete beginner.
+English words: ${wordList}
+
+Return ONLY a JSON array, no markdown, no explanation:
+[{"word":"TRANSLATED_WORD","phonetic":"ROMANIZED_PRONUNCIATION","original":"ENGLISH_WORD"},...]
+
+Rules:
+- word: the word in ${targetLang} script
+- phonetic: simple romanized pronunciation guide (e.g. "an-nyong" for 안녕)
+- original: the original English word exactly as given
+- Keep the same order as the input
+- Return exactly ${currentUnit.words.length} items`;
+
+    fetch('/api/gemini', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ uid: user?.uid ?? null, prompt, temperature: 0.2 }),
+    }).then(r => r.json()).then(data => {
+      const raw = data.text?.trim() || '';
+      const clean = raw.replace(/^```json\s*/i,'').replace(/^```\s*/i,'').replace(/```[\s\S]*$/i,'').trim();
+      const parsed = JSON.parse(clean);
+      if (Array.isArray(parsed)) {
+        // Merge with original emoji
+        const merged = parsed.map((item: any, i: number) => ({
+          word:     item.word     || currentUnit.words[i].word,
+          phonetic: item.phonetic || '',
+          emoji:    currentUnit.words[i].emoji,
+          original: item.original || currentUnit.words[i].word,
+        }));
+        setTranslatedWords(merged);
+      }
+    }).catch(() => {
+      // Translation failed — keep English
+      setTranslatedWords(null);
+    }).finally(() => setIsTranslating(false));
+  }, [unitIdx, langId, user?.uid]);
+
+  // ── Translate word (for match phase native meanings) ─────────────────────────
   const translateWord = useCallback(async (word: string): Promise<string> => {
     if (langId === subLang || subLang === 'en-US') return word;
     const NATIVE_NAMES: Record<string,string> = {
@@ -176,7 +265,8 @@ function StarterContent() {
     };
     const nativeLang = NATIVE_NAMES[subLang] || 'English';
     try {
-      const t = await callGemini(`Translate this single word to ${nativeLang}. Reply with ONLY the translation, nothing else: "${word}"`);
+      // For match phase: translate the TARGET language word back to native
+      const t = await callGemini(`Translate "${word}" to ${nativeLang}. Reply with ONLY the translation.`);
       return t || word;
     } catch { return word; }
   }, [langId, subLang, callGemini]);
@@ -398,6 +488,7 @@ STRICT RULES:
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
         @keyframes pop { 0%{transform:scale(0.8);opacity:0} 50%{transform:scale(1.2)} 100%{transform:scale(1);opacity:1} }
         @keyframes xppop { 0%{opacity:1;transform:translateY(0)} 100%{opacity:0;transform:translateY(-40px)} }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
       `}} />
 
       {/* Back */}
@@ -415,6 +506,18 @@ STRICT RULES:
         boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
         ⭐ {xp} XP
       </div>
+
+      {/* Tutor Video */}
+      <div style={{ position:'relative', width:90, height:90,
+        borderRadius:'50%', overflow:'hidden', marginBottom:16, flexShrink:0,
+        border:'3px solid #E0E7FF',
+        boxShadow:'0 4px 16px rgba(99,102,241,0.12)' }}>
+        <video src={tutor.videoIdle} autoPlay loop muted playsInline
+          style={{ position:'absolute', inset:0, width:'100%', height:'100%',
+            objectFit:'cover', objectPosition:'center 20%' }}/>
+      </div>
+      <div style={{ fontSize:11, color:'#94A3B8', fontWeight:700,
+        marginBottom:6 }}>{tutor.name}</div>
 
       {/* Unit list */}
       <div style={{ fontSize: 13, fontWeight: 700, color: '#94A3B8',
@@ -437,17 +540,40 @@ STRICT RULES:
 
       {/* Words preview */}
       <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap',
-        justifyContent: 'center', marginBottom: 40, maxWidth: 360 }}>
-        {words.map((w, i) => (
+        justifyContent: 'center', marginBottom: 16, maxWidth: 360 }}>
+        {isTranslating ? (
+          // Loading skeleton
+          Array.from({ length: 5 }).map((_, i) => (
+            <div key={i} style={{ background: '#E0E7FF', borderRadius: 14,
+              padding: '10px 20px', width: 80, height: 40,
+              animation: 'pulse 1.2s infinite' }}/>
+          ))
+        ) : words.map((w, i) => (
           <div key={i} style={{ background: 'white', borderRadius: 14,
             padding: '10px 16px', fontSize: 13, fontWeight: 800,
             color: '#334155', boxShadow: '0 2px 8px rgba(0,0,0,0.07)',
             display: 'flex', alignItems: 'center', gap: 6 }}>
             <span style={{ fontSize: 20 }}>{w.emoji}</span>
-            {w.word}
+            <div>
+              <div>{w.word}</div>
+              {(w as any).original && (w as any).original !== w.word && (
+                <div style={{ fontSize: 10, color: '#94A3B8', fontWeight: 600 }}>
+                  {(w as any).original}
+                </div>
+              )}
+            </div>
           </div>
         ))}
       </div>
+
+      {/* Language badge */}
+      {langId !== 'en-US' && langId !== 'en-GB' && (
+        <div style={{ fontSize: 11, color: '#6366F1', fontWeight: 700,
+          marginBottom: 24, padding: '4px 12px',
+          background: '#EEF2FF', borderRadius: 99 }}>
+          {isTranslating ? '⏳ Translating...' : `✅ Showing in ${langId.split('-')[0].toUpperCase()}`}
+        </div>
+      )}
 
       <button onClick={startLearn}
         style={{ ...btnBase, padding: '18px 56px', fontSize: 20,
@@ -480,6 +606,18 @@ STRICT RULES:
   // ── LEARN ───────────────────────────────────────────────────────────────────
   if (phase === 'learn') {
     const w = words[wordIdx];
+    // Show loading while translating
+    if (isTranslating) return (
+      <div style={{ minHeight:'100vh', background:BG, display:'flex',
+        flexDirection:'column', alignItems:'center', justifyContent:'center', gap:16 }}>
+        <div style={{ width:40, height:40, border:'4px solid #E0E7FF',
+          borderTopColor:ACCENT, borderRadius:'50%', animation:'spin .8s linear infinite' }}/>
+        <style dangerouslySetInnerHTML={{ __html:'@keyframes spin{to{transform:rotate(360deg)}}' }}/>
+        <div style={{ fontSize:14, fontWeight:700, color:'#6366F1' }}>
+          Preparing your {langId.split('-')[0].toUpperCase()} lesson...
+        </div>
+      </div>
+    );
     return (
       <div style={{ minHeight: '100vh', background: BG,
         fontFamily: "'Nunito',sans-serif", display: 'flex',
@@ -489,7 +627,24 @@ STRICT RULES:
           @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
           @keyframes pop { 0%{transform:scale(0.8);opacity:0} 50%{transform:scale(1.15)} 100%{transform:scale(1);opacity:1} }
           @keyframes xppop { 0%{opacity:1;transform:translateY(0)} 100%{opacity:0;transform:translateY(-40px)} }
+          @keyframes spin { to{transform:rotate(360deg)} }
         `}} />
+
+        {/* Tutor Video */}
+        <div style={{ position:'relative', width:140, height:140,
+          borderRadius:'50%', overflow:'hidden', marginBottom:24,
+          border:`3px solid ${isSpeaking ? '#6366F1' : '#E0E7FF'}`,
+          boxShadow: isSpeaking ? '0 0 0 6px #6366F120' : 'none',
+          transition:'border-color .3s, box-shadow .3s', flexShrink:0 }}>
+          <video src={tutor.videoIdle} autoPlay loop muted playsInline
+            style={{ position:'absolute', inset:0, width:'100%', height:'100%',
+              objectFit:'cover', objectPosition:'center 20%',
+              opacity: isSpeaking ? 0 : 1, transition:'opacity .25s' }}/>
+          <video src={tutor.videoTalk} autoPlay loop muted playsInline
+            style={{ position:'absolute', inset:0, width:'100%', height:'100%',
+              objectFit:'cover', objectPosition:'center 20%',
+              opacity: isSpeaking ? 1 : 0, transition:'opacity .25s' }}/>
+        </div>
 
         {/* XP pop */}
         {xpPop && (
@@ -569,6 +724,22 @@ STRICT RULES:
         LISTEN & CHOOSE · {listenIdx + 1} / {words.length}
       </div>
 
+      {/* Tutor Video */}
+      <div style={{ position:'relative', width:100, height:100,
+        borderRadius:'50%', overflow:'hidden', marginBottom:24, flexShrink:0,
+        border:`3px solid ${isSpeaking ? ACCENT : '#E0E7FF'}`,
+        boxShadow: isSpeaking ? `0 0 0 5px ${ACCENT}20` : 'none',
+        transition:'border-color .3s, box-shadow .3s' }}>
+        <video src={tutor.videoIdle} autoPlay loop muted playsInline
+          style={{ position:'absolute', inset:0, width:'100%', height:'100%',
+            objectFit:'cover', objectPosition:'center 20%',
+            opacity:isSpeaking?0:1, transition:'opacity .25s' }}/>
+        <video src={tutor.videoTalk} autoPlay loop muted playsInline
+          style={{ position:'absolute', inset:0, width:'100%', height:'100%',
+            objectFit:'cover', objectPosition:'center 20%',
+            opacity:isSpeaking?1:0, transition:'opacity .25s' }}/>
+      </div>
+
       {/* Listen button */}
       <button onClick={() => speak(listenWord.word)}
         style={{ ...btnBase, width: 120, height: 120, borderRadius: '50%',
@@ -635,8 +806,26 @@ STRICT RULES:
 
       <div style={{ fontSize: 13, fontWeight: 800, color: '#94A3B8',
         letterSpacing: 1, marginBottom: 8 }}>MATCH PAIRS</div>
-      <div style={{ fontSize: 15, color: '#64748B', fontWeight: 600,
-        marginBottom: 32 }}>Connect each word to its meaning</div>
+
+      {/* Tutor + instruction row */}
+      <div style={{ display:'flex', alignItems:'center', gap:12, marginBottom:24 }}>
+        <div style={{ position:'relative', width:60, height:60,
+          borderRadius:'50%', overflow:'hidden', flexShrink:0,
+          border:`2px solid ${isSpeaking ? ACCENT : '#E0E7FF'}`,
+          transition:'border-color .3s' }}>
+          <video src={tutor.videoIdle} autoPlay loop muted playsInline
+            style={{ position:'absolute', inset:0, width:'100%', height:'100%',
+              objectFit:'cover', objectPosition:'center 20%',
+              opacity:isSpeaking?0:1, transition:'opacity .25s' }}/>
+          <video src={tutor.videoTalk} autoPlay loop muted playsInline
+            style={{ position:'absolute', inset:0, width:'100%', height:'100%',
+              objectFit:'cover', objectPosition:'center 20%',
+              opacity:isSpeaking?1:0, transition:'opacity .25s' }}/>
+        </div>
+        <div style={{ fontSize:14, color:'#64748B', fontWeight:600, lineHeight:1.4 }}>
+          Connect each word to its meaning
+        </div>
+      </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr',
         gap: '12px 20px', width: '100%', maxWidth: 360 }}>
@@ -714,6 +903,22 @@ STRICT RULES:
           SAY IT · {speakIdx + 1} / {words.length}
         </div>
 
+        {/* Tutor Video */}
+        <div style={{ position:'relative', width:100, height:100,
+          borderRadius:'50%', overflow:'hidden', marginBottom:20, flexShrink:0,
+          border:`3px solid ${isSpeaking ? '#6366F1' : '#E0E7FF'}`,
+          boxShadow: isSpeaking ? '0 0 0 5px #6366F120' : 'none',
+          transition:'border-color .3s' }}>
+          <video src={tutor.videoIdle} autoPlay loop muted playsInline
+            style={{ position:'absolute', inset:0, width:'100%', height:'100%',
+              objectFit:'cover', objectPosition:'center 20%',
+              opacity:isSpeaking?0:1, transition:'opacity .25s' }}/>
+          <video src={tutor.videoTalk} autoPlay loop muted playsInline
+            style={{ position:'absolute', inset:0, width:'100%', height:'100%',
+              objectFit:'cover', objectPosition:'center 20%',
+              opacity:isSpeaking?1:0, transition:'opacity .25s' }}/>
+        </div>
+
         <div style={{ fontSize: 22, color: '#475569', fontWeight: 700,
           marginBottom: 24 }}>Say this word out loud:</div>
 
@@ -760,14 +965,31 @@ STRICT RULES:
       `}} />
 
       {/* Header */}
-      <div style={{ padding: '16px 20px', background: 'white',
+      <div style={{ padding: '12px 16px', background: 'white',
         borderBottom: '1px solid #F1F5F9', display: 'flex',
         alignItems: 'center', gap: 12 }}>
-        <button onClick={() => setPhase('lobby')}
+        <button onClick={() => { audioRef.current?.pause(); setPhase('lobby'); }}
           style={{ ...btnBase, padding: '6px 12px', fontSize: 13,
             background: '#F1F5F9', color: '#64748B' }}>←</button>
+        {/* Tutor video circle */}
+        <div style={{ position:'relative', width:52, height:52,
+          borderRadius:'50%', overflow:'hidden', flexShrink:0,
+          border:`2px solid ${isSpeaking ? ACCENT : '#E0E7FF'}`,
+          boxShadow: isSpeaking ? `0 0 0 4px ${ACCENT}20` : 'none',
+          transition:'all .3s' }}>
+          <video src={tutor.videoIdle} autoPlay loop muted playsInline
+            style={{ position:'absolute', inset:0, width:'100%', height:'100%',
+              objectFit:'cover', objectPosition:'center 20%',
+              opacity:isSpeaking?0:1, transition:'opacity .25s' }}/>
+          <video src={tutor.videoTalk} autoPlay loop muted playsInline
+            style={{ position:'absolute', inset:0, width:'100%', height:'100%',
+              objectFit:'cover', objectPosition:'center 20%',
+              opacity:isSpeaking?1:0, transition:'opacity .25s' }}/>
+        </div>
         <div>
-          <div style={{ fontSize: 15, fontWeight: 900 }}>🤖 Mini Chat</div>
+          <div style={{ fontSize: 15, fontWeight: 900 }}>
+            {tutor.name} <span style={{ color:'#94A3B8', fontWeight:600, fontSize:12 }}>· Mini Chat</span>
+          </div>
           <div style={{ fontSize: 11, color: '#94A3B8', fontWeight: 700 }}>
             Pre-A1 · {unit.title}
           </div>
