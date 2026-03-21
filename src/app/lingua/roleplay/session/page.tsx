@@ -486,6 +486,7 @@ Reply as ${npc.name} in ${targetLang}:`;
       </div>
     </div>
   );
+}
   // ── PLAYING ───────────────────────────────────────────────────────────────
   return (
     <div style={{height:'100dvh',background:'#F8FAFC',fontFamily:"'Nunito',sans-serif",
