@@ -78,6 +78,12 @@ export async function updateUserProfile(uid: string, data: Partial<UserProfile>)
 export async function recordActivity(uid: string, profile: UserProfile): Promise<number> {
   const today = new Date().toISOString().slice(0, 10);
   const existing = Array.isArray(profile.activityDates) ? profile.activityDates : [];
+
+  // 오늘 이미 기록되어 있으면 streak 재계산만 하고 저장 생략 (중복 write 방지)
+  const alreadyToday = existing.includes(today);
+
+  // activityDates가 없거나 비어있는데 streak은 있는 경우 → 데이터 손실로 간주
+  // 기존 streak을 보존하면서 오늘 날짜만 추가
   const dates = [...new Set([...existing, today])].sort();
 
   // 연속일 계산
@@ -89,7 +95,18 @@ export async function recordActivity(uid: string, profile: UserProfile): Promise
     else break;
   }
 
-  await updateUserProfile(uid, { activityDates: dates, streak, lastActive: today });
+  // activityDates가 비어있었는데 기존 streak이 더 크면 → 이전 데이터 유실로 보존
+  const savedStreak = profile.streak || 0;
+  if (existing.length === 0 && savedStreak > streak) {
+    // activityDates 없이 streak만 있는 케이스 (데이터 마이그레이션 미완료)
+    // 오늘 날짜 기록하되 streak은 기존 값 유지 (1로 리셋하지 않음)
+    await updateUserProfile(uid, { activityDates: [today], lastActive: today });
+    return savedStreak;
+  }
+
+  if (!alreadyToday) {
+    await updateUserProfile(uid, { activityDates: dates, streak, lastActive: today });
+  }
   return streak;
 }
 
@@ -110,7 +127,7 @@ export async function migrateFromLocalStorage(uid: string) {
   }
 }
 
-// ─── 구독 필드 추가 ──────────────────────────────────────────────────────────
+// --- 구독 필드 추가 ----------------------------------------------------------
 // UserProfile에 subscription 캐시 필드 추가
 export interface UserProfileWithSub extends UserProfile {
   planId?: string;        // 'free' | 'monthly' | 'biannual' | 'annual'

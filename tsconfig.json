@@ -2,10 +2,16 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     },
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -17,13 +23,24 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "plugins": [{ "name": "next" }]
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "old_files/muntalk/src/app/signup/page.js", "old_files/muntalk/src/app/login/page.js"  ],
-  "exclude": ["old_files/muntalk/node_modules"]
+    "**/*.tsx",
+    "old_files/muntalk/src/app/signup/page.js",
+    "old_files/muntalk/src/app/login/page.js",
+    "build_output_1774799414158/types/**/*.ts",
+    "build_output_1774807916997/types/**/*.ts",
+    "build_output_1774825125137/types/**/*.ts"
+  ],
+  "exclude": [
+    "old_files/muntalk/node_modules"
+  ]
 }

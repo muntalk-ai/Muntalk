@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
-
 import { LEARN_LANGUAGES } from '@/data/languages';
 import { CURRICULUM } from '@/data/curriculum';
 
@@ -39,46 +38,7 @@ export default function DashboardPage() {
     setLocalLang(localStorage.getItem('mt_learn_lang') || 'en-US');
   }, []);
 
-  // Firestore 리더보드 — xp 인덱스 없을 경우 fallback으로 전체 로드 후 클라이언트 정렬
-  useEffect(() => {
-    const load = async () => {
-      try {
-        const q = query(collection(db, 'users'), orderBy('xp', 'desc'), limit(20));
-        const snap = await getDocs(q);
-        setLeaderboard(snap.docs.map(d => {
-          const data = d.data();
-          return {
-            uid: d.id,
-            displayName: data.displayName || 'Learner',
-            xp: data.xp || 0,
-            streak: data.streak || 0,
-            photoURL: data.photoURL || '',
-          };
-        }));
-      } catch (e: any) {
-        // Firestore 인덱스 없을 때 → 인덱스 없이 전체 로드 후 클라이언트 정렬
-        if (e?.code === 'failed-precondition' || e?.message?.includes('index')) {
-          try {
-            const snap = await getDocs(collection(db, 'users'));
-            const all = snap.docs.map(d => {
-              const data = d.data();
-              return {
-                uid: d.id,
-                displayName: data.displayName || 'Learner',
-                xp: data.xp || 0,
-                streak: data.streak || 0,
-                photoURL: data.photoURL || '',
-              };
-            });
-            setLeaderboard(all.sort((a, b) => b.xp - a.xp).slice(0, 20));
-          } catch { /* ignore */ }
-        }
-      } finally {
-        setLbLoading(false);
-      }
-    };
-    load();
-  }, []);
+  // Leaderboard hidden — no longer fetching other users' data
 
   // profile 또는 localStorage에서 값 읽기 (SSR 안전)
   const xp             = profile?.xp             ?? localXp;
@@ -121,8 +81,7 @@ export default function DashboardPage() {
   return (
     <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito', sans-serif" }}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
-        * { box-sizing: border-box; }
+* { box-sizing: border-box; }
         .lb-row:hover { background: #F8FAFC !important; }
       ` }} />
 
@@ -142,7 +101,7 @@ export default function DashboardPage() {
 
       <div style={{ maxWidth: 960, margin: '0 auto', padding: '32px 24px' }}>
 
-        {/* ── Hero Profile Card ── */}
+        {/* -- Hero Profile Card -- */}
         <div style={{ background: 'linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%)', borderRadius: 28, padding: '32px', marginBottom: 24, color: '#fff', display: 'flex', alignItems: 'center', gap: 24, flexWrap: 'wrap', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: -60, right: -60, width: 200, height: 200, borderRadius: '50%', background: 'rgba(255,255,255,0.06)', pointerEvents: 'none' }} />
           <div style={{ position: 'absolute', bottom: -40, left: -40, width: 160, height: 160, borderRadius: '50%', background: 'rgba(255,255,255,0.06)', pointerEvents: 'none' }} />
@@ -183,7 +142,7 @@ export default function DashboardPage() {
           </button>
         </div>
 
-        {/* ── Stats Grid ── */}
+        {/* -- Stats Grid -- */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16, marginBottom: 24 }}>
           {stats.map(s => (
             <div key={s.label} style={{ background: '#fff', borderRadius: 20, border: '1.5px solid #F1F5F9', padding: '22px', display: 'flex', alignItems: 'center', gap: 16 }}>
@@ -198,7 +157,7 @@ export default function DashboardPage() {
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, marginBottom: 24 }}>
 
-          {/* ── Activity Calendar ── */}
+          {/* -- Activity Calendar -- */}
           <div style={{ background: '#fff', borderRadius: 20, border: '1.5px solid #F1F5F9', padding: '24px' }}>
             <div style={{ fontWeight: 900, fontSize: 15, color: '#0F172A', marginBottom: 16 }}>🗓️ Activity (Last 30 Days)</div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(10, 1fr)', gap: 4 }}>
@@ -225,7 +184,7 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* ── Level Roadmap ── */}
+          {/* -- Level Roadmap -- */}
           <div style={{ background: '#fff', borderRadius: 20, border: '1.5px solid #F1F5F9', padding: '24px' }}>
             <div style={{ fontWeight: 900, fontSize: 15, color: '#0F172A', marginBottom: 16 }}>🗺️ Level Roadmap</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -252,43 +211,27 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {/* ── Leaderboard ── */}
+        {/* -- My Progress Summary (leaderboard hidden) -- */}
         <div style={{ background: '#fff', borderRadius: 20, border: '1.5px solid #F1F5F9', padding: '24px' }}>
-          <div style={{ fontWeight: 900, fontSize: 15, color: '#0F172A', marginBottom: 20 }}>🏆 Leaderboard — Top Learners</div>
-          {lbLoading ? (
-            <div style={{ textAlign: 'center', padding: '32px', color: '#94A3B8', fontWeight: 700 }}>Loading…</div>
-          ) : leaderboard.length === 0 ? (
-            <div style={{ textAlign: 'center', padding: '32px', color: '#94A3B8', fontWeight: 700 }}>No data yet — be the first! 🚀</div>
-          ) : (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-              {leaderboard.map((entry, i) => {
-                const isMe = entry.uid === user?.uid;
-                const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `${i + 1}.`;
-                return (
-                  <div key={entry.uid} className="lb-row" style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '12px 16px', borderRadius: 14, background: isMe ? '#EEF2FF' : '#fff', border: isMe ? '1.5px solid #C7D2FE' : '1.5px solid transparent', transition: 'background .15s' }}>
-                    <div style={{ width: 32, textAlign: 'center', fontSize: i < 3 ? 20 : 13, fontWeight: 900, color: '#94A3B8', flexShrink: 0 }}>{medal}</div>
-                    {entry.photoURL
-                      ? <img src={entry.photoURL} alt="" style={{ width: 36, height: 36, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
-                      : <div style={{ width: 36, height: 36, borderRadius: '50%', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 900, color: '#fff', flexShrink: 0 }}>
-                          {(entry.displayName || '?')[0].toUpperCase()}
-                        </div>
-                    }
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ fontSize: 14, fontWeight: 800, color: '#0F172A', display: 'flex', alignItems: 'center', gap: 6 }}>
-                        {entry.displayName}
-                        {isMe && <span style={{ fontSize: 10, background: '#6366F1', color: '#fff', borderRadius: 6, padding: '2px 6px', fontWeight: 700 }}>YOU</span>}
-                      </div>
-                      <div style={{ fontSize: 11, color: '#94A3B8', fontWeight: 600 }}>{entry.streak}🔥 day streak</div>
-                    </div>
-                    <div style={{ textAlign: 'right', flexShrink: 0 }}>
-                      <div style={{ fontSize: 16, fontWeight: 900, color: '#2563EB' }}>{entry.xp.toLocaleString()}</div>
-                      <div style={{ fontSize: 10, color: '#94A3B8', fontWeight: 700 }}>XP</div>
-                    </div>
-                  </div>
-                );
-              })}
+          <div style={{ fontWeight: 900, fontSize: 15, color: '#0F172A', marginBottom: 20 }}>📊 My Progress</div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '16px', borderRadius: 14, background: '#EEF2FF', border: '1.5px solid #C7D2FE' }}>
+            {user?.photoURL
+              ? <img src={user.photoURL} alt="" style={{ width: 48, height: 48, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
+              : <div style={{ width: 48, height: 48, borderRadius: '50%', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, fontWeight: 900, color: '#fff', flexShrink: 0 }}>
+                  {(user?.displayName || '?')[0].toUpperCase()}
+                </div>
+            }
+            <div style={{ flex: 1 }}>
+              <div style={{ fontSize: 15, fontWeight: 900, color: '#0F172A' }}>
+                {user?.displayName || 'Learner'}
+              </div>
+              <div style={{ fontSize: 12, color: '#6366F1', fontWeight: 700 }}>{streak}🔥 day streak</div>
             </div>
-          )}
+            <div style={{ textAlign: 'right' }}>
+              <div style={{ fontSize: 22, fontWeight: 900, color: '#2563EB' }}>{xp.toLocaleString()}</div>
+              <div style={{ fontSize: 10, color: '#94A3B8', fontWeight: 700 }}>XP</div>
+            </div>
+          </div>
         </div>
 
       </div>

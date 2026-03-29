@@ -249,7 +249,18 @@ export default function LevelHub() {
     const clamped = Math.max(0, Math.min(xp - min, max - min));
     return Math.round((clamped / (max - min)) * 100);
   };
-  const isLevelUnlocked  = (levelId: string) => xp >= (XP_BOUNDS[levelId]?.[0] ?? 0);
+  const isLevelUnlocked = (levelId: string): boolean => {
+    if (isAdmin) return true;
+    if (xp >= (XP_BOUNDS[levelId]?.[0] ?? 0)) return true;
+    // 레벨테스트 배정 결과: 배정 레벨까지는 XP 무관 접근 허용
+    if (placementLevel) {
+      const ORDER = ['a1','a2','b1','b2','c1','c2'];
+      const placedIdx = ORDER.indexOf(placementLevel.toLowerCase());
+      const targetIdx = ORDER.indexOf(levelId.toLowerCase());
+      if (placedIdx >= 0 && targetIdx >= 0 && targetIdx <= placedIdx) return true;
+    }
+    return false;
+  };
   const isLevelCompleted = (levelId: string) => xp >= (XP_BOUNDS[levelId]?.[1] ?? 0);
 
   const totalLessonsCount = CURRICULUM.flatMap(l => l.steps.flatMap(s => s.lessons)).length;
@@ -727,7 +738,7 @@ export default function LevelHub() {
       {/* -- Stats -- */}
       <div style={styles.statsWrap}>
         {([
-          ['150+','AI Tutors','👩‍🏫','#EFF6FF','#2563EB'],
+          ['150+','AI Tutors','🤖','#EFF6FF','#2563EB'],
           ['52','Languages','🌍','#F0FDF4','#16A34A'],
           [String(totalLessonsCount),'Lessons','📚','#FFF7ED','#EA580C'],
           ['A1→C2','CEFR Levels','🎓','#FAF5FF','#7C3AED'],

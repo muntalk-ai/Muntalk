@@ -1,6 +1,9 @@
 node_modules/
+build_output_*/
 .next/
+out/
 old_files/
+android/
 # API Keys and Secrets
 .env
 .env.local
