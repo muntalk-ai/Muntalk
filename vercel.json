@@ -1,8 +1,12 @@
 {
-  "crons": [
+  "rewrites": [
     {
-      "path": "/api/send-daily",
-      "schedule": "0 0 * * *"
+      "source": "/__/auth/:path*",
+      "destination": "https://gen-lang-client-0389688038.firebaseapp.com/__/auth/:path*"
+    },
+    {
+      "source": "/__/firebase/:path*",
+      "destination": "https://gen-lang-client-0389688038.firebaseapp.com/__/firebase/:path*"
     }
   ]
 }
