@@ -408,7 +408,7 @@ Reply as ${npc.name} in ${targetLang}:`;
   if (phase==='result') return (
     <div style={{minHeight:'100vh',background:'#F8FAFC',fontFamily:"'Nunito',sans-serif",
       display:'flex',alignItems:'center',justifyContent:'center',padding:24}}>
-      <style dangerouslySetInnerHTML={{ __html: "@import " + "url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');" }} />
+      
       <div style={{maxWidth:520,width:'100%'}}>
         {!result ? (
           <div style={{textAlign:'center',color:'#94A3B8'}}>
