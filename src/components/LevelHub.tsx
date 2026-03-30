@@ -428,22 +428,7 @@ export default function LevelHub() {
                 <div style={styles.modalTitle}>🌐 Choose a Language to Learn</div>
                 <div style={styles.modalSub}>Select the language you want to study</div>
                 <div style={styles.langGrid}>
-                  {[
-                    // -- 최다 학습자 순 ------------------------------
-                    'en-US','en-GB','es-ES','fr-FR','de-DE','ja-JP',
-                    'zh-CN','ko-KR','pt-BR','it-IT','ru-RU','ar-XA',
-                    'hi-IN','zh-TW','vi-VN','tr-TR','pl-PL','nl-NL',
-                    'th-TH','id-ID','sv-SE','da-DK','nb-NO','fi-FI',
-                    'cs-CZ','el-GR','hu-HU','ro-RO','uk-UA','he-IL',
-                    'ms-MY','tl-PH','yue-HK','pt-PT','es-MX','fa-IR',
-                    'sk-SK','bg-BG','hr-HR','sl-SI','sr-RS','ca-ES',
-                    'et-EE','lv-LV','lt-LT','az-AZ','ka-GE',
-                    'bn-IN','ta-IN','te-IN','ml-IN','gu-IN','kn-IN',
-                    'mr-IN','pa-IN','ur-IN','sw-KE','af-ZA',
-                    'km-KH','lo-LA','si-LK','my-MM',
-                  ].map(code => {
-                    const lang = LEARN_LANGUAGES.find(l => l.code === code);
-                    if (!lang) return null;
+                  {LEARN_LANGUAGES.map(lang => {
                     const isSelected = learnLang === lang.code;
                     return (
                       <button
