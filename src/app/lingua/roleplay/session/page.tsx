@@ -408,7 +408,7 @@ Reply as ${npc.name} in ${targetLang}:`;
   if (phase==='result') return (
     <div style={{minHeight:'100vh',background:'#F8FAFC',fontFamily:"'Nunito',sans-serif",
       display:'flex',alignItems:'center',justifyContent:'center',padding:24}}>
-      
+      <style dangerouslySetInnerHTML={{__html:`@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');`}}/>
       <div style={{maxWidth:520,width:'100%'}}>
         {!result ? (
           <div style={{textAlign:'center',color:'#94A3B8'}}>
@@ -445,6 +445,9 @@ Reply as ${npc.name} in ${targetLang}:`;
                 </div>
               );})}
             </div>
+            )}
+            {result.overallFeedback !== '__NO_RESPONSE__' && result.strongPoints?.length > 0 && (
+            <>
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:12,marginBottom:14}}>
               <div style={{background:'#ECFDF5',border:'1px solid #A7F3D0',borderRadius:14,padding:16}}>
                 <div style={{fontSize:10,fontWeight:800,color:'#059669',marginBottom:8,letterSpacing:1}}>STRENGTHS</div>
@@ -476,6 +479,8 @@ Reply as ${npc.name} in ${targetLang}:`;
                 More Worlds →
               </button>
             </div>
+            </>
+            )}
           </>
         )}
       </div>
@@ -567,6 +572,7 @@ Reply as ${npc.name} in ${targetLang}:`;
                 </div>
               </div>
               {isActive&&<div style={{position:'absolute',inset:0,outline:`3px solid ${accentColor}`,pointerEvents:'none'}}/>}
+            </div>
             </div>
           );
         })}
