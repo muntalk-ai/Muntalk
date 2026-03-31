@@ -11,14 +11,12 @@ export default function LevelPage({ params }: { params: { level: string } }) {
   const langId  = searchParams.get('lang')    || 'en-US';
   const subLang = searchParams.get('subLang') || 'ko-KR';
 
-  const { user } = useAuth();
+  const { user, loading: authLoading } = useAuth();
 
   const [xp, setXp] = useState(0);
   const [completedLessons, setCompletedLessons] = useState<Set<string>>(new Set());
-  const [loaded, setLoaded] = useState(false);
+  const [localLoaded, setLocalLoaded] = useState(false);
   const [tutorId, setTutorId] = useState('t01');
-
-  const isAdmin = isAdminEmail(user?.email);
 
   useEffect(() => {
     try {
@@ -29,10 +27,13 @@ export default function LevelPage({ params }: { params: { level: string } }) {
       setCompletedLessons(new Set(savedDone));
       setTutorId(savedTutor);
     } catch { /* ignore */ }
-    setLoaded(true);
+    setLocalLoaded(true);
   }, []);
 
-  if (!loaded) return null;
+  // auth 로딩 완료 + localStorage 로딩 완료 둘 다 기다림
+  if (!localLoaded || authLoading) return null;
+
+  const isAdmin = isAdminEmail(user?.email);
 
   return (
     <StepMap
