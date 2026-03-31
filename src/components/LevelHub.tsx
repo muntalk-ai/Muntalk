@@ -518,7 +518,7 @@ export default function LevelHub() {
         {/* Desktop tabs — visible only on desktop */}
         <div className="mt-desktop-tabs" style={{ display: 'flex', gap: 2 }}>
           {([
-            { label: '📚 Learn',     action: () => router.push('/lingua') },
+            { label: '🧑‍🏫 Coach', action: () => router.push('/lingua/coach') },
             { label: '🎯 Placement', action: () => router.push(`/lingua/placement?lang=${learnLang}`) },
 { label: '🎭 Roleplay',  action: () => router.push('/lingua/roleplay') },
             { label: '🏛️ Agora',    action: () => router.push('/lingua/agora') },
@@ -636,7 +636,7 @@ export default function LevelHub() {
 
           {/* 메뉴 항목 */}
           {([
-            { emoji: '📚', label: 'Learn',       action: () => router.push('/lingua') },
+            { emoji: '🧑‍🏫', label: ' Coach', action: () => router.push('/lingua/coach') },
             { emoji: '🎯', label: 'Placement Test', action: () => router.push(`/lingua/placement?lang=${learnLang}`) },
 { emoji: '🎭', label: 'AI Roleplay',  action: () => router.push('/lingua/roleplay') },
             { emoji: '🏛️', label: 'Agora',        action: () => router.push('/lingua/agora') },
