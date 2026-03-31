@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import StepMap from '@/components/StepMap';
+import { useAuth } from '@/context/AuthContext';
+import { isAdminEmail } from '@/lib/subscription';
 
 export default function LevelPage({ params }: { params: { level: string } }) {
   const { level } = params;
@@ -9,10 +11,14 @@ export default function LevelPage({ params }: { params: { level: string } }) {
   const langId  = searchParams.get('lang')    || 'en-US';
   const subLang = searchParams.get('subLang') || 'ko-KR';
 
+  const { user } = useAuth();
+
   const [xp, setXp] = useState(0);
   const [completedLessons, setCompletedLessons] = useState<Set<string>>(new Set());
   const [loaded, setLoaded] = useState(false);
   const [tutorId, setTutorId] = useState('t01');
+
+  const isAdmin = isAdminEmail(user?.email);
 
   useEffect(() => {
     try {
@@ -36,6 +42,7 @@ export default function LevelPage({ params }: { params: { level: string } }) {
       xp={xp}
       completedLessons={completedLessons}
       tutorId={tutorId}
+      isAdmin={isAdmin}
     />
   );
 }

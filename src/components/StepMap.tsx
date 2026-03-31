@@ -10,9 +10,10 @@ interface StepMapProps {
   xp?: number;
   completedLessons?: Set<string>;
   tutorId?: string;
+  isAdmin?: boolean;
 }
 
-export default function StepMap({ levelId, langId = 'en-US', subLang = 'ko-KR', xp = 340, completedLessons = new Set(), tutorId = 't01' }: StepMapProps) {
+export default function StepMap({ levelId, langId = 'en-US', subLang = 'ko-KR', xp = 0, completedLessons = new Set(), tutorId = 't01', isAdmin = false }: StepMapProps) {
   const router = useRouter();
   const level = CURRICULUM.find(l => l.id === levelId);
   if (!level) return <div style={{ color: '#fff', padding: 40 }}>Level not found</div>;
@@ -20,12 +21,14 @@ export default function StepMap({ levelId, langId = 'en-US', subLang = 'ko-KR', 
   const tutor = getTutorById(tutorId);
 
   const isStepUnlocked = (stepIdx: number): boolean => {
+    if (isAdmin) return true;
     if (stepIdx === 0) return true;
     const prevStep = level.steps[stepIdx - 1];
     return prevStep.lessons.every(l => completedLessons.has(l.id));
   };
 
   const isLessonUnlocked = (stepIdx: number, lessonIdx: number): boolean => {
+    if (isAdmin) return true;
     if (!isStepUnlocked(stepIdx)) return false;
     if (lessonIdx === 0) return true;
     const prevLesson = level.steps[stepIdx].lessons[lessonIdx - 1];
