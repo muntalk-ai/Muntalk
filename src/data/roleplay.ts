@@ -99,7 +99,7 @@ export const EVERYDAY_SCENARIOS: EverydayScenario[] = [
   { id:'directions', emoji:'🗺️', title:'Asking Directions',
     nativeDescs:{ 'ko-KR':'길을 잃었을 때 방향 묻기', 'ja-JP':'道に迷ったとき道を聞く', 'zh-CN':'问路', 'es-ES':'Preguntar por el camino', 'fr-FR':'Demander son chemin' },
     situation:'On the street. Tourist asking a local for directions.', userRole:'A tourist asking for directions',
-    difficulty:'A1', tutorId:'t15', voiceGender:'female', accentColor:'#8B5CF6', bgColor:'#F5F3FF' },
+    difficulty:'A1', tutorId:'t05', voiceGender:'female', accentColor:'#8B5CF6', bgColor:'#F5F3FF' },
   { id:'job-interview', emoji:'💼', title:'Job Interview',
     nativeDescs:{ 'ko-KR':'취업 면접에서 자기소개하기', 'ja-JP':'就職面接で自己紹介する', 'zh-CN':'求职面试', 'es-ES':'Entrevista de trabajo', 'fr-FR':"Entretien d'embauche" },
     situation:'A job interview for a position at a company.', userRole:'A job applicant',
@@ -119,7 +119,7 @@ export const EVERYDAY_SCENARIOS: EverydayScenario[] = [
   { id:'neighborhood', emoji:'🏘️', title:'Meeting Neighbors',
     nativeDescs:{ 'ko-KR':'새 동네에서 이웃 처음 만나기', 'ja-JP':'新しい近所で隣人に会う', 'zh-CN':'在新社区认识邻居', 'es-ES':'Conocer a los vecinos', 'fr-FR':'Rencontrer les voisins' },
     situation:'Moving into a new neighborhood. Meeting neighbors for the first time.', userRole:'A new resident',
-    difficulty:'A2', tutorId:'t11', voiceGender:'female', accentColor:'#059669', bgColor:'#ECFDF5' },
+    difficulty:'A2', tutorId:'t10', voiceGender:'female', accentColor:'#059669', bgColor:'#ECFDF5' },
   { id:'complaint', emoji:'😤', title:'Making a Complaint',
     nativeDescs:{ 'ko-KR':'불량 제품에 대해 고객 서비스에 불만 제기하기', 'ja-JP':'不良品についてカスタマーサービスに苦情を言う', 'zh-CN':'就劣质产品向客服投诉', 'es-ES':'Hacer una queja', 'fr-FR':'Faire une réclamation' },
     situation:'Customer service desk. Making a complaint about a faulty product.', userRole:'A customer making a complaint',
@@ -162,7 +162,7 @@ export const WORLD_SCENARIOS: WorldScenario[] = [
     setting:'International airport departure gate. Last boarding call in 20 minutes.',
     userRole:'Someone who just ran into an old friend at the gate',
     npcs:[
-      { id:'james', name:'James', role:'An old friend about to board a one-way flight', personality:'Thoughtful, a little melancholy, says what he means when pressed', tutorId:'t87', voiceGender:'male', speakFirst:true },
+      { id:'james', name:'James', role:'An old friend about to board a one-way flight', personality:'Thoughtful, a little melancholy, says what he means when pressed', tutorId:'t100', voiceGender:'male', speakFirst:true },
     ],
     difficulty:'B2', accentColor:'#f472b6', bgGradient:'linear-gradient(135deg,#0f0a1e 0%,#4a1a5c 100%)',
     systemPrompt:'You are James, about to board a one-way international flight. You have mixed feelings. Be genuine and emotionally present. Speak only in {targetLang} at {difficulty} level. {choice} 2-3 sentences. No emojis.',
@@ -196,8 +196,8 @@ export const WORLD_SCENARIOS: WorldScenario[] = [
     setting:'After-work drinks. You end up sitting next to your office rival.',
     userRole:'Your own character — navigating this complicated dynamic',
     npcs:[
-      { id:'alex', name:'Alex', role:'Your brilliant, infuriating office rival', personality:'Sharp, competitive, but secretly fascinated by you. Challenges everything you say with wit.', tutorId:'t63', voiceGender:'male', speakFirst:true },
-      { id:'phoebe', name:'Phoebe', role:'A mutual friend who keeps nudging you both', personality:'Playful, observant, enjoys watching the tension, occasionally unhelpfully helpful.', tutorId:'t26', voiceGender:'female', speakFirst:false },
+      { id:'alex', name:'Alex', role:'Your brilliant, infuriating office rival', personality:'Sharp, competitive, but secretly fascinated by you. Challenges everything you say with wit.', tutorId:'t104', voiceGender:'male', speakFirst:true },
+      { id:'phoebe', name:'Phoebe', role:'A mutual friend who keeps nudging you both', personality:'Playful, observant, enjoys watching the tension, occasionally unhelpfully helpful.', tutorId:'t06', voiceGender:'female', speakFirst:false },
     ],
     difficulty:'B2', accentColor:'#f59e0b', bgGradient:'linear-gradient(135deg,#1a0f00 0%,#5c3d00 100%)',
     systemPrompt:'Alex and Phoebe are both present. Alex is a sharp rival with hidden feelings. Phoebe is a playful mutual friend. Speak only in {targetLang} at {difficulty} level. NPCs should occasionally interact with each other, not just the learner. {choice} 2-3 sentences each. No emojis.',
@@ -215,7 +215,7 @@ export const WORLD_SCENARIOS: WorldScenario[] = [
     userRole:'The brains of the operation — your plan, your call',
     npcs:[
       { id:'chen', name:'Detective Chen', role:'The inside contact — a conflicted museum security officer', personality:'Nervous, second-guessing, needs reassurance but is the key to the plan', tutorId:'t09', voiceGender:'female', speakFirst:true },
-      { id:'victor', name:'Victor', role:'The muscle — pragmatic, impatient, morally flexible', personality:'Direct, pushes for action, questions hesitation, loyal if respected', tutorId:'t87', voiceGender:'male', speakFirst:false },
+      { id:'victor', name:'Victor', role:'The muscle — pragmatic, impatient, morally flexible', personality:'Direct, pushes for action, questions hesitation, loyal if respected', tutorId:'t100', voiceGender:'male', speakFirst:false },
     ],
     difficulty:'B2', accentColor:'#818cf8', bgGradient:'linear-gradient(135deg,#0a0a0f 0%,#1a1a3e 100%)',
     storyBeats:[
@@ -236,7 +236,7 @@ export const WORLD_SCENARIOS: WorldScenario[] = [
     setting:'A small interrogation room. Fluorescent light. One table, two chairs, no windows.',
     userRole:'A suspect — innocent, but the evidence looks bad',
     npcs:[
-      { id:'miller', name:'Detective Miller', role:'A veteran detective who trusts evidence over words', personality:'Cold, methodical, has seen every lie, but is fundamentally fair if you convince him', tutorId:'t87', voiceGender:'male', speakFirst:true },
+      { id:'miller', name:'Detective Miller', role:'A veteran detective who trusts evidence over words', personality:'Cold, methodical, has seen every lie, but is fundamentally fair if you convince him', tutorId:'t100', voiceGender:'male', speakFirst:true },
     ],
     difficulty:'C1', accentColor:'#6366f1', bgGradient:'linear-gradient(135deg,#050510 0%,#1a1a2e 100%)',
     systemPrompt:'You are Detective Miller. Ask sharp, specific questions. Do not be easily convinced. Notice inconsistencies. Speak only in {targetLang} at {difficulty} level. {choice} Build pressure. 2-3 sentences. No emojis.',
@@ -250,7 +250,7 @@ export const WORLD_SCENARIOS: WorldScenario[] = [
     userRole:'A double agent deciding whether to tell the truth',
     npcs:[
       { id:'anna', name:'Anna', role:'Your handler — brilliant, betrayed, armed', personality:'Cool under pressure, furious underneath, decides your fate with one word', tutorId:'t04', voiceGender:'female', speakFirst:true },
-      { id:'ko', name:'Ko', role:'The enemy contact — via phone, listening in', personality:'Smooth, dangerous, wants you to stay loyal to them', tutorId:'t85', voiceGender:'male', speakFirst:false },
+      { id:'ko', name:'Ko', role:'The enemy contact — via phone, listening in', personality:'Smooth, dangerous, wants you to stay loyal to them', tutorId:'t101', voiceGender:'male', speakFirst:false },
     ],
     difficulty:'C1', accentColor:'#64748b', bgGradient:'linear-gradient(135deg,#030309 0%,#1a1a1a 100%)',
     systemPrompt:'Anna is in the room; Ko is on the phone (spoken aloud). They have conflicting goals. React to both sides. Speak only in {targetLang} at {difficulty} level. {choice} Build paranoia and tension. No emojis.',
@@ -268,7 +268,7 @@ export const WORLD_SCENARIOS: WorldScenario[] = [
     userRole:'The expedition lead — every decision is yours',
     npcs:[
       { id:'maya', name:'Dr Maya', role:'Archaeologist — excited but cautious', personality:'Brilliant, passionate about history, wants to preserve everything, occasionally reckless', tutorId:'t03', voiceGender:'female', speakFirst:true },
-      { id:'riku', name:'Riku', role:'Local guide — knows things the maps do not', personality:'Calm, practical, knows when to move and when to wait, has seen this go wrong before', tutorId:'t75', voiceGender:'male', speakFirst:false },
+      { id:'riku', name:'Riku', role:'Local guide — knows things the maps do not', personality:'Calm, practical, knows when to move and when to wait, has seen this go wrong before', tutorId:'t102', voiceGender:'male', speakFirst:false },
     ],
     difficulty:'B1', accentColor:'#4ade80', bgGradient:'linear-gradient(135deg,#0a1a0a 0%,#1a3a1a 100%)',
     storyBeats:[
@@ -290,7 +290,7 @@ export const WORLD_SCENARIOS: WorldScenario[] = [
     userRole:'Mission Specialist — the only one still thinking clearly',
     npcs:[
       { id:'hayes', name:'Commander Hayes', role:'Station commander — injured, relying on you', personality:'Experienced but injured, gives calm orders when she can think straight, trusts you completely', tutorId:'t06', voiceGender:'female', speakFirst:true },
-      { id:'sergei', name:'Sergei', role:'Russian engineer — knows the systems best', personality:'Blunt, technically brilliant, communicates in short precise bursts, no time for niceties', tutorId:'t93', voiceGender:'male', speakFirst:false },
+      { id:'sergei', name:'Sergei', role:'Russian engineer — knows the systems best', personality:'Blunt, technically brilliant, communicates in short precise bursts, no time for niceties', tutorId:'t103', voiceGender:'male', speakFirst:false },
     ],
     difficulty:'B2', accentColor:'#60a5fa', bgGradient:'linear-gradient(135deg,#000000 0%,#0a0a2e 100%)',
     storyBeats:[
@@ -312,7 +312,7 @@ export const WORLD_SCENARIOS: WorldScenario[] = [
     userRole:'Expedition leader — the decision is yours alone',
     npcs:[
       { id:'lena', name:'Lena', role:'The team member who cannot continue — but insists she can', personality:'Stubborn, courageous, terrified of being left behind, not thinking clearly from altitude', tutorId:'t01', voiceGender:'female', speakFirst:true },
-      { id:'dorji', name:'Dorji', role:'The Sherpa guide — has seen this before', personality:'Wise, direct, has seen people die here, will tell you the truth even if it hurts', tutorId:'t85', voiceGender:'male', speakFirst:false },
+      { id:'dorji', name:'Dorji', role:'The Sherpa guide — has seen this before', personality:'Wise, direct, has seen people die here, will tell you the truth even if it hurts', tutorId:'t101', voiceGender:'male', speakFirst:false },
     ],
     difficulty:'B2', accentColor:'#94a3b8', bgGradient:'linear-gradient(135deg,#0a0a14 0%,#1a2040 100%)',
     systemPrompt:'Lena is emotional and not thinking clearly. Dorji is calm and brutally honest. Both react to every decision. Real stakes. Speak only in {targetLang} at {difficulty} level. {choice} Short, breathless sentences. No emojis.',
@@ -330,8 +330,8 @@ export const WORLD_SCENARIOS: WorldScenario[] = [
     userRole:'Founder pitching your startup idea',
     npcs:[
       { id:'rachel', name:'Rachel', role:'The lead investor — she has seen it all', personality:'Direct, cuts through vagueness instantly, impressed by clarity and boldness', tutorId:'t06', voiceGender:'female', speakFirst:true },
-      { id:'david', name:'David', role:"The sceptic — plays devil's advocate", personality:'Asks the questions no one wants to answer, will invest if convinced', tutorId:'t87', voiceGender:'male', speakFirst:false },
-      { id:'yui', name:'Yui', role:'The numbers person — wants data not dreams', personality:'Quiet, analytical, speaks only when she has something important to say', tutorId:'t15', voiceGender:'female', speakFirst:false },
+      { id:'david', name:'David', role:"The sceptic — plays devil's advocate", personality:'Asks the questions no one wants to answer, will invest if convinced', tutorId:'t100', voiceGender:'male', speakFirst:false },
+      { id:'yui', name:'Yui', role:'The numbers person — wants data not dreams', personality:'Quiet, analytical, speaks only when she has something important to say', tutorId:'t05', voiceGender:'female', speakFirst:false },
     ],
     difficulty:'C1', accentColor:'#3b82f6', bgGradient:'linear-gradient(135deg,#030a1a 0%,#0a2040 100%)',
     systemPrompt:'Rachel leads the meeting. David challenges everything. Yui asks for specifics. They react to each other. Make the pitch feel real. Speak only in {targetLang} at {difficulty} level. {choice} 1-2 sentences each. No emojis.',
@@ -344,8 +344,8 @@ export const WORLD_SCENARIOS: WorldScenario[] = [
     setting:'A conference room. Two sides of a table. A lot of money and pride at stake.',
     userRole:'The negotiator for your side — prepared and strategic',
     npcs:[
-      { id:'marcus', name:'Marcus', role:"The other side's lead negotiator — experienced, fair", personality:'Strategic, respects preparation, will give ground if you give ground, watches body language', tutorId:'t87', voiceGender:'male', speakFirst:true },
-      { id:'claire', name:'Claire', role:"Marcus's assistant — takes notes, occasionally interjects", personality:'Sharp, notices inconsistencies, occasionally provides Marcus with useful information mid-conversation', tutorId:'t14', voiceGender:'female', speakFirst:false },
+      { id:'marcus', name:'Marcus', role:"The other side's lead negotiator — experienced, fair", personality:'Strategic, respects preparation, will give ground if you give ground, watches body language', tutorId:'t100', voiceGender:'male', speakFirst:true },
+      { id:'claire', name:'Claire', role:"Marcus's assistant — takes notes, occasionally interjects", personality:'Sharp, notices inconsistencies, occasionally provides Marcus with useful information mid-conversation', tutorId:'t08', voiceGender:'female', speakFirst:false },
     ],
     difficulty:'C1', accentColor:'#0ea5e9', bgGradient:'linear-gradient(135deg,#00080f 0%,#001f3f 100%)',
     systemPrompt:'Marcus negotiates strategically. Claire occasionally provides Marcus with information or whispers advice. React realistically to the learner s strategy. Speak only in {targetLang} at {difficulty} level. {choice} 2-3 sentences. No emojis.',
@@ -375,7 +375,7 @@ export const WORLD_SCENARIOS: WorldScenario[] = [
     setting:'A Japanese garden in golden afternoon light. Cherry blossoms, still water, stone paths.',
     userRole:'A weary traveller seeking peace',
     npcs:[
-      { id:'yuki', name:'Yuki', role:'A gentle mindfulness guide', personality:'Serene, uses nature metaphors, celebrates every expression, never pushes', tutorId:'t15', voiceGender:'female', speakFirst:true },
+      { id:'yuki', name:'Yuki', role:'A gentle mindfulness guide', personality:'Serene, uses nature metaphors, celebrates every expression, never pushes', tutorId:'t05', voiceGender:'female', speakFirst:true },
     ],
     difficulty:'A1', accentColor:'#86efac', bgGradient:'linear-gradient(135deg,#0a1a0a 0%,#1a3d1a 100%)',
     systemPrompt:'You are Yuki, a mindfulness guide. Speak softly and gently. Use nature imagery. Ask simple, beautiful questions. Celebrate any English expression the learner makes. Speak only in {targetLang} at {difficulty} level. {choice} Max 2 sentences. Poetic and calm. No emojis.',
@@ -388,7 +388,7 @@ export const WORLD_SCENARIOS: WorldScenario[] = [
     setting:'A quiet corner of a memorial garden. A bench. Time to reflect.',
     userRole:'Someone carrying something heavy',
     npcs:[
-      { id:'eli', name:'Eli', role:'A compassionate grief counsellor', personality:'Patient beyond words, hears what is not said, never fills silence with platitudes', tutorId:'t87', voiceGender:'male', speakFirst:true },
+      { id:'eli', name:'Eli', role:'A compassionate grief counsellor', personality:'Patient beyond words, hears what is not said, never fills silence with platitudes', tutorId:'t100', voiceGender:'male', speakFirst:true },
     ],
     difficulty:'B1', accentColor:'#a78bfa', bgGradient:'linear-gradient(135deg,#0a0a14 0%,#1a1a2e 100%)',
     systemPrompt:'You are Eli. Sit in silence when needed. Only speak when the learner needs a gentle nudge. Model emotional English naturally. Speak only in {targetLang} at {difficulty} level. {choice} Very short responses. No rushing. No emojis.',
@@ -405,7 +405,7 @@ export const WORLD_SCENARIOS: WorldScenario[] = [
     setting:'TED stage, Vancouver. Spotlight. Complete silence. The audience is waiting.',
     userRole:'A TED speaker with an idea worth spreading',
     npcs:[
-      { id:'marcus', name:'Marcus', role:'Your speech coach — backstage, via earpiece', personality:'Energetic, direct, pushes for clarity and emotion, will not let you be vague', tutorId:'t87', voiceGender:'male', speakFirst:true },
+      { id:'marcus', name:'Marcus', role:'Your speech coach — backstage, via earpiece', personality:'Energetic, direct, pushes for clarity and emotion, will not let you be vague', tutorId:'t100', voiceGender:'male', speakFirst:true },
     ],
     difficulty:'C1', accentColor:'#e879f9', bgGradient:'linear-gradient(135deg,#0f0c29 0%,#302b63 100%)',
     storyBeats:[
@@ -426,7 +426,7 @@ export const WORLD_SCENARIOS: WorldScenario[] = [
     setting:'A private dining room. Candles. A legendary figure across the table from you.',
     userRole:'A curious young person granted a rare evening',
     npcs:[
-      { id:'legend', name:'Alex', role:'A visionary who shaped the modern world', personality:'Warm, uses thought experiments, challenges assumptions gently, asks as much as answers', tutorId:'t63', voiceGender:'male', speakFirst:true },
+      { id:'legend', name:'Alex', role:'A visionary who shaped the modern world', personality:'Warm, uses thought experiments, challenges assumptions gently, asks as much as answers', tutorId:'t104', voiceGender:'male', speakFirst:true },
     ],
     difficulty:'B2', accentColor:'#fbbf24', bgGradient:'linear-gradient(135deg,#1a0f00 0%,#3d2000 100%)',
     systemPrompt:'You are Alex, a visionary mentor. Use thought experiments. Challenge the learner s assumptions. Ask them what they believe, not just what they know. Be warm but intellectually demanding. Speak only in {targetLang} at {difficulty} level. {choice} 2-3 sentences. No emojis.',
@@ -440,7 +440,7 @@ export const WORLD_SCENARIOS: WorldScenario[] = [
     userRole:'The person making the comeback — your story, your terms',
     npcs:[
       { id:'elena', name:'Elena', role:'Your long-time mentor — she never gave up on you', personality:'Direct, warm, pushes you to own your story, not apologise for it', tutorId:'t01', voiceGender:'female', speakFirst:true },
-      { id:'drew', name:'Drew', role:'Your biggest critic — and once, your closest friend', personality:'Complex, still hurt, watching to see if you have really changed', tutorId:'t63', voiceGender:'male', speakFirst:false },
+      { id:'drew', name:'Drew', role:'Your biggest critic — and once, your closest friend', personality:'Complex, still hurt, watching to see if you have really changed', tutorId:'t104', voiceGender:'male', speakFirst:false },
     ],
     difficulty:'B2', accentColor:'#f97316', bgGradient:'linear-gradient(135deg,#1a0500 0%,#3d1000 100%)',
     systemPrompt:'Elena is warm and direct, pushes the learner to be confident. Drew is watching — he reacts subtly, occasionally speaks. They have history. Speak only in {targetLang} at {difficulty} level. {choice} Create emotional weight. No emojis.',

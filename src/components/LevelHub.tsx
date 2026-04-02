@@ -703,7 +703,7 @@ export default function LevelHub() {
         <div style={styles.heroBubble1} /><div style={styles.heroBubble2} />
         <div style={styles.heroInner}>
           <div style={styles.heroBadgeRow}>
-            <div style={styles.heroBadge52}>🌐 52 Languages</div>
+            <div style={styles.heroBadge52}>🌐 100 Languages</div>
             <div style={{ ...styles.heroBadgeTutors, cursor: 'pointer' }} onClick={() => setShowPlacementModal(true)}>
               <span style={{ fontSize: 15 }}>🎯</span>
               <span>Take <strong>Placement</strong> Test</span>
@@ -729,7 +729,7 @@ export default function LevelHub() {
       <div style={styles.statsWrap}>
         {([
           ['150+','AI Tutors','🤖','#EFF6FF','#2563EB'],
-          ['52','Languages','🌍','#F0FDF4','#16A34A'],
+          ['100','Languages','🌍','#F0FDF4','#16A34A'],
           [String(totalLessonsCount),'Lessons','📚','#FFF7ED','#EA580C'],
           ['A1→C2','CEFR Levels','🎓','#FAF5FF','#7C3AED'],
         ] as [string,string,string,string,string][]).map(([v,l,e,bg,ac]) => (
