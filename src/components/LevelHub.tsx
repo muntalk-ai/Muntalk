@@ -94,7 +94,10 @@ export default function LevelHub() {
   // -- 스트릭 계산 --------------------------------------------------------------
   const calcStreak = () => {
     try {
-      const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+      // toISOString()은 UTC 기준 → 로컬 날짜로 변환
+      const now = new Date();
+      const today = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+
       const raw = localStorage.getItem('mt_activity_dates');
       const dates: string[] = raw ? JSON.parse(raw) : [];
 
@@ -107,10 +110,10 @@ export default function LevelHub() {
       // 연속 날짜 계산
       const sorted = [...new Set(dates)].sort().reverse();
       let count = 0;
-      let cursor = new Date(today);
+      let cursor = new Date(today + 'T12:00:00'); // 정오 기준으로 비교 (DST 오차 방지)
       for (const d of sorted) {
-        const diff = (cursor.getTime() - new Date(d).getTime()) / 86400000;
-        if (diff <= 1) { count++; cursor = new Date(d); }
+        const diff = (cursor.getTime() - new Date(d + 'T12:00:00').getTime()) / 86400000;
+        if (diff <= 1) { count++; cursor = new Date(d + 'T12:00:00'); }
         else break;
       }
       setStreak(count);
@@ -518,7 +521,7 @@ export default function LevelHub() {
         {/* Desktop tabs — visible only on desktop */}
         <div className="mt-desktop-tabs" style={{ display: 'flex', gap: 2 }}>
           {([
-            { label: '🧑‍🏫 Coach', action: () => router.push('/lingua/coach') },
+            { label: '📚 Learn',     action: () => router.push('/lingua') },
             { label: '🎯 Placement', action: () => router.push(`/lingua/placement?lang=${learnLang}`) },
 { label: '🎭 Roleplay',  action: () => router.push('/lingua/roleplay') },
             { label: '🏛️ Agora',    action: () => router.push('/lingua/agora') },
@@ -636,7 +639,7 @@ export default function LevelHub() {
 
           {/* 메뉴 항목 */}
           {([
-            { emoji: '🧑‍🏫', label: ' Coach', action: () => router.push('/lingua/coach') },
+            { emoji: '📚', label: 'Learn',       action: () => router.push('/lingua') },
             { emoji: '🎯', label: 'Placement Test', action: () => router.push(`/lingua/placement?lang=${learnLang}`) },
 { emoji: '🎭', label: 'AI Roleplay',  action: () => router.push('/lingua/roleplay') },
             { emoji: '🏛️', label: 'Agora',        action: () => router.push('/lingua/agora') },
