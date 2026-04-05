@@ -12,7 +12,7 @@ import PaywallModal from '@/components/PaywallModal';
 
 type FeatureId = 'spark'|'news'|'mirror'|'world'|'character'|'story';
 type ChatMode = 'target'|'native';
-type ChatMsg = { role:'user'|'ai'; text:string; ts:number };
+type ChatMsg = { role:'user'|'ai'; text:string; ts:number; translation?:string; showTranslation?:boolean };
 
 const LANG_NAMES: Record<string,string> = {
   'en-US':'English','en-GB':'English','ja-JP':'Japanese','ko-KR':'Korean',
@@ -133,6 +133,7 @@ function DiscoverContent() {
   const [storyText,  setStoryText]  = useState('');
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isListening,setIsListening]= useState(false);
+  const [translating,setTranslating]= useState<number|null>(null);
 
   const chatRef = useRef<HTMLDivElement>(null);
   const audioRef = useRef<HTMLAudioElement|null>(null);
@@ -190,8 +191,9 @@ function DiscoverContent() {
     setIsSpeaking(true);
     try {
       const t = getTutorById(tutorId);
+      const spkLang = chatMode === 'native' ? subLang : langId;
       const res = await fetch('/api/tts', { method:'POST', headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({ text:clean, lang:langId, gender:t.gender, level:'b1' }) });
+        body: JSON.stringify({ text:clean, lang:spkLang, gender:t.gender, level:'b1' }) });
       const data = await res.json();
       if (!data.audioContent) { setIsSpeaking(false); return; }
       const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
@@ -200,13 +202,39 @@ function DiscoverContent() {
       audio.onerror = () => { setIsSpeaking(false); audioRef.current = null; };
       audio.play().catch(() => setIsSpeaking(false));
     } catch { setIsSpeaking(false); }
-  }, [langId, tutorId]);
+  }, [langId, subLang, chatMode, tutorId]);
 
   const addMsg = (m: Omit<ChatMsg,'ts'>) => {
     const msg = {...m, ts:Date.now()};
     setMessages(prev=>[...prev, msg]);
     return msg;
   };
+
+  const translateMsg = useCallback(async (msgIdx: number, text: string) => {
+    setTranslating(msgIdx);
+    try {
+      const res = await fetch('/api/gemini', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          uid: user?.uid ?? null, temperature: 0.1,
+          prompt: `Translate the following text to language code "${subLang}". Return ONLY the translation, nothing else:\n\n"${text}"`,
+        }),
+      });
+      const data = await res.json();
+      const translation = data.text?.trim().replace(/^"|"$/g, '') || '';
+      setMessages(prev => prev.map((m, i) => i === msgIdx ? { ...m, translation, showTranslation: true } : m));
+    } catch {}
+    finally { setTranslating(null); }
+  }, [user, subLang]);
+
+  const toggleTranslation = useCallback((msgIdx: number) => {
+    const msg = messages[msgIdx];
+    if (msg?.translation) {
+      setMessages(prev => prev.map((m, i) => i === msgIdx ? { ...m, showTranslation: !m.showTranslation } : m));
+    } else {
+      translateMsg(msgIdx, msg.text);
+    }
+  }, [messages, translateMsg]);
 
   // Build system prompt per feature
   const buildPrompt = useCallback((userText: string): string => {
@@ -360,7 +388,7 @@ function DiscoverContent() {
 
   // ── 로딩 중 ────────────────────────────────────────────────────────────────
   if (!subChecked) return (
-    <div style={{ minHeight:'100vh', background:'#08080F', display:'flex',
+    <div style={{ minHeight:'100vh', background:'#F8FAFC', display:'flex',
       alignItems:'center', justifyContent:'center' }}>
       <div style={{ width:40, height:40, border:'4px solid #1e293b',
         borderTopColor:'#6366F1', borderRadius:'50%', animation:'spin .8s linear infinite' }}/>
@@ -370,8 +398,8 @@ function DiscoverContent() {
 
   // ── 미로그인 / 비프리미엄 차단 ──────────────────────────────────────────────
   if (!isPremiumUser) return (
-    <div style={{ minHeight:'100vh', background:'#08080F',
-      fontFamily:"'Nunito',sans-serif", color:'#F1F5F9',
+    <div style={{ minHeight:'100vh', background:'#F8FAFC',
+      fontFamily:"'Nunito',sans-serif", color:'#0F172A',
       display:'flex', alignItems:'center', justifyContent:'center', padding:24 }}>
       <style dangerouslySetInnerHTML={{ __html:`
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
@@ -400,7 +428,7 @@ function DiscoverContent() {
               </button>
               <button onClick={() => router.push('/signup')}
                 style={{ padding:'13px 20px', borderRadius:14,
-                  border:'1.5px solid rgba(255,255,255,0.15)',
+                  border:'1.5px solid #E2E8F0',
                   background:'transparent', color:'#94A3B8',
                   fontSize:14, fontWeight:800, cursor:'pointer',
                   fontFamily:"'Nunito',sans-serif" }}>
@@ -418,7 +446,7 @@ function DiscoverContent() {
           )}
           <button onClick={() => router.push('/lingua')}
             style={{ padding:'13px 20px', borderRadius:14,
-              border:'1.5px solid rgba(255,255,255,0.1)',
+              border:'1.5px solid #E2E8F0',
               background:'transparent', color:'#64748B',
               fontSize:14, fontWeight:800, cursor:'pointer',
               fontFamily:"'Nunito',sans-serif" }}>
@@ -430,8 +458,8 @@ function DiscoverContent() {
   );
 
   if (!active) return (
-    <div style={{ minHeight:'100vh', background:'#08080F', fontFamily:"'Nunito',sans-serif",
-      color:'#F1F5F9' }}>
+    <div style={{ minHeight:'100vh', background:'#F8FAFC', fontFamily:"'Nunito',sans-serif",
+      color:'#0F172A' }}>
       <style dangerouslySetInnerHTML={{ __html:`
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
         @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
@@ -445,7 +473,7 @@ function DiscoverContent() {
 
       <div style={{ padding:'16px 20px 0', display:'flex', alignItems:'center', gap:12 }}>
         <button onClick={() => router.back()}
-          style={{ background:'rgba(255,255,255,0.07)', border:'1px solid rgba(255,255,255,0.1)',
+          style={{ background:'#F1F5F9', border:'1px solid #E2E8F0',
             borderRadius:10, padding:'8px 16px', color:'#64748B', fontSize:13, fontWeight:700,
             cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>← Back</button>
         <div>
@@ -472,7 +500,7 @@ function DiscoverContent() {
           <button onClick={() => setChatMode('target')}
             style={{ padding:'5px 14px', borderRadius:99, border:'none', cursor:'pointer',
               fontFamily:"'Nunito',sans-serif", fontWeight:800, fontSize:12,
-              background: chatMode==='target' ? '#6366F1' : 'rgba(255,255,255,0.07)',
+              background: chatMode==='target' ? '#6366F1' : '#F1F5F9',
               color: chatMode==='target' ? '#fff' : '#64748B',
               boxShadow: chatMode==='target' ? '0 2px 8px rgba(99,102,241,0.4)' : 'none',
               transition:'all .15s' }}>
@@ -482,7 +510,7 @@ function DiscoverContent() {
             <button onClick={() => setChatMode('native')}
               style={{ padding:'5px 14px', borderRadius:99, border:'none', cursor:'pointer',
                 fontFamily:"'Nunito',sans-serif", fontWeight:800, fontSize:12,
-                background: chatMode==='native' ? '#10B981' : 'rgba(255,255,255,0.07)',
+                background: chatMode==='native' ? '#10B981' : '#F1F5F9',
                 color: chatMode==='native' ? '#fff' : '#64748B',
                 boxShadow: chatMode==='native' ? '0 2px 8px rgba(16,185,129,0.4)' : 'none',
                 transition:'all .15s' }}>
@@ -500,8 +528,8 @@ function DiscoverContent() {
 
         {/* TODAY strip */}
         <div style={{ marginBottom:28, padding:'16px 20px', borderRadius:16,
-          background:'linear-gradient(135deg,rgba(99,102,241,0.15),rgba(139,92,246,0.1))',
-          border:'1px solid rgba(99,102,241,0.25)', display:'flex', alignItems:'center', gap:14 }}>
+          background:'linear-gradient(135deg,#EEF2FF,#F5F3FF)',
+          border:'1px solid #C7D2FE', display:'flex', alignItems:'center', gap:14 }}>
           <img src={tutor.thumbnail} alt={tutor.name}
             style={{ width:44, height:44, borderRadius:'50%', objectFit:'cover',
               objectPosition:'center 20%', border:'2px solid #6366F1',
@@ -509,7 +537,7 @@ function DiscoverContent() {
           <div style={{ flex:1 }}>
             <div style={{ fontSize:11, fontWeight:800, color:'#6366F1', letterSpacing:1,
               marginBottom:3 }}>TODAY FROM {tutor.name.toUpperCase()}</div>
-            <div style={{ fontSize:13, fontWeight:700, color:'#E2E8F0', lineHeight:1.5 }}>
+            <div style={{ fontSize:13, fontWeight:700, color:'#1E293B', lineHeight:1.5 }}>
               "{todayQuestion.slice(0,90)}..."
             </div>
           </div>
@@ -545,13 +573,13 @@ function DiscoverContent() {
                     animation:'float 3s ease-in-out infinite' }}>{f.emoji}</div>
                   <div style={{ fontSize:18, fontWeight:900, color:'#fff', marginBottom:4 }}>{f.title}</div>
                   <div style={{ fontSize:12, color:f.accent, fontWeight:700, marginBottom:8 }}>{f.tagline}</div>
-                  <div style={{ fontSize:12, color:'rgba(255,255,255,0.7)', fontWeight:600,
+                  <div style={{ fontSize:12, color:'rgba(0,0,0,0.65)', fontWeight:600,
                     lineHeight:1.5 }}>{f.desc}</div>
 
                   {/* Special: Character preview */}
                   {f.id === 'character' && (
                     <div style={{ marginTop:10, padding:'8px 12px', borderRadius:10,
-                      background:'rgba(255,255,255,0.1)', fontSize:11, color:'rgba(255,255,255,0.8)',
+                      background:'#E2E8F0', fontSize:11, color:'#475569',
                       fontWeight:600 }}>
                       Today: <strong>{todayPersona.name}</strong> — {todayPersona.role.slice(0,50)}...
                     </div>
@@ -574,7 +602,7 @@ function DiscoverContent() {
                         <button key={ch.id} className="ch-btn"
                           onClick={(e) => { e.stopPropagation(); openFeature('world', ch.id); }}
                           style={{ padding:'5px 12px', borderRadius:99, border:'none',
-                            background:'rgba(255,255,255,0.15)', color:'#fff',
+                            background:'#F1F5F9', color:'#fff',
                             fontSize:11, fontWeight:800, cursor:'pointer',
                             fontFamily:"'Nunito',sans-serif" }}>
                           {ch.emoji} {ch.label}
@@ -663,21 +691,48 @@ function DiscoverContent() {
         {messages.map((msg,i) => {
           const isUser = msg.role === 'user';
           return (
-            <div key={i} style={{ display:'flex', justifyContent:isUser?'flex-end':'flex-start',
+            <div key={i} style={{ display:'flex', flexDirection:'column',
+              alignItems:isUser?'flex-end':'flex-start',
               animation:'fadeUp .3s ease' }}>
-              {!isUser && (
-                <img src={tutor.thumbnail} alt={tutor.name}
-                  style={{ width:28, height:28, borderRadius:'50%', objectFit:'cover',
-                    objectPosition:'center 20%', marginRight:8, flexShrink:0, alignSelf:'flex-end' }}/>
-              )}
-              <div style={{ maxWidth:'80%', padding:'11px 15px', lineHeight:1.65,
-                borderRadius:isUser?'18px 18px 4px 18px':'18px 18px 18px 4px',
-                background:isUser?feat.accent:'#fff',
-                border:isUser?'none':'1.5px solid #F1F5F9',
-                boxShadow:isUser?'none':'0 2px 8px rgba(0,0,0,0.06)',
-                color:isUser?'#fff':'#0F172A', fontSize:14, fontWeight:600 }}>
-                {msg.text}
+              <div style={{ display:'flex', justifyContent:isUser?'flex-end':'flex-start',
+                alignItems:'flex-end', gap:8, width:'100%' }}>
+                {!isUser && (
+                  <img src={tutor.thumbnail} alt={tutor.name}
+                    style={{ width:28, height:28, borderRadius:'50%', objectFit:'cover',
+                      objectPosition:'center 20%', flexShrink:0 }}/>
+                )}
+                <div style={{ maxWidth:'80%', padding:'11px 15px', lineHeight:1.65,
+                  borderRadius:isUser?'18px 18px 4px 18px':'18px 18px 18px 4px',
+                  background:isUser?feat.accent:'#fff',
+                  border:isUser?'none':'1.5px solid #F1F5F9',
+                  boxShadow:isUser?'none':'0 2px 8px rgba(0,0,0,0.06)',
+                  color:isUser?'#fff':'#0F172A', fontSize:14, fontWeight:600 }}>
+                  {msg.text}
+                </div>
               </div>
+              {/* Translate button — AI messages only */}
+              {!isUser && (
+                <div style={{ display:'flex', alignItems:'flex-start', gap:6,
+                  marginTop:4, paddingLeft:36, flexWrap:'wrap', maxWidth:'80%' }}>
+                  <button
+                    onClick={() => toggleTranslation(i)}
+                    disabled={translating === i}
+                    title="Translate to your language"
+                    style={{ background:'#F1F5F9', border:'1px solid #E2E8F0',
+                      borderRadius:8, padding:'3px 10px', fontSize:12, cursor:'pointer',
+                      fontFamily:"'Nunito',sans-serif", color:'#64748B', fontWeight:700,
+                      flexShrink:0, transition:'all .15s' }}>
+                    {translating === i ? '⏳' : msg.showTranslation ? '🌐 ✓' : '🌐'}
+                  </button>
+                  {msg.showTranslation && msg.translation && (
+                    <div style={{ fontSize:12, color:'#475569', fontWeight:600,
+                      fontStyle:'italic', lineHeight:1.65, background:'#F1F5F9',
+                      padding:'6px 10px', borderRadius:8, border:'1px solid #E2E8F0' }}>
+                      {msg.translation}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           );
         })}
@@ -737,7 +792,7 @@ function DiscoverContent() {
 
 export default function DiscoverPage() {
   return (
-    <Suspense fallback={<div style={{ minHeight:'100vh', background:'#08080F' }}/>}>
+    <Suspense fallback={<div style={{ minHeight:'100vh', background:'#F8FAFC' }}/>}>
       <DiscoverContent />
     </Suspense>
   );

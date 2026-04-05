@@ -18,9 +18,13 @@ import {
 // ── Types ─────────────────────────────────────────────────────────────────────
 
 interface ChatMsg {
+  // translation support
+
   role: 'user'|'ai';
   text: string;
-  extractedContent?: string;  // content between |||CONTENT_START||| markers
+  extractedContent?: string;
+  translation?: string;
+  showTranslation?: boolean;
 }
 
 // ── Lang helpers ──────────────────────────────────────────────────────────────
@@ -72,6 +76,14 @@ function DreamStudioContent() {
   const chatRef    = useRef<HTMLDivElement>(null);
   const audioRef   = useRef<HTMLAudioElement|null>(null);
   const recRef     = useRef<any>(null);
+
+  // ── Stop audio on unmount (page leave) ───────────────────────────────────
+  useEffect(() => {
+    return () => {
+      if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; }
+      if (recRef.current) { try { recRef.current.stop(); } catch {} }
+    };
+  }, []);
 
   const targetLang = LANG_NAMES[langId]  || 'English';
   const nativeLang = LANG_NAMES[subLang] || 'English';
@@ -142,6 +154,34 @@ function DreamStudioContent() {
   }, [langId, subLang, langMode, tutor.gender]);
 
   const showToast = (msg: string) => { setToast(msg); setTimeout(()=>setToast(''),3000); };
+
+  // Translate a message to native language
+  const [translating, setTranslating] = useState<number|null>(null);
+  const translateMsg = useCallback(async (msgIdx: number, text: string) => {
+    setTranslating(msgIdx);
+    try {
+      const res = await fetch('/api/gemini', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          uid: user?.uid ?? null, temperature: 0.1,
+          prompt: `Translate the following text to language code "${subLang}". Return ONLY the translation, nothing else:\n\n"${text}"`,
+        }),
+      });
+      const data = await res.json();
+      const translation = data.text?.trim().replace(/^"|"$/g, '') || '';
+      setMessages(prev => prev.map((m, i) => i === msgIdx ? { ...m, translation, showTranslation: true } : m));
+    } catch {}
+    finally { setTranslating(null); }
+  }, [user, subLang]);
+
+  const toggleTranslation = useCallback((msgIdx: number) => {
+    const msg = messages[msgIdx];
+    if (msg.translation) {
+      setMessages(prev => prev.map((m, i) => i === msgIdx ? { ...m, showTranslation: !m.showTranslation } : m));
+    } else {
+      translateMsg(msgIdx, msg.text);
+    }
+  }, [messages, translateMsg]);
 
   // Load projects
   const loadProjects = async () => {
@@ -290,7 +330,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
 
   // ── 로딩 중 ────────────────────────────────────────────────────────────────
   if (!subChecked) return (
-    <div style={{ minHeight:'100vh', background:'#08080F', display:'flex',
+    <div style={{ minHeight:'100vh', background:'#F8FAFC', display:'flex',
       alignItems:'center', justifyContent:'center' }}>
       <div style={{ width:40, height:40, border:'4px solid #1e293b',
         borderTopColor:'#fbbf24', borderRadius:'50%', animation:'spin .8s linear infinite' }}/>
@@ -300,8 +340,8 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
 
   // ── 미로그인 / 비프리미엄 차단 ──────────────────────────────────────────────
   if (!isPremiumUser) return (
-    <div style={{ minHeight:'100vh', background:'#08080F',
-      fontFamily:"'Nunito',sans-serif", color:'#F1F5F9',
+    <div style={{ minHeight:'100vh', background:'#F8FAFC',
+      fontFamily:"'Nunito',sans-serif", color:'#0F172A',
       display:'flex', alignItems:'center', justifyContent:'center', padding:24 }}>
       <style dangerouslySetInnerHTML={{ __html:`
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
@@ -330,8 +370,8 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
               </button>
               <button onClick={() => router.push('/signup')}
                 style={{ padding:'13px 20px', borderRadius:14,
-                  border:'1.5px solid rgba(255,255,255,0.15)',
-                  background:'transparent', color:'#94A3B8',
+                  border:'1.5px solid #E2E8F0',
+                  background:'transparent', color:'#64748B',
                   fontSize:14, fontWeight:800, cursor:'pointer',
                   fontFamily:"'Nunito',sans-serif" }}>
                 Create Account
@@ -348,7 +388,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
           )}
           <button onClick={() => router.push('/lingua')}
             style={{ padding:'13px 20px', borderRadius:14,
-              border:'1.5px solid rgba(255,255,255,0.1)',
+              border:'1.5px solid #E2E8F0',
               background:'transparent', color:'#64748B',
               fontSize:14, fontWeight:800, cursor:'pointer',
               fontFamily:"'Nunito',sans-serif" }}>
@@ -360,8 +400,8 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
   );
 
   if (view === 'gallery') return (
-    <div style={{ minHeight:'100vh', background:'#08080F',
-      fontFamily:"'Nunito',sans-serif", color:'#F1F5F9' }}>
+    <div style={{ minHeight:'100vh', background:'#F8FAFC',
+      fontFamily:"'Nunito',sans-serif", color:'#0F172A' }}>
       <style dangerouslySetInnerHTML={{ __html:`
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
         @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
@@ -375,7 +415,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
       {/* HEADER */}
       <div style={{ padding:'18px 20px', display:'flex', alignItems:'center', gap:12 }}>
         <button onClick={() => router.back()}
-          style={{ background:'rgba(255,255,255,0.07)', border:'1px solid rgba(255,255,255,0.1)',
+          style={{ background:'#F1F5F9', border:'1px solid #E2E8F0',
             borderRadius:10, padding:'8px 16px', color:'#64748B', fontSize:13, fontWeight:700,
             cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>← Back</button>
         <div>
@@ -407,7 +447,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
               <div style={{ fontSize:13, fontWeight:800, color:'#6366F1', marginBottom:2 }}>
                 Premium Feature
               </div>
-              <div style={{ fontSize:12, color:'rgba(255,255,255,0.6)', fontWeight:600 }}>
+              <div style={{ fontSize:12, color:'#475569', fontWeight:600 }}>
                 Dream Studio is available for Premium members. Upgrade to start creating your novel, screenplay, lyrics, or poetry.
               </div>
             </div>
@@ -430,7 +470,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
             <div style={{ fontSize:13, fontWeight:800, color:'#fbbf24', marginBottom:2 }}>
               100% Your Copyright
             </div>
-            <div style={{ fontSize:12, color:'rgba(255,255,255,0.6)', fontWeight:600 }}>
+            <div style={{ fontSize:12, color:'#475569', fontWeight:600 }}>
               Everything created here belongs entirely to you. MunTalk AI is your collaborator, not your author. Download anytime with a copyright declaration included.
             </div>
           </div>
@@ -449,7 +489,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
               <button key={opt.id} onClick={() => setLangMode(opt.id)}
                 style={{ padding:'10px 18px', borderRadius:14, border:'none', cursor:'pointer',
                   fontFamily:"'Nunito',sans-serif",
-                  background: langMode===opt.id ? opt.color : 'rgba(255,255,255,0.06)',
+                  background: langMode===opt.id ? opt.color : '#F1F5F9',
                   outline: langMode===opt.id ? `2px solid ${opt.color}50` : 'none',
                   color: langMode===opt.id ? '#fff' : '#64748B',
                   boxShadow: langMode===opt.id ? `0 4px 14px ${opt.color}40` : 'none',
@@ -478,13 +518,13 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
                       setMessages([]);
                       setView('studio');
                     }}
-                    style={{ background:'rgba(255,255,255,0.04)',
-                      border:'1px solid rgba(255,255,255,0.08)',
+                    style={{ background:'#fff',
+                      border:'1px solid #E2E8F0',
                       borderRadius:14, padding:'14px 18px',
                       display:'flex', alignItems:'center', gap:12 }}>
                     <div style={{ fontSize:24 }}>{g?.emoji || '📝'}</div>
                     <div style={{ flex:1 }}>
-                      <div style={{ fontSize:14, fontWeight:800, color:'#F1F5F9' }}>{p.title}</div>
+                      <div style={{ fontSize:14, fontWeight:800, color:'#0F172A' }}>{p.title}</div>
                       <div style={{ fontSize:11, color:'#475569', fontWeight:600 }}>
                         {g?.title} · {p.wordCount} words · {p.phase}
                         · {new Date(p.updatedAt).toLocaleDateString()}
@@ -541,7 +581,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
             <span style={{ fontSize:18 }}>{selGenre?.emoji}</span>
             <div>
               <div style={{ fontSize:13, fontWeight:900, color:'#0F172A' }}>{activeProj?.title}</div>
-              <div style={{ fontSize:10, color:'#94A3B8', fontWeight:700 }}>
+              <div style={{ fontSize:10, color:'#64748B', fontWeight:700 }}>
                 {selGenre?.title} · {activeProj?.wordCount||0} words
               </div>
             </div>
@@ -599,7 +639,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
             <div style={{ fontSize:22, fontWeight:900, color:'#0F172A', marginBottom:6 }}>
               {activeProj?.title}
             </div>
-            <div style={{ fontSize:11, color:'#94A3B8', fontWeight:600, marginBottom:24,
+            <div style={{ fontSize:11, color:'#64748B', fontWeight:600, marginBottom:24,
               paddingBottom:16, borderBottom:'1px solid #F1F5F9' }}>
               {selGenre?.title} · {activeProj?.wordCount||0} words · © {userName}
             </div>
@@ -609,7 +649,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
                 {docContent}
               </div>
             ) : (
-              <div style={{ textAlign:'center', padding:'40px 0', color:'#94A3B8', fontWeight:600 }}>
+              <div style={{ textAlign:'center', padding:'40px 0', color:'#64748B', fontWeight:600 }}>
                 Your work will appear here as you create it
               </div>
             )}
@@ -630,7 +670,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
                     <img src={tutor.thumbnail} alt={tutor.name}
                       style={{ width:22, height:22, borderRadius:'50%', objectFit:'cover',
                         objectPosition:'center 20%' }}/>
-                    <span style={{ fontSize:10, fontWeight:700, color:'#94A3B8' }}>{tutor.name}</span>
+                    <span style={{ fontSize:10, fontWeight:700, color:'#64748B' }}>{tutor.name}</span>
                   </div>
                 )}
                 <div style={{ maxWidth:'82%', padding:'11px 16px',
@@ -642,6 +682,28 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
                   fontSize:14, fontWeight:600, lineHeight:1.65 }}>
                   {msg.text}
                 </div>
+                {/* Translate button — AI messages only */}
+                {!isUser && (
+                  <div style={{ display:'flex', alignItems:'flex-start', gap:6, marginTop:4, flexWrap:'wrap', maxWidth:'82%' }}>
+                    <button
+                      onClick={() => toggleTranslation(i)}
+                      disabled={translating === i}
+                      title="Translate to your language"
+                      style={{ background:'#F1F5F9', border:'1px solid #E2E8F0', borderRadius:8,
+                        padding:'3px 10px', fontSize:12, cursor:'pointer',
+                        fontFamily:"'Nunito',sans-serif", color:'#64748B', fontWeight:700,
+                        flexShrink:0, transition:'all .15s' }}>
+                      {translating === i ? '⏳' : msg.showTranslation ? '🌐 ✓' : '🌐'}
+                    </button>
+                    {msg.showTranslation && msg.translation && (
+                      <div style={{ fontSize:12, color:'#475569', fontWeight:600, fontStyle:'italic',
+                        lineHeight:1.65, background:'#F1F5F9', padding:'6px 10px',
+                        borderRadius:8, border:'1px solid #E2E8F0' }}>
+                        {msg.translation}
+                      </div>
+                    )}
+                  </div>
+                )}
                 {msg.extractedContent && (
                   <div style={{ marginTop:6, maxWidth:'82%', padding:'12px 16px',
                     borderRadius:12, background:'#F0FDF4', border:'1.5px solid #A7F3D0',
@@ -685,7 +747,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
       {/* INPUT */}
       <div style={{ padding:'10px 12px 14px', background:'#fff',
         borderTop:'1px solid #F1F5F9', flexShrink:0 }}>
-        <div style={{ marginBottom:6, fontSize:10, color:'#94A3B8', fontWeight:700 }}>
+        <div style={{ marginBottom:6, fontSize:10, color:'#64748B', fontWeight:700 }}>
           {phaseInfo?.desc} · speaking in {langMode==='native'?nativeLang:langMode==='target'?targetLang:'mixed mode'}
         </div>
         <div style={{ display:'flex', gap:8, alignItems:'flex-end' }}>
@@ -752,7 +814,7 @@ function GenreCard({ genre, index, onSelect, locked = false }: {
           </div>
           <div style={{ fontSize:17, fontWeight:900, color:'#fff', marginBottom:3 }}>{genre.title}</div>
           <div style={{ fontSize:11, color:genre.accent, fontWeight:700, marginBottom:6 }}>{genre.tagline}</div>
-          <div style={{ fontSize:12, color:'rgba(255,255,255,0.75)', fontWeight:600, lineHeight:1.5 }}>
+          <div style={{ fontSize:12, color:'#475569', fontWeight:600, lineHeight:1.5 }}>
             {genre.description}
           </div>
         </div>
@@ -760,8 +822,8 @@ function GenreCard({ genre, index, onSelect, locked = false }: {
 
       {/* Expand for project start */}
       {expanded && (
-        <div style={{ background:'rgba(255,255,255,0.04)', padding:'14px 16px',
-          borderTop:'1px solid rgba(255,255,255,0.08)' }}>
+        <div style={{ background:'#fff', padding:'14px 16px',
+          borderTop:'1px solid #F1F5F9' }}>
           <div style={{ fontSize:10, fontWeight:800, color:'#475569',
             letterSpacing:1, marginBottom:8 }}>EXAMPLES</div>
           <div style={{ display:'flex', flexDirection:'column', gap:5, marginBottom:14 }}>
@@ -771,7 +833,7 @@ function GenreCard({ genre, index, onSelect, locked = false }: {
                 onMouseLeave={()=>setHovIdx(null)}
                 onClick={() => setTitleInput(ex)}
                 style={{ padding:'6px 12px', borderRadius:8, border:'none', cursor:'pointer',
-                  background: hovIdx===i ? `${genre.accent}20` : 'rgba(255,255,255,0.06)',
+                  background: hovIdx===i ? `${genre.accent}15` : '#fff',
                   color: hovIdx===i ? genre.accent : '#94A3B8',
                   fontSize:11, fontWeight:700, textAlign:'left',
                   fontFamily:"'Nunito',sans-serif", transition:'all .12s' }}>
@@ -783,7 +845,7 @@ function GenreCard({ genre, index, onSelect, locked = false }: {
             onKeyDown={e=>{ if(e.key==='Enter'&&titleInput.trim()) onSelect(titleInput.trim()); }}
             placeholder="Or type your own idea..."
             style={{ width:'100%', padding:'10px 14px', borderRadius:10, border:'none',
-              background:'rgba(255,255,255,0.08)', color:'#F1F5F9', fontSize:13,
+              background:'#fff', border:'1.5px solid #E2E8F0', color:'#0F172A', fontSize:13,
               fontFamily:"'Nunito',sans-serif", outline:'none', fontWeight:600,
               marginBottom:10, boxSizing:'border-box' }}/>
           <button onClick={() => titleInput.trim() && onSelect(titleInput.trim())}
@@ -803,7 +865,7 @@ function GenreCard({ genre, index, onSelect, locked = false }: {
 
 export default function DreamStudioPage() {
   return (
-    <Suspense fallback={<div style={{ minHeight:'100vh', background:'#08080F' }}/>}>
+    <Suspense fallback={<div style={{ minHeight:'100vh', background:'#F8FAFC' }}/>}>
       <DreamStudioContent />
     </Suspense>
   );
