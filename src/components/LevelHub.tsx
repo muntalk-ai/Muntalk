@@ -340,15 +340,15 @@ export default function LevelHub() {
     <div style={styles.page}>
       <style suppressHydrationWarning>{`
 *{box-sizing:border-box;}
-        .mt-nav-tab{padding:8px 16px;border-radius:10px;border:none;background:transparent;font-weight:700;font-size:13px;cursor:pointer;color:#64748B;transition:all .15s;font-family:'Nunito',sans-serif;}
+        .mt-nav-tab{padding:6px 10px;border-radius:10px;border:none;background:transparent;font-weight:700;font-size:12px;cursor:pointer;color:#64748B;transition:all .15s;font-family:'Nunito',sans-serif;white-space:nowrap;}
         .mt-nav-tab:hover{color:#38BDF8;}
         .mt-nav-tab.active{background:#EFF6FF;color:#38BDF8;}
-        @media(max-width:768px){
+        @media(max-width:1024px){
           .mt-desktop-tabs{display:none !important;}
           .mt-hamburger{display:flex !important;}
           .mt-nav-streak-xp{display:none !important;}
         }
-        @media(min-width:769px){
+        @media(min-width:1025px){
           .mt-hamburger{display:none !important;}
           .mt-mobile-menu{display:none !important;}
         }
@@ -525,6 +525,8 @@ export default function LevelHub() {
             { label: '🎯 Placement', action: () => router.push(`/lingua/placement?lang=${learnLang}`) },
 { label: '🎭 Roleplay',  action: () => router.push('/lingua/roleplay') },
             { label: '🏛️ Agora',    action: () => router.push('/lingua/agora') },
+            { label: '📖 Grammar',   action: () => router.push('/lingua/grammar') },
+            { label: '🎮 Games',     action: () => router.push('/lingua/games') },
             { label: '🏆 League',    action: () => router.push('/lingua/league') },
             { label: '🔁 Review',    action: () => router.push('/lingua/review') },
             { label: '👩‍🏫 Tutors', action: () => router.push('/lingua/tutors') },
@@ -643,6 +645,8 @@ export default function LevelHub() {
             { emoji: '🎯', label: 'Placement Test', action: () => router.push(`/lingua/placement?lang=${learnLang}`) },
 { emoji: '🎭', label: 'AI Roleplay',  action: () => router.push('/lingua/roleplay') },
             { emoji: '🏛️', label: 'Agora',        action: () => router.push('/lingua/agora') },
+            { emoji: '📖', label: 'Grammar',       action: () => router.push('/lingua/grammar') },
+            { emoji: '🎮', label: 'Word Games',    action: () => router.push('/lingua/games') },
             { emoji: '🏆', label: 'League',       action: () => router.push('/lingua/league') },
             { emoji: '🔁', label: 'Review',       action: () => router.push('/lingua/review') },
             { emoji: '📚', label: 'Word Bank',    action: () => router.push('/lingua/words') },

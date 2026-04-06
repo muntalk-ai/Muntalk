@@ -844,7 +844,7 @@ function GenreCard({ genre, index, onSelect, locked = false }: {
           <input value={titleInput} onChange={e=>setTitleInput(e.target.value)}
             onKeyDown={e=>{ if(e.key==='Enter'&&titleInput.trim()) onSelect(titleInput.trim()); }}
             placeholder="Or type your own idea..."
-            style={{ width:'100%', padding:'10px 14px', borderRadius:10, border:'none',
+            style={{ width:'100%', padding:'10px 14px', borderRadius:10,
               background:'#fff', border:'1.5px solid #E2E8F0', color:'#0F172A', fontSize:13,
               fontFamily:"'Nunito',sans-serif", outline:'none', fontWeight:600,
               marginBottom:10, boxSizing:'border-box' }}/>
