@@ -41,7 +41,8 @@ export default function GrammarPage() {
   const [exampleIdx,  setExampleIdx]  = useState(0);
   const [quiz,        setQuiz]        = useState<QuizState>({ current:0, selected:null, answered:false, score:0, done:false });
   const [tutorId,     setTutorId]     = useState('t01');
-  const [nativeLang,  setNativeLang]  = useState('ko-KR');
+  const [nativeLang,  setNativeLang]  = useState('en-US');
+  const [learnLang,   setLearnLang]   = useState('en-US');
   const [aiChat,      setAiChat]      = useState<{role:'user'|'ai';text:string}[]>([]);
   const [aiInput,     setAiInput]     = useState('');
   const [aiLoading,   setAiLoading]   = useState(false);
@@ -52,8 +53,9 @@ export default function GrammarPage() {
 
   useEffect(() => {
     const ti = localStorage.getItem('mt_tutor_id') || 't01';
-    const nl = localStorage.getItem('mt_native_lang') || 'ko-KR';
-    setTutorId(ti); setNativeLang(nl);
+    const nl = localStorage.getItem('mt_native_lang') || 'en-US';
+    const ll = localStorage.getItem('mt_learn_lang')  || 'en-US';
+    setTutorId(ti); setNativeLang(nl); setLearnLang(ll);
     const done = JSON.parse(localStorage.getItem('mt_grammar_done') || '[]') as string[];
     setCompletedIds(new Set(done));
   }, []);
@@ -63,7 +65,8 @@ export default function GrammarPage() {
   }, [aiChat]);
 
   const tutor = getTutorById(tutorId);
-  const nativeLangName = NATIVE_LANG[nativeLang] || 'Korean';
+  const nativeLangName = NATIVE_LANG[nativeLang] || 'English';
+  const learnLangName  = NATIVE_LANG[learnLang]  || 'English';
 
   const openChapter = (ch: GrammarChapter) => {
     setSelChapter(ch);
@@ -101,13 +104,13 @@ export default function GrammarPage() {
     setShowAI(true);
     setAiLoading(true);
     try {
-      const prompt = `You are ${tutor.name}, a warm and expert English grammar tutor.
+      const prompt = `You are ${tutor.name}, a warm and expert language grammar tutor.
 The student has just studied: "${selChapter.title}" (${selChapter.subtitle}).
-Their native language is ${nativeLangName}.
+They are learning ${learnLangName}. Their native language is ${nativeLangName}.
 
 Open with ONE sentence greeting them on finishing the lesson, then give them ONE practical exercise using ${selChapter.title} — make it feel like a real conversation task, not a textbook exercise.
 Keep it to 3-4 sentences. Be encouraging and specific.
-Respond in English, but you may add a brief ${nativeLangName} translation of the exercise prompt in parentheses.`;
+Respond in ${learnLangName}. You may add a brief ${nativeLangName} translation of the exercise in parentheses if helpful.`;
 
       const res = await fetch('/api/gemini', {
         method:'POST', headers:{'Content-Type':'application/json'},
@@ -131,8 +134,8 @@ Respond in English, but you may add a brief ${nativeLangName} translation of the
     try {
       const history = aiChat.map(m => `${m.role==='user'?'Student':tutor.name}: ${m.text}`).join('\n');
       const prompt = `You are ${tutor.name}, coaching the student on "${selChapter.title}".
-Native language: ${nativeLangName}. 
-Give specific grammar feedback — correct any errors gently, explain why, then ask them to try again or try a new related exercise.
+Learning language: ${learnLangName}. Native language: ${nativeLangName}.
+Give specific grammar feedback in ${learnLangName} — correct any errors gently, explain why, then ask them to try again or try a new related exercise.
 2-3 sentences max. Be warm and specific.
 
 Conversation so far:
@@ -184,7 +187,7 @@ ${tutor.name}:`;
 
           {/* Structure Table */}
           <div style={S.section}>
-            <div style={{ ...S.sectionTitle, color:ch.color }}>📊 구조 (Structure)</div>
+            <div style={{ ...S.sectionTitle, color:ch.color }}>📊 Structure</div>
             <div style={S.tableWrap}>
               <table style={S.table}>
                 <thead>
@@ -214,7 +217,7 @@ ${tutor.name}:`;
 
           {/* Use Cases */}
           <div style={S.section}>
-            <div style={{ ...S.sectionTitle, color:ch.color }}>🎯 언제 쓰나요?</div>
+            <div style={{ ...S.sectionTitle, color:ch.color }}>🎯 When to Use</div>
             <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
               {ch.useCases.map((uc,i) => (
                 <div key={i} style={{ ...S.useCase, borderLeft:`3px solid ${uc.color}` }}>
@@ -230,7 +233,7 @@ ${tutor.name}:`;
 
           {/* Examples Slider */}
           <div style={S.section}>
-            <div style={{ ...S.sectionTitle, color:ch.color }}>💬 예문 (Examples)</div>
+            <div style={{ ...S.sectionTitle, color:ch.color }}>💬 Examples</div>
             <div style={S.exampleCard}>
               <div style={{ fontSize:16, fontWeight:700, color:'#0F172A', lineHeight:1.7, fontFamily:"Georgia,serif", marginBottom:8 }}>
                 {ch.examples[exampleIdx].en.split(ch.examples[exampleIdx].highlight || '###').map((part, pi, arr) => (
@@ -248,7 +251,7 @@ ${tutor.name}:`;
               <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginTop:14 }}>
                 <button onClick={() => setExampleIdx(i => Math.max(0,i-1))}
                   disabled={exampleIdx===0}
-                  style={{ ...S.exBtn, opacity: exampleIdx===0?0.3:1 }}>← 이전</button>
+                  style={{ ...S.exBtn, opacity: exampleIdx===0?0.3:1 }}>← Prev</button>
                 <div style={{ display:'flex', gap:6 }}>
                   {ch.examples.map((_,i) => (
                     <div key={i} style={{ width:7, height:7, borderRadius:'50%',
@@ -259,14 +262,14 @@ ${tutor.name}:`;
                 </div>
                 <button onClick={() => setExampleIdx(i => Math.min(ch.examples.length-1,i+1))}
                   disabled={exampleIdx===ch.examples.length-1}
-                  style={{ ...S.exBtn, opacity: exampleIdx===ch.examples.length-1?0.3:1 }}>다음 →</button>
+                  style={{ ...S.exBtn, opacity: exampleIdx===ch.examples.length-1?0.3:1 }}>Next →</button>
               </div>
             </div>
           </div>
 
           {/* Common Mistakes */}
           <div style={S.section}>
-            <div style={{ ...S.sectionTitle, color:'#DC2626' }}>⚠️ 자주 하는 실수</div>
+            <div style={{ ...S.sectionTitle, color:'#DC2626' }}>⚠️ Common Mistakes</div>
             <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
               {ch.mistakes.map((m,i) => (
                 <div key={i} style={S.mistakeCard}>
@@ -290,7 +293,7 @@ ${tutor.name}:`;
 
           {/* Quiz */}
           <div style={S.section}>
-            <div style={{ ...S.sectionTitle, color:ch.color }}>⚡ 미니 퀴즈</div>
+            <div style={{ ...S.sectionTitle, color:ch.color }}>⚡ Quick Quiz</div>
 
             {quiz.done ? (
               <div style={{ ...S.quizCard, textAlign:'center' }}>
@@ -298,19 +301,19 @@ ${tutor.name}:`;
                   {quiz.score === ch.quiz.length ? '🏆' : quiz.score >= ch.quiz.length/2 ? '🎯' : '💪'}
                 </div>
                 <div style={{ fontSize:20, fontWeight:900, color:'#0F172A', marginBottom:4 }}>
-                  {quiz.score} / {ch.quiz.length} 정답
+                  {quiz.score} / {ch.quiz.length} correct
                 </div>
                 <div style={{ fontSize:13, color:'#64748B', fontWeight:600, marginBottom:16 }}>
-                  {quiz.score === ch.quiz.length ? '완벽해요! 다음 챕터로 가볼까요?' :
-                   quiz.score >= ch.quiz.length/2 ? '잘했어요! 틀린 부분을 다시 복습해보세요.' :
-                   '조금 더 복습이 필요해요. 처음부터 다시 해볼까요?'}
+                  {quiz.score === ch.quiz.length ? 'Perfect score! Ready for the next chapter?' :
+                   quiz.score >= ch.quiz.length/2 ? 'Great job! Review the ones you missed.' :
+                   'Keep practising — you're getting there!'}
                 </div>
                 <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
                   <button onClick={() => setQuiz({ current:0, selected:null, answered:false, score:0, done:false })}
-                    style={S.quizRetryBtn}>🔄 다시 풀기</button>
+                    style={S.quizRetryBtn}>🔄 Try Again</button>
                   {!showAI && (
                     <button onClick={startAI} style={{ ...S.quizRetryBtn, background:ch.color, color:'#fff', border:'none' }}>
-                      🤖 AI로 연습하기
+                      🤖 Practise with AI
                     </button>
                   )}
                 </div>
@@ -318,7 +321,7 @@ ${tutor.name}:`;
             ) : (
               <div style={S.quizCard}>
                 <div style={{ fontSize:11, fontWeight:800, color:'#94A3B8', marginBottom:8, letterSpacing:1 }}>
-                  문제 {quiz.current+1} / {ch.quiz.length}
+                  Question {quiz.current+1} of {ch.quiz.length}
                 </div>
                 <div style={{ fontSize:15, fontWeight:800, color:'#0F172A', marginBottom:16, lineHeight:1.5 }}>
                   {ch.quiz[quiz.current].question}
@@ -356,7 +359,7 @@ ${tutor.name}:`;
                     border: `1px solid ${quiz.selected===ch.quiz[quiz.current].answer ? '#A7F3D0' : '#FECACA'}` }}>
                     <div style={{ fontSize:13, fontWeight:700,
                       color: quiz.selected===ch.quiz[quiz.current].answer ? '#065F46' : '#7F1D1D' }}>
-                      {quiz.selected===ch.quiz[quiz.current].answer ? '✅ 정답!' : '❌ 오답'}
+                      {quiz.selected===ch.quiz[quiz.current].answer ? '✅ Correct!' : '❌ Wrong'}
                     </div>
                     <div style={{ fontSize:12, color:'#475569', fontWeight:600, marginTop:4 }}>
                       {ch.quiz[quiz.current].explanation}
@@ -365,7 +368,7 @@ ${tutor.name}:`;
                       style={{ marginTop:10, padding:'8px 20px', borderRadius:10, border:'none',
                         background:ch.color, color:'#fff', fontWeight:800, fontSize:13,
                         cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>
-                      {quiz.current+1 >= ch.quiz.length ? '결과 보기 →' : '다음 문제 →'}
+                      {quiz.current+1 >= ch.quiz.length ? 'See Results →' : 'Next Question →'}
                     </button>
                   </div>
                 )}
@@ -382,7 +385,7 @@ ${tutor.name}:`;
                   color:'#fff', fontWeight:800, fontSize:14, cursor:'pointer',
                   fontFamily:"'Nunito',sans-serif", display:'flex', alignItems:'center', justifyContent:'center', gap:8 }}>
                 <img src={tutor.thumbnail} alt="" style={{ width:24, height:24, borderRadius:'50%', objectFit:'cover', objectPosition:'center 20%' }}/>
-                🤖 {tutor.name}와 AI 연습하기
+                🤖 Practise with {tutor.name}
               </button>
             </div>
           )}
@@ -391,7 +394,7 @@ ${tutor.name}:`;
             <div style={S.section}>
               <div style={{ ...S.sectionTitle, color:ch.color }}>
                 <img src={tutor.thumbnail} alt="" style={{ width:20, height:20, borderRadius:'50%', objectFit:'cover', objectPosition:'center 20%', marginRight:6, verticalAlign:'middle' }}/>
-                {tutor.name}와 연습하기
+                Practise with {tutor.name}
               </div>
               <div ref={chatRef} style={S.aiChat}>
                 {aiChat.map((msg,i) => (
@@ -420,7 +423,7 @@ ${tutor.name}:`;
                 <input value={aiInput} onChange={e=>setAiInput(e.target.value)}
                   onKeyDown={e=>{ if(e.key==='Enter') sendAI(); }}
                   disabled={aiLoading}
-                  placeholder="문법을 활용한 문장을 써보세요..."
+                  placeholder={`Write a sentence in ${learnLangName} using this grammar...`}
                   style={{ flex:1, padding:'11px 14px', borderRadius:12, border:`1.5px solid ${ch.color}40`,
                     background:'#F8FAFC', color:'#0F172A', fontSize:14, fontFamily:"'Nunito',sans-serif",
                     outline:'none', fontWeight:600 }}/>
@@ -452,7 +455,7 @@ ${tutor.name}:`;
 
       {/* Nav */}
       <nav style={S.nav}>
-        <button onClick={() => router.push('/lingua')} style={S.navBack}>← 홈</button>
+        <button onClick={() => router.push('/lingua')} style={S.navBack}>← Home</button>
         <div style={S.navCenter}>
           <span style={{ fontSize:20 }}>📖</span>
           <span style={S.navTitle}>Grammar Hub</span>
@@ -488,7 +491,7 @@ ${tutor.name}:`;
         <div>
           <div style={{ fontSize:18, fontWeight:900, color:lvInfo.color }}>{lvInfo.label} — {lvInfo.desc}</div>
           <div style={{ fontSize:12, color:'#64748B', fontWeight:700, marginTop:2 }}>
-            {lvInfo.xpRange} · {totalDone}/{levelChapters.length} 챕터 완료
+            {lvInfo.xpRange} · {totalDone}/{levelChapters.length} chapters done
           </div>
         </div>
         <div style={{ flex:1, maxWidth:200, marginLeft:'auto' }}>
@@ -503,7 +506,7 @@ ${tutor.name}:`;
       <div style={S.catRow}>
         <button onClick={() => setSelCategory(null)}
           style={{ ...S.catBtn, background: !selCategory?'#0F172A':'#F1F5F9',
-            color: !selCategory?'#fff':'#64748B' }}>전체</button>
+            color: !selCategory?'#fff':'#64748B' }}>All</button>
         {GRAMMAR_CATEGORIES.filter(cat => levelChapters.some(c=>c.category===cat.id)).map(cat => (
           <button key={cat.id} onClick={() => setSelCategory(selCategory===cat.id?null:cat.id)}
             style={{ ...S.catBtn,
@@ -529,7 +532,7 @@ ${tutor.name}:`;
               {isDone && (
                 <div style={{ position:'absolute', top:12, right:12, background:ch.color,
                   color:'#fff', borderRadius:99, fontSize:10, fontWeight:800, padding:'2px 8px' }}>
-                  ✓ 완료
+                  ✓ Done
                 </div>
               )}
               <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:10 }}>
@@ -551,11 +554,11 @@ ${tutor.name}:`;
               </div>
               <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between' }}>
                 <div style={{ display:'flex', gap:6 }}>
-                  <span style={S.metaTag}>📊 구조표</span>
-                  <span style={S.metaTag}>⚡ {ch.quiz.length}문제</span>
-                  <span style={S.metaTag}>🤖 AI연습</span>
+                  <span style={S.metaTag}>📊 Structure</span>
+                  <span style={S.metaTag}>⚡ {ch.quiz.length} Quiz</span>
+                  <span style={S.metaTag}>🤖 AI Practice</span>
                 </div>
-                <span style={{ fontSize:12, fontWeight:800, color:ch.color }}>학습 →</span>
+                <span style={{ fontSize:12, fontWeight:800, color:ch.color }}>Study →</span>
               </div>
             </div>
           );
@@ -563,7 +566,7 @@ ${tutor.name}:`;
         {filtered.length === 0 && (
           <div style={{ gridColumn:'1/-1', textAlign:'center', padding:'60px 0', color:'#94A3B8' }}>
             <div style={{ fontSize:40, marginBottom:12 }}>📭</div>
-            <div style={{ fontWeight:700 }}>이 카테고리에 챕터가 없어요</div>
+            <div style={{ fontWeight:700 }}>No chapters in this category</div>
           </div>
         )}
       </div>

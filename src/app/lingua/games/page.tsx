@@ -41,10 +41,10 @@ function shuffle<T>(arr: T[]): T[] {
 // ── Game definitions ──────────────────────────────────────────────────────────
 
 const GAMES = [
-  { id: 'snap'   as GameId, emoji:'🃏', title:'Meaning Snap',    sub:'알면 ✅, 모르면 ❌', color:'#6366F1', bg:'#EEF2FF' },
-  { id: 'match'  as GameId, emoji:'🧩', title:'Word Match',      sub:'단어와 뜻 짝 맞추기', color:'#059669', bg:'#ECFDF5' },
-  { id: 'vanish' as GameId, emoji:'💨', title:'Vanishing Words', sub:'사라지기 전에 클릭!', color:'#DC2626', bg:'#FEF2F2' },
-  { id: 'blitz'  as GameId, emoji:'⚡', title:'True/False Blitz',sub:'10초 안에 최대한 많이', color:'#D97706', bg:'#FFFBEB' },
+  { id: 'snap'   as GameId, emoji:'🃏', title:'Meaning Snap',    sub:'Know it ✅ or not ❌', color:'#6366F1', bg:'#EEF2FF' },
+  { id: 'match'  as GameId, emoji:'🧩', title:'Word Match',      sub:'Match words to meanings', color:'#059669', bg:'#ECFDF5' },
+  { id: 'vanish' as GameId, emoji:'💨', title:'Vanishing Words', sub:'Click before time runs out!', color:'#DC2626', bg:'#FEF2F2' },
+  { id: 'blitz'  as GameId, emoji:'⚡', title:'True/False Blitz',sub:'As many as possible in 10s', color:'#D97706', bg:'#FFFBEB' },
 ];
 
 const LEVELS: { id: Difficulty; label: string; color: string }[] = [
@@ -81,7 +81,7 @@ export default function WordGamesPage() {
       <style>{CSS}</style>
 
       <nav style={S.nav}>
-        <button onClick={() => router.push('/lingua')} style={S.navBack}>← 홈</button>
+        <button onClick={() => router.push('/lingua')} style={S.navBack}>← Home</button>
         <div style={S.navCenter}><span style={{ fontSize:20 }}>🎮</span><span style={S.navTitle}>Word Games</span></div>
         <div style={{ fontSize:13, fontWeight:800, color:'#6366F1' }}>+{xpGained} XP</div>
       </nav>
@@ -112,15 +112,15 @@ export default function WordGamesPage() {
           {/* How to play */}
           <div style={S.howTo}>
             <div style={{ fontSize:11, fontWeight:800, color:'#94A3B8', letterSpacing:1, marginBottom:8 }}>HOW TO PLAY</div>
-            {activeGame==='snap' && <HowTo items={['단어와 뜻이 표시돼요','알면 ✅ 클릭, 모르면 ❌ 클릭','모르는 단어는 복습 덱에 자동 저장']}/>}
-            {activeGame==='match' && <HowTo items={['단어 카드와 뜻 카드가 섞여 있어요','같은 쌍을 찾아 클릭해서 매칭','모든 쌍을 찾으면 완료!']}/>}
-            {activeGame==='vanish' && <HowTo items={['타이머가 줄어들어요','올바른 뜻을 4개 중에서 클릭','빠를수록 보너스 XP!']}/>}
-            {activeGame==='blitz' && <HowTo items={['단어와 뜻이 함께 보여요','맞으면 ✅ True, 틀리면 ❌ False','10초 안에 최대한 많이!']}/>}
+            {activeGame==='snap' && <HowTo items={['A word and its meaning are shown','✅ if you know it, ❌ if you don\'t','Unknown words are saved for review']}/>}
+            {activeGame==='match' && <HowTo items={['Word and meaning cards are shuffled','Click to match each pair','Find all pairs to finish!']}/>}
+            {activeGame==='vanish' && <HowTo items={['A timer counts down','Click the correct meaning from 4 choices','Faster answers = bonus XP!']}/>}
+            {activeGame==='blitz' && <HowTo items={['A word and meaning are shown','Correct = ✅ True, Wrong = ❌ False','Answer as many as possible in 10 seconds!']}/>}
           </div>
 
           {/* Level selector */}
           <div style={{ marginBottom:20 }}>
-            <div style={{ fontSize:11, fontWeight:800, color:'#94A3B8', letterSpacing:1, marginBottom:10 }}>난이도 선택</div>
+            <div style={{ fontSize:11, fontWeight:800, color:'#94A3B8', letterSpacing:1, marginBottom:10 }}>Select Level</div>
             <div style={{ display:'flex', gap:8, flexWrap:'wrap' }}>
               {LEVELS.map(l => (
                 <button key={l.id} onClick={() => setDifficulty(l.id)}
@@ -137,13 +137,13 @@ export default function WordGamesPage() {
           <button onClick={() => setPlaying(true)}
             style={{ ...S.startBtn, background:`linear-gradient(135deg,${game.color},${game.color}cc)`,
               boxShadow:`0 8px 24px ${game.color}40` }}>
-            {game.emoji} 시작하기 — {lvl.label}
+            {game.emoji} Start — {lvl.label}
           </button>
         </div>
 
         {/* Recent scores hint */}
         <div style={{ textAlign:'center', marginTop:16, fontSize:12, color:'#94A3B8', fontWeight:600 }}>
-          💡 게임으로 획득한 XP는 학습 기록에 합산돼요
+          💡 XP earned here counts toward your learning progress
         </div>
       </div>
     </div>
@@ -180,7 +180,7 @@ function HowTo({ items }: { items: string[] }) {
 }
 
 // ════════════════════════════════════════════════════════════════════════════
-// GAME 1: Meaning Snap — 알면 ✅ / 모르면 ❌
+// GAME 1: Meaning Snap — Know it ✅ or not ❌
 // ════════════════════════════════════════════════════════════════════════════
 
 function SnapGame({ difficulty, onBack, addXP, gameColor }:
@@ -219,7 +219,7 @@ function SnapGame({ difficulty, onBack, addXP, gameColor }:
       <div style={{ flex:1, display:'flex', flexDirection:'column', alignItems:'center',
         justifyContent:'center', padding:'24px 20px', gap:24 }}>
         <div style={{ fontSize:12, fontWeight:800, color:'#94A3B8', letterSpacing:1 }}>
-          ✅ {known} 알아요  ·  ❌ {unknown} 모르겠어요
+          ✅ {known} Known  ·  ❌ {unknown} Still learning
         </div>
         <div className={`snap-card ${anim==='right'?'snap-right':anim==='left'?'snap-left':''}`}
           style={{ ...S.snapCard, borderTop:`4px solid ${gameColor}` }}>
@@ -239,11 +239,11 @@ function SnapGame({ difficulty, onBack, addXP, gameColor }:
         <div style={{ display:'flex', gap:16, width:'100%', maxWidth:340 }}>
           <button onClick={() => answer(false)}
             style={{ ...S.snapBtn, background:'#FEF2F2', border:'2px solid #FECACA', color:'#DC2626' }}>
-            ❌<br/><span style={{ fontSize:11 }}>모르겠어요</span>
+            ❌<br/><span style={{ fontSize:11 }}>Don't know</span>
           </button>
           <button onClick={() => answer(true)}
             style={{ ...S.snapBtn, background:'#ECFDF5', border:'2px solid #A7F3D0', color:'#059669' }}>
-            ✅<br/><span style={{ fontSize:11 }}>알아요!</span>
+            ✅<br/><span style={{ fontSize:11 }}>Got it!</span>
           </button>
         </div>
       </div>
@@ -252,7 +252,7 @@ function SnapGame({ difficulty, onBack, addXP, gameColor }:
 }
 
 // ════════════════════════════════════════════════════════════════════════════
-// GAME 2: Word Match — 단어-뜻 짝 찾기
+// GAME 2: Word Match — Find matching pairs
 // ════════════════════════════════════════════════════════════════════════════
 
 function MatchGame({ difficulty, onBack, addXP, gameColor }:
@@ -297,18 +297,18 @@ function MatchGame({ difficulty, onBack, addXP, gameColor }:
   };
 
   if (done) return <GameResult score={score} total={pairs.length} xp={score*10} color={gameColor}
-    subtitle={`${attempts}번 시도`} onBack={onBack} onRetry={()=>{ setScore(0);setAttempts(0);setDone(false);setSelected(null);
+    subtitle={`${attempts} attempts`} onBack={onBack} onRetry={()=>{ setScore(0);setAttempts(0);setDone(false);setSelected(null);
       const wc = pairs.map((p,i)=>({id:`w${i}`,text:p.word,type:'word' as const,matched:false,pairIdx:i}));
       const mc = pairs.map((p,i)=>({id:`m${i}`,text:p.meaning,type:'meaning' as const,matched:false,pairIdx:i}));
       setCards(shuffle([...wc,...mc])); }}/>;
 
   return (
     <div style={{ height:'100dvh', display:'flex', flexDirection:'column', background:'#F8FAFC' }}>
-      <GameNav title="Word Match" onBack={onBack} color={gameColor} right={`${score}/${pairs.length} 매칭`}/>
+      <GameNav title="Word Match" onBack={onBack} color={gameColor} right={`${score}/${pairs.length} matched`}/>
       <div style={{ flex:1, display:'flex', flexDirection:'column', alignItems:'center',
         justifyContent:'center', padding:'20px 16px' }}>
         <div style={{ fontSize:12, fontWeight:700, color:'#94A3B8', marginBottom:16 }}>
-          단어와 뜻을 클릭해서 짝을 맞춰보세요
+          Click to match each word with its meaning
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, width:'100%', maxWidth:480 }}>
           {cards.map(card => {
@@ -338,7 +338,7 @@ function MatchGame({ difficulty, onBack, addXP, gameColor }:
 }
 
 // ════════════════════════════════════════════════════════════════════════════
-// GAME 3: Vanishing Words — 타이머 + 4지선다
+// GAME 3: Vanishing Words — Timer + 4 choices
 // ════════════════════════════════════════════════════════════════════════════
 
 function VanishGame({ difficulty, onBack, addXP, gameColor }:
@@ -462,7 +462,7 @@ function VanishGame({ difficulty, onBack, addXP, gameColor }:
 }
 
 // ════════════════════════════════════════════════════════════════════════════
-// GAME 4: True/False Blitz — 10초 타임어택
+// GAME 4: True/False Blitz — 10s time attack
 // ════════════════════════════════════════════════════════════════════════════
 
 function BlitzGame({ difficulty, onBack, addXP, gameColor }:
@@ -534,7 +534,7 @@ function BlitzGame({ difficulty, onBack, addXP, gameColor }:
   };
 
   if (done) return <GameResult score={score} total={idx} xp={score*7} color={gameColor}
-    subtitle={`최대 콤보 ${maxCombo}🔥`}
+    subtitle={`Best combo: ${maxCombo} 🔥`}
     onBack={onBack} onRetry={()=>{ setIdx(0);setScore(0);setWrong(0);setCombo(0);setMaxCombo(0);setDone(false);nextCard(0); }}/>;
 
   const word = vocab[Math.min(idx, vocab.length-1)];
@@ -595,7 +595,7 @@ function BlitzGame({ difficulty, onBack, addXP, gameColor }:
         </div>
 
         <div style={{ fontSize:12, color:'#94A3B8', fontWeight:600, textAlign:'center' }}>
-          3연속 정답 → 보너스 XP 🎯
+          3 in a row → Bonus XP 🎯
         </div>
       </div>
     </div>
@@ -617,32 +617,32 @@ function GameResult({ score, total, xp, color, subtitle, onBack, onRetry }:
       <div style={{ textAlign:'center', maxWidth:360, width:'100%' }}>
         <div style={{ fontSize:64, marginBottom:12, animation:'resultPop .5s ease' }}>{emoji}</div>
         <div style={{ fontSize:28, fontWeight:900, color:'#0F172A', marginBottom:4 }}>
-          {pct===100?'완벽해요!':pct>=80?'훌륭해요!':pct>=60?'잘했어요!':'계속 연습해요!'}
+          {pct===100?'Perfect!':pct>=80?'Excellent!':pct>=60?'Well done!':'Keep practising!'}
         </div>
         <div style={{ fontSize:44, fontWeight:900, color, marginBottom:4 }}>
           {score}<span style={{ fontSize:20, color:'#94A3B8' }}>/{total}</span>
         </div>
         <div style={{ fontSize:14, color:'#64748B', fontWeight:700, marginBottom:4 }}>
-          {Math.round((score/total)*100)}% 정확도
+          {Math.round((score/total)*100)}% accuracy
         </div>
         {subtitle && <div style={{ fontSize:13, color:'#94A3B8', fontWeight:700, marginBottom:4 }}>{subtitle}</div>}
         <div style={{ display:'inline-block', background:`${color}15`, border:`1.5px solid ${color}40`,
           borderRadius:99, padding:'6px 20px', fontSize:14, fontWeight:900, color, marginBottom:28 }}>
-          +{xp} XP 획득!
+          +{xp} XP earned!
         </div>
         <div style={{ display:'flex', gap:10 }}>
           <button onClick={onRetry}
             style={{ flex:1, padding:'14px', borderRadius:14, border:'1.5px solid #E2E8F0',
               background:'#fff', color:'#475569', fontSize:14, fontWeight:800,
               cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>
-            🔄 다시하기
+            🔄 Play Again
           </button>
           <button onClick={onBack}
             style={{ flex:1, padding:'14px', borderRadius:14, border:'none',
               background:`linear-gradient(135deg,${color},${color}cc)`,
               color:'#fff', fontSize:14, fontWeight:800,
               cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>
-            다른 게임 →
+            More Games →
           </button>
         </div>
       </div>
@@ -660,7 +660,7 @@ function GameNav({ title, onBack, color, right }:
       boxShadow:'0 1px 4px rgba(0,0,0,0.04)' }}>
       <button onClick={onBack} style={{ background:'#F1F5F9', border:'none', borderRadius:10,
         padding:'7px 12px', color:'#64748B', fontSize:12, fontWeight:700,
-        cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>← 나가기</button>
+        cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>← Exit</button>
       <div style={{ flex:1, textAlign:'center', fontSize:14, fontWeight:900, color:'#0F172A' }}>{title}</div>
       <div style={{ fontSize:12, fontWeight:800, color }}>{right}</div>
     </nav>
