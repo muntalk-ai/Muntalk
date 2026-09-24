@@ -586,7 +586,7 @@ export default function LevelHub() {
             <span style={{ fontSize: 10, color: '#9CA3AF' }}>▾</span>
           </button>
           <div className="mt-nav-streak-xp" style={styles.navStreak}><span>🔥</span><span style={{ fontWeight: 800, color: '#EA580C', fontSize: 13 }}>{streak} {streak === 1 ? 'day' : 'days'}</span></div>
-          <div className="mt-nav-streak-xp" style={{...styles.navStreak, background:'#EFF6FF'}} title="Streak Freeze — 하루를 빠뜨려도 스트릭을 지켜줘요. 7일 연속 학습마다 +1 (최대 5개)"><span>🧊</span><span style={{ fontWeight: 800, color: '#2563EB', fontSize: 13 }}>{freezes}</span></div>
+          <div className="mt-nav-streak-xp" style={{...styles.navStreak, background:'#EFF6FF'}} title="Streak Freeze — protects your streak when you miss a day. +1 every 7-day streak (max 5)"><span>🧊</span><span style={{ fontWeight: 800, color: '#2563EB', fontSize: 13 }}>{freezes}</span></div>
           <div className="mt-nav-streak-xp" style={styles.navXp}><span>⭐</span><span style={{ fontWeight: 800, color: '#2563EB', fontSize: 13 }}>{xp} XP</span></div>
           {/* 하트바 + Upgrade — auth 로딩 완료 후에만 표시 */}
           {!authLoading && planId === 'free' && !isAdmin && user && (
@@ -658,7 +658,7 @@ export default function LevelHub() {
             borderBottom:'1px solid #BFDBFE',padding:'8px 16px',
             fontSize:12,fontWeight:700,color:'#1D4ED8',fontFamily:"'Nunito',sans-serif",
           }}>
-            <span>🧊 Streak Freeze가 어제의 빈틈을 메워 {streak}일 스트릭을 지켜줬어요! (잔여 {freezes}개 · 7일 연속마다 +1)</span>
+            <span>🧊 Streak Freeze filled yesterday's gap and kept your {streak}-day streak alive! ({freezes} left · +1 every 7 days)</span>
             <button onClick={()=>setFreezeBannerDismissed(true)}
               style={{background:'none',border:'none',color:'#60A5FA',fontWeight:800,cursor:'pointer',fontSize:12}}>✕</button>
           </div>
@@ -777,28 +777,28 @@ export default function LevelHub() {
             /* H3: 로그인 유저 — 학습 대시보드형 히어로 */
             <>
               <div style={styles.heroBadgeRow}>
-                <div style={styles.heroBadge52}>🔥 {streak}일 연속 학습 중</div>
-                {freezes > 0 && <div style={styles.heroBadge52}>🧊 프리즈 {freezes}개</div>}
+                <div style={styles.heroBadge52}>🔥 {streak}-day streak</div>
+                {freezes > 0 && <div style={styles.heroBadge52}>🧊 {freezes} freezes</div>}
                 <div style={styles.heroBadge52}>⭐ {xp} XP</div>
               </div>
               <h1 style={styles.heroTitle}>
-                {streak > 0 ? `🔥 ${streak}일째! 오늘도 이어가볼까요?` : '오늘, 첫 레슨을 시작해볼까요?'}
+                {streak > 0 ? `🔥 Day ${streak} — keep it going today?` : 'Start your first lesson today?'}
               </h1>
               <p style={styles.heroDesc}>
                 {nextLesson
-                  ? <>다음 레슨: <strong>{nextLesson.lesson.title}</strong> (+{nextLesson.lesson.xp} XP)<br />오늘의 목표 — 레슨 1개 완료하기</>
-                  : <>전 레슨 완료! 🎉 복습이나 AI 롤플레이로 실력을 다져보세요.<br />오늘의 목표 — 레슨 1개 완료하기</>}
+                  ? <>Next up: <strong>{nextLesson.lesson.title}</strong> (+{nextLesson.lesson.xp} XP)<br />Today's goal — finish 1 lesson</>
+                  : <>All lessons complete! 🎉 Sharpen up with review or AI roleplay.<br />Today's goal — finish 1 lesson</>}
               </p>
               <div style={styles.heroBtnRow}>
                 {nextLesson ? (
                   <button style={{ ...styles.heroBtn1, fontSize: 16, padding: '15px 36px' }}
                     onClick={() => router.push(`/lingua/learn/${nextLesson.levelId}/${nextLesson.stepId}/${nextLesson.lesson.id}?lang=${learnLang}&subLang=${nativeLang}`)}>
-                    ▶ 이어서 학습하기
+                    ▶ Continue learning
                   </button>
                 ) : (
                   <button style={{ ...styles.heroBtn1, fontSize: 16, padding: '15px 36px' }}
                     onClick={() => router.push('/lingua/review')}>
-                    🔁 복습하기
+                    🔁 Review
                   </button>
                 )}
                 <button style={styles.heroBtn2} onClick={() => router.push('/lingua/roleplay')}>
@@ -823,7 +823,7 @@ export default function LevelHub() {
                 {/* H1: 가입 없이 바로 체험 — 완료 화면에서 가입 유도 */}
                 <button style={{ ...styles.heroBtn1, fontSize: 16, padding: '15px 36px' }}
                   onClick={() => router.push('/lingua/learn/a1/a1-1/a1-1-1')}>
-                  🎤 1분 말하기 체험
+                  🎤 Try 1-min speaking
                 </button>
                 <button style={styles.heroBtn2} onClick={() => router.push('/signup')}>
                   🚀 Start Learning Free
@@ -835,7 +835,7 @@ export default function LevelHub() {
               {/* Positioning: Duolingo Max 대비 */}
               <div style={{ marginTop: 20, display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.16)', border: '1px solid rgba(255,255,255,0.35)', borderRadius: 99, padding: '8px 18px', fontSize: 12.5, fontWeight: 700, color: '#fff', backdropFilter: 'blur(6px)' }}>
                 <span>💬</span>
-                <span>Duolingo Max는 AI 회화에 <strong>&nbsp;$29.99/월</strong> — MunTalk는 <strong>&nbsp;$0부터</strong></span>
+                <span>Duolingo Max charges <strong>&nbsp;$29.99/mo</strong> for AI conversation — MunTalk starts at <strong>&nbsp;$0</strong></span>
               </div>
             </>
           )}
@@ -846,9 +846,9 @@ export default function LevelHub() {
       {!authLoading && !user && (
         <div style={styles.trustStrip}>
           {([
-            ['🌱', 'Beta 테스터와 함께 성장 중'],
-            ['🎤', '가입 없이 1분 말하기 체험'],
-            ['💬', 'Duolingo Max급 AI 회화를 무료로'],
+            ['🌱', 'Growing with our beta testers'],
+            ['🎤', 'Try 1-min speaking, no sign-up'],
+            ['💬', 'Duolingo Max-level AI conversation, free'],
           ] as [string, string][]).map(([icon, label]) => (
             <div key={label} style={styles.trustItem}>
               <span style={{ fontSize: 17 }}>{icon}</span>
