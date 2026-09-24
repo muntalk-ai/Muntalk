@@ -247,7 +247,9 @@ ${tutor.name}:`;
                   </span>
                 ))}
               </div>
-              <div style={{ fontSize:13, color:'#64748B', fontWeight:600 }}>{ch.examples[exampleIdx].ko}</div>
+              {nativeLang === 'ko-KR' && (
+                <div style={{ fontSize:13, color:'#64748B', fontWeight:600 }}>{ch.examples[exampleIdx].ko}</div>
+              )}
               <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginTop:14 }}>
                 <button onClick={() => setExampleIdx(i => Math.max(0,i-1))}
                   disabled={exampleIdx===0}

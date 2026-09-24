@@ -28,7 +28,7 @@ export interface Mistake {
 
 export interface Example {
   en: string;
-  ko?: string; // 한국어 번역 (없으면 영어만 표시)
+  ko: string; // 한국어 번역 (필수)
   highlight?: string; // the grammar point to highlight in the sentence
 }
 
@@ -106,10 +106,10 @@ export const GRAMMAR_CHAPTERS: GrammarChapter[] = [
       { color:'#D97706', label:'Location', example:'We are at home.', translation:'We are at home.' },
     ],
     examples: [
-      { en:'I am 25 years old.', highlight:'am' },
-      { en:'He is a doctor.', highlight:'is' },
-      { en:'They are not here.', highlight:'are not' },
-      { en:'Is she your sister?', highlight:'Is' },
+      { en:'I am 25 years old.', ko:'저는 25살이에요.', highlight:'am' },
+      { en:'He is a doctor.', ko:'그는 의사예요.', highlight:'is' },
+      { en:'They are not here.', ko:'그들은 여기 없어요.', highlight:'are not' },
+      { en:'Is she your sister?', ko:'그녀는 당신의 여동생인가요?', highlight:'Is' },
     ],
     mistakes: [
       { wrong:'I is happy.', right:'I am happy.', note:'After I, always use am.' },
@@ -147,10 +147,10 @@ export const GRAMMAR_CHAPTERS: GrammarChapter[] = [
       { color:'#D97706', label:'Likes & Preferences', example:'She loves music.', translation:'She loves music.' },
     ],
     examples: [
-      { en:'I wake up at 7am every day.', highlight:'wake up' },
-      { en:'He plays football on weekends.', highlight:'plays' },
-      { en:'We don\'t eat meat.', highlight:"don't eat" },
-      { en:'Does she live in Seoul?', highlight:'Does' },
+      { en:'I wake up at 7am every day.', ko:'저는 매일 아침 7시에 일어나요.', highlight:'wake up' },
+      { en:'He plays football on weekends.', ko:'그는 주말마다 축구를 해요.', highlight:'plays' },
+      { en:'We don\'t eat meat.', ko:'우리는 고기를 먹지 않아요.', highlight:"don't eat" },
+      { en:'Does she live in Seoul?', ko:'그녀는 서울에 사나요?', highlight:'Does' },
     ],
     mistakes: [
       { wrong:'She work in a hospital.', right:'She works in a hospital.', note:'He/She/It + verb always takes -s/-es.' },
@@ -188,10 +188,10 @@ export const GRAMMAR_CHAPTERS: GrammarChapter[] = [
       { color:'#059669', label:'Unique in the world (the)', example:'The sun is bright today.', translation:'The sun is bright today.' },
     ],
     examples: [
-      { en:'I have a cat and a dog.', highlight:'a' },
-      { en:'The cat is black.', highlight:'The' },
-      { en:'She is an engineer.', highlight:'an' },
-      { en:'I love the moon.', highlight:'the' },
+      { en:'I have a cat and a dog.', ko:'저는 고양이와 개를 한 마리씩 키우고 있어요.', highlight:'a' },
+      { en:'The cat is black.', ko:'그 고양이는 검은색이에요.', highlight:'The' },
+      { en:'She is an engineer.', ko:'그녀는 엔지니어예요.', highlight:'an' },
+      { en:'I love the moon.', ko:'저는 달을 좋아해요.', highlight:'the' },
     ],
     mistakes: [
       { wrong:'I am a engineer.', right:'I am an engineer.', note:'Before a vowel sound (e), use an.' },
@@ -231,10 +231,10 @@ export const GRAMMAR_CHAPTERS: GrammarChapter[] = [
       { color:'#059669', label:'Asking about place', example:'Where do you work?', translation:'Where do you work?' },
     ],
     examples: [
-      { en:'Are you from Japan?', highlight:'Are' },
-      { en:'What do you do?', highlight:'What' },
-      { en:'Where does he live?', highlight:'Where does' },
-      { en:'Who is your favourite singer?', highlight:'Who' },
+      { en:'Are you from Japan?', ko:'일본에서 오셨나요?', highlight:'Are' },
+      { en:'What do you do?', ko:'무슨 일을 하세요?', highlight:'What' },
+      { en:'Where does he live?', ko:'그는 어디에 사나요?', highlight:'Where does' },
+      { en:'Who is your favourite singer?', ko:'가장 좋아하는 가수는 누구인가요?', highlight:'Who' },
     ],
     mistakes: [
       { wrong:'Where you live?', right:'Where do you live?', note:'Even after a question word, you still need do/does.' },
@@ -273,10 +273,10 @@ export const GRAMMAR_CHAPTERS: GrammarChapter[] = [
       { color:'#D97706', label:'Sequence of events', example:'I woke up, ate, and left.', translation:'I woke up, ate and left.' },
     ],
     examples: [
-      { en:'I visited my grandmother yesterday.', highlight:'visited' },
-      { en:'She didn\'t eat breakfast this morning.', highlight:"didn't eat" },
-      { en:'Did you watch the game last night?', highlight:'Did' },
-      { en:'They went to the beach last summer.', highlight:'went' },
+      { en:'I visited my grandmother yesterday.', ko:'어제 할머니 댁에 다녀왔어요.', highlight:'visited' },
+      { en:'She didn\'t eat breakfast this morning.', ko:'그녀는 오늘 아침을 먹지 않았어요.', highlight:"didn't eat" },
+      { en:'Did you watch the game last night?', ko:'어젯밤에 경기 보셨나요?', highlight:'Did' },
+      { en:'They went to the beach last summer.', ko:'그들은 지난여름에 해변에 갔어요.', highlight:'went' },
     ],
     mistakes: [
       { wrong:'I didn\'t went there.', right:'I didn\'t go there.', note:"After didn't, use the base verb form. went → go" },
@@ -313,10 +313,10 @@ export const GRAMMAR_CHAPTERS: GrammarChapter[] = [
       { color:'#D97706', label:'Near future plans', example:'We are meeting tomorrow.', translation:'We are meeting tomorrow.' },
     ],
     examples: [
-      { en:'The children are playing outside.', highlight:'are playing' },
-      { en:'I am not feeling well today.', highlight:'am not feeling' },
-      { en:'Is it raining outside?', highlight:'Is it raining' },
-      { en:'She is learning Korean these days.', highlight:'is learning' },
+      { en:'The children are playing outside.', ko:'아이들이 밖에서 놀고 있어요.', highlight:'are playing' },
+      { en:'I am not feeling well today.', ko:'오늘 몸이 별로 안 좋아요.', highlight:'am not feeling' },
+      { en:'Is it raining outside?', ko:'밖에 비가 오고 있나요?', highlight:'Is it raining' },
+      { en:'She is learning Korean these days.', ko:'그녀는 요즘 한국어를 배우고 있어요.', highlight:'is learning' },
     ],
     mistakes: [
       { wrong:'I am knowing the answer.', right:'I know the answer.', note:'State verbs like know, like, want, love are not used in the continuous form.' },
@@ -356,10 +356,10 @@ export const GRAMMAR_CHAPTERS: GrammarChapter[] = [
       { color:'#2563EB', label:'Equal comparison (as~as)', example:'He is as tall as his father.', translation:'He is as tall as his father.' },
     ],
     examples: [
-      { en:'This coffee is hotter than that one.', highlight:'hotter than' },
-      { en:'It\'s the most expensive restaurant here.', highlight:'the most expensive' },
-      { en:'Today is better than yesterday.', highlight:'better than' },
-      { en:'She runs faster than anyone else.', highlight:'faster than' },
+      { en:'This coffee is hotter than that one.', ko:'이 커피가 저것보다 더 뜨거워요.', highlight:'hotter than' },
+      { en:'It\'s the most expensive restaurant here.', ko:'여기에서 가장 비싼 식당이에요.', highlight:'the most expensive' },
+      { en:'Today is better than yesterday.', ko:'오늘이 어제보다 나아요.', highlight:'better than' },
+      { en:'She runs faster than anyone else.', ko:'그녀는 다른 누구보다 빨리 달려요.', highlight:'faster than' },
     ],
     mistakes: [
       { wrong:'She is more tall than me.', right:'She is taller than me.', note:'1-2 syllable adjectives take -er. No need for more.' },
@@ -398,10 +398,10 @@ export const GRAMMAR_CHAPTERS: GrammarChapter[] = [
       { color:'#D97706', label:'Duration (for/since)', example:'She has lived here since 2010.', translation:'She has lived here since 2010.' },
     ],
     examples: [
-      { en:'I have never eaten octopus.', highlight:'have never eaten' },
-      { en:'She has already left the office.', highlight:'has already left' },
-      { en:'We have known each other for 10 years.', highlight:'have known...for' },
-      { en:'Have you seen this film yet?', highlight:'Have you seen...yet' },
+      { en:'I have never eaten octopus.', ko:'저는 문어를 먹어본 적이 없어요.', highlight:'have never eaten' },
+      { en:'She has already left the office.', ko:'그녀는 이미 사무실을 떠났어요.', highlight:'has already left' },
+      { en:'We have known each other for 10 years.', ko:'우리는 10년째 알고 지내고 있어요.', highlight:'have known...for' },
+      { en:'Have you seen this film yet?', ko:'이 영화 보셨나요?', highlight:'Have you seen...yet' },
     ],
     mistakes: [
       { wrong:'I have went to Paris.', right:'I have been to Paris.', note:"have been to = experience of visiting. went is a simple past verb." },
@@ -442,10 +442,10 @@ export const GRAMMAR_CHAPTERS: GrammarChapter[] = [
       { color:'#7C3AED', label:'Possibility (might)', example:'He might be at home.', translation:'He might be at home.' },
     ],
     examples: [
-      { en:'You should apologise to her.', highlight:'should' },
-      { en:'It might snow tomorrow.', highlight:'might' },
-      { en:'Can you help me with this?', highlight:'Can' },
-      { en:'You must not park here.', highlight:'must not' },
+      { en:'You should apologise to her.', ko:'그녀에게 사과해야 해요.', highlight:'should' },
+      { en:'It might snow tomorrow.', ko:'내일 눈이 올지도 몰라요.', highlight:'might' },
+      { en:'Can you help me with this?', ko:'이것 좀 도와주시겠어요?', highlight:'Can' },
+      { en:'You must not park here.', ko:'여기에 주차하면 안 돼요.', highlight:'must not' },
     ],
     mistakes: [
       { wrong:'She can to swim.', right:'She can swim.', note:'After modal verbs, use the base verb — no to.' },
@@ -483,10 +483,10 @@ export const GRAMMAR_CHAPTERS: GrammarChapter[] = [
       { color:'#059669', label:'Scientific / academic', example:'Water is made of H₂O.', translation:'Water is made of H₂O.' },
     ],
     examples: [
-      { en:'The Eiffel Tower was built in 1889.', highlight:'was built' },
-      { en:'Spanish is spoken in 20 countries.', highlight:'is spoken' },
-      { en:'The email has been sent.', highlight:'has been sent' },
-      { en:'The cake was eaten by the children.', highlight:'was eaten by' },
+      { en:'The Eiffel Tower was built in 1889.', ko:'에펠탑은 1889년에 지어졌어요.', highlight:'was built' },
+      { en:'Spanish is spoken in 20 countries.', ko:'스페인어는 20개국에서 사용돼요.', highlight:'is spoken' },
+      { en:'The email has been sent.', ko:'이메일이 발송됐어요.', highlight:'has been sent' },
+      { en:'The cake was eaten by the children.', ko:'케이크는 아이들이 먹었어요.', highlight:'was eaten by' },
     ],
     mistakes: [
       { wrong:'The book is write by her.', right:'The book is written by her.', note:'Passive voice = be + past participle. write → written.' },
@@ -523,10 +523,10 @@ export const GRAMMAR_CHAPTERS: GrammarChapter[] = [
       { color:'#059669', label:'Promise / offer', example:'If you help me, I\'ll buy you lunch.', translation:'If you help me, I will buy you lunch.' },
     ],
     examples: [
-      { en:'If you study hard, you will pass.', highlight:'If...will' },
-      { en:'She will be late if she doesn\'t hurry.', highlight:"doesn't hurry...will be late" },
-      { en:'If it snows, we won\'t go out.', highlight:"If it snows...won't" },
-      { en:'What will you do if you lose your job?', highlight:'if you lose...will' },
+      { en:'If you study hard, you will pass.', ko:'열심히 공부하면 합격할 거예요.', highlight:'If...will' },
+      { en:'She will be late if she doesn\'t hurry.', ko:'서두르지 않으면 그녀는 늦을 거예요.', highlight:"doesn't hurry...will be late" },
+      { en:'If it snows, we won\'t go out.', ko:'눈이 오면 우리는 나가지 않을 거예요.', highlight:"If it snows...won't" },
+      { en:'What will you do if you lose your job?', ko:'직장을 잃으면 어떻게 하실 건가요?', highlight:'if you lose...will' },
     ],
     mistakes: [
       { wrong:'If it will rain, I will stay.', right:'If it rains, I will stay.', note:'Do not use will in the if-clause. Use present tense.' },
@@ -565,10 +565,10 @@ export const GRAMMAR_CHAPTERS: GrammarChapter[] = [
       { color:'#059669', label:'Dreams & wishes', example:'If I lived by the sea, I would swim every day.', translation:'If I lived by the sea, I would swim every day.' },
     ],
     examples: [
-      { en:'If I won the lottery, I would buy a house.', highlight:'If I won...would buy' },
-      { en:'What would you do if you lost your phone?', highlight:'would you do...if you lost' },
-      { en:'If I were a bird, I would fly to the sea.', highlight:'If I were...would fly' },
-      { en:'She would help if she could.', highlight:'would help...if she could' },
+      { en:'If I won the lottery, I would buy a house.', ko:'복권에 당첨된다면 집을 살 거예요.', highlight:'If I won...would buy' },
+      { en:'What would you do if you lost your phone?', ko:'휴대폰을 잃어버리면 어떻게 하실 건가요?', highlight:'would you do...if you lost' },
+      { en:'If I were a bird, I would fly to the sea.', ko:'내가 새라면 바다로 날아갈 거예요.', highlight:'If I were...would fly' },
+      { en:'She would help if she could.', ko:'그녀는 할 수 있다면 도와줄 거예요.', highlight:'would help...if she could' },
     ],
     mistakes: [
       { wrong:'If I would have money, I would travel.', right:'If I had money, I would travel.', note:"Do not use would in the if-clause. Use past tense (had)." },
@@ -607,10 +607,10 @@ export const GRAMMAR_CHAPTERS: GrammarChapter[] = [
       { color:'#D97706', label:'Possession (whose)', example:'I know a girl whose sister is famous.', translation:'I know a girl whose sister is famous.' },
     ],
     examples: [
-      { en:'The woman who lives next door is a nurse.', highlight:'who lives next door' },
-      { en:'The phone that I bought is broken.', highlight:'that I bought' },
-      { en:'I know a man whose wife is a chef.', highlight:'whose wife is a chef' },
-      { en:'Paris is the city where they got married.', highlight:'where they got married' },
+      { en:'The woman who lives next door is a nurse.', ko:'옆집에 사는 여자는 간호사예요.', highlight:'who lives next door' },
+      { en:'The phone that I bought is broken.', ko:'제가 산 휴대폰이 고장 났어요.', highlight:'that I bought' },
+      { en:'I know a man whose wife is a chef.', ko:'아내가 요리사인 남자를 알아요.', highlight:'whose wife is a chef' },
+      { en:'Paris is the city where they got married.', ko:'파리는 그들이 결혼한 도시예요.', highlight:'where they got married' },
     ],
     mistakes: [
       { wrong:'The woman which called you left.', right:'The woman who called you left.', note:'Use who, not which, for people.' },
@@ -649,10 +649,10 @@ export const GRAMMAR_CHAPTERS: GrammarChapter[] = [
       { color:'#059669', label:'Past affecting present', example:'If he had taken that job, he would be rich now.', translation:'If he had taken that job, he would be rich now.' },
     ],
     examples: [
-      { en:'If I had known, I would have told you.', highlight:'had known...would have told' },
-      { en:'She would have come if she had been invited.', highlight:'would have come...had been invited' },
-      { en:'If we had left earlier, we wouldn\'t have been late.', highlight:"had left...wouldn't have been" },
-      { en:'He could have won if he had trained harder.', highlight:'could have won...had trained' },
+      { en:'If I had known, I would have told you.', ko:'알았더라면 말해줬을 거예요.', highlight:'had known...would have told' },
+      { en:'She would have come if she had been invited.', ko:'초대받았더라면 그녀는 왔을 거예요.', highlight:'would have come...had been invited' },
+      { en:'If we had left earlier, we wouldn\'t have been late.', ko:'더 일찍 출발했더라면 늦지 않았을 거예요.', highlight:"had left...wouldn't have been" },
+      { en:'He could have won if he had trained harder.', ko:'더 열심히 훈련했더라면 그는 이겼을 거예요.', highlight:'could have won...had trained' },
     ],
     mistakes: [
       { wrong:'If I had known, I would told you.', right:'If I had known, I would have told you.', note:"Result clause = would have + p.p. Don't omit 'have'." },
@@ -691,10 +691,10 @@ export const GRAMMAR_CHAPTERS: GrammarChapter[] = [
       { color:'#059669', label:'Dramatic effect', example:'Only then did she realise the truth.', translation:'Only then did she realise the truth.' },
     ],
     examples: [
-      { en:'Never have I met such an interesting person.', highlight:'Never have I met' },
-      { en:'Not only did he forget, but he also didn\'t apologise.', highlight:'Not only did he' },
-      { en:'Hardly had I sat down when the phone rang.', highlight:'Hardly had I...when' },
-      { en:'Only by working together can we solve this.', highlight:'Only by...can we' },
+      { en:'Never have I met such an interesting person.', ko:'이렇게 흥미로운 사람은 만난 적이 없어요.', highlight:'Never have I met' },
+      { en:'Not only did he forget, but he also didn\'t apologise.', ko:'그는 잊었을 뿐만 아니라 사과도 하지 않았어요.', highlight:'Not only did he' },
+      { en:'Hardly had I sat down when the phone rang.', ko:'앉자마자 전화가 울렸어요.', highlight:'Hardly had I...when' },
+      { en:'Only by working together can we solve this.', ko:'함께 노력해야만 이 문제를 해결할 수 있어요.', highlight:'Only by...can we' },
     ],
     mistakes: [
       { wrong:'Never I have seen this.', right:'Never have I seen this.', note:'After a negative, the order is: auxiliary + subject (inversion).' },
@@ -734,10 +734,10 @@ export const GRAMMAR_CHAPTERS: GrammarChapter[] = [
       { color:'#D97706', label:'Fixed expressions', example:'Come what may, we will succeed.', translation:'Come what may, we will succeed.' },
     ],
     examples: [
-      { en:'It is vital that every student attend the meeting.', highlight:'attend (not attends)' },
-      { en:'I recommend that she apply for the position.', highlight:'apply (not applies)' },
-      { en:'Were he to know the truth, he would be devastated.', highlight:'Were he to know' },
-      { en:'The committee demanded that the report be submitted.', highlight:'be submitted (not is)' },
+      { en:'It is vital that every student attend the meeting.', ko:'모든 학생이 회의에 참석하는 것이 중요해요.', highlight:'attend (not attends)' },
+      { en:'I recommend that she apply for the position.', ko:'그녀가 그 자리에 지원하기를 권해요.', highlight:'apply (not applies)' },
+      { en:'Were he to know the truth, he would be devastated.', ko:'그가 진실을 안다면 큰 충격을 받을 거예요.', highlight:'Were he to know' },
+      { en:'The committee demanded that the report be submitted.', ko:'위원회는 보고서 제출을 요구했어요.', highlight:'be submitted (not is)' },
     ],
     mistakes: [
       { wrong:'It is important that he attends.', right:'It is important that he attend.', note:'In the present subjunctive, do not add -s even for 3rd person singular.' },
@@ -775,10 +775,10 @@ export const GRAMMAR_CHAPTERS: GrammarChapter[] = [
       { color:'#7C3AED', label:'Minimising with "all"', example:'All I ask is that you be honest.', translation:'All I ask is that you be honest.' },
     ],
     examples: [
-      { en:'It was in Paris that they first met.', highlight:'It was...that' },
-      { en:'What surprised me was his reaction.', highlight:'What surprised me was' },
-      { en:'It is honesty that I value most.', highlight:'It is...that' },
-      { en:'All she wanted was to be understood.', highlight:'All she wanted was' },
+      { en:'It was in Paris that they first met.', ko:'그들이 처음 만난 곳은 파리였어요.', highlight:'It was...that' },
+      { en:'What surprised me was his reaction.', ko:'저를 놀라게 한 건 그의 반응이었어요.', highlight:'What surprised me was' },
+      { en:'It is honesty that I value most.', ko:'제가 가장 소중히 여기는 건 정직이에요.', highlight:'It is...that' },
+      { en:'All she wanted was to be understood.', ko:'그녀가 원한 건 이해받는 것뿐이었어요.', highlight:'All she wanted was' },
     ],
     mistakes: [
       { wrong:'It was John who he called me.', right:'It was John who called me.', note:'Do not repeat the pronoun after who.' },
