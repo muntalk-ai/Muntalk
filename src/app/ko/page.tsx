@@ -98,6 +98,8 @@ export default function KoreanLanding() {
             공항 체크인부터 비즈니스 미팅까지 150개 이상의 실전 상황극.
             <br />
             발음 교정과 피드백 리포트는 기본으로 드립니다.
+            <br />
+            월 $29.99짜리 외국 앱의 AI 회화 기능, MunTalk는 무료로 시작합니다.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <a
@@ -123,6 +125,7 @@ export default function KoreanLanding() {
           </div>
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginTop: 28, fontSize: 13, fontWeight: 700, opacity: 0.9 }}>
             <span>🆓 무료 플랜 제공</span>
+            <span>💬 듀오링고 Max급 AI 회화를 $0부터</span>
             <span>💳 카드 등록 불필요</span>
             <span>⏰ 24시간 언제든 연습</span>
           </div>

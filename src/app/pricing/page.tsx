@@ -106,6 +106,54 @@ function PricingContent() {
           </div>
         </div>
 
+        {/* Comparison banner — positioning vs Duolingo Max */}
+        <div style={{ background:'linear-gradient(135deg,#0F172A,#1E1B4B)', borderRadius:20, padding:'26px 30px', marginBottom:36, display:'flex', alignItems:'center', gap:20, flexWrap:'wrap', animation:'fadeUp .5s ease .1s both' }}>
+          <div style={{ fontSize:36, flexShrink:0 }}>💬</div>
+          <div style={{ flex:1, minWidth:240 }}>
+            <div style={{ fontSize:16, fontWeight:900, color:'#fff', marginBottom:6 }}>
+              Duolingo Max charges <span style={{ color:'#F87171' }}>$29.99/mo</span> for AI conversation
+            </div>
+            <div style={{ fontSize:13, color:'rgba(255,255,255,0.65)', fontWeight:700, lineHeight:1.6 }}>
+              MunTalk Premium gives you unlimited AI tutor sessions, real-time pronunciation scoring and CEFR certificates for <span style={{ color:'#A5B4FC', fontWeight:900 }}>$9.99/mo</span> — and the free tier is <span style={{ color:'#A5B4FC', fontWeight:900 }}>$0 forever</span>.
+            </div>
+          </div>
+        </div>
+
+        {/* Comparison table */}
+        <div style={{ marginBottom:64, animation:'fadeUp .5s ease .15s both' }}>
+          <h2 style={{ fontSize:20, fontWeight:900, color:'#0F172A', textAlign:'center', marginBottom:8, letterSpacing:-0.4 }}>MunTalk vs Duolingo Max</h2>
+          <p style={{ textAlign:'center', color:'#94A3B8', fontSize:12, fontWeight:700, marginBottom:24 }}>Public pricing as of September 2026</p>
+          <div style={{ overflowX:'auto', borderRadius:18, border:'1.5px solid #F1F5F9' }}>
+            <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13, minWidth:520 }}>
+              <thead>
+                <tr style={{ background:'#F8FAFC' }}>
+                  <th style={{ textAlign:'left', padding:'14px 18px', fontWeight:800, color:'#64748B' }}></th>
+                  <th style={{ padding:'14px 18px', fontWeight:900, color:'#0F172A' }}>MunTalk<br /><span style={{ fontSize:11, color:'#16A34A', fontWeight:800 }}>Free</span></th>
+                  <th style={{ padding:'14px 18px', fontWeight:900, color:'#fff', background:'linear-gradient(135deg,#6366F1,#8B5CF6)' }}>MunTalk<br /><span style={{ fontSize:11, fontWeight:800, opacity:0.85 }}>Premium</span></th>
+                  <th style={{ padding:'14px 18px', fontWeight:900, color:'#0F172A' }}>Duolingo Max</th>
+                </tr>
+              </thead>
+              <tbody>
+                {([
+                  ['Monthly price', '$0 forever', '$9.99', '$29.99'],
+                  ['AI conversation practice', '3 chats / day', 'Unlimited', 'Included'],
+                  ['Real-time pronunciation scoring', '✓', '✓', '—'],
+                  ['CEFR completion certificates', '✓', '✓', '—'],
+                  ['Languages', '65', '65', '40+'],
+                  ['Streak Freeze & leagues', '✓', '✓', '✓'],
+                ] as string[][]).map((row, i) => (
+                  <tr key={row[0]} style={{ background: i % 2 ? '#fff' : '#F8FAFC' }}>
+                    <td style={{ padding:'12px 18px', fontWeight:800, color:'#334155' }}>{row[0]}</td>
+                    <td style={{ padding:'12px 18px', textAlign:'center', fontWeight:700, color:'#16A34A' }}>{row[1]}</td>
+                    <td style={{ padding:'12px 18px', textAlign:'center', fontWeight:900, color:'#4F46E5', background:'rgba(99,102,241,0.06)' }}>{row[2]}</td>
+                    <td style={{ padding:'12px 18px', textAlign:'center', fontWeight:700, color:'#64748B' }}>{row[3]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         {/* Plan Cards */}
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(225px,1fr))', gap:14, marginBottom:80, alignItems:'end' }}>
           {planOrder.map((planId, i) => {

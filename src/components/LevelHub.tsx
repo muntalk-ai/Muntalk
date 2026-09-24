@@ -762,6 +762,13 @@ export default function LevelHub() {
               </>
             )}
           </div>
+          {/* Positioning: Duolingo Max 대비 — 비로그인 방문자에게만 */}
+          {!authLoading && !user && (
+            <div style={{ marginTop: 20, display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.16)', border: '1px solid rgba(255,255,255,0.35)', borderRadius: 99, padding: '8px 18px', fontSize: 12.5, fontWeight: 700, color: '#fff', backdropFilter: 'blur(6px)' }}>
+              <span>💬</span>
+              <span>Duolingo Max는 AI 회화에 <strong>&nbsp;$29.99/월</strong> — MunTalk는 <strong>&nbsp;$0부터</strong></span>
+            </div>
+          )}
         </div>
       </div>
 
