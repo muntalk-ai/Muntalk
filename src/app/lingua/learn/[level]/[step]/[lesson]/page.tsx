@@ -2,10 +2,12 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import LessonPlayer from '@/components/LessonPlayer';
+import CertificateModal from '@/components/CertificateModal';
 import { useAuth } from '@/context/AuthContext';
 import { updateUserProfile } from '@/lib/userProfile';
 import { addWeeklyXp, ensureLeague } from '@/lib/league';
 import { addCardToSRS } from '@/lib/spacedRepetition';
+import { checkAndAwardCertificate, Certificate } from '@/lib/certificates';
 
 // 비로그인 허용 레슨 (A1 첫 레슨만)
 const GUEST_ALLOWED_LESSON = 'a1-1-1';
@@ -26,6 +28,7 @@ export default function LessonPage({
   const [xp, setXp] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [tutorId, setTutorId] = useState<string | undefined>(undefined);
+  const [earnedCert, setEarnedCert] = useState<Certificate | null>(null);
 
   // 비로그인 게스트 접근 제한 — a1-1-1 외 모든 레슨 차단
   useEffect(() => {
@@ -94,6 +97,14 @@ export default function LessonPage({
 
         // 프로필 갱신
         try { await refreshProfile(); } catch { /* ignore */ }
+
+        // CEFR 수료증 체크 (레벨 전체 완료 시 발급)
+        try {
+          const cert = await checkAndAwardCertificate(user.uid, level);
+          if (cert) setEarnedCert(cert);
+        } catch (e) {
+          console.warn('[lesson] certificate check failed:', e);
+        }
       }
     } catch (e) {
       console.error('[lesson] handleComplete error:', e);
@@ -103,14 +114,19 @@ export default function LessonPage({
   if (!loaded) return null;
 
   return (
-    <LessonPlayer
-      levelId={level}
-      stepId={step}
-      lessonId={lesson}
-      langId={langId}
-      tutorId={tutorId}
-      subLang={subLang}
-      onComplete={handleComplete}
-    />
+    <>
+      <LessonPlayer
+        levelId={level}
+        stepId={step}
+        lessonId={lesson}
+        langId={langId}
+        tutorId={tutorId}
+        subLang={subLang}
+        onComplete={handleComplete}
+      />
+      {earnedCert && (
+        <CertificateModal cert={earnedCert} onClose={() => setEarnedCert(null)} />
+      )}
+    </>
   );
 }

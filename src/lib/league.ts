@@ -47,6 +47,17 @@ export interface UserLeague {
   weeklyXp: number;
   weekStart: string; // YYYY-MM-DD (월요일)
   lastUpdated: any;
+  lastWeekResult?: WeekResult; // 지난주 정산 결과 (모달 표시용)
+}
+
+export interface WeekResult {
+  rank: number;
+  totalMembers: number;
+  oldTier: LeagueTier;
+  newTier: LeagueTier;
+  moved: 'up' | 'down' | 'stay';
+  weekStart: string; // 정산된 주의 weekStart
+  seen: boolean;
 }
 
 /** 이번 주 월요일 날짜 */
@@ -58,6 +69,11 @@ export function getWeekStart(): string {
   return d.toISOString().slice(0, 10);
 }
 
+/** 티어+주별 공용 리그 ID — 같은 티어 유저는 한 리그에서 실제 경쟁 */
+export function canonicalLeagueId(tier: LeagueTier, weekStart: string): string {
+  return `${tier}_${weekStart}`;
+}
+
 /** 유저를 리그에 배정 (없으면 Bronze 자동 생성) */
 export async function ensureLeague(uid: string, displayName: string, photoURL: string): Promise<UserLeague> {
   const ref = doc(db, 'user_leagues', uid);
@@ -66,29 +82,86 @@ export async function ensureLeague(uid: string, displayName: string, photoURL: s
 
   if (snap.exists()) {
     const data = snap.data() as UserLeague;
-    // 새 주가 시작됐으면 XP 리셋
+    // 새 주가 시작됐으면 정산 + 새 리그로 이동
     if (data.weekStart !== weekStart) {
-      const updated: UserLeague = { ...data, weeklyXp: 0, weekStart, lastUpdated: serverTimestamp() };
-      await updateDoc(ref, updated as any);
-      // 리그 멤버 XP도 리셋
-      await setDoc(doc(db, 'leagues', data.leagueId, 'members', uid), {
-        uid, displayName, photoURL, weeklyXp: 0, tier: data.tier, leagueId: data.leagueId,
+      return await rolloverToNewWeek(ref, uid, displayName, photoURL, data, weekStart);
+    }
+    // 마이그레이션: 구 랜덤 leagueId → 공용 canonical 리그로 이동
+    const canonical = canonicalLeagueId(data.tier, weekStart);
+    if (data.leagueId !== canonical) {
+      await setDoc(doc(db, 'leagues', canonical, 'members', uid), {
+        uid, displayName, photoURL, weeklyXp: data.weeklyXp || 0, tier: data.tier, leagueId: canonical,
       });
+      const updated: UserLeague = { ...data, leagueId: canonical, lastUpdated: serverTimestamp() };
+      await updateDoc(ref, updated as any);
       return updated;
     }
     return data;
   }
 
-  // 새 유저 → Bronze 리그 배정
-  const leagueId = `bronze_${weekStart}_${Math.floor(Math.random() * 100)}`;
-  const newLeague: UserLeague = {
+  // 새 유저 → Bronze 공용 리그
+  const leagueId = canonicalLeagueId('bronze', weekStart);
+  const fresh: UserLeague = {
     tier: 'bronze', leagueId, weeklyXp: 0, weekStart, lastUpdated: serverTimestamp(),
   };
-  await setDoc(ref, newLeague);
+  await setDoc(ref, fresh);
   await setDoc(doc(db, 'leagues', leagueId, 'members', uid), {
     uid, displayName, photoURL, weeklyXp: 0, tier: 'bronze', leagueId,
   });
-  return newLeague;
+  return fresh;
+}
+
+/** 주간 정산: 지난주 순위 → 승격/강등 → 새 티어 리그로 이동 */
+async function rolloverToNewWeek(
+  ref: any, uid: string, displayName: string, photoURL: string,
+  data: UserLeague, weekStart: string,
+): Promise<UserLeague> {
+  // 1. 지난주 최종 순위
+  let rank = -1, total = 0;
+  try {
+    const members = await getLeagueMembers(data.leagueId);
+    total = members.length;
+    rank = members.findIndex(m => m.uid === uid) + 1;
+  } catch { /* 리그 조회 실패 시 stay 처리 */ }
+
+  // 2. 승격/강등 판정 (구 랜덤 리그의 1인 순위 같은 무의미한 경쟁은 제외)
+  const cfg = LEAGUE_CONFIG[data.tier];
+  const idx = TIER_ORDER.indexOf(data.tier);
+  let newTier: LeagueTier = data.tier;
+  let moved: 'up' | 'down' | 'stay' = 'stay';
+  if (total >= 3 && rank > 0) {
+    if (rank <= cfg.promoteRank && data.tier !== 'diamond') {
+      newTier = TIER_ORDER[idx + 1]; moved = 'up';
+    } else if (rank > cfg.minRank && data.tier !== 'bronze') {
+      newTier = TIER_ORDER[idx - 1]; moved = 'down';
+    }
+  }
+
+  const newLeagueId = canonicalLeagueId(newTier, weekStart);
+  const result: WeekResult = {
+    rank: rank > 0 ? rank : total, totalMembers: total,
+    oldTier: data.tier, newTier, moved,
+    weekStart: data.weekStart, seen: false,
+  };
+  const updated: UserLeague = {
+    tier: newTier, leagueId: newLeagueId, weeklyXp: 0,
+    weekStart, lastUpdated: serverTimestamp(), lastWeekResult: result,
+  };
+  await setDoc(ref, updated);
+  await setDoc(doc(db, 'leagues', newLeagueId, 'members', uid), {
+    uid, displayName, photoURL, weeklyXp: 0, tier: newTier, leagueId: newLeagueId,
+  });
+  return updated;
+}
+
+/** 주간 정산 모달 확인 처리 */
+export async function markWeekResultSeen(uid: string): Promise<void> {
+  const ref = doc(db, 'user_leagues', uid);
+  const snap = await getDoc(ref);
+  if (!snap.exists()) return;
+  const data = snap.data() as UserLeague;
+  if (!data.lastWeekResult || data.lastWeekResult.seen) return;
+  await updateDoc(ref, { lastWeekResult: { ...data.lastWeekResult, seen: true } });
 }
 
 /** 주간 XP 추가 */

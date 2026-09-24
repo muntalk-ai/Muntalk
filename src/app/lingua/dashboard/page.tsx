@@ -155,6 +155,42 @@ export default function DashboardPage() {
           ))}
         </div>
 
+        {/* -- Certificates (CEFR 수료증) -- */}
+        {(() => {
+          const earned = profile?.certificates || [];
+          return (
+            <div style={{ background: '#fff', borderRadius: 20, border: '1.5px solid #F1F5F9', padding: '24px', marginBottom: 24 }}>
+              <div style={{ fontWeight: 900, fontSize: 15, color: '#0F172A', marginBottom: 4 }}>🎓 Certificates</div>
+              <div style={{ fontSize: 12, color: '#94A3B8', fontWeight: 600, marginBottom: 16 }}>
+                레벨의 모든 레슨을 완료하면 수료증이 발급돼요 — 링크드인에 공유하세요
+              </div>
+              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+                {['a1','a2','b1','b2','c1','c2'].map(lid => {
+                  const info = { a1:['A1','🌱'], a2:['A2','🌿'], b1:['B1','💼'], b2:['B2','🚀'], c1:['C1','🌟'], c2:['C2','👑'] }[lid] as [string,string];
+                  const got = earned.includes(lid);
+                  return (
+                    <div key={lid} style={{
+                      flex: '1 1 90px', minWidth: 90, textAlign: 'center', padding: '14px 8px',
+                      borderRadius: 16,
+                      background: got ? 'linear-gradient(135deg,#FFFBEB,#FEF3C7)' : '#F8FAFC',
+                      border: got ? '2px solid #F59E0B' : '2px dashed #E2E8F0',
+                      opacity: got ? 1 : 0.55,
+                    }}>
+                      <div style={{ fontSize: 28, filter: got ? 'none' : 'grayscale(1)' }}>{info[1]}</div>
+                      <div style={{ fontSize: 13, fontWeight: 900, color: got ? '#B45309' : '#94A3B8', marginTop: 4 }}>
+                        {info[0]}
+                      </div>
+                      <div style={{ fontSize: 10, fontWeight: 700, color: got ? '#D97706' : '#CBD5E1', marginTop: 2 }}>
+                        {got ? '✓ 획득' : '미획득'}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })()}
+
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, marginBottom: 24 }}>
 
           {/* -- Activity Calendar -- */}
