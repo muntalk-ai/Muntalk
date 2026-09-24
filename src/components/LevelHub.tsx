@@ -94,29 +94,23 @@ export default function LevelHub() {
   const [langStep, setLangStep]             = useState<'learn' | 'native'>('learn');
   const [showPlacementModal, setShowPlacementModal] = useState(false);
 
-  // -- 스트릭 계산 --------------------------------------------------------------
+  // -- 스트릭 계산 (게스트용 localStorage 기반) -----------------------------------
   const calcStreak = () => {
     try {
-      // toISOString()은 UTC 기준 → 로컬 날짜로 변환
-      const now = new Date();
-      const today = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+      // UTC 기준 오늘 날짜 — recordActivity(Firestore)와 동일한 기준으로 타임존 무관하게 비교
+      const today = new Date().toISOString().slice(0, 10);
 
       const raw = localStorage.getItem('mt_activity_dates');
       const dates: string[] = raw ? JSON.parse(raw) : [];
+      // ※ 방문 시점에는 날짜를 기록하지 않음 — 레슨 완료 등 실제 학습 활동 시점에만 기록됨
 
-      // 오늘 날짜 기록
-      if (!dates.includes(today)) {
-        dates.push(today);
-        localStorage.setItem('mt_activity_dates', JSON.stringify(dates));
-      }
-
-      // 연속 날짜 계산
+      // 연속 날짜 계산 (UTC 자정 기준으로 비교 — 타임존/DST 오차 없음)
       const sorted = [...new Set(dates)].sort().reverse();
       let count = 0;
-      let cursor = new Date(today + 'T12:00:00'); // 정오 기준으로 비교 (DST 오차 방지)
+      let cursor = new Date(today + 'T00:00:00Z');
       for (const d of sorted) {
-        const diff = (cursor.getTime() - new Date(d + 'T12:00:00').getTime()) / 86400000;
-        if (diff <= 1) { count++; cursor = new Date(d + 'T12:00:00'); }
+        const diff = (cursor.getTime() - new Date(d + 'T00:00:00Z').getTime()) / 86400000;
+        if (diff <= 1) { count++; cursor = new Date(d + 'T00:00:00Z'); }
         else break;
       }
       setStreak(count);
@@ -648,8 +642,8 @@ export default function LevelHub() {
 
       {/* -- Streak Freeze 사용 알림 배너 -- */}
       {(() => {
-        const now = new Date();
-        const todayStr = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+        // UTC 기준 — lastFreezeUsedAt은 recordActivity에서 UTC 날짜로 기록됨
+        const todayStr = new Date().toISOString().slice(0, 10);
         if (!profile || profile.lastFreezeUsedAt !== todayStr || freezeBannerDismissed) return null;
         return (
           <div style={{

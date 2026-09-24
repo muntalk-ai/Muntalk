@@ -4,7 +4,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import LessonPlayer from '@/components/LessonPlayer';
 import CertificateModal from '@/components/CertificateModal';
 import { useAuth } from '@/context/AuthContext';
-import { updateUserProfile } from '@/lib/userProfile';
+import { updateUserProfile, getUserProfile, recordActivity } from '@/lib/userProfile';
 import { addWeeklyXp, ensureLeague } from '@/lib/league';
 import { addCardToSRS } from '@/lib/spacedRepetition';
 import { checkAndAwardCertificate, Certificate } from '@/lib/certificates';
@@ -71,6 +71,16 @@ export default function LessonPage({
         localStorage.setItem('mt_done', JSON.stringify(doneParsed));
       }
 
+      // 게스트용 활동 날짜 기록 — 레슨 완료 시점에만 (UTC 기준, 화면 방문 시에는 기록하지 않음)
+      try {
+        const todayUtc = new Date().toISOString().slice(0, 10);
+        const datesParsed = JSON.parse(localStorage.getItem('mt_activity_dates') || '[]') as string[];
+        if (!datesParsed.includes(todayUtc)) {
+          datesParsed.push(todayUtc);
+          localStorage.setItem('mt_activity_dates', JSON.stringify(datesParsed));
+        }
+      } catch { /* ignore */ }
+
       // Firestore 저장 (로그인 시)
       if (user) {
         const displayName = user.displayName || 'Learner';
@@ -85,6 +95,14 @@ export default function LessonPage({
           console.log('[lesson] Firestore saved — xp:', next, 'lessons:', doneParsed.length);
         } catch (e) {
           console.error('[lesson] Firestore save FAILED:', e);
+        }
+
+        // 스트릭 활동 기록 — 레슨 완료 시점에만 (방문만으로 기록되지 않음)
+        try {
+          const fresh = await getUserProfile(user.uid);
+          if (fresh) await recordActivity(user.uid, fresh);
+        } catch (e) {
+          console.warn('[lesson] recordActivity failed:', e);
         }
 
         // 리그 XP (실패해도 레슨에 영향 없음)
