@@ -58,6 +58,8 @@ export default function LevelHub() {
   const { user, profile, loading: authLoading, refreshProfile } = useAuth();
   const [xp, setXp] = useState(0);
   const [streak, setStreak] = useState(0);
+  const [freezes, setFreezes] = useState(1);
+  const [freezeBannerDismissed, setFreezeBannerDismissed] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
@@ -171,6 +173,7 @@ export default function LevelHub() {
     if (profile) {
       setXp(profile.xp || 0);
       setStreak(profile.streak || 0);
+      setFreezes(profile.streakFreezes ?? 1);
       setLearnLang(profile.learnLang || 'en-US');
       setPlacementLevel((profile as any).placementLevel || localStorage.getItem('mt_placement_level') || '');
       setNativeLang(profile.nativeLang || 'ko-KR');
@@ -555,6 +558,7 @@ export default function LevelHub() {
             <span style={{ fontSize: 10, color: '#9CA3AF' }}>▾</span>
           </button>
           <div className="mt-nav-streak-xp" style={styles.navStreak}><span>🔥</span><span style={{ fontWeight: 800, color: '#EA580C', fontSize: 13 }}>{streak} {streak === 1 ? 'day' : 'days'}</span></div>
+          <div className="mt-nav-streak-xp" style={{...styles.navStreak, background:'#EFF6FF'}} title="Streak Freeze — 하루를 빠뜨려도 스트릭을 지켜줘요. 7일 연속 학습마다 +1 (최대 5개)"><span>🧊</span><span style={{ fontWeight: 800, color: '#2563EB', fontSize: 13 }}>{freezes}</span></div>
           <div className="mt-nav-streak-xp" style={styles.navXp}><span>⭐</span><span style={{ fontWeight: 800, color: '#2563EB', fontSize: 13 }}>{xp} XP</span></div>
           {/* 하트바 + Upgrade — auth 로딩 완료 후에만 표시 */}
           {!authLoading && planId === 'free' && !isAdmin && user && (
@@ -613,6 +617,25 @@ export default function LevelHub() {
           )}
         </div>
       </nav>
+
+      {/* -- Streak Freeze 사용 알림 배너 -- */}
+      {(() => {
+        const now = new Date();
+        const todayStr = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+        if (!profile || profile.lastFreezeUsedAt !== todayStr || freezeBannerDismissed) return null;
+        return (
+          <div style={{
+            display:'flex',alignItems:'center',justifyContent:'center',gap:8,
+            background:'linear-gradient(135deg,#EFF6FF,#DBEAFE)',
+            borderBottom:'1px solid #BFDBFE',padding:'8px 16px',
+            fontSize:12,fontWeight:700,color:'#1D4ED8',fontFamily:"'Nunito',sans-serif",
+          }}>
+            <span>🧊 Streak Freeze가 어제의 빈틈을 메워 {streak}일 스트릭을 지켜줬어요! (잔여 {freezes}개 · 7일 연속마다 +1)</span>
+            <button onClick={()=>setFreezeBannerDismissed(true)}
+              style={{background:'none',border:'none',color:'#60A5FA',fontWeight:800,cursor:'pointer',fontSize:12}}>✕</button>
+          </div>
+        );
+      })()}
 
       {/* -- Mobile Menu Dropdown -- */}
       {showMobileMenu && (

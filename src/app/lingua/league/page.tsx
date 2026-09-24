@@ -5,7 +5,8 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import {
   ensureLeague, getLeagueMembers, getUserLeague, getPromotionMessage,
-  LEAGUE_CONFIG, TIER_ORDER, LeagueMember, UserLeague, getWeekStart,
+  LEAGUE_CONFIG, TIER_ORDER, LeagueMember, UserLeague, WeekResult,
+  getWeekStart, markWeekResultSeen,
 } from '@/lib/league';
 
 const DAYS_LEFT = () => {
@@ -23,6 +24,7 @@ export default function LeaguePage() {
   const [members,    setMembers]      = useState<LeagueMember[]>([]);
   const [loading,    setLoading]      = useState(true);
   const [myRank,     setMyRank]       = useState<number>(-1);
+  const [weekResult, setWeekResult]   = useState<WeekResult | null>(null);
 
   useEffect(() => {
     // authLoading 끝나기 전엔 실행 안 함 (무한로딩 방지)
@@ -40,6 +42,10 @@ export default function LeaguePage() {
         const ms = await getLeagueMembers(league.leagueId);
         setMembers(ms);
         setMyRank(ms.findIndex(m => m.uid === user.uid) + 1);
+        // 지난주 정산 결과 모달 (아직 안 본 경우)
+        if (league.lastWeekResult && !league.lastWeekResult.seen) {
+          setWeekResult(league.lastWeekResult);
+        }
       } catch (e) { console.error(e); }
       finally { setLoading(false); }
     };
@@ -143,6 +149,25 @@ export default function LeaguePage() {
               </div>
             )}
 
+            {/* ── Demotion urgency (강등 위협 — 가장 강력한 재방문 동기) ── */}
+            {(() => {
+              if (!userLeague || myRank <= 0 || userLeague.tier === 'bronze') return null;
+              if (myRank <= tierConfig.minRank || members.length <= tierConfig.minRank) return null;
+              const safetyLine = members[tierConfig.minRank - 1]?.weeklyXp || 0;
+              const gap = Math.max(0, safetyLine - (userLeague.weeklyXp || 0) + 1);
+              return (
+                <div style={{
+                  borderRadius: 16, padding: '14px 18px', marginBottom: 20,
+                  background: 'linear-gradient(135deg,#FEF2F2,#FEE2E2)',
+                  border: '1.5px solid #FCA5A5', color: '#B91C1C',
+                  fontSize: 13, fontWeight: 800, textAlign: 'center',
+                  animation: 'pulse 2s ease-in-out infinite',
+                }}>
+                  🚨 강등 위험! {daysLeft}일 남음 — 안전권(#{tierConfig.minRank})까지 {gap.toLocaleString()} XP 필요해요
+                </div>
+              );
+            })()}
+
             {/* ── Tier Ladder ── */}
             <div style={{ background: '#fff', borderRadius: 20, border: '1.5px solid #F1F5F9', padding: '20px', marginBottom: 20 }}>
               <div style={{ fontWeight: 900, fontSize: 14, color: '#0F172A', marginBottom: 14 }}>League Tiers</div>
@@ -238,6 +263,70 @@ export default function LeaguePage() {
           </>
         )}
       </div>
+
+      {/* ── Weekly Results Modal (주간 정산) ── */}
+      {weekResult && (
+        <div style={{
+          position: 'fixed', inset: 0, zIndex: 500,
+          background: 'rgba(15,23,42,0.55)', backdropFilter: 'blur(4px)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 20,
+          animation: 'fadeUp .3s ease',
+        }}>
+          <div style={{
+            background: '#fff', borderRadius: 28, padding: '36px 32px', maxWidth: 380, width: '100%',
+            textAlign: 'center', boxShadow: '0 24px 64px rgba(0,0,0,0.25)',
+            fontFamily: "'Nunito',sans-serif",
+          }}>
+            <div style={{ fontSize: 12, fontWeight: 800, color: '#94A3B8', letterSpacing: 1.5, marginBottom: 12 }}>
+              LAST WEEK'S RESULTS
+            </div>
+            {weekResult.moved === 'up' ? (
+              <>
+                <div style={{ fontSize: 64, marginBottom: 12 }}>🎉</div>
+                <div style={{ fontSize: 24, fontWeight: 900, color: '#16A34A', marginBottom: 8 }}>PROMOTED!</div>
+                <div style={{ fontSize: 15, fontWeight: 800, color: '#0F172A', marginBottom: 4 }}>
+                  {LEAGUE_CONFIG[weekResult.oldTier].emoji} {LEAGUE_CONFIG[weekResult.oldTier].name}
+                  {' → '}
+                  {LEAGUE_CONFIG[weekResult.newTier].emoji} {LEAGUE_CONFIG[weekResult.newTier].name}
+                </div>
+              </>
+            ) : weekResult.moved === 'down' ? (
+              <>
+                <div style={{ fontSize: 64, marginBottom: 12 }}>😢</div>
+                <div style={{ fontSize: 24, fontWeight: 900, color: '#DC2626', marginBottom: 8 }}>DEMOTED</div>
+                <div style={{ fontSize: 15, fontWeight: 800, color: '#0F172A', marginBottom: 4 }}>
+                  {LEAGUE_CONFIG[weekResult.oldTier].emoji} {LEAGUE_CONFIG[weekResult.oldTier].name}
+                  {' → '}
+                  {LEAGUE_CONFIG[weekResult.newTier].emoji} {LEAGUE_CONFIG[weekResult.newTier].name}
+                </div>
+              </>
+            ) : (
+              <>
+                <div style={{ fontSize: 64, marginBottom: 12 }}>🛡️</div>
+                <div style={{ fontSize: 24, fontWeight: 900, color: '#2563EB', marginBottom: 8 }}>LEAGUE HELD!</div>
+                <div style={{ fontSize: 15, fontWeight: 800, color: '#0F172A', marginBottom: 4 }}>
+                  {LEAGUE_CONFIG[weekResult.newTier].emoji} {LEAGUE_CONFIG[weekResult.newTier].name} 잔류
+                </div>
+              </>
+            )}
+            <div style={{ fontSize: 13, color: '#64748B', fontWeight: 700, marginBottom: 24 }}>
+              지난주 #{weekResult.rank}위 · {weekResult.totalMembers}명 중
+            </div>
+            <button
+              onClick={async () => {
+                if (user) { try { await markWeekResultSeen(user.uid); } catch {} }
+                setWeekResult(null);
+              }}
+              style={{
+                width: '100%', padding: '14px', borderRadius: 16, border: 'none',
+                background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff',
+                fontSize: 15, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
+              }}>
+              이번 주도 달려보자! →
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
