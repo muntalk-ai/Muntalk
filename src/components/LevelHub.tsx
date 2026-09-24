@@ -717,17 +717,46 @@ export default function LevelHub() {
           <h1 style={styles.heroTitle}>Every language in the world<br />Meet +150 AI tutors</h1>
           <p style={styles.heroDesc}>No judgment. No pressure. Your pace, your rules.<br />Our AI tutors get total beginners talking in under 10 minutes.</p>
           <div style={styles.heroBtnRow}>
-            <button style={styles.heroBtn1} onClick={() => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); }}>
-              🌐 Choose a Language
-            </button>
+            {!authLoading && !user ? (
+              <>
+                <button style={{ ...styles.heroBtn1, fontSize: 16, padding: '15px 36px' }} onClick={() => router.push('/signup')}>
+                  🚀 Start Learning Free
+                </button>
+                <button style={styles.heroBtn2} onClick={() => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); }}>
+                  🎯 Free Placement Test
+                </button>
+              </>
+            ) : (
+              <>
+                <button style={styles.heroBtn1} onClick={() => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); }}>
+                  🌐 Choose a Language
+                </button>
 <button style={{...styles.heroBtn2, background: 'linear-gradient(135deg,#F59E0B,#EF4444)', color:'#fff', border:'none'}} onClick={() => router.push('/lingua/discover')}>✨ Discover</button>
 <button style={{...styles.heroBtn2, background: 'linear-gradient(135deg,#fbbf24,#f59e0b)', color:'#fff', border:'none'}} onClick={() => router.push('/lingua/dream')}>🌟 Dream Studio</button>
 <button style={{...styles.heroBtn2, background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color:'#fff', border:'none'}} onClick={() => router.push('/lingua/roleplay')}>🎭 AI Roleplay</button>
-            <button style={styles.heroBtn2} onClick={() => router.push('/lingua/words')}>📚 Word Bank</button>
-            <button style={styles.heroBtn2} onClick={() => router.push('/lingua/tutors')}>👩‍🏫 Meet +150 AI Tutors</button>
+                <button style={styles.heroBtn2} onClick={() => router.push('/lingua/words')}>📚 Word Bank</button>
+                <button style={styles.heroBtn2} onClick={() => router.push('/lingua/tutors')}>👩‍🏫 Meet +150 AI Tutors</button>
+              </>
+            )}
           </div>
         </div>
       </div>
+
+      {/* -- Trust strip (logged-out visitors): honest trust signals, no fabricated numbers -- */}
+      {!authLoading && !user && (
+        <div style={styles.trustStrip}>
+          {([
+            ['🆓', 'Free to start'],
+            ['💳', 'No credit card required'],
+            ['⚡', 'Speaking in 10 minutes'],
+          ] as [string, string][]).map(([icon, label]) => (
+            <div key={label} style={styles.trustItem}>
+              <span style={{ fontSize: 17 }}>{icon}</span>
+              <span>{label}</span>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* -- Stats -- */}
       <div style={styles.statsWrap}>
@@ -985,6 +1014,10 @@ const styles: Record<string, React.CSSProperties> = {
   heroBtnRow: { display: 'flex', gap: 12, flexWrap: 'wrap' },
   heroBtn1: { background: '#fff', color: '#2563EB', border: 'none', borderRadius: 14, padding: '13px 26px', fontWeight: 900, fontSize: 14, cursor: 'pointer', boxShadow: '0 4px 14px rgba(0,0,0,0.15)', fontFamily: "'Nunito',sans-serif" },
   heroBtn2: { background: 'rgba(255,255,255,0.18)', color: '#fff', border: '2px solid rgba(255,255,255,0.5)', borderRadius: 14, padding: '13px 24px', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" },
+
+  // Trust strip (logged-out visitors)
+  trustStrip: { display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap', padding: '20px 32px 0', maxWidth: 900, margin: '0 auto' },
+  trustItem: { display: 'flex', alignItems: 'center', gap: 8, background: '#fff', border: '1px solid #E9ECEF', borderRadius: 99, padding: '9px 18px', fontSize: 13, fontWeight: 800, color: '#475569', boxShadow: '0 1px 6px rgba(0,0,0,0.04)', fontFamily: "'Nunito',sans-serif" },
 
   // Stats
   statsWrap: { display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16, padding: '24px 32px 0', maxWidth: 1200, margin: '0 auto' },
