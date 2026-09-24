@@ -21,6 +21,7 @@ interface Message {
   nativeText?: string;   // live subtitle in learner's native lang
   score?: number;
   tip?: string;
+  fix?: { wrong: string; right: string };  // gentle real-time correction
   ts: number;
 }
 
@@ -208,10 +209,11 @@ CRITICAL RULES:
 - 2-3 sentences maximum.
 - No emojis (text-to-speech).
 - Your name is ${npc.name} — use it if introducing yourself.
-- Silently model correct English in your replies. Never mention grammar errors.
+- CORRECTION STYLE (important): If the learner's message has a grammar or word-choice mistake, do NOT lecture and never say "that's wrong". Instead, naturally weave the corrected form into your reply as a recast (e.g. learner: "I go to store yesterday" → you: "Oh, you went to the store yesterday? What did you buy?"). Keep the scene flowing.
 
 After your reply, on a NEW LINE add:
-|||FB|||{"score":<0-100>,"tip":"<one helpful tip in ${nativeLang}, max 12 words>"}|||END|||
+|||FB|||{"score":<0-100>,"tip":"<one helpful tip in ${nativeLang}, max 12 words>","fix":{"wrong":"<learner's mistaken phrase, in ${targetLang}>","right":"<corrected phrase>"}}}|||END|||
+Omit the "fix" object entirely if the learner made no notable mistake. Keep "wrong"/"right" short (max 8 words each).
 
 Reply as ${npc.name} in ${targetLang}:`;
   }, [world, everyday, targetLang, difficulty, nativeLang, choiceSteer, npcs]); // eslint-disable-line
@@ -300,21 +302,29 @@ Reply as ${npc.name} in ${targetLang}:`;
       const parseNpcResponse = (raw: string) => {
         const fbMatch = raw.match(/\|\|\|FB\|\|\|([\s\S]*?)\|\|\|END\|\|\|/);
         const npcText = raw.replace(/\|\|\|FB\|\|\|[\s\S]*?\|\|\|END\|\|\|/,'').trim();
-        let fb: {score?:number;tip?:string} = {};
-        if (fbMatch) { try { fb = JSON.parse(fbMatch[1]); } catch {} }
+        let fb: {score?:number;tip?:string;fix?:{wrong:string;right:string}} = {};
+        if (fbMatch) {
+          try {
+            fb = JSON.parse(fbMatch[1]);
+            // sanitize fix: must be short strings or drop it
+            if (fb.fix && (typeof fb.fix.wrong!=='string' || typeof fb.fix.right!=='string'
+                || fb.fix.wrong.length>60 || fb.fix.right.length>60)) delete fb.fix;
+          } catch {}
+        }
         return { npcText, fb };
       };
 
       const { npcText:primaryText, fb:primaryFb } = parseNpcResponse(jsons[0].text?.trim()||'');
       pendingRef.current = { text:primaryText, gender:primaryNpc.voiceGender, npcId:primaryNpc.tutorId };
 
-      // Update user message with feedback score
+      // Update user message with feedback score + gentle correction
       if (primaryFb.score !== undefined) {
         setMessages(prev => {
           const copy = [...prev];
           for (let i=copy.length-1;i>=0;i--) {
             if (copy[i].from==='user' && copy[i].score===undefined) {
-              copy[i] = {...copy[i], score:primaryFb.score, tip:primaryFb.tip}; break;
+              copy[i] = {...copy[i], score:primaryFb.score, tip:primaryFb.tip,
+                ...(primaryFb.fix ? { fix:primaryFb.fix } : {})}; break;
             }
           }
           return copy;
@@ -648,6 +658,20 @@ Reply as ${npc.name} in ${targetLang}:`;
                   border:`1px solid ${scoreColor(msg.score)}30`}}>
                   <span style={{fontSize:12,fontWeight:900,color:scoreColor(msg.score)}}>{msg.score}</span>
                   {msg.tip && <span style={{fontSize:10,color:'#64748B',fontWeight:600}}>{msg.tip}</span>}
+                </div>
+              )}
+
+              {/* Gentle real-time correction */}
+              {isUser && msg.fix && (
+                <div style={{marginTop:4,display:'flex',alignItems:'center',gap:6,
+                  padding:'4px 10px',borderRadius:8,maxWidth:'82%',
+                  background:'#EFF6FF',border:'1px solid #BFDBFE',
+                  animation:'fadeUp .3s ease'}}>
+                  <span style={{fontSize:11}}>✏️</span>
+                  <span style={{fontSize:11,color:'#64748B',fontWeight:600,
+                    textDecoration:'line-through'}}>{msg.fix.wrong}</span>
+                  <span style={{fontSize:11,color:'#94A3B8',fontWeight:800}}>→</span>
+                  <span style={{fontSize:11,color:'#1D4ED8',fontWeight:800}}>{msg.fix.right}</span>
                 </div>
               )}
             </div>

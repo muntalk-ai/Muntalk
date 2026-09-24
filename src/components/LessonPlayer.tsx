@@ -50,6 +50,12 @@ export default function LessonPlayer({
   const [quizIdx, setQuizIdx]   = useState(0);
   const [quizScore, setQuizScore] = useState(0);
   const [selectedOpt, setSelectedOpt] = useState<number | null>(null);
+  const [explanation, setExplanation] = useState<string | null>(null);
+  const [explaining, setExplaining] = useState(false);
+  // Pronunciation practice (vocab phase)
+  const [pronListening, setPronListening] = useState(false);
+  const [pronLoading, setPronLoading] = useState(false);
+  const [pronResult, setPronResult] = useState<Record<number, { heard: string; score: number; feedback: string } | null>>({});
   const [chatMsgs, setChatMsgs] = useState<ChatMessage[]>([]);
   const [isChatThinking, setIsChatThinking] = useState(false);
   const [chatHistory, setChatHistory] = useState<{ role: 'user' | 'assistant'; content: string }[]>([]);
@@ -479,6 +485,8 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
   const handleNextQuiz = () => {
     if (!activeLesson) return;
     setSelectedOpt(null);
+    setExplanation(null);
+    setExplaining(false);
     if (quizIdx < activeLesson.quiz.length - 1) {
       setQuizIdx(q => q + 1);
     } else {
@@ -486,6 +494,71 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
       setPhase('chat');
       startChat();
     }
+  };
+
+  // "왜 틀렸어요?" — AI explains the wrong answer (Explain My Answer)
+  const handleExplain = async () => {
+    if (!quizItem || selectedOpt === null || explaining) return;
+    setExplaining(true);
+    try {
+      const res = await fetch('/api/gemini', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          uid: user?.uid,
+          temperature: 0.4,
+          prompt: `You are a friendly language tutor. A student learning ${langNames[langId] || langId} got this quiz question wrong.\nQuestion: ${quizItem.q}\nOptions: ${quizItem.options.map((o: string, i: number) => `${['A','B','C','D'][i]}) ${o}`).join(' | ')}\nCorrect answer: ${quizItem.options[quizItem.answer]}\nStudent chose: ${quizItem.options[selectedOpt]}\nExplain in ${nativeNames[subLang] || 'Korean'}, in 2-3 short sentences: why the correct answer is right, and why the student's choice is wrong. Be encouraging, never condescending. No emojis.`,
+        }),
+      });
+      const data = await res.json();
+      if (data.text) setExplanation(data.text.trim());
+    } catch { /* keep silent on failure */ }
+    finally { setExplaining(false); }
+  };
+
+  // Pronunciation practice — speak the vocab word, get AI feedback on specific sounds
+  const handlePronPractice = () => {
+    if (!vocabItem || pronListening || pronLoading) return;
+    const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (!SR) return;
+    const rec = new SR();
+    rec.lang = langId;
+    rec.continuous = false;
+    rec.interimResults = false;
+    setPronListening(true);
+    rec.onresult = async (e: any) => {
+      setPronListening(false);
+      const transcript: string = e.results[0][0].transcript;
+      setPronLoading(true);
+      try {
+        const res = await fetch('/api/gemini', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            uid: user?.uid,
+            temperature: 0.3,
+            prompt: `You are a pronunciation coach for ${langNames[langId] || langId} learners.\nThe student tried to say: "${vocabItem.word}" (pronunciation guide: ${vocabItem.phonetic || 'n/a'}, meaning: ${vocabItem.meaning}).\nSpeech recognition heard them say: "${transcript}".\nCompare what they said vs the target. Reply in ${nativeNames[subLang] || 'Korean'} with ONLY JSON, no markdown:\n{"score":<0-100>,"heard":"<what you think they actually said>","feedback":"<1-2 sentences: which exact sound was off and how to fix it (e.g. tongue position, sound length). If great, praise briefly and specifically>"}`,
+          }),
+        });
+        const data = await res.json();
+        const parsed = JSON.parse((data.text || '').replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim());
+        setPronResult(prev => ({
+          ...prev,
+          [vocabIdx]: {
+            heard: parsed.heard || transcript,
+            score: typeof parsed.score === 'number' ? parsed.score : 70,
+            feedback: parsed.feedback || '',
+          },
+        }));
+      } catch {
+        setPronResult(prev => ({ ...prev, [vocabIdx]: { heard: transcript, score: 0, feedback: '' } }));
+      } finally {
+        setPronLoading(false);
+      }
+    };
+    rec.onerror = () => setPronListening(false);
+    rec.onend = () => setPronListening(false);
+    try { rec.start(); } catch { setPronListening(false); }
   };
 
   // -----------------------------------------------------------------------------
@@ -788,6 +861,43 @@ RULES:
               >
                 {isSpeaking ? '🔊 Playing...' : hasTts(langId) ? '🔊 Hear example' : '🔇 Voice unavailable'}
               </button>
+              {hasStt(langId) && (
+                <button
+                  onClick={handlePronPractice}
+                  disabled={pronListening || pronLoading}
+                  style={{
+                    ...styles.speakBtn, marginTop: 8,
+                    background: pronListening ? '#EF4444' : '#fff',
+                    color: pronListening ? '#fff' : level.dark,
+                    border: `1.5px solid ${pronListening ? '#EF4444' : level.accent + '50'}`,
+                    cursor: pronListening || pronLoading ? 'default' : 'pointer',
+                    opacity: pronLoading ? 0.6 : 1,
+                  }}
+                >
+                  {pronListening ? '🎤 듣는 중... 말씀하세요!' : pronLoading ? '⏳ 분석 중...' : '🎤 발음 연습하기'}
+                </button>
+              )}
+              {pronResult[vocabIdx]?.feedback ? (
+                <div style={{
+                  marginTop: 10, padding: '12px 16px', borderRadius: 12, textAlign: 'left',
+                  background: pronResult[vocabIdx]!.score >= 80 ? '#ECFDF5' : '#FFFBEB',
+                  border: `1px solid ${pronResult[vocabIdx]!.score >= 80 ? '#A7F3D0' : '#FDE68A'}`,
+                  animation: 'fadeUp .3s ease',
+                }}>
+                  <div style={{
+                    fontSize: 13, fontWeight: 900,
+                    color: pronResult[vocabIdx]!.score >= 80 ? '#059669' : '#D97706', marginBottom: 4,
+                  }}>
+                    🎯 발음 점수: {pronResult[vocabIdx]!.score}점
+                  </div>
+                  <div style={{ fontSize: 12, color: '#64748B', fontWeight: 600, marginBottom: 4 }}>
+                    들린 말: &ldquo;{pronResult[vocabIdx]!.heard}&rdquo;
+                  </div>
+                  <div style={{ fontSize: 13, color: '#0F172A', fontWeight: 600, lineHeight: 1.7 }}>
+                    {pronResult[vocabIdx]!.feedback}
+                  </div>
+                </div>
+              ) : null}
             </div>
             <div style={styles.btnRow}>
               {vocabIdx > 0 && (
@@ -833,6 +943,31 @@ RULES:
             {selectedOpt !== null && (
               <div style={{ ...styles.feedback, color: selectedOpt === quizItem.answer ? '#16A34A' : '#E11D48' }}>
                 {selectedOpt === quizItem.answer ? '✅ Correct! +15 XP' : `❌ The answer is: ${quizItem.options[quizItem.answer]}`}
+              </div>
+            )}
+            {selectedOpt !== null && selectedOpt !== quizItem.answer && (
+              <div style={{ textAlign: 'center', marginTop: 10 }}>
+                <button
+                  onClick={handleExplain}
+                  disabled={explaining}
+                  style={{
+                    padding: '9px 18px', borderRadius: 99, border: `1.5px solid ${level.accent}40`,
+                    background: '#fff', color: level.dark, fontWeight: 800, fontSize: 13,
+                    cursor: explaining ? 'default' : 'pointer', fontFamily: "'Nunito',sans-serif",
+                    opacity: explaining ? 0.6 : 1,
+                  }}>
+                  {explaining ? '⏳ 설명 가져오는 중...' : '🤔 왜 틀렸어요?'}
+                </button>
+                {explanation && (
+                  <div style={{
+                    marginTop: 10, padding: '12px 16px', borderRadius: 12, textAlign: 'left',
+                    background: '#EFF6FF', border: '1px solid #BFDBFE',
+                    color: '#1E3A8A', fontSize: 13, fontWeight: 600, lineHeight: 1.7,
+                    animation: 'fadeUp .3s ease',
+                  }}>
+                    <span style={{ fontWeight: 900 }}>💡 </span>{explanation}
+                  </div>
+                )}
               </div>
             )}
           </div>
