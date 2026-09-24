@@ -62,6 +62,7 @@ export default function LevelHub() {
   const [freezeBannerDismissed, setFreezeBannerDismissed] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const [showUserMenu, setShowUserMenu] = useState(false);
+  const [showMoreMenu, setShowMoreMenu] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [planId, setPlanId] = useState<PlanId>('free');
@@ -270,6 +271,15 @@ export default function LevelHub() {
   const isLevelCompleted = (levelId: string) => xp >= (XP_BOUNDS[levelId]?.[1] ?? 0);
 
   const totalLessonsCount = CURRICULUM.flatMap(l => l.steps.flatMap(s => s.lessons)).length;
+
+  // H3: 다음 미완료 레슨 — 로그인 유저 "이어서 학습하기" 딥링크용
+  const nextLesson = (() => {
+    for (const level of CURRICULUM)
+      for (const step of level.steps)
+        for (const lesson of step.lessons)
+          if (!completedLessons.has(lesson.id)) return { levelId: level.id, stepId: step.id, lesson };
+    return null;
+  })();
   const [activeTab] = useState('learn');
 
   // 레벨 클릭 → 언어가 이미 설정돼 있으면 바로 이동, 없으면 모달
@@ -521,23 +531,41 @@ export default function LevelHub() {
           <span style={styles.navLogoText}>MunTalk</span>
           <span style={styles.navBeta}>BETA</span>
         </div>
-        {/* Desktop tabs — visible only on desktop */}
-        <div className="mt-desktop-tabs" style={{ display: 'flex', gap: 2 }}>
+        {/* Desktop tabs — 핵심 4개 + 더보기 드롭다운 (H2) */}
+        <div className="mt-desktop-tabs" style={{ display: 'flex', gap: 2, alignItems: 'center' }}>
           {([
             { label: '📚 Learn',     action: () => router.push('/lingua') },
-            { label: '🎯 Placement', action: () => router.push(`/lingua/placement?lang=${learnLang}`) },
-{ label: '🎭 Roleplay',  action: () => router.push('/lingua/roleplay') },
-            { label: '🏛️ Agora',    action: () => router.push('/lingua/agora') },
-            { label: '📖 Grammar',   action: () => router.push('/lingua/grammar') },
-            { label: '🎮 Games',     action: () => router.push('/lingua/games') },
+            { label: '🎭 Roleplay',  action: () => router.push('/lingua/roleplay') },
             { label: '🏆 League',    action: () => router.push('/lingua/league') },
-            { label: '🔁 Review',    action: () => router.push('/lingua/review') },
-            { label: '👩‍🏫 Tutors', action: () => router.push('/lingua/tutors') },
             { label: '📊 Dashboard', action: () => router.push('/lingua/dashboard') },
           ]).map(({ label, action }, i) => (
             <button key={label} className={`mt-nav-tab${i === 0 ? ' active' : ''}`}
               onClick={action}>{label}</button>
           ))}
+          <div style={{ position: 'relative' }}>
+            <button className="mt-nav-tab" onClick={() => setShowMoreMenu(m => !m)}>⋯ More ▾</button>
+            {showMoreMenu && (
+              <div style={{ position: 'absolute', top: 42, left: 0, background: '#fff', borderRadius: 14, boxShadow: '0 8px 32px rgba(0,0,0,0.12)', border: '1px solid #F1F5F9', minWidth: 196, zIndex: 300, overflow: 'hidden', padding: 6 }}>
+                {([
+                  { emoji: '🎯', label: 'Placement Test', action: () => router.push(`/lingua/placement?lang=${learnLang}`) },
+                  { emoji: '🏛️', label: 'Agora',          action: () => router.push('/lingua/agora') },
+                  { emoji: '📖', label: 'Grammar',         action: () => router.push('/lingua/grammar') },
+                  { emoji: '🎮', label: 'Word Games',      action: () => router.push('/lingua/games') },
+                  { emoji: '🔁', label: 'Review',          action: () => router.push('/lingua/review') },
+                  { emoji: '📚', label: 'Word Bank',       action: () => router.push('/lingua/words') },
+                  { emoji: '👩‍🏫', label: 'Tutors',         action: () => router.push('/lingua/tutors') },
+                ]).map(({ emoji, label, action }) => (
+                  <button key={label}
+                    onClick={() => { action(); setShowMoreMenu(false); }}
+                    onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = '#F8FAFC'; }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = 'none'; }}
+                    style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 10, padding: '10px 12px', background: 'none', border: 'none', borderRadius: 10, cursor: 'pointer', fontSize: 13, fontWeight: 700, color: '#374151', textAlign: 'left', fontFamily: "'Nunito',sans-serif" }}>
+                    <span style={{ fontSize: 16 }}>{emoji}</span>{label}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Mobile hamburger — visible only on mobile */}
@@ -662,19 +690,35 @@ export default function LevelHub() {
             </div>
           </div>
 
-          {/* 메뉴 항목 */}
+          {/* 메뉴 항목 — 핵심 4개 (H2) */}
           {([
             { emoji: '📚', label: 'Learn',       action: () => router.push('/lingua') },
+            { emoji: '🎭', label: 'AI Roleplay', action: () => router.push('/lingua/roleplay') },
+            { emoji: '🏆', label: 'League',     action: () => router.push('/lingua/league') },
+            { emoji: '📊', label: 'Dashboard',  action: () => router.push('/lingua/dashboard') },
+          ]).map(({ emoji, label, action }) => (
+            <button key={label}
+              onClick={() => { action(); setShowMobileMenu(false); }}
+              style={{ width: '100%', padding: '13px 24px', background: 'none', border: 'none',
+                textAlign: 'left', cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
+                fontWeight: 700, fontSize: 15, color: '#1E293B',
+                display: 'flex', alignItems: 'center', gap: 14,
+                borderBottom: '1px solid #F8FAFC' }}>
+              <span style={{ fontSize: 20, width: 28, textAlign: 'center' }}>{emoji}</span>
+              {label}
+            </button>
+          ))}
+          <div style={{ padding: '10px 24px 2px', fontSize: 11, fontWeight: 800, color: '#94A3B8', letterSpacing: 1.5 }}>
+            MORE
+          </div>
+          {([
             { emoji: '🎯', label: 'Placement Test', action: () => router.push(`/lingua/placement?lang=${learnLang}`) },
-{ emoji: '🎭', label: 'AI Roleplay',  action: () => router.push('/lingua/roleplay') },
             { emoji: '🏛️', label: 'Agora',        action: () => router.push('/lingua/agora') },
             { emoji: '📖', label: 'Grammar',       action: () => router.push('/lingua/grammar') },
             { emoji: '🎮', label: 'Word Games',    action: () => router.push('/lingua/games') },
-            { emoji: '🏆', label: 'League',       action: () => router.push('/lingua/league') },
             { emoji: '🔁', label: 'Review',       action: () => router.push('/lingua/review') },
             { emoji: '📚', label: 'Word Bank',    action: () => router.push('/lingua/words') },
             { emoji: '👩‍🏫', label: 'Tutors', action: () => router.push('/lingua/tutors') },
-            { emoji: '📊', label: 'Dashboard',    action: () => router.push('/lingua/dashboard') },
             { emoji: '🌐', label: 'Languages',    action: () => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); setShowMobileMenu(false); } },
           ]).map(({ emoji, label, action }) => (
             <button key={label}
@@ -729,49 +773,82 @@ export default function LevelHub() {
       <div style={styles.heroBanner}>
         <div style={styles.heroBubble1} /><div style={styles.heroBubble2} />
         <div style={styles.heroInner}>
-          <div style={styles.heroBadgeRow}>
-            <div style={styles.heroBadge52}>🌐 100 Languages</div>
-            <div style={{ ...styles.heroBadgeTutors, cursor: 'pointer' }} onClick={() => setShowPlacementModal(true)}>
-              <span style={{ fontSize: 15 }}>🎯</span>
-              <span>Take <strong>Placement</strong> Test</span>
-              <span style={styles.newTag}>FREE</span>
-            </div>
-          </div>
-          <h1 style={styles.heroTitle}>Every language in the world<br />Meet +150 AI tutors</h1>
-          <p style={styles.heroDesc}>No judgment. No pressure. Your pace, your rules.<br />Our AI tutors get total beginners talking in under 10 minutes.</p>
-          <div style={styles.heroBtnRow}>
-            {!authLoading && !user ? (
-              <>
-                <button style={{ ...styles.heroBtn1, fontSize: 16, padding: '15px 36px' }} onClick={() => router.push('/signup')}>
+          {!authLoading && user ? (
+            /* H3: 로그인 유저 — 학습 대시보드형 히어로 */
+            <>
+              <div style={styles.heroBadgeRow}>
+                <div style={styles.heroBadge52}>🔥 {streak}일 연속 학습 중</div>
+                {freezes > 0 && <div style={styles.heroBadge52}>🧊 프리즈 {freezes}개</div>}
+                <div style={styles.heroBadge52}>⭐ {xp} XP</div>
+              </div>
+              <h1 style={styles.heroTitle}>
+                {streak > 0 ? `🔥 ${streak}일째! 오늘도 이어가볼까요?` : '오늘, 첫 레슨을 시작해볼까요?'}
+              </h1>
+              <p style={styles.heroDesc}>
+                {nextLesson
+                  ? <>다음 레슨: <strong>{nextLesson.lesson.title}</strong> (+{nextLesson.lesson.xp} XP)<br />오늘의 목표 — 레슨 1개 완료하기</>
+                  : <>전 레슨 완료! 🎉 복습이나 AI 롤플레이로 실력을 다져보세요.<br />오늘의 목표 — 레슨 1개 완료하기</>}
+              </p>
+              <div style={styles.heroBtnRow}>
+                {nextLesson ? (
+                  <button style={{ ...styles.heroBtn1, fontSize: 16, padding: '15px 36px' }}
+                    onClick={() => router.push(`/lingua/learn/${nextLesson.levelId}/${nextLesson.stepId}/${nextLesson.lesson.id}?lang=${learnLang}&subLang=${nativeLang}`)}>
+                    ▶ 이어서 학습하기
+                  </button>
+                ) : (
+                  <button style={{ ...styles.heroBtn1, fontSize: 16, padding: '15px 36px' }}
+                    onClick={() => router.push('/lingua/review')}>
+                    🔁 복습하기
+                  </button>
+                )}
+                <button style={styles.heroBtn2} onClick={() => router.push('/lingua/roleplay')}>
+                  🎭 AI Roleplay
+                </button>
+              </div>
+            </>
+          ) : (
+            /* 비로그인 — 마케팅 히어로 (H1 체험 버튼 + 포지셔닝) */
+            <>
+              <div style={styles.heroBadgeRow}>
+                <div style={styles.heroBadge52}>🌐 100 Languages</div>
+                <div style={{ ...styles.heroBadgeTutors, cursor: 'pointer' }} onClick={() => setShowPlacementModal(true)}>
+                  <span style={{ fontSize: 15 }}>🎯</span>
+                  <span>Take <strong>Placement</strong> Test</span>
+                  <span style={styles.newTag}>FREE</span>
+                </div>
+              </div>
+              <h1 style={styles.heroTitle}>Every language in the world<br />Meet +150 AI tutors</h1>
+              <p style={styles.heroDesc}>No judgment. No pressure. Your pace, your rules.<br />Our AI tutors get total beginners talking in under 10 minutes.</p>
+              <div style={styles.heroBtnRow}>
+                {/* H1: 가입 없이 바로 체험 — 완료 화면에서 가입 유도 */}
+                <button style={{ ...styles.heroBtn1, fontSize: 16, padding: '15px 36px' }}
+                  onClick={() => router.push('/lingua/learn/a1/a1-1/a1-1-1')}>
+                  🎤 1분 말하기 체험
+                </button>
+                <button style={styles.heroBtn2} onClick={() => router.push('/signup')}>
                   🚀 Start Learning Free
                 </button>
                 <button style={styles.heroBtn2} onClick={() => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); }}>
                   🎯 Free Placement Test
                 </button>
-              </>
-            ) : (
-              <>
-                <button style={styles.heroBtn1} onClick={() => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); }}>
-                  🌐 Choose a Language
-                </button>
-<button style={{...styles.heroBtn2, background: 'linear-gradient(135deg,#F59E0B,#EF4444)', color:'#fff', border:'none'}} onClick={() => router.push('/lingua/discover')}>✨ Discover</button>
-<button style={{...styles.heroBtn2, background: 'linear-gradient(135deg,#fbbf24,#f59e0b)', color:'#fff', border:'none'}} onClick={() => router.push('/lingua/dream')}>🌟 Dream Studio</button>
-<button style={{...styles.heroBtn2, background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color:'#fff', border:'none'}} onClick={() => router.push('/lingua/roleplay')}>🎭 AI Roleplay</button>
-                <button style={styles.heroBtn2} onClick={() => router.push('/lingua/words')}>📚 Word Bank</button>
-                <button style={styles.heroBtn2} onClick={() => router.push('/lingua/tutors')}>👩‍🏫 Meet +150 AI Tutors</button>
-              </>
-            )}
-          </div>
+              </div>
+              {/* Positioning: Duolingo Max 대비 */}
+              <div style={{ marginTop: 20, display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.16)', border: '1px solid rgba(255,255,255,0.35)', borderRadius: 99, padding: '8px 18px', fontSize: 12.5, fontWeight: 700, color: '#fff', backdropFilter: 'blur(6px)' }}>
+                <span>💬</span>
+                <span>Duolingo Max는 AI 회화에 <strong>&nbsp;$29.99/월</strong> — MunTalk는 <strong>&nbsp;$0부터</strong></span>
+              </div>
+            </>
+          )}
         </div>
       </div>
 
-      {/* -- Trust strip (logged-out visitors): honest trust signals, no fabricated numbers -- */}
+      {/* -- Trust strip (logged-out): Beta 정체성을 살린 참여형 문구 (H4) -- */}
       {!authLoading && !user && (
         <div style={styles.trustStrip}>
           {([
-            ['🆓', 'Free to start'],
-            ['💳', 'No credit card required'],
-            ['⚡', 'Speaking in 10 minutes'],
+            ['🌱', 'Beta 테스터와 함께 성장 중'],
+            ['🎤', '가입 없이 1분 말하기 체험'],
+            ['💬', 'Duolingo Max급 AI 회화를 무료로'],
           ] as [string, string][]).map(([icon, label]) => (
             <div key={label} style={styles.trustItem}>
               <span style={{ fontSize: 17 }}>{icon}</span>

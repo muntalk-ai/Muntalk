@@ -28,7 +28,7 @@ export interface Mistake {
 
 export interface Example {
   en: string;
-  ko: string;
+  ko?: string; // 한국어 번역 (없으면 영어만 표시)
   highlight?: string; // the grammar point to highlight in the sentence
 }
 

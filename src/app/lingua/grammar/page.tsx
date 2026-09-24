@@ -306,7 +306,7 @@ ${tutor.name}:`;
                 <div style={{ fontSize:13, color:'#64748B', fontWeight:600, marginBottom:16 }}>
                   {quiz.score === ch.quiz.length ? 'Perfect score! Ready for the next chapter?' :
                    quiz.score >= ch.quiz.length/2 ? 'Great job! Review the ones you missed.' :
-                   'Keep practising — you're getting there!'}
+                   'Keep practising — you are getting there!'}
                 </div>
                 <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
                   <button onClick={() => setQuiz({ current:0, selected:null, answered:false, score:0, done:false })}
