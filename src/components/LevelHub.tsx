@@ -829,7 +829,7 @@ export default function LevelHub() {
               {/* Positioning: Duolingo Max 대비 */}
               <div style={{ marginTop: 20, display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.16)', border: '1px solid rgba(255,255,255,0.35)', borderRadius: 99, padding: '8px 18px', fontSize: 12.5, fontWeight: 700, color: '#fff', backdropFilter: 'blur(6px)' }}>
                 <span>💬</span>
-                <span>Duolingo Max charges <strong>&nbsp;$29.99/mo</strong> for AI conversation — MunTalk starts at <strong>&nbsp;$0</strong></span>
+                <span>Duolingo Max puts AI conversation behind a premium paywall — MunTalk starts at <strong>&nbsp;$0</strong></span>
               </div>
             </>
           )}

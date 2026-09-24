@@ -111,7 +111,7 @@ function PricingContent() {
           <div style={{ fontSize:36, flexShrink:0 }}>💬</div>
           <div style={{ flex:1, minWidth:240 }}>
             <div style={{ fontSize:16, fontWeight:900, color:'#fff', marginBottom:6 }}>
-              Duolingo Max charges <span style={{ color:'#F87171' }}>$29.99/mo</span> for AI conversation
+              Duolingo Max reserves AI conversation for its premium tier
             </div>
             <div style={{ fontSize:13, color:'rgba(255,255,255,0.65)', fontWeight:700, lineHeight:1.6 }}>
               MunTalk Premium gives you unlimited AI tutor sessions, real-time pronunciation scoring and CEFR certificates for <span style={{ color:'#A5B4FC', fontWeight:900 }}>$9.99/mo</span> — and the free tier is <span style={{ color:'#A5B4FC', fontWeight:900 }}>$0 forever</span>.
@@ -122,7 +122,8 @@ function PricingContent() {
         {/* Comparison table */}
         <div style={{ marginBottom:64, animation:'fadeUp .5s ease .15s both' }}>
           <h2 style={{ fontSize:20, fontWeight:900, color:'#0F172A', textAlign:'center', marginBottom:8, letterSpacing:-0.4 }}>MunTalk vs Duolingo Max</h2>
-          <p style={{ textAlign:'center', color:'#94A3B8', fontSize:12, fontWeight:700, marginBottom:24 }}>Public pricing as of September 2026</p>
+          <p style={{ textAlign:'center', color:'#94A3B8', fontSize:12, fontWeight:700, marginBottom:6 }}>Public pricing as of September 2026</p>
+          <p style={{ textAlign:'center', color:'#CBD5E1', fontSize:11, fontWeight:600, marginBottom:24 }}>Competitor pricing may change — check their official site for the latest.</p>
           <div style={{ overflowX:'auto', borderRadius:18, border:'1.5px solid #F1F5F9' }}>
             <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13, minWidth:520 }}>
               <thead>
