@@ -640,14 +640,14 @@ RULES:
         if (data.error === 'CHAT_LIMIT_REACHED' && !isAdminEmail(user?.email)) {
           setChatMsgs(prev => [...prev, {
             role: 'tutor',
-            text: `오늘의 무료 AI 대화 ${data.limit}회를 모두 사용했어요 😢 프리미엄으로 업그레이드하면 무제한으로 대화할 수 있어요!`,
+            text: `You've used all ${data.limit} free AI chats for today 😢 Upgrade to Premium for unlimited conversations!`,
           }]);
           return;
         }
         if (data.error === 'LOGIN_REQUIRED') {
           setChatMsgs(prev => [...prev, {
             role: 'tutor',
-            text: '🔒 AI 튜터를 사용하려면 로그인이 필요해요.',
+            text: '🔒 Please log in to use the AI tutor.',
           }]);
           return;
         }
@@ -845,7 +845,7 @@ RULES:
               {subLang && subLang !== langId && (
                 <div style={styles.txLine}>
                   {loadingTx[`vocab-ex-${vocabIdx}`]
-                    ? '⏳ 번역 중...'
+                    ? '⏳ Translating...'
                     : translations[`vocab-ex-${vocabIdx}`] || ''}
                 </div>
               )}
@@ -874,7 +874,7 @@ RULES:
                     opacity: pronLoading ? 0.6 : 1,
                   }}
                 >
-                  {pronListening ? '🎤 듣는 중... 말씀하세요!' : pronLoading ? '⏳ 분석 중...' : '🎤 발음 연습하기'}
+                  {pronListening ? '🎤 Listening... speak now!' : pronLoading ? '⏳ Analyzing...' : '🎤 Practice pronunciation'}
                 </button>
               )}
               {pronResult[vocabIdx]?.feedback ? (
@@ -888,10 +888,10 @@ RULES:
                     fontSize: 13, fontWeight: 900,
                     color: pronResult[vocabIdx]!.score >= 80 ? '#059669' : '#D97706', marginBottom: 4,
                   }}>
-                    🎯 발음 점수: {pronResult[vocabIdx]!.score}점
+                    🎯 Pronunciation score: {pronResult[vocabIdx]!.score}
                   </div>
                   <div style={{ fontSize: 12, color: '#64748B', fontWeight: 600, marginBottom: 4 }}>
-                    들린 말: &ldquo;{pronResult[vocabIdx]!.heard}&rdquo;
+                    You said: &ldquo;{pronResult[vocabIdx]!.heard}&rdquo;
                   </div>
                   <div style={{ fontSize: 13, color: '#0F172A', fontWeight: 600, lineHeight: 1.7 }}>
                     {pronResult[vocabIdx]!.feedback}
@@ -956,7 +956,7 @@ RULES:
                     cursor: explaining ? 'default' : 'pointer', fontFamily: "'Nunito',sans-serif",
                     opacity: explaining ? 0.6 : 1,
                   }}>
-                  {explaining ? '⏳ 설명 가져오는 중...' : '🤔 왜 틀렸어요?'}
+                  {explaining ? '⏳ Getting explanation...' : '🤔 Why was that wrong?'}
                 </button>
                 {explanation && (
                   <div style={{
