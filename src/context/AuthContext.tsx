@@ -7,7 +7,7 @@ import { onAuthStateChanged, User } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import {
   getUserProfile, createUserProfile, migrateFromLocalStorage,
-  recordActivity, UserProfile,
+  UserProfile,
 } from '@/lib/userProfile';
 
 interface AuthCtx {
@@ -75,8 +75,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             if (needsEmailSync) console.log('[auth] synced email for existing user:', u.email);
           }
         }
-        // 오늘 활동 기록
-        await recordActivity(u.uid, p);
+        // ※ 활동(스트릭) 기록은 레슨/세션 완료 시점에만 수행 — 로그인/화면 방문만으로는 기록하지 않음
         p = (await getUserProfile(u.uid)) || p;
         setProfile(p);
       } else {

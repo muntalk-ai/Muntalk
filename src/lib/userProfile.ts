@@ -86,7 +86,14 @@ export interface ActivityResult {
   freezeEarned: boolean;   // 오늘 프리즈를 획득했는지 (7일 마일스톤)
 }
 
-/** 오늘 활동 기록 + 스트릭 계산 후 저장 (프리즈 브리징 포함) */
+/** 오늘 활동 기록 + 스트릭 계산 후 저장 (프리즈 브리징 포함)
+ *
+ *  ⚠️ 호출 규칙: 레슨/세션 완료 등 **의미 있는 학습 활동이 실제로 발생했을 때만** 호출.
+ *  로그인/화면 방문 시점에는 호출 금지 (방문만으로 스트릭이 기록되는 것을 방지).
+ *
+ *  날짜 기준: 모든 날짜 키는 UTC 기준 YYYY-MM-DD (new Date().toISOString().slice(0, 10)).
+ *  UI 측에서도 반드시 UTC 기준으로 생성/비교해야 타임존에 무관하게 일관되게 동작함.
+ */
 export async function recordActivity(uid: string, profile: UserProfile): Promise<ActivityResult> {
   const today = new Date().toISOString().slice(0, 10);
   const existing = Array.isArray(profile.activityDates) ? profile.activityDates : [];
