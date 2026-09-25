@@ -874,7 +874,7 @@ RULES:
                     opacity: pronLoading ? 0.6 : 1,
                   }}
                 >
-                  {pronListening ? '🎤 듣는 중... 말씀하세요!' : pronLoading ? '⏳ 분석 중...' : '🎤 발음 연습하기'}
+                  {pronListening ? '🎤 Listening... speak now!' : pronLoading ? '⏳ Analyzing...' : '🎤 Practice pronunciation'}
                 </button>
               )}
               {pronResult[vocabIdx]?.feedback ? (
@@ -888,10 +888,10 @@ RULES:
                     fontSize: 13, fontWeight: 900,
                     color: pronResult[vocabIdx]!.score >= 80 ? '#059669' : '#D97706', marginBottom: 4,
                   }}>
-                    🎯 발음 점수: {pronResult[vocabIdx]!.score}점
+                    🎯 Pronunciation score: {pronResult[vocabIdx]!.score}
                   </div>
                   <div style={{ fontSize: 12, color: '#64748B', fontWeight: 600, marginBottom: 4 }}>
-                    들린 말: &ldquo;{pronResult[vocabIdx]!.heard}&rdquo;
+                    Heard: &ldquo;{pronResult[vocabIdx]!.heard}&rdquo;
                   </div>
                   <div style={{ fontSize: 13, color: '#0F172A', fontWeight: 600, lineHeight: 1.7 }}>
                     {pronResult[vocabIdx]!.feedback}
