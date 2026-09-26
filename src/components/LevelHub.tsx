@@ -417,6 +417,8 @@ export default function LevelHub() {
         @media(min-width:1025px){
           .mt-hamburger{display:none !important;}
           .mt-mobile-menu{display:none !important;}
+          .mt-mobile-menu::-webkit-scrollbar{width:4px;}
+          .mt-mobile-menu::-webkit-scrollbar-thumb{background:#CBD5E1;border-radius:4px;}
         }
         .mt-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.45);backdrop-filter:blur(4px);z-index:1000;display:flex;align-items:center;justify-content:center;}
       `}</style>
@@ -738,6 +740,8 @@ export default function LevelHub() {
           position: 'fixed', top: 62, left: 0, right: 0, zIndex: 199,
           background: '#fff', borderBottom: '1px solid #F1F5F9',
           boxShadow: '0 8px 24px rgba(0,0,0,0.08)', padding: '8px 0',
+          maxHeight: 'calc(100dvh - 70px)', overflowY: 'auto',
+          WebkitOverflowScrolling: 'touch',
         }}>
           {/* 언어 + 스트릭 + XP 요약 */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 20px',
@@ -757,26 +761,9 @@ export default function LevelHub() {
             </div>
           </div>
 
-          {/* 메뉴 항목 — 학습 코어 4개 */}
-          {([
-            { emoji: '📚', label: 'Learn',       action: () => router.push('/lingua') },
-            { emoji: '🎭', label: 'AI Roleplay', action: () => router.push('/lingua/roleplay') },
-            { emoji: '🔁', label: 'Review',     action: () => router.push('/lingua/review') },
-            { emoji: '🧭', label: 'AI Coach',   action: () => router.push('/lingua/coach') },
-          ]).map(({ emoji, label, action }) => (
-            <button key={label}
-              onClick={() => { action(); setShowMobileMenu(false); }}
-              style={{ width: '100%', padding: '13px 24px', background: 'none', border: 'none',
-                textAlign: 'left', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
-                fontWeight: 700, fontSize: 15, color: '#1E293B',
-                display: 'flex', alignItems: 'center', gap: 14,
-                borderBottom: '1px solid #F8FAFC' }}>
-              <span style={{ fontSize: 20, width: 28, textAlign: 'center' }}>{emoji}</span>
-              {label}
-            </button>
-          ))}
+          {/* 학습 코어 4개는 메인 화면 탭에 이미 있어 햄버거에서 제거 (2026-09-26) */}
           <div style={{ padding: '10px 24px 2px', fontSize: 11, fontWeight: 800, color: '#94A3B8', letterSpacing: 1.5 }}>
-            MORE
+            YOUR PROGRESS
           </div>
           {(([
             { emoji: '📊', label: 'Dashboard',      action: () => router.push('/lingua/dashboard') },
