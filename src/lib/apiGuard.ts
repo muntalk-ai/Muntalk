@@ -97,6 +97,15 @@ export async function fetchWithTimeout(
   }
 }
 
+/**
+ * 안전 에러 응답 — 서버 로그에는 원문을 기록하고, 클라이언트에는
+ * 내부 동작이 드러나지 않는 일반 메시지만 반환 (2차 감사 #8).
+ */
+export function apiSafeError(logPrefix: string, e: unknown, status = 500) {
+  console.error(logPrefix, e);
+  return NextResponse.json({ error: 'Internal server error' }, { status });
+}
+
 /** 특권 엔드포인트용 어드민 이메일 화이트리스트 (send-email). */
 export function isAdminEmail(email?: string): boolean {
   if (!email) return false;

@@ -8,6 +8,7 @@ import { useAuth } from '@/context/AuthContext';
 
 import { updateUserProfile } from '@/lib/userProfile';
 import { requestPushPermission } from '@/lib/notifications';
+import { apiFetch } from '@/lib/apiClient';
 import { LEARN_LANGUAGES, UI_LANGUAGES } from '@/data/languages';
 import { PURPOSE_OPTIONS, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
@@ -54,10 +55,11 @@ export default function ProfilePage() {
     if (!user) return;
     setSaving(true);
     try {
-      const res = await fetch('/api/stripe/portal', {
+      const res = await apiFetch('/api/stripe/portal', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ uid: user.uid }),
+        // uid는 서버에서 ID 토큰 기준으로 확정
+        body: JSON.stringify({}),
       });
       const { url } = await res.json();
       if (url) window.location.href = url;

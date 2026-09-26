@@ -165,6 +165,7 @@ export async function POST(req: NextRequest) {
 
   } catch (e: any) {
     console.error('[tts] route error:', e);
-    return NextResponse.json({ audioContent: null, error: e.message }, { status: 500 });
+    // UI 호환을 위해 shape 유지, 메시지는 일반화
+    return NextResponse.json({ audioContent: null, error: 'Internal server error' }, { status: 500 });
   }
 }

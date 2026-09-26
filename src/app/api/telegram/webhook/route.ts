@@ -4,6 +4,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { initializeApp, getApps, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
+import { apiSafeError } from '@/lib/apiGuard';
 
 function getAdminDb() {
   if (!getApps().length) {
@@ -23,6 +24,20 @@ async function sendReply(chatId: number, text: string) {
 }
 
 export async function POST(req: NextRequest) {
+  // ── 2차 감사 #2 [High]: Telegram 발신 검증 ──
+  // BotFather에 등록한 secret_token이 X-Telegram-Bot-Api-Secret-Token 헤더로 전달되는지 확인.
+  // TELEGRAM_WEBHOOK_SECRET 미설정 시에는 경고만 내고 통과 (배포 전 Jay가 BotFather에 등록 필요).
+  const expectedSecret = process.env.TELEGRAM_WEBHOOK_SECRET || '';
+  if (expectedSecret) {
+    const got = req.headers.get('x-telegram-bot-api-secret-token') || '';
+    if (got !== expectedSecret) {
+      console.warn('[telegram/webhook] rejected: bad or missing secret token');
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+    }
+  } else {
+    console.warn('[telegram/webhook] TELEGRAM_WEBHOOK_SECRET not set — skipping origin verification (Jay 액션 필요)');
+  }
+
   try {
     const body = await req.json();
     const message = body?.message;
@@ -99,7 +114,6 @@ Go to: Profile → Notifications → Connect Telegram`);
 
     return NextResponse.json({ ok: true });
   } catch (e: any) {
-    console.error('Telegram webhook error:', e);
-    return NextResponse.json({ error: e.message }, { status: 500 });
+    return apiSafeError('[telegram/webhook] route error:', e);
   }
 }

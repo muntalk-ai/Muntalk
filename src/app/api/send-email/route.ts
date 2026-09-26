@@ -4,7 +4,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import {
-  getIdentity, checkRateLimit, isAdminEmail, apiError, fetchWithTimeout,
+  getIdentity, checkRateLimit, isAdminEmail, apiError, fetchWithTimeout, apiSafeError,
 } from '@/lib/apiGuard';
 
 export async function POST(req: NextRequest) {
@@ -22,6 +22,14 @@ export async function POST(req: NextRequest) {
 
     if (!to || !subject || !html) {
       return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
+    }
+
+    // ── 2차 감사 #13 [Low]: 페이로드 길이 검증 ──
+    if (typeof subject !== 'string' || subject.length > 200) {
+      return NextResponse.json({ error: 'Subject too long (max 200 chars)' }, { status: 413 });
+    }
+    if (typeof html !== 'string' || html.length > 100000) {
+      return NextResponse.json({ error: 'Body too long (max 100000 chars)' }, { status: 413 });
     }
 
     const res = await fetchWithTimeout('https://api.resend.com/emails', {
@@ -42,6 +50,6 @@ export async function POST(req: NextRequest) {
     if (!res.ok) return NextResponse.json({ error: data }, { status: res.status });
     return NextResponse.json({ success: true, id: data.id });
   } catch (e: any) {
-    return NextResponse.json({ error: e.message }, { status: 500 });
+    return apiSafeError('[send-email] route error:', e);
   }
 }
