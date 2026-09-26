@@ -67,6 +67,9 @@ export default function GrammarPage() {
   const tutor = getTutorById(tutorId);
   const nativeLangName = NATIVE_LANG[nativeLang] || 'English';
   const learnLangName  = NATIVE_LANG[learnLang]  || 'English';
+  // Grammar chapters teach ENGLISH grammar — the AI coach must not demand
+  // English output from learners whose target language isn't English.
+  const isEnglishLearner = learnLang.startsWith('en');
 
   const openChapter = (ch: GrammarChapter) => {
     setSelChapter(ch);
@@ -104,13 +107,16 @@ export default function GrammarPage() {
     setShowAI(true);
     setAiLoading(true);
     try {
+      const coachRule = isEnglishLearner
+        ? `Respond in ${learnLangName}. You may add a brief ${nativeLangName} translation of the exercise in parentheses if helpful.`
+        : `NOTE: this chapter teaches ENGLISH grammar, but the student's target language is ${learnLangName}, not English. Explain in ${nativeLangName} (their native language). Do NOT ask the student to write or speak English sentences — only explain the grammar point clearly, using the chapter's examples.`;
       const prompt = `You are ${tutor.name}, a warm and expert language grammar tutor.
 The student has just studied: "${selChapter.title}" (${selChapter.subtitle}).
-They are learning ${learnLangName}. Their native language is ${nativeLangName}.
+Their native language is ${nativeLangName}.
 
 Open with ONE sentence greeting them on finishing the lesson, then give them ONE practical exercise using ${selChapter.title} — make it feel like a real conversation task, not a textbook exercise.
 Keep it to 3-4 sentences. Be encouraging and specific.
-Respond in ${learnLangName}. You may add a brief ${nativeLangName} translation of the exercise in parentheses if helpful.`;
+${coachRule}`;
 
       const res = await fetch('/api/gemini', {
         method:'POST', headers:{'Content-Type':'application/json'},
@@ -122,7 +128,7 @@ Respond in ${learnLangName}. You may add a brief ${nativeLangName} translation o
       setAiChat([{ role:'ai', text:'Great work completing this lesson! Let\'s practise together.' }]);
     }
     setAiLoading(false);
-  }, [selChapter, tutor.name, nativeLangName, user]);
+  }, [selChapter, tutor.name, nativeLangName, learnLangName, isEnglishLearner, user]);
 
   const sendAI = useCallback(async () => {
     if (!aiInput.trim() || aiLoading || !selChapter) return;
@@ -133,9 +139,12 @@ Respond in ${learnLangName}. You may add a brief ${nativeLangName} translation o
 
     try {
       const history = aiChat.map(m => `${m.role==='user'?'Student':tutor.name}: ${m.text}`).join('\n');
+      const feedbackRule = isEnglishLearner
+        ? `Give specific grammar feedback in ${learnLangName} — correct any errors gently, explain why, then ask them to try again or try a new related exercise.`
+        : `Explain in ${nativeLangName} (the student's native language). Do NOT ask the student to produce English sentences — explain the grammar rule and illustrate with the chapter's examples.`;
       const prompt = `You are ${tutor.name}, coaching the student on "${selChapter.title}".
-Learning language: ${learnLangName}. Native language: ${nativeLangName}.
-Give specific grammar feedback in ${learnLangName} — correct any errors gently, explain why, then ask them to try again or try a new related exercise.
+Native language: ${nativeLangName}.
+${feedbackRule}
 2-3 sentences max. Be warm and specific.
 
 Conversation so far:
@@ -153,7 +162,7 @@ ${tutor.name}:`;
       setAiChat(prev => [...prev, { role:'ai', text: 'I got stuck on that question — ask me again and I\'ll explain it clearly! 📖' }]);
     }
     setAiLoading(false);
-  }, [aiInput, aiLoading, selChapter, aiChat, tutor.name, nativeLangName, user]);
+  }, [aiInput, aiLoading, selChapter, aiChat, tutor.name, nativeLangName, learnLangName, isEnglishLearner, user]);
 
   // ── CHAPTER VIEW ────────────────────────────────────────────────────────────
 
@@ -425,7 +434,7 @@ ${tutor.name}:`;
                 <input value={aiInput} onChange={e=>setAiInput(e.target.value)}
                   onKeyDown={e=>{ if(e.key==='Enter') sendAI(); }}
                   disabled={aiLoading}
-                  placeholder={`Write a sentence in ${learnLangName} using this grammar...`}
+                  placeholder={isEnglishLearner ? `Write a sentence in ${learnLangName} using this grammar...` : `Ask about this grammar point in ${nativeLangName}...`}
                   style={{ flex:1, padding:'11px 14px', borderRadius:12, border:`1.5px solid ${ch.color}40`,
                     background:'#F8FAFC', color:'#0F172A', fontSize:14, fontFamily:"'Nunito',sans-serif",
                     outline:'none', fontWeight:600 }}/>
