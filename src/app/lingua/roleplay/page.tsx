@@ -8,7 +8,7 @@ import { getTutorById } from '@/data/tutors';
 import {
   EVERYDAY_SCENARIOS, WORLD_SCENARIOS, WORLD_META,
   type EverydayScenario, type WorldScenario, type RpTab,
-  type RpDifficulty, type WorldId, getNativeDesc,
+  type RpDifficulty, type WorldId, getNativeDesc, resolveNativeKey,
 } from '@/data/roleplay';
 
 const DIFF_COLOR: Record<string,string> = { A1:'#10B981',A2:'#3B82F6',B1:'#8B5CF6',B2:'#F59E0B',C1:'#EF4444' };
@@ -57,7 +57,8 @@ export default function RoleplayLobby() {
 
   const langLabel  = LANG_LABEL[langId]  || 'English';
   const showNative = subLang !== 'en-US' && subLang !== 'en-GB';
-  const diffNative = DIFF_NATIVE[subLang] || {};
+  const diffNativeKey = resolveNativeKey(Object.keys(DIFF_NATIVE), subLang);
+  const diffNative = diffNativeKey ? DIFF_NATIVE[diffNativeKey] : {};
 
   useEffect(() => {
     const ll = localStorage.getItem('mt_learn_lang') || 'en-US';
@@ -65,7 +66,10 @@ export default function RoleplayLobby() {
     setLangId(ll); setSubLang(sl);
     if (user) getUserProfile(user.uid).then(p => {
       if (p?.learnLang) setLangId(p.learnLang);
-      if (p?.nativeLang) setSubLang(p.nativeLang);
+      if (p?.nativeLang) {
+        setSubLang(p.nativeLang);
+        try { localStorage.setItem('mt_native_lang', p.nativeLang); } catch { /* noop */ }
+      }
     });
   }, [user]);
 
@@ -273,7 +277,7 @@ export default function RoleplayLobby() {
                             <span style={{ fontSize:16, fontWeight:900, color:'#fff' }}>{s.title}</span>
                             <span style={{ fontSize:10, fontWeight:800, padding:'1px 7px', borderRadius:99,
                               background:'rgba(255,255,255,0.15)', color:'#fff' }}>
-                              {s.difficulty}{showNative&&DIFF_NATIVE[subLang]?.[s.difficulty]?` · ${DIFF_NATIVE[subLang][s.difficulty]}`:''}
+                              {s.difficulty}{showNative&&diffNative[s.difficulty]?` · ${diffNative[s.difficulty]}`:''}
                             </span>
                           </div>
                           <div style={{ fontSize:11, color:s.accentColor, fontWeight:700, marginBottom:4 }}>

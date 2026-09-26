@@ -454,12 +454,29 @@ export function getWorldScenarios(worldId: WorldId): WorldScenario[] {
   return WORLD_SCENARIOS.filter(s => s.worldId === worldId);
 }
 
+/**
+ * Resolve the best-matching key for a language code against a set of available
+ * keys. Handles both directions of the short/long code mismatch:
+ * exact match → base-code match ('ko-KR' → 'ko' key) → long-code match
+ * ('ko' → 'ko-KR' key). Returns '' when nothing matches.
+ */
+export function resolveNativeKey(availableKeys: string[], code: string): string {
+  if (!code) return '';
+  if (availableKeys.includes(code)) return code;
+  const base = code.split('-')[0];
+  if (base !== code && availableKeys.includes(base)) return base;
+  const found = availableKeys.find(k => k.split('-')[0] === base);
+  return found || '';
+}
+
 export function getNativeDesc(
-  desc: NativeDescMap,
+  desc: NativeDescMap | undefined | null,
   subLang: string,
   fallback: string
 ): string {
-  return desc[subLang] || desc[subLang.split('-')[0]] || fallback;
+  if (!desc) return fallback;
+  const key = resolveNativeKey(Object.keys(desc), subLang);
+  return (key ? desc[key] : undefined) || fallback;
 }
 
 export const WORLD_META: Record<WorldId, { title: string; emoji: string; tagline: string; bgGradient: string; accentColor: string }> = {
