@@ -315,6 +315,7 @@ Return ONLY valid JSON, no markdown, no explanation:
 {"vocab":[{"word":"TARGET_WORD","phonetic":"PRONUNCIATION","meaning":"NATIVE_GLOSS","example":"TARGET_SENTENCE","exampleKo":"NATIVE_TRANSLATION"}],"quiz":[{"q":"NATIVE_QUESTION","options":["TARGET_OPTION"],"answer":INDEX,"answerText":"TARGET_CORRECT_OPTION_TEXT"}]}
 
 Rules:
+- LANGUAGE PURITY (zero tolerance): every field whose schema label is TARGET_* (word, example, options, answerText) MUST be written 100% in ${targetLang}. Never output ${nativeLang}, English, or any other language in these fields — no code-switching, no parenthetical glosses, no mixed-language sentences, no exceptions. The ONLY fields allowed in ${nativeLang} are the NATIVE_* fields (meaning, exampleKo, q). (phonetic is intentionally a ${nativeLang}-readable pronunciation guide, not a translation.)
 - vocab[i].word: the word/expression translated into ${targetLang}
 - vocab[i].phonetic: pronunciation guide a ${nativeLang} speaker can read aloud. If ${nativeLang} is Korean, use Hangul-style notation (e.g. "봉주르"); otherwise simple romanization.
 - vocab[i].meaning: 1-3 word gloss of the TARGET expression itself in ${nativeLang}. Do NOT translate the usage note from the input — give what the expression actually means (e.g. Korean "~인 것 같다" for "Il semblerait que"). When the expression carries register or pragmatic nuance, append a tag in ${nativeLang} (e.g. Korean "[격식]", "[비격식]", "[문어체]", "[구어]", "[빈정]", "[반어]", "[완곡]").
@@ -324,7 +325,7 @@ Rules:
 - vocab[i].example: translate the GIVEN example sentence into ${targetLang}, keeping the same meaning. Do NOT invent a new sentence. It MUST be written in ${targetLang} — never in ${nativeLang}.
 - vocab[i].exampleKo: translation of the example sentence into ${nativeLang}
 - quiz[i].q: question in ${nativeLang}
-- quiz[i].options: answer choices in ${targetLang}
+- quiz[i].options: answer choices in ${targetLang} — 100% ${targetLang} only, never ${nativeLang} or mixed
 - quiz[i].answer: integer index (0-based) of the correct option
 - quiz[i].answerText: the EXACT text of the correct option (must be identical to options[answer]) — this guards against option reordering
 IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
