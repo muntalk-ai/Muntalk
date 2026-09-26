@@ -190,7 +190,7 @@ function PlacementInner() {
       setPhase('cefr');
     } catch (e: any) {
       console.error('[placement]', e);
-      setLoadErr(e.message || 'Something went wrong');
+      setLoadErr('We couldn\'t build your test questions — check your connection, then hit "Start Placement" to try again.');
       setPhase('error');
       setTrackAnswers([]);
     }
@@ -372,14 +372,15 @@ function PlacementInner() {
         {/* Flag + title */}
         <div style={{ fontSize:56, marginBottom:16 }}>{langInfo?.flag || '🌐'}</div>
         <div style={{ fontSize:12, fontWeight:900, color:'#6366F1', letterSpacing:2, textTransform:'uppercase', marginBottom:10 }}>
-          Personalised Placement
+          Personalized Placement
         </div>
         <h1 style={{ fontSize:30, fontWeight:900, color:'#fff', margin:'0 0 12px', lineHeight:1.2 }}>
           Find your {langLabel} level<br/>& learning track
         </h1>
         <p style={{ fontSize:15, color:'#94A3B8', lineHeight:1.7, margin:'0 0 28px' }}>
           <strong style={{ color:'#CBD5E1' }}>2 steps · ~4 minutes</strong><br/>
-          5 questions to find your track, then 10 questions to nail your CEFR level.
+          5 questions to find your track, then 10 questions to pinpoint your CEFR level.<br/>
+          <span style={{ color:'#A5B4FC' }}>Your results unlock a study plan built around your exact level.</span>
         </p>
 
         {/* Steps preview */}

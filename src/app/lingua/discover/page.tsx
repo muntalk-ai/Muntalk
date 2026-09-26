@@ -302,7 +302,7 @@ function DiscoverContent() {
       addMsg({ role:'ai', text:aiText });
       speak(aiText);
     } catch {
-      addMsg({ role:'ai', text:'Something went wrong — try again?' });
+      addMsg({ role:'ai', text:'Hmm, I lost my train of thought there — could you say that again? 🔄' });
     }
     setLoading(false);
   }, [input, loading, active, messages, buildPrompt, speak, user]); // eslint-disable-line

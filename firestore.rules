@@ -77,6 +77,16 @@ service cloud.firestore {
       allow read, write: if isOwner(uid);
     }
 
+    // ── 테스티모니얼 ───────────────────────────────────────────────
+    // 읽기: 공개 (랜딩 페이지 노출용) / 생성: 로그인 사용자 본인만 / 수정·삭제: 관리자
+    match /testimonials/{docId} {
+      allow read: if true;
+      allow create: if isSignedIn()
+        && request.resource.data.uid == request.auth.uid
+        && onlyAllowedFields(['uid', 'displayName', 'text', 'createdAt', 'approved']);
+      allow update, delete: if isAdmin();
+    }
+
     // ── 관리자 로그 ───────────────────────────────────────────────
     // 관리자만 읽기/쓰기 (기존: 모든 인증유저 허용 → 취약점)
     match /admin_logs/{docId} {

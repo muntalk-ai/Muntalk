@@ -93,7 +93,7 @@ function PricingContent() {
             </span>
           </h1>
           <p style={{ fontSize:15, color:'#64748B', maxWidth:460, margin:'0 auto 30px', lineHeight:1.75, fontWeight:700 }}>
-            72 lessons · 65 languages · AI tutor · No ads · Cancel anytime
+            72 lessons · 90+ languages · AI tutor · No ads · Cancel anytime
           </p>
           <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:14, flexWrap:'wrap' }}>
             <div style={{ display:'flex' }}>
@@ -101,8 +101,7 @@ function PricingContent() {
                 <div key={i} style={{ width:30,height:30,borderRadius:'50%',background:'#EEF2FF',border:'2px solid #fff',display:'flex',alignItems:'center',justifyContent:'center',fontSize:14,marginLeft:i>0?-8:0,position:'relative',zIndex:5-i }}>{e}</div>
               ))}
             </div>
-            <span style={{ fontSize:13,color:'#64748B',fontWeight:700 }}><span style={{ color:'#0F172A',fontWeight:900 }}>2,400+</span> learners enrolled</span>
-            <span style={{ color:'#F59E0B',fontSize:13,letterSpacing:2 }}>★★★★★</span>
+            <span style={{ fontSize:13,color:'#64748B',fontWeight:700 }}>Now in <span style={{ color:'#0F172A',fontWeight:900 }}>open beta</span> — join as an early member</span>
           </div>
         </div>
 
@@ -139,7 +138,7 @@ function PricingContent() {
                   ['AI conversation practice', '3 chats / day', 'Unlimited', 'Included'],
                   ['Real-time pronunciation scoring', '✓', '✓', '—'],
                   ['CEFR completion certificates', '✓', '✓', '—'],
-                  ['Languages', '65', '65', '40+'],
+                  ['Languages', '90+', '90+', '40+'],
                   ['Streak Freeze & leagues', '✓', '✓', '✓'],
                 ] as string[][]).map((row, i) => (
                   <tr key={row[0]} style={{ background: i % 2 ? '#fff' : '#F8FAFC' }}>

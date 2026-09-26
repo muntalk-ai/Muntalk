@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import LessonPlayer from '@/components/LessonPlayer';
 import CertificateModal from '@/components/CertificateModal';
+import TestimonialPrompt from '@/components/TestimonialPrompt';
 import { useAuth } from '@/context/AuthContext';
 import { updateUserProfile, getUserProfile, recordActivity } from '@/lib/userProfile';
 import { addWeeklyXp, ensureLeague } from '@/lib/league';
@@ -29,6 +30,7 @@ export default function LessonPage({
   const [loaded, setLoaded] = useState(false);
   const [tutorId, setTutorId] = useState<string | undefined>(undefined);
   const [earnedCert, setEarnedCert] = useState<Certificate | null>(null);
+  const [showTestimonial, setShowTestimonial] = useState(false);
 
   // 비로그인 게스트 접근 제한 — a1-1-1 외 모든 레슨 차단
   useEffect(() => {
@@ -123,6 +125,13 @@ export default function LessonPage({
         } catch (e) {
           console.warn('[lesson] certificate check failed:', e);
         }
+
+        // 테스티모니얼 수집 — 10개 레슨 완료 시 1회만 프롬프트
+        try {
+          if (doneParsed.length >= 10 && !localStorage.getItem('mt_testimonial_asked')) {
+            setShowTestimonial(true);
+          }
+        } catch { /* ignore */ }
       }
     } catch (e) {
       console.error('[lesson] handleComplete error:', e);
@@ -144,6 +153,16 @@ export default function LessonPage({
       />
       {earnedCert && (
         <CertificateModal cert={earnedCert} onClose={() => setEarnedCert(null)} />
+      )}
+      {showTestimonial && user && (
+        <TestimonialPrompt
+          uid={user.uid}
+          displayName={user.displayName || 'Learner'}
+          onDone={() => {
+            try { localStorage.setItem('mt_testimonial_asked', '1'); } catch { /* ignore */ }
+            setShowTestimonial(false);
+          }}
+        />
       )}
     </>
   );
