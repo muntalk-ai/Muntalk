@@ -13,6 +13,32 @@ import { addCardToSRS } from '@/lib/spacedRepetition';
 const hasStt = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.stt ?? false;
 const hasTts = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.tts ?? false;
 
+// -- Bulk translation validation (Option A hardening) --------------------------
+// Returns an error description string, or null when the payload is acceptable.
+function validateBulkTranslation(parsed: any, lsn: { vocab?: any[]; quiz?: any[] } | undefined | null): string | null {
+  if (!parsed || typeof parsed !== 'object') return 'empty payload';
+  const baseVocab = lsn?.vocab || [];
+  const baseQuiz = lsn?.quiz || [];
+  if (!Array.isArray(parsed.vocab) || parsed.vocab.length !== baseVocab.length) {
+    return `vocab length mismatch (got ${Array.isArray(parsed.vocab) ? parsed.vocab.length : 'n/a'}, expected ${baseVocab.length})`;
+  }
+  for (let i = 0; i < parsed.vocab.length; i++) {
+    const v = parsed.vocab[i];
+    if (!v || !v.word || !v.meaning || !v.example) return `vocab[${i}] missing word/meaning/example`;
+  }
+  if (!Array.isArray(parsed.quiz) || parsed.quiz.length !== baseQuiz.length) {
+    return `quiz length mismatch (got ${Array.isArray(parsed.quiz) ? parsed.quiz.length : 'n/a'}, expected ${baseQuiz.length})`;
+  }
+  for (let i = 0; i < parsed.quiz.length; i++) {
+    const q = parsed.quiz[i];
+    if (!q || !q.q || !Array.isArray(q.options) || q.options.length < 2) return `quiz[${i}] missing q/options`;
+    if (!Number.isInteger(q.answer) || q.answer < 0 || q.answer >= q.options.length) {
+      return `quiz[${i}] answer index out of range (${q.answer})`;
+    }
+  }
+  return null;
+}
+
 type Phase = 'vocab' | 'quiz' | 'chat' | 'complete';
 
 interface ChatMessage {
@@ -180,6 +206,8 @@ export default function LessonPlayer({
 
   // -- Translate lesson content when non-English --------------------------------
   const [txError, setTxError] = useState<string | null>(null);
+  // Incremented by the error banner's Retry button to re-run the translation effect
+  const [txAttempt, setTxAttempt] = useState(0);
 
   // 사전생성 JSON이 있는 언어 목록 (public/curriculum/ 폴더)
   const PREGENERATED_LANGS = new Set([
@@ -266,9 +294,10 @@ export default function LessonPlayer({
     console.log(`[lesson] 🤖 Gemini API: translating to ${targetLang}...`);
     callGeminiFallback(lsn, targetLang, nativeLang);
 
-    function callGeminiFallback(lsn: typeof lesson, targetLang: string, nativeLang: string) {
+    function callGeminiFallback(lsn: typeof lesson, targetLang: string, nativeLang: string, attempt = 0) {
       // Slim payload — exclude tutorPrompt to reduce token count ~40%
-      const vocabOnly = (lsn!.vocab || []).map((v: any) => ({ word: v.word, meaning: v.meaning }));
+      // NOTE: example is included so the model TRANSLATES it (never invents a new one)
+      const vocabOnly = (lsn!.vocab || []).map((v: any) => ({ word: v.word, meaning: v.meaning, example: v.example }));
       const quizOnly  = (lsn!.quiz  || []).map((q: any) => ({ q: q.q, options: q.options, answer: q.answer }));
       const lessonPayload = { vocab: vocabOnly, quiz: quizOnly };
       const prompt = `Translate this lesson to ${targetLang}. Student speaks ${nativeLang}.
@@ -276,16 +305,17 @@ export default function LessonPlayer({
 Input: ${JSON.stringify(lessonPayload)}
 
 Return ONLY valid JSON, no markdown, no explanation:
-{"vocab":[{"word":"TARGET_WORD","phonetic":"PRONUNCIATION","meaning":"NATIVE_MEANING","example":"TARGET_SENTENCE"}],"quiz":[{"q":"NATIVE_QUESTION","options":["TARGET_OPTION"],"answer":INDEX}]}
+{"vocab":[{"word":"TARGET_WORD","phonetic":"PRONUNCIATION","meaning":"NATIVE_GLOSS","example":"TARGET_SENTENCE","exampleKo":"NATIVE_TRANSLATION"}],"quiz":[{"q":"NATIVE_QUESTION","options":["TARGET_OPTION"],"answer":INDEX}]}
 
 Rules:
-- vocab[i].word: the word in ${targetLang}
-- vocab[i].phonetic: romanized pronunciation
-- vocab[i].meaning: 1-3 words in ${nativeLang}
-- vocab[i].example: short sentence in ${targetLang}
+- vocab[i].word: the word/expression translated into ${targetLang}
+- vocab[i].phonetic: pronunciation guide a ${nativeLang} speaker can read aloud. If ${nativeLang} is Korean, use Hangul-style notation (e.g. "봉주르"); otherwise simple romanization.
+- vocab[i].meaning: 1-3 word gloss of the TARGET expression itself in ${nativeLang}. Do NOT translate the usage note from the input — give what the expression actually means (e.g. Korean "~인 것 같다" for "Il semblerait que").
+- vocab[i].example: translate the GIVEN example sentence into ${targetLang}, keeping the same meaning. Do NOT invent a new sentence.
+- vocab[i].exampleKo: translation of the example sentence into ${nativeLang}
 - quiz[i].q: question in ${nativeLang}
 - quiz[i].options: answer choices in ${targetLang}
-- quiz[i].answer: integer index (0-based)
+- quiz[i].answer: integer index (0-based) of the correct option
 IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
 
       fetch('/api/gemini', {
@@ -343,6 +373,18 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
           }
 
           if (!parsed?.vocab && !parsed?.quiz) throw new Error('Empty lesson data');
+
+          // Option A: validate bulk translation before accepting it
+          const validationError = validateBulkTranslation(parsed, lsn);
+          if (validationError) {
+            if (attempt < 1) {
+              console.warn(`[lesson] validation failed (${validationError}) — retrying once...`);
+              callGeminiFallback(lsn, targetLang, nativeLang, attempt + 1);
+              return;
+            }
+            throw new Error('Translation validation failed: ' + validationError);
+          }
+
           setTranslatedLesson({ ...lsn!, ...parsed });
           setIsTranslating(false);
         })
@@ -354,7 +396,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
         });
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lessonId, langId, subLang, user?.uid]);
+  }, [lessonId, langId, subLang, user?.uid, txAttempt]);
 
   // -- Auto-scroll chat --------------------------------------------------------
   useEffect(() => {
@@ -498,14 +540,20 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
     }
   };
 
-  // auto-translate vocab on load
+  // auto-translate vocab on load — FALLBACK ONLY.
+  // The bulk translation already provides `exampleKo` (native example translation)
+  // and a native `meaning` gloss; per-item calls run only when bulk data is absent
+  // (e.g. translation failed and we fell back to the English lesson).
+  const vocabExKey = `${lessonId}:${langId}:vocab-ex-${vocabIdx}`;
+  const vocabMeanKey = `${lessonId}:${langId}:vocab-meaning-${vocabIdx}`;
+  const bulkNative = !!((vocabItem as any)?.exampleKo);
   useEffect(() => {
-    if (vocabItem && subLang && subLang !== langId) {
-      translateText(vocabItem.example, `vocab-ex-${vocabIdx}`);
-      translateText(vocabItem.meaning, `vocab-meaning-${vocabIdx}`);
+    if (vocabItem && subLang && subLang !== langId && !bulkNative) {
+      translateText(vocabItem.example, vocabExKey);
+      translateText(vocabItem.meaning, vocabMeanKey);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [vocabIdx, phase]);
+  }, [vocabIdx, phase, langId, lessonId, translatedLesson]);
 
   const handleSpeakVocab = async () => {
     if (!vocabItem) return;
@@ -845,7 +893,7 @@ RULES:
         <div style={{ background: '#FFF7ED', border: '1px solid #FED7AA', padding: '12px 20px', fontSize: 13, color: '#C2410C', fontWeight: 700, textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
           <span>⚠️ AI translation unavailable -- showing in English.</span>
           <button
-            onClick={() => { setTxError(null); setIsTranslating(true); }}
+            onClick={() => setTxAttempt(a => a + 1)}
             style={{ background: '#EA580C', border: 'none', borderRadius: 8, color: '#fff', fontSize: 12, fontWeight: 800, padding: '5px 14px', cursor: 'pointer' }}>
             Retry
           </button>
@@ -952,14 +1000,15 @@ RULES:
               <div style={styles.vocabExample}>"{vocabItem.example}"</div>
               {subLang && subLang !== langId && (
                 <div style={styles.txLine}>
-                  {loadingTx[`vocab-ex-${vocabIdx}`]
+                  {bulkNative ? (vocabItem as any).exampleKo
+                    : loadingTx[vocabExKey]
                     ? '⏳ 번역 중...'
-                    : translations[`vocab-ex-${vocabIdx}`] || ''}
+                    : translations[vocabExKey] || ''}
                 </div>
               )}
-              {subLang && subLang !== langId && vocabItem.meaning && (
+              {subLang && subLang !== langId && vocabItem.meaning && !bulkNative && (
                 <div style={styles.txMeaning}>
-                  {translations[`vocab-meaning-${vocabIdx}`] || ''}
+                  {loadingTx[vocabMeanKey] ? '⏳ 번역 중...' : translations[vocabMeanKey] || ''}
                 </div>
               )}
               <button
