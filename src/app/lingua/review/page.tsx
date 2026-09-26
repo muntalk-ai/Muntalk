@@ -1,11 +1,10 @@
 ﻿'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { getDueCards, reviewCard, getSRSStats, SRSCard, ReviewQuality } from '@/lib/spacedRepetition';
-import { addWeeklyXp } from '@/lib/league';
-import { updateUserProfile } from '@/lib/userProfile';
+import { awardXp } from '@/lib/xpClient';
 
 type CardState = 'question' | 'answer' | 'done';
 
@@ -19,6 +18,8 @@ export default function ReviewPage() {
   const [stats,      setStats]      = useState({ total: 0, due: 0, mastered: 0, learning: 0, new: 0 });
   const [sessionResults, setResults] = useState({ correct: 0, wrong: 0, xpEarned: 0 });
   const [flipping,   setFlipping]   = useState(false);
+  // PR-H: 어뷰징 탐지용 리뷰 세션 시작 시각
+  const sessionStartRef = useRef<number>(Date.now());
 
   useEffect(() => {
     if (authLoading) return;
@@ -53,12 +54,11 @@ export default function ReviewPage() {
     try {
       await reviewCard(user.uid, card, quality);
 
-      // XP 업데이트
-      const newXp = (profile?.xp || 0) + xpForCard;
+      // PR-H: XP는 서버 엔드포인트로 지급 — Firestore 직접 쓰기 금지
       const storedXp = parseInt(localStorage.getItem('mt_xp') || '0') + xpForCard;
       localStorage.setItem('mt_xp', String(storedXp));
-      await updateUserProfile(user.uid, { xp: newXp });
-      await addWeeklyXp(user.uid, xpForCard);
+      const sessionSec = Math.max(1, Math.round((Date.now() - sessionStartRef.current) / 1000));
+      await awardXp({ source: 'review', xp: xpForCard, sessionSec, meta: { quality } });
 
       setResults(r => ({
         correct:   r.correct   + (quality >= 3 ? 1 : 0),

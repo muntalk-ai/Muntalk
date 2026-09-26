@@ -3,6 +3,7 @@
 
 import { doc, getDoc, setDoc, updateDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from './firebase';
+import { awardXp } from './xpClient';
 import type { LearningPurpose } from './purpose';
 
 export interface UserProfile {
@@ -181,8 +182,13 @@ export async function migrateFromLocalStorage(uid: string) {
   const tutorId = localStorage.getItem('mt_tutor_id') || 't01';
 
   if (xp || done.length || dates.length) {
+    // PR-H: XP는 서버 엔드포인트로만 지급 — updateUserProfile로 xp 직접 쓰기 금지.
+    // (기존 코드는 게스트 localStorage 값을 그대로 덮어써 조작 벡터였음)
+    if (xp > 0) {
+      await awardXp({ source: 'guest_migration', xp: Math.min(xp, 1000) });
+    }
     await updateUserProfile(uid, {
-      xp, completedLessons: done, activityDates: dates,
+      completedLessons: done, activityDates: dates,
       learnLang: learn, nativeLang: native, tutorId,
     });
   }
