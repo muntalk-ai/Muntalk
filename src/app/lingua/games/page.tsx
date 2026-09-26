@@ -459,7 +459,7 @@ function VanishGame({ difficulty, onBack, addXP, gameColor }:
       // B-6: 오답 해설 모달 표시 — 닫으면 다음 문제로 진행
       setWrongInfo({
         word: vocab[idx].word,
-        wrongText: optIdx >= 0 ? options[optIdx] : '시간 초과 — 답을 고르지 못했어요',
+        wrongText: optIdx >= 0 ? options[optIdx] : "Time's up — no answer selected",
         correctText: vocab[idx].meaning,
         example: vocab[idx].example,
       });
@@ -626,7 +626,7 @@ function BlitzGame({ difficulty, onBack, addXP, gameColor }:
     if (!w) return;
     let wrongText: string;
     if (kind === 'timeout') {
-      wrongText = '시간 초과 — 답을 고르지 못했어요';
+      wrongText = "Time's up — no answer selected";
     } else if (showMeaning) {
       wrongText = 'You said FALSE — but this meaning was correct';
     } else {

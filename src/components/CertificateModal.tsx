@@ -73,13 +73,13 @@ export default function CertificateModal({
           </div>
 
           <div style={{ fontSize: 13, fontWeight: 700, color: '#475569', marginBottom: 16 }}>
-            링크드인에 추가하고 실력을 증명하세요 💼
+            Add it to LinkedIn and show off your skills 💼
           </div>
 
           <div style={{ display: 'flex', gap: 10, marginBottom: 10 }}>
             <a href={xUrl} target="_blank" rel="noopener noreferrer"
               style={{ flex: 1, padding: '12px', borderRadius: 14, background: '#0F172A', color: '#fff', fontSize: 13, fontWeight: 800, textDecoration: 'none' }}>
-              𝕏 공유하기
+              Share on 𝕏
             </a>
             <a href={linkedInUrl} target="_blank" rel="noopener noreferrer"
               style={{ flex: 1, padding: '12px', borderRadius: 14, background: '#0A66C2', color: '#fff', fontSize: 13, fontWeight: 800, textDecoration: 'none' }}>
@@ -87,13 +87,13 @@ export default function CertificateModal({
             </a>
             <button onClick={copyText}
               style={{ flex: 1, padding: '12px', borderRadius: 14, background: '#F1F5F9', color: '#334155', fontSize: 13, fontWeight: 800, border: 'none', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
-              {copied ? '✅ 복사됨' : '📋 복사'}
+              {copied ? '✅ Copied' : '📋 Copy'}
             </button>
           </div>
 
           <button onClick={onClose}
             style={{ width: '100%', padding: '12px', borderRadius: 14, border: 'none', background: 'none', color: '#94A3B8', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
-            계속 학습하기 →
+            Keep learning →
           </button>
         </div>
       </div>

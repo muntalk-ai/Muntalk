@@ -767,7 +767,7 @@ Generate a warm 1-2 sentence opening. End with a simple question.`,
     const openingMsg: ChatMessage = {
       role: 'tutor',
       text: openingText,
-      subtitle: subLang !== langId ? '대화 연습을 시작해요!' : undefined,
+      subtitle: subLang !== langId ? "Let's start practicing conversation!" : undefined,
     };
     setChatMsgs([openingMsg]);
     await speakText(openingMsg.text, () => {
@@ -818,14 +818,14 @@ RULES:
         if (data.error === 'CHAT_LIMIT_REACHED' && !isAdminEmail(user?.email)) {
           setChatMsgs(prev => [...prev, {
             role: 'tutor',
-            text: `오늘의 무료 AI 대화 ${data.limit}회를 모두 사용했어요 😢 프리미엄으로 업그레이드하면 무제한으로 대화할 수 있어요!`,
+            text: `You've used all ${data.limit} free AI chats for today 😢 Upgrade to Premium for unlimited conversations!`,
           }]);
           return;
         }
         if (data.error === 'LOGIN_REQUIRED') {
           setChatMsgs(prev => [...prev, {
             role: 'tutor',
-            text: '🔒 AI 튜터를 사용하려면 로그인이 필요해요.',
+            text: '🔒 Please sign in to use the AI tutor.',
           }]);
           return;
         }
@@ -1073,13 +1073,13 @@ RULES:
                 <div style={styles.txLine}>
                   {bulkNative ? (vocabItem as any).exampleKo
                     : loadingTx[vocabExKey]
-                    ? '⏳ 번역 중...'
+                    ? '⏳ Translating...'
                     : translations[vocabExKey] || ''}
                 </div>
               )}
               {subLang && subLang !== langId && vocabItem.meaning && !bulkNative && (
                 <div style={styles.txMeaning}>
-                  {loadingTx[vocabMeanKey] ? '⏳ 번역 중...' : translations[vocabMeanKey] || ''}
+                  {loadingTx[vocabMeanKey] ? '⏳ Translating...' : translations[vocabMeanKey] || ''}
                 </div>
               )}
               <button
@@ -1204,7 +1204,7 @@ RULES:
                     cursor: explaining ? 'default' : 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
                     opacity: explaining ? 0.6 : 1,
                   }}>
-                  {explaining ? '⏳ 설명 가져오는 중...' : '🤔 왜 틀렸어요?'}
+                  {explaining ? '⏳ Getting explanation...' : '🤔 Why was I wrong?'}
                 </button>
                 {explanation && (
                   <div style={{
