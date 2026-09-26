@@ -511,7 +511,15 @@ function BlitzGame({ difficulty, onBack, addXP, gameColor }:
     const isReal = Math.random() > 0.4; // 60% real, 40% fake
     setShowMeaning(isReal);
     if (!isReal) {
-      const fake = vocab[Math.floor(Math.random()*vocab.length)];
+      // B-1 hotfix: exclude the current card so a "fake" card can never
+      // display the word's real meaning (unfair false-negative)
+      let fakeIdx = Math.floor(Math.random()*vocab.length);
+      if (vocab.length > 1) {
+        while (fakeIdx === currentIdx) {
+          fakeIdx = Math.floor(Math.random()*vocab.length);
+        }
+      }
+      const fake = vocab[fakeIdx];
       setFakeMeaning(fake.meaning);
     }
     setTimer(10);

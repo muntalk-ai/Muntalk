@@ -14,6 +14,7 @@ import {
   STUDIO_GENRES, buildCreatorPrompt, COPYRIGHT_DECLARATION,
   type StudioType, type LangMode, type ProjectPhase, type StudioProject,
 } from '@/lib/dreamStudio';
+import { getLangLabel } from '@/data/languages';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -28,13 +29,7 @@ interface ChatMsg {
 }
 
 // ── Lang helpers ──────────────────────────────────────────────────────────────
-
-const LANG_NAMES: Record<string,string> = {
-  'en-US':'English','en-GB':'English','ja-JP':'Japanese','ko-KR':'Korean',
-  'zh-CN':'Chinese','fr-FR':'French','de-DE':'German','es-ES':'Spanish',
-  'it-IT':'Italian','pt-BR':'Portuguese','ru-RU':'Russian','ar-XA':'Arabic',
-  'hi-IN':'Hindi','vi-VN':'Vietnamese','th-TH':'Thai','id-ID':'Indonesian',
-};
+// B-12 hotfix: single source of truth — full LEARN_LANGUAGES mapping (getLangLabel)
 
 // ── Main Page ─────────────────────────────────────────────────────────────────
 
@@ -85,8 +80,8 @@ function DreamStudioContent() {
     };
   }, []);
 
-  const targetLang = LANG_NAMES[langId]  || 'English';
-  const nativeLang = LANG_NAMES[subLang] || 'English';
+  const targetLang = getLangLabel(langId);
+  const nativeLang = getLangLabel(subLang);
   const sameLanguage = langId === subLang || (langId.startsWith('en') && subLang.startsWith('en'));
   const isPremiumUser = isAdmin || planId !== 'free';
   const tutor = getTutorById(tutorId);
@@ -281,10 +276,17 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
       const data = await res.json();
       const raw = data.text?.trim() || 'Tell me more about what you\'re imagining.';
 
-      // Extract content blocks
-      const contentMatch = raw.match(/\|\|\|CONTENT_START\|\|\|([\s\S]*?)\|\|\|CONTENT_END\|\|\|/);
+      // Extract content blocks (B-2 hotfix: fallback for models that
+      // mistakenly close with CONTENT_START instead of CONTENT_END)
+      const TAG = '\\|\\|\\|';
+      const contentMatch =
+        raw.match(new RegExp(`${TAG}CONTENT_START${TAG}([\\s\\S]*?)${TAG}CONTENT_END${TAG}`)) ||
+        raw.match(new RegExp(`${TAG}CONTENT_START${TAG}([\\s\\S]*?)${TAG}CONTENT_START${TAG}`));
       const extractedContent = contentMatch ? contentMatch[1].trim() : '';
-      const chatText = raw.replace(/\|\|\|CONTENT_START\|\|\|[\s\S]*?\|\|\|CONTENT_END\|\|\|/,'').trim();
+      const chatText = raw
+        .replace(new RegExp(`${TAG}CONTENT_START${TAG}[\\s\\S]*?${TAG}CONTENT_END${TAG}`),'')
+        .replace(new RegExp(`${TAG}CONTENT_START${TAG}[\\s\\S]*?${TAG}CONTENT_START${TAG}`),'')
+        .trim();
 
       const aiMsg: ChatMsg = { role:'ai', text:chatText, extractedContent };
       setMessages(prev=>[...prev, aiMsg]);

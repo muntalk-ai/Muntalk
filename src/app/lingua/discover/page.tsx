@@ -7,20 +7,13 @@ import { getUserProfile } from '@/lib/userProfile';
 import { getTutorById } from '@/data/tutors';
 import { getSubscription, isAdminEmail } from '@/lib/subscription';
 import PaywallModal from '@/components/PaywallModal';
+import { getLangLabel } from '@/data/languages';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
 type FeatureId = 'spark'|'news'|'mirror'|'world'|'character'|'story';
 type ChatMode = 'target'|'native';
 type ChatMsg = { role:'user'|'ai'; text:string; ts:number; translation?:string; showTranslation?:boolean };
-
-const LANG_NAMES: Record<string,string> = {
-  'en-US':'English','en-GB':'English','ja-JP':'Japanese','ko-KR':'Korean',
-  'zh-CN':'Chinese','zh-TW':'Chinese','fr-FR':'French','de-DE':'German',
-  'es-ES':'Spanish','it-IT':'Italian','pt-BR':'Portuguese','ru-RU':'Russian',
-  'ar-XA':'Arabic','hi-IN':'Hindi','vi-VN':'Vietnamese','th-TH':'Thai',
-  'id-ID':'Indonesian','tr-TR':'Turkish','nl-NL':'Dutch','sv-SE':'Swedish',
-};
 
 interface Feature {
   id: FeatureId;
@@ -242,8 +235,8 @@ function DiscoverContent() {
     const history = messages.map(m=>`${m.role==='user'?'User':t.name}: ${m.text}`).join('\n');
     const dayIdx = new Date().getDay();
     // Compute lang inside callback to avoid hoisting issues
-    const _targetLang = LANG_NAMES[langId]  || 'English';
-    const _nativeLang = LANG_NAMES[subLang] || 'English';
+    const _targetLang = getLangLabel(langId);
+    const _nativeLang = getLangLabel(subLang);
     const lang = chatMode === 'native' ? _nativeLang : _targetLang;
     const targetLangName = _targetLang;
     const nativeLangName = _nativeLang;
@@ -347,8 +340,8 @@ function DiscoverContent() {
   const buildOpeningPrompt = (id: FeatureId, channelId?: string): string => {
     const t = getTutorById(tutorId);
     const dayIdx = new Date().getDay();
-    const _targetLang = LANG_NAMES[langId]  || 'English';
-    const _nativeLang = LANG_NAMES[subLang] || 'English';
+    const _targetLang = getLangLabel(langId);
+    const _nativeLang = getLangLabel(subLang);
     const lang = chatMode === 'native' ? _nativeLang : _targetLang;
     switch(id) {
       case 'spark': {
@@ -376,8 +369,8 @@ function DiscoverContent() {
 
   const tutor = getTutorById(tutorId);
   const isPremiumUser = isAdmin || planId !== 'free';
-  const targetLangName = LANG_NAMES[langId] || 'English';
-  const nativeLangName = LANG_NAMES[subLang] || 'English';
+  const targetLangName = getLangLabel(langId);
+  const nativeLangName = getLangLabel(subLang);
   const chatLang = chatMode === 'native' ? nativeLangName : targetLangName;
   const sameLanguage = langId === subLang || (langId.startsWith('en') && subLang.startsWith('en'));
   const todayDayIdx = new Date().getDay();
