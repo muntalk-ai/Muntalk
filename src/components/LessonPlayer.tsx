@@ -8,6 +8,7 @@ import { LEARN_LANGUAGES } from '@/data/languages';
 import TrialExpiredModal from '@/components/TrialExpiredModal';
 import { getTrialData, initTrial, isTrialExpired, isPremium, TRIAL_MAX_UNITS } from '@/lib/trialPolicy';
 import { isAdminEmail } from '@/lib/subscription';
+import { addCardToSRS } from '@/lib/spacedRepetition';
 
 const hasStt = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.stt ?? false;
 const hasTts = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.tts ?? false;
@@ -57,6 +58,9 @@ export default function LessonPlayer({
   const [pronLoading, setPronLoading] = useState(false);
   const [pronError, setPronError] = useState<string|null>(null);
   const [pronResult, setPronResult] = useState<Record<number, { heard: string; score: number; feedback: string } | null>>({});
+  // Save vocab to SRS Review deck
+  const [savedWords, setSavedWords] = useState<Record<number, boolean>>({});
+  const [savingWord, setSavingWord] = useState(false);
   const [chatMsgs, setChatMsgs] = useState<ChatMessage[]>([]);
   const [isChatThinking, setIsChatThinking] = useState(false);
   const [chatHistory, setChatHistory] = useState<{ role: 'user' | 'assistant'; content: string }[]>([]);
@@ -506,6 +510,22 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
   const handleSpeakVocab = async () => {
     if (!vocabItem) return;
     await speakText(vocabItem.example);
+  };
+
+  // Save current vocab word to the SRS Review deck
+  const handleSaveToReview = async () => {
+    if (!vocabItem || savingWord || savedWords[vocabIdx]) return;
+    if (!user) { setPronError('Log in to save words to Review.'); return; }
+    setSavingWord(true);
+    try {
+      await addCardToSRS(user.uid, vocabItem.word, vocabItem.meaning, langId);
+      setSavedWords(s => ({ ...s, [vocabIdx]: true }));
+    } catch (e) {
+      console.warn('[lesson] save to SRS failed:', e);
+      setPronError('Could not save this word. Please try again.');
+    } finally {
+      setSavingWord(false);
+    }
   };
 
   // -----------------------------------------------------------------------------
@@ -965,6 +985,20 @@ RULES:
                   {pronListening ? '🎤 Listening... speak now!' : pronLoading ? '⏳ Analyzing...' : '🎤 Practice pronunciation'}
                 </button>
               )}
+              <button
+                onClick={handleSaveToReview}
+                disabled={savingWord || !!savedWords[vocabIdx]}
+                style={{
+                  ...styles.speakBtn, marginTop: 8,
+                  background: savedWords[vocabIdx] ? '#ECFDF5' : '#fff',
+                  color: savedWords[vocabIdx] ? '#059669' : level.dark,
+                  border: `1.5px solid ${savedWords[vocabIdx] ? '#A7F3D0' : level.accent + '50'}`,
+                  cursor: savedWords[vocabIdx] ? 'default' : 'pointer',
+                  opacity: savingWord ? 0.6 : 1,
+                }}
+              >
+                {savedWords[vocabIdx] ? '✅ Saved to Review' : savingWord ? '⏳ Saving...' : '🔖 Save to Review'}
+              </button>
               {pronError && (
                 <div style={{ marginTop: 8, fontSize: 12, fontWeight: 700, color: '#B91C1C' }}>
                   ⚠️ {pronError}

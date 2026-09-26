@@ -2,6 +2,9 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useRouter } from 'next/navigation';
+import { useAuth } from '@/context/AuthContext';
+import { updateUserProfile, getUserProfile } from '@/lib/userProfile';
+import { addWeeklyXp, ensureLeague } from '@/lib/league';
 import { CURRICULUM } from '@/data/curriculum';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -60,13 +63,35 @@ const LEVELS: { id: Difficulty; label: string; color: string }[] = [
 
 export default function WordGamesPage() {
   const router = useRouter();
+  const { user } = useAuth();
   const [activeGame, setActiveGame] = useState<GameId>('snap');
   const [difficulty, setDifficulty] = useState<Difficulty>('a1');
   const [playing,    setPlaying]    = useState(false);
   const [xpGained,   setXpGained]   = useState(0);
 
+  // 게임 중 증가분 누적 — 게임 화면을 나갈 때/unmount 시 한 번에 flush
+  const pendingXpRef = useRef(0);
+
+  const flushGameXp = useCallback(async () => {
+    const delta = pendingXpRef.current;
+    pendingXpRef.current = 0;
+    if (!user || delta <= 0) return;
+    try {
+      const profile = await getUserProfile(user.uid);
+      if (profile) await updateUserProfile(user.uid, { xp: profile.xp + delta });
+      await ensureLeague(user.uid, user.displayName || 'Learner', user.photoURL || '');
+      await addWeeklyXp(user.uid, delta);
+    } catch (e) {
+      console.warn('[games] XP flush failed:', e);
+    }
+  }, [user]);
+
+  // 컴포넌트 unmount 시 남은 증가분 flush
+  useEffect(() => () => { void flushGameXp(); }, [flushGameXp]);
+
   const addXP = (pts: number) => {
     setXpGained(prev => prev + pts);
+    pendingXpRef.current += pts;
     const stored = parseInt(localStorage.getItem('mt_xp') || '0', 10);
     localStorage.setItem('mt_xp', String(stored + pts));
   };
@@ -151,7 +176,7 @@ export default function WordGamesPage() {
 
   // ── GAME SCREEN ───────────────────────────────────────────────────────────
 
-  const commonProps = { difficulty, onBack:()=>setPlaying(false), addXP, gameColor:game.color };
+  const commonProps = { difficulty, onBack:()=>{ void flushGameXp(); setPlaying(false); }, addXP, gameColor:game.color };
 
   return (
     <div style={S.page}>

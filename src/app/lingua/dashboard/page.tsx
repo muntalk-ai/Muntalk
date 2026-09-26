@@ -162,7 +162,7 @@ export default function DashboardPage() {
             <div style={{ background: '#fff', borderRadius: 20, border: '1.5px solid #F1F5F9', padding: '24px', marginBottom: 24 }}>
               <div style={{ fontWeight: 900, fontSize: 15, color: '#0F172A', marginBottom: 4 }}>🎓 Certificates</div>
               <div style={{ fontSize: 12, color: '#94A3B8', fontWeight: 600, marginBottom: 16 }}>
-                레벨의 모든 레슨을 완료하면 수료증이 발급돼요 — 링크드인에 공유하세요
+                Complete all lessons in a level to earn a certificate — share it on LinkedIn
               </div>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 {['a1','a2','b1','b2','c1','c2'].map(lid => {
@@ -181,12 +181,56 @@ export default function DashboardPage() {
                         {info[0]}
                       </div>
                       <div style={{ fontSize: 10, fontWeight: 700, color: got ? '#D97706' : '#CBD5E1', marginTop: 2 }}>
-                        {got ? '✓ 획득' : '미획득'}
+                        {got ? '✓ Earned' : 'Locked'}
                       </div>
                     </div>
                   );
                 })}
               </div>
+            </div>
+          );
+        })()}
+
+        {/* -- Weak Areas -- */}
+        {(() => {
+          const doneIds: string[] = (profile?.completedLessons as string[] | undefined) ?? [];
+          const weak: string[] = [];
+          if (doneIds.length > 0) {
+            const a1Count = doneIds.filter(id => id.split('-')[0] === 'a1').length;
+            const bCount = doneIds.filter(id => id.split('-')[0].startsWith('b')).length;
+            if (a1Count < 6) weak.push('Basic expressions (A1)');
+            if (bCount < 3) weak.push('Intermediate grammar (B1+)');
+          }
+          return (
+            <div style={{ background: '#fff', borderRadius: 20, border: '1.5px solid #F1F5F9', padding: '24px', marginBottom: 24 }}>
+              <div style={{ fontWeight: 900, fontSize: 15, color: '#0F172A', marginBottom: 12 }}>🎯 Weak Areas</div>
+              {doneIds.length === 0 ? (
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+                  <span style={{ fontSize: 13, color: '#64748B', fontWeight: 600 }}>
+                    Complete a few lessons and your weak spots will appear here.
+                  </span>
+                  <button onClick={() => router.push('/lingua')}
+                    style={{ padding: '10px 20px', borderRadius: 14, border: 'none', background: '#6366F1', color: '#fff', fontFamily: "'Nunito',sans-serif", fontWeight: 800, fontSize: 13, cursor: 'pointer' }}>
+                    Start learning →
+                  </button>
+                </div>
+              ) : weak.length === 0 ? (
+                <div style={{ fontSize: 13, color: '#10B981', fontWeight: 700 }}>
+                  No weak spots detected — nice work! 🎉
+                </div>
+              ) : (
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+                  {weak.map(w => (
+                    <span key={w} style={{ padding: '8px 16px', borderRadius: 999, background: '#FEF2F2', border: '1.5px solid #FECACA', color: '#B91C1C', fontSize: 13, fontWeight: 700 }}>
+                      {w}
+                    </span>
+                  ))}
+                  <button onClick={() => router.push('/lingua/coach')}
+                    style={{ padding: '10px 20px', borderRadius: 14, border: 'none', background: '#6366F1', color: '#fff', fontFamily: "'Nunito',sans-serif", fontWeight: 800, fontSize: 13, cursor: 'pointer', marginLeft: 4 }}>
+                    🧭 Get coaching →
+                  </button>
+                </div>
+              )}
             </div>
           );
         })()}
