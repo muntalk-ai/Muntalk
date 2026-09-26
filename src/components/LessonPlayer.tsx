@@ -55,6 +55,7 @@ export default function LessonPlayer({
   // Pronunciation practice (vocab phase)
   const [pronListening, setPronListening] = useState(false);
   const [pronLoading, setPronLoading] = useState(false);
+  const [pronError, setPronError] = useState<string|null>(null);
   const [pronResult, setPronResult] = useState<Record<number, { heard: string; score: number; feedback: string } | null>>({});
   const [chatMsgs, setChatMsgs] = useState<ChatMessage[]>([]);
   const [isChatThinking, setIsChatThinking] = useState(false);
@@ -445,6 +446,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
 
   const handleNextVocab = () => {
     if (!activeLesson) return;
+    setPronError(null);
     if (vocabIdx < activeLesson.vocab.length - 1) {
       setVocabIdx(v => v + 1);
     } else {
@@ -520,7 +522,11 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
   const handlePronPractice = () => {
     if (!vocabItem || pronListening || pronLoading) return;
     const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (!SR) return;
+    if (!SR) {
+      setPronError('Speech recognition is not supported in this browser. Please use Chrome on desktop or Android.');
+      return;
+    }
+    setPronError(null);
     const rec = new SR();
     rec.lang = langId;
     rec.continuous = false;
@@ -552,11 +558,15 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
         }));
       } catch {
         setPronResult(prev => ({ ...prev, [vocabIdx]: { heard: transcript, score: 0, feedback: '' } }));
+        setPronError('Could not analyze your pronunciation. Please try again.');
       } finally {
         setPronLoading(false);
       }
     };
-    rec.onerror = () => setPronListening(false);
+    rec.onerror = () => {
+      setPronListening(false);
+      setPronError('Speech recognition ran into a problem. Please try again.');
+    };
     rec.onend = () => setPronListening(false);
     try { rec.start(); } catch { setPronListening(false); }
   };
@@ -877,6 +887,11 @@ RULES:
                   {pronListening ? '🎤 Listening... speak now!' : pronLoading ? '⏳ Analyzing...' : '🎤 Practice pronunciation'}
                 </button>
               )}
+              {pronError && (
+                <div style={{ marginTop: 8, fontSize: 12, fontWeight: 700, color: '#B91C1C' }}>
+                  ⚠️ {pronError}
+                </div>
+              )}
               {pronResult[vocabIdx]?.feedback ? (
                 <div style={{
                   marginTop: 10, padding: '12px 16px', borderRadius: 12, textAlign: 'left',
@@ -901,7 +916,7 @@ RULES:
             </div>
             <div style={styles.btnRow}>
               {vocabIdx > 0 && (
-                <button style={styles.prevBtn} onClick={() => setVocabIdx(v => v - 1)}>← Prev</button>
+                <button style={styles.prevBtn} onClick={() => { setPronError(null); setVocabIdx(v => v - 1); }}>← Prev</button>
               )}
               <button style={{ ...styles.nextBtn, background: level.accent }} onClick={handleNextVocab}>
                 {vocabIdx < activeLesson!.vocab.length - 1 ? 'Next ->' : 'Start Quiz ->'}

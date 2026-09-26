@@ -14,7 +14,7 @@ import {
 
 interface Message {
   id: number;
-  from: 'user'|'npc'|'narrator'|'choice';
+  from: 'user'|'npc'|'narrator'|'choice'|'error';
   npcId?: string;
   npcName?: string;
   text: string;
@@ -114,6 +114,7 @@ function SessionContent() {
   const [translating,  setTranslating]  = useState(false);
   const [openingDone,  setOpeningDone]  = useState(false);
   const [npcRotation,  setNpcRotation]  = useState(0);
+  const lastUserTextRef = useRef('');
 
   const chatRef    = useRef<HTMLDivElement>(null);
   const audioRef   = useRef<HTMLAudioElement|null>(null);
@@ -256,16 +257,26 @@ Reply as ${npc.name} in ${targetLang}:`;
   };
 
   // User turn — with real multi-NPC parallel response
-  const handleUserTurn = useCallback(async (text: string) => {
+  const handleUserTurn = useCallback(async (text: string, isRetry = false) => {
     if (!text.trim() || isThinking || !scenario) return;
     if (audioRef.current) audioRef.current.pause();
 
-    setInput('');
-    addMsg({ from:'user', text });
-    historyRef.current = [...historyRef.current, { role:'user', npcId:'user', content:text }];
-    const newTurn = turnCount + 1;
-    setTurnCount(newTurn);
-    popXP(10);
+    lastUserTextRef.current = text;
+
+    let newTurn: number;
+    if (!isRetry) {
+      // a fresh message clears any previous error notice
+      setMessages(prev => prev.filter(m => m.from !== 'error'));
+      setInput('');
+      addMsg({ from:'user', text });
+      historyRef.current = [...historyRef.current, { role:'user', npcId:'user', content:text }];
+      newTurn = turnCount + 1;
+      setTurnCount(newTurn);
+      popXP(10);
+    } else {
+      // retry the same turn — no double XP
+      newTurn = turnCount;
+    }
 
     setIsThinking(true);
     pendingRef.current = { text:'', gender:'female', npcId:'' };
@@ -296,6 +307,7 @@ Reply as ${npc.name} in ${targetLang}:`;
       ];
 
       const responses = await Promise.all(requests);
+      if (!responses[0].ok) throw new Error(`AI request failed (${responses[0].status})`);
       const jsons = await Promise.all(responses.map(r=>r.json()));
 
       // Process primary NPC response
@@ -315,6 +327,7 @@ Reply as ${npc.name} in ${targetLang}:`;
       };
 
       const { npcText:primaryText, fb:primaryFb } = parseNpcResponse(jsons[0].text?.trim()||'');
+      if (!primaryText) throw new Error('Empty AI response');
       pendingRef.current = { text:primaryText, gender:primaryNpc.voiceGender, npcId:primaryNpc.tutorId };
 
       // Update user message with feedback score + gentle correction
@@ -358,7 +371,10 @@ Reply as ${npc.name} in ${targetLang}:`;
       checkStoryBeats(newTurn);
       if (newTurn >= 10) setTimeout(endSession, 1500);
 
-    } catch(e) { console.error(e); }
+    } catch(e) {
+      console.error(e);
+      addMsg({ from:'error', text: "I couldn't get a reply from the AI tutor. Check your connection and try again." });
+    }
     finally { setIsThinking(false); }
 
     // speak is called inline above; pendingRef used as fallback only
@@ -610,6 +626,21 @@ Reply as ${npc.name} in ${targetLang}:`;
               <span style={{display:'inline-block',padding:'4px 14px',borderRadius:99,fontSize:12,
                 fontWeight:800,background:`${accentColor}15`,color:accentColor,
                 border:`1px solid ${accentColor}30`}}>{msg.text}</span>
+            </div>
+          );
+
+          if (msg.from==='error') return (
+            <div key={msg.id} style={{textAlign:'center',animation:'fadeUp .3s ease'}}>
+              <div style={{display:'inline-block',maxWidth:'85%',background:'#FEF2F2',
+                border:'1.5px solid #FECACA',borderRadius:14,padding:'12px 16px'}}>
+                <div style={{fontSize:13,fontWeight:700,color:'#B91C1C',marginBottom:8}}>⚠️ {msg.text}</div>
+                <button onClick={()=>handleUserTurn(lastUserTextRef.current, true)}
+                  style={{padding:'8px 18px',borderRadius:10,border:'none',background:'#DC2626',
+                    color:'#fff',fontWeight:800,fontSize:13,cursor:'pointer',
+                    fontFamily:"'Nunito',sans-serif"}}>
+                  ↻ Try again
+                </button>
+              </div>
             </div>
           );
 
