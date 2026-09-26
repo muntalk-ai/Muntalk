@@ -1,4 +1,5 @@
 'use client';
+import { apiFetch } from '@/lib/apiClient';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -19,7 +20,7 @@ interface ChatMsg { role: 'user' | 'ai'; text: string }
 type Phase = 'topic' | 'chat' | 'report';
 
 async function callGemini(prompt: string, temperature: number): Promise<string> {
-  const res = await fetch('/api/gemini', {
+  const res = await apiFetch('/api/gemini', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ prompt, temperature }),

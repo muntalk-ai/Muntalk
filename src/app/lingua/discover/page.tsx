@@ -1,4 +1,5 @@
 'use client';
+import { apiFetch } from '@/lib/apiClient';
 
 import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
 import { useRouter } from 'next/navigation';
@@ -194,7 +195,7 @@ function DiscoverContent() {
     try {
       const t = getTutorById(tutorId);
       const spkLang = chatMode === 'native' ? subLang : langId;
-      const res = await fetch('/api/tts', { method:'POST', headers:{'Content-Type':'application/json'},
+      const res = await apiFetch('/api/tts', { method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ text:clean, lang:spkLang, gender:t.gender, level:'b1' }) });
       const data = await res.json();
       if (!data.audioContent) { setIsSpeaking(false); return; }
@@ -215,7 +216,7 @@ function DiscoverContent() {
   const translateMsg = useCallback(async (msgIdx: number, text: string) => {
     setTranslating(msgIdx);
     try {
-      const res = await fetch('/api/gemini', {
+      const res = await apiFetch('/api/gemini', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           uid: user?.uid ?? null, temperature: 0.1,
@@ -295,7 +296,7 @@ function DiscoverContent() {
 
     setLoading(true);
     try {
-      const res = await fetch('/api/gemini', { method:'POST',
+      const res = await apiFetch('/api/gemini', { method:'POST',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ uid:user?.uid??null, temperature:0.85,
           prompt: buildPrompt(msg) }) });
@@ -333,7 +334,7 @@ function DiscoverContent() {
     setLoading(true);
     try {
       const prompt = buildOpeningPrompt(id, channelId);
-      const res = await fetch('/api/gemini', { method:'POST',
+      const res = await apiFetch('/api/gemini', { method:'POST',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ uid:user?.uid??null, temperature:0.9, prompt }) });
       const data = await res.json();

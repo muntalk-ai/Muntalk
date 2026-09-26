@@ -1,4 +1,5 @@
 'use client';
+import { apiFetch } from '@/lib/apiClient';
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
@@ -352,7 +353,7 @@ Rules:
 - quiz[i].answerText: the EXACT text of the correct option (must be identical to options[answer]) — this guards against option reordering
 IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
 
-      fetch('/api/gemini', {
+      apiFetch('/api/gemini', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ uid: user?.uid ?? null, prompt, temperature: 0.3 }),
@@ -470,7 +471,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
     stopAll();
     setIsSpeaking(true);
     try {
-      const res = await fetch('/api/tts', {
+      const res = await apiFetch('/api/tts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: cleanText, lang: langId, gender: tutor?.gender || 'female', level: levelId }),
@@ -507,7 +508,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
     if (msgTranslations[idx]) return; // already translated
     setTranslatingIdx(idx);
     try {
-      const res = await fetch('/api/gemini', {
+      const res = await apiFetch('/api/gemini', {
         method:'POST', headers:{'Content-Type':'application/json'},
         body:JSON.stringify({ uid:user?.uid??null, temperature:0.1,
           prompt:`Translate to ${nativeNames[subLang]||'Korean'}. Reply ONLY with translation:
@@ -526,7 +527,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
     if (translations[key] || loadingTx[key]) return;
     setLoadingTx(prev => ({ ...prev, [key]: true }));
     try {
-      const res = await fetch('/api/gemini', {
+      const res = await apiFetch('/api/gemini', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -645,7 +646,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
     if (!quizItem || selectedOpt === null || explaining) return;
     setExplaining(true);
     try {
-      const res = await fetch('/api/gemini', {
+      const res = await apiFetch('/api/gemini', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -679,7 +680,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
       const transcript: string = e.results[0][0].transcript;
       setPronLoading(true);
       try {
-        const res = await fetch('/api/gemini', {
+        const res = await apiFetch('/api/gemini', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -722,7 +723,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
     // Generate opening message in the learning language
     let openingText = "Great work on the quiz! 🎉 Let's practice conversation now!";
     try {
-      const res = await fetch('/api/gemini', {
+      const res = await apiFetch('/api/gemini', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -763,7 +764,7 @@ Generate a warm 1-2 sentence opening. End with a simple question.`,
     setIsChatThinking(true);
 
     try {
-      const res = await fetch('/api/gemini', {
+      const res = await apiFetch('/api/gemini', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

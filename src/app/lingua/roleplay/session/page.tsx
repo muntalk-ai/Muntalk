@@ -1,4 +1,5 @@
 'use client';
+import { apiFetch } from '@/lib/apiClient';
 
 import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
@@ -163,7 +164,7 @@ function SessionContent() {
     if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; }
     setSpeakingId(npcId); setIsSpeaking(true);
     return new Promise<void>(resolve => {
-      fetch('/api/tts', { method:'POST', headers:{'Content-Type':'application/json'},
+      apiFetch('/api/tts', { method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ text:clean, lang:langId, gender, level:'b1' })
       }).then(r=>r.json()).then(data => {
         if (!data.audioContent) { setIsSpeaking(false); setSpeakingId(null); resolve(); return; }
@@ -180,7 +181,7 @@ function SessionContent() {
   const translateToNative = useCallback(async (text: string): Promise<string> => {
     if (!showNative || !text.trim()) return '';
     try {
-      const res = await fetch('/api/gemini', { method:'POST', headers:{'Content-Type':'application/json'},
+      const res = await apiFetch('/api/gemini', { method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ uid:user?.uid??null, temperature:0.1,
           prompt:`Translate this text to ${nativeLang}. Return ONLY the translation, nothing else:\n"${text}"` })
       });
@@ -283,7 +284,7 @@ Reply as ${npc.name} in ${targetLang}:`;
       ? `${world.systemPrompt.replace('{targetLang}',targetLang).replace('{difficulty}',difficulty).replace('{nativeLang}',nativeLang).replace('{choice}','')}${_purposeLine}\nYour name is ${firstNpc.name}. Open the scene with a vivid, compelling first line. Speak ONLY in ${targetLang}. 1-2 sentences. No emojis. No score block.`
       : '';
 
-    fetch('/api/gemini', { method:'POST', headers:{'Content-Type':'application/json'},
+    apiFetch('/api/gemini', { method:'POST', headers:{'Content-Type':'application/json'},
       body: JSON.stringify({ uid:user?.uid??null, temperature:0.9, prompt:openPrompt })
     }).then(r=>r.json()).then(async data => {
       const text = data.text?.trim() || 'Hello! Welcome.';
@@ -348,11 +349,11 @@ Reply as ${npc.name} in ${targetLang}:`;
 
       // Parallel API calls for multi-NPC
       const requests = [
-        fetch('/api/gemini', { method:'POST', headers:{'Content-Type':'application/json'},
+        apiFetch('/api/gemini', { method:'POST', headers:{'Content-Type':'application/json'},
           body: JSON.stringify({ uid:user?.uid??null, temperature:0.85,
             prompt: buildNpcPrompt(primaryNpc) }) }),
         ...(secondaryNpc ? [
-          fetch('/api/gemini', { method:'POST', headers:{'Content-Type':'application/json'},
+          apiFetch('/api/gemini', { method:'POST', headers:{'Content-Type':'application/json'},
             body: JSON.stringify({ uid:user?.uid??null, temperature:0.85,
               prompt: buildNpcPrompt(secondaryNpc, true) }) })
         ] : []),
@@ -447,7 +448,7 @@ Reply as ${npc.name} in ${targetLang}:`;
     }
 
     try {
-      const res = await fetch('/api/gemini', { method:'POST', headers:{'Content-Type':'application/json'},
+      const res = await apiFetch('/api/gemini', { method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ uid:user?.uid??null, temperature:0.4,
           prompt:`Analyse this language learning conversation. Reply in ${nativeLang}. Return ONLY JSON:\n{"strongPoints":["s1","s2"],"improvements":["i1","i2"],"overallFeedback":"2-3 sentences in ${nativeLang}"}\nConversation:\n${historyRef.current.map(m=>(m.npcId==='user'?'Learner':'NPC')+': '+m.content).join('\n')}` })      });
       const data = await res.json();

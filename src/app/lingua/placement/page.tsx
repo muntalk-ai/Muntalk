@@ -1,4 +1,5 @@
 'use client';
+import { apiFetch } from '@/lib/apiClient';
 
 import { useState, useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -164,7 +165,7 @@ function PlacementInner() {
       // 2️⃣ 사전 생성 없으면 Gemini 실시간 생성
       if (!qs) {
         console.log(`[placement] 🤖 Generating with Gemini for ${learnLang}...`);
-        const res = await fetch('/api/gemini', {
+        const res = await apiFetch('/api/gemini', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

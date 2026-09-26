@@ -1,4 +1,5 @@
 'use client';
+import { apiFetch } from '@/lib/apiClient';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
@@ -144,7 +145,7 @@ export default function AgoraPage() {
   const translateMsg = useCallback(async (msgIdx: number, text: string) => {
     setTranslating(msgIdx);
     try {
-      const res = await fetch('/api/gemini', {
+      const res = await apiFetch('/api/gemini', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           uid: user?.uid ?? null, temperature: 0.1,
@@ -186,7 +187,7 @@ export default function AgoraPage() {
     const history = messages.slice(-10).map(m => `${m.role === 'user' ? 'user' : 'assistant'}: ${m.text}`).join('\n');
 
     try {
-      const res = await fetch('/api/gemini', {
+      const res = await apiFetch('/api/gemini', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           uid: user?.uid ?? null, temperature: 0.8,

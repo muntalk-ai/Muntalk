@@ -1,4 +1,5 @@
 ﻿'use client';
+import { apiFetch } from '@/lib/apiClient';
 
 import { useEffect, useState, useRef, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
@@ -18,7 +19,7 @@ interface ChatMessage  { role: 'user' | 'tutor'; text: string; }
 type Phase = 'vocab' | 'quiz' | 'chat' | 'complete';
 
 async function callGemini(prompt: string, temperature = 0.7): Promise<string> {
-  const res = await fetch('/api/gemini', {
+  const res = await apiFetch('/api/gemini', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ prompt, temperature }),
   });
@@ -98,7 +99,7 @@ function WordLessonContent() {
     stopAudio();
     setIsSpeaking(true);
     try {
-      const res = await fetch('/api/tts', {
+      const res = await apiFetch('/api/tts', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text, lang, gender: tutor.gender, level: 'a1' }),
       });
