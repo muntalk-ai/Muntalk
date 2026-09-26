@@ -25,6 +25,8 @@ function validateBulkTranslation(parsed: any, lsn: { vocab?: any[]; quiz?: any[]
   for (let i = 0; i < parsed.vocab.length; i++) {
     const v = parsed.vocab[i];
     if (!v || !v.word || !v.meaning || !v.example) return `vocab[${i}] missing word/meaning/example`;
+    if (!v.exampleKo) return `vocab[${i}] missing exampleKo`;
+    if (!v.phonetic) return `vocab[${i}] missing phonetic`;
   }
   if (!Array.isArray(parsed.quiz) || parsed.quiz.length !== baseQuiz.length) {
     return `quiz length mismatch (got ${Array.isArray(parsed.quiz) ? parsed.quiz.length : 'n/a'}, expected ${baseQuiz.length})`;
@@ -34,6 +36,10 @@ function validateBulkTranslation(parsed: any, lsn: { vocab?: any[]; quiz?: any[]
     if (!q || !q.q || !Array.isArray(q.options) || q.options.length < 2) return `quiz[${i}] missing q/options`;
     if (!Number.isInteger(q.answer) || q.answer < 0 || q.answer >= q.options.length) {
       return `quiz[${i}] answer index out of range (${q.answer})`;
+    }
+    // answerText must equal the correct option — catches silent option reordering
+    if (!q.answerText || q.options[q.answer] !== q.answerText) {
+      return `quiz[${i}] answer/answerText mismatch`;
     }
   }
   return null;
@@ -297,25 +303,30 @@ export default function LessonPlayer({
     function callGeminiFallback(lsn: typeof lesson, targetLang: string, nativeLang: string, attempt = 0) {
       // Slim payload — exclude tutorPrompt to reduce token count ~40%
       // NOTE: example is included so the model TRANSLATES it (never invents a new one)
+      // topic is included so discourse markers/connectors can be disambiguated by context
       const vocabOnly = (lsn!.vocab || []).map((v: any) => ({ word: v.word, meaning: v.meaning, example: v.example }));
       const quizOnly  = (lsn!.quiz  || []).map((q: any) => ({ q: q.q, options: q.options, answer: q.answer }));
-      const lessonPayload = { vocab: vocabOnly, quiz: quizOnly };
+      const lessonPayload = { topic: (lsn as any)?.title || '', vocab: vocabOnly, quiz: quizOnly };
       const prompt = `Translate this lesson to ${targetLang}. Student speaks ${nativeLang}.
 
 Input: ${JSON.stringify(lessonPayload)}
 
 Return ONLY valid JSON, no markdown, no explanation:
-{"vocab":[{"word":"TARGET_WORD","phonetic":"PRONUNCIATION","meaning":"NATIVE_GLOSS","example":"TARGET_SENTENCE","exampleKo":"NATIVE_TRANSLATION"}],"quiz":[{"q":"NATIVE_QUESTION","options":["TARGET_OPTION"],"answer":INDEX}]}
+{"vocab":[{"word":"TARGET_WORD","phonetic":"PRONUNCIATION","meaning":"NATIVE_GLOSS","example":"TARGET_SENTENCE","exampleKo":"NATIVE_TRANSLATION"}],"quiz":[{"q":"NATIVE_QUESTION","options":["TARGET_OPTION"],"answer":INDEX,"answerText":"TARGET_CORRECT_OPTION_TEXT"}]}
 
 Rules:
 - vocab[i].word: the word/expression translated into ${targetLang}
 - vocab[i].phonetic: pronunciation guide a ${nativeLang} speaker can read aloud. If ${nativeLang} is Korean, use Hangul-style notation (e.g. "봉주르"); otherwise simple romanization.
-- vocab[i].meaning: 1-3 word gloss of the TARGET expression itself in ${nativeLang}. Do NOT translate the usage note from the input — give what the expression actually means (e.g. Korean "~인 것 같다" for "Il semblerait que").
+- vocab[i].meaning: 1-3 word gloss of the TARGET expression itself in ${nativeLang}. Do NOT translate the usage note from the input — give what the expression actually means (e.g. Korean "~인 것 같다" for "Il semblerait que"). When the expression carries register or pragmatic nuance, append a tag in ${nativeLang} (e.g. Korean "[격식]", "[비격식]", "[문어체]", "[구어]", "[빈정]", "[반어]", "[완곡]").
+- Idioms: NEVER translate an idiom literally. If ${targetLang} has an equivalent idiom, use it; otherwise translate the actual meaning explanatorily (e.g. "kick the can down the road" must become "문제를 뒤로 미루다"-style meaning, never a literal kick/can rendering).
+- Discourse markers / connectors (e.g. "Nevertheless", "That said", "What is more", "Notwithstanding"): use the lesson topic to choose the nuance that fits the context — do not default to one generic translation for every lesson.
+- Grammar with no ${targetLang} equivalent (e.g. English inversion "Were it not for…", "Should you need…"): keep the original structure, translate the sentence naturally, and add a short grammar note in ${nativeLang} inside the meaning field (in parentheses) explaining the structure and the natural ${targetLang} equivalent.
 - vocab[i].example: translate the GIVEN example sentence into ${targetLang}, keeping the same meaning. Do NOT invent a new sentence.
 - vocab[i].exampleKo: translation of the example sentence into ${nativeLang}
 - quiz[i].q: question in ${nativeLang}
 - quiz[i].options: answer choices in ${targetLang}
 - quiz[i].answer: integer index (0-based) of the correct option
+- quiz[i].answerText: the EXACT text of the correct option (must be identical to options[answer]) — this guards against option reordering
 IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
 
       fetch('/api/gemini', {
