@@ -4,6 +4,8 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { getUserProfile } from '@/lib/userProfile';
+import { purposePromptBlock, isLearningPurpose } from '@/lib/purpose';
+import type { LearningPurpose } from '@/lib/purpose';
 import { getTutorById } from '@/data/tutors';
 import { CURRICULUM } from '@/data/curriculum';
 
@@ -30,6 +32,7 @@ interface LearnerSnapshot {
   recentLessons: { title: string; level: string }[];
   weakAreas: string[];
   tutorId: string;
+  purpose?: LearningPurpose; // B-11: 학습 목적 (미설정 시 프롬프트 주입 생략)
 }
 
 // ── Language label map ────────────────────────────────────────────────────────
@@ -188,12 +191,16 @@ export default function CoachPage() {
 
       let name = '학습자';
       let firestoreDone: string[] = [];
+      let purpose: LearningPurpose | undefined;
+      const storedPurpose = localStorage.getItem('mt_purpose');
+      if (isLearningPurpose(storedPurpose)) purpose = storedPurpose;
 
       if (user) {
         try {
           const p = await getUserProfile(user.uid);
           if (p?.displayName) name = p.displayName;
           if (p?.completedLessons) firestoreDone = p.completedLessons;
+          if (isLearningPurpose(p?.purpose)) purpose = p!.purpose; // Firestore 우선
         } catch {}
       }
 
@@ -247,6 +254,7 @@ export default function CoachPage() {
         recentLessons,
         weakAreas,
         tutorId,
+        purpose,
       };
 
       setSnapshot(snap);
@@ -319,6 +327,7 @@ export default function CoachPage() {
 - 연속 학습: ${snap.streak}일
 - 최근 학습: ${snap.recentLessons.map(r => `${r.level} ${r.title}`).join(', ') || '없음'}
 - 취약 영역: ${snap.weakAreas.join(', ') || '분석 중'}
+${purposePromptBlock(snap.purpose) ? `- 학습 목적 적응: ${purposePromptBlock(snap.purpose)}` : ''}
 
 규칙:
 - 반드시 ${snap.nativeLangLabel}로만 대화

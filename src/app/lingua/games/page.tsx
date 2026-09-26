@@ -6,6 +6,8 @@ import { useAuth } from '@/context/AuthContext';
 import { updateUserProfile, getUserProfile } from '@/lib/userProfile';
 import { addWeeklyXp, ensureLeague } from '@/lib/league';
 import { CURRICULUM } from '@/data/curriculum';
+import { pickDistractorMeanings } from '@/lib/vocabDistractors';
+import WrongAnswerModal, { type WrongAnswerInfo } from '@/components/WrongAnswerModal';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -290,6 +292,7 @@ function MatchGame({ difficulty, onBack, addXP, gameColor }:
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
   const [attempts, setAttempts] = useState(0);
+  const [wrongInfo, setWrongInfo] = useState<WrongAnswerInfo | null>(null); // B-6
 
   useEffect(() => {
     const wordCards = pairs.map((p,i) => ({ id:`w${i}`, text:p.word, type:'word' as const, matched:false, pairIdx:i }));
@@ -317,12 +320,24 @@ function MatchGame({ difficulty, onBack, addXP, gameColor }:
     } else {
       // Wrong
       setWrong([selected, id]);
+      // B-6: 오답 해설 모달 — 잘못 짝지은 단어·의미 표시
+      const wordCard = selCard.type === 'word' ? selCard : (card.type === 'word' ? card : null);
+      const meaningCard = selCard.type === 'meaning' ? selCard : (card.type === 'meaning' ? card : null);
+      if (wordCard && meaningCard) {
+        const pair = pairs[wordCard.pairIdx];
+        setWrongInfo({
+          word: wordCard.text,
+          wrongText: meaningCard.text,
+          correctText: pair.meaning,
+          example: pair.example,
+        });
+      }
       setTimeout(() => { setWrong([]); setSelected(null); }, 700);
     }
   };
 
   if (done) return <GameResult score={score} total={pairs.length} xp={score*10} color={gameColor}
-    subtitle={`${attempts} attempts`} onBack={onBack} onRetry={()=>{ setScore(0);setAttempts(0);setDone(false);setSelected(null);
+    subtitle={`${attempts} attempts`} onBack={onBack} onRetry={()=>{ setScore(0);setAttempts(0);setDone(false);setSelected(null);setWrongInfo(null);
       const wc = pairs.map((p,i)=>({id:`w${i}`,text:p.word,type:'word' as const,matched:false,pairIdx:i}));
       const mc = pairs.map((p,i)=>({id:`m${i}`,text:p.meaning,type:'meaning' as const,matched:false,pairIdx:i}));
       setCards(shuffle([...wc,...mc])); }}/>;
@@ -358,6 +373,9 @@ function MatchGame({ difficulty, onBack, addXP, gameColor }:
           })}
         </div>
       </div>
+
+      {/* B-6: 오답 해설 모달 */}
+      {wrongInfo && <WrongAnswerModal info={wrongInfo} onClose={() => setWrongInfo(null)}/>}
     </div>
   );
 }
@@ -377,12 +395,14 @@ function VanishGame({ difficulty, onBack, addXP, gameColor }:
   const [score,setScore]   = useState(0);
   const [done,setDone]     = useState(false);
   const [options,setOptions] = useState<string[]>([]);
+  const [wrongInfo, setWrongInfo] = useState<WrongAnswerInfo | null>(null); // B-6
   const timerRef = useRef<NodeJS.Timeout|null>(null);
 
   const buildOptions = useCallback((currentIdx: number) => {
     if (currentIdx >= vocab.length) return;
     const correct = vocab[currentIdx].meaning;
-    const others  = shuffle(vocab.filter((_,i)=>i!==currentIdx)).slice(0,3).map(v=>v.meaning);
+    // B-5: 의미 유사군 오답 — 토큰 오버랩 휴리스틱 (Gemini 호출 없음)
+    const others = pickDistractorMeanings(vocab, currentIdx, 3);
     setOptions(shuffle([correct, ...others]));
   }, [vocab]);
 
@@ -413,19 +433,29 @@ function VanishGame({ difficulty, onBack, addXP, gameColor }:
       setScore(s=>s+1);
       const bonus = timer >= 7 ? 15 : timer >= 4 ? 10 : 5;
       addXP(bonus);
+      setTimeout(advance, 1000);
+    } else {
+      // B-6: 오답 해설 모달 표시 — 닫으면 다음 문제로 진행
+      setWrongInfo({
+        word: vocab[idx].word,
+        wrongText: optIdx >= 0 ? options[optIdx] : '시간 초과 — 답을 고르지 못했어요',
+        correctText: vocab[idx].meaning,
+        example: vocab[idx].example,
+      });
     }
-    setTimeout(() => {
-      if (idx+1 >= vocab.length) { setDone(true); return; }
-      setIdx(i=>i+1);
-      setTimer(10);
-      setSelected(null);
-      setAnswered(false);
-      buildOptions(idx+1);
-    }, 1000);
+  };
+
+  const advance = () => {
+    if (idx+1 >= vocab.length) { setDone(true); return; }
+    setIdx(i=>i+1);
+    setTimer(10);
+    setSelected(null);
+    setAnswered(false);
+    buildOptions(idx+1);
   };
 
   if (done) return <GameResult score={score} total={vocab.length} xp={score*10} color={gameColor}
-    onBack={onBack} onRetry={()=>{ setIdx(0);setScore(0);setDone(false);setTimer(10);setSelected(null);setAnswered(false);buildOptions(0); }}/>;
+    onBack={onBack} onRetry={()=>{ setIdx(0);setScore(0);setDone(false);setTimer(10);setSelected(null);setAnswered(false);setWrongInfo(null);buildOptions(0); }}/>;
 
   const timerPct = (timer/10)*100;
   const timerColor = timer>6?'#10B981':timer>3?'#F59E0B':'#EF4444';
@@ -482,6 +512,9 @@ function VanishGame({ difficulty, onBack, addXP, gameColor }:
           })}
         </div>
       </div>
+
+      {/* B-6: 오답 해설 모달 */}
+      {wrongInfo && <WrongAnswerModal info={wrongInfo} onClose={() => { setWrongInfo(null); advance(); }}/>}
     </div>
   );
 }
@@ -504,6 +537,7 @@ function BlitzGame({ difficulty, onBack, addXP, gameColor }:
   const [flash,setFlash]   = useState<'correct'|'wrong'|null>(null);
   const [showMeaning, setShowMeaning] = useState(true); // true=correct, false=fake
   const [fakeMeaning, setFakeMeaning] = useState('');
+  const [wrongInfo, setWrongInfo] = useState<WrongAnswerInfo | null>(null); // B-6
   const timerRef = useRef<NodeJS.Timeout|null>(null);
 
   const nextCard = useCallback((currentIdx: number) => {
@@ -534,10 +568,10 @@ function BlitzGame({ difficulty, onBack, addXP, gameColor }:
       setTimer(t => {
         if (t <= 1) {
           clearInterval(timerRef.current!);
-          // time out = wrong
+          // time out = wrong → B-6 오답 해설 모달
           setWrong(w=>w+1); setCombo(0);
           setFlash('wrong');
-          setTimeout(() => { setFlash(null); setIdx(i=>{ nextCard(i+1); return i+1; }); }, 400);
+          showWrongModal('timeout');
           return 0;
         }
         return t-1;
@@ -556,19 +590,40 @@ function BlitzGame({ difficulty, onBack, addXP, gameColor }:
       const pts = newCombo>=3 ? 15 : newCombo>=2 ? 10 : 5;
       setScore(s=>s+1); addXP(pts);
       setFlash('correct');
+      setTimeout(advance, 400);
     } else {
+      // B-6: 오답 해설 모달 표시 — 닫으면 다음 카드로
       setCombo(0); setWrong(w=>w+1);
       setFlash('wrong');
+      showWrongModal('answer', saysTrue);
     }
-    setTimeout(() => {
-      setFlash(null);
-      setIdx(i=>{ nextCard(i+1); return i+1; });
-    }, 400);
   };
+
+  // B-6: 오답 모달 정보 생성
+  const showWrongModal = (kind: 'timeout' | 'answer', saysTrue?: boolean) => {
+    const w = vocab[Math.min(idx, vocab.length - 1)];
+    if (!w) return;
+    let wrongText: string;
+    if (kind === 'timeout') {
+      wrongText = '시간 초과 — 답을 고르지 못했어요';
+    } else if (showMeaning) {
+      wrongText = 'You said FALSE — but this meaning was correct';
+    } else {
+      wrongText = `You said TRUE — but "${fakeMeaning}" was a fake meaning`;
+    }
+    setWrongInfo({ word: w.word, wrongText, correctText: w.meaning, example: w.example });
+  };
+
+  const advance = () => {
+    setFlash(null);
+    setIdx(i=>{ nextCard(i+1); return i+1; });
+  };
+
+  const closeWrongModal = () => { setWrongInfo(null); advance(); };
 
   if (done) return <GameResult score={score} total={idx} xp={score*7} color={gameColor}
     subtitle={`Best combo: ${maxCombo} 🔥`}
-    onBack={onBack} onRetry={()=>{ setIdx(0);setScore(0);setWrong(0);setCombo(0);setMaxCombo(0);setDone(false);nextCard(0); }}/>;
+    onBack={onBack} onRetry={()=>{ setIdx(0);setScore(0);setWrong(0);setCombo(0);setMaxCombo(0);setDone(false);setWrongInfo(null);nextCard(0); }}/>;
 
   const word = vocab[Math.min(idx, vocab.length-1)];
   const displayMeaning = showMeaning ? word?.meaning : fakeMeaning;
@@ -631,6 +686,9 @@ function BlitzGame({ difficulty, onBack, addXP, gameColor }:
           3 in a row → Bonus XP 🎯
         </div>
       </div>
+
+      {/* B-6: 오답 해설 모달 */}
+      {wrongInfo && <WrongAnswerModal info={wrongInfo} onClose={closeWrongModal}/>}
     </div>
   );
 }

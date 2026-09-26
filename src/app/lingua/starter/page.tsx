@@ -4,6 +4,9 @@ import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { getTutorForLang } from '@/data/tutors';
+import { updateUserProfile } from '@/lib/userProfile';
+import { PURPOSE_OPTIONS, purposePromptBlock, mapTrackToPurpose, isLearningPurpose } from '@/lib/purpose';
+import type { LearningPurpose } from '@/lib/purpose';
 
 // ─── Unit Data ───────────────────────────────────────────────────────────────
 const UNITS = [
@@ -79,7 +82,7 @@ const UNITS = [
   ]},
 ];
 
-type Phase = 'lobby' | 'learn' | 'listen' | 'match' | 'speak' | 'chat' | 'complete';
+type Phase = 'goal' | 'lobby' | 'learn' | 'listen' | 'match' | 'speak' | 'chat' | 'complete';
 type Word = { word: string; emoji: string; phonetic: string };
 type TranslatedUnit = { word: string; emoji: string; phonetic: string; original: string }[];
 
@@ -87,7 +90,7 @@ type TranslatedUnit = { word: string; emoji: string; phonetic: string; original:
 function StarterContent() {
   const router = useRouter();
   const params = useSearchParams();
-  const { user } = useAuth();
+  const { user, profile, loading: authLoading, refreshProfile } = useAuth();
 
   const [phase, setPhase]         = useState<Phase>('lobby');
   const [unitIdx, setUnitIdx]     = useState(0);
@@ -128,6 +131,47 @@ function StarterContent() {
   // XP
   const [xp, setXp]       = useState(0);
   const [xpPop, setXpPop] = useState(false);
+
+  // ── B-11 학습 목적 (Goal) ──────────────────────────────────────────────────
+  // profile.purpose (Firestore) > localStorage 'mt_purpose' 순으로 확인.
+  // 게스트도 localStorage로 동작.
+  const [purpose, setPurpose] = useState<LearningPurpose | undefined>(() => {
+    if (typeof window !== 'undefined') {
+      const s = localStorage.getItem('mt_purpose');
+      if (isLearningPurpose(s)) return s;
+    }
+    return undefined;
+  });
+  const goalInit = useRef(false);
+
+  // 첫 진입 시: 목적 미설정이면 'goal' phase 먼저 표시
+  useEffect(() => {
+    if (goalInit.current || authLoading) return;
+    goalInit.current = true;
+    const profPurpose = isLearningPurpose(profile?.purpose) ? profile!.purpose : undefined;
+    if (profPurpose && !purpose) setPurpose(profPurpose);
+    const stored = typeof window !== 'undefined' ? localStorage.getItem('mt_purpose') : null;
+    const hasPurpose = profPurpose || isLearningPurpose(stored);
+    if (!hasPurpose) setPhase('goal');
+  }, [authLoading, profile]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Placement 이수자: placementTrack → 목적 자동 매핑 제안 (강제 저장 아님)
+  const suggestedPurpose = mapTrackToPurpose(profile?.placementTrack);
+
+  const selectPurpose = useCallback(async (p: LearningPurpose | null) => {
+    const today = new Date().toISOString().slice(0, 10);
+    if (p) {
+      setPurpose(p);
+      try { localStorage.setItem('mt_purpose', p); } catch {}
+      try {
+        if (user?.uid) {
+          await updateUserProfile(user.uid, { purpose: p, purposeSetAt: today });
+          await refreshProfile();
+        }
+      } catch {}
+    }
+    setPhase('lobby');
+  }, [user, refreshProfile]);
 
   const audioRef   = useRef<HTMLAudioElement|null>(null);
   const chatEndRef = useRef<HTMLDivElement>(null);
@@ -432,10 +476,11 @@ Rules:
     const targetLangName = LANG_NAMES[langId] || langId.split('-')[0];
     const nativeLangName = LANG_NAMES[subLang] || 'English';
     const isEnglishTarget = langId.startsWith('en');
+    const purposeBlock = purposePromptBlock(purpose);
     const prompt = `You are a warm and encouraging tutor for a complete beginner.
 The student just learned these ${targetLangName} words: ${unitWords}
 Unit topic: "${unit.title}"
-
+${purposeBlock ? purposeBlock + '\n' : ''}
 LANGUAGE RULES:
 - If the student's native language (${nativeLangName}) is different from ${targetLangName}: write your message FIRST in ${targetLangName}, then add a short translation in ${nativeLangName} in parentheses
 - If both are the same language: use only ${targetLangName}
@@ -448,7 +493,7 @@ LANGUAGE RULES:
     speak(text);
     setChatLoading(false);
     setChatStarted(true);
-  }, [words, unit, langId, callGemini, speak]);
+  }, [words, unit, langId, callGemini, speak, purpose]);
 
   const handleChatSend = useCallback(async () => {
     if (!chatInput.trim() || chatLoading) return;
@@ -470,9 +515,10 @@ LANGUAGE RULES:
     };
     const tLang = CHAT_LANG_NAMES[langId] || langId.split('-')[0];
     const nLang = CHAT_LANG_NAMES[subLang] || 'English';
+    const followPurposeBlock = purposePromptBlock(purpose);
     const prompt = `You are a warm tutor for a COMPLETE BEGINNER learning their very first ${tLang} words.
 Known ${tLang} words: ${unitWords}
-Conversation so far:
+${followPurposeBlock ? followPurposeBlock + '\n' : ''}Conversation so far:
 ${history}
 
 LANGUAGE RULES:
@@ -491,7 +537,7 @@ LANGUAGE RULES:
     if (chatMsgs.length >= 3) {
       setTimeout(() => setPhase('complete'), 3000);
     }
-  }, [chatInput, chatLoading, chatMsgs, words, callGemini, speak]);
+  }, [chatInput, chatLoading, chatMsgs, words, callGemini, speak, purpose]);
 
   const finishUnit = useCallback(() => {
     if (unitIdx + 1 >= UNITS.length) {
@@ -515,6 +561,59 @@ LANGUAGE RULES:
     fontFamily: "'Nunito',sans-serif", fontWeight: 900,
     borderRadius: 18, transition: 'all .15s',
   };
+
+  // ── GOAL (B-11: 학습 목적 선택) ─────────────────────────────────────────────
+  if (phase === 'goal') return (
+    <div style={{ minHeight: '100vh', background: BG, fontFamily: "'Nunito',sans-serif",
+      display: 'flex', flexDirection: 'column', alignItems: 'center',
+      justifyContent: 'center', padding: 24 }}>
+      <style dangerouslySetInnerHTML={{ __html: `
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
+        @keyframes pop { 0%{transform:scale(0.8);opacity:0} 50%{transform:scale(1.2)} 100%{transform:scale(1);opacity:1} }
+      `}} />
+
+      <div style={{ fontSize: 52, marginBottom: 12, animation: 'pop .5s' }}>🎯</div>
+      <h1 style={{ fontSize: 30, fontWeight: 900, color: '#1E293B',
+        margin: '0 0 8px', textAlign: 'center' }}>
+        What brings you here?
+      </h1>
+      <p style={{ fontSize: 15, color: '#64748B', fontWeight: 600,
+        margin: '0 0 28px', textAlign: 'center', maxWidth: 320 }}>
+        Pick a goal — your AI tutor will match your expressions to it.
+      </p>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr',
+        gap: 12, maxWidth: 360, width: '100%' }}>
+        {PURPOSE_OPTIONS.map(opt => (
+          <button key={opt.id}
+            onClick={() => selectPurpose(opt.id)}
+            style={{ ...btnBase, position: 'relative', padding: '20px 12px',
+              background: 'white', color: '#1E293B',
+              boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
+              border: suggestedPurpose === opt.id ? `2px solid ${ACCENT}` : '2px solid transparent',
+              display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+            {suggestedPurpose === opt.id && (
+              <span style={{ position: 'absolute', top: -11, fontSize: 10,
+                fontWeight: 800, color: 'white', background: ACCENT,
+                borderRadius: 99, padding: '2px 10px' }}>
+                Suggested
+              </span>
+            )}
+            <span style={{ fontSize: 34 }}>{opt.emoji}</span>
+            <span style={{ fontSize: 15 }}>{opt.label}</span>
+            <span style={{ fontSize: 11, color: '#94A3B8', fontWeight: 700,
+              lineHeight: 1.4 }}>{opt.desc}</span>
+          </button>
+        ))}
+      </div>
+
+      <button onClick={() => selectPurpose(null)}
+        style={{ ...btnBase, marginTop: 28, padding: '10px 24px',
+          background: 'transparent', color: '#94A3B8', fontSize: 14 }}>
+        Skip for now
+      </button>
+    </div>
+  );
 
   // ── LOBBY ───────────────────────────────────────────────────────────────────
   if (phase === 'lobby') return (

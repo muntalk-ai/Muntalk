@@ -9,6 +9,8 @@ import { getSubscription, isAdminEmail } from '@/lib/subscription';
 import { truncateHistory } from '@/lib/history';
 import PaywallModal from '@/components/PaywallModal';
 import { getLangLabel } from '@/data/languages';
+import { purposePromptBlock, isLearningPurpose } from '@/lib/purpose';
+import type { LearningPurpose } from '@/lib/purpose';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -125,6 +127,11 @@ function DiscoverContent() {
   const [sessionId,  setSessionId]  = useState(''); // for mirror/story state
   const [mirrorDone, setMirrorDone] = useState(false);
   const [storyText,  setStoryText]  = useState('');
+  // B-11: 학습 목적 (localStorage → profile 순)
+  const [purpose, setPurpose] = useState<LearningPurpose | undefined>(() => {
+    const s = typeof window !== 'undefined' ? localStorage.getItem('mt_purpose') : null;
+    return isLearningPurpose(s) ? s : undefined;
+  });
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isListening,setIsListening]= useState(false);
   const [translating,setTranslating]= useState<number|null>(null);
@@ -144,6 +151,7 @@ function DiscoverContent() {
         if (p?.learnLang) setLangId(p.learnLang);
         if (p?.nativeLang) setSubLang(p.nativeLang);
         if (p?.tutorId) setTutorId(p.tutorId);
+        if (isLearningPurpose(p?.purpose)) setPurpose(p!.purpose); // B-11
       });
       // Check plan
       getSubscription(user.uid).then(sub => {
@@ -354,7 +362,9 @@ function DiscoverContent() {
         const ch = CHANNEL_DATA.find(c=>c.id===channelId);
         const topics = ch?.topics || [];
         const topic = topics[Math.floor(Math.random()*topics.length)];
-        return `You are ${t.name}, having a real conversation about ${ch?.label}. Respond in ${lang}. The topic is "${topic}" — restate it naturally in ${lang} (translate it, do NOT quote the English), then make it personal and direct. Have a strong opinion. Ask the user theirs. 2-3 sentences.`;
+        // B-11: 학습 목적 반영 — 토픽을 목적 맥락에 맞춰 개인화
+        const _pb = purposePromptBlock(purpose);
+        return `You are ${t.name}, having a real conversation about ${ch?.label}. Respond in ${lang}. The topic is "${topic}" — restate it naturally in ${lang} (translate it, do NOT quote the English), then make it personal and direct. Have a strong opinion. Ask the user theirs. 2-3 sentences.${_pb ? ` ${_pb}` : ''}`;
       }
       case 'character': {
         const p = CHARACTER_PERSONAS[dayIdx % CHARACTER_PERSONAS.length];

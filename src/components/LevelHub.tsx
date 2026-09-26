@@ -5,6 +5,8 @@ import { signOut } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
 import { updateUserProfile } from '@/lib/userProfile';
+import { PURPOSE_OPTIONS, PURPOSE_LABEL, isLearningPurpose } from '@/lib/purpose';
+import type { LearningPurpose } from '@/lib/purpose';
 import { CURRICULUM, getCurrentLevel } from '@/data/curriculum';
 import { LEARN_LANGUAGES, UI_LANGUAGES } from '@/data/languages';
 import { getSubscription, getHearts, getLocalHearts, isLevelLocked, isAdminEmail, PlanId, Hearts } from '@/lib/subscription';
@@ -103,6 +105,32 @@ export default function LevelHub() {
     if (authLoading || user) return;
     getTestimonials(6).then(setTestimonials).catch(() => setTestimonials([]));
   }, [authLoading, user]);
+
+  // -- B-11: 기존 유저 1회성 학습 목적 배너 ---------------------------------------
+  const [purposeBannerOpen, setPurposeBannerOpen] = useState(false);
+  useEffect(() => {
+    if (authLoading || !user) return;
+    let asked = false;
+    try { asked = localStorage.getItem('mt_purpose_asked') === '1'; } catch {}
+    if (!asked && !isLearningPurpose(profile?.purpose)) setPurposeBannerOpen(true);
+  }, [authLoading, user, profile]);
+  const dismissPurposeBanner = () => {
+    try { localStorage.setItem('mt_purpose_asked', '1'); } catch {}
+    setPurposeBannerOpen(false);
+  };
+  const chooseBannerPurpose = async (p: LearningPurpose) => {
+    const today = new Date().toISOString().slice(0, 10);
+    try {
+      localStorage.setItem('mt_purpose', p);
+      localStorage.setItem('mt_purpose_asked', '1');
+      if (user?.uid) {
+        await updateUserProfile(user.uid, { purpose: p, purposeSetAt: today });
+        await refreshProfile();
+      }
+    } catch {}
+    setPurposeBannerOpen(false);
+    setToast(`🎯 Goal set: ${PURPOSE_LABEL[p]} — your AI tutor will adapt!`);
+  };
 
   // -- 스트릭 계산 (게스트용 localStorage 기반) -----------------------------------
   const calcStreak = () => {
@@ -820,6 +848,30 @@ export default function LevelHub() {
                   ? <>Next up: <strong>{nextLesson.lesson.title}</strong> (+{nextLesson.lesson.xp} XP)<br />Today's goal — finish 1 lesson</>
                   : <>All lessons complete! 🎉 Sharpen up with review or AI roleplay.<br />Today's goal — finish 1 lesson</>}
               </p>
+              {/* B-11: 기존 유저 1회성 학습 목적 선택 배너 */}
+              {purposeBannerOpen && (
+                <div style={{ marginTop: 16, background: 'rgba(255,255,255,0.14)',
+                  border: '1px solid rgba(255,255,255,0.35)', borderRadius: 16,
+                  padding: '14px 18px', maxWidth: 520, backdropFilter: 'blur(6px)',
+                  position: 'relative' }}>
+                  <button onClick={dismissPurposeBanner} aria-label="Dismiss"
+                    style={{ position: 'absolute', top: 8, right: 10, background: 'none',
+                      border: 'none', color: 'rgba(255,255,255,0.7)', fontSize: 16, cursor: 'pointer' }}>✕</button>
+                  <div style={{ fontSize: 14, fontWeight: 800, color: '#fff', marginBottom: 10 }}>
+                    🎯 What's your learning goal? Your AI tutor will adapt.
+                  </div>
+                  <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                    {PURPOSE_OPTIONS.map(opt => (
+                      <button key={opt.id} onClick={() => chooseBannerPurpose(opt.id)}
+                        style={{ border: '1px solid rgba(255,255,255,0.45)', borderRadius: 99,
+                          background: 'rgba(255,255,255,0.12)', color: '#fff',
+                          padding: '7px 14px', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
+                        {opt.emoji} {opt.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
               <div style={styles.heroBtnRow}>
                 {nextLesson ? (
                   <button style={{ ...styles.heroBtn1, fontSize: 16, padding: '15px 36px' }}
