@@ -133,7 +133,7 @@ export default function LessonPlayer({
 
   // -- Trial timer -------------------------------------------------------------
   const [trialExpired, setTrialExpired]   = useState(false);
-  const [trialExpireReason, setTrialExpireReason] = useState<'expired'|'lesson_limit'|'chat_limit'>('expired');
+  const [trialExpireReason, setTrialExpireReason] = useState<'expired'|'lesson_limit'|'chat_limit'|'check_failed'>('expired');
 
   // -- Video / Speech ----------------------------------------------------------
   const [isSpeaking,   setIsSpeaking]   = useState(false);
@@ -173,26 +173,47 @@ export default function LessonPlayer({
   }, [langId]);
 
   // -- Init trial status (7일 정책 기반) --------------------------------------
-  useEffect(() => {
+  // PR-H: fail-closed — Firestore 조회 실패 시 무제한 허용하지 않고,
+  // 1회 재시도 후에도 실패하면 점검 안내 모달 표시 (재시도 가능).
+  const checkTrial = useCallback(async () => {
     if (!user) return; // 게스트는 trial 제한 없음
-    async function checkTrial() {
+    try {
+      // 프리미엄이면 패스
+      if (await isPremium(user!.uid, user?.email)) return;
+      // trial 데이터 읽기 (없으면 자동 생성)
+      let trial = await getTrialData(user!.uid);
+      if (!trial) trial = await initTrial(user!.uid);
+      if (!trial) return;
+      if (isTrialExpired(trial)) {
+        setTrialExpireReason('expired');
+        setTrialExpired(true);
+      }
+    } catch {
+      // 1회 재시도 (순간적인 네트워크 오류 흡수)
+      await new Promise(r => setTimeout(r, 2500));
       try {
-        // 프리미엄이면 패스
         if (await isPremium(user!.uid, user?.email)) return;
-        // trial 데이터 읽기 (없으면 자동 생성)
         let trial = await getTrialData(user!.uid);
         if (!trial) trial = await initTrial(user!.uid);
-        if (!trial) return;
+        if (!trial) {
+          setTrialExpireReason('check_failed');
+          setTrialExpired(true);
+          return;
+        }
         if (isTrialExpired(trial)) {
           setTrialExpireReason('expired');
           setTrialExpired(true);
         }
-      } catch { /* Firestore 오류 시 제한 없이 허용 */ }
+      } catch {
+        setTrialExpireReason('check_failed');
+        setTrialExpired(true);
+      }
     }
-    checkTrial();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user?.uid]);
 
+  useEffect(() => {
+    checkTrial();
+  }, [checkTrial]);
   // -- P1-6: 레슨 진행 상황 저장/복원 -----------------------------------------
   const PROGRESS_KEY = 'mt_lesson_progress';
 
@@ -908,6 +929,7 @@ RULES:
           langFlag={langInfo?.flag}
           langLabel={langInfo?.native || langInfo?.label}
           onClose={() => router.push('/lingua')}
+          onRetry={() => { setTrialExpired(false); checkTrial(); }}
         />
       )}
 

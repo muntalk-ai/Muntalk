@@ -1,14 +1,14 @@
 ﻿'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import LessonPlayer from '@/components/LessonPlayer';
 import CertificateModal from '@/components/CertificateModal';
 import TestimonialPrompt from '@/components/TestimonialPrompt';
 import { useAuth } from '@/context/AuthContext';
 import { updateUserProfile, getUserProfile, recordActivity } from '@/lib/userProfile';
-import { addWeeklyXp, ensureLeague } from '@/lib/league';
 import { addCardToSRS } from '@/lib/spacedRepetition';
 import { checkAndAwardCertificate, Certificate } from '@/lib/certificates';
+import { awardXp } from '@/lib/xpClient';
 
 // 비로그인 허용 레슨 (A1 첫 레슨만)
 const GUEST_ALLOWED_LESSON = 'a1-1-1';
@@ -31,6 +31,8 @@ export default function LessonPage({
   const [tutorId, setTutorId] = useState<string | undefined>(undefined);
   const [earnedCert, setEarnedCert] = useState<Certificate | null>(null);
   const [showTestimonial, setShowTestimonial] = useState(false);
+  // PR-H: 어뷰징 탐지용 레슨 세션 시작 시각
+  const lessonStartRef = useRef<number>(Date.now());
 
   // 비로그인 게스트 접근 제한 — a1-1-1 외 모든 레슨 차단
   useEffect(() => {
@@ -85,16 +87,15 @@ export default function LessonPage({
 
       // Firestore 저장 (로그인 시)
       if (user) {
-        const displayName = user.displayName || 'Learner';
-        const photoURL    = user.photoURL || '';
-
         try {
-          // XP & 완료 레슨 저장 (setDoc merge 방식 — 필드 없어도 안전)
+          // PR-H: XP는 서버 엔드포인트로 지급 — 클라이언트에서 xp 직접 쓰기 금지.
+          // 완료 레슨 목록만 저장 (xp 필드 건드리지 않음).
           await updateUserProfile(user.uid, {
-            xp: next,
             completedLessons: doneParsed,
           });
-          console.log('[lesson] Firestore saved — xp:', next, 'lessons:', doneParsed.length);
+          const sessionSec = Math.max(1, Math.round((Date.now() - lessonStartRef.current) / 1000));
+          await awardXp({ source: 'lesson', xp: xpEarned, sessionSec, meta: { lessonId: lesson } });
+          console.log('[lesson] Firestore saved — lessons:', doneParsed.length);
         } catch (e) {
           console.error('[lesson] Firestore save FAILED:', e);
         }
@@ -105,14 +106,6 @@ export default function LessonPage({
           if (fresh) await recordActivity(user.uid, fresh);
         } catch (e) {
           console.warn('[lesson] recordActivity failed:', e);
-        }
-
-        // 리그 XP (실패해도 레슨에 영향 없음)
-        try {
-          await ensureLeague(user.uid, displayName, photoURL);
-          await addWeeklyXp(user.uid, xpEarned);
-        } catch (e) {
-          console.warn('[lesson] league update failed:', e);
         }
 
         // 프로필 갱신

@@ -16,12 +16,30 @@ service cloud.firestore {
     function onlyAllowedFields(allowed) {
       return request.resource.data.keys().hasOnly(allowed);
     }
+    // ── PR-H: XP 어뷰징 방지 헬퍼 ──
+    // users.xp 가 쓰기 전후 동일한지 (서버 엔드포인트만 변경 가능)
+    function xpUnchanged() {
+      return request.resource.data.xp == resource.data.xp;
+    }
+    // user_leagues 문서의 현재 주간 XP (없으면 0)
+    function leagueXpCap(uid) {
+      return exists(/databases/$(database)/documents/user_leagues/$(uid))
+        ? get(/databases/$(database)/documents/user_leagues/$(uid)).data.weeklyXp
+        : 0;
+    }
 
     // ── users ────────────────────────────────────────────────────
-    // 본인만 읽기/쓰기, 관리자는 읽기만
+    // PR-H: 클라이언트의 xp 직접 쓰기 금지 — 모든 XP 지급은 서버
+    // POST /api/xp/award (Admin SDK) 를 통해서만 이루어진다.
+    //  - create: xp는 0 또는 미설정만 허용
+    //  - update: xp 변경 금지 (변경 시도는 거부)
+    //  - 관리자는 전체 허용 (조사·정정용)
     match /users/{uid} {
-      allow read:  if isOwner(uid) || isAdmin();
-      allow write: if isOwner(uid) || isAdmin();
+      allow read:   if isOwner(uid) || isAdmin();
+      allow create: if (isOwner(uid) || isAdmin())
+        && (!('xp' in request.resource.data) || request.resource.data.xp == 0);
+      allow update: if isAdmin() || (isOwner(uid) && xpUnchanged());
+      allow delete: if isAdmin();
     }
 
     // ── SRS 카드 ──────────────────────────────────────────────────
@@ -58,8 +76,18 @@ service cloud.firestore {
     }
 
     // ── 리그 ──────────────────────────────────────────────────────
+    // PR-H: weeklyXp는 서버 엔드포인트만 증가.
+    //  - create: 0으로만 생성 (ensureLeague 신규 가입 경로)
+    //  - update: 변경 금지, 단 0으로의 리셋(주간 롤오버)은 허용
     match /user_leagues/{uid} {
-      allow read, write: if isOwner(uid);
+      allow read:   if isOwner(uid) || isAdmin();
+      allow create: if (isOwner(uid) || isAdmin())
+        && (!('weeklyXp' in request.resource.data) || request.resource.data.weeklyXp == 0);
+      allow update: if isAdmin() || (isOwner(uid) && (
+        request.resource.data.weeklyXp == resource.data.weeklyXp
+        || request.resource.data.weeklyXp == 0
+      ));
+      allow delete: if isAdmin();
     }
 
     match /leagues/{leagueId} {
@@ -67,9 +95,19 @@ service cloud.firestore {
       allow write: if isAdmin(); // 리그 생성/수정은 관리자만
     }
 
+    // PR-H: 멤버 weeklyXp는 user_leagues 값을 초과할 수 없음
+    // (서버가 양쪽을 함께 증가시키므로, 클라이언트 단독 증가는 차단)
     match /leagues/{leagueId}/members/{uid} {
       allow read:  if isSignedIn();
-      allow write: if isOwner(uid); // 본인 점수만 업데이트 가능
+      allow write: if isOwner(uid)
+        && request.resource.data.weeklyXp <= leagueXpCap(uid);
+    }
+
+    // ── XP 지급 감사 로그 (PR-H 신규) ─────────────────────────────
+    // 서버(Admin SDK)만 기록, 본인은 읽기만 (이벤트 자격 검증·어뷰징 조사용)
+    match /xp_awards/{uid}/awards/{awardId} {
+      allow read:  if isOwner(uid) || isAdmin();
+      allow write: if false; // Admin SDK는 rules를 우회하므로 서버 쓰기 정상 동작
     }
 
     // ── FCM 토큰 ──────────────────────────────────────────────────
@@ -91,6 +129,17 @@ service cloud.firestore {
     // 관리자만 읽기/쓰기 (기존: 모든 인증유저 허용 → 취약점)
     match /admin_logs/{docId} {
       allow read, write: if isAdmin();
+    }
+
+    // ── $100 월간 이벤트 (Phase 2-1 PR-D) ──────────────────────────
+    // 일일 학습 기록: 본인 + 관리자
+    match /users/{uid}/dailyStats/{date} {
+      allow read, write: if isOwner(uid) || isAdmin();
+    }
+    // 월간 이벤트 (추첨/당첨/지급): 관리자 전용 + 당첨자 본인은 읽기 허용 (인앱 배너용)
+    match /cash_events/{monthId} {
+      allow read: if isAdmin() || (isSignedIn() && resource.data.winnerUid == request.auth.uid);
+      allow write: if isAdmin();
     }
 
   }

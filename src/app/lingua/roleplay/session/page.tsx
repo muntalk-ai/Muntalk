@@ -9,11 +9,11 @@ import {
   EVERYDAY_SCENARIOS, WORLD_SCENARIOS, getNativeDesc,
   type NpcCharacter, type StoryBeat,
 } from '@/data/roleplay';
-import { getUserProfile, updateUserProfile, recordActivity } from '@/lib/userProfile';
+import { getUserProfile, recordActivity } from '@/lib/userProfile';
 import { truncateHistory } from '@/lib/history';
 import { purposePromptBlock, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
-import { addWeeklyXp, ensureLeague } from '@/lib/league';
+import { awardXp } from '@/lib/xpClient';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -139,6 +139,8 @@ function SessionContent() {
   const pendingRef = useRef({text:'',gender:'female' as 'male'|'female',npcId:''});
   const sessionXpRef = useRef(0);   // 누적 XP (state 비동기 문제 회피용)
   const xpSavedRef   = useRef(false); // endSession 중복 저장 방지
+  // PR-H: 어뷰징 탐지용 세션 시작 시각
+  const sessionStartRef = useRef<number>(Date.now());
 
   useEffect(() => {
     chatRef.current?.scrollTo({ top:chatRef.current.scrollHeight, behavior:'smooth' });
@@ -203,12 +205,13 @@ function SessionContent() {
     const earned = sessionXpRef.current;
     if (earned <= 0) return;
     try {
-      const profile = await getUserProfile(user.uid);
-      const next = (profile?.xp || 0) + earned;
-      await updateUserProfile(user.uid, { xp: next });
-      console.log('[roleplay] XP saved:', earned, '→ total:', next);
+      // PR-H: XP는 서버 엔드포인트로 지급 — Firestore 직접 쓰기 금지
+      const sessionSec = Math.max(1, Math.round((Date.now() - sessionStartRef.current) / 1000));
+      const scenario = sp.get('scenario') || sp.get('s') || 'unknown';
+      await awardXp({ source: 'roleplay', xp: earned, sessionSec, meta: { scenario } });
+      console.log('[roleplay] XP awarded:', earned);
     } catch (e) {
-      console.warn('[roleplay] XP save FAILED:', e);
+      console.warn('[roleplay] XP award FAILED:', e);
     }
     try {
       const fresh = await getUserProfile(user.uid);
@@ -216,13 +219,7 @@ function SessionContent() {
     } catch (e) {
       console.warn('[roleplay] recordActivity failed:', e);
     }
-    try {
-      await ensureLeague(user.uid, user.displayName || 'Learner', user.photoURL || '');
-      await addWeeklyXp(user.uid, earned);
-    } catch (e) {
-      console.warn('[roleplay] league update failed:', e);
-    }
-  }, [user]);
+  }, [user, sp]);
 
   const addMsg = (m: Omit<Message,'id'|'ts'>): Message => {
     const full: Message = {...m, id:++msgId.current, ts:Date.now()};

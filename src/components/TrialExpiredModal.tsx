@@ -7,13 +7,15 @@
 import { useRouter } from 'next/navigation';
 import { TRIAL_MAX_LANGUAGES, TRIAL_MAX_UNITS, TRIAL_DAILY_CHATS } from '@/lib/trialPolicy';
 
-type Reason = 'expired' | 'language_limit' | 'lesson_limit' | 'chat_limit' | 'level_test_done' | 'premium_only';
+type Reason = 'expired' | 'language_limit' | 'lesson_limit' | 'chat_limit' | 'level_test_done' | 'premium_only' | 'check_failed';
 
 interface Props {
   reason: Reason;
   langFlag?: string;
   langLabel?: string;
   onClose?: () => void;
+  /** PR-H: 연결 확인 실패 시 재시도 콜백 */
+  onRetry?: () => void;
 }
 
 const MESSAGES: Record<Reason, { emoji: string; title: string; body: (langLabel?: string) => string }> = {
@@ -47,11 +49,19 @@ const MESSAGES: Record<Reason, { emoji: string; title: string; body: (langLabel?
     title: 'Premium Feature',
     body: () => 'This feature is available for Premium members.',
   },
+  // PR-H: trial 상태 확인 실패 (fail-closed) — 업셀 없이 재시도만 제공
+  check_failed: {
+    emoji: '🔌',
+    title: 'Connection Issue',
+    body: () => "We couldn't verify your trial status. Check your connection and try again.",
+  },
 };
 
-export default function TrialExpiredModal({ reason, langFlag, langLabel, onClose }: Props) {
+export default function TrialExpiredModal({ reason, langFlag, langLabel, onClose, onRetry }: Props) {
   const router = useRouter();
   const msg = MESSAGES[reason] || MESSAGES.expired;
+  // PR-H: 연결 실패 화면에서는 업셀 UI를 숨기고 재시도만 제공
+  const isCheckFailed = reason === 'check_failed';
 
   return (
     <div style={{
@@ -85,7 +95,7 @@ export default function TrialExpiredModal({ reason, langFlag, langLabel, onClose
         </div>
 
         <div style={{ fontSize: 11, fontWeight: 900, color: '#6366F1', letterSpacing: 2, textTransform: 'uppercase', marginBottom: 8 }}>
-          {reason === 'expired' ? 'Trial Ended' : 'Upgrade Required'}
+          {isCheckFailed ? 'Please Retry' : reason === 'expired' ? 'Trial Ended' : 'Upgrade Required'}
         </div>
         <h2 style={{ fontSize: 22, fontWeight: 900, color: '#fff', margin: '0 0 10px', lineHeight: 1.3 }}>
           {msg.title}
@@ -94,7 +104,8 @@ export default function TrialExpiredModal({ reason, langFlag, langLabel, onClose
           {msg.body(langLabel ? `${langFlag || ''} ${langLabel}` : undefined)}
         </p>
 
-        {/* Feature comparison */}
+        {/* Feature comparison — 연결 실패 시에는 숨김 */}
+        {!isCheckFailed && (
         <div style={{ background: '#1F2937', borderRadius: 14, padding: '16px', marginBottom: 20, textAlign: 'left' }}>
           <div style={{ fontSize: 11, fontWeight: 900, color: '#4B5563', letterSpacing: 1.5, textTransform: 'uppercase', marginBottom: 12 }}>
             Premium includes
@@ -113,13 +124,21 @@ export default function TrialExpiredModal({ reason, langFlag, langLabel, onClose
             </div>
           ))}
         </div>
+        )}
 
         {/* CTAs */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-          <button onClick={() => router.push('/pricing')}
-            style={{ padding: '14px', borderRadius: 12, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 15, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito',sans-serif", boxShadow: '0 6px 20px rgba(99,102,241,0.4)' }}>
-            🚀 Upgrade to Premium
-          </button>
+          {isCheckFailed ? (
+            <button onClick={onRetry}
+              style={{ padding: '14px', borderRadius: 12, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 15, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito',sans-serif", boxShadow: '0 6px 20px rgba(99,102,241,0.4)' }}>
+              🔄 Try Again
+            </button>
+          ) : (
+            <button onClick={() => router.push('/pricing')}
+              style={{ padding: '14px', borderRadius: 12, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 15, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito',sans-serif", boxShadow: '0 6px 20px rgba(99,102,241,0.4)' }}>
+              🚀 Upgrade to Premium
+            </button>
+          )}
           {onClose && (
             <button onClick={onClose}
               style={{ padding: '12px', borderRadius: 12, border: 'none', background: 'transparent', color: '#4B5563', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
@@ -128,9 +147,11 @@ export default function TrialExpiredModal({ reason, langFlag, langLabel, onClose
           )}
         </div>
 
-        <div style={{ marginTop: 16, fontSize: 11, color: '#374151', fontWeight: 700 }}>
-          Cancel anytime · No hidden fees
-        </div>
+        {!isCheckFailed && (
+          <div style={{ marginTop: 16, fontSize: 11, color: '#374151', fontWeight: 700 }}>
+            Cancel anytime · No hidden fees
+          </div>
+        )}
       </div>
     </div>
   );

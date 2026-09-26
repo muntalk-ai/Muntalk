@@ -1,10 +1,9 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { awardXp } from '@/lib/xpClient';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
-import { updateUserProfile, getUserProfile } from '@/lib/userProfile';
-import { addWeeklyXp, ensureLeague } from '@/lib/league';
 import { CURRICULUM } from '@/data/curriculum';
 import { pickDistractorMeanings } from '@/lib/vocabDistractors';
 import WrongAnswerModal, { type WrongAnswerInfo } from '@/components/WrongAnswerModal';
@@ -73,27 +72,38 @@ export default function WordGamesPage() {
 
   // 게임 중 증가분 누적 — 게임 화면을 나갈 때/unmount 시 한 번에 flush
   const pendingXpRef = useRef(0);
+  // PR-H: 어뷰징 탐지용 세션 증거 (게임 시작 시각 + 정답 수)
+  const sessionStartRef = useRef<number>(Date.now());
+  const answersRef = useRef(0);
 
   const flushGameXp = useCallback(async () => {
     const delta = pendingXpRef.current;
     pendingXpRef.current = 0;
     if (!user || delta <= 0) return;
-    try {
-      const profile = await getUserProfile(user.uid);
-      if (profile) await updateUserProfile(user.uid, { xp: profile.xp + delta });
-      await ensureLeague(user.uid, user.displayName || 'Learner', user.photoURL || '');
-      await addWeeklyXp(user.uid, delta);
-    } catch (e) {
-      console.warn('[games] XP flush failed:', e);
-    }
-  }, [user]);
+    // PR-H: XP 지급은 서버 엔드포인트로 — Firestore 직접 쓰기 금지
+    const sessionSec = Math.max(1, Math.round((Date.now() - sessionStartRef.current) / 1000));
+    await awardXp({
+      source: 'games',
+      xp: delta,
+      sessionSec,
+      meta: { gameId: activeGame, answers: answersRef.current },
+    });
+  }, [user, activeGame]);
 
   // 컴포넌트 unmount 시 남은 증가분 flush
   useEffect(() => () => { void flushGameXp(); }, [flushGameXp]);
 
+  // 게임 시작 시 세션 증거 초기화
+  const startGame = () => {
+    sessionStartRef.current = Date.now();
+    answersRef.current = 0;
+    setPlaying(true);
+  };
+
   const addXP = (pts: number) => {
     setXpGained(prev => prev + pts);
     pendingXpRef.current += pts;
+    answersRef.current += 1;
     const stored = parseInt(localStorage.getItem('mt_xp') || '0', 10);
     localStorage.setItem('mt_xp', String(stored + pts));
   };
@@ -161,7 +171,7 @@ export default function WordGamesPage() {
             </div>
           </div>
 
-          <button onClick={() => setPlaying(true)}
+          <button onClick={startGame}
             style={{ ...S.startBtn, background:`linear-gradient(135deg,${game.color},${game.color}cc)`,
               boxShadow:`0 8px 24px ${game.color}40` }}>
             {game.emoji} Start — {lvl.label}
