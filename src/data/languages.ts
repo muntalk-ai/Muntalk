@@ -189,3 +189,9 @@ export function hasStt(code: string): boolean {
 export function hasTts(code: string): boolean {
   return LEARN_LANGUAGES.find(l => l.code === code)?.tts ?? false;
 }
+
+// PR-I: 프롬프트용 언어명 — 전 언어가 보유한 `native` 필드를 직접 사용 (매핑 테이블 불필요).
+// 매핑에 없는 언어는 원시 코드 대신 자국어 표기(예: 'አማርኛ')로 전달되어 저자원 언어 번역 품질 개선.
+export function promptLangName(code: string): string {
+  return [...LEARN_LANGUAGES, ...UI_LANGUAGES].find(l => l.code === code)?.native ?? code;
+}
