@@ -712,6 +712,9 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
     }
     setPronError(null);
     stopAll(); // stop example TTS audio first — playback during STT start can silently kill recognition
+    // If the vocab "word" is a sentence fragment ending in an ellipsis (e.g. "Ma plus grande force est..."),
+    // evaluate against the full example sentence — that's what "Hear example" plays.
+    const pronTarget = /(\.{3}|…)\s*$/.test(vocabItem.word) && vocabItem.example ? vocabItem.example : vocabItem.word;
     const rec = new SR();
     rec.lang = langId;
     rec.continuous = false;
@@ -733,7 +736,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
           body: JSON.stringify({
             uid: user?.uid,
             temperature: 0.3,
-            prompt: `You are a pronunciation coach for ${promptLangName(langId)} learners.\nThe student tried to say: "${vocabItem.word}" (pronunciation guide: ${vocabItem.phonetic || 'n/a'}, meaning: ${vocabItem.meaning}).\nSpeech recognition heard them say: "${transcript}".\nCompare what they said vs the target. Reply in ${promptLangName(subLang) || 'Korean'} with ONLY JSON, no markdown:\n{"score":<0-100>,"heard":"<what you think they actually said>","feedback":"<1-2 sentences: which exact sound was off and how to fix it (e.g. tongue position, sound length). If great, praise briefly and specifically>"}`,
+            prompt: `You are a pronunciation coach for ${promptLangName(langId)} learners.\nThe student tried to say: "${pronTarget}" (pronunciation guide: ${vocabItem.phonetic || 'n/a'}, meaning: ${vocabItem.meaning}).\nSpeech recognition heard them say: "${transcript}".\nCompare what they said vs the target. Reply in ${promptLangName(subLang) || 'Korean'} with ONLY JSON, no markdown:\n{"score":<0-100>,"heard":"<what you think they actually said>","feedback":"<1-2 sentences: which exact sound was off and how to fix it (e.g. tongue position, sound length). If great, praise briefly and specifically>"}`,
           }),
         timeoutMs: AI_TIMEOUT_MS,
       });
