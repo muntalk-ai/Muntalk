@@ -321,7 +321,7 @@ Rules:
 - Idioms: NEVER translate an idiom literally. If ${targetLang} has an equivalent idiom, use it; otherwise translate the actual meaning explanatorily (e.g. "kick the can down the road" must become "문제를 뒤로 미루다"-style meaning, never a literal kick/can rendering).
 - Discourse markers / connectors (e.g. "Nevertheless", "That said", "What is more", "Notwithstanding"): use the lesson topic to choose the nuance that fits the context — do not default to one generic translation for every lesson.
 - Grammar with no ${targetLang} equivalent (e.g. English inversion "Were it not for…", "Should you need…"): keep the original structure, translate the sentence naturally, and add a short grammar note in ${nativeLang} inside the meaning field (in parentheses) explaining the structure and the natural ${targetLang} equivalent.
-- vocab[i].example: translate the GIVEN example sentence into ${targetLang}, keeping the same meaning. Do NOT invent a new sentence.
+- vocab[i].example: translate the GIVEN example sentence into ${targetLang}, keeping the same meaning. Do NOT invent a new sentence. It MUST be written in ${targetLang} — never in ${nativeLang}.
 - vocab[i].exampleKo: translation of the example sentence into ${nativeLang}
 - quiz[i].q: question in ${nativeLang}
 - quiz[i].options: answer choices in ${targetLang}
