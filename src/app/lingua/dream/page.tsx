@@ -6,6 +6,7 @@ import { Suspense } from 'react';
 import { useAuth } from '@/context/AuthContext';
 import { getUserProfile } from '@/lib/userProfile';
 import { getTutorById } from '@/data/tutors';
+import { getLangLabel } from '@/data/languages';
 import { getSubscription, isAdminEmail } from '@/lib/subscription';
 import PaywallModal from '@/components/PaywallModal';
 import { db } from '@/lib/firebase';
@@ -28,13 +29,6 @@ interface ChatMsg {
 }
 
 // ── Lang helpers ──────────────────────────────────────────────────────────────
-
-const LANG_NAMES: Record<string,string> = {
-  'en-US':'English','en-GB':'English','ja-JP':'Japanese','ko-KR':'Korean',
-  'zh-CN':'Chinese','fr-FR':'French','de-DE':'German','es-ES':'Spanish',
-  'it-IT':'Italian','pt-BR':'Portuguese','ru-RU':'Russian','ar-XA':'Arabic',
-  'hi-IN':'Hindi','vi-VN':'Vietnamese','th-TH':'Thai','id-ID':'Indonesian',
-};
 
 // ── Main Page ─────────────────────────────────────────────────────────────────
 
@@ -85,8 +79,8 @@ function DreamStudioContent() {
     };
   }, []);
 
-  const targetLang = LANG_NAMES[langId]  || 'English';
-  const nativeLang = LANG_NAMES[subLang] || 'English';
+  const targetLang = getLangLabel(langId);  // B-9/B-12: full language list fallback
+  const nativeLang = getLangLabel(subLang);
   const sameLanguage = langId === subLang || (langId.startsWith('en') && subLang.startsWith('en'));
   const isPremiumUser = isAdmin || planId !== 'free';
   const tutor = getTutorById(tutorId);
@@ -281,10 +275,11 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
       const data = await res.json();
       const raw = data.text?.trim() || 'Tell me more about what you\'re imagining.';
 
-      // Extract content blocks
-      const contentMatch = raw.match(/\|\|\|CONTENT_START\|\|\|([\s\S]*?)\|\|\|CONTENT_END\|\|\|/);
+      // Extract content blocks (B-2: also tolerate a mistaken CONTENT_START closing tag)
+      const contentMatch = raw.match(/\|\|\|CONTENT_START\|\|\|([\s\S]*?)\|\|\|CONTENT_END\|\|\|/)
+        || raw.match(/\|\|\|CONTENT_START\|\|\|([\s\S]*?)\|\|\|CONTENT_START\|\|\|/);
       const extractedContent = contentMatch ? contentMatch[1].trim() : '';
-      const chatText = raw.replace(/\|\|\|CONTENT_START\|\|\|[\s\S]*?\|\|\|CONTENT_END\|\|\|/,'').trim();
+      const chatText = raw.replace(/\|\|\|CONTENT_START\|\|\|[\s\S]*?\|\|\|CONTENT_(?:END|START)\|\|\|/,'').trim();
 
       const aiMsg: ChatMsg = { role:'ai', text:chatText, extractedContent };
       setMessages(prev=>[...prev, aiMsg]);

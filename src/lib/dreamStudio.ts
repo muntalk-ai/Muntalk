@@ -84,7 +84,7 @@ export const STUDIO_GENRES: StudioGenre[] = [
     examples: ['A pop song about missing someone', 'Hip-hop lyrics about growing up', 'A ballad for a drama OST', 'An album concept about seasons of love'],
     phases: [
       { id:'idea',     label:'Concept',  desc:'Sound, story, emotion',      prompt:'Develop the song concept: genre, mood, theme, target emotion, and song structure.' },
-      { id:'draft',    label:'Write',    desc:'Verse, chorus, bridge',       prompt:'Write the next section of lyrics. Match the musical style and emotional arc.' },
+      { id:'draft',    label:'Write',    desc:'Verse, chorus, bridge',       prompt:'Write the next section of lyrics. Match the musical style and emotional arc. Stay in the target language — never slip English lines in for hooks; if a hook sounds better in English, ask the creator first.' },
       { id:'refine',   label:'Refine',   desc:'Every word must sing',        prompt:'Refine these lyrics: improve rhyme, flow, imagery, and emotional impact.' },
       { id:'complete', label:'Final',    desc:'Ready to record',             prompt:'Final lyric polish. Every word counts. Make them unforgettable.' },
     ],
@@ -186,6 +186,7 @@ YOUR ROLE:
 - Ask exactly ONE follow-up question per turn to keep the creative conversation moving
 - NEVER say "great idea!" or use hollow encouragement — react authentically
 - If you produce a section of the work, mark it clearly: |||CONTENT_START|||...content...|||CONTENT_END|||
+- ALWAYS close with |||CONTENT_END|||. NEVER reuse |||CONTENT_START||| as the closing tag.
 
 COPYRIGHT NOTICE: Everything created in this session belongs entirely to the creator. You are a collaborator, not an author.
 

@@ -379,11 +379,43 @@ function VanishGame({ difficulty, onBack, addXP, gameColor }:
   const [options,setOptions] = useState<string[]>([]);
   const timerRef = useRef<NodeJS.Timeout|null>(null);
 
+  // B-5: pick plausible distractors from a similar semantic group instead of random
+  const SIM_STOP = new Set(['the','and','for','with','you','your','that','this','from','are','was','were','has','have','had','not','but','can','will','would','should','very','much','more','most','such','than','then','them','they','their','its','into','over','under','about','after','before','between','through','during','each','other','some','any','all','one','two','three','a','an','of','to','in','on','at','as','is','it','be','by','or','if','so','do','does','did','what','when','where','who','how','why']);
+  const simTokens = (s: string) => s.toLowerCase().replace(/[^a-z\s]/g,'').split(/\s+/).filter(w => w.length > 3 && !SIM_STOP.has(w));
+
   const buildOptions = useCallback((currentIdx: number) => {
     if (currentIdx >= vocab.length) return;
-    const correct = vocab[currentIdx].meaning;
-    const others  = shuffle(vocab.filter((_,i)=>i!==currentIdx)).slice(0,3).map(v=>v.meaning);
-    setOptions(shuffle([correct, ...others]));
+    const correct = vocab[currentIdx];
+    const correctToks = new Set(simTokens(correct.meaning));
+    const scored = vocab
+      .filter((v, i) => i !== currentIdx && v.meaning !== correct.meaning)
+      .map(v => {
+        const shared = simTokens(v.meaning).filter(t => correctToks.has(t)).length;
+        let s = shared * 2;
+        if (v.word[0]?.toLowerCase() === correct.word[0]?.toLowerCase()) s += 1;
+        if (Math.abs(v.word.length - correct.word.length) <= 2) s += 1;
+        return { v, s };
+      })
+      .sort((a, b) => b.s - a.s);
+    // take from the top-scoring pool, then shuffle for variety; dedupe meanings
+    const seen = new Set<string>([correct.meaning]);
+    const others: string[] = [];
+    for (const { v } of shuffle(scored.slice(0, 8))) {
+      if (others.length >= 3) break;
+      if (seen.has(v.meaning)) continue;
+      seen.add(v.meaning);
+      others.push(v.meaning);
+    }
+    // fallback: fill any remaining slots with random (shouldn't happen with 12+ vocab)
+    if (others.length < 3) {
+      for (const v of shuffle(vocab.filter((_, i) => i !== currentIdx))) {
+        if (others.length >= 3) break;
+        if (seen.has(v.meaning)) continue;
+        seen.add(v.meaning);
+        others.push(v.meaning);
+      }
+    }
+    setOptions(shuffle([correct.meaning, ...others]));
   }, [vocab]);
 
   useEffect(() => { buildOptions(0); }, [buildOptions]);
@@ -511,7 +543,9 @@ function BlitzGame({ difficulty, onBack, addXP, gameColor }:
     const isReal = Math.random() > 0.4; // 60% real, 40% fake
     setShowMeaning(isReal);
     if (!isReal) {
-      const fake = vocab[Math.floor(Math.random()*vocab.length)];
+      // B-1: exclude the current card so a "fake" meaning is never actually true
+      const pool = vocab.filter((_, i) => i !== currentIdx);
+      const fake = pool[Math.floor(Math.random()*pool.length)];
       setFakeMeaning(fake.meaning);
     }
     setTimer(10);

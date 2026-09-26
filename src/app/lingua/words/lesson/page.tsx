@@ -4,7 +4,7 @@ import { useEffect, useState, useRef, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { POS_META, PartOfSpeech, getSetKey } from '@/data/wordSets';
 import { getTutorById } from '@/data/tutors';
-import { hasTts } from '@/data/languages';
+import { hasTts, getLangLabel } from '@/data/languages';
 
 interface WordData {
   word: string;
@@ -162,10 +162,11 @@ function WordLessonContent() {
   const loadWordData = async (word: string) => {
     if (wordDataMap[word]?.sentences.length > 0) return;
     setWordDataMap(prev => ({ ...prev, [word]: { ...prev[word], loading: true } }));
+    const langName = getLangLabel(lang); // B-4: pin example sentences to the target language
     try {
-      const prompt = `For the ${pos.replace(/\d/g,'')} "${word}", generate:
+      const prompt = `For the ${pos.replace(/\d/g,'')} "${word}" (language: ${langName}), generate:
 1. Translation in ${subLang} (word only, no explanation)
-2. Exactly 5 natural example sentences using "${word}"
+2. Exactly 5 natural example sentences in ${langName} using "${word}"
 3. ${subLang} translation for each sentence
 
 Respond ONLY in this JSON (no markdown):
@@ -194,9 +195,11 @@ Respond ONLY in this JSON (no markdown):
   const generateQuiz = async () => {
     setQuizLoading(true);
     try {
-      const prompt = `Create 5 multiple-choice quiz questions for these ${pos.replace(/\d/g,'')}:
+      const langName = getLangLabel(lang); // B-4: pin quiz to the target language
+      const prompt = `Create 5 multiple-choice quiz questions for these ${pos.replace(/\d/g,'')} (language: ${langName}):
 ${words.join(', ')}
 Rules: 4 options each, mix question types, plausible distractors.
+Write all questions and options in ${langName}, unless a question explicitly tests translation.
 Respond ONLY in JSON (no markdown):
 [{"q":"...","options":["A","B","C","D"],"answer":0},...]`;
       const raw = await callGemini(prompt, 0.5);

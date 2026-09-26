@@ -248,6 +248,7 @@ CRITICAL RULES:
 After your reply, on a NEW LINE add:
 |||FB|||{"score":<0-100>,"tip":"<one helpful tip in ${nativeLang}, max 12 words>","fix":{"wrong":"<learner's mistaken phrase, in ${targetLang}>","right":"<corrected phrase>"}}}|||END|||
 Omit the "fix" object entirely if the learner made no notable mistake. Keep "wrong"/"right" short (max 8 words each).
+Grammar mistakes ALWAYS count as notable: wrong verb choice (e.g. Spanish ser vs estar), wrong tense, wrong article or preposition, or wrong word order MUST be included in "fix" — never let them pass.
 
 Reply as ${npc.name} in ${targetLang}:`;
   }, [world, everyday, targetLang, difficulty, nativeLang, choiceSteer, npcs]); // eslint-disable-line
