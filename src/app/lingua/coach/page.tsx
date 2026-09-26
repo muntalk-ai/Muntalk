@@ -6,6 +6,8 @@ import { useAuth } from '@/context/AuthContext';
 import { getUserProfile } from '@/lib/userProfile';
 import { purposePromptBlock, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
+import { useActiveStudyTimer } from '@/hooks/useActiveStudyTimer';
+import { recordStudySession } from '@/lib/cashEvent';
 import { getTutorById } from '@/data/tutors';
 import { CURRICULUM } from '@/data/curriculum';
 
@@ -172,6 +174,24 @@ export default function CoachPage() {
   const chatRef = useRef<HTMLDivElement>(null);
   const recRef  = useRef<any>(null);
   const msgId   = useRef(0);
+
+  // $100 이벤트: 활성 학습 시간 측정 — 언마운트 시 기록
+  const studyTimer = useActiveStudyTimer();
+  const studyTimerRef = useRef(studyTimer);
+  studyTimerRef.current = studyTimer;
+  const userRef = useRef(user);
+  userRef.current = user;
+  const messagesRef = useRef(messages);
+  messagesRef.current = messages;
+  useEffect(() => {
+    return () => {
+      const u = userRef.current;
+      const userMsgs = messagesRef.current.filter(m => m.role === 'user').length;
+      if (!u || userMsgs === 0) return; // 실제 대화 없으면 기록 안 함
+      recordStudySession(u.uid, studyTimerRef.current.stop(), 0).catch(e =>
+        console.warn('[coach] recordStudySession failed:', e));
+    };
+  }, []);
 
   useEffect(() => {
     chatRef.current?.scrollTo({ top: chatRef.current.scrollHeight, behavior: 'smooth' });

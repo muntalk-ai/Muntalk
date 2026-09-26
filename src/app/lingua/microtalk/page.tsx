@@ -7,6 +7,8 @@ import { getLangLabel, hasStt } from '@/data/languages';
 import { PURPOSE_OPTIONS, PURPOSE_LABEL } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
 import { truncateHistory } from '@/lib/history';
+import { recordStudySession } from '@/lib/cashEvent';
+import { useActiveStudyTimer } from '@/hooks/useActiveStudyTimer';
 import {
   MICROTALK_SECONDS, GUEST_DAILY_LIMIT,
   buildMicroTalkPrompt, buildOpeningPrompt, buildReportPrompt,
@@ -51,6 +53,11 @@ export default function MicroTalkPage() {
 
   const messagesRef = useRef<ChatMsg[]>([]);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  // $100 이벤트: 활성 학습 시간 측정
+  const studyTimer = useActiveStudyTimer();
+  const studyTimerRef = useRef(studyTimer);
+  studyTimerRef.current = studyTimer;
   const recRef = useRef<any>(null);
   const endRef = useRef<() => void>(() => {});
   const inputRef = useRef<HTMLInputElement>(null);
@@ -203,6 +210,14 @@ export default function MicroTalkPage() {
       setReport(parseReportJson(raw, fallback));
     } catch {
       setReport(fallback);
+    }
+    // $100 이벤트: 일일 학습 시간 기록 (로그인 + 실제 발화 있을 때만)
+    try {
+      if (user && userCount > 0) {
+        await recordStudySession(user.uid, studyTimerRef.current.stop(), 0);
+      }
+    } catch (e) {
+      console.warn('[microtalk] recordStudySession failed:', e);
     }
   }, [learnLangLabel, nativeLangLabel]);
   endRef.current = endSession;

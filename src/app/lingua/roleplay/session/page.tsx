@@ -11,6 +11,8 @@ import {
 } from '@/data/roleplay';
 import { getUserProfile, updateUserProfile, recordActivity } from '@/lib/userProfile';
 import { truncateHistory } from '@/lib/history';
+import { recordStudySession } from '@/lib/cashEvent';
+import { useActiveStudyTimer } from '@/hooks/useActiveStudyTimer';
 import { purposePromptBlock, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
 import { addWeeklyXp, ensureLeague } from '@/lib/league';
@@ -140,6 +142,9 @@ function SessionContent() {
   const sessionXpRef = useRef(0);   // 누적 XP (state 비동기 문제 회피용)
   const xpSavedRef   = useRef(false); // endSession 중복 저장 방지
 
+  // $100 이벤트: 활성 학습 시간 측정
+  const studyTimer = useActiveStudyTimer();
+
   useEffect(() => {
     chatRef.current?.scrollTo({ top:chatRef.current.scrollHeight, behavior:'smooth' });
   }, [messages, isThinking, activeChoice]);
@@ -215,6 +220,12 @@ function SessionContent() {
       if (fresh) await recordActivity(user.uid, fresh);
     } catch (e) {
       console.warn('[roleplay] recordActivity failed:', e);
+    }
+    // $100 이벤트: 일일 학습 시간/XP 기록 (활성 시간만)
+    try {
+      await recordStudySession(user.uid, studyTimer.stop(), earned);
+    } catch (e) {
+      console.warn('[roleplay] recordStudySession failed:', e);
     }
     try {
       await ensureLeague(user.uid, user.displayName || 'Learner', user.photoURL || '');

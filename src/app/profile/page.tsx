@@ -8,6 +8,8 @@ import { useAuth } from '@/context/AuthContext';
 
 import { updateUserProfile } from '@/lib/userProfile';
 import { requestPushPermission } from '@/lib/notifications';
+import { ENABLE_CASH_EVENT } from '@/lib/cashEvent';
+import CashEventProgress from '@/components/CashEventProgress';
 import { LEARN_LANGUAGES, UI_LANGUAGES } from '@/data/languages';
 import { PURPOSE_OPTIONS, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
@@ -206,6 +208,17 @@ export default function ProfilePage() {
 
         {/* ── PROFILE TAB ── */}
         {tab === 'profile' && (
+          <>
+            {/* $100 이벤트 응모 현황 (Phase 2-1 PR-D — ENABLE_CASH_EVENT=false면 숨김) */}
+            {ENABLE_CASH_EVENT && user && (profile as any)?.activityDates && (
+              <div style={{ marginBottom: 16 }}>
+                <CashEventProgress
+                  uid={user.uid}
+                  activityDates={(profile as any).activityDates || []}
+                  joinedDate={(profile as any).createdAt?.toDate?.()?.toISOString?.()?.slice(0, 10) || (profile as any).createdAt?.slice?.(0, 10)}
+                />
+              </div>
+            )}
           <div style={{ background: '#fff', borderRadius: 20, border: '1.5px solid #F1F5F9', padding: '28px' }}>
             <div style={fld}>
               <label style={lbl}>Display Name</label>
@@ -238,6 +251,7 @@ export default function ProfilePage() {
               {saving ? 'Saving…' : 'Save Changes'}
             </button>
           </div>
+          </>
         )}
 
         {/* ── PASSWORD TAB ── */}

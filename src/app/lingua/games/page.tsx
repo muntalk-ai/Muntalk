@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { updateUserProfile, getUserProfile } from '@/lib/userProfile';
 import { addWeeklyXp, ensureLeague } from '@/lib/league';
+import { recordStudySession } from '@/lib/cashEvent';
+import { useActiveStudyTimer } from '@/hooks/useActiveStudyTimer';
 import { CURRICULUM } from '@/data/curriculum';
 import { pickDistractorMeanings } from '@/lib/vocabDistractors';
 import WrongAnswerModal, { type WrongAnswerInfo } from '@/components/WrongAnswerModal';
@@ -74,6 +76,9 @@ export default function WordGamesPage() {
   // 게임 중 증가분 누적 — 게임 화면을 나갈 때/unmount 시 한 번에 flush
   const pendingXpRef = useRef(0);
 
+  // $100 이벤트: 활성 학습 시간 측정
+  const studyTimer = useActiveStudyTimer();
+
   const flushGameXp = useCallback(async () => {
     const delta = pendingXpRef.current;
     pendingXpRef.current = 0;
@@ -85,6 +90,12 @@ export default function WordGamesPage() {
       await addWeeklyXp(user.uid, delta);
     } catch (e) {
       console.warn('[games] XP flush failed:', e);
+    }
+    // $100 이벤트: 일일 학습 시간/XP 기록 (활성 시간만)
+    try {
+      await recordStudySession(user.uid, studyTimer.stop(), delta);
+    } catch (e) {
+      console.warn('[games] recordStudySession failed:', e);
     }
   }, [user]);
 

@@ -93,5 +93,17 @@ service cloud.firestore {
       allow read, write: if isAdmin();
     }
 
+    // ── $100 월간 이벤트 (Phase 2-1 PR-D) ──────────────────────────
+    // ⚠️ Firebase 콘솔에서 수동 배포 필요 (자동 배포 안 됨)
+    // 일일 학습 기록: 본인 + 관리자
+    match /users/{uid}/dailyStats/{date} {
+      allow read, write: if isOwner(uid) || isAdmin();
+    }
+    // 월간 이벤트 (추첨/당첨/지급): 관리자 전용 + 당첨자 본인은 읽기 허용 (인앱 배너용)
+    match /cash_events/{monthId} {
+      allow read: if isAdmin() || (isSignedIn() && resource.data.winnerUid == request.auth.uid);
+      allow write: if isAdmin();
+    }
+
   }
 }

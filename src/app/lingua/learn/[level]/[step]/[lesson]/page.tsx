@@ -6,6 +6,8 @@ import CertificateModal from '@/components/CertificateModal';
 import TestimonialPrompt from '@/components/TestimonialPrompt';
 import { useAuth } from '@/context/AuthContext';
 import { updateUserProfile, getUserProfile, recordActivity } from '@/lib/userProfile';
+import { recordStudySession } from '@/lib/cashEvent';
+import { useActiveStudyTimer } from '@/hooks/useActiveStudyTimer';
 import { addWeeklyXp, ensureLeague } from '@/lib/league';
 import { addCardToSRS } from '@/lib/spacedRepetition';
 import { checkAndAwardCertificate, Certificate } from '@/lib/certificates';
@@ -31,6 +33,9 @@ export default function LessonPage({
   const [tutorId, setTutorId] = useState<string | undefined>(undefined);
   const [earnedCert, setEarnedCert] = useState<Certificate | null>(null);
   const [showTestimonial, setShowTestimonial] = useState(false);
+
+  // $100 이벤트: 활성 학습 시간 측정 (레슨 시작~완료)
+  const studyTimer = useActiveStudyTimer();
 
   // 비로그인 게스트 접근 제한 — a1-1-1 외 모든 레슨 차단
   useEffect(() => {
@@ -105,6 +110,13 @@ export default function LessonPage({
           if (fresh) await recordActivity(user.uid, fresh);
         } catch (e) {
           console.warn('[lesson] recordActivity failed:', e);
+        }
+
+        // $100 이벤트: 일일 학습 시간/XP 기록 (활성 시간만)
+        try {
+          await recordStudySession(user.uid, studyTimer.stop(), xpEarned);
+        } catch (e) {
+          console.warn('[lesson] recordStudySession failed:', e);
         }
 
         // 리그 XP (실패해도 레슨에 영향 없음)
