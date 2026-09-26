@@ -261,7 +261,7 @@ export default function LeaguePage() {
                             {medal || `${i + 1}`}
                           </div>
                           {m.photoURL
-                            ? <img src={m.photoURL} alt="" style={{ width: 36, height: 36, borderRadius: '50%', objectFit: 'cover', flexShrink: 0, border: isPromote && i < 3 ? `2px solid ${tierConfig.color}` : 'none' }} />
+                            ? <img loading="lazy" src={m.photoURL} alt="" style={{ width: 36, height: 36, borderRadius: '50%', objectFit: 'cover', flexShrink: 0, border: isPromote && i < 3 ? `2px solid ${tierConfig.color}` : 'none' }} />
                             : <div style={{ width: 36, height: 36, borderRadius: '50%', background: `linear-gradient(135deg,${tierConfig.color},#8B5CF6)`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 900, color: '#fff', flexShrink: 0 }}>
                                 {(m.displayName || '?')[0].toUpperCase()}
                               </div>

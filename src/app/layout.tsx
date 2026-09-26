@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  maximumScale: 5, // UX-infra #7: 핀치줌 허용 (WCAG 1.4.4)
   viewportFit: 'cover', // iPhone notch 대응
+  interactiveWidget: 'resizes-content', // UX-infra #8: 키보드 표시 시 하단 입력창이 가려지지 않도록
   themeColor: '#0F172A',
 };
 

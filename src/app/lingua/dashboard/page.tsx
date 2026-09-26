@@ -8,6 +8,7 @@ import { useAuth } from '@/context/AuthContext';
 import { LEARN_LANGUAGES } from '@/data/languages';
 import { DashboardSkeleton } from '@/components/Skeleton';
 import { CURRICULUM } from '@/data/curriculum';
+import { localDateKey } from '@/lib/userProfile';
 
 const LEVELS = [
   { id: 'a1', label: 'A1', emoji: '🌱', color: '#10B981', xpNeeded: 800 },
@@ -60,12 +61,12 @@ export default function DashboardPage() {
   const prevXp          = LEVELS[LEVELS.indexOf(currentLevel) - 1]?.xpNeeded || 0;
   const progressPct     = nextLevel ? Math.min(100, ((xp - prevXp) / (nextLevel.xpNeeded - prevXp)) * 100) : 100;
 
-  // 최근 30일 활동 캘린더
+  // 최근 30일 활동 캘린더 (UX-infra #10: 로컬 날짜 기준 — recordActivity와 일치)
   const today = new Date();
   const last30 = Array.from({ length: 30 }, (_, i) => {
     const d = new Date(today);
     d.setDate(d.getDate() - (29 - i));
-    return d.toISOString().slice(0, 10);
+    return localDateKey(d);
   });
 
   const stats = [
@@ -293,7 +294,7 @@ export default function DashboardPage() {
           <div style={{ fontWeight: 900, fontSize: 15, color: '#0F172A', marginBottom: 20 }}>📊 My Progress</div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '16px', borderRadius: 14, background: '#EEF2FF', border: '1.5px solid #C7D2FE' }}>
             {user?.photoURL
-              ? <img src={user.photoURL} alt="" style={{ width: 48, height: 48, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
+              ? <img loading="lazy" src={user.photoURL} alt="" style={{ width: 48, height: 48, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
               : <div style={{ width: 48, height: 48, borderRadius: '50%', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, fontWeight: 900, color: '#fff', flexShrink: 0 }}>
                   {(user?.displayName || '?')[0].toUpperCase()}
                 </div>

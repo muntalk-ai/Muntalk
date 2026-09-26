@@ -70,7 +70,7 @@ export default function RoleplayLobby() {
   }, [user]);
 
   const go = (s: EverydayScenario | WorldScenario, type: 'everyday'|'world') => {
-    if (!user) { router.push('/signup'); return; }
+    if (!user) { router.push('/signup?next=/lingua/roleplay'); return; }
     const diff = selDiff === 'all' ? s.difficulty : selDiff;
     router.push(`/lingua/roleplay/session?${new URLSearchParams({ type, scenarioId:s.id, lang:langId, subLang, difficulty:diff })}`);
   };
@@ -197,7 +197,7 @@ export default function RoleplayLobby() {
                             background:DIFF_COLOR[s.difficulty]+'18', color:DIFF_COLOR[s.difficulty] }}>
                             {s.difficulty}{showNative&&diffNative[s.difficulty]?` ${diffNative[s.difficulty]}`:''}
                           </span>
-                          <img src={t.thumbnail} alt={t.name}
+                          <img loading="lazy" src={t.thumbnail} alt={t.name}
                             style={{ width:22,height:22,borderRadius:'50%',objectFit:'cover',objectPosition:'center 20%',border:`1.5px solid ${s.accentColor}40` }}/>
                         </div>
                       </div>
@@ -315,7 +315,7 @@ export default function RoleplayLobby() {
                           {s.npcs.map((npc,ni) => {
                             const t = getTutorById(npc.tutorId);
                             return (
-                              <img key={ni} src={t.thumbnail} alt={npc.name}
+                              <img loading="lazy" key={ni} src={t.thumbnail} alt={npc.name}
                                 style={{ width:34, height:34, borderRadius:'50%',
                                   objectFit:'cover', objectPosition:'center 20%',
                                   border:`2px solid ${s.accentColor}`,

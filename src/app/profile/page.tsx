@@ -175,7 +175,7 @@ export default function ProfilePage() {
         <div style={{ background: '#fff', borderRadius: 24, border: '1.5px solid #F1F5F9', padding: '28px', marginBottom: 24, display: 'flex', alignItems: 'center', gap: 20 }}>
           <div style={{ position: 'relative' }}>
             {user?.photoURL
-              ? <img src={user.photoURL} alt="" style={{ width: 72, height: 72, borderRadius: '50%', objectFit: 'cover', border: '3px solid #E5E7EB' }} />
+              ? <img loading="lazy" src={user.photoURL} alt="" style={{ width: 72, height: 72, borderRadius: '50%', objectFit: 'cover', border: '3px solid #E5E7EB' }} />
               : <div style={{ width: 72, height: 72, borderRadius: '50%', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28, fontWeight: 900, color: '#fff' }}>
                   {(displayName || user?.email || '?')[0].toUpperCase()}
                 </div>

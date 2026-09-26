@@ -489,7 +489,7 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
             {msg.role === 'coach' && (
               <div style={S.coachHeader}>
                 {tutor && (
-                  <img src={tutor.thumbnail} alt="" style={S.coachAvatar}
+                  <img loading="lazy" src={tutor.thumbnail} alt="" style={S.coachAvatar}
                     onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}/>
                 )}
                 <span style={S.coachLabel}>AI 코치</span>
@@ -511,7 +511,7 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
         {/* Thinking */}
         {loading && (
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            {tutor && <img src={tutor.thumbnail} alt="" style={S.coachAvatar}/>}
+            {tutor && <img loading="lazy" src={tutor.thumbnail} alt="" style={S.coachAvatar}/>}
             <div style={{ ...S.coachBubble, ...S.bubble, padding: '12px 16px' }}>
               <div style={{ display: 'flex', gap: 4 }}>
                 {[0,1,2].map(i => (
@@ -540,7 +540,7 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
       {messages.length >= 2 && (
         <div style={S.ctaWrap}>
           <button onClick={() => router.push('/lingua')} style={S.ctaBtn}>
-            📚 학습 시작하기 →
+            📚 학습 시작하기 <span className="mt-flip-rtl">→</span>
           </button>
           <button onClick={() => router.push('/lingua/roleplay')} style={S.ctaBtn2}>
             🎭 롤플레이 연습

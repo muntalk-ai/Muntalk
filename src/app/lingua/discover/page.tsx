@@ -10,6 +10,8 @@ import { getTutorById } from '@/data/tutors';
 import { getSubscription, isAdminEmail } from '@/lib/subscription';
 import { truncateHistory } from '@/lib/history';
 import PaywallModal from '@/components/PaywallModal';
+import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
+import RtlDir from '@/components/RtlDir';
 import { getLangLabel } from '@/data/languages';
 import { purposePromptBlock, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
@@ -136,6 +138,7 @@ function DiscoverContent() {
   });
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isListening,setIsListening]= useState(false);
+  const [micGuide, setMicGuide] = useState<MicGuideReason | null>(null); // UX-infra: STT 안내
   const [translating,setTranslating]= useState<number|null>(null);
 
   const chatRef = useRef<HTMLDivElement>(null);
@@ -182,7 +185,12 @@ function DiscoverContent() {
     const rec = new SR();
     rec.lang = chatMode === 'native' ? subLang : langId; rec.continuous = false; rec.interimResults = false;
     rec.onresult = (e: any) => sendMessage(e.results[0][0].transcript);
-    rec.onerror = () => setIsListening(false);
+    rec.onerror = (e: any) => {
+      setIsListening(false);
+      const code = e?.error;
+      if (code === 'not-allowed' || code === 'service-not-allowed') setMicGuide('denied');
+      else if (code === 'audio-capture') setMicGuide('no-mic');
+    };
     rec.onend   = () => setIsListening(false);
     recRef.current = rec;
   }, [langId, active, messages, selChannel]); // eslint-disable-line
@@ -317,7 +325,7 @@ function DiscoverContent() {
 
   // Open a feature and send opening message
   const openFeature = useCallback(async (id: FeatureId, channelId?: string) => {
-    if (!user) { router.push('/signup'); return; }
+    if (!user) { router.push('/signup?next=/lingua/discover'); return; }
     // Premium-only gate
     if (!isPremiumUser) { setShowPaywall(true); return; }
     setActive(id);
@@ -431,14 +439,14 @@ function DiscoverContent() {
         <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
           {!user ? (
             <>
-              <button onClick={() => router.push('/login')}
+              <button onClick={() => router.push('/login?next=/lingua/discover')}
                 style={{ padding:'13px 28px', borderRadius:14, border:'none',
                   background:'linear-gradient(135deg,#6366F1,#8B5CF6)',
                   color:'#fff', fontSize:14, fontWeight:900, cursor:'pointer',
                   fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 Sign In
               </button>
-              <button onClick={() => router.push('/signup')}
+              <button onClick={() => router.push('/signup?next=/lingua/discover')}
                 style={{ padding:'13px 20px', borderRadius:14,
                   border:'1.5px solid #E2E8F0',
                   background:'transparent', color:'#94A3B8',
@@ -542,7 +550,7 @@ function DiscoverContent() {
         <div style={{ marginBottom:28, padding:'16px 20px', borderRadius:16,
           background:'linear-gradient(135deg,#EEF2FF,#F5F3FF)',
           border:'1px solid #C7D2FE', display:'flex', alignItems:'center', gap:14 }}>
-          <img src={tutor.thumbnail} alt={tutor.name}
+          <img loading="lazy" src={tutor.thumbnail} alt={tutor.name}
             style={{ width:44, height:44, borderRadius:'50%', objectFit:'cover',
               objectPosition:'center 20%', border:'2px solid #6366F1',
               animation:'float 3s ease-in-out infinite', flexShrink:0 }}/>
@@ -558,7 +566,7 @@ function DiscoverContent() {
               background:'linear-gradient(135deg,#6366F1,#8B5CF6)', color:'#fff',
               fontWeight:800, fontSize:13, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
               flexShrink:0 }}>
-            Answer →
+            Answer <span className="mt-flip-rtl">→</span>
           </button>
         </div>
 
@@ -637,6 +645,7 @@ function DiscoverContent() {
   const ch   = CHANNEL_DATA.find(c=>c.id===selChannel);
 
   return (
+    <RtlDir lang={langId}>
     <div style={{ height:'100dvh', background:'#F8FAFC', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
       display:'flex', flexDirection:'column', overflow:'hidden', color:'#0F172A' }}>
       <style dangerouslySetInnerHTML={{ __html:`
@@ -656,7 +665,7 @@ function DiscoverContent() {
             color:'#64748B', fontSize:12, fontWeight:700, cursor:'pointer',
             fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>← Back</button>
         <div style={{ display:'flex', alignItems:'center', gap:10, flex:1 }}>
-          <img src={tutor.thumbnail} alt={tutor.name}
+          <img loading="lazy" src={tutor.thumbnail} alt={tutor.name}
             style={{ width:32, height:32, borderRadius:'50%', objectFit:'cover',
               objectPosition:'center 20%', border:`2px solid ${feat.accent}` }}/>
           <div>
@@ -709,7 +718,7 @@ function DiscoverContent() {
               <div style={{ display:'flex', justifyContent:isUser?'flex-end':'flex-start',
                 alignItems:'flex-end', gap:8, width:'100%' }}>
                 {!isUser && (
-                  <img src={tutor.thumbnail} alt={tutor.name}
+                  <img loading="lazy" src={tutor.thumbnail} alt={tutor.name}
                     style={{ width:28, height:28, borderRadius:'50%', objectFit:'cover',
                       objectPosition:'center 20%', flexShrink:0 }}/>
                 )}
@@ -751,7 +760,7 @@ function DiscoverContent() {
 
         {loading && (
           <div style={{ display:'flex', alignItems:'flex-end', gap:8 }}>
-            <img src={tutor.thumbnail} alt=""
+            <img loading="lazy" src={tutor.thumbnail} alt=""
               style={{ width:28, height:28, borderRadius:'50%', objectFit:'cover',
                 objectPosition:'center 20%' }}/>
             <div style={{ padding:'12px 16px', borderRadius:'18px 18px 18px 4px',
@@ -767,12 +776,13 @@ function DiscoverContent() {
       </div>
 
       {/* INPUT */}
+      {micGuide && <div style={{ padding: '0 12px 8px' }}><MicGuide reason={micGuide} onDismiss={() => setMicGuide(null)} /></div>}
       <div style={{ padding:'10px 12px 14px', background:'#fff',
         borderTop:'1px solid #F1F5F9', flexShrink:0 }}>
         <div style={{ display:'flex', gap:8, alignItems:'flex-end' }}>
           <button
-            onMouseDown={() => { if(!recRef.current||isListening||loading) return; try{recRef.current.start();setIsListening(true);}catch{} }}
-            onTouchStart={() => { if(!recRef.current||isListening||loading) return; try{recRef.current.start();setIsListening(true);}catch{} }}
+            onMouseDown={() => { if(!recRef.current){setMicGuide('unsupported');return;} if(isListening||loading) return; try{recRef.current.start();setIsListening(true);}catch{} }}
+            onTouchStart={() => { if(!recRef.current){setMicGuide('unsupported');return;} if(isListening||loading) return; try{recRef.current.start();setIsListening(true);}catch{} }}
             style={{ width:44, height:44, borderRadius:'50%', border:'none', flexShrink:0,
               background:isListening?'linear-gradient(135deg,#EF4444,#DC2626)':'#F1F5F9',
               color:isListening?'#fff':'#64748B', fontSize:18, cursor:'pointer',
@@ -799,6 +809,7 @@ function DiscoverContent() {
         </div>
       </div>
     </div>
+    </RtlDir>
   );
 }
 

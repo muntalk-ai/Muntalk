@@ -11,6 +11,7 @@ import TrialExpiredModal from '@/components/TrialExpiredModal';
 import { getTrialData, initTrial, isTrialExpired, isPremium, TRIAL_MAX_UNITS } from '@/lib/trialPolicy';
 import { isAdminEmail } from '@/lib/subscription';
 import { addCardToSRS } from '@/lib/spacedRepetition';
+import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 
 const hasStt = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.stt ?? false;
 const hasTts = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.tts ?? false;
@@ -147,6 +148,7 @@ export default function LessonPlayer({
   // -- Video / Speech ----------------------------------------------------------
   const [isSpeaking,   setIsSpeaking]   = useState(false);
   const [isListening,  setIsListening]  = useState(false);
+  const [micGuide, setMicGuide] = useState<MicGuideReason | null>(null); // UX-infra: STT 안내
   const recognitionRef   = useRef<any>(null);
   const chatAreaRef      = useRef<HTMLDivElement | null>(null);
 
@@ -163,7 +165,12 @@ export default function LessonPlayer({
       const transcript = e.results[0][0].transcript;
       handleUserMessage(transcript);
     };
-    rec.onerror = () => setIsListening(false);
+    rec.onerror = (e: any) => {
+      setIsListening(false);
+      const code = e?.error;
+      if (code === 'not-allowed' || code === 'service-not-allowed') setMicGuide('denied');
+      else if (code === 'audio-capture') setMicGuide('no-mic');
+    };
     rec.onend   = () => setIsListening(false);
     recognitionRef.current = rec;
 
@@ -555,7 +562,8 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
 
   // -- STT start ---------------------------------------------------------------
   const startListening = () => {
-    if (!recognitionRef.current || isListening) return;
+    if (!recognitionRef.current) { setMicGuide('unsupported'); return; }
+    if (isListening) return;
     stopAll();
     recognitionRef.current.start();
     setIsListening(true);
@@ -718,9 +726,12 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
         setPronLoading(false);
       }
     };
-    rec.onerror = () => {
+    rec.onerror = (e: any) => {
       setPronListening(false);
-      setPronError('Speech recognition ran into a problem. Please try again.');
+      const code = e?.error;
+      if (code === 'not-allowed' || code === 'service-not-allowed') { setMicGuide('denied'); setPronError(null); }
+      else if (code === 'audio-capture') { setMicGuide('no-mic'); setPronError(null); }
+      else setPronError('Speech recognition ran into a problem. Please try again.');
     };
     rec.onend = () => setPronListening(false);
     try { rec.start(); } catch { setPronListening(false); }
@@ -1006,7 +1017,7 @@ RULES:
             <div style={{ background: '#F3F4F6', borderBottom: '1px solid #E9ECEF', paddingBottom: 10 }}>
               <div style={{ display: 'flex', justifyContent: 'center', padding: '12px 0 0' }}>
                 <div style={{ position: 'relative', width: 160, height: 220, borderRadius: 16, overflow: 'hidden', background: '#1a1a2e', flexShrink: 0 }}>
-                  <video
+                  <video preload="metadata" poster={tutor.thumbnail}
                     key={`vocab-${isSpeaking ? 'talk' : 'idle'}`}
                     src={isSpeaking ? tutor.videoTalk : tutor.videoIdle}
                     autoPlay loop muted playsInline
@@ -1032,7 +1043,7 @@ RULES:
             /* DESKTOP: 좌측 세로 패널 */
             <div style={styles.videoCol}>
               <div style={styles.videoWrap}>
-                <video
+                <video preload="metadata" poster={tutor.thumbnail}
                   key={`vocab-${isSpeaking ? 'talk' : 'idle'}`}
                   src={isSpeaking ? tutor.videoTalk : tutor.videoIdle}
                   autoPlay loop muted playsInline
@@ -1113,6 +1124,7 @@ RULES:
                   ⚠️ {pronError}
                 </div>
               )}
+              {micGuide && <MicGuide reason={micGuide} onDismiss={() => setMicGuide(null)} />}
               {pronResult[vocabIdx]?.feedback ? (
                 <div style={{
                   marginTop: 10, padding: '12px 16px', borderRadius: 12, textAlign: 'left',
@@ -1234,7 +1246,7 @@ RULES:
             <div style={{ background: '#F3F4F6', borderBottom: '1px solid #E9ECEF', flexShrink: 0 }}>
               <div style={{ display: 'flex', justifyContent: 'center', padding: '12px 0 0' }}>
               <div style={{ position: 'relative', width: 160, height: 220, borderRadius: 16, overflow: 'hidden', background: '#1a1a2e' }}>
-              <video
+              <video preload="metadata" poster={tutor.thumbnail}
                 key={isSpeaking || isListening ? 'talk' : 'idle'}
                 src={isSpeaking || isListening ? tutor.videoTalk : tutor.videoIdle}
                 autoPlay loop muted playsInline
@@ -1260,6 +1272,7 @@ RULES:
                 <div style={{ fontSize: 11, color: '#9CA3AF' }}>AI Tutor · {lesson.icon} {lesson.title}</div>
               </div>
               {/* 버튼 바 */}
+              {micGuide && <div style={{ padding: '0 16px 8px' }}><MicGuide reason={micGuide} onDismiss={() => setMicGuide(null)} /></div>}
               <div style={{ padding: '0 16px 10px', display: 'flex', gap: 8 }}>
                 {hasStt(langId) ? (
                   <button
@@ -1302,7 +1315,7 @@ RULES:
             /* DESKTOP: 좌측 세로 패널 */
             <div style={styles.videoCol}>
               <div style={styles.videoWrap}>
-                <video
+                <video preload="metadata" poster={tutor.thumbnail}
                   key={isSpeaking || isListening ? 'talk' : 'idle'}
                   src={isSpeaking || isListening ? tutor.videoTalk : tutor.videoIdle}
                   autoPlay loop muted playsInline

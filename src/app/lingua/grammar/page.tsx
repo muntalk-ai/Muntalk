@@ -401,7 +401,7 @@ ${tutor.name}:`;
                   background:`linear-gradient(135deg,${ch.color},${ch.color}cc)`,
                   color:'#fff', fontWeight:800, fontSize:14, cursor:'pointer',
                   fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display:'flex', alignItems:'center', justifyContent:'center', gap:8 }}>
-                <img src={tutor.thumbnail} alt="" style={{ width:24, height:24, borderRadius:'50%', objectFit:'cover', objectPosition:'center 20%' }}/>
+                <img loading="lazy" src={tutor.thumbnail} alt="" style={{ width:24, height:24, borderRadius:'50%', objectFit:'cover', objectPosition:'center 20%' }}/>
                 🤖 Practise with {tutor.name}
               </button>
             </div>
@@ -410,7 +410,7 @@ ${tutor.name}:`;
           {showAI && (
             <div style={S.section}>
               <div style={{ ...S.sectionTitle, color:ch.color }}>
-                <img src={tutor.thumbnail} alt="" style={{ width:20, height:20, borderRadius:'50%', objectFit:'cover', objectPosition:'center 20%', marginRight:6, verticalAlign:'middle' }}/>
+                <img loading="lazy" src={tutor.thumbnail} alt="" style={{ width:20, height:20, borderRadius:'50%', objectFit:'cover', objectPosition:'center 20%', marginRight:6, verticalAlign:'middle' }}/>
                 Practise with {tutor.name}
               </div>
               <div ref={chatRef} style={S.aiChat}>
