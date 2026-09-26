@@ -260,7 +260,7 @@ function DiscoverContent() {
       }
       case 'mirror': {
         const analysisLang = nativeLangName; // analysis always in native lang
-        if (!mirrorDone) return `You are ${t.name}, an expert language communication analyst. Respond in ${analysisLang}. The user just spoke in ${targetLangName}. Analyse their language skills — their likely learning background, strengths, one clear weakness, one specific thing to work on. Be specific, warm, occasionally surprising. 4-5 sentences. Do NOT be generic.`;
+        if (!mirrorDone) return `You are ${t.name}, an expert language communication analyst. Respond in ${analysisLang}. The user just spoke in ${targetLangName}. Here is their EXACT utterance:\n\n"${userText}"\n\nAnalyse their language skills BASED ONLY ON THIS UTTERANCE — their likely learning background, strengths, one clear weakness, one specific thing to work on. Be specific, warm, occasionally surprising. 4-5 sentences. Do NOT be generic. NEVER invent, assume, or hallucinate details that are not present in their actual words.`;
         return `You are ${t.name}, coaching the user on their ${targetLangName}. Respond in ${analysisLang}. Be specific and encouraging. Based on your earlier analysis, give concrete advice.\n\nConversation:\n${history}\nUser: ${userText}\n${t.name}:`;
       }
       case 'world': {
@@ -360,7 +360,7 @@ function DiscoverContent() {
         const ch = CHANNEL_DATA.find(c=>c.id===channelId);
         const topics = ch?.topics || [];
         const topic = topics[Math.floor(Math.random()*topics.length)];
-        return `You are ${t.name}, having a real conversation about ${ch?.label}. Respond in ${lang}. Start with: "${topic}" — make it personal and direct. Have a strong opinion. Ask the user theirs. 2-3 sentences.`;
+        return `You are ${t.name}, having a real conversation about ${ch?.label}. Respond in ${lang}. The topic is "${topic}" — restate it naturally in ${lang} (translate it, do NOT quote the English), then make it personal and direct. Have a strong opinion. Ask the user theirs. 2-3 sentences.`;
       }
       case 'character': {
         const p = CHARACTER_PERSONAS[dayIdx % CHARACTER_PERSONAS.length];
