@@ -2,11 +2,12 @@
 
 import { useRouter } from 'next/navigation';
 
-// Founder info — fill in when ready (photo: place image at /public/founder.jpg and update src below)
+// Founder info
 const FOUNDER = {
-  name: '[Your Name]',
+  name: 'Jay',
   role: 'Founder & solo developer',
-  photo: '', // e.g. '/founder.jpg'
+  tagline: 'Land surveyor by day, language-app builder by night.',
+  photo: '/founder.jpg',
   location: 'British Columbia, Canada',
 };
 
@@ -81,6 +82,7 @@ export default function AboutPage() {
           <div>
             <div style={{ fontSize: 20, fontWeight: 900 }}>{FOUNDER.name}</div>
             <div style={{ fontSize: 13, color: '#6366F1', fontWeight: 800, marginTop: 2 }}>{FOUNDER.role}</div>
+            <div style={{ fontSize: 13, color: '#475569', fontStyle: 'italic', marginTop: 2 }}>{FOUNDER.tagline}</div>
             <div style={{ fontSize: 12, color: '#94A3B8', fontWeight: 700, marginTop: 2 }}>📍 {FOUNDER.location}</div>
           </div>
         </div>
