@@ -132,6 +132,27 @@ export default function LevelHub() {
     setToast(`🎯 Goal set: ${PURPOSE_LABEL[p]} — your AI tutor will adapt!`);
   };
 
+  // -- Micro-Talk (Phase 2-1 Track 2-B): 홈 히어로 하단 카드 --------------------
+  const [mtGuestLeft, setMtGuestLeft] = useState(3);
+  useEffect(() => {
+    if (authLoading || user) return;
+    try {
+      const raw = localStorage.getItem('mt_microtalk');
+      const today = new Date().toISOString().slice(0, 10);
+      const d = raw ? JSON.parse(raw) : null;
+      setMtGuestLeft(d && d.date === today ? Math.max(0, 3 - (d.count || 0)) : 3);
+    } catch {}
+  }, [authLoading, user]);
+  // T2B-5: 주제 칩 purpose 연동 — 프로필 목적 우선, 게스트는 localStorage, 미설정 시 daily
+  const mtActivePurpose: LearningPurpose = (() => {
+    if (isLearningPurpose(profile?.purpose)) return profile!.purpose as LearningPurpose;
+    try {
+      const gp = localStorage.getItem('mt_purpose');
+      if (isLearningPurpose(gp)) return gp;
+    } catch {}
+    return 'daily';
+  })();
+
   // -- 스트릭 계산 (게스트용 localStorage 기반) -----------------------------------
   const calcStreak = () => {
     try {
@@ -925,6 +946,35 @@ export default function LevelHub() {
         </div>
       </div>
 
+      {/* -- Micro-Talk card (Phase 2-1 Track 2-B) -- */}
+      {!authLoading && (
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '26px 24px 0', width: '100%' }}>
+          <div style={styles.mtCard}>
+            <div style={styles.mtHead}>
+              <div>
+                <div style={styles.mtTitle}>⚡ Micro-Talk <span style={styles.mtSec}>· 60 seconds</span></div>
+                <div style={styles.mtDesc}>One quick chat with your AI tutor — no pressure, just talking.</div>
+              </div>
+              <button style={styles.mtStart} onClick={() => router.push('/lingua/microtalk')}>
+                🎤 Start 1-min talk
+              </button>
+            </div>
+            <div style={styles.mtChips}>
+              {PURPOSE_OPTIONS.map(opt => (
+                <button key={opt.id}
+                  onClick={() => router.push(`/lingua/microtalk?topic=${opt.id}`)}
+                  style={{ ...styles.mtChip, ...(opt.id === mtActivePurpose ? styles.mtChipActive : {}) }}>
+                  {opt.emoji} {opt.label}
+                </button>
+              ))}
+            </div>
+            {!user && (
+              <div style={styles.mtGuest}>🎁 {mtGuestLeft} free talk{mtGuestLeft === 1 ? '' : 's'} left today · no sign-up needed</div>
+            )}
+          </div>
+        </div>
+      )}
+
       {/* -- Trust strip (logged-out): Beta 정체성을 살린 참여형 문구 (H4) -- */}
       {!authLoading && !user && (
         <div style={styles.trustStrip}>
@@ -1290,6 +1340,18 @@ const styles: Record<string, React.CSSProperties> = {
   // Trust strip (logged-out visitors)
   trustStrip: { display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap', padding: '20px 32px 0', maxWidth: 900, margin: '0 auto' },
   trustItem: { display: 'flex', alignItems: 'center', gap: 8, background: '#fff', border: '1px solid #E9ECEF', borderRadius: 99, padding: '9px 18px', fontSize: 13, fontWeight: 800, color: '#475569', boxShadow: '0 1px 6px rgba(0,0,0,0.04)', fontFamily: "'Nunito',sans-serif" },
+
+  // Micro-Talk card (Phase 2-1 Track 2-B)
+  mtCard: { background: 'linear-gradient(135deg,#0F172A 0%,#1E1B4B 60%,#312E81 100%)', borderRadius: 22, padding: '22px 24px', boxShadow: '0 10px 30px rgba(30,27,75,0.25)', color: '#fff' },
+  mtHead: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap', marginBottom: 14 },
+  mtTitle: { fontSize: 20, fontWeight: 900, letterSpacing: -0.3 },
+  mtSec: { fontSize: 13, fontWeight: 700, color: '#FBBF24' },
+  mtDesc: { fontSize: 13.5, color: 'rgba(255,255,255,0.72)', marginTop: 4 },
+  mtStart: { background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', border: 'none', borderRadius: 14, padding: '13px 26px', fontSize: 15, fontWeight: 800, cursor: 'pointer', boxShadow: '0 6px 18px rgba(99,102,241,0.45)', whiteSpace: 'nowrap' },
+  mtChips: { display: 'flex', gap: 8, flexWrap: 'wrap' },
+  mtChip: { border: '1px solid rgba(255,255,255,0.28)', borderRadius: 99, background: 'rgba(255,255,255,0.08)', color: '#E2E8F0', padding: '8px 16px', fontSize: 13, fontWeight: 700, cursor: 'pointer' },
+  mtChipActive: { background: 'rgba(251,191,36,0.18)', borderColor: '#FBBF24', color: '#FDE68A' },
+  mtGuest: { marginTop: 12, fontSize: 12, fontWeight: 700, color: 'rgba(255,255,255,0.6)' },
 
   // Stats
   statsWrap: { display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16, padding: '24px 32px 0', maxWidth: 1200, margin: '0 auto' },
