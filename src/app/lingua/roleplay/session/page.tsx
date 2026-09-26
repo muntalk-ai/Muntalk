@@ -7,7 +7,7 @@ import RtlDir from '@/components/RtlDir';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { getTutorById } from '@/data/tutors';
-import { LEARN_LANGUAGES } from '@/data/languages';
+import { LEARN_LANGUAGES, promptLangName } from '@/data/languages';
 import {
   EVERYDAY_SCENARIOS, WORLD_SCENARIOS, getNativeDesc,
   type NpcCharacter, type StoryBeat,
@@ -40,33 +40,6 @@ interface ActiveChoice {
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
-const LANG_NAMES: Record<string,string> = {
-  'en-US':'English','en-GB':'English','ja-JP':'Japanese','ko-KR':'Korean',
-  'zh-CN':'Chinese (Simplified)','zh-TW':'Chinese (Traditional)','zh-HK':'Cantonese',
-  'fr-FR':'French','de-DE':'German','es-ES':'Spanish','es-MX':'Spanish (Mexico)',
-  'it-IT':'Italian','pt-BR':'Portuguese','pt-PT':'Portuguese',
-  'ru-RU':'Russian','ar-XA':'Arabic','ar-SA':'Arabic','hi-IN':'Hindi',
-  'vi-VN':'Vietnamese','th-TH':'Thai','id-ID':'Indonesian','ms-MY':'Malay',
-  'nl-NL':'Dutch','pl-PL':'Polish','tr-TR':'Turkish','sv-SE':'Swedish',
-  'da-DK':'Danish','no-NO':'Norwegian','fi-FI':'Finnish','cs-CZ':'Czech',
-  'sk-SK':'Slovak','hu-HU':'Hungarian','ro-RO':'Romanian','el-GR':'Greek',
-  'uk-UA':'Ukrainian','bg-BG':'Bulgarian','hr-HR':'Croatian','sr-RS':'Serbian',
-  'he-IL':'Hebrew','fa-IR':'Persian','ur-PK':'Urdu','bn-BD':'Bengali',
-  'ta-IN':'Tamil','te-IN':'Telugu','ml-IN':'Malayalam','kn-IN':'Kannada',
-  'gu-IN':'Gujarati','mr-IN':'Marathi','pa-IN':'Punjabi',
-  'sw-KE':'Swahili','af-ZA':'Afrikaans','tl-PH':'Filipino',
-  'my-MM':'Burmese','km-KH':'Khmer','mn-MN':'Mongolian',
-  'tg-TJ':'Tajik','ky-KG':'Kyrgyz',
-};
-
-const NATIVE_NAMES: Record<string,string> = {
-  'ko-KR':'Korean','ja-JP':'Japanese','zh-CN':'Chinese','zh-TW':'Chinese',
-  'fr-FR':'French','de-DE':'German','es-ES':'Spanish','pt-BR':'Portuguese',
-  'ru-RU':'Russian','ar-XA':'Arabic','hi-IN':'Hindi','vi-VN':'Vietnamese',
-  'id-ID':'Indonesian','tr-TR':'Turkish','it-IT':'Italian',
-  'nl-NL':'Dutch','pl-PL':'Polish','sv-SE':'Swedish','uk-UA':'Ukrainian',
-};
-
 const scoreColor = (s: number) => s>=80?'#10B981':s>=65?'#F59E0B':'#EF4444';
 const hasTts = (c: string) => LEARN_LANGUAGES.find(l=>l.code===c)?.tts ?? false;
 const stripEmoji = (t: string) =>
@@ -85,8 +58,8 @@ function SessionContent() {
   const subLang    = sp.get('subLang') || 'en-US';
   const difficulty = sp.get('difficulty') || 'B1';
 
-  const targetLang = LANG_NAMES[langId] || 'English';
-  const nativeLang = NATIVE_NAMES[subLang] || 'English';
+  const targetLang = promptLangName(langId);
+  const nativeLang = promptLangName(subLang);
   const showNative = subLang !== 'en-US' && subLang !== 'en-GB';
 
   const everyday = EVERYDAY_SCENARIOS.find(s => s.id === scenarioId);
