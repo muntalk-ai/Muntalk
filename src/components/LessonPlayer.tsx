@@ -67,6 +67,7 @@ export default function LessonPlayer({
   const [xpEarned, setXpEarned] = useState(0);
   const [showXPPop, setShowXPPop] = useState(false);
   const [xpPopVal, setXpPopVal] = useState(0);
+  const [resumeOffer, setResumeOffer] = useState<null | { phase: Phase; vocabIdx: number; quizIdx: number; xpEarned: number }>(null);
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loadingTx, setLoadingTx] = useState<Record<string, boolean>>({});
   const [translatedLesson, setTranslatedLesson] = useState<typeof lesson | null>(null);
@@ -133,6 +134,45 @@ export default function LessonPlayer({
     checkTrial();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user?.uid]);
+
+  // -- P1-6: 레슨 진행 상황 저장/복원 -----------------------------------------
+  const PROGRESS_KEY = 'mt_lesson_progress';
+
+  // 마운트 시 저장된 진행 확인 → 이어하기 제안
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(PROGRESS_KEY);
+      if (!raw) return;
+      const saved = JSON.parse(raw);
+      if (saved.lessonId !== lessonId || saved.phase === 'complete') return;
+      // 의미 있는 진행이 있을 때만 제안 (vocab 첫 카드 제외)
+      const hasProgress = saved.phase !== 'vocab' || (saved.vocabIdx || 0) > 0;
+      if (hasProgress) setResumeOffer(saved);
+    } catch { /* ignore */ }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // 진행 변경 시 저장 / 완료 시 삭제
+  useEffect(() => {
+    if (resumeOffer) return; // 이어하기 선택 전에는 덮어쓰지 않음
+    try {
+      if (phase === 'complete') {
+        localStorage.removeItem(PROGRESS_KEY);
+        return;
+      }
+      localStorage.setItem(PROGRESS_KEY, JSON.stringify({
+        lessonId, phase, vocabIdx, quizIdx, xpEarned, savedAt: Date.now(),
+      }));
+    } catch { /* ignore */ }
+  }, [lessonId, phase, vocabIdx, quizIdx, xpEarned, resumeOffer]);
+
+  // 레슨 중 새로고침/탭 닫기 경고
+  useEffect(() => {
+    if (phase === 'complete') return;
+    const onBeforeUnload = (e: BeforeUnloadEvent) => { e.preventDefault(); };
+    window.addEventListener('beforeunload', onBeforeUnload);
+    return () => window.removeEventListener('beforeunload', onBeforeUnload);
+  }, [phase]);
 
   // -- Translate lesson content when non-English --------------------------------
   const [txError, setTxError] = useState<string | null>(null);
@@ -717,6 +757,44 @@ RULES:
   // -----------------------------------------------------------------------------
   return (
     <div style={styles.page}>
+
+      {/* -- Resume offer (P1-6) ------------------------------------------- */}
+      {resumeOffer && (
+        <div style={{ position:'fixed', inset:0, background:'rgba(15,23,42,0.45)', zIndex:9000,
+          display:'flex', alignItems:'center', justifyContent:'center', padding:24 }}>
+          <div style={{ background:'#fff', borderRadius:20, padding:28, maxWidth:380, width:'100%',
+            textAlign:'center', boxShadow:'0 20px 60px rgba(0,0,0,0.25)' }}>
+            <div style={{ fontSize:40, marginBottom:12 }}>📖</div>
+            <div style={{ fontSize:18, fontWeight:900, color:'#0F172A', marginBottom:8 }}>
+              Continue where you left off?
+            </div>
+            <div style={{ fontSize:13, color:'#64748B', fontWeight:600, marginBottom:20 }}>
+              You were in the {resumeOffer.phase === 'vocab' ? 'Vocabulary' : resumeOffer.phase === 'quiz' ? 'Quiz' : 'Conversation'} step.
+            </div>
+            <div style={{ display:'flex', gap:10 }}>
+              <button onClick={() => {
+                  setPhase(resumeOffer.phase);
+                  setVocabIdx(resumeOffer.vocabIdx || 0);
+                  setQuizIdx(resumeOffer.quizIdx || 0);
+                  setXpEarned(resumeOffer.xpEarned || 0);
+                  setResumeOffer(null);
+                }}
+                style={{ flex:1, padding:'12px 0', borderRadius:12, border:'none',
+                  background:'#6366F1', color:'#fff', fontWeight:800, fontSize:14, cursor:'pointer' }}>
+                ▶ Resume
+              </button>
+              <button onClick={() => {
+                  try { localStorage.removeItem('mt_lesson_progress'); } catch { /* ignore */ }
+                  setResumeOffer(null);
+                }}
+                style={{ flex:1, padding:'12px 0', borderRadius:12, border:'1px solid #E2E8F0',
+                  background:'#fff', color:'#64748B', fontWeight:800, fontSize:14, cursor:'pointer' }}>
+                Start over
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
 
       {/* -- Trial timer bar (only for guest / free) ----------------------- */}
