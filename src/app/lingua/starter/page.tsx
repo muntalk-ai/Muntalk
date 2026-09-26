@@ -526,6 +526,7 @@ LANGUAGE RULES:
 - Max 2 short sentences
 - If correct: celebrate loudly 🎉
 - If wrong: gently say the correct ${tLang} word once
+- If the student is being silly or playful: play along with one witty line, then ask them to say one more word
 - End by asking them to say one more word from the list`;
 
     const reply = await callGemini(prompt).catch(() => `Good try! 🌟 You're doing great!`);
