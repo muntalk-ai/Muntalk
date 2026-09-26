@@ -1,5 +1,6 @@
 'use client';
 import { apiFetch } from '@/lib/apiClient';
+import { AI_TIMEOUT_MS } from '@/lib/aiRetry';
 
 import { useState, useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -373,9 +374,11 @@ function PlacementInner() {
         });
         const correct = cefrAnswers.filter((a, i) => questions[i] && a === questions[i].answer).length;
         const accuracy = questions.length ? Math.round(correct / questions.length * 100) : 0;
-        const res = await fetch('/api/gemini', {
+        // PR-G: 직접 fetch → apiFetch (인증+타임아웃), 실패 시 quiet degrade 유지
+        const res = await apiFetch('/api/gemini', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
+          timeoutMs: AI_TIMEOUT_MS,
           body: JSON.stringify({
             uid:         user?.uid || null,
             purpose:     'placement-style',

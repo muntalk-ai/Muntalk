@@ -1,5 +1,7 @@
 'use client';
 import { apiFetch } from '@/lib/apiClient';
+import { runWithAiRetry, AI_TIMEOUT_MS } from '@/lib/aiRetry';
+import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -20,14 +22,21 @@ interface ChatMsg { role: 'user' | 'ai'; text: string }
 type Phase = 'topic' | 'chat' | 'report';
 
 async function callGemini(prompt: string, temperature: number): Promise<string> {
-  const res = await apiFetch('/api/gemini', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ prompt, temperature }),
+  let out = '';
+  // PR-G: 타임아웃 + 실패 시 전역 재시도 모달
+  const failed = await runWithAiRetry(async () => {
+    const res = await apiFetch('/api/gemini', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt, temperature }),
+      timeoutMs: AI_TIMEOUT_MS,
+    });
+    const data = await res.json();
+    if (data?.error) throw new Error(data.error);
+    out = (data?.text ?? '').trim();
   });
-  const data = await res.json();
-  if (data?.error) throw new Error(data.error);
-  return (data?.text ?? '').trim();
+  if (failed) throw new Error('ai-failed');
+  return out;
 }
 
 export default function MicroTalkPage() {
@@ -44,6 +53,7 @@ export default function MicroTalkPage() {
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [isListening, setIsListening] = useState(false);
+  const [micGuide, setMicGuide] = useState<MicGuideReason | null>(null); // PR-G: STT 안내
   const [secondsLeft, setSecondsLeft] = useState(MICROTALK_SECONDS);
   const [report, setReport] = useState<MicroTalkReport | null>(null);
   const [error, setError] = useState('');
@@ -99,14 +109,20 @@ export default function MicroTalkPage() {
     rec.lang = learnLang;
     rec.continuous = false; rec.interimResults = false;
     rec.onresult = (e: any) => { sendRef.current(e.results[0][0].transcript); };
-    rec.onerror = () => setIsListening(false);
+    // PR-G: 권한 거부/마이크 없음 시 무음 대신 안내 UI
+    rec.onerror = (e: any) => {
+      setIsListening(false);
+      const code = e?.error;
+      if (code === 'not-allowed' || code === 'service-not-allowed') setMicGuide('denied');
+      else if (code === 'audio-capture') setMicGuide('no-mic');
+    };
     rec.onend = () => setIsListening(false);
     recRef.current = rec;
   }, [ready, learnLang]); // eslint-disable-line
 
   const toggleListen = () => {
     const rec = recRef.current;
-    if (!rec) return;
+    if (!rec) { setMicGuide('unsupported'); return; }
     if (isListening) { try { rec.stop(); } catch {} return; }
     setIsListening(true);
     try { rec.start(); } catch { setIsListening(false); }
@@ -318,6 +334,7 @@ export default function MicroTalkPage() {
             {error && <div style={S.errBox}>{error} <button style={S.retryBtn} onClick={() => setError('')}>Dismiss</button></div>}
             <div ref={bottomRef} />
           </div>
+          {micGuide && <MicGuide reason={micGuide} onDismiss={() => setMicGuide(null)} />}
           <div style={S.inputRow}>
             {sttOn && (
               <button onClick={toggleListen} style={{ ...S.micBtn, ...(isListening ? S.micOn : {}) }}

@@ -1,5 +1,6 @@
 'use client';
 import { apiFetch } from '@/lib/apiClient';
+import { AI_TIMEOUT_MS } from '@/lib/aiRetry';
 
 import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -246,6 +247,7 @@ function StarterContent() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ uid: user?.uid ?? null, prompt, temperature: 0.5 }),
+      timeoutMs: AI_TIMEOUT_MS,
     });
     const data = await res.json();
     return data.text?.trim() || '';
@@ -303,6 +305,7 @@ Rules:
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ uid: user?.uid ?? null, prompt, temperature: 0.2 }),
+      timeoutMs: AI_TIMEOUT_MS,
     }).then(r => r.json()).then(data => {
       const raw = data.text?.trim() || '';
       const clean = raw.replace(/^```json\s*/i,'').replace(/^```\s*/i,'').replace(/```[\s\S]*$/i,'').trim();

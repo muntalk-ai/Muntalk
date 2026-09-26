@@ -1,5 +1,6 @@
 'use client';
 import { apiFetch } from '@/lib/apiClient';
+import { runWithAiRetry, AI_TIMEOUT_MS } from '@/lib/aiRetry';
 
 import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
 import { useRouter } from 'next/navigation';
@@ -222,6 +223,7 @@ function DiscoverContent() {
           uid: user?.uid ?? null, temperature: 0.1,
           prompt: `Translate the following text to language code "${subLang}". Return ONLY the translation, nothing else:\n\n"${text}"`,
         }),
+        timeoutMs: AI_TIMEOUT_MS,
       });
       const data = await res.json();
       const translation = data.text?.trim().replace(/^"|"$/g, '') || '';
@@ -295,16 +297,19 @@ function DiscoverContent() {
     }
 
     setLoading(true);
-    try {
+    // PR-G: 타임아웃 + 실패 시 전역 재시도 모달
+    const failed = await runWithAiRetry(async () => {
       const res = await apiFetch('/api/gemini', { method:'POST',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ uid:user?.uid??null, temperature:0.85,
-          prompt: buildPrompt(msg) }) });
+          prompt: buildPrompt(msg) }),
+        timeoutMs: AI_TIMEOUT_MS });
       const data = await res.json();
       const aiText = data.text?.trim() || 'Interesting — tell me more.';
       addMsg({ role:'ai', text:aiText });
       speak(aiText);
-    } catch {
+    });
+    if (failed) {
       addMsg({ role:'ai', text:'Hmm, I lost my train of thought there — could you say that again? 🔄' });
     }
     setLoading(false);
@@ -336,7 +341,9 @@ function DiscoverContent() {
       const prompt = buildOpeningPrompt(id, channelId);
       const res = await apiFetch('/api/gemini', { method:'POST',
         headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({ uid:user?.uid??null, temperature:0.9, prompt }) });
+        body: JSON.stringify({ uid:user?.uid??null, temperature:0.9, prompt }),
+        timeoutMs: AI_TIMEOUT_MS,
+      });
       const data = await res.json();
       const aiText = data.text?.trim() || 'Hello! What\'s on your mind?';
       addMsg({ role:'ai', text:aiText });

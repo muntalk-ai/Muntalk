@@ -1,5 +1,6 @@
 ﻿'use client';
 import { apiFetch } from '@/lib/apiClient';
+import { AI_TIMEOUT_MS } from '@/lib/aiRetry';
 
 import { useEffect, useState, useRef, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
@@ -22,6 +23,7 @@ async function callGemini(prompt: string, temperature = 0.7): Promise<string> {
   const res = await apiFetch('/api/gemini', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ prompt, temperature }),
+    timeoutMs: AI_TIMEOUT_MS,
   });
   const data = await res.json();
   if (!res.ok) throw new Error(data.error || 'Gemini error');

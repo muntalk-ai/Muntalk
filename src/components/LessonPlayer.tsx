@@ -1,5 +1,6 @@
 'use client';
 import { apiFetch } from '@/lib/apiClient';
+import { AI_TIMEOUT_MS } from '@/lib/aiRetry';
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
@@ -357,6 +358,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ uid: user?.uid ?? null, prompt, temperature: 0.3 }),
+        timeoutMs: AI_TIMEOUT_MS,
       })
         .then(async r => {
           const data = await r.json();
@@ -512,7 +514,8 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
         method:'POST', headers:{'Content-Type':'application/json'},
         body:JSON.stringify({ uid:user?.uid??null, temperature:0.1,
           prompt:`Translate to ${nativeNames[subLang]||'Korean'}. Reply ONLY with translation:
-"${text}"` })
+"${text}"` }),
+        timeoutMs: AI_TIMEOUT_MS,
       });
       const data = await res.json();
       if (data.text) {
@@ -535,6 +538,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
           prompt: `You are a translator. Translate the given text to ${getLangName(subLang)}. Reply with ONLY the translation, nothing else.\n\n${text}`,
           temperature: 0.3,
         }),
+        timeoutMs: AI_TIMEOUT_MS,
       });
       const data = await res.json();
       const tx = data.text?.trim();
@@ -654,6 +658,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
           temperature: 0.4,
           prompt: `You are a friendly language tutor. A student learning ${langNames[langId] || langId} got this quiz question wrong.\nQuestion: ${quizItem.q}\nOptions: ${quizItem.options.map((o: string, i: number) => `${['A','B','C','D'][i]}) ${o}`).join(' | ')}\nCorrect answer: ${quizItem.options[quizItem.answer]}\nStudent chose: ${quizItem.options[selectedOpt]}\nExplain in ${nativeNames[subLang] || 'Korean'}, in 2-3 short sentences: why the correct answer is right, and why the student's choice is wrong. Be encouraging, never condescending. No emojis.`,
         }),
+        timeoutMs: AI_TIMEOUT_MS,
       });
       const data = await res.json();
       if (data.text) setExplanation(data.text.trim());
@@ -688,7 +693,8 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
             temperature: 0.3,
             prompt: `You are a pronunciation coach for ${langNames[langId] || langId} learners.\nThe student tried to say: "${vocabItem.word}" (pronunciation guide: ${vocabItem.phonetic || 'n/a'}, meaning: ${vocabItem.meaning}).\nSpeech recognition heard them say: "${transcript}".\nCompare what they said vs the target. Reply in ${nativeNames[subLang] || 'Korean'} with ONLY JSON, no markdown:\n{"score":<0-100>,"heard":"<what you think they actually said>","feedback":"<1-2 sentences: which exact sound was off and how to fix it (e.g. tongue position, sound length). If great, praise briefly and specifically>"}`,
           }),
-        });
+        timeoutMs: AI_TIMEOUT_MS,
+      });
         const data = await res.json();
         const parsed = JSON.parse((data.text || '').replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim());
         setPronResult(prev => ({
@@ -735,6 +741,7 @@ LANGUAGE MODE: ${chatLangMode === 'native' ? `Reply in ${nativeNames[subLang]||'
 Generate a warm 1-2 sentence opening. End with a simple question.`,
           temperature: 0.7,
         }),
+        timeoutMs: AI_TIMEOUT_MS,
       });
       const data = await res.json();
       if (data.text) openingText = data.text.trim();
@@ -785,6 +792,7 @@ RULES:
           ].join('\n\n'),
           temperature: 0.8,
         }),
+        timeoutMs: AI_TIMEOUT_MS,
       });
       const data = await res.json();
 
