@@ -6,6 +6,7 @@ import { useAuth } from '@/context/AuthContext';
 import { getUserProfile } from '@/lib/userProfile';
 import { getTutorById } from '@/data/tutors';
 import { getSubscription, isAdminEmail } from '@/lib/subscription';
+import { truncateHistory } from '@/lib/history';
 import PaywallModal from '@/components/PaywallModal';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -239,7 +240,7 @@ function DiscoverContent() {
   // Build system prompt per feature
   const buildPrompt = useCallback((userText: string): string => {
     const t = getTutorById(tutorId);
-    const history = messages.map(m=>`${m.role==='user'?'User':t.name}: ${m.text}`).join('\n');
+    const history = truncateHistory(messages, 10).map(m=>`${m.role==='user'?'User':t.name}: ${m.text}`).join('\n');
     const dayIdx = new Date().getDay();
     // Compute lang inside callback to avoid hoisting issues
     const _targetLang = LANG_NAMES[langId]  || 'English';

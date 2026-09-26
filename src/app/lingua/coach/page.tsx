@@ -263,7 +263,7 @@ export default function CoachPage() {
     const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
     if (!SR) return;
     const rec = new SR();
-    rec.lang = snapshot.nativeLang;
+    rec.lang = snapshot.learnLang;
     rec.continuous = false; rec.interimResults = false;
     rec.onresult = (e: any) => handleSend(e.results[0][0].transcript);
     rec.onerror  = () => setIsListening(false);
