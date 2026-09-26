@@ -200,7 +200,7 @@ export default function CoachPage() {
       const doneParsed = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
       const tutorId    = localStorage.getItem('mt_tutor_id') || 't01';
 
-      let name = '학습자';
+      let name = 'Learner';
       let firestoreDone: string[] = [];
       let purpose: LearningPurpose | undefined;
       const storedPurpose = localStorage.getItem('mt_purpose');
@@ -246,8 +246,8 @@ export default function CoachPage() {
           const lvl = id.split('-')[0];
           levelCounts[lvl] = (levelCounts[lvl] || 0) + 1;
         });
-        if ((levelCounts['a1'] || 0) < 6) weakAreas.push('기초 표현');
-        if (completedLessons.filter(id => id.startsWith('b')).length < 3) weakAreas.push('중급 문법');
+        if ((levelCounts['a1'] || 0) < 6) weakAreas.push('Basic expressions');
+        if (completedLessons.filter(id => id.startsWith('b')).length < 3) weakAreas.push('Intermediate grammar');
       }
 
       const snap: LearnerSnapshot = {
@@ -322,10 +322,10 @@ export default function CoachPage() {
         timeoutMs: AI_TIMEOUT_MS,
       });
       const data = await res.json();
-      const text = data.text?.trim() || '안녕하세요! 학습 코치입니다.';
+      const text = data.text?.trim() || "Hello! I'm your learning coach.";
       setMessages([{ role: 'coach', text, ts: Date.now() }]);
     } catch {
-      setMessages([{ role: 'coach', text: '안녕하세요! 오늘 학습 상담을 시작하겠습니다.', ts: Date.now() }]);
+      setMessages([{ role: 'coach', text: "Hello! Let's start today's coaching session.", ts: Date.now() }]);
     } finally {
       setBriefing(false);
     }
@@ -391,12 +391,12 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
         });
         const data = await res.json();
         setMessages(prev => [...prev, {
-          role: 'coach', text: data.text?.trim() || '죄송합니다, 다시 시도해주세요.', ts: Date.now(),
+          role: 'coach', text: data.text?.trim() || 'Sorry, please try again.', ts: Date.now(),
         }]);
       });
       if (failed) {
         setMessages(prev => [...prev, {
-          role: 'coach', text: '연결 오류가 발생했습니다. 다시 시도해주세요.', ts: Date.now(),
+          role: 'coach', text: 'A connection error occurred. Please try again.', ts: Date.now(),
         }]);
       }
     } finally {
@@ -407,11 +407,11 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
   // ── Quick questions ───────────────────────────────────────────────────────
 
   const quickQuestions = snapshot ? [
-    `오늘 어떤 레슨을 하면 좋을까요?`,
-    `제 약점이 뭔가요?`,
-    `${LEVEL_LABELS[snapshot.currentLevel]}에서 가장 중요한 것은?`,
-    `학습 동기가 떨어질 때 어떻게 하나요?`,
-    `다음 레벨까지 얼마나 걸릴까요?`,
+    `Which lesson should I do today?`,
+    `What are my weak points?`,
+    `${LEVEL_LABELS[snapshot.currentLevel]} — what's most important?`,
+    `What should I do when I lose motivation?`,
+    `How long until the next level?`,
   ] : [];
 
   const tutor = snapshot ? getTutorById(snapshot.tutorId) : null;
@@ -423,7 +423,7 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
       <style>{CSS}</style>
       <div style={S.loadingInner}>
         <div className="pulse-ring"/>
-        <div style={S.loadingText}>코치를 준비하고 있어요...</div>
+        <div style={S.loadingText}>Getting your coach ready...</div>
       </div>
     </div>
   );
@@ -435,10 +435,10 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
 
       {/* Nav */}
       <nav style={S.nav}>
-        <button onClick={() => router.push('/lingua')} style={S.navBack}>← 홈</button>
+        <button onClick={() => router.push('/lingua')} style={S.navBack}>← Home</button>
         <div style={S.navCenter}>
           <span style={S.navIcon}>🧑‍🏫</span>
-          <span style={S.navTitle}>AI 학습 코치</span>
+          <span style={S.navTitle}>AI Learning Coach</span>
         </div>
         <div style={S.navLang}>{snapshot?.nativeLangLabel}</div>
       </nav>
@@ -447,10 +447,10 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
       {snapshot && (
         <div style={S.statsStrip}>
           {[
-            { label: '현재 레벨', value: snapshot.currentLevel.toUpperCase(), icon: '📊' },
-            { label: '총 XP', value: `${snapshot.xp.toLocaleString()}`, icon: '⭐' },
-            { label: '완료 레슨', value: `${snapshot.completedCount}개`, icon: '✅' },
-            { label: '연속 학습', value: `${snapshot.streak}일`, icon: '🔥' },
+            { label: 'Current level', value: snapshot.currentLevel.toUpperCase(), icon: '📊' },
+            { label: 'Total XP', value: `${snapshot.xp.toLocaleString()}`, icon: '⭐' },
+            { label: 'Lessons done', value: `${snapshot.completedCount}`, icon: '✅' },
+            { label: 'Day streak', value: `${snapshot.streak} days`, icon: '🔥' },
           ].map(s => (
             <div key={s.label} style={S.statItem}>
               <span style={S.statIcon}>{s.icon}</span>
@@ -473,7 +473,7 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
                   <div key={i} style={{ ...S.dot, animationDelay: `${i * 0.2}s` }}/>
                 ))}
               </div>
-              <div style={S.briefingText}>학습 기록을 분석하고 있어요...</div>
+              <div style={S.briefingText}>Analyzing your learning history...</div>
             </div>
           </div>
         )}
@@ -492,7 +492,7 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
                   <img loading="lazy" src={tutor.thumbnail} alt="" style={S.coachAvatar}
                     onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}/>
                 )}
-                <span style={S.coachLabel}>AI 코치</span>
+                <span style={S.coachLabel}>AI Coach</span>
               </div>
             )}
 
@@ -540,10 +540,10 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
       {messages.length >= 2 && (
         <div style={S.ctaWrap}>
           <button onClick={() => router.push('/lingua')} style={S.ctaBtn}>
-            📚 학습 시작하기 <span className="mt-flip-rtl">→</span>
+            📚 Start learning <span className="mt-flip-rtl">→</span>
           </button>
           <button onClick={() => router.push('/lingua/roleplay')} style={S.ctaBtn2}>
-            🎭 롤플레이 연습
+            🎭 Practice roleplay
           </button>
         </div>
       )}
@@ -570,7 +570,7 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
           onChange={e => setInput(e.target.value)}
           onKeyDown={e => { if (e.key === 'Enter') handleSend(); }}
           disabled={loading || briefing}
-          placeholder={snapshot ? `${snapshot.nativeLangLabel}로 질문하세요...` : '질문을 입력하세요...'}
+          placeholder={snapshot ? `Ask in ${snapshot.nativeLangLabel}...` : 'Type your question...'}
           style={{ ...S.input, opacity: loading || briefing ? 0.5 : 1 }}
         />
         <button
