@@ -47,6 +47,7 @@ export default function MicroTalkPage() {
   const [report, setReport] = useState<MicroTalkReport | null>(null);
   const [error, setError] = useState('');
   const [guestLeft, setGuestLeft] = useState(GUEST_DAILY_LIMIT);
+  const [shared, setShared] = useState(false);
 
   const messagesRef = useRef<ChatMsg[]>([]);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -224,6 +225,26 @@ export default function MicroTalkPage() {
   const mm = `${Math.floor(secondsLeft / 60)}:${String(secondsLeft % 60).padStart(2, '0')}`;
   const sttOn = hasStt(learnLang);
 
+  // ── 리포트 공유: Web Share API → 미지원 시 클립보드 복사 + "Copied!" ──
+  const shareResult = async () => {
+    if (!report) return;
+    const shareText = `I just did a 60-second Micro-Talk in ${learnLangLabel} on MunTalk! 🗣️ Spoke ${report.utterances} time${report.utterances === 1 ? '' : 's'} · ✨ New phrase: ${report.newPhrase} · 💡 ${report.feedback} — Try a 1-min free chat: https://muntalk.com/lingua/microtalk`;
+    const nav = navigator as Navigator & { share?: (d: { title: string; text: string; url: string }) => Promise<void> };
+    if (nav.share) {
+      try {
+        await nav.share({ title: 'My Micro-Talk recap', text: shareText, url: 'https://muntalk.com/lingua/microtalk' });
+        return;
+      } catch (e: any) {
+        if (e?.name === 'AbortError') return; // 사용자 취소 → 복사 fallback 생략
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(shareText);
+      setShared(true);
+      setTimeout(() => setShared(false), 2000);
+    } catch { /* ignore */ }
+  };
+
   if (!ready) return (
     <div style={S.loadingPage}><div style={S.loadingText}>⚡ Loading Micro-Talk…</div></div>
   );
@@ -257,8 +278,11 @@ export default function MicroTalkPage() {
               <div style={{ fontSize: 15, fontWeight: 800, marginBottom: 6 }}>
                 You've used all {GUEST_DAILY_LIMIT} free Micro-Talks today.
               </div>
-              <div style={{ fontSize: 13, color: '#64748B', marginBottom: 14 }}>
+              <div style={{ fontSize: 13, color: '#64748B', marginBottom: 10 }}>
                 Sign in for unlimited 1-minute chats — it's free.
+              </div>
+              <div style={{ fontSize: 12.5, color: '#94A3B8', marginBottom: 14 }}>
+                Sign in to save your vocabulary &amp; daily streaks!
               </div>
               <button style={S.startBtn} onClick={() => router.push('/signup')}>🚀 Sign in free</button>
             </div>
@@ -328,6 +352,7 @@ export default function MicroTalkPage() {
               <div style={S.loadingText}>Writing your recap…</div>
             )}
             <div style={S.reportBtns}>
+              {report && <button style={S.ghostBtn} onClick={shareResult}>📤 {shared ? 'Copied!' : 'Share'}</button>}
               <button style={S.startBtn} onClick={reset}>🔁 Talk again</button>
               <button style={S.ghostBtn} onClick={() => router.push('/lingua/roleplay')}>🎭 More in Roleplay</button>
               <button style={S.ghostBtn} onClick={() => router.push('/lingua')}>← Home</button>
