@@ -11,6 +11,8 @@ import { CURRICULUM, getCurrentLevel } from '@/data/curriculum';
 import { LEARN_LANGUAGES, UI_LANGUAGES } from '@/data/languages';
 import { getSubscription, getHearts, getLocalHearts, isLevelLocked, isAdminEmail, PlanId, Hearts } from '@/lib/subscription';
 import PaywallModal from '@/components/PaywallModal';
+import CashEventProgress from '@/components/CashEventProgress';
+import CashEventWinnerBanner from '@/components/CashEventWinnerBanner';
 import TrialBanner from '@/components/TrialBanner';
 import TrialExpiredModal from '@/components/TrialExpiredModal';
 import { getTrialData, isTrialExpired, trialDaysRemaining, addTrialLanguage, TRIAL_MAX_LANGUAGES, TrialData } from '@/lib/trialPolicy';
@@ -973,6 +975,18 @@ export default function LevelHub() {
             )}
           </div>
         </div>
+      )}
+
+      {/* -- $100 이벤트 응모 현황 (Phase 2-1 PR-D — ENABLE_CASH_EVENT=false면 숨김) -- */}
+      {!authLoading && user && profile && (
+        <>
+          <CashEventWinnerBanner uid={user.uid} />
+          <CashEventProgress
+            uid={user.uid}
+            activityDates={profile.activityDates || []}
+            joinedDate={profile.createdAt?.toDate?.()?.toISOString?.()?.slice(0, 10) || profile.createdAt?.slice?.(0, 10)}
+          />
+        </>
       )}
 
       {/* -- Trust strip (logged-out): Beta 정체성을 살린 참여형 문구 (H4) -- */}

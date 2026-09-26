@@ -8,10 +8,11 @@ import {
   collection, getDocs, doc, setDoc, getDoc, addDoc,
   serverTimestamp, query, orderBy, limit, where,
 } from 'firebase/firestore';
+import EventsPanel from './EventsPanel';
 
 const ADMIN_EMAILS = ['muntalkofficial@gmail.com'];
 type PlanId = 'free' | 'monthly' | 'biannual' | 'annual';
-type Tab = 'users' | 'email' | 'logs' | 'settings';
+type Tab = 'users' | 'email' | 'logs' | 'settings' | 'events';
 
 interface UserRow {
   uid: string; email: string; displayName: string;
@@ -226,6 +227,7 @@ export default function AdminPage() {
 
   const actionColors: Record<string,string> = {
     grant:'#059669', extend:'#6366F1', revoke:'#E11D48', email:'#F59E0B',
+    draw:'#F59E0B', payout:'#059669', winner_email:'#8B5CF6',
   };
 
   if (loading||fetching) return (
@@ -274,7 +276,7 @@ export default function AdminPage() {
 
         {/* Tabs */}
         <div style={{display:'flex',gap:6,marginBottom:20,background:'#fff',padding:6,borderRadius:14,border:'1px solid #F1F5F9',width:'fit-content'}}>
-          {([['users','👥 Users'],['email','✉️ Email'],['logs','📋 Logs'],['settings','⚙️ Settings']] as [Tab,string][]).map(([t,label])=>(
+          {([['users','👥 Users'],['email','✉️ Email'],['events','💰 Events'],['logs','📋 Logs'],['settings','⚙️ Settings']] as [Tab,string][]).map(([t,label])=>(
             <button key={t} className="tab-btn" onClick={()=>setTab(t)}
               style={{padding:'8px 20px',borderRadius:10,border:'none',background:tab===t?'#EEF2FF':'transparent',color:tab===t?'#6366F1':'#64748B',fontWeight:tab===t?900:700,fontSize:13,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
               {label}
@@ -405,6 +407,11 @@ export default function AdminPage() {
               {emailSending?'Sending...':'✉️ Send Email'}
             </button>
           </div>
+        )}
+
+        {/* -- EVENTS TAB ($100 월간 이벤트 — Phase 2-1 PR-D) -- */}
+        {tab==='events'&&(
+          <EventsPanel users={users} adminEmail={user?.email||''} logAction={logAction} showToast={showToast} />
         )}
 
         {/* -- LOGS TAB -- */}
