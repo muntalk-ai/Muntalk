@@ -901,12 +901,12 @@ export default function LevelHub() {
                 </div>
               </div>
               <h1 style={styles.heroTitle}>Speak 90+ languages<br />with 150+ AI tutors</h1>
-              <p style={styles.heroDesc}>No judgment. No pressure. Your pace, your rules.<br />Our AI tutors get total beginners talking in under 10 minutes.</p>
+              <p style={styles.heroDesc}>Stop matching words. Start real conversations.<br />Our AI tutors get total beginners talking in under 10 minutes.</p>
               <div style={styles.heroBtnRow}>
-                {/* H1: 가입 없이 바로 체험 — 완료 화면에서 가입 유도 */}
+                {/* E-2: 1분 무료 대화 체험 CTA 최상단 — /lingua/microtalk */}
                 <button style={{ ...styles.heroBtn1, fontSize: 16, padding: '15px 36px' }}
-                  onClick={() => router.push('/lingua/learn/a1/a1-1/a1-1-1')}>
-                  🎤 Try 1-min speaking
+                  onClick={() => router.push('/lingua/microtalk')}>
+                  ⚡ Try a 1-min free chat
                 </button>
                 <button style={styles.heroBtn2} onClick={() => router.push('/signup')}>
                   🚀 Start Learning Free
