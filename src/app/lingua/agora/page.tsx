@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
+import { getLangLabel } from '@/data/languages';
 
 type Side = 'for' | 'against';
 
@@ -192,7 +193,7 @@ export default function AgoraPage() {
           prompt: `You are a world-class debate moderator for MunTalk language learning.
 Topic: "${subtopic}"
 Stance guidance: ${stanceNote}
-Rules: Present FOR 🔵 and AGAINST 🔴 sides with intellectual depth. Be Socratic. 150-200 words. Respond in English only.
+Rules: Present FOR 🔵 and AGAINST 🔴 sides with intellectual depth. Be Socratic. 150-200 words. Respond ONLY in ${getLangLabel(learnLang)}.
 
 Conversation:\n${history}\n\nuser: ${txt}\n\nassistant:`,
         }),
