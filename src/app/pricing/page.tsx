@@ -4,6 +4,7 @@ import { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { PLANS, PlanId, getSubscription } from '@/lib/subscription';
+import { apiFetch } from '@/lib/apiClient';
 
 function PricingContent() {
   const router = useRouter();
@@ -24,10 +25,11 @@ function PricingContent() {
     if (!user) { router.push('/login?redirect=/pricing'); return; }
     setLoading(true);
     try {
-      const res = await fetch('/api/stripe/checkout', {
+      const res = await apiFetch('/api/stripe/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ planId, uid: user.uid, email: user.email }),
+        // uid/email은 서버에서 ID 토큰 기준으로 확정 (클라이언트 값 무시)
+        body: JSON.stringify({ planId }),
       });
       const { url } = await res.json();
       if (url) window.location.href = url;

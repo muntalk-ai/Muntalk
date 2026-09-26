@@ -5,6 +5,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { initializeApp, getApps, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
+import { apiSafeError } from '@/lib/apiGuard';
+
+// ── 2차 감사 #11 [Low]: 사용자 입력(displayName·단어) HTML 이스케이프 ──
+const esc = (s: unknown) =>
+  String(s ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
 
 function getAdminDb() {
   if (!getApps().length) {
@@ -94,26 +103,26 @@ export async function GET(req: NextRequest) {
     <p style="color:rgba(255,255,255,0.85);margin:8px 0 0;">${streak}-day streak ends at midnight</p>
   </div>
   <div style="padding:32px;text-align:center;">
-    <p style="font-size:15px;color:#374151;">Hi ${name}! You have <strong>${dueCount} cards</strong> waiting. Just 5 minutes to save your streak!</p>
+    <p style="font-size:15px;color:#374151;">Hi ${esc(name)}! You have <strong>${dueCount} cards</strong> waiting. Just 5 minutes to save your streak!</p>
     <a href="${APP_URL}/lingua" style="display:inline-block;margin-top:16px;padding:14px 36px;background:linear-gradient(135deg,#EF4444,#F97316);color:#fff;text-decoration:none;border-radius:16px;font-weight:bold;font-size:15px;">💪 Save My Streak</a>
   </div>
   <div style="padding:16px 32px;background:#FEF2F2;text-align:center;font-size:11px;color:#94A3B8;">
     <a href="${APP_URL}/profile" style="color:#6366F1;">Manage notifications</a>
   </div>
 </div>`;
-        telegramHtml = `🔥 <b>Streak Alert, ${name}!</b>\n\nYour <b>${streak}-day streak</b> ends tonight!\nYou have <b>${dueCount}</b> cards due.\n\n<a href="${APP_URL}/lingua">💪 Save My Streak →</a>`;
+        telegramHtml = `🔥 <b>Streak Alert, ${esc(name)}!</b>\n\nYour <b>${streak}-day streak</b> ends tonight!\nYou have <b>${dueCount}</b> cards due.\n\n<a href="${APP_URL}/lingua">💪 Save My Streak →</a>`;
         streakWarnings++;
       } else {
         const wordRows = sentences.map(s =>
           `<tr><td style="padding:10px 0;border-bottom:1px solid #F1F5F9;">
-            <b style="color:#6366F1;font-size:15px;">${s.word}</b><br>
-            <span style="color:#374151;">${s.sentence || ''}</span><br>
-            <span style="color:#94A3B8;font-size:13px;">${s.translation}</span>
+            <b style="color:#6366F1;font-size:15px;">${esc(s.word)}</b><br>
+            <span style="color:#374151;">${esc(s.sentence || '')}</span><br>
+            <span style="color:#94A3B8;font-size:13px;">${esc(s.translation)}</span>
           </td></tr>`
         ).join('');
 
         const telegramWords = sentences.map(s =>
-          `📖 <b>${s.word}</b> — ${s.translation}${s.sentence ? `\n    <i>${s.sentence}</i>` : ''}`
+          `📖 <b>${esc(s.word)}</b> — ${esc(s.translation)}${s.sentence ? `\n    <i>${esc(s.sentence)}</i>` : ''}`
         ).join('\n\n');
 
         emailSubject = `📚 ${dueCount} words ready for review!`;
@@ -122,7 +131,7 @@ export async function GET(req: NextRequest) {
   <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);padding:36px;text-align:center;">
     <div style="font-size:44px;margin-bottom:10px;">🌍</div>
     <h1 style="color:#fff;margin:0;font-size:22px;">Daily Review Ready!</h1>
-    <p style="color:rgba(255,255,255,0.8);margin:8px 0 0;">Hi ${name}! ${dueCount} cards are waiting · 🔥 ${streak} day streak</p>
+    <p style="color:rgba(255,255,255,0.8);margin:8px 0 0;">Hi ${esc(name)}! ${dueCount} cards are waiting · 🔥 ${streak} day streak</p>
   </div>
   <div style="padding:28px 32px;">
     <h3 style="color:#0F172A;margin:0 0 16px;">Today's words</h3>
@@ -135,7 +144,7 @@ export async function GET(req: NextRequest) {
     <a href="${APP_URL}/profile" style="color:#6366F1;">Manage notifications</a>
   </div>
 </div>`;
-        telegramHtml = `🌍 <b>Daily Review, ${name}!</b>\n\n🔥 Streak: <b>${streak} days</b>  📚 Due: <b>${dueCount}</b>\n\n<b>Today's words:</b>\n\n${telegramWords}\n\n<a href="${APP_URL}/lingua/review">▶️ Start Reviewing →</a>`;
+        telegramHtml = `🌍 <b>Daily Review, ${esc(name)}!</b>\n\n🔥 Streak: <b>${streak} days</b>  📚 Due: <b>${dueCount}</b>\n\n<b>Today's words:</b>\n\n${telegramWords}\n\n<a href="${APP_URL}/lingua/review">▶️ Start Reviewing →</a>`;
       }
 
       // ── 발송 ────────────────────────────────────────────────────
@@ -159,6 +168,6 @@ export async function GET(req: NextRequest) {
       timestamp: new Date().toISOString(),
     });
   } catch (e: any) {
-    return NextResponse.json({ error: e.message }, { status: 500 });
+    return apiSafeError('[send-daily] route error:', e);
   }
 }

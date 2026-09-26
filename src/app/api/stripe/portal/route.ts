@@ -1,10 +1,14 @@
-﻿// app/api/stripe/portal/route.ts
+// app/api/stripe/portal/route.ts
 // Stripe 고객 포털 — 구독 취소/플랜 변경
+// 2차 감사 #1 [Critical]: ID Token 필수 + 본인 uid만 허용 + rate limit
 
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { initializeApp, getApps, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
+import {
+  getIdentity, checkRateLimit, apiError, apiSafeError,
+} from '@/lib/apiGuard';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
   apiVersion: '2026-02-25.clover',
@@ -18,8 +22,15 @@ function getAdminDb() {
 }
 
 export async function POST(req: NextRequest) {
+  // ── 2차 감사 #1: 인증 필수 (타인 uid로 포털 발급 → 구독 취소 공격 차단) ──
+  const id = await getIdentity(req);
+  if (!id) return apiError('Unauthorized', 401);
+  const rl = checkRateLimit(`stripe-portal:uid:${id.uid}`, 10, 60_000);
+  if (!rl.ok) return apiError('Rate limit exceeded', 429, { retryAfterSec: rl.retryAfterSec });
+
   try {
-    const { uid } = await req.json();
+    // uid는 토큰에서 확정 — 클라이언트 주장 무시
+    const uid = id.uid;
     const db      = getAdminDb();
     const snap    = await db.collection('subscriptions').doc(uid).get();
 
@@ -35,6 +46,6 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ url: session.url });
   } catch (e: any) {
-    return NextResponse.json({ error: e.message }, { status: 500 });
+    return apiSafeError('[stripe/portal] route error:', e);
   }
 }
