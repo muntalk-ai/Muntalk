@@ -18,6 +18,7 @@ const DIFF_NATIVE: Record<string,Record<string,string>> = {
   'zh-CN':{ A1:'初级',A2:'初中级',B1:'中级',B2:'中高级',C1:'高级' },
   'es-ES':{ A1:'Básico',A2:'Elemental',B1:'Intermedio',B2:'Avanzado',C1:'Superior' },
   'fr-FR':{ A1:'Débutant',A2:'Élémentaire',B1:'Intermédiaire',B2:'Avancé',C1:'Maîtrise' },
+  'th-TH':{ A1:'ระดับต้น',A2:'ระดับกลางต้น',B1:'ระดับกลาง',B2:'ระดับกลางสูง',C1:'ระดับสูง' },
   'de-DE':{ A1:'Anfänger',A2:'Grundstufe',B1:'Mittelstufe',B2:'Obere Mittelstufe',C1:'Fortgeschritten' },
   'pt-BR':{ A1:'Básico',A2:'Elementar',B1:'Intermediário',B2:'Avançado',C1:'Proficiente' },
   'ru-RU':{ A1:'Начальный',A2:'Элементарный',B1:'Средний',B2:'Выше среднего',C1:'Продвинутый' },
