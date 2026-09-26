@@ -87,6 +87,33 @@ function ProgressBar({ pct, color = '#6366F1' }: { pct: number; color?: string }
   );
 }
 
+// -- Conversation style analysis (Phase 2-1 Track 2-A) ---------------------------
+interface StyleAnalysis {
+  title: string;
+  axes: { accuracy: string; pace: string; risk: string };
+  comment: string;
+  tip: string;
+}
+
+function buildStylePrompt(o: {
+  langLabel: string; nativeLabel: string; level: string; track: string;
+  byLevel: Record<string, { correct: number; total: number; skipped: number }>;
+  accuracy: number;
+}): string {
+  return `You are a language learning analyst. Based on this CEFR placement quiz result, analyze the learner's conversation style.
+Language: ${o.langLabel} / Assessed level: ${o.level} / Goal: ${o.track}
+Per-level performance: ${JSON.stringify(o.byLevel)} / Overall accuracy: ${o.accuracy}%
+
+Return ONLY valid JSON, no markdown:
+{"title":"...","axes":{"accuracy":"...","pace":"...","risk":"..."},"comment":"...","tip":"..."}
+Rules:
+- "title": 2-4 word persona label in English (e.g. "Cautious Strategist", "Bold Explorer")
+- "axes": short display labels — "accuracy" like "82%", "pace" like "Fast" or "Thoughtful", "risk" like "High" or "Steady"
+- "comment": 1-2 sentences in ${o.nativeLabel}, warm and specific — reference actual patterns (e.g. skips vs guesses, strong/weak levels)
+- "tip": one actionable next step, in ${o.nativeLabel}
+- No markdown, JSON only.`;
+}
+
 // -----------------------------------------------------------------------------
 function PlacementInner() {
   const router       = useRouter();
@@ -115,6 +142,13 @@ function PlacementInner() {
   const [loadErr, setLoadErr]       = useState('');
   const [saving, setSaving]         = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout>|null>(null);
+
+  // -- Conversation style card (Phase 2-1 Track 2-A) -----------------------------
+  const [styleData, setStyleData]     = useState<StyleAnalysis | null>(null);
+  const [styleLoading, setStyleLoading] = useState(false);
+  const [sharing, setSharing]         = useState(false);
+  const [shareNote, setShareNote]     = useState('');
+  const styleCardRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => () => { if (timerRef.current) clearTimeout(timerRef.current); }, []);
 
@@ -318,6 +352,85 @@ function PlacementInner() {
     setQuestions([]); setCefrStep(0); setCefrAnswers([]);
     setCefrSelected(null); setCefrRevealed(false);
     setLoadErr('');
+    setStyleData(null); setShareNote('');
+  };
+
+  // -- Conversation style analysis: fetch once on result -------------------------
+  useEffect(() => {
+    if (phase !== 'result' || styleData || styleLoading) return;
+    let cancelled = false;
+    (async () => {
+      setStyleLoading(true);
+      try {
+        const byLevel: Record<string, { correct: number; total: number; skipped: number }> = {};
+        questions.forEach((q, i) => {
+          const lvl = ['a1','a2','b1','b2','c1'].includes(q.level) ? q.level : 'c1';
+          byLevel[lvl] = byLevel[lvl] || { correct: 0, total: 0, skipped: 0 };
+          byLevel[lvl].total++;
+          if (cefrAnswers[i] == null) byLevel[lvl].skipped++;
+          else if (cefrAnswers[i] === q.answer) byLevel[lvl].correct++;
+        });
+        const correct = cefrAnswers.filter((a, i) => questions[i] && a === questions[i].answer).length;
+        const accuracy = questions.length ? Math.round(correct / questions.length * 100) : 0;
+        const res = await fetch('/api/gemini', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            uid:         user?.uid || null,
+            purpose:     'placement-style',
+            prompt:      buildStylePrompt({
+              langLabel, nativeLabel, level: cefrLevel,
+              track: trackResult?.track || 'travel', byLevel, accuracy,
+            }),
+            temperature: 0.5,
+          }),
+        });
+        const data = await res.json();
+        if (!res.ok || !data.text) throw new Error('style analysis failed');
+        const clean = data.text.replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim();
+        const parsed = JSON.parse(clean);
+        if (!cancelled && parsed.title && parsed.axes && parsed.comment) {
+          setStyleData({
+            title: String(parsed.title),
+            axes: {
+              accuracy: String(parsed.axes.accuracy ?? '—'),
+              pace:     String(parsed.axes.pace ?? '—'),
+              risk:     String(parsed.axes.risk ?? '—'),
+            },
+            comment: String(parsed.comment),
+            tip:     String(parsed.tip ?? ''),
+          });
+        }
+      } catch { /* quiet degrade — card stays hidden */ }
+      if (!cancelled) setStyleLoading(false);
+    })();
+    return () => { cancelled = true; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase]);
+
+  // -- Share the style card as an image ------------------------------------------
+  const handleShareStyle = async () => {
+    if (!styleCardRef.current || !styleData || sharing) return;
+    setSharing(true); setShareNote('');
+    try {
+      const { toPng } = await import('html-to-image');
+      const dataUrl = await toPng(styleCardRef.current, { cacheBust: true, pixelRatio: 2 });
+      const blob = await (await fetch(dataUrl)).blob();
+      const file = new File([blob], 'muntalk-conversation-style.png', { type: 'image/png' });
+      const text = `I'm a "${styleData.title}" on MunTalk! 🪞 Take the free placement test at muntalk.com`;
+      if (typeof navigator !== 'undefined' && (navigator as any).canShare?.({ files: [file] })) {
+        await (navigator as any).share({ files: [file], title: 'My MunTalk Conversation Style', text });
+      } else if (typeof navigator !== 'undefined' && (navigator as any).share) {
+        await (navigator as any).share({ title: 'My MunTalk Conversation Style', text, url: 'https://muntalk.com' });
+      } else {
+        const a = document.createElement('a');
+        a.href = dataUrl; a.download = 'muntalk-conversation-style.png'; a.click();
+        setShareNote('Image downloaded — share it anywhere! 📤');
+      }
+    } catch (e: any) {
+      if (e?.name !== 'AbortError') setShareNote('Could not create the image. Please try again.');
+    }
+    setSharing(false);
   };
 
   // -- Derived ---------------------------------------------------------------
@@ -644,6 +757,57 @@ function PlacementInner() {
             );
           })}
         </div>
+
+        {/* 🪞 Conversation style card (Phase 2-1 Track 2-A) */}
+        {styleData && (
+          <div style={{ marginBottom:14 }}>
+            <div ref={styleCardRef} style={{ background:'linear-gradient(135deg,#1E1B4B 0%,#0F172A 60%,#1E293B 100%)', border:'2px solid #6366F144', borderRadius:18, padding:'22px 20px 14px' }}>
+              <div style={{ fontSize:11, fontWeight:900, color:'#A5B4FC', letterSpacing:1.5, textTransform:'uppercase', marginBottom:10, textAlign:'center' }}>
+                🪞 Your Conversation Style
+              </div>
+              <div style={{ fontSize:24, fontWeight:900, color:'#fff', textAlign:'center', marginBottom:16 }}>
+                "{styleData.title}"
+              </div>
+              <div style={{ display:'flex', justifyContent:'space-around', marginBottom:16 }}>
+                {[
+                  { emoji:'🎯', label:'Accuracy', val:styleData.axes.accuracy, color:'#34D399' },
+                  { emoji:'⚡', label:'Pace',     val:styleData.axes.pace,     color:'#FBBF24' },
+                  { emoji:'🧗', label:'Risk',     val:styleData.axes.risk,     color:'#F472B6' },
+                ].map((a, i) => (
+                  <div key={i} style={{ textAlign:'center' }}>
+                    <div style={{ fontSize:20, marginBottom:4 }}>{a.emoji}</div>
+                    <div style={{ fontSize:16, fontWeight:900, color:a.color }}>{a.val}</div>
+                    <div style={{ fontSize:10, color:'#64748B', fontWeight:700, marginTop:2 }}>{a.label}</div>
+                  </div>
+                ))}
+              </div>
+              <div style={{ fontSize:13, color:'#CBD5E1', lineHeight:1.7, marginBottom:10 }}>
+                💬 {styleData.comment}
+              </div>
+              {styleData.tip && (
+                <div style={{ fontSize:12, color:'#94A3B8', lineHeight:1.6, marginBottom:4 }}>
+                  💡 {styleData.tip}
+                </div>
+              )}
+              <div style={{ marginTop:14, paddingTop:10, borderTop:'1px solid #334155', display:'flex', alignItems:'center', justifyContent:'space-between' }}>
+                <span style={{ fontSize:11, fontWeight:900, color:'#A5B4FC' }}>muntalk.com</span>
+                <span style={{ fontSize:10, fontWeight:700, color:'#64748B' }}>Take the free placement test →</span>
+              </div>
+            </div>
+            <button onClick={handleShareStyle} disabled={sharing}
+              style={{ width:'100%', marginTop:10, padding:'12px', borderRadius:12, border:'1px solid #6366F144', background:sharing?'#334155':'#1E1B4B', color:'#C7D2FE', fontSize:14, fontWeight:900, cursor:sharing?'default':'pointer', fontFamily:"'Nunito',sans-serif" }}>
+              {sharing ? 'Preparing image…' : '📤 Share my result'}
+            </button>
+            {shareNote && (
+              <div style={{ fontSize:12, color:'#94A3B8', fontWeight:700, textAlign:'center', marginTop:8 }}>{shareNote}</div>
+            )}
+          </div>
+        )}
+        {styleLoading && (
+          <div style={{ background:'#1E293B', borderRadius:16, padding:'18px', marginBottom:14, border:'1px solid #334155', textAlign:'center', fontSize:13, color:'#94A3B8', fontWeight:700 }}>
+            🪞 Analyzing your conversation style…
+          </div>
+        )}
 
         {/* CEFR quiz score */}
         <div style={{ background:'#1E293B', borderRadius:14, padding:'14px 18px', marginBottom:20, border:'1px solid #334155', display:'flex', justifyContent:'space-around' }}>
