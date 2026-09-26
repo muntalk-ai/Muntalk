@@ -3,6 +3,7 @@
 
 import { doc, getDoc, setDoc, updateDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from './firebase';
+import type { LearningPurpose } from './purpose';
 
 export interface UserProfile {
   uid:          string;
@@ -27,6 +28,9 @@ export interface UserProfile {
   placementDone?:  boolean;
   placementLevel?: string;
   placementTrack?: string;
+  // 학습 목적 (B-11) — optional: 기존 유저 문서에 변경 불필요
+  purpose?:        LearningPurpose | null; // B-11: null = 미설정(초기화)
+  purposeSetAt?:   string;   // ISO 날짜 (YYYY-MM-DD)
   emailNotifications?: boolean;
   pushNotifications?:  boolean;
   // 메타

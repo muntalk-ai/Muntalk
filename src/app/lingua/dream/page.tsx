@@ -15,6 +15,8 @@ import {
   type StudioType, type LangMode, type ProjectPhase, type StudioProject,
 } from '@/lib/dreamStudio';
 import { getLangLabel } from '@/data/languages';
+import { purposePromptBlock, isLearningPurpose } from '@/lib/purpose';
+import type { LearningPurpose } from '@/lib/purpose';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -43,6 +45,10 @@ function DreamStudioContent() {
   const [subLang,    setSubLang]    = useState('en-US');
   const [tutorId,    setTutorId]    = useState('t01');
   const [userName,   setUserName]   = useState('Creator');
+  const [purpose,    setPurpose]    = useState<LearningPurpose | undefined>(() => {
+    const s = typeof window !== 'undefined' ? localStorage.getItem('mt_purpose') : null;
+    return isLearningPurpose(s) ? s : undefined;
+  });
 
   // Studio state
   const [view,       setView]       = useState<'gallery'|'studio'>('gallery');
@@ -97,6 +103,7 @@ function DreamStudioContent() {
         if (p?.nativeLang) setSubLang(p.nativeLang);
         if (p?.tutorId) setTutorId(p.tutorId);
         if (p?.displayName) setUserName(p.displayName);
+        if (isLearningPurpose(p?.purpose)) setPurpose(p!.purpose); // B-11
       });
       getSubscription(user.uid).then(sub => {
         setPlanId(sub.planId);
@@ -268,6 +275,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
         existingContent: docContent,
         userMessage: msg,
         outline,
+        purpose, // B-11
       });
 
       const res = await fetch('/api/gemini', { method:'POST',
@@ -310,7 +318,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
     }
     setLoading(false);
   }, [input, loading, selGenre, activeProj, phase, langMode, targetLang, nativeLang,
-      tutor.name, docContent, outline, user, speak, saveProject]); // eslint-disable-line
+      tutor.name, docContent, outline, user, speak, saveProject, purpose]); // eslint-disable-line
 
   // Download project
   const downloadProject = () => {

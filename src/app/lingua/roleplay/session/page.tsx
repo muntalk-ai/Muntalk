@@ -11,6 +11,8 @@ import {
 } from '@/data/roleplay';
 import { getUserProfile, updateUserProfile, recordActivity } from '@/lib/userProfile';
 import { truncateHistory } from '@/lib/history';
+import { purposePromptBlock, isLearningPurpose } from '@/lib/purpose';
+import type { LearningPurpose } from '@/lib/purpose';
 import { addWeeklyXp, ensureLeague } from '@/lib/league';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -117,6 +119,15 @@ function SessionContent() {
   const [translating,  setTranslating]  = useState(false);
   const [openingDone,  setOpeningDone]  = useState(false);
   const [npcRotation,  setNpcRotation]  = useState(0);
+  // B-11: 학습 목적 (profile → localStorage 순) — 프롬프트 주입용
+  const [purpose, setPurpose] = useState<LearningPurpose | undefined>(undefined);
+  useEffect(() => {
+    const stored = localStorage.getItem('mt_purpose');
+    if (isLearningPurpose(stored)) setPurpose(stored);
+    if (user) getUserProfile(user.uid).then(p => {
+      if (isLearningPurpose(p?.purpose)) setPurpose(p!.purpose);
+    }).catch(() => {});
+  }, [user]); // eslint-disable-line
   const lastUserTextRef = useRef('');
 
   const chatRef    = useRef<HTMLDivElement>(null);
@@ -229,7 +240,11 @@ function SessionContent() {
       : `You are ${npc.name}, the ${npc.role} in this situation: ${everyday?.situation}. Be helpful and realistic.`;
     const otherNpcs = npcs.filter(n=>n.id!==npc.id);
 
-    return `${basePrompt}
+    // B-11: 학습 목적 주입 (미설정 시 생략)
+    const purposeBlock = purposePromptBlock(purpose);
+    const purposeLine = purposeBlock ? `\nLEARNER'S GOAL: ${purposeBlock}\n` : '';
+
+    return `${basePrompt}${purposeLine}
 
 YOUR CHARACTER: Your name is ${npc.name}. Role: ${npc.role}. Personality: ${npc.personality}.
 ${otherNpcs.length>0?`OTHER CHARACTERS PRESENT: ${otherNpcs.map(n=>`${n.name} (${n.role})`).join(', ')}`:''}
@@ -251,7 +266,7 @@ After your reply, on a NEW LINE add:
 Omit the "fix" object entirely if the learner made no notable mistake. Keep "wrong"/"right" short (max 8 words each).
 
 Reply as ${npc.name} in ${targetLang}:`;
-  }, [world, everyday, targetLang, difficulty, nativeLang, choiceSteer, npcs]); // eslint-disable-line
+  }, [world, everyday, targetLang, difficulty, nativeLang, choiceSteer, npcs, purpose]); // eslint-disable-line
 
   // Opening
   useEffect(() => {
@@ -259,10 +274,12 @@ Reply as ${npc.name} in ${targetLang}:`;
     startedRef.current = true;
 
     const firstNpc = npcs.find(n=>n.speakFirst) || npcs[0];
+    const _purposeBlock = purposePromptBlock(purpose);
+    const _purposeLine = _purposeBlock ? `\nLEARNER'S GOAL: ${_purposeBlock}\n` : '';
     const openPrompt = everyday
-      ? `Your name is ${firstNpc.name}. You are ${firstNpc.role} in: ${everyday.situation}. Greet the learner naturally and begin. Speak ONLY in ${targetLang} at ${difficulty} level. 1-2 sentences. No emojis.`
+      ? `Your name is ${firstNpc.name}. You are ${firstNpc.role} in: ${everyday.situation}. Greet the learner naturally and begin. Speak ONLY in ${targetLang} at ${difficulty} level. 1-2 sentences. No emojis.${_purposeLine}`
       : world
-      ? `${world.systemPrompt.replace('{targetLang}',targetLang).replace('{difficulty}',difficulty).replace('{nativeLang}',nativeLang).replace('{choice}','')}\nYour name is ${firstNpc.name}. Open the scene with a vivid, compelling first line. Speak ONLY in ${targetLang}. 1-2 sentences. No emojis. No score block.`
+      ? `${world.systemPrompt.replace('{targetLang}',targetLang).replace('{difficulty}',difficulty).replace('{nativeLang}',nativeLang).replace('{choice}','')}${_purposeLine}\nYour name is ${firstNpc.name}. Open the scene with a vivid, compelling first line. Speak ONLY in ${targetLang}. 1-2 sentences. No emojis. No score block.`
       : '';
 
     fetch('/api/gemini', { method:'POST', headers:{'Content-Type':'application/json'},

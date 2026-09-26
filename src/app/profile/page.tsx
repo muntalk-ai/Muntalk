@@ -9,6 +9,8 @@ import { useAuth } from '@/context/AuthContext';
 import { updateUserProfile } from '@/lib/userProfile';
 import { requestPushPermission } from '@/lib/notifications';
 import { LEARN_LANGUAGES, UI_LANGUAGES } from '@/data/languages';
+import { PURPOSE_OPTIONS, isLearningPurpose } from '@/lib/purpose';
+import type { LearningPurpose } from '@/lib/purpose';
 
 export default function ProfilePage() {
   const router = useRouter();
@@ -17,6 +19,12 @@ export default function ProfilePage() {
   const [displayName, setDisplayName] = useState(user?.displayName || '');
   const [learnLang,   setLearnLang]   = useState(profile?.learnLang || 'en-US');
   const [nativeLang,  setNativeLang]  = useState(profile?.nativeLang || 'ko-KR');
+  // B-11: 학습 목적 (profile → localStorage 순)
+  const [purpose, setPurpose] = useState<LearningPurpose | undefined>(() => {
+    if (isLearningPurpose((profile as any)?.purpose)) return (profile as any).purpose;
+    const s = typeof window !== 'undefined' ? localStorage.getItem('mt_purpose') : null;
+    return isLearningPurpose(s) ? s : undefined;
+  });
 
   // Password change
   const [currentPw,  setCurrentPw]  = useState('');
@@ -76,9 +84,11 @@ export default function ProfilePage() {
     setSaving(true); setError('');
     try {
       await updateProfile(user, { displayName });
-      await updateUserProfile(user.uid, { learnLang, nativeLang, displayName });
+      await updateUserProfile(user.uid, { learnLang, nativeLang, displayName, purpose: purpose || null });
       localStorage.setItem('mt_learn_lang', learnLang);
       localStorage.setItem('mt_native_lang', nativeLang);
+      if (purpose) localStorage.setItem('mt_purpose', purpose);
+      else localStorage.removeItem('mt_purpose');
       await refreshProfile();
       showSuccess('Profile saved!');
     } catch (e: any) { showError(e.message); }
@@ -213,6 +223,14 @@ export default function ProfilePage() {
               <label style={lbl}>My native language</label>
               <select className="p-select" value={nativeLang} onChange={e => setNativeLang(e.target.value)}>
                 {UI_LANGUAGES.map(l => <option key={l.code} value={l.code}>{l.label}</option>)}
+              </select>
+            </div>
+
+            <div style={fld}>
+              <label style={lbl}>My learning goal</label>
+              <select className="p-select" value={purpose || ''} onChange={e => setPurpose(e.target.value ? (e.target.value as LearningPurpose) : undefined)}>
+                <option value="">Not set</option>
+                {PURPOSE_OPTIONS.map(o => <option key={o.id} value={o.id}>{o.emoji} {o.label} — {o.desc}</option>)}
               </select>
             </div>
 

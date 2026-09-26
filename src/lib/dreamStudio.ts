@@ -1,6 +1,8 @@
 // lib/dreamStudio.ts
 // Dream Studio — Creative workspace data & prompt builders
 
+import { purposePromptBlock } from './purpose';
+
 export type StudioType = 'book'|'screenplay'|'lyrics'|'art'|'poetry'|'free';
 export type LangMode   = 'target'|'native'|'mixed';
 export type ProjectPhase = 'idea'|'draft'|'refine'|'complete';
@@ -152,9 +154,10 @@ export function buildCreatorPrompt(params: {
   existingContent: string;
   userMessage: string;
   outline: string;
+  purpose?: string; // B-11: LearningPurpose 값 (미설정 시 주입 생략)
 }): string {
   const { genre, phase, langMode, targetLang, nativeLang,
-          tutorName, projectTitle, existingContent, userMessage, outline } = params;
+          tutorName, projectTitle, existingContent, userMessage, outline, purpose } = params;
 
   const phaseInfo = genre.phases.find(p=>p.id===phase) || genre.phases[0];
 
@@ -170,6 +173,7 @@ export function buildCreatorPrompt(params: {
 CURRENT PROJECT: "${projectTitle}" — ${genre.title}
 PHASE: ${phaseInfo.label} — ${phaseInfo.desc}
 CREATIVE DIRECTION: ${phaseInfo.prompt}
+${purposePromptBlock(purpose as any) ? `CREATOR'S GOAL: ${purposePromptBlock(purpose as any)}` : ''}
 
 LANGUAGE: ${langInstruction}
 
