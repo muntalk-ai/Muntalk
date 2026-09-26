@@ -1,4 +1,5 @@
 'use client';
+import { apiFetch } from '@/lib/apiClient';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -142,7 +143,7 @@ function DreamStudioContent() {
     setIsSpeaking(true);
     try {
       const spkLang = langMode === 'native' ? subLang : langId;
-      const res = await fetch('/api/tts', { method:'POST',
+      const res = await apiFetch('/api/tts', { method:'POST',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ text:clean, lang:spkLang, gender:tutor.gender, level:'b1' }) });
       const data = await res.json();
@@ -162,7 +163,7 @@ function DreamStudioContent() {
   const translateMsg = useCallback(async (msgIdx: number, text: string) => {
     setTranslating(msgIdx);
     try {
-      const res = await fetch('/api/gemini', {
+      const res = await apiFetch('/api/gemini', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           uid: user?.uid ?? null, temperature: 0.1,
@@ -240,7 +241,7 @@ Open with genuine excitement about this specific project. Ask ONE sharp, specifi
 Do NOT be generic. React to the actual title "${title}". 2-3 sentences.
 Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
 
-      const res = await fetch('/api/gemini', { method:'POST',
+      const res = await apiFetch('/api/gemini', { method:'POST',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ uid:user.uid, temperature:0.9, prompt:openingPrompt }) });
       const data = await res.json();
@@ -278,7 +279,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
         purpose, // B-11
       });
 
-      const res = await fetch('/api/gemini', { method:'POST',
+      const res = await apiFetch('/api/gemini', { method:'POST',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ uid:user?.uid??null, temperature:0.85, prompt }) });
       const data = await res.json();

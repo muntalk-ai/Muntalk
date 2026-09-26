@@ -1,4 +1,7 @@
 ﻿import { NextRequest, NextResponse } from 'next/server';
+import {
+  getIdentity, checkRateLimit, clientIp, fetchWithTimeout,
+} from '@/lib/apiGuard';
 
 // Google Cloud TTS supported voice map
 // Reference: https://cloud.google.com/text-to-speech/docs/voices
@@ -96,6 +99,18 @@ export async function POST(req: NextRequest) {
   try {
     const { text, lang = 'en-US', gender = 'female', speed = 0.95, level } = await req.json();
 
+    // ── PR-F: abuse guards ──
+    // 로그인 유저: UID 기준 분당 30회. 게스트: IP 기준 분당 10회. text 500자 캡.
+    const id = await getIdentity(req);
+    const rlKey = id ? `tts:uid:${id.uid}` : `tts:ip:${clientIp(req)}`;
+    const rl = checkRateLimit(rlKey, id ? 30 : 10, 60_000);
+    if (!rl.ok) {
+      return NextResponse.json({ audioContent: null, error: 'Rate limit exceeded' }, { status: 429 });
+    }
+    if (typeof text === 'string' && text.length > 500) {
+      return NextResponse.json({ audioContent: null, error: 'Text too long (max 500 chars)' }, { status: 413 });
+    }
+
     const apiKey = process.env.GOOGLE_TTS_API_KEY;
     if (!apiKey) {
       return NextResponse.json({ error: 'GOOGLE_TTS_API_KEY not set' }, { status: 500 });
@@ -132,9 +147,10 @@ export async function POST(req: NextRequest) {
       },
     };
 
-    const res = await fetch(
+    const res = await fetchWithTimeout(
      `https://texttospeech.googleapis.com/v1/text:synthesize?key=${apiKey}`,
-      { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }
+      { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) },
+      30000
     );
 
     if (!res.ok) {

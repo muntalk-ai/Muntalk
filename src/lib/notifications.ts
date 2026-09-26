@@ -1,3 +1,4 @@
+import { apiFetch } from '@/lib/apiClient';
 // lib/notifications.ts
 // FCM 푸시 알림 + Resend 이메일 헬퍼
 
@@ -52,7 +53,7 @@ export interface EmailPayload {
 
 export async function sendEmail(payload: EmailPayload): Promise<boolean> {
   try {
-    const res = await fetch('/api/send-email', {
+    const res = await apiFetch('/api/send-email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),

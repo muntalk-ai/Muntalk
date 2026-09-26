@@ -1,4 +1,5 @@
 'use client';
+import { apiFetch } from '@/lib/apiClient';
 
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
@@ -205,7 +206,7 @@ export default function AdminPage() {
     let ok=0, fail=0;
     for (const to of targets) {
       try {
-        const res = await fetch('/api/send-email',{
+        const res = await apiFetch('/api/send-email',{
           method:'POST', headers:{'Content-Type':'application/json'},
           body:JSON.stringify({ to, subject:emailSubject, html:emailBody.replace(/\n/g,'<br/>') }),
         });

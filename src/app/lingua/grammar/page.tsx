@@ -1,4 +1,5 @@
 'use client';
+import { apiFetch } from '@/lib/apiClient';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
@@ -118,7 +119,7 @@ Open with ONE sentence greeting them on finishing the lesson, then give them ONE
 Keep it to 3-4 sentences. Be encouraging and specific.
 ${coachRule}`;
 
-      const res = await fetch('/api/gemini', {
+      const res = await apiFetch('/api/gemini', {
         method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ uid: user?.uid ?? null, temperature: 0.85, prompt }),
       });
@@ -152,7 +153,7 @@ ${history}
 Student: ${userText}
 ${tutor.name}:`;
 
-      const res = await fetch('/api/gemini', {
+      const res = await apiFetch('/api/gemini', {
         method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ uid: user?.uid ?? null, temperature: 0.8, prompt }),
       });

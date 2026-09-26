@@ -1,4 +1,5 @@
 'use client';
+import { apiFetch } from '@/lib/apiClient';
 
 import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -223,7 +224,7 @@ function StarterContent() {
     audioRef.current?.pause();
     setIsSpeaking(false);
     try {
-      const res = await fetch('/api/tts', {
+      const res = await apiFetch('/api/tts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text, lang: langId, gender: tutor.gender, speed: 0.78 }),
@@ -241,7 +242,7 @@ function StarterContent() {
 
   // ── Gemini ─────────────────────────────────────────────────────────────────
   const callGemini = useCallback(async (prompt: string) => {
-    const res = await fetch('/api/gemini', {
+    const res = await apiFetch('/api/gemini', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ uid: user?.uid ?? null, prompt, temperature: 0.5 }),
@@ -298,7 +299,7 @@ Rules:
 - Keep the same order as the input
 - Return exactly ${currentUnit.words.length} items`;
 
-    fetch('/api/gemini', {
+    apiFetch('/api/gemini', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ uid: user?.uid ?? null, prompt, temperature: 0.2 }),

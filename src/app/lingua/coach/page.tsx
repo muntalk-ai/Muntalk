@@ -1,4 +1,5 @@
 'use client';
+import { apiFetch } from '@/lib/apiClient';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
@@ -298,7 +299,7 @@ export default function CoachPage() {
 자연스럽고 따뜻한 코치 말투로, 3-4문단 이내로 작성.`;
 
     try {
-      const res = await fetch('/api/gemini', {
+      const res = await apiFetch('/api/gemini', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ uid: null, temperature: 0.85, prompt: `${systemPrompt}\n\n${openingPrompt}` }),
@@ -364,7 +365,7 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
 코치:`;
 
     try {
-      const res = await fetch('/api/gemini', {
+      const res = await apiFetch('/api/gemini', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ uid: null, temperature: 0.8, prompt }),

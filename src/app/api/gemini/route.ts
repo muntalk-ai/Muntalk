@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
+import {
+  getIdentity, checkRateLimit, clientIp, apiError, fetchWithTimeout,
+} from '@/lib/apiGuard';
 
 // 완전히 단순화된 Gemini route
 // Firebase 의존성 제거 — API 키만 있으면 작동
@@ -15,6 +18,21 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { prompt, temperature = 0.7 } = body;
 
+    // ── PR-F: abuse guards ──
+    // 로그인 유저: UID 기준 분당 60회. 게스트(Micro-Talk 등): IP 기준 분당 20회.
+    const id = await getIdentity(req);
+    const rlKey = id ? `gemini:uid:${id.uid}` : `gemini:ip:${clientIp(req)}`;
+    const rl = checkRateLimit(rlKey, id ? 60 : 20, 60_000);
+    if (!rl.ok) return apiError('Rate limit exceeded', 429, { retryAfterSec: rl.retryAfterSec });
+
+    if (typeof prompt !== 'string' || !prompt.trim()) {
+      return apiError('Missing prompt', 400);
+    }
+    if (prompt.length > 8000) {
+      return apiError('Prompt too long (max 8000 chars)', 413);
+    }
+    const temp = Math.min(2, Math.max(0, Number(temperature) || 0));
+
     const apiKey = process.env.GEMINI_API_KEY || '';
 
     if (!apiKey) {
@@ -28,14 +46,14 @@ export async function POST(req: NextRequest) {
     for (const model of MODELS) {
       try {
         const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-        const res = await fetch(url, {
+        const res = await fetchWithTimeout(url, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             contents: [{ parts: [{ text: prompt }] }],
-            generationConfig: { temperature, maxOutputTokens: 4096 },
+            generationConfig: { temperature: temp, maxOutputTokens: 4096 },
           }),
-        });
+        }, 30000);
 
         if (res.ok) {
           const data = await res.json();
