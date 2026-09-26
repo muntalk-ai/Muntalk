@@ -9,6 +9,8 @@ import {
   EVERYDAY_SCENARIOS, WORLD_SCENARIOS, getNativeDesc,
   type NpcCharacter, type StoryBeat,
 } from '@/data/roleplay';
+import { getUserProfile, updateUserProfile, recordActivity } from '@/lib/userProfile';
+import { addWeeklyXp, ensureLeague } from '@/lib/league';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -123,6 +125,8 @@ function SessionContent() {
   const msgId      = useRef(0);
   const startedRef = useRef(false);
   const pendingRef = useRef({text:'',gender:'female' as 'male'|'female',npcId:''});
+  const sessionXpRef = useRef(0);   // 누적 XP (state 비동기 문제 회피용)
+  const xpSavedRef   = useRef(false); // endSession 중복 저장 방지
 
   useEffect(() => {
     chatRef.current?.scrollTo({ top:chatRef.current.scrollHeight, behavior:'smooth' });
@@ -174,10 +178,39 @@ function SessionContent() {
   }, [showNative, nativeLang, user]);
 
   const popXP = (pts: number) => {
+    sessionXpRef.current += pts;
     setSessionXP(x=>x+pts);
     setXpPop(`+${pts} XP`);
     setTimeout(()=>setXpPop(null),1500);
   };
+
+  // 세션 종료 시 누적 XP를 프로필·리그에 실제 저장 (P1-7: 기존엔 화면 표시만 되고 저장 안 됨)
+  const persistSessionXp = useCallback(async () => {
+    if (xpSavedRef.current || !user) return;
+    xpSavedRef.current = true;
+    const earned = sessionXpRef.current;
+    if (earned <= 0) return;
+    try {
+      const profile = await getUserProfile(user.uid);
+      const next = (profile?.xp || 0) + earned;
+      await updateUserProfile(user.uid, { xp: next });
+      console.log('[roleplay] XP saved:', earned, '→ total:', next);
+    } catch (e) {
+      console.warn('[roleplay] XP save FAILED:', e);
+    }
+    try {
+      const fresh = await getUserProfile(user.uid);
+      if (fresh) await recordActivity(user.uid, fresh);
+    } catch (e) {
+      console.warn('[roleplay] recordActivity failed:', e);
+    }
+    try {
+      await ensureLeague(user.uid, user.displayName || 'Learner', user.photoURL || '');
+      await addWeeklyXp(user.uid, earned);
+    } catch (e) {
+      console.warn('[roleplay] league update failed:', e);
+    }
+  }, [user]);
 
   const addMsg = (m: Omit<Message,'id'|'ts'>): Message => {
     const full: Message = {...m, id:++msgId.current, ts:Date.now()};
@@ -407,7 +440,10 @@ Reply as ${npc.name} in ${targetLang}:`;
         strongPoints:['Scene completed!'], improvements:['Keep practising!'],
         overallFeedback:'Great effort! Consistent practice builds real fluency.' });
     }
-  }, [messages, turnCount, nativeLang, user]); // eslint-disable-line
+
+    // 누적 XP를 프로필·리그에 실제 저장 (P1-7)
+    await persistSessionXp();
+  }, [messages, turnCount, nativeLang, user, persistSessionXp]); // eslint-disable-line
 
   const startListening = () => {
     if (!recRef.current || isListening || isThinking) return;
