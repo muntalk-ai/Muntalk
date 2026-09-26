@@ -197,7 +197,7 @@ export default function ReviewPage() {
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
               <button onClick={() => router.push('/lingua')}
                 style={{ padding: '13px 28px', borderRadius: 16, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
-                Continue Learning →
+                Continue Learning <span className="mt-flip-rtl">→</span>
               </button>
               <button onClick={() => router.push('/lingua/league')}
                 style={{ padding: '13px 24px', borderRadius: 16, border: '1.5px solid #E5E7EB', background: '#fff', color: '#374151', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>

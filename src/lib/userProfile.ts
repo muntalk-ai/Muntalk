@@ -91,16 +91,25 @@ export interface ActivityResult {
   freezeEarned: boolean;   // 오늘 프리즈를 획득했는지 (7일 마일스톤)
 }
 
+// UX-infra #10: 기기 로컬 타임존 기준 YYYY-MM-DD 날짜 키.
+// (UTC 기준이면 KST 심야 학습자의 스트릭이 끊기는 문제 발생)
+export function localDateKey(d: Date): string {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
 /** 오늘 활동 기록 + 스트릭 계산 후 저장 (프리즈 브리징 포함)
  *
  *  ⚠️ 호출 규칙: 레슨/세션 완료 등 **의미 있는 학습 활동이 실제로 발생했을 때만** 호출.
  *  로그인/화면 방문 시점에는 호출 금지 (방문만으로 스트릭이 기록되는 것을 방지).
  *
- *  날짜 기준: 모든 날짜 키는 UTC 기준 YYYY-MM-DD (new Date().toISOString().slice(0, 10)).
- *  UI 측에서도 반드시 UTC 기준으로 생성/비교해야 타임존에 무관하게 일관되게 동작함.
+ *  날짜 기준: 모든 날짜 키는 기기 로컬 타임존 기준 YYYY-MM-DD (localDateKey).
+ *  UI 측에서도 반드시 localDateKey로 생성/비교해야 일관되게 동작함.
  */
 export async function recordActivity(uid: string, profile: UserProfile): Promise<ActivityResult> {
-  const today = new Date().toISOString().slice(0, 10);
+  const today = localDateKey(new Date());
   const existing = Array.isArray(profile.activityDates) ? profile.activityDates : [];
 
   // 오늘 이미 기록되어 있으면 streak 재계산만 하고 저장 생략 (중복 write 방지)
@@ -139,7 +148,7 @@ export async function recordActivity(uid: string, profile: UserProfile): Promise
     const cursor = new Date(today);
     cursor.setDate(cursor.getDate() - 1); // 어제부터 역행
     while (freezes > 0) {
-      const ds = cursor.toISOString().slice(0, 10);
+      const ds = localDateKey(cursor);
       if (dateSet.has(ds)) break; // 체인이 자연스럽게 이어짐
       const hasEarlier = [...dateSet].some(d => d < ds);
       if (!hasEarlier) break; // 더 이전 기록이 없으면 지킬 스트릭 없음
@@ -180,8 +189,12 @@ export async function migrateFromLocalStorage(uid: string) {
   const learn   = localStorage.getItem('mt_learn_lang') || 'en-US';
   const native  = localStorage.getItem('mt_native_lang') || 'ko-KR';
   const tutorId = localStorage.getItem('mt_tutor_id') || 't01';
+  // UX-infra #6: placement 결과도 이관 (기기 변경 시 소실 방지)
+  const placementLevel = localStorage.getItem('mt_placement_level');
+  const placementTrack = localStorage.getItem('mt_track');
+  const placementDone  = localStorage.getItem('mt_placement_done') === 'true';
 
-  if (xp || done.length || dates.length) {
+  if (xp || done.length || dates.length || placementLevel || placementTrack || placementDone) {
     // PR-H: XP는 서버 엔드포인트로만 지급 — updateUserProfile로 xp 직접 쓰기 금지.
     // (기존 코드는 게스트 localStorage 값을 그대로 덮어써 조작 벡터였음)
     if (xp > 0) {
@@ -190,6 +203,9 @@ export async function migrateFromLocalStorage(uid: string) {
     await updateUserProfile(uid, {
       completedLessons: done, activityDates: dates,
       learnLang: learn, nativeLang: native, tutorId,
+      ...(placementLevel ? { placementLevel } : {}),
+      ...(placementTrack ? { placementTrack } : {}),
+      ...(placementDone  ? { placementDone: true } : {}),
     });
   }
 }

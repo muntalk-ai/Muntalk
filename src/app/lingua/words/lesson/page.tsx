@@ -4,6 +4,7 @@ import { AI_TIMEOUT_MS } from '@/lib/aiRetry';
 
 import { useEffect, useState, useRef, Suspense } from 'react';
 import RtlDir from '@/components/RtlDir';
+import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { POS_META, PartOfSpeech, getSetKey } from '@/data/wordSets';
 import { getTutorById } from '@/data/tutors';
@@ -60,6 +61,7 @@ function WordLessonContent() {
   // TTS / video
   const [isSpeaking, setIsSpeaking]     = useState(false);
   const [isListening, setIsListening]   = useState(false);
+  const [micGuide, setMicGuide] = useState<MicGuideReason | null>(null); // UX-infra: STT 안내
   const audioRef                        = useRef<HTMLAudioElement | null>(null);
   const recognitionRef                  = useRef<any>(null);
 
@@ -87,7 +89,12 @@ function WordLessonContent() {
       setIsListening(false);
       sendChatMessage(e.results[0][0].transcript);
     };
-    rec.onerror = () => setIsListening(false);
+    rec.onerror = (e: any) => {
+      setIsListening(false);
+      const code = e?.error;
+      if (code === 'not-allowed' || code === 'service-not-allowed') setMicGuide('denied');
+      else if (code === 'audio-capture') setMicGuide('no-mic');
+    };
     rec.onend   = () => setIsListening(false);
     recognitionRef.current = rec;
   }, [lang]);
@@ -117,7 +124,8 @@ function WordLessonContent() {
   };
 
   const startListening = () => {
-    if (!recognitionRef.current || isListening) return;
+    if (!recognitionRef.current) { setMicGuide('unsupported'); return; }
+    if (isListening) return;
     setIsListening(true);
     recognitionRef.current.start();
   };
@@ -308,7 +316,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
           <div style={{ display: 'flex', alignItems: 'center', gap: 0 }}>
             {/* Video — compact horizontal */}
             <div style={{ flexShrink: 0, width: 180, overflow: 'hidden' }}>
-              <video
+              <video preload="metadata" poster={tutor.thumbnail}
                 key={isSpeaking ? 'talk' : 'idle'}
                 src={isSpeaking ? tutor.videoTalk : tutor.videoIdle}
                 autoPlay loop muted playsInline
@@ -522,7 +530,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
                   {chatMessages.map((msg, i) => (
                     <div key={i} style={{ display: 'flex', justifyContent: msg.role === 'user' ? 'flex-end' : 'flex-start', gap: 8 }}>
                       {msg.role === 'tutor' && (
-                        <img src={tutor.thumbnail} alt={tutor.name}
+                        <img loading="lazy" src={tutor.thumbnail} alt={tutor.name}
                           style={{ width: 32, height: 32, borderRadius: '50%', objectFit: 'cover', objectPosition: 'center 20%', flexShrink: 0, alignSelf: 'flex-end' }}
                         />
                       )}
@@ -536,7 +544,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
                   ))}
                   {chatLoading && (
                     <div style={{ display: 'flex', gap: 8, alignItems: 'flex-end' }}>
-                      <img src={tutor.thumbnail} alt={tutor.name} style={{ width: 32, height: 32, borderRadius: '50%', objectFit: 'cover', objectPosition: 'center 20%' }} />
+                      <img loading="lazy" src={tutor.thumbnail} alt={tutor.name} style={{ width: 32, height: 32, borderRadius: '50%', objectFit: 'cover', objectPosition: 'center 20%' }} />
                       <div style={{ background: '#F1F5F9', borderRadius: '18px 18px 18px 4px', padding: '12px 20px', color: '#94A3B8', fontSize: 14 }}>✨ typing...</div>
                     </div>
                   )}
@@ -544,6 +552,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
                 </div>
 
                 {/* Input */}
+                {micGuide && <div style={{ marginBottom: 8 }}><MicGuide reason={micGuide} onDismiss={() => setMicGuide(null)} /></div>}
                 <div style={{ display: 'flex', gap: 10 }}>
                   <input
                     value={chatInput}

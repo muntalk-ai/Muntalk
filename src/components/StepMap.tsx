@@ -55,7 +55,7 @@ export default function StepMap({ levelId, langId = 'en-US', subLang = 'ko-KR', 
 
       {/* Tutor strip */}
       <div style={{ ...styles.tutorStrip, background: `linear-gradient(135deg, ${level.color}, ${level.color}88)` }}>
-        <img src={tutor.thumbnail} alt={tutor.name} style={styles.tutorThumb} onError={e => { (e.target as HTMLImageElement).src = '/images/tutor-placeholder.jpg'; }} />
+        <img loading="lazy" src={tutor.thumbnail} alt={tutor.name} style={styles.tutorThumb} onError={e => { (e.target as HTMLImageElement).src = '/images/tutor-placeholder.jpg'; }} />
         <div>
           <div style={{ ...styles.tutorName, color: level.dark }}>{tutor.name}</div>
           <div style={{ ...styles.tutorLang, color: level.dark }}>Your tutor for this level</div>

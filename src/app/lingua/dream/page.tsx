@@ -10,6 +10,8 @@ import { getUserProfile } from '@/lib/userProfile';
 import { getTutorById } from '@/data/tutors';
 import { getSubscription, isAdminEmail } from '@/lib/subscription';
 import PaywallModal from '@/components/PaywallModal';
+import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
+import RtlDir from '@/components/RtlDir';
 import { db } from '@/lib/firebase';
 import { doc, setDoc, getDoc, collection, getDocs, query, where, orderBy } from 'firebase/firestore';
 import {
@@ -69,6 +71,7 @@ function DreamStudioContent() {
   const [showDoc,    setShowDoc]    = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isListening,setIsListening]= useState(false);
+  const [micGuide, setMicGuide] = useState<MicGuideReason | null>(null); // UX-infra: STT 안내
   const [saving,     setSaving]     = useState(false);
   const [toast,      setToast]      = useState('');
   const [planId,     setPlanId]     = useState<string>('free');
@@ -130,7 +133,12 @@ function DreamStudioContent() {
     rec.lang = langMode === 'native' ? subLang : langId;
     rec.continuous = false; rec.interimResults = false;
     rec.onresult = (e: any) => sendMessage(e.results[0][0].transcript);
-    rec.onerror  = () => setIsListening(false);
+    rec.onerror  = (e: any) => {
+      setIsListening(false);
+      const code = e?.error;
+      if (code === 'not-allowed' || code === 'service-not-allowed') setMicGuide('denied');
+      else if (code === 'audio-capture') setMicGuide('no-mic');
+    };
     rec.onend    = () => setIsListening(false);
     recRef.current = rec;
   }, [langId, subLang, langMode]); // eslint-disable-line
@@ -215,7 +223,7 @@ function DreamStudioContent() {
 
   // Start new project
   const startNewProject = useCallback(async (genre: typeof STUDIO_GENRES[0], title: string) => {
-    if (!user) { router.push('/signup'); return; }
+    if (!user) { router.push('/signup?next=/lingua/dream'); return; }
     if (!isPremiumUser) { setShowPaywall(true); return; }
     const proj: StudioProject = {
       id: `proj_${Date.now()}`, uid: user.uid,
@@ -382,14 +390,14 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
         <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
           {!user ? (
             <>
-              <button onClick={() => router.push('/login')}
+              <button onClick={() => router.push('/login?next=/lingua/dream')}
                 style={{ padding:'13px 28px', borderRadius:14, border:'none',
                   background:'linear-gradient(135deg,#fbbf24,#f59e0b)',
                   color:'#000', fontSize:14, fontWeight:900, cursor:'pointer',
                   fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 Sign In
               </button>
-              <button onClick={() => router.push('/signup')}
+              <button onClick={() => router.push('/signup?next=/lingua/dream')}
                 style={{ padding:'13px 20px', borderRadius:14,
                   border:'1.5px solid #E2E8F0',
                   background:'transparent', color:'#64748B',
@@ -477,7 +485,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
                 background:'linear-gradient(135deg,#6366F1,#8B5CF6)',
                 color:'#fff', fontWeight:800, fontSize:12,
                 fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", flexShrink:0 }}>
-              Upgrade →
+              Upgrade <span className="mt-flip-rtl">→</span>
             </button>
           </div>
         )}
@@ -551,7 +559,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
                         · {new Date(p.updatedAt).toLocaleDateString()}
                       </div>
                     </div>
-                    <div style={{ fontSize:12, color:'#6366F1', fontWeight:700 }}>Continue →</div>
+                    <div style={{ fontSize:12, color:'#6366F1', fontWeight:700 }}>Continue <span className="mt-flip-rtl">→</span></div>
                   </div>
                 );
               })}
@@ -579,6 +587,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
   const phaseInfo = selGenre?.phases.find(p=>p.id===phase) || selGenre?.phases[0];
 
   return (
+    <RtlDir lang={langId}>
     <div style={{ height:'100dvh', background:'#F8FAFC', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
       display:'flex', flexDirection:'column', overflow:'hidden', color:'#0F172A' }}>
       <style dangerouslySetInnerHTML={{ __html:`
@@ -688,7 +697,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
                 animation:'fadeUp .3s ease' }}>
                 {!isUser && (
                   <div style={{ display:'flex', alignItems:'center', gap:6, marginBottom:4 }}>
-                    <img src={tutor.thumbnail} alt={tutor.name}
+                    <img loading="lazy" src={tutor.thumbnail} alt={tutor.name}
                       style={{ width:22, height:22, borderRadius:'50%', objectFit:'cover',
                         objectPosition:'center 20%' }}/>
                     <span style={{ fontSize:10, fontWeight:700, color:'#64748B' }}>{tutor.name}</span>
@@ -741,7 +750,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
 
           {loading && (
             <div style={{ display:'flex', alignItems:'flex-end', gap:8 }}>
-              <img src={tutor.thumbnail} alt=""
+              <img loading="lazy" src={tutor.thumbnail} alt=""
                 style={{ width:22, height:22, borderRadius:'50%', objectFit:'cover',
                   objectPosition:'center 20%' }}/>
               <div style={{ padding:'10px 14px', borderRadius:'18px 18px 18px 4px',
@@ -766,6 +775,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
       )}
 
       {/* INPUT */}
+      {micGuide && <div style={{ padding: '0 12px 8px' }}><MicGuide reason={micGuide} onDismiss={() => setMicGuide(null)} /></div>}
       <div style={{ padding:'10px 12px 14px', background:'#fff',
         borderTop:'1px solid #F1F5F9', flexShrink:0 }}>
         <div style={{ marginBottom:6, fontSize:10, color:'#64748B', fontWeight:700 }}>
@@ -773,8 +783,8 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
         </div>
         <div style={{ display:'flex', gap:8, alignItems:'flex-end' }}>
           <button
-            onMouseDown={() => { if(!recRef.current||isListening||loading) return; try{recRef.current.start();setIsListening(true);}catch{} }}
-            onTouchStart={() => { if(!recRef.current||isListening||loading) return; try{recRef.current.start();setIsListening(true);}catch{} }}
+            onMouseDown={() => { if(!recRef.current){setMicGuide('unsupported');return;} if(isListening||loading) return; try{recRef.current.start();setIsListening(true);}catch{} }}
+            onTouchStart={() => { if(!recRef.current){setMicGuide('unsupported');return;} if(isListening||loading) return; try{recRef.current.start();setIsListening(true);}catch{} }}
             style={{ width:44, height:44, borderRadius:'50%', border:'none', flexShrink:0,
               background:isListening?'linear-gradient(135deg,#EF4444,#DC2626)':'#F1F5F9',
               color:isListening?'#fff':'#64748B', fontSize:18, cursor:'pointer',
@@ -799,6 +809,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
         </div>
       </div>
     </div>
+    </RtlDir>
   );
 }
 
@@ -876,7 +887,7 @@ function GenreCard({ genre, index, onSelect, locked = false }: {
               color:'#fff', fontWeight:800, fontSize:14, cursor:titleInput.trim()?'pointer':'default',
               fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
               boxShadow: titleInput.trim() ? `0 4px 16px ${genre.accent}40` : 'none' }}>
-            Start Creating →
+            Start Creating <span className="mt-flip-rtl">→</span>
           </button>
         </div>
       )}

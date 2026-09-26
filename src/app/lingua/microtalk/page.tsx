@@ -303,7 +303,7 @@ export default function MicroTalkPage() {
               <div style={{ fontSize: 12.5, color: '#94A3B8', marginBottom: 14 }}>
                 Sign in to save your vocabulary &amp; daily streaks!
               </div>
-              <button style={S.startBtn} onClick={() => router.push('/signup')}>🚀 Sign in free</button>
+              <button style={S.startBtn} onClick={() => router.push('/signup?next=/lingua/microtalk')}>🚀 Sign in free</button>
             </div>
           ) : (
             <>

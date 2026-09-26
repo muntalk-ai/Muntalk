@@ -11,6 +11,7 @@ import {
 } from 'firebase/auth';
 import { auth, googleProvider } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
+import { getNextPath, stashNextPath } from '@/lib/returnUrl';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -22,10 +23,10 @@ export default function LoginPage() {
   const [googleLoading, setGoogleLoading] = useState(false);
   const [redirectChecking, setRedirectChecking] = useState(true);
 
-  // 이미 로그인된 상태면 바로 메인으로
+  // 이미 로그인된 상태면 바로 메인으로 (next 파라미터가 있으면 해당 경로로 복귀)
   useEffect(() => {
     if (!authLoading && user) {
-      router.replace('/lingua');
+      router.replace(getNextPath());
     }
   }, [user, authLoading]);
   const [resetSent,  setResetSent]  = useState(false);
@@ -48,8 +49,8 @@ export default function LoginPage() {
     getRedirectResult(auth)
       .then(result => {
         if (result?.user) {
-          // onAuthStateChanged가 자동으로 감지해서 위의 useEffect가 /lingua로 이동
-          router.replace('/lingua');
+          // onAuthStateChanged가 자동으로 감지해서 위의 useEffect가 이동
+          router.replace(getNextPath());
         }
       })
       .catch((e: any) => {
@@ -67,7 +68,7 @@ export default function LoginPage() {
     setEmailLoading(true); setError('');
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      router.push('/lingua');
+      router.push(getNextPath());
     } catch (e: any) {
       setError(friendlyError(e.code) || 'Sign in failed. Please try again.');
     } finally { setEmailLoading(false); }
@@ -80,11 +81,12 @@ export default function LoginPage() {
       // Popup 방식 — 페이지 이탈 없이 즉시 로그인
       // (Popup 차단 시 redirect로 폴백)
       const result = await signInWithPopup(auth, googleProvider);
-      if (result.user) router.replace('/lingua');
+      if (result.user) router.replace(getNextPath());
     } catch (e: any) {
       if (e.code === 'auth/popup-blocked') {
-        // 팝업 차단 시 redirect 방식으로 폴백
+        // 팝업 차단 시 redirect 방식으로 폴백 (복귀 경로 보관)
         try {
+          stashNextPath(getNextPath());
           await signInWithRedirect(auth, googleProvider);
         } catch (e2: any) {
           setError('Google sign-in failed. Please try again.');

@@ -13,5 +13,11 @@ export default function RtlDir({
   children: React.ReactNode;
 }) {
   if (!isRtlLang(lang)) return <>{children}</>;
-  return <div dir="rtl" style={{ minHeight: 'inherit' }}>{children}</div>;
+  return (
+    <div dir="rtl" style={{ minHeight: 'inherit' }}>
+      {/* UX-infra #9: RTL에서 방향성 화살표(→)를 뒤집는 유틸리티 클래스 */}
+      <style>{`[dir="rtl"] .mt-flip-rtl{display:inline-block;transform:scaleX(-1);}`}</style>
+      {children}
+    </div>
+  );
 }

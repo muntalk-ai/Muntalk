@@ -12,6 +12,7 @@ import {
 import { auth, googleProvider } from '@/lib/firebase';
 import { createUserProfile } from '@/lib/userProfile';
 import { useAuth } from '@/context/AuthContext';
+import { getNextPath, stashNextPath } from '@/lib/returnUrl';
 
 export default function SignupPage() {
   const router = useRouter();
@@ -22,9 +23,9 @@ export default function SignupPage() {
   const [confirm,  setConfirm]  = useState('');
   const [error,    setError]    = useState('');
 
-  // 이미 로그인된 상태면 바로 메인으로
+  // 이미 로그인된 상태면 바로 메인으로 (next 파라미터가 있으면 해당 경로로 복귀)
   useEffect(() => {
-    if (!authLoading && user) router.replace('/lingua');
+    if (!authLoading && user) router.replace(getNextPath());
   }, [user, authLoading]);
   const [emailLoading,  setEmailLoading]  = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
@@ -44,7 +45,7 @@ export default function SignupPage() {
   useEffect(() => {
     getRedirectResult(auth)
       .then(result => {
-        if (result?.user) router.replace('/lingua');
+        if (result?.user) router.replace(getNextPath());
       })
       .catch((e: any) => {
         const msg = friendlyError(e.code);
@@ -70,7 +71,7 @@ export default function SignupPage() {
       const cred = await createUserWithEmailAndPassword(auth, email, password);
       await updateProfile(cred.user, { displayName: name });
       await createUserProfile(cred.user.uid, email, name, '');
-      router.replace('/lingua');
+      router.replace(getNextPath());
     } catch (e: any) {
       setError(friendlyError(e.code) || 'Sign up failed. Please try again.');
     } finally { setEmailLoading(false); }
@@ -82,10 +83,10 @@ export default function SignupPage() {
     try {
       // Popup 방식 — 즉시 로그인 후 바로 이동
       const result = await signInWithPopup(auth, googleProvider);
-      if (result.user) router.replace('/lingua');
+      if (result.user) router.replace(getNextPath());
     } catch (e: any) {
       if (e.code === 'auth/popup-blocked') {
-        try { await signInWithRedirect(auth, googleProvider); }
+        try { stashNextPath(getNextPath()); await signInWithRedirect(auth, googleProvider); }
         catch { setError('Google sign-in failed. Please try again.'); setGoogleLoading(false); }
       } else if (e.code === 'auth/popup-closed-by-user' || e.code === 'auth/cancelled-popup-request') {
         setGoogleLoading(false);

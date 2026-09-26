@@ -704,7 +704,7 @@ function BlitzGame({ difficulty, onBack, addXP, gameColor }:
         </div>
 
         <div style={{ fontSize:12, color:'#94A3B8', fontWeight:600, textAlign:'center' }}>
-          3 in a row → Bonus XP 🎯
+          3 in a row <span className="mt-flip-rtl">→</span> Bonus XP 🎯
         </div>
       </div>
 
@@ -754,7 +754,7 @@ function GameResult({ score, total, xp, color, subtitle, onBack, onRetry }:
               background:`linear-gradient(135deg,${color},${color}cc)`,
               color:'#fff', fontSize:14, fontWeight:800,
               cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
-            More Games →
+            More Games <span className="mt-flip-rtl">→</span>
           </button>
         </div>
       </div>

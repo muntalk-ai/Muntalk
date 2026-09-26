@@ -9,6 +9,8 @@ import { getTutorForLang } from '@/data/tutors';
 import { updateUserProfile } from '@/lib/userProfile';
 import { PURPOSE_OPTIONS, purposePromptBlock, mapTrackToPurpose, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
+import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
+import RtlDir from '@/components/RtlDir';
 
 // ─── Unit Data ───────────────────────────────────────────────────────────────
 const UNITS = [
@@ -179,6 +181,7 @@ function StarterContent() {
   const chatEndRef = useRef<HTMLDivElement>(null);
   const recRef     = useRef<any>(null);
   const [isListening, setIsListening] = useState(false);
+  const [micGuide, setMicGuide] = useState<MicGuideReason | null>(null); // UX-infra: STT 안내
 
   const langId  = params.get('lang')    || (typeof window !== 'undefined' ? localStorage.getItem('mt_learn_lang') : null) || 'en-US';
   const subLang = params.get('subLang') || (typeof window !== 'undefined' ? localStorage.getItem('mt_native_lang') : null) || 'en-US';
@@ -212,7 +215,12 @@ function StarterContent() {
       if (transcript) setChatInput(transcript);
     };
     rec.onend = () => setIsListening(false);
-    rec.onerror = () => setIsListening(false);
+    rec.onerror = (e: any) => {
+      setIsListening(false);
+      const code = e?.error;
+      if (code === 'not-allowed' || code === 'service-not-allowed') setMicGuide('denied');
+      else if (code === 'audio-capture') setMicGuide('no-mic');
+    };
     recRef.current = rec;
   }, [langId]);
 
@@ -654,7 +662,7 @@ LANGUAGE RULES:
         borderRadius:'50%', overflow:'hidden', marginBottom:16, flexShrink:0,
         border:'3px solid #E0E7FF',
         boxShadow:'0 4px 16px rgba(99,102,241,0.12)' }}>
-        <video src={tutor.videoIdle} autoPlay loop muted playsInline
+        <video preload="metadata" poster={tutor.thumbnail} src={tutor.videoIdle} autoPlay loop muted playsInline
           style={{ position:'absolute', inset:0, width:'100%', height:'100%',
             objectFit:'cover', objectPosition:'center 20%' }}/>
       </div>
@@ -778,11 +786,11 @@ LANGUAGE RULES:
           border:`3px solid ${isSpeaking ? '#6366F1' : '#E0E7FF'}`,
           boxShadow: isSpeaking ? '0 0 0 6px #6366F120' : 'none',
           transition:'border-color .3s, box-shadow .3s', flexShrink:0 }}>
-          <video src={tutor.videoIdle} autoPlay loop muted playsInline
+          <video preload="metadata" poster={tutor.thumbnail} src={tutor.videoIdle} autoPlay loop muted playsInline
             style={{ position:'absolute', inset:0, width:'100%', height:'100%',
               objectFit:'cover', objectPosition:'center 20%',
               opacity: isSpeaking ? 0 : 1, transition:'opacity .25s' }}/>
-          <video src={tutor.videoTalk} autoPlay loop muted playsInline
+          <video preload="metadata" poster={tutor.thumbnail} src={tutor.videoTalk} autoPlay loop muted playsInline
             style={{ position:'absolute', inset:0, width:'100%', height:'100%',
               objectFit:'cover', objectPosition:'center 20%',
               opacity: isSpeaking ? 1 : 0, transition:'opacity .25s' }}/>
@@ -878,11 +886,11 @@ LANGUAGE RULES:
         border:`3px solid ${isSpeaking ? ACCENT : '#E0E7FF'}`,
         boxShadow: isSpeaking ? `0 0 0 5px ${ACCENT}20` : 'none',
         transition:'border-color .3s, box-shadow .3s' }}>
-        <video src={tutor.videoIdle} autoPlay loop muted playsInline
+        <video preload="metadata" poster={tutor.thumbnail} src={tutor.videoIdle} autoPlay loop muted playsInline
           style={{ position:'absolute', inset:0, width:'100%', height:'100%',
             objectFit:'cover', objectPosition:'center 20%',
             opacity:isSpeaking?0:1, transition:'opacity .25s' }}/>
-        <video src={tutor.videoTalk} autoPlay loop muted playsInline
+        <video preload="metadata" poster={tutor.thumbnail} src={tutor.videoTalk} autoPlay loop muted playsInline
           style={{ position:'absolute', inset:0, width:'100%', height:'100%',
             objectFit:'cover', objectPosition:'center 20%',
             opacity:isSpeaking?1:0, transition:'opacity .25s' }}/>
@@ -961,11 +969,11 @@ LANGUAGE RULES:
           borderRadius:'50%', overflow:'hidden', flexShrink:0,
           border:`2px solid ${isSpeaking ? ACCENT : '#E0E7FF'}`,
           transition:'border-color .3s' }}>
-          <video src={tutor.videoIdle} autoPlay loop muted playsInline
+          <video preload="metadata" poster={tutor.thumbnail} src={tutor.videoIdle} autoPlay loop muted playsInline
             style={{ position:'absolute', inset:0, width:'100%', height:'100%',
               objectFit:'cover', objectPosition:'center 20%',
               opacity:isSpeaking?0:1, transition:'opacity .25s' }}/>
-          <video src={tutor.videoTalk} autoPlay loop muted playsInline
+          <video preload="metadata" poster={tutor.thumbnail} src={tutor.videoTalk} autoPlay loop muted playsInline
             style={{ position:'absolute', inset:0, width:'100%', height:'100%',
               objectFit:'cover', objectPosition:'center 20%',
               opacity:isSpeaking?1:0, transition:'opacity .25s' }}/>
@@ -1057,11 +1065,11 @@ LANGUAGE RULES:
           border:`3px solid ${isSpeaking ? '#6366F1' : '#E0E7FF'}`,
           boxShadow: isSpeaking ? '0 0 0 5px #6366F120' : 'none',
           transition:'border-color .3s' }}>
-          <video src={tutor.videoIdle} autoPlay loop muted playsInline
+          <video preload="metadata" poster={tutor.thumbnail} src={tutor.videoIdle} autoPlay loop muted playsInline
             style={{ position:'absolute', inset:0, width:'100%', height:'100%',
               objectFit:'cover', objectPosition:'center 20%',
               opacity:isSpeaking?0:1, transition:'opacity .25s' }}/>
-          <video src={tutor.videoTalk} autoPlay loop muted playsInline
+          <video preload="metadata" poster={tutor.thumbnail} src={tutor.videoTalk} autoPlay loop muted playsInline
             style={{ position:'absolute', inset:0, width:'100%', height:'100%',
               objectFit:'cover', objectPosition:'center 20%',
               opacity:isSpeaking?1:0, transition:'opacity .25s' }}/>
@@ -1105,6 +1113,7 @@ LANGUAGE RULES:
 
   // ── CHAT ───────────────────────────────────────────────────────────────────
   if (phase === 'chat') return (
+    <RtlDir lang={langId}>
     <div style={{ minHeight: '100vh', background: BG,
       fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display: 'flex',
       flexDirection: 'column' }}>
@@ -1125,11 +1134,11 @@ LANGUAGE RULES:
           border:`2px solid ${isSpeaking ? ACCENT : '#E0E7FF'}`,
           boxShadow: isSpeaking ? `0 0 0 4px ${ACCENT}20` : 'none',
           transition:'all .3s' }}>
-          <video src={tutor.videoIdle} autoPlay loop muted playsInline
+          <video preload="metadata" poster={tutor.thumbnail} src={tutor.videoIdle} autoPlay loop muted playsInline
             style={{ position:'absolute', inset:0, width:'100%', height:'100%',
               objectFit:'cover', objectPosition:'center 20%',
               opacity:isSpeaking?0:1, transition:'opacity .25s' }}/>
-          <video src={tutor.videoTalk} autoPlay loop muted playsInline
+          <video preload="metadata" poster={tutor.thumbnail} src={tutor.videoTalk} autoPlay loop muted playsInline
             style={{ position:'absolute', inset:0, width:'100%', height:'100%',
               objectFit:'cover', objectPosition:'center 20%',
               opacity:isSpeaking?1:0, transition:'opacity .25s' }}/>
@@ -1184,6 +1193,7 @@ LANGUAGE RULES:
       </div>
 
       {/* Input */}
+      {micGuide && <div style={{ padding: '0 16px' }}><MicGuide reason={micGuide} onDismiss={() => setMicGuide(null)} /></div>}
       <div style={{ padding: '12px 16px', background: 'white',
         borderTop: '1px solid #F1F5F9', display: 'flex', gap: 8 }}>
         <input
@@ -1199,7 +1209,8 @@ LANGUAGE RULES:
         {/* Mic button */}
         <button
           onMouseDown={() => {
-            if (!recRef.current || isListening || chatLoading || !chatStarted) return;
+            if (!recRef.current) { setMicGuide('unsupported'); return; }
+            if (isListening || chatLoading || !chatStarted) return;
             try { recRef.current.start(); setIsListening(true); } catch {}
           }}
           disabled={chatLoading || !chatStarted}
@@ -1217,7 +1228,7 @@ LANGUAGE RULES:
             background: chatInput.trim() && !chatLoading ? ACCENT : '#E2E8F0',
             color: chatInput.trim() && !chatLoading ? 'white' : '#94A3B8',
             flexShrink: 0 }}>
-          →
+          <span className="mt-flip-rtl">→</span>
         </button>
       </div>
 
@@ -1234,6 +1245,7 @@ LANGUAGE RULES:
         </div>
       )}
     </div>
+    </RtlDir>
   );
 
   // ── COMPLETE ────────────────────────────────────────────────────────────────

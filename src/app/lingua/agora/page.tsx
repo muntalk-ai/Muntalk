@@ -6,6 +6,8 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { getLangLabel } from '@/data/languages';
+import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
+import RtlDir from '@/components/RtlDir';
 
 type Side = 'for' | 'against';
 
@@ -120,6 +122,7 @@ export default function AgoraPage() {
   const [hoveredTopic, setHoveredTopic] = useState<string|null>(null);
   const [hoveredSub, setHoveredSub]     = useState<number|null>(null);
   const [isListening, setIsListening]   = useState(false);
+  const [micGuide, setMicGuide] = useState<MicGuideReason | null>(null); // UX-infra: STT 안내
   const [translating, setTranslating]   = useState<number|null>(null);
 
   const chatRef = useRef<HTMLDivElement>(null);
@@ -138,7 +141,12 @@ export default function AgoraPage() {
     const rec = new SR();
     rec.lang = learnLang; rec.continuous = false; rec.interimResults = false;
     rec.onresult = (e: any) => handleSend(e.results[0][0].transcript);
-    rec.onerror = () => setIsListening(false);
+    rec.onerror = (e: any) => {
+      setIsListening(false);
+      const code = e?.error;
+      if (code === 'not-allowed' || code === 'service-not-allowed') setMicGuide('denied');
+      else if (code === 'audio-capture') setMicGuide('no-mic');
+    };
     rec.onend   = () => setIsListening(false);
     recRef.current = rec;
   }, [learnLang]); // eslint-disable-line
@@ -270,6 +278,7 @@ Conversation:\n${history}\n\nuser: ${txt}\n\nassistant:`,
   // ── DEBATE ────────────────────────────────────────────────────────────────
   if (!topic) return null;
   return (
+    <RtlDir lang={learnLang}>
     <div style={S.debatePage}>
       <style>{CSS}</style>
       <nav style={{...S.nav,borderBottom:'1px solid #E2E8F0'}}>
@@ -357,7 +366,8 @@ Conversation:\n${history}\n\nuser: ${txt}\n\nassistant:`,
       </div>
 
       <div style={S.inputBar}>
-        <button onMouseDown={()=>{if(!recRef.current||isListening||loading)return;try{recRef.current.start();setIsListening(true);}catch{}}}
+        {micGuide && <MicGuide reason={micGuide} onDismiss={() => setMicGuide(null)} />}
+        <button onMouseDown={()=>{if(!recRef.current){setMicGuide('unsupported');return;} if(isListening||loading)return;try{recRef.current.start();setIsListening(true);}catch{}}}
           style={{...S.micBtn,background:isListening?'linear-gradient(135deg,#EF4444,#DC2626)':'#F1F5F9',
             color:isListening?'#fff':'#64748B',animation:isListening?'pulse .8s infinite':'none'}}>
           {isListening?'⏹':'🎤'}
@@ -372,6 +382,7 @@ Conversation:\n${history}\n\nuser: ${txt}\n\nassistant:`,
             color:input.trim()&&!loading?'#fff':'#94A3B8'}}>➤</button>
       </div>
     </div>
+    </RtlDir>
   );
 }
 

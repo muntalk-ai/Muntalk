@@ -4,6 +4,7 @@ import { AI_TIMEOUT_MS } from '@/lib/aiRetry';
 
 import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
 import RtlDir from '@/components/RtlDir';
+import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { getTutorById } from '@/data/tutors';
@@ -84,6 +85,7 @@ function SessionContent() {
   const [input,        setInput]        = useState('');
   const [isThinking,   setIsThinking]   = useState(false);
   const [isListening,  setIsListening]  = useState(false);
+  const [micGuide, setMicGuide] = useState<MicGuideReason | null>(null); // UX-infra: STT 안내
   const [isSpeaking,   setIsSpeaking]   = useState(false);
   const [speakingId,   setSpeakingId]   = useState<string|null>(null);
   const [turnCount,    setTurnCount]    = useState(0);
@@ -129,7 +131,12 @@ function SessionContent() {
     const rec = new SR();
     rec.lang = langId; rec.continuous = false; rec.interimResults = false;
     rec.onresult = (e: any) => handleUserTurn(e.results[0][0].transcript);
-    rec.onerror  = () => setIsListening(false);
+    rec.onerror  = (e: any) => {
+      setIsListening(false);
+      const code = e?.error;
+      if (code === 'not-allowed' || code === 'service-not-allowed') setMicGuide('denied');
+      else if (code === 'audio-capture') setMicGuide('no-mic');
+    };
     rec.onend    = () => setIsListening(false);
     recRef.current = rec;
   }, [langId]); // eslint-disable-line
@@ -442,7 +449,8 @@ Reply as ${npc.name} in ${targetLang}:`;
   }, [messages, turnCount, nativeLang, user, persistSessionXp]); // eslint-disable-line
 
   const startListening = () => {
-    if (!recRef.current || isListening || isThinking) return;
+    if (!recRef.current) { setMicGuide('unsupported'); return; }
+    if (isListening || isThinking) return;
     if (audioRef.current) audioRef.current.pause();
     try { recRef.current.start(); setIsListening(true); } catch {}
   };
@@ -497,7 +505,7 @@ Reply as ${npc.name} in ${targetLang}:`;
             <div style={{display:'flex',justifyContent:'center',gap:10,marginBottom:20}}>
               {npcs.map((npc,i) => { const t=getTutorById(npc.tutorId); return (
                 <div key={i} style={{textAlign:'center'}}>
-                  <img src={t.thumbnail} alt={npc.name} style={{width:44,height:44,borderRadius:'50%',
+                  <img loading="lazy" src={t.thumbnail} alt={npc.name} style={{width:44,height:44,borderRadius:'50%',
                     objectFit:'cover',objectPosition:'center 20%',border:`2px solid ${accentColor}`}}/>
                   <div style={{fontSize:10,color:'#94A3B8',fontWeight:700,marginTop:3}}>{npc.name}</div>
                 </div>
@@ -534,7 +542,7 @@ Reply as ${npc.name} in ${targetLang}:`;
                 style={{padding:'13px',borderRadius:13,border:'none',
                   background:`linear-gradient(135deg,${accentColor},${accentColor}cc)`,
                   color:'#fff',fontWeight:800,fontSize:14,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
-                More Worlds →
+                More Worlds <span className="mt-flip-rtl">→</span>
               </button>
             </div>
             </>
@@ -608,12 +616,12 @@ Reply as ${npc.name} in ${targetLang}:`;
                 boxShadow: isActive ? `0 0 0 4px ${accentColor}30` : 'none',
                 transition:'border-color .3s, box-shadow .3s'}}>
               {/* IDLE — visible when not speaking */}
-              <video src={t.videoIdle} autoPlay loop muted playsInline style={{
+              <video preload="metadata" poster={t.thumbnail} src={t.videoIdle} autoPlay loop muted playsInline style={{
                 position:'absolute',inset:0,width:'100%',height:'100%',
                 objectFit:'cover',objectPosition:'center top',display:'block',
                 opacity:isActive?0:1,filter:'brightness(0.72)',transition:'opacity .25s'}}/>
               {/* TALK — visible when speaking */}
-              <video src={t.videoTalk} autoPlay loop muted playsInline style={{
+              <video preload="metadata" poster={t.thumbnail} src={t.videoTalk} autoPlay loop muted playsInline style={{
                 position:'absolute',inset:0,width:'100%',height:'100%',
                 objectFit:'cover',objectPosition:'center top',display:'block',
                 opacity:isActive?1:0,filter:'brightness(1.08)',transition:'opacity .25s'}}/>
@@ -688,7 +696,7 @@ Reply as ${npc.name} in ${targetLang}:`;
               <div style={{display:'flex',alignItems:'center',gap:5,marginBottom:3,
                 flexDirection:isUser?'row-reverse':'row'}}>
                 {!isUser && t && (
-                  <img src={t.thumbnail} alt={npc?.name}
+                  <img loading="lazy" src={t.thumbnail} alt={npc?.name}
                     style={{width:20,height:20,borderRadius:'50%',objectFit:'cover',objectPosition:'center 20%'}}/>
                 )}
                 <div style={{fontSize:10,fontWeight:700,color:'#94A3B8'}}>
@@ -734,7 +742,7 @@ Reply as ${npc.name} in ${targetLang}:`;
                   <span style={{fontSize:11}}>✏️</span>
                   <span style={{fontSize:11,color:'#64748B',fontWeight:600,
                     textDecoration:'line-through'}}>{msg.fix.wrong}</span>
-                  <span style={{fontSize:11,color:'#94A3B8',fontWeight:800}}>→</span>
+                  <span style={{fontSize:11,color:'#94A3B8',fontWeight:800}}><span className="mt-flip-rtl">→</span></span>
                   <span style={{fontSize:11,color:'#1D4ED8',fontWeight:800}}>{msg.fix.right}</span>
                 </div>
               )}
@@ -747,7 +755,7 @@ Reply as ${npc.name} in ${targetLang}:`;
           <div style={{display:'flex',alignItems:'center',gap:8}}>
             {npcs[npcRotation%npcs.length] && (() => {
               const t = getTutorById(npcs[npcRotation%npcs.length].tutorId);
-              return <img src={t.thumbnail} alt="" style={{width:20,height:20,borderRadius:'50%',objectFit:'cover',objectPosition:'center 20%'}}/>;
+              return <img loading="lazy" src={t.thumbnail} alt="" style={{width:20,height:20,borderRadius:'50%',objectFit:'cover',objectPosition:'center 20%'}}/>;
             })()}
             <div style={{padding:'10px 14px',borderRadius:'14px 14px 14px 4px',
               background:'#fff',border:'1.5px solid #F1F5F9',
@@ -793,6 +801,7 @@ Reply as ${npc.name} in ${targetLang}:`;
       )}
 
       {/* INPUT */}
+      {micGuide && <div style={{ padding: '0 12px 8px' }}><MicGuide reason={micGuide} onDismiss={() => setMicGuide(null)} /></div>}
       <div style={{padding:'10px 12px 12px',background:'#fff',
         borderTop:'1px solid #F1F5F9',flexShrink:0}}>
         <div style={{display:'flex',gap:8,alignItems:'flex-end'}}>

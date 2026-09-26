@@ -139,7 +139,7 @@ export default function TutorsPage() {
                   </div>
                 )}
                 <div style={{ width: 72, height: 72, borderRadius: '50%', margin: '0 auto 10px', overflow: 'hidden', background: tutor.gender === 'female' ? 'linear-gradient(135deg,#F9A8D4,#C084FC)' : 'linear-gradient(135deg,#93C5FD,#6EE7B7)' }}>
-                  <img src={tutor.thumbnail} alt={tutor.name}
+                  <img loading="lazy" src={tutor.thumbnail} alt={tutor.name}
                     style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 10%', display: 'block' }}
                     onError={e => { const el = e.currentTarget; el.style.display = 'none'; (el.parentElement as HTMLDivElement).innerHTML = `<span style="font-size:28px;display:flex;align-items:center;justify-content:center;width:100%;height:100%">${tutor.gender === 'female' ? '👩' : '👨'}</span>`; }}
                   />
@@ -164,7 +164,7 @@ export default function TutorsPage() {
       {pendingTutor && (
         <div style={{ position: 'fixed', bottom: 0, left: 0, right: 0, background: '#fff', borderTop: '1px solid #E5E7EB', padding: '14px 24px', display: 'flex', alignItems: 'center', gap: 14, boxShadow: '0 -4px 24px rgba(0,0,0,0.1)', zIndex: 300 }}>
           <div style={{ width: 46, height: 46, borderRadius: '50%', overflow: 'hidden', background: pendingTutor.gender === 'female' ? 'linear-gradient(135deg,#F9A8D4,#C084FC)' : 'linear-gradient(135deg,#93C5FD,#6EE7B7)', flexShrink: 0 }}>
-            <img src={pendingTutor.thumbnail} alt={pendingTutor.name}
+            <img loading="lazy" src={pendingTutor.thumbnail} alt={pendingTutor.name}
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 10%' }}
               onError={e => { (e.currentTarget.parentElement as HTMLDivElement).innerHTML = `<span style="font-size:20px;display:flex;align-items:center;justify-content:center;width:100%;height:100%">${pendingTutor.gender === 'female' ? '👩' : '👨'}</span>`; }}
             />
