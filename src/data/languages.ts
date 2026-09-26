@@ -95,7 +95,7 @@ export const LEARN_LANGUAGES: LangOption[] = [
   { code: 'tl-PH',  label: 'Filipino',            flag: '🇵🇭', native: 'Filipino',             stt: true,  tts: true  },
   { code: 'km-KH',  label: 'Khmer',               flag: '🇰🇭', native: 'ភាសាខ្មែរ',            stt: false, tts: true  },
   { code: 'lo-LA',  label: 'Lao',                 flag: '🇱🇦', native: 'ພາສາລາວ',              stt: false, tts: true  },
-  { code: 'my-MM',  label: 'Burmese',             flag: '🇲🇲', native: 'မြန်မာဘာသာ',           stt: false, tts: false },
+  { code: 'my-MM',  label: 'Burmese',             flag: '🇲🇲', native: 'မြန်မာဘာသာ',           stt: false, tts: true  },
   { code: 'jv-ID',  label: 'Javanese',            flag: '🇮🇩', native: 'Basa Jawa',            stt: false, tts: true  },
   { code: 'su-ID',  label: 'Sundanese',           flag: '🇮🇩', native: 'Basa Sunda',           stt: false, tts: true  },
   // ── 중동 ─────────────────────────────────────────────────────────────
@@ -176,6 +176,8 @@ export const UI_LANGUAGES: LangOption[] = [
   { code: 'km-KH',  label: 'Khmer',                     flag: '🇰🇭', native: 'ភាសាខ្មែរ',            stt: false, tts: true  },
   { code: 'kn-IN',  label: 'Kannada',                   flag: '🇮🇳', native: 'ಕನ್ನಡ',               stt: false, tts: true  },
   { code: 'gu-IN',  label: 'Gujarati',                  flag: '🇮🇳', native: 'ગુજરાતી',              stt: false, tts: true  },
+  { code: 'mn-MN',  label: 'Mongolian',                 flag: '🇲🇳', native: 'Монгол',               stt: false, tts: true  },
+  { code: 'my-MM',  label: 'Burmese',                   flag: '🇲🇲', native: 'မြန်မာဘာသာ',           stt: false, tts: true  },
 ];
 
 export function getLangLabel(code: string): string {
