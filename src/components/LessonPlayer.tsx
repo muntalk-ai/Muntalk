@@ -15,7 +15,8 @@ const hasTts = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?
 
 // -- Bulk translation validation (Option A hardening) --------------------------
 // Returns an error description string, or null when the payload is acceptable.
-function validateBulkTranslation(parsed: any, lsn: { vocab?: any[]; quiz?: any[] } | undefined | null): string | null {
+const HANGUL_RE = /[\uAC00-\uD7A3\u3131-\u318E]/;
+function validateBulkTranslation(parsed: any, lsn: { vocab?: any[]; quiz?: any[] } | undefined | null, targetLang?: string, nativeLang?: string): string | null {
   if (!parsed || typeof parsed !== 'object') return 'empty payload';
   const baseVocab = lsn?.vocab || [];
   const baseQuiz = lsn?.quiz || [];
@@ -40,6 +41,27 @@ function validateBulkTranslation(parsed: any, lsn: { vocab?: any[]; quiz?: any[]
     // answerText must equal the correct option — catches silent option reordering
     if (!q.answerText || q.options[q.answer] !== q.answerText) {
       return `quiz[${i}] answer/answerText mismatch`;
+    }
+  }
+  // Language-leakage scan: a Korean speaker learning a non-Korean language must
+  // never see Hangul inside TARGET_* fields. Catches subword-level mixing
+  // (e.g. "занад토") that prompt rules alone cannot block. phonetic is
+  // intentionally excluded (Hangul-style pronunciation guide by design).
+  if (nativeLang === 'Korean' && targetLang && targetLang !== 'Korean') {
+    const targets: Array<[string, any]> = [];
+    for (let i = 0; i < parsed.vocab.length; i++) {
+      targets.push([`vocab[${i}].word`, parsed.vocab[i].word]);
+      targets.push([`vocab[${i}].example`, parsed.vocab[i].example]);
+    }
+    for (let i = 0; i < parsed.quiz.length; i++) {
+      const q = parsed.quiz[i];
+      (q.options || []).forEach((o: any, j: number) => targets.push([`quiz[${i}].options[${j}]`, o]));
+      targets.push([`quiz[${i}].answerText`, q.answerText]);
+    }
+    for (const [label, text] of targets) {
+      if (typeof text === 'string' && HANGUL_RE.test(text)) {
+        return `${label} contains Korean (target-language leakage)`;
+      }
     }
   }
   return null;
@@ -324,7 +346,7 @@ Rules:
 - Grammar with no ${targetLang} equivalent (e.g. English inversion "Were it not for…", "Should you need…"): keep the original structure, translate the sentence naturally, and add a short grammar note in ${nativeLang} inside the meaning field (in parentheses) explaining the structure and the natural ${targetLang} equivalent.
 - vocab[i].example: translate the GIVEN example sentence into ${targetLang}, keeping the same meaning. Do NOT invent a new sentence. It MUST be written in ${targetLang} — never in ${nativeLang}.
 - vocab[i].exampleKo: translation of the example sentence into ${nativeLang}
-- quiz[i].q: question in ${nativeLang}
+- quiz[i].q: question in ${nativeLang} — the question FRAME must always be ${nativeLang}, even when quoting a ${targetLang} idiom or expression inside it (quote the expression, ask the question in ${nativeLang})
 - quiz[i].options: answer choices in ${targetLang} — 100% ${targetLang} only, never ${nativeLang} or mixed
 - quiz[i].answer: integer index (0-based) of the correct option
 - quiz[i].answerText: the EXACT text of the correct option (must be identical to options[answer]) — this guards against option reordering
@@ -387,7 +409,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
           if (!parsed?.vocab && !parsed?.quiz) throw new Error('Empty lesson data');
 
           // Option A: validate bulk translation before accepting it
-          const validationError = validateBulkTranslation(parsed, lsn);
+          const validationError = validateBulkTranslation(parsed, lsn, targetLang, nativeLang);
           if (validationError) {
             if (attempt < 1) {
               console.warn(`[lesson] validation failed (${validationError}) — retrying once...`);
