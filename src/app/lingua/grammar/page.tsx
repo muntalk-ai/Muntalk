@@ -150,7 +150,7 @@ ${tutor.name}:`;
       const data = await res.json();
       setAiChat(prev => [...prev, { role:'ai', text: data.text?.trim() || 'Good try! Let\'s look at this more carefully.' }]);
     } catch {
-      setAiChat(prev => [...prev, { role:'ai', text: 'Something went wrong — please try again.' }]);
+      setAiChat(prev => [...prev, { role:'ai', text: 'I got stuck on that question — ask me again and I\'ll explain it clearly! 📖' }]);
     }
     setAiLoading(false);
   }, [aiInput, aiLoading, selChapter, aiChat, tutor.name, nativeLangName, user]);

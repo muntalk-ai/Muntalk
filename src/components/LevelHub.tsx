@@ -12,6 +12,7 @@ import PaywallModal from '@/components/PaywallModal';
 import TrialBanner from '@/components/TrialBanner';
 import TrialExpiredModal from '@/components/TrialExpiredModal';
 import { getTrialData, isTrialExpired, trialDaysRemaining, addTrialLanguage, TRIAL_MAX_LANGUAGES, TrialData } from '@/lib/trialPolicy';
+import { getTestimonials, Testimonial, MIN_TESTIMONIALS } from '@/lib/testimonials';
 
 // 언어코드 → 국가코드 매핑 (flagcdn.com 사용)
 const LANG_TO_COUNTRY: Record<string, string> = {
@@ -95,6 +96,13 @@ export default function LevelHub() {
   const [pendingLevelId, setPendingLevelId] = useState<string | null>(null);
   const [langStep, setLangStep]             = useState<'learn' | 'native'>('learn');
   const [showPlacementModal, setShowPlacementModal] = useState(false);
+
+  // -- Testimonials (landing social proof — only fetched for logged-out visitors)
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+  useEffect(() => {
+    if (authLoading || user) return;
+    getTestimonials(6).then(setTestimonials).catch(() => setTestimonials([]));
+  }, [authLoading, user]);
 
   // -- 스트릭 계산 (게스트용 localStorage 기반) -----------------------------------
   const calcStreak = () => {
@@ -557,6 +565,7 @@ export default function LevelHub() {
                   { section: 'MORE' },
                   { emoji: '📚', label: 'Word Bank',      action: () => router.push('/lingua/words') },
                   { emoji: '👩‍🏫', label: 'Tutors',        action: () => router.push('/lingua/tutors') },
+                  { emoji: '👋', label: 'Our Story',     action: () => router.push('/about') },
                 ] as Array<{ section?: string; emoji?: string; label?: string; action?: () => void }>).map((item, idx) => (
                   item.section ? (
                     <div key={`sec-${idx}`} style={{ fontSize: 10, fontWeight: 800, color: '#94A3B8', letterSpacing: 1.2, padding: '8px 12px 2px' }}>
@@ -734,6 +743,7 @@ export default function LevelHub() {
             { header: 'MORE' },
             { emoji: '📚', label: 'Word Bank',      action: () => router.push('/lingua/words') },
             { emoji: '👩‍🏫', label: 'Tutors',       action: () => router.push('/lingua/tutors') },
+            { emoji: '👋', label: 'Our Story',    action: () => router.push('/about') },
             { emoji: '🌐', label: 'Languages',      action: () => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); setShowMobileMenu(false); } },
           ]) as Array<{ header?: string; emoji?: string; label?: string; action?: () => void }>).map((item, idx) => (
             item.header ? (
@@ -831,14 +841,14 @@ export default function LevelHub() {
             /* 비로그인 — 마케팅 히어로 (H1 체험 버튼 + 포지셔닝) */
             <>
               <div style={styles.heroBadgeRow}>
-                <div style={styles.heroBadge52}>🌐 100 Languages</div>
+                <div style={styles.heroBadge52}>🌐 90+ Languages</div>
                 <div style={{ ...styles.heroBadgeTutors, cursor: 'pointer' }} onClick={() => setShowPlacementModal(true)}>
                   <span style={{ fontSize: 15 }}>🎯</span>
                   <span>Take <strong>Placement</strong> Test</span>
                   <span style={styles.newTag}>FREE</span>
                 </div>
               </div>
-              <h1 style={styles.heroTitle}>Every language in the world<br />Meet +150 AI tutors</h1>
+              <h1 style={styles.heroTitle}>Speak 90+ languages<br />with 150+ AI tutors</h1>
               <p style={styles.heroDesc}>No judgment. No pressure. Your pace, your rules.<br />Our AI tutors get total beginners talking in under 10 minutes.</p>
               <div style={styles.heroBtnRow}>
                 {/* H1: 가입 없이 바로 체험 — 완료 화면에서 가입 유도 */}
@@ -869,7 +879,7 @@ export default function LevelHub() {
           {([
             ['🌱', 'Growing with our beta testers'],
             ['🎤', 'Try 1-min speaking, no sign-up'],
-            ['💬', 'Duolingo Max-level AI conversation, free'],
+            ['💬', 'Real AI conversation, free to try'],
           ] as [string, string][]).map(([icon, label]) => (
             <div key={label} style={styles.trustItem}>
               <span style={{ fontSize: 17 }}>{icon}</span>
@@ -879,11 +889,39 @@ export default function LevelHub() {
         </div>
       )}
 
+      {/* -- Testimonials (hidden until enough reviews exist) -- */}
+      {!authLoading && !user && testimonials.length >= MIN_TESTIMONIALS && (
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '28px 32px 0' }}>
+          <div style={{ textAlign: 'center', marginBottom: 18 }}>
+            <div style={{ fontSize: 11, fontWeight: 900, color: '#6366F1', letterSpacing: 2, marginBottom: 6 }}>WALL OF LOVE</div>
+            <h2 style={{ fontSize: 24, fontWeight: 900, color: '#0F172A', margin: 0, letterSpacing: -0.5 }}>
+              Early learners are already speaking up 💬
+            </h2>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 14 }}>
+            {testimonials.map(t => (
+              <div key={t.id} style={{ background: '#fff', border: '1.5px solid #F1F5F9', borderRadius: 18, padding: '20px', boxShadow: '0 2px 10px rgba(0,0,0,0.04)' }}>
+                <div style={{ color: '#F59E0B', fontSize: 13, letterSpacing: 2, marginBottom: 10 }}>★★★★★</div>
+                <p style={{ fontSize: 14, color: '#334155', lineHeight: 1.7, fontWeight: 600, margin: '0 0 12px' }}>
+                  &ldquo;{t.text}&rdquo;
+                </p>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'linear-gradient(135deg,#EEF2FF,#F5F3FF)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 15 }}>
+                    {t.displayName.charAt(0).toUpperCase()}
+                  </div>
+                  <div style={{ fontSize: 13, fontWeight: 800, color: '#0F172A' }}>{t.displayName}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* -- Stats -- */}
       <div style={styles.statsWrap}>
         {([
           ['150+','AI Tutors','🤖','#EFF6FF','#2563EB'],
-          ['100','Languages','🌍','#F0FDF4','#16A34A'],
+          ['90+','Languages','🌍','#F0FDF4','#16A34A'],
           [String(totalLessonsCount),'Lessons','📚','#FFF7ED','#EA580C'],
           ['A1→C2','CEFR Levels','🎓','#FAF5FF','#7C3AED'],
         ] as [string,string,string,string,string][]).map(([v,l,e,bg,ac]) => (
@@ -1147,6 +1185,7 @@ export default function LevelHub() {
       <footer style={styles.footer}>
         <div style={{ marginBottom: 12 }}>🌐 MunTalk · {totalLessonsCount} lessons · A1 to C2 · 150+ AI Tutors</div>
         <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 10 }}>
+          <a href="/about" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>👋 Our Story</a>
           <a href="/faq" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>💬 Help & FAQ</a>
           <a href="/privacy" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>Privacy Policy</a>
           <a href="/terms" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>Terms of Service</a>

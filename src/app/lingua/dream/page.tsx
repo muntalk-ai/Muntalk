@@ -304,7 +304,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
 
       speak(chatText);
     } catch(e) {
-      setMessages(prev=>[...prev, { role:'ai', text:'Something went wrong — try again?' }]);
+      setMessages(prev=>[...prev, { role:'ai', text:'My imagination glitched for a second — try sending that again? ✨' }]);
     }
     setLoading(false);
   }, [input, loading, selGenre, activeProj, phase, langMode, targetLang, nativeLang,

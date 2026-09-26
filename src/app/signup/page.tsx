@@ -124,7 +124,7 @@ export default function SignupPage() {
         <div style={{ textAlign: 'center', marginBottom: 28 }}>
           <div style={{ fontSize: 40, marginBottom: 8 }}>🌍</div>
           <h1 style={{ fontSize: 26, fontWeight: 900, color: '#0F172A', margin: 0 }}>Create your account</h1>
-          <p style={{ fontSize: 14, color: '#94A3B8', margin: '6px 0 0', fontWeight: 600 }}>Start learning a new language today — it's free</p>
+          <p style={{ fontSize: 14, color: '#94A3B8', margin: '6px 0 0', fontWeight: 600 }}>Free forever plan · No credit card · 90+ languages</p>
         </div>
 
         {/* -- Google -- */}
