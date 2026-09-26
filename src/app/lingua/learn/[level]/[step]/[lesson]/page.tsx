@@ -9,6 +9,7 @@ import { updateUserProfile, getUserProfile, recordActivity } from '@/lib/userPro
 import { addCardToSRS } from '@/lib/spacedRepetition';
 import { checkAndAwardCertificate, Certificate } from '@/lib/certificates';
 import { awardXp } from '@/lib/xpClient';
+import RtlDir from '@/components/RtlDir';
 
 // 비로그인 허용 레슨 (A1 첫 레슨만)
 const GUEST_ALLOWED_LESSON = 'a1-1-1';
@@ -134,7 +135,7 @@ export default function LessonPage({
   if (!loaded) return null;
 
   return (
-    <>
+    <RtlDir lang={langId}>
       <LessonPlayer
         levelId={level}
         stepId={step}
@@ -157,6 +158,6 @@ export default function LessonPage({
           }}
         />
       )}
-    </>
+    </RtlDir>
   );
 }

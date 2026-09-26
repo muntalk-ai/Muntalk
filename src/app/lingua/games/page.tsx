@@ -7,6 +7,7 @@ import { useAuth } from '@/context/AuthContext';
 import { CURRICULUM } from '@/data/curriculum';
 import { pickDistractorMeanings } from '@/lib/vocabDistractors';
 import WrongAnswerModal, { type WrongAnswerInfo } from '@/components/WrongAnswerModal';
+import RtlDir from '@/components/RtlDir';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -64,11 +65,17 @@ const LEVELS: { id: Difficulty; label: string; color: string }[] = [
 
 export default function WordGamesPage() {
   const router = useRouter();
-  const { user } = useAuth();
+  const { user, profile } = useAuth();
   const [activeGame, setActiveGame] = useState<GameId>('snap');
   const [difficulty, setDifficulty] = useState<Difficulty>('a1');
   const [playing,    setPlaying]    = useState(false);
   const [xpGained,   setXpGained]   = useState(0);
+  // PR-I: RTL 판정용 학습 언어
+  const [rtlLang, setRtlLang] = useState('en-US');
+  useEffect(() => {
+    try { setRtlLang(profile?.learnLang || localStorage.getItem('mt_learn_lang') || 'en-US'); }
+    catch { /* ignore */ }
+  }, [profile?.learnLang]);
 
   // 게임 중 증가분 누적 — 게임 화면을 나갈 때/unmount 시 한 번에 flush
   const pendingXpRef = useRef(0);
@@ -114,6 +121,7 @@ export default function WordGamesPage() {
   // ── HUB ──────────────────────────────────────────────────────────────────
 
   if (!playing) return (
+    <RtlDir lang={rtlLang}>
     <div style={S.page}>
       <style>{CSS}</style>
 
@@ -163,7 +171,7 @@ export default function WordGamesPage() {
                 <button key={l.id} onClick={() => setDifficulty(l.id)}
                   style={{ padding:'7px 16px', borderRadius:99, border:`2px solid ${difficulty===l.id?l.color:'#E2E8F0'}`,
                     background: difficulty===l.id ? l.color : '#fff', color: difficulty===l.id ? '#fff' : '#64748B',
-                    fontSize:12, fontWeight:800, cursor:'pointer', fontFamily:"'Nunito',sans-serif",
+                    fontSize:12, fontWeight:800, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
                     transition:'all .15s' }}>
                   {l.label}
                 </button>
@@ -184,6 +192,7 @@ export default function WordGamesPage() {
         </div>
       </div>
     </div>
+    </RtlDir>
   );
 
   // ── GAME SCREEN ───────────────────────────────────────────────────────────
@@ -191,6 +200,7 @@ export default function WordGamesPage() {
   const commonProps = { difficulty, onBack:()=>{ void flushGameXp(); setPlaying(false); }, addXP, gameColor:game.color };
 
   return (
+    <RtlDir lang={rtlLang}>
     <div style={S.page}>
       <style>{CSS}</style>
       {activeGame==='snap'   && <SnapGame   {...commonProps}/>}
@@ -198,6 +208,7 @@ export default function WordGamesPage() {
       {activeGame==='vanish' && <VanishGame {...commonProps}/>}
       {activeGame==='blitz'  && <BlitzGame  {...commonProps}/>}
     </div>
+    </RtlDir>
   );
 }
 
@@ -373,7 +384,7 @@ function MatchGame({ difficulty, onBack, addXP, gameColor }:
                 disabled={card.matched}
                 style={{ padding:'14px 10px', borderRadius:14, border:`2px solid ${border}`,
                   background:bg, color, fontSize:13, fontWeight:700, cursor:card.matched?'default':'pointer',
-                  fontFamily:"'Nunito',sans-serif", textAlign:'center', lineHeight:1.4,
+                  fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", textAlign:'center', lineHeight:1.4,
                   transition:'all .15s', minHeight:64,
                   boxShadow: isSelected?`0 4px 14px ${gameColor}30`:'none',
                   animation: card.matched?'matchPop .3s ease':'none' }}>
@@ -514,7 +525,7 @@ function VanishGame({ difficulty, onBack, addXP, gameColor }:
               <button key={oi} onClick={() => handleAnswer(oi)} disabled={answered}
                 style={{ padding:'14px 12px', borderRadius:14, border:`2px solid ${border}`,
                   background:bg, color, fontSize:13, fontWeight:700, cursor:answered?'default':'pointer',
-                  fontFamily:"'Nunito',sans-serif", textAlign:'center', lineHeight:1.4, transition:'all .15s',
+                  fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", textAlign:'center', lineHeight:1.4, transition:'all .15s',
                   minHeight:56 }}>
                 {answered && isCorrect ? '✅ ' : answered && isSelected && !isCorrect ? '❌ ' : ''}{opt}
               </button>
@@ -680,14 +691,14 @@ function BlitzGame({ difficulty, onBack, addXP, gameColor }:
             style={{ flex:1, padding:'18px 10px', borderRadius:16,
               background:'#FEF2F2', border:'2px solid #FECACA',
               color:'#DC2626', fontSize:16, fontWeight:900, cursor:'pointer',
-              fontFamily:"'Nunito',sans-serif", transition:'all .1s' }}>
+              fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", transition:'all .1s' }}>
             ❌ False
           </button>
           <button onClick={() => answer(true)}
             style={{ flex:1, padding:'18px 10px', borderRadius:16,
               background:'#ECFDF5', border:'2px solid #A7F3D0',
               color:'#059669', fontSize:16, fontWeight:900, cursor:'pointer',
-              fontFamily:"'Nunito',sans-serif", transition:'all .1s' }}>
+              fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", transition:'all .1s' }}>
             ✅ True
           </button>
         </div>
@@ -735,14 +746,14 @@ function GameResult({ score, total, xp, color, subtitle, onBack, onRetry }:
           <button onClick={onRetry}
             style={{ flex:1, padding:'14px', borderRadius:14, border:'1.5px solid #E2E8F0',
               background:'#fff', color:'#475569', fontSize:14, fontWeight:800,
-              cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>
+              cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
             🔄 Play Again
           </button>
           <button onClick={onBack}
             style={{ flex:1, padding:'14px', borderRadius:14, border:'none',
               background:`linear-gradient(135deg,${color},${color}cc)`,
               color:'#fff', fontSize:14, fontWeight:800,
-              cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>
+              cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
             More Games →
           </button>
         </div>
@@ -761,7 +772,7 @@ function GameNav({ title, onBack, color, right }:
       boxShadow:'0 1px 4px rgba(0,0,0,0.04)' }}>
       <button onClick={onBack} style={{ background:'#F1F5F9', border:'none', borderRadius:10,
         padding:'7px 12px', color:'#64748B', fontSize:12, fontWeight:700,
-        cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>← Exit</button>
+        cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>← Exit</button>
       <div style={{ flex:1, textAlign:'center', fontSize:14, fontWeight:900, color:'#0F172A' }}>{title}</div>
       <div style={{ fontSize:12, fontWeight:800, color }}>{right}</div>
     </nav>
@@ -791,27 +802,27 @@ const S: Record<string, React.CSSProperties> = {
     background:'#fff', borderBottom:'1px solid #F1F5F9', position:'sticky', top:0, zIndex:100,
     boxShadow:'0 1px 4px rgba(0,0,0,0.04)' },
   navBack: { background:'#F1F5F9', border:'none', borderRadius:10, padding:'7px 14px',
-    color:'#64748B', fontSize:13, fontWeight:700, cursor:'pointer', fontFamily:"'Nunito',sans-serif" },
+    color:'#64748B', fontSize:13, fontWeight:700, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
   navCenter: { display:'flex', alignItems:'center', gap:6 },
   navTitle: { fontSize:17, fontWeight:900, color:'#0F172A' },
 
   // Hub
   gameTabs: { display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:0,
     background:'#fff', borderBottom:'1px solid #F1F5F9' },
-  gameTab: { padding:'12px 6px', border:'none', cursor:'pointer', fontFamily:"'Nunito',sans-serif",
+  gameTab: { padding:'12px 6px', border:'none', cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
     transition:'all .18s', textAlign:'center' },
   gameCard: { background:'#fff', borderRadius:20, padding:'24px 20px',
     boxShadow:'0 4px 20px rgba(0,0,0,0.08)', border:'1px solid #F1F5F9' },
   howTo: { background:'#F8FAFC', borderRadius:12, padding:'14px 16px', marginBottom:16 },
   startBtn: { width:'100%', padding:'16px', borderRadius:14, border:'none',
     color:'#fff', fontSize:16, fontWeight:900, cursor:'pointer',
-    fontFamily:"'Nunito',sans-serif", letterSpacing:.3 },
+    fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", letterSpacing:.3 },
 
   // Snap game
   snapCard: { width:'100%', maxWidth:340, background:'#fff', borderRadius:20,
     padding:'28px 24px', boxShadow:'0 6px 24px rgba(0,0,0,0.1)', border:'1px solid #F1F5F9' },
   snapBtn: { flex:1, padding:'20px 10px', borderRadius:16, cursor:'pointer',
-    fontSize:28, fontWeight:900, fontFamily:"'Nunito',sans-serif",
+    fontSize:28, fontWeight:900, fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
     display:'flex', flexDirection:'column', alignItems:'center', gap:6, transition:'all .1s' },
 
   // Vanish game

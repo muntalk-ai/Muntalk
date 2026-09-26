@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
@@ -6,6 +6,7 @@ import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
 import { LEARN_LANGUAGES } from '@/data/languages';
+import { DashboardSkeleton } from '@/components/Skeleton';
 import { CURRICULUM } from '@/data/curriculum';
 
 const LEVELS = [
@@ -48,12 +49,8 @@ export default function DashboardPage() {
   const activityDates  = profile?.activityDates   ?? [];
 
   if (loading) return (
-    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#F8FAFC', fontFamily: "'Nunito',sans-serif" }}>
-      <div style={{ textAlign: 'center' }}>
-        <div style={{ width: 48, height: 48, border: '4px solid #E5E7EB', borderTopColor: '#6366F1', borderRadius: '50%', animation: 'spin .8s linear infinite', margin: '0 auto 16px' }} />
-        <div style={{ color: '#94A3B8', fontWeight: 700 }}>Loading dashboard…</div>
-      </div>
-      <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `@keyframes spin { to { transform: rotate(360deg); } }` }} />
+    <div style={{ minHeight: '100vh', background: '#F8FAFC' }}>
+      <DashboardSkeleton />
     </div>
   );
 
@@ -79,7 +76,7 @@ export default function DashboardPage() {
   ];
 
   return (
-    <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito', sans-serif" }}>
+    <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
 * { box-sizing: border-box; }
         .lb-row:hover { background: #F8FAFC !important; }
@@ -92,7 +89,7 @@ export default function DashboardPage() {
         {user && (
           <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 10 }}>
             <button onClick={() => router.push('/profile')}
-              style={{ padding: '7px 16px', borderRadius: 20, border: '1.5px solid #E5E7EB', background: '#fff', color: '#374151', fontSize: 13, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+              style={{ padding: '7px 16px', borderRadius: 20, border: '1.5px solid #E5E7EB', background: '#fff', color: '#374151', fontSize: 13, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
               ✏️ Edit Profile
             </button>
           </div>
@@ -137,7 +134,7 @@ export default function DashboardPage() {
           </div>
 
           <button onClick={() => router.push('/lingua')}
-            style={{ padding: '12px 24px', borderRadius: 16, border: '2px solid rgba(255,255,255,0.5)', background: 'rgba(255,255,255,0.15)', color: '#fff', fontFamily: "'Nunito',sans-serif", fontWeight: 800, fontSize: 14, cursor: 'pointer', whiteSpace: 'nowrap' }}>
+            style={{ padding: '12px 24px', borderRadius: 16, border: '2px solid rgba(255,255,255,0.5)', background: 'rgba(255,255,255,0.15)', color: '#fff', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 800, fontSize: 14, cursor: 'pointer', whiteSpace: 'nowrap' }}>
             Continue Learning →
           </button>
         </div>
@@ -210,7 +207,7 @@ export default function DashboardPage() {
                     Complete a few lessons and your weak spots will appear here.
                   </span>
                   <button onClick={() => router.push('/lingua')}
-                    style={{ padding: '10px 20px', borderRadius: 14, border: 'none', background: '#6366F1', color: '#fff', fontFamily: "'Nunito',sans-serif", fontWeight: 800, fontSize: 13, cursor: 'pointer' }}>
+                    style={{ padding: '10px 20px', borderRadius: 14, border: 'none', background: '#6366F1', color: '#fff', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 800, fontSize: 13, cursor: 'pointer' }}>
                     Start learning →
                   </button>
                 </div>
@@ -226,7 +223,7 @@ export default function DashboardPage() {
                     </span>
                   ))}
                   <button onClick={() => router.push('/lingua/coach')}
-                    style={{ padding: '10px 20px', borderRadius: 14, border: 'none', background: '#6366F1', color: '#fff', fontFamily: "'Nunito',sans-serif", fontWeight: 800, fontSize: 13, cursor: 'pointer', marginLeft: 4 }}>
+                    style={{ padding: '10px 20px', borderRadius: 14, border: 'none', background: '#6366F1', color: '#fff', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 800, fontSize: 13, cursor: 'pointer', marginLeft: 4 }}>
                     🧭 Get coaching →
                   </button>
                 </div>

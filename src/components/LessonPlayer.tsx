@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { CURRICULUM } from '@/data/curriculum';
 import { getTutorById, getTutorForLang } from '@/data/tutors';
-import { LEARN_LANGUAGES } from '@/data/languages';
+import { LEARN_LANGUAGES, promptLangName } from '@/data/languages';
 import TrialExpiredModal from '@/components/TrialExpiredModal';
 import { getTrialData, initTrial, isTrialExpired, isPremium, TRIAL_MAX_UNITS } from '@/lib/trialPolicy';
 import { isAdminEmail } from '@/lib/subscription';
@@ -125,6 +125,13 @@ export default function LessonPlayer({
   const [msgTranslations, setMsgTranslations] = useState<Record<number,string>>({});
   const [translatingIdx,  setTranslatingIdx]  = useState<number|null>(null);
   const [xpEarned, setXpEarned] = useState(0);
+  const [audioToast, setAudioToast] = useState(false); // PR-I #5: TTS 실패 피드백
+  const audioToastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const showAudioToast = useCallback(() => {
+    setAudioToast(true);
+    if (audioToastTimer.current) clearTimeout(audioToastTimer.current);
+    audioToastTimer.current = setTimeout(() => setAudioToast(false), 2500);
+  }, []);
   const [showXPPop, setShowXPPop] = useState(false);
   const [xpPopVal, setXpPopVal] = useState(0);
   const [resumeOffer, setResumeOffer] = useState<null | { phase: Phase; vocabIdx: number; quizIdx: number; xpEarned: number }>(null);
@@ -266,29 +273,6 @@ export default function LessonPlayer({
     'es-ES', 'fr-FR', 'de-DE', 'pt-BR', 'it-IT', 'ru-RU',
   ]);
 
-  const langNames: Record<string, string> = {
-    'en-US': 'English', 'en-GB': 'English',
-    'ja-JP': 'Japanese', 'ko-KR': 'Korean',
-    'zh-CN': 'Chinese (Simplified)', 'zh-TW': 'Chinese (Traditional)',
-    'fr-FR': 'French', 'de-DE': 'German', 'es-ES': 'Spanish', 'es-MX': 'Spanish (Mexican)',
-    'it-IT': 'Italian', 'pt-BR': 'Portuguese (Brazilian)', 'pt-PT': 'Portuguese (European)',
-    'ru-RU': 'Russian', 'ar-XA': 'Arabic', 'hi-IN': 'Hindi', 'bn-IN': 'Bengali',
-    'ta-IN': 'Tamil', 'te-IN': 'Telugu', 'ml-IN': 'Malayalam',
-    'nl-NL': 'Dutch', 'pl-PL': 'Polish', 'tr-TR': 'Turkish', 'sv-SE': 'Swedish',
-    'da-DK': 'Danish', 'nb-NO': 'Norwegian', 'fi-FI': 'Finnish', 'cs-CZ': 'Czech',
-    'sk-SK': 'Slovak', 'hu-HU': 'Hungarian', 'ro-RO': 'Romanian', 'el-GR': 'Greek',
-    'uk-UA': 'Ukrainian', 'ca-ES': 'Catalan',
-    'vi-VN': 'Vietnamese', 'th-TH': 'Thai', 'id-ID': 'Indonesian', 'ms-MY': 'Malay',
-    'tl-PH': 'Filipino', 'km-KH': 'Khmer', 'si-LK': 'Sinhala',
-    'he-IL': 'Hebrew', 'fa-IR': 'Persian', 'ur-IN': 'Urdu',
-    'sw-KE': 'Swahili', 'af-ZA': 'Afrikaans',
-    'az-AZ': 'Azerbaijani', 'ka-GE': 'Georgian',
-  };
-  const nativeNames: Record<string, string> = {
-    'ko-KR': 'Korean', 'en-US': 'English', 'ja-JP': 'Japanese', 'zh-CN': 'Chinese',
-    'fr-FR': 'French', 'de-DE': 'German', 'es-ES': 'Spanish', 'pt-BR': 'Portuguese',
-    'ru-RU': 'Russian', 'ar-XA': 'Arabic', 'vi-VN': 'Vietnamese', 'id-ID': 'Indonesian',
-  };
 
   useEffect(() => {
     const lvl = CURRICULUM.find(l => l.id === levelId);
@@ -308,8 +292,8 @@ export default function LessonPlayer({
     setTxError(null);
     setTranslatedLesson(null);
 
-    const targetLang = langNames[langId] || langId;
-    const nativeLang = nativeNames[subLang] || 'English';
+    const targetLang = promptLangName(langId);
+    const nativeLang = promptLangName(subLang) || 'English';
 
     // 관리자 설정: localStorage의 curriculum_mode 확인
     // 'api' = Gemini 우선 (기본), 'json' = JSON 우선
@@ -499,16 +483,17 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: cleanText, lang: langId, gender: tutor?.gender || 'female', level: levelId }),
       });
-      if (!res.ok) { setIsSpeaking(false); onEnd?.(); return; }
+      if (!res.ok) { setIsSpeaking(false); showAudioToast(); onEnd?.(); return; }
       const data = await res.json();
-      if (!data.audioContent) { setIsSpeaking(false); onEnd?.(); return; }
+      if (!data.audioContent) { setIsSpeaking(false); showAudioToast(); onEnd?.(); return; }
       const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
       audioRef.current = audio;
       audio.onended = () => { setIsSpeaking(false); audioRef.current = null; onEnd?.(); };
-      audio.onerror = () => { setIsSpeaking(false); audioRef.current = null; onEnd?.(); };
+      audio.onerror = () => { setIsSpeaking(false); audioRef.current = null; showAudioToast(); onEnd?.(); };
       await audio.play();
     } catch {
       setIsSpeaking(false);
+      showAudioToast();
       onEnd?.();
     }
   };
@@ -534,7 +519,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
       const res = await apiFetch('/api/gemini', {
         method:'POST', headers:{'Content-Type':'application/json'},
         body:JSON.stringify({ uid:user?.uid??null, temperature:0.1,
-          prompt:`Translate to ${nativeNames[subLang]||'Korean'}. Reply ONLY with translation:
+          prompt:`Translate to ${promptLangName(subLang)||'Korean'}. Reply ONLY with translation:
 "${text}"` }),
         timeoutMs: AI_TIMEOUT_MS,
       });
@@ -677,7 +662,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
         body: JSON.stringify({
           uid: user?.uid,
           temperature: 0.4,
-          prompt: `You are a friendly language tutor. A student learning ${langNames[langId] || langId} got this quiz question wrong.\nQuestion: ${quizItem.q}\nOptions: ${quizItem.options.map((o: string, i: number) => `${['A','B','C','D'][i]}) ${o}`).join(' | ')}\nCorrect answer: ${quizItem.options[quizItem.answer]}\nStudent chose: ${quizItem.options[selectedOpt]}\nExplain in ${nativeNames[subLang] || 'Korean'}, in 2-3 short sentences: why the correct answer is right, and why the student's choice is wrong. Be encouraging, never condescending. No emojis.`,
+          prompt: `You are a friendly language tutor. A student learning ${promptLangName(langId)} got this quiz question wrong.\nQuestion: ${quizItem.q}\nOptions: ${quizItem.options.map((o: string, i: number) => `${['A','B','C','D'][i]}) ${o}`).join(' | ')}\nCorrect answer: ${quizItem.options[quizItem.answer]}\nStudent chose: ${quizItem.options[selectedOpt]}\nExplain in ${promptLangName(subLang) || 'Korean'}, in 2-3 short sentences: why the correct answer is right, and why the student's choice is wrong. Be encouraging, never condescending. No emojis.`,
         }),
         timeoutMs: AI_TIMEOUT_MS,
       });
@@ -712,7 +697,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
           body: JSON.stringify({
             uid: user?.uid,
             temperature: 0.3,
-            prompt: `You are a pronunciation coach for ${langNames[langId] || langId} learners.\nThe student tried to say: "${vocabItem.word}" (pronunciation guide: ${vocabItem.phonetic || 'n/a'}, meaning: ${vocabItem.meaning}).\nSpeech recognition heard them say: "${transcript}".\nCompare what they said vs the target. Reply in ${nativeNames[subLang] || 'Korean'} with ONLY JSON, no markdown:\n{"score":<0-100>,"heard":"<what you think they actually said>","feedback":"<1-2 sentences: which exact sound was off and how to fix it (e.g. tongue position, sound length). If great, praise briefly and specifically>"}`,
+            prompt: `You are a pronunciation coach for ${promptLangName(langId)} learners.\nThe student tried to say: "${vocabItem.word}" (pronunciation guide: ${vocabItem.phonetic || 'n/a'}, meaning: ${vocabItem.meaning}).\nSpeech recognition heard them say: "${transcript}".\nCompare what they said vs the target. Reply in ${promptLangName(subLang) || 'Korean'} with ONLY JSON, no markdown:\n{"score":<0-100>,"heard":"<what you think they actually said>","feedback":"<1-2 sentences: which exact sound was off and how to fix it (e.g. tongue position, sound length). If great, praise briefly and specifically>"}`,
           }),
         timeoutMs: AI_TIMEOUT_MS,
       });
@@ -755,10 +740,10 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           uid: user?.uid,
-          prompt: `You are a ${langNames[langId] || langId} language tutor.
-TARGET LANGUAGE: ${langNames[langId] || langId}
+          prompt: `You are a ${promptLangName(langId)} language tutor.
+TARGET LANGUAGE: ${promptLangName(langId)}
 CHAT LEVEL: ${chatLevel === 'easy' ? 'EASY — use only the simplest words, very short sentences, like talking to a 5-year-old learner' : chatLevel === 'advanced' ? 'ADVANCED — natural, complex sentences' : 'NORMAL — simple but natural sentences'}
-LANGUAGE MODE: ${chatLangMode === 'native' ? `Reply in ${nativeNames[subLang]||'the student native language'} — student wants to understand fully` : chatLangMode === 'mixed' ? `Mix ${langNames[langId]||langId} and ${nativeNames[subLang]||'native language'} — help student understand` : `Reply ONLY in ${langNames[langId]||langId}`}
+LANGUAGE MODE: ${chatLangMode === 'native' ? `Reply in ${promptLangName(subLang)||'the student native language'} — student wants to understand fully` : chatLangMode === 'mixed' ? `Mix ${promptLangName(langId)} and ${promptLangName(subLang)||'native language'} — help student understand` : `Reply ONLY in ${promptLangName(langId)}`}
 Generate a warm 1-2 sentence opening. End with a simple question.`,
           temperature: 0.7,
         }),
@@ -798,9 +783,9 @@ Generate a warm 1-2 sentence opening. End with a simple question.`,
         body: JSON.stringify({
           uid: user?.uid,
           prompt: [
-            `You are a ${langNames[langId]||langId} language tutor.
+            `You are a ${promptLangName(langId)} language tutor.
 LANGUAGE RULES:
-${chatLangMode==='native' ? `- Reply ONLY in ${nativeNames[subLang]||'the student native language'} so student understands fully` : chatLangMode==='mixed' ? `- Mix ${langNames[langId]||langId} and ${nativeNames[subLang]||'native language'} naturally` : `- Reply ONLY in ${langNames[langId]||langId}`}
+${chatLangMode==='native' ? `- Reply ONLY in ${promptLangName(subLang)||'the student native language'} so student understands fully` : chatLangMode==='mixed' ? `- Mix ${promptLangName(langId)} and ${promptLangName(subLang)||'native language'} naturally` : `- Reply ONLY in ${promptLangName(langId)}`}
 LEVEL: ${chatLevel==='easy' ? 'EASY — extremely simple words, max 1 sentence, like for a complete beginner child' : chatLevel==='advanced' ? 'ADVANCED — natural complex expressions' : `${levelId.toUpperCase()} — ${levelId.startsWith('a')?'beginner simple words':levelId.startsWith('b')?'intermediate everyday':' advanced natural'}`}
 RULES:
 - 2-3 short sentences max
@@ -890,6 +875,16 @@ RULES:
   return (
     <div style={styles.page}>
 
+      {/* PR-I #5: TTS 실패 토스트 */}
+      {audioToast && (
+        <div style={{ position:'fixed', left:'50%', bottom:88, transform:'translateX(-50%)',
+          background:'rgba(15,23,42,0.92)', color:'#fff', fontSize:13, fontWeight:800,
+          padding:'10px 18px', borderRadius:99, zIndex:9500, whiteSpace:'nowrap',
+          boxShadow:'0 8px 24px rgba(0,0,0,0.25)' }}>
+          🔇 Audio unavailable
+        </div>
+      )}
+
       {/* -- Resume offer (P1-6) ------------------------------------------- */}
       {resumeOffer && (
         <div style={{ position:'fixed', inset:0, background:'rgba(15,23,42,0.45)', zIndex:9000,
@@ -972,7 +967,7 @@ RULES:
 
       {/* Header */}
       <header style={styles.header}>
-        <button style={styles.backBtn} onClick={() => { stopAll(); router.back(); }}>← Back</button>
+        <button style={styles.backBtn} onClick={() => { stopAll(); router.push(`/lingua/learn/${levelId}`); }}>← Back</button>
         <div style={styles.lessonMeta}>
           <span style={{ ...styles.levelTag, background: level.accent }}>{level.label}</span>
           <span style={styles.lessonTitle}>{lesson.icon} {lesson.title}</span>
@@ -1194,7 +1189,7 @@ RULES:
                   style={{
                     padding: '9px 18px', borderRadius: 99, border: `1.5px solid ${level.accent}40`,
                     background: '#fff', color: level.dark, fontWeight: 800, fontSize: 13,
-                    cursor: explaining ? 'default' : 'pointer', fontFamily: "'Nunito',sans-serif",
+                    cursor: explaining ? 'default' : 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
                     opacity: explaining ? 0.6 : 1,
                   }}>
                   {explaining ? '⏳ 설명 가져오는 중...' : '🤔 왜 틀렸어요?'}
@@ -1393,7 +1388,7 @@ RULES:
                       style={{ marginTop:5, padding:'2px 8px', borderRadius:6,
                         border:`1px solid ${level.accent}40`, background:'#fff',
                         fontSize:10, fontWeight:700, color:level.accent, cursor:'pointer',
-                        fontFamily:"'Nunito',sans-serif", display:'block' }}>
+                        fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display:'block' }}>
                       {translatingIdx===i ? '...' : msgTranslations[i] ? '✓' : '🌐 Translate'}
                     </button>
                   )}
@@ -1434,19 +1429,19 @@ RULES:
                 <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
                   <button
                     onClick={() => router.push('/signup')}
-                    style={{ padding: '11px 22px', borderRadius: 14, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 900, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                    style={{ padding: '11px 22px', borderRadius: 14, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 900, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                     Sign Up Free 🎉
                   </button>
                   <button
                     onClick={() => router.push('/pricing')}
-                    style={{ padding: '11px 22px', borderRadius: 14, border: '2px solid #6366F1', background: '#fff', color: '#6366F1', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                    style={{ padding: '11px 22px', borderRadius: 14, border: '2px solid #6366F1', background: '#fff', color: '#6366F1', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                     View Plans
                   </button>
                 </div>
               </div>
             )}
             <div style={styles.completeBtns}>
-              <button style={{ ...styles.nextLessonBtn, background: level.accent }} onClick={() => router.back()}>
+              <button style={{ ...styles.nextLessonBtn, background: level.accent }} onClick={() => router.push(`/lingua/learn/${levelId}`)}>
                 ← Back to Level
               </button>
               <button style={styles.homeBtn} onClick={() => router.push('/lingua')}>
@@ -1462,10 +1457,10 @@ RULES:
 
 // --- Styles -------------------------------------------------------------------
 const styles: Record<string, React.CSSProperties> = {
-  page: { minHeight: '100vh', background: '#F8F9FA', color: '#111', fontFamily: "'Nunito', sans-serif", position: 'relative' },
+  page: { minHeight: '100vh', background: '#F8F9FA', color: '#111', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", position: 'relative' },
   xpPop: { position: 'fixed', top: 80, right: 30, background: 'linear-gradient(135deg,#FFD700,#FFA500)', color: '#000', fontWeight: 900, fontSize: 18, padding: '10px 20px', borderRadius: 30, zIndex: 9999, boxShadow: '0 4px 20px #FFD70060', animation: 'fadeUp 1.4s ease forwards', pointerEvents: 'none' },
   header: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 24px', borderBottom: '1px solid #E9ECEF', position: 'sticky', top: 0, background: '#ffffffee', backdropFilter: 'blur(10px)', zIndex: 100 },
-  backBtn: { background: 'none', border: '1px solid #E9ECEF', color: '#6B7280', padding: '8px 14px', borderRadius: 10, cursor: 'pointer', fontSize: 13, fontWeight: 700, fontFamily: "'Nunito', sans-serif" },
+  backBtn: { background: 'none', border: '1px solid #E9ECEF', color: '#6B7280', padding: '8px 14px', borderRadius: 10, cursor: 'pointer', fontSize: 13, fontWeight: 700, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
   lessonMeta: { display: 'flex', alignItems: 'center', gap: 10 },
   levelTag: { fontSize: 11, fontWeight: 800, padding: '4px 10px', borderRadius: 99, color: '#fff', letterSpacing: 1 },
   lessonTitle: { fontSize: 15, fontWeight: 800, color: '#111' },
@@ -1477,18 +1472,18 @@ const styles: Record<string, React.CSSProperties> = {
   vocabSide: { flex: 1, overflowY: 'auto' as const, padding: '32px 40px', display: 'flex', flexDirection: 'column' as const },
   vocabCounter: { textAlign: 'center', fontSize: 12, color: '#9CA3AF', marginBottom: 20, fontWeight: 700, letterSpacing: 1 },
   vocabCard: { borderRadius: 20, padding: '36px 32px', textAlign: 'center', marginBottom: 28, boxShadow: '0 2px 16px rgba(0,0,0,0.06)' },
-  vocabWord: { fontSize: 32, fontWeight: 900, marginBottom: 8 },
+  vocabWord: { fontSize: 32, fontWeight: 900, marginBottom: 8, overflowWrap: 'break-word', wordBreak: 'break-word' },
   vocabPhonetic: { fontSize: 14, color: '#9CA3AF', fontStyle: 'italic', marginBottom: 12 },
   vocabMeaning: { fontSize: 16, fontWeight: 700, marginBottom: 16 },
   vocabExample: { fontSize: 14, color: '#6B7280', lineHeight: 1.6, marginBottom: 20, fontStyle: 'italic' },
-  speakBtn: { padding: '10px 24px', borderRadius: 99, border: 'none', color: '#fff', fontWeight: 800, fontSize: 13, cursor: 'pointer', fontFamily: "'Nunito', sans-serif" },
+  speakBtn: { padding: '10px 24px', borderRadius: 99, border: 'none', color: '#fff', fontWeight: 800, fontSize: 13, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
   btnRow: { display: 'flex', gap: 12, justifyContent: 'center' },
-  prevBtn: { padding: '14px 28px', borderRadius: 14, border: '2px solid #E9ECEF', background: '#fff', color: '#6B7280', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito', sans-serif" },
-  nextBtn: { padding: '14px 36px', borderRadius: 14, border: 'none', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito', sans-serif" },
+  prevBtn: { padding: '14px 28px', borderRadius: 14, border: '2px solid #E9ECEF', background: '#fff', color: '#6B7280', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
+  nextBtn: { padding: '14px 36px', borderRadius: 14, border: 'none', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
   quizCard: { borderRadius: 20, padding: '32px', marginBottom: 28, boxShadow: '0 2px 16px rgba(0,0,0,0.06)' },
   quizQ: { fontSize: 18, fontWeight: 800, marginBottom: 24, lineHeight: 1.4, color: '#111' },
   optionsGrid: { display: 'flex', flexDirection: 'column', gap: 10 },
-  optBtn: { display: 'flex', alignItems: 'center', gap: 12, padding: '14px 16px', borderRadius: 12, textAlign: 'left', fontFamily: "'Nunito', sans-serif", transition: 'transform 0.1s' },
+  optBtn: { display: 'flex', alignItems: 'center', gap: 12, padding: '14px 16px', borderRadius: 12, textAlign: 'left', overflowWrap: 'break-word', wordBreak: 'break-word', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", transition: 'transform 0.1s' },
   optLetter: { width: 28, height: 28, borderRadius: 99, background: '#F3F4F6', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 800, color: '#6B7280', flexShrink: 0 },
   optText: { fontSize: 14, fontWeight: 700, flex: 1 },
   feedback: { marginTop: 16, fontWeight: 800, fontSize: 15, textAlign: 'center' },
@@ -1501,12 +1496,12 @@ const styles: Record<string, React.CSSProperties> = {
   tutorLabel: { fontSize: 16, fontWeight: 900, color: '#111' },
   tutorSubLabel: { fontSize: 12, color: '#9CA3AF', textAlign: 'center' },
   controls: { display: 'flex', flexDirection: 'column', gap: 10, width: '100%', marginTop: 'auto' },
-  micBtn: { padding: '14px', borderRadius: 14, border: 'none', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito', sans-serif", width: '100%' },
-  doneBtn: { padding: '12px', borderRadius: 14, border: '1px solid #E9ECEF', background: '#fff', color: '#6B7280', fontWeight: 700, fontSize: 13, cursor: 'pointer', fontFamily: "'Nunito', sans-serif", width: '100%' },
+  micBtn: { padding: '14px', borderRadius: 14, border: 'none', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", width: '100%' },
+  doneBtn: { padding: '12px', borderRadius: 14, border: '1px solid #E9ECEF', background: '#fff', color: '#6B7280', fontWeight: 700, fontSize: 13, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", width: '100%' },
   chatCol: { flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', background: '#fff' },
   chatArea: { flex: 1, overflowY: 'auto', padding: '20px', display: 'flex', flexDirection: 'column', gap: 14 },
-  tutorBubble: { alignSelf: 'flex-start', maxWidth: '75%', padding: '14px 18px', borderRadius: '0 18px 18px 18px', border: '1px solid #E9ECEF' },
-  userBubble: { alignSelf: 'flex-end', maxWidth: '75%', padding: '14px 18px', borderRadius: '18px 0 18px 18px', background: '#38BDF8', color: '#000', fontWeight: 700, fontSize: 14 },
+  tutorBubble: { alignSelf: 'flex-start', maxWidth: '75%', padding: '14px 18px', borderRadius: '0 18px 18px 18px', border: '1px solid #E9ECEF', overflowWrap: 'break-word', wordBreak: 'break-word' },
+  userBubble: { alignSelf: 'flex-end', maxWidth: '75%', padding: '14px 18px', borderRadius: '18px 0 18px 18px', background: '#38BDF8', color: '#000', fontWeight: 700, fontSize: 14, overflowWrap: 'break-word', wordBreak: 'break-word' },
   completeWrap: { display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 'calc(100vh - 110px)', padding: 24, background: '#F8F9FA' },
   completeCard: { borderRadius: 24, padding: '48px 36px', textAlign: 'center', maxWidth: 440, boxShadow: '0 4px 24px rgba(0,0,0,0.08)' },
   completeEmoji: { fontSize: 64, marginBottom: 16 },
@@ -1515,8 +1510,8 @@ const styles: Record<string, React.CSSProperties> = {
   xpBig: { fontSize: 36, fontWeight: 900, marginBottom: 12 },
   perfectBadge: { background: '#FFD700', color: '#000', padding: '8px 20px', borderRadius: 99, fontSize: 14, fontWeight: 800, marginBottom: 20, display: 'inline-block' },
   completeBtns: { display: 'flex', gap: 12, justifyContent: 'center' },
-  nextLessonBtn: { padding: '14px 28px', borderRadius: 14, border: 'none', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito', sans-serif" },
-  homeBtn: { padding: '14px 20px', borderRadius: 14, border: '2px solid #E9ECEF', background: '#fff', color: '#6B7280', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito', sans-serif" },
+  nextLessonBtn: { padding: '14px 28px', borderRadius: 14, border: 'none', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
+  homeBtn: { padding: '14px 20px', borderRadius: 14, border: '2px solid #E9ECEF', background: '#fff', color: '#6B7280', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
   txLine: { fontSize: 12, color: '#6B7280', fontStyle: 'italic', marginTop: 6, padding: '4px 10px', background: 'rgba(0,0,0,0.04)', borderRadius: 8 },
   txMeaning: { fontSize: 11, color: '#9CA3AF', marginTop: 2 },
   txBubble: { fontSize: 12, color: '#6B7280', fontStyle: 'italic', marginTop: 6, padding: '4px 8px', background: 'rgba(0,0,0,0.04)', borderRadius: 8 },

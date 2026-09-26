@@ -44,7 +44,7 @@ export default function AiFailureModal() {
           background: '#fff', borderRadius: 20, padding: '28px 26px',
           maxWidth: 380, width: '100%', textAlign: 'center',
           boxShadow: '0 24px 64px rgba(15,23,42,0.25)',
-          fontFamily: "'Nunito',sans-serif",
+          fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
           animation: 'mtPop .25s ease',
         }}
       >
@@ -61,7 +61,7 @@ export default function AiFailureModal() {
             style={{
               flex: 1, padding: '13px 0', borderRadius: 12, border: '1.5px solid #E2E8F0',
               background: '#fff', color: '#475569', fontWeight: 800, fontSize: 15,
-              cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
+              cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
             }}
           >
             Dismiss
@@ -72,7 +72,7 @@ export default function AiFailureModal() {
               flex: 1.4, padding: '13px 0', borderRadius: 12, border: 'none',
               background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff',
               fontWeight: 900, fontSize: 15, cursor: 'pointer',
-              fontFamily: "'Nunito',sans-serif",
+              fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
             }}
           >
             ↻ Try again

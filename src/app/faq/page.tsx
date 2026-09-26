@@ -281,7 +281,7 @@ export default function FaqPage() {
   });
 
   return (
-    <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito', sans-serif" }}>
+    <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
         @keyframes fadeUp { from { opacity:0; transform:translateY(16px) } to { opacity:1; transform:translateY(0) } }
@@ -298,7 +298,7 @@ export default function FaqPage() {
       <div style={{ background: 'linear-gradient(135deg, #1E1B4B 0%, #312E81 50%, #4338CA 100%)', padding: '48px 24px 60px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(99,102,241,0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(139,92,246,0.2) 0%, transparent 40%)', pointerEvents: 'none' }} />
 
-        <button onClick={() => router.back()} style={{ position: 'absolute', top: 20, left: 20, background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 10, padding: '8px 16px', color: '#fff', fontWeight: 700, fontSize: 13, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+        <button onClick={() => router.back()} style={{ position: 'absolute', top: 20, left: 20, background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 10, padding: '8px 16px', color: '#fff', fontWeight: 700, fontSize: 13, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
           ← Back
         </button>
 
@@ -319,7 +319,7 @@ export default function FaqPage() {
               value={search}
               onChange={e => { setSearch(e.target.value); setOpenIndex(null); }}
               placeholder="Search questions..."
-              style={{ width: '100%', padding: '14px 16px 14px 44px', borderRadius: 14, border: '2px solid rgba(255,255,255,0.2)', background: 'rgba(255,255,255,0.1)', color: '#fff', fontSize: 15, fontWeight: 700, fontFamily: "'Nunito',sans-serif", boxSizing: 'border-box', backdropFilter: 'blur(10px)' }}
+              style={{ width: '100%', padding: '14px 16px 14px 44px', borderRadius: 14, border: '2px solid rgba(255,255,255,0.2)', background: 'rgba(255,255,255,0.1)', color: '#fff', fontSize: 15, fontWeight: 700, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", boxSizing: 'border-box', backdropFilter: 'blur(10px)' }}
             />
           </div>
         </div>
@@ -337,7 +337,7 @@ export default function FaqPage() {
               borderBottom: activeCategory === cat.id ? '3px solid #6366F1' : '3px solid transparent',
               color: activeCategory === cat.id ? '#6366F1' : '#64748B',
               fontWeight: 800, fontSize: 13, cursor: 'pointer',
-              fontFamily: "'Nunito',sans-serif", whiteSpace: 'nowrap',
+              fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", whiteSpace: 'nowrap',
               display: 'flex', alignItems: 'center', gap: 6,
             }}>
             <span>{cat.emoji}</span> {cat.label}
@@ -362,7 +362,7 @@ export default function FaqPage() {
               Try different keywords or browse by category
             </div>
             <button onClick={() => { setSearch(''); setActiveCategory('all'); }}
-              style={{ padding: '10px 24px', borderRadius: 12, border: 'none', background: '#6366F1', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+              style={{ padding: '10px 24px', borderRadius: 12, border: 'none', background: '#6366F1', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
               Clear search
             </button>
           </div>
@@ -379,7 +379,7 @@ export default function FaqPage() {
                   {/* Question */}
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : i)}
-                    style={{ width: '100%', padding: '18px 20px', background: 'none', border: 'none', textAlign: 'left', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, fontFamily: "'Nunito',sans-serif" }}>
+                    style={{ width: '100%', padding: '18px 20px', background: 'none', border: 'none', textAlign: 'left', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, flex: 1 }}>
                       <span style={{ fontSize: 18, marginTop: 1, flexShrink: 0 }}>
                         {faq.tags.includes('mic') ? '🎤' :
@@ -439,7 +439,7 @@ export default function FaqPage() {
             We usually respond within 24 hours
           </div>
           <a href="mailto:muntalkofficial@gmail.com"
-            style={{ display: 'inline-block', padding: '12px 28px', borderRadius: 14, background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 900, fontSize: 15, textDecoration: 'none', fontFamily: "'Nunito',sans-serif", boxShadow: '0 4px 16px rgba(99,102,241,0.3)' }}>
+            style={{ display: 'inline-block', padding: '12px 28px', borderRadius: 14, background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 900, fontSize: 15, textDecoration: 'none', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", boxShadow: '0 4px 16px rgba(99,102,241,0.3)' }}>
             ✉️ muntalkofficial@gmail.com
           </a>
         </div>

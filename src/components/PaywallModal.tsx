@@ -127,12 +127,12 @@ export default function PaywallModal({ reason, onClose, levelName }: PaywallModa
 
         {/* View all plans */}
         <button className="pw-cta" onClick={() => { onClose(); router.push('/pricing'); }}
-          style={{ width: '100%', padding: '13px', borderRadius: 14, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 14, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito',sans-serif", marginBottom: 10 }}>
+          style={{ width: '100%', padding: '13px', borderRadius: 14, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 14, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", marginBottom: 10 }}>
           See All Plans & Start Free →
         </button>
 
         <button onClick={onClose}
-          style={{ width: '100%', padding: '10px', borderRadius: 14, border: 'none', background: 'transparent', color: '#94A3B8', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+          style={{ width: '100%', padding: '10px', borderRadius: 14, border: 'none', background: 'transparent', color: '#94A3B8', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
           Maybe later
         </button>
       </div>
@@ -152,7 +152,7 @@ const styles: Record<string, React.CSSProperties> = {
     padding: '32px 28px 28px',
     width: '100%', maxWidth: 480,
     position: 'relative',
-    fontFamily: "'Nunito', sans-serif",
+    fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
     animation: 'slideUp .3s ease',
     maxHeight: '90vh', overflowY: 'auto',
   },

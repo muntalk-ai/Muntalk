@@ -70,7 +70,7 @@ export default function TrialExpiredModal({ reason, langFlag, langLabel, onClose
       backdropFilter: 'blur(12px)',
       display: 'flex', alignItems: 'center', justifyContent: 'center',
       padding: 20,
-      fontFamily: "'Nunito', sans-serif",
+      fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
     }}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap');
@@ -130,18 +130,18 @@ export default function TrialExpiredModal({ reason, langFlag, langLabel, onClose
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           {isCheckFailed ? (
             <button onClick={onRetry}
-              style={{ padding: '14px', borderRadius: 12, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 15, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito',sans-serif", boxShadow: '0 6px 20px rgba(99,102,241,0.4)' }}>
+              style={{ padding: '14px', borderRadius: 12, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 15, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", boxShadow: '0 6px 20px rgba(99,102,241,0.4)' }}>
               🔄 Try Again
             </button>
           ) : (
             <button onClick={() => router.push('/pricing')}
-              style={{ padding: '14px', borderRadius: 12, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 15, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito',sans-serif", boxShadow: '0 6px 20px rgba(99,102,241,0.4)' }}>
+              style={{ padding: '14px', borderRadius: 12, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 15, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", boxShadow: '0 6px 20px rgba(99,102,241,0.4)' }}>
               🚀 Upgrade to Premium
             </button>
           )}
           {onClose && (
             <button onClick={onClose}
-              style={{ padding: '12px', borderRadius: 12, border: 'none', background: 'transparent', color: '#4B5563', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+              style={{ padding: '12px', borderRadius: 12, border: 'none', background: 'transparent', color: '#4B5563', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
               ← Go back
             </button>
           )}

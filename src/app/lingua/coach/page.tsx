@@ -4,6 +4,7 @@ import { runWithAiRetry, AI_TIMEOUT_MS } from '@/lib/aiRetry';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
+import RtlDir from '@/components/RtlDir';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { getUserProfile } from '@/lib/userProfile';
@@ -170,6 +171,7 @@ export default function CoachPage() {
   const [loading, setLoading]     = useState(false);
   const [briefing, setBriefing]   = useState(false); // 초기 브리핑 중
   const [ready, setReady]         = useState(false);
+  const [rtlLang, setRtlLang]     = useState('en-US'); // PR-I: RTL 판정용 학습 언어
   const [isListening, setIsListening] = useState(false);
   const [micGuide, setMicGuide] = useState<MicGuideReason | null>(null); // PR-G: STT 안내
 
@@ -180,6 +182,11 @@ export default function CoachPage() {
   useEffect(() => {
     chatRef.current?.scrollTo({ top: chatRef.current.scrollHeight, behavior: 'smooth' });
   }, [messages, loading]);
+
+  // PR-I: RTL 판정용 학습 언어 (클라이언트에서만 읽기)
+  useEffect(() => {
+    try { setRtlLang(localStorage.getItem('mt_learn_lang') || 'en-US'); } catch { /* ignore */ }
+  }, []);
 
   // ── Build learner snapshot ────────────────────────────────────────────────
 
@@ -422,6 +429,7 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
   );
 
   return (
+    <RtlDir lang={rtlLang}>
     <div style={S.page}>
       <style>{CSS}</style>
 
@@ -577,13 +585,14 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
         </button>
       </div>
     </div>
+    </RtlDir>
   );
 }
 
 // ── CSS ───────────────────────────────────────────────────────────────────────
 
 const CSS = `
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Noto+Sans+KR:wght@400;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Noto+Sans+KR:wght@400;600;700&family=Noto+Sans+Arabic:wght@400;600;700&family=Noto+Sans+Hebrew:wght@400;600;700&family=Noto+Sans+Thai:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+SC:wght@400;700&display=swap');
   * { box-sizing: border-box; }
   @keyframes fadeUp { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
   @keyframes thinking { 0%,100%{opacity:.2;transform:scale(.75)} 50%{opacity:1;transform:scale(1)} }
@@ -615,7 +624,7 @@ const S: Record<string, React.CSSProperties> = {
   },
   loadingPage: {
     minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
-    background: '#F8FAFC', fontFamily: "'Nunito',sans-serif",
+    background: '#F8FAFC', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
   },
   loadingInner: { textAlign: 'center' },
   loadingText: { fontSize: 15, fontWeight: 700, color: '#64748B' },
@@ -630,7 +639,7 @@ const S: Record<string, React.CSSProperties> = {
   navBack: {
     background: '#F1F5F9', border: 'none', borderRadius: 10,
     padding: '7px 14px', color: '#64748B', fontSize: 13,
-    fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
+    fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
   },
   navCenter: { display: 'flex', alignItems: 'center', gap: 6 },
   navIcon: { fontSize: 20 },
@@ -715,7 +724,7 @@ const S: Record<string, React.CSSProperties> = {
     flexShrink: 0, padding: '7px 14px', borderRadius: 99,
     border: '1.5px solid #E2E8F0', background: '#F8FAFC',
     color: '#475569', fontSize: 12, fontWeight: 700,
-    cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
+    cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
     whiteSpace: 'nowrap' as const,
   },
 
@@ -728,13 +737,13 @@ const S: Record<string, React.CSSProperties> = {
     flex: 1, padding: '11px', borderRadius: 12, border: 'none',
     background: 'linear-gradient(135deg,#6366F1,#818CF8)',
     color: '#fff', fontWeight: 800, fontSize: 13,
-    cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
+    cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
   },
   ctaBtn2: {
     flex: 1, padding: '11px', borderRadius: 12,
     border: '1.5px solid #E2E8F0', background: '#fff',
     color: '#475569', fontWeight: 700, fontSize: 13,
-    cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
+    cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
   },
 
   // Input
@@ -750,7 +759,7 @@ const S: Record<string, React.CSSProperties> = {
   input: {
     flex: 1, padding: '11px 16px', borderRadius: 12,
     background: '#F8FAFC', border: '1.5px solid #E5E7EB',
-    color: '#0F172A', fontSize: 14, fontFamily: "'Nunito',sans-serif",
+    color: '#0F172A', fontSize: 14, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
     outline: 'none', fontWeight: 600,
   },
   sendBtn: {

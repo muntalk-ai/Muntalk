@@ -32,7 +32,7 @@ export default function CertificateModal({
       position: 'fixed', inset: 0, zIndex: 600,
       background: 'rgba(15,23,42,0.6)', backdropFilter: 'blur(6px)',
       display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 20,
-      fontFamily: "'Nunito',sans-serif",
+      fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
     }}>
       <div style={{
         background: '#fff', borderRadius: 28, padding: '40px 36px', maxWidth: 420, width: '100%',
@@ -86,13 +86,13 @@ export default function CertificateModal({
               in LinkedIn
             </a>
             <button onClick={copyText}
-              style={{ flex: 1, padding: '12px', borderRadius: 14, background: '#F1F5F9', color: '#334155', fontSize: 13, fontWeight: 800, border: 'none', cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+              style={{ flex: 1, padding: '12px', borderRadius: 14, background: '#F1F5F9', color: '#334155', fontSize: 13, fontWeight: 800, border: 'none', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
               {copied ? '✅ 복사됨' : '📋 복사'}
             </button>
           </div>
 
           <button onClick={onClose}
-            style={{ width: '100%', padding: '12px', borderRadius: 14, border: 'none', background: 'none', color: '#94A3B8', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+            style={{ width: '100%', padding: '12px', borderRadius: 14, border: 'none', background: 'none', color: '#94A3B8', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
             계속 학습하기 →
           </button>
         </div>

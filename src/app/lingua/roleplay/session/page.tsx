@@ -3,6 +3,7 @@ import { apiFetch } from '@/lib/apiClient';
 import { AI_TIMEOUT_MS } from '@/lib/aiRetry';
 
 import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
+import RtlDir from '@/components/RtlDir';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { getTutorById } from '@/data/tutors';
@@ -475,13 +476,13 @@ Reply as ${npc.name} in ${targetLang}:`;
 
   if (!scenario) return (
     <div style={{minHeight:'100vh',background:'#F8FAFC',display:'flex',alignItems:'center',
-      justifyContent:'center',fontFamily:"'Nunito',sans-serif"}}>
+      justifyContent:'center',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
       <div style={{textAlign:'center'}}>
         <div style={{fontSize:48,marginBottom:12}}>😕</div>
         <div style={{fontWeight:700,marginBottom:16,color:'#0F172A'}}>Scenario not found</div>
         <button onClick={()=>router.push('/lingua/roleplay')}
           style={{padding:'12px 24px',borderRadius:12,border:'none',background:'#6366F1',
-            color:'#fff',fontWeight:700,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
+            color:'#fff',fontWeight:700,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
           Back to Roleplay
         </button>
       </div>
@@ -490,7 +491,7 @@ Reply as ${npc.name} in ${targetLang}:`;
 
   // ── RESULT ────────────────────────────────────────────────────────────────
   if (phase==='result') return (
-    <div style={{minHeight:'100vh',background:'#F8FAFC',fontFamily:"'Nunito',sans-serif",
+    <div style={{minHeight:'100vh',background:'#F8FAFC',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
       display:'flex',alignItems:'center',justifyContent:'center',padding:24}}>
       <style dangerouslySetInnerHTML={{__html:`@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');`}}/>
       <div style={{maxWidth:520,width:'100%'}}>
@@ -553,13 +554,13 @@ Reply as ${npc.name} in ${targetLang}:`;
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:10}}>
               <button onClick={()=>{setPhase('playing');setMessages([]);setTurnCount(0);historyRef.current=[];startedRef.current=false;setOpeningDone(false);setActiveChoice(null);setChoiceSteer('');}}
                 style={{padding:'13px',borderRadius:13,border:'1.5px solid #E5E7EB',background:'#fff',
-                  color:'#475569',fontWeight:700,fontSize:14,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
+                  color:'#475569',fontWeight:700,fontSize:14,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
                 Replay
               </button>
               <button onClick={()=>router.push('/lingua/roleplay')}
                 style={{padding:'13px',borderRadius:13,border:'none',
                   background:`linear-gradient(135deg,${accentColor},${accentColor}cc)`,
-                  color:'#fff',fontWeight:800,fontSize:14,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
+                  color:'#fff',fontWeight:800,fontSize:14,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
                 More Worlds →
               </button>
             </div>
@@ -573,7 +574,8 @@ Reply as ${npc.name} in ${targetLang}:`;
 
   // ── PLAYING ───────────────────────────────────────────────────────────────
   return (
-    <div style={{height:'100dvh',background:'#F8FAFC',fontFamily:"'Nunito',sans-serif",
+    <RtlDir lang={langId}>
+    <div style={{height:'100dvh',background:'#F8FAFC',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
       display:'flex',flexDirection:'column',overflow:'hidden',color:'#0F172A'}}>
       <style dangerouslySetInnerHTML={{__html:`
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
@@ -591,7 +593,7 @@ Reply as ${npc.name} in ${targetLang}:`;
         boxShadow:'0 1px 4px rgba(0,0,0,0.04)'}}>
         <button onClick={()=>{if(audioRef.current){audioRef.current.pause();audioRef.current=null;}endSession();}}
           style={{background:'#F1F5F9',border:'none',borderRadius:10,padding:'7px 12px',
-            color:'#64748B',fontSize:12,fontWeight:700,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
+            color:'#64748B',fontSize:12,fontWeight:700,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
           ✕ End
         </button>
         <div style={{flex:1,textAlign:'center'}}>
@@ -695,7 +697,7 @@ Reply as ${npc.name} in ${targetLang}:`;
                 <button onClick={()=>handleUserTurn(lastUserTextRef.current, true)}
                   style={{padding:'8px 18px',borderRadius:10,border:'none',background:'#DC2626',
                     color:'#fff',fontWeight:800,fontSize:13,cursor:'pointer',
-                    fontFamily:"'Nunito',sans-serif"}}>
+                    fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
                   ↻ Try again
                 </button>
               </div>
@@ -797,7 +799,7 @@ Reply as ${npc.name} in ${targetLang}:`;
                 <button key={c.id} onClick={()=>handleChoiceSelect(c)}
                   style={{padding:'10px 14px',borderRadius:12,border:`1.5px solid ${accentColor}30`,
                     background:`${accentColor}08`,color:accentColor,fontWeight:700,fontSize:13,
-                    cursor:'pointer',textAlign:'left',fontFamily:"'Nunito',sans-serif",
+                    cursor:'pointer',textAlign:'left',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
                     transition:'all .15s'}}
                   onMouseEnter={e=>{ (e.currentTarget as HTMLButtonElement).style.background=`${accentColor}18`; }}
                   onMouseLeave={e=>{ (e.currentTarget as HTMLButtonElement).style.background=`${accentColor}08`; }}>
@@ -836,7 +838,7 @@ Reply as ${npc.name} in ${targetLang}:`;
             disabled={isThinking||!openingDone}
             style={{flex:1,padding:'12px 16px',borderRadius:14,background:'#F8FAFC',
               border:'1.5px solid #E5E7EB',color:'#0F172A',fontSize:14,
-              fontFamily:"'Nunito',sans-serif",outline:'none',fontWeight:600,
+              fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",outline:'none',fontWeight:600,
               opacity:isThinking||!openingDone?0.5:1}}/>
           <button onClick={()=>handleUserTurn(input)} disabled={!input.trim()||isThinking||!openingDone}
             style={{width:46,height:46,borderRadius:'50%',border:'none',flexShrink:0,
@@ -849,12 +851,13 @@ Reply as ${npc.name} in ${targetLang}:`;
             style={{width:'100%',marginTop:8,padding:'9px',borderRadius:11,
               border:`1px solid ${accentColor}30`,background:`${accentColor}10`,
               color:accentColor,fontWeight:700,fontSize:12,cursor:'pointer',
-              fontFamily:"'Nunito',sans-serif"}}>
+              fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
             End scene & get feedback →
           </button>
         )}
       </div>
     </div>
+    </RtlDir>
   );
 }
 

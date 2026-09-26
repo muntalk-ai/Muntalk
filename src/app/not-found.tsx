@@ -5,7 +5,7 @@ export default function NotFound() {
       style={{
         minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
         padding: 24, textAlign: 'center', background: '#F8FAFC',
-        fontFamily: "'Nunito',sans-serif",
+        fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
       }}
     >
       <div style={{ maxWidth: 420 }}>
@@ -22,7 +22,7 @@ export default function NotFound() {
             display: 'inline-block', padding: '13px 32px', borderRadius: 12, border: 'none',
             background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff',
             fontWeight: 900, fontSize: 15, textDecoration: 'none',
-            fontFamily: "'Nunito',sans-serif",
+            fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
           }}
         >
           ← Back to home

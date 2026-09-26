@@ -32,7 +32,7 @@ export default function TestimonialPrompt({ uid, displayName, onDone }: Props) {
     <div style={{ position: 'fixed', inset: 0, background: 'rgba(15,23,42,0.55)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999, padding: 20 }}
       onClick={onDone}>
       <div onClick={e => e.stopPropagation()}
-        style={{ background: '#fff', borderRadius: 24, padding: '32px 28px', width: '92vw', maxWidth: 480, boxShadow: '0 20px 60px rgba(0,0,0,0.25)', fontFamily: "'Nunito',sans-serif", textAlign: 'center' }}>
+        style={{ background: '#fff', borderRadius: 24, padding: '32px 28px', width: '92vw', maxWidth: 480, boxShadow: '0 20px 60px rgba(0,0,0,0.25)', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", textAlign: 'center' }}>
         {sent ? (
           <>
             <div style={{ fontSize: 48, marginBottom: 12 }}>🙏</div>
@@ -41,7 +41,7 @@ export default function TestimonialPrompt({ uid, displayName, onDone }: Props) {
               Your words help other learners find the courage to start speaking.
             </p>
             <button onClick={onDone}
-              style={{ padding: '12px 32px', borderRadius: 14, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 900, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+              style={{ padding: '12px 32px', borderRadius: 14, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 900, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
               Keep Learning →
             </button>
           </>
@@ -59,7 +59,7 @@ export default function TestimonialPrompt({ uid, displayName, onDone }: Props) {
               onChange={e => setText(e.target.value.slice(0, MAX_TESTIMONIAL_TEXT))}
               placeholder="e.g. The speaking practice finally got me talking without freezing up!"
               rows={3}
-              style={{ width: '100%', padding: '14px 16px', borderRadius: 14, border: '2px solid #E5E7EB', fontSize: 14, fontFamily: "'Nunito',sans-serif", outline: 'none', resize: 'none', marginBottom: 6, boxSizing: 'border-box' }}
+              style={{ width: '100%', padding: '14px 16px', borderRadius: 14, border: '2px solid #E5E7EB', fontSize: 14, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", outline: 'none', resize: 'none', marginBottom: 6, boxSizing: 'border-box' }}
             />
             <div style={{ textAlign: 'right', fontSize: 11, color: '#94A3B8', fontWeight: 700, marginBottom: 12 }}>
               {text.length}/{MAX_TESTIMONIAL_TEXT}
@@ -67,11 +67,11 @@ export default function TestimonialPrompt({ uid, displayName, onDone }: Props) {
             {error && <div style={{ fontSize: 13, color: '#DC2626', fontWeight: 700, marginBottom: 12 }}>{error}</div>}
             <div style={{ display: 'flex', gap: 10 }}>
               <button onClick={handleSubmit} disabled={sending}
-                style={{ flex: 1, padding: '13px', borderRadius: 14, border: 'none', background: sending ? '#C7D2FE' : 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 900, fontSize: 14, cursor: sending ? 'default' : 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                style={{ flex: 1, padding: '13px', borderRadius: 14, border: 'none', background: sending ? '#C7D2FE' : 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 900, fontSize: 14, cursor: sending ? 'default' : 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 {sending ? 'Saving…' : 'Share My Review 💬'}
               </button>
               <button onClick={onDone}
-                style={{ padding: '13px 20px', borderRadius: 14, border: '2px solid #E5E7EB', background: '#fff', color: '#6B7280', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                style={{ padding: '13px 20px', borderRadius: 14, border: '2px solid #E5E7EB', background: '#fff', color: '#6B7280', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 Skip
               </button>
             </div>

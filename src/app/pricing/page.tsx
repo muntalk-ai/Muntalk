@@ -47,7 +47,7 @@ function PricingContent() {
   const planOrder: PlanId[] = ['free', 'monthly', 'biannual', 'annual'];
 
   return (
-    <div style={{ minHeight:'100vh', background:'#fff', fontFamily:"'Nunito',sans-serif", position:'relative' }}>
+    <div style={{ minHeight:'100vh', background:'#fff', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", position:'relative' }}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
         *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
         @keyframes fadeUp { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
@@ -65,7 +65,7 @@ function PricingContent() {
 
       {/* Nav */}
       <nav style={{ position:'sticky', top:0, zIndex:100, display:'flex', alignItems:'center', padding:'0 28px', height:56, background:'rgba(255,255,255,0.9)', backdropFilter:'blur(12px)', borderBottom:'1px solid #F1F5F9' }}>
-        <button onClick={() => router.push('/lingua')} style={{ background:'none', border:'none', cursor:'pointer', color:'#94A3B8', fontSize:13, fontWeight:700, fontFamily:"'Nunito',sans-serif" }}>
+        <button onClick={() => router.push('/lingua')} style={{ background:'none', border:'none', cursor:'pointer', color:'#94A3B8', fontSize:13, fontWeight:700, fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
           ← Back
         </button>
         <div style={{ position:'absolute', left:'50%', transform:'translateX(-50%)', fontSize:16, fontWeight:900, color:'#0F172A' }}>
@@ -325,7 +325,7 @@ function PricingContent() {
           {faqs.map((item, i) => (
             <div key={i} style={{ borderRadius:13, border:`1px solid ${openFaq===i?'#C7D2FE':'#F1F5F9'}`, marginBottom:8, overflow:'hidden', background: openFaq===i ? '#F5F3FF' : '#fff', transition:'background .15s' }}>
               <button onClick={() => setOpenFaq(openFaq===i ? null : i)}
-                style={{ width:'100%', display:'flex', justifyContent:'space-between', alignItems:'center', background:'none', border:'none', cursor:'pointer', padding:'16px 20px', textAlign:'left', fontFamily:"'Nunito',sans-serif" }}>
+                style={{ width:'100%', display:'flex', justifyContent:'space-between', alignItems:'center', background:'none', border:'none', cursor:'pointer', padding:'16px 20px', textAlign:'left', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 <span style={{ fontSize:13, fontWeight:800, color:'#0F172A' }}>{item.q}</span>
                 <span style={{ fontSize:18, color:'#94A3B8', transition:'transform .2s', transform: openFaq===i?'rotate(45deg)':'none', flexShrink:0, marginLeft:12 }}>+</span>
               </button>

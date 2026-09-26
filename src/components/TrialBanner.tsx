@@ -37,7 +37,7 @@ export default function TrialBanner({ daysLeft, onDismiss }: Props) {
       display: 'flex',
       alignItems: 'center',
       gap: 10,
-      fontFamily: "'Nunito', sans-serif",
+      fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
     }}>
       <span style={{ fontSize: 16 }}>{emoji}</span>
       <div style={{ flex: 1, fontSize: 13, fontWeight: 800, color }}>
@@ -59,7 +59,7 @@ export default function TrialBanner({ daysLeft, onDismiss }: Props) {
           fontSize: 12,
           fontWeight: 900,
           cursor: 'pointer',
-          fontFamily: "'Nunito', sans-serif",
+          fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
           whiteSpace: 'nowrap',
         }}>
         Upgrade →

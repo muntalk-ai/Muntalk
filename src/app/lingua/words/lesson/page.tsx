@@ -3,6 +3,7 @@ import { apiFetch } from '@/lib/apiClient';
 import { AI_TIMEOUT_MS } from '@/lib/aiRetry';
 
 import { useEffect, useState, useRef, Suspense } from 'react';
+import RtlDir from '@/components/RtlDir';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { POS_META, PartOfSpeech, getSetKey } from '@/data/wordSets';
 import { getTutorById } from '@/data/tutors';
@@ -271,7 +272,8 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
 
   // -- UI ---------------------------------------------------------------------
   return (
-    <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito', sans-serif" }}>
+    <RtlDir lang={lang}>
+    <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
       
 
       {/* -- Nav -- */}
@@ -290,7 +292,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
               padding: '6px 14px', borderRadius: 20, border: 'none', cursor: 'pointer',
               background: phase === p ? accent : '#F1F5F9',
               color: phase === p ? '#fff' : '#64748B',
-              fontFamily: "'Nunito',sans-serif", fontWeight: 700, fontSize: 12,
+              fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 700, fontSize: 12,
             }}>
               {p === 'vocab' ? '📖 Vocab' : p === 'quiz' ? '✏️ Quiz' : '💬 Chat'}
             </button>
@@ -325,7 +327,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
                     style={{ padding: '8px 20px', borderRadius: 10, border: 'none',
                       background: isSpeaking ? '#E5E7EB' : accent,
                       color: isSpeaking ? '#9CA3AF' : '#fff',
-                      fontFamily: "'Nunito',sans-serif", fontWeight: 700, fontSize: 13,
+                      fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 700, fontSize: 13,
                       cursor: isSpeaking ? 'default' : 'pointer' }}
                   >{isSpeaking ? '🔊 Playing…' : '🔊 Hear word'}</button>
                 ) : (
@@ -348,7 +350,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
                       fontSize: 10, fontWeight: i === currentWordIdx ? 800 : 600,
                       background: i === currentWordIdx ? accent : '#F1F5F9',
                       color: i === currentWordIdx ? '#fff' : '#64748B',
-                      fontFamily: "'Nunito',sans-serif",
+                      fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
                       maxWidth: 60, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
                     }} title={w}>{w}</button>
                   ))}
@@ -373,7 +375,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
                       width: 32, height: 32, borderRadius: '50%', border: `2px solid ${i === currentWordIdx ? accent : '#E5E7EB'}`,
                       background: i === currentWordIdx ? accent : wordDataMap[w]?.sentences.length > 0 ? '#DCFCE7' : '#fff',
                       color: i === currentWordIdx ? '#fff' : '#64748B',
-                      fontSize: 11, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
+                      fontSize: 11, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
                     }}>{i+1}</button>
                 ))}
               </div>
@@ -429,15 +431,15 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
               {/* Navigation */}
               <div style={{ display: 'flex', gap: 10, justifyContent: 'space-between' }}>
                 <button onClick={() => goToWord(Math.max(0, currentWordIdx-1))} disabled={currentWordIdx === 0}
-                  style={{ padding: '12px 24px', borderRadius: 12, border: '1.5px solid #E5E7EB', background: '#fff', color: currentWordIdx === 0 ? '#CBD5E1' : '#475569', cursor: currentWordIdx === 0 ? 'default' : 'pointer', fontFamily: "'Nunito',sans-serif", fontWeight: 700, fontSize: 14 }}
+                  style={{ padding: '12px 24px', borderRadius: 12, border: '1.5px solid #E5E7EB', background: '#fff', color: currentWordIdx === 0 ? '#CBD5E1' : '#475569', cursor: currentWordIdx === 0 ? 'default' : 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 700, fontSize: 14 }}
                 >← Prev</button>
                 {currentWordIdx < words.length - 1 ? (
                   <button onClick={() => goToWord(currentWordIdx+1)}
-                    style={{ padding: '12px 32px', borderRadius: 12, border: 'none', background: accent, color: '#fff', cursor: 'pointer', fontFamily: "'Nunito',sans-serif", fontWeight: 800, fontSize: 14 }}
+                    style={{ padding: '12px 32px', borderRadius: 12, border: 'none', background: accent, color: '#fff', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 800, fontSize: 14 }}
                   >Next →</button>
                 ) : (
                   <button onClick={() => handlePhaseChange('quiz')}
-                    style={{ padding: '12px 32px', borderRadius: 12, border: 'none', background: accent, color: '#fff', cursor: 'pointer', fontFamily: "'Nunito',sans-serif", fontWeight: 800, fontSize: 14 }}
+                    style={{ padding: '12px 32px', borderRadius: 12, border: 'none', background: accent, color: '#fff', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 800, fontSize: 14 }}
                   >Start Quiz ✏️</button>
                 )}
               </div>
@@ -460,7 +462,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
                     {score >= 4 ? 'Excellent! You know these words well.' : score >= 3 ? 'Good work! Keep practicing.' : 'Keep going — practice makes perfect!'}
                   </div>
                   <button onClick={() => handlePhaseChange('chat')}
-                    style={{ padding: '14px 36px', borderRadius: 14, border: 'none', background: accent, color: '#fff', cursor: 'pointer', fontFamily: "'Nunito',sans-serif", fontWeight: 800, fontSize: 15 }}
+                    style={{ padding: '14px 36px', borderRadius: 14, border: 'none', background: accent, color: '#fff', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 800, fontSize: 15 }}
                   >Start Chat 💬</button>
                 </div>
               ) : quizQuestions.length > 0 ? (
@@ -490,7 +492,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
                         }
                         return (
                           <button key={i} onClick={() => handleAnswer(i)}
-                            style={{ background: bg, border: `2px solid ${border}`, borderRadius: 14, padding: '14px 20px', textAlign: 'left', cursor: selected !== null ? 'default' : 'pointer', color, fontSize: 14, fontWeight: 600, fontFamily: "'Nunito',sans-serif", transition: 'all 0.2s' }}
+                            style={{ background: bg, border: `2px solid ${border}`, borderRadius: 14, padding: '14px 20px', textAlign: 'left', cursor: selected !== null ? 'default' : 'pointer', color, fontSize: 14, fontWeight: 600, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", transition: 'all 0.2s' }}
                           >
                             <span style={{ fontWeight: 800, marginRight: 10, color: accent }}>{String.fromCharCode(65+i)}.</span>{opt}
                           </button>
@@ -548,7 +550,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
                     onChange={e => setChatInput(e.target.value)}
                     onKeyDown={e => e.key === 'Enter' && sendChatMessage(chatInput)}
                     placeholder="Type your message..."
-                    style={{ flex: 1, padding: '14px 18px', borderRadius: 14, border: '1.5px solid #E5E7EB', fontSize: 14, fontFamily: "'Nunito',sans-serif", outline: 'none', background: '#fff' }}
+                    style={{ flex: 1, padding: '14px 18px', borderRadius: 14, border: '1.5px solid #E5E7EB', fontSize: 14, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", outline: 'none', background: '#fff' }}
                   />
                   <button onClick={startListening} disabled={isListening || isSpeaking}
                     style={{ padding: '14px 16px', borderRadius: 14, border: 'none', background: isListening ? '#EF4444' : '#F1F5F9', color: isListening ? '#fff' : '#64748B', cursor: 'pointer', fontSize: 18 }}
@@ -560,7 +562,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
 
                 <div style={{ textAlign: 'center', marginTop: 16 }}>
                   <button onClick={() => setPhase('complete')}
-                    style={{ background: 'none', border: '1.5px solid #E5E7EB', borderRadius: 12, padding: '8px 24px', color: '#94A3B8', cursor: 'pointer', fontFamily: "'Nunito',sans-serif", fontSize: 13, fontWeight: 700 }}
+                    style={{ background: 'none', border: '1.5px solid #E5E7EB', borderRadius: 12, padding: '8px 24px', color: '#94A3B8', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontSize: 13, fontWeight: 700 }}
                   >Finish Lesson ✓</button>
                 </div>
               </div>
@@ -579,11 +581,11 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
               <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
                 {lessonIdx < 5 && (
                   <button onClick={() => router.push(`/lingua/words/lesson?pos=${pos}&set=${setIdx}&lesson=${lessonIdx+1}&lang=${lang}&subLang=${subLang}`)}
-                    style={{ padding: '14px 28px', borderRadius: 14, border: 'none', background: accent, color: '#fff', cursor: 'pointer', fontFamily: "'Nunito',sans-serif", fontWeight: 800, fontSize: 14 }}
+                    style={{ padding: '14px 28px', borderRadius: 14, border: 'none', background: accent, color: '#fff', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 800, fontSize: 14 }}
                   >Next Lesson →</button>
                 )}
                 <button onClick={() => router.push('/lingua/words')}
-                  style={{ padding: '14px 28px', borderRadius: 14, border: '1.5px solid #E5E7EB', background: '#fff', color: '#475569', cursor: 'pointer', fontFamily: "'Nunito',sans-serif", fontWeight: 700, fontSize: 14 }}
+                  style={{ padding: '14px 28px', borderRadius: 14, border: '1.5px solid #E5E7EB', background: '#fff', color: '#475569', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 700, fontSize: 14 }}
                 >Back to Word Bank</button>
               </div>
             </div>
@@ -591,6 +593,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
         </div>
       </div>
     </div>
+    </RtlDir>
   );
 }
 

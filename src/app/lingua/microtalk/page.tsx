@@ -4,6 +4,7 @@ import { runWithAiRetry, AI_TIMEOUT_MS } from '@/lib/aiRetry';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
+import RtlDir from '@/components/RtlDir';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { getLangLabel, hasStt } from '@/data/languages';
@@ -267,6 +268,7 @@ export default function MicroTalkPage() {
   );
 
   return (
+    <RtlDir lang={learnLang}>
     <div style={S.page}>
       {/* Nav */}
       <nav style={S.nav}>
@@ -379,6 +381,7 @@ export default function MicroTalkPage() {
         </div>
       )}
     </div>
+    </RtlDir>
   );
 }
 

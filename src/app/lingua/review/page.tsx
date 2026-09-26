@@ -5,6 +5,9 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { getDueCards, reviewCard, getSRSStats, SRSCard, ReviewQuality } from '@/lib/spacedRepetition';
 import { awardXp } from '@/lib/xpClient';
+import RtlDir from '@/components/RtlDir';
+import EmptyState from '@/components/EmptyState';
+import { CardSkeleton } from '@/components/Skeleton';
 
 type CardState = 'question' | 'answer' | 'done';
 
@@ -79,19 +82,19 @@ export default function ReviewPage() {
 
   // auth 또는 SRS 로딩 중 스피너 표시
   if (authLoading || loading) return (
-    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Nunito',sans-serif" }}>
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
       <div style={{ width: 48, height: 48, border: '4px solid #E5E7EB', borderTopColor: '#6366F1', borderRadius: '50%', animation: 'spin .8s linear infinite' }} />
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `@keyframes spin { to { transform: rotate(360deg); } }` }} />
     </div>
   );
 
   if (!user) return (
-    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Nunito',sans-serif" }}>
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
       <div style={{ textAlign: 'center' }}>
         <div style={{ fontSize: 48, marginBottom: 16 }}>📚</div>
         <div style={{ fontSize: 18, fontWeight: 800, marginBottom: 16 }}>Sign in to review</div>
         <button onClick={() => router.push('/login')}
-          style={{ padding: '12px 28px', borderRadius: 16, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+          style={{ padding: '12px 28px', borderRadius: 16, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
           Sign In
         </button>
       </div>
@@ -99,7 +102,8 @@ export default function ReviewPage() {
   );
 
   return (
-    <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito',sans-serif" }}>
+    <RtlDir lang={profile?.learnLang}>
+    <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
 * { box-sizing: border-box; }
         @keyframes spin   { to { transform: rotate(360deg); } }
@@ -130,28 +134,34 @@ export default function ReviewPage() {
       <div style={{ maxWidth: 560, margin: '0 auto', padding: '32px 20px' }}>
 
         {loading ? (
-          <div style={{ textAlign: 'center', padding: '80px 0' }}>
-            <div style={{ width: 48, height: 48, border: '4px solid #E5E7EB', borderTopColor: '#6366F1', borderRadius: '50%', animation: 'spin .8s linear infinite', margin: '0 auto 16px' }} />
-            <div style={{ color: '#94A3B8', fontWeight: 700 }}>Loading cards…</div>
+          <div style={{ padding: '40px 0' }}>
+            <CardSkeleton />
           </div>
 
-        ) : cardState === 'done' || cards.length === 0 ? (
+        ) : cards.length === 0 ? (
+          // ── PR-I: Empty State — 복습할 카드 없음 (기존 문구 재사용)
+          <EmptyState
+            emoji="✅"
+            title="All caught up!"
+            description="No cards due today. Check back tomorrow!"
+            actionLabel="← Back to Learning"
+            onAction={() => router.push('/lingua')}
+          />
+        ) : cardState === 'done' ? (
           // ── Session Complete ──
           <div style={{ textAlign: 'center', animation: 'fadeUp .4s ease' }}>
             <div style={{ fontSize: 72, marginBottom: 16 }}>
-              {cards.length === 0 ? '✅' : sessionResults.correct > sessionResults.wrong ? '🎉' : '📖'}
+              {sessionResults.correct > sessionResults.wrong ? '🎉' : '📖'}
             </div>
             <h1 style={{ fontSize: 26, fontWeight: 900, color: '#0F172A', marginBottom: 8 }}>
-              {cards.length === 0 ? "All caught up!" : "Session Complete!"}
+              {"Session Complete!"}
             </h1>
             <p style={{ fontSize: 15, color: '#64748B', marginBottom: 32 }}>
-              {cards.length === 0
-                ? "No cards due today. Check back tomorrow!"
-                : `You reviewed ${cards.length} cards today.`}
+              {`You reviewed ${cards.length} cards today.`}
             </p>
 
             {/* Stats */}
-            {cards.length > 0 && (
+            {(
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12, marginBottom: 32 }}>
                 {[
                   { label: 'Correct', value: sessionResults.correct, color: '#16A34A', bg: '#F0FDF4', icon: '✓' },
@@ -186,11 +196,11 @@ export default function ReviewPage() {
 
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
               <button onClick={() => router.push('/lingua')}
-                style={{ padding: '13px 28px', borderRadius: 16, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                style={{ padding: '13px 28px', borderRadius: 16, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 Continue Learning →
               </button>
               <button onClick={() => router.push('/lingua/league')}
-                style={{ padding: '13px 24px', borderRadius: 16, border: '1.5px solid #E5E7EB', background: '#fff', color: '#374151', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                style={{ padding: '13px 24px', borderRadius: 16, border: '1.5px solid #E5E7EB', background: '#fff', color: '#374151', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 🏆 View League
               </button>
             </div>
@@ -234,7 +244,7 @@ export default function ReviewPage() {
             {/* Action buttons */}
             {cardState === 'question' ? (
               <button onClick={handleFlip}
-                style={{ width: '100%', padding: '16px', borderRadius: 20, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 16, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito',sans-serif", boxShadow: '0 4px 16px rgba(99,102,241,0.3)' }}>
+                style={{ width: '100%', padding: '16px', borderRadius: 20, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 16, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", boxShadow: '0 4px 16px rgba(99,102,241,0.3)' }}>
                 Show Answer
               </button>
             ) : (
@@ -250,7 +260,7 @@ export default function ReviewPage() {
                     { q: 5 as ReviewQuality, label: 'Easy',  sub: 'Perfect', color: '#10B981', bg: '#F0FDF4', border: '#BBF7D0' },
                   ]).map(btn => (
                     <button key={btn.q} className="quality-btn" onClick={() => handleQuality(btn.q)}
-                      style={{ padding: '14px 8px', borderRadius: 16, border: `2px solid ${btn.border}`, background: btn.bg, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                      style={{ padding: '14px 8px', borderRadius: 16, border: `2px solid ${btn.border}`, background: btn.bg, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                       <div style={{ fontSize: 14, fontWeight: 900, color: btn.color }}>{btn.label}</div>
                       <div style={{ fontSize: 10, color: '#94A3B8', fontWeight: 700, marginTop: 2 }}>{btn.sub}</div>
                     </button>
@@ -267,5 +277,6 @@ export default function ReviewPage() {
         )}
       </div>
     </div>
+    </RtlDir>
   );
 }
