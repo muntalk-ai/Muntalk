@@ -55,14 +55,44 @@ service cloud.firestore {
     }
 
     // ── 트라이얼 ──────────────────────────────────────────────────
+    // 2차 보안 감사 #5: 체험 만료일·채팅 횟수 조작으로 paywall 우회 차단
+    //  - create: 본인, 필드 화이트리스트만 허용 (initTrial setDoc 호환)
+    //  - update: startedAt/expiresAt 변경 금지 (연장 차단),
+    //           chatUsage.count는 같은 날짜 내에서 증가만 허용 (당일 리셋 차단),
+    //           자정 롤오버(날짜 변경) 시에는 count 1 이하로만 초기화 허용,
+    //           languages는 추가만 허용 (삭제 차단)
+    //  - 관리자는 전체 허용 (지원 대응용)
     match /trials/{uid} {
-      allow read:  if isOwner(uid) || isAdmin();
-      allow write: if isOwner(uid) || isAdmin();
+      allow read:   if isOwner(uid) || isAdmin();
+      allow create: if (isOwner(uid) || isAdmin())
+        && request.resource.data.keys().hasOnly(['startedAt','expiresAt','languages','chatUsage','levelTestDone']);
+      allow update: if isAdmin() || (isOwner(uid)
+        && request.resource.data.startedAt == resource.data.startedAt
+        && request.resource.data.expiresAt == resource.data.expiresAt
+        && (
+          (request.resource.data.chatUsage.date == resource.data.chatUsage.date
+            && request.resource.data.chatUsage.count >= resource.data.chatUsage.count)
+          || (request.resource.data.chatUsage.date != resource.data.chatUsage.date
+            && request.resource.data.chatUsage.count >= 0
+            && request.resource.data.chatUsage.count <= 1)
+        )
+        && request.resource.data.languages.toSet().hasAll(resource.data.languages.toSet()));
+      allow delete: if isAdmin();
     }
 
+    // 2차 보안 감사 #5: 무료 체험 사용 시간(trial_usage) 리셋 차단
+    //  - usedSeconds는 같은 날짜 내에서 감소 불가 (당일 리셋 차단)
+    //  - 날짜 변경(자정 롤오버) 시에만 초기화 허용
     match /trial_usage/{uid} {
-      allow read:  if isOwner(uid) || isAdmin();
-      allow write: if isOwner(uid) || isAdmin();
+      allow read:   if isOwner(uid) || isAdmin();
+      allow create: if (isOwner(uid) || isAdmin())
+        && request.resource.data.keys().hasOnly(['date','usedSeconds','updatedAt'])
+        && request.resource.data.usedSeconds >= 0;
+      allow update: if isAdmin() || (isOwner(uid)
+        && request.resource.data.usedSeconds >= 0
+        && (request.resource.data.date != resource.data.date
+            || request.resource.data.usedSeconds >= resource.data.usedSeconds));
+      allow delete: if isAdmin();
     }
 
     // ── 채팅 사용량 ───────────────────────────────────────────────
