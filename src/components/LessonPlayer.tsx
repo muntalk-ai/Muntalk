@@ -16,6 +16,28 @@ import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 const hasStt = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.stt ?? false;
 const hasTts = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.tts ?? false;
 
+// -- Pronunciation diagnostics (silent-failure hardening) ----------------------
+// Failure-only remote logging via PR-G /api/client-log infra (admin_logs).
+// Fire-and-forget; logging failures are ignored. Successes are NOT logged
+// to avoid polluting admin_logs.
+function reportPronEvent(event: string, detail?: Record<string, unknown>) {
+  try {
+    const msg = detail
+      ? `${event} ${Object.entries(detail).map(([k, v]) => `${k}=${String(v).slice(0, 80)}`).join(' ')}`
+      : event;
+    fetch('/api/client-log', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        kind: 'error',
+        message: msg.slice(0, 500),
+        url: typeof window !== 'undefined' ? window.location.pathname : '',
+      }),
+      keepalive: true,
+    }).catch(() => {});
+  } catch { /* reporting must never break the flow */ }
+}
+
 // -- Bulk translation validation (Option A hardening) --------------------------
 // Returns an error description string, or null when the payload is acceptable.
 const HANGUL_RE = /[\uAC00-\uD7A3\u3131-\u318E]/;
@@ -689,6 +711,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
       return;
     }
     setPronError(null);
+    stopAll(); // stop example TTS audio first — playback during STT start can silently kill recognition
     const rec = new SR();
     rec.lang = langId;
     rec.continuous = false;
@@ -696,7 +719,12 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
     setPronListening(true);
     rec.onresult = async (e: any) => {
       setPronListening(false);
-      const transcript: string = e.results[0][0].transcript;
+      const transcript: string | undefined = e.results?.[0]?.[0]?.transcript;
+      if (!transcript) {
+        reportPronEvent('pron_empty_result', { vocabIdx, word: vocabItem.word });
+        setPronError("Didn't catch that. Please try again.");
+        return;
+      }
       setPronLoading(true);
       try {
         const res = await apiFetch('/api/gemini', {
@@ -711,6 +739,10 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
       });
         const data = await res.json();
         const parsed = JSON.parse((data.text || '').replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim());
+        if (!parsed.feedback) {
+          reportPronEvent('pron_empty_feedback', { vocabIdx, word: vocabItem.word });
+          throw new Error('empty feedback');
+        }
         setPronResult(prev => ({
           ...prev,
           [vocabIdx]: {
@@ -720,6 +752,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
           },
         }));
       } catch {
+        reportPronEvent('pron_api_error', { vocabIdx, word: vocabItem.word });
         setPronResult(prev => ({ ...prev, [vocabIdx]: { heard: transcript, score: 0, feedback: '' } }));
         setPronError('Could not analyze your pronunciation. Please try again.');
       } finally {
@@ -731,10 +764,17 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
       const code = e?.error;
       if (code === 'not-allowed' || code === 'service-not-allowed') { setMicGuide('denied'); setPronError(null); }
       else if (code === 'audio-capture') { setMicGuide('no-mic'); setPronError(null); }
-      else setPronError('Speech recognition ran into a problem. Please try again.');
+      else {
+        reportPronEvent('pron_stt_error', { code, vocabIdx, word: vocabItem.word });
+        setPronError('Speech recognition ran into a problem. Please try again.');
+      }
     };
     rec.onend = () => setPronListening(false);
-    try { rec.start(); } catch { setPronListening(false); }
+    try { rec.start(); } catch {
+      setPronListening(false);
+      reportPronEvent('pron_start_error', { vocabIdx, word: vocabItem.word });
+      setPronError('Speech recognition ran into a problem. Please try again.');
+    }
   };
 
   // -----------------------------------------------------------------------------
