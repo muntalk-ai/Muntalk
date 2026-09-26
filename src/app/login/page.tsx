@@ -117,15 +117,15 @@ export default function LoginPage() {
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
 * { box-sizing: border-box; }
         @keyframes spin { to { transform: rotate(360deg); } }
-        .auth-input { width:100%; padding:14px 16px; border:2px solid #E5E7EB; border-radius:12px; font-size:15px; font-family:'Nunito',sans-serif; outline:none; transition:border .15s; background:#fff; color:#0F172A; }
+        .auth-input { width:100%; padding:14px 16px; border:2px solid #E5E7EB; border-radius:12px; font-size:15px; font-family:'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif; outline:none; transition:border .15s; background:#fff; color:#0F172A; }
         .auth-input:focus { border-color:#6366F1; }
-        .auth-btn-primary { width:100%; padding:14px; border:none; border-radius:14px; background:linear-gradient(135deg,#6366F1,#8B5CF6); color:#fff; font-size:15px; font-weight:800; font-family:'Nunito',sans-serif; cursor:pointer; transition:opacity .15s; }
+        .auth-btn-primary { width:100%; padding:14px; border:none; border-radius:14px; background:linear-gradient(135deg,#6366F1,#8B5CF6); color:#fff; font-size:15px; font-weight:800; font-family:'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif; cursor:pointer; transition:opacity .15s; }
         .auth-btn-primary:hover:not(:disabled) { opacity:.88; }
         .auth-btn-primary:disabled { opacity:.5; cursor:default; }
-        .auth-btn-google { width:100%; padding:13px; border:2px solid #E5E7EB; border-radius:14px; background:#fff; color:#0F172A; font-size:15px; font-weight:700; font-family:'Nunito',sans-serif; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px; transition:background .15s,box-shadow .15s; }
+        .auth-btn-google { width:100%; padding:13px; border:2px solid #E5E7EB; border-radius:14px; background:#fff; color:#0F172A; font-size:15px; font-weight:700; font-family:'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px; transition:background .15s,box-shadow .15s; }
         .auth-btn-google:hover:not(:disabled) { background:#F8FAFC; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
         .auth-btn-google:disabled { opacity:.55; cursor:default; }
-        .auth-link { background:none; border:none; color:#6366F1; font-weight:700; font-size:13px; cursor:pointer; font-family:'Nunito',sans-serif; padding:0; }
+        .auth-link { background:none; border:none; color:#6366F1; font-weight:700; font-size:13px; cursor:pointer; font-family:'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif; padding:0; }
         .auth-link:hover { text-decoration:underline; }
       ` }} />
 
@@ -222,7 +222,7 @@ export default function LoginPage() {
 }
 
 const styles: Record<string, React.CSSProperties> = {
-  page: { minHeight: '100vh', background: '#F1F5FE', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Nunito', sans-serif", padding: '24px 16px', position: 'relative', overflow: 'hidden' },
+  page: { minHeight: '100vh', background: '#F1F5FE', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", padding: '24px 16px', position: 'relative', overflow: 'hidden' },
   blob1: { position: 'fixed', top: -120, right: -120, width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle, #C7D2FE 0%, transparent 70%)', pointerEvents: 'none' },
   blob2: { position: 'fixed', bottom: -100, left: -80, width: 360, height: 360, borderRadius: '50%', background: 'radial-gradient(circle, #DDD6FE 0%, transparent 70%)', pointerEvents: 'none' },
   card: { background: '#fff', borderRadius: 28, padding: '40px 36px', width: '100%', maxWidth: 420, boxShadow: '0 20px 60px rgba(99,102,241,0.12)', position: 'relative', zIndex: 1 },

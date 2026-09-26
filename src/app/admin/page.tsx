@@ -230,7 +230,7 @@ export default function AdminPage() {
   };
 
   if (loading||fetching) return (
-    <div style={{minHeight:'100vh',background:'#F8FAFC',display:'flex',alignItems:'center',justifyContent:'center',fontFamily:"'Nunito',sans-serif"}}>
+    <div style={{minHeight:'100vh',background:'#F8FAFC',display:'flex',alignItems:'center',justifyContent:'center',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
       <div style={{textAlign:'center'}}>
         <div style={{width:40,height:40,border:'4px solid #E5E7EB',borderTopColor:'#6366F1',borderRadius:'50%',animation:'spin .8s linear infinite',margin:'0 auto 14px'}}/>
         <div style={{color:'#94A3B8',fontWeight:700,fontSize:14}}>Loading admin panel...</div>
@@ -240,7 +240,7 @@ export default function AdminPage() {
   );
 
   return (
-    <div style={{minHeight:'100vh',background:'#F8FAFC',fontFamily:"'Nunito',sans-serif"}}>
+    <div style={{minHeight:'100vh',background:'#F8FAFC',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{__html:`
         @keyframes spin{to{transform:rotate(360deg)}}
         @keyframes su{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
@@ -254,7 +254,7 @@ export default function AdminPage() {
 
       {/* Nav */}
       <nav style={{background:'#fff',borderBottom:'1px solid #F1F5F9',height:54,display:'flex',alignItems:'center',padding:'0 24px',gap:14}}>
-        <button onClick={()=>router.push('/lingua')} style={{background:'none',border:'none',color:'#94A3B8',cursor:'pointer',fontWeight:700,fontSize:13,fontFamily:"'Nunito',sans-serif"}}>← Back</button>
+        <button onClick={()=>router.push('/lingua')} style={{background:'none',border:'none',color:'#94A3B8',cursor:'pointer',fontWeight:700,fontSize:13,fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>← Back</button>
         <div style={{fontWeight:900,fontSize:16,color:'#0F172A'}}>🛡️ Admin Panel</div>
         <div style={{marginLeft:'auto',fontSize:12,color:'#94A3B8',fontWeight:700}}>
           {users.length} users · {users.filter(u=>u.planId!=='free').length} premium
@@ -277,7 +277,7 @@ export default function AdminPage() {
         <div style={{display:'flex',gap:6,marginBottom:20,background:'#fff',padding:6,borderRadius:14,border:'1px solid #F1F5F9',width:'fit-content'}}>
           {([['users','👥 Users'],['email','✉️ Email'],['logs','📋 Logs'],['settings','⚙️ Settings']] as [Tab,string][]).map(([t,label])=>(
             <button key={t} className="tab-btn" onClick={()=>setTab(t)}
-              style={{padding:'8px 20px',borderRadius:10,border:'none',background:tab===t?'#EEF2FF':'transparent',color:tab===t?'#6366F1':'#64748B',fontWeight:tab===t?900:700,fontSize:13,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
+              style={{padding:'8px 20px',borderRadius:10,border:'none',background:tab===t?'#EEF2FF':'transparent',color:tab===t?'#6366F1':'#64748B',fontWeight:tab===t?900:700,fontSize:13,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
               {label}
             </button>
           ))}
@@ -288,7 +288,7 @@ export default function AdminPage() {
           <>
             <input value={search} onChange={e=>setSearch(e.target.value)}
               placeholder="🔍 Search by email or name..."
-              style={{width:'100%',padding:'11px 16px',borderRadius:12,border:'1.5px solid #E5E7EB',fontSize:14,fontFamily:"'Nunito',sans-serif",outline:'none',marginBottom:14,background:'#fff',boxSizing:'border-box'}}
+              style={{width:'100%',padding:'11px 16px',borderRadius:12,border:'1.5px solid #E5E7EB',fontSize:14,fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",outline:'none',marginBottom:14,background:'#fff',boxSizing:'border-box'}}
             />
             <div style={{background:'#fff',borderRadius:16,border:'1px solid #F1F5F9',overflow:'hidden'}}>
               <div style={{display:'grid',gridTemplateColumns:'1.5fr 1fr 110px 90px 60px 160px',padding:'10px 16px',background:'#F8FAFC',borderBottom:'1px solid #F1F5F9',fontSize:10,fontWeight:900,color:'#94A3B8',letterSpacing:1.2,textTransform:'uppercase'}}>
@@ -304,16 +304,16 @@ export default function AdminPage() {
                   <div style={{fontSize:12,fontWeight:900,color:'#6366F1'}}>{u.xp.toLocaleString()}</div>
                   <div style={{display:'flex',gap:5}}>
                     <button onClick={()=>openGrant(u)} disabled={saving===u.uid}
-                      style={{padding:'5px 10px',borderRadius:7,border:'none',background:'#EEF2FF',color:'#6366F1',fontSize:10,fontWeight:900,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
+                      style={{padding:'5px 10px',borderRadius:7,border:'none',background:'#EEF2FF',color:'#6366F1',fontSize:10,fontWeight:900,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
                       ⭐ Grant
                     </button>
                     {u.planId!=='free'&&<>
                       <button onClick={()=>openExtend(u)} disabled={saving===u.uid}
-                        style={{padding:'5px 10px',borderRadius:7,border:'none',background:'#F0FDF4',color:'#059669',fontSize:10,fontWeight:900,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
+                        style={{padding:'5px 10px',borderRadius:7,border:'none',background:'#F0FDF4',color:'#059669',fontSize:10,fontWeight:900,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
                         +기간
                       </button>
                       <button onClick={()=>handleRevoke(u)} disabled={saving===u.uid}
-                        style={{padding:'5px 8px',borderRadius:7,border:'none',background:'#FFF1F2',color:'#E11D48',fontSize:10,fontWeight:900,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
+                        style={{padding:'5px 8px',borderRadius:7,border:'none',background:'#FFF1F2',color:'#E11D48',fontSize:10,fontWeight:900,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
                         🔒
                       </button>
                     </>}
@@ -335,7 +335,7 @@ export default function AdminPage() {
               <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
                 {([['single','Single User'],['all','All Users'],['premium','Premium Only'],['free','Free Only']] as [typeof emailTarget,string][]).map(([v,l])=>(
                   <button key={v} onClick={()=>setEmailTarget(v)}
-                    style={{padding:'8px 16px',borderRadius:10,border:`1.5px solid ${emailTarget===v?'#6366F1':'#E5E7EB'}`,background:emailTarget===v?'#EEF2FF':'#fff',color:emailTarget===v?'#6366F1':'#374151',fontSize:12,fontWeight:800,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
+                    style={{padding:'8px 16px',borderRadius:10,border:`1.5px solid ${emailTarget===v?'#6366F1':'#E5E7EB'}`,background:emailTarget===v?'#EEF2FF':'#fff',color:emailTarget===v?'#6366F1':'#374151',fontSize:12,fontWeight:800,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
                     {l} {v!=='single'&&`(${v==='all'?users.length:users.filter(u=>v==='premium'?u.planId!=='free':u.planId==='free').length})`}
                   </button>
                 ))}
@@ -347,7 +347,7 @@ export default function AdminPage() {
                 <div style={{fontSize:11,fontWeight:900,color:'#94A3B8',letterSpacing:1.5,textTransform:'uppercase',marginBottom:6}}>Email Address</div>
                 <input value={emailTo} onChange={e=>setEmailTo(e.target.value)}
                   placeholder="user@example.com"
-                  style={{width:'100%',padding:'10px 14px',borderRadius:10,border:'1.5px solid #E5E7EB',fontSize:14,fontFamily:"'Nunito',sans-serif",outline:'none',boxSizing:'border-box'}}
+                  style={{width:'100%',padding:'10px 14px',borderRadius:10,border:'1.5px solid #E5E7EB',fontSize:14,fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",outline:'none',boxSizing:'border-box'}}
                 />
               </div>
             )}
@@ -356,7 +356,7 @@ export default function AdminPage() {
               <div style={{fontSize:11,fontWeight:900,color:'#94A3B8',letterSpacing:1.5,textTransform:'uppercase',marginBottom:6}}>Subject</div>
               <input value={emailSubject} onChange={e=>setEmailSubject(e.target.value)}
                 placeholder="e.g. Special offer just for you 🎁"
-                style={{width:'100%',padding:'10px 14px',borderRadius:10,border:'1.5px solid #E5E7EB',fontSize:14,fontFamily:"'Nunito',sans-serif",outline:'none',boxSizing:'border-box'}}
+                style={{width:'100%',padding:'10px 14px',borderRadius:10,border:'1.5px solid #E5E7EB',fontSize:14,fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",outline:'none',boxSizing:'border-box'}}
               />
             </div>
 
@@ -364,7 +364,7 @@ export default function AdminPage() {
               <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:6}}>
                 <div style={{fontSize:11,fontWeight:900,color:'#94A3B8',letterSpacing:1.5,textTransform:'uppercase'}}>Message Body</div>
                 <button onClick={()=>setEmailPreview(!emailPreview)}
-                  style={{background:'none',border:'none',color:'#6366F1',fontSize:12,fontWeight:800,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
+                  style={{background:'none',border:'none',color:'#6366F1',fontSize:12,fontWeight:800,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
                   {emailPreview?'✏️ Edit':'👁 Preview'}
                 </button>
               </div>
@@ -375,7 +375,7 @@ export default function AdminPage() {
                 <textarea value={emailBody} onChange={e=>setEmailBody(e.target.value)}
                   placeholder={`Hi there!\n\nWe wanted to share something special with you...\n\nBest,\nMunTalk Team`}
                   rows={8}
-                  style={{width:'100%',padding:'12px 14px',borderRadius:10,border:'1.5px solid #E5E7EB',fontSize:14,fontFamily:"'Nunito',sans-serif",outline:'none',boxSizing:'border-box',lineHeight:1.6}}
+                  style={{width:'100%',padding:'12px 14px',borderRadius:10,border:'1.5px solid #E5E7EB',fontSize:14,fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",outline:'none',boxSizing:'border-box',lineHeight:1.6}}
                 />
               )}
               <div style={{fontSize:11,color:'#94A3B8',fontWeight:700,marginTop:4}}>Tip: line breaks become &lt;br&gt; in the email</div>
@@ -394,7 +394,7 @@ export default function AdminPage() {
                    body:`Welcome to MunTalk Premium!\n\nYou now have access to:\n✅ All 6 levels (A1 → C2)\n✅ Unlimited AI tutor sessions\n✅ 18,000+ Word Bank (verbs, adjectives, adverbs, phrases)\n✅ League system & weekly rankings\n✅ Unlimited hearts\n\nJump back in and start learning!\n\nThe MunTalk Team`},
                 ].map(t=>(
                   <button key={t.label} onClick={()=>{setEmailSubject(t.subject);setEmailBody(t.body);}}
-                    style={{padding:'7px 14px',borderRadius:9,border:'1px solid #E5E7EB',background:'#F8FAFC',color:'#374151',fontSize:11,fontWeight:800,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
+                    style={{padding:'7px 14px',borderRadius:9,border:'1px solid #E5E7EB',background:'#F8FAFC',color:'#374151',fontSize:11,fontWeight:800,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
                     {t.label}
                   </button>
                 ))}
@@ -402,7 +402,7 @@ export default function AdminPage() {
             </div>
 
             <button onClick={handleSendEmail} disabled={emailSending}
-              style={{width:'100%',padding:'13px',borderRadius:12,border:'none',background:emailSending?'#C7D2FE':'linear-gradient(135deg,#6366F1,#8B5CF6)',color:'#fff',fontWeight:900,fontSize:14,cursor:emailSending?'default':'pointer',fontFamily:"'Nunito',sans-serif"}}>
+              style={{width:'100%',padding:'13px',borderRadius:12,border:'none',background:emailSending?'#C7D2FE':'linear-gradient(135deg,#6366F1,#8B5CF6)',color:'#fff',fontWeight:900,fontSize:14,cursor:emailSending?'default':'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
               {emailSending?'Sending...':'✉️ Send Email'}
             </button>
           </div>
@@ -414,7 +414,7 @@ export default function AdminPage() {
             <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:14}}>
               <div style={{fontSize:14,fontWeight:900,color:'#0F172A'}}>📋 Activity Logs</div>
               <button onClick={fetchLogs}
-                style={{padding:'7px 16px',borderRadius:9,border:'1px solid #E5E7EB',background:'#fff',color:'#6366F1',fontSize:12,fontWeight:800,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
+                style={{padding:'7px 16px',borderRadius:9,border:'1px solid #E5E7EB',background:'#fff',color:'#6366F1',fontSize:12,fontWeight:800,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
                 🔄 Refresh
               </button>
             </div>
@@ -458,7 +458,7 @@ export default function AdminPage() {
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:8,marginBottom:18}}>
               {(['monthly','biannual','annual'] as PlanId[]).map(p=>(
                 <button key={p} onClick={()=>{setSelPlan(p); setSelExpiry(modalMode==='extend'?extendExpiry(modal.expiry,p):defaultExpiry(p));}}
-                  style={{padding:'9px 6px',borderRadius:10,border:`2px solid ${selPlan===p?PLAN_COLORS[p]:'#E5E7EB'}`,background:selPlan===p?PLAN_COLORS[p]+'18':'#fff',color:selPlan===p?PLAN_COLORS[p]:'#374151',fontSize:11,fontWeight:900,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
+                  style={{padding:'9px 6px',borderRadius:10,border:`2px solid ${selPlan===p?PLAN_COLORS[p]:'#E5E7EB'}`,background:selPlan===p?PLAN_COLORS[p]+'18':'#fff',color:selPlan===p?PLAN_COLORS[p]:'#374151',fontSize:11,fontWeight:900,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
                   {PLAN_LABELS[p]}
                 </button>
               ))}
@@ -468,16 +468,16 @@ export default function AdminPage() {
               {modalMode==='extend'?'New Expiry (auto-calculated)':'Expiry Date'}
             </div>
             <input type="date" value={selExpiry} onChange={e=>setSelExpiry(e.target.value)}
-              style={{width:'100%',padding:'10px 14px',borderRadius:10,border:'1.5px solid #E5E7EB',fontSize:14,fontFamily:"'Nunito',sans-serif",outline:'none',marginBottom:22,boxSizing:'border-box'}}
+              style={{width:'100%',padding:'10px 14px',borderRadius:10,border:'1.5px solid #E5E7EB',fontSize:14,fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",outline:'none',marginBottom:22,boxSizing:'border-box'}}
             />
 
             <div style={{display:'flex',gap:10}}>
               <button onClick={()=>setModal(null)}
-                style={{flex:1,padding:'11px',borderRadius:11,border:'1.5px solid #E5E7EB',background:'#fff',color:'#374151',fontWeight:700,fontSize:13,cursor:'pointer',fontFamily:"'Nunito',sans-serif"}}>
+                style={{flex:1,padding:'11px',borderRadius:11,border:'1.5px solid #E5E7EB',background:'#fff',color:'#374151',fontWeight:700,fontSize:13,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
                 Cancel
               </button>
               <button onClick={handleSavePlan} disabled={saving===modal.uid}
-                style={{flex:2,padding:'11px',borderRadius:11,border:'none',background:saving===modal.uid?'#C7D2FE':'linear-gradient(135deg,#6366F1,#8B5CF6)',color:'#fff',fontWeight:900,fontSize:13,cursor:saving===modal.uid?'default':'pointer',fontFamily:"'Nunito',sans-serif"}}>
+                style={{flex:2,padding:'11px',borderRadius:11,border:'none',background:saving===modal.uid?'#C7D2FE':'linear-gradient(135deg,#6366F1,#8B5CF6)',color:'#fff',fontWeight:900,fontSize:13,cursor:saving===modal.uid?'default':'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
                 {saving===modal.uid?'Saving...':`${modalMode==='extend'?'Extend':'Grant'} ${PLAN_LABELS[selPlan]}`}
               </button>
             </div>
@@ -500,7 +500,7 @@ export default function AdminPage() {
               <button
                 onClick={()=>{ setCurriculumMode('api'); localStorage.setItem('mt_curriculum_mode','api'); }}
                 style={{padding:'13px 28px',borderRadius:12,border:'none',cursor:'pointer',
-                  fontFamily:"'Nunito',sans-serif",fontWeight:900,fontSize:14,
+                  fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",fontWeight:900,fontSize:14,
                   background:curriculumMode==='api'?'linear-gradient(135deg,#6366F1,#8B5CF6)':'#F1F5F9',
                   color:curriculumMode==='api'?'#fff':'#64748B',
                   boxShadow:curriculumMode==='api'?'0 4px 14px rgba(99,102,241,0.3)':'none',
@@ -510,7 +510,7 @@ export default function AdminPage() {
               <button
                 onClick={()=>{ setCurriculumMode('json'); localStorage.setItem('mt_curriculum_mode','json'); }}
                 style={{padding:'13px 28px',borderRadius:12,border:'none',cursor:'pointer',
-                  fontFamily:"'Nunito',sans-serif",fontWeight:900,fontSize:14,
+                  fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",fontWeight:900,fontSize:14,
                   background:curriculumMode==='json'?'linear-gradient(135deg,#10B981,#059669)':'#F1F5F9',
                   color:curriculumMode==='json'?'#fff':'#64748B',
                   boxShadow:curriculumMode==='json'?'0 4px 14px rgba(16,185,129,0.3)':'none',

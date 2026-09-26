@@ -563,13 +563,13 @@ LANGUAGE RULES:
 
   const btnBase: React.CSSProperties = {
     border: 'none', cursor: 'pointer',
-    fontFamily: "'Nunito',sans-serif", fontWeight: 900,
+    fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 900,
     borderRadius: 18, transition: 'all .15s',
   };
 
   // ── GOAL (B-11: 학습 목적 선택) ─────────────────────────────────────────────
   if (phase === 'goal') return (
-    <div style={{ minHeight: '100vh', background: BG, fontFamily: "'Nunito',sans-serif",
+    <div style={{ minHeight: '100vh', background: BG, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
       display: 'flex', flexDirection: 'column', alignItems: 'center',
       justifyContent: 'center', padding: 24 }}>
       <style dangerouslySetInnerHTML={{ __html: `
@@ -622,7 +622,7 @@ LANGUAGE RULES:
 
   // ── LOBBY ───────────────────────────────────────────────────────────────────
   if (phase === 'lobby') return (
-    <div style={{ minHeight: '100vh', background: BG, fontFamily: "'Nunito',sans-serif",
+    <div style={{ minHeight: '100vh', background: BG, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
       display: 'flex', flexDirection: 'column', alignItems: 'center',
       justifyContent: 'center', padding: 24 }}>
       <style dangerouslySetInnerHTML={{ __html: `
@@ -762,7 +762,7 @@ LANGUAGE RULES:
     );
     return (
       <div style={{ minHeight: '100vh', background: BG,
-        fontFamily: "'Nunito',sans-serif", display: 'flex',
+        fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display: 'flex',
         flexDirection: 'column', alignItems: 'center',
         justifyContent: 'center', padding: 24 }}>
         <style dangerouslySetInnerHTML={{ __html: `
@@ -849,7 +849,7 @@ LANGUAGE RULES:
   // ── LISTEN ──────────────────────────────────────────────────────────────────
   if (phase === 'listen' && listenWord) return (
     <div style={{ minHeight: '100vh', background: BG,
-      fontFamily: "'Nunito',sans-serif", display: 'flex',
+      fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display: 'flex',
       flexDirection: 'column', alignItems: 'center',
       justifyContent: 'center', padding: 24 }}>
       <style dangerouslySetInnerHTML={{ __html: `
@@ -935,7 +935,7 @@ LANGUAGE RULES:
   // ── MATCH ───────────────────────────────────────────────────────────────────
   if (phase === 'match') return (
     <div style={{ minHeight: '100vh', background: BG,
-      fontFamily: "'Nunito',sans-serif", display: 'flex',
+      fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display: 'flex',
       flexDirection: 'column', alignItems: 'center',
       justifyContent: 'center', padding: 24 }}>
       <style dangerouslySetInnerHTML={{ __html: `
@@ -1039,7 +1039,7 @@ LANGUAGE RULES:
     const w = words[speakIdx];
     return (
       <div style={{ minHeight: '100vh', background: BG,
-        fontFamily: "'Nunito',sans-serif", display: 'flex',
+        fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display: 'flex',
         flexDirection: 'column', alignItems: 'center',
         justifyContent: 'center', padding: 24 }}>
         <style dangerouslySetInnerHTML={{ __html: `
@@ -1106,7 +1106,7 @@ LANGUAGE RULES:
   // ── CHAT ───────────────────────────────────────────────────────────────────
   if (phase === 'chat') return (
     <div style={{ minHeight: '100vh', background: BG,
-      fontFamily: "'Nunito',sans-serif", display: 'flex',
+      fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display: 'flex',
       flexDirection: 'column' }}>
       <style dangerouslySetInnerHTML={{ __html: `
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
@@ -1193,7 +1193,7 @@ LANGUAGE RULES:
           placeholder="Type or tap mic..."
           disabled={chatLoading || !chatStarted}
           style={{ flex: 1, padding: '14px 16px', borderRadius: 14,
-            border: '2px solid #E2E8F0', fontSize: 16, fontFamily: "'Nunito',sans-serif",
+            border: '2px solid #E2E8F0', fontSize: 16, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
             fontWeight: 700, outline: 'none', background: '#F8FAFC' }}
         />
         {/* Mic button */}
@@ -1239,7 +1239,7 @@ LANGUAGE RULES:
   // ── COMPLETE ────────────────────────────────────────────────────────────────
   if (phase === 'complete') return (
     <div style={{ minHeight: '100vh', background: BG,
-      fontFamily: "'Nunito',sans-serif", display: 'flex',
+      fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display: 'flex',
       flexDirection: 'column', alignItems: 'center',
       justifyContent: 'center', padding: 24, textAlign: 'center' }}>
       <style dangerouslySetInnerHTML={{ __html: `

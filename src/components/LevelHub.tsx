@@ -406,7 +406,7 @@ export default function LevelHub() {
     <div style={styles.page}>
       <style suppressHydrationWarning>{`
 *{box-sizing:border-box;}
-        .mt-nav-tab{padding:6px 10px;border-radius:10px;border:none;background:transparent;font-weight:700;font-size:12px;cursor:pointer;color:#64748B;transition:all .15s;font-family:'Nunito',sans-serif;white-space:nowrap;}
+        .mt-nav-tab{padding:6px 10px;border-radius:10px;border:none;background:transparent;font-weight:700;font-size:12px;cursor:pointer;color:#64748B;transition:all .15s;font-family:'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif;white-space:nowrap;}
         .mt-nav-tab:hover{color:#38BDF8;}
         .mt-nav-tab.active{background:#EFF6FF;color:#38BDF8;}
         @media(max-width:1024px){
@@ -453,20 +453,20 @@ export default function LevelHub() {
             onClick={e => e.stopPropagation()}>
             {/* 닫기 버튼 */}
             <button onClick={() => setShowPlacementModal(false)}
-              style={{ position: 'absolute', top: 16, right: 16, background: '#F3F4F6', border: 'none', borderRadius: 99, width: 32, height: 32, cursor: 'pointer', fontSize: 16, color: '#6B7280', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Nunito',sans-serif" }}>
+              style={{ position: 'absolute', top: 16, right: 16, background: '#F3F4F6', border: 'none', borderRadius: 99, width: 32, height: 32, cursor: 'pointer', fontSize: 16, color: '#6B7280', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
               ✕
             </button>
             <div style={{ fontSize: 56, marginBottom: 16 }}>🎯</div>
-            <div style={{ fontSize: 22, fontWeight: 900, color: '#0F172A', marginBottom: 10, fontFamily: "'Nunito',sans-serif" }}>
+            <div style={{ fontSize: 22, fontWeight: 900, color: '#0F172A', marginBottom: 10, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
               What's your level?
             </div>
-            <div style={{ fontSize: 14, color: '#64748B', lineHeight: 1.7, marginBottom: 28, fontFamily: "'Nunito',sans-serif", fontWeight: 600 }}>
+            <div style={{ fontSize: 14, color: '#64748B', lineHeight: 1.7, marginBottom: 28, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 600 }}>
               Take a quick 5-minute placement test so we can put you in the right level. No pressure — it's just to personalize your journey!
             </div>
             {/* 통계 뱃지 */}
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', marginBottom: 28 }}>
               {[['⚡', '5 min'], ['🎯', 'Auto-place'], ['🆓', 'Free']].map(([icon, label]) => (
-                <div key={label} style={{ background: '#F8FAFC', borderRadius: 14, padding: '10px 16px', fontSize: 13, fontWeight: 800, color: '#475569', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, fontFamily: "'Nunito',sans-serif" }}>
+                <div key={label} style={{ background: '#F8FAFC', borderRadius: 14, padding: '10px 16px', fontSize: 13, fontWeight: 800, color: '#475569', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                   <span style={{ fontSize: 20 }}>{icon}</span>
                   {label}
                 </div>
@@ -474,12 +474,12 @@ export default function LevelHub() {
             </div>
             <button
               onClick={() => { setShowPlacementModal(false); router.push(`/lingua/placement?lang=${learnLang}`); }}
-              style={{ width: '100%', padding: '15px', borderRadius: 16, border: 'none', background: 'linear-gradient(135deg,#38BDF8,#818CF8)', color: '#fff', fontSize: 16, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito',sans-serif", marginBottom: 10 }}>
+              style={{ width: '100%', padding: '15px', borderRadius: 16, border: 'none', background: 'linear-gradient(135deg,#38BDF8,#818CF8)', color: '#fff', fontSize: 16, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", marginBottom: 10 }}>
               Start Placement Test 🚀
             </button>
             <button
               onClick={() => { setShowPlacementModal(false); localStorage.setItem('mt_placement_done', 'skip'); }}
-              style={{ width: '100%', padding: '12px', borderRadius: 16, border: 'none', background: 'transparent', color: '#94A3B8', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+              style={{ width: '100%', padding: '12px', borderRadius: 16, border: 'none', background: 'transparent', color: '#94A3B8', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
               Skip for now, start from A1
             </button>
           </div>
@@ -508,7 +508,7 @@ export default function LevelHub() {
                           textAlign: 'center', padding: '14px 10px', gap: 8,
                           borderRadius: 12, border: `2px solid ${isSelected ? '#38BDF8' : '#E9ECEF'}`,
                           background: isSelected ? '#EFF6FF' : '#fff',
-                          cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
+                          cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
                           transition: 'all .15s', position: 'relative',
                         }}
                       >
@@ -529,7 +529,7 @@ export default function LevelHub() {
                 <div style={{ margin: '-32px -28px 24px', padding: '24px 28px', background: 'linear-gradient(135deg, #0F172A 0%, #1E3A5F 100%)', borderRadius: '24px 24px 0 0' }}>
                   <button
                     onClick={() => setLangStep('learn')}
-                    style={{ background: 'rgba(255,255,255,0.15)', border: 'none', borderRadius: 8, padding: '5px 12px', color: '#fff', cursor: 'pointer', fontFamily: "'Nunito',sans-serif", fontWeight: 700, fontSize: 12, marginBottom: 16 }}
+                    style={{ background: 'rgba(255,255,255,0.15)', border: 'none', borderRadius: 8, padding: '5px 12px', color: '#fff', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 700, fontSize: 12, marginBottom: 16 }}
                   >← Back</button>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
                     <FlagImg code={learnLang} size={36} />
@@ -560,7 +560,7 @@ export default function LevelHub() {
                           textAlign: 'center', padding: '14px 10px', gap: 8,
                           borderRadius: 12, border: `2px solid ${isSelected ? '#F59E0B' : '#E9ECEF'}`,
                           background: isSelected ? '#FFFBEB' : '#fff',
-                          cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
+                          cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
                           transition: 'all .15s',
                         }}
                       >
@@ -625,7 +625,7 @@ export default function LevelHub() {
                       onClick={() => { item.action!(); setShowMoreMenu(false); }}
                       onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = '#F8FAFC'; }}
                       onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = 'none'; }}
-                      style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 10, padding: '10px 12px', background: 'none', border: 'none', borderRadius: 10, cursor: 'pointer', fontSize: 13, fontWeight: 700, color: '#374151', textAlign: 'left', fontFamily: "'Nunito',sans-serif" }}>
+                      style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 10, padding: '10px 12px', background: 'none', border: 'none', borderRadius: 10, cursor: 'pointer', fontSize: 13, fontWeight: 700, color: '#374151', textAlign: 'left', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                       <span style={{ fontSize: 16 }}>{item.emoji}</span>{item.label}
                     </button>
                   )
@@ -658,7 +658,7 @@ export default function LevelHub() {
           {/* 하트바 + Upgrade — auth 로딩 완료 후에만 표시 */}
           {!authLoading && planId === 'free' && !isAdmin && user && (
             <button onClick={() => router.push('/pricing')}
-              style={{ padding:'6px 14px', borderRadius:20, border:'none', background:'linear-gradient(135deg,#F59E0B,#F97316)', color:'#fff', fontSize:11, fontWeight:900, cursor:'pointer', fontFamily:"'Nunito',sans-serif", letterSpacing:0.3 }}>
+              style={{ padding:'6px 14px', borderRadius:20, border:'none', background:'linear-gradient(135deg,#F59E0B,#F97316)', color:'#fff', fontSize:11, fontWeight:900, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", letterSpacing:0.3 }}>
               ⭐ Upgrade
             </button>
           )}
@@ -687,15 +687,15 @@ export default function LevelHub() {
                     <div style={{ fontSize: 11, color: '#94A3B8' }}>{user.email}</div>
                   </div>
                   <button onClick={() => { router.push('/lingua/dashboard'); setShowUserMenu(false); }}
-                    style={{ width: '100%', padding: '11px 16px', background: 'none', border: 'none', textAlign: 'left', fontSize: 13, fontWeight: 700, color: '#374151', cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                    style={{ width: '100%', padding: '11px 16px', background: 'none', border: 'none', textAlign: 'left', fontSize: 13, fontWeight: 700, color: '#374151', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                     📊 Dashboard
                   </button>
                   <button onClick={() => { router.push('/profile'); setShowUserMenu(false); }}
-                    style={{ width: '100%', padding: '11px 16px', background: 'none', border: 'none', textAlign: 'left', fontSize: 13, fontWeight: 700, color: '#374151', cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                    style={{ width: '100%', padding: '11px 16px', background: 'none', border: 'none', textAlign: 'left', fontSize: 13, fontWeight: 700, color: '#374151', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                     ✏️ Edit Profile
                   </button>
                   <button onClick={handleSignOut}
-                    style={{ width: '100%', padding: '11px 16px', background: 'none', border: 'none', textAlign: 'left', fontSize: 13, fontWeight: 700, color: '#EF4444', cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                    style={{ width: '100%', padding: '11px 16px', background: 'none', border: 'none', textAlign: 'left', fontSize: 13, fontWeight: 700, color: '#EF4444', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                     🚪 Sign Out
                   </button>
                 </div>
@@ -706,7 +706,7 @@ export default function LevelHub() {
             <div style={{ width: 72, height: 28 }} />
           ) : (
             <button onClick={() => router.push('/login')}
-              style={{ padding: '7px 16px', borderRadius: 20, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 12, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+              style={{ padding: '7px 16px', borderRadius: 20, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 12, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
               Sign In
             </button>
           )}
@@ -723,7 +723,7 @@ export default function LevelHub() {
             display:'flex',alignItems:'center',justifyContent:'center',gap:8,
             background:'linear-gradient(135deg,#EFF6FF,#DBEAFE)',
             borderBottom:'1px solid #BFDBFE',padding:'8px 16px',
-            fontSize:12,fontWeight:700,color:'#1D4ED8',fontFamily:"'Nunito',sans-serif",
+            fontSize:12,fontWeight:700,color:'#1D4ED8',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
           }}>
             <span>🧊 Streak Freeze filled yesterday's gap and kept your {streak}-day streak alive! ({freezes} left · +1 every 7 days)</span>
             <button onClick={()=>setFreezeBannerDismissed(true)}
@@ -767,7 +767,7 @@ export default function LevelHub() {
             <button key={label}
               onClick={() => { action(); setShowMobileMenu(false); }}
               style={{ width: '100%', padding: '13px 24px', background: 'none', border: 'none',
-                textAlign: 'left', cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
+                textAlign: 'left', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
                 fontWeight: 700, fontSize: 15, color: '#1E293B',
                 display: 'flex', alignItems: 'center', gap: 14,
                 borderBottom: '1px solid #F8FAFC' }}>
@@ -803,7 +803,7 @@ export default function LevelHub() {
             <button key={item.label}
               onClick={() => { item.action!(); setShowMobileMenu(false); }}
               style={{ width: '100%', padding: '13px 24px', background: 'none', border: 'none',
-                textAlign: 'left', cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
+                textAlign: 'left', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
                 fontWeight: 700, fontSize: 15, color: '#1E293B',
                 display: 'flex', alignItems: 'center', gap: 14,
                 borderBottom: '1px solid #F8FAFC' }}>
@@ -819,7 +819,7 @@ export default function LevelHub() {
               <button onClick={() => { router.push('/pricing'); setShowMobileMenu(false); }}
                 style={{ width: '100%', padding: '13px', borderRadius: 14, border: 'none',
                   background: 'linear-gradient(135deg,#F59E0B,#F97316)', color: '#fff',
-                  fontWeight: 900, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                  fontWeight: 900, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 ⭐ Upgrade to Premium
               </button>
             </div>
@@ -1041,20 +1041,20 @@ export default function LevelHub() {
           <div style={{ borderRadius: 20, background: 'linear-gradient(135deg, #EFF6FF, #F0FDF4)', border: '2px solid #BFDBFE', padding: '20px 24px', display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
             <div style={{ fontSize: 40, flexShrink: 0 }}>🚀</div>
             <div style={{ flex: 1, minWidth: 200 }}>
-              <div style={{ fontSize: 16, fontWeight: 900, color: '#0F172A', marginBottom: 3, fontFamily: "'Nunito',sans-serif" }}>
+              <div style={{ fontSize: 16, fontWeight: 900, color: '#0F172A', marginBottom: 3, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 Keep the momentum going
               </div>
-              <div style={{ fontSize: 12, color: '#64748B', fontWeight: 600, fontFamily: "'Nunito',sans-serif" }}>
+              <div style={{ fontSize: 12, color: '#64748B', fontWeight: 600, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 Pick up where you left off, or review the words you&apos;ve saved.
               </div>
             </div>
             <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
               <button onClick={() => router.push(`/lingua/learn/${currentLevel.id}`)}
-                style={{ padding: '10px 20px', borderRadius: 12, background: 'linear-gradient(135deg,#2563EB,#4F46E5)', color: '#fff', fontSize: 13, fontWeight: 800, border: 'none', cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                style={{ padding: '10px 20px', borderRadius: 12, background: 'linear-gradient(135deg,#2563EB,#4F46E5)', color: '#fff', fontSize: 13, fontWeight: 800, border: 'none', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 ▶️ Continue learning
               </button>
               <button onClick={() => router.push('/lingua/review')}
-                style={{ padding: '10px 20px', borderRadius: 12, background: '#fff', color: '#0F172A', fontSize: 13, fontWeight: 800, border: '1.5px solid #E2E8F0', cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                style={{ padding: '10px 20px', borderRadius: 12, background: '#fff', color: '#0F172A', fontSize: 13, fontWeight: 800, border: '1.5px solid #E2E8F0', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 🔁 Today&apos;s review
               </button>
             </div>
@@ -1258,7 +1258,7 @@ export default function LevelHub() {
       {/* -- Explore (무료 사용자용 컴팩트 Discover/Dream) -- */}
       {isFreeUser && (
         <section style={{ maxWidth: 900, margin: '4px auto 0', padding: '0 24px' }}>
-          <div style={{ fontSize: 11, fontWeight: 800, color: '#94A3B8', letterSpacing: 1.5, marginBottom: 10, paddingLeft: 4, fontFamily: "'Nunito',sans-serif" }}>
+          <div style={{ fontSize: 11, fontWeight: 800, color: '#94A3B8', letterSpacing: 1.5, marginBottom: 10, paddingLeft: 4, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
             ✨ EXPLORE
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 12 }}>
@@ -1266,8 +1266,8 @@ export default function LevelHub() {
               style={{ borderRadius: 16, padding: '14px 18px', cursor: 'pointer', background: 'linear-gradient(135deg, #0f0c29, #302b63)', display: 'flex', alignItems: 'center', gap: 12 }}>
               <div style={{ fontSize: 28 }}>✨</div>
               <div style={{ flex: 1 }}>
-                <div style={{ fontSize: 14, fontWeight: 900, color: '#fff', fontFamily: "'Nunito',sans-serif" }}>Discover</div>
-                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', fontWeight: 600, fontFamily: "'Nunito',sans-serif" }}>AI that talks like a human</div>
+                <div style={{ fontSize: 14, fontWeight: 900, color: '#fff', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>Discover</div>
+                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', fontWeight: 600, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>AI that talks like a human</div>
               </div>
               <div style={{ color: '#fff', fontWeight: 900 }}>→</div>
             </div>
@@ -1275,8 +1275,8 @@ export default function LevelHub() {
               style={{ borderRadius: 16, padding: '14px 18px', cursor: 'pointer', background: 'linear-gradient(135deg, #1a0a00, #5c3800)', display: 'flex', alignItems: 'center', gap: 12 }}>
               <div style={{ fontSize: 28 }}>🌟</div>
               <div style={{ flex: 1 }}>
-                <div style={{ fontSize: 14, fontWeight: 900, color: '#fff', fontFamily: "'Nunito',sans-serif" }}>Dream Studio</div>
-                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', fontWeight: 600, fontFamily: "'Nunito',sans-serif" }}>Create something that lasts</div>
+                <div style={{ fontSize: 14, fontWeight: 900, color: '#fff', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>Dream Studio</div>
+                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', fontWeight: 600, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>Create something that lasts</div>
               </div>
               <div style={{ color: '#fff', fontWeight: 900 }}>→</div>
             </div>
@@ -1312,12 +1312,12 @@ const styles: Record<string, React.CSSProperties> = {
   navBeta: { background: '#EFF6FF', color: '#38BDF8', fontSize: 10, fontWeight: 800, padding: '2px 8px', borderRadius: 20 },
   navStreak: { display: 'flex', alignItems: 'center', gap: 5, background: '#FFF7ED', padding: '6px 12px', borderRadius: 20 },
   navXp: { display: 'flex', alignItems: 'center', gap: 5, background: '#EFF6FF', padding: '6px 12px', borderRadius: 20 },
-  langPill: { display: 'flex', alignItems: 'center', gap: 6, background: '#F8FAFC', border: '1.5px solid #E2E8F0', borderRadius: 20, padding: '6px 12px', cursor: 'pointer', fontFamily: "'Nunito',sans-serif" },
+  langPill: { display: 'flex', alignItems: 'center', gap: 6, background: '#F8FAFC', border: '1.5px solid #E2E8F0', borderRadius: 20, padding: '6px 12px', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
 
   // Modal
   modal: { background: '#fff', borderRadius: 24, padding: '32px 28px', width: '92vw', maxWidth: 560, maxHeight: '80vh', overflowY: 'auto', position: 'relative', boxShadow: '0 20px 60px rgba(0,0,0,0.25)' },
   modalClose: { position: 'absolute', top: 16, right: 16, background: '#F3F4F6', border: 'none', borderRadius: 99, width: 32, height: 32, cursor: 'pointer', fontSize: 14, fontWeight: 800, color: '#6B7280', display: 'flex', alignItems: 'center', justifyContent: 'center' },
-  modalBack: { background: 'none', border: 'none', cursor: 'pointer', color: '#6B7280', fontWeight: 700, fontSize: 13, fontFamily: "'Nunito',sans-serif", marginBottom: 12, padding: 0 },
+  modalBack: { background: 'none', border: 'none', cursor: 'pointer', color: '#6B7280', fontWeight: 700, fontSize: 13, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", marginBottom: 12, padding: 0 },
   modalTitle: { fontSize: 20, fontWeight: 900, color: '#0F172A', marginBottom: 6 },
   modalSub: { fontSize: 13, color: '#6B7280', marginBottom: 20, fontWeight: 600 },
   langGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: 10 },
@@ -1334,12 +1334,12 @@ const styles: Record<string, React.CSSProperties> = {
   heroTitle: { fontSize: 36, fontWeight: 900, lineHeight: 1.25, marginBottom: 14, color: '#fff' },
   heroDesc: { opacity: 0.9, fontSize: 15, lineHeight: 1.75, marginBottom: 32, color: '#fff' },
   heroBtnRow: { display: 'flex', gap: 12, flexWrap: 'wrap' },
-  heroBtn1: { background: '#fff', color: '#2563EB', border: 'none', borderRadius: 14, padding: '13px 26px', fontWeight: 900, fontSize: 14, cursor: 'pointer', boxShadow: '0 4px 14px rgba(0,0,0,0.15)', fontFamily: "'Nunito',sans-serif" },
-  heroBtn2: { background: 'rgba(255,255,255,0.18)', color: '#fff', border: '2px solid rgba(255,255,255,0.5)', borderRadius: 14, padding: '13px 24px', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" },
+  heroBtn1: { background: '#fff', color: '#2563EB', border: 'none', borderRadius: 14, padding: '13px 26px', fontWeight: 900, fontSize: 14, cursor: 'pointer', boxShadow: '0 4px 14px rgba(0,0,0,0.15)', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
+  heroBtn2: { background: 'rgba(255,255,255,0.18)', color: '#fff', border: '2px solid rgba(255,255,255,0.5)', borderRadius: 14, padding: '13px 24px', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
 
   // Trust strip (logged-out visitors)
   trustStrip: { display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap', padding: '20px 32px 0', maxWidth: 900, margin: '0 auto' },
-  trustItem: { display: 'flex', alignItems: 'center', gap: 8, background: '#fff', border: '1px solid #E9ECEF', borderRadius: 99, padding: '9px 18px', fontSize: 13, fontWeight: 800, color: '#475569', boxShadow: '0 1px 6px rgba(0,0,0,0.04)', fontFamily: "'Nunito',sans-serif" },
+  trustItem: { display: 'flex', alignItems: 'center', gap: 8, background: '#fff', border: '1px solid #E9ECEF', borderRadius: 99, padding: '9px 18px', fontSize: 13, fontWeight: 800, color: '#475569', boxShadow: '0 1px 6px rgba(0,0,0,0.04)', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
 
   // Micro-Talk card (Phase 2-1 Track 2-B)
   mtCard: { background: 'linear-gradient(135deg,#0F172A 0%,#1E1B4B 60%,#312E81 100%)', borderRadius: 22, padding: '22px 24px', boxShadow: '0 10px 30px rgba(30,27,75,0.25)', color: '#fff' },
@@ -1380,7 +1380,7 @@ const styles: Record<string, React.CSSProperties> = {
   stepPills: { display: 'flex', gap: 6, marginBottom: 16, flexWrap: 'wrap' },
   stepPill: { width: 34, height: 34, borderRadius: 99, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, fontWeight: 700, transition: 'background 0.2s' },
   progressBar: { height: 6, background: '#E5E7EB', borderRadius: 99, overflow: 'hidden', marginBottom: 6 },
-  cardBtn: { width: '100%', padding: '12px', borderRadius: 12, border: 'none', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', letterSpacing: 0.3, transition: 'opacity 0.15s', fontFamily: "'Nunito',sans-serif" },
+  cardBtn: { width: '100%', padding: '12px', borderRadius: 12, border: 'none', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', letterSpacing: 0.3, transition: 'opacity 0.15s', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
 
   footer: { textAlign: 'center', padding: '28px', color: '#9CA3AF', fontSize: 13, borderTop: '1px solid #E9ECEF', background: '#fff' },
 };

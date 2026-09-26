@@ -28,3 +28,11 @@
   0%, 100% { opacity: 1; }
   50%       { opacity: 0.4; }
 }
+
+/* PR-I: 전역 폰트 스택 — 비라틴 스크립트(아랍·히브리·태국·데바나가리·CJK) 커버.
+   Google Fonts CSS는 unicode-range로 분리되어 실제 필요한 서브셋만 다운로드됨. */
+body {
+  font-family: 'Nunito', 'Noto Sans Arabic', 'Noto Sans Hebrew', 'Noto Sans Thai',
+    'Noto Sans Devanagari', 'Noto Sans KR', 'Noto Sans SC',
+    system-ui, -apple-system, 'Segoe UI', sans-serif;
+}

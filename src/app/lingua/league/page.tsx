@@ -1,6 +1,8 @@
-﻿'use client';
+'use client';
 
 import { useState, useEffect } from 'react';
+import EmptyState from '@/components/EmptyState';
+import { ListSkeleton } from '@/components/Skeleton';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import {
@@ -69,12 +71,12 @@ export default function LeaguePage() {
   );
 
   if (!user) return (
-    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Nunito',sans-serif" }}>
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
       <div style={{ textAlign: 'center' }}>
         <div style={{ fontSize: 48, marginBottom: 16 }}>🏆</div>
         <div style={{ fontSize: 18, fontWeight: 800, color: '#0F172A', marginBottom: 8 }}>Sign in to join the league!</div>
         <button onClick={() => router.push('/login')}
-          style={{ padding: '12px 28px', borderRadius: 16, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+          style={{ padding: '12px 28px', borderRadius: 16, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
           Sign In
         </button>
       </div>
@@ -87,7 +89,7 @@ export default function LeaguePage() {
   const tierIdx     = userLeague ? TIER_ORDER.indexOf(userLeague.tier) : 0;
 
   return (
-    <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito',sans-serif" }}>
+    <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
         * { box-sizing: border-box; }
@@ -108,9 +110,8 @@ export default function LeaguePage() {
       <div style={{ maxWidth: 640, margin: '0 auto', padding: '24px 20px' }}>
 
         {loading ? (
-          <div style={{ textAlign: 'center', padding: '80px 0' }}>
-            <div style={{ width: 48, height: 48, border: '4px solid #E5E7EB', borderTopColor: '#6366F1', borderRadius: '50%', animation: 'spin .8s linear infinite', margin: '0 auto 16px' }} />
-            <div style={{ color: '#94A3B8', fontWeight: 700 }}>Loading league…</div>
+          <div style={{ background: '#fff', borderRadius: 20, border: '1.5px solid #F1F5F9', padding: '20px' }}>
+            <ListSkeleton rows={6} />
           </div>
         ) : (
           <>
@@ -155,7 +156,7 @@ export default function LeaguePage() {
                 <span>👥 You&apos;re the only one in this league — invite friends to make it a real race!</span>
                 <button onClick={handleInvite}
                   style={{ padding: '8px 16px', borderRadius: 12, border: 'none', background: '#2563EB', color: '#fff',
-                    fontFamily: "'Nunito',sans-serif", fontWeight: 800, fontSize: 12, cursor: 'pointer' }}>
+                    fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 800, fontSize: 12, cursor: 'pointer' }}>
                   {inviteCopied ? 'Copied!' : '📣 Invite friends'}
                 </button>
               </div>
@@ -224,9 +225,10 @@ export default function LeaguePage() {
               </div>
 
               {members.length === 0 ? (
-                <div style={{ textAlign: 'center', padding: '32px', color: '#94A3B8', fontWeight: 700 }}>
-                  No competitors yet — you're in the lead! 🏆
-                </div>
+                <EmptyState
+                  emoji="🏆"
+                  title="No competitors yet — you're in the lead!"
+                />
               ) : (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                   {/* Promotion zone header */}
@@ -296,7 +298,7 @@ export default function LeaguePage() {
           <div style={{
             background: '#fff', borderRadius: 28, padding: '36px 32px', maxWidth: 380, width: '100%',
             textAlign: 'center', boxShadow: '0 24px 64px rgba(0,0,0,0.25)',
-            fontFamily: "'Nunito',sans-serif",
+            fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
           }}>
             <div style={{ fontSize: 12, fontWeight: 800, color: '#94A3B8', letterSpacing: 1.5, marginBottom: 12 }}>
               LAST WEEK'S RESULTS
@@ -312,7 +314,7 @@ export default function LeaguePage() {
                   style={{
                     width: '100%', padding: '14px', borderRadius: 16, border: 'none',
                     background: 'linear-gradient(135deg,#2563EB,#3B82F6)', color: '#fff',
-                    fontSize: 15, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
+                    fontSize: 15, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
                     marginBottom: 24,
                   }}>
                   {inviteCopied ? 'Copied!' : '📣 Invite friends'}
@@ -358,7 +360,7 @@ export default function LeaguePage() {
               style={{
                 width: '100%', padding: '14px', borderRadius: 16, border: 'none',
                 background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff',
-                fontSize: 15, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
+                fontSize: 15, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
               }}>
               Let's go again this week! →
             </button>

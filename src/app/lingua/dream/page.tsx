@@ -362,7 +362,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
   // ── 미로그인 / 비프리미엄 차단 ──────────────────────────────────────────────
   if (!isPremiumUser) return (
     <div style={{ minHeight:'100vh', background:'#F8FAFC',
-      fontFamily:"'Nunito',sans-serif", color:'#0F172A',
+      fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", color:'#0F172A',
       display:'flex', alignItems:'center', justifyContent:'center', padding:24 }}>
       <style dangerouslySetInnerHTML={{ __html:`
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
@@ -386,7 +386,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
                 style={{ padding:'13px 28px', borderRadius:14, border:'none',
                   background:'linear-gradient(135deg,#fbbf24,#f59e0b)',
                   color:'#000', fontSize:14, fontWeight:900, cursor:'pointer',
-                  fontFamily:"'Nunito',sans-serif" }}>
+                  fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 Sign In
               </button>
               <button onClick={() => router.push('/signup')}
@@ -394,7 +394,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
                   border:'1.5px solid #E2E8F0',
                   background:'transparent', color:'#64748B',
                   fontSize:14, fontWeight:800, cursor:'pointer',
-                  fontFamily:"'Nunito',sans-serif" }}>
+                  fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 Create Account
               </button>
             </>
@@ -403,7 +403,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
               style={{ padding:'13px 28px', borderRadius:14, border:'none',
                 background:'linear-gradient(135deg,#fbbf24,#f59e0b)',
                 color:'#000', fontSize:14, fontWeight:900, cursor:'pointer',
-                fontFamily:"'Nunito',sans-serif" }}>
+                fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
               ⭐ Upgrade to Premium
             </button>
           )}
@@ -412,7 +412,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
               border:'1.5px solid #E2E8F0',
               background:'transparent', color:'#64748B',
               fontSize:14, fontWeight:800, cursor:'pointer',
-              fontFamily:"'Nunito',sans-serif" }}>
+              fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
             ← Go Back
           </button>
         </div>
@@ -422,7 +422,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
 
   if (view === 'gallery') return (
     <div style={{ minHeight:'100vh', background:'#F8FAFC',
-      fontFamily:"'Nunito',sans-serif", color:'#0F172A' }}>
+      fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", color:'#0F172A' }}>
       <style dangerouslySetInnerHTML={{ __html:`
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
         @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
@@ -438,7 +438,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
         <button onClick={() => router.back()}
           style={{ background:'#F1F5F9', border:'1px solid #E2E8F0',
             borderRadius:10, padding:'8px 16px', color:'#64748B', fontSize:13, fontWeight:700,
-            cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>← Back</button>
+            cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>← Back</button>
         <div>
           <div style={{ fontSize:20, fontWeight:900 }}>🌟 Dream Studio</div>
           <div style={{ fontSize:11, color:'#475569', fontWeight:600 }}>
@@ -476,7 +476,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
               style={{ padding:'8px 18px', borderRadius:12, border:'none', cursor:'pointer',
                 background:'linear-gradient(135deg,#6366F1,#8B5CF6)',
                 color:'#fff', fontWeight:800, fontSize:12,
-                fontFamily:"'Nunito',sans-serif", flexShrink:0 }}>
+                fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", flexShrink:0 }}>
               Upgrade →
             </button>
           </div>
@@ -509,7 +509,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
             ]).filter(o => !sameLanguage || o.id !== 'native').map(opt => (
               <button key={opt.id} onClick={() => setLangMode(opt.id)}
                 style={{ padding:'10px 18px', borderRadius:14, border:'none', cursor:'pointer',
-                  fontFamily:"'Nunito',sans-serif",
+                  fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
                   background: langMode===opt.id ? opt.color : '#F1F5F9',
                   outline: langMode===opt.id ? `2px solid ${opt.color}50` : 'none',
                   color: langMode===opt.id ? '#fff' : '#64748B',
@@ -579,7 +579,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
   const phaseInfo = selGenre?.phases.find(p=>p.id===phase) || selGenre?.phases[0];
 
   return (
-    <div style={{ height:'100dvh', background:'#F8FAFC', fontFamily:"'Nunito',sans-serif",
+    <div style={{ height:'100dvh', background:'#F8FAFC', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
       display:'flex', flexDirection:'column', overflow:'hidden', color:'#0F172A' }}>
       <style dangerouslySetInnerHTML={{ __html:`
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
@@ -597,7 +597,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
           <button onClick={() => setView('gallery')}
             style={{ background:'#F1F5F9', border:'none', borderRadius:10,
               padding:'7px 12px', color:'#64748B', fontSize:12, fontWeight:700,
-              cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>← Projects</button>
+              cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>← Projects</button>
           <div style={{ flex:1, display:'flex', alignItems:'center', gap:8 }}>
             <span style={{ fontSize:18 }}>{selGenre?.emoji}</span>
             <div>
@@ -612,13 +612,13 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
               style={{ padding:'6px 12px', borderRadius:10, border:'none', cursor:'pointer',
                 background: showDoc?'#EEF2FF':'#F1F5F9',
                 color: showDoc?'#6366F1':'#64748B',
-                fontSize:12, fontWeight:700, fontFamily:"'Nunito',sans-serif" }}>
+                fontSize:12, fontWeight:700, fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
               {showDoc ? '💬 Chat' : '📄 Doc'}
             </button>
             <button onClick={downloadProject}
               style={{ padding:'6px 12px', borderRadius:10, border:'none', cursor:'pointer',
                 background:'#F1F5F9', color:'#064E3B', fontSize:12, fontWeight:700,
-                fontFamily:"'Nunito',sans-serif" }}>
+                fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
               📥 Download
             </button>
           </div>
@@ -629,7 +629,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
           {selGenre?.phases.map(p => (
             <button key={p.id} onClick={() => setPhase(p.id)}
               style={{ padding:'4px 12px', borderRadius:99, border:'none', cursor:'pointer',
-                fontFamily:"'Nunito',sans-serif", fontSize:11, fontWeight:800,
+                fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontSize:11, fontWeight:800,
                 background: phase===p.id ? (selGenre.accent) : '#F1F5F9',
                 color: phase===p.id ? '#fff' : '#64748B',
                 transition:'all .15s' }}>
@@ -642,7 +642,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
               .map(([id, icon, label]) => (
               <button key={id} onClick={() => setLangMode(id as LangMode)}
                 style={{ padding:'3px 10px', borderRadius:99, border:'none', cursor:'pointer',
-                  fontFamily:"'Nunito',sans-serif", fontSize:10, fontWeight:800,
+                  fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontSize:10, fontWeight:800,
                   background: langMode===id ? '#0F172A' : '#F1F5F9',
                   color: langMode===id ? '#fff' : '#64748B' }}>
                 {icon} {label}
@@ -712,7 +712,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
                       title="Translate to your language"
                       style={{ background:'#F1F5F9', border:'1px solid #E2E8F0', borderRadius:8,
                         padding:'3px 10px', fontSize:12, cursor:'pointer',
-                        fontFamily:"'Nunito',sans-serif", color:'#64748B', fontWeight:700,
+                        fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", color:'#64748B', fontWeight:700,
                         flexShrink:0, transition:'all .15s' }}>
                       {translating === i ? '⏳' : msg.showTranslation ? '🌐 ✓' : '🌐'}
                     </button>
@@ -788,7 +788,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
             disabled={loading}
             style={{ flex:1, padding:'10px 14px', borderRadius:12,
               background:'#F8FAFC', border:'1.5px solid #E5E7EB',
-              color:'#0F172A', fontSize:13, fontFamily:"'Nunito',sans-serif",
+              color:'#0F172A', fontSize:13, fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
               outline:'none', fontWeight:600, resize:'none',
               opacity:loading?0.5:1 }}/>
           <button onClick={()=>sendMessage()} disabled={!input.trim()||loading}
@@ -857,7 +857,7 @@ function GenreCard({ genre, index, onSelect, locked = false }: {
                   background: hovIdx===i ? `${genre.accent}15` : '#fff',
                   color: hovIdx===i ? genre.accent : '#94A3B8',
                   fontSize:11, fontWeight:700, textAlign:'left',
-                  fontFamily:"'Nunito',sans-serif", transition:'all .12s' }}>
+                  fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", transition:'all .12s' }}>
                 {ex}
               </button>
             ))}
@@ -867,14 +867,14 @@ function GenreCard({ genre, index, onSelect, locked = false }: {
             placeholder="Or type your own idea..."
             style={{ width:'100%', padding:'10px 14px', borderRadius:10,
               background:'#fff', border:'1.5px solid #E2E8F0', color:'#0F172A', fontSize:13,
-              fontFamily:"'Nunito',sans-serif", outline:'none', fontWeight:600,
+              fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", outline:'none', fontWeight:600,
               marginBottom:10, boxSizing:'border-box' }}/>
           <button onClick={() => titleInput.trim() && onSelect(titleInput.trim())}
             disabled={!titleInput.trim()}
             style={{ width:'100%', padding:'12px', borderRadius:12, border:'none',
               background: titleInput.trim() ? `linear-gradient(135deg,${genre.accent},${genre.accent}99)` : '#333',
               color:'#fff', fontWeight:800, fontSize:14, cursor:titleInput.trim()?'pointer':'default',
-              fontFamily:"'Nunito',sans-serif",
+              fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
               boxShadow: titleInput.trim() ? `0 4px 16px ${genre.accent}40` : 'none' }}>
             Start Creating →
           </button>

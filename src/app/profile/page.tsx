@@ -69,7 +69,7 @@ export default function ProfilePage() {
   };
 
   if (loading) return (
-    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#F8FAFC', fontFamily: "'Nunito',sans-serif" }}>
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#F8FAFC', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
       <div style={{ textAlign: 'center' }}>
         <div style={{ width: 48, height: 48, border: '4px solid #E5E7EB', borderTopColor: '#6366F1', borderRadius: '50%', animation: 'spin .8s linear infinite', margin: '0 auto 16px' }} />
         <div style={{ color: '#94A3B8', fontWeight: 700 }}>Loading…</div>
@@ -144,23 +144,23 @@ export default function ProfilePage() {
 
   const tabStyle = (t: string) => ({
     padding: '8px 20px', borderRadius: 20, border: 'none', cursor: 'pointer',
-    fontFamily: "'Nunito',sans-serif", fontWeight: 800, fontSize: 13,
+    fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 800, fontSize: 13,
     background: tab === t ? '#6366F1' : 'transparent',
     color: tab === t ? '#fff' : '#64748B',
     transition: 'all .15s',
   } as React.CSSProperties);
 
   return (
-    <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito', sans-serif" }}>
+    <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
         * { box-sizing: border-box; }
-        .p-input { width:100%; padding:13px 16px; border:2px solid #E5E7EB; border-radius:12px; font-size:14px; font-family:'Nunito',sans-serif; outline:none; background:#fff; transition:border .15s; color:#0F172A; }
+        .p-input { width:100%; padding:13px 16px; border:2px solid #E5E7EB; border-radius:12px; font-size:14px; font-family:'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif; outline:none; background:#fff; transition:border .15s; color:#0F172A; }
         .p-input:focus { border-color:#6366F1; }
-        .p-select { width:100%; padding:13px 16px; border:2px solid #E5E7EB; border-radius:12px; font-size:14px; font-family:'Nunito',sans-serif; outline:none; background:#fff; color:#0F172A; cursor:pointer; }
-        .p-btn { padding:13px 28px; border:none; border-radius:14px; background:linear-gradient(135deg,#6366F1,#8B5CF6); color:#fff; font-size:14px; font-weight:800; font-family:'Nunito',sans-serif; cursor:pointer; }
+        .p-select { width:100%; padding:13px 16px; border:2px solid #E5E7EB; border-radius:12px; font-size:14px; font-family:'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif; outline:none; background:#fff; color:#0F172A; cursor:pointer; }
+        .p-btn { padding:13px 28px; border:none; border-radius:14px; background:linear-gradient(135deg,#6366F1,#8B5CF6); color:#fff; font-size:14px; font-weight:800; font-family:'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif; cursor:pointer; }
         .p-btn:disabled { opacity:.5; cursor:default; }
-        .p-btn-red { padding:13px 28px; border:none; border-radius:14px; background:#EF4444; color:#fff; font-size:14px; font-weight:800; font-family:'Nunito',sans-serif; cursor:pointer; }
+        .p-btn-red { padding:13px 28px; border:none; border-radius:14px; background:#EF4444; color:#fff; font-size:14px; font-weight:800; font-family:'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif; cursor:pointer; }
       ` }} />
 
       {/* Nav */}
@@ -278,7 +278,7 @@ export default function ProfilePage() {
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div>
                   <div style={{ fontSize: 12, fontWeight: 700, color: isPremium ? 'rgba(255,255,255,0.6)' : '#94A3B8', marginBottom: 4, textTransform: 'uppercase' as const, letterSpacing: 1 }}>Current Plan</div>
-                  <div style={{ fontSize: 24, fontWeight: 900, color: isPremium ? '#fff' : '#0F172A', fontFamily: "'Nunito',sans-serif" }}>
+                  <div style={{ fontSize: 24, fontWeight: 900, color: isPremium ? '#fff' : '#0F172A', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                     {isPremium ? '⭐ ' : ''}{planName}
                   </div>
                   <div style={{ fontSize: 13, color: isPremium ? 'rgba(255,255,255,0.6)' : '#64748B', marginTop: 4 }}>
@@ -294,7 +294,7 @@ export default function ProfilePage() {
             {isPremium ? (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                 <button onClick={handleManageSubscription} disabled={saving}
-                  style={{ padding: '13px', borderRadius: 14, border: '1.5px solid #E5E7EB', background: '#fff', color: '#374151', fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                  style={{ padding: '13px', borderRadius: 14, border: '1.5px solid #E5E7EB', background: '#fff', color: '#374151', fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                   {saving ? '…' : '⚙️ Manage Subscription (Stripe Portal)'}
                 </button>
                 <div style={{ fontSize: 12, color: '#94A3B8', textAlign: 'center' }}>
@@ -309,7 +309,7 @@ export default function ProfilePage() {
                   { id: 'monthly',  label: 'Monthly — $9.99/month',     sub: 'No commitment',           color: '#64748B' },
                 ].map(p => (
                   <button key={p.id} onClick={() => router.push(`/pricing?plan=${p.id}`)}
-                    style={{ padding: '13px 16px', borderRadius: 14, border: 'none', background: p.color, color: '#fff', fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito',sans-serif", textAlign: 'left' as const }}>
+                    style={{ padding: '13px 16px', borderRadius: 14, border: 'none', background: p.color, color: '#fff', fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", textAlign: 'left' as const }}>
                     <div>{p.label}</div>
                     <div style={{ fontSize: 11, opacity: 0.75, fontWeight: 600, marginTop: 2 }}>{p.sub}</div>
                   </button>
@@ -343,7 +343,7 @@ export default function ProfilePage() {
                 <div style={{ fontSize: 12, color: '#94A3B8', marginTop: 2 }}>Browser notifications for streak reminders & league updates</div>
               </div>
               <button onClick={handlePushPermission} disabled={pushGranted || pushLoading}
-                style={{ padding: '8px 16px', borderRadius: 12, border: 'none', background: pushGranted ? '#F0FDF4' : 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: pushGranted ? '#16A34A' : '#fff', fontSize: 12, fontWeight: 800, cursor: pushGranted ? 'default' : 'pointer', fontFamily: "'Nunito',sans-serif", flexShrink: 0 }}>
+                style={{ padding: '8px 16px', borderRadius: 12, border: 'none', background: pushGranted ? '#F0FDF4' : 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: pushGranted ? '#16A34A' : '#fff', fontSize: 12, fontWeight: 800, cursor: pushGranted ? 'default' : 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", flexShrink: 0 }}>
                 {pushLoading ? '…' : pushGranted ? '✓ Enabled' : 'Enable'}
               </button>
             </div>
@@ -364,7 +364,7 @@ export default function ProfilePage() {
                 <a
                   href={`https://t.me/${process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || 'LinguaAIBot'}?start=${user?.uid}`}
                   target="_blank" rel="noopener noreferrer"
-                  style={{ padding: '8px 16px', borderRadius: 12, background: '#229ED9', color: '#fff', fontSize: 12, fontWeight: 800, textDecoration: 'none', flexShrink: 0, fontFamily: "'Nunito',sans-serif" }}>
+                  style={{ padding: '8px 16px', borderRadius: 12, background: '#229ED9', color: '#fff', fontSize: 12, fontWeight: 800, textDecoration: 'none', flexShrink: 0, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                   Connect →
                 </a>
               )}
@@ -408,7 +408,7 @@ export default function ProfilePage() {
                 )}
                 <div style={{ display: 'flex', gap: 12, marginTop: 8 }}>
                   <button onClick={() => setShowDeleteConfirm(false)}
-                    style={{ padding: '12px 20px', borderRadius: 12, border: '1.5px solid #E5E7EB', background: '#fff', fontSize: 13, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito',sans-serif", color: '#374151' }}>
+                    style={{ padding: '12px 20px', borderRadius: 12, border: '1.5px solid #E5E7EB', background: '#fff', fontSize: 13, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", color: '#374151' }}>
                     Cancel
                   </button>
                   <button className="p-btn-red" onClick={handleDeleteAccount} disabled={saving}>

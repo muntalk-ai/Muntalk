@@ -358,7 +358,7 @@ ${tutor.name}:`;
                       <button key={oi} onClick={() => handleQuizAnswer(oi)}
                         style={{ padding:'12px 16px', borderRadius:12, border:`2px solid ${border}`,
                           background:bg, color, fontSize:14, fontWeight:700, textAlign:'left',
-                          cursor: quiz.answered?'default':'pointer', fontFamily:"'Nunito',sans-serif",
+                          cursor: quiz.answered?'default':'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
                           transition:'all .15s', display:'flex', alignItems:'center', gap:10 }}>
                         <span style={{ width:22, height:22, borderRadius:'50%', border:`2px solid ${border}`,
                           display:'flex', alignItems:'center', justifyContent:'center', fontSize:12, fontWeight:900, flexShrink:0 }}>
@@ -384,7 +384,7 @@ ${tutor.name}:`;
                     <button onClick={nextQuiz}
                       style={{ marginTop:10, padding:'8px 20px', borderRadius:10, border:'none',
                         background:ch.color, color:'#fff', fontWeight:800, fontSize:13,
-                        cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>
+                        cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                       {quiz.current+1 >= ch.quiz.length ? 'See Results →' : 'Next Question →'}
                     </button>
                   </div>
@@ -400,7 +400,7 @@ ${tutor.name}:`;
                 style={{ width:'100%', padding:'14px', borderRadius:14, border:'none',
                   background:`linear-gradient(135deg,${ch.color},${ch.color}cc)`,
                   color:'#fff', fontWeight:800, fontSize:14, cursor:'pointer',
-                  fontFamily:"'Nunito',sans-serif", display:'flex', alignItems:'center', justifyContent:'center', gap:8 }}>
+                  fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display:'flex', alignItems:'center', justifyContent:'center', gap:8 }}>
                 <img src={tutor.thumbnail} alt="" style={{ width:24, height:24, borderRadius:'50%', objectFit:'cover', objectPosition:'center 20%' }}/>
                 🤖 Practise with {tutor.name}
               </button>
@@ -442,7 +442,7 @@ ${tutor.name}:`;
                   disabled={aiLoading}
                   placeholder={isEnglishLearner ? `Write a sentence in ${learnLangName} using this grammar...` : `Ask about this grammar point in ${nativeLangName}...`}
                   style={{ flex:1, padding:'11px 14px', borderRadius:12, border:`1.5px solid ${ch.color}40`,
-                    background:'#F8FAFC', color:'#0F172A', fontSize:14, fontFamily:"'Nunito',sans-serif",
+                    background:'#F8FAFC', color:'#0F172A', fontSize:14, fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
                     outline:'none', fontWeight:600 }}/>
                 <button onClick={sendAI} disabled={!aiInput.trim()||aiLoading}
                   style={{ width:44, height:44, borderRadius:'50%', border:'none', flexShrink:0,
@@ -610,7 +610,7 @@ const S: Record<string, React.CSSProperties> = {
     background:'#fff', borderBottom:'1px solid #F1F5F9', position:'sticky', top:0, zIndex:100,
     boxShadow:'0 1px 4px rgba(0,0,0,0.04)' },
   navBack: { background:'#F1F5F9', border:'none', borderRadius:10, padding:'7px 14px',
-    color:'#64748B', fontSize:13, fontWeight:700, cursor:'pointer', fontFamily:"'Nunito',sans-serif" },
+    color:'#64748B', fontSize:13, fontWeight:700, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
   navCenter: { display:'flex', alignItems:'center', gap:6 },
   navTitle: { fontSize:17, fontWeight:900, color:'#0F172A' },
   levelBadge: { borderRadius:99, padding:'4px 12px', fontSize:11, fontWeight:800 },
@@ -619,14 +619,14 @@ const S: Record<string, React.CSSProperties> = {
   levelTabs: { display:'flex', gap:8, padding:'14px 16px 10px', overflowX:'auto',
     background:'#fff', borderBottom:'1px solid #F1F5F9' },
   levelTab: { flexShrink:0, padding:'8px 16px', borderRadius:12, border:'none',
-    cursor:'pointer', fontFamily:"'Nunito',sans-serif", transition:'all .18s', textAlign:'center' },
+    cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", transition:'all .18s', textAlign:'center' },
   levelHeader: { padding:'14px 16px', display:'flex', alignItems:'center', gap:12 },
 
   // Category filter
   catRow: { display:'flex', gap:6, padding:'10px 16px', overflowX:'auto',
     background:'#fff', borderBottom:'1px solid #F1F5F9' },
   catBtn: { flexShrink:0, padding:'6px 14px', borderRadius:99, border:'none',
-    fontSize:12, fontWeight:800, cursor:'pointer', fontFamily:"'Nunito',sans-serif",
+    fontSize:12, fontWeight:800, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
     transition:'all .15s', whiteSpace:'nowrap' },
 
   // Chapter grid
@@ -667,7 +667,7 @@ const S: Record<string, React.CSSProperties> = {
     padding:'18px 20px', boxShadow:'0 2px 8px rgba(0,0,0,0.05)' },
   exBtn: { background:'#F1F5F9', border:'none', borderRadius:10, padding:'7px 14px',
     fontSize:12, fontWeight:700, cursor:'pointer', color:'#64748B',
-    fontFamily:"'Nunito',sans-serif" },
+    fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
 
   // Mistakes
   mistakeCard: { background:'#FEF2F2', border:'1px solid #FECACA',
@@ -686,7 +686,7 @@ const S: Record<string, React.CSSProperties> = {
     borderRadius:16, padding:'20px', boxShadow:'0 2px 8px rgba(0,0,0,0.05)' },
   quizRetryBtn: { padding:'10px 20px', borderRadius:12, border:'1.5px solid #E2E8F0',
     background:'#fff', color:'#475569', fontSize:13, fontWeight:700,
-    cursor:'pointer', fontFamily:"'Nunito',sans-serif" },
+    cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
 
   // AI Chat
   aiChat: { background:'#F8FAFC', border:'1px solid #E2E8F0', borderRadius:14,

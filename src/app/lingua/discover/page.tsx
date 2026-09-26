@@ -411,7 +411,7 @@ function DiscoverContent() {
   // ── 미로그인 / 비프리미엄 차단 ──────────────────────────────────────────────
   if (!isPremiumUser) return (
     <div style={{ minHeight:'100vh', background:'#F8FAFC',
-      fontFamily:"'Nunito',sans-serif", color:'#0F172A',
+      fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", color:'#0F172A',
       display:'flex', alignItems:'center', justifyContent:'center', padding:24 }}>
       <style dangerouslySetInnerHTML={{ __html:`
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
@@ -435,7 +435,7 @@ function DiscoverContent() {
                 style={{ padding:'13px 28px', borderRadius:14, border:'none',
                   background:'linear-gradient(135deg,#6366F1,#8B5CF6)',
                   color:'#fff', fontSize:14, fontWeight:900, cursor:'pointer',
-                  fontFamily:"'Nunito',sans-serif" }}>
+                  fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 Sign In
               </button>
               <button onClick={() => router.push('/signup')}
@@ -443,7 +443,7 @@ function DiscoverContent() {
                   border:'1.5px solid #E2E8F0',
                   background:'transparent', color:'#94A3B8',
                   fontSize:14, fontWeight:800, cursor:'pointer',
-                  fontFamily:"'Nunito',sans-serif" }}>
+                  fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 Create Account
               </button>
             </>
@@ -452,7 +452,7 @@ function DiscoverContent() {
               style={{ padding:'13px 28px', borderRadius:14, border:'none',
                 background:'linear-gradient(135deg,#F59E0B,#EF4444)',
                 color:'#fff', fontSize:14, fontWeight:900, cursor:'pointer',
-                fontFamily:"'Nunito',sans-serif" }}>
+                fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
               ⭐ Upgrade to Premium
             </button>
           )}
@@ -461,7 +461,7 @@ function DiscoverContent() {
               border:'1.5px solid #E2E8F0',
               background:'transparent', color:'#64748B',
               fontSize:14, fontWeight:800, cursor:'pointer',
-              fontFamily:"'Nunito',sans-serif" }}>
+              fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
             ← Go Back
           </button>
         </div>
@@ -470,7 +470,7 @@ function DiscoverContent() {
   );
 
   if (!active) return (
-    <div style={{ minHeight:'100vh', background:'#F8FAFC', fontFamily:"'Nunito',sans-serif",
+    <div style={{ minHeight:'100vh', background:'#F8FAFC', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
       color:'#0F172A' }}>
       <style dangerouslySetInnerHTML={{ __html:`
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
@@ -487,7 +487,7 @@ function DiscoverContent() {
         <button onClick={() => router.back()}
           style={{ background:'#F1F5F9', border:'1px solid #E2E8F0',
             borderRadius:10, padding:'8px 16px', color:'#64748B', fontSize:13, fontWeight:700,
-            cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>← Back</button>
+            cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>← Back</button>
         <div>
           <div style={{ fontSize:18, fontWeight:900 }}>✨ Discover</div>
           <div style={{ fontSize:11, color:'#475569', fontWeight:600 }}>AI conversations that actually matter</div>
@@ -511,7 +511,7 @@ function DiscoverContent() {
           </span>
           <button onClick={() => setChatMode('target')}
             style={{ padding:'5px 14px', borderRadius:99, border:'none', cursor:'pointer',
-              fontFamily:"'Nunito',sans-serif", fontWeight:800, fontSize:12,
+              fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight:800, fontSize:12,
               background: chatMode==='target' ? '#6366F1' : '#F1F5F9',
               color: chatMode==='target' ? '#fff' : '#64748B',
               boxShadow: chatMode==='target' ? '0 2px 8px rgba(99,102,241,0.4)' : 'none',
@@ -521,7 +521,7 @@ function DiscoverContent() {
           {!sameLanguage && (
             <button onClick={() => setChatMode('native')}
               style={{ padding:'5px 14px', borderRadius:99, border:'none', cursor:'pointer',
-                fontFamily:"'Nunito',sans-serif", fontWeight:800, fontSize:12,
+                fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight:800, fontSize:12,
                 background: chatMode==='native' ? '#10B981' : '#F1F5F9',
                 color: chatMode==='native' ? '#fff' : '#64748B',
                 boxShadow: chatMode==='native' ? '0 2px 8px rgba(16,185,129,0.4)' : 'none',
@@ -556,7 +556,7 @@ function DiscoverContent() {
           <button onClick={() => openFeature('spark')}
             style={{ padding:'10px 18px', borderRadius:12, border:'none',
               background:'linear-gradient(135deg,#6366F1,#8B5CF6)', color:'#fff',
-              fontWeight:800, fontSize:13, cursor:'pointer', fontFamily:"'Nunito',sans-serif",
+              fontWeight:800, fontSize:13, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
               flexShrink:0 }}>
             Answer →
           </button>
@@ -616,7 +616,7 @@ function DiscoverContent() {
                           style={{ padding:'5px 12px', borderRadius:99, border:'none',
                             background:'#F1F5F9', color:'#fff',
                             fontSize:11, fontWeight:800, cursor:'pointer',
-                            fontFamily:"'Nunito',sans-serif" }}>
+                            fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                           {ch.emoji} {ch.label}
                         </button>
                       ))}
@@ -637,7 +637,7 @@ function DiscoverContent() {
   const ch   = CHANNEL_DATA.find(c=>c.id===selChannel);
 
   return (
-    <div style={{ height:'100dvh', background:'#F8FAFC', fontFamily:"'Nunito',sans-serif",
+    <div style={{ height:'100dvh', background:'#F8FAFC', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
       display:'flex', flexDirection:'column', overflow:'hidden', color:'#0F172A' }}>
       <style dangerouslySetInnerHTML={{ __html:`
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
@@ -654,7 +654,7 @@ function DiscoverContent() {
         <button onClick={() => { setActive(null); if(audioRef.current) audioRef.current.pause(); }}
           style={{ background:'#F1F5F9', border:'none', borderRadius:10, padding:'7px 12px',
             color:'#64748B', fontSize:12, fontWeight:700, cursor:'pointer',
-            fontFamily:"'Nunito',sans-serif" }}>← Back</button>
+            fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>← Back</button>
         <div style={{ display:'flex', alignItems:'center', gap:10, flex:1 }}>
           <img src={tutor.thumbnail} alt={tutor.name}
             style={{ width:32, height:32, borderRadius:'50%', objectFit:'cover',
@@ -673,14 +673,14 @@ function DiscoverContent() {
           <div style={{ display:'flex', gap:4 }}>
             <button onClick={() => setChatMode('target')}
               style={{ padding:'3px 10px', borderRadius:99, border:'none', cursor:'pointer',
-                fontFamily:"'Nunito',sans-serif", fontWeight:800, fontSize:10,
+                fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight:800, fontSize:10,
                 background: chatMode==='target' ? feat.accent : '#F1F5F9',
                 color: chatMode==='target' ? '#fff' : '#64748B' }}>
               🌐
             </button>
             <button onClick={() => setChatMode('native')}
               style={{ padding:'3px 10px', borderRadius:99, border:'none', cursor:'pointer',
-                fontFamily:"'Nunito',sans-serif", fontWeight:800, fontSize:10,
+                fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight:800, fontSize:10,
                 background: chatMode==='native' ? '#10B981' : '#F1F5F9',
                 color: chatMode==='native' ? '#fff' : '#64748B' }}>
               🏠
@@ -732,7 +732,7 @@ function DiscoverContent() {
                     title="Translate to your language"
                     style={{ background:'#F1F5F9', border:'1px solid #E2E8F0',
                       borderRadius:8, padding:'3px 10px', fontSize:12, cursor:'pointer',
-                      fontFamily:"'Nunito',sans-serif", color:'#64748B', fontWeight:700,
+                      fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", color:'#64748B', fontWeight:700,
                       flexShrink:0, transition:'all .15s' }}>
                     {translating === i ? '⏳' : msg.showTranslation ? '🌐 ✓' : '🌐'}
                   </button>
@@ -786,7 +786,7 @@ function DiscoverContent() {
             disabled={loading}
             style={{ flex:1, padding:'12px 16px', borderRadius:14,
               background:'#F8FAFC', border:'1.5px solid #E5E7EB',
-              color:'#0F172A', fontSize:14, fontFamily:"'Nunito',sans-serif",
+              color:'#0F172A', fontSize:14, fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
               outline:'none', fontWeight:600, opacity:loading?0.5:1 }}/>
           <button onClick={()=>sendMessage()}
             disabled={!input.trim()||loading}

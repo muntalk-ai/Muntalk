@@ -1194,7 +1194,7 @@ RULES:
                   style={{
                     padding: '9px 18px', borderRadius: 99, border: `1.5px solid ${level.accent}40`,
                     background: '#fff', color: level.dark, fontWeight: 800, fontSize: 13,
-                    cursor: explaining ? 'default' : 'pointer', fontFamily: "'Nunito',sans-serif",
+                    cursor: explaining ? 'default' : 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
                     opacity: explaining ? 0.6 : 1,
                   }}>
                   {explaining ? '⏳ 설명 가져오는 중...' : '🤔 왜 틀렸어요?'}
@@ -1393,7 +1393,7 @@ RULES:
                       style={{ marginTop:5, padding:'2px 8px', borderRadius:6,
                         border:`1px solid ${level.accent}40`, background:'#fff',
                         fontSize:10, fontWeight:700, color:level.accent, cursor:'pointer',
-                        fontFamily:"'Nunito',sans-serif", display:'block' }}>
+                        fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display:'block' }}>
                       {translatingIdx===i ? '...' : msgTranslations[i] ? '✓' : '🌐 Translate'}
                     </button>
                   )}
@@ -1434,12 +1434,12 @@ RULES:
                 <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
                   <button
                     onClick={() => router.push('/signup')}
-                    style={{ padding: '11px 22px', borderRadius: 14, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 900, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                    style={{ padding: '11px 22px', borderRadius: 14, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 900, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                     Sign Up Free 🎉
                   </button>
                   <button
                     onClick={() => router.push('/pricing')}
-                    style={{ padding: '11px 22px', borderRadius: 14, border: '2px solid #6366F1', background: '#fff', color: '#6366F1', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                    style={{ padding: '11px 22px', borderRadius: 14, border: '2px solid #6366F1', background: '#fff', color: '#6366F1', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                     View Plans
                   </button>
                 </div>
@@ -1462,10 +1462,10 @@ RULES:
 
 // --- Styles -------------------------------------------------------------------
 const styles: Record<string, React.CSSProperties> = {
-  page: { minHeight: '100vh', background: '#F8F9FA', color: '#111', fontFamily: "'Nunito', sans-serif", position: 'relative' },
+  page: { minHeight: '100vh', background: '#F8F9FA', color: '#111', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", position: 'relative' },
   xpPop: { position: 'fixed', top: 80, right: 30, background: 'linear-gradient(135deg,#FFD700,#FFA500)', color: '#000', fontWeight: 900, fontSize: 18, padding: '10px 20px', borderRadius: 30, zIndex: 9999, boxShadow: '0 4px 20px #FFD70060', animation: 'fadeUp 1.4s ease forwards', pointerEvents: 'none' },
   header: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 24px', borderBottom: '1px solid #E9ECEF', position: 'sticky', top: 0, background: '#ffffffee', backdropFilter: 'blur(10px)', zIndex: 100 },
-  backBtn: { background: 'none', border: '1px solid #E9ECEF', color: '#6B7280', padding: '8px 14px', borderRadius: 10, cursor: 'pointer', fontSize: 13, fontWeight: 700, fontFamily: "'Nunito', sans-serif" },
+  backBtn: { background: 'none', border: '1px solid #E9ECEF', color: '#6B7280', padding: '8px 14px', borderRadius: 10, cursor: 'pointer', fontSize: 13, fontWeight: 700, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
   lessonMeta: { display: 'flex', alignItems: 'center', gap: 10 },
   levelTag: { fontSize: 11, fontWeight: 800, padding: '4px 10px', borderRadius: 99, color: '#fff', letterSpacing: 1 },
   lessonTitle: { fontSize: 15, fontWeight: 800, color: '#111' },
@@ -1481,14 +1481,14 @@ const styles: Record<string, React.CSSProperties> = {
   vocabPhonetic: { fontSize: 14, color: '#9CA3AF', fontStyle: 'italic', marginBottom: 12 },
   vocabMeaning: { fontSize: 16, fontWeight: 700, marginBottom: 16 },
   vocabExample: { fontSize: 14, color: '#6B7280', lineHeight: 1.6, marginBottom: 20, fontStyle: 'italic' },
-  speakBtn: { padding: '10px 24px', borderRadius: 99, border: 'none', color: '#fff', fontWeight: 800, fontSize: 13, cursor: 'pointer', fontFamily: "'Nunito', sans-serif" },
+  speakBtn: { padding: '10px 24px', borderRadius: 99, border: 'none', color: '#fff', fontWeight: 800, fontSize: 13, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
   btnRow: { display: 'flex', gap: 12, justifyContent: 'center' },
-  prevBtn: { padding: '14px 28px', borderRadius: 14, border: '2px solid #E9ECEF', background: '#fff', color: '#6B7280', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito', sans-serif" },
-  nextBtn: { padding: '14px 36px', borderRadius: 14, border: 'none', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito', sans-serif" },
+  prevBtn: { padding: '14px 28px', borderRadius: 14, border: '2px solid #E9ECEF', background: '#fff', color: '#6B7280', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
+  nextBtn: { padding: '14px 36px', borderRadius: 14, border: 'none', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
   quizCard: { borderRadius: 20, padding: '32px', marginBottom: 28, boxShadow: '0 2px 16px rgba(0,0,0,0.06)' },
   quizQ: { fontSize: 18, fontWeight: 800, marginBottom: 24, lineHeight: 1.4, color: '#111' },
   optionsGrid: { display: 'flex', flexDirection: 'column', gap: 10 },
-  optBtn: { display: 'flex', alignItems: 'center', gap: 12, padding: '14px 16px', borderRadius: 12, textAlign: 'left', fontFamily: "'Nunito', sans-serif", transition: 'transform 0.1s' },
+  optBtn: { display: 'flex', alignItems: 'center', gap: 12, padding: '14px 16px', borderRadius: 12, textAlign: 'left', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", transition: 'transform 0.1s' },
   optLetter: { width: 28, height: 28, borderRadius: 99, background: '#F3F4F6', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 800, color: '#6B7280', flexShrink: 0 },
   optText: { fontSize: 14, fontWeight: 700, flex: 1 },
   feedback: { marginTop: 16, fontWeight: 800, fontSize: 15, textAlign: 'center' },
@@ -1501,8 +1501,8 @@ const styles: Record<string, React.CSSProperties> = {
   tutorLabel: { fontSize: 16, fontWeight: 900, color: '#111' },
   tutorSubLabel: { fontSize: 12, color: '#9CA3AF', textAlign: 'center' },
   controls: { display: 'flex', flexDirection: 'column', gap: 10, width: '100%', marginTop: 'auto' },
-  micBtn: { padding: '14px', borderRadius: 14, border: 'none', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito', sans-serif", width: '100%' },
-  doneBtn: { padding: '12px', borderRadius: 14, border: '1px solid #E9ECEF', background: '#fff', color: '#6B7280', fontWeight: 700, fontSize: 13, cursor: 'pointer', fontFamily: "'Nunito', sans-serif", width: '100%' },
+  micBtn: { padding: '14px', borderRadius: 14, border: 'none', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", width: '100%' },
+  doneBtn: { padding: '12px', borderRadius: 14, border: '1px solid #E9ECEF', background: '#fff', color: '#6B7280', fontWeight: 700, fontSize: 13, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", width: '100%' },
   chatCol: { flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', background: '#fff' },
   chatArea: { flex: 1, overflowY: 'auto', padding: '20px', display: 'flex', flexDirection: 'column', gap: 14 },
   tutorBubble: { alignSelf: 'flex-start', maxWidth: '75%', padding: '14px 18px', borderRadius: '0 18px 18px 18px', border: '1px solid #E9ECEF' },
@@ -1515,8 +1515,8 @@ const styles: Record<string, React.CSSProperties> = {
   xpBig: { fontSize: 36, fontWeight: 900, marginBottom: 12 },
   perfectBadge: { background: '#FFD700', color: '#000', padding: '8px 20px', borderRadius: 99, fontSize: 14, fontWeight: 800, marginBottom: 20, display: 'inline-block' },
   completeBtns: { display: 'flex', gap: 12, justifyContent: 'center' },
-  nextLessonBtn: { padding: '14px 28px', borderRadius: 14, border: 'none', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito', sans-serif" },
-  homeBtn: { padding: '14px 20px', borderRadius: 14, border: '2px solid #E9ECEF', background: '#fff', color: '#6B7280', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito', sans-serif" },
+  nextLessonBtn: { padding: '14px 28px', borderRadius: 14, border: 'none', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
+  homeBtn: { padding: '14px 20px', borderRadius: 14, border: '2px solid #E9ECEF', background: '#fff', color: '#6B7280', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
   txLine: { fontSize: 12, color: '#6B7280', fontStyle: 'italic', marginTop: 6, padding: '4px 10px', background: 'rgba(0,0,0,0.04)', borderRadius: 8 },
   txMeaning: { fontSize: 11, color: '#9CA3AF', marginTop: 2 },
   txBubble: { fontSize: 12, color: '#6B7280', fontStyle: 'italic', marginTop: 6, padding: '4px 8px', background: 'rgba(0,0,0,0.04)', borderRadius: 8 },

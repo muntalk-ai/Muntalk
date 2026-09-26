@@ -36,7 +36,7 @@ export default function MicGuide({
         display: 'flex', gap: 10, alignItems: 'flex-start',
         background: '#FFFBEB', border: '1.5px solid #FDE68A', borderRadius: 12,
         padding: '10px 12px', margin: '8px 0', animation: 'mtFadeIn .2s ease',
-        fontFamily: "'Nunito',sans-serif",
+        fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
       }}
     >
       <span style={{ fontSize: 20, lineHeight: 1.3 }}>{c.icon}</span>

@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useState, Suspense } from 'react';
+import EmptyState from '@/components/EmptyState';
+import { ListSkeleton } from '@/components/Skeleton';
 import { useRouter } from 'next/navigation';
 import { POS_META, POS_SET_COUNT, PartOfSpeech } from '@/data/wordSets';
 import { useAuth } from '@/context/AuthContext';
@@ -37,11 +39,14 @@ function WordsContent() {
     router.push(`/lingua/words/lesson?pos=${pos}&set=${setIdx}&lesson=${lessonIdx}&lang=${lang}&subLang=${subLang}`);
   };
 
-  // Loading
+  // Loading — PR-I skeleton
   if (!subChecked) return (
-    <div style={{ minHeight:'100vh', background:'#fff', display:'flex', alignItems:'center', justifyContent:'center' }}>
-      <div style={{ width:40, height:40, border:'4px solid #E5E7EB', borderTopColor:'#6366F1', borderRadius:'50%', animation:'spin .8s linear infinite' }} />
-      <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `@keyframes spin{to{transform:rotate(360deg)}}` }} />
+    <div style={{ minHeight:'100vh', background:'#F8FAFC', padding:'24px 20px', maxWidth:640, margin:'0 auto' }}>
+      <div style={{ marginBottom:20 }}>
+        <div style={{ height:28, width:'45%', background:'#E8EDF5', borderRadius:8, animation:'pulse 1.2s ease-in-out infinite', marginBottom:8 }} />
+        <div style={{ height:14, width:'30%', background:'#E8EDF5', borderRadius:8, animation:'pulse 1.2s ease-in-out infinite' }} />
+      </div>
+      <ListSkeleton rows={8} />
     </div>
   );
 
@@ -70,41 +75,18 @@ function WordsContent() {
     };
     const langName = LANG_LABELS[lang] || lang;
     return (
-      <div style={{ minHeight:'100vh', background:'#F8FAFC',
-        fontFamily:"'Nunito',sans-serif",
-        display:'flex', alignItems:'center', justifyContent:'center', padding:24 }}>
-        <div style={{ maxWidth:440, textAlign:'center' }}>
-          <div style={{ fontSize:64, marginBottom:16 }}>🌱</div>
-          <h1 style={{ fontSize:24, fontWeight:900, color:'#0F172A',
-            marginBottom:10, letterSpacing:-0.5 }}>
-            {langName} Word Bank Coming Soon
-          </h1>
-          <p style={{ fontSize:14, color:'#64748B', lineHeight:1.7,
-            marginBottom:8, fontWeight:600 }}>
-            We're currently building the <strong>{langName}</strong> vocabulary
-            library. Check back soon — new languages are added regularly!
-          </p>
-          <p style={{ fontSize:13, color:'#94A3B8', marginBottom:32, fontWeight:600 }}>
-            In the meantime, you can use AI Lessons, Roleplay, and Discover
-            — all fully support {langName}.
-          </p>
-          <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <button onClick={() => router.push('/lingua')}
-              style={{ padding:'13px 28px', borderRadius:14, border:'none',
-                background:'linear-gradient(135deg,#6366F1,#8B5CF6)',
-                color:'#fff', fontSize:14, fontWeight:900, cursor:'pointer',
-                fontFamily:"'Nunito',sans-serif" }}>
-              ← Back to Learning
-            </button>
-            <button onClick={() => router.push('/lingua/roleplay')}
-              style={{ padding:'13px 20px', borderRadius:14,
-                border:'1.5px solid #E5E7EB', background:'#fff',
-                color:'#374151', fontSize:14, fontWeight:800, cursor:'pointer',
-                fontFamily:"'Nunito',sans-serif" }}>
-              Try Roleplay →
-            </button>
-          </div>
-          <p style={{ fontSize:11, color:'#CBD5E1', marginTop:24, fontWeight:600 }}>
+      <div style={{ minHeight:'100vh', background:'#F8FAFC', display:'flex', alignItems:'center', justifyContent:'center', padding:24 }}>
+        <div style={{ width:'100%' }}>
+          <EmptyState
+            emoji="🌱"
+            title={`${langName} Word Bank Coming Soon`}
+            description={`We're currently building the ${langName} vocabulary library. Check back soon — new languages are added regularly! In the meantime, you can use AI Lessons, Roleplay, and Discover — all fully support ${langName}.`}
+            actionLabel="← Back to Learning"
+            onAction={() => router.push('/lingua')}
+            secondaryLabel="Try Roleplay →"
+            onSecondary={() => router.push('/lingua/roleplay')}
+          />
+          <p style={{ fontSize:11, color:'#CBD5E1', marginTop:8, fontWeight:600, textAlign:'center' }}>
             Currently supporting 67 languages in Word Bank
           </p>
         </div>
@@ -114,7 +96,7 @@ function WordsContent() {
 
   // Paywall — not premium
   if (!isPremium && !isAdminEmail(user?.email)) return (
-    <div style={{ minHeight:'100vh', background:'#fff', fontFamily:"'Nunito',sans-serif", display:'flex', alignItems:'center', justifyContent:'center', padding:24 }}>
+    <div style={{ minHeight:'100vh', background:'#fff', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display:'flex', alignItems:'center', justifyContent:'center', padding:24 }}>
       <div style={{ maxWidth:440, textAlign:'center' }}>
         <div style={{ fontSize:64, marginBottom:16 }}>📚</div>
         <h1 style={{ fontSize:26, fontWeight:900, color:'#0F172A', marginBottom:10, letterSpacing:-0.5 }}>
@@ -129,12 +111,12 @@ function WordsContent() {
         <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
           <button
             onClick={() => router.push('/pricing')}
-            style={{ padding:'13px 28px', borderRadius:14, border:'none', background:'linear-gradient(135deg,#6366F1,#8B5CF6)', color:'#fff', fontSize:14, fontWeight:900, cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>
+            style={{ padding:'13px 28px', borderRadius:14, border:'none', background:'linear-gradient(135deg,#6366F1,#8B5CF6)', color:'#fff', fontSize:14, fontWeight:900, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
             ⭐ Upgrade to Premium
           </button>
           <button
             onClick={() => router.push('/lingua')}
-            style={{ padding:'13px 20px', borderRadius:14, border:'1.5px solid #E5E7EB', background:'#fff', color:'#374151', fontSize:14, fontWeight:800, cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>
+            style={{ padding:'13px 20px', borderRadius:14, border:'1.5px solid #E5E7EB', background:'#fff', color:'#374151', fontSize:14, fontWeight:800, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
             ← Go Back
           </button>
         </div>
@@ -143,7 +125,7 @@ function WordsContent() {
   );
 
   return (
-    <div style={{ minHeight:'100vh', background:'#fff', color:'#0F172A', fontFamily:"'Nunito',sans-serif" }}>
+    <div style={{ minHeight:'100vh', background:'#fff', color:'#0F172A', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
         @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
         .lesson-btn:hover { background: var(--accent-bg) !important; border-color: var(--accent) !important; transform: translateY(-2px); }
@@ -151,7 +133,7 @@ function WordsContent() {
 
       <div style={{ padding:'32px 24px 64px', maxWidth:900, margin:'0 auto' }}>
         <button onClick={() => router.push('/lingua')}
-          style={{ background:'none', border:'none', color:'#64748B', cursor:'pointer', fontSize:14, marginBottom:24, display:'flex', alignItems:'center', gap:6, fontFamily:"'Nunito',sans-serif", fontWeight:700 }}>
+          style={{ background:'none', border:'none', color:'#64748B', cursor:'pointer', fontSize:14, marginBottom:24, display:'flex', alignItems:'center', gap:6, fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight:700 }}>
           ← Back
         </button>
 
@@ -170,7 +152,7 @@ function WordsContent() {
             const isSelected = selectedPos === pos;
             return (
               <button key={pos} onClick={() => setSelectedPos(isSelected ? null : pos)}
-                style={{ background: isSelected ? meta.accent : '#fff', border:`2px solid ${isSelected ? meta.accent : '#E5E7EB'}`, borderRadius:16, padding:'22px 18px', cursor:'pointer', textAlign:'left', transition:'all .2s', transform: isSelected ? 'translateY(-2px)' : 'none', fontFamily:"'Nunito',sans-serif" }}>
+                style={{ background: isSelected ? meta.accent : '#fff', border:`2px solid ${isSelected ? meta.accent : '#E5E7EB'}`, borderRadius:16, padding:'22px 18px', cursor:'pointer', textAlign:'left', transition:'all .2s', transform: isSelected ? 'translateY(-2px)' : 'none', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 <div style={{ fontSize:30, marginBottom:10 }}>{meta.icon}</div>
                 <div style={{ fontSize:16, fontWeight:800, color: isSelected ? '#fff' : '#0F172A', marginBottom:3 }}>{meta.label}</div>
                 <div style={{ fontSize:11, color: isSelected ? 'rgba(255,255,255,0.75)' : '#94A3B8', marginBottom:6, fontWeight:700 }}>{meta.desc}</div>
@@ -207,7 +189,7 @@ function WordsContent() {
                     <div style={{ display:'grid', gridTemplateColumns:'repeat(5,1fr)', gap:8 }}>
                       {Array.from({ length: 5 }, (_, li) => (
                         <button key={li} onClick={() => handleLesson(selectedPos, si + 1, li + 1)}
-                          style={{ background:'#F8FAFC', border:'2px solid #F1F5F9', borderRadius:14, padding:'14px 6px', cursor:'pointer', textAlign:'center', fontFamily:"'Nunito',sans-serif", transition:'all .15s' }}
+                          style={{ background:'#F8FAFC', border:'2px solid #F1F5F9', borderRadius:14, padding:'14px 6px', cursor:'pointer', textAlign:'center', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", transition:'all .15s' }}
                           onMouseEnter={e => { const el = e.currentTarget as HTMLButtonElement; el.style.background=`${accent}15`; el.style.borderColor=accent; el.style.transform='translateY(-2px)'; }}
                           onMouseLeave={e => { const el = e.currentTarget as HTMLButtonElement; el.style.background='#F8FAFC'; el.style.borderColor='#F1F5F9'; el.style.transform='none'; }}>
                           <div style={{ fontSize:20, marginBottom:5 }}>{icons[li]}</div>

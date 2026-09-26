@@ -92,7 +92,7 @@ export default function TrialTimerBar({ initialRemaining, onExpire, onTick }: Pr
         color: textColor,
         minWidth: 40,
         textAlign: 'right',
-        fontFamily: "'Nunito', sans-serif",
+        fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
         animation: isDanger ? 'pulse .8s infinite' : 'none',
       }}>
         {fmt(remaining)}

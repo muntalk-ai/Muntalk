@@ -449,7 +449,7 @@ function PlacementInner() {
   // ERROR
   // ════════════════════════════════════════════════════════════════════════════
   if (phase === 'error') return (
-    <div style={{ minHeight:'100vh', background:'#0F172A', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Nunito',sans-serif", padding:20 }}>
+    <div style={{ minHeight:'100vh', background:'#0F172A', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", padding:20 }}>
       <div style={{ textAlign:'center', maxWidth:400 }}>
         <div style={{ fontSize:56, marginBottom:16 }}>⚠️</div>
         <div style={{ fontSize:22, fontWeight:900, color:'#F1F5F9', marginBottom:8 }}>
@@ -479,7 +479,7 @@ function PlacementInner() {
   // INTRO
   // ════════════════════════════════════════════════════════════════════════════
   if (phase === 'intro') return (
-    <div style={{ minHeight:'100vh', background:'#0F172A', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Nunito',sans-serif", padding:20 }}>
+    <div style={{ minHeight:'100vh', background:'#0F172A', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", padding:20 }}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html:`
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap');
         @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
@@ -534,11 +534,11 @@ function PlacementInner() {
         )}
 
         <button onClick={() => setPhase('track')}
-          style={{ width:'100%', padding:'15px', borderRadius:14, border:'none', background:'linear-gradient(135deg,#6366F1,#8B5CF6)', color:'#fff', fontSize:16, fontWeight:900, cursor:'pointer', fontFamily:"'Nunito',sans-serif", boxShadow:'0 8px 24px rgba(99,102,241,0.4)', marginBottom:12, animation:'pulse 2.5s infinite' }}>
+          style={{ width:'100%', padding:'15px', borderRadius:14, border:'none', background:'linear-gradient(135deg,#6366F1,#8B5CF6)', color:'#fff', fontSize:16, fontWeight:900, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", boxShadow:'0 8px 24px rgba(99,102,241,0.4)', marginBottom:12, animation:'pulse 2.5s infinite' }}>
           Start Placement →
         </button>
         <button onClick={handleSkip}
-          style={{ background:'none', border:'none', color:'#475569', fontSize:13, fontWeight:700, cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>
+          style={{ background:'none', border:'none', color:'#475569', fontSize:13, fontWeight:700, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
           Skip — start from A1
         </button>
       </div>
@@ -551,7 +551,7 @@ function PlacementInner() {
   if (phase === 'track') {
     const tq = TRACK_QUESTIONS[trackStep];
     return (
-      <div style={{ minHeight:'100vh', background:'#0F172A', display:'flex', flexDirection:'column', alignItems:'center', fontFamily:"'Nunito',sans-serif", padding:'28px 20px' }}>
+      <div style={{ minHeight:'100vh', background:'#0F172A', display:'flex', flexDirection:'column', alignItems:'center', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", padding:'28px 20px' }}>
         <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html:`
           @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap');
           @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
@@ -581,7 +581,7 @@ function PlacementInner() {
             {tq.options.map((opt, i) => (
               <button key={i} className="topt"
                 onClick={() => handleTrackAnswer(i)}
-                style={{ borderRadius:12, padding:'15px 18px', fontSize:15, fontWeight:800, textAlign:'left', cursor:'pointer', fontFamily:"'Nunito',sans-serif", display:'flex', alignItems:'center', gap:12 }}>
+                style={{ borderRadius:12, padding:'15px 18px', fontSize:15, fontWeight:800, textAlign:'left', cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display:'flex', alignItems:'center', gap:12 }}>
                 <span style={{ width:26, height:26, borderRadius:'50%', background:'#334155', display:'flex', alignItems:'center', justifyContent:'center', fontSize:11, fontWeight:900, color:'#64748B', flexShrink:0 }}>
                   {String.fromCharCode(65+i)}
                 </span>
@@ -598,7 +598,7 @@ function PlacementInner() {
   // LOADING
   // ════════════════════════════════════════════════════════════════════════════
   if (phase === 'loading') return (
-    <div style={{ minHeight:'100vh', background:'#0F172A', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Nunito',sans-serif" }}>
+    <div style={{ minHeight:'100vh', background:'#0F172A', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html:`
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap');
         @keyframes spin{to{transform:rotate(360deg)}}
@@ -628,7 +628,7 @@ function PlacementInner() {
   // CEFR QUIZ
   // ════════════════════════════════════════════════════════════════════════════
   if (phase === 'cefr' && cefrQ && cefrQLevel) return (
-    <div style={{ minHeight:'100vh', background:'#0F172A', display:'flex', flexDirection:'column', alignItems:'center', fontFamily:"'Nunito',sans-serif", padding:'28px 20px' }}>
+    <div style={{ minHeight:'100vh', background:'#0F172A', display:'flex', flexDirection:'column', alignItems:'center', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", padding:'28px 20px' }}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html:`
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap');
         @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
@@ -675,7 +675,7 @@ function PlacementInner() {
             } else if (isSel)  { bg='#1E3A8A'; border='1px solid #6366F1'; color='#fff'; }
             return (
               <button key={i} className="copt" onClick={() => handleCefrAnswer(i)} disabled={cefrRevealed}
-                style={{ background:bg, border, borderRadius:12, padding:'14px 18px', color, fontSize:15, fontWeight:800, textAlign:'left', cursor:cefrRevealed?'default':'pointer', fontFamily:"'Nunito',sans-serif", display:'flex', alignItems:'center', gap:12 }}>
+                style={{ background:bg, border, borderRadius:12, padding:'14px 18px', color, fontSize:15, fontWeight:800, textAlign:'left', cursor:cefrRevealed?'default':'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display:'flex', alignItems:'center', gap:12 }}>
                 <span style={{ width:26, height:26, borderRadius:'50%', background:cefrRevealed&&isCorr?'#059669':cefrRevealed&&isSel?'#DC2626':'#334155', display:'flex', alignItems:'center', justifyContent:'center', fontSize:11, fontWeight:900, flexShrink:0, color:cefrRevealed&&(isCorr||isSel)?'#fff':'#64748B' }}>
                   {cefrRevealed&&isCorr?'✓':cefrRevealed&&isSel&&!isCorr?'✗':String.fromCharCode(65+i)}
                 </span>
@@ -686,7 +686,7 @@ function PlacementInner() {
         </div>
         {!cefrRevealed && (
           <div style={{ textAlign:'center' }}>
-            <button onClick={handleCefrSkip} style={{ background:'none', border:'none', color:'#475569', fontSize:12, fontWeight:700, cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>
+            <button onClick={handleCefrSkip} style={{ background:'none', border:'none', color:'#475569', fontSize:12, fontWeight:700, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
               Skip →
             </button>
           </div>
@@ -700,7 +700,7 @@ function PlacementInner() {
   // ════════════════════════════════════════════════════════════════════════════
   if (!levelInfo || !trackInfo || !trackResult) return null;
   return (
-    <div style={{ minHeight:'100vh', background:'#0F172A', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Nunito',sans-serif", padding:20 }}>
+    <div style={{ minHeight:'100vh', background:'#0F172A', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", padding:20 }}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html:`
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap');
         @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
@@ -799,7 +799,7 @@ function PlacementInner() {
               </div>
             </div>
             <button onClick={handleShareStyle} disabled={sharing}
-              style={{ width:'100%', marginTop:10, padding:'12px', borderRadius:12, border:'1px solid #6366F144', background:sharing?'#334155':'#1E1B4B', color:'#C7D2FE', fontSize:14, fontWeight:900, cursor:sharing?'default':'pointer', fontFamily:"'Nunito',sans-serif" }}>
+              style={{ width:'100%', marginTop:10, padding:'12px', borderRadius:12, border:'1px solid #6366F144', background:sharing?'#334155':'#1E1B4B', color:'#C7D2FE', fontSize:14, fontWeight:900, cursor:sharing?'default':'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
               {sharing ? 'Preparing image…' : '📤 Share my result'}
             </button>
             {shareNote && (
@@ -833,11 +833,11 @@ function PlacementInner() {
         </div>
 
         <button onClick={handleApply} disabled={saving}
-          style={{ width:'100%', padding:'14px', borderRadius:14, border:'none', background:saving?'#334155':`linear-gradient(135deg,${levelInfo.color},${levelInfo.color}bb)`, color:'#fff', fontSize:16, fontWeight:900, cursor:saving?'default':'pointer', fontFamily:"'Nunito',sans-serif", boxShadow:saving?'none':`0 8px 22px ${levelInfo.color}44`, marginBottom:10 }}>
+          style={{ width:'100%', padding:'14px', borderRadius:14, border:'none', background:saving?'#334155':`linear-gradient(135deg,${levelInfo.color},${levelInfo.color}bb)`, color:'#fff', fontSize:16, fontWeight:900, cursor:saving?'default':'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", boxShadow:saving?'none':`0 8px 22px ${levelInfo.color}44`, marginBottom:10 }}>
           {saving ? 'Saving...' : `Start ${trackInfo.emoji} ${trackInfo.label} at ${cefrLevel.toUpperCase()} →`}
         </button>
         <div style={{ textAlign:'center' }}>
-          <button onClick={resetAll} style={{ background:'none', border:'none', color:'#475569', fontSize:13, fontWeight:700, cursor:'pointer', fontFamily:"'Nunito',sans-serif" }}>
+          <button onClick={resetAll} style={{ background:'none', border:'none', color:'#475569', fontSize:13, fontWeight:700, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
             Retake the test
           </button>
         </div>

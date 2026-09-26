@@ -82,7 +82,7 @@ export default function RoleplayLobby() {
   );
 
   return (
-    <div style={{ minHeight:'100vh', background:'#F8FAFC', fontFamily:"'Nunito',sans-serif", color:'#0F172A' }}>
+    <div style={{ minHeight:'100vh', background:'#F8FAFC', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", color:'#0F172A' }}>
       <style dangerouslySetInnerHTML={{ __html:`
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
         @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
@@ -99,7 +99,7 @@ export default function RoleplayLobby() {
         boxShadow:'0 1px 6px rgba(0,0,0,0.05)' }}>
         <button onClick={() => router.back()}
           style={{ background:'none', border:'none', fontSize:20, cursor:'pointer',
-            color:'#64748B', padding:'4px 8px', fontFamily:"'Nunito',sans-serif" }}>←</button>
+            color:'#64748B', padding:'4px 8px', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>←</button>
         <div style={{ flex:1 }}>
           <div style={{ fontSize:17, fontWeight:900, color:'#0F172A' }}>🎭 Roleplay</div>
           <div style={{ fontSize:11, color:'#94A3B8', fontWeight:700 }}>
@@ -119,7 +119,7 @@ export default function RoleplayLobby() {
           <button key={id} onClick={() => setTab(id as RpTab)}
             style={{ padding:'12px 20px', background:'none', border:'none', cursor:'pointer',
               borderBottom: tab===id ? '3px solid #6366F1' : '3px solid transparent',
-              fontFamily:"'Nunito',sans-serif", color:tab===id?'#6366F1':'#64748B' }}>
+              fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", color:tab===id?'#6366F1':'#64748B' }}>
             <div style={{ fontSize:14, fontWeight:900 }}>{label}</div>
             <div style={{ fontSize:10, fontWeight:700, opacity:.7 }}>{sub}</div>
           </button>
@@ -136,7 +136,7 @@ export default function RoleplayLobby() {
           return (
             <button key={d} onClick={() => setSelDiff(d)}
               style={{ padding:'4px 12px', borderRadius:99, border:'none', cursor:'pointer',
-                fontFamily:"'Nunito',sans-serif", fontWeight:800, fontSize:11,
+                fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight:800, fontSize:11,
                 background:active?col:'#F1F5F9', color:active?'#fff':'#64748B',
                 boxShadow:active?`0 2px 8px ${col}40`:'none', transition:'all .15s' }}>
               {d==='all'?'All':d}{d!=='all'&&showNative&&diffNative[d]?` · ${diffNative[d]}`:''}
@@ -149,7 +149,7 @@ export default function RoleplayLobby() {
             <span style={{ fontSize:11, fontWeight:800, color:'#94A3B8', marginLeft:8, letterSpacing:.5 }}>WORLD:</span>
             <button onClick={() => setSelWorld('all')}
               style={{ padding:'4px 12px', borderRadius:99, border:'none', cursor:'pointer',
-                fontFamily:"'Nunito',sans-serif", fontWeight:800, fontSize:11,
+                fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight:800, fontSize:11,
                 background:selWorld==='all'?'#6366F1':'#F1F5F9',
                 color:selWorld==='all'?'#fff':'#64748B', transition:'all .15s' }}>All</button>
             {WORLD_ORDER.map(wid => {
@@ -158,7 +158,7 @@ export default function RoleplayLobby() {
               return (
                 <button key={wid} onClick={() => setSelWorld(wid)} className="world-pill"
                   style={{ padding:'4px 12px', borderRadius:99, border:'none', cursor:'pointer',
-                    fontFamily:"'Nunito',sans-serif", fontWeight:800, fontSize:11,
+                    fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight:800, fontSize:11,
                     background:active?w.accentColor:'#F1F5F9',
                     color:active?'#fff':'#64748B',
                     boxShadow:active?`0 2px 8px ${w.accentColor}40`:'none', transition:'all .15s' }}>

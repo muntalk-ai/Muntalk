@@ -137,9 +137,9 @@ export default function StepMap({ levelId, langId = 'en-US', subLang = 'ko-KR', 
 }
 
 const styles: Record<string, React.CSSProperties> = {
-  page: { minHeight: '100vh', background: '#F8F9FA', color: '#111', fontFamily: "'Nunito', sans-serif" },
+  page: { minHeight: '100vh', background: '#F8F9FA', color: '#111', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
   header: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 28px', borderBottom: '1px solid #E9ECEF', position: 'sticky', top: 0, background: '#ffffffee', backdropFilter: 'blur(10px)', zIndex: 100 },
-  backBtn: { background: 'none', border: '1px solid #E9ECEF', color: '#6B7280', padding: '8px 16px', borderRadius: 10, cursor: 'pointer', fontSize: 13, fontWeight: 700, fontFamily: "'Nunito', sans-serif" },
+  backBtn: { background: 'none', border: '1px solid #E9ECEF', color: '#6B7280', padding: '8px 16px', borderRadius: 10, cursor: 'pointer', fontSize: 13, fontWeight: 700, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
   headerCenter: { display: 'flex', alignItems: 'center', gap: 10 },
   levelPill: { fontSize: 11, fontWeight: 800, padding: '4px 10px', borderRadius: 99, color: '#fff', letterSpacing: 1 },
   headerTitle: { fontSize: 15, fontWeight: 800, color: '#111' },

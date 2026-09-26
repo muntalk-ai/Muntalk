@@ -55,7 +55,7 @@ export default function TutorsPage() {
   const displayTutor = pendingTutor || currentTutor;
 
   return (
-    <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito', sans-serif", paddingBottom: 120 }}>
+    <div style={{ minHeight: '100vh', background: '#F8FAFC', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", paddingBottom: 120 }}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
         .tutor-card { transition: all .15s ease; }
         .tutor-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
@@ -98,12 +98,12 @@ export default function TutorsPage() {
         <div style={{ display: 'flex', gap: 10, marginBottom: 24, flexWrap: 'wrap', alignItems: 'center' }}>
           <input value={search} onChange={e => setSearch(e.target.value)}
             placeholder="🔍 Search by name..."
-            style={{ flex: 1, minWidth: 200, padding: '11px 16px', borderRadius: 12, border: '1.5px solid #E5E7EB', fontSize: 14, fontFamily: "'Nunito',sans-serif", outline: 'none', background: '#fff' }}
+            style={{ flex: 1, minWidth: 200, padding: '11px 16px', borderRadius: 12, border: '1.5px solid #E5E7EB', fontSize: 14, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", outline: 'none', background: '#fff' }}
           />
           <div style={{ display: 'flex', gap: 8 }}>
             {(['all', 'female', 'male'] as GenderFilter[]).map(g => (
               <button key={g} onClick={() => setGender(g)}
-                style={{ padding: '10px 16px', borderRadius: 12, border: '1.5px solid', borderColor: gender === g ? '#2563EB' : '#E5E7EB', background: gender === g ? '#EFF6FF' : '#fff', color: gender === g ? '#2563EB' : '#64748B', fontFamily: "'Nunito',sans-serif", fontWeight: 700, fontSize: 13, cursor: 'pointer' }}>
+                style={{ padding: '10px 16px', borderRadius: 12, border: '1.5px solid', borderColor: gender === g ? '#2563EB' : '#E5E7EB', background: gender === g ? '#EFF6FF' : '#fff', color: gender === g ? '#2563EB' : '#64748B', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 700, fontSize: 13, cursor: 'pointer' }}>
                 {g === 'all' ? '👥 All' : g === 'female' ? '👩 Female' : '👨 Male'}
               </button>
             ))}
@@ -176,11 +176,11 @@ export default function TutorsPage() {
             </div>
           </div>
           <button onClick={() => setPendingTutor(null)}
-            style={{ padding: '10px 16px', borderRadius: 12, border: '1.5px solid #E5E7EB', background: '#fff', color: '#64748B', fontFamily: "'Nunito',sans-serif", fontWeight: 700, fontSize: 13, cursor: 'pointer' }}>
+            style={{ padding: '10px 16px', borderRadius: 12, border: '1.5px solid #E5E7EB', background: '#fff', color: '#64748B', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 700, fontSize: 13, cursor: 'pointer' }}>
             Cancel
           </button>
           <button onClick={handleSelect} disabled={saving}
-            style={{ padding: '11px 24px', borderRadius: 12, border: 'none', background: saved ? '#10B981' : saving ? '#93C5FD' : '#2563EB', color: '#fff', fontFamily: "'Nunito',sans-serif", fontWeight: 900, fontSize: 14, cursor: saving ? 'default' : 'pointer', minWidth: 160 }}>
+            style={{ padding: '11px 24px', borderRadius: 12, border: 'none', background: saved ? '#10B981' : saving ? '#93C5FD' : '#2563EB', color: '#fff', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 900, fontSize: 14, cursor: saving ? 'default' : 'pointer', minWidth: 160 }}>
             {saved ? '✓ Saved!' : saving ? 'Saving...' : pendingTutor.id === currentId ? 'Keep This Tutor →' : 'Confirm Selection →'}
           </button>
         </div>
