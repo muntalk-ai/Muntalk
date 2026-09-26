@@ -309,7 +309,7 @@ function PlacementInner() {
       localStorage.setItem('mt_track',           trackResult.track);
     } catch (e) { console.error(e); }
     setSaving(false);
-    router.push('/lingua');
+    router.push(`/lingua/learn/${cefrLevel}`);
   };
 
   const resetAll = () => {

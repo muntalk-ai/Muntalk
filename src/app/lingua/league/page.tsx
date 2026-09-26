@@ -25,6 +25,14 @@ export default function LeaguePage() {
   const [loading,    setLoading]      = useState(true);
   const [myRank,     setMyRank]       = useState<number>(-1);
   const [weekResult, setWeekResult]   = useState<WeekResult | null>(null);
+  const [inviteCopied, setInviteCopied] = useState(false);
+
+  const handleInvite = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.origin + '/signup');
+      setInviteCopied(true);
+    } catch { /* ignore */ }
+  };
 
   useEffect(() => {
     // authLoading 끝나기 전엔 실행 안 함 (무한로딩 방지)
@@ -138,7 +146,20 @@ export default function LeaguePage() {
             </div>
 
             {/* ── Promotion Status ── */}
-            {promoMsg && (
+            {members.length <= 1 ? (
+              <div style={{
+                borderRadius: 16, padding: '14px 18px', marginBottom: 20, fontSize: 13, fontWeight: 700,
+                background: '#EFF6FF', color: '#2563EB', border: '1px solid #BFDBFE',
+                display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap',
+              }}>
+                <span>👥 You&apos;re the only one in this league — invite friends to make it a real race!</span>
+                <button onClick={handleInvite}
+                  style={{ padding: '8px 16px', borderRadius: 12, border: 'none', background: '#2563EB', color: '#fff',
+                    fontFamily: "'Nunito',sans-serif", fontWeight: 800, fontSize: 12, cursor: 'pointer' }}>
+                  {inviteCopied ? 'Copied!' : '📣 Invite friends'}
+                </button>
+              </div>
+            ) : promoMsg && (
               <div style={{
                 borderRadius: 16, padding: '14px 18px', marginBottom: 20, fontSize: 13, fontWeight: 700,
                 background: promoMsg.type === 'promote' ? '#F0FDF4' : promoMsg.type === 'demote' ? '#FEF2F2' : '#EFF6FF',
@@ -163,7 +184,7 @@ export default function LeaguePage() {
                   fontSize: 13, fontWeight: 800, textAlign: 'center',
                   animation: 'pulse 2s ease-in-out infinite',
                 }}>
-                  🚨 강등 위험! {daysLeft}일 남음 — 안전권(#{tierConfig.minRank})까지 {gap.toLocaleString()} XP 필요해요
+                  🚨 Demotion risk! {daysLeft} days left — you need {gap.toLocaleString()} more XP to stay safe (#{tierConfig.minRank})
                 </div>
               );
             })()}
@@ -280,7 +301,24 @@ export default function LeaguePage() {
             <div style={{ fontSize: 12, fontWeight: 800, color: '#94A3B8', letterSpacing: 1.5, marginBottom: 12 }}>
               LAST WEEK'S RESULTS
             </div>
-            {weekResult.moved === 'up' ? (
+            {weekResult.totalMembers <= 1 ? (
+              <>
+                <div style={{ fontSize: 64, marginBottom: 12 }}>🏝️</div>
+                <div style={{ fontSize: 24, fontWeight: 900, color: '#2563EB', marginBottom: 8 }}>SOLO LEAGUE</div>
+                <div style={{ fontSize: 15, fontWeight: 800, color: '#0F172A', marginBottom: 16 }}>
+                  You had the league to yourself this week. Invite friends to compete!
+                </div>
+                <button onClick={handleInvite}
+                  style={{
+                    width: '100%', padding: '14px', borderRadius: 16, border: 'none',
+                    background: 'linear-gradient(135deg,#2563EB,#3B82F6)', color: '#fff',
+                    fontSize: 15, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
+                    marginBottom: 24,
+                  }}>
+                  {inviteCopied ? 'Copied!' : '📣 Invite friends'}
+                </button>
+              </>
+            ) : weekResult.moved === 'up' ? (
               <>
                 <div style={{ fontSize: 64, marginBottom: 12 }}>🎉</div>
                 <div style={{ fontSize: 24, fontWeight: 900, color: '#16A34A', marginBottom: 8 }}>PROMOTED!</div>
@@ -305,12 +343,12 @@ export default function LeaguePage() {
                 <div style={{ fontSize: 64, marginBottom: 12 }}>🛡️</div>
                 <div style={{ fontSize: 24, fontWeight: 900, color: '#2563EB', marginBottom: 8 }}>LEAGUE HELD!</div>
                 <div style={{ fontSize: 15, fontWeight: 800, color: '#0F172A', marginBottom: 4 }}>
-                  {LEAGUE_CONFIG[weekResult.newTier].emoji} {LEAGUE_CONFIG[weekResult.newTier].name} 잔류
+                  {LEAGUE_CONFIG[weekResult.newTier].emoji} {LEAGUE_CONFIG[weekResult.newTier].name} held
                 </div>
               </>
             )}
             <div style={{ fontSize: 13, color: '#64748B', fontWeight: 700, marginBottom: 24 }}>
-              지난주 #{weekResult.rank}위 · {weekResult.totalMembers}명 중
+              Last week: #{weekResult.rank} of {weekResult.totalMembers}
             </div>
             <button
               onClick={async () => {
@@ -322,7 +360,7 @@ export default function LeaguePage() {
                 background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff',
                 fontSize: 15, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
               }}>
-              이번 주도 달려보자! →
+              Let's go again this week! →
             </button>
           </div>
         </div>

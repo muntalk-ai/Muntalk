@@ -66,6 +66,8 @@ export default function LevelHub() {
   const [isAdmin, setIsAdmin] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [planId, setPlanId] = useState<PlanId>('free');
+  // 무료 사용자: 히어로 paywall 배너 대신 학습 CTA 노출
+  const isFreeUser = !isAdmin && planId === 'free';
   const [hearts, setHearts] = useState<Hearts>({ count: 5 });
   const [showPaywall, setShowPaywall] = useState(false);
   const [paywallReason, setPaywallReason] = useState<'level_locked'|'no_hearts'|'chat_limit'|'general'>('general');
@@ -525,13 +527,13 @@ export default function LevelHub() {
           <span style={styles.navLogoText}>MunTalk</span>
           <span style={styles.navBeta}>BETA</span>
         </div>
-        {/* Desktop tabs — 핵심 4개 + 더보기 드롭다운 (H2) */}
+        {/* Desktop tabs — 학습 코어 4개 + 더보기 드롭다운 */}
         <div className="mt-desktop-tabs" style={{ display: 'flex', gap: 2, alignItems: 'center' }}>
           {([
             { label: '📚 Learn',     action: () => router.push('/lingua') },
             { label: '🎭 Roleplay',  action: () => router.push('/lingua/roleplay') },
-            { label: '🏆 League',    action: () => router.push('/lingua/league') },
-            { label: '📊 Dashboard', action: () => router.push('/lingua/dashboard') },
+            { label: '🔁 Review',    action: () => router.push('/lingua/review') },
+            { label: '🧭 AI Coach',  action: () => router.push('/lingua/coach') },
           ]).map(({ label, action }, i) => (
             <button key={label} className={`mt-nav-tab${i === 0 ? ' active' : ''}`}
               onClick={action}>{label}</button>
@@ -541,21 +543,34 @@ export default function LevelHub() {
             {showMoreMenu && (
               <div style={{ position: 'absolute', top: 42, left: 0, background: '#fff', borderRadius: 14, boxShadow: '0 8px 32px rgba(0,0,0,0.12)', border: '1px solid #F1F5F9', minWidth: 196, zIndex: 300, overflow: 'hidden', padding: 6 }}>
                 {([
+                  { section: 'YOUR PROGRESS' },
+                  { emoji: '📊', label: 'Dashboard',      action: () => router.push('/lingua/dashboard') },
+                  { emoji: '🏆', label: 'League',         action: () => router.push('/lingua/league') },
                   { emoji: '🎯', label: 'Placement Test', action: () => router.push(`/lingua/placement?lang=${learnLang}`) },
-                  { emoji: '🏛️', label: 'Agora',          action: () => router.push('/lingua/agora') },
-                  { emoji: '📖', label: 'Grammar',         action: () => router.push('/lingua/grammar') },
-                  { emoji: '🎮', label: 'Word Games',      action: () => router.push('/lingua/games') },
-                  { emoji: '🔁', label: 'Review',          action: () => router.push('/lingua/review') },
-                  { emoji: '📚', label: 'Word Bank',       action: () => router.push('/lingua/words') },
-                  { emoji: '👩‍🏫', label: 'Tutors',         action: () => router.push('/lingua/tutors') },
-                ]).map(({ emoji, label, action }) => (
-                  <button key={label}
-                    onClick={() => { action(); setShowMoreMenu(false); }}
-                    onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = '#F8FAFC'; }}
-                    onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = 'none'; }}
-                    style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 10, padding: '10px 12px', background: 'none', border: 'none', borderRadius: 10, cursor: 'pointer', fontSize: 13, fontWeight: 700, color: '#374151', textAlign: 'left', fontFamily: "'Nunito',sans-serif" }}>
-                    <span style={{ fontSize: 16 }}>{emoji}</span>{label}
-                  </button>
+                  { section: 'PRACTICE' },
+                  { emoji: '🎮', label: 'Word Games',     action: () => router.push('/lingua/games') },
+                  { emoji: '📖', label: 'Grammar',        action: () => router.push('/lingua/grammar') },
+                  { emoji: '🏛️', label: 'Agora',         action: () => router.push('/lingua/agora') },
+                  { section: 'LAB' },
+                  { emoji: '✨', label: 'Discover',       action: () => router.push('/lingua/discover') },
+                  { emoji: '🌟', label: 'Dream Studio',   action: () => router.push('/lingua/dream') },
+                  { section: 'MORE' },
+                  { emoji: '📚', label: 'Word Bank',      action: () => router.push('/lingua/words') },
+                  { emoji: '👩‍🏫', label: 'Tutors',        action: () => router.push('/lingua/tutors') },
+                ] as Array<{ section?: string; emoji?: string; label?: string; action?: () => void }>).map((item, idx) => (
+                  item.section ? (
+                    <div key={`sec-${idx}`} style={{ fontSize: 10, fontWeight: 800, color: '#94A3B8', letterSpacing: 1.2, padding: '8px 12px 2px' }}>
+                      {item.section}
+                    </div>
+                  ) : (
+                    <button key={item.label}
+                      onClick={() => { item.action!(); setShowMoreMenu(false); }}
+                      onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = '#F8FAFC'; }}
+                      onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = 'none'; }}
+                      style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 10, padding: '10px 12px', background: 'none', border: 'none', borderRadius: 10, cursor: 'pointer', fontSize: 13, fontWeight: 700, color: '#374151', textAlign: 'left', fontFamily: "'Nunito',sans-serif" }}>
+                      <span style={{ fontSize: 16 }}>{item.emoji}</span>{item.label}
+                    </button>
+                  )
                 ))}
               </div>
             )}
@@ -684,12 +699,12 @@ export default function LevelHub() {
             </div>
           </div>
 
-          {/* 메뉴 항목 — 핵심 4개 (H2) */}
+          {/* 메뉴 항목 — 학습 코어 4개 */}
           {([
             { emoji: '📚', label: 'Learn',       action: () => router.push('/lingua') },
             { emoji: '🎭', label: 'AI Roleplay', action: () => router.push('/lingua/roleplay') },
-            { emoji: '🏆', label: 'League',     action: () => router.push('/lingua/league') },
-            { emoji: '📊', label: 'Dashboard',  action: () => router.push('/lingua/dashboard') },
+            { emoji: '🔁', label: 'Review',     action: () => router.push('/lingua/review') },
+            { emoji: '🧭', label: 'AI Coach',   action: () => router.push('/lingua/coach') },
           ]).map(({ emoji, label, action }) => (
             <button key={label}
               onClick={() => { action(); setShowMobileMenu(false); }}
@@ -705,26 +720,38 @@ export default function LevelHub() {
           <div style={{ padding: '10px 24px 2px', fontSize: 11, fontWeight: 800, color: '#94A3B8', letterSpacing: 1.5 }}>
             MORE
           </div>
-          {([
+          {(([
+            { emoji: '📊', label: 'Dashboard',      action: () => router.push('/lingua/dashboard') },
+            { emoji: '🏆', label: 'League',         action: () => router.push('/lingua/league') },
             { emoji: '🎯', label: 'Placement Test', action: () => router.push(`/lingua/placement?lang=${learnLang}`) },
-            { emoji: '🏛️', label: 'Agora',        action: () => router.push('/lingua/agora') },
-            { emoji: '📖', label: 'Grammar',       action: () => router.push('/lingua/grammar') },
-            { emoji: '🎮', label: 'Word Games',    action: () => router.push('/lingua/games') },
-            { emoji: '🔁', label: 'Review',       action: () => router.push('/lingua/review') },
-            { emoji: '📚', label: 'Word Bank',    action: () => router.push('/lingua/words') },
-            { emoji: '👩‍🏫', label: 'Tutors', action: () => router.push('/lingua/tutors') },
-            { emoji: '🌐', label: 'Languages',    action: () => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); setShowMobileMenu(false); } },
-          ]).map(({ emoji, label, action }) => (
-            <button key={label}
-              onClick={() => { action(); setShowMobileMenu(false); }}
+            { header: 'PRACTICE' },
+            { emoji: '🎮', label: 'Word Games',     action: () => router.push('/lingua/games') },
+            { emoji: '📖', label: 'Grammar',        action: () => router.push('/lingua/grammar') },
+            { emoji: '🏛️', label: 'Agora',         action: () => router.push('/lingua/agora') },
+            { header: 'LAB' },
+            { emoji: '✨', label: 'Discover',       action: () => router.push('/lingua/discover') },
+            { emoji: '🌟', label: 'Dream Studio',   action: () => router.push('/lingua/dream') },
+            { header: 'MORE' },
+            { emoji: '📚', label: 'Word Bank',      action: () => router.push('/lingua/words') },
+            { emoji: '👩‍🏫', label: 'Tutors',       action: () => router.push('/lingua/tutors') },
+            { emoji: '🌐', label: 'Languages',      action: () => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); setShowMobileMenu(false); } },
+          ]) as Array<{ header?: string; emoji?: string; label?: string; action?: () => void }>).map((item, idx) => (
+            item.header ? (
+              <div key={`mh-${idx}`} style={{ padding: '10px 24px 2px', fontSize: 11, fontWeight: 800, color: '#94A3B8', letterSpacing: 1.5 }}>
+                {item.header}
+              </div>
+            ) : (
+            <button key={item.label}
+              onClick={() => { item.action!(); setShowMobileMenu(false); }}
               style={{ width: '100%', padding: '13px 24px', background: 'none', border: 'none',
                 textAlign: 'left', cursor: 'pointer', fontFamily: "'Nunito',sans-serif",
                 fontWeight: 700, fontSize: 15, color: '#1E293B',
                 display: 'flex', alignItems: 'center', gap: 14,
                 borderBottom: '1px solid #F8FAFC' }}>
-              <span style={{ fontSize: 20, width: 28, textAlign: 'center' }}>{emoji}</span>
-              {label}
+              <span style={{ fontSize: 20, width: 28, textAlign: 'center' }}>{item.emoji}</span>
+              {item.label}
             </button>
+            )
           ))}
 
           {/* 프리미엄 업그레이드 */}
@@ -868,6 +895,36 @@ export default function LevelHub() {
         ))}
       </div>
 
+      {/* -- Free users: 학습 CTA (paywall 배너 대신) -- */}
+      {isFreeUser && (
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px 8px' }}>
+          <div style={{ borderRadius: 20, background: 'linear-gradient(135deg, #EFF6FF, #F0FDF4)', border: '2px solid #BFDBFE', padding: '20px 24px', display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
+            <div style={{ fontSize: 40, flexShrink: 0 }}>🚀</div>
+            <div style={{ flex: 1, minWidth: 200 }}>
+              <div style={{ fontSize: 16, fontWeight: 900, color: '#0F172A', marginBottom: 3, fontFamily: "'Nunito',sans-serif" }}>
+                Keep the momentum going
+              </div>
+              <div style={{ fontSize: 12, color: '#64748B', fontWeight: 600, fontFamily: "'Nunito',sans-serif" }}>
+                Pick up where you left off, or review the words you&apos;ve saved.
+              </div>
+            </div>
+            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+              <button onClick={() => router.push(`/lingua/learn/${currentLevel.id}`)}
+                style={{ padding: '10px 20px', borderRadius: 12, background: 'linear-gradient(135deg,#2563EB,#4F46E5)', color: '#fff', fontSize: 13, fontWeight: 800, border: 'none', cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                ▶️ Continue learning
+              </button>
+              <button onClick={() => router.push('/lingua/review')}
+                style={{ padding: '10px 20px', borderRadius: 12, background: '#fff', color: '#0F172A', fontSize: 13, fontWeight: 800, border: '1.5px solid #E2E8F0', cursor: 'pointer', fontFamily: "'Nunito',sans-serif" }}>
+                🔁 Today&apos;s review
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* -- Discover/Dream 배너: 프리미엄·어드민에게만 상단 노출 -- */}
+      {!isFreeUser && (
+      <>
       {/* -- Discover Banner -- */}
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px 8px' }}>
         <div
@@ -928,6 +985,7 @@ export default function LevelHub() {
           </div>
         </div>
       </div>
+      </>)}
       {/* -- Current Level -- */}
       <section style={styles.currentSection}>
         <p style={styles.currentSub}>YOUR LEARNING PATH</p>
@@ -1056,6 +1114,35 @@ export default function LevelHub() {
           );
         })}
       </section>
+
+      {/* -- Explore (무료 사용자용 컴팩트 Discover/Dream) -- */}
+      {isFreeUser && (
+        <section style={{ maxWidth: 900, margin: '4px auto 0', padding: '0 24px' }}>
+          <div style={{ fontSize: 11, fontWeight: 800, color: '#94A3B8', letterSpacing: 1.5, marginBottom: 10, paddingLeft: 4, fontFamily: "'Nunito',sans-serif" }}>
+            ✨ EXPLORE
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 12 }}>
+            <div onClick={() => router.push('/lingua/discover')}
+              style={{ borderRadius: 16, padding: '14px 18px', cursor: 'pointer', background: 'linear-gradient(135deg, #0f0c29, #302b63)', display: 'flex', alignItems: 'center', gap: 12 }}>
+              <div style={{ fontSize: 28 }}>✨</div>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontSize: 14, fontWeight: 900, color: '#fff', fontFamily: "'Nunito',sans-serif" }}>Discover</div>
+                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', fontWeight: 600, fontFamily: "'Nunito',sans-serif" }}>AI that talks like a human</div>
+              </div>
+              <div style={{ color: '#fff', fontWeight: 900 }}>→</div>
+            </div>
+            <div onClick={() => router.push('/lingua/dream')}
+              style={{ borderRadius: 16, padding: '14px 18px', cursor: 'pointer', background: 'linear-gradient(135deg, #1a0a00, #5c3800)', display: 'flex', alignItems: 'center', gap: 12 }}>
+              <div style={{ fontSize: 28 }}>🌟</div>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontSize: 14, fontWeight: 900, color: '#fff', fontFamily: "'Nunito',sans-serif" }}>Dream Studio</div>
+                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', fontWeight: 600, fontFamily: "'Nunito',sans-serif" }}>Create something that lasts</div>
+              </div>
+              <div style={{ color: '#fff', fontWeight: 900 }}>→</div>
+            </div>
+          </div>
+        </section>
+      )}
 
       <footer style={styles.footer}>
         <div style={{ marginBottom: 12 }}>🌐 MunTalk · {totalLessonsCount} lessons · A1 to C2 · 150+ AI Tutors</div>
