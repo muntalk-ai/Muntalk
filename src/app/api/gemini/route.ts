@@ -3,7 +3,12 @@ import { NextRequest, NextResponse } from 'next/server';
 // 완전히 단순화된 Gemini route
 // Firebase 의존성 제거 — API 키만 있으면 작동
 
-const MODELS = ['gemini-2.5-flash', 'gemini-1.5-flash'];
+// Gemini model fallback chain — configurable via GEMINI_MODEL (comma-separated).
+// Defaults use current models only: gemini-1.5-flash / gemini-2.0-flash are retired (404).
+const MODELS = (process.env.GEMINI_MODEL || 'gemini-3.8-flash,gemini-2.5-flash')
+  .split(',')
+  .map((m) => m.trim())
+  .filter(Boolean);
 
 export async function POST(req: NextRequest) {
   try {

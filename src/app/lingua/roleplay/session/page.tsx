@@ -10,6 +10,7 @@ import {
   type NpcCharacter, type StoryBeat,
 } from '@/data/roleplay';
 import { getUserProfile, updateUserProfile, recordActivity } from '@/lib/userProfile';
+import { truncateHistory } from '@/lib/history';
 import { addWeeklyXp, ensureLeague } from '@/lib/league';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -220,7 +221,7 @@ function SessionContent() {
 
   // Build NPC system prompt
   const buildNpcPrompt = useCallback((npc: NpcCharacter, replyingToOthers = false) => {
-    const history = historyRef.current
+    const history = truncateHistory(historyRef.current, 10)
       .map(m=>`${m.npcId==='user'?'Learner':m.npcId}: ${m.content}`).join('\n');
     const basePrompt = world
       ? world.systemPrompt.replace('{targetLang}',targetLang).replace('{difficulty}',difficulty)
