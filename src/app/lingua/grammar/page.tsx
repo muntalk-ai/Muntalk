@@ -1,5 +1,6 @@
 'use client';
 import { apiFetch } from '@/lib/apiClient';
+import { runWithAiRetry, AI_TIMEOUT_MS } from '@/lib/aiRetry';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
@@ -122,6 +123,7 @@ ${coachRule}`;
       const res = await apiFetch('/api/gemini', {
         method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ uid: user?.uid ?? null, temperature: 0.85, prompt }),
+        timeoutMs: AI_TIMEOUT_MS,
       });
       const data = await res.json();
       setAiChat([{ role:'ai', text: data.text?.trim() || 'Great work! Let\'s practise this grammar together.' }]);
@@ -138,7 +140,6 @@ ${coachRule}`;
     setAiChat(prev => [...prev, { role:'user', text: userText }]);
     setAiLoading(true);
 
-    try {
       const history = aiChat.map(m => `${m.role==='user'?'Student':tutor.name}: ${m.text}`).join('\n');
       const feedbackRule = isEnglishLearner
         ? `Give specific grammar feedback in ${learnLangName} — correct any errors gently, explain why, then ask them to try again or try a new related exercise.`
@@ -153,15 +154,19 @@ ${history}
 Student: ${userText}
 ${tutor.name}:`;
 
-      const res = await apiFetch('/api/gemini', {
-        method:'POST', headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({ uid: user?.uid ?? null, temperature: 0.8, prompt }),
+      // PR-G: 타임아웃 + 실패 시 전역 재시도 모달
+      const failed = await runWithAiRetry(async () => {
+        const res = await apiFetch('/api/gemini', {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({ uid: user?.uid ?? null, temperature: 0.8, prompt }),
+          timeoutMs: AI_TIMEOUT_MS,
+        });
+        const data = await res.json();
+        setAiChat(prev => [...prev, { role:'ai', text: data.text?.trim() || 'Good try! Let\'s look at this more carefully.' }]);
       });
-      const data = await res.json();
-      setAiChat(prev => [...prev, { role:'ai', text: data.text?.trim() || 'Good try! Let\'s look at this more carefully.' }]);
-    } catch {
-      setAiChat(prev => [...prev, { role:'ai', text: 'I got stuck on that question — ask me again and I\'ll explain it clearly! 📖' }]);
-    }
+      if (failed) {
+        setAiChat(prev => [...prev, { role:'ai', text: 'I got stuck on that question — ask me again and I\'ll explain it clearly! 📖' }]);
+      }
     setAiLoading(false);
   }, [aiInput, aiLoading, selChapter, aiChat, tutor.name, nativeLangName, learnLangName, isEnglishLearner, user]);
 

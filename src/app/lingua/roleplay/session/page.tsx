@@ -1,5 +1,6 @@
 'use client';
 import { apiFetch } from '@/lib/apiClient';
+import { AI_TIMEOUT_MS } from '@/lib/aiRetry';
 
 import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
@@ -183,7 +184,8 @@ function SessionContent() {
     try {
       const res = await apiFetch('/api/gemini', { method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ uid:user?.uid??null, temperature:0.1,
-          prompt:`Translate this text to ${nativeLang}. Return ONLY the translation, nothing else:\n"${text}"` })
+          prompt:`Translate this text to ${nativeLang}. Return ONLY the translation, nothing else:\n"${text}"` }),
+        timeoutMs: AI_TIMEOUT_MS,
       });
       const data = await res.json();
       return data.text?.trim().replace(/^"|"$/g,'') || '';
@@ -285,7 +287,8 @@ Reply as ${npc.name} in ${targetLang}:`;
       : '';
 
     apiFetch('/api/gemini', { method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ uid:user?.uid??null, temperature:0.9, prompt:openPrompt })
+      body: JSON.stringify({ uid:user?.uid??null, temperature:0.9, prompt:openPrompt }),
+      timeoutMs: AI_TIMEOUT_MS,
     }).then(r=>r.json()).then(async data => {
       const text = data.text?.trim() || 'Hello! Welcome.';
       const nativeText = await translateToNative(text);
@@ -351,11 +354,11 @@ Reply as ${npc.name} in ${targetLang}:`;
       const requests = [
         apiFetch('/api/gemini', { method:'POST', headers:{'Content-Type':'application/json'},
           body: JSON.stringify({ uid:user?.uid??null, temperature:0.85,
-            prompt: buildNpcPrompt(primaryNpc) }) }),
+            prompt: buildNpcPrompt(primaryNpc) }), timeoutMs: AI_TIMEOUT_MS }),
         ...(secondaryNpc ? [
           apiFetch('/api/gemini', { method:'POST', headers:{'Content-Type':'application/json'},
             body: JSON.stringify({ uid:user?.uid??null, temperature:0.85,
-              prompt: buildNpcPrompt(secondaryNpc, true) }) })
+              prompt: buildNpcPrompt(secondaryNpc, true) }), timeoutMs: AI_TIMEOUT_MS })
         ] : []),
       ];
 
@@ -450,7 +453,9 @@ Reply as ${npc.name} in ${targetLang}:`;
     try {
       const res = await apiFetch('/api/gemini', { method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ uid:user?.uid??null, temperature:0.4,
-          prompt:`Analyse this language learning conversation. Reply in ${nativeLang}. Return ONLY JSON:\n{"strongPoints":["s1","s2"],"improvements":["i1","i2"],"overallFeedback":"2-3 sentences in ${nativeLang}"}\nConversation:\n${historyRef.current.map(m=>(m.npcId==='user'?'Learner':'NPC')+': '+m.content).join('\n')}` })      });
+          prompt:`Analyse this language learning conversation. Reply in ${nativeLang}. Return ONLY JSON:\n{"strongPoints":["s1","s2"],"improvements":["i1","i2"],"overallFeedback":"2-3 sentences in ${nativeLang}"}\nConversation:\n${historyRef.current.map(m=>(m.npcId==='user'?'Learner':'NPC')+': '+m.content).join('\n')}` }),
+        timeoutMs: AI_TIMEOUT_MS,
+      });
       const data = await res.json();
       const parsed = JSON.parse(data.text?.replace(/```json\s*/gi,'').replace(/```\s*/g,'').trim()||'{}');
       setResult({ avgScore: avg||70, turns: turnCount, ...parsed });

@@ -1,5 +1,7 @@
 'use client';
 import { apiFetch } from '@/lib/apiClient';
+import { runWithAiRetry, AI_TIMEOUT_MS } from '@/lib/aiRetry';
+import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
@@ -169,6 +171,7 @@ export default function CoachPage() {
   const [briefing, setBriefing]   = useState(false); // 초기 브리핑 중
   const [ready, setReady]         = useState(false);
   const [isListening, setIsListening] = useState(false);
+  const [micGuide, setMicGuide] = useState<MicGuideReason | null>(null); // PR-G: STT 안내
 
   const chatRef = useRef<HTMLDivElement>(null);
   const recRef  = useRef<any>(null);
@@ -275,7 +278,13 @@ export default function CoachPage() {
     rec.lang = snapshot.learnLang;
     rec.continuous = false; rec.interimResults = false;
     rec.onresult = (e: any) => handleSend(e.results[0][0].transcript);
-    rec.onerror  = () => setIsListening(false);
+    // PR-G: 권한 거부/마이크 없음 시 무음 대신 안내 UI
+    rec.onerror  = (e: any) => {
+      setIsListening(false);
+      const code = e?.error;
+      if (code === 'not-allowed' || code === 'service-not-allowed') setMicGuide('denied');
+      else if (code === 'audio-capture') setMicGuide('no-mic');
+    };
     rec.onend    = () => setIsListening(false);
     recRef.current = rec;
   }, [snapshot]); // eslint-disable-line
@@ -303,6 +312,7 @@ export default function CoachPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ uid: null, temperature: 0.85, prompt: `${systemPrompt}\n\n${openingPrompt}` }),
+        timeoutMs: AI_TIMEOUT_MS,
       });
       const data = await res.json();
       const text = data.text?.trim() || '안녕하세요! 학습 코치입니다.';
@@ -365,19 +375,23 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
 코치:`;
 
     try {
-      const res = await apiFetch('/api/gemini', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ uid: null, temperature: 0.8, prompt }),
+      const failed = await runWithAiRetry(async () => {
+        const res = await apiFetch('/api/gemini', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ uid: null, temperature: 0.8, prompt }),
+          timeoutMs: AI_TIMEOUT_MS,
+        });
+        const data = await res.json();
+        setMessages(prev => [...prev, {
+          role: 'coach', text: data.text?.trim() || '죄송합니다, 다시 시도해주세요.', ts: Date.now(),
+        }]);
       });
-      const data = await res.json();
-      setMessages(prev => [...prev, {
-        role: 'coach', text: data.text?.trim() || '죄송합니다, 다시 시도해주세요.', ts: Date.now(),
-      }]);
-    } catch {
-      setMessages(prev => [...prev, {
-        role: 'coach', text: '연결 오류가 발생했습니다. 다시 시도해주세요.', ts: Date.now(),
-      }]);
+      if (failed) {
+        setMessages(prev => [...prev, {
+          role: 'coach', text: '연결 오류가 발생했습니다. 다시 시도해주세요.', ts: Date.now(),
+        }]);
+      }
     } finally {
       setLoading(false);
     }
@@ -527,10 +541,12 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
       )}
 
       {/* Input */}
+      {micGuide && <div style={{ padding: '0 16px' }}><MicGuide reason={micGuide} onDismiss={() => setMicGuide(null)} /></div>}
       <div style={S.inputBar}>
         <button
           onMouseDown={() => {
-            if (!recRef.current || isListening || loading) return;
+            if (!recRef.current) { setMicGuide('unsupported'); return; }
+            if (isListening || loading) return;
             try { recRef.current.start(); setIsListening(true); } catch {}
           }}
           style={{

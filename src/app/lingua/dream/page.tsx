@@ -1,5 +1,6 @@
 'use client';
 import { apiFetch } from '@/lib/apiClient';
+import { runWithAiRetry, AI_TIMEOUT_MS } from '@/lib/aiRetry';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -169,6 +170,7 @@ function DreamStudioContent() {
           uid: user?.uid ?? null, temperature: 0.1,
           prompt: `Translate the following text to language code "${subLang}". Return ONLY the translation, nothing else:\n\n"${text}"`,
         }),
+        timeoutMs: AI_TIMEOUT_MS,
       });
       const data = await res.json();
       const translation = data.text?.trim().replace(/^"|"$/g, '') || '';
@@ -243,7 +245,9 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
 
       const res = await apiFetch('/api/gemini', { method:'POST',
         headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({ uid:user.uid, temperature:0.9, prompt:openingPrompt }) });
+        body: JSON.stringify({ uid:user.uid, temperature:0.9, prompt:openingPrompt }),
+        timeoutMs: AI_TIMEOUT_MS,
+      });
       const data = await res.json();
       const aiText = data.text?.trim() || `Let\'s build "${title}" together. Tell me your vision.`;
       setMessages([{ role:'ai', text:aiText }]);
@@ -279,10 +283,16 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
         purpose, // B-11
       });
 
-      const res = await apiFetch('/api/gemini', { method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({ uid:user?.uid??null, temperature:0.85, prompt }) });
-      const data = await res.json();
+      // PR-G: fetch만 재시도 래핑 (문서 append 등 side-effect는 1회만)
+      let data: any = null;
+      const failed = await runWithAiRetry(async () => {
+        const res = await apiFetch('/api/gemini', { method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({ uid:user?.uid??null, temperature:0.85, prompt }),
+          timeoutMs: AI_TIMEOUT_MS });
+        data = await res.json();
+      });
+      if (failed) throw new Error('ai-failed');
       const raw = data.text?.trim() || 'Tell me more about what you\'re imagining.';
 
       // Extract content blocks (B-2 hotfix: fallback for models that

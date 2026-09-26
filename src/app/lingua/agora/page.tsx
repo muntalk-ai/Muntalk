@@ -1,5 +1,6 @@
 'use client';
 import { apiFetch } from '@/lib/apiClient';
+import { runWithAiRetry, AI_TIMEOUT_MS } from '@/lib/aiRetry';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
@@ -151,6 +152,7 @@ export default function AgoraPage() {
           uid: user?.uid ?? null, temperature: 0.1,
           prompt: `Translate the following to language code "${nativeLang}". Return ONLY the translation:\n\n"${text}"`,
         }),
+        timeoutMs: AI_TIMEOUT_MS,
       });
       const data = await res.json();
       const translation = data.text?.trim().replace(/^"|"$/g, '') || '';
@@ -186,7 +188,8 @@ export default function AgoraPage() {
     const stanceNote = TOPIC_STANCE[topic.id] || '';
     const history = messages.slice(-10).map(m => `${m.role === 'user' ? 'user' : 'assistant'}: ${m.text}`).join('\n');
 
-    try {
+    // PR-G: 타임아웃 + 실패 시 전역 재시도 모달 (프롬프트는 무수정)
+    const failed = await runWithAiRetry(async () => {
       const res = await apiFetch('/api/gemini', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -198,15 +201,18 @@ Rules: Present FOR 🔵 and AGAINST 🔴 sides with intellectual depth. Be Socra
 
 Conversation:\n${history}\n\nuser: ${txt}\n\nassistant:`,
         }),
+        timeoutMs: AI_TIMEOUT_MS,
       });
       const data = await res.json();
       setMessages(prev => [...prev, {
         id: ++msgId, role: 'ai', ts: Date.now(),
         text: data.text?.trim() || 'Could not generate a response.',
       }]);
-    } catch {
+    });
+    if (failed) {
       setMessages(prev => [...prev, { id: ++msgId, role: 'ai', ts: Date.now(), text: 'Connection error.' }]);
-    } finally { setLoading(false); }
+    }
+    setLoading(false);
   }, [input, loading, topic, subtopic, messages, activeSide, user]);
 
   // ── LOBBY ─────────────────────────────────────────────────────────────────

@@ -1,6 +1,7 @@
 ﻿import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { AuthProvider } from '@/context/AuthContext';
+import GlobalOverlays from '@/components/GlobalOverlays';
 
 export const metadata: Metadata = {
   title: 'MunTalk — Learn Languages with AI',
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body style={{ margin: 0, padding: 0 }}>
         <AuthProvider>{children}</AuthProvider>
+        <GlobalOverlays />
       </body>
     </html>
   );
