@@ -89,6 +89,28 @@ const VOICE_MAP: Record<string, { f: string; m: string; lang: string }> = {
   'am-ET': { f: 'am-ET-Standard-A',  m: 'am-ET-Standard-B',  lang: 'am-ET' },
 };
 
+// Prepend a 44-byte WAV header (16-bit PCM mono 24kHz) to raw audio bytes.
+// Gemini TTS models return either WAV (gemini-3.8-flash-tts) or raw PCM
+// (older preview models); this normalizes the latter so the client can
+// always play `audio/wav`.
+function addWavHeader(pcm: Uint8Array): Buffer {
+  const header = Buffer.alloc(44);
+  header.write('RIFF', 0);
+  header.writeUInt32LE(36 + pcm.length, 4);
+  header.write('WAVE', 8);
+  header.write('fmt ', 12);
+  header.writeUInt32LE(16, 16);
+  header.writeUInt16LE(1, 20); // PCM
+  header.writeUInt16LE(1, 22); // mono
+  header.writeUInt32LE(24000, 24);
+  header.writeUInt32LE(24000 * 2, 28); // byte rate
+  header.writeUInt16LE(2, 32); // block align
+  header.writeUInt16LE(16, 34); // bits per sample
+  header.write('data', 36);
+  header.writeUInt32LE(pcm.length, 40);
+  return Buffer.concat([header, pcm]);
+}
+
 export async function POST(req: NextRequest) {
   try {
     const { text, lang = 'en-US', gender = 'female', speed = 0.95, level } = await req.json();
@@ -105,18 +127,76 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ audioContent: null, error: 'Text too long (max 500 chars)' }, { status: 413 });
     }
 
+    if (!text?.trim()) {
+      return NextResponse.json({ audioContent: null });
+    }
+
+    // ── Gemini TTS branch: languages Google Cloud TTS has no voice for ──
+    // Burmese (my-MM): Google Cloud TTS has no my-MM voice (verified
+    // 2026-09-26), and most devices lack a Burmese speechSynthesis voice, so
+    // /api/tts previously returned unsupported_language. Gemini's native
+    // speech generation DOES support Burmese (verified 2026-09-27:
+    // gemini-3.8-flash-tts synthesizes Burmese input to 24kHz 16-bit mono
+    // audio), so Burmese requests are served here instead.
+    if (lang.startsWith('my')) {
+      const gemKey = process.env.GEMINI_API_KEY;
+      if (!gemKey) {
+        return NextResponse.json({ error: 'GEMINI_API_KEY not set' }, { status: 500 });
+      }
+      try {
+        const isFemale = !gender || gender === 'female' || gender === 'FEMALE';
+        const voiceName = isFemale ? 'Kore' : 'Charon';
+        // Slow down for beginners: explicit level (a1/a2) or a slow speed
+        // request (e.g. starter passes speed 0.78). Gemini TTS has no
+        // speaking-rate param, so this is a prompt instruction instead.
+        const slow = level === 'a1' || level === 'a2' ||
+          (typeof speed === 'number' && speed < 0.9) ? ', slowly and clearly' : '';
+        const ttsText = `Read aloud in Burmese${slow}: ${text.trim()}`;
+        const gres = await fetchWithTimeout(
+          `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash-tts:generateContent?key=${gemKey}`,
+          { method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              contents: [{ parts: [{ text: ttsText }] }],
+              generationConfig: {
+                responseModalities: ['AUDIO'],
+                speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName } } },
+              },
+            }) },
+          30000
+        );
+        if (!gres.ok) {
+          const err = await gres.text();
+          console.error(`[tts] Gemini TTS error lang=${lang}:`, err.slice(0, 200));
+          return NextResponse.json({ audioContent: null, error: 'TTS failed' });
+        }
+        const gdata = await gres.json();
+        const parts: any[] = gdata?.candidates?.[0]?.content?.parts ?? [];
+        const b64 = parts.find((p: any) => p?.inlineData?.data)?.inlineData?.data;
+        if (!b64) {
+          console.error(`[tts] Gemini TTS returned no audio lang=${lang}`);
+          return NextResponse.json({ audioContent: null, error: 'TTS failed' });
+        }
+        const decoded = Buffer.from(b64, 'base64');
+        // gemini-3.8-flash-tts returns WAV already; older models return raw
+        // PCM — normalize to WAV so the client can play it uniformly.
+        const wav: Buffer = decoded.subarray(0, 4).toString() !== 'RIFF'
+          ? addWavHeader(decoded)
+          : decoded;
+        return NextResponse.json({ audioContent: wav.toString('base64'), mimeType: 'audio/wav' });
+      } catch (e) {
+        console.error('[tts] Gemini TTS exception:', e);
+        return NextResponse.json({ audioContent: null, error: 'TTS failed' });
+      }
+    }
+
     const apiKey = process.env.GOOGLE_TTS_API_KEY;
     if (!apiKey) {
       return NextResponse.json({ error: 'GOOGLE_TTS_API_KEY not set' }, { status: 500 });
     }
 
-    if (!text?.trim()) {
-      return NextResponse.json({ audioContent: null });
-    }
-
-    // Look up voice. Languages without a Google voice (e.g. Burmese — Google
-    // Cloud TTS has no my-MM voice, verified 2026-09-26) get a clean
-    // unsupported_language signal so the client can try device TTS instead.
+    // Look up voice. Languages without a Google voice (and without a Gemini
+    // TTS branch above) get a clean unsupported_language signal so the client
+    // can try device TTS instead.
     // (Never fall back to an en-US voice: wrong-language audio is worse than none.)
     const voiceEntry = VOICE_MAP[lang];
     if (!voiceEntry) {

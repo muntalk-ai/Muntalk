@@ -174,7 +174,7 @@ function SessionContent() {
         body: JSON.stringify({ text:clean, lang:langId, gender, level:'b1' })
       }).then(r=>r.json()).then(data => {
         if (!data.audioContent) { setIsSpeaking(false); setSpeakingId(null); resolve(); return; }
-        const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
+        const audio = new Audio(`data:${data.mimeType || 'audio/mp3'};base64,${data.audioContent}`);
         audioRef.current = audio;
         audio.onended = () => { setIsSpeaking(false); setSpeakingId(null); audioRef.current=null; resolve(); };
         audio.onerror = () => { setIsSpeaking(false); setSpeakingId(null); audioRef.current=null; resolve(); };

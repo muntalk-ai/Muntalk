@@ -9,9 +9,13 @@ export interface LangOption {
 }
 
 // stt: false인 언어는 LessonPlayer에서 텍스트 입력창으로 대체
-// tts: Google Cloud TTS 서버 음성 보유 여부. my-MM/kk-KZ/ky-KG/uz-UZ/mn-MN/lo-LA는
-// Google에 해당 음성이 존재하지 않음을 2026-09-26 실측 확인 → tts:false.
-// (클라이언트는 이 경우 기기 내장 speechSynthesis로 폴백 시도 — src/lib/deviceTts.ts)
+// tts: 서버 TTS 음성 보유 여부 (Google Cloud TTS 또는 Gemini TTS 경유).
+// my-MM: Google Cloud TTS에 음성이 없어 2026-09-26까지 tts:false였으나,
+// Gemini TTS(gemini-3.8-flash-tts)가 버마어를 지원함을 2026-09-27 실측 확인 →
+// /api/tts가 Gemini 경유로 제공하므로 tts:true.
+// kk-KZ/ky-KG/uz-UZ/mn-MN/lo-LA는 Google에 해당 음성이 존재하지 않음을
+// 2026-09-26 실측 확인 → tts:false.
+// (클라이언트는 tts:false인 경우 기기 내장 speechSynthesis로 폴백 시도 — src/lib/deviceTts.ts)
 export const LEARN_LANGUAGES: LangOption[] = [
   // ── 영어 변형 ────────────────────────────────────────────────────────
   { code: 'en-US',  label: 'English (US)',       flag: '🇺🇸', native: 'English',              stt: true,  tts: true  },
@@ -98,7 +102,7 @@ export const LEARN_LANGUAGES: LangOption[] = [
   { code: 'tl-PH',  label: 'Filipino',            flag: '🇵🇭', native: 'Filipino',             stt: true,  tts: true  },
   { code: 'km-KH',  label: 'Khmer',               flag: '🇰🇭', native: 'ភាសាខ្មែរ',            stt: false, tts: true  },
   { code: 'lo-LA',  label: 'Lao',                 flag: '🇱🇦', native: 'ພາສາລາວ',              stt: false, tts: false  },
-  { code: 'my-MM',  label: 'Burmese',             flag: '🇲🇲', native: 'မြန်မာဘာသာ',           stt: false, tts: false  },
+  { code: 'my-MM',  label: 'Burmese',             flag: '🇲🇲', native: 'မြန်မာဘာသာ',           stt: false, tts: true   },
   { code: 'jv-ID',  label: 'Javanese',            flag: '🇮🇩', native: 'Basa Jawa',            stt: false, tts: true  },
   { code: 'su-ID',  label: 'Sundanese',           flag: '🇮🇩', native: 'Basa Sunda',           stt: false, tts: true  },
   // ── 중동 ─────────────────────────────────────────────────────────────
@@ -180,7 +184,7 @@ export const UI_LANGUAGES: LangOption[] = [
   { code: 'kn-IN',  label: 'Kannada',                   flag: '🇮🇳', native: 'ಕನ್ನಡ',               stt: false, tts: true  },
   { code: 'gu-IN',  label: 'Gujarati',                  flag: '🇮🇳', native: 'ગુજરાતી',              stt: false, tts: true  },
   { code: 'mn-MN',  label: 'Mongolian',                 flag: '🇲🇳', native: 'Монгол',               stt: false, tts: false  },
-  { code: 'my-MM',  label: 'Burmese',                   flag: '🇲🇲', native: 'မြန်မာဘာသာ',           stt: false, tts: false  },
+  { code: 'my-MM',  label: 'Burmese',                   flag: '🇲🇲', native: 'မြန်မာဘာသာ',           stt: false, tts: true   },
 ];
 
 export function getLangLabel(code: string): string {

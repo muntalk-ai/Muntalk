@@ -277,7 +277,7 @@ function StarterContent() {
       });
       const data = await res.json();
       if (!data.audioContent) return;
-      const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
+      const audio = new Audio(`data:${data.mimeType || 'audio/mp3'};base64,${data.audioContent}`);
       audioRef.current = audio;
       setIsSpeaking(true);
       audio.onended = () => { setIsSpeaking(false); audioRef.current = null; };
