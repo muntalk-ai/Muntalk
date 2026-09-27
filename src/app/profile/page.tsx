@@ -9,9 +9,13 @@ import { useAuth } from '@/context/AuthContext';
 import { updateUserProfile } from '@/lib/userProfile';
 import { requestPushPermission } from '@/lib/notifications';
 import { apiFetch } from '@/lib/apiClient';
-import { LEARN_LANGUAGES, UI_LANGUAGES } from '@/data/languages';
+import { LEARN_LANGUAGES, UI_LANGUAGES, getLangLabel } from '@/data/languages';
 import { PURPOSE_OPTIONS, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
+
+// 선택된 언어 코드 → 국기 이모지 (요약 줄 표시용)
+const flagOf = (code: string) =>
+  [...LEARN_LANGUAGES, ...UI_LANGUAGES].find(l => l.code === code)?.flag ?? '🌐';
 
 export default function ProfilePage() {
   const router = useRouter();
@@ -19,7 +23,23 @@ export default function ProfilePage() {
 
   const [displayName, setDisplayName] = useState(user?.displayName || '');
   const [learnLang,   setLearnLang]   = useState(profile?.learnLang || 'en-US');
-  const [nativeLang,  setNativeLang]  = useState(profile?.nativeLang || 'ko-KR');
+  // 모국어 스마트 기본값: 저장된 프로필 → localStorage → 브라우저 언어 → en-US
+  const [nativeLang,  setNativeLang]  = useState<string>(() => {
+    if (profile?.nativeLang) return profile.nativeLang;
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('mt_native_lang');
+      if (stored && UI_LANGUAGES.some(l => l.code === stored)) return stored;
+      const nav = (navigator.language || '').toLowerCase();
+      const exact = UI_LANGUAGES.find(l => l.code.toLowerCase() === nav);
+      if (exact) return exact.code;
+      const prefix = nav.split('-')[0];
+      if (prefix) {
+        const byPrefix = UI_LANGUAGES.find(l => l.code.toLowerCase().startsWith(prefix + '-'));
+        if (byPrefix) return byPrefix.code;
+      }
+    }
+    return 'en-US';
+  });
   // B-11: 학습 목적 (profile → localStorage 순)
   const [purpose, setPurpose] = useState<LearningPurpose | undefined>(() => {
     if (isLearningPurpose((profile as any)?.purpose)) return (profile as any).purpose;
@@ -214,18 +234,30 @@ export default function ProfilePage() {
               <input className="p-input" value={displayName} onChange={e => setDisplayName(e.target.value)} placeholder="Your name" />
             </div>
 
-            <div style={fld}>
-              <label style={lbl}>I'm learning</label>
+            {/* 학습 언어: 주요 선택 — 강조 카드 */}
+            <div style={{ ...fld, background: '#F0F7FF', border: '1.5px solid #BFDBFE', borderRadius: 14, padding: '14px 16px' }}>
+              <label style={lbl}>🌐 I'm learning <span style={{ fontWeight: 600, color: '#64748B' }}>— the language you want to speak</span></label>
               <select className="p-select" value={learnLang} onChange={e => setLearnLang(e.target.value)}>
-                {LEARN_LANGUAGES.map(l => <option key={l.code} value={l.code}>{l.label}</option>)}
+                {LEARN_LANGUAGES.map(l => <option key={l.code} value={l.code}>{l.flag} {l.label}</option>)}
               </select>
             </div>
 
+            {/* 모국어: 보조 선택 */}
             <div style={fld}>
-              <label style={lbl}>My native language</label>
+              <label style={lbl}>🏠 My native language <span style={{ fontWeight: 600, color: '#64748B' }}>— used for translations & explanations</span></label>
               <select className="p-select" value={nativeLang} onChange={e => setNativeLang(e.target.value)}>
-                {UI_LANGUAGES.map(l => <option key={l.code} value={l.code}>{l.label}</option>)}
+                {UI_LANGUAGES.map(l => <option key={l.code} value={l.code}>{l.flag} {l.label}</option>)}
               </select>
+            </div>
+
+            {/* 조합 요약 — 잘못 고르면 여기서 바로 눈에 띔 */}
+            <div style={{ background: '#F8FAFC', border: '1px dashed #CBD5E1', borderRadius: 12, padding: '10px 14px', fontSize: 13, color: '#334155', marginBottom: 18 }}>
+              {flagOf(learnLang)} Learning <b>{getLangLabel(learnLang)}</b>
+              <span style={{ color: '#94A3B8' }}> · </span>
+              {flagOf(nativeLang)} Explanations in <b>{getLangLabel(nativeLang)}</b>
+              {learnLang === nativeLang && (
+                <span style={{ color: '#D97706', fontWeight: 700 }}> — same as learning; translations will be hidden</span>
+              )}
             </div>
 
             <div style={fld}>
