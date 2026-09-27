@@ -1036,7 +1036,7 @@ export default function LevelHub() {
               </div>
             </div>
             <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-              <button onClick={() => router.push(`/lingua/learn/${currentLevel.id}`)}
+              <button onClick={() => router.push(`/lingua/learn/${currentLevel.id}?lang=${learnLang}&subLang=${nativeLang}`)}
                 style={{ padding: '10px 20px', borderRadius: 12, background: 'linear-gradient(135deg,#2563EB,#4F46E5)', color: '#fff', fontSize: 13, fontWeight: 800, border: 'none', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 ▶️ Continue learning
               </button>

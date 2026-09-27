@@ -62,11 +62,14 @@ export function deviceTtsAvailable(): boolean {
  * Speak text with a device voice matching `lang` (BCP-47, e.g. 'my-MM').
  * Returns true if a matching voice was found and speech started.
  * Never throws; always calls onEnd exactly once.
+ * `onNoVoice`, when given, is called with the device's available voice
+ * langs if no voice matched (for remote diagnostics).
  */
 export async function speakWithDeviceTts(
   text: string,
   lang: string,
   onEnd?: () => void,
+  onNoVoice?: (availableLangs: string[]) => void,
 ): Promise<boolean> {
   const finish = () => {
     try {
@@ -85,10 +88,17 @@ export async function speakWithDeviceTts(
     const voices = await loadVoices(s);
     const voice = matchVoice(voices, lang);
     if (!voice) {
+      try {
+        onNoVoice?.([...new Set(voices.map(v => v.lang || '?'))]);
+      } catch {
+        /* noop */
+      }
       finish();
       return false; // no device voice for this language — stay silent
     }
     s.cancel();
+    // Chrome on Android can swallow speak() issued immediately after cancel()
+    await new Promise(r => setTimeout(r, 100));
     const utter = new SpeechSynthesisUtterance(clean);
     utter.voice = voice;
     utter.lang = voice.lang;

@@ -507,7 +507,17 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
     if (!hasTts(langId)) {
       stopAll();
       setIsSpeaking(true);
-      await speakWithDeviceTts(cleanText, langId, () => { setIsSpeaking(false); onEnd?.(); });
+      const ok = await speakWithDeviceTts(
+        cleanText, langId,
+        () => { setIsSpeaking(false); onEnd?.(); },
+        (availableLangs) => {
+          // 기기에 해당 언어 음성이 없음 — 원인 확정을 위해 원격 로그
+          reportPronEvent('device-tts-no-voice', { lang: langId, voices: availableLangs.join(',') });
+        },
+      );
+      // 기기 음성도 없으면 무음이 아닌 토스트로 알림 (silent failure 방지)
+      // (speakWithDeviceTts가 이미 onEnd를 호출했으므로 여기서는 토스트만)
+      if (!ok) showAudioToast();
       return;
     }
     stopAll();
@@ -1029,7 +1039,7 @@ RULES:
 
       {/* Header */}
       <header style={styles.header}>
-        <button style={styles.backBtn} onClick={() => { stopAll(); router.push(`/lingua/learn/${levelId}`); }}>← Back</button>
+        <button style={styles.backBtn} onClick={() => { stopAll(); router.push(`/lingua/learn/${levelId}?lang=${langId}&subLang=${subLang}&tutor=${tutorId || ''}`); }}>← Back</button>
         <div style={styles.lessonMeta}>
           <span style={{ ...styles.levelTag, background: level.accent }}>{level.label}</span>
           <span style={styles.lessonTitle}>{lesson.icon} {lesson.title}</span>
@@ -1505,7 +1515,7 @@ RULES:
               </div>
             )}
             <div style={styles.completeBtns}>
-              <button style={{ ...styles.nextLessonBtn, background: level.accent }} onClick={() => router.push(`/lingua/learn/${levelId}`)}>
+              <button style={{ ...styles.nextLessonBtn, background: level.accent }} onClick={() => router.push(`/lingua/learn/${levelId}?lang=${langId}&subLang=${subLang}&tutor=${tutorId || ''}`)}>
                 ← Back to Level
               </button>
               <button style={styles.homeBtn} onClick={() => router.push('/lingua')}>

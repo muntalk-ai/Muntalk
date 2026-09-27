@@ -345,7 +345,7 @@ function PlacementInner() {
       localStorage.setItem('mt_track',           trackResult.track);
     } catch (e) { console.error(e); }
     setSaving(false);
-    router.push(`/lingua/learn/${cefrLevel}`);
+    router.push(`/lingua/learn/${cefrLevel}?lang=${learnLang}&subLang=${nativeLang}`);
   };
 
   const resetAll = () => {
