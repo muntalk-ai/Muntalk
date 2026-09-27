@@ -5,7 +5,7 @@ import { AI_TIMEOUT_MS } from '@/lib/aiRetry';
 import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
-import { getTutorForLang } from '@/data/tutors';
+import { TUTORS, getTutorById, getTutorForLang } from '@/data/tutors';
 import { updateUserProfile } from '@/lib/userProfile';
 import { PURPOSE_OPTIONS, purposePromptBlock, mapTrackToPurpose, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
@@ -186,8 +186,15 @@ function StarterContent() {
   const langId  = params.get('lang')    || (typeof window !== 'undefined' ? localStorage.getItem('mt_learn_lang') : null) || 'en-US';
   const subLang = params.get('subLang') || (typeof window !== 'undefined' ? localStorage.getItem('mt_native_lang') : null) || 'en-US';
 
-  // Tutor for this language
-  const tutor = getTutorForLang(langId);
+  // Tutor: learner's selected tutor first (?tutor= URL param → saved choice),
+  // language default as fallback (e.g. first visit before choosing a tutor)
+  const savedTutorId =
+    params.get('tutor') ||
+    (typeof window !== 'undefined' ? localStorage.getItem('mt_tutor_id') : null);
+  const tutor =
+    savedTutorId && TUTORS.some(t => t.id === savedTutorId)
+      ? getTutorById(savedTutorId)
+      : getTutorForLang(langId);
 
   const unit  = UNITS[unitIdx];
   // Use translated words if available, otherwise fall back to English
