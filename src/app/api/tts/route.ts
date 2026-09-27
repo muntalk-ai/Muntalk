@@ -111,6 +111,58 @@ function addWavHeader(pcm: Uint8Array): Buffer {
   return Buffer.concat([header, pcm]);
 }
 
+/**
+ * Gemini native speech generation fallback for languages Google Cloud TTS
+ * has no voice for. Sends the raw text only — any instruction prefix (e.g.
+ * "Read aloud in Burmese, slowly and clearly:") gets vocalized by the model,
+ * so the user would hear it spoken before every word. Gemini auto-detects
+ * the language from the script; no prefix needed.
+ */
+async function geminiTts(text: string, gender: string, lang: string) {
+  const gemKey = process.env.GEMINI_API_KEY;
+  if (!gemKey) {
+    return NextResponse.json({ error: 'GEMINI_API_KEY not set' }, { status: 500 });
+  }
+  try {
+    const isFemale = !gender || gender === 'female' || gender === 'FEMALE';
+    const voiceName = isFemale ? 'Kore' : 'Charon';
+    const gres = await fetchWithTimeout(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash-tts:generateContent?key=${gemKey}`,
+      { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: text.trim() }] }],
+          generationConfig: {
+            responseModalities: ['AUDIO'],
+            speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName } } },
+          },
+        }) },
+      30000
+    );
+    if (!gres.ok) {
+      const err = await gres.text();
+      console.error(`[tts] Gemini TTS error lang=${lang}:`, err.slice(0, 200));
+      return NextResponse.json({ audioContent: null, error: 'TTS failed' });
+    }
+    const gdata = await gres.json();
+    const parts: any[] = gdata?.candidates?.[0]?.content?.parts ?? [];
+    const b64 = parts.find((p: any) => p?.inlineData?.data)?.inlineData?.data;
+    if (!b64) {
+      console.error(`[tts] Gemini TTS returned no audio lang=${lang}`);
+      return NextResponse.json({ audioContent: null, error: 'TTS failed' });
+    }
+    const decoded = Buffer.from(b64, 'base64');
+    // gemini-3.8-flash-tts returns WAV already; older models return raw
+    // PCM — normalize to WAV so the client can play it uniformly.
+    const wav: Buffer = decoded.subarray(0, 4).toString() !== 'RIFF'
+      ? addWavHeader(decoded)
+      : decoded;
+    return NextResponse.json({ audioContent: wav.toString('base64'), mimeType: 'audio/wav' });
+  } catch (e) {
+    console.error('[tts] Gemini TTS exception:', e);
+    return NextResponse.json({ audioContent: null, error: 'TTS failed' });
+  }
+}
+
 export async function POST(req: NextRequest) {
   try {
     const { text, lang = 'en-US', gender = 'female', speed = 0.95, level } = await req.json();
@@ -131,79 +183,20 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ audioContent: null });
     }
 
-    // ── Gemini TTS branch: languages Google Cloud TTS has no voice for ──
-    // Burmese (my-MM): Google Cloud TTS has no my-MM voice (verified
-    // 2026-09-26), and most devices lack a Burmese speechSynthesis voice, so
-    // /api/tts previously returned unsupported_language. Gemini's native
-    // speech generation DOES support Burmese (verified 2026-09-27:
-    // gemini-3.8-flash-tts synthesizes Burmese input to 24kHz 16-bit mono
-    // audio), so Burmese requests are served here instead.
-    if (lang.startsWith('my')) {
-      const gemKey = process.env.GEMINI_API_KEY;
-      if (!gemKey) {
-        return NextResponse.json({ error: 'GEMINI_API_KEY not set' }, { status: 500 });
-      }
-      try {
-        const isFemale = !gender || gender === 'female' || gender === 'FEMALE';
-        const voiceName = isFemale ? 'Kore' : 'Charon';
-        // Send the raw text only. Any instruction prefix (e.g. "Read aloud
-        // in Burmese, slowly and clearly:") gets vocalized by the model —
-        // the user hears it spoken before every word. Gemini auto-detects
-        // the language from the script; no prefix needed.
-        const ttsText = text.trim();
-        const gres = await fetchWithTimeout(
-          `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash-tts:generateContent?key=${gemKey}`,
-          { method: 'POST', headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              contents: [{ parts: [{ text: ttsText }] }],
-              generationConfig: {
-                responseModalities: ['AUDIO'],
-                speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName } } },
-              },
-            }) },
-          30000
-        );
-        if (!gres.ok) {
-          const err = await gres.text();
-          console.error(`[tts] Gemini TTS error lang=${lang}:`, err.slice(0, 200));
-          return NextResponse.json({ audioContent: null, error: 'TTS failed' });
-        }
-        const gdata = await gres.json();
-        const parts: any[] = gdata?.candidates?.[0]?.content?.parts ?? [];
-        const b64 = parts.find((p: any) => p?.inlineData?.data)?.inlineData?.data;
-        if (!b64) {
-          console.error(`[tts] Gemini TTS returned no audio lang=${lang}`);
-          return NextResponse.json({ audioContent: null, error: 'TTS failed' });
-        }
-        const decoded = Buffer.from(b64, 'base64');
-        // gemini-3.8-flash-tts returns WAV already; older models return raw
-        // PCM — normalize to WAV so the client can play it uniformly.
-        const wav: Buffer = decoded.subarray(0, 4).toString() !== 'RIFF'
-          ? addWavHeader(decoded)
-          : decoded;
-        return NextResponse.json({ audioContent: wav.toString('base64'), mimeType: 'audio/wav' });
-      } catch (e) {
-        console.error('[tts] Gemini TTS exception:', e);
-        return NextResponse.json({ audioContent: null, error: 'TTS failed' });
-      }
+    // ── Gemini TTS fallback: any language Google Cloud TTS has no voice ──
+    // for is served by Gemini's native speech generation instead of
+    // returning unsupported_language. Verified 2026-09-27 with
+    // gemini-3.8-flash-tts (real audio returned): my (Burmese), mn
+    // (Mongolian), kk (Kazakh), ky (Kyrgyz), uz (Uzbek), lo (Lao).
+    // (Never fall back to an en-US voice: wrong-language audio is worse than none.)
+    const voiceEntry = VOICE_MAP[lang];
+    if (!voiceEntry) {
+      return geminiTts(text, gender, lang);
     }
 
     const apiKey = process.env.GOOGLE_TTS_API_KEY;
     if (!apiKey) {
       return NextResponse.json({ error: 'GOOGLE_TTS_API_KEY not set' }, { status: 500 });
-    }
-
-    // Look up voice. Languages without a Google voice (and without a Gemini
-    // TTS branch above) get a clean unsupported_language signal so the client
-    // can try device TTS instead.
-    // (Never fall back to an en-US voice: wrong-language audio is worse than none.)
-    const voiceEntry = VOICE_MAP[lang];
-    if (!voiceEntry) {
-      return NextResponse.json(
-        { audioContent: null, error: 'unsupported_language',
-          detail: `No Google TTS voice for ${lang}` },
-        { status: 400 }
-      );
     }
     const entry = voiceEntry;
     const isFemale = !gender || gender === 'female' || gender === 'FEMALE';
