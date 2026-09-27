@@ -586,10 +586,10 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
                   transition:'all .15s' }}>
                 <div style={{ fontSize:13, fontWeight:800 }}>{opt.label}</div>
                 {trUnder(opt.label, { fontSize:10, fontWeight:600, marginTop:1,
-                  color: langMode===opt.id ? 'rgba(255,255,255,0.7)' : '#94A3B8' })}
+                  color: langMode===opt.id ? 'rgba(255,255,255,0.85)' : '#94A3B8' })}
                 <div style={{ fontSize:10, fontWeight:600, opacity:.8 }}>{opt.sub}</div>
                 {trUnder(opt.sub, { fontSize:10, fontWeight:600, marginTop:1,
-                  color: langMode===opt.id ? 'rgba(255,255,255,0.7)' : '#94A3B8' })}
+                  color: langMode===opt.id ? 'rgba(255,255,255,0.85)' : '#94A3B8' })}
               </button>
             ))}
           </div>
@@ -918,13 +918,13 @@ function GenreCard({ genre, index, menuT, onSelect, locked = false }: {
             )}
           </div>
           <div style={{ fontSize:17, fontWeight:900, color:'#fff', marginBottom:3 }}>{genre.title}</div>
-          {trUnder(genre.title, { fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:3 })}
+          {trUnder(genre.title, { fontSize:11, color:'rgba(255,255,255,0.85)', marginBottom:3 })}
           <div style={{ fontSize:11, color:genre.accent, fontWeight:700, marginBottom:6 }}>{genre.tagline}</div>
-          {trUnder(genre.tagline, { fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:6 })}
+          {trUnder(genre.tagline, { fontSize:11, color:'rgba(255,255,255,0.85)', marginBottom:6 })}
           <div style={{ fontSize:12, color:'#475569', fontWeight:600, lineHeight:1.5 }}>
             {genre.description}
           </div>
-          {trUnder(genre.description, { fontSize:11, color:'rgba(255,255,255,0.55)', lineHeight:1.5, marginTop:3 })}
+          {trUnder(genre.description, { fontSize:11, color:'rgba(255,255,255,0.85)', lineHeight:1.5, marginTop:3 })}
         </div>
       </div>
 

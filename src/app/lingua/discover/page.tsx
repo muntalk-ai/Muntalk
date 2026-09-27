@@ -654,12 +654,12 @@ function DiscoverContent() {
                   <div style={{ fontSize:36, marginBottom:10,
                     animation:'float 3s ease-in-out infinite' }}>{f.emoji}</div>
                   <div style={{ fontSize:18, fontWeight:900, color:'#fff', marginBottom:4 }}>{f.title}</div>
-                  {trUnder(f.title, { fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:4 })}
+                  {trUnder(f.title, { fontSize:11, color:'rgba(255,255,255,0.85)', marginBottom:4 })}
                   <div style={{ fontSize:12, color:f.accent, fontWeight:700, marginBottom:8 }}>{f.tagline}</div>
-                  {trUnder(f.tagline, { fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:8 })}
+                  {trUnder(f.tagline, { fontSize:11, color:'rgba(255,255,255,0.85)', marginBottom:8 })}
                   <div style={{ fontSize:12, color:'rgba(0,0,0,0.65)', fontWeight:600,
                     lineHeight:1.5 }}>{f.desc}</div>
-                  {trUnder(f.desc, { fontSize:11, color:'rgba(255,255,255,0.55)', lineHeight:1.5, marginTop:3 })}
+                  {trUnder(f.desc, { fontSize:11, color:'rgba(255,255,255,0.85)', lineHeight:1.5, marginTop:3 })}
 
                   {/* Special: Character preview */}
                   {f.id === 'character' && (
@@ -667,7 +667,7 @@ function DiscoverContent() {
                       background:'#E2E8F0', fontSize:11, color:'#475569',
                       fontWeight:600 }}>
                       Today: <strong>{todayPersona.name}</strong> — {todayPersona.role.slice(0,50)}...
-                      {trUnder(`${todayPersona.role.slice(0,50)}...`, { fontSize:10, color:'#94A3B8', marginTop:3 })}
+                      {trUnder(`${todayPersona.role.slice(0,50)}...`, { fontSize:10, color:'rgba(255,255,255,0.8)', marginTop:3 })}
                     </div>
                   )}
 
