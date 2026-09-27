@@ -35,7 +35,7 @@ export default function KoreanLanding() {
             🌍
           </div>
           <span style={{ fontWeight: 900, fontSize: 19, color: '#0F172A', letterSpacing: '-0.5px' }}>MunTalk</span>
-          <span style={{ background: '#EFF6FF', color: '#38BDF8', fontSize: 10, fontWeight: 800, padding: '2px 8px', borderRadius: 20 }}>
+          <span style={{ background: '#EFF6FF', color: '#0284C7', fontSize: 10, fontWeight: 800, padding: '2px 8px', borderRadius: 20 }}>
             BETA
           </span>
         </a>
@@ -277,7 +277,7 @@ export default function KoreanLanding() {
       </section>
 
       {/* -- Footer -- */}
-      <footer style={{ textAlign: 'center', padding: '32px', color: '#9CA3AF', fontSize: 13, borderTop: '1px solid #E9ECEF', background: '#fff' }}>
+      <footer style={{ textAlign: 'center', padding: '32px', color: '#6B7280', fontSize: 13, borderTop: '1px solid #E9ECEF', background: '#fff' }}>
         <div style={{ marginBottom: 12 }}>🌐 MunTalk · AI와 함께하는 언어 학습</div>
         <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 12 }}>
           <a href="/faq" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>도움말</a>

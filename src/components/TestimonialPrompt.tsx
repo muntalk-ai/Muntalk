@@ -67,7 +67,7 @@ export default function TestimonialPrompt({ uid, displayName, onDone }: Props) {
             {error && <div style={{ fontSize: 13, color: '#DC2626', fontWeight: 700, marginBottom: 12 }}>{error}</div>}
             <div style={{ display: 'flex', gap: 10 }}>
               <button onClick={handleSubmit} disabled={sending}
-                style={{ flex: 1, padding: '13px', borderRadius: 14, border: 'none', background: sending ? '#C7D2FE' : 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 900, fontSize: 14, cursor: sending ? 'default' : 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+                style={{ flex: 1, padding: '13px', borderRadius: 14, border: 'none', background: sending ? '#C7D2FE' : 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: sending ? '#4F46E5' : '#fff', fontWeight: 900, fontSize: 14, cursor: sending ? 'default' : 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 {sending ? 'Saving…' : 'Share My Review 💬'}
               </button>
               <button onClick={onDone}

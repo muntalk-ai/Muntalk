@@ -538,7 +538,7 @@ function PlacementInner() {
           Start Placement →
         </button>
         <button onClick={handleSkip}
-          style={{ background:'none', border:'none', color:'#475569', fontSize:13, fontWeight:700, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+          style={{ background:'none', border:'none', color:'#94A3B8', fontSize:13, fontWeight:700, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
           Skip — start from A1
         </button>
       </div>
@@ -582,7 +582,7 @@ function PlacementInner() {
               <button key={i} className="topt"
                 onClick={() => handleTrackAnswer(i)}
                 style={{ borderRadius:12, padding:'15px 18px', fontSize:15, fontWeight:800, textAlign:'left', cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display:'flex', alignItems:'center', gap:12 }}>
-                <span style={{ width:26, height:26, borderRadius:'50%', background:'#334155', display:'flex', alignItems:'center', justifyContent:'center', fontSize:11, fontWeight:900, color:'#64748B', flexShrink:0 }}>
+                <span style={{ width:26, height:26, borderRadius:'50%', background:'#334155', display:'flex', alignItems:'center', justifyContent:'center', fontSize:11, fontWeight:900, color:'#CBD5E1', flexShrink:0 }}>
                   {String.fromCharCode(65+i)}
                 </span>
                 {opt}
@@ -617,7 +617,7 @@ function PlacementInner() {
         <div style={{ fontSize:15, fontWeight:800, color:'#fff', marginBottom:6 }}>
           Generating your {langLabel} level test…
         </div>
-        <div style={{ fontSize:13, color:'#475569', fontWeight:700, animation:'pulse2 1.5s infinite' }}>
+        <div style={{ fontSize:13, color:'#94A3B8', fontWeight:700, animation:'pulse2 1.5s infinite' }}>
           AI is crafting 10 personalised questions
         </div>
       </div>
@@ -817,7 +817,7 @@ function PlacementInner() {
         <div style={{ background:'#1E293B', borderRadius:14, padding:'14px 18px', marginBottom:20, border:'1px solid #334155', display:'flex', justifyContent:'space-around' }}>
           {[
             { val:cefrCorrect, label:'Correct', color:'#6366F1' },
-            { val:questions.length-cefrCorrect, label:'Wrong',   color:'#475569' },
+            { val:questions.length-cefrCorrect, label:'Wrong',   color:'#94A3B8' },
             { val:`${Math.round(cefrCorrect/Math.max(questions.length,1)*100)}%`, label:'Accuracy', color:levelInfo.color },
           ].map((s,i) => (
             <div key={i} style={{ textAlign:'center' }}>

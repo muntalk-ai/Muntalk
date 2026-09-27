@@ -457,7 +457,7 @@ export default function AdminPage() {
             </div>
 
             <button onClick={handleSendEmail} disabled={emailSending}
-              style={{width:'100%',padding:'14px',borderRadius:12,border:'none',background:emailSending?'#C7D2FE':'linear-gradient(135deg,#6366F1,#8B5CF6)',color:'#fff',fontWeight:900,fontSize:14,cursor:emailSending?'default':'pointer',fontFamily:FONT}}>
+              style={{width:'100%',padding:'14px',borderRadius:12,border:'none',background:emailSending?'#C7D2FE':'linear-gradient(135deg,#6366F1,#8B5CF6)',color:emailSending?'#4F46E5':'#fff',fontWeight:900,fontSize:14,cursor:emailSending?'default':'pointer',fontFamily:FONT}}>
               {emailSending?'Sending...':'✉️ Send Email'}
             </button>
           </div>
@@ -610,7 +610,7 @@ export default function AdminPage() {
                 Cancel
               </button>
               <button onClick={handleSavePlan} disabled={saving===modal.uid}
-                style={{flex:2,padding:'11px',borderRadius:11,border:'none',background:saving===modal.uid?'#C7D2FE':'linear-gradient(135deg,#6366F1,#8B5CF6)',color:'#fff',fontWeight:900,fontSize:13,cursor:saving===modal.uid?'default':'pointer',fontFamily:FONT}}>
+                style={{flex:2,padding:'11px',borderRadius:11,border:'none',background:saving===modal.uid?'#C7D2FE':'linear-gradient(135deg,#6366F1,#8B5CF6)',color:saving===modal.uid?'#4F46E5':'#fff',fontWeight:900,fontSize:13,cursor:saving===modal.uid?'default':'pointer',fontFamily:FONT}}>
                 {saving===modal.uid?'Saving...':`${modalMode==='extend'?'Extend':'Grant'} ${PLAN_LABELS[selPlan]}`}
               </button>
             </div>

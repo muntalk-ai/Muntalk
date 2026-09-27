@@ -91,6 +91,20 @@ function SessionContent() {
       : [];
 
   const accentColor = everyday?.accentColor || world?.accentColor || '#6366F1';
+  // 밝은 accent(#7dd3fc 등)는 밝은 배경 위 텍스트·흰 글씨에서 안 보이므로 텍스트용 어두운 변형 사용
+  const accentDark = (() => {
+    const n = accentColor.replace('#','');
+    const v = parseInt(n.length===3 ? n.split('').map(c=>c+c).join('') : n, 16);
+    const f = (x:number) => Math.max(0, Math.round(x*0.55));
+    const r=f(v>>16&255), g=f(v>>8&255), b=f(v&255);
+    return '#'+((1<<24)+(r<<16)+(g<<8)+b).toString(16).slice(1);
+  })();
+  const isLightAccent = (() => {
+    const n = accentColor.replace('#','');
+    const v = parseInt(n.length===3 ? n.split('').map(c=>c+c).join('') : n, 16);
+    const lum = (0.2126*(v>>16&255) + 0.7152*(v>>8&255) + 0.0722*(v&255)) / 255;
+    return lum > 0.55;
+  })();
   const storyBeats  = world?.storyBeats || [];
 
   // ── State ──────────────────────────────────────────────────────────────────
@@ -524,7 +538,7 @@ Reply as ${npc.name} in ${targetLang}:`;
                 <>
                   <div style={{fontSize:52,marginBottom:8}}>{result.avgScore>=80?'🏆':result.avgScore>=65?'🎯':'💪'}</div>
                   <div style={{fontSize:24,fontWeight:900,color:'#0F172A',marginBottom:4}}>Scene Complete!</div>
-                  <div style={{fontSize:48,fontWeight:900,color:accentColor}}>{result.avgScore}</div>
+                  <div style={{fontSize:48,fontWeight:900,color:accentDark}}>{result.avgScore}</div>
                   <div style={{fontSize:12,color:'#94A3B8',fontWeight:700}}>{result.turns} turns · +{sessionXP} XP</div>
                 </>
               )}
@@ -569,7 +583,7 @@ Reply as ${npc.name} in ${targetLang}:`;
               <button onClick={()=>router.replace('/lingua/roleplay')}
                 style={{padding:'13px',borderRadius:13,border:'none',
                   background:`linear-gradient(135deg,${accentColor},${accentColor}cc)`,
-                  color:'#fff',fontWeight:800,fontSize:14,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
+                  color:isLightAccent?'#0F172A':'#fff',fontWeight:800,fontSize:14,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
                 More Worlds <span className="mt-flip-rtl">→</span>
               </button>
             </div>
@@ -614,7 +628,7 @@ Reply as ${npc.name} in ${targetLang}:`;
             {showNative ? ' · Subtitles ON' : ''}
           </div>
         </div>
-        <div style={{fontSize:12,fontWeight:800,color:accentColor}}>+{sessionXP} XP</div>
+        <div style={{fontSize:12,fontWeight:800,color:accentDark}}>+{sessionXP} XP</div>
       </div>
 
       {/* Progress */}
@@ -693,7 +707,7 @@ Reply as ${npc.name} in ${targetLang}:`;
           if (msg.from==='choice') return (
             <div key={msg.id} style={{textAlign:'center',animation:'fadeUp .3s ease'}}>
               <span style={{display:'inline-block',padding:'4px 14px',borderRadius:99,fontSize:12,
-                fontWeight:800,background:`${accentColor}15`,color:accentColor,
+                fontWeight:800,background:`${accentColor}15`,color:accentDark,
                 border:`1px solid ${accentColor}30`}}>{msg.text}</span>
             </div>
           );
@@ -738,7 +752,7 @@ Reply as ${npc.name} in ${targetLang}:`;
                 background:isUser?accentColor:'#fff',
                 border:isUser?'none':'1.5px solid #F1F5F9',
                 boxShadow:isUser?'none':'0 2px 6px rgba(0,0,0,0.05)',
-                color:isUser?'#fff':'#0F172A',fontSize:15,fontWeight:600,lineHeight:1.65}}>
+                color:isUser?(isLightAccent?'#0F172A':'#fff'):'#0F172A',fontSize:15,fontWeight:600,lineHeight:1.65}}>
                 {msg.text}
               </div>
 

@@ -1144,7 +1144,7 @@ RULES:
                 </div>
               )}
               <button
-                style={{ ...styles.speakBtn, background: isSpeaking ? '#9CA3AF' : canHear ? level.accent : '#E5E7EB', color: canHear ? '#fff' : '#92400E', cursor: canHear ? 'pointer' : 'default' }}
+                style={{ ...styles.speakBtn, background: isSpeaking ? '#6B7280' : canHear ? level.accent : '#E5E7EB', color: canHear ? '#fff' : '#92400E', cursor: canHear ? 'pointer' : 'default' }}
                 onClick={canHear ? handleSpeakVocab : undefined}
                 disabled={isSpeaking || !canHear}
               >

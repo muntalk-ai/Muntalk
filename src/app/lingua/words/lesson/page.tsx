@@ -551,7 +551,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
                   {chatLoading && (
                     <div style={{ display: 'flex', gap: 8, alignItems: 'flex-end' }}>
                       <img loading="lazy" src={tutor.thumbnail} alt={tutor.name} style={{ width: 32, height: 32, borderRadius: '50%', objectFit: 'cover', objectPosition: 'center 20%' }} />
-                      <div style={{ background: '#F1F5F9', borderRadius: '18px 18px 18px 4px', padding: '12px 20px', color: '#94A3B8', fontSize: 14 }}>✨ typing...</div>
+                      <div style={{ background: '#F1F5F9', borderRadius: '18px 18px 18px 4px', padding: '12px 20px', color: '#64748B', fontSize: 14 }}>✨ typing...</div>
                     </div>
                   )}
                   <div ref={chatEndRef} />

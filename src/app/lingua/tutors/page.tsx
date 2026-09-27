@@ -180,7 +180,7 @@ export default function TutorsPage() {
             Cancel
           </button>
           <button onClick={handleSelect} disabled={saving}
-            style={{ padding: '11px 24px', borderRadius: 12, border: 'none', background: saved ? '#10B981' : saving ? '#93C5FD' : '#2563EB', color: '#fff', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 900, fontSize: 14, cursor: saving ? 'default' : 'pointer', minWidth: 160 }}>
+            style={{ padding: '11px 24px', borderRadius: 12, border: 'none', background: saved ? '#10B981' : saving ? '#93C5FD' : '#2563EB', color: saving ? '#1E40AF' : '#fff', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 900, fontSize: 14, cursor: saving ? 'default' : 'pointer', minWidth: 160 }}>
             {saved ? '✓ Saved!' : saving ? 'Saving...' : pendingTutor.id === currentId ? 'Keep This Tutor →' : 'Confirm Selection →'}
           </button>
         </div>
