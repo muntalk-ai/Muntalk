@@ -13,84 +13,92 @@ import { PURPOSE_OPTIONS, purposePromptBlock, mapTrackToPurpose, isLearningPurpo
 import type { LearningPurpose } from '@/lib/purpose';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 import RtlDir from '@/components/RtlDir';
+import { addCardToSRS } from '@/lib/spacedRepetition';
 
 // ─── Unit Data ───────────────────────────────────────────────────────────────
 const UNITS = [
   { id: 1, title: 'First Words',       emoji: '👋', words: [
-    { word: 'Hello',   emoji: '👋', phonetic: 'heh-LOH' },
-    { word: 'Yes',     emoji: '✅', phonetic: 'yɛs' },
-    { word: 'No',      emoji: '❌', phonetic: 'noʊ' },
-    { word: 'Please',  emoji: '🙏', phonetic: 'pliːz' },
-    { word: 'Thank you', emoji: '😊', phonetic: 'ΘÆŊK-yuː' },
+    { word: 'Hello',   emoji: '👋', phonetic: 'heh-LOH',   example: 'Hello! How are you?' },
+    { word: 'Yes',     emoji: '✅', phonetic: 'yehs',      example: 'Yes, please.' },
+    { word: 'No',      emoji: '❌', phonetic: 'noh',       example: 'No, thank you.' },
+    { word: 'Please',  emoji: '🙏', phonetic: 'pleez',     example: 'Water, please.' },
+    { word: 'Thank you', emoji: '😊', phonetic: 'THANK-yoo', example: 'Thank you very much!' },
   ]},
-  { id: 2, title: 'Numbers 1–5',       emoji: '🔢', words: [
-    { word: 'One',   emoji: '1️⃣', phonetic: 'wʌn' },
-    { word: 'Two',   emoji: '2️⃣', phonetic: 'tuː' },
-    { word: 'Three', emoji: '3️⃣', phonetic: 'θriː' },
-    { word: 'Four',  emoji: '4️⃣', phonetic: 'fɔːr' },
-    { word: 'Five',  emoji: '5️⃣', phonetic: 'faɪv' },
+  { id: 2, title: 'Introducing Yourself', emoji: '🤝', words: [
+    { word: 'I am',   emoji: '🙋', phonetic: 'eye am',         example: 'I am Jay.' },
+    { word: 'My name', emoji: '📛', phonetic: 'my naym',       example: 'My name is Jay.' },
+    { word: 'I am from', emoji: '🌍', phonetic: 'eye am frum', example: 'I am from Korea.' },
+    { word: 'Nice to meet you', emoji: '🤝', phonetic: 'nyse tu meet yoo', example: 'Nice to meet you!' },
+    { word: 'Goodbye', emoji: '👋', phonetic: 'gud-BY',        example: 'Goodbye! See you!' },
   ]},
-  { id: 3, title: 'Numbers 6–10',      emoji: '🔟', words: [
-    { word: 'Six',   emoji: '6️⃣', phonetic: 'sɪks' },
-    { word: 'Seven', emoji: '7️⃣', phonetic: 'SEV-ən' },
-    { word: 'Eight', emoji: '8️⃣', phonetic: 'eɪt' },
-    { word: 'Nine',  emoji: '9️⃣', phonetic: 'naɪn' },
-    { word: 'Ten',   emoji: '🔟', phonetic: 'tɛn' },
+  { id: 3, title: 'Numbers 1–5',       emoji: '🔢', words: [
+    { word: 'One',   emoji: '1️⃣', phonetic: 'wun',   example: 'One apple.' },
+    { word: 'Two',   emoji: '2️⃣', phonetic: 'too',   example: 'Two cats.' },
+    { word: 'Three', emoji: '3️⃣', phonetic: 'three', example: 'Three books.' },
+    { word: 'Four',  emoji: '4️⃣', phonetic: 'for',   example: 'Four birds.' },
+    { word: 'Five',  emoji: '5️⃣', phonetic: 'fyve',  example: 'Five stars.' },
   ]},
-  { id: 4, title: 'Colors',            emoji: '🎨', words: [
-    { word: 'Red',    emoji: '🔴', phonetic: 'rɛd' },
-    { word: 'Blue',   emoji: '🔵', phonetic: 'bluː' },
-    { word: 'Green',  emoji: '🟢', phonetic: 'ɡriːn' },
-    { word: 'Yellow', emoji: '🟡', phonetic: 'YEL-oh' },
-    { word: 'White',  emoji: '⬜', phonetic: 'waɪt' },
+  { id: 4, title: 'Numbers 6–10',      emoji: '🔟', words: [
+    { word: 'Six',   emoji: '6️⃣', phonetic: 'siks',    example: 'Six eggs.' },
+    { word: 'Seven', emoji: '7️⃣', phonetic: 'SEV-uhn', example: 'Seven days.' },
+    { word: 'Eight', emoji: '8️⃣', phonetic: 'ayt',     example: 'Eight fish.' },
+    { word: 'Nine',  emoji: '9️⃣', phonetic: 'nyne',    example: 'Nine pens.' },
+    { word: 'Ten',   emoji: '🔟', phonetic: 'tehn',    example: 'Ten fingers.' },
   ]},
-  { id: 5, title: 'Body Parts',        emoji: '🧍', words: [
-    { word: 'Head',  emoji: '🗣️', phonetic: 'hɛd' },
-    { word: 'Hand',  emoji: '✋', phonetic: 'hænd' },
-    { word: 'Eye',   emoji: '👁️', phonetic: 'aɪ' },
-    { word: 'Mouth', emoji: '👄', phonetic: 'maʊθ' },
-    { word: 'Ear',   emoji: '👂', phonetic: 'ɪər' },
+  { id: 5, title: 'Colors',            emoji: '🎨', words: [
+    { word: 'Red',    emoji: '🔴', phonetic: 'rehd',   example: 'A red apple.' },
+    { word: 'Blue',   emoji: '🔵', phonetic: 'bloo',   example: 'The blue sky.' },
+    { word: 'Green',  emoji: '🟢', phonetic: 'green',  example: 'Green grass.' },
+    { word: 'Yellow', emoji: '🟡', phonetic: 'YEL-oh', example: 'A yellow banana.' },
+    { word: 'White',  emoji: '⬜', phonetic: 'wyte',   example: 'White snow.' },
   ]},
-  { id: 6, title: 'Family',            emoji: '👨‍👩‍👧', words: [
-    { word: 'Mother',  emoji: '👩', phonetic: 'MUH-thər' },
-    { word: 'Father',  emoji: '👨', phonetic: 'FAH-thər' },
-    { word: 'Sister',  emoji: '👧', phonetic: 'SIS-tər' },
-    { word: 'Brother', emoji: '👦', phonetic: 'BRUH-thər' },
-    { word: 'Friend',  emoji: '🤝', phonetic: 'frɛnd' },
+  { id: 6, title: 'Body Parts',        emoji: '🧍', words: [
+    { word: 'Head',  emoji: '🗣️', phonetic: 'hehd',  example: 'Touch your head.' },
+    { word: 'Hand',  emoji: '✋', phonetic: 'hand',  example: 'Raise your hand.' },
+    { word: 'Eye',   emoji: '👁️', phonetic: 'eye',   example: 'I see with my eyes.' },
+    { word: 'Mouth', emoji: '👄', phonetic: 'mowth', example: 'Open your mouth.' },
+    { word: 'Ear',   emoji: '👂', phonetic: 'eer',   example: 'I hear with my ears.' },
   ]},
-  { id: 7, title: 'Food & Drink',      emoji: '🍽️', words: [
-    { word: 'Water', emoji: '💧', phonetic: 'WAW-tər' },
-    { word: 'Food',  emoji: '🍱', phonetic: 'fuːd' },
-    { word: 'Bread', emoji: '🍞', phonetic: 'brɛd' },
-    { word: 'Rice',  emoji: '🍚', phonetic: 'raɪs' },
-    { word: 'Fruit', emoji: '🍎', phonetic: 'fruːt' },
+  { id: 7, title: 'Family',            emoji: '👨‍👩‍👧', words: [
+    { word: 'Mother',  emoji: '👩', phonetic: 'MUH-thur',  example: 'My mother is kind.' },
+    { word: 'Father',  emoji: '👨', phonetic: 'FAH-thur',  example: 'My father is tall.' },
+    { word: 'Sister',  emoji: '👧', phonetic: 'SIS-tur',   example: 'My sister is funny.' },
+    { word: 'Brother', emoji: '👦', phonetic: 'BRUH-thur', example: 'My brother is strong.' },
+    { word: 'Friend',  emoji: '🤝', phonetic: 'frend',     example: 'You are my friend.' },
   ]},
-  { id: 8, title: 'Places',            emoji: '🏠', words: [
-    { word: 'Home',   emoji: '🏠', phonetic: 'hoʊm' },
-    { word: 'School', emoji: '🏫', phonetic: 'skuːl' },
-    { word: 'Store',  emoji: '🏪', phonetic: 'stɔːr' },
-    { word: 'Street', emoji: '🛣️', phonetic: 'striːt' },
-    { word: 'Park',   emoji: '🌳', phonetic: 'pɑːrk' },
+  { id: 8, title: 'Food & Drink',      emoji: '🍽️', words: [
+    { word: 'Water', emoji: '💧', phonetic: 'WAW-tur', example: 'I drink water.' },
+    { word: 'Food',  emoji: '🍱', phonetic: 'food',    example: 'I like food.' },
+    { word: 'Bread', emoji: '🍞', phonetic: 'brehd',   example: 'Fresh bread.' },
+    { word: 'Rice',  emoji: '🍚', phonetic: 'ryse',    example: 'I eat rice.' },
+    { word: 'Fruit', emoji: '🍎', phonetic: 'froot',   example: 'Sweet fruit.' },
   ]},
-  { id: 9, title: 'Actions',           emoji: '🏃', words: [
-    { word: 'Go',    emoji: '🚶', phonetic: 'ɡoʊ' },
-    { word: 'Come',  emoji: '👉', phonetic: 'kʌm' },
-    { word: 'Eat',   emoji: '😋', phonetic: 'iːt' },
-    { word: 'Drink', emoji: '🥤', phonetic: 'drɪŋk' },
-    { word: 'Sleep', emoji: '😴', phonetic: 'sliːp' },
+  { id: 9, title: 'Places',            emoji: '🏠', words: [
+    { word: 'Home',   emoji: '🏠', phonetic: 'hohm',   example: 'I am home.' },
+    { word: 'School', emoji: '🏫', phonetic: 'skool',  example: 'I go to school.' },
+    { word: 'Store',  emoji: '🏪', phonetic: 'stor',   example: 'The store is open.' },
+    { word: 'Street', emoji: '🛣️', phonetic: 'street', example: 'A busy street.' },
+    { word: 'Park',   emoji: '🌳', phonetic: 'pahrk',  example: 'We play in the park.' },
   ]},
-  { id: 10, title: 'Simple Phrases',   emoji: '💬', words: [
-    { word: 'I am',    emoji: '🙋', phonetic: 'aɪ æm' },
-    { word: 'I want',  emoji: '🙌', phonetic: 'aɪ wɒnt' },
-    { word: 'I like',  emoji: '❤️', phonetic: 'aɪ laɪk' },
-    { word: 'Good',    emoji: '👍', phonetic: 'ɡʊd' },
-    { word: 'Help',    emoji: '🆘', phonetic: 'hɛlp' },
+  { id: 10, title: 'Actions',           emoji: '🏃', words: [
+    { word: 'Go',    emoji: '🚶', phonetic: 'goh',   example: 'I go home.' },
+    { word: 'Come',  emoji: '👉', phonetic: 'kum',   example: 'Come here!' },
+    { word: 'Eat',   emoji: '😋', phonetic: 'eet',   example: 'I eat bread.' },
+    { word: 'Drink', emoji: '🥤', phonetic: 'drink', example: 'Drink water!' },
+    { word: 'Sleep', emoji: '😴', phonetic: 'sleep', example: 'I sleep at night.' },
+  ]},
+  { id: 11, title: 'Simple Phrases',   emoji: '💬', words: [
+    { word: 'I want',  emoji: '🙌', phonetic: 'eye wont', example: 'I want water.' },
+    { word: 'I like',  emoji: '❤️', phonetic: 'eye lyke', example: 'I like rice.' },
+    { word: 'Good',    emoji: '👍', phonetic: 'gud',      example: 'Very good!' },
+    { word: 'Help',    emoji: '🆘', phonetic: 'help',     example: 'Help me, please!' },
+    { word: 'Sorry',   emoji: '🙏', phonetic: 'SOR-ee',   example: 'Sorry! I am late.' },
   ]},
 ];
 
 type Phase = 'goal' | 'lobby' | 'learn' | 'listen' | 'match' | 'speak' | 'chat' | 'complete';
-type Word = { word: string; emoji: string; phonetic: string };
-type TranslatedUnit = { word: string; emoji: string; phonetic: string; original: string; meaning?: string }[];
+type Word = { word: string; emoji: string; phonetic: string; example?: string };
+type TranslatedUnit = { word: string; emoji: string; phonetic: string; original: string; meaning?: string; example?: string }[];
 
 // BCP-47 -> display name for prompts (target + native language names)
 const LANG_DISPLAY_NAMES: Record<string,string> = {
@@ -337,18 +345,21 @@ function StarterContent() {
     const nativeLang = LANG_DISPLAY_NAMES[subLang] || 'English';
     const currentUnit = UNITS[unitIdx];
     const wordList = currentUnit.words.map(w => w.word).join(', ');
+    const exampleList = currentUnit.words.map(w => w.example).join(' || ');
 
     const prompt = `Translate these ${currentUnit.words.length} words into ${targetLang} for a complete beginner.
 English words: ${wordList}
+Example sentences (same order, one per word): ${exampleList}
 
 Return ONLY a JSON array, no markdown, no explanation:
-[{"word":"TRANSLATED_WORD","phonetic":"ROMANIZED_PRONUNCIATION","original":"ENGLISH_WORD","meaning":"MEANING_IN_${nativeLang.toUpperCase()}"},...]
+[{"word":"TRANSLATED_WORD","phonetic":"ROMANIZED_PRONUNCIATION","original":"ENGLISH_WORD","meaning":"MEANING_IN_${nativeLang.toUpperCase()}","example":"TRANSLATED_EXAMPLE"},...]
 
 Rules:
 - word: the word in ${targetLang} script
 - phonetic: simple romanized pronunciation guide (e.g. "an-nyong" for 안녕)
 - original: the original English word exactly as given
 - meaning: the meaning of the word in ${nativeLang} (the learner's native language)
+- example: translate the example sentence into ${targetLang}, keeping it natural and beginner-friendly
 - Keep the same order as the input
 - Return exactly ${currentUnit.words.length} items`;
 
@@ -370,6 +381,8 @@ Rules:
           original: item.original || currentUnit.words[i].word,
           // 의미는 학습자 모국어로 (없으면 영어 원문으로 폴백)
           meaning:  item.meaning  || item.original || currentUnit.words[i].word,
+          // 예문도 목표 언어로 번역 (없으면 영어 원문으로 폴백)
+          example:  item.example  || currentUnit.words[i].example,
         }));
         setTranslatedWords(merged);
       }
@@ -450,7 +463,7 @@ Rules:
 
   // ── MATCH phase ─────────────────────────────────────────────────────────────
   const startMatchPhase = useCallback(async () => {
-    const sample = words.slice(0, 3);
+    const sample = words; // 유닛 단어 전부 (5개) — 회상 연습에서 제외되는 단어 없음
     const translations: Record<string,string> = {};
     for (const w of sample) {
       translations[w.word] = await translateWord(w.word);
@@ -483,12 +496,12 @@ Rules:
       setMatchDone(d => [...d, leftWord, rightWord]);
       setMatchSel(null);
       setXp(x => x + 15); setXpPop(true); setTimeout(() => setXpPop(false), 1000);
-      if (matchDone.length + 2 >= 6) setTimeout(() => startSpeakPhase(), 700);
+      if (matchDone.length + 2 >= words.length * 2) setTimeout(() => startSpeakPhase(), 700);
     } else {
       setMatchWrong([leftWord, rightWord]);
       setTimeout(() => { setMatchWrong([]); setMatchSel(null); }, 800);
     }
-  }, [matchSel, matchDone, matchTranslations, subLang]);
+  }, [matchSel, matchDone, matchTranslations, subLang, words]);
 
   // ── SPEAK phase ─────────────────────────────────────────────────────────────
   const startSpeakPhase = useCallback(() => {
@@ -667,7 +680,22 @@ LANGUAGE RULES:
     setLearnDone(false);
     setChatStarted(false);
     setChatMsgs([]);
+    setReviewSaved(false);
   }, [unitIdx, router]);
+
+  // ── 유닛 완료 시 단어를 SRS Review 덱에 자동 저장 (로그인 유저만) ──────────
+  const [reviewSaved, setReviewSaved] = useState(false);
+  useEffect(() => {
+    if (phase !== 'complete' || reviewSaved || !user) return;
+    setReviewSaved(true);
+    (async () => {
+      for (const w of words) {
+        try {
+          await addCardToSRS(user.uid, w.word, (w as any).meaning || (w as any).original || w.word, langId);
+        } catch { /* 저장 실패는 조용히 무시 — 학습 플로우 방해 금지 */ }
+      }
+    })();
+  }, [phase, reviewSaved, user, words, langId]);
 
   // ── Styles ──────────────────────────────────────────────────────────────────
   const ACCENT = '#6366F1';
@@ -934,6 +962,18 @@ LANGUAGE RULES:
               {(w as any).meaning}
             </div>
           )}
+          {/* Example sentence — tap to hear it */}
+          {w.example && (
+            <div onClick={(e) => { e.stopPropagation(); if (voiceSupported) speak(w.example!); }}
+              className="tth-btn"
+              style={{ display: 'block', margin: '2px auto 10px', maxWidth: '100%',
+                fontSize: 14, color: '#475569', fontWeight: 700, lineHeight: 1.6,
+                background: '#F8FAFC', border: '1.5px dashed #CBD5E1',
+                borderRadius: 12, padding: '10px 14px',
+                cursor: voiceSupported ? 'pointer' : 'default' }}>
+              💬 {w.example}
+            </div>
+          )}
           <div className="tth-btn" style={{ display:'inline-flex', alignItems:'center', justifyContent:'center',
             minHeight: 56, padding: '12px 36px', borderRadius: 99, marginBottom: 0,
             fontSize: 17, color: voiceSupported ? ACCENT : '#94A3B8', fontWeight: 800,
@@ -1148,7 +1188,7 @@ LANGUAGE RULES:
         </div>
       </div>
 
-      {matchDone.length >= 6 && (
+      {matchDone.length >= matchLeft.length * 2 && matchLeft.length > 0 && (
         <button onClick={startSpeakPhase}
           style={{ ...btnBase, marginTop: 40, padding: '16px 48px', fontSize: 18,
             background: `linear-gradient(135deg, #10B981, #059669)`,
@@ -1462,7 +1502,7 @@ LANGUAGE RULES:
 
       {/* Words learned */}
       <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap',
-        justifyContent: 'center', marginBottom: 40, maxWidth: 360 }}>
+        justifyContent: 'center', marginBottom: 16, maxWidth: 360 }}>
         {words.map((w, i) => (
           <div key={i} style={{ background: 'white', borderRadius: 14,
             padding: '10px 16px', fontSize: 14, fontWeight: 800,
@@ -1472,6 +1512,13 @@ LANGUAGE RULES:
           </div>
         ))}
       </div>
+
+      {user && (
+        <div style={{ fontSize: 13, fontWeight: 700, color: '#10B981',
+          marginBottom: 28 }}>
+          🔖 Words saved to your Review deck
+        </div>
+      )}
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12,
         width: '100%', maxWidth: 320 }}>
