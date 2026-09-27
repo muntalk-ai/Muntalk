@@ -149,6 +149,12 @@ function StarterContent() {
   // Speak phase
   const [speakIdx, setSpeakIdx]     = useState(0);
   const [speakDone, setSpeakDone]   = useState<boolean[]>([]);
+  // "Say it" pronunciation check (replaces the old "I said it!" self-confirm)
+  const [sayListening, setSayListening] = useState(false);
+  const [sayLoading, setSayLoading]     = useState(false);
+  const [sayError, setSayError]         = useState<string | null>(null);
+  const [sayResult, setSayResult]       = useState<{ heard: string; score: number; feedback: string } | null>(null);
+  const [sayUnsupported, setSayUnsupported] = useState(false); // STT 불가 → "I said it!" 폴백
 
   // Chat phase
   const [chatMsgs, setChatMsgs]     = useState<{role:'tutor'|'user';text:string}[]>([]);
@@ -498,6 +504,8 @@ Rules:
     newDone[speakIdx] = true;
     setSpeakDone(newDone);
     setXp(x => x + 5);
+    setSayResult(null);
+    setSayError(null);
     if (next >= words.length) {
       setTimeout(() => startChatPhase(), 500);
     } else {
@@ -505,6 +513,68 @@ Rules:
       setTimeout(() => speak(words[next].word), 300);
     }
   }, [speakIdx, speakDone, words, speak]);
+
+  // ── "Say it" 발음 체크: STT로 인식 → Gemini가 점수·피드백 ──────────────────
+  const handleSayPractice = useCallback(() => {
+    if (sayListening || sayLoading) return;
+    const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (!SR) { setSayUnsupported(true); return; } // STT 미지원 → "I said it!" 폴백
+    const w = words[speakIdx];
+    if (!w) return;
+    setSayError(null);
+    // TTS 재생 중이면 먼저 정지 — 재생 중 STT 시작이 인식을 죽이는 경우 방지
+    const prev = audioRef.current;
+    if (prev) { try { prev.pause(); prev.currentTime = 0; } catch { /* noop */ } }
+    audioRef.current = null;
+    setIsSpeaking(false);
+    const rec = new SR();
+    rec.lang = langId;
+    rec.continuous = false;
+    rec.interimResults = false;
+    setSayListening(true);
+    rec.onresult = async (e: any) => {
+      setSayListening(false);
+      const transcript: string | undefined = e.results?.[0]?.[0]?.transcript?.trim();
+      if (!transcript) { setSayError("Didn't catch that. Please try again."); return; }
+      setSayLoading(true);
+      try {
+        const targetLang = LANG_DISPLAY_NAMES[langId] || langId;
+        const nativeLang = LANG_DISPLAY_NAMES[subLang] || 'English';
+        const text = await callGemini(
+          `You are a pronunciation coach for ${targetLang} learners.\n` +
+          `The student tried to say: "${w.word}" (pronunciation guide: ${(w as any).phonetic || 'n/a'}, meaning: ${(w as any).meaning || 'n/a'}).\n` +
+          `Speech recognition heard them say: "${transcript}".\n` +
+          `Compare what they said vs the target. Reply in ${nativeLang} with ONLY JSON, no markdown:\n` +
+          `{"score":<0-100>,"heard":"<what you think they actually said>","feedback":"<1-2 sentences: which exact sound was off and how to fix it (e.g. tongue position, sound length). If great, praise briefly and specifically>"}`
+        );
+        const parsed = JSON.parse((text || '').replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim());
+        if (!parsed.feedback) throw new Error('empty feedback');
+        setSayResult({
+          heard: parsed.heard || transcript,
+          score: typeof parsed.score === 'number' ? parsed.score : 70,
+          feedback: parsed.feedback,
+        });
+      } catch {
+        setSayResult({ heard: transcript, score: 0, feedback: '' });
+        setSayError('Could not analyze your pronunciation. Please try again.');
+      } finally {
+        setSayLoading(false);
+      }
+    };
+    rec.onerror = (e: any) => {
+      setSayListening(false);
+      const code = e?.error;
+      if (code === 'language-not-supported') { setSayUnsupported(true); return; } // 예: 버마어 → "I said it!" 폴백
+      if (code === 'not-allowed' || code === 'service-not-allowed') { setMicGuide('denied'); setSayError(null); }
+      else if (code === 'audio-capture') { setMicGuide('no-mic'); setSayError(null); }
+      else setSayError('Speech recognition ran into a problem. Please try again.');
+    };
+    rec.onend = () => setSayListening(false);
+    try { rec.start(); } catch {
+      setSayListening(false);
+      setSayError('Speech recognition ran into a problem. Please try again.');
+    }
+  }, [sayListening, sayLoading, words, speakIdx, langId, subLang, callGemini]);
 
   // ── CHAT phase ─────────────────────────────────────────────────────────────
   const startChatPhase = useCallback(async () => {
@@ -1145,12 +1215,81 @@ LANGUAGE RULES:
           </div>
         </div>
 
-        <button onClick={handleSpeakDone}
-          style={{ ...btnBase, padding: '18px 48px', fontSize: 18,
-            background: `linear-gradient(135deg, #F59E0B, #D97706)`,
-            color: 'white', boxShadow: '0 6px 20px #F59E0B40' }}>
-          🗣️ I said it!
-        </button>
+        {sayUnsupported ? (
+          <button onClick={handleSpeakDone}
+            className="tth-btn"
+            style={{ ...btnBase, padding: '18px 48px', fontSize: 18,
+              background: `linear-gradient(135deg, #F59E0B, #D97706)`,
+              color: 'white', boxShadow: '0 6px 20px #F59E0B40' }}>
+            🗣️ I said it!
+          </button>
+        ) : (
+          <button onClick={handleSayPractice} disabled={sayListening || sayLoading}
+            className="tth-btn"
+            style={{ ...btnBase, padding: '18px 48px', fontSize: 18,
+              background: sayListening
+                ? 'linear-gradient(135deg, #EF4444, #DC2626)'
+                : `linear-gradient(135deg, #F59E0B, #D97706)`,
+              color: 'white', boxShadow: '0 6px 20px #F59E0B40',
+              cursor: sayListening || sayLoading ? 'default' : 'pointer',
+              opacity: sayLoading ? 0.7 : 1 }}>
+            {sayListening ? '🎤 Listening... speak now!' : sayLoading ? '⏳ Analyzing...' : '🎤 Say it'}
+          </button>
+        )}
+
+        {sayError && (
+          <div style={{ marginTop: 12, fontSize: 13, fontWeight: 700, color: '#B91C1C' }}>
+            ⚠️ {sayError}
+          </div>
+        )}
+        {micGuide && (
+          <div style={{ marginTop: 12, maxWidth: 420, width: '100%' }}>
+            <MicGuide reason={micGuide} onDismiss={() => setMicGuide(null)} />
+          </div>
+        )}
+
+        {sayResult && sayResult.feedback ? (
+          <div style={{ marginTop: 20, padding: '16px 20px', borderRadius: 16,
+            maxWidth: 420, width: '100%', textAlign: 'left',
+            background: sayResult.score >= 70 ? '#ECFDF5' : '#FFFBEB',
+            border: `2px solid ${sayResult.score >= 70 ? '#A7F3D0' : '#FDE68A'}`,
+            animation: 'pop .3s ease' }}>
+            <div style={{ fontSize: 15, fontWeight: 900,
+              color: sayResult.score >= 70 ? '#059669' : '#D97706', marginBottom: 6 }}>
+              🎯 Pronunciation score: {sayResult.score}
+            </div>
+            <div style={{ fontSize: 13, color: '#64748B', fontWeight: 600, marginBottom: 6 }}>
+              Heard: &ldquo;{sayResult.heard}&rdquo;
+            </div>
+            <div style={{ fontSize: 14, color: '#0F172A', fontWeight: 600,
+              lineHeight: 1.7, marginBottom: 14 }}>
+              {sayResult.feedback}
+            </div>
+            <div style={{ display: 'flex', gap: 12 }}>
+              <button onClick={handleSayPractice}
+                className="tth-btn"
+                style={{ ...btnBase, flex: 1, padding: '12px', fontSize: 15,
+                  background: 'white', color: '#475569',
+                  border: '2px solid #E2E8F0' }}>
+                🔁 Try again
+              </button>
+              <button onClick={handleSpeakDone}
+                className="tth-btn"
+                style={{ ...btnBase, flex: 1, padding: '12px', fontSize: 15,
+                  background: `linear-gradient(135deg, ${ACCENT}, #818CF8)`,
+                  color: 'white', boxShadow: `0 4px 14px ${ACCENT}40` }}>
+                Next →
+              </button>
+            </div>
+          </div>
+        ) : !sayUnsupported && (
+          <button onClick={handleSpeakDone}
+            style={{ marginTop: 14, background: 'none', border: 'none',
+              fontSize: 14, fontWeight: 700, color: '#94A3B8',
+              cursor: 'pointer', textDecoration: 'underline' }}>
+            Skip →
+          </button>
+        )}
 
         <div style={{ display: 'flex', gap: 8, marginTop: 32 }}>
           {words.map((_, i) => (
