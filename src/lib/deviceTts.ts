@@ -4,6 +4,8 @@
 // system TTS engine with these voices; desktop browsers often don't.
 // Always resolves onEnd() so lesson/roleplay flow never hangs.
 
+import { stripEmojis } from './stripEmojis';
+
 let cachedVoices: SpeechSynthesisVoice[] | null = null;
 
 function synth(): SpeechSynthesis | null {
@@ -91,7 +93,7 @@ export async function speakWithDeviceTts(
   };
   try {
     const s = synth();
-    const clean = (text || '').trim();
+    const clean = stripEmojis(text || '').trim();
     if (!s || !clean) {
       finish();
       return false;
