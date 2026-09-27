@@ -8,8 +8,10 @@ import { isAdminEmail } from '@/lib/subscription';
 export default function LevelPage({ params }: { params: { level: string } }) {
   const { level } = params;
   const searchParams = useSearchParams();
-  const langId  = searchParams.get('lang')    || 'en-US';
-  const subLang = searchParams.get('subLang') || 'ko-KR';
+  // URL param 우선, 없으면 localStorage(프로필에서 저장된 학습 언어) 폴백 — lesson 페이지와 동일 패턴.
+  // (Back 버튼 등이 ?lang= 없이 들어와도 학습 언어가 en-US로 리셋되지 않도록)
+  const [langId, setLangId]   = useState(searchParams.get('lang')    || 'en-US');
+  const [subLang, setSubLang] = useState(searchParams.get('subLang') || 'ko-KR');
 
   const { user, loading: authLoading } = useAuth();
 
@@ -26,6 +28,14 @@ export default function LevelPage({ params }: { params: { level: string } }) {
       setXp(savedXp);
       setCompletedLessons(new Set(savedDone));
       setTutorId(savedTutor);
+      if (!searchParams.get('lang')) {
+        const lsLang = localStorage.getItem('mt_learn_lang');
+        if (lsLang) setLangId(lsLang);
+      }
+      if (!searchParams.get('subLang')) {
+        const lsNative = localStorage.getItem('mt_native_lang');
+        if (lsNative) setSubLang(lsNative);
+      }
     } catch { /* ignore */ }
     setLocalLoaded(true);
   }, []);
