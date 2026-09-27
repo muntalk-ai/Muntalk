@@ -59,6 +59,17 @@ export function deviceTtsAvailable(): boolean {
 }
 
 /**
+ * Does the device actually have a voice matching `lang` (BCP-47, e.g. 'my-MM')?
+ * Used to decide whether "Tap to hear" should be offered at all.
+ */
+export async function deviceHasVoiceFor(lang: string): Promise<boolean> {
+  const s = synth();
+  if (!s) return false;
+  const voices = await loadVoices(s);
+  return matchVoice(voices, lang) !== null;
+}
+
+/**
  * Speak text with a device voice matching `lang` (BCP-47, e.g. 'my-MM').
  * Returns true if a matching voice was found and speech started.
  * Never throws; always calls onEnd exactly once.
