@@ -2,7 +2,7 @@
 import {
   getIdentity, checkRateLimit, clientIp, fetchWithTimeout,
 } from '@/lib/apiGuard';
-import { stripEmojis } from '@/lib/stripEmojis';
+import { cleanTtsText } from '@/lib/stripEmojis';
 
 // Google Cloud TTS supported voice map
 // Reference: https://cloud.google.com/text-to-speech/docs/voices
@@ -168,8 +168,8 @@ export async function POST(req: NextRequest) {
   try {
     const { text, lang = 'en-US', gender = 'female', speed = 0.95, level } = await req.json();
 
-    // ── 이모지 제거: TTS가 이모지를 단어로 읽어버리는 문제 방지 (전 수업 공통) ──
-    const cleanText: string = stripEmojis(typeof text === 'string' ? text : '');
+    // ── 이모지·기호 제거: TTS가 학습 문장만 읽도록 (전 수업 공통) ──
+    const cleanText: string = cleanTtsText(typeof text === 'string' ? text : '');
 
     // ── PR-F: abuse guards ──
     // 로그인 유저: UID 기준 분당 30회. 게스트: IP 기준 분당 10회. text 500자 캡.
