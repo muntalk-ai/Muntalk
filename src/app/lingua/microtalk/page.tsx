@@ -11,6 +11,7 @@ import { getLangLabel, hasStt } from '@/data/languages';
 import { PURPOSE_OPTIONS, PURPOSE_LABEL } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
 import { truncateHistory } from '@/lib/history';
+import { cleanTtsText } from '@/lib/stripEmojis';
 import {
   MICROTALK_SECONDS, GUEST_DAILY_LIMIT,
   buildMicroTalkPrompt, buildOpeningPrompt, buildReportPrompt,
@@ -133,8 +134,10 @@ export default function MicroTalkPage() {
     try {
       const synth = window.speechSynthesis;
       if (!synth) return;
+      const clean = cleanTtsText(text || '');
+      if (!clean) return;
       synth.cancel();
-      const u = new SpeechSynthesisUtterance(text);
+      const u = new SpeechSynthesisUtterance(clean);
       u.lang = learnLang;
       synth.speak(u);
     } catch { /* ignore */ }
