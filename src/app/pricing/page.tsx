@@ -191,7 +191,7 @@ function PricingContent() {
                   </div>
                 )}
                 {isCurrent && (
-                  <div style={{ position:'absolute', top:-13, right:16, background:'#10B981', color:'#fff', fontSize:10, fontWeight:900, padding:'4px 12px', borderRadius:20 }}>
+                  <div style={{ position:'absolute', top:-13, right:16, background:'#047857', color:'#fff', fontSize:10, fontWeight:900, padding:'4px 12px', borderRadius:20 }}>
                     Current plan
                   </div>
                 )}

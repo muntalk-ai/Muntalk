@@ -581,12 +581,12 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
                   fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
                   background: langMode===opt.id ? opt.color : '#F1F5F9',
                   outline: langMode===opt.id ? `2px solid ${opt.color}50` : 'none',
-                  color: langMode===opt.id ? '#fff' : '#64748B',
+                  color: langMode===opt.id ? (opt.color==='#F59E0B' ? '#78350F' : '#fff') : '#64748B',
                   boxShadow: langMode===opt.id ? `0 4px 14px ${opt.color}40` : 'none',
                   transition:'all .15s' }}>
                 <div style={{ fontSize:13, fontWeight:800 }}>{opt.label}</div>
                 {trUnder(opt.label, { fontSize:10, fontWeight:600, marginTop:1,
-                  color: langMode===opt.id ? 'rgba(255,255,255,0.85)' : '#94A3B8' })}
+                  color: langMode===opt.id ? (opt.color==='#F59E0B' ? 'rgba(120,53,15,0.85)' : 'rgba(255,255,255,0.85)') : '#94A3B8' })}
                 <div style={{ fontSize:10, fontWeight:600, opacity:.8 }}>{opt.sub}</div>
                 {trUnder(opt.sub, { fontSize:10, fontWeight:600, marginTop:1,
                   color: langMode===opt.id ? 'rgba(255,255,255,0.85)' : '#94A3B8' })}

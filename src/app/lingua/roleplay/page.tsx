@@ -199,7 +199,7 @@ export default function RoleplayLobby() {
                         <div style={{ fontSize:28 }}>{s.emoji}</div>
                         <div style={{ display:'flex', flexDirection:'column', alignItems:'flex-end', gap:4 }}>
                           <span style={{ fontSize:9, fontWeight:800, padding:'2px 7px', borderRadius:99,
-                            background:DIFF_COLOR[s.difficulty]+'18', color:DIFF_COLOR[s.difficulty] }}>
+                            background:DIFF_COLOR[s.difficulty]+'18', color:s.difficulty==='B2'?'#B45309':DIFF_COLOR[s.difficulty] }}>
                             {s.difficulty}{showNative&&diffNative[s.difficulty]?` ${diffNative[s.difficulty]}`:''}
                           </span>
                           <img loading="lazy" src={t.thumbnail} alt={t.name}
