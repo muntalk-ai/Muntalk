@@ -122,7 +122,7 @@ function DiscoverContent() {
   const [input,      setInput]      = useState('');
   const [loading,    setLoading]    = useState(false);
   const [langId,     setLangId]     = useState('en-US');
-  const [subLang,    setSubLang]    = useState('en-US');
+  const [subLang,    setSubLang]    = useState('ko-KR'); // 모국어 기본값: 영어 대신 학습자 모국어 (Coach와 동일)
   const [tutorId,    setTutorId]    = useState('t01');
   const [planId,     setPlanId]     = useState<string>('free');
   const [isAdmin,    setIsAdmin]    = useState(false);
@@ -150,13 +150,13 @@ function DiscoverContent() {
 
   useEffect(() => {
     const ll = localStorage.getItem('mt_learn_lang') || 'en-US';
-    const sl = localStorage.getItem('mt_native_lang') || 'en-US';
+    const sl = localStorage.getItem('mt_native_lang') || 'ko-KR'; // 영어 대신 모국어 기본값 (Coach와 동일)
     const ti = localStorage.getItem('mt_tutor_id') || 't01';
     setLangId(ll); setSubLang(sl); setTutorId(ti);
     if (user) {
       getUserProfile(user.uid).then(p => {
-        if (p?.learnLang) setLangId(p.learnLang);
-        if (p?.nativeLang) setSubLang(p.nativeLang);
+        if (p?.learnLang) { setLangId(p.learnLang); try { localStorage.setItem('mt_learn_lang', p.learnLang); } catch {} }
+        if (p?.nativeLang) { setSubLang(p.nativeLang); try { localStorage.setItem('mt_native_lang', p.nativeLang); } catch {} }
         if (p?.tutorId) setTutorId(p.tutorId);
         if (isLearningPurpose(p?.purpose)) setPurpose(p!.purpose); // B-11
       });
