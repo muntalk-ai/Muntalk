@@ -310,7 +310,7 @@ export default function AdminPage() {
                     {u.planId!=='free'&&<>
                       <button onClick={()=>openExtend(u)} disabled={saving===u.uid}
                         style={{padding:'5px 10px',borderRadius:7,border:'none',background:'#F0FDF4',color:'#059669',fontSize:10,fontWeight:900,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
-                        +기간
+                        +Extend
                       </button>
                       <button onClick={()=>handleRevoke(u)} disabled={saving===u.uid}
                         style={{padding:'5px 8px',borderRadius:7,border:'none',background:'#FFF1F2',color:'#E11D48',fontSize:10,fontWeight:900,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
@@ -439,6 +439,65 @@ export default function AdminPage() {
             </div>
           </div>
         )}
+
+        {tab==='settings'&&(
+          <div>
+            <div style={{fontSize:18,fontWeight:900,color:'#0F172A',marginBottom:8}}>System Settings</div>
+            <div style={{fontSize:13,color:'#64748B',marginBottom:24,fontWeight:600}}>Configure how lesson content is generated for learners.</div>
+
+            <div style={{background:'#fff',borderRadius:16,border:'1px solid #E9ECEF',padding:24,marginBottom:20}}>
+              <div style={{fontSize:15,fontWeight:800,color:'#0F172A',marginBottom:4}}>Lesson Content Source</div>
+              <div style={{fontSize:13,color:'#64748B',marginBottom:20,lineHeight:1.7,fontWeight:600}}>
+                <strong>API Mode:</strong> Gemini AI generates content in real-time. Falls back to JSON if unavailable.<br/>
+                <strong>JSON Mode:</strong> Uses pre-generated JSON files first. Falls back to Gemini if file not found.
+              </div>
+              <div style={{display:'flex',gap:12,flexWrap:'wrap'}}>
+                <button
+                  onClick={()=>{ setCurriculumMode('api'); localStorage.setItem('mt_curriculum_mode','api'); }}
+                  style={{padding:'13px 28px',borderRadius:12,border:'none',cursor:'pointer',
+                    fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",fontWeight:900,fontSize:14,
+                    background:curriculumMode==='api'?'linear-gradient(135deg,#6366F1,#8B5CF6)':'#F1F5F9',
+                    color:curriculumMode==='api'?'#fff':'#64748B',
+                    boxShadow:curriculumMode==='api'?'0 4px 14px rgba(99,102,241,0.3)':'none',
+                    transition:'all .2s'}}>
+                  🤖 API Mode (Gemini First)
+                </button>
+                <button
+                  onClick={()=>{ setCurriculumMode('json'); localStorage.setItem('mt_curriculum_mode','json'); }}
+                  style={{padding:'13px 28px',borderRadius:12,border:'none',cursor:'pointer',
+                    fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",fontWeight:900,fontSize:14,
+                    background:curriculumMode==='json'?'linear-gradient(135deg,#10B981,#059669)':'#F1F5F9',
+                    color:curriculumMode==='json'?'#fff':'#64748B',
+                    boxShadow:curriculumMode==='json'?'0 4px 14px rgba(16,185,129,0.3)':'none',
+                    transition:'all .2s'}}>
+                  📦 JSON Mode (Pre-generated First)
+                </button>
+              </div>
+
+              <div style={{marginTop:16,padding:'12px 16px',borderRadius:10,
+                background:curriculumMode==='api'?'#EEF2FF':'#ECFDF5',
+                border:'1.5px solid '+(curriculumMode==='api'?'#C7D2FE':'#A7F3D0')}}>
+                <div style={{fontSize:13,fontWeight:800,color:curriculumMode==='api'?'#6366F1':'#10B981',marginBottom:4}}>
+                  {curriculumMode==='api'
+                    ? '🤖 Active: API Mode — Gemini AI generates lessons, JSON is fallback'
+                    : '📦 Active: JSON Mode — Pre-generated files load first, Gemini is fallback'}
+                </div>
+                <div style={{fontSize:11,color:'#64748B',fontWeight:600}}>
+                  Stored in browser localStorage. Applies immediately to all new lesson sessions on this device.
+                </div>
+              </div>
+            </div>
+
+            <div style={{background:'#FFF7ED',borderRadius:12,border:'1px solid #FED7AA',padding:16}}>
+              <div style={{fontSize:12,fontWeight:800,color:'#EA580C',marginBottom:8}}>When to use each mode</div>
+              <div style={{fontSize:12,color:'#78350F',lineHeight:1.9,fontWeight:600}}>
+                Use <strong>API Mode</strong> when Gemini is working well and you want real-time personalised content<br/>
+                Use <strong>JSON Mode</strong> when Gemini is slow, rate-limited, or pre-generated files are ready<br/>
+                JSON files must exist in <code style={{background:'#FEF3C7',padding:'1px 4px',borderRadius:4}}>/public/curriculum/</code> for JSON mode to work
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Grant / Extend Modal */}
@@ -468,7 +527,9 @@ export default function AdminPage() {
               {modalMode==='extend'?'New Expiry (auto-calculated)':'Expiry Date'}
             </div>
             <input type="date" value={selExpiry} onChange={e=>setSelExpiry(e.target.value)}
-              style={{width:'100%',padding:'10px 14px',borderRadius:10,border:'1.5px solid #E5E7EB',fontSize:14,fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",outline:'none',marginBottom:22,boxSizing:'border-box'}}
+              readOnly={modalMode==='extend'}
+              title={modalMode==='extend'?'Auto-calculated from current expiry':undefined}
+              style={{width:'100%',padding:'10px 14px',borderRadius:10,border:'1.5px solid #E5E7EB',fontSize:14,fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",outline:'none',marginBottom:22,boxSizing:'border-box',background:modalMode==='extend'?'#F8FAFC':'#fff',color:modalMode==='extend'?'#94A3B8':'#0F172A'}}
             />
 
             <div style={{display:'flex',gap:10}}>
@@ -485,64 +546,6 @@ export default function AdminPage() {
         </div>
       )}
 
-      {tab==='settings'&&(
-        <div style={{padding:24}}>
-          <div style={{fontSize:18,fontWeight:900,color:'#0F172A',marginBottom:8}}>System Settings</div>
-          <div style={{fontSize:13,color:'#64748B',marginBottom:24,fontWeight:600}}>Configure how lesson content is generated for learners.</div>
-
-          <div style={{background:'#fff',borderRadius:16,border:'1px solid #E9ECEF',padding:24,marginBottom:20}}>
-            <div style={{fontSize:15,fontWeight:800,color:'#0F172A',marginBottom:4}}>Lesson Content Source</div>
-            <div style={{fontSize:13,color:'#64748B',marginBottom:20,lineHeight:1.7,fontWeight:600}}>
-              <strong>API Mode:</strong> Gemini AI generates content in real-time. Falls back to JSON if unavailable.<br/>
-              <strong>JSON Mode:</strong> Uses pre-generated JSON files first. Falls back to Gemini if file not found.
-            </div>
-            <div style={{display:'flex',gap:12,flexWrap:'wrap'}}>
-              <button
-                onClick={()=>{ setCurriculumMode('api'); localStorage.setItem('mt_curriculum_mode','api'); }}
-                style={{padding:'13px 28px',borderRadius:12,border:'none',cursor:'pointer',
-                  fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",fontWeight:900,fontSize:14,
-                  background:curriculumMode==='api'?'linear-gradient(135deg,#6366F1,#8B5CF6)':'#F1F5F9',
-                  color:curriculumMode==='api'?'#fff':'#64748B',
-                  boxShadow:curriculumMode==='api'?'0 4px 14px rgba(99,102,241,0.3)':'none',
-                  transition:'all .2s'}}>
-                🤖 API Mode (Gemini First)
-              </button>
-              <button
-                onClick={()=>{ setCurriculumMode('json'); localStorage.setItem('mt_curriculum_mode','json'); }}
-                style={{padding:'13px 28px',borderRadius:12,border:'none',cursor:'pointer',
-                  fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",fontWeight:900,fontSize:14,
-                  background:curriculumMode==='json'?'linear-gradient(135deg,#10B981,#059669)':'#F1F5F9',
-                  color:curriculumMode==='json'?'#fff':'#64748B',
-                  boxShadow:curriculumMode==='json'?'0 4px 14px rgba(16,185,129,0.3)':'none',
-                  transition:'all .2s'}}>
-                📦 JSON Mode (Pre-generated First)
-              </button>
-            </div>
-
-            <div style={{marginTop:16,padding:'12px 16px',borderRadius:10,
-              background:curriculumMode==='api'?'#EEF2FF':'#ECFDF5',
-              border:'1.5px solid '+(curriculumMode==='api'?'#C7D2FE':'#A7F3D0')}}>
-              <div style={{fontSize:13,fontWeight:800,color:curriculumMode==='api'?'#6366F1':'#10B981',marginBottom:4}}>
-                {curriculumMode==='api'
-                  ? '🤖 Active: API Mode — Gemini AI generates lessons, JSON is fallback'
-                  : '📦 Active: JSON Mode — Pre-generated files load first, Gemini is fallback'}
-              </div>
-              <div style={{fontSize:11,color:'#64748B',fontWeight:600}}>
-                Stored in browser localStorage. Applies immediately to all new lesson sessions on this device.
-              </div>
-            </div>
-          </div>
-
-          <div style={{background:'#FFF7ED',borderRadius:12,border:'1px solid #FED7AA',padding:16}}>
-            <div style={{fontSize:12,fontWeight:800,color:'#EA580C',marginBottom:8}}>When to use each mode</div>
-            <div style={{fontSize:12,color:'#78350F',lineHeight:1.9,fontWeight:600}}>
-              Use <strong>API Mode</strong> when Gemini is working well and you want real-time personalised content<br/>
-              Use <strong>JSON Mode</strong> when Gemini is slow, rate-limited, or pre-generated files are ready<br/>
-              JSON files must exist in <code style={{background:'#FEF3C7',padding:'1px 4px',borderRadius:4}}>/public/curriculum/</code> for JSON mode to work
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
