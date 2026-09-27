@@ -2,6 +2,7 @@
 import {
   getIdentity, checkRateLimit, clientIp, fetchWithTimeout,
 } from '@/lib/apiGuard';
+import { stripEmojis } from '@/lib/stripEmojis';
 
 // Google Cloud TTS supported voice map
 // Reference: https://cloud.google.com/text-to-speech/docs/voices
@@ -167,6 +168,9 @@ export async function POST(req: NextRequest) {
   try {
     const { text, lang = 'en-US', gender = 'female', speed = 0.95, level } = await req.json();
 
+    // ── 이모지 제거: TTS가 이모지를 단어로 읽어버리는 문제 방지 (전 수업 공통) ──
+    const cleanText: string = stripEmojis(typeof text === 'string' ? text : '');
+
     // ── PR-F: abuse guards ──
     // 로그인 유저: UID 기준 분당 30회. 게스트: IP 기준 분당 10회. text 500자 캡.
     const id = await getIdentity(req);
@@ -175,11 +179,11 @@ export async function POST(req: NextRequest) {
     if (!rl.ok) {
       return NextResponse.json({ audioContent: null, error: 'Rate limit exceeded' }, { status: 429 });
     }
-    if (typeof text === 'string' && text.length > 500) {
+    if (cleanText.length > 500) {
       return NextResponse.json({ audioContent: null, error: 'Text too long (max 500 chars)' }, { status: 413 });
     }
 
-    if (!text?.trim()) {
+    if (!cleanText) {
       return NextResponse.json({ audioContent: null });
     }
 
@@ -191,7 +195,7 @@ export async function POST(req: NextRequest) {
     // (Never fall back to an en-US voice: wrong-language audio is worse than none.)
     const voiceEntry = VOICE_MAP[lang];
     if (!voiceEntry) {
-      return geminiTts(text, gender, lang);
+      return geminiTts(cleanText, gender, lang);
     }
 
     const apiKey = process.env.GOOGLE_TTS_API_KEY;
@@ -210,7 +214,7 @@ export async function POST(req: NextRequest) {
                     : 0.95;
 
     const body = {
-      input: { text },
+      input: { text: cleanText },
       voice: { languageCode: langCode, name: voiceName },
       audioConfig: {
         audioEncoding: 'MP3',
