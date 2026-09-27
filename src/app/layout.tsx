@@ -4,8 +4,22 @@ import { AuthProvider } from '@/context/AuthContext';
 import GlobalOverlays from '@/components/GlobalOverlays';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.muntalk.com'),
   title: 'MunTalk — Learn Languages with AI',
   description: 'Master any language with AI-powered lessons, spaced repetition, and live tutors.',
+  openGraph: {
+    type: 'website',
+    siteName: 'MunTalk',
+    title: 'MunTalk — Learn Languages with AI',
+    description: 'Master any language with AI-powered lessons, spaced repetition, and live tutors.',
+    images: ['/logo.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'MunTalk — Learn Languages with AI',
+    description: 'Master any language with AI-powered lessons, spaced repetition, and live tutors.',
+    images: ['/logo.png'],
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
