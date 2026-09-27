@@ -81,12 +81,6 @@ const VOICE_MAP: Record<string, { f: string; m: string; lang: string }> = {
   'ms-MY': { f: 'ms-MY-Wavenet-A',   m: 'ms-MY-Wavenet-B',   lang: 'ms-MY' },
   'tl-PH': { f: 'fil-PH-Wavenet-A',  m: 'fil-PH-Wavenet-B',  lang: 'fil-PH' },
   'km-KH': { f: 'km-KH-Standard-A',  m: 'km-KH-Standard-A',  lang: 'km-KH' },
-  'my-MM': { f: 'my-MM-Standard-A',  m: 'my-MM-Standard-A',  lang: 'my-MM' },
-  'lo-LA': { f: 'lo-LA-Standard-A',  m: 'lo-LA-Standard-A',  lang: 'lo-LA' },
-  'kk-KZ': { f: 'kk-KZ-Standard-A',  m: 'kk-KZ-Standard-A',  lang: 'kk-KZ' },
-  'ky-KG': { f: 'ky-KG-Standard-A',  m: 'ky-KG-Standard-A',  lang: 'ky-KG' },
-  'mn-MN': { f: 'mn-MN-Standard-A',  m: 'mn-MN-Standard-A',  lang: 'mn-MN' },
-  'uz-UZ': { f: 'uz-UZ-Standard-A',  m: 'uz-UZ-Standard-A',  lang: 'uz-UZ' },
   // ── African ──────────────────────────────────────────────────────────
   'sw-KE': { f: 'sw-KE-Standard-A',  m: 'sw-KE-Standard-B',  lang: 'sw-KE' },
   'sw-TZ': { f: 'sw-TZ-Standard-A',  m: 'sw-TZ-Standard-B',  lang: 'sw-TZ' },
@@ -120,12 +114,19 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ audioContent: null });
     }
 
-    // Look up voice — fallback to en-US if language not supported
+    // Look up voice. Languages without a Google voice (e.g. Burmese — Google
+    // Cloud TTS has no my-MM voice, verified 2026-09-26) get a clean
+    // unsupported_language signal so the client can try device TTS instead.
+    // (Never fall back to an en-US voice: wrong-language audio is worse than none.)
     const voiceEntry = VOICE_MAP[lang];
     if (!voiceEntry) {
-     console.warn(`[tts] No voice for lang=${lang}, using en-US fallback`);
+      return NextResponse.json(
+        { audioContent: null, error: 'unsupported_language',
+          detail: `No Google TTS voice for ${lang}` },
+        { status: 400 }
+      );
     }
-    const entry = voiceEntry || VOICE_MAP['en-US'];
+    const entry = voiceEntry;
     const isFemale = !gender || gender === 'female' || gender === 'FEMALE';
     const voiceName = isFemale ? entry.f : entry.m;
     const langCode  = entry.lang;
@@ -156,7 +157,8 @@ export async function POST(req: NextRequest) {
     if (!res.ok) {
       const err = await res.text();
       console.error(`[tts] Google TTS error lang=${lang} voice=${voiceName}:`, err);
-      // DIAG (temporary): surface Google's error message so the client toast can show it
+      // Include Google's message in the response for debugging (visible in
+      // devtools/network and server logs, not shown to end users).
       let detail = '';
       try { detail = String(JSON.parse(err)?.error?.message ?? err).slice(0, 140); }
       catch { detail = err.slice(0, 140); }

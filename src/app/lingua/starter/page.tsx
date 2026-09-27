@@ -6,6 +6,8 @@ import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { TUTORS, getTutorById, getTutorForLang } from '@/data/tutors';
+import { hasTts } from '@/data/languages';
+import { speakWithDeviceTts } from '@/lib/deviceTts';
 import { updateUserProfile } from '@/lib/userProfile';
 import { PURPOSE_OPTIONS, purposePromptBlock, mapTrackToPurpose, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
@@ -239,6 +241,12 @@ function StarterContent() {
   const speak = useCallback(async (text: string) => {
     audioRef.current?.pause();
     setIsSpeaking(false);
+    // 서버 음성 미지원 언어(예: 버마어)는 기기 내장 음성으로 폴백
+    if (!hasTts(langId)) {
+      setIsSpeaking(true);
+      await speakWithDeviceTts(text, langId, () => setIsSpeaking(false));
+      return;
+    }
     try {
       const res = await apiFetch('/api/tts', {
         method: 'POST',

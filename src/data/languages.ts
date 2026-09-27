@@ -9,6 +9,9 @@ export interface LangOption {
 }
 
 // stt: false인 언어는 LessonPlayer에서 텍스트 입력창으로 대체
+// tts: Google Cloud TTS 서버 음성 보유 여부. my-MM/kk-KZ/ky-KG/uz-UZ/mn-MN/lo-LA는
+// Google에 해당 음성이 존재하지 않음을 2026-09-26 실측 확인 → tts:false.
+// (클라이언트는 이 경우 기기 내장 speechSynthesis로 폴백 시도 — src/lib/deviceTts.ts)
 export const LEARN_LANGUAGES: LangOption[] = [
   // ── 영어 변형 ────────────────────────────────────────────────────────
   { code: 'en-US',  label: 'English (US)',       flag: '🇺🇸', native: 'English',              stt: true,  tts: true  },
@@ -61,12 +64,12 @@ export const LEARN_LANGUAGES: LangOption[] = [
   { code: 'ka-GE',  label: 'Georgian',            flag: '🇬🇪', native: 'ქართული',              stt: false, tts: true  },
   // ── 중앙아시아 ───────────────────────────────────────────────────────
   { code: 'az-AZ',  label: 'Azerbaijani',         flag: '🇦🇿', native: 'Azərbaycan',           stt: false, tts: true  },
-  { code: 'kk-KZ',  label: 'Kazakh',              flag: '🇰🇿', native: 'Қазақша',              stt: false, tts: true  },
-  { code: 'ky-KG',  label: 'Kyrgyz',              flag: '🇰🇬', native: 'Кыргызча',             stt: false, tts: true  },
-  { code: 'uz-UZ',  label: 'Uzbek',               flag: '🇺🇿', native: 'Oʻzbekcha',            stt: false, tts: true  },
+  { code: 'kk-KZ',  label: 'Kazakh',              flag: '🇰🇿', native: 'Қазақша',              stt: false, tts: false  },
+  { code: 'ky-KG',  label: 'Kyrgyz',              flag: '🇰🇬', native: 'Кыргызча',             stt: false, tts: false  },
+  { code: 'uz-UZ',  label: 'Uzbek',               flag: '🇺🇿', native: 'Oʻzbekcha',            stt: false, tts: false  },
   { code: 'tg-TJ',  label: 'Tajik',               flag: '🇹🇯', native: 'Тоҷикӣ',               stt: false, tts: true  },
   { code: 'tk-TM',  label: 'Turkmen',             flag: '🇹🇲', native: 'Türkmençe',            stt: false, tts: true  },
-  { code: 'mn-MN',  label: 'Mongolian',           flag: '🇲🇳', native: 'Монгол',               stt: false, tts: true  },
+  { code: 'mn-MN',  label: 'Mongolian',           flag: '🇲🇳', native: 'Монгол',               stt: false, tts: false  },
   // ── 동아시아 ─────────────────────────────────────────────────────────
   { code: 'ja-JP',  label: 'Japanese',            flag: '🇯🇵', native: '日本語',               stt: true,  tts: true  },
   { code: 'ko-KR',  label: 'Korean',              flag: '🇰🇷', native: '한국어',               stt: true,  tts: true  },
@@ -94,8 +97,8 @@ export const LEARN_LANGUAGES: LangOption[] = [
   { code: 'ms-MY',  label: 'Malay',               flag: '🇲🇾', native: 'Bahasa Melayu',       stt: false, tts: true  },
   { code: 'tl-PH',  label: 'Filipino',            flag: '🇵🇭', native: 'Filipino',             stt: true,  tts: true  },
   { code: 'km-KH',  label: 'Khmer',               flag: '🇰🇭', native: 'ភាសាខ្មែរ',            stt: false, tts: true  },
-  { code: 'lo-LA',  label: 'Lao',                 flag: '🇱🇦', native: 'ພາສາລາວ',              stt: false, tts: true  },
-  { code: 'my-MM',  label: 'Burmese',             flag: '🇲🇲', native: 'မြန်မာဘာသာ',           stt: false, tts: true  },
+  { code: 'lo-LA',  label: 'Lao',                 flag: '🇱🇦', native: 'ພາສາລາວ',              stt: false, tts: false  },
+  { code: 'my-MM',  label: 'Burmese',             flag: '🇲🇲', native: 'မြန်မာဘာသာ',           stt: false, tts: false  },
   { code: 'jv-ID',  label: 'Javanese',            flag: '🇮🇩', native: 'Basa Jawa',            stt: false, tts: true  },
   { code: 'su-ID',  label: 'Sundanese',           flag: '🇮🇩', native: 'Basa Sunda',           stt: false, tts: true  },
   // ── 중동 ─────────────────────────────────────────────────────────────
@@ -176,8 +179,8 @@ export const UI_LANGUAGES: LangOption[] = [
   { code: 'km-KH',  label: 'Khmer',                     flag: '🇰🇭', native: 'ភាសាខ្មែរ',            stt: false, tts: true  },
   { code: 'kn-IN',  label: 'Kannada',                   flag: '🇮🇳', native: 'ಕನ್ನಡ',               stt: false, tts: true  },
   { code: 'gu-IN',  label: 'Gujarati',                  flag: '🇮🇳', native: 'ગુજરાતી',              stt: false, tts: true  },
-  { code: 'mn-MN',  label: 'Mongolian',                 flag: '🇲🇳', native: 'Монгол',               stt: false, tts: true  },
-  { code: 'my-MM',  label: 'Burmese',                   flag: '🇲🇲', native: 'မြန်မာဘာသာ',           stt: false, tts: true  },
+  { code: 'mn-MN',  label: 'Mongolian',                 flag: '🇲🇳', native: 'Монгол',               stt: false, tts: false  },
+  { code: 'my-MM',  label: 'Burmese',                   flag: '🇲🇲', native: 'မြန်မာဘာသာ',           stt: false, tts: false  },
 ];
 
 export function getLangLabel(code: string): string {
