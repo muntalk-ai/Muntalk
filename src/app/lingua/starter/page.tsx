@@ -7,7 +7,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { TUTORS, getTutorById, getTutorForLang } from '@/data/tutors';
 import { hasTts } from '@/data/languages';
-import { speakWithDeviceTts } from '@/lib/deviceTts';
+import { speakWithDeviceTts, deviceHasVoiceFor } from '@/lib/deviceTts';
 import { updateUserProfile } from '@/lib/userProfile';
 import { PURPOSE_OPTIONS, purposePromptBlock, mapTrackToPurpose, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
@@ -285,6 +285,19 @@ function StarterContent() {
       audio.play().catch(() => { setIsSpeaking(false); });
     } catch { setIsSpeaking(false); }
   }, [langId, tutor.gender]);
+
+  // 음성 지원 여부: 서버 TTS(hasTts) 또는 기기 내장 음성 중 하나라도 있으면 true.
+  // 둘 다 없으면(예: 데스크톱 브라우저의 버마어) "Tap to hear" UI를 비활성 처리.
+  const [voiceSupported, setVoiceSupported] = useState(true);
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      if (hasTts(langId)) { if (!cancelled) setVoiceSupported(true); return; }
+      const ok = await deviceHasVoiceFor(langId);
+      if (!cancelled) setVoiceSupported(ok);
+    })();
+    return () => { cancelled = true; };
+  }, [langId]);
 
   // ── Gemini ─────────────────────────────────────────────────────────────────
   const callGemini = useCallback(async (prompt: string) => {
@@ -827,9 +840,9 @@ LANGUAGE RULES:
 
         {/* Word card */}
         <div key={w.word}
-          onClick={() => speak(w.word)}
+          onClick={voiceSupported ? () => speak(w.word) : undefined}
           style={{ background: 'white', borderRadius: 28, padding: '40px 56px',
-            textAlign: 'center', cursor: 'pointer', marginBottom: 28,
+            textAlign: 'center', cursor: voiceSupported ? 'pointer' : 'default', marginBottom: 28,
             boxShadow: '0 8px 40px rgba(99,102,241,0.15)',
             animation: 'pop .35s ease',
             border: `2px solid ${ACCENT}20` }}>
@@ -845,8 +858,8 @@ LANGUAGE RULES:
               {(w as any).meaning}
             </div>
           )}
-          <div style={{ fontSize: 14, color: ACCENT, fontWeight: 800, marginBottom: 0 }}>
-            🔊 Tap to hear
+          <div style={{ fontSize: 14, color: voiceSupported ? ACCENT : '#94A3B8', fontWeight: 800, marginBottom: 0 }}>
+            {voiceSupported ? '🔊 Tap to hear' : '🔇 Voice not available'}
           </div>
         </div>
 
@@ -912,13 +925,21 @@ LANGUAGE RULES:
       </div>
 
       {/* Listen button */}
-      <button onClick={() => speak(listenWord.word)}
+      <button onClick={() => speak(listenWord.word)} disabled={!voiceSupported}
         style={{ ...btnBase, width: 120, height: 120, borderRadius: '50%',
-          background: `linear-gradient(135deg, ${ACCENT}, #818CF8)`,
+          background: voiceSupported ? `linear-gradient(135deg, ${ACCENT}, #818CF8)` : '#E2E8F0',
           color: 'white', fontSize: 48, marginBottom: 48,
-          boxShadow: `0 8px 32px ${ACCENT}50` }}>
-        🔊
+          boxShadow: voiceSupported ? `0 8px 32px ${ACCENT}50` : 'none',
+          cursor: voiceSupported ? 'pointer' : 'not-allowed',
+          opacity: voiceSupported ? 1 : 0.6 }}>
+        {voiceSupported ? '🔊' : '🔇'}
       </button>
+
+      {!voiceSupported && (
+        <div style={{ fontSize: 13, fontWeight: 700, color: '#94A3B8', marginTop: -32, marginBottom: 32 }}>
+          Voice not available for this language
+        </div>
+      )}
 
       <div style={{ fontSize: 18, fontWeight: 800, color: '#475569',
         marginBottom: 32 }}>Which word did you hear?</div>
@@ -1093,9 +1114,9 @@ LANGUAGE RULES:
         <div style={{ fontSize: 22, color: '#475569', fontWeight: 700,
           marginBottom: 24 }}>Say this word out loud:</div>
 
-        <div onClick={() => speak(w.word)}
+        <div onClick={voiceSupported ? () => speak(w.word) : undefined}
           style={{ background: 'white', borderRadius: 24, padding: '36px 48px',
-            textAlign: 'center', cursor: 'pointer', marginBottom: 40,
+            textAlign: 'center', cursor: voiceSupported ? 'pointer' : 'default', marginBottom: 40,
             boxShadow: '0 8px 40px rgba(99,102,241,0.12)' }}>
           <div style={{ fontSize: 72, marginBottom: 10 }}>{w.emoji}</div>
           <div style={{ fontSize: 40, fontWeight: 900, color: '#0F172A',
@@ -1103,8 +1124,8 @@ LANGUAGE RULES:
           <div style={{ fontSize: 15, color: '#94A3B8', fontStyle: 'italic' }}>
             {w.phonetic}
           </div>
-          <div style={{ fontSize: 13, color: ACCENT, fontWeight: 700, marginTop: 10 }}>
-            🔊 Tap to hear again
+          <div style={{ fontSize: 13, color: voiceSupported ? ACCENT : '#94A3B8', fontWeight: 700, marginTop: 10 }}>
+            {voiceSupported ? '🔊 Tap to hear again' : '🔇 Voice not available'}
           </div>
         </div>
 
