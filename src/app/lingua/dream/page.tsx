@@ -921,7 +921,7 @@ function GenreCard({ genre, index, menuT, onSelect, locked = false }: {
           {trUnder(genre.title, { fontSize:11, color:'rgba(255,255,255,0.85)', marginBottom:3 })}
           <div style={{ fontSize:11, color:genre.accent, fontWeight:700, marginBottom:6 }}>{genre.tagline}</div>
           {trUnder(genre.tagline, { fontSize:11, color:'rgba(255,255,255,0.85)', marginBottom:6 })}
-          <div style={{ fontSize:12, color:'#475569', fontWeight:600, lineHeight:1.5 }}>
+          <div style={{ fontSize:12, color:'rgba(255,255,255,0.85)', fontWeight:600, lineHeight:1.5 }}>
             {genre.description}
           </div>
           {trUnder(genre.description, { fontSize:11, color:'rgba(255,255,255,0.85)', lineHeight:1.5, marginTop:3 })}
