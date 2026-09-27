@@ -90,7 +90,29 @@ const UNITS = [
 
 type Phase = 'goal' | 'lobby' | 'learn' | 'listen' | 'match' | 'speak' | 'chat' | 'complete';
 type Word = { word: string; emoji: string; phonetic: string };
-type TranslatedUnit = { word: string; emoji: string; phonetic: string; original: string }[];
+type TranslatedUnit = { word: string; emoji: string; phonetic: string; original: string; meaning?: string }[];
+
+// BCP-47 -> display name for prompts (target + native language names)
+const LANG_DISPLAY_NAMES: Record<string,string> = {
+  'ko-KR':'Korean','ja-JP':'Japanese','zh-CN':'Chinese (Simplified)',
+  'zh-TW':'Chinese (Traditional)','fr-FR':'French','de-DE':'German',
+  'es-ES':'Spanish','it-IT':'Italian','pt-BR':'Portuguese','ru-RU':'Russian',
+  'ar-XA':'Arabic','hi-IN':'Hindi','vi-VN':'Vietnamese','th-TH':'Thai',
+  'id-ID':'Indonesian','ms-MY':'Malay','tr-TR':'Turkish','nl-NL':'Dutch',
+  'pl-PL':'Polish','sv-SE':'Swedish','da-DK':'Danish','fi-FI':'Finnish',
+  'he-IL':'Hebrew','uk-UA':'Ukrainian','cs-CZ':'Czech','hu-HU':'Hungarian',
+  'ro-RO':'Romanian','el-GR':'Greek','bg-BG':'Bulgarian','hr-HR':'Croatian',
+  'sk-SK':'Slovak','bn-IN':'Bengali','ta-IN':'Tamil','te-IN':'Telugu',
+  'ml-IN':'Malayalam','kn-IN':'Kannada','gu-IN':'Gujarati','mr-IN':'Marathi',
+  'pa-IN':'Punjabi','ur-IN':'Urdu','sw-KE':'Swahili','af-ZA':'Afrikaans',
+  'am-ET':'Amharic','ha-NG':'Hausa','yo-NG':'Yoruba','ig-NG':'Igbo',
+  'zu-ZA':'Zulu','km-KH':'Khmer','my-MM':'Burmese','lo-LA':'Lao',
+  'kk-KZ':'Kazakh','uz-UZ':'Uzbek','mn-MN':'Mongolian','az-AZ':'Azerbaijani',
+  'hy-AM':'Armenian','ka-GE':'Georgian','ne-NP':'Nepali','si-LK':'Sinhala',
+  'ps-AF':'Pashto','mk-MK':'Macedonian','sq-AL':'Albanian','is-IS':'Icelandic',
+  'cy-GB':'Welsh','ca-ES':'Catalan','nb-NO':'Norwegian','lt-LT':'Lithuanian',
+  'lv-LV':'Latvian','et-EE':'Estonian','sr-RS':'Serbian','sl-SI':'Slovenian',
+};
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 function StarterContent() {
@@ -286,28 +308,8 @@ function StarterContent() {
     setIsTranslating(true);
     setTranslatedWords(null);
 
-    const LANG_NAMES: Record<string,string> = {
-      'ko-KR':'Korean','ja-JP':'Japanese','zh-CN':'Chinese (Simplified)',
-      'zh-TW':'Chinese (Traditional)','fr-FR':'French','de-DE':'German',
-      'es-ES':'Spanish','it-IT':'Italian','pt-BR':'Portuguese','ru-RU':'Russian',
-      'ar-XA':'Arabic','hi-IN':'Hindi','vi-VN':'Vietnamese','th-TH':'Thai',
-      'id-ID':'Indonesian','ms-MY':'Malay','tr-TR':'Turkish','nl-NL':'Dutch',
-      'pl-PL':'Polish','sv-SE':'Swedish','da-DK':'Danish','fi-FI':'Finnish',
-      'he-IL':'Hebrew','uk-UA':'Ukrainian','cs-CZ':'Czech','hu-HU':'Hungarian',
-      'ro-RO':'Romanian','el-GR':'Greek','bg-BG':'Bulgarian','hr-HR':'Croatian',
-      'sk-SK':'Slovak','bn-IN':'Bengali','ta-IN':'Tamil','te-IN':'Telugu',
-      'ml-IN':'Malayalam','kn-IN':'Kannada','gu-IN':'Gujarati','mr-IN':'Marathi',
-      'pa-IN':'Punjabi','ur-IN':'Urdu','sw-KE':'Swahili','af-ZA':'Afrikaans',
-      'am-ET':'Amharic','ha-NG':'Hausa','yo-NG':'Yoruba','ig-NG':'Igbo',
-      'zu-ZA':'Zulu','km-KH':'Khmer','my-MM':'Burmese','lo-LA':'Lao',
-      'kk-KZ':'Kazakh','uz-UZ':'Uzbek','mn-MN':'Mongolian','az-AZ':'Azerbaijani',
-      'hy-AM':'Armenian','ka-GE':'Georgian','ne-NP':'Nepali','si-LK':'Sinhala',
-      'ps-AF':'Pashto','mk-MK':'Macedonian','sq-AL':'Albanian','is-IS':'Icelandic',
-      'cy-GB':'Welsh','ca-ES':'Catalan','nb-NO':'Norwegian','lt-LT':'Lithuanian',
-      'lv-LV':'Latvian','et-EE':'Estonian','sr-RS':'Serbian','sl-SI':'Slovenian',
-    };
-
-    const targetLang = LANG_NAMES[langId] || langId;
+    const targetLang = LANG_DISPLAY_NAMES[langId] || langId;
+    const nativeLang = LANG_DISPLAY_NAMES[subLang] || 'English';
     const currentUnit = UNITS[unitIdx];
     const wordList = currentUnit.words.map(w => w.word).join(', ');
 
@@ -315,12 +317,13 @@ function StarterContent() {
 English words: ${wordList}
 
 Return ONLY a JSON array, no markdown, no explanation:
-[{"word":"TRANSLATED_WORD","phonetic":"ROMANIZED_PRONUNCIATION","original":"ENGLISH_WORD"},...]
+[{"word":"TRANSLATED_WORD","phonetic":"ROMANIZED_PRONUNCIATION","original":"ENGLISH_WORD","meaning":"MEANING_IN_${nativeLang.toUpperCase()}"},...]
 
 Rules:
 - word: the word in ${targetLang} script
 - phonetic: simple romanized pronunciation guide (e.g. "an-nyong" for 안녕)
 - original: the original English word exactly as given
+- meaning: the meaning of the word in ${nativeLang} (the learner's native language)
 - Keep the same order as the input
 - Return exactly ${currentUnit.words.length} items`;
 
@@ -340,6 +343,8 @@ Rules:
           phonetic: item.phonetic || '',
           emoji:    currentUnit.words[i].emoji,
           original: item.original || currentUnit.words[i].word,
+          // 의미는 학습자 모국어로 (없으면 영어 원문으로 폴백)
+          meaning:  item.meaning  || item.original || currentUnit.words[i].word,
         }));
         setTranslatedWords(merged);
       }
@@ -347,17 +352,12 @@ Rules:
       // Translation failed — keep English
       setTranslatedWords(null);
     }).finally(() => setIsTranslating(false));
-  }, [unitIdx, langId, user?.uid]);
+  }, [unitIdx, langId, subLang, user?.uid]);
 
   // ── Translate word (for match phase native meanings) ─────────────────────────
   const translateWord = useCallback(async (word: string): Promise<string> => {
     if (langId === subLang || subLang === 'en-US') return word;
-    const NATIVE_NAMES: Record<string,string> = {
-      'ko-KR':'Korean','ja-JP':'Japanese','zh-CN':'Chinese','fr-FR':'French',
-      'de-DE':'German','es-ES':'Spanish','ru-RU':'Russian','ar-XA':'Arabic',
-      'hi-IN':'Hindi','pt-BR':'Portuguese','it-IT':'Italian','vi-VN':'Vietnamese',
-    };
-    const nativeLang = NATIVE_NAMES[subLang] || 'English';
+    const nativeLang = LANG_DISPLAY_NAMES[subLang] || 'English';
     try {
       // For match phase: translate the TARGET language word back to native
       const t = await callGemini(`Translate "${word}" to ${nativeLang}. Reply with ONLY the translation.`);
@@ -721,9 +721,9 @@ LANGUAGE RULES:
             <span style={{ fontSize: 20 }}>{w.emoji}</span>
             <div>
               <div>{w.word}</div>
-              {(w as any).original && (w as any).original !== w.word && (
+              {(w as any).meaning && (w as any).meaning !== w.word && (
                 <div style={{ fontSize: 10, color: '#94A3B8', fontWeight: 600 }}>
-                  {(w as any).original}
+                  {(w as any).meaning}
                 </div>
               )}
             </div>
@@ -839,10 +839,10 @@ LANGUAGE RULES:
             marginBottom: 6, letterSpacing: -1 }}>{w.word}</div>
           <div style={{ fontSize: 16, color: '#94A3B8', fontWeight: 700,
             marginBottom: 8, fontStyle: 'italic' }}>{w.phonetic}</div>
-          {/* Original English word (if translated) */}
-          {(w as any).original && (w as any).original !== w.word && (
+          {/* Meaning in the learner's native language (if translated) */}
+          {(w as any).meaning && (w as any).meaning !== w.word && (
             <div style={{ fontSize: 13, color: '#94A3B8', marginBottom: 6, fontWeight: 600 }}>
-              {(w as any).original}
+              {(w as any).meaning}
             </div>
           )}
           <div style={{ fontSize: 14, color: ACCENT, fontWeight: 800, marginBottom: 0 }}>
