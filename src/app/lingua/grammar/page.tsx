@@ -7,18 +7,16 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { getTutorById } from '@/data/tutors';
 import {
-  GRAMMAR_CHAPTERS, GRAMMAR_CATEGORIES, LEVEL_ORDER, getLevelInfo,
+  GRAMMAR_CATEGORIES, LEVEL_ORDER, getLevelInfo,
   getChaptersByLevel, type GrammarLevel, type GrammarChapter,
 } from '@/data/grammar';
+import { LEARN_LANGUAGES } from '@/data/languages';
 
-// ── Native language map ───────────────────────────────────────────────────────
+// ── Language label map (all 93 learning languages) ──────────────────────────
 
-const NATIVE_LANG: Record<string,string> = {
-  'ko-KR':'Korean','ja-JP':'Japanese','zh-CN':'Chinese','zh-TW':'Chinese',
-  'fr-FR':'French','de-DE':'German','es-ES':'Spanish','pt-BR':'Portuguese',
-  'ru-RU':'Russian','ar-XA':'Arabic','hi-IN':'Hindi','vi-VN':'Vietnamese',
-  'id-ID':'Indonesian','tr-TR':'Turkish','it-IT':'Italian','en-US':'English',
-};
+const LANG_LABEL: Record<string,string> = Object.fromEntries(
+  LEARN_LANGUAGES.map(l => [l.code, l.label] as const),
+);
 
 // ── Quiz state ────────────────────────────────────────────────────────────────
 
@@ -45,6 +43,9 @@ export default function GrammarPage() {
   const [tutorId,     setTutorId]     = useState('t01');
   const [nativeLang,  setNativeLang]  = useState('en-US');
   const [learnLang,   setLearnLang]   = useState('en-US');
+  const [chapters,    setChapters]    = useState<GrammarChapter[]>([]);
+  const [loading,     setLoading]     = useState(true);
+  const [loadError,   setLoadError]   = useState(false);
   const [aiChat,      setAiChat]      = useState<{role:'user'|'ai';text:string}[]>([]);
   const [aiInput,     setAiInput]     = useState('');
   const [aiLoading,   setAiLoading]   = useState(false);
@@ -60,6 +61,26 @@ export default function GrammarPage() {
     setTutorId(ti); setNativeLang(nl); setLearnLang(ll);
     const done = JSON.parse(localStorage.getItem('mt_grammar_done') || '[]') as string[];
     setCompletedIds(new Set(done));
+    // Load the grammar pack for the learning language
+    // (Firestore cache → pre-generated static pack, via API).
+    (async () => {
+      setLoading(true); setLoadError(false);
+      try {
+        const res = await apiFetch(
+          `/api/grammar/chapters?lang=${encodeURIComponent(ll)}`,
+          { timeoutMs: 20000 },
+        );
+        const data = await res.json();
+        if (Array.isArray(data.chapters) && data.chapters.length > 0) {
+          setChapters(data.chapters);
+        } else {
+          setLoadError(true);
+        }
+      } catch {
+        setLoadError(true);
+      }
+      setLoading(false);
+    })();
   }, []);
 
   useEffect(() => {
@@ -67,11 +88,10 @@ export default function GrammarPage() {
   }, [aiChat]);
 
   const tutor = getTutorById(tutorId);
-  const nativeLangName = NATIVE_LANG[nativeLang] || 'English';
-  const learnLangName  = NATIVE_LANG[learnLang]  || 'English';
-  // Grammar chapters teach ENGLISH grammar — the AI coach must not demand
-  // English output from learners whose target language isn't English.
-  const isEnglishLearner = learnLang.startsWith('en');
+  const nativeLangName = LANG_LABEL[nativeLang] || 'English';
+  const learnLangName  = LANG_LABEL[learnLang]  || 'English';
+  // Chapters now teach the LEARNER'S language (per-language packs), so the
+  // AI coach always works in the learning language.
 
   const openChapter = (ch: GrammarChapter) => {
     setSelChapter(ch);
@@ -109,9 +129,7 @@ export default function GrammarPage() {
     setShowAI(true);
     setAiLoading(true);
     try {
-      const coachRule = isEnglishLearner
-        ? `Respond in ${learnLangName}. You may add a brief ${nativeLangName} translation of the exercise in parentheses if helpful.`
-        : `NOTE: this chapter teaches ENGLISH grammar, but the student's target language is ${learnLangName}, not English. Explain in ${nativeLangName} (their native language). Do NOT ask the student to write or speak English sentences — only explain the grammar point clearly, using the chapter's examples.`;
+      const coachRule = `Respond in ${learnLangName}. You may add a brief ${nativeLangName} translation of the exercise in parentheses if helpful.`;
       const prompt = `You are ${tutor.name}, a warm and expert language grammar tutor.
 The student has just studied: "${selChapter.title}" (${selChapter.subtitle}).
 Their native language is ${nativeLangName}.
@@ -131,7 +149,7 @@ ${coachRule}`;
       setAiChat([{ role:'ai', text:'Great work completing this lesson! Let\'s practise together.' }]);
     }
     setAiLoading(false);
-  }, [selChapter, tutor.name, nativeLangName, learnLangName, isEnglishLearner, user]);
+  }, [selChapter, tutor.name, nativeLangName, learnLangName, user]);
 
   const sendAI = useCallback(async () => {
     if (!aiInput.trim() || aiLoading || !selChapter) return;
@@ -141,9 +159,7 @@ ${coachRule}`;
     setAiLoading(true);
 
       const history = aiChat.map(m => `${m.role==='user'?'Student':tutor.name}: ${m.text}`).join('\n');
-      const feedbackRule = isEnglishLearner
-        ? `Give specific grammar feedback in ${learnLangName} — correct any errors gently, explain why, then ask them to try again or try a new related exercise.`
-        : `Explain in ${nativeLangName} (the student's native language). Do NOT ask the student to produce English sentences — explain the grammar rule and illustrate with the chapter's examples.`;
+      const feedbackRule = `Give specific grammar feedback in ${learnLangName} — correct any errors gently, explain why, then ask them to try again or try a new related exercise.`;
       const prompt = `You are ${tutor.name}, coaching the student on "${selChapter.title}".
 Native language: ${nativeLangName}.
 ${feedbackRule}
@@ -168,7 +184,7 @@ ${tutor.name}:`;
         setAiChat(prev => [...prev, { role:'ai', text: 'I got stuck on that question — ask me again and I\'ll explain it clearly! 📖' }]);
       }
     setAiLoading(false);
-  }, [aiInput, aiLoading, selChapter, aiChat, tutor.name, nativeLangName, learnLangName, isEnglishLearner, user]);
+  }, [aiInput, aiLoading, selChapter, aiChat, tutor.name, nativeLangName, learnLangName, user]);
 
   // ── CHAPTER VIEW ────────────────────────────────────────────────────────────
 
@@ -239,7 +255,9 @@ ${tutor.name}:`;
                   <span style={{ ...S.useCaseLabel, background:`${uc.color}15`, color:uc.color }}>{uc.label}</span>
                   <div style={{ marginTop:6 }}>
                     <div style={{ fontSize:14, fontWeight:700, color:'#0F172A', fontFamily:"Georgia,serif" }}>{uc.example}</div>
-                    <div style={{ fontSize:12, color:'#64748B', fontWeight:600, marginTop:2 }}>{uc.translation}</div>
+                    {uc.translation ? (
+                      <div style={{ fontSize:12, color:'#64748B', fontWeight:600, marginTop:2 }}>{uc.translation}</div>
+                    ) : null}
                   </div>
                 </div>
               ))}
@@ -440,7 +458,7 @@ ${tutor.name}:`;
                 <input value={aiInput} onChange={e=>setAiInput(e.target.value)}
                   onKeyDown={e=>{ if(e.key==='Enter') sendAI(); }}
                   disabled={aiLoading}
-                  placeholder={isEnglishLearner ? `Write a sentence in ${learnLangName} using this grammar...` : `Ask about this grammar point in ${nativeLangName}...`}
+                  placeholder={`Write a sentence in ${learnLangName} using this grammar...`}
                   style={{ flex:1, padding:'11px 14px', borderRadius:12, border:`1.5px solid ${ch.color}40`,
                     background:'#F8FAFC', color:'#0F172A', fontSize:14, fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
                     outline:'none', fontWeight:600 }}/>
@@ -461,10 +479,62 @@ ${tutor.name}:`;
 
   // ── HUB VIEW ────────────────────────────────────────────────────────────────
 
-  const levelChapters = getChaptersByLevel(selLevel);
+  const levelChapters = getChaptersByLevel(chapters, selLevel);
   const filtered = selCategory ? levelChapters.filter(c => c.category === selCategory) : levelChapters;
   const lvInfo = getLevelInfo(selLevel);
   const totalDone = levelChapters.filter(c => completedIds.has(c.id)).length;
+
+  if (loading) {
+    return (
+      <div style={S.page}>
+        <style>{CSS}</style>
+        <nav style={S.nav}>
+          <button onClick={() => router.push('/lingua')} style={S.navBack}>← Home</button>
+          <div style={S.navCenter}>
+            <span style={{ fontSize:20 }}>📖</span>
+            <span style={S.navTitle}>Grammar Hub</span>
+          </div>
+          <div style={{ width:60 }} />
+        </nav>
+        <div style={{ maxWidth:1100, margin:'0 auto', padding:'16px' }}>
+          {[0,1,2,3,4,5].map(i => (
+            <div key={i} style={{ height:120, borderRadius:18, background:'#F1F5F9',
+              marginBottom:16, animation:'fadeUp .35s ease both', animationDelay:`${i*.05}s` }} />
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  if (loadError) {
+    return (
+      <div style={S.page}>
+        <style>{CSS}</style>
+        <nav style={S.nav}>
+          <button onClick={() => router.push('/lingua')} style={S.navBack}>← Home</button>
+          <div style={S.navCenter}>
+            <span style={{ fontSize:20 }}>📖</span>
+            <span style={S.navTitle}>Grammar Hub</span>
+          </div>
+          <div style={{ width:60 }} />
+        </nav>
+        <div style={{ textAlign:'center', padding:'80px 20px', color:'#94A3B8' }}>
+          <div style={{ fontSize:40, marginBottom:12 }}>📡</div>
+          <div style={{ fontWeight:800, color:'#475569', marginBottom:8 }}>
+            Couldn't load {learnLangName} grammar
+          </div>
+          <div style={{ fontSize:13, fontWeight:600, marginBottom:20 }}>
+            Check your connection and try again.
+          </div>
+          <button onClick={() => window.location.reload()}
+            style={{ padding:'10px 24px', borderRadius:12, border:'none',
+              background:'#0F172A', color:'#fff', fontWeight:800, fontSize:14, cursor:'pointer' }}>
+            ↻ Retry
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div style={S.page}>
@@ -478,7 +548,7 @@ ${tutor.name}:`;
           <span style={S.navTitle}>Grammar Hub</span>
         </div>
         <div style={{ fontSize:11, fontWeight:800, color:'#64748B' }}>
-          {GRAMMAR_CHAPTERS.filter(c=>completedIds.has(c.id)).length}/{GRAMMAR_CHAPTERS.length}
+          {chapters.filter(c=>completedIds.has(c.id)).length}/{chapters.length}
         </div>
       </nav>
 
@@ -487,8 +557,8 @@ ${tutor.name}:`;
         {LEVEL_ORDER.map(lvl => {
           const info = getLevelInfo(lvl);
           const isActive = selLevel === lvl;
-          const done = getChaptersByLevel(lvl).filter(c=>completedIds.has(c.id)).length;
-          const total = getChaptersByLevel(lvl).length;
+          const done = getChaptersByLevel(chapters, lvl).filter(c=>completedIds.has(c.id)).length;
+          const total = getChaptersByLevel(chapters, lvl).length;
           return (
             <button key={lvl} onClick={() => { setSelLevel(lvl); setSelCategory(null); }}
               style={{ ...S.levelTab,

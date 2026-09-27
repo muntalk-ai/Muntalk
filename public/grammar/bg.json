@@ -1,0 +1,3413 @@
+[
+ {
+  "id": "bg-a1-present-tense-conjugations",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔄",
+  "title": "Present Tense Verb Groups (1st, 2nd, and 3rd Conjugations)",
+  "subtitle": "Conjugate verbs in the present tense by recognizing their stem vowel.",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Bulgarian verbs are divided into three conjugations based on the 3rd person singular vowel: First (-е-), Second (-и-), and Third (-а-/-я-).",
+  "structure": {
+   "headers": [
+    "Conjugation",
+    "3rd Person Sing.",
+    "1st Person Sing.",
+    "English"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st (-e-)",
+      "чете",
+      "чета",
+      "to read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd (-и-)",
+      "говори",
+      "говоря",
+      "to speak"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd (-а-/-я-)",
+      "обича",
+      "обичам",
+      "to love"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Habitual actions",
+    "example": "Всяка сутрин пия кафе.",
+    "translation": ""
+   },
+   {
+    "color": "#06B6D4",
+    "label": "Current state",
+    "example": "Сега живея в София.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Universal facts",
+    "example": "Земята обикаля около слънцето.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Аз чета интересна книга.",
+    "ko": "",
+    "highlight": "чета"
+   },
+   {
+    "en": "Ние говорим български език.",
+    "ko": "",
+    "highlight": "говорим"
+   },
+   {
+    "en": "Те обичат хубава музика.",
+    "ko": "",
+    "highlight": "обичат"
+   },
+   {
+    "en": "Ти пишеш писмо на приятел.",
+    "ko": "",
+    "highlight": "пишеш"
+   },
+   {
+    "en": "Вие работите ли днес?",
+    "ko": "",
+    "highlight": "работите"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Аз обича кафе.",
+    "right": "Аз обичам кафе.",
+    "note": "Third conjugation verbs add -м for the 1st person singular 'аз', not just the bare stem."
+   },
+   {
+    "wrong": "Ние четеме вестник.",
+    "right": "Ние четем вестник.",
+    "note": "First and second conjugation 1st person plural takes -ем or -им, never -еме in standard written Bulgarian."
+   },
+   {
+    "wrong": "Те говори български.",
+    "right": "Те говорят български.",
+    "note": "The 3rd person plural for the 2nd conjugation requires the ending -ят, not the singular form."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I speak' in Bulgarian?",
+    "options": [
+     "говори",
+     "говорим",
+     "говоря",
+     "говорят"
+    ],
+    "answer": 2,
+    "explanation": "'Говоря' is the 1st person singular form for the 2nd-conjugation verb 'говоря'."
+   },
+   {
+    "question": "Complete: 'Ние ___ в София.' (We live in Sofia - живея)",
+    "options": [
+     "живеем",
+     "живея",
+     "живеят",
+     "живеете"
+    ],
+    "answer": 0,
+    "explanation": "The 1st conjugation 1st person plural ('ние') ending is -ем: 'живеем'."
+   },
+   {
+    "question": "Complete: 'Те ___ музика.' (They listen to music - слушам)",
+    "options": [
+     "слуша",
+     "слушам",
+     "слушате",
+     "слушат"
+    ],
+    "answer": 3,
+    "explanation": "The 3rd conjugation 3rd person plural ('те') ending is -ат: 'слушат'."
+   },
+   {
+    "question": "Complete: 'Ти ___ ли български?' (Do you understand Bulgarian? - разбирам)",
+    "options": [
+     "разбира",
+     "разбираш",
+     "разбирам",
+     "разбирате"
+    ],
+    "answer": 1,
+    "explanation": "The 2nd person singular ('ти') ending for 3rd conjugation is -аш: 'разбираш'."
+   }
+  ],
+  "tip": "To determine a verb's conjugation, look at its 'той/тя' (he/she) form: -е indicates 1st, -и indicates 2nd, and -а/-я indicates 3rd."
+ },
+ {
+  "id": "bg-a1-postposed-definite-article",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🏷️",
+  "title": "The Postposed Definite Article for Nouns",
+  "subtitle": "Attach definite articles directly to the end of Bulgarian nouns.",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Bulgarian lacks a standalone word for 'the'; instead, gender- and number-specific article endings are attached directly to the end of nouns.",
+  "structure": {
+   "headers": [
+    "Gender / Number",
+    "Article Ending",
+    "Indefinite",
+    "Definite"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine (Subject/Object)",
+      "-ът / -а (-ят / -я)",
+      "град",
+      "градът / града"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine",
+      "-та",
+      "жена",
+      "жената"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter",
+      "-то",
+      "дете",
+      "детето"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural",
+      "-те / -та",
+      "книги",
+      "книгите"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Specific known object",
+    "example": "Книгата е на масата.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Subject of the sentence",
+    "example": "Мъжът чете вестник.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Direct object",
+    "example": "Виждам града отдалеч.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Градът е много стар.",
+    "ko": "",
+    "highlight": "Градът"
+   },
+   {
+    "en": "Жената работи в училище.",
+    "ko": "",
+    "highlight": "Жената"
+   },
+   {
+    "en": "Момчето играе в парка.",
+    "ko": "",
+    "highlight": "Момчето"
+   },
+   {
+    "en": "Книгите са на рафта.",
+    "ko": "",
+    "highlight": "Книгите"
+   },
+   {
+    "en": "Виждам мъжа на улицата.",
+    "ko": "",
+    "highlight": "мъжа"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Аз чета книга.",
+    "right": "Аз чета книгата.",
+    "note": "Use the definite article when referring to a specific book both speakers know about."
+   },
+   {
+    "wrong": "В стаята влезе мъжа.",
+    "right": "В стаята влезе мъжът.",
+    "note": "Use the full article (-ът / -ят) when a masculine noun is the grammatical subject of the sentence."
+   },
+   {
+    "wrong": "Виждам женат.",
+    "right": "Виждам жената.",
+    "note": "Feminine nouns take -та as their definite suffix, not just a consonant."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete: '___ е хубаво.' (The child is good - дете)",
+    "options": [
+     "Детето",
+     "Детета",
+     "Детете",
+     "Дете"
+    ],
+    "answer": 0,
+    "explanation": "Neuter nouns take the definite suffix -то: 'детето'."
+   },
+   {
+    "question": "Which form is used for masculine subject: '___ е висок.' (The student is tall - студент)",
+    "options": [
+     "Студентта",
+     "Студентът",
+     "Студенто",
+     "Студенти"
+    ],
+    "answer": 1,
+    "explanation": "Masculine nouns functioning as the grammatical subject take the full article ending -ът: 'студентът'."
+   },
+   {
+    "question": "Complete: '___ пие чай.' (The woman is drinking tea - жена)",
+    "options": [
+     "Жено",
+     "Жени",
+     "Женът",
+     "Жената"
+    ],
+    "answer": 3,
+    "explanation": "Feminine singular nouns take the suffix -та: 'жената'."
+   },
+   {
+    "question": "Complete: '___ са нови.' (The tables are new - маси)",
+    "options": [
+     "Масито",
+     "Масите",
+     "Масита",
+     "Масиът"
+    ],
+    "answer": 1,
+    "explanation": "Plural nouns ending in -и take the definite suffix -те: 'масите'."
+   }
+  ],
+  "tip": "Remember the 'rule of thumb' for masculine nouns: if you can replace it with 'той' (he), use the full article -ът/-ят; if with 'него' (him), use the short article -а/-я."
+ },
+ {
+  "id": "bg-a1-vocative-case-endings",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🗣️",
+  "title": "Vocative Case Endings",
+  "subtitle": "Address people and things directly using vocative noun forms.",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "While Bulgarian has lost most case endings, it retains a distinct vocative form used exclusively for direct address.",
+  "structure": {
+   "headers": [
+    "Noun Type",
+    "Vocative Ending",
+    "Nominative",
+    "Vocative"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masc. hard consonant",
+      "-е / -о",
+      "Иван",
+      "Иване!"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masc. soft ending",
+      "-ю",
+      "приятел",
+      "приятелю!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Fem. in -а / -я",
+      "-о / -е",
+      "Мария",
+      "Марийо!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Fem. in consonant",
+      "-ьо",
+      "пролет",
+      "пролеттьо!"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Direct personal greeting",
+    "example": "Здравей, Петре!",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Calling someone over",
+    "example": "Иване, ела тук!",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Polite address to title",
+    "example": "Господине, заповядайте!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Добър ден, господине!",
+    "ko": "",
+    "highlight": "господине"
+   },
+   {
+    "en": "Здравей, Иване!",
+    "ko": "",
+    "highlight": "Иване"
+   },
+   {
+    "en": "Ела бързо, сине!",
+    "ko": "",
+    "highlight": "сине"
+   },
+   {
+    "en": "Благодаря ти, приятелю!",
+    "ko": "",
+    "highlight": "приятелю"
+   },
+   {
+    "en": "Къде си, мамо?",
+    "ko": "",
+    "highlight": "мамо"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Здравей, господин!",
+    "right": "Здравей, господине!",
+    "note": "When addressing a gentleman directly, 'господин' takes the vocative ending -е."
+   },
+   {
+    "wrong": "Иван, ела тук!",
+    "right": "Иване, ела тук!",
+    "note": "Traditional masculine names ending in a consonant take -е when calling someone."
+   },
+   {
+    "wrong": "Мамо, къде е мама?",
+    "right": "Мамо, къде е мама?",
+    "note": "Do not mix the vocative (мамо) for direct calling with the nominative (мама) when talking about the person."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you address your mother directly? '___, къде си?'",
+    "options": [
+     "Майката",
+     "Мамо",
+     "Мама",
+     "Мами"
+    ],
+    "answer": 1,
+    "explanation": "The vocative form of 'мама' is 'мамо'."
+   },
+   {
+    "question": "Call your friend 'Петър' directly: 'Здравей, ___!'",
+    "options": [
+     "Петър",
+     "Петъра",
+     "Петре",
+     "Петрето"
+    ],
+    "answer": 2,
+    "explanation": "Masculine 'Петър' drops the fleeting ъ and adds -е to become 'Петре'."
+   },
+   {
+    "question": "Address a friend directly: 'Здравей, ___!' (приятел)",
+    "options": [
+     "приятел",
+     "приятеля",
+     "приятели",
+     "приятелю"
+    ],
+    "answer": 3,
+    "explanation": "Masculine nouns ending in soft consonants like -тел take the vocative suffix -ю: 'приятелю'."
+   },
+   {
+    "question": "Call a teacher politely: '___, имам въпрос.' (господин)",
+    "options": [
+     "Господине",
+     "Господинът",
+     "Господин",
+     "Господина"
+    ],
+    "answer": 0,
+    "explanation": "'Господин' takes the vocative suffix -е: 'господине'."
+   }
+  ],
+  "tip": "Many modern female personal names (like Анна, Елена) can colloquially remain without a vocative change to sound gentler, but traditional family terms like 'мамо' and 'бабо' always use -о."
+ },
+ {
+  "id": "bg-a1-plural-noun-formations",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "📚",
+  "title": "Regular and Count Plural Forms of Nouns",
+  "subtitle": "Form standard plurals and the special masculine count form after numbers.",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Masculine non-person nouns must use the special count form (бройна форма) in -а/-я after numerals, while other nouns and people use the regular plural.",
+  "structure": {
+   "headers": [
+    "Noun Category",
+    "Condition",
+    "Ending",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masc. inanimate",
+      "General plural",
+      "-и / -ове",
+      "столове (chairs)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masc. inanimate",
+      "After numbers (2+)",
+      "-а / -я",
+      "два стола (2 chairs)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masc. persons",
+      "Always plural",
+      "-и / -ове",
+      "двама студенти (2 students)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Fem. / Neuter",
+      "Plural everywhere",
+      "-и / -а",
+      "три книги (3 books)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Count form after cardinal numbers",
+    "example": "Имам два компютъра.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Regular plural without quantity",
+    "example": "Тези градове са големи.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Counting male persons",
+    "example": "В стаята има трима лекари.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Купих два нови стола.",
+    "ko": "",
+    "highlight": "стола"
+   },
+   {
+    "en": "Всички столове са заети.",
+    "ko": "",
+    "highlight": "столове"
+   },
+   {
+    "en": "В офиса работят трима инженери.",
+    "ko": "",
+    "highlight": "инженери"
+   },
+   {
+    "en": "Трябват ми пет лева.",
+    "ko": "",
+    "highlight": "лева"
+   },
+   {
+    "en": "На масата има четири ябълки.",
+    "ko": "",
+    "highlight": "ябълки"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Имам два столове.",
+    "right": "Имам два стола.",
+    "note": "Non-person masculine nouns take the count form ending in -а/-я after numerals, not the regular plural."
+   },
+   {
+    "wrong": "Виждам двама студента.",
+    "right": "Виждам двама студенти.",
+    "note": "Masculine nouns referring to human beings take the standard plural (-и), never the count form."
+   },
+   {
+    "wrong": "Купих три книгите.",
+    "right": "Купих три книги.",
+    "note": "Do not attach the definite article to nouns immediately after indefinite numerals unless specifically specifying 'the three books'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete: 'В града има пет ___.' (hotels - хотел)",
+    "options": [
+     "хотели",
+     "хотел",
+     "хотела",
+     "хотелите"
+    ],
+    "answer": 2,
+    "explanation": "Inanimate masculine noun 'хотел' uses the count form -а after numerals: 'пет хотела'."
+   },
+   {
+    "question": "Complete: 'В залата влязоха двама ___.' (professors - професор)",
+    "options": [
+     "професори",
+     "професора",
+     "професор",
+     "професорите"
+    ],
+    "answer": 0,
+    "explanation": "Human masculine nouns use the regular plural (-и) even after numerals: 'двама професори'."
+   },
+   {
+    "question": "Complete: 'Тези ___ са много удобни.' (chairs - стол)",
+    "options": [
+     "стола",
+     "столи",
+     "столите",
+     "столове"
+    ],
+    "answer": 3,
+    "explanation": "Without a specific numeral, general plurality for 'стол' uses the regular plural 'столове'."
+   },
+   {
+    "question": "Complete: 'Това струва десет ___.' (levs - лев)",
+    "options": [
+     "леви",
+     "лева",
+     "левове",
+     "лев"
+    ],
+    "answer": 1,
+    "explanation": "The currency unit 'лев' is a masculine inanimate noun and takes the count form ending -а after numbers: 'десет лева'."
+   }
+  ],
+  "tip": "Use the count form (-а/-я) for masculine things and objects after numbers and 'колко' (how many), but stick to standard plurals for people!"
+ },
+ {
+  "id": "bg-a1-short-pronominal-clitics",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🎯",
+  "title": "Short Form Dative and Accusative Pronouns",
+  "subtitle": "Master direct and indirect object clitics in everyday conversation.",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Bulgarian uses short, unstressed clitic pronouns for direct (ме, те, го, я, ни, ви, ги) and indirect (ми, ти, му, ѝ, ни, ви, им) objects, placing them directly before the finite verb.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Direct (Acc.)",
+    "Indirect (Dat.)",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Sing. (аз)",
+      "ме",
+      "ми",
+      "me / to me"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Sing. Masc. (той)",
+      "го",
+      "му",
+      "him / to him"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3rd Sing. Fem. (тя)",
+      "я",
+      "ѝ",
+      "her / to her"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Plural (те)",
+      "ги",
+      "им",
+      "them / to them"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Direct object pronoun",
+    "example": "Познавам го много добре.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Indirect object pronoun",
+    "example": "Той ми дава книга.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Double object combination",
+    "example": "Тя ми го дава.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Аз те обичам.",
+    "ko": "",
+    "highlight": "те"
+   },
+   {
+    "en": "Той ми каза истината.",
+    "ko": "",
+    "highlight": "ми"
+   },
+   {
+    "en": "Виждам я всеки ден.",
+    "ko": "",
+    "highlight": "я"
+   },
+   {
+    "en": "Учителят ни помага.",
+    "ko": "",
+    "highlight": "ни"
+   },
+   {
+    "en": "Купих им подарък за празника.",
+    "ko": "",
+    "highlight": "им"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Го виждам днес.",
+    "right": "Виждам го днес.",
+    "note": "A short clitic pronoun cannot stand at the very beginning of a sentence; place it after the verb if no word precedes it."
+   },
+   {
+    "wrong": "Аз давам го на Петър.",
+    "right": "Аз му го давам.",
+    "note": "When both short clitics are used, indirect (му) always precedes direct (го): indirect + direct."
+   },
+   {
+    "wrong": "Аз и казах всичко.",
+    "right": "Аз ѝ казах всичко.",
+    "note": "The indirect feminine pronoun 'to her' is spelled with a grave accent (ѝ) to distinguish it from the conjunction 'и' (and)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete: 'Аз ___ виждам на спирката.' (I see him - direct object)",
+    "options": [
+     "му",
+     "го",
+     "ми",
+     "ѝ"
+    ],
+    "answer": 1,
+    "explanation": "'Го' is the accusative (direct object) clitic for 3rd person singular masculine 'him'."
+   },
+   {
+    "question": "Complete: 'Тя ___ даде книгата.' (She gave me the book - indirect object)",
+    "options": [
+     "ме",
+     "ми",
+     "ни",
+     "му"
+    ],
+    "answer": 1,
+    "explanation": "'Ми' is the dative (indirect object) clitic for 1st person singular 'to me'."
+   },
+   {
+    "question": "Complete: 'Ние ___ обичаме много.' (We love you [informal sg.] - direct object)",
+    "options": [
+     "ти",
+     "те",
+     "то",
+     "ви"
+    ],
+    "answer": 1,
+    "explanation": "'Те' is the direct object clitic for 2nd person singular 'you'."
+   },
+   {
+    "question": "Complete: 'Майка ___ чете приказка.' (Mother reads them a story - indirect object)",
+    "options": [
+     "ги",
+     "те",
+     "им",
+     "му"
+    ],
+    "answer": 2,
+    "explanation": "'Им' is the 3rd person plural indirect object pronoun meaning 'to them'."
+   }
+  ],
+  "tip": "Never start a Bulgarian sentence with a clitic pronoun! If nothing comes before the verb, place the clitic immediately after the verb (e.g., 'Давам ти' instead of 'Ти давам')."
+ },
+ {
+  "id": "bg-a1-da-construction-basics",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🔗",
+  "title": "Basic 'Da'-Constructions replacing the Infinitive",
+  "subtitle": "Connecting conjugated verbs without an infinitive form",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Bulgarian lacks an infinitive verb form, so it connects verbs using the particle 'да' followed by a fully conjugated present-tense verb matching the subject.",
+  "structure": {
+   "headers": [
+    "Structure",
+    "Bulgarian Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "искам + да + verb",
+      "Искам да чета.",
+      "I want to read."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "мога + да + verb",
+      "Можеш ли да дойдеш?",
+      "Can you come?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "трябва + да + verb",
+      "Трябва да учим.",
+      "We must study."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "обичам + да + verb",
+      "Те обичат да пътуват.",
+      "They love to travel."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Desire and Intent (искам)",
+    "example": "Искам да пия кафе.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Ability and Possibility (мога)",
+    "example": "Мога да говоря български.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Obligation and Necessity (трябва)",
+    "example": "Трябва да тръгваме сега.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Искам да спя.",
+    "ko": "",
+    "highlight": "да спя"
+   },
+   {
+    "en": "Той иска да яде ябълка.",
+    "ko": "",
+    "highlight": "да яде"
+   },
+   {
+    "en": "Ние можем да помогнем.",
+    "ko": "",
+    "highlight": "да помогнем"
+   },
+   {
+    "en": "Вие трябва да работите днес.",
+    "ko": "",
+    "highlight": "да работите"
+   },
+   {
+    "en": "Децата не обичат да спят следобед.",
+    "ko": "",
+    "highlight": "да спят"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Искам чета.",
+    "right": "Искам да чета.",
+    "note": "You cannot omit the conjunction 'да' between the two verbs."
+   },
+   {
+    "wrong": "Искаме да учи.",
+    "right": "Искаме да учим.",
+    "note": "The verb after 'да' must conjugate to agree with the subject (we = учим, not учи)."
+   },
+   {
+    "wrong": "Мога да четене.",
+    "right": "Мога да чета.",
+    "note": "Never use a verbal noun after 'да'; use the conjugated finite verb form."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase for 'I want to drink water': 'Искам ___ вода.'",
+    "options": [
+     "пия",
+     "да пия",
+     "да пиеш",
+     "пие"
+    ],
+    "answer": 1,
+    "explanation": "'Да' is required, followed by the first-person singular conjugated verb 'пия'."
+   },
+   {
+    "question": "Choose the correct phrase for 'We can come': 'Ние можем ___.'",
+    "options": [
+     "дойдем",
+     "да дойде",
+     "да дойдем",
+     "да дойдете"
+    ],
+    "answer": 2,
+    "explanation": "The second verb must agree with 'ние' (1st person plural), yielding 'да дойдем'."
+   },
+   {
+    "question": "Choose the correct phrase for 'You (singular) must study': 'Трябва ___.'",
+    "options": [
+     "да учиш",
+     "учиш",
+     "да учи",
+     "да учат"
+    ],
+    "answer": 0,
+    "explanation": "Modal 'трябва' remains impersonal while the verb after 'да' conjugates for 'ти': 'да учиш'."
+   },
+   {
+    "question": "Choose the correct phrase for 'They love to travel': 'Те обичат ___.'",
+    "options": [
+     "пътуват",
+     "да пътува",
+     "да пътувате",
+     "да пътуват"
+    ],
+    "answer": 3,
+    "explanation": "'Те' requires the 3rd person plural ending '-ат', making 'да пътуват' correct."
+   }
+  ],
+  "tip": "Think of 'да + conjugated verb' as Bulgarian's equivalent to the English infinitive 'to + verb'."
+ },
+ {
+  "id": "bg-a2-full-vs-short-masculine-article",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "📏",
+  "title": "Full vs. Short Masculine Definite Article (Пълен и кратък член)",
+  "subtitle": "Choosing between -ът/-ят and -а/-я for masculine singular nouns",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use the full article (-ът/-ят) when the masculine noun is the grammatical subject, and the short article (-а/-я) for direct objects, indirect objects, or after prepositions.",
+  "structure": {
+   "headers": [
+    "Role",
+    "Article Ending",
+    "Hard Stem Example",
+    "Soft Stem Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Subject (Кой?)",
+      "-ът / -ят",
+      "столът (the chair)",
+      "учителят (the teacher)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Direct Object (Кого? / Какво?)",
+      "-а / -я",
+      "стола",
+      "учителя"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "After Preposition (в, на, за...)",
+      "-а / -я",
+      "на стола",
+      "при учителя"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Subject Complement (след съм)",
+      "-ът / -ят",
+      "Той е лекарят.",
+      "Той е мъжът."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Subject Position",
+    "example": "Влакът пристига на гарата.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Direct Object Position",
+    "example": "Виждам влака отдалеч.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "After Prepositions",
+    "example": "Качвам се на влака.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Мъжът чете интересна книга.",
+    "ko": "",
+    "highlight": "Мъжът"
+   },
+   {
+    "en": "Познавам мъжа от вчера.",
+    "ko": "",
+    "highlight": "мъжа"
+   },
+   {
+    "en": "Учителят влезе в класната стая.",
+    "ko": "",
+    "highlight": "Учителят"
+   },
+   {
+    "en": "Дадох тетрадката на учителя.",
+    "ko": "",
+    "highlight": "учителя"
+   },
+   {
+    "en": "Градът е много стар и красив.",
+    "ko": "",
+    "highlight": "Градът"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Човека влезе в стаята.",
+    "right": "Човекът влезе в стаята.",
+    "note": "The subject performing the action must take the full article (-ът)."
+   },
+   {
+    "wrong": "Видях филмът вчера.",
+    "right": "Видях филма вчера.",
+    "note": "A noun acting as a direct object must take the short article (-а)."
+   },
+   {
+    "wrong": "Отивам при лекарят.",
+    "right": "Отивам при лекаря.",
+    "note": "Nouns after prepositions always take the short article (-а/-я)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct form for 'The student is reading': '___ чете нова книга.'",
+    "options": [
+     "Ученик",
+     "Ученика",
+     "Ученикът",
+     "Ученици"
+    ],
+    "answer": 2,
+    "explanation": "'The student' is the subject of the sentence, so the full article '-ът' is required."
+   },
+   {
+    "question": "Choose the correct form for 'I bought the computer': 'Купих ___ вчера.'",
+    "options": [
+     "компютъра",
+     "компютърът",
+     "компютър",
+     "компютри"
+    ],
+    "answer": 0,
+    "explanation": "'The computer' is the direct object of the verb 'купих', requiring the short article '-а'."
+   },
+   {
+    "question": "Choose the correct form for 'We are talking about the film': 'Говорим за ___.'",
+    "options": [
+     "филмът",
+     "филми",
+     "филм",
+     "филма"
+    ],
+    "answer": 3,
+    "explanation": "Any noun following a preposition (like 'за') takes the short article '-а'."
+   },
+   {
+    "question": "Choose the correct form for 'The teacher answered the question': '___ отговори на въпроса.'",
+    "options": [
+     "Учителя",
+     "Учителят",
+     "Учители",
+     "Учител"
+    ],
+    "answer": 1,
+    "explanation": "'Учител' is a soft-stem masculine noun acting as the subject, taking the full soft article '-ят'."
+   }
+  ],
+  "tip": "Substitute the pronoun 'той' (he) or 'него' (him): if 'той' sounds right, use the full article (-ът/-ят); if 'него' fits, use the short article (-а/-я)."
+ },
+ {
+  "id": "bg-a2-clitic-doubling",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#7C3AED",
+  "emoji": "👥",
+  "title": "Clitic Doubling for Topicalization and Emphasis",
+  "subtitle": "Pairing full noun phrases with matching short object pronouns",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Bulgarian reinforces topicalized or fronted direct and indirect objects by pairing the full noun or pronoun with its corresponding short clitic pronoun.",
+  "structure": {
+   "headers": [
+    "Object Type",
+    "Full Form / Noun",
+    "Short Clitic",
+    "Complete Sentence"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Direct Object (Fronted)",
+      "Иван (Ivan)",
+      "го (him)",
+      "Иван го познавам отдавна."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Direct Object (Pronoun)",
+      "Мене (Me)",
+      "ме (me)",
+      "Мене ме викат."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Indirect Object (Noun)",
+      "На Мария (To Maria)",
+      "ѝ (to her)",
+      "На Мария ѝ дадоха цветя."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Indirect Object (Pronoun)",
+      "На нас (To us)",
+      "ни (to us)",
+      "На нас ни харесва тук."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Emphasizing Direct Objects",
+    "example": "Тази книга я прочетох за един ден.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Fronted Indirect Recipients",
+    "example": "На баща ми му купихме часовник.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Expressing Feelings / States",
+    "example": "На мене ми е студено.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Него го познавам много добре.",
+    "ko": "",
+    "highlight": "Него го"
+   },
+   {
+    "en": "Книгата я оставих на масата.",
+    "ko": "",
+    "highlight": "Книгата я"
+   },
+   {
+    "en": "На Петър му казаха истината.",
+    "ko": "",
+    "highlight": "На Петър му"
+   },
+   {
+    "en": "На мене ми харесва тази музика.",
+    "ko": "",
+    "highlight": "На мене ми"
+   },
+   {
+    "en": "Нея я търси директорът.",
+    "ko": "",
+    "highlight": "Нея я"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "На Мария го дадох подаръка.",
+    "right": "На Мария ѝ дадох подаръка.",
+    "note": "The indirect clitic must match the feminine recipient (на Мария -> ѝ, not го)."
+   },
+   {
+    "wrong": "Тази книга го четох.",
+    "right": "Тази книга я четох.",
+    "note": "'Книга' is feminine singular, so the doubling clitic must be direct feminine 'я'."
+   },
+   {
+    "wrong": "Мене харесва този град.",
+    "right": "На мене ми харесва този град.",
+    "note": "Impersonal sensory expressions like 'харесва' require the indirect dative frame ('на мене ми')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill the blank with the doubled direct clitic: 'Филма ___ гледах снощи.'",
+    "options": [
+     "го",
+     "я",
+     "му",
+     "ги"
+    ],
+    "answer": 0,
+    "explanation": "'Филм' is masculine singular, so its direct object clitic is 'го'."
+   },
+   {
+    "question": "Fill the blank with the doubled indirect clitic: 'На сестра ми ___ подарих книга.'",
+    "options": [
+     "го",
+     "я",
+     "ѝ",
+     "му"
+    ],
+    "answer": 2,
+    "explanation": "'На сестра ми' is feminine indirect (to her), requiring the short indirect dative clitic 'ѝ'."
+   },
+   {
+    "question": "Choose the missing pronoun: 'На децата ___ дадоха сладолед.'",
+    "options": [
+     "ги",
+     "ни",
+     "ви",
+     "им"
+    ],
+    "answer": 3,
+    "explanation": "'На децата' is plural indirect (to them), requiring 'им'."
+   },
+   {
+    "question": "Choose the correct doubling pair: '___ ме поканиха на вечеря.'",
+    "options": [
+     "Тебе",
+     "Мене",
+     "Него",
+     "Нея"
+    ],
+    "answer": 1,
+    "explanation": "The clitic 'ме' (1st person singular direct) pairs with the full direct pronoun 'мене'."
+   }
+  ],
+  "tip": "Whenever you bring an object to the absolute beginning of a sentence to make it the topic, always echo it with a short clitic right before the verb."
+ },
+ {
+  "id": "bg-a2-pronominal-clitic-placement",
+  "level": "a2",
+  "category": "advanced",
+  "categoryColor": "#4F46E5",
+  "emoji": "🧩",
+  "title": "Pronominal Clitic Placement and Wackernagel's Law",
+  "subtitle": "Ordering clitics and preventing them from starting sentences",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Bulgarian clitics cannot stand at the very beginning of a sentence; they lean on the verb or preceding words in the fixed order: Indirect Clitic + Direct Clitic + Verb.",
+  "structure": {
+   "headers": [
+    "Position",
+    "Rule Description",
+    "Bulgarian Pattern",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Postverbal (Enclitic)",
+      "When the verb starts the sentence",
+      "Verb + Clitics",
+      "Давам ти го веднага."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Preverbal (Proclitic)",
+      "When another word begins the sentence",
+      "Subject/Adv + Clitics + Verb",
+      "Аз ти го давам."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Clitic Cluster Order",
+      "Indirect precedes direct object",
+      "Indirect (му) + Direct (го)",
+      "Той му го даде."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "With Negation 'Не'",
+      "Clitics stay before verb after 'не'",
+      "Не + Clitics + Verb",
+      "Не му го давам."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Initial Verb Sentence",
+    "example": "Обади ми се утре сутрин.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Non-Initial Preverbal Clitic",
+    "example": "Вчера ми го донесоха.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Negated Verbal Phrase",
+    "example": "Не му я давай днес.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Казвам ти го за последен път.",
+    "ko": "",
+    "highlight": "ти го"
+   },
+   {
+    "en": "Той ми я показа вчера.",
+    "ko": "",
+    "highlight": "ми я"
+   },
+   {
+    "en": "Не му го казвай още.",
+    "ko": "",
+    "highlight": "му го"
+   },
+   {
+    "en": "Дай ми го, моля те!",
+    "ko": "",
+    "highlight": "ми го"
+   },
+   {
+    "en": "Сега ви ги връщам.",
+    "ko": "",
+    "highlight": "ви ги"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Го виждам всеки ден.",
+    "right": "Виждам го всеки ден.",
+    "note": "A clitic can never be the first word in a sentence; place it after the initial verb."
+   },
+   {
+    "wrong": "Той го ми даде.",
+    "right": "Той ми го даде.",
+    "note": "Indirect clitics (ми, ти, му, ѝ...) must strictly precede direct clitics (ме, те, го, я...)."
+   },
+   {
+    "wrong": "Не давам ти го.",
+    "right": "Не ти го давам.",
+    "note": "The negative particle 'не' attracts clitics before the verb; do not put them after."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which sentence correctly begins with the verb?",
+    "options": [
+     "Ми дай книгата!",
+     "Дай ми книгата!",
+     "Дай книгата ми!",
+     "Ми дай я!"
+    ],
+    "answer": 1,
+    "explanation": "Clitics cannot open a sentence; 'Дай ми книгата!' correctly places the clitic after the verb."
+   },
+   {
+    "question": "Select the correct clitic order for 'He is giving it to her': 'Той ___ дава.'",
+    "options": [
+     "го ѝ",
+     "ѝ я",
+     "ѝ го",
+     "го ѝ се"
+    ],
+    "answer": 2,
+    "explanation": "Indirect clitics precede direct clitics: 'ѝ' (to her) comes before 'го' (it/him)."
+   },
+   {
+    "question": "How do you correctly negate 'Той ми го каза'?",
+    "options": [
+     "Той каза не ми го.",
+     "Той не каза ми го.",
+     "Не той ми го каза.",
+     "Той не ми го каза."
+    ],
+    "answer": 3,
+    "explanation": "The particle 'не' precedes the clitics, which in turn precede the verb: 'Той не ми го каза'."
+   },
+   {
+    "question": "Choose the grammatically sound sentence meaning 'I see you':",
+    "options": [
+     "Те виждам.",
+     "Виждам те.",
+     "Виждам се те.",
+     "Те аз виждам."
+    ],
+    "answer": 1,
+    "explanation": "Because 'виждам' is the first word, the enclitic 'те' must follow: 'Виждам те'."
+   }
+  ],
+  "tip": "Memorize the strict cluster formula: Indirect Clitic (to whom) + Direct Clitic (what) + Verb, unless the verb is the sentence's very first word."
+ },
+ {
+  "id": "bg-a2-future-tense-shte",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "⏳",
+  "title": "Future Tense Formation with 'Ще' and Negation with 'Няма да'",
+  "subtitle": "Expressing upcoming events in positive and negative sentences",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "Form the affirmative future tense using the invariant particle 'ще' before the present verb, and the negative future using the fixed construction 'няма да' plus the present verb.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Formula",
+    "Bulgarian Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Positive Future",
+      "ще + present verb",
+      "Утре ще пътувам.",
+      "Tomorrow I will travel."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Future",
+      "няма да + present verb",
+      "Утре няма да пътувам.",
+      "Tomorrow I will not travel."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Positive with Clitic",
+      "ще + clitic + verb",
+      "Ще ти се обадя.",
+      "I will call you."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative with Clitic",
+      "няма да + clitic + verb",
+      "Няма да ти се обадя.",
+      "I will not call you."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Scheduled Events",
+    "example": "Влакът ще замине в пет часа.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Promises and Plans",
+    "example": "Ще ти помогна с домашната работа.",
+    "translation": ""
+   },
+   {
+    "color": "#9333EA",
+    "label": "Refusals and Denials",
+    "example": "Няма да отидем на кино довечера.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Утре ще чета тази книга.",
+    "ko": "",
+    "highlight": "ще чета"
+   },
+   {
+    "en": "Ние ще дойдем навреме.",
+    "ko": "",
+    "highlight": "ще дойдем"
+   },
+   {
+    "en": "Той няма да работи в понеделник.",
+    "ko": "",
+    "highlight": "няма да работи"
+   },
+   {
+    "en": "Аз няма да закъснея.",
+    "ko": "",
+    "highlight": "няма да закъснея"
+   },
+   {
+    "en": "Ще вали ли дъжд следобед?",
+    "ko": "",
+    "highlight": "Ще вали"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Аз не ще дойда утре.",
+    "right": "Аз няма да дойда утре.",
+    "note": "Standard modern Bulgarian uses 'няма да' for future negation, not 'не ще'."
+   },
+   {
+    "wrong": "Те ще пътува утре.",
+    "right": "Те ще пътуват утре.",
+    "note": "'Ще' never conjugates, but the main verb must agree with 'те' (3rd person plural: пътуват)."
+   },
+   {
+    "wrong": "Няма да пътувам ще.",
+    "right": "Няма да пътувам.",
+    "note": "Do not mix 'ще' into negative sentences formed with 'няма да'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill the blank for 'We will speak with the doctor': 'Ние ___ с лекаря.'",
+    "options": [
+     "ще говори",
+     "ще говорим",
+     "говорим ще",
+     "ще да говорим"
+    ],
+    "answer": 1,
+    "explanation": "'Ще' is placed before the 1st person plural present verb form 'говорим'."
+   },
+   {
+    "question": "Fill the blank for 'I will not come tomorrow': 'Утре ___ на срещата.'",
+    "options": [
+     "не ще дойда",
+     "не да дойда",
+     "няма да дойда",
+     "няма дойда"
+    ],
+    "answer": 2,
+    "explanation": "The standard negative future construction is 'няма да' followed by the conjugated verb 'дойда'."
+   },
+   {
+    "question": "Choose the correct phrase: '___ ли кафе утре сутрин?' (Will you drink...?)",
+    "options": [
+     "Ще пиеш",
+     "Ще пие",
+     "Няма пиеш",
+     "Да ще пиеш"
+    ],
+    "answer": 0,
+    "explanation": "'Ще' pairs directly with the second-person singular verb 'пиеш'."
+   },
+   {
+    "question": "Which sentence correctly says 'They will not buy the house'?",
+    "options": [
+     "Те не ще купят къщата.",
+     "Те ще не купят къщата.",
+     "Те нямат да купят къщата.",
+     "Те няма да купят къщата."
+    ],
+    "answer": 3,
+    "explanation": "'Няма' is impersonal and never conjugates to 'нямат'; 'Те няма да купят къщата' is correct."
+   }
+  ],
+  "tip": "'Ще' is completely invariable and never changes for person or number; only conjugate the verb that immediately follows it!"
+ },
+ {
+  "id": "bg-a2-verbal-aspect-imperfective-perfective",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔄",
+  "title": "Verbal Aspect: Imperfective vs. Perfective",
+  "subtitle": "Mastering the fundamental division of Bulgarian verb stems",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Imperfective verbs express ongoing, repeated, or general actions, whereas perfective verbs denote completed, single actions with a clear boundary or result.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Imperfective (несвършен)",
+    "Perfective (свършен)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Prefixation",
+      "пиша",
+      "напиша",
+      "to write"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Prefixation",
+      "чета",
+      "прочета",
+      "to read"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Suffixation",
+      "отварям",
+      "отворя",
+      "to open"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Suffixation",
+      "купувам",
+      "купя",
+      "to buy"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Suppletive",
+      "говоря",
+      "кажа",
+      "to speak / say"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Habitual or Ongoing Action",
+    "example": "Всяка сутрин пия кафе и чета вестник.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "One-Time Completed Result",
+    "example": "Ще прочета тази интересна книга до утре.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Sequence of Completed Events",
+    "example": "Той влезе в стаята и отвори прозореца.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Всеки ден уча нови български думи.",
+    "ko": "",
+    "highlight": "уча"
+   },
+   {
+    "en": "Утре ще науча всички тези правила.",
+    "ko": "",
+    "highlight": "ще науча"
+   },
+   {
+    "en": "Обикновено пиша писма бавно.",
+    "ko": "",
+    "highlight": "пиша"
+   },
+   {
+    "en": "Трябва да напиша имейл на шефа.",
+    "ko": "",
+    "highlight": "да напиша"
+   },
+   {
+    "en": "Той дълго чете статията, но накрая я разбра.",
+    "ko": "",
+    "highlight": "разбра"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Искам да прочитам тази книга сега.",
+    "right": "Искам да прочета тази книга сега.",
+    "note": "When expressing a desire to finish a specific single act, use the perfective stem with 'да'."
+   },
+   {
+    "wrong": "Всяка вечер той прочете по една приказка.",
+    "right": "Всяка вечер той чете по една приказка.",
+    "note": "Habitual or repeated actions require imperfective aspect, not perfective."
+   },
+   {
+    "wrong": "Купя хляб всеки ден.",
+    "right": "Купувам хляб всеки ден.",
+    "note": "Perfective verbs cannot stand alone as independent present tense predicates expressing regular habits."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Every day I ___ tea with lemon in the morning.",
+    "options": [
+     "пия",
+     "изпия",
+     "напия",
+     "попия"
+    ],
+    "answer": 0,
+    "explanation": "Regular repeated daily habits require the imperfective aspect (пия)."
+   },
+   {
+    "question": "I have to ___ this letter right now.",
+    "options": [
+     "написвам",
+     "пиша",
+     "напиша",
+     "преписвам"
+    ],
+    "answer": 2,
+    "explanation": "A specific completed outcome in the immediate context takes the perfective form (да напиша)."
+   },
+   {
+    "question": "Maria always ___ the windows on Saturdays.",
+    "options": [
+     "отвори",
+     "отваря",
+     "отваряше",
+     "отвореше"
+    ],
+    "answer": 1,
+    "explanation": "The adverb 'винаги' (always) indicates repetition, demanding the imperfective present (отваря)."
+   },
+   {
+    "question": "Tomorrow we will ___ a new car.",
+    "options": [
+     "купувахме",
+     "купуваме",
+     "купвахме",
+     "купим"
+    ],
+    "answer": 3,
+    "explanation": "Future single events aiming at completion require the perfective stem after 'ще' (ще купим)."
+   }
+  ],
+  "tip": "Never use a standalone perfective verb in the present tense; it usually requires auxiliary particles like 'ще' (future) or 'да' (subjunctive)."
+ },
+ {
+  "id": "bg-a2-possessive-clitics-kinship",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "👨‍👩‍👧",
+  "title": "Enclitic Possessive Pronouns and Kinship Terms",
+  "subtitle": "Short dative clitics for natural, everyday possession",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Short possessive clitics directly follow definite nouns with an article, but follow singular kinship terms without any article.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Clitic Form",
+    "With Definite Noun",
+    "With Kinship Term"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Sing. (my)",
+      "ми",
+      "къщата ми",
+      "майка ми"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Sing. (your)",
+      "ти",
+      "братът ти",
+      "баща ти"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Masc./Neut. (his/its)",
+      "му",
+      "синът му",
+      "дядо му"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Fem. (her)",
+      "ѝ",
+      "стаята ѝ",
+      "сестра ѝ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "1st Plur. (our)",
+      "ни",
+      "градът ни",
+      "леля ни"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Singular Kinship",
+    "example": "Майка ми готви много вкусно.",
+    "translation": ""
+   },
+   {
+    "color": "#4F46E5",
+    "label": "Possession with Definite Nouns",
+    "example": "Колата му е паркирана отпред.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Body Parts and Personal Objects",
+    "example": "Главата ме боли, очите ми са уморени.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Баща ми работи в голяма болница.",
+    "ko": "",
+    "highlight": "Баща ми"
+   },
+   {
+    "en": "Къде живее брат ти сега?",
+    "ko": "",
+    "highlight": "брат ти"
+   },
+   {
+    "en": "Новият апартамент на сестра ѝ е просторен.",
+    "ko": "",
+    "highlight": "сестра ѝ"
+   },
+   {
+    "en": "Парите ми са в чантата.",
+    "ko": "",
+    "highlight": "Парите ми"
+   },
+   {
+    "en": "Кучето ни обича дългите разходки в парка.",
+    "ko": "",
+    "highlight": "Кучето ни"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Майката ми е лекар.",
+    "right": "Майка ми е лекар.",
+    "note": "Singular kinship terms take possessive clitics directly, without the definite article suffix."
+   },
+   {
+    "wrong": "Книга ми е на масата.",
+    "right": "Книгата ми е на масата.",
+    "note": "Standard non-kinship nouns must take the definite article when paired with a possessive clitic."
+   },
+   {
+    "wrong": "Къщата и е голяма.",
+    "right": "Къщата ѝ е голяма.",
+    "note": "Use 'ѝ' with a grave accent for the feminine possessive clitic 'her', not the conjunction 'и' (and)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'my brother'?",
+    "options": [
+     "братът ми",
+     "брат ми",
+     "моят братът",
+     "брата ми"
+    ],
+    "answer": 1,
+    "explanation": "Singular kinship words like 'брат' take clitics directly without a definite article: 'брат ми'."
+   },
+   {
+    "question": "Choose the correct phrase: 'our house'.",
+    "options": [
+     "къща ни",
+     "къщата ни",
+     "ни къща",
+     "наша къщата"
+    ],
+    "answer": 1,
+    "explanation": "Regular nouns take the definite article before appending the enclitic: 'къщата ни'."
+   },
+   {
+    "question": "Her sister is very smart: '___ е много умна.'",
+    "options": [
+     "сестрата ѝ",
+     "сестрата и",
+     "сестра ѝ",
+     "сестра си"
+    ],
+    "answer": 2,
+    "explanation": "Kinship words take no article and 'her' requires the accented pronoun 'ѝ'."
+   },
+   {
+    "question": "Where is your car? -> Къде е ___?",
+    "options": [
+     "колата ти",
+     "кола ти",
+     "ти колата",
+     "твоята кола ти"
+    ],
+    "answer": 0,
+    "explanation": "'Кола' is not a kinship term, so it must be definite: 'колата ти'."
+   }
+  ],
+  "tip": "In Bulgarian, adjectives pull the definite article! If an adjective precedes the noun, the clitic attaches to that adjective: 'моята стара майка' or 'добрата ми приятелка'."
+ },
+ {
+  "id": "bg-b1-aorist-past-tense",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#D97706",
+  "emoji": "⏱️",
+  "title": "The Aorist Tense (Минало свършено време)",
+  "subtitle": "Conjugating verbs to narrate completed past actions",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "The aorist tense expresses an action completed at a specific point in the past, formed using specific theme vowels and the endings -х, -хме, -хте, -ха.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Ending",
+    "пиша (написа-)",
+    "чета (прочете-)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Аз",
+      "-х",
+      "написах",
+      "прочетох"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ти",
+      "- / -е",
+      "написа",
+      "прочете"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Той / Тя / То",
+      "- / -е",
+      "написа",
+      "прочете"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Ние",
+      "-хме",
+      "написахме",
+      "прочетохме"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Те",
+      "-ха",
+      "написаха",
+      "прочетоха"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Sequential Past Events",
+    "example": "Той влезе, поздрави и седна на стола.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Action with Stated Completion",
+    "example": "Снощи изгледахме целия филм.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Sudden Past Occurrence",
+    "example": "Изведнъж токът спря и телефонът звънна.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Вчера написах дълго писмо до приятел.",
+    "ko": "",
+    "highlight": "написах"
+   },
+   {
+    "en": "Тя прочете статията за десет минути.",
+    "ko": "",
+    "highlight": "прочете"
+   },
+   {
+    "en": "Миналата седмица купихме нов диван.",
+    "ko": "",
+    "highlight": "купихме"
+   },
+   {
+    "en": "Те чуха силния шум на улицата.",
+    "ko": "",
+    "highlight": "чуха"
+   },
+   {
+    "en": "Защо не ми каза истината тогава?",
+    "ko": "",
+    "highlight": "каза"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Вчера аз пиша писмото.",
+    "right": "Вчера аз написах писмото.",
+    "note": "Use the past aorist tense rather than the present tense for completed events in the past."
+   },
+   {
+    "wrong": "Ти написах писмо вчера.",
+    "right": "Ти написа писмо вчера.",
+    "note": "The second person singular ('ти') ending does not have '-х'; it drops the ending or takes the bare stem."
+   },
+   {
+    "wrong": "Ние направихме грешката вчера.",
+    "right": "Ние направихме грешка вчера.",
+    "note": "Watch out for false definite article usage in Bulgarian when nouns are introduced generally in the past."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday we ___ the whole book. (прочета)",
+    "options": [
+     "прочетох",
+     "прочетохме",
+     "прочетете",
+     "прочетоха"
+    ],
+    "answer": 1,
+    "explanation": "The 1st person plural ('ние') aorist ending is '-хме': 'прочетохме'."
+   },
+   {
+    "question": "She ___ home late last night. (се прибера)",
+    "options": [
+     "се прибира",
+     "се приберах",
+     "се прибере",
+     "се прибра"
+    ],
+    "answer": 3,
+    "explanation": "The 3rd person singular aorist of 'прибера се' drops the -х marker to yield 'се прибра'."
+   },
+   {
+    "question": "They ___ what happened. (разбера)",
+    "options": [
+     "разбраха",
+     "разбрахме",
+     "разбираха",
+     "разберете"
+    ],
+    "answer": 0,
+    "explanation": "The 3rd person plural ('те') aorist ending is '-ха': 'разбраха'."
+   },
+   {
+    "question": "Did you (sing.) ___ that noise? (чуя)",
+    "options": [
+     "чух",
+     "чу",
+     "чуе",
+     "чухте"
+    ],
+    "answer": 1,
+    "explanation": "The 2nd person singular ('ти') of 'чуя' in the aorist is simply 'чу'."
+   }
+  ],
+  "tip": "Notice that in the aorist, the 2nd person ('ти') and 3rd person singular ('той/тя/то') forms look completely identical (e.g., ти написа, той написа)."
+ },
+ {
+  "id": "bg-b1-imperfect-past-tense",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#D97706",
+  "emoji": "⏳",
+  "title": "The Imperfect Tense (Минало несвършено време)",
+  "subtitle": "Conjugating verbs for ongoing background and past habits",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "The imperfect tense depicts an action in progress, background context, or a repeating habit viewed from a past vantage point, using suffixes with -ше- or -я-.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Ending",
+    "чета (1st conj.)",
+    "говоря (2nd conj.)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Аз",
+      "-х",
+      "четях",
+      "говорех"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ти",
+      "-ше",
+      "четеше",
+      "говореше"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Той / Тя / То",
+      "-ше",
+      "четеше",
+      "говореше"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Ние",
+      "-хме",
+      "четяхме",
+      "говорехме"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Те",
+      "-ха",
+      "четяха",
+      "говореха"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Past Action in Progress",
+    "example": "Докато четях книгата, някой почука на вратата.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Simultaneous Background Scenery",
+    "example": "Слънцето грееше и птиците пееха весело.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Past Habitual Routine",
+    "example": "Като малък играех навън по цял ден.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Докато тя спеше, навън валеше дъжд.",
+    "ko": "",
+    "highlight": "валеше"
+   },
+   {
+    "en": "Когато бяхме деца, всяко лято прекарвахме на село.",
+    "ko": "",
+    "highlight": "прекарвахме"
+   },
+   {
+    "en": "Той често мислеше за родния си град.",
+    "ko": "",
+    "highlight": "мислеше"
+   },
+   {
+    "en": "Ние говорехме за политика цяла нощ.",
+    "ko": "",
+    "highlight": "говорехме"
+   },
+   {
+    "en": "Те живееха в Пловдив преди десет години.",
+    "ko": "",
+    "highlight": "живееха"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Докато аз прочетох книгата, той влезе.",
+    "right": "Докато аз четях книгата, той влезе.",
+    "note": "Background ongoing processes framing another action require the imperfect tense (четях), not the aorist."
+   },
+   {
+    "wrong": "Ти четешех интересна приказка.",
+    "right": "Ти четеше интересна приказка.",
+    "note": "The 2nd and 3rd person singular imperfect ending is '-ше', without '-х'."
+   },
+   {
+    "wrong": "Вчера валеше дъжд за пет минути и спря.",
+    "right": "Вчера валя дъжд за пет минути и спря.",
+    "note": "If the total duration is delimited as a single complete past event, Bulgarian prefers the aorist (валя)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "While we ___ dinner, the phone rang. (готвя)",
+    "options": [
+     "сготвихме",
+     "готвехме",
+     "готвихме",
+     "сготвяхме"
+    ],
+    "answer": 1,
+    "explanation": "An ongoing background activity interrupted by another past action uses the imperfect ('готвехме')."
+   },
+   {
+    "question": "When I was young, I ___ football every Sunday. (играя)",
+    "options": [
+     "играх",
+     "играхме",
+     "играех",
+     "изиграх"
+    ],
+    "answer": 2,
+    "explanation": "Past recurring habits from a continuous perspective take the imperfect: 'аз играех'."
+   },
+   {
+    "question": "The sun ___ brightly all afternoon. (грея)",
+    "options": [
+     "грееше",
+     "гря",
+     "греехте",
+     "изгря"
+    ],
+    "answer": 0,
+    "explanation": "Atmospheric past background descriptions typically take the 3rd person imperfect: 'грееше'."
+   },
+   {
+    "question": "What were they ___ at that moment? (правя)",
+    "options": [
+     "направиха",
+     "правиха",
+     "правехте",
+     "правеха"
+    ],
+    "answer": 3,
+    "explanation": "The 3rd person plural ('те') imperfect form of 'правя' is 'правеха'."
+   }
+  ],
+  "tip": "The distinctive fingerprint of the imperfect is the ending '-ше' in both the 2nd (ти) and 3rd person (той/тя) singular, unlike the aorist which drops this suffix."
+ },
+ {
+  "id": "bg-b1-aorist-vs-imperfect-aspect-interaction",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#7C3AED",
+  "emoji": "🧩",
+  "title": "Aspectual Interaction: Aorist vs. Imperfect",
+  "subtitle": "Unlocking the 2x2 matrix of Bulgarian past tenses and aspects",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Bulgarian combines two aspects with two past tenses, allowing both imperfective aorists (durative blocks) and perfective imperfects (habitual repeated completed actions).",
+  "structure": {
+   "headers": [
+    "Combination",
+    "Verb Form",
+    "Aspect & Tense",
+    "Meaning Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Perf. Aorist",
+      "написах",
+      "Свършен аорист",
+      "Single completed point in past"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Imperf. Imperfect",
+      "пишех",
+      "Несвършен имперфект",
+      "Continuous process/scenery in past"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Imperf. Aorist",
+      "писах",
+      "Несвършен аорист",
+      "Action viewed as a closed durative event"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Perf. Imperfect",
+      "напишех",
+      "Свършен имперфект",
+      "Hypothetical or repeated completed act (e.g. с 'щом')"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Imperfective Aorist (Closed Duration)",
+    "example": "Вчера четох два часа и после излязох.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Perfective Imperfect (Past Iteration)",
+    "example": "Щом решеше задачата, веднага започваше нова.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Interrupted Line (Impf. Impf + Perf. Aorist)",
+    "example": "Докато вървях към парка, срещнах Иван.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Снощи спах осем часа.",
+    "ko": "",
+    "highlight": "спах"
+   },
+   {
+    "en": "Когато чуеше гласа ѝ, той се усмихваше.",
+    "ko": "",
+    "highlight": "чуеше"
+   },
+   {
+    "en": "Цял ден учих за трудния изпит.",
+    "ko": "",
+    "highlight": "учих"
+   },
+   {
+    "en": "Винаги щом видеше куче, тя се плашеше.",
+    "ko": "",
+    "highlight": "видеше"
+   },
+   {
+    "en": "Вчера говорих с майка ми по телефона.",
+    "ko": "",
+    "highlight": "говорих"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Вчера спахме, докато телефонът звънеше.",
+    "right": "Вчера спяхме, докато телефонът звънна.",
+    "note": "Use imperfective imperfect (спяхме) for ongoing background, and perfective aorist (звънна) for the interruption."
+   },
+   {
+    "wrong": "Всеки път щом той напише писмото, го пращаше.",
+    "right": "Всеки път щом той напишеше писмото, го пращаше.",
+    "note": "In past repeated sequences, the perfective verb requires the imperfect past ending (напишеше), not present tense."
+   },
+   {
+    "wrong": "Цял следобед прочетох вестника.",
+    "right": "Цял следобед четох вестника.",
+    "note": "Duration expressions ('цял следобед') focus on the process over time, calling for the imperfective aorist (четох)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday I worked for three hours: 'Вчера ___ три часа.'",
+    "options": [
+     "работех",
+     "поработихме",
+     "работих",
+     "изработих"
+    ],
+    "answer": 2,
+    "explanation": "'Работих' is an imperfective aorist: an uncompleted-type verb packaged as a closed past block of time."
+   },
+   {
+    "question": "Whenever he ___ a word, he looked it up. (сбъркам - perf. imperfect)",
+    "options": [
+     "сбърках",
+     "сбърка",
+     "сбъркваше",
+     "сбъркаше"
+    ],
+    "answer": 3,
+    "explanation": "The perfective imperfect 'сбъркаше' denotes a repeated, complete action whenever triggered in the past."
+   },
+   {
+    "question": "While she ___ dinner, Peter arrived. (imperfect + aorist)",
+    "options": [
+     "готвеше / пристигна",
+     "сготви / пристигаше",
+     "готви / пристигна",
+     "готвеше / пристигаше"
+    ],
+    "answer": 0,
+    "explanation": "The background process uses imperfective imperfect ('готвеше') and the interrupting event uses perfective aorist ('пристигна')."
+   },
+   {
+    "question": "The perfective imperfect form of 'прочета' (3rd person sing.) is:",
+    "options": [
+     "прочете",
+     "прочетеше",
+     "четяха",
+     "прочетете"
+    ],
+    "answer": 1,
+    "explanation": "'Прочете' is perfective aorist, while 'прочетеше' is the perfective imperfect form used in subordinate iterative clauses."
+   }
+  ],
+  "tip": "Think of the Imperfective Aorist ('четох') as answering 'Did you spend time doing it?' without caring whether you finished, whereas the Perfective Aorist ('прочетох') means 'Did you finish it?'."
+ },
+ {
+  "id": "bg-b1-past-perfect-tenses",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "⏳",
+  "title": "Past Indefinite and Past Perfect",
+  "subtitle": "Master compound past tenses using the 'l'-participle with present and imperfect forms of 'съм'",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The Past Indefinite pairs the present tense of 'съм' with the past active participle to denote relevance to now, while the Past Perfect pairs the imperfect of 'съм' with the participle for prior past actions.",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Auxiliary (съм)",
+    "Participle (чел)",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Past Indefinite (1sg)",
+      "съм",
+      "чел / чела",
+      "Аз съм чел тази книга."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Indefinite (3sg)",
+      "е",
+      "чел / чела",
+      "Тя е чела тази книга."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past Perfect (1sg)",
+      "бях",
+      "чел / чела",
+      "Аз бях чел преди да дойдеш."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Perfect (3sg)",
+      "беше",
+      "чел / чела",
+      "Той беше чел доклада вече."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Life Experience (Indefinite)",
+    "example": "Никога не съм пътувал до Япония.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Past Result Relevant Now",
+    "example": "Той е загубил ключовете си и не може да влезе.",
+    "translation": ""
+   },
+   {
+    "color": "#1E40AF",
+    "label": "Action Prior to Past Point",
+    "example": "Когато пристигнахме, влакът вече беше заминал.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ние сме посетили много красиви градове в Европа.",
+    "ko": "",
+    "highlight": "сме посетили"
+   },
+   {
+    "en": "Тя е написала прекрасно писмо до родителите си.",
+    "ko": "",
+    "highlight": "е написала"
+   },
+   {
+    "en": "Преди да се обадиш, аз вече бях приготвил вечерята.",
+    "ko": "",
+    "highlight": "бях приготвил"
+   },
+   {
+    "en": "Те бяха завършили проекта преди крайния срок.",
+    "ko": "",
+    "highlight": "бяха завършили"
+   },
+   {
+    "en": "Вие чели ли сте този роман на Вазов?",
+    "ko": "",
+    "highlight": "чели ли сте"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Тя чел книгата.",
+    "right": "Тя е чела книгата.",
+    "note": "The auxiliary 'е' cannot be omitted in standard Past Indefinite, and the participle must agree in gender with the feminine subject."
+   },
+   {
+    "wrong": "Ние бяхме дошъл навреме.",
+    "right": "Ние бяхме дошли навреме.",
+    "note": "The participle must agree in number (plural ending '-ли') with plural subjects like 'ние'."
+   },
+   {
+    "wrong": "Когато дойде, аз съм тръгнал вече.",
+    "right": "Когато дойде, аз вече бях тръгнал.",
+    "note": "Use the Past Perfect ('бях тръгнал') instead of Past Indefinite for actions completed before another past event."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Maria ___ to Sofia several times.",
+    "options": [
+     "е пътувала",
+     "бяха пътували",
+     "съм пътувал",
+     "е пътувал"
+    ],
+    "answer": 0,
+    "explanation": "'Мария' is 3rd person singular feminine, requiring 'е' plus the feminine participle 'пътувала'."
+   },
+   {
+    "question": "When Ivan arrived, we ___ the movie.",
+    "options": [
+     "сме изгледали",
+     "бяхме изгледали",
+     "съм изгледал",
+     "беше изгледал"
+    ],
+    "answer": 1,
+    "explanation": "An action completed before another past moment takes the Past Perfect ('бяхме изгледали' for 'ние')."
+   },
+   {
+    "question": "Have you (plural) ever ___ this traditional dish?",
+    "options": [
+     "опитал",
+     "опитали",
+     "опитвали ли сте",
+     "бяхте опитали"
+    ],
+    "answer": 2,
+    "explanation": "Questions in the Past Indefinite place 'ли' after the participle or auxiliary: 'опитвали ли сте'."
+   },
+   {
+    "question": "Peter ___ his homework before his mother returned home.",
+    "options": [
+     "е написал",
+     "бях написал",
+     "сме написали",
+     "беше написал"
+    ],
+    "answer": 3,
+    "explanation": "Third person singular Past Perfect requires 'беше' + masculine participle 'написал'."
+   }
+  ],
+  "tip": "Never omit the 3rd person auxiliary 'е' or 'са' in the Past Indefinite; dropping them accidentally turns your sentence into the Renarrative mood!"
+ },
+ {
+  "id": "bg-b1-relative-pronouns-definite-article",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#10B981",
+  "emoji": "🔗",
+  "title": "Articulated Relative Pronouns",
+  "subtitle": "Connect subordinate clauses accurately using 'който', 'която', 'което', and 'които'",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Bulgarian relative pronouns agree in gender and number with the antecedent noun and take the definite article form (-то), with masculine accusative using 'когото'.",
+  "structure": {
+   "headers": [
+    "Gender/Number",
+    "Subject Form",
+    "Prepositional / Object Form",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masc. Singular",
+      "който",
+      "когото / на когото",
+      "човекът, когото видях"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Fem. Singular",
+      "която",
+      "която / на която",
+      "жената, с която говорих"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neut. Singular",
+      "което",
+      "което / на което",
+      "детето, което играе"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural (All)",
+      "които",
+      "които / на които",
+      "хората, които познавам"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Subject of Subordinate Clause",
+    "example": "Това е писателят, който спечели наградата.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Direct Object of Subordinate Clause",
+    "example": "Лекарят, когото търсите, е в кабинета.",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "Prepositional Object Reference",
+    "example": "Къщата, в която живеем, е много стара.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Момичето, което седи до прозореца, чете интересна книга.",
+    "ko": "",
+    "highlight": "което"
+   },
+   {
+    "en": "Това са приятелите, с които пътувахме до морето.",
+    "ko": "",
+    "highlight": "с които"
+   },
+   {
+    "en": "Учителят, на когото благодарихме, беше много развълнуван.",
+    "ko": "",
+    "highlight": "на когото"
+   },
+   {
+    "en": "Търся книгата, която ми препоръча вчера.",
+    "ko": "",
+    "highlight": "която"
+   },
+   {
+    "en": "Мъжът, който говори по телефона, е моят директор.",
+    "ko": "",
+    "highlight": "който"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Човекът, кой видях вчера.",
+    "right": "Човекът, когото видях вчера.",
+    "note": "Relative pronouns must be articulated (-то) and masculine human direct objects require 'когото'."
+   },
+   {
+    "wrong": "Жената, който живее тук, е лекарка.",
+    "right": "Жената, която живее тук, е лекарка.",
+    "note": "The pronoun must agree in gender with the feminine antecedent 'жената'."
+   },
+   {
+    "wrong": "Колегите, на които казахме всичко.",
+    "right": "Колегите, на които казахме всичко.",
+    "note": "Always maintain the plural marker '-ито' for plural referents, preceded by prepositions when necessary."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The building in ___ they work is located downtown.",
+    "options": [
+     "в която",
+     "в който",
+     "в което",
+     "в които"
+    ],
+    "answer": 0,
+    "explanation": "'Сграда' (implied: сградата) is feminine singular, so it requires 'в която'."
+   },
+   {
+    "question": "The students ___ passed the exam are celebrating.",
+    "options": [
+     "който",
+     "която",
+     "които",
+     "когото"
+    ],
+    "answer": 2,
+    "explanation": "'Студентите' is plural, requiring the plural relative pronoun 'които'."
+   },
+   {
+    "question": "The man ___ we saw at the station is an engineer.",
+    "options": [
+     "което",
+     "когото",
+     "която",
+     "които"
+    ],
+    "answer": 1,
+    "explanation": "A masculine singular person functioning as direct object takes the special accusative form 'когото'."
+   },
+   {
+    "question": "The village in ___ my grandparents live is peaceful.",
+    "options": [
+     "в когото",
+     "в която",
+     "в които",
+     "в което"
+    ],
+    "answer": 3,
+    "explanation": "'Село' is neuter singular, requiring 'в което'."
+   }
+  ],
+  "tip": "For masculine human antecedents, ask whether the pronoun is the subject ('който') or object ('когото/на когото') inside the clause."
+ },
+ {
+  "id": "bg-b2-renarrative-mood",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🗣️",
+  "title": "The Renarrative Mood",
+  "subtitle": "Report indirect, hearsay, or unwitnessed statements accurately in Bulgarian",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The Renarrative mood conveys hearsay or unwitnessed events by using 'l'-participles while crucially dropping the 3rd person auxiliaries 'е' and 'са'.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Direct Indicative",
+    "Renarrative Form",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Person",
+      "Аз работя",
+      "съм работил / работила",
+      "Аз съм работил (казват)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Singular",
+      "Той работи",
+      "работил (NO 'е')",
+      "Той работил много."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3rd Plural",
+      "Те работят",
+      "работили (NO 'са')",
+      "Те работили заедно."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3rd Past Imperfect",
+      "Той спеше",
+      "спял (Imperfect Participle)",
+      "Той спял, когато дошли."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Hearsay / Second-hand News",
+    "example": "Казват, че министърът подал оставка вчера.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Unwitnessed Past Events",
+    "example": "Преди векове тук живял могъщ владетел.",
+    "translation": ""
+   },
+   {
+    "color": "#5B21B6",
+    "label": "Doubt or Distancing",
+    "example": "Той твърди, че нямал време за срещата.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Според вестниците инцидентът станал късно снощи.",
+    "ko": "",
+    "highlight": "станал"
+   },
+   {
+    "en": "Тя каза, че Мария заминала за Лондон миналата седмица.",
+    "ko": "",
+    "highlight": "заминала"
+   },
+   {
+    "en": "Разправят, че новите съседи купили скъпа кола.",
+    "ko": "",
+    "highlight": "купили"
+   },
+   {
+    "en": "Иван не дойде, защото бил болен от грип.",
+    "ko": "",
+    "highlight": "бил"
+   },
+   {
+    "en": "Когато полицията пристигнала, крадците вече били избягали.",
+    "ko": "",
+    "highlight": "пристигнала"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Казват, че той е заминал вчера.",
+    "right": "Казват, че той заминал вчера.",
+    "note": "Retaining 'е' marks the sentence as an eyewitness/factual Past Indefinite rather than reported speech."
+   },
+   {
+    "wrong": "Те казаха, че са били там.",
+    "right": "Те казаха, че били там.",
+    "note": "In 3rd person plural renarrative, omit the auxiliary 'са'."
+   },
+   {
+    "wrong": "Тя разбрала, че той е имал проблем.",
+    "right": "Тя разбрала, че той имал проблем.",
+    "note": "Both verbs in renarrated context drop the 3rd person auxiliary to maintain modal consistency."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Reported: 'They say that Peter bought a new apartment.'",
+    "options": [
+     "Петър купил нов апартамент.",
+     "Петър е купил нов апартамент.",
+     "Петър беше купил нов апартамент.",
+     "Петър ще купи нов апартамент."
+    ],
+    "answer": 0,
+    "explanation": "In 3rd person singular renarrative, the auxiliary 'е' is omitted: 'купил'."
+   },
+   {
+    "question": "Reported: 'According to rumors, the witnesses ___ afraid to speak.'",
+    "options": [
+     "са били",
+     "бяха",
+     "били",
+     "биха"
+    ],
+    "answer": 2,
+    "explanation": "The 3rd person plural renarrative drops 'са', leaving only the participle 'били'."
+   },
+   {
+    "question": "Reported: 'Elena claimed she ___ late because the bus broke down.'",
+    "options": [
+     "е закъсняла",
+     "закъсня",
+     "закъсняваше",
+     "закъсняла"
+    ],
+    "answer": 3,
+    "explanation": "Renarrative of an unwitnessed result drops 'е', using the feminine participle 'закъсняла'."
+   },
+   {
+    "question": "Which sentence contains an eyewitness statement, NOT a renarrative?",
+    "options": [
+     "Той бил на плажа.",
+     "Тя прочела книгата.",
+     "Иван е написал писмото.",
+     "Те заминали рано сутринта."
+    ],
+    "answer": 2,
+    "explanation": "'Иван е написал' retains 'е', indicating eyewitness Past Indefinite rather than reported speech."
+   }
+  ],
+  "tip": "The fastest diagnostic test: if 'е' or 'са' is present with the 'l'-participle in 3rd person, it is indicative; if dropped, it is renarrative."
+ },
+ {
+  "id": "bg-b2-adverbial-and-passive-participles",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#EC4899",
+  "emoji": "📜",
+  "title": "Adverbial and Passive Past Participles",
+  "subtitle": "Express simultaneous action with '-йки' and form passive constructions with '-н/-т'",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "Adverbial participles (-йки) express an action simultaneous to the main verb sharing the same subject, while passive past participles (-н/-т) inflect like adjectives to form passive states.",
+  "structure": {
+   "headers": [
+    "Participle Type",
+    "Formation Suffix",
+    "Agreement Rules",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Adverbial (Деепричастие)",
+      "-йки (imperfective)",
+      "Invariable (no gender/number)",
+      "Вървейки, той пееше."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Passive Past Masc.",
+      "-н / -т",
+      "Gender/number agreement",
+      "Писмото е написано."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passive Past Fem.",
+      "-на / -та",
+      "Agrees with subject",
+      "Вратата беше затворена."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passive Past Plural",
+      "-ни / -ти",
+      "Agrees with subject",
+      "Прозорците са измити."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EC4899",
+    "label": "Simultaneous Manner/Action",
+    "example": "Тя влезе в стаята, усмихвайки се топло.",
+    "translation": ""
+   },
+   {
+    "color": "#BE185D",
+    "label": "Present State via Passive",
+    "example": "Всички важни документи вече са подписани.",
+    "translation": ""
+   },
+   {
+    "color": "#9D174D",
+    "label": "Past Passive Result",
+    "example": "Мостът беше построен преди пет години.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Четейки сутрешния вестник, баща ми пиеше кафе.",
+    "ko": "",
+    "highlight": "Четейки"
+   },
+   {
+    "en": "Сградата беше напълно разрушена от силното земетресение.",
+    "ko": "",
+    "highlight": "беше напълно разрушена"
+   },
+   {
+    "en": "Слушайки любимата си песен, тя си спомни за дома.",
+    "ko": "",
+    "highlight": "Слушайки"
+   },
+   {
+    "en": "Тази интересна статия е написана от известен журналист.",
+    "ko": "",
+    "highlight": "е написана"
+   },
+   {
+    "en": "Всички билети за концерта са вече продадени.",
+    "ko": "",
+    "highlight": "са вече продадени"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Вървейки по улицата, шапката му падна.",
+    "right": "Докато вървеше по улицата, шапката му падна.",
+    "note": "Dangling participle: the subject of the adverbial participle (-йки) MUST be identical to the main clause subject."
+   },
+   {
+    "wrong": "Книгата е написан от Петър.",
+    "right": "Книгата е написана от Петър.",
+    "note": "Passive past participles function as adjectives and must agree in gender with the subject ('книгата' is feminine)."
+   },
+   {
+    "wrong": "Прочетейки книгата, той заспа.",
+    "right": "Като прочете книгата, той заспа.",
+    "note": "The adverbial participle in '-йки' can only be formed from IMPERFECTIVE verbs, never perfective ones."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "While ___ the coffee, she was talking on the phone.",
+    "options": [
+     "пиейки",
+     "изпиейки",
+     "пиена",
+     "пила"
+    ],
+    "answer": 0,
+    "explanation": "Form the adverbial participle from the imperfective stem 'пия' -> 'пиейки'."
+   },
+   {
+    "question": "The newly built house was ___ last month.",
+    "options": [
+     "продал",
+     "продадена",
+     "продадено",
+     "продадени"
+    ],
+    "answer": 1,
+    "explanation": "'Къщата' is feminine singular, so the passive participle must be 'продадена'."
+   },
+   {
+    "question": "The computers in the office are already ___.",
+    "options": [
+     "поправи",
+     "поправен",
+     "поправена",
+     "поправени"
+    ],
+    "answer": 3,
+    "explanation": "'Компютрите' is plural, requiring the plural passive participle ending '-ни' ('поправени')."
+   },
+   {
+    "question": "Why is 'Направийки това, той си тръгна' incorrect?",
+    "options": [
+     "The suffix is spelled wrong.",
+     "It requires a feminine subject.",
+     "Adverbial participles cannot be formed from perfective verbs like 'направя'.",
+     "It lacks an auxiliary verb."
+    ],
+    "answer": 2,
+    "explanation": "Bulgarian adverbial participles in '-йки' can strictly be formed only from imperfective verbs (e.g., 'правейки', not 'направийки')."
+   }
+  ],
+  "tip": "Remember that '-йки' is completely invariable (it never takes gender/number endings), whereas passive participles in '-н/-т' inflect just like adjectives!"
+ },
+ {
+  "id": "bg-b2-conditional-mood-biha",
+  "level": "b2",
+  "category": "conditionals",
+  "categoryColor": "#F59E0B",
+  "emoji": "🎭",
+  "title": "Conditional Mood with 'Бих'",
+  "subtitle": "Construct polite requests and hypothetical conditional clauses using 'бих' and 'l'-participles",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "The Bulgarian conditional mood is formed using the special invariant past auxiliary stem 'бих-' inflected for person, followed by the active 'l'-participle.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Auxiliary (бих)",
+    "Participle (помогнал)",
+    "Full Clause"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Singular",
+      "бих",
+      "помогнал / помогнала",
+      "Аз бих помогнал."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Singular",
+      "би",
+      "помогнал / помогнала",
+      "Ти би помогнал ли?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Singular",
+      "би",
+      "помогнал / помогнала / помогнало",
+      "Той би помогнал на всеки."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "1st Plural",
+      "бихме",
+      "помогнали",
+      "Ние бихме дошли с радост."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Plural",
+      "биха",
+      "помогнали",
+      "Те биха направили всичко."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Polite Requests & Wishes",
+    "example": "Бих искал чаша минерална вода, моля.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Hypothetical Present/Future",
+    "example": "Ако имахме пари, бихме си купили нова къща.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Unreal Past Hypotheses",
+    "example": "Ако беше попитал, щяхме да ти помогнем.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Аз бих желал да резервирам една двойна стая.",
+    "ko": "",
+    "highlight": "бих желал"
+   },
+   {
+    "en": "Ако времето беше хубаво, бихме отишли на планина.",
+    "ko": "",
+    "highlight": "бихме отишли"
+   },
+   {
+    "en": "Те биха приели предложението, ако условията бяха по-добри.",
+    "ko": "",
+    "highlight": "биха приели"
+   },
+   {
+    "en": "Ти би ли ми услужил с химикалка за минута?",
+    "ko": "",
+    "highlight": "би ли ми услужил"
+   },
+   {
+    "en": "Никой не би повярвал на такава невероятна история.",
+    "ko": "",
+    "highlight": "не би повярвал"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Аз би искал да кажа нещо.",
+    "right": "Аз бих искал да кажа нещо.",
+    "note": "The 1st person singular auxiliary is 'бих', whereas 'би' is strictly for 2nd and 3rd person singular."
+   },
+   {
+    "wrong": "Ние бихме отишъл на кино.",
+    "right": "Ние бихме отишли на кино.",
+    "note": "The 'l'-participle must agree in number with the subject: use plural 'отишли' with 'ние'."
+   },
+   {
+    "wrong": "Те биха могли да помогне.",
+    "right": "Те биха могли да помогнат.",
+    "note": "When the conditional is followed by 'да', the subsequent verb inflects in the present personal form ('те да помогнат')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I would gladly ___ to you if I knew the answer.",
+    "options": [
+     "бих казал",
+     "би казал",
+     "бихме казали",
+     "биха казали"
+    ],
+    "answer": 0,
+    "explanation": "First-person singular requires 'бих' alongside the masculine participle 'казал'."
+   },
+   {
+    "question": "They ___ buy that car if it were cheaper.",
+    "options": [
+     "би купил",
+     "бихме купили",
+     "биха купили",
+     "бихте купили"
+    ],
+    "answer": 2,
+    "explanation": "Third-person plural auxiliary is 'биха', combined with plural participle 'купили'."
+   },
+   {
+    "question": "Would you (informal singular) ___ to join us for dinner?",
+    "options": [
+     "бихте искали",
+     "би искал",
+     "бих искал",
+     "биха искали"
+    ],
+    "answer": 1,
+    "explanation": "Second-person singular uses 'би' + masculine/feminine participle: 'би искал'."
+   },
+   {
+    "question": "We ___ happy to meet with the delegates tomorrow.",
+    "options": [
+     "бих се радвал",
+     "би се радвал",
+     "биха се радвали",
+     "бихме се радвали"
+    ],
+    "answer": 3,
+    "explanation": "First-person plural requires 'бихме' + plural participle 'радвали'."
+   }
+  ],
+  "tip": "Notice that 'би' serves for BOTH 2nd and 3rd person singular ('ти би казал', 'той би казал'), making it exceptionally easy to memorize!"
+ }
+]

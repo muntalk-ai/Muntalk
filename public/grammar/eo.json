@@ -1,0 +1,3328 @@
+[
+ {
+  "id": "eo-a1-word-endings-and-parts-of-speech",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#2563EB",
+  "emoji": "🧩",
+  "title": "Grammatical Endings (-o, -a, -e, -i)",
+  "subtitle": "Determine part of speech instantly using invariant vowel endings",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Every Esperanto root changes its part of speech predictably by changing its final vowel: -o for nouns, -a for adjectives, -e for adverbs, and -i for infinitive verbs.",
+  "structure": {
+   "headers": [
+    "Ending",
+    "Part of Speech",
+    "Esperanto Root: bel- (beauty)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-o",
+      "Noun",
+      "belo",
+      "beauty"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-a",
+      "Adjective",
+      "bela",
+      "beautiful"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-e",
+      "Adverb",
+      "bele",
+      "beautifully"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-i",
+      "Infinitive Verb",
+      "beli",
+      "to be beautiful"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Naming things (Nouns)",
+    "example": "La amiko estas feliĉa.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Describing things (Adjectives)",
+    "example": "La rapida hundo kuras.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Describing actions (Adverbs)",
+    "example": "Ŝi kantas bele.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "La patro legas libron.",
+    "ko": "",
+    "highlight": "patro"
+   },
+   {
+    "en": "Tio estas bona ideo.",
+    "ko": "",
+    "highlight": "bona"
+   },
+   {
+    "en": "Li parolas rapide.",
+    "ko": "",
+    "highlight": "rapide"
+   },
+   {
+    "en": "Mi volas lerni Esperanton.",
+    "ko": "",
+    "highlight": "lerni"
+   },
+   {
+    "en": "La suno brilas varme.",
+    "ko": "",
+    "highlight": "varme"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "La bela kantas.",
+    "right": "La belulo kantas.",
+    "note": "An adjective ending in -a cannot function alone as the subject noun without an appropriate noun ending or suffix."
+   },
+   {
+    "wrong": "Li kuras rapida.",
+    "right": "Li kuras rapide.",
+    "note": "Use the adverb ending -e to modify a verb, not the adjective ending -a."
+   },
+   {
+    "wrong": "Mi volas parol.",
+    "right": "Mi volas paroli.",
+    "note": "Infinitive verb forms must always retain the -i ending; roots cannot stand alone."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the noun form: 'The ___ is on the table.'",
+    "options": [
+     "libro",
+     "libra",
+     "libre",
+     "libri"
+    ],
+    "answer": 0,
+    "explanation": "Nouns in Esperanto always end with the vowel -o."
+   },
+   {
+    "question": "Choose the adverb form: 'She sings ___.'",
+    "options": [
+     "bela",
+     "bele",
+     "belo",
+     "beli"
+    ],
+    "answer": 1,
+    "explanation": "Adverbs modify verbs and always end with -e."
+   },
+   {
+    "question": "Choose the infinitive verb form: 'I want ___.'",
+    "options": [
+     "kanto",
+     "kanta",
+     "kante",
+     "kanti"
+    ],
+    "answer": 3,
+    "explanation": "Infinitives (to do something) always end with -i."
+   },
+   {
+    "question": "Choose the adjective form: 'A ___ dog runs.'",
+    "options": [
+     "rapido",
+     "rapidi",
+     "rapida",
+     "rapide"
+    ],
+    "answer": 2,
+    "explanation": "Adjectives describing nouns always end with -a."
+   }
+  ],
+  "tip": "Whenever you encounter an unfamiliar Esperanto word, glance at its final vowel to instantly recognize whether it is a noun (-o), adjective (-a), adverb (-e), or verb (-i)."
+ },
+ {
+  "id": "eo-a1-noun-adjective-agreement",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#2563EB",
+  "emoji": "👯",
+  "title": "Plurality and Noun-Adjective Agreement (-j)",
+  "subtitle": "Match nouns and their modifying adjectives with the plural ending -j",
+  "color": "#1E40AF",
+  "bg": "#EFF6FF",
+  "keyPoint": "In Esperanto, both nouns and their modifying adjectives must agree in number by adding -j whenever they refer to more than one person or thing.",
+  "structure": {
+   "headers": [
+    "Form",
+    "Noun Ending",
+    "Adjective Ending",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Singular",
+      "-o",
+      "-a",
+      "bela floro"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural",
+      "-oj",
+      "-aj",
+      "belaj floroj"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Predicate Plural",
+      "-oj",
+      "-aj",
+      "La floroj estas belaj"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Attributive plural",
+    "example": "Grandaj domoj staras tie.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Predicative plural",
+    "example": "La infanoj estas feliĉaj.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Plural demonstrative",
+    "example": "Tiuj libroj estas novaj.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "La bonaj amikoj venas hodiaŭ.",
+    "ko": "",
+    "highlight": "bonaj amikoj"
+   },
+   {
+    "en": "Ruĝaj pomoj estas sur la tablo.",
+    "ko": "",
+    "highlight": "Ruĝaj pomoj"
+   },
+   {
+    "en": "Tiuj novaj aŭtoj estas rapidaj.",
+    "ko": "",
+    "highlight": "rapidaj"
+   },
+   {
+    "en": "Ni havas multajn pensojn.",
+    "ko": "",
+    "highlight": "pensojn"
+   },
+   {
+    "en": "La birdoj kantas dolĉe.",
+    "ko": "",
+    "highlight": "birdoj"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "La bona amikoj kune ridas.",
+    "right": "La bonaj amikoj kune ridas.",
+    "note": "Adjectives must agree with plural nouns by adding -j as well."
+   },
+   {
+    "wrong": "La libroj estas nova.",
+    "right": "La libroj estas novaj.",
+    "note": "Predicate adjectives linked by 'estas' must also take the plural marker -j."
+   },
+   {
+    "wrong": "Kelkaj viroj kantasej.",
+    "right": "Kelkaj viroj kantas.",
+    "note": "Verbs in Esperanto never take plural endings; only nouns, adjectives, and correlatives do."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct plural phrase: 'Green trees'",
+    "options": [
+     "verda arboj",
+     "verdaj arboj",
+     "verdaj arbo",
+     "verdoj arboj"
+    ],
+    "answer": 1,
+    "explanation": "Both the adjective (verda) and the noun (arbo) require -j in the plural: verdaj arboj."
+   },
+   {
+    "question": "Complete the sentence: 'La floroj estas ___.'",
+    "options": [
+     "bela",
+     "belo",
+     "belaj",
+     "beloj"
+    ],
+    "answer": 2,
+    "explanation": "Predicate adjectives agreeing with plural subjects take -aj."
+   },
+   {
+    "question": "Choose the properly matched singular phrase:",
+    "options": [
+     "bela floro",
+     "belaj floro",
+     "bela floroj",
+     "beloj floro"
+    ],
+    "answer": 0,
+    "explanation": "Singular forms do not take -j: 'bela floro'."
+   },
+   {
+    "question": "Complete the sentence: 'Tiuj knaboj estas tre ___.'",
+    "options": [
+     "lerta",
+     "lerto",
+     "lerte",
+     "lertaj"
+    ],
+    "answer": 3,
+    "explanation": "The adjective modifying plural boys (knaboj) must end in -aj: 'lertaj'."
+   }
+  ],
+  "tip": "The letter 'j' sounds like the English 'y' in 'boy' (-oj) and 'eye' (-aj); pronounce both words with a smooth diphthong."
+ },
+ {
+  "id": "eo-a1-accusative-direct-object",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#2563EB",
+  "emoji": "🎯",
+  "title": "The Direct Object Accusative (-n)",
+  "subtitle": "Clarify direct objects and unlock free word order with -n",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Attach the accusative ending -n to any noun or adjective serving as the direct object of an action, allowing flexible word order without changing the meaning.",
+  "structure": {
+   "headers": [
+    "Grammatical Role",
+    "Singular",
+    "Plural",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Subject (Nominative)",
+      "-o / -a",
+      "-oj / -aj",
+      "La hundo vidas la katon."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Object (Accusative)",
+      "-on / -an",
+      "-ojn / -ajn",
+      "La katon vidas la hundo."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "After Prepositions",
+      "-o / -oj",
+      "-a / -aj",
+      "Li sidas sur la seĝo."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Direct object",
+    "example": "Mi trinkas varman teon.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Inverted word order",
+    "example": "La leteron skribas ŝi.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Agreement in accusative",
+    "example": "Ni aĉetis novajn librojn.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "La knabo legas bonan libron.",
+    "ko": "",
+    "highlight": "bonan libron"
+   },
+   {
+    "en": "Mi amas vin.",
+    "ko": "",
+    "highlight": "vin"
+   },
+   {
+    "en": "Feliĉajn tagojn ni spertis.",
+    "ko": "",
+    "highlight": "Feliĉajn tagojn"
+   },
+   {
+    "en": "La kato kaptis malgrandan muson.",
+    "ko": "",
+    "highlight": "malgrandan muson"
+   },
+   {
+    "en": "Ŝi trinkas freŝan akvon.",
+    "ko": "",
+    "highlight": "freŝan akvon"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mi vidas la bela floro.",
+    "right": "Mi vidas la belan floron.",
+    "note": "Both the noun and modifying adjective must receive the -n accusative marker."
+   },
+   {
+    "wrong": "Li estas kuraciston.",
+    "right": "Li estas kuracisto.",
+    "note": "Never use the accusative after linking verbs like 'esti' (to be); predicate complements stay nominative."
+   },
+   {
+    "wrong": "Mi legas librojn novaj.",
+    "right": "Mi legas librojn novajn.",
+    "note": "Adjectives must match both the plural (-j) and accusative (-n) endings in order: -ajn."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the direct object: 'The dog chases the cat.' -> 'La hundo ĉasas la ___.'",
+    "options": [
+     "kato",
+     "katoj",
+     "katon",
+     "katun"
+    ],
+    "answer": 2,
+    "explanation": "The direct object receiving the action must take -n: 'katon'."
+   },
+   {
+    "question": "Choose the correct phrase: 'I see green apples.' -> 'Mi vidas ___.'",
+    "options": [
+     "verdajn pomojn",
+     "verdaj pomoj",
+     "verdan pomon",
+     "verda pomojn"
+    ],
+    "answer": 0,
+    "explanation": "Both plural and accusative endings combine as -ajn and -ojn: 'verdajn pomojn'."
+   },
+   {
+    "question": "Choose the correct form: 'Li estas bona ___.'",
+    "options": [
+     "instruiston",
+     "instruisto",
+     "instruistojn",
+     "instruistoj"
+    ],
+    "answer": 1,
+    "explanation": "The verb 'esti' takes a nominative complement without -n: 'instruisto'."
+   },
+   {
+    "question": "Complete the inverted sentence: '___ amas la patrino.' (The mother loves the children)",
+    "options": [
+     "La infanoj",
+     "La infano",
+     "La infanon",
+     "La infanojn"
+    ],
+    "answer": 3,
+    "explanation": "Since 'la infanoj' is the object being loved, it takes both plural -j and accusative -n: 'La infanojn'."
+   }
+  ],
+  "tip": "Remember the fixed suffix order: root + noun/adjective vowel (-o/-a) + plural (-j) + accusative (-n). It is always -ojn and -ajn, never *-onj."
+ },
+ {
+  "id": "eo-a1-basic-verb-tenses",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#059669",
+  "emoji": "⏳",
+  "title": "Simple Verb Tenses (-as, -is, -os)",
+  "subtitle": "Conjugate every verb seamlessly with three invariant tense endings",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Esperanto verbs do not change for person or number; simply attach -as for present, -is for past, or -os for future to the root.",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Ending",
+    "Example with 'skribi' (to write)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present",
+      "-as",
+      "mi skribas",
+      "I write / am writing"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past",
+      "-is",
+      "li skribis",
+      "he wrote / was writing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Future",
+      "-os",
+      "ni skribos",
+      "we will write"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Current action or state",
+    "example": "Mi loĝas en granda urbo.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Completed past event",
+    "example": "Hieraŭ ni vizitis muzeon.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Upcoming future plan",
+    "example": "Morgaŭ ili alvenos frue.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mi nun laboras en oficejo.",
+    "ko": "",
+    "highlight": "laboras"
+   },
+   {
+    "en": "Ili promenis en la parko hieraŭ.",
+    "ko": "",
+    "highlight": "promenis"
+   },
+   {
+    "en": "Ni renkontiĝos morgaŭ vespere.",
+    "ko": "",
+    "highlight": "renkontiĝos"
+   },
+   {
+    "en": "Ĉu vi komprenas la demandon?",
+    "ko": "",
+    "highlight": "komprenas"
+   },
+   {
+    "en": "Ŝi legis interesan libron.",
+    "ko": "",
+    "highlight": "legis"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mi estas legas libron.",
+    "right": "Mi legas libron.",
+    "note": "Do not translate English continuous 'am reading' with 'estas + -as'; simple '-as' already covers ongoing actions."
+   },
+   {
+    "wrong": "Ili kantasj kune.",
+    "right": "Ili kantas kune.",
+    "note": "Verbs never take plural suffixes; they remain invariant regardless of the subject."
+   },
+   {
+    "wrong": "Li skribos morgaŭ letero.",
+    "right": "Li skribos morgaŭ leteron.",
+    "note": "Tense changes do not affect case marking; the direct object still requires -n."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete with past tense: 'Hieraŭ ni ___ amikojn.' (visited)",
+    "options": [
+     "vizitos",
+     "vizitas",
+     "vizitis",
+     "viziti"
+    ],
+    "answer": 2,
+    "explanation": "The past tense suffix for all verbs is -is: 'vizitis'."
+   },
+   {
+    "question": "Complete with present tense: 'Ŝi nun ___ Esperanton.' (learns)",
+    "options": [
+     "lernas",
+     "lernis",
+     "lernos",
+     "lerni"
+    ],
+    "answer": 0,
+    "explanation": "The present tense ending is -as: 'lernas'."
+   },
+   {
+    "question": "Complete with future tense: 'Morgaŭ la vetero ___ varma.' (will be)",
+    "options": [
+     "estas",
+     "estis",
+     "estos",
+     "esti"
+    ],
+    "answer": 2,
+    "explanation": "The future tense ending is -os: 'estos'."
+   },
+   {
+    "question": "Which verb correctly fills the blank: 'Ili kune ___ bieron hodiaŭ.' (drink)",
+    "options": [
+     "trinkos",
+     "trinkis",
+     "trinki",
+     "trinkas"
+    ],
+    "answer": 3,
+    "explanation": "Current actions occurring 'today' use present -as: 'trinkas'."
+   }
+  ],
+  "tip": "Think of the vowel progression chronologically: 'i' (past, behind you), 'a' (present, right now), 'o' (future, round ahead)."
+ },
+ {
+  "id": "eo-a1-correlatives-table",
+  "level": "a1",
+  "category": "questions",
+  "categoryColor": "#7C3AED",
+  "emoji": "🗺️",
+  "title": "The System of Correlatives (Tabelvortoj)",
+  "subtitle": "Form 45 essential pro-words by combining 5 initial letters with 9 endings",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Esperanto correlatives are formed systematically by joining an initial element indicating type (ki-, ti-, i-, ĉi-, neni-) to a final root indicating category (-o, -a, -e, -u, etc.).",
+  "structure": {
+   "headers": [
+    "Type Prefix",
+    "Category Suffix",
+    "Combined Word",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ki- (question)",
+      "-o (thing)",
+      "kio",
+      "what"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ti- (demonstrative)",
+      "-o (thing)",
+      "tio",
+      "that thing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ki- (question)",
+      "-e (place)",
+      "kie",
+      "where"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ĉi- (universal)",
+      "-u (individual)",
+      "ĉiu",
+      "everyone / each"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "neni- (negative)",
+      "-am (time)",
+      "neniam",
+      "never"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Asking questions",
+    "example": "Kiu estas tiu persono?",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Specifying locations",
+    "example": "Tie mi trovis mian horloĝon.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Expressing totals and negatives",
+    "example": "Neniu scias ĉion pri la mondo.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kio estas sur la tablo?",
+    "ko": "",
+    "highlight": "Kio"
+   },
+   {
+    "en": "Mi neniam vidis tian grandan urbon.",
+    "ko": "",
+    "highlight": "neniam"
+   },
+   {
+    "en": "Ĉiu homo volas esti feliĉa.",
+    "ko": "",
+    "highlight": "Ĉiu"
+   },
+   {
+    "en": "Kie vi loĝas nun?",
+    "ko": "",
+    "highlight": "Kie"
+   },
+   {
+    "en": "Tiu libro estas tre interesa.",
+    "ko": "",
+    "highlight": "Tiu"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Kio persono venis?",
+    "right": "Kiu persono venis?",
+    "note": "Use 'kiu' (individual/which person), not 'kio' (abstract object/thing), when referring to individuals or specific items."
+   },
+   {
+    "wrong": "Mi vidas neniun personon tie ĉi.",
+    "right": "Mi vidas neniun tie.",
+    "note": "'Neniu' already means 'no one / nobody'; pairing it redundantly with 'persono' is usually unnecessary."
+   },
+   {
+    "wrong": "Kion vi iras?",
+    "right": "Kien vi iras?",
+    "note": "To indicate motion towards a place, add the accusative -n to the location correlative: 'kien' (whither / where to)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correlative for 'where': '___ estas la stacidomo?'",
+    "options": [
+     "Kiam",
+     "Kie",
+     "Kiel",
+     "Kio"
+    ],
+    "answer": 1,
+    "explanation": "The prefix ki- (question) combined with place suffix -e yields 'kie' (where)."
+   },
+   {
+    "question": "Choose the correlative for 'everyone': '___ volas lerni.'",
+    "options": [
+     "Ĉiu",
+     "Neniu",
+     "Iu",
+     "Tiu"
+    ],
+    "answer": 0,
+    "explanation": "'Ĉi-' (all/every) + '-u' (individual) gives 'ĉiu' (everyone / each)."
+   },
+   {
+    "question": "Choose the correlative for 'never': 'Mi ___ manĝas viandon.'",
+    "options": [
+     "ĉiam",
+     "iam",
+     "neniam",
+     "tiam"
+    ],
+    "answer": 2,
+    "explanation": "'Neni-' (none) + '-am' (time) gives 'neniam' (never)."
+   },
+   {
+    "question": "Choose the correlative for 'what': '___ okazis hieraŭ?'",
+    "options": [
+     "Kiu",
+     "Kie",
+     "Kial",
+     "Kio"
+    ],
+    "answer": 3,
+    "explanation": "'Ki-' (question) + '-o' (thing/matter) gives 'kio' (what)."
+   }
+  ],
+  "tip": "Group correlatives by endings to memorize them quickly: -u (individuals), -o (things), -a (quality), -e (place), and -am (time)."
+ },
+ {
+  "id": "eo-a1-negation-and-questions",
+  "level": "a1",
+  "category": "questions",
+  "categoryColor": "#3B82F6",
+  "emoji": "❓",
+  "title": "Questions with 'Ĉu' and Negation with 'Ne'",
+  "subtitle": "Form polar questions and negative sentences effortlessly",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Place 'ĉu' at the start of a statement to turn it into a yes/no question, and place 'ne' directly before the word you want to negate.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Esperanto Pattern",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Statement",
+      "Vi parolas Esperanton.",
+      "You speak Esperanto."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Yes/No Question",
+      "Ĉu vi parolas Esperanton?",
+      "Do you speak Esperanto?"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negation",
+      "Mi ne parolas Esperanton.",
+      "I do not speak Esperanto."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Question",
+      "Ĉu vi ne komprenas?",
+      "Don't you understand?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Yes/No Question",
+    "example": "Ĉu vi estas preta?",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Verbal Negation",
+    "example": "Li ne ŝatas kafon.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Selective Negation",
+    "example": "Mi trinkas ne teon, sed akvon.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ĉu vi loĝas en Berlino?",
+    "ko": "",
+    "highlight": "Ĉu vi loĝas"
+   },
+   {
+    "en": "Mi ne konas tiun viron.",
+    "ko": "",
+    "highlight": "ne konas"
+   },
+   {
+    "en": "Ĉu la vetero hodiaŭ estas bona?",
+    "ko": "",
+    "highlight": "Ĉu la vetero"
+   },
+   {
+    "en": "Ŝi ne volas dormi nun.",
+    "ko": "",
+    "highlight": "ne volas"
+   },
+   {
+    "en": "Ĉu vi ne havas tempon?",
+    "ko": "",
+    "highlight": "Ĉu vi ne havas"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ĉu vi havas ne libron?",
+    "right": "Ĉu vi ne havas libron?",
+    "note": "To negate the action, place 'ne' directly before the finite verb, not after it."
+   },
+   {
+    "wrong": "Faras vi kompreni?",
+    "right": "Ĉu vi komprenas?",
+    "note": "Esperanto never uses auxiliary 'do/does' to ask questions; simply prefix the sentence with 'ĉu'."
+   },
+   {
+    "wrong": "Mi ne havas nenion.",
+    "right": "Mi havas nenion.",
+    "note": "Esperanto avoids double negatives; pairing 'ne' with a negative correlative like 'nenion' is incorrect."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "'___ you speak English?'",
+    "options": [
+     "Ĉu",
+     "Kion",
+     "Kiel",
+     "Kiu"
+    ],
+    "answer": 0,
+    "explanation": "'Ĉu' is the particle used to form standard yes/no questions in Esperanto."
+   },
+   {
+    "question": "'I ___ like cold weather.'",
+    "options": [
+     "jes",
+     "ne",
+     "ĉu",
+     "jam"
+    ],
+    "answer": 1,
+    "explanation": "'Ne' precedes the verb 'ŝatas' to express negation without needing auxiliary verbs like 'do'."
+   },
+   {
+    "question": "'Is she a teacher?' -> '___ ŝi estas instruisto?'",
+    "options": [
+     "Kiu",
+     "Kiam",
+     "Ĉu",
+     "Ne"
+    ],
+    "answer": 2,
+    "explanation": "Starting the clause with 'ĉu' turns the declaration into a polar question."
+   },
+   {
+    "question": "'We do not work on Sundays.' -> 'Dimanĉe ni ___ laboras.'",
+    "options": [
+     "nek",
+     "nenio",
+     "ĉu",
+     "ne"
+    ],
+    "answer": 3,
+    "explanation": "'Ne' directly negates the verb 'laboras'."
+   }
+  ],
+  "tip": "Think of 'ĉu' as the English 'whether'—it simply marks the whole sentence as a question without altering word order."
+ },
+ {
+  "id": "eo-a2-accusative-of-direction",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🎯",
+  "title": "Accusative of Motion and Direction (-n)",
+  "subtitle": "Show movement into or toward a place using the -n ending",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Add the accusative ending '-n' to a noun or adverb to indicate movement toward a target, distinguishing destination from static location.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Esperanto Sentence",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Static Location",
+      "La kato saltas sur la tablo.",
+      "The cat jumps around on top of the table."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Direction / Goal",
+      "La kato saltas sur la tablon.",
+      "The cat jumps onto the table."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Static Adverb",
+      "Ni promenas hejme.",
+      "We take a walk at home."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Directional Adverb",
+      "Ni iras hejmen.",
+      "We are going home (homeward)."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Entering a Space",
+    "example": "La birdo flugis en la ĉambron.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Onto a Surface",
+    "example": "Li metis la libron sur la liton.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Directional Adverbs",
+    "example": "Kien vi vojaĝos somere?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "La muso kuris sub la liton.",
+    "ko": "",
+    "highlight": "sub la liton"
+   },
+   {
+    "en": "Li iris en la ĝardenon por legi.",
+    "ko": "",
+    "highlight": "en la ĝardenon"
+   },
+   {
+    "en": "Mi revenos hejmen vespere.",
+    "ko": "",
+    "highlight": "hejmen"
+   },
+   {
+    "en": "Ŝi falis en la akvon.",
+    "ko": "",
+    "highlight": "en la akvon"
+   },
+   {
+    "en": "Kien vi kuras tiel rapide?",
+    "ko": "",
+    "highlight": "Kien"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Li iris al la urbon.",
+    "right": "Li iris al la urbo.",
+    "note": "The preposition 'al' inherently indicates direction, so do not add '-n' after it."
+   },
+   {
+    "wrong": "La hundo kuŝas sur la liton.",
+    "right": "La hundo kuŝas sur la lito.",
+    "note": "Lying on a bed is a static location, not motion toward it; therefore, no '-n' is used."
+   },
+   {
+    "wrong": "Kie vi iras?",
+    "right": "Kien vi iras?",
+    "note": "'Kie' means 'where (at)'; when asking about destination, you must use 'kien' (whither)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "'The boy ran into the house.' -> 'La knabo kuris en la ___.'",
+    "options": [
+     "domo",
+     "domon",
+     "domoj",
+     "domojn"
+    ],
+    "answer": 1,
+    "explanation": "The movement enters into the house, requiring the singular accusative of direction '-n'."
+   },
+   {
+    "question": "'Where are you driving to?' -> '___ vi veturas?'",
+    "options": [
+     "Kie",
+     "Kiel",
+     "Kien",
+     "Kio"
+    ],
+    "answer": 2,
+    "explanation": "'Kien' is used for asking toward which destination someone is traveling."
+   },
+   {
+    "question": "'The cup fell onto the floor.' -> 'La taso falis sur la ___.'",
+    "options": [
+     "plankon",
+     "planko",
+     "plankoj",
+     "plankojn"
+    ],
+    "answer": 0,
+    "explanation": "The falling motion terminates onto the surface, which requires the accusative '-n'."
+   },
+   {
+    "question": "'We walk in the park (inside it, not into it).' -> 'Ni promenas en la ___.'",
+    "options": [
+     "parkon",
+     "parken",
+     "parkoj",
+     "parko"
+    ],
+    "answer": 3,
+    "explanation": "Because the activity is static within the park and not moving into it, no '-n' is added."
+   }
+  ],
+  "tip": "Prepositions like 'al' (to) and 'ĝis' (until/up to) already express direction, so adding '-n' after them is redundant and forbidden."
+ },
+ {
+  "id": "eo-a2-volitive-imperative-mood",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🗣️",
+  "title": "The Volitive Mood (-u)",
+  "subtitle": "Commands, requests, wishes, and purpose clauses with the -u ending",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The verb ending '-u' expresses will, intention, direct commands, polite wishes, and clauses following verbs of desiring or ordering.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Esperanto Example",
+    "English Translation"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Direct Command",
+      "Venu ĉi tien!",
+      "Come here!"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Polite Request",
+      "Bonvolu sidiĝi.",
+      "Please sit down."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Indirect Will (Subordinate)",
+      "Mi volas, ke vi aŭskultu.",
+      "I want you to listen."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "1st Person Proposal",
+      "Ni kantu kune!",
+      "Let's sing together!"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Direct Command",
+    "example": "Fermu la pordon, mi petas.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Let's (Suggestion)",
+    "example": "Ni komencu la lecionon.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Subordinate Clause of Will",
+    "example": "Li petis, ke mi telefonu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Legu la libron atente!",
+    "ko": "",
+    "highlight": "Legu"
+   },
+   {
+    "en": "Mi petas, ke vi helpu min.",
+    "ko": "",
+    "highlight": "ke vi helpu"
+   },
+   {
+    "en": "Vivu la paco en la mondo!",
+    "ko": "",
+    "highlight": "Vivu"
+   },
+   {
+    "en": "Li diris al mi, ke mi silentu.",
+    "ko": "",
+    "highlight": "ke mi silentu"
+   },
+   {
+    "en": "Ni iru al la kinejo hodiaŭ vespere.",
+    "ko": "",
+    "highlight": "Ni iru"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mi volas vin veni.",
+    "right": "Mi volas, ke vi venu.",
+    "note": "Esperanto does not use infinitive accusative structures like English 'want you to come'; use 'ke' + '-u'."
+   },
+   {
+    "wrong": "Bonvolu helpas min.",
+    "right": "Bonvolu helpi min.",
+    "note": "After the command 'bonvolu' (be pleased to), the main action must be an infinitive (-i)."
+   },
+   {
+    "wrong": "Mi petas ke vi venos.",
+    "right": "Mi petas ke vi venu.",
+    "note": "Subordinate clauses expressing desire, requests, or commands take '-u', not future '-os'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "'Open the window!' -> '___ la fenestron!'",
+    "options": [
+     "Malfermi",
+     "Malfermas",
+     "Malfermu",
+     "Malfermus"
+    ],
+    "answer": 2,
+    "explanation": "The '-u' ending forms the imperative mood for direct orders."
+   },
+   {
+    "question": "'Let's drink some water!' -> 'Ni ___ akvon!'",
+    "options": [
+     "trinku",
+     "trinkas",
+     "trinkos",
+     "trinki"
+    ],
+    "answer": 0,
+    "explanation": "When used with 'ni', the '-u' verb creates a cohortative suggestion ('Let us...')."
+   },
+   {
+    "question": "'She ordered that he leave.' -> 'Ŝi ordonis, ke li ___.'",
+    "options": [
+     "foriris",
+     "foriros",
+     "foriri",
+     "foriru"
+    ],
+    "answer": 3,
+    "explanation": "Verbs of command require the volitive '-u' in the subsequent 'ke' clause."
+   },
+   {
+    "question": "'Please speak slowly.' -> 'Bonvolu ___ malrapide.'",
+    "options": [
+     "parolas",
+     "paroli",
+     "parolu",
+     "parolus"
+    ],
+    "answer": 1,
+    "explanation": "'Bonvolu' itself already carries the '-u' ending; the accompanying verb must be in the infinitive (-i)."
+   }
+  ],
+  "tip": "Unlike English imperatives which lack subjects, Esperanto often includes pronouns: 'Vi legu!' (You read!), 'Ni manĝu!' (Let's eat!)."
+ },
+ {
+  "id": "eo-a2-conditional-mood",
+  "level": "a2",
+  "category": "conditionals",
+  "categoryColor": "#F59E0B",
+  "emoji": "💭",
+  "title": "The Conditional Mood (-us)",
+  "subtitle": "Hypothetical situations and polite statements with -us",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Replace the verb ending with '-us' in both the condition and the result to describe unreal, hypothetical, or polite scenarios.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Esperanto Clause Pattern",
+    "English Sense"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Hypothetical Condition",
+      "Se mi havus tempon...",
+      "If I had time..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Hypothetical Result",
+      "...mi vojaĝus tra la mondo.",
+      "...I would travel the world."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Polite Softener",
+      "Ĉu vi povus helpi min?",
+      "Could you help me?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Counterfactual Past",
+      "Se vi venintus, ni ĝojus.",
+      "If you had come, we would have rejoiced."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Hypothetical Scenario",
+    "example": "Se mi estus riĉa, mi aĉetus domon.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Polite Inquiry",
+    "example": "Mi ŝatus trinki tason da teo.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Wish / Preference",
+    "example": "Estus bone renkontiĝi morgaŭ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Se mi scius la respondon, mi dirus ĝin.",
+    "ko": "",
+    "highlight": "scius la respondon, mi dirus"
+   },
+   {
+    "en": "Ĉu vi volus promeni kun mi?",
+    "ko": "",
+    "highlight": "vi volus"
+   },
+   {
+    "en": "Sen via helpo ni ne sukcesus.",
+    "ko": "",
+    "highlight": "ne sukcesus"
+   },
+   {
+    "en": "Mi preferus resti hejme hodiaŭ.",
+    "ko": "",
+    "highlight": "preferus resti"
+   },
+   {
+    "en": "Se li havus monon, li aĉetus aŭton.",
+    "ko": "",
+    "highlight": "havus monon, li aĉetus"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Se mi havos monon, mi aĉetus aŭton.",
+    "right": "Se mi havus monon, mi aĉetus aŭton.",
+    "note": "Hypothetical condition and result must match moods; use '-us' in both parts."
+   },
+   {
+    "wrong": "Mi volas demandus vin.",
+    "right": "Mi volus demandi vin.",
+    "note": "Attach '-us' directly to the modal verb ('volus'), followed by an infinitive (-i)."
+   },
+   {
+    "wrong": "Se mi estus vi, mi faros tion.",
+    "right": "Se mi estus vi, mi farus tion.",
+    "note": "Do not mix the real future '-os' with an unreal conditional condition '-us'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "'If I were a bird, I would fly.' -> 'Se mi ___ birdo, mi flugus.'",
+    "options": [
+     "estas",
+     "estis",
+     "estus",
+     "estos"
+    ],
+    "answer": 2,
+    "explanation": "Hypothetical 'if' clauses require the conditional ending '-us'."
+   },
+   {
+    "question": "'I would like to order.' -> 'Mi ___ mendi.'",
+    "options": [
+     "ŝatus",
+     "ŝatas",
+     "ŝatos",
+     "ŝatu"
+    ],
+    "answer": 0,
+    "explanation": "'Ŝatus' softens the desire politely, meaning 'would like'."
+   },
+   {
+    "question": "'If you practiced more, you ___ speak better.' -> 'Se vi ekzercus pli, vi ___ pli bone.'",
+    "options": [
+     "parolis",
+     "parolos",
+     "parolu",
+     "parolus"
+    ],
+    "answer": 3,
+    "explanation": "The apodosis (result clause) of an unreal conditional statement takes '-us'."
+   },
+   {
+    "question": "'Could you close the window?' -> 'Ĉu vi ___ fermi la fenestron?'",
+    "options": [
+     "povas",
+     "povus",
+     "povis",
+     "povu"
+    ],
+    "answer": 1,
+    "explanation": "'Povus' expresses a courteous and polite request ('could you')."
+   }
+  ],
+  "tip": "In Esperanto, 'se' (if) takes '-us' directly when the condition is unreal; there is no rule forbidding conditional endings inside the if-clause."
+ },
+ {
+  "id": "eo-a2-reflexive-pronoun-si",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#EC4899",
+  "emoji": "🪞",
+  "title": "The Reflexive Pronoun 'Si' and Possessive 'Sia'",
+  "subtitle": "Clear 3rd-person reference without ambiguity",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "'Si' and its possessive 'sia' refer back exclusively to the subject of the clause and are only used for third-person subjects.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Direct / Prepositional Reflexive",
+    "Possessive Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Person (mi / ni)",
+      "Mi lavas min (not 'sin')",
+      "Mia libro"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd Person (vi)",
+      "Vi lavas vin (not 'sin')",
+      "Via libro"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person (li / ŝi / ili)",
+      "Li lavas sin",
+      "Lia / Ŝia / Ilia (someone else's)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person Reflexive",
+      "Ŝi lavas sin",
+      "Sia libro (her own book)"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EC4899",
+    "label": "Self as Direct Object",
+    "example": "Li vidas sin en la spegulo.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Subject's Own Possession",
+    "example": "Petro amas sian edzinon.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "After Prepositions",
+    "example": "Ili kunportis manĝaĵon por si.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ŝi kombas siajn harojn matene.",
+    "ko": "",
+    "highlight": "siajn harojn"
+   },
+   {
+    "en": "Li parolis al si mem.",
+    "ko": "",
+    "highlight": "al si mem"
+   },
+   {
+    "en": "Johano renkontis Petron en lia domo.",
+    "ko": "",
+    "highlight": "en lia domo"
+   },
+   {
+    "en": "Ili defendis sin kontraŭ la danĝero.",
+    "ko": "",
+    "highlight": "defendis sin"
+   },
+   {
+    "en": "Maria prenis sian sakon kaj foriris.",
+    "ko": "",
+    "highlight": "sian sakon"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mi lavas sin.",
+    "right": "Mi lavas min.",
+    "note": "'Si' is only for third persons; first and second persons use 'min', 'nin', 'vin'."
+   },
+   {
+    "wrong": "Sia patro estas kuracisto.",
+    "right": "Lia patro estas kuracisto.",
+    "note": "'Sia' can never be part of the subject itself because it must refer to an already stated subject."
+   },
+   {
+    "wrong": "Petro kisis lian edzinon.",
+    "right": "Petro kisis sian edzinon.",
+    "note": "'Lian' means someone else's wife; to refer to Petro's own wife, you must use 'sian'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "'Anna loves her (own) dog.' -> 'Anna amas ___ hundon.'",
+    "options": [
+     "ŝian",
+     "sian",
+     "ĝian",
+     "lia"
+    ],
+    "answer": 1,
+    "explanation": "'Sian' refers back to the subject 'Anna', signifying her own dog."
+   },
+   {
+    "question": "'He sees himself in the mirror.' -> 'Li vidas ___ en la spegulo.'",
+    "options": [
+     "lin",
+     "li",
+     "sin",
+     "sia"
+    ],
+    "answer": 2,
+    "explanation": "'Sin' is the 3rd person reflexive pronoun in the accusative case."
+   },
+   {
+    "question": "'I prepare myself for the exam.' -> 'Mi preparas ___ por la ekzameno.'",
+    "options": [
+     "min",
+     "sin",
+     "mia",
+     "sia"
+    ],
+    "answer": 0,
+    "explanation": "'Si' cannot be used with first person 'mi'; use 'min' instead."
+   },
+   {
+    "question": "'They took their (someone else's) bags.' -> 'Ili prenis ___ sakojn.'",
+    "options": [
+     "siajn",
+     "sian",
+     "ilrajn",
+     "iliajn"
+    ],
+    "answer": 3,
+    "explanation": "'Iliajn' means another group's bags; 'siajn' would mean their own bags."
+   }
+  ],
+  "tip": "Golden rule: 'Si' or 'sia' can never be the subject of a clause or part of the subject phrase."
+ },
+ {
+  "id": "eo-a2-core-affixes-word-building",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#2563EB",
+  "emoji": "🧩",
+  "title": "Core Productive Affixes (mal-, in-, -il-, -ej-, -ar-)",
+  "subtitle": "Build hundreds of precise words using five essential building blocks",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Esperanto derives opposites, female forms, tools, places, and collections by attaching predictable, unvarying affixes directly to root words.",
+  "structure": {
+   "headers": [
+    "Affix",
+    "Function",
+    "Esperanto Root",
+    "Derived Word"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "mal-",
+      "Exact opposite",
+      "bela (beautiful)",
+      "malbela (ugly)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-in-",
+      "Female gender",
+      "patro (father)",
+      "patrino (mother)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-il-",
+      "Tool / Instrument",
+      "tranĉi (to cut)",
+      "tranĉilo (knife)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ej-",
+      "Place / Room",
+      "lerni (to learn)",
+      "lernejo (school)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ar-",
+      "Collection / Group",
+      "arbo (tree)",
+      "arbaro (forest)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Opposites with mal-",
+    "example": "Tiu ĉambro estas tre malgranda kaj malvarma.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Instruments & Places",
+    "example": "En la kuirejo mi prenis grandan tranĉilon.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Collectives & Gender",
+    "example": "La instruistino montris novan vortaron al la klaso.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Li malfermis la pordon per speciala ŝlosilo.",
+    "ko": "",
+    "highlight": "ŝlosilo"
+   },
+   {
+    "en": "Ni renkontiĝos antaŭ la lernejo posttagmeze.",
+    "ko": "",
+    "highlight": "lernejo"
+   },
+   {
+    "en": "Granda arbaro ĉirkaŭas la malnovan urbeton.",
+    "ko": "",
+    "highlight": "arbaro"
+   },
+   {
+    "en": "Mia fratino legas libron en sia ĉambro.",
+    "ko": "",
+    "highlight": "fratino"
+   },
+   {
+    "en": "La vetero hodiaŭ estas tre malvarma.",
+    "ko": "",
+    "highlight": "malvarma"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mi uzas tranĉejon por tranĉi la panon.",
+    "right": "Mi uzas tranĉilon por tranĉi la panon.",
+    "note": "Use -il- for tools and instruments; -ej- denotes a location, so 'tranĉejo' would mean a cutting room."
+   },
+   {
+    "wrong": "Li estas negranda homo.",
+    "right": "Li estas malgranda homo.",
+    "note": "Use the prefix mal- to express an antonym (small/short), rather than negating with 'ne'."
+   },
+   {
+    "wrong": "Mi aĉetis novan libroon.",
+    "right": "Mi aĉetis novan libraron.",
+    "note": "Use the suffix -ar- to express a collection or set of things (a library of books / set of books)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "A place where people work (labori) is called a ___.",
+    "options": [
+     "laborilo",
+     "laborejo",
+     "mallaborejo",
+     "laboraro"
+    ],
+    "answer": 1,
+    "explanation": "The suffix -ej- signifies a place dedicated to an action or thing: laborejo = workshop / workplace."
+   },
+   {
+    "question": "The tool used to write (skribi) is a ___.",
+    "options": [
+     "skribilo",
+     "skribejo",
+     "malskribilo",
+     "skribaro"
+    ],
+    "answer": 0,
+    "explanation": "The suffix -il- denotes a tool or instrument: skribilo = writing utensil / pen."
+   },
+   {
+    "question": "The opposite of 'helpi' (to help) is ___.",
+    "options": [
+     "inhelpi",
+     "helpilo",
+     "malhelpi",
+     "helparo"
+    ],
+    "answer": 2,
+    "explanation": "The prefix mal- produces the exact semantic opposite: malhelpi = to hinder / obstruct."
+   },
+   {
+    "question": "A collection of trees (arboj) is an ___.",
+    "options": [
+     "arbejo",
+     "arbeto",
+     "arbaro",
+     "arbinom"
+    ],
+    "answer": 2,
+    "explanation": "The suffix -ar- forms collective nouns representing an entire group or cluster: arbaro = forest / woods."
+   }
+  ],
+  "tip": "Affixes in Esperanto can be stacked freely: 'mal-varm-ig-il-o' means an instrument that makes things un-warm, i.e., a refrigerator!"
+ },
+ {
+  "id": "eo-a2-accusative-measurement-time",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#2563EB",
+  "emoji": "⏱️",
+  "title": "The Accusative of Measure, Duration, and Date",
+  "subtitle": "Using the -n ending without a preposition for time, distance, and cost",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "The accusative ending -n replaces missing prepositions to indicate duration of time, points in time, distance, and monetary measure.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Esperanto Construction",
+    "Meaning",
+    "Equivalent with Preposition"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Duration",
+      "Mi dormis ok horojn.",
+      "I slept for eight hours.",
+      "dum ok horoj"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Specific Date",
+      "Li venos la lundon.",
+      "He will come on Monday.",
+      "en la lundo / je la lundo"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Distance / Measure",
+      "Ni marŝis tri kilometrojn.",
+      "We walked three kilometers.",
+      "je tri kilometroj"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Price / Cost",
+      "La libro kostas dek eŭrojn.",
+      "The book costs ten euros.",
+      "por dek eŭroj"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Duration of Action",
+    "example": "Ŝi atendis la buson tutan horon en la pluvo.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Point in Time",
+    "example": "La dek-kvinan de marto ni komencos la kurson.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Distance and Price",
+    "example": "Ni kuris du kilometrojn matene.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mi studis Esperanton du jarojn.",
+    "ko": "",
+    "highlight": "du jarojn"
+   },
+   {
+    "en": "Li alvenos la sekvan tagon.",
+    "ko": "",
+    "highlight": "la sekvan tagon"
+   },
+   {
+    "en": "Ili promenis kvin mejlojn tra la arbaro.",
+    "ko": "",
+    "highlight": "kvin mejlojn"
+   },
+   {
+    "en": "Tiu ĉemizo kostas dudek dolarojn.",
+    "ko": "",
+    "highlight": "dudek dolarojn"
+   },
+   {
+    "en": "Ni restis tie tri semajnojn.",
+    "ko": "",
+    "highlight": "tri semajnojn"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mi laboris dum tri tagojn.",
+    "right": "Mi laboris dum tri tagoj. / Mi laboris tri tagojn.",
+    "note": "Do not combine a preposition with the accusative of time; use either the preposition 'dum' or the '-n' ending, not both."
+   },
+   {
+    "wrong": "Ni marŝis du kilometroj.",
+    "right": "Ni marŝis du kilometrojn.",
+    "note": "Without a preposition such as 'je', a phrase expressing measure or distance requires the accusative ending -n."
+   },
+   {
+    "wrong": "Li alvenos lundo.",
+    "right": "Li alvenos lundon.",
+    "note": "Expressing a specific temporal point without a preposition requires -n on the noun."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase: 'We stayed there for one whole week.'",
+    "options": [
+     "Ni restis tie tuta semajno.",
+     "Ni restis tie dum tutan semajnon.",
+     "Ni restis tie tutan semajnon.",
+     "Ni restis tie je tutan semajnon."
+    ],
+    "answer": 2,
+    "explanation": "Without a preposition, 'tutan semajnon' takes the accusative ending -n on both the adjective and the noun to show duration."
+   },
+   {
+    "question": "Complete the date: 'He was born on the fifth of May.' -> 'Li naskiĝis ___ de majo.'",
+    "options": [
+     "la kvina",
+     "la kvinan",
+     "en la kvinan",
+     "dum la kvinan"
+    ],
+    "answer": 1,
+    "explanation": "Dates indicating 'when' without a preposition take -n: 'la kvinan de majo'."
+   },
+   {
+    "question": "How do you say 'The ticket costs ten euros' without a preposition?",
+    "options": [
+     "La bileto kostas dek eŭroj.",
+     "La bileto kostas dek eŭrojn.",
+     "La bileto kostas por dek eŭrojn.",
+     "La bileto kostas je dek eŭrojn."
+    ],
+    "answer": 1,
+    "explanation": "'Kosti' takes an accusative of measure when no preposition is used: 'dek eŭrojn'."
+   },
+   {
+    "question": "Why is 'Mi dormis dum tri horojn' incorrect?",
+    "options": [
+     "'Dormi' cannot take numbers.",
+     "Prepositions like 'dum' should not be followed by -n here.",
+     "The plural -j- must be dropped before -n.",
+     "Adverbs must replace 'dum'."
+    ],
+    "answer": 1,
+    "explanation": "The accusative replaces a preposition. When 'dum' is already present, the noun stays in the nominative: 'dum tri horoj'."
+   }
+  ],
+  "tip": "Think of -n as an invisible preposition; if you already have a clear preposition like 'dum' or 'en', you usually drop the -n."
+ },
+ {
+  "id": "eo-b1-transitivity-ig-igxi",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🔄",
+  "title": "Transitivity and Voice with Suffixes -ig- and -iĝ-",
+  "subtitle": "Mastering causative '-ig-' (make/cause) and inchoative '-iĝ-' (become)",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "The suffix -ig- makes any root transitive (causing an action/state), while -iĝ- makes verbs intransitive (becoming or happening on its own).",
+  "structure": {
+   "headers": [
+    "Suffix",
+    "Meaning",
+    "Base Root",
+    "Derived Verb"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-ig-",
+      "Causative (to cause/make)",
+      "pura (clean)",
+      "purigi (to clean something)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-iĝ-",
+      "Inchoative (to become)",
+      "pura (clean)",
+      "puriĝi (to become clean)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ig-",
+      "Make someone do",
+      "bruli (to burn [intr.])",
+      "bruligi (to burn [tr.] / ignite)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-iĝ-",
+      "Spontaneous change",
+      "ruli (to roll [tr.])",
+      "ruliĝi (to roll [intr.])"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Causing a State (-ig-)",
+    "example": "La varma teo varmigis miajn manojn.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Spontaneous Change (-iĝ-)",
+    "example": "La vetero rapide varmiĝis posttagmeze.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Changing Transitivity",
+    "example": "Ŝi naskiĝis en Parizo kaj tie kreskiĝis.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "La forta vento faligis la malnovan arbon.",
+    "ko": "",
+    "highlight": "faligis"
+   },
+   {
+    "en": "La folioj fariĝis flavaj en aŭtuno.",
+    "ko": "",
+    "highlight": "fariĝis"
+   },
+   {
+    "en": "Bonvolu fermi la pordon, ĝi ne fermiĝas mem.",
+    "ko": "",
+    "highlight": "fermiĝas"
+   },
+   {
+    "en": "Li sidigis la infanon sur la seĝon.",
+    "ko": "",
+    "highlight": "sidigis"
+   },
+   {
+    "en": "La glacio fandiĝis sub la hela suno.",
+    "ko": "",
+    "highlight": "fandiĝis"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mi varmiĝis la supon en la forno.",
+    "right": "Mi varmigis la supon en la forno.",
+    "note": "Use -ig- because you are actively warming the soup (transitive action with direct object)."
+   },
+   {
+    "wrong": "La pordo fermis rapide.",
+    "right": "La pordo fermiĝis rapide.",
+    "note": "'Fermi' is inherently transitive (to close something); if the door closes on its own, use -iĝ-."
+   },
+   {
+    "wrong": "Li naskis en majo.",
+    "right": "Li naskiĝis en majo.",
+    "note": "'Naski' means to give birth; to be born is 'naskiĝi'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'The sun melted (made melt) the snow'?",
+    "options": [
+     "La suno fandiĝis la neĝon.",
+     "La suno fandigis la neĝon.",
+     "La suno fandi la neĝon.",
+     "La suno fandoĝis la neĝon."
+    ],
+    "answer": 1,
+    "explanation": "'Fandigi' is causative (to melt something). 'La neĝo fandiĝis' would mean the snow melted by itself."
+   },
+   {
+    "question": "Choose the correct verb: 'Post longa tago, mi finfine ___ laca.' (I became tired)",
+    "options": [
+     "lacigis",
+     "laciĝis",
+     "lacis",
+     "lacanta"
+    ],
+    "answer": 1,
+    "explanation": "To become tired is 'laciĝi' (-iĝ- indicates entering a state). 'Lacigi' means to tire someone else out."
+   },
+   {
+    "question": "Verbs with the suffix '-iĝ-' are always ___.",
+    "options": [
+     "transitive and require an accusative object",
+     "future participles",
+     "intransitive and never take a direct object",
+     "past tense only"
+    ],
+    "answer": 2,
+    "explanation": "Suffix -iĝ- creates inherently intransitive verbs that cannot take a direct object with -n."
+   },
+   {
+    "question": "Which sentence means 'She sat down on the chair'?",
+    "options": [
+     "Ŝi sidigis sur la seĝo.",
+     "Ŝi sidis la seĝon.",
+     "Ŝi sidiĝis sur la seĝon.",
+     "Ŝi sidigantis la seĝo."
+    ],
+    "answer": 2,
+    "explanation": "'Sidi' means to be sitting; 'sidiĝi' means to become seated / sit down."
+   }
+  ],
+  "tip": "A quick shortcut: -ig- means 'to make [X]' and takes an object (-n); -iĝ- means 'to become [X]' and never takes an object."
+ },
+ {
+  "id": "eo-b1-active-participles",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#7C3AED",
+  "emoji": "🏃",
+  "title": "Active Participles (-ant-, -int-, -ont-)",
+  "subtitle": "Expressing present, past, and prospective doers of actions",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Active participles use the vowel series -a-, -i-, -o- with -nt- to describe a subject that is currently doing, has done, or is about to do an action.",
+  "structure": {
+   "headers": [
+    "Tense/Aspect",
+    "Participle",
+    "Adjective Form",
+    "Noun Form (Doer)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present (ongoing)",
+      "-ant-",
+      "leganta (reading)",
+      "leganto (reader)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past (completed)",
+      "-int-",
+      "leginta (having read)",
+      "leginto (one who read)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Future (prospective)",
+      "-ont-",
+      "legonta (about to read)",
+      "legonto (one about to read)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adverbial (while/after)",
+      "-ante / -inte",
+      "kurante (while running)",
+      "kurinte (having run)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Ongoing State (Present)",
+    "example": "Mi estas leganta tre interesan romanon.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Completed Action (Past)",
+    "example": "La veninto rakontis pri sia longa vojaĝo.",
+    "translation": ""
+   },
+   {
+    "color": "#DB2777",
+    "label": "Prospective Action (Future)",
+    "example": "La forirontaj gastoj diris adiaŭon.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "La parolanto klarigis la novan gramatikon tre bone.",
+    "ko": "",
+    "highlight": "parolanto"
+   },
+   {
+    "en": "Estante laca, ŝi decidis enlitiĝi frue.",
+    "ko": "",
+    "highlight": "Estante"
+   },
+   {
+    "en": "La gajninto de la konkurso ricevis oran medalon.",
+    "ko": "",
+    "highlight": "gajninto"
+   },
+   {
+    "en": "Vidinte la danĝeron, la kato forkuris.",
+    "ko": "",
+    "highlight": "Vidinte"
+   },
+   {
+    "en": "Ni estas ekvojaĝontaj morgaŭ matene.",
+    "ko": "",
+    "highlight": "ekvojaĝontaj"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mi estas skribas leteron.",
+    "right": "Mi estas skribanta leteron. / Mi skribas leteron.",
+    "note": "Never combine 'estas' directly with a finite verb ending in -as; use a participle like 'skribanta', or simply say 'skribas'."
+   },
+   {
+    "wrong": "La viro leginto la libron dormas.",
+    "right": "La viro leginta la libron dormas.",
+    "note": "When modifying a noun ('the man'), the participle must be an adjective ending in -a (leginta), not a noun ending in -o."
+   },
+   {
+    "wrong": "Skribante la letero, li pensis pri ŝi.",
+    "right": "Skribante la leteron, li pensis pri ŝi.",
+    "note": "Participles of transitive verbs still take direct objects in the accusative (-n)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'the one who has won' (the winner)?",
+    "options": [
+     "la gajnanto",
+     "la gajnonto",
+     "la gajninto",
+     "la gajnoto"
+    ],
+    "answer": 2,
+    "explanation": "The suffix -int- denotes completed past action, and noun ending -o denotes the person: gajninto = winner / one who has won."
+   },
+   {
+    "question": "Which active participle indicates an action about to happen in the future?",
+    "options": [
+     "-ont-",
+     "-ant-",
+     "-int-",
+     "-at-"
+    ],
+    "answer": 0,
+    "explanation": "The vowel 'o' matches the future tense (-os), making -ont- the prospective active participle suffix."
+   },
+   {
+    "question": "Translate: 'While walking to school, I met Marko.' -> '___ al la lernejo, mi renkontis Markon.'",
+    "options": [
+     "Marŝinta",
+     "Marŝante",
+     "Marŝonto",
+     "Marŝato"
+    ],
+    "answer": 1,
+    "explanation": "The adverbial participle ending in -e expresses simultaneous circumstantial action: marŝante = while walking."
+   },
+   {
+    "question": "In 'La forirontaj gastoj pakis siajn valizojn', what does 'forirontaj' mean?",
+    "options": [
+     "guests who already left",
+     "guests who are currently leaving",
+     "guests who are about to leave",
+     "guests who were made to leave"
+    ],
+    "answer": 2,
+    "explanation": "-ont- indicates prospective future aspect: guests about to depart."
+   }
+  ],
+  "tip": "The vowel vowel memory hook is universal in Esperanto: A = present (now), I = past (already done), O = future (yet to come)."
+ },
+ {
+  "id": "eo-b1-passive-participles",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#4F46E5",
+  "emoji": "🛡️",
+  "title": "Passive Participles (-at-, -it-, -ot-)",
+  "subtitle": "Expressing actions done to a subject across present, past, and future",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Passive participles use -at-, -it-, and -ot- to describe the patient receiving an action, with the agent introduced by the preposition 'de'.",
+  "structure": {
+   "headers": [
+    "Aspect",
+    "Suffix",
+    "Compound Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present / Ongoing",
+      "-at-",
+      "estas farata",
+      "is being done"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past / Completed",
+      "-it-",
+      "estas farita",
+      "is done / has been done"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Future / Prospective",
+      "-ot-",
+      "estas farota",
+      "is to be done / will be done"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Agent Marker",
+      "de",
+      "farita de mi",
+      "done by me"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Completed State",
+    "example": "La letero estas jam skribita kaj sendita.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Ongoing Process",
+    "example": "La nova domo estas nun konstruata de laboristoj.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Pending Requirement",
+    "example": "Tiu grava tasko estas plenumota morgaŭ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "La libro estis verkita de fama aŭtoro.",
+    "ko": "",
+    "highlight": "verkita de"
+   },
+   {
+    "en": "La pordo estas ŝlosita de la gardisto.",
+    "ko": "",
+    "highlight": "estas ŝlosita"
+   },
+   {
+    "en": "Dum la leciono, novaj vortoj estas lernataj.",
+    "ko": "",
+    "highlight": "lernataj"
+   },
+   {
+    "en": "La problemo estas solvita finfine.",
+    "ko": "",
+    "highlight": "estas solvita"
+   },
+   {
+    "en": "La propono estos diskutata en la venonta kunsido.",
+    "ko": "",
+    "highlight": "estos diskutata"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "La libro estis skribita per Zamenhof.",
+    "right": "La libro estis skribita de Zamenhof.",
+    "note": "Use the preposition 'de' to indicate the human agent of a passive verb; 'per' indicates the instrument or tool used."
+   },
+   {
+    "wrong": "La leteroj estas sendita hieraŭ.",
+    "right": "La leteroj estas senditaj hieraŭ.",
+    "note": "Participles functioning as predicate adjectives must agree in number with plural subjects by adding -j."
+   },
+   {
+    "wrong": "La pomo estas manĝata jam.",
+    "right": "La pomo estas manĝita jam.",
+    "note": "If the action is already completed ('jam'), use the past passive participle -it-, not the ongoing -at-."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'The letters were written by Anna'?",
+    "options": [
+     "La leteroj estis skribitaj de Anna.",
+     "La leteroj estis skribita per Anna.",
+     "La leteroj estis skribantaj de Anna.",
+     "La leteroj estis skribota de Anna."
+    ],
+    "answer": 0,
+    "explanation": "The plural subject 'leteroj' requires agreement ('skribitaj'), completed aspect takes -it-, and the agent uses 'de'."
+   },
+   {
+    "question": "Which suffix signals that something is currently undergoing an action right now?",
+    "options": [
+     "-it-",
+     "-ot-",
+     "-at-",
+     "-ant-"
+    ],
+    "answer": 2,
+    "explanation": "The suffix -at- denotes ongoing present passive action: 'konstruata' = being built right now."
+   },
+   {
+    "question": "Fill in the agent: 'La kuko estis farita ___ mia avino.'",
+    "options": [
+     "kun",
+     "per",
+     "pro",
+     "de"
+    ],
+    "answer": 3,
+    "explanation": "In passive constructions, the agent performing the action is introduced by 'de' (by)."
+   },
+   {
+    "question": "Translate: 'The documents to be signed tomorrow.' -> 'La dokumentoj morgaŭ ___.'",
+    "options": [
+     "subskribitaj",
+     "subskribotaj",
+     "subskribataj",
+     "subskribantaj"
+    ],
+    "answer": 1,
+    "explanation": "The future passive suffix -ot- signifies an action pending or yet to be carried out: subskribotaj = to be signed."
+   }
+  ],
+  "tip": "Distinguish agent vs. instrument easily: 'La pano estis tranĉita DE Petro PER akra tranĉilo' (by Peter with a sharp knife)."
+ },
+ {
+  "id": "eo-b1-adverbial-participles-subclauses",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#3B82F6",
+  "emoji": "✂️",
+  "title": "Adverbial Participles (-ante, -inte, -ite)",
+  "subtitle": "Shorten subordinate clauses cleanly using adverbial participles",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Adverbial participles end in -e and describe the circumstance of the main action while strictly sharing the subject of the main clause.",
+  "structure": {
+   "headers": [
+    "Participle Type",
+    "Esperanto Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Active Present (-ant-e)",
+      "Promenante en la parko",
+      "While walking in the park"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Active Past (-int-e)",
+      "Fininte la taskon",
+      "Having finished the task"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passive Present (-at-e)",
+      "Helpate de amikoj",
+      "Being helped by friends"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passive Past (-it-e)",
+      "Avertite pri la danĝero",
+      "Having been warned about danger"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Simultaneous Action",
+    "example": "Kriegante pro ĝojo, la infanoj kuris al la maro.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Prior / Completed Action",
+    "example": "Trinkinte la kafon, ŝi komencis verki la raporton.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Passive State or Reason",
+    "example": "Surprizite de la bruo, la kato forkuris sub liton.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Legante la libron, mi ekdormis sur la sofo.",
+    "ko": "",
+    "highlight": "Legante"
+   },
+   {
+    "en": "Manĝinte la tagmanĝon, ni tuj ekiris al la stacidomo.",
+    "ko": "",
+    "highlight": "Manĝinte"
+   },
+   {
+    "en": "Vidite de la polico, la ŝtelisto rapide forkuris.",
+    "ko": "",
+    "highlight": "Vidite"
+   },
+   {
+    "en": "Sciante la veron, li tamen decidis silenti.",
+    "ko": "",
+    "highlight": "Sciante"
+   },
+   {
+    "en": "Laciĝinte post la longa marŝo, ili ripozis apud la rivero.",
+    "ko": "",
+    "highlight": "Laciĝinte"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Promenante en la arbaro, arbo falis sur min.",
+    "right": "Kiam mi promenis en la arbaro, arbo falis sur min.",
+    "note": "The subject of an adverbial participle must be the subject of the main clause; here the tree did not walk."
+   },
+   {
+    "wrong": "Finante la taskon hieraŭ, mi iris hejmen.",
+    "right": "Fininte la taskon hieraŭ, mi iris hejmen.",
+    "note": "Use -inte for an action completed before the main verb, rather than -ante which denotes ongoing overlap."
+   },
+   {
+    "wrong": "Promenantaj en la parko, ili kantis kune.",
+    "right": "Promenante en la parko, ili kantis kune.",
+    "note": "When modifying the action or sentence adverbially, the ending must be -e, never the adjective ending -aj."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Having eaten dinner, we watched a movie: '___ la vespermanĝon, ni spektis filmon.'",
+    "options": [
+     "Manĝante",
+     "Manĝinte",
+     "Manĝote",
+     "Manĝite"
+    ],
+    "answer": 1,
+    "explanation": "The meal was completed before watching the movie, requiring the past active adverbial participle ending -inte."
+   },
+   {
+    "question": "While listening to music, she fell asleep: '___ muzikon, ŝi ekdormis.'",
+    "options": [
+     "Aŭskultante",
+     "Aŭskultinte",
+     "Aŭskultate",
+     "Aŭskultota"
+    ],
+    "answer": 0,
+    "explanation": "The listening was concurrent with falling asleep, requiring the present active participle -ante."
+   },
+   {
+    "question": "Having been warned by his teacher, Marko studied diligently: '___ de sia instruisto, Marko zorge studis.'",
+    "options": [
+     "Avertante",
+     "Avertinte",
+     "Avertite",
+     "Avertota"
+    ],
+    "answer": 2,
+    "explanation": "Marko received the warning prior to studying, so the passive past participle -ite is correct."
+   },
+   {
+    "question": "Knowing that he was wrong, he apologized: '___ ke li malpravis, li pardonpetis.'",
+    "options": [
+     "Scinte",
+     "Scite",
+     "Scita",
+     "Sciante"
+    ],
+    "answer": 3,
+    "explanation": "His state of knowing coincided with his apology, requiring the present active form sciante."
+   }
+  ],
+  "tip": "Always test your sentence by asking: 'Is the subject of the main verb also doing the participle action?' If not, expand it into a full subclause with 'kiam' or 'ĉar'."
+ },
+ {
+  "id": "eo-b1-preposition-je-and-elision",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🧭",
+  "title": "The Indefinite Preposition 'Je' and Prepositional Accusative",
+  "subtitle": "Solve ambiguous prepositions with 'je' or the bare accusative of measure and time",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use 'je' when no preposition has a definite meaning for the situation, or drop the preposition entirely and mark time, date, and measure with -n.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Prepositional Form with 'je'",
+    "Accusative Alternative (-n)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Exact Clock Time",
+      "Je la tria horo",
+      "La trian horon"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Day of Week / Date",
+      "Je lundo",
+      "Lundon"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Measurements & Dimensions",
+      "Je du metroj longa",
+      "Du metrojn longa"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Fixed Verb Idioms",
+      "Kredi je Dio / fiera je tio",
+      "Not replaceable by -n"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Time & Scheduling",
+    "example": "La trajno alvenos je la oka vespere.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Replacing Preposition with -n",
+    "example": "Li atendis min tri longajn horojn apud la pordo.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Emotional or Relational Stance",
+    "example": "Ŝi estas tre fiera je sia talenta filino.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ni renkontiĝos je la sesa horo matene.",
+    "ko": "",
+    "highlight": "je la sesa horo"
+   },
+   {
+    "en": "Venontdimanĉon ni kune vizitos la novan muzeon.",
+    "ko": "",
+    "highlight": "Venontdimanĉon"
+   },
+   {
+    "en": "La rivero tie estas dudek metrojn larĝa.",
+    "ko": "",
+    "highlight": "dudek metrojn"
+   },
+   {
+    "en": "Ĉu vi vere dubas je mia sincereco?",
+    "ko": "",
+    "highlight": "je mia sincereco"
+   },
+   {
+    "en": "Mi dankas vin el la koro je via helpo.",
+    "ko": "",
+    "highlight": "je via helpo"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mi vidis lin je lundon.",
+    "right": "Mi vidis lin lundon. (or: je lundo)",
+    "note": "Never combine the preposition 'je' with the accusative '-n'; use either the preposition or the accusative alone."
+   },
+   {
+    "wrong": "La tablo estas du metroj longa.",
+    "right": "La tablo estas du metrojn longa. (or: je du metroj longa)",
+    "note": "Measurements indicating extent require the accusative '-n' or the preposition 'je'."
+   },
+   {
+    "wrong": "Mi fidas lin je.",
+    "right": "Mi fidas je li.",
+    "note": "Prepositions cannot stand alone at the end of a clause without their nominal object in Esperanto."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase for 'at five o'clock': 'La kunveno komenciĝos ___.'",
+    "options": [
+     "je la kvina horo",
+     "je la kvinan horon",
+     "en la kvina horon",
+     "al la kvina horo"
+    ],
+    "answer": 0,
+    "explanation": "'Je la kvina horo' uses the preposition 'je' without an accusative ending."
+   },
+   {
+    "question": "Express 'He stayed two days' using the accusative of duration: 'Li restis tie ___.'",
+    "options": [
+     "du tagoj",
+     "al du tagoj",
+     "du tagojn",
+     "en du tagoj"
+    ],
+    "answer": 2,
+    "explanation": "Duration without a preposition takes the accusative of measure: 'du tagojn'."
+   },
+   {
+    "question": "I congratulate you on your success: 'Mi gratulas vin ___ via sukceso.'",
+    "options": [
+     "tra",
+     "pri",
+     "por",
+     "je"
+    ],
+    "answer": 3,
+    "explanation": "'Gratuli je' is a standard idiom where 'je' expresses the indefinite cause or occasion of congratulation."
+   },
+   {
+    "question": "Which sentence incorrectly combines 'je' with the accusative?",
+    "options": [
+     "Mi renkontos vin je la tagmezo.",
+     "Mi renkontos vin morgaŭ vespere.",
+     "Mi renkontos vin je la sesan horon.",
+     "Mi renkontos vin la sesan horon."
+    ],
+    "answer": 2,
+    "explanation": "'Je la sesan horon' incorrectly stacks the preposition 'je' with the accusative ending '-n'."
+   }
+  ],
+  "tip": "Think of 'je' as the joker in a deck of cards: only play it when no specific preposition (like en, sur, al, or pri) clearly fits the meaning."
+ },
+ {
+  "id": "eo-b2-aspect-compound-tenses",
+  "level": "b2",
+  "category": "tenses",
+  "categoryColor": "#EC4899",
+  "emoji": "⏳",
+  "title": "Aspect in Compound Tenses (Esti + Participles)",
+  "subtitle": "Differentiate ongoing, completed, and impending states without overusing them",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "Compound tenses combine a tense of 'esti' (establishing the reference frame) with a participle suffix indicating anteriority (-int-), contemporaneity (-ant-), or posteriority (-ont-).",
+  "structure": {
+   "headers": [
+    "Compound Form",
+    "Esperanto Construction",
+    "Temporal & Aspectual Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Past Prior (Pluperfect)",
+      "Kiam li venis, mi jam estis manĝinta.",
+      "Past reference frame; action already finished."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past Continuous",
+      "Hieraŭ je la tria mi estis leganta.",
+      "Past reference frame; action in active progress."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Future Anterior",
+      "Morgaŭ tagmeze ni estos finintaj.",
+      "Future reference frame; action completed beforehand."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Present Prospective",
+      "Li estas forironta.",
+      "Present frame; imminent future departure."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DB2777",
+    "label": "Prior Action in the Past",
+    "example": "Ŝi konstatis, ke ŝi estis forgesinta siajn ŝlosilojn.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Simultaneous Past Background",
+    "example": "Dum la tuta posttagmezo li estis riparanta la tegmenton.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Future Completion Milestone",
+    "example": "Antaŭ la fino de la jaro ni estos konstruintaj la domon.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kiam la voko sonis, mi jam estis foririnta el la oficejo.",
+    "ko": "",
+    "highlight": "estis foririnta"
+   },
+   {
+    "en": "Je tiu momento ili estis diskutantaj gravan problemon.",
+    "ko": "",
+    "highlight": "estis diskutantaj"
+   },
+   {
+    "en": "Kiam vi alvenos hejmen, mi estos preparinta la tablon.",
+    "ko": "",
+    "highlight": "estos preparinta"
+   },
+   {
+    "en": "La ŝipo estis sinkonta kiam la savantoj finfine alvenis.",
+    "ko": "",
+    "highlight": "estis sinkonta"
+   },
+   {
+    "en": "Mi estas leginta tiun libron plurfoje en mia juneco.",
+    "ko": "",
+    "highlight": "estas leginta"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mi estas skribanta leteron nun.",
+    "right": "Mi skribas leteron nun.",
+    "note": "Do not copy English continuous forms; simple present 'skribas' is the standard way to express ongoing present actions."
+   },
+   {
+    "wrong": "Ni estis vidintaj la filmon hieraŭ vespere.",
+    "right": "Ni vidis la filmon hieraŭ vespere.",
+    "note": "Use simple past 'vidis' for straightforward completed events unless contrasting with another past time reference."
+   },
+   {
+    "wrong": "Ili estis fininta la laboron kune.",
+    "right": "Ili estis finintaj la laboron kune.",
+    "note": "Participles acting as adjectival predicates must agree in number (-j) with the plural subject."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "When you arrive tomorrow, we will have already departed: 'Kiam vi alvenos morgaŭ, ni jam ___.'",
+    "options": [
+     "estos forirantaj",
+     "estos foririntaj",
+     "estos forirontaj",
+     "estis foririntaj"
+    ],
+    "answer": 1,
+    "explanation": "The reference frame is future ('estos') and the action is completed prior to that point ('-int-'), plural ('-aj')."
+   },
+   {
+    "question": "Which sentence correctly avoids redundant compound tenses for a simple ongoing action?",
+    "options": [
+     "Mi estas manĝanta pomon.",
+     "Mi manĝas pomon.",
+     "Mi estis manĝinta pomon nun.",
+     "Mi estos manĝonta pomon."
+    ],
+    "answer": 1,
+    "explanation": "In standard Esperanto, simple 'Mi manĝas pomon' is preferred over 'estas manĝanta' for simple present actions."
+   },
+   {
+    "question": "They were on the verge of crying when they heard the news: 'Ili ___ kiam ili aŭdis la novaĵon.'",
+    "options": [
+     "estis plorintaj",
+     "estas plorontaj",
+     "estis plorantaj",
+     "estis plorontaj"
+    ],
+    "answer": 3,
+    "explanation": "'Estis' sets the past frame, and '-ontaj' denotes an action about to happen in that moment."
+   },
+   {
+    "question": "Spot the plural agreement error: 'La knaboj estis ___ la lecionon.'",
+    "options": [
+     "lerninta",
+     "lernintaj",
+     "lernantaj",
+     "lernontaj"
+    ],
+    "answer": 0,
+    "explanation": "'Lerninta' lacks the plural marker '-j', which is required because the subject 'la knaboj' is plural."
+   }
+  ],
+  "tip": "Default to simple tenses (-as, -is, -os). Reserve compound forms strictly for moments when precise chronological relationships between two separate events must be clarified."
+ },
+ {
+  "id": "eo-b2-subtle-affix-nuances",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🧩",
+  "title": "Nuanced Affix Differentiation (-et-, -eg-, -aĉ-, -ad-, -ebl-, -end-)",
+  "subtitle": "Distinguish obligation, possibility, continuation, and nuance through affixes",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Affixes in Esperanto carry independent semantic values that modulate degree (-et-, -eg-), contempt (-aĉ-), duration (-ad-), possibility (-ebl-), and strict necessity (-end-).",
+  "structure": {
+   "headers": [
+    "Affix",
+    "Semantic Nuance",
+    "Contrasting Example Pair"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-ebl- vs -end-",
+      "Possibility vs Obligation",
+      "farebla (doable) vs farenda (must be done)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-et- vs -eg-",
+      "Diminutive vs Augmentative",
+      "varmeta (lukewarm) vs varmega (scalding)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-aĉ-",
+      "Derogatory / Poor Quality",
+      "domaĉo (hovel) vs dometo (cozy cottage)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ad-",
+      "Continuous Habit / Action Process",
+      "paroli (to speak) vs paroladi (to give a speech)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Feasibility vs Imperative",
+    "example": "Ĉi tiu tasko estas facile solvebla, sed tiu alia estas tuj farenda.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Qualitative Degradation",
+    "example": "Pluvis forte, kaj la vetero fariĝis tute veteraĉo.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Repeated or Prolonged Process",
+    "example": "Lia senĉesa babilado malhelpis mian laboradon.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Tiu libro estas leginda, sed ĉi tiu dokumento estas nepre legenda.",
+    "ko": "",
+    "highlight": "legenda"
+   },
+   {
+    "en": "Li sentis nur dormeton, sed post horo li falis en dormegon.",
+    "ko": "",
+    "highlight": "dormegon"
+   },
+   {
+    "en": "La malnova veturilo estis vera veturilaĉo, kiu apenaŭ moviĝis.",
+    "ko": "",
+    "highlight": "veturilaĉo"
+   },
+   {
+    "en": "Post longa marŝado tra la montaro, ni trovis rifuĝejon.",
+    "ko": "",
+    "highlight": "marŝado"
+   },
+   {
+    "en": "Via propono estas teorie ebla, sed praktike apenaŭ efektivigebla.",
+    "ko": "",
+    "highlight": "efektivigebla"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Tio estas tasko pagenda per mono.",
+    "right": "Tio estas tasko pagebla per mono.",
+    "note": "Use -ebl- for what can be paid (possible); -end- means it mandatory/must be paid."
+   },
+   {
+    "wrong": "Li estas malbonega homo.",
+    "right": "Li estas malbonaĉa homo. (or: aĉa homo)",
+    "note": "To denote moral defect or contempt, use '-aĉ-', whereas '-eg-' simply magnifies intensity (extremely bad)."
+   },
+   {
+    "wrong": "Mi legadas libron nun.",
+    "right": "Mi legas libron nun.",
+    "note": "Do not affix '-ad-' merely because an action is happening right now; reserve it for prolonged, habitual, or emphasized processes."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "A task that must be done immediately is a 'tasko ___':",
+    "options": [
+     "farebla",
+     "farinda",
+     "farenda",
+     "farada"
+    ],
+    "answer": 2,
+    "explanation": "The suffix -end- conveys obligation ('which must be done'), unlike -ebl- (possible) or -ind- (worthy)."
+   },
+   {
+    "question": "A contemptible, broken-down dog could be described as a:",
+    "options": [
+     "hundaĉo",
+     "hundeto",
+     "hundego",
+     "hundaro"
+    ],
+    "answer": 0,
+    "explanation": "The suffix -aĉ- marks poor quality, distastefulness, or wretchedness."
+   },
+   {
+    "question": "Choose the word meaning 'lukewarm' or slightly warm:",
+    "options": [
+     "varmega",
+     "varmeta",
+     "varmaĉa",
+     "varmenda"
+    ],
+    "answer": 1,
+    "explanation": "The diminutive suffix -et- lessens the degree, producing 'varmeta' (lukewarm/slightly warm)."
+   },
+   {
+    "question": "Which suffix converts 'pensi' into sustained contemplation or meditation?",
+    "options": [
+     "-ebl-",
+     "-end-",
+     "-ad-",
+     "-aĉ-"
+    ],
+    "answer": 2,
+    "explanation": "The suffix -ad- denotes continuation, habitual repetition, or an extended process: 'pensado'."
+   }
+  ],
+  "tip": "Remember the trio: -ebla (can be done), -inda (worth doing), and -enda (must be done). They are all passive modal suffixes that save entire clauses."
+ },
+ {
+  "id": "eo-b2-root-character-derivation",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🌳",
+  "title": "Inherent Root Categories (Substantive, Verbal, Adjectival)",
+  "subtitle": "Predict derivation and transitivity by understanding innate root character",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Every Esperanto root carries an innate semantic character—verbal, nominal, or adjectival—which dictates what zero-derivation means and when suffixes like -igi and -iĝi are needed.",
+  "structure": {
+   "headers": [
+    "Root Character",
+    "Base Root Example",
+    "Zero Derivation Effect",
+    "To Make Action / State"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Verbal Root",
+      "kur- (run)",
+      "kuro = act of running",
+      "kuri = to run naturally"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adjectival Root",
+      "blank- (white)",
+      "blanko = white color/thing",
+      "blankigi = to make white (needs -ig-)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Substantive Root",
+      "martel- (hammer)",
+      "marteli = to strike with hammer",
+      "martelado = process of hammering"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Verbal Transitive",
+      "ferm- (close)",
+      "fermo = the act of closing",
+      "fermiĝi = to close by itself (needs -iĝ-)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Adjectival Root Causative",
+    "example": "La novaj lampoj tute lumigis kaj blankigis la ĉambron.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Substantive Root Instrument",
+    "example": "Li brosas siajn vestojn ĉiutage per ligna broso.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Inherent Transitivity Shift",
+    "example": "La pordo malfermiĝis malrapide pro la forta vento.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "La suno varmigis la malvarman akvon en la lageto.",
+    "ko": "",
+    "highlight": "varmigis"
+   },
+   {
+    "en": "Ili kronis la novan reĝon en la grandioza katedralo.",
+    "ko": "",
+    "highlight": "kronis"
+   },
+   {
+    "en": "La situacio rapide pliboniĝis post la interkonsento.",
+    "ko": "",
+    "highlight": "pliboniĝis"
+   },
+   {
+    "en": "Ŝi martelis la najlon rekte en la muron.",
+    "ko": "",
+    "highlight": "martelis"
+   },
+   {
+    "en": "Lia vizaĝo ruĝiĝis pro subita honto.",
+    "ko": "",
+    "highlight": "ruĝiĝis"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "La suno varmas la teron.",
+    "right": "La suno varmigas la teron.",
+    "note": "Because 'varm-' is inherently adjectival (warm), 'varmi' means 'to be warm'; making something warm requires '-igi'."
+   },
+   {
+    "wrong": "La pordo fermis je la dekua.",
+    "right": "La pordo fermiĝis je la dekua.",
+    "note": "Because 'ferm-' is an inherently transitive verbal root, an intransitive closing on its own requires '-iĝi'."
+   },
+   {
+    "wrong": "Mi brosonis mian jakon.",
+    "right": "Mi brosis mian jakon.",
+    "note": "The root 'bros-' is substantive (brush); adding verbal '-i' directly yields 'to brush' without extra affixes."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Because 'pur-' is an adjectival root, how do you say 'to clean' (make clean)?",
+    "options": [
+     "puri",
+     "puriĝi",
+     "purigi",
+     "puregi"
+    ],
+    "answer": 2,
+    "explanation": "Adjectival roots express the state with -i (puri = to be clean); to cause that state transitively requires '-igi' (purigi = to clean)."
+   },
+   {
+    "question": "The verb root 'fal-' (fall) is naturally intransitive. How do you say 'to drop/fell something'?",
+    "options": [
+     "faladi",
+     "faligi",
+     "faliĝi",
+     "fali"
+    ],
+    "answer": 1,
+    "explanation": "Adding '-igi' to an intransitive verbal root makes it transitive/causative: 'faligi' (to drop or make fall)."
+   },
+   {
+    "question": "What does the zero-derived verb 'marteli' mean, given that 'martel-' is a substantive root for hammer?",
+    "options": [
+     "To become a hammer",
+     "To strike using a hammer",
+     "To make a hammer",
+     "To seek a hammer"
+    ],
+    "answer": 1,
+    "explanation": "Verbalizing a tool noun root with -i directly means employing that tool: 'marteli' = to hammer / strike with a hammer."
+   },
+   {
+    "question": "The root 'koler-' is verbal and intransitive (to be angry). How do you say 'to anger someone'?",
+    "options": [
+     "koleri",
+     "kolerigi",
+     "koleriĝi",
+     "koleradi"
+    ],
+    "answer": 1,
+    "explanation": "'Koleri' already means 'to be angry'; turning it into causing anger in another person requires '-igi'."
+   }
+  ],
+  "tip": "When in doubt, check a dictionary for the root's base category: if an adjective root, -i means 'to be [adj]', -igi means 'to make [adj]', and -iĝi means 'to become [adj]'."
+ }
+]

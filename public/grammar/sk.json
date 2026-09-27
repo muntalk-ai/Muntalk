@@ -1,0 +1,3387 @@
+[
+ {
+  "id": "sk-a1-grammatical-gender-and-basic-plurals",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🏷️",
+  "title": "Grammatical Gender and Basic Nominative Plurals",
+  "subtitle": "Recognize noun genders by endings and form basic plurals in Slovak",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Slovak nouns belong to one of three genders—masculine (usually ending in a consonant), feminine (ending in -a), or neuter (ending in -o, -e, or -ie)—and each forms plurals with specific vowel suffixes.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Singular Ending",
+    "Plural Ending",
+    "Example (Sg. → Pl.)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Animate",
+      "Hard/Soft Consonant",
+      "-i / -ia",
+      "študent → študenti"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masculine Inanimate",
+      "Hard/Soft Consonant",
+      "-y / -e",
+      "stôl → stoly"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine",
+      "-a",
+      "-y (hard) / -e (soft)",
+      "kniha → knihy"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter",
+      "-o / -e",
+      "-á / -a",
+      "mesto → mestá"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Masculine Noun Plurals",
+    "example": "Títo noví študenti čítajú knihy.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Feminine Noun Plurals",
+    "example": "Na stole ležia staré mapy.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Neuter Noun Plurals",
+    "example": "Moderné mestá sú veľmi pekné.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Na dvore brešú veľkí psi.",
+    "ko": "",
+    "highlight": "veľkí psi"
+   },
+   {
+    "en": "V izbe sú nové stoly.",
+    "ko": "",
+    "highlight": "nové stoly"
+   },
+   {
+    "en": "Moje sestry študujú v Bratislave.",
+    "ko": "",
+    "highlight": "Moje sestry"
+   },
+   {
+    "en": "Tieto zelené jablká sú sladké.",
+    "ko": "",
+    "highlight": "zelené jablká"
+   },
+   {
+    "en": "V knižnici sú zaujímavé knihy.",
+    "ko": "",
+    "highlight": "zaujímavé knihy"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "dva mestá",
+    "right": "dve mestá",
+    "note": "Neuter and feminine nouns use the numeral 'dve', whereas 'dva' is only for masculine nouns."
+   },
+   {
+    "wrong": "dobrý ženy",
+    "right": "dobré ženy",
+    "note": "Nominative plural feminine adjectives end in -é, not -ý."
+   },
+   {
+    "wrong": "stoli",
+    "right": "stoly",
+    "note": "Inanimate masculine nouns ending in a hard consonant take -y, not -i."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct plural form for 'kniha' (book):",
+    "options": [
+     "knihe",
+     "knihy",
+     "knihi",
+     "kniha"
+    ],
+    "answer": 1,
+    "explanation": "Feminine nouns ending in -a preceded by a hard consonant take the plural ending -y."
+   },
+   {
+    "question": "Which of these nouns is neuter?",
+    "options": [
+     "stôl",
+     "káva",
+     "okno",
+     "chlapec"
+    ],
+    "answer": 2,
+    "explanation": "Nouns ending in -o (like okno) are neuter in Slovak."
+   },
+   {
+    "question": "Choose the correct plural: 'V parku behajú ___.' (boys)",
+    "options": [
+     "chlapci",
+     "chlapce",
+     "chlapcy",
+     "chlapcá"
+    ],
+    "answer": 0,
+    "explanation": "Masculine animate nouns typically end in -i in the nominative plural, causing 'k' to soften to 'c' (chlapec → chlapci)."
+   },
+   {
+    "question": "What is the nominative plural of 'auto' (car)?",
+    "options": [
+     "auty",
+     "auti",
+     "autá",
+     "aute"
+    ],
+    "answer": 2,
+    "explanation": "Neuter nouns ending in -o replace it with -á in the plural (auto → autá)."
+   }
+  ],
+  "tip": "Look at the last letter of a Slovak noun in nominative singular: a consonant usually means masculine, -a means feminine, and -o or -e means neuter."
+ },
+ {
+  "id": "sk-a1-present-tense-verb-conjugation-classes",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⏱️",
+  "title": "Present Tense Conjugation Classes",
+  "subtitle": "Master the primary present tense verb patterns and subject-pronoun dropping",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Slovak verbs conjugate in the present tense by attaching person-specific endings to stem classes (-á, -í, -ie, -e), allowing subject pronouns to be dropped routinely.",
+  "structure": {
+   "headers": [
+    "Class",
+    "Infinitive",
+    "ja (I)",
+    "oni / ony (they)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-á class",
+      "volať",
+      "volám",
+      "volajú"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-í class",
+      "robiť",
+      "robím",
+      "robia"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ie class",
+      "rozumieť",
+      "rozumiem",
+      "rozumejú"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-e class",
+      "písať",
+      "píšem",
+      "píšu"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Habitual or Daily Action",
+    "example": "Každé ráno pijem čierny čaj.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Current State or Action",
+    "example": "Teraz píšeme dôležitú úlohu.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Dropped Pronouns in Dialogue",
+    "example": "Hovoríš po slovensky?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Každý deň čítam noviny.",
+    "ko": "",
+    "highlight": "čítam"
+   },
+   {
+    "en": "Čo robíte cez víkend?",
+    "ko": "",
+    "highlight": "robíte"
+   },
+   {
+    "en": "Oni nerozumejú po anglicky.",
+    "ko": "",
+    "highlight": "nerozumejú"
+   },
+   {
+    "en": "Bývame v malom byte.",
+    "ko": "",
+    "highlight": "Bývame"
+   },
+   {
+    "en": "Peter píše dlhý list rodine.",
+    "ko": "",
+    "highlight": "píše"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ja som študent a ja bývam tu.",
+    "right": "Som študent a bývam tu.",
+    "note": "Slovak is a pro-drop language; repeating 'ja' sounds unnatural unless emphasizing contrast."
+   },
+   {
+    "wrong": "oni robiať",
+    "right": "oni robia",
+    "note": "Third-person plural never ends in -ť; -ť is the infinitive marker."
+   },
+   {
+    "wrong": "my čítate",
+    "right": "my čítame",
+    "note": "The 1st person plural ending is -me, while -te is for 2nd person plural."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'My ___ po slovensky.' (hovoriť - we speak)",
+    "options": [
+     "hovorím",
+     "hovorí",
+     "hovoríme",
+     "hovoria"
+    ],
+    "answer": 2,
+    "explanation": "The 1st person plural ('my') ending for the -í conjugation is -íme (hovoríme)."
+   },
+   {
+    "question": "Complete the sentence: 'Peter ___ novú prácu.' (hľadať - Peter searches)",
+    "options": [
+     "hľadá",
+     "hľadám",
+     "hľadajú",
+     "hľadáme"
+    ],
+    "answer": 0,
+    "explanation": "Peter is 3rd person singular ('on'), taking the ending -á for the -á class."
+   },
+   {
+    "question": "Which form matches 'oni' for the verb 'pracovať' (to work)?",
+    "options": [
+     "pracujem",
+     "pracuje",
+     "pracujú",
+     "pracujete"
+    ],
+    "answer": 2,
+    "explanation": "Verbs ending in -ovať conjugate as -ujem, -uješ... -ujú in 3rd person plural."
+   },
+   {
+    "question": "Complete the sentence: 'Čo ___ ty dnes večer?' (robiť - you do)",
+    "options": [
+     "robím",
+     "robia",
+     "robíme",
+     "robíš"
+    ],
+    "answer": 3,
+    "explanation": "The 2nd person singular ('ty') takes the ending -š (robíš)."
+   }
+  ],
+  "quizTip": "",
+  "tip": "Since verb endings clearly identify who is performing the action, omit subject pronouns like 'ja' or 'ty' unless you need contrast or emphasis."
+ },
+ {
+  "id": "sk-a1-accusative-case-and-animate-distinction",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎯",
+  "title": "Accusative Case and Masculine Animacy",
+  "subtitle": "Direct objects and the essential animate vs. inanimate masculine contrast",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "In the accusative case, feminine nouns change -a to -u, neuters and inanimate masculines remain identical to the nominative, but masculine animate nouns take the genitive ending -a.",
+  "structure": {
+   "headers": [
+    "Noun Category",
+    "Nominative (Subject)",
+    "Accusative (Object)",
+    "Rule"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masc. Animate",
+      "brat",
+      "brata",
+      "Takes -a ending (like Genitive)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masc. Inanimate",
+      "počítač",
+      "počítač",
+      "Identical to Nominative"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine (-a)",
+      "káva",
+      "kávu",
+      "Ending -a becomes -u"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter (-o/-e)",
+      "pivo",
+      "pivo",
+      "Identical to Nominative"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Direct Object with Person or Pet",
+    "example": "Čakám na svojho brata.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Direct Object with Inanimate Thing",
+    "example": "Kupujem nový stôl.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Direct Object with Feminine Noun",
+    "example": "Dám si jednu kávu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Poznám tvojho dobrého otca.",
+    "ko": "",
+    "highlight": "tvojho dobrého otca"
+   },
+   {
+    "en": "Vidím vysoký moderný dom.",
+    "ko": "",
+    "highlight": "vysoký moderný dom"
+   },
+   {
+    "en": "Mám rád horúcu polievku.",
+    "ko": "",
+    "highlight": "horúcu polievku"
+   },
+   {
+    "en": "Hľadáte nášho psa?",
+    "ko": "",
+    "highlight": "nášho psa"
+   },
+   {
+    "en": "Pijem studené mlieko.",
+    "ko": "",
+    "highlight": "studené mlieko"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Vidím môj otec.",
+    "right": "Vidím môjho otca.",
+    "note": "Masculine animate direct objects must take the accusative ending -a (matching the genitive)."
+   },
+   {
+    "wrong": "Kupujem novú stôl.",
+    "right": "Kupujem nový stôl.",
+    "note": "'Stôl' is masculine inanimate, so it keeps nominative form and requires masculine agreement."
+   },
+   {
+    "wrong": "Mám rád káva.",
+    "right": "Mám rád kávu.",
+    "note": "Feminine nouns ending in -a must change to -u when used as direct objects."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Poznáš toho nového ___?' (učiteľ - teacher)",
+    "options": [
+     "učiteľ",
+     "učiteľa",
+     "učiteľu",
+     "učiteľom"
+    ],
+    "answer": 1,
+    "explanation": "Učiteľ is masculine animate, so its accusative singular ending is -a (učiteľa)."
+   },
+   {
+    "question": "Complete the sentence: 'Čítam zaujímavú ___.' (kniha - book)",
+    "options": [
+     "knihu",
+     "kniha",
+     "knihe",
+     "knihy"
+    ],
+    "answer": 0,
+    "explanation": "Feminine nouns ending in -a shift to -u in the accusative case."
+   },
+   {
+    "question": "Complete the sentence: 'Kupujem tento ___.' (telefón - phone)",
+    "options": [
+     "telefóna",
+     "telefónu",
+     "telefón",
+     "telefóne"
+    ],
+    "answer": 2,
+    "explanation": "Telefón is masculine inanimate, so accusative is identical to nominative."
+   },
+   {
+    "question": "Which accusative phrase is grammatically correct for 'I see a good friend' (male friend)?",
+    "options": [
+     "Vidím dobrý kamarát.",
+     "Vidím dobrú kamarát.",
+     "Vidím dobrého kamaráta.",
+     "Vidím dobrému kamarátovi."
+    ],
+    "answer": 2,
+    "explanation": "Masculine animate adjectives take -ého and nouns take -a in the accusative."
+   }
+  ],
+  "tip": "Ask 'Koho? Čo?' (Whom or What?) to test for the accusative: if it's a person/animal (Koho?), masculine nouns need -a; if it's an object (Čo?), masculine nouns don't change."
+ },
+ {
+  "id": "sk-a1-locative-case-with-prepositions",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📍",
+  "title": "Locative Case with Static Prepositions",
+  "subtitle": "Express static locations and topics using 'v', 'na', and 'o'",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "The locative case in Slovak is never used on its own; it always follows prepositions like 'v' (in), 'na' (on/at), or 'o' (about) to denote location or topic.",
+  "structure": {
+   "headers": [
+    "Preposition",
+    "Meaning",
+    "Gender & Ending",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "v / vo",
+      "in / inside",
+      "Masc./Neut. (-e / -i)",
+      "v hoteli / v meste"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "na",
+      "on / at",
+      "Feminine (-e / -i)",
+      "na stanici / na stole"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "o",
+      "about (topic)",
+      "Masc. Animate (-ovi)",
+      "o kamarátovi"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "v / na",
+      "in / on",
+      "Plural (-och / -ách)",
+      "v mestách / na stoloch"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Enclosed Physical Location",
+    "example": "Bývame v novom byte.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Surface or Event Location",
+    "example": "Sme na koncerte v Bratislave.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Topic of Conversation/Thought",
+    "example": "Rozprávame sa o politike.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Pracujem v modernej kancelárii.",
+    "ko": "",
+    "highlight": "v modernej kancelárii"
+   },
+   {
+    "en": "Kniha leží na drevenom stole.",
+    "ko": "",
+    "highlight": "na drevenom stole"
+   },
+   {
+    "en": "Často rozmýšľam o budúcnosti.",
+    "ko": "",
+    "highlight": "o budúcnosti"
+   },
+   {
+    "en": "Stretneme sa na pošte.",
+    "ko": "",
+    "highlight": "na pošte"
+   },
+   {
+    "en": "Deti sú teraz v škole.",
+    "ko": "",
+    "highlight": "v škole"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Som v Slovensko.",
+    "right": "Som na Slovensku.",
+    "note": "Slovakia takes the preposition 'na' and irregular locative ending -u (na Slovensku), not 'v'."
+   },
+   {
+    "wrong": "v mesto",
+    "right": "v meste",
+    "note": "Locative requires an ending change; neuter nouns in -o take -e in the locative singular."
+   },
+   {
+    "wrong": "Hovoríme o film.",
+    "right": "Hovoríme o filme.",
+    "note": "The preposition 'o' demands the locative case, requiring the -e ending for masculine inanimate nouns."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Bývam v ___.' (Bratislava)",
+    "options": [
+     "Bratislavu",
+     "Bratislave",
+     "Bratislavy",
+     "Bratislavou"
+    ],
+    "answer": 1,
+    "explanation": "Feminine hard-stem nouns take the ending -e in the locative singular after 'v'."
+   },
+   {
+    "question": "Which preposition is used for location with 'Slovensko'?",
+    "options": [
+     "v",
+     "do",
+     "k",
+     "na"
+    ],
+    "answer": 3,
+    "explanation": "Countries usually take 'v', but Slovakia idiomatically takes 'na' (na Slovensku)."
+   },
+   {
+    "question": "Complete the sentence: 'Kľúče sú na ___.' (stôl - table)",
+    "options": [
+     "stôl",
+     "stola",
+     "stole",
+     "stolu"
+    ],
+    "answer": 2,
+    "explanation": "Masculine inanimate noun 'stôl' takes the locative ending -e (na stole)."
+   },
+   {
+    "question": "Complete the sentence: 'Rozprávajú sa o novom ___.' (film - movie)",
+    "options": [
+     "filme",
+     "filmu",
+     "filmom",
+     "film"
+    ],
+    "answer": 0,
+    "explanation": "The preposition 'o' governs the locative case, producing 'o novom filme'."
+   }
+  ],
+  "tip": "Remember that countries normally take 'v' (v Nemecku, v Rakúsku), but 'Slovensko' is an exception requiring 'na' (na Slovensku)."
+ },
+ {
+  "id": "sk-a1-past-tense-formation-and-clitic-l",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#F59E0B",
+  "emoji": "🕰️",
+  "title": "Past Tense and the 'l'-Participle",
+  "subtitle": "Construct past tense actions using -l participles with 'byť' auxiliaries",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "The Slovak past tense combines the gender-marked 'l'-participle of the verb with the present-tense auxiliary of 'byť' in the 1st and 2nd persons, while dropping the auxiliary entirely in the 3rd person.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Singular (Masc. / Fem. / Neut.)",
+    "Plural (All Genders)",
+    "Auxiliary"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st (ja / my)",
+      "robil som / robila som",
+      "robili sme",
+      "som / sme"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd (ty / vy)",
+      "robil si / robila si",
+      "robili ste",
+      "si / ste"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd (on / ona / ono / oni)",
+      "robil / robila / robilo",
+      "robili",
+      "NONE (no auxiliary)"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Personal Past Experience",
+    "example": "Včera som bol v kine.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Completed Action by Third Person",
+    "example": "Mama varila obed.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Inquiring About Past Events",
+    "example": "Kde si bol cez víkend?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Včera som čítal zaujímavú knihu.",
+    "ko": "",
+    "highlight": "som čítal"
+   },
+   {
+    "en": "Kde ste kúpili to auto?",
+    "ko": "",
+    "highlight": "ste kúpili"
+   },
+   {
+    "en": "Zuzana nebola včera v škole.",
+    "ko": "",
+    "highlight": "nebola"
+   },
+   {
+    "en": "My sme bývali v Košiciach päť rokov.",
+    "ko": "",
+    "highlight": "sme bývali"
+   },
+   {
+    "en": "Oni prišli domov veľmi neskoro.",
+    "ko": "",
+    "highlight": "prišli"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "On je robil včera.",
+    "right": "On robil včera.",
+    "note": "Never use the auxiliary verb 'je' or 'sú' in the 3rd person past tense."
+   },
+   {
+    "wrong": "Ja som bola unavený.",
+    "right": "Ja som bola unavená.",
+    "note": "The gender of the l-participle, predicate adjective, and speaker must agree (feminine -a)."
+   },
+   {
+    "wrong": "My robili sme to.",
+    "right": "Robili sme to.",
+    "note": "The auxiliary 'sme' is a clitic and naturally sits in second position, not attached clumsily at the end."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How does a female speaker say 'I worked'?",
+    "options": [
+     "Pracoval som.",
+     "Pracovala som.",
+     "Pracovala si.",
+     "Pracovalo som."
+    ],
+    "answer": 1,
+    "explanation": "A female speaker uses the feminine past participle suffix -la with the 1st person singular auxiliary 'som'."
+   },
+   {
+    "question": "Complete the 3rd person sentence: 'Peter včera ___ futbal.' (hrať)",
+    "options": [
+     "hral",
+     "hral je",
+     "hral som",
+     "hrala"
+    ],
+    "answer": 0,
+    "explanation": "Third-person past tense requires no auxiliary verb; just the masculine participle 'hral'."
+   },
+   {
+    "question": "Complete the sentence: 'Čo ste včera ___?' (vy / robiť - plural)",
+    "options": [
+     "robil",
+     "robili",
+     "robila",
+     "robilo"
+    ],
+    "answer": 1,
+    "explanation": "Plural past participles always take the ending -li (robili)."
+   },
+   {
+    "question": "Where does the auxiliary 'si' belong in: 'Kde ___ včera večer?' (ty / byť)",
+    "options": [
+     "si bol",
+     "bol si je",
+     "bol ty",
+     "si bola si"
+    ],
+    "answer": 0,
+    "explanation": "The auxiliary 'si' occupies the second grammatical position: 'Kde si bol včera večer?'"
+   }
+  ],
+  "tip": "Third person forms NEVER take an auxiliary: say 'on robil' or 'ona písala', never add 'je'!"
+ },
+ {
+  "id": "sk-a1-modal-verbs-and-negation",
+  "level": "a1",
+  "category": "modals",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🚦",
+  "title": "Modal Verbs and Prefixed Negation",
+  "subtitle": "Expressing ability, necessity, desire, and knowledge with prefixed 'ne-'",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Slovak modal verbs are followed by an infinitive, and verbs are negated directly by attaching the prefix 'ne-' directly to the conjugated verb.",
+  "structure": {
+   "headers": [
+    "Modal Verb",
+    "1st Person Present",
+    "Negated Form",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "môcť",
+      "môžem",
+      "nemôžem",
+      "can / to be able to"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "musieť",
+      "musím",
+      "nemusím",
+      "must / to have to"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "chcieť",
+      "chcem",
+      "nechcem",
+      "want / to wish"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "vedieť",
+      "viem",
+      "neviem",
+      "know / to know how to"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Expressing Necessity",
+    "example": "Dnes musím pracovať dlho do večera.",
+    "translation": ""
+   },
+   {
+    "color": "#A78BFA",
+    "label": "Expressing Inability or Refusal",
+    "example": "Bohužiaľ nemôžem prísť na tvoju oslavu.",
+    "translation": ""
+   },
+   {
+    "color": "#C4B5FD",
+    "label": "Acquired Skills and Knowledge",
+    "example": "Vieš hovoriť po slovensky veľmi dobre.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dnes večer nechcem variť večeru.",
+    "ko": "",
+    "highlight": "nechcem variť"
+   },
+   {
+    "en": "Môžem si tu sadnúť?",
+    "ko": "",
+    "highlight": "Môžem si tu sadnúť"
+   },
+   {
+    "en": "Zajtra musíme vstávať veľmi skoro ráno.",
+    "ko": "",
+    "highlight": "musíme vstávať"
+   },
+   {
+    "en": "Môj brat nevie plávať v hlbokej vode.",
+    "ko": "",
+    "highlight": "nevie plávať"
+   },
+   {
+    "en": "Tento týždeň nemusíte písať domáce úlohy.",
+    "ko": "",
+    "highlight": "nemusíte písať"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ja nie chcem jesť polievku.",
+    "right": "Ja nechcem jesť polievku.",
+    "note": "Negation in Slovak is a bound prefix attached directly to the verb ('nechcem'), not a detached word ('nie chcem')."
+   },
+   {
+    "wrong": "Nemôžem hovorím teraz.",
+    "right": "Nemôžem hovoriť teraz.",
+    "note": "A modal verb must be followed by an infinitive (-ť ending), never by a conjugated verb form."
+   },
+   {
+    "wrong": "Ja viem plávať ale dnes neviem prísť.",
+    "right": "Ja viem plávať ale dnes nemôžem prísť.",
+    "note": "Use 'môcť' for circumstantial possibility/permission and 'vedieť' exclusively for learned skills or knowledge."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Peter ___ prísť na stretnutie, pretože má chrípku.",
+    "options": [
+     "nemôže",
+     "nevie",
+     "nie môže",
+     "nechcieť"
+    ],
+    "answer": 0,
+    "explanation": "'Nemôže' expresses the external physical impossibility of coming, and negation merges into the verb as 'ne-'."
+   },
+   {
+    "question": "Ospravedlňujem sa, ale ___ tvoje telefónne číslo.",
+    "options": [
+     "nie viem",
+     "neviem",
+     "neviemť",
+     "vedieť nie"
+    ],
+    "answer": 1,
+    "explanation": "The negative form of 'viem' (I know) is written as a single word: 'neviem'."
+   },
+   {
+    "question": "Deti, ___ rýchlo upratať svoje izby!",
+    "options": [
+     "chcieť",
+     "môžete",
+     "musíte",
+     "vedieť"
+    ],
+    "answer": 2,
+    "explanation": "'Musíte' (you must - plural) fits the imperative context of necessity followed by the infinitive 'upratať'."
+   },
+   {
+    "question": "Prepáčte, dnes naozaj ___ ísť do kina.",
+    "options": [
+     "nechce",
+     "nechcú",
+     "nechceš",
+     "nechcem"
+    ],
+    "answer": 3,
+    "explanation": "The 1st person singular ('I') form of chcieť negated is 'nechcem'."
+   }
+  ],
+  "tip": "Remember that 'nemusieť' means 'don't have to' (absence of obligation), not 'must not'. For prohibition, Slovak uses 'nesmieť' (e.g., 'nesmieš' = you must not)."
+ },
+ {
+  "id": "sk-a2-verbal-aspect-dokonavost-nedokonavost",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "Verbal Aspect: Perfective vs. Imperfective",
+  "subtitle": "Distinguishing between ongoing actions and completed results",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Imperfective verbs focus on ongoing or repeated actions, while perfective verbs express completed actions with a clear result.",
+  "structure": {
+   "headers": [
+    "Imperfective (Process)",
+    "Perfective (Result)",
+    "Prefix / Suffix Change",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "písať",
+      "napísať",
+      "na- (prefix)",
+      "to write"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "čítať",
+      "prečítať",
+      "pre- (prefix)",
+      "to read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "kupovať",
+      "kúpiť",
+      "suffix change",
+      "to buy"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "otvárať",
+      "otvoriť",
+      "suffix change",
+      "to open"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Ongoing Process (Imperfective)",
+    "example": "Včera večer som písal list dve hodiny.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Single Completed Result (Perfective)",
+    "example": "Už som napísal celú správu pre šéfa.",
+    "translation": ""
+   },
+   {
+    "color": "#6EE7B7",
+    "label": "Regular Repeated Action (Imperfective)",
+    "example": "Každé ráno kupujem čerstvé pečivo.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Celé popoludnie čítala zaujímavú knihu.",
+    "ko": "",
+    "highlight": "čítala"
+   },
+   {
+    "en": "Konečne prečítal celú učebnicu na skúšku.",
+    "ko": "",
+    "highlight": "prečítal"
+   },
+   {
+    "en": "Zajtra uvarím obed pre celú rodinu.",
+    "ko": "",
+    "highlight": "uvarím"
+   },
+   {
+    "en": "Mama varila obed, keď zazvonil telefón.",
+    "ko": "",
+    "highlight": "varila"
+   },
+   {
+    "en": "Vždy zatváram okná, keď odchádzam z domu.",
+    "ko": "",
+    "highlight": "zatváram"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Budem napísať list zajtra.",
+    "right": "Napíšem list zajtra.",
+    "note": "Perfective verbs form the future tense using their present tense conjugations alone; never combine 'budem' with a perfective infinitive."
+   },
+   {
+    "wrong": "Každý deň som prečítal noviny.",
+    "right": "Každý deň som čítal noviny.",
+    "note": "Habitual or repeated daily actions require imperfective verbs ('čítal'), not perfective result verbs ('prečítal')."
+   },
+   {
+    "wrong": "Dve hodiny som urobil úlohu.",
+    "right": "Dve hodiny som robil úlohu.",
+    "note": "Duration expressions ('dve hodiny') require imperfective verbs because they describe the duration of a process."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Peter včera celý večer ___ na počítači novú hru.",
+    "options": [
+     "hral",
+     "zahral",
+     "dohral",
+     "vyhral"
+    ],
+    "answer": 0,
+    "explanation": "'Celý večer' indicates duration of a process, demanding the imperfective verb 'hral'."
+   },
+   {
+    "question": "Už si ___ tú novú knihu, ktorú som ti požičal?",
+    "options": [
+     "čítal si",
+     "prečítal",
+     "čítaš",
+     "dočítavať"
+    ],
+    "answer": 1,
+    "explanation": "'Už' (already) asks about completion and result, requiring the perfective past form 'prečítal'."
+   },
+   {
+    "question": "Zajtra ti určite ___ všetky peniaze.",
+    "options": [
+     "vraciam",
+     "budem vrátiť",
+     "vrátim",
+     "vracať"
+    ],
+    "answer": 2,
+    "explanation": "A single future completion takes the simple perfective present-future form 'vrátim'."
+   },
+   {
+    "question": "Každé ráno o siedmej ___ do práce električkou.",
+    "options": [
+     "cestujem",
+     "pocestujem",
+     "odcestujem",
+     "docestujem"
+    ],
+    "answer": 0,
+    "explanation": "'Každé ráno' describes a repeated habitual action, requiring the imperfective 'cestujem'."
+   }
+  ],
+  "tip": "Perfective verbs do not have a compound future with 'budem'. The present tense forms of perfective verbs (e.g. urobím, kúpim, prečítam) automatically refer to future completed actions!"
+ },
+ {
+  "id": "sk-a2-genitive-case-possession-and-quantities",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🏷️",
+  "title": "Genitive Case: Possession, Absence, and Numbers",
+  "subtitle": "Expressing ownership, absence with 'niet', and counting from 5 onward",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The genitive indicates possession, follows prepositions like 'od', 'do', and 'bez', and is required after numerals 5 and above as well as negated existence.",
+  "structure": {
+   "headers": [
+    "Noun Gender",
+    "Nominative Sg.",
+    "Genitive Sg.",
+    "Genitive Plural"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Animate",
+      "študent",
+      "študenta",
+      "študentov"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masculine Inanimate",
+      "stôl",
+      "stola",
+      "stolov"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine",
+      "žena",
+      "ženy",
+      "žien"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter",
+      "mesto",
+      "mesta",
+      "miest"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Possession (Whose?)",
+    "example": "Toto je auto môjho staršieho brata.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Counting Quantities (5+)",
+    "example": "Na námestí stojí päť vysokých stromov.",
+    "translation": ""
+   },
+   {
+    "color": "#93C5FD",
+    "label": "Absence with 'bez' or 'niet'",
+    "example": "Kávu pijem vždy bez bieleho cukru.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dnes prišiel do školy bez domácej úlohy.",
+    "ko": "",
+    "highlight": "bez domácej úlohy"
+   },
+   {
+    "en": "Kúpil som šesť zelených jabĺk v obchode.",
+    "ko": "",
+    "highlight": "šesť zelených jabĺk"
+   },
+   {
+    "en": "Cestujeme od Bratislavy až do Košíc.",
+    "ko": "",
+    "highlight": "od Bratislavy až do Košíc"
+   },
+   {
+    "en": "Tu niet žiadnej pomoci.",
+    "ko": "",
+    "highlight": "niet žiadnej pomoci"
+   },
+   {
+    "en": "Kabát môjho otca visí v predsieni.",
+    "ko": "",
+    "highlight": "môjho otca"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mám päť noví kamaráti.",
+    "right": "Mám päť nových kamarátov.",
+    "note": "Numbers from five upwards govern the genitive plural ('nových kamarátov'), not the nominative plural."
+   },
+   {
+    "wrong": "Idem tam bez brat.",
+    "right": "Idem tam bez brata.",
+    "note": "The preposition 'bez' (without) always triggers the genitive case ('brata')."
+   },
+   {
+    "wrong": "Kniha od môj učiteľ leží tu.",
+    "right": "Kniha od môjho učiteľa leží tu.",
+    "note": "Both adjective and noun must decline into the genitive singular after the preposition 'od'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "V kaviarni si objednal čaj bez ___.",
+    "options": [
+     "cukru",
+     "cukor",
+     "cukrom",
+     "cukre"
+    ],
+    "answer": 0,
+    "explanation": "The preposition 'bez' always governs the genitive case ('cukru')."
+   },
+   {
+    "question": "Na parkovisku pred domom stojí sedem ___.",
+    "options": [
+     "nové autá",
+     "nových áut",
+     "nové autami",
+     "novým autám"
+    ],
+    "answer": 1,
+    "explanation": "Numerals 5 and higher govern nouns and adjectives in the genitive plural ('nových áut')."
+   },
+   {
+    "question": "Toto je taška mojej sestry a toto je kabát môjho ___.",
+    "options": [
+     "otcovi",
+     "otcom",
+     "otca",
+     "otec"
+    ],
+    "answer": 2,
+    "explanation": "Expressing possession ('of my father') requires the masculine animate genitive singular suffix '-a'."
+   },
+   {
+    "question": "Odchádzame na dovolenku od ___.",
+    "options": [
+     "pondelok",
+     "pondelku",
+     "pondelkom",
+     "pondelka"
+    ],
+    "answer": 3,
+    "explanation": "'Od' governs the genitive case, turning 'pondelok' into 'pondelka'."
+   }
+  ],
+  "tip": "Slovak feminine and neuter genitive plurals usually drop their final vowel and introduce a lengthening or diphthong inside the root (e.g., žena -> žien, mesto -> miest)!"
+ },
+ {
+  "id": "sk-a2-dative-case-and-indirect-objects",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎁",
+  "title": "Dative Case and Indirect Objects",
+  "subtitle": "Identifying recipients, beneficiaries, and using prepositions 'k/ku' and 'proti'",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "The dative case answers 'to whom / for whom' (komu/čomu) an action is directed and is mandatory after prepositions like 'k/ku' (towards) and 'proti' (against).",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Nominative Sg.",
+    "Dative Sg.",
+    "Dative Plural"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Animate",
+      "kamarát",
+      "kamarátovi",
+      "kamarátom"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masculine Inanimate",
+      "dom",
+      "domu",
+      "domom"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine",
+      "sestra",
+      "sestre",
+      "sestrám"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter",
+      "dieťa",
+      "dieťaťu",
+      "deťom"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Indirect Object (Recipient)",
+    "example": "Otec kúpil malému synovi nový bicykel.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Direction Towards (k / ku)",
+    "example": "Poobede ideme na návštevu k babke.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Opposition (proti)",
+    "example": "Hráme dôležitý zápas proti rivalovi.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dal som kamarátovi kľúče od bytu.",
+    "ko": "",
+    "highlight": "kamarátovi"
+   },
+   {
+    "en": "Po práci idem rýchlo k lekárovi.",
+    "ko": "",
+    "highlight": "k lekárovi"
+   },
+   {
+    "en": "Táto masť pomáha proti bolesti hlavy.",
+    "ko": "",
+    "highlight": "proti bolesti"
+   },
+   {
+    "en": "Napíš svojej mame peknú správu.",
+    "ko": "",
+    "highlight": "svojej mame"
+   },
+   {
+    "en": "Učiteľ vysvetľuje študentom novú gramatiku.",
+    "ko": "",
+    "highlight": "študentom"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Idem k lekár na vyšetrenie.",
+    "right": "Idem k lekárovi na vyšetrenie.",
+    "note": "The preposition 'k' requires the dative case. Masculine animate singular takes '-ovi'."
+   },
+   {
+    "wrong": "Dal som to pre brata.",
+    "right": "Dal som to bratovi.",
+    "note": "In Slovak, direct giving or sending takes the dative alone ('bratovi'), without using 'pre' (for)."
+   },
+   {
+    "wrong": "Telefonujem moju mamu.",
+    "right": "Telefonujem mojej mame.",
+    "note": "The verb 'telefonovať' governs the dative case ('komu?'), not the accusative."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Peter podal ruku svojmu novému ___.",
+    "options": [
+     "susedovi",
+     "suseda",
+     "susedom",
+     "sused"
+    ],
+    "answer": 0,
+    "explanation": "The recipient of an action takes dative masculine animate singular ending '-ovi'."
+   },
+   {
+    "question": "Zajtra pôjdeme na víkend ku ___.",
+    "options": [
+     "starí rodičia",
+     "starým rodičom",
+     "starých rodičov",
+     "starými rodičmi"
+    ],
+    "answer": 1,
+    "explanation": "The preposition 'ku' requires the dative plural: 'starým rodičom'."
+   },
+   {
+    "question": "Všetci občania bojujú proti ___.",
+    "options": [
+     "nespravodlivosť",
+     "nespravodlivostiach",
+     "nespravodlivosti",
+     "nespravodlivosťou"
+    ],
+    "answer": 2,
+    "explanation": "The preposition 'proti' (against) takes dative singular ('nespravodlivosti')."
+   },
+   {
+    "question": "Čo povieš svojej ___ o našom pláne?",
+    "options": [
+     "kamarátku",
+     "kamarátka",
+     "kamarátkou",
+     "kamarátke"
+    ],
+    "answer": 3,
+    "explanation": "Feminine dative singular takes the '-e' ending ('kamarátke')."
+   }
+  ],
+  "tip": "The preposition 'k' vocalizes into 'ku' before words starting with velar sounds /k/ or /g/, or clusters containing them (e.g., 'ku kapele', 'ku mne')."
+ },
+ {
+  "id": "sk-a2-instrumental-case-means-and-accompaniment",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🚲",
+  "title": "Instrumental Case: Means, Transport, and 's/so'",
+  "subtitle": "Mastering instruments, transportation without prepositions, and accompaniment with 's/so'",
+  "color": "#1E40AF",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use the instrumental without a preposition for instruments and means of transport, but include the preposition 's/so' to express accompaniment ('with').",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Nominative Sg.",
+    "Instrumental Sg.",
+    "Instrumental Pl."
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine",
+      "autobus / kamarát",
+      "autobusom / kamarátom",
+      "autobusmi / kamarátmi"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine",
+      "ceruzka / káva",
+      "ceruzkou / kávou",
+      "ceruzkami / kávami"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter",
+      "pero / auto",
+      "perom / autom",
+      "perami / autami"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Personal Pronoun (ja)",
+      "ja",
+      "mnou (so mnou)",
+      "nami (s nami)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1E40AF",
+    "label": "Accompaniment ('with')",
+    "example": "Cestujem na dovolenku s mojou rodinou.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Means of Transport (no prep)",
+    "example": "Do práce chodím každé ráno vlakom.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Tool or Instrument (no prep)",
+    "example": "Píšem dôležitú zmluvu modrým perom.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Rád jem polievku veľkou lyžicou.",
+    "ko": "",
+    "highlight": "veľkou lyžicou"
+   },
+   {
+    "en": "Išiel do mesta autom, nie autobusom.",
+    "ko": "",
+    "highlight": "autom, nie autobusom"
+   },
+   {
+    "en": "Pôjdeš dnes večer do kina so mnou?",
+    "ko": "",
+    "highlight": "so mnou"
+   },
+   {
+    "en": "Krájal chlieb ostrým nožom.",
+    "ko": "",
+    "highlight": "ostrým nožom"
+   },
+   {
+    "en": "Učiteľka prišla na výlet so svojimi žiakmi.",
+    "ko": "",
+    "highlight": "so svojimi žiakmi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Cestujem s vlakom do Košíc.",
+    "right": "Cestujem vlakom do Košíc.",
+    "note": "Means of transport do not take the preposition 's'. Using 's vlakom' implies you are accompanying the train as a companion."
+   },
+   {
+    "wrong": "Píšem s ceruzkou.",
+    "right": "Píšem ceruzkou.",
+    "note": "Instruments used to perform an action take the bare instrumental without the preposition 's'."
+   },
+   {
+    "wrong": "Hovoril som s moju sestru.",
+    "right": "Hovoril som s mojou sestrou.",
+    "note": "The preposition 's' requires both adjective and noun in the instrumental case ('-ou' ending for feminine singular)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Do školy zvyčajne cestujeme mestským ___.",
+    "options": [
+     "autobus",
+     "autobusom",
+     "s autobusom",
+     "autobusu"
+    ],
+    "answer": 1,
+    "explanation": "Means of transport take the bare instrumental without prepositions ('autobusom')."
+   },
+   {
+    "question": "Bol si včera večer vonku so ___?",
+    "options": [
+     "svoja sestra",
+     "svoju sestru",
+     "svojou sestrou",
+     "svojej sestre"
+    ],
+    "answer": 2,
+    "explanation": "Accompaniment with 'so' requires the feminine instrumental ending '-ou': 'svojou sestrou'."
+   },
+   {
+    "question": "Tento list musíte podpísať čiernym ___.",
+    "options": [
+     "perom",
+     "pero",
+     "s perom",
+     "pera"
+    ],
+    "answer": 0,
+    "explanation": "Instruments or tools used to execute an action take the bare instrumental: 'čiernym perom'."
+   },
+   {
+    "question": "Chceš ísť dnes na obed so ___?",
+    "options": [
+     "ja",
+     "ma",
+     "mne",
+     "mnou"
+    ],
+    "answer": 3,
+    "explanation": "The 1st person singular pronoun after 'so' in the instrumental is 'mnou'."
+   }
+  ],
+  "tip": "The preposition 's' vocalizes to 'so' whenever the following word begins with s, š, z, or ž (e.g., 'so sestrou', 'so ženou', 'so psom' due to cluster voicing)."
+ },
+ {
+  "id": "sk-a2-clitic-ordering-second-position-rule",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🧩",
+  "title": "Wackernagel's Law and Clitic Pronoun Placement",
+  "subtitle": "Mastering the strict sequence of unstressed particles in the second position",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Clitics are unaccented words that cluster together strictly in the clause's second syntactic slot in a fixed relative hierarchy.",
+  "structure": {
+   "headers": [
+    "Order Slot",
+    "Elements",
+    "Example Cluster"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1. Auxiliaries",
+      "som, si, sme, ste / by",
+      "som"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2. Reflexive marker",
+      "sa, si",
+      "som sa"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3. Dative short pronoun",
+      "mi, ti, mu, jej, nám, vám, im",
+      "som sa mu"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "4. Accusative short pronoun",
+      "ma, ťa, ho, ju, nás, vás, ich, to",
+      "som sa mu ho"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Past Auxiliary with Reflexive",
+    "example": "Včera som sa vrátil neskoro domov.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Dative before Accusative",
+    "example": "Peter mi to včera vysvetlil.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Full Clitic Cluster",
+    "example": "Rodičia by nám ho určite kúpili.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Včera som sa stretol s Michalom.",
+    "ko": "",
+    "highlight": "som sa"
+   },
+   {
+    "en": "Prečo si mi to nepovedal skôr?",
+    "ko": "",
+    "highlight": "si mi to"
+   },
+   {
+    "en": "Oni by si ho radi pozreli.",
+    "ko": "",
+    "highlight": "by si ho"
+   },
+   {
+    "en": "Kedy ste sa im predstavili?",
+    "ko": "",
+    "highlight": "ste sa im"
+   },
+   {
+    "en": "Brat mi ju nechcel požičať.",
+    "ko": "",
+    "highlight": "mi ju"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Sa volám Martin.",
+    "right": "Volám sa Martin.",
+    "note": "A clitic can never stand at the absolute beginning of a sentence; it must adhere to the second position."
+   },
+   {
+    "wrong": "Včera som to mu dal.",
+    "right": "Včera som mu to dal.",
+    "note": "Within the clitic cluster, the dative pronoun (mu) must precede the accusative pronoun (to)."
+   },
+   {
+    "wrong": "Prečo si to sa opýtal?",
+    "right": "Prečo si sa to opýtal?",
+    "note": "The reflexive particle (sa/si) must directly follow the auxiliary verb (si) before any case pronouns."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday I bought it. -> Včera ___ kúpil.",
+    "options": [
+     "som to",
+     "to som",
+     "som ho to",
+     "to ho"
+    ],
+    "answer": 0,
+    "explanation": "The auxiliary 'som' occupies position 1 and the accusative clitic 'to' occupies position 4 in the cluster."
+   },
+   {
+    "question": "Why didn't you tell me? -> Prečo ___ nepovedal?",
+    "options": [
+     "mi to si",
+     "si to mi",
+     "si mi to",
+     "to si mi"
+    ],
+    "answer": 2,
+    "explanation": "The correct clitic sequence is auxiliary (si) + dative (mi) + accusative (to)."
+   },
+   {
+    "question": "Choose the correctly ordered sentence.",
+    "options": [
+     "Brat by si to nekúpil.",
+     "Brat si by to nekúpil.",
+     "Brat to by si nekúpil.",
+     "Brat by to si nekúpil."
+    ],
+    "answer": 0,
+    "explanation": "The conditional particle 'by' precedes the reflexive pronoun 'si', which precedes accusative 'to'."
+   },
+   {
+    "question": "We introduced ourselves to them. -> My ___ predstavili.",
+    "options": [
+     "im sme sa",
+     "sme im sa",
+     "sa sme im",
+     "sme sa im"
+    ],
+    "answer": 3,
+    "explanation": "The order is auxiliary (sme) + reflexive (sa) + dative pronoun (im)."
+   }
+  ],
+  "tip": "Remember the formula: Aux/By + Sa/Si + Dative + Accusative. Clitics never begin a sentence, so place a stressed word first."
+ },
+ {
+  "id": "sk-a2-reflexive-verbs-sa-vs-si",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🪞",
+  "title": "Reflexive Verbs and the Contrast Between 'sa' and 'si'",
+  "subtitle": "Distinguishing true reflexives, reciprocal actions, and self-benefactive dative actions",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use accusative 'sa' when the action directly targets the subject, and dative 'si' when the subject performs the action for or to their own benefit.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Particle",
+    "Pattern & Meaning",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Direct Reflexive",
+      "sa",
+      "Direct object is oneself (Accusative)",
+      "umývať sa (wash oneself)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Indirect Reflexive",
+      "si",
+      "Self-benefactive / own possession (Dative)",
+      "umývať si ruky (wash one's hands)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Reflexiva Tantum",
+      "sa / si",
+      "Inherently reflexive verbs",
+      "smiať sa, pamätať si"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reciprocal",
+      "sa / si",
+      "Mutually between multiple actors",
+      "stretnúť sa, pomáhať si"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Direct Reflexive Action",
+    "example": "Každé ráno sa sprchujem studenou vodou.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Possession or Benefit (Dative)",
+    "example": "Kúpil si nový kabát na zimu.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Reciprocal Mutual Action",
+    "example": "Priatelia si navzájom pomáhajú.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Chlapec sa češe pred zrkadlom.",
+    "ko": "",
+    "highlight": "sa češe"
+   },
+   {
+    "en": "Dievča si češe dlhé vlasy.",
+    "ko": "",
+    "highlight": "si češe"
+   },
+   {
+    "en": "Často sa smejeme na jeho vtipoch.",
+    "ko": "",
+    "highlight": "sa smejeme"
+   },
+   {
+    "en": "Musím si oddýchnuť po dlhej práci.",
+    "ko": "",
+    "highlight": "si oddýchnuť"
+   },
+   {
+    "en": "Peter a Lucia sa zobrali minulý rok.",
+    "ko": "",
+    "highlight": "sa zobrali"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Umývam sa ruky.",
+    "right": "Umývam si ruky.",
+    "note": "When a specific body part or external direct object is named, the reflexive pronoun must be dative 'si'."
+   },
+   {
+    "wrong": "Bojím si pavúkov.",
+    "right": "Bojím sa pavúkov.",
+    "note": "'Báť sa' (to be afraid) is an inherently reflexive verb that always requires 'sa'."
+   },
+   {
+    "wrong": "Kúpil sa novú knihu.",
+    "right": "Kúpil si novú knihu.",
+    "note": "Buying something for oneself is an indirect/benefactive action requiring 'si', not accusative 'sa'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I brush my teeth every evening. -> Každý večer ___ zuby.",
+    "options": [
+     "si umývam",
+     "sa umývam",
+     "ma umývam",
+     "mi umývam"
+    ],
+    "answer": 0,
+    "explanation": "Because 'zuby' (teeth) is the direct accusative object, the self-affecting action takes dative 'si'."
+   },
+   {
+    "question": "Children, why are you laughing? -> Deti, prečo ___?",
+    "options": [
+     "si smejete",
+     "sa smejete",
+     "ste sa smiali",
+     "vás smejete"
+    ],
+    "answer": 1,
+    "explanation": "'Smiať sa' is an inherently reflexive verb taking 'sa'."
+   },
+   {
+    "question": "He bought a new car for himself. -> Kúpil ___ nové auto.",
+    "options": [
+     "seba",
+     "sa",
+     "si",
+     "mu"
+    ],
+    "answer": 2,
+    "explanation": "Actions carried out for one's own advantage/ownership demand dative reflexive 'si'."
+   },
+   {
+    "question": "Tomáš and Marek help each other. -> Tomáš a Marek ___ pomáhajú.",
+    "options": [
+     "sa",
+     "ich",
+     "seba",
+     "si"
+    ],
+    "answer": 3,
+    "explanation": "Pomáhať takes a dative object, so the reciprocal 'each other' pronoun is dative 'si'."
+   }
+  ],
+  "tip": "Ask: Is there already another direct object (accusative noun) in the clause? If yes, use 'si' (e.g., umyť si tvár). If the subject alone is the object, use 'sa' (umyť sa)."
+ },
+ {
+  "id": "sk-b1-directional-motion-verbs-ist-vs-chodit",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🚶",
+  "title": "Verbs of Motion: Determinate vs. Indeterminate",
+  "subtitle": "Navigating unidirectional, multidirectional, and prefixed motion verbs",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "Determinate verbs denote unidirectional motion happening at one specific moment, while indeterminate verbs denote repeated, round-trip, or multidirectional motion.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Determinate (Unidirectional)",
+    "Indeterminate (Multidirectional/Habitual)",
+    "Prefixed Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Foot travel",
+      "ísť (idúc tam)",
+      "chodiť (pravidelne, sem a tam)",
+      "odísť / prísť"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Vehicle travel",
+      "ísť / viezť sa",
+      "jazdiť / voziť sa",
+      "odísť / pricestovať"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Flight",
+      "letieť (práve teraz)",
+      "lietať (pravidelne / vo vzduchu)",
+      "odletieť / priletieť"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Running",
+      "bežať (jedným smerom)",
+      "behať (opakom / po parku)",
+      "dobehnúť / pribehnúť"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Specific Progressive Motion",
+    "example": "Práve teraz idem pešo do obchodu.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Habitual or Round-Trip",
+    "example": "Každý deň chodím do práce električkou.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Prefixed Perfective Departure",
+    "example": "Vlak už odišiel zo stanice.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kam teraz ideš tak rýchlo?",
+    "ko": "",
+    "highlight": "ideš"
+   },
+   {
+    "en": "Môj otec chodí každé ráno behať.",
+    "ko": "",
+    "highlight": "chodí"
+   },
+   {
+    "en": "Lietadlo práve letí nad Bratislavou.",
+    "ko": "",
+    "highlight": "letí"
+   },
+   {
+    "en": "Vtáky na jeseň lietajú na juh.",
+    "ko": "",
+    "highlight": "lietajú"
+   },
+   {
+    "en": "Kedy konečne prídeš na návštevu?",
+    "ko": "",
+    "highlight": "prídeš"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Práve teraz chodím do školy.",
+    "right": "Práve teraz idem do školy.",
+    "note": "Use determinate 'ísť' for motion happening right now in one specific direction."
+   },
+   {
+    "wrong": "Každú nedeľu idem k starým rodičom.",
+    "right": "Každú nedeľu chodím k starým rodičom.",
+    "note": "Repeated, habitual journeys require indeterminate 'chodiť'."
+   },
+   {
+    "wrong": "Včera som išiel do kina a vrátil som sa.",
+    "right": "Včera som bol v kine. / Včera som išiel do kina...",
+    "note": "If a completed round trip is meant without emphasis on the outbound leg, Slovak prefers 'bol som' or 'chodil'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Where are you going right now? -> Kam práve teraz ___?",
+    "options": [
+     "chodíš",
+     "ideš",
+     "pôjdeš",
+     "pochádzaš"
+    ],
+    "answer": 1,
+    "explanation": "Determinate 'ideš' expresses unidirectional movement in progress right now."
+   },
+   {
+    "question": "My son attends elementary school. -> Môj syn ___ do základnej školy.",
+    "options": [
+     "ide",
+     "odíde",
+     "chodí",
+     "lieta"
+    ],
+    "answer": 2,
+    "explanation": "Habitual attendance over a prolonged period requires indeterminate 'chodiť'."
+   },
+   {
+    "question": "Look, that bird is flying very low! -> Pozri, ten vták ___ veľmi nízko!",
+    "options": [
+     "lieta",
+     "behá",
+     "preletí",
+     "letí"
+    ],
+    "answer": 3,
+    "explanation": "A single continuous flight observed right now calls for determinate 'letieť' (letí)."
+   },
+   {
+    "question": "He has already left home. -> Už ___ z domu preč.",
+    "options": [
+     "odišiel",
+     "prišiel",
+     "chodil",
+     "išiel"
+    ],
+    "answer": 0,
+    "explanation": "The prefix 'od-' marks departure/leaving, combined with ísť -> odísť (past: odišiel)."
+   }
+  ],
+  "tip": "Ask yourself: Is it happening right now in one line (ísť/letieť/bežať), or is it a repeat habit or wandering around (chodiť/lietať/behať)?"
+ },
+ {
+  "id": "sk-b1-rhythmic-law-and-vowel-shortening",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🎵",
+  "title": "The Rhythmic Law (Rytmický zákon) and Exceptions",
+  "subtitle": "Mastering Slovak vowel shortening and its systematic exceptions",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "In standard Slovak, two consecutive long syllables cannot follow each other within the same word; a following long vowel automatically shortens.",
+  "structure": {
+   "headers": [
+    "Root Syllable",
+    "Underlying Suffix",
+    "Realized Form",
+    "Reason"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "krás- (long)",
+      "-ný / -ná / -né",
+      "krásny, krásna, krásne",
+      "Shortened suffix due to long stem syllable"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "pekn- (short)",
+      "-ý / -á / -é",
+      "pekný, pekná, pekné",
+      "Suffix remains long after short stem"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "čít- (long)",
+      "-ám / -ajú",
+      "čítam, čítajú",
+      "-am shortens after long vowel / diphthong"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "biel- (diphthong = long)",
+      "-ieť",
+      "bieliť (vs. černieť)",
+      "Suffix shortens after diphthong 'ie'"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Adjective Inflexion",
+    "example": "Máme krásny a slnečný deň.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Verb Conjugation",
+    "example": "Každý večer píšem a čítam knihy.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Valid Exception (páví)",
+    "example": "Na lúke leží pávie pero.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "V záhrade kvitne biely kvet.",
+    "ko": "",
+    "highlight": "biely"
+   },
+   {
+    "en": "To je veľmi múdra odpoveď.",
+    "ko": "",
+    "highlight": "múdra"
+   },
+   {
+    "en": "Volám sa Juraj a bývam v Trnave.",
+    "ko": "",
+    "highlight": "bývam"
+   },
+   {
+    "en": "Videli sme nádherné pávie perie.",
+    "ko": "",
+    "highlight": "pávie"
+   },
+   {
+    "en": "Študenti píšu dôležitý test.",
+    "ko": "",
+    "highlight": "píšu"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "krásný dom",
+    "right": "krásny dom",
+    "note": "Because 'krás-' has a long vowel (á), the masculine ending '-ý' shortens to '-y'."
+   },
+   {
+    "wrong": "múdrá žena",
+    "right": "múdra žena",
+    "note": "The stem syllable 'múd-' is long (ú), forcing the feminine adjectival ending '-á' to shorten to '-a'."
+   },
+   {
+    "wrong": "bývať -> bývám",
+    "right": "bývať -> bývam",
+    "note": "The first-person singular suffix '-ám' shortens to '-am' because the stem 'býv-' has a long 'ý'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correctly shortened feminine form of 'krásny'.",
+    "options": [
+     "krásná",
+     "krasná",
+     "krásna",
+     "krasna"
+    ],
+    "answer": 2,
+    "explanation": "The long root 'krás-' forces the adjectival ending '-á' to shorten to '-a' -> 'krásna'."
+   },
+   {
+    "question": "Which word is a systematic EXCEPTION to the Rhythmic Law?",
+    "options": [
+     "krásny",
+     "múdri",
+     "čítam",
+     "páví"
+    ],
+    "answer": 3,
+    "explanation": "Animal possessive adjectives ending in '-í' (like páví, líščí, kohútí) do not shorten their endings."
+   },
+   {
+    "question": "I write letters. -> Ja ___ listy.",
+    "options": [
+     "píšem",
+     "píšemé",
+     "pišem",
+     "píšiem"
+    ],
+    "answer": 0,
+    "explanation": "In 'písať', the stem vowel 'í' is long; the present ending is short '-em' (píšem)."
+   },
+   {
+    "question": "White shirt -> ___ košeľa.",
+    "options": [
+     "biela",
+     "bielá",
+     "bielia",
+     "bieľá"
+    ],
+    "answer": 0,
+    "explanation": "The diphthong 'ie' counts phonologically as a long syllable, so the ending '-á' shortens to '-a' (biela)."
+   }
+  ],
+  "tip": "Diphthongs (ia, ie, iu, ô) count as long syllables! Whenever a stem has á, é, í, ó, ú, ý or a diphthong, shorten the following suffix vowel."
+ },
+ {
+  "id": "sk-b1-conditional-moods-present-and-past",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#F59E0B",
+  "emoji": "💭",
+  "title": "Present and Past Conditional Moods",
+  "subtitle": "Hypothetical scenarios and counterfactual past reflections using 'by'",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Form the present conditional with the past -l verb plus particle 'by' and personal auxiliary clitics, and the past conditional by inserting 'bol/bola/boli'.",
+  "structure": {
+   "headers": [
+    "Mood",
+    "Formula",
+    "Example (1st Sing.)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present Conditional",
+      "Past tense (-l) + by + auxiliary",
+      "povedal by som",
+      "I would say (now / in future)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past Conditional",
+      "Past tense + bol + by + auxiliary",
+      "bol by som povedal",
+      "I would have said (unreal past)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Conditional Conjunction",
+      "keby + auxiliary + past -l form",
+      "keby som vedel",
+      "if I knew / had known"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person (No aux)",
+      "Verb (-l) + by / bol by + verb (-l)",
+      "prišiel by / bol by prišiel",
+      "he would come / would have come"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Polite Request / Present Desire",
+    "example": "Radi by sme si objednali obed.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Hypothetical Condition",
+    "example": "Keby som mal viac času, cestoval by som.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Unreal Past Counterfactual",
+    "example": "Keby si mi zavolal, bol by som ti pomohol.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Čo by si urobil na mojom mieste?",
+    "ko": "",
+    "highlight": "by si urobil"
+   },
+   {
+    "en": "Veľmi rád by som navštívil Vysoké Tatry.",
+    "ko": "",
+    "highlight": "by som navštívil"
+   },
+   {
+    "en": "Keby sme mali peniaze, kúpili by sme si dom.",
+    "ko": "",
+    "highlight": "kúpili by sme"
+   },
+   {
+    "en": "Včera by bol prišiel, ale ochorel.",
+    "ko": "",
+    "highlight": "by bol prišiel"
+   },
+   {
+    "en": "Bez teba by sme to nikdy neboli dokázali.",
+    "ko": "",
+    "highlight": "neboli dokázali"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Keby som by vedel...",
+    "right": "Keby som vedel...",
+    "note": "'Keby' already embeds the conditional marker 'by'; never add another 'by' after 'keby'."
+   },
+   {
+    "wrong": "Ja by chcel kávu.",
+    "right": "Ja by som chcel kávu.",
+    "note": "In the 1st and 2nd persons, the auxiliary clitic ('som/si/sme/ste') is obligatory with 'by'."
+   },
+   {
+    "wrong": "On by bol prišiel včera, keby vedel by.",
+    "right": "On by bol prišiel včera, keby bol vedel.",
+    "note": "In the 'keby' clause, use the past conditional (keby bol vedel) without adding a redundant 'by'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I would like to help you. -> Rád ___ pomohol.",
+    "options": [
+     "by som ti",
+     "by ti",
+     "som by ti",
+     "by si mi"
+    ],
+    "answer": 0,
+    "explanation": "1st person singular present conditional requires 'by' + 'som' along with the dative pronoun 'ti'."
+   },
+   {
+    "question": "If we had time, we would go. -> ___ čas, išli by sme.",
+    "options": [
+     "Keby by sme mali",
+     "Keby sme mali",
+     "Keby mali by sme",
+     "Keby sme by mali"
+    ],
+    "answer": 1,
+    "explanation": "'Keby' already contains 'by', so you only attach the auxiliary 'sme' without duplicating 'by'."
+   },
+   {
+    "question": "She would have bought that book yesterday. -> Ona ___ tú knihu kúpila.",
+    "options": [
+     "by",
+     "kúpila by",
+     "by bola",
+     "bola by sme"
+    ],
+    "answer": 2,
+    "explanation": "3rd person feminine past conditional requires 'by bola' + past tense verb ('kúpila')."
+   },
+   {
+    "question": "What would you (singular informal) say? -> Čo ___?",
+    "options": [
+     "by si povedal",
+     "by povedal",
+     "by si bol hovoril",
+     "povedal by ste"
+    ],
+    "answer": 0,
+    "explanation": "2nd person singular conditional requires 'by si' followed by the masculine -l participle 'povedal'."
+   }
+  ],
+  "tip": "Remember: 'Keby' already has 'by' built into it! Never say 'keby by som'; say 'keby som'."
+ },
+ {
+  "id": "sk-b1-impersonal-and-passive-reflexive-structures",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#8b5cf6",
+  "emoji": "🔄",
+  "title": "Impersonal and Reflexive Passive Constructions",
+  "subtitle": "Use 3rd person verbs with 'sa' to express general truths, states, and agentless actions",
+  "color": "#7c3aed",
+  "bg": "#f5f3ff",
+  "keyPoint": "Combine the reflexive particle 'sa' with a 3rd person singular verb to describe general statements or actions where the agent is omitted.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Grammar Formula",
+    "Slovak Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "General Truth",
+      "3rd person sg. + sa",
+      "Tu sa nefajčí.",
+      "Smoking is not allowed here."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Reflexive Passive",
+      "Nominative object + 3rd person + sa",
+      "Kniha sa dobre predáva.",
+      "The book sells well."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Bodily / Mental State",
+      "Dative experiencer + 3rd person sg. + sa",
+      "Dobre sa mi spalo.",
+      "I slept well."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural Reflexive Passive",
+      "Nominative plural object + 3rd person pl. + sa",
+      "Jablká sa zbierajú na jeseň.",
+      "Apples are harvested in autumn."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7c3aed",
+    "label": "Rules and Prohibitions",
+    "example": "V knižnici sa nehovorí nahlas.",
+    "translation": ""
+   },
+   {
+    "color": "#6366f1",
+    "label": "Subjective Well-being / States",
+    "example": "V novom byte sa nám býva príjemne.",
+    "translation": ""
+   },
+   {
+    "color": "#ec4899",
+    "label": "Product or Process Descriptions",
+    "example": "Tento liek sa užíva ráno.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "V našej obci sa stavia nová škola.",
+    "ko": "",
+    "highlight": "sa stavia"
+   },
+   {
+    "en": "Ako sa píše toto slovo?",
+    "ko": "",
+    "highlight": "sa píše"
+   },
+   {
+    "en": "V nedeľu sa tu nepracuje.",
+    "ko": "",
+    "highlight": "sa tu nepracuje"
+   },
+   {
+    "en": "Na Slovensku sa pije veľa minerálnej vody.",
+    "ko": "",
+    "highlight": "sa pije"
+   },
+   {
+    "en": "Pri mori sa mi dýchalo veľmi ľahko.",
+    "ko": "",
+    "highlight": "sa mi dýchalo"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ľudia hovoria sa, že bude zima.",
+    "right": "Hovorí sa, že bude zima.",
+    "note": "Do not include an explicit agent like 'ľudia' when using the impersonal reflexive 'hovorí sa'."
+   },
+   {
+    "wrong": "Tu nie je dovolené fajčiť sa.",
+    "right": "Tu sa nefajčí.",
+    "note": "To state a general ban concisely, attach 'sa' directly to the verb 'fajčiť' instead of calquing from English."
+   },
+   {
+    "wrong": "Ja sa dobre spalo.",
+    "right": "Dobre sa mi spalo.",
+    "note": "Impersonal state expressions take the experiencer in the dative case (mi), never the nominative (ja)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'How is this dish prepared?'",
+    "options": [
+     "Ako pripravuje toto jedlo?",
+     "Ako sa pripravuje toto jedlo?",
+     "Ako je toto jedlo pripraviť?",
+     "Ako pripravovať sa toto jedlo?"
+    ],
+    "answer": 1,
+    "explanation": "The 3rd person singular with reflexive 'sa' forms the passive: 'Ako sa pripravuje...'"
+   },
+   {
+    "question": "Complete the prohibition: 'V múzeu ___ (no taking photos).'",
+    "options": [
+     "sa nefotografuje",
+     "nefotografujú",
+     "nefotografuje",
+     "sa nefotografovať"
+    ],
+    "answer": 0,
+    "explanation": "General bans use the impersonal 3rd person singular form with 'sa': 'sa nefotografuje'."
+   },
+   {
+    "question": "Which sentence correctly expresses 'I study well here'?",
+    "options": [
+     "Dobre sa ja učím tu.",
+     "Dobre sa mi tu učí.",
+     "Dobre sa mňa učí tu.",
+     "Dobre sa ma tu učí."
+    ],
+    "answer": 1,
+    "explanation": "Experiencer states require the dative pronoun 'mi' alongside the impersonal reflexive verb."
+   },
+   {
+    "question": "Choose the correct reflexive passive: 'New cars are sold here.'",
+    "options": [
+     "Tu predávajú nové autá.",
+     "Tu sa predáva nové autá.",
+     "Tu sa nové autá predáva.",
+     "Tu sa predávajú nové autá."
+    ],
+    "answer": 3,
+    "explanation": "Because 'nové autá' is plural nominative, the verb agrees in the plural: 'sa predávajú'."
+   }
+  ],
+  "tip": "Think of 3rd person + 'sa' as the Slovak equivalent of English 'one does' or 'people do'; it avoids passive participles in everyday speech."
+ },
+ {
+  "id": "sk-b1-relative-clauses-and-pronoun-ktory",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#0ea5e9",
+  "emoji": "🔗",
+  "title": "Relative Clauses and Declension of 'ktorý'",
+  "subtitle": "Connect ideas by choosing the proper gender, number, and case for 'which' and 'who'",
+  "color": "#0284c7",
+  "bg": "#f0f9ff",
+  "keyPoint": "The pronoun 'ktorý' takes its gender and number from the noun it modifies, but its grammatical case depends entirely on its role inside the relative clause.",
+  "structure": {
+   "headers": [
+    "Case",
+    "Masculine Animate",
+    "Feminine",
+    "Neuter"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Nominative (Sg.)",
+      "ktorý",
+      "ktorá",
+      "ktoré"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Accusative (Sg.)",
+      "ktorého",
+      "ktorú",
+      "ktoré"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Genitive (Sg.)",
+      "ktorého",
+      "ktorej",
+      "ktorého"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Locative (Sg.)",
+      "o ktorom",
+      "o ktorej",
+      "o ktorom"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Nominative (Pl.)",
+      "ktorí (anim.) / ktoré (inanim.)",
+      "ktoré",
+      "ktoré"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284c7",
+    "label": "Subject of Relative Clause",
+    "example": "Poznám muža, ktorý hovorí piatimi jazykmi.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Direct Object of Relative Clause",
+    "example": "To je tá kniha, ktorú som hľadal.",
+    "translation": ""
+   },
+   {
+    "color": "#d97706",
+    "label": "Prepositional Complement",
+    "example": "Mesto, v ktorom žijem, je veľmi tiché.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Hľadám dievča, ktoré stratilo tento batoh.",
+    "ko": "",
+    "highlight": "ktoré"
+   },
+   {
+    "en": "Auto, ktoré sme kúpili minulý týždeň, je úsporné.",
+    "ko": "",
+    "highlight": "ktoré"
+   },
+   {
+    "en": "Študenti, ktorým profesor pomohol, zložili skúšku.",
+    "ko": "",
+    "highlight": "ktorým"
+   },
+   {
+    "en": "Vidíš ten dom, pred ktorým stojí policajné auto?",
+    "ko": "",
+    "highlight": "pred ktorým"
+   },
+   {
+    "en": "Lekárka, o ktorej sme sa rozprávali, pracuje v nemocnici.",
+    "ko": "",
+    "highlight": "o ktorej"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Žena, čo vidím, je moja teta.",
+    "right": "Žena, ktorú vidím, je moja teta.",
+    "note": "While 'čo' is common in casual spoken Slovak, standard grammar requires 'ktorú' (feminine accusative)."
+   },
+   {
+    "wrong": "To sú muži, ktoré nám pomohli.",
+    "right": "To sú muži, ktorí nám pomohli.",
+    "note": "Masculine animate nominative plural requires 'ktorí' with a soft 'í', not 'ktoré'."
+   },
+   {
+    "wrong": "Kniha som kúpil včera je dobrá.",
+    "right": "Kniha, ktorú som kúpil včera, je dobrá.",
+    "note": "Unlike English, Slovak never omits the relative pronoun and always requires a separating comma."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the right form: 'Kaviareň, do ___ často chodíme, je dnes zatvorená.'",
+    "options": [
+     "ktorej",
+     "ktorú",
+     "ktorá",
+     "ktorom"
+    ],
+    "answer": 0,
+    "explanation": "The preposition 'do' requires the genitive case. 'Kaviareň' is feminine, so 'do ktorej' is correct."
+   },
+   {
+    "question": "Fill the blank: 'To sú priatelia, ___ som pozval na večeru.'",
+    "options": [
+     "ktorí",
+     "ktorých",
+     "ktorým",
+     "ktoré"
+    ],
+    "answer": 1,
+    "explanation": "The relative pronoun is the direct object (accusative plural animate) of 'pozval', so 'ktorých' is required."
+   },
+   {
+    "question": "Choose the right relative pronoun: 'Mám nové auto, ___ má výborný motor.'",
+    "options": [
+     "ktorého",
+     "ktorý",
+     "ktoré",
+     "ktorom"
+    ],
+    "answer": 2,
+    "explanation": "'Auto' is neuter singular and serves as the subject (nominative) in the subclause, yielding 'ktoré'."
+   },
+   {
+    "question": "Pick the correct form: 'Učiteľ, s ___ sme hovorili, bol milý.'",
+    "options": [
+     "ktorým",
+     "ktorom",
+     "ktorého",
+     "ktorí"
+    ],
+    "answer": 0,
+    "explanation": "The preposition 's' (with) governs the instrumental case: masculine singular instrumental is 's ktorým'."
+   }
+  ],
+  "tip": "Always write a comma before 'ktorý', and remember that English allows omitting 'which' or 'that', but Slovak never drops the relative pronoun."
+ },
+ {
+  "id": "sk-b2-active-and-passive-verbal-participles",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#10b981",
+  "emoji": "📜",
+  "title": "Active and Passive Adjectival Participles",
+  "subtitle": "Form and decline '-úci/-iaci' and '-ný/-tý' verbal adjectives for formal writing",
+  "color": "#059669",
+  "bg": "#ecfdf5",
+  "keyPoint": "Present active participles end in '-úci/-iaci' and express ongoing action by an agent, while passive participles end in '-ný/-tý' and describe the recipient of a completed or ongoing action.",
+  "structure": {
+   "headers": [
+    "Participle Type",
+    "Formation Base",
+    "Suffixes",
+    "Slovak Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present Active",
+      "3rd pl. imperfective present",
+      "-úci, -iaci, -aci",
+      "písať → píšuci študent"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Passive (-ný)",
+      "Past stem (inf. minus -ť)",
+      "-ný, -ná, -né",
+      "napísať → napísaný list"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passive (-tý)",
+      "Stems ending in -kryť, -biť, -núť",
+      "-tý, -tá, -té",
+      "otvoriť → otvorený / umyť → umytý riad"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Agreement Rule",
+      "Declines like standard adjectives",
+      "pekný pattern",
+      "o pracujúcich ženách"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Active Ongoing Modifier",
+    "example": "Vlak vezúci stovky cestujúcich meškal.",
+    "translation": ""
+   },
+   {
+    "color": "#2563eb",
+    "label": "Passive State Modifier",
+    "example": "Všetky predložené dokumenty boli schválené.",
+    "translation": ""
+   },
+   {
+    "color": "#7c3aed",
+    "label": "Compound Analytical Passive",
+    "example": "Tento most bol postavený v minulom storočí.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Na ulici sme videli spievajúce deti.",
+    "ko": "",
+    "highlight": "spievajúce"
+   },
+   {
+    "en": "Dvere na kancelárii zostali zatvorené celý deň.",
+    "ko": "",
+    "highlight": "zatvorené"
+   },
+   {
+    "en": "Zákazníci čakajúci v rade boli netrpezliví.",
+    "ko": "",
+    "highlight": "čakajúci"
+   },
+   {
+    "en": "Balík odoslaný včera dorazí až v pondelok.",
+    "ko": "",
+    "highlight": "odoslaný"
+   },
+   {
+    "en": "Tento článok bol napísaný skúseným novinárom.",
+    "ko": "",
+    "highlight": "bol napísaný"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Videl som človeka píšuc list.",
+    "right": "Videl som človeka píšuceho list.",
+    "note": "When modifying a noun ('človeka' in acc. sg.), the active participle must decline like an adjective ('píšuceho'), not stay uninflected."
+   },
+   {
+    "wrong": "Kniha bola čítala mnohými deťmi.",
+    "right": "Kniha bola čítaná mnohými deťmi.",
+    "note": "Use the passive participle ending '-ná' with 'byť' for passive constructions, never the past tense '-la'."
+   },
+   {
+    "wrong": "Okno je umytené.",
+    "right": "Okno je umyté.",
+    "note": "Verbs like 'umyť' take the suffix '-tý' (yielding 'umytý/umytá/umyté'), not '-ený'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct present active participle: 'Muž ___ kávu číta noviny.'",
+    "options": [
+     "pijúc",
+     "pijúci",
+     "pijúceho",
+     "pitý"
+    ],
+    "answer": 1,
+    "explanation": "'Muž' is masculine nominative singular, requiring the nominative adjective form 'pijúci'."
+   },
+   {
+    "question": "Select the correct passive form: 'Všetky úlohy boli úspešne ___.'",
+    "options": [
+     "dokončené",
+     "dokončiace",
+     "dokončiac",
+     "dokončený"
+    ],
+    "answer": 0,
+    "explanation": "'Úlohy' is feminine plural nominative, so the passive participle must match in feminine/inanimate plural: 'dokončené'."
+   },
+   {
+    "question": "Which verb forms its passive participle with the suffix '-tý'?",
+    "options": [
+     "urobiť",
+     "napísať",
+     "otvoriť",
+     "zavrieť"
+    ],
+    "answer": 3,
+    "explanation": "'Zavrieť' forms 'zavretý' (also 'zatvorený' exists from 'zatvoriť', but 'zavrieť' strictly takes '-tý')."
+   },
+   {
+    "question": "Choose the right participle: 'Hovoril o študentoch ___ na univerzite.'",
+    "options": [
+     "študujúci",
+     "študujúcich",
+     "študovaným",
+     "študujúcimi"
+    ],
+    "answer": 1,
+    "explanation": "The preposition 'o' with 'študentoch' triggers locative plural: 'o študujúcich'."
+   }
+  ],
+  "tip": "Active participles decline like 'cudzí' (soft paradigm), whereas passive participles decline like 'pekný' (hard paradigm)."
+ },
+ {
+  "id": "sk-b2-transgressives-prechodnik",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#f59e0b",
+  "emoji": "⏳",
+  "title": "The Transgressive (Prechodník) for Concurrent Actions",
+  "subtitle": "Condense subordinate clauses using verbal adverbs ending in '-úc' or '-iac'",
+  "color": "#d97706",
+  "bg": "#fffbeb",
+  "keyPoint": "The transgressive expresses a secondary action performed simultaneously by the same subject as the main verb and never changes for gender, number, or case.",
+  "structure": {
+   "headers": [
+    "Infinitive",
+    "3rd Person Plural",
+    "Transgressive Suffix",
+    "Prechodník Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "niesť (to carry)",
+      "nesú",
+      "-úc",
+      "nesúc"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "robiť (to do)",
+      "robia",
+      "-iac",
+      "robiac"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "stáť (to stand)",
+      "stoja",
+      "-ac (after long vowel)",
+      "stojac"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "vedieť (to know)",
+      "vedia",
+      "-iac",
+      "vediac"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#d97706",
+    "label": "Simultaneous Background Action",
+    "example": "Počúval hudbu, kráčajúc po tichej ulici.",
+    "translation": ""
+   },
+   {
+    "color": "#b45309",
+    "label": "Cause or Manner",
+    "example": "Nemajúc dostatok peňazí, rozhodol sa ostať doma.",
+    "translation": ""
+   },
+   {
+    "color": "#475569",
+    "label": "Literary and Formal Narration",
+    "example": "Odišiel z miestnosti, nehovoriac ani slovo.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Sedela pri okne, premýšľajúc o svojej budúcnosti.",
+    "ko": "",
+    "highlight": "premýšľajúc"
+   },
+   {
+    "en": "Pozdravil nás, usmievajúc sa od ucha k uchu.",
+    "ko": "",
+    "highlight": "usmievajúc sa"
+   },
+   {
+    "en": "Vstúpil do izby, držiac v rukách horúci čaj.",
+    "ko": "",
+    "highlight": "držiac"
+   },
+   {
+    "en": "Nevediac kam ísť, spýtal sa okoloidúceho na cestu.",
+    "ko": "",
+    "highlight": "Nevediac"
+   },
+   {
+    "en": "Chlapci utekali domov, smejúc sa celou cestou.",
+    "ko": "",
+    "highlight": "smejúc sa"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Kráčajúc po ulici, zrazu spadol dážď.",
+    "right": "Keď kráčal po ulici, zrazu začalo pršať.",
+    "note": "Dangling participle: the subject of the transgressive ('kráčajúc') must be identical to the subject of the main clause."
+   },
+   {
+    "wrong": "Ona pracujúc píše správy.",
+    "right": "Ona pracujúc píše správy. (Better: Pracujúc píše správy or Pri práci píše správy.)",
+    "note": "Prechodník is indeclinable: never add adjectival endings like '-úca' or '-iaca' to form an adverbial participle."
+   },
+   {
+    "wrong": "Urobac úlohu, šiel spať.",
+    "right": "Urobiac úlohu, šiel spať.",
+    "note": "Check the 3rd person plural stem ('robia' → stem 'rob-' + '-iac' = 'robiac')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Form the transgressive of 'čítať' (3rd pl. 'čítajú'):",
+    "options": [
+     "čítajúc",
+     "čítajiac",
+     "čítajúci",
+     "čítajuc"
+    ],
+    "answer": 0,
+    "explanation": "Remove '-ú' from the 3rd person plural 'čítajú' and append '-úc': 'čítajúc'."
+   },
+   {
+    "question": "Identify the sentence that correctly employs a transgressive:",
+    "options": [
+     "Pozerajúc film, pukance boli zjedené.",
+     "Pozerajúc film, zjedol celú misku pukancov.",
+     "Pozerajúc film, zaspalo sa mi.",
+     "Pozerajúc film, telefón zazvonil."
+    ],
+    "answer": 1,
+    "explanation": "The subject doing the watching must be the one performing the main action ('on zjedol'). The others are dangling participles."
+   },
+   {
+    "question": "What is the transgressive of 'sedieť' (3rd pl. 'sedia')?",
+    "options": [
+     "sedejúc",
+     "sedúc",
+     "sediac",
+     "sediaci"
+    ],
+    "answer": 2,
+    "explanation": "From the 3rd person plural 'sedia', add '-c' to form the verbal adverb 'sediac'."
+   },
+   {
+    "question": "Which English structure best matches the Slovak prechodník?",
+    "options": [
+     "'Having done something' (exclusively)",
+     "'By means of' with a noun",
+     "The present participle '-ing' indicating simultaneous action",
+     "The infinitive of purpose 'in order to'"
+    ],
+    "answer": 2,
+    "explanation": "Prechodník represents an action happening at the same time as the main verb, mirroring English '-ing' clauses (e.g., 'Smiling, he entered')."
+   }
+  ],
+  "tip": "Never decline a transgressive for gender or number: whether 'he', 'she', or 'they' is doing the action, 'krFieldáčajúc' remains unchanged."
+ },
+ {
+  "id": "sk-b2-verbal-prefixation-and-semantic-shifts",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#10b981",
+  "emoji": "🧭",
+  "title": "Advanced Verbal Prefixation and Semantic Shifts",
+  "subtitle": "Transform verb meanings and aspect using prefixes like pre-, vy-, za-, od-, and pri-",
+  "color": "#059669",
+  "bg": "#ecfdf5",
+  "keyPoint": "Prefixes in Slovak not only turn imperfective verbs into perfective ones, but they also systematically alter spatial trajectory, intensity, and lexical meaning.",
+  "structure": {
+   "headers": [
+    "Prefix",
+    "Primary Meaning",
+    "Base Verb",
+    "Prefixed Verb & Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "pre-",
+      "through, across, re- / over",
+      "písať (to write)",
+      "prepísať (to rewrite / overwrite)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "vy-",
+      "outward, completion, upward",
+      "robiť (to do)",
+      "vyrobiť (to produce / manufacture)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "od-",
+      "away, detachment, response",
+      "cestovať (to travel)",
+      "odcestovať (to depart / leave)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "pri-",
+      "arrival, approach, addition",
+      "niesť (to carry)",
+      "priniesť (to bring to)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "za-",
+      "behind, start of action, covering",
+      "volať (to call)",
+      "zavolať (to place a phone call)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Spatial Movement",
+    "example": "Vták preletel cez záhradu a vyletel z klietky.",
+    "translation": ""
+   },
+   {
+    "color": "#2563eb",
+    "label": "Change of State or Thoroughness",
+    "example": "Študent si dôkladne prečítal celú knihu.",
+    "translation": ""
+   },
+   {
+    "color": "#d97706",
+    "label": "Starting an Action (Ingressive)",
+    "example": "Keď zbadala psa, zrazu sa rozplakala.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Musíš ten text prepísať, lebo je v ňom veľa chýb.",
+    "ko": "",
+    "highlight": "prepísať"
+   },
+   {
+    "en": "Vlak do Košíc práve odišiel zo stanice.",
+    "ko": "",
+    "highlight": "odišiel"
+   },
+   {
+    "en": "Kedy k nám zajtra prídete na návštevu?",
+    "ko": "",
+    "highlight": "prídete"
+   },
+   {
+    "en": "Firma vyvinula úplne novú aplikáciu.",
+    "ko": "",
+    "highlight": "vyvinula"
+   },
+   {
+    "en": "Vodič zaparkoval auto pred naším domom.",
+    "ko": "",
+    "highlight": "zaparkoval"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Idem odcestovať na letisko teraz.",
+    "right": "Práve odchádzam na letisko.",
+    "note": "'Odcestovať' is perfective (completed action). For an ongoing action happening right now, use imperfective 'odchádzať'."
+   },
+   {
+    "wrong": "Prišiel som von z budovy.",
+    "right": "Vyšiel som z budovy.",
+    "note": "'Pri-' indicates arrival or approach toward the speaker. To move out from inside, use 'vy-' ('vyšiel som')."
+   },
+   {
+    "wrong": "Zabil som dve hodiny čítaním.",
+    "right": "Zabil som čas čítaním. / Prečítal som to za dve hodiny.",
+    "note": "Be careful with figurative vs. literal prefixes; 'prečítať' expresses reading completely from start to finish."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which prefixed verb means 'to cross the street on foot'?",
+    "options": [
+     "odísť ulicu",
+     "prejsť cez ulicu",
+     "vyjsť cez ulicu",
+     "zísť na ulicu"
+    ],
+    "answer": 1,
+    "explanation": "The prefix 'pre-' denotes movement across or through a barrier or space: 'prejsť cez ulicu'."
+   },
+   {
+    "question": "Choose the verb that means 'to earn money by working':",
+    "options": [
+     "prirobiť",
+     "zarobiť",
+     "odrobiť",
+     "prerobiť"
+    ],
+    "answer": 1,
+    "explanation": "'Zarobiť' specifically means to earn money through labor."
+   },
+   {
+    "question": "What is the meaning of 'odniesť' compared to 'priniesť'?",
+    "options": [
+     "To carry inside vs. to carry outside",
+     "To carry away vs. to bring toward",
+     "To finish carrying vs. to start carrying",
+     "To carry poorly vs. to carry well"
+    ],
+    "answer": 1,
+    "explanation": "'Od-' conveys motion away from a point, while 'pri-' indicates motion toward or bringing to a destination."
+   },
+   {
+    "question": "Which verb means 'to thoroughly examine / look through'?",
+    "options": [
+     "pozrieť",
+     "prehliadnuť",
+     "odrieť",
+     "zazrieť"
+    ],
+    "answer": 1,
+    "explanation": "'Prehliadnuť' (si) means to inspect or look thoroughly through something (e.g., medical exam or sights)."
+   }
+  ],
+  "tip": "Prefixes almost always turn an imperfective verb perfective. If you need an ongoing imperfective with the new prefix meaning, look for the suffixed secondary imperfective (e.g., prečítať → prečítavať)."
+ }
+]

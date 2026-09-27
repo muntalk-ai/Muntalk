@@ -1,0 +1,3368 @@
+[
+ {
+  "id": "sv-a1-en-vs-ett-genders",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📦",
+  "title": "En vs. Ett Noun Genders",
+  "subtitle": "Mastering Sweden's two grammatical genders",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Every Swedish noun belongs to either the common gender (en-words, roughly 75%) or the neuter gender (ett-words, roughly 25%).",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Indefinite Article",
+    "Swedish Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Common (Utrum)",
+      "en",
+      "en hund",
+      "a dog"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter (Neutrum)",
+      "ett",
+      "ett hus",
+      "a house"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Common (Utrum)",
+      "en",
+      "en kopp",
+      "a cup"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter (Neutrum)",
+      "ett",
+      "ett äpple",
+      "an apple"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Common Gender (En-words)",
+    "example": "Jag köper en bil idag.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Neuter Gender (Ett-words)",
+    "example": "Vi bor i ett stort hus.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Indefinite Quantification",
+    "example": "Hon har ett barn och en katt.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Han dricker en kopp kaffe.",
+    "ko": "",
+    "highlight": "en kopp"
+   },
+   {
+    "en": "Det ligger ett brev på bordet.",
+    "ko": "",
+    "highlight": "ett brev"
+   },
+   {
+    "en": "Jag vill ha en smörgås, tack.",
+    "ko": "",
+    "highlight": "en smörgås"
+   },
+   {
+    "en": "Vi hyr ett rum i Stockholm.",
+    "ko": "",
+    "highlight": "ett rum"
+   },
+   {
+    "en": "Hon läser en spännande bok.",
+    "ko": "",
+    "highlight": "en spännande bok"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jag har ett katt.",
+    "right": "Jag har en katt.",
+    "note": "Most living things are common gender (en), so 'katt' takes the article 'en'."
+   },
+   {
+    "wrong": "Hon köper en äpple.",
+    "right": "Hon köper ett äpple.",
+    "note": "'Äpple' is an inherent neuter noun, so it requires 'ett'."
+   },
+   {
+    "wrong": "Vi ser en bord.",
+    "right": "Vi ser ett bord.",
+    "note": "'Bord' is a neuter noun and must be paired with 'ett'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I see ___ car on the street.",
+    "options": [
+     "ett",
+     "en",
+     "det",
+     "den"
+    ],
+    "answer": 1,
+    "explanation": "'Bil' is an en-word (common gender), so it takes the indefinite article 'en'."
+   },
+   {
+    "question": "Do you live in ___ house?",
+    "options": [
+     "ett",
+     "en",
+     "den",
+     "det"
+    ],
+    "answer": 0,
+    "explanation": "'Hus' is an ett-word (neuter gender), requiring 'ett'."
+   },
+   {
+    "question": "Lisa reads ___ interesting book.",
+    "options": [
+     "ett",
+     "det",
+     "en",
+     "den"
+    ],
+    "answer": 2,
+    "explanation": "'Bok' is an en-word, so we use 'en'."
+   },
+   {
+    "question": "He eats ___ red apple.",
+    "options": [
+     "en",
+     "den",
+     "de",
+     "ett"
+    ],
+    "answer": 3,
+    "explanation": "'Äpple' is neuter, so the indefinite article is 'ett'."
+   }
+  ],
+  "tip": "When learning new Swedish vocabulary, always memorize the noun together with its article ('en bil', 'ett hus') as one indivisible unit."
+ },
+ {
+  "id": "sv-a1-definite-noun-suffixes",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🏷️",
+  "title": "Suffix Definiteness",
+  "subtitle": "How Swedish attaches 'the' directly to the noun",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Swedish forms the definite form ('the') by attaching an ending (-en, -n, -et, -t) directly to the end of the noun.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Indefinite",
+    "Definite Suffix",
+    "Definite Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "en-word (ends in consonant)",
+      "en stol",
+      "-en",
+      "stolen"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "en-word (ends in vowel)",
+      "en flicka",
+      "-n",
+      "flickan"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ett-word (ends in consonant)",
+      "ett barn",
+      "-et",
+      "barnet"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ett-word (ends in vowel)",
+      "ett äpple",
+      "-t",
+      "äpplet"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Specific En-word",
+    "example": "Katten sover på soffan.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Specific Ett-word",
+    "example": "Barnet leker i trädgården.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Vowel-Ending Nouns",
+    "example": "Flickan dricker vattnet.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Bilen står parkerad utanför.",
+    "ko": "",
+    "highlight": "Bilen"
+   },
+   {
+    "en": "Huset är mycket gammalt.",
+    "ko": "",
+    "highlight": "Huset"
+   },
+   {
+    "en": "Solen skiner idag.",
+    "ko": "",
+    "highlight": "Solen"
+   },
+   {
+    "en": "Jag stänger fönstret nu.",
+    "ko": "",
+    "highlight": "fönstret"
+   },
+   {
+    "en": "Kaffet smakar fantastiskt.",
+    "ko": "",
+    "highlight": "Kaffet"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Den stol är röd.",
+    "right": "Stolen är röd.",
+    "note": "Swedish does not use a standalone article like 'the' for basic nouns; use the suffix '-en' instead."
+   },
+   {
+    "wrong": "Jag ser kattet i parken.",
+    "right": "Jag ser katten i parken.",
+    "note": "'Katt' is an en-word, so its definite ending is '-en', never '-et'."
+   },
+   {
+    "wrong": "Flickanen talar svenska.",
+    "right": "Flickan talar svenska.",
+    "note": "When an en-word already ends in a vowel, only add '-n', not '-en'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "___ (The dog) is sleeping on the floor.",
+    "options": [
+     "Hund",
+     "Hunden",
+     "Hundet",
+     "Den hund"
+    ],
+    "answer": 1,
+    "explanation": "'En hund' takes the suffix '-en' to become 'hunden'."
+   },
+   {
+    "question": "Where is ___ (the house)?",
+    "options": [
+     "huset",
+     "husen",
+     "hus",
+     "det hus"
+    ],
+    "answer": 0,
+    "explanation": "'Ett hus' ends in a consonant and takes '-et', giving 'huset'."
+   },
+   {
+    "question": "___ (The girl) sings well.",
+    "options": [
+     "Flicka",
+     "Flickanet",
+     "Flickan",
+     "Flickat"
+    ],
+    "answer": 2,
+    "explanation": "'En flicka' ends in a vowel, so you attach just '-n' to get 'flickan'."
+   },
+   {
+    "question": "He washes ___ (the table).",
+    "options": [
+     "borden",
+     "borda",
+     "bord",
+     "bordet"
+    ],
+    "answer": 3,
+    "explanation": "'Ett bord' takes the definite neuter suffix '-et', making 'bordet'."
+   }
+  ],
+  "tip": "Think of the indefinite articles 'en' and 'ett' as flying around to the back of the word: 'en bil' becomes 'bil-en', and 'ett bord' becomes 'bord-et'!"
+ },
+ {
+  "id": "sv-a1-v2-word-order",
+  "level": "a1",
+  "category": "clauses",
+  "categoryColor": "#EC4899",
+  "emoji": "🔄",
+  "title": "V2 Rule in Main Clauses",
+  "subtitle": "Keeping the finite verb in position two",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "In Swedish main declarative clauses, the finite verb MUST strictly be the second constituent, even when something other than the subject begins the sentence.",
+  "structure": {
+   "headers": [
+    "Position 1 (Foundation)",
+    "Position 2 (Finite Verb)",
+    "Position 3 (Subject)",
+    "Rest of Sentence"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Jag",
+      "äter",
+      "—",
+      "frukost nu."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Nu",
+      "äter",
+      "jag",
+      "frukost."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "I Sverige",
+      "talar",
+      "man",
+      "svenska."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Igår",
+      "köpte",
+      "han",
+      "en ny cykel."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EC4899",
+    "label": "Subject First (SVO)",
+    "example": "Vi dricker kaffe varje morgon.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Time Adverbial First (Inversion)",
+    "example": "Idag arbetar Peter hemma.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Place Adverbial First (Inversion)",
+    "example": "I Göteborg bor mina vänner.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "På måndag börjar jag mitt nya jobb.",
+    "ko": "",
+    "highlight": "börjar jag"
+   },
+   {
+    "en": "Nu förstår vi regeln ganska bra.",
+    "ko": "",
+    "highlight": "förstår vi"
+   },
+   {
+    "en": "Han läser tidningen varje dag.",
+    "ko": "",
+    "highlight": "Han läser"
+   },
+   {
+    "en": "Klockan åtta vaknar barnen.",
+    "ko": "",
+    "highlight": "vaknar barnen"
+   },
+   {
+    "en": "I morgon åker de till Malmö.",
+    "ko": "",
+    "highlight": "åker de"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Idag jag dricker kaffe.",
+    "right": "Idag dricker jag kaffe.",
+    "note": "If an adverb of time starts the clause, the verb must stay in position 2, forcing the subject into position 3."
+   },
+   {
+    "wrong": "På kvällen vi tittar på tv.",
+    "right": "På kvällen tittar vi på tv.",
+    "note": "Swedish requires verb-subject inversion when the sentence begins with an adverbial phrase."
+   },
+   {
+    "wrong": "I skolan barnen leker.",
+    "right": "I skolan leker barnen.",
+    "note": "Place phrases trigger the V2 rule: the verb 'leker' must precede the subject 'barnen'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Tomorrow ___ we to the cinema.",
+    "options": [
+     "vi går",
+     "går vi",
+     "vi gå",
+     "gå vi"
+    ],
+    "answer": 1,
+    "explanation": "Starting with 'I morgon' (tomorrow) pushes the verb 'går' to the second spot, followed by 'vi'."
+   },
+   {
+    "question": "Now ___ the train.",
+    "options": [
+     "kommer tåget",
+     "tåget kommer",
+     "tåget kom",
+     "kommer det tåg"
+    ],
+    "answer": 0,
+    "explanation": "With 'Nu' in position 1, the finite verb 'kommer' must take position 2 before 'tåget'."
+   },
+   {
+    "question": "In Sweden ___ coffee frequently.",
+    "options": [
+     "folk dricker",
+     "de dricker",
+     "dricker man",
+     "man dricker"
+    ],
+    "answer": 2,
+    "explanation": "After 'I Sverige', the verb 'dricker' must immediately follow in position 2."
+   },
+   {
+    "question": "Today ___ Maria to the market.",
+    "options": [
+     "Maria åker",
+     "åka Maria",
+     "Maria åka",
+     "åker Maria"
+    ],
+    "answer": 3,
+    "explanation": "V2 inversion puts 'åker' in position 2 immediately after the adverb 'Idag'."
+   }
+  ],
+  "tip": "Position 1 can be a single word like 'Idag' or a long phrase like 'Efter en mycket lång resa'—the verb must still be the very next element!"
+ },
+ {
+  "id": "sv-a1-present-tense-conjugation",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⚡",
+  "title": "Present Tense Verb Groups",
+  "subtitle": "Conjugating present verbs without person endings",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Swedish verbs do not change for person or number (I, you, we all use the same form) and end in either -ar, -er, or -r in the present tense.",
+  "structure": {
+   "headers": [
+    "Group",
+    "Infinitive",
+    "Present Ending",
+    "Present Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Group 1 (-ar verbs)",
+      "tala (to speak)",
+      "-ar",
+      "talar"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Group 2 (-er verbs)",
+      "läsa (to read)",
+      "-er",
+      "läser"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Group 3 (-r verbs)",
+      "bo (to live/reside)",
+      "-r",
+      "bor"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Group 4 (Irregular)",
+      "vara (to be)",
+      "irregular",
+      "är"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Group 1 Verbs (-ar)",
+    "example": "Jag pratar svenska och engelska.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Group 2 Verbs (-er)",
+    "example": "Hon skriver ett långt brev.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Group 3 Short Verbs (-r)",
+    "example": "Vi bor i en lägenhet.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Han studerar biologi vid universitetet.",
+    "ko": "",
+    "highlight": "studerar"
+   },
+   {
+    "en": "Vi dricker te tillsammans.",
+    "ko": "",
+    "highlight": "dricker"
+   },
+   {
+    "en": "De tror på framtiden.",
+    "ko": "",
+    "highlight": "tror"
+   },
+   {
+    "en": "Hon köper bröd varje lördag.",
+    "ko": "",
+    "highlight": "köper"
+   },
+   {
+    "en": "Jag lyssnar på musik.",
+    "ko": "",
+    "highlight": "lyssnar"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jag äte frukost nu.",
+    "right": "Jag äter frukost nu.",
+    "note": "Present tense verbs in Swedish must end in '-r' (e.g. 'äter'), never bare stems without endings."
+   },
+   {
+    "wrong": "De tala svenska mycket bra.",
+    "right": "De talar svenska mycket bra.",
+    "note": "Even for plural subjects ('de'), the verb must take the present tense suffix '-r' ('talar')."
+   },
+   {
+    "wrong": "Hon är bor i Uppsala.",
+    "right": "Hon bor i Uppsala.",
+    "note": "Do not insert 'är' (is) as an auxiliary for present continuous actions; 'bor' covers both 'lives' and 'is living'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "She ___ Swedish at university. (tala)",
+    "options": [
+     "talar",
+     "talarer",
+     "talade",
+     "tala"
+    ],
+    "answer": 0,
+    "explanation": "Group 1 verbs replace infinitive '-a' with present ending '-ar' (talar)."
+   },
+   {
+    "question": "We ___ a book right now. (läsa)",
+    "options": [
+     "läsar",
+     "läsa",
+     "läser",
+     "läst"
+    ],
+    "answer": 2,
+    "explanation": "Group 2 verbs form the present tense with '-er' (läser)."
+   },
+   {
+    "question": "Where do you ___? (bo)",
+    "options": [
+     "bor",
+     "boar",
+     "borar",
+     "bo"
+    ],
+    "answer": 0,
+    "explanation": "Group 3 vowel-stem verbs add '-r' in the present tense (bor)."
+   },
+   {
+    "question": "They ___ coffee every afternoon. (dricka)",
+    "options": [
+     "drickar",
+     "dricker",
+     "drick",
+     "drickr"
+    ],
+    "answer": 1,
+    "explanation": "'Dricka' is a strong verb whose present form ends in '-er' (dricker)."
+   }
+  ],
+  "tip": "Swedish has no separate continuous tense (no 'is doing'). The simple present form 'jag springer' means both 'I run' and 'I am running'!"
+ },
+ {
+  "id": "sv-a1-adjective-agreement-indefinite",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎨",
+  "title": "Adjective Agreement in the Indefinite",
+  "subtitle": "Matching adjectives to en, ett, and plural nouns",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "Adjectives in the indefinite change form to match the head noun: base form for en-words, add -t for ett-words, and add -a for all plurals.",
+  "structure": {
+   "headers": [
+    "Noun Class",
+    "Indefinite Article",
+    "Adjective Ending",
+    "Complete Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "En-word (Utrum)",
+      "en",
+      "no change (base)",
+      "en fin bil"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ett-word (Neutrum)",
+      "ett",
+      "+t",
+      "ett fint hus"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Plural (All genders)",
+      "—",
+      "+a",
+      "fina bilar / fina hus"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Describing En-Words",
+    "example": "Jag har en röd cykel.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Describing Ett-Words",
+    "example": "Vi köpte ett rött äpple.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Describing Plural Nouns",
+    "example": "De säljer röda bilar.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Han kör en snabb bil.",
+    "ko": "",
+    "highlight": "snabb bil"
+   },
+   {
+    "en": "Det är ett snabbt tåg.",
+    "ko": "",
+    "highlight": "snabbt tåg"
+   },
+   {
+    "en": "De har mycket snabba cyklar.",
+    "ko": "",
+    "highlight": "snabba cyklar"
+   },
+   {
+    "en": "Hon bär en varm jacka.",
+    "ko": "",
+    "highlight": "varm jacka"
+   },
+   {
+    "en": "Rummet har ett stort fönster.",
+    "ko": "",
+    "highlight": "stort fönster"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jag bor i ett stor hus.",
+    "right": "Jag bor i ett stort hus.",
+    "note": "Because 'hus' is an ett-word, the adjective 'stor' must take the neuter suffix '-t'."
+   },
+   {
+    "wrong": "Han äter två röd äpplen.",
+    "right": "Han äter två röda äpplen.",
+    "note": "Plural nouns require the adjective to end in '-a', regardless of original gender."
+   },
+   {
+    "wrong": "Det är en fint blomma.",
+    "right": "Det är en fin blomma.",
+    "note": "'Blomma' is an en-word, so keep the base adjective 'fin' without the neuter '-t'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Peter lives in a ___ house. (stor)",
+    "options": [
+     "stor",
+     "stort",
+     "stora",
+     "store"
+    ],
+    "answer": 1,
+    "explanation": "'Hus' is an ett-word, so 'stor' adds '-t' to become 'stort'."
+   },
+   {
+    "question": "She has a ___ jacket. (varm)",
+    "options": [
+     "varm",
+     "varmt",
+     "varma",
+     "varme"
+    ],
+    "answer": 0,
+    "explanation": "'Jacka' is an en-word, so the adjective stays in its base form 'varm'."
+   },
+   {
+    "question": "They bought three ___ chairs. (ny)",
+    "options": [
+     "ny",
+     "nyt",
+     "nytt",
+     "nya"
+    ],
+    "answer": 3,
+    "explanation": "Plural nouns (stolar) require the '-a' adjective ending (nya)."
+   },
+   {
+    "question": "We drink ___ water. (kall - neuter)",
+    "options": [
+     "kall",
+     "kalla",
+     "kallt",
+     "kalle"
+    ],
+    "answer": 2,
+    "explanation": "'Vatten' is neuter (ett vatten), so the adjective takes '-t' to become 'kallt'."
+   }
+  ],
+  "tip": "Adjectives ending in double consonants simplify before '-t', so 'vass' (sharp) becomes 'vasst', while regular adjectives simply add '-t' ('grön' -> 'grönt')."
+ },
+ {
+  "id": "sv-a1-plural-noun-declensions",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "📚",
+  "title": "The Five Plural Declensions",
+  "subtitle": "Mastering indefinite plural noun endings in Swedish",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Swedish nouns form their indefinite plurals using five main patterns: -or, -ar, -er, -n, and zero endings.",
+  "structure": {
+   "headers": [
+    "Group",
+    "Ending",
+    "Typical Nouns",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1: -or",
+      "-or",
+      "en-words ending in -a",
+      "flickor"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2: -ar",
+      "-ar",
+      "many monosyllabic en-words",
+      "bilar"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3: -er",
+      "-er",
+      "en-words stressed on last syllable",
+      "katten -> katter"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "4: -n",
+      "-n",
+      "ett-words ending in a vowel",
+      "äpplen"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "5: Zero",
+      "no change",
+      "ett-words ending in a consonant",
+      "hus"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Group 1 (-or)",
+    "example": "Två flickor sitter på bänken.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Group 2 (-ar)",
+    "example": "Många bilar kör förbi.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Group 5 (Zero)",
+    "example": "Vi har tre hus här.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Jag köper tre flaskor vatten.",
+    "ko": "",
+    "highlight": "flaskor"
+   },
+   {
+    "en": "Det står många stolar i rummet.",
+    "ko": "",
+    "highlight": "stolar"
+   },
+   {
+    "en": "Hon läser flera böcker varje månad.",
+    "ko": "",
+    "highlight": "böcker"
+   },
+   {
+    "en": "Vi plockar röda äpplen från trädet.",
+    "ko": "",
+    "highlight": "äpplen"
+   },
+   {
+    "en": "De äger fem gamla hus vid havet.",
+    "ko": "",
+    "highlight": "hus"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "två boken",
+    "right": "två böcker",
+    "note": "Bok belongs to Group 3 and takes the plural ending -er with an umlaut shift, not the singular definite suffix -en."
+   },
+   {
+    "wrong": "tre husar",
+    "right": "tre hus",
+    "note": "Ett-words ending in a consonant (Group 5) do not add a suffix in the indefinite plural."
+   },
+   {
+    "wrong": "fyra äppler",
+    "right": "fyra äpplen",
+    "note": "Ett-words ending in a vowel (Group 4) take -n, not -er."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Jag ser tre ___ på sjön.",
+    "options": [
+     "båtar",
+     "båtor",
+     "båter",
+     "båtn"
+    ],
+    "answer": 0,
+    "explanation": "'En båt' is an en-word belonging to Group 2, which takes the plural ending -ar."
+   },
+   {
+    "question": "Vi behöver köpa fyra nya ___.",
+    "options": [
+     "stolar",
+     "stolen",
+     "stols",
+     "stoler"
+    ],
+    "answer": 0,
+    "explanation": "'En stol' takes the Group 2 plural suffix -ar (stolar)."
+   },
+   {
+    "question": "Han dricker två koppar kaffe och äter två ___.",
+    "options": [
+     "äpple",
+     "äppler",
+     "äpplen",
+     "äpplor"
+    ],
+    "answer": 2,
+    "explanation": "'Ett äpple' ends in a vowel and belongs to Group 4, forming the plural with -n."
+   },
+   {
+    "question": "I skogen finns det många höga ___.",
+    "options": [
+     "trädar",
+     "trädor",
+     "träden",
+     "träd"
+    ],
+    "answer": 3,
+    "explanation": "'Ett träd' is a neuter noun ending in a consonant, so its indefinite plural takes zero ending (träd)."
+   }
+  ],
+  "tip": "If an en-word ends in '-a', drop the '-a' and add '-or' almost 100% of the time (e.g., flicka -> flickor)."
+ },
+ {
+  "id": "sv-a2-double-definiteness",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "💎",
+  "title": "Double Definiteness (Den/Det/De + Noun Suffix)",
+  "subtitle": "Combining front articles and noun suffixes with adjectives",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "When an adjective describes a definite noun, Swedish requires both a preceding definite article (den/det/de) and the definite noun ending.",
+  "structure": {
+   "headers": [
+    "Gender/Number",
+    "Front Article",
+    "Adjective Form",
+    "Noun Ending"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "en-words (common)",
+      "den",
+      "stora",
+      "bilen"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ett-words (neuter)",
+      "det",
+      "röda",
+      "huset"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "plural (all)",
+      "de",
+      "gamla",
+      "böckerna"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Common Gender",
+    "example": "Den gula bilen stannade.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Neuter Gender",
+    "example": "Det nya huset är fint.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Plural Noun",
+    "example": "De små barnen sover.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Den röda bilen kör snabbt.",
+    "ko": "",
+    "highlight": "Den röda bilen"
+   },
+   {
+    "en": "Jag vill bo i det vita huset.",
+    "ko": "",
+    "highlight": "det vita huset"
+   },
+   {
+    "en": "De gamla böckerna ligger på bordet.",
+    "ko": "",
+    "highlight": "De gamla böckerna"
+   },
+   {
+    "en": "Hon läser den intressanta boken.",
+    "ko": "",
+    "highlight": "den intressanta boken"
+   },
+   {
+    "en": "Vi köpte det stora bordet igår.",
+    "ko": "",
+    "highlight": "det stora bordet"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "den röd bil",
+    "right": "den röda bilen",
+    "note": "Double definiteness requires both the definite adjective ending (-a) and the noun suffix (-en)."
+   },
+   {
+    "wrong": "det nytt hus",
+    "right": "det nya huset",
+    "note": "Ett-words require the front article 'det', definite adjective form ending in -a, and suffix -et."
+   },
+   {
+    "wrong": "de snälla vänner",
+    "right": "de snälla vännerna",
+    "note": "Plural nouns preceded by 'de' must also take their definite plural suffix (-na)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Jag gillar inte ___.",
+    "options": [
+     "den kalla mjölken",
+     "den kall mjölk",
+     "det kalla mjölken",
+     "kalla mjölk"
+    ],
+    "answer": 0,
+    "explanation": "Mjölk is an en-word, requiring 'den', the definite adjective 'kalla', and suffix '-en'."
+   },
+   {
+    "question": "Vem äger ___?",
+    "options": [
+     "den stora huset",
+     "det stora huset",
+     "det stort hus",
+     "stora huset"
+    ],
+    "answer": 1,
+    "explanation": "Hus is an ett-word, requiring front article 'det' and the suffix '-et' on the noun."
+   },
+   {
+    "question": "Titta på ___ som simmar där borta.",
+    "options": [
+     "de små fiskar",
+     "den små fiskarna",
+     "de små fiskarna",
+     "det små fiskarna"
+    ],
+    "answer": 2,
+    "explanation": "Plural nouns need the article 'de', the adjective ending -a ('små' is already plural), and the suffix '-na'."
+   },
+   {
+    "question": "Vi känner redan ___.",
+    "options": [
+     "nya läraren",
+     "det nya läraren",
+     "den nya lärare",
+     "den nya läraren"
+    ],
+    "answer": 3,
+    "explanation": "Lärare is an en-word, so it takes 'den', definite adjective 'nya', and the noun ending '-n'."
+   }
+  ],
+  "tip": "Think of it as sandwiching the adjective: Article (den/det/de) + Adjective (-a) + Suffix (-en/-et/-na)."
+ },
+ {
+  "id": "sv-a2-subordinate-clause-inte-placement",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#059669",
+  "emoji": "🔄",
+  "title": "Adverbial Placement in Subordinate Clauses (BIFF Rule)",
+  "subtitle": "Where to place 'inte' and other adverbs in subordinate clauses",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "According to the BIFF rule (BIsats Inte Före Finita verbet), sentence adverbs like 'inte' must stand before the finite verb in subordinate clauses.",
+  "structure": {
+   "headers": [
+    "Clause Type",
+    "Subordinator / Subject",
+    "Adverb",
+    "Finite Verb"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Main clause",
+      "Han",
+      "(verb first)",
+      "kommer inte"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Subordinate clause",
+      "eftersom han",
+      "inte",
+      "kommer"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Subordinate clause",
+      "om hon",
+      "aldrig",
+      "ringer"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Causal Clause (eftersom)",
+    "example": "Hon stannar hemma eftersom hon inte mår bra.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Conditional Clause (om)",
+    "example": "Vi går ut om det inte regnar.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Reported Speech (att)",
+    "example": "Han säger att han inte vet svaret.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Han stannar hemma eftersom han inte mår bra.",
+    "ko": "",
+    "highlight": "inte mår"
+   },
+   {
+    "en": "Jag vet att du inte tycker om fisk.",
+    "ko": "",
+    "highlight": "inte tycker"
+   },
+   {
+    "en": "Vi går en promenad om det inte snöar.",
+    "ko": "",
+    "highlight": "inte snöar"
+   },
+   {
+    "en": "Hon frågade varför vi inte kom igår.",
+    "ko": "",
+    "highlight": "inte kom"
+   },
+   {
+    "en": "Det är synd att de inte kan komma.",
+    "ko": "",
+    "highlight": "inte kan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jag är ledsen eftersom jag kommer inte.",
+    "right": "Jag är ledsen eftersom jag inte kommer.",
+    "note": "In subordinate clauses introduced by conjunctions like 'eftersom', 'inte' must precede the finite verb."
+   },
+   {
+    "wrong": "Han sa att han förstod inte frågan.",
+    "right": "Han sa att han inte förstod frågan.",
+    "note": "Follow the BIFF rule: 'inte' comes before 'förstod' inside 'att' clauses."
+   },
+   {
+    "wrong": "Om du vill inte, behöver du inte.",
+    "right": "Om du inte vill, behöver du inte.",
+    "note": "In the conditional subclause 'om du...', place 'inte' before the modal verb 'vill'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Jag ringer dig om jag ___ tid imorgon.",
+    "options": [
+     "har inte",
+     "inte har",
+     "inte hade",
+     "inte ha"
+    ],
+    "answer": 1,
+    "explanation": "The BIFF rule states that 'inte' must go before the finite verb ('har') in a subordinate clause introduced by 'om'."
+   },
+   {
+    "question": "Hon berättade att hon ___ filmen.",
+    "options": [
+     "såg inte",
+     "inte såg",
+     "har inte sett",
+     "hade sett inte"
+    ],
+    "answer": 1,
+    "explanation": "'Att' introduces a subordinate clause, placing 'inte' directly before the finite verb 'såg'."
+   },
+   {
+    "question": "Vi stannar inne därför att det ___ varmt ute.",
+    "options": [
+     "är inte",
+     "blir inte",
+     "inte är",
+     "inte vara"
+    ],
+    "answer": 2,
+    "explanation": "In subordinate clauses with 'därför att', the adverb 'inte' precedes the finite verb 'är'."
+   },
+   {
+    "question": "Vet du varför Peter ___ till festen igår?",
+    "options": [
+     "kom inte",
+     "hade inte kommit",
+     "kom aldrig",
+     "inte kom"
+    ],
+    "answer": 3,
+    "explanation": "In an indirect question clause introduced by 'varför', 'inte' precedes the finite verb 'kom'."
+   }
+  ],
+  "tip": "Remember the acronym BIFF: I BIsats kommer 'Inte' Före Finita verbet."
+ },
+ {
+  "id": "sv-a2-past-tenses-preteritum-vs-supinum",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "⏳",
+  "title": "Preteritum vs. Supinum (Perfekt)",
+  "subtitle": "Choosing between simple past and present perfect in Swedish",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "Preteritum narrates completed events tied to a specific past time, while supinum combines with 'har' (perfekt) to express experiences or ongoing relevance.",
+  "structure": {
+   "headers": [
+    "Infinitive",
+    "Preteritum (Past)",
+    "Supinum (-t form)",
+    "Perfekt (har + supinum)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "prata",
+      "pratade",
+      "pratat",
+      "har pratat"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "köpa",
+      "köpte",
+      "köpt",
+      "har köpt"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "skriva",
+      "skrev",
+      "skrivit",
+      "har skrivit"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "se",
+      "såg",
+      "sett",
+      "har sett"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Specific Past Time",
+    "example": "Igår pratade jag med mormor.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Indefinite Life Experience",
+    "example": "Jag har aldrig besökt Rom.",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Action with Present Impact",
+    "example": "Hon har tappat sina nycklar.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Igår köpte jag en ny dator.",
+    "ko": "",
+    "highlight": "köpte"
+   },
+   {
+    "en": "Jag har redan köpt biljetterna.",
+    "ko": "",
+    "highlight": "har redan köpt"
+   },
+   {
+    "en": "Förra veckan såg vi en fantastisk film.",
+    "ko": "",
+    "highlight": "såg"
+   },
+   {
+    "en": "Har du någonsin varit i Sverige?",
+    "ko": "",
+    "highlight": "Har du någonsin varit"
+   },
+   {
+    "en": "Han skrev ett långt brev i morse.",
+    "ko": "",
+    "highlight": "skrev"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Igår har jag träffat Anna.",
+    "right": "Igår träffade jag Anna.",
+    "note": "Specific past time markers like 'igår' require preteritum, not perfekt."
+   },
+   {
+    "wrong": "Jag har skrivit brevet igår.",
+    "right": "Jag skrev brevet igår.",
+    "note": "You cannot use 'har + supinum' with finished, definite past time adverbials."
+   },
+   {
+    "wrong": "Vi har bodde här länge.",
+    "right": "Vi har bott här länge.",
+    "note": "After auxiliary 'har', Swedish requires the supinum ending in -t ('bott'), not the past tense 'bodde'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Förra året ___ vi till Spanien på semester.",
+    "options": [
+     "har rest",
+     "reste",
+     "rest",
+     "reser"
+    ],
+    "answer": 1,
+    "explanation": "'Förra året' indicates a completed, specific time in the past, demanding the preteritum 'reste'."
+   },
+   {
+    "question": "Jag kan inte hitta min plånbok; jag tror att jag ___ den.",
+    "options": [
+     "tappade",
+     "tappat",
+     "har tappat",
+     "tappa"
+    ],
+    "answer": 2,
+    "explanation": "The loss is relevant right now in the present, which requires perfekt formed with 'har' + supinum 'tappat'."
+   },
+   {
+    "question": "Hon har redan ___ frukost idag.",
+    "options": [
+     "äter",
+     "åt",
+     "ätit",
+     "äta"
+    ],
+    "answer": 2,
+    "explanation": "The auxiliary 'har' must be paired with the supinum form 'ätit', not the preteritum 'åt'."
+   },
+   {
+    "question": "Vad ___ du klockan åtta i morse?",
+    "options": [
+     "har gjort",
+     "gjort",
+     "gör",
+     "gjorde"
+    ],
+    "answer": 3,
+    "explanation": "'I morse' sets a finished past time point, requiring preteritum 'gjorde'."
+   }
+  ],
+  "tip": "Supinum is unique to Swedish: unlike past participles, it only ends in -t (never inflects for gender/number) and only follows 'ha'."
+ },
+ {
+  "id": "sv-a2-modal-verbs-with-bare-infinitive",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#7C3AED",
+  "emoji": "🚀",
+  "title": "Modal Auxiliaries and Bare Infinitives",
+  "subtitle": "Expressing ability, necessity, and desire without 'att'",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Core Swedish modal verbs take a bare infinitive directly without the infinitive marker 'att'.",
+  "structure": {
+   "headers": [
+    "Modal Verb",
+    "Meaning",
+    "Followed By",
+    "Example Sentence"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "kan",
+      "can / be able to",
+      "bare infinitive",
+      "Kan du hjälpa mig?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "vill",
+      "want to",
+      "bare infinitive",
+      "Jag vill sova nu."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ska",
+      "will / shall",
+      "bare infinitive",
+      "Vi ska resa bort."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "måste",
+      "must / have to",
+      "bare infinitive",
+      "Du måste studera."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "får",
+      "may / be allowed to",
+      "bare infinitive",
+      "Får man röka här?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Desire (vill)",
+    "example": "Jag vill dricka kaffe nu.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Ability (kan)",
+    "example": "Hon kan tala tre språk flytande.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Obligation (måste)",
+    "example": "Vi måste gå hem tidigt ikväll.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Jag vill äta lunch klockan tolv.",
+    "ko": "",
+    "highlight": "vill äta"
+   },
+   {
+    "en": "Han kan simma mycket snabbt.",
+    "ko": "",
+    "highlight": "kan simma"
+   },
+   {
+    "en": "Vi måste städa lägenheten idag.",
+    "ko": "",
+    "highlight": "måste städa"
+   },
+   {
+    "en": "Du får låna min cykel imorgon.",
+    "ko": "",
+    "highlight": "får låna"
+   },
+   {
+    "en": "Ska vi gå på bio ikväll?",
+    "ko": "",
+    "highlight": "Ska vi gå"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jag vill att dricka te.",
+    "right": "Jag vill dricka te.",
+    "note": "Never place the infinitive marker 'att' after modal verbs like 'vill'."
+   },
+   {
+    "wrong": "Han kan inte att komma.",
+    "right": "Han kan inte komma.",
+    "note": "'Kan' takes a bare infinitive; omit 'att' completely."
+   },
+   {
+    "wrong": "Vi måste att arbeta hårt.",
+    "right": "Vi måste arbeta hårt.",
+    "note": "'Måste' links directly with the bare infinitive 'arbeta'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Jag kan tyvärr inte ___ på fredag.",
+    "options": [
+     "att komma",
+     "kommer",
+     "komma",
+     "kom"
+    ],
+    "answer": 2,
+    "explanation": "The modal auxiliary 'kan' must be followed directly by a bare infinitive without 'att'."
+   },
+   {
+    "question": "Vad ska du ___ till middag ikväll?",
+    "options": [
+     "att laga",
+     "laga",
+     "lagar",
+     "lagade"
+    ],
+    "answer": 1,
+    "explanation": "The modal verb 'ska' requires the bare infinitive 'laga'."
+   },
+   {
+    "question": "Alla studenter måste ___ provet innan klockan tre.",
+    "options": [
+     "lämna in",
+     "att lämna in",
+     "lämnar in",
+     "lämnade in"
+    ],
+    "answer": 0,
+    "explanation": "'Måste' takes the bare infinitive without the infinitive marker 'att'."
+   },
+   {
+    "question": "Här får man inte ___ bilen över natten.",
+    "options": [
+     "parkerar",
+     "parkerade",
+     "att parkera",
+     "parkera"
+    ],
+    "answer": 3,
+    "explanation": "The permission modal 'får' requires the bare infinitive 'parkera'."
+   }
+  ],
+  "tip": "English says 'want TO sleep', but Swedish strictly drops 'to': 'vill sova' (never 'vill att sova')."
+ },
+ {
+  "id": "sv-a2-phrasal-particle-verbs",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔄",
+  "title": "Particle Verbs vs. Prepositional Verbs",
+  "subtitle": "Stress the particle to transform the verb's meaning completely.",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "In Swedish particle verbs, the stress falls squarely on the particle rather than the verb stem, shifting the meaning entirely.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Stress Pattern",
+    "Swedish Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Prepositional",
+      "Verb stressed",
+      "Hon hälsar på mormor.",
+      "She visits grandma."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Particle Verb",
+      "Particle stressed",
+      "Hon hälsar PÅ dem.",
+      "She greets them."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Prepositional",
+      "Verb stressed",
+      "Han går av bussen.",
+      "He steps off the bus."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Particle Verb",
+      "Particle stressed",
+      "Bion går AV stapeln.",
+      "The film takes place."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Idiomatic Action",
+    "example": "Vi måste lägga av nu.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Literal Preposition",
+    "example": "Katten hoppar på bordet.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Separable Adverbial Particle",
+    "example": "Han stänger inte av teven.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Han tycker om att resa på sommaren.",
+    "ko": "",
+    "highlight": "tycker om"
+   },
+   {
+    "en": "Skriv under kontraktet här.",
+    "ko": "",
+    "highlight": "Skriv under"
+   },
+   {
+    "en": "Vi måste ställa in mötet i dag.",
+    "ko": "",
+    "highlight": "ställa in"
+   },
+   {
+    "en": "Hon ser på teve varje kväll.",
+    "ko": "",
+    "highlight": "ser på"
+   },
+   {
+    "en": "Tåget kom fram i tid.",
+    "ko": "",
+    "highlight": "kom fram"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jag tycker inte om det.",
+    "right": "Jag tycker inte om det.",
+    "note": "Pronounce 'om' with primary stress, not 'tycker', or native listeners will hear a preposition instead of the verb 'to like'."
+   },
+   {
+    "wrong": "Hon stängde teven av.",
+    "right": "Hon stängde av teven.",
+    "note": "Unlike English, verbal particles in Swedish typically stay directly adjacent to the finite verb before any definite noun object."
+   },
+   {
+    "wrong": "Vi lyssnar musik på kvällen.",
+    "right": "Vi lyssnar på musik på kvällen.",
+    "note": "'Lyssna' requires the preposition 'på' when specifying the object of listening."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the particle verb phrase meaning 'to cancel the concert':",
+    "options": [
+     "ställer ut konserten",
+     "ställer upp konserten",
+     "ställer in konserten",
+     "ställer av konserten"
+    ],
+    "answer": 2,
+    "explanation": "'Ställa in' is the idiomatic particle verb meaning 'to cancel'."
+   },
+   {
+    "question": "In 'De tycker om glass', where does the main stress fall?",
+    "options": [
+     "om",
+     "tycker",
+     "glass",
+     "De"
+    ],
+    "answer": 0,
+    "explanation": "In Swedish particle verbs, the stress systematically falls on the particle ('om')."
+   },
+   {
+    "question": "Which sentence means 'She turned off the radio'?",
+    "options": [
+     "Hon stängde teven in.",
+     "Hon stängde av radion.",
+     "Hon stängde radion av.",
+     "Hon stängde till radion."
+    ],
+    "answer": 1,
+    "explanation": "'Stänga av' means to turn off/switch off, and the particle directly follows the verb before the noun object."
+   },
+   {
+    "question": "Complete the sentence to mean 'He signed the letter': Han ___ brevet.",
+    "options": [
+     "skrev om",
+     "skrev av",
+     "skrev till",
+     "skrev under"
+    ],
+    "answer": 3,
+    "explanation": "'Skriva under' is the lexicalized particle verb meaning 'to sign'."
+   }
+  ],
+  "tip": "Listen for the beat: if the short word after the verb carries the strongest stress, it is a particle that changes the dictionary definition."
+ },
+ {
+  "id": "sv-a2-possessive-reflexive-sin-vs-hans-hennes",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "👥",
+  "title": "Sin/Sitt/Sina vs. Hans/Hennes/Deras",
+  "subtitle": "Use sin/sitt/sina only when the owner is the third-person subject of that exact clause.",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use reflexive possessives (sin/sitt/sina) when the owner is the subject of the same clause, but use hans/hennes/deras when referring to someone else or inside the subject itself.",
+  "structure": {
+   "headers": [
+    "Target Gender / Number",
+    "Reflexive (Subject's own)",
+    "Non-reflexive Genitive"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "En-word (common)",
+      "sin bok",
+      "hans / hennes bok"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ett-word (neuter)",
+      "sitt hus",
+      "hans / hennes hus"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Plural",
+      "sina vänner",
+      "hans / hennes vänner"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Inside Subject Position",
+      "Never allowed (impossible)",
+      "Hans / Hennes bil är ny."
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Third-Person Subject's Possession",
+    "example": "Erik tvättar sin bil.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Another Person's Possession",
+    "example": "Erik tvättar hans bil.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Subject Slot (Genitive Only)",
+    "example": "Hennes pappa bor i Malmö.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Anna älskar sin hund väldigt mycket.",
+    "ko": "",
+    "highlight": "sin"
+   },
+   {
+    "en": "Oskar sålde sitt gamla piano.",
+    "ko": "",
+    "highlight": "sitt"
+   },
+   {
+    "en": "Föräldrarna hjälper sina barn med läxan.",
+    "ko": "",
+    "highlight": "sina"
+   },
+   {
+    "en": "Lars ringde till hans fru i går.",
+    "ko": "",
+    "highlight": "hans"
+   },
+   {
+    "en": "Hennes bror studerar i Lund.",
+    "ko": "",
+    "highlight": "Hennes"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Sin katt är jättesöt.",
+    "right": "Hennes katt är jättesöt.",
+    "note": "'Sin/sitt/sina' can NEVER be part of the grammatical subject of the clause; use hans/hennes/deras instead."
+   },
+   {
+    "wrong": "Per älskar hans fru.",
+    "right": "Per älskar sin fru.",
+    "note": "If Per loves his own wife, you must use 'sin'. Using 'hans' implies Per loves another man's wife."
+   },
+   {
+    "wrong": "Maja ringde sin vänner.",
+    "right": "Maja ringde sina vänner.",
+    "note": "'Vänner' is plural, so the reflexive pronoun must agree in number and take 'sina'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Peter drove ___ car home (his own car, ett-word: fordon/bil). 'Peter körde ___ bil hem.'",
+    "options": [
+     "hans",
+     "sin",
+     "sitt",
+     "hennes"
+    ],
+    "answer": 1,
+    "explanation": "'Bil' is an en-word (common gender) and belongs to the subject Peter, so use 'sin'."
+   },
+   {
+    "question": "Fill the blank: '___ syster bor i Göteborg.' (Talking about Johan's sister)",
+    "options": [
+     "Sin",
+     "Sitt",
+     "Hans",
+     "Sina"
+    ],
+    "answer": 2,
+    "explanation": "The possessor is part of the subject noun phrase itself; 'sin' cannot appear in the subject position."
+   },
+   {
+    "question": "Sara and Lisa pack ___ bags (plural, their own). 'Sara och Lisa packar ___ väskor.'",
+    "options": [
+     "deras",
+     "sin",
+     "sitt",
+     "sina"
+    ],
+    "answer": 3,
+    "explanation": "'Väskor' is plural and refers back to the plural subject 'Sara och Lisa', requiring 'sina'."
+   },
+   {
+    "question": "Which sentence means 'Kalle borrowed someone else's coat'?",
+    "options": [
+     "Kalle tog hans jacka.",
+     "Kalle tog sin jacka.",
+     "Kalle tog sitt jacka.",
+     "Kalle tog sina jacka."
+    ],
+    "answer": 0,
+    "explanation": "'Hans' indicates that the jacket belongs to someone other than the subject Kalle."
+   }
+  ],
+  "tip": "Always identify the grammatical subject first: if the possessor IS that subject, choose sin/sitt/sina; if not (or if it is inside the subject itself), use hans/hennes/deras."
+ },
+ {
+  "id": "sv-a2-object-reflexive-sig",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🪞",
+  "title": "Reflexive Verbs and the Pronoun 'Sig'",
+  "subtitle": "Inflect reflexive objects to match 1st/2nd persons, and use 'sig' for all 3rd persons.",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "Swedish reflexive verbs require standard object pronouns for 1st and 2nd persons (mig, dig, oss, er) and the invariant reflexive pronoun 'sig' for all third-person subjects.",
+  "structure": {
+   "headers": [
+    "Subject Pronoun",
+    "Reflexive Pronoun",
+    "Swedish Verb Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "jag",
+      "mig (mej)",
+      "Jag skyndar mig.",
+      "I hurry."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "du",
+      "dig (dej)",
+      "Du kammar dig.",
+      "You comb your hair."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "han / hon / den / de",
+      "sig (sej)",
+      "De lägger sig.",
+      "They go to bed."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "vi / ni",
+      "oss / er",
+      "Vi sätter oss.",
+      "We sit down."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Bodily Care & Movement",
+    "example": "Pappa rakar sig på morgonen.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Emotional & Mental States",
+    "example": "Hon känner sig trött efter jobbet.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Inherent Reflexive Verbs",
+    "example": "De gifter sig i morgon.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Jag måste skynda mig till bussen.",
+    "ko": "",
+    "highlight": "skynda mig"
+   },
+   {
+    "en": "Han sätter sig på stolen i hörnet.",
+    "ko": "",
+    "highlight": "sätter sig"
+   },
+   {
+    "en": "Vi känner oss glada över resultatet.",
+    "ko": "",
+    "highlight": "känner oss"
+   },
+   {
+    "en": "Barnen lägger sig klockan åtta.",
+    "ko": "",
+    "highlight": "lägger sig"
+   },
+   {
+    "en": "Hur mår du? Rakar du dig varje dag?",
+    "ko": "",
+    "highlight": "Rakar du dig"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jag tvättar sig.",
+    "right": "Jag tvättar mig.",
+    "note": "'Sig' is strictly for third person (han, hon, den, det, de). First person 'jag' requires 'mig'."
+   },
+   {
+    "wrong": "De skyndar dem.",
+    "right": "De skyndar sig.",
+    "note": "'Dem' is a non-reflexive object pronoun; when referring back to the 3rd person subject 'de', use 'sig'."
+   },
+   {
+    "wrong": "Vi sätter sig här borta.",
+    "right": "Vi sätter oss här borta.",
+    "note": "The first-person plural 'vi' requires the matching reflexive pronoun 'oss'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Hon känner ___ inte så pigg i dag.'",
+    "options": [
+     "henne",
+     "sig",
+     "hennes",
+     "sitt"
+    ],
+    "answer": 1,
+    "explanation": "The 3rd-person singular subject 'hon' requires the reflexive pronoun 'sig'."
+   },
+   {
+    "question": "Complete the sentence: 'Nu måste vi skynda ___!'",
+    "options": [
+     "oss",
+     "sig",
+     "er",
+     "dem"
+    ],
+    "answer": 0,
+    "explanation": "The subject 'vi' matches with the 1st-person plural reflexive pronoun 'oss'."
+   },
+   {
+    "question": "Complete the sentence: 'Varför lägger ni ___ så sent?'",
+    "options": [
+     "sig",
+     "oss",
+     "dem",
+     "er"
+    ],
+    "answer": 3,
+    "explanation": "Second person plural 'ni' takes 'er' as its reflexive object pronoun."
+   },
+   {
+    "question": "Which sentence is grammatically correct?",
+    "options": [
+     "Han lär mig tala svenska.",
+     "Han lär sig tala svenska.",
+     "Han lär honom tala svenska.",
+     "Han lär dem sig tala svenska."
+    ],
+    "answer": 1,
+    "explanation": "'Lära sig' means to learn (literally 'to teach oneself'); matching 'han' requires 'sig'."
+   }
+  ],
+  "tip": "Think of 'sig' as Swedish for 'himself/herself/itself/themselves'—use it only when the subject is 3rd person."
+ },
+ {
+  "id": "sv-b1-s-passive-vs-bli-passive",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#F59E0B",
+  "emoji": "⚙️",
+  "title": "Morphological S-Passive vs. Periphrastic Bli-Passive",
+  "subtitle": "Use s-passives for notices, rules, and states; use bli-passives for dynamic, single events.",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "The morphological s-passive is favored for rules, instructions, recipes, and timeless facts, while the 'bli + past participle' passive highlights dynamic, momentary events.",
+  "structure": {
+   "headers": [
+    "Passive Type",
+    "Formation",
+    "Typical Function",
+    "Swedish Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "S-Passive",
+      "Verb stem + (e)s",
+      "General rules, timeless states, notices",
+      "Dörren öppnas klockan åtta."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Bli-Passive",
+      "bli + past participle",
+      "Concrete single events, change of state",
+      "Han blev påkörd av en bil."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Modal S-Passive",
+      "Modal + infinitive-s",
+      "Commands, regulations, instructions",
+      "Boken kan köpas på nätet."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Vara-Passive",
+      "vara + past participle",
+      "Resulting static state after an action",
+      "Affären är stängd."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Official Rules & Instructions",
+    "example": "Rökning undanbedes i lokalen.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Dynamic Event with Agent",
+    "example": "Tjuven blev gripen av polisen.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Daily Routine / Habitual",
+    "example": "Tidningen delas ut varje morgon.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Maten serveras klockan tolv.",
+    "ko": "",
+    "highlight": "serveras"
+   },
+   {
+    "en": "Bron förstördes av stormen.",
+    "ko": "",
+    "highlight": "förstördes"
+   },
+   {
+    "en": "Han blev vald till ordförande i går.",
+    "ko": "",
+    "highlight": "blev vald"
+   },
+   {
+    "en": "Detta problem måste lösas omedelbart.",
+    "ko": "",
+    "highlight": "lösas"
+   },
+   {
+    "en": "Fönstret krossades under festen.",
+    "ko": "",
+    "highlight": "krossades"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Maten blir serveras klockan sex.",
+    "right": "Maten serveras klockan sex.",
+    "note": "Never combine 'bli' with an -s passive verb; use either 'serveras' or 'blir serverad'."
+   },
+   {
+    "wrong": "Han blev sparkas från jobbet.",
+    "right": "Han blev sparkad från jobbet.",
+    "note": "After 'bli', the following verb must be an inflected past participle ('sparkad'), not an s-passive infinitive."
+   },
+   {
+    "wrong": "Dörren måste öppnar nu.",
+    "right": "Dörren måste öppnas nu.",
+    "note": "Passive infinitives after modal verbs like 'måste' require the -s ending: 'öppnas'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which sentence is the most natural for a sign: 'The door closes at 21:00'?",
+    "options": [
+     "Dörren blir stängd klockan 21:00.",
+     "Dörren stängs klockan 21:00.",
+     "Dörren stängde sig klockan 21:00.",
+     "Dörren stänga klockan 21:00."
+    ],
+    "answer": 1,
+    "explanation": "Timeless routines, signs, and official hours strongly favor the morphological s-passive ('stängs')."
+   },
+   {
+    "question": "Complete the dynamic event: 'Mannen ___ av polisen efter rånet.'",
+    "options": [
+     "blev arresterad",
+     "arresteras",
+     "blir arresteras",
+     "blev arresteras"
+    ],
+    "answer": 0,
+    "explanation": "A dynamic singular event completed by an agent ('av polisen') commonly uses 'blev + past participle'."
+   },
+   {
+    "question": "How do you form the passive infinitive after 'kan' with 'köpa'?",
+    "options": [
+     "kan köper",
+     "kan köpt",
+     "kan bli köper",
+     "kan köpas"
+    ],
+    "answer": 3,
+    "explanation": "The passive infinitive adds -s to the active infinitive stem ('köpa' -> 'köpas')."
+   },
+   {
+    "question": "What is the difference between 'Fönstret stängdes' and 'Fönstret är stängt'?",
+    "options": [
+     "They are completely identical in every context.",
+     "The first describes the action occurring; the second describes the resulting state.",
+     "The second means someone will close it tomorrow.",
+     "The first can only be used with human subjects."
+    ],
+    "answer": 1,
+    "explanation": "S-passive conveys the passive process/action; 'vara + past participle' expresses the resulting static condition."
+   }
+  ],
+  "tip": "Look at the context: signs, menus, recipes, and recurring routines almost always use the short -s passive, while dramatic incidents use 'bli + participle'."
+ },
+ {
+  "id": "sv-b1-past-participle-declension",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "📋",
+  "title": "Inflection of the Past Participle",
+  "subtitle": "Decline participles like adjectives (en, ett, plural) when paired with vara or bli.",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "While the supinum used with 'ha' is invariant (-t), the past participle functions as an adjective and must agree in gender and number with the noun it modifies.",
+  "structure": {
+   "headers": [
+    "Form",
+    "En-word (common)",
+    "Ett-word (neuter)",
+    "Plural / Definite"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Group 1 (-ar verbs)",
+      "målad",
+      "målat",
+      "målade"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Group 2 (-er verbs)",
+      "stängd / släckt",
+      "stängt / släckt",
+      "stängda / släckta"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Group 4 (Strong)",
+      "skriven",
+      "skrivet",
+      "skrivna"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Supinum with 'ha'",
+      "har målat",
+      "har målat",
+      "har målat (invariant!)"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Neuter Agreement with Ett-Word",
+    "example": "Huset är nymålat och rent.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Plural Agreement with Bli",
+    "example": "Bilarna blev reparerade i förrgår.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Attributive Modifier",
+    "example": "Den stängda dörren var låst.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dörren är stängd för dagen.",
+    "ko": "",
+    "highlight": "stängd"
+   },
+   {
+    "en": "Ett brev blev skrivet av professorn.",
+    "ko": "",
+    "highlight": "skrivet"
+   },
+   {
+    "en": "Alla fönster är tvättade nu.",
+    "ko": "",
+    "highlight": "tvättade"
+   },
+   {
+    "en": "Maten är redan lagad.",
+    "ko": "",
+    "highlight": "lagad"
+   },
+   {
+    "en": "Bordet blev dukat av barnen.",
+    "ko": "",
+    "highlight": "dukat"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Boken är skrivit.",
+    "right": "Boken är skriven.",
+    "note": "'Skrivit' is the invariable supinum used after 'har'. With 'är' (en-word), the participle inflects as 'skriven'."
+   },
+   {
+    "wrong": "Husen blev sålda förra veckan.",
+    "right": "Husen blev sålda förra veckan.",
+    "note": "Take care to avoid using singular '-d/-t' when the subject is plural ('husen' -> 'sålda')."
+   },
+   {
+    "wrong": "Jag har stängd dörren.",
+    "right": "Jag har stängt dörren.",
+    "note": "After auxiliary 'ha', you must always use the invariant supinum ('stängt'), never an inflected participle."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which form completes: 'Äpplet är ___.' (äta - strong verb; ett äpple)?",
+    "options": [
+     "äten",
+     "ätet",
+     "ätna",
+     "ätit"
+    ],
+    "answer": 1,
+    "explanation": "The strong verb past participle declines as -en (en-word), -et (ett-word), -na (plural). For 'äpplet' (ett-word), choose 'ätet'."
+   },
+   {
+    "question": "Complete the plural sentence: 'Rapporterna är redan ___.' (skriva)",
+    "options": [
+     "skrivit",
+     "skriven",
+     "skrivet",
+     "skrivna"
+    ],
+    "answer": 3,
+    "explanation": "'Rapporterna' is plural, requiring the plural participle ending '-na'."
+   },
+   {
+    "question": "What is the difference between 'har stängt' and 'är stängd'?",
+    "options": [
+     "'har stängt' is the invariant supinum tense; 'är stängd' is an inflected participle describing state.",
+     "'har stängt' is plural only.",
+     "'är stängd' can only be used with animate subjects.",
+     "They are interchangeable dialectal variants."
+    ],
+    "answer": 0,
+    "explanation": "After 'ha' use the supinum (-t); after 'vara/bli' the participle agrees like an adjective with the subject."
+   },
+   {
+    "question": "Complete with 'måla' (Group 1): 'Stolarna blev ___ vita.'",
+    "options": [
+     "målad",
+     "målat",
+     "målade",
+     "målats"
+    ],
+    "answer": 2,
+    "explanation": "'Stolarna' is plural; Group 1 verbs inflect as -ad (en), -at (ett), -ade (plural)."
+   }
+  ],
+  "tip": "Test the auxiliary: if you see 'har' or 'hade', use the unchanging supinum (-t); if you see 'är', 'var', or 'blev', treat the participle like an adjective and match the noun."
+ },
+ {
+  "id": "sv-b1-present-participle-and-gerundial-forms",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🏃",
+  "title": "The -ande/-ende Present Participle",
+  "subtitle": "Forming descriptive participles and avoiding English continuous tense transfer",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Swedish present participles ending in -ande or -ende function purely as adjectives or adverbs, never as progressive verb tenses like English '-ing'.",
+  "structure": {
+   "headers": [
+    "Infinitive Ending",
+    "Suffix",
+    "Participle Example",
+    "Function / Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Group 1 (-ar verbs: tala)",
+      "-ande",
+      "talande",
+      "Adjective: speaking / expressive"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Group 2 & 3 (-er verbs: läsa)",
+      "-ande",
+      "läsande",
+      "Adjective: reading"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Group 4 (short vowel roots: bo, gå)",
+      "-ende",
+      "gående",
+      "Adjective/Noun: walking / pedestrian"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Adverbial use (springa)",
+      "-ande",
+      "Hon kom springande",
+      "Adverb: She came running"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Attributive Adjective",
+    "example": "Vi såg ett lysande exempel på gott ledarskap.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Manner Adverb with Motion Verbs",
+    "example": "Barnen kom skrattande ut från klassrummet.",
+    "translation": ""
+   },
+   {
+    "color": "#1E40AF",
+    "label": "Nominalized Concept or Person",
+    "example": "De gående måste använda övergångsstället.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ett leende barn mötte oss i dörren.",
+    "ko": "",
+    "highlight": "leende"
+   },
+   {
+    "en": "Mannen blev sittande kvar på bänken.",
+    "ko": "",
+    "highlight": "sittande"
+   },
+   {
+    "en": "Hon svarade med en nickande rörelse.",
+    "ko": "",
+    "highlight": "nickande"
+   },
+   {
+    "en": "Det var ett avgörande ögonblick för matchen.",
+    "ko": "",
+    "highlight": "avgörande"
+   },
+   {
+    "en": "Fågeln flög sjungande genom skogen.",
+    "ko": "",
+    "highlight": "sjungande"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jag är läsande en bok nu.",
+    "right": "Jag läser en bok nu.",
+    "note": "Never translate English continuous 'am reading' with a participle; use simple present 'läser' or 'håller på att läsa'."
+   },
+   {
+    "wrong": "Ett gåande spöke dök upp.",
+    "right": "Ett gående spöke dök upp.",
+    "note": "Verbs with roots ending in a stressed vowel take -ende rather than -ande."
+   },
+   {
+    "wrong": "Hon gillar simmande.",
+    "right": "Hon gillar att simma.",
+    "note": "Swedish uses the infinitive with 'att' where English uses gerundial '-ing' as an activity noun."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you correctly say 'I am eating right now' in natural Swedish?",
+    "options": [
+     "Jag är ätande just nu.",
+     "Jag äter just nu.",
+     "Jag håller på ätande just nu.",
+     "Jag är att äta just nu."
+    ],
+    "answer": 1,
+    "explanation": "Swedish expresses ongoing actions using the standard present tense (äter) or 'håller på att äta', never 'är ätande'."
+   },
+   {
+    "question": "Choose the correct participle form for 'tro' (to believe):",
+    "options": [
+     "troende",
+     "troande",
+     "trorande",
+     "trottande"
+    ],
+    "answer": 0,
+    "explanation": "Verbs ending in a stressed root vowel take the suffix -ende (tro -> troende)."
+   },
+   {
+    "question": "Complete: 'Pojken kom ___ mot sin mamma.' (running)",
+    "options": [
+     "sprungit",
+     "springa",
+     "springande",
+     "sprang"
+    ],
+    "answer": 2,
+    "explanation": "Motion verbs like 'komma' take a present participle in -ande/-ende to describe simultaneous manner."
+   },
+   {
+    "question": "Identify the incorrect Swedish sentence:",
+    "options": [
+     "Hon gav mig ett värmande leende.",
+     "De stod diskuterande i hörnet.",
+     "Min bror är arbetande i Stockholm just nu.",
+     "Resultatet var mycket överraskande."
+    ],
+    "answer": 2,
+    "explanation": "'Är arbetande' is an incorrect literal translation of 'is working'; it must be 'Min bror arbetar i Stockholm just nu'."
+   }
+  ],
+  "tip": "If you are tempted to use -ande/-ende as a finite verb after 'är' or 'var', stop! Use simple present/past instead, or 'håller på att + infinitive' for continuous focus."
+ },
+ {
+  "id": "sv-b1-fronting-and-cleft-sentences",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔄",
+  "title": "Topicalization and Cleft Sentences (Det är ... som)",
+  "subtitle": "Fronting elements with V2 word order and clefting for contrastive emphasis",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Fronting any non-subject element triggers obligatory V2 inversion, while cleft sentences use 'Det är/var X som...' to isolate and emphasize a specific focus.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Construction Pattern",
+    "Example Sentence",
+    "Focus / Effect"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Neutral SVO",
+      "Subj + V + Obj + Adv",
+      "Lisa köpte bilen igår.",
+      "Neutral statement"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Topicalization (Fronting)",
+      "Adv/Obj + V + Subj ...",
+      "Igår köpte Lisa bilen.",
+      "Emphasis on time; strict V2 inversion"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Subject Cleft",
+      "Det är [Subj] som + V ...",
+      "Det var Lisa som köpte bilen.",
+      "Contrastive focus on the actor"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adverbial Cleft",
+      "Det är [Adv] som + Subj + V ...",
+      "Det var igår som Lisa köpte bilen.",
+      "Contrastive focus on the time"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Time/Place Fronting",
+    "example": "I morgon åker hela familjen till fjällen.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Contrastive Focus Cleft",
+    "example": "Det är min syster som bor i Göteborg, inte jag.",
+    "translation": ""
+   },
+   {
+    "color": "#5B21B6",
+    "label": "Correcting False Assumptions",
+    "example": "Det var faktiskt Peter som ringde polisen.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Den här boken har jag läst två gånger.",
+    "ko": "",
+    "highlight": "Den här boken har jag läst"
+   },
+   {
+    "en": "Det är Johan som talar flytande spanska.",
+    "ko": "",
+    "highlight": "Det är Johan som talar"
+   },
+   {
+    "en": "På fredag ska vi äta middag tillsammans.",
+    "ko": "",
+    "highlight": "På fredag ska vi äta"
+   },
+   {
+    "en": "Det var i Stockholm som vi träffades första gången.",
+    "ko": "",
+    "highlight": "Det var i Stockholm som vi träffades"
+   },
+   {
+    "en": "Henne känner jag inte alls.",
+    "ko": "",
+    "highlight": "Henne känner jag inte"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Igår jag träffade Maria.",
+    "right": "Igår träffade jag Maria.",
+    "note": "Swedish strictly enforces V2 word order; fronting an adverbial forces the finite verb before the subject."
+   },
+   {
+    "wrong": "Det är honom vem vann tävlingen.",
+    "right": "Det är han som vann tävlingen.",
+    "note": "Swedish clefts use 'som' as the universal subordinator; interrogative 'vem' cannot be used here."
+   },
+   {
+    "wrong": "Det är i morgon när vi ska resa.",
+    "right": "Det är i morgon som vi ska resa.",
+    "note": "Even when emphasizing time in a cleft sentence, the relative connector remains 'som', not 'när'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Front the object: 'Jag gillar inte den här filmen.' -> '___'",
+    "options": [
+     "Den här filmen gillar jag inte.",
+     "Den här filmen jag gillar inte.",
+     "Den här filmen inte gillar jag.",
+     "Den här filmen jag inte gillar."
+    ],
+    "answer": 0,
+    "explanation": "Fronting the object 'Den här filmen' places the finite verb 'gillar' in second position, followed by the subject 'jag'."
+   },
+   {
+    "question": "Complete the cleft sentence to emphasize 'Maria': 'Det är Maria ___ ringde.'",
+    "options": [
+     "vem",
+     "som",
+     "att",
+     "vilken"
+    ],
+    "answer": 1,
+    "explanation": "Cleft sentences (brytningar) in Swedish invariably employ 'som' to introduce the subordinate clause."
+   },
+   {
+    "question": "Choose the correctly inverted sentence after fronting an adverbial:",
+    "options": [
+     "Plötsligt hörde vi ett märkligt ljud.",
+     "Plötsligt vi hörde ett märkligt ljud.",
+     "Plötsligt vi ett märkligt ljud hörde.",
+     "Plötsligt hörde ett märkligt ljud vi."
+    ],
+    "answer": 0,
+    "explanation": "Adverbial first triggers V2: Adverbial (Plötsligt) + Finite Verb (hörde) + Subject (vi)."
+   },
+   {
+    "question": "Which sentence correctly clefts 'i fjol' (last year)?",
+    "options": [
+     "Det var i fjol när vi flyttade hit.",
+     "Det var i fjol som vi flyttade hit.",
+     "Det var i fjol då vi flyttade hit.",
+     "Det är i fjol att vi flyttade hit."
+    ],
+    "answer": 1,
+    "explanation": "'Det var [tid] som...' is the correct construction; Swedish cleft clauses rely on 'som', not 'när' or 'då'."
+   }
+  ],
+  "tip": "Whenever you begin a Swedish sentence with anything other than the subject, check immediately if your finite verb sits safely in slot 2!"
+ },
+ {
+  "id": "sv-b1-relative-clauses-som-vs-vars-där",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔗",
+  "title": "Relative Pronoun 'Som' and Preposition Stranding",
+  "subtitle": "Mastering invariable 'som', genitive 'vars', and sentence-final prepositions",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Swedish uses the invariable relative marker 'som' for both people and things, stranding any governing prepositions at the very end of the relative clause.",
+  "structure": {
+   "headers": [
+    "Relative Marker",
+    "Role / Reference",
+    "Swedish Example",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "som (subject)",
+      "Actor in relative clause",
+      "Kvinnan som talar är lärare.",
+      "The woman who is speaking..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "som + stranding",
+      "Prepositional object",
+      "Huset som vi bor i är gammalt.",
+      "The house (which) we live in..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "vars",
+      "Possessive / Genitive",
+      "En författare vars böcker säljer...",
+      "An author whose books sell..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "där / dit",
+      "Location / Direction",
+      "Staden där han växte upp...",
+      "The city where he grew up..."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Subject / Object Relative",
+    "example": "Boken som ligger på bordet är min.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Preposition Stranding",
+    "example": "Flickan som han pratade med heter Sara.",
+    "translation": ""
+   },
+   {
+    "color": "#5B21B6",
+    "label": "Genitive Antecedent",
+    "example": "Vi träffade en man vars son studerar i Uppsala.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Datorn som jag köpte igår fungerar perfekt.",
+    "ko": "",
+    "highlight": "som jag köpte igår"
+   },
+   {
+    "en": "Här är restaurangen som vi åt på i lördags.",
+    "ko": "",
+    "highlight": "som vi åt på"
+   },
+   {
+    "en": "Det var ett problem vars lösning krävde tid.",
+    "ko": "",
+    "highlight": "vars lösning"
+   },
+   {
+    "en": "Mannen som du ser där borta är min farbror.",
+    "ko": "",
+    "highlight": "som du ser"
+   },
+   {
+    "en": "Filmen som alla pratar om har vunnit flera priser.",
+    "ko": "",
+    "highlight": "som alla pratar om"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mannen med vem jag talade är snäll.",
+    "right": "Mannen som jag talade med är snäll.",
+    "note": "Swedish avoids pied-piping like 'med vem'; use 'som' and strand the preposition 'med' at the end."
+   },
+   {
+    "wrong": "Huset vilkets tak läcker är sålt.",
+    "right": "Huset vars tak läcker är sålt.",
+    "note": "Use 'vars' for relative possession ('whose') for both persons and inanimate nouns."
+   },
+   {
+    "wrong": "Kvinnan som bor i Malmö hon är läkare.",
+    "right": "Kvinnan som bor i Malmö är läkare.",
+    "note": "Do not insert a redundant resumptive pronoun ('hon') after the relative clause."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'Tåget ___ vi väntar på är försenat.'",
+    "options": [
+     "som",
+     "vad",
+     "vem",
+     "vilka"
+    ],
+    "answer": 0,
+    "explanation": "'Som' is the universal restrictive relative pronoun for both objects and persons."
+   },
+   {
+    "question": "Choose the natural Swedish phrasing for 'The boy whose dog ran away':",
+    "options": [
+     "Pojken vems hund sprang bort",
+     "Pojken som hunden sprang bort",
+     "Pojken vars hund sprang bort",
+     "Pojken vilkens hund sprang bort"
+    ],
+    "answer": 2,
+    "explanation": "'Vars' is the relative possessive pronoun meaning 'whose'. 'Vems' is only interrogative."
+   },
+   {
+    "question": "Which sentence demonstrates correct Swedish preposition stranding?",
+    "options": [
+     "Det här är pennan med vilken jag skrev.",
+     "Det här är pennan jag skrev med den.",
+     "Det här är pennan som jag skrev med.",
+     "Det här är pennan som med jag skrev."
+    ],
+    "answer": 2,
+    "explanation": "In Swedish relative clauses, the governing preposition ('med') is stranded at the end of the clause after 'som'."
+   },
+   {
+    "question": "Fill in: 'Skolan ___ mina barn går har en stor trädgård.'",
+    "options": [
+     "där",
+     "dit",
+     "vars",
+     "som"
+    ],
+    "answer": 0,
+    "explanation": "'Där' refers to a static location ('where'); 'dit' denotes movement toward ('whither')."
+   }
+  ],
+  "tip": "Never translate 'the person with whom' literally. Swedish overwhelmingly prefers 'personen som jag pratade med', stranding the preposition naturally at the end."
+ },
+ {
+  "id": "sv-b2-deponent-verbs",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎭",
+  "title": "Deponent and Reciprocal S-Verbs",
+  "subtitle": "Active meaning in passive packaging: deponents vs. reciprocal actions",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Deponent verbs end in -s across all tenses but have exclusively active meanings, whereas reciprocal s-verbs express mutual 'each other' actions.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Infinitive / Present",
+    "Past / Supine",
+    "Meaning & Syntax"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Deponent (Attitude)",
+      "hoppas / hoppas",
+      "hoppades / hoppats",
+      "to hope (strictly active subject)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Deponent (Memory)",
+      "minnas / minns",
+      "mindes / mints",
+      "to remember (active cognitive state)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Deponent (Feeling)",
+      "trivas / trivs",
+      "trivdes / trivts",
+      "to feel comfortable / thrive"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reciprocal Verb",
+      "ses / ses",
+      "sågs / setts",
+      "to see each other (plural subject)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Deponent Mental State",
+    "example": "Jag minns fortfarande vår första resa till Gotland.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Reciprocal Social Action",
+    "example": "Vi träffas på caféet klockan tre.",
+    "translation": ""
+   },
+   {
+    "color": "#1E40AF",
+    "label": "Deponent Habitual Activity",
+    "example": "Hon svettas mycket när hon springer.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Vi hoppas att det slutar regna snart.",
+    "ko": "",
+    "highlight": "hoppas"
+   },
+   {
+    "en": "Han låtsades som om ingenting hade hänt.",
+    "ko": "",
+    "highlight": "låtsades"
+   },
+   {
+    "en": "Hur trivs du på din nya arbetsplats?",
+    "ko": "",
+    "highlight": "trivs"
+   },
+   {
+    "en": "De kramades länge på flygplatsen.",
+    "ko": "",
+    "highlight": "kramades"
+   },
+   {
+    "en": "Jag minns inte vad han heter i efternamn.",
+    "ko": "",
+    "highlight": "minns"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jag hoppar att du mår bra.",
+    "right": "Jag hoppas att du mår bra.",
+    "note": "'Hoppa' means to jump physically; 'hoppas' is the deponent verb meaning to hope."
+   },
+   {
+    "wrong": "Boken minns av mig.",
+    "right": "Jag minns boken.",
+    "note": "'Minnas' is deponent, not a passive voice; it cannot take an agent with 'av'."
+   },
+   {
+    "wrong": "Vi ses oss i morgon.",
+    "right": "Vi ses i morgon.",
+    "note": "Reciprocal -s verbs already encapsulate 'each other' / reflexive meaning; adding 'oss' is ungrammatical."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Jag ___ verkligen på mitt nya jobb.' (thrive/enjoy)",
+    "options": [
+     "trivar",
+     "trivs",
+     "trivas",
+     "triver"
+    ],
+    "answer": 1,
+    "explanation": "The present tense of the deponent verb 'trivas' is 'trivs'."
+   },
+   {
+    "question": "What is the past tense of 'hoppas' (to hope)?",
+    "options": [
+     "hoppade",
+     "hoppte",
+     "hoppades",
+     "hopptes"
+    ],
+    "answer": 2,
+    "explanation": "'Hoppas' belongs to group 1; its preterite form retains the deponent ending: 'hoppades'."
+   },
+   {
+    "question": "Which verb is reciprocal rather than strictly deponent?",
+    "options": [
+     "andas (to breathe)",
+     "enas (to agree with one another)",
+     "svettas (to sweat)",
+     "hoppas (to hope)"
+    ],
+    "answer": 1,
+    "explanation": "'Enas' implies mutual consensus between two or more parties ('to come to an agreement with each other')."
+   },
+   {
+    "question": "Identify the incorrect usage of a deponent verb:",
+    "options": [
+     "Patienten andades lugnt och djupt.",
+     "Vi hörs nästa vecka.",
+     "Han låtsar att han sover.",
+     "De träffades på universitetet."
+    ],
+    "answer": 2,
+    "explanation": "The verb 'låtsas' is deponent in standard Swedish and must keep its -s in the present tense: 'Han låtsas'."
+   }
+  ],
+  "tip": "Remember: 'hoppa' = to jump, 'hoppas' = to hope. Forgetting the -s turns a heartfelt wish into physical bouncing!"
+ },
+ {
+  "id": "sv-b2-modal-discourse-particles",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#F59E0B",
+  "emoji": "💬",
+  "title": "Modal and Pragmatic Particles (Ju, Väl, Nog, Kanske)",
+  "subtitle": "Fine-tuning conversational nuance, epistemic stance, and shared knowledge",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Swedish modal particles like 'ju', 'väl', and 'nog' signal shared assumptions, tentativeness, or probability, placed in the main clause adverbial slot.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Speaker Stance / Pragma",
+    "Swedish Example",
+    "Approximate English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ju",
+      "Shared obvious knowledge",
+      "Du vet ju vad som hände.",
+      "As you know / Obviously..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "väl",
+      "Tentative assumption, seeks agreement",
+      "Du kommer väl i kväll?",
+      "You're coming tonight, aren't you?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "nog",
+      "High subjective probability",
+      "Det ordnar sig nog.",
+      "It will probably / surely work out."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "visst",
+      "Hearsay or realization",
+      "Han har visst slutat.",
+      "Apparently / It seems he quit."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Invoking Common Knowledge (ju)",
+    "example": "Det är ju söndag idag, så butiken är stängd.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Hedging / Checking Assumption (väl)",
+    "example": "Du har väl inte glömt nycklarna?",
+    "translation": ""
+   },
+   {
+    "color": "#92400E",
+    "label": "Cautious Optimism / Probability (nog)",
+    "example": "Tåget är nog bara några minuter sent.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Vi kan inte gå nu, det regnar ju!",
+    "ko": "",
+    "highlight": "regnar ju"
+   },
+   {
+    "en": "Han har väl redan läst rapporten?",
+    "ko": "",
+    "highlight": "har väl"
+   },
+   {
+    "en": "Jag tror att hon kommer nog att klara provet.",
+    "ko": "",
+    "highlight": "kommer nog"
+   },
+   {
+    "en": "Du känner ju min bror sedan tidigare.",
+    "ko": "",
+    "highlight": "känner ju"
+   },
+   {
+    "en": "Det blir nog fint väder till helgen.",
+    "ko": "",
+    "highlight": "blir nog"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ju det är söndag idag.",
+    "right": "Det är ju söndag idag.",
+    "note": "Particles like 'ju' cannot stand first as sentence adverbs; they occupy the middle adverbial position after the verb."
+   },
+   {
+    "wrong": "Du kommer väl, kommer du inte?",
+    "right": "Du kommer väl?",
+    "note": "'Väl' already acts as an epistemic tag question ('right? / aren't you?'); adding an English-style tag is redundant."
+   },
+   {
+    "wrong": "Han är nog inte sjuk, han är död!",
+    "right": "Han är inte nog sjuk...",
+    "note": "'Nog' implies 'probably/supposedly'; do not use it when you state certain, absolute facts."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which particle best conveys 'as everyone knows / obviously': 'Det är ___ inte tillåtet att röka här.'",
+    "options": [
+     "väl",
+     "ju",
+     "nog",
+     "kanske"
+    ],
+    "answer": 1,
+    "explanation": "'Ju' appeals to shared, self-evident knowledge ('as you know / obviously')."
+   },
+   {
+    "question": "You expect an affirmative answer to 'You haven't told anyone, right?'. Choose the best particle: 'Du har ___ inte sagt något till någon?'",
+    "options": [
+     "nog",
+     "ju",
+     "visst",
+     "väl"
+    ],
+    "answer": 3,
+    "explanation": "'Väl' turns a statement into a gentle verification tag expecting confirmation from the listener."
+   },
+   {
+    "question": "Where should 'ju' be placed in this subordinate clause: '...eftersom hon [1] har [2] varit [3] sjuk [4]?'",
+    "options": [
+     "Position 1 (before finite verb)",
+     "Position 2 (after finite verb)",
+     "Position 3 (after past participle)",
+     "Position 4 (at the end)"
+    ],
+    "answer": 0,
+    "explanation": "In Swedish subordinate clauses, modal adverbs obey the BIFF rule (Bifogade satser: Inte/adverb Före Finita verbet) and precede the finite verb: '...eftersom hon ju har varit sjuk'."
+   },
+   {
+    "question": "Choose the best particle for tentative reassurance: 'Oroa dig inte, det löser sig ___.'",
+    "options": [
+     "visst",
+     "heller",
+     "nog",
+     "dock"
+    ],
+    "answer": 2,
+    "explanation": "'Nog' conveys comforting probability or cautious optimism ('probably / surely')."
+   }
+  ],
+  "tip": "Keep the BIFF rule in mind: in main clauses, particles follow the finite verb ('Han kommer ju'); in subordinate clauses, they jump in FRONT of it ('...eftersom han ju kommer')."
+ }
+]

@@ -1,0 +1,3362 @@
+[
+ {
+  "id": "yue-a1-classifier-usage",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔢",
+  "title": "Classifiers with Demonstratives and Numbers",
+  "subtitle": "Mandatory measure words between numbers or demonstratives and nouns",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "In Cantonese, a classifier is strictly mandatory whenever a noun is counted by a number or pointed to with a demonstrative.",
+  "structure": {
+   "headers": [
+    "Pattern",
+    "Cantonese Example",
+    "English Function",
+    "Breakdown"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Numeral + Classifier + Noun",
+      "三個人",
+      "Counting general people or items",
+      "三 (three) + 個 (cl.) + 人 (person)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Demonstrative + Classifier + Noun",
+      "呢條魚",
+      "Specifying a long/slender object",
+      "呢 (this) + 條 (cl.) + 魚 (fish)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Demonstrative + Classifier + Noun",
+      "嗰隻狗",
+      "Specifying an animal",
+      "嗰 (that) + 隻 (cl.) + 狗 (dog)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Classifier + Noun (Definite)",
+      "本書好厚",
+      "Acting like a definite article ('the book')",
+      "本 (cl.) + 書 (book) + 好厚 (is very thick)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Counting people and general items",
+    "example": "我想要兩個蘋果。",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Specifying with demonstratives",
+    "example": "呢條褲好長。",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Counting animals and single limbs",
+    "example": "嗰度有三隻貓。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "呢條裙好靚。",
+    "ko": "",
+    "highlight": "呢條"
+   },
+   {
+    "en": "我有兩隻狗。",
+    "ko": "",
+    "highlight": "兩隻"
+   },
+   {
+    "en": "我想買嗰本書。",
+    "ko": "",
+    "highlight": "嗰本"
+   },
+   {
+    "en": "佢食咗三個橙。",
+    "ko": "",
+    "highlight": "三個"
+   },
+   {
+    "en": "呢支筆寫唔到字。",
+    "ko": "",
+    "highlight": "呢支"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我有三狗。",
+    "right": "我有三隻狗。",
+    "note": "Cantonese requires an appropriate classifier between a numeral and a noun; bare counting is ungrammatical."
+   },
+   {
+    "wrong": "呢人好高。",
+    "right": "呢個人好高。",
+    "note": "Demonstratives like 呢 (this) or 嗰 (that) cannot attach directly to nouns without a classifier."
+   },
+   {
+    "wrong": "我買咗一條書。",
+    "right": "我買咗一本書。",
+    "note": "Classifiers must match the physical shape or semantic class; books take 本, not the long/flexible classifier 條."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase for 'three apples':",
+    "options": [
+     "三個蘋果",
+     "三蘋果",
+     "三條蘋果",
+     "三隻蘋果"
+    ],
+    "answer": 0,
+    "explanation": "General round fruits like apples take the default/round classifier 個."
+   },
+   {
+    "question": "Choose the correct sentence for 'This dog is very cute':",
+    "options": [
+     "呢狗好得意。",
+     "呢隻狗好得意。",
+     "呢條狗好得意。",
+     "呢本狗好得意。"
+    ],
+    "answer": 1,
+    "explanation": "Animals typically take the classifier 隻."
+   },
+   {
+    "question": "Which sentence correctly says 'I bought that book'?",
+    "options": [
+     "我買咗嗰人書。",
+     "我買咗嗰條書。",
+     "我買咗嗰隻書。",
+     "我買咗嗰本書。"
+    ],
+    "answer": 3,
+    "explanation": "Bound volumes like books and magazines take the classifier 本."
+   },
+   {
+    "question": "Fill in the blank: 'There is one river over there' (嗰度有__河。)",
+    "options": [
+     "一個",
+     "一隻",
+     "一條",
+     "一本"
+    ],
+    "answer": 2,
+    "explanation": "Long, winding, or flexible entities like rivers, pants, and fish use 條."
+   }
+  ],
+  "tip": "When in doubt for objects or people, 個 is the most common general classifier, but learning shape-based ones like 條 (long/flexible) and 隻 (animals) will dramatically improve naturalness."
+ },
+ {
+  "id": "yue-a1-basic-negation",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🚫",
+  "title": "Basic Negation with 唔 and 冇",
+  "subtitle": "Distinguishing stative or habitual negation from existential and past negation",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use 唔 to negate states, habits, or future intentions, and use 冇 to negate possession or the completion of past actions.",
+  "structure": {
+   "headers": [
+    "Negator",
+    "Function",
+    "Cantonese Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "唔",
+      "Negating adjectives/states",
+      "今日唔凍",
+      "Today is not cold"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "唔",
+      "Refusal, habit, or future",
+      "我唔食牛肉",
+      "I do not eat beef (habit/choice)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "冇",
+      "Lack of possession",
+      "我冇錢",
+      "I do not have money"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "冇",
+      "Past action did not happen",
+      "佢尋日冇嚟",
+      "He did not come yesterday"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Describing non-existence or lack",
+    "example": "雪櫃入面冇牛奶。",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Declining an action or stating a habit",
+    "example": "我平時唔飲咖啡。",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Stating that a past action did not occur",
+    "example": "我琴晚冇睇電視。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "佢唔係我嘅老師。",
+    "ko": "",
+    "highlight": "唔係"
+   },
+   {
+    "en": "我今日冇食早餐。",
+    "ko": "",
+    "highlight": "冇食"
+   },
+   {
+    "en": "呢杯茶唔熱。",
+    "ko": "",
+    "highlight": "唔熱"
+   },
+   {
+    "en": "我冇去過日本。",
+    "ko": "",
+    "highlight": "冇去過"
+   },
+   {
+    "en": "我聽日唔返工。",
+    "ko": "",
+    "highlight": "唔返工"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我唔有錢。",
+    "right": "我冇錢。",
+    "note": "To negate possession (have), Cantonese uses 冇, never 唔有."
+   },
+   {
+    "wrong": "我琴日唔去學校。",
+    "right": "我琴日冇去學校。",
+    "note": "Past events that did not take place must be negated with 冇, while 唔 marks general unwillingness or present/future habits."
+   },
+   {
+    "wrong": "佢冇係學生。",
+    "right": "佢唔係學生。",
+    "note": "The copula 係 is negated with 唔 (唔係), never 冇."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I do not drink alcohol' (as a rule or habit)?",
+    "options": [
+     "我冇飲酒。",
+     "我唔飲酒。",
+     "我未飲酒。",
+     "我咪飲酒。"
+    ],
+    "answer": 1,
+    "explanation": "Habitual actions and preferences are negated with 唔."
+   },
+   {
+    "question": "How do you say 'He did not buy bread yesterday'?",
+    "options": [
+     "佢琴日唔買麵包。",
+     "佢琴日咪買麵包。",
+     "佢琴日冇買麵包。",
+     "佢琴日莫買麵包。"
+    ],
+    "answer": 2,
+    "explanation": "Past completed actions that did not happen require 冇."
+   },
+   {
+    "question": "Fill in the blank: 'I do not have a car' (我__車。)",
+    "options": [
+     "唔",
+     "冇",
+     "咪",
+     "非"
+    ],
+    "answer": 1,
+    "explanation": "Possession is negated solely by 冇 ('to not have')."
+   },
+   {
+    "question": "Fill in the blank: 'This soup is not spicy' (呢個湯__辣。)",
+    "options": [
+     "冇",
+     "未",
+     "唔",
+     "咪"
+    ],
+    "answer": 2,
+    "explanation": "Adjectives (states) are negated using 唔."
+   }
+  ],
+  "tip": "Think of 冇 as 'did not' or 'not have', and 唔 as 'do not', 'will not', or 'is not'."
+ },
+ {
+  "id": "yue-a1-sentence-final-particles-basics",
+  "level": "a1",
+  "category": "questions",
+  "categoryColor": "#F59E0B",
+  "emoji": "💬",
+  "title": "Foundational Sentence-Final Particles (呀, 喎, 啦, 咩)",
+  "subtitle": "Essential particles for tone, softening, suggestion, and disbelief",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Cantonese sentence-final particles attach to the end of a clause to express mood, question type, softened directives, or surprise without changing core syntax.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Function",
+    "Cantonese Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "呀",
+      "Friendly inquiry or softened statement",
+      "你食咗飯未呀？",
+      "Have you eaten yet? (gentle)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "啦",
+      "Friendly imperative, suggestion, or agreement",
+      "我哋一齊行啦！",
+      "Let's walk together!"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "咩",
+      "Surprise, incredulity, or rhetorical question",
+      "你唔知咩？",
+      "You didn't know!? (really?)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "喎",
+      "Reported speech or unexpected new realization",
+      "佢話聽日落雨喎。",
+      "He says it will rain tomorrow, apparently."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Making a polite suggestion or urging action",
+    "example": "飲杯茶啦。",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Expressing incredulity or doubt",
+    "example": "佢真係會嚟咩？",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Reporting hearsay or sudden observation",
+    "example": "原來你識講廣東話喎！",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "快啲行啦！",
+    "ko": "",
+    "highlight": "啦"
+   },
+   {
+    "en": "你好嗎呀？",
+    "ko": "",
+    "highlight": "呀"
+   },
+   {
+    "en": "你真係唔去咩？",
+    "ko": "",
+    "highlight": "咩"
+   },
+   {
+    "en": "天文台話今日好凍喎。",
+    "ko": "",
+    "highlight": "喎"
+   },
+   {
+    "en": "食呢個啦，好食啲呀。",
+    "ko": "",
+    "highlight": "啦"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "你唔知啦？",
+    "right": "你唔知咩？",
+    "note": "啦 is for suggestions or completion; to express surprise or disbelief ('Don't you know?!'), use 咩."
+   },
+   {
+    "wrong": "我哋走咩！",
+    "right": "我哋走啦！",
+    "note": "To suggest 'Let's go!', use the imperative/cohortative particle 啦, not 咩."
+   },
+   {
+    "wrong": "佢話唔嚟呀喎係嗎？",
+    "right": "佢話唔嚟喎。",
+    "note": "喎 already conveys reported speech ('he said that...'); stacking redundant question tags is unnatural."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which particle best completes a friendly suggestion: 'Let's eat together!' (一齊食飯__) ?",
+    "options": [
+     "咩",
+     "啦",
+     "喎",
+     "吓"
+    ],
+    "answer": 1,
+    "explanation": "啦 is the standard particle for friendly prompts and suggestions ('Let's...')."
+   },
+   {
+    "question": "Which particle expresses shock or disbelief: 'Is he really not coming?!' (佢真係唔嚟__) ?",
+    "options": [
+     "咩",
+     "啦",
+     "呀",
+     "喎"
+    ],
+    "answer": 0,
+    "explanation": "咩 turns a statement into a rhetorical question indicating disbelief or surprise."
+   },
+   {
+    "question": "How do you gently report what someone else stated: 'He said he is very busy' (佢話好忙__) ?",
+    "options": [
+     "啦",
+     "咩",
+     "喎",
+     "呀"
+    ],
+    "answer": 2,
+    "explanation": "喎 marks reported speech, hearsay, or information learned from an external source."
+   },
+   {
+    "question": "Which sentence softens a friendly question: 'What is your name?'",
+    "options": [
+     "你叫咩名啦？",
+     "你叫咩名喎？",
+     "你叫咩名咩？",
+     "你叫咩名呀？"
+    ],
+    "answer": 3,
+    "explanation": "呀 is frequently added to open-ended questions to make them warm and polite."
+   }
+  ],
+  "tip": "Sentence-final particles act like spoken punctuation marks and emojis; dropping them entirely makes speech sound abrupt or robotic."
+ },
+ {
+  "id": "yue-a1-ditransitive-word-order",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🎁",
+  "title": "Ditransitive Word Order (Verb + Direct Object + Indirect Object)",
+  "subtitle": "Placing the direct object before the recipient in giving constructions",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Unlike English and Mandarin, Cantonese ditransitive verbs typically put the direct object (the thing given) before the indirect object (the recipient).",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Verb",
+    "Direct Object (Thing)",
+    "Indirect Object (Recipient)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "我",
+      "畀",
+      "一本書",
+      "你"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "佢",
+      "找",
+      "十蚊",
+      "我"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "阿媽",
+      "遞",
+      "支筆",
+      "細佬"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "老師",
+      "派",
+      "功課",
+      "學生"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Giving an item to someone",
+    "example": "請畀杯水我。",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Returning change or money",
+    "example": "收銀員找返十蚊我。",
+    "translation": ""
+   },
+   {
+    "color": "#0F766E",
+    "label": "Handing an object across",
+    "example": "遞個電話畀我。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "我畀個蘋果你。",
+    "ko": "",
+    "highlight": "畀個蘋果你"
+   },
+   {
+    "en": "佢畀咗兩百蚊我。",
+    "ko": "",
+    "highlight": "畀咗兩百蚊我"
+   },
+   {
+    "en": "唔該畀張紙我。",
+    "ko": "",
+    "highlight": "畀張紙我"
+   },
+   {
+    "en": "阿爸畀咗架車我。",
+    "ko": "",
+    "highlight": "畀咗架車我"
+   },
+   {
+    "en": "老闆找少咗五蚊我。",
+    "ko": "",
+    "highlight": "找少咗五蚊我"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我畀你一本書。",
+    "right": "我畀一本書你。",
+    "note": "Mandarin and English place the recipient first, but native Cantonese puts the direct object before the recipient."
+   },
+   {
+    "wrong": "唔該畀我杯水。",
+    "right": "唔該畀杯水我。",
+    "note": "In natural Cantonese, the item requested (杯水) must precede the person receiving it (我)."
+   },
+   {
+    "wrong": "佢找我十蚊。",
+    "right": "佢找十蚊我。",
+    "note": "Change-giving verbs like 找 follow the identical Direct Object + Indirect Object sequence."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'Please give me a pen'?",
+    "options": [
+     "唔該畀我支筆。",
+     "唔該畀支筆我。",
+     "唔該支筆畀我。",
+     "唔該我畀支筆。"
+    ],
+    "answer": 1,
+    "explanation": "Cantonese requires Verb (畀) + Direct Object (支筆) + Recipient (我)."
+   },
+   {
+    "question": "Choose the natural Cantonese sentence for 'He gave you three apples':",
+    "options": [
+     "佢畀你三個蘋果。",
+     "佢三個蘋果畀你。",
+     "佢畀三個蘋果你。",
+     "佢三個蘋果你畀。"
+    ],
+    "answer": 2,
+    "explanation": "The direct object (三個蘋果) must precede the recipient (你)."
+   },
+   {
+    "question": "Fill in the blank to say 'Mom gave me a present': 阿媽畀咗___。",
+    "options": [
+     "一份禮物我",
+     "我一份禮物",
+     "禮物我一份",
+     "我禮物一份"
+    ],
+    "answer": 0,
+    "explanation": "The gift (一份禮物) comes before the recipient (我)."
+   },
+   {
+    "question": "Which of the following is correct Cantonese word order?",
+    "options": [
+     "找我兩蚊",
+     "兩蚊找我",
+     "我找兩蚊",
+     "找兩蚊我"
+    ],
+    "answer": 3,
+    "explanation": "Verb (找) + Direct Object (兩蚊) + Recipient (我) is the standard ditransitive order."
+   }
+  ],
+  "tip": "Remember the formula: 'Give + THING + PERSON' — exactly inverted from the English 'Give me that!'"
+ },
+ {
+  "id": "yue-a1-progressive-continuous-aspect",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "⏳",
+  "title": "Continuous and Progressive Aspect (緊 and 住)",
+  "subtitle": "Distinguishing dynamic actions in progress from static resulting states",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Attach 緊 directly after a verb to express an action currently taking place, and attach 住 to mark a sustained state resulting from an action.",
+  "structure": {
+   "headers": [
+    "Aspect Marker",
+    "Type of State",
+    "Cantonese Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "緊",
+      "Active dynamic ongoing process",
+      "我食緊飯",
+      "I am currently eating a meal"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "住",
+      "Static posture or sustained state",
+      "佢坐住喺度",
+      "He is sitting down here"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "住",
+      "Holding/wearing state",
+      "佢著住件褸",
+      "She is wearing a coat"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "住 + V2",
+      "Background continuous action",
+      "佢聽住歌做運動",
+      "He exercises while listening to music"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Dynamic action happening right now",
+    "example": "我睇緊電視，陣間傾啦。",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Continuous physical state or wearing clothes",
+    "example": "佢戴住副眼鏡。",
+    "translation": ""
+   },
+   {
+    "color": "#5B21B6",
+    "label": "Background action accompanying another action",
+    "example": "我哋行住講啦。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "佢跑緊步。",
+    "ko": "",
+    "highlight": "跑緊"
+   },
+   {
+    "en": "門口開住。",
+    "ko": "",
+    "highlight": "開住"
+   },
+   {
+    "en": "我著住新鞋。",
+    "ko": "",
+    "highlight": "著住"
+   },
+   {
+    "en": "爸爸講緊電話。",
+    "ko": "",
+    "highlight": "講緊"
+   },
+   {
+    "en": "你坐住等我一陣啦。",
+    "ko": "",
+    "highlight": "坐住"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我食住飯。",
+    "right": "我食緊飯。",
+    "note": "To indicate the ongoing physical process of eating right now, use progressive 緊, not durative 住."
+   },
+   {
+    "wrong": "佢戴緊眼鏡。",
+    "right": "佢戴住眼鏡。",
+    "note": "To express the ongoing state of wearing glasses, Cantonese uses 住; 戴緊 means the literal dynamic movement of putting them onto one's face."
+   },
+   {
+    "wrong": "我正食飯。",
+    "right": "我食緊飯。",
+    "note": "Unlike Mandarin 在 or 正在, Cantonese places 緊 immediately after the verb."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I am currently reading a book'?",
+    "options": [
+     "我睇住書。",
+     "我睇過書。",
+     "我睇咗書。",
+     "我睇緊書。"
+    ],
+    "answer": 3,
+    "explanation": "An active dynamic action in progress requires the verbal suffix 緊."
+   },
+   {
+    "question": "How do you say 'The window is open' (in an open state)?",
+    "options": [
+     "個窗開緊。",
+     "個窗開住。",
+     "個窗開晒。",
+     "個窗開埋。"
+    ],
+    "answer": 1,
+    "explanation": "住 expresses a continuous resulting state without active movement."
+   },
+   {
+    "question": "Fill in the blank: 'He is wearing a red shirt' (佢__件紅色衫。)",
+    "options": [
+     "著緊",
+     "著咗",
+     "著住",
+     "著過"
+    ],
+    "answer": 2,
+    "explanation": "States of wearing apparel or accessories are marked by 住."
+   },
+   {
+    "question": "Which sentence means 'Let's chat while walking'?",
+    "options": [
+     "我哋行緊講啦。",
+     "我哋行住講啦。",
+     "我哋行咗講啦。",
+     "我哋行過講啦。"
+    ],
+    "answer": 1,
+    "explanation": "Verb 1 + 住 + Verb 2 describes an ongoing background activity accompanying the main action."
+   }
+  ],
+  "tip": "If someone is mid-motion doing something, use 緊; if the action is done and they are simply staying in that state (sitting, wearing, holding), use 住."
+ },
+ {
+  "id": "yue-a1-basic-comparison",
+  "level": "a1",
+  "category": "advanced",
+  "categoryColor": "#4B5563",
+  "emoji": "⚖️",
+  "title": "Comparative Structures with 過",
+  "subtitle": "Comparing two items using the post-adjectival marker 過",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "In Cantonese, comparisons place the adjective before the comparative marker 過 in the pattern: X + Adjective + 過 + Y.",
+  "structure": {
+   "headers": [
+    "Item X",
+    "Adjective",
+    "過 + Item Y",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "哥哥",
+      "高",
+      "過細佬",
+      "Older brother is taller than younger brother"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "今日",
+      "凍",
+      "過琴日",
+      "Today is colder than yesterday"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "呢部電話",
+      "貴",
+      "過嗰部",
+      "This phone is more expensive than that one"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "搭地鐵",
+      "快",
+      "過搭巴士",
+      "Taking the MTR is faster than taking the bus"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Physical attributes",
+    "example": "我高過你好多。",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Price and quality",
+    "example": "呢件衫貴過嗰件。",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Speed and efficiency",
+    "example": "搭的士快過行路。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "我哥哥高過我。",
+    "ko": "",
+    "highlight": "高過"
+   },
+   {
+    "en": "呢度嘅嘢食好食過嗰間餐廳。",
+    "ko": "",
+    "highlight": "好食過"
+   },
+   {
+    "en": "廣東話難學過英文。",
+    "ko": "",
+    "highlight": "難學過"
+   },
+   {
+    "en": "今日天氣凍過琴日好多。",
+    "ko": "",
+    "highlight": "凍過"
+   },
+   {
+    "en": "搭飛機貴過搭火車好多倍。",
+    "ko": "",
+    "highlight": "貴過"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我過你高。",
+    "right": "我高過你。",
+    "note": "Unlike Mandarin's 比 structure (X 比 Y 高), Cantonese places the adjective before 過."
+   },
+   {
+    "wrong": "今日好凍過琴日。",
+    "right": "今日凍過琴日好多。",
+    "note": "Do not put degree adverbs like 好 directly before the adjective in a 過 comparison; place modifiers like 好多 after."
+   },
+   {
+    "wrong": "呢個雪糕甜比起嗰個。",
+    "right": "呢個雪糕甜過嗰個。",
+    "note": "Natural colloquial Cantonese relies on 過 rather than Mandarin-style 比起 for everyday comparisons."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct sentence for 'This book is thicker than that one':",
+    "options": [
+     "呢本書厚過嗰本。",
+     "呢本書過嗰本厚。",
+     "呢本書比嗰本厚過。",
+     "呢本書好厚過嗰本。"
+    ],
+    "answer": 0,
+    "explanation": "The standard Cantonese comparison follows [Subject + Adjective + 過 + Object]."
+   },
+   {
+    "question": "Complete the comparison: 'My older sister is older than me' -> 我家姐 ___ 我。",
+    "options": [
+     "大",
+     "過大",
+     "大過",
+     "比大"
+    ],
+    "answer": 2,
+    "explanation": "大過 combines the adjective 大 (old/older) with the marker 過."
+   },
+   {
+    "question": "Which sentence correctly says 'Taking the subway is faster than taking the bus'?",
+    "options": [
+     "搭地鐵過搭巴士快。",
+     "搭地鐵好快搭巴士。",
+     "搭巴士快過搭地鐵。",
+     "搭地鐵快過搭巴士。"
+    ],
+    "answer": 3,
+    "explanation": "搭地鐵 is the subject, followed by 快 (fast) + 過 + comparator (搭巴士)."
+   },
+   {
+    "question": "To say 'Today is much hotter than yesterday', choose the natural Cantonese phrase:",
+    "options": [
+     "今日好熱過琴日。",
+     "今日熱過琴日好多。",
+     "今日過琴日熱好多。",
+     "今日熱得多琴日。"
+    ],
+    "answer": 1,
+    "explanation": "Degree markers like 好多 (much) follow the comparative predicate rather than preceding the adjective."
+   }
+  ],
+  "tip": "Remember: Cantonese places the adjective first (高過, 快過, 貴過), which is the exact reverse order of Mandarin (比...高, 比...快)."
+ },
+ {
+  "id": "yue-a2-experiential-perfective-aspect",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "⏱️",
+  "title": "Experiential and Perfective Aspect Markers (咗 and 過)",
+  "subtitle": "Distinguishing completed actions (咗) from life experiences (過)",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Attach 咗 immediately to a verb to mark completion of a specific event, but use 過 to indicate an indefinite life experience that has happened at least once.",
+  "structure": {
+   "headers": [
+    "Aspect Marker",
+    "Meaning",
+    "Example",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "咗",
+      "Completed action / event finished",
+      "我食咗飯喇。",
+      "I have eaten / I ate (dinner)."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "過",
+      "Experiential / ever done before",
+      "我食過蛇羹。",
+      "I have eaten snake soup before (ever)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "未...過",
+      "Negative experiential (never)",
+      "我未去過日本。",
+      "I have never been to Japan."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "仲未 / 未",
+      "Negative perfective (not yet)",
+      "我仲未食飯。",
+      "I have not eaten yet."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Recent completion",
+    "example": "佢啱啱出咗去買嘢。",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Life milestone / travel",
+    "example": "你去過外國讀書未呀？",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Negative experience",
+    "example": "我從來都未試過咁做。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "我琴晚睇咗嗰套戲。",
+    "ko": "",
+    "highlight": "睇咗"
+   },
+   {
+    "en": "你睇過呢套戲未呀？",
+    "ko": "",
+    "highlight": "睇過"
+   },
+   {
+    "en": "佢飲咗杯咖啡，所以瞓唔着。",
+    "ko": "",
+    "highlight": "飲咗"
+   },
+   {
+    "en": "我以前飲過貓屎咖啡，味道好特別。",
+    "ko": "",
+    "highlight": "飲過"
+   },
+   {
+    "en": "媽媽已經買咗今晚嘅餸。",
+    "ko": "",
+    "highlight": "買咗"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我去咗日本好多次，好鍾意嗰度。",
+    "right": "我去過日本好多次，好鍾意嗰度。",
+    "note": "Talking about lifetime occurrences or visits requires the experiential aspect 過, not the simple completion marker 咗."
+   },
+   {
+    "wrong": "我食過早餐喇，而家唔肚餓。",
+    "right": "我食咗早餐喇，而家唔肚餓。",
+    "note": "Breakfast today is a completed event relevant to your current state, so use 咗."
+   },
+   {
+    "wrong": "我冇去過日本。（colloquial context）",
+    "right": "我未去過日本。",
+    "note": "To negate experiential 過, Cantonese uses 未 (not yet / never) instead of 冇."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you ask someone 'Have you ever been to Hong Kong before?'",
+    "options": [
+     "你去咗香港未呀？",
+     "你去過香港未呀？",
+     "你有冇去咗香港？",
+     "你過香港去未？"
+    ],
+    "answer": 1,
+    "explanation": "Asking about lifetime experience uses 去過...未呀 (have you ever gone... yet?)."
+   },
+   {
+    "question": "To state 'I finished drinking the medicine', which verb phrase fits best?",
+    "options": [
+     "飲完過",
+     "飲咗",
+     "飲過未",
+     "過飲咗"
+    ],
+    "answer": 1,
+    "explanation": "Completing a specific action in context calls for the perfective suffix 咗."
+   },
+   {
+    "question": "Fill in the blank: 'I have never tried eating durian': 我從來都未 ___ 榴槤。",
+    "options": [
+     "食緊",
+     "食咗",
+     "食完",
+     "食過"
+    ],
+    "answer": 3,
+    "explanation": "未...過 forms the negative experiential pattern meaning 'have never done'."
+   },
+   {
+    "question": "Identify the sentence that describes a specific completed event today:",
+    "options": [
+     "我琴日買咗部新電腦。",
+     "我細個嗰陣學過琴。",
+     "我未搭過電車。",
+     "佢去過歐洲旅行。"
+    ],
+    "answer": 0,
+    "explanation": "買咗部新電腦 marks the completion of a specific event (yesterday), whereas the others denote general life experiences."
+   }
+  ],
+  "tip": "Think of 咗 as 'done and checked off your to-do list', and 過 as 'been there, done that at some point in your life'."
+ },
+ {
+  "id": "yue-a2-verbal-directional-complements",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🧩",
+  "title": "Directional and Action Complements (埋, 落, 開, 起)",
+  "subtitle": "Expressing inclusion, downward direction, separation, and initiation",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Cantonese verbal suffixes like 埋 (inclusive/together), 落 (downward/continuation), 開 (apart/habitual diversion), and 起 (upward/completion) modify the scope or trajectory of the main action.",
+  "structure": {
+   "headers": [
+    "Complement",
+    "Core Function",
+    "Cantonese Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "埋",
+      "Inclusion / finish all together",
+      "食埋件蛋糕啦。",
+      "Eat up the rest of the cake too."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "落",
+      "Downward motion / adding onto",
+      "坐落張梳化度。",
+      "Sit down onto the sofa."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "開",
+      "Separation / spreading out",
+      "行開一邊。",
+      "Step aside / move away."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "起",
+      "Upward / beginning / completion",
+      "起貨 / 起身",
+      "Get up / finish building"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Including someone / something",
+    "example": "叫埋佢一齊去食飯啦。",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Physical movement away",
+    "example": "請你行開少少，唔該。",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Completing a project/task",
+    "example": "做起呢份功課先好瞓。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "你飲埋呢杯水先走啦。",
+    "ko": "",
+    "highlight": "飲埋"
+   },
+   {
+    "en": "佢擺低咗個袋就坐落地下。",
+    "ko": "",
+    "highlight": "坐落"
+   },
+   {
+    "en": "唔好行開，等我一陣。",
+    "ko": "",
+    "highlight": "行開"
+   },
+   {
+    "en": "我哋要喺聽日之前做起個報告。",
+    "ko": "",
+    "highlight": "做起"
+   },
+   {
+    "en": "你叫埋陳先生一齊開會啦。",
+    "ko": "",
+    "highlight": "叫埋"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "食這件蛋糕一齊。（Mandarin influence）",
+    "right": "食埋呢件蛋糕啦。",
+    "note": "Use 埋 after the verb to mean 'eating the rest / joining in'."
+   },
+   {
+    "wrong": "請你行走少少。",
+    "right": "請你行開少少。",
+    "note": "To tell someone to step aside to clear space, Cantonese uses 行開, not 行走."
+   },
+   {
+    "wrong": "我做完起份功課。",
+    "right": "我做起份功課喇。",
+    "note": "做起 already conveys completing and getting the job ready; do not double up 完 and 起."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you tell a friend to finish up their tea before leaving?",
+    "options": [
+     "飲落呢杯茶啦。",
+     "飲起呢杯茶啦。",
+     "飲開呢杯茶啦。",
+     "飲埋呢杯茶啦。"
+    ],
+    "answer": 3,
+    "explanation": "飲埋 means to drink up the rest / finish up."
+   },
+   {
+    "question": "Fill in the blank to say 'step aside': 請你行 ___ 少少，等架車過。",
+    "options": [
+     "開",
+     "埋",
+     "落",
+     "起"
+    ],
+    "answer": 0,
+    "explanation": "行開 means to step aside or move out of the way."
+   },
+   {
+    "question": "To invite someone along ('Ask Mary along as well'): 叫 ___ Mary 一齊去啦。",
+    "options": [
+     "開",
+     "起",
+     "埋",
+     "落"
+    ],
+    "answer": 2,
+    "explanation": "埋 attached to 叫 indicates including another person in the activity."
+   },
+   {
+    "question": "Which sentence means 'We must complete the project by this afternoon'?",
+    "options": [
+     "我哋今日下晝要起貨。",
+     "我哋今日下晝要做起個項目。",
+     "我哋今日下晝要落埋個項目。",
+     "我哋今日下晝要做開個項目。"
+    ],
+    "answer": 1,
+    "explanation": "做起 denotes finishing and preparing an item or project thoroughly."
+   }
+  ],
+  "tip": "Think of 埋 as the ultimate 'and also / finish the rest' particle—it shows up everywhere in Hong Kong daily life (例如: 睇埋、做埋、叫埋)!"
+ },
+ {
+  "id": "yue-a2-habitual-aspect-marker",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "🔄",
+  "title": "Habitual Aspect with 開",
+  "subtitle": "Expressing regular routines and established habits",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Attaching the aspect suffix 開 immediately after a verb indicates an established custom, habitual preference, or an action someone is used to doing regularly.",
+  "structure": {
+   "headers": [
+    "Verb + 開",
+    "Context",
+    "Cantonese Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "食開",
+      "Regular restaurant / diet",
+      "我食開呢間茶餐廳。",
+      "I usually / regularly eat at this diner."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "睇開",
+      "Regular doctor / media",
+      "佢睇開嗰個家庭醫生。",
+      "He regularly sees that family doctor."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "去開",
+      "Frequented place",
+      "你去開邊間超市買餸？",
+      "Which supermarket do you usually shop at?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "用開",
+      "Familiar brand / tool",
+      "我用開呢隻牌子嘅洗頭水。",
+      "I am used to using this shampoo brand."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Regular patronage",
+    "example": "我幫襯開樓下嗰間士多。",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "While you're at it (opportunistic habit)",
+    "example": "既然去開中環，不如去埋文武廟。",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Longstanding personal habit",
+    "example": "我飲開熱奶茶，唔飲凍嘢。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "我睇開呢個醫生，佢好有經驗。",
+    "ko": "",
+    "highlight": "睇開"
+   },
+   {
+    "en": "你平時去開邊度剪頭髮呀？",
+    "ko": "",
+    "highlight": "去開"
+   },
+   {
+    "en": "佢用開呢款相機，所以好上手。",
+    "ko": "",
+    "highlight": "用開"
+   },
+   {
+    "en": "我食開清淡嘢，唔太食得辣。",
+    "ko": "",
+    "highlight": "食開"
+   },
+   {
+    "en": "我哋坐開呢個位，感覺舒服啲。",
+    "ko": "",
+    "highlight": "坐開"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我常常食呢間餐廳開。",
+    "right": "我食開呢間餐廳。",
+    "note": "開 must attach directly to the verb (食開), not at the very end of the predicate."
+   },
+   {
+    "wrong": "我以前食開辣，但今日淨係食咗一次。",
+    "right": "我以前食開辣，而家戒咗喇。",
+    "note": "開 indicates a prolonged routine or habit, not an isolated single occasion."
+   },
+   {
+    "wrong": "我食緊呢間餐廳。（when referring to a general habit）",
+    "right": "我食開呢間餐廳。",
+    "note": "緊 denotes progressive action right now ('eating right now'), while 開 denotes habitual custom."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you ask someone 'Which doctor do you usually go to?'",
+    "options": [
+     "你睇咗邊個醫生？",
+     "你睇緊邊個醫生？",
+     "你睇過邊個醫生？",
+     "你睇開邊個醫生？"
+    ],
+    "answer": 3,
+    "explanation": "睇開 expresses the doctor one is accustomed to seeing on an ongoing basis."
+   },
+   {
+    "question": "Complete the phrase: 'I am used to drinking this brand of milk': 我飲 ___ 呢隻牌子嘅牛奶。",
+    "options": [
+     "開",
+     "咗",
+     "緊",
+     "過"
+    ],
+    "answer": 0,
+    "explanation": "飲開 marks habitual consumption of a particular item or brand."
+   },
+   {
+    "question": "'Since you're going to Causeway Bay anyway (going there routinely/conveniently)...' translates to:",
+    "options": [
+     "既然你過去銅鑼灣",
+     "既然你去開銅鑼灣",
+     "既然你緊去銅鑼灣",
+     "既然你去咗銅鑼灣"
+    ],
+    "answer": 1,
+    "explanation": "去開 combines habitual route or an already planned direction ('since you're heading/frequenting there')."
+   },
+   {
+    "question": "What is the difference between 我食咗 and 我食開?",
+    "options": [
+     "食咗 is future; 食開 is past.",
+     "食咗 is progressive right now; 食開 is completed.",
+     "食咗 is completed event; 食開 is a habitual routine.",
+     "食咗 is experiential; 食開 is imperative."
+    ],
+    "answer": 2,
+    "explanation": "咗 marks perfective completion of an event; 開 marks habitual ongoing custom."
+   }
+  ],
+  "tip": "If you have a regular barber, coffee shop, or brand you swear by, just slap 開 onto the verb: 剪開, 飲開, 買開!"
+ },
+ {
+  "id": "yue-a2-classifier-definiteness",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#F59E0B",
+  "emoji": "🏷️",
+  "title": "Bare Classifier as Definite Article",
+  "subtitle": "Using standalone classifiers to mean 'the [noun]'",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "In Cantonese, a bare classifier preceding a noun (without any number or demonstrative) naturally functions as the definite article 'the'.",
+  "structure": {
+   "headers": [
+    "Classifier + Noun",
+    "Literal Makeup",
+    "Cantonese Sentence",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "架車",
+      "Vehicle-CL + Car",
+      "架車好污糟。",
+      "The car is very dirty."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "本書",
+      "Volume-CL + Book",
+      "本書喺邊度？",
+      "Where is the book?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "隻碟",
+      "Plate-CL + Plate",
+      "隻碟好熱，小心呀。",
+      "The plate is very hot, be careful."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "條路",
+      "Long-strip-CL + Road",
+      "條路好塞車。",
+      "The road is very congested."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Specific known object",
+    "example": "部電視壞咗，開唔到。",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Salient individual in context",
+    "example": "個人行得好快。",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Referring to an animal",
+    "example": "隻狗係邊個養㗎？",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "架車係爸爸嘅。",
+    "ko": "",
+    "highlight": "架車"
+   },
+   {
+    "en": "間屋好大好舒服。",
+    "ko": "",
+    "highlight": "間屋"
+   },
+   {
+    "en": "件衫洗乾淨未呀？",
+    "ko": "",
+    "highlight": "件衫"
+   },
+   {
+    "en": "隻貓喺張枱下面瞓覺。",
+    "ko": "",
+    "highlight": "隻貓"
+   },
+   {
+    "en": "杯奶茶太甜喇。",
+    "ko": "",
+    "highlight": "杯奶茶"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "這車好污糟。（Mandarin literal phrasing）",
+    "right": "架車好污糟。",
+    "note": "Spoken Cantonese drops the demonstrative entirely and simply uses the bare classifier 架 to mean 'the car'."
+   },
+   {
+    "wrong": "個書喺邊度？",
+    "right": "本書喺邊度？",
+    "note": "You must choose the classifier matched to the noun (本 for books, not the generic 個)."
+   },
+   {
+    "wrong": "架車係好多。（meaning 'cars in general'）",
+    "right": "好多人買車。",
+    "note": "Bare classifier + noun (架車) always refers to a specific, definite entity ('the car'), never general indefinite plurals."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'The cat is sleeping' using a natural bare classifier?",
+    "options": [
+     "貓隻瞓緊覺。",
+     "個貓瞓緊覺。",
+     "隻貓瞓緊覺。",
+     "呢隻貓瞓緊覺一個。"
+    ],
+    "answer": 2,
+    "explanation": "隻 is the appropriate classifier for cats; 隻貓 means 'the cat'."
+   },
+   {
+    "question": "To say 'The house is very big', which classifier correctly pairs with 屋?",
+    "options": [
+     "部屋好大。",
+     "間屋好大。",
+     "條屋好大。",
+     "件屋好大。"
+    ],
+    "answer": 1,
+    "explanation": "Buildings, flats, and rooms take the classifier 間 (間屋 = the house)."
+   },
+   {
+    "question": "What does 杯水 mean in Cantonese when used as the subject of a sentence?",
+    "options": [
+     "Any water in general",
+     "The cup of water",
+     "Many cups of water",
+     "Drinking water"
+    ],
+    "answer": 1,
+    "explanation": "A bare classifier + noun phrase functions definitely to mean 'the specific cup of water'."
+   },
+   {
+    "question": "Choose the most natural way to say 'The shirt is not dry yet':",
+    "options": [
+     "件衫仲未乾。",
+     "個衫仲未乾。",
+     "這衫仲未乾。",
+     "一衫仲未乾。"
+    ],
+    "answer": 0,
+    "explanation": "Clothing uses the classifier 件; 件衫 conveys 'the shirt'."
+   }
+  ],
+  "tip": "English says 'THE car' and Mandarin often says '這輛車', but natural Cantonese just says '架車'. Master this and your Cantonese instantly sounds native!"
+ },
+ {
+  "id": "yue-a2-pretransitive-jeung",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔄",
+  "title": "Disposal Construction with 將",
+  "subtitle": "Fronting the direct object to describe actions that alter its state",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Use 將 to front a definite object before the verb when the action explicitly manipulates, moves, or changes the state of that object.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Marker + Object",
+    "Verb + Result / Direction",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "我",
+      "將部電腦",
+      "整返好喇",
+      "Restoration of state"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "佢",
+      "將啲書",
+      "放喺枱面",
+      "Relocation of items"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "請你",
+      "將度門",
+      "閂埋佢",
+      "Disposal with dummy pronoun"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "阿媽",
+      "將件衫",
+      "洗得好乾淨",
+      "Resultative complement"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Changing Physical Location",
+    "example": "請你將個袋擺喺地下。",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Modifying or Altering State",
+    "example": "佢將份文件改咗好多次。",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Consumption or Complete Disposal",
+    "example": "細路仔將杯牛奶飲晒。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "我將啲衫洗乾淨喇。",
+    "ko": "",
+    "highlight": "將啲衫洗乾淨"
+   },
+   {
+    "en": "請你將杯水遞俾我。",
+    "ko": "",
+    "highlight": "將杯水遞"
+   },
+   {
+    "en": "佢將個密碼話咗俾朋友知。",
+    "ko": "",
+    "highlight": "將個密碼話咗"
+   },
+   {
+    "en": "我哋要將呢部舊冷氣機拆走。",
+    "ko": "",
+    "highlight": "將呢部舊冷氣機拆走"
+   },
+   {
+    "en": "老師將所有功課派返俾學生。",
+    "ko": "",
+    "highlight": "將所有功課派返"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我將本書睇。",
+    "right": "我睇緊本書。",
+    "note": "The verb after 將 cannot stand alone; it requires an aspect marker, directional complement, or resultative phrase showing disposal."
+   },
+   {
+    "wrong": "佢將一條魚好鍾意。",
+    "right": "佢好鍾意魚。",
+    "note": "Statival or emotional verbs like 鍾意 (to like) cannot take the disposal construction because they do not manipulate the object."
+   },
+   {
+    "wrong": "我將一本書擺喺度。",
+    "right": "我將本書擺喺度。",
+    "note": "The fronted object with 將 must be specific or definite, so generic or indefinite noun phrases with 一 are incorrect."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence to mean 'Please put the keys on the table': 請你 ___ 擺喺枱面。",
+    "options": [
+     "將條鎖匙",
+     "睇條鎖匙",
+     "有條鎖匙",
+     "等條鎖匙"
+    ],
+    "answer": 0,
+    "explanation": "The marker 將 brings the definite object '條鎖匙' before the verb '擺' to show relocation."
+   },
+   {
+    "question": "Choose the correct sentence that properly uses 將 with a resultative complement:",
+    "options": [
+     "我將個蘋果食。",
+     "我將個蘋果好甜。",
+     "我將個蘋果食咗。",
+     "我將個蘋果好大。"
+    ],
+    "answer": 2,
+    "explanation": "A sentence using 將 requires an aspect marker or complement like 咗 to complete the disposal."
+   },
+   {
+    "question": "Identify where 將 belongs: 媽媽 ___ 啲菜煮熟咗。",
+    "options": [
+     "邊個",
+     "但係",
+     "如果",
+     "將"
+    ],
+    "answer": 3,
+    "explanation": "將 is placed right after the subject to introduce the fronted object 啲菜."
+   },
+   {
+    "question": "Which verb phrase CANNOT be used with 將?",
+    "options": [
+     "搬去新屋",
+     "抌落垃圾桶",
+     "識得",
+     "切碎"
+    ],
+    "answer": 2,
+    "explanation": "識得 (to know/recognize) is a cognitive stative verb and does not manipulate or dispose of an object."
+   }
+  ],
+  "tip": "Never leave the main verb alone after 將; always attach an ending like 咗, 晒, 走, or a destination phrase like 喺...度."
+ },
+ {
+  "id": "yue-a2-modal-verbs-potential",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#0284C7",
+  "emoji": "🎯",
+  "title": "Potential Complements with 到 and 唔到",
+  "subtitle": "Signaling ability, physical capacity, or achievement of an action",
+  "color": "#0369A1",
+  "bg": "#F0F9FF",
+  "keyPoint": "Attach 到 directly after a verb to express the capacity to succeed in an action, and replace it with 唔到 to state an inability to achieve it.",
+  "structure": {
+   "headers": [
+    "Verb",
+    "Complement",
+    "Object / Context",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "睇",
+      "到",
+      "個招牌",
+      "Able to see / visually perceive"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "睇",
+      "唔到",
+      "個招牌",
+      "Cannot see / unable to perceive"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "買",
+      "到",
+      "平飛",
+      "Managed to purchase"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "去",
+      "唔到",
+      "旅行",
+      "Unable to go (due to circumstances)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Sensory Perception",
+    "example": "你聽唔聽到出面有聲？",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "External Circumstance or Access",
+    "example": "我今日趕唔到過嚟食飯。",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Attaining a Scarce Target",
+    "example": "佢終於買到演唱會飛喇。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "我戴咗眼鏡就睇到好清楚。",
+    "ko": "",
+    "highlight": "睇到"
+   },
+   {
+    "en": "太嘈喇，我聽唔到你講乜嘢。",
+    "ko": "",
+    "highlight": "聽唔到"
+   },
+   {
+    "en": "今晚八點前我返唔到屋企。",
+    "ko": "",
+    "highlight": "返唔到"
+   },
+   {
+    "en": "佢跑得好快，追得到前面架車。",
+    "ko": "",
+    "highlight": "追得到"
+   },
+   {
+    "en": "呢個掣壞咗，撳唔到掣喇。",
+    "ko": "",
+    "highlight": "撳唔到"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我唔可以睇到。",
+    "right": "我睇唔到。",
+    "note": "In Cantonese potential expressions, negate by replacing 到 with 唔到 directly on the verb rather than stacking 唔可以 before it."
+   },
+   {
+    "wrong": "佢買唔得倒飛。",
+    "right": "佢買唔到飛。",
+    "note": "Use standard Cantonese potential complement 到 (or 唔到), not Mandarin-influenced structures like 唔得倒."
+   },
+   {
+    "wrong": "我食飯唔到。",
+    "right": "我食唔到飯。",
+    "note": "The potential particle 唔到 must stick directly to the verb stem, coming before the object."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I cannot hear clearly' in Cantonese?",
+    "options": [
+     "我聽清楚唔得。",
+     "我聽唔到清楚。",
+     "我唔聽得到清楚。",
+     "我聽得唔到清楚。"
+    ],
+    "answer": 1,
+    "explanation": "The negative potential complement 唔到 attaches directly behind the perception verb 聽."
+   },
+   {
+    "question": "Fill in the blank: 地鐵太多人，我上 ___ 車呀！",
+    "options": [
+     "得唔",
+     "唔到",
+     "倒唔",
+     "又到"
+    ],
+    "answer": 1,
+    "explanation": "上唔到 indicates being physically unable to board the train due to overcrowding."
+   },
+   {
+    "question": "Which sentence means 'Did you manage to find your keys?'",
+    "options": [
+     "你搵到條鎖匙未呀？",
+     "你唔搵到條鎖匙？",
+     "你搵鎖匙得到未？",
+     "你鎖匙搵冇到？"
+    ],
+    "answer": 0,
+    "explanation": "搵到 expresses successfully locating an item, and paired with 未 creates a natural question."
+   },
+   {
+    "question": "What is the positive counterpart of 做唔到 (cannot accomplish)?",
+    "options": [
+     "做會到",
+     "做到",
+     "做有到",
+     "做晒到"
+    ],
+    "answer": 1,
+    "explanation": "The affirmative potential form replaces 唔到 directly with 到, yielding 做到."
+   }
+  ],
+  "tip": "Distinguish 唔識 (lacking the learned skill) from 做唔到 (physically prevented by circumstance right now)."
+ },
+ {
+  "id": "yue-b1-passive-constructions",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#DC2626",
+  "emoji": "🛡️",
+  "title": "Passive Voice with 比 and 比人",
+  "subtitle": "Forming adversative and everyday passive constructions",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "Form passives by placing 比 (or 比人 when the agent is anonymous) directly before the agent to highlight actions typically involving misfortune or adversity.",
+  "structure": {
+   "headers": [
+    "Receiver (Patient)",
+    "Passive Marker",
+    "Agent (Doer)",
+    "Verb Phrase",
+    "Note"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "部手機",
+      "比",
+      "細佬",
+      "整爛咗",
+      "Named agent of adversity"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "個銀包",
+      "比人",
+      "（省略）",
+      "偷咗",
+      "Anonymous agent with 比人"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "佢",
+      "比",
+      "老闆",
+      "照肺",
+      "Idiomatic reprimand passive"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "架車",
+      "比",
+      "大雨",
+      "整污糟晒",
+      "Inanimate cause/agent"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Adversity or Damage",
+    "example": "我頂帽比風吹走咗。",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Unknown Culprit (比人)",
+    "example": "佢琴日比人呃咗幾千蚊。",
+    "translation": ""
+   },
+   {
+    "color": "#0891B2",
+    "label": "Unpleasant Interpersonal Action",
+    "example": "小明又比阿媽鬧喇。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "佢杯奶茶比人飲咗一啖。",
+    "ko": "",
+    "highlight": "比人飲咗"
+   },
+   {
+    "en": "間房啱啱比阿哥整亂晒。",
+    "ko": "",
+    "highlight": "比阿哥整亂晒"
+   },
+   {
+    "en": "成個花樽比隻貓打碎咗。",
+    "ko": "",
+    "highlight": "比隻貓打碎咗"
+   },
+   {
+    "en": "個犯人終於比警察拉咗。",
+    "ko": "",
+    "highlight": "比警察拉咗"
+   },
+   {
+    "en": "我份功課比雨水淋濕晒。",
+    "ko": "",
+    "highlight": "比雨水淋濕晒"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "部車被撞咗。",
+    "right": "部車比人撞咗。",
+    "note": "In natural spoken Cantonese, use 比 or 比人 rather than the formal Mandarin loan 被, and specify 人 if the agent is unnamed."
+   },
+   {
+    "wrong": "我比偷咗銀包。",
+    "right": "我個銀包比人偷咗。",
+    "note": "The grammatical subject receiving the passive action must be the entity directly affected (the wallet, not the person directly)."
+   },
+   {
+    "wrong": "佢比讚好叻。",
+    "right": "老師讚佢好叻。",
+    "note": "Cantonese passive voice strongly implies adversity or negative outcome; positive events generally retain active voice."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct way to say 'My umbrella was taken by someone': 我把遮 ___ 拎走咗。",
+    "options": [
+     "被人地",
+     "比人",
+     "受人",
+     "讓個人"
+    ],
+    "answer": 1,
+    "explanation": "比人 is the standard colloquial construction when an unnamed person carries out an undesirable action."
+   },
+   {
+    "question": "Which sentence correctly expresses that a cake was eaten by the dog?",
+    "options": [
+     "個蛋糕狗狗食晒。",
+     "個蛋糕被隻狗飲晒。",
+     "個蛋糕比隻狗食晒。",
+     "個蛋糕把隻狗食咗。"
+    ],
+    "answer": 2,
+    "explanation": "The receiver 個蛋糕 comes first, followed by marker 比, agent 隻狗, and verb predicate 食晒."
+   },
+   {
+    "question": "Why is '小明比阿媽獎勵' unnatural in colloquial Cantonese?",
+    "options": [
+     "Because passive marker 比 is strictly reserved for questions.",
+     "Because passive constructions in Cantonese naturally carry an adversative or negative nuance.",
+     "Because 阿媽 cannot be an agent.",
+     "Because 獎勵 is not a verb."
+    ],
+    "answer": 1,
+    "explanation": "Cantonese passives almost exclusively describe mishaps, damage, or reprimands; positive actions remain in active voice."
+   },
+   {
+    "question": "Fill the blank: 條魚仔 ___ 隻大貓捉住咗。",
+    "options": [
+     "從",
+     "對",
+     "向",
+     "比"
+    ],
+    "answer": 3,
+    "explanation": "The marker 比 introduces the doer 隻大貓 in passive voice."
+   }
+  ],
+  "tip": "If you don't know who caused the damage, default to 比人 — leaving bare 比 without an agent sounds incomplete in Cantonese."
+ },
+ {
+  "id": "yue-b1-complex-sentence-final-particles",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#9333EA",
+  "emoji": "🎭",
+  "title": "Nuanced Sentence-Final Particles (囉, 嘅, 吓話, 啫)",
+  "subtitle": "Expressing evidentiality, obviousness, confirmation-seeking, and downplaying severity",
+  "color": "#7E22CE",
+  "bg": "#FAF5FF",
+  "keyPoint": "Sentence-final particles alter pragmatic force: 囉 states obviousness, 嘅 asserts conviction or softens, 吓話 seeks confirmation with disbelief, and 啫 downplays significance.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Core Pragmatic Tone",
+    "Cantonese Example",
+    "English Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "囉",
+      "Obviousness / 'Duh'",
+      "咪就係噉囉！",
+      "Stating the glaringly evident"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "啫",
+      "Minimizing / 'Just'",
+      "玩吓啫，唔好嬲啦。",
+      "Downplaying severity or amount"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "吓話",
+      "Skeptical confirmation",
+      "你唔去呀？真係吓話？",
+      "Seeking confirmation in mild shock"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "嘅",
+      "Unexpected discovery / firm assertion",
+      "點解會噉嘅？",
+      "Noting an unexpected reality"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#9333EA",
+    "label": "Asserting Obvious Fact (囉)",
+    "example": "唔識咪問人囉。",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Minimizing Importance (啫)",
+    "example": "跌咗十蚊之嘛，好小事啫。",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Incredulous Confirmation (吓話)",
+    "example": "你連佢係邊個都唔知吓話？",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "冇問題啦，好容易搞掂啫。",
+    "ko": "",
+    "highlight": "搞掂啫"
+   },
+   {
+    "en": "既然落雨，咪坐的士囉。",
+    "ko": "",
+    "highlight": "坐的士囉"
+   },
+   {
+    "en": "佢份人平時好隨和嘅。",
+    "ko": "",
+    "highlight": "隨和嘅"
+   },
+   {
+    "en": "聽日要朝早六點集合吓話？",
+    "ko": "",
+    "highlight": "集合吓話"
+   },
+   {
+    "en": "我講吓笑啫，唔使咁認真。",
+    "ko": "",
+    "highlight": "講吓笑啫"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "好小事囉，唔好喊啦。",
+    "right": "好小事啫，唔好喊啦。",
+    "note": "囉 implies an impatient 'obviously', which sounds callous here; use 啫 to comfort by minimizing the problem."
+   },
+   {
+    "wrong": "你唔記得帶鎖匙啫？",
+    "right": "你唔記得帶鎖匙吓話？",
+    "note": "To convey surprised confirmation ('You didn't forget your keys, did you?!'), use 吓話, not 啫."
+   },
+   {
+    "wrong": "佢係我朋友啫！",
+    "right": "佢係我朋友嚟嘅！",
+    "note": "Using 啫 here wrongly implies 'He is merely a friend (nothing special)' instead of defining a relationship."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which particle best completes the sentence to say 'Don't worry, it only costs five dollars, just a tiny amount!': 五蚊 ___，好平之嘛！",
+    "options": [
+     "囉",
+     "吓話",
+     "啫",
+     "咩"
+    ],
+    "answer": 2,
+    "explanation": "啫 diminishes severity or quantity, matching 'only / just'."
+   },
+   {
+    "question": "Choose the particle that expresses 'Obviously, if you're hungry then eat!': 肚餓咪食飯 ___！",
+    "options": [
+     "囉",
+     "啫",
+     "吓話",
+     "先"
+    ],
+    "answer": 0,
+    "explanation": "囉 indicates that the course of action is obvious and self-evident under the condition."
+   },
+   {
+    "question": "Your friend claims they walk 50km every day. You react with disbelief: 你每日行五十公里 ___？",
+    "options": [
+     "喇",
+     "吓話",
+     "啫",
+     "囉"
+    ],
+    "answer": 1,
+    "explanation": "吓話 tags onto a statement when the speaker is asking for confirmation with skepticism or mild shock."
+   },
+   {
+    "question": "What is the primary function of the sentence-final particle 嘅 in '點解部機郁唔到嘅？'?",
+    "options": [
+     "To command someone to move",
+     "To indicate total completeness",
+     "To ask a rhetorical question sarcastically",
+     "To express bafflement or highlight an unexpected situation"
+    ],
+    "answer": 3,
+    "explanation": "The particle 嘅 paired with 點解 signals that the speaker finds an observed state of affairs perplexing or contrary to expectation."
+   }
+  ],
+  "tip": "Remember: 囉 points out the obvious solution, while 啫 reassures that the issue is no big deal."
+ },
+ {
+  "id": "yue-b1-quantifier-dou-movement",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#059669",
+  "emoji": "🌐",
+  "title": "Adverbial Quantifier Movement with 都 and 晒",
+  "subtitle": "Expressing totality and universal quantification through post-verbal 晒 paired with pre-verbal 都",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Achieve absolute universal quantification by placing the pre-verbal adverb 都 before the predicate and the post-verbal suffix 晒 immediately following the verb.",
+  "structure": {
+   "headers": [
+    "Quantified Noun Phrase",
+    "Pre-verbal Adverb",
+    "Verb + Suffix",
+    "Totality Scope"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "啲朋友",
+      "都",
+      "走晒",
+      "All members of group departed"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "所有功課",
+      "都",
+      "做晒",
+      "Every single homework task finished"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "幾杯咖啡",
+      "都",
+      "凍晒",
+      "Every coffee went completely cold"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "邊個",
+      "都",
+      "知晒",
+      "Universal subject ('everyone knows')"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Exhaustive Subject Totality",
+    "example": "啲飛冚唪唥都賣晒。",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Universal Fronted Object",
+    "example": "呢度啲衫我件件都試晒。",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Full Depletion or Completion",
+    "example": "佢將啲錢全部都使晒。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "啲客人都走晒喇。",
+    "ko": "",
+    "highlight": "都走晒"
+   },
+   {
+    "en": "我將雪櫃入面啲嘢食都食晒。",
+    "ko": "",
+    "highlight": "都食晒"
+   },
+   {
+    "en": "啲衫乾晒，我全部都收晒返入屋。",
+    "ko": "",
+    "highlight": "都收晒"
+   },
+   {
+    "en": "佢哋個個都去晒外國讀書。",
+    "ko": "",
+    "highlight": "都去晒"
+   },
+   {
+    "en": "桌面上嘅文件我都睇晒喇。",
+    "ko": "",
+    "highlight": "都睇晒"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "啲學生晒都嚟咗。",
+    "right": "啲學生都嚟晒。",
+    "note": "晒 is a verbal suffix and must adhere immediately to the verb, while 都 is a pre-verbal adverb."
+   },
+   {
+    "wrong": "全部人都晒去日本。",
+    "right": "全部人都去晒日本。",
+    "note": "Never place 晒 in front of the verb; it must sit right behind 去."
+   },
+   {
+    "wrong": "我食晒全部嘢都。",
+    "right": "我全部嘢都食晒。",
+    "note": "Universal quantifiers like 全部嘢 must be fronted before 都 to trigger the double totality frame."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the sentence with natural Cantonese quantifier harmony meaning 'All the pens are broken':",
+    "options": [
+     "啲筆都爛晒喇。",
+     "啲筆爛都晒喇。",
+     "啲筆晒都爛喇。",
+     "都啲筆爛晒喇。"
+    ],
+    "answer": 0,
+    "explanation": "都 stands before the predicate adjective/verb 爛, and 晒 attaches immediately to it."
+   },
+   {
+    "question": "Where does 都 belong in this sentence? 所有問題 (A) 老師 (B) 解釋 (C) 清楚 (D) 晒。",
+    "options": [
+     "Position D",
+     "Position A",
+     "Position B",
+     "Position C"
+    ],
+    "answer": 2,
+    "explanation": "The quantifier adverb 都 sits before the main verb phrase: 老師都解釋清楚晒."
+   },
+   {
+    "question": "How do you say 'Everyone has already left' using both 都 and 晒?",
+    "options": [
+     "邊個晒都走咗。",
+     "人人走晒都。",
+     "個個都走晒喇。",
+     "全部都走咗晒人。"
+    ],
+    "answer": 2,
+    "explanation": "Reduplicated classifier 個個 pairs with pre-verbal 都 and post-verbal 晒 to express complete universal departure."
+   },
+   {
+    "question": "What happens when you use 晒 without 都 on an action like 睇晒本書?",
+    "options": [
+     "It indicates completeness of that single item rather than universal quantification across multiple items.",
+     "It turns the sentence into a negative question.",
+     "It becomes ungrammatical Cantonese.",
+     "It forces the tense into future imperative."
+    ],
+    "answer": 0,
+    "explanation": "Post-verbal 晒 alone indicates completing the whole item ('read the entire book'), whereas 都...晒 quantifies across all items in a set."
+   }
+  ],
+  "tip": "Think of 都 as an intake funnel and 晒 as an exhaust pipe: 都 gathers all items before the verb, and 晒 confirms none were left behind."
+ },
+ {
+  "id": "yue-b1-pragmatic-verb-reduplication",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "⏳",
+  "title": "Delimitative Verb Reduplication",
+  "subtitle": "Soften directives and express brief or casual attempts",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Cantonese uses the suffix 吓 or the intercalated pattern V-一-V after action verbs to indicate doing something briefly, casually, or as a gentle trial.",
+  "structure": {
+   "headers": [
+    "Pattern",
+    "Cantonese Form",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "V + 吓",
+      "睇吓",
+      "Casual observation ('take a quick look')"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "V + 一 + V",
+      "試一試",
+      "Deliberate brief trial ('give it a try')"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "V + 吓 + V + 吓",
+      "行吓行吓",
+      "Continuous casual activity while another event happens"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "V + 返 + 吓",
+      "抖返吓",
+      "Restorative brief action ('get some rest')"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Softening Requests",
+    "example": "唔該你等我一等。",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Casual Exploration",
+    "example": "我哋去商場行吓啦。",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Brief Trial Action",
+    "example": "呢部新手機你試吓先啦。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "你得閒就過嚟坐吓啦。",
+    "ko": "",
+    "highlight": "坐吓"
+   },
+   {
+    "en": "等我諗一諗先答你。",
+    "ko": "",
+    "highlight": "諗一諗"
+   },
+   {
+    "en": "呢件事等我問吓佢。",
+    "ko": "",
+    "highlight": "問吓"
+   },
+   {
+    "en": "不如大家停一停食個晏仔。",
+    "ko": "",
+    "highlight": "停一停"
+   },
+   {
+    "en": "我哋行吓行吓就到咗海邊。",
+    "ko": "",
+    "highlight": "行吓行吓"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "請你看一看這本書。",
+    "right": "請你睇吓呢本書。",
+    "note": "Cantonese prefers the vernacular verb 睇 and aspect marker 吓 instead of Mandarin 看一看 in colloquial speech."
+   },
+   {
+    "wrong": "我好想瞓覺吓。",
+    "right": "我好想瞓吓覺。",
+    "note": "For verb-object compounds like 瞓覺, the suffix 吓 must split the compound and follow the verbal head 瞓 directly."
+   },
+   {
+    "wrong": "佢昨日病吓。",
+    "right": "佢昨日病咗。",
+    "note": "Delimitative reduplication cannot be applied to stative verbs or uncontrolled states to mark past occurrence; use 咗 instead."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Could you please take a brief look at this document?",
+    "options": [
+     "睇吓",
+     "睇過",
+     "睇實",
+     "睇晒"
+    ],
+    "answer": 0,
+    "explanation": "The suffix 吓 is the standard delimitative marker indicating a brief or casual check."
+   },
+   {
+    "question": "Let me think about it for a quick second before deciding.",
+    "options": [
+     "諗緊",
+     "諗一諗",
+     "諗親",
+     "諗住"
+    ],
+    "answer": 1,
+    "explanation": "The pattern V-一-V (here 諗一諗) signifies a brief, tentative attempt to deliberate."
+   },
+   {
+    "question": "Why don't we sit down and rest for a little bit?",
+    "options": [
+     "坐晒",
+     "坐起",
+     "坐吓",
+     "坐定"
+    ],
+    "answer": 2,
+    "explanation": "坐吓 softens the suggestion into a polite, casual invitation to take a seat briefly."
+   },
+   {
+    "question": "They were casually chatting and walking along the harbor.",
+    "options": [
+     "行完行完",
+     "行親行親",
+     "行到行到",
+     "行吓行吓"
+    ],
+    "answer": 3,
+    "explanation": "The reduplicated iterative pattern V-吓-V-吓 indicates an ongoing, leisurely progression."
+   }
+  ],
+  "tip": "Never place 吓 after the complete verb-object phrase; always split them (e.g., 游吓水, not 游水吓)."
+ },
+ {
+  "id": "yue-b1-adverbial-intensifiers",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#F59E0B",
+  "emoji": "💥",
+  "title": "Post-Adjectival Intensifiers",
+  "subtitle": "Express extreme degree and emotional exaggeration",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Cantonese attaches expressive post-verbal complements like 到死, 到絕, and the approximator 噉滯 directly after adjectives to heighten emotional intensity beyond plain adverbs.",
+  "structure": {
+   "headers": [
+    "Complement",
+    "Literal Sense",
+    "Pragmatic Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Adj + 到死",
+      "to death",
+      "Extremely, unbearably (colloquial & emotive)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Adj + 到絕",
+      "to the absolute end",
+      "Utterly, to the ultimate degree"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adj + 噉滯",
+      "almost like",
+      "Virtually, practically, almost entirely"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adj + 到爆",
+      "to bursting point",
+      "Incredibly full, overloaded, or thrilling"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Complaining about Hardship",
+    "example": "做咗成日嘢，我依家攰到死。",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Describing Ultimate Limits",
+    "example": "佢個人做嘢絕到絕，完全唔留情面。",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Nearing Completion or Limit",
+    "example": "啲嘢食畀大家食晒噉滯。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "今日個天氣真係凍到死。",
+    "ko": "",
+    "highlight": "凍到死"
+   },
+   {
+    "en": "佢間房亂到絕，連企位都冇。",
+    "ko": "",
+    "highlight": "亂到絕"
+   },
+   {
+    "en": "個音樂會精彩到爆，全場拍爛手掌。",
+    "ko": "",
+    "highlight": "精彩到爆"
+   },
+   {
+    "en": "我忙到成個禮拜冇瞓過覺噉滯。",
+    "ko": "",
+    "highlight": "噉滯"
+   },
+   {
+    "en": "呢部舊電腦慢到死，快啲換咗佢啦。",
+    "ko": "",
+    "highlight": "慢到死"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "好攰到死。",
+    "right": "攰到死。",
+    "note": "Post-adjectival degree complements like 到死 already express maximum intensity; do not combine them with pre-adjectival 好."
+   },
+   {
+    "wrong": "佢跑得快噉滯。",
+    "right": "佢跑得快到飛起噉滯。",
+    "note": "噉滯 means 'almost/practically' and modifies complete predicates, states, or complements rather than bare descriptive adverbs."
+   },
+   {
+    "wrong": "好死熱。",
+    "right": "熱到死。",
+    "note": "Unlike English 'dead hot' or northern dialects, 到死 must strictly follow the adjective via the complement linker 到."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I have been standing all afternoon; my legs are painfully sore to death.",
+    "options": [
+     "痠親",
+     "痠到死",
+     "好痠過",
+     "痠極都"
+    ],
+    "answer": 1,
+    "explanation": "Adj + 到死 is the primary colloquial complement for expressing unbearable discomfort."
+   },
+   {
+    "question": "The concert hall was packed to the absolute bursting limit.",
+    "options": [
+     "爆到死",
+     "爆過頭",
+     "爆晒棚噉滯",
+     "爆到絕"
+    ],
+    "answer": 3,
+    "explanation": "到絕 indicates pushing an attribute or state to the absolute extreme limit."
+   },
+   {
+    "question": "The battery is empty; the phone is practically dead.",
+    "options": [
+     "冇電到死",
+     "冇電起嚟",
+     "冇電噉滯",
+     "冇電翻嚟"
+    ],
+    "answer": 2,
+    "explanation": "噉滯 translates to 'almost' or 'virtually', modifying the state of battery depletion."
+   },
+   {
+    "question": "This spicy noodle soup is overwhelmingly spicy!",
+    "options": [
+     "辣到死",
+     "死辣辣",
+     "辣咁滯",
+     "辣得晒"
+    ],
+    "answer": 0,
+    "explanation": "辣到死 conveys hyper-intensive colloquial spiciness."
+   }
+  ],
+  "tip": "Remember that 噉滯 expresses 'almost/nearly' and always occupies the absolute tail end of the entire predicate clause."
+ },
+ {
+  "id": "yue-b2-inversion-topicalization",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔄",
+  "title": "Syntactic Inversion & Afterthought",
+  "subtitle": "Shift subjects and objects to sentence-final position",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Spoken Cantonese frequently inverts canonical SVO order by placing the predicate first and tagging the subject or clausal topic onto the absolute end as an emotive afterthought.",
+  "structure": {
+   "headers": [
+    "Inversion Type",
+    "Base SVO",
+    "Inverted Postposed Pattern"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Subject Inversion",
+      "佢好叻。",
+      "好叻呀，佢！"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Imperative Addressee",
+      "你行先啦。",
+      "行先啦，你！"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Object Topicalization",
+      "我食咗個包。",
+      "個包，我食咗喇。"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Predicate Focus + Object",
+      "我唔要呢件衫。",
+      "唔要喇，呢件衫！"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Subject Afterthought",
+    "example": "好搞笑呀，呢套戲！",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Emphatic Imperative",
+    "example": "咪搞我呀，你！",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Topical Preposing",
+    "example": "呢碟餸，我哋一早叫咗喇。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "真係好麻煩呀，單手續！",
+    "ko": "",
+    "highlight": "單手續"
+   },
+   {
+    "en": "走得未呀，你哋？",
+    "ko": "",
+    "highlight": "你哋"
+   },
+   {
+    "en": "好靚喎，你頂新帽！",
+    "ko": "",
+    "highlight": "你頂新帽"
+   },
+   {
+    "en": "食晒喇，啲雲吞麵！",
+    "ko": "",
+    "highlight": "啲雲吞麵"
+   },
+   {
+    "en": "好叻仔喎，呢個小朋友！",
+    "ko": "",
+    "highlight": "呢個小朋友"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "好靚，呢頂帽呀！",
+    "right": "好靚呀，呢頂帽！",
+    "note": "Sentence-final pragmatic particles like 呀 or 喎 must attach to the main predicate before the postposed subject tail."
+   },
+   {
+    "wrong": "我食晒，個飯。",
+    "right": "食晒喇，我個飯！",
+    "note": "When inverting for emphasis, the predicate containing the aspect and modal particle leads the utterance."
+   },
+   {
+    "wrong": "去邊度，是你？",
+    "right": "去邊度呀，你？",
+    "note": "Do not insert the copula 是/係 when postposing subjects in colloquial Cantonese."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you exclaim 'This movie is truly thrilling!' using subject postposing inversion?",
+    "options": [
+     "呢套戲真係好刺激！",
+     "刺激好真係，呢套戲！",
+     "刺激呢套戲好真！",
+     "真係好刺激呀，呢套戲！"
+    ],
+    "answer": 3,
+    "explanation": "The predicate plus final particle leads the sentence, followed by a slight pause and the postposed subject 呢套戲."
+   },
+   {
+    "question": "'Are you guys ready to leave yet?' with an inverted afterthought pronoun:",
+    "options": [
+     "走得未呀，你哋？",
+     "你哋走得未呀？",
+     "走得你哋未呀？",
+     "走呀未得，你哋？"
+    ],
+    "answer": 0,
+    "explanation": "走得未呀 is the primary interrogative predicate, with the subject pronoun 你哋 trailing as an afterthought."
+   },
+   {
+    "question": "In the sentence '貴到飛起呀，呢餐飯！', which constituent has been postposed?",
+    "options": [
+     "The adverb",
+     "The subject noun phrase",
+     "The verb complement",
+     "The sentence particle"
+    ],
+    "answer": 1,
+    "explanation": "呢餐飯 is the subject of the clause, placed at the end after the predicate complement phrase."
+   },
+   {
+    "question": "'Don't talk nonsense, you!' with sharp emotional postposing:",
+    "options": [
+     "你咪亂講嘢！",
+     "咪亂講嘢呀，你！",
+     "講嘢咪亂，你呀！",
+     "亂講嘢咪，你！"
+    ],
+    "answer": 1,
+    "explanation": "咪亂講嘢呀 precedes the addressee pronoun 你 to deliver a punchy, direct warning."
+   }
+  ],
+  "tip": "In speech, always drop your pitch slightly on the postposed subject after the sentence-final particle; it acts purely as clarifying background information."
+ },
+ {
+  "id": "yue-b2-idiomatic-aspect-suffix-combos",
+  "level": "b2",
+  "category": "tenses",
+  "categoryColor": "#10B981",
+  "emoji": "🔗",
+  "title": "Multi-Aspect Suffix Chains",
+  "subtitle": "Stack directional, phase, and aspect markers onto verbs",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Cantonese allows intricate stacking of phase suffixes (埋, 返) with compound directional complements (落去, 出嚟) to denote nuanced trajectory and spatial continuity.",
+  "structure": {
+   "headers": [
+    "Compound Chain",
+    "Core Meaning",
+    "Metaphorical Extension"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "V + 落去",
+      "Physical downward motion",
+      "Continuation into the future ('keep on doing')"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "V + 翻出嚟",
+      "Emerge outward",
+      "Resurfacing memories, recovery of hidden states"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "V + 埋落去",
+      "Incorporate + down into",
+      "Sinking, plunging, or absorbing into an ongoing activity"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "V + 翻入去",
+      "Return inward",
+      "Restoring an item or person into an enclosure"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Persevering Future Action",
+    "example": "無論幾辛苦，我都會堅持做落去。",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Surfacing Hidden Information",
+    "example": "差人終於查翻出嚟單案嘅真相。",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Total Absorption",
+    "example": "你再咁樣玩埋落去，聽日一定起唔到身。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "你再食落去就真係會超重喇。",
+    "ko": "",
+    "highlight": "食落去"
+   },
+   {
+    "en": "佢諗咗好耐，終於記翻起件事出嚟。",
+    "ko": "",
+    "highlight": "記翻起件事出嚟"
+   },
+   {
+    "en": "佢將所有儲蓄都抌埋落去個生意度。",
+    "ko": "",
+    "highlight": "抌埋落去"
+   },
+   {
+    "en": "快啲收返入去個櫃度啦。",
+    "ko": "",
+    "highlight": "收返入去"
+   },
+   {
+    "en": "大家一齊討論落去，好快有結果。",
+    "ko": "",
+    "highlight": "討論落去"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我會做下去。",
+    "right": "我會做落去。",
+    "note": "Mandarin 下去 must be rendered as the Cantonese compound directional suffix 落去 in spoken contexts."
+   },
+   {
+    "wrong": "佢搵出嚟返條鎖匙。",
+    "right": "佢搵返條鎖匙出嚟。",
+    "note": "When an object is involved, the phase marker 返 sticks to the verb head, while the directional compound 出嚟 surrounds or follows the noun."
+   },
+   {
+    "wrong": "抌落去埋啲錢。",
+    "right": "抌埋落去啲錢。",
+    "note": "The delimitative/inclusive phase marker 埋 must precede the directional chain 落去."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "If you keep living like this, you will run into trouble.",
+    "options": [
+     "住返嚟",
+     "過埋去",
+     "過落去",
+     "行出嚟"
+    ],
+    "answer": 2,
+    "explanation": "過落去 uses the aspectual continuation of 落去 ('to carry on living/spending days')."
+   },
+   {
+    "question": "He ended up pouring all his remaining time and effort into the project.",
+    "options": [
+     "擺起上嚟",
+     "擺落過去",
+     "擺埋晒落去",
+     "擺返出嚟"
+    ],
+    "answer": 2,
+    "explanation": "擺埋晒落去 combines the inclusive markers 埋/晒 with the downward trajectory 落去 to show total investment."
+   },
+   {
+    "question": "The police dug up the lost evidence again after several years.",
+    "options": [
+     "搵返出嚟",
+     "搵落去",
+     "搵埋入嚟",
+     "搵返落去"
+    ],
+    "answer": 0,
+    "explanation": "搵返出嚟 denotes retrieving (返) and bringing out into the open (出嚟)."
+   },
+   {
+    "question": "Can you put all the books back inside the box?",
+    "options": [
+     "放低出去",
+     "放返入去",
+     "放落起嚟",
+     "放埋出嚟"
+    ],
+    "answer": 1,
+    "explanation": "放返入去 expresses returning something back (返) into the interior (入去)."
+   }
+  ],
+  "tip": "When stacking suffixes, the order is fixed: Verb Stem + Aspect/Phase (埋/返) + Directional Suffix (落/出/入) + Deictic Anchor (嚟/去)."
+ },
+ {
+  "id": "yue-b2-diglossic-switching",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#F59E0B",
+  "emoji": "🏛️",
+  "title": "Written Chinese to Vernacular Bridging",
+  "subtitle": "Bridge formal classical markers with spoken equivalents",
+  "color": "#B45309",
+  "bg": "#FFFBEB",
+  "keyPoint": "Cantonese speakers navigate diglossia by systematically mapping written Chinese formal markers (之, 於, 將) into native colloquial equivalents (嘅, 喺, 攞/將).",
+  "structure": {
+   "headers": [
+    "Formal / Written (書面語)",
+    "Spoken Colloquial (白話)",
+    "Syntactic Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "之 (zī)",
+      "嘅",
+      "Genitive & associative particle ('s / of)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "於 (yū)",
+      "喺",
+      "Locative / temporal preposition (at / in)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "將 (zēung)",
+      "攞 / 提",
+      "Disposal marker (taking an object to act upon)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "其 (kèi)",
+      "佢嘅",
+      "Third person possessive pronoun (its / his / her)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#B45309",
+    "label": "Formal Announcement to Speech",
+    "example": "喺會議之中，大家都發表咗意見。",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Colloquial Disposal Shift",
+    "example": "快啲攞啲垃圾掉咗佢。",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Locative Conversion",
+    "example": "佢依家喺香港大學讀書。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "呢個係我阿哥嘅電話。",
+    "ko": "",
+    "highlight": "嘅"
+   },
+   {
+    "en": "我琴日成日都留喺屋企。",
+    "ko": "",
+    "highlight": "喺"
+   },
+   {
+    "en": "唔該你攞支筆畀我。",
+    "ko": "",
+    "highlight": "攞"
+   },
+   {
+    "en": "佢嘅諗法同我完全唔同。",
+    "ko": "",
+    "highlight": "佢嘅"
+   },
+   {
+    "en": "我喺圖書館門口等你。",
+    "ko": "",
+    "highlight": "喺"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "這是我之書。",
+    "right": "呢本係我嘅書。",
+    "note": "Using classical 之 and written 這 in daily casual Cantonese sounds unnaturally archaic; use 呢本 and 嘅 instead."
+   },
+   {
+    "wrong": "我生於香港。",
+    "right": "我喺香港出世。",
+    "note": "While 生於 is valid in high formal registers, natural conversational Cantonese uses 喺...出世."
+   },
+   {
+    "wrong": "請將門關上。",
+    "right": "唔該閂埋度門。",
+    "note": "Casual spoken Cantonese avoids the formal 將 disposal construction in favor of direct verb phrases with appropriate phase markers like 埋."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Convert the written phrase '於學校門口' into natural spoken Cantonese:",
+    "options": [
+     "喺學校門口",
+     "之學校門口",
+     "將學校門口",
+     "同學校門口"
+    ],
+    "answer": 0,
+    "explanation": "The literary locative preposition 於 directly converts to spoken 喺 in colloquial speech."
+   },
+   {
+    "question": "Which sentence replaces the literary genitive marker 之 with spoken Cantonese?",
+    "options": [
+     "佢之朋友好熱情。",
+     "佢嘅朋友好熱情。",
+     "佢喺朋友好熱情。",
+     "佢將朋友好熱情。"
+    ],
+    "answer": 1,
+    "explanation": "嘅 is the spoken counterpart to the classical/written genitive marker 之."
+   },
+   {
+    "question": "How do you naturally convert written '將手機交給他' into spoken colloquial speech?",
+    "options": [
+     "於手機畀佢",
+     "之手機喺佢",
+     "攞部手機畀佢",
+     "其手機等佢"
+    ],
+    "answer": 2,
+    "explanation": "Written 將 as a disposal marker is regularly replaced by 攞 or direct SVO verb phrasing in Cantonese."
+   },
+   {
+    "question": "Replace the written possessive '其父' with the natural spoken Cantonese equivalent:",
+    "options": [
+     "佢嘅爸爸",
+     "其之老頭",
+     "喺佢爸爸",
+     "將阿爸"
+    ],
+    "answer": 0,
+    "explanation": "Written 其 is replaced by the colloquial third-person pronoun plus genitive 嘅, yielding 佢嘅爸爸."
+   }
+  ],
+  "tip": "Mixing 書面語 into everyday casual chats makes you sound like a legal textbook; stick to 嘅, 喺, and 攞 for natural fluency."
+ }
+]

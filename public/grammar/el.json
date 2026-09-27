@@ -1,0 +1,3288 @@
+[
+ {
+  "id": "el-a1-definite-indefinite-articles-gender",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🏷️",
+  "title": "Definite and Indefinite Articles Across Three Genders",
+  "subtitle": "Mastering masculine, feminine, and neuter articles in the nominative case",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Every Greek noun has a grammatical gender (masculine, feminine, or neuter) signaled by its nominative definite (ο, η, το) or indefinite (ένας, μια, ένα) article.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Definite (The)",
+    "Indefinite (A/An)",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine",
+      "ο",
+      "ένας",
+      "ο άντρας / ένας άντρας"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine",
+      "η",
+      "μια (μία)",
+      "η γυναίκα / μια γυναίκα"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter",
+      "το",
+      "ένα",
+      "το παιδί / ένα παιδί"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Specific masculine subject",
+    "example": "Ο καθηγητής διαβάζει.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Unspecified feminine entity",
+    "example": "Εδώ είναι μια πλατεία.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Definite neuter item",
+    "example": "Το βιβλίο είναι μεγάλο.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ο φίλος μου είναι εδώ.",
+    "ko": "",
+    "highlight": "Ο φίλος"
+   },
+   {
+    "en": "Ένας σκύλος τρέχει γρήγορα.",
+    "ko": "",
+    "highlight": "Ένας σκύλος"
+   },
+   {
+    "en": "Η πόρτα είναι ανοιχτή.",
+    "ko": "",
+    "highlight": "Η πόρτα"
+   },
+   {
+    "en": "Θέλω μια καρέκλα, παρακαλώ.",
+    "ko": "",
+    "highlight": "μια καρέκλα"
+   },
+   {
+    "en": "Το νερό είναι κρύο.",
+    "ko": "",
+    "highlight": "Το νερό"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ο κορίτσι πίνει γάλα.",
+    "right": "Το κορίτσι πίνει γάλα.",
+    "note": "Although 'κορίτσι' means girl, its grammatical gender is neuter and requires 'το'."
+   },
+   {
+    "wrong": "Ένα γιατρός είναι εδώ.",
+    "right": "Ένας γιατρός είναι εδώ.",
+    "note": "Masculine nouns ending in -ος take the indefinite article 'ένας', not neuter 'ένα'."
+   },
+   {
+    "wrong": "Το γάλα είναι ένας ποτό.",
+    "right": "Το γάλα είναι ένα ποτό.",
+    "note": "The noun 'ποτό' is neuter and must take 'ένα', matching its gender."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct article: '___ αδελφός μου λέγεται Πέτρος.' (My brother is named Petros.)",
+    "options": [
+     "Η",
+     "Ο",
+     "Το",
+     "Ένα"
+    ],
+    "answer": 1,
+    "explanation": "'Αδελφός' is a masculine noun ending in -ος, so it takes the definite article 'ο'."
+   },
+   {
+    "question": "Choose the correct article: 'Έχω ___ ιδέα!' (I have an idea!)",
+    "options": [
+     "ένας",
+     "ένα",
+     "μια",
+     "το"
+    ],
+    "answer": 2,
+    "explanation": "'Ιδέα' is feminine ending in -α, requiring the indefinite article 'μια'."
+   },
+   {
+    "question": "Choose the correct article: '___ σπίτι είναι όμορφο.' (The house is beautiful.)",
+    "options": [
+     "Ο",
+     "Η",
+     "Μια",
+     "Το"
+    ],
+    "answer": 3,
+    "explanation": "'Σπίτι' is a neuter noun ending in -ι, so the definite article is 'το'."
+   },
+   {
+    "question": "Choose the correct article: 'Εκεί είναι ___ ταξί.' (There is a taxi.)",
+    "options": [
+     "ένα",
+     "ένας",
+     "μια",
+     "ο"
+    ],
+    "answer": 0,
+    "explanation": "'Ταξί' is an indeclinable neuter noun and takes the indefinite article 'ένα'."
+   }
+  ],
+  "tip": "Look at noun endings for handy gender clues: masculine nouns usually end in -ος, -ης, or -ας; feminine in -α or -η; and neuter in -ο, -ι, or -μα."
+ },
+ {
+  "id": "el-a1-nominative-accusative-singular",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔄",
+  "title": "Nominative vs Accusative in Singular Nouns",
+  "subtitle": "Distinguishing subjects from direct objects and knowing when to keep final -ν",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Direct objects take the accusative case, dropping the final -ς from masculine nominative nouns and retaining final -ν on articles only before vowels and plosive consonants (κ, π, τ, ξ, ψ, μπ, ντ, γκ, τσ, τζ).",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Nominative (Subject)",
+    "Accusative (Object)",
+    "Article Rule for -ν"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masc (-ος/-ης/-ας)",
+      "ο φίλος / ο άντρας",
+      "τον φίλο / τον άντρα",
+      "τον always keeps -ν in modern standard usage"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Fem (-α/-η)",
+      "η μητέρα / η φίλη",
+      "τη(ν) μητέρα / τη(ν) φίλη",
+      "την keeps -ν before vowels and κ, π, τ, ξ, ψ, etc."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter (-ο/-ι/-μα)",
+      "το νερό / το μάθημα",
+      "το νερό / το μάθημα",
+      "Neuters stay identical in nominative and accusative"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Masculine direct object",
+    "example": "Βλέπω τον γιατρό.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Feminine direct object dropping -ν",
+    "example": "Ακούω τη μουσική.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Feminine direct object keeping -ν",
+    "example": "Αγοράζω την εφημερίδα.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ο Νίκος περιμένει τον καθηγητή.",
+    "ko": "",
+    "highlight": "τον καθηγητή"
+   },
+   {
+    "en": "Διαβάζω τη λέξη προσεκτικά.",
+    "ko": "",
+    "highlight": "τη λέξη"
+   },
+   {
+    "en": "Γνωρίζω την κοπέλα από το σχολείο.",
+    "ko": "",
+    "highlight": "την κοπέλα"
+   },
+   {
+    "en": "Πίνω το τσάι μου κάθε πρωί.",
+    "ko": "",
+    "highlight": "το τσάι"
+   },
+   {
+    "en": "Ένας άντρας ψάχνει έναν φίλο.",
+    "ko": "",
+    "highlight": "έναν φίλο"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Βλέπω ο άντρας.",
+    "right": "Βλέπω τον άντρα.",
+    "note": "Direct objects require the accusative case ('τον άντρα'), not the nominative ('ο άντρας')."
+   },
+   {
+    "wrong": "Αγαπώ την θάλασσα.",
+    "right": "Αγαπώ τη θάλασσα.",
+    "note": "The feminine article drops -ν before 'θ', because 'θ' is not a vowel or plosive stop."
+   },
+   {
+    "wrong": "Καλώ τον φίλος.",
+    "right": "Καλώ τον φίλο.",
+    "note": "Masculine nouns ending in -ος drop the final -ς when declined into accusative singular."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Έχω ___ αδελφό.' (I have a brother.)",
+    "options": [
+     "ένα",
+     "ένας",
+     "έναν",
+     "μια"
+    ],
+    "answer": 2,
+    "explanation": "'Αδελφός' becomes accusative 'αδελφό', taking the masculine accusative article 'έναν'."
+   },
+   {
+    "question": "Complete the sentence: 'Ανοίγω ___ πόρτα.' (I open the door.)",
+    "options": [
+     "την",
+     "τη",
+     "η",
+     "στη"
+    ],
+    "answer": 0,
+    "explanation": "The feminine noun 'πόρτα' starts with 'π', so the article retains its final -ν ('την')."
+   },
+   {
+    "question": "Complete the sentence: 'Ψάχνει ___ καθηγητή του.' (He is looking for his teacher.)",
+    "options": [
+     "ο",
+     "του",
+     "τη",
+     "τον"
+    ],
+    "answer": 3,
+    "explanation": "'Καθηγητής' is a masculine direct object in the accusative, taking the article 'τον'."
+   },
+   {
+    "question": "Complete the sentence: 'Ακούω ___ φωνή σου.' (I hear your voice.)",
+    "options": [
+     "τη",
+     "την",
+     "η",
+     "τον"
+    ],
+    "answer": 0,
+    "explanation": "The feminine noun 'φωνή' begins with 'φ', so the accusative article drops -ν and becomes 'τη'."
+   }
+  ],
+  "tip": "Neuter singular nouns (το παιδί, το βιβλίο) never change form between nominative and accusative, making them the easiest direct objects to use!"
+ },
+ {
+  "id": "el-a1-present-tense-group-a-verbs",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "⚡",
+  "title": "Present Tense Active: Group A Verbs (-ω)",
+  "subtitle": "Conjugating first-conjugation regular verbs with unstressed stems",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Group A verbs carry stress on the stem syllable and take the standard regular active endings: -ω, -εις, -ει, -ουμε, -ετε, -ουν(ε).",
+  "structure": {
+   "headers": [
+    "Person",
+    "Pronoun",
+    "Ending",
+    "Example (κάνω)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Sing.",
+      "εγώ",
+      "-ω",
+      "κάνω"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd Sing.",
+      "εσύ",
+      "-εις",
+      "κάνεις"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Sing.",
+      "αυτός/ή/ό",
+      "-ει",
+      "κάνει"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "1st Plur.",
+      "εμείς",
+      "-ουμε",
+      "κάνουμε"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd / 3rd Plur.",
+      "εσείς / αυτοί",
+      "-ετε / -ουν(ε)",
+      "κάνετε / κάνουν(ε)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Daily routine / ongoing action",
+    "example": "Τώρα διαβάζω ένα βιβλίο.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Expressing residency or state",
+    "example": "Μένουμε στην Αθήνα.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Expressing knowledge or ability",
+    "example": "Ξέρεις πού είναι ο σταθμός;",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Εγώ κάνω μια σημαντική ερώτηση.",
+    "ko": "",
+    "highlight": "κάνω"
+   },
+   {
+    "en": "Εσύ ξέρεις την απάντηση;",
+    "ko": "",
+    "highlight": "ξέρεις"
+   },
+   {
+    "en": "Ο Πέτρος μένει κοντά στο πάρκο.",
+    "ko": "",
+    "highlight": "μένει"
+   },
+   {
+    "en": "Εμείς μαθαίνουμε ελληνικά μαζί.",
+    "ko": "",
+    "highlight": "μαθαίνουμε"
+   },
+   {
+    "en": "Τα παιδιά γράφουν στο τετράδιο.",
+    "ko": "",
+    "highlight": "γράφουν"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Εμείς κάνομε γυμναστική.",
+    "right": "Εμείς κάνουμε γυμναστική.",
+    "note": "The first-person plural ending is spelled with -ουμε (-ου-), never -ομε."
+   },
+   {
+    "wrong": "Εσύ μένι στην Ελλάδα;",
+    "right": "Εσύ μένεις στην Ελλάδα;",
+    "note": "Second-person singular takes -εις (-ει- with -ς), whereas -ει is for the third person singular."
+   },
+   {
+    "wrong": "Εγώ έχει ένα πρόβλημα.",
+    "right": "Εγώ έχω ένα πρόβλημα.",
+    "note": "First person singular 'I have' is 'έχω' with an -ω ending, not 'έχει'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete with the correct form: 'Εμείς ___ στο κέντρο.' (We live in the center.)",
+    "options": [
+     "μένουμε",
+     "μένεις",
+     "μένει",
+     "μένετε"
+    ],
+    "answer": 0,
+    "explanation": "The 1st person plural ('εμείς') takes the ending -ουμε, so 'μένουμε' is correct."
+   },
+   {
+    "question": "Complete with the correct form: 'Τι ___ εσείς;' (What are you [pl.] doing?)",
+    "options": [
+     "κάνω",
+     "κάνεις",
+     "κάνετε",
+     "κάνουν"
+    ],
+    "answer": 2,
+    "explanation": "The 2nd person plural ('εσείς') ending is -ετε: 'κάνετε'."
+   },
+   {
+    "question": "Complete with the correct form: 'Η Μαρία ___ καλά αγγλικά.' (Maria knows good English.)",
+    "options": [
+     "ξέρω",
+     "ξέρει",
+     "ξέρεις",
+     "ξέρουν"
+    ],
+    "answer": 1,
+    "explanation": "Maria is 3rd person singular ('αυτή'), requiring the -ει ending: 'ξέρει'."
+   },
+   {
+    "question": "Complete with the correct form: 'Τα παιδιά ___ ένα ποίημα.' (The children are writing a poem.)",
+    "options": [
+     "γράφω",
+     "γράφει",
+     "γράφομαι",
+     "γράφουν"
+    ],
+    "answer": 3,
+    "explanation": "'Τα παιδιά' is 3rd person plural ('αυτά'), taking -ουν(ε): 'γράφουν'."
+   }
+  ],
+  "tip": "Subject pronouns (εγώ, εσύ, etc.) are usually dropped in Greek because the verb ending already specifies who is doing the action."
+ },
+ {
+  "id": "el-a1-present-tense-group-b-verbs",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🗣️",
+  "title": "Present Tense Active: Group B Verbs (-άω/-ώ, -ώ/-είς)",
+  "subtitle": "Conjugating contract verbs stressed on the final syllable",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Group B verbs place the primary accent directly on their final present tense endings and are divided into two subgroups: B1 (-άω/-ώ, -άς, -άει) and B2 (-ώ, -είς, -εί).",
+  "structure": {
+   "headers": [
+    "Person",
+    "Subgroup B1 (-άω/-ώ)",
+    "Subgroup B2 (-ώ/-είς)",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "εγώ",
+      "μιλάω / μιλώ",
+      "μπορώ",
+      "I speak / I can"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "εσύ",
+      "μιλάς",
+      "μπορείς",
+      "you speak / you can"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "αυτός/ή/ό",
+      "μιλάει / μιλά",
+      "μπορεί",
+      "he/she speaks / can"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "εμείς",
+      "μιλάμε",
+      "μπορούμε",
+      "we speak / we can"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "εσείς / αυτοί",
+      "μιλάτε / μιλάνε",
+      "μπορείτε / μπορούν(ε)",
+      "you (pl.) / they"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Expressing language communication (B1)",
+    "example": "Μιλάω ελληνικά και αγγλικά.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Expressing ability or permission (B2)",
+    "example": "Μπορείς να έρθεις σήμερα;",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Expressing guidance or driving (B2)",
+    "example": "Οδηγεί πολύ προσεκτικά.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Η Ελένη μιλάει πολύ γρήγορα.",
+    "ko": "",
+    "highlight": "μιλάει"
+   },
+   {
+    "en": "Εμείς αγαπάμε τη θάλασσα.",
+    "ko": "",
+    "highlight": "αγαπάμε"
+   },
+   {
+    "en": "Δεν μπορώ να ακούσω τίποτα.",
+    "ko": "",
+    "highlight": "μπορώ"
+   },
+   {
+    "en": "Εσείς μπορείτε να περιμένετε εδώ;",
+    "ko": "",
+    "highlight": "μπορείτε"
+   },
+   {
+    "en": "Αυτοί ζουν στην Κρήτη.",
+    "ko": "",
+    "highlight": "ζουν"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Εγώ μίλω ελληνικά.",
+    "right": "Εγώ μιλώ ελληνικά.",
+    "note": "Group B verbs are stressed on the ending; the first-person form is 'μιλώ' or 'μιλάω', never 'μίλω'."
+   },
+   {
+    "wrong": "Εσύ μποράς να βοηθήσεις;",
+    "right": "Εσύ μπορείς να βοηθήσεις;",
+    "note": "'Μπορώ' belongs to Subgroup B2 (-ώ, -είς, -εί), so the 2nd person singular is 'μπορείς'."
+   },
+   {
+    "wrong": "Εμείς μιλουμε ελληνικά.",
+    "right": "Εμείς μιλάμε ελληνικά.",
+    "note": "Subgroup B1 verbs use -άμε in the 1st person plural ('μιλάμε'), not -ουμε."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete with the correct form of μιλάω: 'Εσύ ___ πολύ καλά ελληνικά.' (You speak Greek very well.)",
+    "options": [
+     "μιλάς",
+     "μιλάτε",
+     "μιλάει",
+     "μιλώ"
+    ],
+    "answer": 0,
+    "explanation": "The 2nd person singular form for B1 verbs (-άω) ends in -άς: 'μιλάς'."
+   },
+   {
+    "question": "Complete with the correct form of μπορώ: 'Εμείς δεν ___ σήμερα.' (We cannot today.)",
+    "options": [
+     "μπορείς",
+     "μπορείτε",
+     "μπορούμε",
+     "μπορούν"
+    ],
+    "answer": 2,
+    "explanation": "For subgroup B2, the 1st person plural ending is -ούμε: 'μπορούμε'."
+   },
+   {
+    "question": "Complete with the correct form of αγαπάω: 'Ο Νίκος ___ τη μουσική.' (Nikos loves music.)",
+    "options": [
+     "αγαπάς",
+     "αγαπάει",
+     "αγαπάμε",
+     "αγαπάνε"
+    ],
+    "answer": 1,
+    "explanation": "The 3rd person singular for 'αγαπάω' is 'αγαπάει' (or contracted 'αγαπά')."
+   },
+   {
+    "question": "Complete with the correct form of οδηγώ: 'Εσείς ___ αυτοκίνητο;' (Do you [pl.] drive a car?)",
+    "options": [
+     "οδηγείς",
+     "οδηγεί",
+     "οδηγούμε",
+     "οδηγείτε"
+    ],
+    "answer": 3,
+    "explanation": "The 2nd person plural form for B2 verbs (-ώ/-είς) is -είτε: 'οδηγείτε'."
+   }
+  ],
+  "tip": "When in doubt for everyday speech, B1 verbs commonly prefer the -άω forms (μιλάω, μιλάς, μιλάει, μιλάμε, μιλάτε, μιλάνε) over the older contracted variants."
+ },
+ {
+  "id": "el-a1-verb-eimai-existential-echo",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "📍",
+  "title": "The Irregular Verb 'Είμαι' and Existential 'Έχει'",
+  "subtitle": "Conjugating 'to be' and expressing 'there is / there are' impersonally",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "'Είμαι' expresses identity, origin, and conditions using passive-like personal endings, while the impersonal 3rd-person singular 'έχει' equates to 'there is' or 'there are'.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Subject / Context",
+    "Greek Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Identity / State",
+      "εγώ / εσύ / αυτός",
+      "είμαι / είσαι / είναι",
+      "I am / you are / he is"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Identity / State",
+      "εμείς / εσείς / αυτοί",
+      "είμαστε / είστε / είναι",
+      "we are / you are / they are"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3rd Person Identical",
+      "αυτός / αυτοί",
+      "είναι (both sing. & plur.)",
+      "is / are (same form!)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Existential",
+      "Impersonal (any number)",
+      "έχει (+ noun in acc.)",
+      "there is / there are"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Describing identity or profession",
+    "example": "Είμαι φοιτητής στο πανεπιστήμιο.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Expressing existence (singular)",
+    "example": "Εδώ κοντά έχει μια τράπεζα.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Expressing existence (plural)",
+    "example": "Στην πόλη έχει πολλά μουσεία.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Εμείς είμαστε πολύ κουρασμένοι σήμερα.",
+    "ko": "",
+    "highlight": "είμαστε"
+   },
+   {
+    "en": "Αυτός είναι ο καινούριος συνάδελφος.",
+    "ko": "",
+    "highlight": "είναι"
+   },
+   {
+    "en": "Πού είστε τώρα;",
+    "ko": "",
+    "highlight": "είστε"
+   },
+   {
+    "en": "Έχει έναν καλό φούρνο στον δρόμο.",
+    "ko": "",
+    "highlight": "Έχει"
+   },
+   {
+    "en": "Δεν έχει καθόλου γάλα στο ψυγείο.",
+    "ko": "",
+    "highlight": "έχει"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Υπάρχουν έχει πολλά αυτοκίνητα.",
+    "right": "Έχει πολλά αυτοκίνητα.",
+    "note": "Do not combine 'υπάρχουν' and 'έχει'; use either verb alone, with 'έχει' being the most common everyday expression for 'there are'."
+   },
+   {
+    "wrong": "Αυτοί είσαστε φίλοι.",
+    "right": "Αυτοί είναι φίλοι.",
+    "note": "'Είσαστε' (or 'είστε') is for 2nd person plural 'εσείς'; 3rd person plural 'they are' is 'είναι'."
+   },
+   {
+    "wrong": "Έχουν ένα πρόβλημα εδώ πέρα.",
+    "right": "Έχει ένα πρόβλημα εδώ πέρα.",
+    "note": "To say 'there is/are' existentially, 'έχει' must stay fixed in the singular 3rd person."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Εμείς ___ από την Ελλάδα.' (We are from Greece.)",
+    "options": [
+     "είμαι",
+     "είστε",
+     "είμαστε",
+     "είναι"
+    ],
+    "answer": 2,
+    "explanation": "'Είμαστε' is the 1st person plural form of 'είμαι' corresponding to 'εμείς'."
+   },
+   {
+    "question": "Complete the sentence: '___ ένα φαρμακείο εδώ κοντά;' (Is there a pharmacy nearby?)",
+    "options": [
+     "Είναι",
+     "Έχει",
+     "Έχουν",
+     "Είστε"
+    ],
+    "answer": 1,
+    "explanation": "Impersonal 'έχει' is used for existential statements meaning 'is there / there is'."
+   },
+   {
+    "question": "Complete the sentence: 'Πού ___ εσύ;' (Where are you?)",
+    "options": [
+     "είσαι",
+     "είμαι",
+     "είναι",
+     "είστε"
+    ],
+    "answer": 0,
+    "explanation": "'Είσαι' is the 2nd person singular form matching 'εσύ'."
+   },
+   {
+    "question": "Complete the sentence: 'Στο τραπέζι ___ πολλά βιβλία.' (There are many books on the table.)",
+    "options": [
+     "είστε",
+     "είμαστε",
+     "έχουν",
+     "έχει"
+    ],
+    "answer": 3,
+    "explanation": "Existential 'there are' remains strictly impersonal 3rd person singular 'έχει', even with plural items."
+   }
+  ],
+  "tip": "Notice that 'είναι' serves as both 'he/she/it is' AND 'they are' — the context and surrounding noun always clarify whether it is singular or plural!"
+ },
+ {
+  "id": "el-a1-basic-negation-den-min",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🚫",
+  "title": "Negation Particles: Δεν vs Μην",
+  "subtitle": "Mastering real-world statements versus prohibitions and wishes",
+  "color": "#EF4444",
+  "bg": "#FEF2F2",
+  "keyPoint": "Use δεν to negate factual statements in the indicative mood, and use μην for negative commands, wishes, and after subjunctive markers.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Context",
+    "Greek Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "δεν / δε",
+      "Indicative (facts, statements)",
+      "Δεν ξέρω.",
+      "I do not know."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "μην / μη",
+      "Subjunctive (after να, για να)",
+      "Θέλω να μην αργήσεις.",
+      "I want you not to be late."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "μην / μη",
+      "Prohibitions / Negative Imperatives",
+      "Μην καπνίζετε εδώ.",
+      "Do not smoke here."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Stating Negative Facts",
+    "example": "Ο Νίκος δεν πίνει καφέ το βράδυ.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Prohibitions & Warnings",
+    "example": "Μην αγγίζετε τα εκθέματα παρακαλώ.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Subjunctive Doubts & Wishes",
+    "example": "Ελπίζω να μην βρέξει σήμερα.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Δεν καταλαβαίνω τι λες.",
+    "ko": "",
+    "highlight": "Δεν καταλαβαίνω"
+   },
+   {
+    "en": "Μην τρέχεις τόσο γρήγορα!",
+    "ko": "",
+    "highlight": "Μην τρέχεις"
+   },
+   {
+    "en": "Προτιμώ να μην πάω στο πάρτι.",
+    "ko": "",
+    "highlight": "να μην πάω"
+   },
+   {
+    "en": "Αυτός δεν θέλει να φάει κρέας.",
+    "ko": "",
+    "highlight": "δεν θέλει"
+   },
+   {
+    "en": "Μη φωνάζεις, το παιδί κοιμάται.",
+    "ko": "",
+    "highlight": "Μη φωνάζεις"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Δεν μιλάς!",
+    "right": "Μη μιλάς!",
+    "note": "To give a negative command ('Don't speak!'), use μην/μη with the subjunctive/present, never simple indicative negation with δεν."
+   },
+   {
+    "wrong": "Θέλω να δεν έρθεις.",
+    "right": "Θέλω να μην έρθεις.",
+    "note": "After the subjunctive particle να, negation always requires μην instead of δεν."
+   },
+   {
+    "wrong": "Μην ξέρω την απάντηση.",
+    "right": "Δεν ξέρω την απάντηση.",
+    "note": "Factual knowledge is stated in the indicative mood, which strictly takes δεν."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I do not understand Greek very well.",
+    "options": [
+     "Μην καταλαβαίνω",
+     "Δεν καταλαβαίνω",
+     "Να μην καταλαβαίνω",
+     "Όχι καταλαβαίνω"
+    ],
+    "answer": 1,
+    "explanation": "A factual statement about oneself requires the indicative negation particle 'δεν'."
+   },
+   {
+    "question": "Don't open the window, please!",
+    "options": [
+     "Μην ανοίγεις",
+     "Δεν ανοίγεις",
+     "Όχι ανοίξεις",
+     "Δε να ανοίξεις"
+    ],
+    "answer": 0,
+    "explanation": "Negative commands and prohibitions require 'μην'."
+   },
+   {
+    "question": "Maria tries not to eat sweets.",
+    "options": [
+     "να δεν τρώει",
+     "δεν να τρώει",
+     "να μην τρώει",
+     "μην να τρώει"
+    ],
+    "answer": 2,
+    "explanation": "Subjunctive clauses introduced by 'να' must be negated with 'μην'."
+   },
+   {
+    "question": "They are not coming to the cinema tonight.",
+    "options": [
+     "μην έρχονται",
+     "να μην έρχονται",
+     "όχι έρχονται",
+     "δεν έρχονται"
+    ],
+    "answer": 3,
+    "explanation": "Declarative present-tense statements require 'δεν'."
+   }
+  ],
+  "tip": "Keep the final -ν on both 'δεν' and 'μην' when the following word starts with a vowel or the stops κ, π, τ, ξ, ψ, μπ, ντ, γκ, τσ, τζ!"
+ },
+ {
+  "id": "el-a2-genitive-case-possession",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🏷️",
+  "title": "The Genitive Case for Possession",
+  "subtitle": "Expressing ownership, family relations, and descriptions across genders",
+  "color": "#10B981",
+  "bg": "#ECFDF5",
+  "keyPoint": "Nouns and definite articles shift endings in the genitive case to indicate 'of' or ownership, matching gender and number.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Singular Article + Ending",
+    "Plural Article + Ending",
+    "Example (Singular)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine (-ος, -ας, -ης)",
+      "του ... -ου / -α / -η",
+      "των ... -ων",
+      "του καθηγητή"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine (-α, -η)",
+      "της ... -ας / -ης",
+      "των ... -ων",
+      "της μητέρας"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter (-ο, -ι, -μα)",
+      "του ... -ου / -ιού / -ματος",
+      "των ... -ων / -ιών / -μάτων",
+      "του σπιτιού"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Possession & Ownership",
+    "example": "Το αυτοκίνητο του πατέρα είναι παλιό.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Interpersonal Relationships",
+    "example": "Γνώρισα την αδελφή της Άννας.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Origin & Specific Names",
+    "example": "Το κέντρο της πόλης έχει πολλή κίνηση.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Αυτό είναι το βιβλίο του καθηγητή.",
+    "ko": "",
+    "highlight": "του καθηγητή"
+   },
+   {
+    "en": "Η τσάντα της Μαρίας είναι καινούρια.",
+    "ko": "",
+    "highlight": "της Μαρίας"
+   },
+   {
+    "en": "Η πόρτα του σπιτιού είναι ανοιχτή.",
+    "ko": "",
+    "highlight": "του σπιτιού"
+   },
+   {
+    "en": "Τα ονόματα των μαθητών είναι στη λίστα.",
+    "ko": "",
+    "highlight": "των μαθητών"
+   },
+   {
+    "en": "Το χρώμα του προβλήματος είναι περίπλοκο.",
+    "ko": "",
+    "highlight": "του προβλήματος"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Το βιβλίο από τον καθηγητή",
+    "right": "Το βιβλίο του καθηγητή",
+    "note": "Do not translate English 'of' with the preposition 'από'; standard Greek expresses possessive ownership directly via the genitive case."
+   },
+   {
+    "wrong": "Το σπίτι της φίλη μου",
+    "right": "Το σπίτι της φίλης μου",
+    "note": "Remember to inflect both the article and the feminine noun ending into the genitive (-ης)."
+   },
+   {
+    "wrong": "Το όνομα του παιδί",
+    "right": "Το όνομα του παιδιού",
+    "note": "Neuter nouns ending in -ι add -ού in the genitive singular (παιδί -> παιδιού)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "This is Peter's coat (ο Πέτρος).",
+    "options": [
+     "του Πέτρο",
+     "του Πέτρου",
+     "τον Πέτρο",
+     "της Πέτρου"
+    ],
+    "answer": 1,
+    "explanation": "Masculine names ending in -ος take the genitive article 'του' and drop -ς to end in '-ου'."
+   },
+   {
+    "question": "The keys of the room (το δωμάτιο) are on the table.",
+    "options": [
+     "του δωματίου",
+     "το δωμάτιο",
+     "των δωματίων",
+     "της δωματίου"
+    ],
+    "answer": 0,
+    "explanation": "Neuter nouns in -ο take the genitive article 'του' and end in '-ου' in the singular."
+   },
+   {
+    "question": "The voice of the singer (η τραγουδίστρια) is wonderful.",
+    "options": [
+     "την τραγουδίστρια",
+     "του τραγουδίστριας",
+     "των τραγουδίστρια",
+     "της τραγουδίστριας"
+    ],
+    "answer": 3,
+    "explanation": "Feminine nouns in -α take the feminine genitive article 'της' and suffix '-ας'."
+   },
+   {
+    "question": "The parents of the children (τα παιδιά) arrived early.",
+    "options": [
+     "των παιδιού",
+     "τους παιδιά",
+     "των παιδιών",
+     "του παιδιών"
+    ],
+    "answer": 2,
+    "explanation": "Plural genitive across all genders uses the article 'των' and the ending '-ων'."
+   }
+  ],
+  "tip": "All plural genitive nouns in Greek end in -ων, and the definite article for every gender in the plural genitive is always των!"
+ },
+ {
+  "id": "el-a2-aorist-past-tense-active",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#F59E0B",
+  "emoji": "⚡",
+  "title": "Aorist Active: Stem Mutations",
+  "subtitle": "Mastering the simple past tense and consonant mergers",
+  "color": "#F59E0B",
+  "bg": "#FFFBEB",
+  "keyPoint": "The active Aorist combines past endings with a sigmatic suffix that merges with the stem consonant into either -ψ- or -ξ-.",
+  "structure": {
+   "headers": [
+    "Stem Endings",
+    "Consonant Merger",
+    "Present Stem",
+    "Aorist Form (1st Sing.)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Labials: -π-, -β-, -φ-, -πτ-",
+      "+ σ = ψ",
+      "γράφω",
+      "έγραψα"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Velars: -κ-, -γ-, -χ-, -χν-",
+      "+ σ = ξ",
+      "ανοίγω",
+      "άνοιξα"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Dentals: -τ-, -δ-, -θ-, -ζ-",
+      "+ σ = σ",
+      "αγοράζω",
+      "αγόρασα"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Completed Past Actions",
+    "example": "Χθες έγραψα ένα μεγάλο γράμμα.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Sequential Past Events",
+    "example": "Άνοιξα την πόρτα και μπήκα μέσα.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Specific Moment in Time",
+    "example": "Το μάθημα άρχισε στις οκτώ το πρωί.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Χθες έγραψα όλα τα μηνύματα.",
+    "ko": "",
+    "highlight": "έγραψα"
+   },
+   {
+    "en": "Η Ελένη άνοιξε το παράθυρο.",
+    "ko": "",
+    "highlight": "άνοιξε"
+   },
+   {
+    "en": "Τα παιδιά διάβασαν το νέο βιβλίο.",
+    "ko": "",
+    "highlight": "διάβασαν"
+   },
+   {
+    "en": "Μαγειρέψαμε ένα νόστιμο φαγητό.",
+    "ko": "",
+    "highlight": "Μαγειρέψαμε"
+   },
+   {
+    "en": "Έκλεισες την πόρτα πριν φύγεις;",
+    "ko": "",
+    "highlight": "Έκλεισες"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Χθες γράφισα ένα γράμμα.",
+    "right": "Χθες έγραψα ένα γράμμα.",
+    "note": "Labial stem verbs (like γράφ-ω) merge with the past marker to form -ψ- (έγραψα)."
+   },
+   {
+    "wrong": "Ανοίγησα το παράθυρο.",
+    "right": "Άνοιξα το παράθυρο.",
+    "note": "Velar stems (like ανοίγ-ω) merge with the -σ- of the aorist into -ξ- (άνοιξα)."
+   },
+   {
+    "wrong": "Εμείς δουλέψαμε και μετά έφαγαμε.",
+    "right": "Εμείς δουλέψαμε και μετά φάγαμε.",
+    "note": "The past stress prefix (augment ε-) only appears when the verb needs an extra syllable to place stress on the antepenult."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday I cooked (μαγειρεύω) pastitsio.",
+    "options": [
+     "μαγείρεψα",
+     "μαγείρεξα",
+     "μαγείρευσα",
+     "εμαγείρευα"
+    ],
+    "answer": 0,
+    "explanation": "Verbs in -εύω change their stem ending to -εψ- in the aorist: μαγείρεψα."
+   },
+   {
+    "question": "Who opened (ανοίγω) the store?",
+    "options": [
+     "άνοιπσε",
+     "άνοιξε",
+     "ανοίγησε",
+     "ένοιξε"
+    ],
+    "answer": 1,
+    "explanation": "Velar verbs with -γ- mutate to -ξ- in the Aorist: άνοιξε."
+   },
+   {
+    "question": "We bought (αγοράζω) a new house.",
+    "options": [
+     "αγοράξαμε",
+     "αγοράψαμε",
+     "αγοράσαμε",
+     "αγοραστήκαμε"
+    ],
+    "answer": 2,
+    "explanation": "Verbs ending in -ζω drop the dental consonant and simply take -σ-: αγοράσαμε."
+   },
+   {
+    "question": "They drank (πίνω -> ήπια) all the milk.",
+    "options": [
+     "πίνανε",
+     "πίσανε",
+     "έπιξαν",
+     "ήπιαν"
+    ],
+    "answer": 3,
+    "explanation": "The verb πίνω has an irregular strong Aorist stem: ήπια / ήπιαν."
+   }
+  ],
+  "tip": "Remember the phone formula: π, β, φ become ψ (like Greek psi), and κ, γ, χ become ξ (like Greek xi)!"
+ },
+ {
+  "id": "el-a2-imperfect-vs-aorist-aspect",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#F59E0B",
+  "emoji": "⏳",
+  "title": "Imperfect vs Aorist: Past Aspect",
+  "subtitle": "Choosing between continuous background and punctual finished events",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use the Imperfect (Παρατατικός) for ongoing, habitual, or repeated past actions, and the Aorist (Αόριστος) for single, completed events.",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Aspect",
+    "Trigger Adverbs",
+    "Greek Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Παρατατικός (Imperfect)",
+      "Continuous / Habitual",
+      "πάντα, κάθε μέρα, συχνά",
+      "Έτρωγα κάθε πρωί."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Αόριστος (Aorist)",
+      "Completed / Punctual",
+      "ξαφνικά, χθες, μια φορά",
+      "Έφαγα στις οκτώ."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Combination",
+      "Background interrupted by Event",
+      "ενώ / όταν",
+      "Ενώ κοιμόμουν, χτύπησε το τηλέφωνο."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Habitual Childhood Action",
+    "example": "Όταν ήμουν μικρός, έπαιζα ποδόσφαιρο.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Single Finished Punctual Action",
+    "example": "Χθες αγόρασα ένα καινούριο ποδήλατο.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Interrupted Continuous Action",
+    "example": "Διάβαζα όταν μπήκε ο πατέρας.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Κάθε καλοκαίρι πηγαίναμε στο χωριό.",
+    "ko": "",
+    "highlight": "πηγαίναμε"
+   },
+   {
+    "en": "Μια φορά πήγαμε στο χωριό με τρένο.",
+    "ko": "",
+    "highlight": "πήγαμε"
+   },
+   {
+    "en": "Μαγείρευα όταν κόπηκε το ρεύμα.",
+    "ko": "",
+    "highlight": "Μαγείρευα"
+   },
+   {
+    "en": "Ξαφνικά κόπηκε το ρεύμα.",
+    "ko": "",
+    "highlight": "κόπηκε"
+   },
+   {
+    "en": "Χθες έβρεχε όλη μέρα.",
+    "ko": "",
+    "highlight": "έβρεχε"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Όταν ήμουν παιδί, πήγα κάθε μέρα στην παραλία.",
+    "right": "Όταν ήμουν παιδί, πήγαινα κάθε μέρα στην παραλία.",
+    "note": "Habitual or repeated past actions ('κάθε μέρα') require the Imperfect (πήγαινα), not the Aorist (πήγα)."
+   },
+   {
+    "wrong": "Χθες διάβαζα ένα άρθρο και το τελείωσα.",
+    "right": "Χθες διάβασα ένα άρθρο και το τελείωσα.",
+    "note": "When a past action is brought to a definite, completed finish, use the Aorist (διάβασα)."
+   },
+   {
+    "wrong": "Ενώ περπάτησα στο δρόμο, είδα ένα σκύλο.",
+    "right": "Ενώ περπατούσα στο δρόμο, είδα ένα σκύλο.",
+    "note": "Clauses introduced by ενώ ('while') set an ongoing background scene and require the Imperfect."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Every summer my family ___ in the sea.",
+    "options": [
+     "κολυμπούσε",
+     "κολύμπησε",
+     "να κολυμπήσει",
+     "θα κολυμπήσει"
+    ],
+    "answer": 0,
+    "explanation": "The phrase 'Every summer' denotes repeated habitual action, requiring the Imperfect (κολυμπούσε)."
+   },
+   {
+    "question": "Yesterday at five o'clock, the courier ___ the package.",
+    "options": [
+     "έφερνε",
+     "έφερε",
+     "φέρει",
+     "να φέρει"
+    ],
+    "answer": 1,
+    "explanation": "A specific punctual completed event in the past uses the Aorist (έφερε)."
+   },
+   {
+    "question": "While George ___ dinner, the phone rang.",
+    "options": [
+     "ετοίμασε",
+     "έτοιμος",
+     "ετοίμαζε",
+     "θα ετοιμάσει"
+    ],
+    "answer": 2,
+    "explanation": "An ongoing background action interrupted by another requires the Imperfect (ετοίμαζε)."
+   },
+   {
+    "question": "Suddenly, it ___ to rain.",
+    "options": [
+     "άρχιζε",
+     "αρχίζει",
+     "να αρχίσει",
+     "άρχισε"
+    ],
+    "answer": 3,
+    "explanation": "'Ξαφνικά' (suddenly) marks an instantaneous entry into an event, triggering the Aorist (άρχισε)."
+   }
+  ],
+  "tip": "Ask yourself: Was it a movie scene unfolding over time (Imperfect), or a snapshot photo of a finished action (Aorist)?"
+ },
+ {
+  "id": "el-a2-weak-clitic-pronoun-placement",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🧩",
+  "title": "Weak Personal Clitic Pronoun Placement",
+  "subtitle": "Placing direct and indirect unstressed pronouns accurately",
+  "color": "#3B82F6",
+  "bg": "#EFF6FF",
+  "keyPoint": "Weak object pronouns precede finite conjugated verbs, but attach directly to the end of affirmative imperative forms.",
+  "structure": {
+   "headers": [
+    "Verb Form",
+    "Rule Position",
+    "Formula",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Indicative / Subjunctive",
+      "BEFORE the verb",
+      "Pronoun + Verb",
+      "Τον βλέπω κάθε μέρα."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Affirmative Imperative",
+      "AFTER the verb",
+      "Imperative + Pronoun",
+      "Δώσε μου το κλειδί."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Imperative",
+      "BEFORE the verb",
+      "Μην + Pronoun + Verb",
+      "Μην τον ενοχλείς."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Direct Object Replacement",
+    "example": "Το βιβλίο; Το αγόρασα χθες.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Indirect Beneficiary / Recipient",
+    "example": "Μου έδωσε ένα όμορφο δώρο.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Imperative Commands",
+    "example": "Πες μου όλη την αλήθεια.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Τον ξέρω πολλά χρόνια.",
+    "ko": "",
+    "highlight": "Τον ξέρω"
+   },
+   {
+    "en": "Δώσε μου το μολύβι σου.",
+    "ko": "",
+    "highlight": "Δώσε μου"
+   },
+   {
+    "en": "Μην της μιλάς τώρα, είναι θυμωμένη.",
+    "ko": "",
+    "highlight": "Μην της μιλάς"
+   },
+   {
+    "en": "Σας παρακαλώ, βοηθήστε μας.",
+    "ko": "",
+    "highlight": "βοηθήστε μας"
+   },
+   {
+    "en": "Θέλω να σου πω κάτι.",
+    "ko": "",
+    "highlight": "να σου πω"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Βλέπω τον κάθε μέρα.",
+    "right": "Τον βλέπω κάθε μέρα.",
+    "note": "In indicative statements, weak clitic pronouns must stand directly before the conjugated verb."
+   },
+   {
+    "wrong": "Μου δώσε το νερό.",
+    "right": "Δώσε μου το νερό.",
+    "note": "In positive imperative commands, the clitic pronoun always follows the verb."
+   },
+   {
+    "wrong": "Μην πες μου ψέματα.",
+    "right": "Μη μου λες ψέματα.",
+    "note": "Negative commands place the clitic before the verb and immediately after the negative particle μη(ν)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I see her (αυτήν -> τη / την) every afternoon.",
+    "options": [
+     "Βλέπω την",
+     "Τη βλέπω",
+     "Βλέπω τη",
+     "Εγώ βλέπω της"
+    ],
+    "answer": 1,
+    "explanation": "In indicative statements, clitics go before the conjugated verb: Τη βλέπω."
+   },
+   {
+    "question": "Give me (μου) the ticket!",
+    "options": [
+     "Μου δώσε",
+     "Δώσε μου",
+     "Να μου δώσε",
+     "Μου να δώσεις"
+    ],
+    "answer": 1,
+    "explanation": "Affirmative imperative verbs place the weak clitic pronoun directly after the verb: Δώσε μου."
+   },
+   {
+    "question": "Do not tell him (του) anything!",
+    "options": [
+     "Μην πεις του τίποτα!",
+     "Του μην πεις τίποτα!",
+     "Μην του πεις τίποτα!",
+     "Πες του μη τίποτα!"
+    ],
+    "answer": 2,
+    "explanation": "In negative commands, the clitic is placed between 'μην' and the verb: Μην του πεις."
+   },
+   {
+    "question": "When both clitics appear together, indirect precedes direct: He gave it to me.",
+    "options": [
+     "Μου το έδωσε.",
+     "Το μου έδωσε.",
+     "Έδωσέ το μου.",
+     "Έδωσε μου το."
+    ],
+    "answer": 0,
+    "explanation": "In pre-verbal position, the indirect pronoun (μου) precedes the direct accusative pronoun (το): Μου το έδωσε."
+   }
+  ],
+  "tip": "If a positive imperative verb is stressed on the third syllable from the end (antepenult), adding a clitic forces an extra accent on the last syllable: π.χ., διάβασέ το!"
+ },
+ {
+  "id": "el-a2-simple-future-tha-aspect",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "⏳",
+  "title": "Future Tenses with 'Θα': Continuous vs Simple Dependent",
+  "subtitle": "Master the distinction between ongoing and one-time future actions",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use 'θα' with the present stem for continuous or repeated future actions, but use 'θα' with the dependent (aorist) stem for single, completed events.",
+  "structure": {
+   "headers": [
+    "Aspect",
+    "Formation",
+    "Greek Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Continuous Future",
+      "θα + Present Stem",
+      "θα γράφω",
+      "I will be writing (habitually/in progress)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Simple Future",
+      "θα + Dependent Stem",
+      "θα γράψω",
+      "I will write (once/completed)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Irregular Simple",
+      "θα + Irregular Stem",
+      "θα δω",
+      "I will see (single event)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Single Event (Simple)",
+    "example": "Αύριο θα πάρω το τρένο στις οκτώ.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Ongoing Process (Continuous)",
+    "example": "Όλο το απόγευμα θα διαβάζω στη βιβλιοθήκη.",
+    "translation": ""
+   },
+   {
+    "color": "#1E40AF",
+    "label": "Habitual Future (Continuous)",
+    "example": "Από τον άλλο μήνα θα πηγαίνω στο γυμναστήριο κάθε μέρα.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Απόψε θα μαγειρέψω ένα ωραίο φαγητό.",
+    "ko": "",
+    "highlight": "θα μαγειρέψω"
+   },
+   {
+    "en": "Κάθε πρωί θα πίνω καφέ στο μπαλκόνι.",
+    "ko": "",
+    "highlight": "θα πίνω"
+   },
+   {
+    "en": "Αύριο στις πέντε θα ταξιδεύουμε για την Κρήτη.",
+    "ko": "",
+    "highlight": "θα ταξιδεύουμε"
+   },
+   {
+    "en": "Μόλις φτάσω στο σπίτι, θα σε πάρω τηλέφωνο.",
+    "ko": "",
+    "highlight": "θα σε πάρω"
+   },
+   {
+    "en": "Τον επόμενο χειμώνα θα μαθαίνω ισπανικά κάθε Τρίτη.",
+    "ko": "",
+    "highlight": "θα μαθαίνω"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Αύριο θα γράφω ένα γράμμα στη μαμά μου.",
+    "right": "Αύριο θα γράψω ένα γράμμα στη μαμά μου.",
+    "note": "Writing one letter tomorrow is a single, complete action, so you must use the simple future stem (γράψ-), not the continuous (γράφ-)."
+   },
+   {
+    "wrong": "Κάθε μέρα θα διαβάσω για δύο ώρες.",
+    "right": "Κάθε μέρα θα διαβάζω για δύο ώρες.",
+    "note": "Repeated daily habits require the continuous stem (διαβάζ-), not the one-time simple stem (διαβάσ-)."
+   },
+   {
+    "wrong": "Θα πάω κάθε Κυριακή στη γιαγιά.",
+    "right": "Θα πηγαίνω κάθε Κυριακή στη γιαγιά.",
+    "note": "Recurring habitual actions ('κάθε Κυριακή') demand the continuous verb form 'θα πηγαίνω'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Tomorrow I will buy a new car. (one-time event)",
+    "options": [
+     "θα αγοράζω",
+     "θα αγοράσω",
+     "αγοράσω",
+     "θα αγόρασα"
+    ],
+    "answer": 1,
+    "explanation": "A single future event requires 'θα' followed by the simple dependent stem (-ασ-)."
+   },
+   {
+    "question": "Next year I will be studying every afternoon.",
+    "options": [
+     "θα διαβάσω",
+     "θα διάβασα",
+     "θα διαβάζω",
+     "διαβάζω"
+    ],
+    "answer": 2,
+    "explanation": "Habitual, repeated future actions need the continuous future with the present stem."
+   },
+   {
+    "question": "Tonight we will watch the new film. (single event)",
+    "options": [
+     "θα δούμε",
+     "θα βλέπουμε",
+     "βλέπουμε",
+     "είδαμε"
+    ],
+    "answer": 0,
+    "explanation": "Watching a film once tonight calls for the simple dependent form of 'βλέπω', which is 'θα δούμε'."
+   },
+   {
+    "question": "All night long the wind will be blowing.",
+    "options": [
+     "θα φυσήξει",
+     "φύσηξε",
+     "θα φύσηξε",
+     "θα φυσάει"
+    ],
+    "answer": 3,
+    "explanation": "Actions that extend continuously over a period ('όλη τη νύχτα') take the continuous future."
+   }
+  ],
+  "tip": "Time markers are your best clue: words like 'αύριο', 'απόψε', and 'μόλις' usually take simple future (θα γράψω), whereas 'κάθε μέρα' and 'όλη μέρα' take continuous future (θα γράφω)."
+ },
+ {
+  "id": "el-a2-imperative-mood-active",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🗣️",
+  "title": "Active Imperative: Continuous vs Punctual Commands",
+  "subtitle": "Give direct orders, advice, and instructions with the correct aspect",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use the punctual imperative for one-time instructions and the continuous imperative for ongoing habits, while always using 'μη(ν)' + subjunctive for negative commands.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Singular (εσύ)",
+    "Plural (εσείς)",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Continuous Command",
+      "γράφε!",
+      "γράφετε!",
+      "keep writing / write regularly"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Punctual Command",
+      "γράψε!",
+      "γράψτε!",
+      "write (this down right now)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negative Command",
+      "μη γράφεις!",
+      "μη γράφετε!",
+      "don't write (habitual)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Punctual",
+      "μη γράψεις!",
+      "μη γράψετε!",
+      "don't write (this once)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Immediate Instruction",
+    "example": "Κλείσε την πόρτα, σε παρακαλώ!",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Ongoing Advice",
+    "example": "Πίνε πολύ νερό κάθε μέρα.",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "Prohibition (Negative)",
+    "example": "Μην καπνίζετε μέσα στο κτίριο.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Άνοιξε το παράθυρο, κάνει ζέστη.",
+    "ko": "",
+    "highlight": "Άνοιξε"
+   },
+   {
+    "en": "Διάβαζε καθημερινά για να μάθεις γρήγορα.",
+    "ko": "",
+    "highlight": "Διάβαζε"
+   },
+   {
+    "en": "Περιμένετε εδώ για λίγα λεπτά.",
+    "ko": "",
+    "highlight": "Περιμένετε"
+   },
+   {
+    "en": "Μην αγγίζεις τα εκθέματα στο μουσείο.",
+    "ko": "",
+    "highlight": "Μην αγγίζεις"
+   },
+   {
+    "en": "Πες μου όλη την αλήθεια τώρα.",
+    "ko": "",
+    "highlight": "Πες"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Μη γράψε αυτό το μήνυμα!",
+    "right": "Μη γράψεις αυτό το μήνυμα!",
+    "note": "Greek has no direct negative imperative; use 'μη(ν)' plus the dependent subjunctive (-εις), never the positive imperative form."
+   },
+   {
+    "wrong": "Κάθε πρωί πιες ένα ποτήρι γάλα.",
+    "right": "Κάθε πρωί πίνε ένα ποτήρι γάλα.",
+    "note": "General habitual instructions over time require the continuous imperative (πίνε), not the punctual (πιες)."
+   },
+   {
+    "wrong": "Άκουσε με προσοχή όταν μιλάω!",
+    "right": "Άκουγε με προσοχή όταν μιλάω!",
+    "note": "Ongoing actions while someone speaks require continuous aspect (άκουγε)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Turn off the light right now! (to one person, punctual)",
+    "options": [
+     "Κλείνε",
+     "Κλείσε",
+     "Μην κλείσεις",
+     "Έκλεισες"
+    ],
+    "answer": 1,
+    "explanation": "For a single, immediate command to 'εσύ', use the punctual imperative 'κλείσε'."
+   },
+   {
+    "question": "Don't eat the cake! (one-time prohibition to 'εσύ')",
+    "options": [
+     "Μη φας",
+     "Μη φάε",
+     "Μην τρως",
+     "Μη έφαγες"
+    ],
+    "answer": 0,
+    "explanation": "Negative punctual commands use 'μη' + simple subjunctive: 'μη φας'."
+   },
+   {
+    "question": "Practice Greek every single day! (habitual advice to 'εσύ')",
+    "options": [
+     "Μίλησε",
+     "Μιλάς",
+     "Μίλαγε",
+     "Μιλάτε"
+    ],
+    "answer": 2,
+    "explanation": "'Μίλαγε' (or 'μίλα') is the continuous imperative expressing a repeated long-term habit."
+   },
+   {
+    "question": "Tell me your name! (polite/plural form)",
+    "options": [
+     "Πες",
+     "Λέγε",
+     "Πες μου",
+     "Πείτε"
+    ],
+    "answer": 3,
+    "explanation": "'Πείτε' is the punctual imperative plural form of the irregular verb 'λέω'."
+   }
+  ],
+  "tip": "Never put 'μη' directly before an imperative word like 'γράψε'—always switch to the subjunctive: 'μη γράψεις'!"
+ },
+ {
+  "id": "el-b1-passive-voice-present-tense",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔄",
+  "title": "Mediopassive Voice Present Tense (-ομαι, -ιέμαι)",
+  "subtitle": "Conjugate reflexive, reciprocal, and passive actions in the present",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Greek mediopassive verbs end in -ομαι (Group A) or -ιέμαι/-ούμαι (Group B) and describe passive, reflexive, or state-change actions.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Group A (-ομαι)",
+    "Group B1 (-ιέμαι)",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "εγώ",
+      "πλένομαι",
+      "αγαπιέμαι",
+      "I wash myself / I am loved"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "εσύ",
+      "πλένεσαι",
+      "αγαπιέσαι",
+      "you wash yourself / you are loved"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "αυτός/-ή/-ό",
+      "πλένεται",
+      "αγαπιέται",
+      "he/she/it washes / is loved"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "εμείς",
+      "πλενόμαστε",
+      "αγαπιόμαστε",
+      "we wash / we are loved"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "αυτοί/-ές/-ά",
+      "πλένονται",
+      "αγαπιούνται",
+      "they wash / they are loved"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Reflexive Action",
+    "example": "Ο Νίκος ντύνεται γρήγορα κάθε πρωί.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "True Passive",
+    "example": "Τα ελληνικά βιβλία διαβάζονται σε όλο τον κόσμο.",
+    "translation": ""
+   },
+   {
+    "color": "#5B21B6",
+    "label": "Reciprocal Action",
+    "example": "Βλεπόμαστε συχνά στην πλατεία.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Το μουσείο κλείνεται νωρίς κάθε Κυριακή.",
+    "ko": "",
+    "highlight": "κλείνεται"
+   },
+   {
+    "en": "Εμείς σκεφτόμαστε σοβαρά να αλλάξουμε δουλειά.",
+    "ko": "",
+    "highlight": "σκεφτόμαστε"
+   },
+   {
+    "en": "Πώς γράφεται αυτή η λέξη;",
+    "ko": "",
+    "highlight": "γράφεται"
+   },
+   {
+    "en": "Τα παιδιά κουράζονται εύκολα στο σχολείο.",
+    "ko": "",
+    "highlight": "κουράζονται"
+   },
+   {
+    "en": "Η Μαρία και ο Γιώργος αγαπιούνται πάρα πολύ.",
+    "ko": "",
+    "highlight": "αγαπιούνται"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Το φαγητό μαγειρεύει από τη μητέρα.",
+    "right": "Το φαγητό μαγειρεύεται από τη μητέρα.",
+    "note": "Active 'μαγειρεύει' means 'cooks'; the food is cooked, so passive 'μαγειρεύεται' is required."
+   },
+   {
+    "wrong": "Εγώ πλένω κάθε πρωί.",
+    "right": "Εγώ πλένομαι κάθε πρωί.",
+    "note": "'Πλένω' needs an object (I wash the car). To wash yourself, use mediopassive 'πλένομαι'."
+   },
+   {
+    "wrong": "Αυτοί αγαπιούνται τους εαυτούς τους.",
+    "right": "Αυτοί αγαπιούνται.",
+    "note": "The mediopassive form already carries reflexive/reciprocal meaning; do not add redundant object pronouns."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How is this word pronounced? ('This word ___')",
+    "options": [
+     "προφέρεται",
+     "προφέρει",
+     "προφέρομαι",
+     "προφέρονται"
+    ],
+    "answer": 0,
+    "explanation": "The subject 'η λέξη' is 3rd person singular, needing 'προφέρεται' (is pronounced)."
+   },
+   {
+    "question": "We see each other every weekend.",
+    "options": [
+     "βλέπουμε",
+     "βλέπεται",
+     "βλεπόμαστε",
+     "βλέπονται"
+    ],
+    "answer": 2,
+    "explanation": "Reciprocal 1st person plural ('we see each other') uses the ending -όμαστε: 'βλεπόμαστε'."
+   },
+   {
+    "question": "The boy gets dressed on his own.",
+    "options": [
+     "ντύνει",
+     "ντύνομαι",
+     "ντύνονται",
+     "ντύνεται"
+    ],
+    "answer": 3,
+    "explanation": "3rd person singular mediopassive for 'he gets dressed' is 'ντύνεται'."
+   },
+   {
+    "question": "Many languages are spoken in Europe.",
+    "options": [
+     "μιλάει",
+     "μιλιούνται",
+     "μιλιέται",
+     "μιλάνε"
+    ],
+    "answer": 1,
+    "explanation": "The plural subject 'πολλές γλώσσες' requires the 3rd person plural passive 'μιλιούνται'."
+   }
+  ],
+  "tip": "Deponent verbs in Greek (like έρχομαι, θυμάμαι, κοιμάμαι) use passive endings but always have active meanings in English."
+ },
+ {
+  "id": "el-b1-subjunctive-na-clauses",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#F59E0B",
+  "emoji": "🎯",
+  "title": "Subjunctive Mood with 'Να' (Aspectual Choice)",
+  "subtitle": "Express wants, intentions, and necessity while choosing aspect",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Follow the particle 'να' with the continuous stem for ongoing desires or habits, and with the simple dependent stem for single, specific goals.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Construction",
+    "Greek Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Continuous Subjunctive",
+      "να + Present Stem",
+      "θέλω να χορεύω",
+      "I want to dance (habitually/for hours)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Simple Subjunctive",
+      "να + Dependent Stem",
+      "θέλω να χορέψω",
+      "I want to dance (this one dance)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Impersonal 'Πρέπει'",
+      "πρέπει να + Subjunctive",
+      "πρέπει να φύγω",
+      "I must leave (now, single action)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Desire for One Event",
+    "example": "Θέλω να πιω έναν κρύο καφέ.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Necessity / Obligation",
+    "example": "Πρέπει να πληρώσουμε τον λογαριασμό σήμερα.",
+    "translation": ""
+   },
+   {
+    "color": "#92400E",
+    "label": "Ongoing Preference",
+    "example": "Μου αρέσει να ξυπνάω νωρίς το πρωί.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Μπορείς να μου δώσεις το αλάτι;",
+    "ko": "",
+    "highlight": "να μου δώσεις"
+   },
+   {
+    "en": "Πρέπει να τρως φρούτα κάθε μέρα.",
+    "ko": "",
+    "highlight": "να τρως"
+   },
+   {
+    "en": "Ελπίζω να βρεις τα κλειδιά σου σύντομα.",
+    "ko": "",
+    "highlight": "να βρεις"
+   },
+   {
+    "en": "Δεν θέλω να περιμένω στην ουρά με τις ώρες.",
+    "ko": "",
+    "highlight": "να περιμένω"
+   },
+   {
+    "en": "Αποφάσισα να αγοράσω ένα καινούριο διαμέρισμα.",
+    "ko": "",
+    "highlight": "να αγοράσω"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Θέλω να πίνω έναν καφέ τώρα.",
+    "right": "Θέλω να πιω έναν καφέ τώρα.",
+    "note": "Drinking one specific coffee right now is a punctual, completed action; use 'να πιω', not 'να πίνω'."
+   },
+   {
+    "wrong": "Μου αρέσει να διαβάσω κάθε βράδυ.",
+    "right": "Μου αρέσει να διαβάζω κάθε βράδυ.",
+    "note": "Liking a recurring activity ('κάθε βράδυ') demands the continuous subjunctive 'να διαβάζω'."
+   },
+   {
+    "wrong": "Πρέπει να πηγαίνω αμέσως στον γιατρό.",
+    "right": "Πρέπει να πάω αμέσως στον γιατρό.",
+    "note": "Going immediately right now is a single event, requiring simple subjunctive 'να πάω'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I would like to order right now. (single action)",
+    "options": [
+     "να παραγγέλνω",
+     "να παράγγελνα",
+     "να παρήγγειλα",
+     "να παραγγείλω"
+    ],
+    "answer": 3,
+    "explanation": "A single, specific order requires the dependent simple stem: 'να παραγγείλω'."
+   },
+   {
+    "question": "You should exercise every single day. (habitual)",
+    "options": [
+     "να γυμνάζεσαι",
+     "να γυμναστείς",
+     "γυμνάζεσαι",
+     "να γυμνάστηκες"
+    ],
+    "answer": 0,
+    "explanation": "Daily ongoing habits take the continuous subjunctive: 'να γυμνάζεσαι'."
+   },
+   {
+    "question": "Can you open the door, please? (single event)",
+    "options": [
+     "να ανοίγεις",
+     "να ανοίξεις",
+     "άνοιξες",
+     "να άνοιξες"
+    ],
+    "answer": 1,
+    "explanation": "Opening the door once in this moment calls for the simple stem 'να ανοίξεις'."
+   },
+   {
+    "question": "We plan to live in Athens permanently.",
+    "options": [
+     "να μείνουμε",
+     "μείναμε",
+     "να μένουμε",
+     "να μέναμε"
+    ],
+    "answer": 2,
+    "explanation": "Living permanently represents an ongoing state, fitting the continuous subjunctive 'να μένουμε'."
+   }
+  ],
+  "tip": "Whenever English uses 'to + infinitive' (e.g., 'I want to go'), Greek nearly always replaces it with 'να' + subjunctive."
+ },
+ {
+  "id": "el-b1-passive-aorist-past-stem",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🏛️",
+  "title": "Passive Aorist (Simple Past Passive in -θηκα)",
+  "subtitle": "Form and use completed past passive actions ending in -θηκα",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The simple past of mediopassive verbs is formed with the suffix -θηκα, -θηκες, -θηκε and active past personal endings.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Group A (-ω -> -στηκα/-θηκα)",
+    "Group B (-ιέμαι -> -ήθηκα)",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "εγώ",
+      "πλήρωσα -> πληρώθηκα",
+      "κοιμάμαι -> κοιμήθηκα",
+      "I was paid / I slept"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "εσύ",
+      "πληρώθηκες",
+      "κοιμήθηκες",
+      "you were paid / you slept"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "αυτός/-ή/-ό",
+      "πληρώθηκε",
+      "κοιμήθηκε",
+      "he/she/it was paid / slept"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "εμείς",
+      "πληρωθήκαμε",
+      "κοιμηθήκαμε",
+      "we were paid / we slept"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "αυτοί/-ές/-ά",
+      "πληρώθηκαν(ε)",
+      "κοιμήθηκαν(ε)",
+      "they were paid / they slept"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Completed Passive Event",
+    "example": "Το σπίτι πουλήθηκε την περασμένη εβδομάδα.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Past Deponent Action",
+    "example": "Χθες κοιμήθηκα πολύ αργά.",
+    "translation": ""
+   },
+   {
+    "color": "#5B21B6",
+    "label": "Reciprocal Past Event",
+    "example": "Γνωριστήκαμε σε ένα συνέδριο το 2020.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Η συναυλία ακυρώθηκε λόγω βροχής.",
+    "ko": "",
+    "highlight": "ακυρώθηκε"
+   },
+   {
+    "en": "Χθες το βράδυ κουράστηκα πάρα πολύ στη δουλειά.",
+    "ko": "",
+    "highlight": "κουράστηκα"
+   },
+   {
+    "en": "Γεννήθηκα στην Αθήνα πριν από είκοσι χρόνια.",
+    "ko": "",
+    "highlight": "Γεννήθηκα"
+   },
+   {
+    "en": "Όλα τα εισιτήρια πληρώθηκαν με κάρτα.",
+    "ko": "",
+    "highlight": "πληρώθηκαν"
+   },
+   {
+    "en": "Σηκωθήκαμε νωρίς για να προλάβουμε την πτήση.",
+    "ko": "",
+    "highlight": "Σηκωθήκαμε"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Το γράμμα έγραψε από τον Πέτρο.",
+    "right": "Το γράμμα γράφτηκε από τον Πέτρο.",
+    "note": "'Έγραψε' is active ('he wrote'). The letter was written, so use the passive past 'γράφτηκε'."
+   },
+   {
+    "wrong": "Εμείς κοιμήσαμε νωρίς χθες.",
+    "right": "Εμείς κοιμηθήκαμε νωρίς χθες.",
+    "note": "'Κοιμάμαι' is a deponent verb; its past tense requires the mediopassive ending -ήθηκα ('κοιμηθήκαμε')."
+   },
+   {
+    "wrong": "Χθες πληρώθηκα τη Μαρία.",
+    "right": "Χθες πλήρωσα τη Μαρία.",
+    "note": "If you paid Maria, use the active 'πλήρωσα'. 'Πληρώθηκα' means 'I received my salary / I was paid'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday the shop was closed early.",
+    "options": [
+     "έκλεισε",
+     "κλείστηκε",
+     "κλείνει",
+     "κλεινόταν"
+    ],
+    "answer": 1,
+    "explanation": "The passive simple past for 'was closed' is 'κλείστηκε' (from κλείνομαι)."
+   },
+   {
+    "question": "We met each other last summer in Crete.",
+    "options": [
+     "γνωρίσαμε",
+     "γνωριζόμαστε",
+     "γνωριστήκαμε",
+     "γνωρίστηκα"
+    ],
+    "answer": 2,
+    "explanation": "1st person plural past passive for reciprocal 'we met' is 'γνωριστήκαμε'."
+   },
+   {
+    "question": "Where were you born? (to singular 'εσύ')",
+    "options": [
+     "Γεννήθηκες",
+     "Γεννήθηκα",
+     "Γεννιέσαι",
+     "Γέννησες"
+    ],
+    "answer": 0,
+    "explanation": "'Γεννήθηκες' is the 2nd person singular past passive of 'γεννιέμαι' (to be born)."
+   },
+   {
+    "question": "They woke up late on Sunday.",
+    "options": [
+     "ξύπνησαν",
+     "σηκώθηκε",
+     "σηκώθηκα",
+     "σηκώθηκαν"
+    ],
+    "answer": 3,
+    "explanation": "3rd person plural past passive of 'σηκώνομαι' (to get up) is 'σηκώθηκαν'."
+   }
+  ],
+  "tip": "Notice that even though the stem is passive (-θηκ-), the personal endings (-α, -ες, -ε, -αμε, -ατε, -αν) are identical to the active simple past!"
+ },
+ {
+  "id": "el-b1-clitic-doubling-topicalization",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#7C3AED",
+  "emoji": "🔄",
+  "title": "Clitic Doubling and Flexible Word Order",
+  "subtitle": "Highlighting topics and emphasis using weak object pronouns",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Clitic doubling pairs a weak object pronoun with a full noun phrase to mark information as an established topic or to bring it into focus.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Construction",
+    "Greek Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Anticipatory (Left-dislocation)",
+      "Clitic + Verb + Full Noun Phrase",
+      "Τον είδα τον Γιώργο χθες."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Preposed Topic",
+      "Full Noun Phrase + Clitic + Verb",
+      "Το βιβλίο το διάβασα ήδη."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Indirect Object Doubling",
+      "Clitic + Verb + Indirect Object",
+      "Της το έδωσα της Μαρίας."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Topic Topicalization",
+    "example": "Αυτό το τραγούδι το ξέρω πολύ καλά.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Known Entities (Anticipation)",
+    "example": "Τον κάλεσες τελικά τον καθηγητή;",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Indirect Beneficiary",
+    "example": "Τους έστειλα μήνυμα των παιδιών.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Τον είδα τον Γιώργο στην πλατεία.",
+    "ko": "",
+    "highlight": "Τον είδα τον Γιώργο"
+   },
+   {
+    "en": "Το αυτοκίνητο το πούλησε πριν από έναν μήνα.",
+    "ko": "",
+    "highlight": "Το αυτοκίνητο το πούλησε"
+   },
+   {
+    "en": "Της μίλησα της Ελένης για το πρόγραμμα.",
+    "ko": "",
+    "highlight": "Της μίλησα της Ελένης"
+   },
+   {
+    "en": "Αυτά τα νέα τα μάθαμε πολύ νωρίς.",
+    "ko": "",
+    "highlight": "τα μάθαμε"
+   },
+   {
+    "en": "Δεν την ξέρω αυτή την κοπέλα.",
+    "ko": "",
+    "highlight": "την ξέρω αυτή την κοπέλα"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Τον είδα έναν άντρα.",
+    "right": "Είδα έναν άντρα.",
+    "note": "Indefinite or non-specific direct objects cannot normally undergo clitic doubling."
+   },
+   {
+    "wrong": "Είδα τον τον Γιώργο.",
+    "right": "Τον είδα τον Γιώργο.",
+    "note": "In indicative sentences, weak object clitics must precede the finite verb, not follow it."
+   },
+   {
+    "wrong": "Του είδα τον Γιώργο.",
+    "right": "Τον είδα τον Γιώργο.",
+    "note": "Make sure the clitic pronoun matches the case of the full noun phrase (accusative τον for direct objects)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the natural way to say 'As for that letter, I sent it': 'Εκείνο το γράμμα ___.'",
+    "options": [
+     "το έστειλα",
+     "έστειλα",
+     "τον έστειλα",
+     "έστειλά το"
+    ],
+    "answer": 0,
+    "explanation": "When the direct object is topicalized at the beginning, Greek requires the matching accusative clitic pronoun (το) before the verb."
+   },
+   {
+    "question": "Complete the doubled question: '___ είδες τη Μαρία στο γραφείο;'",
+    "options": [
+     "Το",
+     "Της",
+     "Την",
+     "Τον"
+    ],
+    "answer": 2,
+    "explanation": "The noun phrase 'τη Μαρία' is feminine singular accusative, so the agreeing direct clitic is 'την'."
+   },
+   {
+    "question": "Identify the incorrect usage of clitic doubling:",
+    "options": [
+     "Τον γνωρίζω τον κύριο Παπαδόπουλο.",
+     "Την αγόρασα μια εφημερίδα.",
+     "Την άκουσα αυτή τη μουσική.",
+     "Τους βοήθησα τους φοιτητές."
+    ],
+    "answer": 1,
+    "explanation": "Indefinite noun phrases like 'μια εφημερίδα' cannot take a clitic double."
+   },
+   {
+    "question": "Which sentence correctly doubles an indirect object?",
+    "options": [
+     "Τον έδωσα το κλειδί του Πέτρου.",
+     "Του έδωσα το κλειδί τον Πέτρο.",
+     "Το έδωσα του Πέτρου το κλειδί.",
+     "Του έδωσα του Πέτρου το κλειδί."
+    ],
+    "answer": 3,
+    "explanation": "The recipient 'του Πέτρου' is genitive, so it must be doubled by the matching masculine genitive clitic 'του'."
+   }
+  ],
+  "tip": "Only double definite or referential noun phrases. Using a clitic with an indefinite noun like 'ένα μήλο' is grammatically incorrect in Greek."
+ },
+ {
+  "id": "el-b1-participles-active-adverbial-vs-passive",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "⏳",
+  "title": "Gerund (-οντας/-ώντας) vs Passive Participle (-μένος)",
+  "subtitle": "Contrasting invariant adverbial actions with inflected passive states",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Active participles ending in -οντας/-ώντας are invariable adverbs describing simultaneous actions, while passive participles ending in -μένος decline like regular adjectives.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Ending Pattern",
+    "Syntactic Role"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Active Participle (Gerund)",
+      "Invariable (-οντας / -ώντας)",
+      "Adverbial modifier of time/manner"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Passive Participle",
+      "Inflected (-μένος, -μένη, -μένο)",
+      "Adjectival modifier or predicate result"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Compound Resultative",
+      "είμαι + -μένος",
+      "Stative present perfect meaning"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Simultaneous Manner/Time",
+    "example": "Έφυγε τρέχοντας από το σπίτι.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Resulting State (Adjective)",
+    "example": "Η πόρτα ήταν κλειδωμένη.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Subject Modification",
+    "example": "Περπατώντας στο δάσος, είδε ένα ελάφι.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Διαβάζοντας το βιβλίο, αποκοιμήθηκε στον καναπέ.",
+    "ko": "",
+    "highlight": "Διαβάζοντας"
+   },
+   {
+    "en": "Ήπιαμε καφέ κοιτάζοντας τη θάλασσα.",
+    "ko": "",
+    "highlight": "κοιτάζοντας"
+   },
+   {
+    "en": "Όλα τα φώτα στο κτίριο είναι σβησμένα.",
+    "ko": "",
+    "highlight": "σβησμένα"
+   },
+   {
+    "en": "Μου έδωσε μια σπασμένη κούπα.",
+    "ko": "",
+    "highlight": "σπασμένη"
+   },
+   {
+    "en": "Γελώντας δυνατά, μπήκαν μέσα στην τάξη.",
+    "ko": "",
+    "highlight": "Γελώντας"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Τρέχοντες στο πάρκο, κουράστηκαν.",
+    "right": "Τρέχοντας στο πάρκο, κουράστηκαν.",
+    "note": "The active participle in modern Greek never inflects for plural; it stays -οντας/-ώντας regardless of subject."
+   },
+   {
+    "wrong": "Το φαγητό είναι μαγειρεύοντας.",
+    "right": "Το φαγητό είναι μαγειρεμένο.",
+    "note": "To describe a state or completed quality, use the inflected passive participle (-μένος), not the gerund."
+   },
+   {
+    "wrong": "Οι κουρασμένη μαθητές κοιμήθηκαν.",
+    "right": "Οι κουρασμένοι μαθητές κοιμήθηκαν.",
+    "note": "Passive participles in -μένος must agree in gender, number, and case with the noun they modify."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct form: 'Μπήκε στο δωμάτιο ___ ένα τραγούδι.' (singing)",
+    "options": [
+     "τραγουδισμένος",
+     "τραγουδώντας",
+     "τραγουδισμένη",
+     "τραγουδούντες"
+    ],
+    "answer": 1,
+    "explanation": "'Τραγουδώντας' is the active adverbial gerund indicating an action happening concurrently with entering."
+   },
+   {
+    "question": "Complete the sentence with the correct passive participle: 'Τα παράθυρα είναι ___.' (open)",
+    "options": [
+     "ανοίγοντας",
+     "ανοιχτή",
+     "ανοιχτά",
+     "ανοιγμένος"
+    ],
+    "answer": 2,
+    "explanation": "The passive participle/adjective must agree with the neuter plural noun 'τα παράθυρα' (ανοιχτά / ανοιγμένα)."
+   },
+   {
+    "question": "Which word correctly completes: 'Η Μαρία έφτασε στη δουλειά εντελώς ___.' (tired)",
+    "options": [
+     "κουράζοντας",
+     "κουρασμένο",
+     "κουρασμένη",
+     "κουρασμένος"
+    ],
+    "answer": 2,
+    "explanation": "The subject 'Η Μαρία' is feminine singular nominative, requiring 'κουρασμένη'."
+   },
+   {
+    "question": "Spell the gerund of 'κοιτάζω' (I look):",
+    "options": [
+     "κοιτάζοντας",
+     "κοιταζόμενος",
+     "κοιταγμένος",
+     "κοιτώντας"
+    ],
+    "answer": 0,
+    "explanation": "First-conjugation verbs like κοιτάζω form the gerund in -οντας (unaccented omega: κοιτάζοντας)."
+   }
+  ],
+  "tip": "Spelling check: verbs stressed on the stem end in -οντας (τρέχω -> τρέχοντας), while verbs stressed on the last syllable end in -ώντας (αγαπώ -> αγαπώντας)."
+ },
+ {
+  "id": "el-b2-conditional-counterfactuals",
+  "level": "b2",
+  "category": "conditionals",
+  "categoryColor": "#DC2626",
+  "emoji": "🎭",
+  "title": "Hypothetical and Counterfactual Conditionals",
+  "subtitle": "Constructing potential and unreal present and past conditions",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "Counterfactual and hypothetical conditionals use 'αν' with the imperfect for present unreal scenarios and 'θα' + imperfect or pluperfect for past counterfactual outcomes.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Condition (αν clause)",
+    "Consequence (main clause)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Real / Open",
+      "αν + Present / Future",
+      "Future / Imperative"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Hypothetical / Unreal Present",
+      "αν + Imperfect (Παρατατικός)",
+      "θα + Imperfect (Παρατατικός)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past Counterfactual",
+      "αν + Past / Pluperfect",
+      "θα + Pluperfect / Past"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Present Unreal",
+    "example": "Αν είχα χρήματα, θα αγόραζα εκείνο το σπίτι.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Past Unreal (Counterfactual)",
+    "example": "Αν είχες έρθει στην ώρα σου, θα είχαμε προλάβει το τρένο.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Polite Hypothesis / Wish",
+    "example": "Αν ήμουν στη θέση σου, δεν θα μιλούσα.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Αν ήξερα την απάντηση, θα σου την έλεγα.",
+    "ko": "",
+    "highlight": "Αν ήξερα"
+   },
+   {
+    "en": "Αν είχαμε φύγει νωρίτερα, δεν θα χάναμε την πτήση.",
+    "ko": "",
+    "highlight": "δεν θα χάναμε"
+   },
+   {
+    "en": "Αν είχα διαβάσει περισσότερο, θα είχα περάσει το μάθημα.",
+    "ko": "",
+    "highlight": "θα είχα περάσει"
+   },
+   {
+    "en": "Τι θα έκανες αν κέρδιζες το λαχείο;",
+    "ko": "",
+    "highlight": "θα έκανες αν κέρδιζες"
+   },
+   {
+    "en": "Αν δεν έβρεχε χθες, θα πηγαίναμε εκδρομή.",
+    "ko": "",
+    "highlight": "θα πηγαίναμε"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Αν θα είχα χρόνο, θα ερχόμουν.",
+    "right": "Αν είχα χρόνο, θα ερχόμουν.",
+    "note": "Never place the particle 'θα' directly inside the 'αν' condition clause."
+   },
+   {
+    "wrong": "Αν είχα λεφτά, θα αγοράσω αυτοκίνητο.",
+    "right": "Αν είχα λεφτά, θα αγόραζα αυτοκίνητο.",
+    "note": "Do not mix an unreal imperfect in the 'αν' clause with a simple future in the apodosis."
+   },
+   {
+    "wrong": "Αν ήξερες, θα μου πεις.",
+    "right": "Αν ήξερες, θα μου έλεγες.",
+    "note": "Present hypothetical conditionals require 'θα' + Imperfect in the main clause."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct verb for a present unreal condition: 'Αν ___ πλούσιος, θα ταξίδευα παντού.'",
+    "options": [
+     "ήμουν",
+     "θα είμαι",
+     "είμαι",
+     "θα ήμουν"
+    ],
+    "answer": 0,
+    "explanation": "The 'αν' clause of an unreal present condition takes the imperfect without 'θα' (ήμουν)."
+   },
+   {
+    "question": "Complete the past counterfactual: 'Αν με είχες προειδοποιήσει, ___ πιο προσεκτικός.'",
+    "options": [
+     "ήμουν",
+     "θα είμαι",
+     "θα ήμουν",
+     "είμαι"
+    ],
+    "answer": 2,
+    "explanation": "The apodosis (consequence) of a counterfactual condition requires 'θα' + imperfect/pluperfect (θα ήμουν / θα είχα υπάρξει)."
+   },
+   {
+    "question": "Which sentence represents an impossible past counterfactual?",
+    "options": [
+     "Αν βρέξει, θα μείνουμε σπίτι.",
+     "Αν έχεις χρόνο, έλα.",
+     "Αν είχαμε κλειδιά, θα μπαίναμε τώρα.",
+     "Αν είχες διαβάσει, θα είχες γράψει καλά."
+    ],
+    "answer": 3,
+    "explanation": "'Αν είχες διαβάσει, θα είχες γράψει καλά' uses the pluperfect to indicate an event that did not happen in the past."
+   },
+   {
+    "question": "Find the grammatically sound counterfactual clause:",
+    "options": [
+     "Αν θα έρθεις, θα χαρώ.",
+     "Αν ερχόσουν, θα περνούσαμε υπέροχα.",
+     "Αν θα ερχόσουν, περνούσαμε υπέροχα.",
+     "Αν ήρθες, θα περάσουμε υπέροχα."
+    ],
+    "answer": 1,
+    "explanation": "'Αν ερχόσουν, θα περνούσαμε υπέροχα' matches imperfect in the condition with 'θα' + imperfect in the result."
+   }
+  ],
+  "tip": "Remember the Golden Rule of Greek conditionals: 'θα' belongs in the consequence clause, never inside the clause introduced by 'αν'."
+ },
+ {
+  "id": "el-b2-archaic-third-declension-fossils",
+  "level": "b2",
+  "category": "nouns",
+  "categoryColor": "#2563EB",
+  "emoji": "🏛️",
+  "title": "Learned and Third-Declension Nominal Declensions",
+  "subtitle": "Navigating formal nominal patterns inherited from Katharevousa",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Fossilized third-declension learned nouns preserve archaic genitive and plural endings, such as -εως for feminine abstracts in -ση/-ξη/-ψη and -ους for neuters in -ος.",
+  "structure": {
+   "headers": [
+    "Stem / Ending",
+    "Case & Number",
+    "Greek Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "η λύση / κυβέρνηση",
+      "Genitive Singular: -εως",
+      "της λύσεως / της κυβερνήσεως"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "το λάθος / γεγονός",
+      "Genitive Singular: -ους",
+      "του λάθους / του γεγονότος"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "το κράτος / μέλος",
+      "Nominative/Acc. Plural: -η",
+      "τα κράτη / τα μέλη"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ο/η ενδιαφέρων/-ουσα",
+      "Participle/Adjective: -ων, -ουσα, -ον",
+      "ο ενδιαφέρων, του ενδιαφέροντος"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Formal Administrative Speech",
+    "example": "Ο Υπουργός Εξωτερικών ανακοίνωσε νέα μέτρα.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Learned Genitives",
+    "example": "Το θέμα της εκπαιδεύσεως απασχολεί τη χώρα.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Neuter Learned Nouns in -ος",
+    "example": "Το κόστος του προϊόντος αυξήθηκε.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Η εξέλιξη της καταστάσεως είναι απρόβλεπτη.",
+    "ko": "",
+    "highlight": "της καταστάσεως"
+   },
+   {
+    "en": "Όλα τα μέλη του διοικητικού συμβουλίου συμφώνησαν.",
+    "ko": "",
+    "highlight": "τα μέλη"
+   },
+   {
+    "en": "Έγινε αναφορά στις παραμέτρους του προβλήματος.",
+    "ko": "",
+    "highlight": "στις παραμέτρους"
+   },
+   {
+    "en": "Πρόκειται για άτομο με ιδιαίτερες πνευματικές ικανότητες.",
+    "ko": "",
+    "highlight": "ιδιαίτερες"
+   },
+   {
+    "en": "Η τιμή του εισιτηρίου εξαρτάται από το βάθος της διαδρομής.",
+    "ko": "",
+    "highlight": "του εισιτηρίου"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Τα λάθα έγιναν από απροσεξία.",
+    "right": "Τα λάθη έγιναν από απροσεξία.",
+    "note": "Neuter nouns ending in -ος (το λάθος) form their plural in -η (τα λάθη), never -α."
+   },
+   {
+    "wrong": "Της κυβέρνησης η απόφαση.",
+    "right": "Της κυβέρνησης / Της κυβερνήσεως η απόφαση.",
+    "note": "Both forms exist, but in elevated speech -εως is favored; avoid mixing colloquial and formal stems erroneously."
+   },
+   {
+    "wrong": "Του κράτου.",
+    "right": "Του κράτους.",
+    "note": "Neuters in -ος take -ους in the genitive singular (το κράτος -> του κράτους)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the genitive singular of 'η εξέλιξη' in formal Greek: 'Τα αίτια της ___.'",
+    "options": [
+     "εξέλιξης",
+     "εξελίξεως",
+     "εξέλιξου",
+     "εξελίξεις"
+    ],
+    "answer": 1,
+    "explanation": "In formal or learned registers, feminine nouns in -ξη form their genitive in -εως (της εξελίξεως)."
+   },
+   {
+    "question": "What is the nominative plural of 'το μέρος' (the part/place)?",
+    "options": [
+     "τα μέρη",
+     "τα μέρα",
+     "οι μέρες",
+     "τα μέρους"
+    ],
+    "answer": 0,
+    "explanation": "Neuter learned nouns ending in -ος take the nominative/accusative plural ending -η (τα μέρη)."
+   },
+   {
+    "question": "Complete the genitive phrase: 'Λόγω του ___ (το γεγονός).'",
+    "options": [
+     "γεγονότου",
+     "γεγονός",
+     "γεγονότος",
+     "γεγονήματος"
+    ],
+    "answer": 2,
+    "explanation": "Third-declension neuters ending in -ός form their genitive singular with -ότος (του γεγονότος)."
+   },
+   {
+    "question": "Identify the genitive singular of 'το έδαφος':",
+    "options": [
+     "του εδάφου",
+     "του εδάφους",
+     "του εδάφη",
+     "του εδάφοτος"
+    ],
+    "answer": 1,
+    "explanation": "Neuters in -ος take -ους in the genitive singular: του εδάφους."
+   }
+  ],
+  "tip": "Neuter nouns ending in -ος like 'το λάθος' or 'το κράτος' always form the genitive singular in -ους and the plural in -η. Never treat them like masculine -ος nouns!"
+ },
+ {
+  "id": "el-b2-indirect-discourse-modality-particles",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#D97706",
+  "emoji": "🗣️",
+  "title": "Complement Clauses: 'Ότι' vs 'Πως' vs 'Που'",
+  "subtitle": "Navigating nuanced complementizer selection across reporting and emotion",
+  "color": "#B45309",
+  "bg": "#FFFBEB",
+  "keyPoint": "'Ότι' introduces neutral factual assertions, 'πως' conveys subjective or informal reporting, and 'που' is used when the proposition is an acknowledged fact triggering an emotional reaction.",
+  "structure": {
+   "headers": [
+    "Complementizer",
+    "Governing Verb Type",
+    "Greek Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ότι",
+      "Neutral verbs of declaration / thinking",
+      "Είπε ότι θα έρθει αύριο."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "πως",
+      "Informal reporting, perception, opinion",
+      "Νομίζω πως έχεις δίκιο."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "που",
+      "Verbs of emotion, memory, sensory proof",
+      "Χαίρομαι που σε βλέπω."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "να",
+      "Desire, permission, volition, purpose",
+      "Θέλω να πας τώρα."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Factual Declaration (Ότι)",
+    "example": "Οι ειδήσεις ανέφεραν ότι ο καιρός θα χαλάσει.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Emotional Complement (Που)",
+    "example": "Λυπάμαι που δεν μπόρεσα να σε βοηθήσω.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Colloquial Belief (Πως)",
+    "example": "Μου φαίνεται πως δεν έχει καταλάβει τίποτα.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ξέρω ότι είσαι πολύ απασχολημένος.",
+    "ko": "",
+    "highlight": "ότι"
+   },
+   {
+    "en": "Άκουσα πως αλλάζεις δουλειά σύντομα.",
+    "ko": "",
+    "highlight": "πως"
+   },
+   {
+    "en": "Χάρηκα πολύ που σε γνώρισα από κοντά.",
+    "ko": "",
+    "highlight": "που"
+   },
+   {
+    "en": "Θυμάμαι που πηγαίναμε στην παραλία κάθε καλοκαίρι.",
+    "ko": "",
+    "highlight": "που"
+   },
+   {
+    "en": "Μας διαβεβαίωσε ότι όλα ήταν εντάξει.",
+    "ko": "",
+    "highlight": "ότι"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Χαίρομαι ότι σε βλέπω.",
+    "right": "Χαίρομαι που σε βλέπω.",
+    "note": "Verbs expressing emotion (χαίρομαι, λυπάμαι, φοβάμαι) require 'που', not 'ότι'."
+   },
+   {
+    "wrong": "Θέλω ότι θα έρθεις.",
+    "right": "Θέλω να έρθεις.",
+    "note": "Verbs of wanting and requesting govern the subjunctive particle 'να', never declarative 'ότι'."
+   },
+   {
+    "wrong": "Θυμάμαι ότι έπαιξες όταν ήσουν παιδί.",
+    "right": "Θυμάμαι που έπαιζες όταν ήσουν παιδί.",
+    "note": "When evoking vivid personal memories as lived experiences, 'που' with the imperfect is the natural choice."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the emotional statement: 'Λυπάμαι πολύ ___ έχασες την πτήση σου.'",
+    "options": [
+     "ότι",
+     "που",
+     "να",
+     "αν"
+    ],
+    "answer": 1,
+    "explanation": "Verbs of emotional reaction like 'λυπάμαι' trigger the complementizer 'που'."
+   },
+   {
+    "question": "Fill in the formal declarative clause: 'Η ανακοίνωση έλεγε ___ το κατάστημα θα μείνει κλειστό.'",
+    "options": [
+     "που",
+     "να",
+     "γιατί",
+     "ότι"
+    ],
+    "answer": 3,
+    "explanation": "Formal neutral statements and official reports use 'ότι'."
+   },
+   {
+    "question": "Select the correct particle after a verb of volition: 'Ελπίζω ___ πάνε όλα καλά.'",
+    "options": [
+     "να",
+     "πως",
+     "ότι",
+     "που"
+    ],
+    "answer": 0,
+    "explanation": "Verbs expressing hope or anticipation frequently take 'να' to introduce subjunctive modal clauses."
+   },
+   {
+    "question": "Which verb correctly governs 'που' as a complementizer?",
+    "options": [
+     "Δηλώνω",
+     "Υποστηρίζω",
+     "Στενοχωριέμαι",
+     "Ισχυρίζομαι"
+    ],
+    "answer": 2,
+    "explanation": "'Στενοχωριέμαι' (I feel sad/upset) is an affective verb and takes 'που' (e.g., Στενοχωριέμαι που φεύγεις)."
+   }
+  ],
+  "tip": "Quick rule of thumb: If you can replace the connector with 'the fact that' after an emotion or memory, use 'που'. For straightforward factual reporting ('he said that'), use 'ότι'."
+ }
+]

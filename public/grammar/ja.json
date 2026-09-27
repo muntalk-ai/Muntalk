@@ -1,0 +1,3357 @@
+[
+ {
+  "id": "ja-a1-wa-vs-ga",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "⚖️",
+  "title": "Topic Marker は (wa) vs Subject Marker が (ga)",
+  "subtitle": "Contrast context-setting topics with specific grammatical subjects",
+  "color": "#3B82F6",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use は to state an established topic or contrast, and が to mark specific grammatical subjects, identifier focus, or newly noticed information.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Function",
+    "Japanese Example",
+    "English Focus"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "は (wa)",
+      "Topic / Contrast",
+      "田中さんは学生です。",
+      "As for Tanaka, he is a student."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "が (ga)",
+      "Identifier / Subject",
+      "田中さんが来ました。",
+      "Tanaka (specifically) came."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "が (ga)",
+      "Phenomenon / Sensation",
+      "雨が降っています。",
+      "Rain (observed) is falling."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "は (wa)",
+      "Contrastive Focus",
+      "肉は食べますが、魚は食べません。",
+      "Meat I eat, but fish I do not."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Broad Topic",
+    "example": "これは何ですか。",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Specific Actor",
+    "example": "誰が話しましたか。",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Objective Observation",
+    "example": "猫がいます。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "私はアメリカ人です。",
+    "ko": "",
+    "highlight": "は"
+   },
+   {
+    "en": "誰が来ましたか。",
+    "ko": "",
+    "highlight": "が"
+   },
+   {
+    "en": "桜の花が綺麗です。",
+    "ko": "",
+    "highlight": "が"
+   },
+   {
+    "en": "お茶は飲みますが、コーヒーは飲みません。",
+    "ko": "",
+    "highlight": "は"
+   },
+   {
+    "en": "今日はずっと雨が降っています。",
+    "ko": "",
+    "highlight": "が"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "誰は来ましたか。",
+    "right": "誰が来ましたか。",
+    "note": "Question words like 誰 (who) or 何 (what) ask for specific new identification and must be marked with が, never は."
+   },
+   {
+    "wrong": "私が行きます。私は学生です。",
+    "right": "私は学生です。私が行きます。",
+    "note": "Introducing general identity uses は; using が on 私 shifts focus to 'I am the specific one who does it'."
+   },
+   {
+    "wrong": "猫はいます。",
+    "right": "猫がいます。",
+    "note": "Noticing or introducing the existence of an item for the first time requires the subject marker が."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct particle to ask 'Who is the teacher?': '___ が先生ですか。'",
+    "options": [
+     "これ",
+     "誰",
+     "今日",
+     "何時"
+    ],
+    "answer": 1,
+    "explanation": "The question word 誰 (who) represents unknown information and takes が."
+   },
+   {
+    "question": "Select the correct sentence to say 'Speaking of me, I am a teacher.'",
+    "options": [
+     "私が先生です。",
+     "私は先生です。",
+     "私に先生です。",
+     "私を先生です。"
+    ],
+    "answer": 1,
+    "explanation": "は establishes 'myself' as the topic under discussion."
+   },
+   {
+    "question": "Fill in the blank for sensory observation: '雨 ___ 降っています。'",
+    "options": [
+     "は",
+     "を",
+     "が",
+     "に"
+    ],
+    "answer": 2,
+    "explanation": "Natural events and observed phenomena are marked with が."
+   },
+   {
+    "question": "Express contrast: 'りんご ___ 食べますが、みかんは食べません。'",
+    "options": [
+     "へ",
+     "で",
+     "を",
+     "は"
+    ],
+    "answer": 3,
+    "explanation": "は is used contrastively to compare one item against another."
+   }
+  ],
+  "tip": "If a question word (誰, 何, どこ) is the subject of the sentence, ALWAYS attach が to it, never は."
+ },
+ {
+  "id": "ja-a1-copula-desu-da",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🏷️",
+  "title": "The Copula: です (desu) and だ (da)",
+  "subtitle": "Predicating identity, state-of-being, and polite vs plain registers",
+  "color": "#10B981",
+  "bg": "#ECFDF5",
+  "keyPoint": "The copula equates 'A is B', using です in polite speech and だ in casual speech across non-past, past, and negative forms.",
+  "structure": {
+   "headers": [
+    "Tense / Polarity",
+    "Polite (丁寧語)",
+    "Plain (普通体)",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present Positive",
+      "学生です",
+      "学生だ",
+      "is a student"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Present Negative",
+      "学生ではありません",
+      "学生ではない",
+      "is not a student"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Positive",
+      "学生でした",
+      "学生だった",
+      "was a student"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Negative",
+      "学生ではありませんでした",
+      "学生ではなかった",
+      "was not a student"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Polite Identity",
+    "example": "鈴木さんは医者です。",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Casual Past",
+    "example": "昨日は休みだった。",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Polite Negative",
+    "example": "明日ではありません。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "田中さんは銀行員です。",
+    "ko": "",
+    "highlight": "です"
+   },
+   {
+    "en": "昨日は日曜日でした。",
+    "ko": "",
+    "highlight": "でした"
+   },
+   {
+    "en": "私は先生ではありません。",
+    "ko": "",
+    "highlight": "ではありません"
+   },
+   {
+    "en": "彼は私の友達だ。",
+    "ko": "",
+    "highlight": "だ"
+   },
+   {
+    "en": "あの建物は病院ではありませんでした。",
+    "ko": "",
+    "highlight": "ではありませんでした"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "高いですだ。",
+    "right": "高いです。",
+    "note": "True い-adjectives already contain predicative force; never attach だ to them."
+   },
+   {
+    "wrong": "学生でしたではありません。",
+    "right": "学生ではありませんでした。",
+    "note": "To negate in the past politely, add でした to the negative base ではありません."
+   },
+   {
+    "wrong": "昨日は雨です。",
+    "right": "昨日は雨でした。",
+    "note": "Past time references like 昨日 (yesterday) require the past copula でした."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the polite negative copula: '私はエンジニア ___。'",
+    "options": [
+     "ではありません",
+     "でした",
+     "だ",
+     "だった"
+    ],
+    "answer": 0,
+    "explanation": "ではありません is the standard polite negative copular form."
+   },
+   {
+    "question": "Choose the polite past copula: '昨日は祝日 ___。'",
+    "options": [
+     "です",
+     "だ",
+     "でした",
+     "ではない"
+    ],
+    "answer": 2,
+    "explanation": "でした is the polite past tense of です."
+   },
+   {
+    "question": "Which form completes the casual past sentence? 'あれは嘘 ___。'",
+    "options": [
+     "です",
+     "だった",
+     "でした",
+     "ではありません"
+    ],
+    "answer": 1,
+    "explanation": "だった is the plain/casual past form of だ."
+   },
+   {
+    "question": "Complete the polite present statement: '山田さんは日本人 ___。'",
+    "options": [
+     "だ",
+     "だった",
+     "ではない",
+     "です"
+    ],
+    "answer": 3,
+    "explanation": "です is the neutral-polite non-past copula."
+   }
+  ],
+  "tip": "In conversational spoken Japanese, では in ではありません is often contracted to じゃ (じゃありません)."
+ },
+ {
+  "id": "ja-a1-core-case-particles",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "📍",
+  "title": "Core Case Particles: を, に, で, and へ",
+  "subtitle": "Assigning direct objects, times, targets, tools, and movement",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use を for direct objects, に for precise times and arrival targets, で for locations of activity or means, and へ for directional movement.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Core Function",
+    "Japanese Example",
+    "Key Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "を (o)",
+      "Direct Object",
+      "本を読みます。",
+      "Object of transitive verb"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "に (ni)",
+      "Specific Time / Target",
+      "七時に起きます。",
+      "Pinpoint point in time or target"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "で (de)",
+      "Location of Action / Means",
+      "図書館で勉強します。",
+      "Dynamic action setting or tool"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "へ (e)",
+      "Direction of Motion",
+      "日本へ行きます。",
+      "Heading towards a destination"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Object Marking",
+    "example": "朝ご飯を食べます。",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Action Location",
+    "example": "駅で切符を買いました。",
+    "translation": ""
+   },
+   {
+    "color": "#14B8A6",
+    "label": "Directional Goal",
+    "example": "京都へ旅行します。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "毎朝新聞を読みます。",
+    "ko": "",
+    "highlight": "を"
+   },
+   {
+    "en": "日曜日に友達に会います。",
+    "ko": "",
+    "highlight": "に"
+   },
+   {
+    "en": "箸でご飯を食べます。",
+    "ko": "",
+    "highlight": "で"
+   },
+   {
+    "en": "明日東京へ行きます。",
+    "ko": "",
+    "highlight": "へ"
+   },
+   {
+    "en": "喫茶店でコーヒーを飲みました。",
+    "ko": "",
+    "highlight": "で"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "学校で歩いて行きます。",
+    "right": "学校へ歩いて行きます。",
+    "note": "で marks where an action takes place; motion toward a goal uses へ or に."
+   },
+   {
+    "wrong": "今日に本を読みます。",
+    "right": "今日本を読みます。",
+    "note": "Relative time words without numbers (今日, 明日, 毎日) do not take に."
+   },
+   {
+    "wrong": "図書館に行動して本を読みます。",
+    "right": "図書館で本を読みます。",
+    "note": "Carrying out an active verb (reading, studying) inside a place takes で, not に."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the particle marking the direct object: '水を ___ 飲みます。'",
+    "options": [
+     "を",
+     "に",
+     "で",
+     "へ"
+    ],
+    "answer": 0,
+    "explanation": "The direct object of drinking is marked by を."
+   },
+   {
+    "question": "Select the correct particle for location of action: '家 ___ 映画を見ます。'",
+    "options": [
+     "へ",
+     "で",
+     "に",
+     "を"
+    ],
+    "answer": 1,
+    "explanation": "で indicates the location where an activity takes place."
+   },
+   {
+    "question": "Pick the particle that pins down specific clock time: '毎晩十一時 ___ 寝ます。'",
+    "options": [
+     "を",
+     "で",
+     "に",
+     "へ"
+    ],
+    "answer": 2,
+    "explanation": "に attaches to specific numerical time expressions like 十一時."
+   },
+   {
+    "question": "Select the particle for direction toward a destination: '空港 ___ 向かいます。'",
+    "options": [
+     "を",
+     "で",
+     "が",
+     "へ"
+    ],
+    "answer": 3,
+    "explanation": "へ marks orientation and direction of movement toward a destination."
+   }
+  ],
+  "tip": "Only use に with time expressions that contain numbers (like 3時 or 5月). Relative times like 昨日 or 来週 never take に."
+ },
+ {
+  "id": "ja-a1-i-na-adjectives",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "🎨",
+  "title": "い-Adjectives vs な-Adjectives Conjugation",
+  "subtitle": "Conjugating stems for tense and modifying nouns correctly",
+  "color": "#F59E0B",
+  "bg": "#FFFBEB",
+  "keyPoint": "い-adjectives inflect their own trailing い into negative and past forms, while な-adjectives remain unchanged and rely on copula changes or な before nouns.",
+  "structure": {
+   "headers": [
+    "Type & Form",
+    "Present Positive",
+    "Present Negative",
+    "Past Positive"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "い-Adj Predicate",
+      "寒いです",
+      "寒くないです",
+      "寒かったです"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "な-Adj Predicate",
+      "静かです",
+      "静かではありません",
+      "静かでした"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "い-Adj + Noun",
+      "寒い日",
+      "寒くない日",
+      "寒かった日"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "な-Adj + Noun",
+      "静かな町",
+      "静かではない町",
+      "静かだった町"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Direct Modification",
+    "example": "静かな部屋で本を読みます。",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Past Description",
+    "example": "昨日の試験は難しかったです。",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Negative State",
+    "example": "この部屋はあまり広くないです。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "富士山は高い山です。",
+    "ko": "",
+    "highlight": "高い"
+   },
+   {
+    "en": "この町はとても静かです。",
+    "ko": "",
+    "highlight": "静か"
+   },
+   {
+    "en": "昨日の映画は面白くなかったです。",
+    "ko": "",
+    "highlight": "面白くなかったです"
+   },
+   {
+    "en": "田中さんは親切な人です。",
+    "ko": "",
+    "highlight": "親切な"
+   },
+   {
+    "en": "先週の旅行は本当に楽しかったです。",
+    "ko": "",
+    "highlight": "楽しかったです"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "綺麗いな花です。",
+    "right": "綺麗な花です。",
+    "note": "綺麗 (きれい) ends in the sound 'i' but is fundamentally a な-adjective; modify nouns with な."
+   },
+   {
+    "wrong": "寒いですでした。",
+    "right": "寒かったです。",
+    "note": "い-adjectives conjugate by dropping い and adding かったです, never ですでした."
+   },
+   {
+    "wrong": "静か本を読みます。",
+    "right": "静かな本を読みます。",
+    "note": "な-adjectives must attach な when directly modifying a following noun."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Form the polite past tense of 暑い (hot): '昨日はとても ___。'",
+    "options": [
+     "暑かったです",
+     "暑いでした",
+     "暑くでした",
+     "暑いでしたです"
+    ],
+    "answer": 0,
+    "explanation": "い-adjectives replace い with かったです for polite past."
+   },
+   {
+    "question": "Modify the noun with the な-adjective 有名 (famous): '彼はずっと ___ 人物です。'",
+    "options": [
+     "有名",
+     "有名い",
+     "有名な",
+     "有名の"
+    ],
+    "answer": 2,
+    "explanation": "な-adjectives attach な directly before nouns."
+   },
+   {
+    "question": "Select the correct polite negative of 高い (expensive): 'この靴は ___。'",
+    "options": [
+     "高くないです",
+     "高いないです",
+     "高いではありません",
+     "高かったです"
+    ],
+    "answer": 0,
+    "explanation": "い-adjectives drop い and take くないです for polite negative."
+   },
+   {
+    "question": "Choose the past form of the な-adjective 暇: '先週の土曜日は ___。'",
+    "options": [
+     "暇かった",
+     "暇くないでした",
+     "暇でした",
+     "暇いでした"
+    ],
+    "answer": 2,
+    "explanation": "な-adjectives conjugate using the copula, becoming 暇でした in the past."
+   }
+  ],
+  "tip": "Watch out for false い-adjectives like きれい (pretty) and ゆうめい (famous); they end phonetically in -i, but are strictly な-adjectives."
+ },
+ {
+  "id": "ja-a1-verb-groups-polite-masu",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⚙️",
+  "title": "Verb Groups and the Polite ます (masu) Form",
+  "subtitle": "Classifying Godan, Ichidan, and Irregular verbs into polite stems",
+  "color": "#EC4899",
+  "bg": "#FDF2F8",
+  "keyPoint": "Derive the polite stem by dropping る for Ichidan verbs or changing the final -u syllable to an -i syllable for Godan verbs before attaching ます.",
+  "structure": {
+   "headers": [
+    "Group",
+    "Dictionary Form",
+    "Stem Change",
+    "Polite Form (ます)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Group 2 (Ichidan)",
+      "食べる (taberu)",
+      "Drop る → 食べ-",
+      "食べます"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Group 1 (Godan)",
+      "書く (kaku)",
+      "Change -u to -i → 書き-",
+      "書きます"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Group 1 (Godan)",
+      "飲む (nomu)",
+      "Change -u to -i → 飲み-",
+      "飲みます"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Group 3 (Irregular)",
+      "する / 来る",
+      "Irregular base",
+      "します / 来ます"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EC4899",
+    "label": "Habitual Action",
+    "example": "毎朝七時に起きます。",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Polite Negation",
+    "example": "今日はお酒を飲みません。",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Polite Past",
+    "example": "昨日図書館で勉強しました。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "毎朝パンを食べます。",
+    "ko": "",
+    "highlight": "食べます"
+   },
+   {
+    "en": "日本語の手紙を書きます。",
+    "ko": "",
+    "highlight": "書きます"
+   },
+   {
+    "en": "昨日は友達と買い物をしました。",
+    "ko": "",
+    "highlight": "しました"
+   },
+   {
+    "en": "朝はコーヒーを飲みません。",
+    "ko": "",
+    "highlight": "飲みません"
+   },
+   {
+    "en": "先生が教室に来ました。",
+    "ko": "",
+    "highlight": "来ました"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "食べみます。",
+    "right": "食べます。",
+    "note": "Ichidan verbs drop る completely; never insert an extra み before ます."
+   },
+   {
+    "wrong": "話すます。",
+    "right": "話します。",
+    "note": "Godan verbs ending in す change their vowel to し before attaching ます (す → し)."
+   },
+   {
+    "wrong": "来（く）ます。",
+    "right": "来（き）ます。",
+    "note": "The irregular verb 来る (kuru) alters its root pronunciation to ki in the polite form 来ます (kimasu)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Convert the Godan verb 飲む (to drink) to polite non-past:",
+    "options": [
+     "飲ます",
+     "飲みます",
+     "飲るます",
+     "飲めます"
+    ],
+    "answer": 1,
+    "explanation": "The final む changes to the i-column sound み, giving 飲みます."
+   },
+   {
+    "question": "Form the polite past tense of the verb 見る (to watch):",
+    "options": [
+     "見ました",
+     "見ますでした",
+     "見りでした",
+     "見ないでした"
+    ],
+    "answer": 0,
+    "explanation": "Ichidan verb 見る drops る and adds ました to form the polite past tense."
+   },
+   {
+    "question": "What is the polite negative of する (to do)?",
+    "options": [
+     "すりません",
+     "しないです",
+     "しません",
+     "するません"
+    ],
+    "answer": 2,
+    "explanation": "The irregular verb する changes irregularly to しません in polite negative."
+   },
+   {
+    "question": "Choose the correct polite form of 行く (to go):",
+    "options": [
+     "行きます",
+     "行きす",
+     "行くます",
+     "行けます"
+    ],
+    "answer": 0,
+    "explanation": "The final く changes to き, resulting in 行きます."
+   }
+  ],
+  "tip": "To test if an -eru/-iru verb is Ichidan, conjugate it to negative: if it drops る and takes ない (like 食べる → 食べない), it is Ichidan!"
+ },
+ {
+  "id": "ja-a1-te-form-conjunction",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔗",
+  "title": "The て Form and Clause Chaining",
+  "subtitle": "Connect sequential actions and compound predicates effortlessly",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "The て form links actions chronologically, functioning like 'and' or 'and then' between verb phrases.",
+  "structure": {
+   "headers": [
+    "Verb Ending (Group 1)",
+    "Change Pattern",
+    "Example Conjugation"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "う, つ, る",
+      "っ + て",
+      "買って (かう → かって)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "む, ぶ, ぬ",
+      "ん + で",
+      "飲んで (のむ → のんで)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "く / ぐ",
+      "い + て / い + で",
+      "書いて (かく → かいて)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "す",
+      "し + て",
+      "話して (はなす → はなして)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Group 2 (る)",
+      "Drop る + て",
+      "食べて (たべる → たべて)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Sequential Actions",
+    "example": "朝起きて、顔を洗います。",
+    "translation": ""
+   },
+   {
+    "color": "#06B6D4",
+    "label": "Reason / Cause",
+    "example": "風邪をひいて、学校を休みました。",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Method / Means",
+    "example": "歩いて駅まで行きます。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "図書館に行って、本を借りました。",
+    "ko": "",
+    "highlight": "行って"
+   },
+   {
+    "en": "手を洗って、ご飯を食べましょう。",
+    "ko": "",
+    "highlight": "洗って"
+   },
+   {
+    "en": "コーヒーを飲んで、少し休みます。",
+    "ko": "",
+    "highlight": "飲んで"
+   },
+   {
+    "en": "友達と話して、映画を見ました。",
+    "ko": "",
+    "highlight": "話して"
+   },
+   {
+    "en": "宿題をしてから、寝ます。",
+    "ko": "",
+    "highlight": "して"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "朝起きます、そして顔を洗います。",
+    "right": "朝起きて、顔を洗います。",
+    "note": "Chaining clauses directly with the て form is far more natural than repeating full polite sentence endings with 'そして'."
+   },
+   {
+    "wrong": "行って、買いました、食べました。",
+    "right": "行って、買って、食べました。",
+    "note": "Only the final verb in a chained clause takes the past or polite inflection; non-final verbs stay in the て form."
+   },
+   {
+    "wrong": "学校へいきって、勉強しました。",
+    "right": "学校へ行って、勉強しました。",
+    "note": "The verb 行く (いく) is an irregular phonetic exception: it conjugates to 行って (いって), not いいて or いきって."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Connect 'to drink' (飲む) with the next action: 'I drink water and sleep.' → 水を___、寝ます。",
+    "options": [
+     "飲みて",
+     "飲んで",
+     "飲って",
+     "飲みてから"
+    ],
+    "answer": 1,
+    "explanation": "Group 1 verbs ending in む replace む with んで to form the て form."
+   },
+   {
+    "question": "Choose the correct irregular て form for 行く (to go): 毎日学校へ___、友達に会います。",
+    "options": [
+     "行って",
+     "行いて",
+     "行きって",
+     "行いで"
+    ],
+    "answer": 0,
+    "explanation": "行く is the sole phonetic exception among く-ending verbs, becoming 行って (いって) instead of いいて."
+   },
+   {
+    "question": "Complete the sequence: 'Read a book and buy groceries.' → 本を___、買い物をします。",
+    "options": [
+     "読みて",
+     "読って",
+     "読んで",
+     "読んでいて"
+    ],
+    "answer": 2,
+    "explanation": "The dictionary form 読む (よむ) ends in む, so its て form is 読んで (よんで)."
+   },
+   {
+    "question": "Connect the Ru-verb (Group 2) 食べる into a chain: 朝ご飯を___、出かけます。",
+    "options": [
+     "食べって",
+     "食べいで",
+     "食んで",
+     "食べて"
+    ],
+    "answer": 3,
+    "explanation": "Group 2 (ichidan) verbs form the て form simply by dropping the final る and appending て."
+   }
+  ],
+  "tip": "Remember the rhyme 'い・ち・り becomes って, み・び・に becomes んで' to quickly master Group 1 euphonic shifts!"
+ },
+ {
+  "id": "ja-a2-plain-form-speech-levels",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🗣️",
+  "title": "Plain Form and Casual Register",
+  "subtitle": "Master dictionary, negative, and past plain forms for casual speech and complex grammar",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "Plain forms are essential not only for informal conversations with peers but also as building blocks for embedded clauses like quotes, thoughts, and noun modifiers.",
+  "structure": {
+   "headers": [
+    "Polarity & Tense",
+    "Polite Form",
+    "Plain Form (Dictionary/ない/た)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present Affirmative",
+      "食べます / 行きます",
+      "食べる / 行く"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Present Negative",
+      "食べません / 行きません",
+      "食べない / 行かない"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past Affirmative",
+      "食べました / 行きました",
+      "食べた / 行った"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Negative",
+      "食べませんでした",
+      "食べなかった / 行かなかった"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Casual Conversation",
+    "example": "明日、一緒に映画を見る？",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Quoting Thoughts (と思う)",
+    "example": "田中さんは来ないと思います。",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Noun Modification",
+    "example": "昨日買った本は面白かったです。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "明日、東京へ行く？うん、行くよ。",
+    "ko": "",
+    "highlight": "行く"
+   },
+   {
+    "en": "今日は宿題がないから、遊ぼう。",
+    "ko": "",
+    "highlight": "ない"
+   },
+   {
+    "en": "昨日見た映画はとても怖かった。",
+    "ko": "",
+    "highlight": "見た"
+   },
+   {
+    "en": "彼は肉を食べないと言っていました。",
+    "ko": "",
+    "highlight": "食べない"
+   },
+   {
+    "en": "先週読んだ本をもう一度読む。",
+    "ko": "",
+    "highlight": "読んだ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "明日は雨が降りますと思います。",
+    "right": "明日は雨が降ると思います。",
+    "note": "Embedded clauses preceding と思う (I think) or と言う (to say) strictly require the plain form, not the polite ます form."
+   },
+   {
+    "wrong": "昨日作ったの料理はおいしいです。",
+    "right": "昨日作った料理はおいしいです。",
+    "note": "Verbs in plain form modify nouns directly; do not insert the particle の between a verb and the noun it modifies."
+   },
+   {
+    "wrong": "友達に「何を食べますか」と聞いた。",
+    "right": "友達に「何を食べる？」と聞いた。",
+    "note": "Using full polite forms with close friends or family sounds unnaturally stiff and distant in casual settings."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Express casual thought: 'I think she will come.' → 彼女は___と思います。",
+    "options": [
+     "来ます",
+     "来る",
+     "来て",
+     "来ないでした"
+    ],
+    "answer": 1,
+    "explanation": "The complementizer と requires the plain dictionary form (来る) when expressing an affirmative future/present thought."
+   },
+   {
+    "question": "Choose the plain negative past of 飲む (to drink): 昨日お酒を___。",
+    "options": [
+     "飲まない",
+     "飲まなかった",
+     "飲みませんでした",
+     "飲まないでした"
+    ],
+    "answer": 1,
+    "explanation": "The plain past negative replaces ない with なかった, giving 飲まなかった."
+   },
+   {
+    "question": "Select the correct plain form to modify the noun 'person': 'The person who bought the car' → 車を___人",
+    "options": [
+     "買い",
+     "買います",
+     "買いました",
+     "買った"
+    ],
+    "answer": 3,
+    "explanation": "Direct noun modification in the past tense uses the plain past た form (買った)."
+   },
+   {
+    "question": "What is the plain negative form of the irregular verb する?",
+    "options": [
+     "すらない",
+     "しない",
+     "さない",
+     "しらない"
+    ],
+    "answer": 1,
+    "explanation": "The verb する becomes しない in its plain negative (ない) form."
+   }
+  ],
+  "tip": "Remember that the た form follows the exact same euphonic shifts as the て form—just swap て/で for た/だ!"
+ },
+ {
+  "id": "ja-a2-continuous-state-te-iru",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "⏳",
+  "title": "Aspectual ている: Progressive vs Resultative State",
+  "subtitle": "Distinguish continuous actions from lingering resultant states",
+  "color": "#3B82F6",
+  "bg": "#EFF6FF",
+  "keyPoint": "ている expresses ongoing continuous actions with durative verbs, but signifies an enduring state resulting from a past change with punctual/instantaneous verbs.",
+  "structure": {
+   "headers": [
+    "Verb Type",
+    "Verb Meaning",
+    "ている Interpretation"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Durative (継続動詞)",
+      "食べる, 読む, 書く",
+      "Action in progress ('is doing')"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Instantaneous (瞬間動詞)",
+      "結婚する, 死ぬ, 落ちる",
+      "Resulting state ('is in a state of')"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "State/Attribute (状態動詞)",
+      "似る, 優れる",
+      "Ongoing inherent attribute"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Movement/Transfer",
+      "行く, 来る",
+      "Has gone/come and is still there"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Progressive Action",
+    "example": "今、日本語を勉強しています。",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Resultant State",
+    "example": "姉は結婚しています。",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Habitual Action",
+    "example": "毎朝公園を走っています。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "子供たちは庭で遊んでいます。",
+    "ko": "",
+    "highlight": "遊んでいます"
+   },
+   {
+    "en": "窓が開いています。",
+    "ko": "",
+    "highlight": "開いています"
+   },
+   {
+    "en": "田中さんはメガネをかけています。",
+    "ko": "",
+    "highlight": "かけています"
+   },
+   {
+    "en": "電車の鍵が落ちていますよ。",
+    "ko": "",
+    "highlight": "落ちています"
+   },
+   {
+    "en": "父は有名な会社で働いています。",
+    "ko": "",
+    "highlight": "働いています"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "田中さんは今、結婚します。",
+    "right": "田中さんは結婚しています。",
+    "note": "結婚する is instantaneous; to express marital status, use 結婚している (has married and remains in that state)."
+   },
+   {
+    "wrong": "私はその答えを知りませんではなく、知っていません。",
+    "right": "私はその答えを知りません。",
+    "note": "While affirmative knowledge is 知っている, the negative state of 'not knowing' is virtually always 知りません (or 知らない), never 知っていません."
+   },
+   {
+    "wrong": "ドアが開けます。",
+    "right": "ドアが開いています。",
+    "note": "An open state uses the intransitive verb 開く with ている (開いている), not the transitive potential 開ける."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Say 'The window is open (in an open state)' using intransitive 開く: 窓が___。",
+    "options": [
+     "開けています",
+     "開いています",
+     "開きます",
+     "開いたでした"
+    ],
+    "answer": 1,
+    "explanation": "開く (あく) is an instantaneous intransitive verb; its ている form denotes the continuous result of opening."
+   },
+   {
+    "question": "Express 'I do not know' correctly: そのニュースを___。",
+    "options": [
+     "知っていません",
+     "知っていなかった",
+     "知るではありません",
+     "知りません"
+    ],
+    "answer": 3,
+    "explanation": "To state that you do not possess knowledge, standard Japanese requires 知りません (plain: 知らない), not the negative ている pattern."
+   },
+   {
+    "question": "Describe an ongoing action right now: 弟は部屋で本を___。",
+    "options": [
+     "読んでいる",
+     "読んだ",
+     "読みます",
+     "読めばいい"
+    ],
+    "answer": 0,
+    "explanation": "読む is a durative action verb, so 読んでいる describes an action currently in progress."
+   },
+   {
+    "question": "Say 'She is wearing glasses': 彼女は眼鏡を___。",
+    "options": [
+     "かけます",
+     "かけた",
+     "かけています",
+     "かけるです"
+    ],
+    "answer": 2,
+    "explanation": "Clothing and accessories put onto the body use instantaneous action verbs in the ている form to describe being worn."
+   }
+  ],
+  "tip": "Ask yourself: 'Does this action happen in a split second?' If yes (like 結婚する, 死ぬ, 落ちる), ている means 'has happened and stays that way'!"
+ },
+ {
+  "id": "ja-a2-verb-potential-form",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#F59E0B",
+  "emoji": "💪",
+  "title": "Potential Form: られる and える",
+  "subtitle": "Express capability and possibility while adjusting particle usage",
+  "color": "#F59E0B",
+  "bg": "#FFFBEB",
+  "keyPoint": "The potential form converts verbs to express ability ('can do') and typically switches the direct object particle を to が.",
+  "structure": {
+   "headers": [
+    "Verb Class",
+    "Conjugation Rule",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Group 1 (Godan)",
+      "Change final -u to -e + る",
+      "話す → 話せる, 書く → 書ける"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Group 2 (Ichidan)",
+      "Drop る, attach られる",
+      "食べる → 食べられる, 見る → 見られる"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Suru (Irregular)",
+      "する becomes できる",
+      "勉強する → 勉強できる"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Kuru (Irregular)",
+      "くる becomes こられる",
+      "来る → 来られる (こられる)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Personal Ability",
+    "example": "私は漢字が書けます。",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Situational Possibility",
+    "example": "この店でカードが使えますか。",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Inability (Negative)",
+    "example": "辛い食べ物が食べられません。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "一人で着物が着られますか。",
+    "ko": "",
+    "highlight": "着られますか"
+   },
+   {
+    "en": "刺身が食べられません。",
+    "ko": "",
+    "highlight": "食べられません"
+   },
+   {
+    "en": "日本語の新聞が読めます。",
+    "ko": "",
+    "highlight": "読めます"
+   },
+   {
+    "en": "明日パーティーに来られますか。",
+    "ko": "",
+    "highlight": "来られますか"
+   },
+   {
+    "en": "今日は宿題が多くて、遊べない。",
+    "ko": "",
+    "highlight": "遊べない"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "日本語を話せます。",
+    "right": "日本語が話せます。",
+    "note": "Potential verbs function as stative predicates of capability, standardly taking the subject marker が instead of を for the object."
+   },
+   {
+    "wrong": "私は寿司を食べれます。",
+    "right": "私は寿司が食べられます。",
+    "note": "Dropping ら in Group 2 potential forms (ら抜き言葉) is common in casual slang, but grammatically non-standard in formal textbooks and tests."
+   },
+   {
+    "wrong": "一人で行くができます。",
+    "right": "一人で行くことができます。",
+    "note": "When using nominalized dictionary form + ことができる, do not omit the formal noun こと before が."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Convert the Group 1 verb 泳ぐ (to swim) into polite potential: 私も海で___。",
+    "options": [
+     "泳がれます",
+     "泳げます",
+     "泳ぎられます",
+     "泳ぐできます"
+    ],
+    "answer": 1,
+    "explanation": "For Group 1 verbs, shift the final 'u' sound to 'e' and add ます: およぐ → およげる → およげます."
+   },
+   {
+    "question": "Which particle correctly marks the object with a potential verb? 私にはピアノ___弾けません。",
+    "options": [
+     "を",
+     "に",
+     "が",
+     "で"
+    ],
+    "answer": 2,
+    "explanation": "The potential form denotes a state of ability, shifting the required particle from the direct object marker を to が."
+   },
+   {
+    "question": "Choose the standard grammatical potential form for 食べる: 納豆が___。",
+    "options": [
+     "食べれます",
+     "食べられます",
+     "食べせます",
+     "食べさせます"
+    ],
+    "answer": 1,
+    "explanation": "Group 2 verbs attach られる (polite: られます); omitting 'ra' is colloquial rather than standard written Japanese."
+   },
+   {
+    "question": "What is the potential form of 来る (to come)? 明日学校に___？",
+    "options": [
+     "来れる",
+     "来られる",
+     "来せる",
+     "来す"
+    ],
+    "answer": 1,
+    "explanation": "The irregular verb 来る (くる) conjugates irregularly to 来られる (こられる)."
+   }
+  ],
+  "tip": "Notice that all potential verbs conjugate identically to Group 2 (Ichidan) verbs once transformed—their negatives always end in ない and polite forms in ます!"
+ },
+ {
+  "id": "ja-a2-giving-receiving-basics",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🎁",
+  "title": "Basic Giving and Receiving: あげる, もらう, and くれる",
+  "subtitle": "Navigate perspective and directional social flow when gifting objects",
+  "color": "#10B981",
+  "bg": "#ECFDF5",
+  "keyPoint": "あげる expresses giving outward from oneself, くれる expresses giving inward to the speaker or in-group, and もらう expresses receiving from the recipient's viewpoint.",
+  "structure": {
+   "headers": [
+    "Verb",
+    "Direction of Transfer",
+    "Canonical Sentence Pattern"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "あげる",
+      "Speaker/in-group gives outward to others",
+      "[Giver] は [Recipient] に [Item] をあげる"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "くれる",
+      "Other person gives inward toward speaker",
+      "[Giver] は 私に [Item] をくれる"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "もらう",
+      "Recipient receives from giver",
+      "[Recipient] は [Giver] に/から [Item] をもらう"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Giving Outward (あげる)",
+    "example": "私は妹にプレゼントをあげました。",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Giving to Me (くれる)",
+    "example": "田中さんが私に花をくれました。",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Receiving (もらう)",
+    "example": "私は先生に辞書をもらいました。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "母の日に花をあげました。",
+    "ko": "",
+    "highlight": "あげました"
+   },
+   {
+    "en": "友達が私にお土産をくれました。",
+    "ko": "",
+    "highlight": "くれました"
+   },
+   {
+    "en": "誕生日に父から時計をもらいました。",
+    "ko": "",
+    "highlight": "もらいました"
+   },
+   {
+    "en": "弟に新しいゲームをあげた。",
+    "ko": "",
+    "highlight": "あげた"
+   },
+   {
+    "en": "親切な人が道を教えてくれました。",
+    "ko": "",
+    "highlight": "くれました"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "田中さんは私に本をあげました。",
+    "right": "田中さんは私に本をくれました。",
+    "note": "When another person gives something to you (or your in-group), you must use くれる, never あげる."
+   },
+   {
+    "wrong": "私は友達にプレゼントをくれました。",
+    "right": "私は友達にプレゼントをあげました。",
+    "note": "The speaker cannot be the giver when using くれる; giving outward to another person requires あげる."
+   },
+   {
+    "wrong": "先生にプレゼントをあげました。",
+    "right": "先生にプレゼントを差し上げました。",
+    "note": "While あげる is structurally correct, using it directly toward superiors (like teachers or bosses) sounds condescending; humble 差し上げる is preferred in polite society."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the gift inward: 'Suzuki gave me a souvenir.' → 鈴木さんは私にお土産を___。",
+    "options": [
+     "あげました",
+     "もらいました",
+     "くれました",
+     "やりました"
+    ],
+    "answer": 2,
+    "explanation": "When an outside giver presents an item inward to 'me' (私に), くれる must be used."
+   },
+   {
+    "question": "Complete the gift outward: 'I gave my friend a book.' → 私は友達に本を___。",
+    "options": [
+     "あげました",
+     "くれました",
+     "もらいました",
+     "いただきした"
+    ],
+    "answer": 0,
+    "explanation": "When the speaker gives outward to another person, the verb must be あげる."
+   },
+   {
+    "question": "Fill in the receiving perspective: 'I received a letter from Ken.' → 私はケンさんに手紙を___。",
+    "options": [
+     "あげました",
+     "くれました",
+     "もらいました",
+     "やりたい"
+    ],
+    "answer": 2,
+    "explanation": "The recipient marked by は (私は) receives an item from someone marked by に/から using もらう."
+   },
+   {
+    "question": "Identify the giver when くれる is used: 課長が___ペンをくれました。",
+    "options": [
+     "友達に",
+     "私に",
+     "課長に",
+     "社長に"
+    ],
+    "answer": 1,
+    "explanation": "くれる indicates a vector directed toward the speaker (私) or members of the speaker's in-group."
+   }
+  ],
+  "tip": "Think of くれる as an arrow pointing straight at your chest (Giver → Me), while あげる points away from you into the world (Me → Out)!"
+ },
+ {
+  "id": "ja-a2-relative-clauses",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔗",
+  "title": "Noun Modification and Relative Clauses",
+  "subtitle": "Attaching full descriptive sentences directly before nouns",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "In Japanese, relative clauses directly precede the noun they modify in plain form without using any relative pronouns.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Plain Form Pattern",
+    "Example Noun Phrase",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Verb (Present)",
+      "食べる ＋ 人",
+      "ご飯を食べる人",
+      "a person who eats meals"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Verb (Past)",
+      "買った ＋ 本",
+      "きのう買った本",
+      "the book that I bought yesterday"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "い-adjective",
+      "青い ＋ 車",
+      "背が高い人",
+      "a person who is tall"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "な-adjective",
+      "静かな ＋ 町",
+      "有名な町",
+      "a town that is famous"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Noun",
+      "先生の ＋ 本",
+      "日本の文化",
+      "Japanese culture"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Describing Objects",
+    "example": "これは母が作ったケーキです。",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Describing People",
+    "example": "あそこで本を読んでいる人は田中さんです。",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Describing Places",
+    "example": "去年行った場所を覚えていますか。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "私が昨日買った本はとても面白かったです。",
+    "ko": "",
+    "highlight": "私が昨日買った本"
+   },
+   {
+    "en": "あそこで歌を歌っている女性は私の姉です。",
+    "ko": "",
+    "highlight": "歌を歌っている女性"
+   },
+   {
+    "en": "父がよく作る料理はカレーライスです。",
+    "ko": "",
+    "highlight": "父がよく作る料理"
+   },
+   {
+    "en": "先週見た映画の名前を忘れました。",
+    "ko": "",
+    "highlight": "先週見た映画"
+   },
+   {
+    "en": "英語を話すことができる学生は多いです。",
+    "ko": "",
+    "highlight": "英語を話すことができる学生"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "私が昨日買ったの本",
+    "right": "私が昨日買った本",
+    "note": "Do not insert の between a plain-form verb and the noun it modifies."
+   },
+   {
+    "wrong": "友達が行きます町",
+    "right": "友達が行く町",
+    "note": "Verbs inside relative clauses must be in the plain form, not polite ます form."
+   },
+   {
+    "wrong": "私は作った料理はおいしいです。",
+    "right": "私が作った料理はおいしいです。",
+    "note": "The subject inside a modifying clause takes が rather than the topic marker は."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase: 'The person who drank coffee.'",
+    "options": [
+     "コーヒーを飲んだの人",
+     "コーヒーを飲みました人",
+     "コーヒーを飲んだ人",
+     "コーヒーを飲むの人"
+    ],
+    "answer": 2,
+    "explanation": "Plain past form verb directly precedes the noun without any particle: 飲んだ人."
+   },
+   {
+    "question": "Fill in the blank: 'This is the watch that my friend gave me.' (これは友達___くれた時計です。)",
+    "options": [
+     "が",
+     "は",
+     "を",
+     "に"
+    ],
+    "answer": 0,
+    "explanation": "Subjects inside embedded modifying clauses are marked by が instead of the topic marker は."
+   },
+   {
+    "question": "Select the natural phrase for 'a house where a cat lives'.",
+    "options": [
+     "猫が住むの家",
+     "猫が住んでいる家",
+     "猫は住みます家",
+     "猫が住み家"
+    ],
+    "answer": 1,
+    "explanation": "Continuous action modifying a noun uses plain form ~ている: 住んでいる家."
+   },
+   {
+    "question": "Which sentence properly describes 'a movie I saw last week'?",
+    "options": [
+     "先週に見たの映画です。",
+     "先週見ました映画です。",
+     "先週を見映画です。",
+     "先週見た映画です。"
+    ],
+    "answer": 3,
+    "explanation": "Past plain verb 見た directly modifies 映画 without any connector particle."
+   }
+  ],
+  "tip": "Remember that Japanese relative clauses work in reverse compared to English: put the whole descriptive action first, and drop the modified noun at the very end!"
+ },
+ {
+  "id": "ja-a2-volitional-and-tai-desire",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🎯",
+  "title": "Desire (~たい) and Volitional Form (~よう/おう)",
+  "subtitle": "Expressing personal desires and collaborative intentions",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Attach ~たい to the verb stem for personal desires, and conjugate into the volitional form (~おう/~よう) for casual suggestions and intentions.",
+  "structure": {
+   "headers": [
+    "Verb Group",
+    "Dictionary Form",
+    "Desire (~たい)",
+    "Volitional (~おう/よう)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Group 1 (五段)",
+      "行く / 飲む",
+      "行きたい / 飲みたい",
+      "行こう / 飲もう"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Group 2 (一段)",
+      "食べる / 見る",
+      "食べたい / 見たい",
+      "食べよう / 見よう"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Irregular (する)",
+      "する",
+      "したい",
+      "しよう"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Irregular (来る)",
+      "来る",
+      "来たい",
+      "来よう"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Personal Desire",
+    "example": "日本へ旅行に行きたいです。",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Casual Invitation",
+    "example": "一緒に昼ご飯を食べよう。",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Personal Resolve",
+    "example": "今日から毎日漢字を勉強しよう。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "今年の夏は富士山に登りたいです。",
+    "ko": "",
+    "highlight": "登りたいです"
+   },
+   {
+    "en": "のどが渇いたので冷たい水が飲みたい。",
+    "ko": "",
+    "highlight": "飲みたい"
+   },
+   {
+    "en": "少し疲れたから喫茶店で休もう。",
+    "ko": "",
+    "highlight": "休もう"
+   },
+   {
+    "en": "週末は友達と映画を見ようと思います。",
+    "ko": "",
+    "highlight": "見よう"
+   },
+   {
+    "en": "将来は自分の店を持ちたいです。",
+    "ko": "",
+    "highlight": "持ちたいです"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "田中さんはお茶を飲みたいです。",
+    "right": "田中さんはお茶を飲みたがっています。",
+    "note": "Use ~たがっている instead of ~たい when describing a third person's desires."
+   },
+   {
+    "wrong": "映画を見たいしましょう。",
+    "right": "映画を見ましょう。",
+    "note": "Do not merge ~たい with ましょう; use the volitional or ~ましょう directly on the stem."
+   },
+   {
+    "wrong": "明日早く起きろう。",
+    "right": "明日早く起きよう。",
+    "note": "Group 2 (一段) verbs take ~よう in volitional form, not ~ろう."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which is the correct volitional form of the verb 飲む (nomu)?",
+    "options": [
+     "飲みよう",
+     "飲もう",
+     "飲みろう",
+     "飲めよう"
+    ],
+    "answer": 1,
+    "explanation": "For Group 1 (五段) verbs, change the final 'u' syllable to 'o' and add 'u': 飲む -> 飲もう."
+   },
+   {
+    "question": "How do you say 'I want to eat sushi'?",
+    "options": [
+     "すしを食べたいです。",
+     "すしを食べたいあります。",
+     "すしを食べろうです。",
+     "すしを食べたがるです。"
+    ],
+    "answer": 0,
+    "explanation": "Attach ~たい to the verb stem (食べ) plus polite copula です: 食べたいです."
+   },
+   {
+    "question": "Complete the informal invitation: 'Let's play tennis together!' (一緒にテニスを___。)",
+    "options": [
+     "するよう",
+     "したろう",
+     "しよう",
+     "しろう"
+    ],
+    "answer": 2,
+    "explanation": "The irregular verb する becomes しよう in casual volitional form."
+   },
+   {
+    "question": "Choose the natural sentence describing someone else's desire (Ken):",
+    "options": [
+     "ケンさんは新しい車を買いたいです。",
+     "ケンさんは新しい車を買いたいだ。",
+     "ケンさんは新しい車を買おうです。",
+     "ケンさんは新しい車を買いたがっています。"
+    ],
+    "answer": 3,
+    "explanation": "Third-person desires must be observed externally using ~たがる / ~たがっている."
+   }
+  ],
+  "tip": "Treat ~たい grammatically like an い-adjective: its past form is ~たかった, and negative is ~たくない!"
+ },
+ {
+  "id": "ja-b1-conditional-forms",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#F59E0B",
+  "emoji": "🔀",
+  "title": "The Four Conditionals: と, ば, たら, and なら",
+  "subtitle": "Mastering logical, temporal, hypothetical, and contextual conditions",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Use と for natural inevitability, ば for general logical conditions, たら for chronological 'once/when', and なら for contextual topics.",
+  "structure": {
+   "headers": [
+    "Conditional",
+    "Formation",
+    "Core Nuance",
+    "Key Restriction"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "と",
+      "Dictionary Form ＋ と",
+      "Natural / Inevitable result",
+      "No requests, commands, or volitions"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "たら",
+      "Past Plain (た) ＋ ら",
+      "Chronological / Temporal sequence",
+      "Most versatile, universally safe"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ば",
+      "Conditional stem (え-row) ＋ ば",
+      "General hypothetical condition",
+      "Restricted with personal requests"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "なら",
+      "Noun / Plain Form ＋ なら",
+      "Contextual topic ('if it is that')",
+      "Main clause can happen before condition"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Natural Law (と)",
+    "example": "春になると桜が咲きます。",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Sequence / Once (たら)",
+    "example": "家に着いたら電話してください。",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Topic / Advice (なら)",
+    "example": "京都に行くなら新幹線が便利です。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "このボタンを押すと切符が出ます。",
+    "ko": "",
+    "highlight": "押すと"
+   },
+   {
+    "en": "安ければあのパソコンを買いたいです。",
+    "ko": "",
+    "highlight": "安ければ"
+   },
+   {
+    "en": "雨が降ったら試合は中止になります。",
+    "ko": "",
+    "highlight": "雨が降ったら"
+   },
+   {
+    "en": "日本料理なら寿司が一番好きです。",
+    "ko": "",
+    "highlight": "日本料理なら"
+   },
+   {
+    "en": "時間があれば美術館へ行きましょう。",
+    "ko": "",
+    "highlight": "時間があれば"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "時間が空くと手伝ってください。",
+    "right": "時間が空いたら手伝ってください。",
+    "note": "と cannot be followed by commands, requests, or invitations. Use たら instead."
+   },
+   {
+    "wrong": "日本へ行ったならカメラを買うつもりだ。",
+    "right": "日本へ行くならカメラを買うつもりだ。",
+    "note": "Use dictionary form before なら when giving recommendations or intentions based on that premise."
+   },
+   {
+    "wrong": "高いたら買いません。",
+    "right": "高かったら買いません。",
+    "note": "For い-adjectives with たら, conjugate past first: 高い -> 高かった -> 高かったら."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which conditional correctly completes a request: 'Please call me when you arrive at the station.' (駅に___電話してください。)",
+    "options": [
+     "着くと",
+     "着けば",
+     "着いたら",
+     "着くなら"
+    ],
+    "answer": 2,
+    "explanation": "たら is the only conditional among these that naturally licenses requests and commands in the main clause for temporal sequences."
+   },
+   {
+    "question": "Complete the natural consequence: 'Turn right at the corner and you will see the post office.' (あの角を右に___郵便局があります。)",
+    "options": [
+     "曲がると",
+     "曲がるなら",
+     "曲がればなら",
+     "曲がったなら"
+    ],
+    "answer": 0,
+    "explanation": "Natural outcomes, automated results, and route directions require the factual conditional と."
+   },
+   {
+    "question": "Choose the best option: 'If you want to buy cheap electronics, Akihabara is best.' (安い電化製品を買う___秋葉原がいいですよ。)",
+    "options": [
+     "と",
+     "ば",
+     "たらば",
+     "なら"
+    ],
+    "answer": 3,
+    "explanation": "なら takes up a conversational topic or premise and provides recommendations or comments."
+   },
+   {
+    "question": "What is the proper conditional form of 安い with ~ば?",
+    "options": [
+     "安えば",
+     "安ければ",
+     "安かったば",
+     "安いくれば"
+    ],
+    "answer": 1,
+    "explanation": "い-adjectives form the ば conditional by replacing ~い with ~ければ (安ければ)."
+   }
+  ],
+  "tip": "When in doubt between conversational conditionals, たら is the safest choice because it allows commands, requests, and past events!"
+ },
+ {
+  "id": "ja-b1-benefactive-te-constructions",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🎁",
+  "title": "Benefactive Auxiliary Verbs: ~てあげる, ~てもらう, ~てくれる",
+  "subtitle": "Expressing favors and tracking psychological direction of kindness",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "Track the flow of benefit: ~てあげる is outward to others, ~てくれる is inward to the speaker/in-group, and ~てもらう expresses receiving a favor from someone.",
+  "structure": {
+   "headers": [
+    "Construction",
+    "Subject / Agent",
+    "Direction of Favor",
+    "Social Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "~てあげる",
+      "Speaker / In-group",
+      "Toward other person",
+      "Careful: can sound condescending if said directly"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "~てくれる",
+      "Other person",
+      "Toward Speaker / In-group",
+      "Grateful; another person initiates favor for me"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "~てもらう",
+      "Speaker (Receiver)",
+      "Receiver gets favor from Actor",
+      "Expresses receiving a favor initiated or asked for"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Receiving Help (~てくれる)",
+    "example": "友達が駅まで車で送ってくれました。",
+    "translation": ""
+   },
+   {
+    "color": "#14B8A6",
+    "label": "Securing a Favor (~てもらう)",
+    "example": "先生に作文を直してもらいました。",
+    "translation": ""
+   },
+   {
+    "color": "#2DD4BF",
+    "label": "Doing for Others (~てあげる)",
+    "example": "妹に新しい自転車を買ってあげました。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "田中さんが傘を貸してくれました。",
+    "ko": "",
+    "highlight": "貸してくれました"
+   },
+   {
+    "en": "私は友達に引っ越しを手伝ってもらいました。",
+    "ko": "",
+    "highlight": "手伝ってもらいました"
+   },
+   {
+    "en": "弟の宿題を見てあげました。",
+    "ko": "",
+    "highlight": "見てあげました"
+   },
+   {
+    "en": "母がおいしいお弁当を作ってくれた。",
+    "ko": "",
+    "highlight": "作ってくれた"
+   },
+   {
+    "en": "駅員さんに道を教えてもらいました。",
+    "ko": "",
+    "highlight": "教えてもらいました"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "友達は私に本を貸してあげました。",
+    "right": "友達は私に本を貸してくれました。",
+    "note": "When someone else performs an action beneficial to you, you must use ~てくれる, never ~てあげる."
+   },
+   {
+    "wrong": "私は先生に荷物を持ってあげました。",
+    "right": "私は先生のお荷物をお持ちしました。",
+    "note": "~てあげる sounds boastful toward superiors; use humble language (謙譲語) instead."
+   },
+   {
+    "wrong": "医者に見てくれました。",
+    "right": "医者に見てもらいました。",
+    "note": "When you are the subject who had someone do something for you, use ~てもらう with the agent marked by に."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct verb: 'My friend helped me with my Japanese homework.' (友達が日本語の宿題を___。)",
+    "options": [
+     "手伝ってあげました",
+     "手伝ってもらいました",
+     "手伝ってくれました",
+     "手伝ってやりたい"
+    ],
+    "answer": 2,
+    "explanation": "The subject is the friend performing a favor toward the speaker, so ~てくれました is correct."
+   },
+   {
+    "question": "Choose the right particle for the agent in: 'I had the teacher correct my essay.' (私は先生___作文を直してもらいました。)",
+    "options": [
+     "に",
+     "を",
+     "が",
+     "へ"
+    ],
+    "answer": 0,
+    "explanation": "With ~てもらう, the person from whom you receive the favor is marked by に."
+   },
+   {
+    "question": "Which sentence means 'I bought a gift for my younger sister'?",
+    "options": [
+     "妹にプレゼントを買ってもらいました。",
+     "妹はプレゼントを買ってくれました。",
+     "妹にプレゼントを買ってあげました。",
+     "妹がプレゼントを買ってあげました。"
+    ],
+    "answer": 2,
+    "explanation": "Giving a favor outwards from speaker to sister uses ~てあげました."
+   },
+   {
+    "question": "Why is '社長に手伝ってあげます' grammatically or socially improper?",
+    "options": [
+     "社長 requires the passive form only.",
+     "てあげる implies doing a favor and sounds patronizing to a superior.",
+     "社長 cannot receive help in Japanese syntax.",
+     "The verb 手伝う cannot conjugate into te-form."
+    ],
+    "answer": 1,
+    "explanation": "~てあげる carries a connotation of doing a favor and is rude when applied upwards to bosses or teachers."
+   }
+  ],
+  "tip": "Think of くれる as an arrow pointing IN towards you (someone does for me), and あげる as an arrow pointing OUT (I do for others)!"
+ },
+ {
+  "id": "ja-b1-passive-and-adversative-passive",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🛡️",
+  "title": "Passive Voice and Adversative Passive (迷惑受身)",
+  "subtitle": "Conjugating passive verbs and expressing suffering from unexpected events",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Form passive verbs with れる/られる to describe standard receiver viewpoints or the unique 'suffering passive' where an outside action causes hardship to the subject.",
+  "structure": {
+   "headers": [
+    "Verb Type",
+    "Dictionary Form",
+    "Passive Form",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Group 1 (五段)",
+      "踏む / 書く",
+      "踏まれる / 書かれる",
+      "足を踏まれた (had foot stepped on)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Group 2 (一段)",
+      "褒める / 叱る*",
+      "褒められる / 叱られる",
+      "先生に褒められた (was praised by teacher)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Irregular (する)",
+      "する",
+      "される",
+      "迷惑される (to be inconvenienced)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Irregular (来る)",
+      "来る",
+      "来られる",
+      "雨に来られた (adversely hit by rain)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Direct Passive",
+    "example": "私は先生に褒められました。",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Possessive Passive",
+    "example": "電車の中で足を踏まれました。",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Suffering Passive (迷惑)",
+    "example": "雨に降られて服が濡れました。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "このお寺は四百年前に建てられました。",
+    "ko": "",
+    "highlight": "建てられました"
+   },
+   {
+    "en": "泥棒に財布を盗まれました。",
+    "ko": "",
+    "highlight": "盗まれました"
+   },
+   {
+    "en": "満員電車で見知らぬ人に足を踏まれた。",
+    "ko": "",
+    "highlight": "足を踏まれた"
+   },
+   {
+    "en": "夜遅くに友達に来られて困りました。",
+    "ko": "",
+    "highlight": "友達に来られて"
+   },
+   {
+    "en": "妹に私の日記を読まれました。",
+    "ko": "",
+    "highlight": "読まれました"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "私は猫を引っかかれた。",
+    "right": "私は猫に引っかかれた。",
+    "note": "In passive sentences, the agent/performer of the action is marked by に, not を."
+   },
+   {
+    "wrong": "雨が降られた。",
+    "right": "雨に降られた。",
+    "note": "In the suffering passive (迷惑受身), the cause or agent of trouble is marked with に."
+   },
+   {
+    "wrong": "車が彼を壊された。",
+    "right": "車は彼に壊された。",
+    "note": "The agent must be marked by に; を indicates the direct object, not the person who broke the car."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the passive form of the Group 1 verb 飲む (nomu)?",
+    "options": [
+     "飲まれる",
+     "飲められる",
+     "飲みられる",
+     "飲まされる"
+    ],
+    "answer": 0,
+    "explanation": "Group 1 verbs change final 'u' sound to 'a' row and append れる: 飲む -> 飲まれる."
+   },
+   {
+    "question": "Fill in the blank for the suffering passive: 'I got rained on on the way home.' (帰り道で雨___降られました。)",
+    "options": [
+     "を",
+     "が",
+     "に",
+     "で"
+    ],
+    "answer": 2,
+    "explanation": "In suffering passive (迷惑受身), the cause of distress (雨) is marked by に."
+   },
+   {
+    "question": "Choose the sentence meaning 'I was scolded by my mother':",
+    "options": [
+     "母は私を叱られました。",
+     "私は母を叱られました。",
+     "私は母に叱りました。",
+     "私は母に叱られました。"
+    ],
+    "answer": 3,
+    "explanation": "The recipient of the action is the subject (私は), the agent takes に (母に), and the verb is passive (叱られました)."
+   },
+   {
+    "question": "Identify the passive verb in this sentence: 赤ちゃんに泣かれて寝られなかった。",
+    "options": [
+     "赤ちゃんに",
+     "寝られなかった",
+     "泣かれて",
+     "なかった"
+    ],
+    "answer": 2,
+    "explanation": "泣かれて is the te-form of the suffering passive 泣かれる (to have a baby cry on you)."
+   }
+  ],
+  "tip": "Japanese can even make intransitive verbs passive (like 死なれる or 降られる) to explicitly convey emotional annoyance, grief, or inconvenience!"
+ },
+ {
+  "id": "ja-b1-causative-form",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🤹",
+  "title": "Causative Form: せる and させる",
+  "subtitle": "Making or letting someone perform an action",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Group 1 verbs replace the final u-sound with an a-sound plus せる, while Group 2 verbs append させる to the verb stem.",
+  "structure": {
+   "headers": [
+    "Verb Class",
+    "Formation Rule",
+    "Example Verb",
+    "Causative Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Group 1 (五段)",
+      "Change -u to -aseru",
+      "書く",
+      "書かせる"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Group 2 (一段)",
+      "Stem + saseru",
+      "食べる",
+      "食べさせる"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Irregular (する)",
+      "Special change",
+      "する",
+      "させる"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Irregular (来る)",
+      "Special change",
+      "来る",
+      "来させる"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Forcing / Ordering",
+    "example": "先生が生徒に宿題をもう一度やらせた。",
+    "translation": ""
+   },
+   {
+    "color": "#06B6D4",
+    "label": "Permitting / Letting",
+    "example": "母は子供に好きなアニメを見せました。",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Emotional Causation",
+    "example": "弟がいつも両親を心配させます。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "母は私に野菜をたくさん食べさせます。",
+    "ko": "",
+    "highlight": "食べさせます"
+   },
+   {
+    "en": "先生は学生に教室を掃除させました。",
+    "ko": "",
+    "highlight": "掃除させました"
+   },
+   {
+    "en": "部長は新入社員に書類をコピーさせた。",
+    "ko": "",
+    "highlight": "コピーさせた"
+   },
+   {
+    "en": "父は妹を一人でイギリスに留学させた。",
+    "ko": "",
+    "highlight": "留学させた"
+   },
+   {
+    "en": "その面白い冗談はみんなを笑わせた。",
+    "ko": "",
+    "highlight": "笑わせた"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "母は私を食べさせます。",
+    "right": "母は私に食べさせます。",
+    "note": "When the main verb takes a direct object with を, mark the causee with に to avoid double-object confusion."
+   },
+   {
+    "wrong": "先生は学生を書かせた。",
+    "right": "先生は学生に書かせた。",
+    "note": "Transitive verbs require the causee to be marked with に rather than を."
+   },
+   {
+    "wrong": "友達を本を読ませる。",
+    "right": "友達に本を読ませる。",
+    "note": "Japanese grammar generally disallows two instances of を in the same simple clause."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The coach made the athletes run ten kilometers: 監督は選手___十キロ走らせた。",
+    "options": [
+     "を",
+     "に",
+     "で",
+     "へ"
+    ],
+    "answer": 0,
+    "explanation": "With intransitive verbs like 走る, the causee is marked with を when coerced."
+   },
+   {
+    "question": "Choose the correct causative form of 飲む (to drink).",
+    "options": [
+     "飲ませる",
+     "飲みさせる",
+     "飲める",
+     "飲まれる"
+    ],
+    "answer": 0,
+    "explanation": "飲む is a Group 1 verb, so the final mu changes to ma before adding seru: 飲ませる."
+   },
+   {
+    "question": "My father let me play games for one hour: 父は私___一時間ゲームをさせた。",
+    "options": [
+     "と",
+     "が",
+     "に",
+     "から"
+    ],
+    "answer": 2,
+    "explanation": "Since the verb phrase contains the direct object ゲームを, the causee takes the particle に."
+   },
+   {
+    "question": "Choose the correct causative form of 来る (to come).",
+    "options": [
+     "きさせる",
+     "こさせる",
+     "くさせる",
+     "きせる"
+    ],
+    "answer": 1,
+    "explanation": "The irregular verb 来る (kuru) becomes 来させる (kosaseru) in the causative."
+   }
+  ],
+  "tip": "Check whether the base verb takes an object with を; if it does, mark the causee with に to prevent awkward double を particles."
+ },
+ {
+  "id": "ja-b1-evidentiality-and-conjecture",
+  "level": "b1",
+  "category": "modals",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔮",
+  "title": "Evidentiality: そう, よう, らしい, and だろう",
+  "subtitle": "Distinguishing hearsay, visual impression, circumstantial evidence, and conjecture",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use stem + そう for immediate visual impressions, plain form + そう for hearsay, よう for inference from signs, and らしい for typicality or gathered reports.",
+  "structure": {
+   "headers": [
+    "Pattern",
+    "Meaning Source",
+    "Attachment Rule",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Stem + そうだ",
+      "Visual impression / looks like",
+      "Verb stem / Adj stem",
+      "雨が降りそうだ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Plain form + そうだ",
+      "Hearsay / I heard that",
+      "Dictionary form / Plain form",
+      "雨が降るそうだ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "〜ようだ / 〜みたいだ",
+      "Circumstantial deduction / seems",
+      "Plain form / Noun+の",
+      "風邪をひいたようだ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "〜らしい",
+      "Reliable report / archetypal",
+      "Plain form / Direct noun",
+      "明日は晴れるらしい"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Immediate Look",
+    "example": "このリンゴはとても美味しそうだ。",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Reported Rumor",
+    "example": "天気予報によると明日は大雨になるそうだ。",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Inferred Deduction",
+    "example": "部屋の電気が消えているから、留守のようだ。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "空が急に暗くなって、今にも雨が降りそうだ。",
+    "ko": "",
+    "highlight": "降りそうだ"
+   },
+   {
+    "en": "山田さんは来月転職するそうです。",
+    "ko": "",
+    "highlight": "転職するそうです"
+   },
+   {
+    "en": "誰も電話に出ないところを見ると、出かけたようだ。",
+    "ko": "",
+    "highlight": "出かけたようだ"
+   },
+   {
+    "en": "田中さんは来週海外出張に行くらしい。",
+    "ko": "",
+    "highlight": "行くらしい"
+   },
+   {
+    "en": "明日は気温が下がって寒くなるだろう。",
+    "ko": "",
+    "highlight": "寒くなるだろう"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "このケーキは美味しいそうです。（意味：見た目が美味しそう）",
+    "right": "このケーキは美味しそうだ。",
+    "note": "To say something 'looks delicious', drop the final い from the adjective before appending そうだ."
+   },
+   {
+    "wrong": "雨が降るそうに見える。",
+    "right": "雨が降りそうだ。",
+    "note": "Do not attach そう directly to the dictionary form when expressing an immediate visual appearance."
+   },
+   {
+    "wrong": "学生のらしい態度。",
+    "right": "学生らしい態度。",
+    "note": "Noun modification with らしい takes no intervening particle の."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "It looks like the button is about to fall off: ボタンが___そうだ。",
+    "options": [
+     "落ちる",
+     "落ち",
+     "落ちた",
+     "落ちて"
+    ],
+    "answer": 1,
+    "explanation": "Visual conjecture 'about to' attaches directly to the pre-masu stem of the verb (落ちる -> 落ち)."
+   },
+   {
+    "question": "I heard from the teacher that the exam will be difficult: 先生によると試験は___そうだ。",
+    "options": [
+     "難し",
+     "難しい",
+     "難しく",
+     "難しかったら"
+    ],
+    "answer": 1,
+    "explanation": "Hearsay attaches to the plain dictionary form of the i-adjective (難しい)."
+   },
+   {
+    "question": "Looking at the dark footprints, it appears that someone entered: 誰かが部屋に___ようだ。",
+    "options": [
+     "入る",
+     "入った",
+     "入り",
+     "入って"
+    ],
+    "answer": 1,
+    "explanation": "Conjecture based on sensory evidence takes the plain past form (入った) to express a completed action."
+   },
+   {
+    "question": "Complete the phrase expressing typical gentlemanly conduct: 彼はいつも紳士___行動をとる。",
+    "options": [
+     "のように",
+     "そうな",
+     "らしい",
+     "みたい"
+    ],
+    "answer": 2,
+    "explanation": "Noun + らしい means 'befitting of' or 'acting truly like' that noun."
+   }
+  ],
+  "tip": "Remember: drop the い on adjectives for visual impression (美味しそう), but keep the い for hearsay (美味しいそう)."
+ },
+ {
+  "id": "ja-b2-causative-passive-form",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#EF4444",
+  "emoji": "😣",
+  "title": "Causative-Passive Form: させられる and される",
+  "subtitle": "Expressing coercion or being forced to do something reluctantly",
+  "color": "#EF4444",
+  "bg": "#FEF2F2",
+  "keyPoint": "The causative-passive combines causative and passive suffixes to convey that the speaker was compelled to do an action against their will.",
+  "structure": {
+   "headers": [
+    "Verb Class",
+    "Full Form",
+    "Shortened Form",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Group 1 (-u verbs)",
+      "-aserareru",
+      "-asaserareru / -asareru",
+      "待たされる"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Group 1 ending in す",
+      "-asaserareru only",
+      "No contraction",
+      "話させられる"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Group 2 (一段)",
+      "-saserareru",
+      "No contraction",
+      "食べさせられる"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Irregular (する / 来る)",
+      "Special forms",
+      "No contraction",
+      "させられる / こさせられる"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Forced Labor / Duty",
+    "example": "新入社員は先輩に重い荷物を運ばされた。",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Emotional Compulsion",
+    "example": "彼の素晴らしいスピーチには深く考えさせられた。",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Inconvenient Compliance",
+    "example": "病院で二時間も長い間待たされました。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "私は飲み会で無理にお酒を飲まされた。",
+    "ko": "",
+    "highlight": "飲まされた"
+   },
+   {
+    "en": "子供のころ、母に毎日ピアノを練習させられた。",
+    "ko": "",
+    "highlight": "練習させられた"
+   },
+   {
+    "en": "休日に上司に呼び出されて、残業させられた。",
+    "ko": "",
+    "highlight": "残業させられた"
+   },
+   {
+    "en": "彼の悲しい身の上話を聞いて、泣かされた。",
+    "ko": "",
+    "highlight": "泣かされた"
+   },
+   {
+    "en": "嫌いなピーマンを全部食べさせられました。",
+    "ko": "",
+    "highlight": "食べさせられました"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "話さされた。",
+    "right": "話させられる / 話させられた。",
+    "note": "Group 1 verbs ending in す (like 話す) cannot contract to 〜さされる; use the full 〜させられる form."
+   },
+   {
+    "wrong": "食べさされた。",
+    "right": "食べさせられた。",
+    "note": "Group 2 (ichidan) verbs never contract to 〜さされる; they strictly take 〜させられる."
+   },
+   {
+    "wrong": "彼に本を読まれた。（強い強制感）",
+    "right": "彼に本を読まされた。",
+    "note": "Simple passive (読まれた) indicates suffering an action, whereas causative-passive (読まされた) specifically indicates being forced to act."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I was made to wait for an hour in the cold: 寒い中で一時間も___。",
+    "options": [
+     "待たれた",
+     "待たされた",
+     "待たせられた",
+     "待たした"
+    ],
+    "answer": 1,
+    "explanation": "待つ becomes 待たされる (contracted from 待たせられる) to express being forced to wait."
+   },
+   {
+    "question": "Choose the correct causative-passive form of 歌う (to sing).",
+    "options": [
+     "歌わされる",
+     "歌さされる",
+     "歌わせる",
+     "歌われる"
+    ],
+    "answer": 0,
+    "explanation": "For 歌う, the -u sound shifts to -wa plus sareru: 歌わされる."
+   },
+   {
+    "question": "Which verb form is grammatically INCORRECT as a causative-passive contraction?",
+    "options": [
+     "書かされた",
+     "行かされた",
+     "話さされた",
+     "飲まされた"
+    ],
+    "answer": 2,
+    "explanation": "Verbs ending in -su (話す) cannot contract to -sasareru; it must remain 話させられた."
+   },
+   {
+    "question": "His performance made me reflect deeply on life: 彼の演技には深く___。",
+    "options": [
+     "考えた",
+     "考えられた",
+     "考えさせた",
+     "考えさせられた"
+    ],
+    "answer": 3,
+    "explanation": "The causative-passive 考えさせられた captures being moved or compelled to think deeply."
+   }
+  ],
+  "tip": "For Group 1 verbs not ending in す, native speakers almost always use the shorter contracted form (〜あされる) in everyday speech."
+ },
+ {
+  "id": "ja-b2-keigo-honorifics-humble",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#0D9488",
+  "emoji": "🙇",
+  "title": "Honorific (尊敬語) vs Humble (謙譲語) Keigo",
+  "subtitle": "Navigating polite distance by elevating the superior and humbling the self",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "Sonkeigo raises the status of the listener or third-party superior, whereas Kenjougo lowers oneself and one's in-group to show deference.",
+  "structure": {
+   "headers": [
+    "Dictionary Form",
+    "Honorific (尊敬語)",
+    "Humble (謙譲語)",
+    "Polite (丁寧語)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "行く / 来る",
+      "いらっしゃる / おいでになる",
+      "参る / 伺う",
+      "行きます / 来ます"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "言う",
+      "おっしゃる",
+      "申す / 申し上げます",
+      "言います"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "食べる / 飲む",
+      "召し上がる",
+      "いただく",
+      "食べます / 飲みます"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "知っている",
+      "ご存じだ",
+      "存じております",
+      "知っています"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Describing Superior's Action",
+    "example": "社長はすでに新しいオフィスへいらっしゃいました。",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Describing Own Action to Client",
+    "example": "明日十時に御社へ伺います。",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Offering Humble Assistance",
+    "example": "その重いお荷物をお持ちいたします。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "先生、こちらの書類をご覧になりましたか。",
+    "ko": "",
+    "highlight": "ご覧になりましたか"
+   },
+   {
+    "en": "午後からお客様の会社へ伺う予定です。",
+    "ko": "",
+    "highlight": "伺う"
+   },
+   {
+    "en": "部長が会議室でお待ちになっております。",
+    "ko": "",
+    "highlight": "お待ちになっております"
+   },
+   {
+    "en": "私の名前は田中と申します。",
+    "ko": "",
+    "highlight": "申します"
+   },
+   {
+    "en": "美味しいお茶をいただきました。",
+    "ko": "",
+    "highlight": "いただきました"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "私が召し上がります。",
+    "right": "私がいただきます。",
+    "note": "Never use the honorific 召し上がる for your own actions; use the humble verb いただく."
+   },
+   {
+    "wrong": "社長、明日何時に参りますか。",
+    "right": "社長、明日何時にいらっしゃいますか。",
+    "note": "参る is humble and can only apply to yourself or your in-group, not to your boss."
+   },
+   {
+    "wrong": "先生がお申しになりました。",
+    "right": "先生がおっしゃいました。",
+    "note": "Do not mix humble roots with honorific affixes; say おっしゃいました."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Asking a client politely if they know a person: その方を___か。",
+    "options": [
+     "ご存じです",
+     "存じております",
+     "申します",
+     "召し上がります"
+    ],
+    "answer": 0,
+    "explanation": "ご存じです is the respectful (尊敬語) form of 知っている to elevate the listener."
+   },
+   {
+    "question": "Introducing your own name in an interview: 田中と___。",
+    "options": [
+     "おっしゃいます",
+     "申します",
+     "ご覧になります",
+     "なさいます"
+    ],
+    "answer": 1,
+    "explanation": "申す (mousu) is the humble form of 言う used to state your own name with humility."
+   },
+   {
+    "question": "Offering to carry a customer's bag: 私がお荷物を___。",
+    "options": [
+     "お持ちになります",
+     "お持ちなさいます",
+     "お持ちいたします",
+     "持たれます"
+    ],
+    "answer": 2,
+    "explanation": "お + stem + いたす is the classic humble formula for doing a helpful deed for someone of higher status."
+   },
+   {
+    "question": "Asking the director what they will drink: 何を___か。",
+    "options": [
+     "いただきます",
+     "参ります",
+     "存じます",
+     "召し上がります"
+    ],
+    "answer": 3,
+    "explanation": "召し上がる is the honorific equivalent of 飲む / 食べる when addressing a superior."
+   }
+  ],
+  "tip": "Always identify the subject of the action first: if the subject is the superior, use 尊敬語; if the subject is you or your team, use 謙譲語."
+ },
+ {
+  "id": "ja-b2-compound-particles-advanced-syntax",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#1E293B",
+  "emoji": "🧩",
+  "title": "Compound Case Markers (に関して, に基づいて, をめぐって)",
+  "subtitle": "Connecting complex contextual relations with grammaticalized particle phrases",
+  "color": "#1E293B",
+  "bg": "#F8FAFC",
+  "keyPoint": "Compound particles transform basic verbs into multi-word case markers that express topics, standards, and surrounding disputes in formal prose.",
+  "structure": {
+   "headers": [
+    "Compound Particle",
+    "Adverbial Form",
+    "Noun-Modifying Form",
+    "Core Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "〜に関して",
+      "Noun + に関して",
+      "Noun + に関する + Noun",
+      "Regarding / Concerning"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "〜に基づいて",
+      "Noun + に基づいて",
+      "Noun + に基づく + Noun",
+      "Based on / According to"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "〜をめぐって",
+      "Noun + をめぐって",
+      "Noun + をめぐる + Noun",
+      "Concerning / Over (a dispute)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "〜を通じて / を通して",
+      "Noun + を通じて",
+      "Noun + を通じた + Noun",
+      "Through / Via the medium of"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1E293B",
+    "label": "Formal Topic Discussion",
+    "example": "環境問題に関する報告書を注意深く読んだ。",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Evidence-Based Decisions",
+    "example": "最新の調査データに基づいて計画を立てる。",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Contestation and Conflict",
+    "example": "遺産の分割をめぐって親族が激しく対立した。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "この事件に関して、警察が詳しく調査しています。",
+    "ko": "",
+    "highlight": "に関して"
+   },
+   {
+    "en": "事実に基づいて記事を書かなければなりません。",
+    "ko": "",
+    "highlight": "に基づいて"
+   },
+   {
+    "en": "新政策をめぐって国会で熱い議論が交わされた。",
+    "ko": "",
+    "highlight": "をめぐって"
+   },
+   {
+    "en": "友人の紹介を通じて、現在の妻と出会いました。",
+    "ko": "",
+    "highlight": "を通じて"
+   },
+   {
+    "en": "法律に関する深い知識がこの仕事には不可欠だ。",
+    "ko": "",
+    "highlight": "に関する"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "環境問題に関して報告書。",
+    "right": "環境問題に関する報告書。",
+    "note": "When modifying a subsequent noun directly, change the adverbial に関して to the attributive form に関する."
+   },
+   {
+    "wrong": "データをめぐって計画を修正した。",
+    "right": "データに基づいて計画を修正した。",
+    "note": "Use に基づいて for foundational evidence; をめぐって implies an ongoing debate, dispute, or conflict among multiple parties."
+   },
+   {
+    "wrong": "法律に基づくの判決。",
+    "right": "法律に基づく判決。",
+    "note": "The attributive verb form 基づく modifies nouns directly without inserting the particle の."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The city council argued over the relocation of the market: 市場の移転___激しい議論が続いた。",
+    "options": [
+     "を通じて",
+     "をめぐって",
+     "に関しての",
+     "に基づいて"
+    ],
+    "answer": 1,
+    "explanation": "〜をめぐって is chosen because the sentence involves disagreement or conflicting debate around an issue."
+   },
+   {
+    "question": "Modifying a noun with に関する: 事故___詳しい説明を求めます。",
+    "options": [
+     "に関して",
+     "に関する",
+     "に関しても",
+     "に関すれば"
+    ],
+    "answer": 1,
+    "explanation": "Before a noun (詳しい説明), use the attributive form に関する rather than the te-form に関して."
+   },
+   {
+    "question": "Constructing an argument based on experimental results: 実験結果___論文を執筆した。",
+    "options": [
+     "を通じて",
+     "をめぐって",
+     "に基づいて",
+     "にしては"
+    ],
+    "answer": 2,
+    "explanation": "〜に基づいて means 'based upon' or 'grounded in' foundational facts or experimental data."
+   },
+   {
+    "question": "Learning cultural customs throughout the entire year: 一年___様々な伝統行事が行われる。",
+    "options": [
+     "に基づいて",
+     "をめぐって",
+     "に関して",
+     "を通じて"
+    ],
+    "answer": 3,
+    "explanation": "〜を通じて expresses span across an entire duration of time or through a medium."
+   }
+  ],
+  "tip": "Remember: 〜て endings function adverbially to modify the following verb clause, while 〜る / 〜た forms modify the following noun directly."
+ }
+]

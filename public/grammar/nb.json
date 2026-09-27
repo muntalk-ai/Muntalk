@@ -1,0 +1,3342 @@
+[
+ {
+  "id": "nb-a1-v2-word-order",
+  "level": "a1",
+  "category": "clauses",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔄",
+  "title": "The V2 Rule in Main Clauses",
+  "subtitle": "Keep the finite verb in second place no matter what starts the sentence",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "In a Norwegian main clause, the finite verb must strictly occupy the second syntactic position.",
+  "structure": {
+   "headers": [
+    "Position 1 (Fronted Element)",
+    "Position 2 (Verb)",
+    "Position 3 (Subject)",
+    "Rest of Clause"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Jeg",
+      "drikker",
+      "—",
+      "kaffe om morgenen."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "I dag",
+      "drikker",
+      "jeg",
+      "kaffe på kafé."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Nå",
+      "leser",
+      "han",
+      "en god bok."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "I morgen",
+      "reiser",
+      "vi",
+      "til Oslo."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Subject First (SVO)",
+    "example": "Vi spiser middag klokken fem.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Time Expression First (Adv-V-S)",
+    "example": "I kveld ser jeg på film.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Place Expression First (Prep-V-S)",
+    "example": "I Norge snakker folk norsk.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "I dag spiser vi pizza til middag.",
+    "ko": "",
+    "highlight": "spiser vi"
+   },
+   {
+    "en": "Nå bor Maria i Bergen.",
+    "ko": "",
+    "highlight": "bor Maria"
+   },
+   {
+    "en": "På mandag starter kurset.",
+    "ko": "",
+    "highlight": "starter kurset"
+   },
+   {
+    "en": "Vanligvis drikker han te.",
+    "ko": "",
+    "highlight": "drikker han"
+   },
+   {
+    "en": "Etter frokost går barna på skolen.",
+    "ko": "",
+    "highlight": "går barna"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "I dag jeg spiser fisk.",
+    "right": "I dag spiser jeg fisk.",
+    "note": "Norwegian requires V2; placing the subject before the verb after an adverbial phrase violates this rule."
+   },
+   {
+    "wrong": "Nå vi bor i Oslo.",
+    "right": "Nå bor vi i Oslo.",
+    "note": "When 'nå' starts the sentence, the verb 'bor' must take position two before the subject 'vi'."
+   },
+   {
+    "wrong": "I morgen hun reiser hjem.",
+    "right": "I morgen reiser hun hjem.",
+    "note": "Inversion of subject and verb is mandatory whenever anything other than the subject begins the clause."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday we went to the cinema: 'I går ___ på kino.'",
+    "options": [
+     "vi gikk",
+     "gikk vi",
+     "gikk",
+     "vi har gått"
+    ],
+    "answer": 1,
+    "explanation": "'I går' occupies position 1, so the verb 'gikk' must come second, immediately followed by the subject 'vi'."
+   },
+   {
+    "question": "Now he is reading: 'Nå ___ en avis.'",
+    "options": [
+     "leser han",
+     "han leser",
+     "leser",
+     "han er leser"
+    ],
+    "answer": 0,
+    "explanation": "Starting with the adverb 'Nå' triggers inversion, putting verb 'leser' in second position."
+   },
+   {
+    "question": "Every day she drinks coffee: 'Hver dag ___ hun kaffe.'",
+    "options": [
+     "drikker",
+     "hun drikker",
+     "og drikker",
+     "er drikker"
+    ],
+    "answer": 0,
+    "explanation": "The position directly after the fronted phrase 'Hver dag' must be the finite verb 'drikker'."
+   },
+   {
+    "question": "In Norway they speak Norwegian: 'I Norge ___ norsk.'",
+    "options": [
+     "de snakker",
+     "snakker de",
+     "de taler",
+     "taler de"
+    ],
+    "answer": 1,
+    "explanation": "Prepositional phrase 'I Norge' takes position 1, requiring the verb 'snakker' followed by subject 'de'."
+   }
+  ],
+  "tip": "Think of Position 1 as a single chair: whoever sits there (a word or a whole phrase), the verb always claims the very next seat!"
+ },
+ {
+  "id": "nb-a1-noun-genders-and-indefinite-articles",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#0891B2",
+  "emoji": "📦",
+  "title": "Grammatical Gender and Indefinite Articles",
+  "subtitle": "Master masculine (en), feminine (ei), and neuter (et) nouns",
+  "color": "#0891B2",
+  "bg": "#ECFEFF",
+  "keyPoint": "Every Norwegian noun has an inherent gender that dictates whether it takes the indefinite article en, ei, or et.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Indefinite Article",
+    "Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Maskulin (Masculine)",
+      "en",
+      "en gutt",
+      "a boy"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminin (Feminine)",
+      "ei / en",
+      "ei jente",
+      "a girl"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Nøytrum (Neuter)",
+      "et",
+      "et hus",
+      "a house"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0891B2",
+    "label": "Masculine Nouns",
+    "example": "Jeg leser en bok og drikker en kopp kaffe.",
+    "translation": ""
+   },
+   {
+    "color": "#DB2777",
+    "label": "Feminine Nouns",
+    "example": "Hun har ei hytte på fjellet.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Neuter Nouns",
+    "example": "De bor i et koselig hus.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Han har en bil og en sykkel.",
+    "ko": "",
+    "highlight": "en bil og en sykkel"
+   },
+   {
+    "en": "Vi leier et hus i sommer.",
+    "ko": "",
+    "highlight": "et hus"
+   },
+   {
+    "en": "Ser du ei dør der borte?",
+    "ko": "",
+    "highlight": "ei dør"
+   },
+   {
+    "en": "Dette er et eple fra hagen.",
+    "ko": "",
+    "highlight": "et eple"
+   },
+   {
+    "en": "Læreren har en blyant.",
+    "ko": "",
+    "highlight": "en blyant"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jeg spiser en eple.",
+    "right": "Jeg spiser et eple.",
+    "note": "'Eple' is neuter and requires the article 'et', not 'en'."
+   },
+   {
+    "wrong": "Han kjøper et bil.",
+    "right": "Han kjøper en bil.",
+    "note": "'Bil' is masculine and must take 'en'."
+   },
+   {
+    "wrong": "Vi bor i en hus.",
+    "right": "Vi bor i et hus.",
+    "note": "'Hus' is neuter and always uses 'et' in the indefinite singular."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I would like a cup of tea: 'Jeg vil gjerne ha ___ kopp te.'",
+    "options": [
+     "et",
+     "en",
+     "ei",
+     "det"
+    ],
+    "answer": 1,
+    "explanation": "'Kopp' is a masculine noun and takes 'en'."
+   },
+   {
+    "question": "They bought a new house: 'De kjøpte ___ nytt hus.'",
+    "options": [
+     "en",
+     "ei",
+     "et",
+     "den"
+    ],
+    "answer": 2,
+    "explanation": "'Hus' is a neuter noun and takes 'et'."
+   },
+   {
+    "question": "She has a sister: 'Hun har ___ søster.'",
+    "options": [
+     "ei",
+     "et",
+     "det",
+     "ett"
+    ],
+    "answer": 0,
+    "explanation": "'Søster' is feminine, taking 'ei' (or optionally 'en')."
+   },
+   {
+    "question": "Do you see a table over there?: 'Ser du ___ bord der borte?'",
+    "options": [
+     "en",
+     "ei",
+     "den",
+     "et"
+    ],
+    "answer": 3,
+    "explanation": "'Bord' is neuter, so it takes 'et'."
+   }
+  ],
+  "tip": "In Bokmål, all feminine nouns can optionally use the masculine article 'en', but neuter 'et' must never be mixed with masculine!"
+ },
+ {
+  "id": "nb-a1-noun-definiteness-suffixes",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#0891B2",
+  "emoji": "🏷️",
+  "title": "Noun Definiteness as Suffixes",
+  "subtitle": "Say 'the' by attaching endings directly to noun stems",
+  "color": "#0891B2",
+  "bg": "#ECFEFF",
+  "keyPoint": "Norwegian expresses definiteness by attaching suffixes directly to the end of nouns rather than using a separate word for 'the'.",
+  "structure": {
+   "headers": [
+    "Gender/Number",
+    "Indefinite Form",
+    "Definite Suffix",
+    "Definite Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Sg.",
+      "en bil",
+      "-en",
+      "bilen (the car)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine Sg.",
+      "ei bok",
+      "-a / -en",
+      "boka / boken (the book)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter Sg.",
+      "et hus",
+      "-et",
+      "huset (the house)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural (All)",
+      "biler / hus",
+      "-ene",
+      "bilene / husene (the ...)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0891B2",
+    "label": "Specific Singular Object",
+    "example": "Bilen står parkert utenfor.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Neuter Definite Silent -t",
+    "example": "Vinduet er helt åpent.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Definite Plurals",
+    "example": "Barna leker i parken.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mannen kjører til jobb hver dag.",
+    "ko": "",
+    "highlight": "Mannen"
+   },
+   {
+    "en": "Huset ligger rett ved sjøen.",
+    "ko": "",
+    "highlight": "Huset"
+   },
+   {
+    "en": "Jenta leser ei spennende bok.",
+    "ko": "",
+    "highlight": "Jenta"
+   },
+   {
+    "en": "Bøkene ligger på skrivebordet.",
+    "ko": "",
+    "highlight": "Bøkene"
+   },
+   {
+    "en": "Eplet smaker kjempegodt.",
+    "ko": "",
+    "highlight": "Eplet"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Den bil er rød.",
+    "right": "Bilen er rød.",
+    "note": "Standard Norwegian uses suffix definiteness ('bilen'), not 'den bil' on its own without an adjective."
+   },
+   {
+    "wrong": "Vi liker the huset.",
+    "right": "Vi liker huset.",
+    "note": "Do not add an English 'the'; the suffix '-et' already means 'the'."
+   },
+   {
+    "wrong": "Hvor er bokene?",
+    "right": "Hvor er bøkene?",
+    "note": "Notice vowel changes in some plurals; 'bok' becomes 'bøker' and 'bøkene'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The boy is eating an apple: '___ spiser et eple.'",
+    "options": [
+     "Gutt",
+     "Gutten",
+     "Guttene",
+     "Gutter"
+    ],
+    "answer": 1,
+    "explanation": "'En gutt' adds the masculine definite suffix '-en' to become 'gutten'."
+   },
+   {
+    "question": "Where is the key?: 'Hvor er ___?'",
+    "options": [
+     "nøkkel",
+     "nøkler",
+     "nøkkelen",
+     "nøklene"
+    ],
+    "answer": 2,
+    "explanation": "'Nøkkelen' is the definite singular of masculine noun 'en nøkkel'."
+   },
+   {
+    "question": "The children are playing outside: '___ leker ute.'",
+    "options": [
+     "Barna",
+     "Barn",
+     "Barnet",
+     "Barne"
+    ],
+    "answer": 0,
+    "explanation": "'Barna' (or 'barnene') is the definite plural form for 'barn' (children)."
+   },
+   {
+    "question": "The house is old: '___ er gammelt.'",
+    "options": [
+     "Huser",
+     "Husene",
+     "Husen",
+     "Huset"
+    ],
+    "answer": 3,
+    "explanation": "'Et hus' takes the neuter definite suffix '-et' to become 'huset'."
+   }
+  ],
+  "tip": "In the neuter suffix '-et' (like 'huset', 'landet'), the 't' is almost always silent in standard spoken Norwegian!"
+ },
+ {
+  "id": "nb-a1-negation-ikke-placement-main-clauses",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🚫",
+  "title": "Sentence Negation with 'Ikke'",
+  "subtitle": "Place 'ikke' directly after the finite verb in main clauses",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "In a Norwegian main clause, the negative adverb 'ikke' is placed immediately after the finite verb.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Finite Verb",
+    "Negation (ikke)",
+    "Rest of Sentence"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Jeg",
+      "forstår",
+      "ikke",
+      "norsk ennå."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Han",
+      "liker",
+      "ikke",
+      "kaffe."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Vi",
+      "har",
+      "ikke",
+      "sett filmen."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Liker",
+      "du",
+      "ikke",
+      "sjokolade? (Question)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Simple Present Statement",
+    "example": "Jeg spiser ikke kjøtt.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Compound Verb Construction",
+    "example": "Hun kan ikke svømme.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Inverted Question",
+    "example": "Snakker du ikke engelsk?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Jeg vet ikke svaret på oppgaven.",
+    "ko": "",
+    "highlight": "vet ikke"
+   },
+   {
+    "en": "De bor ikke i Norge lenger.",
+    "ko": "",
+    "highlight": "bor ikke"
+   },
+   {
+    "en": "Morten vil ikke spise frokost nå.",
+    "ko": "",
+    "highlight": "vil ikke spise"
+   },
+   {
+    "en": "Hvorfor kommer du ikke i kveld?",
+    "ko": "",
+    "highlight": "kommer du ikke"
+   },
+   {
+    "en": "Nå har vi ikke mer melk igjen.",
+    "ko": "",
+    "highlight": "har vi ikke"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jeg ikke forstår.",
+    "right": "Jeg forstår ikke.",
+    "note": "In English 'not' comes with an auxiliary before the main verb, but Norwegian 'ikke' follows the finite verb."
+   },
+   {
+    "wrong": "Hun ikke kan komme i dag.",
+    "right": "Hun kan ikke komme i dag.",
+    "note": "'Ikke' must follow the modal/finite verb 'kan', not precede it."
+   },
+   {
+    "wrong": "I dag jeg vil ikke sove.",
+    "right": "I dag vil jeg ikke sove.",
+    "note": "Maintain the V2 rule! Place the verb 'vil' second, subject 'jeg' third, then 'ikke'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I do not drink tea: 'Jeg ___ te.'",
+    "options": [
+     "ikke drikker",
+     "drikker ikke",
+     "er ikke drikke",
+     "drikker nei"
+    ],
+    "answer": 1,
+    "explanation": "The finite verb 'drikker' comes first, followed directly by 'ikke'."
+   },
+   {
+    "question": "She cannot come tomorrow: 'Hun ___ komme i morgen.'",
+    "options": [
+     "ikke kan",
+     "kan",
+     "kan ikke",
+     "vil ikke kan"
+    ],
+    "answer": 2,
+    "explanation": "In compound verb structures, 'ikke' directly follows the finite modal 'kan'."
+   },
+   {
+    "question": "Why don't you understand?: 'Hvorfor forstår ___?'",
+    "options": [
+     "du ikke",
+     "ikke du",
+     "du nei",
+     "du aldri ikke"
+    ],
+    "answer": 0,
+    "explanation": "In an inverted question, pronoun subjects precede 'ikke': Verb + Subject Pronoun + ikke."
+   },
+   {
+    "question": "We do not have time: 'Vi ___ tid nå.'",
+    "options": [
+     "har",
+     "ikke har",
+     "har aldri",
+     "har ikke"
+    ],
+    "answer": 3,
+    "explanation": "'Har ikke' correctly places the negative particle right after the finite verb."
+   }
+  ],
+  "tip": "When a personal pronoun subject is inverted after the verb, 'ikke' follows the pronoun: 'Liker du ikke fisk?' (Verb + Pronoun + ikke)."
+ },
+ {
+  "id": "nb-a1-pronoun-case-subject-vs-object",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#0891B2",
+  "emoji": "👥",
+  "title": "Personal Pronouns: Subject vs. Object",
+  "subtitle": "Know when to switch from 'jeg' to 'meg' and 'de' to 'dem'",
+  "color": "#0891B2",
+  "bg": "#ECFEFF",
+  "keyPoint": "Use subject pronouns when performing an action and object pronouns when receiving an action or after a preposition.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Subject Form",
+    "Object Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Person Sg.",
+      "jeg",
+      "meg",
+      "I / me"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Person Sg.",
+      "du",
+      "deg",
+      "you / you"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person Sg.",
+      "han / hun",
+      "ham (han) / henne",
+      "he/him, she/her"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "1st Person Pl.",
+      "vi",
+      "oss",
+      "we / us"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person Pl.",
+      "de",
+      "dem",
+      "they / them"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0891B2",
+    "label": "Direct Object",
+    "example": "Han ser meg på skolen.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Prepositional Object",
+    "example": "Kan du snakke med oss?",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Subject vs Object in Pairs",
+    "example": "De hjelper dem med leksene.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Jeg ringer deg i ettermiddag.",
+    "ko": "",
+    "highlight": "deg"
+   },
+   {
+    "en": "Læreren forklarer regelen for oss.",
+    "ko": "",
+    "highlight": "oss"
+   },
+   {
+    "en": "Kjenner du henne fra kurset?",
+    "ko": "",
+    "highlight": "henne"
+   },
+   {
+    "en": "Vi inviterte dem på middag på lørdag.",
+    "ko": "",
+    "highlight": "dem"
+   },
+   {
+    "en": "Han ga en fin gave til meg.",
+    "ko": "",
+    "highlight": "meg"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Meg liker kaffe.",
+    "right": "Jeg liker kaffe.",
+    "note": "Use subject form 'jeg' when functioning as the subject of the clause."
+   },
+   {
+    "wrong": "Bli med jeg på kino.",
+    "right": "Bli med meg på kino.",
+    "note": "Prepositions such as 'med' always require the object form 'meg'."
+   },
+   {
+    "wrong": "Læreren spurte vi.",
+    "right": "Læreren spurte oss.",
+    "note": "'Vi' is the subject form; the direct object must be 'oss'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Can you hear me?: 'Hører du ___?'",
+    "options": [
+     "jeg",
+     "meg",
+     "mitt",
+     "min"
+    ],
+    "answer": 1,
+    "explanation": "'Meg' is the object form of 'jeg'."
+   },
+   {
+    "question": "___ are traveling to Spain: '___ reiser til Spania.'",
+    "options": [
+     "Dem",
+     "Oss",
+     "De",
+     "Deg"
+    ],
+    "answer": 2,
+    "explanation": "The subject of the sentence requires the subject pronoun 'De' (they)."
+   },
+   {
+    "question": "Come with us to town: 'Bli med ___ til byen.'",
+    "options": [
+     "vi",
+     "oss",
+     "vår",
+     "dem"
+    ],
+    "answer": 1,
+    "explanation": "After the preposition 'med', you must use the object form 'oss' (us)."
+   },
+   {
+    "question": "Do you know him?: 'Kjenner du ___?'",
+    "options": [
+     "han",
+     "ham",
+     "hans",
+     "seg"
+    ],
+    "answer": 1,
+    "explanation": "'Ham' (or 'han' colloquially) is the object pronoun form for 'he'."
+   }
+  ],
+  "tip": "Any pronoun right after a preposition (til, for, med, hos, om) must always be in the object form: 'til meg', 'med oss', 'hos dem'!"
+ },
+ {
+  "id": "nb-a1-inversion-in-yes-no-questions",
+  "level": "a1",
+  "category": "questions",
+  "categoryColor": "#0284C7",
+  "emoji": "❓",
+  "title": "Subject-Verb Inversion in Polar Questions",
+  "subtitle": "Form yes/no questions by swapping the finite verb and subject without 'do'",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "In Norwegian yes/no questions, the finite verb moves to the first position directly before the subject without any auxiliary verb like 'do'.",
+  "structure": {
+   "headers": [
+    "Clause Type",
+    "Structure",
+    "Example",
+    "English"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Statement",
+      "Subject + Verb",
+      "Du snakker norsk.",
+      "You speak Norwegian."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Question",
+      "Verb + Subject",
+      "Snakker du norsk?",
+      "Do you speak Norwegian?"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Compound Verb",
+      "Aux + Subj + Main Verb",
+      "Har du spist lunsj?",
+      "Have you eaten lunch?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Direct Questions",
+    "example": "Bor du i Oslo?",
+    "translation": ""
+   },
+   {
+    "color": "#0369A1",
+    "label": "Checking Facts",
+    "example": "Er bussen forsinket i dag?",
+    "translation": ""
+   },
+   {
+    "color": "#075985",
+    "label": "Compound Verb Queries",
+    "example": "Vil du drikke kaffe nå?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Snakker du engelsk?",
+    "ko": "",
+    "highlight": "Snakker du"
+   },
+   {
+    "en": "Liker hun sjokolade?",
+    "ko": "",
+    "highlight": "Liker hun"
+   },
+   {
+    "en": "Kommer dere på festen i kveld?",
+    "ko": "",
+    "highlight": "Kommer dere"
+   },
+   {
+    "en": "Har du sett nøklene mine?",
+    "ko": "",
+    "highlight": "Har du"
+   },
+   {
+    "en": "Kan vi betale med kort her?",
+    "ko": "",
+    "highlight": "Kan vi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Gjør du like kaffe?",
+    "right": "Liker du kaffe?",
+    "note": "Norwegian does not use 'gjøre' as a dummy auxiliary like English 'do'."
+   },
+   {
+    "wrong": "Du har en bil?",
+    "right": "Har du en bil?",
+    "note": "Standard Norwegian questions require verb-subject inversion rather than statement order with rising intonation."
+   },
+   {
+    "wrong": "Vil spise du nå?",
+    "right": "Vil du spise nå?",
+    "note": "With modal auxiliaries, the subject sits directly between the finite auxiliary and the main verb."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Convert 'Du forstår' into a question: '___ du meg?'",
+    "options": [
+     "Forstår",
+     "Gjør forstår",
+     "Er du forstår",
+     "Forstått"
+    ],
+    "answer": 0,
+    "explanation": "Place the finite verb 'forstår' directly first in the question."
+   },
+   {
+    "question": "'Do they live in Bergen?' translates to: '___ de i Bergen?'",
+    "options": [
+     "Gjør",
+     "Bor",
+     "Bo",
+     "Er"
+    ],
+    "answer": 1,
+    "explanation": "Use the finite verb 'bor' directly at the start; do not translate 'do'."
+   },
+   {
+    "question": "'Can you help me?' translates to: '___ du hjelpe meg?'",
+    "options": [
+     "Hjelper",
+     "Kunne",
+     "Kan",
+     "Måtte"
+    ],
+    "answer": 2,
+    "explanation": "The present modal auxiliary 'kan' takes the first position before the subject 'du'."
+   },
+   {
+    "question": "Which sentence correctly asks if she is coming tomorrow?",
+    "options": [
+     "Hun kommer i morgen?",
+     "Gjør hun komme i morgen?",
+     "Er hun kommer i morgen?",
+     "Kommer hun i morgen?"
+    ],
+    "answer": 3,
+    "explanation": "Invert the verb 'kommer' and subject 'hun' to form a standard polar question."
+   }
+  ],
+  "tip": "Never translate 'do' or 'does' when asking questions in Norwegian—simply put the real verb first!"
+ },
+ {
+  "id": "nb-a2-double-definiteness",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#16A34A",
+  "emoji": "🏷️",
+  "title": "Double Definiteness (Dobbelt Bestemthet)",
+  "subtitle": "Use both an adjectival article and a definite noun ending together",
+  "color": "#16A34A",
+  "bg": "#F0FDF4",
+  "keyPoint": "When a definite noun is modified by an adjective, Norwegian requires both a preposed article (den/det/de) and the definite suffix on the noun.",
+  "structure": {
+   "headers": [
+    "Gender/Number",
+    "Article",
+    "Adjective Form",
+    "Noun with Suffix"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine",
+      "den",
+      "store",
+      "bilen (den store bilen)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine",
+      "den",
+      "gamle",
+      "boka (den gamle boka)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter",
+      "det",
+      "hvite",
+      "huset (det hvite huset)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural",
+      "de",
+      "nye",
+      "bøkene (de nye bøkene)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#16A34A",
+    "label": "Modified Definite Nouns",
+    "example": "Den røde bilen står utenfor.",
+    "translation": ""
+   },
+   {
+    "color": "#15803D",
+    "label": "Specific Plurals",
+    "example": "De nye skoene er veldig gode.",
+    "translation": ""
+   },
+   {
+    "color": "#166534",
+    "label": "Describing Objects",
+    "example": "Det lille huset ligger ved sjøen.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Den fine jakken koster mye.",
+    "ko": "",
+    "highlight": "Den fine jakken"
+   },
+   {
+    "en": "Det gule huset er til salgs.",
+    "ko": "",
+    "highlight": "Det gule huset"
+   },
+   {
+    "en": "De gamle bildene henger på veggen.",
+    "ko": "",
+    "highlight": "De gamle bildene"
+   },
+   {
+    "en": "Hun liker den nye læreren sin.",
+    "ko": "",
+    "highlight": "den nye læreren"
+   },
+   {
+    "en": "Vi sov i det kalde rommet hele natten.",
+    "ko": "",
+    "highlight": "det kalde rommet"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Den rød bil er min.",
+    "right": "Den røde bilen er min.",
+    "note": "You must use the definite adjective ending '-e' and the definite noun suffix '-en'."
+   },
+   {
+    "wrong": "Store bilen er dyr.",
+    "right": "Den store bilen er dyr.",
+    "note": "A definite modified noun cannot omit the preposed article 'den/det/de'."
+   },
+   {
+    "wrong": "Det stor huset er gammelt.",
+    "right": "Det store huset er gammelt.",
+    "note": "Adjectives in definite noun phrases always take the definite '-e' suffix."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase for 'the big house': '___ er gammelt.'",
+    "options": [
+     "Det store huset",
+     "Det stor hus",
+     "Store huset",
+     "Den store huset"
+    ],
+    "answer": 0,
+    "explanation": "Neuter singular requires article 'det', adjective 'store', and suffix '-et' on 'huset'."
+   },
+   {
+    "question": "Choose the correct phrase for 'the red car': 'Jeg ser ___.'",
+    "options": [
+     "den rød bil",
+     "den røde bilen",
+     "røde bilen",
+     "det røde bilen"
+    ],
+    "answer": 1,
+    "explanation": "Masculine singular takes article 'den', adjective 'røde', and suffix '-en' on 'bilen'."
+   },
+   {
+    "question": "Fill in the blank: '___ bøkene tilhører skolen.' (the new)",
+    "options": [
+     "Den nye",
+     "Det nye",
+     "De nye",
+     "De nytt"
+    ],
+    "answer": 2,
+    "explanation": "Plural definite takes article 'de' and adjective form 'nye'."
+   },
+   {
+    "question": "Which sentence illustrates correct double definiteness?",
+    "options": [
+     "Den gammel mannen smiler.",
+     "Det kald vannet smaker godt.",
+     "De grønne eple er søte.",
+     "Det lille barnet sover nå."
+    ],
+    "answer": 3,
+    "explanation": "'Det lille barnet' correctly matches neuter article 'det', weak adjective 'lille', and definite noun 'barnet'."
+   }
+  ],
+  "tip": "Think of it as bookending the adjective: an article in front (den/det/de) and a suffix at the back (-en/-et/-ene)."
+ },
+ {
+  "id": "nb-a2-adjective-agreement",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#16A34A",
+  "emoji": "🎨",
+  "title": "Adjective Gender and Number Agreement",
+  "subtitle": "Inflect adjectives to match the gender and number of nouns",
+  "color": "#22C55E",
+  "bg": "#F0FDF4",
+  "keyPoint": "Norwegian adjectives add -t for indefinite neuter singular and -e for plurals and definite forms.",
+  "structure": {
+   "headers": [
+    "Form",
+    "Rule / Suffix",
+    "Example",
+    "English"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masc / Fem Indefinite",
+      "Base form (no suffix)",
+      "en fin dag",
+      "a nice day"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter Indefinite",
+      "Add -t to stem",
+      "et fint hus",
+      "a nice house"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Plural Indefinite",
+      "Add -e to stem",
+      "fine biler",
+      "nice cars"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Definite (all)",
+      "Add -e to stem",
+      "den fine dagen",
+      "the nice day"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#22C55E",
+    "label": "Neuter Singular Nouns",
+    "example": "Bordet er helt nytt.",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Plural Attributes",
+    "example": "De har kjøpt fine blomster.",
+    "translation": ""
+   },
+   {
+    "color": "#15803D",
+    "label": "Predicative Agreement",
+    "example": "Huset er veldig stort.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Han har en varm jakke.",
+    "ko": "",
+    "highlight": "varm"
+   },
+   {
+    "en": "Dette er et varmt teppe.",
+    "ko": "",
+    "highlight": "varmt"
+   },
+   {
+    "en": "Vi har varme votter på oss.",
+    "ko": "",
+    "highlight": "varme"
+   },
+   {
+    "en": "Bordet er rundt og pent.",
+    "ko": "",
+    "highlight": "rundt og pent"
+   },
+   {
+    "en": "Stolene er veldig gamle.",
+    "ko": "",
+    "highlight": "gamle"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Et stor problem oppsto.",
+    "right": "Et stort problem oppsto.",
+    "note": "Neuter indefinite nouns require the adjective to add the '-t' suffix."
+   },
+   {
+    "wrong": "Bøkene er interessant.",
+    "right": "Bøkene er interessante.",
+    "note": "Predicative adjectives modifying plural nouns must take the plural ending '-e'."
+   },
+   {
+    "wrong": "Hun har et fin hund.",
+    "right": "Hun har en fin hund.",
+    "note": "'Hund' is masculine ('en hund'), so the adjective must be in the base form 'fin'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete with 'kald' (cold): 'Vannet er ___.'",
+    "options": [
+     "kalde",
+     "kaldt",
+     "kald",
+     "kalder"
+    ],
+    "answer": 1,
+    "explanation": "'Vannet' is neuter singular, requiring the suffix '-t': 'kaldt'."
+   },
+   {
+    "question": "Complete with 'grønn' (green): 'Vi spiser ___ epler.'",
+    "options": [
+     "grønt",
+     "grønn",
+     "grønne",
+     "grønnes"
+    ],
+    "answer": 2,
+    "explanation": "'Epler' is plural indefinite, so 'grønn' takes the plural ending '-e'."
+   },
+   {
+    "question": "Complete with 'ny' (new): 'Han kjøpte et ___ bord.'",
+    "options": [
+     "nytt",
+     "nye",
+     "ny",
+     "nyen"
+    ],
+    "answer": 0,
+    "explanation": "Neuter singular forms of monosyllabic adjectives ending in a vowel double the t: 'nytt'."
+   },
+   {
+    "question": "Which sentence has correct adjective agreement?",
+    "options": [
+     "Huset er gammel.",
+     "Bilen er gammelt.",
+     "Vinduene er åpen.",
+     "Rommet er lyst og trivelig."
+    ],
+    "answer": 3,
+    "explanation": "'Rommet' is neuter singular, so both predicative adjectives correctly end in -t: 'lyst' and 'trivelig' (adjectives in -lig drop the -t)."
+   }
+  ],
+  "tip": "Adjectives ending in -lig (like 'hyggelig' or 'trivelig') usually do not add -t in the neuter form."
+ },
+ {
+  "id": "nb-a2-possessive-placement-sin-vs-hans",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#16A34A",
+  "emoji": "👤",
+  "title": "Reflexive Possessive 'Sin' vs. Non-Reflexive Genitives",
+  "subtitle": "Use sin/si/sitt/sine when the possessor is the clause's third-person subject",
+  "color": "#EAB308",
+  "bg": "#FEFCE8",
+  "keyPoint": "Use the reflexive possessive 'sin/si/sitt/sine' when the possessed item belongs to the 3rd-person subject of that same clause; use 'hans/hennes/deres' for someone else.",
+  "structure": {
+   "headers": [
+    "Possessor",
+    "Gender/Number of Owned Item",
+    "Form",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Subject (Masc/Fem)",
+      "Masculine item",
+      "sin",
+      "Han vasker bilen sin. (His own car)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Subject (Neuter)",
+      "Neuter item",
+      "sitt",
+      "Hun liker huset sitt. (Her own house)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Subject (Plural)",
+      "Plural items",
+      "sine",
+      "De besøker barna sine. (Their own kids)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Not Subject",
+      "Any gender/number",
+      "hans / hennes",
+      "Han kysset kona hans. (Another man's wife)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EAB308",
+    "label": "Subject's Own Object",
+    "example": "Jonas ringte moren sin.",
+    "translation": ""
+   },
+   {
+    "color": "#CA8A04",
+    "label": "External Possessor",
+    "example": "Jonas ringte moren hans.",
+    "translation": ""
+   },
+   {
+    "color": "#A16207",
+    "label": "Plural Possessions",
+    "example": "De solgte alle bøkene sine.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ola elsker hunden sin.",
+    "ko": "",
+    "highlight": "hunden sin"
+   },
+   {
+    "en": "Kari solgte leiligheten sin i fjor.",
+    "ko": "",
+    "highlight": "leiligheten sin"
+   },
+   {
+    "en": "Barnet leker med lekene sine.",
+    "ko": "",
+    "highlight": "lekene sine"
+   },
+   {
+    "en": "Han tok jakken hans ved en feil.",
+    "ko": "",
+    "highlight": "jakken hans"
+   },
+   {
+    "en": "Eva spiser lunsjen sin alene.",
+    "ko": "",
+    "highlight": "lunsjen sin"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Han vasker bilen hans.",
+    "right": "Han vasker bilen sin.",
+    "note": "'Bilen hans' means he is washing another man's car; use 'sin' for his own car."
+   },
+   {
+    "wrong": "Sin bil er rød.",
+    "right": "Bilen hans er rød.",
+    "note": "'Sin' can NEVER be part of the subject itself; use 'hans/hennes' in subject position."
+   },
+   {
+    "wrong": "Hun leste bøkene sitt.",
+    "right": "Hun leste bøkene sine.",
+    "note": "Use 'sine' with plural nouns ('bøkene'), not neuter 'sitt'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Peter drove his own car: 'Peter kjørte bilen ___.'",
+    "options": [
+     "hans",
+     "sin",
+     "sitt",
+     "sine"
+    ],
+    "answer": 1,
+    "explanation": "'Bilen' is masculine singular and belongs to the subject Peter, so use 'sin'."
+   },
+   {
+    "question": "His brother lives in Bergen: 'Broren ___ bor i Bergen.'",
+    "options": [
+     "sin",
+     "sitt",
+     "hans",
+     "sine"
+    ],
+    "answer": 2,
+    "explanation": "'Broren hans' is the subject of the sentence, and reflexive 'sin' can never stand within the subject."
+   },
+   {
+    "question": "Marit called her own children: 'Marit ringte barna ___.'",
+    "options": [
+     "hennes",
+     "sitt",
+     "sin",
+     "sine"
+    ],
+    "answer": 3,
+    "explanation": "'Barna' is plural and belongs to the subject Marit, requiring 'sine'."
+   },
+   {
+    "question": "Magnus parked his own bike: 'Magnus parkerte sykkelen ___.'",
+    "options": [
+     "sin",
+     "hans",
+     "sitt",
+     "si"
+    ],
+    "answer": 0,
+    "explanation": "'Sykkelen' is masculine and owned by the subject Magnus, so use 'sin'."
+   }
+  ],
+  "tip": "'Sin' can never be inside the subject of a clause—if the noun is doing the action, use 'hans', 'hennes', or 'deres'!"
+ },
+ {
+  "id": "nb-a2-subordinate-clause-word-order",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔗",
+  "title": "Subordinate Clause Word Order (BIFF Rule)",
+  "subtitle": "Sentence adverbs like 'ikke' precede the finite verb in dependent clauses",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "In subordinate clauses introduced by subjunctions, sentence adverbs such as 'ikke' must stand directly BEFORE the finite verb (the BIFF rule).",
+  "structure": {
+   "headers": [
+    "Clause Type",
+    "Conjunction",
+    "Subject",
+    "Adverb + Verb Order"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Main Clause",
+      "—",
+      "Han",
+      "kommer IKKE i dag. (V2 rule)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Subordinate Clause",
+      "fordi",
+      "han",
+      "IKKE kommer i dag. (BIFF rule)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Relative Clause",
+      "som",
+      "jeg",
+      "ALDRI har møtt før."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Reason Clauses (fordi)",
+    "example": "Vi går ut selv om det regner.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Indirect Questions",
+    "example": "Jeg vet ikke hvorfor hun ikke ringer.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Conditional Clauses (hvis)",
+    "example": "Hvis du ikke spiser, blir du sulten.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Han sier at han ikke kommer.",
+    "ko": "",
+    "highlight": "ikke kommer"
+   },
+   {
+    "en": "Vi blir hjemme hvis det ikke slutter å regne.",
+    "ko": "",
+    "highlight": "ikke slutter"
+   },
+   {
+    "en": "Hun er trist fordi hun ikke fikk jobben.",
+    "ko": "",
+    "highlight": "ikke fikk"
+   },
+   {
+    "en": "Kjenner du gutten som ikke snakker norsk?",
+    "ko": "",
+    "highlight": "ikke snakker"
+   },
+   {
+    "en": "Jeg lurte på om de alltid spiser så tidlig.",
+    "ko": "",
+    "highlight": "alltid spiser"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jeg vet at han kommer ikke.",
+    "right": "Jeg vet at han ikke kommer.",
+    "note": "In a subordinate clause, 'ikke' must precede the finite verb 'kommer'."
+   },
+   {
+    "wrong": "Fordi jeg forstår ikke, spør jeg.",
+    "right": "Fordi jeg ikke forstår, spør jeg.",
+    "note": "Subjunction 'fordi' triggers subordinate order: subject + adverb + verb."
+   },
+   {
+    "wrong": "Hvis du har ikke penger...",
+    "right": "Hvis du ikke har penger...",
+    "note": "Place 'ikke' directly before the auxiliary verb 'har'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the subordinate clause: 'Jeg vet at han ___.'",
+    "options": [
+     "ikke forstår",
+     "forstår ikke",
+     "forstå ikke",
+     "ikke forstå"
+    ],
+    "answer": 0,
+    "explanation": "In subordinate clauses (after 'at'), adverb 'ikke' comes before the finite verb 'forstår'."
+   },
+   {
+    "question": "Complete the conditional clause: 'Hvis du ___ tid, kan vi møtes.'",
+    "options": [
+     "har alltid",
+     "alltid har",
+     "alltid ha",
+     "har aldri"
+    ],
+    "answer": 1,
+    "explanation": "The sentence adverb 'alltid' must come before the finite verb 'har' in a subordinate clause."
+   },
+   {
+    "question": "Complete the causal clause: 'Hun gråt fordi hun ___ glad.'",
+    "options": [
+     "var aldri",
+     "var ikke",
+     "ikke var",
+     "aldri var ikke"
+    ],
+    "answer": 2,
+    "explanation": "The negative adverb 'ikke' stands before the finite past verb 'var' in a subordinate clause."
+   },
+   {
+    "question": "Which sentence follows correct subordinate clause word order?",
+    "options": [
+     "Hun sa at hun ville ikke spise.",
+     "Vi venter hvis bussen kommer ikke.",
+     "Jeg kjenner en mann som liker aldri kaffe.",
+     "Jeg vet hvorfor de ikke vil hjelpe."
+    ],
+    "answer": 3,
+    "explanation": "In 'hvorfor de ikke vil hjelpe', the adverb 'ikke' correctly precedes the auxiliary verb 'vil'."
+   }
+  ],
+  "tip": "Remember the Norwegian acronym BIFF: 'I Bisetning står Ikke Før Finitte verb' (In subordinate clauses, 'ikke' stands before the finite verb)."
+ },
+ {
+  "id": "nb-a2-prepositional-verbs-and-particles",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🔄",
+  "title": "Phrasal Verbs and Idiomatic Particle Placement",
+  "subtitle": "How verbal particles shift stress and alter meanings entirely",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "A verb combined with a stressed particle creates an idiomatic meaning that differs completely from the verb paired with an unstressed preposition.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Norwegian Structure",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Prepositional verb (stress on verb)",
+      "å holde med noen",
+      "to agree with someone"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Particle verb (stress on particle)",
+      "å holde opp",
+      "to cease / stop"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Particle verb + object",
+      "å gi opp håpet",
+      "to surrender / give up hope"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Particle verb (transitive)",
+      "å finne ut av noe",
+      "to figure something out"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Cessation of Action",
+    "example": "Nå må dere holde opp med bråket.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Agreement or Support",
+    "example": "Jeg holder med deg i denne saken.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Discovery or Resolution",
+    "example": "Vi må finne ut hva som skjedde.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Han valgte å gi opp hele prosjektet.",
+    "ko": "",
+    "highlight": "gi opp"
+   },
+   {
+    "en": "Barna må holde opp med å rope inne.",
+    "ko": "",
+    "highlight": "holde opp"
+   },
+   {
+    "en": "Jeg holder med deg, det var en dårlig idé.",
+    "ko": "",
+    "highlight": "holder med"
+   },
+   {
+    "en": "Politiet prøver å finne ut sannheten.",
+    "ko": "",
+    "highlight": "finne ut"
+   },
+   {
+    "en": "De la ut på en lang reise over fjellet.",
+    "ko": "",
+    "highlight": "la ut"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Han stoppet opp å røyke.",
+    "right": "Han holdt opp med å røyke.",
+    "note": "Use 'holde opp med' to mean quitting a habit permanently; 'stoppe opp' means halting physical motion."
+   },
+   {
+    "wrong": "Jeg holder opp med deg.",
+    "right": "Jeg holder med deg.",
+    "note": "'Å holde med' expresses agreement; 'å holde opp' means to quit or cease an activity."
+   },
+   {
+    "wrong": "Vi må finne på sannheten.",
+    "right": "Vi må finne ut sannheten.",
+    "note": "'Finne på' means to invent/make up something fictional, whereas 'finne ut' means to discover facts."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Can you please ___ making that noise?",
+    "options": [
+     "finne ut",
+     "gi opp",
+     "holde opp med",
+     "holde med"
+    ],
+    "answer": 2,
+    "explanation": "'Holde opp med' specifically translates to 'stop/cease doing' an ongoing action."
+   },
+   {
+    "question": "I completely ___ you in this debate.",
+    "options": [
+     "holder med",
+     "holder opp",
+     "gir opp",
+     "finner på"
+    ],
+    "answer": 0,
+    "explanation": "'Holde med' means to agree with or take someone's side."
+   },
+   {
+    "question": "We need to ___ when the train arrives.",
+    "options": [
+     "gi opp",
+     "legge ut",
+     "holde med",
+     "finne ut"
+    ],
+    "answer": 3,
+    "explanation": "'Finne ut' means to figure out or discover verifiable information."
+   },
+   {
+    "question": "Do not ___ even if the exam is hard.",
+    "options": [
+     "finn på",
+     "gi opp",
+     "hold med",
+     "legg om"
+    ],
+    "answer": 1,
+    "explanation": "'Gi opp' is the phrasal verb meaning to surrender or give up."
+   }
+  ],
+  "tip": "Listen for voice stress: in phrasal verbs, the particle (opp, ut, av) carries heavy tonic stress, whereas ordinary prepositions remain unstressed."
+ },
+ {
+  "id": "nb-a2-modal-verbs-with-bare-infinitives",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#D97706",
+  "emoji": "🚶",
+  "title": "Modal Auxiliaries and Omission of Motion Verbs",
+  "subtitle": "Using bare infinitives and dropping motion verbs with directional adverbs",
+  "color": "#B45309",
+  "bg": "#FFFBEB",
+  "keyPoint": "Norwegian modal verbs take bare infinitives without 'å', and common motion verbs like 'gå' or 'dra' are regularly omitted when a directional adverb or prepositional destination follows.",
+  "structure": {
+   "headers": [
+    "Structure Pattern",
+    "Norwegian Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Modal + bare infinitive",
+      "Han må sove nå.",
+      "He must sleep now."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Modal + omitted motion verb",
+      "Jeg skal hjem nå.",
+      "I will go home now."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past modal + omitted motion",
+      "Vi måtte på sykehuset.",
+      "We had to go to the hospital."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Desire modal + directional",
+      "Vil du ut i kveld?",
+      "Do you want to go out tonight?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Scheduled Movement",
+    "example": "Jeg skal på kino i kveld.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Urgent Destination",
+    "example": "Hun må til tannlegen i morgen.",
+    "translation": ""
+   },
+   {
+    "color": "#FBBF24",
+    "label": "Volitional Direction",
+    "example": "Vil dere inn og drikke kaffe?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Jeg skal hjem etter jobb i dag.",
+    "ko": "",
+    "highlight": "skal hjem"
+   },
+   {
+    "en": "Han vil ikke ut i regnværet.",
+    "ko": "",
+    "highlight": "vil ikke ut"
+   },
+   {
+    "en": "Vi må på butikken før den stenger.",
+    "ko": "",
+    "highlight": "må på butikken"
+   },
+   {
+    "en": "De kan svømme veldig fort.",
+    "ko": "",
+    "highlight": "kan svømme"
+   },
+   {
+    "en": "Skal du til Bergen i helgen?",
+    "ko": "",
+    "highlight": "Skal du til"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jeg vil å gå hjem.",
+    "right": "Jeg vil gå hjem. / Jeg vil hjem.",
+    "note": "Never place the infinitive marker 'å' directly after a modal auxiliary verb like 'vil'."
+   },
+   {
+    "wrong": "Vi må gå på kino i kveld.",
+    "right": "Vi skal på kino i kveld.",
+    "note": "While grammatically valid, native speakers naturally omit 'gå/reise' when motion to a destination is obvious."
+   },
+   {
+    "wrong": "Han skal til hjem.",
+    "right": "Han skal hjem.",
+    "note": "'Hjem' is already an adverb of direction; adding 'til' before 'hjem' is ungrammatical."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I have to ___ to the grocery store right now.",
+    "options": [
+     "må til",
+     "må å gå",
+     "må på",
+     "skal å"
+    ],
+    "answer": 2,
+    "explanation": "In Norwegian, 'må på butikken' implies 'must go to the store' with motion verb omitted and preposition 'på'."
+   },
+   {
+    "question": "She wants ___ tonight because it is cold.",
+    "options": [
+     "ikke å gå ut",
+     "ikke ut",
+     "ikke ut til",
+     "å ikke reise"
+    ],
+    "answer": 1,
+    "explanation": "The motion verb is omitted after modal 'vil', and adverbs are placed naturally: 'vil ikke ut'."
+   },
+   {
+    "question": "Are you going ___ after the lecture?",
+    "options": [
+     "til hjem",
+     "å hjem",
+     "hjem",
+     "i hjemmet"
+    ],
+    "answer": 2,
+    "explanation": "'Hjem' indicates directional motion toward home without prepositions."
+   },
+   {
+    "question": "He can ___ fluent Norwegian.",
+    "options": [
+     "snakker",
+     "snakke",
+     "å snakke",
+     "snakket"
+    ],
+    "answer": 1,
+    "explanation": "Modals require the bare infinitive ('snakke') without 'å'."
+   }
+  ],
+  "tip": "When a destination or direction adverb (hjem, ut, inn, bort, opp, ned) is present, dropping 'gå' or 'dra' after 'skal/vil/må' instantly makes your Norwegian sound native."
+ },
+ {
+  "id": "nb-b1-relative-clauses-som-as-subject-vs-object",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#059669",
+  "emoji": "🔗",
+  "title": "Relative Clauses with 'Som' and Preposition Stranding",
+  "subtitle": "Navigating subject vs object relative pronouns and terminal prepositions",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "The invariant pronoun 'som' introduces relative clauses and must be retained when representing the clause's subject, but it allows dependent prepositions to be stranded at the clause end.",
+  "structure": {
+   "headers": [
+    "Role of 'Som'",
+    "Norwegian Sentence",
+    "Preposition Status"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Subject (obligatory)",
+      "Boka som ligger der, er min.",
+      "No preposition"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Direct object (optional)",
+      "Boka (som) du leste, var spennende.",
+      "No preposition"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Prepositional object (stranded)",
+      "Mannen som jeg snakket med, var hyggelig.",
+      "Stranded at end ('med')"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Subordinate adverb placement",
+      "Mannen som aldri klager, er snill.",
+      "Adverb before finite verb"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Subject Identifier",
+    "example": "Jenta som vant løpet, trener hver dag.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Stranded Preposition",
+    "example": "Huset som vi bodde i, er nå solgt.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Omitted Object Pronoun",
+    "example": "Kaken du bakte, smakte kjempegodt.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dette er studenten som vant førstepremien.",
+    "ko": "",
+    "highlight": "som vant"
+   },
+   {
+    "en": "Her er nøkkelen som jeg lette etter.",
+    "ko": "",
+    "highlight": "som jeg lette etter"
+   },
+   {
+    "en": "Bilen som han ikke ville selge, ble stjålet.",
+    "ko": "",
+    "highlight": "som han ikke ville selge"
+   },
+   {
+    "en": "Vennen jeg tenkte på, ringte plutselig.",
+    "ko": "",
+    "highlight": "jeg tenkte på"
+   },
+   {
+    "en": "Huset som de har bodd i, er veldig gammelt.",
+    "ko": "",
+    "highlight": "som de har bodd i"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mannen med hvem jeg snakket, var tysk.",
+    "right": "Mannen som jeg snakket med, var tysk.",
+    "note": "Norwegian does not use 'med hvem'; instead, use 'som' and strand the preposition at the end of the clause."
+   },
+   {
+    "wrong": "Bilen står der borte, er min.",
+    "right": "Bilen som står der borte, er min.",
+    "note": "You cannot omit 'som' when it acts as the grammatical subject of the subordinate relative clause."
+   },
+   {
+    "wrong": "Her er huset som vi bodde i det.",
+    "right": "Her er huset som vi bodde i.",
+    "note": "Do not insert a redundant pronoun ('det') after the stranded preposition; 'som' already represents the noun."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Here is the woman ___ I was talking about.",
+    "options": [
+     "som jeg snakket om",
+     "om hvem jeg snakket",
+     "hvem jeg snakket om",
+     "som jeg snakket om henne"
+    ],
+    "answer": 0,
+    "explanation": "Natural Norwegian strands the preposition 'om' at the end of the clause introduced by 'som'."
+   },
+   {
+    "question": "The boy ___ runs fastest will win.",
+    "options": [
+     "hvem",
+     "hvis",
+     "som",
+     "hva"
+    ],
+    "answer": 2,
+    "explanation": "'Som' is obligatory when replacing the subject of the relative clause."
+   },
+   {
+    "question": "The town ___ we traveled to was very quiet.",
+    "options": [
+     "som vi reiste til det",
+     "der vi reiste til",
+     "til som vi reiste",
+     "som vi reiste til"
+    ],
+    "answer": 3,
+    "explanation": "Prepositions stay at the end of the relative clause without resumptive pronouns: 'som vi reiste til'."
+   },
+   {
+    "question": "Which sentence allows omitting 'som' entirely?",
+    "options": [
+     "Gutten som roper, er min bror.",
+     "Kaken som står på bordet, er god.",
+     "Filmen som vi så i går, var kjedelig.",
+     "Læreren som underviser her, er streng."
+    ],
+    "answer": 2,
+    "explanation": "'Som' can be omitted only when it acts as the object of the relative clause ('vi så [filmen]')."
+   }
+  ],
+  "tip": "Test whether 'som' is optional by checking what follows: if an explicit subject pronoun/noun follows ('som vi så'), 'som' can be dropped. If a verb follows immediately ('som kom'), 'som' is mandatory."
+ },
+ {
+  "id": "nb-b1-present-participle-vs-past-participle",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🎭",
+  "title": "Participles as Adjectives and Adverbials",
+  "subtitle": "Inflecting past participles for agreement and employing invariable '-ende'",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Past participles function as adjectives agreeing in gender and number with the noun, whereas present participles end in '-ende' and are completely invariable.",
+  "structure": {
+   "headers": [
+    "Participle Type",
+    "Norwegian Form",
+    "Agreement Rule"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Past participle (en-word)",
+      "en stengt dør",
+      "Basic participle form"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past participle (et-word)",
+      "et stengt vindu",
+      "Adds -t (regular) or shifts root"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past participle (plural/definite)",
+      "stengte dører",
+      "Inflects with suffix -e"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Present participle (adjective)",
+      "et smilende barn",
+      "Invariable -ende ending"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Present participle (adverbial)",
+      "Han kom løpende.",
+      "Invariable -ende ending"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Resulting State (Past)",
+    "example": "Vinduet er knust av ballen.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Ongoing Manner (Present)",
+    "example": "Hun kom syngende inn i rommet.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Plural Adjectival Past",
+    "example": "Alle de stjålne syklene ble funnet.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dørene forble låste hele natten.",
+    "ko": "",
+    "highlight": "låste"
+   },
+   {
+    "en": "Han leste brevet med skjelvende hender.",
+    "ko": "",
+    "highlight": "skjelvende"
+   },
+   {
+    "en": "Et nymalt hus lukter sterkt.",
+    "ko": "",
+    "highlight": "nymalt"
+   },
+   {
+    "en": "Barna kom løpende mot oss på stranden.",
+    "ko": "",
+    "highlight": "løpende"
+   },
+   {
+    "en": "Vi fant de mistede nøklene i gangen.",
+    "ko": "",
+    "highlight": "mistede"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "To smilender barn sto i hagen.",
+    "right": "To smilende barn sto i hagen.",
+    "note": "Present participles ending in '-ende' never take plural or neuter inflection markers."
+   },
+   {
+    "wrong": "Døren er stengte.",
+    "right": "Døren er stengt.",
+    "note": "A singular masculine or feminine subject requires the singular uninflected participle 'stengt', not plural '-e'."
+   },
+   {
+    "wrong": "Hun kom til å løpe gråtende.",
+    "right": "Hun kom gråtende.",
+    "note": "To express accompanying manner, use the present participle '-ende' directly after verbs of motion without auxiliaries."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "All the ___ windows must be replaced immediately.",
+    "options": [
+     "knust",
+     "knuste",
+     "knustende",
+     "knuster"
+    ],
+    "answer": 1,
+    "explanation": "Plural definite nouns require the past participle to take the plural agreement suffix '-e' ('knuste vinduer')."
+   },
+   {
+    "question": "She sat ___ on the bench for an hour.",
+    "options": [
+     "ventende",
+     "ventet",
+     "ventede",
+     "venter"
+    ],
+    "answer": 0,
+    "explanation": "Ongoing, simultaneous manner or action uses the invariable present participle ending in '-ende'."
+   },
+   {
+    "question": "A freshly ___ bread was on the counter.",
+    "options": [
+     "stekt",
+     "stekte",
+     "stekende",
+     "stekten"
+    ],
+    "answer": 0,
+    "explanation": "Neuter singular indefinite takes the standard neuter agreement form 'stekt'."
+   },
+   {
+    "question": "The dogs came ___ into the garden.",
+    "options": [
+     "løpt",
+     "løpte",
+     "løpende",
+     "løper"
+    ],
+    "answer": 2,
+    "explanation": "Verbs of motion combined with present participles describe manner of movement invariantly using '-ende'."
+   }
+  ],
+  "tip": "Think of '-ende' as equivalent to English '-ing' describing an active state or adverbial manner; unlike past participles, it never adds an '-e' in the plural."
+ },
+ {
+  "id": "nb-b1-passive-voice-s-passive-vs-bli-passive",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#7C3AED",
+  "emoji": "⚙️",
+  "title": "The S-Passive vs. Periphrastic 'Bli'-Passive",
+  "subtitle": "Choosing between morphological rules and concrete dynamic actions",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use the morphological s-passive for formal instructions, recurring routines, and modal commands, and reserve the periphrastic 'bli'-passive for specific, dynamic events occurring at a definitive point in time.",
+  "structure": {
+   "headers": [
+    "Passive Type",
+    "Norwegian Formation",
+    "Primary Usage"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "S-Passive (Present)",
+      "Varene leveres her.",
+      "Timeless rules, instructions, notices"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "S-Passive (with modal)",
+      "Oppgaven må gjøres nå.",
+      "Mandates, obligations, recipes"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Bli-Passive (Dynamic)",
+      "Bilen ble reparert i går.",
+      "Specific single events in time"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Være-Passive (Stative)",
+      "Bilen er reparert.",
+      "State or completed result"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Instructional Mandate",
+    "example": "Pakken må åpnes med saks.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Historic Event",
+    "example": "Broen ble bygget i 1994.",
+    "translation": ""
+   },
+   {
+    "color": "#A78BFA",
+    "label": "Formal Notice",
+    "example": "Døren låses automatisk klokken 21.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Søknaden må sendes innen fredag.",
+    "ko": "",
+    "highlight": "må sendes"
+   },
+   {
+    "en": "Møtet ble avlyst på grunn av stormen.",
+    "ko": "",
+    "highlight": "ble avlyst"
+   },
+   {
+    "en": "Norsk snakkes over hele landet.",
+    "ko": "",
+    "highlight": "snakkes"
+   },
+   {
+    "en": "Tyven ble tatt av politiet i morges.",
+    "ko": "",
+    "highlight": "ble tatt"
+   },
+   {
+    "en": "Dette skjemaet skal fylles ut med penn.",
+    "ko": "",
+    "highlight": "skal fylles"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Bilen seltes i går.",
+    "right": "Bilen ble solgt i går.",
+    "note": "Past tense s-passives are extremely rare and archaic; use 'ble + past participle' for concrete past events."
+   },
+   {
+    "wrong": "Boka må bli lest.",
+    "right": "Boka må leses.",
+    "note": "After modal verbs (må, kan, skal, bør), the morphological infinitive s-passive ('leses') is vastly preferred."
+   },
+   {
+    "wrong": "Huset ble malt i mange år nå.",
+    "right": "Huset er malt.",
+    "note": "Use 'være + participle' for an existing completed state; 'ble' implies a transition or dynamic occurrence."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The homework must ___ before tomorrow.",
+    "options": [
+     "bli levert",
+     "leveres",
+     "ble levert",
+     "levering"
+    ],
+    "answer": 1,
+    "explanation": "Modal auxiliary verbs like 'må' predominantly trigger the s-infinitive passive form: 'må leveres'."
+   },
+   {
+    "question": "The bank ___ yesterday afternoon.",
+    "options": [
+     "rans",
+     "ble ranet",
+     "ransaket seg",
+     "blir ranet"
+    ],
+    "answer": 1,
+    "explanation": "A specific, historic or punctual event in the past demands the periphrastic passive with 'ble'."
+   },
+   {
+    "question": "Norwegian salmon ___ all over the world.",
+    "options": [
+     "selges",
+     "ble solgt",
+     "skal selge",
+     "selger av"
+    ],
+    "answer": 0,
+    "explanation": "General, timeless truths, sales notices, and commercial facts standardly take the present s-passive ('selges')."
+   },
+   {
+    "question": "The old castle ___ by tourists every summer.",
+    "options": [
+     "ble besøke",
+     "besøkes",
+     "besøke",
+     "må besøke"
+    ],
+    "answer": 1,
+    "explanation": "Habitual seasonal routines and recurring situations use the present s-passive ('besøkes')."
+   }
+  ],
+  "tip": "Remember this rule of thumb: If you see a modal verb (må, bør, kan, skal) or a printed sign/rule, pick the -s ending. If you are narrating a concrete story with a specific timeline, pick 'ble'."
+ },
+ {
+  "id": "nb-b1-spatial-adverbs-motion-vs-rest",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#4F46E5",
+  "emoji": "🧭",
+  "title": "Static vs. Dynamic Directional Adverbs",
+  "subtitle": "Mastering the contrast between stationary position and directional movement",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "Norwegian uses shorter adverb forms to show movement toward a destination and extended forms with an ending to signal a static location.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Norwegian Adverbs",
+    "Meaning / Usage"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Rest (Sted)",
+      "inne, ute, oppe, nede, hjemme",
+      "Stationary location (no movement)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Motion (Retning)",
+      "inn, ut, opp, ned, hjem",
+      "Directional motion toward a goal"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Rest (Bort/Fram)",
+      "borte, framme, der, her",
+      "Being present at a remote or reached point"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Motion (Bort/Fram)",
+      "bort, fram, dit, hit",
+      "Heading toward a remote or reached point"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Staying in a Location",
+    "example": "Vi sitter inne fordi det regner kraftig ute.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Moving Toward a Goal",
+    "example": "Barna løper inn så snart klokken ringer.",
+    "translation": ""
+   },
+   {
+    "color": "#818CF8",
+    "label": "Returning Home",
+    "example": "Jeg vil reise hjem etter en lang dag på kontoret.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Han sitter hjemme og leser en spennende roman.",
+    "ko": "",
+    "highlight": "hjemme"
+   },
+   {
+    "en": "Nå må vi gå hjem før det blir for mørkt ute.",
+    "ko": "",
+    "highlight": "hjem"
+   },
+   {
+    "en": "Katten klatret opp i treet og nektet å komme ned.",
+    "ko": "",
+    "highlight": "opp"
+   },
+   {
+    "en": "Bestefar er nede i kjelleren for å hente epler.",
+    "ko": "",
+    "highlight": "nede"
+   },
+   {
+    "en": "Solen skinner fint, så vi skal spise ute i hagen.",
+    "ko": "",
+    "highlight": "ute"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jeg vil gå hjemme nå.",
+    "right": "Jeg vil gå hjem nå.",
+    "note": "Use the directional form 'hjem' when expressing movement toward home."
+   },
+   {
+    "wrong": "Han sitter inn i stua.",
+    "right": "Han sitter inne i stua.",
+    "note": "Use the static form 'inne' because sitting is a stationary action without movement."
+   },
+   {
+    "wrong": "Kan du komme her?",
+    "right": "Kan du komme hit?",
+    "note": "'Hit' denotes movement toward the speaker, whereas 'her' denotes stationary presence here."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Barna leker ___ i hagen i ettermiddag.",
+    "options": [
+     "ut",
+     "ute",
+     "inn",
+     "hjem"
+    ],
+    "answer": 1,
+    "explanation": "Playing takes place stationary in the yard, requiring the static form 'ute'."
+   },
+   {
+    "question": "Etter skolen sykler elevene alltid rett ___.",
+    "options": [
+     "hjemme",
+     "oppe",
+     "hjem",
+     "nede"
+    ],
+    "answer": 2,
+    "explanation": "Cycling conveys motion toward a destination, requiring dynamic 'hjem'."
+   },
+   {
+    "question": "Vennligst kom ___ og sett deg i sofaen.",
+    "options": [
+     "inn",
+     "inne",
+     "nede",
+     "borte"
+    ],
+    "answer": 0,
+    "explanation": "The speaker invites movement into the room, calling for directional 'inn'."
+   },
+   {
+    "question": "Jeg fant nøklene mine langt ___ i vesken.",
+    "options": [
+     "ned",
+     "hit",
+     "dit",
+     "nede"
+    ],
+    "answer": 3,
+    "explanation": "The keys are positioned statically at the bottom, so static 'nede' is required."
+   }
+  ],
+  "tip": "Remember: short words like 'inn', 'ut', 'opp', 'ned', and 'hjem' pack momentum and movement, while adding a vowel like '-e' brings them to a complete stop."
+ },
+ {
+  "id": "nb-b1-existential-sentences-det-presentative",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#059669",
+  "emoji": "📦",
+  "title": "Presentative Cleaving and Dummy 'Det' Clauses",
+  "subtitle": "Introducing new information and indefinite subjects naturally",
+  "color": "#10B981",
+  "bg": "#ECFDF5",
+  "keyPoint": "Norwegian introduces indefinite new subjects using the dummy subject 'det' followed by a verb and the actual logical subject.",
+  "structure": {
+   "headers": [
+    "Dummy Element",
+    "Verb",
+    "Logical Subject (Indefinite)",
+    "Adverbial / Remainder"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Det",
+      "sitter",
+      "en fugl",
+      "på taket"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Det",
+      "er",
+      "mange studenter",
+      "på biblioteket"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Det",
+      "kom",
+      "et tog",
+      "inn på stasjonen"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Det",
+      "skjedde",
+      "noe merkelig",
+      "i går kveld"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Existential Statements",
+    "example": "Det finnes mange vakre fjell i Norge.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Describing Ambient Events",
+    "example": "Det banker kraftig på inngangsdøren.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Presentative Sentences",
+    "example": "Det står en ukjent bil utenfor huset vårt.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Det sitter en gammel katt på trappen.",
+    "ko": "",
+    "highlight": "Det sitter en gammel katt"
+   },
+   {
+    "en": "Det kom tre nye kolleger til avdelingen i dag.",
+    "ko": "",
+    "highlight": "Det kom tre nye kolleger"
+   },
+   {
+    "en": "Det ligger mange ferske rundstykker på bordet.",
+    "ko": "",
+    "highlight": "Det ligger mange ferske rundstykker"
+   },
+   {
+    "en": "Det oppsto plutselig et alvorlig problem under møtet.",
+    "ko": "",
+    "highlight": "Det oppsto plutselig et alvorlig problem"
+   },
+   {
+    "en": "Det er ikke noe melk igjen i kjøleskapet.",
+    "ko": "",
+    "highlight": "Det er ikke noe melk"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "En katt sitter på trappen.",
+    "right": "Det sitter en katt på trappen.",
+    "note": "Norwegian strongly disfavors indefinite subjects at the start of a clause; use dummy 'det'."
+   },
+   {
+    "wrong": "Der er mange studenter her.",
+    "right": "Det er mange studenter her.",
+    "note": "Unlike English 'there is', Norwegian uses 'det er' rather than the locative 'der'."
+   },
+   {
+    "wrong": "Det bor mannen i huset.",
+    "right": "Mannen bor i huset.",
+    "note": "Dummy 'det' presentatives require an indefinite logical subject, not a definite noun."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "___ står mange turister utenfor museet i dag.",
+    "options": [
+     "Der",
+     "Det",
+     "De",
+     "Her"
+    ],
+    "answer": 1,
+    "explanation": "Norwegian uses dummy 'det' to present an indefinite subject ('mange turister')."
+   },
+   {
+    "question": "Det ___ en kald vind over fjorden nå.",
+    "options": [
+     "blåser",
+     "blåser det",
+     "som blåser",
+     "er blåst"
+    ],
+    "answer": 0,
+    "explanation": "The finite verb directly follows the dummy subject 'det' in normal V2 word order."
+   },
+   {
+    "question": "Hvorfor ___ det ingen ledige plasser på toget?",
+    "options": [
+     "har",
+     "fins",
+     "er",
+     "står"
+    ],
+    "answer": 2,
+    "explanation": "'Er' (or 'finnes') fits naturally with dummy 'det' to express existential availability."
+   },
+   {
+    "question": "Det lå ___ på kjøkkenbenken da jeg kom hjem.",
+    "options": [
+     "boken min",
+     "nøkkelen din",
+     "et brev",
+     "denne pakken"
+    ],
+    "answer": 2,
+    "explanation": "Only indefinite noun phrases like 'et brev' can serve as the logical subject in a presentative clause."
+   }
+  ],
+  "tip": "Avoid translating English 'there is' directly to 'der er'; Norwegian almost exclusively uses 'det er' or descriptive posture verbs like 'det sitter/ligger/står'."
+ },
+ {
+  "id": "nb-b2-inversion-with-subordinated-clauses-and-feltanalyse",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#059669",
+  "emoji": "📐",
+  "title": "Advanced Clausal Topology (The Sentence Field Model)",
+  "subtitle": "Applying Diderichsen's topological model to complex Norwegian syntax",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "When an adverbial or subordinate clause is fronted to the foundation field (forfelt), the main clause triggers strict subject-verb inversion (V2).",
+  "structure": {
+   "headers": [
+    "Forfelt (Front)",
+    "v (Finite Verb)",
+    "n (Subject)",
+    "a (Central Adverbial)",
+    "V / N / A (Content Field)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Da toget ankom",
+      "måtte",
+      "alle passasjerene",
+      "raskt",
+      "forlate vognene"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "I fjor sommer",
+      "reiste",
+      "familien min",
+      "aldri",
+      "til Syden"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Uten tvil",
+      "har",
+      "studentene",
+      "alltid",
+      "jobbet usedvanlig hardt"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Hva enn som skjer",
+      "vil",
+      "vi",
+      "uansett",
+      "støtte forslaget"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0369A1",
+    "label": "Subordinate Clause Fronting",
+    "example": "Hvis det regner i morgen, må vi avlyse hele utflukten.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Adverbial Topicalization",
+    "example": "Helt plutselig åpnet den ukjente døren seg sakte.",
+    "translation": ""
+   },
+   {
+    "color": "#38BDF8",
+    "label": "Object Fronting with Inversion",
+    "example": "Denne vanskelige oppgaven klarte studentene på rekordtid.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Da læreren kom inn i rommet, ble alle elevene helt stille.",
+    "ko": "",
+    "highlight": "ble alle elevene helt stille"
+   },
+   {
+    "en": "Selv om prøven var usedvanlig krevende, besto hun med glans.",
+    "ko": "",
+    "highlight": "besto hun med glans"
+   },
+   {
+    "en": "Fordi budsjettet var stramt, kunne bedriften ikke ansette flere.",
+    "ko": "",
+    "highlight": "kunne bedriften ikke ansette"
+   },
+   {
+    "en": "Etter at møtet var hevet, spiste direktøren lunsj alene.",
+    "ko": "",
+    "highlight": "spiste direktøren lunsj"
+   },
+   {
+    "en": "Så snart snøen smelter om våren, begynner blomstene å spire.",
+    "ko": "",
+    "highlight": "begynner blomstene å spire"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Da vi kom hjem, vi spiste middag.",
+    "right": "Da vi kom hjem, spiste vi middag.",
+    "note": "Fronting a subordinate clause fills the foundation field; the main clause finite verb must come second."
+   },
+   {
+    "wrong": "I går jeg leste en spennende artikkel.",
+    "right": "I går leste jeg en spennende artikkel.",
+    "note": "Norwegian is a strict V2 language; fronting an adverbial requires subject-verb inversion."
+   },
+   {
+    "wrong": "Hvis du ringer meg, jeg skal svare.",
+    "right": "Hvis du ringer meg, skal jeg svare.",
+    "note": "The conditional subordinate clause occupying the first position forces the modal verb into position 2."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Da konserten var over, ___ publikum begeistret.",
+    "options": [
+     "applauderte",
+     "publikum applauderte",
+     "som applauderte",
+     "har applaudert"
+    ],
+    "answer": 0,
+    "explanation": "The finite verb 'applauderte' must follow immediately after the fronted subordinate clause to preserve V2 order."
+   },
+   {
+    "question": "Selv om veien var speilglatt, ___ sjåføren ulykken.",
+    "options": [
+     "han unngikk",
+     "unngikk",
+     "unngikk han",
+     "og unngikk"
+    ],
+    "answer": 1,
+    "explanation": "'Unngikk' is the finite verb that must precede the subject 'sjåføren'."
+   },
+   {
+    "question": "Dersom pakken ikke ankommer innen fredag, ___ vi ta kontakt med butikken.",
+    "options": [
+     "vi må",
+     "må vi",
+     "skal vi må",
+     "så vi kan"
+    ],
+    "answer": 1,
+    "explanation": "The conditional clause occupies the front field, compelling subject-verb inversion: 'må vi'."
+   },
+   {
+    "question": "Etter at alarmen gikk, ___ lokalet umiddelbart.",
+    "options": [
+     "alle arbeiderne forlot",
+     "forlot alle arbeiderne",
+     "som alle forlot",
+     "forlate arbeiderne"
+    ],
+    "answer": 1,
+    "explanation": "The finite verb 'forlot' must take second position, followed by the subject 'alle arbeiderne'."
+   }
+  ],
+  "tip": "Treat an entire introductory dependent clause as one single syntactic block occupying position 1; position 2 must immediately host your main clause's finite verb."
+ },
+ {
+  "id": "nb-b2-focus-clefting-utbrytning",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#059669",
+  "emoji": "🔦",
+  "title": "Cleft Sentences (Setningsutbrytning) for Focus",
+  "subtitle": "Isolating sentence elements with 'Det er/var ... som' structures",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Focus clefting wraps a prominent constituent between 'Det er/var...' and a relative clause starting with 'som' (or zero) to create stark contrastive focus.",
+  "structure": {
+   "headers": [
+    "Cleft Frame",
+    "Focused Element (Fokusledd)",
+    "Relative Connector",
+    "Remainder of Clause"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Det var",
+      "Per",
+      "som",
+      "knuste den dyre vasen"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Det er",
+      "til Spania",
+      "at",
+      "vi skal reise i år"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Det er",
+      "deg",
+      "som",
+      "alle venter på nå"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Det var",
+      "i går",
+      "at",
+      "ulykken inntraff"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#B45309",
+    "label": "Subject Clefting",
+    "example": "Det er Kari som har ansvaret for budsjettet vårt.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Object Clefting",
+    "example": "Det var denne spennende boken jeg ville låne bort.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Adverbial Clefting",
+    "example": "Det var i Oslo vi først møtte hverandre.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Det er legen som må undersøke pasienten grundig først.",
+    "ko": "",
+    "highlight": "Det er legen som må undersøke"
+   },
+   {
+    "en": "Det var Jon som vant førstepremien i konkurransen.",
+    "ko": "",
+    "highlight": "Det var Jon som vant"
+   },
+   {
+    "en": "Det er kaffe jeg trenger mest akkurat nå.",
+    "ko": "",
+    "highlight": "Det er kaffe jeg trenger"
+   },
+   {
+    "en": "Det var for ti år siden at familien kjøpte denne hytta.",
+    "ko": "",
+    "highlight": "Det var for ti år siden at"
+   },
+   {
+    "en": "Det er ikke meg som har rotet til hele kjøkkenet.",
+    "ko": "",
+    "highlight": "Det er ikke meg som har rotet"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Er Kari som leder møtet.",
+    "right": "Det er Kari som leder møtet.",
+    "note": "Norwegian clefts require the dummy pronoun 'det' to introduce the copular verb."
+   },
+   {
+    "wrong": "Det er han som jeg så ham i går.",
+    "right": "Det er ham jeg så i går.",
+    "note": "Do not duplicate the pronoun object inside the clefted relative clause; use object case 'ham'."
+   },
+   {
+    "wrong": "Det var i fjor som vi giftet oss.",
+    "right": "Det var i fjor at vi giftet oss.",
+    "note": "When clefting adverbial phrases of time or place, 'at' is traditionally preferred over 'som'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "___ var Marie som fant de forsvunne nøklene.",
+    "options": [
+     "Den",
+     "Hun",
+     "Det",
+     "Dette"
+    ],
+    "answer": 2,
+    "explanation": "The cleft construction obligatorily opens with the invariant dummy pronoun 'Det'."
+   },
+   {
+    "question": "Det er deg ___ vi stoler på i denne saken.",
+    "options": [
+     "hvem",
+     "som",
+     "hvilken",
+     "hva"
+    ],
+    "answer": 1,
+    "explanation": "'Som' acts as the universal relative subjunction introducing the remainder of the cleft sentence."
+   },
+   {
+    "question": "Det var på biblioteket ___ jeg lånte den historiske romanen.",
+    "options": [
+     "at",
+     "som",
+     "hvorfor",
+     "dersom"
+    ],
+    "answer": 0,
+    "explanation": "When clefting a prepositional adverbial of place, 'at' (or zero connector) is standardly used."
+   },
+   {
+    "question": "Det var ikke ___ som tok den siste kakebiten.",
+    "options": [
+     "meg",
+     "jeg",
+     "min",
+     "mitt"
+    ],
+    "answer": 0,
+    "explanation": "The focused pronoun after 'det er/var' standardly appears in the objective oblique form 'meg' in modern Norwegian."
+   }
+  ],
+  "tip": "When clefting the subject, 'som' is strictly mandatory because Norwegian relative clauses cannot omit 'som' when it serves as the grammatical subject."
+ },
+ {
+  "id": "nb-b2-modal-particles-jo-nok-vel-visst",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#4F46E5",
+  "emoji": "💬",
+  "title": "Discourse and Modal Particles (Jo, Nok, Vel, Visst)",
+  "subtitle": "Nuancing attitude, epistemic certainty, and shared pragmatic knowledge",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "Modal particles nuance an utterance by signalling shared common knowledge ('jo'), probability ('nok'), polite presumption ('vel'), or second-hand information ('visst').",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Core Pragmatic Meaning",
+    "Contextual Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "jo",
+      "As you and I already know; obvious fact",
+      "Du vet jo at butikken stenger tidlig"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "nok",
+      "High probability; likely expectation",
+      "Toget kommer nok snart til perrongen"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "vel",
+      "Tentative assumption; seeking confirmation",
+      "Du kan vel hjelpe meg med dette?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "visst",
+      "Hearsay; apparent observation without certainty",
+      "De har visst flyttet til Bergen allerede"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6D28D9",
+    "label": "Invoking Shared Truths (jo)",
+    "example": "Dette er jo ikke første gang han glemmer avtalen.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Expressing Reasonable Doubt or Hope (vel)",
+    "example": "Du har vel husket å låse døren før du dro?",
+    "translation": ""
+   },
+   {
+    "color": "#A78BFA",
+    "label": "Reporting Apparent Hearsay (visst)",
+    "example": "Hun er visst sykmeldt ut hele denne uken.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Vi har jo snakket grundig om dette temaet før.",
+    "ko": "",
+    "highlight": "jo"
+   },
+   {
+    "en": "Det ordner seg nok så snart sjefen kommer tilbake.",
+    "ko": "",
+    "highlight": "nok"
+   },
+   {
+    "en": "Du er vel ikke sint på meg for det som skjedde?",
+    "ko": "",
+    "highlight": "vel"
+   },
+   {
+    "en": "Han skal visst begynne i ny jobb fra neste måned.",
+    "ko": "",
+    "highlight": "visst"
+   },
+   {
+    "en": "Prisen var nok litt for høy for mange interessenter.",
+    "ko": "",
+    "highlight": "nok"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Du vet vel at Oslo er Norges hovedstad.",
+    "right": "Du vet jo at Oslo er Norges hovedstad.",
+    "note": "Use 'jo' when referencing an undeniable, shared fact; 'vel' incorrectly introduces uncertainty or asks confirmation."
+   },
+   {
+    "wrong": "Han er nok på kontoret, men jeg vet at han er syk.",
+    "right": "Han er visst på kontoret, eller kanskje syk.",
+    "note": "'Nok' implies a confident conviction based on likelihood, creating a contradiction here."
+   },
+   {
+    "wrong": "Jo, jeg skal nok gjøre det vel.",
+    "right": "Jeg skal nok gjøre det.",
+    "note": "Avoid stacking conflicting modal particles like 'nok' (probability) and 'vel' (tentative questioning) together."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Du kjenner ___ igjen Peter? Han gikk i klassen vår.",
+    "options": [
+     "vel",
+     "jo",
+     "nok",
+     "visst"
+    ],
+    "answer": 0,
+    "explanation": "'Vel' expresses a tentative assumption where the speaker expects and seeks confirmation ('You recognize Peter, don't you?')."
+   },
+   {
+    "question": "Solen står ___ opp i øst, så det er ingen overraskelse.",
+    "options": [
+     "nok",
+     "vel",
+     "jo",
+     "visst"
+    ],
+    "answer": 2,
+    "explanation": "'Jo' appeals to common, indisputable knowledge known by both interlocutors."
+   },
+   {
+    "question": "Det ordner seg ___ til slutt, så ikke bekymre deg så mye.",
+    "options": [
+     "visst",
+     "vel",
+     "heller",
+     "nok"
+    ],
+    "answer": 3,
+    "explanation": "'Nok' is idiomatic for reassuring probability ('It will most likely work out fine')."
+   },
+   {
+    "question": "Naboen har ___ kjøpt seg ny elbil, etter hva jeg hørte.",
+    "options": [
+     "visst",
+     "jo",
+     "nok",
+     "vel"
+    ],
+    "answer": 0,
+    "explanation": "'Visst' conveys reported speech or an apparent occurrence based on indirect evidence/hearsay."
+   }
+  ],
+  "tip": "Modal particles are unaccented mid-sentence adverbs: remember 'jo' = 'as we know', 'nok' = 'probably/surely', 'vel' = 'presumably, right?', and 'visst' = 'apparently'."
+ }
+]

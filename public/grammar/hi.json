@@ -1,0 +1,3332 @@
+[
+ {
+  "id": "hi-a1-word-order-and-copula",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🧱",
+  "title": "SOV Word Order and the Copula (होना)",
+  "subtitle": "Master the basic sentence structure and forms of 'to be' in present tense",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Hindi follows a strict Subject-Object-Verb (SOV) sentence order where the inflected present copula always appears at the very end.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Copula Form",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "मैं",
+      "हूँ",
+      "I am"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "तू / यह / वह",
+      "है",
+      "You (intimate) / He / She / It is"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "तुम",
+      "हो",
+      "You (informal) are"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "हम / आप / ये / वे",
+      "हैं",
+      "We / You (formal) / They are"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Identity or Name",
+    "example": "मैं राज हूँ।",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Origin or Profession",
+    "example": "आप शिक्षक हैं।",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Describing State/Condition",
+    "example": "किताब मेज़ पर है।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "मैं एक विद्यार्थी हूँ।",
+    "ko": "",
+    "highlight": "हूँ"
+   },
+   {
+    "en": "वह लड़का बहुत खुश है।",
+    "ko": "",
+    "highlight": "है"
+   },
+   {
+    "en": "तुम बहुत अच्छे दोस्त हो।",
+    "ko": "",
+    "highlight": "हो"
+   },
+   {
+    "en": "हम सब भारतीय हैं।",
+    "ko": "",
+    "highlight": "हैं"
+   },
+   {
+    "en": "यह मेरा कमरा है।",
+    "ko": "",
+    "highlight": "है"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मैं हूँ विद्यार्थी।",
+    "right": "मैं विद्यार्थी हूँ।",
+    "note": "Hindi verbs belong strictly at the end of the sentence (SOV), not directly after the subject like in English."
+   },
+   {
+    "wrong": "आप डॉक्टर है।",
+    "right": "आप डॉक्टर हैं।",
+    "note": "The polite second-person pronoun आप always requires the plural nasalized copula हैं, never singular है."
+   },
+   {
+    "wrong": "हम खुश हो।",
+    "right": "हम खुश हैं।",
+    "note": "The auxiliary हो is reserved exclusively for तुम; हम requires हैं."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct copula: 'मैं अध्यापक _____।'",
+    "options": [
+     "है",
+     "हूँ",
+     "हो",
+     "हैं"
+    ],
+    "answer": 1,
+    "explanation": "The pronoun मैं ('I') always pairs uniquely with हूँ."
+   },
+   {
+    "question": "Choose the correct copula: 'आप बहुत दयालु _____।'",
+    "options": [
+     "हैं",
+     "हो",
+     "हूँ",
+     "है"
+    ],
+    "answer": 0,
+    "explanation": "The formal pronoun आप always takes the plural/honorific copula हैं."
+   },
+   {
+    "question": "Choose the correct copula: 'तुम कहाँ _____?'",
+    "options": [
+     "हूँ",
+     "है",
+     "हैं",
+     "हो"
+    ],
+    "answer": 3,
+    "explanation": "The informal pronoun तुम strictly pairs with the copula form हो."
+   },
+   {
+    "question": "Choose the correct copula: 'यह नया घर _____।'",
+    "options": [
+     "हूँ",
+     "हो",
+     "है",
+     "हैं"
+    ],
+    "answer": 2,
+    "explanation": "Singular third-person entities (यह/वह) take the singular copula है."
+   }
+  ],
+  "tip": "Listen carefully for the nasal dot (bindu) in हैं—it distinguishes the plural/formal 'are' from the singular unnasalized है 'is'."
+ },
+ {
+  "id": "a1-grammatical-gender-and-inflection",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "⚖️",
+  "title": "Noun Gender and Direct-Case Marked Inflection",
+  "subtitle": "Determine masculine and feminine nouns and adjust endings for plurals",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Marked masculine nouns ending in -ा change to -े in the plural, while feminine nouns ending in -ी typically shorten to -िया for plurals.",
+  "structure": {
+   "headers": [
+    "Noun Class",
+    "Singular",
+    "Plural Direct",
+    "Pattern"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Marked Masculine",
+      "लड़का",
+      "लड़के",
+      "-ा becomes -े"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Unmarked Masculine",
+      "घर",
+      "घर",
+      "No change"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Marked Feminine (-ी)",
+      "लड़की",
+      "लड़कियाँ",
+      "-ी becomes -ियाँ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Marked Feminine (-ा/-consonant)",
+      "किताब",
+      "किताबें",
+      "Adds -ें"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Counting Masculine Objects",
+    "example": "यहाँ दो कमरे हैं।",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Counting Feminine Items",
+    "example": "मेरे पास तीन गाड़ियाँ हैं।",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Unmarked Nouns in Quantity",
+    "example": "चार फल ताज़े हैं।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "यह बड़ा कमरा साफ़ है।",
+    "ko": "",
+    "highlight": "कमरा"
+   },
+   {
+    "en": "ये दोनों कमरे बड़े हैं।",
+    "ko": "",
+    "highlight": "कमरे"
+   },
+   {
+    "en": "वह लड़की खेल रही है।",
+    "ko": "",
+    "highlight": "लड़की"
+   },
+   {
+    "en": "यहाँ बहुत सारी लड़कियाँ हैं।",
+    "ko": "",
+    "highlight": "लड़कियाँ"
+   },
+   {
+    "en": "मेज पर दो नई किताबें हैं।",
+    "ko": "",
+    "highlight": "किताबें"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "दो लड़का आए।",
+    "right": "दो लड़के आए।",
+    "note": "Marked masculine nouns ending in -ा must change to -े in the direct plural."
+   },
+   {
+    "wrong": "तीन लड़की खेलती हैं।",
+    "right": "तीन लड़कियाँ खेलती हैं।",
+    "note": "Feminine nouns ending in -ी must form their direct plural by shortening to -िया (लड़कियाँ)."
+   },
+   {
+    "wrong": "ये दो घरें हैं।",
+    "right": "ये दो घर हैं।",
+    "note": "Unmarked masculine nouns ending in consonants (like घर, सेब) do not change form in the direct plural."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the plural of the masculine noun 'कमरा' (room)?",
+    "options": [
+     "कमरों",
+     "कमरे",
+     "कमरियाँ",
+     "कमराएं"
+    ],
+    "answer": 1,
+    "explanation": "Marked masculine nouns ending in -ा change to -े in the direct plural."
+   },
+   {
+    "question": "What is the plural of the feminine noun 'गाड़ी' (car)?",
+    "options": [
+     "गाड़ी",
+     "गाड़े",
+     "गाड़ियाँ",
+     "गाड़ियों"
+    ],
+    "answer": 2,
+    "explanation": "Feminine nouns ending in -ी change their final vowel to short -ि and add -याँ in the direct plural."
+   },
+   {
+    "question": "What is the plural of the unmarked masculine noun 'सेब' (apple) in the direct case?",
+    "options": [
+     "सेब",
+     "सेबे",
+     "सेबें",
+     "सेबियाँ"
+    ],
+    "answer": 0,
+    "explanation": "Masculine nouns not ending in -ा remain completely unchanged in the direct plural."
+   },
+   {
+    "question": "What is the plural of the feminine noun 'रात' (night)?",
+    "options": [
+     "राता",
+     "राते",
+     "रातियाँ",
+     "रातें"
+    ],
+    "answer": 3,
+    "explanation": "Feminine consonant-ending nouns take -ें in the direct plural."
+   }
+  ],
+  "tip": "Adjectives follow their nouns! A marked adjective like बड़ा changes to बड़े before plural masculine nouns and बड़ी before all feminine nouns."
+ },
+ {
+  "id": "a1-core-postpositions-and-oblique-case",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "📍",
+  "title": "Core Postpositions and the Oblique Case",
+  "subtitle": "Inflect nouns and modifiers before Hindi case markers like में, पर, and से",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Any noun or modifier followed directly by a postposition (में, पर, से, को, का) switches into the oblique case.",
+  "structure": {
+   "headers": [
+    "Noun Category",
+    "Direct Form",
+    "Oblique Singular",
+    "Oblique Plural"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Marked Masc. (-ा)",
+      "लड़का",
+      "लड़के को",
+      "लड़कों को"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Unmarked Masc.",
+      "घर",
+      "घर में",
+      "घरों में"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine (-ी)",
+      "लड़की",
+      "लड़की से",
+      "लड़कियों से"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine (other)",
+      "किताब",
+      "किताब पर",
+      "किताबों पर"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Location Inside (में)",
+    "example": "वह कमरे में बैठा है।",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Surface or Location (पर)",
+    "example": "मेज पर किताब है।",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Source or Instrument (से)",
+    "example": "मैं चम्मच से खाता हूँ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "उस लड़के को पानी दो।",
+    "ko": "",
+    "highlight": "लड़के को"
+   },
+   {
+    "en": "बच्चे कमरे में खेल रहे हैं।",
+    "ko": "",
+    "highlight": "कमरे में"
+   },
+   {
+    "en": "सभी लड़कों ने मेहनत की।",
+    "ko": "",
+    "highlight": "लड़कों ने"
+   },
+   {
+    "en": "किताब उस मेज़ पर रखी है।",
+    "ko": "",
+    "highlight": "मेज़ पर"
+   },
+   {
+    "en": "इन लड़कियों से पूछिए।",
+    "ko": "",
+    "highlight": "लड़कियों से"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "कमरा में कौन है?",
+    "right": "कमरे में कौन है?",
+    "note": "The marked masculine noun कमरा must change to its oblique form कमरे before the postposition में."
+   },
+   {
+    "wrong": "लड़का को बुलाओ।",
+    "right": "लड़के को बुलाओ।",
+    "note": "Before the postposition को, marked masculine nouns ending in -ा obligatorily change to -े."
+   },
+   {
+    "wrong": "किताबें पर मत लिखो।",
+    "right": "किताबों पर मत लिखो।",
+    "note": "All plural nouns take the oblique ending -ों when followed by any postposition."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank with the correct oblique form: 'उस _____ में कोई नहीं है।' (कमरा - room)",
+    "options": [
+     "कमरों",
+     "कमरा",
+     "कमरे",
+     "कमरी"
+    ],
+    "answer": 2,
+    "explanation": "The marked masculine noun कमरा changes to oblique कमरे before the postposition में."
+   },
+   {
+    "question": "Fill in the blank with the plural oblique form: 'इन _____ को खाना दो।' (बच्चा - child)",
+    "options": [
+     "बच्चों",
+     "बच्चे",
+     "बच्चा",
+     "बच्चियाँ"
+    ],
+    "answer": 0,
+    "explanation": "Plural nouns in the oblique case universally take the suffix -ों (बच्चों)."
+   },
+   {
+    "question": "Fill in the blank: 'वह _____ पर बैठी है।' (कुर्सी - chair)",
+    "options": [
+     "कुर्सियों",
+     "कुर्से",
+     "कुर्सा",
+     "कुर्सी"
+    ],
+    "answer": 3,
+    "explanation": "Feminine singular nouns ending in -ी do not change form in the singular oblique."
+   },
+   {
+    "question": "Fill in the blank: 'सब _____ से बात करो।' (दोस्त - friend [plural])",
+    "options": [
+     "दोस्ते",
+     "दोस्तों",
+     "दोस्त",
+     "दोस्ता"
+    ],
+    "answer": 1,
+    "explanation": "Even unmarked masculine nouns take -ों in the plural oblique case before postpositions like से."
+   }
+  ],
+  "tip": "English uses prepositions placed BEFORE nouns (in the room), but Hindi uses postpositions placed AFTER (कमरे में). Watch out for that automatic oblique shift on the preceding word!"
+ },
+ {
+  "id": "a1-habitual-aspect-present-tense",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "🔄",
+  "title": "Present Habitual Aspect (ता/ती/ते है)",
+  "subtitle": "Express daily routines and general truths with the imperfective participle",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "Add -ता, -ती, or -ते to the verb stem based on gender and number, followed by the present copula (हूँ, है, हो, हैं).",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Stem + Participle",
+    "Copula",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "मैं (Masc.)",
+      "बोल + ता",
+      "हूँ",
+      "I speak"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "मैं / वह (Fem.)",
+      "बोल + ती",
+      "हूँ / है",
+      "I / She speaks"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "वह (Masc.)",
+      "बोल + ता",
+      "है",
+      "He speaks"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "हम / आप / वे (Plural)",
+      "बोल + ते / तीं",
+      "हैं",
+      "We / You / They speak"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#B91C1C",
+    "label": "Daily Routine",
+    "example": "मैं रोज़ सुबह छह बजे उठता हूँ।",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Universal Truth",
+    "example": "सूरज पूरब में उगता है।",
+    "translation": ""
+   },
+   {
+    "color": "#C026D3",
+    "label": "General Preferences",
+    "example": "हम शाम को चाय पीते हैं।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "अमित रोज़ स्कूल जाता है।",
+    "ko": "",
+    "highlight": "जाता है"
+   },
+   {
+    "en": "नेहा हर दिन हिंदी पढ़ती है।",
+    "ko": "",
+    "highlight": "पढ़ती है"
+   },
+   {
+    "en": "हम दिल्ली में रहते हैं।",
+    "ko": "",
+    "highlight": "रहते हैं"
+   },
+   {
+    "en": "तुम कहाँ काम करते हो?",
+    "ko": "",
+    "highlight": "करते हो"
+   },
+   {
+    "en": "लड़कियाँ यहाँ खेलती हैं।",
+    "ko": "",
+    "highlight": "खेलती हैं"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मैं रोज़ चाय पीता।",
+    "right": "मैं रोज़ चाय पीता हूँ।",
+    "note": "Do not drop the present auxiliary हूँ; habitual present requires stem + participle + copula."
+   },
+   {
+    "wrong": "सीता गाना गाता है।",
+    "right": "सीता गाना गाती है।",
+    "note": "The participle must agree with the feminine subject सीता, using -ती instead of -ता."
+   },
+   {
+    "wrong": "वे यहाँ रहता हैं।",
+    "right": "वे यहाँ रहते हैं।",
+    "note": "Plural masculine third-person subjects take -ते on the verb participle (रहते), not -ता."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence for a female speaker: 'मैं रोज़ सुबह दौड़ने _____।'",
+    "options": [
+     "जाता हूँ",
+     "जाती हूँ",
+     "जाते हैं",
+     "जाती हो"
+    ],
+    "answer": 1,
+    "explanation": "A female speaker uses the feminine participle ending -ती paired with हूँ."
+   },
+   {
+    "question": "Complete the sentence: 'सूरज सुबह _____।'",
+    "options": [
+     "उगते हैं",
+     "उगती है",
+     "उगता है",
+     "उगता हूँ"
+    ],
+    "answer": 2,
+    "explanation": "सूरज (sun) is masculine singular, so it triggers उगता है."
+   },
+   {
+    "question": "Complete the sentence: 'आप कहाँ _____?' (addressing a male elder)",
+    "options": [
+     "रहते हैं",
+     "रहता है",
+     "रहती हैं",
+     "रहते हो"
+    ],
+    "answer": 0,
+    "explanation": "The formal pronoun आप takes the masculine plural honorific participle ending -ते and auxiliary हैं."
+   },
+   {
+    "question": "Complete the sentence: 'तुम क्या _____?' (to a male peer)",
+    "options": [
+     "खाती हो",
+     "खाते हैं",
+     "खाता है",
+     "खाते हो"
+    ],
+    "answer": 3,
+    "explanation": "The pronoun तुम pairs with masculine plural/informal participle -ते and the copula हो."
+   }
+  ],
+  "tip": "To make any habitual sentence negative, insert नहीं right before the participle verb phrase (e.g. मैं चाय नहीं पीता), where the final auxiliary है/हूँ is frequently dropped!"
+ },
+ {
+  "id": "a1-continuous-aspect",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "⏳",
+  "title": "Continuous Aspect with रहा/रही/रहे",
+  "subtitle": "Describe actions unfolding in real time using root + रहा/रही/रहे + auxiliary",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "Form the continuous aspect by joining the bare verb root with रहा/रही/रहे, inflected to match the subject's gender and number, followed by the copula.",
+  "structure": {
+   "headers": [
+    "Subject Type",
+    "Verb Construction",
+    "Auxiliary",
+    "Example Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masc. Singular",
+      "Stem + रहा",
+      "हूँ / है",
+      "He / I am reading"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Fem. Singular",
+      "Stem + रही",
+      "हूँ / है",
+      "She / I am reading"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masc. Plural / Formal",
+      "Stem + रहे",
+      "हो / हैं",
+      "They / You are reading"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Fem. Plural",
+      "Stem + रही",
+      "हैं",
+      "They (fem.) are reading"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#B91C1C",
+    "label": "Actions Happening Right Now",
+    "example": "बारिश हो रही है।",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Temporary Contemporary States",
+    "example": "मैं इन दिनों एक किताब लिख रहा हूँ।",
+    "translation": ""
+   },
+   {
+    "color": "#C026D3",
+    "label": "Asking About Immediate Activity",
+    "example": "तुम क्या कर रहे हो?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "मोहन अभी खाना खा रहा है।",
+    "ko": "",
+    "highlight": "खा रहा है"
+   },
+   {
+    "en": "पूजा गाना सुन रही है।",
+    "ko": "",
+    "highlight": "सुन रही है"
+   },
+   {
+    "en": "हम बाज़ार जा रहे हैं।",
+    "ko": "",
+    "highlight": "जा रहे हैं"
+   },
+   {
+    "en": "लड़कियाँ हँस रही हैं।",
+    "ko": "",
+    "highlight": "हँस रही हैं"
+   },
+   {
+    "en": "आप क्या पढ़ रहे हैं?",
+    "ko": "",
+    "highlight": "पढ़ रहे हैं"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "वह पानी पीता रहा है।",
+    "right": "वह पानी पी रहा है।",
+    "note": "Attach रहा directly to the bare verb root (पी), not to the habitual participle (पीता)."
+   },
+   {
+    "wrong": "लड़कियाँ आ रहे हैं।",
+    "right": "लड़कियाँ आ रही हैं।",
+    "note": "A feminine plural subject requires रही with the nasalized auxiliary हैं (never रहे हैं)."
+   },
+   {
+    "wrong": "मैं काम कर रहा।",
+    "right": "मैं काम कर रहा हूँ।",
+    "note": "In affirmative present continuous sentences, do not omit the present auxiliary हूँ/है/हैं."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'रोहन गेंद फेंक _____।'",
+    "options": [
+     "रही है",
+     "रहे हैं",
+     "रहा है",
+     "रहा हूँ"
+    ],
+    "answer": 2,
+    "explanation": "रोहन is masculine singular, requiring रहा है."
+   },
+   {
+    "question": "Complete the sentence for a female speaker: 'मैं अपनी सहेली को पत्र लिख _____।'",
+    "options": [
+     "रहा हूँ",
+     "रही हूँ",
+     "रहे हो",
+     "रही हैं"
+    ],
+    "answer": 1,
+    "explanation": "A female speaker (मैं) uses रही with the first-person copula हूँ."
+   },
+   {
+    "question": "Complete the sentence: 'माताजी खाना बना _____।'",
+    "options": [
+     "रही हैं",
+     "रहा है",
+     "रहे हैं",
+     "रही है"
+    ],
+    "answer": 0,
+    "explanation": "माताजी is a respected female singular entity, triggering honorific feminine agreement रही हैं."
+   },
+   {
+    "question": "Complete the sentence: 'बच्चे मैदान में दौड़ _____।'",
+    "options": [
+     "रहा है",
+     "रही है",
+     "रहा हैं",
+     "रहे हैं"
+    ],
+    "answer": 3,
+    "explanation": "बच्चे is masculine plural, requiring रहे हैं."
+   }
+  ],
+  "tip": "Unlike habitual aspect where feminine plural takes an overt nasal marker on the participle (-तीं), the continuous marker stays uniform as रही, leaving the nasalization solely on the auxiliary: रही हैं."
+ },
+ {
+  "id": "hi-a1-imperatives-and-politeness-levels",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🙏",
+  "title": "Imperative Forms and Politeness Tiers",
+  "subtitle": "Master the three politeness levels: तू, तुम, and आप",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Hindi commands change endings based on social distance, moving from the bare root with intimate तू to -ओ with informal तुम and -इए with polite आप.",
+  "structure": {
+   "headers": [
+    "Pronoun Tier",
+    "Verb Ending",
+    "Example (पढ़ना)",
+    "Politeness Context"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "तू (Intimate)",
+      "Root stem",
+      "तू पढ़",
+      "Children, close friends, or deity; offensive if used carelessly"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "तुम (Familiar)",
+      "Stem + ओ",
+      "तुम पढ़ो",
+      "Friends, siblings, and informal peers"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "आप (Polite/Formal)",
+      "Stem + इए / ईजिए",
+      "आप पढ़िए",
+      "Elders, professionals, strangers, and formal respect"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Formal Workplace Request",
+    "example": "कृपया यहाँ बैठिए।",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Casual Instruction to a Friend",
+    "example": "मेरी बात सुनो।",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Intimate Expression or Literary Address",
+    "example": "तू चिंता मत कर।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "आप चाय पीजिए।",
+    "ko": "",
+    "highlight": "पीजिए"
+   },
+   {
+    "en": "तुम बाज़ार जाओ और फल लाओ।",
+    "ko": "",
+    "highlight": "जाओ"
+   },
+   {
+    "en": "यहाँ हस्ताक्षर कीजिए।",
+    "ko": "",
+    "highlight": "कीजिए"
+   },
+   {
+    "en": "दरवाज़ा बंद करो।",
+    "ko": "",
+    "highlight": "करो"
+   },
+   {
+    "en": "तू चुप रह।",
+    "ko": "",
+    "highlight": "रह"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "आप यहाँ आओ।",
+    "right": "आप यहाँ आइए।",
+    "note": "Do not mix the respectful pronoun आप with the informal -ओ verb ending; always match आप with -इए or -ईजिए."
+   },
+   {
+    "wrong": "कृपया यहाँ मत बैठो।",
+    "right": "कृपया यहाँ मत बैठिए।",
+    "note": "When using the formal request word 'कृपया' (please), always use the polite imperative tier (-इए)."
+   },
+   {
+    "wrong": "तुम पानी पीइयो।",
+    "right": "तुम पानी पियो।",
+    "note": "The irregular polite command for पीना is पीजिए, but the तुम form is straightforwardly पियो."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Polite request to an elder: 'Please come inside.' -> कृपया अंदर ___।",
+    "options": [
+     "आओ",
+     "आइए",
+     "आ",
+     "आना"
+    ],
+    "answer": 1,
+    "explanation": "For respectful address (matching आप/कृपया), append -इए to the verb stem."
+   },
+   {
+    "question": "Casual instruction to a classmate: 'Read this book.' -> यह किताब ___।",
+    "options": [
+     "पढ़ो",
+     "पढ़िए",
+     "पढ़ी",
+     "पढ़"
+    ],
+    "answer": 0,
+    "explanation": "Talking familiarly to peers uses the तुम tier, ending in -ओ (पढ़ + ओ = पढ़ो)."
+   },
+   {
+    "question": "Formal command: 'Please take this cup.' -> यह कप ___।",
+    "options": [
+     "लो",
+     "ले",
+     "लीजिए",
+     "लेओ"
+    ],
+    "answer": 2,
+    "explanation": "The verb लेना has the irregular polite command रूप लीजिए rather than लेइए."
+   },
+   {
+    "question": "Intimate instruction to a small child: 'Eat food quickly.' -> जल्दी खाना ___।",
+    "options": [
+     "खाइए",
+     "खाओ",
+     "खाता",
+     "खा"
+    ],
+    "answer": 3,
+    "explanation": "The intimate तू imperative simply takes the bare verb stem (खा)."
+   }
+  ],
+  "tip": "Four high-frequency verbs have irregular polite (आप) forms: करना becomes कीजिए, लेना becomes लीजिए, देना becomes दीजिए, and पीना becomes पीजिए."
+ },
+ {
+  "id": "hi-a2-ergativity-and-ne-particle",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "Ergative Case Alignment with ने",
+  "subtitle": "Transitive verbs in perfective tenses transfer agreement to the object",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "In perfective tenses of transitive verbs, the subject takes the postposition ने and the verb agrees in gender and number with the unmarked direct object.",
+  "structure": {
+   "headers": [
+    "Subject + ने",
+    "Direct Object (Unmarked)",
+    "Verb Form",
+    "Agreement Target"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "लड़के ने (Boy.M)",
+      "रोटी (Bread.F.SG)",
+      "खाई (Ate.F.SG)",
+      "Agrees with feminine object रोटी"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "लड़की ने (Girl.F)",
+      "सेब (Apple.M.SG)",
+      "खाया (Ate.M.SG)",
+      "Agrees with masculine object सेब"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "हमने (We)",
+      "किताबें (Books.F.PL)",
+      "पढ़ीं (Read.F.PL)",
+      "Agrees with feminine plural किताबें"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "उन्होंने (They)",
+      "मकान (House.M.SG)",
+      "देखा (Saw.M.SG)",
+      "Agrees with masculine singular मकान"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Completed Transitive Action",
+    "example": "राधा ने एक सुंदर गीत गाया।",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Agreement with Plural Objects",
+    "example": "मैंने कल दो फ़िल्में देखीं।",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Pronoun Subject Ergativity",
+    "example": "उसने सारा काम समाप्त किया।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "अमित ने एक नया घर खरीदा।",
+    "ko": "",
+    "highlight": "अमित ने"
+   },
+   {
+    "en": "माँ ने स्वादिष्ट चाय बनाई।",
+    "ko": "",
+    "highlight": "बनाई"
+   },
+   {
+    "en": "छात्रों ने कठिन सवाल पूछे।",
+    "ko": "",
+    "highlight": "पूछे"
+   },
+   {
+    "en": "सीता ने एक पत्र लिखा।",
+    "ko": "",
+    "highlight": "लिखा"
+   },
+   {
+    "en": "हमने ताज़ा रोटियाँ खाईं।",
+    "ko": "",
+    "highlight": "खाईं"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "लड़की ने सेब खाई।",
+    "right": "लड़की ने सेब खाया।",
+    "note": "Because ने is on the subject, the verb must agree with the object सेब (masculine singular), not the subject लड़की."
+   },
+   {
+    "wrong": "वह ने किताब पढ़ी।",
+    "right": "उसने किताब पढ़ी।",
+    "note": "The pronoun वह changes to oblique form उस before ने (producing उसने)."
+   },
+   {
+    "wrong": "राम ने बाज़ार गया।",
+    "right": "राम बाज़ार गया।",
+    "note": "जाना (to go) is intransitive and never takes ने, even in the past perfective tense."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Neha wrote a letter.' -> नेहा ने पत्र ___।",
+    "options": [
+     "लिखा",
+     "लिखी",
+     "लिखे",
+     "लिखीं"
+    ],
+    "answer": 0,
+    "explanation": "The direct object पत्र is masculine singular, so the verb agrees with it: लिखा."
+   },
+   {
+    "question": "Identify the correct ergative pronoun: '___ saw the film.'",
+    "options": [
+     "हम",
+     "हमने",
+     "हमको",
+     "हमारा"
+    ],
+    "answer": 1,
+    "explanation": "In transitive perfective clauses, the subject 'we' takes the ergative postposition: हमने."
+   },
+   {
+    "question": "Which verb NEVER takes ने in the past tense?",
+    "options": [
+     "पढ़ना",
+     "देखना",
+     "लाना",
+     "खोलना"
+    ],
+    "answer": 2,
+    "explanation": "लाना (to bring) is grammatically treated as intransitive in Hindi and never takes ने."
+   },
+   {
+    "question": "Complete the sentence: 'The boy read two books.' -> लड़के ने दो किताबें ___।",
+    "options": [
+     "पढ़ा",
+     "पढ़ी",
+     "पढ़ीं",
+     "पढ़े"
+    ],
+    "answer": 2,
+    "explanation": "किताबें is feminine plural, so the verb agrees with feminine plural nasalized inflection पढ़ीं."
+   }
+  ],
+  "tip": "Remember: लाना (to bring), भूलना (to forget), and बोलना (to speak) generally do not take ने, behaving like intransitive verbs."
+ },
+ {
+  "id": "hi-a2-ko-marking-and-differential-object-marking",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#F59E0B",
+  "emoji": "🎯",
+  "title": "Differential Object Marking with को",
+  "subtitle": "Specific and animate direct objects take को and neutralize verb agreement",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Direct objects that are human, animate, or specifically identified require the postposition को, which triggers the default masculine singular ending on the verb in perfective clauses.",
+  "structure": {
+   "headers": [
+    "Object Type",
+    "Structure",
+    "Verb Form",
+    "Rule Effect"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Inanimate / Generic",
+      "लड़के ने सेब खाया",
+      "खाया (agrees with सेब)",
+      "No को needed; verb agrees with object"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Specific Human",
+      "लड़के ने राज को देखा",
+      "देखा (default M.SG)",
+      "को blocks agreement; verb reverts to default -आ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Specific Inanimate",
+      "उसने उस किताब को पढ़ा",
+      "पढ़ा (default M.SG)",
+      "Even feminine noun takes masculine singular default verb"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Pronoun Object",
+      "मैंने उसको बुलाया",
+      "बुलाया (default M.SG)",
+      "Personal pronouns as direct objects always take को"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Human Direct Object",
+    "example": "डॉक्टर ने मरीज़ को देखा।",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Definite Specific Object",
+    "example": "पुलिस ने चोर को पकड़ा।",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Pronoun Direct Object",
+    "example": "शिक्षक ने मुझको बुलाया।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "माँ ने बच्चे को जगाया।",
+    "ko": "",
+    "highlight": "बच्चे को"
+   },
+   {
+    "en": "मैंने उस लड़की को देखा।",
+    "ko": "",
+    "highlight": "लड़की को"
+   },
+   {
+    "en": "अध्यापक ने छात्रों को बुलाया।",
+    "ko": "",
+    "highlight": "छात्रों को"
+   },
+   {
+    "en": "सुरेश ने बिल्ली को बचाया।",
+    "ko": "",
+    "highlight": "बिल्ली को"
+   },
+   {
+    "en": "उसने इस फ़िल्म को पसंद किया।",
+    "ko": "",
+    "highlight": "फ़िल्म को"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मैंने सीता को देखी।",
+    "right": "मैंने सीता को देखा।",
+    "note": "When the direct object is marked with को, it cannot trigger agreement; the verb must freeze in the default masculine singular -आ form."
+   },
+   {
+    "wrong": "मैंने एक सेब को खाया।",
+    "right": "मैंने एक सेब खाया।",
+    "note": "Indefinite, generic, inanimate objects should not take को."
+   },
+   {
+    "wrong": "वह लड़का को बुलाओ।",
+    "right": "उस लड़के को बुलाओ।",
+    "note": "Before the postposition को, nouns and demonstrative adjectives must enter the oblique case (उस लड़के)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the correct form: 'The mother called the daughter.' -> माँ ने बेटी को ___।",
+    "options": [
+     "बुलाई",
+     "बुलाईं",
+     "बुलाया",
+     "बुलाए"
+    ],
+    "answer": 2,
+    "explanation": "Because बेटी is marked with को, agreement is blocked, forcing the default masculine singular ending बुलाया."
+   },
+   {
+    "question": "Which object requires को? 'I saw ___.'",
+    "options": [
+     "अध्यापक",
+     "चाय",
+     "किताब",
+     "पानी"
+    ],
+    "answer": 0,
+    "explanation": "अध्यापक is a human being, and animate/human direct objects obligatorily take differential object marking with को."
+   },
+   {
+    "question": "Choose the correct sentence: 'Call Ramesh.'",
+    "options": [
+     "रमेश बुलाओ।",
+     "रमेश को बुलाओ।",
+     "रमेश से बुलाओ।",
+     "रमेश ने बुलाओ।"
+    ],
+    "answer": 1,
+    "explanation": "Specific individual names functioning as direct objects take को: रमेश को बुलाओ।"
+   },
+   {
+    "question": "What happens when both the subject has ने and the object has को?",
+    "options": [
+     "Verb agrees with subject",
+     "Verb agrees with object",
+     "Verb becomes feminine plural",
+     "Verb takes default masculine singular ending"
+    ],
+    "answer": 3,
+    "explanation": "When both core arguments are postpositionally marked, verb agreement defaults to masculine singular (-आ)."
+   }
+  ],
+  "tip": "Double-blocked agreement rule: When the subject takes ने and the object takes को, the verb ALWAYS defaults to masculine singular (-आ), regardless of either noun's actual gender."
+ },
+ {
+  "id": "hi-a2-dative-subject-constructions",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🧠",
+  "title": "Dative Subject (Experiencer) Constructions",
+  "subtitle": "Express feelings, physical states, and needs with Subject + को",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "In involuntary experiences, sensations, or psychological states, the experiencer is marked with को while the grammatical agreement is controlled by the sensation or thing experienced.",
+  "structure": {
+   "headers": [
+    "Experiencer + को",
+    "Stimulus / State",
+    "Verb (होना/लगना/चाहिए)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "मुझको / मुझे",
+      "भूख (F)",
+      "लगी है",
+      "I feel hungry"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "उसको / उसे",
+      "बुख़ार (M)",
+      "है",
+      "He/She has a fever"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "बच्चों को",
+      "नींद (F)",
+      "आ रही है",
+      "The children are feeling sleepy"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "आपको",
+      "क्या",
+      "चाहिए?",
+      "What do you need/want?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Physical Sensation (Hunger, Thirst, Cold)",
+    "example": "मुझे बहुत प्यास लगी है।",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Knowledge & Mental States",
+    "example": "क्या आपको यह बात मालूम है?",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Expressing Need or Obligation",
+    "example": "रोहन को नया जूता चाहिए।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "मुझे ठंड लग रही है।",
+    "ko": "",
+    "highlight": "मुझे"
+   },
+   {
+    "en": "पिताजी को सिरदर्द है।",
+    "ko": "",
+    "highlight": "पिताजी को"
+   },
+   {
+    "en": "हमें आपकी मदद चाहिए।",
+    "ko": "",
+    "highlight": "हमें"
+   },
+   {
+    "en": "क्या तुमको हिंदी आती है?",
+    "ko": "",
+    "highlight": "तुमको"
+   },
+   {
+    "en": "अनीता को गुस्सा आया।",
+    "ko": "",
+    "highlight": "अनीता को"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मैं भूख लगा हूँ।",
+    "right": "मुझे भूख लगी है।",
+    "note": "Hunger is an involuntary experience; the experiencer takes मुझे (मैं + को), not the nominative मैं."
+   },
+   {
+    "wrong": "मुझे पानी चाहता हूँ।",
+    "right": "मुझे पानी चाहिए।",
+    "note": "Expressions of need with dative experiencers use the defective modal verb रूप चाहिए, not regular conjugations of चाहना."
+   },
+   {
+    "wrong": "उसको किताबें चाहिएँ।",
+    "right": "उसे किताबें चाहिए।",
+    "note": "While plural agreement can sometimes be heard colloquially, standard चाहिए remains invariant with dative subjects."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Express: 'I know this.' -> ___ यह मालूम है।",
+    "options": [
+     "मैं",
+     "मेरा",
+     "मुझे",
+     "मुझसे"
+    ],
+    "answer": 2,
+    "explanation": "मालूम होना (to be known) requires an experiencer marked with को (मैं + को = मुझे)."
+   },
+   {
+    "question": "Express: 'Do you feel cold?' -> क्या आपको ठंड ___?",
+    "options": [
+     "लग रही है",
+     "लग रहा है",
+     "लगेगा",
+     "लगते हैं"
+    ],
+    "answer": 0,
+    "explanation": "ठंड is feminine singular, so the verb agrees with it: लग रही है."
+   },
+   {
+    "question": "Complete the need sentence: 'The student needs a pen.' -> छात्र को कलम ___।",
+    "options": [
+     "चाहता है",
+     "चाहती है",
+     "चाहिए",
+     "होगा"
+    ],
+    "answer": 2,
+    "explanation": "Expressing that someone requires an object uses Experiencer + को + Object + चाहिए."
+   },
+   {
+    "question": "Which sentence means 'I like Hindi'?",
+    "options": [
+     "मैं हिंदी पसंद हूँ।",
+     "मुझे हिंदी पसंद है।",
+     "मेरा हिंदी पसंद है।",
+     "मुझसे हिंदी पसंद है।"
+    ],
+    "answer": 1,
+    "explanation": "पसंद होना takes a dative experiencer: मुझे हिंदी पसंद है।"
+   }
+  ],
+  "tip": "Combine personal pronouns with को into short contracted forms: मुझे (not मुझको), तुझे (not तुझको), उसे (not उसको), and हमें (not हमकों)."
+ },
+ {
+  "id": "hi-a2-possession-systems",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔑",
+  "title": "Possession Systems: का vs के पास",
+  "subtitle": "Distinguish portable property from kinship and body parts",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use के पास for alienable, tangible, or movable possession (like money or phones), but inflected forms of का (का/की/के) for inalienable kinship ties, body parts, and intrinsic qualities.",
+  "structure": {
+   "headers": [
+    "Possession Type",
+    "Marker",
+    "Hindi Example",
+    "Agreement Logic"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Alienable / Tangible Item",
+      "के पास",
+      "मेरे पास गाड़ी है",
+      "के पास is invariant; verb agrees with possessed item"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Kinship / Family Member",
+      "का / के / की",
+      "मेरी दो बहनें हैं",
+      "Genitive postposition agrees with the relative in gender/number"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Body Parts & Inherent Traits",
+      "का / के / की",
+      "हाथी की लंबी सूँड़ होती है",
+      "Belongs inherently to the subject; inflects like an adjective"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Abstract Attributes / Time",
+      "का / के / की",
+      "उसके पास समय नहीं है",
+      "Concrete availability uses के पास; quality takes का"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Physical Objets / Currency",
+    "example": "मेरे पास पर्याप्त पैसे हैं।",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Family Relationships",
+    "example": "सुनील के तीन बच्चे हैं।",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Body Parts",
+    "example": "उसकी आँखें नीली हैं।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "मेरे पास एक मोबाइल फ़ोन है।",
+    "ko": "",
+    "highlight": "मेरे पास"
+   },
+   {
+    "en": "रोहन के दो भाई हैं।",
+    "ko": "",
+    "highlight": "रोहन के"
+   },
+   {
+    "en": "क्या आपके पास चाबी है?",
+    "ko": "",
+    "highlight": "आपके पास"
+   },
+   {
+    "en": "गाय के चार पैर होते हैं।",
+    "ko": "",
+    "highlight": "गाय के"
+   },
+   {
+    "en": "हमारे पास आज गाड़ी नहीं है।",
+    "ko": "",
+    "highlight": "हमारे पास"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मेरे पास दो भाई हैं।",
+    "right": "मेरे दो भाई हैं।",
+    "note": "Family members cannot be held as portable items; use the possessive genitive मेरे, not मेरे पास."
+   },
+   {
+    "wrong": "मेरे पास दो हाथ हैं।",
+    "right": "मेरे दो हाथ हैं।",
+    "note": "Body parts are inalienable and naturally attached, requiring का/के/की rather than के पास."
+   },
+   {
+    "wrong": "सीमा का पास कलम है।",
+    "right": "सीमा के पास कलम है।",
+    "note": "The postposition complex is fixed as के पास, so feminine possessors still take masculine oblique के (सीमा के पास)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Express: 'I have a car.' -> ___ एक कार है।",
+    "options": [
+     "मेरे पास",
+     "मेरा",
+     "मेरी",
+     "मुझको"
+    ],
+    "answer": 0,
+    "explanation": "A car is a movable, alienable object; use the locative-possessive construct मेरे पास."
+   },
+   {
+    "question": "Express: 'Ravi has two sisters.' -> रवि ___ दो बहनें हैं।",
+    "options": [
+     "के पास",
+     "की",
+     "का",
+     "के"
+    ],
+    "answer": 1,
+    "explanation": "Sisters (बहनें) are feminine plural relatives, requiring the feminine genitive marker की."
+   },
+   {
+    "question": "Express: 'Do you have pen with you right now?' -> क्या आपके ___ कलम है?",
+    "options": [
+     "पर",
+     "का",
+     "पास",
+     "में"
+    ],
+    "answer": 2,
+    "explanation": "Tangible possession uses the compound postposition के पास."
+   },
+   {
+    "question": "Choose the natural sentence for 'Cats have sharp teeth.'",
+    "options": [
+     "बिल्ली के पास तेज़ दाँत होते हैं।",
+     "बिल्ली के तेज़ दाँत होते हैं।",
+     "बिल्ली को तेज़ दाँत होते हैं।",
+     "बिल्ली में तेज़ दाँत होते हैं।"
+    ],
+    "answer": 1,
+    "explanation": "Teeth are inalienable body parts, so use the genitive marker के rather than के पास."
+   }
+  ],
+  "tip": "Test it simply: If you can accidentally leave it at home in a drawer, use 'के पास'. If it is part of your anatomy or family tree, use 'का / के / की'."
+ },
+ {
+  "id": "hi-a2-compulsion-and-obligation",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#8B5CF6",
+  "emoji": "⚖️",
+  "title": "Modals of Obligation (पड़ना vs होना)",
+  "subtitle": "Expressing internal necessity versus external compulsion in dative constructions",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Mark the logical subject with the dative postposition को and use an infinitive with होना for planned duty, or with पड़ना for involuntary external compulsion.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Formula",
+    "Hindi Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Planned / Moral (होना)",
+      "Subject + को + Infinitive + होना",
+      "मुझे आज पढ़ना है।",
+      "I have to study today (planned)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "External Compulsion (पड़ना)",
+      "Subject + को + Infinitive + पड़ना",
+      "मुझे देर तक रुकना पड़ा।",
+      "I had to stay late (forced/no choice)."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Future Compulsion",
+      "Subject + को + Infinitive + पड़ेगा",
+      "उसे जुर्माना भरना पड़ेगा।",
+      "He will have to pay a fine."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Agreement Rule",
+      "Verb agrees with object (or default masc. sing.)",
+      "सीमा को किताबें ख़रीदनी हैं।",
+      "Seema has to buy books."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6366F1",
+    "label": "Scheduled Obligation",
+    "example": "रोहन को कल दिल्ली जाना है।",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Involuntary Duty",
+    "example": "बारिश के कारण हमें पैदल चलना पड़ा।",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Unavoidable Future Requirement",
+    "example": "आपको सच बोलना पड़ेगा।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "मुझे रोज़ सुबह छह बजे उठना पड़ता है।",
+    "ko": "",
+    "highlight": "उठना पड़ता है"
+   },
+   {
+    "en": "अमित को आज शाम को डॉक्टर के पास जाना है।",
+    "ko": "",
+    "highlight": "जाना है"
+   },
+   {
+    "en": "हमें मजबूरी में यह पुराना घर बेचना पड़ा।",
+    "ko": "",
+    "highlight": "बेचना पड़ा"
+   },
+   {
+    "en": "तुम्हें इस कठिन परीक्षा के लिए बहुत मेहनत करनी होगी।",
+    "ko": "",
+    "highlight": "मेहनत करनी होगी"
+   },
+   {
+    "en": "छात्रों को गृहकार्य समय पर जमा करना पड़ेगा।",
+    "ko": "",
+    "highlight": "जमा करना पड़ेगा"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मैं जाना है।",
+    "right": "मुझे जाना है।",
+    "note": "The logical subject must take the dative marker को (मैं + को becomes मुझे)."
+   },
+   {
+    "wrong": "मुझे चाय पीना है।",
+    "right": "मुझे चाय पीनी है।",
+    "note": "Because चाय is feminine singular, the infinitive and auxiliary agree with it (पीनी है)."
+   },
+   {
+    "wrong": "मुझे रोज़ काम करना चाहा।",
+    "right": "मुझे रोज़ काम करना पड़ता है।",
+    "note": "To express routine obligation or compulsion, use पड़ना, not चाहना."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Because the car broke down, 'We had to walk.'",
+    "options": [
+     "हम पैदल चले थे।",
+     "हमें पैदल चलना पड़ा।",
+     "हम पैदल चलना है।",
+     "हमें पैदल चलना चाहा।"
+    ],
+    "answer": 1,
+    "explanation": "External involuntary obligation in the past requires the subject with को (हमें) and infinitive + पड़ा."
+   },
+   {
+    "question": "Choose the correct sentence for 'I have to write a letter (routine/duty)':",
+    "options": [
+     "मुझे ख़त लिखना है।",
+     "मैं ख़त लिखना है।",
+     "मुझे ख़त लिखनी है।",
+     "मुझको ख़त लिखते हैं।"
+    ],
+    "answer": 0,
+    "explanation": "The subject takes मुझे, and masculine singular ख़त requires the masculine infinitive and verb agreement लिखना है."
+   },
+   {
+    "question": "Fill in the blank for unavoidable future consequence: 'तुम्हें यह दवाई कड़वी होने पर भी लेनी ___।' (fem. sing.)",
+    "options": [
+     "पड़ती है",
+     "पड़ेगा",
+     "पड़ेगी",
+     "होती है"
+    ],
+    "answer": 2,
+    "explanation": "दवाई is feminine singular, so the future compulsion verb पड़ना inflects as पड़ेगी."
+   },
+   {
+    "question": "Which sentence expresses that Priya is obliged by schedule (not coercion) to leave at 5?",
+    "options": [
+     "प्रिया को पाँच बजे जाना पड़ा।",
+     "प्रिया पाँच बजे जाएगी।",
+     "प्रिया को पाँच बजे जाना पड़ेगा।",
+     "प्रिया को पाँच बजे जाना है।"
+    ],
+    "answer": 3,
+    "explanation": "The infinitive + होना construction indicates scheduled or accepted personal plans without forced external pressure."
+   }
+  ],
+  "tip": "Think of पड़ना as 'falling upon someone' (external burden) and होना as an established state or agenda."
+ },
+ {
+  "id": "hi-a2-simple-future-tense",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "⏳",
+  "title": "Synthetic Future Tense Conjugation",
+  "subtitle": "Forming future actions using direct stem inflections with gender and number suffixes",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Add personal subjunctive suffixes to the verb stem followed by गा, गी, or गे depending on the subject's gender and grammatical number.",
+  "structure": {
+   "headers": [
+    "Subject Pronoun",
+    "Stem + Ending (Masc.)",
+    "Stem + Ending (Fem.)",
+    "Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "मैं (I)",
+      "बोलूँगा",
+      "बोलूँगी",
+      "I will speak"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "तू (You intimate)",
+      "बोलेगा",
+      "बोलेगी",
+      "You will speak"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "यह / वह (He/She)",
+      "बोलेगा",
+      "बोलेगी",
+      "He/She will speak"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "हम / आप / वे (Plural/Formal)",
+      "बोलेंगे / बोलेंगे",
+      "बोलेंगी / बोलेंगी",
+      "We/You/They will speak"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Definite Future Intent",
+    "example": "हम अगले हफ़्ते नया मकान ख़रीदेंगे।",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Promises and Commitments",
+    "example": "मैं कल समय पर तुम्हारा काम कर दूँगा।",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Predictions and Forecasts",
+    "example": "शाम को तेज़ बारिश होगी।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "सुनीता कल शाम को बाज़ार जाएगी।",
+    "ko": "",
+    "highlight": "जाएगी"
+   },
+   {
+    "en": "क्या आप हमारे साथ दोपहर का खाना खाएंगे?",
+    "ko": "",
+    "highlight": "खाएंगे"
+   },
+   {
+    "en": "लड़के मैदान में क्रिकेट खेलेंगे।",
+    "ko": "",
+    "highlight": "खेलेंगे"
+   },
+   {
+    "en": "मैं यह नई किताब दो दिनों में पढ़ लूँगी।",
+    "ko": "",
+    "highlight": "पढ़ लूँगी"
+   },
+   {
+    "en": "पिताजी दफ़्तर से कब लौटेंगे?",
+    "ko": "",
+    "highlight": "लौटेंगे"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "हम कल जाएगा।",
+    "right": "हम कल जाएंगे।",
+    "note": "हम represents plural first-person and requires the plural ending -एंगे / -एंगी, not singular -एगा."
+   },
+   {
+    "wrong": "लड़कियाँ गाना गाएगा।",
+    "right": "लड़कियाँ गाना गाएंगी।",
+    "note": "Feminine plural subjects require nasalized -एंगी ending."
+   },
+   {
+    "wrong": "मैं कल आएगा।",
+    "right": "मैं कल आऊँगा। (or आऊँगी)",
+    "note": "The pronoun मैं combines with verb stems ending in -ऊँगा / -ऊँगी, never -एगा."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the correct feminine form: 'सीमा कल एक पत्र ___।' (लिखना)",
+    "options": [
+     "लिखेगा",
+     "लिखेगी",
+     "लिखूँगी",
+     "लिखेंगे"
+    ],
+    "answer": 1,
+    "explanation": "Third-person singular feminine requires the suffix -एगी (लिखेगी)."
+   },
+   {
+    "question": "Complete the sentence: 'हम कल सिनेमा ___।' (जाना, masculine plural)",
+    "options": [
+     "जाऊँगा",
+     "जाएगी",
+     "जाएंगे",
+     "जाएगा"
+    ],
+    "answer": 2,
+    "explanation": "हम (masculine plural) takes the synthetic suffix -एंगे giving जाएंगे."
+   },
+   {
+    "question": "Which form matches a woman saying 'I will speak': 'मैं हिन्दी में ___।'?",
+    "options": [
+     "बोलूँगी",
+     "बोलूँगा",
+     "बोलोगी",
+     "बोलेंगी"
+    ],
+    "answer": 0,
+    "explanation": "A female first-person speaker uses stem + -ऊँगी, making बोलूँगी."
+   },
+   {
+    "question": "Which verb form correctly completes the formal question: 'आप चाय ___?' (पीना)",
+    "options": [
+     "पिएगा",
+     "पिओगे",
+     "पिएँगी",
+     "पिएंगे"
+    ],
+    "answer": 3,
+    "explanation": "आप takes the respectful plural ending -एंगे (पिएंगे) or -एंगी (पिएंगी). Option 3 is misspelled relative to standard masculine formal plural."
+   }
+  ],
+  "tip": "The irregular forms for stems ending in vowels often contract smoothly: देना becomes दूँगा/देंगे and लेना becomes लूँगा/लेंगे."
+ },
+ {
+  "id": "hi-b1-compound-verbs-with-operator-roots",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "Compound Verbs with Polar Explanators (लेना, देना, जाना, डालना)",
+  "subtitle": "Nuancing root verbs with auxiliary operators for completion, direction, and intensity",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "A compound verb joins a bare main verb stem with an inflected auxiliary operator that adds aspectual nuances such as self-benefit (लेना), other-benefit (देना), or totality (जाना).",
+  "structure": {
+   "headers": [
+    "Operator",
+    "Primary Nuance",
+    "Example Stem + Operator",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "लेना",
+      "Inward action / Benefiting self",
+      "पढ़ लेना",
+      "to read (for oneself)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "देना",
+      "Outward action / Benefiting others",
+      "समझा देना",
+      "to explain (to someone)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "जाना",
+      "Completion / Irreversibility",
+      "गिर जाना / खा जाना",
+      "to fall down / to eat up"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "डालना",
+      "Forcefulness / Recklessness",
+      "मार डालना / तोड़ डालना",
+      "to slaughter / to smash recklessly"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Self-Directed Benefit",
+    "example": "उसने सारा खाना चुपचाप खा लिया।",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Other-Directed Action",
+    "example": "शिक्षक ने छात्रों को नया पाठ समझा दिया।",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Drastic Complete Action",
+    "example": "गुस्से में उसने वह पुराना पत्र फाड़ डाला।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "मैंने सारा सच अपनी माँ को बता दिया।",
+    "ko": "",
+    "highlight": "बता दिया"
+   },
+   {
+    "en": "बच्चों ने अपने सारे खिलौने समेट लिए।",
+    "ko": "",
+    "highlight": "समेट लिए"
+   },
+   {
+    "en": "गिलास मेज़ से नीचे गिर गया।",
+    "ko": "",
+    "highlight": "गिर गया"
+   },
+   {
+    "en": "डाकुओं ने सिपाही को गोली से मार डाला।",
+    "ko": "",
+    "highlight": "मार डाला"
+   },
+   {
+    "en": "दुकानदार ने अपना सारा सामान बेच दिया।",
+    "ko": "",
+    "highlight": "बेच दिया"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "उसने मुझे किताब पढ़ लिया।",
+    "right": "उसने मुझे किताब पढ़ दी।",
+    "note": "When the action is performed for another person's benefit, use देना (दी), not लेना."
+   },
+   {
+    "wrong": "दूध गिर लिया।",
+    "right": "दूध गिर गया।",
+    "note": "Intransitive change-of-state verbs combine with जाना (गिर गया), not transitive लेना."
+   },
+   {
+    "wrong": "मैंने खाना खाया गया।",
+    "right": "मैं खाना खा गया। (or मैंने खाना खा लिया।)",
+    "note": "When using जाना as an operator, the whole compound functions intransitively for ergative marking; do not use ने with खा जाना."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which compound verb correctly expresses 'I explained it (for someone else)': 'मैंने मित्र को बात ___।'?",
+    "options": [
+     "समझा ली",
+     "समझा दी",
+     "समझा गई",
+     "समझा डाली"
+    ],
+    "answer": 1,
+    "explanation": "देना conveys actions directed outward toward or for the benefit of another person."
+   },
+   {
+    "question": "Choose the form emphasizing that the cat ate up all the fish completely and irreversibly:",
+    "options": [
+     "बिल्ली सारी मछली खा गई।",
+     "बिल्ली ने सारी मछली खा दी।",
+     "बिल्ली सारी मछली खा डाली।",
+     "बिल्ली मछली खा ली।"
+    ],
+    "answer": 0,
+    "explanation": "खा जाना indicates total consumption and completion without retaining ergative ने."
+   },
+   {
+    "question": "What nuance does डालना add in 'उसने शीशा तोड़ डाला'?",
+    "options": [
+     "Hesitation",
+     "Self-benefit",
+     "Carelessness or violence",
+     "Futurity"
+    ],
+    "answer": 2,
+    "explanation": "The operator डालना imparts a sense of violence, sudden force, rashness, or utter disregard."
+   },
+   {
+    "question": "Select the correct combination for 'She kept/took the money for herself': 'उसने पैसे ___।'?",
+    "options": [
+     "रख दिया",
+     "रख डाला",
+     "रख गया",
+     "रख लिए"
+    ],
+    "answer": 3,
+    "explanation": "The operator लेना (plural masculine लिए agreeing with पैसे) indicates self-directed retention."
+   }
+  ],
+  "tip": "Only the second verb (the operator) conjugates for tense, aspect, and gender; the main root remains in its bare stem form."
+ },
+ {
+  "id": "hi-b1-conjunctive-participles",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#F59E0B",
+  "emoji": "🔗",
+  "title": "Conjunctive Participle Construction with कर (Kar)",
+  "subtitle": "Chaining chronologically ordered actions with bare verb stems plus कर or के",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Attach कर or के directly to a verb stem to combine sequential clauses that share the exact same grammatical subject.",
+  "structure": {
+   "headers": [
+    "First Verb Stem",
+    "Participle Suffix",
+    "Full Compound Form",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "जा (go)",
+      "+ कर / के",
+      "जाकर / जाके",
+      "having gone / after going"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "खा (eat)",
+      "+ कर / के",
+      "खाकर / खाके",
+      "having eaten / after eating"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "देख (see)",
+      "+ कर / के",
+      "देखकर / देखके",
+      "having seen / on seeing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "कर (do)",
+      "+ के (irreg.)",
+      "करके",
+      "having done / after doing"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Sequential Actions",
+    "example": "वह नहाकर पूजा करने मंदिर गया।",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Cause and Effect Manner",
+    "example": "समाचार सुनकर वह बहुत खुश हुआ।",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Manner of Execution",
+    "example": "उसने मुस्कुराकर मेरा स्वागत किया।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "मैं दफ़्तर पहुँचकर तुम्हें फ़ोन करूँगा।",
+    "ko": "",
+    "highlight": "पहुँचकर"
+   },
+   {
+    "en": "छात्र गृहकार्य समाप्त करके सोने चले गए।",
+    "ko": "",
+    "highlight": "समाप्त करके"
+   },
+   {
+    "en": "उसने दौड़कर बस पकड़ी।",
+    "ko": "",
+    "highlight": "दौड़कर"
+   },
+   {
+    "en": "हम बाज़ार से सब्ज़ियाँ लाकर खाना बनाएंगे।",
+    "ko": "",
+    "highlight": "लाकर"
+   },
+   {
+    "en": "पिताजी चाय पीकर अख़बार पढ़ने लगे।",
+    "ko": "",
+    "highlight": "पीकर"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "वह काम करकर घर गया।",
+    "right": "वह काम करके घर गया।",
+    "note": "With the verb करना, repeat Avoidance requires करके instead of करकर."
+   },
+   {
+    "wrong": "मैंने खाया और मैं सो गया। (redundant in natural speech)",
+    "right": "मैं खाकर सो गया।",
+    "note": "Native speakers condense redundant sequential coordinate clauses into a single conjunctive participle sentence with कर."
+   },
+   {
+    "wrong": "मेरे जाने कर वह रोने लगी।",
+    "right": "मेरे जाने पर वह रोने लगी।",
+    "note": "Both actions in a कर construction must share the exact same subject; if subjects differ, use a postpositional participle like पर instead."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Join these two actions: 'वह घर आया' and 'उसने खाना खाया':",
+    "options": [
+     "वह घर आकर खाना खाया।",
+     "उसने घर आकर खाना खाया।",
+     "वह घर आके खाना खाएगा।",
+     "उसने घर आते ही खाना खाया था।"
+    ],
+    "answer": 1,
+    "explanation": "The main clause verb खाया requires the ergative उसने, while the first clause collapses into आकर."
+   },
+   {
+    "question": "How should the verb करना be formed as a conjunctive participle?",
+    "options": [
+     "करकर",
+     "करके",
+     "करता कर",
+     "कीकर"
+    ],
+    "answer": 1,
+    "explanation": "The verb stem कर- irregular pairs with -के to yield करके to prevent sound repetition."
+   },
+   {
+    "question": "Complete the sentence: 'राधा रोते हुए बच्चे को ___ हँसाने लगी।' (देखना)",
+    "options": [
+     "देखी",
+     "देखता",
+     "देखकर",
+     "देखना"
+    ],
+    "answer": 2,
+    "explanation": "The sequential action 'on seeing' is expressed by the stem देख plus कर: देखकर."
+   },
+   {
+    "question": "Which sentence demonstrates the use of a conjunctive participle indicating manner?",
+    "options": [
+     "उसने भागकर चोर को पकड़ा।",
+     "वह स्कूल जाता है।",
+     "तुम कब आओगे?",
+     "मुझे पानी पीना है।"
+    ],
+    "answer": 0,
+    "explanation": "भागकर ('by running') acts as a conjunctive participle detailing how the primary action was performed."
+   }
+  ],
+  "tip": "If the main clause takes an ergative marker ने, apply it to the shared subject at the very start of the sentence (e.g., उसने चाय पीकर काम शुरू किया)."
+ },
+ {
+  "id": "hi-b1-subjunctive-mood",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "💭",
+  "title": "Subjunctive Mood for Contingency and Wishes",
+  "subtitle": "Conveying possibility, polite requests, desires, and uncertain conditions",
+  "color": "#047857",
+  "bg": "#F0FDF4",
+  "keyPoint": "Drop the final future particles (गा/गी/गे) to yield the tenseless subjunctive endings that express doubts, indirect requests, and contingent possibilities.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Future Tense",
+    "Subjunctive Mood",
+    "Subjunctive Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "मैं",
+      "जाऊँगा / जाऊँगी",
+      "जाऊँ",
+      "(Shall/May) I go?"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "तू",
+      "जाएगा / जाएगी",
+      "जाए",
+      "you may go"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "यह / वह",
+      "जाएगा / जाएगी",
+      "जाए",
+      "he/she may go"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "हम / आप / वे",
+      "जाएंगे / जाएँगी",
+      "जाएं / जाएं",
+      "we/you/they may go"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Seeking Permission or Suggestions",
+    "example": "क्या अब हम घर चलें?",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Uncertainty with 'शायद' (Perhaps)",
+    "example": "शायद आज रात को बारिश हो।",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Desire / Purpose Clauses with 'ताकि'",
+    "example": "मेहनत करो ताकि तुम सफल हो सको।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "अगर वह यहाँ आए तो मुझे तुरंत बताना।",
+    "ko": "",
+    "highlight": "आए"
+   },
+   {
+    "en": "क्या मैं अंदर आऊँ?",
+    "ko": "",
+    "highlight": "आऊँ"
+   },
+   {
+    "en": "भगवान करे आपकी हर मनोकामना पूरी हो।",
+    "ko": "",
+    "highlight": "हो"
+   },
+   {
+    "en": "शायद वे कल हमसे मिलने आएँ।",
+    "ko": "",
+    "highlight": "आएँ"
+   },
+   {
+    "en": "मैं चाहता हूँ कि तुम हमेशा सच बोलो।",
+    "ko": "",
+    "highlight": "बोलो"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "शायद वह कल आएगा। (too definitive)",
+    "right": "शायद वह कल आए।",
+    "note": "Words of doubt such as शायद canonically trigger the subjunctive (आए) rather than the indicative future (आएगा)."
+   },
+   {
+    "wrong": "क्या मैं अंदर आऊँगा?",
+    "right": "क्या मैं अंदर आऊँ?",
+    "note": "When asking for polite permission ('May I come in?'), Hindi requires the subjunctive आऊँ, not the future declaration आऊँगा."
+   },
+   {
+    "wrong": "अगर आप बोलेगा तो मैं सुनूँगा।",
+    "right": "अगर आप बोलें तो मैं सुनूँगा।",
+    "note": "Formal आप takes the nasalized subjunctive suffix -एँ (बोलें) in conditional prototypes."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you ask 'Shall we leave now?' politely in Hindi?",
+    "options": [
+     "क्या अब हम जाते हैं?",
+     "क्या अब हम चले गए?",
+     "क्या अब हम चलें?",
+     "क्या अब हम चलेंगे क्या?"
+    ],
+    "answer": 2,
+    "explanation": "First-person plural subjunctive चलें expresses a polite collective suggestion or inquiry."
+   },
+   {
+    "question": "Select the correct verb form expressing possibility: 'संभव है कि वह आज न ___।' (आना)",
+    "options": [
+     "आएगा",
+     "आया",
+     "आता",
+     "आए"
+    ],
+    "answer": 3,
+    "explanation": "Expressions of contingency like 'संभव है कि' govern the subjunctive verb mood (आए)."
+   },
+   {
+    "question": "Complete the polite request to enter: 'क्या मैं खिड़की खोल ___?' (देना)",
+    "options": [
+     "दूँ",
+     "दूँगा",
+     "दीजिएगा",
+     "देता"
+    ],
+    "answer": 0,
+    "explanation": "The first-person singular subjunctive of देना is दूँ ('May I open/give?')."
+   },
+   {
+    "question": "Choose the correct verb for a wish: 'मेरी इच्छा है कि आप हमारे घर ___।' (पधारना)",
+    "options": [
+     "पधारेंगे",
+     "पधारें",
+     "पधारेगा",
+     "पधारते"
+    ],
+    "answer": 1,
+    "explanation": "Wishes introduced by इच्छा है कि require the subjunctive form agreeing with आप (पधारें)."
+   }
+  ],
+  "tip": "To easily form the subjunctive, start with the synthetic future tense and simply strip off the trailing गा, गी, or गे."
+ },
+ {
+  "id": "hi-b1-causative-verb-derivations",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔄",
+  "title": "First and Second Causative Verb Formations",
+  "subtitle": "Transforming base verbs into direct and indirect causative actions",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Hindi creates first causatives by adding -आना to cause an action directly, and second causatives with -वाना to have an action done via an intermediary.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Morphological Rule",
+    "Hindi Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Base Verb",
+      "Original root form",
+      "करना",
+      "to do"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "First Causative",
+      "Root + आना (stem vowel shortens)",
+      "कराना",
+      "to have done / cause to do"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Second Causative",
+      "Root + वाना (stem vowel shortens)",
+      "करवाना",
+      "to have done through someone"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Direct Causation",
+    "example": "माँ बच्चे को खाना खिलाती है।",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "Indirect Mediation",
+    "example": "अध्यापक छात्रों से निबंध लिखवाते हैं।",
+    "translation": ""
+   },
+   {
+    "color": "#9D174D",
+    "label": "Vowel Shortening Shift",
+    "example": "वह बढ़ई से मेज़ बनवाता है।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "माँ बच्चे को सुलाती है।",
+    "ko": "",
+    "highlight": "सुलाती है"
+   },
+   {
+    "en": "पिताजी दर्ज़ी से कपड़े सिलवाते हैं।",
+    "ko": "",
+    "highlight": "सिलवाते हैं"
+   },
+   {
+    "en": "मालिक नौकर से कमरा साफ़ करवाता है।",
+    "ko": "",
+    "highlight": "करवाता है"
+   },
+   {
+    "en": "मैं तुम्हें यह नया गाना सुनाता हूँ।",
+    "ko": "",
+    "highlight": "सुनाता हूँ"
+   },
+   {
+    "en": "उसने मैकेनिक से गाड़ी ठीक करवाई।",
+    "ko": "",
+    "highlight": "करवाई"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "माँ बच्चे को सोनाती है।",
+    "right": "माँ बच्चे को सुलाती है।",
+    "note": "The root vowel in सोना (to sleep) shifts to short 'उ' and inserts 'ल' to form सुलाना, rather than regular suffixation."
+   },
+   {
+    "wrong": "मैं दोस्त से चाय बनाता हूँ।",
+    "right": "मैं दोस्त से चाय बनवाता हूँ।",
+    "note": "Use the second causative (बनवाना) when using a secondary agent marked with से."
+   },
+   {
+    "wrong": "उसने धोबी से कपड़े धोया।",
+    "right": "उसने धोबी से कपड़े धुलवाए।",
+    "note": "Having an intermediary perform an action requires the causative stem धुलवाना, agreeing with plural masculine कपड़े."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct first causative form: 'The teacher teaches (makes learn) the students.' -> अध्यापक बच्चों को ___ हैं।",
+    "options": [
+     "सिखाते",
+     "सीखते",
+     "सिखवाते",
+     "सीखवाते"
+    ],
+    "answer": 0,
+    "explanation": "The base verb सीखना (to learn) shortens its root vowel to 'इ' and adds -आना to form सिखाना for direct causation."
+   },
+   {
+    "question": "Choose the correct second causative: 'I get the house painted by a painter.' -> मैं पेंटर से घर ___ हूँ।",
+    "options": [
+     "रंगता",
+     "रँगवाता",
+     "रंगाता",
+     "रंगवाना"
+    ],
+    "answer": 1,
+    "explanation": "Indirect causation involving an agent with से requires the second causative suffix -वाना, yielding रँगवाना."
+   },
+   {
+    "question": "Identify the base intransitive form of the causative verb 'दिखाना' (to show):",
+    "options": [
+     "देखवाना",
+     "देखना",
+     "दिखना",
+     "दिखवाना"
+    ],
+    "answer": 2,
+    "explanation": "दिखना (to be seen/visible) is the base intransitive verb, from which the transitive देखना and causatives are derived."
+   },
+   {
+    "question": "Complete the sentence: 'She had her luggage lifted by the porter.' -> उसने कुली से सामान ___।",
+    "options": [
+     "उठाया",
+     "उठना",
+     "उठाई",
+     "उठवाया"
+    ],
+    "answer": 3,
+    "explanation": "With an intermediary agent marked with से (कुली से), the second causative perfective masculine singular उठवाया is required."
+   }
+  ],
+  "tip": "Long vowels in monosyllabic roots always shorten when causativized: आ becomes अ, ई becomes इ, and ऊ becomes उ."
+ },
+ {
+  "id": "hi-b1-passive-voice-and-incapacity",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#0891B2",
+  "emoji": "🛡️",
+  "title": "Passive Voice and Expressions of Inability with जाना",
+  "subtitle": "Forming objective passives and instrumental expressions of incapacity",
+  "color": "#0891B2",
+  "bg": "#ECFEFF",
+  "keyPoint": "The passive voice is formed by combining the perfective participle of the main verb with inflected forms of जाना.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Grammar Structure",
+    "Hindi Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Standard Passive",
+      "Perf. Participle + जाना",
+      "पत्र लिखा जाता है",
+      "The letter is written"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Agentive Passive",
+      "Agent + के द्वारा / से + Verb + जाना",
+      "पुलिस द्वारा चोर पकड़ा गया",
+      "The thief was caught by police"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passive of Inability",
+      "Agent + से + Verb + नहीं + जाना",
+      "मुझसे चला नहीं जाता",
+      "I am unable to walk"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0891B2",
+    "label": "Impersonal Action",
+    "example": "यहाँ हिंदी बोली जाती है।",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Official / Formal Notice",
+    "example": "सड़कें बनाई जा रही हैं।",
+    "translation": ""
+   },
+   {
+    "color": "#B91C1C",
+    "label": "Physical Incapacity",
+    "example": "दादी जी से सीढ़ियाँ नहीं चढ़ी जातीं।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "यहाँ रोज़ ताज़ा खाना पकाया जाता है।",
+    "ko": "",
+    "highlight": "पकाया जाता है"
+   },
+   {
+    "en": "यह पुल पिछले साल बनाया गया।",
+    "ko": "",
+    "highlight": "बनाया गया"
+   },
+   {
+    "en": "मुझसे इतना तीखा खाना नहीं खाया जाता।",
+    "ko": "",
+    "highlight": "नहीं खाया जाता"
+   },
+   {
+    "en": "मरीज़ से अब उठा नहीं जाता।",
+    "ko": "",
+    "highlight": "उठा नहीं जाता"
+   },
+   {
+    "en": "सारे समाचार पत्र पढ़े जा चुके हैं।",
+    "ko": "",
+    "highlight": "पढ़े जा चुके हैं"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "कमरा साफ़ किया होता है।",
+    "right": "कमरा साफ़ किया जाता है।",
+    "note": "Hindi passive voice requires the auxiliary verb जाना, never होना."
+   },
+   {
+    "wrong": "मुझको चला नहीं जाता।",
+    "right": "मुझसे चला नहीं जाता।",
+    "note": "The agent in passives of physical incapacity must take the postposition से, not को."
+   },
+   {
+    "wrong": "किताबें पढ़ा गया।",
+    "right": "किताबें पढ़ी गईं।",
+    "note": "Both the main perfective participle and जाना must agree in gender and number with the promoted subject (किताबें = fem. pl.)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the passive sentence: 'Hindi is understood throughout India.' -> पूरे भारत में हिंदी ___।",
+    "options": [
+     "समझी जाती है",
+     "समझा जाता है",
+     "समझते हैं",
+     "समझाई होती है"
+    ],
+    "answer": 0,
+    "explanation": "हिंदी is feminine singular, so the perfective participle and auxiliary must be feminine singular: समझी जाती है."
+   },
+   {
+    "question": "How do you express 'I cannot walk (due to physical inability)'?",
+    "options": [
+     "मैं नहीं चलता हूँ।",
+     "मुझसे चला नहीं जाता।",
+     "मुझे नहीं चलना है।",
+     "मेरे द्वारा चलना नहीं है।"
+    ],
+    "answer": 1,
+    "explanation": "Agent + से + intransitive perfective participle + नहीं + जाना expresses involuntary incapacity."
+   },
+   {
+    "question": "Complete the sentence: 'The thief was arrested by the police.' -> पुलिस के द्वारा चोर ___।",
+    "options": [
+     "पकड़ी गई",
+     "पकड़े गए",
+     "पकड़ा गया",
+     "पकड़ते हैं"
+    ],
+    "answer": 2,
+    "explanation": "चोर is masculine singular here as the grammatical subject, requiring पकड़ा गया."
+   },
+   {
+    "question": "Fill in the blank: 'Old houses are being demolished.' -> पुराने मकान गिराए ___।",
+    "options": [
+     "जाता है",
+     "गए थे",
+     "जाती हैं",
+     "जा रहे हैं"
+    ],
+    "answer": 3,
+    "explanation": "मकान is masculine plural and the context indicates continuous passive, demanding गिराए जा रहे हैं."
+   }
+  ],
+  "tip": "In passives expressing incapacity (असमर्थता), even intransitive verbs like चलना, उठना, or सोना can be used with a default masculine singular ending."
+ },
+ {
+  "id": "hi-b2-relative-correlative-clauses",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#059669",
+  "emoji": "🔗",
+  "title": "Relative-Correlative Syntactic Structures (जो... वो, जब... तब)",
+  "subtitle": "Pairing relative and correlative markers to construct compound sentences",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Hindi relative clauses introduce a condition or identity with a 'ज-' word and resolve it in the main clause with a corresponding 'त-' or 'व-' correlative word.",
+  "structure": {
+   "headers": [
+    "Category",
+    "Relative (ज-)",
+    "Correlative (त-/व-)",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Entity / Person",
+      "जो",
+      "वह / वो",
+      "The one who... that one"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Time",
+      "जब",
+      "तब",
+      "When... then"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Place",
+      "जहाँ",
+      "वहाँ",
+      "Where... there"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Manner / Degree",
+      "जैसा / जितना",
+      "वैसा / उतना",
+      "As / As much... so / that much"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Individual Identification",
+    "example": "जो लड़का वहाँ खड़ा है, वह मेरा भाई है।",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Temporal Dependency",
+    "example": "जब बारिश रुकी, तब हम बाहर गए।",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Proportional Comparison",
+    "example": "जितनी मेहनत करोगे, उतनी सफलता मिलेगी।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "जो मेहनत करता है, वह हमेशा सफल होता है।",
+    "ko": "",
+    "highlight": "जो मेहनत करता है, वह"
+   },
+   {
+    "en": "जब मैं स्टेशन पहुँचा, तब गाड़ी आ चुकी थी।",
+    "ko": "",
+    "highlight": "जब मैं स्टेशन पहुँचा, तब"
+   },
+   {
+    "en": "जहाँ शांति होती है, वहाँ ईश्वर का वास होता है।",
+    "ko": "",
+    "highlight": "जहाँ शांति होती है, वहाँ"
+   },
+   {
+    "en": "जैसा बोओगे, वैसा काटोगे।",
+    "ko": "",
+    "highlight": "जैसा बोओगे, वैसा"
+   },
+   {
+    "en": "जितना माँगो उतना लो।",
+    "ko": "",
+    "highlight": "जितना माँगो उतना"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "वह लड़का जो वहाँ खड़ा है, मेरा भाई है। (stylistically weak)",
+    "right": "जो लड़का वहाँ खड़ा है, वह मेरा भाई है।",
+    "note": "Natural Hindi syntax places the relative clause (with जो) first, followed by the correlative clause (with वह)."
+   },
+   {
+    "wrong": "जब बारिश होगी, मैं घर जाऊँगा।",
+    "right": "जब बारिश होगी, तब मैं घर जाऊँगा।",
+    "note": "Hindi requires the explicit correlative conjunction तब in the main clause; it cannot be dropped like 'then' in English."
+   },
+   {
+    "wrong": "जितना तुम खाओगे, वैसा तुम बनोगे।",
+    "right": "जैसा तुम खाओगे, वैसा तुम बनोगे।",
+    "note": "Correlative pairs must match semantically: जैसा pairs with वैसा (manner/quality), and जितना pairs with उतना (quantity)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the time clause: '___ तुम आओगे, तब हम खाना खाएँगे।'",
+    "options": [
+     "जब",
+     "जहाँ",
+     "जो",
+     "जैसा"
+    ],
+    "answer": 0,
+    "explanation": "The temporal correlative तब must be preceded by the temporal relative conjunction जब."
+   },
+   {
+    "question": "Complete the proportional clause: 'जितना गुड़ डालोगे, ___ मीठा होगा।'",
+    "options": [
+     "वैसा",
+     "उतना",
+     "तहाँ",
+     "वहाँ"
+    ],
+    "answer": 1,
+    "explanation": "The quantity relative जितना must pair with the correlative उतना."
+   },
+   {
+    "question": "Complete the clause: 'जहाँ फूल खिलते हैं, ___ भँवरे आते हैं।'",
+    "options": [
+     "तब",
+     "वैसा",
+     "वहाँ",
+     "उतना"
+    ],
+    "answer": 2,
+    "explanation": "जहाँ denotes place and corresponds directly to वहाँ."
+   },
+   {
+    "question": "Fill in the blank: 'जो लड़की कल आई थी, ___ मेरी सहेली है।'",
+    "options": [
+     "तब",
+     "जहाँ",
+     "उतनी",
+     "वह"
+    ],
+    "answer": 3,
+    "explanation": "The relative pronoun जो referring to an entity is paired with the correlative pronoun वह/वो."
+   }
+  ],
+  "tip": "Remember: ज-words introduce the dependent relative clause, and corresponding त- or व-words anchor the independent correlative clause."
+ },
+ {
+  "id": "hi-b2-participial-adjectival-phrases",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#065F46",
+  "emoji": "🌿",
+  "title": "Imperfective and Perfective Participles as Modifiers (हुआ/हुई/हुए)",
+  "subtitle": "Employing expanded participial modifiers to describe ongoing or resultant noun states",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Participles followed by forms of हुआ act as adjectives, agreeing in gender and number with the noun they modify to indicate ongoing or resultant states.",
+  "structure": {
+   "headers": [
+    "Participle Type",
+    "Formation Pattern",
+    "Hindi Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Imperfective Modifier",
+      "Verb-ता + हुआ/हुई/हुए",
+      "रोता हुआ बच्चा",
+      "crying child (active state)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Perfective Modifier",
+      "Verb-आ + हुआ/हुई/हुए",
+      "टूटी हुई कुर्सी",
+      "broken chair (resultant state)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Oblique Agreement",
+      "Verb-ते/ए + हुए",
+      "सोते हुए बच्चे को",
+      "to the sleeping child"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Active Continuous State",
+    "example": "मैंने दौड़ती हुई गाड़ी को देखा।",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Resultant Past State",
+    "example": "मेज पर रखा हुआ पत्र पढ़ो।",
+    "translation": ""
+   },
+   {
+    "color": "#4F46E5",
+    "label": "Oblique Case Modification",
+    "example": "उस गिरे हुए पेड़ को हटाओ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "हँसती हुई लड़की कमरे में आई।",
+    "ko": "",
+    "highlight": "हँसती हुई"
+   },
+   {
+    "en": "सड़क पर गिरे हुए पत्ते बहुत सुंदर लगते हैं।",
+    "ko": "",
+    "highlight": "गिरे हुए"
+   },
+   {
+    "en": "अलमारी में रखी हुई किताबें पुरानी हैं।",
+    "ko": "",
+    "highlight": "रखी हुई"
+   },
+   {
+    "en": "मैंने तैरते हुए हंसों को देखा।",
+    "ko": "",
+    "highlight": "तैरते हुए"
+   },
+   {
+    "en": "दीवार पर टँगी हुई तस्वीर गिर गई।",
+    "ko": "",
+    "highlight": "टँगी हुई"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मैंने एक टूटा कुर्सी देखी।",
+    "right": "मैंने एक टूटी हुई कुर्सी देखी।",
+    "note": "Participles modifying feminine nouns must show feminine agreement in both participle and auxiliary: टूटी हुई."
+   },
+   {
+    "wrong": "सोता हुआ बच्चे को मत जगाओ।",
+    "right": "सोते हुए बच्चे को मत जगाओ।",
+    "note": "Because बच्चे is followed by the postposition को, the modifier must inflect to masculine oblique: सोते हुए."
+   },
+   {
+    "wrong": "दौड़ते बच्चा गिर पड़ा।",
+    "right": "दौड़ता हुआ बच्चा गिर पड़ा।",
+    "note": "In the direct singular nominative case, the imperfective adjectival modifier must be दौड़ता हुआ, not plural/oblique दौड़ते."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence with an adjectival participle: 'Bring the water boiling on the stove.' -> चूल्हे पर ___ पानी लाओ।",
+    "options": [
+     "उबलती हुई",
+     "उबलता हुआ",
+     "उबलते हुए",
+     "उबला हुआ"
+    ],
+    "answer": 1,
+    "explanation": "पानी is grammatically masculine singular direct here, requiring the masculine singular imperfective participle उबलता हुआ."
+   },
+   {
+    "question": "Select the correct form: 'Do not throw stones at the sleeping dog.' -> ___ कुत्ते पर पत्थर मत फेंको।",
+    "options": [
+     "सोता हुआ",
+     "सोते हुए",
+     "सोई हुई",
+     "सोया हुआ"
+    ],
+    "answer": 1,
+    "explanation": "The noun कुत्ते is in the masculine oblique singular before पर, so the modifier must take the oblique form सोते हुए."
+   },
+   {
+    "question": "Fill in the blank: 'The flowers plucked from the garden have dried up.' -> बाग़ से ___ फूल सूख गए।",
+    "options": [
+     "तोड़ा हुआ",
+     "तोड़ी हुई",
+     "तोड़े हुए",
+     "तोड़ती हुई"
+    ],
+    "answer": 2,
+    "explanation": "फूल is masculine plural in this subject position, requiring the masculine plural resultant form तोड़े हुए."
+   },
+   {
+    "question": "Fill in the blank: 'She was reading a written letter.' -> वह एक ___ चिट्ठी पढ़ रही थी।",
+    "options": [
+     "लिखा हुआ",
+     "लिखती हुई",
+     "लिखे हुए",
+     "लिखी हुई"
+    ],
+    "answer": 3,
+    "explanation": "चिट्ठी is feminine singular, so the resultant modifier must be feminine singular: लिखी हुई."
+   }
+  ],
+  "tip": "Use the imperfective participle (ता हुआ) for an action currently in progress, and the perfective participle (आ हुआ) for a state that resulted from a completed event."
+ },
+ {
+  "id": "hi-b2-presumptive-and-counterfactual-moods",
+  "level": "b2",
+  "category": "conditionals",
+  "categoryColor": "#DC2626",
+  "emoji": "🔮",
+  "title": "Presumptive (होगा) and Counterfactual Past Tenses",
+  "subtitle": "Deducing epistemic probability with होगा and expressing unfulfilled past conditions",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "The presumptive mood uses participles with होगा to express probabilities, while the counterfactual uses bare imperfective participles in both clauses to express unfulfilled conditions.",
+  "structure": {
+   "headers": [
+    "Mood",
+    "Grammar Formula",
+    "Hindi Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Habitual Presumptive",
+      "Verb-ता + होगा/होगी/होंगे",
+      "वह पढ़ता होगा",
+      "He must be studying / probably studies"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Perfective Presumptive",
+      "Perf. Participle + होगा",
+      "उसने खाना खाया होगा",
+      "He must have eaten"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Counterfactual",
+      "यदि + Root-ता, तो + Root-ता",
+      "यदि तुम आते, तो मैं चलता",
+      "Had you come, I would have gone"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Epistemic Inference",
+    "example": "वह अब तक घर पहुँच गया होगा।",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Habitual Assumption",
+    "example": "रोहन दफ़्तर में काम करता होगा।",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Unfulfilled Past Condition",
+    "example": "अगर बारिश होती, तो फ़सल अच्छी होती।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "पिताजी इस समय अख़बार पढ़ रहे होंगे।",
+    "ko": "",
+    "highlight": "पढ़ रहे होंगे"
+   },
+   {
+    "en": "डाकिया अब तक चिट्ठी दे चुका होगा।",
+    "ko": "",
+    "highlight": "दे चुका होगा"
+   },
+   {
+    "en": "यदि तुम मुझे बताते, तो मैं तुम्हारी मदद करता।",
+    "ko": "",
+    "highlight": "बताते, तो मैं तुम्हारी मदद करता"
+   },
+   {
+    "en": "अगर हम समय पर निकलते, तो ट्रेन न छूटती।",
+    "ko": "",
+    "highlight": "निकलते, तो ट्रेन न छूटती"
+   },
+   {
+    "en": "उसने यह फ़िल्म ज़रूर देखी होगी।",
+    "ko": "",
+    "highlight": "देखी होगी"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "अगर तुम आते, तो मैं आऊँगा।",
+    "right": "अगर तुम आते, तो मैं आता।",
+    "note": "In a counterfactual past conditional, both the protasis and apodosis must use bare imperfective participles, never the future tense."
+   },
+   {
+    "wrong": "उसने पत्र लिखा है होगा।",
+    "right": "उसने पत्र लिखा होगा।",
+    "note": "Do not stack present auxiliary है with the presumptive auxiliary होगा; attach होगा directly to the perfective participle."
+   },
+   {
+    "wrong": "यदि बारिश होती, तो फ़सल अच्छी होगी।",
+    "right": "यदि बारिश होती, तो फ़सल अच्छी होती।",
+    "note": "Counterfactual outcomes require the past imperfective participle होती to denote unfulfilled past possibility."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Express epistemic presumption: 'She must have reached Delhi by now.' -> वह अब तक दिल्ली ___।",
+    "options": [
+     "पहुँच गई होगी",
+     "पहुँच जाएगी",
+     "पहुँचती है",
+     "पहुँची"
+    ],
+    "answer": 0,
+    "explanation": "The feminine perfective participle पहुँच गई plus feminine singular presumptive auxiliary होगी conveys 'must have arrived'."
+   },
+   {
+    "question": "Complete the counterfactual sentence: 'If you had studied, you would have passed.' -> अगर तुम पढ़ते, तो परीक्षा में सफल ___।",
+    "options": [
+     "होते होंगे",
+     "होते",
+     "हुए होंगे",
+     "हो जाओगे"
+    ],
+    "answer": 1,
+    "explanation": "Hindi past counterfactuals take the bare imperfective participle (होते) in the result clause."
+   },
+   {
+    "question": "Express habitual presumption: 'What does he do at this hour?' -> वह इस समय क्या ___?",
+    "options": [
+     "किया होगा",
+     "करेगा",
+     "करता होगा",
+     "कर रहा था"
+    ],
+    "answer": 2,
+    "explanation": "Habitual presumptive is formed with the imperfective participle करता plus presumptive auxiliary होगा."
+   },
+   {
+    "question": "Complete the negative counterfactual: 'Had we run fast, the bus would not have been missed.' -> यदि हम तेज़ दौड़ते, तो बस ___।",
+    "options": [
+     "नहीं छूटेगी",
+     "नहीं छूटती होगी",
+     "नहीं छूटी",
+     "न छूटती"
+    ],
+    "answer": 3,
+    "explanation": "The negative unfulfilled counterfactual uses the negative particle न (or नहीं) alongside the bare participle छूटती."
+   }
+  ],
+  "tip": "For unfulfilled past regrets or 'what ifs', drop all forms of 'था' and 'है' — use only the bare -ता/-ती/-ते participle in both parts of the sentence."
+ }
+]

@@ -1,0 +1,3390 @@
+[
+ {
+  "id": "ar-a1-nominal-vs-verbal-sentences",
+  "level": "a1",
+  "category": "clauses",
+  "categoryColor": "#4F46E5",
+  "emoji": "⚖️",
+  "title": "Nominal vs. Verbal Sentences",
+  "subtitle": "Master the difference between sentences starting with a noun versus a verb",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "In Arabic, sentences that start with a noun are nominal (equational in the present tense with no 'is/are' verb), whereas sentences starting with a verb are verbal and conventionally place the verb before the subject.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Word Order",
+    "Arabic Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Nominal (جملة اسمية)",
+      "Mubtada' + Khabar (SVO / S + Predicate)",
+      "الطالبُ مجتهدٌ",
+      "The student is diligent."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Verbal (جملة فعلية)",
+      "Fi'l + Fa'il (VSO)",
+      "قرأَ الطالبُ الكتابَ",
+      "The student read the book."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Verbal with Object",
+      "Fi'l + Fa'il + Maf'ul Bihi (VSO)",
+      "تكتبُ البنتُ رسالةً",
+      "The girl writes a letter."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Nominal with Verbal Predicate",
+      "Mubtada' + Jumla Fi'liyya (SVO)",
+      "الطالبُ يقرأُ الكتابَ",
+      "The student reads the book."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Zero-Copula Present Description",
+    "example": "الطقسُ جميلٌ اليومَ.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Action-First Narrative (VSO)",
+    "example": "سافرَ المعلمُ إلى القاهرةِ.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Topic-Fronted Statement (SVO)",
+    "example": "المعلمُ يشرحُ الدرسَ بعنايةٍ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "البيتُ كبيرٌ وجميلٌ.",
+    "ko": "",
+    "highlight": "البيتُ كبيرٌ"
+   },
+   {
+    "en": "ذهبَ محمدٌ إلى السوقِ صباحاً.",
+    "ko": "",
+    "highlight": "ذهبَ محمدٌ"
+   },
+   {
+    "en": "الأستاذُ في المكتبةِ الآن.",
+    "ko": "",
+    "highlight": "الأستاذُ في المكتبةِ"
+   },
+   {
+    "en": "شربتْ مريمُ عصيرَ برتقالٍ بارداً.",
+    "ko": "",
+    "highlight": "شربتْ مريمُ"
+   },
+   {
+    "en": "المهندسونَ يعملونَ في المشروعِ.",
+    "ko": "",
+    "highlight": "المهندسونَ يعملونَ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "محمد يكون طالب.",
+    "right": "محمدٌ طالبٌ.",
+    "note": "Arabic does not use a present tense 'to be' verb (like يكون) to join a subject and predicate in simple present nominal sentences."
+   },
+   {
+    "wrong": "ذهبوا الأولاد إلى المدرسة.",
+    "right": "ذهبَ الأولادُ إلى المدرسةِ.",
+    "note": "When a verb begins a verbal sentence (VSO), it remains singular even if the following subject is plural."
+   },
+   {
+    "wrong": "كتاب الولد جديد.",
+    "right": "الولدُ جديدٌ / كتابُ الولدِ جديدٌ.",
+    "note": "Be sure you place the subject in nominative case (damma) and establish a clear topic-predicate relationship without dropping essential parts."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct nominal sentence meaning 'The city is wide':",
+    "options": [
+     "المدينةُ واسعةٌ.",
+     "اتسعتْ المدينةُ واسعةً.",
+     "تكون المدينةُ واسعةٌ.",
+     "المدينةِ واسعٌ."
+    ],
+    "answer": 0,
+    "explanation": "A nominal sentence connects the definite subject (المدينةُ) to an indefinite predicate (واسعةٌ) without any present tense auxiliary verb."
+   },
+   {
+    "question": "Choose the correct verbal sentence meaning 'The students (m.) wrote the homework':",
+    "options": [
+     "كتبوا الطلابُ الواجبَ.",
+     "كتبَ الطلابُ الواجبَ.",
+     "الطلابُ كتبَ الواجبَ.",
+     "كتبتْ الطلابُ الواجبَ."
+    ],
+    "answer": 1,
+    "explanation": "In classical VSO verbal order, the verb precedes the subject and must stay singular (كتبَ, not كتبوا), agreeing only in masculine gender with الطلاب."
+   },
+   {
+    "question": "Complete the nominal sentence: 'The university ___'",
+    "options": [
+     "كبيرٌ",
+     "جميلاً",
+     "جديدةٌ",
+     "ذهبَ"
+    ],
+    "answer": 2,
+    "explanation": "الجامعة (the university) is feminine singular, so its predicate adjective must be feminine singular and nominative (جديدةٌ)."
+   },
+   {
+    "question": "Identify which of the following is a proper Jumla Fi'liyya (Verbal Sentence):",
+    "options": [
+     "الشمسُ مشرقةٌ.",
+     "الولدُ يلعبُ بالكرةِ.",
+     "أنا في البيتِ.",
+     "أكلَ الطفلُ التفاحةَ."
+    ],
+    "answer": 3,
+    "explanation": "A Jumla Fi'liyya begins with a verb. 'أكل الطفل التفاحة' starts directly with the past tense verb أكل."
+   }
+  ],
+  "tip": "To determine the sentence type, look strictly at the first word: starting with an Ism (noun/pronoun) makes it nominal; starting with a Fi'l (verb) makes it verbal."
+ },
+ {
+  "id": "ar-a1-sun-and-moon-letters",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "☀️",
+  "title": "Sun and Moon Letters",
+  "subtitle": "Pronounce the definite article 'al-' with smooth phonetic assimilation",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "When attaching the definite article 'al-' (الـ), pronounce the 'L' clearly before the 14 Moon letters, but assimilate the 'L' completely into the 14 coronal Sun letters by doubling them with a shaddah.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Phonetic Rule",
+    "Arabic Example",
+    "Pronunciation Effect"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Sun Letters (الحروف الشمسية)",
+      "Assimilation: L drops, consonant doubled",
+      "الشَّمْسُ",
+      "Pronounced 'ash-shams' (no 'l' sound)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Moon Letters (الحروف القمرية)",
+      "Clear articulation: L is fully pronounced",
+      "القَمَرُ",
+      "Pronounced 'al-qamar' (clear 'l' sound)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Coronal Sun Sounds",
+      "t, th, d, dh, r, z, s, sh, s, d, t, z, l, n",
+      "الدَّفْتَرُ",
+      "Pronounced 'ad-daftar'"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Moon Letter Group",
+      "Memorized via phrase: ابغِ حَجَّكَ وَخَفْ عَقِيمَهُ",
+      "الكِتَابُ",
+      "Pronounced 'al-kitaab'"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Sun Letter Assimilation",
+    "example": "أشرقتِ الشَّمسُ فوقَ المدينةِ.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Moon Letter Clear Articulation",
+    "example": "ظهرَ القَمرُ منيراً في الليلِ.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Connected Speech Junction",
+    "example": "بابُ البَيتِ مفتوحٌ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "السَّيَّارَةُ سريعةٌ جداً.",
+    "ko": "",
+    "highlight": "السَّيَّارَةُ"
+   },
+   {
+    "en": "البَابُ مصنوعٌ من خشبٍ متينٍ.",
+    "ko": "",
+    "highlight": "البَابُ"
+   },
+   {
+    "en": "ذَهَبَ التِّلْمِيذُ إلى الصَّفِّ.",
+    "ko": "",
+    "highlight": "التِّلْمِيذُ"
+   },
+   {
+    "en": "المَكْتَبَةُ قريبةٌ منَ المَسْجِدِ.",
+    "ko": "",
+    "highlight": "المَكْتَبَةُ"
+   },
+   {
+    "en": "النُّورُ يدخلُ منَ النَّافِذَةِ.",
+    "ko": "",
+    "highlight": "النُّورُ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "الْشَّمْسُ (pronouncing 'al-shams')",
+    "right": "الشَّمْسُ (pronouncing 'ash-shams')",
+    "note": "Do not voice the 'L' before sun letters like sheen; assimilate into the consonant and mark with a shaddah."
+   },
+   {
+    "wrong": "ألقَمَر (writing hamza on the lām)",
+    "right": "الْقَمَرُ",
+    "note": "The definite article consists of an alif followed by lam; never place a hamza underneath or on top of the lam itself."
+   },
+   {
+    "wrong": "الـ كتاب جديد (separating 'al' with a space)",
+    "right": "الكتابُ جديدٌ.",
+    "note": "The article 'al-' is a proclitic particle and must be attached directly to the noun without any intervening space."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which of the following words begins with a Sun letter?",
+    "options": [
+     "البابُ",
+     "القلمُ",
+     "الشَّارعُ",
+     "المفتاحُ"
+    ],
+    "answer": 2,
+    "explanation": "The letter Sheen (ش) is a Sun letter; the 'L' assimilates, yielding 'ash-shaari' '."
+   },
+   {
+    "question": "Which of the following words begins with a Moon letter?",
+    "options": [
+     "الكتابُ",
+     "الصَّباحُ",
+     "الزَّهرةُ",
+     "الرَّجلُ"
+    ],
+    "answer": 0,
+    "explanation": "Kaf (ك) is a Moon letter; the 'L' is articulated explicitly as 'al-kitaab'."
+   },
+   {
+    "question": "What happens to the letter Ta (ت) when the article الـ is attached to تفاح?",
+    "options": [
+     "The 'L' is silent and Ta takes a sukoon.",
+     "The 'L' is pronounced normally as 'al-tuffah'.",
+     "The 'L' is dropped from the written script completely.",
+     "The 'L' assimilates and Ta takes a shaddah: التُّفَّاح."
+    ],
+    "answer": 3,
+    "explanation": "Ta is a coronal Sun letter, so the 'L' assimilates phonetically into 'at-' and the Ta receives a shaddah (التُّفاح)."
+   },
+   {
+    "question": "Identify the word containing a Moon letter among these options:",
+    "options": [
+     "الثَّوبُ",
+     "الدَّارُ",
+     "الجَامِعَةُ",
+     "النَّهرُ"
+    ],
+    "answer": 2,
+    "explanation": "Jeem (ج) is classified as a Moon letter in standard Arabic (al-jaami'ah), while thaa, daal, and noon are Sun letters."
+   }
+  ],
+  "tip": "All Sun letters are articulated along the front teeth, ridge, and tongue tip (coronal sounds); your tongue naturally wants to stay at the front rather than jump back to pronounce the 'L'."
+ },
+ {
+  "id": "ar-a1-gender-and-agreement-basics",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🌸",
+  "title": "Gender and Adjective Agreement",
+  "subtitle": "Distinguish masculine from feminine and match descriptive adjectives perfectly",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Every Arabic noun is masculine or feminine; adjectives follow their noun in gender, definiteness, and case.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Typical Marker",
+    "Noun + Adjective Example",
+    "Rule Summary"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Feminine",
+      "Ta Marbuta (ـة / ة)",
+      "سَيَّارَةٌ جَدِيدَةٌ",
+      "Adjective adds ة to match feminine noun"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masculine",
+      "No marker (default base)",
+      "كِتَابٌ جَدِيدٌ",
+      "Adjective retains plain masculine form"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Definite Feminine",
+      "الـ prefix + ة",
+      "السَّيَّارَةُ الجَدِيدَةُ",
+      "Both noun and adjective take الـ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Definite Masculine",
+      "الـ prefix",
+      "الكِتَابُ الجَدِيدُ",
+      "Both noun and adjective take الـ"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Describing Indefinite Things",
+    "example": "اشتريتُ حَقِيبَةً جَمِيلَةً.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Describing Definite Things",
+    "example": "زُرْتُ المَدِينَةَ القَدِيمَةَ.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Describing Natural Gender",
+    "example": "هَذَا وَلَدٌ ذَكِيٌّ وَهَذِهِ بِنْتٌ ذَكِيَّةٌ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "قَرَأْتُ قِصَّةً قَصِيرَةً ومُفِيدَةً.",
+    "ko": "",
+    "highlight": "قِصَّةً قَصِيرَةً"
+   },
+   {
+    "en": "هَذَا قَلَمٌ جَدِيدٌ ورَخِيصٌ.",
+    "ko": "",
+    "highlight": "قَلَمٌ جَدِيدٌ"
+   },
+   {
+    "en": "تَسْكُنُ عَائِشَةُ في شَقَّةٍ وَاسِعَةٍ.",
+    "ko": "",
+    "highlight": "شَقَّةٍ وَاسِعَةٍ"
+   },
+   {
+    "en": "المُدَرِّسُ الجَدِيدُ نَشِيطٌ في عَمَلِهِ.",
+    "ko": "",
+    "highlight": "المُدَرِّسُ الجَدِيدُ"
+   },
+   {
+    "en": "البِنْتُ الصَّغِيرَةُ تَلْعَبُ في الحَدِيقَةِ.",
+    "ko": "",
+    "highlight": "البِنْتُ الصَّغِيرَةُ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "هذه سيارة جديد.",
+    "right": "هَذِهِ سَيَّارَةٌ جَدِيدَةٌ.",
+    "note": "Because سيارة ends with Ta Marbuta (feminine), the descriptive adjective must also take Ta Marbuta (جديدة)."
+   },
+   {
+    "wrong": "البنت جميل.",
+    "right": "البِنْتُ جَمِيلَةٌ.",
+    "note": "Female beings (بنت, أم) are inherently feminine; their descriptors and predicates must be feminine."
+   },
+   {
+    "wrong": "البيت الجديدة.",
+    "right": "البَيْتُ الجَدِيدُ.",
+    "note": "بَيْت is grammatically masculine (ending in an open 'taa', not Ta Marbuta), so its adjective must remain masculine."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct phrase for 'a beautiful garden':",
+    "options": [
+     "حَدِيقَةٌ جَمِيلٌ",
+     "حَدِيقَةٌ جَمِيلَةٌ",
+     "الحَدِيقَةُ جَمِيلَةٌ",
+     "حَدِيقَةٍ الجَمِيلَةُ"
+    ],
+    "answer": 1,
+    "explanation": "حَدِيقَةٌ is feminine and indefinite (tanween); its matching adjective must be feminine and indefinite (جَمِيلَةٌ)."
+   },
+   {
+    "question": "Select the correct phrase for 'the small boy':",
+    "options": [
+     "الوَلَدُ الصَّغِيرُ",
+     "الوَلَدُ صَغِيرٌ",
+     "وَلَدٌ الصَّغِيرُ",
+     "الوَلَدُ الصَّغِيرَةُ"
+    ],
+    "answer": 0,
+    "explanation": "For an attributive phrase ('the small boy'), both the noun and adjective must agree in definiteness (both take الـ) and masculine gender."
+   },
+   {
+    "question": "Complete the sentence: 'الغُرْفَةُ ___'",
+    "options": [
+     "نَظِيفٌ",
+     "مُغْلَقٌ",
+     "نَظِيفَةٌ",
+     "كَبِيرٍ"
+    ],
+    "answer": 2,
+    "explanation": "الغرفة is feminine; therefore, the predicate adjective must be feminine and nominative (نَظِيفَةٌ)."
+   },
+   {
+    "question": "Which of the following is inherently feminine despite lacking a Ta Marbuta?",
+    "options": [
+     "بَاب",
+     "قَلَم",
+     "مَكْتَب",
+     "أُمّ"
+    ],
+    "answer": 3,
+    "explanation": "أم (mother) is feminine by biological gender/meaning, so it takes feminine agreement (أُمٌّ كَرِيمَةٌ)."
+   }
+  ],
+  "tip": "An Arabic adjective comes AFTER the noun it modifies, acting like a mirror: whatever definiteness, gender, or case marker the noun has, the adjective reflects."
+ },
+ {
+  "id": "ar-a1-idafa-construct-phrase",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🔗",
+  "title": "The Genitive Construct (Idafa)",
+  "subtitle": "Express ownership, association, and compound concepts without prepositions",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "An Idafa links two nouns (Noun 1 of Noun 2); the first noun (mudaf) never takes 'al-' or tanween, while the second noun (mudaf ilayh) sits in the genitive case (kasra).",
+  "structure": {
+   "headers": [
+    "Element",
+    "Grammatical Term",
+    "Conditions",
+    "Arabic Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "First Noun",
+      "المُضَاف (Mudaf)",
+      "No الـ, NO Tanween, takes case by position",
+      "كِتَابُ (kitābu)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Second Noun",
+      "المُضَاف إِلَيْهِ (Mudaf Ilayh)",
+      "Genitive case (kasra), can have الـ",
+      "المُعَلِّمِ (al-mu'allimi)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Full Construct",
+      "الإِضَافَة (Al-Idafa)",
+      "Possessive meaning: 'The teacher's book'",
+      "كِتَابُ المُعَلِّمِ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Indefinite Idafa",
+      "إضافة نكرة",
+      "Last term indefinite -> whole phrase indefinite",
+      "كِتَابُ مُعَلِّمٍ ('a teacher's book')"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Direct Ownership",
+    "example": "مَفَاتِيحُ السَّيَّارَةِ عَلَى الطَّاوِلَةِ.",
+    "translation": ""
+   },
+   {
+    "color": "#14B8A6",
+    "label": "Office or Place Titles",
+    "example": "مُدِيرُ المَدْرَسَةِ قَادِمٌ اليَوْمَ.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Compound Nouns",
+    "example": "شَرِبْتُ كَأْسَ شَايٍ سَاخِنٍ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "بَابُ البَيْتِ مَفْتُوحٌ.",
+    "ko": "",
+    "highlight": "بَابُ البَيْتِ"
+   },
+   {
+    "en": "سَيَّارَةُ المَدِيرِ جَدِيدَةٌ وسَرِيعَةٌ.",
+    "ko": "",
+    "highlight": "سَيَّارَةُ المَدِيرِ"
+   },
+   {
+    "en": "سَمِعْتُ صَوْتَ قِطَّةٍ في الحَدِيقَةِ.",
+    "ko": "",
+    "highlight": "صَوْتَ قِطَّةٍ"
+   },
+   {
+    "en": "طَالِبُ الجَامِعَةِ يَقْرَأُ في المَكْتَبَةِ.",
+    "ko": "",
+    "highlight": "طَالِبُ الجَامِعَةِ"
+   },
+   {
+    "en": "عَاصِمَةُ مِصْرَ مَدِينَةٌ قَدِيمَةٌ.",
+    "ko": "",
+    "highlight": "عَاصِمَةُ مِصْرَ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "الكتاب الطالب",
+    "right": "كِتَابُ الطَّالِبِ",
+    "note": "The first noun (mudaf) can NEVER take the definite article 'al-'."
+   },
+   {
+    "wrong": "كتابٌ الطالبِ",
+    "right": "كِتَابُ الطَّالِبِ",
+    "note": "The first noun (mudaf) loses its tanween when placed into an annexation phrase."
+   },
+   {
+    "wrong": "باب من البيت",
+    "right": "بَابُ البَيْتِ",
+    "note": "Native Arabic prefers direct annexation (Idafa) over using the preposition 'min' for possession and relationship."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you correctly say 'the doctor's car' in Arabic?",
+    "options": [
+     "السَّيَّارَةُ الطَّبِيبِ",
+     "سَيَّارَةُ الطَّبِيبِ",
+     "سَيَّارَةٌ الطَّبِيبُ",
+     "سَيَّارَةُ طَبِيبٌ"
+    ],
+    "answer": 1,
+    "explanation": "The first word cannot have 'al-' or tanween (سَيَّارَةُ), and the second word takes 'al-' with genitive kasra (الطَّبِيبِ)."
+   },
+   {
+    "question": "Why is 'الكَلْبُ الحَارِسِ' ungrammatical as an Idafa?",
+    "options": [
+     "Because both words are masculine.",
+     "Because the second word has a kasra.",
+     "Because the first word has the definite article 'al-'.",
+     "Because it lacks a verb."
+    ],
+    "answer": 2,
+    "explanation": "The mudaf (first term) is strictly prohibited from carrying the definite article 'al-'."
+   },
+   {
+    "question": "Choose the phrase meaning 'the door of a house' (indefinite house):",
+    "options": [
+     "بَابُ بَيْتٍ",
+     "بَابُ البَيْتِ",
+     "البَابُ بَيْتٌ",
+     "بَابٌ بَيْتٍ"
+    ],
+    "answer": 0,
+    "explanation": "To make an entire Idafa indefinite, leave the final noun without 'al-' but with genitive tanween kasr (بَابُ بَيْتٍ)."
+   },
+   {
+    "question": "In the phrase 'مَفَاتِيحُ الغُرْفَةِ ضَائِعَةٌ', what case ending belongs on 'الغُرْفَة'?",
+    "options": [
+     "Damma (-u)",
+     "Fatha (-a)",
+     "Sukoon (no vowel)",
+     "Kasra (-i)"
+    ],
+    "answer": 3,
+    "explanation": "The second term of an Idafa (mudaf ilayh) is always in the genitive case, marked by a kasra (الغرفةِ)."
+   }
+  ],
+  "tip": "Think of the first noun in an Idafa as already 'specified' by the second noun: adding 'al-' or tanween to it would create redundant double-marking."
+ },
+ {
+  "id": "ar-a1-attached-pronouns",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🧲",
+  "title": "Attached Pronouns (Dama'ir Muttasila)",
+  "subtitle": "Use suffix pronouns to show possession, prepositional targets, and verbal objects",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Attached pronouns are suffixes added directly to nouns to signify possession ('my', 'your', 'his'), to prepositions, or to verbs to serve as direct objects.",
+  "structure": {
+   "headers": [
+    "Person / Suffix",
+    "Base Noun",
+    "With Attached Pronoun",
+    "English Translation"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Person (ـي / -ī)",
+      "كِتَاب (kitāb)",
+      "كِتَابِي (kitābī)",
+      "My book"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Masc. Sing. (ـهُ / -hu)",
+      "كِتَاب (kitāb)",
+      "كِتَابُهُ (kitābuhu)",
+      "His book"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3rd Fem. Sing. (ـهَا / -hā)",
+      "كِتَاب (kitāb)",
+      "كِتَابُهَا (kitābuhā)",
+      "Her book"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd Masc. Sing. (ـكَ / -ka)",
+      "كِتَاب (kitāb)",
+      "كِتَابُكَ (kitābuka)",
+      "Your (m.) book"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "1st Plural (ـنَا / -nā)",
+      "كِتَاب (kitāb)",
+      "كِتَابُنَا (kitābunā)",
+      "Our book"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Possession on Nouns",
+    "example": "هَذَا بَيْتُنَا الجَدِيدُ فِي القَاهِرَةِ.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Attached to Prepositions",
+    "example": "تَكَلَّمَ الأُسْتَاذُ عَنْهُ أَمْسِ.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Direct Object on Verbs",
+    "example": "شَاهَدْتُهُ فِي المَكْتَبَةِ يَقْرَأُ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "أَيْنَ سَيَّارَتُكَ يَا خَالِدُ؟",
+    "ko": "",
+    "highlight": "سَيَّارَتُكَ"
+   },
+   {
+    "en": "أُمِّي تُحِبُّ القِرَاءَةَ كَثِيراً.",
+    "ko": "",
+    "highlight": "أُمِّي"
+   },
+   {
+    "en": "هَذَا صَدِيقِي وَقَدْ زَارَنِي اليَوْمَ.",
+    "ko": "",
+    "highlight": "زَارَنِي"
+   },
+   {
+    "en": "الأُسْتَاذُ شَرَحَ لَنَا القَاعِدَةَ.",
+    "ko": "",
+    "highlight": "لَنَا"
+   },
+   {
+    "en": "سَأَلْتُهَا عَنْ مَوْعِدِ الامْتِحَانِ.",
+    "ko": "",
+    "highlight": "سَأَلْتُهَا"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "كتاب أنا",
+    "right": "كِتَابِي",
+    "note": "Independent subject pronouns like أنا cannot be placed next to a noun for possession; use the attached suffix ـي."
+   },
+   {
+    "wrong": "الكتابي",
+    "right": "كِتَابِي",
+    "note": "A noun with an attached possessive suffix is already definite; never prefix 'al-' (الكتابي is incorrect)."
+   },
+   {
+    "wrong": "غرفتها (pronouncing taa as haa)",
+    "right": "غُرْفَتُهَا",
+    "note": "When attaching a pronoun to a noun ending in Ta Marbuta (ـة), the Ta Marbuta converts into an open 'T' sound and letter (ت)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you write 'her pen' in Arabic?",
+    "options": [
+     "قَلَمُهَا",
+     "قَلَمُهُ",
+     "قَلَمُكَ",
+     "قَلَمُكِ"
+    ],
+    "answer": 0,
+    "explanation": "The attached suffix for the 3rd person feminine singular ('her') is ـهَا (qalamuhā)."
+   },
+   {
+    "question": "What is the attached pronoun in the word 'سَأَلُونَا' (they asked us)?",
+    "options": [
+     "ـون",
+     "ـنَا",
+     "ـكُم",
+     "ـهُم"
+    ],
+    "answer": 1,
+    "explanation": "ـنَا (-nā) is the 1st person plural attached object pronoun meaning 'us'."
+   },
+   {
+    "question": "What happens to the Ta Marbuta of 'مَدْرَسَة' when adding 'your (masc.)' (ـكَ)?",
+    "options": [
+     "It is deleted entirely: مَدْرَسْكَ.",
+     "It stays as ة with sukoon: مَدْرَسَةْكَ.",
+     "It turns into an open pronounced Ta (ت): مَدْرَسَتُكَ.",
+     "It transforms into an alif: مَدْرَسَاكَ."
+    ],
+    "answer": 2,
+    "explanation": "A Ta Marbuta always uncurls into an audible regular 'taa' (ت) when followed by any attached pronoun suffix."
+   },
+   {
+    "question": "Select the correct combination for 'with him' using the preposition مَعَ:",
+    "options": [
+     "مَعِي",
+     "مَعَكَ",
+     "مَعَهَا",
+     "مَعَهُ"
+    ],
+    "answer": 3,
+    "explanation": "The 3rd person masculine attached suffix is ـهُ, producing مَعَهُ ('ma'ahu' - with him)."
+   }
+  ],
+  "tip": "Remember: attached pronouns turn a noun into an Idafa construct. That is why a noun with a possessive suffix can never have 'al-' (الـ) in front of it."
+ },
+ {
+  "id": "ar-a1-past-tense-conjugation",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "⏳",
+  "title": "Past Tense Suffix Conjugation",
+  "subtitle": "Conjugate regular Form I verbs in the past tense using standard suffix endings",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "In Arabic, the past tense is formed entirely by attaching personal pronoun suffixes to the three-letter verb root.",
+  "structure": {
+   "headers": [
+    "Person / Pronoun",
+    "Suffix",
+    "Example (فَعَلَ)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "أنا (I)",
+      "-تُ (-tu)",
+      "كَتَبْتُ",
+      "I wrote"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "هو (He / Base)",
+      "-َ (-a)",
+      "كَتَبَ",
+      "He wrote"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "هي (She)",
+      "-َتْ (-at)",
+      "كَتَبَتْ",
+      "She wrote"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "نحن (We)",
+      "-نا (-naa)",
+      "كَتَبْنا",
+      "We wrote"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "هم (They m.)",
+      "-وا (-uu)",
+      "كَتَبُوا",
+      "They wrote"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "First Person Narrative",
+    "example": "شَرِبْتُ الماءَ في الصَّباحِ.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Third Person Description",
+    "example": "خَرَجَتْ فاطمةُ مِنَ البَيْتِ.",
+    "translation": ""
+   },
+   {
+    "color": "#1E40AF",
+    "label": "Plural Completed Action",
+    "example": "دَرَسْنا اللُّغَةَ العَرَبِيَّةَ مَعاً.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "كَتَبْتُ رِسالَةً إلى صَديقي.",
+    "ko": "",
+    "highlight": "كَتَبْتُ"
+   },
+   {
+    "en": "ذَهَبَ عَلِيٌّ إلى الجامِعَةِ.",
+    "ko": "",
+    "highlight": "ذَهَبَ"
+   },
+   {
+    "en": "شَرِبَتْ مَرْيَمُ القَهْوَةَ.",
+    "ko": "",
+    "highlight": "شَرِبَتْ"
+   },
+   {
+    "en": "سَمِعْنا الخَبَرَ في الصَّباحِ.",
+    "ko": "",
+    "highlight": "سَمِعْنا"
+   },
+   {
+    "en": "لَعِبُوا كُرَةَ القَدَمِ في المَلْعَبِ.",
+    "ko": "",
+    "highlight": "لَعِبُوا"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "أنا ذَهَبَ إلى السُّوقِ.",
+    "right": "أنا ذَهَبْتُ إلى السُّوقِ.",
+    "note": "Do not leave the verb in the dictionary base form (he-form) when the subject is 'I'; attach the suffix -tu."
+   },
+   {
+    "wrong": "هي دَرَسَ أَمْسِ.",
+    "right": "هي دَرَسَتْ أَمْسِ.",
+    "note": "A feminine singular subject in the past tense requires the feminine marker suffix -at (ـَتْ)."
+   },
+   {
+    "wrong": "الرِّجالُ ذَهَبْنَ إلى المَسْجِدِ.",
+    "right": "الرِّجالُ ذَهَبُوا إلى المَسْجِدِ.",
+    "note": "Use the masculine plural suffix -uu (ـوا) for masculine plural groups, not the feminine plural -na."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct past verb for: 'Yesterday, I ___ Arabic.'",
+    "options": [
+     "دَرَسْتُ",
+     "دَرَسَتْ",
+     "دَرَسَ",
+     "دَرَسْنا"
+    ],
+    "answer": 0,
+    "explanation": "The first-person singular suffix ('I') in the past tense is -tu (ـتُ), giving دَرَسْتُ."
+   },
+   {
+    "question": "Choose the correct past verb for: 'Fatima ___ coffee.'",
+    "options": [
+     "شَرِبْتَ",
+     "شَرِبَ",
+     "شَرِبَتْ",
+     "شَرِبُوا"
+    ],
+    "answer": 2,
+    "explanation": "Fatima is third-person feminine singular (she), which requires the suffix -at (ـَتْ), yielding شَرِبَتْ."
+   },
+   {
+    "question": "Choose the correct past verb for: 'We ___ to the market.'",
+    "options": [
+     "ذَهَبْتُمْ",
+     "ذَهَبْنا",
+     "ذَهَبْتِ",
+     "ذَهَبُوا"
+    ],
+    "answer": 1,
+    "explanation": "The first-person plural suffix ('we') is -naa (ـنا), producing ذَهَبْنا."
+   },
+   {
+    "question": "Choose the correct past verb for: 'The students (m.pl.) ___ the lesson.'",
+    "options": [
+     "فَهِمْنَ",
+     "فَهِمْتَ",
+     "فَهِمْنا",
+     "فَهِمُوا"
+    ],
+    "answer": 3,
+    "explanation": "Third-person masculine plural requires the suffix -uu (ـوا) with a silent alif, forming فَهِمُوا."
+   }
+  ],
+  "tip": "The 3rd-person masculine singular form (e.g. كَتَبَ) carries no extra suffix and serves as the primary base entry in Arabic dictionaries."
+ },
+ {
+  "id": "ar-a2-present-tense-conjugation",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "Present Tense Prefix/Suffix Conjugation",
+  "subtitle": "Conjugate imperfective verbs for habitual and ongoing actions using person markers",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Present tense verbs in Arabic require a person-marking prefix (أ / ت / ي / ن), sometimes accompanied by a suffix to denote gender or plurality.",
+  "structure": {
+   "headers": [
+    "Person / Pronoun",
+    "Prefix / Suffix",
+    "Form (فعل)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "أنا (I)",
+      "أَ...ُ",
+      "أَكْتُبُ",
+      "I write"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "هو (He)",
+      "يَ...ُ",
+      "يَكْتُبُ",
+      "He writes"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "هي / أنتَ (She / You m.)",
+      "تَ...ُ",
+      "تَكْتُبُ",
+      "She writes / You write"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "أنتِ (You f.)",
+      "تَ...ِينَ",
+      "تَكْتُبِينَ",
+      "You (f.) write"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "هم (They m.)",
+      "يَ...ُونَ",
+      "يَكْتُبُونَ",
+      "They (m.) write"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Habitual Routine",
+    "example": "أَشْرَبُ القَهْوَةَ كُلَّ يَوْمٍ.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Ongoing Present State",
+    "example": "يَعِيشُ زَيْدٌ في القاهِرَةِ الآنَ.",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "General Universal Fact",
+    "example": "تَطْلُعُ الشَّمْسُ مِنَ الشَّرْقِ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "أَنَا أَكْتُبُ الواجِبَ في المَكْتَبَةِ.",
+    "ko": "",
+    "highlight": "أَكْتُبُ"
+   },
+   {
+    "en": "مُحَمَّدٌ يَعْمَلُ في الشَّرِكَةِ.",
+    "ko": "",
+    "highlight": "يَعْمَلُ"
+   },
+   {
+    "en": "هَلْ تَسْكُنِينَ في هَذِهِ المَدِينَةِ؟",
+    "ko": "",
+    "highlight": "تَسْكُنِينَ"
+   },
+   {
+    "en": "نَحْنُ نَفْهَمُ الدَّرْسَ جَيِّداً.",
+    "ko": "",
+    "highlight": "نَفْهَمُ"
+   },
+   {
+    "en": "المُعَلِّمُونَ يَشْرَحُونَ الكِتابَ.",
+    "ko": "",
+    "highlight": "يَشْرَحُونَ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "أنا يَكْتُبُ الرِّسالَةَ.",
+    "right": "أنا أَكْتُبُ الرِّسالَةَ.",
+    "note": "Use prefix alif (أَ) for 'I' (أنا), not the prefix yaa (يَ), which marks 'he'."
+   },
+   {
+    "wrong": "أنتِ تَشْرَبُ الشَّايَ.",
+    "right": "أنتِ تَشْرَبِينَ الشَّايَ.",
+    "note": "Addressing a female singular (أنتِ) requires both the prefix ta- and suffix -iina (تَـ...ـِينَ)."
+   },
+   {
+    "wrong": "الطُّلابُ يَدْرُسُ في الفَصْلِ.",
+    "right": "الطُّلابُ يَدْرُسُونَ في الفَصْلِ.",
+    "note": "When the plural subject precedes the verb, the verb must show full plural agreement with -uuna (ـُونَ)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct verb: 'Every morning, I ___ milk.'",
+    "options": [
+     "يَشْرَبُ",
+     "أَشْرَبُ",
+     "تَشْرَبُ",
+     "نَشْرَبُ"
+    ],
+    "answer": 1,
+    "explanation": "First-person singular takes the prefix hamza/alif (أَ), resulting in أَشْرَبُ."
+   },
+   {
+    "question": "Select the correct verb: 'Where do you (female singular) ___?'",
+    "options": [
+     "تَسْكُنُ",
+     "يَسْكُنَّ",
+     "تَسْكُنُونَ",
+     "تَسْكُنِينَ"
+    ],
+    "answer": 3,
+    "explanation": "Second-person feminine singular (أنتِ) takes prefix ta- and suffix -iina, forming تَسْكُنِينَ."
+   },
+   {
+    "question": "Select the correct verb: 'We ___ new vocabulary.'",
+    "options": [
+     "نَحْفَظُ",
+     "أَحْفَظُ",
+     "يَحْفَظُ",
+     "يَحْفَظُونَ"
+    ],
+    "answer": 0,
+    "explanation": "First-person plural ('we') always uses prefix nuun (نَ), making نَحْفَظُ."
+   },
+   {
+    "question": "Select the correct verb: 'The engineers (m.pl.) ___ the project.'",
+    "options": [
+     "يَعْمَلْنَ",
+     "تَعْمَلُونَ",
+     "يَعْمَلُونَ",
+     "أَعْمَلُ"
+    ],
+    "answer": 2,
+    "explanation": "Third-person masculine plural takes prefix ya- and suffix -uuna (يَـ...ـُونَ), giving يَعْمَلُونَ."
+   }
+  ],
+  "tip": "Notice that تَكْتُبُ can mean both 'you (m.sg.) write' and 'she writes'; sentence context and subject pronouns will clarify which one is intended."
+ },
+ {
+  "id": "ar-a2-broken-plurals",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#F59E0B",
+  "emoji": "📚",
+  "title": "Broken Plurals (Jam' Taksir)",
+  "subtitle": "Form plurals by shifting internal vowel patterns instead of attaching standard suffixes",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "The majority of masculine and non-human Arabic nouns form plurals by altering their internal vowel template rather than adding standard end suffixes.",
+  "structure": {
+   "headers": [
+    "Pattern Template",
+    "Singular",
+    "Broken Plural",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "أَفْعال (af'aal)",
+      "قَلَم",
+      "أَقْلام",
+      "pen → pens"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "فُعُول (fu'uul)",
+      "قَلْب",
+      "قُلُوب",
+      "heart → hearts"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "كُتُب (kutub)",
+      "كِتاب",
+      "كُتُب",
+      "book → books"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "مَفاطِع / مَفاعِل",
+      "مَكْتَب",
+      "مَكاتِب",
+      "office → offices"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "رِجال (fi'aal)",
+      "رَجُل",
+      "رِجال",
+      "man → men"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Objects & Implements",
+    "example": "اشْتَرَيْتُ أَقْلاماً جَديدَةً.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Locations & Facilities",
+    "example": "تَجَوَّلْنا بَيْنَ مَساجِدَ قَديمَةٍ.",
+    "translation": ""
+   },
+   {
+    "color": "#92400E",
+    "label": "Human Groups",
+    "example": "اجْتَمَعَ عُلَماءُ المَدينَةِ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "قَرَأْتُ ثَلاثَةَ كُتُبٍ في أُسْبُوعٍ.",
+    "ko": "",
+    "highlight": "كُتُبٍ"
+   },
+   {
+    "en": "في هَذِهِ المَدينَةِ شَوارِعُ واسِعَةٌ.",
+    "ko": "",
+    "highlight": "شَوارِعُ"
+   },
+   {
+    "en": "فَتَحَ الحارِسُ جَميعَ الأَبْوابِ.",
+    "ko": "",
+    "highlight": "الأَبْوابِ"
+   },
+   {
+    "en": "شاهَدْنا بُيُوتاً قَديمَةً في القَرْيَةِ.",
+    "ko": "",
+    "highlight": "بُيُوتاً"
+   },
+   {
+    "en": "زارَ السُّيّاحُ مَتاحِفَ عَدِيدَةً.",
+    "ko": "",
+    "highlight": "مَتاحِفَ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "اشْتَرَيْتُ كِتابُونَ كَثيرَةً.",
+    "right": "اشْتَرَيْتُ كُتُباً كَثيرَةً.",
+    "note": "Do not attach the regular sound plural ending -uun to inanimate nouns like kitaab; use its broken plural kutub."
+   },
+   {
+    "wrong": "هَذِهِ قَلَمات جَميلَةٌ.",
+    "right": "هَذِهِ أَقْلامٌ جَميلَةٌ.",
+    "note": "The plural of qalam (pen) is aqlaam (أقلام), not regular feminine plural -aat."
+   },
+   {
+    "wrong": "رَأَيْتُ رَجُلونَ في الشَّارِعِ.",
+    "right": "رَأَيْتُ رِجالاً في الشَّارِعِ.",
+    "note": "The word rajul (man) forms a broken plural rijaal (رجال), never sound masculine *rajuluun."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the broken plural form of بَيْت (house)?",
+    "options": [
+     "بَيْتونَ",
+     "بُيُوت",
+     "بَيْيات",
+     "أَبْيات"
+    ],
+    "answer": 1,
+    "explanation": "بَيْت follows the pattern فُعُول (fu'uul) to become بُيُوت."
+   },
+   {
+    "question": "What is the broken plural of وَلَد (boy)?",
+    "options": [
+     "وَلَدُونَ",
+     "والِدُونَ",
+     "أَوْلاد",
+     "وُلْدانَة"
+    ],
+    "answer": 2,
+    "explanation": "وَلَد follows the أَفْعال (af'aal) pattern to form أَوْلاد."
+   },
+   {
+    "question": "What is the correct broken plural of مَدْرَسَة (school)?",
+    "options": [
+     "مَدارِس",
+     "مَدْرَسات",
+     "مُدَرِّسُونَ",
+     "أَدْراس"
+    ],
+    "answer": 0,
+    "explanation": "مَدْرَسَة takes the broken plural pattern مَفاعِل (mafaa'il), becoming مَدارِس."
+   },
+   {
+    "question": "What is the broken plural of مَدينَة (city)?",
+    "options": [
+     "مَدينات",
+     "مَدائِن",
+     "مُدُن",
+     "مَدَنُونَ"
+    ],
+    "answer": 2,
+    "explanation": "The standard broken plural for مَدينَة in modern Arabic is مُدُن (mudun)."
+   }
+  ],
+  "tip": "Whenever you memorize a new singular Arabic noun, always memorize its broken plural alongside it like a single vocabulary pair."
+ },
+ {
+  "id": "ar-a2-non-human-plural-agreement",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#F59E0B",
+  "emoji": "🐈",
+  "title": "The Non-Human Plural Rule",
+  "subtitle": "Treat plural non-human nouns as grammatically feminine singular for all agreement",
+  "color": "#B45309",
+  "bg": "#FFFBEB",
+  "keyPoint": "All non-human plural nouns (animals, objects, ideas) require feminine singular adjectives, pronouns, demonstratives, and verbs.",
+  "structure": {
+   "headers": [
+    "Target Noun (Plural)",
+    "Agreement Type",
+    "Correct Arabic Form",
+    "Grammatical Status"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "الكُتُب (books)",
+      "Adjective",
+      "الكُتُبُ الجَديدَةُ",
+      "Feminine Singular Adjective"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "السَّيّارات (cars)",
+      "Demonstrative",
+      "هَذِهِ السَّيّاراتُ",
+      "Feminine Singular Pronoun"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "الكِلاب (dogs)",
+      "Verb",
+      "تَجْري الكِلابُ",
+      "Feminine Singular Verb Prefix"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "الأَيّام (days)",
+      "Pronoun Suffix",
+      "الأَيّامُ وَذِكْراها",
+      "Feminine Suffix (-haa)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Descriptive Modifiers",
+    "example": "قَرَأْتُ رَسائِلَ قَديمَةً.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Demonstrative Agreement",
+    "example": "هَذِهِ كِلابٌ صَغيرَةٌ.",
+    "translation": ""
+   },
+   {
+    "color": "#78350F",
+    "label": "Verbal Agreement",
+    "example": "سَقَطَتِ الأَوْراقُ مِنَ الشَّجَرِ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "هَذِهِ بُيُوتٌ جَميلَةٌ جِدّاً.",
+    "ko": "",
+    "highlight": "جَميلَةٌ"
+   },
+   {
+    "en": "الدُّرُوسُ العَرَبِيَّةُ سَهْلَةٌ ومُفِيدَةٌ.",
+    "ko": "",
+    "highlight": "سَهْلَةٌ ومُفِيدَةٌ"
+   },
+   {
+    "en": "تَسِيرُ السَّيّاراتُ في الشَّوارِعِ السَّرِيعَةِ.",
+    "ko": "",
+    "highlight": "تَسِيرُ"
+   },
+   {
+    "en": "تِلْكَ الجِبالُ عالِيَةٌ جِدّاً.",
+    "ko": "",
+    "highlight": "تِلْكَ"
+   },
+   {
+    "en": "أَيْنَ الكُتُبُ؟ وَضَعْتُها عَلَى المَكْتَبِ.",
+    "ko": "",
+    "highlight": "وَضَعْتُها"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "هَؤُلاءِ كُتُبٌ مُهِمَّةٌ.",
+    "right": "هَذِهِ كُتُبٌ مُهِمَّةٌ.",
+    "note": "هَؤُلاءِ is only used for human plurals; non-human plurals must use the feminine singular demonstrative هَذِهِ."
+   },
+   {
+    "wrong": "الجِبالُ كَبِيرُونَ في الشِّمالِ.",
+    "right": "الجِبالُ كَبِيرَةٌ في الشِّمالِ.",
+    "note": "Non-human plurals cannot take masculine sound plural adjectives; they take feminine singular (كَبِيرَة)."
+   },
+   {
+    "wrong": "الكِلابُ جَرَوْا خَلْفَ القِطِّ.",
+    "right": "الكِلابُ جَرَتْ خَلْفَ القِطِّ.",
+    "note": "Verbs referring back to non-human plurals must be inflected in the feminine singular form (جَرَتْ)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: '___ are ancient cities.'",
+    "options": [
+     "هَؤُلاءِ",
+     "هَذا",
+     "هَذِهِ",
+     "هُم"
+    ],
+    "answer": 2,
+    "explanation": "مُدُن (cities) is a non-human plural, so it requires the feminine singular demonstrative هَذِهِ."
+   },
+   {
+    "question": "Choose the correct adjective: 'I bought new pens: اشْتَرَيْتُ أَقْلاماً ___.'",
+    "options": [
+     "جَديدَةً",
+     "جَديدونَ",
+     "جُدُداً",
+     "جَديدينَ"
+    ],
+    "answer": 0,
+    "explanation": "أقلام is a non-human plural noun; its modifying adjective must be feminine singular (جَديدَةً)."
+   },
+   {
+    "question": "Choose the correct verb: 'The cars ___ fast.'",
+    "options": [
+     "يَسِيرُونَ",
+     "تَسِيرُ",
+     "تَسِيرِينَ",
+     "يَسِيرُ"
+    ],
+    "answer": 1,
+    "explanation": "Plural non-human subjects take a 3rd-person feminine singular verb (تَسِيرُ)."
+   },
+   {
+    "question": "Choose the correct pronoun: 'I found the keys and took ___ (them).'",
+    "options": [
+     "ـهُمْ",
+     "ـهُ",
+     "ـهُنَّ",
+     "ـها"
+    ],
+    "answer": 3,
+    "explanation": "Keys (مَفاتِيح) are non-human plural, referring to them requires the feminine singular pronoun suffix ـها."
+   }
+  ],
+  "tip": "Memorize the classic golden rule of Arabic syntax: 'Every non-human plural is feminine singular' (كُلُّ جَمْعٍ لا يَعْقِلُ مُؤَنَّثٌ)."
+ },
+ {
+  "id": "ar-a2-dual-system",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#F59E0B",
+  "emoji": "✌️",
+  "title": "The Dual (Al-Muthanna) in Nouns and Verbs",
+  "subtitle": "Inflect words for exactly two entities using dedicated dual endings",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Arabic has a distinct grammatical dual number marked by -aan/-ayn on nouns and -aa on verbs to represent exactly two people or items.",
+  "structure": {
+   "headers": [
+    "Case / Position",
+    "Noun Suffix",
+    "Example",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Nominative (Marfoo')",
+      "-aan (ـانِ)",
+      "كِتابانِ",
+      "two books (subject)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Accusative/Genitive",
+      "-ayn (ـَيْنِ)",
+      "كِتابَيْنِ",
+      "two books (object/prep)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine Noun (+taa)",
+      "-ataan / -atayn",
+      "مَدِينَتَانِ",
+      "two cities"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Verb (3rd person)",
+      "-aa (ـا)",
+      "كَتَبا",
+      "they two (m.) wrote"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Present Verb (3rd person)",
+      "-aani (ـانِ)",
+      "يَكْتُبانِ",
+      "they two (m.) write"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Subject of a Sentence",
+    "example": "جاءَ الطّالِبانِ الجَديدانِ.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Direct Object Position",
+    "example": "قَرَأْتُ كِتابَيْنِ مُفِيدَيْنِ.",
+    "translation": ""
+   },
+   {
+    "color": "#5B21B6",
+    "label": "Paired Human Action",
+    "example": "الوَلَدانِ يَلْعَبانِ مَعاً.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "زارَنا صَديقانِ أَمْسِ.",
+    "ko": "",
+    "highlight": "صَديقانِ"
+   },
+   {
+    "en": "اشْتَرَيْتُ قَلَمَيْنِ مِنَ الدُّكَّانِ.",
+    "ko": "",
+    "highlight": "قَلَمَيْنِ"
+   },
+   {
+    "en": "البِنْتانِ دَرَسَتا في نَفْسِ المَدْرَسَةِ.",
+    "ko": "",
+    "highlight": "دَرَسَتا"
+   },
+   {
+    "en": "سَكَنْتُ في مَدِينَتَيْنِ كَبِيرَتَيْنِ.",
+    "ko": "",
+    "highlight": "مَدِينَتَيْنِ"
+   },
+   {
+    "en": "المُهَنْدِسانِ يَعْمَلانِ بِجِدٍّ.",
+    "ko": "",
+    "highlight": "المُهَنْدِسانِ يَعْمَلانِ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "عِنْدي اثْنَيْنِ كِتاب.",
+    "right": "عِنْدي كِتابانِ.",
+    "note": "Do not use the numeral two followed by a singular noun in Arabic; decline the noun itself directly into the dual (كِتابانِ)."
+   },
+   {
+    "wrong": "رَأَيْتُ رَجُلانِ في الحَديقَةِ.",
+    "right": "رَأَيْتُ رَجُلَيْنِ في الحَديقَةِ.",
+    "note": "In the accusative object position, the dual takes suffix -ayn (ـَيْنِ), not nominative -aan (ـانِ)."
+   },
+   {
+    "wrong": "الطّالِبانِ كَتَبُوا الرِّسالَةَ.",
+    "right": "الطّالِبانِ كَتَبا الرِّسالَةَ.",
+    "note": "Verbs agreeing with two subjects must take the dual verb suffix alif (ـا), not the plural suffix (ـوا)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank with the subject: 'The two students (m.) arrived: وَصَلَ ___.'",
+    "options": [
+     "الطّالِبَيْنِ",
+     "الطُّلابُ",
+     "الطّالِبانِ",
+     "الطّالِباتُ"
+    ],
+    "answer": 2,
+    "explanation": "As the subject (nominative / marfoo'), the dual noun requires the ending -aan (ـانِ), giving الطّالِبانِ."
+   },
+   {
+    "question": "Choose the correct verb: 'The two girls ___ the lesson.'",
+    "options": [
+     "فَهِمُوا",
+     "فَهِمْنَ",
+     "فَهِمَتْ",
+     "فَهِمَتا"
+    ],
+    "answer": 3,
+    "explanation": "For two females in the past tense, the verb takes the feminine dual suffix -ataa (ـتا), yielding فَهِمَتا."
+   },
+   {
+    "question": "Fill in the blank: 'I ate at two restaurants: أَكَلْتُ في ___.'",
+    "options": [
+     "مَطْعَمَيْنِ",
+     "مَطْعَمانِ",
+     "مَطاعِمُونَ",
+     "مَطْعَمات"
+    ],
+    "answer": 0,
+    "explanation": "Following the preposition في (genitive / majroor), the dual noun takes the suffix -ayn (ـَيْنِ): مَطْعَمَيْنِ."
+   },
+   {
+    "question": "Choose the correct present tense verb: 'The two brothers ___ every morning.'",
+    "options": [
+     "يَتَكَلَّمُونَ",
+     "يَتَكَلَّمانِ",
+     "تَتَكَلَّمِينَ",
+     "يَتَكَلَّمْنا"
+    ],
+    "answer": 1,
+    "explanation": "Third-person masculine dual in the present tense adds the dual ending -aani (ـانِ), producing يَتَكَلَّمانِ."
+   }
+  ],
+  "tip": "Distinguish between the dual suffix -ayn (ـَيْنِ, with fat-ha before yaa) and the sound masculine plural -iin (ـِينَ, with kasra before yaa)."
+ },
+ {
+  "id": "ar-a2-negation-particles",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🚫",
+  "title": "Core Negation (Maa, Laa, Laysa)",
+  "subtitle": "Master the primary tools for negating past, present, and equational sentences",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Use maa to negate past actions, laa for present habits, and laysa to negate equational nominal sentences.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Target Sentence Type",
+    "Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ما",
+      "Past verbal sentences",
+      "ما ذَهَبَ زَيْدٌ",
+      "Zayd did not go"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "لا",
+      "Present tense habitual verbs",
+      "لا يَشْرَبُ الشَّايَ",
+      "He does not drink tea"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "لَيْسَ",
+      "Present nominal equations",
+      "لَيْسَ البَيْتُ كَبِيرًا",
+      "The house is not big"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Past Negation",
+    "example": "ما كَتَبَ الطَّالِبُ الرِّسَالَةَ أَمْسِ.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Habitual Present",
+    "example": "أَنَا لا آكُلُ اللَّحْمَ فِي الصَّبَاحِ.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Equational Nominal",
+    "example": "لَيْسَ الطَّقْسُ بَارِدًا اليَوْمَ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ما سَافَرَ أَبِي إِلَى دُبَيّ.",
+    "ko": "",
+    "highlight": "ما سَافَرَ"
+   },
+   {
+    "en": "لا يُحِبُّ أَخِي السَّفَرَ بِالطَّائِرَةِ.",
+    "ko": "",
+    "highlight": "لا يُحِبُّ"
+   },
+   {
+    "en": "لَيْسَتِ المُعَلِّمَةُ حَاضِرَةً فِي الفَصْلِ.",
+    "ko": "",
+    "highlight": "لَيْسَتِ"
+   },
+   {
+    "en": "ما عَرَفْتُ جَوَابَ هَذَا السُّؤَالِ.",
+    "ko": "",
+    "highlight": "ما عَرَفْتُ"
+   },
+   {
+    "en": "نَحْنُ لَسْنَا طُلاَّبًا فِي هَذِهِ الجَامِعَةِ.",
+    "ko": "",
+    "highlight": "لَسْنَا"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "لا ذَهَبَ أَحْمَدُ إِلَى السُّوقِ.",
+    "right": "ما ذَهَبَ أَحْمَدُ إِلَى السُّوقِ.",
+    "note": "Use 'maa' (or 'lam' + jussive) to negate past actions; 'laa' is reserved for present or imperative contexts."
+   },
+   {
+    "wrong": "لَيْسَ هُوَ يَشْرَبُ القَهْوَةَ.",
+    "right": "لا يَشْرَبُ القَهْوَةَ.",
+    "note": "To negate an active present-tense verb directly, use 'laa' instead of 'laysa'."
+   },
+   {
+    "wrong": "لَيْسَ الكِتَابُ جَدِيدٌ.",
+    "right": "لَيْسَ الكِتَابُ جَدِيدًا.",
+    "note": "The predicate of 'laysa' (khabar laysa) must be placed in the accusative case with nasb (fathatayn)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday, Fatima ___ her homework.",
+    "options": [
+     "لا كَتَبَتْ",
+     "ما كَتَبَتْ",
+     "لَيْسَتْ كَتَبَتْ",
+     "لَمْ تَكْتُبْ كَتَبَتْ"
+    ],
+    "answer": 1,
+    "explanation": "Negating a past tense verb requires 'maa' directly preceding the verb."
+   },
+   {
+    "question": "He ___ milk at all.",
+    "options": [
+     "لا يَشْرَبُ",
+     "ما يَشْرَبُ",
+     "لَيْسَ يَشْرَبُ",
+     "لَنْ يَشْرَبَ أَمْسِ"
+    ],
+    "answer": 0,
+    "explanation": "Regular present habitual actions are negated using 'laa'."
+   },
+   {
+    "question": "The exam is ___ difficult.",
+    "options": [
+     "لَيْسَ صَعْبٌ",
+     "لا صَعْبٌ",
+     "لَيْسَ صَعْبًا",
+     "ما صَعْبٌ"
+    ],
+    "answer": 2,
+    "explanation": "'Laysa' negates nominal sentences, and its predicate takes the accusative marker (-an)."
+   },
+   {
+    "question": "We ___ ready for the test.",
+    "options": [
+     "ما نَحْنُ",
+     "لا نَحْنُ",
+     "لَيْسُوا",
+     "لَسْنَا مُسْتَعِدِّينَ"
+    ],
+    "answer": 3,
+    "explanation": "'Laysa' conjugates like a past verb: 'lasnaa' matches the first person plural 'we'."
+   }
+  ],
+  "tip": "Remember that 'laysa' conjugates as a past-tense verb in form, but strictly refers to present-tense states."
+ },
+ {
+  "id": "ar-a2-derived-verb-forms-ii-iv",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🌱",
+  "title": "Derived Verb Forms II, III, and IV",
+  "subtitle": "Augment root verbs to express causation, interaction, and direct transitivity",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Derive Form II by doubling the middle radical (fa''ala), Form III by lengthening the first vowel (faa'ala), and Form IV by prefixing a hamza (af'ala).",
+  "structure": {
+   "headers": [
+    "Form",
+    "Pattern",
+    "Typical Meaning",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Form II",
+      "فَعَّلَ / يُفَعِّلُ",
+      "Causative / Intensive",
+      "دَرَّسَ (to teach)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Form III",
+      "فَاعَلَ / يُفَاعِلُ",
+      "Mutual / Associative",
+      "سَافَرَ (to travel)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Form IV",
+      "أَفْعَلَ / يُفْعِلُ",
+      "Causative / Transitive",
+      "أَرْسَلَ (to send)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Form II: Causative Teaching",
+    "example": "عَلَّمَ المُدَرِّسُ التَّلَامِيذَ اللُّغَةَ.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Form III: Mutual Exchange",
+    "example": "شَاهَدَ الطَّالِبُ فِيلْمًا مَعَ صَدِيقِهِ.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Form IV: Instigating Action",
+    "example": "أَخْرَجَ الرَّجُلُ المَالَ مِنْ جَيْبِهِ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "دَرَّسَ الأُسْتَاذُ التَّارِيخَ فِي الجَامِعَةِ.",
+    "ko": "",
+    "highlight": "دَرَّسَ"
+   },
+   {
+    "en": "قَابَلَ طَارِقٌ رَئِيسَ الشَّرِكَةِ صَبَاحًا.",
+    "ko": "",
+    "highlight": "قَابَلَ"
+   },
+   {
+    "en": "أَعْلَنَتِ الوِزَارَةُ عَنِ المَشْرُوعِ الجَدِيدِ.",
+    "ko": "",
+    "highlight": "أَعْلَنَتِ"
+   },
+   {
+    "en": "فَكَّرَ عُمَرُ فِي حَلِّ المُشْكِلَةِ.",
+    "ko": "",
+    "highlight": "فَكَّرَ"
+   },
+   {
+    "en": "سَاعَدَتْ مَرْيَمُ أُمَّهَا فِي المَطْبَخِ.",
+    "ko": "",
+    "highlight": "سَاعَدَتْ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "عَلِمَ المُعَلِّمُ الأَوْلادَ.",
+    "right": "عَلَّمَ المُعَلِّمُ الأَوْلادَ.",
+    "note": "Form I 'alima' means 'to know'; to express 'to teach' (causing someone to know), Form II 'allama' is needed."
+   },
+   {
+    "wrong": "كَتَبَ عَلِيٌّ مَعَ خَالِدٍ.",
+    "right": "كَاتَبَ عَلِيٌّ خَالِدًا.",
+    "note": "Use Form III 'kaataba' to express mutual correspondence without needing unnecessary prepositional clutter."
+   },
+   {
+    "wrong": "خَرَجَ عَلِيٌّ الكِتَابَ.",
+    "right": "أَخْرَجَ عَلِيٌّ الكِتَابَ.",
+    "note": "'Kharaja' is intransitive ('he exited'); to make it transitive ('he took out'), Form IV 'akhraja' must be used."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which verb form pattern represents Form II?",
+    "options": [
+     "فَعَّلَ",
+     "فَاعَلَ",
+     "أَفْعَلَ",
+     "تَفَعَّلَ"
+    ],
+    "answer": 0,
+    "explanation": "Form II is characterized by doubling the second root radical with a shaddah: fa''ala."
+   },
+   {
+    "question": "To express mutual helping or assisting someone, use:",
+    "options": [
+     "سَمِعَ",
+     "سَاعَدَ",
+     "سَكَنَ",
+     "أَسْلَمَ"
+    ],
+    "answer": 1,
+    "explanation": "Form III 'faa'ala' often conveys an action directed at another person, such as 'saa'ada' (to assist)."
+   },
+   {
+    "question": "The verb أَرْسَلَ belongs to which derived form?",
+    "options": [
+     "Form I",
+     "Form II",
+     "Form III",
+     "Form IV"
+    ],
+    "answer": 3,
+    "explanation": "Form IV follows the pattern 'af'ala' with an initial hamza and sukun on the first radical."
+   },
+   {
+    "question": "The present tense prefix for Forms II, III, and IV always takes which vowel?",
+    "options": [
+     "Fat-hah (a)",
+     "Dammah (u)",
+     "Kasrah (i)",
+     "Sukun (no vowel)"
+    ],
+    "answer": 1,
+    "explanation": "Forms II, III, and IV are unique in having a dammah on their present-tense prefix (yu-fa''ilu, yu-faa'ilu, yu-f'ilu)."
+   }
+  ],
+  "tip": "Check the present-tense prefix: if it carries a dammah ('yu-'), the verb is almost certainly Form II, III, or IV."
+ },
+ {
+  "id": "ar-b1-case-endings-i'rab",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🏷️",
+  "title": "The Three Grammatical Cases (I'rab: Raf', Nasb, Jarr)",
+  "subtitle": "Track subjects, objects, and possessives through standard case declensions",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Arabic nouns decline into three cases: raf' (nominative for subjects), nasb (accusative for objects), and jarr (genitive for prepositions and possession).",
+  "structure": {
+   "headers": [
+    "Case",
+    "Primary Marker",
+    "Grammatical Role",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "الرَّفْع (Raf')",
+      "Dammah (-u)",
+      "Subject / Predicate",
+      "جَاءَ المُعَلِّمُ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "النَّصْب (Nasb)",
+      "Fat-hah (-a)",
+      "Direct Object / Adverbial",
+      "رَأَيْتُ المُعَلِّمَ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "الجَرّ (Jarr)",
+      "Kasrah (-i)",
+      "Prepositional / Idafa",
+      "سَلَّمْتُ عَلَى المُعَلِّمِ"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Subject Nominative (Raf')",
+    "example": "كَتَبَ الوَلَدُ قِصَّةً قَصِيرَةً.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Direct Object Accusative (Nasb)",
+    "example": "قَرَأَتْ فَاطِمَةُ الكِتَابَ كُلَّهُ.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Prepositional Genitive (Jarr)",
+    "example": "جَلَسَ الرَّجُلُ فِي الحَدِيقَةِ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "الطَّالِبُ الجَدِيدُ مُجْتَهِدٌ.",
+    "ko": "",
+    "highlight": "الطَّالِبُ"
+   },
+   {
+    "en": "شَرِبَ الضَّيْفُ العَصِيرَ البَارِدَ.",
+    "ko": "",
+    "highlight": "العَصِيرَ"
+   },
+   {
+    "en": "وَضَعْتُ المِفْتَاحَ عَلَى المَكْتَبِ.",
+    "ko": "",
+    "highlight": "المَكْتَبِ"
+   },
+   {
+    "en": "بَابُ البَيْتِ مَفْتُوحٌ.",
+    "ko": "",
+    "highlight": "البَيْتِ"
+   },
+   {
+    "en": "زَارَ الوُزَرَاءُ مَدِينَةَ القَاهِرَةِ.",
+    "ko": "",
+    "highlight": "مَدِينَةَ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "رَأَيْتُ الطَّالِبُ فِي الصَّفِّ.",
+    "right": "رَأَيْتُ الطَّالِبَ فِي الصَّفِّ.",
+    "note": "The direct object of a verb must take nasb with a fat-hah ('at-taaliba'), not raf'."
+   },
+   {
+    "wrong": "كِتَابَ المُهَنْدِسُ مَفْقُودٌ.",
+    "right": "كِتَابُ المُهَنْدِسِ مَفْقُودٌ.",
+    "note": "In an idafa, the head noun takes its regular role marker, while the mudaf ilayh is strictly genitive (jarr)."
+   },
+   {
+    "wrong": "ذَهَبْتُ إِلَى السُّوقُ.",
+    "right": "ذَهَبْتُ إِلَى السُّوقِ.",
+    "note": "Any noun preceded by a preposition like 'ila' must be in the genitive case marked by kasrah."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the case of the underlined subject: 'نَامَ الطِّفْلُ'",
+    "options": [
+     "مَرْفُوع (Raf')",
+     "مَنْصُوب (Nasb)",
+     "مَجْرُور (Jarr)",
+     "مَجْزُوم (Jazm)"
+    ],
+    "answer": 0,
+    "explanation": "The doer of an action (faa'il) is in the nominative case, known as marfoo'."
+   },
+   {
+    "question": "Complete with the correct direct object: 'اشْتَرَى وَالِدِي ___'",
+    "options": [
+     "سَيَّارَةٌ",
+     "سَيَّارَةٍ",
+     "سَيَّارَةً",
+     "سَيَّارَةُ"
+    ],
+    "answer": 2,
+    "explanation": "Direct objects take nasb, which for indefinite singular nouns is marked by fathatayn (-an)."
+   },
+   {
+    "question": "Complete the idafa: 'مِفْتَاحُ ___ عَلَى الطَّاوِلَةِ'",
+    "options": [
+     "الغُرْفَةُ",
+     "الغُرْفَةَ",
+     "الغُرْفَةِ",
+     "الغُرْفَةً"
+    ],
+    "answer": 2,
+    "explanation": "The second term of a possessive construct (al-mudaaf ilayh) is always in jarr with a kasrah."
+   },
+   {
+    "question": "Dual nouns take the suffix '-ayni' in which two cases?",
+    "options": [
+     "Raf' and Jarr",
+     "Nasb and Jarr",
+     "Raf' and Nasb",
+     "Nasb only"
+    ],
+    "answer": 1,
+    "explanation": "Dual nouns take '-aani' in raf', and change to '-ayni' in both nasb and jarr."
+   }
+  ],
+  "tip": "Remember that prepositions and possessive constructs (idafa) are the ONLY two triggers that cause a noun to take jarr."
+ },
+ {
+  "id": "ar-b1-verb-moods-nasb-jazm",
+  "level": "b1",
+  "category": "modals",
+  "categoryColor": "#D97706",
+  "emoji": "⚡",
+  "title": "Subjunctive and Jussive Moods (Al-Mansub wa Al-Majzum)",
+  "subtitle": "Alter present verb endings to signal intent, strict negation, and commands",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Particles like 'an' and 'lan' place the imperfect verb into the subjunctive (mansub, ending in -a), while 'lam' and 'laa' al-naahiya place it into the jussive (majzum, ending in sukun).",
+  "structure": {
+   "headers": [
+    "Mood",
+    "Triggers",
+    "Ending Change",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Indicative (Marfoo')",
+      "Default",
+      "-u (dammah)",
+      "يَكْتُبُ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Subjunctive (Mansub)",
+      "أَنْ، لَنْ، كَيْ، حَتَّى",
+      "-a (fat-hah)",
+      "لَنْ يَكْتُبَ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Jussive (Majzum)",
+      "لَمْ، لَا النَّاهِيَة",
+      "-0 (sukun)",
+      "لَمْ يَكْتُبْ"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Future Negation (Subjunctive)",
+    "example": "لَنْ أُسَافِرَ غَدًا إِلَى العَاصِمَةِ.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Past Negation (Jussive)",
+    "example": "لَمْ يَفْهَمْ زَيْدٌ هَذَا الدَّرْسَ.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Intent & Subordination",
+    "example": "أُرِيدُ أَنْ أَتَعَلَّمَ اللُّغَةَ العَرَبِيَّةَ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "يَجِبُ أَنْ تَقْرَأَ هَذَا الكِتَابَ.",
+    "ko": "",
+    "highlight": "أَنْ تَقْرَأَ"
+   },
+   {
+    "en": "لَنْ نَتْرُكَ هَذِهِ المَدِينَةَ أَبَدًا.",
+    "ko": "",
+    "highlight": "لَنْ نَتْرُكَ"
+   },
+   {
+    "en": "لَمْ يَصِلِ القِطَارُ فِي مَوْعِدِهِ.",
+    "ko": "",
+    "highlight": "لَمْ يَصِلِ"
+   },
+   {
+    "en": "لا تَكْذِبْ فِي حَدِيثِكَ.",
+    "ko": "",
+    "highlight": "لا تَكْذِبْ"
+   },
+   {
+    "en": "سَافَرْتُ كَيْ أَدْرُسَ الطِّبَّ.",
+    "ko": "",
+    "highlight": "كَيْ أَدْرُسَ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "أُرِيدُ أَنْ أَذْهَبُ مَعَكَ.",
+    "right": "أُرِيدُ أَنْ أَذْهَبَ مَعَكَ.",
+    "note": "The complementizer 'an' triggers the subjunctive mood, changing the final vowel from dammah to fat-hah."
+   },
+   {
+    "wrong": "لَمْ يَكْتُبُ رِسَالَتَهُ.",
+    "right": "لَمْ يَكْتُبْ رِسَالَتَهُ.",
+    "note": "The past-negator particle 'lam' triggers the jussive mood, replacing dammah with a sukun."
+   },
+   {
+    "wrong": "لَنْ كَتَبْتُ الوَاجِبَ.",
+    "right": "لَنْ أَكْتُبَ الوَاجِبَ.",
+    "note": "'Lan' cannot precede past-tense verbs; it strictly governs imperfect subjunctive verbs to negate future actions."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which particle negates future actions and triggers the subjunctive?",
+    "options": [
+     "لَمْ",
+     "مَا",
+     "لَنْ",
+     "لَا"
+    ],
+    "answer": 2,
+    "explanation": "'Lan' indicates emphatic future negation and requires the subjunctive verb form ending in fat-hah."
+   },
+   {
+    "question": "Choose the correct ending: 'يَجِبُ عَلَيْكَ أَنْ ___'",
+    "options": [
+     "تَجْتَهِدُ",
+     "تَجْتَهِدَ",
+     "تَجْتَهِدْ",
+     "تَجْتَهِدِ"
+    ],
+    "answer": 1,
+    "explanation": "Following the subjunctive particle 'an', the singular masculine imperfect takes fat-hah."
+   },
+   {
+    "question": "The particle 'لَمْ' conveys past negation and triggers which mood?",
+    "options": [
+     "المَرْفُوع (Indicative)",
+     "المَنْصُوب (Subjunctive)",
+     "المَجْرُور (Genitive)",
+     "المَجْزُوم (Jussive)"
+    ],
+    "answer": 3,
+    "explanation": "'Lam' is one of the primary particles of jazm (jussive), negating past action using the present tense stem."
+   },
+   {
+    "question": "In plural verbs ending in '-oona', what happens in subjunctive and jussive moods?",
+    "options": [
+     "The final noon is dropped",
+     "The noon turns into a meem",
+     "A fat-hah is added after noon",
+     "No change occurs"
+    ],
+    "answer": 0,
+    "explanation": "Verbs of the 'Five Verbs' paradigm (like yaktuboona) drop the final noon (hazf an-noon) in both nasb and jazm."
+   }
+  ],
+  "tip": "Pairings to memorize: 'an/lan' always take fat-hah (subjunctive), while 'lam/laa' prohibition always take sukun (jussive)."
+ },
+ {
+  "id": "ar-b1-derived-verb-forms-v-x",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🌳",
+  "title": "Derived Verb Forms V through X",
+  "subtitle": "Uncover subtle semantic layers: reflexives, reciprocity, and seeking states",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Higher verb forms build upon lower roots to systematically express reflexivity (Forms V & VIII), cooperation (Form VI), passivity (Form VII), and requests (Form X).",
+  "structure": {
+   "headers": [
+    "Form",
+    "Pattern",
+    "Core Meaning",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Form V",
+      "تَفَعَّلَ / يَتَفَعَّلُ",
+      "Reflexive of Form II",
+      "تَعَلَّمَ (to learn)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Form VI",
+      "تَفَاعَلَ / يَتَفَاعَلُ",
+      "Mutual / Simulated",
+      "تَعَاوَنَ (to cooperate)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Form VII",
+      "اِنْفَعَلَ / يَنْفَعِلُ",
+      "Passive / Involuntary",
+      "اِنْكَسَرَ (to break)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Form VIII",
+      "اِفْتَعَلَ / يَفْتَعِلُ",
+      "Reflexive / Effortful",
+      "اِجْتَمَعَ (to gather)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Form X",
+      "اِسْتَفْعَلَ / يَسْتَفْعِلُ",
+      "Seeking / Estimating",
+      "اِسْتَغْفَرَ (to seek pardon)"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Form V: Gradual Acquisition",
+    "example": "تَعَلَّمَ زَيْدٌ اللُّغَةَ العَرَبِيَّةَ بِسُرْعَةٍ.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Form VII: Involuntary State",
+    "example": "اِنْكَسَرَ الزُّجَاجُ عِنْدَمَا سَقَطَ.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Form X: Requesting Action",
+    "example": "اِسْتَفْسَرَ الطَّالِبُ عَنِ النَّتِيجَةِ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "تَكَلَّمَ الرَّجُلُ أَمَامَ النَّاسِ بِثِقَةٍ.",
+    "ko": "",
+    "highlight": "تَكَلَّمَ"
+   },
+   {
+    "en": "تَشَارَكَ الأَصْدِقَاءُ فِي المَشْرُوعِ.",
+    "ko": "",
+    "highlight": "تَشَارَكَ"
+   },
+   {
+    "en": "اِنْفَتَحَ البَابُ بِسَبَبِ الرِّيحِ.",
+    "ko": "",
+    "highlight": "اِنْفَتَحَ"
+   },
+   {
+    "en": "اِشْتَغَلَ العُمَّالُ فِي المَصْنَعِ طَوَالَ اليَوْمِ.",
+    "ko": "",
+    "highlight": "اِشْتَغَلَ"
+   },
+   {
+    "en": "اِسْتَقْبَلَ المُدِيرُ الضُّيُوفَ بِتَرْحِيبٍ.",
+    "ko": "",
+    "highlight": "اِسْتَقْبَلَ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "كَسَرَ الزُّجَاجُ وَحْدَهُ.",
+    "right": "اِنْكَسَرَ الزُّجَاجُ.",
+    "note": "'Kasara' means someone broke something; use Form VII 'inkasara' when an object breaks by itself without an agent."
+   },
+   {
+    "wrong": "عَلِمْتُ نَفْسِي العَرَبِيَّةَ.",
+    "right": "تَعَلَّمْتُ العَرَبِيَّةَ.",
+    "note": "Rather than using reflexive pronouns, Arabic employs Form V 'ta'allama' to express learning (teaching oneself)."
+   },
+   {
+    "wrong": "سَأَلْتُ الغُفْرَانَ مِنَ اللهِ.",
+    "right": "اِسْتَغْفَرْتُ اللهَ.",
+    "note": "Form X 'istaghfara' inherently contains the meaning 'to seek forgiveness', making additional nouns redundant."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Form X verbs ('istaf'ala') predominantly signify:",
+    "options": [
+     "Extreme passivity",
+     "Seeking or requesting something",
+     "Mutual competition",
+     "Accidental destruction"
+    ],
+    "answer": 1,
+    "explanation": "The prefix 'ista-' frequently denotes asking for, requesting, or estimating the root concept (e.g. istakhdama, istaghfara)."
+   },
+   {
+    "question": "Which verb demonstrates the reciprocal Form VI pattern?",
+    "options": [
+     "تَعَاوَنَ",
+     "عَاوَنَ",
+     "أَعَانَ",
+     "اِسْتَعَانَ"
+    ],
+    "answer": 0,
+    "explanation": "'Ta'aawana' follows the 'tafaa'ala' pattern representing reciprocal cooperation among multiple participants."
+   },
+   {
+    "question": "The verb 'اِنْقَطَعَ' (to be cut off) is which derived form?",
+    "options": [
+     "Form V",
+     "Form VIII",
+     "Form VII",
+     "Form X"
+    ],
+    "answer": 2,
+    "explanation": "Verbs beginning with an unvocalized alif followed by noon (infa'ala) are Form VII, denoting intransitive or reflexive passivity."
+   },
+   {
+    "question": "What is the primary structural difference between Form II and Form V?",
+    "options": [
+     "Prefixing 'ista-'",
+     "Lengthening the first vowel",
+     "Prefixing the letter 'taa-' (تَـ)",
+     "Adding a noon prefix"
+    ],
+    "answer": 2,
+    "explanation": "Form V (tafa''ala) is formed by adding the prefix 'ta-' to the doubled middle radical of Form II (fa''ala)."
+   }
+  ],
+  "tip": "Whenever you spot the prefix 'ista-' (اِسْتَـ), assume the verb means 'to seek' or 'to request' whatever root concept follows."
+ },
+ {
+  "id": "ar-b1-kana-and-its-sisters",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "⏳",
+  "title": "Kana and Its Sisters (Kana wa Akhawatuha)",
+  "subtitle": "Expressing past, ongoing, or transformed states by marking the predicate accusative",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Verbs in this family leave the subject in the nominative (Marfu') but shift the predicate into the accusative (Mansub).",
+  "structure": {
+   "headers": [
+    "Verb",
+    "Arabic Example",
+    "Grammatical Role of Predicate"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "كانَ (was)",
+      "كانَ الجَوُّ جَميلاً",
+      "Accusative predicate marked with Tanwin Fatha"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "أَصْبَحَ (became)",
+      "أَصْبَحَ الطّالِبُ مُجْتَهِداً",
+      "Accusative predicate showing change of state"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "لَيْسَ (is not)",
+      "لَيْسَ الاِمْتِحانُ صَعْباً",
+      "Accusative predicate of negation"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ما زالَ (still)",
+      "ما زالَ المُعَلِّمُ غائباً",
+      "Accusative predicate of continuity"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Past State (Kana)",
+    "example": "كانَ البَيْتُ كَبيراً.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Transformation (Asbaha / Sara)",
+    "example": "صارَ الماءُ بارِداً.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Negation of State (Laysa)",
+    "example": "لَيْسَ الوَقْتُ مُناسِباً.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "كانَ الطَّقْسُ بارِداً جِدّاً أَمْسِ.",
+    "ko": "",
+    "highlight": "بارِداً"
+   },
+   {
+    "en": "صارَ الطَّالِبُ طَبيباً مَشْهوراً.",
+    "ko": "",
+    "highlight": "طَبيباً"
+   },
+   {
+    "en": "لَيْسَتِ المَدينَةُ بَعيدَةً عَنِ العاصِمَةِ.",
+    "ko": "",
+    "highlight": "بَعيدَةً"
+   },
+   {
+    "en": "ما زالَ الوَلَدُ نائِماً في غُرْفَتِهِ.",
+    "ko": "",
+    "highlight": "نائِماً"
+   },
+   {
+    "en": "أَصْبَحَتِ الفِكْرَةُ واضِحَةً لِلْجَميعِ.",
+    "ko": "",
+    "highlight": "واضِحَةً"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "كانَ المَطَرُ غَزيرٌ.",
+    "right": "كانَ المَطَرُ غَزيراً.",
+    "note": "The predicate of kana must be in the accusative (Mansub) with fatha/tanwin fatha, never nominative (damma)."
+   },
+   {
+    "wrong": "لَيْسَ السَّيّارَةُ جَديدَةً.",
+    "right": "لَيْسَتِ السَّيّارَةُ جَديدَةً.",
+    "note": "Kana and its sisters must agree in gender with their subject; add the feminine ta (ت) for feminine subjects."
+   },
+   {
+    "wrong": "أَصْبَحَ الطّالِبانِ مُجْتَهِدانِ.",
+    "right": "أَصْبَحَ الطّالِبانِ مُجْتَهِدَيْنِ.",
+    "note": "Dual predicates take the accusative dual ending -ayn (ـَيْنِ) instead of the nominative -an (ـانِ)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct predicate: 'كانَ البابُ ___.' (The door was open)",
+    "options": [
+     "مَفْتوحٌ",
+     "مَفْتوحاً",
+     "مَفْتوحٍ",
+     "مَفْتوحُ"
+    ],
+    "answer": 1,
+    "explanation": "The predicate of kana takes the accusative case, marked here by tanwin fatha (مَفْتوحاً)."
+   },
+   {
+    "question": "Fill in the blank: '___ الحَقيقَةُ واضِحَةً.' (The truth became clear)",
+    "options": [
+     "صارَ",
+     "صارَتْ",
+     "صِرْتُ",
+     "صاروا"
+    ],
+    "answer": 1,
+    "explanation": "The subject 'الحَقيقَةُ' is grammatically feminine, so the verb must take the feminine suffix 'صارَتْ'."
+   },
+   {
+    "question": "Select the correct form for plural: 'كانَ المُهَنْدِسونَ ___.' (The engineers were hardworking)",
+    "options": [
+     "مُجْتَهِدونَ",
+     "مُجْتَهِداتٍ",
+     "مُجْتَهِدينَ",
+     "مُجْتَهِدٌ"
+    ],
+    "answer": 2,
+    "explanation": "Sound masculine plurals take -ina (ـينَ) in the accusative case as the predicate of kana."
+   },
+   {
+    "question": "Complete the negation: 'لَيْسَ الكِتابُ ___.' (The book is not useful)",
+    "options": [
+     "مُفيداً",
+     "مُفيدٌ",
+     "مُفيدٍ",
+     "مُفيدانِ"
+    ],
+    "answer": 0,
+    "explanation": "Laysa is a sister of kana, so its predicate must be in the accusative case (مُفيداً)."
+   }
+  ],
+  "tip": "Remember: Kana 'steals' the damma from the predicate and turns it into fatha, while keeping the subject nominative."
+ },
+ {
+  "id": "ar-b1-inna-and-its-sisters",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "💎",
+  "title": "Inna and Its Sisters (Inna wa Akhawatuha)",
+  "subtitle": "Adding emphasis and nuance by placing the subject into the accusative case",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Inna and its sisters govern nominal sentences by putting the subject into the accusative (Mansub) while leaving the predicate nominative (Marfu').",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Meaning",
+    "Arabic Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "إِنَّ",
+      "Indeed / Truly (sentence start)",
+      "إِنَّ اللهَ غَفورٌ رَحيمٌ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "أَنَّ",
+      "That (subordinate clause)",
+      "عَلِمْتُ أَنَّ الاِمْتِحانَ سَهْلٌ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "لكِنَّ",
+      "However / But",
+      "البَيْتُ صَغيرٌ لكِنَّ الحَديقَةَ جَميلَةٌ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "لَعَلَّ / لَيْتَ",
+      "Perhaps (hope) / If only (wish)",
+      "لَعَلَّ النَّجاحَ قَريبٌ"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Assertive Emphasis (Inna)",
+    "example": "إِنَّ العِلْمَ نورٌ.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Reporting Content (Anna)",
+    "example": "أَعْرِفُ أَنَّ السَّفَرَ مُتْعِبٌ.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Wishes and Hopes (Layta / La'alla)",
+    "example": "لَيْتَ الشَّبابَ يَعُودُ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "إِنَّ الدَّرْسَ سَهْلٌ جِدّاً.",
+    "ko": "",
+    "highlight": "الدَّرْسَ"
+   },
+   {
+    "en": "سَمِعْتُ أَنَّ القِطارَ مُتَأَخِّرٌ اليَوْمَ.",
+    "ko": "",
+    "highlight": "القِطارَ"
+   },
+   {
+    "en": "السَّيّارَةُ قَديمَةٌ لكِنَّ المُحَرِّكَ قَوِيٌّ.",
+    "ko": "",
+    "highlight": "المُحَرِّكَ"
+   },
+   {
+    "en": "لَعَلَّ الفَرَجَ قَريبٌ بِإِذْنِ اللهِ.",
+    "ko": "",
+    "highlight": "الفَرَجَ"
+   },
+   {
+    "en": "إِنَّ الطّالِبَيْنِ مُتَفَوِّقانِ في اللُّغَةِ العَرَبِيَّةِ.",
+    "ko": "",
+    "highlight": "الطّالِبَيْنِ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "إِنَّ الجَوُّ حارٌّ اليَوْمَ.",
+    "right": "إِنَّ الجَوَّ حارٌّ اليَوْمَ.",
+    "note": "The noun directly following Inna is its subject (Ism Inna) and must take the accusative case (fatha)."
+   },
+   {
+    "wrong": "قالَ المُعَلِّمُ أَنَّ الاِمْتِحانَ غَداً.",
+    "right": "قالَ المُعَلِّمُ إِنَّ الاِمْتِحانَ غَداً.",
+    "note": "After the verb qala (قالَ), you must always use Inna (إِنَّ) with a kasra, never Anna (أَنَّ)."
+   },
+   {
+    "wrong": "إِنَّ المُعَلِّمونَ حاضِرونَ.",
+    "right": "إِنَّ المُعَلِّمينَ حاضِرونَ.",
+    "note": "Masculine plural nouns following Inna become accusative, changing the suffix from -oona to -eena."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct voweling: 'إِنَّ ___ جَميلٌ.' (Indeed, the view is beautiful)",
+    "options": [
+     "المَنْظَرُ",
+     "المَنْظَرَ",
+     "المَنْظَرِ",
+     "مَنْظَرٍ"
+    ],
+    "answer": 1,
+    "explanation": "The noun following 'Inna' is in the accusative (Mansub), requiring a fatha (المَنْظَرَ)."
+   },
+   {
+    "question": "Complete the sentence: 'قالَ أَبي: ___ الصِّدْقَ فَضيلَةٌ.' (My father said: Indeed, truthfulness is a virtue)",
+    "options": [
+     "إِنَّ",
+     "أَنَّ",
+     "لكِنَّ",
+     "كَأَنَّ"
+    ],
+    "answer": 0,
+    "explanation": "After forms of the verb قالَ (to say), 'إِنَّ' is required rather than 'أَنَّ'."
+   },
+   {
+    "question": "Identify the correct form: 'عَرَفْتُ أَنَّ ___ قادِمونَ.' (I learned that the guests are coming)",
+    "options": [
+     "الضُّيوفُ",
+     "الضُّيوفِ",
+     "الضُّيوفَ",
+     "الضَّيْفانِ"
+    ],
+    "answer": 2,
+    "explanation": "The subject of 'Anna' takes the accusative case (fatha: الضُّيوفَ)."
+   },
+   {
+    "question": "Select the correct combination: 'لَعَلَّ المُسافِرَ ___.' (Perhaps the traveler returns/is returning)",
+    "options": [
+     "عائِدٌ",
+     "عائِداً",
+     "عائِدٍ",
+     "عائِدَيْنِ"
+    ],
+    "answer": 0,
+    "explanation": "The predicate of La'alla remains in the nominative case (Marfu') with tanwin damma (عائِدٌ)."
+   }
+  ],
+  "tip": "Contrast trick: Kana makes the predicate accusative; Inna makes the subject accusative. They are exact grammatical mirrors!"
+ },
+ {
+  "id": "ar-b2-weak-verbs",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔄",
+  "title": "Weak, Assimilated, and Defective Verbs (Al-Mu'tall)",
+  "subtitle": "Navigating roots with Waw and Ya through vowel mutations, drops, and shortenings",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Weak radicals (و or ي) mutate into long vowels, shorten before sukūn, or disappear entirely across conjugations.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Weak Position",
+    "Example Root & Past/Present",
+    "Key Shift"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Assimilated (Mithal)",
+      "1st radical (Fa)",
+      "وَصَلَ / يَصِلُ",
+      "Initial Waw drops in present tense"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Hollow (Ajwaf)",
+      "2nd radical ('Ayn)",
+      "قالَ / يَقولُ / قُلْتُ",
+      "Long vowel shortens before sukūn (u/i)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Defective (Naqis)",
+      "3rd radical (Lam)",
+      "رَمى / يَرْمي / رَمَيْتُ",
+      "Weak letter becomes alif/ya depending on suffix"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Doubly Weak (Lafif)",
+      "Two radicals",
+      "وَقى / يَقِي / قِ",
+      "Combined weak contractions"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Assimilated: Dropping Initial Waw",
+    "example": "وَقَفَ الرَّجُلُ ثُمَّ يَقِفُ هُنا.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Hollow: Shortening Before Suffixes",
+    "example": "زُرْتُ العاصِمَةَ الشَّهْرَ الماضي.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Defective: Final Vowel Changes",
+    "example": "دَعا المُؤْمِنُ رَبَّهُ في الصَّلاةِ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "قُلْتُ لِصَديقي الحَقيقَةَ كامِلَةً.",
+    "ko": "",
+    "highlight": "قُلْتُ"
+   },
+   {
+    "en": "يَجِدُ الطّالِبُ صُعوبَةً في القِراءَةِ.",
+    "ko": "",
+    "highlight": "يَجِدُ"
+   },
+   {
+    "en": "مَشَيْتُ خَمْسَةَ كِيلومِتْراتٍ اليَوْمَ.",
+    "ko": "",
+    "highlight": "مَشَيْتُ"
+   },
+   {
+    "en": "لَمْ يَكُنِ الوَقْتُ كافِياً لِلإِجابَةِ.",
+    "ko": "",
+    "highlight": "يَكُنِ"
+   },
+   {
+    "en": "نَسِيَ أَخي مَفاتيحَ البَيْتِ في الدَّاخِلِ.",
+    "ko": "",
+    "highlight": "نَسِيَ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "أَنا قُولْتُ لَهُ ذلِكَ.",
+    "right": "أَنا قُلْتُ لَهُ ذلِكَ.",
+    "note": "Hollow verbs drop their long vowel when conjugated with consonant subject suffixes (e.g. tu, ta, na) because two consonants cannot carry sukun consecutively."
+   },
+   {
+    "wrong": "هُوَ يَوْصِلُ إلى المَطارِ.",
+    "right": "هُوَ يَصِلُ إلى المَطارِ.",
+    "note": "The initial Waw in Form I assimilated verbs (Mithal) regularly drops in the present tense (يَصِلُ, not يَوْصِلُ)."
+   },
+   {
+    "wrong": "لَمْ يَمْشي في الظَّلامِ.",
+    "right": "لَمْ يَمْشِ في الظَّلامِ.",
+    "note": "In the jussive mood after 'lam' (لَمْ), defective verbs drop their final weak vowel completely."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Conjugate 'زارَ' (to visit) for 'I' in the past: 'أَنا ___ صَديقي.'",
+    "options": [
+     "زُرْتُ",
+     "زارْتُ",
+     "زِرْتُ",
+     "زَوْرْتُ"
+    ],
+    "answer": 0,
+    "explanation": "Because the middle vowel in the present is 'u' (يَزورُ), the past stem shortens to damma before 'tu': زُرْتُ."
+   },
+   {
+    "question": "What is the present tense of 'وَجَدَ' (to find) for 'he'?",
+    "options": [
+     "يَوْجُدُ",
+     "يُوجِدُ",
+     "يَجِدُ",
+     "يَواجِدُ"
+    ],
+    "answer": 2,
+    "explanation": "In Form I assimilated verbs, the initial Waw drops in the present tense, yielding يَجِدُ."
+   },
+   {
+    "question": "Conjugate with the jussive negative particle: 'لَمْ ___ عَلَى السُّؤالِ.' (He did not respond from دَعا/يَدْعو)",
+    "options": [
+     "يَدْعُو",
+     "يَدْعُ",
+     "يَدْعى",
+     "يَدْعي"
+    ],
+    "answer": 1,
+    "explanation": "The jussive mood of a defective verb shortens the final long vowel to a short damma: لَمْ يَدْعُ."
+   },
+   {
+    "question": "Conjugate 'رَمى' (to throw) for 'they (masc. pl.)' in the past: 'هُمْ ___ الكُرَةَ.'",
+    "options": [
+     "رَمَوْا",
+     "رَمَيوا",
+     "رَمُوا",
+     "رَمَيْتُمْ"
+    ],
+    "answer": 0,
+    "explanation": "With the masculine plural 'waw al-jama'a', final alif maqsura opens to an -aw diphthong: رَمَوْا."
+   }
+  ],
+  "tip": "To determine the short vowel of a hollow verb in the past (قُلْتُ vs. بِعْتُ), look at its present-tense vowel: يَقولُ gives 'u' (قُلْتُ), while يَبيعُ gives 'i' (بِعْتُ)."
+ },
+ {
+  "id": "ar-b2-the-hal-accusative-of-condition",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#475569",
+  "emoji": "🎭",
+  "title": "The Circumstantial Accusative (Al-Hal)",
+  "subtitle": "Depicting simultaneous physical states and manner using accusative words or clauses",
+  "color": "#0F766E",
+  "bg": "#F0FDFA",
+  "keyPoint": "A Hal must be indefinite and accusative (Mansub) while its referent (Sahib al-Hal) is definite, answering the question 'How?'.",
+  "structure": {
+   "headers": [
+    "Type of Hal",
+    "Arabic Example",
+    "Referent (Sahib al-Hal)",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Single Word (Mufrad)",
+      "رَجَعَ الوَلَدُ باكِياً",
+      "Definite (الوَلَدُ)",
+      "Indefinite accusative participle describing manner"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Nominal Clause (Jumla Ismiyya)",
+      "وَصَلْنا والمَطَرُ يَهْطِلُ",
+      "Definite (ضمير نا)",
+      "Introduced by Waw al-Hal + independent sentence"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Verbal Clause (Jumla Fi'liyya)",
+      "دَخَلَ المُعَلِّمُ يَبْتَسِمُ",
+      "Definite (المُعَلِّمُ)",
+      "Imperfect verb directly functioning as simultaneous state"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Prepositional Phrase (Shibh Jumla)",
+      "رَأَيْتُ الطّائِرَ فَوْقَ الغُصْنِ",
+      "Definite (الطّائِرَ)",
+      "Locational circumstance"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0F766E",
+    "label": "Single Participle Manner",
+    "example": "خَرَجَ المُسافِرُ مُسْرِعاً.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Verbal Clause Manner",
+    "example": "جاءَ الطِّفْلُ يَرْكُضُ.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Waw of State (Waw al-Hal)",
+    "example": "سافَرْتُ والشَّمْسُ تَغْرُبُ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "شَرِبَ الضَّيْفُ القَهْوَةَ ساخِنَةً.",
+    "ko": "",
+    "highlight": "ساخِنَةً"
+   },
+   {
+    "en": "عِشْنا في القَرْيَةِ نَسْتَمْتِعُ بِالهُدوءِ.",
+    "ko": "",
+    "highlight": "نَسْتَمْتِعُ"
+   },
+   {
+    "en": "سَمِعْتُ الخَبَرَ وأَنا أَقْرَأُ الجَريدَةَ.",
+    "ko": "",
+    "highlight": "وأَنا أَقْرَأُ الجَريدَةَ"
+   },
+   {
+    "en": "وَقَفَ الخَطيبُ مُتَحَدِّثاً بِفَصاحَةٍ.",
+    "ko": "",
+    "highlight": "مُتَحَدِّثاً"
+   },
+   {
+    "en": "عادَتِ البِنْتُ مِنَ المَدْرَسَةِ فَرِحَةً.",
+    "ko": "",
+    "highlight": "فَرِحَةً"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "جاءَ الطّالِبُ المُبْتَسِمُ.",
+    "right": "جاءَ الطّالِبُ مُبْتَسِماً.",
+    "note": "If you make the participle definite with 'al-', it becomes an adjective (The smiling student came), not a circumstantial Hal (The student came smiling)."
+   },
+   {
+    "wrong": "رَأَيْتُ الوَلَدَ باكٍ.",
+    "right": "رَأَيْتُ الوَلَدَ باكِياً.",
+    "note": "Defective active participles restore their ya and take tanwin fatha in the accusative Hal form."
+   },
+   {
+    "wrong": "خَرَجْنا والشَّمْسَ طالِعَةً.",
+    "right": "خَرَجْنا والشَّمْسُ طالِعَةٌ.",
+    "note": "In a Hal clause following Waw al-Hal, the clause is an independent equational sentence where subject and predicate remain nominative."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct Hal form: 'رَجَعَ الجُنودُ مِنَ المَعْرَكَةِ ___.' (The soldiers returned victorious)",
+    "options": [
+     "مُنْتَصِرونَ",
+     "مُنْتَصِرينَ",
+     "مُنْتَصِرانِ",
+     "مُنْتَصِرٍ"
+    ],
+    "answer": 1,
+    "explanation": "The Hal must be accusative. For sound masculine plural, the accusative suffix is -ina: مُنْتَصِرينَ."
+   },
+   {
+    "question": "Turn into a proper Hal: 'جَلَسْتُ في الغُرْفَةِ ___ الكِتابَ.' (I sat in the room reading the book)",
+    "options": [
+     "أَقْرَأُ",
+     "قَرَأْتُ",
+     "قارِئٍ",
+     "القِراءَةُ"
+    ],
+    "answer": 0,
+    "explanation": "An imperfect (present) verb clause can function directly as a Hal depicting an ongoing action simultaneous with the main verb."
+   },
+   {
+    "question": "Choose the correct Waw al-Hal structure: 'وَصَلَ الطُّلّابُ ___.' (The students arrived while the teacher was absent)",
+    "options": [
+     "والمُعَلِّمَ غائِباً",
+     "والمُعَلِّمُ غائِبٌ",
+     "والمُعَلِّمِ غائِبٍ",
+     "المُعَلِّمُ غائِباً"
+    ],
+    "answer": 1,
+    "explanation": "After Waw al-Hal, a nominal clause is composed of normal nominative mubtada' and khabar: والمُعَلِّمُ غائِبٌ."
+   },
+   {
+    "question": "Identify the Hal in: 'أَكَلَ أَخي الطَّعامَ واقِفاً.' (My brother ate the food standing)",
+    "options": [
+     "أَكَلَ",
+     "أَخي",
+     "الطَّعامَ",
+     "واقِفاً"
+    ],
+    "answer": 3,
+    "explanation": "'واقِفاً' is an indefinite accusative active participle that explains the physical state of the brother during the eating."
+   }
+  ],
+  "tip": "Check test: Ask 'كَيْفَ؟' (How?). If your word answers how the subject or object was behaving at the exact moment the verb occurred, it is a Hal!"
+ },
+ {
+  "id": "ar-b2-diptotes-mamnu-min-al-sarf",
+  "level": "b2",
+  "category": "nouns",
+  "categoryColor": "#F59E0B",
+  "emoji": "🛡️",
+  "title": "Diptotes (Al-Mamnu' min Al-Sarf)",
+  "subtitle": "Special nouns and adjectives barred from nunation and taking fatha in the genitive",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Diptotes cannot receive nunation (tanwīn) and take a fatḥa instead of a kasra when in the genitive case, unless prefixed by 'al-' or annexed in an Iḍāfa.",
+  "structure": {
+   "headers": [
+    "Category",
+    "Pattern / Trigger",
+    "Arabic Example (Nom / Gen)",
+    "Key Trait"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Broken Plural",
+      "مَفاعِل / مَفاعيل (Aqsā al-Jumū')",
+      "مَساجِدُ / في مَساجِدَ",
+      "No tanwin; genitive takes fatha"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Colors & Defects",
+      "أَفْعَل (fem. فَعْلاء)",
+      "أَحْمَرُ / بِثَوْبٍ أَحْمَرَ",
+      "Adjective pattern barring nunation"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Non-Arab Names",
+      "Foreign proper names (>3 letters)",
+      "إِبْراهيمُ / مِنْ إِبْراهيمَ",
+      "Proper names of non-Arab origin"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Definite State Exception",
+      "Prefixed with الـ or Mudaf",
+      "في المَساجِدِ الكَبيرَةِ",
+      "Reverts to normal kasra when made definite"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Ultimate Broken Plurals",
+    "example": "صَلَّيْتُ في مَساجِدَ كَثيرَةٍ.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Foreign & Feminine Names",
+    "example": "تَحَدَّثْتُ مَعَ مَرْيَمَ ويوسُفَ.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Color / Superlative Adjectives",
+    "example": "كَتَبْتُ بِقَلَمٍ أَسْوَدَ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "سافَرَ أَحْمَدُ إلى لَنْدَنَ أَمْسِ.",
+    "ko": "",
+    "highlight": "لَنْدَنَ"
+   },
+   {
+    "en": "قَرَأْتُ عَنْ عُلَماءَ عَباقِرَةٍ في التَّاريخِ.",
+    "ko": "",
+    "highlight": "عُلَماءَ"
+   },
+   {
+    "en": "مَرَرْتُ بِمَبَانٍ ومَكاتِبَ حَديثَةٍ.",
+    "ko": "",
+    "highlight": "مَكاتِبَ"
+   },
+   {
+    "en": "سَكَنَ عُمَرُ في مَدينَةٍ أُخْرى.",
+    "ko": "",
+    "highlight": "عُمَرُ"
+   },
+   {
+    "en": "دَرَسْتُ في مَدارِسِ المَدينَةِ المَشْهورَةِ.",
+    "ko": "",
+    "highlight": "مَدارِسِ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "سافَرْتُ إلى دِمَشْقٍ.",
+    "right": "سافَرْتُ إلى دِمَشْقَ.",
+    "note": "Foreign/feminine city names are diptotes; they never take tanwin and take fatha in the genitive after prepositions."
+   },
+   {
+    "wrong": "تَكَلَّمْتُ مَعَ عُمَرٍ.",
+    "right": "تَكَلَّمْتُ مَعَ عُمَرَ.",
+    "note": "Proper names on the pattern of فُعَل (Fu'al) such as 'Umar are diptotes and take fatha in the genitive without nunation."
+   },
+   {
+    "wrong": "صَلَّيْتُ في المَساجِدَ القَديمَةِ.",
+    "right": "صَلَّيْتُ في المَساجِدِ القَديمَةِ.",
+    "note": "When a diptote receives the definite article 'al-' (الـ), its diptote status is disabled and it takes a normal kasra."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correctly vowelled diptote: 'سَلَّمْتُ عَلَى ___.' (I greeted Ibrahim)",
+    "options": [
+     "إِبْراهيمٍ",
+     "إِبْراهيمُ",
+     "إِبْراهيمَ",
+     "إِبْراهيماً"
+    ],
+    "answer": 2,
+    "explanation": "Foreign proper names are diptotic: in the genitive position after 'عَلَى', they take a fatha without tanwin (إِبْراهيمَ)."
+   },
+   {
+    "question": "Select the correct form: 'اشْتَرَيْتُ سَيّارَةً ذاتَ لَوْنٍ ___.' (I bought a car of a green color)",
+    "options": [
+     "أَخْضَرَ",
+     "أَخْضَرٍ",
+     "أَخْضَرُ",
+     "أَخْضَراً"
+    ],
+    "answer": 0,
+    "explanation": "Color adjectives matching the pattern أَفْعَل are diptotes and take fatha in the genitive (أَخْضَرَ)."
+   },
+   {
+    "question": "What happens when 'مَساجِد' has 'al-': 'اعْتَكَفَ الرَّجُلُ في ___.' (The man retreated in the mosques)",
+    "options": [
+     "المَساجِدَ",
+     "المَساجِدُ",
+     "المَساجِدِ",
+     "مَساجِدٍ"
+    ],
+    "answer": 2,
+    "explanation": "The moment a diptote is made definite by 'al-' (الـ), it returns to normal triptote declension and takes a standard kasra (المَساجِدِ)."
+   },
+   {
+    "question": "Which of the following is NOT a diptote?",
+    "options": [
+     "مَفاتيـح",
+     "فاطِمَة",
+     "أَفْضَل",
+     "مُحَمَّد"
+    ],
+    "answer": 3,
+    "explanation": "The name 'مُحَمَّد' is fully declinable (Triptote / Masruf) and accepts tanwin (مُحَمَّدٌ, مُحَمَّداً, مُحَمَّدٍ)."
+   }
+  ],
+  "tip": "Two keys break the diptote shield: add 'الـ' to the front OR put it first in an Idafa chain, and it instantly behaves like a normal noun with kasra!"
+ }
+]

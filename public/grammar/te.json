@@ -1,0 +1,3362 @@
+[
+ {
+  "id": "te-a1-pronouns-and-agreement",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🗣️",
+  "title": "Personal Pronouns and PNG Agreement",
+  "subtitle": "Matching subjects to verbal Person-Number-Gender suffixes",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Finite verbs in Telugu must conjugate with suffixes that reflect the person, number, and gender of the subject pronoun.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "PNG Suffix",
+    "Full Verb Example",
+    "Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "నేను",
+      "-ను",
+      "నేను చదువుతాను",
+      "I will read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "నువ్వు",
+      "-వు",
+      "నువ్వు చదువుతావు",
+      "You will read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "అతను",
+      "-డు",
+      "అతను చదువుతాడు",
+      "He will read"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ఆమె / అది",
+      "-ది",
+      "ఆమె చదువుతుంది",
+      "She will read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "మేము / మనం",
+      "-ము",
+      "మేము చదువుతాము",
+      "We will read"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "First Person Statement",
+    "example": "నేను తెలుగు నేర్చుకుంటున్నాను.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Third Person Masculine",
+    "example": "అతను రేపు వస్తాడు.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Polite Plural Form",
+    "example": "మీరు ఎప్పుడు వెళ్తారు?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "నేను అన్నం తింటాను.",
+    "ko": "",
+    "highlight": "తింటాను"
+   },
+   {
+    "en": "నువ్వు ఎక్కడికి వెళ్తావు?",
+    "ko": "",
+    "highlight": "వెళ్తావు"
+   },
+   {
+    "en": "అతను బడికి వెళ్తాడు.",
+    "ko": "",
+    "highlight": "వెళ్తాడు"
+   },
+   {
+    "en": "ఆమె పాట పాడుతుంది.",
+    "ko": "",
+    "highlight": "పాడుతుంది"
+   },
+   {
+    "en": "మేము సినిమా చూస్తాము.",
+    "ko": "",
+    "highlight": "చూస్తాము"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "నేను రేపు వస్తాడు.",
+    "right": "నేను రేపు వస్తాను.",
+    "note": "First person subject (నేను) must end with -ను, not the masculine third person -డు."
+   },
+   {
+    "wrong": "ఆమె ఉత్తరం రాస్తాడు.",
+    "right": "ఆమె ఉత్తరం రాస్తుంది.",
+    "note": "Feminine third person singular subjects (ఆమె) pair with -ది, not masculine -డు."
+   },
+   {
+    "wrong": "నువ్వు ఎక్కడ ఉంటాను?",
+    "right": "నువ్వు ఎక్కడ ఉంటావు?",
+    "note": "Second person singular (నువ్వు) requires the agreement suffix -వు."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'నేను పాలు ___.' (I will drink milk)",
+    "options": [
+     "తాగుతాడు",
+     "తాగుతాను",
+     "తాగుతావు",
+     "తాగుతుంది"
+    ],
+    "answer": 1,
+    "explanation": "The first-person singular pronoun 'నేను' requires the verbal suffix '-ను'."
+   },
+   {
+    "question": "Complete the sentence: 'అతను నడుస్తూ ___.' (He will go walking)",
+    "options": [
+     "వెళ్తాము",
+     "వెళ్తావు",
+     "వెళ్తాడు",
+     "వెళ్తాను"
+    ],
+    "answer": 2,
+    "explanation": "'అతను' (he) is third-person masculine singular, requiring '-డు'."
+   },
+   {
+    "question": "Complete the sentence: 'నువ్వు పుస్తకం ___.' (You will read a book)",
+    "options": [
+     "చదువుతావు",
+     "చదువుతాడు",
+     "చదువుతాను",
+     "చదువుతారు"
+    ],
+    "answer": 0,
+    "explanation": "'నువ్వు' takes the second-person singular informal ending '-వు'."
+   },
+   {
+    "question": "Complete the sentence: 'ఆమె రేపు మా ఇంటికి ___.' (She will come to our house tomorrow)",
+    "options": [
+     "వస్తాడు",
+     "వస్తాను",
+     "వస్తాము",
+     "వస్తుంది"
+    ],
+    "answer": 3,
+    "explanation": "Third-person singular non-masculine (she/it) takes '-ది' (changing here to 'వస్తుంది')."
+   }
+  ],
+  "tip": "Notice how the pronoun's final syllable often echoes the verb's ending: నే-ను ends in -ను, నువ్-వు ends in -వు, and మే-ము ends in -ము!"
+ },
+ {
+  "id": "te-a1-postpositions-and-oblique-stem",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "📍",
+  "title": "Oblique Noun Stems and Core Postpositions",
+  "subtitle": "Inflecting nouns before attaching locative, instrumental, and dative suffixes",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Telugu postpositions attach directly to the oblique stem of nouns, which frequently alters endings like -ము to -ం- or changes final vowels.",
+  "structure": {
+   "headers": [
+    "Noun (Nominative)",
+    "Oblique Form",
+    "With Postposition",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "పుస్తకము (book)",
+      "పుస్తకం-",
+      "పుస్తకంలో",
+      "in the book"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ఇల్లు (house)",
+      "ఇంటి-",
+      "ఇంటికి",
+      "to the house"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ఊరు (village)",
+      "ఊరి-",
+      "ఊరిలో",
+      "in the village"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "కలం (pen)",
+      "కలం-",
+      "కలంతో",
+      "with a pen"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Location with -లో",
+    "example": "పిల్లలు బడిలో ఉన్నారు.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Destination with -కి/-కు",
+    "example": "రవి ఆఫీసుకు వెళ్లాడు.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Instrument with -తో",
+    "example": "నేను కలంతో రాస్తున్నాను.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "నా పుస్తకంలో మంచి కథలు ఉన్నాయి.",
+    "ko": "",
+    "highlight": "పుస్తకంలో"
+   },
+   {
+    "en": "ఆమె ఇంటికి నడిచి వెళ్ళింది.",
+    "ko": "",
+    "highlight": "ఇంటికి"
+   },
+   {
+    "en": "మేము స్నేహితులతో మాట్లాడుతున్నాము.",
+    "ko": "",
+    "highlight": "స్నేహితులతో"
+   },
+   {
+    "en": "అమ్మ చేతితో వంట చేసింది.",
+    "ko": "",
+    "highlight": "చేతితో"
+   },
+   {
+    "en": "వారి ఊరిలో ఒక పెద్ద చెరువు ఉంది.",
+    "ko": "",
+    "highlight": "ఊరిలో"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ఇల్లుకి రండి.",
+    "right": "ఇంటికి రండి.",
+    "note": "The irregular noun 'ఇల్లు' must mutate to its oblique form 'ఇంటి' before attaching postpositions."
+   },
+   {
+    "wrong": "చేయిలో పట్టుకో.",
+    "right": "చేతిలో పట్టుకో.",
+    "note": "'చేయి' (hand) changes to the oblique form 'చేతి' before case suffixes like -లో."
+   },
+   {
+    "wrong": "ఊరులో నీరు ఉంది.",
+    "right": "ఊరిలో నీరు ఉంది.",
+    "note": "Nouns ending in -రు often alter their final vowel to -రి- before postpositions."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Attach the locative suffix '-లో' (in) to 'ఇల్లు' (house): 'ఆమె ___ ఉంది.'",
+    "options": [
+     "ఇంటిలో",
+     "ఇల్లులో",
+     "ఇల్లలో",
+     "ఇంటికి"
+    ],
+    "answer": 0,
+    "explanation": "The oblique stem of 'ఇల్లు' is 'ఇంటి-', making 'ఇంటిలో' (or 'ఇంట్లో')."
+   },
+   {
+    "question": "Choose the correct dative form for 'రాముడు': 'ఈ పుస్తకం ___ ఇవ్వండి.'",
+    "options": [
+     "రాముడుతో",
+     "రాముడికి",
+     "రాముడుకి",
+     "రాముడితో"
+    ],
+    "answer": 1,
+    "explanation": "Masculine nouns in -డు change to oblique -డి before dative -కి."
+   },
+   {
+    "question": "Attach '-తో' (with) to 'కలం' (pen): 'నేను ___ సంతకం చేశాను.'",
+    "options": [
+     "కలంతో",
+     "కలంకి",
+     "కలంలో",
+     "కలముతోటి"
+    ],
+    "answer": 0,
+    "explanation": "The postposition '-తో' attaches directly to the stem 'కలం' giving 'కలంతో'."
+   },
+   {
+    "question": "Attach '-లో' (in) to 'ఊరు' (village): 'మా ___ అందమైన తోటలు ఉన్నాయి.'",
+    "options": [
+     "ఊరులో",
+     "ఊరుకి",
+     "ఊరికి",
+     "ఊరిలో"
+    ],
+    "answer": 3,
+    "explanation": "The oblique stem of 'ఊరు' is 'ఊరి-', yielding 'ఊరిలో'."
+   }
+  ],
+  "tip": "Pay special attention to nouns ending in -లు or -డు: 'పాలు' becomes 'పాల-', 'కాలు' becomes 'కాలి-', and words ending in -ము turn cleanly into -ం-!"
+ },
+ {
+  "id": "te-a1-equational-and-existential-sentences",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "⚖️",
+  "title": "Zero-Copula Equational Sentences vs Undu (Existence)",
+  "subtitle": "Contrasting identity (A = B) with presence/location using 'ఉండు'",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "Telugu states identity or character by placing two noun phrases together without any verb, but uses the verb 'ఉండు' to express existence or location.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Construction",
+    "Telugu Example",
+    "English Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Equational (Zero Copula)",
+      "Noun 1 + Noun 2",
+      "అతను ఉపాధ్యాయుడు.",
+      "Identity (A is B)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Existential / Locational",
+      "Noun + Location + ఉండు",
+      "అతను బడిలో ఉన్నాడు.",
+      "Location/Existence (A is at B)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Equational Negation",
+      "Noun 1 + Noun 2 + కాదు",
+      "అతను ఉపాధ్యాయుడు కాదు.",
+      "Negation of identity"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Existential Negation",
+      "Noun + Location + లేడు/లేదు",
+      "అతను బడిలో లేడు.",
+      "Negation of presence"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Identity Statement",
+    "example": "ఇది నా పుస్తకం.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Physical Location",
+    "example": "పుస్తకం బల్ల మీద ఉంది.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Denying Identity",
+    "example": "ఆమె డాక్టర్ కాదు.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ఈమె మా అమ్మ.",
+    "ko": "",
+    "highlight": "మా అమ్మ"
+   },
+   {
+    "en": "నా తాళం చెవి గదిలో ఉంది.",
+    "ko": "",
+    "highlight": "ఉంది"
+   },
+   {
+    "en": "ఆ అబ్బాయి విద్యార్థి కాదు.",
+    "ko": "",
+    "highlight": "కాదు"
+   },
+   {
+    "en": "నాన్న ఇంట్లో లేరు.",
+    "ko": "",
+    "highlight": "లేరు"
+   },
+   {
+    "en": "హైదరాబాద్ ఒక పెద్ద నగరం.",
+    "ko": "",
+    "highlight": "పెద్ద నగరం"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "అతను ఉపాధ్యాయుడు ఉన్నాడు.",
+    "right": "అతను ఉపాధ్యాయుడు.",
+    "note": "Do not insert 'ఉన్నాడు' to mean 'is' when stating someone's profession or identity; Telugu uses zero copula."
+   },
+   {
+    "wrong": "పుస్తకం బల్ల మీద కాదు.",
+    "right": "పుస్తకం బల్ల మీద లేదు.",
+    "note": "Use 'లేదు' (not 'కాదు') when negating presence or location."
+   },
+   {
+    "wrong": "ఇది నా ఇల్లు లేదు.",
+    "right": "ఇది నా ఇల్లు కాదు.",
+    "note": "Use 'కాదు' when negating identity or ownership ('This is not my house')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase for 'Suresh is a teacher': 'సురేష్ ___.'",
+    "options": [
+     "ఉపాధ్యాయుడు ఉన్నాడు",
+     "ఉపాధ్యాయుడు",
+     "ఉపాధ్యాయుడు ఉంది",
+     "ఉపాధ్యాయుడు లేడు"
+    ],
+    "answer": 1,
+    "explanation": "Identity statements require no copular verb, simply juxtaposition of subject and predicate noun."
+   },
+   {
+    "question": "Complete the locational sentence: 'పిల్లి కుర్చీ కింద ___.' (The cat is under the chair)",
+    "options": [
+     "కాదు",
+     "ఉన్నాడు",
+     "ఉంది",
+     "కదా"
+    ],
+    "answer": 2,
+    "explanation": "Non-human singular subjects located somewhere require the third-person neuter existential verb 'ఉంది'."
+   },
+   {
+    "question": "How do you say 'This is not water'?",
+    "options": [
+     "ఇది నీరు లేదు.",
+     "ఇది నీరు కాదు.",
+     "ఇది నీరు ఉండదు.",
+     "ఇది నీరు రాదు."
+    ],
+    "answer": 1,
+    "explanation": "Negating the identity of a thing ('X is not Y') uses 'కాదు'."
+   },
+   {
+    "question": "Complete: 'రాజు తరగతిలో ___.' (Raju is not in class)",
+    "options": [
+     "కాదు",
+     "లేరు",
+     "లేవు",
+     "లేడు"
+    ],
+    "answer": 3,
+    "explanation": "Negating location/presence for a third-person masculine singular subject uses 'లేడు'."
+   }
+  ],
+  "tip": "Remember: 'కాదు' denies WHAT something is, while 'లేదు / లేడు / లేరు' denies WHERE something is or IF it exists!"
+ },
+ {
+  "id": "te-a1-dative-subject-constructions",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🧠",
+  "title": "Dative Subject Constructions with Kavali and Telusu",
+  "subtitle": "Expressing needs, desires, and knowledge where the experiencer takes -కి/-కు",
+  "color": "#9333EA",
+  "bg": "#FAF5FF",
+  "keyPoint": "In Telugu, feelings, needs (కావాలి), and states of knowing (తెలుసు) treat the experiencer as an indirect dative target marked with -కి or -కు.",
+  "structure": {
+   "headers": [
+    "Experiencer (Dative)",
+    "Theme / Object",
+    "Dative Predicate",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "నాకు (to me)",
+      "కాఫీ",
+      "కావాలి",
+      "I want coffee"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "నాకు (to me)",
+      "సమాధానం",
+      "తెలుసు",
+      "I know the answer"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ఆమెకు (to her)",
+      "సహాయం",
+      "అక్కర్లేదు",
+      "She does not need help"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "వారికి (to them)",
+      "తెలుగు",
+      "తెలియదు",
+      "They do not know Telugu"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#9333EA",
+    "label": "Expressing Desire / Need",
+    "example": "నాకు మంచి నీళ్ళు కావాలి.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Expressing Knowledge",
+    "example": "నాకు ఈ విషయం తెలుసు.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Negative Need / Unwanted",
+    "example": "నాకు టీ వద్దు.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "నాకు ఇప్పుడు భోజనం కావాలి.",
+    "ko": "",
+    "highlight": "నాకు"
+   },
+   {
+    "en": "నీకు అతని పేరు తెలుసా?",
+    "ko": "",
+    "highlight": "నీకు"
+   },
+   {
+    "en": "ఆమెకు ఈ చిరునామా తెలియదు.",
+    "ko": "",
+    "highlight": "ఆమెకు"
+   },
+   {
+    "en": "పిల్లలకు చాక్లెట్లు కావాలి.",
+    "ko": "",
+    "highlight": "పిల్లలకు"
+   },
+   {
+    "en": "మాకు విశ్రాంతి కావాలి.",
+    "ko": "",
+    "highlight": "మాకు"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "నేను కాఫీ కావాలి.",
+    "right": "నాకు కాఫీ కావాలి.",
+    "note": "The experiencer of 'కావాలి' must take the dative suffix (నాకు), not the nominative pronoun (నేను)."
+   },
+   {
+    "wrong": "నువ్వు తెలుగు తెలుసా?",
+    "right": "నీకు తెలుగు తెలుసా?",
+    "note": "Knowledge predicates like 'తెలుసు' require the dative pronoun 'నీకు', never nominative 'నువ్వు'."
+   },
+   {
+    "wrong": "నాకు కలం కావద్దు.",
+    "right": "నాకు కలం వద్దు.",
+    "note": "The negative of 'కావాలి' is 'వద్దు' (or 'అక్కర్లేదు'), not 'కావద్దు'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: '___ ఆకలిగా ఉంది, అన్నం కావాలి.' (I am hungry, I want food)",
+    "options": [
+     "నేను",
+     "నన్ను",
+     "నాకు",
+     "నా"
+    ],
+    "answer": 2,
+    "explanation": "'కావాలి' requires the dative case pronoun 'నాకు' (to me)."
+   },
+   {
+    "question": "Choose the correct translation for 'Do you know?': '___ తెలుసా?'",
+    "options": [
+     "నీకు",
+     "నువ్వు",
+     "నిన్ను",
+     "నీతో"
+    ],
+    "answer": 0,
+    "explanation": "The experiential verb 'తెలుసు' pairs with the dative form 'నీకు'."
+   },
+   {
+    "question": "How do you say 'I do not want tea'?",
+    "options": [
+     "నాకు టీ కావాలి.",
+     "నాకు టీ తెలుసు.",
+     "నాకు టీ లేదు.",
+     "నాకు టీ వద్దు."
+    ],
+    "answer": 3,
+    "explanation": "'వద్దు' is the standard negative equivalent to 'కావాలి' when rejecting an item."
+   },
+   {
+    "question": "Complete: 'రమేష్___ ఈ విషయం తెలియదు.' (Ramesh does not know this matter)",
+    "options": [
+     "తో",
+     "కి",
+     "లో",
+     "నుండి"
+    ],
+    "answer": 1,
+    "explanation": "Proper names ending in consonants or regular vowels take the dative '-కి' (రమేష్‌కి)."
+   }
+  ],
+  "tip": "English says 'I want X' or 'I know X', but Telugu thinks 'To me, X is desirable' (నాకు X కావాలి) or 'To me, X is known' (నాకు X తెలుసు)!"
+ },
+ {
+  "id": "te-a1-present-continuous-tense",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#2563EB",
+  "emoji": "⏳",
+  "title": "Present Continuous Tense with -tunna-",
+  "subtitle": "Forming ongoing actions using the durative infix and PNG markers",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "The present continuous tense is formed by joining the verb stem to the durative marker -తున్న- (-tunna-) followed by personal agreement endings.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Stem + -తున్న-",
+    "Agreement",
+    "Combined Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "నేను (I)",
+      "చేస్ + -తున్న-",
+      "-ను",
+      "చేస్తున్నాను (I am doing)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "నువ్వు (You)",
+      "చేస్ + -తున్న-",
+      "-వు",
+      "చేస్తున్నావు (You are doing)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "అతను (He)",
+      "చేస్ + -తున్న-",
+      "-డు",
+      "చేస్తున్నాడు (He is doing)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ఆమె/అది (She/It)",
+      "చేస్ + -తున్న-",
+      "-ది",
+      "చేస్తున్నది / చేస్తోంది (She is doing)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Action in Progress",
+    "example": "నేను పుస్తకం చదువుతున్నాను.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Immediate Future Plan",
+    "example": "మేము రేపు ఉదయం వస్తున్నాము.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Ongoing State",
+    "example": "వాళ్ళు హైదరాబాద్‌లో ఉంటున్నారు.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "పిల్లలు మైదానంలో ఆడుకుంటున్నారు.",
+    "ko": "",
+    "highlight": "ఆడుకుంటున్నారు"
+   },
+   {
+    "en": "నాన్న వార్తాపత్రిక చదువుతున్నారు.",
+    "ko": "",
+    "highlight": "చదువుతున్నారు"
+   },
+   {
+    "en": "వర్షం పడుతున్నది.",
+    "ko": "",
+    "highlight": "పడుతున్నది"
+   },
+   {
+    "en": "నువ్వు ఏం చేస్తున్నావు?",
+    "ko": "",
+    "highlight": "చేస్తున్నావు"
+   },
+   {
+    "en": "మేము సినిమా చూస్తున్నాము.",
+    "ko": "",
+    "highlight": "చూస్తున్నాము"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "నేను తింటుంది.",
+    "right": "నేను తింటున్నాను.",
+    "note": "With 'నేను', the continuous suffix must terminate in first-person '-ను', not non-masculine '-ది'."
+   },
+   {
+    "wrong": "అతను రాస్తున్నావు.",
+    "right": "అతను రాస్తున్నాడు.",
+    "note": "Third-person masculine singular 'అతను' requires the ending '-డు'."
+   },
+   {
+    "wrong": "వాళ్ళు పని చేస్తున్నాడు.",
+    "right": "వాళ్ళు పని చేస్తున్నారు.",
+    "note": "Plural subject 'వాళ్ళు' demands the plural personal marker '-రు'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the ongoing action: 'నేను పాట ___.' (I am listening to a song)",
+    "options": [
+     "వింటున్నాడు",
+     "వింటున్నాను",
+     "వింటుంది",
+     "వింటున్నావు"
+    ],
+    "answer": 1,
+    "explanation": "'నేను' requires the first-person singular continuous form 'వింటున్నాను'."
+   },
+   {
+    "question": "Complete the sentence: 'నువ్వు ఎక్కడికి ___?' (Where are you going?)",
+    "options": [
+     "వెళ్తున్నావు",
+     "వెళ్తున్నాను",
+     "వెళ్తున్నాడు",
+     "వెళ్తున్నారు"
+    ],
+    "answer": 0,
+    "explanation": "'నువ్వు' takes the second-person singular ending '-వు', giving 'వెళ్తున్నావు'."
+   },
+   {
+    "question": "Complete: 'వాళ్ళు బంతి ఆట ___.' (They are playing ball)",
+    "options": [
+     "ఆడుతున్నాను",
+     "ఆడుతున్నాడు",
+     "ఆడుతున్నారు",
+     "ఆడుతున్నది"
+    ],
+    "answer": 2,
+    "explanation": "Plural human pronoun 'వాళ్ళు' pairs with the suffix '-రు' ('ఆడుతున్నారు')."
+   },
+   {
+    "question": "Complete: 'ఆమె ఉత్తరం ___.' (She is writing a letter)",
+    "options": [
+     "రాస్తున్నాడు",
+     "రాస్తున్నాను",
+     "రాస్తున్నావు",
+     "రాస్తున్నది"
+    ],
+    "answer": 3,
+    "explanation": "Third-person feminine singular pronoun 'ఆమె' agrees with '-ది' ('రాస్తున్నది' / 'రాస్తోంది')."
+   }
+  ],
+  "tip": "In everyday spoken Telugu, the feminine/neuter continuous '-తున్నది' (-tunnadi) is almost universally contracted to '-తోంది' (-tondi), as in 'చేస్తోంది' or 'వెళ్తోంది'!"
+ },
+ {
+  "id": "te-a1-imperatives-polite-and-informal",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🗣️",
+  "title": "Imperative Forms: Informal vs Polite",
+  "subtitle": "Giving commands, invitations, and requests politely and informally",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Add -u or use the basic stem for casual imperatives with peers, but attach the honorific suffix -aṇḍi (-అండి) to show respect or address elders.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Formula / Stem",
+    "Telugu Example",
+    "English Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Informal (Regular)",
+      "Root + -u",
+      "చేయు / చెయ్యి",
+      "Do! (Casual/Peers)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Polite / Honorific",
+      "Root + -aṇḍi",
+      "చేయండి",
+      "Please do! (Elders/Strangers)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Irregular: 'Come'",
+      "రా (Casual) / రండి (Polite)",
+      "రండి",
+      "Come / Please come"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Irregular: 'Go'",
+      "పో / వెళ్లు (Casual) / వెళ్లండి (Polite)",
+      "వెళ్లండి",
+      "Go / Please go"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Inviting a Guest",
+    "example": "లోపలికి రండి, కూర్చోండి.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Casual peer instruction",
+    "example": "పుస్తకం చదువు.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Polite Request",
+    "example": "దయచేసి మంచి నీళ్లు ఇవ్వండి.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "దయచేసి ఇక్కడ కూర్చోండి.",
+    "ko": "",
+    "highlight": "కూర్చోండి"
+   },
+   {
+    "en": "నువ్వు త్వరగా రా.",
+    "ko": "",
+    "highlight": "రా"
+   },
+   {
+    "en": "ఈ ఉత్తరం చదవండి.",
+    "ko": "",
+    "highlight": "చదవండి"
+   },
+   {
+    "en": "అన్నం తిను.",
+    "ko": "",
+    "highlight": "తిను"
+   },
+   {
+    "en": "రేపు మా ఇంటికి రండి.",
+    "ko": "",
+    "highlight": "రండి"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "మీరు ఇక్కడికి రా.",
+    "right": "మీరు ఇక్కడికి రండి.",
+    "note": "When using the formal pronoun మీరు (meeru), always pair it with the polite imperative ending -aṇḍi (-ండి/-రండి)."
+   },
+   {
+    "wrong": "నువ్వు వెళ్లండి.",
+    "right": "నువ్వు వెళ్లు.",
+    "note": "The casual pronoun నువ్వు (nuvvu) requires the informal imperative form, not the honorific -aṇḍi."
+   },
+   {
+    "wrong": "పోండి లోపలికి.",
+    "right": "రండి లోపలికి.",
+    "note": "Use 'రండి' (come in) rather than 'పోండి' (go away/get lost) when welcoming guests inside."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Please speak politely to an elder: 'Please speak!'",
+    "options": [
+     "మాట్లాడు",
+     "మాట్లాడండి",
+     "మాట్లాడడు",
+     "మాట్లాడవు"
+    ],
+    "answer": 1,
+    "explanation": "The polite imperative suffix is -ండి (-aṇḍi), yielding మాట్లాడండి."
+   },
+   {
+    "question": "Tell your younger brother casually: 'Eat!'",
+    "options": [
+     "తినండి",
+     "తిన్నారు",
+     "తిను",
+     "తింటాడు"
+    ],
+    "answer": 2,
+    "explanation": "The informal singular imperative of 'to eat' is simply తిను (tinu)."
+   },
+   {
+    "question": "Irregular imperative: Address a respected visitor and say 'Please come!'",
+    "options": [
+     "రండి",
+     "రా",
+     "పోండి",
+     "వెళ్లు"
+    ],
+    "answer": 0,
+    "explanation": "The irregular polite imperative of 'to come' (వచ్చు) is రండి (raṇḍi)."
+   },
+   {
+    "question": "Complete the informal instruction: 'నువ్వు ఉత్తరం ___.' (Write!)",
+    "options": [
+     "రాయండి",
+     "రాశారు",
+     "రాస్తాడు",
+     "రాయి"
+    ],
+    "answer": 3,
+    "explanation": "The informal imperative for 'to write' addressed to నువ్వు is రాయి (raayi) or రాయు (raayu)."
+   }
+  ],
+  "tip": "Attach -aṇḍi to practically any casual verb stem to instantly turn it into a warm, polite invitation!"
+ },
+ {
+  "id": "te-a2-past-tense-formation",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "⏳",
+  "title": "Past Tense Stem Classes and Mutations",
+  "subtitle": "Forming the past tense with the marker -ina- and stem alternations",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "The Telugu past tense is formed by appending the past marker -ina- (or its colloquial mutated variant -æ-) to the verb stem before personal gender-number agreement suffixes.",
+  "structure": {
+   "headers": [
+    "Verb Class",
+    "Infinitive Root",
+    "Past Stem",
+    "3rd Person Masc. Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Regular -u Verbs",
+      "చేయు (to do)",
+      "చేసి- / చేసిన-",
+      "చేశాడు (He did)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-yu/-cu Roots",
+      "చూచు (to see)",
+      "చూసి- / చూసిన-",
+      "చూశాడు (He saw)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-nu Roots",
+      "విను (to hear)",
+      "విని- / విన్న-",
+      "విన్నాడు (He heard)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Irregular (to go)",
+      "పోవు/వెళ్లు (to go)",
+      "పోయి- / వెళ్లిన-",
+      "వెళ్లాడు (He went)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Completed past events",
+    "example": "నిన్న నేను ఒక సినిమా చూశాను.",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Personal achievements",
+    "example": "మేము పరీక్ష రాశాము.",
+    "translation": ""
+   },
+   {
+    "color": "#4F46E5",
+    "label": "Reporting arrivals",
+    "example": "అతిథులు సమయానికి వచ్చారు.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "నిన్న నేను హైదరాబాద్ వెళ్లాను.",
+    "ko": "",
+    "highlight": "వెళ్లాను"
+   },
+   {
+    "en": "ఆమె మంచి కాఫీ తాగింది.",
+    "ko": "",
+    "highlight": "తాగింది"
+   },
+   {
+    "en": "వాళ్లు కథ విన్నారు.",
+    "ko": "",
+    "highlight": "విన్నారు"
+   },
+   {
+    "en": "రాముడు పండు తిన్నాడు.",
+    "ko": "",
+    "highlight": "తిన్నాడు"
+   },
+   {
+    "en": "నువ్వు నిన్న ఏమి చేశావు?",
+    "ko": "",
+    "highlight": "చేశావు"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "నేను నిన్న సినిమా చూస్తాను.",
+    "right": "నేను నిన్న సినిమా చూశాను.",
+    "note": "చూస్తాను is future/habitual; completed past actions require past inflection like చూశాను."
+   },
+   {
+    "wrong": "ఆమె ఉత్తరం రాశాడు.",
+    "right": "ఆమె ఉత్తరం రాసింది.",
+    "note": "Verbs agree with subject gender: ఆమె (she) takes -indi, whereas -aaḍu is reserved for masculine subjects."
+   },
+   {
+    "wrong": "మేము అన్నం తిన్నాను.",
+    "right": "మేము అన్నం తిన్నాము.",
+    "note": "First-person plural మేము requires the agreement ending -aamu, not singular -aanu."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct past form: 'నిన్న ఆమె బాగా ___.' (She sang well)",
+    "options": [
+     "పాడింది",
+     "పాడాడు",
+     "పాడుతుంది",
+     "పాడారు"
+    ],
+    "answer": 0,
+    "explanation": "The feminine 3rd person singular past agreement ending is -indi (పాడింది)."
+   },
+   {
+    "question": "Choose the correct past form: 'మేము బడికి ___.' (We went to school)",
+    "options": [
+     "వెళ్లాను",
+     "వెళ్లాడు",
+     "వెళ్లాము",
+     "వెళ్తాము"
+    ],
+    "answer": 2,
+    "explanation": "The 1st person plural past suffix is -aamu (వెళ్లాము)."
+   },
+   {
+    "question": "Choose the correct past form: 'అతను నిన్న ఉత్తరం ___.' (He wrote a letter)",
+    "options": [
+     "రాసింది",
+     "రాశాడు",
+     "రాశారు",
+     "రాస్తాడు"
+    ],
+    "answer": 1,
+    "explanation": "The masculine 3rd person singular past suffix is -aaḍu (రాశాడు)."
+   },
+   {
+    "question": "Choose the correct past form: 'వారు నిన్న ___.' (They came yesterday)",
+    "options": [
+     "వచ్చాడు",
+     "వచ్చింది",
+     "వస్తాడు",
+     "వచ్చారు"
+    ],
+    "answer": 3,
+    "explanation": "The 3rd person epicene plural marker is -aaru (వచ్చారు)."
+   }
+  ],
+  "tip": "In everyday spoken Telugu, the formal past cluster -in- fuses with personal endings into long vowels: చేశాను (I did) instead of చేసినాను."
+ },
+ {
+  "id": "te-a2-future-habitual-tense",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "🔄",
+  "title": "Future-Habitual Tense with -taa-",
+  "subtitle": "Expressing recurring daily routines and forthcoming future plans",
+  "color": "#9333EA",
+  "bg": "#FAF5FF",
+  "keyPoint": "The infix -taa- / -tuu- attaches directly to the verb base to indicate both regular everyday habits and events scheduled to happen in the future.",
+  "structure": {
+   "headers": [
+    "Person / Pronoun",
+    "Stem + Infix",
+    "Personal Suffix",
+    "Combined Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "నేను (I)",
+      "చేస్- + -తా-",
+      "-ను",
+      "చేస్తాను (I will do / I do)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "నువ్వు (You casual)",
+      "చేస్- + -తా-",
+      "-వు",
+      "చేస్తావు (You will do / You do)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "అతను (He)",
+      "చేస్- + -తా-",
+      "-డు",
+      "చేస్తాడు (He will do / He does)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ఆమె/అది (She/It)",
+      "చేస్- + -తుం-",
+      "-ది",
+      "చేస్తుంది (She will do / She does)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#9333EA",
+    "label": "Daily Routines",
+    "example": "నేను రోజూ కాఫీ తాగుతాను.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Future Events",
+    "example": "రేపు మేము సినిమా చూస్తాము.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Timeless Truths",
+    "example": "సూర్యుడు తూర్పున ఉదయిస్తాడు.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "నేను రేపు పొద్దున్నే వస్తాను.",
+    "ko": "",
+    "highlight": "వస్తాను"
+   },
+   {
+    "en": "ఆమె ప్రతిరోజూ వ్యాయామం చేస్తుంది.",
+    "ko": "",
+    "highlight": "చేస్తుంది"
+   },
+   {
+    "en": "అతను ఎప్పుడూ నిజం మాట్లాడతాడు.",
+    "ko": "",
+    "highlight": "మాట్లాడతాడు"
+   },
+   {
+    "en": "మేము వచ్చే వారం ఊరికి వెళ్తాము.",
+    "ko": "",
+    "highlight": "వెళ్తాము"
+   },
+   {
+    "en": "మీరు సాయంత్రం వస్తారా?",
+    "ko": "",
+    "highlight": "వస్తారా"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "నేను రేపు వెళ్లాను.",
+    "right": "నేను రేపు వెళ్తాను.",
+    "note": "వెళ్లాను is past tense; an event planned for tomorrow (రేపు) requires the future marker -taa- (వెళ్తాను)."
+   },
+   {
+    "wrong": "ఆమె రేపు వస్తాడు.",
+    "right": "ఆమె రేపు వస్తుంది.",
+    "note": "The pronoun ఆమె (she) takes the feminine future suffix -tundi, while -taaḍu is masculine."
+   },
+   {
+    "wrong": "వాళ్లు రేపు వస్తాను.",
+    "right": "వాళ్లు రేపు వస్తారు.",
+    "note": "Third person plural వాళ్లు (they) requires the agreement ending -aaru (వస్తారు)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill the routine action: 'నేను ప్రతిరోజూ ఉదయం ___.' (I read)",
+    "options": [
+     "చదువుతాను",
+     "చదివాను",
+     "చదువుతాడు",
+     "చదవండి"
+    ],
+    "answer": 0,
+    "explanation": "The 1st person singular future-habitual form is చదువుతాను."
+   },
+   {
+    "question": "Fill the future action: 'రవి రేపు క్రికెట్ ___.' (Ravi will play)",
+    "options": [
+     "ఆడింది",
+     "ఆడతారు",
+     "ఆడతాడు",
+     "ఆడాము"
+    ],
+    "answer": 2,
+    "explanation": "Ravi is 3rd person masculine singular, taking the ending -taaḍu (ఆడతాడు)."
+   },
+   {
+    "question": "Express a habitual truth: 'ఆవు పాలు ___.' (The cow gives milk)",
+    "options": [
+     "ఇచ్చింది",
+     "ఇస్తాడు",
+     "ఇచ్చారు",
+     "ఇస్తుంది"
+    ],
+    "answer": 3,
+    "explanation": "Animals and non-human singular nouns take the 3rd person non-masculine suffix -tundi (ఇస్తుంది)."
+   },
+   {
+    "question": "Complete the polite question: 'మీరు రేపు మా ఆఫీసుకు ___?' (Will you come?)",
+    "options": [
+     "వచ్చారా",
+     "వస్తారా",
+     "వచ్చాడు",
+     "వస్తావా"
+    ],
+    "answer": 1,
+    "explanation": "Formal second person మీరు pairs with the polite interrogative -taaraa (వస్తారా)."
+   }
+  ],
+  "tip": "Telugu does not have distinct grammatical forms for 'I am going tomorrow' versus 'I go every day'; both use this single future-habitual form!"
+ },
+ {
+  "id": "te-a2-tripartite-negation",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#059669",
+  "emoji": "🚫",
+  "title": "Distinct Negators: Ledu, Kaadu, and Vaddu",
+  "subtitle": "Navigating absence, identity negation, and negative desires",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use లేదు (ledu) for non-existence or past negation, కాదు (kaadu) for denying identity or qualities, and వద్దు (vaddu) for prohibition or rejecting an offer.",
+  "structure": {
+   "headers": [
+    "Negator",
+    "Primary Meaning",
+    "Telugu Example",
+    "English Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "లేదు (ledu)",
+      "Non-existence / Did not",
+      "ఇంట్లో పాలు లేవు / నేను తినలేదు",
+      "There isn't / Did not do"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "కాదు (kaadu)",
+      "Identity / Not this entity",
+      "ఇది నా పుస్తకం కాదు",
+      "It is not (X is not Y)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "వద్దు (vaddu)",
+      "Refusal / Do not want / Prohibition",
+      "నాకు కాఫీ వద్దు / మాట్లాడవద్దు",
+      "Don't want / Don't do!"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Denying an identity",
+    "example": "అతను డాక్టర్ కాదు.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Past action denial",
+    "example": "నేను నిన్న రాలేదు.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Declining an object",
+    "example": "నాకు పంచదార వద్దు.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "నా దగ్గర డబ్బులు లేవు.",
+    "ko": "",
+    "highlight": "లేవు"
+   },
+   {
+    "en": "ఆమె నా స్నేహితురాలు కాదు.",
+    "ko": "",
+    "highlight": "కాదు"
+   },
+   {
+    "en": "నువ్వు అక్కడికి వెళ్లవద్దు.",
+    "ko": "",
+    "highlight": "వెళ్లవద్దు"
+   },
+   {
+    "en": "నేను నిన్న అన్నం తినలేదు.",
+    "ko": "",
+    "highlight": "తినలేదు"
+   },
+   {
+    "en": "నాకు ఈ చొక్కా వద్దు.",
+    "ko": "",
+    "highlight": "వద్దు"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "అతను ఉపాధ్యాయుడు లేదు.",
+    "right": "అతను ఉపాధ్యాయుడు కాదు.",
+    "note": "To negate identities or professions (He is not a teacher), use కాదు, not లేదు."
+   },
+   {
+    "wrong": "నాకు టీ లేదు.",
+    "right": "నాకు టీ వద్దు.",
+    "note": "'నాకు టీ లేదు' means 'I do not have tea'. To say 'I do not want tea', use వద్దు."
+   },
+   {
+    "wrong": "నేను నిన్న సినిమా చూడవద్దు.",
+    "right": "నేను నిన్న సినిమా చూడలేదు.",
+    "note": "For completed past events ('did not see'), suffix the infinitive with లేదు, not వద్దు."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Deny possession or presence: 'గదిలో ఎవరూ ___.' (There is no one in the room)",
+    "options": [
+     "వద్దు",
+     "లేదు",
+     "కాదు",
+     "రాలేదు"
+    ],
+    "answer": 1,
+    "explanation": "Absence or non-existence is expressed using లేదు (ledu)."
+   },
+   {
+    "question": "Deny identity: 'ఇది మా ఊరు ___.' (This is not our village)",
+    "options": [
+     "లేదు",
+     "రాదు",
+     "కాదు",
+     "వద్దు"
+    ],
+    "answer": 2,
+    "explanation": "Negating equivalence or identity ('X is not Y') requires కాదు (kaadu)."
+   },
+   {
+    "question": "Politely decline an offer: 'నాకు మిఠాయి ___.' (I don't want sweets)",
+    "options": [
+     "వద్దు",
+     "కాదు",
+     "లేదు",
+     "లేవు"
+    ],
+    "answer": 0,
+    "explanation": "Rejecting or refusing an object ('do not want') requires వద్దు (vaddu)."
+   },
+   {
+    "question": "Negate a past action: 'మేము నిన్న మార్కెట్‌కు ___.' (We did not go)",
+    "options": [
+     "వెళ్లవద్దు",
+     "వెళ్లము",
+     "వెళ్లరు",
+     "వెళ్లలేదు"
+    ],
+    "answer": 3,
+    "explanation": "Past action negation is formed by adding లేదు to the infinitive (వెళ్లలేదు)."
+   }
+  ],
+  "tip": "Remember: లేదు = 'is not there / did not'; కాదు = 'is not that thing'; వద్దు = 'do not want / do not do!'"
+ },
+ {
+  "id": "te-a2-past-participle-converb",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#2563EB",
+  "emoji": "🔗",
+  "title": "Past Participle (Converb) in -i for Chaining Actions",
+  "subtitle": "Connecting sequential temporal clauses smoothly with -i",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Form the Telugu verbal participle by adding -i to the verbal root, allowing you to string together consecutive actions before concluding with a final conjugated verb.",
+  "structure": {
+   "headers": [
+    "Infinitive Verb",
+    "Converb Stem (-i)",
+    "Chained Construction",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "చేయు (to do)",
+      "చేసి",
+      "పని చేసి వచ్చాడు",
+      "Having done work, he came"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "తిను (to eat)",
+      "తిని",
+      "అన్నం తిని పడుకున్నాడు",
+      "Having eaten, he slept"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "చూచు (to see)",
+      "చూసి",
+      "సినిమా చూసి వెళ్లాము",
+      "Having watched the movie, we left"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "వచ్చు (to come)",
+      "వచ్చి",
+      "ఇంటికి వచ్చి మాట్లాడాడు",
+      "Having come home, he spoke"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Chronological Sequence",
+    "example": "స్నానం చేసి పూజ చేశాను.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Cause & Immediate Outcome",
+    "example": "వర్షం పడి రోడ్లు తడిశాయి.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Compound Verb Bases",
+    "example": "ఉత్తరం రాసి పంపించాడు.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "అతను బడికి వెళ్లి చదువుకున్నాడు.",
+    "ko": "",
+    "highlight": "వెళ్లి"
+   },
+   {
+    "en": "మేము కాఫీ తాగి బయలుదేరాము.",
+    "ko": "",
+    "highlight": "తాగి"
+   },
+   {
+    "en": "ఆమె పుస్తకం కొని చదివింది.",
+    "ko": "",
+    "highlight": "కొని"
+   },
+   {
+    "en": "పిల్లలు ఆడుకుని నిద్రపోయారు.",
+    "ko": "",
+    "highlight": "ఆడుకుని"
+   },
+   {
+    "en": "నువ్వు ఇంటికి వచ్చి భోజనం చెయ్యి.",
+    "ko": "",
+    "highlight": "వచ్చి"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "నేను తిన్నాను మరియు పడుకున్నాను.",
+    "right": "నేను తిని పడుకున్నాను.",
+    "note": "Native Telugu rarely connects chronological actions with and (మరియు); chain them using the converb -i (తిని) instead."
+   },
+   {
+    "wrong": "ఆమె రాసి ఆమె వెళ్లింది.",
+    "right": "ఆమె రాసి వెళ్లింది.",
+    "note": "Do not repeat the subject pronoun when clauses share the same subject in a converbial chain."
+   },
+   {
+    "wrong": "నేను చూడు వచ్చి మాట్లాడాను.",
+    "right": "నేను చూసి వచ్చి మాట్లాడాను.",
+    "note": "Use the valid converb ending -i (చూసి), never the bare raw root."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Chain the sequence: 'అతను కాఫీ ___ ఆఫీసుకు వెళ్లాడు.' (Having drunk coffee, he went to office)",
+    "options": [
+     "తాగాడు",
+     "తాగి",
+     "తాగుతాడు",
+     "తాగండి"
+    ],
+    "answer": 1,
+    "explanation": "The past participle (converb) of తాగు is తాగి (taagi)."
+   },
+   {
+    "question": "Combine consecutive verbs: 'ఆమె ఉత్తరం ___ పోస్ట్ చేసింది.' (Having written the letter, she posted it)",
+    "options": [
+     "రాసి",
+     "రాసింది",
+     "రాస్తుంది",
+     "రాయి"
+    ],
+    "answer": 0,
+    "explanation": "The converb of రాయు is రాసి (raasi)."
+   },
+   {
+    "question": "Select the correct chained converb: 'పిల్లలు పాఠం ___ పరీక్ష రాశారు.' (Having learned the lesson, the kids took the exam)",
+    "options": [
+     "నేర్చుకున్నారు",
+     "నేర్చుకుంటాడు",
+     "నేర్చుకో",
+     "నేర్చుకుని"
+    ],
+    "answer": 3,
+    "explanation": "The converbial participle of నేర్చుకొను is నేర్చుకుని (having learned)."
+   },
+   {
+    "question": "Fill the linked clause: 'మిత్రులు ఇంటికి ___ భోజనం చేశారు.' (The friends, having come home, ate dinner)",
+    "options": [
+     "వచ్చారు",
+     "వచ్చి",
+     "వస్తారు",
+     "రండి"
+    ],
+    "answer": 1,
+    "explanation": "The past participle converb of వచ్చు is వచ్చి (vacci)."
+   }
+  ],
+  "tip": "You can chain multiple -i converbs consecutively in a single sentence (e.g., లేచి, స్నానం చేసి, తిని వెళ్లాడు) — only the very last verb takes tense and personal endings!"
+ },
+ {
+  "id": "te-a2-interrogative-clitics",
+  "level": "a2",
+  "category": "questions",
+  "categoryColor": "#0284C7",
+  "emoji": "❓",
+  "title": "Question Clitic -aa vs Doubt Clitic -o",
+  "subtitle": "Forming yes/no polar questions and expressing uncertainty",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Attach the clitic -aa to the focus word or verb to form a yes/no question, and attach -o to express doubt, indefiniteness, or indirect questions.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Base Form",
+    "Suffix Attached",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Yes/No Polar Question",
+      "వచ్చాడు",
+      "వచ్చాడా?",
+      "Did he come?"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Uncertainty / Wonder",
+      "వచ్చాడు",
+      "వచ్చాడో!",
+      "I wonder if he came"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Indefinite Pronoun",
+      "ఎవరు",
+      "ఎవరో",
+      "Someone (unknown)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Specific Constituent Question",
+      "నిన్న",
+      "నిన్నా?",
+      "Yesterday? (focus on yesterday)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Polar Yes/No Question",
+    "example": "నువ్వు కాఫీ తాగుతావా?",
+    "translation": ""
+   },
+   {
+    "color": "#0369A1",
+    "label": "Expressing Doubt or Wonder",
+    "example": "ఆయన రేపు వస్తాడో రాడో నాకు తెలియదు.",
+    "translation": ""
+   },
+   {
+    "color": "#075985",
+    "label": "Indefinite Reference",
+    "example": "గదిలో ఎవరో ఉన్నారు.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "మీరు రేపు బడికి వెళ్తున్నారా?",
+    "ko": "",
+    "highlight": "వెళ్తున్నారా"
+   },
+   {
+    "en": "ఇది మీ పుస్తకమా?",
+    "ko": "",
+    "highlight": "పుస్తకమా"
+   },
+   {
+    "en": "బయట ఎవరో పిలుస్తున్నారు.",
+    "ko": "",
+    "highlight": "ఎవరో"
+   },
+   {
+    "en": "ఆమె సినిమాకి వస్తుందో రాదో.",
+    "ko": "",
+    "highlight": "వస్తుందో"
+   },
+   {
+    "en": "ఆమె చెప్పింది నిజమేనా?",
+    "ko": "",
+    "highlight": "నిజమేనా"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "మీరు భోజనం చేశారు?",
+    "right": "మీరు భోజనం చేశారా?",
+    "note": "Telugu requires the interrogative suffix -aa on the verb; question intonation alone is unnatural in standard speech."
+   },
+   {
+    "wrong": "ఎవరా వచ్చారు?",
+    "right": "ఎవరో వచ్చారు.",
+    "note": "Use -o on interrogative pronouns to mean 'someone' (indefinite); using -aa turns it into a rhetorical or echo question."
+   },
+   {
+    "wrong": "ఆమె వస్తుందా రాదా నాకు తెలియదు.",
+    "right": "ఆమె వస్తుందో రాదో నాకు తెలియదు.",
+    "note": "Embedded indirect questions meaning 'whether... or' take the dubitative marker -o, not the direct question marker -aa."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the polar question: 'Are you drinking tea?' -> 'నువ్వు టీ ___?'",
+    "options": [
+     "తాగుతావు",
+     "తాగుతావా",
+     "తాగుతావో",
+     "తాగావు"
+    ],
+    "answer": 1,
+    "explanation": "The polar interrogative marker -aa replaces or lengthens the final vowel of the finite verb (తాగుతావు + ఆ = తాగుతావా)."
+   },
+   {
+    "question": "Choose the form expressing uncertainty: 'I don't know whether he will come' -> 'ఆయన ___ నాకు తెలియదు.'",
+    "options": [
+     "వస్తాడో",
+     "వస్తాడా",
+     "వస్తాడు",
+     "వచ్చాడు"
+    ],
+    "answer": 0,
+    "explanation": "Indirect embedded questions and doubt require the dubitative suffix -o (వస్తాడు + ఓ = వస్తాడో)."
+   },
+   {
+    "question": "Identify the indefinite pronoun meaning 'somewhere':",
+    "options": [
+     "ఎక్కడ",
+     "ఎక్కడా",
+     "ఎక్కడైనా",
+     "ఎక్కడో"
+    ],
+    "answer": 3,
+    "explanation": "Attaching -o to question words forms indefinites: ఎక్కడ (where) + ఓ = ఎక్కడో (somewhere)."
+   },
+   {
+    "question": "Select the correct sentence for: 'Is this your car?'",
+    "options": [
+     "ఇది మీ కారు.",
+     "ఇది మీ కారే.",
+     "ఇది మీ కారా?",
+     "ఇది మీ కారో."
+    ],
+    "answer": 2,
+    "explanation": "The noun కారు takes the vowel-lengthened interrogative suffix -aa to ask 'is it a car?'."
+   }
+  ],
+  "tip": "To target a specific detail in a sentence, shift -aa from the verb to that specific word: 'నిన్నా వచ్చావు?' means 'Was it yesterday that you came?'"
+ },
+ {
+  "id": "te-a2-accusative-marker-nu-ni",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#EA580C",
+  "emoji": "🎯",
+  "title": "Accusative Marker -nu / -ni",
+  "subtitle": "Differential object marking for animate and definite direct objects",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "The accusative suffixes -nu (after back vowels u, o) and -ni (after front vowels i, e) are applied to animate beings and definite specific inanimate objects.",
+  "structure": {
+   "headers": [
+    "Noun Ending",
+    "Suffix",
+    "Base Noun",
+    "Accusative Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Front vowels (-i, -e)",
+      "-ni (ని)",
+      "తమ్ముడు (stem: తమ్ముడి-)",
+      "తమ్ముడిని (younger brother-ACC)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Back vowel (-u)",
+      "-nu (ను)",
+      "రాముడు",
+      "రాముడిని / రాముణ్ణి (Rama-ACC)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Inanimate / Indefinite",
+      "Ø (no suffix)",
+      "పుస్తకం",
+      "పుస్తకం (book as non-specific object)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Pronouns (-nu / -ni)",
+      "-nu / -ni",
+      "నన్ను, నిన్ను, అతడిని",
+      "నన్ను (me), నిన్ను (you)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Animate Direct Object",
+    "example": "నేను కుక్కను చూశాను.",
+    "translation": ""
+   },
+   {
+    "color": "#C2410C",
+    "label": "Specific Definite Object",
+    "example": "ఆ పుస్తకాన్ని నాకు ఇవ్వు.",
+    "translation": ""
+   },
+   {
+    "color": "#9A3412",
+    "label": "Human Pronoun Object",
+    "example": "పోలీసులు అతడిని పట్టుకున్నారు.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "అమ్మ పిల్లలను పిలిచింది.",
+    "ko": "",
+    "highlight": "పిల్లలను"
+   },
+   {
+    "en": "నువ్వు నిన్న నన్ను చూశావా?",
+    "ko": "",
+    "highlight": "నన్ను"
+   },
+   {
+    "en": "ఆ ఉత్తరాన్ని త్వరగా పోస్ట్ చేయండి.",
+    "ko": "",
+    "highlight": "ఉత్తరాన్ని"
+   },
+   {
+    "en": "నేను రోజూ పాలు తాగుతాను.",
+    "ko": "",
+    "highlight": "పాలు"
+   },
+   {
+    "en": "డాక్టర్ రోగిని పరీక్షించారు.",
+    "ko": "",
+    "highlight": "రోగిని"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "నేను పిల్లి చూశాను.",
+    "right": "నేను పిల్లిని చూశాను.",
+    "note": "Animate objects (humans and animals) require the accusative marker -ni/-nu; omitting it sounds incomplete."
+   },
+   {
+    "wrong": "నేను నీళ్లును తాగాను.",
+    "right": "నేను నీళ్లు తాగాను.",
+    "note": "General non-specific inanimate direct objects (like water or rice) drop the accusative suffix."
+   },
+   {
+    "wrong": "ఆమె నా చూసింది.",
+    "right": "ఆమె నన్ను చూసింది.",
+    "note": "The pronoun 'I' (నేను) takes the suppletive accusative stem 'నన్ను' (me), not the genitive stem 'నా'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct object form: 'The teacher praised the student (విద్యార్థి).' -> 'ఉపాధ్యాయుడు ___ మెచ్చుకున్నారు.'",
+    "options": [
+     "విద్యార్థి",
+     "విద్యార్థిని",
+     "విద్యార్థికి",
+     "విద్యార్థితో"
+    ],
+    "answer": 1,
+    "explanation": "Animate nouns ending in -i take -ni in the accusative case (విద్యార్థి + ని = విద్యార్థిని)."
+   },
+   {
+    "question": "Which sentence correctly drops the accusative marker for a non-specific inanimate object?",
+    "options": [
+     "నేను అన్నం తింటున్నాను.",
+     "నేను అన్నాన్ని తింటున్నాను.",
+     "నేను అన్నంని తింటున్నాను.",
+     "నేను అన్నాన్ను తింటున్నాను."
+    ],
+    "answer": 0,
+    "explanation": "Everyday non-specific mass nouns like 'అన్నం' do not take the accusative marker in ordinary transitive sentences."
+   },
+   {
+    "question": "Identify the accusative form of 'you' (singular informal):",
+    "options": [
+     "నువ్వు",
+     "నీవు",
+     "నీ",
+     "నిన్ను"
+    ],
+    "answer": 3,
+    "explanation": "The accusative form of నువ్వు is నిన్ను."
+   },
+   {
+    "question": "Fill in the blank with the definite object: 'Give me that pen.' -> 'ఆ ___ నాకు ఇవ్వు.'",
+    "options": [
+     "కలాన్ని",
+     "కలానికి",
+     "కలాలు",
+     "కలంతో"
+    ],
+    "answer": 0,
+    "explanation": "Specific definite inanimate nouns marked with a demonstrative (ఆ) take the accusative marker (కలం + ని = కలాన్ని)."
+   }
+  ],
+  "tip": "Vowel harmony rule: If the preceding syllable ends in 'i' or 'e', use -ni (పిల్లిని, ఆమెని). If it ends in 'u', use -nu (ఆవును, గురువును)."
+ },
+ {
+  "id": "te-b1-relative-participles",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#059669",
+  "emoji": "🔗",
+  "title": "Relative Participles Across Tenses",
+  "subtitle": "Modifying nouns directly with adjectival verb forms",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Telugu forms relative clauses by turning verbs into adjectival participles (-ina for past, -tunna for present continuous, -e for habitual/future) placed directly before the modified noun.",
+  "structure": {
+   "headers": [
+    "Tense / Aspect",
+    "Participle Suffix",
+    "Participle Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Past",
+      "-ina (ఇన)",
+      "వచ్చిన మనిషి",
+      "the person who came"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Present Progressive",
+      "-tunna (తున్న)",
+      "మాట్లాడుతున్న అమ్మాయి",
+      "the girl who is speaking"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Habitual / Future",
+      "-e (ఏ)",
+      "వెళ్లే బస్సు",
+      "the bus that goes / will go"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative (All Tenses)",
+      "-ani (అని)",
+      "రాని అతిథి",
+      "the guest who did/does not come"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Past Completed Event",
+    "example": "నిన్న కొన్న పండ్లు చాలా తీపిగా ఉన్నాయి.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Ongoing Present Action",
+    "example": "పాట పాడుతున్న బాలుడు నా స్నేహితుడు.",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "Habitual or Future Action",
+    "example": "హైదరాబాద్ వెళ్లే రైలు ఏ ప్లాట్‌ఫారమ్‌కు వస్తుంది?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "నేను చదివిన పుస్తకం చాలా బాగుంది.",
+    "ko": "",
+    "highlight": "చదివిన"
+   },
+   {
+    "en": "అక్కడ ఆడుతున్న పిల్లలు మా బంధువులు.",
+    "ko": "",
+    "highlight": "ఆడుతున్న"
+   },
+   {
+    "en": "ఆయన రాసే ఉత్తరాలు అందంగా ఉంటాయి.",
+    "ko": "",
+    "highlight": "రాసే"
+   },
+   {
+    "en": "సమయానికి రాని వాళ్లకు ప్రవేశం లేదు.",
+    "ko": "",
+    "highlight": "రాని"
+   },
+   {
+    "en": "మనం తాగే నీరు శుభ్రంగా ఉండాలి.",
+    "ko": "",
+    "highlight": "తాగే"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "మనిషి ఎవరు వచ్చాడు నా మిత్రుడు.",
+    "right": "వచ్చిన మనిషి నా మిత్రుడు.",
+    "note": "Telugu does not use English-style relative pronouns (who/which); instead, convert the verb into a relative participle placed before the noun."
+   },
+   {
+    "wrong": "నేను చదివాను పుస్తకం బాగుంది.",
+    "right": "నేను చదివిన పుస్తకం బాగుంది.",
+    "note": "Finite verbs (చదివాను) cannot modify a noun; you must use the relative adjectival participle (చదివిన)."
+   },
+   {
+    "wrong": "చేయని పనికి జీతం రాదు (using wrong negative: చేయక పని)",
+    "right": "చేయని పనికి జీతం రాదు.",
+    "note": "Relative adjectival negation requires the participle suffix -ani (చేయని), not the adverbial verbal participle form -ka."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct participle: 'The boy who is running is my brother.' -> 'అక్కడ ___ అబ్బాయి మా తమ్ముడు.'",
+    "options": [
+     "పరిగెత్తిన",
+     "పరిగెడుతున్న",
+     "పరిగెత్తే",
+     "పరిగెత్తని"
+    ],
+    "answer": 1,
+    "explanation": "The present continuous relative participle suffix is -tunna (పరిగెడుతున్న = who is running)."
+   },
+   {
+    "question": "Choose the past relative participle: 'The movie that we saw yesterday.' -> 'మేము నిన్న ___ సినిమా.'",
+    "options": [
+     "చూసే",
+     "చూస్తున్న",
+     "చూసిన",
+     "చూడని"
+    ],
+    "answer": 2,
+    "explanation": "The past relative participle is formed by adding -ina to the verbal base (చూడు -> చూసిన)."
+   },
+   {
+    "question": "Complete the sentence with habitual participle: 'The water we drink must be pure.' -> 'మనం ___ నీరు పరిశుభ్రంగా ఉండాలి.'",
+    "options": [
+     "తాగే",
+     "తాగిన",
+     "తాగుతున్న",
+     "తాగని"
+    ],
+    "answer": 0,
+    "explanation": "The habitual/generic relative participle uses the suffix -e (తాగే = that one drinks)."
+   },
+   {
+    "question": "Which word is the negative relative participle meaning 'the train that does not stop'?",
+    "options": [
+     "ఆగని",
+     "ఆగక",
+     "ఆగదు",
+     "ఆగలేదు"
+    ],
+    "answer": 0,
+    "explanation": "Negative relative participles are formed with root + ani (ఆగు + అని = ఆగని)."
+   }
+  ],
+  "tip": "Telugu relative clauses precede the head noun entirely. Unlike English 'the book that I read', Telugu structure is '[I read-which] book' (నేను చదివిన పుస్తకం)."
+ },
+ {
+  "id": "te-b1-conditional-and-concessive-forms",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#7C3AED",
+  "emoji": "🔀",
+  "title": "Conditional (-te) and Concessive (-ina)",
+  "subtitle": "Expressing 'if' conditions and 'even if / although' concessions",
+  "color": "#7C3AED",
+  "bg": "#FAF5FF",
+  "keyPoint": "Add -te to the past verbal stem to state conditions ('if'), and add -ina to state concessions ('even if / although').",
+  "structure": {
+   "headers": [
+    "Type",
+    "Suffix",
+    "Telugu Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Real Conditional (If)",
+      "-te (తే / టే)",
+      "వర్షం పడితే ఇంట్లోనే ఉంటాం.",
+      "If it rains, we will stay home."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Concessive (Even if)",
+      "-ina (ఇనా)",
+      "వర్షం పడినా వెళ్తాము.",
+      "Even if it rains, we will go."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Conditional",
+      "-kapote (కపోతే)",
+      "రాకపోతే ఫోన్ చేయి.",
+      "If you don't come, call."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Concessive",
+      "-kapoyina (కపోయినా)",
+      "చదవకపోయినా పాసయ్యాడు.",
+      "Even though he didn't study, he passed."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Hypothesis & Consequence",
+    "example": "నువ్వు పిలిస్తే నేను తప్పకుండా వస్తాను.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Obstacle Overcome (Concession)",
+    "example": "ఎంత కష్టపడినా విజయం సాధించలేకపోయాడు.",
+    "translation": ""
+   },
+   {
+    "color": "#5B21B6",
+    "label": "Negative Condition ('Unless / If not')",
+    "example": "మందులు వేసుకోకపోతే జ్వరం తగ్గదు.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "నువ్వు అడిగితే ఆమె సహాయం చేస్తుంది.",
+    "ko": "",
+    "highlight": "అడిగితే"
+   },
+   {
+    "en": "ఆలస్యమైనా పర్వాలేదు, జాగ్రత్తగా రండి.",
+    "ko": "",
+    "highlight": "ఆలస్యమైనా"
+   },
+   {
+    "en": "బాగా చదివితే మంచి మార్కులు వస్తాయి.",
+    "ko": "",
+    "highlight": "చదివితే"
+   },
+   {
+    "en": "ఆమె చెప్పినా అతడు వినలేదు.",
+    "ko": "",
+    "highlight": "చెప్పినా"
+   },
+   {
+    "en": "సమయానికి బస్సు రాకపోతే టాక్సీ తీసుకుందాం.",
+    "ko": "",
+    "highlight": "రాకపోతే"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "నువ్వు వస్తే నేను వెళ్లాను.",
+    "right": "నువ్వు వస్తే నేను వెళ్తాను.",
+    "note": "A conditional -te clause referring to a pending situation must be followed by a future/habitual or modal main verb, not a past tense."
+   },
+   {
+    "wrong": "అతడు చెప్పితే విను.",
+    "right": "అతడు చెబితే విను.",
+    "note": "Irregular verb stems shift before -te: చెప్పు becomes చెబితే (or చెప్పినట్లయితే), not చెప్పితే."
+   },
+   {
+    "wrong": "వర్షం పడితే కూడా వెళ్లాను.",
+    "right": "వర్షం పడినా వెళ్లాను.",
+    "note": "Do not attach కూడా to -te for 'even if'; use the dedicated concessive suffix -ina (పడినా)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the 'if' clause: 'If you study well, you will pass.' -> 'బాగా ___ పరీక్ష పాసవుతావు.'",
+    "options": [
+     "చదివినా",
+     "చదివితే",
+     "చదువుతూ",
+     "చదివావు"
+    ],
+    "answer": 1,
+    "explanation": "The conditional 'if' marker attached to the verbal root is -te (చదివితే)."
+   },
+   {
+    "question": "Select the form meaning 'even if called':",
+    "options": [
+     "పిలిస్తే",
+     "పిలుస్తూ",
+     "పిలిచినా",
+     "పిలవకపోతే"
+    ],
+    "answer": 2,
+    "explanation": "The concessive 'even if' form is built by adding -ina to the stem (పిలిచినా)."
+   },
+   {
+    "question": "Choose the negative condition: 'If you do not eat medicine, health won't improve.' -> 'మందులు ___ ఆరోగ్యం బాగుపడదు.'",
+    "options": [
+     "వేసుకుంటే",
+     "వేసుకున్నా",
+     "వేసుకుంటూ",
+     "వేసుకోకపోతే"
+    ],
+    "answer": 3,
+    "explanation": "Negative conditionals use the auxiliary -kapote (వేసుకోకపోతే = if you do not take)."
+   },
+   {
+    "question": "What does 'చెప్పినా వినలేదు' mean?",
+    "options": [
+     "He didn't listen even though I told him.",
+     "If I tell him, he won't listen.",
+     "Because I didn't tell him, he didn't listen.",
+     "While telling, he did not listen."
+    ],
+    "answer": 0,
+    "explanation": "చెప్పినా contains the concessive -ina ('even though told'), indicating counter-expectation."
+   }
+  ],
+  "tip": "Distinguish between relative participle -ina (short: వచ్చిన మనిషి 'the man who came') and concessive -ina (lengthened vowel -inaa: వచ్చినా 'even if he comes')."
+ },
+ {
+  "id": "te-b1-infinitive-auxiliaries-galugu-and-vaccu",
+  "level": "b1",
+  "category": "modals",
+  "categoryColor": "#D97706",
+  "emoji": "🛠️",
+  "title": "Modal Auxiliaries with Verbal Infinitive",
+  "subtitle": "Expressing ability (-galugu) and permission or possibility (-vaccu)",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Form the verbal infinitive by suffixing -an/-a to the verb root, then append auxiliary verbs like galugu (can/ability) or vaccu (may/possibility).",
+  "structure": {
+   "headers": [
+    "Modal Function",
+    "Infinitive + Auxiliary",
+    "Example Form",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Physical Ability / Capability",
+      "Inf + galugu (గలుగు)",
+      "మాట్లాడగలను",
+      "I can speak"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Inability (Negative)",
+      "Inf + le- (లే-)",
+      "రాలేకపోయాను",
+      "I could not come"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Permission / Likelihood",
+      "Inf + vaccu (వచ్చు)",
+      "వెళ్లవచ్చు",
+      "may go / can possibly go"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Prohibition / Negative Possibility",
+      "Inf + koodadu (కూడదు)",
+      "చేయకూడదు",
+      "must not do / should not do"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Expressing Ability",
+    "example": "నేను తెలుగు అనర్గళంగా మాట్లాడగలను.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Asking / Giving Permission",
+    "example": "నేను లోపలికి రావచ్చా?",
+    "translation": ""
+   },
+   {
+    "color": "#92400E",
+    "label": "Strong Prohibition",
+    "example": "ఇక్కడ ధూమపానం చేయకూడదు.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ఆమె ఈ బరువును ఎత్తగలదు.",
+    "ko": "",
+    "highlight": "ఎత్తగలదు"
+   },
+   {
+    "en": "మీరు ఇప్పుడు ఇంటికి వెళ్లవచ్చు.",
+    "ko": "",
+    "highlight": "వెళ్లవచ్చు"
+   },
+   {
+    "en": "నేను ఈ సమస్యను పరిష్కరించలేను.",
+    "ko": "",
+    "highlight": "పరిష్కరించలేను"
+   },
+   {
+    "en": "చిన్న పిల్లలు అక్కడ ఆడకూడదు.",
+    "ko": "",
+    "highlight": "ఆడకూడదు"
+   },
+   {
+    "en": "రేపు వర్షం పడవచ్చు.",
+    "ko": "",
+    "highlight": "పడవచ్చు"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "నేను చేయవచ్చును (for ability).",
+    "right": "నేను చేయగలను.",
+    "note": "Use galugu for internal capability or learned skill; vaccu expresses permission or external possibility."
+   },
+   {
+    "wrong": "నువ్వు లోపల రావచ్చు (asking permission).",
+    "right": "నువ్వు లోపలికి రావచ్చా?",
+    "note": "When asking for permission, the infinitive + vaccu must end with the question clitic -aa (రావచ్చా?)."
+   },
+   {
+    "wrong": "ఆమె పాడగలిగింది కాదు.",
+    "right": "ఆమె పాడలేకపోయింది.",
+    "note": "To express past inability ('could not'), combine the infinitive with leka-poyindi rather than negating galugu with kaadu."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct modal for ability: 'I can swim.' -> 'నేను ఈద___.'",
+    "options": [
+     "గలను",
+     "వచ్చు",
+     "కూడదు",
+     "వలెను"
+    ],
+    "answer": 0,
+    "explanation": "Infinitive ఈద + గలను (first-person singular of galugu) denotes personal capability: 'I can swim'."
+   },
+   {
+    "question": "How do you ask for permission: 'May I sit here?'",
+    "options": [
+     "నేను ఇక్కడ కూర్చోగలను?",
+     "నేను ఇక్కడ కూర్చోవచ్చా?",
+     "నేను ఇక్కడ కూర్చోకూడదా?",
+     "నేను ఇక్కడ కూర్చుంటానా?"
+    ],
+    "answer": 1,
+    "explanation": "Permission questions combine the infinitive (కూర్చో-) with vaccu and the question marker -aa (కూర్చోవచ్చా?)."
+   },
+   {
+    "question": "Select the modal expressing strict prohibition: 'One must not speak lies.' -> 'అబద్ధాలు చెప్ప___.'",
+    "options": [
+     "వచ్చు",
+     "గలరు",
+     "కూడదు",
+     "లేరు"
+    ],
+    "answer": 2,
+    "explanation": "The auxiliary koodadu (కూడదు) attached to the infinitive (చెప్ప) indicates prohibition ('must not')."
+   },
+   {
+    "question": "Complete the sentence to mean 'He could not come': 'అతడు ___.'",
+    "options": [
+     "రాగలడు",
+     "రాలేకపోయాడు",
+     "రావచ్చు",
+     "రావాలి"
+    ],
+    "answer": 1,
+    "explanation": "Past inability is expressed using the negative infinitive auxiliary lekapoyadu (రాలేకపోయాడు)."
+   }
+  ],
+  "tip": "The verb vaccu inflected as an auxiliary is invariable across genders and numbers: 'ఆమె వెళ్లవచ్చు' (she may go) and 'వాళ్లు వెళ్లవచ్చు' (they may go) both use identical forms."
+ },
+ {
+  "id": "te-b1-reflexive-and-inchoative-konu",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔄",
+  "title": "Compound Verbs with Auxiliary Konu",
+  "subtitle": "Expressing actions done for oneself, reflexivity, and gradual change of state",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Appending the auxiliary verb కొను (konu) to an invariant verbal base indicates that an action is performed for one's own benefit, reciprocally, or denotes an internal state transition.",
+  "structure": {
+   "headers": [
+    "Root Form",
+    "With కొను (Konu)",
+    "Function / Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "చేయి (do)",
+      "చేసుకొను",
+      "To do for oneself (Self-benefactive)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "చూడు (see)",
+      "చూసుకొను",
+      "To look at oneself / take care"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "తీయు (take)",
+      "తీసుకొను",
+      "To take for oneself / accept"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "అనుకో (think)",
+      "అనుకొను",
+      "To think to oneself / imagine"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Self-Benefactive",
+    "example": "నేను కొత్త బట్టలు కుట్టించుకున్నాను.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Reflexive Action",
+    "example": "ఆమె అద్దంలో తన ముఖం చూసుకుంది.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Internal/Mental State",
+    "example": "వారు ఆ విషయం గురించి బాగా ఆలోచించుకున్నారు.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "అతను స్వయంగా వంట చేసుకున్నాడు.",
+    "ko": "",
+    "highlight": "చేసుకున్నాడు"
+   },
+   {
+    "en": "పిల్లలు పాఠం జాగ్రత్తగా చదువుకున్నారు.",
+    "ko": "",
+    "highlight": "చదువుకున్నారు"
+   },
+   {
+    "en": "మేము సంతలో పండ్లు కొనుక్కున్నాము.",
+    "ko": "",
+    "highlight": "కొనుక్కున్నాము"
+   },
+   {
+    "en": "నువ్వు నీ వస్తువులు సర్దుకున్నావా?",
+    "ko": "",
+    "highlight": "సర్దుకున్నావా"
+   },
+   {
+    "en": "ఆమె నిద్రలేచి తల దువ్వుకుంది.",
+    "ko": "",
+    "highlight": "దువ్వుకుంది"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "నేను పుస్తకం కొన్నాను తన కోసం.",
+    "right": "నేను నా కోసం పుస్తకం కొనుక్కున్నాను.",
+    "note": "When the action directly benefits the subject, use the auxiliary కొను rather than simple transitive verbs."
+   },
+   {
+    "wrong": "ఆమె బట్టలు వేసింది.",
+    "right": "ఆమె బట్టలు వేసుకుంది.",
+    "note": "Wearing or putting clothes on oneself requires the reflexive వేసుకొను rather than వేయు."
+   },
+   {
+    "wrong": "అతను నన్ను చూసుకున్నాడు.",
+    "right": "అతను నన్ను చూశాడు.",
+    "note": "Do not use కొను when the beneficiary or target of the action is completely external to the subject."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I prepared dinner for myself: నేను రాత్రి భోజనం ___.",
+    "options": [
+     "చేసింది",
+     "చేసుకున్నాను",
+     "చేశాడు",
+     "చేసాము"
+    ],
+    "answer": 1,
+    "explanation": "చేసుకున్నాను indicates a 1st person singular past action done for one's own benefit."
+   },
+   {
+    "question": "She looked at herself in the mirror: ఆమె అద్దంలో ___.",
+    "options": [
+     "చూసింది",
+     "చూశారు",
+     "చూసుకుంది",
+     "చూస్తాడు"
+    ],
+    "answer": 2,
+    "explanation": "చూసుకుంది is the 3rd person feminine past reflexive form matching ఆమె."
+   },
+   {
+    "question": "Did you (informal) take the money?: నువ్వు డబ్బులు ___?",
+    "options": [
+     "తీసుకున్నావా",
+     "తీసుకున్నారా",
+     "తీశారా",
+     "తీసుకుంది"
+    ],
+    "answer": 0,
+    "explanation": "తీసుకున్నావా is the correct 2nd person singular past interrogative form."
+   },
+   {
+    "question": "The children sat down quietly: పిల్లలు నిశ్శబ్దంగా ___.",
+    "options": [
+     "కూర్చున్నాను",
+     "కూర్చుంది",
+     "కూర్చున్నాడు",
+     "కూర్చున్నారు"
+    ],
+    "answer": 3,
+    "explanation": "కూర్చున్నారు is the 3rd person plural past form derived from కూర్చొను."
+   }
+  ],
+  "tip": "In conversational Telugu, the past stem of కొను often becomes -క్కున్- (-kkun-), so కొను + past becomes కొనుక్కున్నాను."
+ },
+ {
+  "id": "te-b1-causative-verb-derivations",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "⚙️",
+  "title": "Causative Verb Formations with -incu",
+  "subtitle": "Deriving transitive and causative verbs using the verbal suffix -incu",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Suffixing -ించు (-incu) to intransitive or simple transitive verb bases derives causative verbs indicating that the subject causes another entity to perform or undergo the action.",
+  "structure": {
+   "headers": [
+    "Base Verb",
+    "Causative Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "చేయు (to do)",
+      "చేయించు",
+      "To cause to do / have someone do"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "తిను (to eat)",
+      "తినిపించు",
+      "To feed (cause to eat)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "నడుచు (to walk)",
+      "నడిపించు",
+      "To lead / steer (cause to walk)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "విను (to hear)",
+      "వినిపించు",
+      "To sound / make heard / tell"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Direct Causation",
+    "example": "తల్లి బిడ్డకు అన్నం తినిపించింది.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Indirect / Commissioned Action",
+    "example": "మేనేజర్ పనివాడితో ఇల్లు శుభ్రం చేయించాడు.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Sensory Causation",
+    "example": "గాయకుడు అందరికీ పాట వినిపించాడు.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ఉపాధ్యాయుడు విద్యార్థితో పద్యం చదివించాడు.",
+    "ko": "",
+    "highlight": "చదివించాడు"
+   },
+   {
+    "en": "డాక్టర్ రోగికి మందు తాగించాడు.",
+    "ko": "",
+    "highlight": "తాగించాడు"
+   },
+   {
+    "en": "నాన్న నాకు సైకిల్ తొక్కించడం నేర్పించారు.",
+    "ko": "",
+    "highlight": "తొక్కించడం"
+   },
+   {
+    "en": "ఆమె పిల్లలను త్వరగా నిద్రపుచ్చింది.",
+    "ko": "",
+    "highlight": "నిద్రపుచ్చింది"
+   },
+   {
+    "en": "వారు మాకు తమ కొత్త ఇల్లు చూపించారు.",
+    "ko": "",
+    "highlight": "చూపించారు"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "అమ్మ బాబుకి అన్నం తిన్నది.",
+    "right": "అమ్మ బాబుకి అన్నం తినిపించింది.",
+    "note": "Use the causative form తినిపించు (to feed) rather than the simple verb తిను (to eat) when feeding someone."
+   },
+   {
+    "wrong": "నేను అతనితో పని చేశాను.",
+    "right": "నేను అతనితో పని చేయించాను.",
+    "note": "When getting work done through someone else, use the causative చేయించు instead of చేశాను."
+   },
+   {
+    "wrong": "ఆయన నన్ను నడిచాడు.",
+    "right": "ఆయన నన్ను నడిపించాడు.",
+    "note": "నడుచు is intransitive; making someone walk or leading them requires causative నడిపించు."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Mother fed the child milk: తల్లి పిల్లకు పాలు ___.",
+    "options": [
+     "తాగింది",
+     "తాగాడు",
+     "తాగించింది",
+     "తాగారు"
+    ],
+    "answer": 2,
+    "explanation": "తాగించింది is the 3rd person feminine causative past form of తాగు (to drink)."
+   },
+   {
+    "question": "The teacher made the students write an essay: ఉపాధ్యాయురాలు విద్యార్థులతో వ్యాసం ___.",
+    "options": [
+     "రాయించింది",
+     "రాసింది",
+     "రాశారు",
+     "రాయించారు"
+    ],
+    "answer": 0,
+    "explanation": "రాయించింది indicates that the female teacher caused the students to write."
+   },
+   {
+    "question": "They showed us their farm: వారు మాకు తమ పొలం ___.",
+    "options": [
+     "చూసింది",
+     "చూపించారు",
+     "చూశారు",
+     "చూస్తాడు"
+    ],
+    "answer": 1,
+    "explanation": "చూపించారు is the respectful plural past causative form of చూడు (to see)."
+   },
+   {
+    "question": "The driver drove the car carefully: డ్రైవర్ కారును జాగ్రత్తగా ___.",
+    "options": [
+     "నడిచింది",
+     "నడిచాడు",
+     "నడిచారు",
+     "నడిపించాడు"
+    ],
+    "answer": 3,
+    "explanation": "నడిపించాడు is the causative masculine form indicating driving or steering."
+   }
+  ],
+  "tip": "The intermediary agent who is caused to do the action is almost always marked by the instrumental postposition తో (to / with)."
+ },
+ {
+  "id": "te-b2-quotative-particle-ani",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "💬",
+  "title": "Complementizer and Purposive Constructions with Ani",
+  "subtitle": "Forming reported speech, indirect thoughts, intentions, and causal clauses",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The verbal participle అని (ani), originating from the defective verb అను (to say), functions as an indispensable quotative marker, complementizer, and purpose conjunction.",
+  "structure": {
+   "headers": [
+    "Construction Type",
+    "Telugu Pattern",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Direct Quotation",
+      "[వాక్యం] + అని చెప్పాడు",
+      "Quoting exact speech directly"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Internal Thought",
+      "[వాక్యం] + అని అనుకున్నాను",
+      "Expressing personal thoughts or beliefs"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Purposive Clause",
+      "క్రియా రూపం + అని వెళ్ళాడు",
+      "Indicating purpose or intent (in order to)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Causal Clause",
+      "విశేషణం / నామవాచకం + అని",
+      "Explaining reasons or naming entities"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Reported Speech",
+    "example": "రేపు వస్తానని రాము చెప్పాడు.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Intentional State",
+    "example": "సహాయం చేద్దామని అక్కడికి వెళ్ళాను.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Reason / Cause",
+    "example": "వర్షం వస్తుందని గొడుగు తెచ్చుకున్నాను.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ఆయన రేపు రారని తెలిసింది.",
+    "ko": "",
+    "highlight": "రారని"
+   },
+   {
+    "en": "పరీక్ష బాగా రాయాలని విద్యార్థి కష్టపడ్డాడు.",
+    "ko": "",
+    "highlight": "రాయాలని"
+   },
+   {
+    "en": "ఆమె నాతో నిజం చెప్పలేదని కోపం వచ్చింది.",
+    "ko": "",
+    "highlight": "చెప్పలేదని"
+   },
+   {
+    "en": "నువ్వు వస్తావని నేను చాలాసేపు ఎదురుచూశాను.",
+    "ko": "",
+    "highlight": "వస్తావని"
+   },
+   {
+    "en": "సమయం అయిపోయిందని అందరూ వెళ్ళిపోయారు.",
+    "ko": "",
+    "highlight": "అయిపోయిందని"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "నేను అతను వస్తాడు అనుకున్నాను.",
+    "right": "నేను అతను వస్తాడని అనుకున్నాను.",
+    "note": "Telugu complement clauses cannot simply juxtapose; the quotative అని must link the subordinate clause to the main verb."
+   },
+   {
+    "wrong": "పుస్తకం కొనడానికి కోసం వెళ్ళాడు.",
+    "right": "పుస్తకం కొందామని వెళ్ళాడు.",
+    "note": "Combining dynamic intent with కోసం redundantly is unnatural; use the hortative + అని construction."
+   },
+   {
+    "wrong": "ఆమె చెప్పింది అని రేపు రాదు.",
+    "right": "ఆమె రేపు రానని చెప్పింది.",
+    "note": "In Telugu, the content clause precedes అని and the main verb follows at the end."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I brought an umbrella thinking it might rain: వర్షం పడుతుంది ___ గొడుగు తెచ్చాను.",
+    "options": [
+     "అని",
+     "కోసం",
+     "నుంచి",
+     "కంటే"
+    ],
+    "answer": 0,
+    "explanation": "అని connects the anticipated thought or reason directly to the main action."
+   },
+   {
+    "question": "He said that he would come tomorrow: అతను రేపు ___ అని చెప్పాడు.",
+    "options": [
+     "వచ్చాడు",
+     "వస్తాడు",
+     "వస్తానని",
+     "వచ్చింది"
+    ],
+    "answer": 2,
+    "explanation": "వస్తానని incorporates the 1st person future marker bound seamlessly to అని in indirect reported speech."
+   },
+   {
+    "question": "We went there intending to buy mangoes: మేము మామిడిపండ్లు ___ అక్కడికి వెళ్ళాము.",
+    "options": [
+     "తిన్నారని",
+     "అమ్ముతారని",
+     "కొందామని",
+     "వచ్చారని"
+    ],
+    "answer": 2,
+    "explanation": "కొందామని combines the hortative కొందాము with the quotative purposive marker అని."
+   },
+   {
+    "question": "I found out that she is not feeling well: ఆమెకు ఆరోగ్యం బాగాలేదు ___ తెలిసింది.",
+    "options": [
+     "వలన",
+     "వరకు",
+     "ద్వారా",
+     "అని"
+    ],
+    "answer": 3,
+    "explanation": "అని acts as the complementizer linking the state clause to the cognitive verb తెలిసింది."
+   }
+  ],
+  "tip": "When personal verb endings ending in -ను combine with అని, the vowels coalesce: వస్తాను + అని becomes వస్తానని."
+ },
+ {
+  "id": "te-b2-participial-nouns",
+  "level": "b2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "👤",
+  "title": "Participial Nouns (Headless Relatives)",
+  "subtitle": "Nominalizing relative participles into agentive and abstract demonstratives",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Participial nouns are created by fusing verbal adjectives (relative participles) with third-person pronominal suffixes to express 'the one who does' or 'that which did'.",
+  "structure": {
+   "headers": [
+    "Participle Base",
+    "Pronominal Suffix",
+    "Formed Noun",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "చేసిన (who did)",
+      "-వాడు (masc)",
+      "చేసినవాడు",
+      "He who did"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "వచ్చే (who comes)",
+      "-ఆమె (fem)",
+      "వచ్చేఆమె",
+      "She who will come"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "తిన్న (who ate)",
+      "-ది (neut)",
+      "తిన్నది",
+      "That which ate / was eaten"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "చెప్పని (who didn't say)",
+      "-వారు (pl/polite)",
+      "చెప్పనివారు",
+      "Those who did not say"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Definite Agent",
+    "example": "నిన్న మాట్లాడినవాడు మా అన్నయ్య.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Neuter / Factual Nominalization",
+    "example": "నువ్వు చెప్పినది అక్షరాలా నిజం.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Negative Participial Noun",
+    "example": "సమయానికి రానివారికి ప్రవేశం లేదు.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "నిజం మాట్లాడేవారిని అందరూ గౌరవిస్తారు.",
+    "ko": "",
+    "highlight": "మాట్లాడేవారిని"
+   },
+   {
+    "en": "జరిగినదాన్ని ఎవరూ మార్చలేరు.",
+    "ko": "",
+    "highlight": "జరిగినదాన్ని"
+   },
+   {
+    "en": "నా మాట విన్నవాడు ఎప్పుడూ నష్టపోడు.",
+    "ko": "",
+    "highlight": "విన్నవాడు"
+   },
+   {
+    "en": "అక్కడ పరిగెడుతున్నది మా చెల్లి.",
+    "ko": "",
+    "highlight": "పరిగెడుతున్నది"
+   },
+   {
+    "en": "తప్పు చేయనివారు సమాజంలో ఎవరూ ఉండరు.",
+    "ko": "",
+    "highlight": "చేయనివారు"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "చేసిన మనిషి వాడు వచ్చాడు.",
+    "right": "చేసినవాడు వచ్చాడు.",
+    "note": "Avoid clumsy double modification; merge the participle and demonstrative pronoun into చేసినవాడు."
+   },
+   {
+    "wrong": "నువ్వు చెప్పిన విషయం ది విన్నాను.",
+    "right": "నువ్వు చెప్పినది విన్నాను.",
+    "note": "When turning an entire relative clause into an object noun, suffix -ది directly: చెప్పినది."
+   },
+   {
+    "wrong": "రాసినవారుడు మంచి రచయిత.",
+    "right": "రాసినవాడు మంచి రచయిత.",
+    "note": "Do not affix extra case remnants like -డు onto -వారు; use -వాడు for masculine singular and -వారు for plural."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The one (male) who arrived yesterday is my brother: నిన్న ___ మా తమ్ముడు.",
+    "options": [
+     "వచ్చినది",
+     "వచ్చినవాడు",
+     "వచ్చేవారు",
+     "వచ్చినవారు"
+    ],
+    "answer": 1,
+    "explanation": "వచ్చినవాడు fuses the past participle వచ్చిన with the masculine demonstrative suffix -వాడు."
+   },
+   {
+    "question": "Those who do not work will not eat: పని ___ వారికి తిండి దొరకదు.",
+    "options": [
+     "చేసిన",
+     "చేస్తున్న",
+     "చేసే",
+     "చేయని"
+    ],
+    "answer": 3,
+    "explanation": "చేయని is the negative relative participle required for 'those who do not do'."
+   },
+   {
+    "question": "What you said is correct: నువ్వు ___ నిజమే.",
+    "options": [
+     "అన్నవాడు",
+     "అన్నది",
+     "అనేవారు",
+     "అన్నవారు"
+    ],
+    "answer": 1,
+    "explanation": "అన్నది nominalizes the action neuter-wise to mean 'the thing that was said'."
+   },
+   {
+    "question": "All those who came to the meeting listened: సమావేశానికి ___ అందరూ విన్నారు.",
+    "options": [
+     "వచ్చినవారు",
+     "వచ్చినది",
+     "వచ్చేవాడు",
+     "రానిది"
+    ],
+    "answer": 0,
+    "explanation": "వచ్చినవారు corresponds to the plural human noun 'those who came'."
+   }
+  ],
+  "tip": "Neuter participial nouns ending in -ది (e.g., తిన్నది) can mean either the object ('what was eaten') or the feminine/neuter subject ('she/it that ate') depending on context."
+ },
+ {
+  "id": "te-b2-passive-and-adversative-padu",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#EC4899",
+  "emoji": "🛡️",
+  "title": "Passive and Adversative Constructions with Padu",
+  "subtitle": "Expressing passive voice and involuntary or adversative experiences",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "The auxiliary verb పడు (padu) joins with verbal infinitive stems ending in -అ (-a) to form formal passive clauses and denote adverse or involuntary experiences.",
+  "structure": {
+   "headers": [
+    "Infinitive Stem",
+    "Passive with పడు",
+    "English Translation"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "రాయ (write)",
+      "రాయబడు",
+      "To be written"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "చంప (kill)",
+      "చంపబడు",
+      "To be killed"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "దొంగిలించ (steal)",
+      "దొంగిలించబడు",
+      "To be stolen"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "బాధ (pain / noun)",
+      "బాధపడు",
+      "To suffer / feel sorrow"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DB2777",
+    "label": "Formal Literary Passive",
+    "example": "ఈ పుస్తకం ప్రముఖ రచయితచే రాయబడింది.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Adversative Sensation",
+    "example": "వారు అనేక ఇబ్బందులు పడ్డారు.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Involuntary Mental State",
+    "example": "ఆ శబ్దానికి పిల్లవాడు భయపడ్డాడు.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ఆలయం ప్రభుత్వం చేత నిర్మించబడింది.",
+    "ko": "",
+    "highlight": "నిర్మించబడింది"
+   },
+   {
+    "en": "దొంగ పోలీసులచే బంధించబడ్డాడు.",
+    "ko": "",
+    "highlight": "బంధించబడ్డాడు"
+   },
+   {
+    "en": "అకారణంగా ఆమె చాలా బాధపడింది.",
+    "ko": "",
+    "highlight": "బాధపడింది"
+   },
+   {
+    "en": "అతను ఆ సమస్య గురించి తీవ్రంగా ఆందోళనపడ్డాడు.",
+    "ko": "",
+    "highlight": "ఆందోళనపడ్డాడు"
+   },
+   {
+    "en": "ఆ ప్రతిపాదన ఏకగ్రీవంగా ఆమోదించబడింది.",
+    "ko": "",
+    "highlight": "ఆమోదించబడింది"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "పుస్తకం చదవడం పడింది.",
+    "right": "పుస్తకం చదవబడింది.",
+    "note": "Attach పడు directly to the short verbal infinitive stem (చదవ-), never to the verbal noun (చదవడం)."
+   },
+   {
+    "wrong": "అతను నన్ను భయపెట్టబడ్డాడు.",
+    "right": "అతను నా వల్ల భయపడ్డాడు.",
+    "note": "Experiential states like భయపడు are inherently intransitive; do not mix causative -పెట్టు with passive forms."
+   },
+   {
+    "wrong": "ఇల్లు కట్టాడు ప్రభుత్వం చేత.",
+    "right": "ఇల్లు ప్రభుత్వం చేత కట్టబడింది.",
+    "note": "When using the instrumental agent marker చేత (by), the governing verb must be conjugated in the passive voice with పడు."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The bill was approved in assembly: ఆ బిల్లు శాసనసభలో ___.",
+    "options": [
+     "ఆమోదించింది",
+     "ఆమోదించాడు",
+     "ఆమోదించబడింది",
+     "ఆమోదిస్తాడు"
+    ],
+    "answer": 2,
+    "explanation": "ఆమోదించబడింది is the correct 3rd person neuter passive past formation."
+   },
+   {
+    "question": "The boy was scared by the sudden noise: అబ్బాయి హఠాత్తుగా వచ్చిన శబ్దానికి ___.",
+    "options": [
+     "భయపడ్డాడు",
+     "భయపడింది",
+     "భయపడ్డారు",
+     "భయపడ్డాను"
+    ],
+    "answer": 0,
+    "explanation": "భయపడ్డాడు is the experiential masculine past tense meaning 'he felt scared'."
+   },
+   {
+    "question": "This letter was written by Rama: ఈ ఉత్తరం రాముడి చేత ___.",
+    "options": [
+     "రాయించింది",
+     "రాయబడింది",
+     "రాశాడు",
+     "రాయబడ్డారు"
+    ],
+    "answer": 1,
+    "explanation": "The passive form రాయబడింది agrees with the neuter singular subject ఉత్తరం (letter)."
+   },
+   {
+    "question": "The villagers faced many troubles during the floods: వరదల సమయంలో గ్రామస్తులు ఎన్నో కష్టాలు ___.",
+    "options": [
+     "పడ్డాడు",
+     "పడింది",
+     "పడతాను",
+     "పడ్డారు"
+    ],
+    "answer": 3,
+    "explanation": "పడ్డారు agrees with the plural subject గ్రామస్తులు (villagers) in experiencing hardship."
+   }
+  ],
+  "tip": "Spoken Telugu prefers active constructions whenever possible; the formal passive with పడు is primarily encountered in news broadcasts, administrative notices, and formal literature."
+ }
+]

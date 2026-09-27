@@ -1,0 +1,3355 @@
+[
+ {
+  "id": "fr-a1-grammatical-gender-and-agreement",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🏷️",
+  "title": "Noun Gender and Adjective Agreement",
+  "subtitle": "Matching adjectives in gender and number with the nouns they describe",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "In French, all nouns are masculine or feminine, and adjectives must match their noun in both gender and number.",
+  "structure": {
+   "headers": [
+    "Gender & Number",
+    "Ending Change",
+    "Example",
+    "English"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Singular",
+      "Base form",
+      "un petit livre",
+      "a small book"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine Singular",
+      "Add -e",
+      "une petite table",
+      "a small table"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masculine Plural",
+      "Add -s",
+      "des petits livres",
+      "small books"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine Plural",
+      "Add -es",
+      "des petites tables",
+      "small tables"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Describing Objects",
+    "example": "La voiture est blanche et rapide.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Describing People",
+    "example": "Mon frère est grand et intelligent.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Plural Groups",
+    "example": "Les maisons sont anciennes.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Le chat noir dort sur le canapé.",
+    "ko": "",
+    "highlight": "noir"
+   },
+   {
+    "en": "Elle porte une robe verte.",
+    "ko": "",
+    "highlight": "verte"
+   },
+   {
+    "en": "Ce sont de grands appartements modernes.",
+    "ko": "",
+    "highlight": "grands"
+   },
+   {
+    "en": "Mes deux sœurs sont très bavardes.",
+    "ko": "",
+    "highlight": "bavardes"
+   },
+   {
+    "en": "Il achète une chemise bleue.",
+    "ko": "",
+    "highlight": "bleue"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "La robe est bleu.",
+    "right": "La robe est bleue.",
+    "note": "Robe is feminine, so the adjective requires an -e ending."
+   },
+   {
+    "wrong": "Les garçons sont content.",
+    "right": "Les garçons sont contents.",
+    "note": "Plural subjects require an -s on the adjective."
+   },
+   {
+    "wrong": "Une grand maison.",
+    "right": "Une grande maison.",
+    "note": "Grand must agree in the feminine form with maison."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "La chaise est ___.",
+    "options": [
+     "blanc",
+     "blanche",
+     "blanches",
+     "blancs"
+    ],
+    "answer": 1,
+    "explanation": "Chaise is feminine singular, so use the feminine form blanche."
+   },
+   {
+    "question": "Ils ont des yeux ___.",
+    "options": [
+     "bleus",
+     "bleue",
+     "bleues",
+     "bleu"
+    ],
+    "answer": 0,
+    "explanation": "Yeux is masculine plural, so the adjective takes -s."
+   },
+   {
+    "question": "C'est une très ___ idée.",
+    "options": [
+     "bon",
+     "bons",
+     "bonnes",
+     "bonne"
+    ],
+    "answer": 3,
+    "explanation": "Idée is feminine singular, requiring bonne."
+   },
+   {
+    "question": "Ces livres sont ___.",
+    "options": [
+     "intéressante",
+     "intéressantes",
+     "intéressants",
+     "intéressant"
+    ],
+    "answer": 2,
+    "explanation": "Livres is masculine plural, requiring intéressants."
+   }
+  ],
+  "tip": "Most French adjectives follow the noun, except for common short ones like BAGS (Beauty, Age, Goodness, Size) which precede it."
+ },
+ {
+  "id": "fr-a1-definite-indefinite-partitive-articles",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🥖",
+  "title": "Definite, Indefinite, and Partitive Articles",
+  "subtitle": "Choosing between specific, countable, and uncountable quantity markers",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use le/la/les for specific things or general concepts, un/une/des for countable items, and du/de la/de l' for uncountable amounts.",
+  "structure": {
+   "headers": [
+    "Article Type",
+    "Masculine",
+    "Feminine",
+    "Plural"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Definite (the)",
+      "le / l'",
+      "la / l'",
+      "les"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Indefinite (a / some)",
+      "un",
+      "une",
+      "des"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Partitive (some / portion)",
+      "du / de l'",
+      "de la / de l'",
+      "des"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Specific Reference",
+    "example": "J'aime le café de cette boulangerie.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Countable Whole Items",
+    "example": "Je mange une pomme rouge.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Uncountable Portions",
+    "example": "Tu veux du sucre avec ton thé ?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Je voudrais du pain et de l'eau.",
+    "ko": "",
+    "highlight": "du pain"
+   },
+   {
+    "en": "Le chocolat belge est délicieux.",
+    "ko": "",
+    "highlight": "Le chocolat"
+   },
+   {
+    "en": "Elle achète une baguette fraîche.",
+    "ko": "",
+    "highlight": "une baguette"
+   },
+   {
+    "en": "Nous buvons de la limonade.",
+    "ko": "",
+    "highlight": "de la limonade"
+   },
+   {
+    "en": "Ils ont des enfants adorables.",
+    "ko": "",
+    "highlight": "des enfants"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Je bois le café tous les matins. (meaning some coffee)",
+    "right": "Je bois du café tous les matins.",
+    "note": "Use the partitive article du for consuming an unspecified amount of a drink."
+   },
+   {
+    "wrong": "J'aime de la musique jazz.",
+    "right": "J'aime la musique jazz.",
+    "note": "Verbs of preference like aimer always use definite articles (le, la, les)."
+   },
+   {
+    "wrong": "Je veux de l'eau, s'il vous plaît.",
+    "right": "Je veux de l'eau, s'il vous plaît.",
+    "note": "De la becomes de l' before a vowel or mute h."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Tous les matins, je prends ___ thé.",
+    "options": [
+     "le",
+     "un",
+     "du",
+     "de"
+    ],
+    "answer": 2,
+    "explanation": "Thé is an uncountable masculine substance being consumed, so use du."
+   },
+   {
+    "question": "J'adore ___ fraises fraîches.",
+    "options": [
+     "les",
+     "des",
+     "du",
+     "de la"
+    ],
+    "answer": 0,
+    "explanation": "Verbs of liking (adorer) take definite articles; use les for plural."
+   },
+   {
+    "question": "Tu as acheté ___ croissants pour le petit-déjeuner ?",
+    "options": [
+     "du",
+     "les",
+     "des",
+     "la"
+    ],
+    "answer": 2,
+    "explanation": "Croissants are plural countable items, taking the indefinite article des."
+   },
+   {
+    "question": "Il boit toujours ___ eau minérale.",
+    "options": [
+     "du",
+     "de l'",
+     "la",
+     "une"
+    ],
+    "answer": 1,
+    "explanation": "Eau is feminine and starts with a vowel, so partitive de la contracts to de l'."
+   }
+  ],
+  "tip": "Verbs of preference (aimer, adorer, détester, préférer) always take definite articles (le, la, les), never partitives."
+ },
+ {
+  "id": "fr-a1-present-tense-verb-groups",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#059669",
+  "emoji": "⏱️",
+  "title": "Present Tense: -er, -ir, -re & Auxiliaries",
+  "subtitle": "Conjugating regular verb groups and the essential irregular verbs",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Regular French verbs follow fixed stem-and-ending patterns by group, while key auxiliaries have irregular stems you must memorize.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "-ER (parler)",
+    "-IR (finir)",
+    "-RE (vendre)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "je / j'",
+      "parle",
+      "finis",
+      "vends"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "tu",
+      "parles",
+      "finis",
+      "vends"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "il / elle / on",
+      "parle",
+      "finit",
+      "vend"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "nous",
+      "parlons",
+      "finissons",
+      "vendons"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "vous / ils",
+      "parlez / parlent",
+      "finissez / finissent",
+      "vendez / vendent"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Habitual Routines",
+    "example": "Nous habitons à Paris depuis un an.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "States of Being (être)",
+    "example": "Je suis fatigué ce soir.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Possession & Age (avoir)",
+    "example": "Elle a vingt ans et deux chats.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Nous parlons français et anglais en classe.",
+    "ko": "",
+    "highlight": "parlons"
+   },
+   {
+    "en": "Tu finis tes devoirs avant le dîner.",
+    "ko": "",
+    "highlight": "finis"
+   },
+   {
+    "en": "Ils vendent leur vieille voiture.",
+    "ko": "",
+    "highlight": "vendent"
+   },
+   {
+    "en": "Je suis étudiant à l'université.",
+    "ko": "",
+    "highlight": "suis"
+   },
+   {
+    "en": "Nous allons au cinéma ce samedi.",
+    "ko": "",
+    "highlight": "allons"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ils sont mangent une pizza.",
+    "right": "Ils mangent une pizza.",
+    "note": "French does not use être as an auxiliary for present continuous actions."
+   },
+   {
+    "wrong": "Je ai faim.",
+    "right": "J'ai faim.",
+    "note": "Je elides to j' before a vowel sound."
+   },
+   {
+    "wrong": "Nous faisons du bruit, ils faisez aussi.",
+    "right": "Ils font aussi.",
+    "note": "Faire has an irregular 3rd person plural form: ils/elles font."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Elles ___ le dîner pour leurs amis.",
+    "options": [
+     "prépare",
+     "prépares",
+     "préparons",
+     "préparent"
+    ],
+    "answer": 3,
+    "explanation": "The 3rd person plural ending for -er verbs is -ent (silent)."
+   },
+   {
+    "question": "Nous ___ à la gare immédiatement.",
+    "options": [
+     "allons",
+     "vont",
+     "va",
+     "allez"
+    ],
+    "answer": 0,
+    "explanation": "The nous form of irregular aller is allons."
+   },
+   {
+    "question": "Vous ___ un livre intéressant ?",
+    "options": [
+     "choisis",
+     "choisissez",
+     "choisit",
+     "choisissent"
+    ],
+    "answer": 1,
+    "explanation": "The vous form of -ir verbs adds the infix -iss- plus -ez: choisissez."
+   },
+   {
+    "question": "Tu ___ quel âge aujourd'hui ?",
+    "options": [
+     "es",
+     "ai",
+     "as",
+     "a"
+    ],
+    "answer": 2,
+    "explanation": "Age uses avoir; the tu form is tu as."
+   }
+  ],
+  "tip": "The endings -e, -es, and -ent for regular -er verbs are all pronounced identically (silent) in spoken French."
+ },
+ {
+  "id": "fr-a1-basic-negation-ne-pas",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#DC2626",
+  "emoji": "🚫",
+  "title": "Basic Two-Part Negation (ne... pas)",
+  "subtitle": "Framing conjugated verbs with ne... pas and handling article changes",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "Wrap the conjugated verb with ne and pas, and remember that indefinite and partitive articles switch to de in negative sentences.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Affirmative",
+    "Negative",
+    "Note"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Standard Verb",
+      "Je parle",
+      "Je ne parle pas",
+      "ne ... pas sandwiches verb"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Vowel Start",
+      "Il aime",
+      "Il n'aime pas",
+      "ne contracts to n'"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Indefinite Article",
+      "J'ai un chien",
+      "Je n'ai pas de chien",
+      "un/une/des becomes de"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "With Être",
+      "C'est un livre",
+      "Ce n'est pas un livre",
+      "articles do NOT change with être"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Denying Actions",
+    "example": "Je ne travaille pas le dimanche.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Zero Quantity",
+    "example": "Il n'y a pas de problème.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Expressing Dislikes",
+    "example": "Elle n'aime pas le café noir.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Je ne comprends pas la question.",
+    "ko": "",
+    "highlight": "ne comprends pas"
+   },
+   {
+    "en": "Nous n'habitons pas dans cette ville.",
+    "ko": "",
+    "highlight": "n'habitons pas"
+   },
+   {
+    "en": "Il ne boit pas de café.",
+    "ko": "",
+    "highlight": "pas de"
+   },
+   {
+    "en": "Ce n'est pas une bonne solution.",
+    "ko": "",
+    "highlight": "Ce n'est pas"
+   },
+   {
+    "en": "Vous n'avez pas de voiture rouge.",
+    "ko": "",
+    "highlight": "n'avez pas de"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Je ne veux pas du pain.",
+    "right": "Je ne veux pas de pain.",
+    "note": "Partitive du/de la becomes de after pas."
+   },
+   {
+    "wrong": "Je pas aime les épinards.",
+    "right": "Je n'aime pas les épinards.",
+    "note": "Ne/n' must precede the verb, and pas must follow it."
+   },
+   {
+    "wrong": "Ce n'est pas de stylo.",
+    "right": "Ce n'est pas un stylo.",
+    "note": "With être, un/une/des do NOT turn into de in the negative."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Je ___ pas de sucre dans mon café.",
+    "options": [
+     "veux",
+     "ne prends",
+     "prends",
+     "n'a"
+    ],
+    "answer": 1,
+    "explanation": "The negative structure needs ne before the verb: ne prends pas."
+   },
+   {
+    "question": "Nous n'avons pas ___ enfants.",
+    "options": [
+     "des",
+     "d'",
+     "les",
+     "un"
+    ],
+    "answer": 1,
+    "explanation": "Des becomes de/d' in negation; d' is used before the vowel in enfants."
+   },
+   {
+    "question": "Elle ___ habite pas à Lyon.",
+    "options": [
+     "ne",
+     "pas",
+     "n'",
+     "non"
+    ],
+    "answer": 2,
+    "explanation": "Habite begins with a mute h, so ne contracts to n'."
+   },
+   {
+    "question": "Ce ne sont pas ___ erreurs graves.",
+    "options": [
+     "d'",
+     "de",
+     "une",
+     "des"
+    ],
+    "answer": 3,
+    "explanation": "The rule changing articles to de does not apply with the verb être."
+   }
+  ],
+  "tip": "In everyday spoken French, speakers often drop ne entirely (e.g. 'J'sais pas'), but always write it in formal and written French."
+ },
+ {
+  "id": "fr-a1-c-est-vs-il-est",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "👥",
+  "title": "C'est vs. Il est",
+  "subtitle": "Presenting, identifying, and describing people and things accurately",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "Use c'est before a modified noun or general comment, and il/elle est directly before an unmodified adjective or profession.",
+  "structure": {
+   "headers": [
+    "Expression",
+    "Followed By",
+    "Example",
+    "English"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "C'est",
+      "Determiner + Noun",
+      "C'est un médecin.",
+      "He is a doctor."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Il / Elle est",
+      "Bare Profession",
+      "Il est médecin.",
+      "He is a doctor."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Il / Elle est",
+      "Bare Adjective",
+      "Elle est intelligente.",
+      "She is intelligent."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "C'est",
+      "Neuter Adjective",
+      "C'est magnifique !",
+      "It is wonderful!"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Identifying a Person",
+    "example": "C'est mon ami Marc.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Stating Professions",
+    "example": "Elle est professeure de français.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "General Opinions",
+    "example": "Apprendre le français, c'est amusant.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "C'est un musicien exceptionnel.",
+    "ko": "",
+    "highlight": "C'est un"
+   },
+   {
+    "en": "Il est italien et habite à Rome.",
+    "ko": "",
+    "highlight": "Il est italien"
+   },
+   {
+    "en": "Regarde cette maison, elle est magnifique.",
+    "ko": "",
+    "highlight": "elle est magnifique"
+   },
+   {
+    "en": "C'est facile à comprendre.",
+    "ko": "",
+    "highlight": "C'est facile"
+   },
+   {
+    "en": "Qui est à la porte ? C'est Sophie.",
+    "ko": "",
+    "highlight": "C'est Sophie"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Il est un bon avocat.",
+    "right": "C'est un bon avocat.",
+    "note": "When the noun has an article or modifier (un bon avocat), use c'est."
+   },
+   {
+    "wrong": "C'est avocat.",
+    "right": "Il est avocat.",
+    "note": "A bare profession without an article takes il est / elle est."
+   },
+   {
+    "wrong": "C'est une belle voiture, c'est rouge.",
+    "right": "C'est une belle voiture, elle est rouge.",
+    "note": "To describe a specific mentioned feminine noun, use elle est with the adjective."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Regarde Thomas : ___ dentiste.",
+    "options": [
+     "c'est",
+     "il est",
+     "elle est",
+     "c'est un"
+    ],
+    "answer": 1,
+    "explanation": "Dentiste is a bare profession without an article, requiring il est."
+   },
+   {
+    "question": "___ une excellente idée pour les vacances !",
+    "options": [
+     "Il est",
+     "Elle est",
+     "C'est",
+     "Ils sont"
+    ],
+    "answer": 2,
+    "explanation": "Une excellente idée is a noun phrase with an article, so use c'est."
+   },
+   {
+    "question": "Marie n'est pas là ? Non, ___ malade.",
+    "options": [
+     "c'est",
+     "il est",
+     "ce sont",
+     "elle est"
+    ],
+    "answer": 3,
+    "explanation": "Describing Marie with an adjective (malade) requires elle est."
+   },
+   {
+    "question": "___ français, c'est une langue romane.",
+    "options": [
+     "Le",
+     "Il est",
+     "C'est",
+     "Elle est"
+    ],
+    "answer": 0,
+    "explanation": "French as a subject takes the definite article Le before the sentence structure."
+   }
+  ],
+  "tip": "Think of c'est as pointing something out with a label (a/the ...), while il est / elle est directly describes an inherent characteristic."
+ },
+ {
+  "id": "fr-a1-question-formation",
+  "level": "a1",
+  "category": "questions",
+  "categoryColor": "#3B82F6",
+  "emoji": "❓",
+  "title": "Question Formation",
+  "subtitle": "Master intonation, est-ce que, and subject-verb inversion",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "French forms questions in three registers: rising intonation for casual speech, 'est-ce que' for neutral everyday conversation, and subject-verb inversion for formal contexts.",
+  "structure": {
+   "headers": [
+    "Register",
+    "Structure",
+    "French Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Informal (Intonation)",
+      "Subject + Verb + ?",
+      "Tu viens à la fête ?",
+      "Are you coming to the party?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Standard (Est-ce que)",
+      "Est-ce que + Subject + Verb ?",
+      "Est-ce que tu viens à la fête ?",
+      "Are you coming to the party?"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Formal (Inversion)",
+      "Verb-Subject pronoun ?",
+      "Viens-tu à la fête ?",
+      "Are you coming to the party?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Open Questions",
+      "Question word + est-ce que / inversion",
+      "Où habitez-vous ?",
+      "Where do you live?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Casual Everyday Chat",
+    "example": "Vous avez faim ?",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Standard Polite Query",
+    "example": "Est-ce qu'il parle anglais ?",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Formal or Written Context",
+    "example": "Pourquoi partez-vous si tôt ?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Est-ce que tu as fini tes devoirs ?",
+    "ko": "",
+    "highlight": "Est-ce que"
+   },
+   {
+    "en": "Comment vous appelez-vous ?",
+    "ko": "",
+    "highlight": "appelez-vous"
+   },
+   {
+    "en": "Il arrive à quelle heure ?",
+    "ko": "",
+    "highlight": "à quelle heure"
+   },
+   {
+    "en": "Aime-t-elle le chocolat noir ?",
+    "ko": "",
+    "highlight": "Aime-t-elle"
+   },
+   {
+    "en": "Quand est-ce qu'ils partent en vacances ?",
+    "ko": "",
+    "highlight": "Quand est-ce qu'"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Est-ce que tu aimes le café ?",
+    "right": "Aimes-tu le café ?",
+    "note": "Both are correct French, but avoid mixing inversion with est-ce que (never say 'Est-ce qu'aimes-tu')."
+   },
+   {
+    "wrong": "Aime elle la musique ?",
+    "right": "Aime-t-elle la musique ?",
+    "note": "When inverting a verb ending in a vowel with il, elle, or on, insert a euphonic '-t-' to ease pronunciation."
+   },
+   {
+    "wrong": "Qu'est-ce que tu vas ?",
+    "right": "Où vas-tu ?",
+    "note": "Do not confuse 'qu'est-ce que' (what) with interrogative adverbs like 'où' (where) or 'quand' (when)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which sentence correctly uses standard question form with 'est-ce que'?",
+    "options": [
+     "Est-ce qu'elle habite à Paris ?",
+     "Est-ce elle habite à Paris ?",
+     "Est-ce que habite-t-elle à Paris ?",
+     "Habite est-ce qu'elle à Paris ?"
+    ],
+    "answer": 0,
+    "explanation": "'Est-ce que' elides to 'Est-ce qu'' before a vowel sound and maintains normal subject-verb order."
+   },
+   {
+    "question": "How do you correctly invert 'Il parle français' into a question?",
+    "options": [
+     "Parle-il français ?",
+     "Parle-t-il français ?",
+     "Est-ce parle-t-il français ?",
+     "Il parle-t-il français ?"
+    ],
+    "answer": 1,
+    "explanation": "Inversion between a verb ending in a vowel ('parle') and 'il' requires a euphonic '-t-'."
+   },
+   {
+    "question": "Choose the most natural informal question for 'Where are you going?':",
+    "options": [
+     "Où vas-tu ?",
+     "Tu vas où ?",
+     "Où est-ce que vous allez ?",
+     "Vas-tu où ?"
+    ],
+    "answer": 1,
+    "explanation": "In informal French, speakers place the question word at the end while keeping standard subject-verb order."
+   },
+   {
+    "question": "Complete the formal question: 'Que ____ pour le dîner ?'",
+    "options": [
+     "tu veux",
+     "tu veux-tu",
+     "veux-tu",
+     "est-ce que tu"
+    ],
+    "answer": 2,
+    "explanation": "Formal open questions starting with 'Que' require direct subject-verb inversion ('veux-tu')."
+   }
+  ],
+  "tip": "In everyday spoken French, 90% of yes/no questions simply use regular statement word order with a rising pitch at the end."
+ },
+ {
+  "id": "fr-a2-passe-compose-auxiliary-choice",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#F59E0B",
+  "emoji": "⏳",
+  "title": "Passé Composé: Avoir vs. Être",
+  "subtitle": "Choosing the auxiliary verb and mastering participle agreement",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Most verbs use 'avoir' in the passé composé, but reflexive verbs and DR & MRS VANDERTRAMP motion verbs take 'être', requiring the participle to agree in gender and number with the subject.",
+  "structure": {
+   "headers": [
+    "Auxiliary",
+    "Trigger",
+    "French Example",
+    "Agreement Rule"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Avoir",
+      "Most transitive/intransitive verbs",
+      "J'ai mangé une pomme.",
+      "No subject agreement"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Être",
+      "17 motion/state verbs (VANDERTRAMP)",
+      "Elle est allée à la gare.",
+      "Agrees with subject in gender/number"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Être",
+      "All reflexive & reciprocal verbs",
+      "Nous nous sommes levés tôt.",
+      "Agrees with preceding reflexive COD"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Avoir",
+      "Preceding Direct Object (COD)",
+      "Les lettres que j'ai écrites.",
+      "Agrees with preceding direct object"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Actions with Avoir",
+    "example": "Ils ont regardé un film hier soir.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Movement with Être",
+    "example": "Marie est retournée chez elle.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Reflexive Verbs with Être",
+    "example": "Les enfants se sont endormis rapidement.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Nous sommes arrivés à l'aéroport à l'heure.",
+    "ko": "",
+    "highlight": "sommes arrivés"
+   },
+   {
+    "en": "Elles ont acheté une nouvelle voiture.",
+    "ko": "",
+    "highlight": "ont acheté"
+   },
+   {
+    "en": "Elle s'est lavé les mains.",
+    "ko": "",
+    "highlight": "s'est lavé"
+   },
+   {
+    "en": "Mon frère est né en juillet.",
+    "ko": "",
+    "highlight": "est né"
+   },
+   {
+    "en": "Voici la tarte qu'il a préparée.",
+    "ko": "",
+    "highlight": "a préparée"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Elle a allé au cinéma hier.",
+    "right": "Elle est allée au cinéma hier.",
+    "note": "'Aller' is a verb of movement from the DR MRS VANDERTRAMP list and must take 'être', requiring feminine agreement."
+   },
+   {
+    "wrong": "Ils se sont lavé.",
+    "right": "Ils se sont lavés.",
+    "note": "When the reflexive pronoun is the direct object ('they washed themselves'), the participle agrees with the subject."
+   },
+   {
+    "wrong": "J'ai tombé dans l'escalier.",
+    "right": "Je suis tombé dans l'escalier.",
+    "note": "'Tomber' expresses an involuntary change of physical state and always takes 'être' in standard French."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct form: 'Mes sœurs ____ en Italie hier matin.'",
+    "options": [
+     "ont parties",
+     "sont parties",
+     "sont parti",
+     "ont parti"
+    ],
+    "answer": 1,
+    "explanation": "'Partir' takes 'être', and the participle must agree with the feminine plural subject 'Mes sœurs' (+es)."
+   },
+   {
+    "question": "Choose the correct sentence for 'We (masculine) finished the project':",
+    "options": [
+     "Nous avons fini le projet.",
+     "Nous sommes finis le projet.",
+     "Nous avons finis le projet.",
+     "Nous sommes fini le projet."
+    ],
+    "answer": 0,
+    "explanation": "'Finir' takes 'avoir', and participles with 'avoir' do not agree with the subject."
+   },
+   {
+    "question": "Complete the reflexive sentence: 'Elle s'est ____ ce matin.'",
+    "options": [
+     "réveiller",
+     "réveillé",
+     "réveillés",
+     "réveillée"
+    ],
+    "answer": 3,
+    "explanation": "'Se réveiller' takes 'être'; since 'elle' is feminine singular and the direct object, add an 'e': 'réveillée'."
+   },
+   {
+    "question": "Which verb takes 'être' in the passé composé?",
+    "options": [
+     "Manger",
+     "Voyager",
+     "Venir",
+     "Danser"
+    ],
+    "answer": 2,
+    "explanation": "'Venir' belongs to the DR & MRS VANDERTRAMP group and takes 'être' (e.g., 'il est venu')."
+   }
+  ],
+  "tip": "Remember the 17 être verbs by visualizing life stages: 'naître' (to be born), 'grandir' takes avoir, but you 'aller', 'arriver', 'partir', and finally 'mourir' (to die)."
+ },
+ {
+  "id": "fr-a2-passe-compose-vs-imparfait",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#F59E0B",
+  "emoji": "🎞️",
+  "title": "Passé Composé vs. Imparfait",
+  "subtitle": "Distinguishing completed plot events from descriptive backgrounds",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Use the imparfait for ongoing descriptions, habits, weather, and states of mind, and the passé composé for punctual, completed actions that advance the storyline.",
+  "structure": {
+   "headers": [
+    "Feature",
+    "Passé Composé",
+    "Imparfait",
+    "Contrast Clue"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Core Concept",
+      "Specific completed event",
+      "Ongoing background / description",
+      "Foreground vs. Stage setting"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Habit vs. Punctual",
+      "Soudain, une fois, hier",
+      "Tous les jours, d'habitude",
+      "Time markers signal the tense"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Interruption",
+      "Interrupting action",
+      "Action in progress when interrupted",
+      "Pendant que... quand soudain..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Internal States",
+      "Realization / sudden change",
+      "Ongoing emotion or mental state",
+      "J'ai su (found out) vs. Je savais (knew)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Setting the Scene",
+    "example": "Il faisait beau et les oiseaux chantaient.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Sudden Interrupting Event",
+    "example": "Je dormais quand le téléphone a sonné.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Habitual Childhood Action",
+    "example": "Quand nous étions petits, nous visitions nos grands-parents.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Hier, j'ai rencontré un vieil ami dans le métro.",
+    "ko": "",
+    "highlight": "ai rencontré"
+   },
+   {
+    "en": "Pendant qu'elle lisait, quelqu'un a frappé à la porte.",
+    "ko": "",
+    "highlight": "lisait"
+   },
+   {
+    "en": "Chaque samedi, nous mangions ensemble au restaurant.",
+    "ko": "",
+    "highlight": "mangions"
+   },
+   {
+    "en": "Il était minuit et il pleuvait des cordes.",
+    "ko": "",
+    "highlight": "pleuvait"
+   },
+   {
+    "en": "Le train est parti exactement à huit heures.",
+    "ko": "",
+    "highlight": "est parti"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Hier, il a fait beau toute la journée.",
+    "right": "Hier, il faisait beau toute la journée.",
+    "note": "Weather descriptions set the background atmosphere and typically require the imparfait."
+   },
+   {
+    "wrong": "Pendant que j'ai marché, je suis tombé.",
+    "right": "Pendant que je marchais, je suis tombé.",
+    "note": "The ongoing continuous backdrop takes the imparfait ('marchais'), while the sudden interruption takes the passé composé ('suis tombé')."
+   },
+   {
+    "wrong": "Tous les jours, je suis allé à l'école à pied.",
+    "right": "Tous les jours, j'allais à l'école à pied.",
+    "note": "Repeated habitual routines in the past without a fixed number of times require the imparfait."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Je faisais la cuisine quand mon frère ____.'",
+    "options": [
+     "arrivait",
+     "a arrivé",
+     "est arrivé",
+     "arrive"
+    ],
+    "answer": 2,
+    "explanation": "The sudden interrupting event requires the passé composé of 'arriver' ('est arrivé')."
+   },
+   {
+    "question": "Which tense is needed for: 'Quand j'avais dix ans, je ____ peur du noir.'",
+    "options": [
+     "avais",
+     "ai eu",
+     "suis eu",
+     "étais"
+    ],
+    "answer": 0,
+    "explanation": "A continuous mental state or feeling in the past takes the imparfait ('avais')."
+   },
+   {
+    "question": "Select the sentence depicting an interrupted action:",
+    "options": [
+     "Il a plu toute la nuit sans arrêt.",
+     "Elle a fermé la fenêtre et a éteint la lumière.",
+     "Nous regardions la télévision quand le courant s'est coupé.",
+     "J'ai voyagé en Espagne trois fois."
+    ],
+    "answer": 2,
+    "explanation": "'Nous regardions' (imparfait, in progress) is interrupted by 'le courant s'est coupé' (passé composé)."
+   },
+   {
+    "question": "Identify the proper form for a single event completed yesterday: 'Hier soir, nous ____ une pizza.'",
+    "options": [
+     "mangions",
+     "avons mangé",
+     "sommes mangé",
+     "avions mangé"
+    ],
+    "answer": 1,
+    "explanation": "A completed past event happening at a specific time requires the passé composé ('avons mangé')."
+   }
+  ],
+  "tip": "Think of the imparfait as a video camera capturing an ongoing atmosphere and the passé composé as a snapshot camera capturing a specific flash action."
+ },
+ {
+  "id": "fr-a2-direct-and-indirect-object-pronouns",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🎯",
+  "title": "Direct and Indirect Pronouns",
+  "subtitle": "Replace nouns with me, te, le, la, les, lui, and leur",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Direct object pronouns (le, la, les) answer 'whom?' or 'what?', while indirect pronouns (lui, leur) replace people preceded by the preposition 'à', and both precede the conjugated verb.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Pronouns",
+    "French Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Direct (COD)",
+      "me, te, le, la, nous, vous, les",
+      "Je le vois tous les matins.",
+      "I see him/it every morning."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Indirect (COI)",
+      "me, te, lui, nous, vous, leur",
+      "Je lui téléphone ce soir.",
+      "I call him/her tonight (téléphoner à)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Position",
+      "ne + pronoun + verb + pas",
+      "Je ne les aime pas.",
+      "I do not like them."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Dual Verbs",
+      "conjugated + pronoun + infinitive",
+      "Je vais lui parler.",
+      "I am going to speak to him/her."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Direct Replacement (COD)",
+    "example": "Tu prends le bus ? Oui, je le prends.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Indirect with Preposition 'à' (COI)",
+    "example": "Elle écrit une lettre à ses parents ? Oui, elle leur écrit.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Placement Before Infinitive",
+    "example": "Nous voulons les inviter pour le dîner.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ce livre est passionnant, je le lis tous les soirs.",
+    "ko": "",
+    "highlight": "le lis"
+   },
+   {
+    "en": "Tu as vu Sophie ? — Oui, je l'ai rencontrée hier.",
+    "ko": "",
+    "highlight": "l'ai rencontrée"
+   },
+   {
+    "en": "Paul parle souvent à ses collègues ? — Oui, il leur parle.",
+    "ko": "",
+    "highlight": "leur parle"
+   },
+   {
+    "en": "Je ne lui ai pas encore répondu.",
+    "ko": "",
+    "highlight": "lui ai"
+   },
+   {
+    "en": "Pouvez-vous nous expliquer cette règle ?",
+    "ko": "",
+    "highlight": "nous expliquer"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Je téléphone à lui tous les jours.",
+    "right": "Je lui téléphone tous les jours.",
+    "note": "Indirect pronouns must precede the verb and replace 'à + person'; do not use disjunctive pronouns here."
+   },
+   {
+    "wrong": "Je lui vois dans la rue.",
+    "right": "Je le vois dans la rue.",
+    "note": "'Voir' takes a direct object (voir quelqu'un), so you must use 'le' or 'la', never 'lui'."
+   },
+   {
+    "wrong": "Je veux acheter le.",
+    "right": "Je veux l'acheter.",
+    "note": "In a semi-auxiliary + infinitive structure, the pronoun sits directly before the infinitive verb it modifies."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Replace the object: 'J'envoie un courriel à ma mère.' -> 'Je ____ envoie un courriel.'",
+    "options": [
+     "la",
+     "lui",
+     "l'",
+     "leur"
+    ],
+    "answer": 1,
+    "explanation": "'Envoyer à ma mère' requires the singular indirect object pronoun 'lui'."
+   },
+   {
+    "question": "Replace the object: 'Il regarde la télévision chaque soir.' -> 'Il ____ regarde chaque soir.'",
+    "options": [
+     "lui",
+     "leur",
+     "la",
+     "l'"
+    ],
+    "answer": 2,
+    "explanation": "'La télévision' is feminine direct object, replaced by 'la'."
+   },
+   {
+    "question": "Where does the pronoun go in: 'Nous allons regarder le match'?",
+    "options": [
+     "Nous le allons regarder.",
+     "Nous allons regarder le.",
+     "Nous n'allons le regarder.",
+     "Nous allons le regarder."
+    ],
+    "answer": 3,
+    "explanation": "When an infinitive follows a conjugated verb like 'aller', the object pronoun sits right before the infinitive."
+   },
+   {
+    "question": "Choose the correct replacement for: 'Elle donne des conseils à ses étudiants.'",
+    "options": [
+     "Elle leur donne des conseils.",
+     "Elle les donne des conseils.",
+     "Elle lui donne des conseils.",
+     "Elle donne leur des conseils."
+    ],
+    "answer": 0,
+    "explanation": "'À ses étudiants' is plural indirect (à + people), replaced by 'leur' placed before the verb."
+   }
+  ],
+  "tip": "Test the verb: if it uses 'à' before a person (e.g. téléphoner à, parler à, donner à), use 'lui' (singular) or 'leur' (plural)."
+ },
+ {
+  "id": "fr-a2-pronominal-and-reflexive-verbs",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🪞",
+  "title": "Pronominal and Reflexive Verbs",
+  "subtitle": "Daily routines, reciprocal actions, and compound past usage",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Pronominal verbs always take a reflexive pronoun matching the subject (me, te, se, nous, vous, se) and invariably form compound tenses with 'être'.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Reflexive Pronoun",
+    "Present Tense Example",
+    "Passé Composé Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Je",
+      "me / m'",
+      "Je me réveille à sept heures.",
+      "Je me suis réveillé(e)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Tu",
+      "te / t'",
+      "Tu te laves le visage.",
+      "Tu t'es lavé(e)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Il / Elle / On",
+      "se / s'",
+      "Elle se prépare pour sortir.",
+      "Elle s'est préparée."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Nous",
+      "nous",
+      "Nous nous brossons les dents.",
+      "Nous nous sommes brossé(e)s."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ils / Elles",
+      "se / s'",
+      "Ils se disputent rarement.",
+      "Ils se sont disputés."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Daily Grooming and Routine",
+    "example": "Tous les matins, je me rase avant le travail.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Reciprocal Action (Each Other)",
+    "example": "Ils s'aiment et s'écrivent des poèmes.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Idiomatic Pronominal Meaning",
+    "example": "Tu te souviens de nos vacances à Nice ?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Je me lève tôt pendant la semaine.",
+    "ko": "",
+    "highlight": "me lève"
+   },
+   {
+    "en": "À quelle heure vous couchez-vous d'habitude ?",
+    "ko": "",
+    "highlight": "vous couchez-vous"
+   },
+   {
+    "en": "Elles se sont rencontrées à l'université de Lyon.",
+    "ko": "",
+    "highlight": "se sont rencontrées"
+   },
+   {
+    "en": "Ne t'inquiète pas pour cet examen.",
+    "ko": "",
+    "highlight": "t'inquiète"
+   },
+   {
+    "en": "Nous nous douchons après notre séance de sport.",
+    "ko": "",
+    "highlight": "nous douchons"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Je lave à sept heures.",
+    "right": "Je me lave à sept heures.",
+    "note": "Without the reflexive pronoun 'me', 'laver' requires an object (e.g. 'Je lave la voiture'). To wash oneself, 'se laver' is required."
+   },
+   {
+    "wrong": "Elle a s'habillée vite.",
+    "right": "Elle s'est habillée vite.",
+    "note": "All reflexive verbs take 'être' as the auxiliary in the passé composé, never 'avoir'."
+   },
+   {
+    "wrong": "Elle s'est lavée les mains.",
+    "right": "Elle s'est lavé les mains.",
+    "note": "No agreement occurs when a direct object ('les mains') follows the verb; the reflexive pronoun 'se' acts as an indirect object."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the routine: 'Mon frère ____ à 7h tous les jours.'",
+    "options": [
+     "réveille",
+     "se réveille",
+     "se réveiller",
+     "s'est réveillé"
+    ],
+    "answer": 1,
+    "explanation": "The 3rd person singular present reflexive pronoun is 'se', giving 'se réveille'."
+   },
+   {
+    "question": "Choose the correct negative imperative: 'Don't hurry!'",
+    "options": [
+     "Ne te dépêche pas !",
+     "Ne dépêche-toi pas !",
+     "Ne te dépêches pas !",
+     "Ne se dépêche pas !"
+    ],
+    "answer": 0,
+    "explanation": "In negative commands with reflexive verbs, the pronoun stays before the verb: 'Ne te dépêche pas !' (no 's' for tu in -er verbs)."
+   },
+   {
+    "question": "Select the correct passé composé form: 'Elles ____ hier soir.'",
+    "options": [
+     "se sont disputé",
+     "ont disputé",
+     "se ont disputées",
+     "se sont disputées"
+    ],
+    "answer": 3,
+    "explanation": "Reflexive verbs use 'être'. Here, 'se' is the direct object and agrees with feminine plural 'Elles' (+es)."
+   },
+   {
+    "question": "Which sentence means 'We get along well'?",
+    "options": [
+     "Nous entendons bien.",
+     "Nous nous entendons bien.",
+     "Nous nous avons entendus.",
+     "Nous vous entendons bien."
+    ],
+    "answer": 1,
+    "explanation": "'S'entendre bien' is a reciprocal pronominal verb; with 'nous' it becomes 'Nous nous entendons bien.'"
+   }
+  ],
+  "tip": "When body parts are the direct object of a reflexive verb (e.g., 'Je me lave les dents'), never add an 'e' or 's' to the participle in the passé composé."
+ },
+ {
+  "id": "fr-a2-prepositions-with-places-and-countries",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🌍",
+  "title": "Prepositions of Place (à, en, au, aux)",
+  "subtitle": "Choosing the right preposition for cities, countries, and continents",
+  "color": "#3B82F6",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use 'à' for cities, 'en' for continents and feminine countries, 'au' for masculine countries starting with a consonant, and 'aux' for plural destinations.",
+  "structure": {
+   "headers": [
+    "Destination Type",
+    "Preposition",
+    "Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Cities",
+      "à",
+      "à Paris",
+      "in/to Paris"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine countries / Continents",
+      "en",
+      "en France",
+      "in/to France"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masculine countries (consonant)",
+      "au",
+      "au Japon",
+      "in/to Japan"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural countries",
+      "aux",
+      "aux États-Unis",
+      "in/to the United States"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Cities & Islands",
+    "example": "Elle habite à Rome depuis trois ans.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Feminine Countries & Vowels",
+    "example": "Nous partons en vacances en Italie.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Masculine & Plural Lands",
+    "example": "Ils voyagent souvent au Canada et aux Pays-Bas.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mon frère étudie à Berlin cette année.",
+    "ko": "",
+    "highlight": "à Berlin"
+   },
+   {
+    "en": "Je passe mes vacances en Espagne avec mes amis.",
+    "ko": "",
+    "highlight": "en Espagne"
+   },
+   {
+    "en": "Nous allons au Mexique l'hiver prochain.",
+    "ko": "",
+    "highlight": "au Mexique"
+   },
+   {
+    "en": "Mes cousins habitent aux États-Unis.",
+    "ko": "",
+    "highlight": "aux États-Unis"
+   },
+   {
+    "en": "Il s'installe en Iran pour son nouveau travail.",
+    "ko": "",
+    "highlight": "en Iran"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Je vais à la France cet été.",
+    "right": "Je vais en France cet été.",
+    "note": "Countries do not take 'à la'; feminine countries ending in -e take 'en'."
+   },
+   {
+    "wrong": "Elle habite dans Paris.",
+    "right": "Elle habite à Paris.",
+    "note": "Use 'à' before cities to express 'in' or 'to', not 'dans'."
+   },
+   {
+    "wrong": "Nous partons à Japon demain.",
+    "right": "Nous partons au Japon demain.",
+    "note": "Masculine countries starting with a consonant use 'au' (à + le contraction)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Luc vit ___ Londres depuis cinq mois.",
+    "options": [
+     "en",
+     "au",
+     "à",
+     "aux"
+    ],
+    "answer": 2,
+    "explanation": "Cities always take the preposition 'à'."
+   },
+   {
+    "question": "Nous voyageons ___ Grèce chaque été.",
+    "options": [
+     "en",
+     "au",
+     "à la",
+     "aux"
+    ],
+    "answer": 0,
+    "explanation": "'Grèce' is a feminine country (ends in -e), so it takes 'en'."
+   },
+   {
+    "question": "Tu vas souvent ___ Brésil pour le carnaval ?",
+    "options": [
+     "en",
+     "aux",
+     "à",
+     "au"
+    ],
+    "answer": 3,
+    "explanation": "'Brésil' is a masculine country beginning with a consonant, so it takes 'au'."
+   },
+   {
+    "question": "Ils ont acheté une maison ___ Pays-Bas.",
+    "options": [
+     "au",
+     "aux",
+     "en",
+     "à"
+    ],
+    "answer": 1,
+    "explanation": "'Pays-Bas' is a plural country name, so it requires 'aux'."
+   }
+  ],
+  "tip": "Most countries ending in '-e' are feminine and take 'en' (la France, l'Italie). Important exceptions include 'le Mexique' and 'le Cambodge', which take 'au'!"
+ },
+ {
+  "id": "fr-a2-future-tenses-proche-vs-simple",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "⏳",
+  "title": "Futur Proche vs. Futur Simple",
+  "subtitle": "Talking about near intentions versus distant or formal future events",
+  "color": "#EF4444",
+  "bg": "#FEF2F2",
+  "keyPoint": "Use 'futur proche' (aller + infinitive) for immediate plans or high-certainty events, and 'futur simple' (stem + endings) for long-term plans, formal announcements, and conditions.",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Formation",
+    "Typical Context",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Futur Proche",
+      "aller (present) + infinitive",
+      "Immediate actions & spoken plans",
+      "Je vais manger."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Futur Simple (Regular)",
+      "infinitive + -ai, -as, -a, -ons, -ez, -ont",
+      "Distant plans & formal writing",
+      "Je mangerai."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Futur Simple (Irregular stem)",
+      "irregular root + same endings",
+      "Predictions, weather forecasts",
+      "Il fera beau."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Immediate Plan / Imminent Event",
+    "example": "Regarde le ciel, il va pleuvoir dans cinq minutes.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Formal or Distant Prediction",
+    "example": "Dans dix ans, nous construirons une nouvelle maison.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Conditional 'Si' Clause",
+    "example": "Si tu réussis ton examen, nous fêterons cela ensemble.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Attention, tu vas tomber si tu ne fais pas attention !",
+    "ko": "",
+    "highlight": "vas tomber"
+   },
+   {
+    "en": "Ce soir, je vais regarder un film avec ma sœur.",
+    "ko": "",
+    "highlight": "vais regarder"
+   },
+   {
+    "en": "L'année prochaine, nous partirons vivre au Canada.",
+    "ko": "",
+    "highlight": "partirons"
+   },
+   {
+    "en": "Quand j'aurai trente ans, j'achèterai un appartement.",
+    "ko": "",
+    "highlight": "achèterai"
+   },
+   {
+    "en": "Demain, le ministre prononcera un grand discours.",
+    "ko": "",
+    "highlight": "prononcera"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Je vais téléphonerai à Marie.",
+    "right": "Je vais téléphoner à Marie.",
+    "note": "After 'aller' in the futur proche, use the uninflected infinitive, not an inflected form."
+   },
+   {
+    "wrong": "Si j'aurai le temps, je viendrai.",
+    "right": "Si j'ai le temps, je viendrai.",
+    "note": "Never put the futur simple directly after 'si' in conditional hypotheses; use the present indicative."
+   },
+   {
+    "wrong": "Dans vingt ans je vais être retraité.",
+    "right": "Dans vingt ans je serai retraité.",
+    "note": "For long-term, distant life stages, the futur simple is much more natural than the futur proche."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Dépêche-toi, le train ___ partir !",
+    "options": [
+     "va",
+     "partira",
+     "ira",
+     "part"
+    ],
+    "answer": 0,
+    "explanation": "An imminent event happening in seconds uses futur proche: 'aller + infinitive' (le train va partir)."
+   },
+   {
+    "question": "Plus tard, quand elle sera grande, elle ___ médecin.",
+    "options": [
+     "va devenir",
+     "devenait",
+     "deviendra",
+     "devient"
+    ],
+    "answer": 2,
+    "explanation": "Futur simple ('deviendra') expresses long-term aspirations and follows temporal markers like 'quand' with a future verb."
+   },
+   {
+    "question": "Si nous avons assez d'argent, nous ___ en vacances.",
+    "options": [
+     "allons",
+     "irons",
+     "irons aller",
+     "sont allés"
+    ],
+    "answer": 1,
+    "explanation": "In a 'si' clause (si + présent), the main clause takes the futur simple ('irons')."
+   },
+   {
+    "question": "Ce soir après le dîner, nous ___ un jeu de société.",
+    "options": [
+     "allons jouer à",
+     "jouer",
+     "jouerons à",
+     "allons joué"
+    ],
+    "answer": 0,
+    "explanation": "Immediate evening plans in everyday conversation naturally use the futur proche: 'allons jouer à'."
+   }
+  ],
+  "tip": "All futur simple endings (-ai, -as, -a, -ons, -ez, -ont) are based on the present tense forms of the verb 'avoir'!"
+ },
+ {
+  "id": "fr-b1-adverbial-pronouns-y-and-en",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#7C3AED",
+  "emoji": "🔄",
+  "title": "Adverbial Pronouns: Y and En",
+  "subtitle": "Mastering the versatile pronouns that replace locations, à-phrases, and de-phrases",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use 'y' to replace locations and ideas introduced by 'à', and use 'en' to replace quantities and phrases introduced by 'de'.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Replaces",
+    "Trigger Preposition",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "y",
+      "Places / locations",
+      "à, chez, dans, en, sur",
+      "J'y vais (à Paris)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "y",
+      "Non-human objects / ideas",
+      "à + [chose/idée]",
+      "J'y pense (à ce projet)."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "en",
+      "Partitive & indefinite quantities",
+      "du, de la, des, un, une",
+      "J'en veux trois."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "en",
+      "Complements of 'de'",
+      "de + [chose / lieu]",
+      "J'en viens (de la gare)."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Location or Idea with 'à'",
+    "example": "Tu vas à la bibliothèque ? Oui, j'y vais maintenant.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Quantities & Partitives",
+    "example": "Tu as des pommes ? Oui, j'en ai acheté quatre.",
+    "translation": ""
+   },
+   {
+    "color": "#06B6D4",
+    "label": "Verbal Phrase with 'de'",
+    "example": "Elle parle souvent de son enfance ? Oui, elle en parle tout le temps.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Vous habitez en France ? Oui, nous y habitons depuis deux ans.",
+    "ko": "",
+    "highlight": "y habitons"
+   },
+   {
+    "en": "As-tu réfléchi à notre proposition ? Oui, j'y ai pensé toute la nuit.",
+    "ko": "",
+    "highlight": "j'y ai pensé"
+   },
+   {
+    "en": "Combien de croissants veux-tu ? J'en prends deux, s'il vous plaît.",
+    "ko": "",
+    "highlight": "J'en prends"
+   },
+   {
+    "en": "Tu as peur du noir ? Non, je n'en ai pas peur du tout.",
+    "ko": "",
+    "highlight": "n'en ai pas"
+   },
+   {
+    "en": "Est-ce qu'il y a du café ? Oui, il y en a encore dans la cafetière.",
+    "ko": "",
+    "highlight": "y en a"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Je pense à lui -> J'y pense.",
+    "right": "Je pense à lui.",
+    "note": "'Y' cannot replace human beings introduced by 'à'; use stress pronouns instead (à lui, à elle)."
+   },
+   {
+    "wrong": "J'ai trois chats -> J'en ai trois chats.",
+    "right": "J'en ai trois.",
+    "note": "When using 'en' with a specific number, omit the noun since 'en' already represents it."
+   },
+   {
+    "wrong": "Tu as du pain ? Oui, j'ai.",
+    "right": "Tu as du pain ? Oui, j'en ai.",
+    "note": "French verbs cannot drop indefinite direct objects; you must use 'en'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Tu vas au supermarché cet après-midi ? Oui, j'___ vais vers seize heures.",
+    "options": [
+     "en",
+     "y",
+     "le",
+     "lui"
+    ],
+    "answer": 1,
+    "explanation": "'Au supermarché' is a destination/place introduced by 'à + le', replaced by 'y'."
+   },
+   {
+    "question": "Avez-vous besoin de cette clé ? Non, je n'___ ai plus besoin.",
+    "options": [
+     "y",
+     "la",
+     "en",
+     "de lui"
+    ],
+    "answer": 2,
+    "explanation": "The idiom 'avoir besoin de' uses 'de', so the thing needed is replaced by 'en'."
+   },
+   {
+    "question": "Des tomates, est-ce que tu ___ as acheté au marché ?",
+    "options": [
+     "en",
+     "les",
+     "y",
+     "des"
+    ],
+    "answer": 0,
+    "explanation": "Indefinite or partitive quantities (des tomates) are replaced by 'en'."
+   },
+   {
+    "question": "Pensez-vous souvent à votre avenir ? Oui, nous ___ pensons constamment.",
+    "options": [
+     "le",
+     "lui",
+     "en",
+     "y"
+    ],
+    "answer": 3,
+    "explanation": "'Penser à' followed by an abstract concept (votre avenir) requires the pronoun 'y'."
+   }
+  ],
+  "tip": "When 'y' and 'en' appear together (as in 'il y en a'), 'y' ALWAYS precedes 'en'!"
+ },
+ {
+  "id": "fr-b1-double-object-pronoun-order",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🧩",
+  "title": "Double Object Pronoun Order and Placement",
+  "subtitle": "Arranging direct and indirect object pronouns in statements and commands",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "In standard statements, 1st/2nd-person pronouns precede direct objects (le/la/les), which precede 3rd-person indirects (lui/leur), followed by y, then en; in affirmative commands, pronouns attach with hyphens after the verb.",
+  "structure": {
+   "headers": [
+    "Order in Statements",
+    "Rank 1",
+    "Rank 2",
+    "Rank 3 / 4"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Before Verb",
+      "me / te / se / nous / vous",
+      "le / la / l' / les",
+      "lui / leur → y → en"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Example",
+      "Il me le donne.",
+      "Je la lui montre.",
+      "On y envoie."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Affirmative Command",
+      "Verb-le/la/les",
+      "-moi/-toi/-lui/-nous/-vous/-leur",
+      "-y / -en"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Declarative Sentence",
+    "example": "Je te prêterai ma voiture demain : je te la prêterai.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Third-Person Indirect",
+    "example": "Elle a donné le livre à Thomas : elle le lui a donné.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Affirmative Imperative",
+    "example": "Rends-moi ce dossier immédiatement : rends-le-moi !",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ce secret, tu ne dois le dire à personne : garde-le pour toi.",
+    "ko": "",
+    "highlight": "garde-le"
+   },
+   {
+    "en": "Mes devoirs ? Je les lui ai donnés ce matin.",
+    "ko": "",
+    "highlight": "les lui ai donnés"
+   },
+   {
+    "en": "Si tu veux cette robe, je peux te l'offrir.",
+    "ko": "",
+    "highlight": "te l'offrir"
+   },
+   {
+    "en": "Ne me l'explique pas encore, je veux chercher seul.",
+    "ko": "",
+    "highlight": "me l'explique"
+   },
+   {
+    "en": "Donnez-m'en deux kilos, s'il vous plaît.",
+    "ko": "",
+    "highlight": "Donnez-m'en"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Je lui le donne tous les matins.",
+    "right": "Je le lui donne tous les matins.",
+    "note": "Third-person direct objects (le/la/les) always come before third-person indirects (lui/leur)."
+   },
+   {
+    "wrong": "Donne-me-le tout de suite !",
+    "right": "Donne-le-moi tout de suite !",
+    "note": "In affirmative commands, direct object comes first, and 'me' becomes the stressed form 'moi'."
+   },
+   {
+    "wrong": "Je vais le vous dire.",
+    "right": "Je vais vous le dire.",
+    "note": "First and second-person pronouns (nous, vous, te, me) come before direct object 'le/la/les'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Tu as envoyé la lettre à tes parents ? Oui, je ___ ai envoyée hier.",
+    "options": [
+     "la leur",
+     "leur la",
+     "l'y",
+     "la lui"
+    ],
+    "answer": 0,
+    "explanation": "'La lettre' (COD) = la; 'à tes parents' (COI) = leur. Order before the verb is: la + leur."
+   },
+   {
+    "question": "Peux-tu me passer le sel ? Oui, tiens, je ___ passe.",
+    "options": [
+     "le te",
+     "te le",
+     "moi le",
+     "le lui"
+    ],
+    "answer": 1,
+    "explanation": "2nd-person pronoun 'te' precedes the direct object 'le' (je te le passe)."
+   },
+   {
+    "question": "Cette histoire est fascinante, raconte-___ !",
+    "options": [
+     "la-me",
+     "me-la",
+     "moi-la",
+     "la-moi"
+    ],
+    "answer": 3,
+    "explanation": "In affirmative imperative commands, COD comes first, followed by stressed indirect pronoun: 'raconte-la-moi'."
+   },
+   {
+    "question": "Est-ce qu'elle te prêtera ses clés ? Non, elle ne ___ prêtera pas.",
+    "options": [
+     "les me",
+     "me les",
+     "me leur",
+     "lui les"
+    ],
+    "answer": 1,
+    "explanation": "'Me' (1st person) comes before 'les' (3rd person direct object): 'ne me les prêtera pas'."
+   }
+  ],
+  "tip": "Remember the 3rd-person reversal: while 'me/te/nous/vous' sit BEFORE 'le/la/les', 'lui/leur' sit AFTER 'le/la/les' (e.g., 'me le' vs. 'le lui')!"
+ },
+ {
+  "id": "fr-b1-present-subjunctive-triggers",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#059669",
+  "emoji": "💭",
+  "title": "Present Subjunctive: Necessity, Emotion, and Doubt",
+  "subtitle": "Expressing subjectivity, wishes, and requirements after 'que'",
+  "color": "#10B981",
+  "bg": "#ECFDF5",
+  "keyPoint": "The subjunctive mood is required after expressions of necessity, emotion, doubt, and will when the main and subordinate clauses have different subjects connected by 'que'.",
+  "structure": {
+   "headers": [
+    "Trigger Category",
+    "Common Trigger",
+    "Subjunctive Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Necessity / Impersonal",
+      "Il faut que...",
+      "Il faut que tu viennes.",
+      "You must come."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Desire / Will",
+      "Vouloir / Souhaiter que...",
+      "Je veux que vous fassiez attention.",
+      "I want you to pay attention."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Emotion / Feeling",
+      "Être content / Peur que...",
+      "Elle a peur qu'il soit malade.",
+      "She fears he is sick."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Doubt / Denial",
+      "Douter que...",
+      "Je doute qu'ils réussissent.",
+      "I doubt that they will succeed."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Obligation & Necessity",
+    "example": "Il est indispensable que nous finissions ce rapport avant midi.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Feelings & Emotional Reactions",
+    "example": "Je suis très heureux que vous soyez tous là ce soir.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Doubt & Uncertainty",
+    "example": "Le professeur doute que tout le monde comprenne la règle.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Il faut que tu prennes tes médicaments à l'heure.",
+    "ko": "",
+    "highlight": "que tu prennes"
+   },
+   {
+    "en": "Mes parents aimeraient que j'aille à l'université de Lyon.",
+    "ko": "",
+    "highlight": "que j'aille"
+   },
+   {
+    "en": "Nous sommes ravis qu'elle puisse venir avec nous.",
+    "ko": "",
+    "highlight": "qu'elle puisse"
+   },
+   {
+    "en": "Je ne pense pas qu'il fasse assez chaud pour nager.",
+    "ko": "",
+    "highlight": "qu'il fasse"
+   },
+   {
+    "en": "Bien qu'il pleuve, ils partent faire une randonnée.",
+    "ko": "",
+    "highlight": "qu'il pleuve"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Je pense qu'il soit gentil.",
+    "right": "Je pense qu'il est gentil.",
+    "note": "'Penser que' and 'croire que' take the indicative in the affirmative; they only trigger subjunctive when negated or questioned."
+   },
+   {
+    "wrong": "Il faut que je vais chez le médecin.",
+    "right": "Il faut que j'aille chez le médecin.",
+    "note": "'Il faut que' always triggers the subjunctive form ('aille'), never the present indicative ('vais')."
+   },
+   {
+    "wrong": "J'espère que tu viennes demain.",
+    "right": "J'espère que tu viendras demain.",
+    "note": "'Espérer que' is an exception and does NOT take the subjunctive; it takes the indicative future or present."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Il faut absolument que vous ___ à l'heure pour le départ du train.",
+    "options": [
+     "soyez",
+     "êtes",
+     "serez",
+     "étiez"
+    ],
+    "answer": 0,
+    "explanation": "'Il faut que' requires the subjunctive mood ('soyez', not the indicative 'êtes')."
+   },
+   {
+    "question": "Je suis triste que Pierre ne ___ pas venir à la fête ce soir.",
+    "options": [
+     "peut",
+     "pourra",
+     "puisse",
+     "pouvait"
+    ],
+    "answer": 2,
+    "explanation": "Expressions of emotion ('être triste que') trigger the subjunctive; 'pouvoir' becomes 'puisse'."
+   },
+   {
+    "question": "Je sais bien qu'il ___ raison sur ce point.",
+    "options": [
+     "ait",
+     "a",
+     "soit",
+     "ayez"
+    ],
+    "answer": 1,
+    "explanation": "'Savoir que' expresses certainty and factual knowledge, so it takes the indicative ('a'), not the subjunctive."
+   },
+   {
+    "question": "Mes amis ont peur que nous ne ___ pas l'examen de français.",
+    "options": [
+     "réussissons",
+     "réussirons",
+     "réussir",
+     "réussissions"
+    ],
+    "answer": 3,
+    "explanation": "'Avoir peur que' expresses emotion/fear, requiring the subjunctive ('réussissions' for nous)."
+   }
+  ],
+  "tip": "Form regular present subjunctive stems by taking the 'ils' form of the present indicative, dropping '-ent', and adding: -e, -es, -e, -ions, -iez, -ent!"
+ },
+ {
+  "id": "fr-b1-relative-pronouns-qui-que-dont-ou",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔗",
+  "title": "Relative Pronouns: Qui, Que, Dont, and Où",
+  "subtitle": "Connect ideas smoothly by choosing the right relative pronoun based on its grammatical role.",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Use qui for the subject, que for direct objects, dont for complements introduced by de, and où for locations or points in time.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Grammatical Role",
+    "French Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "qui",
+      "Subject (verb follows)",
+      "La femme qui parle est avocate.",
+      "The woman who is speaking is a lawyer."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "que / qu'",
+      "Direct Object (subject + verb follows)",
+      "Le livre que tu lis est captivant.",
+      "The book that you are reading is captivating."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "dont",
+      "Object of preposition 'de'",
+      "Le projet dont nous parlons avance vite.",
+      "The project which we are talking about progresses quickly."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "où",
+      "Place or Time",
+      "La ville où je suis né est calme.",
+      "The city where I was born is calm."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Subject Replacement",
+    "example": "C'est un collègue qui aide tout le monde.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Objects Dependent on 'De'",
+    "example": "Voici le film dont j'ai oublié le titre.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Temporal Reference",
+    "example": "Le jour où il est parti, il pleuvait.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "L'artiste qui a peint ce tableau est célèbre.",
+    "ko": "",
+    "highlight": "qui a peint"
+   },
+   {
+    "en": "Le gâteau que tu as préparé est délicieux.",
+    "ko": "",
+    "highlight": "que tu as préparé"
+   },
+   {
+    "en": "C'est l'employé dont le bureau se trouve au fond.",
+    "ko": "",
+    "highlight": "dont le bureau"
+   },
+   {
+    "en": "La maison où nous habitions était très ancienne.",
+    "ko": "",
+    "highlight": "où nous habitions"
+   },
+   {
+    "en": "Ce sont des choses dont il faut se méfier.",
+    "ko": "",
+    "highlight": "dont il faut"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "La personne que parle français arrive.",
+    "right": "La personne qui parle français arrive.",
+    "note": "Use 'qui' because the pronoun is the subject of the verb 'parle'."
+   },
+   {
+    "wrong": "Le livre que j'ai besoin est sur la table.",
+    "right": "Le livre dont j'ai besoin est sur la table.",
+    "note": "The expression is 'avoir besoin de', so you must use 'dont'."
+   },
+   {
+    "wrong": "L'année quand nous sommes partis était difficile.",
+    "right": "L'année où nous sommes partis était difficile.",
+    "note": "'Quand' cannot serve as a relative pronoun for time; use 'où' instead."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Voici l'homme ___ a remporté la compétition.",
+    "options": [
+     "qui",
+     "que",
+     "dont",
+     "où"
+    ],
+    "answer": 0,
+    "explanation": "The relative pronoun serves as the subject of the verb 'a remporté', so 'qui' is required."
+   },
+   {
+    "question": "La robe ___ elle a achetée hier est magnifique.",
+    "options": [
+     "qui",
+     "que",
+     "dont",
+     "où"
+    ],
+    "answer": 1,
+    "explanation": "'Elle' is the subject and the dress is the direct object of 'a achetée', requiring 'que'."
+   },
+   {
+    "question": "C'est une opportunité exceptionnelle ___ je rêve chaque nuit.",
+    "options": [
+     "qui",
+     "que",
+     "dont",
+     "où"
+    ],
+    "answer": 2,
+    "explanation": "The verb is 'rêver de', meaning the relative pronoun must be 'dont'."
+   },
+   {
+    "question": "Le moment ___ nous avons compris la vérité reste inoubliable.",
+    "options": [
+     "dont",
+     "que",
+     "qui",
+     "où"
+    ],
+    "answer": 3,
+    "explanation": "'Le moment' is an expression of time acting as an antecedent, so 'où' is used."
+   }
+  ],
+  "tip": "'Que' elides to 'qu'' before a vowel sound (qu'il, qu'elle), but 'qui' never elides (qui il est)."
+ },
+ {
+  "id": "fr-b1-si-clauses-and-the-conditional",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#0EA5E9",
+  "emoji": "🌿",
+  "title": "Hypothetical 'Si' Clauses (Present, Imparfait, Conditionnel)",
+  "subtitle": "Master conditional hypotheses by locking down strict tense pairing formulas.",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Never put the future or conditional directly inside the 'si' clause; pair present with future, or imparfait with present conditional.",
+  "structure": {
+   "headers": [
+    "Type",
+    "'Si' Clause Tense",
+    "Result Clause Tense",
+    "French Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Likely / Real",
+      "Présent",
+      "Futur simple (or Présent/Impératif)",
+      "Si tu viens, nous irons au parc."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Unreal Present",
+      "Imparfait",
+      "Conditionnel présent",
+      "Si j'avais le temps, je voyagerais plus."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Unreal Past",
+      "Plus-que-parfait",
+      "Conditionnel passé",
+      "Si tu avais révisé, tu aurais réussi."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Real Future Prediction",
+    "example": "Si nous partons tôt, nous éviterons les bouchons.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Hypothetical Situation",
+    "example": "Si j'étais riche, j'achèterais un voilier.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Habit or General Truth",
+    "example": "Si vous avez faim, servez-vous sans hésiter.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Si vous travaillez sérieusement, vous réussirez cet examen.",
+    "ko": "",
+    "highlight": "Si vous travaillez"
+   },
+   {
+    "en": "Si nous habitions à Paris, nous irions souvent au musée.",
+    "ko": "",
+    "highlight": "nous irions"
+   },
+   {
+    "en": "S'il fait beau demain, nous ferons une longue promenade.",
+    "ko": "",
+    "highlight": "nous ferons"
+   },
+   {
+    "en": "Si elle connaissait la réponse, elle nous la dirait immédiatement.",
+    "ko": "",
+    "highlight": "elle connaissait"
+   },
+   {
+    "en": "Si vous aviez un doute, vous pourriez m'appeler.",
+    "ko": "",
+    "highlight": "vous pourriez"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Si j'aurais de l'argent, je voyagerais.",
+    "right": "Si j'avais de l'argent, je voyagerais.",
+    "note": "Never use the conditional after 'si'; use the imparfait for hypothetical scenarios."
+   },
+   {
+    "wrong": "Si tu seras libre demain, appelle-moi.",
+    "right": "Si tu es libre demain, appelle-moi.",
+    "note": "Use the présent indicative (not future simple) directly after 'si' for open conditions."
+   },
+   {
+    "wrong": "Si il vient, préviens-moi.",
+    "right": "S'il vient, préviens-moi.",
+    "note": "'Si' elides with 'il' and 'ils' to become 's'il' and 's'ils'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Si nous ___ le train de huit heures, nous arriverons à l'heure.",
+    "options": [
+     "prenons",
+     "prendrons",
+     "prendrions",
+     "prenions"
+    ],
+    "answer": 0,
+    "explanation": "The result clause is in the futur simple ('arriverons'), so the 'si' clause requires the présent indicative."
+   },
+   {
+    "question": "Si tu faisais plus de sport, tu ___ en meilleure forme.",
+    "options": [
+     "es",
+     "seras",
+     "serais",
+     "étais"
+    ],
+    "answer": 2,
+    "explanation": "An imparfait in the 'si' clause ('faisais') must be paired with the conditionnel présent in the result clause."
+   },
+   {
+    "question": "___ vous avez des questions, n'hésitez pas à demander.",
+    "options": [
+     "Quand",
+     "Si",
+     "Bien que",
+     "Puisque"
+    ],
+    "answer": 1,
+    "explanation": "'Si' pairs with the présent to express a general condition followed by an imperative result clause."
+   },
+   {
+    "question": "S'il pleuvait cet après-midi, nous ___ à la maison.",
+    "options": [
+     "restons",
+     "resterons",
+     "restions",
+     "resterions"
+    ],
+    "answer": 3,
+    "explanation": "The condition uses the imparfait ('pleuvait'), requiring the conditionnel présent ('resterions') in the main clause."
+   }
+  ],
+  "tip": "Remember the classic French rhyme: 'Les « si » n'aiment pas les « -rait »' — never put a conditional ending in a 'si' clause!"
+ },
+ {
+  "id": "fr-b2-subjunctive-vs-indicative-nuances",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#DC2626",
+  "emoji": "🎭",
+  "title": "Subjunctive vs. Indicative in Nuanced Contexts",
+  "subtitle": "Distinguish certainty from subjectivity in relative clauses and inverted opinion structures.",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "Use the subjunctive when the antecedent is hypothetical or nonexistent, and when opinion verbs are negated or inverted in questions.",
+  "structure": {
+   "headers": [
+    "Trigger Context",
+    "Mood Required",
+    "French Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Certain antecedent",
+      "Indicatif",
+      "Je cherche un guide qui connaît la région.",
+      "I'm looking for a guide who knows the area (he exists)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Hypothetical antecedent",
+      "Subjonctif",
+      "Je cherche un guide qui connaisse la région.",
+      "I'm looking for any guide who might know the area."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Affirmative opinion",
+      "Indicatif",
+      "Je pense qu'il est honnête.",
+      "I think he is honest."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negated/Inverted opinion",
+      "Subjonctif",
+      "Pensez-vous qu'il soit honnête ?",
+      "Do you think that he is honest? (doubt implied)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Superlative Relatives",
+    "example": "C'est le seul candidat qui ait toutes les compétences requises.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Negative Belief Verbs",
+    "example": "Je ne crois pas que cette décision soit judicieuse.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Nonexistent Antecedent",
+    "example": "Il n'y a personne qui sache résoudre cette équation.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Nous voulons louer une maison qui ait un grand jardin clos.",
+    "ko": "",
+    "highlight": "ait un grand jardin"
+   },
+   {
+    "en": "Je connais un chauffeur qui sait conduire sur la neige.",
+    "ko": "",
+    "highlight": "sait conduire"
+   },
+   {
+    "en": "Croyez-vous vraiment que ce projet réussisse sans aide ?",
+    "ko": "",
+    "highlight": "ce projet réussisse"
+   },
+   {
+    "en": "C'est la plus belle symphonie que j'aie jamais entendue.",
+    "ko": "",
+    "highlight": "que j'aie jamais"
+   },
+   {
+    "en": "Je ne prétends pas qu'elle ait entièrement tort.",
+    "ko": "",
+    "highlight": "ait entièrement tort"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Je cherche un appartement qui est calme, si cela existe.",
+    "right": "Je cherche un appartement qui soit calme, si cela existe.",
+    "note": "When the existence of the entity is uncertain, the subjunctive is required in the relative clause."
+   },
+   {
+    "wrong": "Je ne pense pas qu'il viendra ce soir.",
+    "right": "Je ne pense pas qu'il vienne ce soir.",
+    "note": "Negated verbs of thinking like 'ne pas penser' trigger the subjunctive mood."
+   },
+   {
+    "wrong": "Bien qu'il fait froid, nous sortons marcher.",
+    "right": "Bien qu'il fasse froid, nous sortons marcher.",
+    "note": "The conjunction 'bien que' (although) obligatorily governs the subjunctive."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Je connais un étudiant qui ___ couramment cinq langues.",
+    "options": [
+     "parle",
+     "parles",
+     "parlât",
+     "avoir parlé"
+    ],
+    "answer": 0,
+    "explanation": "The speaker knows a specific existing person ('Je connais un...'), so the indicatif ('parle') is correct."
+   },
+   {
+    "question": "Y a-t-il quelqu'un ici qui ___ m'expliquer ce document ?",
+    "options": [
+     "sait",
+     "saura",
+     "puisse",
+     "pourra"
+    ],
+    "answer": 2,
+    "explanation": "A question concerning the existence of a person requires the subjunctive ('puisse') in the relative clause."
+   },
+   {
+    "question": "Nous ne pensons pas qu'elle ___ prête pour cette responsabilité.",
+    "options": [
+     "est",
+     "sera",
+     "soit",
+     "serait"
+    ],
+    "answer": 2,
+    "explanation": "'Ne pas penser que' conveys doubt and requires the subjunctive verb 'soit'."
+   },
+   {
+    "question": "C'est le film le plus émouvant que nous ___ cette année.",
+    "options": [
+     "regarderons",
+     "avons vu",
+     "avions vu",
+     "ayons vu"
+    ],
+    "answer": 3,
+    "explanation": "Superlative expressions ('le plus...') governing a subjective assessment trigger the past subjunctive ('ayons vu')."
+   }
+  ],
+  "tip": "With verbs of thinking (croire, penser, trouver), affirmative = Indicatif; negative or inverted question = Subjonctif."
+ },
+ {
+  "id": "fr-b2-past-participle-agreement-with-reflexives-and-preceding-cod",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "✍️",
+  "title": "Advanced Past Participle Agreement Exceptions",
+  "subtitle": "Navigate complex agreements with preceding direct objects, reflexive verbs, and causatives.",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "The past participle agrees with a preceding direct object, but never agrees with an indirect object or with a causative 'faire'.",
+  "structure": {
+   "headers": [
+    "Grammatical Pattern",
+    "Agreement Rule",
+    "French Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Preceding Direct Object (COD)",
+      "Agrees in gender and number",
+      "Les lettres que j'ai écrites sont parties.",
+      "The letters I wrote have departed."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Pronominal with Indirect Object",
+      "No agreement (verb takes 'à')",
+      "Elles se sont parlé hier soir.",
+      "They spoke to each other yesterday."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Pronominal with Direct Object",
+      "Agrees with preceding COD",
+      "Elle s'est lavé les mains.",
+      "She washed her hands (COD is 'les mains' after verb)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Causative 'faire + infinitif'",
+      "Invariable (never agrees)",
+      "Les robes que j'ai fait faire sont chics.",
+      "The dresses that I had made are stylish."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Preceding Direct Pronoun",
+    "example": "Cette chanson, nous l'avons entendue plusieurs fois.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Reciprocal Indirect Action",
+    "example": "Ils se sont téléphoné pour régler le problème.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Causative Structure",
+    "example": "Les maisons qu'il a fait construire sont modernes.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Quelles magnifiques photos as-tu prises pendant ton voyage ?",
+    "ko": "",
+    "highlight": "as-tu prises"
+   },
+   {
+    "en": "Les fleurs qu'ils ont coupées commencent à faner.",
+    "ko": "",
+    "highlight": "ont coupées"
+   },
+   {
+    "en": "Ils se sont rendu compte de leur monumentale erreur.",
+    "ko": "",
+    "highlight": "se sont rendu"
+   },
+   {
+    "en": "Les musiciens que nous avons entendus jouer étaient doués.",
+    "ko": "",
+    "highlight": "avons entendus"
+   },
+   {
+    "en": "Elle s'est blessée à la cheville en courant ce matin.",
+    "ko": "",
+    "highlight": "s'est blessée"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Elles se sont parlées pendant des heures.",
+    "right": "Elles se sont parlé pendant des heures.",
+    "note": "'Parler' takes an indirect complement ('parler à quelqu'un'), so the past participle remains invariable."
+   },
+   {
+    "wrong": "La maison qu'il a faite construire est immense.",
+    "right": "La maison qu'il a fait construire est immense.",
+    "note": "When followed immediately by an infinitive, 'fait' is strictly invariable."
+   },
+   {
+    "wrong": "Elle s'est lavée les dents avant de dormir.",
+    "right": "Elle s'est lavé les dents avant de dormir.",
+    "note": "'Les dents' is the direct object and appears after the verb, so the participle does not agree with 'se'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "La décision qu'ils ont ___ a surpris tout le monde.",
+    "options": [
+     "prise",
+     "pris",
+     "prises",
+     "prient"
+    ],
+    "answer": 0,
+    "explanation": "'La décision' is feminine singular and serves as the preceding direct object (COD), requiring 'prise'."
+   },
+   {
+    "question": "Mes deux sœurs se sont ___ une longue lettre.",
+    "options": [
+     "écrit",
+     "écrite",
+     "écrites",
+     "écrits"
+    ],
+    "answer": 0,
+    "explanation": "The direct object 'une lettre' comes after the verb, and the reciprocal pronoun 'se' is indirect ('écrire à'), so 'écrit' is invariable."
+   },
+   {
+    "question": "Les voitures qu'elle a ___ réparer roulent parfaitement.",
+    "options": [
+     "faite",
+     "faites",
+     "fait",
+     "faîtes"
+    ],
+    "answer": 2,
+    "explanation": "'Faire' followed immediately by an infinitive is strictly invariable; write 'fait'."
+   },
+   {
+    "question": "Voici les actrices que nous avons ___ applaudir sur scène.",
+    "options": [
+     "vu",
+     "vue",
+     "vus",
+     "vues"
+    ],
+    "answer": 3,
+    "explanation": "'Les actrices' (feminine plural) perform the action of applauding, so agreement occurs: 'vues'."
+   }
+  ],
+  "tip": "Ask 'qui/quoi ?' immediately after the verb. If the answer is placed BEFORE the participle, agree with it; if it is AFTER or introduced by 'à', do not agree!"
+ },
+ {
+  "id": "fr-b2-gerondif-participe-present-and-adjectif-verbal",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#DC2626",
+  "emoji": "🏃",
+  "title": "Gérondif, Participe Présent, and Adjectif Verbal",
+  "subtitle": "Distinguish verbal adverbs, participial clauses, and derived adjectives ending in -ant.",
+  "color": "#991B1B",
+  "bg": "#FEF2F2",
+  "keyPoint": "The gérondif (en + -ant) acts as an invariable adverb of manner or simultaneity sharing the main subject, while the verbal adjective agrees in gender and number.",
+  "structure": {
+   "headers": [
+    "Form",
+    "Grammatical Nature",
+    "Agreement",
+    "French Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Gérondif (en -ant)",
+      "Adverbial modifier (manner, time)",
+      "Invariable",
+      "Elle chante en cuisinant."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Participe présent (-ant)",
+      "Verb form (cause, condition, action)",
+      "Invariable",
+      "Ayant faim, il mange une pomme."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adjectif verbal (-ant / -ent)",
+      "Descriptive adjective (quality)",
+      "Agrees with noun",
+      "Des nouvelles surprenantes."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Simultaneous Action (Gérondif)",
+    "example": "Il écoute de la musique tout en révisant.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Causal Action (Participe Présent)",
+    "example": "Ne sachant que faire, elle a consulté un spécialiste.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Noun Modifier (Adjectif Verbal)",
+    "example": "Ce sont des arguments convaincants et pertinents.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "C'est en forgeant qu'on devient forgeron.",
+    "ko": "",
+    "highlight": "en forgeant"
+   },
+   {
+    "en": "Les personnes ayant réservé entreront les premières.",
+    "ko": "",
+    "highlight": "ayant réservé"
+   },
+   {
+    "en": "Ce voyage propose des activités captivantes pour tous.",
+    "ko": "",
+    "highlight": "captivantes"
+   },
+   {
+    "en": "En regardant par la fenêtre, nous avons aperçu un chevreuil.",
+    "ko": "",
+    "highlight": "En regardant"
+   },
+   {
+    "en": "Refusant de céder à la panique, le capitaine a gardé son calme.",
+    "ko": "",
+    "highlight": "Refusant de céder"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "En marchant dans la rue, mon sac est tombé.",
+    "right": "En marchant dans la rue, j'ai fait tomber mon sac.",
+    "note": "The subject of the gérondif must be the exact same subject as that of the main clause."
+   },
+   {
+    "wrong": "Elle lisait le journal en buvant son café chaud.",
+    "right": "Elle lisait le journal en buvant son café chaud.",
+    "note": "Ensure 'en' is retained; using only 'buvant' changes the relationship from simultaneous manner to a restrictive clause."
+   },
+   {
+    "wrong": "Ce sont des enfants obéissants à leurs parents.",
+    "right": "Ce sont des enfants obéissant à leurs parents.",
+    "note": "When followed by an object complement ('à leurs parents'), it functions as a present participle and remains invariable."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "C'est ___ que vous découvrirez les charmes secrets de cette région.",
+    "options": [
+     "en voyageant",
+     "voyageant",
+     "voyagé",
+     "voyageante"
+    ],
+    "answer": 0,
+    "explanation": "The gérondif with 'en' indicates the means/manner of discovering the charms."
+   },
+   {
+    "question": "Les candidats ___ les critères requis seront convoqués à l'entretien.",
+    "options": [
+     "remplissant",
+     "remplissants",
+     "remplissiez",
+     "en remplissant"
+    ],
+    "answer": 0,
+    "explanation": "'Remplissant' is a participe présent modifying candidates with a direct object ('les critères'); it stays invariable."
+   },
+   {
+    "question": "Elle nous a présenté des propositions très ___ et audacieuses.",
+    "options": [
+     "stimulant",
+     "stimulantes",
+     "en stimulant",
+     "stimulants"
+    ],
+    "answer": 1,
+    "explanation": "Here it is an adjectif verbal describing 'des propositions' (feminine plural), so agreement is required: 'stimulantes'."
+   },
+   {
+    "question": "Tout ___ la vérité, il a préféré garder le silence.",
+    "options": [
+     "sachant",
+     "en sachant",
+     "su",
+     "sachante"
+    ],
+    "answer": 1,
+    "explanation": "'Tout en + participe présent' forms an emphatic gérondif expressing opposition/concession ('while knowing')."
+   }
+  ],
+  "tip": "Spelling trap: Some verbal adjectives differ from their present participle forms (e.g., différant vs différent, communiquant vs communicant, fatiguant vs fatigant)."
+ }
+]

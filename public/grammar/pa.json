@@ -1,0 +1,3366 @@
+[
+ {
+  "id": "pa-a1-gurmukhi-vowel-diacritics",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "✍️",
+  "title": "Gurmukhi Orthography & Mukta/Laga Matra",
+  "subtitle": "Understanding inherent vowels and diacritic markers",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Every bare Gurmukhi consonant contains an inherent short vowel called 'Mukta' unless modified or replaced by a dependent vowel sign (Laga Matra).",
+  "structure": {
+   "headers": [
+    "Matra Name",
+    "Symbol & Example",
+    "Vowel Sound"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ਮੁਕਤਾ (Mukta)",
+      "ਕ (ਕਲਮ)",
+      "Short inherent /ə/"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਕੰਨਾ (Kanna)",
+      "ਕਾ (ਕਾਲਾ)",
+      "Long /aː/"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ਸਿਹਾਰੀ (Sihari)",
+      "ਕਿ (ਕਿਤਾਬ)",
+      "Short /ɪ/ written to the left"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਬਿਹਾਰੀ (Bihari)",
+      "ਕੀ (ਕੀੜੀ)",
+      "Long /iː/ written to the right"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Default Inherent Vowel",
+    "example": "ਘਰ ਸਾਫ਼ ਹੈ।",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Using Kanna for Long A",
+    "example": "ਇਹ ਤਾਰਾ ਵੱਡਾ ਹੈ।",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Differentiating Sihari and Bihari",
+    "example": "ਇਹ ਕਿਤਾਬ ਨਵੀਂ ਹੈ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਘਰ ਸਾਫ਼ ਹੈ।",
+    "ko": "",
+    "highlight": "ਘਰ"
+   },
+   {
+    "en": "ਕਾਕਾ ਦੁੱਧ ਪੀਂਦਾ ਹੈ।",
+    "ko": "",
+    "highlight": "ਕਾਕਾ"
+   },
+   {
+    "en": "ਇਹ ਕਿਤਾਬ ਮੇਰੀ ਹੈ।",
+    "ko": "",
+    "highlight": "ਕਿਤਾਬ"
+   },
+   {
+    "en": "ਪਾਣੀ ਠੰਢਾ ਹੈ।",
+    "ko": "",
+    "highlight": "ਪਾਣੀ"
+   },
+   {
+    "en": "ਮੇਰਾ ਸੂਟ ਸੋਹਣਾ ਹੈ।",
+    "ko": "",
+    "highlight": "ਸੂਟ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਕਤਾਬ",
+    "right": "ਕਿਤਾਬ",
+    "note": "Short 'i' requires the Sihari marker (ਿ) placed to the left of the consonant."
+   },
+   {
+    "wrong": "ਪਾਣਿ",
+    "right": "ਪਾਣੀ",
+    "note": "Word-final long 'ee' sounds require Bihari (ੀ), not Sihari."
+   },
+   {
+    "wrong": "ਕਲਮਾ",
+    "right": "ਕਲਮ",
+    "note": "Do not add Kanna (ਾ) if the word ends with the inherent mukta sound."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which word contains only the inherent Mukta vowel?",
+    "options": [
+     "ਕਿਤਾਬ",
+     "ਘਰ",
+     "ਪਾਣੀ",
+     "ਤਾਰਾ"
+    ],
+    "answer": 1,
+    "explanation": "'ਘਰ' consists solely of two consonants carrying the inherent short Mukta vowel."
+   },
+   {
+    "question": "Complete the word for 'book': '___ਤਾਬ'",
+    "options": [
+     "ਕਿ",
+     "ਕੀ",
+     "ਕਾ",
+     "ਕੋ"
+    ],
+    "answer": 0,
+    "explanation": "The word 'ਕਿਤਾਬ' takes Sihari (ਿ) before the consonant 'ਕ' for the short /ɪ/ sound."
+   },
+   {
+    "question": "Identify the vowel sign used at the end of 'ਪਾਣੀ':",
+    "options": [
+     "ਔਂਕੜ",
+     "ਕੰਨਾ",
+     "ਸਿਹਾਰੀ",
+     "ਬਿਹਾਰੀ"
+    ],
+    "answer": 3,
+    "explanation": "The stroke on the right side of 'ਣ' is Bihari (ੀ), denoting a long /iː/ vowel."
+   },
+   {
+    "question": "Which word correctly spells 'black' using Kanna?",
+    "options": [
+     "ਕਲ",
+     "ਕਲਾ",
+     "ਕਾਲਾ",
+     "ਕਿਲ"
+    ],
+    "answer": 2,
+    "explanation": "'ਕਾਲਾ' correctly uses Kanna on both syllables for the long /aː/ sounds."
+   }
+  ],
+  "tip": "Remember that Sihari is visually written to the left of a consonant, but phonetically pronounced after it!"
+ },
+ {
+  "id": "pa-a1-direct-vs-oblique-noun-cases",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "📦",
+  "title": "Direct vs Oblique Noun Inflection",
+  "subtitle": "Inflecting nouns before postpositions",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Marked masculine singular nouns ending in Kanna (-ਾ) change to Laan (-ੇ) before any postposition, while plurals typically add '-ਆਂ'.",
+  "structure": {
+   "headers": [
+    "Noun Class",
+    "Direct (Singular/Plural)",
+    "Oblique (Singular/Plural)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masc. Marked (-ਾ)",
+      "ਮੁੰਡਾ / ਮੁੰਡੇ",
+      "ਮੁੰਡੇ / ਮੁੰਡਿਆਂ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masc. Unmarked (Consonant)",
+      "ਘਰ / ਘਰ",
+      "ਘਰ / ਘਰਾਂ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Fem. Marked (-ੀ)",
+      "ਕੁੜੀ / ਕੁੜੀਆਂ",
+      "ਕੁੜੀ / ਕੁੜੀਆਂ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Fem. Unmarked (Consonant)",
+      "ਮੇਜ਼ / ਮੇਜ਼ਾਂ",
+      "ਮੇਜ਼ / ਮੇਜ਼ਾਂ"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Singular Marked Masculine",
+    "example": "ਮੁੰਡੇ ਨੇ ਰੋਟੀ ਖਾਧੀ।",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Plural Marked Masculine",
+    "example": "ਮੁੰਡਿਆਂ ਕੋਲ ਕਿਤਾਬਾਂ ਹਨ।",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Unmarked Noun in Oblique",
+    "example": "ਘਰ ਵਿੱਚ ਕੋਈ ਨਹੀਂ ਹੈ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਮੁੰਡੇ ਨੇ ਰੋਟੀ ਖਾਧੀ।",
+    "ko": "",
+    "highlight": "ਮੁੰਡੇ"
+   },
+   {
+    "en": "ਮੁੰਡਿਆਂ ਨੂੰ ਪਾਣੀ ਦਿਓ।",
+    "ko": "",
+    "highlight": "ਮੁੰਡਿਆਂ"
+   },
+   {
+    "en": "ਕਮਰੇ ਵਿੱਚ ਪੱਖਾ ਚੱਲਦਾ ਹੈ।",
+    "ko": "",
+    "highlight": "ਕਮਰੇ"
+   },
+   {
+    "en": "ਕੁੜੀਆਂ ਨੇ ਗੀਤ ਗਾਇਆ।",
+    "ko": "",
+    "highlight": "ਕੁੜੀਆਂ"
+   },
+   {
+    "en": "ਘਰਾਂ ਵਿੱਚ ਰੌਸ਼ਨੀ ਹੈ।",
+    "ko": "",
+    "highlight": "ਘਰਾਂ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਮੁੰਡਾ ਨੇ ਕਿਹਾ।",
+    "right": "ਮੁੰਡੇ ਨੇ ਕਿਹਾ।",
+    "note": "Marked masculine singular nouns like 'ਮੁੰਡਾ' must shift to 'ਮੁੰਡੇ' before postpositions like 'ਨੇ'."
+   },
+   {
+    "wrong": "ਮੁੰਡੇ ਨੂੰ ਪਾਣੀ ਦਿਓ। (to the boys)",
+    "right": "ਮੁੰਡਿਆਂ ਨੂੰ ਪਾਣੀ ਦਿਓ।",
+    "note": "For masculine plural oblique before postpositions, use '-ਆਂ' ('ਮੁੰਡਿਆਂ'), not the direct plural ending."
+   },
+   {
+    "wrong": "ਕਮਰਾ ਵਿੱਚ",
+    "right": "ਕਮਰੇ ਵਿੱਚ",
+    "note": "Singular 'ਕਮਰਾ' takes the oblique ending '-ੇ' when followed by 'ਵਿੱਚ'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: '___ ਨੇ ਦੁੱਧ ਪੀਤਾ।' (The boy drank milk)",
+    "options": [
+     "ਮੁੰਡਾ",
+     "ਮੁੰਡੇ",
+     "ਮੁੰਡਿਆਂ",
+     "ਮੁੰਡੀਆਂ"
+    ],
+    "answer": 1,
+    "explanation": "The singular marked masculine noun 'ਮੁੰਡਾ' shifts to oblique 'ਮੁੰਡੇ' before the postposition 'ਨੇ'."
+   },
+   {
+    "question": "Choose the correct oblique plural form: 'Give books to the girls' -> '___ ਨੂੰ ਕਿਤਾਬਾਂ ਦਿਓ।'",
+    "options": [
+     "ਕੁੜੀ",
+     "ਕੁੜੀਆਂ",
+     "ਕੁੜੀਓ",
+     "ਕੁੜੇ"
+    ],
+    "answer": 1,
+    "explanation": "Feminine nouns ending in '-ੀ' take '-ੀਆਂ' in both direct plural and oblique plural."
+   },
+   {
+    "question": "What is the oblique singular form of 'ਕਮਰਾ' (room)?",
+    "options": [
+     "ਕਮਰਿਆਂ",
+     "ਕਮਰਾ",
+     "ਕਮਰੇ",
+     "ਕਮਰੀ"
+    ],
+    "answer": 2,
+    "explanation": "Marked masculine nouns replace final '-ਾ' with '-ੇ' in the oblique singular."
+   },
+   {
+    "question": "Choose the correct oblique plural for 'ਘਰ' (house): 'ਉਹ ___ ਵਿੱਚ ਰਹਿੰਦੇ ਹਨ।' (in the houses)",
+    "options": [
+     "ਘਰੇ",
+     "ਘਰੂ",
+     "ਘਰੀਂ",
+     "ਘਰਾਂ"
+    ],
+    "answer": 3,
+    "explanation": "Unmarked masculine nouns add '-ਾਂ' to form the oblique plural."
+   }
+  ],
+  "tip": "Any time a noun is directly followed by a particle (ਨੂੰ, ਨੇ, ਵਿੱਚ, ਤੋਂ, ਦਾ), check if it needs an oblique ending!"
+ },
+ {
+  "id": "pa-a1-core-postpositions-ka-da",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔗",
+  "title": "Core Postpositions & The Genitive 'Daa'",
+  "subtitle": "Expressing possession and relational location",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "The genitive postposition agrees in gender and number with the possessed noun that follows it: ਦਾ, ਦੇ, ਦੀ, or ਦੀਆਂ.",
+  "structure": {
+   "headers": [
+    "Possessed Noun Category",
+    "Genitive Form",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Singular",
+      "ਦਾ",
+      "ਮੁੰਡੇ ਦਾ ਘਰ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masculine Plural / Oblique",
+      "ਦੇ",
+      "ਮੁੰਡੇ ਦੇ ਦੋਸਤ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine Singular",
+      "ਦੀ",
+      "ਮੁੰਡੇ ਦੀ ਕਿਤਾਬ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine Plural",
+      "ਦੀਆਂ",
+      "ਮੁੰਡੇ ਦੀਆਂ ਭੈਣਾਂ"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Possession Agreement",
+    "example": "ਰਾਜ ਦਾ ਭਰਾ ਆਇਆ ਹੈ।",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Spatial Postposition",
+    "example": "ਕਿਤਾਬ ਮੇਜ਼ ਉੱਤੇ ਹੈ।",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Recipient Postposition",
+    "example": "ਅਧਿਆਪਕ ਨੇ ਬੱਚੇ ਨੂੰ ਪੁੱਛਿਆ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਰਾਜ ਦਾ ਘਰ ਬਹੁਤ ਵੱਡਾ ਹੈ।",
+    "ko": "",
+    "highlight": "ਦਾ ਘਰ"
+   },
+   {
+    "en": "ਉਸ ਦੀ ਕਿਤਾਬ ਮੇਜ਼ 'ਤੇ ਪਈ ਹੈ।",
+    "ko": "",
+    "highlight": "ਦੀ ਕਿਤਾਬ"
+   },
+   {
+    "en": "ਸਿਮਰਨ ਦੇ ਕੱਪੜੇ ਸਾਫ਼ ਹਨ।",
+    "ko": "",
+    "highlight": "ਦੇ ਕੱਪੜੇ"
+   },
+   {
+    "en": "ਮੇਰੀ ਭੈਣ ਦੀਆਂ ਸਹੇਲੀਆਂ ਆਈਆਂ।",
+    "ko": "",
+    "highlight": "ਦੀਆਂ ਸਹੇਲੀਆਂ"
+   },
+   {
+    "en": "ਮੈਂ ਦੁਕਾਨ ਤੋਂ ਆਇਆ ਹਾਂ।",
+    "ko": "",
+    "highlight": "ਦੁਕਾਨ ਤੋਂ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਮੁੰਡੇ ਦਾ ਕਿਤਾਬ",
+    "right": "ਮੁੰਡੇ ਦੀ ਕਿਤਾਬ",
+    "note": "'ਕਿਤਾਬ' is feminine singular, so the genitive postposition must be 'ਦੀ', not 'ਦਾ'."
+   },
+   {
+    "wrong": "ਕੁੜੀ ਦਾ ਕੱਪੜੇ",
+    "right": "ਕੁੜੀ ਦੇ ਕੱਪੜੇ",
+    "note": "'ਕੱਪੜੇ' is masculine plural, so it requires 'ਦੇ' instead of 'ਦਾ'."
+   },
+   {
+    "wrong": "ਮੇਜ਼ ਉੱਤੇ ਦਾ ਕਿਤਾਬ",
+    "right": "ਮੇਜ਼ ਉੱਤੇ ਕਿਤਾਬ",
+    "note": "Do not chain 'ਦਾ' redundantly after spatial postpositions like 'ਉੱਤੇ'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'ਇਹ ਮੇਰੇ ਵੀਰ ___ ਕਾਰ ਹੈ।' (This is my brother's car - feminine)",
+    "options": [
+     "ਦੀਆਂ",
+     "ਦਾ",
+     "ਦੀ",
+     "ਦੇ"
+    ],
+    "answer": 2,
+    "explanation": "Since 'ਕਾਰ' is feminine singular, the genitive postposition must agree with it as 'ਦੀ'."
+   },
+   {
+    "question": "Choose the correct genitive marker: 'ਕੁੜੀ ___ ਖਿਡੌਣੇ ਕਿੱਥੇ ਹਨ?' (Where are the girl's toys? - masc. plural)",
+    "options": [
+     "ਦੇ",
+     "ਦਾ",
+     "ਦੀ",
+     "ਦੀਆਂ"
+    ],
+    "answer": 0,
+    "explanation": "Toys ('ਖਿਡੌਣੇ') is masculine plural, demanding the masculine plural form 'ਦੇ'."
+   },
+   {
+    "question": "Which postposition corresponds to 'from' in 'from the shop'?",
+    "options": [
+     "ਨੂੰ",
+     "ਵਿੱਚ",
+     "ਕੋਲ",
+     "ਤੋਂ"
+    ],
+    "answer": 3,
+    "explanation": "'ਤੋਂ' means 'from' or 'since' in Punjabi."
+   },
+   {
+    "question": "Fill in the blank: 'ਅਧਿਆਪਕ ___ ਪੁੱਛੋ।' (Ask the teacher - recipient)",
+    "options": [
+     "ਦਾ",
+     "ਨੂੰ",
+     "ਦੀ",
+     "ਦੇ"
+    ],
+    "answer": 1,
+    "explanation": "'ਨੂੰ' marks the direct/indirect object or recipient of an action."
+   }
+  ],
+  "tip": "Always look ahead to the possessed object (not the possessor) to choose between ਦਾ, ਦੇ, ਦੀ, or ਦੀਆਂ."
+ },
+ {
+  "id": "pa-a1-pronoun-inflection-and-oblique-stems",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "👤",
+  "title": "Personal Pronouns & Irregular Oblique Stems",
+  "subtitle": "Using subject pronouns and oblique stems",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Personal pronouns take distinct oblique stems before postpositions (e.g., ਮੈਂ becomes ਮੈ- / ਮੇਰੇ, ਤੂੰ becomes ਤੈ- / ਤੇਰੇ, ਉਹ becomes ਉਸ / ਉਨ੍ਹਾਂ).",
+  "structure": {
+   "headers": [
+    "Pronoun (Direct)",
+    "Oblique + ਨੂੰ (Dative)",
+    "Oblique + Possessive (My/Your)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ਮੈਂ (I)",
+      "ਮੈਨੂੰ (To me)",
+      "ਮੇਰਾ / ਮੇਰੀ (Mine)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ਤੂੰ (You sing./inf.)",
+      "ਤੈਨੂੰ (To you)",
+      "ਤੇਰਾ / ਤੇਰੀ (Yours)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਉਹ (He/She sing.)",
+      "ਉਸਨੂੰ / ਉਹਨੂੰ (To him/her)",
+      "ਉਸਦਾ / ਉਹਦਾ (His/Hers)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਅਸੀਂ (We)",
+      "ਸਾਨੂੰ (To us)",
+      "ਸਾਡਾ / ਸਾਡੀ (Ours)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Subject Pronoun Use",
+    "example": "ਅਸੀਂ ਸਕੂਲ ਜਾਂਦੇ ਹਾਂ।",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Oblique Pronoun with Postposition",
+    "example": "ਉਸ ਕੋਲ ਨਵੀਂ ਕਲਮ ਹੈ।",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Contracted Dative Pronoun",
+    "example": "ਮੈਨੂੰ ਪਾਣੀ ਚਾਹੀਦਾ ਹੈ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਮੈਂ ਰੋਜ਼ ਪੜ੍ਹਦਾ ਹਾਂ।",
+    "ko": "",
+    "highlight": "ਮੈਂ"
+   },
+   {
+    "en": "ਮੈਨੂੰ ਭੁੱਖ ਲੱਗੀ ਹੈ।",
+    "ko": "",
+    "highlight": "ਮੈਨੂੰ"
+   },
+   {
+    "en": "ਤੈਨੂੰ ਕੀ ਚਾਹੀਦਾ ਹੈ?",
+    "ko": "",
+    "highlight": "ਤੈਨੂੰ"
+   },
+   {
+    "en": "ਉਸ ਨੇ ਇੱਕ ਚਿੱਠੀ ਲਿਖੀ।",
+    "ko": "",
+    "highlight": "ਉਸ ਨੇ"
+   },
+   {
+    "en": "ਸਾਨੂੰ ਤੁਹਾਡੀ ਮਦਦ ਚਾਹੀਦੀ ਹੈ।",
+    "ko": "",
+    "highlight": "ਸਾਨੂੰ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਮੈਂ ਨੂੰ ਪਾਣੀ ਦਿਓ।",
+    "right": "ਮੈਨੂੰ ਪਾਣੀ ਦਿਓ।",
+    "note": "'ਮੈਂ + ਨੂੰ' fuses into the oblique contraction 'ਮੈਨੂੰ'."
+   },
+   {
+    "wrong": "ਉਹ ਨੇ ਕਿਹਾ।",
+    "right": "ਉਸ ਨੇ ਕਿਹਾ।",
+    "note": "Singular 'ਉਹ' becomes oblique 'ਉਸ' before postpositions like 'ਨੇ'."
+   },
+   {
+    "wrong": "ਤੂੰ ਨੂੰ ਕੀ ਹੋਇਆ?",
+    "right": "ਤੈਨੂੰ ਕੀ ਹੋਇਆ?",
+    "note": "Use 'ਤੈਨੂੰ' instead of placing the bare direct pronoun 'ਤੂੰ' with 'ਨੂੰ'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the correct form for 'to me': '___ ਦੱਸੋ।' (Tell me)?",
+    "options": [
+     "ਮੈਨੂੰ",
+     "ਮੈਂ ਨੂੰ",
+     "ਮੇਰਾ",
+     "ਸਾਡਾ"
+    ],
+    "answer": 0,
+    "explanation": "'ਮੈਂ' merges with postposition 'ਨੂੰ' to form 'ਮੈਨੂੰ'."
+   },
+   {
+    "question": "Fill in the blank with the singular oblique pronoun: '___ ਨੇ ਕੰਮ ਮੁਕਾਇਆ।' (He/She finished work)",
+    "options": [
+     "ਉਹ",
+     "ਸਾਨੂੰ",
+     "ਉਸ",
+     "ਉਨ੍ਹਾਂ"
+    ],
+    "answer": 2,
+    "explanation": "The 3rd person singular pronoun 'ਉਹ' takes the oblique stem 'ਉਸ' before 'ਨੇ'."
+   },
+   {
+    "question": "Which form represents 'to us'?",
+    "options": [
+     "ਮੈਨੂੰ",
+     "ਤੈਨੂੰ",
+     "ਤੁਹਾਨੂੰ",
+     "ਸਾਨੂੰ"
+    ],
+    "answer": 3,
+    "explanation": "'ਅਸੀਂ + ਨੂੰ' contracts irregularly into 'ਸਾਨੂੰ'."
+   },
+   {
+    "question": "Choose the correct polite/plural possessive for 'Your': 'ਇਹ ___ ਘਰ ਹੈ।'",
+    "options": [
+     "ਤੇਰਾ",
+     "ਤੁਹਾਡਾ",
+     "ਮੇਰਾ",
+     "ਸਾਡਾ"
+    ],
+    "answer": 1,
+    "explanation": "'ਤੁਹਾਡਾ' is the formal/plural 2nd-person possessive adjective agreeing with masculine 'ਘਰ'."
+   }
+  ],
+  "tip": "Think of ਮੈਨੂੰ (to me), ਤੈਨੂੰ (to you), and ਸਾਨੂੰ (to us) as single indivisible words rather than separate pronouns plus postpositions."
+ },
+ {
+  "id": "pa-a1-verb-hona-and-negation",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#DC2626",
+  "emoji": "⚡",
+  "title": "The Copula 'Hona' & Negation with 'Nahi'",
+  "subtitle": "Expressing 'to be' and negating assertions",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "The auxiliary verb 'ਹੋਣਾ' conjugates to match subject person and number, and negation particle 'ਨਹੀਂ' is typically placed immediately before the copula.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Affirmative Copula (Present)",
+    "Negative Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ਮੈਂ (I)",
+      "ਹਾਂ",
+      "ਨਹੀਂ ਹਾਂ / ਨਹੀਂ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਤੂੰ (You sing./inf.)",
+      "ਹੈਂ",
+      "ਨਹੀਂ ਹੈਂ / ਨਹੀਂ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਉਹ / ਇਹ (He/She/It)",
+      "ਹੈ",
+      "ਨਹੀਂ ਹੈ / ਨਹੀਂ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ਅਸੀਂ / ਤੁਸੀਂ / ਉਹ (Plural)",
+      "ਹਾਂ / ਹੋ / ਹਨ",
+      "ਨਹੀਂ ਹਨ / ਨਹੀਂ ਹੋ"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Identity & Equative",
+    "example": "ਉਹ ਮੇਰਾ ਦੋਸਤ ਹੈ।",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Describing Condition/State",
+    "example": "ਅੱਜ ਮੌਸਮ ਬਹੁਤ ਵਧੀਆ ਹੈ।",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Direct Negation",
+    "example": "ਮੈਂ ਵਿਦਿਆਰਥੀ ਨਹੀਂ ਹਾਂ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਮੈਂ ਇੱਕ ਡਾਕਟਰ ਹਾਂ।",
+    "ko": "",
+    "highlight": "ਹਾਂ"
+   },
+   {
+    "en": "ਕਮਰਾ ਸਾਫ਼ ਨਹੀਂ ਹੈ।",
+    "ko": "",
+    "highlight": "ਨਹੀਂ ਹੈ"
+   },
+   {
+    "en": "ਤੁਸੀਂ ਕਿੱਥੇ ਹੋ?",
+    "ko": "",
+    "highlight": "ਹੋ"
+   },
+   {
+    "en": "ਉਹ ਬਹੁਤ ਹੁਸ਼ਿਆਰ ਹਨ।",
+    "ko": "",
+    "highlight": "ਹਨ"
+   },
+   {
+    "en": "ਇਹ ਮੇਰੀ ਕਿਤਾਬ ਨਹੀਂ ਹੈ।",
+    "ko": "",
+    "highlight": "ਨਹੀਂ ਹੈ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਮੈਂ ਥੱਕਿਆ ਹੈ।",
+    "right": "ਮੈਂ ਥੱਕਿਆ ਹਾਂ।",
+    "note": "First person 'ਮੈਂ' must take 'ਹਾਂ', never third-person 'ਹੈ'."
+   },
+   {
+    "wrong": "ਨਹੀਂ ਉਹ ਅਧਿਆਪਕ ਹੈ।",
+    "right": "ਉਹ ਅਧਿਆਪਕ ਨਹੀਂ ਹੈ।",
+    "note": "In standard SOV sentences, 'ਨਹੀਂ' precedes the copula at the end rather than standing at the very beginning."
+   },
+   {
+    "wrong": "ਉਹ ਠੀਕ ਹੋ।",
+    "right": "ਉਹ ਠੀਕ ਹਨ।",
+    "note": "Third person plural 'ਉਹ' pairs with 'ਹਨ', while 'ਹੋ' is reserved for 'ਤੁਸੀਂ'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'ਮੈਂ ਅਧਿਆਪਕ ___।' (I am a teacher)",
+    "options": [
+     "ਹੈ",
+     "ਹਾਂ",
+     "ਹੋ",
+     "ਹਨ"
+    ],
+    "answer": 1,
+    "explanation": "The 1st person singular pronoun 'ਮੈਂ' conjugates with 'ਹਾਂ'."
+   },
+   {
+    "question": "Select the correct copula for plural/respectful: 'ਉਹ ਬਾਜ਼ਾਰ ਵਿੱਚ ___।' (They are in the market)",
+    "options": [
+     "ਹਾਂ",
+     "ਹੈਂ",
+     "ਹਨ",
+     "ਹੈ"
+    ],
+    "answer": 2,
+    "explanation": "3rd person plural/honorific subjects require 'ਹਨ'."
+   },
+   {
+    "question": "Negate the sentence correctly: 'ਉਹ ਘਰ ਹੈ।' -> 'He is not home.'",
+    "options": [
+     "ਨਹੀਂ ਉਹ ਘਰ ਹੈ।",
+     "ਉਹ ਨਹੀਂ ਘਰ।",
+     "ਉਹ ਘਰ ਹੈ ਨਹੀਂ।",
+     "ਉਹ ਘਰ ਨਹੀਂ ਹੈ।"
+    ],
+    "answer": 3,
+    "explanation": "Standard negation places 'ਨਹੀਂ' right before the final copula: 'ਉਹ ਘਰ ਨਹੀਂ ਹੈ।'"
+   },
+   {
+    "question": "Complete the question: 'ਤੁਸੀਂ ਕੌਣ ___?' (Who are you?)",
+    "options": [
+     "ਹੋ",
+     "ਹੈ",
+     "ਹਾਂ",
+     "ਹੈਂ"
+    ],
+    "answer": 0,
+    "explanation": "The 2nd person plural/formal pronoun 'ਤੁਸੀਂ' pairs with 'ਹੋ'."
+   }
+  ],
+  "tip": "In conversational Punjabi, the present copula (ਹੈ, ਹਨ) is often dropped after ਨਹੀਂ (e.g., 'ਮੈਨੂੰ ਪਤਾ ਨਹੀਂ' instead of 'ਮੈਨੂੰ ਪਤਾ ਨਹੀਂ ਹੈ')."
+ },
+ {
+  "id": "pa-a1-present-habitual-aspect",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔄",
+  "title": "Habitual Aspect Markers (-ਦਾ, -ਦੀ, -ਦੇ)",
+  "subtitle": "Talking about daily habits and recurring routines",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Add gender and number agreement suffixes (-ਦਾ, -ਦੀ, -ਦੇ, -ਦੀਆਂ) directly to the verb stem followed by the auxiliary 'ਹੋਣਾ' to express habitual actions.",
+  "structure": {
+   "headers": [
+    "Subject Category",
+    "Participle Suffix",
+    "Punjabi Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Singular",
+      "-ਦਾ (ਹਾਂ/ਹੈ)",
+      "ਮੁੰਡਾ ਖੇਡਦਾ ਹੈ",
+      "The boy plays"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine Singular",
+      "-ਦੀ (ਹਾਂ/ਹੈ)",
+      "ਕੁੜੀ ਪੜ੍ਹਦੀ ਹੈ",
+      "The girl reads"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masculine Plural",
+      "-ਦੇ (ਹਾਂ/ਹੋ/ਹਨ)",
+      "ਮੁੰਡੇ ਖੇਡਦੇ ਹਨ",
+      "The boys play"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine Plural",
+      "-ਦੀਆਂ (ਹਾਂ/ਹੋ/ਹਨ)",
+      "ਕੁੜੀਆਂ ਪੜ੍ਹਦੀਆਂ ਹਨ",
+      "The girls read"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Daily Routines",
+    "example": "ਮੈਂ ਰੋਜ਼ ਸਵੇਰੇ ਚਾਹ ਪੀਂਦਾ ਹਾਂ।",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "General Truths",
+    "example": "ਸੂਰਜ ਪੂਰਬ ਵੱਲੋਂ ਨਿਕਲਦਾ ਹੈ।",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Hobbies & Work",
+    "example": "ਉਹ ਸਕੂਲ ਵਿੱਚ ਪੜ੍ਹਾਉਂਦੀ ਹੈ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਮੈਂ ਹਰ ਰੋਜ਼ ਸੈਰ ਕਰਦਾ ਹਾਂ।",
+    "ko": "",
+    "highlight": "ਕਰਦਾ ਹਾਂ"
+   },
+   {
+    "en": "ਸਿਮਰਨ ਕਿਤਾਬ ਪੜ੍ਹਦੀ ਹੈ।",
+    "ko": "",
+    "highlight": "ਪੜ੍ਹਦੀ ਹੈ"
+   },
+   {
+    "en": "ਅਸੀਂ ਸ਼ਹਿਰ ਵਿੱਚ ਰਹਿੰਦੇ ਹਾਂ।",
+    "ko": "",
+    "highlight": "ਰਹਿੰਦੇ ਹਾਂ"
+   },
+   {
+    "en": "ਬੱਚੀਆਂ ਗੀਤ ਗਾਉਂਦੀਆਂ ਹਨ।",
+    "ko": "",
+    "highlight": "ਗਾਉਂਦੀਆਂ ਹਨ"
+   },
+   {
+    "en": "ਤੁਸੀਂ ਕੀ ਕੰਮ ਕਰਦੇ ਹੋ?",
+    "ko": "",
+    "highlight": "ਕਰਦੇ ਹੋ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਕੁੜੀ ਕਿਤਾਬ ਪੜ੍ਹਦਾ ਹੈ।",
+    "right": "ਕੁੜੀ ਕਿਤਾਬ ਪੜ੍ਹਦੀ ਹੈ।",
+    "note": "The verb participle must agree with the feminine singular subject by using -ਦੀ, not -ਦਾ."
+   },
+   {
+    "wrong": "ਮੈਂ ਸਕੂਲ ਜਾਂਦਾ।",
+    "right": "ਮੈਂ ਸਕੂਲ ਜਾਂਦਾ ਹਾਂ।",
+    "note": "Do not omit the present auxiliary 'ਹਾਂ' in standard habitual affirmative statements."
+   },
+   {
+    "wrong": "ਕੁੜੀਆਂ ਖੇਡਦੇ ਹਨ।",
+    "right": "ਕੁੜੀਆਂ ਖੇਡਦੀਆਂ ਹਨ।",
+    "note": "Feminine plural subjects require the distinctive plural feminine ending -ਦੀਆਂ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete with the correct feminine singular form: 'ਰਾਧਾ ਗੀਤ ___ ਹੈ।'",
+    "options": [
+     "ਸੁਣਦਾ",
+     "ਸੁਣਦੀ",
+     "ਸੁਣਦੇ",
+     "ਸੁਣਦੀਆਂ"
+    ],
+    "answer": 1,
+    "explanation": "Radha is feminine singular, so the verb takes the suffix -ਦੀ."
+   },
+   {
+    "question": "Select the correct masculine plural verb: 'ਮੁੰਡੇ ਸਕੂਲ ___ ਹਨ।'",
+    "options": [
+     "ਜਾਂਦੇ",
+     "ਜਾਂਦੀ",
+     "ਜਾਂਦਾ",
+     "ਜਾਂਦੀਆਂ"
+    ],
+    "answer": 0,
+    "explanation": "Boys (ਮੁੰਡੇ) is masculine plural, requiring the suffix -ਦੇ."
+   },
+   {
+    "question": "Choose the feminine plural form: 'ਕੁੜੀਆਂ ਹਾਕੀ ___ ਹਨ।'",
+    "options": [
+     "ਖੇਡਦੇ",
+     "ਖੇਡਦਾ",
+     "ਖੇਡਦੀ",
+     "ਖੇਡਦੀਆਂ"
+    ],
+    "answer": 3,
+    "explanation": "Girls (ਕੁੜੀਆਂ) is feminine plural, which requires -ਦੀਆਂ."
+   },
+   {
+    "question": "Complete the sentence for a male speaker: 'ਮੈਂ ਪਾਣੀ ___ ਹਾਂ।'",
+    "options": [
+     "ਪੀਂਦੀਆਂ",
+     "ਪੀਂਦੇ",
+     "ਪੀਂਦਾ",
+     "ਪੀਂਦੀ"
+    ],
+    "answer": 2,
+    "explanation": "A masculine singular speaker uses -ਦਾ followed by ਹਾਂ."
+   }
+  ],
+  "tip": "Remember that unlike Hindi, Punjabi retains a distinct feminine plural participle ending (-ਦੀਆਂ) instead of collapsing plural agreement into the auxiliary."
+ },
+ {
+  "id": "pa-a2-past-perfective-transitivity",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🎯",
+  "title": "Simple Past & Ergative 'ਨੇ' Usage",
+  "subtitle": "Mastering transitive past constructions and ergative alignment",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "In the simple past tense, transitive verbs require the ergative postposition 'ਨੇ' after the agent, causing the verb to agree with the object instead of the subject.",
+  "structure": {
+   "headers": [
+    "Verb Type",
+    "Agent Marking",
+    "Punjabi Example",
+    "Agreement Rule"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Intransitive",
+      "No 'ਨੇ' (Direct Subject)",
+      "ਮੁੰਡਾ ਗਿਆ",
+      "Agrees with subject (ਮੁੰਡਾ)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Transitive (Masc. Object)",
+      "Agent + ਨੇ",
+      "ਮੁੰਡੇ ਨੇ ਸੇਬ ਖਾਧਾ",
+      "Agrees with masculine object (ਸੇਬ)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Transitive (Fem. Object)",
+      "Agent + ਨੇ",
+      "ਕੁੜੀ ਨੇ ਰੋਟੀ ਖਾਧੀ",
+      "Agrees with feminine object (ਰੋਟੀ)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Transitive (Plural Object)",
+      "Agent + ਨੇ",
+      "ਉਹਨਾਂ ਨੇ ਚਿੱਠੀਆਂ ਲਿਖੀਆਂ",
+      "Agrees with plural object (ਚਿੱਠੀਆਂ)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Completed Transitive Action",
+    "example": "ਉਸ ਨੇ ਇੱਕ ਚੰਗੀ ਕਿਤਾਬ ਪੜ੍ਹੀ।",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Completed Intransitive Action",
+    "example": "ਅਸੀਂ ਕੱਲ੍ਹ ਦਿੱਲੀ ਪਹੁੰਚੇ।",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Specific Object Reference",
+    "example": "ਰਾਜ ਨੇ ਪਾਣੀ ਪੀਤਾ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਅਮਨ ਨੇ ਚਿੱਠੀ ਲਿਖੀ।",
+    "ko": "",
+    "highlight": "ਨੇ ਚਿੱਠੀ ਲਿਖੀ"
+   },
+   {
+    "en": "ਮੈਂ ਕੱਲ੍ਹ ਨਵਾਂ ਫ਼ੋਨ ਖ਼ਰੀਦਿਆ।",
+    "ko": "",
+    "highlight": "ਫ਼ੋਨ ਖ਼ਰੀਦਿਆ"
+   },
+   {
+    "en": "ਉਸ ਨੇ ਰੋਟੀਆਂ ਪਕਾਈਆਂ।",
+    "ko": "",
+    "highlight": "ਨੇ ਰੋਟੀਆਂ ਪਕਾਈਆਂ"
+   },
+   {
+    "en": "ਬੱਚੇ ਮੈਦਾਨ ਵਿੱਚ ਦੌੜੇ।",
+    "ko": "",
+    "highlight": "ਦੌੜੇ"
+   },
+   {
+    "en": "ਤੁਸੀਂ ਕਿਹੜੀ ਫ਼ਿਲਮ ਵੇਖੀ?",
+    "ko": "",
+    "highlight": "ਵੇਖੀ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਮੁੰਡਾ ਨੇ ਰੋਟੀ ਖਾਧੀ।",
+    "right": "ਮੁੰਡੇ ਨੇ ਰੋਟੀ ਖਾਧੀ।",
+    "note": "The noun preceding 'ਨੇ' must inflect into the oblique case ('ਮੁੰਡੇ' instead of 'ਮੁੰਡਾ')."
+   },
+   {
+    "wrong": "ਉਸ ਨੇ ਕਿਤਾਬ ਪੜ੍ਹਿਆ।",
+    "right": "ਉਸ ਨੇ ਕਿਤਾਬ ਪੜ੍ਹੀ।",
+    "note": "Because the verb is transitive, it agrees with the feminine object 'ਕਿਤਾਬ' (ਪੜ੍ਹੀ), not the subject."
+   },
+   {
+    "wrong": "ਮੈਂ ਨੇ ਸਕੂਲ ਗਿਆ।",
+    "right": "ਮੈਂ ਸਕੂਲ ਗਿਆ।",
+    "note": "'ਜਾਣਾ' (to go) is intransitive in Punjabi and never takes the ergative marker 'ਨੇ'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct past verb for: 'ਕੁੜੀ ਨੇ ਰੋਟੀ ___।'",
+    "options": [
+     "ਖਾਧਾ",
+     "ਖਾਧੀ",
+     "ਖਾਧੇ",
+     "ਖਾਧੀਆਂ"
+    ],
+    "answer": 1,
+    "explanation": "The feminine object 'ਰੋਟੀ' requires the feminine singular past form 'ਖਾਧੀ'."
+   },
+   {
+    "question": "Select the correct form of the agent before 'ਨੇ': '___ ਨੇ ਪਾਣੀ ਪੀਤਾ।'",
+    "options": [
+     "ਮੁੰਡਾ",
+     "ਮੁੰਡੇ",
+     "ਮੁੰਡਿਆਂ ਨੂੰ",
+     "ਮੁੰਡਾ ਦਾ"
+    ],
+    "answer": 1,
+    "explanation": "Before the postposition 'ਨੇ', the singular noun 'ਮੁੰਡਾ' changes to the oblique form 'ਮੁੰਡੇ'."
+   },
+   {
+    "question": "Identify the sentence with an intransitive verb (no 'ਨੇ'):",
+    "options": [
+     "ਉਸ ਨੇ ਚਾਹ ਪੀਤੀ।",
+     "ਮੈਂ ਰੋਟੀ ਖਾਧੀ।",
+     "ਉਹ ਘਰ ਆਇਆ।",
+     "ਰਾਮ ਨੇ ਕੰਮ ਕੀਤਾ।"
+    ],
+    "answer": 2,
+    "explanation": "'ਆਉਣਾ' (to come) is intransitive, so the subject remains unmarked without 'ਨੇ'."
+   },
+   {
+    "question": "Fill the blank with the plural feminine past verb: 'ਮਾਂ ਨੇ ਕਹਾਣੀਆਂ ___।'",
+    "options": [
+     "ਸੁਣਾਈ",
+     "ਸੁਣਾਇਆ",
+     "ਸੁਣਾਏ",
+     "ਸੁਣਾਈਆਂ"
+    ],
+    "answer": 3,
+    "explanation": "'ਕਹਾਣੀਆਂ' is feminine plural, so the agreeing transitive verb must be 'ਸੁਣਾਈਆਂ'."
+   }
+  ],
+  "tip": "Always check transitivity first: if the action cannot take a direct object (like ਸੌਣਾ, ਜਾਣਾ, ਆਉਣਾ), never use 'ਨੇ'!"
+ },
+ {
+  "id": "pa-a2-continuous-aspect-reha",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "⏳",
+  "title": "Continuous Aspect with 'ਰਿਹਾ'",
+  "subtitle": "Describing actions in progress across present and past",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Form the continuous aspect by combining the bare verb root with the auxiliary participle 'ਰਿਹਾ/ਰਹੀ/ਰਹੇ/ਰਹੀਆਂ' and the appropriate tense marker.",
+  "structure": {
+   "headers": [
+    "Subject Gender/Number",
+    "Continuous Form",
+    "Punjabi Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Singular",
+      "ਰਿਹਾ ਹੈ / ਸੀ",
+      "ਮੈਂ ਪੜ੍ਹ ਰਿਹਾ ਹਾਂ",
+      "I am reading"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine Singular",
+      "ਰਹੀ ਹੈ / ਸੀ",
+      "ਉਹ ਲਿਖ ਰਹੀ ਹੈ",
+      "She is writing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masculine Plural",
+      "ਰਹੇ ਹਨ / ਸਨ",
+      "ਅਸੀਂ ਖੇਡ ਰਹੇ ਹਾਂ",
+      "We are playing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine Plural",
+      "ਰਹੀਆਂ ਹਨ / ਸਨ",
+      "ਕੁੜੀਆਂ ਗਾ ਰਹੀਆਂ ਹਨ",
+      "The girls are singing"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Actions Happening Now",
+    "example": "ਹੁਣ ਮੀਂਹ ਪੈ ਰਿਹਾ ਹੈ।",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Past Actions in Progress",
+    "example": "ਉਹ ਓਦੋਂ ਸੌਂ ਰਿਹਾ ਸੀ।",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Ongoing Temporary States",
+    "example": "ਅਸੀਂ ਅੱਜ-ਕੱਲ੍ਹ ਪੰਜਾਬੀ ਸਿੱਖ ਰਹੇ ਹਾਂ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਬੱਚਾ ਦੁੱਧ ਪੀ ਰਿਹਾ ਹੈ।",
+    "ko": "",
+    "highlight": "ਪੀ ਰਿਹਾ ਹੈ"
+   },
+   {
+    "en": "ਅਧਿਆਪਕਾ ਪੜ੍ਹਾ ਰਹੀ ਹੈ।",
+    "ko": "",
+    "highlight": "ਪੜ੍ਹਾ ਰਹੀ ਹੈ"
+   },
+   {
+    "en": "ਲੋਕ ਬਾਜ਼ਾਰ ਜਾ ਰਹੇ ਹਨ।",
+    "ko": "",
+    "highlight": "ਜਾ ਰਹੇ ਹਨ"
+   },
+   {
+    "en": "ਔਰਤਾਂ ਗੱਲਾਂ ਕਰ ਰਹੀਆਂ ਸਨ।",
+    "ko": "",
+    "highlight": "ਕਰ ਰਹੀਆਂ ਸਨ"
+   },
+   {
+    "en": "ਤੂੰ ਕੀ ਸੋਚ ਰਿਹਾ ਹੈਂ?",
+    "ko": "",
+    "highlight": "ਸੋਚ ਰਿਹਾ ਹੈਂ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਮੈਂ ਪੜ੍ਹਦਾ ਰਿਹਾ ਹਾਂ।",
+    "right": "ਮੈਂ ਪੜ੍ਹ ਰਿਹਾ ਹਾਂ।",
+    "note": "Use the bare verb root (ਪੜ੍ਹ), not the habitual participle (ਪੜ੍ਹਦਾ), before 'ਰਿਹਾ'."
+   },
+   {
+    "wrong": "ਕੁੜੀ ਖੇਡ ਰਿਹਾ ਹੈ।",
+    "right": "ਕੁੜੀ ਖੇਡ ਰਹੀ ਹੈ।",
+    "note": "'ਰਿਹਾ' must change to 'ਰਹੀ' to agree with a feminine singular subject."
+   },
+   {
+    "wrong": "ਉਹ ਗਾ ਰਹੀ ਹਨ।",
+    "right": "ਉਹ ਗਾ ਰਹੀਆਂ ਹਨ।",
+    "note": "When the subject is feminine plural, 'ਰਹੀ' must inflect to 'ਰਹੀਆਂ'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the feminine singular sentence: 'ਮਾਤਾ ਜੀ ਖਾਣਾ ਬਣਾ ___ ਹਨ।'",
+    "options": [
+     "ਰਿਹਾ",
+     "ਰਹੀ",
+     "ਰਹੇ",
+     "ਰਹੀਆਂ"
+    ],
+    "answer": 1,
+    "explanation": "Mother (ਮਾਤਾ ਜੀ) is feminine, taking the agreement marker 'ਰਹੀ' (with honorific plural auxiliary ਹਨ)."
+   },
+   {
+    "question": "Select the correct form for multiple men: 'ਮੁੰਡੇ ਫੁੱਟਬਾਲ ਖੇਡ ___ ਸਨ।'",
+    "options": [
+     "ਰਿਹਾ",
+     "ਰਹੀ",
+     "ਰਹੇ",
+     "ਰਹੀਆਂ"
+    ],
+    "answer": 2,
+    "explanation": "Masculine plural subjects require 'ਰਹੇ'."
+   },
+   {
+    "question": "Fill the blank for a group of girls: 'ਵਿਦਿਆਰਥਣਾਂ ਪੜ੍ਹ ___ ਹਨ।'",
+    "options": [
+     "ਰਹੀਆਂ",
+     "ਰਹੇ",
+     "ਰਿਹਾ",
+     "ਰਹੀ"
+    ],
+    "answer": 0,
+    "explanation": "Female students (ਵਿਦਿਆਰਥਣਾਂ) is feminine plural, so 'ਰਹੀਆਂ' is mandatory."
+   },
+   {
+    "question": "Complete the question for a male listener: 'ਤੂੰ ਕਿੱਥੇ ਜਾ ___ ਹੈਂ?'",
+    "options": [
+     "ਰਹੀ",
+     "ਰਹੇ",
+     "ਰਹੀਆਂ",
+     "ਰਿਹਾ"
+    ],
+    "answer": 3,
+    "explanation": "Addressing a single male informal subject (ਤੂੰ) requires 'ਰਿਹਾ'."
+   }
+  ],
+  "tip": "Keep the main verb in its bare root form (ਜਾ, ਖਾ, ਪੀ, ਕਰ) without adding any inflections before 'ਰਿਹਾ'."
+ },
+ {
+  "id": "pa-a2-future-inflectional-endings",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🚀",
+  "title": "Synthetic Future Tense Conjugation",
+  "subtitle": "Forming future statements without auxiliary verbs",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Punjabi forms its future tense synthetically by attaching suffix endings (-ਏਗਾ, -ਏਗੀ, -ਾਂਗਾ, -ਾਂਗੇ) directly to the verb stem without auxiliary verbs.",
+  "structure": {
+   "headers": [
+    "Pronoun / Person",
+    "Masc. Suffix",
+    "Fem. Suffix",
+    "Punjabi Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ਮੈਂ (1st Sing.)",
+      "-ਾਂਗਾ",
+      "-ਾਂਗੀ",
+      "ਮੈਂ ਆਵਾਂਗਾ / ਆਵਾਂਗੀ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਤੂੰ (2nd Sing.)",
+      "-ੇਂਗਾ",
+      "-ੇਂਗੀ",
+      "ਤੂੰ ਜਾਵੇਂਗਾ / ਜਾਵੇਂਗੀ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਉਹ (3rd Sing.)",
+      "-ੇਗਾ",
+      "-ੇਗੀ",
+      "ਉਹ ਲਿਖੇਗਾ / ਲਿਖੇਗੀ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ਅਸੀਂ / ਉਹ (Plural)",
+      "-ਾਂਗੇ",
+      "-ਣਗੀਆਂ / -ਣਗੇ",
+      "ਅਸੀਂ ਵੇਖਾਂਗੇ"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Intentions & Plans",
+    "example": "ਮੈਂ ਕੱਲ੍ਹ ਜਲੰਧਰ ਜਾਵਾਂਗਾ।",
+    "translation": ""
+   },
+   {
+    "color": "#06B6D4",
+    "label": "Predictions",
+    "example": "ਸ਼ਾਮ ਨੂੰ ਮੀਂਹ ਪਵੇਗਾ।",
+    "translation": ""
+   },
+   {
+    "color": "#84CC16",
+    "label": "Promises",
+    "example": "ਅਸੀਂ ਤੁਹਾਡੀ ਮਦਦ ਕਰਾਂਗੇ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਮੈਂ ਕੱਲ੍ਹ ਨਵਾਂ ਪਾਠ ਪੜ੍ਹਾਂਗਾ।",
+    "ko": "",
+    "highlight": "ਪੜ੍ਹਾਂਗਾ"
+   },
+   {
+    "en": "ਉਹ ਕੁੜੀ ਗੀਤ ਗਾਵੇਗੀ।",
+    "ko": "",
+    "highlight": "ਗਾਵੇਗੀ"
+   },
+   {
+    "en": "ਅਸੀਂ ਇਕੱਠੇ ਖਾਣਾ ਖਾਵਾਂਗੇ।",
+    "ko": "",
+    "highlight": "ਖਾਵਾਂਗੇ"
+   },
+   {
+    "en": "ਤੂੰ ਕਦੋਂ ਘਰ ਆਵੇਂਗਾ?",
+    "ko": "",
+    "highlight": "ਆਵੇਂਗਾ"
+   },
+   {
+    "en": "ਬੱਚੇ ਸਕੂਲ ਜਾਣਗੇ।",
+    "ko": "",
+    "highlight": "ਜਾਣਗੇ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਮੈਂ ਜਾਵੇਗਾ ਹਾਂ।",
+    "right": "ਮੈਂ ਜਾਵਾਂਗਾ।",
+    "note": "Punjabi future is synthetic; never add the present auxiliary 'ਹਾਂ' to future inflected verbs."
+   },
+   {
+    "wrong": "ਉਹ ਕੁੜੀ ਕੱਲ੍ਹ ਆਵੇਗਾ।",
+    "right": "ਉਹ ਕੁੜੀ ਕੱਲ੍ਹ ਆਵੇਗੀ।",
+    "note": "Third person feminine singular requires the feminine future marker -ੇਗੀ."
+   },
+   {
+    "wrong": "ਅਸੀਂ ਕੰਮ ਕਰੇਗਾ।",
+    "right": "ਅਸੀਂ ਕੰਮ ਕਰਾਂਗੇ।",
+    "note": "First person plural ('ਅਸੀਂ') requires the ending -ਾਂਗੇ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete for a female speaker: 'ਮੈਂ ਚਿੱਠੀ ___।'",
+    "options": [
+     "ਲਿਖਾਂਗਾ",
+     "ਲਿਖਾਂਗੀ",
+     "ਲਿਖੇਗਾ",
+     "ਲਿਖਣਗੇ"
+    ],
+    "answer": 1,
+    "explanation": "A female first-person speaker ('ਮੈਂ') uses the ending -ਾਂਗੀ (ਲਿਖਾਂਗੀ)."
+   },
+   {
+    "question": "Select the verb for 3rd person masculine singular: 'ਸੋਹਣ ਕੱਲ੍ਹ ਕੰਮ ___।'",
+    "options": [
+     "ਕਰਾਂਗੇ",
+     "ਕਰੇਗੀ",
+     "ਕਰੇਗਾ",
+     "ਕਰਾਂਗਾ"
+    ],
+    "answer": 2,
+    "explanation": "Third person masculine singular takes -ੇਗਾ (ਕਰੇਗਾ)."
+   },
+   {
+    "question": "Choose the plural form: 'ਅਸੀਂ ਸਾਰੇ ਬਾਜ਼ਾਰ ___।'",
+    "options": [
+     "ਜਾਵਾਂਗੇ",
+     "ਜਾਵਾਂਗਾ",
+     "ਜਾਵੇਗਾ",
+     "ਜਾਵੇਂਗੀ"
+    ],
+    "answer": 0,
+    "explanation": "'ਅਸੀਂ' (we) requires the plural future suffix -ਾਂਗੇ (ਜਾਵਾਂਗੇ)."
+   },
+   {
+    "question": "Complete the sentence: 'ਕੁੜੀਆਂ ਮੈਦਾਨ ਵਿੱਚ ___।'",
+    "options": [
+     "ਦੌੜੇਗਾ",
+     "ਦੌੜਾਂਗੇ",
+     "ਦੌੜੇਗੀ",
+     "ਦੌੜਨਗੀਆਂ"
+    ],
+    "answer": 3,
+    "explanation": "Feminine plural third-person subjects take -ਣਗੀਆਂ / -ਨਗੀਆਂ (ਦੌੜਨਗੀਆਂ)."
+   }
+  ],
+  "tip": "Notice how Punjabi merges the tense, gender, and person into a single synthetic word, completely dropping auxiliaries like 'ਹੈ' or 'ਸੀ'."
+ },
+ {
+  "id": "pa-a2-postposition-val-kann",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#F59E0B",
+  "emoji": "🧭",
+  "title": "Locative & Directional Postpositions (ਵੱਲੋਂ, ਕੰਨ, ਕੋਲੇ)",
+  "subtitle": "Expressing directions, sources, and spatial proximity",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Directional and locative postpositions like 'ਵੱਲ' (towards), 'ਵੱਲੋਂ' (from/by), and 'ਕੋਲ' (near/with) follow nouns in the oblique case or the genitive linker 'ਦੇ'.",
+  "structure": {
+   "headers": [
+    "Postposition",
+    "Meaning",
+    "Punjabi Example",
+    "Structural Rule"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ਦੇ ਵੱਲ / ਵੱਲ",
+      "Towards",
+      "ਘਰ ਵੱਲ ਜਾਓ",
+      "Direct directional movement"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਦੇ ਵੱਲੋਂ / ਵੱਲੋਂ",
+      "From / On behalf of",
+      "ਸਰਕਾਰ ਵੱਲੋਂ ਐਲਾਨ",
+      "Ablative source or agent marker"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ਦੇ ਕੰਨ / ਕੰਨੀਂ",
+      "Towards the side of",
+      "ਦਰਿਆ ਕੰਨੇ",
+      "Side-focused locative alignment"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਦੇ ਕੋਲ / ਕੋਲੇ",
+      "Near / In possession of",
+      "ਮੇਰੇ ਕੋਲ ਕਿਤਾਬ ਹੈ",
+      "Physical proximity or possession"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Direction Towards",
+    "example": "ਉਹ ਆਪਣੇ ਪਿੰਡ ਵੱਲ ਗਿਆ।",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Source or Origin",
+    "example": "ਇਹ ਸੁਨੇਹਾ ਮੇਰੇ ਵੱਲੋਂ ਸੀ।",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Possession / Proximity",
+    "example": "ਦੁਕਾਨ ਦੇ ਕੋਲੇ ਖੜ੍ਹੇ ਹੋਵੋ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਉਹ ਸਕੂਲ ਦੇ ਵੱਲ ਤੁਰ ਪਿਆ।",
+    "ko": "",
+    "highlight": "ਦੇ ਵੱਲ"
+   },
+   {
+    "en": "ਇਹ ਤੋਹਫ਼ਾ ਸਾਡੇ ਵੱਲੋਂ ਹੈ।",
+    "ko": "",
+    "highlight": "ਵੱਲੋਂ"
+   },
+   {
+    "en": "ਮੇਰੇ ਕੋਲ ਇੱਕ ਕਲਮ ਹੈ।",
+    "ko": "",
+    "highlight": "ਮੇਰੇ ਕੋਲ"
+   },
+   {
+    "en": "ਨਦੀ ਦੇ ਕੰਨੇ ਵੱਡੇ ਰੁੱਖ ਹਨ।",
+    "ko": "",
+    "highlight": "ਦੇ ਕੰਨੇ"
+   },
+   {
+    "en": "ਬੱਚਾ ਆਪਣੀ ਮਾਂ ਵੱਲ ਦੌੜਿਆ।",
+    "ko": "",
+    "highlight": "ਮਾਂ ਵੱਲ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਮੈਂ ਕੋਲ ਪੈਸੇ ਹਨ।",
+    "right": "ਮੇਰੇ ਕੋਲ ਪੈਸੇ ਹਨ।",
+    "note": "Personal pronouns take genitive/oblique base forms (ਮੇਰੇ, ਤੇਰੇ, ਸਾਡੇ) before 'ਕੋਲ'."
+   },
+   {
+    "wrong": "ਉਹ ਘਰ ਦਾ ਵੱਲ ਗਿਆ।",
+    "right": "ਉਹ ਘਰ ਦੇ ਵੱਲ ਗਿਆ।",
+    "note": "Spatial postpositions require the oblique genitive linker 'ਦੇ', never the direct masculine 'ਦਾ'."
+   },
+   {
+    "wrong": "ਦਿੱਲੀ ਵੱਲੋਂ ਜਾਓ।",
+    "right": "ਦਿੱਲੀ ਵੱਲ ਜਾਓ।",
+    "note": "Use 'ਵੱਲ' for direction 'towards'; 'ਵੱਲੋਂ' means 'from' or 'via'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct phrase for 'towards home': 'ਉਹ ਘਰ ___ ਗਿਆ।'",
+    "options": [
+     "ਵੱਲੋਂ",
+     "ਵੱਲ",
+     "ਨਾਲ",
+     "ਉੱਤੇ"
+    ],
+    "answer": 1,
+    "explanation": "'ਵੱਲ' denotes direction towards a destination."
+   },
+   {
+    "question": "Choose the correct possessive construct for 'with me / I have': '___ ਕੋਲ ਕਿਤਾਬ ਹੈ।'",
+    "options": [
+     "ਮੈਂ",
+     "ਮੈਨੂੰ",
+     "ਮੇਰੇ",
+     "ਮੇਰਾ"
+    ],
+    "answer": 2,
+    "explanation": "The postposition 'ਕੋਲ' requires the oblique pronoun form 'ਮੇਰੇ'."
+   },
+   {
+    "question": "Complete the sentence meaning 'from our side': 'ਇਹ ਮਦਦ ਸਾਡੇ ___ ਹੈ।'",
+    "options": [
+     "ਕੋਲ",
+     "ਅੰਦਰ",
+     "ਵੱਲ",
+     "ਵੱਲੋਂ"
+    ],
+    "answer": 3,
+    "explanation": "'ਵੱਲੋਂ' translates to 'from' or 'on behalf of'."
+   },
+   {
+    "question": "Select the correct phrase meaning 'near the shop': 'ਦੁਕਾਨ ___ ਖੜ੍ਹੋ।'",
+    "options": [
+     "ਦੇ ਕੋਲ",
+     "ਦਾ ਕੋਲ",
+     "ਦੀ ਕੋਲ",
+     "ਨੇ ਕੋਲ"
+    ],
+    "answer": 0,
+    "explanation": "Compound postpositions use the oblique connector 'ਦੇ' (ਦੇ ਕੋਲ)."
+   }
+  ],
+  "tip": "Remember that '-ਓਂ' at the end of postpositions like 'ਵੱਲੋਂ' acts like the ablative suffix 'from', contrasting with 'ਵੱਲ' which means 'towards'."
+ },
+ {
+  "id": "pa-a2-subjunctive-mood",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "💭",
+  "title": "Basic Subjunctive Mood",
+  "subtitle": "Forming wishes, doubts, suggestions, and polite queries",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "The subjunctive is formed by adding personal inflection endings directly to the verb root without any auxiliary verbs.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Ending Pattern",
+    "Example",
+    "English Sense"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ਮੈਂ (I)",
+      "Root + -ਆਂ",
+      "ਮੈਂ ਜਾਵਾਂ",
+      "Shall I go? / May I go"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਤੂੰ (You, intimate)",
+      "Root + -ਏਂ",
+      "ਤੂੰ ਪੜ੍ਹੇਂ",
+      "That you may read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਉਹ / ਇਹ (He/She/It)",
+      "Root + -ਏ",
+      "ਉਹ ਆਵੇ",
+      "May he/she come"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ਅਸੀਂ (We)",
+      "Root + -ਈਏ",
+      "ਅਸੀਂ ਦੇਖੀਏ",
+      "Let us see / Should we see"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਤੁਸੀਂ / ਉਹ (You/They)",
+      "Root + -ਓ / -ਣ",
+      "ਤੁਸੀਂ ਬੋਲੋ / ਉਹ ਬੋਲਣ",
+      "May you speak / That they speak"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Seeking Permission",
+    "example": "ਕੀ ਮੈਂ ਹੁਣ ਅੰਦਰ ਆਵਾਂ?",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Collective Suggestions",
+    "example": "ਆਓ ਅੱਜ ਬਾਹਰ ਚੱਲੀਏ।",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Wishes and Hopes",
+    "example": "ਰੱਬ ਕਰੇ ਉਹ ਇਮਤਿਹਾਨ ਪਾਸ ਕਰੇ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਕੀ ਮੈਂ ਤੁਹਾਡੀ ਕਿਤਾਬ ਪੜ੍ਹਾਂ?",
+    "ko": "",
+    "highlight": "ਪੜ੍ਹਾਂ"
+   },
+   {
+    "en": "ਚੱਲੋ ਅਸੀਂ ਕੰਮ ਸ਼ੁਰੂ ਕਰੀਏ।",
+    "ko": "",
+    "highlight": "ਕਰੀਏ"
+   },
+   {
+    "en": "ਹੋ ਸਕਦਾ ਹੈ ਕਿ ਅੱਜ ਮੀਂਹ ਪਵੇ।",
+    "ko": "",
+    "highlight": "ਪਵੇ"
+   },
+   {
+    "en": "ਕੀ ਤੁਸੀਂ ਮੇਰੀ ਮਦਦ ਕਰੋਗੇ ਜਾਂ ਮੈਂ ਇਕੱਲਾ ਕਰਾਂ?",
+    "ko": "",
+    "highlight": "ਕਰਾਂ"
+   },
+   {
+    "en": "ਚੰਗਾ ਹੋਵੇਗਾ ਜੇ ਉਹ ਸਮੇਂ ਸਿਰ ਆਉਣ।",
+    "ko": "",
+    "highlight": "ਆਉਣ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਕੀ ਮੈਂ ਹੁਣ ਅੰਦਰ ਆਉਂਦਾ ਹਾਂ?",
+    "right": "ਕੀ ਮੈਂ ਹੁਣ ਅੰਦਰ ਆਵਾਂ?",
+    "note": "Using the present habitual tense sounds like stating a fact instead of politely asking for permission."
+   },
+   {
+    "wrong": "ਅਸੀਂ ਚੱਲਣਾ ਹਾਂ।",
+    "right": "ਆਓ ਚੱਲੀਏ।",
+    "note": "Do not use the infinitive structure when suggesting a collective action; use the subjunctive first-person plural ending -ਈਏ."
+   },
+   {
+    "wrong": "ਸ਼ਾਇਦ ਉਹ ਆਵੇਗਾ।",
+    "right": "ਸ਼ਾਇਦ ਉਹ ਆਵੇ।",
+    "note": "After uncertainty words like ਸ਼ਾਇਦ (maybe/perhaps), use the subjunctive rather than the definite future tense."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Politely ask: 'Shall I bring water?' -> ਕੀ ਮੈਂ ਪਾਣੀ ___?",
+    "options": [
+     "ਲਿਆਉਂਦਾ ਹਾਂ",
+     "ਲਿਆਵਾਂ",
+     "ਲਿਆਇਆ",
+     "ਲਿਆਉਣਾ"
+    ],
+    "answer": 1,
+    "explanation": "For the pronoun ਮੈਂ in a polite subjunctive query, use the root + -ਆਂ ending (ਲਿਆਵਾਂ)."
+   },
+   {
+    "question": "Suggest: 'Let us eat food.' -> ਆਓ ਰੋਟੀ ___।",
+    "options": [
+     "ਖਾਈਏ",
+     "ਖਾਂਦੇ ਹਾਂ",
+     "ਖਾਓ",
+     "ਖਾਣਗੇ"
+    ],
+    "answer": 0,
+    "explanation": "The cohortative/collective suggestion for 'we' takes the subjunctive ending -ਈਏ (ਖਾਈਏ)."
+   },
+   {
+    "question": "Express uncertainty: 'Maybe he will speak today.' -> ਸ਼ਾਇਦ ਉਹ ਅੱਜ ___।",
+    "options": [
+     "ਬੋਲੇਗਾ",
+     "ਬੋਲਦਾ ਹੈ",
+     "ਬੋਲਿਆ",
+     "ਬੋਲੇ"
+    ],
+    "answer": 3,
+    "explanation": "With ਸ਼ਾਇਦ, Punjabi prefers the third-person singular subjunctive verb ending in -ਏ (ਬੋਲੇ)."
+   },
+   {
+    "question": "Ask for advice: 'What should we do now?' -> ਹੁਣ ਅਸੀਂ ਕੀ ___?",
+    "options": [
+     "ਕੀਤਾ",
+     "ਕਰਦੇ ਹਾਂ",
+     "ਕਰੀਏ",
+     "ਕਰੋ"
+    ],
+    "answer": 2,
+    "explanation": "The first-person plural pronoun ਅਸੀਂ requires the subjunctive form ਕਰੀਏ."
+   }
+  ],
+  "tip": "To make any suggestion sound polite and natural in Punjabi, simply strip the future -ਗਾ/-ਗੇ endings and use the bare subjunctive suffix."
+ },
+ {
+  "id": "pa-a2-imperative-and-honorific-levels",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🗣️",
+  "title": "Imperative Tiers & Respect Levels",
+  "subtitle": "Mastering intimate, familiar, and highly respectful commands",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Punjabi imperatives strictly mirror social hierarchy using three distinct forms: bare root for intimate 'ਤੂੰ', -ਓ for familiar 'ਤੁਸੀਂ', and -ਇਓ / -ਓ ਜੀ for deferential requests.",
+  "structure": {
+   "headers": [
+    "Target Pronoun",
+    "Formation Rule",
+    "Example",
+    "Context / Usage"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ਤੂੰ (Intimate/Casual)",
+      "Bare verb root",
+      "ਤੂੰ ਬੈਠ",
+      "Close peers, younger relatives, or children"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਤੁਸੀਂ (Standard Polite)",
+      "Root + -ਓ",
+      "ਤੁਸੀਂ ਬੈਠੋ",
+      "Standard polite command for equals and elders"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ਤੁਸੀਂ (Future/Gentle)",
+      "Root + -ਇਓ / -ਈਓ",
+      "ਕੱਲ੍ਹ ਆਇਓ",
+      "Gentle request or instruction for future action"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਆਪ ਜੀ (Ultra-Formal)",
+      "Subjunctive / Imperative + ਜੀ",
+      "ਕਿਰਪਾ ਕਰਕੇ ਬੈਠੋ ਜੀ",
+      "Guests, strangers, and high-status elders"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Casual Instruction",
+    "example": "ਇੱਥੇ ਆ ਅਤੇ ਇਹ ਦੇਖ।",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Polite Command",
+    "example": "ਤੁਸੀਂ ਚਾਹ ਪੀਓ।",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Future Consideration",
+    "example": "ਘਰ ਪਹੁੰਚ ਕੇ ਫ਼ੋਨ ਕਰਿਓ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਤੂੰ ਮੇਰੀ ਗੱਲ ਧਿਆਨ ਨਾਲ ਸੁਣ।",
+    "ko": "",
+    "highlight": "ਸੁਣ"
+   },
+   {
+    "en": "ਤੁਸੀਂ ਕਿਰਪਾ ਕਰਕੇ ਏਥੇ ਬੈਠੋ।",
+    "ko": "",
+    "highlight": "ਬੈਠੋ"
+   },
+   {
+    "en": "ਜਦੋਂ ਵੇਹਲੇ ਹੋਵੋ ਤਾਂ ਮੈਨੂੰ ਮਿਲਿਓ।",
+    "ko": "",
+    "highlight": "ਮਿਲਿਓ"
+   },
+   {
+    "en": "ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹੋ ਜੀ।",
+    "ko": "",
+    "highlight": "ਖੋਲ੍ਹੋ ਜੀ"
+   },
+   {
+    "en": "ਸ਼ੋਰ ਨਾ ਕਰੋ।",
+    "ko": "",
+    "highlight": "ਕਰੋ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਤੁਸੀਂ ਇੱਥੇ ਆ।",
+    "right": "ਤੁਸੀਂ ਇੱਥੇ ਆਓ।",
+    "note": "Pairing the plural/respectful pronoun ਤੁਸੀਂ with the bare root command ਆ sounds disrespectful."
+   },
+   {
+    "wrong": "ਮਾਤਾ ਜੀ, ਰੋਟੀ ਖਾ।",
+    "right": "ਮਾਤਾ ਜੀ, ਰੋਟੀ ਖਾਓ।",
+    "note": "Bare root imperatives should never be addressed to parents or elders."
+   },
+   {
+    "wrong": "ਮਤ ਕਰੋ ਇਹ ਕੰਮ।",
+    "right": "ਇਹ ਕੰਮ ਨਾ ਕਰੋ।",
+    "note": "Use ਨਾ (or ਨਹੀਂ) rather than Hindi 'ਮਤ' for negative commands in Punjabi."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Politely ask your teacher to sit: 'Teacher, please ___ here.' -> ਮਾਸਟਰ ਜੀ, ਕਿਰਪਾ ਕਰਕੇ ਏਥੇ ___।",
+    "options": [
+     "ਬੈਠ",
+     "ਬੈਠੋ",
+     "ਬੈਠੇਗਾ",
+     "ਬੈਠਣਾ"
+    ],
+    "answer": 1,
+    "explanation": "Addressing an elder or teacher requires the polite -ਓ ending (ਬੈਠੋ)."
+   },
+   {
+    "question": "Tell your younger brother casually: 'Look there!' -> ਓਧਰ ___!",
+    "options": [
+     "ਦੇਖੋ ਜੀ",
+     "ਦੇਖਿਓ",
+     "ਦੇਖ",
+     "ਦੇਖਦੇ"
+    ],
+    "answer": 2,
+    "explanation": "For intimate/younger addressees (ਤੂੰ level), the bare verb stem ਦੇਖ is used."
+   },
+   {
+    "question": "Instruct gently for later: 'Call me tomorrow.' -> ਕੱਲ੍ਹ ਮੈਨੂੰ ਫ਼ੋਨ ___।",
+    "options": [
+     "ਕਰਿਓ",
+     "ਕਰ",
+     "ਕੀਤਾ",
+     "ਕਰਦਾ"
+    ],
+    "answer": 0,
+    "explanation": "The -ਇਓ suffix (ਕਰਿਓ) conveys a gentle or delayed/future imperative instruction."
+   },
+   {
+    "question": "What is the respectful negative command: 'Please do not speak loudly.' -> ਉੱਚੀ ___?",
+    "options": [
+     "ਨਾ ਬੋਲ",
+     "ਮਤ ਬੋਲਣਾ",
+     "ਨਾ ਬੋਲਦੇ",
+     "ਨਾ ਬੋਲੋ"
+    ],
+    "answer": 3,
+    "explanation": "The polite negative command combines the standard particle ਨਾ with the polite plural imperative ਬੋਲੋ."
+   }
+  ],
+  "tip": "When in doubt, always use the -ਓ ending. It is courteous enough for strangers and natural enough not to sound stiff."
+ },
+ {
+  "id": "pa-b1-conjunctive-participle-ke",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#059669",
+  "emoji": "🔗",
+  "title": "Conjunctive Participle (-ਕੇ)",
+  "subtitle": "Connecting chronological actions seamlessly with 'having done'",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Attach -ਕੇ (or -ਕਰਕੇ) directly to a verb stem to indicate an action completed immediately prior to the main clause verb.",
+  "structure": {
+   "headers": [
+    "Base Verb",
+    "Stem + ਕੇ",
+    "Combined Clause",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ਖਾਣਾ (to eat)",
+      "ਖਾ + ਕੇ",
+      "ਰੋਟੀ ਖਾ ਕੇ ਆਇਆ",
+      "Came after eating food"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਪੜ੍ਹਨਾ (to read)",
+      "ਪੜ੍ਹ + ਕੇ",
+      "ਕਿਤਾਬ ਪੜ੍ਹ ਕੇ ਸੌਂ ਗਿਆ",
+      "Read the book and went to sleep"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ਕਰਨਾ (to do)",
+      "ਕਰ + ਕੇ",
+      "ਕੰਮ ਕਰਕੇ ਜਾਵਾਂਗੇ",
+      "Having finished work, we will leave"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਨਹਾਉਣਾ (to bathe)",
+      "ਨਹਾ + ਕੇ",
+      "ਨਹਾ ਕੇ ਤਿਆਰ ਹੋਵੋ",
+      "Take a bath and get ready"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Sequential Actions",
+    "example": "ਉਹ ਚਾਹ ਪੀ ਕੇ ਦਫ਼ਤਰ ਗਿਆ।",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Reason / Cause",
+    "example": "ਬਿਮਾਰ ਹੋ ਕੇ ਉਹ ਸਕੂਲ ਨਾ ਆਇਆ।",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Manner / Preparation",
+    "example": "ਸੋਚ ਸਮਝ ਕੇ ਫ਼ੈਸਲਾ ਕਰੋ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਉਹ ਹੱਥ ਧੋ ਕੇ ਖਾਣਾ ਖਾਂਦਾ ਹੈ।",
+    "ko": "",
+    "highlight": "ਧੋ ਕੇ"
+   },
+   {
+    "en": "ਮੈਂ ਘਰ ਪਹੁੰਚ ਕੇ ਤੁਹਾਨੂੰ ਸੁਨੇਹਾ ਭੇਜਾਂਗਾ।",
+    "ko": "",
+    "highlight": "ਪਹੁੰਚ ਕੇ"
+   },
+   {
+    "en": "ਬੱਚੇ ਸਕੂਲੋਂ ਆ ਕੇ ਖੇਡਣ ਲੱਗੇ।",
+    "ko": "",
+    "highlight": "ਆ ਕੇ"
+   },
+   {
+    "en": "ਦਵਾਈ ਲੈ ਕੇ ਆਰਾਮ ਕਰੋ।",
+    "ko": "",
+    "highlight": "ਲੈ ਕੇ"
+   },
+   {
+    "en": "ਅਸੀਂ ਸਾਰੀ ਗੱਲ ਸੁਣ ਕੇ ਹੈਰਾਨ ਰਹਿ ਗਏ।",
+    "ko": "",
+    "highlight": "ਸੁਣ ਕੇ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਉਹ ਖਾਣਾ ਖਾਇਆ ਅਤੇ ਦਫ਼ਤਰ ਗਿਆ।",
+    "right": "ਉਹ ਖਾਣਾ ਖਾ ਕੇ ਦਫ਼ਤਰ ਗਿਆ।",
+    "note": "Chaining full verbs with 'ਅਤੇ' sounds unnatural when the same subject carries out sequential actions; use -ਕੇ instead."
+   },
+   {
+    "wrong": "ਉਹ ਪੜ੍ਹਨਾ ਕੇ ਸੌਂ ਗਿਆ।",
+    "right": "ਉਹ ਪੜ੍ਹ ਕੇ ਸੌਂ ਗਿਆ।",
+    "note": "Attach -ਕੇ to the bare verb root (ਪੜ੍ਹ), not to the infinitive (ਪੜ੍ਹਨਾ)."
+   },
+   {
+    "wrong": "ਮੈਂ ਦੇਖਿਆ ਕੇ ਡਰ ਗਿਆ।",
+    "right": "ਮੈਂ ਦੇਖ ਕੇ ਡਰ ਗਿਆ।",
+    "note": "Never conjugate the first verb into past tense before -ਕੇ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Combine into one clause: 'Having washed hands, eat.' -> ਹੱਥ ___ ਰੋਟੀ ਖਾਓ।",
+    "options": [
+     "ਧੋਂਦੇ",
+     "ਧੋਇਆ",
+     "ਧੋ ਕੇ",
+     "ਧੋਣਾ"
+    ],
+    "answer": 2,
+    "explanation": "The conjunctive participle attaches ਕੇ directly to the root ਧੋ to give ਧੋ ਕੇ."
+   },
+   {
+    "question": "Express sequence: 'I will call after reaching home.' -> ਮੈਂ ਘਰ ___ ਫ਼ੋਨ ਕਰਾਂਗਾ।",
+    "options": [
+     "ਪਹੁੰਚ ਕੇ",
+     "ਪਹੁੰਚਣਾ",
+     "ਪਹੁੰਚਿਆ",
+     "ਪਹੁੰਚਦੇ"
+    ],
+    "answer": 0,
+    "explanation": "ਪਹੁੰਚ ਕੇ ('having reached') links the prior action to the main future verb."
+   },
+   {
+    "question": "Complete the instruction: 'Think carefully before speaking.' -> ਸੋਚ ___ ਬੋਲੋ।",
+    "options": [
+     "ਸੁਣ ਕੇ",
+     "ਕੇ",
+     "ਕਰ",
+     "ਸਮਝ ਕੇ"
+    ],
+    "answer": 3,
+    "explanation": "The common Punjabi paired idiom is ਸੋਚ ਸਮਝ ਕੇ ('having thought and understood')."
+   },
+   {
+    "question": "Choose the correct prior action: 'He took the medicine and slept.' -> ਉਹ ਦਵਾਈ ___ ਸੌਂ ਗਿਆ।",
+    "options": [
+     "ਲੈਂਦਾ",
+     "ਲੈ ਕੇ",
+     "ਲੀਤਾ",
+     "ਲੈਣ"
+    ],
+    "answer": 1,
+    "explanation": "The root of ਲੈਣਾ is ਲੈ, resulting in ਲੈ ਕੇ ('having taken')."
+   }
+  ],
+  "tip": "If the base verb itself is ਕਰਨਾ (to do), use ਕਰਕੇ (having done), which also doubles as the everyday word for 'because of'."
+ },
+ {
+  "id": "pa-b1-compound-verbs-vector-verbs",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "⚡",
+  "title": "Compound Verbs & Vector Auxiliaries",
+  "subtitle": "Adding direction, finality, and attitude using vector verbs",
+  "color": "#9333EA",
+  "bg": "#FAF5FF",
+  "keyPoint": "In a compound verb, the main verb appears as a bare stem carrying meaning, while the auxiliary vector verb takes all grammatical inflections to specify nuance.",
+  "structure": {
+   "headers": [
+    "Vector Verb",
+    "Primary Nuance",
+    "Example",
+    "English Sense"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ਜਾਣਾ (to go)",
+      "Completion / Change of state",
+      "ਉਹ ਸੌਂ ਗਿਆ",
+      "He fell asleep (completed transition)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ਲੈਣਾ (to take)",
+      "Action done for self / Inward",
+      "ਮੈਂ ਗੱਲ ਸਮਝ ਲਈ",
+      "I understood (for my own benefit)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਦੇਣਾ (to give)",
+      "Action done outward / For others",
+      "ਉਸਨੇ ਪੈਸੇ ਦੇ ਦਿੱਤੇ",
+      "He gave away the money completely"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਸੁੱਟਣਾ (to throw)",
+      "Careless or hasty completion",
+      "ਉਸਨੇ ਚਿੱਠੀ ਪਾੜ ਸੁੱਟੀ",
+      "He ripped up the letter recklessly"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#9333EA",
+    "label": "Inward Reflexive Action",
+    "example": "ਮੈਂ ਇਹ ਪਾਠ ਯਾਦ ਕਰ ਲਿਆ।",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Outward Directed Action",
+    "example": "ਮੈਂ ਉਸਨੂੰ ਸਭ ਕੁਝ ਦੱਸ ਦਿੱਤਾ।",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Sudden or Final Change",
+    "example": "ਦੁੱਧ ਖ਼ਰਾਬ ਹੋ ਗਿਆ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਮਹਿਮਾਨ ਆ ਗਏ ਹਨ।",
+    "ko": "",
+    "highlight": "ਆ ਗਏ"
+   },
+   {
+    "en": "ਉਸਨੇ ਸਾਰਾ ਖਾਣਾ ਖਾ ਲਿਆ।",
+    "ko": "",
+    "highlight": "ਖਾ ਲਿਆ"
+   },
+   {
+    "en": "ਮੈਂ ਉਸਨੂੰ ਕਿਤਾਬ ਮੋੜ ਦਿੱਤੀ।",
+    "ko": "",
+    "highlight": "ਮੋੜ ਦਿੱਤੀ"
+   },
+   {
+    "en": "ਕੰਧ ਅਚਾਨਕ ਡਿੱਗ ਪਈ।",
+    "ko": "",
+    "highlight": "ਡਿੱਗ ਪਈ"
+   },
+   {
+    "en": "ਤੁਸੀਂ ਆਪਣਾ ਕੰਮ ਖ਼ਤਮ ਕਰ ਲਵੋ।",
+    "ko": "",
+    "highlight": "ਕਰ ਲਵੋ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਮੈਂ ਉਸਨੂੰ ਕਿਤਾਬ ਦੇ ਲਈ।",
+    "right": "ਮੈਂ ਉਸਨੂੰ ਕਿਤਾਬ ਦੇ ਦਿੱਤੀ।",
+    "note": "Giving outward to someone else requires the vector ਦੇਣਾ, not the inward-oriented ਲੈਣਾ."
+   },
+   {
+    "wrong": "ਉਹ ਸਕੂਲ ਗਿਆ ਜਾਣਾ।",
+    "right": "ਉਹ ਸਕੂਲ ਚਲਾ ਗਿਆ।",
+    "note": "The primary verb must stay in its bare stem form (ਚਲ), while only the vector inflects (ਗਿਆ)."
+   },
+   {
+    "wrong": "ਉਸਨੇ ਖਾਣਾ ਨਹੀਂ ਖਾ ਲਿਆ।",
+    "right": "ਉਸਨੇ ਖਾਣਾ ਨਹੀਂ ਖਾਧਾ।",
+    "note": "Compound vectors are rarely used in standard negative sentences; use the simple past instead."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the inward action: 'I bought and kept the book for myself.' -> ਮੈਂ ਕਿਤਾਬ ਖ਼ਰੀਦ ___।",
+    "options": [
+     "ਦਿੱਤੀ",
+     "ਗਈ",
+     "ਲਈ",
+     "ਸੁੱਟੀ"
+    ],
+    "answer": 2,
+    "explanation": "Actions carried out for one's own advantage take the vector verb ਲੈਣਾ (feminine past: ਲਈ)."
+   },
+   {
+    "question": "Complete the outward action: 'I told him the secret.' -> ਮੈਂ ਉਸਨੂੰ ਭੇਤ ਦੱਸ ___।",
+    "options": [
+     "ਦਿੱਤਾ",
+     "ਲਿਆ",
+     "ਗਿਆ",
+     "ਰਿਹਾ"
+    ],
+    "answer": 0,
+    "explanation": "An action directed towards someone else takes the vector ਦੇਣਾ (masculine past: ਦਿੱਤਾ)."
+   },
+   {
+    "question": "Indicate irreversible completion: 'The glass broke.' -> ਗਲਾਸ ਟੁੱਟ ___।",
+    "options": [
+     "ਲਿਆ",
+     "ਦਿੱਤਾ",
+     "ਪਿਆ",
+     "ਗਿਆ"
+    ],
+    "answer": 3,
+    "explanation": "Intransitive changes of state and irreversible events take the vector verb ਜਾਣਾ (past: ਗਿਆ)."
+   },
+   {
+    "question": "Identify the vector verb in this sentence: 'ਉਸਨੇ ਕੰਮ ਮੁਕਾ ਦਿੱਤਾ।' -> Which word is the vector?",
+    "options": [
+     "ਉਸਨੇ",
+     "ਕੰਮ",
+     "ਦਿੱਤਾ",
+     "ਮੁਕਾ"
+    ],
+    "answer": 2,
+    "explanation": "ਮੁਕਾ is the primary verb stem ('to finish'), while ਦਿੱਤਾ is the inflected vector auxiliary imparting completion."
+   }
+  ],
+  "tip": "Think of ਲੈਣਾ as 'pulling the benefit in towards you' and ਦੇਣਾ as 'pushing the action outward to someone else'."
+ },
+ {
+  "id": "pa-b1-causative-verb-stems",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "⚙️",
+  "title": "First & Second Causative Verbs",
+  "subtitle": "Deriving actions made to happen directly or through an intermediary",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Punjabi systematically derives transitive verbs using -ਆਉਣਾ (-auna) for direct causation and -ਵਾਉਣਾ (-vauna) for indirect causation through an agent.",
+  "structure": {
+   "headers": [
+    "Base Verb (Direct)",
+    "1st Causative (-ਆਉਣਾ)",
+    "2nd Causative (-ਵਾਉਣਾ)",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ਪੜ੍ਹਨਾ (to read)",
+      "ਪੜ੍ਹਾਉਣਾ (to teach)",
+      "ਪੜ੍ਹਵਾਉਣਾ (cause to teach)",
+      "Read -> Teach -> Have taught"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ਕਰਨਾ (to do)",
+      "ਕਰਾਉਣਾ (to have done)",
+      "ਕਰਵਾਉਣਾ (have done via 3rd party)",
+      "Do -> Have done -> Get done by someone"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਲਿਖਣਾ (to write)",
+      "ਲਿਖਾਉਣਾ (to dictate/cause to write)",
+      "ਲਿਖਵਾਉਣਾ (to have written by someone)",
+      "Write -> Dictate -> Have written"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ਖਾਣਾ (to eat)",
+      "ਖੁਆਉਣਾ (to feed)",
+      "ਖਵਵਾਉਣਾ (to have fed via someone)",
+      "Eat -> Feed -> Cause to be fed"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Direct Causation",
+    "example": "ਅਧਿਆਪਕ ਵਿਦਿਆਰਥੀਆਂ ਨੂੰ ਪੜ੍ਹਾਉਂਦਾ ਹੈ।",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Indirect Causation",
+    "example": "ਮੈਂ ਦਰਜ਼ੀ ਤੋਂ ਕੱਪੜੇ ਸਿਲਵਾਏ।",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Caregiving / Feeding",
+    "example": "ਮਾਂ ਬੱਚੇ ਨੂੰ ਰੋਟੀ ਖੁਆਉਂਦੀ ਹੈ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਉਹ ਬੱਚਿਆਂ ਨੂੰ ਹਸਾਉਂਦਾ ਹੈ।",
+    "ko": "",
+    "highlight": "ਹਸਾਉਂਦਾ"
+   },
+   {
+    "en": "ਮੈਂ ਮਿਸਤਰੀ ਕੋਲੋਂ ਕਾਰ ਠੀਕ ਕਰਵਾਈ।",
+    "ko": "",
+    "highlight": "ਕਰਵਾਈ"
+   },
+   {
+    "en": "ਕਿਰਪਾ ਕਰਕੇ ਮੈਨੂੰ ਇਹ ਪਤਾ ਸਮਝਾਓ।",
+    "ko": "",
+    "highlight": "ਸਮਝਾਓ"
+   },
+   {
+    "en": "ਅਸੀਂ ਉਸ ਤੋਂ ਕੰਮ ਕਰਵਾਇਆ।",
+    "ko": "",
+    "highlight": "ਕਰਵਾਇਆ"
+   },
+   {
+    "en": "ਡਾਕਟਰ ਨੇ ਮਰੀਜ਼ ਨੂੰ ਦਵਾਈ ਪਿਲਾਈ।",
+    "ko": "",
+    "highlight": "ਪਿਲਾਈ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਮੈਂ ਬੱਚੇ ਨੂੰ ਖਾਣਾ ਖਾਂਦਾ ਹਾਂ।",
+    "right": "ਮੈਂ ਬੱਚੇ ਨੂੰ ਖਾਣਾ ਖੁਆਉਂਦਾ ਹਾਂ।",
+    "note": "Using ਖਾਣਾ means you are eating, whereas the first causative ਖੁਆਉਣਾ means you are feeding someone else."
+   },
+   {
+    "wrong": "ਦਰਜ਼ੀ ਨੇ ਕੱਪੜੇ ਸਿਲਵਾਏ।",
+    "right": "ਮੈਂ ਦਰਜ਼ੀ ਤੋਂ ਕੱਪੜੇ ਸਿਲਵਾਏ।",
+    "note": "The person performing the labor takes the postposition ਤੋਂ or ਕੋਲੋਂ, while the initiator is the subject."
+   },
+   {
+    "wrong": "ਉਹ ਮੈਨੂੰ ਹੱਸਦਾ ਹੈ।",
+    "right": "ਉਹ ਮੈਨੂੰ ਹਸਾਉਂਦਾ ਹੈ।",
+    "note": "ਹੱਸਣਾ is intransitive ('to laugh'); making someone else laugh requires the causative stem ਹਸਾਉਣਾ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Say 'The teacher teaches Punjabi' -> ਅਧਿਆਪਕ ਪੰਜਾਬੀ ___ ਹੈ।",
+    "options": [
+     "ਪੜ੍ਹਦਾ",
+     "ਪੜ੍ਹਾਉਂਦਾ",
+     "ਪੜ੍ਹਵਾਉਂਦਾ",
+     "ਪੜ੍ਹਨਾ"
+    ],
+    "answer": 1,
+    "explanation": "The direct causative of ਪੜ੍ਹਨਾ ('to read') is ਪੜ੍ਹਾਉਣਾ ('to teach/cause to learn')."
+   },
+   {
+    "question": "Say 'I got the house painted by a painter' -> ਮੈਂ ਰੰਗਸਾਜ਼ ਤੋਂ ਘਰ ਰੰਗ___।",
+    "options": [
+     "ਵਾਇਆ",
+     "ਰੰਗਿਆ",
+     "ਰੰਗਦਾ",
+     "ਰੰਗਾਇਆ"
+    ],
+    "answer": 0,
+    "explanation": "Indirect causation involving a paid agent takes the second causative suffix -ਵਾਇਆ (ਰੰਗਵਾਇਆ)."
+   },
+   {
+    "question": "Choose the correct causative for 'to show' derived from ਦੇਖਣਾ (to see):",
+    "options": [
+     "ਦੇਖਣਾ",
+     "ਦੇਖਵਾਉਣਾ",
+     "ਦਿਖਾਉਣਾ",
+     "ਦਿਖਣਾ"
+    ],
+    "answer": 2,
+    "explanation": "The standard first causative of ਦੇਖਣਾ (to see) with vowel shortening is ਦਿਖਾਉਣਾ (to show)."
+   },
+   {
+    "question": "What role does the postposition 'ਤੋਂ' play in: 'ਮੈਂ ਨੌਕਰ ਤੋਂ ਕੰਮ ਕਰਵਾਇਆ'?",
+    "options": [
+     "Specifies the final destination",
+     "Marks the indirect instrumental agent",
+     "Indicates the direct object",
+     "Marks the subject"
+    ],
+    "answer": 1,
+    "explanation": "In second causative sentences, the secondary agent who executes the physical task is marked by ਤੋਂ or ਕੋਲੋਂ."
+   }
+  ],
+  "tip": "Long vowels in the root often shorten when forming causatives: ਖਾਣਾ becomes ਖੁਆਉਣਾ, and ਪੀਣਾ becomes ਪਿਆਉਣਾ/ਪਿਲਾਉਣਾ."
+ },
+ {
+  "id": "pa-b1-modal-compulsion-paina-chahida",
+  "level": "b1",
+  "category": "modals",
+  "categoryColor": "#4F46E5",
+  "emoji": "⚖️",
+  "title": "Modalities of Obligation ('Paina' vs 'Chahida')",
+  "subtitle": "Distinguishing external compulsion from ethical advice using dative subjects",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Both constructions require an oblique subject marked by ਨੂੰ, where ਪੈਣਾ denotes inescapable external compulsion and ਚਾਹੀਦਾ denotes moral advisability or desire.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Formula",
+    "Punjabi Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Moral Obligation",
+      "Subject + ਨੂੰ + Infinitive + ਚਾਹੀਦਾ ਹੈ",
+      "ਤੁਹਾਨੂੰ ਪੜ੍ਹਨਾ ਚਾਹੀਦਾ ਹੈ",
+      "You should study"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "External Compulsion",
+      "Subject + ਨੂੰ + Infinitive + ਪੈਂਦਾ ਹੈ",
+      "ਮੈਨੂੰ ਜਾਣਾ ਪੈਂਦਾ ਹੈ",
+      "I have to go (forced)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past Compulsion",
+      "Subject + ਨੂੰ + Infinitive + ਪਿਆ",
+      "ਉਸਨੂੰ ਰੁਕਣਾ ਪਿਆ",
+      "He had to stop"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural Moral",
+      "Subject + ਨੂੰ + Infinitive + ਚਾਹੀਦੇ ਹਨ",
+      "ਸਾਨੂੰ ਕਿਤਾਬਾਂ ਪੜ੍ਹਨੀਆਂ ਚਾਹੀਦੀਆਂ ਹਨ",
+      "We ought to read books"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "External Duty",
+    "example": "ਮੈਨੂੰ ਹਰ ਰੋਜ਼ ਦਫ਼ਤਰ ਜਾਣਾ ਪੈਂਦਾ ਹੈ।",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Moral Advice",
+    "example": "ਸਾਨੂੰ ਸੱਚ ਬੋਲਣਾ ਚਾਹੀਦਾ ਹੈ।",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Unavoidable Past Action",
+    "example": "ਕੱਲ੍ਹ ਮੀਂਹ ਕਰਕੇ ਉਸਨੂੰ ਘਰ ਬੈਠਣਾ ਪਿਆ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਮੈਨੂੰ ਅੱਜ ਦਵਾਈ ਲੈਣੀ ਪਵੇਗੀ।",
+    "ko": "",
+    "highlight": "ਲੈਣੀ ਪਵੇਗੀ"
+   },
+   {
+    "en": "ਤੁਹਾਨੂੰ ਬਜ਼ੁਰਗਾਂ ਦਾ ਆਦਰ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ।",
+    "ko": "",
+    "highlight": "ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ"
+   },
+   {
+    "en": "ਉਹਨਾਂ ਨੂੰ ਸਾਰੀ ਰਾਤ ਕੰਮ ਕਰਨਾ ਪਿਆ।",
+    "ko": "",
+    "highlight": "ਕਰਨਾ ਪਿਆ"
+   },
+   {
+    "en": "ਸਾਨੂੰ ਸਾਫ਼ ਪਾਣੀ ਪੀਣਾ ਚਾਹੀਦਾ ਹੈ।",
+    "ko": "",
+    "highlight": "ਪੀਣਾ ਚਾਹੀਦਾ ਹੈ"
+   },
+   {
+    "en": "ਬੱਚਿਆਂ ਨੂੰ ਸਕੂਲ ਦਾ ਕੰਮ ਸਮੇਂ ਸਿਰ ਕਰਨਾ ਪੈਂਦਾ ਹੈ।",
+    "ko": "",
+    "highlight": "ਕਰਨਾ ਪੈਂਦਾ ਹੈ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਮੈਂ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ।",
+    "right": "ਮੈਨੂੰ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ।",
+    "note": "Obligation modals require the subject to take the dative postposition ਨੂੰ (ਮੈਨੂੰ, not ਮੈਂ)."
+   },
+   {
+    "wrong": "ਸਾਨੂੰ ਕਿਤਾਬਾਂ ਪੜ੍ਹਨਾ ਚਾਹੀਦਾ ਹਨ।",
+    "right": "ਸਾਨੂੰ ਕਿਤਾਬਾਂ ਪੜ੍ਹਨੀਆਂ ਚਾਹੀਦੀਆਂ ਹਨ।",
+    "note": "When the verb has a direct object, both the infinitive stem and ਚਾਹੀਦਾ must agree in gender and number with that object."
+   },
+   {
+    "wrong": "ਉਸਨੇ ਕੰਮ ਕਰਨਾ ਪਿਆ।",
+    "right": "ਉਸਨੂੰ ਕੰਮ ਕਰਨਾ ਪਿਆ।",
+    "note": "Do not confuse the ergative marker ਨੇ with the dative marker ਨੂੰ needed for modals of compulsion."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Because of bad weather, we had to stay home: 'ਸਾਨੂੰ ਘਰ ਰਹਿਣਾ ___।'",
+    "options": [
+     "ਚਾਹੀਦਾ ਹੈ",
+     "ਪਿਆ",
+     "ਸਕਿਆ",
+     "ਹੋਇਆ"
+    ],
+    "answer": 1,
+    "explanation": "ਪਿਆ marks unavoidable external past compulsion."
+   },
+   {
+    "question": "You should speak politely to others: 'ਤੁਹਾਨੂੰ ਨਿਮਰਤਾ ਨਾਲ ___।'",
+    "options": [
+     "ਬੋਲਣਾ ਚਾਹੀਦਾ ਹੈ",
+     "ਬੋਲਣਾ ਪੈਂਦਾ ਹੈ",
+     "ਬੋਲਿਆ ਸੀ",
+     "ਬੋਲਣਾ ਪਵੇਗਾ"
+    ],
+    "answer": 0,
+    "explanation": "ਚਾਹੀਦਾ ਹੈ marks moral recommendation rather than physical force."
+   },
+   {
+    "question": "I have to leave right now (obligation imposed by schedule): 'ਮੈਨੂੰ ਹੁਣੇ ___।'",
+    "options": [
+     "ਜਾ ਸਕਦਾ ਹਾਂ",
+     "ਜਾਂਦਾ ਹਾਂ",
+     "ਜਾਣਾ ਪੈਣਾ ਹੈ",
+     "ਜਾ ਰਿਹਾ"
+    ],
+    "answer": 2,
+    "explanation": "ਜਾਣਾ ਪੈਣਾ ਹੈ (or ਜਾਣਾ ਪਵੇਗਾ) conveys scheduled external necessity."
+   },
+   {
+    "question": "We ought to read these newspapers: 'ਸਾਨੂੰ ਇਹ ਅਖ਼ਬਾਰਾਂ ___।'",
+    "options": [
+     "ਪੜ੍ਹਨਾ ਚਾਹੀਦਾ ਹੈ",
+     "ਪੜ੍ਹਨੇ ਚਾਹੀਦੇ ਹਨ",
+     "ਪੜ੍ਹਨੀਆਂ ਚਾਹੀਦੀਆਂ ਹਨ",
+     "ਪੜ੍ਹਨੀ ਪੈਂਦੀ ਹੈ"
+    ],
+    "answer": 2,
+    "explanation": "ਅਖ਼ਬਾਰਾਂ is feminine plural, so both infinitive (ਪੜ੍ਹਨੀਆਂ) and modal (ਚਾਹੀਦੀਆਂ ਹਨ) must agree."
+   }
+  ],
+  "tip": "Think of ਚਾਹੀਦਾ as the internal 'heart' saying should, and ਪੈਣਾ as the external 'circumstances' saying must."
+ },
+ {
+  "id": "pa-b1-relative-correlative-clauses",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#0284C7",
+  "emoji": "🔗",
+  "title": "Relative-Correlative Syntax (Jo... So / Jado... Tado)",
+  "subtitle": "Joining paired clauses using Gurmukhi relative and correlative pairs",
+  "color": "#0369A1",
+  "bg": "#F0F9FF",
+  "keyPoint": "Punjabi forms relative constructions using bipartite pairs starting with a J-word (ਜੋ, ਜਦੋਂ, ਜਿੱਥੇ) in the dependent clause paired with a T/S-word (ਉਹ/ਸੋ, ਤਦੋਂ, ਉੱਥੇ) in the main clause.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Relative (J-word)",
+    "Correlative (T/S-word)",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Entity",
+      "ਜੋ (or ਜਿਹੜਾ)",
+      "ਸੋ (or ਉਹ)",
+      "Whoever... that / What... that"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Time",
+      "ਜਦੋਂ",
+      "ਤਦੋਂ (or ਉਦੋਂ)",
+      "When... then"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Location",
+      "ਜਿੱਥੇ",
+      "ਉੱਥੇ",
+      "Where... there"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Manner",
+      "ਜਿਵੇਂ",
+      "ਤਿਵੇਂ (or ਉਵੇਂ)",
+      "As... so"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0369A1",
+    "label": "Identity Identification",
+    "example": "ਜਿਹੜਾ ਮਿਹਨਤ ਕਰਦਾ ਹੈ, ਉਹ ਸਫ਼ਲ ਹੁੰਦਾ ਹੈ।",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Temporal Synchronicity",
+    "example": "ਜਦੋਂ ਘੰਟੀ ਵੱਜੀ, ਉਦੋਂ ਅਧਿਆਪਕ ਆਏ।",
+    "translation": ""
+   },
+   {
+    "color": "#4338CA",
+    "label": "Spatial Coincidence",
+    "example": "ਜਿੱਥੇ ਤੁਸੀਂ ਰਹਿੰਦੇ ਹੋ, ਉੱਥੇ ਹੀ ਮੈਂ ਰਹਿੰਦਾ ਹਾਂ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਜੋ ਬੀਜੋਗੇ, ਸੋ ਵੱਢੋਗੇ।",
+    "ko": "",
+    "highlight": "ਜੋ"
+   },
+   {
+    "en": "ਜਦੋਂ ਉਹ ਆਇਆ, ਉਦੋਂ ਮੈਂ ਸੌਂ ਰਿਹਾ ਸੀ।",
+    "ko": "",
+    "highlight": "ਜਦੋਂ ਉਹ ਆਇਆ, ਉਦੋਂ"
+   },
+   {
+    "en": "ਜਿਹੜੀ ਕਿਤਾਬ ਮੇਜ਼ 'ਤੇ ਹੈ, ਉਹ ਮੇਰੀ ਹੈ।",
+    "ko": "",
+    "highlight": "ਜਿਹੜੀ ਕਿਤਾਬ"
+   },
+   {
+    "en": "ਜਿਵੇਂ ਤੁਸੀਂ ਕਹੋਗੇ, ਉਵੇਂ ਹੀ ਅਸੀਂ ਕਰਾਂਗੇ।",
+    "ko": "",
+    "highlight": "ਜਿਵੇਂ ਤੁਸੀਂ ਕਹੋਗੇ, ਉਵੇਂ"
+   },
+   {
+    "en": "ਜਿੱਥੇ ਸੱਚ ਹੈ, ਉੱਥੇ ਰੱਬ ਹੈ।",
+    "ko": "",
+    "highlight": "ਜਿੱਥੇ ਸੱਚ ਹੈ, ਉੱਥੇ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਜਦੋਂ ਮੈਂ ਆਇਆ, ਫਿਰ ਉਹ ਚਲਾ ਗਿਆ।",
+    "right": "ਜਦੋਂ ਮੈਂ ਆਇਆ, ਉਦੋਂ ਉਹ ਚਲਾ ਗਿਆ।",
+    "note": "Do not replace the correlative time marker ਉਦੋਂ/ਤਦੋਂ with conversational ਫਿਰ in balanced correlative sentences."
+   },
+   {
+    "wrong": "ਕਿਤਾਬ ਜੋ ਮੈਂ ਪੜ੍ਹੀ, ਚੰਗੀ ਸੀ।",
+    "right": "ਜਿਹੜੀ ਕਿਤਾਬ ਮੈਂ ਪੜ੍ਹੀ, ਉਹ ਚੰਗੀ ਸੀ।",
+    "note": "Unlike English post-nominal relatives, standard Punjabi puts the J-clause first, accompanied by a matching demonstrative correlative in the second clause."
+   },
+   {
+    "wrong": "ਜਿਹੜਾ ਆਦਮੀ ਆਏ, ਉਹ ਚੰਗੇ ਹਨ।",
+    "right": "ਜਿਹੜੇ ਆਦਮੀ ਆਏ, ਉਹ ਚੰਗੇ ਹਨ।",
+    "note": "The relative marker ਜਿਹੜਾ must inflect for gender and number (ਜਿਹੜੇ for masculine plural)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Wherever there is unity, there is strength: '___ ਏਕਤਾ ਹੈ, ਉੱਥੇ ਬਲ ਹੈ।'",
+    "options": [
+     "ਜਦੋਂ",
+     "ਜਿਵੇਂ",
+     "ਜਿੱਥੇ",
+     "ਜੋ"
+    ],
+    "answer": 2,
+    "explanation": "ਜਿੱਥੇ corresponds to spatial location matching ਉੱਥੇ."
+   },
+   {
+    "question": "When you call, I will come: 'ਜਦੋਂ ਤੂੰ ਬੁਲਾਵੇਂਗਾ, ___ ਮੈਂ ਆਵਾਂਗਾ।'",
+    "options": [
+     "ਉਦੋਂ",
+     "ਉੱਥੇ",
+     "ਜਿਵੇਂ",
+     "ਸੋ"
+    ],
+    "answer": 0,
+    "explanation": "ਉਦੋਂ (or ਤਦੋਂ) is the correlative counterpart of the temporal relative ਜਦੋਂ."
+   },
+   {
+    "question": "The girl who sang well won the prize: 'ਜਿਹੜੀ ਕੁੜੀ ਨੇ ਗਾਇਆ, ___ ਇਨਾਮ ਜਿੱਤਿਆ।'",
+    "options": [
+     "ਇਹ",
+     "ਕਿਸਨੇ",
+     "ਉਸਨੇ",
+     "ਜਿਸਨੇ"
+    ],
+    "answer": 2,
+    "explanation": "In past transitive clauses, the correlative pronoun takes the ergative case: ਉਸਨੇ."
+   },
+   {
+    "question": "As you sow, so shall you reap: 'ਜੋ ਬੀਜੋਗੇ, ___ ਵੱਢੋਗੇ।'",
+    "options": [
+     "ਕਿਉਂ",
+     "ਕਦੋਂ",
+     "ਜਿਵੇਂ",
+     "ਸੋ"
+    ],
+    "answer": 3,
+    "explanation": "The traditional proverbial pair for ਜੋ is ਸੋ."
+   }
+  ],
+  "tip": "Remember the J-T symmetry: relative clauses almost always start with J (ਜ-), and the main clause answers with T/O (ਤ-/ਉ-)."
+ },
+ {
+  "id": "pa-b2-punjabi-tonal-phonology-morphology",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#EA580C",
+  "emoji": "🎵",
+  "title": "Tonal Shift & Voiced Aspirates",
+  "subtitle": "Mastering the low, mid, and high tonal shifts generated by Gurmukhi voiced aspirates and Haahaa",
+  "color": "#C2410C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Gurmukhi voiced aspirates (ਘ, ਝ, ਢ, ਧ, ਭ) and the glottal ਹ lose aspiration and convert into pitch contours: word-initial produces low-rising tone, while medial/final produces high-falling tone.",
+  "structure": {
+   "headers": [
+    "Position",
+    "Orthography",
+    "Pronunciation Effect",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Initial Voiced Aspirate",
+      "ਘੋੜਾ (horse)",
+      "Voiceless [k] + Low-rising tone",
+      "ਘੋੜਾ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Medial/Final Voiced Aspirate",
+      "ਸੰਘ (throat)",
+      "Voiced stop + High-falling tone on preceding vowel",
+      "ਸੰਘ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Intervocalic Haahaa (ਹ)",
+      "ਸ਼ਹਿਰ (city)",
+      "Preceding vowel shifts to open [ɛ] + High-falling tone",
+      "ਸ਼ਹਿਰ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Subjoined Haahaa (ਪੈਰੀਂ ਹ)",
+      "ਪੜ੍ਹਨਾ (to read)",
+      "Retroflex flap [ɽ] + High tone",
+      "ਪੜ੍ਹਨਾ"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Low-Rising Tone (Initial)",
+    "example": "ਘਰ ਬਹੁਤ ਵੱਡਾ ਅਤੇ ਸੁੰਦਰ ਹੈ।",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "High-Falling Tone (Medial/Final)",
+    "example": "ਮੇਰੇ ਕੋਲ ਇੱਕ ਲਾਭਦਾਇਕ ਸੁਝਾਅ ਹੈ।",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Subjoined Haahaa Contour",
+    "example": "ਉਹ ਰੋਜ਼ ਸ਼ਾਮ ਨੂੰ ਕਿਤਾਬ ਪੜ੍ਹਦਾ ਹੈ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਮੈਂ ਉਸਦੇ ਘਰ ਗਿਆ ਸੀ।",
+    "ko": "",
+    "highlight": "ਘਰ"
+   },
+   {
+    "en": "ਚਾਹ ਬਹੁਤ ਗਰਮ ਹੈ।",
+    "ko": "",
+    "highlight": "ਚਾਹ"
+   },
+   {
+    "en": "ਉਹ ਆਪਣਾ ਕੰਮ ਸਮਝ ਗਿਆ।",
+    "ko": "",
+    "highlight": "ਸਮਝ"
+   },
+   {
+    "en": "ਧੁੱਪ ਵਿੱਚ ਬੈਠਣਾ ਚੰਗਾ ਲੱਗਦਾ ਹੈ।",
+    "ko": "",
+    "highlight": "ਧੁੱਪ"
+   },
+   {
+    "en": "ਦਰਵਾਜ਼ੇ ਦੀ ਕੁੰਡੀ ਚੰਗੀ ਤਰ੍ਹਾਂ ਬੰਨ੍ਹੋ।",
+    "ko": "",
+    "highlight": "ਬੰਨ੍ਹੋ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਗੋੜਾ (when intending horse)",
+    "right": "ਘੋੜਾ",
+    "note": "Replacing ਘ with plain ਗ loses the distinctive low tone essential for semantic distinction."
+   },
+   {
+    "wrong": "ਸ਼ਹਰ (writing without Sihari mutation)",
+    "right": "ਸ਼ਹਿਰ",
+    "note": "When ਹ occurs medially with Mukta, standard Gurmukhi adds a Sihari (ਿ) to reflect the tonally induced open-mid vowel [ɛ]."
+   },
+   {
+    "wrong": "ਬਾਰ (when meaning outside)",
+    "right": "ਬਾਹਰ",
+    "note": "Omitting silent medial/final ਹ removes the high-falling tonal inflection that distinguishes words like ਬਾਹਰ (outside) from ਬਾਰ (door/twelve)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which word carries an initial low-rising tone replacing standard voiced aspiration?",
+    "options": [
+     "ਕਮਰਾ",
+     "ਭਰਾ",
+     "ਤਾਰਾ",
+     "ਸੇਬ"
+    ],
+    "answer": 1,
+    "explanation": "ਭਰਾ starts with ਭ, which is pronounced as an unvoiced [p] accompanied by a low-rising tone."
+   },
+   {
+    "question": "In the word 'ਸ਼ਹਿਰ' (city), what phonetic effect does the medial 'ਹ' produce?",
+    "options": [
+     "A breathy voiced fricative [h]",
+     "A nasalized vowel",
+     "A high-falling pitch on the preceding vowel",
+     "A lengthened consonant"
+    ],
+    "answer": 2,
+    "explanation": "Medial ਹ in Punjabi acts tonally, imparting a high-falling pitch contour on the preceding vowel."
+   },
+   {
+    "question": "Choose the word containing a subjoined (pairin) consonant that triggers tone:",
+    "options": [
+     "ਗਿਆਨ",
+     "ਚੜ੍ਹਨਾ",
+     "ਮਿੱਤਰ",
+     "ਸਵਾਲ"
+    ],
+    "answer": 1,
+    "explanation": "ਚੜ੍ਹਨਾ features subjoined ਹ (ੜ੍ਹ), which creates a high pitch contour on the root syllable."
+   },
+   {
+    "question": "The final letter in 'ਲਾਭ' (profit) is pronounced with:",
+    "options": [
+     "Full breathy aspiration [bʱ]",
+     "A plain [b] with high-falling pitch on [a]",
+     "A retroflex click",
+     "A silent vowel ending"
+    ],
+    "answer": 1,
+    "explanation": "Word-final voiced aspirates retain voicing but transfer aspiration into a high pitch drop on the preceding vowel."
+   }
+  ],
+  "tip": "Listen for pitch rather than breath: Punjabi never breathes out heavily on voiced aspirates; it changes musical tone instead."
+ },
+ {
+  "id": "pa-b2-passive-and-impersonal-voice",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#9333EA",
+  "emoji": "🛡️",
+  "title": "Synthetic Passive & Dative Inability",
+  "subtitle": "Forming periphrastic and synthetic passives and expressing involuntary inability",
+  "color": "#7E22CE",
+  "bg": "#FAF5FF",
+  "keyPoint": "The passive voice is formed periphrastically using the past participle followed by conjugated ਜਾਣਾ, while involuntary inability is expressed by pairing an ablative agent (ਤੋਂ) with a negative passive verb.",
+  "structure": {
+   "headers": [
+    "Construction",
+    "Stem / Particle",
+    "Punjabi Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Periphrastic Passive",
+      "Past Participle + ਜਾਣਾ",
+      "ਚਿੱਠੀ ਭੇਜੀ ਗਈ",
+      "The letter was sent"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Inability (Passive)",
+      "Agent + ਤੋਂ + Participle + ਨਹੀਂ + ਜਾਣਾ",
+      "ਮੇਰੇ ਤੋਂ ਖਾਧਾ ਨਹੀਂ ਜਾਂਦਾ",
+      "I cannot bear to eat it"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Synthetic Passive",
+      "Root + -ਈਦਾ / -ਈਦੀ",
+      "ਇੰਝ ਨਹੀਂ ਕਰੀਦਾ",
+      "One does not do this"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Impersonal Voice",
+      "Transitive Neuter + ਜਾਣਾ",
+      "ਸੱਚ ਬੋਲਿਆ ਜਾਵੇਗਾ",
+      "Truth will be spoken"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7E22CE",
+    "label": "Formal Object Focus",
+    "example": "ਕੱਲ੍ਹ ਨਵਾਂ ਪੁਲ ਖੋਲ੍ਹਿਆ ਜਾਵੇਗਾ।",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Physical / Psychological Inability",
+    "example": "ਬਿਮਾਰੀ ਕਰਕੇ ਉਸ ਤੋਂ ਤੁਰਿਆ ਨਹੀਂ ਜਾਂਦਾ।",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Proverbial / Generalized Rule",
+    "example": "ਬਜ਼ੁਰਗਾਂ ਦਾ ਦਿਲ ਨਹੀਂ ਦੁਖਾਈਦਾ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਸਾਰੀਆਂ ਚੋਰੀ ਹੋਈਆਂ ਚੀਜ਼ਾਂ ਲੱਭੀਆਂ ਗਈਆਂ।",
+    "ko": "",
+    "highlight": "ਲੱਭੀਆਂ ਗਈਆਂ"
+   },
+   {
+    "en": "ਮੇਰੇ ਤੋਂ ਹੋਰ ਝੂਠ ਨਹੀਂ ਸੁਣਿਆ ਜਾਂਦਾ।",
+    "ko": "",
+    "highlight": "ਨਹੀਂ ਸੁਣਿਆ ਜਾਂਦਾ"
+   },
+   {
+    "en": "ਇਹ ਕਿਤਾਬ ਹਰ ਪਿੰਡ ਵਿੱਚ ਪੜ੍ਹੀ ਜਾਂਦੀ ਹੈ।",
+    "ko": "",
+    "highlight": "ਪੜ੍ਹੀ ਜਾਂਦੀ ਹੈ"
+   },
+   {
+    "en": "ਐਵੇਂ ਗੁੱਸਾ ਨਹੀਂ ਕਰੀਦਾ।",
+    "ko": "",
+    "highlight": "ਨਹੀਂ ਕਰੀਦਾ"
+   },
+   {
+    "en": "ਕੱਲ੍ਹ ਸਾਰੇ ਮਹਿਮਾਨਾਂ ਨੂੰ ਸੱਦਿਆ ਗਿਆ।",
+    "ko": "",
+    "highlight": "ਸੱਦਿਆ ਗਿਆ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਮੈਂ ਤੋਂ ਤੁਰਿਆ ਨਹੀਂ ਜਾਂਦਾ।",
+    "right": "ਮੇਰੇ ਤੋਂ ਤੁਰਿਆ ਨਹੀਂ ਜਾਂਦਾ।",
+    "note": "Use the oblique possessive form ਮੇਰੇ followed by ਤੋਂ to express inability, not the direct pronoun ਮੈਂ."
+   },
+   {
+    "wrong": "ਚਿੱਠੀ ਲਿਖਿਆ ਗਈ।",
+    "right": "ਚਿੱਠੀ ਲਿਖੀ ਗਈ।",
+    "note": "The past participle in a passive clause must agree with the grammatical subject (ਚਿੱਠੀ is feminine singular, thus ਲਿਖੀ ਗਈ)."
+   },
+   {
+    "wrong": "ਮੈਂ ਕੰਮ ਨਹੀਂ ਕੀਤਾ ਜਾਂਦਾ।",
+    "right": "ਮੇਰੇ ਤੋਂ ਕੰਮ ਨਹੀਂ ਕੀਤਾ ਜਾਂਦਾ।",
+    "note": "In an inability passive, the subject must take the ablative postposition ਤੋਂ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The rooms were cleaned yesterday: 'ਕੱਲ੍ਹ ਕਮਰੇ ਸਾਫ਼ ___।'",
+    "options": [
+     "ਕੀਤਾ ਗਿਆ",
+     "ਕੀਤੇ ਗਏ",
+     "ਕੀਤੀ ਗਈ",
+     "ਕਰਦੇ ਸਨ"
+    ],
+    "answer": 1,
+    "explanation": "ਕਮਰੇ is masculine plural, demanding agreement: ਕੀਤੇ ਗਏ."
+   },
+   {
+    "question": "Because of leg pain, she cannot walk: 'ਉਸ ਤੋਂ ___ ਨਹੀਂ ਜਾਂਦਾ।'",
+    "options": [
+     "ਤੁਰਿਆ",
+     "ਤੁਰਨਾ",
+     "ਤੁਰਦੇ",
+     "ਤੁਰ ਕੇ"
+    ],
+    "answer": 0,
+    "explanation": "The inability passive uses the uninflected past participle masculine singular of the intransitive verb (ਤੁਰਿਆ)."
+   },
+   {
+    "question": "One should not speak ill of others: 'ਕਿਸੇ ਦੀ ਨਿੰਦਿਆ ਨਹੀਂ ___।'",
+    "options": [
+     "ਕਰੀਦਾ",
+     "ਕਰੀਦੀ",
+     "ਕਰਨਾ",
+     "ਕੀਤੇ"
+    ],
+    "answer": 1,
+    "explanation": "The synthetic passive marker inflects with ਨਿੰਦਿਆ (feminine singular), yielding ਕਰੀਦੀ."
+   },
+   {
+    "question": "Complete the impersonal passive: 'ਸਾਰੇ ਨਿਯਮਾਂ ਦੀ ਪਾਲਣਾ ___ ਚਾਹੀਦੀ ਹੈ।'",
+    "options": [
+     "ਕੀਤੀ ਜਾਣੀ",
+     "ਕੀਤਾ ਜਾਣਾ",
+     "ਕਰਨਾ ਜਾਣੀ",
+     "ਕੀਤੇ ਜਾਣੇ"
+    ],
+    "answer": 0,
+    "explanation": "ਪਾਲਣਾ is feminine, requiring the passive participle compound ਕੀਤੀ ਜਾਣੀ."
+   }
+  ],
+  "tip": "To express 'I just can't do it' (physical or emotional incapacity), swap 'ਮੈਂ ਨਹੀਂ ਕਰ ਸਕਦਾ' for 'ਮੇਰੇ ਤੋਂ ਨਹੀਂ ਹੁੰਦਾ' to sound instantly native."
+ },
+ {
+  "id": "pa-b2-pronominal-suffixes",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#16A34A",
+  "emoji": "🧩",
+  "title": "Colloquial Pronominal Clitics",
+  "subtitle": "Using Majhi verbal and nominal enclitic suffixes for streamlined colloquial speech",
+  "color": "#15803D",
+  "bg": "#F0FDF4",
+  "keyPoint": "In colloquial and central Majhi Punjabi, unstressed personal pronouns are synthesized directly onto the end of verbs or kinship nouns as pronominal suffixes (e.g., ਸੂ, ਜੇ, ਓ).",
+  "structure": {
+   "headers": [
+    "Clitic",
+    "Person / Case",
+    "Suffixed Verb / Noun",
+    "Standard Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-ਸੂ",
+      "3rd Sing. Agent/Object",
+      "ਆਖਿਆਸੂ",
+      "ਉਸਨੇ ਆਖਿਆ (He said)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ਜੇ",
+      "2nd Plur. Honorific",
+      "ਦੱਸਿਆਜੇ",
+      "ਤੁਸੀਂ ਦੱਸਿਆ (You told)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ਨੇ",
+      "3rd Plur. Agent",
+      "ਕੀਤਾਨੇ",
+      "ਉਹਨਾਂ ਨੇ ਕੀਤਾ (They did)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ਈ",
+      "2nd Sing. Genitive",
+      "ਪਿਓਈ",
+      "ਤੇਰਾ ਪਿਓ (Your father)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#15803D",
+    "label": "Concise Narrative Reporting",
+    "example": "ਉਸਨੇ ਕੰਮ ਮੁਕਾਇਆ ਅਤੇ ਘੱਲਿਆਸੂ।",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Polite Familial Query",
+    "example": "ਕੀ ਹਾਲ ਹੈ ਤੇਰੇ ਭਰਾਵਾ?",
+    "translation": ""
+   },
+   {
+    "color": "#4338CA",
+    "label": "Direct Ergative Contraction",
+    "example": "ਰੋਟੀ ਖਾਧੀਨੇ ਕਿ ਅਜੇ ਭੁੱਖੇ ਨੇ?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ਜਦੋਂ ਮੈਂ ਪੁੱਛਿਆ, ਤਾਂ ਕਹਿਣ ਲੱਗਾਸੂ।",
+    "ko": "",
+    "highlight": "ਲੱਗਾਸੂ"
+   },
+   {
+    "en": "ਤੁਸੀਂ ਇਹ ਗੱਲ ਸੁਣੀਜੇ?",
+    "ko": "",
+    "highlight": "ਸੁਣੀਜੇ"
+   },
+   {
+    "en": "ਕੱਲ੍ਹ ਮਕਾਨ ਵੇਚ ਦਿੱਤਾਨੇ।",
+    "ko": "",
+    "highlight": "ਦਿੱਤਾਨੇ"
+   },
+   {
+    "en": "ਜਾ ਕੇ ਮਾਂਈ ਨੂੰ ਪੁੱਛ।",
+    "ko": "",
+    "highlight": "ਮਾਂਈ"
+   },
+   {
+    "en": "ਉਸਨੇ ਖ਼ਤ ਪੜ੍ਹਿਆਸੂ ਤੇ ਰੋ ਪਿਆ।",
+    "ko": "",
+    "highlight": "ਪੜ੍ਹਿਆਸੂ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ਉਸਨੇ ਆਖਿਆਸੂ। (redundant repetition)",
+    "right": "ਆਖਿਆਸੂ। (or ਉਸਨੇ ਆਖਿਆ)",
+    "note": "The suffix -ਸੂ already embeds the 3rd person singular agent; combining both full pronoun ਉਸਨੇ and clitic -ਸੂ in standard literary style is considered tautological."
+   },
+   {
+    "wrong": "ਤੁਸੀਂ ਦੇਖਿਆਸੂ?",
+    "right": "ਤੁਸੀਂ ਦੇਖਿਆਜੇ?",
+    "note": "The suffix -ਸੂ is 3rd person, while 2nd person plural honorific demands -ਜੇ."
+   },
+   {
+    "wrong": "ਮੇਰਾ ਭਰਾਈ ਆਇਆ ਹੈ।",
+    "right": "ਭਰਾਈ ਆਇਆ ਹੈ।",
+    "note": "The suffix -ਈ already incorporates the second-person genitive 'your'; it cannot be combined with ਮੇਰਾ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What does the clitic verb form 'ਆਖਿਆਸੂ' mean in standard Punjabi?",
+    "options": [
+     "ਉਹਨਾਂ ਨੇ ਆਖਿਆ",
+     "ਮੈਂ ਆਖਿਆ",
+     "ਉਸਨੇ ਆਖਿਆ",
+     "ਤੁਸੀਂ ਆਖਿਆ"
+    ],
+    "answer": 2,
+    "explanation": "The suffix -ਸੂ represents the 3rd person singular agent (ਉਸਨੇ)."
+   },
+   {
+    "question": "Which suffix attaches to the verb to signify a 2nd person plural/polite subject ('Did you see it?')?",
+    "options": [
+     "-ਸੂ",
+     "-ਜੇ",
+     "-ਮ",
+     "-ਓ"
+    ],
+    "answer": 1,
+    "explanation": "-ਜੇ is the second-person polite pronominal clitic (e.g., ਡਿੱਠਾਜੇ / ਦੇਖਿਆਜੇ)."
+   },
+   {
+    "question": "The form 'ਕੀਤਾਨੇ' indicates which agent?",
+    "options": [
+     "ਮੈਂ",
+     "ਤੂੰ",
+     "ਅਸੀਂ",
+     "ਉਹਨਾਂ ਨੇ"
+    ],
+    "answer": 3,
+    "explanation": "The suffix -ਨੇ corresponds to the 3rd person plural ergative agent (ਉਹਨਾਂ ਨੇ ਕੀਤਾ)."
+   },
+   {
+    "question": "In colloquial Majhi, 'ਚਾਚਈ' means:",
+    "options": [
+     "ਤੇਰਾ ਚਾਚਾ",
+     "ਮੇਰਾ ਚਾਚਾ",
+     "ਸਾਡਾ ਚਾਚਾ",
+     "ਉਸਦਾ ਚਾਚਾ"
+    ],
+    "answer": 0,
+    "explanation": "The nominal clitic -ਈ attaches to kinship terms to signify 'your' (second person singular genitive)."
+   }
+  ],
+  "tip": "Pronominal clitics are heavily used in rural Punjab and classic Punjabi literature; spotting -ਸੂ and -ਜੇ at verb ends will help you read dialogue fluently."
+ }
+]

@@ -1,0 +1,3374 @@
+[
+ {
+  "id": "fa-a1-sov-word-order-and-copula",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🏛️",
+  "title": "SOV Word Order and the Enclitic Copula",
+  "subtitle": "Master the core Persian sentence structure and the present forms of 'to be'",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Persian typically places the verb at the very end of the sentence (Subject-Object-Verb), and the present copula 'to be' attaches to adjectives or nouns.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Complement / Predicate",
+    "Copula Verb"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "من (man)",
+      "دانشجو (dâneshju)",
+      "هستم (hastam)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "او (u)",
+      "خوشحال (khoshhâl)",
+      "است (ast)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ما (mâ)",
+      "در خانه (dar khâne)",
+      "هستیم (hastim)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "آن‌ها (ânhâ)",
+      "مهربان (mehrabân)",
+      "هستند (hastand)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Identity & Profession",
+    "example": "من معلم هستم.",
+    "translation": ""
+   },
+   {
+    "color": "#06B6D4",
+    "label": "Stating Conditions",
+    "example": "امروز هوا بسیار سرد است.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Specifying Location",
+    "example": "کتاب روی میز است.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "من دانشجو هستم.",
+    "ko": "",
+    "highlight": "هستم"
+   },
+   {
+    "en": "او معلم خوب است.",
+    "ko": "",
+    "highlight": "است"
+   },
+   {
+    "en": "ما در خانه هستیم.",
+    "ko": "",
+    "highlight": "هستیم"
+   },
+   {
+    "en": "شما بسیار مهربان هستید.",
+    "ko": "",
+    "highlight": "هستید"
+   },
+   {
+    "en": "کتاب روی میز است.",
+    "ko": "",
+    "highlight": "است"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "من هستم خوشحال.",
+    "right": "من خوشحال هستم.",
+    "note": "Verbs must go at the end of the clause in standard Persian word order."
+   },
+   {
+    "wrong": "ما ایرانی هستم.",
+    "right": "ما ایرانی هستیم.",
+    "note": "The copula must agree with the subject plural marker (هستیم for ما)."
+   },
+   {
+    "wrong": "او است در تهران.",
+    "right": "او در تهران است.",
+    "note": "Place complements appear before the copula, which remains in final position."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct verb to complete: 'I am a student' -> من دانشجو ___.",
+    "options": [
+     "هستم",
+     "هستی",
+     "است",
+     "هستیم"
+    ],
+    "answer": 0,
+    "explanation": "The first-person singular 'من' takes the ending '-am', giving 'هستم'."
+   },
+   {
+    "question": "Which sentence follows correct Persian SOV order for 'He is at home'?",
+    "options": [
+     "او است در خانه.",
+     "است او در خانه.",
+     "او در خانه است.",
+     "در خانه او هست."
+    ],
+    "answer": 2,
+    "explanation": "Standard order requires Subject (او) + Prepositional Phrase (در خانه) + Verb (است)."
+   },
+   {
+    "question": "Complete the sentence: 'We are happy' -> ما خوشحال ___.",
+    "options": [
+     "هستند",
+     "هستم",
+     "است",
+     "هستیم"
+    ],
+    "answer": 3,
+    "explanation": "'ما' (we) requires the first-person plural verb ending '-im', yielding 'هستیم'."
+   },
+   {
+    "question": "Complete the sentence: 'You (singular informal) are kind' -> تو مهربان ___.",
+    "options": [
+     "هستم",
+     "هستی",
+     "هستید",
+     "هستند"
+    ],
+    "answer": 1,
+    "explanation": "'تو' takes the second-person singular ending '-i', producing 'هستی'."
+   }
+  ],
+  "tip": "In everyday speech, 'است' (ast) is often pronounced as a simple enclitic '-e' attached to the preceding consonant."
+ },
+ {
+  "id": "fa-a1-ezfe-construction",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🔗",
+  "title": "The Ezafe Construction (-e / -ye)",
+  "subtitle": "Connecting nouns to adjectives and possessors",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Ezafe is an unstressed vocalic bridge (-e after consonants, -ye after vowels) that links a head noun to its modifier or possessor.",
+  "structure": {
+   "headers": [
+    "Head Noun",
+    "Connector",
+    "Modifier / Possessor"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "کتاب (ketâb)",
+      "-ِ (-e)",
+      "بزرگ (bozorg)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "خانه (khâne)",
+      "یِ (-ye)",
+      "علی (Ali)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "صدای (sedâ-ye)",
+      "یِ (-ye)",
+      "زیبا (zibâ)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ماشین (mâshin)",
+      "-ِ (-e)",
+      "من (man)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Noun + Adjective",
+    "example": "کتابِ جالب روی میز است.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Possession (Genitive)",
+    "example": "ماشینِ برادرم سریع است.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Noun + Noun Association",
+    "example": "دانشگاهِ تهران بزرگ است.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "کتابِ جالب روی میز است.",
+    "ko": "",
+    "highlight": "کتابِ جالب"
+   },
+   {
+    "en": "خانهٔ علی بسیار زیبا است.",
+    "ko": "",
+    "highlight": "خانهٔ علی"
+   },
+   {
+    "en": "ماشینِ سفید متعلق به من است.",
+    "ko": "",
+    "highlight": "ماشینِ سفید"
+   },
+   {
+    "en": "صدایِ باران آرامش‌بخش است.",
+    "ko": "",
+    "highlight": "صدایِ باران"
+   },
+   {
+    "en": "کیفِ دستی نو خریدم.",
+    "ko": "",
+    "highlight": "کیفِ دستی"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ماشین بزرگ است آبی.",
+    "right": "ماشینِ بزرگ، آبی است.",
+    "note": "Adjectives modifying a noun must immediately follow it via Ezafe, not float after the verb."
+   },
+   {
+    "wrong": "صدایِِ من زیباست.",
+    "right": "صدای من زیباست.",
+    "note": "Do not write double kasre marks; nouns ending in silent -eh or vowels take 'ی' or a solitary hamza mark."
+   },
+   {
+    "wrong": "کتاب من نو است بدون کسره.",
+    "right": "کتابِ من نو است.",
+    "note": "Even when unwritten in informal text, the Ezafe sound must be pronounced when reading aloud."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which phrase correctly expresses 'the big house' (خانه + بزرگ)?",
+    "options": [
+     "بزرگ خانه",
+     "خانهٔ بزرگ",
+     "خانه از بزرگ",
+     "بزرگِ خانه"
+    ],
+    "answer": 1,
+    "explanation": "Because 'خانه' ends in silent 'h' (pronounced 'e'), it requires the '-ye' Ezafe bridge, often marked with a small yeh/hamza (خانهٔ)."
+   },
+   {
+    "question": "Choose the correct phrase for 'Ali's book'.",
+    "options": [
+     "کتابِ علی",
+     "علی کتاب",
+     "کتاب از علی",
+     "علیِ کتاب"
+    ],
+    "answer": 0,
+    "explanation": "The head noun (کتاب) comes first, followed by the Ezafe sound (-e) and the possessor (علی)."
+   },
+   {
+    "question": "Which connector sound is used after words ending in consonants like 'دست' (dast)?",
+    "options": [
+     "-o",
+     "-ye",
+     "-â",
+     "-e"
+    ],
+    "answer": 3,
+    "explanation": "Consonant-ending stems take the short unstressed vowel sound '-e' (kasre)."
+   },
+   {
+    "question": "Which combination correctly means 'good student'?",
+    "options": [
+     "دانشجویِ خوب",
+     "خوبِ دانشجو",
+     "دانشجو خوبه",
+     "خوب دانشجو"
+    ],
+    "answer": 0,
+    "explanation": "Since 'دانشجو' ends with the vowel '-u', the bridge is written and pronounced with 'ی' (ye)."
+   }
+  ],
+  "tip": "Standard Persian writing often omits the short vowel mark (kasre), so you must supply the -e sound mentally based on syntax."
+ },
+ {
+  "id": "fa-a1-present-stem-and-mi-prefix",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "⏳",
+  "title": "Simple Present Tense with the 'mi-' Prefix",
+  "subtitle": "Conjugate ongoing and habitual present actions",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "The Persian present tense combines the prefix 'می-' (mi-) with the present stem and personal subject endings.",
+  "structure": {
+   "headers": [
+    "Prefix",
+    "Present Stem",
+    "Personal Suffix",
+    "Combined Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "میـ",
+      "رو (rav/ro - go)",
+      "-َم (-am)",
+      "می‌روم (I go)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "میـ",
+      "خور (khor - eat)",
+      "-َد (-ad)",
+      "می‌خورد (He/She eats)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "میـ",
+      "خوان (khân - read)",
+      "-یم (-im)",
+      "می‌خوانیم (We read)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "میـ",
+      "نویس (nevis - write)",
+      "-ید (-id)",
+      "می‌نویسید (You write)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Habitual Routines",
+    "example": "من هر روز کتاب می‌خوانم.",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Present Progressive Action",
+    "example": "اکنون چای می‌نوشم.",
+    "translation": ""
+   },
+   {
+    "color": "#CA8A04",
+    "label": "General Truths",
+    "example": "خورشید در شرق طلوع می‌کند.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "من هر روز کتاب می‌خوانم.",
+    "ko": "",
+    "highlight": "می‌خوانم"
+   },
+   {
+    "en": "او به دانشگاه می‌رود.",
+    "ko": "",
+    "highlight": "می‌رود"
+   },
+   {
+    "en": "ما در رستوران غذا می‌خوریم.",
+    "ko": "",
+    "highlight": "می‌خوریم"
+   },
+   {
+    "en": "شما نامه می‌نویسید.",
+    "ko": "",
+    "highlight": "می‌نویسید"
+   },
+   {
+    "en": "آن‌ها فارسی صحبت می‌کنند.",
+    "ko": "",
+    "highlight": "می‌کنند"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "من کتاب خوانم.",
+    "right": "من کتاب می‌خوانم.",
+    "note": "Dropping 'می-' alters the mood to subjunctive instead of indicative present tense."
+   },
+   {
+    "wrong": "او می‌روند.",
+    "right": "او می‌رود.",
+    "note": "Singular third person 'او' requires the ending '-ad' (می‌رود), not plural '-and'."
+   },
+   {
+    "wrong": "میخوانم (without half-space)",
+    "right": "می‌خوانم",
+    "note": "Standard orthography uses a zero-width non-joiner (half space) between 'میـ' and the stem."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'We write' -> ما نامه ___.",
+    "options": [
+     "می‌نویسید",
+     "می‌نویسد",
+     "می‌نویسیم",
+     "می‌نویسم"
+    ],
+    "answer": 2,
+    "explanation": "The subject 'ما' takes the first-person plural ending '-im' -> 'می‌نویسیم'."
+   },
+   {
+    "question": "Fill in the blank: 'I eat breakfast' -> من صبحانه ___.",
+    "options": [
+     "می‌خورم",
+     "می‌خوری",
+     "می‌خورد",
+     "می‌خورند"
+    ],
+    "answer": 0,
+    "explanation": "Subject 'من' matches with suffix '-am' -> 'می‌خورم'."
+   },
+   {
+    "question": "What is the role of 'میـ' in the simple present tense?",
+    "options": [
+     "It indicates past completion",
+     "It marks imperfective/indicative aspect",
+     "It negates the action",
+     "It marks an imperative command"
+    ],
+    "answer": 1,
+    "explanation": "The prefix 'میـ' (mi-) denotes indicative habitual or ongoing present aspect."
+   },
+   {
+    "question": "Choose the correct form for 'They go' -> آن‌ها ___.",
+    "options": [
+     "می‌روی",
+     "می‌رویم",
+     "می‌رود",
+     "می‌روند"
+    ],
+    "answer": 3,
+    "explanation": "'آن‌ها' is third-person plural, requiring '-and' -> 'می‌روند'."
+   }
+  ],
+  "tip": "Present stems are historically irregular; memorize each verb's present stem alongside its infinitive."
+ },
+ {
+  "id": "fa-a1-past-stem-simple-past",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "🕰️",
+  "title": "Simple Past Tense Formation",
+  "subtitle": "Build past actions by pruning the infinitive",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Drop the final '-an' (-ن) from any infinitive to get the past stem, then add past personal endings (with zero ending for 3rd person singular).",
+  "structure": {
+   "headers": [
+    "Infinitive",
+    "Past Stem",
+    "Subject",
+    "Conjugated Verb"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "رفتن (raftan)",
+      "رفت (raft)",
+      "من (man)",
+      "رفتم (raftam)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "دیدن (didan)",
+      "دید (did)",
+      "او (u)",
+      "دید (did - no suffix)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "آمدن (âmadan)",
+      "آمد (âmad)",
+      "ما (mâ)",
+      "آمدیم (âmadim)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "کردن (kardan)",
+      "کرد (kard)",
+      "آن‌ها (ânhâ)",
+      "کردند (kardand)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Completed Past Actions",
+    "example": "دیروز به مدرسه رفتم.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Narrating Past Events",
+    "example": "او فیلم را دید.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Sequential Past Steps",
+    "example": "غذا خوردم و خوابیدم.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "دیروز به سینما رفتم.",
+    "ko": "",
+    "highlight": "رفتم"
+   },
+   {
+    "en": "او ناهار را خورد.",
+    "ko": "",
+    "highlight": "خورد"
+   },
+   {
+    "en": "ما در پارک قدم زدیم.",
+    "ko": "",
+    "highlight": "زدیم"
+   },
+   {
+    "en": "شما دیروز آمدید.",
+    "ko": "",
+    "highlight": "آمدید"
+   },
+   {
+    "en": "آن‌ها کتاب خواندند.",
+    "ko": "",
+    "highlight": "خواندند"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "او رفتد.",
+    "right": "او رفت.",
+    "note": "The third-person singular past takes zero ending (no '-ad' like in the present)."
+   },
+   {
+    "wrong": "من دیدن کردم دیروز.",
+    "right": "من دیدم.",
+    "note": "Use the simple past stem of the verb itself rather than creating a superfluous compound verb."
+   },
+   {
+    "wrong": "آن‌ها آمد.",
+    "right": "آن‌ها آمدند.",
+    "note": "Plural subjects take the past plural ending '-and'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the past stem of 'نوشتن' (neveshtan - to write)?",
+    "options": [
+     "نویس",
+     "نوشت",
+     "نوشتن",
+     "نوشته"
+    ],
+    "answer": 1,
+    "explanation": "Drop the final '-an' (-ن) from 'نوشتن' to yield the past stem 'نوشت'."
+   },
+   {
+    "question": "Choose the correct past form for 'He/She bought' (خریدن).",
+    "options": [
+     "خریدند",
+     "خریدم",
+     "خرید",
+     "خریدید"
+    ],
+    "answer": 2,
+    "explanation": "The 3rd person singular past tense has no ending; it is identical to the past stem 'خرید'."
+   },
+   {
+    "question": "Fill in the blank: 'We went home' -> ما به خانه ___.",
+    "options": [
+     "رفتم",
+     "رفتید",
+     "رفتند",
+     "رفتیم"
+    ],
+    "answer": 3,
+    "explanation": "Subject 'ما' pairs with the 1st person plural ending '-im' -> 'رفتیم'."
+   },
+   {
+    "question": "Fill in the blank: 'You (singular) saw the teacher' -> تو معلم را ___.",
+    "options": [
+     "دیدی",
+     "دیدم",
+     "دید",
+     "دیدیم"
+    ],
+    "answer": 0,
+    "explanation": "Subject 'تو' pairs with the 2nd person singular suffix '-i' -> 'دیدی'."
+   }
+  ],
+  "tip": "Unlike present stems, every Persian verb has a 100% regular past stem derived simply by lopping off final '-an'."
+ },
+ {
+  "id": "fa-a1-direct-object-marker-ra",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🎯",
+  "title": "Definite Direct Object Marker 'râ' (ro)",
+  "subtitle": "Mark definite specific direct objects with precision",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "The postposition 'را' (râ) is placed immediately after a direct object when that object is definite or specifically identified.",
+  "structure": {
+   "headers": [
+    "Object Noun",
+    "Marker",
+    "Verb",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "کتاب (ketâb)",
+      "را (râ)",
+      "خواندم (khândam)",
+      "I read the specific book"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "کتاب (ketâb)",
+      "— (no marker)",
+      "خواندم (khândam)",
+      "I read a book / read books"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "علی (Ali)",
+      "را (râ)",
+      "دیدم (didam)",
+      "I saw Ali (proper noun = definite)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "این خانه (in khâne)",
+      "را (râ)",
+      "خریدیم (kharidim)",
+      "We bought this house"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Specific Definite Objects",
+    "example": "من کتاب را خواندم.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Proper Names & People",
+    "example": "دیروز مریم را دیدم.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Demonstrative Objects",
+    "example": "این فیلم را دوست دارم.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "من کتاب را خواندم.",
+    "ko": "",
+    "highlight": "کتاب را"
+   },
+   {
+    "en": "دیروز مریم را در دانشگاه دیدم.",
+    "ko": "",
+    "highlight": "مریم را"
+   },
+   {
+    "en": "این ماشین را دوست دارم.",
+    "ko": "",
+    "highlight": "این ماشین را"
+   },
+   {
+    "en": "او کلید را پیدا کرد.",
+    "ko": "",
+    "highlight": "کلید را"
+   },
+   {
+    "en": "آن نامه را برای من بفرستید.",
+    "ko": "",
+    "highlight": "آن نامه را"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "من خواندم کتاب را.",
+    "right": "من کتاب را خواندم.",
+    "note": "Direct objects marked by 'را' stay before the final verb in Persian word order."
+   },
+   {
+    "wrong": "را کتاب خریدم.",
+    "right": "کتاب را خریدم.",
+    "note": "'را' is a postposition; it must follow the noun, never precede it."
+   },
+   {
+    "wrong": "من یک سیب را خوردم (when non-specific).",
+    "right": "من یک سیب خوردم.",
+    "note": "Indefinite non-specific direct objects should not take 'را'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which sentence correctly says 'I saw the car'?",
+    "options": [
+     "من دیدم ماشین را.",
+     "من ماشین را دیدم.",
+     "من را ماشین دیدم.",
+     "ماشین من دیدم را."
+    ],
+    "answer": 1,
+    "explanation": "'ماشین' takes the postposition 'را' directly after it, and the verb stays at the end."
+   },
+   {
+    "question": "Why does 'علی را دیدم' require 'را'?",
+    "options": [
+     "Because Ali is the subject",
+     "Because proper nouns are inherently definite direct objects",
+     "Because it is an indirect preposition",
+     "Because the verb is past tense"
+    ],
+    "answer": 1,
+    "explanation": "Proper names referring to the direct recipient of an action are inherently specific and definite."
+   },
+   {
+    "question": "Complete the sentence: 'We bought this house' -> ما این خانه ___ خریدیم.",
+    "options": [
+     "از",
+     "به",
+     "در",
+     "را"
+    ],
+    "answer": 3,
+    "explanation": "'این خانه' is definite due to the demonstrative 'این', requiring the direct object marker 'را'."
+   },
+   {
+    "question": "Where does 'را' attach when a noun has an adjective, like 'کتابِ بزرگ' (the big book)?",
+    "options": [
+     "کتابِ را بزرگ",
+     "کتابِ بزرگ را",
+     "را کتابِ بزرگ",
+     "کتاب را بزرگ"
+    ],
+    "answer": 1,
+    "explanation": "'را' marks the entire noun phrase and must be placed after the final modifier."
+   }
+  ],
+  "tip": "In conversational Tehrani Persian, 'را' is routinely pronounced and written informally as 'رو' (ro) after vowels and 'و' (o) after consonants."
+ },
+ {
+  "id": "fa-a1-pronominal-enclitics",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "📎",
+  "title": "Pronominal Enclitics",
+  "subtitle": "Attached personal endings for possession and objects",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "Pronominal enclitics attach directly to nouns, prepositions, or verbs to express possession or objects without using independent personal pronouns.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Enclitic",
+    "With Noun (کتاب)",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Singular",
+      "ـَم",
+      "کتابم",
+      "my book"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd Singular",
+      "ـَت",
+      "کتابت",
+      "your (sg.) book"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Singular",
+      "ـَش",
+      "کتابش",
+      "his / her book"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "1st Plural",
+      "ـِمان",
+      "کتابمان",
+      "our book"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Plural",
+      "ـِشان",
+      "کتابشان",
+      "their book"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Possession on Nouns",
+    "example": "ماشینم خراب است.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Complements of Prepositions",
+    "example": "او با من صحبت کرد و ازم تشکر نمود.",
+    "translation": ""
+   },
+   {
+    "color": "#818CF8",
+    "label": "Direct or Indirect Object",
+    "example": "دیدمش و به او سلام کردم.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "کیفم را روی میز جا گذاشتم.",
+    "ko": "",
+    "highlight": "کیفم"
+   },
+   {
+    "en": "نامت را در لیست پیدا نکردم.",
+    "ko": "",
+    "highlight": "نامت"
+   },
+   {
+    "en": "استاد صدایش را شنید.",
+    "ko": "",
+    "highlight": "صدایش"
+   },
+   {
+    "en": "خانه‌مان نزدیک ایستگاه مترو است.",
+    "ko": "",
+    "highlight": "خانه‌مان"
+   },
+   {
+    "en": "دوستانشان دیروز به تهران رسیدند.",
+    "ko": "",
+    "highlight": "دوستانشان"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "کتاب من ام",
+    "right": "کتابم",
+    "note": "Do not attach the enclitic to independent pronouns; attach it directly to the noun stem."
+   },
+   {
+    "wrong": "خانه‌ام",
+    "right": "خانه‌ام",
+    "note": "When a word ends in a silent 'eh' (ه), use a connecting hamzeh or keep a semi-space before adding the enclitic."
+   },
+   {
+    "wrong": "ماشین من خراب است و ماشینم کار نمی‌کند",
+    "right": "ماشینم خراب است",
+    "note": "Avoid using both the independent pronoun with ezafe ('ماشینِ من') and the pronominal enclitic ('ماشینم') simultaneously for the same noun."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'my brother' using an enclitic?",
+    "options": [
+     "برادرت",
+     "برادرم",
+     "برادرش",
+     "برادرمان"
+    ],
+    "answer": 1,
+    "explanation": "The suffix for first-person singular possession is '-am' (ـَم), producing 'برادرم'."
+   },
+   {
+    "question": "Complete the sentence to mean 'Where is your (singular) house?': '___ کجاست؟'",
+    "options": [
+     "خانه‌ات",
+     "خانه‌ام",
+     "خانه‌مان",
+     "خانه‌شان"
+    ],
+    "answer": 0,
+    "explanation": "The second-person singular enclitic is '-at' (ـَت), giving 'خانه‌ات'."
+   },
+   {
+    "question": "Identify the word meaning 'their car':",
+    "options": [
+     "ماشینم",
+     "ماشینت",
+     "ماشینتان",
+     "ماشینشان"
+    ],
+    "answer": 3,
+    "explanation": "The third-person plural enclitic is '-eshān' (ـِشان), giving 'ماشینشان'."
+   },
+   {
+    "question": "Choose the correct complement meaning 'I saw him/her': 'دیروز در دانشگاه ___.'",
+    "options": [
+     "دیدمت",
+     "دیدمم",
+     "دیدمش",
+     "دیدممان"
+    ],
+    "answer": 2,
+    "explanation": "The third-person singular object enclitic '-ash' attaches to the conjugated past verb: 'دیدم' + 'ـَش' = 'دیدمش'."
+   }
+  ],
+  "tip": "If a word ends in a long vowel like 'ā' (ا) or 'u' (و), insert an epenthetic 'y' (ی) before the singular enclitics (e.g., پا -> پایم)."
+ },
+ {
+  "id": "fa-a2-compound-verbs",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🧩",
+  "title": "Compound Verbs",
+  "subtitle": "Combining nouns and adjectives with auxiliary light verbs",
+  "color": "#10B981",
+  "bg": "#ECFDF5",
+  "keyPoint": "Persian compound verbs pair a non-verbal element with a light verb, where only the auxiliary verb conjugates for tense and person while the non-verbal base remains unchanged.",
+  "structure": {
+   "headers": [
+    "Non-Verbal Base",
+    "Light Verb",
+    "Compound Infinitive",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "کار (Work)",
+      "کردن (To do)",
+      "کار کردن",
+      "to work"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "باز (Open)",
+      "کردن (To do)",
+      "باز کردن",
+      "to open"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "پیدا (Found)",
+      "شدن (To become)",
+      "پیدا شدن",
+      "to be found"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "حرف (Speech)",
+      "زدن (To strike)",
+      "حرف زدن",
+      "to speak / talk"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "گوش (Ear)",
+      "دادن (To give)",
+      "گوش دادن",
+      "to listen"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Active Operations with کردن",
+    "example": "من هر روز در این شرکت کار می‌کنم.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Intransitive/Passive Transitions with شدن",
+    "example": "درِ اتاق ناگهان باز شد.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Idiomatic Verbal Actions with زدن & دادن",
+    "example": "علی با دوستانش در کافه حرف می‌زند.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "دانشجویان به سخنان استاد گوش دادند.",
+    "ko": "",
+    "highlight": "گوش دادند"
+   },
+   {
+    "en": "مادرم شام خوشمزه‌ای درست می‌کند.",
+    "ko": "",
+    "highlight": "درست می‌کند"
+   },
+   {
+    "en": "پدرم تلویزیون را خاموش کرد.",
+    "ko": "",
+    "highlight": "خاموش کرد"
+   },
+   {
+    "en": "ما درباره این موضوع با هم صحبت کردیم.",
+    "ko": "",
+    "highlight": "صحبت کردیم"
+   },
+   {
+    "en": "کلید گمشده بعد از دو روز پیدا شد.",
+    "ko": "",
+    "highlight": "پیدا شد"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "می‌کار کنم",
+    "right": "کار می‌کنم",
+    "note": "Prefixes like 'mi-' and 'be-' attach directly to the verbal element, never to the non-verbal noun or adjective."
+   },
+   {
+    "wrong": "من کاریدم",
+    "right": "من کار کردم",
+    "note": "Persian rarely invents simple verbs; conjugate the light verb 'کردن' instead of modifying the noun."
+   },
+   {
+    "wrong": "صحبت نَمیکرد",
+    "right": "صحبت نمی‌کرد",
+    "note": "The negative prefix 'ne-' must precede the light verb stem, keeping the noun base intact."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which verb correctly completes: 'او هر روز ورزش ___.' (He exercises every day)?",
+    "options": [
+     "می‌زند",
+     "می‌کند",
+     "می‌شود",
+     "می‌دهد"
+    ],
+    "answer": 1,
+    "explanation": "'ورزش کردن' is the fixed compound verb meaning 'to exercise'."
+   },
+   {
+    "question": "Where does the continuous prefix 'mi-' go in 'زندگی کردن' for 'we live'?",
+    "options": [
+     "می‌زندگی کنیم",
+     "زندگی می‌کنیم",
+     "زندگی می‌کردیم",
+     "می‌زندگی کردیم"
+    ],
+    "answer": 1,
+    "explanation": "The prefix 'میـ' attaches to the present stem of the light verb: 'زندگی می‌کنیم'."
+   },
+   {
+    "question": "Choose the compound verb that means 'to speak':",
+    "options": [
+     "حرف خوردن",
+     "حرف رفتن",
+     "حرف زدن",
+     "حرف داشتن"
+    ],
+    "answer": 2,
+    "explanation": "'حرف زدن' pairs the noun 'حرف' with the light verb 'زدن' to mean 'to talk/speak'."
+   },
+   {
+    "question": "How do you conjugate 'تمیز کردن' (to clean) in past tense for 'they cleaned'?",
+    "options": [
+     "تمیز کردید",
+     "تمیز کردیم",
+     "تمیز کرد",
+     "تمیز کردند"
+    ],
+    "answer": 3,
+    "explanation": "The third-person plural past of 'کردن' is 'کردند', producing 'تمیز کردند'."
+   }
+  ],
+  "tip": "Direct object markers (را) and prepositional phrases normally sit right before the light verb or before the entire compound verb, but prefixes like 'میـ' always attach directly to the verb stem."
+ },
+ {
+  "id": "fa-a2-present-subjunctive-be-prefix",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🎯",
+  "title": "Present Subjunctive",
+  "subtitle": "Forming subjunctive verbs with the modal prefix be-",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "The present subjunctive is formed by adding the prefix 'be-' to the present verb stem along with personal endings to express wishes, doubts, or requests.",
+  "structure": {
+   "headers": [
+    "Infinitive",
+    "Present Stem",
+    "Subjunctive 1st Sg.",
+    "Subjunctive 3rd Sg."
+   ],
+   "rows": [
+    {
+     "cells": [
+      "رفتن (To go)",
+      "رو",
+      "بروم",
+      "برود"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "خوردن (To eat)",
+      "خور",
+      "بخورم",
+      "بخورد"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "نوشتن (To write)",
+      "نویس",
+      "بنویسم",
+      "بنویسد"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "دیدن (To see)",
+      "بین",
+      "ببینم",
+      "ببیند"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0F766E",
+    "label": "Desire and Wishing with خواستن",
+    "example": "می‌خواهم کتاب جدیدی بخوانم.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Impersonal Requirement with باید",
+    "example": "باید فردا زود بیدار شویم.",
+    "translation": ""
+   },
+   {
+    "color": "#14B8A6",
+    "label": "Uncertainty or Possibility with شاید",
+    "example": "شاید او امروز به دانشگاه بیاید.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "امیدوارم فردا باران ببارد.",
+    "ko": "",
+    "highlight": "ببارد"
+   },
+   {
+    "en": "باید این نامه مهم را بنویسی.",
+    "ko": "",
+    "highlight": "بنویسی"
+   },
+   {
+    "en": "می‌خواهم پنجره اتاق را باز کنم.",
+    "ko": "",
+    "highlight": "باز کنم"
+   },
+   {
+    "en": "بهتر است حقیقت را بداند.",
+    "ko": "",
+    "highlight": "بداند"
+   },
+   {
+    "en": "شاید فردا با دوستانم به سینما برویم.",
+    "ko": "",
+    "highlight": "برویم"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "می‌خواهم می‌روم",
+    "right": "می‌خواهم بروم",
+    "note": "Verbs dependent on 'خواستن' take the subjunctive prefix 'بـ', not the indicative prefix 'میـ'."
+   },
+   {
+    "wrong": "باید بنویسید نه",
+    "right": "نباید بنویسید",
+    "note": "Negating the modal or subjunctive verb takes 'نـ', replacing 'بـ' entirely (e.g., 'ننویسید', never 'بننویسید')."
+   },
+   {
+    "wrong": "باز بکند",
+    "right": "باز کند",
+    "note": "In many common compound verbs, the prefix 'بـ' is frequently dropped from the light verb."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'می‌خواهم به خانه ___.' (I want to go home)",
+    "options": [
+     "می‌روم",
+     "رفتم",
+     "بروم",
+     "رفته‌ام"
+    ],
+    "answer": 2,
+    "explanation": "The present subjunctive first-person singular of 'رفتن' is 'بروم' (prefix 'be-' + stem 'rav' + ending '-am')."
+   },
+   {
+    "question": "What happens to the 'be-' prefix when a subjunctive verb is negated?",
+    "options": [
+     "It is replaced by 'ne-' / 'na-'",
+     "It merges into 'bene-'",
+     "It moves behind the stem",
+     "It turns into 'mi-'"
+    ],
+    "answer": 0,
+    "explanation": "The negative marker 'نـ' replaces 'بـ' entirely (e.g., 'برود' becomes 'نرود')."
+   },
+   {
+    "question": "Select the correct subjunctive form for 'you (singular) write':",
+    "options": [
+     "بنویسید",
+     "می‌نویسی",
+     "بنویسند",
+     "بنویسی"
+    ],
+    "answer": 3,
+    "explanation": "'بنویسی' consists of 'بـ' + present stem 'نویس' + 2nd singular personal ending 'ـی'."
+   },
+   {
+    "question": "Complete the obligation clause: 'باید آب سالم ___.' (We must drink healthy water)",
+    "options": [
+     "نوشیدیم",
+     "بنوشیم",
+     "می‌نوشیم",
+     "نوشید"
+    ],
+    "answer": 1,
+    "explanation": "'باید' governs the subjunctive; for 'ما' the form is 'بنوشیم' (stem 'nush' + ending '-im')."
+   }
+  ],
+  "tip": "The vowel sound in the prefix 'بـ' harmonizes with the root vowel: it sounds like 'bo-' before stems containing 'o' or 'u' (e.g., 'بخور' - bokhor), and 'be-' elsewhere."
+ },
+ {
+  "id": "fa-a2-modal-verbs-bayad-tavanestan",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#D97706",
+  "emoji": "🔑",
+  "title": "Modal Constructions",
+  "subtitle": "Expressing necessity, possibility, and ability",
+  "color": "#F59E0B",
+  "bg": "#FFFBEB",
+  "keyPoint": "Impersonal modals like 'باید' (must) and 'شاید' (might) stay invariable, whereas 'توانستن' (can) conjugates for person and tense; all require a subjunctive main verb.",
+  "structure": {
+   "headers": [
+    "Modal Type",
+    "Modal Form",
+    "Main Verb Mood",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Impersonal Obligation",
+      "باید",
+      "Subjunctive",
+      "must / should"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Impersonal Possibility",
+      "شاید",
+      "Subjunctive",
+      "might / perhaps"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Conjugated Ability",
+      "می‌توانم / توانستم",
+      "Subjunctive",
+      "I can / I could"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Conjugated Volition",
+      "می‌خواهم / خواستم",
+      "Subjunctive",
+      "I want / I wanted"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#B45309",
+    "label": "Expressing Obligation (باید)",
+    "example": "شما باید درس‌هایتان را مرور کنید.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Expressing Ability (توانستن)",
+    "example": "آیا می‌توانی به زبان فارسی صحبت کنی؟",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Expressing Speculation (شاید)",
+    "example": "شاید فردا باران بیاید و هوا سرد شود.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "باید هر روز ورزش کنیم.",
+    "ko": "",
+    "highlight": "باید"
+   },
+   {
+    "en": "او می‌تواند پیانو بنوازد.",
+    "ko": "",
+    "highlight": "می‌تواند"
+   },
+   {
+    "en": "شاید هفته آینده به سفر بروند.",
+    "ko": "",
+    "highlight": "شاید"
+   },
+   {
+    "en": "نتوانستم دیروز با شما تماس بگیرم.",
+    "ko": "",
+    "highlight": "نتوانستم"
+   },
+   {
+    "en": "باید حقیقت را به مادرت بگویی.",
+    "ko": "",
+    "highlight": "باید"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "من بایدم بروم",
+    "right": "من باید بروم",
+    "note": "'باید' is an impersonal modal particle and never takes personal endings like '-am' in standard Persian."
+   },
+   {
+    "wrong": "می‌توانم رفت",
+    "right": "می‌توانم بروم",
+    "note": "The secondary verb following 'توانستن' must be in the present subjunctive, not a shortened infinitive."
+   },
+   {
+    "wrong": "شاید او می‌آید",
+    "right": "شاید او بیاید",
+    "note": "Uncertain speculation with 'شاید' requires the present subjunctive rather than the indicative."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you conjugate 'باید' for the pronoun 'ما' (we)?",
+    "options": [
+     "بایدیم",
+     "بایدمان",
+     "باید",
+     "بایدند"
+    ],
+    "answer": 2,
+    "explanation": "'باید' is invariable and remains identical for all subjects."
+   },
+   {
+    "question": "Choose the sentence meaning 'I cannot come today':",
+    "options": [
+     "نمی‌توانم امروز بیایم.",
+     "نمی‌توانم امروز آمدم.",
+     "نمی‌توانم امروز می‌آیم.",
+     "نمی‌توانم امروز آمد."
+    ],
+    "answer": 0,
+    "explanation": "'نمی‌توانم' governs the 1st singular present subjunctive verb 'بیایم'."
+   },
+   {
+    "question": "Which modal is invariable and conveys uncertainty ('perhaps / maybe')?",
+    "options": [
+     "خواستن",
+     "توانستن",
+     "شاید",
+     "دانستن"
+    ],
+    "answer": 2,
+    "explanation": "'شاید' is an invariable modal particle expressing probability or speculation."
+   },
+   {
+    "question": "Select the correct combination for 'You (formal) can help': 'شما می‌توانید ___.'",
+    "options": [
+     "کمک کردید",
+     "کمک کنید",
+     "کمک می‌کنید",
+     "کمک کردن"
+    ],
+    "answer": 1,
+    "explanation": "The auxiliary 'می‌توانید' governs the subjunctive form 'کمک کنید'."
+   }
+  ],
+  "tip": "To negate obligation ('must not'), prefix 'na-' directly to the modal: 'نباید' (nabāyad), followed still by a subjunctive verb."
+ },
+ {
+  "id": "fa-a2-past-continuous-mi-prefix",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "⏳",
+  "title": "Past Continuous Tense",
+  "subtitle": "Describing habitual and ongoing actions in the past",
+  "color": "#EF4444",
+  "bg": "#FEF2F2",
+  "keyPoint": "The past continuous is formed by attaching the imperfective prefix 'mi-' to the simple past stem along with past personal endings.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Simple Past",
+    "Past Continuous",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "من (I)",
+      "رفتم",
+      "می‌رفتم",
+      "I used to go / was going"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "تو (You sg.)",
+      "نوشتی",
+      "می‌نوشتی",
+      "you used to write / were writing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "او (He/She)",
+      "خواند",
+      "می‌خواند",
+      "he/she used to read / was reading"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ما (We)",
+      "دیدیم",
+      "می‌دیدیم",
+      "we used to see / were seeing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "آن‌ها (They)",
+      "گفتند",
+      "می‌گفتند",
+      "they used to say / were saying"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#B91C1C",
+    "label": "Habitual Past Behavior",
+    "example": "وقتی کودک بودم، هر روز در کوچه بازی می‌کردم.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Ongoing Interrupted Action",
+    "example": "داشتم کتاب می‌خواندم که علی آمد.",
+    "translation": ""
+   },
+   {
+    "color": "#F87171",
+    "label": "Past State over Time",
+    "example": "آن زمان در شیراز زندگی می‌کردیم.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "هر روز صبح پیاده به مدرسه می‌رفتم.",
+    "ko": "",
+    "highlight": "می‌رفتم"
+   },
+   {
+    "en": "وقتی تلفن زنگ زد، غذا می‌خوردیم.",
+    "ko": "",
+    "highlight": "می‌خوردیم"
+   },
+   {
+    "en": "او همیشه به دیگران کمک می‌کرد.",
+    "ko": "",
+    "highlight": "کمک می‌کرد"
+   },
+   {
+    "en": "آن‌ها در آن سال‌ها سخت کار می‌کردند.",
+    "ko": "",
+    "highlight": "کار می‌کردند"
+   },
+   {
+    "en": "باران تندی در جنگل می‌بارید.",
+    "ko": "",
+    "highlight": "می‌بارید"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "می‌روم دیروز",
+    "right": "می‌رفتم دیروز",
+    "note": "Do not confuse the present stem with the past stem; 'mi-' attached to a present stem creates present tense, while 'mi-' with a past stem forms the past continuous."
+   },
+   {
+    "wrong": "نمی‌خواندم با بـ",
+    "right": "نمی‌خواندم",
+    "note": "The negative marker replaces or prefixes 'mi-' as 'نمیـ' (e.g., 'نمی‌خواندم'), never combining with 'be-'."
+   },
+   {
+    "wrong": "بازی می‌کرد بودم",
+    "right": "بازی می‌کردم",
+    "note": "Do not add auxiliary 'بودم' to form the standard past continuous; the prefix 'میـ' alone marks the imperfective aspect."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which verb form represents 'I used to eat / was eating'?",
+    "options": [
+     "می‌خورم",
+     "می‌خوردم",
+     "خوردم",
+     "بخورم"
+    ],
+    "answer": 1,
+    "explanation": "'می‌خوردم' uses 'mi-' with the past stem 'خورد-' plus the first-person suffix '-am'."
+   },
+   {
+    "question": "How do you say 'they used to live' using 'زندگی کردن'?",
+    "options": [
+     "زندگی می‌کردند",
+     "زندگی کردند",
+     "زندگی می‌کنند",
+     "زندگی بکنند"
+    ],
+    "answer": 0,
+    "explanation": "The past continuous is formed on the past stem of the light verb: 'زندگی می‌کردند'."
+   },
+   {
+    "question": "Identify the tense of: 'شب‌ها داستان می‌نوشت.'",
+    "options": [
+     "Present Simple",
+     "Present Subjunctive",
+     "Past Continuous",
+     "Past Perfect"
+    ],
+    "answer": 2,
+    "explanation": "The prefix 'میـ' attached to the past 3rd-person singular stem 'نوشت' marks the past continuous."
+   },
+   {
+    "question": "Complete the negative sentence: 'ما در آن رودخانه شنا ___.' (We were not swimming)",
+    "options": [
+     "شنا نمی‌کردید",
+     "شنا نکردیم",
+     "شنا نمی‌کردند",
+     "شنا نمی‌کردیم"
+    ],
+    "answer": 3,
+    "explanation": "The 1st-person plural negative past continuous of 'شنا کردن' is 'شنا نمی‌کردیم'."
+   }
+  ],
+  "tip": "Persian past continuous serves as both 'used to [verb]' (habitual past) and 'was [verb]-ing' (progressive past). Context clarifies which English nuance applies."
+ },
+ {
+  "id": "fa-a2-colloquial-vs-formal-phonology-and-grammar",
+  "level": "a2",
+  "category": "advanced",
+  "categoryColor": "#4B5563",
+  "emoji": "🗣️",
+  "title": "Colloquial vs. Formal Persian Shifts",
+  "subtitle": "Master common Tehrani spoken sound changes and grammatical reductions",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Spoken Tehrani systematically transforms '-ân' into '-un', contracts the direct object marker 'râ' to 'ro' or 'o', and simplifies verb endings.",
+  "structure": {
+   "headers": [
+    "Rule / Shift",
+    "Formal (Ketâbi)",
+    "Spoken (Goftâri)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ân → un",
+      "نان",
+      "نون"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Object Marker râ → ro/o",
+      "کتاب را",
+      "کتاب رو"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person ast → -e",
+      "این خوب است",
+      "این خوبه"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Vowel reduction / stem",
+      "می‌رود",
+      "میره"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Vowel Shift (ân to un)",
+    "example": "من نون تازه می‌خوام.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Contracted Object Marker",
+    "example": "این کتاب رو خوندم.",
+    "translation": ""
+   },
+   {
+    "color": "#78350F",
+    "label": "Spoken Copula Contraction",
+    "example": "امروز هوا خیلی سرده.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "من هر روز نون تازه می‌خرم.",
+    "ko": "",
+    "highlight": "نون"
+   },
+   {
+    "en": "این کلید رو به سارا بده.",
+    "ko": "",
+    "highlight": "کلید رو"
+   },
+   {
+    "en": "او به خیابون رفت.",
+    "ko": "",
+    "highlight": "خیابون"
+   },
+   {
+    "en": "حالت چطوره؟",
+    "ko": "",
+    "highlight": "چطوره"
+   },
+   {
+    "en": "داری کجا میری؟",
+    "ko": "",
+    "highlight": "میری"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "من نان رو می‌خوام.",
+    "right": "من نون رو می‌خوام.",
+    "note": "Mixing formal 'نان' with colloquial 'رو' sounds inconsistent; spoken Persian shifts both simultaneously to 'نون رو'."
+   },
+   {
+    "wrong": "کتاب او رو دیدم.",
+    "right": "کتابشو دیدم.",
+    "note": "In natural spoken Persian, pronominal clitics (-esh / -esho) are preferred over full independent pronouns with 'رو'."
+   },
+   {
+    "wrong": "او تهرون است.",
+    "right": "اون تهرونه.",
+    "note": "In speech, the subject pronoun 'او' shifts to 'اون' and the copula 'است' reduces to enclitic '-e'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'bread' in casual spoken Tehrani Persian?",
+    "options": [
+     "نون",
+     "نان",
+     "نوند",
+     "نوم"
+    ],
+    "answer": 0,
+    "explanation": "The sequence 'ân' before nasal consonants almost universally shifts to 'un' in colloquial Persian."
+   },
+   {
+    "question": "Choose the colloquial equivalent for: 'او کتاب را خواند.'",
+    "options": [
+     "او کتاب خواند.",
+     "اون کتاب رو خوند.",
+     "آن کتاب را خواندند.",
+     "اونها کتاب ران خواند."
+    ],
+    "answer": 1,
+    "explanation": "'او' becomes 'اون', 'را' becomes 'رو', and the vowel in 'خواند' shifts to 'خوند'."
+   },
+   {
+    "question": "What is the natural spoken reduction of 'خانه است' (It is a house)?",
+    "options": [
+     "خونس",
+     "خونه هس",
+     "خونه‌ست",
+     "خانه‌ایه"
+    ],
+    "answer": 2,
+    "explanation": "'خانه' becomes 'خونه' and followed by the copula '-ast' contracts smoothly to 'خونه‌ست'."
+   },
+   {
+    "question": "Which sentence correctly reflects natural spoken direct object marking after a consonant?",
+    "options": [
+     "دستور کار را دیدم",
+     "ماشینو دیدم",
+     "ماشینان دیدم",
+     "ماشینست دیدم"
+    ],
+    "answer": 1,
+    "explanation": "After a consonant like 'ن', the colloquial object marker 'ro' often reduces simply to the enclitic 'o' (ماشینو)."
+   }
+  ],
+  "tip": "Spoken sound shifts like ân → un apply primarily to native Iranian roots (like نان → نون and باران → بارون), but rarely to formal Arabic loanwords (like قرآن or انقلاب)."
+ },
+ {
+  "id": "fa-a2-indefinite-enclitic-i",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#2563EB",
+  "emoji": "🏷️",
+  "title": "The Indefinite Suffix '-i' (یای نکره)",
+  "subtitle": "Mark non-specific reference with the unstressed suffix 'ی'",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Attaching the unstressed suffix '-i' (ی) to a noun marks it as an indefinite entity ('a/an/a certain'), often reinforced by the numeral 'yek'.",
+  "structure": {
+   "headers": [
+    "Form",
+    "Pattern",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Noun + unstressed -i",
+      "کتابی خریدم",
+      "Indefinite singular ('a book')"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "yek + Noun + -i",
+      "یک کتابی دیدم",
+      "Emphatic indefinite ('a certain book')"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Bare Noun (generic)",
+      "کتاب خواندم",
+      "Generic / categorical ('I read books')"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Vowel-ending + -yi",
+      "نامه‌ای نوشتم",
+      "Indefinite on silent 'eh' (-eh-i)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Singular Indefinite",
+    "example": "دیروز مردی به اینجا آمد.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Indefinite with 'yek'",
+    "example": "یک کتابی روی میز است.",
+    "translation": ""
+   },
+   {
+    "color": "#1E40AF",
+    "label": "With Modifying Adjectives",
+    "example": "او دختر مهربانی است.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "مردی در خیابان منتظر بود.",
+    "ko": "",
+    "highlight": "مردی"
+   },
+   {
+    "en": "یک روزی به ایران سفر خواهم کرد.",
+    "ko": "",
+    "highlight": "یک روزی"
+   },
+   {
+    "en": "من داستانی جالب خواندم.",
+    "ko": "",
+    "highlight": "داستانی"
+   },
+   {
+    "en": "او نامه‌ای برای من فرستاد.",
+    "ko": "",
+    "highlight": "نامه‌ای"
+   },
+   {
+    "en": "سیبی از درخت افتاد.",
+    "ko": "",
+    "highlight": "سیبی"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "من کتابی را خواندم.",
+    "right": "من کتابی خواندم.",
+    "note": "Do not combine the indefinite suffix '-i' with the specific definite marker 'râ' (را) unless specified by a restrictive relative clause."
+   },
+   {
+    "wrong": "یک مرد آمد اینجا.",
+    "right": "مردی آمد اینجا.",
+    "note": "Using bare 'yek' without '-i' often emphasizes the exact numeral 'one' rather than simple indefinite 'a/an'."
+   },
+   {
+    "wrong": "او نامه‌ی نوشت.",
+    "right": "او نامه‌ای نوشت.",
+    "note": "When a noun ends in silent 'h' (ه), the indefinite suffix requires an orthographic hamza/alef seat: 'نامه‌ای'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which word contains the indefinite suffix (یای نکره) meaning 'a child'?",
+    "options": [
+     "کودکی",
+     "ایرانی",
+     "خوبی",
+     "کودکانه"
+    ],
+    "answer": 0,
+    "explanation": "'کودکی' attaches unstressed '-i' to 'کودک' meaning 'a child'."
+   },
+   {
+    "question": "How do you say 'I read an interesting book'?",
+    "options": [
+     "من کتاب جالب را خواندم.",
+     "من کتاب جالبی خواندم.",
+     "من کتاب‌های جالب خواندم.",
+     "من یک کتاب جالب را خواندم."
+    ],
+    "answer": 1,
+    "explanation": "When an adjective follows an indefinite noun, the indefinite suffix '-i' attaches to the adjective: 'کتاب جالبی'."
+   },
+   {
+    "question": "Where does the indefinite suffix attach in the phrase 'یک سیب قرمز' (a red apple)?",
+    "options": [
+     "روی یک",
+     "روی سیب",
+     "روی قرمز",
+     "حذف می‌شود"
+    ],
+    "answer": 2,
+    "explanation": "The indefinite suffix attaches to the end of the entire noun phrase: 'یک سیب قرمزی'."
+   },
+   {
+    "question": "What is the difference between 'سیب خوردم' and 'سیبی خوردم'?",
+    "options": [
+     "'سیب' is past tense, 'سیبی' is present tense",
+     "'سیب خوردم' is generic (apple-eating), 'سیبی خوردم' means 'I ate an apple'",
+     "'سیب خوردم' is incorrect Persian",
+     "'سیبی خوردم' is plural"
+    ],
+    "answer": 1,
+    "explanation": "Bare nouns denote generic categories, while suffixing '-i' isolates a singular individual indefinite item."
+   }
+  ],
+  "tip": "The indefinite suffix '-i' is always UNSTRESSED. If you pronounce the final '-i' with stress, it sounds like an abstract noun (e.g., مردی mardí = chivalry vs márdi = a man)."
+ },
+ {
+  "id": "fa-b1-past-subjunctive-and-pluperfect",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "⏳",
+  "title": "Past Participle, Pluperfect & Past Subjunctive",
+  "subtitle": "Form compound past moods using the past participle with būdan",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Combine the past participle (past stem + -e) with 'بودم' for the pluperfect, or with 'باشم' for the past subjunctive.",
+  "structure": {
+   "headers": [
+    "Mood / Tense",
+    "Formula",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Past Participle",
+      "Past stem + -e (ه)",
+      "رفته"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Pluperfect (Past Perfect)",
+      "Participle + بودم / بودی / بود...",
+      "رفته بودم"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past Subjunctive",
+      "Participle + باشم / باشی / باشد...",
+      "رفته باشد"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negative Subjunctive",
+      "Participle + نبوده باشد / نرفته باشد",
+      "نرفته باشد"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Action Before Past (Pluperfect)",
+    "example": "وقتی آمدی، من رفته بودم.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Doubt / Wish About Past (Subjunctive)",
+    "example": "امیدوارم نامه رسیده باشد.",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "Past Necessity",
+    "example": "شاید او غذا خورده باشد.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "قبل از رفتن، غذا خورده بودم.",
+    "ko": "",
+    "highlight": "خورده بودم"
+   },
+   {
+    "en": "شاید علی به دانشگاه رفته باشد.",
+    "ko": "",
+    "highlight": "رفته باشد"
+   },
+   {
+    "en": "باید تا دیروز کار را تمام کرده بودید.",
+    "ko": "",
+    "highlight": "تمام کرده بودید"
+   },
+   {
+    "en": "امیدوارم قطار راه نیفتاده باشد.",
+    "ko": "",
+    "highlight": "راه نیفتاده باشد"
+   },
+   {
+    "en": "ما قبلاً این فیلم را دیده بودیم.",
+    "ko": "",
+    "highlight": "دیده بودیم"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "امیدوارم او آمد.",
+    "right": "امیدوارم او آمده باشد.",
+    "note": "Expressions of uncertainty or hope regarding past events require the past subjunctive ('آمده باشد'), not simple past."
+   },
+   {
+    "wrong": "من کتاب را خوانده هستم.",
+    "right": "من کتاب را خوانده‌ام.",
+    "note": "The present perfect uses enclitic copulas (-am, -i, -ast), not the free-standing verb 'هستم'."
+   },
+   {
+    "wrong": "او کار را نکرده بود باشد.",
+    "right": "او کار را نکرده باشد.",
+    "note": "Past subjunctive is formed with 'باش-', never by stacking both 'بود' and 'باش'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you complete the past perfect: 'من قبلاً او را ___' (I had seen him)?",
+    "options": [
+     "دیده باشم",
+     "دیده بودم",
+     "دیده‌ام",
+     "می‌دیدم"
+    ],
+    "answer": 1,
+    "explanation": "The pluperfect (past perfect) is formed by the past participle + past of 'بودن' ('دیده بودم')."
+   },
+   {
+    "question": "Choose the past subjunctive form for 'he might have gone': 'شاید او ___'",
+    "options": [
+     "رفت",
+     "رفته باشد",
+     "رفته بود",
+     "می‌رود"
+    ],
+    "answer": 1,
+    "explanation": "'شاید' (perhaps) triggers the subjunctive; for past reference, use past participle + 'باشد'."
+   },
+   {
+    "question": "What is the past participle of 'نوشتن' (to write)?",
+    "options": [
+     "نویسنده",
+     "نوشت",
+     "نوشته",
+     "بنویس"
+    ],
+    "answer": 2,
+    "explanation": "Add the silent 'e' (ه) to the past stem (نوشت) to form 'نوشته'."
+   },
+   {
+    "question": "Select the correct sentence meaning 'They had already eaten':",
+    "options": [
+     "آن‌ها قبلاً غذا خورده باشیم.",
+     "آن‌ها قبلاً غذا خورده است.",
+     "آن‌ها قبلاً غذا می‌خوردند.",
+     "آن‌ها قبلاً غذا خورده بودند."
+    ],
+    "answer": 3,
+    "explanation": "'آن‌ها خورده بودند' correctly conjugates the pluperfect for 3rd person plural."
+   }
+  ],
+  "tip": "To spot the difference instantly: pluperfect ends in 'بود-' and expresses a completed past fact; past subjunctive ends in 'باش-' and expresses past doubt, obligation, or possibility."
+ },
+ {
+  "id": "fa-b1-progressive-aspect-dashtan",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "⏱️",
+  "title": "Progressive Aspect with 'dâshtan'",
+  "subtitle": "Express ongoing, uninterrupted actions in the present and past",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Persian creates an explicit progressive tense by conjugating 'داشتن' right before a conjugated main verb that already carries 'می‌-'.",
+  "structure": {
+   "headers": [
+    "Aspect / Tense",
+    "Auxiliary (داشتن)",
+    "Main Verb (with می‌-)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present Progressive (1st sg)",
+      "دارم",
+      "می‌نویسم"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past Progressive (1st sg)",
+      "داشتم",
+      "می‌نوشتم"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Present Progressive (3rd pl)",
+      "دارند",
+      "می‌روند"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Progressive (3rd pl)",
+      "داشتند",
+      "می‌رفتند"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Right Now (Present Progressive)",
+    "example": "من الان دارم شام می‌خورم.",
+    "translation": ""
+   },
+   {
+    "color": "#B91C1C",
+    "label": "Interrupted Past Action",
+    "example": "داشتم کتاب می‌خواندم که تلفن زنگ زد.",
+    "translation": ""
+   },
+   {
+    "color": "#991B1B",
+    "label": "Strictly Ongoing State",
+    "example": "بچه‌ها دارند در حیاط بازی می‌کنند.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "علی دارد تکالیفش را انجام می‌دهد.",
+    "ko": "",
+    "highlight": "دارد"
+   },
+   {
+    "en": "ما داشتیم فیلم تماشا می‌کردیم.",
+    "ko": "",
+    "highlight": "داشتیم"
+   },
+   {
+    "en": "داری چه کار می‌کنی؟",
+    "ko": "",
+    "highlight": "داری چه کار می‌کنی"
+   },
+   {
+    "en": "باران داشت به شدت می‌بارید.",
+    "ko": "",
+    "highlight": "داشت"
+   },
+   {
+    "en": "آن‌ها دارند به سمت خانه می‌روند.",
+    "ko": "",
+    "highlight": "دارند"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "من دارم غذا خوردم.",
+    "right": "من دارم غذا می‌خورم.",
+    "note": "Both auxiliary and main verb must match tense and person: 'دارم' (present) requires 'می‌خورم' (present)."
+   },
+   {
+    "wrong": "من ندارم می‌روم.",
+    "right": "من نمی‌روم.",
+    "note": "The auxiliary 'داشتن' is never negated for progressive meaning; simply negate the standard continuous verb ('نمی‌روم')."
+   },
+   {
+    "wrong": "او داشت رفت.",
+    "right": "او داشت می‌رفت.",
+    "note": "The main verb MUST retain the prefix 'می‌-' when preceded by 'داشتن'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'وقتی رسیدی، من ___ غذا می‌پختم.'",
+    "options": [
+     "دارم",
+     "بودم",
+     "داشتم",
+     "هستم"
+    ],
+    "answer": 2,
+    "explanation": "Matching the past progressive 'می‌پختم' requires the 1st person singular past auxiliary 'داشتم'."
+   },
+   {
+    "question": "How do you say 'We are currently speaking' in Persian?",
+    "options": [
+     "ما صحبت می‌داریم.",
+     "ما داریم صحبت می‌کنیم.",
+     "ما داشتیم صحبت می‌کردیم.",
+     "ما صحبت کرده داریم."
+    ],
+    "answer": 1,
+    "explanation": "Present progressive for 'ما' is 'داریم' + present continuous 'صحبت می‌کنیم'."
+   },
+   {
+    "question": "Which sentence correctly demonstrates the progressive aspect?",
+    "options": [
+     "سارا دارد به موسیقی گوش می‌دهد.",
+     "سارا داشت به موسیقی گوش داد.",
+     "سارا دارد گوش داد.",
+     "سارا گوش می‌داشت."
+    ],
+    "answer": 0,
+    "explanation": "'دارد' matches the present continuous main verb 'گوش می‌دهد'."
+   },
+   {
+    "question": "Can the progressive auxiliary 'داشتن' be negated (e.g., ندارم می‌روم)?",
+    "options": [
+     "Yes, it is common in formal Persian.",
+     "Yes, but only in past tense.",
+     "No, Persian negates the main continuous verb directly without داشتن.",
+     "No, you must use 'نیستم' instead."
+    ],
+    "answer": 2,
+    "explanation": "Persian does not use 'داشتن' in the negative; you simply use the standard negative imperfective (e.g. 'نمی‌روم')."
+   }
+  ],
+  "tip": "Remember: both the auxiliary 'داشتن' and the main verb must agree in person and tense (e.g., 'داشتم می‌رفتم' — both 1st person singular past)."
+ },
+ {
+  "id": "fa-b1-passive-voice-shodan",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#7C3AED",
+  "emoji": "🔄",
+  "title": "Passive Voice with 'shodan'",
+  "subtitle": "Convert transitive verbs into the passive using past participle + shodan",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The passive voice is formed by taking the past participle of a transitive verb and adding a conjugated form of 'شدن'.",
+  "structure": {
+   "headers": [
+    "Voice",
+    "Sentence",
+    "Structure"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Active (Simple)",
+      "سارا در را بست.",
+      "Subject + Object + Verb"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passive (Past)",
+      "در بسته شد.",
+      "Subject + Participle + شد"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Passive (Present)",
+      "در بسته می‌شود.",
+      "Subject + Participle + می‌شود"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Passive (Compound Verb)",
+      "خانه تمیز شد.",
+      "Non-verbal + شد (replaces کرد)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Simple Verb Passive",
+    "example": "این کتاب در سال گذشته نوشته شد.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Compound Verb Passive",
+    "example": "همه پنجره‌ها تمیز شدند.",
+    "translation": ""
+   },
+   {
+    "color": "#5B21B6",
+    "label": "Future Passive",
+    "example": "نامه فردا ارسال خواهد شد.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "نامه دیروز فرستاده شد.",
+    "ko": "",
+    "highlight": "فرستاده شد"
+   },
+   {
+    "en": "درهای دانشگاه بسته شدند.",
+    "ko": "",
+    "highlight": "بسته شدند"
+   },
+   {
+    "en": "این خانه سال گذشته ساخته شد.",
+    "ko": "",
+    "highlight": "ساخته شد"
+   },
+   {
+    "en": "غذا در آشپزخانه آماده می‌شود.",
+    "ko": "",
+    "highlight": "آماده می‌شود"
+   },
+   {
+    "en": "رمز عبور تغییر داده شد.",
+    "ko": "",
+    "highlight": "تغییر داده شد"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "در توسط باد باز کرد.",
+    "right": "در باز شد.",
+    "note": "Compound verbs with 'کردن' form the passive by replacing 'کردن' with 'شدن', not keeping 'کرد'."
+   },
+   {
+    "wrong": "نامه نوشته آمد.",
+    "right": "نامه نوشته شد.",
+    "note": "Persian uses 'شدن' as the passive auxiliary, never 'آمدن'."
+   },
+   {
+    "wrong": "کتاب‌ها خوانده شد.",
+    "right": "کتاب‌ها خوانده شدند.",
+    "note": "In standard Persian, plural animate and prominent subjects in passive clauses require plural verb agreement ('شدند')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'The door was opened'?",
+    "options": [
+     "در باز شد.",
+     "در باز کرد.",
+     "در باز شده است شد.",
+     "در باز بود."
+    ],
+    "answer": 0,
+    "explanation": "The compound verb 'باز کردن' forms its simple past passive by replacing 'کرد' with 'شد'."
+   },
+   {
+    "question": "What is the passive form of 'نوشت' (he/she wrote)?",
+    "options": [
+     "نوشتن شد",
+     "نوشته شد",
+     "می‌نویسد",
+     "نوشت شده"
+    ],
+    "answer": 1,
+    "explanation": "Past stem 'نوشت' + -e = 'نوشته', followed by 'شد' = 'نوشته شد'."
+   },
+   {
+    "question": "Change into the present passive: 'او پنجره را می‌شکند.' (The window is broken...)",
+    "options": [
+     "پنجره شکسته بود.",
+     "پنجره شکسته شد.",
+     "پنجره شکسته می‌شود.",
+     "پنجره می‌شکند."
+    ],
+    "answer": 2,
+    "explanation": "Present continuous passive uses the past participle + 'می‌شود': 'شکسته می‌شود'."
+   },
+   {
+    "question": "How do compound verbs formed with 'کردن' generally form their passive?",
+    "options": [
+     "By adding 'بوده'",
+     "By suffixing '-i'",
+     "By replacing 'کردن' with 'بودن'",
+     "By replacing 'کردن' with 'شدن'"
+    ],
+    "answer": 3,
+    "explanation": "Compound verbs with 'کردن' (like 'تعمیر کردن') simply swap 'کردن' for 'شدن' ('تعمیر شدن')."
+   }
+  ],
+  "tip": "For compound verbs formed with 'کردن' (like 'پیدا کردن' to find), simply substitute 'کردن' with 'شدن' ('پیدا شدن' to be found) without needing a past participle."
+ },
+ {
+  "id": "fa-b1-causative-verbs",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🔄",
+  "title": "Morphological Causative Verbs (-ândan / -ânidan)",
+  "subtitle": "Deriving transitive and causative verbs from present stems",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Add the suffix -ândan (or -ânidan) to the present stem of an intransitive verb to create a regular transitive causative verb.",
+  "structure": {
+   "headers": [
+    "Base Verb",
+    "Present Stem",
+    "Causative Infinitive",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ترسیدن",
+      "ترس",
+      "ترساندن",
+      "to frighten / scare"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "خوابیدن",
+      "خواب",
+      "خواباندن",
+      "to put to sleep"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "رسیدن",
+      "رس",
+      "رساندن",
+      "to deliver / convey"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "نشستن",
+      "نشین",
+      "نشاندن",
+      "to seat / make sit"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Making Someone Do an Action",
+    "example": "مادر کودک را سر سفره نشاند.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Causing a Psychological State",
+    "example": "صدای رعد و برق بچه‌ها را ترساند.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Physical Transfer or Delivery",
+    "example": "پستچی نامه را به دست من رساند.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "او همیشه برادر کوچکش را می‌ترساند.",
+    "ko": "",
+    "highlight": "می‌ترساند"
+   },
+   {
+    "en": "پرستار بیمار را روی تخت خواباند.",
+    "ko": "",
+    "highlight": "خواباند"
+   },
+   {
+    "en": "راننده مسافران را به فرودگاه رساند.",
+    "ko": "",
+    "highlight": "رساند"
+   },
+   {
+    "en": "باد برگ‌های پاییزی را رقصاند.",
+    "ko": "",
+    "highlight": "رقصاند"
+   },
+   {
+    "en": "معلم دانش‌آموز را سر جایش نشاند.",
+    "ko": "",
+    "highlight": "نشاند"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "مادر کودک را خوابید.",
+    "right": "مادر کودک را خواباند.",
+    "note": "Intransitive verbs like 'خوابیدن' cannot take a direct object ('را'); you must derive the causative form 'خواباندن'."
+   },
+   {
+    "wrong": "او سگ را ترسیدن کرد.",
+    "right": "او سگ را ترساند.",
+    "note": "Do not construct artificial compound verbs with 'کردن' when a direct morphological causative with '-ândan' exists."
+   },
+   {
+    "wrong": "او نامه را به ما رسید.",
+    "right": "او نامه را به ما رساند.",
+    "note": "'رسیدن' means 'to arrive' (intransitive); use 'رساندن' to mean 'to deliver' or 'to cause to arrive'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The thunder ___ the small children last night.",
+    "options": [
+     "ترسید",
+     "ترساند",
+     "ترسیده بود",
+     "می‌ترسید"
+    ],
+    "answer": 1,
+    "explanation": "The causative form 'ترساند' is needed because the thunder caused the children to fear (direct object 'بچه‌ها را')."
+   },
+   {
+    "question": "I ___ my friend to the train station on time.",
+    "options": [
+     "رسیدم",
+     "رسید",
+     "رساندم",
+     "می‌رسیدم"
+    ],
+    "answer": 2,
+    "explanation": "'رساندم' (first-person singular causative past) means 'I delivered / gave a lift to someone'."
+   },
+   {
+    "question": "The mother gently ___ the baby in the crib.",
+    "options": [
+     "خواباند",
+     "خوابید",
+     "بخوابد",
+     "می‌خوابید"
+    ],
+    "answer": 0,
+    "explanation": "'خواباند' is the transitive causative past of 'خوابیدن', meaning 'put to sleep'."
+   },
+   {
+    "question": "The teacher ___ all the students in the auditorium.",
+    "options": [
+     "نشست",
+     "می‌نشیند",
+     "بنشینند",
+     "نشاند"
+    ],
+    "answer": 3,
+    "explanation": "'نشاند' is the transitive causative stem used for making someone sit down."
+   }
+  ],
+  "tip": "All causative verbs formed with '-ândan' behave as completely regular verbs in both past and present (present stem ends in '-ân', e.g., می‌ترساند)."
+ },
+ {
+  "id": "fa-b1-relative-clauses-and-resumptive-pronouns",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#7C3AED",
+  "emoji": "🔗",
+  "title": "Restrictive Relative Clauses with 'ke' and Resumptive Pronouns",
+  "subtitle": "Connecting clauses using the restrictive marker -i and resumptive enclitics",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Attach the restrictive enclitic '-i' (ی) to the head noun before 'که' and retain an obligatory pronominal clitic inside the clause whenever the relativized noun serves as an object or prepositional complement.",
+  "structure": {
+   "headers": [
+    "Syntactic Role",
+    "Head Noun Pattern",
+    "Relative Clause with Resumptive Clitic",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Direct Object",
+      "کتابی که",
+      "کتابی که آن را خریدم / دیروز خریدمش",
+      "Clitic '-ash' references the antecedent"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Prepositional Object",
+      "مردی که",
+      "مردی که با او / باهاش صحبت کردم",
+      "Preposition requires a pronominal object"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Possessive",
+      "دانشجویی که",
+      "دانشجویی که نمره‌اش عالی شد",
+      "Clitic marks possession inside relative clause"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Subject",
+      "زنی که",
+      "زنی که اینجا کار می‌کند",
+      "No resumptive clitic needed for subject head"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Restrictive Clause with Preposition",
+    "example": "این همان خانه‌ای است که در آن بزرگ شدم.",
+    "translation": ""
+   },
+   {
+    "color": "#9333EA",
+    "label": "Object Relative Clause with Clitic",
+    "example": "فیلمی که دیشب دیدمش بسیار جالب بود.",
+    "translation": ""
+   },
+   {
+    "color": "#C026D3",
+    "label": "Possessive Subordinate Reference",
+    "example": "نویسنده‌ای که کتابش برنده شد اینجاست.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "مردی که دیروز با او حرف زدی وکیلم است.",
+    "ko": "",
+    "highlight": "با او"
+   },
+   {
+    "en": "کتابی که خریدمش روی میز است.",
+    "ko": "",
+    "highlight": "خریدمش"
+   },
+   {
+    "en": "دانشجویی که نمره‌اش بیست شد جایزه گرفت.",
+    "ko": "",
+    "highlight": "نمره‌اش"
+   },
+   {
+    "en": "ماشینی که موتورش خراب است حرکت نمی‌کند.",
+    "ko": "",
+    "highlight": "موتورش"
+   },
+   {
+    "en": "دوستی که به او اعتماد دارم امروز می‌آید.",
+    "ko": "",
+    "highlight": "به او"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "مرد که دیروز دیدم مهربان بود.",
+    "right": "مردی که دیروز دیدم مهربان بود.",
+    "note": "A restrictive relative clause requires the restrictive suffix '-i' (ی) attached to the head noun."
+   },
+   {
+    "wrong": "دوستی که با صحبت کردم آمد.",
+    "right": "دوستی که با او صحبت کردم آمد.",
+    "note": "A preposition inside a relative clause cannot stand stranded without a resumptive pronoun object."
+   },
+   {
+    "wrong": "این کتابی که خریدم هست.",
+    "right": "این کتابی است که خریدم.",
+    "note": "In standard formal syntax, the copula 'است' precedes the relative clause when defining the subject."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The student ___ car was stolen called the police.",
+    "options": [
+     "دانشجویی که ماشینش",
+     "دانشجو که ماشین",
+     "دانشجویی که ماشین",
+     "دانشجو که ماشینش"
+    ],
+    "answer": 0,
+    "explanation": "The head noun must take the restrictive '-i' (دانشجویی), and 'ماشینش' contains the required resumptive clitic '-ash'."
+   },
+   {
+    "question": "This is the colleague ___ I traveled to Isfahan with.",
+    "options": [
+     "که سفر کردم با او",
+     "همکاری که با او سفر کردم",
+     "همکار که با او سفر کرد",
+     "همکاری با او که سفر کردم"
+    ],
+    "answer": 1,
+    "explanation": "'همکاری که' marks the restricted antecedent, followed by preposition + resumptive pronoun 'با او'."
+   },
+   {
+    "question": "The house ___ doors were painted blue looks beautiful.",
+    "options": [
+     "خانه‌ای که درهایش",
+     "خانه که درها",
+     "خانه‌ای درهایش که",
+     "خانه که درهای"
+    ],
+    "answer": 0,
+    "explanation": "The head noun takes '-i' (خانه‌ای) and the possessive relationship in the clause requires the clitic '-ash' on 'درهایش'."
+   },
+   {
+    "question": "The poem ___ I heard yesterday was profound.",
+    "options": [
+     "شعری شنیدمش",
+     "شعر که شنیدم",
+     "شعر که آن را",
+     "شعری که دیروز شنیدمش"
+    ],
+    "answer": 3,
+    "explanation": "'شعری که' features the restrictive marker, while 'شنیدمش' appropriately retains the resumptive direct object clitic."
+   }
+  ],
+  "tip": "Unlike English, which drops prepositions or moves them ('the man I spoke to'), Persian never strands prepositions; 'با', 'به', and 'از' must always attach to a resumptive pronoun like 'او' or an enclitic."
+ },
+ {
+  "id": "fa-b2-unreal-and-counterfactual-conditionals",
+  "level": "b2",
+  "category": "conditionals",
+  "categoryColor": "#EA580C",
+  "emoji": "⏳",
+  "title": "Hypothetical and Counterfactual Conditionals",
+  "subtitle": "Expressing impossible past events and unreal present situations with agar",
+  "color": "#C2410C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Counterfactual conditionals employ the past imperfective (می‌ + past stem) or past subjunctive in the condition clause and past imperfective in the result clause.",
+  "structure": {
+   "headers": [
+    "Conditional Type",
+    "Protasis (agar clause)",
+    "Apodosis (result clause)",
+    "Significance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Unreal Present",
+      "اگر وقت داشتم",
+      "می‌آمدم",
+      "I do not have time now, so I cannot come"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Counterfactual Past",
+      "اگر خوانده بود",
+      "قبول می‌شد",
+      "Had he studied in the past, he would have passed"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Mixed Conditional",
+      "اگر زودتر راه افتاده بودیم",
+      "الان اینجا بودیم",
+      "Past action with present hypothetical result"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Alternative Subjunctive",
+      "اگر باران باریده بود",
+      "زمین خیس می‌بود",
+      "Subjunctive past in protasis expressing contrary to fact"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Unreal Present Condition",
+    "example": "اگر پول کافی داشتم، همین امروز آن خانه را می‌خریدم.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Regret over Past Action",
+    "example": "اگر به هشدارهای پلیس گوش داده بودی، جریمه نمی‌شدی.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Hypothetical Counterfactual Scenario",
+    "example": "اگر او حقیقت را می‌دانست، هرگز با آن‌ها همکاری نمی‌کرد.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "اگر دیروز هوا خوب بود، به کوه می‌رفتیم.",
+    "ko": "",
+    "highlight": "می‌رفتیم"
+   },
+   {
+    "en": "اگر به من گفته بودید، حتماً کمکتان می‌کردم.",
+    "ko": "",
+    "highlight": "گفته بودید"
+   },
+   {
+    "en": "اگر بال داشتم، به آسمان پرواز می‌کردم.",
+    "ko": "",
+    "highlight": "می‌کردم"
+   },
+   {
+    "en": "اگر کلید را فراموش نکرده بودم، پشت در نمی‌ماندم.",
+    "ko": "",
+    "highlight": "نمی‌ماندم"
+   },
+   {
+    "en": "اگر پزشک اینجا بود، بیمار نجات پیدا می‌کرد.",
+    "ko": "",
+    "highlight": "نجات پیدا می‌کرد"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "اگر پول داشته باشم، آن خانه را می‌خریدم.",
+    "right": "اگر پول داشتم، آن خانه را می‌خریدم.",
+    "note": "Do not mix the present subjunctive (داشته باشم - real future) with a counterfactual past apodosis (می‌خریدم)."
+   },
+   {
+    "wrong": "اگر دیروز باران بارید، نرفتیم.",
+    "right": "اگر دیروز باران باریده بود، نمی‌رفتیم.",
+    "note": "Counterfactual past events require the past perfect or past imperfective in Persian, not simple past indicative."
+   },
+   {
+    "wrong": "اگر تو جای من بودی، چه کار کردی؟",
+    "right": "اگر تو جای من بودی، چه کار می‌کردی؟",
+    "note": "The apodosis (result clause) of an unreal conditional must have the continuous prefix 'می‌'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "If you had informed me earlier, I ___ you immediately.",
+    "options": [
+     "خبر دادم",
+     "کمکت می‌کردم",
+     "کمک خواهم کرد",
+     "کمک بکنم"
+    ],
+    "answer": 1,
+    "explanation": "Counterfactual result clauses require the past imperfective with 'می‌' ('کمکت می‌کردم')."
+   },
+   {
+    "question": "If we had taken the train, we ___ late.",
+    "options": [
+     "نمی‌رسیدیم",
+     "نرسیدیم",
+     "نمی‌رسیم",
+     "نرسیده باشیم"
+    ],
+    "answer": 0,
+    "explanation": "'نمی‌رسیدیم' represents the past continuous negative used for unreal past results."
+   },
+   {
+    "question": "If she ___ the secret, she wouldn't have cried.",
+    "options": [
+     "می‌داند",
+     "بداند",
+     "دانسته بود",
+     "بدان"
+    ],
+    "answer": 2,
+    "explanation": "The past perfect subjunctive/indicative ('دانسته بود') correctly establishes the prior counterfactual condition."
+   },
+   {
+    "question": "If I were rich right now, I ___ around the world.",
+    "options": [
+     "سفر کردم",
+     "سفر کنم",
+     "سفر کرده‌ام",
+     "سفر می‌کردم"
+    ],
+    "answer": 3,
+    "explanation": "For an unreal present conditional, the result clause takes the past continuous ('سفر می‌کردم')."
+   }
+  ],
+  "tip": "Notice how the prefix 'می‌' on past stems functions like 'would' in English unreal conditionals (e.g., می‌رفتم = 'I would go' or 'I would have gone')."
+ },
+ {
+  "id": "fa-b2-infinitive-and-deverbal-nominalizations",
+  "level": "b2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🏗️",
+  "title": "Short Infinitives and Deverbal Nominal Derivations",
+  "subtitle": "Past stems as short infinitives and compound nominal stems",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Dropping the final -an from full infinitives produces 'short infinitives' (past stems), which function as action nouns and combine with present stems to create abstract deverbal compounds.",
+  "structure": {
+   "headers": [
+    "Derivation Pattern",
+    "Stem Formula",
+    "Compound Persian Example",
+    "Gloss & Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Short Infinitive",
+      "Infinitive minus -an",
+      "رفت و برگشت",
+      "going and returning (round trip)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past + Present Stem",
+      "Past Stem + o + Present Stem",
+      "جست‌وجو / گفت‌وگو",
+      "search (seeking) / dialogue (talking)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Suffixation with -mân",
+      "Present/Past + -mân",
+      "ساختمان / چیدمان",
+      "building / arrangement"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Suffixation with -esh",
+      "Present Stem + -esh",
+      "گردش / کوشش",
+      "stroll / effort"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Round-Trip and Reciprocal Actions",
+    "example": "بلیط رفت و برگشت به شیراز بسیار گران شده است.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Abstract Deverbal Compounds",
+    "example": "گفت‌وگو میان دو طرف ساعت‌ها به طول انجامید.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Short Infinitive as Object of Preposition",
+    "example": "پس از رسیدن قطار، هنگام پیاده شدن مسافران شلوغ شد.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "خرید و فروش ملک در این منطقه سودآور است.",
+    "ko": "",
+    "highlight": "خرید و فروش"
+   },
+   {
+    "en": "دانشمندان در حال جست‌وجو برای یافتن دارو هستند.",
+    "ko": "",
+    "highlight": "جست‌وجو"
+   },
+   {
+    "en": "دید و بازدید عید یکی از سنت‌های کهن است.",
+    "ko": "",
+    "highlight": "دید و بازدید"
+   },
+   {
+    "en": "هنگام شست‌وشو باید از آب سرد استفاده کرد.",
+    "ko": "",
+    "highlight": "شست‌وشو"
+   },
+   {
+    "en": "رفت و آمد ماشین‌ها در مرکز شهر محدود شد.",
+    "ko": "",
+    "highlight": "رفت و آمد"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "بلیط رفتن و برگشتن خریدم.",
+    "right": "بلیط رفت و برگشت خریدم.",
+    "note": "Idiomatic nominal compounds and tickets use truncated past stems ('رفت و برگشت'), not full long infinitives."
+   },
+   {
+    "wrong": "آن‌ها در حال گفتن و شنیدن بودند.",
+    "right": "آن‌ها در حال گفت‌وگو بودند.",
+    "note": "The standard abstract nominal for 'dialogue/negotiation' is the compound 'گفت‌وگو' (or گفت‌و‌شنود)."
+   },
+   {
+    "wrong": "برای خریدن این کتاب، جستن و جویدن زیادی کردم.",
+    "right": "برای خرید این کتاب، جست‌وجوی زیادی کردم.",
+    "note": "Use the nominalized stem compound 'جست‌وجو' rather than awkward full coordinated infinitives."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "We bought a ___ train ticket to Mashhad.",
+    "options": [
+     "رفت و برگشت",
+     "رفتن و برگشتن",
+     "رو و گرد",
+     "رفته و برگشته"
+    ],
+    "answer": 0,
+    "explanation": "'رفت و برگشت' uses short infinitives (past stems) coupled with the conjunction 'o' to mean 'round trip'."
+   },
+   {
+    "question": "The diplomatic ___ lasted until midnight.",
+    "options": [
+     "گفتن",
+     "گفت‌وگو",
+     "شنیده",
+     "گوینده"
+    ],
+    "answer": 1,
+    "explanation": "'گفت‌وگو' combines past stem 'گفت' + present stem 'گو' to form the abstract noun 'conversation/dialogue'."
+   },
+   {
+    "question": "Commercial ___ has expanded rapidly in the capital.",
+    "options": [
+     "فروشنده",
+     "خرایدار",
+     "خرید و فروش",
+     "خریده شد"
+    ],
+    "answer": 2,
+    "explanation": "'خرید و فروش' (buying and selling / commerce) uses the short infinitive pairing formula."
+   },
+   {
+    "question": "Urban traffic (literally: coming and going) is dense today: ___ سنگین است.",
+    "options": [
+     "آمده و رفته",
+     "آمدن",
+     "آینده",
+     "رفت و آمد"
+    ],
+    "answer": 3,
+    "explanation": "'رفت و آمد' is the standard compound noun for transit, traffic, and commuting."
+   }
+  ],
+  "tip": "Short infinitives (like 'دید', 'شنید', 'خرید') are completely identical to the third-person singular simple past, but function syntactically as pure nouns."
+ },
+ {
+  "id": "fa-b2-differential-object-and-enclitic-movement",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#DC2626",
+  "emoji": "🔀",
+  "title": "Clitic Climbing and Syntactic Dislocation",
+  "subtitle": "Managing pronominal enclitics and topicalized objects in complex predicates",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "In compound verbs and modal verb phrases, pronominal object enclitics can 'climb' from the main infinitive or verbal noun and attach to the non-verbal element or auxiliary.",
+  "structure": {
+   "headers": [
+    "Syntactic Position",
+    "Compound/Modal Structure",
+    "Enclitic Attached Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Canonical Placement",
+      "پیدا کردن + او",
+      "پیدایش کردم",
+      "I found him/it (attached to non-verbal)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Climbing to Auxiliary",
+      "می‌خواهم ببینم + تو",
+      "می‌خواهمت ببینم (colloquial)",
+      "I want to see you"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Topicalization with 'râ'",
+      "کتاب را دیروز خریدم",
+      "آن کتاب را، دیروز خریدمش",
+      "Dislocated topic with resumptive clitic"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Preposition Cliticization",
+      "از دست دادن + آن",
+      "از دستش دادم",
+      "I lost it / missed it"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Clitic Attachment to Non-Verbal Stem",
+    "example": "فراموشش کردم چون دیگر اهمیتی نداشت.",
+    "translation": ""
+   },
+   {
+    "color": "#E11D48",
+    "label": "Complex Object Dislocation (Topicalization)",
+    "example": "این موضوع مهم را، سال‌ها پیش بررسی‌اش کرده بودیم.",
+    "translation": ""
+   },
+   {
+    "color": "#BE123C",
+    "label": "Clitic on Prepositional Element in Compound",
+    "example": "فرصت طلایی را خیلی ساده از دستش داد.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "کلیدم گم شده بود اما بالاخره پیدایش کردم.",
+    "ko": "",
+    "highlight": "پیدایش کردم"
+   },
+   {
+    "en": "این خاطره تلخ را هیچ‌وقت فراموشش نمی‌کنم.",
+    "ko": "",
+    "highlight": "فراموشش نمی‌کنم"
+   },
+   {
+    "en": "بچه‌ها بازیگوش هستند، آرامشان کن.",
+    "ko": "",
+    "highlight": "آرامشان کن"
+   },
+   {
+    "en": "اگر پیراهن کثیف است، تمیزش می‌کنم.",
+    "ko": "",
+    "highlight": "تمیزش می‌کنم"
+   },
+   {
+    "en": "این داستان زیبا را بارها خواندمش.",
+    "ko": "",
+    "highlight": "خواندمش"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "من پیدا کردم او را.",
+    "right": "من پیدایش کردم. / من او را پیدا کردم.",
+    "note": "In natural Persian, pronominal direct objects are expressed either with pre-verbal 'او را' or enclitics on the nominal element ('پیدایش کردم')."
+   },
+   {
+    "wrong": "پیدا کردمش.",
+    "right": "پیدایش کردم.",
+    "note": "In compound verbs formed with 'کردن', the object enclitic prefers to attach directly to the nominal part ('پیدایش'), not to the auxiliary verb ending."
+   },
+   {
+    "wrong": "این کتاب را، من نخواندم آن.",
+    "right": "این کتاب را، من نخواندمش.",
+    "note": "Topicalized definite objects marked with 'را' take a resumptive enclitic ('-ash' / '-esh') rather than an independent pronoun at the end."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I lost my sunglasses yesterday, but today I ___ under the sofa.",
+    "options": [
+     "پیدا کردی",
+     "پیدایش کردم",
+     "پیدا کردم او",
+     "پیدایم کرد"
+    ],
+    "answer": 1,
+    "explanation": "In 'پیدایش کردم', the 3rd person singular enclitic '-ash' attaches to the nominal base 'پیدا'."
+   },
+   {
+    "question": "That old house? We ___ two years ago.",
+    "options": [
+     "خراب کردیم او",
+     "خرابش کردیم",
+     "خرابمان کرد",
+     "خراب کردندش"
+    ],
+    "answer": 1,
+    "explanation": "'خرابش کردیم' shows standard clitic climbing onto the adjective 'خراب' before the verbal light verb 'کردیم'."
+   },
+   {
+    "question": "The soup was completely cold, so she ___ in the microwave.",
+    "options": [
+     "گرمش کرد",
+     "گرم کرد او",
+     "گرمش کردند",
+     "گرم شد"
+    ],
+    "answer": 0,
+    "explanation": "'گرمش کرد' (she warmed it up) correctly positions the clitic '-ash' on the adjective 'گرم'."
+   },
+   {
+    "question": "As for this antique Persian rug, my grandfather ___ fifty years ago.",
+    "options": [
+     "خریدند",
+     "خریدم او",
+     "خریده بود",
+     "خریدش"
+    ],
+    "answer": 3,
+    "explanation": "'خریدش' attaches the resumptive enclitic '-ash' directly to the transitive simple verb."
+   }
+  ],
+  "tip": "In everyday formal and colloquial Persian compound verbs (Noun + کردن/زدن/دادن), the enclitic pronoun (-am, -at, -ash) almost always attaches to the NOUN, not to the auxiliary verb."
+ }
+]

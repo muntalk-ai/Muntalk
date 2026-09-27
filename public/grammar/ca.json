@@ -1,0 +1,3355 @@
+[
+ {
+  "id": "ca-a1-definite-articles-and-contractions",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "📰",
+  "title": "Definite Articles and Contractions",
+  "subtitle": "Learn how Catalan articles change before vowels and combine with prepositions",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Catalan definite articles el and la apostrophize before vowels, and combine obligatorily with the prepositions a, de, and per.",
+  "structure": {
+   "headers": [
+    "Preposition",
+    "el (M. Sg.)",
+    "els (M. Pl.)",
+    "la / les (Fem.)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "a (to / at)",
+      "al (a + el)",
+      "als (a + els)",
+      "a la / a les"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "de (of / from)",
+      "del (de + el)",
+      "dels (de + els)",
+      "de la / de les"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "per (by / through)",
+      "pel (per + el)",
+      "pels (per + els)",
+      "per la / per les"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Elision before vowels",
+    "example": "L'home i l'amiga viuen a Girona.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Prepositional contraction",
+    "example": "Anem al teatre amb el cotxe del pare.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Plural forms",
+    "example": "Donem les gràcies als professors.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "L'amic de la Maria arriba avui.",
+    "ko": "",
+    "highlight": "L'amic"
+   },
+   {
+    "en": "Caminem pel parc cada matí.",
+    "ko": "",
+    "highlight": "pel"
+   },
+   {
+    "en": "Donem el llibre al professor.",
+    "ko": "",
+    "highlight": "al"
+   },
+   {
+    "en": "Aquest és el cotxe del veí.",
+    "ko": "",
+    "highlight": "del"
+   },
+   {
+    "en": "Parlem dels problemes actuals.",
+    "ko": "",
+    "highlight": "dels"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Vaig a el cinema.",
+    "right": "Vaig al cinema.",
+    "note": "The preposition 'a' and the masculine article 'el' must contract into 'al'."
+   },
+   {
+    "wrong": "El aigua és freda.",
+    "right": "L'aigua és freda.",
+    "note": "Feminine singular nouns starting with a vowel take l', not el or uncontracted la."
+   },
+   {
+    "wrong": "Passegem per el carrer.",
+    "right": "Passegem pel carrer.",
+    "note": "'Per' + 'el' contracts obligatorily into 'pel' in standard Catalan."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "We are going ___ market. (to the)",
+    "options": [
+     "a el",
+     "al",
+     "als",
+     "pel"
+    ],
+    "answer": 1,
+    "explanation": "The preposition 'a' combines with masculine article 'el' to form the contraction 'al'."
+   },
+   {
+    "question": "This is the car ___ boy. (of the)",
+    "options": [
+     "del",
+     "de el",
+     "de l'",
+     "dels"
+    ],
+    "answer": 0,
+    "explanation": "'De' + 'el' contracts into 'del' before a consonant-initial masculine noun."
+   },
+   {
+    "question": "She walks ___ streets of Barcelona. (through the [pl.])",
+    "options": [
+     "per les",
+     "pels",
+     "per els",
+     "pel"
+    ],
+    "answer": 1,
+    "explanation": "'Pels' is the contraction of 'per' + 'els' (masculine plural: els carrers)."
+   },
+   {
+    "question": "___ friend lives near the beach. (The [fem.])",
+    "options": [
+     "La amiga",
+     "L'amiga",
+     "El amiga",
+     "Al amiga"
+    ],
+    "answer": 1,
+    "explanation": "The feminine article 'la' apostrophizes to 'l'' before a vowel."
+   }
+  ],
+  "tip": "Before unstressed i/u (or hi/hu), the feminine article 'la' does not elide: say 'la universitat' and 'la idea', but 'l'illa' (stressed i)."
+ },
+ {
+  "id": "ca-a1-personal-articles",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "👤",
+  "title": "Personal Articles with Proper Names",
+  "subtitle": "Discover the unique Catalan habit of placing articles before first names",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "In Catalan, first names are normally preceded by personal articles (en/el for men, na/la for women), expressing familiarity and grammatical naturalness.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Before Consonant",
+    "Before Vowel",
+    "Central Everyday Variant"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine",
+      "en",
+      "n'",
+      "el / l'"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine (formal/trad.)",
+      "na",
+      "n'",
+      "la / l'"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine (standard modern)",
+      "la",
+      "l'",
+      "la / l'"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Talking about a male friend",
+    "example": "En Joan arriba demà al matí.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Talking about a female friend",
+    "example": "La Marta estudia medicina a Barcelona.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Names starting with a vowel",
+    "example": "L'Anna i n'Andreu són germans.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "En Pau té vint anys.",
+    "ko": "",
+    "highlight": "En Pau"
+   },
+   {
+    "en": "La Clara parla tres idiomes.",
+    "ko": "",
+    "highlight": "La Clara"
+   },
+   {
+    "en": "He vist l'Oriol al supermercat.",
+    "ko": "",
+    "highlight": "l'Oriol"
+   },
+   {
+    "en": "Demà vindrà n'Helena a dinar.",
+    "ko": "",
+    "highlight": "n'Helena"
+   },
+   {
+    "en": "El Marc treballa des de casa.",
+    "ko": "",
+    "highlight": "El Marc"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Pere és el meu germà.",
+    "right": "En Pere és el meu germà.",
+    "note": "Dropping the personal article sounds unnatural or overly foreign in everyday Catalan."
+   },
+   {
+    "wrong": "Hola, en Jordi!",
+    "right": "Hola, Jordi!",
+    "note": "Do not use personal articles when addressing someone directly in the vocative case."
+   },
+   {
+    "wrong": "N'Joan viu a Lleida.",
+    "right": "En Joan viu a Lleida.",
+    "note": "Use 'en' before consonants; 'n'' is only used before vowels or silent h."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "___ David is studying Catalan. (using standard personal article)",
+    "options": [
+     "N'",
+     "En",
+     "Na",
+     "Al"
+    ],
+    "answer": 1,
+    "explanation": "'En' is the masculine personal article used before consonant-initial names."
+   },
+   {
+    "question": "Where is ___ Anna?",
+    "options": [
+     "la",
+     "l'",
+     "en",
+     "el"
+    ],
+    "answer": 1,
+    "explanation": "Before a vowel-initial name like Anna, the feminine article apostrophizes to 'l'' (or 'n'')."
+   },
+   {
+    "question": "When speaking directly to a friend: 'Good morning, ___!'",
+    "options": [
+     "en Marc",
+     "el Marc",
+     "Marc",
+     "del Marc"
+    ],
+    "answer": 2,
+    "explanation": "In direct address (vocative), the personal article is omitted entirely."
+   },
+   {
+    "question": "___ Laura arrives tomorrow.",
+    "options": [
+     "El",
+     "En",
+     "Dels",
+     "La"
+    ],
+    "answer": 3,
+    "explanation": "Female first names starting with a consonant take 'la' (or traditionally 'na')."
+   }
+  ],
+  "tip": "In the Balearic Islands, 'en' and 'na' are standard everywhere; in Central Catalonia, 'el' and 'la' are commonly heard instead."
+ },
+ {
+  "id": "ca-a1-ser-vs-estar",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "⚖️",
+  "title": "Ser vs Estar",
+  "subtitle": "Master the distinction between permanent essence, temporary states, and Catalan location rules",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use 'ser' for essential identity, characteristics, origin, and permanent location, but 'estar' for physical states, health, and temporary situations.",
+  "structure": {
+   "headers": [
+    "Verb",
+    "Main Uses",
+    "Catalan Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ser",
+      "Identity, nationality, time, inherent traits",
+      "Soc mestre i soc de Manresa.",
+      "I am a teacher and I'm from Manresa."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "estar",
+      "Emotions, states of health, temporary postures",
+      "Estic cansat i la sopa està calenta.",
+      "I am tired and the soup is hot."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ser (location)",
+      "Geographical/permanent location of objects and cities",
+      "La Sagrada Família és a Barcelona.",
+      "The Sagrada Familia is in Barcelona."
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Identity & Origin",
+    "example": "Ell és enginyer i és de València.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Temporary Physical State",
+    "example": "Avui estic molt refredat.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Geographical Location",
+    "example": "On és la biblioteca del poble?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "La casa és gran i blanca.",
+    "ko": "",
+    "highlight": "és"
+   },
+   {
+    "en": "Com estàs avui?",
+    "ko": "",
+    "highlight": "estàs"
+   },
+   {
+    "en": "Barcelona és a Catalunya.",
+    "ko": "",
+    "highlight": "és"
+   },
+   {
+    "en": "El cafè està massa calent.",
+    "ko": "",
+    "highlight": "està"
+   },
+   {
+    "en": "Nosaltres som estudiants universitaris.",
+    "ko": "",
+    "highlight": "som"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "On està la catedral?",
+    "right": "On és la catedral?",
+    "note": "In Catalan, the permanent location of buildings and places typically uses 'ser', unlike Spanish."
+   },
+   {
+    "wrong": "Estic de Mallorca.",
+    "right": "Soc de Mallorca.",
+    "note": "Origin and provenance always require 'ser'."
+   },
+   {
+    "wrong": "La taula és bruta.",
+    "right": "La taula està bruta.",
+    "note": "Being dirty is a temporary state or condition, requiring 'estar'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Girona ___ in the north of Catalonia.",
+    "options": [
+     "està",
+     "és",
+     "hi ha",
+     "ser"
+    ],
+    "answer": 1,
+    "explanation": "Catalan uses 'ser' for the permanent geographical location of towns and landmarks."
+   },
+   {
+    "question": "Today I ___ very tired from work.",
+    "options": [
+     "estic",
+     "soc",
+     "ets",
+     "estar"
+    ],
+    "answer": 0,
+    "explanation": "Tiredness is a temporary physical state, so 'estar' ('estic') is used."
+   },
+   {
+    "question": "They ___ doctors at the general hospital.",
+    "options": [
+     "estan",
+     "estem",
+     "són",
+     "sou"
+    ],
+    "answer": 2,
+    "explanation": "Professions and identities require 'ser' ('ells són')."
+   },
+   {
+    "question": "How ___ you? (greeting someone)",
+    "options": [
+     "com ets?",
+     "com estàs?",
+     "com som?",
+     "com estar?"
+    ],
+    "answer": 1,
+    "explanation": "Asking how someone is feeling refers to their current state, requiring 'estar'."
+   }
+  ],
+  "tip": "Be careful if you know Spanish: permanent places use 'ser' in Catalan ('El museu és al centre'), never 'estar'!"
+ },
+ {
+  "id": "ca-a1-gender-and-number-agreement",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "👥",
+  "title": "Gender and Plural Formation Rules",
+  "subtitle": "Understand feminine vowel shifts and orthographic consonant changes in the plural",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Feminine nouns and plurals typically end in -a and -es, requiring spelling adjustments like c > qu, ç > c, and g > gu to preserve pronunciation.",
+  "structure": {
+   "headers": [
+    "Singular Ending",
+    "Plural Ending",
+    "Spelling Rule",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-a (fem. sg.)",
+      "-es (fem. pl.)",
+      "General feminine plural",
+      "casa → cases"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ca",
+      "-ques",
+      "c turns to qu before e",
+      "amiga → amigues / vaca → vaques"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ça / -ja",
+      "-ces / -ges",
+      "ç/j soften before e",
+      "plaça → places / taronja → taronges"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ig (masc.)",
+      "-jos / -igs",
+      "Affricate sound shifts",
+      "desig → desitjos / passeig → passejos"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Regular plural ending",
+    "example": "Tinc dues taules noves a l'habitació.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Sound-preserving spelling change",
+    "example": "Les noies són molt simpàtiques.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Masculine consonant plurals",
+    "example": "Visitem molts pobles petits.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Aquestes botigues tanquen tard.",
+    "ko": "",
+    "highlight": "botigues"
+   },
+   {
+    "en": "Caminem per places antigues.",
+    "ko": "",
+    "highlight": "places"
+   },
+   {
+    "en": "Mengem tres taronges dolces.",
+    "ko": "",
+    "highlight": "taronges"
+   },
+   {
+    "en": "Les meves amigues viuen lluny.",
+    "ko": "",
+    "highlight": "amigues"
+   },
+   {
+    "en": "Pugem a les muntanyes altes.",
+    "ko": "",
+    "highlight": "muntanyes"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Dues amicas simpàticas.",
+    "right": "Dues amigues simpàtiques.",
+    "note": "Feminine plurals end in -es, and the letter 'c' becomes 'qu' before 'e' to preserve the /k/ sound."
+   },
+   {
+    "wrong": "Les plases del barri.",
+    "right": "Les places del barri.",
+    "note": "The cedilla 'ç' becomes a normal 'c' before 'e' (plaça → places)."
+   },
+   {
+    "wrong": "Molts gossos blancs i negreses.",
+    "right": "Molts gossos blancs i negres.",
+    "note": "'Negre' is masculine singular; its masculine plural is 'negres', not 'negreses'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the plural of 'la vaca' (the cow)?",
+    "options": [
+     "les vacas",
+     "les vaques",
+     "les vaquas",
+     "les vaces"
+    ],
+    "answer": 1,
+    "explanation": "The feminine suffix -a becomes -es, requiring 'c' to turn into 'qu' (vaques)."
+   },
+   {
+    "question": "What is the plural of 'la plaça' (the square)?",
+    "options": [
+     "les plaçes",
+     "les plases",
+     "les places",
+     "les plaquas"
+    ],
+    "answer": 2,
+    "explanation": "Cedilla 'ç' changes to regular 'c' before '-es' because 'c' already sounds like /s/ before 'e'."
+   },
+   {
+    "question": "The plural of 'amiga' (female friend) is:",
+    "options": [
+     "amigas",
+     "amiges",
+     "amigues",
+     "amiquas"
+    ],
+    "answer": 2,
+    "explanation": "The /g/ sound is kept before 'e' by spelling it 'gu': amiga → amigues."
+   },
+   {
+    "question": "Choose the correctly agreed sentence: 'These ___ (red apples).'",
+    "options": [
+     "pomes vermell",
+     "pomes vermelles",
+     "pomas vermellas",
+     "pomes vermels"
+    ],
+    "answer": 1,
+    "explanation": "Both noun and adjective take the feminine plural ending -es: pomes vermelles."
+   }
+  ],
+  "tip": "Remember the spelling formula: c → qu, ç → c, g → gu, and j → g when adding the feminine plural ending -es."
+ },
+ {
+  "id": "ca-a1-present-tense-irregularities",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "⚡",
+  "title": "Present Tense and Velar Infixes",
+  "subtitle": "Discover irregular 1st-person present forms and the velar consonant stem patterns",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Many common Catalan verbs exhibit a velar consonant (-c or -g) in the first person singular present tense, which shapes their entire irregular paradigm.",
+  "structure": {
+   "headers": [
+    "Infinitive",
+    "Jo (1st sg.)",
+    "Tu (2nd sg.)",
+    "Ell/Ella (3rd sg.)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "beure (to drink)",
+      "bec",
+      "beus",
+      "beu"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "conèixer (to know)",
+      "conec",
+      "coneixes",
+      "coneix"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "venir (to come)",
+      "vinc",
+      "vens",
+      "ve"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "tenir (to have)",
+      "tinc",
+      "tens",
+      "té"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Expressing possession",
+    "example": "Jo tinc dos germans grans.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Actions with velar first-person",
+    "example": "Cada dia bec molta aigua.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Arrival & Movement",
+    "example": "Vinc de la universitat ara mateix.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Jo bec un cafè amb llet.",
+    "ko": "",
+    "highlight": "bec"
+   },
+   {
+    "en": "No conec aquesta persona.",
+    "ko": "",
+    "highlight": "conec"
+   },
+   {
+    "en": "Jo vinc a peu a la feina.",
+    "ko": "",
+    "highlight": "vinc"
+   },
+   {
+    "en": "Jo venc fruita al mercat.",
+    "ko": "",
+    "highlight": "venc"
+   },
+   {
+    "en": "Tinc una pregunta important.",
+    "ko": "",
+    "highlight": "Tinc"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jo bevo aigua.",
+    "right": "Jo bec aigua.",
+    "note": "'Beure' has an irregular 1st-person form with a velar consonant: 'bec'."
+   },
+   {
+    "wrong": "Jo teno tres gossos.",
+    "right": "Jo tinc tres gossos.",
+    "note": "The first person singular of 'tenir' is 'tinc', not 'teno'."
+   },
+   {
+    "wrong": "Jo veno de casa.",
+    "right": "Jo vinc de casa.",
+    "note": "'Venir' (to come) uses 'vinc'; 'venc' is from 'vendre' (to sell)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Every morning I ___ (drink) tea.",
+    "options": [
+     "bevo",
+     "beu",
+     "bec",
+     "bevem"
+    ],
+    "answer": 2,
+    "explanation": "The 1st-person singular (jo) of 'beure' is 'bec'."
+   },
+   {
+    "question": "I ___ (know) this beautiful city.",
+    "options": [
+     "conec",
+     "conoixo",
+     "coneixo",
+     "conegut"
+    ],
+    "answer": 0,
+    "explanation": "The 1st-person singular of 'conèixer' takes the velar ending: 'conec'."
+   },
+   {
+    "question": "I ___ (come) to class at nine.",
+    "options": [
+     "venc",
+     "venio",
+     "vin",
+     "vinc"
+    ],
+    "answer": 3,
+    "explanation": "'Jo vinc' is the irregular first-person present form of 'venir' (to come)."
+   },
+   {
+    "question": "I ___ (have) a ticket for the concert.",
+    "options": [
+     "tinc",
+     "teno",
+     "tienc",
+     "hai"
+    ],
+    "answer": 0,
+    "explanation": "'Tenir' has the irregular velar 1st person form 'tinc'."
+   }
+  ],
+  "tip": "Verbs with -c in the 1st person singular ('bec', 'conec', 'visc') carry this velar stem throughout the present subjunctive and past participle."
+ },
+ {
+  "id": "ca-a1-impersonal-haver-hi",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "📍",
+  "title": "Existential 'Hi ha' (There is / There are)",
+  "subtitle": "Expressing existence and presence impersonally in Catalan",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "The verb 'haver-hi' is strictly impersonal in Catalan, meaning it always stays in the third-person singular regardless of whether the noun that follows is singular or plural.",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Form",
+    "Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present",
+      "hi ha",
+      "Hi ha un llibre sobre la taula.",
+      "There is a book on the table."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past (Imperfect)",
+      "hi havia",
+      "Hi havia moltes persones al carrer.",
+      "There were many people in the street."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past (Periphrastic)",
+      "va haver-hi",
+      "Va haver-hi un accident ahir.",
+      "There was an accident yesterday."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Future",
+      "hi haurà",
+      "Demà hi haurà una festa gran.",
+      "Tomorrow there will be a big party."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Singular Existence",
+    "example": "Hi ha una cafeteria a la cantonada.",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "Plural Existence",
+    "example": "Hi ha dues cadires a l'habitació.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Past Existence",
+    "example": "Abans hi havia tres cinemes aquí.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Al pati hi ha un arbre molt alt.",
+    "ko": "",
+    "highlight": "hi ha"
+   },
+   {
+    "en": "A la nevera no hi ha gaire llet.",
+    "ko": "",
+    "highlight": "hi ha"
+   },
+   {
+    "en": "A la classe hi havia vint estudiants.",
+    "ko": "",
+    "highlight": "hi havia"
+   },
+   {
+    "en": "Aquesta tarda hi haurà un concert a la plaça.",
+    "ko": "",
+    "highlight": "hi haurà"
+   },
+   {
+    "en": "La setmana passada va haver-hi una reunió important.",
+    "ko": "",
+    "highlight": "va haver-hi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Hi han moltes pomes a la cistella.",
+    "right": "Hi ha moltes pomes a la cistella.",
+    "note": "Never pluralize 'ha' to 'han'; 'haver-hi' remains singular even with plural objects."
+   },
+   {
+    "wrong": "Ha un gos al parc.",
+    "right": "Hi ha un gos al parc.",
+    "note": "Do not drop the clitic 'hi'; existential 'there is' always requires 'hi ha'."
+   },
+   {
+    "wrong": "Ahir hi havien tres cotxes.",
+    "right": "Ahir hi havia tres cotxes.",
+    "note": "The imperfect form remains singular 'hi havia', never 'hi havien'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'There are two cats under the bed'?",
+    "options": [
+     "Hi han dos gats sota el llit.",
+     "Hi ha dos gats sota el llit.",
+     "Són dos gats sota el llit.",
+     "Estan dos gats sota el llit."
+    ],
+    "answer": 1,
+    "explanation": "'Hi ha' never agrees with a plural noun; it always stays in the third-person singular."
+   },
+   {
+    "question": "Complete the sentence: 'Ahir ___ un concert fantàstic.' (Yesterday there was...)",
+    "options": [
+     "va haver-hi",
+     "hi ha",
+     "hi han",
+     "van haver-hi"
+    ],
+    "answer": 0,
+    "explanation": "The periphrastic past form is 'va haver-hi' (singular)."
+   },
+   {
+    "question": "Choose the correct past imperfect form: 'Abans ___ moltes botigues aquí.'",
+    "options": [
+     "hi eren",
+     "hi havien",
+     "eren",
+     "hi havia"
+    ],
+    "answer": 3,
+    "explanation": "Existential imperfect requires singular 'hi havia'."
+   },
+   {
+    "question": "Which sentence correctly says 'There will be food for everyone'?",
+    "options": [
+     "Hi serà menjar per a tothom.",
+     "Hauran menjar per a tothom.",
+     "Hi haurà menjar per a tothom.",
+     "Estarà menjar per a tothom."
+    ],
+    "answer": 2,
+    "explanation": "Future existential requires 'hi haurà'."
+   }
+  ],
+  "tip": "Think of 'hi ha' as a single unbreakable block meaning 'there is / there are'. Never turn it into 'hi han'!"
+ },
+ {
+  "id": "ca-a2-periphrastic-past",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#2563EB",
+  "emoji": "⏳",
+  "title": "The Periphrastic Past (Passat Perifràstic)",
+  "subtitle": "Narrating completed past actions using the auxiliary 'anar' + infinitive",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Catalan expresses the simple past using the auxiliary forms of 'anar' (vaig, vas, va, vam, vau, van) followed by the infinitive, meaning 'I did' rather than 'I am going to do'.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Auxiliary (Anar)",
+    "Infinitive",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "jo",
+      "vaig",
+      "parlar",
+      "I spoke"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "tu",
+      "vas / vares",
+      "menjar",
+      "you ate"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ell / ella",
+      "va",
+      "viure",
+      "he/she lived"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "nosaltres",
+      "vam / vàrem",
+      "arribar",
+      "we arrived"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "vosaltres / ells",
+      "vau / van",
+      "sortir",
+      "you/they went out"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Completed Past Action",
+    "example": "Ahir vaig comprar un ordinador nou.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Narrative Sequence",
+    "example": "El tren va arribar i la gent va pujar.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Specific Past Event",
+    "example": "L'any passat vam viatjar a Girona.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ahir a la nit vaig mirar una pel·lícula.",
+    "ko": "",
+    "highlight": "vaig mirar"
+   },
+   {
+    "en": "L'Anna va escriure una carta molt llarga.",
+    "ko": "",
+    "highlight": "va escriure"
+   },
+   {
+    "en": "Diumenge passat vam caminar deu quilòmetres.",
+    "ko": "",
+    "highlight": "vam caminar"
+   },
+   {
+    "en": "A quina hora vau dinar vosaltres?",
+    "ko": "",
+    "highlight": "vau dinar"
+   },
+   {
+    "en": "Els nens van obrir tots els regals ràpidament.",
+    "ko": "",
+    "highlight": "van obrir"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Vaig anar a menjar demà.",
+    "right": "Vaig menjar ahir.",
+    "note": "'Vaig + infinitive' is strictly a past tense in Catalan, never a future 'going to' construct."
+   },
+   {
+    "wrong": "Nosaltres vam vam anar al parc.",
+    "right": "Nosaltres vam anar al parc.",
+    "note": "To say 'we went', use 'vam' plus the infinitive 'anar': 'vam anar'."
+   },
+   {
+    "wrong": "Ell va parlava amb el metge.",
+    "right": "Ell va parlar amb el metge.",
+    "note": "The verb after the auxiliary must always be in the bare infinitive form."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you translate 'I slept for eight hours last night'?",
+    "options": [
+     "Ahir a la nit vaig dormir vuit hores.",
+     "Ahir a la nit vaig dormo vuit hores.",
+     "Ahir a la nit va dormir vuit hores.",
+     "Ahir a la nit vam dormir vuit hores."
+    ],
+    "answer": 0,
+    "explanation": "'Jo' takes the auxiliary 'vaig' + infinitive 'dormir'."
+   },
+   {
+    "question": "Complete the sentence: 'La setmana passada vosaltres ___ un pastís deliciós.'",
+    "options": [
+     "van fer",
+     "vas fer",
+     "vau fer",
+     "vam fer"
+    ],
+    "answer": 2,
+    "explanation": "The second-person plural auxiliary for 'vosaltres' is 'vau'."
+   },
+   {
+    "question": "What does 'Ell va comprar pa' mean in English?",
+    "options": [
+     "He is going to buy bread.",
+     "He buys bread.",
+     "He is buying bread.",
+     "He bought bread."
+    ],
+    "answer": 3,
+    "explanation": "The periphrastic past indicates a finished past action ('He bought'), not a future action."
+   },
+   {
+    "question": "Choose the correct form for 'We lived in Mallorca':",
+    "options": [
+     "Vam viure a Mallorca.",
+     "Vau viure a Mallorca.",
+     "Van viure a Mallorca.",
+     "Vaig viure a Mallorca."
+    ],
+    "answer": 0,
+    "explanation": "'Nosaltres' uses 'vam' + infinitive 'viure'."
+   }
+  ],
+  "tip": "Do not confuse Catalan 'vaig cantar' (I sang) with French or Spanish 'je vais / voy a cantar' (I am going to sing). In Catalan, it is entirely past tense!"
+ },
+ {
+  "id": "ca-a2-pronominal-particle-en",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🔄",
+  "title": "The Weak Pronoun 'En'",
+  "subtitle": "Replacing indefinite objects, quantities, and prepositional phrases with 'de'",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "The pronoun 'en' (or 'n'') replaces nouns introduced by an indefinite article, quantities, and phrases introduced by the preposition 'de'.",
+  "structure": {
+   "headers": [
+    "Target Replaced",
+    "Full Sentence",
+    "With Pronoun 'En'",
+    "Pronoun Rule"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Preposition 'de' + place",
+      "Vinc de Barcelona.",
+      "En vinc.",
+      "Replaces origin/provenance"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Indefinite object / partitive",
+      "Menjo pa.",
+      "En menjo.",
+      "Replaces unspecified noun"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Noun with quantifier",
+      "Tinc tres germans.",
+      "En tinc tres.",
+      "Noun is dropped, number stays"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Pre-vocalic elision",
+      "Té oli.",
+      "N'aprofita / N'hi ha.",
+      "'En' becomes 'n'' before vowels"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Origin (Coming from)",
+    "example": "Sortiu del cinema? Sí, en sortim ara.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Quantity with Remainder",
+    "example": "Vols pomes? En vull dues, si us plau.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Indefinite Direct Object",
+    "example": "Tens cafè? No, no en tinc.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Si vols cireres, en pots agafar unes quantes.",
+    "ko": "",
+    "highlight": "en"
+   },
+   {
+    "en": "Quan tornis de la feina, en parlarem amb calma.",
+    "ko": "",
+    "highlight": "en"
+   },
+   {
+    "en": "No tinc diners; no en tinc gens.",
+    "ko": "",
+    "highlight": "en"
+   },
+   {
+    "en": "Compreu pomes? Sí, en comprem un quilo.",
+    "ko": "",
+    "highlight": "en"
+   },
+   {
+    "en": "Necessites sucre per a la recepta? No, no en necessito.",
+    "ko": "",
+    "highlight": "en"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Vols pa? Sí, vull.",
+    "right": "Vols pa? Sí, en vull.",
+    "note": "In Catalan, you cannot omit the object pronoun when answering questions about indefinite things; 'en' is required."
+   },
+   {
+    "wrong": "Tinc dos gats -> Els tinc dos.",
+    "right": "Tinc dos gats -> En tinc dos.",
+    "note": "When specifying an exact number from an indefinite set, replace the noun with 'en' and retain the numeral."
+   },
+   {
+    "wrong": "En tinc una poma.",
+    "right": "En tinc una.",
+    "note": "Do not repeat the noun alongside 'en'; keep only the quantifier."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you respond to 'Tens diners?' with 'Yes, I have some'?",
+    "options": [
+     "Sí, els tinc.",
+     "Sí, tinc.",
+     "Sí, en tinc.",
+     "Sí, hi tinc."
+    ],
+    "answer": 2,
+    "explanation": "'Diners' is an indefinite direct object, so it must be replaced by 'en'."
+   },
+   {
+    "question": "Which sentence correctly replaces the complement in 'Vens de Girona?'",
+    "options": [
+     "Sí, en vinc.",
+     "Sí, hi vinc.",
+     "Sí, la vinc.",
+     "Sí, vinc de allà."
+    ],
+    "answer": 0,
+    "explanation": "Phrases introduced by 'de' indicating origin are replaced by 'en'."
+   },
+   {
+    "question": "Transform: 'Compro quatre llibres' using a pronoun for 'llibres'.",
+    "options": [
+     "Els compro quatre.",
+     "En compro.",
+     "Hi compro quatre.",
+     "En compro quatre."
+    ],
+    "answer": 3,
+    "explanation": "The noun 'llibres' is replaced by 'en', while the numeral 'quatre' is retained at the end."
+   },
+   {
+    "question": "Choose the correct contraction before a vowel: '___ agafa una mica.'",
+    "options": [
+     "En",
+     "N'",
+     "L'",
+     "Hi"
+    ],
+    "answer": 1,
+    "explanation": "'En' elides to 'n'' before a vowel sound (e.g., 'N'agafa')."
+   }
+  ],
+  "tip": "Whenever you answer with a number or amount without naming the object (e.g., 'I want two'), Catalan requires 'en': 'En vull dos'."
+ },
+ {
+  "id": "ca-a2-pronominal-particle-hi",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "📌",
+  "title": "The Weak Pronoun 'Hi'",
+  "subtitle": "Replacing locatives, manner, and prepositional phrases with 'a', 'en', 'amb', or 'per'",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "The invariable pronoun 'hi' replaces prepositional complements introduced by prepositions other than 'de' (especially 'a', 'en', 'amb', 'per'), including places and manner.",
+  "structure": {
+   "headers": [
+    "Complement Type",
+    "Preposition",
+    "Original Phrase",
+    "With 'Hi'"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Location (Destination)",
+      "a / cap a",
+      "Vaig a Barcelona.",
+      "Hi vaig."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Location (In/At)",
+      "en / a",
+      "Visc a Tarragona.",
+      "Hi visc."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Manner",
+      "sense / amb / etc.",
+      "Camina a poc a poc.",
+      "Hi camina."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Prepositional object",
+      "amb / en / a",
+      "Penso en el futur.",
+      "Hi penso."
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Destination or Place",
+    "example": "Vas a la biblioteca? Sí, hi vaig ara mateix.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Manner / Adverbial",
+    "example": "Condueixes amb compte? Sí, sempre hi condueixo.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Prepositional Object (not 'de')",
+    "example": "Penses en el viatge? Sí, hi penso sovint.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Aquest estiu anirem a Mallorca i hi passarem dues setmanes.",
+    "ko": "",
+    "highlight": "hi"
+   },
+   {
+    "en": "Entres a la sala o no hi entres?",
+    "ko": "",
+    "highlight": "hi"
+   },
+   {
+    "en": "Ell no està d'acord amb la decisió, però nosaltres sí que hi estem.",
+    "ko": "",
+    "highlight": "hi"
+   },
+   {
+    "en": "Si vas al mercat, compra fruita fresca.",
+    "ko": "",
+    "highlight": "vas"
+   },
+   {
+    "en": "T'acostumes a la nova feina? Sí, ja m'hi he acostumat.",
+    "ko": "",
+    "highlight": "m'hi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Vaig a la platja -> En vaig.",
+    "right": "Vaig a la platja -> Hi vaig.",
+    "note": "Use 'hi' for destinations or locations introduced by 'a'; 'en' is reserved for departure from ('de')."
+   },
+   {
+    "wrong": "Penses en la prova? Sí, la penso.",
+    "right": "Penses en la prova? Sí, hi penso.",
+    "note": "Verbs taking 'en' (pensar en) require 'hi', not direct object pronouns like 'la'."
+   },
+   {
+    "wrong": "Vols anar al parc? Sí, vull anar.",
+    "right": "Vols anar al parc? Sí, hi vull anar.",
+    "note": "Catalan does not like dangling verbs of movement; the destination must be represented by 'hi'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'Are you going to the supermarket? Yes, I am going there'?",
+    "options": [
+     "Vas al supermercat? Sí, en vaig.",
+     "Vas al supermercat? Sí, la vaig.",
+     "Vas al supermercat? Sí, hi vaig.",
+     "Vas al supermercat? Sí, ho vaig."
+    ],
+    "answer": 2,
+    "explanation": "Destination introduced by 'a' ('al supermercat') is replaced by 'hi'."
+   },
+   {
+    "question": "Replace the prepositional complement: 'Ell es fixa en els detalls.'",
+    "options": [
+     "Ell s'en fixa.",
+     "Ell s'hi fixa.",
+     "Ell se'ls fixa.",
+     "Ell es fixa en."
+    ],
+    "answer": 1,
+    "explanation": "The complement introduced by 'en' ('en els detalls') is replaced by 'hi', forming 's'hi fixa'."
+   },
+   {
+    "question": "Which pronoun replaces 'de Barcelona' vs 'a Barcelona'?",
+    "options": [
+     "'en' for 'de Barcelona', 'hi' for 'a Barcelona'",
+     "'hi' for 'de Barcelona', 'en' for 'a Barcelona'",
+     "'en' for both",
+     "'hi' for both"
+    ],
+    "answer": 0,
+    "explanation": "Origin with 'de' uses 'en'; destination/location with 'a' uses 'hi'."
+   },
+   {
+    "question": "How do you say 'I live there' (referring to 'a Girona')?",
+    "options": [
+     "En visc.",
+     "Ho visc.",
+     "Li visc.",
+     "Hi visc."
+    ],
+    "answer": 3,
+    "explanation": "Location introduced by 'a' is replaced by 'hi'."
+   }
+  ],
+  "tip": "Quick rule: If the preposition is 'de', use 'en'. If the preposition is 'a', 'en', 'amb', or 'per', use 'hi'!"
+ },
+ {
+  "id": "ca-a2-per-vs-per-a",
+  "level": "a2",
+  "category": "advanced",
+  "categoryColor": "#DC2626",
+  "emoji": "🎯",
+  "title": "Prepositions: 'Per' vs 'Per a'",
+  "subtitle": "Mastering the distinction between cause/means and recipient/purpose",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Use 'per' for cause, motive, agent, means, and transit, whereas 'per a' expresses recipient, destination, deadline, and intended purpose.",
+  "structure": {
+   "headers": [
+    "Preposition",
+    "Primary Functions",
+    "Catalan Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "per",
+      "Cause / Reason",
+      "Ho faig per tu.",
+      "I do it because of you / for your sake."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "per",
+      "Means / Route / Agent",
+      "Enviat per correu.",
+      "Sent by mail."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "per a",
+      "Recipient / Destination",
+      "Aquest regal és per a tu.",
+      "This gift is for you (recipient)."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "per a",
+      "Deadline / Future date",
+      "Ho necessito per a demà.",
+      "I need it by/for tomorrow."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "per / per a",
+      "Purpose (+ Infinitive)",
+      "Estudio per (a) aprendre.",
+      "I study in order to learn."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Recipient / Beneficiary",
+    "example": "Aquesta carta és per a la Maria.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Cause / Motive",
+    "example": "La carretera està tallada per la neu.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Transit / Through",
+    "example": "Vam passejar pel centre de la ciutat.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Aquest llibre és per a tu.",
+    "ko": "",
+    "highlight": "per a"
+   },
+   {
+    "en": "Hem de lliurar el projecte per a dilluns.",
+    "ko": "",
+    "highlight": "per a"
+   },
+   {
+    "en": "No hem pogut sortir per la pluja.",
+    "ko": "",
+    "highlight": "per"
+   },
+   {
+    "en": "Aquest pont va ser construït pels romans.",
+    "ko": "",
+    "highlight": "pels"
+   },
+   {
+    "en": "Tinc un paquet per al veí.",
+    "ko": "",
+    "highlight": "per al"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Aquest regal és per tu.",
+    "right": "Aquest regal és per a tu.",
+    "note": "When expressing the final recipient of an object, Catalan standard requires 'per a'."
+   },
+   {
+    "wrong": "Ho vaig fer per a culpa teva.",
+    "right": "Ho vaig fer per culpa teva.",
+    "note": "Cause or motive ('because of') always requires 'per', never 'per a'."
+   },
+   {
+    "wrong": "Passegem per a la platja cada matí.",
+    "right": "Passegem per la platja cada matí.",
+    "note": "Movement through or along an area uses 'per', not 'per a'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which preposition completes: 'Aquest jersei és ___ la mare' (recipient)?",
+    "options": [
+     "per",
+     "per a",
+     "pel",
+     "de a"
+    ],
+    "answer": 1,
+    "explanation": "'Per a' is used to denote the recipient or intended receiver of an object."
+   },
+   {
+    "question": "Which sentence correctly expresses cause: 'We canceled the trip because of the cold'?",
+    "options": [
+     "Vam cancel·lar el viatge per al fred.",
+     "Vam cancel·lar el viatge per a fred.",
+     "Vam cancel·lar el viatge pel fred.",
+     "Vam cancel·lar el viatge per a el fred."
+    ],
+    "answer": 2,
+    "explanation": "Cause requires 'per' + 'el' = 'pel fred'."
+   },
+   {
+    "question": "Complete the deadline: 'Heu de tenir la feina feta ___ divendres.'",
+    "options": [
+     "pel",
+     "per",
+     "en",
+     "per a"
+    ],
+    "answer": 3,
+    "explanation": "Deadlines indicating 'by' or 'for a specific date' take 'per a'."
+   },
+   {
+    "question": "Translate: 'They walked through the park.'",
+    "options": [
+     "Van caminar per al parc.",
+     "Van caminar pel parc.",
+     "Van caminar per a parc.",
+     "Van caminar a través per parc."
+    ],
+    "answer": 1,
+    "explanation": "Movement through a location uses 'per' + 'el' = 'pel'."
+   }
+  ],
+  "tip": "Ask yourself: Is it a recipient/deadline ('per a') or a reason/cause/pathway ('per')? If it's a gift for someone, always use 'per a'!"
+ },
+ {
+  "id": "ca-a2-weak-pronoun-placement-and-elision",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🧩",
+  "title": "Clitic Pronoun Forms and Apostrophation",
+  "subtitle": "Master the four forms of Catalan weak pronouns based on position and vowels.",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Catalan weak pronouns change shape (reforçada, elidida, plena, reduïda) depending on whether they precede or follow the verb and meet vowels.",
+  "structure": {
+   "headers": [
+    "Position",
+    "Shape Name",
+    "Form (e.g. 'el')",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Before consonant",
+      "Reforçada",
+      "el / em / es",
+      "El mira"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Before vowel / h",
+      "Elidida",
+      "l' / m' / s'",
+      "L'espera"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "After consonant / diphthong",
+      "Plena",
+      "-lo / -me / -se",
+      "Mirar-lo"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "After vowel",
+      "Reduïda",
+      "'l / 'm / 's",
+      "Mira'l"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Before consonant-initial verb",
+    "example": "Em sentiu bé?",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Before vowel-initial verb",
+    "example": "M'agrada molt llegir.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "After vowel-ending imperative",
+    "example": "Compri'l avui mateix.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "El noi el veu cada matí.",
+    "ko": "",
+    "highlight": "el veu"
+   },
+   {
+    "en": "Nosaltres l'entenem perfectament.",
+    "ko": "",
+    "highlight": "l'entenem"
+   },
+   {
+    "en": "Volien comprar-lo ahir.",
+    "ko": "",
+    "highlight": "comprar-lo"
+   },
+   {
+    "en": "Menja'l de pressa, si us plau.",
+    "ko": "",
+    "highlight": "Menja'l"
+   },
+   {
+    "en": "No em diguis mentides.",
+    "ko": "",
+    "highlight": "em diguis"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "El obro ara.",
+    "right": "L'obro ara.",
+    "note": "Pronouns before a vowel or 'h' must elide with an apostrophe."
+   },
+   {
+    "wrong": "Porta-el aquí.",
+    "right": "Porta'l aquí.",
+    "note": "After a verb ending in a vowel, use the reduced form with an apostrophe ('l)."
+   },
+   {
+    "wrong": "Vol trobar'l.",
+    "right": "Vol trobar-lo.",
+    "note": "Infinitive forms end in a consonant, requiring a hyphen and the full form (-lo)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the correct form before a vowel: 'Jo ___ escolto amb atenció.'",
+    "options": [
+     "el",
+     "l'",
+     "-lo",
+     "'l"
+    ],
+    "answer": 1,
+    "explanation": "Before a vowel-initial verb, masculine direct object 'el' elides to 'l''."
+   },
+   {
+    "question": "Identify the correct imperative suffix: 'Escolta___ bé!'",
+    "options": [
+     "-me",
+     "'m",
+     "em",
+     "m'"
+    ],
+    "answer": 1,
+    "explanation": "After a vowel-ending verb ('escolta'), the first-person pronoun contracts to ''m'."
+   },
+   {
+    "question": "Identify the correct form after an infinitive: 'No podem fer___ ara.'",
+    "options": [
+     "-el",
+     "'l",
+     "-lo",
+     "l'"
+    ],
+    "answer": 2,
+    "explanation": "After an infinitive ending in a consonant, attach the full form '-lo' with a hyphen."
+   },
+   {
+    "question": "Identify the correct form before a consonant: 'Ells ___ donen la clau.'",
+    "options": [
+     "ens",
+     "ns'",
+     "-nos",
+     "'ns"
+    ],
+    "answer": 0,
+    "explanation": "Before a consonant, the standard reinforced form 'ens' is placed before the verb."
+   }
+  ],
+  "tip": "Always check the adjoining letter: apostrophes attach towards the verb whenever a vowel meets the clitic."
+ },
+ {
+  "id": "ca-a2-imperfect-vs-periphrastic-past",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#10B981",
+  "emoji": "⏳",
+  "title": "Imfet vs Passat Perifràstic",
+  "subtitle": "Distinguish continuous background descriptions from completed narrative past actions.",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use the imperfet for ongoing past habits or background descriptions and the passat perifràstic (va + infinitive) for finished punctual actions.",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Formation",
+    "Function",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Imperfet",
+      "Stem + -ava / -ia",
+      "Habit / state / background",
+      "Plouia molt"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passat Perifràstic",
+      "vaig / vas / va... + inf.",
+      "Completed single event",
+      "Va començar a ploure"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Combined Context",
+      "Imperfet + Perifràstic",
+      "Interrupted action",
+      "Dormia quan va trucar"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Background scene setting",
+    "example": "Feia molt fred aquell hivern.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Punctual past event",
+    "example": "Ahir vam arribar a les vuit.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Interruption in the past",
+    "example": "Caminava pel carrer quan va caure.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Quan era petit, vivia a Girona.",
+    "ko": "",
+    "highlight": "era petit, vivia"
+   },
+   {
+    "en": "Ahir a la tarda va sonar el telèfon.",
+    "ko": "",
+    "highlight": "va sonar"
+   },
+   {
+    "en": "Mentre menjàvem, van obrir la porta.",
+    "ko": "",
+    "highlight": "Mentre menjàvem, van obrir"
+   },
+   {
+    "en": "Sempre anaven a la platja a l'estiu.",
+    "ko": "",
+    "highlight": "anaven a la platja"
+   },
+   {
+    "en": "Dissabte passat vaig comprar un llibre.",
+    "ko": "",
+    "highlight": "vaig comprar"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ahir feia un examen important a les deu.",
+    "right": "Ahir vaig fer un examen important a les deu.",
+    "note": "A specific punctual past action takes the passat perifràstic, not the imperfet."
+   },
+   {
+    "wrong": "De petit vaig jugar a futbol cada dia.",
+    "right": "De petit jugava a futbol cada dia.",
+    "note": "Repeated habitual routines in the past require the imperfet."
+   },
+   {
+    "wrong": "Quan va ploure, miràvem la televisió.",
+    "right": "Quan plovia, vam mirar la televisió.",
+    "note": "The ongoing backdrop takes the imperfet while the punctual event takes the perifràstic."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the habitual past: 'Quan vivíem a Reus, sempre ___ al mercat.'",
+    "options": [
+     "vam anar",
+     "anàvem",
+     "van anar",
+     "anar"
+    ],
+    "answer": 1,
+    "explanation": "The adverb 'sempre' indicating a repeated habit in the past triggers the imperfet ('anàvem')."
+   },
+   {
+    "question": "Complete the sudden past action: 'Mentre dormia, de sobte ___ un soroll fort.'",
+    "options": [
+     "sentia",
+     "ha sentit",
+     "vaig sentir",
+     "sentint"
+    ],
+    "answer": 2,
+    "explanation": "A sudden punctual event interrupting a background action uses the passat perifràstic ('vaig sentir')."
+   },
+   {
+    "question": "Choose the correct auxiliary for: 'Nosaltres ___ visitar el museu dissabte.'",
+    "options": [
+     "vàrem",
+     "vam",
+     "anàvem",
+     "havíem"
+    ],
+    "answer": 1,
+    "explanation": "'Vam' (or 'vàrem') is the standard auxiliary for first-person plural in passat perifràstic."
+   },
+   {
+    "question": "Complete the descriptive background: 'L'habitació ___ molt fosca.'",
+    "options": [
+     "va ser",
+     "va estar",
+     "era",
+     "ha estat"
+    ],
+    "answer": 2,
+    "explanation": "Describing static qualities or atmospheric conditions in the past uses the imperfet ('era')."
+   }
+  ],
+  "tip": "Think of the imperfet as a continuous video recording and the passat perifràstic as a single snapshot photo."
+ },
+ {
+  "id": "ca-b1-double-pronoun-combinations",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔗",
+  "title": "Weak Pronoun Combinations (Pronoms Combinats)",
+  "subtitle": "Combine direct and indirect object clitics following standard order rules.",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "When pairing clitics, the indirect object precedes the direct object, and third-person indirect 'li' transforms into 'hi' when followed by definite direct pronouns.",
+  "structure": {
+   "headers": [
+    "Combination",
+    "Rule / Shift",
+    "Standard Form",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Indirect 3rd (li) + Direct (el)",
+      "li + el -> l'hi",
+      "l'hi",
+      "L'hi dono"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Indirect 3rd (li) + Direct (la)",
+      "li + la -> la hi",
+      "la hi",
+      "La hi porto"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Indirect plural (els) + Direct (la)",
+      "els + la -> els la",
+      "els la",
+      "Els la deixo"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reflexive (se) + Partitive (en)",
+      "se + en -> se'n",
+      "se'n",
+      "Se'n va"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Singular indirect with masculine direct",
+    "example": "El paquet? Ja l'hi hem enviat.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Singular indirect with feminine direct",
+    "example": "La clau? La hi tornarem demà.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Plural indirect with feminine direct",
+    "example": "La veritat? Els la vam dir ahir.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Aquest llibre, l'hi deixaré demà.",
+    "ko": "",
+    "highlight": "l'hi deixaré"
+   },
+   {
+    "en": "La carta, la hi vam enviar a temps.",
+    "ko": "",
+    "highlight": "la hi vam enviar"
+   },
+   {
+    "en": "Les pomes, els les vam regalar.",
+    "ko": "",
+    "highlight": "els les vam regalar"
+   },
+   {
+    "en": "Vol anar-se'n ben d'hora al matí.",
+    "ko": "",
+    "highlight": "anar-se'n"
+   },
+   {
+    "en": "Si necessites sucre, te'n poso una mica.",
+    "ko": "",
+    "highlight": "te'n poso"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Li el dono ara mateix.",
+    "right": "L'hi dono ara mateix.",
+    "note": "In standard Catalan, 'li + el' shifts to 'l'hi', never 'li el'."
+   },
+   {
+    "wrong": "Li la deixo sobre la taula.",
+    "right": "La hi deixo sobre la taula.",
+    "note": "'li + la' becomes 'la hi' (direct object first, followed by adverbial substitute 'hi')."
+   },
+   {
+    "wrong": "Els hi dono el llibre a ells.",
+    "right": "Els el dono a ells.",
+    "note": "Avoid using 'els hi' for a masculine direct object; use 'els el'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I give it (masculine) to him/her'?: 'El paquet? Jo ___ dono.'",
+    "options": [
+     "li'l",
+     "l'hi",
+     "li el",
+     "el hi"
+    ],
+    "answer": 1,
+    "explanation": "The standard combination of indirect 'li' and masculine direct 'el' is 'l'hi'."
+   },
+   {
+    "question": "How do you say 'I explain it (feminine) to them'?: 'La lliçó? Jo ___ explico.'",
+    "options": [
+     "els hi",
+     "les hi",
+     "els la",
+     "l'els"
+    ],
+    "answer": 2,
+    "explanation": "Indirect plural 'els' combined with feminine singular direct 'la' is 'els la'."
+   },
+   {
+    "question": "Combine reflexive 'es' and partitive 'en' before a consonant: 'Ell ___ va sense dir res.'",
+    "options": [
+     "se'n",
+     "s'en",
+     "en se",
+     "es ne"
+    ],
+    "answer": 0,
+    "explanation": "Reflexive 'es' and partitive 'en' merge as 'se'n' before a verb."
+   },
+   {
+    "question": "How do you say 'I bring it (feminine) to him/her'?: 'La cadira? Jo ___ porto.'",
+    "options": [
+     "li la",
+     "la li",
+     "l'hi",
+     "la hi"
+    ],
+    "answer": 3,
+    "explanation": "'li + la' systematically converts to 'la hi' in normative Catalan."
+   }
+  ],
+  "tip": "Remember: whenever singular indirect 'li' meets 'el' or 'la', 'li' turns into 'hi'."
+ },
+ {
+  "id": "ca-b1-present-subjunctive-and-trigger-clauses",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#8B5CF6",
+  "emoji": "💭",
+  "title": "Present Subjunctive Form and Triggers",
+  "subtitle": "Form regular and velar subjunctive stems to express wishes, doubts, and emotions.",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The present subjunctive expresses unreality, volition, and doubt after 'que', swapping verb vowels (-ar becomes -e/i; -er/-ir becomes -a) and maintaining velar root consonants.",
+  "structure": {
+   "headers": [
+    "Conjugation",
+    "Vowel Shift",
+    "Example Verb",
+    "Subjunctive 1st Sing."
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st (-ar)",
+      "-a -> -e / -i",
+      "cantar",
+      "que jo canti"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd / 3rd (-er / -re / -ir)",
+      "-e/-i -> -a",
+      "beure / dormir",
+      "que jo begui / dormi"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Velar extension stems",
+      "preserves -c / -g",
+      "tenir (tinc)",
+      "que jo tingui"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Volition and desire",
+    "example": "Vull que vinguis a la festa.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Doubt and denial",
+    "example": "Dubto que sàpiga la resposta.",
+    "translation": ""
+   },
+   {
+    "color": "#A78BFA",
+    "label": "Emotional reaction",
+    "example": "M'alegra que estigueu contents.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Espero que tinguis un bon viatge.",
+    "ko": "",
+    "highlight": "tinguis"
+   },
+   {
+    "en": "Cal que mengem més verdura.",
+    "ko": "",
+    "highlight": "mengem"
+   },
+   {
+    "en": "No crec que plogui aquesta tarda.",
+    "ko": "",
+    "highlight": "plogui"
+   },
+   {
+    "en": "És necessari que facis els deures.",
+    "ko": "",
+    "highlight": "facis"
+   },
+   {
+    "en": "Volem que ells aprenguin català.",
+    "ko": "",
+    "highlight": "aprenguin"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Vull que tu véns demà.",
+    "right": "Vull que tu vinguis demà.",
+    "note": "Subordinate clauses expressing desire require the subjunctive ('vinguis'), not indicative ('véns')."
+   },
+   {
+    "wrong": "Espero que ell parla amb ella.",
+    "right": "Espero que ell parli amb ella.",
+    "note": "-AR verbs swap endings to -i in the present subjunctive singular."
+   },
+   {
+    "wrong": "Dubto que tenen prou diners.",
+    "right": "Dubto que tinguin prou diners.",
+    "note": "Doubt triggers the subjunctive, and 'tenir' retains its velar base ('tinguin')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct subjunctive: 'Vull que tu ___ (parlar) amb el metge.'",
+    "options": [
+     "parlis",
+     "parles",
+     "parla",
+     "parlaràs"
+    ],
+    "answer": 0,
+    "explanation": "-AR verbs shift their thematic vowel to 'i' in the second person singular subjunctive: 'parlis'."
+   },
+   {
+    "question": "Select the correct velar form: 'No crec que ells ___ (beure) vi.'",
+    "options": [
+     "beuen",
+     "beuran",
+     "beguin",
+     "beuessin"
+    ],
+    "answer": 2,
+    "explanation": "Verbs with velar roots in the first person present indicative ('bec') extend this to subjunctive: 'beguin'."
+   },
+   {
+    "question": "Complete the clause: 'És important que vosaltres ___ (fer) atenció.'",
+    "options": [
+     "feis",
+     "feu",
+     "faci",
+     "fàgieu"
+    ],
+    "answer": 1,
+    "explanation": "The 'vosaltres' subjunctive form for 'fer' is 'feu' (matching the indicative plural stem)."
+   },
+   {
+    "question": "Expressing doubt: 'Dubto que la Maria ___ (venir) avui.'",
+    "options": [
+     "ve",
+     "vindrà",
+     "vingui",
+     "venia"
+    ],
+    "answer": 2,
+    "explanation": "'Dubtar que' mandates the subjunctive; 'venir' uses its velar base 'vingui'."
+   }
+  ],
+  "tip": "Check the 1st person present indicative ('jo tinc', 'jo conec'): that velar sound (-c / -g) carries all through the subjunctive."
+ },
+ {
+  "id": "ca-b1-direct-object-marking-absence",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🚫",
+  "title": "Absence of Prepositional Direct Object",
+  "subtitle": "Avoid the intrusive preposition 'a' for direct objects referring to people.",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Unlike Spanish, standard Catalan does not introduce personal direct objects with the preposition 'a'.",
+  "structure": {
+   "headers": [
+    "Syntactic Role",
+    "Rule",
+    "Correct Catalan",
+    "Incorrect Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Direct object (person)",
+      "Direct contact, NO preposition",
+      "Miro el metge",
+      "*Miro al metge"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Direct object (proper name)",
+      "Article + Name, NO preposition",
+      "Conec la Marta",
+      "*Conec a la Marta"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Indirect object (person)",
+      "REQUIRES preposition 'a'",
+      "Envio una carta al metge",
+      "Envio el metge..."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Person as direct object",
+    "example": "He vist el teu germà al carrer.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Proper name direct object",
+    "example": "Ahir vam trucar en Joan.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Indefinite person direct object",
+    "example": "Busquen un nou professor.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ahir vaig veure els teus pares.",
+    "ko": "",
+    "highlight": "veure els teus pares"
+   },
+   {
+    "en": "Tots escolten el president amb atenció.",
+    "ko": "",
+    "highlight": "escolten el president"
+   },
+   {
+    "en": "Hem de convidar els veïns a sopar.",
+    "ko": "",
+    "highlight": "convidar els veïns"
+   },
+   {
+    "en": "Coneixes la nova veïna?",
+    "ko": "",
+    "highlight": "Coneixes la nova veïna"
+   },
+   {
+    "en": "No trobo el nen enlloc.",
+    "ko": "",
+    "highlight": "trobo el nen"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Estimo a la meva família.",
+    "right": "Estimo la meva família.",
+    "note": "Do not insert 'a' before direct objects in standard Catalan, even for loved ones."
+   },
+   {
+    "wrong": "Vaig veure a en Pere ahir.",
+    "right": "Vaig veure en Pere ahir.",
+    "note": "Proper nouns as direct objects only take their personal article, never 'a'."
+   },
+   {
+    "wrong": "Esperem a l'autobús.",
+    "right": "Esperem l'autobús.",
+    "note": "'Esperar' directly governs its object without any preposition."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct standard phrasing for 'I saw your doctor':",
+    "options": [
+     "Vaig veure al teu metge.",
+     "Vaig veure el teu metge.",
+     "Vaig veure amb el teu metge.",
+     "Vaig veure de teu metge."
+    ],
+    "answer": 1,
+    "explanation": "Direct objects denoting specific people take no preposition in standard Catalan."
+   },
+   {
+    "question": "Choose the correct sentence for 'They are looking for the children':",
+    "options": [
+     "Busquen als nens.",
+     "Busquen per els nens.",
+     "Busquen els nens.",
+     "Busquen d'els nens."
+    ],
+    "answer": 2,
+    "explanation": "'Els nens' is the direct object and must connect directly to the verb without 'a'."
+   },
+   {
+    "question": "Choose the correct option: 'Vam conèixer ___ a la festa.'",
+    "options": [
+     "a en Marc",
+     "en Marc",
+     "per en Marc",
+     "d'en Marc"
+    ],
+    "answer": 1,
+    "explanation": "Catalan personal names take the article ('en') without the preposition 'a' when used as direct objects."
+   },
+   {
+    "question": "Contrast test: 'El professor saluda ___.'",
+    "options": [
+     "els estudiants",
+     "als estudiants",
+     "amb els estudiants",
+     "dels estudiants"
+    ],
+    "answer": 0,
+    "explanation": "'Saludar' is transitive; the direct object 'els estudiants' needs no preposition."
+   }
+  ],
+  "tip": "Test with clitic replacement: if it replaces with 'el' or 'la' (direct object), strip away any preposition 'a'."
+ },
+ {
+  "id": "ca-b1-relative-pronouns-que-qui-on-qual",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔗",
+  "title": "Relative Pronouns (Que, Què, Qui, On, El qual)",
+  "subtitle": "Connecting sentences precisely using Catalan relative pronouns",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Use invariant 'que' directly after an antecedent without prepositions, but switch to accent-bearing 'què' for things or 'qui' for people following a preposition.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Form",
+    "Context",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Direct Relative",
+      "que",
+      "Subject or direct object (people/things)",
+      "El noi que canta"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Preposition + Thing",
+      "prep. + què / el qual",
+      "Prepositional object (things/abstract)",
+      "El tema de què parlem"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Preposition + Person",
+      "prep. + qui / el qual",
+      "Prepositional object (people only)",
+      "La dona amb qui visc"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Locative Relative",
+      "on / en què",
+      "Expressing spatial or abstract location",
+      "El poble on vaig néixer"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "No Preposition (Subject/Object)",
+    "example": "M'agrada molt el llibre que m'has regalat avui.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Preposition with Thing",
+    "example": "Aquesta és l'eina amb què has de treballar.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Preposition with Person",
+    "example": "Els amics amb qui viatjo són de Girona.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "La noia que va arribar ahir és la meva germana.",
+    "ko": "",
+    "highlight": "que"
+   },
+   {
+    "en": "La cadira en què seus està trencada.",
+    "ko": "",
+    "highlight": "en què"
+   },
+   {
+    "en": "L'home a qui vas donar el paquet és advocat.",
+    "ko": "",
+    "highlight": "a qui"
+   },
+   {
+    "en": "La ciutat on visc té molts parcs preciosos.",
+    "ko": "",
+    "highlight": "on"
+   },
+   {
+    "en": "La reunió durant la qual tothom va callar va ser tensa.",
+    "ko": "",
+    "highlight": "la qual"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "El tema de que parlem és complicat.",
+    "right": "El tema de què parlem és complicat.",
+    "note": "After a preposition referring to things, you must use tonic 'què' with an accent, not unaccented 'que'."
+   },
+   {
+    "wrong": "El noi amb que surto és metge.",
+    "right": "El noi amb qui surto és metge.",
+    "note": "Use 'qui' (or 'el qual') after a preposition when referring to people, never 'que'."
+   },
+   {
+    "wrong": "La casa on en visc és antiga.",
+    "right": "La casa on visc és antiga.",
+    "note": "Do not duplicate the locative relative 'on' with the clitic pronoun 'en'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He comprat el cotxe ___ hem vist aquest matí.",
+    "options": [
+     "que",
+     "què",
+     "qui",
+     "on"
+    ],
+    "answer": 0,
+    "explanation": "Direct object relative without a preposition uses unaccented 'que'."
+   },
+   {
+    "question": "Aquest és el bolígraf amb ___ has de signar el contracte.",
+    "options": [
+     "qui",
+     "on",
+     "què",
+     "que"
+    ],
+    "answer": 2,
+    "explanation": "After a preposition referring to a thing, use 'què' (or 'el qual')."
+   },
+   {
+    "question": "La mestra a ___ vam escriure la carta ens ha respost.",
+    "options": [
+     "on",
+     "què",
+     "el que",
+     "qui"
+    ],
+    "answer": 3,
+    "explanation": "After a preposition referring to a human antecedent, use 'qui'."
+   },
+   {
+    "question": "El barri ___ vam passar la infantesa ha canviat molt.",
+    "options": [
+     "que",
+     "on",
+     "qui",
+     "què"
+    ],
+    "answer": 1,
+    "explanation": "Spatial relations take the locative relative adverb 'on'."
+   }
+  ],
+  "tip": "Remember: no preposition = 'que' (no accent). Preposition + thing = 'què' (grave accent). Preposition + person = 'qui'."
+ },
+ {
+  "id": "ca-b1-past-participle-agreement",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🧩",
+  "title": "Past Participle Agreement with Clitics",
+  "subtitle": "Matching compound past participles in gender and number",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "In compound tenses with 'haver', the past participle agrees in gender and number when preceded by direct object clitics (el, la, els, les, and the partitive en).",
+  "structure": {
+   "headers": [
+    "Clitic",
+    "Preceded Form",
+    "Agreement Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "el / l'",
+      "Masc. Singular",
+      "L'he comprat",
+      "I bought it (masc.)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "la / l'",
+      "Fem. Singular",
+      "L'he comprada",
+      "I bought it (fem.)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "els",
+      "Masc. Plural",
+      "Els he comprats",
+      "I bought them (masc.)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "les",
+      "Fem. Plural",
+      "Les he comprades",
+      "I bought them (fem.)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "en / n'",
+      "Partitive (matches noun)",
+      "N'he comprat / comprada / comprats / comprades",
+      "I bought some (agrees with noun)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Feminine Direct Object Clitic",
+    "example": "La clau? L'he trobada a la cuina.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Plural Direct Object Clitics",
+    "example": "Aquestes pomes, les has menjades totes?",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Partitive Clitic 'En'",
+    "example": "De cireres, n'hem collides un cistell sencer.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "La carta, l'has escrita tu?",
+    "ko": "",
+    "highlight": "escrita"
+   },
+   {
+    "en": "Els documents, els hem impresos a la feina.",
+    "ko": "",
+    "highlight": "impresos"
+   },
+   {
+    "en": "Les fotografies, no les he vistes encara.",
+    "ko": "",
+    "highlight": "vistes"
+   },
+   {
+    "en": "De cadires, n'hem portades quatre per a la sala.",
+    "ko": "",
+    "highlight": "portades"
+   },
+   {
+    "en": "El jersei nou, l'has rentat a mà?",
+    "ko": "",
+    "highlight": "rentat"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "La novel·la, l'he llegit dues vegades.",
+    "right": "La novel·la, l'he llegida dues vegades.",
+    "note": "When the direct object pronoun 'la' (contracted to 'l'') precedes the verb, the participle must take the feminine suffix (-ida)."
+   },
+   {
+    "wrong": "Aquests llibres, els he comprat ahir.",
+    "right": "Aquests llibres, els he comprats ahir.",
+    "note": "With preceding masculine plural direct object clitic 'els', the participle takes the plural -s ending."
+   },
+   {
+    "wrong": "Li he donada la flor a la Maria.",
+    "right": "Li he donat la flor a la Maria.",
+    "note": "Do not make the participle agree with indirect objects ('li') or postposed direct objects; only preceding direct object clitics trigger agreement."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "La maleta, ja l'heu ___ al cotxe?",
+    "options": [
+     "carregats",
+     "carregat",
+     "carregada",
+     "carregades"
+    ],
+    "answer": 2,
+    "explanation": "The clitic 'l'' refers to 'la maleta' (feminine singular), so the participle agrees as 'carregada'."
+   },
+   {
+    "question": "Aquestes revistes antigues, les he ___ a la biblioteca.",
+    "options": [
+     "trobades",
+     "trobat",
+     "trobada",
+     "trobats"
+    ],
+    "answer": 0,
+    "explanation": "The direct object pronoun 'les' is feminine plural, requiring 'trobades'."
+   },
+   {
+    "question": "Quants informes heu redactat? — Ja n'hem ___ tres.",
+    "options": [
+     "redactada",
+     "redactades",
+     "redactats",
+     "redactat"
+    ],
+    "answer": 2,
+    "explanation": "'En' refers to 'informes' (masculine plural), triggering masculine plural agreement: 'redactats'."
+   },
+   {
+    "question": "El pont vell, els enginyers l'han ___ amb cura.",
+    "options": [
+     "reconstruïts",
+     "reconstruïda",
+     "reconstruïdes",
+     "reconstruït"
+    ],
+    "answer": 3,
+    "explanation": "The clitic 'l'' replaces 'el pont' (masculine singular), so the participle stays masculine singular: 'reconstruït'."
+   }
+  ],
+  "tip": "Only preceding DIRECT object pronouns (el, la, els, les, en) trigger agreement. Indirect objects (li, els) never change the participle!"
+ },
+ {
+  "id": "ca-b2-imperfect-subjunctive-and-conditionals",
+  "level": "b2",
+  "category": "conditionals",
+  "categoryColor": "#0891B2",
+  "emoji": "💭",
+  "title": "Imperfect Subjunctive and Hypothetical Conditionals",
+  "subtitle": "Expressing hypothetical conditions and impossible wishes",
+  "color": "#0891B2",
+  "bg": "#ECFEFF",
+  "keyPoint": "In hypothetical 'si' clauses, use the imperfect subjunctive (-és / -ís) in the conditional protasis and the simple conditional (-ia) in the apodosis.",
+  "structure": {
+   "headers": [
+    "Verb Conjugation",
+    "Si Clause (Imperfect Subj.)",
+    "Result Clause (Conditional)",
+    "English Structure"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Conjugation (-ar)",
+      "Si mengés més sa...",
+      "...em sentiria millor.",
+      "If I ate healthier, I would feel better."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd Conjugation (-re / -er)",
+      "Si vinguessis demà...",
+      "...aniríem al teatre.",
+      "If you came tomorrow, we would go to the theater."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3rd Conjugation (-ir)",
+      "Si dormís vuit hores...",
+      "...tindria més energia.",
+      "If I slept eight hours, I would have more energy."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Unreal / Pluperfect",
+      "Si hagués sabut això...",
+      "...hauria vingut abans.",
+      "If I had known this, I would have come earlier."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0891B2",
+    "label": "Hypothetical Present/Future",
+    "example": "Si tingués més diners, faria la volta al món.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Subordinate Clause of Desire",
+    "example": "Volia que tu vinguessis a la festa.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Past Counterfactual",
+    "example": "Si haguéssiu trucat, us hauríem ajudat.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Si jo fos ric, viuria davant del mar.",
+    "ko": "",
+    "highlight": "fos"
+   },
+   {
+    "en": "T'ajudaria amb el projecte si pogués.",
+    "ko": "",
+    "highlight": "pogués"
+   },
+   {
+    "en": "Els pares preferien que estudiéssim a Barcelona.",
+    "ko": "",
+    "highlight": "estudiéssim"
+   },
+   {
+    "en": "Si tinguéssiu fred, encendríem la calefacció.",
+    "ko": "",
+    "highlight": "tinguéssiu"
+   },
+   {
+    "en": "Si sabés la veritat, no actuaria d'aquesta manera.",
+    "ko": "",
+    "highlight": "sabés"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Si tindria temps, viatjaria a Menorca.",
+    "right": "Si tingués temps, viatjaria a Menorca.",
+    "note": "Never use the conditional tense after conditional 'si'; use the imperfect subjunctive instead."
+   },
+   {
+    "wrong": "Si fóssem aquí, veuríem el concert.",
+    "right": "Si fóssim aquí, veuríem el concert.",
+    "note": "The 1st person plural imperfect subjunctive of 'ser' is spelled with 'i': 'fóssim' (not 'fóssem')."
+   },
+   {
+    "wrong": "Si parlessis més a poc a poc, t'entendria.",
+    "right": "Si parlessis més a poc a poc, t'entendria.",
+    "note": "First conjugation verbs use -és endings: 'parlessis' (not 'parlassis' in standard central Catalan)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Si nosaltres ___ el tren ara, arribaríem a temps.",
+    "options": [
+     "agafaríem",
+     "agaféssim",
+     "agafem",
+     "hàgim agafat"
+    ],
+    "answer": 1,
+    "explanation": "The 'si' clause expressing an unreal present/future condition takes the imperfect subjunctive: 'agaféssim'."
+   },
+   {
+    "question": "Si tu m'ho demanessis, jo ho ___ de seguida.",
+    "options": [
+     "faria",
+     "fes",
+     "faig",
+     "fés"
+    ],
+    "answer": 0,
+    "explanation": "The main result clause (apodosis) paired with an imperfect subjunctive takes the conditional: 'faria'."
+   },
+   {
+    "question": "Què faries si et ___ la loteria?",
+    "options": [
+     "tocarà",
+     "tocaria",
+     "toqués",
+     "toqui"
+    ],
+    "answer": 2,
+    "explanation": "After 'si' in an imaginative conditional sentence, use the imperfect subjunctive 'toqués'."
+   },
+   {
+    "question": "Si vosaltres ___ més atenció, no cometríeu tants errors.",
+    "options": [
+     "pararíeu",
+     "paréssiu",
+     "pareu",
+     "pàssiu"
+    ],
+    "answer": 1,
+    "explanation": "The second person plural imperfect subjunctive of 'parar' is 'paréssiu'."
+   }
+  ],
+  "tip": "Rule of thumb: 'Si' never meets the conditional tense. After 'si', always reach for the subjunctive ('Si tingués...')."
+ },
+ {
+  "id": "ca-b2-change-and-fall-of-prepositions",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#DC2626",
+  "emoji": "📉",
+  "title": "Canvi i Caiguda de Preposicions",
+  "subtitle": "Mastering when prepositions drop or change before que and infinitives",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Prepositions (a, de, en, amb) must drop entirely before a subordinate 'que' conjunction, while 'en' and 'amb' generally change to 'de' (or 'a') before an infinitive.",
+  "structure": {
+   "headers": [
+    "Underlying Prep.",
+    "Before Noun Phrase",
+    "Before 'que' (Caiguda)",
+    "Before Infinitive (Canvi)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "en",
+      "Confio en la teva paraula",
+      "Confio que vindràs (drops)",
+      "Confio a/de tenir èxit (changes)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "de",
+      "M'oblido del teu nom",
+      "M'oblido que tenim feina (drops)",
+      "M'oblido de trucar (stays)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "a",
+      "M'acostumo a la calor",
+      "M'acostumo que faci calor (drops)",
+      "M'acostumo a matinar (stays)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "amb",
+      "Somio amb un viatge",
+      "Somio que viatgem (drops)",
+      "Somio de viatjar (changes to 'de')"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Caiguda Before 'que'",
+    "example": "Tinc por que no arribin a temps.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Canvi Before Infinitive (amb -> de)",
+    "example": "Ell somia de comprar-se una barca.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Canvi Before Infinitive (en -> a/de)",
+    "example": "Tinc interès a resoldre aquesta qüestió.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Estic convençut que guanyarem el partit.",
+    "ko": "",
+    "highlight": "convençut que"
+   },
+   {
+    "en": "No t'adonaves que tothom et mirava?",
+    "ko": "",
+    "highlight": "adonaves que"
+   },
+   {
+    "en": "Confio a poder resoldre el problema demà.",
+    "ko": "",
+    "highlight": "Confio a"
+   },
+   {
+    "en": "No et preocupis que plogui demà.",
+    "ko": "",
+    "highlight": "preocupis que"
+   },
+   {
+    "en": "Tinc l'esperança de trobar una feina millor.",
+    "ko": "",
+    "highlight": "esperança de"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Estic segur de que aprovaré l'examen.",
+    "right": "Estic segur que aprovaré l'examen.",
+    "note": "The preposition 'de' drops completely before the conjunction 'que' (caiguda de preposició)."
+   },
+   {
+    "wrong": "Ell somia amb guanyar el campionat.",
+    "right": "Ell somia de guanyar el campionat.",
+    "note": "Before an infinitive, 'amb' changes to 'de' (canvi de preposició)."
+   },
+   {
+    "wrong": "Tinc interès en estudiar filologia.",
+    "right": "Tinc interès a estudiar filologia.",
+    "note": "Before an infinitive, 'en' regularly shifts to 'a' or 'de'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Ella està molt contenta ___ hagis vingut.",
+    "options": [
+     "de que",
+     "que",
+     "en què",
+     "a que"
+    ],
+    "answer": 1,
+    "explanation": "The preposition 'de' drops entirely before the subordinate conjunction 'que'."
+   },
+   {
+    "question": "No dubtis mai ___ demanar auxili si cal.",
+    "options": [
+     "amb",
+     "en",
+     "de",
+     "per"
+    ],
+    "answer": 2,
+    "explanation": "Before an infinitive, 'en' shifts to 'de': 'dubtar de fer quelcom'."
+   },
+   {
+    "question": "Estic convençuda ___ farem un bon paper.",
+    "options": [
+     "amb que",
+     "de que",
+     "que",
+     "en que"
+    ],
+    "answer": 2,
+    "explanation": "Prepositions cannot appear immediately before nominal 'que'; they must drop."
+   },
+   {
+    "question": "Tots nosaltres somiem ___ visitar el Japó algun dia.",
+    "options": [
+     "de",
+     "amb",
+     "en",
+     "a"
+    ],
+    "answer": 0,
+    "explanation": "'Somiar amb' changes to 'somiar de' before a verb in the infinitive."
+   }
+  ],
+  "tip": "In normative Catalan, never allow 'de que', 'en que', or 'amb que' when 'que' introduces a subordinate clause: the preposition must drop!"
+ },
+ {
+  "id": "ca-b2-advanced-pronominal-combinations-with-passive-reflexive",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#9333EA",
+  "emoji": "⚙️",
+  "title": "Pronominal Passives, Impersonal 'Es', and Pronoun Clustering",
+  "subtitle": "Navigating impersonal 'es', passive reflexive, and complex clitics",
+  "color": "#9333EA",
+  "bg": "#FAF5FF",
+  "keyPoint": "Passive reflexive 'es' agrees in number with the patient subject, whereas impersonal 'es' takes a singular verb and combines cleanly with clitics like 'en' and 'hi' (e.g. 'se n'hi').",
+  "structure": {
+   "headers": [
+    "Type",
+    "Construction",
+    "Agreement Rule",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Passive Reflexive",
+      "es + transitive verb + patient",
+      "Verb agrees in number with patient noun",
+      "Es venen pisos (plural)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Impersonal 'Es'",
+      "es + intransitive / transitive + object",
+      "Verb is strictly 3rd person singular",
+      "Es viu bé aquí"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Clitic + Reflexive (Locative)",
+      "se + hi -> se n'hi",
+      "Strict cluster order: Reflexive -> Indirect/Direct -> Locative",
+      "Se n'hi parla sovint"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Cluster with Partitive",
+      "se + en -> se'n / se n'",
+      "Reflexive precedes partitive 'en'",
+      "Se'n parla a la premsa"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#9333EA",
+    "label": "Passive Reflexive Agreement",
+    "example": "Aquí es parlen diverses llengües oficials.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Impersonal Construction",
+    "example": "Es treballa molt millor en silenci.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Complex Clitic Combination",
+    "example": "No se n'hi pot entrar sense permís.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "A la botiga es venen mobles restaurats.",
+    "ko": "",
+    "highlight": "es venen mobles"
+   },
+   {
+    "en": "D'aquest afer, ja se n'ha parlat a bastament.",
+    "ko": "",
+    "highlight": "se n'ha parlat"
+   },
+   {
+    "en": "En aquesta conferència se n'hi van tractar molts.",
+    "ko": "",
+    "highlight": "se n'hi van tractar"
+   },
+   {
+    "en": "Es busca secretària amb coneixements d'anglès.",
+    "ko": "",
+    "highlight": "Es busca secretària"
+   },
+   {
+    "en": "Des d'aquell mirador s'hi veu tot el golf.",
+    "ko": "",
+    "highlight": "s'hi veu"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Es ven aquests llibres a meitat de preu.",
+    "right": "Es venen aquests llibres a meitat de preu.",
+    "note": "In a passive reflexive clause, 'aquests llibres' is the grammatical subject; the verb must be plural ('es venen')."
+   },
+   {
+    "wrong": "N'hi se parla a la ràdio.",
+    "right": "Se n'hi parla a la ràdio.",
+    "note": "The reflexive/impersonal 'se' must always come first in pronoun clusters: se + en + hi -> se n'hi."
+   },
+   {
+    "wrong": "Es viuen bé a Catalunya.",
+    "right": "Es viu bé a Catalunya.",
+    "note": "With intransitive verbs ('viure'), the construction is impersonal, not passive, and must remain singular."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "En aquest mercat ___ verdures fresques cada dissabte.",
+    "options": [
+     "es ven",
+     "es venen",
+     "se venen",
+     "venen-se"
+    ],
+    "answer": 1,
+    "explanation": "In passive reflexive constructions, the verb agrees with the plural subject 'verdures fresques'."
+   },
+   {
+    "question": "D'aquelles pomes, ___ van collir més de cent quilos.",
+    "options": [
+     "n'es",
+     "es en",
+     "se'n",
+     "se n'hi"
+    ],
+    "answer": 2,
+    "explanation": "The impersonal/reflexive clitic 'se' combines with partitive 'en' as 'se'n'."
+   },
+   {
+    "question": "A la reunió, d'aquell problema, ja ___.",
+    "options": [
+     "hi se'n va parlar",
+     "se n'hi va parlar",
+     "se n'hi van parlar",
+     "se hi en va parlar"
+    ],
+    "answer": 1,
+    "explanation": "The canonical clitic cluster order is reflexive 'se' + partitive 'n'' + locative 'hi' with a singular verb: 'se n'hi va parlar'."
+   },
+   {
+    "question": "A l'estiu ___ tard a causa de la calor.",
+    "options": [
+     "es sopem",
+     "es sopen",
+     "es sopar",
+     "es sopa"
+    ],
+    "answer": 3,
+    "explanation": "Impersonal statements with intransitive verbs strictly take the 3rd person singular: 'es sopa'."
+   }
+  ],
+  "tip": "Test for passive reflexive: can you turn the noun into a subject that changes the verb from singular to plural? If yes ('es ven el pis' vs. 'es venen els pisos'), it is passive reflexive and must agree!"
+ }
+]

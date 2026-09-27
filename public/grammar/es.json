@@ -1,0 +1,3386 @@
+[
+ {
+  "id": "es-a1-gender-and-number-agreement",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🏷️",
+  "title": "Noun-Adjective Gender and Number Agreement",
+  "subtitle": "Match gender and quantity across articles, nouns, and adjectives",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "In Spanish, articles and adjectives must match the gender (masculine/feminine) and number (singular/plural) of the noun they describe.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Masculine Singular",
+    "Feminine Singular",
+    "Masculine Plural",
+    "Feminine Plural"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Definite Article",
+      "el libro",
+      "la mesa",
+      "los libros",
+      "las mesas"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Regular Adjective (-o/-a)",
+      "el gato negro",
+      "la gata negra",
+      "los gatos negros",
+      "las gatas negras"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Consonant / -e Ending",
+      "el coche azul",
+      "la flor azul",
+      "los coches azules",
+      "las flores azules"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Describing Objects",
+    "example": "Compro una mesa redonda para la cocina.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Plural Groups",
+    "example": "Los zapatos nuevos son muy cómodos.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Invariable Adjectives",
+    "example": "Ella lleva unas camisas verdes.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "El chico alto juega al baloncesto.",
+    "ko": "",
+    "highlight": "El chico alto"
+   },
+   {
+    "en": "Tenemos una casa pequeña en el campo.",
+    "ko": "",
+    "highlight": "una casa pequeña"
+   },
+   {
+    "en": "Los vestidos rojos son elegantes.",
+    "ko": "",
+    "highlight": "Los vestidos rojos"
+   },
+   {
+    "en": "Ellas leen unas revistas interesantes.",
+    "ko": "",
+    "highlight": "unas revistas interesantes"
+   },
+   {
+    "en": "La comida española es deliciosa.",
+    "ko": "",
+    "highlight": "La comida española"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "La falda rojo",
+    "right": "La falda roja",
+    "note": "Feminine nouns require feminine adjective endings (-a)."
+   },
+   {
+    "wrong": "Los libro interesantes",
+    "right": "Los libros interesantes",
+    "note": "Both the noun and the adjective must take the plural marker -s or -es."
+   },
+   {
+    "wrong": "El problema blanca",
+    "right": "El problema blanco",
+    "note": "Words of Greek origin ending in -ma (like problema) are masculine."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase for 'The red apples':",
+    "options": [
+     "Las manzanas rojas",
+     "Los manzanas rojos",
+     "Las manzanas rojos",
+     "La manzana roja"
+    ],
+    "answer": 0,
+    "explanation": "'Manzanas' is feminine and plural, so the article must be 'las' and the adjective 'rojas'."
+   },
+   {
+    "question": "Select the correct combination for 'an interesting book':",
+    "options": [
+     "un libro interesanta",
+     "un libro interesante",
+     "una libro interesante",
+     "un libros interesantes"
+    ],
+    "answer": 1,
+    "explanation": "'Libro' is masculine singular ('un libro'), and 'interesante' ends in -e so it does not change for gender."
+   },
+   {
+    "question": "Complete the sentence: 'Las casas son ___.'",
+    "options": [
+     "blancos",
+     "blanco",
+     "blancas",
+     "blanca"
+    ],
+    "answer": 2,
+    "explanation": "'Casas' is feminine and plural, requiring the feminine plural adjective 'blancas'."
+   },
+   {
+    "question": "Identify the grammatically correct sentence:",
+    "options": [
+     "El agua está frío.",
+     "Tengo unos amigos divertida.",
+     "Los coches son rápidos.",
+     "La problema es difícil."
+    ],
+    "answer": 2,
+    "explanation": "'Los coches son rápidos' maintains full masculine plural agreement across article, noun, and adjective."
+   }
+  ],
+  "tip": "Adjectives ending in -e or consonants (like 'verde' or 'fácil') change for number by adding -s or -es, but stay the same for masculine and feminine."
+ },
+ {
+  "id": "es-a1-ser-vs-estar",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "⚖️",
+  "title": "Ser vs Estar",
+  "subtitle": "Navigate the two Spanish verbs for 'to be'",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use 'ser' for inherent characteristics, identity, time, and origin, but use 'estar' for locations, temporary conditions, and emotional states.",
+  "structure": {
+   "headers": [
+    "Verb",
+    "Primary Uses",
+    "Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ser",
+      "Identity, origin, traits, time",
+      "Soy de Madrid y soy médico.",
+      "Permanent traits / profession"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "estar",
+      "Location, conditions, states",
+      "Estoy cansado en la biblioteca.",
+      "Temporary condition / physical place"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ser vs estar",
+      "Meaning-changing adjectives",
+      "Es listo (smart) vs Está listo (ready)",
+      "Shift from trait to current status"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Identity & Origin",
+    "example": "Nosotros somos profesores de historia.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Physical Location",
+    "example": "La farmacia está cerca del supermercado.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Temporary Mood or Health",
+    "example": "¿Cómo estás hoy después del viaje?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mi hermana es arquitecta en Valencia.",
+    "ko": "",
+    "highlight": "es arquitecta"
+   },
+   {
+    "en": "Hoy estoy muy contento con el resultado.",
+    "ko": "",
+    "highlight": "estoy muy contento"
+   },
+   {
+    "en": "El café está frío ahora mismo.",
+    "ko": "",
+    "highlight": "está frío"
+   },
+   {
+    "en": "Nosotros somos de Colombia.",
+    "ko": "",
+    "highlight": "somos de"
+   },
+   {
+    "en": "¿Dónde están las llaves del coche?",
+    "ko": "",
+    "highlight": "están las llaves"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Madrid es en España.",
+    "right": "Madrid está en España.",
+    "note": "Location of physical entities always uses 'estar', never 'ser'."
+   },
+   {
+    "wrong": "Estoy profesor de español.",
+    "right": "Soy profesor de español.",
+    "note": "Professions and careers are viewed as essential identities and take 'ser'."
+   },
+   {
+    "wrong": "La sopa es muy caliente hoy.",
+    "right": "La sopa está muy caliente hoy.",
+    "note": "Current perceived temperature or condition uses 'estar'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'Where are you from?'",
+    "options": [
+     "¿De dónde estás?",
+     "¿De dónde eres?",
+     "¿Dónde estás de?",
+     "¿De dónde tienes?"
+    ],
+    "answer": 1,
+    "explanation": "Origin is an inherent characteristic and requires 'ser' ('eres')."
+   },
+   {
+    "question": "Fill in the blank: 'Juan no viene porque ___ enfermo.'",
+    "options": [
+     "es",
+     "está",
+     "estás",
+     "ser"
+    ],
+    "answer": 1,
+    "explanation": "Illness is a health condition, requiring 'estar' ('está')."
+   },
+   {
+    "question": "What is the meaning of 'Ella está aburrida'?",
+    "options": [
+     "She is boring (by nature).",
+     "She is intelligent.",
+     "She is angry.",
+     "She is feeling bored right now."
+    ],
+    "answer": 3,
+    "explanation": "'Ser aburrido' means being a boring person, while 'estar aburrido' means feeling bored."
+   },
+   {
+    "question": "Choose the sentence that correctly expresses time:",
+    "options": [
+     "Están las tres de la tarde.",
+     "Tienen las tres de la tarde.",
+     "Son las tres de la tarde.",
+     "Hay las tres de la tarde."
+    ],
+    "answer": 2,
+    "explanation": "Telling time always uses the third-person plural or singular of 'ser' ('Son las...')."
+   }
+  ],
+  "tip": "Remember the rhyme: 'For how you feel and where you are, always use the verb ESTAR!'"
+ },
+ {
+  "id": "es-a1-regular-present-indicative",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#2563EB",
+  "emoji": "⏱️",
+  "title": "Present Indicative of Regular Verbs",
+  "subtitle": "Conjugate regular -ar, -er, and -ir verbs in everyday speech",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Spanish verbs change endings according to the subject, allowing subject pronouns to be dropped naturally in most sentences.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "-ar (hablar)",
+    "-er (comer)",
+    "-ir (vivir)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "yo",
+      "hablo",
+      "como",
+      "vivo"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "tú",
+      "hablas",
+      "comes",
+      "vives"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "él / ella / usted",
+      "habla",
+      "come",
+      "vive"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "nosotros/-as",
+      "hablamos",
+      "comemos",
+      "vivimos"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ellos / ellas / ustedes",
+      "hablan",
+      "comen",
+      "viven"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Habits & Routines",
+    "example": "Ceno con mi familia a las ocho.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "General Truths",
+    "example": "El sol calienta la tierra cada mañana.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Immediate Actions",
+    "example": "¿Escribes el correo ahora mismo?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Yo trabajo en una oficina moderna.",
+    "ko": "",
+    "highlight": "trabajo"
+   },
+   {
+    "en": "Nosotros comemos fruta fresca todos los días.",
+    "ko": "",
+    "highlight": "comemos"
+   },
+   {
+    "en": "Ellos viven en un apartamento soleado.",
+    "ko": "",
+    "highlight": "viven"
+   },
+   {
+    "en": "¿Bebes café por la mañana?",
+    "ko": "",
+    "highlight": "Bebes"
+   },
+   {
+    "en": "Ana aprende muchas palabras en clase.",
+    "ko": "",
+    "highlight": "aprende"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Yo hablar con mi madre.",
+    "right": "Yo hablo con mi madre.",
+    "note": "The infinitive must be conjugated to agree with the subject 'yo'."
+   },
+   {
+    "wrong": "Nosotros vives en Madrid.",
+    "right": "Nosotros vivimos en Madrid.",
+    "note": "'Nosotros' with an -ir verb takes the ending -imos ('vivimos')."
+   },
+   {
+    "wrong": "Ellos coman pan todos los días.",
+    "right": "Ellos comen pan todos los días.",
+    "note": "Regular present indicative for -er verbs uses -en for 'ellos', not -an."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct form: 'Tú ___ (escribir) una carta.'",
+    "options": [
+     "escribes",
+     "escribo",
+     "escribe",
+     "escriben"
+    ],
+    "answer": 0,
+    "explanation": "The 'tú' form of regular -ir verbs ends in -es: 'escribes'."
+   },
+   {
+    "question": "Complete the phrase: 'Mis hermanos ___ (aprender) idiomas.'",
+    "options": [
+     "aprendes",
+     "aprende",
+     "aprenden",
+     "aprendemos"
+    ],
+    "answer": 2,
+    "explanation": "'Mis hermanos' corresponds to the third-person plural 'ellos', ending in -en ('aprenden')."
+   },
+   {
+    "question": "Which verb form completes 'Nosotros ___ (hablar) español'?",
+    "options": [
+     "habláis",
+     "hablan",
+     "hablo",
+     "hablamos"
+    ],
+    "answer": 3,
+    "explanation": "'Nosotros' always takes the -amos ending for -ar verbs in the present indicative."
+   },
+   {
+    "question": "Choose the sentence where the subject pronoun is correctly dropped:",
+    "options": [
+     "Comes una ensalada deliciosa.",
+     "Comer una ensalada deliciosa.",
+     "Como tú una ensalada deliciosa.",
+     "Comen tú una ensalada deliciosa."
+    ],
+    "answer": 0,
+    "explanation": "The ending -es in 'comes' uniquely points to 'tú', making the pronoun unnecessary."
+   }
+  ],
+  "tip": "Because Spanish verb endings reveal who is performing the action, omit 'yo', 'tú', and 'nosotros' unless you want to add special contrast or emphasis."
+ },
+ {
+  "id": "es-a1-gustar-and-similar-verbs",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "❤️",
+  "title": "Verbs like Gustar and Indirect Pronouns",
+  "subtitle": "Express likes and preferences backwards with indirect objects",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "With 'gustar', the thing you like is actually the grammatical subject, so the verb is usually 'gusta' (singular) or 'gustan' (plural).",
+  "structure": {
+   "headers": [
+    "Clarifier (Optional)",
+    "IOP",
+    "Verb Form",
+    "Grammatical Subject"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "(A mí)",
+      "me",
+      "gusta",
+      "el té caliente (singular noun)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "(A ti)",
+      "te",
+      "gusta",
+      "bailar (verb infinitive)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "(A ella / él / usted)",
+      "le",
+      "gustan",
+      "las flores rojas (plural noun)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "(A nosotros)",
+      "nos",
+      "gustan",
+      "los libros de misterio"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "(A ellos)",
+      "les",
+      "gusta",
+      "la música clásica"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Liking Singular Objects",
+    "example": "A Carlos le gusta el chocolate.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Liking Plural Items",
+    "example": "No me gustan los lunes por la mañana.",
+    "translation": ""
+   },
+   {
+    "color": "#4F46E5",
+    "label": "Liking Activities (Infinitives)",
+    "example": "¿Os gusta cocinar los fines de semana?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "A mí me gusta la comida mexicana.",
+    "ko": "",
+    "highlight": "me gusta la comida"
+   },
+   {
+    "en": "¿A ti te gustan los perros grandes?",
+    "ko": "",
+    "highlight": "te gustan los perros"
+   },
+   {
+    "en": "A ella le gusta viajar en tren.",
+    "ko": "",
+    "highlight": "le gusta viajar"
+   },
+   {
+    "en": "Nos gusta mucho este parque infantil.",
+    "ko": "",
+    "highlight": "Nos gusta"
+   },
+   {
+    "en": "A mis padres les gustan los conciertos de jazz.",
+    "ko": "",
+    "highlight": "les gustan los conciertos"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Yo gusto el café.",
+    "right": "Me gusta el café.",
+    "note": "'Gustar' does not conjugate like English 'I like'; the coffee pleases me ('me gusta')."
+   },
+   {
+    "wrong": "Me gusta los gatos.",
+    "right": "Me gustan los gatos.",
+    "note": "Because 'los gatos' is plural, the verb must match it as 'gustan'."
+   },
+   {
+    "wrong": "A él gusta la música.",
+    "right": "A él le gusta la música.",
+    "note": "Even when using 'A él', the indirect object pronoun 'le' cannot be omitted."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'A nosotros ___ la paella.'",
+    "options": [
+     "nos gustan",
+     "nos gusta",
+     "te gusta",
+     "gustamos"
+    ],
+    "answer": 1,
+    "explanation": "'La paella' is singular, so the verb is 'gusta', preceded by the pronoun 'nos'."
+   },
+   {
+    "question": "Choose the right option for 'Do you like apples?':",
+    "options": [
+     "¿Tú gustas las manzanas?",
+     "¿Te gusta las manzanas?",
+     "¿Te gustan las manzanas?",
+     "¿Le gustas las manzanas?"
+    ],
+    "answer": 2,
+    "explanation": "'Las manzanas' is plural, so we use 'gustan' along with the informal 'te'."
+   },
+   {
+    "question": "Fill in the blank: 'A ellos les ___ leer novelas.'",
+    "options": [
+     "gustan",
+     "gusto",
+     "gusta",
+     "gustas"
+    ],
+    "answer": 2,
+    "explanation": "Infinitives like 'leer' act as singular subjects, taking 'gusta'."
+   },
+   {
+    "question": "Identify the grammatically correct sentence:",
+    "options": [
+     "A mí me encanta el fútbol.",
+     "A yo me gusta la playa.",
+     "A ellos gustan el cine.",
+     "Me gustas los libros."
+    ],
+    "answer": 0,
+    "explanation": "'A mí me encanta el fútbol' correctly pairs prepositional phrase, indirect object pronoun, and singular verb."
+   }
+  ],
+  "tip": "Whenever an infinitive verb follows 'gustar' (even multiple actions like 'bailar y cantar'), the verb always remains singular: 'gusta'."
+ },
+ {
+  "id": "es-a1-hay-vs-estar",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "📍",
+  "title": "Hay vs Estar for Existence and Location",
+  "subtitle": "Distinguish between the existence of things and their exact whereabouts",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Use 'hay' (there is/are) to state the existence of indefinite or uncounted items, and 'estar' to locate specific, definite persons or things.",
+  "structure": {
+   "headers": [
+    "Form",
+    "Type of Subject",
+    "Triggers / Markers",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "hay",
+      "Existence (indefinite)",
+      "un, una, números, nada, muchos",
+      "Hay un gato en el tejado."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "estar",
+      "Location (definite singular)",
+      "el, la, posesivos (mi, tu)",
+      "El gato está en el tejado."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "están",
+      "Location (definite plural)",
+      "los, las, nombres propios",
+      "Mis llaves están en la mesa."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Stating Existence",
+    "example": "Hay tres farmacias en este barrio.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Locating a Specific Object",
+    "example": "¿Dónde está la parada de autobús?",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Describing Inhabitants or Objects",
+    "example": "No hay nadie en la oficina hoy.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "En mi barrio hay un parque muy bonito.",
+    "ko": "",
+    "highlight": "hay un parque"
+   },
+   {
+    "en": "El parque municipal está al final de la calle.",
+    "ko": "",
+    "highlight": "está al final"
+   },
+   {
+    "en": "¿Hay agua en la nevera?",
+    "ko": "",
+    "highlight": "Hay agua"
+   },
+   {
+    "en": "Mis profesores están en la sala de reuniones.",
+    "ko": "",
+    "highlight": "están en la sala"
+   },
+   {
+    "en": "No hay boletos para el cine esta noche.",
+    "ko": "",
+    "highlight": "No hay boletos"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "El banco hay en la esquina.",
+    "right": "El banco está en la esquina.",
+    "note": "'El banco' is definite and known, so we locate it with 'estar', not 'hay'."
+   },
+   {
+    "wrong": "Hay el libro en mi mochila.",
+    "right": "Está el libro en mi mochila / El libro está en mi mochila.",
+    "note": "'Hay' is never followed by definite articles ('el', 'la', 'los', 'las')."
+   },
+   {
+    "wrong": "En la mesa hay están dos vasos.",
+    "right": "En la mesa hay dos vasos.",
+    "note": "Do not combine 'hay' and 'estar' together to describe existence."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the question: '¿Dónde ___ la biblioteca central?'",
+    "options": [
+     "hay",
+     "está",
+     "es",
+     "están"
+    ],
+    "answer": 1,
+    "explanation": "'La biblioteca central' is a definite, specific place, so locate it using 'está'."
+   },
+   {
+    "question": "Choose the correct word: 'En la mesa ___ muchas frutas.'",
+    "options": [
+     "están",
+     "son",
+     "es",
+     "hay"
+    ],
+    "answer": 3,
+    "explanation": "'Muchas frutas' introduces indefinite quantity/existence, which takes 'hay'."
+   },
+   {
+    "question": "Which sentence is grammatically correct?",
+    "options": [
+     "Hay el gato en el jardín.",
+     "El gato está en el jardín.",
+     "Está un gato en el jardín.",
+     "Hay los niños en la escuela."
+    ],
+    "answer": 1,
+    "explanation": "'El gato' uses the definite article 'el', requiring 'está' to describe its location."
+   },
+   {
+    "question": "Fill in the blank: '¿___ un médico en la sala?'",
+    "options": [
+     "Está",
+     "Hay",
+     "Es",
+     "Son"
+    ],
+    "answer": 1,
+    "explanation": "Indefinite article 'un médico' marks existence, requiring impersonal 'Hay'."
+   }
+  ],
+  "tip": "Never place 'el', 'la', 'los', or 'las' immediately after 'hay' — if you need a definite article, switch to 'estar'!"
+ },
+ {
+  "id": "es-a1-personal-a",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "👤",
+  "title": "The Personal 'a'",
+  "subtitle": "Connecting transitive verbs to specific people and beloved pets",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Insert the preposition 'a' immediately before a direct object when it refers to a specific known person or domestic pet.",
+  "structure": {
+   "headers": [
+    "Object Type",
+    "Structure",
+    "Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Specific Person",
+      "Verbo + a + persona",
+      "Veo a María en el parque.",
+      "I see María in the park."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Beloved Pet",
+      "Verbo + a + mascota",
+      "Paseo a mi perro por la tarde.",
+      "I walk my dog in the afternoon."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Inanimate Thing",
+      "Verbo + objeto directo",
+      "Veo la casa blanca.",
+      "I see the white house."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Contraction (a + el)",
+      "Verbo + al + sustantivo",
+      "Llamo al doctor ahora mismo.",
+      "I call the doctor right now."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Named Individuals",
+    "example": "Visito a Carlos los domingos.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Beloved Domestic Animals",
+    "example": "Quiero mucho a mi gata.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Indefinite Pronouns for People",
+    "example": "No conozco a nadie en esta fiesta.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Escucho atentamente a la profesora.",
+    "ko": "",
+    "highlight": "a la profesora"
+   },
+   {
+    "en": "Buscamos a nuestros amigos en el centro.",
+    "ko": "",
+    "highlight": "a nuestros amigos"
+   },
+   {
+    "en": "Llevo al veterinario a mi perro enfermo.",
+    "ko": "",
+    "highlight": "al veterinario"
+   },
+   {
+    "en": "Ellos no vieron a nadie en la oficina.",
+    "ko": "",
+    "highlight": "a nadie"
+   },
+   {
+    "en": "Invitamos a Elena a cenar tacos.",
+    "ko": "",
+    "highlight": "a Elena"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Veo mi hermano en el supermercado.",
+    "right": "Veo a mi hermano en el supermercado.",
+    "note": "Specific family members are direct objects requiring the personal 'a'."
+   },
+   {
+    "wrong": "Visito a la biblioteca municipal.",
+    "right": "Visito la biblioteca municipal.",
+    "note": "Never use the personal 'a' with non-human inanimate objects or places."
+   },
+   {
+    "wrong": "Llamo a el médico por la mañana.",
+    "right": "Llamo al médico por la mañana.",
+    "note": "The preposition 'a' and the masculine article 'el' must contract into 'al'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I am looking for my sister in the shopping mall.",
+    "options": [
+     "Busco mi hermana.",
+     "Busco a mi hermana.",
+     "Busco en mi hermana.",
+     "Busco para mi hermana."
+    ],
+    "answer": 1,
+    "explanation": "The sister is a specific person functioning as a direct object, requiring the personal 'a'."
+   },
+   {
+    "question": "We visit the museum on Saturdays.",
+    "options": [
+     "Visitamos al museo los sábados.",
+     "Visitamos a museo los sábados.",
+     "Visitamos el museo los sábados.",
+     "Visitamos de el museo los sábados."
+    ],
+    "answer": 2,
+    "explanation": "Museums are inanimate locations, so the personal 'a' is not used."
+   },
+   {
+    "question": "Do you know the new doctor?",
+    "options": [
+     "¿Conoces al nuevo médico?",
+     "¿Conoces el nuevo médico?",
+     "¿Conoces a el nuevo médico?",
+     "¿Conoces lo nuevo médico?"
+    ],
+    "answer": 0,
+    "explanation": "Specific humans require 'a', which combines with 'el' to form the contraction 'al'."
+   },
+   {
+    "question": "I don't know anyone here.",
+    "options": [
+     "No conozco nadie aquí.",
+     "No conozco de nadie aquí.",
+     "No conozco para nadie aquí.",
+     "No conozco a nadie aquí."
+    ],
+    "answer": 3,
+    "explanation": "Pronouns referring to human beings like 'nadie' and 'alguien' take the personal 'a'."
+   }
+  ],
+  "tip": "Never use the personal 'a' after the existential verb 'haber' (hay), even when talking about people: say 'Hay tres médicos', not 'Hay a tres médicos'."
+ },
+ {
+  "id": "es-a2-preterite-vs-imperfect",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "⏳",
+  "title": "Preterite vs Imperfect Aspect",
+  "subtitle": "Navigating completed milestones versus ongoing past descriptions",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "Use the preterite for past actions completed at a definite point, and the imperfect for ongoing background states, descriptions, or habits.",
+  "structure": {
+   "headers": [
+    "Aspect",
+    "Primary Function",
+    "Common Trigger Words",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Preterite",
+      "Completed past event with defined boundaries",
+      "ayer, anoche, una vez",
+      "Ayer comí paella."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Imperfect",
+      "Habitual or repeated past action",
+      "siempre, todos los días, a menudo",
+      "Siempre comía paella."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Imperfect",
+      "Background condition or physical/mental state",
+      "mientras, era, estaba",
+      "Hacía frío en la sala."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Combined",
+      "Interruption (Imperfect interrupted by Preterite)",
+      "cuando",
+      "Dormía cuando sonó el teléfono."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#B91C1C",
+    "label": "Single Completed Actions",
+    "example": "El año pasado me mudé a Madrid.",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Childhood Habits",
+    "example": "De niño jugaba en el parque todos los días.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Ongoing Scene Interrupted",
+    "example": "Caminaba por la calle cuando vi el accidente.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ayer compré un billete de tren para Toledo.",
+    "ko": "",
+    "highlight": "compré"
+   },
+   {
+    "en": "Cuando era pequeño, leía muchos libros de aventuras.",
+    "ko": "",
+    "highlight": "era"
+   },
+   {
+    "en": "Estudiábamos en la biblioteca cuando empezó la tormenta.",
+    "ko": "",
+    "highlight": "empezó"
+   },
+   {
+    "en": "La casa era grande y tenía paredes blancas.",
+    "ko": "",
+    "highlight": "tenía"
+   },
+   {
+    "en": "Anoche salí con mis amigos a bailar.",
+    "ko": "",
+    "highlight": "salí"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ayer caminaba a la tienda y compré leche.",
+    "right": "Ayer caminé a la tienda y compré leche.",
+    "note": "Consecutive, completed actions in a narrative sequence both take the preterite."
+   },
+   {
+    "wrong": "El examen fue a las diez cuando tuve veinte años.",
+    "right": "El examen fue a las diez cuando tenía veinte años.",
+    "note": "Age in the past expresses ongoing background state, which requires the imperfect."
+   },
+   {
+    "wrong": "Siempre fui a la playa cada verano con mis abuelos.",
+    "right": "Siempre iba a la playa cada verano con mis abuelos.",
+    "note": "Customary or habitual past routines require the imperfect."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday I ___ a new laptop.",
+    "options": [
+     "compraba",
+     "compré",
+     "he comprado",
+     "compro"
+    ],
+    "answer": 1,
+    "explanation": "The specific time indicator 'ayer' marks a single, completed action requiring the preterite 'compré'."
+   },
+   {
+    "question": "When we were kids, we ___ in the forest every afternoon.",
+    "options": [
+     "jugábamos",
+     "jugamos",
+     "jugué",
+     "jugaron"
+    ],
+    "answer": 0,
+    "explanation": "Habitual, repeated childhood routines use the imperfect tense."
+   },
+   {
+    "question": "I was studying when my mother ___ the room.",
+    "options": [
+     "entraba",
+     "entra",
+     "ha entrado",
+     "entró"
+    ],
+    "answer": 3,
+    "explanation": "The sudden action that interrupts an ongoing activity takes the preterite."
+   },
+   {
+    "question": "It ___ cold outside and the wind was howling.",
+    "options": [
+     "hizo",
+     "hacía",
+     "hizo frío",
+     "fue"
+    ],
+    "answer": 1,
+    "explanation": "Describing environmental conditions and setting the scene in the past requires the imperfect 'hacía'."
+   }
+  ],
+  "tip": "Think of the past as a stage play: the imperfect paints the painted backdrop and weather, while the preterite is the actors stepping forward to make things happen."
+ },
+ {
+  "id": "es-a2-direct-and-indirect-object-pronouns",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "Direct and Indirect Object Pronoun Placement",
+  "subtitle": "Ordering clitics and executing the mandatory 'le' to 'se' transformation",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Indirect object pronouns always precede direct object pronouns, and third-person indirect 'le/les' changes to 'se' before 'lo/la/los/las'.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Pronouns",
+    "Placement with Conjugated Verb",
+    "Placement with Infinitive/Gerund"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Indirect (to/for whom)",
+      "me, te, le, nos, os, les",
+      "Me da el libro.",
+      "Dándome el libro / darme"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Direct (who/what)",
+      "me, te, lo/la, nos, os, los/las",
+      "Lo compro hoy.",
+      "Comprándolo / comprarlo"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Double Pronoun Order",
+      "Indirect + Direct",
+      "Te lo explico.",
+      "Explicártelo"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "'Le/Les' to 'Se' Rule",
+      "se + lo/la/los/las",
+      "Se lo envié ayer.",
+      "Enviárselo"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Before Conjugated Verbs",
+    "example": "Ella me lo dijo ayer por la noche.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Attached to Infinitives",
+    "example": "Quiero comprártelo este fin de semana.",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Spurious 'Se' Replacement",
+    "example": "Le escribí una carta -> Se la escribí.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "¿El libro? Te lo presto hasta el lunes.",
+    "ko": "",
+    "highlight": "Te lo"
+   },
+   {
+    "en": "No puedo dártelo en este momento.",
+    "ko": "",
+    "highlight": "dártelo"
+   },
+   {
+    "en": "Ese mensaje se lo envié a mi jefa.",
+    "ko": "",
+    "highlight": "se lo"
+   },
+   {
+    "en": "Mis padres están preparándonoslo para la cena.",
+    "ko": "",
+    "highlight": "preparándonoslo"
+   },
+   {
+    "en": "La carta ya se la mandamos por correo.",
+    "ko": "",
+    "highlight": "se la"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Le lo compré a mi hermano.",
+    "right": "Se lo compré a mi hermano.",
+    "note": "When both pronouns start with 'l' (le + lo), the indirect pronoun changes to 'se' to avoid tongue twisters."
+   },
+   {
+    "wrong": "Yo lo te doy mañana por la tarde.",
+    "right": "Yo te lo doy mañana por la tarde.",
+    "note": "Indirect pronouns must always come BEFORE direct pronouns: remember 'I.D.' (Indirect then Direct)."
+   },
+   {
+    "wrong": "Quiero dar lo te ahora.",
+    "right": "Quiero dártelo ahora.",
+    "note": "When attaching pronouns to infinitives, attach both as a single word without spaces, maintaining I.D. order."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Can you bring it (the key: la llave) to me?",
+    "options": [
+     "¿Me la puedes traer?",
+     "¿La me puedes traer?",
+     "¿Te la puedes traer?",
+     "¿Se la puedes traer a mí?"
+    ],
+    "answer": 0,
+    "explanation": "Indirect 'me' precedes direct 'la', placed before the conjugated modal verb 'puedes'."
+   },
+   {
+    "question": "I told the truth (la verdad) to Carlos.",
+    "options": [
+     "Le la dije.",
+     "La le dije.",
+     "Se la dije.",
+     "Me la dije."
+    ],
+    "answer": 2,
+    "explanation": "When 'le' precedes 'la', 'le' converts into 'se', producing 'Se la dije'."
+   },
+   {
+    "question": "We are going to sell the car (el coche) to you all.",
+    "options": [
+     "Vamos a vendéroslo.",
+     "Vamos a venderlo os.",
+     "Os lo vamos vendiendo.",
+     "Vamos os lo a vender."
+    ],
+    "answer": 0,
+    "explanation": "Attached pronouns join the infinitive directly in indirect+direct order with a written accent: vendéroslo."
+   },
+   {
+    "question": "She gave them (the flowers: las flores) to her grandmother.",
+    "options": [
+     "Les las dio.",
+     "Las les dio.",
+     "Se las dio.",
+     "La se dio."
+    ],
+    "answer": 2,
+    "explanation": "'Les' turns into 'se' before feminine direct plural 'las'."
+   }
+  ],
+  "tip": "Remember the acronym RID: Reflexive before Indirect before Direct. And whenever two 'L' pronouns collide ('le lo'), change the first into 'se'."
+ },
+ {
+  "id": "es-a2-reflexive-and-pronominal-verbs",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🪞",
+  "title": "Reflexive Pronouns and Pronominal Verbs",
+  "subtitle": "Actions upon oneself, mutual reciprocity, and lexical shifts with 'se'",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Pronominal verbs use reflexive pronouns matching the subject to show actions done to oneself, reciprocal actions ('each other'), or lexical shifts.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Pattern",
+    "Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "True Reflexive",
+      "Sujeto + pronombre reflexivo",
+      "Me lavo las manos.",
+      "I wash my hands."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Reciprocal",
+      "Plurales (nos, os, se)",
+      "Nos vemos mañana.",
+      "We will see each other tomorrow."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Lexical Meaning Shift",
+      "Verbo simple vs pronominal",
+      "Dormir (sleep) / Dormirse (fall asleep)",
+      "Me dormí a las doce."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Inherently Pronominal",
+      "Solo existe con 'se'",
+      "Quejarse de",
+      "Ella se queja del ruido."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Self-Directed Actions",
+    "example": "Mi hermano se despierta a las siete.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Mutual Reciprocal Actions",
+    "example": "Mis tíos se quieren muchísimo.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Inherent Involuntary Verbs",
+    "example": "No te preocupes por el dinero.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Siempre me cepillo los dientes después de comer.",
+    "ko": "",
+    "highlight": "me cepillo"
+   },
+   {
+    "en": "Ellos se abrazaron al verse en el aeropuerto.",
+    "ko": "",
+    "highlight": "se abrazaron"
+   },
+   {
+    "en": "El bebé se durmió profundamente en la cuna.",
+    "ko": "",
+    "highlight": "se durmió"
+   },
+   {
+    "en": "Nos acordamos de nuestras vacaciones de verano.",
+    "ko": "",
+    "highlight": "Nos acordamos"
+   },
+   {
+    "en": "¿A qué hora te vas de la fiesta?",
+    "ko": "",
+    "highlight": "te vas"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Lavo mis manos antes de cenar.",
+    "right": "Me lavo las manos antes de cenar.",
+    "note": "In Spanish, body parts use definite articles (las manos) with a reflexive pronoun, not possessives (mis manos)."
+   },
+   {
+    "wrong": "Nosotros quejamos del examen.",
+    "right": "Nosotros nos quejamos del examen.",
+    "note": "'Quejarse' is inherently pronominal and cannot be conjugated without its reflexive pronoun."
+   },
+   {
+    "wrong": "Yo duermo a las diez anoche.",
+    "right": "Yo me dormí a las diez anoche.",
+    "note": "Falling asleep (inchoative change of state) requires pronominal 'dormirse' in preterite, not simple 'dormir'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "She combs her hair every morning.",
+    "options": [
+     "Ella peina su pelo cada mañana.",
+     "Ella peina el pelo cada mañana.",
+     "Ella se peina el pelo cada mañana.",
+     "Ella se peina su pelo cada mañana."
+    ],
+    "answer": 2,
+    "explanation": "Reflexive actions upon body parts use 'se' + verb + definite article ('el pelo')."
+   },
+   {
+    "question": "Romeo and Juliet loved each other deeply.",
+    "options": [
+     "Romeo y Julieta se amaban profundamente.",
+     "Romeo y Julieta les amaban profundamente.",
+     "Romeo y Julieta amaban profundamente.",
+     "Romeo y Julieta se amaba profundamente."
+    ],
+    "answer": 0,
+    "explanation": "Plural pronominal actions express mutual reciprocity ('each other') using 'se amaban'."
+   },
+   {
+    "question": "Don't worry about the results.",
+    "options": [
+     "No preocupas por los resultados.",
+     "No te preocupes por los resultados.",
+     "No le preocupes por los resultados.",
+     "No preocupes a los resultados."
+    ],
+    "answer": 1,
+    "explanation": "'Preocuparse' is a pronominal verb that requires the reflexive pronoun 'te'."
+   },
+   {
+    "question": "I am leaving now because it is very late.",
+    "options": [
+     "Voy ahora porque es muy tarde.",
+     "Estoy yendo ahora porque es muy tarde.",
+     "Me voy ahora porque es muy tarde.",
+     "Se voy ahora porque es muy tarde."
+    ],
+    "answer": 2,
+    "explanation": "'Irse' means to leave / go away, in contrast to 'ir' which means to go toward a destination."
+   }
+  ],
+  "tip": "Notice how adding 'se' often marks an inchoative shift—a transition into a state: dormir (to sleep) becomes dormirse (to fall asleep), and ir (to go) becomes irse (to take off / leave)."
+ },
+ {
+  "id": "es-a2-por-vs-para",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "⚖️",
+  "title": "Por vs Para",
+  "subtitle": "Balancing motivations and means against destinations and targets",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use 'por' for causes, duration, exchanges, and means; use 'para' for recipients, deadlines, final goals, and physical destinations.",
+  "structure": {
+   "headers": [
+    "Preposition",
+    "Core Concept",
+    "Common Meanings",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Por",
+      "Looking back / around (Cause & Motion)",
+      "Because of, duration, through, exchange, by means of",
+      "Viajamos por avión."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Para",
+      "Looking forward (Goal & Destination)",
+      "In order to, recipient, deadline, destination",
+      "Este regalo es para ti."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Contrast: Time",
+      "Por = duration / Para = deadline",
+      "Estudio por dos horas vs Termino para el lunes",
+      "Trabajo por la tarde."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Contrast: Reason",
+      "Por = cause / Para = purpose",
+      "Llora por dolor vs Corre para ganar",
+      "Estudia para médico."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Por: Cause and Exchange",
+    "example": "Pagué veinte euros por la cena.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Para: Destination and Recipient",
+    "example": "Salimos para Colombia mañana temprano.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Para: Purpose (In order to)",
+    "example": "Hago ejercicio para mantenerme en forma.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Caminamos por el parque durante la tarde.",
+    "ko": "",
+    "highlight": "por el parque"
+   },
+   {
+    "en": "Necesito terminar este informe para el viernes.",
+    "ko": "",
+    "highlight": "para el viernes"
+   },
+   {
+    "en": "Compré flores para mi madre por su cumpleaños.",
+    "ko": "",
+    "highlight": "para mi madre"
+   },
+   {
+    "en": "Te cambio mi manzana por tu naranja.",
+    "ko": "",
+    "highlight": "por tu naranja"
+   },
+   {
+    "en": "Estudio español para conseguir un buen trabajo.",
+    "ko": "",
+    "highlight": "para conseguir"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Estudié en Madrid para seis meses.",
+    "right": "Estudié en Madrid por seis meses.",
+    "note": "Duration of time takes 'por' (or often no preposition at all), never 'para'."
+   },
+   {
+    "wrong": "Hago esto por aprender español.",
+    "right": "Hago esto para aprender español.",
+    "note": "Purpose or intended goal ('in order to' followed by an infinitive) requires 'para'."
+   },
+   {
+    "wrong": "La tarea es por mañana a las ocho.",
+    "right": "La tarea es para mañana a las ocho.",
+    "note": "Deadlines and points in future time always use 'para'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I bought this present ___ my brother.",
+    "options": [
+     "por",
+     "para",
+     "de",
+     "hacia"
+    ],
+    "answer": 1,
+    "explanation": "'Para' is used for the intended recipient of an object or action."
+   },
+   {
+    "question": "We walked ___ the historic center for two hours.",
+    "options": [
+     "para",
+     "hacia",
+     "por",
+     "a"
+    ],
+    "answer": 2,
+    "explanation": "Movement through or around a general area takes 'por'."
+   },
+   {
+    "question": "This essay must be finished ___ tomorrow morning.",
+    "options": [
+     "para",
+     "por",
+     "en",
+     "desde"
+    ],
+    "answer": 0,
+    "explanation": "A deadline or specified cutoff date takes 'para'."
+   },
+   {
+    "question": "Thank you ___ your help yesterday.",
+    "options": [
+     "para",
+     "con",
+     "a",
+     "por"
+    ],
+    "answer": 3,
+    "explanation": "Gratitude and exchanges are motivated by a cause/reason, requiring 'por' ('Gracias por...')."
+   }
+  ],
+  "tip": "Think of 'por' as looking backward to the cause (because of / motivated by), and 'para' as looking forward to the arrow's target (destination, purpose, or recipient)."
+ },
+ {
+  "id": "es-a2-stem-changing-and-irregular-preterite",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🕰️",
+  "title": "Irregular and Stem-Changing Preterite Forms",
+  "subtitle": "Navigating radical shifts and third-person vowel changes in the past",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Irregular preterite stems share a unique set of unaccented endings, while -ir verbs change vowels only in the third-person forms.",
+  "structure": {
+   "headers": [
+    "Verb Group",
+    "Stem / Change",
+    "Example (3rd Sing.)",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "U-Stem (tener)",
+      "tuv-",
+      "tuvo",
+      "had / received"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "I-Stem (hacer)",
+      "hic- (hiz-)",
+      "hizo",
+      "did / made"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "J-Stem (decir)",
+      "dij- (eron ending)",
+      "dijo",
+      "said / told"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ir Vowel shift (pedir)",
+      "e -> i",
+      "pidió",
+      "asked for / ordered"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ir Vowel shift (dormir)",
+      "o -> u",
+      "durmió",
+      "slept"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Completed Radical Action",
+    "example": "Ayer pusimos las llaves sobre la mesa.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Third-Person Narrative Shift",
+    "example": "El camarero nos sirvió una sopa deliciosa.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Irregular Past Dialogue",
+    "example": "¿Qué le dijiste a tu hermano anoche?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mis amigos no pudieron venir a la fiesta.",
+    "ko": "",
+    "highlight": "pudieron"
+   },
+   {
+    "en": "Ella durmió ocho horas seguidas.",
+    "ko": "",
+    "highlight": "durmió"
+   },
+   {
+    "en": "Yo traje los refrescos para la cena.",
+    "ko": "",
+    "highlight": "traje"
+   },
+   {
+    "en": "El testigo no dijo toda la verdad.",
+    "ko": "",
+    "highlight": "dijo"
+   },
+   {
+    "en": "Los niños pidieron helado de chocolate.",
+    "ko": "",
+    "highlight": "pidieron"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ayer yo tení mucho trabajo.",
+    "right": "Ayer yo tuve mucho trabajo.",
+    "note": "Irregular stems like 'tener' use radical past forms (tuve, tuviste, tuvo) rather than regular -er preterite endings."
+   },
+   {
+    "wrong": "Él dormió toda la tarde.",
+    "right": "Él durmió toda la tarde.",
+    "note": "Stem-changing -ir verbs undergo an o -> u shift exclusively in the third-person preterite."
+   },
+   {
+    "wrong": "Ellos trajeron accent marks en la raíz.",
+    "right": "Ellos trajeron las maletas.",
+    "note": "Irregular stems (tuv-, pud-, dij-, traj-) never take written accent marks on any of their preterite endings."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Anoche nosotros ___ un examen muy difícil.",
+    "options": [
+     "tuvimos",
+     "tenimos",
+     "tuvémos",
+     "tenemos"
+    ],
+    "answer": 0,
+    "explanation": "'Tener' takes the irregular stem 'tuv-' with the regular irregular past ending '-imos' (no accent)."
+   },
+   {
+    "question": "El camarero nos ___ el menú rápidamente.",
+    "options": [
+     "servió",
+     "sirvió",
+     "sirve",
+     "sirvieron"
+    ],
+    "answer": 1,
+    "explanation": "-ir stem changers shift e -> i in the third-person singular preterite: 'sirvió'."
+   },
+   {
+    "question": "¿Ustedes qué le ___ al profesor ayer?",
+    "options": [
+     "dijieron",
+     "decieron",
+     "dijeron",
+     "dijisteis"
+    ],
+    "answer": 2,
+    "explanation": "J-stem verbs drop the 'i' in the third-person plural ending, taking '-eron' instead of '-ieron'."
+   },
+   {
+    "question": "Ella no ___ la tarea a tiempo.",
+    "options": [
+     "hizo",
+     "hicó",
+     "hace",
+     "hice"
+    ],
+    "answer": 0,
+    "explanation": "'Hacer' in third-person singular changes 'c' to 'z' before 'o' to maintain sound: 'hizo'."
+   }
+  ],
+  "tip": "Irregular preterite stems (tuv-, pud-, pus-, sup-, dij-) never take written accents on any conjugation, not even yo or él!"
+ },
+ {
+  "id": "es-a2-formal-and-informal-imperatives",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🗣️",
+  "title": "Affirmative and Negative Commands (Tú vs Usted)",
+  "subtitle": "Directing actions across formal and informal registers",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Affirmative tú uses the third-person present indicative, while negative tú and all usted commands switch to opposite vowel endings.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Affirmative Form",
+    "Negative Form",
+    "Opposite Vowel Rule"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Tú (-ar)",
+      "habla",
+      "no hables",
+      "-a in affirmative, -es in negative"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Tú (-er/-ir)",
+      "come / escribe",
+      "no comas / no escribas",
+      "-e in affirmative, -as in negative"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Usted (-ar)",
+      "hable",
+      "no hable",
+      "always uses opposite vowel -e"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Usted (-er/-ir)",
+      "coma / escriba",
+      "no coma / no escriba",
+      "always uses opposite vowel -a"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Pronoun rule",
+      "Attach to end (dímelo)",
+      "Precede verb (no me lo digas)",
+      "Accents needed on affirmative compounds"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Informal Directive",
+    "example": "Cierra la puerta antes de salir, por favor.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Formal Instruction",
+    "example": "Pase y tome asiento, señor López.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Negative Prohibition",
+    "example": "No abras esa ventana porque hace frío.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Haz la tarea ahora mismo.",
+    "ko": "",
+    "highlight": "Haz"
+   },
+   {
+    "en": "No comas tanta comida chatarra.",
+    "ko": "",
+    "highlight": "No comas"
+   },
+   {
+    "en": "Dígame su número de teléfono, por favor.",
+    "ko": "",
+    "highlight": "Dígame"
+   },
+   {
+    "en": "No toquen los cuadros en el museo.",
+    "ko": "",
+    "highlight": "No toquen"
+   },
+   {
+    "en": "Escucha atentamente las instrucciones.",
+    "ko": "",
+    "highlight": "Escucha"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "¡No habla tan rápido!",
+    "right": "¡No hables tan rápido!",
+    "note": "Negative tú commands require the subjunctive opposite-vowel ending (-es for -ar verbs)."
+   },
+   {
+    "wrong": "No lo haz ahora.",
+    "right": "No lo hagas ahora.",
+    "note": "The irregular affirmative command 'haz' switches to 'no hagas' in the negative."
+   },
+   {
+    "wrong": "Dime lo más tarde.",
+    "right": "Dímelo más tarde.",
+    "note": "Object pronouns must attach directly to affirmative commands, often requiring a written accent mark."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Carlos, ¡___ la ventana ahora mismo!",
+    "options": [
+     "abre",
+     "abra",
+     "abras",
+     "abres"
+    ],
+    "answer": 0,
+    "explanation": "Affirmative informal (tú) command of 'abrir' uses the third-person present indicative form: 'abre'."
+   },
+   {
+    "question": "Señor Gómez, por favor no ___ aquí.",
+    "options": [
+     "fumes",
+     "fuma",
+     "fume",
+     "fumar"
+    ],
+    "answer": 2,
+    "explanation": "Negative formal (usted) command for an -ar verb takes the opposite vowel '-e': 'no fume'."
+   },
+   {
+    "question": "Lucía, ¡no ___ mentiras a tus padres!",
+    "options": [
+     "dices",
+     "di",
+     "diga",
+     "digas"
+    ],
+    "answer": 3,
+    "explanation": "Negative informal (tú) command for 'decir' takes the opposite vowel ending: 'no digas'."
+   },
+   {
+    "question": "Si tienes el libro de Juan, ___ mañana.",
+    "options": [
+     "devuélveselo",
+     "se lo devuelve",
+     "no devuélvelo",
+     "devuélvelo se"
+    ],
+    "answer": 0,
+    "explanation": "Affirmative commands attach both indirect and direct object pronouns to the end, forming a single accented word."
+   }
+  ],
+  "tip": "Remember the 8 short affirmative tú irregulars with the mnemonic: 'Vin Diesel Has Ten Weapons' (ven, di, sal, haz, ten, ve, pon, sé)."
+ },
+ {
+  "id": "es-b1-present-subjunctive-wishes-and-emotions",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "💭",
+  "title": "Present Subjunctive for Volition and Emotion",
+  "subtitle": "Expressing desires, influences, and feelings in dependent clauses",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "When the main clause expresses will, hope, or emotion and introduces a new subject via 'que', the subordinate verb must take the subjunctive.",
+  "structure": {
+   "headers": [
+    "Trigger Category",
+    "Main Clause (Subject 1)",
+    "Connector",
+    "Subordinate Clause (Subject 2)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Volition / Desire",
+      "Quiero / Deseo",
+      "que",
+      "vengas a la fiesta"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Influence / Request",
+      "Te aconsejo",
+      "que",
+      "estudies más"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Emotion / Reaction",
+      "Me alegro de",
+      "que",
+      "estés bien"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Hope (Ojalá)",
+      "Ojalá",
+      "(que)",
+      "tengamos buen tiempo"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Same Subject (No que)",
+      "Quiero / Espero",
+      "---",
+      "viajar pronto (Infinitive)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Expressing a Wish",
+    "example": "Espero que encuentres un buen trabajo.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Emotional Response",
+    "example": "Nos molesta que la gente hable tan alto.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Advice / Requirement",
+    "example": "El médico me sugiere que duerma más.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Deseo que tengas un día maravilloso.",
+    "ko": "",
+    "highlight": "tengas"
+   },
+   {
+    "en": "Temo que no haya suficientes sillas.",
+    "ko": "",
+    "highlight": "haya"
+   },
+   {
+    "en": "Mis padres quieren que yo estudie medicina.",
+    "ko": "",
+    "highlight": "estudie"
+   },
+   {
+    "en": "Ojalá mañana no llueva durante el partido.",
+    "ko": "",
+    "highlight": "llueva"
+   },
+   {
+    "en": "Me alegro de que disfrutes tus vacaciones.",
+    "ko": "",
+    "highlight": "disfrutes"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Quiero que yo voy al cine.",
+    "right": "Quiero ir al cine.",
+    "note": "If the subject does not change, use an infinitive directly instead of 'que' + subjunctive."
+   },
+   {
+    "wrong": "Espero que tú vienes pronto.",
+    "right": "Espero que tú vengas pronto.",
+    "note": "Verbs of hoping and wishing (esperar) require the subjunctive mood when the subject changes."
+   },
+   {
+    "wrong": "Me gusta que tú estás aquí.",
+    "right": "Me gusta que tú estés aquí.",
+    "note": "Emotional reactions (gustar, alegrar, encantar) trigger the subjunctive in the subordinate clause."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Mi madre insiste en que nosotros ___ toda la verdura.",
+    "options": [
+     "comemos",
+     "comamos",
+     "coman",
+     "comer"
+    ],
+    "answer": 1,
+    "explanation": "The main verb expresses volition with a change of subject, requiring present subjunctive 'comamos'."
+   },
+   {
+    "question": "Siento mucho que tú no ___ venir con nosotros.",
+    "options": [
+     "puedes",
+     "podrás",
+     "puedas",
+     "pudiste"
+    ],
+    "answer": 2,
+    "explanation": "'Sentir que' expresses an emotional reaction, triggering the subjunctive 'puedas'."
+   },
+   {
+    "question": "Yo quiero ___ a España este verano.",
+    "options": [
+     "viajar",
+     "viaje",
+     "que viaje",
+     "viajo"
+    ],
+    "answer": 0,
+    "explanation": "There is no change of subject (Yo quiero [yo]), so the infinitive 'viajar' is used without 'que'."
+   },
+   {
+    "question": "¡Ojalá el examen ___ fácil!",
+    "options": [
+     "es",
+     "sea",
+     "será",
+     "ha sido"
+    ],
+    "answer": 1,
+    "explanation": "'Ojalá' expresses hope and always takes the subjunctive mood ('sea')."
+   }
+  ],
+  "tip": "Think of the acronym WEIRDOS (Wishes, Emotions, Impersonal expressions, Recommendations, Doubt, Ojalá, Speculation) to quickly identify subjunctive triggers."
+ },
+ {
+  "id": "es-b1-subjunctive-in-relative-clauses",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔍",
+  "title": "Subjunctive vs Indicative with Unknown or Nonexistent Antecedents",
+  "subtitle": "Distinguishing concrete reality from hypothetical search targets",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "Use the subjunctive in a relative clause when modifying an antecedent that is unknown, unspecific, or nonexistent to the speaker.",
+  "structure": {
+   "headers": [
+    "Antecedent Status",
+    "Antecedent Type",
+    "Verb Mood",
+    "Example Sentence"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Known / Specific",
+      "Definite noun (el, la)",
+      "Indicative",
+      "Busco al guía que habla inglés."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Unknown / Indefinite",
+      "Indefinite noun (un, una)",
+      "Subjunctive",
+      "Busco un guía que hable inglés."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Nonexistent / Negated",
+      "Negative pronoun (nadie, nada)",
+      "Subjunctive",
+      "No hay nadie que hable inglés."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "General Question",
+      "¿Hay alguien que...?",
+      "Subjunctive",
+      "¿Hay alguien que conozca la respuesta?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6366F1",
+    "label": "Seeking an Unknown Item",
+    "example": "Necesito un libro que explique este tema de forma clara.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Denying Existence",
+    "example": "No conozco a nadie que viva en esa ciudad.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Describing a Specific Known Fact",
+    "example": "Tengo un teléfono que saca fotos increíbles.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Quiero comprar una casa que tenga piscina.",
+    "ko": "",
+    "highlight": "tenga"
+   },
+   {
+    "en": "Vivimos en una casa que tiene jardín amplio.",
+    "ko": "",
+    "highlight": "tiene"
+   },
+   {
+    "en": "¿Hay algún restaurante cerca que sirva comida vegana?",
+    "ko": "",
+    "highlight": "sirva"
+   },
+   {
+    "en": "No encontré nada que me gustara en la tienda.",
+    "ko": "",
+    "highlight": "gustara"
+   },
+   {
+    "en": "Buscamos a la secretaria que habla tres idiomas.",
+    "ko": "",
+    "highlight": "habla"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Busco un hotel que tiene habitaciones libres.",
+    "right": "Busco un hotel que tenga habitaciones libres.",
+    "note": "When searching for an unspecified hotel that may or may not exist, use the subjunctive 'tenga'."
+   },
+   {
+    "wrong": "Conozco a un hombre que viva aquí.",
+    "right": "Conozco a un hombre que vive aquí.",
+    "note": "'Conozco' implies the person is a concrete, known entity; hence the indicative 'vive' is mandatory."
+   },
+   {
+    "wrong": "No hay ningún médico que sabe la cura.",
+    "right": "No hay ningún médico que sepa la cura.",
+    "note": "Negated antecedents (no hay ningún...) affirm nonexistence, triggering the subjunctive."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Necesito un amigo que me ___ cuando tengo problemas.",
+    "options": [
+     "ayuda",
+     "ayudará",
+     "ayude",
+     "ayudaba"
+    ],
+    "answer": 2,
+    "explanation": "The antecedent 'un amigo' is indefinite and hypothetical, triggering the subjunctive 'ayude'."
+   },
+   {
+    "question": "Ya tengo un coche que ___ muy poco combustible.",
+    "options": [
+     "consume",
+     "consuma",
+     "consumirá",
+     "ha consumido"
+    ],
+    "answer": 0,
+    "explanation": "The speaker actually possesses this specific car, representing a confirmed reality (indicative: 'consume')."
+   },
+   {
+    "question": "No hay nadie en esta clase que ___ chino.",
+    "options": [
+     "habla",
+     "hable",
+     "habló",
+     "hablaría"
+    ],
+    "answer": 1,
+    "explanation": "'Nadie' denotes a nonexistent antecedent, requiring the subjunctive 'hable'."
+   },
+   {
+    "question": "¿Conoces a alguien que ___ arreglar bicicletas?",
+    "options": [
+     "sabe",
+     "sabrá",
+     "supo",
+     "sepa"
+    ],
+    "answer": 3,
+    "explanation": "Asking whether a hypothetical person exists prompts the subjunctive 'sepa'."
+   }
+  ],
+  "tip": "Check the article: 'el/la/los/las' usually refers to a known specific entity (Indicative), while 'un/una/alguien/nadie' signals uncertainty or nonexistence (Subjunctive)."
+ },
+ {
+  "id": "es-b1-past-subjunctive-formation-and-use",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "⏳",
+  "title": "Imperfect Subjunctive Triggered by Past Tenses",
+  "subtitle": "Forming -ra/-se stems from the preterite to govern past subordinate clauses",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Drop the '-ron' ending of the third-person plural preterite and add -ra, -ras, -ra, -ramos, -rais, -ran to form the imperfect subjunctive.",
+  "structure": {
+   "headers": [
+    "Infinitive",
+    "3rd Plural Preterite",
+    "Imperfect Subj. (yo)",
+    "Imperfect Subj. (nosotros)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "hablar",
+      "hablaron",
+      "hablara / hablase",
+      "habláramos (written accent)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "tener",
+      "tuvieron",
+      "tuviera / tuviese",
+      "tuviéramos (written accent)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "hacer",
+      "hicieron",
+      "hiciera / hiciese",
+      "hiciéramos (written accent)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ir / ser",
+      "fueron",
+      "fuera / fuese",
+      "fuéramos (written accent)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "decir",
+      "dijeron",
+      "dijera / dijese",
+      "dijéramos (written accent)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Past Volition or Request",
+    "example": "El profesor quería que entregáramos el ensayo ayer.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Past Emotional Reaction",
+    "example": "Nos alegró mucho que vinieras a visitarnos.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Polite Past Request",
+    "example": "Quisiera pedir una taza de café, por favor.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dudaba que ellos supieran la respuesta correcta.",
+    "ko": "",
+    "highlight": "supieran"
+   },
+   {
+    "en": "Mis padres me pidieron que volviera temprano.",
+    "ko": "",
+    "highlight": "volviera"
+   },
+   {
+    "en": "Fue una lástima que el concierto se cancelara.",
+    "ko": "",
+    "highlight": "se cancelara"
+   },
+   {
+    "en": "Esperábamos que el tren llegara a tiempo.",
+    "ko": "",
+    "highlight": "llegara"
+   },
+   {
+    "en": "No creía que fuera tan difícil aprender a conducir.",
+    "ko": "",
+    "highlight": "fuera"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mi padre quería que yo hablo con él.",
+    "right": "Mi padre quería que yo hablara con él.",
+    "note": "A past-tense trigger (quería) cannot connect to a present indicative; it requires the imperfect subjunctive."
+   },
+   {
+    "wrong": "Ellos esperaban que nosotros fueramos.",
+    "right": "Ellos esperaban que nosotros fuéramos.",
+    "note": "The 'nosotros' form of the imperfect subjunctive always carries an accent on the vowel before -ramos."
+   },
+   {
+    "wrong": "Quise que él poniera la mesa.",
+    "right": "Quise que él pusiera la mesa.",
+    "note": "The stem must derive from the 3rd person preterite (pusieron -> pusiera), not regular infinitive roots."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Ella me recomendó que ___ más agua todos los días.",
+    "options": [
+     "beba",
+     "bebiera",
+     "bebo",
+     "bebería"
+    ],
+    "answer": 1,
+    "explanation": "Because the main verb 'recomendó' is in the preterite, the subordinate subjunctive must be past: 'bebiera'."
+   },
+   {
+    "question": "El jefe nos ordenó que ___ el informe inmediatamente.",
+    "options": [
+     "hiciéramos",
+     "hicéramos",
+     "hagamos",
+     "hicimos"
+    ],
+    "answer": 0,
+    "explanation": "'Hacer' derives from 'hicieron' -> 'hiciéramos', with an obligatory accent on the 'e'."
+   },
+   {
+    "question": "No me pareció bien que ellos no nos ___ la verdad.",
+    "options": [
+     "digan",
+     "dijieron",
+     "decían",
+     "dijeran"
+    ],
+    "answer": 3,
+    "explanation": "From 'dijeron', drop '-ron' and add '-ran': 'dijeran'."
+   },
+   {
+    "question": "Era imposible que tú ___ a la reunión tan temprano.",
+    "options": [
+     "llegues",
+     "llegaste",
+     "llegaras",
+     "llegarías"
+    ],
+    "answer": 2,
+    "explanation": "Impersonal past expressions of impossibility ('Era imposible que...') require the imperfect subjunctive 'llegaras'."
+   }
+  ],
+  "tip": "Always anchor to the 'ellos' preterite form: drop -ron, and you will never miss irregular stems like tuv-, pus-, sup-, or dij-."
+ },
+ {
+  "id": "es-b1-impersonal-and-passive-se",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#4F46E5",
+  "emoji": "📢",
+  "title": "Impersonal 'Se' and Passive 'Se'",
+  "subtitle": "Talking about actions without naming who does them",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Use impersonal 'se' with singular verbs for generalized people, and passive 'se' where the verb agrees with the grammatical subject.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Formula",
+    "Spanish Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Impersonal Se",
+      "se + singular verb",
+      "Se vive bien aquí.",
+      "People live well here."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passive Se (Singular)",
+      "se + 3rd sing. + sing. noun",
+      "Se vende una casa.",
+      "A house is sold."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passive Se (Plural)",
+      "se + 3rd plur. + plur. noun",
+      "Se venden casas.",
+      "Houses are sold."
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "General statements",
+    "example": "Se come muy bien en este país.",
+    "translation": ""
+   },
+   {
+    "color": "#06B6D4",
+    "label": "Passive signs and notices",
+    "example": "Se buscan empleados con experiencia.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Rules and instructions",
+    "example": "No se permite fumar en el edificio.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Aquí se habla español todos los días.",
+    "ko": "",
+    "highlight": "se habla"
+   },
+   {
+    "en": "Se venden pisos modernos en el centro.",
+    "ko": "",
+    "highlight": "Se venden"
+   },
+   {
+    "en": "Se necesita un camarero urgente.",
+    "ko": "",
+    "highlight": "Se necesita"
+   },
+   {
+    "en": "En esa playa se descansa maravillosamente.",
+    "ko": "",
+    "highlight": "se descansa"
+   },
+   {
+    "en": "Se alquilan habitaciones para estudiantes.",
+    "ko": "",
+    "highlight": "Se alquilan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Se vende libros usados.",
+    "right": "Se venden libros usados.",
+    "note": "In passive 'se', the verb must agree in plural with the plural grammatical subject (libros)."
+   },
+   {
+    "wrong": "Ellos se dicen que va a llover.",
+    "right": "Se dice que va a llover.",
+    "note": "Do not add subject pronouns like 'ellos' when making generalized statements with 'se'."
+   },
+   {
+    "wrong": "Se viven bien en esta ciudad.",
+    "right": "Se vive bien en esta ciudad.",
+    "note": "Impersonal 'se' without a noun subject always takes a singular verb."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'Spanish is spoken here'?",
+    "options": [
+     "Aquí se hablan español.",
+     "Aquí se habla español.",
+     "Aquí hablan se español.",
+     "Aquí se hablar español."
+    ],
+    "answer": 1,
+    "explanation": "'Español' is singular, so use 'se habla'."
+   },
+   {
+    "question": "Fill in the blank: '___ apartamentos baratos en el barrio.'",
+    "options": [
+     "Se alquila",
+     "Se alquilan",
+     "Alquilan se",
+     "Se alquilando"
+    ],
+    "answer": 1,
+    "explanation": "'Apartamentos' is plural, requiring the plural verb 'se alquilan'."
+   },
+   {
+    "question": "How do you say 'One works a lot here'?",
+    "options": [
+     "Se trabajan mucho aquí.",
+     "Se trabaja mucho aquí.",
+     "Trabajarse mucho aquí.",
+     "Se es trabajado mucho aquí."
+    ],
+    "answer": 1,
+    "explanation": "Impersonal statements about general activity use 'se' + third-person singular."
+   },
+   {
+    "question": "Choose the correct phrase for 'No photos allowed':",
+    "options": [
+     "No permiten fotos.",
+     "No se permite fotos.",
+     "No se permiten fotos.",
+     "No fotos se permite."
+    ],
+    "answer": 2,
+    "explanation": "'Fotos' is plural, so passive 'se' requires plural 'se permiten'."
+   }
+  ],
+  "tip": "If there is a plural noun directly tied to the action, make your verb plural: 'se vende coche' vs 'se venden coches'."
+ },
+ {
+  "id": "es-b1-real-and-hypothetical-conditionals",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#0EA5E9",
+  "emoji": "🔀",
+  "title": "First and Second Conditionals",
+  "subtitle": "Real possibilities vs. hypothetical dreams",
+  "color": "#0EA5E9",
+  "bg": "#F0F9FF",
+  "keyPoint": "Use present indicative for likely conditions, but pair the imperfect subjunctive with the conditional for imaginary situations.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Condition (Si...)",
+    "Result Clause",
+    "Reality"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "First (Real)",
+      "Si + Present Indicative",
+      "Futuro / Presente",
+      "Likely to happen"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Second (Hypothetical)",
+      "Si + Imperfect Subjunctive",
+      "Condicional Simple",
+      "Unreal / Imaginary"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Habitual (Zero)",
+      "Si + Present Indicative",
+      "Presente Indicativo",
+      "General truth"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0EA5E9",
+    "label": "Likely future outcomes",
+    "example": "Si tengo tiempo mañana, te llamaré.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Imagined present scenarios",
+    "example": "Si tuviera dinero, viajaría por el mundo.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Giving advice gently",
+    "example": "Si yo fuera tú, estudiaría más.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Si llueve hoy, nos quedamos en casa.",
+    "ko": "",
+    "highlight": "Si llueve"
+   },
+   {
+    "en": "Si ganas el partido, celebraremos juntos.",
+    "ko": "",
+    "highlight": "celebraremos"
+   },
+   {
+    "en": "Si tuviera alas, volaría muy alto.",
+    "ko": "",
+    "highlight": "Si tuviera"
+   },
+   {
+    "en": "Compraría esa casa si fuera rica.",
+    "ko": "",
+    "highlight": "si fuera"
+   },
+   {
+    "en": "Si supieras la verdad, no dirías eso.",
+    "ko": "",
+    "highlight": "Si supieras"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Si tendría dinero, viajaría.",
+    "right": "Si tuviera dinero, viajaría.",
+    "note": "Never put the conditional tense directly after 'si'; use the imperfect subjunctive instead."
+   },
+   {
+    "wrong": "Si tengo tiempo, te ayudaría.",
+    "right": "Si tuviera tiempo, te ayudaría.",
+    "note": "Match the conditional result ('ayudaría') with the imperfect subjunctive ('tuviera')."
+   },
+   {
+    "wrong": "Si tuviera hambre, comeré algo.",
+    "right": "Si tengo hambre, comeré algo.",
+    "note": "A future result ('comeré') requires present indicative in the 'si' clause."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the real condition: 'Si hace sol, ___ a la playa.'",
+    "options": [
+     "iremos",
+     "fuéramos",
+     "iríamos",
+     "fueron"
+    ],
+    "answer": 0,
+    "explanation": "A present condition ('hace') pairs with the future tense ('iremos') for likely outcomes."
+   },
+   {
+    "question": "Complete the hypothetical condition: 'Si yo ___ tú, aceptaría el trabajo.'",
+    "options": [
+     "soy",
+     "sería",
+     "fuera",
+     "sea"
+    ],
+    "answer": 2,
+    "explanation": "Hypothetical 'if I were you' requires the imperfect subjunctive 'fuera'."
+   },
+   {
+    "question": "Complete the sentence: 'Si tuviera más tiempo libre, ___ un nuevo idioma.'",
+    "options": [
+     "aprendo",
+     "aprendí",
+     "aprenderé",
+     "aprendería"
+    ],
+    "answer": 3,
+    "explanation": "The imperfect subjunctive in the condition demands the conditional simple ('aprendería') in the result."
+   },
+   {
+    "question": "Which sentence is grammatically correct?",
+    "options": [
+     "Si tendría coche, conduciría.",
+     "Si tuviera coche, conduciría.",
+     "Si tendré coche, conduzco.",
+     "Si tuviera coche, conduciré."
+    ],
+    "answer": 1,
+    "explanation": "Only 'si' + imperfect subjunctive paired with conditional is correct."
+   }
+  ],
+  "tip": "Remember the golden rhyme: Never put conditional right after 'si' — use the '-ra' subjunctive there instead!"
+ },
+ {
+  "id": "es-b2-counterfactual-third-conditionals",
+  "level": "b2",
+  "category": "conditionals",
+  "categoryColor": "#D97706",
+  "emoji": "⏪",
+  "title": "Third Conditionals (Past Counterfactuals)",
+  "subtitle": "Expressing past regrets and what could have been",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Pair 'si' plus the pluperfect subjunctive with the conditional perfect to talk about unchangeable past events.",
+  "structure": {
+   "headers": [
+    "Clause",
+    "Tense",
+    "Example",
+    "English Sense"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Condition",
+      "Si + Pluperfect Subjunctive",
+      "Si hubieras venido...",
+      "If you had come..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Result (Past)",
+      "Conditional Perfect",
+      "...habríamos ganado.",
+      "...we would have won."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Result (Alt.)",
+      "Pluperfect Subjunctive",
+      "...hubiéramos ganado.",
+      "...we would have won."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Expressing past regrets",
+    "example": "Si hubiera estudiado, habría aprobado.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Missed opportunities",
+    "example": "Habríamos ido a la fiesta si nos hubieran invitado.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Alternate history",
+    "example": "Si no hubiese llovido, habríamos salido al campo.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Si me lo hubieras dicho antes, te habría ayudado.",
+    "ko": "",
+    "highlight": "hubieras dicho"
+   },
+   {
+    "en": "Habríamos llegado a tiempo si no hubiéramos perdido el tren.",
+    "ko": "",
+    "highlight": "Habríamos llegado"
+   },
+   {
+    "en": "Si hubieras tenido cuidado, no te habrías caído.",
+    "ko": "",
+    "highlight": "habrías caído"
+   },
+   {
+    "en": "Habría comprado las entradas si hubiera habido descuento.",
+    "ko": "",
+    "highlight": "hubiera habido"
+   },
+   {
+    "en": "Si no hubiéramos salido tarde, habríamos visto la película.",
+    "ko": "",
+    "highlight": "Si no hubiéramos salido"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Si habría sabido esto, no venía.",
+    "right": "Si hubiera sabido esto, no habría venido.",
+    "note": "Never place the conditional perfect directly after 'si'; use 'hubiera + participle'."
+   },
+   {
+    "wrong": "Si hubiera estudiado, aprobé el examen.",
+    "right": "Si hubiera estudiado, habría aprobado el examen.",
+    "note": "A past hypothetical condition needs a compound conditional result ('habría aprobado')."
+   },
+   {
+    "wrong": "Si hubiese tenido dinero, compraría el coche ayer.",
+    "right": "Si hubiese tenido dinero, habría comprado el coche ayer.",
+    "note": "A completed past event requires conditional perfect ('habría comprado'), not simple conditional."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Si ___ el mapa, no nos habríamos perdido.'",
+    "options": [
+     "traeríamos",
+     "hubiéramos traído",
+     "habríamos traído",
+     "hayamos traído"
+    ],
+    "answer": 1,
+    "explanation": "The condition clause requires the pluperfect subjunctive 'hubiéramos traído'."
+   },
+   {
+    "question": "Complete the result: 'Si hubieras llamado, yo te ___ a recoger.'",
+    "options": [
+     "habría ido",
+     "hubiera ido",
+     "iba",
+     "vaya"
+    ],
+    "answer": 0,
+    "explanation": "The standard result clause in third conditionals uses the conditional perfect 'habría ido'."
+   },
+   {
+    "question": "Which sentence expresses an unfulfilled past scenario?",
+    "options": [
+     "Si tengo tiempo, voy.",
+     "Si tuviera tiempo, iría.",
+     "Si hubiera tenido tiempo, habría ido.",
+     "Si tendré tiempo, habré ido."
+    ],
+    "answer": 2,
+    "explanation": "'Si hubiera tenido..., habría ido' explicitly addresses an unalterable past situation."
+   },
+   {
+    "question": "Identify the error in: 'Si habrías venido, habríamos comido juntos.'",
+    "options": [
+     "comido",
+     "juntos",
+     "habríamos",
+     "habrías venido"
+    ],
+    "answer": 3,
+    "explanation": "Never use conditional after 'si'; it must be 'hubieras venido'."
+   }
+  ],
+  "tip": "In everyday spoken Spanish, native speakers often use 'hubiera' in BOTH clauses (e.g. 'Si hubiera sabido, hubiera venido')."
+ },
+ {
+  "id": "es-b2-subjunctive-in-adverbial-clauses",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#10B981",
+  "emoji": "⏳",
+  "title": "Subjunctive in Adverbial Clauses",
+  "subtitle": "Choosing between fact and anticipation with connectors",
+  "color": "#10B981",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use indicative for facts and habitual routines, but switch to subjunctive when the action is anticipated, future, or unverified.",
+  "structure": {
+   "headers": [
+    "Connector",
+    "With Indicative",
+    "With Subjunctive",
+    "Key Trigger"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Aunque",
+      "Known fact (even though)",
+      "Hypothetical (even if)",
+      "Certainty vs Doubt"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Cuando",
+      "Past / Routine action",
+      "Future anticipated action",
+      "Time perspective"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Tan pronto como",
+      "Past completed action",
+      "Pending future event",
+      "Event completion"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "A pesar de que",
+      "Acknowledged reality",
+      "Conceded uncertainty",
+      "Factual status"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Future anticipation",
+    "example": "Te llamaré cuando llegue a la estación.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Concession of known fact",
+    "example": "Aunque llueve, voy a salir a correr.",
+    "translation": ""
+   },
+   {
+    "color": "#F97316",
+    "label": "Hypothetical concession",
+    "example": "Aunque llueva mañana, iremos al parque.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Avísame en cuanto termines la tarea.",
+    "ko": "",
+    "highlight": "termines"
+   },
+   {
+    "en": "Siempre ceno cuando vuelvo a casa.",
+    "ko": "",
+    "highlight": "vuelvo"
+   },
+   {
+    "en": "Aunque no tenga ganas, iré a la reunión.",
+    "ko": "",
+    "highlight": "tenga"
+   },
+   {
+    "en": "Tan pronto como sepamos algo, te informaremos.",
+    "ko": "",
+    "highlight": "sepamos"
+   },
+   {
+    "en": "A pesar de que trabaja mucho, gana poco.",
+    "ko": "",
+    "highlight": "trabaja"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Te llamo cuando llego a Madrid mañana.",
+    "right": "Te llamo cuando llegue a Madrid mañana.",
+    "note": "'Cuando' referring to a future event requires the subjunctive ('llegue')."
+   },
+   {
+    "wrong": "Ayer cuando llegue a casa, dormí.",
+    "right": "Ayer cuando llegué a casa, dormí.",
+    "note": "Past completed actions after 'cuando' must take the preterite indicative ('llegué')."
+   },
+   {
+    "wrong": "Aunque es caro mañana, lo compraré.",
+    "right": "Aunque sea caro mañana, lo compraré.",
+    "note": "Hypothetical future scenarios introduced by 'aunque' take the subjunctive ('sea')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct verb: 'Te daré las llaves cuando ___.'",
+    "options": [
+     "vienes",
+     "vendrás",
+     "vengas",
+     "viniste"
+    ],
+    "answer": 2,
+    "explanation": "'Cuando' pointing to an anticipated future moment triggers the present subjunctive 'vengas'."
+   },
+   {
+    "question": "Select the verb expressing an acknowledged current fact: 'Aunque ___ frío ahora, no llevo abrigo.'",
+    "options": [
+     "hace",
+     "haga",
+     "hará",
+     "hiciera"
+    ],
+    "answer": 0,
+    "explanation": "Indicative 'hace' is used because the speaker is stating a factual, currently experienced condition."
+   },
+   {
+    "question": "Complete: 'Tan pronto como el tren ___, bajaremos todos.'",
+    "options": [
+     "paró",
+     "para",
+     "pare",
+     "parará"
+    ],
+    "answer": 2,
+    "explanation": "Future-oriented 'tan pronto como' takes the present subjunctive 'pare'."
+   },
+   {
+    "question": "Why does 'Siempre leo cuando viajo en tren' take indicative?",
+    "options": [
+     "It is a doubt.",
+     "It is a past regret.",
+     "It is a hypothetical condition.",
+     "It is a habitual routine."
+    ],
+    "answer": 3,
+    "explanation": "Habitual or repeated actions with 'cuando' use the indicative mood."
+   }
+  ],
+  "tip": "Ask yourself: Has this happened yet? If it's a pending future event after 'cuando' or 'en cuanto', choose subjunctive!"
+ },
+ {
+  "id": "es-b2-accidental-and-involuntary-se",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#8B5CF6",
+  "emoji": "💥",
+  "title": "The Accidental 'Se'",
+  "subtitle": "Describing accidents and shifting blame away from yourself",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "Combine 'se' with an indirect object pronoun and third-person verb that agrees with the object that dropped, broke, or got lost.",
+  "structure": {
+   "headers": [
+    "Element",
+    "Pattern",
+    "Spanish Example",
+    "Role"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Accidental Marker",
+      "se",
+      "Se...",
+      "Removes intent"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Affected Person",
+      "me / te / le / nos / os / les",
+      "...me...",
+      "Indirect victim"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Verb Agreement",
+      "Singular / Plural 3rd person",
+      "...cayeron...",
+      "Agrees with the item"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "The Item",
+      "Grammatical Subject",
+      "...las llaves.",
+      "What dropped/broke"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Dropped or broken objects",
+    "example": "Se me cayó el vaso al suelo.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Unplanned forgetting",
+    "example": "A Juan se le olvidó la cartera.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Running out of things",
+    "example": "Se nos acabó el café esta mañana.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Se me rompieron las gafas favoritas.",
+    "ko": "",
+    "highlight": "Se me rompieron"
+   },
+   {
+    "en": "A ella se le perdió el pasaporte en el aeropuerto.",
+    "ko": "",
+    "highlight": "se le perdió"
+   },
+   {
+    "en": "Se nos quedaron las llaves dentro del coche.",
+    "ko": "",
+    "highlight": "Se nos quedaron"
+   },
+   {
+    "en": "¿Se te olvidó comprar la leche?",
+    "ko": "",
+    "highlight": "Se te olvidó"
+   },
+   {
+    "en": "A los niños se les cayó el helado.",
+    "ko": "",
+    "highlight": "se les cayó"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Yo caí el plato sin querer.",
+    "right": "Se me cayó el plato sin querer.",
+    "note": "Spanish uses the accidental 'se me cayó' rather than active 'caer' for dropping objects accidentally."
+   },
+   {
+    "wrong": "Se me olvidaron la cita.",
+    "right": "Se me olvidó la cita.",
+    "note": "The verb agrees with the grammatical subject: 'la cita' is singular, so use 'olvidó'."
+   },
+   {
+    "wrong": "Se le cayeron el teléfono.",
+    "right": "Se le cayó el teléfono.",
+    "note": "'El teléfono' is singular, so the verb must be singular ('cayó')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I dropped my keys' (accidental)?",
+    "options": [
+     "Caí mis llaves.",
+     "Se me cayeron las llaves.",
+     "Me caí las llaves.",
+     "Se me cayó las llaves."
+    ],
+    "answer": 1,
+    "explanation": "'Las llaves' is plural, so the verb must agree in plural: 'se me cayeron'."
+   },
+   {
+    "question": "Complete the sentence: 'A nosotros se nos ___ la gasolina.'",
+    "options": [
+     "acabaron",
+     "acabamos",
+     "acabó",
+     "acabé"
+    ],
+    "answer": 2,
+    "explanation": "'La gasolina' is singular, so the verb is third-person singular 'acabó'."
+   },
+   {
+    "question": "Fill in the blank for 'She forgot her homework': 'A ella se ___ olvidaron los deberes.'",
+    "options": [
+     "la",
+     "le",
+     "se",
+     "su"
+    ],
+    "answer": 1,
+    "explanation": "The affected third person requires indirect object pronoun 'le'."
+   },
+   {
+    "question": "What is the true grammatical subject in 'Se me rompió la taza'?",
+    "options": [
+     "yo (implicit)",
+     "me",
+     "se",
+     "la taza"
+    ],
+    "answer": 3,
+    "explanation": "'La taza' is the subject of the passive/accidental verb 'rompió'."
+   }
+  ],
+  "tip": "Think of it as 'The object broke itself onto me' — the item is the grammatical subject, and you are just the innocent bystander!"
+ }
+]

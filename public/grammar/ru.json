@@ -1,0 +1,3360 @@
+[
+ {
+  "id": "ru-a1-gender-and-plural-nouns",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📦",
+  "title": "Noun Gender and Basic Pluralization",
+  "subtitle": "Determine noun gender by its ending and make it plural",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Russian nouns are categorized by their final letter into masculine (consonant), feminine (-а/-я), or neuter (-о/-е), forming standard plurals with -ы/-и or -а/-я.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Singular Ending",
+    "Plural Ending",
+    "Example (Sg. → Pl.)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine",
+      "Hard consonant / -й",
+      "-ы / -и",
+      "стол → столы"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine",
+      "-а / -я",
+      "-ы / -и",
+      "газета → газеты"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter",
+      "-о / -е",
+      "-а / -я",
+      "окно → окна"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Masculine Plural",
+    "example": "Здесь стоят новые столы.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Feminine Plural",
+    "example": "На столе лежат интересные книги.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Neuter Plural",
+    "example": "В комнате открыты большие окна.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Студент читает текст.",
+    "ko": "",
+    "highlight": "Студент"
+   },
+   {
+    "en": "Моя сестра живёт в Москве.",
+    "ko": "",
+    "highlight": "сестра"
+   },
+   {
+    "en": "Это красивое письмо.",
+    "ko": "",
+    "highlight": "письмо"
+   },
+   {
+    "en": "У нас есть новые компьютеры.",
+    "ko": "",
+    "highlight": "компьютеры"
+   },
+   {
+    "en": "В парке поют птицы.",
+    "ko": "",
+    "highlight": "птицы"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "книгы",
+    "right": "книги",
+    "note": "Due to the 7-letter spelling rule, never write 'ы' after к, г, х, ш, щ, ж, ч; write 'и' instead."
+   },
+   {
+    "wrong": "окны",
+    "right": "окна",
+    "note": "Neuter nouns ending in -о take -а in the nominative plural, not -ы."
+   },
+   {
+    "wrong": "моя папа",
+    "right": "мой папа",
+    "note": "Biological male family words like папа and дедушка have feminine endings (-а) but take masculine agreement."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct plural form of 'журнал' (magazine):",
+    "options": [
+     "журналы",
+     "журнали",
+     "журнала",
+     "журнале"
+    ],
+    "answer": 0,
+    "explanation": "Hard masculine consonants take -ы in the nominative plural."
+   },
+   {
+    "question": "Which of the following nouns is grammatically neuter?",
+    "options": [
+     "книга",
+     "молоко",
+     "брат",
+     "машина"
+    ],
+    "answer": 1,
+    "explanation": "Nouns ending in -о are neuter in Russian."
+   },
+   {
+    "question": "Choose the correct plural form of 'ручка' (pen):",
+    "options": [
+     "ручка",
+     "ручкы",
+     "ручки",
+     "ручко"
+    ],
+    "answer": 2,
+    "explanation": "According to the spelling rule, write -и instead of -ы after the consonant 'к'."
+   },
+   {
+    "question": "Identify the masculine noun:",
+    "options": [
+     "лампа",
+     "слово",
+     "комната",
+     "телефон"
+    ],
+    "answer": 3,
+    "explanation": "Nouns ending in a hard consonant (like 'н' in телефон) are masculine."
+   }
+  ],
+  "tip": "Memorize the 7-letter spelling rule (г, к, х, ж, ч, ш, щ) early: you can never write 'ы' after them, always 'и'!"
+ },
+ {
+  "id": "ru-a1-present-tense-conjugation",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⏱️",
+  "title": "Present Tense: First and Second Conjugations",
+  "subtitle": "Conjugate Russian verbs with -е- vs. -и- personal endings",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Russian present tense verbs fall into Conjugation 1 (vowel -е- in endings) or Conjugation 2 (vowel -и- in endings).",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Conjugation 1 (-ать type)",
+    "Conjugation 2 (-ить type)",
+    "Key Difference"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Я (I)",
+      "читаю",
+      "говорю",
+      "-ю / -у"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ты (You sg.)",
+      "читаешь",
+      "говоришь",
+      "-ешь vs. -ишь"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Он/Она (He/She)",
+      "читает",
+      "говорит",
+      "-ет vs. -ит"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Они (They)",
+      "читают",
+      "говорят",
+      "-ют/-ут vs. -ят/-ат"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Habitual Action",
+    "example": "Каждый день я читаю книги.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Current Action",
+    "example": "Мы сейчас говорим по-русски.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Language Ability",
+    "example": "Они отлично понимают вопрос.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Я знаю правильный ответ.",
+    "ko": "",
+    "highlight": "знаю"
+   },
+   {
+    "en": "Ты понимаешь это правило?",
+    "ko": "",
+    "highlight": "понимаешь"
+   },
+   {
+    "en": "Анна хорошо говорит по-английски.",
+    "ko": "",
+    "highlight": "говорит"
+   },
+   {
+    "en": "Мы смотрим фильм вечером.",
+    "ko": "",
+    "highlight": "смотрим"
+   },
+   {
+    "en": "Студенты делают домашнее задание.",
+    "ko": "",
+    "highlight": "делают"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Он говориет по-русски.",
+    "right": "Он говорит по-русски.",
+    "note": "Говорить is Conjugation 2; its 3rd person singular ending is -ит, not -ет or -иет."
+   },
+   {
+    "wrong": "Они читаят текст.",
+    "right": "Они читают текст.",
+    "note": "Conjugation 1 verbs use -ют/-ут for they (они), never -ят."
+   },
+   {
+    "wrong": "Ты знаеш урок.",
+    "right": "Ты знаешь урок.",
+    "note": "Remember to write the soft sign (ь) at the end of second-person singular (-ешь/-ишь)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete with the correct verb form: 'Ты часто ___ музыку?' (слушать)",
+    "options": [
+     "слушает",
+     "слушаешь",
+     "слушаю",
+     "слушают"
+    ],
+    "answer": 1,
+    "explanation": "The subject 'ты' takes the ending -ешь for Conjugation 1 verbs like слушать."
+   },
+   {
+    "question": "Complete with the correct verb form: 'Они ___ в центре.' (жить)",
+    "options": [
+     "живёт",
+     "живем",
+     "живут",
+     "живу"
+    ],
+    "answer": 2,
+    "explanation": "The 3rd person plural (они) of the 1st conjugation verb жить is живут."
+   },
+   {
+    "question": "Complete with the correct verb form: 'Мы ___ по-русски.' (говорить)",
+    "options": [
+     "говорим",
+     "говорите",
+     "говорят",
+     "говорю"
+    ],
+    "answer": 0,
+    "explanation": "The subject 'мы' takes the Conjugation 2 ending -им."
+   },
+   {
+    "question": "Complete with the correct verb form: 'Она быстро ___ текст.' (читать)",
+    "options": [
+     "читаешь",
+     "читаю",
+     "читают",
+     "читает"
+    ],
+    "answer": 3,
+    "explanation": "The 3rd person singular pronoun 'она' requires the ending -ет for 1st conjugation."
+   }
+  ],
+  "tip": "Most verbs with infinitives ending in -ать belong to Conjugation 1 (-ешь, -ет), while verbs in -ить usually belong to Conjugation 2 (-ишь, -ит)."
+ },
+ {
+  "id": "ru-a1-prepositional-case-location",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📍",
+  "title": "Prepositional Case for Static Location",
+  "subtitle": "Answer 'Where?' (Где?) using prepositions 'в' and 'на'",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "To express location with prepositions в (in) or на (on/at), add the ending -е to most masculine, feminine, and neuter singular nouns.",
+  "structure": {
+   "headers": [
+    "Nominative Base",
+    "Preposition",
+    "Prepositional Form",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "город (masc.)",
+      "в",
+      "в городе",
+      "in the city"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Москва (fem.)",
+      "в",
+      "в Москве",
+      "in Moscow"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "работа (fem.)",
+      "на",
+      "на работе",
+      "at work"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Россия (fem. in -ия)",
+      "в",
+      "в России",
+      "in Russia (-ии ending)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Enclosed Spaces (в)",
+    "example": "Книга лежит в столе.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Open Spaces / Events (на)",
+    "example": "Мы гуляем на стадионе.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "City or Country (в)",
+    "example": "Иван сейчас живёт в Лондоне.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Мой друг учится в университете.",
+    "ko": "",
+    "highlight": "в университете"
+   },
+   {
+    "en": "Мы сидим в уютном кафе.",
+    "ko": "",
+    "highlight": "в уютном кафе"
+   },
+   {
+    "en": "Тарелка стоит на столе.",
+    "ko": "",
+    "highlight": "на столе"
+   },
+   {
+    "en": "Анна сейчас на интересном уроке.",
+    "ko": "",
+    "highlight": "на интересном уроке"
+   },
+   {
+    "en": "Моя семья живёт в России.",
+    "ko": "",
+    "highlight": "в России"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Я живу в Москва.",
+    "right": "Я живу в Москве.",
+    "note": "When expressing location after 'в', feminine nouns ending in -а change to -е."
+   },
+   {
+    "wrong": "в здание",
+    "right": "в здании",
+    "note": "Neuter nouns ending in -ие take -ии in the prepositional case, not -е."
+   },
+   {
+    "wrong": "в концерте",
+    "right": "на концерте",
+    "note": "Events, performances, and public functions take the preposition 'на', not 'в'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Мы живём ___.' (Петербург)",
+    "options": [
+     "в Петербурге",
+     "в Петербурга",
+     "на Петербурге",
+     "в Петербург"
+    ],
+    "answer": 0,
+    "explanation": "Cities take 'в' and masculine hard consonants change to -е."
+   },
+   {
+    "question": "Complete the sentence: 'Студенты сейчас ___.' (лекция)",
+    "options": [
+     "в лекции",
+     "на лекция",
+     "на лекции",
+     "в лекцию"
+    ],
+    "answer": 2,
+    "explanation": "Events take 'на', and feminine nouns ending in -ия take -ии."
+   },
+   {
+    "question": "Complete the sentence: 'Мой брат сейчас ___.' (работа)",
+    "options": [
+     "в работе",
+     "на работе",
+     "на работу",
+     "в работу"
+    ],
+    "answer": 1,
+    "explanation": "'Работа' takes 'на' to denote 'at work', and changes its ending -а to -е."
+   },
+   {
+    "question": "Complete the sentence: 'Чайник стоит ___.' (кухня)",
+    "options": [
+     "на кухне",
+     "на кухню",
+     "в кухне",
+     "в кухню"
+    ],
+    "answer": 0,
+    "explanation": "In Russian idiom, 'in the kitchen' standardly uses 'на кухне'."
+   }
+  ],
+  "tip": "Use 'в' for enclosed buildings and physical containers, but use 'на' for open spaces, islands, and events (на концерте, на уроке, на пляже)."
+ },
+ {
+  "id": "ru-a1-accusative-case-inanimate-objects",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎯",
+  "title": "Accusative Case for Inanimate Direct Objects",
+  "subtitle": "Forming direct objects: transform feminine nouns, keep masculine & neuter identical",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "For inanimate direct objects, masculine and neuter nouns remain identical to their nominative forms, while feminine singular nouns change -а to -у and -я to -ю.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Nominative (Subject)",
+    "Accusative (Object)",
+    "Change Rule"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Feminine (-а)",
+      "книга",
+      "книгу",
+      "-а becomes -у"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine (-я)",
+      "песня",
+      "песню",
+      "-я becomes -ю"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masculine (inan.)",
+      "журнал",
+      "журнал",
+      "No change (looks like Nom.)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter (inan.)",
+      "письмо",
+      "письмо",
+      "No change (looks like Nom.)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Feminine Object (-у)",
+    "example": "Я покупаю новую машину.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Feminine Object (-ю)",
+    "example": "Мы слушаем красивую песню.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Masculine Object (No change)",
+    "example": "Он читает интересный журнал.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Я пью воду каждое утро.",
+    "ko": "",
+    "highlight": "воду"
+   },
+   {
+    "en": "Ольга читает книгу в метро.",
+    "ko": "",
+    "highlight": "книгу"
+   },
+   {
+    "en": "Мы слушаем радио сегодня.",
+    "ko": "",
+    "highlight": "радио"
+   },
+   {
+    "en": "Он покупает новый телефон.",
+    "ko": "",
+    "highlight": "телефон"
+   },
+   {
+    "en": "Ты знаешь эту песню?",
+    "ko": "",
+    "highlight": "песню"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Я читаю газета.",
+    "right": "Я читаю газету.",
+    "note": "Feminine nouns ending in -а must change to -у when acting as the direct object."
+   },
+   {
+    "wrong": "Он купил журнала.",
+    "right": "Он купил журнал.",
+    "note": "Inanimate masculine nouns do NOT take -а in the accusative; they stay identical to nominative."
+   },
+   {
+    "wrong": "Я ем пиццу и супу.",
+    "right": "Я ем пиццу и суп.",
+    "note": "Пицца is feminine (becomes пиццу), but суп is masculine inanimate (remains unchanged as суп)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Каждое утро я пью ___.' (кофе - masc. indeclinable)",
+    "options": [
+     "кофем",
+     "кофе",
+     "кофу",
+     "кофя"
+    ],
+    "answer": 1,
+    "explanation": "Кофе is an indeclinable masculine noun and does not change form."
+   },
+   {
+    "question": "Complete the sentence: 'Студент открывает ___.' (тетрадь - fem. soft sign)",
+    "options": [
+     "тетрадю",
+     "тетради",
+     "тетрадя",
+     "тетрадь"
+    ],
+    "answer": 3,
+    "explanation": "Feminine nouns ending in a soft sign (ь) remain unchanged in the accusative inanimate."
+   },
+   {
+    "question": "Complete the sentence: 'Мы смотрим интересную ___.' (программа)",
+    "options": [
+     "программу",
+     "программе",
+     "программа",
+     "программы"
+    ],
+    "answer": 0,
+    "explanation": "Feminine nouns ending in -а replace it with -у in the accusative case."
+   },
+   {
+    "question": "Complete the sentence: 'Отец слушает ___.' (новости - pl.)",
+    "options": [
+     "новость",
+     "новостям",
+     "новости",
+     "новостей"
+    ],
+    "answer": 2,
+    "explanation": "Inanimate plural nouns keep their nominative plural form in the accusative case."
+   }
+  ],
+  "tip": "If the direct object cannot move on its own (inanimate), only feminine nouns ending in -а/-я change form: -а → -у, -я → -ю."
+ },
+ {
+  "id": "ru-a1-past-tense-agreement",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🕰️",
+  "title": "Past Tense Gender and Number Agreement",
+  "subtitle": "Express past actions matching the subject's gender and number",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Russian past tense drops the infinitive suffix -ть and adds -л (masc.), -ла (fem.), -ло (neut.), or -ли (plural), agreeing in gender and number rather than person.",
+  "structure": {
+   "headers": [
+    "Subject Category",
+    "Suffix",
+    "Example (читать)",
+    "Subject Pronouns"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine singular",
+      "-л",
+      "читал",
+      "он, я (male), ты (male)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine singular",
+      "-ла",
+      "читала",
+      "она, я (female), ты (female)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter singular",
+      "-ло",
+      "читало",
+      "оно"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural (all genders)",
+      "-ли",
+      "читали",
+      "мы, вы, они"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Male Speaker / Subject",
+    "example": "Вчера Антон много работал.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Female Speaker / Subject",
+    "example": "Мария вчера смотрела фильм.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Plural Subjects",
+    "example": "Мы долго гуляли в парке.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Вчера я купил новый телефон.",
+    "ko": "",
+    "highlight": "купил"
+   },
+   {
+    "en": "Она читала эту книгу весь вечер.",
+    "ko": "",
+    "highlight": "читала"
+   },
+   {
+    "en": "Солнце светило очень ярко.",
+    "ko": "",
+    "highlight": "светило"
+   },
+   {
+    "en": "Студенты писали диктант на уроке.",
+    "ko": "",
+    "highlight": "писали"
+   },
+   {
+    "en": "Анна и Иван жили в Петербурге.",
+    "ko": "",
+    "highlight": "жили"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Она говорил быстро.",
+    "right": "Она говорила быстро.",
+    "note": "The verb must agree with a feminine subject by ending in -ла."
+   },
+   {
+    "wrong": "Мы читал газету.",
+    "right": "Мы читали газету.",
+    "note": "Any plural subject (мы, вы, они, or combined names) requires the plural ending -ли."
+   },
+   {
+    "wrong": "Я была там (spoken by a male).",
+    "right": "Я был там.",
+    "note": "The speaker's biological gender determines whether 'я' takes -л or -ла."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence with the past tense: 'Вчера Анна ___ дома.' (отдыхать)",
+    "options": [
+     "отдыхал",
+     "отдыхало",
+     "отдыхала",
+     "отдыхали"
+    ],
+    "answer": 2,
+    "explanation": "Анна is feminine singular, so the past tense verb takes the ending -ла."
+   },
+   {
+    "question": "Complete the sentence with the past tense: 'Окно ___ открыто.' (быть)",
+    "options": [
+     "было",
+     "был",
+     "была",
+     "были"
+    ],
+    "answer": 0,
+    "explanation": "Окно is neuter singular, requiring the past tense form было (-ло ending)."
+   },
+   {
+    "question": "Complete the sentence: 'Студенты вчера долго ___.' (заниматься)",
+    "options": [
+     "занимался",
+     "занималась",
+     "занималось",
+     "занимались"
+    ],
+    "answer": 3,
+    "explanation": "Студенты is plural, requiring the plural past ending -ли (with reflexive -сь)."
+   },
+   {
+    "question": "A male speaker says: 'Вчера я ___ весь день.' (работать)",
+    "options": [
+     "работала",
+     "работал",
+     "работали",
+     "работало"
+    ],
+    "answer": 1,
+    "explanation": "When the speaker 'я' is male, the verb takes the masculine suffix -л."
+   }
+  ],
+  "tip": "Russian past tense is actually a participle by origin; that is why it conjugates by gender and number (like an adjective) instead of 1st, 2nd, or 3rd person."
+ },
+ {
+  "id": "ru-a1-basic-genitive-possession-absence",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📦",
+  "title": "Genitive Case for Possession and Absence",
+  "subtitle": "Expressing what you have and what is missing",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Possession uses 'у' plus the possessor in the genitive case, while absence requires 'нет' followed by the missing item in the genitive.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Formula",
+    "Russian Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Possession",
+      "У + Genitive + есть + Nominative",
+      "У меня есть брат.",
+      "I have a brother."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Absence",
+      "Нет + Genitive",
+      "Здесь нет брата.",
+      "There is no brother here."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Possession",
+      "У + Genitive + нет + Genitive",
+      "У меня нет машины.",
+      "I do not have a car."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Stating Possession",
+    "example": "У Анны есть собака.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Expressing Complete Lack",
+    "example": "У меня нет времени.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Absence at a Location",
+    "example": "Сегодня на уроке нет Ивана.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "У меня есть новый словарь.",
+    "ko": "",
+    "highlight": "У меня есть"
+   },
+   {
+    "en": "У сестры нет кошки.",
+    "ko": "",
+    "highlight": "нет кошки"
+   },
+   {
+    "en": "В офисе сейчас нет директора.",
+    "ko": "",
+    "highlight": "нет директора"
+   },
+   {
+    "en": "У нас есть интересная книга.",
+    "ko": "",
+    "highlight": "У нас есть"
+   },
+   {
+    "en": "У студента нет билета.",
+    "ko": "",
+    "highlight": "нет билета"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Я имею книгу.",
+    "right": "У меня есть книга.",
+    "note": "Use 'у меня есть' rather than the literal verb 'иметь' for everyday physical possession."
+   },
+   {
+    "wrong": "У меня нет машина.",
+    "right": "У меня нет машины.",
+    "note": "The word following 'нет' must be in the genitive case, not the nominative."
+   },
+   {
+    "wrong": "У мне есть собака.",
+    "right": "У меня есть собака.",
+    "note": "The preposition 'у' governs the genitive case ('меня'), not the dative ('мне')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'I have a computer' -> '___ есть компьютер.'",
+    "options": [
+     "Я",
+     "Меня",
+     "У меня",
+     "У мне"
+    ],
+    "answer": 2,
+    "explanation": "Possession requires the preposition 'у' plus the genitive pronoun 'меня'."
+   },
+   {
+    "question": "Complete the negative sentence: 'We don't have time' -> 'У нас нет ___.'",
+    "options": [
+     "время",
+     "времени",
+     "временем",
+     "времена"
+    ],
+    "answer": 1,
+    "explanation": "The word following 'нет' must take the genitive ending; the genitive of 'время' is 'времени'."
+   },
+   {
+    "question": "Which form completes: '___ нет дома' (Ivan is not at home)?",
+    "options": [
+     "Иван",
+     "Ивану",
+     "Иваном",
+     "Ивана"
+    ],
+    "answer": 3,
+    "explanation": "To state someone's absence with 'нет', put their name in the genitive case ('Ивана')."
+   },
+   {
+    "question": "Complete: 'Do you have a question?' -> 'У тебя ___ вопрос?'",
+    "options": [
+     "есть",
+     "нет",
+     "был",
+     "будет"
+    ],
+    "answer": 0,
+    "explanation": "Use 'есть' to inquire about the existence or possession of a noun in the present tense."
+   }
+  ],
+  "tip": "Drop 'есть' when describing specific qualities or characteristics (e.g., 'У неё голубые глаза' rather than 'У неё есть голубые глаза')."
+ },
+ {
+  "id": "ru-a2-verbal-aspect-imperfective-perfective",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⏱️",
+  "title": "Verbal Aspect: Imperfective vs. Perfective",
+  "subtitle": "Choosing between process, repetition, and completed results",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Imperfective verbs focus on processes, duration, or habits, while perfective verbs emphasize a completed result or a single definitive event.",
+  "structure": {
+   "headers": [
+    "Aspect",
+    "Primary Focus",
+    "Russian Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Imperfective",
+      "Ongoing process or duration",
+      "Я читал книгу два часа.",
+      "I was reading the book for two hours."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Imperfective",
+      "Repeated regular action",
+      "Каждый день он пьёт кофе.",
+      "Every day he drinks coffee."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Perfective",
+      "Completed result / achievement",
+      "Я прочитал книгу вчера.",
+      "I read (finished) the book yesterday."
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Duration or Process",
+    "example": "Мы долго смотрели фильм.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Habitual / Repeated Action",
+    "example": "Обычно я встаю в семь утра.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Achieved Result",
+    "example": "Она наконец сдала экзамен.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Он писал письмо весь вечер.",
+    "ko": "",
+    "highlight": "писал"
+   },
+   {
+    "en": "Она наконец написала письмо.",
+    "ko": "",
+    "highlight": "написала"
+   },
+   {
+    "en": "Мы часто покупаем фрукты на рынке.",
+    "ko": "",
+    "highlight": "покупаем"
+   },
+   {
+    "en": "Вчера мы купили новый стол.",
+    "ko": "",
+    "highlight": "купили"
+   },
+   {
+    "en": "Студент быстро решил сложную задачу.",
+    "ko": "",
+    "highlight": "решил"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Я прочитал книгу два часа.",
+    "right": "Я читал книгу два часа.",
+    "note": "Use imperfective with time frames of duration like 'два часа' (for two hours)."
+   },
+   {
+    "wrong": "Завтра я буду сделать уроки.",
+    "right": "Завтра я сделаю уроки.",
+    "note": "Never pair 'буду' with a perfective infinitive; use the simple perfective future ('сделаю')."
+   },
+   {
+    "wrong": "Он всегда решит эту проблему.",
+    "right": "Он всегда решает эту проблему.",
+    "note": "Habitual words like 'всегда' (always) require an imperfective verb."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which verb fits: 'I finished reading the whole article yesterday' -> 'Вчера я полностью ___ эту статью.'",
+    "options": [
+     "читал",
+     "прочитал",
+     "буду читать",
+     "читаю"
+    ],
+    "answer": 1,
+    "explanation": "The perfective 'прочитал' denotes completion and a final result."
+   },
+   {
+    "question": "Which verb fits: 'Every day he writes letters' -> 'Каждый день он ___ письма.'",
+    "options": [
+     "пишет",
+     "напишет",
+     "написал",
+     "списал"
+    ],
+    "answer": 0,
+    "explanation": "Regular repeated actions signaled by 'каждый день' require the imperfective present 'пишет'."
+   },
+   {
+    "question": "Complete the sentence of duration: 'Мы ___ фильм два часа.'",
+    "options": [
+     "посмотрели",
+     "увидели",
+     "смотрели",
+     "посмотрим"
+    ],
+    "answer": 2,
+    "explanation": "Durations of time require the imperfective verb 'смотрели'."
+   },
+   {
+    "question": "Complete the future result: 'Завтра утром я ___ маме.'",
+    "options": [
+     "звонил",
+     "позвоню",
+     "буду позвонить",
+     "звоню"
+    ],
+    "answer": 1,
+    "explanation": "A single completed future action uses the simple perfective future form 'позвоню'."
+   }
+  ],
+  "tip": "Perfective verbs do not have a present tense form; their conjugated non-past forms indicate future completed actions."
+ },
+ {
+  "id": "ru-a2-unidirectional-multidirectional-motion-verbs",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🚶",
+  "title": "Basic Verbs of Motion: Идти/Ходить and Ехать/Ездить",
+  "subtitle": "Navigating unidirectional and multidirectional movement",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "Use unidirectional verbs (идти, ехать) for one-way journeys happening in real time, and multidirectional verbs (ходить, ездить) for round trips, habits, or general movement.",
+  "structure": {
+   "headers": [
+    "Type",
+    "On Foot",
+    "By Vehicle",
+    "Primary Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Unidirectional",
+      "идти",
+      "ехать",
+      "One-way movement underway now"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Multidirectional",
+      "ходить",
+      "ездить",
+      "Repeated, regular, or round-trip journeys"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Round Trip",
+      "ходил",
+      "ездил",
+      "Went and returned back successfully"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "In Progress (One Direction)",
+    "example": "Сейчас я иду в библиотеку.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Habitual or Frequent Trips",
+    "example": "Каждое лето они ездят на море.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Completed Round Trip",
+    "example": "Вчера Анна ходила в музей.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Посмотри, куда идёт этот человек?",
+    "ko": "",
+    "highlight": "идёт"
+   },
+   {
+    "en": "Дети каждый день ходят в школу.",
+    "ko": "",
+    "highlight": "ходят"
+   },
+   {
+    "en": "Мы сейчас едем в центр на метро.",
+    "ko": "",
+    "highlight": "едем"
+   },
+   {
+    "en": "Летом мы часто ездим на дачу.",
+    "ko": "",
+    "highlight": "ездим"
+   },
+   {
+    "en": "В субботу брат ходил в кинотеатр.",
+    "ko": "",
+    "highlight": "ходил"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Сейчас я хожу на работу.",
+    "right": "Сейчас я иду на работу.",
+    "note": "Movement in a single direction happening right now requires 'идти', not 'ходить'."
+   },
+   {
+    "wrong": "Я еду в Москву каждый месяц.",
+    "right": "Я езжу в Москву каждый месяц.",
+    "note": "Habitual or repeated vehicle travel demands multidirectional 'ездить'."
+   },
+   {
+    "wrong": "Вчера я шёл в театр и посмотрел оперу.",
+    "right": "Вчера я ходил в театр и посмотрел оперу.",
+    "note": "Use 'ходил' to express a completed round trip (went to the theater and came back)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete: 'Where are you going right now?' -> 'Куда ты сейчас ___?'",
+    "options": [
+     "ходишь",
+     "идёшь",
+     "ездишь",
+     "шёл"
+    ],
+    "answer": 1,
+    "explanation": "A one-way pedestrian trip in progress at this moment requires the unidirectional verb 'идёшь'."
+   },
+   {
+    "question": "Complete: 'We regularly travel by train' -> 'Мы часто ___ на поезде.'",
+    "options": [
+     "едем",
+     "идём",
+     "ездим",
+     "пойдём"
+    ],
+    "answer": 2,
+    "explanation": "Habitual transportation by vehicle requires multidirectional 'ездим'."
+   },
+   {
+    "question": "Complete: 'Yesterday I went to the store (and came back)' -> 'Вчера я ___ в магазин.'",
+    "options": [
+     "ходил",
+     "шёл",
+     "еду",
+     "пойду"
+    ],
+    "answer": 0,
+    "explanation": "A completed round-trip on foot in the past is expressed with the multidirectional form 'ходил'."
+   },
+   {
+    "question": "Complete: 'Right now they are traveling to Berlin' -> 'Сейчас они ___ в Берлин на машине.'",
+    "options": [
+     "ездят",
+     "ходят",
+     "шли",
+     "едут"
+    ],
+    "answer": 3,
+    "explanation": "Vehicular movement heading toward a destination right now requires unidirectional 'едут'."
+   }
+  ],
+  "tip": "In the past tense, using 'ходил' or 'ездил' implies you went to the destination and have already returned home."
+ },
+ {
+  "id": "ru-a2-accusative-animate-rule",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🦁",
+  "title": "Animate Accusative Rule for Nouns and Modifiers",
+  "subtitle": "Why living beings change endings when functioning as direct objects",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Masculine animate nouns (people and animals) and their modifying adjectives take genitive case endings instead of nominative endings when used in the accusative case.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Nominative",
+    "Accusative Direct Object",
+    "Pattern Rule"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masc. Inanimate",
+      "новый стол",
+      "Я вижу новый стол.",
+      "Accusative = Nominative"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masc. Animate",
+      "новый студент",
+      "Я вижу нового студента.",
+      "Accusative = Genitive (-а/-я, -ого/-его)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Plural Animate",
+      "хорошие друзья",
+      "Мы любим хороших друзей.",
+      "Accusative = Genitive for all animates"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Male Persons",
+    "example": "Мы пригласили известного профессора.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Animals as Direct Objects",
+    "example": "Они увидели дикого медведя.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Plural Living Beings",
+    "example": "Учитель похвалил умных учеников.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Я часто встречаю этого студента.",
+    "ko": "",
+    "highlight": "этого студента"
+   },
+   {
+    "en": "Она кормит домашнего кота.",
+    "ko": "",
+    "highlight": "домашнего кота"
+   },
+   {
+    "en": "Мы долго слушали старого музыканта.",
+    "ko": "",
+    "highlight": "старого музыканта"
+   },
+   {
+    "en": "Они ищут нового преподавателя.",
+    "ko": "",
+    "highlight": "нового преподавателя"
+   },
+   {
+    "en": "На улице я встретил старого друга.",
+    "ko": "",
+    "highlight": "старого друга"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Я знаю этот студент.",
+    "right": "Я знаю этого студента.",
+    "note": "Because 'студент' is a living masculine person, the accusative must adopt the genitive forms '-ого' and '-а'."
+   },
+   {
+    "wrong": "Мы видели старый кот.",
+    "right": "Мы видели старого кота.",
+    "note": "Animals are grammatically animate in Russian and use genitive forms in the accusative."
+   },
+   {
+    "wrong": "Он купил нового компьютера.",
+    "right": "Он купил новый компьютер.",
+    "note": "Inanimate masculine objects keep their base nominative form in the accusative."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete: 'I see a new doctor' -> 'Я вижу ___.'",
+    "options": [
+     "новый врач",
+     "нового врача",
+     "новому врачу",
+     "новым врачом"
+    ],
+    "answer": 1,
+    "explanation": "A male person is animate, so both adjective and noun take genitive endings ('нового врача') in the accusative."
+   },
+   {
+    "question": "Complete: 'He bought a new phone' -> 'Он купил ___.'",
+    "options": [
+     "новый телефон",
+     "нового телефона",
+     "новому телефону",
+     "новым телефоном"
+    ],
+    "answer": 0,
+    "explanation": "Inanimate objects do not use the animate rule; the accusative is identical to the nominative ('новый телефон')."
+   },
+   {
+    "question": "Complete: 'We noticed a big wolf' -> 'Мы заметили ___.'",
+    "options": [
+     "большой волк",
+     "большому волку",
+     "большого волка",
+     "большим волком"
+    ],
+    "answer": 2,
+    "explanation": "Animals are animate; masculine animate accusative takes the genitive form ('большого волка')."
+   },
+   {
+    "question": "Complete: 'Do you know this actor?' -> 'Ты знаешь ___?'",
+    "options": [
+     "этот актёр",
+     "этому актёру",
+     "этом актёре",
+     "этого актёра"
+    ],
+    "answer": 3,
+    "explanation": "'Актёр' is animate masculine, requiring 'этого актёра' in the accusative case."
+   }
+  ],
+  "tip": "Feminine nouns with '-а/-я' do NOT follow this rule; feminine accusative ends in '-у/-ю' whether animate ('девушку') or inanimate ('книгу')."
+ },
+ {
+  "id": "ru-a2-dative-case-indirect-objects-age",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎁",
+  "title": "Dative Case: Indirect Objects and Age Expressions",
+  "subtitle": "Designating recipients, age, and impersonal states",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The dative case marks the recipient of an action, is used impersonally to express age, and signals feelings of necessity or ease.",
+  "structure": {
+   "headers": [
+    "Role",
+    "Endings Pattern",
+    "Russian Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Recipient (Indirect Object)",
+      "Masc: -у/-ю | Fem: -е",
+      "Я звоню другу.",
+      "I am calling a friend."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Age Construction",
+      "Subject in Dative + Age",
+      "Анне двадцать лет.",
+      "Anna is twenty years old."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Impersonal Need / State",
+      "Dative + надо / трудно",
+      "Мне нужно работать.",
+      "I need to work."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Action Recipient",
+    "example": "Мама подарила сыну гитару.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Stating Age",
+    "example": "Сколько лет твоему брату?",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Expressing Obligation or Sensation",
+    "example": "Студентам нужно много читать.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Отец купил подарок маленькой дочке.",
+    "ko": "",
+    "highlight": "маленькой дочке"
+   },
+   {
+    "en": "Моему дедушке исполнилось семьдесят лет.",
+    "ko": "",
+    "highlight": "Моему дедушке"
+   },
+   {
+    "en": "Мне сейчас очень холодно.",
+    "ko": "",
+    "highlight": "Мне"
+   },
+   {
+    "en": "Учитель объяснил правило иностранному студенту.",
+    "ko": "",
+    "highlight": "иностранному студенту"
+   },
+   {
+    "en": "Сестре нужно идти к врачу.",
+    "ko": "",
+    "highlight": "Сестре"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Я звоню мой друг.",
+    "right": "Я звоню моему другу.",
+    "note": "The verb 'звонить' governs the dative case for the person called, not the accusative."
+   },
+   {
+    "wrong": "Я двадцать лет.",
+    "right": "Мне двадцать лет.",
+    "note": "Age statements in Russian use the person in the dative case ('Мне', 'Анне'), never nominative ('Я')."
+   },
+   {
+    "wrong": "Я надо идти домой.",
+    "right": "Мне надо идти домой.",
+    "note": "Impersonal modal words like 'надо', 'нужно', and 'можно' require the logical subject in the dative."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete: 'I gave the book to the teacher (female)' -> 'Я дал книгу ___.'",
+    "options": [
+     "учительница",
+     "учительнице",
+     "учительницу",
+     "учительницы"
+    ],
+    "answer": 1,
+    "explanation": "The recipient takes the dative case; feminine singular '-а' becomes '-е' ('учительнице')."
+   },
+   {
+    "question": "Complete the age statement: 'Ivan is thirty years old' -> '___ тридцать лет.'",
+    "options": [
+     "Ивана",
+     "Иваном",
+     "Ивану",
+     "Иван"
+    ],
+    "answer": 2,
+    "explanation": "The person whose age is being stated must appear in the dative case ('Ивану')."
+   },
+   {
+    "question": "Complete: 'She is bored' -> '___ скучно.'",
+    "options": [
+     "Ей",
+     "Она",
+     "Её",
+     "Ею"
+    ],
+    "answer": 0,
+    "explanation": "Impersonal emotional states require the logical subject in the dative case ('Ей')."
+   },
+   {
+    "question": "Complete: 'We need to write an essay' -> '___ нужно написать сочинение.'",
+    "options": [
+     "Мы",
+     "Нас",
+     "Нами",
+     "Нам"
+    ],
+    "answer": 3,
+    "explanation": "'Нужно' requires the subject to be in the dative case ('Нам')."
+   }
+  ],
+  "tip": "Whenever you describe how someone feels using adverbs like холодно, жарко, or скучно, put that person in the dative case."
+ },
+ {
+  "id": "ru-a2-instrumental-case-with-and-means",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🛠️",
+  "title": "Instrumental Case: Accompaniment and Means",
+  "subtitle": "Expressing tools, means of transport, and doing things together",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Use the preposition 'с' (with) for human accompaniment, but use the bare Instrumental case without any preposition for tools, instruments, and means.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Construction",
+    "Russian Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Accompaniment",
+      "с + Instrumental",
+      "Я гуляю с другом.",
+      "I walk with a friend."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Tool / Instrument",
+      "Bare Instrumental",
+      "Он пишет ручкой.",
+      "He writes with a pen."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Transport / Means",
+      "Bare Instrumental",
+      "Мы едем поездом.",
+      "We travel by train."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Flavoring / Content",
+      "с + Instrumental",
+      "Чай с лимоном.",
+      "Tea with lemon."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Using Tools and Utensils",
+    "example": "Мы едим суп большой ложкой.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Accompaniment with People",
+    "example": "Анна идёт в театр с братом.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Means of Transport",
+    "example": "Они обычно летают самолётом.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Я режу свежий хлеб острым ножом.",
+    "ko": "",
+    "highlight": "острым ножом"
+   },
+   {
+    "en": "Ольга пьёт чёрный кофе с молоком.",
+    "ko": "",
+    "highlight": "с молоком"
+   },
+   {
+    "en": "Студенты пишут контрольную работу карандашом.",
+    "ko": "",
+    "highlight": "карандашом"
+   },
+   {
+    "en": "Вечером мы долго гуляли с собакой по парку.",
+    "ko": "",
+    "highlight": "с собакой"
+   },
+   {
+    "en": "Дедушка читает мелкий текст с лупой.",
+    "ko": "",
+    "highlight": "с лупой"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Я пишу с ручкой.",
+    "right": "Я пишу ручкой.",
+    "note": "Do not use 'с' when referring to an inanimate instrument used to perform an action."
+   },
+   {
+    "wrong": "Он пошёл в кино другом.",
+    "right": "Он пошёл в кино с другом.",
+    "note": "Accompaniment with persons requires the preposition 'с'."
+   },
+   {
+    "wrong": "Она ест салат с вилкой.",
+    "right": "Она ест салат вилкой.",
+    "note": "Eating utensils take the bare instrumental without 'с'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase: 'I am drawing a picture with a pencil.'",
+    "options": [
+     "карандаша",
+     "с карандашом",
+     "карандашом",
+     "карандаше"
+    ],
+    "answer": 2,
+    "explanation": "Instruments or tools take the bare instrumental without 'с'."
+   },
+   {
+    "question": "Choose the correct phrase: 'Boris is having dinner with his sister.'",
+    "options": [
+     "с сестрой",
+     "сестрой",
+     "с сестру",
+     "о сестре"
+    ],
+    "answer": 0,
+    "explanation": "Accompaniment with people requires the preposition 'с' plus instrumental."
+   },
+   {
+    "question": "Choose the correct phrase: 'She cut the paper with scissors.'",
+    "options": [
+     "ножниц",
+     "ножницами",
+     "с ножницами",
+     "ножницы"
+    ],
+    "answer": 1,
+    "explanation": "Tools take the bare instrumental; 'ножницы' becomes 'ножницами'."
+   },
+   {
+    "question": "Choose the correct phrase: 'Would you like coffee with sugar?'",
+    "options": [
+     "сахаром",
+     "о сахаре",
+     "в сахаре",
+     "с сахаром"
+    ],
+    "answer": 3,
+    "explanation": "Combinations and ingredients take 'с' plus instrumental."
+   }
+  ],
+  "tip": "Ask yourself: is the noun an instrument doing the action, or a companion alongside you? An instrument drops the 'с' entirely."
+ },
+ {
+  "id": "ru-a2-genitive-with-numbers",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔢",
+  "title": "Number-Noun Agreement and Quantification",
+  "subtitle": "Mastering Genitive singular and plural forms after numerals",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The number 1 takes Nominative singular, numbers 2-4 trigger Genitive singular, and numbers 5-20 trigger Genitive plural.",
+  "structure": {
+   "headers": [
+    "Numeral",
+    "Required Case",
+    "Masculine Example",
+    "Feminine Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1 (один, одна, одно)",
+      "Nominative singular",
+      "один стол",
+      "одна книга"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2, 3, 4 (два, три, четыре)",
+      "Genitive singular",
+      "два стола",
+      "три книги"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "5-20, 30, etc.",
+      "Genitive plural",
+      "пять столов",
+      "шесть книг"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Compound (e.g., 21, 23)",
+      "Determined by last word",
+      "двадцать один стол",
+      "двадцать три книги"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Small Numbers (2, 3, 4)",
+    "example": "В комнате стоят три больших стула.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Larger Quantities (5 and above)",
+    "example": "На столе лежит десять чистых тетрадей.",
+    "translation": ""
+   },
+   {
+    "color": "#DB2777",
+    "label": "Compound Numbers Ending in 2-4",
+    "example": "Ей исполнилось двадцать два года.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "На полке лежат три новые книги.",
+    "ko": "",
+    "highlight": "три новые книги"
+   },
+   {
+    "en": "В нашем классе учатся двадцать пять студентов.",
+    "ko": "",
+    "highlight": "двадцать пять студентов"
+   },
+   {
+    "en": "У меня есть два билета на концерт.",
+    "ko": "",
+    "highlight": "два билета"
+   },
+   {
+    "en": "В парке растёт много старых деревьев.",
+    "ko": "",
+    "highlight": "старых деревьев"
+   },
+   {
+    "en": "Мы ждали автобус ровно сорок минут.",
+    "ko": "",
+    "highlight": "сорок минут"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "В гараже стоят три машины.",
+    "right": "В гараже стоят три машины.",
+    "note": "While 'машины' matches both Nom. pl. and Gen. sg. for feminine nouns, remember the governing case is specifically Genitive singular!"
+   },
+   {
+    "wrong": "Я купил пять апельсины.",
+    "right": "Я купил пять апельсинов.",
+    "note": "Numbers 5 through 20 trigger Genitive plural, not Nominative plural."
+   },
+   {
+    "wrong": "Там было четыре столов.",
+    "right": "Там было четыре стола.",
+    "note": "Numbers 2, 3, and 4 require Genitive singular, not Genitive plural."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the phrase: 'В парке гуляют четыре ___.'",
+    "options": [
+     "человека",
+     "людей",
+     "человек",
+     "люди"
+    ],
+    "answer": 0,
+    "explanation": "The number 4 governs Genitive singular; 'человек' is counted with 2, 3, 4 as 'человека'."
+   },
+   {
+    "question": "Complete the phrase: 'У меня есть шесть ___.'",
+    "options": [
+     "сестра",
+     "сестры",
+     "сестёр",
+     "сёстрами"
+    ],
+    "answer": 2,
+    "explanation": "The number 6 requires Genitive plural ('сестёр')."
+   },
+   {
+    "question": "Complete the phrase: 'В сумке лежит двадцать один ___.'",
+    "options": [
+     "рубли",
+     "рубль",
+     "рубля",
+     "рублей"
+    ],
+    "answer": 1,
+    "explanation": "Compound numbers ending in 'один' govern the Nominative singular ('рубль')."
+   },
+   {
+    "question": "Complete the phrase: 'Мы купили три ___.'",
+    "options": [
+     "яблока",
+     "яблок",
+     "яблоки",
+     "яблоком"
+    ],
+    "answer": 0,
+    "explanation": "The number 3 governs the Genitive singular of neuter noun 'яблоко' -> 'яблока'."
+   }
+  ],
+  "tip": "For compound numbers like 53 or 104, look exclusively at the very last word: 53 ends in 'три', so it takes Genitive singular."
+ },
+ {
+  "id": "ru-b1-prefixed-verbs-of-motion",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🚶",
+  "title": "Prefixation of Verbs of Motion",
+  "subtitle": "Navigating spatial prefixes and aspect changes in Russian motion verbs",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Adding a spatial prefix to a unidirectional motion verb creates a perfective verb of specific spatial direction, while prefixing a multidirectional verb creates its imperfective partner.",
+  "structure": {
+   "headers": [
+    "Prefix",
+    "Core Spatial Meaning",
+    "Perfective (from идти)",
+    "Imperfective (from ходить)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "при-",
+      "Arrival / Reaching",
+      "прийти",
+      "приходить"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "у-",
+      "Departure / Leaving completely",
+      "уйти",
+      "уходить"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "в- (во-)",
+      "Entry / Going inside",
+      "войти",
+      "входить"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "вы-",
+      "Exit / Going out",
+      "выйти",
+      "выходить"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "пере-",
+      "Crossing / Moving across",
+      "перейти",
+      "переходить"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Arriving at a Destination",
+    "example": "Поезд пришёл на вокзал вовремя.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Departing and Leaving Behind",
+    "example": "Отец уже ушёл на работу.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Crossing a Physical Boundary",
+    "example": "Пешеходы переходят широкую улицу.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Они быстро вышли из душной комнаты на улицу.",
+    "ko": "",
+    "highlight": "вышли из"
+   },
+   {
+    "en": "Мама обычно приходит домой в шесть вечера.",
+    "ko": "",
+    "highlight": "приходит домой"
+   },
+   {
+    "en": "Студент тихо вошёл в аудиторию и сел.",
+    "ko": "",
+    "highlight": "вошёл в аудиторию"
+   },
+   {
+    "en": "Мы подошли к старинному замку на холме.",
+    "ko": "",
+    "highlight": "подошли к"
+   },
+   {
+    "en": "Самолёт успешно улетел в столицу утром.",
+    "ko": "",
+    "highlight": "улетел в"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Он пришёл из комнаты на улицу.",
+    "right": "Он вышел из комнаты на улицу.",
+    "note": "To indicate exiting from inside a space, use the prefix 'вы-' with preposition 'из', not 'при-'."
+   },
+   {
+    "wrong": "Мы пошли через мост.",
+    "right": "Мы перешли через мост.",
+    "note": "Crossing from one side of a road or bridge to the other requires 'пере-'."
+   },
+   {
+    "wrong": "Она ушла в аудиторию.",
+    "right": "Она вошла в аудиторию.",
+    "note": "'Уйти' means to leave away entirely; to enter a room, use 'войти'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the best verb: 'Каждое утро поезд ___ в Москву в 8:00.'",
+    "options": [
+     "уходит",
+     "прибывает",
+     "выходит",
+     "переходит"
+    ],
+    "answer": 1,
+    "explanation": "'Прибывать/приходить' indicates reaching a destination on schedule."
+   },
+   {
+    "question": "Choose the best verb: 'Осторожно ___ через эту дорогу!'",
+    "options": [
+     "уходи",
+     "войди",
+     "переходи",
+     "подойди"
+    ],
+    "answer": 2,
+    "explanation": "Crossing a physical street or barrier uses the prefix 'пере-'."
+   },
+   {
+    "question": "Choose the best verb: 'Директор только что ___ из своего кабинета.'",
+    "options": [
+     "вошёл",
+     "вышел",
+     "дошёл",
+     "пришёл"
+    ],
+    "answer": 1,
+    "explanation": "Exiting an enclosed space requires 'вы- / выйти' paired with 'из'."
+   },
+   {
+    "question": "Choose the best verb: 'Гости уже попрощались и ___.'",
+    "options": [
+     "вошли",
+     "дошли",
+     "зашли",
+     "ушли"
+    ],
+    "answer": 3,
+    "explanation": "Departing and leaving the location completely requires 'уйти'."
+   }
+  ],
+  "tip": "Prefixes often match their associated prepositions: 'в-' pairs with 'в + Acc', 'вы-' pairs with 'из + Gen', and 'под-' pairs with 'к + Dat'."
+ },
+ {
+  "id": "ru-b1-reflexive-verbs-and-passive-meanings",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🪞",
+  "title": "Reflexive Verbs with the -ся/-сь Suffix",
+  "subtitle": "Navigating reflexive, reciprocal, intransitive, and passive functions",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "The postfix '-ся' (shortened to '-сь' after vowels) turns actions back onto the subject, denotes mutual interaction, or forms passive/middle voice constructions.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Postfix Rule",
+    "Example",
+    "Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "After Consonant",
+      "-ся",
+      "Он одевается.",
+      "Action on oneself (he dresses himself)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "After Vowel",
+      "-сь",
+      "Она оделась.",
+      "Vowel contraction (she got dressed)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Reciprocal",
+      "-ся / -сь",
+      "Друзья обнимаются.",
+      "Mutual action (each other)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passive / Middle",
+      "-ся / -сь",
+      "Дом строится рабочими.",
+      "Process undergoing action (by workers)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Self-Directed Actions",
+    "example": "Мальчик каждое утро умывается холодной водой.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Reciprocal (Mutual) Actions",
+    "example": "Мы часто встречаемся по субботам в центре.",
+    "translation": ""
+   },
+   {
+    "color": "#E11D48",
+    "label": "Passive Descriptions",
+    "example": "Новый музей открывается в мае.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Дети долго смеялись над этой шуткой.",
+    "ko": "",
+    "highlight": "смеялись над"
+   },
+   {
+    "en": "Эта книга читается очень легко и быстро.",
+    "ko": "",
+    "highlight": "читается"
+   },
+   {
+    "en": "Они познакомились на международной конференции.",
+    "ko": "",
+    "highlight": "познакомились"
+   },
+   {
+    "en": "Дверь магазина закрывается ровно в девять.",
+    "ko": "",
+    "highlight": "закрывается"
+   },
+   {
+    "en": "Я надеюсь увидеть тебя завтра вечером.",
+    "ko": "",
+    "highlight": "надеюсь увидеть"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Она оделася очень тепло.",
+    "right": "Она оделась очень тепло.",
+    "note": "Use '-сь' after vowel endings like '-а', not '-ся'."
+   },
+   {
+    "wrong": "Я мою себя каждый день.",
+    "right": "Я моюсь каждый день.",
+    "note": "Natural Russian uses the reflexive verb 'мыться' instead of 'мыть себя'."
+   },
+   {
+    "wrong": "Мы встретили в кафе вчера.",
+    "right": "Мы встретились в кафе вчера.",
+    "note": "Meeting each other reciprocally requires the reflexive particle '-ся / -сь'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct form: 'После тренировки спортсмен быстро ___.'",
+    "options": [
+     "умывался",
+     "умылся",
+     "умылась",
+     "умылись"
+    ],
+    "answer": 1,
+    "explanation": "Singular masculine past tense after consonant 'л' takes '-ся' -> 'умылся'."
+   },
+   {
+    "question": "Choose the correct form: 'Студенты всегда радостно ___ в начале года.'",
+    "options": [
+     "здоровается",
+     "здороваются",
+     "здороваюсь",
+     "здороваетесь"
+    ],
+    "answer": 1,
+    "explanation": "Plural 3rd person requires '-ются' -> 'здороваются'."
+   },
+   {
+    "question": "Choose the correct form: 'Мы вчера долго ___ в библиотеке.'",
+    "options": [
+     "занимался",
+     "занималась",
+     "занимались",
+     "занималось"
+    ],
+    "answer": 2,
+    "explanation": "'Мы' is plural, and the ending '-и' is a vowel, which triggers '-сь' -> 'занимались'."
+   },
+   {
+    "question": "Choose the correct verb: 'Этот проект ___ известными инженерами.'",
+    "options": [
+     "создают",
+     "создаёт",
+     "создаёт себя",
+     "создаётся"
+    ],
+    "answer": 3,
+    "explanation": "Passive process with an instrumental agent ('инженерами') uses '-ся' -> 'создаётся'."
+   }
+  ],
+  "tip": "Spelling check: If the verb form ends in a vowel (а, е, и, у, я), attach '-сь'; if it ends in a consonant or soft sign, attach '-ся'."
+ },
+ {
+  "id": "ru-b1-instrumental-predicates-and-professions",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#7C3AED",
+  "emoji": "🎓",
+  "title": "Instrumental Case in Predicate Expressions",
+  "subtitle": "Forming predicate complements with verbs of becoming, being, and seeming",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "While the present tense of 'быть' is omitted with Nominative complements, past and future states or dynamic verbs like 'стать' and 'казаться' strictly govern the Instrumental case.",
+  "structure": {
+   "headers": [
+    "Verb",
+    "Tense / Mood",
+    "Case Required",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "быть (to be)",
+      "Present (zero copula)",
+      "Nominative",
+      "Он врач."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "быть (to be)",
+      "Past & Future",
+      "Instrumental (preferred)",
+      "Он был хорошим врачом."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "стать (to become)",
+      "All tenses",
+      "Instrumental",
+      "Она стала инженером."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "казаться (to seem)",
+      "All tenses",
+      "Instrumental",
+      "Задача кажется сложной."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "работать (to work as)",
+      "All tenses",
+      "Instrumental",
+      "Иван работает гидом."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6D28D9",
+    "label": "Changing Status with 'стать'",
+    "example": "Мой старший брат хочет стать известным юристом.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Past or Future Professions with 'быть'",
+    "example": "Раньше Анна была школьной учительницей.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Perception with 'казаться'",
+    "example": "Этот фильм казался нам слишком скучным.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "В детстве я мечтал быть космонавтом.",
+    "ko": "",
+    "highlight": "быть космонавтом"
+   },
+   {
+    "en": "После университета она стала талантливым архитектором.",
+    "ko": "",
+    "highlight": "талантливым архитектором"
+   },
+   {
+    "en": "Его странное поведение показалось мне подозрительным.",
+    "ko": "",
+    "highlight": "подозрительным"
+   },
+   {
+    "en": "Мой дядя уже десять лет работает водителем.",
+    "ko": "",
+    "highlight": "работает водителем"
+   },
+   {
+    "en": "Этот молодой человек будет отличным руководителем.",
+    "ko": "",
+    "highlight": "отличным руководителем"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Она хочет стать известная актриса.",
+    "right": "Она хочет стать известной актрисой.",
+    "note": "The verb 'стать' always requires the Instrumental case for predicate nouns and adjectives."
+   },
+   {
+    "wrong": "Он был хороший студент в институте.",
+    "right": "Он был хорошим студентом в институте.",
+    "note": "While Nominative sometimes appears in colloquial speech, standard Russian strongly prefers Instrumental for past roles."
+   },
+   {
+    "wrong": "Она работает переводчик.",
+    "right": "Она работает переводчиком.",
+    "note": "The verb 'работать' requires Instrumental to specify a profession or job title."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Её сын вырос и стал ___.'",
+    "options": [
+     "успешным врачом",
+     "успешный врач",
+     "успешного врача",
+     "об успешном враче"
+    ],
+    "answer": 0,
+    "explanation": "'Стать' governs the Instrumental case ('успешным врачом')."
+   },
+   {
+    "question": "Complete the sentence: 'В молодости дедушка был ___.'",
+    "options": [
+     "капитана",
+     "капитан",
+     "капитаном",
+     "капитану"
+    ],
+    "answer": 2,
+    "explanation": "The past tense copula 'был' governing profession takes the Instrumental 'капитаном'."
+   },
+   {
+    "question": "Complete the sentence: 'Его предложение казалось нам очень ___.'",
+    "options": [
+     "странное",
+     "странная",
+     "странным",
+     "странному"
+    ],
+    "answer": 2,
+    "explanation": "'Казаться' governs an adjective complement in the Instrumental case ('странным')."
+   },
+   {
+    "question": "Complete the sentence: 'Марина отлично знает немецкий и работает ___.'",
+    "options": [
+     "переводчиком",
+     "переводчик",
+     "переводчика",
+     "переводчику"
+    ],
+    "answer": 0,
+    "explanation": "'Работать' (to work as) takes the Instrumental case of the profession."
+   }
+  ],
+  "tip": "Think of the Instrumental here as answering the question 'Кем?' (As whom?) or 'Каким?' (In what manner / state?)."
+ },
+ {
+  "id": "ru-b1-impersonal-sentences-modal-dative",
+  "level": "b1",
+  "category": "modals",
+  "categoryColor": "#4F46E5",
+  "emoji": "🚦",
+  "title": "Impersonal Sentences and Dative Modals",
+  "subtitle": "Expressing necessity, permission, and prohibition without a grammatical subject",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "In Russian modal expressions like 'нужно', 'можно', and 'нельзя', the person experiencing the obligation or permission must be in the Dative case.",
+  "structure": {
+   "headers": [
+    "Experiencer (Dative)",
+    "Modal Word",
+    "Infinitive Verb",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Мне",
+      "нужно",
+      "работать",
+      "I need to work"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Тебе",
+      "можно",
+      "войти",
+      "You may enter"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Студентам",
+      "нельзя",
+      "опаздывать",
+      "Students must not be late"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ему",
+      "надо",
+      "подумать",
+      "He has to think"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Necessity and Need",
+    "example": "Нам нужно срочно сдать этот отчёт.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Permission and Possibility",
+    "example": "Здесь можно расплатиться картой.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Strict Prohibition",
+    "example": "Детям нельзя смотреть такие фильмы.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Анне нужно позвонить врачу прямо сейчас.",
+    "ko": "",
+    "highlight": "Анне нужно"
+   },
+   {
+    "en": "Вам можно взять эту книгу домой.",
+    "ko": "",
+    "highlight": "Вам можно"
+   },
+   {
+    "en": "Пассажирам нельзя курить в салоне самолёта.",
+    "ko": "",
+    "highlight": "Пассажирам нельзя"
+   },
+   {
+    "en": "Мне надо купить новые зимние ботинки.",
+    "ko": "",
+    "highlight": "Мне надо"
+   },
+   {
+    "en": "Здесь никому нельзя шуметь после десяти вечера.",
+    "ko": "",
+    "highlight": "никому нельзя"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Я надо идти домой.",
+    "right": "Мне надо идти домой.",
+    "note": "Impersonal modal constructions require the dative pronoun (мне), never the nominative (я)."
+   },
+   {
+    "wrong": "Здесь не можно фотографировать.",
+    "right": "Здесь нельзя фотографировать.",
+    "note": "Russian does not use 'не можно'; prohibition or impossibility is expressed with 'нельзя'."
+   },
+   {
+    "wrong": "Он нужно прочитать этот текст.",
+    "right": "Ему нужно прочитать этот текст.",
+    "note": "The experiencer must appear in the dative case (ему), not the nominative pronoun (он)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: '___ нужно выпить лекарство.' (She needs to take medicine.)",
+    "options": [
+     "Она",
+     "Её",
+     "Ей",
+     "Ею"
+    ],
+    "answer": 2,
+    "explanation": "'Нужно' requires the experiencer in the dative case, so 'она' becomes 'ей'."
+   },
+   {
+    "question": "Choose the correct phrase: '___ здесь курить.' (You are not allowed to smoke here.)",
+    "options": [
+     "Не можно",
+     "Нельзя",
+     "Не надо",
+     "Не нужно"
+    ],
+    "answer": 1,
+    "explanation": "Prohibition is expressed with 'нельзя', as 'не можно' does not exist in standard Russian."
+   },
+   {
+    "question": "Complete the sentence: '___ можно задать вопрос?' (May I ask a question?)",
+    "options": [
+     "Мне",
+     "Я",
+     "Меня",
+     "Мной"
+    ],
+    "answer": 0,
+    "explanation": "The person seeking permission takes the dative case pronoun 'мне'."
+   },
+   {
+    "question": "Complete the sentence: 'Студентам ___ много читать.' (Students need to read a lot.)",
+    "options": [
+     "нужны",
+     "нужные",
+     "нужен",
+     "нужно"
+    ],
+    "answer": 3,
+    "explanation": "When followed by an infinitive, the invariant neuter short form 'нужно' is used."
+   }
+  ],
+  "tip": "To shift these constructions to the past or future, simply add 'было' or 'будет' directly after the modal word: 'Мне нужно было уйти' or 'Вам можно будет войти'."
+ },
+ {
+  "id": "ru-b1-genitive-plural-irregular-patterns",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "📦",
+  "title": "Plural Declension and Genitive Plural Zero Endings",
+  "subtitle": "Navigating consonant clusters, fleeting vowels, and zero endings in the genitive plural",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Most feminine and neuter nouns ending in -а, -я, or -о take a zero ending (чистый конец) in the genitive plural, often inserting a fleeting vowel (о, е, or ё) to break consonant clusters.",
+  "structure": {
+   "headers": [
+    "Nominative Singular",
+    "Genitive Plural",
+    "Ending Type",
+    "Phonetic Note"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "девушка",
+      "девушек",
+      "Zero ending",
+      "Fleeting 'е' inserted between ш and к"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "окно",
+      "окон",
+      "Zero ending",
+      "Fleeting 'о' inserted between к and н"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "письмо",
+      "писем",
+      "Zero ending",
+      "Fleeting 'е' replaces soft sign"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "газета",
+      "газет",
+      "Zero ending",
+      "Stem ends in single consonant; no inserted vowel"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "студент",
+      "студентов",
+      "-ов ending",
+      "Standard masculine hard ending"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Quantities of Feminine Nouns",
+    "example": "В аудитории сидит много умных девушек.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Quantities of Neuter Nouns",
+    "example": "В этом старом доме нет больших окон.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Expressing Absence",
+    "example": "У меня совсем нет свободных мест.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "На столе лежало пять длинных писем от друзей.",
+    "ko": "",
+    "highlight": "писем"
+   },
+   {
+    "en": "В нашем городе живёт много красивых девушек.",
+    "ko": "",
+    "highlight": "девушек"
+   },
+   {
+    "en": "В этой маленькой комнате совсем нет окон.",
+    "ko": "",
+    "highlight": "окон"
+   },
+   {
+    "en": "В парке высадили около ста молодых яблонь.",
+    "ko": "",
+    "highlight": "яблонь"
+   },
+   {
+    "en": "В зале ожидания не осталось свободных мест.",
+    "ko": "",
+    "highlight": "мест"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "В библиотеке много книгов.",
+    "right": "В библиотеке много книг.",
+    "note": "Feminine nouns ending in -а drop the ending to form a zero ending in the genitive plural, not -ов."
+   },
+   {
+    "wrong": "У меня нет девушк знакомых.",
+    "right": "У меня нет девушек знакомых.",
+    "note": "When dropping -а creates an awkward consonant cluster like -шк-, insert a fleeting vowel (-е-)."
+   },
+   {
+    "wrong": "В квартире много окн.",
+    "right": "В квартире много окон.",
+    "note": "The cluster -кн- in the zero-ending neuter noun requires the fleeting vowel -о-."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the genitive plural of 'сестра'?",
+    "options": [
+     "сестров",
+     "сестёр",
+     "сёстрах",
+     "сестрах"
+    ],
+    "answer": 1,
+    "explanation": "The feminine noun 'сестра' takes a zero ending with a fleeting 'ё' breaking the cluster 'стр' -> 'сестёр'."
+   },
+   {
+    "question": "What is the genitive plural of 'яблоко'?",
+    "options": [
+     "яблоков",
+     "яблоке",
+     "яблок",
+     "яблоковъ"
+    ],
+    "answer": 2,
+    "explanation": "The neuter noun 'яблоко' drops the ending entirely to form the zero ending 'яблок'."
+   },
+   {
+    "question": "What is the genitive plural of 'ложка'?",
+    "options": [
+     "ложек",
+     "ложков",
+     "ложк",
+     "ложках"
+    ],
+    "answer": 0,
+    "explanation": "The feminine noun 'ложка' drops -а and inserts a fleeting 'е' before the suffix -к, giving 'ложек'."
+   },
+   {
+    "question": "Complete the sentence: 'В зале было много свободных ___.' (место)",
+    "options": [
+     "местов",
+     "местей",
+     "места",
+     "мест"
+    ],
+    "answer": 3,
+    "explanation": "The neuter noun 'место' takes a simple zero ending in the genitive plural: 'мест'."
+   }
+  ],
+  "tip": "Remember the fleeting vowel rule: if dropping the -а/-о creates an unpronounceable cluster ending in -к (e.g., ручка, шапка, ложка), almost always insert an 'е' or 'о' before that final consonant!"
+ },
+ {
+  "id": "ru-b2-active-and-passive-participles",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#DC2626",
+  "emoji": "📜",
+  "title": "Attributive Participles: Formation and Syntax",
+  "subtitle": "Modifying nouns concisely in formal and literary registers",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Participles are verbal adjectives that agree in gender, number, and case with the noun they modify, formed using characteristic suffixes such as -ущ-/-ащ- (present active), -вш- (past active), and -нн-/-т- (past passive).",
+  "structure": {
+   "headers": [
+    "Participle Type",
+    "Typical Suffixes",
+    "Base Verb",
+    "Participial Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present Active",
+      "-ущ- / -ющ- / -ащ- / -ящ-",
+      "читать",
+      "читающий"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Active",
+      "-вш- / -ш-",
+      "написать",
+      "написавший"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past Passive",
+      "-нн- / -енн- / -т-",
+      "прочитать",
+      "прочитанный"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Present Passive",
+      "-ем- / -им-",
+      "любить",
+      "любимый"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Active Ongoing Action",
+    "example": "Мы увидели человека, читающего редкую книгу.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Active Completed Action",
+    "example": "Профессор, написавший эту статью, уехал в Рим.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Passive State from Completed Action",
+    "example": "На столе лежали забытые ключи.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Я увидел студента, читающего интересную книгу.",
+    "ko": "",
+    "highlight": "читающего"
+   },
+   {
+    "en": "Письмо, отправленное вчера, уже дошло до адресата.",
+    "ko": "",
+    "highlight": "отправленное"
+   },
+   {
+    "en": "Художник, нарисовавший эту картину, получил награду.",
+    "ko": "",
+    "highlight": "нарисовавший"
+   },
+   {
+    "en": "Мы подошли к девушке, стоящей на перроне.",
+    "ko": "",
+    "highlight": "стоящей"
+   },
+   {
+    "en": "Книга, закрытая читателем, осталась на скамейке.",
+    "ko": "",
+    "highlight": "закрытая"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Я встретил студента, читающий журнал.",
+    "right": "Я встретил студента, читающего журнал.",
+    "note": "Participles function as adjectives and must agree in gender, number, and case with the noun (студента = masculine genitive/accusative animate)."
+   },
+   {
+    "wrong": "Книга, прочитавшая им, была длинной.",
+    "right": "Книга, прочитанная им, была длинной.",
+    "note": "The active past participle (-вш-) implies the book read itself; passive past participle (-нн-) is required for actions done to the subject."
+   },
+   {
+    "wrong": "Написаемый автором роман вышел вчера.",
+    "right": "Написанный автором роман вышел вчера.",
+    "note": "There is no present passive participle for perfective verbs; use the past passive participle 'написанный'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct form: 'Мы говорили с автором, ___ эту книгу.' (having written)",
+    "options": [
+     "написавший",
+     "написавшим",
+     "написавшего",
+     "написавшему"
+    ],
+    "answer": 1,
+    "explanation": "The participle modifies 'с автором' (instrumental masculine singular), so it takes the instrumental ending '-им': 'написавшим'."
+   },
+   {
+    "question": "Identify the present active participle among the options:",
+    "options": [
+     "работавший",
+     "работающий",
+     "работанный",
+     "работаемый"
+    ],
+    "answer": 1,
+    "explanation": "The suffix '-ющ-' identifies the present active participle: 'работающий'."
+   },
+   {
+    "question": "Complete the sentence: 'Письмо, ___ вчера, лежит на полке.' (received)",
+    "options": [
+     "полученное",
+     "получивший",
+     "получающий",
+     "полученная"
+    ],
+    "answer": 0,
+    "explanation": "'Письмо' is neuter singular nominative; the past passive participle must agree in the neuter: 'полученное'."
+   },
+   {
+    "question": "Which suffix signals a past active participle?",
+    "options": [
+     "-ем-",
+     "-ащ-",
+     "-т-",
+     "-вш-"
+    ],
+    "answer": 3,
+    "explanation": "The suffix '-вш-' (or '-ш-' after consonants) forms past active participles like 'знавший' and 'нёсший'."
+   }
+  ],
+  "tip": "If a participle clause follows the noun it modifies, wrap the entire phrase in commas (e.g., 'Студент, читающий книгу, сидит тут'). If it precedes the noun, no commas are used ('Читающий книгу студент сидит тут')."
+ },
+ {
+  "id": "ru-b2-verbal-adverbs-deoprichastiya",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#7C3AED",
+  "emoji": "⚡",
+  "title": "Transgressives (Verbal Adverbs / Деепричастия)",
+  "subtitle": "Combining secondary actions smoothly with imperfective and perfective verbal adverbs",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Verbal adverbs (деепричастия) are invariable forms modifying the main verb; imperfective adverbs (-я/-а) show simultaneous actions, while perfective adverbs (-в/-вши) show completed prior actions.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Aspect",
+    "Suffix",
+    "Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Simultaneous",
+      "Imperfective",
+      "-я / -а",
+      "читая",
+      "while reading"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Prior Action",
+      "Perfective",
+      "-в / -вши",
+      "прочитав",
+      "having read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reflexive Prior",
+      "Perfective",
+      "-вшись",
+      "умывшись",
+      "having washed up"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reflexive Simultaneous",
+      "Imperfective",
+      "-ясь / -ась",
+      "улыбаясь",
+      "while smiling"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Simultaneous Background Action",
+    "example": "Он слушал музыку, делая домашнее задание.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Sequential Preceding Action",
+    "example": "Пообедав, мы сразу пошли на прогулку.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Manner or Cause",
+    "example": "Узнав правду, она не смогла сдержать слёз.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Она шла по улице, улыбаясь прохожим.",
+    "ko": "",
+    "highlight": "улыбаясь"
+   },
+   {
+    "en": "Окончив университет, брат устроился на работу.",
+    "ko": "",
+    "highlight": "Окончив"
+   },
+   {
+    "en": "Позавтракав, Анна вышла из дома.",
+    "ko": "",
+    "highlight": "Позавтракав"
+   },
+   {
+    "en": "Он сидел в кресле, читая утреннюю газету.",
+    "ko": "",
+    "highlight": "читая"
+   },
+   {
+    "en": "Увидев старого друга, я окликнул его.",
+    "ko": "",
+    "highlight": "Увидев"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Подъезжая к станции, у меня слетела шляпа.",
+    "right": "Когда я подъезжал к станции, у меня слетела шляпа.",
+    "note": "The subject of the verbal adverb MUST be identical to the subject of the main verb. The hat cannot 'подъезжать'."
+   },
+   {
+    "wrong": "Сделав уроки, он делает чай сейчас.",
+    "right": "Сделав уроки, он пошёл гулять.",
+    "note": "A perfective verbal adverb (сделав) marks a completed action prior to the main clause, making a simultaneous present main verb ill-fitting."
+   },
+   {
+    "wrong": "Она вошла в комнату, улыбая.",
+    "right": "Она вошла в комнату, улыбаясь.",
+    "note": "Reflexive verbs retain the reflexive particle '-сь' after vowels in verbal adverbs (улыбаясь, not улыбая)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the clause: '___ домой, я включил свет.' (Having arrived)",
+    "options": [
+     "Приходя",
+     "Пришедший",
+     "Придя",
+     "Приду"
+    ],
+    "answer": 2,
+    "explanation": "The perfective verbal adverb from 'прийти' is irregularly formed as 'придя' to indicate a completed prior action."
+   },
+   {
+    "question": "Identify the sentence with correct verbal adverb usage:",
+    "options": [
+     "Прочитав книгу, она мне понравилась.",
+     "Выходя из автобуса, пошёл сильный дождь.",
+     "Возвращаясь домой, мы увидели салют.",
+     "Потеряв кошелёк, полиция помогла ему."
+    ],
+    "answer": 2,
+    "explanation": "In 'Возвращаясь домой, мы увидели салют', 'мы' is the subject of both 'возвращаясь' and 'увидели'."
+   },
+   {
+    "question": "What is the imperfective verbal adverb of 'говорить'?",
+    "options": [
+     "говоря",
+     "говорив",
+     "говоривший",
+     "говорят"
+    ],
+    "answer": 0,
+    "explanation": "Imperfective verbal adverbs take the suffix '-я' from the present stem (говор-ят -> говоря)."
+   },
+   {
+    "question": "Complete the sentence: 'Студенты слушали лекцию, ___ важные моменты.' (writing down simultaneously)",
+    "options": [
+     "записав",
+     "записывая",
+     "записывавшие",
+     "записывают"
+    ],
+    "answer": 1,
+    "explanation": "An ongoing simultaneous action requires the imperfective verbal adverb 'записывая'."
+   }
+  ],
+  "tip": "Always test your sentence by checking the subject: ask 'Who did the action in the деепричастие?' If that is not exactly the nominative grammatical subject of the sentence, the construction is grammatically illegal in Russian!"
+ },
+ {
+  "id": "ru-b2-subjunctive-and-counterfactual-by",
+  "level": "b2",
+  "category": "conditionals",
+  "categoryColor": "#EA580C",
+  "emoji": "🔮",
+  "title": "Conditional and Subjunctive Mood with the Particle 'Бы'",
+  "subtitle": "Formulating unreal conditions, polite desires, and counterfactual statements",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "The subjunctive/conditional mood in Russian is created by combining the past tense verb form with the particle 'бы' (or 'б') in both the condition and the result clauses.",
+  "structure": {
+   "headers": [
+    "Clause Type",
+    "Particle",
+    "Verb Form",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Condition (If...)",
+      "если бы",
+      "Past tense",
+      "Если бы у меня было время..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Consequence",
+      "бы",
+      "Past tense",
+      "...я бы помог тебе."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Polite Wish",
+      "бы",
+      "Past tense",
+      "Я бы хотел чашку чая."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Purpose / Desire",
+      "чтобы",
+      "Past tense or Infinitive",
+      "Я хочу, чтобы ты пришёл."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Counterfactual Conditions",
+    "example": "Если бы вчера была хорошая погода, мы поехали бы за город.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Polite Requests and Preferences",
+    "example": "Я с удовольствием выпил бы чашку кофе.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Desire for Another's Action",
+    "example": "Отец хочет, чтобы сын поступил в университет.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Если бы я знал об этом раньше, я бы предупредил вас.",
+    "ko": "",
+    "highlight": "Если бы я знал"
+   },
+   {
+    "en": "Мы бы поехали на море летом, но у нас много работы.",
+    "ko": "",
+    "highlight": "Мы бы поехали"
+   },
+   {
+    "en": "Я хотел бы задать вам один короткий вопрос.",
+    "ko": "",
+    "highlight": "хотел бы"
+   },
+   {
+    "en": "Если бы погода была тёплой, дети играли бы на улице.",
+    "ko": "",
+    "highlight": "играли бы"
+   },
+   {
+    "en": "Она попросила, чтобы мы не опаздывали на встречу.",
+    "ko": "",
+    "highlight": "чтобы мы не опаздывали"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Если я бы имел время, я пришёл бы.",
+    "right": "Если бы у меня было время, я бы пришёл.",
+    "note": "The particle 'бы' attaches directly to 'если' (если бы), and possession is typically expressed with 'у меня было'."
+   },
+   {
+    "wrong": "Если бы я знаю это, я бы сказал.",
+    "right": "Если бы я знал это, я бы сказал.",
+    "note": "The verb accompanying 'бы' must always be in the past tense, even when referring to present or future hypotheses."
+   },
+   {
+    "wrong": "Я хочу чтобы ты приходишь завтра.",
+    "right": "Я хочу, чтобы ты пришёл завтра.",
+    "note": "Subordinate clauses introduced by 'чтобы' expressing a wish require past tense forms (пришёл), not present tense."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the counterfactual clause: 'Если бы ты позвонил мне вчера, я ___.' (would have met you)",
+    "options": [
+     "встретил бы тебя",
+     "встречу тебя",
+     "буду встретить тебя",
+     "встречаю тебя"
+    ],
+    "answer": 0,
+    "explanation": "The result clause in a counterfactual conditional requires the past tense verb with 'бы': 'встретил бы'."
+   },
+   {
+    "question": "Choose the correct polite phrase: 'Я ___ стакан воды.' (I would like)",
+    "options": [
+     "хочу бы",
+     "хотел бы",
+     "хотеть бы",
+     "буду хотеть бы"
+    ],
+    "answer": 1,
+    "explanation": "Polite wishes use the masculine/feminine past tense verb followed by 'бы': 'хотел бы' / 'хотела бы'."
+   },
+   {
+    "question": "What tense is used with 'чтобы' when expressing a wish for someone else?",
+    "options": [
+     "Present tense",
+     "Future tense",
+     "Past tense",
+     "Imperative mood"
+    ],
+    "answer": 2,
+    "explanation": "Clauses with 'чтобы' denoting wishes or demands for someone else require the past tense (e.g., 'Я хочу, чтобы ты сказал')."
+   },
+   {
+    "question": "Complete the sentence: 'Если ___ больше времени, мы бы пошли в музей.' (if we had)",
+    "options": [
+     "у нас есть",
+     "было бы",
+     "бы у нас было",
+     "у нас будет"
+    ],
+    "answer": 2,
+    "explanation": "The conjunction 'если бы' introduces the condition, accompanied by the past neuter verb 'было': 'Если бы у нас было'."
+   }
+  ],
+  "tip": "Russian does not have separate forms for the second conditional (hypothetical present/future) and third conditional (unreal past). Context alone tells you whether 'Если бы я знал...' means 'If I knew [now]' or 'If I had known [back then]'."
+ }
+]

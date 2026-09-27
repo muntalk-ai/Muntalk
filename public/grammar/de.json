@@ -1,0 +1,3328 @@
+[
+ {
+  "id": "de-a1-grammatical-gender-and-nominative-articles",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🏷️",
+  "title": "Grammatical Gender and Nominative Articles",
+  "subtitle": "Mastering der, die, das and ein/eine for sentence subjects",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Every German noun possesses an inherent grammatical gender (masculine, feminine, or neuter) that determines its definite and indefinite nominative articles.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Definite",
+    "Indefinite",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine",
+      "der",
+      "ein",
+      "der Mann / ein Mann"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine",
+      "die",
+      "eine",
+      "die Frau / eine Frau"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter",
+      "das",
+      "ein",
+      "das Kind / ein Kind"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Plural",
+      "die",
+      "keine / —",
+      "die Kinder"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Specific Person or Thing (Definite)",
+    "example": "Der Tisch ist neu.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Unspecified Person or Thing (Indefinite)",
+    "example": "Eine Lampe steht hier.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Plural Subjects",
+    "example": "Die Bücher sind interessant.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Der Hund schläft im Garten.",
+    "ko": "",
+    "highlight": "Der Hund"
+   },
+   {
+    "en": "Das Auto fährt sehr schnell.",
+    "ko": "",
+    "highlight": "Das Auto"
+   },
+   {
+    "en": "Eine Katze sitzt auf dem Stuhl.",
+    "ko": "",
+    "highlight": "Eine Katze"
+   },
+   {
+    "en": "Ein Kind spielt im Park.",
+    "ko": "",
+    "highlight": "Ein Kind"
+   },
+   {
+    "en": "Die Blumen blühen schön.",
+    "ko": "",
+    "highlight": "Die Blumen"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Das Tisch ist groß.",
+    "right": "Der Tisch ist groß.",
+    "note": "Grammatical gender in German is arbitrary; 'Tisch' is masculine, so it requires 'der'."
+   },
+   {
+    "wrong": "Hier ist ein Frau.",
+    "right": "Hier ist eine Frau.",
+    "note": "Feminine nouns require the indefinite article ending '-e' (eine Frau)."
+   },
+   {
+    "wrong": "Ich sehe ein Plural: ein Kinder.",
+    "right": "Hier sind Kinder.",
+    "note": "There is no plural form of 'ein'; simply use the bare plural noun or 'keine' for negation."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct definite article: '___ Apfel ist rot.' (Apfel is masculine)",
+    "options": [
+     "Die",
+     "Der",
+     "Das",
+     "Den"
+    ],
+    "answer": 1,
+    "explanation": "Since 'Apfel' is a masculine noun acting as the nominative subject, use 'Der'."
+   },
+   {
+    "question": "Choose the correct indefinite article: 'Hier steht ___ Haus.' (Haus is neuter)",
+    "options": [
+     "ein",
+     "eine",
+     "einer",
+     "eines"
+    ],
+    "answer": 0,
+    "explanation": "Neuter nouns take 'ein' in the nominative case."
+   },
+   {
+    "question": "Choose the correct definite article: '___ Sonne scheint heute sehr hell.' (Sonne is feminine)",
+    "options": [
+     "Der",
+     "Das",
+     "Den",
+     "Die"
+    ],
+    "answer": 3,
+    "explanation": "'Sonne' is grammatically feminine, requiring 'Die' in the nominative case."
+   },
+   {
+    "question": "Which article correctly completes: 'Ist das ___ Zeitung?' (Zeitung is feminine)",
+    "options": [
+     "ein",
+     "einen",
+     "eine",
+     "einem"
+    ],
+    "answer": 2,
+    "explanation": "Feminine nouns in the nominative case take the indefinite article 'eine'."
+   }
+  ],
+  "tip": "Always memorize German nouns together with their definite article and plural form (e.g., 'das Buch, die Bücher') rather than in isolation."
+ },
+ {
+  "id": "de-a1-verb-conjugation-and-vowel-changes",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "Present Tense Conjugation and Stem-Vowel Changes",
+  "subtitle": "Regular endings and essential vowel shifts (e→i/ie, a→ä)",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "While German present-tense verbs take standard personal endings (-e, -st, -t, -en, -t, -en), strong verbs change their stem vowel exclusively in the du and er/sie/es forms.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Regular (kommen)",
+    "Vowel Shift (sprechen)",
+    "Vowel Shift (fahren)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ich",
+      "komme",
+      "spreche",
+      "fahre"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "du",
+      "kommst",
+      "sprichst",
+      "fährst"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "er / sie / es",
+      "kommt",
+      "spricht",
+      "fährt"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "wir / sie / Sie",
+      "kommen",
+      "sprechen",
+      "fahren"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ihr",
+      "kommt",
+      "sprecht",
+      "fahrt"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Regular Verb Conjugation",
+    "example": "Ich trinke gern Wasser.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Vowel Shift: e to i / ie",
+    "example": "Er liest ein Buch.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Vowel Shift: a to ä",
+    "example": "Du fährst sehr schnell.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Wir lernen jeden Tag Deutsch.",
+    "ko": "",
+    "highlight": "lernen"
+   },
+   {
+    "en": "Du sprichst sehr gut Deutsch.",
+    "ko": "",
+    "highlight": "sprichst"
+   },
+   {
+    "en": "Er gibt mir den Schlüssel.",
+    "ko": "",
+    "highlight": "gibt"
+   },
+   {
+    "en": "Sie schläft am Wochenende lange.",
+    "ko": "",
+    "highlight": "schläft"
+   },
+   {
+    "en": "Ihr spielt heute Fußball.",
+    "ko": "",
+    "highlight": "spielt"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Du sprechst Englisch.",
+    "right": "Du sprichst Englisch.",
+    "note": "The verb 'sprechen' undergoes an e-to-i stem-vowel change for 'du' and 'er/sie/es'."
+   },
+   {
+    "wrong": "Er fahrt nach Berlin.",
+    "right": "Er fährt nach Berlin.",
+    "note": "Verbs like 'fahren' add an umlaut (a→ä) in the second and third person singular."
+   },
+   {
+    "wrong": "Wir fahrt nach Hause.",
+    "right": "Wir fahren nach Hause.",
+    "note": "The vowel shift never affects the plural forms; 'wir' takes the regular base stem ending '-en'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Du ___ heute einen Roman.' (lesen)",
+    "options": [
+     "lest",
+     "lesst",
+     "liest",
+     "liesst"
+    ],
+    "answer": 2,
+    "explanation": "'Lesen' changes its vowel from e to ie for 'du': 'du liest'."
+   },
+   {
+    "question": "Complete the sentence: 'Maria ___ am liebsten einen Apfel.' (essen)",
+    "options": [
+     "isst",
+     "esst",
+     "eßt",
+     "ist"
+    ],
+    "answer": 0,
+    "explanation": "'Essen' undergoes an e-to-i change; the third-person form is 'isst' (double s)."
+   },
+   {
+    "question": "Complete the sentence: 'Der Zug ___ um neun Uhr ab.' (fahren)",
+    "options": [
+     "fahrt",
+     "fährt",
+     "fahren",
+     "fährst"
+    ],
+    "answer": 1,
+    "explanation": "Third person singular of 'fahren' requires an umlaut: 'fährt'."
+   },
+   {
+    "question": "Complete the sentence: 'Ihr ___ jeden Abend Pizza.' (essen)",
+    "options": [
+     "isst",
+     "essen",
+     "ässt",
+     "esst"
+    ],
+    "answer": 3,
+    "explanation": "The 'ihr' (you all) form never takes a vowel change: 'ihr esst'."
+   }
+  ],
+  "tip": "Vowel shifts only ever affect 'du' and 'er/sie/es'; the plural forms (wir, ihr, sie) always keep the original infinitive vowel stem."
+ },
+ {
+  "id": "de-a1-verb-position-v2-and-inversion",
+  "level": "a1",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "⚓",
+  "title": "Verb-Second Rule (V2) and Inversion",
+  "subtitle": "Structuring German main clauses and fronting elements correctly",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "In a standard German declarative main clause, the conjugated finite verb must occupy the exact second structural position, triggering subject-verb inversion if another element comes first.",
+  "structure": {
+   "headers": [
+    "Position 1",
+    "Position 2 (Verb)",
+    "Position 3 (Subject)",
+    "Rest of Clause"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Ich",
+      "gehe",
+      "—",
+      "heute ins Kino."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Heute",
+      "gehe",
+      "ich",
+      "ins Kino."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Am Montag",
+      "arbeiten",
+      "wir",
+      "zu Hause."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Gerne",
+      "trinkt",
+      "er",
+      "schwarzen Kaffee."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Subject First (S-V-O)",
+    "example": "Wir lernen heute viel.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Time/Adverb First (Inversion)",
+    "example": "Heute lernen wir viel.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Location/Object First",
+    "example": "Hier wohnen meine Eltern.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Morgen fahre ich nach Hamburg.",
+    "ko": "",
+    "highlight": "fahre ich"
+   },
+   {
+    "en": "Peter kauft im Supermarkt ein.",
+    "ko": "",
+    "highlight": "kauft"
+   },
+   {
+    "en": "Manchmal trinken wir zusammen Tee.",
+    "ko": "",
+    "highlight": "trinken wir"
+   },
+   {
+    "en": "Jetzt beginnt der neue Deutschkurs.",
+    "ko": "",
+    "highlight": "beginnt der neue Deutschkurs"
+   },
+   {
+    "en": "Am Abend kocht mein Vater.",
+    "ko": "",
+    "highlight": "kocht mein Vater"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Gestern ich habe Pizza gegessen.",
+    "right": "Gestern habe ich Pizza gegessen.",
+    "note": "If an adverbial is placed in position 1, the conjugated verb MUST come next, in position 2."
+   },
+   {
+    "wrong": "Heute das Wetter ist schön.",
+    "right": "Heute ist das Wetter schön.",
+    "note": "Putting the subject before the verb when starting with 'Heute' creates an ungrammatical V3 order."
+   },
+   {
+    "wrong": "In Berlin wir wohnen.",
+    "right": "In Berlin wohnen wir.",
+    "note": "A prepositional phrase in position 1 requires immediate inversion of verb and subject."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correctly structured sentence:",
+    "options": [
+     "Morgen wir gehen ins Kino.",
+     "Morgen gehen wir ins Kino.",
+     "Morgen ins Kino gehen wir.",
+     "Wir morgen gehen ins Kino."
+    ],
+    "answer": 1,
+    "explanation": "With 'Morgen' occupying Position 1, the conjugated verb 'gehen' must sit in Position 2, followed by the subject 'wir'."
+   },
+   {
+    "question": "Complete the inverted sentence: 'Am Wochenende ___ gern lange.'",
+    "options": [
+     "schlafe ich",
+     "ich schlafe",
+     "schlafen ich",
+     "ich schläft"
+    ],
+    "answer": 0,
+    "explanation": "'Am Wochenende' is Position 1, so the conjugated verb 'schlafe' must take Position 2, followed immediately by 'ich'."
+   },
+   {
+    "question": "Complete the sentence: 'Heute Abend ___ Thomas ein Buch.'",
+    "options": [
+     "liest",
+     "er liest",
+     "lesen",
+     "liest er"
+    ],
+    "answer": 0,
+    "explanation": "Position 1 is 'Heute Abend', Position 2 is the verb 'liest', and Position 3 is the named subject 'Thomas'."
+   },
+   {
+    "question": "Identify which element is in Position 2: 'Nach der Schule essen die Kinder Obst.'",
+    "options": [
+     "Nach der Schule",
+     "die Kinder",
+     "Obst",
+     "essen"
+    ],
+    "answer": 3,
+    "explanation": "'Nach der Schule' counts as a single constituent in Position 1; the conjugated verb 'essen' is in Position 2."
+   }
+  ],
+  "tip": "Think of Position 1 as a parking space for one whole idea (like 'Am späten Nachmittag'), immediately after which the conjugated verb MUST appear."
+ },
+ {
+  "id": "de-a1-accusative-case-direct-objects",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎯",
+  "title": "The Accusative Case and Masculine Shift",
+  "subtitle": "Identifying direct objects and executing der→den and ein→einen",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "In the accusative case (used for direct objects receiving the action), only masculine articles change form (der to den, ein to einen), while feminine, neuter, and plural stay identical to the nominative.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Nominative",
+    "Accusative Definite",
+    "Accusative Indefinite"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine",
+      "der / ein",
+      "den",
+      "einen"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine",
+      "die / eine",
+      "die",
+      "eine"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter",
+      "das / ein",
+      "das",
+      "ein"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural",
+      "die / keine",
+      "die",
+      "keine"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Direct Object with Transitive Verb",
+    "example": "Ich kaufe den Pullover.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Expressing Possession (haben / brauchen)",
+    "example": "Er hat einen Hund.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Food and Drink Consumption",
+    "example": "Wir trinken einen Saft.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ich habe einen großen Bruder.",
+    "ko": "",
+    "highlight": "einen großen Bruder"
+   },
+   {
+    "en": "Sie sucht den alten Schlüssel.",
+    "ko": "",
+    "highlight": "den alten Schlüssel"
+   },
+   {
+    "en": "Wir brauchen ein neues Auto.",
+    "ko": "",
+    "highlight": "ein neues Auto"
+   },
+   {
+    "en": "Er trinkt jeden Tag eine Tasse Tee.",
+    "ko": "",
+    "highlight": "eine Tasse Tee"
+   },
+   {
+    "en": "Kaufst du den Computer?",
+    "ko": "",
+    "highlight": "den Computer"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ich habe ein Hund.",
+    "right": "Ich habe einen Hund.",
+    "note": "'Hund' is masculine; as the direct object of 'haben', 'ein' must shift to 'einen'."
+   },
+   {
+    "wrong": "Er kauft der Tisch.",
+    "right": "Er kauft den Tisch.",
+    "note": "The definite masculine article 'der' becomes 'den' in the accusative case."
+   },
+   {
+    "wrong": "Ich sehe den Mädchen.",
+    "right": "Ich sehe das Mädchen.",
+    "note": "'Mädchen' is neuter; neuter nouns remain 'das' / 'ein' in the accusative case."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Ich brauche ___ Bleistift.' (Bleistift is masculine)",
+    "options": [
+     "ein",
+     "einer",
+     "einen",
+     "einem"
+    ],
+    "answer": 2,
+    "explanation": "'Bleistift' is a masculine direct object, so the accusative indefinite article is 'einen'."
+   },
+   {
+    "question": "Complete the sentence: 'Wir sehen ___ Frau.' (Frau is feminine)",
+    "options": [
+     "die",
+     "der",
+     "den",
+     "dem"
+    ],
+    "answer": 0,
+    "explanation": "Feminine nouns retain 'die' in the accusative case."
+   },
+   {
+    "question": "Complete the sentence: 'Kennst du ___ Mann dort drüben?' (Mann is masculine)",
+    "options": [
+     "der",
+     "dem",
+     "das",
+     "den"
+    ],
+    "answer": 3,
+    "explanation": "Masculine definite article shifts from 'der' to 'den' as a direct object."
+   },
+   {
+    "question": "Complete the sentence: 'Er liest ___ Buch.' (Buch is neuter)",
+    "options": [
+     "einen",
+     "ein",
+     "eine",
+     "einem"
+    ],
+    "answer": 1,
+    "explanation": "Neuter nouns do not change their form in the accusative; 'ein Buch' remains 'ein Buch'."
+   }
+  ],
+  "tip": "The accusative case only changes the masculine gender: remember 'Der/Ein becomes Den/Einen'; feminine, neuter, and plural look exactly like their nominative twins."
+ },
+ {
+  "id": "de-a1-separable-prefix-verbs",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "✂️",
+  "title": "Separable-Prefix Verbs",
+  "subtitle": "Splitting verbs and sending prefixes to the end of the clause",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "In simple present tense main clauses, separable verb prefixes detach from their verb stem and are sent to the absolute final position of the clause.",
+  "structure": {
+   "headers": [
+    "Infinitive",
+    "Prefix Meaning",
+    "Verb Stem (Position 2)",
+    "Prefix (End of Clause)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "aufstehen",
+      "auf- (up)",
+      "stehe",
+      "auf"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "einkaufen",
+      "ein- (in/into)",
+      "kauft",
+      "ein"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "anrufen",
+      "an- (at/contact)",
+      "ruft",
+      "an"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "fernsehen",
+      "fern- (distant)",
+      "sieht",
+      "fern"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Daily Routine Actions",
+    "example": "Ich stehe um sieben Uhr auf.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Shopping and Errands",
+    "example": "Wir kaufen am Samstag ein.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Starting / Ending Events",
+    "example": "Der Film fängt um acht Uhr an.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Er steht jeden Morgen früh auf.",
+    "ko": "",
+    "highlight": "steht"
+   },
+   {
+    "en": "Meine Mutter ruft mich oft an.",
+    "ko": "",
+    "highlight": "ruft"
+   },
+   {
+    "en": "Wir kaufen heute im Supermarkt ein.",
+    "ko": "",
+    "highlight": "kaufen"
+   },
+   {
+    "en": "Wann machst du das Fenster auf?",
+    "ko": "",
+    "highlight": "machst"
+   },
+   {
+    "en": "Sie packt ihren Koffer für die Reise aus.",
+    "ko": "",
+    "highlight": "packt"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ich aufstehe um sechs Uhr.",
+    "right": "Ich stehe um sechs Uhr auf.",
+    "note": "Separable verbs cannot stay attached in a simple main clause present tense; the prefix must go to the end."
+   },
+   {
+    "wrong": "Er kauft ein Brot ein heute.",
+    "right": "Er kauft heute Brot ein.",
+    "note": "The separated prefix must occupy the very last position in the clause, after all objects and adverbs."
+   },
+   {
+    "wrong": "Wir anrufen unsere Großmutter.",
+    "right": "Wir rufen unsere Großmutter an.",
+    "note": "Conjugate the base verb 'rufen' in position 2 and place 'an' at the clause end."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Wann ___ der Deutschunterricht ___?' (anfangen)",
+    "options": [
+     "fängt ... an",
+     "fangt ... an",
+     "anfängt ... —",
+     "fängt ... auf"
+    ],
+    "answer": 0,
+    "explanation": "'Anfangen' undergoes a vowel change (fängt) and splits, sending 'an' to the end of the question."
+   },
+   {
+    "question": "Complete the sentence: 'Paul ___ seine Freunde am Abend ___.' (anrufen)",
+    "options": [
+     "ruft ... ein",
+     "anruft ... —",
+     "ruft ... an",
+     "rufe ... an"
+    ],
+    "answer": 2,
+    "explanation": "Paul is 3rd person singular ('ruft'), and the separable prefix is 'an', placed at the end."
+   },
+   {
+    "question": "Where does the prefix go in: 'Wir (mitkommen) heute ins Schwimmbad'?",
+    "options": [
+     "Before 'heute'",
+     "At the end: '... ins Schwimmbad mit.'",
+     "Right after 'Wir'",
+     "Attached to the verb: 'mitkommen'"
+    ],
+    "answer": 1,
+    "explanation": "In a main clause, the separable prefix 'mit' moves to the absolute end of the sentence: 'Wir kommen heute ins Schwimmbad mit.'"
+   },
+   {
+    "question": "Complete the sentence: 'Ich ___ jeden Abend eine Stunde ___.' (fernsehen)",
+    "options": [
+     "sehe fern ... —",
+     "fernsehe ... —",
+     "sieht ... fern",
+     "sehe ... fern"
+    ],
+    "answer": 3,
+    "explanation": "For 'ich', 'sehen' conjugates as 'sehe', and the prefix 'fern' lands at the sentence end: 'sehe ... fern'."
+   }
+  ],
+  "tip": "Listen for the stress: if the prefix is stressed when spoken in the infinitive (AUF-stehen, EIN-kaufen), it is separable!"
+ },
+ {
+  "id": "de-a1-negation-nicht-vs-kein",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🚫",
+  "title": "Negation with 'nicht' vs. 'kein'",
+  "subtitle": "Master when to deny nouns versus verbs, adjectives, and entire clauses",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use 'kein' to negate nouns that would otherwise take an indefinite article or no article, and use 'nicht' for everything else.",
+  "structure": {
+   "headers": [
+    "Target of Negation",
+    "Negation Word",
+    "German Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Noun (indefinite / zero article)",
+      "kein (declined)",
+      "Ich habe kein Auto.",
+      "I have no car / I don't have a car."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Verb (general action)",
+      "nicht (end of clause)",
+      "Ich schwimme nicht.",
+      "I do not swim."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adjective / Adverb",
+      "nicht (before word)",
+      "Das Haus ist nicht groß.",
+      "The house is not big."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Definite Noun / Specific item",
+      "nicht (before noun phrase)",
+      "Ich kenne nicht den Mann.",
+      "I do not know the man."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Negating Nouns with Indefinite Articles",
+    "example": "Wir trinken keinen Kaffee.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Negating Adjectives or Adverbs",
+    "example": "Der Film ist nicht interessant.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Negating Entire Actions or Verbs",
+    "example": "Mein Bruder arbeitet heute nicht.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ich habe kein Geld für das Ticket.",
+    "ko": "",
+    "highlight": "kein Geld"
+   },
+   {
+    "en": "Er spricht nicht schnell.",
+    "ko": "",
+    "highlight": "nicht schnell"
+   },
+   {
+    "en": "Sie kauft keine Äpfel auf dem Markt.",
+    "ko": "",
+    "highlight": "keine Äpfel"
+   },
+   {
+    "en": "Wir reisen im Winter nicht.",
+    "ko": "",
+    "highlight": "nicht"
+   },
+   {
+    "en": "Das ist kein Problem.",
+    "ko": "",
+    "highlight": "kein Problem"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ich habe nicht Auto.",
+    "right": "Ich habe kein Auto.",
+    "note": "Use 'kein' instead of 'nicht' when negating a noun that lacks a definite article."
+   },
+   {
+    "wrong": "Ich trinke nicht Milch.",
+    "right": "Ich trinke keine Milch.",
+    "note": "Uncountable nouns without articles must be negated with the appropriate declined form of 'kein'."
+   },
+   {
+    "wrong": "Er ist kein glücklich.",
+    "right": "Er ist nicht glücklich.",
+    "note": "Use 'nicht' directly before predicate adjectives; 'kein' can only modify nouns."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I do not have a dog: 'Ich habe ___ Hund.'",
+    "options": [
+     "nicht",
+     "keinen",
+     "kein",
+     "keine"
+    ],
+    "answer": 1,
+    "explanation": "'Hund' is masculine singular in the accusative case, so 'ein' becomes 'keinen'."
+   },
+   {
+    "question": "The soup is not hot: 'Die Suppe ist ___ heiß.'",
+    "options": [
+     "keine",
+     "nicht",
+     "kein",
+     "keinen"
+    ],
+    "answer": 1,
+    "explanation": "Adjectives like 'heiß' are negated using 'nicht', never 'kein'."
+   },
+   {
+    "question": "We have no time today: 'Wir haben heute ___ Zeit.'",
+    "options": [
+     "nicht",
+     "kein",
+     "keinen",
+     "keine"
+    ],
+    "answer": 3,
+    "explanation": "'Zeit' is a feminine noun; zero-article feminine nouns take 'keine'."
+   },
+   {
+    "question": "Max does not sleep: 'Max schläft ___.'",
+    "options": [
+     "nicht",
+     "kein",
+     "nie kein",
+     "keinen"
+    ],
+    "answer": 0,
+    "explanation": "Negating the main verb alone requires 'nicht' placed at the end of the clause."
+   }
+  ],
+  "tip": "Think of 'kein' as equivalent to English 'no' or 'not any' before a noun; if you can say 'no car' or 'no idea', German demands 'kein'."
+ },
+ {
+  "id": "de-a2-dative-case-and-indirect-objects",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🎁",
+  "title": "The Dative Case and Fixed Dative Verbs",
+  "subtitle": "Identify recipient objects and verbs that strictly mandate dative arguments",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "The dative case marks indirect recipients and required objects for specific verbs like 'helfen', changing masculine/neuter articles to 'dem' and feminine to 'der'.",
+  "structure": {
+   "headers": [
+    "Gender / Number",
+    "Nominativ",
+    "Dativ Definite",
+    "Dativ Indefinite / Possessive"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine",
+      "der Mann",
+      "dem Mann",
+      "einem / meinem Mann"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter",
+      "das Kind",
+      "dem Kind",
+      "einem / meinem Kind"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine",
+      "die Frau",
+      "der Frau",
+      "einer / meiner Frau"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Plural",
+      "die Freunde",
+      "den Freunden (+n)",
+      "meinen Freunden (+n)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Indirect Beneficiary or Recipient",
+    "example": "Der Kellner bringt dem Gast die Speisekarte.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Fixed Dative Verb 'helfen'",
+    "example": "Ich helfe der alten Dame über die Straße.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Expressions of Taste or Approval",
+    "example": "Das Essen schmeckt den Kindern gut.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Wir danken dem Lehrer für seine Hilfe.",
+    "ko": "",
+    "highlight": "dem Lehrer"
+   },
+   {
+    "en": "Das neue Kleid gefällt meiner Schwester.",
+    "ko": "",
+    "highlight": "meiner Schwester"
+   },
+   {
+    "en": "Er schenkt seinem Freund ein interessantes Buch.",
+    "ko": "",
+    "highlight": "seinem Freund"
+   },
+   {
+    "en": "Die Schuhe passen dem Jungen nicht.",
+    "ko": "",
+    "highlight": "dem Jungen"
+   },
+   {
+    "en": "Ich antworte den Studenten morgen.",
+    "ko": "",
+    "highlight": "den Studenten"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ich helfe dich gern.",
+    "right": "Ich helfe dir gern.",
+    "note": "'Helfen' takes a dative object ('dir'), never an accusative object ('dich')."
+   },
+   {
+    "wrong": "Das Buch gefällt mich.",
+    "right": "Das Buch gefällt mir.",
+    "note": "'Gefallen' governs the dative case for the person who likes the item."
+   },
+   {
+    "wrong": "Er gibt den Kinder Schokolade.",
+    "right": "Er gibt den Kindern Schokolade.",
+    "note": "Dative plural nouns add an '-n' suffix unless they already end in -n or -s."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Can you help me?: 'Kannst du ___ helfen?'",
+    "options": [
+     "mich",
+     "mir",
+     "mein",
+     "ich"
+    ],
+    "answer": 1,
+    "explanation": "'Helfen' strictly governs a dative object, so the 1st person singular pronoun is 'mir'."
+   },
+   {
+    "question": "The coat belongs to the woman: 'Der Mantel gehört ___ Frau.'",
+    "options": [
+     "die",
+     "den",
+     "der",
+     "dem"
+    ],
+    "answer": 2,
+    "explanation": "In the dative case, feminine singular definite article 'die' changes to 'der'."
+   },
+   {
+    "question": "We buy the boy an ice cream: 'Wir kaufen ___ Jungen ein Eis.'",
+    "options": [
+     "dem",
+     "den",
+     "des",
+     "der"
+    ],
+    "answer": 0,
+    "explanation": "Masculine recipient objects take the dative article 'dem'."
+   },
+   {
+    "question": "The soup tastes good to the guests: 'Die Suppe schmeckt den ___ sehr gut.'",
+    "options": [
+     "Gäste",
+     "Gästen",
+     "Gäster",
+     "Gast"
+    ],
+    "answer": 1,
+    "explanation": "Plural dative requires the article 'den' plus the suffix '-n' on the noun: 'Gästen'."
+   }
+  ],
+  "tip": "Memorize the core dative-only verbs in pairs: helfen (to help), danken (to thank), gefallen (to please), gehören (to belong to), and schmecken (to taste)."
+ },
+ {
+  "id": "de-a2-two-way-prepositions-wechselpraepositionen",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🧭",
+  "title": "Two-Way Prepositions (Akkusativ vs. Dativ)",
+  "subtitle": "Choose accusative for directional motion and dative for fixed position",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Nine dual prepositions take the accusative when asking 'wohin?' (destination/motion) and the dative when asking 'wo?' (stationary location).",
+  "structure": {
+   "headers": [
+    "Question",
+    "Case Required",
+    "Paired Verb Types",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Wohin? (Direction)",
+      "Akkusativ",
+      "legen, stellen, setzen",
+      "Ich lege das Buch auf den Tisch."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Wo? (Location)",
+      "Dativ",
+      "liegen, stehen, sitzen",
+      "Das Buch liegt auf dem Tisch."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Common 9 Prepositions",
+      "an, auf, hinter, in, neben, über, unter, vor, zwischen",
+      "Both",
+      "varied"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Dynamic Movement into a Space (Akkusativ)",
+    "example": "Wir gehen heute Abend in das Kino.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Static Location inside a Space (Dativ)",
+    "example": "Wir sitzen gemütlich im Restaurant.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Placing an Object vs. Resting State",
+    "example": "Er stellt die Lampe neben das Bett.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Die Katze schläft unter dem Sofa.",
+    "ko": "",
+    "highlight": "unter dem Sofa"
+   },
+   {
+    "en": "Sie hängt das Bild an die Wand.",
+    "ko": "",
+    "highlight": "an die Wand"
+   },
+   {
+    "en": "Das Bild hängt an der Wand.",
+    "ko": "",
+    "highlight": "an der Wand"
+   },
+   {
+    "en": "Der Hund läuft hinter das Haus.",
+    "ko": "",
+    "highlight": "hinter das Haus"
+   },
+   {
+    "en": "Die Kinder spielen vor der Schule.",
+    "ko": "",
+    "highlight": "vor der Schule"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ich gehe in dem Park spazieren.",
+    "right": "Ich gehe in den Park.",
+    "note": "Moving into the park answers 'wohin?' and requires accusative 'in den Park'."
+   },
+   {
+    "wrong": "Das Glas steht auf den Tisch.",
+    "right": "Das Glas steht auf dem Tisch.",
+    "note": "'Stehen' indicates a stationary position ('wo?'), which demands the dative 'dem Tisch'."
+   },
+   {
+    "wrong": "Er legt das Handy auf dem Sofa.",
+    "right": "Er legt das Handy auf das Sofa.",
+    "note": "'Legen' is an active placement toward a destination ('wohin?'), requiring the accusative."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The picture is hanging on the wall (stationary): 'Das Bild hängt an ___ Wand.'",
+    "options": [
+     "die",
+     "der",
+     "den",
+     "dem"
+    ],
+    "answer": 1,
+    "explanation": "'Hängen' intransitive describes a location ('wo?'); feminine dative requires 'der'."
+   },
+   {
+    "question": "Put the glasses on the table: 'Stell bitte die Gläser auf ___ Tisch!'",
+    "options": [
+     "dem",
+     "den",
+     "des",
+     "der"
+    ],
+    "answer": 1,
+    "explanation": "'Stellen' describes directed movement across a boundary ('wohin?'), demanding masculine accusative 'den'."
+   },
+   {
+    "question": "The cat runs under the bed: 'Die Katze läuft unter ___ Bett.'",
+    "options": [
+     "das",
+     "dem",
+     "des",
+     "den"
+    ],
+    "answer": 0,
+    "explanation": "The movement goes toward a new destination under the bed ('wohin?'); neuter accusative is 'das'."
+   },
+   {
+    "question": "We are currently waiting in front of the station: 'Wir warten vor ___ Bahnhof.'",
+    "options": [
+     "den",
+     "der",
+     "dem",
+     "das"
+    ],
+    "answer": 2,
+    "explanation": "Waiting happens at a stationary place ('wo?'); masculine dative requires 'dem'."
+   }
+  ],
+  "tip": "Pair transitive action verbs with accusative (stellen/legen/setzen) and intransitive rest verbs with dative (stehen/liegen/sitzen)."
+ },
+ {
+  "id": "de-a2-perfekt-tense-haben-vs-sein",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#F59E0B",
+  "emoji": "⏳",
+  "title": "Conversational Past (Perfekt) with 'haben' vs. 'sein'",
+  "subtitle": "Construct past participles and choose the correct auxiliary verb",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Form the Perfekt with a conjugated form of 'haben' or 'sein' in position 2 and the past participle (Partizip II) at the end of the sentence.",
+  "structure": {
+   "headers": [
+    "Auxiliary Verb",
+    "Rule / Criterion",
+    "German Example",
+    "Past Participle"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "haben",
+      "Transitive verbs & static states",
+      "Ich habe eine Pizza gegessen.",
+      "gegessen (am Ende)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "sein",
+      "Movement (A to B) & change of state",
+      "Er ist nach Berlin gefahren.",
+      "gefahren (am Ende)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "sein",
+      "Verbs: sein, werden, bleiben",
+      "Wir sind gestern zu Hause geblieben.",
+      "geblieben (am Ende)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Everyday Conversational Past",
+    "example": "Was hast du am Wochenende gemacht?",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Verbs of Physical Relocation (sein)",
+    "example": "Sie sind früh zum Flughafen geflogen.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Change of State or Condition (sein)",
+    "example": "Das Kind ist sehr schnell eingeschlafen.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ich habe gestern meine Hausaufgaben gemacht.",
+    "ko": "",
+    "highlight": "habe"
+   },
+   {
+    "en": "Wir sind gestern um acht Uhr aufgestanden.",
+    "ko": "",
+    "highlight": "sind"
+   },
+   {
+    "en": "Er ist im Sommer nach Spanien gereist.",
+    "ko": "",
+    "highlight": "ist"
+   },
+   {
+    "en": "Sie hat ein neues Fahrrad gekauft.",
+    "ko": "",
+    "highlight": "hat"
+   },
+   {
+    "en": "Die Gäste sind lange auf der Party geblieben.",
+    "ko": "",
+    "highlight": "sind"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ich habe nach Hause gegangen.",
+    "right": "Ich bin nach Hause gegangen.",
+    "note": "'Gehen' denotes physical change of location and must take 'sein' as its auxiliary."
+   },
+   {
+    "wrong": "Er ist ein Buch gelesen.",
+    "right": "Er hat ein Buch gelesen.",
+    "note": "Transitive verbs with direct accusative objects take 'haben', not 'sein'."
+   },
+   {
+    "wrong": "Wir haben gestern zu Hause geblieben.",
+    "right": "Wir sind gestern zu Hause geblieben.",
+    "note": "Despite lack of movement, 'bleiben' (to stay) grammatically takes 'sein'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday we visited grandmother: 'Gestern ___ wir unsere Oma besucht.'",
+    "options": [
+     "sind",
+     "haben",
+     "waren",
+     "hat"
+    ],
+    "answer": 1,
+    "explanation": "'Besuchen' is a transitive verb with an accusative object, requiring the auxiliary 'haben'."
+   },
+   {
+    "question": "When did you arrive?: 'Wann ___ du am Bahnhof angekommen?'",
+    "options": [
+     "hast",
+     "bist",
+     "seid",
+     "hat"
+    ],
+    "answer": 1,
+    "explanation": "'Ankommen' signifies transition and change of location, requiring 'sein' ('du bist')."
+   },
+   {
+    "question": "The boy fell asleep quickly: 'Der Junge ___ sofort eingeschlafen.'",
+    "options": [
+     "hat",
+     "ist",
+     "wird",
+     "wurde"
+    ],
+    "answer": 1,
+    "explanation": "'Einschlafen' expresses a change of physical state (awake to asleep) and requires 'sein'."
+   },
+   {
+    "question": "What did you drink?: 'Was ___ ihr im Café getrunken?'",
+    "options": [
+     "habt",
+     "seid",
+     "haben",
+     "hat"
+    ],
+    "answer": 0,
+    "explanation": "'Trinken' is a standard transitive verb conjugated with 'ihr habt'."
+   }
+  ],
+  "tip": "Remember the 'Klammer' (bracket): auxiliary verb takes the second position, while the Partizip II locks in at the very end of the sentence."
+ },
+ {
+  "id": "de-a2-subordinating-conjunctions-verb-kick",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔄",
+  "title": "Subordinating Conjunctions and Verb-Final Word Order",
+  "subtitle": "Send the conjugated finite verb to the very end with subordinators",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Subordinating conjunctions like 'weil', 'dass', 'wenn', and 'ob' trigger subordinate clause order, kicking the conjugated verb to the final slot.",
+  "structure": {
+   "headers": [
+    "Conjunction",
+    "Meaning / Usage",
+    "Main Clause + Conjunction",
+    "Final Verb Position"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "weil",
+      "because (cause)",
+      "Ich lerne Deutsch, weil ich in Wien",
+      "wohne."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "dass",
+      "that (noun clause)",
+      "Er weiß, dass du morgen Geburtstag",
+      "hast."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "wenn",
+      "if / whenever (condition/time)",
+      "Ruf mich an, wenn du Zeit",
+      "hast."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ob",
+      "whether / if (indirect question)",
+      "Sie fragt, ob der Zug pünktlich",
+      "kommt."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Giving Reasons with 'weil'",
+    "example": "Er bleibt im Bett, weil er krank ist.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Reporting Thoughts or Facts with 'dass'",
+    "example": "Ich hoffe, dass das Wetter morgen schön wird.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Conditional Statements with 'wenn'",
+    "example": "Wir gehen spazieren, wenn die Sonne scheint.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Sie kommt nicht zur Schule, weil sie Fieber hat.",
+    "ko": "",
+    "highlight": "hat"
+   },
+   {
+    "en": "Wir wissen alle, dass Deutsch lernen Spaß macht.",
+    "ko": "",
+    "highlight": "macht"
+   },
+   {
+    "en": "Ich trinke Tee, wenn ich erkältet bin.",
+    "ko": "",
+    "highlight": "bin"
+   },
+   {
+    "en": "Können Sie mir sagen, ob der Bus schon abgefahren ist?",
+    "ko": "",
+    "highlight": "ist"
+   },
+   {
+    "en": "Er fragt, ob wir heute Abend kommen.",
+    "ko": "",
+    "highlight": "kommen"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ich bleibe zu Hause, weil ich bin krank.",
+    "right": "Ich bleibe zu Hause, weil ich krank bin.",
+    "note": "'Weil' is a subordinating conjunction and demands the conjugated verb at the very end."
+   },
+   {
+    "wrong": "Er sagt, dass er hat keine Zeit.",
+    "right": "Er sagt, dass er keine Zeit hat.",
+    "note": "'Dass' kicks the inflected verb ('hat') to the clause-final position."
+   },
+   {
+    "wrong": "Wenn du wirst kommen, sag Bescheid.",
+    "right": "Wenn du kommst, sag Bescheid.",
+    "note": "Maintain verb-final order in subordinate conditional clauses introduced by 'wenn'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He is learning German because he lives in Berlin: 'Er lernt Deutsch, weil er in Berlin ___.'",
+    "options": [
+     "wohnen",
+     "wohnt",
+     "wohne",
+     "gewohnt"
+    ],
+    "answer": 1,
+    "explanation": "The conjugated verb matching 'er' is 'wohnt' and must stand at the very end of the 'weil' clause."
+   },
+   {
+    "question": "I know that you are coming: 'Ich weiß, dass du morgen ___.'",
+    "options": [
+     "kommst",
+     "kommt",
+     "kommen",
+     "gekommen"
+    ],
+    "answer": 0,
+    "explanation": "'Dass' sends the conjugated finite verb for 'du' ('kommst') to the clause final spot."
+   },
+   {
+    "question": "Do you know if he is home?: 'Weißt du, ob Peter zu Hause ___?'",
+    "options": [
+     "hat",
+     "ist",
+     "wird",
+     "sein"
+    ],
+    "answer": 1,
+    "explanation": "Indirect questions with 'ob' place the conjugated copula 'ist' at the end of the clause."
+   },
+   {
+    "question": "If it rains, we stay home: 'Wenn es heute ___ , bleiben wir zu Hause.'",
+    "options": [
+     "regnen",
+     "geregnet",
+     "regnet",
+     "hat"
+    ],
+    "answer": 2,
+    "explanation": "In a 'wenn' clause, the inflected verb ('regnet') is kicked to the end of that clause."
+   }
+  ],
+  "tip": "When a subordinate clause with modal verbs or auxiliary verbs ends, the conjugated verb is always the very last word (e.g., '... weil er kommen will')."
+ },
+ {
+  "id": "de-a2-modal-verbs-prateritum",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#4F46E5",
+  "emoji": "🕰️",
+  "title": "Modal Verbs in the Simple Past (Präteritum)",
+  "subtitle": "Talking about past obligations, permissions, and abilities",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "In German, modal verbs almost always use their simple past forms (Präteritum) instead of compound Perfekt forms, dropping umlauts and adding -te endings.",
+  "structure": {
+   "headers": [
+    "Infinitive",
+    "Präteritum Form (ich / er, sie, es)",
+    "Example Pattern"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "müssen (must / have to)",
+      "musste",
+      "Ich musste gestern lange arbeiten."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "können (can / be able to)",
+      "konnte",
+      "Er konnte den Schlüssel nicht finden."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "wollen (to want to)",
+      "wollte",
+      "Wir wollten ins Kino gehen."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "dürfen (may / to be allowed to)",
+      "durfte",
+      "Sie durfte als Kind kein Eis essen."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Past Obligation / Necessity",
+    "example": "Gestern musste ich zum Arzt gehen.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Past Ability / Possibility",
+    "example": "Wir konnten das Problem schnell lösen.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Past Permission or Prohibition",
+    "example": "Im Museum durfte man keine Fotos machen.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ich musste gestern sehr früh aufstehen.",
+    "ko": "",
+    "highlight": "musste"
+   },
+   {
+    "en": "Mein Bruder konnte nicht zur Party kommen.",
+    "ko": "",
+    "highlight": "konnte"
+   },
+   {
+    "en": "Wir wollten eigentlich nach Spanien reisen.",
+    "ko": "",
+    "highlight": "wollte"
+   },
+   {
+    "en": "Die Kinder durften gestern bis spät draußen spielen.",
+    "ko": "",
+    "highlight": "durften"
+   },
+   {
+    "en": "Was solltest du für die Hausaufgabe machen?",
+    "ko": "",
+    "highlight": "solltest"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ich habe gestern arbeiten gemusst.",
+    "right": "Ich musste gestern arbeiten.",
+    "note": "While Perfekt with modal verbs is grammatically possible, native speakers overwhelmingly use the Präteritum forms in everyday speech."
+   },
+   {
+    "wrong": "Er müsste gestern nach Hause gehen.",
+    "right": "Er musste gestern nach Hause gehen.",
+    "note": "Do not keep the umlaut! 'Müsste' is Subjunctive II (would have to), while past tense 'musste' drops the umlaut."
+   },
+   {
+    "wrong": "Er konntet das Auto reparieren.",
+    "right": "Er konnte das Auto reparieren.",
+    "note": "Remember that the 1st person (ich) and 3rd person singular (er/sie/es) share the identical form without a -t ending."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday I had to stay at home because of the rain: 'Gestern ___ ich zu Hause bleiben.'",
+    "options": [
+     "musste",
+     "müsste",
+     "habe gemusst",
+     "muss"
+    ],
+    "answer": 0,
+    "explanation": "'Müssen' drops its umlaut and takes the 1st person singular ending '-te': 'ich musste'."
+   },
+   {
+    "question": "We wanted to buy the house: 'Wir ___ das Haus kaufen.'",
+    "options": [
+     "wollten",
+     "wolltet",
+     "haben gewollt",
+     "willten"
+    ],
+    "answer": 0,
+    "explanation": "'Wir wollten' is the correct 1st person plural past tense form of 'wollen'."
+   },
+   {
+    "question": "Could you (formal) sleep well last night?: '___ Sie gestern Nacht gut schlafen?'",
+    "options": [
+     "Können",
+     "Konntest",
+     "Konnten",
+     "Könnten"
+    ],
+    "answer": 2,
+    "explanation": "'Konnten Sie' is the correct formal Präteritum question form for 'können'."
+   },
+   {
+    "question": "The children were not allowed to watch TV: 'Die Kinder ___ nicht fernsehen.'",
+    "options": [
+     "dürften",
+     "durften",
+     "durfte",
+     "gedurft"
+    ],
+    "answer": 1,
+    "explanation": "The subject 'die Kinder' is plural, requiring 'durften' without an umlaut."
+   }
+  ],
+  "tip": "All modal verbs completely drop their umlauts (ä, ö, ü) when conjugated in the Präteritum: müssen -> musste, können -> konnte, dürfen -> durfte!"
+ },
+ {
+  "id": "de-a2-adjective-declension-basics",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🎨",
+  "title": "Adjective Endings with Definite and Indefinite Articles",
+  "subtitle": "Weak and mixed adjective inflection suffixes",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Attributive adjectives preceding a noun must change their endings depending on the preceding article, gender, number, and grammatical case.",
+  "structure": {
+   "headers": [
+    "Case / Gender",
+    "With Definite Article (der/die/das)",
+    "With Indefinite Article (ein/eine)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Nominative Masculine",
+      "der alte Mann",
+      "ein alter Mann"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Accusative Masculine",
+      "den alten Mann",
+      "einen alten Mann"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Nominative / Accusative Feminine",
+      "die schöne Stadt",
+      "eine schöne Stadt"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Nominative / Accusative Neuter",
+      "das kleine Kind",
+      "ein kleines Kind"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "All Dative forms",
+      "dem alten Mann / der alten Frau",
+      "einem alten Mann / einer alten Frau"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Nominative Subject Description",
+    "example": "Der neue Computer funktioniert einwandfrei.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Accusative Direct Object",
+    "example": "Ich trinke jeden Morgen einen heißen Kaffee.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Dative Indirect Object or Location",
+    "example": "Wir wohnen in einem kleinen Haus am See.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Der nette Nachbar grüßt uns jeden Morgen.",
+    "ko": "",
+    "highlight": "nette"
+   },
+   {
+    "en": "Sie kauft einen roten Pullover im Kaufhaus.",
+    "ko": "",
+    "highlight": "roten"
+   },
+   {
+    "en": "Ein kleiner Hund läuft fröhlich durch den Park.",
+    "ko": "",
+    "highlight": "kleiner"
+   },
+   {
+    "en": "Ich helfe der älteren Dame beim Einkaufen.",
+    "ko": "",
+    "highlight": "älteren"
+   },
+   {
+    "en": "Wir suchen ein modernes Apartment im Zentrum.",
+    "ko": "",
+    "highlight": "modernes"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ich habe ein neuer Computer.",
+    "right": "Ich habe einen neuen Computer.",
+    "note": "Computer is masculine (der) and serves as an accusative direct object here, requiring 'einen neuen'."
+   },
+   {
+    "wrong": "Das ist ein schönes Haus und der schönes Garten.",
+    "right": "Das ist ein schönes Haus und der schöne Garten.",
+    "note": "After the definite article 'der' in the nominative masculine, the adjective ending is weak ('-e'), not '-es'."
+   },
+   {
+    "wrong": "Er wohnt mit seiner alt Mutter.",
+    "right": "Er wohnt mit seiner alten Mutter.",
+    "note": "Adjectives after dative possessive pronouns always take the '-en' ending: 'seiner alten Mutter'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I see a big dog in the garden: 'Ich sehe einen ___ Hund im Garten.'",
+    "options": [
+     "großer",
+     "großen",
+     "großes",
+     "große"
+    ],
+    "answer": 1,
+    "explanation": "Masculine accusative with an indefinite article ('einen') takes the '-en' ending: 'großen'."
+   },
+   {
+    "question": "The blue car belongs to my brother: 'Das ___ Auto gehört meinem Bruder.'",
+    "options": [
+     "blaues",
+     "blaue",
+     "blauen",
+     "blauer"
+    ],
+    "answer": 1,
+    "explanation": "Neuter nominative after the definite article 'das' takes the weak ending '-e': 'das blaue Auto'."
+   },
+   {
+    "question": "She lives in an old apartment: 'Sie wohnt in einer ___ Wohnung.'",
+    "options": [
+     "alte",
+     "altes",
+     "alten",
+     "alter"
+    ],
+    "answer": 2,
+    "explanation": "Dative feminine after 'einer' takes the universal dative adjective ending '-en': 'einer alten'."
+   },
+   {
+    "question": "A friendly waiter brings the food: 'Ein ___ Kellner bringt das Essen.'",
+    "options": [
+     "freundlicher",
+     "freundliche",
+     "freundliches",
+     "freundlichen"
+    ],
+    "answer": 0,
+    "explanation": "Masculine nominative after 'ein' must show the masculine gender signal '-er': 'ein freundlicher Kellner'."
+   }
+  ],
+  "tip": "Whenever you encounter any Dative or Plural noun with an article, the adjective ending is almost always guaranteed to be '-en'!"
+ },
+ {
+  "id": "de-b1-genitive-case-and-prepositions",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "📜",
+  "title": "The Genitive Case and Genitive Prepositions",
+  "subtitle": "Expressing possession and relationships with prepositions",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "The genitive case modifies nouns to indicate possession or origin, and masculine/neuter singular nouns add an -s or -es suffix alongside articles des/eines.",
+  "structure": {
+   "headers": [
+    "Gender / Number",
+    "Definite Article & Noun",
+    "Indefinite / Possessive"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine",
+      "des Vaters / des Mannes",
+      "eines / meines Vaters"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter",
+      "des Kindes / des Autos",
+      "eines / meines Kindes"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine",
+      "der Mutter / der Stadt",
+      "einer / meiner Mutter"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural",
+      "der Kinder / der Freunde",
+      "meiner Kinder / unserer Freunde"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Possession or Belonging",
+    "example": "Das ist das Auto meines Bruders.",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Concession (trotz) or Cause (wegen)",
+    "example": "Trotz des schlechten Wetters gingen wir spazieren.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Temporal Duration (während)",
+    "example": "Während der Sommerferien lerne ich Deutsch.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Die Farbe des neuen Autos gefällt mir sehr gut.",
+    "ko": "",
+    "highlight": "des neuen Autos"
+   },
+   {
+    "en": "Wegen des starken Regens fiel das Konzert leider aus.",
+    "ko": "",
+    "highlight": "Wegen des starken Regens"
+   },
+   {
+    "en": "Trotz der großen Müdigkeit beendete sie den Bericht.",
+    "ko": "",
+    "highlight": "Trotz der großen Müdigkeit"
+   },
+   {
+    "en": "Während des langen Vortrags schliefen einige Gäste ein.",
+    "ko": "",
+    "highlight": "Während des langen Vortrags"
+   },
+   {
+    "en": "Das Haus meiner Großeltern liegt direkt am Waldrand.",
+    "ko": "",
+    "highlight": "meiner Großeltern"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Wegen dem Regen bleiben wir drinnen.",
+    "right": "Wegen des Regens bleiben wir drinnen.",
+    "note": "Although dative with 'wegen' is heard colloquially, standard written German requires the genitive: 'des Regens'."
+   },
+   {
+    "wrong": "Das ist das Fahrrad des Vater.",
+    "right": "Das ist das Fahrrad des Vaters.",
+    "note": "Masculine and neuter singular nouns must take the genitive ending '-s' or '-es' (e.g., 'des Vaters', 'des Hauses')."
+   },
+   {
+    "wrong": "Während der Konzert sprachen die Leute.",
+    "right": "Während des Konzerts sprachen die Leute.",
+    "note": "'Konzert' is neuter (das Konzert), so the genitive requires 'des Konzerts', not feminine 'der'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Because of the delay, we missed our train: 'Wegen ___ Verspätung haben wir den Zug verpasst.'",
+    "options": [
+     "der",
+     "des",
+     "dem",
+     "den"
+    ],
+    "answer": 0,
+    "explanation": "'Verspätung' is feminine (die), so the genitive article is 'der'."
+   },
+   {
+    "question": "The roof of the old house was damaged: 'Das Dach des alten ___ wurde beschädigt.'",
+    "options": [
+     "Hause",
+     "Haus",
+     "Hauses",
+     "Häusers"
+    ],
+    "answer": 2,
+    "explanation": "Monosyllabic nouns ending in sibilants like 's' take the '-es' ending in the genitive neuter: 'des Hauses'."
+   },
+   {
+    "question": "During the examination you may not use your phone: 'Während ___ Prüfung darf man kein Handy benutzen.'",
+    "options": [
+     "die",
+     "dem",
+     "einer",
+     "der"
+    ],
+    "answer": 3,
+    "explanation": "'Prüfung' is feminine, so the genitive requires 'der Prüfung'."
+   },
+   {
+    "question": "Despite the storm, the ship arrived on time: 'Trotz des ___ kam das Schiff pünktlich an.'",
+    "options": [
+     "Sturmes",
+     "Sturm",
+     "Sturms",
+     "Stürme"
+    ],
+    "answer": 0,
+    "explanation": "Masculine 'der Sturm' takes the genitive form 'des Sturmes' (or 'des Sturms')."
+   }
+  ],
+  "tip": "Short, single-syllable nouns ending in -s, -ß, -z, -sch, or -t/-d (like Tag, Kind, Haus) usually add '-es' in the genitive singular (des Tages, des Kindes, des Hauses)."
+ },
+ {
+  "id": "de-b1-pronominal-adverbs-da-and-wo-compounds",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔗",
+  "title": "Pronominal Adverbs (Da- and Wo-Compounds)",
+  "subtitle": "Combining 'da(r)-' and 'wo(r)-' with prepositions",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use da-compounds (e.g., darüber, damit) to replace inanimate prepositional objects and wo-compounds (e.g., worüber, womit) to ask questions about things.",
+  "structure": {
+   "headers": [
+    "Preposition",
+    "Question Form (Things)",
+    "Statement / Pronoun Form",
+    "With Persons (Contrasted)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "für (for)",
+      "Wofür? (For what?)",
+      "Dafür (For that)",
+      "Für wen? (For whom?)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "an (at / on)",
+      "Woran? (At/about what?)",
+      "Daran (At/about that)",
+      "An wen? / An wem?"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "über (about)",
+      "Worüber? (About what?)",
+      "Darüber (About that)",
+      "Über wen? (About whom?)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "mit (with)",
+      "Womit? (With what?)",
+      "Damit (With that)",
+      "Mit wem? (With whom?)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Referring to an Inanimate Concept",
+    "example": "Ich habe ein Problem und denke die ganze Zeit darüber nach.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Asking Questions About Things",
+    "example": "Worauf freust du dich am meisten?",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Introducing Infinitive/Dass-Clauses",
+    "example": "Wir warten darauf, dass der Bus endlich kommt.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Woran denkst du gerade so intensiv?",
+    "ko": "",
+    "highlight": "Woran"
+   },
+   {
+    "en": "Ich erinnere mich gerne an unsere Reise; ich denke oft daran.",
+    "ko": "",
+    "highlight": "daran"
+   },
+   {
+    "en": "Worüber habt ihr gestern so laut gelacht?",
+    "ko": "",
+    "highlight": "Worüber"
+   },
+   {
+    "en": "Womit kann ich dieses Glas am besten öffnen?",
+    "ko": "",
+    "highlight": "Womit"
+   },
+   {
+    "en": "Er hat mir geholfen, und ich danke ihm dafür.",
+    "ko": "",
+    "highlight": "dafür"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Über was sprecht ihr gerade?",
+    "right": "Worüber sprecht ihr gerade?",
+    "note": "In standard German, combine 'wo(r)-' with the preposition ('worüber') rather than using 'über was'."
+   },
+   {
+    "wrong": "Ich warte auf ihn -> Ich warte darauf.",
+    "right": "Ich warte auf ihn.",
+    "note": "Never use 'da-' compounds for human beings! Use 'Preposition + Personal Pronoun' (auf ihn / mit ihr)."
+   },
+   {
+    "wrong": "Ich denke daan jeden Tag.",
+    "right": "Ich denke daran jeden Tag.",
+    "note": "If the preposition begins with a vowel (an, auf, über), insert an '-r-' between 'da/wo' and the preposition (daran, worüber)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What are you waiting for (inanimate)?: '___ wartest du?'",
+    "options": [
+     "Auf was",
+     "Worauf",
+     "Wofür",
+     "Warum"
+    ],
+    "answer": 1,
+    "explanation": "The verb 'warten auf' requires 'worauf' for things, inserting '-r-' before the vowel 'a'."
+   },
+   {
+    "question": "Are you interested in art? Yes, I am interested in it: 'Interessierst du dich für Kunst? Ja, ich interessiere mich ___.'",
+    "options": [
+     "für das",
+     "daran",
+     "dafür",
+     "darüber"
+    ],
+    "answer": 2,
+    "explanation": "'Sich interessieren für' pairs with 'dafür' when referring to inanimate things like 'Kunst'."
+   },
+   {
+    "question": "What are you writing with?: '___ schreibst du?'",
+    "options": [
+     "Womit",
+     "Mit was",
+     "Wovon",
+     "Worin"
+    ],
+    "answer": 0,
+    "explanation": "'Schreiben mit' forms 'Womit' when asking about an instrument or tool."
+   },
+   {
+    "question": "Who are you waiting for?: '___ wartest du?'",
+    "options": [
+     "Worauf",
+     "Auf wen",
+     "Drauf",
+     "Für wen"
+    ],
+    "answer": 1,
+    "explanation": "For people, use the preposition followed by the accusative interrogative pronoun 'Auf wen?', not a wo-compound."
+   }
+  ],
+  "tip": "Always insert an '-r-' (da-r-an, wo-r-über, da-r-auf) whenever the preposition starts with a vowel to make pronunciation smooth and effortless!"
+ },
+ {
+  "id": "de-b1-process-passive-vorgangspassiv",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#EA580C",
+  "emoji": "⚙️",
+  "title": "The Process Passive Voice (Vorgangspassiv)",
+  "subtitle": "Focusing on the action using 'werden + Partizip II'",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "The process passive describes an ongoing action or process and is constructed with a conjugated form of 'werden' and the past participle (Partizip II) at the end of the clause.",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Passive Auxiliary (werden)",
+    "Past Participle (Partizip II)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Präsens (Present)",
+      "Das Haus wird ...",
+      "... gebaut."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Präteritum (Simple Past)",
+      "Das Haus wurde ...",
+      "... gebaut."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Perfekt (Present Perfect)",
+      "Das Haus ist ...",
+      "... gebaut worden."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Modal Verb Present",
+      "Das Haus muss ...",
+      "... gebaut werden."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Action-Focused Communication",
+    "example": "Hier wird zurzeit eine neue Schule gebaut.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Specifying the Agent (von + Dativ)",
+    "example": "Der Brief wird von dem Postboten gebracht.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Official Rules and Processes",
+    "example": "Rechnungen müssen innerhalb von zwei Wochen bezahlt werden.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Das alte Auto wird morgen in der Werkstatt repariert.",
+    "ko": "",
+    "highlight": "wird morgen in der Werkstatt repariert"
+   },
+   {
+    "en": "Der Dieb wurde gestern von der Polizei gefasst.",
+    "ko": "",
+    "highlight": "wurde gestern von der Polizei gefasst"
+   },
+   {
+    "en": "Das neue Museum ist letztes Jahr eröffnet worden.",
+    "ko": "",
+    "highlight": "ist letztes Jahr eröffnet worden"
+   },
+   {
+    "en": "Alle Fenster müssen vor dem Sturm geschlossen werden.",
+    "ko": "",
+    "highlight": "geschlossen werden"
+   },
+   {
+    "en": "In Deutschland wird viel Brot gegessen.",
+    "ko": "",
+    "highlight": "wird viel Brot gegessen"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Das Haus ist von einem Architekten gebaut.",
+    "right": "Das Haus wurde von einem Architekten gebaut.",
+    "note": "'Ist gebaut' is state passive (Zustandspassiv), which focuses on the completed result rather than the action itself."
+   },
+   {
+    "wrong": "Der Kuchen wird durch meiner Mutter gebacken.",
+    "right": "Der Kuchen wird von meiner Mutter gebacken.",
+    "note": "Use 'von + Dativ' for the active personal agent/doer of the action, not 'durch'."
+   },
+   {
+    "wrong": "Das Buch ist gelesen geworden.",
+    "right": "Das Buch ist gelesen worden.",
+    "note": "In passive Perfekt, the past participle of 'werden' drops the 'ge-' prefix and becomes 'worden'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The computer is being repaired today: 'Der Computer ___ heute repariert.'",
+    "options": [
+     "ist",
+     "wird",
+     "wurde",
+     "worden"
+    ],
+    "answer": 1,
+    "explanation": "The present tense process passive uses 3rd person singular 'wird' + Partizip II ('repariert')."
+   },
+   {
+    "question": "The letter was written by Anna: 'Der Brief wurde ___ Anna geschrieben.'",
+    "options": [
+     "mit",
+     "aus",
+     "von",
+     "durch"
+    ],
+    "answer": 2,
+    "explanation": "The personal agent doing the action in a passive sentence is marked by the preposition 'von' (+ Dative)."
+   },
+   {
+    "question": "The package has already been delivered: 'Das Paket ist schon geliefert ___.'",
+    "options": [
+     "geworden",
+     "worden",
+     "werden",
+     "wurde"
+    ],
+    "answer": 1,
+    "explanation": "In the passive Perfekt construction (sein + Partizip II + worden), 'worden' is used without the 'ge-' prefix."
+   },
+   {
+    "question": "The rules must be observed: 'Die Regeln müssen beachtet ___.'",
+    "options": [
+     "worden",
+     "wird",
+     "wurde",
+     "werden"
+    ],
+    "answer": 3,
+    "explanation": "With modal verbs in the passive, the infinitive 'werden' stands at the very end of the clause."
+   }
+  ],
+  "tip": "Whenever you formulate a passive sentence in the Perfekt, always end with 'worden' (never 'geworden')!"
+ },
+ {
+  "id": "de-b1-infinitive-clauses-um-zu-and-zu-infinitives",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎯",
+  "title": "Infinitive Clauses with 'zu' and 'um... zu'",
+  "subtitle": "Master subordinate infinitival constructions and express clear intentions",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Infinitive clauses lack an independent subject and place 'zu' directly before the final infinitive, or infixed between prefix and stem in separable verbs.",
+  "structure": {
+   "headers": [
+    "Structure Type",
+    "German Pattern",
+    "English Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Standard infinitive",
+      "Er hofft, die Prüfung zu bestehen.",
+      "Complement of verbs expressing hope, intention, or belief"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Separable verb",
+      "Ich plane, dich morgen anzurufen.",
+      "Infix -zu- wedges between the prefix and verbal stem"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Purpose clause (um... zu)",
+      "Sie lernt Deutsch, um in Berlin zu studieren.",
+      "Indicates intention or goal (in order to)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adjective + sein",
+      "Es ist schwierig, alles rechtzeitig zu schaffen.",
+      "Impersonal evaluations with an adjective base"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Expressing purpose (in order to)",
+    "example": "Er spart Geld, um ein neues Auto zu kaufen.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Verbal complements (intentions)",
+    "example": "Wir beabsichtigen, nächstes Jahr nach Wien zu ziehen.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Impersonal evaluations",
+    "example": "Es ist verboten, im Gebäude zu rauchen.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ich habe keine Zeit, heute Abend ins Kino zu gehen.",
+    "ko": "",
+    "highlight": "zu gehen"
+   },
+   {
+    "en": "Er trainiert fleißig, um den Marathon zu gewinnen.",
+    "ko": "",
+    "highlight": "um den Marathon zu gewinnen"
+   },
+   {
+    "en": "Vergiss bitte nicht, das Fenster zuzumachen.",
+    "ko": "",
+    "highlight": "zuzumachen"
+   },
+   {
+    "en": "Es freut mich sehr, Sie persönlich kennenzulernen.",
+    "ko": "",
+    "highlight": "kennenzulernen"
+   },
+   {
+    "en": "Sie hat die Absicht, ihr Studium bald abzuschließen.",
+    "ko": "",
+    "highlight": "abzuschließen"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Er lernt Deutsch für in Deutschland arbeiten.",
+    "right": "Er lernt Deutsch, um in Deutschland zu arbeiten.",
+    "note": "German uses 'um... zu + infinitive' for goals, never the preposition 'für' with an infinitive."
+   },
+   {
+    "wrong": "Ich habe vergessen, die Tür zu aufmachen.",
+    "right": "Ich habe vergessen, die Tür aufzumachen.",
+    "note": "With separable verbs, 'zu' must be placed between the prefix and the stem as a single word."
+   },
+   {
+    "wrong": "Wir hoffen, dass wir die Stelle zu bekommen.",
+    "right": "Wir hoffen, die Stelle zu bekommen.",
+    "note": "Do not combine a finite conjunction like 'dass' with an infinitive construction."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Er geht in den Supermarkt, ___ frisches Brot ___ kaufen.",
+    "options": [
+     "für / zu",
+     "um / zu",
+     "damit / zu",
+     "ohne / zu"
+    ],
+    "answer": 1,
+    "explanation": "'um... zu' expresses purpose ('in order to') when the subject of both clauses is identical."
+   },
+   {
+    "question": "Vergiss nicht, deine Großmutter ___.",
+    "options": [
+     "anrufen",
+     "anzurufen",
+     "zu anrufen",
+     "angerufen"
+    ],
+    "answer": 1,
+    "explanation": "Separable verbs insert '-zu-' between the prefix 'an-' and the stem 'rufen'."
+   },
+   {
+    "question": "Es ist nicht leicht, eine bezahlbare Wohnung ___.",
+    "options": [
+     "zu finden",
+     "um finden",
+     "finden zu",
+     "gefunden"
+    ],
+    "answer": 0,
+    "explanation": "Standard infinitive complements place 'zu' immediately before the final infinitive."
+   },
+   {
+    "question": "Sie geht zur Bibliothek, ___ in Ruhe lernen ___ können.",
+    "options": [
+     "anstatt / zu",
+     "damit / zu",
+     "ohne / zu",
+     "um / zu"
+    ],
+    "answer": 3,
+    "explanation": "'um... zu können' conveys purpose with capability ('in order to be able to')."
+   }
+  ],
+  "tip": "Only use 'um... zu' when the implied subject of the infinitive clause is identical to the subject of the main clause; if subjects differ, use 'damit' with a conjugated verb."
+ },
+ {
+  "id": "de-b1-subjunctive-ii-konjunktiv-ii-unreal-wishes",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#8B5CF6",
+  "emoji": "💭",
+  "title": "Subjunctive II (Konjunktiv II)",
+  "subtitle": "Express hypothetical conditions, unreal wishes, and polite requests",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use 'würde + infinitive' for most verbs, but use the dedicated synthetic forms 'wäre', 'hätte', and modal preterite stems with umlauts for essential verbs.",
+  "structure": {
+   "headers": [
+    "Verb Type",
+    "Base / Auxiliary",
+    "Example in Konjunktiv II"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "sein",
+      "wäre-",
+      "Wenn ich reich wäre, würde ich reisen."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "haben",
+      "hätte-",
+      "Wenn wir mehr Zeit hätten, kämen wir mit."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "General verbs",
+      "würde + Infinitiv",
+      "Ich würde gerne ein neues Projekt beginnen."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Modal verbs",
+      "könnte / müsste / dürfte",
+      "Könnten Sie mir bitte kurz helfen?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Polite requests",
+    "example": "Könnten Sie das bitte noch einmal wiederholen?",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Unreal conditions (counterfactuals)",
+    "example": "Wenn ich der Chef wäre, würde ich die Arbeitszeiten verkürzen.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Hypothetical wishes",
+    "example": "Ich hätte jetzt gern einen heißen Kaffee.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Wenn ich mehr Geld hätte, würde ich eine Weltreise machen.",
+    "ko": "",
+    "highlight": "hätte"
+   },
+   {
+    "en": "An deiner Stelle würde ich sofort den Arzt anrufen.",
+    "ko": "",
+    "highlight": "würde ich sofort den Arzt anrufen"
+   },
+   {
+    "en": "Es wäre fantastisch, wenn das Wetter morgen schön bliebe.",
+    "ko": "",
+    "highlight": "wäre fantastisch"
+   },
+   {
+    "en": "Könntest du mir bitte das Salz reichen?",
+    "ko": "",
+    "highlight": "Könntest du"
+   },
+   {
+    "en": "Wir würden gerne einen Tisch für zwei Personen reservieren.",
+    "ko": "",
+    "highlight": "würden gerne einen Tisch für zwei Personen reservieren"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Wenn ich reich sein würde, würde ich ein Schloss kaufen.",
+    "right": "Wenn ich reich wäre, würde ich ein Schloss kaufen.",
+    "note": "Always prefer the synthetic form 'wäre' over the clumsy 'sein würde'."
+   },
+   {
+    "wrong": "Ich wurde gern ein Glas Wasser trinken.",
+    "right": "Ich würde gern ein Glas Wasser trinken.",
+    "note": "'wurde' is simple past (indicative) of werden; Konjunktiv II requires an umlaut: 'würde'."
+   },
+   {
+    "wrong": "Wenn ich Zeit habe, würde ich dir helfen.",
+    "right": "Wenn ich Zeit hätte, würde ich dir helfen.",
+    "note": "Counterfactual conditionals require matching hypothetical moods in both clauses."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Wenn ich du ___, würde ich dieses teure Angebot ablehnen.",
+    "options": [
+     "bin",
+     "wäre",
+     "würde sein",
+     "sei"
+    ],
+    "answer": 1,
+    "explanation": "'wäre' is the standard subjunctive II form of 'sein' for unreal hypothetical premises."
+   },
+   {
+    "question": "___ Sie mir bitte das Dokument per E-Mail schicken?",
+    "options": [
+     "Konnten",
+     "Dürfen",
+     "Könnten",
+     "Wollen"
+    ],
+    "answer": 2,
+    "explanation": "'Könnten' softens the request into polite, formal phrasing."
+   },
+   {
+    "question": "Wir ___ jetzt gerne nach Hause gehen, wenn es möglich ist.",
+    "options": [
+     "werden",
+     "wurden",
+     "worden",
+     "würden"
+    ],
+    "answer": 3,
+    "explanation": "The auxiliary 'würden' combined with an infinitive expresses present polite preference."
+   },
+   {
+    "question": "Wenn er bloß mehr Geduld ___!",
+    "options": [
+     "hätte",
+     "hatte",
+     "habe",
+     "haben würde"
+    ],
+    "answer": 0,
+    "explanation": "'hätte' is the subjunctive II form of 'haben' expressing an unreal wish."
+   }
+  ],
+  "tip": "Avoid 'doppel-würde' (using 'würde' in both the 'wenn'-clause and the result clause); place 'wäre' or 'hätte' in the condition and 'würde' in the result."
+ },
+ {
+  "id": "de-b2-extended-participial-attributes",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#475569",
+  "emoji": "📑",
+  "title": "Extended Participial Attributes",
+  "subtitle": "Decode and construct sophisticated pre-nominal participial modifiers",
+  "color": "#334155",
+  "bg": "#F8FAFC",
+  "keyPoint": "An extended participial attribute wraps full prepositional or adverbial complements between an article and a participle acting as an adjective before a noun.",
+  "structure": {
+   "headers": [
+    "Participle Base",
+    "Grammar Core",
+    "Extended Pre-nominal Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Partizip I (Active/Simultaneous)",
+      "verb + d + adj. ending",
+      "die stetig steigenden Energiekosten"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Partizip II (Passive/Completed)",
+      "participle + adj. ending",
+      "das vor zwei Jahren verfasste Dokument"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Gerundive (Partizip I + zu)",
+      "zu + Partizip I + ending",
+      "die unverzüglich zu erledigenden Aufgaben"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#475569",
+    "label": "Compressing relative clauses",
+    "example": "Die von Experten überprüften Daten sind nun öffentlich zugänglich.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Simultaneous active processes",
+    "example": "Alle im Saal anwesenden Personen müssen sich registrieren.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Passive necessity (Gerundivum)",
+    "example": "Der bis Freitag einzureichende Bericht erfordert gründliche Recherche.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Die gestern vom Parlament beschlossene Reform tritt nächsten Monat in Kraft.",
+    "ko": "",
+    "highlight": "vom Parlament beschlossene"
+   },
+   {
+    "en": "Wir beobachten eine ständig wachsende Zahl an neuen Bewerbern.",
+    "ko": "",
+    "highlight": "ständig wachsende"
+   },
+   {
+    "en": "Das im siebzehnten Jahrhundert erbaute Schloss zieht viele Touristen an.",
+    "ko": "",
+    "highlight": "im siebzehnten Jahrhundert erbaute"
+   },
+   {
+    "en": "Die nicht zu unterschätzende Gefahr verlangt sofortige Schutzmaßnahmen.",
+    "ko": "",
+    "highlight": "nicht zu unterschätzende"
+   },
+   {
+    "en": "Alle an dem Projekt beteiligten Wissenschaftler trafen sich in Bonn.",
+    "ko": "",
+    "highlight": "an dem Projekt beteiligten"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Das Dokument geschrieben von dem Anwalt ist wichtig.",
+    "right": "Das von dem Anwalt geschriebene Dokument ist wichtig.",
+    "note": "In German, extended participial modifiers must precede the noun, wedged after the article, rather than follow it directly as in English."
+   },
+   {
+    "wrong": "Die schnell fahrende Auto bog nach links ab.",
+    "right": "Das schnell fahrende Auto bog nach links ab.",
+    "note": "The participle functions as an adjective and must take standard adjective declension agreeing in gender, number, and case with the noun."
+   },
+   {
+    "wrong": "Die zu lösende Probleme sind komplex.",
+    "right": "Die zu lösenden Probleme sind komplex.",
+    "note": "Plural definite nominative/accusative adjectives must take weak inflection (-en)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Find the correct phrasing for 'the car repaired yesterday': Das gestern ___ Auto steht vor der Tür.",
+    "options": [
+     "reparierte",
+     "reparierende",
+     "reparierenden",
+     "repariert"
+    ],
+    "answer": 0,
+    "explanation": "Neuter singular nominative with a definite article takes weak ending '-e' for Partizip II ('das reparierte Auto')."
+   },
+   {
+    "question": "Translate function: 'die von allen Mitarbeitern akzeptierte Regel' represents which relative clause?",
+    "options": [
+     "Die Regel, die alle Mitarbeiter akzeptiert.",
+     "Die Regel, die von allen Mitarbeitern akzeptiert wurde.",
+     "Die Regel, die alle Mitarbeiter akzeptieren wird.",
+     "Die Regel, welche Mitarbeiter akzeptieren muss."
+    ],
+    "answer": 1,
+    "explanation": "Partizip II denotes passive completion: 'The rule that was accepted by all employees'."
+   },
+   {
+    "question": "Der ___ Kuchen duftet im ganzen Haus.",
+    "options": [
+     "im Ofen gebacken",
+     "im Ofen backend",
+     "im Ofen backende",
+     "im Ofen gebackene"
+    ],
+    "answer": 2,
+    "explanation": "Partizip I ('backende') indicates a currently ongoing, active process in the masculine nominative with definite article."
+   },
+   {
+    "question": "Die unverzüglich ___ Maßnahmen verhinderten Schlimmeres.",
+    "options": [
+     "einzuleitende",
+     "eingeleitete",
+     "einzuleitenden",
+     "einleitenden"
+    ],
+    "answer": 2,
+    "explanation": "A gerundive ('zu + Partizip I') in the plural nominative with definite article takes the ending '-en'."
+   }
+  ],
+  "tip": "To decipher an extended attribute, find the article and jump immediately to the head noun to identify the subject, then read the bracketed contents backwards from the participle."
+ },
+ {
+  "id": "de-b2-reported-speech-konjunktiv-i",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#475569",
+  "emoji": "📰",
+  "title": "Reported Speech with Konjunktiv I",
+  "subtitle": "Relate statements neutrally in journalistic and formal communication",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Konjunktiv I is formed by adding special personal endings (-e, -est, -e, -en, -et, -en) to the present verbal stem to convey neutral reporting without endorsing truth.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Stem + Ending",
+    "Example Form (haben / sein / sagen)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "er / sie / es (3rd Sing.)",
+      "stem + -e",
+      "er habe / er sei / er sage"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ich (1st Sing.)",
+      "matches Indikativ -> replace with Konj. II",
+      "ich hätte / ich würde sagen"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "wir / sie (Plural)",
+      "matches Indikativ -> replace with Konj. II",
+      "sie hätten / sie würden sagen"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Special: sein",
+      "irregular stem (sei-)",
+      "er sei, sie seien, ihr seiet"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Press and news reporting",
+    "example": "Der Minister erklärte, die Regierung plane keine Steuererhöhung.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Scientific and academic quotation",
+    "example": "Der Forscher betont, die Ergebnisse seien eindeutig.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Official court and legal statements",
+    "example": "Der Zeuge behauptete, er habe den Verdächtigen nie zuvor gesehen.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Die Kanzlerin teilte mit, sie wolle die Reform so schnell wie möglich umsetzen.",
+    "ko": "",
+    "highlight": "sie wolle"
+   },
+   {
+    "en": "Laut dem Wetterbericht gebe es am Wochenende heftige Unwetter.",
+    "ko": "",
+    "highlight": "gebe es"
+   },
+   {
+    "en": "Er versicherte uns, er habe alle Rechnungen pünktlich bezahlt.",
+    "ko": "",
+    "highlight": "er habe"
+   },
+   {
+    "en": "Die Sprecherin sagte, die Verhandlungen seien auf einem guten Weg.",
+    "ko": "",
+    "highlight": "seien auf einem guten Weg"
+   },
+   {
+    "en": "Der Angeklagte beteuerte, er wisse nichts von diesem Vorfall.",
+    "ko": "",
+    "highlight": "er wisse"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Er sagte, dass er ist unschuldig.",
+    "right": "Er sagte, er sei unschuldig.",
+    "note": "Indirect speech in formal contexts uses Konjunktiv I ('sei'), not the indicative ('ist')."
+   },
+   {
+    "wrong": "Sie behaupten, sie haben kein Geld.",
+    "right": "Sie behaupten, sie hätten kein Geld.",
+    "note": "When Konjunktiv I ('haben') is indistinguishable from the indicative present, substitute Konjunktiv II ('hätten')."
+   },
+   {
+    "wrong": "Der Arzt sagte, der Patient hat Fieber.",
+    "right": "Der Arzt sagte, der Patient habe Fieber.",
+    "note": "The 3rd person singular of Konjunktiv I preserves the root with '-e' ending ('habe')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Der Sprecher verkündete, die Konferenz ___ morgen pünktlich beginnen.",
+    "options": [
+     "werde",
+     "wird",
+     "würde",
+     "worden"
+    ],
+    "answer": 0,
+    "explanation": "The 3rd person singular Konjunktiv I form of 'werden' is 'werde'."
+   },
+   {
+    "question": "Sie behauptet, sie ___ krank gewesen und konnte nicht kommen.",
+    "options": [
+     "wäre",
+     "ist",
+     "habe",
+     "sei"
+    ],
+    "answer": 3,
+    "explanation": "Past events with verbs of state/movement take Konjunktiv I of 'sein': 'sie sei gewesen'."
+   },
+   {
+    "question": "Die Zeugen gaben an, sie ___ nichts Verdächtiges bemerkt.",
+    "options": [
+     "haben",
+     "hätten",
+     "seien",
+     "hätten haben"
+    ],
+    "answer": 1,
+    "explanation": "Plural 'sie haben' matches indicative, so Konjunktiv II ('sie hätten') must replace it."
+   },
+   {
+    "question": "Der Politiker meinte, das Land ___ vor großen Herausforderungen.",
+    "options": [
+     "stehe",
+     "steht",
+     "stünde",
+     "stand"
+    ],
+    "answer": 0,
+    "explanation": "3rd person singular regular Konjunktiv I is formed by verb stem + -e ('stehe')."
+   }
+  ],
+  "tip": "In third-person singular (er/sie/es), Konjunktiv I is distinct for nearly all verbs; look for the signature final '-e' without consonant endings (er habe, er gehe, er wisse)."
+ },
+ {
+  "id": "de-b2-noun-verb-collocations-nomen-verb-verbindungen",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🧩",
+  "title": "Noun-Verb Collocations (Funktionsverbgefüge)",
+  "subtitle": "Elevate formal expression with fixed idiomatic verb-noun partnerships",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "In a Funktionsverbgefüge, a semantically weakened verb couples with a noun-preposition pair to carry precise aspectual and stylistic meaning.",
+  "structure": {
+   "headers": [
+    "Collocation (FVG)",
+    "Simpler Equivalent Verb",
+    "Direction / Voice"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "zur Verfügung stehen",
+      "verfügbar sein",
+      "Passive / State (to be available)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "zur Verfügung stellen",
+      "bereitstellen",
+      "Active / Causative (to make available)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "eine Entscheidung treffen",
+      "entscheiden",
+      "Action (to reach a decision)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "in Betracht ziehen",
+      "berücksichtigen",
+      "Process (to take into consideration)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Professional and bureaucratic reporting",
+    "example": "Wir müssen diesen Aspekt unbedingt in Betracht ziehen.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Distinguishing active vs. passive nuance",
+    "example": "Das neue Modell steht den Kunden ab sofort zur Verfügung.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Commencing or ending processes",
+    "example": "Das Vorhaben wurde erfolgreich zu Ende gebracht.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Die Firma stellte den Mitarbeitern neue Laptops zur Verfügung.",
+    "ko": "",
+    "highlight": "stellte den Mitarbeitern neue Laptops zur Verfügung"
+   },
+   {
+    "en": "Wir müssen für dieses dringende Problem eine Lösung finden.",
+    "ko": "",
+    "highlight": "eine Lösung finden"
+   },
+   {
+    "en": "Nach stundenlangen Verhandlungen haben sie endlich eine Entscheidung getroffen.",
+    "ko": "",
+    "highlight": "eine Entscheidung getroffen"
+   },
+   {
+    "en": "Seine mutige Kritik brachte die Verantwortlichen in Verlegenheit.",
+    "ko": "",
+    "highlight": "brachte die Verantwortlichen in Verlegenheit"
+   },
+   {
+    "en": "Das Thema Umweltschutz steht heute im Mittelpunkt der Debatte.",
+    "ko": "",
+    "highlight": "steht heute im Mittelpunkt"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Wir müssen eine Entscheidung machen.",
+    "right": "Wir müssen eine Entscheidung treffen.",
+    "note": "German uses 'eine Entscheidung treffen' or 'fällen', never 'machen'."
+   },
+   {
+    "wrong": "Das Dokument stellt Ihnen gern zur Verfügung.",
+    "right": "Das Dokument steht Ihnen gern zur Verfügung.",
+    "note": "Use 'stehen' for passive availability; 'stellen' requires an active subject providing the item."
+   },
+   {
+    "wrong": "Er zieht diese Möglichkeit in die Betrachtung.",
+    "right": "Er zieht diese Möglichkeit in Betracht.",
+    "note": "The fixed idiomatic phrase is 'in Betracht ziehen' without an article."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Der Direktor möchte das heikle Thema morgen zur Sprache ___.",
+    "options": [
+     "nehmen",
+     "bringen",
+     "stellen",
+     "setzen"
+    ],
+    "answer": 1,
+    "explanation": "'etwas zur Sprache bringen' is the fixed collocation meaning 'to bring something up for discussion'."
+   },
+   {
+    "question": "Für Rückfragen ___ Ihnen unser Team jederzeit gerne zur Verfügung.",
+    "options": [
+     "bringt",
+     "macht",
+     "steht",
+     "hält"
+    ],
+    "answer": 2,
+    "explanation": "'zur Verfügung stehen' means to be at someone's disposal (state/passive)."
+   },
+   {
+    "question": "Wir sollten alle Risiken sorgfältig in Betracht ___.",
+    "options": [
+     "stellen",
+     "geben",
+     "ziehen",
+     "kommen"
+    ],
+    "answer": 2,
+    "explanation": "'in Betracht ziehen' is the established idiom meaning 'to take into consideration'."
+   },
+   {
+    "question": "Die Forschungsergebnisse haben große Zweifel an der Theorie ___.",
+    "options": [
+     "geweckt",
+     "gefallen",
+     "gemacht",
+     "gezogen"
+    ],
+    "answer": 0,
+    "explanation": "'Zweifel wecken' (or 'aufkommen lassen') is the natural collocation meaning 'to awaken/raise doubts'."
+   }
+  ],
+  "tip": "Pay close attention to paired verbs like 'bringen/kommen' or 'stellen/stehen': the former usually implies active causation, while the latter signifies resulting state or passivity."
+ }
+]

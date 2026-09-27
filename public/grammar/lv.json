@@ -1,0 +1,3436 @@
+[
+ {
+  "id": "lv-a1-noun-declensions-gender",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🏷️",
+  "title": "Noun Genders and Declension Groups",
+  "subtitle": "Determine masculine and feminine declension groups by nominative endings",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Every Latvian noun is either masculine (typically ending in -s, -š, or -is) or feminine (typically ending in -a, -e, or rarely -s).",
+  "structure": {
+   "headers": [
+    "Group",
+    "Gender",
+    "Nominative Singular Ending",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Declension",
+      "Masculine",
+      "-s / -š",
+      "draugs / ceļš"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Declension",
+      "Masculine",
+      "-is (rarely -s)",
+      "brālis / suns"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Declension",
+      "Masculine",
+      "-us",
+      "tirgus / medus"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "4th Declension",
+      "Feminine",
+      "-a",
+      "māja / meita"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "5th & 6th Declension",
+      "Feminine",
+      "-e / -s",
+      "upe / sirds"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "1st Declension (Masculine)",
+    "example": "Galds ir liels.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "4th Declension (Feminine)",
+    "example": "Māja ir jauna.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "5th Declension (Feminine)",
+    "example": "Upe ir dziļa.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mans brālis mācās skolā.",
+    "ko": "",
+    "highlight": "brālis"
+   },
+   {
+    "en": "Šis vecais koks ir ozols.",
+    "ko": "",
+    "highlight": "ozols"
+   },
+   {
+    "en": "Šī mazā meitene lasa grāmatu.",
+    "ko": "",
+    "highlight": "meitene"
+   },
+   {
+    "en": "Pilsētā ir liels tirgus.",
+    "ko": "",
+    "highlight": "tirgus"
+   },
+   {
+    "en": "Mana māsa dzīvo Rīgā.",
+    "ko": "",
+    "highlight": "māsa"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Liela galds stāv istabā.",
+    "right": "Liels galds stāv istabā.",
+    "note": "'Galds' ends in -s and is masculine, so it requires masculine adjectives like 'liels'."
+   },
+   {
+    "wrong": "Šis skaists puķe zied.",
+    "right": "Šī skaistā puķe zied.",
+    "note": "'Puķe' ends in -e and is a 5th declension feminine noun, requiring feminine agreement."
+   },
+   {
+    "wrong": "Maza suns skrien.",
+    "right": "Mazs suns skrien.",
+    "note": "Although ending in -s, 'suns' (dog) is a 2nd declension masculine noun."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which of the following nouns belongs to the 1st declension (masculine)?",
+    "options": [
+     "māte",
+     "tēvs",
+     "upe",
+     "nakts"
+    ],
+    "answer": 1,
+    "explanation": "'Tēvs' ends in -s, making it a classic 1st declension masculine noun."
+   },
+   {
+    "question": "The noun 'zeme' (earth, land) belongs to which declension group?",
+    "options": [
+     "5th declension (feminine)",
+     "1st declension (masculine)",
+     "4th declension (feminine)",
+     "2nd declension (masculine)"
+    ],
+    "answer": 0,
+    "explanation": "Feminine nouns ending in -e belong to the 5th declension."
+   },
+   {
+    "question": "Which word is a 3rd declension masculine noun?",
+    "options": [
+     "ceļš",
+     "tirgus",
+     "brālis",
+     "skola"
+    ],
+    "answer": 1,
+    "explanation": "Nouns ending in -us such as 'tirgus' belong to the 3rd declension."
+   },
+   {
+    "question": "Identify the 4th declension feminine noun from the list:",
+    "options": [
+     "brālis",
+     "galds",
+     "medus",
+     "grāmata"
+    ],
+    "answer": 3,
+    "explanation": "Nouns ending in -a like 'grāmata' belong to the 4th declension."
+   }
+  ],
+  "tip": "Almost every noun ending in -a or -e is feminine, while almost every noun ending in -s, -š, or -is is masculine."
+ },
+ {
+  "id": "lv-a1-present-tense-conjugations",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "⏳",
+  "title": "Three Verb Conjugation Classes in Present Tense",
+  "subtitle": "Conjugate short, long, and mixed verbs in the present tense",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Latvian verbs fall into three conjugations based on their stem changes and present-tense suffixes.",
+  "structure": {
+   "headers": [
+    "Conjugation",
+    "Infinitive Suffix",
+    "Present Pattern",
+    "Example (Viņš/Viņa)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st (Short)",
+      "Consonant + -t",
+      "Stem vowel shift / palatalization",
+      "iet -> iet / cept -> cep"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd (Long)",
+      "-āt, -ēt, -ot, -īt",
+      "Suffix retained (-o, -ā, -ē, -ī)",
+      "strādāt -> strādā"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3rd (Mixed)",
+      "-ināt, -ēt, -īt",
+      "Truncated suffix in present",
+      "lasīt -> lasa / gribēt -> grib"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "2nd Conjugation (-ot)",
+    "example": "Mēs ceļojam uz Latviju.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "3rd Conjugation (-īt)",
+    "example": "Viņš lasa jaunu grāmatu.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "1st Conjugation (Irregular/Short)",
+    "example": "Es eju uz darbu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Es strādāju skolā katru dienu.",
+    "ko": "",
+    "highlight": "strādāju"
+   },
+   {
+    "en": "Ko tu šodien dari?",
+    "ko": "",
+    "highlight": "dari"
+   },
+   {
+    "en": "Mēs dzīvojam Rīgas centrā.",
+    "ko": "",
+    "highlight": "dzīvojam"
+   },
+   {
+    "en": "Bērni dzer aukstu pienu.",
+    "ko": "",
+    "highlight": "dzer"
+   },
+   {
+    "en": "Anna runā latviski un angliski.",
+    "ko": "",
+    "highlight": "runā"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Es lasīju grāmatu tagad.",
+    "right": "Es lasu grāmatu tagad.",
+    "note": "'Lasīt' is a 3rd conjugation verb; its present 1st person form is 'lasu', not 'lasīju' (which is past)."
+   },
+   {
+    "wrong": "Viņš strādāt birojā.",
+    "right": "Viņš strādā birojā.",
+    "note": "Drop the infinitive ending -t and use the present ending -ā for 3rd person in the 2nd conjugation."
+   },
+   {
+    "wrong": "Mēs gribam iet, bet viņi negribat.",
+    "right": "Mēs gribam iet, bet viņi negrib.",
+    "note": "The 3rd person plural (viņi/viņas) always shares the exact same form as 3rd person singular (viņš/viņa)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete with the correct present tense form: 'Es tagad birojā ___ (strādāt).'",
+    "options": [
+     "strādā",
+     "strādājam",
+     "strādāju",
+     "strādājat"
+    ],
+    "answer": 2,
+    "explanation": "For 2nd conjugation verbs like 'strādāt', the 1st person singular 'es' takes '-ju', giving 'strādāju'."
+   },
+   {
+    "question": "Complete the sentence: 'Viņa katru rītu ___ (dzert) tēju.'",
+    "options": [
+     "dzer",
+     "dzeru",
+     "dzeram",
+     "dzerat"
+    ],
+    "answer": 0,
+    "explanation": "The 3rd person singular present of 'dzert' is 'dzer'."
+   },
+   {
+    "question": "Choose the correct form: 'Mēs ātri ___ (skriet) uz parku.'",
+    "options": [
+     "skrienu",
+     "skrien",
+     "skrienat",
+     "skrienam"
+    ],
+    "answer": 3,
+    "explanation": "The 1st person plural pronoun 'mēs' takes the ending '-am', giving 'skrienam'."
+   },
+   {
+    "question": "Complete the sentence: 'Ko jūs tagad ___ (darīt)?'",
+    "options": [
+     "daru",
+     "darāt",
+     "dariet",
+     "dara"
+    ],
+    "answer": 1,
+    "explanation": "'Darīt' is a 3rd conjugation verb where 'jūs' takes '-āt': 'jūs darāt'."
+   }
+  ],
+  "tip": "In Latvian, 3rd person singular (viņš/viņa) and 3rd person plural (viņi/viņas) ALWAYS use the identical verb form."
+ },
+ {
+  "id": "lv-a1-locative-case-location",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "📍",
+  "title": "Locative Case for Place and Time",
+  "subtitle": "Express static locations and specific times without prepositions",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "The locative case uses lengthened vowels (-ā, -ē, -ī, -ū) without any preposition to indicate 'in', 'at', or 'on'.",
+  "structure": {
+   "headers": [
+    "Declension",
+    "Nominative",
+    "Locative Singular",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Declension (-s)",
+      "galds / parks",
+      "galdā / parkā",
+      "on the table / in the park"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Declension (-is)",
+      "skapis / brālis",
+      "skapī / brālī",
+      "in the wardrobe / in the brother"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Declension (-us)",
+      "tirgus / ledus",
+      "tirgū / ledū",
+      "at the market / in the ice"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "4th Declension (-a)",
+      "māja / Rīga",
+      "mājā / Rīgā",
+      "in the house / in Riga"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "5th Declension (-e)",
+      "upe / virtuve",
+      "upē / virtuvē",
+      "in the river / in the kitchen"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Static Location (Towns/Cities)",
+    "example": "Es pašlaik dzīvoju Rīgā.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Enclosed or Open Spaces",
+    "example": "Grāmata atrodas skapī.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Time Expressions",
+    "example": "Tiksimies piecos vakarā.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mēs pusdienojam jaunā restorānā.",
+    "ko": "",
+    "highlight": "restorānā"
+   },
+   {
+    "en": "Visi dokumenti stāv uz galda vai plauktā.",
+    "ko": "",
+    "highlight": "plauktā"
+   },
+   {
+    "en": "Zivis peld dziļā upē.",
+    "ko": "",
+    "highlight": "upē"
+   },
+   {
+    "en": "Svētdienā mēs parasti braucam uz laukiem.",
+    "ko": "",
+    "highlight": "Svētdienā"
+   },
+   {
+    "en": "Vai tu tagad esi darbā?",
+    "ko": "",
+    "highlight": "darbā"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Es dzīvoju iekš Rīga.",
+    "right": "Es dzīvoju Rīgā.",
+    "note": "Latvian does not use prepositions like 'iekš' or 'iekšā' for static locations; use the locative suffix -ā instead."
+   },
+   {
+    "wrong": "Māte gatavo ēdienu virtuvi.",
+    "right": "Māte gatavo ēdienu virtuvē.",
+    "note": "'Virtuve' is 5th declension and takes -ē in the locative singular, not the accusative -i."
+   },
+   {
+    "wrong": "Vakarā mēs ejam parkā.",
+    "right": "Vakarā mēs ejam uz parku.",
+    "note": "Movement toward a destination uses 'uz + accusative', while static position uses the locative 'parkā'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'in the shop' (veikals)?",
+    "options": [
+     "veikalā",
+     "veikalu",
+     "veikalam",
+     "veikalājs"
+    ],
+    "answer": 0,
+    "explanation": "The 1st declension masculine noun 'veikals' forms the locative singular with '-ā': 'veikalā'."
+   },
+   {
+    "question": "Complete the sentence: 'Bērni mācās ___ (skola).'",
+    "options": [
+     "skolas",
+     "skolam",
+     "skolā",
+     "skolu"
+    ],
+    "answer": 2,
+    "explanation": "The 4th declension feminine noun 'skola' takes the locative singular ending '-ā': 'skolā'."
+   },
+   {
+    "question": "Choose the correct locative form of 'istaba' (room): 'Kaķis guļ ___.'",
+    "options": [
+     "istabu",
+     "istabā",
+     "istabam",
+     "istabas"
+    ],
+    "answer": 1,
+    "explanation": "'Istaba' becomes 'istabā' in the locative singular."
+   },
+   {
+    "question": "Fill in the blank: 'Pārtika atrodas aukstā ___ (ledusskapis).'",
+    "options": [
+     "ledusskapim",
+     "ledusskapi",
+     "ledusskapī",
+     "ledusskapis"
+    ],
+    "answer": 2,
+    "explanation": "2nd declension nouns ending in -is replace the ending with long '-ī' in the locative: 'ledusskapī'."
+   }
+  ],
+  "tip": "To make the locative singular, simply lengthen the final vowel of the nominative ending: -a becomes -ā, -e becomes -ē, -is becomes -ī, and -us becomes -ū."
+ },
+ {
+  "id": "lv-a1-accusative-direct-objects",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🎯",
+  "title": "Accusative Case for Direct Objects",
+  "subtitle": "Form accusative singular and plural nouns when receiving an action",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Direct objects of transitive verbs take the accusative case, marked by -u in the singular for nearly all noun declensions.",
+  "structure": {
+   "headers": [
+    "Declension",
+    "Nominative Singular",
+    "Accusative Singular",
+    "Accusative Plural"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Declension (-s)",
+      "galds",
+      "galdu",
+      "galdus"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Declension (-is)",
+      "brālis",
+      "brāli",
+      "brāļus"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Declension (-us)",
+      "tirgus",
+      "tirgu",
+      "tirgus"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "4th Declension (-a)",
+      "māja",
+      "māju",
+      "mājas"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "5th Declension (-e)",
+      "upe",
+      "upi",
+      "upes"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Direct Object Singular",
+    "example": "Es pērku jaunu maizi.",
+    "translation": ""
+   },
+   {
+    "color": "#4F46E5",
+    "label": "Direct Object Plural",
+    "example": "Viņa lasa interesantas grāmatas.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Prepositional Object (uz, par)",
+    "example": "Mēs domājam par šo vasaru.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Es redzu lielu suni dārzā.",
+    "ko": "",
+    "highlight": "suni"
+   },
+   {
+    "en": "Pēteris dzer karstu kafiju.",
+    "ko": "",
+    "highlight": "kafiju"
+   },
+   {
+    "en": "Vai tu pazīsti manu draugu?",
+    "ko": "",
+    "highlight": "draugu"
+   },
+   {
+    "en": "Mēs rakstām garu vēstuli vecmāmiņai.",
+    "ko": "",
+    "highlight": "vēstuli"
+   },
+   {
+    "en": "Skolēni risina grūtus uzdevumus.",
+    "ko": "",
+    "highlight": "uzdevumus"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Es gribu kafija.",
+    "right": "Es gribu kafiju.",
+    "note": "'Kafija' is the direct object of 'gribēt', so it must take the accusative singular ending -u."
+   },
+   {
+    "wrong": "Viņš lasa grāmata.",
+    "right": "Viņš lasa grāmatu.",
+    "note": "Direct objects of transitive verbs cannot remain in the nominative case; use 'grāmatu'."
+   },
+   {
+    "wrong": "Mēs redzam brālisu.",
+    "right": "Mēs redzam brāli.",
+    "note": "2nd declension nouns in -is (like 'brālis') drop -is and end in -i in the accusative singular, not -u."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence with the accusative object: 'Tēvs pērk jaunu ___ (auto / mašīna).'",
+    "options": [
+     "mašīnai",
+     "mašīnas",
+     "mašīnā",
+     "mašīnu"
+    ],
+    "answer": 3,
+    "explanation": "4th declension feminine noun 'mašīna' takes '-u' in accusative singular: 'mašīnu'."
+   },
+   {
+    "question": "Which form completes the sentence: 'Es redzu tavu ___ (brālis).'?",
+    "options": [
+     "brāli",
+     "brālu",
+     "brālis",
+     "brālim"
+    ],
+    "answer": 0,
+    "explanation": "2nd declension masculine nouns in -is end in '-i' in the accusative singular: 'brāli'."
+   },
+   {
+    "question": "Select the correct plural direct object: 'Mēs pērkam svaigus ___ (ābols).'?",
+    "options": [
+     "āboli",
+     "ābolus",
+     "ābolos",
+     "āboliem"
+    ],
+    "answer": 1,
+    "explanation": "1st declension masculine nouns take '-us' in the accusative plural: 'ābolus'."
+   },
+   {
+    "question": "Fill in the blank: 'Vai jūs dzerat melnu ___ (tēja)?'",
+    "options": [
+     "tējā",
+     "tējai",
+     "tēju",
+     "tējas"
+    ],
+    "answer": 2,
+    "explanation": "'Tēja' takes '-u' as a singular direct object: 'tēju'."
+   }
+  ],
+  "tip": "Almost all singular nouns end in -u in the accusative, except 2nd and 5th declensions (-is, -e), which end in -i."
+ },
+ {
+  "id": "lv-a1-dative-indirect-objects",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🎁",
+  "title": "Dative Case and Preposition Government",
+  "subtitle": "Master indirect objects for recipients and essential dative prepositions",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The dative case marks the recipient ('to/for someone') and is required after prepositions like 'līdz' (until), 'pa' (along), and 'pa priekšu' (ahead of).",
+  "structure": {
+   "headers": [
+    "Declension",
+    "Nominative",
+    "Dative Singular",
+    "Dative Plural"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Declension (Masc)",
+      "draugs",
+      "draugam",
+      "draugiem"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Declension (Masc)",
+      "brālis",
+      "brālim",
+      "brāļiem"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "4th Declension (Fem)",
+      "māsa",
+      "māsai",
+      "māsām"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "5th Declension (Fem)",
+      "māte",
+      "mātei",
+      "mātēm"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "6th Declension (Fem)",
+      "sirds",
+      "sirdij",
+      "sirdīm"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Indirect Recipient",
+    "example": "Es dodu grāmatu draugam.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Preposition 'līdz' (until/up to)",
+    "example": "Mēs ejam līdz upei.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Preposition 'pa' (along/by)",
+    "example": "Tūristi pastaigājas pa ielu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Skolotājs stāsta pasaku bērnam.",
+    "ko": "",
+    "highlight": "bērnam"
+   },
+   {
+    "en": "Mēs brauksim ciemos pie vecmāmiņas līdz vakaram.",
+    "ko": "",
+    "highlight": "vakaram"
+   },
+   {
+    "en": "Vakar es zvanīju savai māsai.",
+    "ko": "",
+    "highlight": "māsai"
+   },
+   {
+    "en": "Pastaigāsimies lēnām pa mežu!",
+    "ko": "",
+    "highlight": "mežu"
+   },
+   {
+    "en": "Ko tu uzdāvināsi brālim dzimšanas dienā?",
+    "ko": "",
+    "highlight": "brālim"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Es dodu ābolu draugs.",
+    "right": "Es dodu ābolu draugam.",
+    "note": "The recipient must be in the dative case (-am for 1st declension masculine), not nominative."
+   },
+   {
+    "wrong": "Mēs ejam līdz skola.",
+    "right": "Mēs ejam līdz skolai.",
+    "note": "The preposition 'līdz' always requires the dative case ('līdz skolai')."
+   },
+   {
+    "wrong": "Es rakstu vēstuli mātei un tēvei.",
+    "right": "Es rakstu vēstuli mātei un tēvam.",
+    "note": "'Tēvs' is masculine (1st declension) and takes the dative suffix '-am', not feminine '-ei'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which form correctly completes: 'Es saku paldies ___ (māte).'?",
+    "options": [
+     "māti",
+     "mātei",
+     "mātē",
+     "mātes"
+    ],
+    "answer": 1,
+    "explanation": "5th declension feminine noun 'māte' takes '-ei' in the dative singular: 'mātei'."
+   },
+   {
+    "question": "Complete the prepositional phrase: 'Mēs ejam līdz ___ (parks).'",
+    "options": [
+     "parku",
+     "parkā",
+     "parkam",
+     "parkamā"
+    ],
+    "answer": 2,
+    "explanation": "'Līdz' governs the dative; 1st declension 'parks' becomes 'parkam'."
+   },
+   {
+    "question": "Choose the correct recipient: 'Jānis dāvina ziedus savai ___ (draudzene).'",
+    "options": [
+     "draudzenei",
+     "draudzeni",
+     "draudzenē",
+     "draudzenes"
+    ],
+    "answer": 0,
+    "explanation": "5th declension 'draudzene' takes the dative singular ending '-ei': 'draudzenei'."
+   },
+   {
+    "question": "Fill in the blank with the plural recipient: 'Skolotāja skaidro uzdevumu ___ (skolēni).'",
+    "options": [
+     "skolēnus",
+     "skolēnos",
+     "skolēnam",
+     "skolēniem"
+    ],
+    "answer": 3,
+    "explanation": "Masculine nouns in the dative plural take '-iem': 'skolēniem'."
+   }
+  ],
+  "tip": "Masculine dative singular always ends in '-m' (-am, -im, -um), whereas feminine dative singular always ends in '-i' (-ai, -ei, -ij)."
+ },
+ {
+  "id": "lv-a1-negation-and-nav",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🚫",
+  "title": "Verbal Negation and 'Nav'",
+  "subtitle": "Form negative verbs with 'ne-' and express absence with 'nav'",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Prefix 'ne-' directly to standard verbs, but replace the affirmative copula 'ir' entirely with 'nav'.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Affirmative",
+    "Negative",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Regular Verb",
+      "es zinu",
+      "es nezinu",
+      "I know / I do not know"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Equative Copula",
+      "viņš ir skolotājs",
+      "viņš nav skolotājs",
+      "He is / is not a teacher"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Existential / Absence",
+      "piens ir",
+      "piena nav",
+      "There is / is no milk"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Possession",
+      "man ir kaķis",
+      "man nav kaķa",
+      "I have / don't have a cat"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Direct Verbal Negation",
+    "example": "Mēs šodien nestrādājam.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Absence and Non-existence",
+    "example": "Veikalā maizes nav.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Negative Predicative Possession",
+    "example": "Man nav laika.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Es nesaprotu šo uzdevumu.",
+    "ko": "",
+    "highlight": "nesaprotu"
+   },
+   {
+    "en": "Šeit šodien nav neviena.",
+    "ko": "",
+    "highlight": "nav"
+   },
+   {
+    "en": "Viņa nekad neguļ dienas laikā.",
+    "ko": "",
+    "highlight": "neguļ"
+   },
+   {
+    "en": "Man diemžēl nav naudas.",
+    "ko": "",
+    "highlight": "nav naudas"
+   },
+   {
+    "en": "Pilsētā nav liela parka.",
+    "ko": "",
+    "highlight": "nav"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Es ne zinu to.",
+    "right": "Es nezinu to.",
+    "note": "The negative prefix 'ne-' must be written attached directly to the verb without a space."
+   },
+   {
+    "wrong": "Viņš ne ir mājās.",
+    "right": "Viņš nav mājās.",
+    "note": "Never say 'ne ir'; the present negative form of the verb 'būt' (to be) is always 'nav'."
+   },
+   {
+    "wrong": "Man nav laiks.",
+    "right": "Man nav laika.",
+    "note": "When expressing the absence of something or negative possession with 'nav', the noun takes the genitive case, not nominative."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I do not work today'?",
+    "options": [
+     "Es ne strādāju šodien.",
+     "Es nestrādāju šodien.",
+     "Es nav strādāju šodien.",
+     "Es strādāju ne šodien."
+    ],
+    "answer": 1,
+    "explanation": "The negative marker 'ne-' is prefixed directly to the inflected verb 'strādāju'."
+   },
+   {
+    "question": "Complete the sentence: 'Pēteris šodien ___ skolā.' (Peter is not at school today.)",
+    "options": [
+     "ne ir",
+     "neesmu",
+     "nav",
+     "neesi"
+    ],
+    "answer": 2,
+    "explanation": "'Nav' is the invariant third-person negative copula for 'to be'."
+   },
+   {
+    "question": "Complete the negative sentence: 'Mums nav ___.' (We do not have bread.)",
+    "options": [
+     "maize",
+     "maizi",
+     "maizē",
+     "maizes"
+    ],
+    "answer": 3,
+    "explanation": "Negative existence and possession with 'nav' require the genitive case ('maizes')."
+   },
+   {
+    "question": "Which sentence correctly exhibits Latvian double negation?",
+    "options": [
+     "Es nekad nezinu.",
+     "Es nekad zinu.",
+     "Es kad nezinu.",
+     "Es nekad ne zinu."
+    ],
+    "answer": 0,
+    "explanation": "Latvian requires multiple negative elements: negative adverbs like 'nekad' (never) must co-occur with a negated verb ('nezinu')."
+   }
+  ],
+  "tip": "Latvian mandates negative concord (double/multiple negatives): words like 'nekad' (never) and 'neviens' (nobody) always require 'ne-' or 'nav' on the main verb."
+ },
+ {
+  "id": "lv-a2-debitive-mood-vajag",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#EA580C",
+  "emoji": "📋",
+  "title": "Debitive Mood (Vajadzības izteiksme)",
+  "subtitle": "Express obligation using 'jā-' prefixed to present stems with dative subjects",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Form the debitive by prefixing 'jā-' to the 3rd person present verb stem, changing the logical subject to the dative case.",
+  "structure": {
+   "headers": [
+    "Subject Case",
+    "Debitive Marker",
+    "Auxiliary (Optional)",
+    "Direct Object Case"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Datīvs (Man)",
+      "jāmācās",
+      "(ir) present",
+      "Nominatīvs (valoda) / Pronoun (Acc)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Datīvs (Tev)",
+      "jāiet",
+      "bija (past)",
+      "Nominatīvs"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Datīvs (Viņam)",
+      "jāraksta",
+      "būs (future)",
+      "Nominatīvs (vēstule)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Datīvs (Mums)",
+      "jāsaprot",
+      "ir (present)",
+      "Akuzatīvs (viņu - pronoun)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Personal Duty or Necessity",
+    "example": "Man rīt agri jāceļas.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Past Obligation",
+    "example": "Tev vakar bija jāmācās.",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Future Requirement",
+    "example": "Mums rīt būs jāstrādā.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Man šodien jādzer daudz ūdens.",
+    "ko": "",
+    "highlight": "jādzer"
+   },
+   {
+    "en": "Studentiem jānodod šis referāts rīt.",
+    "ko": "",
+    "highlight": "jānodod"
+   },
+   {
+    "en": "Tev bija jāpērk biļete stacijā.",
+    "ko": "",
+    "highlight": "bija jāpērk"
+   },
+   {
+    "en": "Viņai rīt būs jādodas uz slimnīcu.",
+    "ko": "",
+    "highlight": "būs jādodas"
+   },
+   {
+    "en": "Mums ir jāciena vecāki.",
+    "ko": "",
+    "highlight": "jāciena"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Es jāiet mājās.",
+    "right": "Man jāiet mājās.",
+    "note": "The agent of a debitive construction must be in the dative case ('man'), not the nominative ('es')."
+   },
+   {
+    "wrong": "Man jāmācos latviešu valoda.",
+    "right": "Man jāmācās latviešu valoda.",
+    "note": "The debitive prefix 'jā-' is always affixed to the 3rd person present stem ('mācās'), never to the 1st person form."
+   },
+   {
+    "wrong": "Man jālasa grāmatu.",
+    "right": "Man jālasa grāmata.",
+    "note": "In standard modern debitive syntax, regular noun direct objects shift from accusative to the nominative case ('grāmata')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct sentence for 'I must read this book':",
+    "options": [
+     "Es jālasa šī grāmata.",
+     "Man jālasu šo grāmatu.",
+     "Man jālasa šī grāmata.",
+     "Man jālasi šī grāmata."
+    ],
+    "answer": 2,
+    "explanation": "The subject takes the dative ('man'), the verb uses the 3rd-person present stem with 'jā-' ('jālasa'), and the direct object becomes nominative ('šī grāmata')."
+   },
+   {
+    "question": "How do you express 'We had to wait' in the past?",
+    "options": [
+     "Mums bija jāgaida.",
+     "Mēs bija jāgaida.",
+     "Mums ir jāgaida.",
+     "Mums būs jāgaida."
+    ],
+    "answer": 0,
+    "explanation": "Past debitive requires dative logical subject ('mums'), past auxiliary 'bija', and the debitive form 'jāgaida'."
+   },
+   {
+    "question": "Complete the sentence: '___ rīt agri jāceļas.' (You [singular informal] have to get up early tomorrow.)",
+    "options": [
+     "Tu",
+     "Tevi",
+     "Tev",
+     "Tevis"
+    ],
+    "answer": 2,
+    "explanation": "The logical subject of a debitive verb must appear in the dative case ('tev')."
+   },
+   {
+    "question": "Which verb form correctly completes: 'Viņai šodien ___ mājās.' (She must stay home.)",
+    "options": [
+     "jāpalieku",
+     "jāpaliec",
+     "jāpaliek",
+     "jāpaliekam"
+    ],
+    "answer": 2,
+    "explanation": "Debitive stems are built exclusively from the 3rd-person present tense ('paliek' -> 'jāpaliek')."
+   }
+  ],
+  "tip": "Personal pronouns as direct objects in the debitive remain in the accusative (e.g., 'Tev mani jāsaprot' - You must understand me), while regular nouns shift to the nominative."
+ },
+ {
+  "id": "lv-a2-dative-possession-man-ir",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#0891B2",
+  "emoji": "🔑",
+  "title": "Dative Predicative Possession",
+  "subtitle": "Express possession via 'dative possessor + ir + nominative object'",
+  "color": "#0891B2",
+  "bg": "#ECFEFF",
+  "keyPoint": "Latvian does not use a verb meaning 'to have'; instead, the possessor is in the dative case and the possessed item is the grammatical nominative subject of 'ir'.",
+  "structure": {
+   "headers": [
+    "Possessor (Dative)",
+    "Copula (būt)",
+    "Possessed Item (Case)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Man (to me)",
+      "ir",
+      "jauns telefons (Nom. Sg.)",
+      "I have a new phone"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Tev (to you)",
+      "bija",
+      "skaistas puķes (Nom. Pl.)",
+      "You had beautiful flowers"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Viņam (to him)",
+      "būs",
+      "daudz laika (Gen. Partitive)",
+      "He will have a lot of time"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Mums (to us)",
+      "nav",
+      "brīvu vietu (Gen. Negation)",
+      "We do not have free seats"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0891B2",
+    "label": "Physical Possession",
+    "example": "Māsai ir divi mazi bērni.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Internal States & Sensation",
+    "example": "Man ir auksti un bail.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Past / Future Possession",
+    "example": "Mums vakar bija svarīga sapulce.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Man ir liels un ērts dzīvoklis.",
+    "ko": "",
+    "highlight": "Man ir"
+   },
+   {
+    "en": "Vai tev ir šīs pilsētas karte?",
+    "ko": "",
+    "highlight": "tev ir"
+   },
+   {
+    "en": "Viņai bija gari un gaiši mati.",
+    "ko": "",
+    "highlight": "Viņai bija"
+   },
+   {
+    "en": "Brālim būs jauna mašīna nākamgad.",
+    "ko": "",
+    "highlight": "Brālim būs"
+   },
+   {
+    "en": "Mums nav nekādu jautājumu.",
+    "ko": "",
+    "highlight": "Mums nav"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Es ir suns.",
+    "right": "Man ir suns.",
+    "note": "Do not translate English 'I have' into nominative 'Es'; the possessor must be dative ('Man')."
+   },
+   {
+    "wrong": "Man ir suni.",
+    "right": "Man ir suns.",
+    "note": "The possessed object is the grammatical subject of the sentence, so it takes nominative ('suns'), not accusative ('suni')."
+   },
+   {
+    "wrong": "Viņam ir daudz nauda.",
+    "right": "Viņam ir daudz naudas.",
+    "note": "Quantifiers like 'daudz' (much/many) or 'maz' (few/little) trigger the genitive case ('naudas')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you correctly say 'Do you have a question?' in Latvian?",
+    "options": [
+     "Vai tu ir jautājums?",
+     "Vai tev ir jautājums?",
+     "Vai tev ir jautājumu?",
+     "Vai tevi ir jautājums?"
+    ],
+    "answer": 1,
+    "explanation": "The possessor pronoun must be dative ('tev') and the possessed thing nominative ('jautājums')."
+   },
+   {
+    "question": "Fill the blank: '___ rīt būs jauns dators.' (He will have a new computer tomorrow.)",
+    "options": [
+     "Viņš",
+     "Viņa",
+     "Viņu",
+     "Viņam"
+    ],
+    "answer": 3,
+    "explanation": "'Viņam' is the masculine singular 3rd person dative pronoun required by the possession pattern."
+   },
+   {
+    "question": "Choose the correct past-tense possession sentence:",
+    "options": [
+     "Man bija daudz darba.",
+     "Es bija daudz darbs.",
+     "Man ir biju darbu.",
+     "Man bija daudz darbam."
+    ],
+    "answer": 0,
+    "explanation": "'Man bija' sets the past possession, and 'daudz' demands the genitive case 'darba'."
+   },
+   {
+    "question": "What is the grammatical case of 'suns' in 'Mums ir liels suns'?",
+    "options": [
+     "Accusative",
+     "Dative",
+     "Nominative",
+     "Genitive"
+    ],
+    "answer": 2,
+    "explanation": "The possessed item functions as the syntactic grammatical subject of the copula 'ir', thus taking the nominative case."
+   }
+  ],
+  "tip": "Remember that 'ir' acts like an equals sign: [To me] = [a dog]. Since the item itself 'is' there, it stands in the nominative case!"
+ },
+ {
+  "id": "lv-a2-palatalization-iotation",
+  "level": "a2",
+  "category": "advanced",
+  "categoryColor": "#7C3AED",
+  "emoji": "🔄",
+  "title": "Consonant Mutation (Līdzskaņu mija)",
+  "subtitle": "Master stem-final consonant shifts in noun declensions and past-tense verbs",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Historical palatalization alters root-final consonants before front endings in 2nd declension genitives and 1st conjugation past tenses.",
+  "structure": {
+   "headers": [
+    "Base Consonant",
+    "Shifted Variant",
+    "2nd Declension Noun (Nom > Gen)",
+    "Verb (Pres > Past)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "t / d",
+      "š / ž",
+      "lācis / briedis > brieža",
+      "sēdēt > sēžu > sēdēju"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "s / z",
+      "š / ž",
+      "nazis > naža",
+      "lūzt > lūztu > lūzu"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "b / p / m / v",
+      "bj / pj / mj / vj",
+      "skapis > skapja",
+      "glābt > glābju > glābu"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "l / n",
+      "ļ / ņ",
+      "brālis > brāļa / ceļš",
+      "ganīt > ganu > ganīju"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "2nd Declension Genitive Singular",
+    "example": "Tas ir mana brāļa velosipēds.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "1st Conjugation Past Tense",
+    "example": "Es pirtī pēros pagājušajā sestdienā.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Plural Genitive in 2nd, 5th, 6th Decl.",
+    "example": "Plauktā ir daudz glāžu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Šī ir mana kaķa bļodiņa.",
+    "ko": "",
+    "highlight": "kaķa"
+   },
+   {
+    "en": "Šeit nav neviena liela naža.",
+    "ko": "",
+    "highlight": "naža"
+   },
+   {
+    "en": "Mēs nopirkām jaunu skapja atslēgu.",
+    "ko": "",
+    "highlight": "skapja"
+   },
+   {
+    "en": "Mežā mēs redzējām daudz zaļu egļu.",
+    "ko": "",
+    "highlight": "egļu"
+   },
+   {
+    "en": "Tā ir mana vecākā brāļa istaba.",
+    "ko": "",
+    "highlight": "brāļa"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Tas ir mana brālis velosipēds.",
+    "right": "Tas ir mana brāļa velosipēds.",
+    "note": "Second declension nouns ending in '-is' mutate their final stem consonant in genitive singular (l -> ļ): brālis -> brāļa."
+   },
+   {
+    "wrong": "Virtuvē nav naida/nazja.",
+    "right": "Virtuvē nav naža.",
+    "note": "Stem 'z' mutates into 'ž' (nazis -> naža), not into 'zj' or other unassimilated clusters."
+   },
+   {
+    "wrong": "Pie galda ir daudz zvaigznes.",
+    "right": "Pie galda ir daudz zvaigžņu.",
+    "note": "Female nouns in the 5th declension mutate 'zn' to 'žņ' in the genitive plural (zvaigzne -> zvaigžņu)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the genitive singular form of 'lācis' (bear)?",
+    "options": [
+     "lāca",
+     "lāča",
+     "lācja",
+     "lācī"
+    ],
+    "answer": 1,
+    "explanation": "In 2nd declension genitive singular, 'c' undergoes consonant mutation into 'č', yielding 'lāča'."
+   },
+   {
+    "question": "What is the genitive singular form of 'skapis' (cupboard)?",
+    "options": [
+     "skapa",
+     "skapi",
+     "skapja",
+     "skapeņa"
+    ],
+    "answer": 2,
+    "explanation": "Labial consonants (b, p, m, v) append 'j' upon palatalization: 'p' becomes 'pj', making 'skapja'."
+   },
+   {
+    "question": "What is the genitive plural of the 5th declension feminine noun 'krūze' (mug)?",
+    "options": [
+     "krūzu",
+     "krūžu",
+     "krūzju",
+     "krūzīšu"
+    ],
+    "answer": 1,
+    "explanation": "In 5th declension genitive plural, 'z' mutates into 'ž', giving 'krūžu'."
+   },
+   {
+    "question": "Which shift accurately reflects the consonant mutation rule in Latvian?",
+    "options": [
+     "t -> č",
+     "d -> dž",
+     "l -> ļ",
+     "k -> š"
+    ],
+    "answer": 2,
+    "explanation": "The liquid 'l' consistently mutates to palatal lateral 'ļ' (e.g., brālis -> brāļa). Note that 't' mutates to 'š', not 'č'."
+   }
+  ],
+  "tip": "Labials (p, b, m, v) never soften alone; they simply insert a 'j' directly after them (p > pj, b > bj, m > mj, v > vj)."
+ },
+ {
+  "id": "lv-a2-definite-vs-indefinite-adjectives",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#0891B2",
+  "emoji": "🏷️",
+  "title": "Definite vs. Indefinite Adjective Endings",
+  "subtitle": "Choose endings (-s/-a vs. -ais/-ā) to specify definiteness and familiarity",
+  "color": "#0891B2",
+  "bg": "#ECFEFF",
+  "keyPoint": "Use indefinite endings (-s/-a) for new or non-specific items, and definite endings (-ais/-ā) after demonstratives, possessives, or for unique referents.",
+  "structure": {
+   "headers": [
+    "Feature",
+    "Masculine Ending",
+    "Feminine Ending",
+    "Contextual Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Indefinite (A / An)",
+      "-s / -š",
+      "-a",
+      "liels galds / liela māja"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Definite (The / Specific)",
+      "-ais",
+      "-ā",
+      "lielais galds / lielā māja"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "With Demonstratives",
+      "tas pats -ais",
+      "tā pati -ā",
+      "šis jaunais auto / tā vecā skola"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Terms of Direct Address",
+      "dārgais draugs!",
+      "mīļā mamma!",
+      "Godātais kungs!"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0891B2",
+    "label": "Indefinite / General Introduction",
+    "example": "Es redzēju lielu suni parkā.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Definite / Known or Specified Object",
+    "example": "Šis melnais kaķis pieder man.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Geographic Names and Terms",
+    "example": "Baltijas jūra ir auksta un skaista.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Rīgā ir vecs un skaists tornis.",
+    "ko": "",
+    "highlight": "vecs"
+   },
+   {
+    "en": "Šis jaunais kaimiņš ir ļoti draudzīgs.",
+    "ko": "",
+    "highlight": "jaunais"
+   },
+   {
+    "en": "Kur atrodas Klusais okeāns?",
+    "ko": "",
+    "highlight": "Klusais"
+   },
+   {
+    "en": "Viņa nopirka sarkanu kleitu veikalā.",
+    "ko": "",
+    "highlight": "sarkanu"
+   },
+   {
+    "en": "Man patīk mana baltā mašīna.",
+    "ko": "",
+    "highlight": "baltā"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Šis jauns dators ir dārgs.",
+    "right": "Šis jaunais dators ir dārgs.",
+    "note": "Demonstrative pronouns like 'šis' (this) or 'tas' (that) force any modifying adjective to take the definite ending ('jaunais')."
+   },
+   {
+    "wrong": "Mani dārgi draugi!",
+    "right": "Mani dārgie draugi!",
+    "note": "Vocatives and direct address require the definite adjective declension ('dārgie draugi')."
+   },
+   {
+    "wrong": "Klusais okeāns ir liels okeāns, bet Melns jūra ir mazāka.",
+    "right": "Melna jūra -> Melnā jūra",
+    "note": "Proper geographic designations (the Black Sea, the Baltic Sea) always require definite endings ('Melnā jūra')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct form: 'Mums ir ___ dārzs.' (We have a large garden.)",
+    "options": [
+     "lielais",
+     "liels",
+     "lielā",
+     "lieliem"
+    ],
+    "answer": 1,
+    "explanation": "Introducing an unspecified item for the first time without demonstratives calls for the indefinite masculine ending '-s' ('liels')."
+   },
+   {
+    "question": "Choose the correct form: 'Kur ir ___ atslēga?' (Where is the green key? [specific known key])",
+    "options": [
+     "zaļa",
+     "zaļu",
+     "zaļā",
+     "zaļas"
+    ],
+    "answer": 2,
+    "explanation": "The reference is to a specific, identifiable key, requiring the feminine definite ending '-ā' ('zaļā')."
+   },
+   {
+    "question": "Complete the phrase: 'Tas ___ puisis labi runā latviski.' (That young boy speaks Latvian well.)",
+    "options": [
+     "jaunais",
+     "jauns",
+     "jaunā",
+     "jaunam"
+    ],
+    "answer": 0,
+    "explanation": "The demonstrative pronoun 'tas' requires the accompanying adjective to take the definite masculine suffix '-ais'."
+   },
+   {
+    "question": "Which of the following phrases is correct for addressing a dear friend directly?",
+    "options": [
+     "Mīļš draugs!",
+     "Mīļam draugam!",
+     "Mīļais draugs!",
+     "Mīļu draugu!"
+    ],
+    "answer": 2,
+    "explanation": "Forms of direct address (vocative context) strictly require definite adjective morphology ('Mīļais draugs!')."
+   }
+  ],
+  "tip": "Whenever you see 'mans' (my), 'tavs' (your), 'šis' (this), or 'tas' (that) in front of an adjective, immediately default to the definite endings (-ais / -ā)!"
+ },
+ {
+  "id": "lv-a2-simple-past-tense",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🕰️",
+  "title": "Simple Past Tense Formation",
+  "subtitle": "Conjugating verbs in the past across all three verb groups",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The simple past tense adds the person endings (-u, -i, -a, -ām, -āt, -a) to the past stem, which often involves an internal vowel change or consonant shift in 1st conjugation verbs.",
+  "structure": {
+   "headers": [
+    "Person",
+    "1st Conj. (augt)",
+    "2nd Conj. (dzīvot)",
+    "3rd Conj. (lasīt)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Es (I)",
+      "augu",
+      "dzīvoju",
+      "lasīju"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Tu (You)",
+      "augi",
+      "dzīvoji",
+      "lasīji"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Viņš/Viņa (He/She)",
+      "auga",
+      "dzīvoja",
+      "lasīja"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Mēs (We)",
+      "augām",
+      "dzīvojām",
+      "lasījām"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Jūs (You all)",
+      "augāt",
+      "dzīvojāt",
+      "lasījāt"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Completed Past Action",
+    "example": "Vakar es nopirku jaunu grāmatu.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Past State or Habit",
+    "example": "Bērnībā mēs daudz spēlējāmies ārā.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Historical Events",
+    "example": "Latvija ieguva neatkarību 1918. gadā.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Vakar es ilgi strādāju birojā.",
+    "ko": "",
+    "highlight": "strādāju"
+   },
+   {
+    "en": "Mēs vakarā dzērām siltu tēju.",
+    "ko": "",
+    "highlight": "dzērām"
+   },
+   {
+    "en": "Vai tu redzēji to skaisto filmu?",
+    "ko": "",
+    "highlight": "redzēji"
+   },
+   {
+    "en": "Bērni ātri aizskrēja uz skolu.",
+    "ko": "",
+    "highlight": "aizskrēja"
+   },
+   {
+    "en": "Viņš uzrakstīja garu vēstuli draugam.",
+    "ko": "",
+    "highlight": "uzrakstīja"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Es vakar redzēju viņu un saku čau.",
+    "right": "Es vakar redzēju viņu un teicu čau.",
+    "note": "Maintain consistent past tense throughout; the past tense of 'teikt' (to say) is 'teicu', not present 'saku'."
+   },
+   {
+    "wrong": "Vakar mēs braucām uz Rīga.",
+    "right": "Vakar mēs braucām uz Rīgu.",
+    "note": "Do not forget that prepositional destination phrases still govern their required case ('uz' takes accusative)."
+   },
+   {
+    "wrong": "Viņa dzēra ūdens.",
+    "right": "Viņa dzēra ūdeni.",
+    "note": "Direct objects in simple past sentences still require the accusative case ('ūdeni', not nominative 'ūdens')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Vakar mēs visu dienu ___ mājās.",
+    "options": [
+     "palikām",
+     "paliekam",
+     "paliks",
+     "paliekat"
+    ],
+    "answer": 0,
+    "explanation": "The subject 'mēs' requires the 1st person plural past ending '-ām' (palikām)."
+   },
+   {
+    "question": "Ko tu vakar vakarā ___?",
+    "options": [
+     "daru",
+     "darīji",
+     "darījāt",
+     "darīja"
+    ],
+    "answer": 1,
+    "explanation": "The subject 'tu' requires the 2nd person singular past ending '-i' (darīji)."
+   },
+   {
+    "question": "Kārlis pagājušajā gadā ___ uz Jelgavu.",
+    "options": [
+     "pārcēlos",
+     "pārceļas",
+     "pārcēlās",
+     "pārcēlies"
+    ],
+    "answer": 2,
+    "explanation": "Third-person singular reflexive past for 'pārcelties' uses the ending '-ās' (pārcēlās)."
+   },
+   {
+    "question": "Es no rīta agri ___ kafiju.",
+    "options": [
+     "dzeru",
+     "dzersi",
+     "dzēra",
+     "dzēru"
+    ],
+    "answer": 3,
+    "explanation": "The 1st person singular past of 'dzert' with internal vowel lengthening (e -> ē) is 'dzēru'."
+   }
+  ],
+  "tip": "In the 3rd person (viņš, viņa, viņi, viņas), the ending is always identically '-a' (or '-ās' for reflexive) regardless of whether the subject is singular or plural!"
+ },
+ {
+  "id": "lv-a2-genitive-quantity-possession",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "📦",
+  "title": "Genitive Case for Possession, Quantities, and Negation",
+  "subtitle": "Expressing ownership, amounts with adverbs, and absent items",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "In Latvian, the genitive case expresses possession (placed before the noun), follows adverbs of quantity like 'daudz' and 'maz', and replaces the nominative subject in negative existential sentences.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Genitive Form",
+    "Latvian Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Possession",
+      "Noun + Noun",
+      "brāļa auto",
+      "brother's car"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Quantity",
+      "daudz / maz + Gen.",
+      "daudz naudas",
+      "a lot of money"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negation (nav)",
+      "Nav + Genitive",
+      "te nav maizes",
+      "there is no bread"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural Quantity",
+      "daudz + Gen. Pl.",
+      "daudz draugu",
+      "many friends"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Owner Before Owned",
+    "example": "Šī ir manas mātes māja.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Adverbs of Measure",
+    "example": "Veikalā ir maz piena un daudz ābolu.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Negative Existence",
+    "example": "Ledusskapī šodien nav sviesta.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Skolotāja grāmata stāv uz galda.",
+    "ko": "",
+    "highlight": "Skolotāja"
+   },
+   {
+    "en": "Rīgā šodien ir daudz tūristu.",
+    "ko": "",
+    "highlight": "tūristu"
+   },
+   {
+    "en": "Man šobrīd diemžēl nav laika runāt.",
+    "ko": "",
+    "highlight": "laika"
+   },
+   {
+    "en": "Mums mājās nav maizes un piena.",
+    "ko": "",
+    "highlight": "maizes un piena"
+   },
+   {
+    "en": "Cik glāžu ūdens tu izdzer dienā?",
+    "ko": "",
+    "highlight": "ūdens"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Man nav laiks.",
+    "right": "Man nav laika.",
+    "note": "Negative existence ('nav') always demands genitive ('laika'), never nominative ('laiks')."
+   },
+   {
+    "wrong": "Automašīna mana tēva ir jauna.",
+    "right": "Mana tēva automašīna ir jauna.",
+    "note": "In Latvian, the possessor in genitive comes before the possessed object, not after."
+   },
+   {
+    "wrong": "Šeit ir daudz cilvēki.",
+    "right": "Šeit ir daudz cilvēku.",
+    "note": "Adverbs of quantity like 'daudz' require genitive plural ('cilvēku'), not nominative plural ('cilvēki')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Šodien ārā ir ļoti daudz ___.",
+    "options": [
+     "sniegs",
+     "sniega",
+     "sniegam",
+     "sniegu"
+    ],
+    "answer": 1,
+    "explanation": "Quantity adverb 'daudz' requires the genitive singular form 'sniega'."
+   },
+   {
+    "question": "Mūsu pilsētā nav liela ___.",
+    "options": [
+     "teātris",
+     "teātrim",
+     "teātra",
+     "teātri"
+    ],
+    "answer": 2,
+    "explanation": "Negative existence with 'nav' requires masculine genitive singular '-a' (teātra)."
+   },
+   {
+    "question": "Kur ir ___ soma?",
+    "options": [
+     "māsas",
+     "māsa",
+     "māsu",
+     "māsai"
+    ],
+    "answer": 0,
+    "explanation": "Possession requires the genitive form placed first: 'māsas soma' (sister's bag)."
+   },
+   {
+    "question": "Kafijā ir par daudz ___.",
+    "options": [
+     "cukurs",
+     "cukuru",
+     "cukuri",
+     "cukura"
+    ],
+    "answer": 3,
+    "explanation": "'Daudz' requires the genitive case: 'cukura' (of sugar)."
+   }
+  ],
+  "tip": "Whenever you see 'nav' indicating something does not exist or isn't present, immediately switch the noun from nominative to genitive!"
+ },
+ {
+  "id": "lv-b1-verbal-prefixes-aspect",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🧭",
+  "title": "Verbal Prefixes and Aspectual Pairs",
+  "subtitle": "Adding prefixes to specify direction, completion, and telicity",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Attaching spatial prefixes like no-, iz-, aiz-, pie-, and uz- converts imperfective base verbs into perfective verbs signifying completed or directional action.",
+  "structure": {
+   "headers": [
+    "Prefix",
+    "Core Direction/Meaning",
+    "Base Verb",
+    "Prefixed Verb"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "aiz-",
+      "Away / Departure",
+      "iet (to go)",
+      "aiziet (to leave / walk away)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "iz-",
+      "Out of / Completion",
+      "lasīt (to read)",
+      "izlasīt (to read through/finish)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "pie-",
+      "Approach / Addition",
+      "nākt (to come)",
+      "pienākt (to approach)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "uz-",
+      "Onto / Inception",
+      "rakstīt (to write)",
+      "uzrakstīt (to finish writing)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "no-",
+      "Down from / Perfective result",
+      "pirkt (to buy)",
+      "nopirkt (to purchase completely)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Full Completion (Telic)",
+    "example": "Es beidzot izlasīju šo biezo grāmatu.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Directional Movement",
+    "example": "Vilciens tikko aizbrauca no stacijas.",
+    "translation": ""
+   },
+   {
+    "color": "#A78BFA",
+    "label": "Arrival or Approach",
+    "example": "Pienāc tuvāk un paskaties uz karti.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Lūdzu, uzraksti savu vārdu šeit.",
+    "ko": "",
+    "highlight": "uzraksti"
+   },
+   {
+    "en": "Mēs jau aizgājām no sapulces.",
+    "ko": "",
+    "highlight": "aizgājām"
+   },
+   {
+    "en": "Viņa ātri izdzēra glāzi auksta ūdens.",
+    "ko": "",
+    "highlight": "izdzēra"
+   },
+   {
+    "en": "Cikos jūs vakar atnācāt mājās?",
+    "ko": "",
+    "highlight": "atnācāt"
+   },
+   {
+    "en": "Tētis nopirka jaunu velosipēdu brālim.",
+    "ko": "",
+    "highlight": "nopirka"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Es lasīju grāmatu un tagad zinu beigas.",
+    "right": "Es izlasīju grāmatu un tagad zinu beigas.",
+    "note": "Use 'izlasīt' (prefixed perfective) when the entire book has been read from start to finish."
+   },
+   {
+    "wrong": "Viņš aiznāca pie manis ciemos.",
+    "right": "Viņš atnāca pie manis ciemos.",
+    "note": "Use prefix 'at-' for motion arriving towards the speaker; 'aiz-' indicates movement away."
+   },
+   {
+    "wrong": "Mēs gribam uzpirkt maizi.",
+    "right": "Mēs gribam nopirkt maizi.",
+    "note": "'Nopirkt' means to purchase an item, while 'uzpirkt' means to bribe someone or buy up stock."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Vai tu jau esi ___ visu šo rakstu?",
+    "options": [
+     "lasījis",
+     "izlasījis",
+     "aizlasījis",
+     "pielasījis"
+    ],
+    "answer": 1,
+    "explanation": "'Izlasīt' denotes reading a text to completion."
+   },
+   {
+    "question": "Lūdzu, ___ pie manis rīt pusdienlaikā.",
+    "options": [
+     "izej",
+     "aizej",
+     "atnāc",
+     "uznāc"
+    ],
+    "answer": 2,
+    "explanation": "'Atnākt' means to come/arrive toward the speaker's location."
+   },
+   {
+    "question": "Autobuss tikko ___ no pieturas.",
+    "options": [
+     "aizbrauca",
+     "uzbrauca",
+     "iebrauca",
+     "pārbrauca"
+    ],
+    "answer": 0,
+    "explanation": "The prefix 'aiz-' designates departure/moving away from a location."
+   },
+   {
+    "question": "Es gribu ___ vēstuli vecmāmiņai.",
+    "options": [
+     "ierakstīt",
+     "norakstīt",
+     "piezīmēt",
+     "uzrakstīt"
+    ],
+    "answer": 3,
+    "explanation": "'Uzrakstīt' is the standard perfective counterpart for composing a letter or message."
+   }
+  ],
+  "tip": "Base verbs in Latvian naturally focus on the ongoing process, while adding a prefix shifts the focus decisively to the end result or specific spatial trajectory."
+ },
+ {
+  "id": "lv-b1-reflexive-verbs-and-pronoun",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#EC4899",
+  "emoji": "🔄",
+  "title": "Reflexive Verbs and Suffixation (-ties)",
+  "subtitle": "Navigating reflexive endings across tenses and reciprocal semantics",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "Reflexive verbs end in -ties in the infinitive and take specialized personal endings containing -o-, -ie-, or -ā- instead of the regular active verb suffixes.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Present (mācīties)",
+    "Past (mācīties)",
+    "Future (mācīties)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Es (I)",
+      "mācos",
+      "mācījos",
+      "mācīšos"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Tu (You)",
+      "mācies",
+      "mācījies",
+      "mācīsies"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Viņš/Viņa (He/She)",
+      "mācās",
+      "mācījās",
+      "mācīsies"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Mēs (We)",
+      "mācāmies",
+      "mācījāmies",
+      "mācīsimies"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Jūs (You all)",
+      "mācāties",
+      "mācījāties",
+      "mācīsieties"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EC4899",
+    "label": "Self-Directed Actions",
+    "example": "No rīta es ātri saģērbjos un nomazgājos.",
+    "translation": ""
+   },
+   {
+    "color": "#BE185D",
+    "label": "Reciprocal Meaning",
+    "example": "Draugi bieži tiekas pilsētas centrā.",
+    "translation": ""
+   },
+   {
+    "color": "#F472B6",
+    "label": "Inherent Reflexives",
+    "example": "Bērns baidās no tumsas.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mēs priecājamies par taviem labajiem panākumiem.",
+    "ko": "",
+    "highlight": "priecājamies"
+   },
+   {
+    "en": "Es šovasar mācīšos runāt latviski.",
+    "ko": "",
+    "highlight": "mācīšos"
+   },
+   {
+    "en": "Cikos tu parasti mosties no rītiem?",
+    "ko": "",
+    "highlight": "mosties"
+   },
+   {
+    "en": "Viņi satikās parkā pēc nodarbībām.",
+    "ko": "",
+    "highlight": "satikās"
+   },
+   {
+    "en": "Jūs ļoti labi sagatavojāties eksāmenam.",
+    "ko": "",
+    "highlight": "sagatavojāties"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Es mācu latviešu valodu skolā (when meaning 'I study').",
+    "right": "Es mācos latviešu valodu skolā.",
+    "note": "'Mācīt' means to teach someone else; 'mācīties' (reflexive) means to study/learn oneself."
+   },
+   {
+    "wrong": "Mēs satiekam parkā.",
+    "right": "Mēs satiekamies parkā.",
+    "note": "Reciprocal meetings require the reflexive form 'satikties' (mēs satiekamies), not transitive active 'satikt'."
+   },
+   {
+    "wrong": "Viņa baida no suņiem.",
+    "right": "Viņa baidās no suņiem.",
+    "note": "'Baidīties' is an inherently reflexive verb requiring the reflexive ending '-ās'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Mēs katru svētdienu ___ ar veciem draugiem.",
+    "options": [
+     "tiekam",
+     "tiekamies",
+     "tiks",
+     "tikties"
+    ],
+    "answer": 1,
+    "explanation": "The reciprocal action 'to meet each other' requires reflexive 1st person plural 'tiekamies'."
+   },
+   {
+    "question": "Vai tu rīt ___ uz teātri?",
+    "options": [
+     "pucēsies",
+     "pucēsi",
+     "pucētos",
+     "pucējies"
+    ],
+    "answer": 0,
+    "explanation": "The 2nd person singular future reflexive ending is '-sies' (pucēsies)."
+   },
+   {
+    "question": "Es vakar ļoti vēlu ___.",
+    "options": [
+     "aizmigāt",
+     "aizmiga",
+     "aizmigos",
+     "aizmigu"
+    ],
+    "answer": 3,
+    "explanation": "1st person singular past of reflexive 'aizmigt' (active conjugation with reflexive nuance) or standard root past is 'aizmigu'."
+   },
+   {
+    "question": "Viņi vienmēr ___ par jaunumiem.",
+    "options": [
+     "interesējamies",
+     "interesēties",
+     "interesējas",
+     "interesējaties"
+    ],
+    "answer": 2,
+    "explanation": "3rd person (singular & plural) present reflexive ending is '-as' / '-ās' (interesējas)."
+   }
+  ],
+  "tip": "Notice that in the future tense of reflexive verbs, the 2nd person singular ('tu') and 3rd person ('viņš/viņa/viņi') share the identical ending: '-sies'!"
+ },
+ {
+  "id": "lv-b1-declinable-participles",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#F59E0B",
+  "emoji": "📑",
+  "title": "Declinable Active and Passive Participles",
+  "subtitle": "Forming verbal adjectives in -ošs, -is/-usi, -ts, and -ams/-āms",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Declinable participles act as verbal adjectives, agreeing in gender, number, and case with the nouns they modify while encoding active or passive voice and tense.",
+  "structure": {
+   "headers": [
+    "Participle Type",
+    "Ending (M / F)",
+    "Formation Base",
+    "Latvian Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Active Present",
+      "-ošs / -oša",
+      "Present stem + ošs",
+      "dziedošs bērns (singing child)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Active Past",
+      "-is / -usi",
+      "Past stem + is/usi",
+      "uzrakstījis vēstuli (having written)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Passive Present",
+      "-ams, -āms / -ama, -āma",
+      "Present stem + ams/āms",
+      "lasāma grāmata (readable book)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passive Past",
+      "-ts / -ta",
+      "Infinitive stem + ts",
+      "uzcelts nams (built house)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Simultaneous Active State",
+    "example": "Vilcienā iekāpa smaidoša meitene.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Completed Prior Action",
+    "example": "Policija atrada pazudušo velosipēdu.",
+    "translation": ""
+   },
+   {
+    "color": "#FBBF24",
+    "label": "Passive Completed State",
+    "example": "Šis nams ir uzcelts pagājušajā gadsimtā.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ezerā peld runājoši un smaidoši jaunieši.",
+    "ko": "",
+    "highlight": "smaidoši"
+   },
+   {
+    "en": "Visi logi šajā vecajā ēkā bija aizvērti.",
+    "ko": "",
+    "highlight": "aizvērti"
+   },
+   {
+    "en": "Mēs klausījāmies atbraukušo viesu stāstos.",
+    "ko": "",
+    "highlight": "atbraukušo"
+   },
+   {
+    "en": "Tā ir viegli saprotama problēma.",
+    "ko": "",
+    "highlight": "saprotama"
+   },
+   {
+    "en": "Vīrietis, izlasījis ziņu, uzreiz piecēlās.",
+    "ko": "",
+    "highlight": "izlasījis"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Es redzēju dziedoša meitene.",
+    "right": "Es redzēju dziedošu meiteni.",
+    "note": "Participles are declinable adjectives; they must match the accusative case of the direct object ('dziedošu meiteni')."
+   },
+   {
+    "wrong": "Grāmata ir rakstīta no Jāņa.",
+    "right": "Grāmatu ir sarakstījis Jānis.",
+    "note": "Latvian avoids using 'no + Genitive' for agents in passive constructions; use active perfect participles instead."
+   },
+   {
+    "wrong": "Viņš bija atbraucis vīrietis.",
+    "right": "Viņš bija atbraukušais vīrietis.",
+    "note": "When functioning as an attributive definite descriptor, use the definite participle ending ('-ais / -usī')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Pie loga sēdēja zēns, ___ interesantu grāmatu.",
+    "options": [
+     "lasošs",
+     "lasīts",
+     "lasāms",
+     "lasot"
+    ],
+    "answer": 0,
+    "explanation": "The masculine nominative singular present active participle modifying 'zēns' is 'lasošs'."
+   },
+   {
+    "question": "Šie dokumenti jau ir ___ vakar.",
+    "options": [
+     "parakstīts",
+     "parakstīti",
+     "parakstījusi",
+     "parakstītus"
+    ],
+    "answer": 1,
+    "explanation": "Passive past participle modifying masculine plural nominative 'dokumenti' takes the ending '-ti' (parakstīti)."
+   },
+   {
+    "question": "Meitene, ___ uz Rīgu, jutās priecīga.",
+    "options": [
+     "aizbraucis",
+     "aizbraukusi",
+     "aizbraukts",
+     "aizbraucot"
+    ],
+    "answer": 1,
+    "explanation": "Feminine nominative singular active past participle takes '-usi' (aizbraukusi)."
+   },
+   {
+    "question": "Tas ir visiem viegli ___ jautājums.",
+    "options": [
+     "saprotošs",
+     "sapratis",
+     "saprotams",
+     "saprauts"
+    ],
+    "answer": 2,
+    "explanation": "Present passive participle modifying masculine nominative singular 'jautājums' is 'saprotams' (understandable)."
+   }
+  ],
+  "tip": "Active past participles (-is/-usi) combined with forms of 'būt' build Latvian's compound tenses like the Present Perfect (esmu redzējis) and Past Perfect (biju aizgājis)!"
+ },
+ {
+  "id": "lv-b1-compound-tenses-perfects",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "⏳",
+  "title": "Compound Past and Perfect Tenses",
+  "subtitle": "Combining auxiliary 'būt' with active participles to show completed results",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Form compound perfect tenses by combining the conjugated auxiliary verb 'būt' with past active participles ending in -is/-usi (singular) or -uši/-ušas (plural) matching the subject's gender and number.",
+  "structure": {
+   "headers": [
+    "Tense / Gender",
+    "Auxiliary (būt)",
+    "Participle",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present Perfect (M)",
+      "esmu",
+      "lasījis",
+      "I have read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Present Perfect (F)",
+      "ir",
+      "aizgājusi",
+      "she has left"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past Perfect (M Pl)",
+      "bijām",
+      "pabeiguši",
+      "we had finished"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Future Perfect (F Pl)",
+      "būsiet",
+      "redzējušas",
+      "you will have seen"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Completed action with present relevance",
+    "example": "Es jau esmu paēdis pusdienas.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Action completed before another past event",
+    "example": "Kad viņš zvanīja, mēs jau bijām izgājuši.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Action to be finished before a future point",
+    "example": "Rīt līdz trijiem es būšu pabeidzis darbu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Anna jau ir aizbraukusi uz Rīgu.",
+    "ko": "",
+    "highlight": "ir aizbraukusi"
+   },
+   {
+    "en": "Vai tu esi kādreiz bijis Liepājā?",
+    "ko": "",
+    "highlight": "esi kādreiz bijis"
+   },
+   {
+    "en": "Mēs bijām nokavējuši vilcienu.",
+    "ko": "",
+    "highlight": "bijām nokavējuši"
+   },
+   {
+    "en": "Meitenes jau bija sagatavojušas pusdienas.",
+    "ko": "",
+    "highlight": "bija sagatavojušas"
+   },
+   {
+    "en": "Līdz vakaram viņš būs izlasījis šo grāmatu.",
+    "ko": "",
+    "highlight": "būs izlasījis"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Viņa ir lasījis šo vēstuli.",
+    "right": "Viņa ir lasījusi šo vēstuli.",
+    "note": "The participle must agree in gender and number with the feminine singular subject."
+   },
+   {
+    "wrong": "Mēs esam pabeidzis darbu.",
+    "right": "Mēs esam pabeiguši darbu.",
+    "note": "Plural masculine subjects require the plural ending -uši instead of the singular -is."
+   },
+   {
+    "wrong": "Es esmu dzīvojis šeit divus gadus tagad.",
+    "right": "Es šeit dzīvoju jau divus gadus.",
+    "note": "Use simple present for ongoing actions starting in the past and continuing into the present; compound perfect marks completed actions."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Kad mēs atnācām, viņa jau ___ mājās.",
+    "options": [
+     "bija aizgājis",
+     "bija aizgājusi",
+     "ir aizgājusi",
+     "būtu aizgājusi"
+    ],
+    "answer": 1,
+    "explanation": "The past perfect feminine singular requires 'bija' paired with 'aizgājusi'."
+   },
+   {
+    "question": "Kāpēc tu vēl neesi ___ šo uzdevumu?",
+    "options": [
+     "pabeigusi",
+     "pabeigts",
+     "pabeidzu",
+     "pabeigt"
+    ],
+    "answer": 0,
+    "explanation": "Present perfect addressing a female singular speaker uses 'neesi' followed by the feminine participle 'pabeigusi'."
+   },
+   {
+    "question": "Līdz rītdienai zēni jau ___ visu nepieciešamo.",
+    "options": [
+     "bija nopirkuši",
+     "esat nopirkuši",
+     "būs nopirkuši",
+     "ir nopirkusi"
+    ],
+    "answer": 2,
+    "explanation": "Future perfect with a masculine plural subject takes 'būs' and 'nopirkuši'."
+   },
+   {
+    "question": "Mēs (females) ___ ļoti nogurušas pēc ceļa.",
+    "options": [
+     "bijušas",
+     "bijām bijuši",
+     "bijām bijušas",
+     "esat bijuši"
+    ],
+    "answer": 2,
+    "explanation": "First-person plural feminine past perfect requires 'bijām' plus 'bijušas'."
+   }
+  ],
+  "tip": "Remember that 3rd person auxiliary 'ir' and 'bija' stay invariant whether the subject is singular or plural; only the participle changes its ending (-is, -usi, -uši, -ušas)."
+ },
+ {
+  "id": "lv-b1-conditional-mood",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#10B981",
+  "emoji": "🌿",
+  "title": "Conditional Mood (Vēlējuma izteiksme)",
+  "subtitle": "Hypothetical wishes, politeness, and counterfactuals using -tu",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Attach the invariant suffix -tu to the verb infinitive stem to form the simple conditional, or combine 'būtu' with active past participles to create past counterfactual conditionals.",
+  "structure": {
+   "headers": [
+    "Form",
+    "Construction",
+    "Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Simple Present",
+      "Stem + -tu",
+      "Es gribētu tēju.",
+      "I would like tea."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Simple Negative",
+      "ne- + Stem + -tu",
+      "Mēs neietu tur.",
+      "We would not go there."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reflexive Verb",
+      "Stem + -tos",
+      "Viņš priecātos.",
+      "He would rejoice."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Conditional",
+      "būtu + Participle",
+      "Es būtu nācis.",
+      "I would have come."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Polite requests and soft wishes",
+    "example": "Es labprāt iedzertu tasi kafijas.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Present hypothetical conditions",
+    "example": "Ja man būtu laiks, es tev palīdzētu.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Unreal past counterfactuals",
+    "example": "Ja tu būtu piezvanījis, es būtu atbraucis.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ja rīt spīdētu saule, mēs brauktu pie jūras.",
+    "ko": "",
+    "highlight": "brauktu pie jūras"
+   },
+   {
+    "en": "Es gribētu uzdot vienu jautājumu.",
+    "ko": "",
+    "highlight": "Es gribētu uzdot"
+   },
+   {
+    "en": "Vai tu man palīdzētu ar šo somu?",
+    "ko": "",
+    "highlight": "palīdzētu"
+   },
+   {
+    "en": "Ja viņa būtu zinājusi patiesību, viņa nebūtu klusējusi.",
+    "ko": "",
+    "highlight": "būtu zinājusi"
+   },
+   {
+    "en": "Bērni ļoti priecātos par jaunu suni.",
+    "ko": "",
+    "highlight": "priecātos"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ja es būšu bagāts, es pirktu māju.",
+    "right": "Ja es būtu bagāts, es pirktu māju.",
+    "note": "In unreal/hypothetical conditional clauses, use the conditional 'būtu', not the future indicative 'būšu'."
+   },
+   {
+    "wrong": "Es gribētos kafiju.",
+    "right": "Es gribētu kafiju.",
+    "note": "Personal pronoun 'es' pairs with non-reflexive 'gribētu'. The reflexive 'gribētos' requires dative 'man gribētos'."
+   },
+   {
+    "wrong": "Ja viņš atnāktu vakar, viss būtu labi.",
+    "right": "Ja viņš būtu atnācis vakar, viss būtu labi.",
+    "note": "Past counterfactual events require the compound conditional 'būtu atnācis', not the simple conditional 'atnāktu'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Ja man būtu nauda, es noteikti ___ šo automašīnu.",
+    "options": [
+     "nopirktu",
+     "nopirks",
+     "nopirku",
+     "nopirkt"
+    ],
+    "answer": 0,
+    "explanation": "Simple conditional requires the suffix '-tu' (nopirktu) to match the hypothetical 'ja man būtu'."
+   },
+   {
+    "question": "Vai jūs ___ lūdzu man padot sāli?",
+    "options": [
+     "varēsiet",
+     "varat",
+     "varētu",
+     "būtu varējuši"
+    ],
+    "answer": 2,
+    "explanation": "'Varētu' expresses a polite present request ('Could you please pass...')."
+   },
+   {
+    "question": "Ja mēs vakar nebūtu aizgulējušies, mēs ___ vilcienu.",
+    "options": [
+     "nenokavēsim",
+     "nebūtu nokavējuši",
+     "nenokavētu",
+     "nokavējām"
+    ],
+    "answer": 1,
+    "explanation": "Past unreal conditional in the main clause uses 'nebūtu' + past participle 'nokavējuši'."
+   },
+   {
+    "question": "Viņi noteikti ___ par taviem panākumiem.",
+    "options": [
+     "priecātu",
+     "priecājas",
+     "priecājās",
+     "priecātos"
+    ],
+    "answer": 3,
+    "explanation": "Reflexive verbs take the conditional ending '-tos' (priecāties -> priecātos)."
+   }
+  ],
+  "tip": "Unlike indicative tenses, the simple conditional '-tu' never inflects for person or number: 'es ietu', 'tu ietu', 'viņš ietu', 'mēs ietu' all take the exact same suffix!"
+ },
+ {
+  "id": "lv-b2-indeclinable-participles",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🎭",
+  "title": "Indeclinable Adverbial Participles (-ot, -oties, -dam-)",
+  "subtitle": "Connecting simultaneous actions with semi-predicative participle forms",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use indeclinable -ot/-oties when an adverbial action is concurrent with the main verb, and inflected semi-predicative -dams/-dama to emphasize simultaneous actions sharing the exact same grammatical subject.",
+  "structure": {
+   "headers": [
+    "Participle Type",
+    "Ending",
+    "Example Clause",
+    "Grammatical Role"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Concurrent Adverbial",
+      "-ot / -oties",
+      "Ejot pa ielu...",
+      "General adverbial concurrence"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Subject Semi-predicative (M)",
+      "-dams / -damies",
+      "Smaidīdams viņš teica...",
+      "Directly modifies masculine subject"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Subject Semi-predicative (F)",
+      "-dama / -damās",
+      "Dziedādama viņa strādā...",
+      "Directly modifies feminine subject"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Subject Plural (M/F)",
+      "-dami / -damas",
+      "Smiedamies viņi gāja...",
+      "Modifies plural subject"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Simultaneous background action (-ot)",
+    "example": "Klausoties mūziku, laiks pagāja ātri.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Subject-tied concurrent manner (-dams)",
+    "example": "Māte smaidīdama sagaidīja bērnus.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Reflexive manner of action (-damies)",
+    "example": "Atvadīdamies viņš pamāja ar roku.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ejot uz darbu, es satiku vecu draugu.",
+    "ko": "",
+    "highlight": "Ejot uz darbu"
+   },
+   {
+    "en": "Meitene raudādama pieskrēja pie mātes.",
+    "ko": "",
+    "highlight": "raudādama"
+   },
+   {
+    "en": "Skatoties filmu, mēs ēdām popkornu.",
+    "ko": "",
+    "highlight": "Skatoties filmu"
+   },
+   {
+    "en": "Puiši dziedādami soļoja pa ceļu.",
+    "ko": "",
+    "highlight": "dziedādami"
+   },
+   {
+    "en": "Domādams par nākotni, viņš pieņēma lēmumu.",
+    "ko": "",
+    "highlight": "Domādams par nākotni"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Viņa gāja dziedoties pa mežu.",
+    "right": "Viņa gāja dziedādama pa mežu.",
+    "note": "Dziedāt is non-reflexive; for a feminine subject performing simultaneous action, use 'dziedādama' or indeclinable 'dziedot'."
+   },
+   {
+    "wrong": "Vīrietis sēdēja lasīdama avīzi.",
+    "right": "Vīrietis sēdēja lasīdams avīzi.",
+    "note": "The semi-predicative participle must match masculine singular subject 'vīrietis' (-dams, not feminine -dama)."
+   },
+   {
+    "wrong": "Ieejot istabā, gaisma ieslēdzās pati.",
+    "right": "Kad es iegāju istabā, gaisma ieslēdzās.",
+    "note": "Avoid dangling participles in -ot when the logical agent does not match or clearly relate to the subject, unless intended as dative absolute."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Māsa ___ iegāja savā istabā.",
+    "options": [
+     "dziedādams",
+     "dziedādama",
+     "dziedādami",
+     "dziedādamas"
+    ],
+    "answer": 1,
+    "explanation": "'Māsa' is feminine singular, so the semi-predicative participle requires the ending '-dama'."
+   },
+   {
+    "question": "___ ārā pa logu, mēs pamanījām pirmo sniegu.",
+    "options": [
+     "Skatoties",
+     "Skatīdamies",
+     "Skatījies",
+     "Skatīdamies mēs"
+    ],
+    "answer": 0,
+    "explanation": "The indeclinable reflexive adverbial participle in '-oties' (skatoties) describes the concurrent background action."
+   },
+   {
+    "question": "Vērotājs stāvēja klusēdams, neko ___ .",
+    "options": [
+     "nesaka",
+     "nesacīdams",
+     "nesakot",
+     "nesacījis"
+    ],
+    "answer": 2,
+    "explanation": "'Nesakot' forms an indeclinable adverbial modifier ('without saying anything')."
+   },
+   {
+    "question": "Draugi devās mājup, skaļi ___ par redzēto.",
+    "options": [
+     "sarunādamās",
+     "sarunādamies",
+     "sarunājoties",
+     "sarunāties"
+    ],
+    "answer": 1,
+    "explanation": "Masculine plural subject 'draugi' with a reflexive verb takes '-damies' (or alternatively indeclinable 'sarunājoties', but '-damies' specifically agrees with masculine plural)."
+   }
+  ],
+  "tip": "Distinguish -ot and -dams easily: -ot is completely indeclinable and never changes endings; -dams/-dama behaves like an adjective and must agree in gender and number with the subject."
+ },
+ {
+  "id": "lv-b2-relative-reporting-mood",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#EC4899",
+  "emoji": "📰",
+  "title": "Relative Mood / Evidentiality (Atstāstījuma izteiksme)",
+  "subtitle": "Reporting hearsay, rumours, and secondhand claims without personal endorsement",
+  "color": "#BE185D",
+  "bg": "#FDF2F8",
+  "keyPoint": "Use the relative mood ending in -ot (present) or 'esot' + past participle (past) to report speech, unverified claims, or folklore where the speaker disclaims direct responsibility.",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Formation",
+    "Example",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present Relative",
+      "Stem + -ot / -oties",
+      "Viņš rīt braucot prom.",
+      "Supposedly he is leaving tomorrow."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past Relative",
+      "esot / bijis + Participle",
+      "Viņa esot uzvarējusi.",
+      "She reportedly won."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Future Relative",
+      "būšot + Verb infinitive / Participle",
+      "Rīt līšot stiprs lietus.",
+      "They say it will rain heavily."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Relative",
+      "ne- prefix + -ot",
+      "Viņš neko nezinot.",
+      "He allegedly knows nothing."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EC4899",
+    "label": "Reporting news or hearsay",
+    "example": "Avīzēs raksta, ka cenas celšoties.",
+    "translation": ""
+   },
+   {
+    "color": "#BE185D",
+    "label": "Indirect reported speech without 'ka'",
+    "example": "Jānis teica: viņš šodien nevarot nākt.",
+    "translation": ""
+   },
+   {
+    "color": "#DB2777",
+    "label": "Folkloric or legendary narration",
+    "example": "Reiz senos laikos te esot dzīvojis milzis.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Meteorologi brīdina, ka rīt būšot stipra vētra.",
+    "ko": "",
+    "highlight": "būšot stipra vētra"
+   },
+   {
+    "en": "Kaimiņi stāsta, ka viņa esot pārdevusi savu dzīvokli.",
+    "ko": "",
+    "highlight": "esot pārdevusi"
+   },
+   {
+    "en": "Pēteris teica, ka viņš šodien strādājot no mājām.",
+    "ko": "",
+    "highlight": "strādājot no mājām"
+   },
+   {
+    "en": "Viņš apgalvo, ka neko par to nezinot.",
+    "ko": "",
+    "highlight": "nezinot"
+   },
+   {
+    "en": "Visi runā, ka direktors drīz iecelšot jaunu vadītāju.",
+    "ko": "",
+    "highlight": "iecelšot jaunu vadītāju"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Viņa teica, ka viņa ir slima (when reporting doubt).",
+    "right": "Viņa teica, ka viņa esot slima.",
+    "note": "Using the indicative 'ir' indicates the speaker verifies it as fact; 'esot' signals secondhand attribution or non-verified speech."
+   },
+   {
+    "wrong": "Viņš saka, ka rīt būs līst.",
+    "right": "Viņš saka, ka rīt līšot.",
+    "note": "Future relative uses the specific future stem suffix '-šot' (līt -> līšot), not 'būs līst'."
+   },
+   {
+    "wrong": "Kāpēc tu saki, ka es negribu palīdzēt?",
+    "right": "Kāpēc tu saki, ka es negribot palīdzēt?",
+    "note": "When repeating an assertion someone else claims you made, standard Latvian uses relative mood 'negribot'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Radio ziņo, ka rīt visā valstī ___ pirmais sniegs.",
+    "options": [
+     "snigs",
+     "snigt",
+     "snigšot",
+     "bija snidzis"
+    ],
+    "answer": 2,
+    "explanation": "Future hearsay reported in news broadcasts uses the future relative ending '-šot' (snigšot)."
+   },
+   {
+    "question": "Draugs apgalvo, ka viņš nekad ___ šo cilvēku.",
+    "options": [
+     "nav redzējis",
+     "neesot redzējis",
+     "neredzot",
+     "nebija redzējis"
+    ],
+    "answer": 1,
+    "explanation": "Past reported assertion uses the relative auxiliary 'neesot' followed by the past participle 'redzējis'."
+   },
+   {
+    "question": "Māte stāsta, ka mazais brālis jau brīvi ___ angliski.",
+    "options": [
+     "runājot",
+     "runātu",
+     "runā",
+     "runājis"
+    ],
+    "answer": 0,
+    "explanation": "Present reported speech without the speaker's direct observation takes the present relative '-ot' (runājot)."
+   },
+   {
+    "question": "Leģenda vēsta, ka šajā pilī reiz ___ noslēpumaina princese.",
+    "options": [
+     "dzīvo",
+     "dzīvotu",
+     "dzīvosi",
+     "esot dzīvojusi"
+    ],
+    "answer": 3,
+    "explanation": "Traditional legends reporting past events take 'esot' + feminine participle 'dzīvojusi'."
+   }
+  ],
+  "tip": "Think of the relative mood as built-in quotation marks: replacing 'iet' with 'ejot' or 'būs' with 'būšot' grammatically tells the listener 'someone told me this, but don't hold me to it!'"
+ },
+ {
+  "id": "lv-b2-dative-absolute-pusdambis",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#F59E0B",
+  "emoji": "🏛️",
+  "title": "Dative Absolute Construction (Datīva absolūts)",
+  "subtitle": "Independent subordinate clauses with dative subjects and -ot participles",
+  "color": "#B45309",
+  "bg": "#FFFBEB",
+  "keyPoint": "The Dative Absolute (datīva absolūts) pairs an independent subject in the dative case with an adverbial participle ending in -ot or -oties to build a concise temporal, causal, or concessive subordinate clause.",
+  "structure": {
+   "headers": [
+    "Component",
+    "Grammar Rule",
+    "Sentence Fragment",
+    "Role in Sentence"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Subject",
+      "Dative Noun / Pronoun",
+      "Saulei rietot...",
+      "Independent subject of action"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Participle",
+      "Indeclinable -ot / -oties",
+      "...zvaigznes parādījās.",
+      "Participle predicate"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Main Clause",
+      "Nominative + Finite Verb",
+      "...mēs atgriezāmies.",
+      "Primary main event"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reflexive Verb",
+      "Dative + -amies / -oties",
+      "Pavasarim tuvojoties...",
+      "Reflexive absolute modifier"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Temporal circumstance ('when / while')",
+    "example": "Vilcienam pienākot, visi piecēlās kājās.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Causal circumstance ('because / as')",
+    "example": "Tēvam saslimstot, dēlam nācās pārņemt darbu.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Concessive circumstance ('even though')",
+    "example": "Lietum līstot, mēs tomēr devāmies pārgājienā.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Saulei lecot, putni sāka skaļi dziedāt.",
+    "ko": "",
+    "highlight": "Saulei lecot"
+   },
+   {
+    "en": "Viesiem ierodoties, saimniece pasniedza tēju.",
+    "ko": "",
+    "highlight": "Viesiem ierodoties"
+   },
+   {
+    "en": "Mācību gadam beidzoties, skolēni devās brīvdienās.",
+    "ko": "",
+    "highlight": "Mācību gadam beidzoties"
+   },
+   {
+    "en": "Pulkstenim sitot divpadsmit, visi pacēla glāzes.",
+    "ko": "",
+    "highlight": "Pulkstenim sitot divpadsmit"
+   },
+   {
+    "en": "Tumsai iestājoties, pilsētas ielās iedegās laternas.",
+    "ko": "",
+    "highlight": "Tumsai iestājoties"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Saule rietot, palika auksts.",
+    "right": "Saulei rietot, palika auksts.",
+    "note": "The subject of an absolute participle clause must be in the dative case ('saulei'), never the nominative ('saule')."
+   },
+   {
+    "wrong": "Man ejot uz mājām, es satiku Jāni.",
+    "right": "Ejot uz mājām, es satiku Jāni.",
+    "note": "If the subordinate clause subject and the main clause subject are identical ('es'), use a simple adverbial participle (-ot or -dams), not the dative absolute."
+   },
+   {
+    "wrong": "Vējam pūšot, bērni pūta balonus.",
+    "right": "Kamēr pūta vējš, bērni pūta balonus.",
+    "note": "While grammatically valid, avoid using dative absolute when subjects can easily cause semantic ambiguity with the main action verbs."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "___ rietot, debesis kļuva koši sarkanas.",
+    "options": [
+     "Saule",
+     "Sauli",
+     "Saulē",
+     "Saulei"
+    ],
+    "answer": 3,
+    "explanation": "The dative absolute construction strictly demands the dative case for its independent subject ('saulei')."
+   },
+   {
+    "question": "Mācībām ___, visi bērni izskrēja pagalmā.",
+    "options": [
+     "beidzoties",
+     "beidzas",
+     "beidzās",
+     "bijušas"
+    ],
+    "answer": 0,
+    "explanation": "The reflexive participle ending '-oties' (beidzoties) combines with dative 'mācībām' to mark simultaneous completion."
+   },
+   {
+    "question": "Lietum ___, mēs tomēr nolēmām palikt mežā.",
+    "options": [
+     "līst",
+     "līstošam",
+     "līstot",
+     "lījis"
+    ],
+    "answer": 2,
+    "explanation": "The indeclinable participle suffix '-ot' (līstot) forms the predicate of the dative absolute clause."
+   },
+   {
+    "question": "___ ienākot zālē, visi piecēlās kājās.",
+    "options": [
+     "Prezidents",
+     "Prezidentam",
+     "Prezidentu",
+     "Prezidenta"
+    ],
+    "answer": 1,
+    "explanation": "Dative singular masculine 'prezidentam' is needed before participle 'ienākot'."
+   }
+  ],
+  "tip": "Golden rule: never use a dative absolute if both clauses share the same subject! Use 'Es ejot satiku...' ONLY if someone else is doing the meeting; if you met him yourself, write 'Ejot mājās, es satiku...'."
+ }
+]

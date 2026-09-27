@@ -1,0 +1,3380 @@
+[
+ {
+  "id": "he-a1-gender-and-pluralization",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "👥",
+  "title": "Gender and Plural Suffixes",
+  "subtitle": "Mastering masculine and feminine noun and adjective agreement",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Hebrew nouns are either masculine or feminine, generally taking ים- for masculine plurals and ות- for feminine plurals, with modifying adjectives matching in both gender and number.",
+  "structure": {
+   "headers": [
+    "Gender / Number",
+    "Suffix",
+    "Noun + Adjective Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Singular",
+      "Ø (no suffix)",
+      "ספר טוב",
+      "a good book"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine Singular",
+      "ה- / ת-",
+      "תלמידה טובה",
+      "a good female student"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masculine Plural",
+      "ים-",
+      "ספרים טובים",
+      "good books"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine Plural",
+      "ות-",
+      "תלמידות טובות",
+      "good female students"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Masculine Plural",
+    "example": "הילדים הקטנים לומדים עברית בכיתה.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Feminine Plural",
+    "example": "המורות החדשות מדברות לאט.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Mixed Group Rule",
+    "example": "הבנים והבנות עומדים יחד בחצר.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "זה שולחן גדול וחדש.",
+    "ko": "",
+    "highlight": "שולחן גדול"
+   },
+   {
+    "en": "זאת דירה יפה במרכז העיר.",
+    "ko": "",
+    "highlight": "דירה יפה"
+   },
+   {
+    "en": "יש לנו מורים טובים באולפן.",
+    "ko": "",
+    "highlight": "מורים טובים"
+   },
+   {
+    "en": "הן קונות עוגות טעימות לשבת.",
+    "ko": "",
+    "highlight": "עוגות טעימות"
+   },
+   {
+    "en": "השולחנות הישנים עומדים בחוץ.",
+    "ko": "",
+    "highlight": "שולחנות הישנים"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ילדה טוב",
+    "right": "ילדה טובה",
+    "note": "Adjectives must match feminine singular nouns with the feminine ending."
+   },
+   {
+    "wrong": "נשים טובים",
+    "right": "נשים טובות",
+    "note": "Even if an irregular noun looks unusual, feminine nouns like אישה/נשים require feminine adjectives."
+   },
+   {
+    "wrong": "שולחנות גדולות",
+    "right": "שולחנות גדולים",
+    "note": "שולחן is grammatically masculine despite taking ות- in plural; adjectives match true grammatical gender."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase for 'big houses' (בית is masculine):",
+    "options": [
+     "בתים גדולות",
+     "בתים גדולים",
+     "ביתים גדולים",
+     "בתות גדולות"
+    ],
+    "answer": 1,
+    "explanation": "Although בית forms the irregular plural בתים with the standard masculine ending, its adjective must always be masculine plural (גדולים)."
+   },
+   {
+    "question": "Select the correct phrase for 'new female students':",
+    "options": [
+     "תלמידות חדשות",
+     "תלמידות חדשים",
+     "תלמידים חדשות",
+     "תלמידה חדשות"
+    ],
+    "answer": 0,
+    "explanation": "Both the feminine plural noun (תלמידות) and its adjective must take the feminine plural ending ות-."
+   },
+   {
+    "question": "Which sentence correctly says 'The chairs are comfortable' (כיסא is masculine):",
+    "options": [
+     "הכיסאות נוחות",
+     "הכיסאות נוחה",
+     "הכיסאות נוחים",
+     "הכיסאים נוחים"
+    ],
+    "answer": 2,
+    "explanation": "כיסא takes an irregular plural ending (כיסאות), but remains masculine, so the adjective must be masculine plural (נוחים)."
+   },
+   {
+    "question": "Choose the correct adjective form for 'חולצה' (shirt, feminine):",
+    "options": [
+     "לבן",
+     "לבנים",
+     "לבנות",
+     "לבנה"
+    ],
+    "answer": 3,
+    "explanation": "חולצה is a feminine singular noun, so it requires the feminine singular adjective לבנה."
+   }
+  ],
+  "tip": "Always learn the gender of a noun in the singular; irregular plural endings like שולחנות (masculine) or מילים (feminine) never change the noun's true gender for adjective agreement."
+ },
+ {
+  "id": "he-a1-definite-article-he-hayedia",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔍",
+  "title": "The Definite Article (ה׳ הידיעה)",
+  "subtitle": "Prefixing ha- to nouns and maintaining modifier agreement",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "The prefix ה- (ha-) marks a noun as definite, and unlike English, any adjective modifying that noun must also take the prefix ה-.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Construction",
+    "Hebrew Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Indefinite",
+      "Noun + Adj",
+      "ספר טוב",
+      "a good book"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Definite Noun",
+      "ה + Noun",
+      "הספר",
+      "the book"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Definite Noun Phrase",
+      "ה + Noun + ה + Adj",
+      "הספר הטוב",
+      "the good book"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Equational Sentence",
+      "ה + Noun + Adj",
+      "הספר טוב",
+      "the book is good"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Single Definite Object",
+    "example": "הילד קורא ספר מעניין בסלון.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Attributive Modification",
+    "example": "האיש הגבוה גר בחיפה.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Predicative Distinction",
+    "example": "השמלה היפה יקרה מאוד.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "התלמיד החדש לומד באוניברסיטה.",
+    "ko": "",
+    "highlight": "התלמיד החדש"
+   },
+   {
+    "en": "המכונית האדומה שייכת לדני.",
+    "ko": "",
+    "highlight": "המכונית האדומה"
+   },
+   {
+    "en": "אנחנו אוהבים את העיר העתיקה.",
+    "ko": "",
+    "highlight": "העיר העתיקה"
+   },
+   {
+    "en": "הספר המעניין נמצא על השולחן.",
+    "ko": "",
+    "highlight": "הספר המעניין"
+   },
+   {
+    "en": "האנשים הנחמדים גרים ליד הפארק.",
+    "ko": "",
+    "highlight": "האנשים הנחמדים"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "הספר טוב קורא דני",
+    "right": "הספר הטוב מעניין",
+    "note": "To say 'the good book', both noun and adjective must take ה-. 'הספר טוב' means 'The book IS good'."
+   },
+   {
+    "wrong": "איש הטוב",
+    "right": "האיש הטוב",
+    "note": "You cannot attach the definite article only to the adjective; the noun must have it as well."
+   },
+   {
+    "wrong": "ה שמש",
+    "right": "השמש",
+    "note": "The definite article ה- must be attached directly as a prefix to the word with no space."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'the big dog' in Hebrew?",
+    "options": [
+     "הכלב גדול",
+     "כלב הגדול",
+     "הכלב הגדול",
+     "כלב גדול"
+    ],
+    "answer": 2,
+    "explanation": "In an attributive definite phrase, both the noun and the adjective require the definite prefix: הכלב הגדול."
+   },
+   {
+    "question": "What does the sentence 'הקפה חם' mean?",
+    "options": [
+     "the hot coffee",
+     "the coffee is hot",
+     "a hot coffee",
+     "hot coffee"
+    ],
+    "answer": 1,
+    "explanation": "Because חם lacks the prefix ה-, this forms a complete sentence: 'The coffee is hot'."
+   },
+   {
+    "question": "Complete the phrase 'the new apartment': הדירה ___",
+    "options": [
+     "חדש",
+     "החדשה",
+     "חדשה",
+     "החדש"
+    ],
+    "answer": 1,
+    "explanation": "Since דירה is feminine singular and has the definite article ה-, the adjective must match: feminine singular with ה- (החדשה)."
+   },
+   {
+    "question": "Which of the following phrases correctly translates 'the small cities' (ערים is feminine plural)?",
+    "options": [
+     "הערים הקטנים",
+     "ערים הקטנות",
+     "הערים קטנות",
+     "הערים הקטנות"
+    ],
+    "answer": 3,
+    "explanation": "ערים is feminine plural and definite, so the adjective must be feminine plural and definite: הערים הקטנות."
+   }
+  ],
+  "tip": "Double check double ה-: If your English phrase is 'the [adjective] [noun]', Hebrew requires 'ha-[noun] ha-[adjective]'. Dropping the second ה turns it into a full sentence with 'is'!"
+ },
+ {
+  "id": "he-a1-preposition-et-direct-object",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🎯",
+  "title": "The Direct Object Marker (את)",
+  "subtitle": "Connecting transitive verbs to specific direct objects",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "The particle את (et) must be placed before a definite direct object (proper names, nouns with ה-, or possessives), but is completely omitted before indefinite nouns.",
+  "structure": {
+   "headers": [
+    "Object Type",
+    "Rule",
+    "Hebrew Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Indefinite Object",
+      "No את",
+      "אני רואה סרט",
+      "I see a movie"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Definite with ה-",
+      "Use את לפני ה-",
+      "אני רואה את הסרט",
+      "I see the movie"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Proper Name",
+      "Use את before name",
+      "דני פוגש את שרה",
+      "Danny meets Sarah"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "With Pronoun Suffix",
+      "Merged with את",
+      "היא אוהבת אותו",
+      "She loves him"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Definite Noun with Article",
+    "example": "הם שותים את המיץ בארוחת הבוקר.",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Person or City Name",
+    "example": "אני מבקר את ירושלים ואת משה.",
+    "translation": ""
+   },
+   {
+    "color": "#9333EA",
+    "label": "Indefinite Contrast",
+    "example": "יוסי קונה ספר ולא את העיתון.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "יוסי אוכל את התפוח האדום.",
+    "ko": "",
+    "highlight": "את התפוח"
+   },
+   {
+    "en": "אני מכיר את דוד מהאוניברסיטה.",
+    "ko": "",
+    "highlight": "את דוד"
+   },
+   {
+    "en": "אנחנו רואים סרט בקולנוע.",
+    "ko": "",
+    "highlight": "רואים סרט"
+   },
+   {
+    "en": "מי שותה את הקפה הזה?",
+    "ko": "",
+    "highlight": "את הקפה"
+   },
+   {
+    "en": "הילדה מחפשת את הכלב שלה.",
+    "ko": "",
+    "highlight": "את הכלב"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "אני אוהב את שוקולד",
+    "right": "אני אוהב שוקולד / אני אוהב את השוקולד",
+    "note": "Never use את before general or indefinite nouns that lack ה- or a definite identifier."
+   },
+   {
+    "wrong": "ראיתי הילד בפארק",
+    "right": "ראיתי את הילד בפארק",
+    "note": "When the direct object is definite (הילד), את is mandatory and cannot be omitted."
+   },
+   {
+    "wrong": "הוא הולך את תל אביב",
+    "right": "הוא הולך לתל אביב",
+    "note": "את only marks direct objects received by transitive verbs, not destinations or directions."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'אני רואה ___ מורה בכיתה.' (I see the teacher)",
+    "options": [
+     "מורה",
+     "את",
+     "את המורה",
+     "ה"
+    ],
+    "answer": 2,
+    "explanation": "'The teacher' is a definite direct object, requiring both the marker את and the article ה-."
+   },
+   {
+    "question": "Choose the correct translation for 'Ron drinks water':",
+    "options": [
+     "רון שותה את מים",
+     "רון שותה את המים",
+     "רון שותה מים",
+     "רון שותה למים"
+    ],
+    "answer": 2,
+    "explanation": "'Water' is indefinite in this sentence, so את must not be used."
+   },
+   {
+    "question": "Which sentence correctly says 'We know Michal'?",
+    "options": [
+     "אנחנו מכירים מיכל",
+     "אנחנו מכירים את מיכל",
+     "אנחנו מכירים למיכל",
+     "אנחנו מכירים את ה מיכל"
+    ],
+    "answer": 1,
+    "explanation": "Proper names are inherently definite, so proper direct objects require את (without ה-)."
+   },
+   {
+    "question": "Choose the correct translation: 'The girl is reading the letter.'",
+    "options": [
+     "הילדה קוראת המכתב.",
+     "הילדה קוראת למכתב.",
+     "הילדה קוראת מכתב.",
+     "הילדה קוראת את המכתב."
+    ],
+    "answer": 3,
+    "explanation": "Because 'the letter' (המכתב) is definite, the transitive verb קוראת must take את המכתב."
+   }
+  ],
+  "tip": "Think of את as an untranslatable grammatical flag: if you can point to a specific 'the' or a named person receiving the action, raise the 'את' flag!"
+ },
+ {
+  "id": "he-a1-inseparable-prepositions",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🧩",
+  "title": "Inseparable Prepositions (ב, ל, כ, מ)",
+  "subtitle": "Attaching single-letter prepositions and merging definite articles",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The single-letter prepositions ב- (in/at), ל- (to/for), כ- (as/like), and מ- (from) attach directly to nouns, and when combined with the definite article, ב/ל/כ absorb the ה and adopt its 'a' vowel.",
+  "structure": {
+   "headers": [
+    "Preposition",
+    "Indefinite Form",
+    "Definite Merge (with ה-)",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ב (in / at)",
+      "בְּבַיִת (be-bayit)",
+      "בַּבַּיִת (ba-bayit)",
+      "in a house / in the house"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ל (to / for)",
+      "לְיֶלֶד (le-yeled)",
+      "לַיֶּלֶד (la-yeled)",
+      "to a boy / to the boy"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "מ (from)",
+      "מִבַּיִת (mi-bayit)",
+      "מֵהַבַּיִת (me-ha-bayit)",
+      "from a house / from the house"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "כ (as / like)",
+      "כְּמֶלֶךְ (ke-melekh)",
+      "כַּמֶּלֶךְ (ka-melekh)",
+      "like a king / like the king"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Location (ב-)",
+    "example": "הספרים נמצאים בספרייה של העיר.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Direction or Recipient (ל-)",
+    "example": "דני נותן מתנה יפה למורה.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Source or Origin (מ-)",
+    "example": "התיירים מגיעים מארצות הברית.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "דוד גר בבית גדול ליד הים.",
+    "ko": "",
+    "highlight": "בבית"
+   },
+   {
+    "en": "אנחנו נוסעים לירושלים מחר בבוקר.",
+    "ko": "",
+    "highlight": "לירושלים"
+   },
+   {
+    "en": "רחל חוזרת מהעבודה בשעה חמש.",
+    "ko": "",
+    "highlight": "מהעבודה"
+   },
+   {
+    "en": "התלמידים יושבים בכיתה ולומדים.",
+    "ko": "",
+    "highlight": "בכיתה"
+   },
+   {
+    "en": "הוא שלח הודעה לחבר שלו.",
+    "ko": "",
+    "highlight": "לחבר"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "אני הולך ב הבית",
+    "right": "אני הולך לבית / לַבַּיִת",
+    "note": "Prepositions cannot stand detached with spaces, and going 'to' requires ל-, not ב-."
+   },
+   {
+    "wrong": "הוא הולך לְהַחנות",
+    "right": "הוא הולך לַחנות",
+    "note": "When attaching ל-, ב-, or כ- to a definite noun, the letter ה drops and transfers its vowel (lah-khanut, not le-ha-khanut)."
+   },
+   {
+    "wrong": "מבית הספר (meaning: from THE school)",
+    "right": "מהבית ספר / מבית הספר",
+    "note": "With מ-, the letter ה is NOT swallowed; it stays as מה- (me-ha-)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you write 'in the room' (the room = החדר) in Hebrew script?",
+    "options": [
+     "בחדר",
+     "בהחדר",
+     "ב חדר",
+     "לחדר"
+    ],
+    "answer": 0,
+    "explanation": "When ב- attaches to a definite noun like החדר, the ה drops in spelling/speech (vowel becomes 'ba'), written simply as בחדר."
+   },
+   {
+    "question": "Which prefix correctly expresses 'from' in 'from the store'?",
+    "options": [
+     "ב",
+     "ל",
+     "מה",
+     "כ"
+    ],
+    "answer": 2,
+    "explanation": "The preposition מ- keeps the definite article intact, prefixing as מה- (from the)."
+   },
+   {
+    "question": "Fill in the blank: 'אנחנו נוסעים ___ תל אביב.' (to Tel Aviv)",
+    "options": [
+     "בתל אביב",
+     "מתל אביב",
+     "כתל אביב",
+     "לתל אביב"
+    ],
+    "answer": 3,
+    "explanation": "Destination 'to' is denoted by the inseparable preposition ל- attached directly to תל אביב."
+   },
+   {
+    "question": "Choose the correct phrase for 'to a friend' (indefinite friend = חבר):",
+    "options": [
+     "לחבר",
+     "להחבר",
+     "ל חבר",
+     "ב חבר"
+    ],
+    "answer": 0,
+    "explanation": "The preposition ל- prefixes directly to the indefinite noun without spaces: לחבר (le-khaver)."
+   }
+  ],
+  "tip": "Remember the acronym בֶּלֶ״ך (Be, Le, Ke): these three swallow the letter ה when definite (be + ha = ba, le + ha = la), while מ (Me) keeps the ה visible (me-ha-)!"
+ },
+ {
+  "id": "he-a1-nominal-sentences-and-yesh-ein",
+  "level": "a1",
+  "category": "clauses",
+  "categoryColor": "#0891B2",
+  "emoji": "⚖️",
+  "title": "Nominal Sentences and Existence (יש / אין)",
+  "subtitle": "Forming present-tense equational sentences and expressing existence or possession",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "Hebrew has no present tense 'to be' (am/is/are), using direct noun-adjective placement instead, while existence and possession are expressed with יש (there is / to have) and אין (there is not / to not have).",
+  "structure": {
+   "headers": [
+    "Type",
+    "Pattern",
+    "Hebrew Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Equational (Identity)",
+      "Noun + Noun/Adj",
+      "דני מורה",
+      "Danny is a teacher"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Existence (Positive)",
+      "יש + Noun",
+      "יש קפה",
+      "There is coffee"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Existence (Negative)",
+      "אין + Noun",
+      "אין חלב",
+      "There is no milk"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Possession",
+      "יש / אין + ל- + Noun",
+      "יש לי זמן",
+      "I have time"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Zero Copula Description",
+    "example": "יונתן עייף היום מאוד.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Availability / Existence",
+    "example": "יש מקום פנוי באוטובוס?",
+    "translation": ""
+   },
+   {
+    "color": "#E11D48",
+    "label": "Possession with Preposition ל-",
+    "example": "אין לנו שיעור מחר בבוקר.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "שלום, אני דני ואני סטודנט.",
+    "ko": "",
+    "highlight": "אני סטודנט"
+   },
+   {
+    "en": "יש מים קרים במקרר?",
+    "ko": "",
+    "highlight": "יש מים"
+   },
+   {
+    "en": "אין לחם טרי בחנות היום.",
+    "ko": "",
+    "highlight": "אין לחם"
+   },
+   {
+    "en": "יש לתלמידים מבחן קשה מחר.",
+    "ko": "",
+    "highlight": "יש לתלמידים"
+   },
+   {
+    "en": "אין לי זמן לדבר עכשיו.",
+    "ko": "",
+    "highlight": "אין לי"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "אני הוא תלמיד",
+    "right": "אני תלמיד",
+    "note": "Do not attempt to insert a copula like 'is' or 'am'; simply juxtapose the subject and predicate."
+   },
+   {
+    "wrong": "אני יש לי ספר",
+    "right": "יש לי ספר",
+    "note": "Possession in Hebrew uses 'יש ל-' (there is to me), so adding unnecessary subject pronouns is ungrammatical."
+   },
+   {
+    "wrong": "לא יש חלב במטבח",
+    "right": "אין חלב במטבח",
+    "note": "Never negate יש with 'לא יש'; the negative existential word is strictly אין."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'We do not have bread' in Hebrew?",
+    "options": [
+     "אנחנו לא יש לחם",
+     "אין לנו לחם",
+     "לא יש לנו לחם",
+     "אין אנחנו לחם"
+    ],
+    "answer": 1,
+    "explanation": "Possession is negated using אין combined with the preposition ל- inflected for 'us' (לנו): אין לנו לחם."
+   },
+   {
+    "question": "Complete the equational sentence: 'היא ___' (She is a doctor [f.]):",
+    "options": [
+     "יש רופאה",
+     "היא רופאה",
+     "רופאה",
+     "תהיה רופאה"
+    ],
+    "answer": 2,
+    "explanation": "In present-tense nominal sentences, the pronoun and noun link directly without any helper verb: היא רופאה."
+   },
+   {
+    "question": "Choose the Hebrew sentence meaning 'Is there water here?':",
+    "options": [
+     "פה מים?",
+     "אין מים פה?",
+     "אתה מים פה?",
+     "יש מים פה?"
+    ],
+    "answer": 3,
+    "explanation": "Existential 'is there' is expressed using יש: יש מים פה?"
+   },
+   {
+    "question": "Which sentence correctly says 'I have a dog'?",
+    "options": [
+     "יש לי כלב",
+     "אני יש כלב",
+     "אני כלב",
+     "לי יש לי כלב"
+    ],
+    "answer": 0,
+    "explanation": "Hebrew expresses 'I have' literally as 'there is to me': יש לי."
+   }
+  ],
+  "tip": "To master possession in Hebrew, replace the English verb 'to have' in your mind with 'there is to...': 'יש לי' (there is to me), 'יש לך' (there is to you)."
+ },
+ {
+  "id": "he-a1-paal-present-tense",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "✍️",
+  "title": "Binyan Pa'al Present Tense (Kotev Pattern)",
+  "subtitle": "Conjugate foundational active verbs across masculine, feminine, singular, and plural",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "In Hebrew present tense, verbs do not conjugate by person (I, you, he), but only by the gender and number of the subject using four standard endings.",
+  "structure": {
+   "headers": [
+    "Gender & Number",
+    "Vowel Pattern",
+    "Hebrew Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Singular",
+      "פּוֹעֵל (o-e)",
+      "כּוֹתֵב",
+      "writes / is writing (m.sg)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine Singular",
+      "פּוֹעֶלֶת (o-e-et)",
+      "כּוֹתֶבֶת",
+      "writes / is writing (f.sg)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masculine Plural",
+      "פּוֹעֲלִים (o-im)",
+      "כּוֹתְבִים",
+      "write / are writing (m.pl)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine Plural",
+      "פּוֹעֲלוֹת (o-ot)",
+      "כּוֹתְבוֹת",
+      "write / are writing (f.pl)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Habitual or Daily Routine",
+    "example": "דני כותב מכתב בכל שבוע.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Current Action (Present Continuous)",
+    "example": "אני לומד עברית עכשיו.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "General State or Fact",
+    "example": "הילדים אוהבים גלידה בקיץ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "יוסי כותב מייל לחבר שלו.",
+    "ko": "",
+    "highlight": "כותב"
+   },
+   {
+    "en": "מיכל קוראת ספר חדש בסלון.",
+    "ko": "",
+    "highlight": "קוראת"
+   },
+   {
+    "en": "התלמידים לומדים בכיתה כל בוקר.",
+    "ko": "",
+    "highlight": "לומדים"
+   },
+   {
+    "en": "הבנות שותות מים קרים בחוף.",
+    "ko": "",
+    "highlight": "שותות"
+   },
+   {
+    "en": "אנחנו עובדים במשרד בתל אביב.",
+    "ko": "",
+    "highlight": "עובדים"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "אני כותב מכתב (spoken by a female speaker)",
+    "right": "אני כותבת מכתב",
+    "note": "The pronoun אני takes the feminine verb ending when the speaker is a woman."
+   },
+   {
+    "wrong": "הם כותב מיילים כל יום.",
+    "right": "הם כותבים מיילים כל יום.",
+    "note": "Plural subjects require the plural verb suffix -im (-ים) or -ot (-ות)."
+   },
+   {
+    "wrong": "היא אוהב שוקולד.",
+    "right": "היא אוהבת שוקולד.",
+    "note": "Singular feminine subjects take the -et (-ת) pattern in Binyan Pa'al."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Sarah says: 'I am reading a book.' Which form fits? 'אני ___ ספר.'",
+    "options": [
+     "קורא",
+     "קוראת",
+     "קוראים",
+     "קוראות"
+    ],
+    "answer": 1,
+    "explanation": "Sarah is a feminine singular speaker, requiring the feminine singular present form קוראת."
+   },
+   {
+    "question": "Choose the correct form for 'The boys are learning Hebrew': 'הבנים ___ עברית.'",
+    "options": [
+     "לומד",
+     "לומדת",
+     "לומדים",
+     "לומדות"
+    ],
+    "answer": 2,
+    "explanation": "הבנים is masculine plural, requiring the plural suffix -im in לומדים."
+   },
+   {
+    "question": "Choose the masculine singular form: 'David ___ coffee now.' 'דוד ___ קפה עכשיו.'",
+    "options": [
+     "שותה",
+     "שותת",
+     "שותים",
+     "שותות"
+    ],
+    "answer": 0,
+    "explanation": "David is masculine singular, so the root ש-ת-ה takes the masculine singular present form שותה."
+   },
+   {
+    "question": "Choose the correct form for 'The female students write well': 'הסטודנטיות ___ טוב.'",
+    "options": [
+     "כותב",
+     "כותבת",
+     "כותבים",
+     "כותבות"
+    ],
+    "answer": 3,
+    "explanation": "הסטודנטיות is feminine plural, demanding the feminine plural ending כותבות."
+   }
+  ],
+  "tip": "Because Hebrew has no auxiliary verb like 'is/are' in the present tense, כותב means both 'writes' and 'is writing'."
+ },
+ {
+  "id": "he-a2-prepositional-pronoun-suffixes",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🔗",
+  "title": "Inflected Prepositions with Pronominal Suffixes",
+  "subtitle": "Attach personal endings to prepositions like le-, be-, ot-, and al-",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Hebrew combines prepositions directly with personal pronouns into single fused words instead of keeping them separate.",
+  "structure": {
+   "headers": [
+    "Person / Number",
+    "Preposition לְ־ (to/for)",
+    "Preposition אֶת (direct object)",
+    "Preposition עַל (on/about)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Person Sg. (I)",
+      "לִי (to me)",
+      "אוֹתִי (me)",
+      "עָלַי (on me)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Person Sg. M. (you m.)",
+      "לְךָ (to you)",
+      "אוֹתְךָ (you)",
+      "עָלֶיךָ (on you)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person Sg. M. (he/him)",
+      "לוֹ (to him)",
+      "אוֹתוֹ (him)",
+      "עָלָיו (on him)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person Sg. F. (she/her)",
+      "לָהּ (to her)",
+      "אוֹתָהּ (her)",
+      "עָלֶיהָ (on her)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Expressing Possession with יש",
+    "example": "יש לי ספר מעניין מאוד.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Definite Direct Objects with את",
+    "example": "ראיתי אותו אתמול בקניון.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Topics of Thought or Speech with על",
+    "example": "הם מדברים עלינו כל הזמן.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "דני סיפר לי סיפור מצחיק.",
+    "ko": "",
+    "highlight": "לי"
+   },
+   {
+    "en": "המורה ראתה אותה בספרייה.",
+    "ko": "",
+    "highlight": "אותה"
+   },
+   {
+    "en": "אין לו זמן ללכת לסרט.",
+    "ko": "",
+    "highlight": "לו"
+   },
+   {
+    "en": "אנחנו חושבים עליכם הרבה.",
+    "ko": "",
+    "highlight": "עליכם"
+   },
+   {
+    "en": "הבאתי לך מתנה יפה.",
+    "ko": "",
+    "highlight": "לך"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "יש אל אני כלב בבית.",
+    "right": "יש לי כלב בבית.",
+    "note": "Never place an independent pronoun like אני after an uninflected particle; fuse them into לי."
+   },
+   {
+    "wrong": "ראיתי את הוא אתמול.",
+    "right": "ראיתי אותו אתמול.",
+    "note": "The direct object marker את inflects into אותו, אותה, etc., rather than taking raw pronouns."
+   },
+   {
+    "wrong": "דיברנו על הוא בפגישה.",
+    "right": "דיברנו עליו בפגישה.",
+    "note": "The preposition על fuses using plural-type suffixes, yielding עליו, not על הוא."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank for 'I saw him yesterday': 'ראיתי ___ אתמול.'",
+    "options": [
+     "אותו",
+     "אותי",
+     "אותה",
+     "אותם"
+    ],
+    "answer": 0,
+    "explanation": "אותו represents 'him' (direct object marker את + 3rd person singular masculine suffix)."
+   },
+   {
+    "question": "Complete the phrase 'Do you (m.sg.) have time?': 'יש ___ זמן?'",
+    "options": [
+     "לי",
+     "לה",
+     "לךָ",
+     "לנו"
+    ],
+    "answer": 2,
+    "explanation": "לךָ (spelled לך) is the 2nd person masculine singular inflection of לְ־."
+   },
+   {
+    "question": "Complete 'She told us the news': 'היא אמרה ___ את החדשות.'",
+    "options": [
+     "לו",
+     "להם",
+     "לי",
+     "לנו"
+    ],
+    "answer": 3,
+    "explanation": "לנו means 'to us' (1st person plural)."
+   },
+   {
+    "question": "Fill in 'Why are you talking about her?': 'למה אתם מדברים ___?'",
+    "options": [
+     "עליו",
+     "עליה",
+     "עלינו",
+     "עליך"
+    ],
+    "answer": 1,
+    "explanation": "עליה means 'about her' (preposition על inflected for 3rd person feminine singular)."
+   }
+  ],
+  "tip": "Prepositions fall into two suffix families: singular-style like לִי / בּוֹ and plural-style like עָלַי / אֵלָיו."
+ },
+ {
+  "id": "he-a2-construct-state-smikhut",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🏛️",
+  "title": "The Construct State (Smikhut)",
+  "subtitle": "Link two nouns into compound phrases and definite chains",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "In a smikhut construct chain, only the final noun can take the definite article הַ־, which makes the entire chain definite.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Independent Base",
+    "Construct Form (N1)",
+    "Complete Compound"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Feminine Singular (-ah to -at)",
+      "עוּגָה",
+      "עוּגַת־",
+      "עוגת שוקולד (chocolate cake)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masculine Plural (-im to -ei)",
+      "סְפָרִים",
+      "סִפְרֵי־",
+      "ספרי לימוד (textbooks)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine Plural (-ot remains -ot)",
+      "תְּמוּנוֹת",
+      "תְּמוּנוֹת־",
+      "תמונות מחזור (yearbook photos)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Unchanged Masculine Sg.",
+      "בַּיִת",
+      "בֵּית־",
+      "בית ספר (school)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Compounds & Fixed Terms",
+    "example": "הילדים הולכים אל בית ספר ברגל.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Definite Smikhut Chains",
+    "example": "שתיתי את מיץ התפוזים בבוקר.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Possession & Affiliation",
+    "example": "מפתח הבית נמצא על השולחן.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "אנחנו אוהבים עוגת גבינה טעימה.",
+    "ko": "",
+    "highlight": "עוגת גבינה"
+   },
+   {
+    "en": "זה בית הספר הכי ישן בעיר.",
+    "ko": "",
+    "highlight": "בית הספר"
+   },
+   {
+    "en": "קראתי את ספרי ההיסטוריה החדשים.",
+    "ko": "",
+    "highlight": "ספרי ההיסטוריה"
+   },
+   {
+    "en": "יש פה תחנת רכבת מרכזית.",
+    "ko": "",
+    "highlight": "תחנת רכבת"
+   },
+   {
+    "en": "הזמנתי כוס קפה בבית הקפה.",
+    "ko": "",
+    "highlight": "כוס קפה"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "הבית ספר סגור היום.",
+    "right": "בית הספר סגור היום.",
+    "note": "Never put the definite article ה- on the first word of a construct chain; attach it solely to the second noun."
+   },
+   {
+    "wrong": "אכלתי עוגה שוקולד מעולה.",
+    "right": "אכלתי עוגת שוקולד מעולה.",
+    "note": "Singular feminine nouns ending in ה- change to ת- when in the construct state (עוגה becomes עוגת)."
+   },
+   {
+    "wrong": "קניתי ספרים לימוד חדשים.",
+    "right": "קניתי ספרי לימוד חדשים.",
+    "note": "Masculine plural nouns drop the final ם- and change ending to י- (ספרים becomes ספרי)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which phrase correctly says 'the train station'?",
+    "options": [
+     "התחנת רכבת",
+     "תחנת הרכבת",
+     "התחנה הרכבת",
+     "תחנה הרכבת"
+    ],
+    "answer": 1,
+    "explanation": "In smikhut, the first noun drops its independent ending (תחנה -> תחנת) and the definite article ה- attaches only to the second noun."
+   },
+   {
+    "question": "Choose the correct construct form of 'עוגה' (cake) in 'lemon cake': '___ לימון.'",
+    "options": [
+     "עוגות",
+     "עוגת",
+     "עוגה",
+     "עוגי"
+    ],
+    "answer": 1,
+    "explanation": "Feminine singular nouns ending in ה- systematically replace ה with ת in smikhut, giving עוגת."
+   },
+   {
+    "question": "How do you say 'the language teachers' (masculine plural)?",
+    "options": [
+     "מורים השפה",
+     "המורי שפה",
+     "מורי השפה",
+     "המורים השפה"
+    ],
+    "answer": 2,
+    "explanation": "Plural construct drops the final mem (מורים -> מורי) and definiteness attaches to the second noun (השפה)."
+   },
+   {
+    "question": "Which of the following represents a correct indefinite smikhut for 'orange juice'?",
+    "options": [
+     "מיץ תפוזים",
+     "המיץ תפוז",
+     "מיצים תפוזים",
+     "מיץ התפוזים"
+    ],
+    "answer": 0,
+    "explanation": "מיץ תפוזים is the standard indefinite construct pair for 'orange juice' without any definite articles."
+   }
+  ],
+  "tip": "Adjectives modifying a smikhut phrase always appear at the very end of the entire chain and match the gender and number of the FIRST noun."
+ },
+ {
+  "id": "he-a2-paal-past-tense",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🕰️",
+  "title": "Binyan Pa'al Past Tense Conjugation",
+  "subtitle": "Conjugate three-letter roots using person-identifying suffixes",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Unlike the present tense, Hebrew past tense verbs conjugate across all grammatical persons by appending distinct person-identifying suffixes to the base stem.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Suffix Pattern",
+    "Hebrew Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Person Sg. (I)",
+      "־תִּי (-ti)",
+      "כָּתַבְתִּי",
+      "I wrote"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Person Sg. M. (you)",
+      "־תָּ (-ta)",
+      "כָּתַבְתָּ",
+      "you (m) wrote"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person Sg. M. (he/base)",
+      "— (no suffix)",
+      "כָּתַב",
+      "he wrote"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person Plural (they)",
+      "־וּ (-u)",
+      "כָּתְבוּ",
+      "they wrote"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Completed Past Actions",
+    "example": "אתמול שמרתי על הילדים של אחותי.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Narrating Sequential Events",
+    "example": "הוא חזר הביתה, פתח את הדלת ואכל.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Questions About Past Events",
+    "example": "מתי סגרתם את החנות אתמול?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "אתמול כתבתי מכתב ארוך להורים.",
+    "ko": "",
+    "highlight": "כתבתי"
+   },
+   {
+    "en": "היא למדה באוניברסיטה חמש שנים.",
+    "ko": "",
+    "highlight": "למדה"
+   },
+   {
+    "en": "איפה קנית את החולצה היפה הזאת?",
+    "ko": "",
+    "highlight": "קנית"
+   },
+   {
+    "en": "הם סגרו את כל החלונות בגלל הגשם.",
+    "ko": "",
+    "highlight": "סגרו"
+   },
+   {
+    "en": "אנחנו פגשנו את דני במרכז העיר.",
+    "ko": "",
+    "highlight": "פגשנו"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "אני כותב אתמול שיעורי בית.",
+    "right": "אני כתבתי אתמול שיעורי בית.",
+    "note": "Do not use present tense verbs for completed past actions; use the past tense form with -ti (-תי)."
+   },
+   {
+    "wrong": "אתה כתבתָ מכתב יפה.",
+    "right": "אתה כתבת מכתב יפה.",
+    "note": "Learners often write an extra letter hey (כתבתה); the masculine 2nd-person suffix is spelled simply with a tav (כתבת)."
+   },
+   {
+    "wrong": "הם כתבוּם את המבחן.",
+    "right": "הם כתבו את המבחן.",
+    "note": "The 3rd person plural past suffix is simply vav (־וּ), not an added mem."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank for 'I learned Hebrew yesterday': 'אתמול ___ עברית.'",
+    "options": [
+     "למד",
+     "למדתי",
+     "למדת",
+     "למדנו"
+    ],
+    "answer": 1,
+    "explanation": "The first-person singular past suffix is -ti (־תִּי), producing למדתי."
+   },
+   {
+    "question": "Fill in the blank for 'They closed the restaurant early': 'הם ___ את המסעדה מוקדם.'",
+    "options": [
+     "סגרו",
+     "סגר",
+     "סגרה",
+     "סגרתם"
+    ],
+    "answer": 0,
+    "explanation": "The 3rd person plural past suffix for both masculine and feminine is -u (־וּ), giving סגרו."
+   },
+   {
+    "question": "Fill in the blank for 'We met a good friend': 'אנחנו ___ חבר טוב.'",
+    "options": [
+     "פגשתי",
+     "פגשו",
+     "פגשנו",
+     "פגשתם"
+    ],
+    "answer": 2,
+    "explanation": "The 1st person plural suffix is -nu (־נוּ), yielding פגשנו."
+   },
+   {
+    "question": "Which verb correctly completes 'She wrote an email': 'היא ___ מייל'?",
+    "options": [
+     "כתב",
+     "כותבת",
+     "כתבו",
+     "כתבה"
+    ],
+    "answer": 3,
+    "explanation": "3rd person feminine singular takes a kamats + hey suffix (־ָה), yielding כָּתְבָה."
+   }
+  ],
+  "tip": "The 3rd-person masculine singular form (כָּתַב) has no suffix; it is the dictionary citation root for past tense verbs."
+ },
+ {
+  "id": "he-a2-binyan-piel-basics",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#8B5CF6",
+  "emoji": "⚡",
+  "title": "Binyan Pi'el (Present and Past)",
+  "subtitle": "Active intensive verbs marked by present prefix m- and characteristic vowels",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "In Binyan Pi'el, every present tense verb begins with the prefix מְ־, while the past tense features an 'i-e' vowel template.",
+  "structure": {
+   "headers": [
+    "Tense & Person",
+    "Vowel Pattern",
+    "Hebrew Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present Masc. Sg.",
+      "מְפַעֵל (m-a-el)",
+      "מְדַבֵּר",
+      "speaks / is speaking (m)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Present Fem. Sg.",
+      "מְפַעֶלֶת (m-a-elet)",
+      "מְדַבֶּרֶת",
+      "speaks / is speaking (f)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past 3rd Masc. Sg. (Base)",
+      "פִּעֵל (i-el)",
+      "דִּבֵּר",
+      "he spoke"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past 1st Person Sg.",
+      "פִּעַלְתִּי (i-al-ti)",
+      "דִּבַּרְתִּי",
+      "I spoke"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Active Communication & Actions",
+    "example": "הוא מדבר שלוש שפות שונות.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Seeking and Requesting",
+    "example": "ביקשתי עזרה מהפקיד בבנק.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Teaching and Instruction",
+    "example": "המורה מלמד היסטוריה בתיכון.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "הם מדברים עברית שוטפת.",
+    "ko": "",
+    "highlight": "מדברים"
+   },
+   {
+    "en": "אתמול שילמתי על כל הארוחה.",
+    "ko": "",
+    "highlight": "שילמתי"
+   },
+   {
+    "en": "מי מספר את הסיפור הזה?",
+    "ko": "",
+    "highlight": "מספר"
+   },
+   {
+    "en": "דני חיפש את המפתחות שלו שעה.",
+    "ko": "",
+    "highlight": "חיפש"
+   },
+   {
+    "en": "אנחנו מקבלים הרבה הודעות ביום.",
+    "ko": "",
+    "highlight": "מקבלים"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "אני דובר עברית. (meaning: I am speaking Hebrew right now)",
+    "right": "אני מדבר עברית.",
+    "note": "To express speaking as an active verb, use Binyan Pi'el (מדבר), not the Pa'al noun/participle דובר (which means 'spokesperson')."
+   },
+   {
+    "wrong": "אתמול דָבַרְתִּי איתו.",
+    "right": "אתמול דיברתי איתו.",
+    "note": "The root ד-ב-ר belongs to Binyan Pi'el; its past stem uses the 'i' vowel (דיברתי), never Pa'al vowels."
+   },
+   {
+    "wrong": "היא מדבר אנגלית מצוין.",
+    "right": "היא מדברת אנגלית מצוין.",
+    "note": "Feminine singular subjects require the feminine suffix -et (מדברת) in the present tense."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which verb correctly fills 'She is speaking on the phone': 'היא ___ בטלפון'?",
+    "options": [
+     "מדבר",
+     "מדברת",
+     "מדברים",
+     "מדברות"
+    ],
+    "answer": 1,
+    "explanation": "היא is feminine singular, requiring the Pi'el feminine present form מדברת."
+   },
+   {
+    "question": "Fill in the blank for 'I paid for the tickets': '___ על הכרטיסים.'",
+    "options": [
+     "שילם",
+     "משלם",
+     "שילמתי",
+     "שילמנו"
+    ],
+    "answer": 2,
+    "explanation": "The 1st person singular past in Pi'el adds -ti to the stem (שִׁילַּמְתִּי)."
+   },
+   {
+    "question": "Choose the past tense for 'He searched for his dog': 'הוא ___ את הכלב שלו.'",
+    "options": [
+     "מחפש",
+     "חיפשו",
+     "חיפשת",
+     "חיפש"
+    ],
+    "answer": 3,
+    "explanation": "The 3rd person masculine singular past in Pi'el follows the 'i-e' stem pattern without suffix: חִיפֵּשׂ."
+   },
+   {
+    "question": "Choose the masculine plural present form for 'They are looking for an apartment': 'הם ___ דירה.'",
+    "options": [
+     "מחפשים",
+     "מחפש",
+     "חיפשו",
+     "מחפשות"
+    ],
+    "answer": 0,
+    "explanation": "Masculine plural in Pi'el takes the m- prefix plus the plural suffix -im (מְחַפְּשִׂים)."
+   }
+  ],
+  "tip": "Almost all verbs in Binyan Pi'el share the letter mem (מ) as their very first letter in the present tense."
+ },
+ {
+  "id": "he-a2-binyan-hifil-basics",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⚡",
+  "title": "Binyan Hif'il: The Causative Stem",
+  "subtitle": "Forming causative and active verbs with characteristic prefixes",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Binyan Hif'il typically conveys causative actions marked by a he- prefix in the past tense and a ma- prefix in the present tense.",
+  "structure": {
+   "headers": [
+    "Tense / Form",
+    "Prefix Pattern",
+    "Hebrew Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present (m.sg)",
+      "מַ- (ma-)",
+      "מַזְמִין",
+      "invites / orders"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past (3rd m.sg)",
+      "הִ- (hi-)",
+      "הִזְמִין",
+      "invited / ordered"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Future (3rd m.sg)",
+      "יַ- (ya-)",
+      "יַזְמִין",
+      "will invite"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Infinitive",
+      "לְהַ- (leha-)",
+      "לְהַזְמִין",
+      "to invite"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Causative Action",
+    "example": "הַמּוֹרֶה מַרְגִּישׁ טוֹב הַיּוֹם בַּכִּתָּה.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Making Something Happen",
+    "example": "הֵם הִתְחִילוּ אֶת הַפְּגִישָׁה בִּזְמַן.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Invitations and Orders",
+    "example": "אֲנִי מַזְמִין שֻׁלְחָן לְאַרְבָּעָה בַּמִּסְעָדָה.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "הוּא מַסְבִּיר אֶת הַשִּׁעוּר לַתַּלְמִידִים.",
+    "ko": "",
+    "highlight": "מַסְבִּיר"
+   },
+   {
+    "en": "אֲנַחְנוּ הִזְמַנּוּ כַּרְטִיסִים לַקּוֹלְנוֹעַ.",
+    "ko": "",
+    "highlight": "הִזְמַנּוּ"
+   },
+   {
+    "en": "אַתָּה מַכִּיר אֶת הָאִישׁ הַזֶּה?",
+    "ko": "",
+    "highlight": "מַכִּיר"
+   },
+   {
+    "en": "הִיא הִגִּיעָה לָעֲבוֹדָה מֻקְדָּם הַבֹּקֶר.",
+    "ko": "",
+    "highlight": "הִגִּיעָה"
+   },
+   {
+    "en": "הַיְּלָדִים מַקְשִׁיבִים לַסִּפּוּר שֶׁל סַבָּא.",
+    "ko": "",
+    "highlight": "מַקְשִׁיבִים"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "הוּא סִבֵּיר אֶת הַכֹּל.",
+    "right": "הוּא הִסְבִּיר אֶת הַכֹּל.",
+    "note": "The root ס-ב-ר belongs to Hif'il for 'explaining', requiring the הִ- prefix in the past."
+   },
+   {
+    "wrong": "אֲנִי הִזְמַנְתִּי אוֹתוֹ לָבוֹא.",
+    "right": "הִזְמַנְתִּי אוֹתוֹ לָבוֹא.",
+    "note": "While pronoun inclusion isn't strictly ungrammatical, dropping redundant subject pronouns like אני in past 1st-person is natural; more critically, avoid confusing Hif'il suffixes with Pa'al."
+   },
+   {
+    "wrong": "הִיא מַרְגִּישׁ שִׂמְחָה גְּדוֹלָה.",
+    "right": "הִיא מַרְגִּישָׁה שִׂמְחָה גְּדוֹלָה.",
+    "note": "Present tense verbs in Hif'il must agree in gender; feminine singular takes the ־ָה (-ah) ending."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday, Dan ___ pizza for everyone.",
+    "options": [
+     "מַזְמִין",
+     "הִזְמִין",
+     "לְהַזְמִין",
+     "יַזְמִין"
+    ],
+    "answer": 1,
+    "explanation": "The past tense masculine singular in Binyan Hif'il uses the prefix הִ- (hizmin)."
+   },
+   {
+    "question": "The teacher (f.sg) ___ the new words right now.",
+    "options": [
+     "מַסְבִּירָה",
+     "הִסְבִּירָה",
+     "מַסְבִּיר",
+     "תַּסְבִּיר"
+    ],
+    "answer": 0,
+    "explanation": "Present tense feminine singular uses the prefix מַ- with feminine suffix ־ָה (masbirah)."
+   },
+   {
+    "question": "Do you want ___ to the radio?",
+    "options": [
+     "הִקְשִׁיב",
+     "מַקְשִׁיב",
+     "תַּקְשִׁיב",
+     "לְהַקְשִׁיב"
+    ],
+    "answer": 3,
+    "explanation": "After modal verbs like want, use the infinitive which in Hif'il starts with לְהַ- (lehaqshiv)."
+   },
+   {
+    "question": "Tomorrow we ___ the new project.",
+    "options": [
+     "הִתְחַלְנוּ",
+     "מַתְחִילִים",
+     "נַתְחִיל",
+     "יַתְחִילוּ"
+    ],
+    "answer": 2,
+    "explanation": "Future tense 1st person plural (we) takes the prefix נַ- (natchil)."
+   }
+  ],
+  "tip": "Spot Hif'il easily in vocabulary lists: present tense verbs almost always open with 'ma-' or 'me-', while past tense forms open with 'hi-'."
+ },
+ {
+  "id": "he-a2-binyan-hitpael-reflexive",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🪞",
+  "title": "Binyan Hitpa'el: Reflexive and Reciprocal",
+  "subtitle": "Mastering the hit- prefix and sibilant letter shifts",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Binyan Hitpa'el indicates reflexive or reciprocal actions using the prefix הִתְ- (hit-), which swaps positions when the root begins with a sibilant consonant like ש or ס.",
+  "structure": {
+   "headers": [
+    "Root Type",
+    "Root",
+    "Past Form (3rd m.sg)",
+    "Phonetic Feature"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Standard Root",
+      "ל-ב-שׁ",
+      "הִתְלַבֵּשׁ",
+      "Standard הִתְ- prefix"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Sibilant Root (ס)",
+      "ס-ר-ק",
+      "הִסְתָּרֵק",
+      "Metathesis: ת and ס swap"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Sibilant Root (שׁ)",
+      "ש-מ-שׁ",
+      "הִשְׁתַּמֵּשׁ",
+      "Metathesis: ת and ש swap"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Voiced Sibilant (ז)",
+      "ז-ק-ן",
+      "הִזְדַּקֵּן",
+      "Metathesis + voicing (ת becomes ד)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Reflexive Action (Self)",
+    "example": "הַיֶּלֶד מִתְלַבֵּשׁ לְבַד בַּבֹּקֶר.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Reciprocal Action (Mutual)",
+    "example": "הֵם מִתְכַּתְּבִים בְּהוֹדָעוֹת כָּל יוֹם.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Inner Process or State Change",
+    "example": "מֶזֶג הָאֲוִיר מִתְחַמֵּם בָּאָבִיב.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "דָּנִי מִשְׁתַּמֵּשׁ בַּמַּחְשֵׁב הַחֲדָשׁ שֶׁלּוֹ.",
+    "ko": "",
+    "highlight": "מִשְׁתַּמֵּשׁ"
+   },
+   {
+    "en": "הִיא הִסְתַּכְּלָה בַּמַּרְאָה לִפְנֵי שֶׁיָּצְאָה.",
+    "ko": "",
+    "highlight": "הִסְתַּכְּלָה"
+   },
+   {
+    "en": "אֲנַחְנוּ מִתְרַגְּשִׁים מְאוֹד מֵהַטִּיּוּל הַקָּרוֹב.",
+    "ko": "",
+    "highlight": "מִתְרַגְּשִׁים"
+   },
+   {
+    "en": "יוֹסִי הִתְנַצֵּל עַל הַטָּעוּת שֶׁעָשָׂה.",
+    "ko": "",
+    "highlight": "הִתְנַצֵּל"
+   },
+   {
+    "en": "הַחֲבֵרִים נִפְגְּשׁוּ וְהִתְחַבְּקוּ בָּרְחוֹב.",
+    "ko": "",
+    "highlight": "הִתְחַבְּקוּ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "הוּא הִתְשַׁמֵּשׁ בַּטֶּלֶפוֹן.",
+    "right": "הוּא הִשְׁתַּמֵּשׁ בַּטֶּלֶפוֹן.",
+    "note": "When the root starts with ש, the prefix letter ת must swap places with it (metathesis)."
+   },
+   {
+    "wrong": "הִיא הִתְסַדְּרָה בַּדִּירָה הַחֲדָשָׁה.",
+    "right": "הִיא הִסְתַּדְּרָה בַּדִּירָה הַחֲדָשָׁה.",
+    "note": "Roots starting with ס also swap positions with the prefix ת, yielding הִסְתַּ- instead of הִתְסַ-."
+   },
+   {
+    "wrong": "הוּא הִתְזַקֵּן בְּמֶשֶׁךְ הַשָּׁנִים.",
+    "right": "הוּא הִזְדַּקֵּן בְּמֶשֶׁךְ הַשָּׁנִים.",
+    "note": "With root letter ז, the prefix ת swaps and also changes into a ד to harmonize voicing."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Noa ___ every morning before school.",
+    "options": [
+     "מִסְתָּרֶקֶת",
+     "מִתְסָרֶקֶת",
+     "סוֹרֶקֶת",
+     "הִסְתָּרֵק"
+    ],
+    "answer": 0,
+    "explanation": "Roots starting with ס undergo metathesis: the ת moves behind the ס, producing מִסְתָּרֶקֶת."
+   },
+   {
+    "question": "Yesterday they ___ outside the cinema.",
+    "options": [
+     "נִפְגָּשׁ",
+     "מִתְרָאִים",
+     "הִתְרָאוּ",
+     "יִתְרָאוּ"
+    ],
+    "answer": 2,
+    "explanation": "Past tense 3rd person plural for 'saw each other' is הִתְרָאוּ (hitra'u)."
+   },
+   {
+    "question": "I usually ___ by train to work.",
+    "options": [
+     "מִתְנַהֵג",
+     "מִשְׁתַּמֵּשׁ",
+     "מִסְתַּכֵּל",
+     "מִתְקַדֵּם"
+    ],
+    "answer": 1,
+    "explanation": "מִשְׁתַּמֵּשׁ (uses) features metathesis between ש and ת and fits the context of using transport."
+   },
+   {
+    "question": "The boy ___ when his mother entered.",
+    "options": [
+     "הִתְבַּיֵּשׁ",
+     "מִתְבַּיֵּשׁ",
+     "בִּיֵּשׁ",
+     "יִתְבַּיֵּשׁ"
+    ],
+    "answer": 0,
+    "explanation": "Past tense masculine singular of ב-ו-ש/ב-י-ש in Hitpa'el is הִתְבַּיֵּשׁ (was shy / ashamed)."
+   }
+  ],
+  "tip": "Whenever you encounter a root starting with ש, שׂ, ס, or צ in Hitpa'el, remember the 'dance step': the prefix ת always steps behind that first consonant!"
+ },
+ {
+  "id": "he-b1-weak-roots-paal-gutturals-and-hollow",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🕳️",
+  "title": "Weak Roots in Pa'al: Gutturals and Hollow Verbs",
+  "subtitle": "Navigating vowel shifts and disappearing middle letters",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Hollow roots collapse their middle vav or yod in the past tense into a two-letter base, while guttural consonants force neighboring vowels to shift toward 'a' (patach).",
+  "structure": {
+   "headers": [
+    "Root Class",
+    "Root",
+    "Present (m.sg)",
+    "Past (3rd m.sg)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Regular (Strong)",
+      "כ-ת-ב",
+      "כּוֹתֵב",
+      "כָּתַב"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Hollow (Ayin-Vav)",
+      "ק-ו-ם",
+      "קָם",
+      "קָם"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Hollow (Ayin-Yod)",
+      "ש-י-ר",
+      "שָׁר",
+      "שָׁר"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Lamed-Guttural",
+      "ש-מ-ע",
+      "שׁוֹמֵעַ",
+      "שָׁמַע"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Hollow Verbs (Movement/State)",
+    "example": "הוּא קָם בְּשֶׁבַע בַּבֹּקֶר כָּל יוֹם.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Guttural Final Consonants (ח/ע)",
+    "example": "אֲנִי שׁוֹמֵעַ אֶת הַמּוּזִיקָה הַיָּפָה הַזֹּאת.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Travel and Living Hollow Roots",
+    "example": "הֵם גָּרִים בִּירוּשָׁלַיִם כְּבָר חָמֵשׁ שָׁנִים.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "הִיא שָׂמָה אֶת הַמַּפְתְּחוֹת עַל הַשֻּׁלְחָן.",
+    "ko": "",
+    "highlight": "שָׂמָה"
+   },
+   {
+    "en": "אֶתְמוֹל רַצְנוּ חֲמִשָּׁה קִילוֹמֶטְרִים בַּפַּארְק.",
+    "ko": "",
+    "highlight": "רַצְנוּ"
+   },
+   {
+    "en": "הַיֶּלֶד פּוֹתֵחַ אֶת הַדֶּלֶת לָאוֹרְחִים.",
+    "ko": "",
+    "highlight": "פּוֹתֵחַ"
+   },
+   {
+    "en": "שָׁמַעְתִּי שֶׁאַתֶּם טָסִים לְאִיטַלְיָה בַּקַּיִץ.",
+    "ko": "",
+    "highlight": "טָסִים"
+   },
+   {
+    "en": "הֵם לֹא יָדְעוּ מָה לַעֲשׂוֹת בַּמַּצָּב הַזֶּה.",
+    "ko": "",
+    "highlight": "יָדְעוּ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "הוּא קָוַם מֻקְדָּם הַיּוֹם.",
+    "right": "הוּא קָם מֻקְדָּם הַיּוֹם.",
+    "note": "Hollow roots like ק-ו-ם lose their middle vav in past tense 3rd person; never conjugate them like standard three-letter strong roots."
+   },
+   {
+    "wrong": "אֲנִי שׁוֹמֵעְ אֶת הַשִּׁיר.",
+    "right": "אֲנִי שׁוֹמֵעַ אֶת הַשִּׁיר.",
+    "note": "Final gutturals (ח and ע) demand an 'a' glide (patach gnuvah) right before them, pronounced 'shome'a'."
+   },
+   {
+    "wrong": "אֶתְמוֹל שַׁרְתִּי שִׁיר וְהוּא שָׁיַר אִתִּי.",
+    "right": "אֶתְמוֹל שַׁרְתִּי שִׁיר וְהוּא שָׁר אִתִּי.",
+    "note": "The middle yod of ש-י-ר drops out in 3rd person past, giving שָׁר rather than a tri-consonantal שָׁיַר."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday, Sarah ___ from Tel Aviv to London.",
+    "options": [
+     "טָסָה",
+     "טָס",
+     "טוּסָה",
+     "תָּטוּס"
+    ],
+    "answer": 0,
+    "explanation": "In hollow roots (ט-ו-ס), the past feminine singular is formed by adding ־ָה to the two-letter base: טָסָה (tasa)."
+   },
+   {
+    "question": "I (m.sg) am ___ the window because it is hot.",
+    "options": [
+     "פּוֹתֵחַ",
+     "פּוֹתֵח",
+     "פָּתַחְתִּי",
+     "יִפְתַּח"
+    ],
+    "answer": 0,
+    "explanation": "Roots ending in guttural ח take a furtive patach in the present masculine singular: פּוֹתֵחַ (pote'ach)."
+   },
+   {
+    "question": "We ___ in an apartment near the sea last year.",
+    "options": [
+     "גָּרִים",
+     "יָגוּרוּ",
+     "גַּרְנוּ",
+     "לָגוּר"
+    ],
+    "answer": 2,
+    "explanation": "The past 1st-person plural of ג-ו-ר takes the two-letter stem plus standard suffix ־נוּ: גַּרְנוּ (garnu)."
+   },
+   {
+    "question": "Dan ___ his coffee very fast this morning.",
+    "options": [
+     "שׁוֹתֶה",
+     "שָׁתָה",
+     "יִשְׁתֶּה",
+     "לִשְׁתּוֹת"
+    ],
+    "answer": 1,
+    "explanation": "Weak Lamed-He root ש-ת-ה in past 3rd person masculine singular becomes שָׁתָה (shata)."
+   }
+  ],
+  "tip": "For hollow verbs (ק-ו-ם, ג-ו-ר, ש-ׂי-ם), the 3rd person masculine singular past (קָם) and present (קָם) look identical without vowel marks; context will clarify tense!"
+ },
+ {
+  "id": "he-b1-future-tense-prefixes",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🚀",
+  "title": "Future Tense Formation Across Binyanim",
+  "subtitle": "Mastering the א-ת-י-נ prefix system and vowel variations",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The future tense in Hebrew is formed by attaching the person prefixes א-ת-י-נ (E-Ti-Yi-Ni) to stem bases whose vowel patterns depend on the binyan.",
+  "structure": {
+   "headers": [
+    "Person / Pronoun",
+    "Prefix / Suffix",
+    "Pa'al (כ-ת-ב)",
+    "Pi'el (ד-ב-ר)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st sg (אֲנִי)",
+      "אֶ- (e-)",
+      "אֶכְתֹּב",
+      "אֲדַבֵּר"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd m.sg (הוּא)",
+      "יִ- / יְ- (yi-)",
+      "יִכְתֹּב",
+      "יְדַבֵּר"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd m.sg / 3rd f.sg",
+      "תִּ- / תְּ- (ti-)",
+      "תִּכְתֹּב",
+      "תְּדַבֵּר"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "1st pl (אֲנַחְנוּ)",
+      "נִ- / נְ- (ni-)",
+      "נִכְתֹּב",
+      "נְדַבֵּר"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Future Intentions and Plans",
+    "example": "מָחָר נִסַּע לִירוּשָׁלַיִם בַּבֹּקֶר.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Promises and Commitments",
+    "example": "אֲנִי אֶתְקַשֵּׁר אֵלֶיךָ מִיָּד אַחֲרֵי הַפְּגִישָׁה.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Polite Requests or Directives",
+    "example": "תִּפְתְּחוּ אֶת הַסְּפָרִים בְּעַמּוּד עֶשְׂרִים.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "מָחָר אֲנִי אֶקְנֶה מַתָּנָה לְיוֹם הַהֻלֶּדֶת.",
+    "ko": "",
+    "highlight": "אֶקְנֶה"
+   },
+   {
+    "en": "הַסְּטוּדֶנְטִים יִלְמְדוּ לַמִּבְחָן בַּסִּפְרִיָּה.",
+    "ko": "",
+    "highlight": "יִלְמְדוּ"
+   },
+   {
+    "en": "אַתְּ תִּמְצְאִי אֶת הַתְּשׁוּבָה בַּסֵּפֶר הַזֶּה.",
+    "ko": "",
+    "highlight": "תִּמְצְאִי"
+   },
+   {
+    "en": "אֲנַחְנוּ נְסַדֵּר אֶת הַחֶדֶר לִפְנֵי שֶׁהֵם יַגִּיעוּ.",
+    "ko": "",
+    "highlight": "נְסַדֵּר"
+   },
+   {
+    "en": "הוּא יַסְבִּיר לָנוּ אֶת הַכְּלָלִים הַחֲדָשִׁים.",
+    "ko": "",
+    "highlight": "יַסְבִּיר"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "אֲנִי יִכְתֹּב לְךָ מִכְתָּב.",
+    "right": "אֲנִי אֶכְתֹּב לְךָ מִכְתָּב.",
+    "note": "First person singular ('I') takes the prefix אֶ- (Alef), never יִ- (Yod), which marks 3rd person 'he'."
+   },
+   {
+    "wrong": "מָחָר אֲנַחְנוּ יֵלְכוּ לַיָּם.",
+    "right": "מָחָר אֲנַחְנוּ נֵלֵךְ לַיָּם.",
+    "note": "First person plural ('we') always uses prefix נ- (Nun), not י- with plural suffix ־וּ."
+   },
+   {
+    "wrong": "אַתָּה תִּכְתְּבִי אֶת הַמִּבְחָן.",
+    "right": "אַתָּה תִּכְתֹּב אֶת הַמִּבְחָן.",
+    "note": "The suffix ־ִי (-i) is strictly for 2nd person feminine singular ('you, f.'), not masculine."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Tomorrow, Miriam (she) ___ to her parents.",
+    "options": [
+     "אֶכְתֹּב",
+     "יִכְתֹּב",
+     "תִּכְתֹּב",
+     "נִכְתֹּב"
+    ],
+    "answer": 2,
+    "explanation": "Third person feminine singular takes the prefix תִּ- (tichtov), identical in form to 2nd m.sg."
+   },
+   {
+    "question": "Next week, I ___ a new car.",
+    "options": [
+     "אֶקְנֶה",
+     "יִקְנֶה",
+     "תִּקְנֶה",
+     "נִקְנֶה"
+    ],
+    "answer": 0,
+    "explanation": "First person singular ('I') always uses the Alef prefix: אֶקְנֶה (eqneh)."
+   },
+   {
+    "question": "The children (they) ___ all afternoon in the yard.",
+    "options": [
+     "יְשַׂחֵק",
+     "נְשַׂחֵק",
+     "תְּשַׂחֲקוּ",
+     "יְשַׂחֲקוּ"
+    ],
+    "answer": 3,
+    "explanation": "Third person plural ('they') uses prefix י- and suffix ־וּ: יְשַׂחֲקוּ (yesachaku)."
+   },
+   {
+    "question": "When ___ you (m.pl) arrive home tonight?",
+    "options": [
+     "יַגִּיעוּ",
+     "תַּגִּיעוּ",
+     "נַגִּיעַ",
+     "תַּגִּיעַ"
+    ],
+    "answer": 1,
+    "explanation": "Second person plural ('you all') takes prefix תַּ- and suffix ־וּ: תַּגִּיעוּ (tagi'u)."
+   }
+  ],
+  "tip": "Remember the acronym אֵיתָ\"ן (EITAN): א (I), י (he/they), ת (you/she), נ (we). It matches the four prefixes of Hebrew future tense!"
+ },
+ {
+  "id": "he-b1-infinitive-construct-shem-hapoal",
+  "level": "b1",
+  "category": "modals",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔗",
+  "title": "Infinitives (Shem Ha-Po'al) and Verb Complements",
+  "subtitle": "Deriving l-prefixed infinitives and pairing them with modal verbs",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The Hebrew infinitive (שם הפועל) always begins with the prefix לְ- (le-) and combines with modal verbs like רוֹצֶה, יָכוֹל, and צָרִיךְ without needing a subordinator.",
+  "structure": {
+   "headers": [
+    "Binyan",
+    "Infinitive Pattern",
+    "Hebrew Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Pa'al",
+      "לִ- - -וֹ- (li...o...)",
+      "לִכְתֹּב",
+      "to write"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Pi'el",
+      "לְ- - -ֵ- (le...e...)",
+      "לְדַבֵּר",
+      "to speak"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Hif'il",
+      "לְהַ- -ִ- (leha...i...)",
+      "לְהַזְמִין",
+      "to invite"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Hitpa'el",
+      "לְהִתְ- - -ֵ- (lehit...e...)",
+      "לְהִתְרַחֵץ",
+      "to wash oneself"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Desire with רוֹצֶה (Wants)",
+    "example": "אֲנִי רוֹצֶה לִלְמֹד עִבְרִית הַשָּׁנָה.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Ability with יָכוֹל (Can / Able)",
+    "example": "אַתָּה יָכוֹל לַעֲזֹר לִי עִם הַשִּׂיחָה?",
+    "translation": ""
+   },
+   {
+    "color": "#A78BFA",
+    "label": "Obligation with צָרִיךְ (Must / Need)",
+    "example": "הֵם צְרִיכִים לָקוּם מֻקְדָּם מָחָר.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "אֶפְשָׁר לִפְתֹּחַ אֶת הַחַלּוֹן, בְּבַקָּשָׁה?",
+    "ko": "",
+    "highlight": "לִפְתֹּחַ"
+   },
+   {
+    "en": "אָסוּר לְעַשֵּׁן בַּמָּקוֹם הַזֶּה.",
+    "ko": "",
+    "highlight": "לְעַשֵּׁן"
+   },
+   {
+    "en": "כְּדַאי לָכֶם לְהַקְשִׁיב לַהוֹרָאוֹת הָאֵלֶּה.",
+    "ko": "",
+    "highlight": "לְהַקְשִׁיב"
+   },
+   {
+    "en": "הִיא לֹא יְכוֹלָה לָבוֹא לַמְּסִבָּה הָעֶרֶב.",
+    "ko": "",
+    "highlight": "לָבוֹא"
+   },
+   {
+    "en": "אֲנַחְנוּ מְקַוִּים לְהִתְרָאוֹת בְּקָרוֹב שׁוּב.",
+    "ko": "",
+    "highlight": "לְהִתְרָאוֹת"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "אֲנִי רוֹצֶה שֶׁלִּכְתֹּב.",
+    "right": "אֲנִי רוֹצֶה לִכְתֹּב.",
+    "note": "Do not insert שֶׁ- (that) before an infinitive; connect the modal directly to the לְ- verb."
+   },
+   {
+    "wrong": "הוּא צָרִיךְ כְּתֹב עַכְשָׁו.",
+    "right": "הוּא צָרִיךְ לִכְתֹּב עַכְשָׁו.",
+    "note": "Hebrew infinitives strictly require the prefix לְ- (le- / li-); you cannot use a bare root stem."
+   },
+   {
+    "wrong": "אֲנַחְנוּ צְרִיכִים לְלַמֵּד שָׂפָה חֲדָשָׁה.",
+    "right": "אֲנַחְנוּ צְרִיכִים לִלְמֹד שָׂפָה חֲדָשָׁה.",
+    "note": "Avoid confusing לִלְמֹד (Pa'al: to learn) with לְלַמֵּד (Pi'el: to teach)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Can you (m.sg) ___ the doctor today?",
+    "options": [
+     "רוֹאֶה",
+     "לִרְאוֹת",
+     "רָאָה",
+     "יִרְאֶה"
+    ],
+    "answer": 1,
+    "explanation": "After modal יָכוֹל (can), the infinitive construct form with prefix לְ- is required: לִרְאוֹת (to see)."
+   },
+   {
+    "question": "It is forbidden ___ photos inside the museum.",
+    "options": [
+     "לְצַלֵּם",
+     "מְצַלֵּם",
+     "צִלֵּם",
+     "יְצַלְּמוּ"
+    ],
+    "answer": 0,
+    "explanation": "Impersonal modal phrases like אָסוּר (forbidden) are directly followed by the Pi'el infinitive לְצַלֵּם."
+   },
+   {
+    "question": "We want ___ a table at the restaurant.",
+    "options": [
+     "מַזְמִינִים",
+     "הִזְמַנּוּ",
+     "נַזְמִין",
+     "לְהַזְמִין"
+    ],
+    "answer": 3,
+    "explanation": "Hif'il infinitive takes the לְהַ- prefix: לְהַזְמִין (to order / invite)."
+   },
+   {
+    "question": "You must ___ on the road while driving.",
+    "options": [
+     "מִסְתַּכֵּל",
+     "לְהִסְתַּכֵּל",
+     "הִסְתַּכֵּל",
+     "תִּסְתַּכֵּל"
+    ],
+    "answer": 1,
+    "explanation": "After צָרִיךְ (must/need), the Hitpa'el infinitive begins with לְהִתְ- (or לְהִסְתַּ- with metathesis)."
+   }
+  ],
+  "tip": "Every Hebrew infinitive starts with the letter לַ/לְ (Lamed). If your verb complement doesn't start with ל-, it isn't an infinitive!"
+ },
+ {
+  "id": "he-b1-noun-possessive-suffixes",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#2563EB",
+  "emoji": "🏷️",
+  "title": "Possessive Suffixes on Nouns",
+  "subtitle": "Attach pronominal endings directly to singular and plural nouns",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Direct possessive suffixes attach to the construct base of nouns, distinguishing singular from plural stems.",
+  "structure": {
+   "headers": [
+    "Possessor",
+    "Singular Stem",
+    "Plural Stem"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "my (1s)",
+      "ספרי",
+      "ספריי"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "your (2ms)",
+      "ספרך",
+      "ספריך"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "his (3ms)",
+      "ספרו",
+      "ספריו"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "her (3fs)",
+      "ספרה",
+      "ספריה"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "our (1p)",
+      "ספרנו",
+      "ספרינו"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Singular Possessed Noun",
+    "example": "קיבלתי את מכתבו אתמול בבוקר.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Plural Possessed Noun",
+    "example": "הוא סידר את כל ספריו על המדף.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Kinship and Family Terms",
+    "example": "אבי ואמי גרים בעיר הזאת שנים רבות.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "קראתי את ספרו החדש בעניין רב.",
+    "ko": "",
+    "highlight": "ספרו"
+   },
+   {
+    "en": "היא שוחחה עם מורתה על תוצאות המבחן.",
+    "ko": "",
+    "highlight": "מורתה"
+   },
+   {
+    "en": "כל חבריו הגיעו למסיבת יום ההולדת.",
+    "ko": "",
+    "highlight": "חבריו"
+   },
+   {
+    "en": "זהו ביתנו החדש ליד חוף הים.",
+    "ko": "",
+    "highlight": "ביתנו"
+   },
+   {
+    "en": "הילדים מצאו את משחקיהם בחדר השני.",
+    "ko": "",
+    "highlight": "משחקיהם"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "הספרו",
+    "right": "ספרו",
+    "note": "Never add the definite article ה to a noun with a pronominal possessive suffix because the suffix already makes it definite."
+   },
+   {
+    "wrong": "ספרו שלו",
+    "right": "ספרו",
+    "note": "Do not duplicate the possessor with both a bound suffix and separate pronoun unless intentional poetic emphasis is needed."
+   },
+   {
+    "wrong": "חבריו שלי",
+    "right": "חבריי",
+    "note": "Ensure the plural stem matches the correct grammatical person instead of mixing third and first person markers."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct Hebrew word for 'his book':",
+    "options": [
+     "ספרי",
+     "ספרו",
+     "ספרה",
+     "ספרך"
+    ],
+    "answer": 1,
+    "explanation": "The suffix -o (ו) attaches to a singular stem to denote third-person masculine possession."
+   },
+   {
+    "question": "Choose the correct Hebrew word for 'his books' (plural possessed):",
+    "options": [
+     "ספריו",
+     "ספרו",
+     "ספריה",
+     "ספרם"
+    ],
+    "answer": 0,
+    "explanation": "Plural nouns take -av (יו) for 'his', marked orthographically by yod-vav."
+   },
+   {
+    "question": "Complete the sentence: 'This is our house' -> 'זהו ___ החדש.'",
+    "options": [
+     "ביתי",
+     "ביתה",
+     "ביתנו",
+     "ביתכם"
+    ],
+    "answer": 2,
+    "explanation": "The suffix -nu (נו) indicates first-person plural possession ('our')."
+   },
+   {
+    "question": "Choose the correct form for 'her teacher' (female teacher possessed by her):",
+    "options": [
+     "מורתי",
+     "מורתו",
+     "מורתך",
+     "מורתה"
+    ],
+    "answer": 3,
+    "explanation": "Nouns ending in feminine -ah change to construct -at- before suffixes, yielding moratah (מורתה)."
+   }
+  ],
+  "tip": "Look for the letter yod (י) before the final suffix letter: it almost always signals that the possessed noun is plural (e.g., ספרו vs ספריו)."
+ },
+ {
+  "id": "he-b1-relative-clauses-with-she",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#059669",
+  "emoji": "🔗",
+  "title": "The Subordinating Prefix She- and Resumptive Pronouns",
+  "subtitle": "Connect relative clauses and handle required resumptive prepositions",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "The prefix ש- introduces relative clauses, requiring a resumptive prepositional pronoun when relativizing oblique objects.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Pattern",
+    "Hebrew Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Subject Relative",
+      "Noun + ש- + Verb",
+      "האיש שדיבר איתי"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Direct Object (Optional Pronoun)",
+      "Noun + ש- + (אותו/ה)",
+      "הספר שקראתי (אותו)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Prepositional Resumptive",
+      "Noun + ש- + ... + Prep-Pronoun",
+      "האישה שדיברתי עליה"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Locative Resumptive",
+      "Noun + ש- + ... + בו / שם",
+      "העיר שגרנו בה"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Subject Relativization",
+    "example": "הסטודנט שלומד כאן הגיע אתמול.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Prepositional Object Resumption",
+    "example": "זה הנושא שחשבתי עליו כל השבוע.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Locative Resumption with Preposition",
+    "example": "המסעדה שישבנו בה נסגרה מוקדם.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "זה האיש שעזר לי למצוא את הדרך.",
+    "ko": "",
+    "highlight": "שעזר"
+   },
+   {
+    "en": "האישה שדיברתי איתה היא רופאה מפורסמת.",
+    "ko": "",
+    "highlight": "שדיברתי איתה"
+   },
+   {
+    "en": "הנושא שחשבנו עליו עלה שוב בישיבה.",
+    "ko": "",
+    "highlight": "שחשבנו עליו"
+   },
+   {
+    "en": "הדירה שגרנו בה הייתה קטנה אך נעימה.",
+    "ko": "",
+    "highlight": "שגרנו בה"
+   },
+   {
+    "en": "הספר שקראתי אתמול ריתק אותי לגמרי.",
+    "ko": "",
+    "highlight": "שקראתי"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "האיש שדיברתי עם",
+    "right": "האיש שדיברתי איתו",
+    "note": "Hebrew prepositions cannot dangle at the end of a clause; they must combine with a resumptive pronoun."
+   },
+   {
+    "wrong": "הבית איפה שגרתי",
+    "right": "הבית שגרתי בו",
+    "note": "In standard Hebrew, use ש- with a resumptive pronoun (בו) rather than colloquial איפה ש-."
+   },
+   {
+    "wrong": "האיש ש הוא בא",
+    "right": "האיש שבא",
+    "note": "The complementizer ש- attaches directly to the following word with no space, and redundant subject pronouns are omitted."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'The woman that I wrote to (her)' -> 'האישה שכתבתי ___.'",
+    "options": [
+     "אליה",
+     "אליו",
+     "אותה",
+     "עליו"
+    ],
+    "answer": 0,
+    "explanation": "The feminine singular antecedent האישה requires the matching feminine prepositional pronoun אליה (to her)."
+   },
+   {
+    "question": "Complete the relative clause: 'The problem that we spoke about (it)' -> 'הבעיה שדיברנו ___.'",
+    "options": [
+     "איתו",
+     "עליו",
+     "עליה",
+     "בהם"
+    ],
+    "answer": 2,
+    "explanation": "The noun בעיה is feminine singular, so the resumptive pronoun after על must be עליה."
+   },
+   {
+    "question": "Which sentence correctly attaches the prefix ש-?",
+    "options": [
+     "האיש ש גר פה",
+     "האיש שגר פה",
+     "האיש אשר שגר פה",
+     "האיש כ שגר פה"
+    ],
+    "answer": 1,
+    "explanation": "The prefix ש- is proclitic and attaches directly to the next word with no intervening space."
+   },
+   {
+    "question": "Complete the sentence: 'The city that we live in (it)' -> 'העיר שאנחנו גרים ___.'",
+    "options": [
+     "שם",
+     "בו",
+     "עליה",
+     "בה"
+    ],
+    "answer": 3,
+    "explanation": "The noun עיר is feminine singular, requiring the prepositional form בה (in it)."
+   }
+  ],
+  "tip": "Hebrew never strands prepositions. If an English sentence ends in 'about', 'with', or 'in', Hebrew attaches a pronoun to that preposition inside the relative clause."
+ },
+ {
+  "id": "he-b2-binyan-nifal-passive-and-inchoative",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#7C3AED",
+  "emoji": "🔄",
+  "title": "Binyan Nif'al (Passive of Pa'al and Middle Voice)",
+  "subtitle": "Conjugate N-prefix verbs in past, present, and assimilating future stems",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Binyan Nif'al marks the passive or reflexive of Pa'al, displaying a prefixed נ- in past/present that assimilates into the first root letter in future forms.",
+  "structure": {
+   "headers": [
+    "Tense / Form",
+    "Pattern (3ms)",
+    "Hebrew Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Past",
+      "נִפְעַל",
+      "נִכְתַּב",
+      "was written"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Present",
+      "נִפְעָל",
+      "נִכְתָּב",
+      "is being written / writes"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Future",
+      "יִפָּעֵל",
+      "יִכָּתֵב",
+      "will be written"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Infinitive",
+      "לְהִפָּעֵל",
+      "לְהִכָּתֵב",
+      "to be written"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6D28D9",
+    "label": "Passive of Pa'al",
+    "example": "המכתב נשלח הבוקר בדואר מהיר.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Inchoative / State Change",
+    "example": "הדלת נפתחה מעצמה בגלל הרוח.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Reciprocal or Middle Voice",
+    "example": "הם נפגשו בבית הקפה לאחר שנים רבות.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "הספר נכתב במאה התשע-עשרה.",
+    "ko": "",
+    "highlight": "נכתב"
+   },
+   {
+    "en": "החלון נשבר אתמול במהלך הסערה.",
+    "ko": "",
+    "highlight": "נשבר"
+   },
+   {
+    "en": "ההודעה תימסר לכל העובדים מחר.",
+    "ko": "",
+    "highlight": "תימסר"
+   },
+   {
+    "en": "קשה מאוד להיכנס לבניין ללא אישור.",
+    "ko": "",
+    "highlight": "להיכנס"
+   },
+   {
+    "en": "הפגישה נקבעה לשעה שלוש אחר הצהריים.",
+    "ko": "",
+    "highlight": "נקבעה"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "הוא ינכתב",
+    "right": "הוא ייכתב",
+    "note": "In future tense Nif'al, the nun assimilates into the first root letter (marked by dagesh or double yod in unvocalized text)."
+   },
+   {
+    "wrong": "לנכתב",
+    "right": "להיכתב",
+    "note": "The infinitive of Nif'al uses the prefix לה- (le-hi-), never ל- with a nun prefix."
+   },
+   {
+    "wrong": "הדלת פתחה אתמול",
+    "right": "הדלת נפתחה אתמול",
+    "note": "Pa'al פתח is transitive; when the door opens intransitively/passively, use Nif'al נפתח."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the past tense 3ms Nif'al form of the root כ-ת-ב:",
+    "options": [
+     "נכתב",
+     "יכתב",
+     "הוכתב",
+     "כתב"
+    ],
+    "answer": 0,
+    "explanation": "נכתב is the standard past 3ms form of Nif'al (nikhtav)."
+   },
+   {
+    "question": "What is the future 3ms form of Nif'al for the root ס-ג-ר ('it will be closed')?",
+    "options": [
+     "יסגור",
+     "ייסגר",
+     "נסגר",
+     "להיסגר"
+    ],
+    "answer": 1,
+    "explanation": "In future Nif'al, the prefix takes i-vowel and the nun assimilates into the samekh, written ייסגר in ktiv male."
+   },
+   {
+    "question": "Choose the correct Nif'al infinitive form meaning 'to meet':",
+    "options": [
+     "לפגוש",
+     "להיפגש",
+     "נפגש",
+     "לנפגש"
+    ],
+    "answer": 1,
+    "explanation": "Nif'al infinitives take the template להיפעל (le-hipa'el), producing להיפגש."
+   },
+   {
+    "question": "Complete the sentence: 'The window was broken yesterday' -> 'החלון ___ אתמול.'",
+    "options": [
+     "שבר",
+     "שובר",
+     "נשבר",
+     "נשברה"
+    ],
+    "answer": 2,
+    "explanation": "חלון is grammatically masculine, requiring the masculine singular past Nif'al verb נשבר."
+   }
+  ],
+  "tip": "In unvocalized spelling (כתיב מלא), future Nif'al often appears with double yod (ייכנס, ייפתח) to reflect the assimilation of the historical nun."
+ },
+ {
+  "id": "he-b2-passive-binyanim-pual-and-hufal",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#DC2626",
+  "emoji": "🛡️",
+  "title": "Internal Passives (Binyanim Pu'al and Huf'al)",
+  "subtitle": "Form and recognize the direct passive counterparts of Pi'el and Hif'il",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "Pu'al and Huf'al serve as the vowel-internal passives of Pi'el and Hif'il, featuring characteristic u/o vowels and lacking imperative or true independent infinitive forms.",
+  "structure": {
+   "headers": [
+    "Active Binyan",
+    "Passive Binyan",
+    "Past Example",
+    "Present Participle"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Pi'el (שילם)",
+      "Pu'al (שוּלַם)",
+      "שולם",
+      "משולם"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Pi'el (ביקש)",
+      "Pu'al (בוּקַש)",
+      "בוקש",
+      "מבוקש"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Hif'il (הזמין)",
+      "Huf'al (הוּזְמַן)",
+      "הוזמן",
+      "מוזמן"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Hif'il (הדליק)",
+      "Huf'al (הוּדְלַק)",
+      "הודלק",
+      "מודלק"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#B91C1C",
+    "label": "Passive of Pi'el (Pu'al)",
+    "example": "החשבון שולם במלואו לפני יומיים.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Passive of Hif'il (Huf'al)",
+    "example": "האורחים הוזמנו לקבלת הפנים.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Present Passive Adjectives",
+    "example": "המוצר הזה מבוקש מאוד בשוק.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "הפרויקט החדש בוטל עקב חוסר תקציב.",
+    "ko": "",
+    "highlight": "בוטל"
+   },
+   {
+    "en": "המסמכים הועברו למשרד הראשי אתמול.",
+    "ko": "",
+    "highlight": "הועברו"
+   },
+   {
+    "en": "כל התשלומים שולמו בזמן.",
+    "ko": "",
+    "highlight": "שולמו"
+   },
+   {
+    "en": "האיש מובהל כעת לבית החולים בניידת טיפול נמרץ.",
+    "ko": "",
+    "highlight": "מובהל"
+   },
+   {
+    "en": "הודעה רשמית תפורסם בעיתונות מחר בבוקר.",
+    "ko": "",
+    "highlight": "תפורסם"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "הוא הושילם",
+    "right": "הוא שולם",
+    "note": "Do not add the Hif'il prefix ה- to Pu'al verbs; Pu'al mirrors Pi'el stem shapes with u-a vowels."
+   },
+   {
+    "wrong": "הם הוזמנו את המלון",
+    "right": "הם הזמינו את המלון",
+    "note": "Huf'al (הוזמן) is passive and cannot take a direct object with את; use active Hif'il (הזמין) for transitive action."
+   },
+   {
+    "wrong": "לבטל / לבוטל",
+    "right": "להתבטל",
+    "note": "Pu'al has no productive infinitive of its own; Hebrew uses the reflexive/middle Hitpa'el infinitive instead."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which of the following is the Pu'al passive of the Pi'el verb ביטל ('he cancelled')?",
+    "options": [
+     "התבטל",
+     "בוטל",
+     "מבטל",
+     "הובטל"
+    ],
+    "answer": 1,
+    "explanation": "בוטל is the past 3ms Pu'al form corresponding directly to active ביטל."
+   },
+   {
+    "question": "Identify the Huf'al form meaning 'was invited / ordered':",
+    "options": [
+     "הזמין",
+     "מזמין",
+     "הוזמן",
+     "מוזמן"
+    ],
+    "answer": 2,
+    "explanation": "הוזמן (huzman) is the past 3ms Huf'al form derived from root ז-מ-נ."
+   },
+   {
+    "question": "Complete the sentence: 'The bill was paid' -> 'החשבון ___.'",
+    "options": [
+     "שילם",
+     "שולם",
+     "משלם",
+     "ישלם"
+    ],
+    "answer": 1,
+    "explanation": "The passive of שילם (he paid) is the Pu'al form שולם (was paid)."
+   },
+   {
+    "question": "What is the present participle (ms) of the Huf'al verb 'to be recommended' (root מ-ל-צ)?",
+    "options": [
+     "הומלץ",
+     "ממליץ",
+     "מומלץ",
+     "נמלץ"
+    ],
+    "answer": 2,
+    "explanation": "Huf'al present participles take the prefix מ- with an u/o vowel (mumlatz = מומלץ)."
+   }
+  ],
+  "tip": "The vowel 'u' (spelled with vav ו in modern script) immediately after the first root letter in past tense strongly indicates Pu'al (סודר, שולם) or Huf'al (הוסבר, הוזמן)."
+ },
+ {
+  "id": "he-b2-gerunds-action-nouns-shem-peula",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#4F46E5",
+  "emoji": "🏗️",
+  "title": "Action Nouns (Shem Pe'ulah) and Root Derivation",
+  "subtitle": "Derive systematic nominal forms from each binyan pattern",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Every active binyan possesses a primary nominalized pattern (משקל) used to express the abstract action of the verb.",
+  "structure": {
+   "headers": [
+    "Binyan",
+    "Mishkal Pattern",
+    "Action Noun",
+    "Related Verb"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Pa'al",
+      "קְטִילָה (qətilah)",
+      "כְּתִיבָה",
+      "כָּתַב"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Pi'el",
+      "קִטּוּל (qitul)",
+      "בִּקּוּר",
+      "בִּקֵּר"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Hif'il",
+      "הַקְטָלָה (haqtalah)",
+      "הַפְסָקָה",
+      "הִפְסִיק"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Hitpa'el",
+      "הִתְקַטְּלוּת (hitqatlot)",
+      "הִתְנַהֲגוּת",
+      "הִתְנַהֵג"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Formal Pa'al Nominalization",
+    "example": "הקריאה בספרים מפתחת את הדמיון.",
+    "translation": ""
+   },
+   {
+    "color": "#4F46E5",
+    "label": "Pi'el Process Nominalization",
+    "example": "ביצוע המשימה דורש ריכוז רב.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Hif'il Causative Nominalization",
+    "example": "החלטת ההנהלה התקבלה לאחר דיון ארוך.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "כתיבת המאמר ארכה שבועיים תמימים.",
+    "ko": "",
+    "highlight": "כתיבת"
+   },
+   {
+    "en": "הכניסה למתחם מותרת למורשים בלבד.",
+    "ko": "",
+    "highlight": "הכניסה"
+   },
+   {
+    "en": "ההסבר של המרצה היה ברור ומעמיק.",
+    "ko": "",
+    "highlight": "ההסבר"
+   },
+   {
+    "en": "התפתחות הטכנולוגיה משפיעה על כולנו.",
+    "ko": "",
+    "highlight": "התפתחות"
+   },
+   {
+    "en": "סיום הקורס ייחגג בטקס מיוחד בשבוע הבא.",
+    "ko": "",
+    "highlight": "סיום"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ההתחלה של הספר הייתה מעניין",
+    "right": "ההתחלה של הספר הייתה מעניינת",
+    "note": "Action nouns ending in -ah (ה-) or -ut (ות-) are grammatically feminine and require feminine agreement."
+   },
+   {
+    "wrong": "הלמידה של עברית קל",
+    "right": "הלמידה של עברית קלה",
+    "note": "למידה is feminine; ensure predicative adjectives and verbs agree in gender."
+   },
+   {
+    "wrong": "הפסקת של עשר דקות",
+    "right": "הפסקה של עשר דקות",
+    "note": "Do not use the construct form (סמיכות) ending in -at before the preposition של."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the standard action noun (shem pe'ulah) of the Pa'al verb שמר ('to guard/keep')?",
+    "options": [
+     "משמר",
+     "שמירה",
+     "שימור",
+     "השמרה"
+    ],
+    "answer": 1,
+    "explanation": "Pa'al regularly derives feminine action nouns in the qətilah pattern: שמירה (shmirah)."
+   },
+   {
+    "question": "Choose the Pi'el action noun derived from the verb לימד ('to teach'):",
+    "options": [
+     "לימוד",
+     "למידה",
+     "תלמיד",
+     "הלמדה"
+    ],
+    "answer": 0,
+    "explanation": "Pi'el derives action nouns in the qitul pattern: לימוד (limud), distinct from Pa'al למידה (lmidah)."
+   },
+   {
+    "question": "What is the Hif'il action noun corresponding to the verb הזמין ('to invite / order')?",
+    "options": [
+     "הזמנה",
+     "זימון",
+     "מזמין",
+     "זמירה"
+    ],
+    "answer": 0,
+    "explanation": "Hif'il forms action nouns on the haqtalah pattern, producing הזמנה (hazmanah)."
+   },
+   {
+    "question": "Choose the Hitpa'el action noun derived from התפתח ('to develop'):",
+    "options": [
+     "פיתוח",
+     "התפתחות",
+     "פתיחה",
+     "מפתח"
+    ],
+    "answer": 1,
+    "explanation": "Hitpa'el forms feminine abstract action nouns ending in -ut: התפתחות (hitpatkhut)."
+   }
+  ],
+  "tip": "Pairs from the same root change nuance by binyan: root ל-מ-ד gives למידה (learning, Pa'al) versus לימוד (instruction/study, Pi'el)."
+ }
+]

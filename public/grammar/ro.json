@@ -1,0 +1,3369 @@
+[
+ {
+  "id": "ro-a1-noun-gender-and-neuter",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "⚖️",
+  "title": "Three Noun Genders and the Ambigen (Neuter)",
+  "subtitle": "Discover how Romanian blends masculine singular and feminine plural into the neuter gender.",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Romanian neuter nouns behave as masculine in the singular and feminine in the plural.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Singular Test (un)",
+    "Plural Test (doi / două)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine",
+      "un băiat",
+      "doi băieți"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine",
+      "o fată",
+      "două fete"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter (Ambigen)",
+      "un scaun",
+      "două scaune"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Counting Masculine Entities",
+    "example": "Un băiat citește și doi băieți scriu.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Counting Feminine Entities",
+    "example": "O carte este pe masă și două cărți sunt în geantă.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Counting Inanimate Neuter Nouns",
+    "example": "Am un hotel mic, dar ei au două hoteluri mari.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Pe birou este un creion nou.",
+    "ko": "",
+    "highlight": "un creion"
+   },
+   {
+    "en": "Avem două creioane pe masă.",
+    "ko": "",
+    "highlight": "două creioane"
+   },
+   {
+    "en": "Un profesor explică lecția.",
+    "ko": "",
+    "highlight": "Un profesor"
+   },
+   {
+    "en": "Văd o casă frumoasă aici.",
+    "ko": "",
+    "highlight": "o casă"
+   },
+   {
+    "en": "În oraș sunt două teatre vechi.",
+    "ko": "",
+    "highlight": "două teatre"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Am doi scaune în bucătărie.",
+    "right": "Am două scaune în bucătărie.",
+    "note": "Neuter nouns require feminine plural counting words like 'două', never masculine 'doi'."
+   },
+   {
+    "wrong": "Văd o creion pe birou.",
+    "right": "Văd un creion pe birou.",
+    "note": "Neuter nouns take masculine indefinite articles ('un') in the singular."
+   },
+   {
+    "wrong": "Aceste hoteluri sunt scumpi.",
+    "right": "Aceste hoteluri sunt scumpe.",
+    "note": "Adjectives modifying plural neuter nouns must take the feminine plural ending '-e', not masculine '-i'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you count 'one desk and two desks' (birou = neuter)?",
+    "options": [
+     "un birou și doi birouri",
+     "o birou și două birouri",
+     "un birou și două birouri",
+     "doi birouri și o birou"
+    ],
+    "answer": 2,
+    "explanation": "Neuter nouns take 'un' in the singular and 'două' in the plural."
+   },
+   {
+    "question": "Which sentence correctly pairs the neuter noun 'tren' with an adjective?",
+    "options": [
+     "Trenul este lung și trenurile sunt lungi.",
+     "Trenul este lungă și trenurile sunt lungi.",
+     "Trenul este lungi și trenurile sunt lung.",
+     "Trenul este lungă și trenurile sunt lung."
+    ],
+    "answer": 0,
+    "explanation": "In the singular 'tren' is masculine ('lung'), and in the plural it takes feminine plural agreement ('lungi')."
+   },
+   {
+    "question": "Identify the masculine counting pair:",
+    "options": [
+     "un măr, două mere",
+     "un câine, doi câini",
+     "o floare, două flori",
+     "un pahar, două pahare"
+    ],
+    "answer": 1,
+    "explanation": "'Un câine, doi câini' follows the pure masculine pattern (un/doi)."
+   },
+   {
+    "question": "Complete with the correct number for the neuter noun 'oraș': 'Am vizitat ___ orașe mari.'",
+    "options": [
+     "doi",
+     "o",
+     "trei sute de",
+     "două"
+    ],
+    "answer": 3,
+    "explanation": "Neuter nouns take the feminine plural number 'două'."
+   }
+  ],
+  "tip": "Test any noun's gender immediately using the counting rule: 'un, doi' = masculine; 'o, două' = feminine; 'un, două' = neuter."
+ },
+ {
+  "id": "ro-a1-enclitic-definite-articles",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📎",
+  "title": "Enclitic Definite Articles",
+  "subtitle": "Attach the definite article directly to the end of Romanian nouns.",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Romanian attaches the definite article directly to the end of nouns as a suffix rather than placing a separate word before them.",
+  "structure": {
+   "headers": [
+    "Gender & Number",
+    "Indefinite Base",
+    "Suffix",
+    "Definite Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masc. Singular",
+      "băiat (consonant)",
+      "-ul",
+      "băiatul"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Fem. Singular",
+      "fată (ends in -ă)",
+      "-a (replaces -ă)",
+      "fata"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter Singular",
+      "scaun (consonant)",
+      "-ul",
+      "scaunul"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masc. Plural",
+      "băieți (ends in -i)",
+      "-i (becomes double -i)",
+      "băieții"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Fem./Neut. Plural",
+      "fete / scaune",
+      "-le",
+      "fetele / scaunele"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Singular Definite Subject",
+    "example": "Băiatul merge la școală în fiecare dimineață.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Feminine Replacement Suffix",
+    "example": "Cartea este pe masă, nu în ghiozdan.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Plural Definite Objects",
+    "example": "Profesorul verifică temele elevilor.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Omul vorbește foarte calm.",
+    "ko": "",
+    "highlight": "Omul"
+   },
+   {
+    "en": "Fata citește un roman captivant.",
+    "ko": "",
+    "highlight": "Fata"
+   },
+   {
+    "en": "Muzeul se deschide la ora zece.",
+    "ko": "",
+    "highlight": "Muzeul"
+   },
+   {
+    "en": "Băieții joacă fotbal în parc.",
+    "ko": "",
+    "highlight": "Băieții"
+   },
+   {
+    "en": "Mașinile sunt parcate pe stradă.",
+    "ko": "",
+    "highlight": "Mașinile"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "El băiat este student.",
+    "right": "Băiatul este student.",
+    "note": "Romanian does not use standalone definite articles like English 'the' or Spanish 'el'; attach '-ul' to the noun."
+   },
+   {
+    "wrong": "Băieți sunt în clasă.",
+    "right": "Băieții sunt în clasă.",
+    "note": "The definite masculine plural suffix adds an extra '-i', producing '-ii'."
+   },
+   {
+    "wrong": "Fatăa merge acasă.",
+    "right": "Fata merge acasă.",
+    "note": "When attaching definite '-a' to feminine nouns ending in '-ă', the '-ă' is dropped, not doubled."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'The brother' in Romanian (base noun: 'frate')?",
+    "options": [
+     "fratele",
+     "fratul",
+     "fratea",
+     "frateul"
+    ],
+    "answer": 0,
+    "explanation": "Masculine nouns ending in '-e' append '-le' to form the definite singular ('fratele')."
+   },
+   {
+    "question": "Complete the sentence: '___ (The girl) învață românește.'",
+    "options": [
+     "Fată",
+     "Fatăa",
+     "Fata",
+     "Fatale"
+    ],
+    "answer": 2,
+    "explanation": "Singular feminine nouns in '-ă' drop the '-ă' and take '-a'."
+   },
+   {
+    "question": "Which is the definite plural form of 'prieten' (plural base: 'prieteni')?",
+    "options": [
+     "prietenul",
+     "prietenile",
+     "prietenilor",
+     "prietenii"
+    ],
+    "answer": 3,
+    "explanation": "Masculine plural nouns add '-i' to the plural base, resulting in 'prietenii'."
+   },
+   {
+    "question": "What is the definite form of the neuter plural 'tablouri' (paintings)?",
+    "options": [
+     "tablourii",
+     "tablourile",
+     "tablouril",
+     "tablouriua"
+    ],
+    "answer": 1,
+    "explanation": "Feminine and neuter plurals form their definite state by adding '-le' ('tablourile')."
+   }
+  ],
+  "tip": "Listen for pronunciation: plural indefinite 'elevi' ends in a short whispered 'i', but definite 'elevii' ends in a distinct, full vocalic 'i'."
+ },
+ {
+  "id": "ro-a1-present-indicative-conjugation-classes",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "Present Indicative Conjugation Classes",
+  "subtitle": "Conjugate verbs across the four verb classes including '-ez' and '-esc' infixes.",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Romanian verbs fall into four infinitive classes (-a, -ea, -e, -i/-î), many of which require infixes like -ez or -esc in singular forms and the third-person plural.",
+  "structure": {
+   "headers": [
+    "Group / Infinitive",
+    "Eu (1sg)",
+    "Tu (2sg)",
+    "El/Ea (3sg)",
+    "Ei/Ele (3pl)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Class: a lucra (-ez)",
+      "lucrez",
+      "lucrezi",
+      "lucrează",
+      "lucrează"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "1st Class: a cânta (plain)",
+      "cânt",
+      "cânți",
+      "cântă",
+      "cântă"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Class: a merge",
+      "merg",
+      "mergi",
+      "merge",
+      "merg"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "4th Class: a vorbi (-esc)",
+      "vorbesc",
+      "vorbești",
+      "vorbește",
+      "vorbesc"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Using Infix -ez (1st Class)",
+    "example": "Eu lucrez la o companie mare din București.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Using Infix -esc (4th Class)",
+    "example": "Noi nu vorbim franceză, dar vorbim românește.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "3rd Conjugation Root Forms",
+    "example": "Ei merg la teatru în fiecare vineri.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Eu lucrez de dimineață până seara.",
+    "ko": "",
+    "highlight": "lucrez"
+   },
+   {
+    "en": "Ea locuiește într-un apartament luminos.",
+    "ko": "",
+    "highlight": "locuiește"
+   },
+   {
+    "en": "Voi citiți o carte foarte interesantă.",
+    "ko": "",
+    "highlight": "citiți"
+   },
+   {
+    "en": "Tu înțelegi ce spun acum?",
+    "ko": "",
+    "highlight": "înțelegi"
+   },
+   {
+    "en": "Copiii desenează animale colorate.",
+    "ko": "",
+    "highlight": "desenează"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Eu lucru în fiecare zi.",
+    "right": "Eu lucrez în fiecare zi.",
+    "note": "The verb 'a lucra' belongs to the productive subclass that requires the '-ez' infix in the singular and 3rd plural."
+   },
+   {
+    "wrong": "Ea vorbe la telefon.",
+    "right": "Ea vorbește la telefon.",
+    "note": "'A vorbi' takes the '-esc' family infix, yielding 3rd person singular '-ește'."
+   },
+   {
+    "wrong": "Ei merge acasă acum.",
+    "right": "Ei merg acasă acum.",
+    "note": "3rd person plural for 'a merge' is 'merg' (identical to 1st person singular), not 'merge'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you conjugate 'a studia' (to study) for 'eu'?",
+    "options": [
+     "studiu",
+     "studiez",
+     "studesc",
+     "studie"
+    ],
+    "answer": 1,
+    "explanation": "'A studia' takes the '-ez' infix: 'eu studiez'."
+   },
+   {
+    "question": "What is the 3rd person singular form (el/ea) of 'a citi' (to read)?",
+    "options": [
+     "cită",
+     "citez",
+     "citește",
+     "citi"
+    ],
+    "answer": 2,
+    "explanation": "'A citi' takes the 4th conjugation infix: 'el/ea citește'."
+   },
+   {
+    "question": "Choose the correct form: 'Noi ___ (a merge) la cinema.'",
+    "options": [
+     "merge",
+     "mergi",
+     "merg",
+     "mergem"
+    ],
+    "answer": 3,
+    "explanation": "The 1st person plural ('noi') ending for 3rd conjugation is '-em': 'mergem'."
+   },
+   {
+    "question": "Which verb forms share identical spelling in the present tense of 'a scrie' (to write)?",
+    "options": [
+     "eu scriu and el scrie",
+     "eu scriu and ei scriu",
+     "tu scrii and noi scriem",
+     "el scrie and voi scrieți"
+    ],
+    "answer": 1,
+    "explanation": "For many verbs like 'a scrie' and 'a merge', 'eu' and 'ei/ele' share the exact same present form."
+   }
+  ],
+  "tip": "When learning a new 1st or 4th conjugation verb, always learn the 'eu' form alongside the infinitive so you immediately know if it uses '-ez' or '-esc'."
+ },
+ {
+  "id": "ro-a1-pe-personal-accusative-marking",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎯",
+  "title": "Differential Object Marking with 'Pe'",
+  "subtitle": "Know when to place the preposition 'pe' before direct objects.",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "The preposition 'pe' marks specific, animate, and human direct objects, as well as proper names and pronouns.",
+  "structure": {
+   "headers": [
+    "Object Type",
+    "Rule",
+    "Correct Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Proper Name of Person",
+      "Always mandatory",
+      "O văd pe Maria."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Stressed Personal Pronoun",
+      "Always mandatory",
+      "Te iubesc pe tine."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Specific Human Noun",
+      "Mandatory with definite article",
+      "Îl chem pe doctorul Popescu."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Inanimate / Abstract Object",
+      "Never use 'pe'",
+      "Citesc cartea."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Direct Object: Personal Name",
+    "example": "Îl aștept pe Andrei în fața gării.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Direct Object: Stressed Pronoun",
+    "example": "Profesoara o ascultă pe ea cu atenție.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Direct Object: Specific Person",
+    "example": "Căutăm pe profesorul nostru de istorie.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "O cunosc pe Ana de mulți ani.",
+    "ko": "",
+    "highlight": "pe Ana"
+   },
+   {
+    "en": "Îl caut pe fratele meu.",
+    "ko": "",
+    "highlight": "pe fratele"
+   },
+   {
+    "en": "Noi îi ajutăm pe părinți în grădină.",
+    "ko": "",
+    "highlight": "pe părinți"
+   },
+   {
+    "en": "Văd un câine pe stradă.",
+    "ko": "",
+    "highlight": "un câine"
+   },
+   {
+    "en": "Voi mă priviți pe mine.",
+    "ko": "",
+    "highlight": "pe mine"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Cunosc Maria foarte bine.",
+    "right": "O cunosc pe Maria foarte bine.",
+    "note": "Proper personal names used as direct objects must be preceded by 'pe' and doubled with an unstressed clitic pronoun."
+   },
+   {
+    "wrong": "Citesc pe un ziar interesant.",
+    "right": "Citesc un ziar interesant.",
+    "note": "Never use prepositional object marking 'pe' with inanimate objects like newspapers or books."
+   },
+   {
+    "wrong": "Am văzut pe un film aseară.",
+    "right": "Am văzut un film aseară.",
+    "note": "'Film' is an inanimate noun; 'pe' is strictly reserved for people and specific pets/entities."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the sentence requiring 'pe':",
+    "options": [
+     "Cumpăr ___ pâine caldă.",
+     "Ascult ___ muzică clasică.",
+     "Îl chem ___ Mihai acum.",
+     "Deschid ___ fereastra mare."
+    ],
+    "answer": 2,
+    "explanation": "'Mihai' is a specific personal name used as a direct object, so 'pe Mihai' is required."
+   },
+   {
+    "question": "Which sentence correctly omits 'pe'?",
+    "options": [
+     "Văd masa din bucătărie.",
+     "Văd pe masa din bucătărie.",
+     "Îl văd pe masa.",
+     "Văd pe birou nou."
+    ],
+    "answer": 0,
+    "explanation": "'Masa' (the table) is an inanimate object and must not take 'pe'."
+   },
+   {
+    "question": "Complete the phrase: 'Ea îl iubește mult ___ (him).'",
+    "options": [
+     "la el",
+     "cu el",
+     "în el",
+     "pe el"
+    ],
+    "answer": 3,
+    "explanation": "Stressed direct object personal pronouns must take 'pe' ('pe el')."
+   },
+   {
+    "question": "Choose the correct sentence:",
+    "options": [
+     "O caut profesoara.",
+     "O caut pe profesoara mea.",
+     "Caut la profesoara mea.",
+     "Profesoara mea caut."
+    ],
+    "answer": 1,
+    "explanation": "A specific, definite human direct object requires 'pe' alongside the clitic pronoun 'o'."
+   }
+  ],
+  "tip": "Ask yourself: Is the object a specific human or proper name? If yes, use 'pe'. Is it a thing or an abstract idea? Never use 'pe'."
+ },
+ {
+  "id": "ro-a1-possessive-adjectives-and-al-a-ai-ale",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🏷️",
+  "title": "Possessive Adjectives and Genitival Articles",
+  "subtitle": "Express ownership and master the genitival clitics 'al, a, ai, ale'.",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Possessive adjectives follow the noun they modify, and genitival articles (al, a, ai, ale) agree in gender and number with the possessed item.",
+  "structure": {
+   "headers": [
+    "Possessed Item",
+    "Article",
+    "1st Person (my)",
+    "Example Phrase"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Singular",
+      "al",
+      "meu",
+      "un prieten al meu"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine Singular",
+      "a",
+      "mea",
+      "o prietenă a mea"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masculine Plural",
+      "ai",
+      "mei",
+      "băieții mei / ai mei"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine/Neuter Plural",
+      "ale",
+      "mele",
+      "cărțile mele / ale mele"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Direct Postnominal Possession",
+    "example": "Fratele meu locuiește la Cluj.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Indefinite Genitival Link",
+    "example": "Un coleg al meu a sunat mai devreme.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Genitival Genitive Linking",
+    "example": "Grădina este a vecinului nostru.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Casa mea este foarte spațioasă.",
+    "ko": "",
+    "highlight": "Casa mea"
+   },
+   {
+    "en": "Acesta este un prieten al meu din copilărie.",
+    "ko": "",
+    "highlight": "al meu"
+   },
+   {
+    "en": "Pixurile acestea sunt ale tale?",
+    "ko": "",
+    "highlight": "ale tale"
+   },
+   {
+    "en": "Părinții noștri călătoresc des.",
+    "ko": "",
+    "highlight": "Părinții noștri"
+   },
+   {
+    "en": "Mașina este a tatălui meu.",
+    "ko": "",
+    "highlight": "a tatălui"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mea casă este mare.",
+    "right": "Casa mea este mare.",
+    "note": "In Romanian, possessive adjectives typically follow the noun, and the noun normally takes the definite article suffix first ('Casa mea')."
+   },
+   {
+    "wrong": "O prietenă al meu vine mâine.",
+    "right": "O prietenă a mea vine mâine.",
+    "note": "The genitival article and possessive must agree with the possessed noun ('prietenă' is feminine, so use 'a mea')."
+   },
+   {
+    "wrong": "Cărțile sunt ai mei.",
+    "right": "Cărțile sunt ale mele.",
+    "note": "'Cărți' is feminine plural; the possessive form must be 'ale mele', not masculine 'ai mei'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'My sister' in standard Romanian?",
+    "options": [
+     "Mea soră",
+     "Sora mea",
+     "O soră mea",
+     "Sora al meu"
+    ],
+    "answer": 1,
+    "explanation": "The definite noun takes the suffix '-a' and the possessive adjective follows: 'Sora mea'."
+   },
+   {
+    "question": "Choose the correct genitival article for feminine singular: 'Această geantă este ___ Mariei.'",
+    "options": [
+     "al",
+     "ai",
+     "ale",
+     "a"
+    ],
+    "answer": 3,
+    "explanation": "'Geantă' is feminine singular, so the genitival article must be 'a'."
+   },
+   {
+    "question": "Complete the phrase: 'Doi colegi ___ (of mine) sunt aici.'",
+    "options": [
+     "al meu",
+     "a mea",
+     "ai mei",
+     "ale mele"
+    ],
+    "answer": 2,
+    "explanation": "'Colegi' is masculine plural, requiring 'ai mei'."
+   },
+   {
+    "question": "Which sentence shows correct agreement with neuter plural 'stilouri' (pens)?",
+    "options": [
+     "Stilourile sunt ale noastre.",
+     "Stilourile sunt ai noștri.",
+     "Stilourile sunt al nostru.",
+     "Stilourile sunt a noastră."
+    ],
+    "answer": 0,
+    "explanation": "Neuter nouns are feminine in the plural, so 'stilourile' agrees with 'ale noastre'."
+   }
+  ],
+  "tip": "Remember: The article 'al / a / ai / ale' always matches the gender and number of the item POSSESSED, never the possessor!"
+ },
+ {
+  "id": "ro-a1-stem-vowel-and-consonant-alternations",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#0284c7",
+  "emoji": "🔄",
+  "title": "Morphophonemic Stem Alternations",
+  "subtitle": "How vowels and consonants shift when endings are added",
+  "color": "#0284c7",
+  "bg": "#f0f9ff",
+  "keyPoint": "Adding plural or verbal endings frequently triggers predictable vowel shifts and consonant softening in the stem.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Singular / Base",
+    "Plural / Inflected",
+    "Shift"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Vowel Shift",
+      "băiat",
+      "băieți",
+      "a → e"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Consonant Shift",
+      "carte",
+      "cărți",
+      "t → ț"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Diphthong Shift",
+      "fată",
+      "fete",
+      "ă → e"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Velar Shift",
+      "copil",
+      "copii",
+      "l drops"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284c7",
+    "label": "Noun Plurals",
+    "example": "Avem două cărți noi.",
+    "translation": ""
+   },
+   {
+    "color": "#0369a1",
+    "label": "Verb Conjugation",
+    "example": "Eu pot, dar tu poți veni.",
+    "translation": ""
+   },
+   {
+    "color": "#075985",
+    "label": "Adjective Agreement",
+    "example": "Acești băieți sunt înalți.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Acești băieți învață limba română.",
+    "ko": "",
+    "highlight": "băieți"
+   },
+   {
+    "en": "Am cumpărat trei cărți interesante.",
+    "ko": "",
+    "highlight": "cărți"
+   },
+   {
+    "en": "Două fete citesc în grădină.",
+    "ko": "",
+    "highlight": "fete"
+   },
+   {
+    "en": "Mulți studenți merg la bibliotecă.",
+    "ko": "",
+    "highlight": "studenți"
+   },
+   {
+    "en": "Dacă vrei, poți pleca acum.",
+    "ko": "",
+    "highlight": "poți"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Am două carti.",
+    "right": "Am două cărți.",
+    "note": "The consonant 't' mutates to 'ț' before the plural ending '-i'."
+   },
+   {
+    "wrong": "Acei băiati sunt veseli.",
+    "right": "Acei băieți sunt veseli.",
+    "note": "The root vowel 'a' mutates to 'e' alongside 't' shifting to 'ț'."
+   },
+   {
+    "wrong": "Tu poti să vii mâine?",
+    "right": "Tu poți să vii mâine?",
+    "note": "In second-person verb forms, dental 't' softens to 'ț' before '-i'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct plural form: 'Avem multe ___.'",
+    "options": [
+     "carti",
+     "cărți",
+     "carte",
+     "cărturi"
+    ],
+    "answer": 1,
+    "explanation": "Carte shifts both its stem vowel (a → ă) and consonant (t → ț) in the plural: cărți."
+   },
+   {
+    "question": "Choose the correct plural form: 'Acei ___ sunt prietenii mei.'",
+    "options": [
+     "băieți",
+     "băiati",
+     "băieti",
+     "băiați"
+    ],
+    "answer": 0,
+    "explanation": "Băiat shifts 'a' to 'e' and 't' to 'ț' before the plural '-i', yielding băieți."
+   },
+   {
+    "question": "Complete the verb form: 'Tu ___ să citești acum.' (a putea)",
+    "options": [
+     "pote",
+     "pot",
+     "putem",
+     "poți"
+    ],
+    "answer": 3,
+    "explanation": "The second-person singular of a putea undergoes t → ț mutation before '-i': poți."
+   },
+   {
+    "question": "Choose the correct plural form: 'Două ___ vorbesc cu profesorul.'",
+    "options": [
+     "fătâ",
+     "fată",
+     "fete",
+     "feti"
+    ],
+    "answer": 2,
+    "explanation": "Fată alternates the root vowel 'ă' to 'e' to form the plural fete."
+   }
+  ],
+  "tip": "Whenever a suffix containing '-i' is added to a stem ending in 't', 'd', or 's', expect mutation to 'ț', 'z', or 'ș'."
+ },
+ {
+  "id": "ro-a2-clitic-doubling-accusative",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#2563eb",
+  "emoji": "👥",
+  "title": "Accusative Clitic Doubling",
+  "subtitle": "Doubling specific personal direct objects with weak pronouns",
+  "color": "#2563eb",
+  "bg": "#eff6ff",
+  "keyPoint": "Direct objects denoting specific persons marked with the preposition 'pe' require a matching accusative clitic pronoun.",
+  "structure": {
+   "headers": [
+    "Object Form",
+    "Accusative Clitic",
+    "Example Structure",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "pe + Masc. Sg.",
+      "îl / l-",
+      "Îl văd pe Dan.",
+      "I see Dan."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "pe + Fem. Sg.",
+      "o",
+      "O cunosc pe Maria.",
+      "I know Maria."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "pe + Masc. Pl.",
+      "îi / i-",
+      "Îi aștept pe băieți.",
+      "I wait for the boys."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "pe + Fem. Pl.",
+      "le",
+      "Le chem pe fete.",
+      "I call the girls."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563eb",
+    "label": "Specific Names",
+    "example": "Îl caut pe Andrei.",
+    "translation": ""
+   },
+   {
+    "color": "#1d4ed8",
+    "label": "Specific People",
+    "example": "O ajut pe mama mea.",
+    "translation": ""
+   },
+   {
+    "color": "#1e40af",
+    "label": "Personal Pronouns",
+    "example": "Mă asculți pe mine?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Îl văd pe profesor în clasă.",
+    "ko": "",
+    "highlight": "Îl văd pe"
+   },
+   {
+    "en": "O iubesc pe sora mea foarte mult.",
+    "ko": "",
+    "highlight": "O iubesc pe"
+   },
+   {
+    "en": "Îi chemăm pe prietenii noștri diseară.",
+    "ko": "",
+    "highlight": "Îi chemăm pe"
+   },
+   {
+    "en": "Le ascult pe studente cu atenție.",
+    "ko": "",
+    "highlight": "Le ascult pe"
+   },
+   {
+    "en": "L-am întâlnit pe Mihai la magazin.",
+    "ko": "",
+    "highlight": "L-am întâlnit pe"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Văd pe Dan în fiecare zi.",
+    "right": "Îl văd pe Dan în fiecare zi.",
+    "note": "Specific direct objects with 'pe' obligatorily require the matching clitic (îl)."
+   },
+   {
+    "wrong": "O am văzut pe Ana.",
+    "right": "Am văzut-o pe Ana.",
+    "note": "In compound tenses with 'am', feminine singular 'o' attaches as a suffix with a hyphen."
+   },
+   {
+    "wrong": "Îl văd un măr pe masă.",
+    "right": "Văd un măr pe masă.",
+    "note": "Inanimate non-person objects do not take 'pe' and cannot be doubled with a clitic."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: '___ văd pe Maria la universitate.'",
+    "options": [
+     "Îl",
+     "O",
+     "Le",
+     "Îi"
+    ],
+    "answer": 1,
+    "explanation": "Maria is feminine singular, requiring the accusative clitic 'o'."
+   },
+   {
+    "question": "Complete the sentence: '___ aștept pe frații mei aici.'",
+    "options": [
+     "Îi",
+     "Îl",
+     "Le",
+     "O"
+    ],
+    "answer": 0,
+    "explanation": "Frații mei is masculine plural, requiring the accusative clitic 'îi'."
+   },
+   {
+    "question": "Complete the sentence: 'Noi ___ căutăm pe doctor.'",
+    "options": [
+     "o",
+     "le",
+     "îl",
+     "i"
+    ],
+    "answer": 2,
+    "explanation": "Doctor is masculine singular, requiring the accusative clitic 'îl'."
+   },
+   {
+    "question": "Complete the sentence: 'Profesorul ___ laudă pe elevele silitoare.'",
+    "options": [
+     "îi",
+     "îl",
+     "o",
+     "le"
+    ],
+    "answer": 3,
+    "explanation": "Elevele is feminine plural, requiring the accusative clitic 'le'."
+   }
+  ],
+  "tip": "Whenever you formulate 'pe + [person]', immediately remind yourself to place a matching weak pronoun before the verb."
+ },
+ {
+  "id": "ro-a2-clitic-doubling-dative",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🎁",
+  "title": "Dative Case and Dative Clitic Doubling",
+  "subtitle": "Inflecting indirect objects and reinforcing them with dative clitics",
+  "color": "#059669",
+  "bg": "#ecfdf5",
+  "keyPoint": "Indirect objects in Romanian take the dative ending and are almost always doubled by an unstressed dative clitic.",
+  "structure": {
+   "headers": [
+    "Target Noun",
+    "Dative Form",
+    "Dative Clitic",
+    "Full Pattern"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masc. Sg. (băiat)",
+      "băiatului",
+      "îi / i-",
+      "Îi dau băiatului cartea."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Fem. Sg. (fată)",
+      "fetei",
+      "îi / i-",
+      "Îi spun fetei adevărul."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masc. Pl. (băieți)",
+      "băieților",
+      "le / li",
+      "Le scriu băieților un mesaj."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Fem. Pl. (fete)",
+      "fetelor",
+      "le / li",
+      "Le ofer fetelor flori."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Giving Something",
+    "example": "Îi dau colegului un pix.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Telling / Communicating",
+    "example": "Îi spun mamei o poveste.",
+    "translation": ""
+   },
+   {
+    "color": "#065f46",
+    "label": "Plural Indirect Objects",
+    "example": "Le trimit prietenilor o scrisoare.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Îi dau profesorului tema mea.",
+    "ko": "",
+    "highlight": "Îi dau profesorului"
+   },
+   {
+    "en": "Îi trimit Mariei un cadou frumos.",
+    "ko": "",
+    "highlight": "Îi trimit Mariei"
+   },
+   {
+    "en": "Le explicăm studenților această regulă.",
+    "ko": "",
+    "highlight": "Le explicăm studenților"
+   },
+   {
+    "en": "I-am dat copilului o înghețată gustoasă.",
+    "ko": "",
+    "highlight": "I-am dat copilului"
+   },
+   {
+    "en": "Le răspundem prietenelor noastre.",
+    "ko": "",
+    "highlight": "Le răspundem prietenelor"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Dau băiatului o carte.",
+    "right": "Îi dau băiatului o carte.",
+    "note": "Even when 'băiatului' is explicitly stated, the clitic 'îi' must double the indirect object."
+   },
+   {
+    "wrong": "Îi dau la Maria o floare.",
+    "right": "Îi dau Mariei o floare.",
+    "note": "Standard Romanian uses the inflected dative ending 'Mariei', not preposition 'la'."
+   },
+   {
+    "wrong": "Le spun colegului noutatea.",
+    "right": "Îi spun colegului noutatea.",
+    "note": "Colegului is singular, so the dative clitic must be singular 'îi', not plural 'le'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Noi ___ spunem tatălui tot ce s-a întâmplat.'",
+    "options": [
+     "o",
+     "le",
+     "îi",
+     "îl"
+    ],
+    "answer": 2,
+    "explanation": "Tatălui is masculine singular dative, which requires the singular clitic 'îi'."
+   },
+   {
+    "question": "Complete the sentence: 'Profesoara ___ oferă premii elevilor.'",
+    "options": [
+     "îi",
+     "le",
+     "o",
+     "îi-"
+    ],
+    "answer": 1,
+    "explanation": "Elevilor is plural dative, requiring the plural dative clitic 'le'."
+   },
+   {
+    "question": "Select the correct dative inflection: 'Îi dau o floare ___.' (fata)",
+    "options": [
+     "fata",
+     "fataei",
+     "fete",
+     "fetei"
+    ],
+    "answer": 3,
+    "explanation": "Fată becomes fetei in the definite dative singular."
+   },
+   {
+    "question": "Complete the compound tense: '___-am trimis mamei un mesaj.'",
+    "options": [
+     "I",
+     "Îl",
+     "O",
+     "Le"
+    ],
+    "answer": 0,
+    "explanation": "The clitic 'îi' elides to 'i-' when attaching to the auxiliary 'am'."
+   }
+  ],
+  "tip": "Singular dative clitic 'îi' serves both masculine and feminine, while plural dative clitic is always 'le'."
+ },
+ {
+  "id": "ro-a2-genitive-case-inflection",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#7c3aed",
+  "emoji": "🏷️",
+  "title": "Genitive Case Inflection",
+  "subtitle": "Forming possessive nouns and using the possessive article",
+  "color": "#7c3aed",
+  "bg": "#f5f3ff",
+  "keyPoint": "Genitive matches dative morphology, adding '-lui' to masculine nouns and '-ei/-lor' to feminine and plural nouns.",
+  "structure": {
+   "headers": [
+    "Noun Class",
+    "Nominative",
+    "Definite Genitive",
+    "Possessive Article"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masc. Sg.",
+      "băiatul",
+      "băiatului",
+      "al / a / ai / ale"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Fem. Sg.",
+      "fata",
+      "fetei",
+      "al / a / ai / ale"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masc. Pl.",
+      "băieții",
+      "băieților",
+      "al / a / ai / ale"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Fem. Pl.",
+      "fetele",
+      "fetelor",
+      "al / a / ai / ale"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7c3aed",
+    "label": "Direct Possession",
+    "example": "Cartea profesorului este nouă.",
+    "translation": ""
+   },
+   {
+    "color": "#6d28d9",
+    "label": "With Possessive Article",
+    "example": "O mașină a vecinului este albastră.",
+    "translation": ""
+   },
+   {
+    "color": "#5b21b6",
+    "label": "Separated Possession",
+    "example": "Această grădină frumoasă este a Mariei.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mașina băiatului este rapidă.",
+    "ko": "",
+    "highlight": "băiatului"
+   },
+   {
+    "en": "Culoarea fetei rochie este roșie.",
+    "ko": "",
+    "highlight": "fetei"
+   },
+   {
+    "en": "Opiniile studenților sunt foarte clare.",
+    "ko": "",
+    "highlight": "studenților"
+   },
+   {
+    "en": "Această geantă este a mamei.",
+    "ko": "",
+    "highlight": "a mamei"
+   },
+   {
+    "en": "Am văzut biroul noului director.",
+    "ko": "",
+    "highlight": "noului director"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Casa de băiatul este mare.",
+    "right": "Casa băiatului este mare.",
+    "note": "Romanian uses synthetic inflection (-lui) rather than 'de' for definite possessors."
+   },
+   {
+    "wrong": "Această carte este de profesorul.",
+    "right": "Această carte este a profesorului.",
+    "note": "Predicate possessives require the genitive article 'al/a/ai/ale' plus the genitive form."
+   },
+   {
+    "wrong": "Cartea fetei este a fratele.",
+    "right": "Cartea fetei este a fratelui.",
+    "note": "The noun after possessive article 'a' must be in the genitive case (fratelui)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the genitive noun: 'Cheile ___ sunt pe masă.' (apartamentul)",
+    "options": [
+     "apartament",
+     "apartamentului",
+     "apartamentelor",
+     "apartamentei"
+    ],
+    "answer": 1,
+    "explanation": "Apartament is neuter singular, inflecting with '-ului' in the definite genitive."
+   },
+   {
+    "question": "Complete the phrase: 'Răspunsul ___ a fost corect.' (studenta)",
+    "options": [
+     "studentei",
+     "studenta",
+     "studentului",
+     "studentelor"
+    ],
+    "answer": 0,
+    "explanation": "Studentă has the genitive singular definite ending '-ei': studentei."
+   },
+   {
+    "question": "Choose the correct possessive article: 'Acești pantofi sunt ___ fratelui meu.'",
+    "options": [
+     "al",
+     "a",
+     "ale",
+     "ai"
+    ],
+    "answer": 3,
+    "explanation": "Pantofi is masculine plural, requiring the matching possessive article 'ai'."
+   },
+   {
+    "question": "Complete the genitive plural: 'Cărțile ___ sunt la bibliotecă.' (copiii)",
+    "options": [
+     "copii",
+     "copilului",
+     "copiilor",
+     "copiilor-i"
+    ],
+    "answer": 2,
+    "explanation": "The plural genitive definite suffix for both genders is '-lor': copiilor."
+   }
+  ],
+  "tip": "In Romanian, feminine genitive singular looks identical to the feminine nominative plural plus '-i' (o fată → fete → fetei)."
+ },
+ {
+  "id": "ro-a2-perfect-compus-vs-imperfect",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#d97706",
+  "emoji": "⏳",
+  "title": "Past Tenses: Perfect Compus vs. Imperfect",
+  "subtitle": "Choosing between completed past actions and continuous background states",
+  "color": "#d97706",
+  "bg": "#fffbeb",
+  "keyPoint": "Use perfect compus for completed actions with definite boundaries, and imperfect for ongoing states, background descriptions, or past habits.",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Formation",
+    "Aspect / Usage",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Perfect Compus",
+      "auxiliary 'a avea' + past participle",
+      "Completed action",
+      "Am mâncat o pizza."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Imperfect",
+      "stem + imperfect suffix (-am, -ai, -a)",
+      "Continuous background",
+      "Mâncam când ai sunat."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Interrupted Action",
+      "Imperfect + Perfect Compus",
+      "Background broken by event",
+      "Dormeam când a bătut la ușă."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#d97706",
+    "label": "Completed Event",
+    "example": "Ieri am citit toată cartea.",
+    "translation": ""
+   },
+   {
+    "color": "#b45309",
+    "label": "Past Habit",
+    "example": "În fiecare vară mergeam la mare.",
+    "translation": ""
+   },
+   {
+    "color": "#92400e",
+    "label": "Ongoing Background",
+    "example": "Afară ploua când am ieșit.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ieri am cumpărat un telefon nou.",
+    "ko": "",
+    "highlight": "am cumpărat"
+   },
+   {
+    "en": "Când eram mic, citeam în fiecare seară.",
+    "ko": "",
+    "highlight": "citeam"
+   },
+   {
+    "en": "Noi am terminat proiectul la timp.",
+    "ko": "",
+    "highlight": "am terminat"
+   },
+   {
+    "en": "Ea gătea când a sunat telefonul.",
+    "ko": "",
+    "highlight": "gătea"
+   },
+   {
+    "en": "Soarele strălucea și vântul adia ușor.",
+    "ko": "",
+    "highlight": "strălucea"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ieri mergeam la magazin și am cumpărat pâine.",
+    "right": "Ieri am mers la magazin și am cumpărat pâine.",
+    "note": "A single completed trip yesterday requires perfect compus (am mers), not imperfect."
+   },
+   {
+    "wrong": "Când am fost mic, locuiam la sat.",
+    "right": "Când eram mic, locuiam la sat.",
+    "note": "Prolonged childhood states are expressed with the imperfect of a fi (eram)."
+   },
+   {
+    "wrong": "În fiecare zi am citit două ore.",
+    "right": "În fiecare zi citeam două ore.",
+    "note": "Repeated habitual actions in the past generally require the imperfect (citeam)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the right tense for a completed past action: 'Ieri seară noi ___ un film excelent.'",
+    "options": [
+     "vedeam",
+     "am văzut",
+     "am vedea",
+     "văzuserăm"
+    ],
+    "answer": 1,
+    "explanation": "A completed single event in the past (yesterday evening) calls for perfect compus: am văzut."
+   },
+   {
+    "question": "Choose the right form for an ongoing state: 'Când ___ mic, îmi plăcea ciocolata.'",
+    "options": [
+     "am fost",
+     "fusesem",
+     "eram",
+     "sunt"
+    ],
+    "answer": 2,
+    "explanation": "Being small is an extended background state in the past, requiring the imperfect: eram."
+   },
+   {
+    "question": "Complete the interrupted sentence: 'Noi ___ când mama a intrat în cameră.'",
+    "options": [
+     "am dormit",
+     "dormit",
+     "am dormi",
+     "dormeam"
+    ],
+    "answer": 3,
+    "explanation": "The ongoing action interrupted by another past action must be in the imperfect: dormeam."
+   },
+   {
+    "question": "Express a regular past habit: 'În copilărie, ei ___ fotbal în fiecare sâmbătă.'",
+    "options": [
+     "jucau",
+     "au jucat",
+     "jucat",
+     "au jucau"
+    ],
+    "answer": 0,
+    "explanation": "Habitual, repeated actions in the past are rendered with the imperfect: jucau."
+   }
+  ],
+  "tip": "Think of the imperfect as setting the stage (scenery, habits, ongoing feelings) and the perfect compus as the actors performing specific actions on that stage."
+ },
+ {
+  "id": "ro-a2-conjunctive-present-with-sa",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔄",
+  "title": "Subjunctive Present with the Particle 'Să'",
+  "subtitle": "Express wishes, necessity, and intentions where other languages use the infinitive",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "Romanian almost entirely replaces infinitive verbs after modals or desire verbs with the subjunctive marker 'să' followed by a conjugated verb.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Conjunctive Form",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "eu",
+      "să merg",
+      "First person singular"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "tu",
+      "să mergi",
+      "Second person singular"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "el / ea",
+      "să meargă",
+      "Third person (distinct vowel alternation)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "noi / voi",
+      "să mergem / să mergeți",
+      "First & second person plural"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ei / ele",
+      "să meargă",
+      "Third person plural (identical to 3rd singular)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Desire / Willingness",
+    "example": "Vreau să învăț limba română în fiecare zi.",
+    "translation": ""
+   },
+   {
+    "color": "#06B6D4",
+    "label": "Modal Obligation",
+    "example": "Trebuie să plecăm imediat la gară.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Ability / Permission",
+    "example": "Pot să deschid fereastra din bucătărie?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Vreau să citesc această carte interesantă.",
+    "ko": "",
+    "highlight": "să citesc"
+   },
+   {
+    "en": "Ea poate să vorbească românește foarte bine.",
+    "ko": "",
+    "highlight": "să vorbească"
+   },
+   {
+    "en": "Noi trebuie să ajungem la timp la conferință.",
+    "ko": "",
+    "highlight": "să ajungem"
+   },
+   {
+    "en": "Copiii doresc să meargă în parc.",
+    "ko": "",
+    "highlight": "să meargă"
+   },
+   {
+    "en": "Încerc să înțeleg această regulă gramaticală.",
+    "ko": "",
+    "highlight": "să înțeleg"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Vreau a citi o carte.",
+    "right": "Vreau să citesc o carte.",
+    "note": "Unlike English or French, Romanian uses the subjunctive with 'să', not the long infinitive with 'a', after verbs of desire."
+   },
+   {
+    "wrong": "El vrea să citește.",
+    "right": "El vrea să citească.",
+    "note": "The third-person subjunctive often takes different endings (like -ească or -ă) compared to the present indicative."
+   },
+   {
+    "wrong": "Trebuie să eu merg.",
+    "right": "Trebuie să merg eu.",
+    "note": "Never place subject pronouns directly between the particle 'să' and the conjugated verb; object clitics or adverbs go there instead."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I want to buy bread today: 'Vreau ___ pâine astăzi.'",
+    "options": [
+     "să cumpără",
+     "să cumpăr",
+     "a cumpăra",
+     "să cumpere"
+    ],
+    "answer": 1,
+    "explanation": "The subjunctive must match the subject 'eu' (first-person singular): 'să cumpăr'."
+   },
+   {
+    "question": "Maria has to leave early: 'Maria trebuie ___ devreme.'",
+    "options": [
+     "să plece",
+     "să pleacă",
+     "a pleca",
+     "să pleacă ea"
+    ],
+    "answer": 0,
+    "explanation": "The 3rd person singular subjunctive for 'a pleca' changes vowel to 'să plece'."
+   },
+   {
+    "question": "Can you (plural) help me?: 'Puteți ___ mâine?'",
+    "options": [
+     "să ajutați",
+     "să ajută",
+     "a ajuta",
+     "să ajuți"
+    ],
+    "answer": 0,
+    "explanation": "The verb agrees with 'voi' (second-person plural): 'să ajutați'."
+   },
+   {
+    "question": "They want to sleep now: 'Ei vor ___ acum.'",
+    "options": [
+     "să doarme",
+     "să dormi",
+     "să doarmă",
+     "a dormi"
+    ],
+    "answer": 2,
+    "explanation": "Third-person plural for 'a dormi' takes the subjunctive ending '-ă': 'să doarmă'."
+   }
+  ],
+  "tip": "Remember that the 3rd person singular and plural subjunctive forms are almost always identical (e.g., 'el să vadă', 'ei să vadă')."
+ },
+ {
+  "id": "ro-a2-combined-clitic-pronouns",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🧩",
+  "title": "Combined Dative and Accusative Clitic Clusters",
+  "subtitle": "Order and fuse indirect and direct unstressed object pronouns smoothly",
+  "color": "#3B82F6",
+  "bg": "#EFF6FF",
+  "keyPoint": "Dative clitics always precede accusative clitics, frequently merging via hyphens or sound contractions into a single unit before the verb.",
+  "structure": {
+   "headers": [
+    "Dative + Accusative",
+    "Combined Form",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "îmi (to me) + îl (him/it)",
+      "mi-l",
+      "Mi-l arată."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "îți (to you) + o (her/it)",
+      "ți-o",
+      "Ți-o trimit."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "îi (to him/her) + le (them, f.)",
+      "i le",
+      "I le dă."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ne (to us) + îi (them, m.)",
+      "ni-i",
+      "Ni-i prezintă."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "vă (to you pl.) + le (them, f.)",
+      "vi le",
+      "Vi le cumpăr."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Singular Accusative Fusion",
+    "example": "Mi-l aduci mâine la birou?",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Direct Feminine Object 'o'",
+    "example": "Ți-o spun cu toată sinceritatea.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Plural Object Combinations",
+    "example": "I le explic cu multă răbdare.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Vecinul mi-l recomandă pe acest mecanic.",
+    "ko": "",
+    "highlight": "mi-l"
+   },
+   {
+    "en": "Dacă ai nevoie de cheie, ți-o dau acum.",
+    "ko": "",
+    "highlight": "ți-o"
+   },
+   {
+    "en": "Profesorul ni-i arată pe noii studenți.",
+    "ko": "",
+    "highlight": "ni-i"
+   },
+   {
+    "en": "Părinții vi le trimit prin poștă.",
+    "ko": "",
+    "highlight": "vi le"
+   },
+   {
+    "en": "Secretara i-o transmite directorului.",
+    "ko": "",
+    "highlight": "i-o"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Îl mi dai te rog.",
+    "right": "Mi-l dai te rog.",
+    "note": "Dative clitics must always precede accusative clitics (Indirect Object + Direct Object)."
+   },
+   {
+    "wrong": "Îți o dau mâine.",
+    "right": "Ți-o dau mâine.",
+    "note": "Unstressed pronouns contract with a hyphen before 'o': 'îți + o' becomes 'ți-o'."
+   },
+   {
+    "wrong": "Ne îi trimit azi.",
+    "right": "Ni-i trimit azi.",
+    "note": "The dative 'ne' transforms into 'ni' when followed by masculine plural accusative 'îi', written as 'ni-i'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He gives it (masc. book) to me: 'El ___ dă astăzi.'",
+    "options": [
+     "îl mi",
+     "mi-l",
+     "mă-l",
+     "îmi îl"
+    ],
+    "answer": 1,
+    "explanation": "Dative 'îmi' + accusative 'îl' contract to 'mi-l'."
+   },
+   {
+    "question": "I am sending it (fem. letter) to you: 'Eu ___ trimit prin e-mail.'",
+    "options": [
+     "ți-o",
+     "te-o",
+     "o-ți",
+     "îți o"
+    ],
+    "answer": 0,
+    "explanation": "'Îți' combined with direct object 'o' contracts to 'ți-o'."
+   },
+   {
+    "question": "She tells it (fem.) to them: 'Ea ___ spune în fiecare seară.'",
+    "options": [
+     "le-l",
+     "le o",
+     "li-o",
+     "o le"
+    ],
+    "answer": 2,
+    "explanation": "Dative plural 'le' becomes 'li' before 'o', forming 'li-o'."
+   },
+   {
+    "question": "We are showing them (masc. pl.) to him: 'Noi ___ arătăm acum.'",
+    "options": [
+     "i-o",
+     "îi îi",
+     "i-i",
+     "îl îi"
+    ],
+    "answer": 2,
+    "explanation": "Dative 'îi' + accusative 'îi' contracts with a hyphen to 'i-i'."
+   }
+  ],
+  "tip": "Remember the mantra: 'To whom' (dative) always comes before 'What' (accusative), fused together with a hyphen whenever vowels collide."
+ },
+ {
+  "id": "ro-b1-dative-possessive-and-dative-of-interest",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#F59E0B",
+  "emoji": "🤲",
+  "title": "Dative Possessive and Inalienable Possession",
+  "subtitle": "Express personal belonging and affected body parts naturally with clitic datives",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Romanian prefers weak dative clitics directly linked to the verb over possessive adjectives when referring to body parts, clothing, and close relatives.",
+  "structure": {
+   "headers": [
+    "Clitic Dative",
+    "Affected Noun",
+    "Idiomatic Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "îmi / mi-",
+      "capul (def. art.)",
+      "my head"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "îți / ți-",
+      "mâinile (def. art.)",
+      "your hands"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "își / și-",
+      "haina (def. art.)",
+      "his / her own coat (reflexive)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "îi / i-",
+      "ochii (def. art.)",
+      "his / her eyes (non-reflexive)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ne / vă / le",
+      "inima (def. art.)",
+      "our / your / their heart"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Body Parts",
+    "example": "Îmi spăl mâinile înainte de masă.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Clothing & Personal Items",
+    "example": "El își pune cămașa albastră.",
+    "translation": ""
+   },
+   {
+    "color": "#78350F",
+    "label": "Close Family Relationships",
+    "example": "I-a murit bunicul anul trecut.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mă doare capul și îmi simt tâmplele grele.",
+    "ko": "",
+    "highlight": "îmi"
+   },
+   {
+    "en": "Copilul își leagă șireturile singur.",
+    "ko": "",
+    "highlight": "își"
+   },
+   {
+    "en": "Vântul puternic i-a smuls pălăria de pe cap.",
+    "ko": "",
+    "highlight": "i-a"
+   },
+   {
+    "en": "Spală-ți fața cu apă rece ca să te trezești.",
+    "ko": "",
+    "highlight": "-ți"
+   },
+   {
+    "en": "Doctorul ne ascultă plămânii cu stetoscopul.",
+    "ko": "",
+    "highlight": "ne"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Spăl mâinile mele.",
+    "right": "Îmi spăl mâinile.",
+    "note": "Using possessive adjectives ('mele') with body parts sounds foreign in Romanian; use the unstressed dative pronoun 'îmi'."
+   },
+   {
+    "wrong": "El pune haina lui.",
+    "right": "El își pune haina.",
+    "note": "When the subject owns the item being acted upon, Romanian requires the reflexive dative 'își'."
+   },
+   {
+    "wrong": "Îmi spăl mâini.",
+    "right": "Îmi spăl mâinile.",
+    "note": "Nouns governed by a possessive dative must carry the definite article ('-le')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I brush my teeth: '___ spăl dinții în fiecare dimineață.'",
+    "options": [
+     "Mă",
+     "Îmi",
+     "Pe mine",
+     "Ai mei"
+    ],
+    "answer": 1,
+    "explanation": "'Îmi' is the first-person singular dative clitic used for personal body parts."
+   },
+   {
+    "question": "Wash your face!: 'Spală-___ fața!'",
+    "options": [
+     "te",
+     "ți",
+     "le",
+     "vă"
+    ],
+    "answer": 1,
+    "explanation": "The postposed dative clitic for second person singular is '-ți' ('Spală-ți fața')."
+   },
+   {
+    "question": "He broke his leg: 'Și-a rupt ___ ieri la schi.'",
+    "options": [
+     "picior",
+     "un picior",
+     "piciorul",
+     "piciorul lui"
+    ],
+    "answer": 2,
+    "explanation": "The possessed noun must take the definite article: 'piciorul'."
+   },
+   {
+    "question": "Her tears were falling down: 'Lacrimile ___ curgeau pe obraji.'",
+    "options": [
+     "îi",
+     "o",
+     "pe ea",
+     "își"
+    ],
+    "answer": 0,
+    "explanation": "Non-reflexive 3rd person singular dative 'îi' expresses possession ('her tears')."
+   }
+  ],
+  "tip": "Notice that the noun following a dative possessive always retains its definite article suffix: 'îmi spăl faț-a', 'îți iei hain-a'."
+ },
+ {
+  "id": "ro-b1-future-varieties-o-sa-vs-voi-vs-am-sa",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#10B981",
+  "emoji": "⏳",
+  "title": "Colloquial vs. Formal Future Tenses",
+  "subtitle": "Master the nuances between 'voi cânta', 'o să cânt', and 'am să cânt'",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "While the auxiliary 'voi + infinitive' forms the literary standard, daily spoken Romanian predominantly relies on the invariant 'o să + subjunctive'.",
+  "structure": {
+   "headers": [
+    "Future Variety",
+    "Structure",
+    "Register / Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Literary Future",
+      "voi, vei, va + infinitiv",
+      "Formal, official, written documents"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Colloquial Invariable",
+      "o să + conjunctiv",
+      "Standard spoken daily Romanian (most common)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Intention Future",
+      "am, ai, are + să + conjunctiv",
+      "Subjective intent, determination"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Regional / Inverted",
+      "cânta-voi / oi cânta",
+      "Archaic, regional folklore, or poetic"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Everyday Speech",
+    "example": "O să plouă diseară în tot orașul.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Formal Announcement",
+    "example": "Președintele va susține o declarație la ora cinci.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Personal Determination",
+    "example": "Am să-ți spun tot adevărul, mai devreme sau mai târziu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mâine o să mergem la cumpărături împreună.",
+    "ko": "",
+    "highlight": "o să mergem"
+   },
+   {
+    "en": "Compania va deschide trei filiale noi în toamnă.",
+    "ko": "",
+    "highlight": "va deschide"
+   },
+   {
+    "en": "Am să termin acest proiect până vineri seară.",
+    "ko": "",
+    "highlight": "Am să termin"
+   },
+   {
+    "en": "Ce o să faci în vacanța de vară?",
+    "ko": "",
+    "highlight": "o să faci"
+   },
+   {
+    "en": "Vom analiza rezultatele în cadrul următoarei ședințe.",
+    "ko": "",
+    "highlight": "Vom analiza"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Voi să fac asta mâine.",
+    "right": "Voi face asta mâine.",
+    "note": "The standard future auxiliary ('voi') joins directly with the infinitive without 'să'."
+   },
+   {
+    "wrong": "O să facă el, dar om să facem noi.",
+    "right": "O să facem noi.",
+    "note": "In 'o să + subjunctive', the particle 'o' is completely invariant and does not conjugate for person."
+   },
+   {
+    "wrong": "Am a merge la doctor.",
+    "right": "Am să merg la doctor.",
+    "note": "The personal intention periphrasis uses conjugated 'a avea' + 'să' + subjunctive, never the long infinitive with 'a'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Natural conversational: We will see each other tomorrow: 'Mâine ___ la universitate.'",
+    "options": [
+     "o să ne vedem",
+     "vom să ne vedem",
+     "avem a ne vedea",
+     "o să ne vom vedea"
+    ],
+    "answer": 0,
+    "explanation": "The invariable 'o să' + 1st person plural subjunctive 'ne vedem' is the most natural colloquial form."
+   },
+   {
+    "question": "Formal news broadcast: The train will arrive at platform 2: 'Trenul ___ la linia doi.'",
+    "options": [
+     "o să sosească",
+     "am să sosească",
+     "va sosi",
+     "va să sosește"
+    ],
+    "answer": 2,
+    "explanation": "'Va sosi' (standard 3rd person future with infinitive) is expected in formal announcements."
+   },
+   {
+    "question": "Personal resolve: I will certainly call him tonight: '___ în această seară negreșit.'",
+    "options": [
+     "Am să-l sun",
+     "O să-l sună",
+     "Voi să-l sun",
+     "Voi să-l sunat"
+    ],
+    "answer": 0,
+    "explanation": "'Am să-l sun' uses the intention future ('am să' + subjunctive)."
+   },
+   {
+    "question": "Complete the conversational form: What will you eat?: 'Ce ___ diseară?'",
+    "options": [
+     "vei să mănânci",
+     "o să mănânci",
+     "o să mănânce",
+     "ai să mânca"
+    ],
+    "answer": 1,
+    "explanation": "'O să' remains unchanged, followed by second person subjunctive 'mănânci'."
+   }
+  ],
+  "tip": "If you are speaking on the street, stick with 'o să + subjunctive' for 90% of your future statements; it sounds the most natural."
+ },
+ {
+  "id": "ro-b1-prepositional-government-and-case",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#F59E0B",
+  "emoji": "🧭",
+  "title": "Prepositional Case Government (Genitive and Dative Prepositions)",
+  "subtitle": "Master prepositions requiring genitive or dative inflection instead of the accusative",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "While most Romanian prepositions govern the accusative, locational/adversarial prepositions govern the genitive, and causal benefactive prepositions govern the dative.",
+  "structure": {
+   "headers": [
+    "Case Governed",
+    "Prepositions",
+    "Noun Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Accusative (Standard)",
+      "pe, la, cu, în, din, spre",
+      "Uninflected / Indefinite base"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Genitive",
+      "înaintea, în spatele, împotriva, contra",
+      "Genitive articulated ending (e.g. -ului, -ei)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Dative",
+      "datorită, mulțumită, grație, conform",
+      "Dative articulated ending (e.g. -ului, -ei)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Spatial Genitive",
+    "example": "Mașina este parcată în fața blocului.",
+    "translation": ""
+   },
+   {
+    "color": "#C2410C",
+    "label": "Opposition Genitive",
+    "example": "Luptăm împotriva poluării excesive.",
+    "translation": ""
+   },
+   {
+    "color": "#9A3412",
+    "label": "Favorable Cause Dative",
+    "example": "Am reușit datorită ajutorului tău.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Autobuzul oprește chiar înaintea semaforului.",
+    "ko": "",
+    "highlight": "înaintea semaforului"
+   },
+   {
+    "en": "Toți au votat împotriva propunerii mele.",
+    "ko": "",
+    "highlight": "împotriva propunerii"
+   },
+   {
+    "en": "Echipa a câștigat mulțumită antrenorului dedicat.",
+    "ko": "",
+    "highlight": "mulțumită antrenorului"
+   },
+   {
+    "en": "S-a comportat conform regulamentului oficial.",
+    "ko": "",
+    "highlight": "conform regulamentului"
+   },
+   {
+    "en": "Pisica doarme liniștită în spatele canapelei.",
+    "ko": "",
+    "highlight": "în spatele canapelei"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "În fața de bloc.",
+    "right": "În fața blocului.",
+    "note": "Compound spatial prepositions take the genitive directly without an extra 'de'."
+   },
+   {
+    "wrong": "Datorită la prietenul meu.",
+    "right": "Datorită prietenului meu.",
+    "note": "Dative prepositions ('datorită', 'grație') attach directly to the inflected noun suffix without the preposition 'la'."
+   },
+   {
+    "wrong": "Împotriva război.",
+    "right": "Împotriva războiului.",
+    "note": "'Împotriva' demands the articulated genitive case: 'războiului'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "In front of the school: 'Ne întâlnim în fața ___.'",
+    "options": [
+     "școală",
+     "școlii",
+     "la școală",
+     "cu școala"
+    ],
+    "answer": 1,
+    "explanation": "'În fața' governs the genitive case feminine singular: 'școlii'."
+   },
+   {
+    "question": "Thanks to the doctor (masc.): 'A supraviețuit grație ___.'",
+    "options": [
+     "medicului",
+     "medicul",
+     "pe medic",
+     "la medic"
+    ],
+    "answer": 0,
+    "explanation": "'Grație' governs the dative case masculine singular: 'medicului'."
+   },
+   {
+    "question": "Against all expectations (fem. pl.): 'A reușit împotriva ___.'",
+    "options": [
+     "așteptări",
+     "așteptările",
+     "așteptărilor",
+     "de așteptări"
+    ],
+    "answer": 2,
+    "explanation": "'Împotriva' governs the genitive case plural: 'așteptărilor'."
+   },
+   {
+    "question": "According to the law (fem. sg.): 'Au procedat conform ___.'",
+    "options": [
+     "la lege",
+     "legii",
+     "legea",
+     "pe lege"
+    ],
+    "answer": 1,
+    "explanation": "'Conform' governs the dative case without prepositions: 'legii'."
+   }
+  ],
+  "tip": "Prepositions ending in '-a' (like 'înaintea', 'deasupra', 'împotriva') or compound locational phrases ('în fața') almost always govern the genitive case."
+ },
+ {
+  "id": "ro-b1-conditional-optative-mood",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#4F46E5",
+  "emoji": "💭",
+  "title": "Conditional-Optative Present and Past",
+  "subtitle": "Expressing wishes, polite requests, and hypothetical scenarios",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "The conditional-optative uses dedicated auxiliary forms (aș, ai, ar, am, ați, ar) followed by the short infinitive for present conditions or 'fi' plus the past participle for past conditions.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Auxiliary + Present Infinitive",
+    "Past Conditional",
+    "English Value"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Eu (1st Sg)",
+      "aș citi",
+      "aș fi citit",
+      "I would read / would have read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Tu (2nd Sg)",
+      "ai merge",
+      "ai fi mers",
+      "You would go / would have gone"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "El/Ea (3rd Sg/Pl)",
+      "ar vorbi",
+      "ar fi vorbit",
+      "He/They would speak / would have spoken"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Noi (1st Pl)",
+      "am dori",
+      "am fi dorit",
+      "We would wish / would have wished"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Voi (2nd Pl)",
+      "ați putea",
+      "ați fi putut",
+      "You all would be able / could have"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Polite Requests & Wishes",
+    "example": "Aș dori o cafea neagră, vă rog.",
+    "translation": ""
+   },
+   {
+    "color": "#06B6D4",
+    "label": "Present Hypothetical (Type 2)",
+    "example": "Dacă aș avea timp, aș vizita muzeul.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Past Unreal / Regret (Type 3)",
+    "example": "Dacă m-ai fi sunat, aș fi venit imediat.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Aș vrea să discutăm despre noul proiect.",
+    "ko": "",
+    "highlight": "Aș vrea"
+   },
+   {
+    "en": "Ce ai face în locul meu?",
+    "ko": "",
+    "highlight": "ai face"
+   },
+   {
+    "en": "El nu ar accepta o astfel de ofertă.",
+    "ko": "",
+    "highlight": "ar accepta"
+   },
+   {
+    "en": "Dacă ar fi știut adevărul, nu ar fi plecat.",
+    "ko": "",
+    "highlight": "ar fi știut"
+   },
+   {
+    "en": "Noi am fi cumpărat biletele mai devreme.",
+    "ko": "",
+    "highlight": "am fi cumpărat"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Dacă aș avea bani, aș fi cumpărat mașina acum.",
+    "right": "Dacă aș avea bani, aș cumpăra mașina acum.",
+    "note": "Use the present conditional (aș cumpăra), not the past conditional, for present hypothetical consequences."
+   },
+   {
+    "wrong": "El ar vrea să citește cartea.",
+    "right": "El ar vrea să citească cartea.",
+    "note": "Subjunctive complements after 'ar vrea' still require subjunctive conjugation (să citească), not indicative."
+   },
+   {
+    "wrong": "Dacă voi avea timp, aș veni la petrecere.",
+    "right": "Dacă aș avea timp, aș veni la petrecere.",
+    "note": "Hypothetical conditional clauses take conditional in both clauses, unlike indicative future conditional pairs."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you politely say: 'I would like a glass of water'?",
+    "options": [
+     "Am vrut un pahar cu apă.",
+     "Aș dori un pahar cu apă.",
+     "Voi dori un pahar cu apă.",
+     "Aș fi dorit un pahar cu apă ieri."
+    ],
+    "answer": 1,
+    "explanation": "'Aș dori' is the 1st person singular present conditional used for polite requests."
+   },
+   {
+    "question": "Complete the Type 3 unreal conditional: 'Dacă ne-ai fi chemat, noi ___.'",
+    "options": [
+     "am fi venit",
+     "am veni",
+     "am venit",
+     "vom veni"
+    ],
+    "answer": 0,
+    "explanation": "A counterfactual past condition requires past conditional 'am fi venit' in the result clause."
+   },
+   {
+    "question": "Choose the correct form for 3rd person singular: 'Ea ___ un ceai cald.'",
+    "options": [
+     "aș bea",
+     "ai bea",
+     "ar bea",
+     "am bea"
+    ],
+    "answer": 2,
+    "explanation": "The 3rd person singular auxiliary particle is 'ar', giving 'ar bea'."
+   },
+   {
+    "question": "Complete: 'Dacă ați învăța mai mult, ___ examenele cu ușurință.'",
+    "options": [
+     "ați trecut",
+     "veți trece",
+     "ați fi trecut",
+     "ați trece"
+    ],
+    "answer": 3,
+    "explanation": "Present hypothetical condition ('ați învăța') pairs with present conditional ('ați trece')."
+   }
+  ],
+  "tip": "Remember that 'ar' is invariable for both the 3rd person singular and 3rd person plural (el ar merge, ei ar merge)."
+ },
+ {
+  "id": "ro-b1-passivization-participial-vs-reflexive-passive",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#059669",
+  "emoji": "⚙️",
+  "title": "Reflexive Passive vs. True Passive with 'A Fi'",
+  "subtitle": "Choosing between 'se' passive and standard periphrastic passive",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use the reflexive passive with 'se' for general, agentless actions and habitual processes, reserving the periphrastic passive ('a fi' + participle) when emphasizing the resulting state or an explicit agent introduced by 'de către'.",
+  "structure": {
+   "headers": [
+    "Passive Type",
+    "Structure",
+    "Example",
+    "Usage Context"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Reflexive Passive",
+      "se + 3rd person verb",
+      "Aici se vând cărți vechi.",
+      "General actions, unknown/irrelevant agent"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Periphrastic (Agentive)",
+      "a fi + participle + de către",
+      "Cartea a fost scrisă de către profesor.",
+      "Specific actions with explicit human agent"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Periphrastic (Stative)",
+      "a fi + agreement participle",
+      "Ușa este deja încuiată.",
+      "Current state resulting from a past event"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Impersonal Reflexive",
+      "se + 3rd singular only",
+      "Se vorbește mult despre asta.",
+      "General rumor, observation, or unspecific subject"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Notices & General Rules",
+    "example": "Aici se vorbește limba română.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Formal Agentive Reports",
+    "example": "Proiectul a fost aprobat de către comisie.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Commercial & Public Processes",
+    "example": "Biletele se cumpără de la ghișeu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "În acest magazin se acceptă doar plăți cu cardul.",
+    "ko": "",
+    "highlight": "se acceptă"
+   },
+   {
+    "en": "Documentul a fost semnat de către director ieri.",
+    "ko": "",
+    "highlight": "a fost semnat"
+   },
+   {
+    "en": "Nu se știe când va sosi următorul tren.",
+    "ko": "",
+    "highlight": "se știe"
+   },
+   {
+    "en": "Toate scrisorile au fost trimise la timp.",
+    "ko": "",
+    "highlight": "au fost trimise"
+   },
+   {
+    "en": "În fiecare duminică se organizează concerte gratuite.",
+    "ko": "",
+    "highlight": "se organizează"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Pâinea se vinde de către brutar în fiecare dimineață.",
+    "right": "Pâinea este vândută de către brutar în fiecare dimineață.",
+    "note": "Do not pair the reflexive passive ('se vinde') with an explicit agent introduced by 'de către'; use periphrastic passive instead."
+   },
+   {
+    "wrong": "Scrisorile a fost trimise de secretariat.",
+    "right": "Scrisorile au fost trimise de secretariat.",
+    "note": "In the periphrastic passive, auxiliary 'a fi' and participle must agree in gender and number with the subject (scrisorile = feminine plural -> au fost trimise)."
+   },
+   {
+    "wrong": "Aici se vând lapte proaspăt.",
+    "right": "Aici se vinde lapte proaspăt.",
+    "note": "The reflexive verb agrees with the grammatical subject; 'lapte' is singular, so use 'se vinde'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the natural reflexive passive: 'Romanian is spoken here.'",
+    "options": [
+     "Aici este vorbit limba română.",
+     "Aici se vorbim română.",
+     "Aici se vorbește limba română.",
+     "Aici s-a vorbit de către toți limba română."
+    ],
+    "answer": 2,
+    "explanation": "General statements use the reflexive passive 'se vorbește' agreeing with singular 'limba'."
+   },
+   {
+    "question": "Complete with proper agreement: 'Apartamentele ___ de către o companie privată.'",
+    "options": [
+     "au fost construite",
+     "a fost construit",
+     "au fost construiți",
+     "este construit"
+    ],
+    "answer": 0,
+    "explanation": "'Apartamentele' is neuter plural (behaves feminine in plural), requiring 'au fost construite'."
+   },
+   {
+    "question": "Identify why 'Se vinde mere dulci' is incorrect:",
+    "options": [
+     "'Mere' requires a periphrastic passive.",
+     "The reflexive verb must agree with plural 'mere': 'se vând'.",
+     "The clitic 'se' cannot be placed before the verb.",
+     "'Vinde' must take the subjunctive mood."
+    ],
+    "answer": 1,
+    "explanation": "In reflexive passive constructions, the verb agrees with the plural grammatical subject: 'se vând mere'."
+   },
+   {
+    "question": "Select the correct sentence with an explicit human agent:",
+    "options": [
+     "Tabloul se pictează de către artist.",
+     "Tabloul a fost pictat de către artist.",
+     "Tabloul s-a pictat de către artist.",
+     "Tabloul este pictând de artist."
+    ],
+    "answer": 1,
+    "explanation": "Explicit agents introduced by 'de către' require the periphrastic passive ('a fost pictat'), not the reflexive."
+   }
+  ],
+  "tip": "Whenever you see 'de către' (by), steer clear of 'se' and use 'a fi' + agreed participle!"
+ },
+ {
+  "id": "ro-b2-presumptive-mood",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#EA580C",
+  "emoji": "🔮",
+  "title": "The Presumptive Mood (Modul Prezumtiv)",
+  "subtitle": "Conveying speculation, doubt, and probable events",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "The presumptive mood expresses likelihood or suspicion using future forms, subjunctive markers, or conditional auxiliaries followed by 'fi' and a gerund or participle.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Formula",
+    "Romanian Example",
+    "Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present Presumptive (Future)",
+      "va/vor + fi + gerund",
+      "Va fi dormind la ora asta.",
+      "He is probably sleeping right now."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past Presumptive (Future)",
+      "va/vor + fi + participle",
+      "O fi plecat deja cu trenul.",
+      "She might have/must have left already."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Subjunctive Presumptive",
+      "să + fi + gerund/participle",
+      "Să fi știind el ce s-a întâmplat?",
+      "Could he possibly know what happened?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Conditional Presumptive",
+      "ar + fi + gerund",
+      "Ar fi lucrând încă la birou.",
+      "He might still be working at the office."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Current Speculation",
+    "example": "Unde este Dan? Va fi dormind în camera lui.",
+    "translation": ""
+   },
+   {
+    "color": "#C2410C",
+    "label": "Past Guesswork with 'O fi'",
+    "example": "Cine a sunat? O fi fost curierul.",
+    "translation": ""
+   },
+   {
+    "color": "#9A3412",
+    "label": "Incredulous Questions",
+    "example": "Să fi greșit noi oare adresa?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Nu răspunde la telefon; va fi dormind încă.",
+    "ko": "",
+    "highlight": "va fi dormind"
+   },
+   {
+    "en": "Cine știe ce o fi făcând el acum acolo.",
+    "ko": "",
+    "highlight": "o fi făcând"
+   },
+   {
+    "en": "O fi înțeles instrucțiunile greșit, altfel nu-mi explic.",
+    "ko": "",
+    "highlight": "O fi înțeles"
+   },
+   {
+    "en": "Să fi fost adevărat tot ce a povestit?",
+    "ko": "",
+    "highlight": "Să fi fost"
+   },
+   {
+    "en": "Copiii or fi citind în biblioteca de sus.",
+    "ko": "",
+    "highlight": "or fi citind"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "El probabil că va dormi chiar acum.",
+    "right": "El va fi dormind chiar acum.",
+    "note": "Standard future indicates future time; to hypothesize an action in progress right now, use presumptive 'va fi dormind'."
+   },
+   {
+    "wrong": "O fi citind cartea ieri.",
+    "right": "O fi citit cartea ieri.",
+    "note": "Use 'o fi' + past participle for past speculation, not gerund."
+   },
+   {
+    "wrong": "Ei va fi plecat deja.",
+    "right": "Ei or fi plecat deja.",
+    "note": "In conversational past presumptive, 3rd person plural takes 'or fi', not 'va fi'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you speculate that someone is currently eating? 'Dan nu răspunde, ___.'",
+    "options": [
+     "va mânca mâine",
+     "a mâncat bine",
+     "va fi mâncând",
+     "să mănânce acum"
+    ],
+    "answer": 2,
+    "explanation": "'Va fi mâncând' (future marker + fi + gerund) expresses present ongoing probability."
+   },
+   {
+    "question": "Complete the casual past speculation: 'Cine a bătut la ușă? ___ vecina.'",
+    "options": [
+     "O fi fost",
+     "Va fi fiind",
+     "Ar fi fiind",
+     "Să fie fost"
+    ],
+    "answer": 0,
+    "explanation": "'O fi fost' is the very common conversational presumptive past form for 'It was probably'."
+   },
+   {
+    "question": "What is the function of the presumptive mood in Romanian?",
+    "options": [
+     "To command actions firmly",
+     "To denote past habits",
+     "To indicate certainty in scientific texts",
+     "To express doubt, probability, and conjecture"
+    ],
+    "answer": 3,
+    "explanation": "The presumptive mood is specifically used to speculate or express uncertainty regarding actions."
+   },
+   {
+    "question": "Select the correct plural past presumptive: 'Unde sunt ochelarii mei? Copiii îi ___ pe undeva.'",
+    "options": [
+     "or fi ascunzând",
+     "or fi ascuns",
+     "vor fi ascunși",
+     "o fi ascuns"
+    ],
+    "answer": 1,
+    "explanation": "'Copiii' is plural ('or fi') and the action is completed in the past ('ascuns')."
+   }
+  ],
+  "tip": "In everyday speech, Romanians constantly use the short invariant or semi-variable particle 'o fi' + participle to mean 'might have' or 'could have'."
+ },
+ {
+  "id": "ro-b2-conjunctive-past-and-irrealis-clauses",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#DB2777",
+  "emoji": "⏳",
+  "title": "Subjunctive Past ('Să Fi') and Unreal Conditions",
+  "subtitle": "Forming past irrealis clauses and unfulfilled requirements",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "The past subjunctive is uniquely simple because it uses the invariant marker 'să fi' for all persons, followed immediately by the invariable masculine singular past participle.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Subjunctive Past",
+    "Sample Clause",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Eu / Tu",
+      "să fi + participiu",
+      "Să fi plecat la timp...",
+      "Had I/you left on time..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "El / Ea",
+      "să fi + participiu",
+      "Trebuia să fi venit ieri.",
+      "He/she should have come yesterday."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Noi / Voi",
+      "să fi + participiu",
+      "Era bine să fi știut toți.",
+      "It would have been good for all of us/you to have known."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ei / Ele",
+      "să fi + participiu",
+      "Fără să fi cerut acordul...",
+      "Without them having requested permission..."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DB2777",
+    "label": "Unrealized Past Obligation",
+    "example": "Trebuia să fi terminat raportul până la prânz.",
+    "translation": ""
+   },
+   {
+    "color": "#BE185D",
+    "label": "Counterfactual Conditional Clause",
+    "example": "Să fi știut că vii, pregăteam cina.",
+    "translation": ""
+   },
+   {
+    "color": "#9D174D",
+    "label": "Negative Concomitant Event",
+    "example": "A plecat fără să fi spus un singur cuvânt.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ar fi fost de preferat să fi rămas acasă.",
+    "ko": "",
+    "highlight": "să fi rămas"
+   },
+   {
+    "en": "Să fi avut curaj, le-ar fi mărturisit secretul.",
+    "ko": "",
+    "highlight": "Să fi avut"
+   },
+   {
+    "en": "Nu-mi amintesc să fi văzut vreodată acest monument.",
+    "ko": "",
+    "highlight": "să fi văzut"
+   },
+   {
+    "en": "E imposibil să fi făcut Maria o asemenea greșeală.",
+    "ko": "",
+    "highlight": "să fi făcut"
+   },
+   {
+    "en": "Au intrat în sală fără să fi plătit biletele.",
+    "ko": "",
+    "highlight": "să fi plătit"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Trebuia ca eu să fiu terminat proiectul.",
+    "right": "Trebuia ca eu să fi terminat proiectul.",
+    "note": "The subjunctive past auxiliary is invariable 'fi', never conjugated as 'fiu', 'fii', or 'fie'."
+   },
+   {
+    "wrong": "Ea a ieșit fără să fi plecată.",
+    "right": "Ea a ieșit fără să fi plecat.",
+    "note": "The past participle in compound verbal predicates with 'să fi' remains invariable (masculine singular 'plecat'), unlike predicative adjectives."
+   },
+   {
+    "wrong": "Dacă să fi știut, veneam.",
+    "right": "Să fi știut, veneam.",
+    "note": "When 'să fi' replaces conditional 'dacă', do not use 'dacă' alongside 'să fi'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct form for 'You should have told me earlier': 'Trebuia ___ mai devreme.'",
+    "options": [
+     "să-mi fii spus",
+     "să-mi fi spus",
+     "să-mi fi spui",
+     "să-mi ai spus"
+    ],
+    "answer": 1,
+    "explanation": "'Să fi' is invariable across all persons; combined with clitic 'îmi', it becomes 'să-mi fi spus'."
+   },
+   {
+    "question": "How does 'Să fi avut bani, cumpăram casa' function?",
+    "options": [
+     "As a present order",
+     "As an unreal past condition equivalent to 'Dacă aș fi avut'",
+     "As a future possibility",
+     "As a passive description"
+    ],
+    "answer": 1,
+    "explanation": "An inverted past subjunctive clause acts as a counterfactual (irrealis) condition: 'Had I had money...'"
+   },
+   {
+    "question": "Fill the blank: 'Au plecat fără ca noi ___.'",
+    "options": [
+     "să fim observat",
+     "să fie observat",
+     "să fim observați",
+     "să fi observat"
+    ],
+    "answer": 3,
+    "explanation": "The auxiliary 'fi' in the past subjunctive never agrees with person; it is always 'să fi observat'."
+   },
+   {
+    "question": "Complete the sentence expressing past impossibility: 'Ea neagă ___ banii.'",
+    "options": [
+     "să fi luat",
+     "să fi luată",
+     "să aibă luată",
+     "să fie luând"
+    ],
+    "answer": 0,
+    "explanation": "'Să fi luat' is the correct invariable past subjunctive."
+   }
+  ],
+  "tip": "Never conjugate 'fi' in the subjunctive past! Whether it is 'eu', 'tu', or 'ei', it is ALWAYS 'să fi' + participle."
+ },
+ {
+  "id": "ro-b2-gerund-usage-and-participial-predication",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#7C3AED",
+  "emoji": "🔗",
+  "title": "Advanced Gerunziu Syntax and Clitic Attachment",
+  "subtitle": "Subordinate gerund clauses and enclitic pronoun mechanics",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The Romanian gerunziu (-ând/-ind) attaches all pronominal clitics enclitically with a connecting hyphen and vowel shift (-ându-și, văzându-l), expressing simultaneous adverbial actions.",
+  "structure": {
+   "headers": [
+    "Base Verb",
+    "Gerunziu",
+    "Enclitic Combination",
+    "Syntactic Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "a vedea",
+      "văzând",
+      "văzându-l (seeing him)",
+      "Enclitic direct object clitic (-l)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "a aminti",
+      "amintind",
+      "amintindu-și (recalling to self)",
+      "Reflexive indirect dative clitic (-și)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "a spune",
+      "spunând",
+      "spunându-i-se (being told it)",
+      "Stacked dative + reflexive passive clitics"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "a asculta",
+      "ascultând",
+      "ascultând muzică",
+      "Temporal adverbial clause (while listening)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Simultaneous Circumstance",
+    "example": "Mergând spre casă, m-am întâlnit cu Andrei.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Causal Consequence",
+    "example": "Neavând altă opțiune, a acceptat oferta.",
+    "translation": ""
+   },
+   {
+    "color": "#5B21B6",
+    "label": "Instrumental Means",
+    "example": "A învățat limba exersând în fiecare zi.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Văzându-mă îngrijorat, prietenul meu m-a întrebat ce am pățit.",
+    "ko": "",
+    "highlight": "Văzându-mă"
+   },
+   {
+    "en": "Și-a petrecut toată după-amiaza citindu-și corespondența.",
+    "ko": "",
+    "highlight": "citindu-și"
+   },
+   {
+    "en": "Spunându-le întregul adevăr, el s-a simțit eliberat.",
+    "ko": "",
+    "highlight": "Spunându-le"
+   },
+   {
+    "en": "Nu rezolvi nimic plângându-te mereu de soartă.",
+    "ko": "",
+    "highlight": "plângându-te"
+   },
+   {
+    "en": "Ajungând la gară târziu, am pierdut acceleratul de Cluj.",
+    "ko": "",
+    "highlight": "Ajungând"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Îl văzând pe stradă, l-am salutat.",
+    "right": "Văzându-l pe stradă, l-am salutat.",
+    "note": "Clitics can NEVER precede a gerunziu; they must attach to the end with a hyphen, triggering the buffer vowel '-u-' (văzând-u-l)."
+   },
+   {
+    "wrong": "Făcând tema, telefonul a sunat.",
+    "right": "În timp ce eu făceam tema, telefonul a sunat.",
+    "note": "Avoid dangling gerunds: the implicit subject of a gerunziu clause must match the subject of the main clause."
+   },
+   {
+    "wrong": "El s-a așezat citind o carte și bând un ceai.",
+    "right": "El s-a așezat, citind o carte și bând un ceai.",
+    "note": "Adverbial gerund clauses functioning as supplementary predications must be set off by commas."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you properly append the direct clitic 'o' (her/it) to 'chemând'?",
+    "options": [
+     "o chemând",
+     "chemând-o",
+     "chemându-o",
+     "chemând-u-o"
+    ],
+    "answer": 1,
+    "explanation": "With feminine clitic 'o', the gerund suffix directly attaches hyphenated as 'chemând-o' (buffer -u- is used for consonant clitics like -l, -și, -le)."
+   },
+   {
+    "question": "Attach the reflexive clitic 'se' to 'uitând': 'Looking at himself in the mirror...'",
+    "options": [
+     "Se uitând în oglindă...",
+     "Uitându-se în oglindă...",
+     "Uitând-se în oglindă...",
+     "Uitându-și-se în oglindă..."
+    ],
+    "answer": 1,
+    "explanation": "Consonant clitic 'se' triggers the connective buffer vowel '-u-', resulting in 'uitându-se'."
+   },
+   {
+    "question": "Identify the primary grammatical rule regarding clitic pronouns with Romanian gerunds:",
+    "options": [
+     "Clitics always precede the gerund with no hyphen.",
+     "Clitics can either precede or follow freely.",
+     "Clitics are completely dropped in gerund clauses.",
+     "Clitics must attach enclitically to the gerund via hyphen."
+    ],
+    "answer": 3,
+    "explanation": "Gerund syntax in Romanian strictly requires postpositive (enclitic) attachment of pronouns."
+   },
+   {
+    "question": "Select the correct combination for 'giving them (to them)':",
+    "options": [
+     "dându-le",
+     "le dând",
+     "dândule",
+     "dând-le"
+    ],
+    "answer": 0,
+    "explanation": "'Dând' + buffer vowel 'u' + hyphen + dative plural pronoun 'le' forms 'dându-le'."
+   }
+  ],
+  "tip": "Whenever you append a clitic starting with a consonant (-l, -mi, -ți, -și, -ne, -vă, -le) to a gerunziu, insert the linking vowel '-u-' right before the hyphen: lucrând -> lucrându-și."
+ }
+]

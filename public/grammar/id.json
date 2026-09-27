@@ -1,0 +1,3320 @@
+[
+ {
+  "id": "id-a1-word-order-and-copula-absence",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🗣️",
+  "title": "SVO Order and Equative Sentences (Adalah vs Ialah)",
+  "subtitle": "Forming basic sentences without linking verbs and using optional copular markers correctly",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Indonesian follows Subject-Verb-Object word order and typically requires no linking verb (like 'to be') between subjects and their descriptions or identities.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Indonesian Pattern",
+    "Function / Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Zero Copula (Adjective)",
+      "Dia tinggi.",
+      "Subject + Adjective directly (He is tall)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Zero Copula (Noun)",
+      "Saya guru.",
+      "Subject + Noun directly (I am a teacher)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Formal Copula (Adalah)",
+      "Jakarta adalah ibu kota Indonesia.",
+      "Used before noun phrases in formal or definitional statements"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Alternative Copula (Ialah)",
+      "Tujuan kita ialah belajar bersama.",
+      "Used interchangeably with 'adalah' to define identity"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Describing with Adjectives",
+    "example": "Rumah ini sangat besar.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Stating Professions Directly",
+    "example": "Ayah saya dokter.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Formal Definitions with Adalah",
+    "example": "Pancasila adalah dasar negara.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mereka bahagia hari ini.",
+    "ko": "",
+    "highlight": "bahagia"
+   },
+   {
+    "en": "Budi membaca buku di kamar.",
+    "ko": "",
+    "highlight": "membaca"
+   },
+   {
+    "en": "Ibu saya adalah guru bahasa Indonesia.",
+    "ko": "",
+    "highlight": "adalah guru"
+   },
+   {
+    "en": "Masalah utama ialah kurangnya waktu.",
+    "ko": "",
+    "highlight": "ialah"
+   },
+   {
+    "en": "Mobil itu baru dan cepat.",
+    "ko": "",
+    "highlight": "baru"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Saya adalah lapar.",
+    "right": "Saya lapar.",
+    "note": "Never use 'adalah' before an adjective. Only place adjectives directly after the subject."
+   },
+   {
+    "wrong": "Dia ada dokter.",
+    "right": "Dia dokter.",
+    "note": "'Ada' indicates presence or possession (there is / to exist), not identity."
+   },
+   {
+    "wrong": "Buku membaca saya.",
+    "right": "Saya membaca buku.",
+    "note": "Indonesian strictly follows SVO word order in active sentences."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the natural way to say: 'My younger sibling is smart.'",
+    "options": [
+     "Adik saya adalah pintar.",
+     "Adik saya pintar.",
+     "Adik saya ada pintar.",
+     "Adik saya ialah pintar."
+    ],
+    "answer": 1,
+    "explanation": "'Pintar' is an adjective, so no copula should be used between the subject and the predicate."
+   },
+   {
+    "question": "Complete the formal definition: 'Indonesia ___ negara kepulauan.'",
+    "options": [
+     "adalah",
+     "ada",
+     "sangat",
+     "ialah ada"
+    ],
+    "answer": 0,
+    "explanation": "'Adalah' functions as the formal copula before noun phrases in definitions."
+   },
+   {
+    "question": "How do you say: 'We are students.'",
+    "options": [
+     "Kami adalah belajar.",
+     "Kami ada murid.",
+     "Kami berada murid.",
+     "Kami murid."
+    ],
+    "answer": 3,
+    "explanation": "In standard Indonesian, the subject simply joins the noun predicate directly without any linking verb."
+   },
+   {
+    "question": "Which sentence incorrectly uses a linking word?",
+    "options": [
+     "Dia guru matematika.",
+     "Kucing itu lucu sekali.",
+     "Bapak Joko adalah ramah.",
+     "Harimau adalah hewan buas."
+    ],
+    "answer": 2,
+    "explanation": "'Ramah' (friendly) is an adjective, making 'adalah' grammatically incorrect here."
+   }
+  ],
+  "tip": "If the word following the subject describes a feeling, size, or quality (adjective), simply drop the English 'am/is/are' entirely!"
+ },
+ {
+  "id": "a1-negation-tidak-vs-bukan",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🚫",
+  "title": "Negation: Tidak vs Bukan",
+  "subtitle": "Distinguishing between verb/adjective negation (tidak) and noun/identity negation (bukan)",
+  "color": "#EF4444",
+  "bg": "#FEF2F2",
+  "keyPoint": "Use 'tidak' to negate verbs and adjectives, and use 'bukan' to negate nouns, pronouns, and identities.",
+  "structure": {
+   "headers": [
+    "Negative Word",
+    "Followed By",
+    "Example Sentence"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "tidak",
+      "Verbs (actions)",
+      "Saya tidak minum kopi."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "tidak",
+      "Adjectives (states/qualities)",
+      "Makanan ini tidak pedas."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "bukan",
+      "Nouns / Pronouns",
+      "Ini bukan sepatu saya."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "bukan ... melainkan",
+      "Contrasting Nouns",
+      "Dia bukan dokter, melainkan perawat."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Negating Actions",
+    "example": "Kami tidak pergi ke bioskop.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Negating Qualities",
+    "example": "Baju ini tidak mahal.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Negating Nouns / Identities",
+    "example": "Dia bukan orang Jepang.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Saya tidak tahu jawabannya.",
+    "ko": "",
+    "highlight": "tidak tahu"
+   },
+   {
+    "en": "Kopi ini tidak manis.",
+    "ko": "",
+    "highlight": "tidak manis"
+   },
+   {
+    "en": "Ini bukan tas milik Andi.",
+    "ko": "",
+    "highlight": "bukan tas"
+   },
+   {
+    "en": "Mereka tidak mau makan sekarang.",
+    "ko": "",
+    "highlight": "tidak mau"
+   },
+   {
+    "en": "Itu bukan kesalahan Anda.",
+    "ko": "",
+    "highlight": "bukan kesalahan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Saya bukan lapar.",
+    "right": "Saya tidak lapar.",
+    "note": "'Lapar' is an adjective, so it must be negated with 'tidak'."
+   },
+   {
+    "wrong": "Dia tidak guru.",
+    "right": "Dia bukan guru.",
+    "note": "'Guru' is a noun designating a profession, so it requires 'bukan'."
+   },
+   {
+    "wrong": "Ini tidak buku saya.",
+    "right": "Ini bukan buku saya.",
+    "note": "'Buku saya' is a noun phrase, requiring 'bukan' instead of 'tidak'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'Rumah kami ___ besar, tetapi nyaman.'",
+    "options": [
+     "tidak",
+     "bukan",
+     "belum",
+     "jangan"
+    ],
+    "answer": 0,
+    "explanation": "'Besar' is an adjective, so it must be negated with 'tidak'."
+   },
+   {
+    "question": "Fill in the blank: 'Orang itu ___ paman saya.'",
+    "options": [
+     "tidak",
+     "jangan",
+     "bukan",
+     "tiada"
+    ],
+    "answer": 2,
+    "explanation": "'Paman saya' (my uncle) is a noun phrase, requiring 'bukan' to negate identity."
+   },
+   {
+    "question": "Choose the correct sentence to mean 'I do not understand':",
+    "options": [
+     "Saya bukan mengerti.",
+     "Saya tidak mengerti.",
+     "Saya belum mengerti ada.",
+     "Saya jangan mengerti."
+    ],
+    "answer": 1,
+    "explanation": "'Mengerti' is a verb, which takes 'tidak'."
+   },
+   {
+    "question": "Complete the contrast: 'Dia ___ murid, melainkan guru.'",
+    "options": [
+     "tiada",
+     "tidak",
+     "kurang",
+     "bukan"
+    ],
+    "answer": 3,
+    "explanation": "Contrasting noun categories ('not a student, but a teacher') requires 'bukan'."
+   }
+  ],
+  "tip": "Think of 'bukan' as 'not a / not the' for things and people, while 'tidak' covers doing and feeling!"
+ },
+ {
+  "id": "a1-demonstratives-and-definiteness",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🏷️",
+  "title": "Demonstratives (Ini/Itu) and Definiteness with -nya",
+  "subtitle": "Using post-nominal determiners and -nya to mark specificity, possession, and definiteness",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Demonstratives ('ini' for near, 'itu' for far) always follow the noun they modify, while the suffix '-nya' marks the definite article 'the' or third-person possession.",
+  "structure": {
+   "headers": [
+    "Grammar Element",
+    "Position",
+    "Function / Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ini (this / these)",
+      "After noun",
+      "Marks proximity to speaker (mobil ini = this car)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "itu (that / those)",
+      "After noun",
+      "Marks distance from speaker (gedung itu = that building)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-nya (definiteness)",
+      "Attached suffix",
+      "Acts like English 'the' (bukunya = the book)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-nya (possession)",
+      "Attached suffix",
+      "Marks his/her/their (kuncinya = his/her key)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Pointing Close Things (Ini)",
+    "example": "Kemeja ini sangat bersih.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Pointing Distant Things (Itu)",
+    "example": "Pohon kelapa itu tinggi sekali.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Marking Definiteness (-nya)",
+    "example": "Kopinya enak sekali.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kucing ini suka tidur di sofa.",
+    "ko": "",
+    "highlight": "Kucing ini"
+   },
+   {
+    "en": "Restoran itu sangat ramai pengunjung.",
+    "ko": "",
+    "highlight": "Restoran itu"
+   },
+   {
+    "en": "Mobilnya rusak kemarin malam.",
+    "ko": "",
+    "highlight": "Mobilnya"
+   },
+   {
+    "en": "Kunci rumah ini milik siapa?",
+    "ko": "",
+    "highlight": "rumah ini"
+   },
+   {
+    "en": "Harganya terlalu mahal untuk saya.",
+    "ko": "",
+    "highlight": "Harganya"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ini buku sangat tebal.",
+    "right": "Buku ini sangat tebal.",
+    "note": "Demonstratives must follow the noun they modify in Indonesian, unlike in English."
+   },
+   {
+    "wrong": "Itu mobil merah cepat.",
+    "right": "Mobil merah itu cepat.",
+    "note": "When adjectives modify a noun, 'itu' goes after the adjective at the end of the noun phrase."
+   },
+   {
+    "wrong": "Buku dia nya hilang.",
+    "right": "Bukunya hilang.",
+    "note": "Do not double third-person pronouns; use either 'buku dia' or 'bukunya'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you correctly translate: 'This hotel is comfortable'?",
+    "options": [
+     "Hotel ini nyaman.",
+     "Ini hotel nyaman.",
+     "Hotel ada nyaman.",
+     "Ini adalah hotel nyaman."
+    ],
+    "answer": 0,
+    "explanation": "In Indonesian, demonstrative adjectives follow the noun: 'Hotel ini'."
+   },
+   {
+    "question": "Where does 'itu' belong in 'that black cat'?",
+    "options": [
+     "Itu kucing hitam",
+     "Kucing itu hitam",
+     "Kucing hitam itu",
+     "Hitam kucing itu"
+    ],
+    "answer": 2,
+    "explanation": "The order is Noun + Adjective + Demonstrative: 'Kucing hitam itu'."
+   },
+   {
+    "question": "In the sentence 'Makanannya lezat,' what role does '-nya' play?",
+    "options": [
+     "Indicates plural food",
+     "Makes the noun definite ('The food')",
+     "Turns the noun into a question",
+     "Negates the predicate"
+    ],
+    "answer": 1,
+    "explanation": "The enclitic '-nya' turns an indefinite noun into a definite one, equivalent to English 'the food'."
+   },
+   {
+    "question": "Complete the sentence to mean 'His bag is new': '___ baru.'",
+    "options": [
+     "Tas itu dia",
+     "Tas ini dia",
+     "Tasku",
+     "Tasnya"
+    ],
+    "answer": 3,
+    "explanation": "'-nya' attaches directly to the possessed noun to denote 'his/her bag'."
+   }
+  ],
+  "tip": "Remember the golden word-order rule: Head noun first, then its adjectives, and demonstratives (ini/itu) last!"
+ },
+ {
+  "id": "a1-numeral-classifiers",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🔢",
+  "title": "Numeral Classifiers (Kata Penggolong)",
+  "subtitle": "Pairing numbers with standard counting words like orang, ekor, buah, and lembar",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "When counting nouns, Indonesian frequently places a specific classifier between the numeral and the noun based on whether the entity is human, animal, inanimate, or flat.",
+  "structure": {
+   "headers": [
+    "Classifier",
+    "Applies To",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "orang",
+      "Humans / People",
+      "seorang dokter (one doctor)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ekor",
+      "Animals / Creatures",
+      "dua ekor anjing (two dogs)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "buah",
+      "Objects, fruits, vehicles",
+      "tiga buah apel (three apples)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "lembar",
+      "Flat, thin items (paper, cloth)",
+      "selembar kertas (a sheet of paper)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Counting Humans (orang)",
+    "example": "Ada lima orang murid di perpustakaan.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Counting Animals (ekor)",
+    "example": "Paman membeli empat ekor ayam.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "General Objects (buah)",
+    "example": "Saya membeli dua buah kursi baru.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dua orang guru datang ke kelas.",
+    "ko": "",
+    "highlight": "Dua orang"
+   },
+   {
+    "en": "Kucing itu melahirkan tiga ekor anak kucing.",
+    "ko": "",
+    "highlight": "tiga ekor"
+   },
+   {
+    "en": "Ibu meletakkan sebuah semangka di meja.",
+    "ko": "",
+    "highlight": "sebuah"
+   },
+   {
+    "en": "Tolong beri saya selembar tisu.",
+    "ko": "",
+    "highlight": "selembar"
+   },
+   {
+    "en": "Dia memiliki empat buah sepeda motor.",
+    "ko": "",
+    "highlight": "empat buah"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "dua ekor orang",
+    "right": "dua orang",
+    "note": "'Ekor' literally means 'tail' and is exclusively for animals, never humans."
+   },
+   {
+    "wrong": "tiga orang burung",
+    "right": "tiga ekor burung",
+    "note": "Birds and other animals take 'ekor', whereas 'orang' is reserved for humans."
+   },
+   {
+    "wrong": "satu buah kertas",
+    "right": "selembar kertas",
+    "note": "Sheets of paper and thin flat objects use 'lembar' rather than 'buah'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which classifier should fill the blank: 'Saya melihat tiga ___ burung di pohon.'?",
+    "options": [
+     "orang",
+     "ekor",
+     "buah",
+     "batang"
+    ],
+    "answer": 1,
+    "explanation": "Animals are counted with the classifier 'ekor' (literally 'tail')."
+   },
+   {
+    "question": "How do you say 'a teacher' using the single prefix 'se-'?",
+    "options": [
+     "satu guru",
+     "seekor guru",
+     "sebuah guru",
+     "seorang guru"
+    ],
+    "answer": 3,
+    "explanation": "The prefix 'se-' combines with 'orang' to make 'seorang' for a single human being."
+   },
+   {
+    "question": "Which phrase correctly expresses 'two sheets of paper'?",
+    "options": [
+     "dua lembar kertas",
+     "dua ekor kertas",
+     "dua orang kertas",
+     "dua batang kertas"
+    ],
+    "answer": 0,
+    "explanation": "'Lembar' is the classifier used for paper, sheets, and thin flat materials."
+   },
+   {
+    "question": "Which classifier is most appropriate for 'dua ___ mobil'?",
+    "options": [
+     "orang",
+     "ekor",
+     "buah",
+     "lembar"
+    ],
+    "answer": 2,
+    "explanation": "'Buah' is the standard classifier for general 3D objects, vehicles, and fruits."
+   }
+  ],
+  "tip": "When the quantity is one, 'satu' blends with the classifier into the prefix 'se-' (seorang = a person, seekor = an animal, sebuah = an item)."
+ },
+ {
+  "id": "a1-question-words-and-particle-kah",
+  "level": "a1",
+  "category": "questions",
+  "categoryColor": "#8B5CF6",
+  "emoji": "❓",
+  "title": "Question Formation and the -kah Interrogative Enclitic",
+  "subtitle": "Using WH-words in situ vs fronted, and attaching -kah for formal polar questions",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Indonesian question words can sit at the front or remain in place (in situ), and the enclitic '-kah' attaches to the focused element in formal yes/no inquiries.",
+  "structure": {
+   "headers": [
+    "Question Word",
+    "Meaning",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "apa / apakah",
+      "what / yes-no marker",
+      "Apakah Anda sibuk?"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "siapa",
+      "who",
+      "Siapa nama Anda?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "di mana / ke mana",
+      "where / where to",
+      "Di mana stasiun kereta?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "kapan / mengapa",
+      "when / why",
+      "Kapan kereta tiba?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Informal In Situ Questions",
+    "example": "Kamu tinggal di mana?",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Fronted WH-Questions",
+    "example": "Mengapa dia terlambat?",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Formal Yes/No with -kah",
+    "example": "Bolehkah saya masuk?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Apakah Anda sudah makan malam?",
+    "ko": "",
+    "highlight": "Apakah"
+   },
+   {
+    "en": "Siapa yang memasak makanan ini?",
+    "ko": "",
+    "highlight": "Siapa yang"
+   },
+   {
+    "en": "Kapan toko buku itu buka?",
+    "ko": "",
+    "highlight": "Kapan"
+   },
+   {
+    "en": "Benarkah kabar tentang dia?",
+    "ko": "",
+    "highlight": "Benarkah"
+   },
+   {
+    "en": "Mau beli apa di pasar?",
+    "ko": "",
+    "highlight": "apa"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Apakah kamu beli?",
+    "right": "Kamu beli apa?",
+    "note": "Use 'apa' for 'what' and 'apakah' for yes/no questions; 'apakah kamu beli?' means 'Are you buying (something)?'."
+   },
+   {
+    "wrong": "Di manakah rumah kamu tinggal?",
+    "right": "Di mana rumah kamu?",
+    "note": "Do not stack extra unnecessary verbs with location questions."
+   },
+   {
+    "wrong": "Kamu kah dokter?",
+    "right": "Kamukah dokter?",
+    "note": "'-kah' is an attached enclitic and must be written joined without a space."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which word turns a simple statement into a polite yes/no question?",
+    "options": [
+     "Mengapa",
+     "Bagaimana",
+     "Apakah",
+     "Kapan"
+    ],
+    "answer": 2,
+    "explanation": "'Apakah' is placed at the front of a sentence to form a formal yes/no question."
+   },
+   {
+    "question": "How do you ask 'Where do you work?' naturally in Indonesian?",
+    "options": [
+     "Anda bekerja siapa?",
+     "Di mana Anda bekerja?",
+     "Berapa Anda bekerja?",
+     "Mengapa Anda bekerja?"
+    ],
+    "answer": 1,
+    "explanation": "'Di mana' translates to 'where (at what place)'."
+   },
+   {
+    "question": "Attach the interrogative particle correctly to 'Boleh' (May/Can):",
+    "options": [
+     "Boleh kah",
+     "Bolehkah",
+     "Kah boleh",
+     "Boleh kah anda"
+    ],
+    "answer": 1,
+    "explanation": "The particle '-kah' must attach directly to the verb or predicate as an enclitic: 'Bolehkah'."
+   },
+   {
+    "question": "Select the proper question word for 'Who is that person?': '___ orang itu?'",
+    "options": [
+     "Kapan",
+     "Berapa",
+     "Mana",
+     "Siapa"
+    ],
+    "answer": 3,
+    "explanation": "'Siapa' is used when asking about identity or people ('who')."
+   }
+  ],
+  "tip": "In everyday conversational Indonesian, speakers often drop '-kah' and 'apakah' completely, relying solely on rising intonation at the end of the sentence!"
+ },
+ {
+  "id": "id-a1-temporal-markers-and-aspect",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "⏱️",
+  "title": "Temporal and Aspectual Markers",
+  "subtitle": "Expressing time and completion using pre-verbal aspect words",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Indonesian verbs never conjugate for tense; instead, place aspect markers like sudah, belum, sedang, and akan immediately before the verb.",
+  "structure": {
+   "headers": [
+    "Marker",
+    "Aspect Function",
+    "Indonesian Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "sudah",
+      "Completed (Perfective)",
+      "Saya sudah makan.",
+      "I have already eaten."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "belum",
+      "Not yet (Negative Perfective)",
+      "Dia belum mandi.",
+      "He has not bathed yet."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "sedang",
+      "In progress (Continuous)",
+      "Kami sedang belajar.",
+      "We are currently studying."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "akan",
+      "Future (Prospective)",
+      "Mereka akan pergi.",
+      "They will go."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Completed Action",
+    "example": "Budi sudah menyelesaikan tugasnya.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Action in Progress",
+    "example": "Ibu sedang memasak rendang di dapur.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Anticipated Action",
+    "example": "Kereta api akan berangkat pukul tujuh.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Saya sudah membaca buku itu.",
+    "ko": "",
+    "highlight": "sudah"
+   },
+   {
+    "en": "Adik belum tidur karena masih ramai.",
+    "ko": "",
+    "highlight": "belum"
+   },
+   {
+    "en": "Guru sedang menjelaskan materi baru.",
+    "ko": "",
+    "highlight": "sedang"
+   },
+   {
+    "en": "Kami akan berlibur ke Bali besok.",
+    "ko": "",
+    "highlight": "akan"
+   },
+   {
+    "en": "Mereka belum pernah pergi ke luar negeri.",
+    "ko": "",
+    "highlight": "belum pernah"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Saya sudah tidak makan.",
+    "right": "Saya belum makan.",
+    "note": "Use 'belum' to express 'not yet' rather than combining 'sudah' with 'tidak'."
+   },
+   {
+    "wrong": "Dia makan sudah kemarin.",
+    "right": "Dia sudah makan kemarin.",
+    "note": "Aspect markers must precede the verb, never placed after it."
+   },
+   {
+    "wrong": "Saya akan sedang belajar.",
+    "right": "Saya akan belajar.",
+    "note": "Do not stack aspect markers unnaturally; choose the primary aspect required."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "To say 'I have already eaten', choose: Saya ___ makan.",
+    "options": [
+     "sedang",
+     "sudah",
+     "akan",
+     "belum"
+    ],
+    "answer": 1,
+    "explanation": "'Sudah' indicates completed or perfective aspect."
+   },
+   {
+    "question": "To express that someone has not arrived yet: Tamu itu ___ datang.",
+    "options": [
+     "belum",
+     "tidak sudah",
+     "sedang",
+     "bukan"
+    ],
+    "answer": 0,
+    "explanation": "'Belum' specifically expresses 'not yet'."
+   },
+   {
+    "question": "To say 'The teacher is currently talking': Guru ___ berbicara.",
+    "options": [
+     "telah",
+     "akan",
+     "sedang",
+     "pernah"
+    ],
+    "answer": 2,
+    "explanation": "'Sedang' marks continuous actions in progress."
+   },
+   {
+    "question": "To express a planned future trip: Kami ___ berangkat lusa.",
+    "options": [
+     "sudah",
+     "telah",
+     "sedang",
+     "akan"
+    ],
+    "answer": 3,
+    "explanation": "'Akan' functions as the prospective marker indicating future action."
+   }
+  ],
+  "tip": "In conversational Indonesian, 'sudah' is frequently shortened to 'udah' and 'sedang' to 'lagi'."
+ },
+ {
+  "id": "id-a2-prefix-meN-transitive-verbs",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "Active Transitive Prefix meN-",
+  "subtitle": "Forming active transitive verbs through nasalization rules",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "The prefix meN- derives active transitive verbs, dropping root-initial voiceless consonants K, P, T, and S into corresponding nasals.",
+  "structure": {
+   "headers": [
+    "Root Initial",
+    "Prefix Allomorph",
+    "Base -> Verb",
+    "Rule Note"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "k, p, t, s",
+      "meng-, mem-, men-, meny-",
+      "tulis -> menulis",
+      "Voiceless initials drop and nasalize"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "b, f, v",
+      "mem-",
+      "baca -> membaca",
+      "Voiced bilabial retains initial consonant"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "d, j, c",
+      "men-",
+      "dengar -> mendengar",
+      "Alveolar and palatal retain consonant"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "g, h, vowels",
+      "meng-",
+      "ambil -> mengambil",
+      "Velar and vowel bases take meng-"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Voiceless Initial Deletion",
+    "example": "Siti menyapu lantai kamar setiap pagi.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Voiced Initial Retention",
+    "example": "Ayah membaca koran di teras rumah.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Vowel-Initial Attachment",
+    "example": "Mereka mengambil foto pemandangan danau.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Rina menulis surat untuk sahabatnya.",
+    "ko": "",
+    "highlight": "menulis"
+   },
+   {
+    "en": "Kucing itu mengejar tikus kecil.",
+    "ko": "",
+    "highlight": "mengejar"
+   },
+   {
+    "en": "Budi meminjam buku sejarah di perpustakaan.",
+    "ko": "",
+    "highlight": "meminjam"
+   },
+   {
+    "en": "Polisi memeriksa dokumen pengemudi mobil.",
+    "ko": "",
+    "highlight": "memeriksa"
+   },
+   {
+    "en": "Ibu memotong sayuran dengan pisau tajam.",
+    "ko": "",
+    "highlight": "memotong"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Saya mentulis surat cinta.",
+    "right": "Saya menulis surat cinta.",
+    "note": "Root-initial 't' drops and nasalizes to 'n', resulting in 'menulis'."
+   },
+   {
+    "wrong": "Dia mempakai baju baru.",
+    "right": "Dia memakai baju baru.",
+    "note": "Root-initial 'p' drops and nasalizes to 'm', forming 'memakai'."
+   },
+   {
+    "wrong": "Adik mengsapu halaman depan.",
+    "right": "Adik menyapu halaman depan.",
+    "note": "Root-initial 's' turns into 'meny-', yielding 'menyapu'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct meN- verb for root 'kirim':",
+    "options": [
+     "mengirim",
+     "menkirim",
+     "memkirim",
+     "menyirim"
+    ],
+    "answer": 0,
+    "explanation": "Initial 'k' deletes and becomes nasal 'meng-', producing 'mengirim'."
+   },
+   {
+    "question": "Select the correct meN- verb for root 'tolong':",
+    "options": [
+     "mentolong",
+     "menolong",
+     "memtolong",
+     "mengtolong"
+    ],
+    "answer": 1,
+    "explanation": "Initial 't' deletes and assimilates into 'menolong'."
+   },
+   {
+    "question": "Select the correct meN- verb for root 'beli':",
+    "options": [
+     "mengbeli",
+     "menbeli",
+     "membeli",
+     "mebeli"
+    ],
+    "answer": 2,
+    "explanation": "Initial voiced 'b' is preserved after the bilabial nasal 'mem-'."
+   },
+   {
+    "question": "Select the correct meN- verb for root 'sapu':",
+    "options": [
+     "mensapu",
+     "memsapu",
+     "mengsapu",
+     "menyapu"
+    ],
+    "answer": 3,
+    "explanation": "Initial 's' drops and triggers 'meny-', producing 'menyapu'."
+   }
+  ],
+  "tip": "Remember the mnemonic 'K-P-T-S': these four voiceless consonants always melt away into nasals when meN- is added."
+ },
+ {
+  "id": "id-a2-prefix-ber-intransitive-verbs",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🌱",
+  "title": "Intransitive Prefix ber-",
+  "subtitle": "Deriving intransitive, stative, reflexive, and possession verbs",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "The prefix ber- creates intransitive verbs that cannot take a direct object, often signaling states, possession, self-directed action, or reciprocity.",
+  "structure": {
+   "headers": [
+    "Root Type",
+    "Variant",
+    "Base -> Verb",
+    "Core Semantic Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Regular roots",
+      "ber-",
+      "jalan -> berjalan",
+      "Intransitive motion / basic activity"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Roots with initial 'r'",
+      "be-",
+      "renang -> berenang",
+      "Avoids double 'r' cluster"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Roots with '-er-' syllable",
+      "be-",
+      "kerja -> bekerja",
+      "Dissimilates before internal 'er'"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Noun base",
+      "ber-",
+      "sepatu -> bersepatu",
+      "Possession or wearing an item"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Motion and Activity",
+    "example": "Anak-anak berlari di lapangan rumput.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Possession of State/Item",
+    "example": "Paman memiliki toko dan beruang banyak.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Reciprocal / Social Action",
+    "example": "Mereka berbicara tentang rencana liburan.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kami berenang di pantai setiap akhir pekan.",
+    "ko": "",
+    "highlight": "berenang"
+   },
+   {
+    "en": "Ayah bekerja di kantor kementerian.",
+    "ko": "",
+    "highlight": "bekerja"
+   },
+   {
+    "en": "Mahasiswa berkumpul di aula kampus.",
+    "ko": "",
+    "highlight": "berkumpul"
+   },
+   {
+    "en": "Dia bersepeda menuju stasiun kereta.",
+    "ko": "",
+    "highlight": "bersepeda"
+   },
+   {
+    "en": "Mereka berjanji untuk saling menolong.",
+    "ko": "",
+    "highlight": "berjanji"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Saya bekerja pekerjaan ini.",
+    "right": "Saya mengerjakan pekerjaan ini.",
+    "note": "'Bekerja' is strictly intransitive; use transitive 'mengerjakan' before a direct object."
+   },
+   {
+    "wrong": "Dia berrenang sangat cepat.",
+    "right": "Dia berenang sangat cepat.",
+    "note": "When the base starts with 'r', the prefix drops its 'r' and becomes 'be-'."
+   },
+   {
+    "wrong": "Mereka berbelanja sayur itu di pasar.",
+    "right": "Mereka membeli sayur itu di pasar.",
+    "note": "'Berbelanja' (intransitive shopping) cannot take a direct noun object; use 'membeli' to specify the bought object."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Form the correct ber- verb from the base 'ajar':",
+    "options": [
+     "berajar",
+     "belajar",
+     "beajar",
+     "berkajar"
+    ],
+    "answer": 1,
+    "explanation": "'Ajar' is an irregular root that takes 'bel-', forming 'belajar'."
+   },
+   {
+    "question": "Which verb means 'to have/wear shoes'?",
+    "options": [
+     "menyepatu",
+     "bersepatu",
+     "disepatu",
+     "tersepatu"
+    ],
+    "answer": 1,
+    "explanation": "Affixing 'ber-' to the noun 'sepatu' yields 'to wear/have shoes'."
+   },
+   {
+    "question": "Form the correct ber- verb from the base 'kerja':",
+    "options": [
+     "berkerja",
+     "mengkerja",
+     "bekerja",
+     "terkerja"
+    ],
+    "answer": 2,
+    "explanation": "Roots containing '-er-' in the first syllable drop the 'r' of the prefix, giving 'bekerja'."
+   },
+   {
+    "question": "Which sentence correctly uses an intransitive ber- verb?",
+    "options": [
+     "Saya berjalan jalan.",
+     "Saya berjalan buku.",
+     "Saya berjalan ke sekolah.",
+     "Saya berjalan mobil."
+    ],
+    "answer": 2,
+    "explanation": "Since 'berjalan' is intransitive, it connects to destinations via prepositions like 'ke'."
+   }
+  ],
+  "tip": "A fast rule: if the verb has 'ber-', do not put a direct object noun right after it without a preposition."
+ },
+ {
+  "id": "id-a2-passive-type-one-di",
+  "level": "a2",
+  "category": "passive",
+  "categoryColor": "#8B5CF6",
+  "emoji": "📦",
+  "title": "Canonical Passive Prefix di-",
+  "subtitle": "Passive constructions featuring third-person agents or unstated actors",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Prefix di- attaches directly to the verb base to form passive clauses when the agent is a third person (dia, mereka, or a noun phrase).",
+  "structure": {
+   "headers": [
+    "Patient (Subject)",
+    "Passive Verb",
+    "Agent Phrase (oleh...)",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Buku itu",
+      "dibaca",
+      "oleh Hasan.",
+      "The book was read by Hasan."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Pintu gerbang",
+      "dikunci",
+      "setiap malam.",
+      "The gate is locked every night."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Surat kabar",
+      "dibeli",
+      "oleh mereka.",
+      "The newspaper was bought by them."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Kue bolu",
+      "dimakan",
+      "adik.",
+      "The cake was eaten by little brother."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Third-Person Agent Mentioned",
+    "example": "Mobil baru diperbaiki oleh montir berpengalaman.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Agent Omitted (Neutral)",
+    "example": "Gedung pertemuan dibersihkan dua kali sehari.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Direct Post-Verbal Noun Agent",
+    "example": "Tikus sawah dimakan burung hantu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Artikel ilmiah itu ditulis oleh Profesor Rudi.",
+    "ko": "",
+    "highlight": "ditulis"
+   },
+   {
+    "en": "Sepeda tua diperbaiki di bengkel kemarin.",
+    "ko": "",
+    "highlight": "diperbaiki"
+   },
+   {
+    "en": "Makanan tradisional disukai oleh para wisatawan.",
+    "ko": "",
+    "highlight": "disukai"
+   },
+   {
+    "en": "Kopi panas diminum kakek di ruang tamu.",
+    "ko": "",
+    "highlight": "diminum"
+   },
+   {
+    "en": "Lampu kamar dimatikan sebelum kami tidur.",
+    "ko": "",
+    "highlight": "dimatikan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Surat itu ditulis oleh saya.",
+    "right": "Surat itu saya tulis.",
+    "note": "Type 1 passive with 'di-' is strictly forbidden with first-person agents; use Type 2 bare passive instead."
+   },
+   {
+    "wrong": "Buku di baca oleh mereka.",
+    "right": "Buku dibaca oleh mereka.",
+    "note": "Passive prefix 'di-' must be attached to the root without a space, unlike the preposition 'di'."
+   },
+   {
+    "wrong": "Apel dimakan oleh kamu.",
+    "right": "Apel kamu makan.",
+    "note": "Do not use 'di- ... oleh' for second-person agents in formal Indonesian; use bare passive 'kamu makan'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the passive sentence: Ikan bakar itu ___ oleh ayah.",
+    "options": [
+     "dimasak",
+     "memasak",
+     "bermasak",
+     "termasak"
+    ],
+    "answer": 0,
+    "explanation": "The passive form with a 3rd person agent requires prefix 'di-', forming 'dimasak'."
+   },
+   {
+    "question": "Identify the incorrect passive construction:",
+    "options": [
+     "Kopi diminum paman.",
+     "Mobil dicuci mereka.",
+     "Kue dimakan oleh saya.",
+     "Surat dikirim kemarin."
+    ],
+    "answer": 2,
+    "explanation": "'Dimakan oleh saya' is grammatically unidiomatic; first-person agents require Type 2 passive 'saya makan'."
+   },
+   {
+    "question": "How should the passive verb for base 'tulis' be written?",
+    "options": [
+     "di tulis",
+     "dituliskanlah",
+     "ditulis",
+     "menulis"
+    ],
+    "answer": 2,
+    "explanation": "Prefix 'di-' attaches directly to the verb base without spaces."
+   },
+   {
+    "question": "Which particle can introduce the agent after a di- verb?",
+    "options": [
+     "pada",
+     "ke",
+     "dari",
+     "oleh"
+    ],
+    "answer": 3,
+    "explanation": "'Oleh' corresponds to 'by' in English agentive passive phrases."
+   }
+  ],
+  "tip": "Spelling check: If it is a verb (action), attach 'di-' directly (dijual). If it is a location, put a space after 'di' (di toko)."
+ },
+ {
+  "id": "id-a2-passive-type-two-bare-verb",
+  "level": "a2",
+  "category": "passive",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🧩",
+  "title": "Zero-Prefix Passive (Type 2)",
+  "subtitle": "Passive constructions reserved for first and second person agents",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "When the agent is 1st or 2nd person (saya, aku, kami, kita, kamu, Anda), place the pronoun directly before the bare root verb without any prefix.",
+  "structure": {
+   "headers": [
+    "Object (Topic)",
+    "Agent Pronoun",
+    "Bare Verb Base",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Kopi ini",
+      "sudah saya",
+      "buat.",
+      "This coffee has been made by me."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Buku itu",
+      "harus kamu",
+      "kembalikan.",
+      "That book must be returned by you."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Tugas besar",
+      "akan kami",
+      "diskusikan.",
+      "The major assignment will be discussed by us."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Pertanyaan ini",
+      "bisa Anda",
+      "jawab.",
+      "This question can be answered by you."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "First-Person Singular (saya / ku-)",
+    "example": "Kunci rumah sudah kuambil tadi pagi.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Second-Person Agent (kamu / Anda)",
+    "example": "Baju batik ini harus kamu cuci dengan tangan.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Aspect/Modal Placement",
+    "example": "Keputusan penting ini belum kami sepakati.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Surat pernyataan ini sudah saya tandatangani.",
+    "ko": "",
+    "highlight": "saya tandatangani"
+   },
+   {
+    "en": "Mobil tua itu akan kami jual minggu depan.",
+    "ko": "",
+    "highlight": "kami jual"
+   },
+   {
+    "en": "Dompet kulit itu sudah kauambil kemarin?",
+    "ko": "",
+    "highlight": "kauambil"
+   },
+   {
+    "en": "Pekerjaan rumah harus kalian selesaikan segera.",
+    "ko": "",
+    "highlight": "kalian selesaikan"
+   },
+   {
+    "en": "Buku cerita anak itu sudah kubaca tiga kali.",
+    "ko": "",
+    "highlight": "kubaca"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Kue itu sudah saya memakan.",
+    "right": "Kue itu sudah saya makan.",
+    "note": "In Type 2 passive, strip the 'meN-' prefix entirely; use the bare root base 'makan'."
+   },
+   {
+    "wrong": "Buku ini saya sudah baca.",
+    "right": "Buku ini sudah saya baca.",
+    "note": "Aspect markers and modals like 'sudah' must precede the pronoun agent, never split pronoun and verb."
+   },
+   {
+    "wrong": "Rumah itu dibeli oleh saya.",
+    "right": "Rumah itu saya beli.",
+    "note": "Avoid using 3rd person passive 'di-... oleh' for first-person agents; use Type 2 'saya beli'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Translate passively: 'The food has been eaten by me' -> Makanan itu sudah ___.",
+    "options": [
+     "dimakan oleh saya",
+     "saya makan",
+     "saya memakan",
+     "ku dimakan"
+    ],
+    "answer": 1,
+    "explanation": "Type 2 passive combines the agent pronoun directly with the bare root: 'saya makan'."
+   },
+   {
+    "question": "Where should the modal 'harus' go in: 'Mobil itu ___ kamu cuci'?",
+    "options": [
+     "setelah cuci",
+     "harus",
+     "antara kamu dan cuci",
+     "paling akhir"
+    ],
+    "answer": 1,
+    "explanation": "Modals and aspect markers precede the pronoun-verb unit: 'harus kamu cuci'."
+   },
+   {
+    "question": "Which sentence correctly reflects Type 2 passive word order?",
+    "options": [
+     "Nasi goreng saya sudah masak.",
+     "Nasi goreng sudah masak saya.",
+     "Nasi goreng sudah saya masak.",
+     "Nasi goreng dimasak oleh saya."
+    ],
+    "answer": 2,
+    "explanation": "Aspect marker (sudah) + Agent (saya) + Root (masak) is the strict order."
+   },
+   {
+    "question": "Using clitic 'ku-', complete: 'The letter was written by me' -> Surat itu ___.",
+    "options": [
+     "kutulis",
+     "kumenulis",
+     "ditulisku",
+     "oleh kutulis"
+    ],
+    "answer": 0,
+    "explanation": "The proclitic pronoun 'ku-' attaches directly to the bare root: 'kutulis'."
+   }
+  ],
+  "tip": "Treat the pronoun and bare verb as an indivisible unit; never squeeze adverbs, negations, or modals between 'saya' and the verb root."
+ },
+ {
+  "id": "id-a2-relativizer-yang",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔗",
+  "title": "Relative Clauses and Nominalization with Yang",
+  "subtitle": "Connecting descriptions, highlighting specific items, and saying 'the one which'",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "The word yang functions as a relative pronoun equivalent to who, which, or that, and turns adjectives into definite nouns like 'the red one'.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Indonesian Pattern",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Modifier / Relative Clause",
+      "mobil yang merah",
+      "the car that is red"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Nominalization ('the one that')",
+      "pilih yang besar",
+      "choose the big one"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Superlative Emphasis",
+      "yang paling mahal",
+      "the most expensive one"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Focus / Cleft Construction",
+      "Dia yang datang kemarin",
+      "It was he who came yesterday"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Linking Descriptive Modifiers",
+    "example": "Saya membeli buku yang tebal itu.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Nominalization ('The One')",
+    "example": "Yang biru lebih murah daripada yang hijau.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Specifying People or Agents",
+    "example": "Guru yang mengajar bahasa Indonesia sangat ramah.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Saya mencari rumah yang memiliki halaman luas.",
+    "ko": "",
+    "highlight": "yang"
+   },
+   {
+    "en": "Kamu lebih suka kemeja yang mana?",
+    "ko": "",
+    "highlight": "yang mana"
+   },
+   {
+    "en": "Makanan yang dimasak ibu selalu enak.",
+    "ko": "",
+    "highlight": "yang dimasak"
+   },
+   {
+    "en": "Jangan ambil yang rusak itu.",
+    "ko": "",
+    "highlight": "yang rusak"
+   },
+   {
+    "en": "Orang yang berdiri di dekat pintu adalah paman saya.",
+    "ko": "",
+    "highlight": "yang berdiri"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Saya mau apel merah yang.",
+    "right": "Saya mau apel yang merah.",
+    "note": "The word 'yang' must precede the adjective or clause that modifies the noun, never stand at the end."
+   },
+   {
+    "wrong": "Buku ini adalah yang saya.",
+    "right": "Buku ini adalah buku saya.",
+    "note": "Do not insert 'yang' before basic possessive pronouns unless contrasting 'mine' as 'yang milik saya'."
+   },
+   {
+    "wrong": "Dia orang siapa tinggal di sini.",
+    "right": "Dia orang yang tinggal di sini.",
+    "note": "Never use the question word 'siapa' as a relative pronoun; Indonesian uses 'yang' for both people and things."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase to complete: 'Saya mau beli baju ___ warna putih.'",
+    "options": [
+     "yang",
+     "apa",
+     "dan",
+     "untuk"
+    ],
+    "answer": 0,
+    "explanation": "'Yang' is used to introduce the modifier specifying which shirt is being bought."
+   },
+   {
+    "question": "How do you say 'Which one is yours?' in Indonesian?",
+    "options": [
+     "Milikmu apa?",
+     "Yang mana milikmu?",
+     "Siapa yang mana?",
+     "Di mana yangmu?"
+    ],
+    "answer": 1,
+    "explanation": "'Yang mana' translates directly to 'which one'."
+   },
+   {
+    "question": "Complete the cleft sentence: 'Bukan saya, melainkan Budi ___ membawa kue itu.'",
+    "options": [
+     "ke",
+     "dengan",
+     "yang",
+     "pada"
+    ],
+    "answer": 2,
+    "explanation": "'Yang' introduces the focalized agent who performed the action."
+   },
+   {
+    "question": "Identify the natural sentence meaning 'I prefer the hot one':",
+    "options": [
+     "Saya lebih suka yang panas.",
+     "Saya lebih suka itu panas.",
+     "Saya lebih suka di panas.",
+     "Saya lebih suka panas yang."
+    ],
+    "answer": 0,
+    "explanation": "'Yang panas' nominalizes the adjective 'panas' into 'the hot one'."
+   }
+  ],
+  "tip": "Whenever you want to distinguish between options (e.g., 'the big one' vs 'the small one'), place 'yang' directly in front of the adjective: 'yang besar' and 'yang kecil'."
+ },
+ {
+  "id": "id-a2-pragmatic-particles-colloquial",
+  "level": "a2",
+  "category": "advanced",
+  "categoryColor": "#0D9488",
+  "emoji": "💬",
+  "title": "Discourse Particles (Sih, Dong, Kok, Deh, Kan)",
+  "subtitle": "Adding nuance, emotion, and natural flow to conversational Indonesian",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "Indonesian discourse particles adjust the speaker's emotional stance, solidarity, or expectation without altering the basic propositional content.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Core Pragmatic Tone",
+    "Typical English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "kan",
+      "Confirmation / Shared knowledge",
+      "right? / you know..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "sih",
+      "Softener / Topic marker / Curiosity",
+      "well / as for / actually"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "dong",
+      "Friendly insistence / Obviousness",
+      "of course! / come on!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "kok",
+      "Surprise / Puzzled 'why'",
+      "how come? / why on earth?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "deh",
+      "Resignation / Decisive preference",
+      "I guess / let's just..."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Seeking Agreement or Confirming",
+    "example": "Kamu sudah tahu berita itu, kan?",
+    "translation": ""
+   },
+   {
+    "color": "#E11D48",
+    "label": "Expressing Surprise or Confusion",
+    "example": "Kok kamu belum tidur jam begini?",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Encouraging or Asserting Naturally",
+    "example": "Bantu aku sebentar, dong!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dia kan sudah pernah ke Bali.",
+    "ko": "",
+    "highlight": "kan"
+   },
+   {
+    "en": "Kok lampunya tiba-tiba mati?",
+    "ko": "",
+    "highlight": "Kok"
+   },
+   {
+    "en": "Boleh minta airnya sedikit, dong?",
+    "ko": "",
+    "highlight": "dong"
+   },
+   {
+    "en": "Sebenarnya sih saya tidak terlalu lapar.",
+    "ko": "",
+    "highlight": "sih"
+   },
+   {
+    "en": "Mending kita pulang sekarang saja, deh.",
+    "ko": "",
+    "highlight": "deh"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mengapa kamu belum makan, kok?",
+    "right": "Kok kamu belum makan?",
+    "note": "'Kok' appears at the beginning of the clause or predicate to express surprise, not tagged at the end like 'kan'."
+   },
+   {
+    "wrong": "Dong bantu saya sekarang.",
+    "right": "Bantu saya dong sekarang.",
+    "note": "'Dong' is placed immediately after the verb, request, or focal word, never as an opening sentence starter."
+   },
+   {
+    "wrong": "Saya kan tidak tahu kemarin.",
+    "right": "Saya kan tidak tahu waktu itu, kan?",
+    "note": "Do not confuse the causal 'kan' (short for bukan/karena) with inappropriate formal usage; keep particles strictly in informal contexts."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which particle best completes the friendly command: 'Ikut kita ke kafe, ___!'",
+    "options": [
+     "sih",
+     "dong",
+     "kok",
+     "kan"
+    ],
+    "answer": 1,
+    "explanation": "'Dong' softens an imperative into a warm, encouraging invitation ('come on, join us!')."
+   },
+   {
+    "question": "Which particle conveys unexpected surprise in: '___ kamu bisa ada di sini?'",
+    "options": [
+     "Deh",
+     "Dong",
+     "Kok",
+     "Kan"
+    ],
+    "answer": 2,
+    "explanation": "'Kok' expresses mild bewilderment or curiosity ('How come you are here?')."
+   },
+   {
+    "question": "Complete the tag question: 'Besok kita libur, ___?'",
+    "options": [
+     "kan",
+     "kok",
+     "deh",
+     "sih"
+    ],
+    "answer": 0,
+    "explanation": "'Kan' acts like 'right?' or 'isn't it?', appealing to common shared knowledge."
+   },
+   {
+    "question": "Express a mild personal concession: 'Kalau menurut saya ___, rencana ini bagus.'",
+    "options": [
+     "dong",
+     "kok",
+     "kan",
+     "sih"
+    ],
+    "answer": 3,
+    "explanation": "'Sih' serves as a pragmatic topic marker and conversational softener."
+   }
+  ],
+  "tip": "Listen carefully to native speakers before overusing particles: 'kan' tags at the end or before predicates, 'kok' leads questions of surprise, and 'dong' softens requests."
+ },
+ {
+  "id": "id-b1-suffix-kan-causative-benefactive",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#DC2626",
+  "emoji": "🛠️",
+  "title": "Applicative Suffix -kan: Causative and Benefactive",
+  "subtitle": "Causing an action or performing a deed for someone else's benefit",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "The verbal suffix -kan either causes an object to enter a state (causative) or shifts the beneficiary of an action into the primary direct object position (benefactive).",
+  "structure": {
+   "headers": [
+    "Root Word",
+    "Derived Verb (-kan)",
+    "Grammatical Role"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "tidur (sleep)",
+      "menidurkan",
+      "Causative (put someone to sleep)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "beli (buy)",
+      "membelikan",
+      "Benefactive (buy something for someone)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "masuk (enter)",
+      "memasukkan",
+      "Causative (put something inside)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "buat (make)",
+      "membuatkan",
+      "Benefactive (make something for someone)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Causative Action (Cause to happen/become)",
+    "example": "Ibu mematikan lampu kamar sebelum tidur.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Benefactive Action (Doing for someone)",
+    "example": "Ayah membelikan adik sepeda baru.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Conveyance / Moving an Object",
+    "example": "Dia melemparkan bola ke arah saya.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kakak membukakan pintu untuk tamunya.",
+    "ko": "",
+    "highlight": "membukakan"
+   },
+   {
+    "en": "Tolong dengarkan penjelasan guru dengan baik.",
+    "ko": "",
+    "highlight": "dengarkan"
+   },
+   {
+    "en": "Polisi menghentikan mobil yang melanggar rambu.",
+    "ko": "",
+    "highlight": "menghentikan"
+   },
+   {
+    "en": "Saya memasakkan teman saya nasi goreng.",
+    "ko": "",
+    "highlight": "memasakkan"
+   },
+   {
+    "en": "Guru meminjamkan kamus kepada siswa.",
+    "ko": "",
+    "highlight": "meminjamkan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Saya membeli adik saya buku.",
+    "right": "Saya membelikan adik saya buku.",
+    "note": "Without '-kan', the base verb 'membeli' cannot take the beneficiary directly after the verb without 'untuk'."
+   },
+   {
+    "wrong": "Dia mematikan dari televisi.",
+    "right": "Dia mematikan televisi.",
+    "note": "Causative verbs with '-kan' are strictly transitive and take their object directly without prepositions like 'dari' or 'pada'."
+   },
+   {
+    "wrong": "Tolong buatkan kopi untuk kepada saya.",
+    "right": "Tolong buatkan saya kopi.",
+    "note": "When using the benefactive '-kan', the recipient directly follows the verb, making 'untuk kepada' redundant."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "In 'Ibu membelikan adik baju', what role does 'adik' play?",
+    "options": [
+     "Agent",
+     "Beneficiary",
+     "Instrument",
+     "Location"
+    ],
+    "answer": 1,
+    "explanation": "The suffix '-kan' promotes the beneficiary ('adik') to the primary object position directly following the verb."
+   },
+   {
+    "question": "Which verb means 'to put something into' or 'insert'?",
+    "options": [
+     "keluarkan",
+     "memasukkan",
+     "termasuk",
+     "bermasuk"
+    ],
+    "answer": 1,
+    "explanation": "'Memasukkan' is the causative form of 'masuk' (to enter), meaning to make something enter."
+   },
+   {
+    "question": "Complete the benefactive sentence: 'Bisa tolong ___ saya secangkir teh?'",
+    "options": [
+     "membuatkan",
+     "terbuat",
+     "berbuat",
+     "buatan"
+    ],
+    "answer": 0,
+    "explanation": "'Membuatkan' means to make something for someone (the speaker 'saya')."
+   },
+   {
+    "question": "What is the causative form of 'bersih' (clean) meaning 'to clean something'?",
+    "options": [
+     "kebersihan",
+     "dibersihkan",
+     "membersihkan",
+     "pembersih"
+    ],
+    "answer": 2,
+    "explanation": "'Membersihkan' combines the meN- prefix and -kan suffix with root 'bersih' to mean 'to make clean'."
+   }
+  ],
+  "tip": "Order matters with benefactive -kan: [Verb-kan] + [Person benefiting] + [Item]. For example: 'mengambilkan saya air' (get me water)."
+ },
+ {
+  "id": "id-b1-suffix-i-locative-iterative",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#EA580C",
+  "emoji": "🎯",
+  "title": "Locative and Iterative Suffix -i",
+  "subtitle": "Targeting stationary locations, recipients, and repetitive actions",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "The suffix -i binds a stationary location or recipient directly to the verb as its object, or marks repetitive and iterative actions.",
+  "structure": {
+   "headers": [
+    "Base Word",
+    "Derived Verb (-i)",
+    "Core Semantic Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "masuk (enter)",
+      "memasuki",
+      "Locative: enter into (a place)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "hadir (attend)",
+      "menghadiri",
+      "Locative: attend (an event)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "pukul (hit)",
+      "memukuli",
+      "Iterative: hit repeatedly"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "kirim (send)",
+      "mengirimi",
+      "Recipient-focus: send someone something"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Stationary Target / Location",
+    "example": "Presiden mengunjungi desa terpencil itu.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Recipient-Oriented Applicative",
+    "example": "Paman mengirimi saya surat dari Jepang.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Iterative / Repeated Action",
+    "example": "Petinju itu memukuli lawannya berkali-kali.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ratusan orang menghadiri seminar internasional tersebut.",
+    "ko": "",
+    "highlight": "menghadiri"
+   },
+   {
+    "en": "Jangan mendekati binatang liar itu.",
+    "ko": "",
+    "highlight": "mendekati"
+   },
+   {
+    "en": "Polisi mencurigai pria berbaju hitam itu.",
+    "ko": "",
+    "highlight": "mencurigai"
+   },
+   {
+    "en": "Ibu memarahi adik karena pulang terlambat.",
+    "ko": "",
+    "highlight": "memarahi"
+   },
+   {
+    "en": "Kami melewati jembatan tua setiap pagi.",
+    "ko": "",
+    "highlight": "melewati"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Saya menghadiri ke pesta itu.",
+    "right": "Saya menghadiri pesta itu.",
+    "note": "The suffix '-i' absorbs the preposition 'ke'; do not use prepositions between a '-i' verb and its locative object."
+   },
+   {
+    "wrong": "Ibu mengirimi uang kepada saya.",
+    "right": "Ibu mengirimi saya uang.",
+    "note": "With 'mengirimi', the direct recipient immediately follows the verb; using 'kepada' is ungrammatical."
+   },
+   {
+    "wrong": "Dia memasuki pensil ke dalam kotak.",
+    "right": "Dia memasukkan pensil ke dalam kotak.",
+    "note": "Use '-kan' when moving an object into something; use '-i' when the destination itself is the grammatical object (memasuki ruangan)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete with the correct locative verb: 'Rombongan turis ___ museum nasional.'",
+    "options": [
+     "memasuki",
+     "memasukkan",
+     "pemasukan",
+     "termasuk"
+    ],
+    "answer": 0,
+    "explanation": "'Memasuki' targets the location itself ('museum nasional') as the direct object."
+   },
+   {
+    "question": "What nuance does '-i' add to 'memukul' in 'Dia memukuli drum itu'?",
+    "options": [
+     "Accidental event",
+     "Benefactive action",
+     "Repeated / iterative strikes",
+     "Passive outcome"
+    ],
+    "answer": 2,
+    "explanation": "The suffix '-i' denotes repeated, intense, or iterative action when attached to physical verbs like pukul (strike)."
+   },
+   {
+    "question": "Choose the correct sentence following '-i' recipient grammar:",
+    "options": [
+     "Dia membelikan saya.",
+     "Dia mengirimi saya paket.",
+     "Dia menaruh toko itu.",
+     "Dia mengirimi paket kepada saya."
+    ],
+    "answer": 1,
+    "explanation": "'Mengirimi' requires the recipient ('saya') immediately following the verb without prepositions."
+   },
+   {
+    "question": "Complete the warning: 'Jangan ___ rel kereta api saat palang sudah turun!'",
+    "options": [
+     "didekatkan",
+     "dekatan",
+     "terdekat",
+     "mendekati"
+    ],
+    "answer": 3,
+    "explanation": "'Mendekati' means to move toward or approach a physical stationary location or object."
+   }
+  ],
+  "tip": "Contrast trick: -kan moves an item away towards a goal (memasukkan buku = put a book in), while -i stays fixed on the recipient/place (memasuki kamar = enter a room)."
+ },
+ {
+  "id": "id-b1-circumfix-ke-an-adversative-and-nouns",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#9333EA",
+  "emoji": "🌧️",
+  "title": "Adversative Verbs and Abstract Nouns with ke-...-an",
+  "subtitle": "Expressing adverse victim experiences and creating abstract concepts",
+  "color": "#9333EA",
+  "bg": "#FAF5FF",
+  "keyPoint": "The circumfix ke-...-an derives either abstract nouns (qualities, states, domains) or involuntary adversative verbs where the subject suffers an unwanted mishap.",
+  "structure": {
+   "headers": [
+    "Root Word",
+    "Derived ke-...-an",
+    "Function & English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "hujan (rain)",
+      "kehujanan",
+      "Adversative Verb: caught in the rain"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "hilang (lost)",
+      "kehilangan",
+      "Adversative Verb: suffered a loss"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "adil (just)",
+      "keadilan",
+      "Abstract Noun: justice"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "bersih (clean)",
+      "kebersihan",
+      "Abstract Noun: cleanliness / hygiene"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#9333EA",
+    "label": "Adversative Experience (Unfortunate Event)",
+    "example": "Tadi sore saya kehujanan di jalan.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Suffering a Loss or Deficit",
+    "example": "Keluarga itu kehilangan rumah akibat kebakaran.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Abstract Noun Formation",
+    "example": "Kesehatan jauh lebih berharga daripada uang.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mereka kelaparan karena bantuan belum tiba.",
+    "ko": "",
+    "highlight": "kelaparan"
+   },
+   {
+    "en": "Keamanan lingkungan ini selalu terjaga dengan baik.",
+    "ko": "",
+    "highlight": "Keamanan"
+   },
+   {
+    "en": "Saya kemalaman dan tidak ada angkutan umum lagi.",
+    "ko": "",
+    "highlight": "kemalaman"
+   },
+   {
+    "en": "Ketinggian gunung itu mencapai tiga ribu meter.",
+    "ko": "",
+    "highlight": "Ketinggian"
+   },
+   {
+    "en": "Banyak warga kepanasan di tengah lapangan terbuka.",
+    "ko": "",
+    "highlight": "kepanasan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Saya menghujani di jalan kemarin.",
+    "right": "Saya kehujanan di jalan kemarin.",
+    "note": "'Menghujani' means to shower something with objects, while 'kehujanan' conveys the accidental experience of getting caught in the rain."
+   },
+   {
+    "wrong": "Dia kehijauan dompetnya.",
+    "right": "Dia kehilangan dompetnya.",
+    "note": "Use 'kehilangan' (loss) derived from 'hilang', not unrelated base roots when describing accidental losses."
+   },
+   {
+    "wrong": "Adil adalah penting bagi semua orang.",
+    "right": "Keadilan adalah hal penting bagi semua orang.",
+    "note": "'Adil' is an adjective ('just/fair'); the abstract noun 'justice' requires the circumfix 'ke-...-an' to become 'keadilan'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which word derived from 'malam' (night) means 'to be overtaken by nightfall'?",
+    "options": [
+     "bermalam",
+     "semalam",
+     "kemalaman",
+     "malam-malam"
+    ],
+    "answer": 2,
+    "explanation": "'Kemalaman' is an adversative ke-...-an verb meaning caught by nightfall or stranded late."
+   },
+   {
+    "question": "Convert the adjective 'bersih' (clean) into the abstract noun 'cleanliness':",
+    "options": [
+     "membersihkan",
+     "kebersihan",
+     "pembersihan",
+     "terbersih"
+    ],
+    "answer": 1,
+    "explanation": "The circumfix ke-...-an forms abstract quality nouns from adjectives: 'bersih' becomes 'kebersihan'."
+   },
+   {
+    "question": "In 'Dia kehilangan kunci motornya', what does 'kehilangan' indicate?",
+    "options": [
+     "An intentional act",
+     "An involuntary loss",
+     "A repeated motion",
+     "A future goal"
+    ],
+    "answer": 1,
+    "explanation": "Adversative ke-...-an verbs highlight that the subject unintentionally suffered an unwanted experience or loss."
+   },
+   {
+    "question": "Select the correct word to fill the blank: '___ udara di kota ini semakin buruk.'",
+    "options": [
+     "Pencemar",
+     "Tercemar",
+     "Mencemari",
+     "Pencemaran"
+    ],
+    "answer": 3,
+    "explanation": "'Pencemaran' (pollution) represents the nominalized process affecting air quality in the sentence."
+   }
+  ],
+  "tip": "When an adverse verb has ke-...-an, think of it as 'undergoing too much of' or 'being struck by' the root word: hujan -> kehujanan (trapped in rain), dingin -> kedinginan (suffering from cold)."
+ },
+ {
+  "id": "id-b1-circumfix-peN-an-nominalization",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🏷️",
+  "title": "Nominalization: peN-, peN-...-an, and -an",
+  "subtitle": "Form agents, ongoing processes, and concrete results from base words",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Prefix peN- derives the agent or instrument, circumfix peN-...-an marks the abstract process or action, while suffix -an indicates the concrete result or product.",
+  "structure": {
+   "headers": [
+    "Affix Pattern",
+    "Indonesian Example",
+    "Semantic Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "peN- + tulis",
+      "penulis",
+      "Agent / Actor (writer)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "peN-...-an + tulis",
+      "penulisan",
+      "Process / Act (the act of writing)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "tulis + -an",
+      "tulisan",
+      "Result / Product (article, writing)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "peN-...-an + bangun",
+      "pembangunan",
+      "Process / Undertaking (development)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Agent / Instrument (peN-)",
+    "example": "Pemerintah mencari penerjemah resmi untuk konferensi internasional.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Process or Action (peN-...-an)",
+    "example": "Proses pembuatan dokumen ini membutuhkan waktu dua minggu.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Result or Object (-an)",
+    "example": "Masakan ibu selalu menjadi makanan favorit seluruh keluarga.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Penulis artikel itu memenangkan penghargaan bergengsi.",
+    "ko": "",
+    "highlight": "Penulis"
+   },
+   {
+    "en": "Penulisan laporan keuangan harus selesai sebelum akhir bulan.",
+    "ko": "",
+    "highlight": "Penulisan"
+   },
+   {
+    "en": "Tulisan tangannya sangat rapi dan mudah dibaca oleh dosen.",
+    "ko": "",
+    "highlight": "Tulisan"
+   },
+   {
+    "en": "Pengembangan sektor pariwisata meningkatkan devisa negara secara signifikan.",
+    "ko": "",
+    "highlight": "Pengembangan"
+   },
+   {
+    "en": "Bantuan kemanusiaan telah tiba di lokasi bencana alam pagi ini.",
+    "ko": "",
+    "highlight": "Bantuan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Proses menulis buku itu makan waktu setahun.",
+    "right": "Proses penulisan buku itu memakan waktu setahun.",
+    "note": "Use the derived nominal circumfix peN-...-an (penulisan) rather than the active verb base after 'proses'."
+   },
+   {
+    "wrong": "Saya sangat menyukai masak ini.",
+    "right": "Saya sangat menyukai masakan ini.",
+    "note": "The suffix -an is required to change the verbal action 'masak' into the concrete noun 'masakan' (cooked dish/food)."
+   },
+   {
+    "wrong": "Pembersihan itu bekerja dengan sangat teliti setiap pagi.",
+    "right": "Pembersih itu bekerja dengan sangat teliti setiap pagi.",
+    "note": "Use peN- (pembersih) for the agent or tool; peN-...-an (pembersihan) designates the abstract act of cleaning."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Para dokter mengawasi ___ pasien secara intensif di ruang gawat darurat.",
+    "options": [
+     "pemeriksaan",
+     "pemeriksa",
+     "periksa",
+     "periksaan"
+    ],
+    "answer": 0,
+    "explanation": "Circumfix peN-...-an is needed to denote the medical process or examination."
+   },
+   {
+    "question": "Dia dikenal sebagai seorang novelis dan ___ puisi terkenal di kota ini.",
+    "options": [
+     "pembacaan",
+     "bacaan",
+     "pembaca",
+     "terbaca"
+    ],
+    "answer": 2,
+    "explanation": "The prefix peN- forms the human agent (pembaca = reader/reciter)."
+   },
+   {
+    "question": "Kami membaca banyak ___ klasik selama liburan musim panas.",
+    "options": [
+     "pembaca",
+     "pembacaan",
+     "terbaca",
+     "bacaan"
+    ],
+    "answer": 3,
+    "explanation": "Suffix -an produces the concrete object/material being read (bacaan = reading material/literature)."
+   },
+   {
+    "question": "Kementerian Keuangan mengumumkan rencana ___ jembatan antarprovinsi.",
+    "options": [
+     "bangunan",
+     "pembangunan",
+     "pembangun",
+     "terbangun"
+    ],
+    "answer": 1,
+    "explanation": "Pembangunan expresses the ongoing process or project of development/construction."
+   }
+  ],
+  "tip": "Match the nasal morphophonemics of peN- and peN-...-an directly to meN-: if the verb is menulis, the derived nouns are penulis and penulisan."
+ },
+ {
+  "id": "id-b1-reduplication-morphology",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔄",
+  "title": "Reduplication Types and Functions",
+  "subtitle": "Master full, partial, and sound-altering repetition in Indonesian",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Indonesian reduplication alters word meaning systematically, indicating noun pluralization, repetitive or relaxed verbal activity, mutual reciprocity, or intensified qualities.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Morphological Pattern",
+    "Meaning & Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Full (Dwilingga)",
+      "anak -> anak-anak",
+      "Indefinite plurality / variety"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Sound-Altering",
+      "bolak-balik, sayur-mayur",
+      "Variation, frequency, or collective items"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Affixed Reduplication",
+      "pukul -> pukul-memukul",
+      "Reciprocal action (hitting each other)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Verb-Derived Full",
+      "jalan -> jalan-jalan",
+      "Relaxed, purposeless action (strolling)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Plurality & Diversity",
+    "example": "Buku-buku di perpustakaan nasional tersusun rapi menurut kategori ilmiah.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Casual / Relaxed Action",
+    "example": "Kami hanya duduk-duduk di teras rumah sambil menikmati secangkir kopi panas.",
+    "translation": ""
+   },
+   {
+    "color": "#1E40AF",
+    "label": "Reciprocal / Mutual Interaction",
+    "example": "Kedua belah pihak saling tolong-menolong dalam mengatasi krisis pangan ini.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Guru meminta semua murid-murid kembali ke dalam kelas masing-masing.",
+    "ko": "",
+    "highlight": "murid-murid"
+   },
+   {
+    "en": "Pada akhir pekan, keluarga kami sering jalan-jalan ke taman kota.",
+    "ko": "",
+    "highlight": "jalan-jalan"
+   },
+   {
+    "en": "Mereka bersalaman dan saling maaf-memaafkan di hari raya yang fitri.",
+    "ko": "",
+    "highlight": "maaf-memaafkan"
+   },
+   {
+    "en": "Bus antarkota itu mondar-mandir menjemput penumpang di sepanjang jalan raya.",
+    "ko": "",
+    "highlight": "mondar-mandir"
+   },
+   {
+    "en": "Mobil-mobilan kayu ini dibuat sendiri oleh paman dengan ketelitian tinggi.",
+    "ko": "",
+    "highlight": "Mobil-mobilan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Banyak buku-buku di meja.",
+    "right": "Banyak buku di meja.",
+    "note": "Avoid double pluralization: do not reduplicate the noun if a quantifier like 'banyak' or 'semua' is already present."
+   },
+   {
+    "wrong": "Mereka pukul satu sama lain.",
+    "right": "Mereka pukul-memukul saat pertengkaran itu terjadi.",
+    "note": "Use the reciprocal reduplication template stem + meN-stem (pukul-memukul) to convey mutual interaction."
+   },
+   {
+    "wrong": "Kami mau jalan di taman santai.",
+    "right": "Kami mau jalan-jalan santai di taman.",
+    "note": "Reduplicating intransitive dynamic verbs like jalan to jalan-jalan expresses aimless leisure rather than purposeful transit."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Setelah pertengkaran panjang, kedua sahabat itu akhirnya saling ___.",
+    "options": [
+     "memaafkan",
+     "maaf-memaafkan",
+     "dimaafkan",
+     "pemaaf"
+    ],
+    "answer": 1,
+    "explanation": "The pattern base + meN-base (maaf-memaafkan) conveys mutual, reciprocal action."
+   },
+   {
+    "question": "Budi suka menghabiskan sore hari dengan ___ di tepi pantai.",
+    "options": [
+     "duduk-duduk",
+     "mendudukkan",
+     "dudukan",
+     "terduduk"
+    ],
+    "answer": 0,
+    "explanation": "Full reduplication of the verb stem (duduk-duduk) communicates relaxed, leisurely activity."
+   },
+   {
+    "question": "Di supermarket itu, terdapat aneka ___ segar yang diimpor dari luar negeri.",
+    "options": [
+     "buah",
+     "sayuran",
+     "buah-buahan",
+     "membuahi"
+    ],
+    "answer": 2,
+    "explanation": "Reduplication with the suffix -an (buah-buahan) creates a collective noun meaning 'various sorts of fruits'."
+   },
+   {
+    "question": "Jangan menumpuk terlalu banyak ___ referensi di atas meja belajar.",
+    "options": [
+     "buku-buku",
+     "buku",
+     "pebukuan",
+     "pembuku"
+    ],
+    "answer": 1,
+    "explanation": "'Banyak' already establishes plurality, so the singular root 'buku' must be used without reduplication."
+   }
+  ],
+  "tip": "Reduplication plus the suffix -an (e.g., mobil-mobilan, rumah-rumahan) creates diminutive or imitation nouns meaning 'toy car' or 'model house'."
+ },
+ {
+  "id": "id-b2-accidental-passive-ter",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#8B5CF6",
+  "emoji": "⚡",
+  "title": "Prefix ter-: Involuntary Actions and Superlatives",
+  "subtitle": "Express accidental outcomes, completed states, potential, and extremes",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The prefix ter- marks non-volitional involuntary events, non-agentive resulting states, ability in negative frames, and absolute superlatives when bound to adjectives.",
+  "structure": {
+   "headers": [
+    "Root Class",
+    "ter- Formation",
+    "Grammatical Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Transitive Verb",
+      "injak -> terinjak",
+      "Accidental / Involuntary action"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Transitive Verb",
+      "buka -> terbuka",
+      "Static result / Already open"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Transitive Verb",
+      "angkat -> tidak terangkat",
+      "Potential ability (cannot be lifted)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adjective",
+      "tinggi -> tertinggi",
+      "Absolute Superlative (the highest)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Accidental / Unintentional Event",
+    "example": "Kaki kucing malang itu tidak sengaja terinjak oleh saya ketika berjalan.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Static Resultant State",
+    "example": "Pintu gerbang museum selalu terbuka lebar bagi pengunjung dari berbagai daerah.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Absolute Superlative",
+    "example": "Gedung pencakar langit ini dinobatkan sebagai bangunan tertinggi di ibu kota.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Gelas antik peninggalan kakek terjatuh dari meja dan pecah berantakan.",
+    "ko": "",
+    "highlight": "terjatuh"
+   },
+   {
+    "en": "Buku catatan harian saya tertinggal di dalam gerbong kereta listrik tadi pagi.",
+    "ko": "",
+    "highlight": "tertinggal"
+   },
+   {
+    "en": "Kotak brankas yang berat itu tidak terangkat oleh dua orang pekerja sekalipun.",
+    "ko": "",
+    "highlight": "terangkat"
+   },
+   {
+    "en": "Mahasiswa itu mencatatkan namanya sebagai lulusan terbaik di fakultas hukum.",
+    "ko": "",
+    "highlight": "terbaik"
+   },
+   {
+    "en": "Jendela kamar tidur masih terkunci rapat saat pencuri mencoba masuk ke dalam.",
+    "ko": "",
+    "highlight": "terkunci"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Saya sengaja tertabrak tiang listrik kemarin sore.",
+    "right": "Saya menabrak tiang listrik kemarin sore.",
+    "note": "Prefix ter- implies unintentional or accidental events; deliberate intentional actions must use meN-."
+   },
+   {
+    "wrong": "Kue itu termakan oleh saya karena saya sangat lapar.",
+    "right": "Kue itu saya makan karena saya sangat lapar.",
+    "note": "Use standard canonical passive (di- or object pronoun + root) when the consumption was voluntary and intentional."
+   },
+   {
+    "wrong": "Gedung itu paling tertinggi di Asia Tenggara.",
+    "right": "Gedung itu tertinggi di Asia Tenggara.",
+    "note": "'Ter-' on an adjective already means 'the most'. Do not combine it redundantly with 'paling'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Maafkan saya, berkas rahasia perusahaan tidak sengaja ___ kemarin siang.",
+    "options": [
+     "dibuang",
+     "terbuang",
+     "membuang",
+     "pembuangan"
+    ],
+    "answer": 1,
+    "explanation": "Prefix ter- marks involuntary or accidental actions ('accidentally thrown away')."
+   },
+   {
+    "question": "Batu besar yang menghalangi jalan pegunungan itu tidak ___ oleh warga desa.",
+    "options": [
+     "tergeser",
+     "menggeser",
+     "pergeseran",
+     "penggeser"
+    ],
+    "answer": 0,
+    "explanation": "In negative contexts (tidak + ter-), ter- denotes involuntary potentiality or capability ('cannot be shifted')."
+   },
+   {
+    "question": "Gunung Kerinci merupakan gunung berapi ___ di kepulauan Indonesia.",
+    "options": [
+     "paling tinggi sekali",
+     "ketinggian",
+     "tertinggi",
+     "meninggi"
+    ],
+    "answer": 2,
+    "explanation": "Prefix ter- attached to an adjective creates the absolute superlative form ('highest')."
+   },
+   {
+    "question": "Saat kami tiba di gedung pertemuan, pintu aula utama sudah ___ lebar.",
+    "options": [
+     "membuka",
+     "pembuka",
+     "dibukakan",
+     "terbuka"
+    ],
+    "answer": 3,
+    "explanation": "Terbuka represents a passive static resultant state ('in an open state')."
+   }
+  ],
+  "tip": "Never combine 'paling' with a 'ter-' adjective (avoid *paling terbagus*). Either write 'paling bagus' or 'terbagus' independently."
+ },
+ {
+  "id": "id-b2-complex-affixation-meN-per-kan-i",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⚙️",
+  "title": "Complex Causatives: memper-, memper-...-kan, memper-...-i",
+  "subtitle": "Express intensified causation, acquisition, comparison, and reformative actions",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "The prefix memper- makes adjectives comparative or causative, while adding suffixes -kan or -i produces complex multi-tiered transitive verbs signifying treatment, acquisition, or repetitive spatial causation.",
+  "structure": {
+   "headers": [
+    "Affix Combination",
+    "Base Word",
+    "Derived Verb",
+    "Semantic Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "memper- + Adjective",
+      "besar (big)",
+      "memperbesar",
+      "To make bigger / expand"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "memper- + Noun",
+      "istri (wife)",
+      "memperistri",
+      "To acquire / take as wife"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "memper-...-kan + Verb/Noun",
+      "kenal (know)",
+      "memperkenalkan",
+      "To cause to know / introduce"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "memper-...-i + Noun/Adj",
+      "baru (new)",
+      "memperbarui",
+      "To renovate / modernize / renew"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Causative from Adjectives (memper-)",
+    "example": "Pemerintah kota memperlebar jalan protokol guna mengurai kemacetan parah.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Causative with Recipient (memper-...-kan)",
+    "example": "Direktur utama memperkenalkan kepala divisi logistik yang baru kepada staf.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Iterative / Renewal (memper-...-i)",
+    "example": "Perusahaan wajib memperbarui izin operasional pabrik setiap lima tahun sekali.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ilmuwan berusaha mempercepat proses uji klinis obat antiviral generasi baru.",
+    "ko": "",
+    "highlight": "mempercepat"
+   },
+   {
+    "en": "Dosen tamu itu memperlihatkan dokumen sejarah kuno di depan seluruh mahasiswa.",
+    "ko": "",
+    "highlight": "memperlihatkan"
+   },
+   {
+    "en": "Raja akhirnya mempersunting putri bangsawan dari kerajaan tetangga setelah perang.",
+    "ko": "",
+    "highlight": "mempersunting"
+   },
+   {
+    "en": "Pihak kontraktor sedang memperbaiki instalasi listrik yang rusak akibat korsleting.",
+    "ko": "",
+    "highlight": "memperbaiki"
+   },
+   {
+    "en": "Pengacara itu berusaha memperjelas keterangan saksi kunci di hadapan majelis hakim.",
+    "ko": "",
+    "highlight": "memperjelas"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Pemerintah memperbesarkan anggaran pendidikan.",
+    "right": "Pemerintah memperbesar anggaran pendidikan.",
+    "note": "Do not attach the suffix -kan to memper- when the base is an adjective; use simple 'memperbesar' (or 'membesarkan'), never *memperbesarkan*."
+   },
+   {
+    "wrong": "Dia mempertemu temannya di kafe.",
+    "right": "Dia mempertemukan kedua temannya di kafe.",
+    "note": "The circumfix memper-...-kan is mandatory when applying a transitive causative action to a verb root like 'temu'."
+   },
+   {
+    "wrong": "Kita harus memperbaharui paspor.",
+    "right": "Kita harus memperbarui paspor.",
+    "note": "The standard Baku Indonesian base is 'baru', giving the derived form 'memperbarui' without intrusive historical 'h'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Arsitek itu mendesain ulang ruangan ini untuk ___ kapasitas ruang pertemuan.",
+    "options": [
+     "memperluas",
+     "memperluaskan",
+     "terperluas",
+     "perluasan"
+    ],
+    "answer": 0,
+    "explanation": "With adjective roots like luas, memper- alone signifies 'to make more [adjective]'. Suffix -kan is redundant and ungrammatical here."
+   },
+   {
+    "question": "Duta besar Indonesia berniat ___ delegasi diplomatik kepada presiden.",
+    "options": [
+     "memperkenal",
+     "memperkenalkan",
+     "perkenalan",
+     "dikenalkan"
+    ],
+    "answer": 1,
+    "explanation": "The causative verb 'to introduce' requires the circumfix memper-...-kan on the base root kenal."
+   },
+   {
+    "question": "Teknisi handal itu segera ___ jaringan internet kantor yang terputus mendadak.",
+    "options": [
+     "terperbaiki",
+     "perbaikan",
+     "memperbaiki",
+     "memperbaikkan"
+    ],
+    "answer": 2,
+    "explanation": "The standard verb meaning 'to repair/fix' uses the circumfix memper-...-i (memperbaiki)."
+   },
+   {
+    "question": "Latihan pernapasan secara rutin terbukti ampuh untuk ___ daya tahan tubuh.",
+    "options": [
+     "memperkuatkan",
+     "terkuat",
+     "penguatan",
+     "memperkuat"
+    ],
+    "answer": 3,
+    "explanation": "Adjectives take simple prefix memper- to form causatives (memperkuat = to strengthen)."
+   }
+  ],
+  "tip": "Remember the golden constraint: Adjective + memper- never takes -kan. Choose either 'memperdalam' OR 'mendalamkan', never *memperdalamkan*."
+ },
+ {
+  "id": "id-b2-register-shift-formal-vs-informal",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#F59E0B",
+  "emoji": "🗣️",
+  "title": "Formal vs Informal Register Shifts",
+  "subtitle": "Convert between Bahasa Baku and colloquial Indonesian grammar",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Informal Indonesian systematically drops verbal nasal prefixes, substitutes the causative/applicative suffixes -kan and -i with -in, and replaces formal vocabulary with colloquial particles and pronouns.",
+  "structure": {
+   "headers": [
+    "Grammatical Domain",
+    "Formal (Bahasa Baku)",
+    "Informal (Colloquial Jakarta)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Active Verb Prefix",
+      "membeli, membaca",
+      "beli, baca (nasal dropped)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Causative / Applicative Suffix",
+      "membetulkan, membelikan",
+      "benerin, beliin (-in replacement)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negation Markers",
+      "tidak, belum",
+      "nggak / gak, belom"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "First / Second Pronouns",
+      "saya / Anda",
+      "gue / gua and lo / lu"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Dropped Active Nasal Prefix",
+    "example": "Kamu mau beli kopi di warung seberang jalan nggak?",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Suffix -in for -kan / -i",
+    "example": "Tolong bersihin meja makan ini sebelum tamu-tamu datang berkunjung.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Colloquial Lexicon & Particles",
+    "example": "Gue udah bilang sama dia kemarin, tapi dia tetep aja lupa.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kemarin gue udah selesai ngerjain tugas kuliah sampai larut malam.",
+    "ko": "",
+    "highlight": "ngerjain"
+   },
+   {
+    "en": "Tolong bukain pintu depan dong, tangan gue lagi penuh barang belanjaan.",
+    "ko": "",
+    "highlight": "bukain"
+   },
+   {
+    "en": "Mereka nggak mau ngomong langsung sama kepala cabang bank itu.",
+    "ko": "",
+    "highlight": "ngomong"
+   },
+   {
+    "en": "Jangan dipikirin terus masalah sepele kayak gitu, bikin stres aja.",
+    "ko": "",
+    "highlight": "dipikirin"
+   },
+   {
+    "en": "Lo mau ikut nonton konser musik jazz bareng anak-anak nanti malam?",
+    "ko": "",
+    "highlight": "Lo"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Dalam surat dinas resmi, direktur nulis pengumuman baru.",
+    "right": "Dalam surat dinas resmi, direktur menulis pengumuman baru.",
+    "note": "Prefix-dropping and colloquial variants like 'nulis' are strictly prohibited in formal or institutional correspondence."
+   },
+   {
+    "wrong": "Gue ingin mengajukan permohonan beasiswa kepada Anda.",
+    "right": "Saya ingin mengajukan permohonan beasiswa kepada Bapak/Ibu.",
+    "note": "Do not mix ultra-informal pronouns (gue) with formal institutional verb forms and polite requests."
+   },
+   {
+    "wrong": "Dosen meminta mahasiswa kumpulin skripsi tepat waktu.",
+    "right": "Dosen meminta mahasiswa mengumpulkan skripsi tepat waktu.",
+    "note": "In academic and official settings, use the canonical circumfix meng-...-kan instead of the colloquial suffix -in."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Buku laporan pertanggungjawaban itu harus segera ___ kepada atasan.",
+    "options": [
+     "dikasihin",
+     "diberikan",
+     "ngasih",
+     "kasih"
+    ],
+    "answer": 1,
+    "explanation": "In formal standard register (Bahasa Baku), passive verbs retain the canonical di-...-kan affixation ('diberikan')."
+   },
+   {
+    "question": "Eh, lo udah ___ adik lo hadiah ulang tahun belum?",
+    "options": [
+     "dibelikan",
+     "membelikan",
+     "beliin",
+     "pembelian"
+    ],
+    "answer": 2,
+    "explanation": "In informal conversational Indonesian, the applicative suffix -kan is replaced by -in ('beliin')."
+   },
+   {
+    "question": "Saya mohon izin untuk tidak menghadiri rapat karena ___ enak badan.",
+    "options": [
+     "nggak",
+     "kagak",
+     "kurang",
+     "gak"
+    ],
+    "answer": 2,
+    "explanation": "'Kurang enak badan' is the idiomatic standard expression; 'nggak' and 'kagak' are inappropriate in formal letters."
+   },
+   {
+    "question": "Tolong matiin lampu kamar sebelum tidur. Bentuk baku dari 'matiin' adalah ___.",
+    "options": [
+     "mematikan",
+     "kematian",
+     "dimatikan",
+     "pemadaman"
+    ],
+    "answer": 0,
+    "explanation": "The informal root + -in in an imperative maps directly to the active transitive stem meN-...-kan ('mematikan') in formal register."
+   }
+  ],
+  "tip": "Colloquial verbs starting with vowels or velar sounds often take 'ng-' (e.g., ngomong, ngambil, ngatur), which transforms into 'meng-' in standard written Indonesian."
+ }
+]

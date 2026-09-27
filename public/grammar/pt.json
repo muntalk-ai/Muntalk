@@ -1,0 +1,3361 @@
+[
+ {
+  "id": "pt-a1-ser-vs-estar",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎭",
+  "title": "Ser vs. Estar",
+  "subtitle": "Essential differences between permanent identity and temporary state",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use 'ser' for permanent traits, origin, and identity, but use 'estar' for temporary conditions, feelings, and locations.",
+  "structure": {
+   "headers": [
+    "Verb",
+    "Usage Focus",
+    "Present (Ele/Ela)",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Ser",
+      "Identity, origin, essence",
+      "é",
+      "Ele é brasileiro."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Estar",
+      "States, moods, locations",
+      "está",
+      "Ela está cansada."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Ser",
+      "Time, dates, professions",
+      "é",
+      "Hoje é segunda-feira."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Estar",
+      "Ongoing actions (estar + gerund)",
+      "está",
+      "Ele está trabalhando."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Identity & Inherent Traits",
+    "example": "A Maria é médica e é muito inteligente.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Current State or Emotion",
+    "example": "Eu estou feliz hoje, mas estou com sono.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Physical Location",
+    "example": "Nós estamos no escritório agora.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "O café está muito quente agora.",
+    "ko": "",
+    "highlight": "está"
+   },
+   {
+    "en": "Meu irmão é alto e simpático.",
+    "ko": "",
+    "highlight": "é"
+   },
+   {
+    "en": "Onde você está neste momento?",
+    "ko": "",
+    "highlight": "está"
+   },
+   {
+    "en": "Eles são do Rio de Janeiro.",
+    "ko": "",
+    "highlight": "são"
+   },
+   {
+    "en": "Eu estou em casa assistindo televisão.",
+    "ko": "",
+    "highlight": "estou"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Eu sou doente hoje.",
+    "right": "Eu estou doente hoje.",
+    "note": "Illness is a temporary state, so 'estar' must be used instead of 'ser'."
+   },
+   {
+    "wrong": "Onde é o banheiro agora?",
+    "right": "Onde está o banheiro agora?",
+    "note": "Use 'estar' to ask for the current physical location of something or someone."
+   },
+   {
+    "wrong": "Ela está muito inteligente.",
+    "right": "Ela é muito inteligente.",
+    "note": "General intelligence is considered an inherent quality, requiring 'ser'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct form for: 'She is tired today.' -> 'Ela ___ cansada hoje.'",
+    "options": [
+     "é",
+     "está",
+     "sou",
+     "somos"
+    ],
+    "answer": 1,
+    "explanation": "Fatigue is a temporary physical state, so 'está' (from estar) is correct."
+   },
+   {
+    "question": "Choose the correct form for: 'We are Brazilian.' -> 'Nós ___ brasileiros.'",
+    "options": [
+     "somos",
+     "estamos",
+     "são",
+     "estão"
+    ],
+    "answer": 0,
+    "explanation": "Nationality and origin are inherent identity traits requiring 'ser' (nós somos)."
+   },
+   {
+    "question": "Choose the correct form for: 'Where are you right now?' -> 'Onde você ___ agora?'",
+    "options": [
+     "é",
+     "era",
+     "está",
+     "seja"
+    ],
+    "answer": 2,
+    "explanation": "Current location requires the verb 'estar'."
+   },
+   {
+    "question": "Choose the correct form for: 'They are architects.' -> 'Eles ___ arquitetos.'",
+    "options": [
+     "estão",
+     "ficam",
+     "estamos",
+     "são"
+    ],
+    "answer": 3,
+    "explanation": "Professions take 'ser' because they define identity or occupation."
+   }
+  ],
+  "tip": "Think of 'ser' as 'DOVE' (Description, Origin, Values, Events) and 'estar' as 'LoCo' (Location, Condition)."
+ },
+ {
+  "id": "pt-a1-gender-number-agreement",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🧩",
+  "title": "Gender and Number Agreement",
+  "subtitle": "Matching articles, nouns, and adjectives in gender and plural forms",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "In Portuguese, articles and adjectives must match the noun they modify in both gender (masculine/feminine) and number (singular/plural).",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Singular Article",
+    "Plural Article",
+    "Typical Ending Pattern"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine",
+      "o / um",
+      "os / uns",
+      "-o -> -os (o livro novo)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine",
+      "a / uma",
+      "as / umas",
+      "-a -> -as (a casa nova)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Invariable Adj.",
+      "o / a",
+      "os / as",
+      "-e -> -es (o/a carro/casa grande)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Masculine Concordance",
+    "example": "O menino simpático comprou um livro caro.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Feminine Concordance",
+    "example": "A menina simpática comprou uma bolsa cara.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Plural Concordance",
+    "example": "Os carros vermelhos e as bicicletas novas são rápidas.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "A mesa redonda é muito bonita.",
+    "ko": "",
+    "highlight": "A mesa redonda"
+   },
+   {
+    "en": "Os sapatos pretos estão limpos.",
+    "ko": "",
+    "highlight": "Os sapatos pretos"
+   },
+   {
+    "en": "Eu comprei um casaco quente para o inverno.",
+    "ko": "",
+    "highlight": "um casaco quente"
+   },
+   {
+    "en": "As cidades brasileiras são lindas e acolhedoras.",
+    "ko": "",
+    "highlight": "As cidades brasileiras"
+   },
+   {
+    "en": "Eles têm uns amigos italianos em São Paulo.",
+    "ko": "",
+    "highlight": "uns amigos italianos"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "A problema é difícil.",
+    "right": "O problema é difícil.",
+    "note": "Words of Greek origin ending in '-ma' (like problema, sistema, tema) are masculine."
+   },
+   {
+    "wrong": "As menina altas jogam vôlei.",
+    "right": "As meninas altas jogam vôlei.",
+    "note": "Every element modifying the noun (article, noun, adjective) must take the plural '-s'."
+   },
+   {
+    "wrong": "Ele tem uma casa muito bonito.",
+    "right": "Ele tem uma casa muito bonita.",
+    "note": "Since 'casa' is feminine, the modifying adjective must be feminine ('bonita')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct combination for: 'The yellow flowers' -> '___ flores ___'",
+    "options": [
+     "As / amarelas",
+     "Os / amarelos",
+     "A / amarela",
+     "As / amarelo"
+    ],
+    "answer": 0,
+    "explanation": "'Flor' is feminine plural ('as flores'), so the adjective must also be feminine plural ('amarelas')."
+   },
+   {
+    "question": "Select the correct form: 'Um carro ___' (fast)",
+    "options": [
+     "rápidas",
+     "rápido",
+     "rápidos",
+     "rápida"
+    ],
+    "answer": 1,
+    "explanation": "'Carro' is masculine singular, so it requires the masculine singular adjective 'rápido'."
+   },
+   {
+    "question": "Complete the phrase: 'Ele leu ___ livro interessante.'",
+    "options": [
+     "uma",
+     "umas",
+     "um",
+     "uns"
+    ],
+    "answer": 2,
+    "explanation": "'Livro' is masculine singular, requiring the singular indefinite article 'um'."
+   },
+   {
+    "question": "Identify the grammatically correct sentence:",
+    "options": [
+     "Os viagem foram boas.",
+     "A mala é pesados.",
+     "As portas estão abertas.",
+     "O casa é antigo."
+    ],
+    "answer": 2,
+    "explanation": "'As portas estão abertas' exhibits flawless feminine plural agreement throughout."
+   }
+  ],
+  "tip": "Adjectives ending in -e (like 'grande', 'forte') or consonants (like 'fácil') don't change for gender, only for number (grandes, fortes, fáceis)."
+ },
+ {
+  "id": "pt-a1-subject-pronouns-brazilian-usage",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🗣️",
+  "title": "Subject Pronouns: Você and A Gente",
+  "subtitle": "Brazilian everyday speech pronouns and third-person agreement",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Brazilian Portuguese widely replaces 'tu' with 'você' and 'nós' with 'a gente', both taking 3rd-person singular verb conjugations.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Meaning",
+    "Verb Conjugation",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Eu",
+      "I",
+      "1st person sing.",
+      "Eu falo português."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Você",
+      "You (informal/neutral)",
+      "3rd person sing.",
+      "Você fala muito bem."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "A gente",
+      "We (colloquial)",
+      "3rd person sing.",
+      "A gente vai à praia."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Nós",
+      "We (formal/standard)",
+      "1st person plural",
+      "Nós vamos à praia."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Vocês",
+      "You all",
+      "3rd person plural",
+      "Vocês querem café?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Everyday 'You'",
+    "example": "Você mora no Brasil há quanto tempo?",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Informal 'We'",
+    "example": "A gente estuda todo dia na biblioteca.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Plural 'You all'",
+    "example": "Vocês precisam de ajuda com as malas?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "A gente vai almoçar agora.",
+    "ko": "",
+    "highlight": "A gente vai"
+   },
+   {
+    "en": "Você quer um suco de laranja?",
+    "ko": "",
+    "highlight": "Você quer"
+   },
+   {
+    "en": "Nós moramos em Salvador, mas a gente trabalha em Lauro.",
+    "ko": "",
+    "highlight": "a gente trabalha"
+   },
+   {
+    "en": "Vocês conhecem aquele restaurante mineiro?",
+    "ko": "",
+    "highlight": "Vocês conhecem"
+   },
+   {
+    "en": "Hoje a gente não tem aula de português.",
+    "ko": "",
+    "highlight": "a gente não tem"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "A gente vamos ao cinema amanhã.",
+    "right": "A gente vai ao cinema amanhã.",
+    "note": "Even though 'a gente' means 'we', it grammatically requires 3rd person singular ('vai', not 'vamos')."
+   },
+   {
+    "wrong": "Você queres beber água?",
+    "right": "Você quer beber água?",
+    "note": "'Você' conjugates like ele/ela (3rd person singular), never with traditional 2nd-person '-es' endings."
+   },
+   {
+    "wrong": "A gente somos amigos.",
+    "right": "A gente é amigo.",
+    "note": "Use singular verb and singular predicative adjectives with 'a gente' in standard colloquial phrasing."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the proper verb form for: 'A gente ___ pizza hoje à noite.' (comer)",
+    "options": [
+     "comemos",
+     "come",
+     "comem",
+     "como"
+    ],
+    "answer": 1,
+    "explanation": "'A gente' always triggers the 3rd person singular verb ending ('come')."
+   },
+   {
+    "question": "How do Brazilians typically say 'Do you have time?' informally?",
+    "options": [
+     "Tu tens tempo?",
+     "Você tendes tempo?",
+     "Você tem tempo?",
+     "Vós tendes tempo?"
+    ],
+    "answer": 2,
+    "explanation": "In most of Brazil, 'você tem' (with 3rd person verb) is standard for addressing 'you'."
+   },
+   {
+    "question": "Which sentence is grammatically equivalent to 'Nós entendemos a lição'?",
+    "options": [
+     "A gente entendem a lição.",
+     "A gente entende a lição.",
+     "A gente entendemos a lição.",
+     "Vocês entende a lição."
+    ],
+    "answer": 1,
+    "explanation": "'A gente' replaces 'nós' and takes the singular form 'entende'."
+   },
+   {
+    "question": "Choose the correct pronoun: '___ sabem onde fica a rodoviária?' (speaking to a group)",
+    "options": [
+     "A gente",
+     "Você",
+     "Tu",
+     "Vocês"
+    ],
+    "answer": 3,
+    "explanation": "'Vocês' addresses a group ('you all') and matches the 3rd person plural verb 'sabem'."
+   }
+  ],
+  "tip": "Listen to Brazilian songs or podcasts: you'll hear 'a gente' far more frequently than 'nós' in spoken day-to-day conversation."
+ },
+ {
+  "id": "pt-a1-presente-do-indicativo-regular",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#EF4444",
+  "emoji": "⏰",
+  "title": "Present Indicative of Regular Verbs",
+  "subtitle": "Conjugating regular -ar, -er, and -ir verbs for routines and habits",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Drop the infinitive ending (-ar, -er, -ir) and attach regular person endings, where all verbs share the 1st person ending '-o'.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "-AR (Falar)",
+    "-ER (Comer)",
+    "-IR (Abrir)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Eu",
+      "falo",
+      "como",
+      "abro"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Você / Ele / Ela",
+      "fala",
+      "come",
+      "abre"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Nós",
+      "falamos",
+      "comemos",
+      "abrimos"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Vocês / Eles / Elas",
+      "falam",
+      "comem",
+      "abrem"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Daily Routine",
+    "example": "Eu tomo café da manhã às sete horas.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "General Truths",
+    "example": "Os brasileiros adoram futebol e música.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Immediate Future Plan",
+    "example": "Amanhã nós partimos cedo para a praia.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Eu moro perto do metrô.",
+    "ko": "",
+    "highlight": "moro"
+   },
+   {
+    "en": "Ela bebe bastante água durante o treino.",
+    "ko": "",
+    "highlight": "bebe"
+   },
+   {
+    "en": "Eles abrem a loja às nove horas.",
+    "ko": "",
+    "highlight": "abrem"
+   },
+   {
+    "en": "Nós aprendemos vocabulário novo toda semana.",
+    "ko": "",
+    "highlight": "aprendemos"
+   },
+   {
+    "en": "Você escreve mensagens muito engraçadas.",
+    "ko": "",
+    "highlight": "escreve"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Eu fala português.",
+    "right": "Eu falo português.",
+    "note": "All regular verbs in the first-person singular 'eu' end in '-o' in the present indicative."
+   },
+   {
+    "wrong": "Eles come carne todos os dias.",
+    "right": "Eles comem carne todos os dias.",
+    "note": "Plural subjects ('eles') require the plural ending '-em' or '-am' ('comem')."
+   },
+   {
+    "wrong": "Nós dividi a conta.",
+    "right": "Nós dividimos a conta.",
+    "note": "With 'nós', the ending must be '-amos', '-emos', or '-imos' ('dividimos')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Conjugate for 'Eu': 'Eu ___ (trabalhar) em um banco.'",
+    "options": [
+     "trabalha",
+     "trabalham",
+     "trabalho",
+     "trabalhamos"
+    ],
+    "answer": 2,
+    "explanation": "Regular -ar verbs take '-o' for the subject 'eu' (trabalho)."
+   },
+   {
+    "question": "Conjugate for 'Eles': 'Eles ___ (viver) no centro da cidade.'",
+    "options": [
+     "vivem",
+     "vive",
+     "vivo",
+     "vivemos"
+    ],
+    "answer": 0,
+    "explanation": "Regular -er verbs take '-em' for 'eles/elas/vocês' (vivem)."
+   },
+   {
+    "question": "Conjugate for 'Você': 'Você ___ (abrir) a janela, por favor?'",
+    "options": [
+     "abro",
+     "abrem",
+     "abre",
+     "abrimos"
+    ],
+    "answer": 2,
+    "explanation": "'Você' takes the third-person singular inflection, which for -ir verbs ends in '-e' (abre)."
+   },
+   {
+    "question": "Conjugate for 'Nós': 'Nós ___ (escrever) cartas com frequência.'",
+    "options": [
+     "escrevo",
+     "escreve",
+     "escrevem",
+     "escrevemos"
+    ],
+    "answer": 3,
+    "explanation": "The 'nós' ending for regular -er verbs is '-emos' (escrevemos)."
+   }
+  ],
+  "tip": "Notice that 'ele/ela' and 'você' always share the exact same verb form across all Brazilian conjugations."
+ },
+ {
+  "id": "pt-a1-ter-vs-haver-existential",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "📍",
+  "title": "Existential 'Ter' vs. 'Haver'",
+  "subtitle": "Using 'tem' to express existence ('there is / there are') like a native",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "In Brazilian spoken Portuguese, the verb 'ter' (specifically 'tem') universally replaces 'haver' ('há') to express 'there is' or 'there are'.",
+  "structure": {
+   "headers": [
+    "Style / Register",
+    "Verb Form",
+    "Meaning",
+    "Brazilian Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Everyday Spoken (BR)",
+      "tem",
+      "there is / there are",
+      "Tem muita gente aqui."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Formal / Written",
+      "há",
+      "there is / there are",
+      "Há muita gente aqui."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Possession (Standard)",
+      "ter (conjugates)",
+      "to have / possess",
+      "Eu tenho dois carros."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Existential (Spoken)",
+      "tinha",
+      "there was / were",
+      "Tinha muita comida na festa."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Singular Existence",
+    "example": "Tem uma farmácia aberta nesta rua?",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Plural Existence",
+    "example": "Tem muitas pessoas esperando na fila.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Formal Register Equivalent",
+    "example": "Há problemas que precisam de solução imediata.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Tem um gato em cima do telhado.",
+    "ko": "",
+    "highlight": "Tem"
+   },
+   {
+    "en": "Não tem ninguém em casa agora.",
+    "ko": "",
+    "highlight": "Não tem"
+   },
+   {
+    "en": "Tem muitos livros bons naquela estante.",
+    "ko": "",
+    "highlight": "Tem muitos"
+   },
+   {
+    "en": "Hoje tem festa na casa da Júlia.",
+    "ko": "",
+    "highlight": "Hoje tem"
+   },
+   {
+    "en": "Quantos alunos tem na sala de aula?",
+    "ko": "",
+    "highlight": "tem"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Têm muitas pessoas na festa.",
+    "right": "Tem muitas pessoas na festa.",
+    "note": "When expressing existence, 'ter' is impersonal and stays singular ('tem'), never pluralizing to 'têm'."
+   },
+   {
+    "wrong": "Existe muitas pessoas aqui.",
+    "right": "Existem muitas pessoas aqui.",
+    "note": "Unlike 'ter' and 'haver', the verb 'existir' is personal and MUST agree with the plural subject."
+   },
+   {
+    "wrong": "Há dez anos atrás eu cheguei.",
+    "right": "Há dez anos eu cheguei / Dez anos atrás eu cheguei.",
+    "note": "Combining 'há' with 'atrás' is a redundant pleonasm in Portuguese; choose one or the other."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do Brazilians naturally say 'There is a bakery nearby' in spoken Portuguese?",
+    "options": [
+     "É uma padaria perto.",
+     "Está uma padaria perto.",
+     "Tem uma padaria perto.",
+     "Faz uma padaria perto."
+    ],
+    "answer": 2,
+    "explanation": "In spoken Brazilian Portuguese, 'tem' is the natural, default way to say 'there is'."
+   },
+   {
+    "question": "How would you express 'There are many cars on the street' using colloquial Brazilian 'ter'?",
+    "options": [
+     "Tem muitos carros na rua.",
+     "Têm muitos carros na rua.",
+     "Temos muitos carros na rua.",
+     "Tenho muitos carros na rua."
+    ],
+    "answer": 0,
+    "explanation": "Existential 'ter' is impersonal and remains singular ('tem') regardless of whether what follows is plural."
+   },
+   {
+    "question": "Which verb form correctly and formally replaces 'tem' in 'Tem dúvidas?'",
+    "options": [
+     "São",
+     "Há",
+     "Faz",
+     "Têm"
+    ],
+    "answer": 1,
+    "explanation": "The standard, formal equivalent for existential 'tem' is impersonal 'há' (from haver)."
+   },
+   {
+    "question": "Choose the correct sentence using the verb 'existir':",
+    "options": [
+     "Existe muitos problemas.",
+     "Existem muitos problemas.",
+     "Existir muitos problemas.",
+     "Existe uns problemas."
+    ],
+    "answer": 1,
+    "explanation": "Unlike existential 'ter' and 'haver', 'existir' agrees in number with its subject: 'muitos problemas existem'."
+   }
+  ],
+  "tip": "In Brazil, using 'há' in casual street conversation can sound stiff or overly academic; embrace 'tem' for natural fluidity."
+ },
+ {
+  "id": "pt-a1-basic-prepositions-contractions",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔗",
+  "title": "Mandatory Preposition Contractions (de, em, a, por)",
+  "subtitle": "Merge common prepositions with articles and demonstratives seamlessly",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "In Brazilian Portuguese, prepositions like 'de', 'em', 'a', and 'por' must contract when followed by definite articles or demonstrative pronouns.",
+  "structure": {
+   "headers": [
+    "Preposition",
+    "+ Article / Pronoun",
+    "Contracted Form",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "de",
+      "o / a / os / as",
+      "do / da / dos / das",
+      "of/from the"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "em",
+      "o / a / os / as",
+      "no / na / nos / nas",
+      "in/on/at the"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "a",
+      "o / a / os / as",
+      "ao / à / aos / às",
+      "to/at the"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "por",
+      "o / a / os / as",
+      "pelo / pela / pelos / pelas",
+      "by/through the"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "em",
+      "aquele / aquela",
+      "naquele / naquela",
+      "in/on that"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Origin & Possession (de)",
+    "example": "Eu sou do Brasil e moro perto da praia.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Location (em)",
+    "example": "Eles estão no cinema e nós estamos na praça.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Transit & Passage (por)",
+    "example": "Nós caminhamos pelo parque todos os dias.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "O livro é do professor de história.",
+    "ko": "",
+    "highlight": "do"
+   },
+   {
+    "en": "Ela colocou as chaves na mesa da sala.",
+    "ko": "",
+    "highlight": "na"
+   },
+   {
+    "en": "Eles foram ao supermercado de manhã.",
+    "ko": "",
+    "highlight": "ao"
+   },
+   {
+    "en": "Nós passamos pelo centro da cidade.",
+    "ko": "",
+    "highlight": "pelo"
+   },
+   {
+    "en": "Eu morava naquele apartamento antigo.",
+    "ko": "",
+    "highlight": "naquele"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Eu moro em o Brasil.",
+    "right": "Eu moro no Brasil.",
+    "note": "Prepositions must combine with definite articles; 'em + o' always becomes 'no'."
+   },
+   {
+    "wrong": "O carro de o meu pai quebrou.",
+    "right": "O carro do meu pai quebrou.",
+    "note": "'De + o' must contract into 'do' before masculine singular nouns."
+   },
+   {
+    "wrong": "Ela foi para o trabalho por a avenida.",
+    "right": "Ela foi para o trabalho pela avenida.",
+    "note": "'Por + a' always becomes 'pela', never 'por a'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Maria está ___ escola agora.",
+    "options": [
+     "em a",
+     "na",
+     "no",
+     "da"
+    ],
+    "answer": 1,
+    "explanation": "The feminine noun 'escola' combines with 'em' to make 'na' (em + a)."
+   },
+   {
+    "question": "Este é o casaco ___ menino.",
+    "options": [
+     "do",
+     "de o",
+     "no",
+     "pelo"
+    ],
+    "answer": 0,
+    "explanation": "'De + o' contracts into 'do' to indicate possession."
+   },
+   {
+    "question": "Nós caminhamos ___ rua principal ontem à noite.",
+    "options": [
+     "por a",
+     "naquela",
+     "pela",
+     "ao"
+    ],
+    "answer": 2,
+    "explanation": "'Por + a' contracts into 'pela' to express movement through a street."
+   },
+   {
+    "question": "Eles foram ___ teatro municipal no sábado.",
+    "options": [
+     "à",
+     "em o",
+     "pelo",
+     "ao"
+    ],
+    "answer": 3,
+    "explanation": "'A + o' contracts into 'ao' with the masculine noun 'teatro'."
+   }
+  ],
+  "tip": "Unlike Spanish where 'en el' stays separate, Portuguese contractions like 'no', 'na', 'do', and 'da' are strictly mandatory in both spoken and written registers."
+ },
+ {
+  "id": "pt-a2-perfeito-vs-imperfeito",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#EF4444",
+  "emoji": "⏳",
+  "title": "Pretérito Perfeito vs. Pretérito Imperfeito",
+  "subtitle": "Distinguish single past completions from habits and ongoing backgrounds",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Use the Pretérito Perfeito for actions completed at a specific point, and the Pretérito Imperfeito for past habits, descriptions, and interrupted background actions.",
+  "structure": {
+   "headers": [
+    "Aspect",
+    "Tense",
+    "Example Verb (Falar)",
+    "Usage Context"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Completed Action",
+      "Perfeito",
+      "Eu falei",
+      "Finished event with clear bounds"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Habitual / Continuous",
+      "Imperfeito",
+      "Eu falava",
+      "Repeated habit ('used to') or background"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Interrupted Scene",
+      "Both combined",
+      "Eu dormia quando você ligou",
+      "Imperfeito sets scene; Perfeito interrupts"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Age / State",
+      "Imperfeito",
+      "Eu tinha dez anos",
+      "Descriptive backdrop in the past"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Single Finished Event",
+    "example": "Ontem eu comprei um celular novo.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Past Habitual Routine",
+    "example": "Quando eu era criança, jogava bola todo sábado.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Interrupted Action",
+    "example": "Ela lia um livro quando o telefone tocou.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ontem à noite, nós assistimos a um filme excelente.",
+    "ko": "",
+    "highlight": "assistimos"
+   },
+   {
+    "en": "Antigamente, meu avô caminhava cinco quilômetros por dia.",
+    "ko": "",
+    "highlight": "caminhava"
+   },
+   {
+    "en": "Eu estudava na biblioteca quando a luz acabou.",
+    "ko": "",
+    "highlight": "estudava"
+   },
+   {
+    "en": "Eles moravam no Rio antes de se mudar para São Paulo.",
+    "ko": "",
+    "highlight": "moravam"
+   },
+   {
+    "en": "Ela chegou em casa, tomou banho e dormiu cedo.",
+    "ko": "",
+    "highlight": "tomou"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ontem eu estudava para a prova o dia todo e passei.",
+    "right": "Ontem eu estudei para a prova o dia todo e passei.",
+    "note": "Use 'estudei' (Perfeito) because the studying is viewed as a single completed event yesterday."
+   },
+   {
+    "wrong": "Quando eu era pequeno, fui à praia todos os domingos.",
+    "right": "Quando eu era pequeno, ia à praia todos os domingos.",
+    "note": "Repeated, customary past actions require the Imperfeito ('ia'), not the Perfeito ('fui')."
+   },
+   {
+    "wrong": "Eu dormi quando o alarme tocou.",
+    "right": "Eu dormia quando o alarme tocou.",
+    "note": "The ongoing background action in progress when interrupted must take the Imperfeito ('dormia')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Ontem, eu ___ um bolo delicioso para a festa.",
+    "options": [
+     "fazia",
+     "fiz",
+     "faço",
+     "faria"
+    ],
+    "answer": 1,
+    "explanation": "'Fiz' (Perfeito) marks a specific, completed event completed yesterday."
+   },
+   {
+    "question": "Quando éramos jovens, nós sempre ___ os fins de semana no sítio.",
+    "options": [
+     "passávamos",
+     "passamos",
+     "vamos passar",
+     "passaríamos"
+    ],
+    "answer": 0,
+    "explanation": "The word 'sempre' (always) signaling a routine past habit triggers the Imperfeito ('passávamos')."
+   },
+   {
+    "question": "Ele ___ banho quando alguém bateu na porta.",
+    "options": [
+     "tomou",
+     "vai tomar",
+     "tomaria",
+     "tomava"
+    ],
+    "answer": 3,
+    "explanation": "Taking a shower is the ongoing background action ('tomava'), interrupted by the knock."
+   },
+   {
+    "question": "No ano passado, nós ___ para Salvador nas férias.",
+    "options": [
+     "viajávamos",
+     "viajamos",
+     "viajam",
+     "viajando"
+    ],
+    "answer": 1,
+    "explanation": "A defined vacation trip in the past is treated as a completed event: 'viajamos' (Perfeito)."
+   }
+  ],
+  "tip": "Think of the Imperfeito as setting the movie scene ('the sun was shining, people were walking') and the Perfeito as the sudden plot trigger ('a car crashed')."
+ },
+ {
+  "id": "pt-a2-gerund-present-continuous",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "Present Continuous with the Gerúndio",
+  "subtitle": "Express ongoing actions right now with 'estar + gerúndio'",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "In Brazilian Portuguese, express actions happening right now using the present tense of 'estar' followed directly by the gerund (-ando, -endo, -indo).",
+  "structure": {
+   "headers": [
+    "Infinitive Ending",
+    "Gerund Suffix",
+    "Example Infinitive",
+    "Gerund Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-ar",
+      "-ando",
+      "falar",
+      "falando"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-er",
+      "-endo",
+      "comer",
+      "comendo"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ir",
+      "-indo",
+      "abrir",
+      "abrindo"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "irregular: pôr",
+      "-ondo",
+      "pôr",
+      "pondo"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Action in Progress Right Now",
+    "example": "Eu estou almoçando com a minha família agora.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Temporary Present Trend",
+    "example": "Ele está morando com amigos este mês.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Continuous Background State",
+    "example": "O trânsito está piorando cada vez mais.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Nós estamos assistindo ao jogo na televisão.",
+    "ko": "",
+    "highlight": "estamos assistindo"
+   },
+   {
+    "en": "O que você está fazendo no computador agora?",
+    "ko": "",
+    "highlight": "está fazendo"
+   },
+   {
+    "en": "Ela está lendo um romance muito interessante.",
+    "ko": "",
+    "highlight": "está lendo"
+   },
+   {
+    "en": "Eles estão construindo um prédio novo na esquina.",
+    "ko": "",
+    "highlight": "estão construindo"
+   },
+   {
+    "en": "Eu estou cozinhando o jantar para os convidados.",
+    "ko": "",
+    "highlight": "estou cozinhando"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Eu estou a falar com o meu chefe.",
+    "right": "Eu estou falando com o meu chefe.",
+    "note": "'Estar a + infinitive' is European Portuguese. Brazilian Portuguese strictly uses the gerund ('falando')."
+   },
+   {
+    "wrong": "Eles são comendo pizza agora.",
+    "right": "Eles estão comendo pizza agora.",
+    "note": "Always pair progressive actions with the auxiliary verb 'estar', never 'ser'."
+   },
+   {
+    "wrong": "Nós estamos dormendo tarde hoje.",
+    "right": "Nós estamos dormindo tarde hoje.",
+    "note": "-ir verbs take the '-indo' ending (dormir -> dormindo), not '-endo'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "A professora ___ a lição no quadro agora.",
+    "options": [
+     "está explicando",
+     "é explicando",
+     "está a explicar",
+     "vai explicada"
+    ],
+    "answer": 0,
+    "explanation": "Brazilian Portuguese uses 'estar' + gerund (-ando): 'está explicando'."
+   },
+   {
+    "question": "Nós ___ o almoço agora; ligamos depois.",
+    "options": [
+     "estamos preparar",
+     "estamos preparando",
+     "somos preparando",
+     "ficamos preparando"
+    ],
+    "answer": 1,
+    "explanation": "'Estamos preparando' matches 'nós' with 'estar' plus the gerund of 'preparar'."
+   },
+   {
+    "question": "O que eles ___ na sala?",
+    "options": [
+     "estão a discutir",
+     "estão discutindo",
+     "são discutindo",
+     "estão discutem"
+    ],
+    "answer": 1,
+    "explanation": "'Discutir' (-ir verb) forms its gerund with '-indo', giving 'estão discutindo'."
+   },
+   {
+    "question": "Silêncio, por favor! O bebê ___ no quarto.",
+    "options": [
+     "é dormindo",
+     "está a dormir",
+     "está dormendo",
+     "está dormindo"
+    ],
+    "answer": 3,
+    "explanation": "'Dormir' forms the gerund 'dormindo' preceded by the third-person auxiliary 'está'."
+   }
+  ],
+  "tip": "In everyday spoken Brazilian Portuguese, 'estou' is almost always shortened to 'tô', 'está' to 'tá', and 'estamos' to 'tamo' (e.g., 'Tô comendo')."
+ },
+ {
+  "id": "pt-a2-periphrastic-future",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#EF4444",
+  "emoji": "🚀",
+  "title": "Periphrastic Future (Ir + Infinitive)",
+  "subtitle": "Talk about tomorrow with the everyday spoken future structure",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "To express nearly all future actions in spoken Brazilian Portuguese, conjugate the auxiliary verb 'ir' in the present tense and add the main verb in the infinitive.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Ir (Present)",
+    "Main Verb (Infinitive)",
+    "Full Phrase Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Eu",
+      "vou",
+      "viajar",
+      "I am going to travel"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Você / Ele / Ela",
+      "vai",
+      "estudar",
+      "You / He / She will study"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Nós",
+      "vamos",
+      "sair",
+      "We are going to go out"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Vocês / Eles / Elas",
+      "vão",
+      "comprar",
+      "They / You all will buy"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Immediate / Definite Plan",
+    "example": "Eu vou ligar para o médico amanhã cedo.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Prediction",
+    "example": "O tempo vai mudar no fim de semana.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Shared Intentions",
+    "example": "Nós vamos viajar para a praia na sexta.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Amanhã nós vamos almoçar juntos naquele restaurante.",
+    "ko": "",
+    "highlight": "vamos almoçar"
+   },
+   {
+    "en": "Ela vai começar um curso novo na próxima semana.",
+    "ko": "",
+    "highlight": "vai começar"
+   },
+   {
+    "en": "Eu vou falar com ela assim que ela chegar.",
+    "ko": "",
+    "highlight": "vou falar"
+   },
+   {
+    "en": "Eles não vão trabalhar no feriado nacional.",
+    "ko": "",
+    "highlight": "vão trabalhar"
+   },
+   {
+    "en": "Você vai comprar os ingressos para o show hoje?",
+    "ko": "",
+    "highlight": "vai comprar"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Amanhã eu comerei pizza com meus amigos.",
+    "right": "Amanhã eu vou comer pizza com meus amigos.",
+    "note": "While 'comerei' (simple future) is grammatically valid, native Brazilians practically never use it in conversation; 'vou comer' is the natural choice."
+   },
+   {
+    "wrong": "Nós vamos vamos à festa amanhã.",
+    "right": "Nós vamos ir à festa amanhã / Nós vamos à festa amanhã.",
+    "note": "Do not repeat the conjugated auxiliary; use 'vamos ir' or simply 'vamos à festa'."
+   },
+   {
+    "wrong": "Eles vão viajando no próximo mês.",
+    "right": "Eles vão viajar no próximo mês.",
+    "note": "The periphrastic future requires an infinitive ('viajar'), not a gerund ('viajando')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Amanhã, nós ___ uma reunião importante com a diretoria.",
+    "options": [
+     "vai ter",
+     "vão ter",
+     "vamos ter",
+     "iremos tendo"
+    ],
+    "answer": 2,
+    "explanation": "'Nós' requires the first-person plural form 'vamos' followed by the infinitive 'ter'."
+   },
+   {
+    "question": "Você ___ para o trabalho de metrô ou de ônibus amanhã?",
+    "options": [
+     "vou ir",
+     "vai ir",
+     "vão ir",
+     "vamos ir"
+    ],
+    "answer": 1,
+    "explanation": "'Você' conjugates with 'vai' plus the infinitive 'ir'."
+   },
+   {
+    "question": "Os meninos ___ futebol no parque depois da escola.",
+    "options": [
+     "vão jogar",
+     "vai jogar",
+     "vamos jogar",
+     "vou jogar"
+    ],
+    "answer": 0,
+    "explanation": "The plural subject 'Os meninos' takes 'vão' plus the infinitive 'jogar'."
+   },
+   {
+    "question": "Eu ___ uma mensagem para ele logo após a aula.",
+    "options": [
+     "vai mandar",
+     "vamos mandar",
+     "vão mandar",
+     "vou mandar"
+    ],
+    "answer": 3,
+    "explanation": "'Eu' conjugates with 'vou' plus the infinitive 'mandar'."
+   }
+  ],
+  "tip": "Save the synthetic future ('falarei', 'comerei') for formal legal contracts or literary prose. In virtually every casual and professional Brazilian spoken scenario, 'ir + infinitive' reigns supreme."
+ },
+ {
+  "id": "pt-a2-por-vs-para",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎯",
+  "title": "Por vs. Para",
+  "subtitle": "Master the difference between cause/route and destination/purpose",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use 'por' for causes, durations, means, and routes, and use 'para' (often shortened to 'pra') for destinations, recipients, goals, and deadlines.",
+  "structure": {
+   "headers": [
+    "Preposition",
+    "Primary Concept",
+    "Common Clues",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "por",
+      "Cause / Motivation",
+      "because of, thanks to",
+      "Obrigado por vir"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "por",
+      "Passage / Exchange",
+      "through, per, in exchange",
+      "Passei por aqui"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "para",
+      "Destination / Recipient",
+      "headed toward, for someone",
+      "Viajo para o Rio"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "para",
+      "Purpose / In order to",
+      "purpose + infinitive",
+      "Estudo para aprender"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Destination & Target (para)",
+    "example": "Este presente é para a minha mãe.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Reason & Cause (por)",
+    "example": "Ele não veio trabalhar por motivo de doença.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Purpose & Goal (para)",
+    "example": "Eu acordo cedo todos os dias para treinar.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Eu comprei esta garrafa de vinho para o jantar.",
+    "ko": "",
+    "highlight": "para"
+   },
+   {
+    "en": "Eles caminharam por duas horas pela orla.",
+    "ko": "",
+    "highlight": "por"
+   },
+   {
+    "en": "Nós precisamos enviar o relatório para o cliente hoje.",
+    "ko": "",
+    "highlight": "para"
+   },
+   {
+    "en": "Ela me agradeceu pelo apoio durante o projeto.",
+    "ko": "",
+    "highlight": "pelo"
+   },
+   {
+    "en": "Ele viajou para Salvador no Carnaval.",
+    "ko": "",
+    "highlight": "para"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Eu estudo português por viajar ao Brasil.",
+    "right": "Eu estudo português para viajar ao Brasil.",
+    "note": "To express an intended goal or 'in order to', always use 'para + infinitive', not 'por'."
+   },
+   {
+    "wrong": "Paguei cinquenta reais para esta camisa.",
+    "right": "Paguei cinquenta reais por esta camisa.",
+    "note": "Financial exchanges, trades, and prices require 'por' (or contractions like 'pela/pelo')."
+   },
+   {
+    "wrong": "Este café é por você.",
+    "right": "Este café é para você.",
+    "note": "The recipient of a gift, service, or object requires 'para', not 'por'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Eu preciso terminar esta lição ___ amanhã cedo.",
+    "options": [
+     "por",
+     "para",
+     "pelo",
+     "pela"
+    ],
+    "answer": 1,
+    "explanation": "Deadlines take 'para' (e.g., 'para amanhã')."
+   },
+   {
+    "question": "Muito obrigado ___ sua ajuda com as malas!",
+    "options": [
+     "para",
+     "pela",
+     "pra",
+     "ao"
+    ],
+    "answer": 1,
+    "explanation": "'Obrigado' takes 'por' (here contracted as 'pela' before 'sua ajuda') to show gratitude for a cause."
+   },
+   {
+    "question": "Eles viajaram ___ avião até Porto Alegre.",
+    "options": [
+     "para",
+     "pra",
+     "de",
+     "por"
+    ],
+    "answer": 3,
+    "explanation": "Means of transit or route often pairs with 'por' or 'de'; among these options for passage, 'por' represents routing/means."
+   },
+   {
+    "question": "Ela corre todos os dias ___ manter a boa forma.",
+    "options": [
+     "por",
+     "pelo",
+     "para",
+     "na"
+    ],
+    "answer": 2,
+    "explanation": "'In order to' express purpose before an infinitive verb ('manter') requires 'para'."
+   }
+  ],
+  "tip": "In everyday conversational Brazilian Portuguese, 'para' and its contractions ('para o', 'para a') almost universally compress into 'pra', 'pro', and 'pras'."
+ },
+ {
+  "id": "pt-a2-clitic-pronoun-placement-br",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔄",
+  "title": "Brazilian Clitic Pronoun Placement (Próclise)",
+  "subtitle": "Natural pronoun placement before the verb in Brazilian Portuguese",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "In everyday Brazilian Portuguese, object pronouns almost always precede the verb, even at the beginning of a sentence.",
+  "structure": {
+   "headers": [
+    "Structure",
+    "Portuguese (BR) Example",
+    "English Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Sentence Starter",
+      "Me avisa quando chegar.",
+      "Pronoun precedes the verb directly in informal speech."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Subject + Pronoun + Verb",
+      "Ela te ligou ontem.",
+      "Standard proclitic word order."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative + Pronoun + Verb",
+      "Não me diga isso!",
+      "Negation strictly pulls pronoun before the verb."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Preposition + Pronoun + Verb",
+      "Para te ajudar, vim cedo.",
+      "Infinitive structures heavily favor próclise."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Everyday Commands & Openers",
+    "example": "Me dá um copo de água, por favor.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "After Negative Words",
+    "example": "Ninguém me avisou da reunião de hoje.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "With Relative Pronouns",
+    "example": "Foi o amigo que me indicou este livro.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ela me ligou bem cedo para dar a notícia.",
+    "ko": "",
+    "highlight": "me ligou"
+   },
+   {
+    "en": "Não se preocupe com esses detalhes agora.",
+    "ko": "",
+    "highlight": "se preocupe"
+   },
+   {
+    "en": "Eles nos convidaram para o almoço de domingo.",
+    "ko": "",
+    "highlight": "nos convidaram"
+   },
+   {
+    "en": "Me passa o sal que está perto de você.",
+    "ko": "",
+    "highlight": "Me passa"
+   },
+   {
+    "en": "Quem te contou essa história maluca?",
+    "ko": "",
+    "highlight": "te contou"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Dê-me o livro, por favor.",
+    "right": "Me dá o livro, por favor.",
+    "note": "While enclisis ('dê-me') is formally correct in Portugal, spoken Brazilian Portuguese favors proclisis ('me dá') in everyday interaction."
+   },
+   {
+    "wrong": "Não ligou-me ontem à noite.",
+    "right": "Não me ligou ontem à noite.",
+    "note": "Negative words like 'não' strictly require the pronoun before the verb (próclise)."
+   },
+   {
+    "wrong": "Eu vi ele ontem na praia.",
+    "right": "Eu o vi ontem na praia.",
+    "note": "In careful speech or writing, use clitic pronouns ('o/a') rather than subject pronouns ('ele/ela') as direct objects."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Excuse me, can you tell me the time? (Informal Brazilian starter)",
+    "options": [
+     "Me diz que horas são?",
+     "Diz-me que horas são?",
+     "Diga a mim as horas?",
+     "Mim fala que horas são?"
+    ],
+    "answer": 0,
+    "explanation": "Starting colloquial requests with 'Me + verb' is the most natural Brazilian pattern."
+   },
+   {
+    "question": "He didn't tell me anything about the plan.",
+    "options": [
+     "Ele falou nada me.",
+     "Ele não falou-me nada.",
+     "Ele não me falou nada.",
+     "Ele nada falou para me."
+    ],
+    "answer": 2,
+    "explanation": "Negative adverbs like 'não' strongly attract object pronouns to the proclitic position right before the verb."
+   },
+   {
+    "question": "They saw us at the shopping mall.",
+    "options": [
+     "Eles viram nós no shopping.",
+     "Eles nos viram no shopping.",
+     "Eles viram-nos no shopping.",
+     "Eles viram a nós no shopping."
+    ],
+    "answer": 1,
+    "explanation": "'Nos viram' is natural standard Brazilian Portuguese with the pronoun placed before the verb."
+   },
+   {
+    "question": "Who told you that secret?",
+    "options": [
+     "Quem você falou isso?",
+     "Quem disse-te isso?",
+     "Quem falou para si isso?",
+     "Quem te disse isso?"
+    ],
+    "answer": 3,
+    "explanation": "Question words like 'quem' attract clitic pronouns before the conjugated verb ('te disse')."
+   }
+  ],
+  "tip": "Do not worry about European enclisis rules (like 'ajude-me') when speaking in Brazil; placing pronouns right before the verb ('me ajuda') sounds immediately authentic and friendly."
+ },
+ {
+  "id": "pt-a2-saber-vs-conhecer",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🧠",
+  "title": "Saber vs. Conhecer",
+  "subtitle": "Choosing between factual knowledge and personal familiarity",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use 'saber' for facts, information, and learned skills with an infinitive, but use 'conhecer' for people, places, and general acquaintance.",
+  "structure": {
+   "headers": [
+    "Verb",
+    "Typical Usage",
+    "Portuguese (BR) Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Saber + Info/Clause",
+      "Data, facts, or embedded clauses",
+      "Eu sei onde fica o banco."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Saber + Infinitive",
+      "Learned skills or abilities (know how to)",
+      "Você sabe dirigir bem?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Conhecer + Person",
+      "Familiarity with someone",
+      "Eu conheço o seu irmão."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Conhecer + Place/Thing",
+      "Having visited or experienced something",
+      "Eles conhecem o Rio de Janeiro."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Learned Abilities",
+    "example": "Meu pai sabe falar três línguas fluentemente.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Familiarity with People",
+    "example": "Você conhece a professora nova de português?",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Factual Information",
+    "example": "Nós não sabemos a resposta dessa pergunta.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Você sabe onde fica a estação de metrô mais próxima?",
+    "ko": "",
+    "highlight": "sabe onde fica"
+   },
+   {
+    "en": "Eu não conheço aquele rapaz que acabou de entrar.",
+    "ko": "",
+    "highlight": "conheço aquele rapaz"
+   },
+   {
+    "en": "Eles sabem cozinhar uma feijoada maravilhosa.",
+    "ko": "",
+    "highlight": "sabem cozinhar"
+   },
+   {
+    "en": "Nós já conhecemos muitas praias do Nordeste.",
+    "ko": "",
+    "highlight": "conhecemos muitas praias"
+   },
+   {
+    "en": "Ela sabe a matéria toda para a prova final.",
+    "ko": "",
+    "highlight": "sabe a matéria toda"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Eu não sei Maria.",
+    "right": "Eu não conheço a Maria.",
+    "note": "'Conhecer' is required when speaking about knowing or being acquainted with people."
+   },
+   {
+    "wrong": "Você conhece nadar?",
+    "right": "Você sabe nadar?",
+    "note": "Use 'saber' + infinitive when describing learned physical skills or abilities."
+   },
+   {
+    "wrong": "Eu conheço que horas o voo sai.",
+    "right": "Eu sei que horas o voo sai.",
+    "note": "Information points, times, and embedded clauses take 'saber'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Do you know how to drive an automatic car?",
+    "options": [
+     "Você conhece dirigir carro automático?",
+     "Você sabe dirigir carro automático?",
+     "Você pode conhecer dirigir carro?",
+     "Você tem que saber para dirigir?"
+    ],
+    "answer": 1,
+    "explanation": "'Saber' followed by an infinitive expresses knowing how to perform a skill."
+   },
+   {
+    "question": "I don't know this city very well yet.",
+    "options": [
+     "Ainda não sei muito bem esta cidade.",
+     "Ainda não posso saber esta cidade.",
+     "Ainda não conheço muito bem esta cidade.",
+     "Ainda não entendo esta cidade."
+    ],
+    "answer": 2,
+    "explanation": "Being familiar with or having visited a city/place requires 'conhecer'."
+   },
+   {
+    "question": "Do you know what time the supermarket closes?",
+    "options": [
+     "Você sabe a que horas o mercado fecha?",
+     "Você conhece o horário fechado?",
+     "Você conhece que horas fecha?",
+     "Você tem saber que horas fecha?"
+    ],
+    "answer": 0,
+    "explanation": "Factual knowledge regarding schedules and times uses 'saber'."
+   },
+   {
+    "question": "Lucas met and got to know Mariana at the conference.",
+    "options": [
+     "Lucas soube a Mariana na conferência.",
+     "Lucas saboreou a Mariana na conferência.",
+     "Lucas entendeu Mariana na conferência.",
+     "Lucas conheceu a Mariana na conferência."
+    ],
+    "answer": 3,
+    "explanation": "'Conhecer' means to meet or get acquainted with a person."
+   }
+  ],
+  "tip": "If you can replace 'know' with 'have been to' or 'am familiar with', pick 'conhecer'; if you can replace it with 'know how to' or 'know that', pick 'saber'."
+ },
+ {
+  "id": "pt-b1-presente-do-subjuntivo",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#059669",
+  "emoji": "🌱",
+  "title": "Present Subjunctive (Presente do Subjuntivo)",
+  "subtitle": "Wishes, doubts, and emotional triggers in dependent clauses",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Form the present subjunctive by taking the 'eu' form of the present indicative and swapping endings (-ar becomes -e, -er/-ir become -a) after triggers of doubt, emotion, or desire.",
+  "structure": {
+   "headers": [
+    "Infinitive Class",
+    "Formula",
+    "Portuguese (BR) Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-AR verbs (falar)",
+      "Stem + -e, -es, -e, -emos, -em",
+      "Espero que ele fale a verdade."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ER verbs (comer)",
+      "Stem + -a, -as, -a, -amos, -am",
+      "Quero que você coma mais legumes."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-IR verbs (partir)",
+      "Stem + -a, -as, -a, -amos, -am",
+      "Tomara que eles partam hoje."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Irregular (ser, ir)",
+      "seja / vá, etc.",
+      "Duvido que seja verdade."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Desires & Wishes",
+    "example": "Quero que você tenha um ótimo fim de semana.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Doubts & Uncertainty",
+    "example": "Duvido que eles venham para o jantar.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Impersonal Opinions",
+    "example": "É importante que nós estudemos com calma.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Espero que tudo dê certo na sua nova entrevista.",
+    "ko": "",
+    "highlight": "dê certo"
+   },
+   {
+    "en": "Talvez nós façamos uma viagem no feriado prolongado.",
+    "ko": "",
+    "highlight": "façamos"
+   },
+   {
+    "en": "É necessário que você compareça à reunião amanhã.",
+    "ko": "",
+    "highlight": "compareça"
+   },
+   {
+    "en": "Tomara que não chova durante a nossa festa no quintal.",
+    "ko": "",
+    "highlight": "chova"
+   },
+   {
+    "en": "Minha mãe quer que eu coma mais salada e frutas.",
+    "ko": "",
+    "highlight": "eu coma"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Espero que você vem amanhã.",
+    "right": "Espero que você venha amanhã.",
+    "note": "'Esperar que' triggers the subjunctive; 'vem' is the indicative, whereas 'venha' is the present subjunctive."
+   },
+   {
+    "wrong": "É bom que nós falamos agora.",
+    "right": "É bom que nós falemos agora.",
+    "note": "-AR verbs swap the thematic vowel to '-e' in the subjunctive ('falemos')."
+   },
+   {
+    "wrong": "Tomara que ele é feliz.",
+    "right": "Tomara que ele seja feliz.",
+    "note": "The irregular verb 'ser' becomes 'seja' in the present subjunctive, especially after 'tomara que'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I hope you have a great day. (Espero que você ___ um ótimo dia.)",
+    "options": [
+     "tem",
+     "tinha",
+     "tenha",
+     "terá"
+    ],
+    "answer": 2,
+    "explanation": "'Ter' in the present subjunctive for 'você' is 'tenha'."
+   },
+   {
+    "question": "It is important that we arrive early. (É importante que nós ___ cedo.)",
+    "options": [
+     "cheguemos",
+     "chegamos",
+     "chegávamos",
+     "chegar"
+    ],
+    "answer": 0,
+    "explanation": "-AR verbs switch to -e endings: 'nós cheguemos' (spelled with 'gu' to preserve the hard g)."
+   },
+   {
+    "question": "I doubt that she knows the real truth. (Duvido que ela ___ a verdade.)",
+    "options": [
+     "sabe",
+     "saiba",
+     "conhece",
+     "soube"
+    ],
+    "answer": 1,
+    "explanation": "'Duvidar que' triggers the subjunctive; the irregular subjunctive form of 'saber' is 'saiba'."
+   },
+   {
+    "question": "Maybe they can help us. (Talvez eles ___ nos ajudar.)",
+    "options": [
+     "podem",
+     "puderam",
+     "podiam",
+     "possam"
+    ],
+    "answer": 3,
+    "explanation": "'Talvez' generally requires the subjunctive; 'poder' becomes 'possam' for 'eles'."
+   }
+  ],
+  "tip": "Remember the vowel swap trick: regular -AR verbs switch to 'e' ('fale'), while regular -ER/-IR verbs switch to 'a' ('beba', 'abra')."
+ },
+ {
+  "id": "pt-b1-imperfeito-do-subjuntivo",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#D97706",
+  "emoji": "💭",
+  "title": "Past Subjunctive (Pretérito Imperfeito do Subjuntivo)",
+  "subtitle": "Hypothetical situations and unreal past conditions with -sse",
+  "color": "#B45309",
+  "bg": "#FFFBEB",
+  "keyPoint": "Derive the imperfect subjunctive by dropping '-ram' from the 3rd person plural preterite and adding '-sse', '-sses', '-sse', '-ssemos', '-ssem'.",
+  "structure": {
+   "headers": [
+    "Preterite 'Eles'",
+    "Stem",
+    "Portuguese (BR) Imperfect Subjunctive"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "falaram",
+      "fala-",
+      "Se eu falasse com ela, você me ouviria."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "tiveram",
+      "tiver-",
+      "Se nós tivéssemos tempo, viajaríamos."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "foram",
+      "fo-",
+      "Se ele fosse médico, ajudaria agora."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "puderam",
+      "puder-",
+      "Se eles pudessem vir, ficaria feliz."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Hypothetical 'If' Clauses",
+    "example": "Se eu ganhasse na loteria, compraria uma fazenda.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Polite Past Wishes",
+    "example": "Eu queria que você ficasse mais um pouco.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Unreal Demands or Doubts",
+    "example": "Duvidava que ele fizesse todo o trabalho sozinho.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Se eu tivesse dinheiro suficiente, compraria aquele apartamento.",
+    "ko": "",
+    "highlight": "tivesse dinheiro"
+   },
+   {
+    "en": "Eles agiriam diferente se soubessem de toda a verdade.",
+    "ko": "",
+    "highlight": "soubessem de toda"
+   },
+   {
+    "en": "O chefe pediu que nós terminássemos o relatório ainda hoje.",
+    "ko": "",
+    "highlight": "terminássemos"
+   },
+   {
+    "en": "Se você pudesse escolher qualquer lugar, para onde iria?",
+    "ko": "",
+    "highlight": "pudesse escolher"
+   },
+   {
+    "en": "Ela falava como se fosse a dona da empresa inteira.",
+    "ko": "",
+    "highlight": "fosse a dona"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Se eu tenho tempo, eu iria com você.",
+    "right": "Se eu tivesse tempo, eu iria com você.",
+    "note": "Pair conditional outcomes ('iria') with the past subjunctive ('tivesse'), not the present indicative."
+   },
+   {
+    "wrong": "Se nós falamos com ele ontem, resolvia.",
+    "right": "Se nós falássemos com ele ontem, resolveria.",
+    "note": "Hypothetical conditions need the '-sse' ending with an acute/circumflex accent on the preceding vowel for 'nós' ('falássemos')."
+   },
+   {
+    "wrong": "Queria que você está aqui.",
+    "right": "Queria que você estivesse aqui.",
+    "note": "Past desire ('queria que') demands the imperfect subjunctive ('estivesse')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "If I had more time, I would study another language. (Se eu ___ mais tempo, estudaria outro idioma.)",
+    "options": [
+     "tivesse",
+     "tenho",
+     "teria",
+     "tiver"
+    ],
+    "answer": 0,
+    "explanation": "'Tivesse' is the imperfect subjunctive of 'ter' required by the counterfactual 'se' clause."
+   },
+   {
+    "question": "If we were rich, we would travel the whole world. (Se nós ___ ricos, viajaríamos pelo mundo.)",
+    "options": [
+     "somos",
+     "éramos",
+     "fôssemos",
+     "seríamos"
+    ],
+    "answer": 2,
+    "explanation": "The imperfect subjunctive of 'ser' for 'nós' is 'fôssemos' (with a circumflex accent)."
+   },
+   {
+    "question": "She acted as if she knew everything. (Ela agia como se ___ tudo.)",
+    "options": [
+     "sabe",
+     "saberia",
+     "soube",
+     "soubesse"
+    ],
+    "answer": 3,
+    "explanation": "'Como se' triggers the imperfect subjunctive: 'soubesse' (from irregular stem 'souberam')."
+   },
+   {
+    "question": "I would like you to stay until dinner. (Gostaria que você ___ até o jantar.)",
+    "options": [
+     "fica",
+     "ficasse",
+     "ficará",
+     "ficou"
+    ],
+    "answer": 1,
+    "explanation": "Conditional triggers like 'gostaria que' require the imperfect subjunctive ('ficasse')."
+   }
+  ],
+  "tip": "The '-sse' sound is unique to the past subjunctive in Portuguese; whenever you encounter 'se' followed by a dream or imaginary condition, look for that double 's'."
+ },
+ {
+  "id": "pt-b1-futuro-do-subjuntivo",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#059669",
+  "emoji": "🔮",
+  "title": "Future Subjunctive (Futuro do Subjuntivo)",
+  "subtitle": "Potential future events triggered by 'quando', 'se', and 'assim que'",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "The future subjunctive expresses eventual actions in future time clauses, derived by dropping '-am' from the preterite 3rd person plural.",
+  "structure": {
+   "headers": [
+    "Preterite 3rd Plural",
+    "Stem",
+    "Portuguese (BR) Future Subjunctive"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "falaram",
+      "falar-",
+      "Quando eu falar com ela, te aviso."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "fizeram",
+      "fizer-",
+      "Se você fizer o bolo, eu compro o café."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "foram",
+      "for-",
+      "Assim que eles forem embora, limpamos tudo."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "tiveram",
+      "tiver-",
+      "Quando nós tivermos tempo, iremos ao teatro."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Time Triggers (Quando / Assim que)",
+    "example": "Assim que você chegar em casa, me manda mensagem.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Real Future Conditions (Se)",
+    "example": "Se você quiser sair mais tarde, me avise.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Undetermined Persons/Things",
+    "example": "Quem chegar primeiro ganha o melhor lugar.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Quando você chegar ao aeroporto, me mande uma mensagem.",
+    "ko": "",
+    "highlight": "você chegar"
+   },
+   {
+    "en": "Se nós tivermos tempo livre amanhã, vamos almoçar juntos.",
+    "ko": "",
+    "highlight": "tivermos tempo"
+   },
+   {
+    "en": "Assim que ele terminar a faculdade, vai procurar um emprego.",
+    "ko": "",
+    "highlight": "ele terminar"
+   },
+   {
+    "en": "Faça o que você achar melhor para a sua carreira.",
+    "ko": "",
+    "highlight": "você achar"
+   },
+   {
+    "en": "Se eles forem para a festa, nós também iremos.",
+    "ko": "",
+    "highlight": "eles forem"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Quando você vai chegar, me avisa.",
+    "right": "Quando você chegar, me avisa.",
+    "note": "'Quando' referring to a future event requires the future subjunctive ('chegar'), not the indicative present/future."
+   },
+   {
+    "wrong": "Se eu fazer isso amanhã, dará certo.",
+    "right": "Se eu fizer isso amanhã, dará certo.",
+    "note": "Irregular verbs follow their preterite stem ('fizeram' -> 'fizer'), not the regular infinitive ('fazer')."
+   },
+   {
+    "wrong": "Assim que nós ir lá, ligamos.",
+    "right": "Assim que nós formos lá, ligamos.",
+    "note": "'Ir' conjugates irregularly in the future subjunctive: for, fores, for, formos, forem."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "When you arrive home, give me a call. (Quando você ___ em casa, me liga.)",
+    "options": [
+     "chegou",
+     "chega",
+     "chegar",
+     "chegasse"
+    ],
+    "answer": 2,
+    "explanation": "The future subjunctive of regular -ar verbs like 'chegar' matches the infinitive for 'você': 'chegar'."
+   },
+   {
+    "question": "If you want to come with us, there is plenty of room. (Se você ___ vir com a gente, tem espaço.)",
+    "options": [
+     "quiser",
+     "quer",
+     "quisesse",
+     "querer"
+    ],
+    "answer": 0,
+    "explanation": "The irregular stem from 'quiseram' yields 'quiser' in the future subjunctive."
+   },
+   {
+    "question": "As soon as we have the final results, we will call you. (Assim que nós ___ os resultados, ligaremos.)",
+    "options": [
+     "temos",
+     "tínhamos",
+     "tivermos",
+     "teremos"
+    ],
+    "answer": 2,
+    "explanation": "'Tivermos' is the 1st person plural (nós) future subjunctive form of 'ter'."
+   },
+   {
+    "question": "Whoever comes to the event will receive a free badge. (Quem ___ ao evento receberá um crachá.)",
+    "options": [
+     "vem",
+     "vir",
+     "vier",
+     "venha"
+    ],
+    "answer": 2,
+    "explanation": "'Vir' forms the future subjunctive from 'vieram' -> 'vier' (not to be confused with 'ver' -> 'vir')."
+   }
+  ],
+  "tip": "For regular verbs, the future subjunctive looks identical to the personal infinitive. But watch out for irregulars: always derive them from the 3rd person preterite (ex: 'fizeram' -> 'se eu fizer')."
+ },
+ {
+  "id": "pt-b1-conditional-sentences-si-clauses",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#0ea5e9",
+  "emoji": "💭",
+  "title": "Hypothetical Conditionals (Se + Imperfeito do Subjuntivo)",
+  "subtitle": "Talking about imaginary situations and hypothetical outcomes in Portuguese",
+  "color": "#0284c7",
+  "bg": "#f0f9ff",
+  "keyPoint": "Use 'se' followed by the imperfect subjunctive to express the condition, and pair it with the conditional or colloquial imperfect indicative for the result.",
+  "structure": {
+   "headers": [
+    "Condition Clause (Se)",
+    "Consequence (Formal / Spoken)",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Se eu tivesse tempo...",
+      "eu viajaria / viajava mais.",
+      "If I had time, I would travel more."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Se você soubesse...",
+      "não faria isso.",
+      "If you knew, you wouldn't do that."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Se nós pudéssemos...",
+      "compraríamos a casa.",
+      "If we could, we would buy the house."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Se eles fossem lá...",
+      "veriam a verdade.",
+      "If they went there, they would see the truth."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0ea5e9",
+    "label": "Imaginary Present",
+    "example": "Se eu fosse você, aceitaria a proposta.",
+    "translation": ""
+   },
+   {
+    "color": "#0284c7",
+    "label": "Unlikely Future",
+    "example": "Se nós ganhássemos na loteria, pararíamos de trabalhar.",
+    "translation": ""
+   },
+   {
+    "color": "#0369a1",
+    "label": "Colloquial Spoken Form",
+    "example": "Se você me ajudasse, eu terminava mais rápido.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Se eu tivesse dinheiro, compraria aquele carro.",
+    "ko": "",
+    "highlight": "tivesse dinheiro, compraria"
+   },
+   {
+    "en": "Se você me escutasse, evitaria muitos problemas.",
+    "ko": "",
+    "highlight": "me escutasse, evitaria"
+   },
+   {
+    "en": "Se nós morássemos no Rio, iríamos à praia todo dia.",
+    "ko": "",
+    "highlight": "morássemos no Rio, iríamos"
+   },
+   {
+    "en": "O que você faria se você ganhasse esse prêmio?",
+    "ko": "",
+    "highlight": "faria se você ganhasse"
+   },
+   {
+    "en": "Se eles estudassem mais, passavam no vestibular.",
+    "ko": "",
+    "highlight": "estudassem mais, passavam"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Se eu tenho tempo amanhã, eu viajaria.",
+    "right": "Se eu tivesse tempo amanhã, eu viajaria.",
+    "note": "A hypothetical result with the conditional requires the imperfect subjunctive after 'se', not the present indicative."
+   },
+   {
+    "wrong": "Se você saberia disso, não vinha.",
+    "right": "Se você soubesse disso, não viria.",
+    "note": "Never place the conditional directly after 'se' in a conditional clause."
+   },
+   {
+    "wrong": "Se eu pudesse, eu compro o ingresso.",
+    "right": "Se eu pudesse, eu compraria o ingresso.",
+    "note": "Hypothetical 'se pudesse' must balance with conditional 'compraria' or colloquial imperfect 'comprava', not present 'compro'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the hypothetical clause: 'Se nós ___ mais dinheiro, compraríamos o apartamento.'",
+    "options": [
+     "temos",
+     "tínhamos",
+     "tivéssemos",
+     "teremos"
+    ],
+    "answer": 2,
+    "explanation": "The hypothetical 'se' clause requires the imperfect subjunctive 'tivéssemos'."
+   },
+   {
+    "question": "Complete the result clause: 'Se você estudasse todos os dias, ___ a prova com facilidade.'",
+    "options": [
+     "passaria",
+     "passava-se",
+     "passa",
+     "passasse"
+    ],
+    "answer": 0,
+    "explanation": "The standard hypothetical result requires the conditional tense 'passaria'."
+   },
+   {
+    "question": "Which verb correctly completes: 'Se eu ___ o Pedro, contava tudo para ele.'",
+    "options": [
+     "vejo",
+     "visse",
+     "veria",
+     "vi"
+    ],
+    "answer": 1,
+    "explanation": "'Visse' is the imperfect subjunctive of 'ver', matching the hypothetical structure."
+   },
+   {
+    "question": "Identify the natural colloquial alternative: 'Se ela quisesse, ela ___ agora mesmo.'",
+    "options": [
+     "irá",
+     "vai",
+     "fora",
+     "ia"
+    ],
+    "answer": 3,
+    "explanation": "In spoken Brazilian Portuguese, the imperfect indicative 'ia' frequently replaces the conditional 'iria'."
+   }
+  ],
+  "tip": "In everyday spoken Brazilian Portuguese, speakers almost always use the imperfeito do indicativo (e.g., 'eu comprava') instead of the formal conditional ('eu compraria')."
+ },
+ {
+  "id": "pt-b1-personal-infinitive",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#10b981",
+  "emoji": "👥",
+  "title": "The Inflected/Personal Infinitive (Infinitivo Pessoal)",
+  "subtitle": "Conjugating infinitives when subjects need clear distinction",
+  "color": "#059669",
+  "bg": "#ecfdf5",
+  "keyPoint": "The personal infinitive adds personal endings (-es, -mos, -em) to an infinitive base so that actions performed by distinct subjects remain explicit after prepositions.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Ending",
+    "Regular Example (Fazer)",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "eu / você / ele",
+      "—",
+      "fazer",
+      "for me/him to do"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "tu",
+      "-es",
+      "fazeres",
+      "for you (tu) to do"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "nós",
+      "-mos",
+      "fazermos",
+      "for us to do"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "vocês / eles",
+      "-em",
+      "fazerem",
+      "for them to do"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10b981",
+    "label": "After Prepositions with New Subject",
+    "example": "Comprei o livro para nós lermos juntos.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Impersonal Triggers with Specific Agents",
+    "example": "É importante eles saberem a verdade.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Expressing Prior Temporal Actions",
+    "example": "Antes de saírem, fechem as janelas.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "É melhor nós sairmos agora por causa do trânsito.",
+    "ko": "",
+    "highlight": "nós sairmos"
+   },
+   {
+    "en": "Eles foram embora sem dizerem nada a ninguém.",
+    "ko": "",
+    "highlight": "dizerem nada"
+   },
+   {
+    "en": "Trouxe as pastas para vocês revisarem o contrato.",
+    "ko": "",
+    "highlight": "vocês revisarem"
+   },
+   {
+    "en": "Antes de viajarmos, precisamos confirmar as passagens.",
+    "ko": "",
+    "highlight": "viajarmos, precisamos"
+   },
+   {
+    "en": "O professor pediu para os alunos prestarem atenção.",
+    "ko": "",
+    "highlight": "prestarem atenção"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Comprei os ingressos para nós assistir o filme.",
+    "right": "Comprei os ingressos para nós assistirmos ao filme.",
+    "note": "When the subject changes to 'nós' after 'para', the infinitive must inflect to 'assistirmos'."
+   },
+   {
+    "wrong": "É necessário vocês entender a regra.",
+    "right": "É necessário vocês entenderem a regra.",
+    "note": "Third person plural subjects ('vocês') take the '-em' inflection on the infinitive."
+   },
+   {
+    "wrong": "Nós precisamos de trabalharmos juntos.",
+    "right": "Nós precisamos de trabalhar juntos.",
+    "note": "Do not inflect the infinitive when both verbs share the exact same subject in a direct modal-verb chain."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct verb: 'É fundamental vocês ___ os relatórios hoje.'",
+    "options": [
+     "entregarem",
+     "entregar",
+     "entregam",
+     "entregassem"
+    ],
+    "answer": 0,
+    "explanation": "'Vocês' requires the personal infinitive ending '-em' ('entregarem')."
+   },
+   {
+    "question": "Fill in the blank: 'O professor explicou tudo para nós ___ o exercício.'",
+    "options": [
+     "compreender",
+     "compreendêssemos",
+     "compreendermos",
+     "compreendemos"
+    ],
+    "answer": 2,
+    "explanation": "After 'para nós', the personal infinitive takes the '-mos' ending ('compreendermos')."
+   },
+   {
+    "question": "Which sentence correctly avoids redundant inflection?",
+    "options": [
+     "Nós queremos falarmos com o diretor.",
+     "Nós queremos falar com o diretor.",
+     "Eles foram embora para eles dormirem.",
+     "Antes de vocês comerem, vocês lavem as mãos."
+    ],
+    "answer": 1,
+    "explanation": "When auxiliary and main verbs share the exact same subject directly, use the uninflected infinitive ('falar')."
+   },
+   {
+    "question": "Complete the instruction: 'Antes de ___ de casa, apaguem as luzes.'",
+    "options": [
+     "saem",
+     "saírem",
+     "sair",
+     "saindo"
+    ],
+    "answer": 1,
+    "explanation": "The implied subject is plural ('vocês' from 'apaguem'), so the infinitive inflects to 'saírem'."
+   }
+  ],
+  "tip": "Only inflect the infinitive when the subject is clearly different from the main clause's subject, or when you need to avoid ambiguity with third-person plurals."
+ },
+ {
+  "id": "pt-b2-crase",
+  "level": "b2",
+  "category": "nouns",
+  "categoryColor": "#f59e0b",
+  "emoji": "🎯",
+  "title": "The Crase (Contraction of 'a' + 'a')",
+  "subtitle": "Mastering the fusion of the preposition 'a' and feminine articles",
+  "color": "#d97706",
+  "bg": "#fffbeb",
+  "keyPoint": "A crase (indicated by the grave accent à) is the required phonological merger of preposition 'a' with feminine singular article 'a' or demonstratives starting with 'a'.",
+  "structure": {
+   "headers": [
+    "Rule Trigger",
+    "Preposition + Article",
+    "Result",
+    "Example Sentence"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Feminine Noun Destination",
+      "a + a cidade",
+      "à cidade",
+      "Vou à cidade amanhã."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine Fixed Adverbial",
+      "a + a noite",
+      "à noite",
+      "Estudo sempre à noite."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Demonstrative Pronoun",
+      "a + aquele",
+      "àquele",
+      "Entreguei àquele rapaz."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Manner/Fashion Ellipsis",
+      "à moda de",
+      "à francesa",
+      "Bife à milanesa."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#f59e0b",
+    "label": "Destination with Feminine Article",
+    "example": "Ela foi à feira comprar verduras frescas.",
+    "translation": ""
+   },
+   {
+    "color": "#d97706",
+    "label": "Feminine Adverbial Phrases",
+    "example": "O evento começará às oito horas em ponto.",
+    "translation": ""
+   },
+   {
+    "color": "#b45309",
+    "label": "Demonstrative Contractions",
+    "example": "Fiz referência àquela situação desagradável.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Vou à praia no próximo fim de semana com meus primos.",
+    "ko": "",
+    "highlight": "à praia"
+   },
+   {
+    "en": "Eles responderam à pergunta com muita segurança.",
+    "ko": "",
+    "highlight": "à pergunta"
+   },
+   {
+    "en": "O médico atende de segunda à sexta-feira.",
+    "ko": "",
+    "highlight": "à sexta-feira"
+   },
+   {
+    "en": "Nós fomos àquele restaurante novo ontem à noite.",
+    "ko": "",
+    "highlight": "àquele"
+   },
+   {
+    "en": "Você deve se dedicar mais às tarefas da faculdade.",
+    "ko": "",
+    "highlight": "às tarefas"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Vou à pé para o trabalho hoje.",
+    "right": "Vou a pé para o trabalho hoje.",
+    "note": "Never use crase before masculine nouns ('pé' is masculine; substitute test: 'a cavalo')."
+   },
+   {
+    "wrong": "Comecei à estudar português ano passado.",
+    "right": "Comecei a estudar português ano passado.",
+    "note": "Never use crase before verbs, because verbs take no gendered feminine articles."
+   },
+   {
+    "wrong": "Entreguei o documento à uma funcionária.",
+    "right": "Entreguei o documento a uma funcionária.",
+    "note": "Never place crase before indefinite articles like 'uma'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the sentence where crase is used correctly:",
+    "options": [
+     "Ele viajou à negócios com o chefe.",
+     "Gosto de andar à cavalo na fazenda.",
+     "Chegamos à estação antes das seis horas.",
+     "Fiquei frente à frente com o autor."
+    ],
+    "answer": 2,
+    "explanation": "'Estação' is a feminine noun requiring preposition 'a' + article 'a' = 'à'."
+   },
+   {
+    "question": "In which case is crase strictly forbidden?",
+    "options": [
+     "Antes de palavras masculinas",
+     "Antes de horários determinados",
+     "Em locuções prepositivas femininas",
+     "Antes do pronome 'aquela'"
+    ],
+    "answer": 0,
+    "explanation": "Crase cannot occur before masculine words because no feminine article exists there."
+   },
+   {
+    "question": "Complete the sentence: 'Eu me referia ___ aluna que se destacou na apresentação.'",
+    "options": [
+     "a",
+     "à",
+     "ao",
+     "às"
+    ],
+    "answer": 1,
+    "explanation": "The verb 'referir-se' demands preposition 'a', which contracts with feminine singular 'a aluna' to yield 'à'."
+   },
+   {
+    "question": "Choose the correct form: 'Chegamos ___ duas horas da tarde.'",
+    "options": [
+     "as",
+     "a",
+     "às",
+     "aos"
+    ],
+    "answer": 2,
+    "explanation": "Specific numeric indications of hours take feminine plural crase 'às'."
+   }
+  ],
+  "tip": "Use the masculine replacement trick: swap the feminine noun with a masculine equivalent. If 'a' turns into 'ao' (e.g., 'vou à praia' -> 'vou ao clube'), crase is guaranteed!"
+ },
+ {
+  "id": "pt-b2-compound-tenses-ter-haver",
+  "level": "b2",
+  "category": "tenses",
+  "categoryColor": "#8b5cf6",
+  "emoji": "⏳",
+  "title": "Compound Past Subjunctive and Indicative with 'Ter'",
+  "subtitle": "Expressing actions completed prior to other reference points",
+  "color": "#7c3aed",
+  "bg": "#f5f3ff",
+  "keyPoint": "Form compound tenses in Brazilian Portuguese by combining auxiliary 'ter' with an invariable past participle ending in -do to express anteriority.",
+  "structure": {
+   "headers": [
+    "Compound Tense",
+    "Auxiliary (Ter)",
+    "Participle",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Pret. Perfeito Composto",
+      "tenho / tem / temos",
+      "estudado",
+      "I have been studying (iterative)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Mais-que-Perfeito Ind.",
+      "tinha / tínhamos",
+      "terminado",
+      "I had finished"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Pret. Perfeito Subjuntivo",
+      "tenha / tenhamos",
+      "dito",
+      "that I have said / did say"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Mais-que-Perfeito Subj.",
+      "tivesse / tivéssemos",
+      "sabido",
+      "if I had known"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8b5cf6",
+    "label": "Past Anteriority (Past of the Past)",
+    "example": "Quando cheguei, o trem já tinha partido.",
+    "translation": ""
+   },
+   {
+    "color": "#7c3aed",
+    "label": "Subjunctive Anteriority",
+    "example": "Espero que você tenha feito boa viagem.",
+    "translation": ""
+   },
+   {
+    "color": "#6d28d9",
+    "label": "Counterfactual Past Condition",
+    "example": "Se eu tivesse visto o aviso, não teria entrado.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Eu já tinha comido quando eles me ligaram para jantar.",
+    "ko": "",
+    "highlight": "tinha comido"
+   },
+   {
+    "en": "Duvido que ela tenha esquecido o compromisso marcado.",
+    "ko": "",
+    "highlight": "tenha esquecido"
+   },
+   {
+    "en": "Se nós tivéssemos saído mais cedo, teríamos chegado a tempo.",
+    "ko": "",
+    "highlight": "tivéssemos saído"
+   },
+   {
+    "en": "Tenho trabalhado bastante nessas últimas três semanas.",
+    "ko": "",
+    "highlight": "Tenho trabalhado"
+   },
+   {
+    "en": "Ele agiu como se nada tivesse acontecido naquela noite.",
+    "ko": "",
+    "highlight": "tivesse acontecido"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Eles tinham comprados os ingressos antecipados.",
+    "right": "Eles tinham comprado os ingressos antecipados.",
+    "note": "With auxiliary 'ter', the past participle is invariable and never agrees in gender or number."
+   },
+   {
+    "wrong": "Espero que eles tem falado a verdade.",
+    "right": "Espero que eles tenham falado a verdade.",
+    "note": "Expressions of doubt or wish triggering subjunctive require the subjunctive auxiliary 'tenham'."
+   },
+   {
+    "wrong": "Ontem eu tenho visitado o museu novo.",
+    "right": "Ontem eu visitei o museu novo.",
+    "note": "Unlike Spanish or English, 'ter + participle' in the present indicates an ongoing repetitive action, not a completed single past action."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the counterfactual past conditional: 'Se você me ___ o dinheiro, eu teria comprado.'",
+    "options": [
+     "tinha emprestado",
+     "tivesse emprestado",
+     "teria emprestado",
+     "tenha emprestado"
+    ],
+    "answer": 1,
+    "explanation": "The counterfactual condition in the past requires 'tivesse' + participle (pretérito mais-que-perfeito do subjuntivo)."
+   },
+   {
+    "question": "Complete the past anterior sentence: 'Quando eles chegaram, nós já ___ toda a limpeza.'",
+    "options": [
+     "tínhamos terminado",
+     "tenhamos terminado",
+     "tínhamos terminados",
+     "teríamos terminado"
+    ],
+    "answer": 0,
+    "explanation": "'Tínhamos terminado' expresses a completed action prior to another past event; participle stays singular."
+   },
+   {
+    "question": "Choose the sentence denoting a repetitive habit up to the present:",
+    "options": [
+     "Tive ido ao cinema semana passada.",
+     "Tinha ido à academia ontem de manhã.",
+     "Tenho feito exercícios físicos ultimamente.",
+     "Tivesse feito os deveres da escola."
+    ],
+    "answer": 2,
+    "explanation": "The pretérito perfeito composto ('tenho feito') indicates a repetitive or continued process extending into the present."
+   },
+   {
+    "question": "Fill the blank: 'Não acredito que vocês ___ todo o bolo sozinhos!'",
+    "options": [
+     "tinham comido",
+     "têm comido",
+     "tenham comido",
+     "teriam comido"
+    ],
+    "answer": 2,
+    "explanation": "'Não acredito que' governs the present subjunctive auxiliary 'tenham comido'."
+   }
+  ],
+  "tip": "Remember: in Brazilian Portuguese, 'tenho feito' never means 'I have done it once today'—it means 'I have been doing it repeatedly recently'!"
+ },
+ {
+  "id": "pt-b2-passive-voice-and-se-apolassivador",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#ec4899",
+  "emoji": "🔄",
+  "title": "Passive Voice and the Passive Particle 'Se'",
+  "subtitle": "Differentiating analytic passive from the synthetic reflexive passive",
+  "color": "#db2777",
+  "bg": "#fdf2f8",
+  "keyPoint": "In synthetic passive constructions with transitive direct verbs and 'se', the verb agrees in number with the grammatical patient subject.",
+  "structure": {
+   "headers": [
+    "Passive Type",
+    "Structure",
+    "Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Analytic Passive",
+      "Ser + Participle (+ por)",
+      "A casa foi vendida pelo corretor.",
+      "The house was sold by the agent."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Synthetic Passive (Singular)",
+      "Verb (3rd sing.) + se + Singular Patient",
+      "Vende-se esta casa.",
+      "This house is sold / for sale."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Synthetic Passive (Plural)",
+      "Verb (3rd plur.) + se + Plural Patient",
+      "Vendem-se estas casas.",
+      "These houses are sold / for sale."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Indeterminate Subject",
+      "Transitive Indirect + se (Singular only)",
+      "Precisa-se de funcionários.",
+      "Employees are needed."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#ec4899",
+    "label": "Formal Advertisements & Notices",
+    "example": "Alugam-se quartos mobiliados para estudantes.",
+    "translation": ""
+   },
+   {
+    "color": "#db2777",
+    "label": "Analytic Focus on Agent",
+    "example": "O projeto foi desenvolvido por uma equipe experiente.",
+    "translation": ""
+   },
+   {
+    "color": "#be185d",
+    "label": "Impersonal Reports & Instructions",
+    "example": "Fazem-se reformas completas de apartamentos.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Constroem-se novos prédios nesta avenida todo ano.",
+    "ko": "",
+    "highlight": "Constroem-se novos prédios"
+   },
+   {
+    "en": "A nova ponte foi construída pelo governo estadual.",
+    "ko": "",
+    "highlight": "foi construída pelo"
+   },
+   {
+    "en": "Exigem-se documentos originais no ato da matrícula.",
+    "ko": "",
+    "highlight": "Exigem-se documentos"
+   },
+   {
+    "en": "Discutiu-se a proposta durante a reunião de ontem.",
+    "ko": "",
+    "highlight": "Discutiu-se a proposta"
+   },
+   {
+    "en": "Divulgaram-se os resultados oficiais nesta manhã.",
+    "ko": "",
+    "highlight": "Divulgaram-se os resultados"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Vende-se apartamentos mobiliados na praia.",
+    "right": "Vendem-se apartamentos mobiliados na praia.",
+    "note": "Because 'apartamentos' is the grammatical subject in a synthetic passive, the transitive verb must inflect to plural 'vendem-se'."
+   },
+   {
+    "wrong": "Precisam-se de cozinheiros com urgência.",
+    "right": "Precisa-se de cozinheiros com urgência.",
+    "note": "When followed by a preposition ('de'), the construction is an indeterminate subject, not passive; the verb must stay strictly singular."
+   },
+   {
+    "wrong": "Os livros foi escrito por professores da universidade.",
+    "right": "Os livros foram escritos por professores da universidade.",
+    "note": "In the analytic passive, the auxiliary 'ser' and the participle must agree in number and gender with the subject."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the grammatically correct billboard text:",
+    "options": [
+     "Aluga-se apartamentos",
+     "Alugam-se apartamentos",
+     "Alugam-se de apartamentos",
+     "Alugam apartamentos"
+    ],
+    "answer": 1,
+    "explanation": "'Apartamentos' is the plural subject of direct transitive 'alugar', requiring plural 'alugam-se'."
+   },
+   {
+    "question": "Which sentence correctly represents the indeterminate subject (non-passive)?",
+    "options": [
+     "Contratam-se pedreiros com experiência.",
+     "Vendem-se carros usados.",
+     "Precisa-se de mecânicos qualificados.",
+     "Construíram-se casas modernas."
+    ],
+    "answer": 2,
+    "explanation": "'Precisa-se de' contains a prepositional complement, making it an indeterminate subject where the verb stays singular."
+   },
+   {
+    "question": "Complete the analytic passive: 'As encomendas ___ entregues hoje cedo pelo correio.'",
+    "options": [
+     "foi",
+     "foram",
+     "era",
+     "tinha"
+    ],
+    "answer": 1,
+    "explanation": "Plural feminine subject 'as encomendas' matches the plural auxiliary 'foram'."
+   },
+   {
+    "question": "Fill the blank with the proper agreement: '___-se soluções imediatas para a crise.'",
+    "options": [
+     "Buscavam",
+     "Buscava",
+     "Busca",
+     "Buscam"
+    ],
+    "answer": 3,
+    "explanation": "'Soluções imediatas' is plural, requiring 'Buscam-se'."
+   }
+  ],
+  "tip": "Check if a preposition follows the verb: if there is no preposition (transitive direct, e.g., 'vender algo'), make the verb agree with the noun ('vendem-se casas'). If a preposition is required (e.g., 'precisa-se DE algo'), keep the verb strictly singular."
+ }
+]

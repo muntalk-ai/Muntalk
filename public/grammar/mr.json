@@ -1,0 +1,3320 @@
+[
+ {
+  "id": "mr-a1-three-grammatical-genders",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "🚻",
+  "title": "Three Grammatical Genders and Noun Endings",
+  "subtitle": "Mastering masculine, feminine, and neuter nouns along with matching adjectives",
+  "color": "#1E88E5",
+  "bg": "#E3F2FD",
+  "keyPoint": "Marathi classifies every noun into masculine, feminine, or neuter, typically matching them with adjectives ending in -आ, -ई, and -ए respectively.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Typical Ending",
+    "Adjective + Noun Pattern",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine (पुल्लिंग)",
+      "Ends in -आ / Consonant",
+      "चांगला मुलगा",
+      "Good boy"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine (स्त्रीलिंग)",
+      "Ends in -ई / -ऊ / Consonant",
+      "चांगली मुलगी",
+      "Good girl"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter (नपुंसकलिंग)",
+      "Ends in -ए / Consonant",
+      "चांगले पुस्तक",
+      "Good book"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1E88E5",
+    "label": "Masculine Concord",
+    "example": "हा मोठा आंबा गोड आहे.",
+    "translation": ""
+   },
+   {
+    "color": "#E91E63",
+    "label": "Feminine Concord",
+    "example": "ही नवी गाडी सुंदर आहे.",
+    "translation": ""
+   },
+   {
+    "color": "#43A047",
+    "label": "Neuter Concord",
+    "example": "हे लहान घर छान आहे.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "तो मुलगा हुशार आहे.",
+    "ko": "",
+    "highlight": "तो मुलगा"
+   },
+   {
+    "en": "ती मुलगी गाणे गाते.",
+    "ko": "",
+    "highlight": "ती मुलगी"
+   },
+   {
+    "en": "ते झाड खूप उंच आहे.",
+    "ko": "",
+    "highlight": "ते झाड"
+   },
+   {
+    "en": "हा लाल चेंडू माझा आहे.",
+    "ko": "",
+    "highlight": "हा लाल चेंडू"
+   },
+   {
+    "en": "हे नवीन पुस्तक सुंदर आहे.",
+    "ko": "",
+    "highlight": "हे नवीन पुस्तक"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "चांगला मुलगी",
+    "right": "चांगली मुलगी",
+    "note": "Adjectives ending in variable -आ must change to -ई when modifying a feminine noun."
+   },
+   {
+    "wrong": "ती पुस्तक",
+    "right": "ते पुस्तक",
+    "note": "Unlike Hindi, 'पुस्तक' (book) in Marathi is neuter, so it takes the neuter demonstrative 'ते' rather than feminine 'ती'."
+   },
+   {
+    "wrong": "मोठा घर",
+    "right": "मोठे घर",
+    "note": "'घर' (house) is grammatically neuter in Marathi, demanding the neuter adjective ending -ए."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct demonstrative pronoun for 'room' (खोली - feminine): '___ खोली मोठी आहे.'",
+    "options": [
+     "तो",
+     "ती",
+     "ते",
+     "त्या"
+    ],
+    "answer": 1,
+    "explanation": "'खोली' is a feminine noun, so the feminine demonstrative 'ती' must be used."
+   },
+   {
+    "question": "Select the correct adjective form for 'water' (पाणी - neuter): 'इथे ___ पाणी आहे.'",
+    "options": [
+     "थंड",
+     "थंडा",
+     "थंडी",
+     "थंडे"
+    ],
+    "answer": 0,
+    "explanation": "'थंड' is an invariant adjective that does not change gender suffixes, correctly modifying the neuter noun 'पाणी'."
+   },
+   {
+    "question": "Complete with the correct adjective form: 'हा ___ घोडा धावतो.' (white)",
+    "options": [
+     "पांढरी",
+     "पांढरे",
+     "पांढरा",
+     "पांढऱ्या"
+    ],
+    "answer": 2,
+    "explanation": "'घोडा' is masculine singular, so the variable adjective takes the masculine suffix -आ ('पांढरा')."
+   },
+   {
+    "question": "Identify the neuter phrase:",
+    "options": [
+     "चांगला माणूस",
+     "हिरवी साडी",
+     "सुंदर बाग",
+     "स्वच्छ पान"
+    ],
+    "answer": 3,
+    "explanation": "'पान' (leaf/page) is neuter, making 'स्वच्छ पान' a neuter noun phrase."
+   }
+  ],
+  "tip": "Test an unknown noun's gender using the third-person pronouns: if it pairs naturally with तो it's masculine, ती is feminine, and ते is neuter."
+ },
+ {
+  "id": "mr-a1-basic-postpositions-oblique-stem",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "🏷️",
+  "title": "Basic Postpositions and the Oblique Case (सामान्यरूप)",
+  "subtitle": "Inflecting noun stems before attaching location, motion, and associative suffixes",
+  "color": "#FB8C00",
+  "bg": "#FFF3E0",
+  "keyPoint": "Before attaching any postposition, a Marathi noun must transform into its oblique base (सामान्यरूप).",
+  "structure": {
+   "headers": [
+    "Direct Noun",
+    "Oblique Base",
+    "With Postposition",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "घर (house, neuter)",
+      "घरा-",
+      "घरात",
+      "in the house"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "मुलगा (boy, masc.)",
+      "मुलग्या-",
+      "मुलग्याला",
+      "to the boy"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "शाळा (school, fem.)",
+      "शाळे-",
+      "शाळेत",
+      "in the school"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "टेबल (table, neuter)",
+      "टेबला-",
+      "टेबलावर",
+      "on the table"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#FB8C00",
+    "label": "Location Inside (-त)",
+    "example": "मी खोलीत बसलो आहे.",
+    "translation": ""
+   },
+   {
+    "color": "#43A047",
+    "label": "Surface Support (-वर)",
+    "example": "मांजर टेबलावर झोपली आहे.",
+    "translation": ""
+   },
+   {
+    "color": "#1E88E5",
+    "label": "Dative Target (-ला)",
+    "example": "आई मुलाला हाक मारते.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "माझे मित्र पुण्यात राहतात.",
+    "ko": "",
+    "highlight": "पुण्यात"
+   },
+   {
+    "en": "वही टेबलावर ठेवली आहे.",
+    "ko": "",
+    "highlight": "टेबलावर"
+   },
+   {
+    "en": "तो सायकलने शाळेत गेला.",
+    "ko": "",
+    "highlight": "शाळेत"
+   },
+   {
+    "en": "राजूने कुत्र्याला बिस्कीट दिले.",
+    "ko": "",
+    "highlight": "कुत्र्याला"
+   },
+   {
+    "en": "बागेत सुंदर फुले आहेत.",
+    "ko": "",
+    "highlight": "बागेत"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "घरत",
+    "right": "घरात",
+    "note": "The consonant-ending neuter noun 'घर' lengthens its final syllable to '-रा' in the oblique base before suffixes like '-त'."
+   },
+   {
+    "wrong": "शाळात",
+    "right": "शाळेत",
+    "note": "Feminine nouns ending in '-आ' like 'शाळा' change their ending vowel to '-ए' ('शाळे-') in the oblique case."
+   },
+   {
+    "wrong": "मुलगाला",
+    "right": "मुलग्याला",
+    "note": "Masculine nouns ending in '-आ' undergo palatalization to '-या' in the oblique base."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Attach the postposition '-वर' (on) to 'झाड' (tree): 'पक्षी ___ बसला आहे.'",
+    "options": [
+     "झाडवर",
+     "झाडावर",
+     "झाडेवर",
+     "झाडीवर"
+    ],
+    "answer": 1,
+    "explanation": "'झाड' becomes 'झाडा-' in the oblique base before receiving '-वर'."
+   },
+   {
+    "question": "Attach '-त' (in) to 'पाणी' (water): 'मासा ___ पोहतो.'",
+    "options": [
+     "पाण्यात",
+     "पाणीत",
+     "पाणात",
+     "पाणेत"
+    ],
+    "answer": 0,
+    "explanation": "Neuter nouns ending in '-ई' like 'पाणी' change their stem to '-यात' ('पाण्यात')."
+   },
+   {
+    "question": "Complete the sentence with the oblique form of 'मुलगी' + '-ला': 'आईने ___ बोलावले.'",
+    "options": [
+     "मुलगीला",
+     "मुलगेला",
+     "मुलीला",
+     "मुलग्याला"
+    ],
+    "answer": 2,
+    "explanation": "Feminine nouns ending in '-ई' like 'मुलगी' change stem-internal vowels to form the oblique 'मुली-' ('मुलीला')."
+   },
+   {
+    "question": "Which sentence correctly demonstrates the oblique form of 'दुकान' (shop) + '-त'?",
+    "options": [
+     "तो दुकानत गेला.",
+     "तो दुकानेत गेला.",
+     "तो दुकान्यात गेला.",
+     "तो दुकानात गेला."
+    ],
+    "answer": 3,
+    "explanation": "Consonant-ending neuter nouns lengthen the preceding final vowel to '-आ' ('दुकानात')."
+   }
+  ],
+  "tip": "Never attach a postposition like -त, -वर, or -ला directly to the base dictionary word; always check how the ending transforms into its oblique shape first."
+ },
+ {
+  "id": "a1-copula-and-existence-ahe-vs-nahi",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#43A047",
+  "emoji": "⚖️",
+  "title": "Affirmative vs Negative Copula (आहे vs नाही)",
+  "subtitle": "Distinguishing positive and negative existential and equational sentences",
+  "color": "#43A047",
+  "bg": "#E8F5E9",
+  "keyPoint": "Use आहे for 'is/am/are' to affirm existence or identity, and substitute नाही to express negation.",
+  "structure": {
+   "headers": [
+    "Subject Pronoun",
+    "Affirmative Copula",
+    "Negative Copula",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "मी (I)",
+      "आहे",
+      "नाही",
+      "I am / I am not"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "तू (You, inf.)",
+      "आहेस",
+      "नाहीस",
+      "You are / You are not"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "तो / ती / ते (He / She / It)",
+      "आहे",
+      "नाही",
+      "He/She/It is / is not"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "आम्ही / तुम्ही / ते (We / You / They)",
+      "आहोत / आहात / आहेत",
+      "नाहीत",
+      "Plural forms"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#43A047",
+    "label": "Stating Identity",
+    "example": "तो माझा भाऊ आहे.",
+    "translation": ""
+   },
+   {
+    "color": "#E53935",
+    "label": "Negating Identity",
+    "example": "तो माझा भाऊ नाही.",
+    "translation": ""
+   },
+   {
+    "color": "#FB8C00",
+    "label": "Asserting Presence",
+    "example": "घरात कोणीतरी आहे.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "मी आज खूप आनंदी आहे.",
+    "ko": "",
+    "highlight": "आहे"
+   },
+   {
+    "en": "रमेश घरी नाही.",
+    "ko": "",
+    "highlight": "नाही"
+   },
+   {
+    "en": "त्या खोलीत फॅन आहे.",
+    "ko": "",
+    "highlight": "आहे"
+   },
+   {
+    "en": "माझ्याकडे गाडी नाही.",
+    "ko": "",
+    "highlight": "नाही"
+   },
+   {
+    "en": "तुम्ही शिक्षक आहात का?",
+    "ko": "",
+    "highlight": "आहात"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "तो डॉक्टर आहे नाही.",
+    "right": "तो डॉक्टर नाही.",
+    "note": "Do not combine 'आहे' and 'नाही' together; 'नाही' replaces 'आहे' completely in negative equational sentences."
+   },
+   {
+    "wrong": "मी ठीक नाहीस.",
+    "right": "मी ठीक नाही.",
+    "note": "'-स' is solely the second-person singular inflection for 'तू'; first-person 'मी' pairs with uninflected 'नाही' or 'नाहीये'."
+   },
+   {
+    "wrong": "तू हुशार आहे.",
+    "right": "तू हुशार आहेस.",
+    "note": "The second-person singular pronoun 'तू' requires the specific copular agreement marker '-स' ('आहेस')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'माझा मित्र आज इथे ___.' (is not)",
+    "options": [
+     "नाही",
+     "नका",
+     "नये",
+     "नसतो"
+    ],
+    "answer": 0,
+    "explanation": "'नाही' is the standard third-person singular negative copula for present existence."
+   },
+   {
+    "question": "Choose the matching affirmative copula: 'तू खूप दयाळू ___.'",
+    "options": [
+     "आहे",
+     "आहोत",
+     "आहेस",
+     "आहात"
+    ],
+    "answer": 2,
+    "explanation": "'तू' strictly takes the second-person singular ending '-स' giving 'आहेस'."
+   },
+   {
+    "question": "Fill in the blank: 'आम्ही सध्या पुण्यात ___.' (we are)",
+    "options": [
+     "आहे",
+     "आहेस",
+     "नाही",
+     "आहोत"
+    ],
+    "answer": 3,
+    "explanation": "The first-person plural pronoun 'आम्ही' pairs with the verb form 'आहोत'."
+   },
+   {
+    "question": "Fill in the blank: 'तिथे कोणीही पाणी ___.' (there is no water)",
+    "options": [
+     "आहे",
+     "नाही",
+     "आहात",
+     "नको"
+    ],
+    "answer": 1,
+    "explanation": "Negation of presence uses 'नाही'."
+   }
+  ],
+  "tip": "Remember that 'नाही' inherently carries the meaning of 'is not' / 'are not' — never say 'आहे नाही' in Marathi."
+ },
+ {
+  "id": "a1-simple-present-habitual-aspect",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#8E24AA",
+  "emoji": "⏰",
+  "title": "Simple Present and Habitual Conjugation",
+  "subtitle": "Expressing daily routines, universal facts, and habits with gender-number agreements",
+  "color": "#8E24AA",
+  "bg": "#F3E5F5",
+  "keyPoint": "In the simple present habitual tense, the verb stem takes person, number, and gender endings reflecting the subject.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Stem + Ending",
+    "Full Verb",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "मी (Masc.)",
+      "बोल + तो",
+      "बोलतो",
+      "I speak"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "मी (Fem.)",
+      "बोल + ते",
+      "बोलते",
+      "I speak"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "तो (Masc. Sing.)",
+      "वाच + तो",
+      "वाचतो",
+      "He reads"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ती (Fem. Sing.)",
+      "वाच + ते",
+      "वाचते",
+      "She reads"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ते / त्या (Plural)",
+      "वाच + तात",
+      "वाचतात",
+      "They read"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8E24AA",
+    "label": "Daily Routine",
+    "example": "मी रोज सकाळी लवकर उठतो.",
+    "translation": ""
+   },
+   {
+    "color": "#1E88E5",
+    "label": "Universal Truth",
+    "example": "सूर्य पूर्वेला उगवतो.",
+    "translation": ""
+   },
+   {
+    "color": "#43A047",
+    "label": "Habitual Action",
+    "example": "ती दररोज ग्रंथालयात अभ्यास करते.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "सुनील दररोज व्यायाम करतो.",
+    "ko": "",
+    "highlight": "करतो"
+   },
+   {
+    "en": "अ Anita सुंदर गाणी गाते.",
+    "ko": "",
+    "highlight": "गाते"
+   },
+   {
+    "en": "आम्ही दर रविवारी क्रिकेट खेळतो.",
+    "ko": "",
+    "highlight": "खेळतो"
+   },
+   {
+    "en": "मुले मैदानावर धावतात.",
+    "ko": "",
+    "highlight": "धावतात"
+   },
+   {
+    "en": "तू रोज चहा पितोस का?",
+    "ko": "",
+    "highlight": "पितोस"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ती पत्र लिहितो.",
+    "right": "ती पत्र लिखते.",
+    "note": "A feminine subject ('ती') must agree with the verb using the feminine ending '-ते', not the masculine '-तो'."
+   },
+   {
+    "wrong": "मी दररोज अभ्यास करतो (female speaker).",
+    "right": "मी दररोज अभ्यास करते.",
+    "note": "Female speakers must conjugate simple present verbs with the feminine inflection '-ते'."
+   },
+   {
+    "wrong": "ते रोज वर्तमानपत्र वाचतो.",
+    "right": "ते रोज वर्तमानपत्र वाचतात.",
+    "note": "Plural or honorific subjects ('ते') require the plural suffix '-तात'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence for a female subject: 'सीमा दररोज शाळेत ___.' (goes)",
+    "options": [
+     "जातो",
+     "जाते",
+     "जातात",
+     "जातोस"
+    ],
+    "answer": 1,
+    "explanation": "'सीमा' is a third-person feminine singular subject, requiring the verbal suffix '-ते' ('जाते')."
+   },
+   {
+    "question": "Complete the sentence: 'पक्षी आकाशात उंच ___.' (birds fly, plural)",
+    "options": [
+     "उडू",
+     "उडतो",
+     "उडते",
+     "उडतात"
+    ],
+    "answer": 3,
+    "explanation": "'पक्षी' is plural here, demanding the plural verb suffix '-तात' ('उडतात')."
+   },
+   {
+    "question": "Complete the sentence for a male speaker: 'मी दररोज सकाळी धावायला ___.' (I go)",
+    "options": [
+     "जातो",
+     "जाते",
+     "जातात",
+     "जातोस"
+    ],
+    "answer": 0,
+    "explanation": "A male first-person speaker uses the '-तो' inflection ('जातो')."
+   },
+   {
+    "question": "Choose the correct verb for second-person masculine informal: 'तू रोज पुस्तक ___ का?' (read)",
+    "options": [
+     "वाचतेस",
+     "वाचतात",
+     "वाचतोस",
+     "वाचतो"
+    ],
+    "answer": 2,
+    "explanation": "Informal 'तू' for a male addressee takes the combined suffix '-तोस'."
+   }
+  ],
+  "tip": "Simple present endings follow the vowel pattern: -तो for masculine, -ते for feminine, and -तात for all plurals."
+ },
+ {
+  "id": "a1-imperatives-and-honorific-levels",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#43A047",
+  "emoji": "🙏",
+  "title": "Imperative Forms and Politeness Registers",
+  "subtitle": "Navigating intimate commands, plural requests, and respectful honorific instructions",
+  "color": "#D81B60",
+  "bg": "#FCE4EC",
+  "keyPoint": "Use the bare verb root for intimate commands with तू, and attach -ा or -ावे for polite and respectful requests with तुम्ही or आपण.",
+  "structure": {
+   "headers": [
+    "Verb Root",
+    "Informal (तू)",
+    "Polite/Plural (तुम्ही)",
+    "English Instruction"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "बस (sit)",
+      "बस",
+      "बसा",
+      "Sit!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "कर (do)",
+      "कर",
+      "करा",
+      "Do!"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "वाच (read)",
+      "वाच",
+      "वाचा",
+      "Read!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ये (come)",
+      "ये",
+      "या",
+      "Come!"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D81B60",
+    "label": "Informal / Close Command",
+    "example": "तू इथे बस आणि अभ्यास कर.",
+    "translation": ""
+   },
+   {
+    "color": "#1E88E5",
+    "label": "Polite / Respectful Request",
+    "example": "कृपया आत या आणि बसा.",
+    "translation": ""
+   },
+   {
+    "color": "#FB8C00",
+    "label": "Negative Prohibition",
+    "example": "तिथे जाऊ नका.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "कृपया मला पाणी द्या.",
+    "ko": "",
+    "highlight": "द्या"
+   },
+   {
+    "en": "तू शांत बस.",
+    "ko": "",
+    "highlight": "बस"
+   },
+   {
+    "en": "दररोज भरपूर फळे खा.",
+    "ko": "",
+    "highlight": "खा"
+   },
+   {
+    "en": "इथे कचरा टाकू नका.",
+    "ko": "",
+    "highlight": "टाकू नका"
+   },
+   {
+    "en": "तुम्ही हे पुस्तक नक्की वाचा.",
+    "ko": "",
+    "highlight": "वाचा"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "सर, इथे बस.",
+    "right": "सर, इथे बसा.",
+    "note": "Using the bare stem 'बस' with elders or teachers is disrespectful; use the honorific ending '-ा' ('बसा')."
+   },
+   {
+    "wrong": "तुम्ही खोटे बोलू नको.",
+    "right": "तुम्ही खोटे बोलू नका.",
+    "note": "'नको' is the negative imperative for informal 'तू'; polite 'तुम्ही' requires 'नका'."
+   },
+   {
+    "wrong": "तू शांत बसा.",
+    "right": "तू शांत बस.",
+    "note": "Pairing informal 'तू' with polite 'बसा' causes an agreement mismatch; use bare 'बस'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Politely ask an elder to drink tea: 'काका, चहा ___.'",
+    "options": [
+     "पी",
+     "प्या",
+     "पिऊ नको",
+     "पितोस"
+    ],
+    "answer": 1,
+    "explanation": "'प्या' is the respectful imperative form of 'पीणे' (to drink) suited for elders ('काका')."
+   },
+   {
+    "question": "Form an informal negative command with 'तू': 'तू तिकडे जाऊ ___.'",
+    "options": [
+     "नका",
+     "नाही",
+     "नको",
+     "नये"
+    ],
+    "answer": 2,
+    "explanation": "'नको' accompanies the oblique infinitive ('जाऊ') for negative commands addressing 'तू'."
+   },
+   {
+    "question": "Ask a friend informally to write down an address: 'हा पत्ता ___.'",
+    "options": [
+     "लिहा",
+     "लिहू नका",
+     "लिहितात",
+     "लिही"
+    ],
+    "answer": 3,
+    "explanation": "The bare stem or short form 'लिही' is the informal imperative for 'तू'."
+   },
+   {
+    "question": "Choose the formal negative request: 'कृपया येथे गोंधळ करू ___.'",
+    "options": [
+     "नका",
+     "नको",
+     "नाही",
+     "नसत"
+    ],
+    "answer": 0,
+    "explanation": "'नका' is the polite plural negative imperative matching 'कृपया' (please)."
+   }
+  ],
+  "tip": "When addressing strangers, shopkeepers, or elders, always add -ा to the verb stem (or use नका for negatives) to remain naturally courteous."
+ },
+ {
+  "id": "mr-a1-personal-pronouns-and-inflections",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "👥",
+  "title": "Personal Pronouns and Politeness",
+  "subtitle": "Distinguishing inclusive vs. exclusive 'we' and honorific third-person forms",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Marathi distinguishes between inclusive 'we' (आपण) and exclusive 'we' (आम्ही), while honorific reference to an elder or respected person always requires plural pronouns and verb agreement.",
+  "structure": {
+   "headers": [
+    "Person / Level",
+    "Pronoun",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Person Exclusive",
+      "आम्ही",
+      "We (excluding the listener)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "1st Person Inclusive",
+      "आपण",
+      "We (including the listener)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Person Respectful",
+      "तुम्ही / आपण",
+      "You (polite / formal)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person Honorific (M/F)",
+      "ते / त्या",
+      "He / She (respectful)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Inviting the listener along",
+    "example": "आपण सर्व मिळून सिनेमाला जाऊया.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Speaking on behalf of a separate group",
+    "example": "आम्ही उद्या सकाळी पुण्याला निघणार आहोत.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Showing respect to elders or teachers",
+    "example": "ते आमचे आदरणीय शिक्षक आहेत.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "आपण चहा पिऊया.",
+    "ko": "",
+    "highlight": "आपण"
+   },
+   {
+    "en": "आम्ही घरात काम करत आहोत.",
+    "ko": "",
+    "highlight": "आम्ही"
+   },
+   {
+    "en": "तुम्ही कुठे चालला आहात?",
+    "ko": "",
+    "highlight": "तुम्ही"
+   },
+   {
+    "en": "ते माझे वडील आहेत.",
+    "ko": "",
+    "highlight": "ते"
+   },
+   {
+    "en": "त्या आमच्या मुख्याध्यापिका आहेत.",
+    "ko": "",
+    "highlight": "त्या"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "तो माझे आजोबा आहेत.",
+    "right": "ते माझे आजोबा आहेत.",
+    "note": "Using the singular 'तो' for a grandfather or elder is disrespectful; use the honorific plural 'ते'."
+   },
+   {
+    "wrong": "आम्ही सोबत जाऊया का?",
+    "right": "आपण सोबत जाऊया का?",
+    "note": "When asking someone to join you together, use the inclusive 'आपण', not exclusive 'आम्ही'."
+   },
+   {
+    "wrong": "तुम्ही काय करतोस?",
+    "right": "तुम्ही काय करता?",
+    "note": "The polite pronoun 'तुम्ही' requires the plural verb inflection '-ता', not the informal '-तोस'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the inclusive 'we' to invite the listener: '___ will have dinner together.'",
+    "options": [
+     "आम्ही",
+     "आपण",
+     "तुम्ही",
+     "ते"
+    ],
+    "answer": 1,
+    "explanation": "'आपण' includes the speaker and the listener together."
+   },
+   {
+    "question": "Select the correct honorific pronoun: '___ are my respected father.'",
+    "options": [
+     "तो",
+     "हा",
+     "ते",
+     "तू"
+    ],
+    "answer": 2,
+    "explanation": "'ते' is the masculine honorific plural pronoun used to address or refer to elders politely."
+   },
+   {
+    "question": "To inform a listener that 'we (not you)' are traveling, choose: '___ are going to Mumbai.'",
+    "options": [
+     "आम्ही",
+     "आपण",
+     "त्या",
+     "तुम्ही"
+    ],
+    "answer": 0,
+    "explanation": "'आम्ही' is the exclusive first-person plural, excluding the listener."
+   },
+   {
+    "question": "Pick the correct polite verb form for 'तुम्ही कुठे ___?' (Where are you going?)",
+    "options": [
+     "जातोस",
+     "जातेस",
+     "जातो",
+     "जाता"
+    ],
+    "answer": 3,
+    "explanation": "The respectful 2nd-person pronoun 'तुम्ही' requires the plural suffix '-ता'."
+   }
+  ],
+  "tip": "Think of आपण as 'you + I together', whereas आम्ही is 'someone else + I (without you)'."
+ },
+ {
+  "id": "mr-a2-ergativity-transitive-past",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "Split Ergativity in the Past Tense",
+  "subtitle": "Marking transitive agents with instrumental suffixes while agreeing with the object",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "In the Marathi past tense of transitive verbs, the subject takes an instrumental marker (-ने, -नी) and the verb agrees with the direct object in gender and number.",
+  "structure": {
+   "headers": [
+    "Subject + Marker",
+    "Object (Gender/Number)",
+    "Past Verb Agreement"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "रामाने (Rama - Agent)",
+      "आंबा (Mango - Masc.Sg)",
+      "खाल्ला (Ate - Masc.Sg)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "रामाने (Rama - Agent)",
+      "पोळी (Flatbread - Fem.Sg)",
+      "खाल्ली (Ate - Fem.Sg)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "रामाने (Rama - Agent)",
+      "केळे (Banana - Neut.Sg)",
+      "खाल्ले (Ate - Neut.Sg)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "मुलांनी (Boys - Pl. Agent)",
+      "गोष्टी (Stories - Fem.Pl)",
+      "वाचल्या (Read - Fem.Pl)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Singular masculine agent acting on a feminine object",
+    "example": "त्याने काल एक नवी गाडी घेतली.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Plural agent acting on a neuter plural object",
+    "example": "विद्यार्थ्यांनी सर्व पुस्तके वाचली.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Feminine agent acting on a masculine object",
+    "example": "आईने चविष्ट शिरा बनवला.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "रामाने गोड आंबा खाल्ला.",
+    "ko": "",
+    "highlight": "खाल्ला"
+   },
+   {
+    "en": "सुधाने सुंदर कविता लिहिली.",
+    "ko": "",
+    "highlight": "लिहिली"
+   },
+   {
+    "en": "त्यांनी ताजे दूध पिले.",
+    "ko": "",
+    "highlight": "पिले"
+   },
+   {
+    "en": "मुलाने सर्व लाडू खाल्ले.",
+    "ko": "",
+    "highlight": "खाल्ले"
+   },
+   {
+    "en": "आम्ही काल चित्रपट पाहिला.",
+    "ko": "",
+    "highlight": "पाहिला"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मी सफरचंद खाल्लो.",
+    "right": "मी सफरचंद खाल्ले.",
+    "note": "In the transitive past tense, the verb agrees with the neuter object 'सफरचंद' (खाल्ले), not with the speaker 'मी'."
+   },
+   {
+    "wrong": "आई चहा बनवली.",
+    "right": "आईने चहा बनवला.",
+    "note": "The subject must take the instrumental marker '-ने' (आईने), and the verb must agree with masculine 'चहा' (बनवला)."
+   },
+   {
+    "wrong": "त्याने पत्र लिहिला.",
+    "right": "त्याने पत्र लिहिले.",
+    "note": "'पत्र' is neuter singular in Marathi, so the verb must end in '-ले' (लिहिले)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct past verb form: 'मुलाने पेढा ___.' (The boy ate a pedha [masculine]).",
+    "options": [
+     "खाल्ली",
+     "खाल्ला",
+     "खाल्ले",
+     "खाल्ल्या"
+    ],
+    "answer": 1,
+    "explanation": "'पेढा' is masculine singular, so the past transitive verb must be 'खाल्ला'."
+   },
+   {
+    "question": "Fill in the agent marker: 'राधा___ छान गाणे गायले.' (Radha sang a nice song).",
+    "options": [
+     "ला",
+     "चा",
+     "ने",
+     "तून"
+    ],
+    "answer": 2,
+    "explanation": "Transitive past subjects take the instrumental suffix '-ने' (राधा + ने = राधाने)."
+   },
+   {
+    "question": "Identify the proper verb agreement: 'आम्ही तीन पुस्तके ___.' (We read three books [neuter plural]).",
+    "options": [
+     "वाचली",
+     "वाचला",
+     "वाचलो",
+     "वाचले"
+    ],
+    "answer": 0,
+    "explanation": "Neuter plural objects ('पुस्तके') trigger the '-ली' ending on past transitive verbs ('वाचली')."
+   },
+   {
+    "question": "Complete the sentence: 'शिक्षकांनी मुलांना प्रश्न ___.' (The teacher asked a question [masculine]).",
+    "options": [
+     "विचारली",
+     "विचारल्या",
+     "विचारले",
+     "विचारला"
+    ],
+    "answer": 3,
+    "explanation": "The direct object 'प्रश्न' is masculine singular, requiring 'विचारला'."
+   }
+  ],
+  "tip": "Always identify the grammatical gender and number of the DIRECT OBJECT first; that tells you exactly how the transitive past verb must end."
+ },
+ {
+  "id": "mr-a2-intransitive-past-conjugation",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#EF4444",
+  "emoji": "🏃",
+  "title": "Intransitive Past Tense Conjugation",
+  "subtitle": "Conjugating verbs without direct objects to match the subject directly",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "Unlike transitive verbs, intransitive past verbs require an unmarked subject in the nominative case and agree directly with that subject in person, gender, and number.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Stem + Suffix",
+    "Conjugated Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "तो (He - Masc.Sg)",
+      "गे- + -ला",
+      "गेला (He went)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ती (She - Fem.Sg)",
+      "गे- + -ली",
+      "गेली (She went)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ते (It - Neut.Sg)",
+      "गे- + -ले",
+      "गेले (It went)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ते / त्या (They - Plural)",
+      "गे- + -ले / -ल्या",
+      "गेले / गेल्या (They went)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Describing motion or movement",
+    "example": "मुलगा वेगाने धावला.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Describing posture or state changes",
+    "example": "म्हातारी आजी खुर्चीवर बसली.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Personal reflection or arrival",
+    "example": "मी वेळेवर शाळेत पोहोचलो.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "तो काल रात्री उशिरा आला.",
+    "ko": "",
+    "highlight": "आला"
+   },
+   {
+    "en": "ती जोरात हसली.",
+    "ko": "",
+    "highlight": "हसली"
+   },
+   {
+    "en": "ते लहान मूल शांतपणे झोपले.",
+    "ko": "",
+    "highlight": "झोपले"
+   },
+   {
+    "en": "आम्ही मैदानात खूप पळालो.",
+    "ko": "",
+    "highlight": "पळालो"
+   },
+   {
+    "en": "मुली वेळेवर वर्गात आल्या.",
+    "ko": "",
+    "highlight": "आल्या"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "त्याने आला.",
+    "right": "तो आला.",
+    "note": "Intransitive verbs do NOT take the ergative/instrumental marker '-ने'. The subject stays nominative 'तो'."
+   },
+   {
+    "wrong": "ती घरी गेलो.",
+    "right": "ती घरी गेली.",
+    "note": "The feminine singular subject 'ती' requires the feminine past agreement ending '-ली'."
+   },
+   {
+    "wrong": "आम्ही काल बसलो नाहीस.",
+    "right": "आम्ही काल बसलो नाही.",
+    "note": "'-स' is for 2nd person singular ('तू'). First person plural with 'आम्ही' takes '-लो'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the intransitive sentence: 'ती मुलगी जोरात ___.' (That girl ran [feminine]).",
+    "options": [
+     "धावला",
+     "धावले",
+     "धावली",
+     "धावलो"
+    ],
+    "answer": 2,
+    "explanation": "'मुलगी' is feminine singular, so the intransitive past verb ends in '-ली' (धावली)."
+   },
+   {
+    "question": "Choose the correct form for a male speaker: 'मी गावाहून ___.' (I arrived/came).",
+    "options": [
+     "आलो",
+     "आली",
+     "आला",
+     "आले"
+    ],
+    "answer": 0,
+    "explanation": "A 1st-person masculine singular subject 'मी' takes the ending '-लो' (आलो)."
+   },
+   {
+    "question": "Fill in the blank: 'पक्षी आकाशात ___.' (The birds flew [masculine plural]).",
+    "options": [
+     "उडाला",
+     "उडाले",
+     "उडालो",
+     "उडाली"
+    ],
+    "answer": 1,
+    "explanation": "'पक्षी' here is masculine plural, requiring the agreement '-ले' (उडाले)."
+   },
+   {
+    "question": "Select the correct sentence with proper subject casing:",
+    "options": [
+     "मुलाने धावला.",
+     "मुलाला धावला.",
+     "मुलगा धावला.",
+     "मुलाने धावले."
+    ],
+    "answer": 2,
+    "explanation": "Intransitive verbs keep the subject in the unmarked nominative form ('मुलगा')."
+   }
+  ],
+  "tip": "Verbs of motion (जाणे, येणे, पळणे, निघणे) and states (झोपणे, बसणे, उठणे) are intransitive; never put '-ने' on their subjects!"
+ },
+ {
+  "id": "mr-a2-dative-subjects-experiencer-constructions",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🧠",
+  "title": "Dative Subject Constructions",
+  "subtitle": "Expressing internal states, obligations, and needs using the -ला marker",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "In Marathi experiencer constructions expressing feelings, illness, needs (पाहिजे), or obligations, the logical subject takes the dative suffix '-ला' while the verb or modal reflects the experienced thing.",
+  "structure": {
+   "headers": [
+    "Experiencer (+ला)",
+    "Experienced Item / State",
+    "Predicate Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "मला (To me)",
+      "पाणी (Water)",
+      "हवे आहे / पाहिजे (is needed)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "त्याला (To him)",
+      "ताप (Fever)",
+      "आला आहे (has come)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "आम्हाला (To us)",
+      "मराठी (Marathi)",
+      "समजते (is understood)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "तिला (To her)",
+      "गोष्टी (Stories)",
+      "आवडतात (are liked)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Expressing physical sensation or illness",
+    "example": "मला आज खूप भूक लागली आहे.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Expressing necessity or desire with पाहिजे",
+    "example": "रोहनला नवीन सायकल पाहिजे.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Expressing liking or taste with आवडणे",
+    "example": "मुलांना गोड आईस्क्रीम आवडते.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "मला थोडी विश्रांती पाहिजे.",
+    "ko": "",
+    "highlight": "मला"
+   },
+   {
+    "en": "त्याला डोकेदुखीचा त्रास होत आहे.",
+    "ko": "",
+    "highlight": "त्याला"
+   },
+   {
+    "en": "तिला शास्त्रीय संगीत खूप आवडते.",
+    "ko": "",
+    "highlight": "तिला"
+   },
+   {
+    "en": "आम्हाला हा नियम समजला नाही.",
+    "ko": "",
+    "highlight": "आम्हाला"
+   },
+   {
+    "en": "विद्यार्थ्यांना सुट्टी हवी आहे.",
+    "ko": "",
+    "highlight": "विद्यार्थ्यांना"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मी पाणी पाहिजे.",
+    "right": "मला पाणी पाहिजे.",
+    "note": "Needs expressed with 'पाहिजे' require the dative subject 'मला', never the nominative 'मी'."
+   },
+   {
+    "wrong": "तो आंबा आवडतो.",
+    "right": "त्याला आंबा आवडतो.",
+    "note": "The experiencer of liking must take the dative marker '-ला' (त्याला)."
+   },
+   {
+    "wrong": "मला आंबे आवडतो.",
+    "right": "मला आंबे आवडतात.",
+    "note": "The verb 'आवडतात' must agree in plural number with the liked items ('आंबे' - mangoes)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct pronoun: '___ चहा पाहिजे.' (I want tea).",
+    "options": [
+     "मी",
+     "माझे",
+     "मला",
+     "माझ्या"
+    ],
+    "answer": 2,
+    "explanation": "'पाहिजे' governs the dative experiencer case, so 'मला' (to me) is required."
+   },
+   {
+    "question": "Complete the sentence: 'सुरेशला क्रिकेट ___.' (Suresh likes cricket [masculine]).",
+    "options": [
+     "आवडतो",
+     "आवडते",
+     "आवडतात",
+     "आवडलीस"
+    ],
+    "answer": 0,
+    "explanation": "'क्रिकेट' is treated as masculine singular here, so the verb is 'आवडतो'."
+   },
+   {
+    "question": "Choose the right experiencer form: '___ खूप तहान लागली आहे.' (She is very thirsty).",
+    "options": [
+     "ती",
+     "तिचा",
+     "तिने",
+     "तिला"
+    ],
+    "answer": 3,
+    "explanation": "Involuntary bodily states take the dative case; feminine 3rd person singular becomes 'तिला'."
+   },
+   {
+    "question": "Pick the right form for 'We understand this': 'आम्हाला हे ___.'",
+    "options": [
+     "समजतोस",
+     "समजते",
+     "समजतो",
+     "समजतात"
+    ],
+    "answer": 1,
+    "explanation": "The pronoun 'हे' (this thing, neuter singular) governs the verb ending '-ते' (समजते)."
+   }
+  ],
+  "tip": "Whenever expressing 'want' (पाहिजे), 'like' (आवडणे), or bodily urges (भूक/तहान लागणे), immediately affix '-ला' to the person feeling it."
+ },
+ {
+  "id": "mr-a2-present-continuous-formation",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#EF4444",
+  "emoji": "⏳",
+  "title": "Present Continuous Tense",
+  "subtitle": "Constructing ongoing actions with imperfective participles and आहे",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "The present continuous tense is formed by adding the invariable suffix '-त' to the verb stem, followed by the present tense auxiliary 'आहे' conjugated for subject gender, number, and person.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Stem + त",
+    "Auxiliary (आहे)",
+    "Full Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "मी (I - Masc/Fem)",
+      "कर + त",
+      "आहे",
+      "I am doing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "तो (He - Masc.Sg)",
+      "वाच + त",
+      "आहे",
+      "He is reading"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ती (She - Fem.Sg)",
+      "गा + त",
+      "आहे",
+      "She is singing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ते / आम्ही (Plural)",
+      "खेळ + त",
+      "आहेत / आहोत",
+      "They / We are playing"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Action occurring at the exact moment of speech",
+    "example": "बाबा वर्तमानपत्र वाचत आहेत.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Temporary ongoing situation or activity",
+    "example": "मी सध्या एका प्रकल्पावर काम करत आहे.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Group activity in progress",
+    "example": "मुले बागेमध्ये चेंडूने खेळत आहेत.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "सुनील पुस्तक वाचत आहे.",
+    "ko": "",
+    "highlight": "वाचत आहे"
+   },
+   {
+    "en": "नेहा सुरेल गाणे गात आहे.",
+    "ko": "",
+    "highlight": "गात आहे"
+   },
+   {
+    "en": "आम्ही सर्वजण मराठी शिकत आहोत.",
+    "ko": "",
+    "highlight": "शिकत आहोत"
+   },
+   {
+    "en": "शेतकरी शेतात काम करत आहेत.",
+    "ko": "",
+    "highlight": "करत आहेत"
+   },
+   {
+    "en": "तू काय विचार करत आहेस?",
+    "ko": "",
+    "highlight": "करत आहेस"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मी काम करतो आहे.",
+    "right": "मी काम करत आहे.",
+    "note": "Use the invariable participle ending in '-त' (करत), not the habitual form 'करतो', for continuous actions."
+   },
+   {
+    "wrong": "आम्ही अभ्यास करत आहे.",
+    "right": "आम्ही अभ्यास करत आहोत.",
+    "note": "The auxiliary verb must agree with 1st person plural 'आम्ही' by using 'आहोत'."
+   },
+   {
+    "wrong": "ती पाणी पीत आहेत.",
+    "right": "ती पाणी पीत आहे.",
+    "note": "Singular non-honorific feminine 'ती' requires the singular auxiliary 'आहे', not plural 'आहेत'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Form the present continuous: 'आम्ही जेवण ___.' (We are eating food).",
+    "options": [
+     "जेवत आहोत",
+     "जेवतो आहे",
+     "जेवत आहे",
+     "जेवलो आहोत"
+    ],
+    "answer": 0,
+    "explanation": "Stem 'जेव' + '-त' plus the 1st person plural auxiliary 'आहोत' creates 'जेवत आहोत'."
+   },
+   {
+    "question": "Choose the right participle ending: 'मुलगा वेगाने धाव___ आहे.' (The boy is running fast).",
+    "options": [
+     "तो",
+     "त",
+     "ला",
+     "ऊन"
+    ],
+    "answer": 1,
+    "explanation": "The present continuous stem always receives the invariant suffix '-त' (धावत)."
+   },
+   {
+    "question": "Select the correct auxiliary for 'तू': 'तू काय लिहीत ___?' (What are you writing?)",
+    "options": [
+     "आहे",
+     "आहोत",
+     "आहेस",
+     "आहात"
+    ],
+    "answer": 2,
+    "explanation": "The 2nd person informal singular pronoun 'तू' pairs with 'आहेस'."
+   },
+   {
+    "question": "Complete the sentence honorifically: 'गुरुजी फळ्यावर लिहीत ___.' (The teacher is writing on the board).",
+    "options": [
+     "आहे",
+     "आहेत",
+     "आहोत",
+     "आहेस"
+    ],
+    "answer": 1,
+    "explanation": "Respected subjects like 'गुरुजी' require the honorific plural auxiliary 'आहेत'."
+   }
+  ],
+  "tip": "The continuous marker '-त' never changes for gender or number; only the ending auxiliary (आहे, आहेस, आहोत, आहेत) changes to match the subject!"
+ },
+ {
+  "id": "mr-a2-future-tense-suffixes",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔮",
+  "title": "Future Tense Formation and Agreement",
+  "subtitle": "Adding personal endings directly to verb stems to talk about tomorrow",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Marathi forms the simple future tense by appending synthetic person-number suffixes directly to the raw verb stem.",
+  "structure": {
+   "headers": [
+    "Person & Number",
+    "Suffix",
+    "Verb Stem (करणे)",
+    "Complete Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Person (मी / आम्ही)",
+      "-ईन / -ऊ",
+      "कर-",
+      "मी करीन / आम्ही करू"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd Person (तू / तुम्ही)",
+      "-शील / -आल",
+      "कर-",
+      "तू करशील / तुम्ही कराल"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person Sg. (तो / ती / ते)",
+      "-ईल",
+      "कर-",
+      "तो/ती/ते करेल (करील)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3rd Person Pl. (ते / त्या / ती)",
+      "-तील",
+      "कर-",
+      "ते/त्या/ती करतील"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Definite Future Intent",
+    "example": "मी उद्या सकाळी लवकर उठेन.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Predictions & Outcomes",
+    "example": "संध्याकाळी नक्की पाऊस पडेल.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Polite Queries & Promises",
+    "example": "आम्ही तुमचे काम वेळेवर पूर्ण करू.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "मी उद्या नवीन पुस्तक वाचेन.",
+    "ko": "",
+    "highlight": "वाचेन"
+   },
+   {
+    "en": "तू माझ्यासोबत बाजारात येशील का?",
+    "ko": "",
+    "highlight": "येशील"
+   },
+   {
+    "en": "तो आज रात्री उशिरा घरी येईल.",
+    "ko": "",
+    "highlight": "येईल"
+   },
+   {
+    "en": "आम्ही पुढच्या आठवड्यात गावाला जाऊ.",
+    "ko": "",
+    "highlight": "जाऊ"
+   },
+   {
+    "en": "सर्व मुले उद्या मैदानावर क्रिकेट खेळतील.",
+    "ko": "",
+    "highlight": "खेळतील"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मी उद्या काम करेल.",
+    "right": "मी उद्या काम करीन.",
+    "note": "The suffix -ईल/-एल is strictly for third-person singular (he/she/it); first-person 'I' requires -ईन."
+   },
+   {
+    "wrong": "तू पत्र लिहील.",
+    "right": "तू पत्र लिहिशील.",
+    "note": "Second-person informal 'तू' must take -शील, not third-person -ईल."
+   },
+   {
+    "wrong": "ते उद्या मुंबईला जाईन.",
+    "right": "ते उद्या मुंबईला जातील.",
+    "note": "Third-person plural requires the suffix -तील, whereas -ईन is reserved for first-person singular."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I will drink tea tomorrow: 'मी उद्या चहा _____.'",
+    "options": [
+     "प्यायला",
+     "प्यायलो",
+     "प्यालो",
+     "पिईन"
+    ],
+    "answer": 3,
+    "explanation": "First-person singular 'मी' takes the future suffix -ईन, turning root पि- into पिईन."
+   },
+   {
+    "question": "Will you (informal) come with us?: 'तू आमच्यासोबत _____ का?'",
+    "options": [
+     "येईल",
+     "येशील",
+     "येतील",
+     "आलास"
+    ],
+    "answer": 1,
+    "explanation": "The informal second-person pronoun 'तू' pairs with the suffix -शील."
+   },
+   {
+    "question": "She will write a letter: 'ती पत्र _____.'",
+    "options": [
+     "लिहील",
+     "लिहिलीस",
+     "लिहितात",
+     "लिहिणार आहोत"
+    ],
+    "answer": 0,
+    "explanation": "Third-person singular feminine 'ती' uses the future ending -ईल."
+   },
+   {
+    "question": "They will play football: 'ते फुटबॉल _____.'",
+    "options": [
+     "खेळू",
+     "खेळला",
+     "खेळतील",
+     "खेळतो"
+    ],
+    "answer": 2,
+    "explanation": "Third-person plural 'ते' requires the suffix -तील."
+   }
+  ],
+  "tip": "Unlike Hindi which adds separate inflected markers like 'गा/गे/गी', Marathi integrates the tense ending directly onto the verb root like Romance languages."
+ },
+ {
+  "id": "mr-a2-modal-verbs-shakne-and-pene",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔑",
+  "title": "Potential and Permission Modals (शकणे vs मिळणे)",
+  "subtitle": "Distinguishing internal capability from external permission and opportunity",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use roots + शकणे for direct personal ability, but pair the dative subject with an infinitive + मिळणे for permission or opportunity.",
+  "structure": {
+   "headers": [
+    "Modal Function",
+    "Structure",
+    "Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Physical Ability (Can)",
+      "Stem + शकणे",
+      "मी पोहू शकतो.",
+      "I can swim."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Permission / Chance",
+      "Dative + Inf. (-यला) + मिळणे",
+      "मला बोलू द्या / मला बोलायला मिळाले.",
+      "I got the chance to speak."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Acquired Skill / Know-how",
+      "Dative + Inf. (-ता) + येणे",
+      "मला गाडी चालवता येते.",
+      "I know how to drive."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Inherent Physical Capacity",
+    "example": "तो एवढे जड वजन सहज उचलू शकतो.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Granted Opportunity",
+    "example": "आज मला मुख्यमंत्र्यांना भेटायला मिळाले.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Learned Cognitive Skill",
+    "example": "तिला अस्खलित मराठी बोलायला येते.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "तू हे कठीण गणित सोडवू शकतोस का?",
+    "ko": "",
+    "highlight": "सोडवू शकतोस"
+   },
+   {
+    "en": "आम्ही आज वेळेवर पोहोचू शकलो नाही.",
+    "ko": "",
+    "highlight": "पोहोचू शकलो"
+   },
+   {
+    "en": "विद्यार्थ्यांना ग्रंथालयात अभ्यास करायला मिळतो.",
+    "ko": "",
+    "highlight": "करायला मिळतो"
+   },
+   {
+    "en": "मला काल चित्रपट पाहायला मिळाला नाही.",
+    "ko": "",
+    "highlight": "पाहायला मिळाला"
+   },
+   {
+    "en": "ती उत्तम गाणे गाऊ शकते.",
+    "ko": "",
+    "highlight": "गाऊ शकते"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मी आत येऊ मिळतो का?",
+    "right": "मी आत येऊ शकतो का?",
+    "note": "When asking direct personal ability or permission without dative casing, use the potential verb शकणे."
+   },
+   {
+    "wrong": "मला धावू शकतो.",
+    "right": "मी धावू शकतो.",
+    "note": "The verb शकणे takes a standard nominative subject (मी), not a dative subject (मला)."
+   },
+   {
+    "wrong": "मला अमेरिकेला जायला शकले.",
+    "right": "मला अमेरिकेला जायला मिळाले.",
+    "note": "For having the opportunity or fortune to go, Marathi uses dative + मिळणे rather than शकणे."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Can you lift this bag?: 'तू ही पिशवी उचलू _____ का?'",
+    "options": [
+     "मिळतोस",
+     "शकतोस",
+     "पाहिजेस",
+     "लागतोस"
+    ],
+    "answer": 1,
+    "explanation": "Direct capacity with nominative 'तू' demands the modal verb शकणे in 2nd person: शकतोस."
+   },
+   {
+    "question": "I got an opportunity to watch the match: 'मला सामना _____ मिळाला.'",
+    "options": [
+     "पाहतो",
+     "पाहू",
+     "पाहायला",
+     "पाहणे"
+    ],
+    "answer": 2,
+    "explanation": "The verb मिळणे governs an oblique/purposive infinitive ending in -यला (पाहायला)."
+   },
+   {
+    "question": "She cannot come today: 'ती आज येऊ _____ नाही.'",
+    "options": [
+     "शकत",
+     "मिळत",
+     "पाहिजे",
+     "आली"
+    ],
+    "answer": 0,
+    "explanation": "In negative present potentiality, शकणे takes its invariant participle stem शकत."
+   },
+   {
+    "question": "We did not get permission/a chance to enter: 'आम्हाला आत जायला _____ नाही.'",
+    "options": [
+     "शकले",
+     "पाहिजे",
+     "झाले",
+     "मिळाले"
+    ],
+    "answer": 3,
+    "explanation": "Opportunity with dative subject 'आम्हाला' uses negative past of मिळणे: मिळाले नाही."
+   }
+  ],
+  "tip": "Remember: शकणे = 'I am able' (nominative subject); मिळणे = 'Opportunity was received by me' (dative subject: मला, तुला, त्याला)."
+ },
+ {
+  "id": "mr-b1-causative-verb-derivations",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "Causative Verb Morphology (प्रयोजक क्रियापदे)",
+  "subtitle": "Transforming base verbs into transitive and causative actions using infixes",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Marathi creates causative verbs systematically by adding the infix -व- (-वि-) before the infinitive marker, turning 'to do' into 'to cause to do'.",
+  "structure": {
+   "headers": [
+    "Root Verb",
+    "Direct Causative",
+    "Secondary Causative",
+    "Semantic Shift"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "करणे (to do)",
+      "करवणे",
+      "करवून घेणे",
+      "to cause someone to do"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "बसणे (to sit)",
+      "बसवणे",
+      "बसवायला लावणे",
+      "to seat / make sit"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "खाणे (to eat)",
+      "भरवणे / खाऊ घालणे",
+      "खायला लावणे",
+      "to feed / make eat"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "हसणे (to laugh)",
+      "हसवणे",
+      "हसवायला लावणे",
+      "to make someone laugh"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Making Someone Perform an Action",
+    "example": "आई बाळाला घास भरवते.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Constructing or Commissioning",
+    "example": "बाबांनी गवंड्याकडून सुंदर घर बांधवले.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Entertaining or Provoking Reaction",
+    "example": "विदूषकाने सर्व प्रेक्षकांना मनापासून हसवले.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "आई लहान बाळाला शांत झोपवते.",
+    "ko": "",
+    "highlight": "झोपवते"
+   },
+   {
+    "en": "शिक्षकांनी विद्यार्थ्यांकडून निबंध लिहवून घेतला.",
+    "ko": "",
+    "highlight": "लिहवून"
+   },
+   {
+    "en": "त्या विनोदी नाटकाने आम्हांला खूप हसवले.",
+    "ko": "",
+    "highlight": "हसवले"
+   },
+   {
+    "en": "मालक नोकराकडून जड सामान उचलवतो.",
+    "ko": "",
+    "highlight": "उचलवतो"
+   },
+   {
+    "en": "त्याने मित्राला नवीन गाणे ऐकवले.",
+    "ko": "",
+    "highlight": "ऐकवले"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "आई मुलाला जेवण करते.",
+    "right": "आई मुलाला जेवण भरवते/करवते.",
+    "note": "करणे means simply 'to do/make'; causing an agent to eat requires the causative root भरवणे or जेवू घालणे."
+   },
+   {
+    "wrong": "शिक्षकाने मुलाला हसला.",
+    "right": "शिक्षकाने मुलाला हसवले.",
+    "note": "हसणे is intransitive (to laugh). Making another laugh requires transitive causative हसवणे with neuter agreement in the past."
+   },
+   {
+    "wrong": "तो गाडी चालवला.",
+    "right": "त्याने गाडी चालवली.",
+    "note": "Causative and transitive perfective verbs must take ergative agent marking (-ने) on the subject."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The joker makes everyone laugh: 'विदूषक सर्वांना _____.'",
+    "options": [
+     "हसतो",
+     "हसला",
+     "हसवतो",
+     "हसणार"
+    ],
+    "answer": 2,
+    "explanation": "The causative form of हसणे (to laugh) is हसवणे, conjugate for present tense: हसवतो."
+   },
+   {
+    "question": "Mother puts the baby to sleep: 'आई बाळाला _____.'",
+    "options": [
+     "झोपते",
+     "झोपवते",
+     "झोपला",
+     "झोपेल"
+    ],
+    "answer": 1,
+    "explanation": "The causative form of झोपणे (to sleep) is झोपवणे (to put to sleep)."
+   },
+   {
+    "question": "He got the letter written by his assistant: 'त्याने साहाय्यकाकडून पत्र _____ घेतले.'",
+    "options": [
+     "लिहून",
+     "लिहवून",
+     "लिहितो",
+     "लिहिला"
+    ],
+    "answer": 1,
+    "explanation": "The causative conjunctive participle form is लिहवून (having caused to write)."
+   },
+   {
+    "question": "The trainer made the horse run: 'प्रशिक्षकाने घोड्याला _____.'",
+    "options": [
+     "पळवले",
+     "धावला",
+     "पळतो",
+     "पळेल"
+    ],
+    "answer": 0,
+    "explanation": "The causative of पळणे (to run) is पळवणे, which takes neuter past ending -ले with dative object."
+   }
+  ],
+  "tip": "When deriving causatives, short stem vowels frequently undergo strengthening or simply insert the -व- suffix: बसणे → बसवणे, शिकणे → शिकवणे (to learn → to teach)."
+ },
+ {
+  "id": "mr-b1-conjunctive-participle-un",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#EC4899",
+  "emoji": "🔗",
+  "title": "Conjunctive Participle (-ऊन Suffix)",
+  "subtitle": "Connecting chronological actions smoothly into one fluid sentence",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "Add the suffix -ऊन to any verb root to signify 'having done X', joining consecutive actions sharing identical subjects without conjunctions.",
+  "structure": {
+   "headers": [
+    "Initial Verb",
+    "Conjunctive Participle",
+    "Second Verb",
+    "Combined Structure"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "खाणे (to eat)",
+      "खाऊन (having eaten)",
+      "पिणे (to drink)",
+      "जेवण खाऊन पाणी प्या."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "जाणे (to go)",
+      "जाऊन (having gone)",
+      "येणे (to come)",
+      "बाजारात जाऊन परत ये."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "हात धुणे (wash)",
+      "धुवून (having washed)",
+      "जेवणे (to dine)",
+      "हात धुवून जेवायला बस."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EC4899",
+    "label": "Sequential Chronological Steps",
+    "example": "मी सकाळी उठून ध्यान करतो.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Cause Preceding Effect",
+    "example": "तो बातमी ऐकून खूप आनंदी झाला.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Manner of Primary Action",
+    "example": "ती धावून वेळेवर पोहोचली.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "आम्ही चहा पिऊन कामाला सुरुवात केली.",
+    "ko": "",
+    "highlight": "पिऊन"
+   },
+   {
+    "en": "तो गृहपाठ संपवून मैदानावर खेळायला गेला.",
+    "ko": "",
+    "highlight": "संपवून"
+   },
+   {
+    "en": "विद्यार्थी गुरुजींना नमस्कार करून बसले.",
+    "ko": "",
+    "highlight": "करून"
+   },
+   {
+    "en": "आई बाजारात जाऊन भाजीपाला घेऊन आली.",
+    "ko": "",
+    "highlight": "जाऊन"
+   },
+   {
+    "en": "तिने शांतपणे विचार करून योग्य निर्णय घेतला.",
+    "ko": "",
+    "highlight": "करून"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मी जेवण केले आणि मी झोपलो.",
+    "right": "मी जेवण करून झोपलो.",
+    "note": "While 'आणि' is understood, native Marathi natural speech chains consecutive same-subject verbs using the -ऊन participle."
+   },
+   {
+    "wrong": "तो धावतो आणि पडला.",
+    "right": "तो धावून पडला.",
+    "note": "Use the conjunctive stem धावून instead of mixing unmatched finite verb tenses across clauses."
+   },
+   {
+    "wrong": "पाऊस पडून मी छत्री घेतली.",
+    "right": "पाऊस पडल्यामुळे मी छत्री घेतली.",
+    "note": "Do not use -ऊन when the two clauses have distinct subjects (पाऊस vs मी); use causal subordinators like -मुळे instead."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Wash your hands and eat food: 'हात _____ जेवायला बस.'",
+    "options": [
+     "धुतला",
+     "धुणे",
+     "धुवून",
+     "धुतो"
+    ],
+    "answer": 2,
+    "explanation": "The conjunctive participle of धुणे (to wash) is formed by adding -ऊन: धुवून."
+   },
+   {
+    "question": "Having heard the news, she wept: 'बातमी _____ ती रडू लागली.'",
+    "options": [
+     "ऐकून",
+     "ऐकतो",
+     "ऐकणार",
+     "ऐकले"
+    ],
+    "answer": 0,
+    "explanation": "Root ऐक- plus suffix -ऊन yields ऐकून ('having heard')."
+   },
+   {
+    "question": "Finish your work and go home: 'काम _____ घरी जा.'",
+    "options": [
+     "करा",
+     "करून",
+     "केले",
+     "करशील"
+    ],
+    "answer": 1,
+    "explanation": "The irregular conjunctive participle of करणे is करून."
+   },
+   {
+    "question": "Having arrived at the station, we called him: 'आम्ही स्थानकावर _____ त्याला फोन केला.'",
+    "options": [
+     "पोहोचलो",
+     "पोहोचतो",
+     "पोहोचता",
+     "पोहोचून"
+    ],
+    "answer": 3,
+    "explanation": "Root पोहोच- plus conjunctive suffix -ऊन yields पोहोचून."
+   }
+  ],
+  "tip": "Verb stems ending in vowels often undergo glide insertions or contractions: करणे becomes करून, and धुणे becomes धुवून."
+ },
+ {
+  "id": "mr-b1-obligative-and-desiderative-moods",
+  "level": "b1",
+  "category": "modals",
+  "categoryColor": "#F59E0B",
+  "emoji": "📋",
+  "title": "Necessity and Obligation (-आवे लागते / -ायचे आहे)",
+  "subtitle": "Differentiating external compulsion from personal duties and intentions",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Use the potential stem + लागणे for inescapable external compulsion, and the verbal noun (-ायचे) + असणे for personal plans or duties.",
+  "structure": {
+   "headers": [
+    "Type of Necessity",
+    "Grammar Formula",
+    "Marathi Example",
+    "Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "External Compulsion",
+      "Dative + Stem-आवे लागते",
+      "मला रोज जावे लागते.",
+      "Unavoidable external force / daily rule"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Intended Obligation",
+      "Dative + Stem-ायचे आहे",
+      "मला अभ्यास करायचा आहे.",
+      "Personal plan, duty, or strong desire"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Moral Obligation",
+      "Stem-आवे / पाहिजे",
+      "तुम्ही काळजी घ्यावी.",
+      "Ethical duty, advice, or polite mandate"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Imposed Routine or Law",
+    "example": "प्रत्येक नागरिकाला कर भरावा लागतो.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Personal Daily Objective",
+    "example": "मला आज संध्याकाळी किराणा आणायचा आहे.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Ethical Guidance",
+    "example": "आपण नेहमी खरे बोलावे.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "मला दररोज सकाळी पाच वाजता उठावे लागते.",
+    "ko": "",
+    "highlight": "उठावे लागते"
+   },
+   {
+    "en": "त्याला आज तातडीने पुणे गाठावे लागले.",
+    "ko": "",
+    "highlight": "गाठावे लागले"
+   },
+   {
+    "en": "मला हे पुस्तक दोन दिवसांत वाचायचे आहे.",
+    "ko": "",
+    "highlight": "वाचायचे आहे"
+   },
+   {
+    "en": "आम्हाला नवीन घर विकत घ्यायचे आहे.",
+    "ko": "",
+    "highlight": "घ्यायचे आहे"
+   },
+   {
+    "en": "विद्यार्थ्यांनी वर्गात शांतता राखली पाहिजे.",
+    "ko": "",
+    "highlight": "पाहिजे"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मी जावे लागते.",
+    "right": "मला जावे लागते.",
+    "note": "Impersonal obligative constructions with लागणे require the subject in the dative case (मला, not मी)."
+   },
+   {
+    "wrong": "मला आंबा खायचा लागते.",
+    "right": "मला आंबा खावा लागतो.",
+    "note": "The verb preceding लागणे must end in -आवे agreement markers (-आवा/-आवी/-आवे), matching the gender/number of the object."
+   },
+   {
+    "wrong": "मला गृहपाठ करायला पाहिजे आहे.",
+    "right": "मला गृहपाठ करायचा आहे.",
+    "note": "Do not blend पाहिजे with आहे; personal intention uses the -ायचे आहे construction directly."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I have to wake up early every day (compulsion): 'मला दररोज लवकर _____.'",
+    "options": [
+     "उठावे लागते",
+     "उठतो आहे",
+     "उठायचे होते",
+     "उठू शकतो"
+    ],
+    "answer": 0,
+    "explanation": "Routine external necessity uses the dative subject + -आवे लागते construction."
+   },
+   {
+    "question": "I want/plan to buy a new laptop: 'मला नवीन लॅपटॉप _____.'",
+    "options": [
+     "घ्यावे लागते",
+     "खरेदी करावे",
+     "घ्यायचा आहे",
+     "घेतला पाहिजे"
+    ],
+    "answer": 2,
+    "explanation": "A masculine object (लॅपटॉप) pairs with personal desiderative marker -आयचा आहे (घ्यायचा आहे)."
+   },
+   {
+    "question": "He had to pay a fine yesterday: 'त्याला काल दंड _____.'",
+    "options": [
+     "भरावा लागला",
+     "भरायचे आहे",
+     "भरतो",
+     "भरला पाहिजे"
+    ],
+    "answer": 0,
+    "explanation": "Past external obligation for masculine object 'दंड' requires भरावा लागला."
+   },
+   {
+    "question": "You ought to tell the truth: 'तुम्ही सत्य _____.'",
+    "options": [
+     "बोलावे",
+     "बोलतो",
+     "बोलायचे आहे",
+     "बोलले"
+    ],
+    "answer": 0,
+    "explanation": "Moral propriety or polite imperative takes the -आवे subjunctive suffix (बोलावे)."
+   }
+  ],
+  "tip": "Pay attention to gender agreement! In 'मला आंबा खायचा आहे' vs 'मला पोळी खायची आहे', the -ायचे suffix shifts to -आयचा (masc.) or -आयची (fem.) to match the object."
+ },
+ {
+  "id": "mr-b1-relative-correlative-clauses",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔗",
+  "title": "Relative-Correlative Syntax (जो... तो / जे... ते)",
+  "subtitle": "Linking relative conditions and descriptions with correlative pronouns",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Marathi relative clauses introduce an entity with a 'ज-' pronoun and resolve it in the main clause with a matching 'त-' correlative pronoun.",
+  "structure": {
+   "headers": [
+    "Gender/Number",
+    "Relative (ज-)",
+    "Correlative (त-)",
+    "Example Clause"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Singular",
+      "जो",
+      "तो",
+      "जो अभ्यास करतो, तो उत्तीर्ण होतो."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine Singular",
+      "जी",
+      "ती",
+      "जी मुलगी धावते, ती माझी बहीण आहे."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter Singular",
+      "जे",
+      "ते",
+      "जे चकाकते, ते सर्व सोने नसते."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural (All Genders)",
+      "जे / ज्या",
+      "ते / त्या",
+      "ज्या गाड्या निघाल्या, त्या वेळेवर पोहोचल्या."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Proverbs & Maxims",
+    "example": "करावे तसे भरावे.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Identifying People",
+    "example": "जो माणूस काल आला होता, तो डॉक्टर आहे.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Conditional Outcomes",
+    "example": "जे पेराल, तेच उगवेल.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "जो मेहनत करतो, तो नक्की यशस्वी होतो.",
+    "ko": "",
+    "highlight": "जो मेहनत करतो, तो"
+   },
+   {
+    "en": "जी गाडी पहिली येईल, ती आपल्याला मिळेल.",
+    "ko": "",
+    "highlight": "जी गाडी पहिली येईल, ती"
+   },
+   {
+    "en": "जे सत्य असते, ते कधी लपत नाही.",
+    "ko": "",
+    "highlight": "जे सत्य असते, ते"
+   },
+   {
+    "en": "ज्यांनी मदत केली, त्यांचे आभार माना.",
+    "ko": "",
+    "highlight": "ज्यांनी मदत केली, त्यांचे"
+   },
+   {
+    "en": "जिथे शांतता असते, तिथे सुख नांदते.",
+    "ko": "",
+    "highlight": "जिथे शांतता असते, तिथे"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "जो मुलगी गाते, तो छान आहे.",
+    "right": "जी मुलगी गाते, ती छान आहे.",
+    "note": "Relative pronouns must match the gender of the noun; मुलगी is feminine and takes जी... ती."
+   },
+   {
+    "wrong": "जे काम तू केले, तो चांगले आहे.",
+    "right": "जे काम तू केले, ते चांगले आहे.",
+    "note": "काम is neuter, so both the relative and correlative must match in neuter: जे... ते."
+   },
+   {
+    "wrong": "जो अभ्यास करतो, आणि तो पास होतो.",
+    "right": "जो अभ्यास करतो, तो पास होतो.",
+    "note": "Do not insert आणि between the relative clause and the correlative clause."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the maxim: 'All that glitters is not gold.' -> ___ चकाकते, ते सोने नसते.",
+    "options": [
+     "जो",
+     "जी",
+     "जे",
+     "ज्या"
+    ],
+    "answer": 2,
+    "explanation": "The neuter pronoun जे matches the correlative pronoun ते."
+   },
+   {
+    "question": "Complete the pair: 'He who works hard succeeds.' -> ___ कष्ट करतो, तो पुढे जातो.",
+    "options": [
+     "जो",
+     "जी",
+     "जे",
+     "जसे"
+    ],
+    "answer": 0,
+    "explanation": "The correlative तो is masculine singular, so it pairs with masculine relative जो."
+   },
+   {
+    "question": "Complete the sentence: 'The girl who ran fast won.' -> ___ मुलगी जोरात धावली, ती जिंकली.",
+    "options": [
+     "जो",
+     "जे",
+     "ज्या",
+     "जी"
+    ],
+    "answer": 3,
+    "explanation": "मुलगी is feminine singular, requiring the feminine relative pronoun जी."
+   },
+   {
+    "question": "Match the adverbial relative: 'Where there is water, there is life.' -> जिथे पाणी असते, ___ जीवन असते.",
+    "options": [
+     "कधी",
+     "तिथे",
+     "तेव्हा",
+     "कसे"
+    ],
+    "answer": 1,
+    "explanation": "The spatial relative adverb जिथे ('where') pairs with correlative तिथे ('there')."
+   }
+  ],
+  "tip": "Remember the golden rule of Marathi syntax: ज- words set up the clause, and त- words complete the thought."
+ },
+ {
+  "id": "mr-b1-compound-verbs-vector-auxiliaries",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🚀",
+  "title": "Compound Verbs with Aspectual Auxiliaries (टाकणे, देणे, घेणे)",
+  "subtitle": "Using vector auxiliaries to specify completeness, direction, and attitude",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "A compound verb joins a conjunctive stem ending in -ऊन with a vector auxiliary to add nuance like suddenness, self-benefit, or other-directed action.",
+  "structure": {
+   "headers": [
+    "Vector Verb",
+    "Underlying Meaning",
+    "Nuance Added",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "टाकणे (to throw/drop)",
+      "Forceful completion",
+      "Disposal, finality, haste",
+      "त्याने काम संपवून टाकले."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "देणे (to give)",
+      "Outward action",
+      "Benefiting someone else",
+      "मी त्याला पुस्तक वाचून दिले."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "घेणे (to take)",
+      "Inward action",
+      "Self-benefit, reflection",
+      "त्याने नवीन गोष्ट शिकून घेतली."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "जाणे (to go)",
+      "Process to completion",
+      "Irreversibility, transition",
+      "दूध सांडून गेले."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Drastic/Decisive Action",
+    "example": "त्याने जुने पत्र फाडून टाकले.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Self-Directed Activity",
+    "example": "मी माझे कपडे इस्त्री करून घेतले.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Assisting Others",
+    "example": "आईने मुलाला गोष्ट सांगून दिली.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "त्याने सगळे जेवण संपवून टाकले.",
+    "ko": "",
+    "highlight": "संपवून टाकले"
+   },
+   {
+    "en": "शिक्षकांनी विद्यार्थ्यांना कविता समजावून दिली.",
+    "ko": "",
+    "highlight": "समजावून दिली"
+   },
+   {
+    "en": "मी ही नवी भाषा शिकून घेतली.",
+    "ko": "",
+    "highlight": "शिकून घेतली"
+   },
+   {
+    "en": "तो मुलगा धावताना खाली पडून गेला.",
+    "ko": "",
+    "highlight": "पडून गेला"
+   },
+   {
+    "en": "तिने सर्व जुनी पुस्तके विकून टाकली.",
+    "ko": "",
+    "highlight": "विकून टाकली"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मी स्वतःसाठी चहा करून दिला.",
+    "right": "मी स्वतःसाठी चहा करून घेतला.",
+    "note": "Actions done for one's own benefit require घेणे (करून घेतला), while देणे implies benefiting someone else."
+   },
+   {
+    "wrong": "त्याने कागद फाडणे टाकले.",
+    "right": "त्याने कागद फाडून टाकले.",
+    "note": "The primary verb must take the conjunctive participle form ending in -ऊन (फाडून), not the infinitive."
+   },
+   {
+    "wrong": "दूध संपवून गेले.",
+    "right": "दूध संपून गेले.",
+    "note": "Involuntary intransitive processes take संपून with जाणे, not the causative संपवून."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the vector verb indicating self-benefit: 'I understood the lesson (for myself).' -> मी धडा समजून ___.",
+    "options": [
+     "दिला",
+     "घेतला",
+     "टाकला",
+     "गेला"
+    ],
+    "answer": 1,
+    "explanation": "घेणे indicates an inward action performed for the subject's own comprehension or benefit."
+   },
+   {
+    "question": "Express decisive completion/riddance: 'He tore up the letter.' -> त्याने पत्र फाडून ___.",
+    "options": [
+     "घेतले",
+     "दिले",
+     "टाकले",
+     "पडले"
+    ],
+    "answer": 2,
+    "explanation": "टाकणे conveys decisive, irreversible completion and disposal."
+   },
+   {
+    "question": "Indicate an action done to help someone else: 'She explained the problem to her friend.' -> तिने मैत्रिणीला प्रश्न समजावून ___.",
+    "options": [
+     "दिला",
+     "घेतला",
+     "टाकला",
+     "गेला"
+    ],
+    "answer": 0,
+    "explanation": "देणे expresses an action directed outward for the benefit of another person."
+   },
+   {
+    "question": "Express unintentional change of state: 'The cat drank up all the milk and ran away.' -> मांजर दूध पिऊन ___.",
+    "options": [
+     "टाकली",
+     "घेतली",
+     "दिली",
+     "गेली"
+    ],
+    "answer": 3,
+    "explanation": "निघून जाणे / पिऊन जाणे uses जाणे to depict complete departure or final state transition."
+   }
+  ],
+  "tip": "To choose between देणे and घेणे, ask: 'Who is the receiver of the benefit?' If it flows outward to another, use देणे; if inward to oneself, use घेणे."
+ },
+ {
+  "id": "mr-b2-neutral-voice-bhave-prayog",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#4F46E5",
+  "emoji": "⚖️",
+  "title": "Neuter Impersonal Construction (भावे प्रयोग)",
+  "subtitle": "When neither subject nor object controls the verb",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "When both subject and direct object carry postpositional markers, the verb is frozen in the third-person neuter singular ending (-ले).",
+  "structure": {
+   "headers": [
+    "Case Marking Pattern",
+    "Marathi Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Subject-ने + Object-ला",
+      "रामाने रावणाला मारले",
+      "Rama killed Ravana"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Subject-ने + Object-स",
+      "शिक्षकांनी मुलास शिकवले",
+      "The teacher taught the boy"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Intransitive (Subject-ने)",
+      "त्याने घरी जावे",
+      "He should go home"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Intransitive Involuntary",
+      "मला आता चालवते",
+      "I am able to walk now"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Transitive Perfective with Definite Object",
+    "example": "पोलिसांनी चोराला पकडले.",
+    "translation": ""
+   },
+   {
+    "color": "#3730A3",
+    "label": "Prescriptive / Obligative (विध्यर्थ)",
+    "example": "सर्वांनी नियमांचे पालन करावे.",
+    "translation": ""
+   },
+   {
+    "color": "#312E81",
+    "label": "Involuntary Intransitive Action",
+    "example": "आजोबांना आता बसवले.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "आईने बाळाला झोपवले.",
+    "ko": "",
+    "highlight": "झोपवले"
+   },
+   {
+    "en": "शिक्षकांनी विद्यार्थ्यांना समजावून सांगितले.",
+    "ko": "",
+    "highlight": "सांगितले"
+   },
+   {
+    "en": "रामाने रावणाला युद्धात मारले.",
+    "ko": "",
+    "highlight": "मारले"
+   },
+   {
+    "en": "त्यांनी कुत्र्याला घराबाहेर काढले.",
+    "ko": "",
+    "highlight": "काढले"
+   },
+   {
+    "en": "मुलांनी मांजराला वाचवले.",
+    "ko": "",
+    "highlight": "वाचवले"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "आईने बाळाला झोपवला.",
+    "right": "आईने बाळाला झोपवले.",
+    "note": "Because the direct object has the marker -ला, the verb cannot agree with it and must end in neuter singular -ले."
+   },
+   {
+    "wrong": "रामाने सीतेला पाहिली.",
+    "right": "रामाने सीतेला पाहिले.",
+    "note": "Even though Sita is feminine, the marker -ला blocks feminine agreement on the verb."
+   },
+   {
+    "wrong": "पोलिसांनी चोरांना पकडलेत.",
+    "right": "पोलिसांनी चोरांना पकडले.",
+    "note": "Do not add plural agreement suffixes to impersonal verbs; keep the strict 3rd-person neuter singular -ले."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct verb form: शिक्षकांनी सर्व मुलांना वर्गात ___.",
+    "options": [
+     "बोलावले",
+     "बोलावला",
+     "बोलावली",
+     "बोलावल्या"
+    ],
+    "answer": 0,
+    "explanation": "Both subject and object take case markers, so the verb defaults strictly to third-person neuter singular ending in -ले."
+   },
+   {
+    "question": "Complete the sentence correctly: मांजराने उंदराला शेवटी ___.",
+    "options": [
+     "पकडला",
+     "पकडले",
+     "पकडली",
+     "पकडलेत"
+    ],
+    "answer": 1,
+    "explanation": "The object उंदीर takes the accusative marker -ला, preventing agreement and triggering the neuter form पकडले."
+   },
+   {
+    "question": "Identify the correct form: पोलिसांनी त्या आरोपीला ताबडतोब ___.",
+    "options": [
+     "अटक केली",
+     "अडकवला",
+     "अटकवले",
+     "अटकवलास"
+    ],
+    "answer": 2,
+    "explanation": "The impersonal causal verb takes the neutral -ले ending when the object carries -ला."
+   },
+   {
+    "question": "Which sentence demonstrates proper Bhave Prayog (भावे प्रयोग)?",
+    "options": [
+     "राधा आंबा खाते.",
+     "रामाने पेरू खाल्ला.",
+     "राधाने पुस्तके वाचली.",
+     "राधाने मीराला पाहिले."
+    ],
+    "answer": 3,
+    "explanation": "Both Radha (-ने) and Meera (-ला) have markers, yielding the invariant neuter verb पाहिले."
+   }
+  ],
+  "tip": "If you see -ने on the subject AND -ला on the object, the verb suffix is virtually guaranteed to end with neuter -ले."
+ },
+ {
+  "id": "mr-b2-conditional-and-unreal-past",
+  "level": "b2",
+  "category": "conditionals",
+  "categoryColor": "#059669",
+  "emoji": "🌿",
+  "title": "Irrealis Conditionals (संकेतार्थ -ता / -ते)",
+  "subtitle": "Expressing hypothetical, unrealized conditions and counterfactual pasts",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Unreal conditionals pair hypothetical condition and consequence clauses using habitual past suffixes (-ता, -ती, -ते, -तो) across both verbs.",
+  "structure": {
+   "headers": [
+    "Gender / Number",
+    "Marker Form",
+    "Marathi Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Singular",
+      "-ता",
+      "तो आला असता"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine Singular",
+      "-ती",
+      "ती आली असती"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter Singular / Masc Plural",
+      "-ते",
+      "ते आले असते"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine Plural",
+      "-त्या",
+      "त्या आल्या असत्या"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Past Counterfactual Consequence",
+    "example": "तू अभ्यास केला असतास तर उत्तीर्ण झाला असतास.",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "Hypothetical Present/Future Wish",
+    "example": "पाऊस पडला तर शेतकरी आनंदी होतील.",
+    "translation": ""
+   },
+   {
+    "color": "#064E3B",
+    "label": "Unrealized Opportunity in the Past",
+    "example": "गाडी वेळेवर आली असती तर आम्ही पोहोचलो असतो.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "तू वेळेवर आला असतास तर आपण भेटलो असतो.",
+    "ko": "",
+    "highlight": "आला असतास"
+   },
+   {
+    "en": "चांगला पाऊस पडता तर पिके छान आली असती.",
+    "ko": "",
+    "highlight": "पिके छान आली असती"
+   },
+   {
+    "en": "मी तिथे असतो तर त्याला नक्की मदत केली असती.",
+    "ko": "",
+    "highlight": "मदत केली असती"
+   },
+   {
+    "en": "पैसे असते तर मी नवीन घर विकत घेतले असते.",
+    "ko": "",
+    "highlight": "विकत घेतले असते"
+   },
+   {
+    "en": "तिने औषध घेतले असते तर ती बरी झाली असती.",
+    "ko": "",
+    "highlight": "बरी झाली असती"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "तू आला तर मी गेलो.",
+    "right": "तू आला असतास तर मी गेलो असतो.",
+    "note": "Counterfactual past conditions require the conditional auxiliary असता paired with the conditional verb form."
+   },
+   {
+    "wrong": "ती आली असती तर काम झाले असता.",
+    "right": "ती आली असती तर काम झाले असते.",
+    "note": "The neuter subject काम requires the neuter auxiliary असते, not masculine असता."
+   },
+   {
+    "wrong": "आम्ही अभ्यास केला तर पास झालो असतो.",
+    "right": "आम्ही अभ्यास केला असता तर पास झालो असतो.",
+    "note": "Both clauses in counterfactual past sentences must reflect the irrealis conditional morphology."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the counterfactual sentence: जर पाऊस पडला असता, तर धरण ___.",
+    "options": [
+     "भरते",
+     "भरले असते",
+     "भरेल",
+     "भरले"
+    ],
+    "answer": 1,
+    "explanation": "The protasis is past counterfactual, so the neuter noun धरण takes the auxiliary clause भरले असते."
+   },
+   {
+    "question": "Select the correct second-person masculine form: जर तू बोलावले असतेस, तर मी नक्की ___.",
+    "options": [
+     "आलो",
+     "येईन",
+     "आलो असतो",
+     "येतो"
+    ],
+    "answer": 2,
+    "explanation": "A counterfactual statement by a masculine speaker takes the habitual past auxiliary आलो असतो."
+   },
+   {
+    "question": "Choose the grammatically matching form: ती मुलगी इथे असती तर तिने गाणे ___.",
+    "options": [
+     "म्हटली असती",
+     "म्हणते",
+     "म्हणाली",
+     "म्हटले असते"
+    ],
+    "answer": 3,
+    "explanation": "The verb agrees with the neuter noun गाणे in transitive perfective, resulting in म्हटले असते."
+   },
+   {
+    "question": "Which conjunction pair correctly frames this conditional?",
+    "options": [
+     "जरी ... तरी",
+     "जर ... तर",
+     "म्हणून ... कारण",
+     "कारण ... म्हणून"
+    ],
+    "answer": 1,
+    "explanation": "Irrealis conditional statements are standardly constructed using the correlative pair जर ... तर."
+   }
+  ],
+  "tip": "Remember to match the gender and number of the auxiliary असता/असती/असते to the controlling noun of each respective clause."
+ },
+ {
+  "id": "mr-b2-passive-voice-and-inability-constructions",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#EA580C",
+  "emoji": "🛡️",
+  "title": "Passive and Incapacitative Voice (कर्मणी and शक्य प्रयोग)",
+  "subtitle": "Passive constructions with जाणे and physiological capacity markers",
+  "color": "#C2410C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Formal passive voice uses the past participle with auxiliary जाणे, while physiological ability or inability inflects the verbal root with -व-.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Grammatical Pattern",
+    "Marathi Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Analytical Passive",
+      "Past Participle + जाणे",
+      "आदेश दिला गेला"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Agentive Marker",
+      "Subject + कडून",
+      "सरकारकडून रस्ता बांधला गेला"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Incapacitative (Negative)",
+      "Dative Subject + Verb-वत नाही",
+      "माझ्याने/मला चालवत नाही"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Potential (Positive)",
+      "Dative Subject + Verb-वते",
+      "आजोबांना आता फिरवते"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#C2410C",
+    "label": "Formal / Institutional Passive",
+    "example": "हा निर्णय समितीकडून घेण्यात आला.",
+    "translation": ""
+   },
+   {
+    "color": "#9A3412",
+    "label": "Physiological / Inherent Inability",
+    "example": "तब्बेत बरी नसल्यामुळे त्याला जेवत नाही.",
+    "translation": ""
+   },
+   {
+    "color": "#7C2D12",
+    "label": "Recovered Physical Capacity",
+    "example": "औषध घेतल्यावर रुग्णाला आता बोलवते.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "चोर पोलिसांकडून पकडला गेला.",
+    "ko": "",
+    "highlight": "पकडला गेला"
+   },
+   {
+    "en": "पाय दुखत असल्याने मला डोंगर चढवत नाही.",
+    "ko": "",
+    "highlight": "चढवत नाही"
+   },
+   {
+    "en": "शहरात नवीन पूल बांधला जात आहे.",
+    "ko": "",
+    "highlight": "बांधला जात आहे"
+   },
+   {
+    "en": "ताप आल्यामुळे मुलाला खावत नाही.",
+    "ko": "",
+    "highlight": "खावत नाही"
+   },
+   {
+    "en": "सर्व कागदपत्रे वेळेवर पाठवली गेली.",
+    "ko": "",
+    "highlight": "पाठवली गेली"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मी हे काम केले जात आहे.",
+    "right": "माझ्याकडून हे काम केले जात आहे.",
+    "note": "In passive sentences with जाणे, the human agent must be marked by कडून, not simple nominative pronoun मी."
+   },
+   {
+    "wrong": "मला चालत नाही.",
+    "right": "मला चालवत नाही.",
+    "note": "The incapacitative construction requires the potential stem infix -व- (चालवत नाही, not चालत नाही)."
+   },
+   {
+    "wrong": "पत्र लिहिला गेला.",
+    "right": "पत्र लिहिले गेले.",
+    "note": "Since पत्र is neuter singular, the participle and auxiliary verb must both agree in neuter form: लिहिले गेले."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct analytical passive: 'The bridge was built by the government.'",
+    "options": [
+     "सरकारने पूल बांधला.",
+     "शासनाकडून पूल बांधला गेला.",
+     "शासनाने पूल बांधला जातो.",
+     "शासनाला पूल बांधवला."
+    ],
+    "answer": 1,
+    "explanation": "The analytical passive uses the agentive marker कडून alongside the auxiliary form बांधला गेला."
+   },
+   {
+    "question": "Express incapacitative inability: 'Due to weakness, she cannot walk.'",
+    "options": [
+     "तिला चालत नाही.",
+     "ती चालू शकत नाही.",
+     "तिच्याने चालवत नाही.",
+     "ती चालत नाही."
+    ],
+    "answer": 2,
+    "explanation": "Physiological involuntary incapacity is expressed via the instrumental or dative subject with the -वत stem: तिच्याने चालवत नाही."
+   },
+   {
+    "question": "Select the correct neuter plural passive ending: सर्व पुस्तके काल ग्रंथालयात ___.",
+    "options": [
+     "जमा केली गेली",
+     "जमा केले गेले",
+     "जमा केली गेल्या",
+     "जमा केला गेला"
+    ],
+    "answer": 0,
+    "explanation": "पुस्तके is neuter plural; the past participle and passive auxiliary take the neuter plural -ली ending (जमा केली गेली)."
+   },
+   {
+    "question": "Select the appropriate capacity verb form: ताप कमी झाल्यावर आता त्याला थोडेफार ___.",
+    "options": [
+     "जेवतो",
+     "जेवले",
+     "जेवते",
+     "जेववते"
+    ],
+    "answer": 3,
+    "explanation": "The potential stem adds infix -व-, resulting in जेववते when indicating acquired physical capacity."
+   }
+  ],
+  "tip": "Distinguish between modal impossibility (शकत नाही - mental or external barrier) and incapacitative voice (-वत नाही - internal physical barrier)."
+ }
+]

@@ -1,0 +1,3331 @@
+[
+ {
+  "id": "ne-a1-copulas-ho-vs-cha",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "⚖️",
+  "title": "Equational vs Existential Copulas (हो vs छ)",
+  "subtitle": "Distinguish between defining identity and stating location or temporary conditions.",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Use हो (ho) to equate or define what something is, and छ (cha) to describe location, existence, or temporary physical qualities.",
+  "structure": {
+   "headers": [
+    "Copula",
+    "Negative",
+    "Core Function",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "हो (ho)",
+      "होइन (hoina)",
+      "Identity / Definition (A = B)",
+      "म विद्यार्थी हो।"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "छ (cha)",
+      "छैन (chhaina)",
+      "Location / Existence / Quality",
+      "किताब टेबलमा छ।"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "हुनुहुन्छ (hunuhunchha)",
+      "हुनुहुन्न (hunuhunna)",
+      "High Honorific (Identity & State)",
+      "उहाँ डाक्टर हुनुहुन्छ।"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Identity & Classification",
+    "example": "यो कलम हो।",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Location & Presence",
+    "example": "घरमा कोठा छ।",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Temporary Physical Quality",
+    "example": "चिया तातो छ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "यो मेरो किताब हो।",
+    "ko": "",
+    "highlight": "हो"
+   },
+   {
+    "en": "यो पानी चिसो छ।",
+    "ko": "",
+    "highlight": "छ"
+   },
+   {
+    "en": "उहाँ शिक्षक होइन।",
+    "ko": "",
+    "highlight": "होइन"
+   },
+   {
+    "en": "आज कोठामा कोही छैन।",
+    "ko": "",
+    "highlight": "छैन"
+   },
+   {
+    "en": "स्याउ रातो छ।",
+    "ko": "",
+    "highlight": "छ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "काठमाडौँ नेपालमा हो।",
+    "right": "काठमाडौँ नेपालमा छ।",
+    "note": "Use छ (cha) for location, not हो (ho)."
+   },
+   {
+    "wrong": "म नेपाली छ।",
+    "right": "म नेपाली हुँ।",
+    "note": "Nationalities and core identities require the equational verb हो/हुँ."
+   },
+   {
+    "wrong": "पानी तातो हो।",
+    "right": "पानी तातो छ।",
+    "note": "Variable physical states like temperature require छ (cha)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "This is a pen. -> यो कलम ___।",
+    "options": [
+     "छ",
+     "हो",
+     "हुन्",
+     "छन्"
+    ],
+    "answer": 1,
+    "explanation": "Equating 'this' with 'a pen' is an identity statement, so 'हो' is required."
+   },
+   {
+    "question": "The tea is cold. -> चिया चिसो ___।",
+    "options": [
+     "छ",
+     "हो",
+     "हुन्",
+     "हुनुहुन्छ"
+    ],
+    "answer": 0,
+    "explanation": "A physical condition like cold temperature requires 'छ'."
+   },
+   {
+    "question": "The keys are not on the table. -> चाबी टेबलमा ___।",
+    "options": [
+     "होइन",
+     "छन्",
+     "छैन",
+     "हुँदैन"
+    ],
+    "answer": 2,
+    "explanation": "Negating presence or location requires 'छैन'."
+   },
+   {
+    "question": "He is not a teacher. -> उहाँ शिक्षक ___।",
+    "options": [
+     "छैन",
+     "हुनुहुन्न",
+     "हुन्",
+     "छन्"
+    ],
+    "answer": 1,
+    "explanation": "For high honorific subjects (उहाँ), the negative equational copula is 'हुनुहुन्न'."
+   }
+  ],
+  "tip": "Think of हो as an equals sign (=) and छ as expressing 'exists in a place or condition'."
+ },
+ {
+  "id": "ne-a1-pronouns-and-honorific-tiers",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "👥",
+  "title": "Pronoun System and Honorific Tiers",
+  "subtitle": "Navigate social politeness through low, medium, and high honorific levels.",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Nepali pronouns strictly dictate matching verb endings to express social distance and respect.",
+  "structure": {
+   "headers": [
+    "Tier",
+    "Pronoun",
+    "Sample Verb Ending",
+    "Social Context"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Low (तुच्छ)",
+      "तँ (tã)",
+      "गर्छस् / गर्छेस्",
+      "Intimate, children, or derogatory"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Medium (मध्यम)",
+      "तिमी (timi)",
+      "गर्छौ / गर्छ्यौ",
+      "Friends, peers, family members"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "High (उच्च)",
+      "तपाईं (tapãĩ)",
+      "गर्नुहुन्छ",
+      "Strangers, elders, polite address"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3rd Person High",
+      "उहाँ (uhã)",
+      "गर्नुहुन्छ",
+      "Respected third parties"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Formal Address",
+    "example": "तपाईं कस्तो हुनुहुन्छ?",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Friendly Informal",
+    "example": "तिमी के गर्छौ?",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Intimate / Low",
+    "example": "तँ कहाँ जान्छस्?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "तपाईं राम्रो हुनुहुन्छ।",
+    "ko": "",
+    "highlight": "तपाईं"
+   },
+   {
+    "en": "तिमी किताब पढ्छौ।",
+    "ko": "",
+    "highlight": "तिमी"
+   },
+   {
+    "en": "उहाँ मेरो बुबा हुनुहुन्छ।",
+    "ko": "",
+    "highlight": "उहाँ"
+   },
+   {
+    "en": "तँ कहिले आउँछस्?",
+    "ko": "",
+    "highlight": "तँ"
+   },
+   {
+    "en": "हामी सँगै जान्छौँ।",
+    "ko": "",
+    "highlight": "हामी"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "तपाईं भात खान्छ।",
+    "right": "तपाईं भात खानुहुन्छ।",
+    "note": "High honorific pronoun तपाईं must pair with the honorific verb ending -नुहुन्छ."
+   },
+   {
+    "wrong": "तिमी कहिले आउँछस्?",
+    "right": "तिमी कहिले आउँछौ?",
+    "note": "The ending -छस् belongs strictly to low tier तँ, not medium तिमी."
+   },
+   {
+    "wrong": "उहाँ जान्छ।",
+    "right": "उहाँ जानुहुन्छ।",
+    "note": "Respectful 3rd-person pronoun उहाँ requires high honorific verb agreement."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How are you? (Polite/Formal) -> ___ कस्तो हुनुहुन्छ?",
+    "options": [
+     "तँ",
+     "तिमी",
+     "तपाईं",
+     "उ"
+    ],
+    "answer": 2,
+    "explanation": "The honorific ending 'हुनुहुन्छ' requires the high-respect pronoun 'तपाईं'."
+   },
+   {
+    "question": "What are you reading? (To a peer) -> तिमी के ___?",
+    "options": [
+     "पढ्छौ",
+     "पढ्छस्",
+     "पढ्नुहुन्छ",
+     "पढ्छ"
+    ],
+    "answer": 0,
+    "explanation": "The medium pronoun 'तिमी' pairs with the suffix '-छौ'."
+   },
+   {
+    "question": "He/She is eating. (Formal third person) -> उहाँ खाना ___।",
+    "options": [
+     "खान्छ",
+     "खान्छे",
+     "खानुहुन्छ",
+     "खान्छौ"
+    ],
+    "answer": 2,
+    "explanation": "The respectful third-person pronoun 'उहाँ' takes the '-नुहुन्छ' verb form."
+   },
+   {
+    "question": "Where are you going? (Intimate/Low tier) -> ___ कहाँ जान्छस्?",
+    "options": [
+     "तपाईं",
+     "तँ",
+     "हामी",
+     "तिमी"
+    ],
+    "answer": 1,
+    "explanation": "The verb ending '-छस्' exclusively takes the low-tier pronoun 'तँ'."
+   }
+  ],
+  "tip": "When in doubt with strangers or elders, always default to तपाईं (tapãĩ) and -नुहुन्छ to remain respectful."
+ },
+ {
+  "id": "ne-a1-ergative-case-le",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "✍️",
+  "title": "The Ergative/Instrumental Marker (-ले)",
+  "subtitle": "Mark the doer of completed transitive actions and the instrument used.",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "The postposition -ले marks the subject of transitive verbs in past/perfect tenses and indicates the instrument used for an action.",
+  "structure": {
+   "headers": [
+    "Role",
+    "Noun + ले",
+    "Nepali Meaning",
+    "Rule Context"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Transitive Agent",
+      "रामले (ram-le)",
+      "Ram (did something)",
+      "Obligatory in past transitive"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Instrument / Means",
+      "कलमले (kalam-le)",
+      "with / using a pen",
+      "Any tense, instrument of action"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Pronoun Agent",
+      "मैले (mai-le)",
+      "I (did something)",
+      "Irregular base: म becomes मै-"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Past Transitive Subject",
+    "example": "रामले भात खायो।",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Instrument / Tool",
+    "example": "उसले चम्चाले खायो।",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Obligatory Present Habitual",
+    "example": "मैले काम गर्नुपर्छ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "सीताले चिठी लेखिन्।",
+    "ko": "",
+    "highlight": "सीताले"
+   },
+   {
+    "en": "मैले हिजो चिया पिएँ।",
+    "ko": "",
+    "highlight": "मैले"
+   },
+   {
+    "en": "उनीहरूले फुटबल खेले।",
+    "ko": "",
+    "highlight": "उनीहरूले"
+   },
+   {
+    "en": "हामीले कलमले लेख्यौँ।",
+    "ko": "",
+    "highlight": "कलमले"
+   },
+   {
+    "en": "तिमीले के भन्यौ?",
+    "ko": "",
+    "highlight": "तिमीले"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "राम भात खायो।",
+    "right": "रामले भात खायो।",
+    "note": "Past transitive sentences require -ले on the subject."
+   },
+   {
+    "wrong": "मले किताब पढेँ।",
+    "right": "मैले किताब पढेँ।",
+    "note": "The pronoun म combines with -ले irregularly to form मैले, never मले."
+   },
+   {
+    "wrong": "सीताले घर गइन्।",
+    "right": "सीता घर गइन्।",
+    "note": "Intransitive verbs like जानु (to go) never take the ergative marker -ले."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I ate food. -> ___ भात खाएँ।",
+    "options": [
+     "म",
+     "मैले",
+     "मलाई",
+     "मेरो"
+    ],
+    "answer": 1,
+    "explanation": "'खाएँ' is past transitive, so 'म' changes to 'मैले'."
+   },
+   {
+    "question": "Ram wrote with a pen. -> रामले ___ लेख्यो।",
+    "options": [
+     "कलम",
+     "कलमलाई",
+     "कलमले",
+     "कलममा"
+    ],
+    "answer": 2,
+    "explanation": "The instrument used to perform an action takes the suffix '-ले'."
+   },
+   {
+    "question": "Hari went to the market. -> ___ बजार गयो।",
+    "options": [
+     "हरिले",
+     "हरि",
+     "हरिलाई",
+     "हरिको"
+    ],
+    "answer": 1,
+    "explanation": "'जानु' (to go) is intransitive, so the subject 'हरि' must NOT take '-ले'."
+   },
+   {
+    "question": "What did you say? -> ___ के भन्यौ?",
+    "options": [
+     "तिमीलाई",
+     "तपाईं",
+     "तिमी",
+     "तिमीले"
+    ],
+    "answer": 3,
+    "explanation": "'भन्नु' (to say) is transitive in the past tense, requiring 'तिमीले'."
+   }
+  ],
+  "tip": "Check the verb: if it takes a direct object and happened in the past, attach -ले to the subject!"
+ },
+ {
+  "id": "ne-a1-dative-accusative-lai",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🎯",
+  "title": "The Object Marker (-लाई)",
+  "subtitle": "Distinguish recipients, human direct objects, and experiencer subjects.",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Attach -लाई to indirect objects, specific human direct objects, and the subject in experiencer constructions.",
+  "structure": {
+   "headers": [
+    "Role",
+    "Attached Noun",
+    "Function",
+    "Example Sentence"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Indirect Object",
+      "भाइलाई (bhai-lai)",
+      "To/for recipient",
+      "भाइलाई किताब देऊ।"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Definite Animate Object",
+      "साथीलाई (sathi-lai)",
+      "Specific direct object",
+      "मैले साथीलाई बोलाएँ।"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Experiencer Subject",
+      "मलाई (ma-lai)",
+      "Physical/emotional sensation",
+      "मलाई भोक लाग्यो।"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Recipient (To/For)",
+    "example": "उहाँलाई पैसा दिनुहोस्।",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Specific Person Direct Object",
+    "example": "म रामलाई चिन्छु।",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Sensations & Desires",
+    "example": "मलाई तिर्खा लाग्यो।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "मलाई पानी दिनुहोस्।",
+    "ko": "",
+    "highlight": "मलाई"
+   },
+   {
+    "en": "उसले बहिनीलाई माया गर्छ।",
+    "ko": "",
+    "highlight": "बहिनीलाई"
+   },
+   {
+    "en": "तिमीलाई के चाहियो?",
+    "ko": "",
+    "highlight": "तिमीलाई"
+   },
+   {
+    "en": "हामीले शिक्षकलाई सोध्यौँ।",
+    "ko": "",
+    "highlight": "शिक्षकलाई"
+   },
+   {
+    "en": "उनीहरूलाई जाडो भयो।",
+    "ko": "",
+    "highlight": "उनीहरूलाई"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "म भातलाई खान्छु।",
+    "right": "म भात खान्छु।",
+    "note": "Inanimate non-specific direct objects like rice (भात) should not take -लाई."
+   },
+   {
+    "wrong": "म भोक लाग्यो।",
+    "right": "मलाई भोक लाग्यो।",
+    "note": "Sensations like hunger and thirst require the experiencer marker -लाई on the subject."
+   },
+   {
+    "wrong": "म साथी बोलाउँछु।",
+    "right": "म साथीलाई बोलाउँछु।",
+    "note": "Specific human direct objects normally require -लाई."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I am hungry. (Hunger struck me) -> ___ भोक लाग्यो।",
+    "options": [
+     "म",
+     "मेरो",
+     "मलाई",
+     "मैले"
+    ],
+    "answer": 2,
+    "explanation": "Physical sensation predicates require the experiencer subject with '-लाई'."
+   },
+   {
+    "question": "Give this letter to the teacher. -> यो चिठी ___ दिनुहोस्।",
+    "options": [
+     "शिक्षकलाई",
+     "शिक्षकले",
+     "शिक्षक",
+     "शिक्षकको"
+    ],
+    "answer": 0,
+    "explanation": "The recipient/indirect object takes '-लाई'."
+   },
+   {
+    "question": "I eat apples every day. -> म सधैँ ___ खान्छु।",
+    "options": [
+     "स्याउलाई",
+     "स्याउले",
+     "स्याउ",
+     "स्याउमा"
+    ],
+    "answer": 2,
+    "explanation": "Inanimate, non-specific direct objects do not take '-लाई'."
+   },
+   {
+    "question": "Do you know Ram? -> के तिमी ___ चिन्छौ?",
+    "options": [
+     "राम",
+     "रामले",
+     "रामको",
+     "रामलाई"
+    ],
+    "answer": 3,
+    "explanation": "A specific person as a direct object requires '-लाई'."
+   }
+  ],
+  "tip": "Never attach -लाई to inanimate things like food or inanimate tools unless you are personifying them."
+ },
+ {
+  "id": "ne-a1-simple-present-habitual",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "🔄",
+  "title": "Habitual Non-Past Tense (-छ/-छे/-छन्)",
+  "subtitle": "Express daily routines, recurring habits, and universal truths.",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Add habitual suffixes (-छु, -छौ, -छ, -छे, -छन्, -नुहुन्छ) directly to the verb stem matching the subject's gender and honorific tier.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Stem",
+    "Suffix",
+    "Full Habitual Verb"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "म (I)",
+      "जान्-",
+      "-छु",
+      "जान्छु (I go)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "तिमी (You - med)",
+      "जान्-",
+      "-छौ / -छ्यौ",
+      "जान्छौ (You go)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "उ / उनी (He/She)",
+      "जान्-",
+      "-छ / -छे",
+      "जान्छ / जान्छे (He/She goes)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "तपाईं (You - high)",
+      "जा-",
+      "-नुहुन्छ",
+      "जानुहुन्छ (You go)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Daily Routine",
+    "example": "म बिहान सबेरै उठ्छु।",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Universal Truth",
+    "example": "सूर्य पूर्वबाट उदाउँछ।",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Feminine Agreement",
+    "example": "बहिनी भात पकाउँछे।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "म सधैँ कलेज जान्छु।",
+    "ko": "",
+    "highlight": "जान्छु"
+   },
+   {
+    "en": "तिमी राम्रो नेपाली बोल्छौ।",
+    "ko": "",
+    "highlight": "बोल्छौ"
+   },
+   {
+    "en": "उहाँ पत्रिका पढ्नुहुन्छ।",
+    "ko": "",
+    "highlight": "पढ्नुहुन्छ"
+   },
+   {
+    "en": "सीता गीत गाउँछे।",
+    "ko": "",
+    "highlight": "गाउँछे"
+   },
+   {
+    "en": "उनीहरू काठमाडौँमा बस्छन्।",
+    "ko": "",
+    "highlight": "बस्छन्"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "म नेपाली बोल्छ।",
+    "right": "म नेपाली बोल्छु।",
+    "note": "The first-person singular pronoun म requires the suffix -छु, not -छ."
+   },
+   {
+    "wrong": "आमा चिया खान्छ।",
+    "right": "आमा चिया खानुहुन्छ।",
+    "note": "Parents and elders should receive the high honorific suffix -नुहुन्छ."
+   },
+   {
+    "wrong": "बहिनी स्कुल जान्छौ।",
+    "right": "बहिनी स्कुल जान्छे।",
+    "note": "A female third-person singular informal subject takes -छे."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I read a book every morning. -> म हरेक बिहान किताब ___।",
+    "options": [
+     "पढ्छ",
+     "पढ्छु",
+     "पढ्छौ",
+     "पढ्नुहुन्छ"
+    ],
+    "answer": 1,
+    "explanation": "The subject 'म' takes the first-person suffix '-छु'."
+   },
+   {
+    "question": "They live in Pokhara. -> उनीहरू पोखरामा ___।",
+    "options": [
+     "बस्छन्",
+     "बस्छु",
+     "बस्छ",
+     "बस्छौ"
+    ],
+    "answer": 0,
+    "explanation": "Plural 3rd-person 'उनीहरू' agrees with '-छन्'."
+   },
+   {
+    "question": "You (high honorific) speak good English. -> तपाईं राम्रो अङ्ग्रेजी ___।",
+    "options": [
+     "बोल्छौ",
+     "बोल्छस्",
+     "बोल्नुहुन्छ",
+     "बोल्छ"
+    ],
+    "answer": 2,
+    "explanation": "'तपाईं' requires the honorific ending '-नुहुन्छ'."
+   },
+   {
+    "question": "My younger sister sings well. -> बहिनी राम्रो गीत ___।",
+    "options": [
+     "गाउँछन्",
+     "गाउँछु",
+     "गाउनुहुन्छ",
+     "गाउँछे"
+    ],
+    "answer": 3,
+    "explanation": "Younger female family members take the feminine agreement ending '-छे'."
+   }
+  ],
+  "tip": "For high honorifics (तपाईं/उहाँ), take the infinitive ending -नु and simply attach हुन्छ!"
+ },
+ {
+  "id": "ne-a1-basic-postpositions",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3b82f6",
+  "emoji": "📍",
+  "title": "Basic Postpositions (-मा, -बाट, -देखि)",
+  "subtitle": "Connecting locations, sources, and time points in Nepali",
+  "color": "#2563eb",
+  "bg": "#eff6ff",
+  "keyPoint": "Nepali postpositions attach directly to the end of noun stems without spaces to indicate location, origin, or duration.",
+  "structure": {
+   "headers": [
+    "Postposition",
+    "Function",
+    "Nepali Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-मा (-ma)",
+      "In / On / At (Locative)",
+      "घरमा",
+      "at home / in the house"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-बाट (-bata)",
+      "From (Source / Agent / Place)",
+      "नेपालबाट",
+      "from Nepal"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-देखि (-dekhi)",
+      "From / Since (Starting point in time/space)",
+      "बिहानदेखि",
+      "since morning"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3b82f6",
+    "label": "Spatial Location",
+    "example": "किताब टेबुलमा छ।",
+    "translation": ""
+   },
+   {
+    "color": "#10b981",
+    "label": "Origin or Source",
+    "example": "म पोखराबाट आएँ।",
+    "translation": ""
+   },
+   {
+    "color": "#f59e0b",
+    "label": "Starting Point in Time",
+    "example": "ऊ सोमबारदेखि बिरामी छ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "किताब टेबुलमा छ।",
+    "ko": "",
+    "highlight": "टेबुलमा"
+   },
+   {
+    "en": "हामी काठमाडौँमा बस्छौँ।",
+    "ko": "",
+    "highlight": "काठमाडौँमा"
+   },
+   {
+    "en": "ऊ नेपालबाट आयो।",
+    "ko": "",
+    "highlight": "नेपालबाट"
+   },
+   {
+    "en": "म बिहानदेखि काम गर्दै छु।",
+    "ko": "",
+    "highlight": "बिहानदेखि"
+   },
+   {
+    "en": "रुखबाट फल खस्यो।",
+    "ko": "",
+    "highlight": "रुखबाट"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "घर मा",
+    "right": "घरमा",
+    "note": "Postpositions like -मा must be attached directly to the noun without a space."
+   },
+   {
+    "wrong": "टेबुल बाट छ",
+    "right": "टेबुलमा छ",
+    "note": "Use -मा for static location ('on/at'), not -बाट ('from')."
+   },
+   {
+    "wrong": "नेपाल देखि आयो",
+    "right": "नेपालबाट आयो",
+    "note": "For physical origin of departure, -बाट is the natural native choice rather than -देखि."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The children are playing ___ the room.",
+    "options": [
+     "कोठाबाट",
+     "कोठामा",
+     "कोठादेखि",
+     "कोठालाई"
+    ],
+    "answer": 1,
+    "explanation": "The postposition -मा expresses location ('in the room')."
+   },
+   {
+    "question": "He arrived ___ London yesterday.",
+    "options": [
+     "लन्डनबाट",
+     "लन्डनमा",
+     "लन्डनदेखि",
+     "लन्डनले"
+    ],
+    "answer": 0,
+    "explanation": "The postposition -बाट indicates origin or point of departure ('from London')."
+   },
+   {
+    "question": "I have been waiting here ___ morning.",
+    "options": [
+     "बिहानमा",
+     "बिहानलाई",
+     "बिहानदेखि",
+     "बिहानले"
+    ],
+    "answer": 2,
+    "explanation": "The postposition -देखि marks temporal starting points ('since morning')."
+   },
+   {
+    "question": "Water is falling ___ the roof.",
+    "options": [
+     "छानालाई",
+     "छानामा",
+     "छानादेखि",
+     "छानाबाट"
+    ],
+    "answer": 3,
+    "explanation": "Source of descent or movement away from a surface uses -बाट."
+   }
+  ],
+  "tip": "Remember: -मा is stationary (where something is), while -बाट and -देखि denote movement or duration starting from a reference point."
+ },
+ {
+  "id": "ne-a2-indefinite-past-bhayo-bhayena",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#8b5cf6",
+  "emoji": "⏱️",
+  "title": "Simple Past Tense (भयो / गरेँ)",
+  "subtitle": "Narrating completed events and mastering ergative marking",
+  "color": "#7c3aed",
+  "bg": "#f5f3ff",
+  "keyPoint": "In the simple past tense, transitive verbs require the subject to take the ergative particle -ले, while the verb agrees in gender, number, and honorific level.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Root + Ending",
+    "Affirmative",
+    "Negative"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "म (1sg)",
+      "गर्- + -एँ",
+      "मैले गरेँ",
+      "मैले गरिनँ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "तिमी (2mid)",
+      "गर्- + -यौ",
+      "तिमीले गर्यौ",
+      "तिमीले गरेनौ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ऊ (3low)",
+      "गर्- + -यो",
+      "उसले गर्यो",
+      "उसले गरेन"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "हुनु (irregular)",
+      "भ- + -यो",
+      "भयो",
+      "भएन"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8b5cf6",
+    "label": "Completed Action (Transitive)",
+    "example": "मैले चिया खाएँ।",
+    "translation": ""
+   },
+   {
+    "color": "#10b981",
+    "label": "Completed Action (Intransitive)",
+    "example": "ऊ हिजो गयो।",
+    "translation": ""
+   },
+   {
+    "color": "#ef4444",
+    "label": "Occurrence / Becoming",
+    "example": "काम पूरा भयो।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "मैले नयाँ किताब किनेँ।",
+    "ko": "",
+    "highlight": "मैले"
+   },
+   {
+    "en": "उसले भात खायो।",
+    "ko": "",
+    "highlight": "खायो"
+   },
+   {
+    "en": "हामी हिजो सिनेमा हेर्न गयौँ।",
+    "ko": "",
+    "highlight": "गयौँ"
+   },
+   {
+    "en": "आज धेरै ढिलो भयो।",
+    "ko": "",
+    "highlight": "भयो"
+   },
+   {
+    "en": "तिमीले मेरो कुरा सुन्यौ?",
+    "ko": "",
+    "highlight": "सुन्यौ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "म भात खाएँ।",
+    "right": "मैले भात खाएँ।",
+    "note": "Because 'खाएँ' (ate) is transitive, the subject 'म' must take the ergative suffix -ले to become 'मैले'."
+   },
+   {
+    "wrong": "उसले आयो।",
+    "right": "ऊ आयो।",
+    "note": "Intransitive verbs like 'आउनु' (to come) never take the ergative marker -ले."
+   },
+   {
+    "wrong": "काम भएन छ।",
+    "right": "काम भएन।",
+    "note": "Simple past negation of 'भयो' is simply 'भएन' without adding auxiliary forms."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I drank cold water.",
+    "options": [
+     "मैले चिसो पानी पिएँ।",
+     "म चिसो पानी पिएँ।",
+     "मैले चिसो पानी पियो।",
+     "म चिसो पानी पिउँछु।"
+    ],
+    "answer": 0,
+    "explanation": "Transitive past requires ergative 'मैले' and 1st person agreement 'पिएँ'."
+   },
+   {
+    "question": "Yesterday Sita went to the market.",
+    "options": [
+     "सीताले बजार गइन्।",
+     "सीता बजार गइन्।",
+     "सीता बजार गयो।",
+     "सीताले बजार गयो।"
+    ],
+    "answer": 1,
+    "explanation": "'गइन्' (went) is intransitive, so the subject must NOT take -ले."
+   },
+   {
+    "question": "Did you finish the work? (informal/mid-respect)",
+    "options": [
+     "तिमी काम गर्यौ?",
+     "तिमीले काम गरेँ?",
+     "तिमीले काम गर्यौ?",
+     "तिमीले काम गर्छौ?"
+    ],
+    "answer": 2,
+    "explanation": "Transitive verb requires subject with -ले ('तिमीले') and mid-respect agreement 'गर्यौ'."
+   },
+   {
+    "question": "The program was not successful.",
+    "options": [
+     "कार्यक्रम सफल भयो।",
+     "कार्यक्रम सफल हुँदैन।",
+     "कार्यक्रम सफल थिएन।",
+     "कार्यक्रम सफल भएन।"
+    ],
+    "answer": 3,
+    "explanation": "Negative simple past of 'भयो' is 'भएन'."
+   }
+  ],
+  "tip": "Rule of thumb: Did the subject DO something to an object? Add -ले. Did the subject just move, sleep, or exist? No -ले."
+ },
+ {
+  "id": "ne-a2-continuous-aspect-dai",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10b981",
+  "emoji": "🔄",
+  "title": "Continuous Aspect with -दै (-दै छ)",
+  "subtitle": "Expressing ongoing actions in the present and past",
+  "color": "#059669",
+  "bg": "#ecfdf5",
+  "keyPoint": "Attach the progressive converb -दै directly to the verb stem followed by a conjugated form of 'छ' or 'थियो' to indicate an ongoing action.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Stem + -दै",
+    "Auxiliary (Present)",
+    "Full Continuous"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "म (1sg)",
+      "पढ्- + -दै",
+      "छु",
+      "पढ्दै छु"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "तिमी (2mid)",
+      "लेख्- + -दै",
+      "छौ",
+      "लेख्दै छौ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ऊ (3low)",
+      "खा- + -दै",
+      "छ",
+      "खाँदै छ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "हामी (1pl past)",
+      "हिँड्- + -दै",
+      "थियौँ",
+      "हिँड्दै थियौँ"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10b981",
+    "label": "Action Happening Right Now",
+    "example": "म भात खाँदै छु।",
+    "translation": ""
+   },
+   {
+    "color": "#3b82f6",
+    "label": "Past Continuous Action",
+    "example": "ऊ सुत्दै थियो।",
+    "translation": ""
+   },
+   {
+    "color": "#f59e0b",
+    "label": "Simultaneous Action",
+    "example": "ऊ गीत गाउँदै हिँड्छ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "म अहिले नेपाली पढ्दै छु।",
+    "ko": "",
+    "highlight": "पढ्दै छु"
+   },
+   {
+    "en": "पानी परिरहेको छ वा पर्दै छ।",
+    "ko": "",
+    "highlight": "पर्दै छ"
+   },
+   {
+    "en": "उनीहरू फुटबल खेल्दै छन्।",
+    "ko": "",
+    "highlight": "खेल्दै छन्"
+   },
+   {
+    "en": "हामी रेडियो सुन्दै थियौँ।",
+    "ko": "",
+    "highlight": "सुन्दै थियौँ"
+   },
+   {
+    "en": "बहिनी भात पकाउँदै छे।",
+    "ko": "",
+    "highlight": "पकाउँदै छे"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "म पढ्छु छु।",
+    "right": "म पढ्दै छु।",
+    "note": "Do not double-inflect the finite verb; attach the continuous suffix -दै to the bare stem."
+   },
+   {
+    "wrong": "ऊ खादै छ।",
+    "right": "ऊ खाँदै छ।",
+    "note": "Vowel stems often take nasalization (ँ) when combined with -दै."
+   },
+   {
+    "wrong": "उनीहरू खेल्दै छ।",
+    "right": "उनीहरू खेल्दै छन्।",
+    "note": "The auxiliary verb must agree with the plural subject 'उनीहरू'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "We are learning Nepali right now.",
+    "options": [
+     "हामी नेपाली सिक्दै छौँ।",
+     "हामी नेपाली सिक्यो।",
+     "हामी नेपाली सिक्छौँ।",
+     "हामी नेपाली सिक्दै थियो।"
+    ],
+    "answer": 0,
+    "explanation": "Subject 'हामी' matches the 1st person plural auxiliary 'छौँ'."
+   },
+   {
+    "question": "What were you (mid-honorific) doing yesterday?",
+    "options": [
+     "तिमी के गर्छौ?",
+     "तिमी के गर्दै थियौ?",
+     "तिमी के गर्यौ?",
+     "तिमी के गर्दै छौ?"
+    ],
+    "answer": 1,
+    "explanation": "Past progressive requires stem + -दै followed by past auxiliary 'थियौ'."
+   },
+   {
+    "question": "She (mid-polite) is singing a song.",
+    "options": [
+     "उनी गीत गाउँछ।",
+     "उनी गीत गाउँदै थिए।",
+     "उनी गीत गाउँदै छिन्।",
+     "उनी गीत गाउँदै छ।"
+    ],
+    "answer": 2,
+    "explanation": "Respectful feminine 3rd person takes 'गाउँदै छिन्'."
+   },
+   {
+    "question": "The boy is running in the field.",
+    "options": [
+     "केटा मैदानमा दौड्दै छिन्।",
+     "केटा मैदानमा दौड्यो।",
+     "केटा मैदानमा दौडिन्छ।",
+     "केटा मैदानमा दौड्दै छ।"
+    ],
+    "answer": 3,
+    "explanation": "3rd person masculine singular matches the auxiliary 'छ'."
+   }
+  ],
+  "tip": "When -दै is doubled without an auxiliary (e.g., खाँदै खाँदै), it means doing something repeatedly or continuously while performing another verb."
+ },
+ {
+  "id": "ne-a2-dative-subject-constructions",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#ec4899",
+  "emoji": "🧠",
+  "title": "Dative Experiencer Constructions (-लाई)",
+  "subtitle": "Expressing needs, physical sensations, and involuntary feelings",
+  "color": "#db2777",
+  "bg": "#fdf2f8",
+  "keyPoint": "Involuntary bodily sensations, desires, and necessities mark the human experiencer with -लाई, keeping the predicate in default 3rd-person neuter agreement.",
+  "structure": {
+   "headers": [
+    "Experiencer",
+    "Object / Sensation",
+    "Predicate",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "मलाई (to me)",
+      "पानी",
+      "चाहिन्छ",
+      "I need water"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "उसलाई (to him/her)",
+      "टाउको",
+      "दुखेको छ",
+      "His/her head hurts"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "तिमीलाई (to you)",
+      "जाडो",
+      "लाग्यो",
+      "You felt cold"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "हामीलाई (to us)",
+      "भोक",
+      "लागेको छ",
+      "We are hungry"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#ec4899",
+    "label": "Desire and Necessity (चाहिनु)",
+    "example": "मलाई आराम चाहिन्छ।",
+    "translation": ""
+   },
+   {
+    "color": "#3b82f6",
+    "label": "Sensations and Emotions (लाग्नु)",
+    "example": "मलाई तिर्खा लाग्यो।",
+    "translation": ""
+   },
+   {
+    "color": "#ef4444",
+    "label": "Physical Pain (दुख्नु)",
+    "example": "मेरो पेट दुखेको छ वा मलाई पेट दुख्यो।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "मलाई नयाँ कलम चाहिन्छ।",
+    "ko": "",
+    "highlight": "मलाई"
+   },
+   {
+    "en": "तिमीलाई सन्चो छ?",
+    "ko": "",
+    "highlight": "तिमीलाई"
+   },
+   {
+    "en": "उसलाई धेरै भोक लाग्यो।",
+    "ko": "",
+    "highlight": "उसलाई"
+   },
+   {
+    "en": "हामीलाई डर लाग्यो।",
+    "ko": "",
+    "highlight": "हामीलाई"
+   },
+   {
+    "en": "बहिनीलाई टाउको दुखेको छ।",
+    "ko": "",
+    "highlight": "बहिनीलाई"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "म पानी चाहिन्छ।",
+    "right": "मलाई पानी चाहिन्छ।",
+    "note": "Needs require the dative experiencer marker -लाई on the person experiencing the need."
+   },
+   {
+    "wrong": "म भोक लाग्यो।",
+    "right": "मलाई भोक लाग्यो।",
+    "note": "Feelings and bodily sensations require -लाई (मलाई, not म)."
+   },
+   {
+    "wrong": "मलाई तिमी मन पर्छु।",
+    "right": "मलाई तिमी मन पर्छौ।",
+    "note": "The verb agrees with the liked object (तिमी -> पर्छौ), not with the experiencer (मलाई)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Do you need help?",
+    "options": [
+     "तिमीलाई मद्दत चाहिन्छ?",
+     "तिमी मद्दत चाहिन्छ?",
+     "तिमीलाई मद्दत चाहन्छौ?",
+     "तिमीले मद्दत चाहिन्छ?"
+    ],
+    "answer": 0,
+    "explanation": "The experiencer of necessity takes -लाई ('तिमीलाई') and the verb remains 'चाहिन्छ'."
+   },
+   {
+    "question": "He feels sleepy.",
+    "options": [
+     "उसले निद्रा लाग्यो।",
+     "ऊ निद्रा लाग्यो।",
+     "उसलाई निद्रा लाग्यो।",
+     "उसलाई निद्रा लाग्छु।"
+    ],
+    "answer": 2,
+    "explanation": "Involuntary sensations like sleepiness take 'उसलाई ... लाग्यो'."
+   },
+   {
+    "question": "I like this book.",
+    "options": [
+     "मलाई यो किताब मन पर्छ।",
+     "म यो किताब मन पर्छु।",
+     "मैले यो किताब मन पर्छ।",
+     "मलाई यो किताब मन पर्छु।"
+    ],
+    "answer": 0,
+    "explanation": "Experiencer takes 'मलाई', and the verb agrees with 3rd-person singular 'किताब' ('पर्छ')."
+   },
+   {
+    "question": "We are feeling cold.",
+    "options": [
+     "हामी जाडो लाग्छ।",
+     "हामीले जाडो लाग्यो।",
+     "हामी जाडो छौँ।",
+     "हामीलाई जाडो लाग्यो।"
+    ],
+    "answer": 3,
+    "explanation": "Cold sensations require the dative experiencer 'हामीलाई'."
+   }
+  ],
+  "tip": "Think of -लाई as 'to me / for me'. You are not actively 'hunger-ing'; rather, 'hunger is happening TO you' (मलाई भोक लाग्यो)."
+ },
+ {
+  "id": "ne-a2-sequential-converb-era",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#f97316",
+  "emoji": "🔗",
+  "title": "Sequential Converb (-एर)",
+  "subtitle": "Chaining chronologically ordered actions together",
+  "color": "#ea580c",
+  "bg": "#fff7ed",
+  "keyPoint": "Add the suffix -एर to the verb stem to link sequential actions sharing the same subject, equivalent to 'having done X, Y happened'.",
+  "structure": {
+   "headers": [
+    "First Verb Stem",
+    "+ -एर",
+    "Linked Clause Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "खा- (eat)",
+      "खाएर",
+      "भात खाएर सुत्छु।",
+      "Having eaten rice, I sleep."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ग- / जा- (go)",
+      "गएर",
+      "बजार गएर तरकारी किन।",
+      "Go to the market and buy vegetables."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "उठ्- (wake up)",
+      "उठेर",
+      "बिहान उठेर पढ्छु।",
+      "Having woken up in the morning, I study."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "हात धु- (wash)",
+      "धोएर",
+      "हात धोएर खाना खाऊ।",
+      "Wash hands and eat food."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#f97316",
+    "label": "Sequential Action",
+    "example": "म मुख धोएर चिया पिउँछु।",
+    "translation": ""
+   },
+   {
+    "color": "#10b981",
+    "label": "Reason / Cause",
+    "example": "धेरै हिँडेर खुट्टा दुख्यो।",
+    "translation": ""
+   },
+   {
+    "color": "#3b82f6",
+    "label": "Manner of Action",
+    "example": "ऊ हाँसेर बोल्यो।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "हामी खाना खाएर बजार गयौँ।",
+    "ko": "",
+    "highlight": "खाएर"
+   },
+   {
+    "en": "ऊ विद्यालय गएर साथीलाई भेट्यो।",
+    "ko": "",
+    "highlight": "गएर"
+   },
+   {
+    "en": "तिमी चिया पिएर आऊ।",
+    "ko": "",
+    "highlight": "पिएर"
+   },
+   {
+    "en": "घर पुगेर मलाई फोन गर।",
+    "ko": "",
+    "highlight": "पुगेर"
+   },
+   {
+    "en": "किताब पढेर उसले धेरै कुरा सिक्यो।",
+    "ko": "",
+    "highlight": "पढेर"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "म भात खान्छु र सुत्छु।",
+    "right": "म भात खाएर सुत्छु।",
+    "note": "While 'र' (and) exists, chaining identical-subject actions with -एर is vastly more idiomatic in Nepali."
+   },
+   {
+    "wrong": "ऊ गएर म आएँ।",
+    "right": "ऊ गएपछि म आएँ।",
+    "note": "-एर strictly requires both actions to share the same agent. Use -पछि for different subjects."
+   },
+   {
+    "wrong": "धुएर",
+    "right": "धोएर",
+    "note": "Irregular stem shift: 'धुनु' (to wash) becomes 'धोएर'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Wash your hands and eat dinner.",
+    "options": [
+     "हात धुन्छ र खाना खाऊ।",
+     "हात धोएर खाना खाऊ।",
+     "हात धुनु खाना खाऊ।",
+     "हात धोयो खाना खाऊ।"
+    ],
+    "answer": 1,
+    "explanation": "Stem of धुनु alternates to धो- before adding the sequential converb -एर ('धोएर')."
+   },
+   {
+    "question": "She woke up and drank water.",
+    "options": [
+     "उनी उठेर पानी पिइन्।",
+     "उनी उठ्छ र पानी पिइन्।",
+     "उनी उठ्यो पानी पिए।",
+     "उनी उठेपछि पानी पिएँ।"
+    ],
+    "answer": 0,
+    "explanation": "Same subject sequential action takes stem उठ्- + -एर = 'उठेर'."
+   },
+   {
+    "question": "Having reached Kathmandu, we rested.",
+    "options": [
+     "हामी काठमाडौँ पुग्यो र आराम गर्यौँ।",
+     "हामी काठमाडौँ पुग्छ आराम गर्यौँ।",
+     "हामी काठमाडौँ पुगेर आराम गर्यौँ।",
+     "हामी काठमाडौँ पुगेपछि आराम गर्छु।"
+    ],
+    "answer": 2,
+    "explanation": "Root पुग्- + -एर gives 'पुगेर' (having reached)."
+   },
+   {
+    "question": "Go to school and study well.",
+    "options": [
+     "विद्यालय जान्छ र राम्ररी पढ।",
+     "विद्यालय गयो राम्ररी पढ।",
+     "विद्यालय जानु राम्ररी पढ।",
+     "विद्यालय गएर राम्ररी पढ।"
+    ],
+    "answer": 3,
+    "explanation": "The irregular stem for 'जानु' in the sequential converb is 'गएर'."
+   }
+  ],
+  "tip": "Whenever you want to say 'did X and then did Y' with the same subject, reach for -एर instead of the conjunction 'र'."
+ },
+ {
+  "id": "ne-a2-obligation-modal-parcha",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#8b5cf6",
+  "emoji": "⚠️",
+  "title": "Obligation and Compulsion (-नु पर्छ)",
+  "subtitle": "Expressing 'must', 'have to', and 'should' using the infinitive",
+  "color": "#7c3aed",
+  "bg": "#f5f3ff",
+  "keyPoint": "To express necessity or obligation in Nepali, attach the invariant verb पर्छ (present) or पर्यो (past) to the full infinitive ending in -नु, while marking the logical subject with the dative postposition -लाई.",
+  "structure": {
+   "headers": [
+    "Structure",
+    "Nepali Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Subject-लाई + Verb-नु पर्छ",
+      "मलाई जानु पर्छ",
+      "I have to / must go"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Subject-लाई + Verb-नु पर्दैन",
+      "तिमीलाई आउनु पर्दैन",
+      "You do not have to come"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Subject-लाई + Verb-नु पर्यो",
+      "हामीलाई काम गर्नुपर्यो",
+      "We had to work"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Subject-लाई + Verb-नु परेन",
+      "उसलाई पढ्नु परेन",
+      "He/She did not have to study"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7c3aed",
+    "label": "General Obligation (Must / Have to)",
+    "example": "सबै नागरिकले नियम मान्नुपर्छ।",
+    "translation": ""
+   },
+   {
+    "color": "#6366f1",
+    "label": "Past Necessity (Had to)",
+    "example": "पानी परेकोले म घर फर्कनुपर्यो।",
+    "translation": ""
+   },
+   {
+    "color": "#ec4899",
+    "label": "Absence of Need (Don't have to)",
+    "example": "तिमीले चिन्ता लिनुपर्दैन।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "मलाई आज बेलुका छिटो सुत्नुपर्छ।",
+    "ko": "",
+    "highlight": "सुत्नुपर्छ"
+   },
+   {
+    "en": "हामीलाई भोलि बिहानै काठमाडौँ जानुपर्छ।",
+    "ko": "",
+    "highlight": "जानुपर्छ"
+   },
+   {
+    "en": "बिरामी भएकोले उसलाई औषधि खानुपर्यो।",
+    "ko": "",
+    "highlight": "खानुपर्यो"
+   },
+   {
+    "en": "तपाईंलाई धेरै काम गर्नुपर्दैन।",
+    "ko": "",
+    "highlight": "गर्नुपर्दैन"
+   },
+   {
+    "en": "विद्यार्थीहरूलाई गृहकार्य बुझाउनु पर्यो।",
+    "ko": "",
+    "highlight": "बुझाउनु पर्यो"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "म जानु पर्छ।",
+    "right": "मलाई जानु पर्छ।",
+    "note": "Obligation constructions require the logical agent to take the dative marker -लाई (or an ergative instrumental context), not the plain nominative."
+   },
+   {
+    "wrong": "हामीलाई जान्छ पर्छ।",
+    "right": "हामीलाई जानु पर्छ।",
+    "note": "Always join पर्छ to the full dictionary infinitive ending in -नु, never to a conjugated finite verb form."
+   },
+   {
+    "wrong": "तिमीले औषधि खानु नपर्छ।",
+    "right": "तिमीले औषधि खानुपर्दैन।",
+    "note": "The negative of पर्छ is पर्दैन, not नपर्छ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I have to read this book today.",
+    "options": [
+     "म यो किताब पढ्नुपर्छ।",
+     "मलाई यो किताब पढ्नुपर्छ।",
+     "मलाई यो किताब पढ्छ पर्छ।",
+     "मलाई यो किताब पढ्न पर्छ।"
+    ],
+    "answer": 1,
+    "explanation": "The person with the obligation requires -लाई (मलाई) followed by the -नु infinitive plus पर्छ."
+   },
+   {
+    "question": "You do not have to go to the market tomorrow.",
+    "options": [
+     "तिमीलाई बजार जानुपरेन।",
+     "तिमीलाई बजार जानु नपर्छ।",
+     "तिमीलाई बजार जानुपर्दैन।",
+     "तिमीलाई बजार जानुहुन्छ।"
+    ],
+    "answer": 2,
+    "explanation": "Present negative lack of necessity ('do not have to') uses -नु पर्दैन."
+   },
+   {
+    "question": "Yesterday we had to wait for a long time.",
+    "options": [
+     "हामीलाई धेरै बेर कुर्नुपर्यो।",
+     "हामीलाई धेरै बेर कुर्नुपर्छ।",
+     "हामी धेरै बेर कुर्यो पर्छ।",
+     "हामीलाई धेरै बेर कुर्नुभयो।"
+    ],
+    "answer": 0,
+    "explanation": "Past completed necessity ('had to') is expressed by pairing the -नु infinitive with the past form पर्यो."
+   },
+   {
+    "question": "What must Sita do right now?",
+    "options": [
+     "सीता के गर्छ पर्छ?",
+     "सीतालाई के गर्नुपर्यो?",
+     "सीतालाई के गर्नुपर्दैन?",
+     "सीतालाई के गर्नुपर्छ?"
+    ],
+    "answer": 3,
+    "explanation": "Subject + लाई (सीतालाई) + question word + verb-नु पर्छ (गर्नुपर्छ) creates the question 'What must Sita do?'."
+   }
+  ],
+  "tip": "Think of पर्छ as meaning 'it falls upon [someone]'; this explains why the person takes -लाई ('to me it falls to go')."
+ },
+ {
+  "id": "ne-a2-infinitives-nu-vs-na",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10b981",
+  "emoji": "🔄",
+  "title": "Infinitive Forms (-नु vs -न)",
+  "subtitle": "Distinguishing citation-noun forms (-नु) from purpose-motion forms (-न)",
+  "color": "#059669",
+  "bg": "#ecfdf5",
+  "keyPoint": "Use the -नु infinitive as a verbal noun, citation form, or subject of a sentence, but switch to the -न infinitive to express purpose before motion verbs or with auxiliary modal stems.",
+  "structure": {
+   "headers": [
+    "Infinitive Ending",
+    "Primary Grammatical Function",
+    "Nepali Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-नु (Citation/Gerund)",
+      "Subject, object, general verbal noun",
+      "बिहान हिँड्नु राम्रो हो।"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-न (Purpose of Motion)",
+      "Going or coming in order to do an action",
+      "म साथीलाई भेट्न जान्छु।"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-न + सक्नु / थाल्नु",
+      "Combined with modal/inceptive auxiliary verbs",
+      "उनी नेपाली बोल्न सक्छिन्।"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-नु अघि / पछि",
+      "Prepositions taking the oblique citation form",
+      "खानुपहिले हात धुनुहोस्।"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Subject / Gerund (-नु)",
+    "example": "धुम्रपान गर्नु स्वास्थ्यको लागि हानिकारक छ।",
+    "translation": ""
+   },
+   {
+    "color": "#0d9488",
+    "label": "Purpose with Motion Verbs (-न)",
+    "example": "हामी चिया पिउन चियापसल गयौँ।",
+    "translation": ""
+   },
+   {
+    "color": "#14b8a6",
+    "label": "Modal Ability with सक्नु (-न)",
+    "example": "तिमी यो गह्रौँ भारी उठाउन सक्छौ?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "पौडी खेल्नु एउटा राम्रो कसरत हो।",
+    "ko": "",
+    "highlight": "खेल्नु"
+   },
+   {
+    "en": "ऊ नयाँ लुगा किन्न बजार गयो।",
+    "ko": "",
+    "highlight": "किन्न"
+   },
+   {
+    "en": "म आज बेलुका खाना पकाउन सक्दिनँ।",
+    "ko": "",
+    "highlight": "पकाउन"
+   },
+   {
+    "en": "नेपाली भाषा सिक्नु निकै रमाइलो छ।",
+    "ko": "",
+    "highlight": "सिक्नु"
+   },
+   {
+    "en": "भाइ फुटबल खेल्न मैदानतिर दगुऱ्यो।",
+    "ko": "",
+    "highlight": "खेल्न"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "म साथी भेट्नु जान्छु।",
+    "right": "म साथी भेट्न जान्छु।",
+    "note": "When expressing the purpose of movement with motion verbs like जानु or आउनु, always change -नु to -न."
+   },
+   {
+    "wrong": "किताब पढ्न राम्रो बानी हो।",
+    "right": "किताब पढ्नु राम्रो बानी हो।",
+    "note": "When the verb acts as the subject of the sentence (gerund), use the -नु form."
+   },
+   {
+    "wrong": "म पौडी खेल्नु सक्छु।",
+    "right": "म पौडी खेल्न सक्छु।",
+    "note": "The modal auxiliary सक्नु ('can/able') must be preceded by the -न form, never the -नु form."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Learning Nepali is very interesting.",
+    "options": [
+     "नेपाली सिक्न धेरै रमाइलो छ।",
+     "नेपाली सिकेर धेरै रमाइलो छ।",
+     "नेपाली सिक्नु धेरै रमाइलो छ।",
+     "नेपाली सिक्छ धेरै रमाइलो छ।"
+    ],
+    "answer": 2,
+    "explanation": "The subject of a sentence acting as a verbal noun ('learning') requires the citation infinitive -नु."
+   },
+   {
+    "question": "He went to the bazaar to buy vegetables.",
+    "options": [
+     "ऊ तरकारी किन्न बजार गयो।",
+     "ऊ तरकारी किन्नु बजार गयो।",
+     "ऊ तरकारी किनेर बजार गयो।",
+     "ऊ तरकारी किन्छ बजार गयो।"
+    ],
+    "answer": 0,
+    "explanation": "Movement with a purpose ('in order to buy') triggers the purpose-infinitive ending in -न before verbs of motion."
+   },
+   {
+    "question": "Can you speak English?",
+    "options": [
+     "तपाईं अङ्ग्रेजी बोल्नु सक्नुहुन्छ?",
+     "तपाईं अङ्ग्रेजी बोलेर सक्नुहुन्छ?",
+     "तपाईं अङ्ग्रेजी बोल्दा सक्नुहुन्छ?",
+     "तपाईं अङ्ग्रेजी बोल्न सक्नुहुन्छ?"
+    ],
+    "answer": 3,
+    "explanation": "The auxiliary verb सक्नु (to be able) requires the -न infinitive (बोल्न सक्नुहुन्छ)."
+   },
+   {
+    "question": "They came to our house to eat food.",
+    "options": [
+     "उनीहरू भात खानु हाम्रो घर आए।",
+     "उनीहरू भात खान हाम्रो घर आए।",
+     "उनीहरू भात खाएर हाम्रो घर आए।",
+     "उनीहरू भात खाने हाम्रो घर आए।"
+    ],
+    "answer": 1,
+    "explanation": "Expressing purpose of coming requires the -न form (खान आए)."
+   }
+  ],
+  "tip": "Whenever you can insert 'in order to' in English before a verb of motion or ability, use the -न infinitive in Nepali."
+ },
+ {
+  "id": "ne-b1-evidential-aspect-aeko-cha",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#3b82f6",
+  "emoji": "😲",
+  "title": "Unknown Past / Mirative Form (-एछ)",
+  "subtitle": "Expressing newly discovered facts, realizations, and surprise",
+  "color": "#2563eb",
+  "bg": "#eff6ff",
+  "keyPoint": "Attach -एछ (or its gender/honorific variants) directly to the verb root to signal that you did not witness an event occur but have just realized its result or discovered it with surprise.",
+  "structure": {
+   "headers": [
+    "Subject Category",
+    "Affix Form",
+    "Nepali Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "3rd Person Masc / Neutral",
+      "Root + -एछ",
+      "पानी परेछ।",
+      "It rained! (I just noticed the wet ground)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3rd Person Feminine",
+      "Root + -इछे",
+      "बहिनी आएछिन्।",
+      "Little sister has arrived! (I just saw her)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "High Honorific",
+      "Root + -एछन् / -नुभएछ",
+      "बुबा सुत्नुभएछ।",
+      "Father has already fallen asleep! (discovered)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Unknown Past",
+      "न- + Root + -एछ",
+      "उसले खाना नखाएछ।",
+      "Apparently he didn't eat his meal."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563eb",
+    "label": "Sudden Realization",
+    "example": "ऐया! मेरो त पैसा हराएछ!",
+    "translation": ""
+   },
+   {
+    "color": "#0284c7",
+    "label": "Indirect Evidence / Deduction",
+    "example": "राति यहाँ ठूलो हावाहुरी आएछ।",
+    "translation": ""
+   },
+   {
+    "color": "#38bdf8",
+    "label": "Mild Surprise / Unintended State",
+    "example": "तपाईं त साह्रै ज्ञानी हुनुभएछ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "झ्याल खोलेर हेर्दा त हिउँ परेछ!",
+    "ko": "",
+    "highlight": "परेछ"
+   },
+   {
+    "en": "अहो! तिमी त निकै अग्लो भएछौ!",
+    "ko": "",
+    "highlight": "भएछौ"
+   },
+   {
+    "en": "मैले त चाबी कोठामै बिर्सेछु।",
+    "ko": "",
+    "highlight": "बिर्सेछु"
+   },
+   {
+    "en": "चिया त चिसो भइसकेछ।",
+    "ko": "",
+    "highlight": "भइसकेछ"
+   },
+   {
+    "en": "सर आज बिदामा बस्नुभएछ।",
+    "ko": "",
+    "highlight": "बस्नुभएछ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मैले हिजो साथीलाई भेटेछ।",
+    "right": "मैले हिजो साथीलाई भेटेँ।",
+    "note": "Do not use -एछ for deliberate actions you consciously carried out in the past; use the simple past instead."
+   },
+   {
+    "wrong": "पानी पर्यो! (when looking outside at puddles you just discovered)",
+    "right": "पानी परेछ!",
+    "note": "Use परेछ rather than पर्यो when you infer the past rain from fresh visual cues rather than experiencing the shower yourself."
+   },
+   {
+    "wrong": "उनीहरू आएछ।",
+    "right": "उनीहरू आएछन्।",
+    "note": "The evidential suffix must agree with plural/honorific subjects (-एछन् for plural/mid-honorific)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Looking at the cold cup on the desk: 'Oh, the tea has gotten cold!'",
+    "options": [
+     "चिया चिसो हुन्छ।",
+     "चिया चिसो भयो होला।",
+     "चिया चिसो भएछ।",
+     "चिया चिसो भएको थियो।"
+    ],
+    "answer": 2,
+    "explanation": "The evidential -एछ conveys the immediate discovery of a state you were previously unaware of."
+   },
+   {
+    "question": "Opening your bag and realizing: 'I forgot my purse at home!'",
+    "options": [
+     "मैले झोलामा पैसा बिर्सेछु।",
+     "मैले झोलामा पैसा बिर्सेँ।",
+     "मैले झोलामा पैसा बिर्सन्छु।",
+     "मैले झोलामा पैसा बिर्सिन्थेँ।"
+    ],
+    "answer": 0,
+    "explanation": "First-person realization of an unintended slip of memory uses -एछु (मैले... बिर्सेछु)."
+   },
+   {
+    "question": "Looking outside the window in the morning: 'Apparently it snowed last night!'",
+    "options": [
+     "राति हिउँ पर्यो।",
+     "राति हिउँ पर्छ।",
+     "राति हिउँ पर्थ्यो।",
+     "राति हिउँ परेछ।"
+    ],
+    "answer": 3,
+    "explanation": "Deducing an unobserved weather event from morning evidence requires the evidential form परेछ."
+   },
+   {
+    "question": "Noticing your sister unexpectedly: 'Little sister has arrived!'",
+    "options": [
+     "बहिनी आएछ।",
+     "बहिनी आएछिन्।",
+     "बहिनी आइन्।",
+     "बहिनी आउँछिन्।"
+    ],
+    "answer": 1,
+    "explanation": "Feminine singular subjects take the feminine evidential agreement -इछिन् (or -इछे informal)."
+   }
+  ],
+  "tip": "Think of -एछ as the Nepali equivalent of saying 'Oh! It turns out that...' or 'I just realized that...'"
+ },
+ {
+  "id": "ne-b1-simultaneous-durative-converb-da",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#f59e0b",
+  "emoji": "⏱️",
+  "title": "Simultaneous Converb (-दा / -दाखेरी)",
+  "subtitle": "Connecting concurrent background actions ('while doing') and situational conditions",
+  "color": "#d97706",
+  "bg": "#fffbeb",
+  "keyPoint": "Add -दा or -दाखेरी directly to the verb stem to link an ongoing background action with a main event, signifying 'while doing' or 'at the time of doing'.",
+  "structure": {
+   "headers": [
+    "Affix Pattern",
+    "Usage Context",
+    "Nepali Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Stem + -दा",
+      "While doing (concise written/spoken)",
+      "बाटो काट्दा होसियार हुनुपर्छ।"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Stem + -दाखेरी / -दाखेरि",
+      "Extended temporal 'at the moment when'",
+      "घर जाँदाखेरी पानी पर्यो।"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Stem + -दा पनि",
+      "Concessive conditional ('even though / even while')",
+      "धेरै खोज्दा पनि भेटिएन।"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Stem + -दै गर्दा",
+      "Emphasized progressive simultaneity",
+      "खाना खाँदै गर्दा फोन आयो।"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#d97706",
+    "label": "Simultaneous Actions",
+    "example": "गीत सुन्दै हिँड्दा समय बितेको पत्तै भएन।",
+    "translation": ""
+   },
+   {
+    "color": "#b45309",
+    "label": "Temporal Trigger / Concurrence",
+    "example": "काठमाडौँ पुग्दा रातिको दश बजिसकेको थियो।",
+    "translation": ""
+   },
+   {
+    "color": "#78350f",
+    "label": "Conditional Instruction",
+    "example": "गाह्रो पर्दा मलाई तुरुन्तै सम्पर्क गर्नुहोस्।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "टिभी हेर्दा म निदाएछु।",
+    "ko": "",
+    "highlight": "हेर्दा"
+   },
+   {
+    "en": "बाटोमा हिँड्दाखेरी लडेर खुट्टामा चोट लाग्यो।",
+    "ko": "",
+    "highlight": "हिँड्दाखेरी"
+   },
+   {
+    "en": "मैले बोलाउँदा उसले सुनेन।",
+    "ko": "",
+    "highlight": "बोलाउँदा"
+   },
+   {
+    "en": "नेपालमा बस्दा मैले धेरै नयाँ साथीहरू बनाएँ।",
+    "ko": "",
+    "highlight": "बस्दा"
+   },
+   {
+    "en": "भात पकाउँदाखेरी हात पोल्यो।",
+    "ko": "",
+    "highlight": "पकाउँदाखेरी"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "म खाना खाएर टिभी हेर्दा फोन आयो। (meaning at that very moment)",
+    "right": "म खाना खाँदा फोन आयो।",
+    "note": "Use -एर for sequential actions ('after doing'); use -दा for simultaneous interruptions ('while doing')."
+   },
+   {
+    "wrong": "घर जान्दा पानी पर्यो।",
+    "right": "घर जाँदा पानी पर्यो।",
+    "note": "Verbs with irregular stems like जानु reduce to जाँदा (nasalized), not जान्दा."
+   },
+   {
+    "wrong": "बोल्दाखेरी गरेर काम गर।",
+    "right": "बोल्दै काम गर।",
+    "note": "Do not stack unnecessary auxiliary verbs; use -दा / -दाखेरी or duplicated -दै for concurrent parallel activities."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Be careful when crossing the road.",
+    "options": [
+     "बाटो काटेर होसियार हुनुहोस्।",
+     "बाटो काट्दा होसियार हुनुहोस्।",
+     "बाटो काट्न होसियार हुनुहोस्।",
+     "बाटो काट्नु होसियार हुनुहोस्।"
+    ],
+    "answer": 1,
+    "explanation": "'When/while crossing' expresses temporal circumstance and requires the stem + -दा form (काट्दा)."
+   },
+   {
+    "question": "While going home, rain started falling.",
+    "options": [
+     "घर जाँदाखेरी पानी पर्यो।",
+     "घर गएर पानी पर्यो।",
+     "घर जान पानी पर्यो।",
+     "घर गएपछि पानी पर्छ।"
+    ],
+    "answer": 0,
+    "explanation": "The converb जाँदाखेरी ('while going') marks the ongoing action during which another event occurs."
+   },
+   {
+    "question": "Even though I searched a lot, I could not find my keys.",
+    "options": [
+     "धेरै खोज्न पनि भेटिएन।",
+     "धेरै खोजेर पनि भेटिएन।",
+     "धेरै खोज्दा पनि भेटिएन।",
+     "धेरै खोज्नु पनि भेटिएन।"
+    ],
+    "answer": 2,
+    "explanation": "Stem + -दा पनि forms the concessive conditional 'even upon / even after searching'."
+   },
+   {
+    "question": "While studying, I fell asleep.",
+    "options": [
+     "पढ्न म निदाएछु।",
+     "पढेर म निदाएछु।",
+     "पढ्नु म निदाएछु।",
+     "पढ्दा म निदाएछु।"
+    ],
+    "answer": 3,
+    "explanation": "Simultaneous background activity ('while studying') uses पढ्दा."
+   }
+  ],
+  "tip": "Contrasting with sequential -एर (do X then Y), the converb -दा means X and Y are occurring at the very same window of time."
+ },
+ {
+  "id": "ne-b1-passive-and-impersonal-verbs",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#ef4444",
+  "emoji": "🛡️",
+  "title": "Passive and Impersonal Voice (-इ- Stem Infix)",
+  "subtitle": "Deriving passive verbs to diminish agency or convey general possibility",
+  "color": "#dc2626",
+  "bg": "#fef2f2",
+  "keyPoint": "Insert the infix -इ- between the verb root and the inflectional ending to make any transitive verb passive, marking the original agent with -द्वारा or -बाट ('by').",
+  "structure": {
+   "headers": [
+    "Active Verb",
+    "Passive Root",
+    "Nepali 3rd Person Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "गर्नु (to do)",
+      "गरि-",
+      "गरिन्छ",
+      "It is done / carried out"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "लेख्नु (to write)",
+      "लेखि-",
+      "लेखियो",
+      "It was written"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "भन्नु (to say)",
+      "भनि-",
+      "भनिन्छ",
+      "It is said / People say"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "देख्नु (to see)",
+      "देखि-",
+      "देखिँदैन",
+      "It is not seen / invisible"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#dc2626",
+    "label": "General Sayings & Conventions",
+    "example": "नेपालीमा यसलाई के भनिन्छ?",
+    "translation": ""
+   },
+   {
+    "color": "#b91c1c",
+    "label": "Formal or Journalistic Statements",
+    "example": "नयाँ भवन सरकारद्वारा निर्माण गरियो।",
+    "translation": ""
+   },
+   {
+    "color": "#991b1b",
+    "label": "Impersonal Capability / Potential",
+    "example": "यहाँबाट हिमाल प्रष्ट रूपमा देखिन्छ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "यो काम भोलिसम्ममा गरिनेछ।",
+    "ko": "",
+    "highlight": "गरिनेछ"
+   },
+   {
+    "en": "प्रहरीद्वारा चोर समातियो।",
+    "ko": "",
+    "highlight": "समातियो"
+   },
+   {
+    "en": "सडक मर्मतको काम द्रुत गतिमा गरिँदै छ।",
+    "ko": "",
+    "highlight": "गरिँदै छ"
+   },
+   {
+    "en": "यो औषधि दिनमा दुई पटक खाइन्छ।",
+    "ko": "",
+    "highlight": "खाइन्छ"
+   },
+   {
+    "en": "नेपालमा विभिन्न चाडपर्वहरू हर्षोल्लासका साथ मनाइन्छ।",
+    "ko": "",
+    "highlight": "मनाइन्छ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "सरकार यो पुल बनाइयो।",
+    "right": "सरकारद्वारा यो पुल बनाइयो।",
+    "note": "If an agent is mentioned in a passive sentence, it must take -द्वारा or -बाट ('by'), not bare nominative."
+   },
+   {
+    "wrong": "किताब पढ्इन्छ।",
+    "right": "किताब पढिन्छ।",
+    "note": "The passive infix -इ- replaces the final mute vowel of the consonant stem, yielding पढिन्छ rather than पढ्इन्छ."
+   },
+   {
+    "wrong": "उनीहरूलाई बोलाइन्।",
+    "right": "उनीहरूलाई बोलाइयो।",
+    "note": "Nepali passive and impersonal verbs overwhelmingly default to the neutral third-person singular inflection (-इन्छ / -इयो)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is this called in Nepali?",
+    "options": [
+     "नेपालीमा यसलाई के भन्छ?",
+     "नेपालीमा यसलाई के भनिन्छ?",
+     "नेपालीमा यसलाई के भनेको छ?",
+     "नेपालीमा यसलाई के भन्ने?"
+    ],
+    "answer": 1,
+    "explanation": "The passive idiom 'it is said / called' uses the stem भन्- + -इ- + -न्छ -> भनिन्छ."
+   },
+   {
+    "question": "The thief was caught by the police.",
+    "options": [
+     "प्रहरी चोर समात्यो।",
+     "प्रहरीलाई चोर समातियो।",
+     "प्रहरीद्वारा चोर समातियो।",
+     "प्रहरीले चोर समातिन्छ।"
+    ],
+    "answer": 2,
+    "explanation": "The passive agent takes -द्वारा ('by') and the verb takes the passive past marker समातियो."
+   },
+   {
+    "question": "From this viewpoint, Mt. Everest can be seen clearly.",
+    "options": [
+     "यहाँबाट सगरमाथा प्रष्ट देखिन्छ।",
+     "यहाँबाट सगरमाथा प्रष्ट देख्छ।",
+     "यहाँबाट सगरमाथा प्रष्ट देखायो।",
+     "यहाँबाट सगरमाथा प्रष्ट देख्न सक्यो।"
+    ],
+    "answer": 0,
+    "explanation": "Intransitive/impersonal capability 'is seen / is visible' uses the passive stem form देखिन्छ."
+   },
+   {
+    "question": "Festivals are celebrated with joy in Nepal.",
+    "options": [
+     "नेपालमा चाडपर्वहरू मनाउँछ।",
+     "नेपालमा चाडपर्वहरू मनाइयो।",
+     "नेपालमा चाडपर्वहरू मनाउनुहुन्छ।",
+     "नेपालमा चाडपर्वहरू मनाइन्छ।"
+    ],
+    "answer": 3,
+    "explanation": "Habitual general passive action ('are celebrated') takes the passive ending -इन्छ (मनाइन्छ)."
+   }
+  ],
+  "tip": "Passive forms in Nepali are frequently used where English uses 'one does...' or 'people say...' (e.g., भनिन्छ = 'it is said / they say')."
+ },
+ {
+  "id": "ne-b1-causative-verbs",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔄",
+  "title": "Causative Verb Morphology (-आउनु / -वाउनु)",
+  "subtitle": "Making or having someone else perform an action",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Add -आउनु to basic consonant verb roots for direct causation, or -वाउनु for double or indirect causation involving an intermediary.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Morphological Pattern",
+    "Base -> Causative",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Base Verb",
+      "Root + नु",
+      "गर्नु",
+      "to do"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Direct Causative",
+      "Root + -आउनु",
+      "गराउनु",
+      "to make someone do"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Indirect Causative",
+      "Root + -वाउनु",
+      "गरवाउनु",
+      "to have something done via an intermediary"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Vowel Root Causative",
+      "Vowel Root + -उनु / -वाउनु",
+      "खुवाउनु (from खानु)",
+      "to feed / to cause to eat"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Direct Instruction or Compulsion",
+    "example": "आमाले नानीलाई भात खुवाउनुभयो।",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "Arranging Services via Third Parties",
+    "example": "मैले सिकर्मीलाई टेबल बनाउन लगाएको छु।",
+    "translation": ""
+   },
+   {
+    "color": "#9A3412",
+    "label": "Indirect Institutional Causation",
+    "example": "शिक्षकले विद्यार्थीहरूद्वारा कोठा सफा गरवाउनुभयो।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "आमाले सानो बच्चालाई मीठो दूध खुवाउनुभयो।",
+    "ko": "",
+    "highlight": "खुवाउनुभयो"
+   },
+   {
+    "en": "दाइले मलाई बजारबाट सामान मगाउनुभयो।",
+    "ko": "",
+    "highlight": "मगाउनुभयो"
+   },
+   {
+    "en": "उहाँले चालकलाई गाडी रोक्न लगाउनुभयो।",
+    "ko": "",
+    "highlight": "लगाउनुभयो"
+   },
+   {
+    "en": "शिक्षकले मलाई नयाँ पाठ पढाउनुभयो।",
+    "ko": "",
+    "highlight": "पढाउनुभयो"
+   },
+   {
+    "en": "बुबाले मिस्त्रीद्वारा घरको ढोका रङ्गाउनुभयो।",
+    "ko": "",
+    "highlight": "रङ्गाउनुभयो"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "म भाइलाई भात खायो।",
+    "right": "मैले भाइलाई भात खुवाएँ।",
+    "note": "Basic transitive verbs cannot be used reflexively for 'feed'; use the causative verb खुवाउनु with the agent marker -ले."
+   },
+   {
+    "wrong": "शिक्षकले मलाई पाठ पढ्यो।",
+    "right": "शिक्षकले मलाई पाठ पढाउनुभयो।",
+    "note": "To convey 'teach' or 'cause to read', use the causative पढाउनु rather than the basic transitive पढ्नु."
+   },
+   {
+    "wrong": "मैले ऊ काम गराएँ।",
+    "right": "मैले उसलाई काम गराएँ।",
+    "note": "The recipient or causee being instructed must take the accusative/dative postposition -लाई."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Mother fed the child fresh milk: आमाले नानीलाई ताजा दूध ___।",
+    "options": [
+     "खानुभयो",
+     "खुवाउनुभयो",
+     "पकाउनुभयो",
+     "पिउनुभयो"
+    ],
+    "answer": 1,
+    "explanation": "The causative form of खानु (to eat) is खुवाउनु (to feed)."
+   },
+   {
+    "question": "The teacher made the students write an essay: शिक्षकले विद्यार्थीहरूलाई निबन्ध ___।",
+    "options": [
+     "लेख्नुभयो",
+     "पढ्नुभयो",
+     "लेखाउनुभयो",
+     "सिकाउनुभयो"
+    ],
+    "answer": 2,
+    "explanation": "लेखाउनु is the causative form of लेख्नु (to write), expressing causing someone to write."
+   },
+   {
+    "question": "I had my watch repaired by the technician: मैले मिस्त्रीद्वारा घडी ___।",
+    "options": [
+     "मर्मत गराएँ",
+     "मर्मत गरेँ",
+     "मर्मत भएँ",
+     "मर्मत लिएँ"
+    ],
+    "answer": 0,
+    "explanation": "Using गराउनु with the instrumental agent मिस्त्रीद्वारा marks an arranged, causative action."
+   },
+   {
+    "question": "Select the correct causative stem for the verb बस्नु (to sit):",
+    "options": [
+     "बसाल्नु",
+     "बसाउनु",
+     "बसिदिनु",
+     "बसाइदिनु"
+    ],
+    "answer": 1,
+    "explanation": "The primary morphological causative derived directly from बस्नु is बसाउनु (or lexical बसाल्नु to settle/seat)."
+   }
+  ],
+  "tip": "Remember that the person causing the action always takes -ले in past/perfective frames, while the intermediate agent carrying out the action usually takes -लाई or -द्वारा."
+ },
+ {
+  "id": "ne-b1-potential-capability-saknu",
+  "level": "b1",
+  "category": "modals",
+  "categoryColor": "#059669",
+  "emoji": "🎯",
+  "title": "Potentiality and Capability: सक्नु vs पाउनु",
+  "subtitle": "Distinguishing sheer physical ability from granted permission and opportunity",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Affix सक्नु directly to the bare verb root for physical ability, but use the infinitive in -न followed by पाउनु for opportunity, permission, or luck.",
+  "structure": {
+   "headers": [
+    "Grammar Pattern",
+    "Structural Rule",
+    "Nepali Example",
+    "Semantic Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Capability (सक्नु)",
+      "Bare Verb Root + सक्नु",
+      "म पौडी खेल्न सक्छु",
+      "Inherent skill or physical capability"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Opportunity / Permission (पाउनु)",
+      "Root-न + पाउनु",
+      "मैले मन्त्रीलाई भेट्न पाएँ",
+      "Fortunate circumstance or permission"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Inability / Prohibition",
+      "Negative inflection of auxiliary",
+      "भित्र जान पाइँदैन",
+      "Social rule or external ban"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Completion Aspect (सक्नु)",
+      "Bare Root + सक्नु (Past)",
+      "मैले काम गरिसकेँ",
+      "Completion of an entire task"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Physical or Mental Skill",
+    "example": "म नेपाली भाषा सरर बोल्न सक्छु।",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Fortunate Opportunity",
+    "example": "दसैँमा घर जान पाउँदा म धेरै खुसी भएँ।",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Social Permission or Regulation",
+    "example": "यहाँ तस्बिर खिच्न पाइँदैन।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "उनी कठिन पहाडी बाटोमा पनि छिटो हिँड्न सक्छिन्।",
+    "ko": "",
+    "highlight": "हिँड्न सक्छिन्"
+   },
+   {
+    "en": "मैले हिजो साथीहरूसँग रमाइलो चलचित्र हेर्न पाएँ।",
+    "ko": "",
+    "highlight": "हेर्न पाएँ"
+   },
+   {
+    "en": "के म यो शान्त कोठाभित्र अध्ययन गर्न सक्छु?",
+    "ko": "",
+    "highlight": "गर्न सक्छु"
+   },
+   {
+    "en": "अस्पतालमा ठूलो स्वरले कराउन पाइँदैन।",
+    "ko": "",
+    "highlight": "कराउन पाइँदैन"
+   },
+   {
+    "en": "हामीले समयमै आफ्नो काम पूरा गरिसक्यौँ।",
+    "ko": "",
+    "highlight": "गरिसक्यौँ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मैले पोखरा जान सक्यो किनकि बिदा थियो।",
+    "right": "मैले पोखरा जान पाएँ किनकि बिदा थियो।",
+    "note": "Use पाउनु instead of सक्नु when referring to an opportunity granted by circumstances like having holidays."
+   },
+   {
+    "wrong": "यहाँ धुम्रपान गर्न सक्दैन।",
+    "right": "यहाँ धुम्रपान गर्न पाइँदैन।",
+    "note": "Public prohibitions use the impersonal passive form of पाउनु (पाइँदैन), not सक्नु."
+   },
+   {
+    "wrong": "म पौडिन पाएँ तर पानी चिसो थियो।",
+    "right": "म पौडिन सक्थेँ तर पानी चिसो थियो।",
+    "note": "Internal capability or theoretical ability requires सक्नु."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Because of heavy traffic, I couldn't reach on time: बाटो बन्द भएकाले म समयमा पुग्न ___।",
+    "options": [
+     "सकिनँ",
+     "पाइनँ",
+     "चाहिनँ",
+     "गरिनँ"
+    ],
+    "answer": 0,
+    "explanation": "Inability to achieve an action due to circumstance or capability uses सक्नु in the negative (सकिनँ)."
+   },
+   {
+    "question": "Were you able to meet the minister yesterday (did you get the chance)?: के तपाईंले हिजो मन्त्रीलाई भेट्न ___?",
+    "options": [
+     "सक्नुभयो",
+     "जानुभयो",
+     "पाउनुभयो",
+     "दिनुभयो"
+    ],
+    "answer": 2,
+    "explanation": "Asking if someone had the privilege or opportunity to meet someone calls for पाउनु."
+   },
+   {
+    "question": "Photography is strictly forbidden here: यहाँ फोटो खिच्न ___।",
+    "options": [
+     "सकिन्छ",
+     "पाइन्छ",
+     "सकिँदैन",
+     "पाइँदैन"
+    ],
+    "answer": 3,
+    "explanation": "Prohibitions and general permissions use impersonal forms of पाउनु: पाइँदैन indicates 'it is not permitted'."
+   },
+   {
+    "question": "She has already finished eating her meal: उनले खाना ___।",
+    "options": [
+     "खाइसकिन्",
+     "खाइपाइन्",
+     "खाइहालिन्",
+     "खाइबसिन्"
+    ],
+    "answer": 0,
+    "explanation": "Auxiliary सक्नु compounded with the absolutive particple / root forms the completive aspect: खाइसकिन्."
+   }
+  ],
+  "tip": "A neat mental check: if you can translate the sentence as 'I got to do it' or 'I had the privilege of doing it', reach for पाउनु; if it means 'I am physically/mentally capable', choose सक्नु."
+ },
+ {
+  "id": "ne-b2-royal-honorific-baksanu",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#7C3AED",
+  "emoji": "👑",
+  "title": "High and Royal Honorifics (हजुर and -बक्सनु)",
+  "subtitle": "Ultra-deferential speech registers for royalty, dignitaries, and refined formal contexts",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Attach the auxiliary suffix -बक्सनु to oblique infinitive stems or honorific noun complements to express the highest possible social deference.",
+  "structure": {
+   "headers": [
+    "Degree of Respect",
+    "Pronoun",
+    "Verbal Marker",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Neutral / High (उच्च आदर)",
+      "तपाईं",
+      "गर्नुहुन्छ",
+      "तपाईं चिया खानुहुन्छ।"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Royal / Supreme (महा आदर)",
+      "हजुर / मौसुफ",
+      "गरिबक्सिन्छ / गरिबक्सियो",
+      "हजुरले सवारी होइबक्सियो।"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "High Request (अनुरोध)",
+      "हजुर",
+      "गर्नुहोला / गरिबक्सियोस्",
+      "यो पत्र हेरिबक्सियोस्।"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Formal Address",
+      "हजुर",
+      "छ / हुनुहुन्छ",
+      "हजुरलाई कस्तो छ?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Traditional Royal Deference",
+    "example": "राजाबाट भाषण गरिबक्सियो।",
+    "translation": ""
+   },
+   {
+    "color": "#4338CA",
+    "label": "Courtly and Diplomatic Protocol",
+    "example": "महामहिम राजदूतले चिया ग्रहण गरिबक्सियोस्।",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Polite Elite Speech in Traditional Homes",
+    "example": "हजुरबाबाट कथा सुनिबक्सियो।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "सरकारबाट नयाँ नियम घोषणा गरिबक्सियो।",
+    "ko": "",
+    "highlight": "गरिबक्सियो"
+   },
+   {
+    "en": "रानी मौसुफबाट विद्यालयको उद्घाटन गरिबक्सियो।",
+    "ko": "",
+    "highlight": "गरिबक्सियो"
+   },
+   {
+    "en": "हजुरले यो उपहार स्वीकार गरिबक्सियोस्।",
+    "ko": "",
+    "highlight": "गरिबक्सियोस्"
+   },
+   {
+    "en": "उहाँ सवारी होइबक्सिन्छ कि भनेर पर्खिरहेका छौँ।",
+    "ko": "",
+    "highlight": "होइबक्सिन्छ"
+   },
+   {
+    "en": "हजुरका कुरा सुनेर मलाई ज्यादै खुसी लाग्यो।",
+    "ko": "",
+    "highlight": "हजुरका"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "म खाना खाइबक्सन्छु।",
+    "right": "म खाना खान्छु।",
+    "note": "Never use -बक्सनु or royal honorifics for oneself; they are strictly reserved for second and third persons of elevated status."
+   },
+   {
+    "wrong": "हजुर कहिले आउँछस्?",
+    "right": "हजुर कहिले आउनुहुन्छ?",
+    "note": "Combining the high-honorific pronoun हजुर with the lowest-grade verb suffix -छस् is a severe pragmatic clash."
+   },
+   {
+    "wrong": "राजाले भने।",
+    "right": "राजाबाट हुकुम गरिबक्सियो।",
+    "note": "In royal register, agents take बाट instead of the plain -ले, and speaking becomes हुकुम गरिबक्सनु."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "May Your Highness please read this letter: हजुरले यो पत्र ___।",
+    "options": [
+     "पढ",
+     "पढ्नुहोस्",
+     "पढिबक्सियोस्",
+     "पढ्छ"
+    ],
+    "answer": 2,
+    "explanation": "The optative/polite imperative form of the royal honorific is formed with stem + -इबक्सियोस् (पढिबक्सियोस्)."
+   },
+   {
+    "question": "Which marker typically replaces the ergative agent -ले in high courtly royal statements?",
+    "options": [
+     "-लाई",
+     "-बाट",
+     "-सँग",
+     "-द्वारा"
+    ],
+    "answer": 1,
+    "explanation": "The postposition -बाट ('from / by the graceful agency of') is characteristic of royal honorific agents."
+   },
+   {
+    "question": "The Queen arrived at the palace: महारानीबाट दरबारमा सवारी ___।",
+    "options": [
+     "भयो",
+     "गरियो",
+     "होइबक्सियो",
+     "गयो"
+    ],
+    "answer": 2,
+    "explanation": "Royal arrival/movement uses the honorific compound सवारी हुनु / सवारी होइबक्सनु."
+   },
+   {
+    "question": "Why is 'मैले पत्र लेखिबक्सेँ' grammatically incorrect?",
+    "options": [
+     "The spelling is invalid",
+     "Royal honorifics cannot be applied to first-person subjects",
+     "It lacks a dative marker",
+     "The verb tense is incorrect"
+    ],
+    "answer": 1,
+    "explanation": "Honorific affixes like -बक्सनु indicate deference toward the listener or topic and cannot elevate the speaker oneself."
+   }
+  ],
+  "tip": "While -बक्सनु is less common in everyday modern democracy, it remains indispensable in classical Nepali literature, period films, diplomatic honors, and elite household traditions."
+ },
+ {
+  "id": "ne-b2-compound-vector-verbs",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#EA580C",
+  "emoji": "🧩",
+  "title": "Compound Vector Verbs (हाल्नु, दिनु, लिनु, छोड्नु)",
+  "subtitle": "Adding nuance, trajectory, and suddenness through auxiliary vector verbs",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Combine an absolutive primary verb stem in -इ with a vector auxiliary to specify beneficiary, sudden finality, or irrevocable completion.",
+  "structure": {
+   "headers": [
+    "Vector Verb",
+    "Primary Semantic Nuance",
+    "Example Stem",
+    "Combined Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "दिनु (to give)",
+      "Action performed for someone else's benefit",
+      "गरिदिनु",
+      "to do for someone"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "लिनु (to take)",
+      "Action performed for one's own benefit",
+      "गरिलिनु",
+      "to do for oneself"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "हाल्नु (to drop/put)",
+      "Sudden, decisive, or rash completion",
+      "खाइहाल्नु",
+      "to eat up quickly / immediately"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "छोड्नु (to leave)",
+      "Persistence to the bitter end or uninhibited result",
+      "गरिछोड्नु",
+      "to do at all costs / finish irrevocably"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Benefactive Direction (Other-focused)",
+    "example": "कृपया मलाई यो ठेगाना बताइदिनुहोस्।",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Immediate / Decisive Action",
+    "example": "पानी पर्न थाल्यो, छिटो छाता ओढीहाल।",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Determined Completion",
+    "example": "जतिसुकै गाह्रो भए पनि म यो काम फत्ते गरिछोड्छु।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "साथीले मलाई कठिन गृहकार्य सम्झाइदियो।",
+    "ko": "",
+    "highlight": "सम्झाइदियो"
+   },
+   {
+    "en": "मैले नयाँ किताब बजारबाट किनिहालेँ।",
+    "ko": "",
+    "highlight": "किनिहालेँ"
+   },
+   {
+    "en": "उनले आफ्नो सबै कुरा मनमै राखिलिइन्।",
+    "ko": "",
+    "highlight": "राखिलिइन्"
+   },
+   {
+    "en": "हामी आजै यो भित्तो रङ्गाइछोड्छौँ।",
+    "ko": "",
+    "highlight": "रङ्गाइछोड्छौँ"
+   },
+   {
+    "en": "समय सकिन लाग्यो, छिटो भात खाइहालौँ।",
+    "ko": "",
+    "highlight": "खाइहालौँ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "मैले तिमीलाई किताब पढिलिएँ।",
+    "right": "मैले तिमीलाई किताब पढिदिएँ।",
+    "note": "लिनु marks an action done for oneself; an action done for another person requires दिनु."
+   },
+   {
+    "wrong": "उहाँले मलाई सहयोग गरिहाल्नुभयो (meaning 'kindly helped me').",
+    "right": "उहाँले मलाई सहयोग गरिदिनुभयो।",
+    "note": "हाल्नु implies haste or recklessness; for polite benevolence use गरिदिनु."
+   },
+   {
+    "wrong": "म काम गर छोड्छु।",
+    "right": "म काम गरिछोड्छु।",
+    "note": "The primary verb must take the conjunctive/absolutive -इ stem (गरि-) before the auxiliary छोड्नु."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Could you please explain this word for me?: कृपया मलाई यो शब्द ___।",
+    "options": [
+     "सिकाइदिनुहोस्",
+     "सिकाइहाल्नुहोस्",
+     "सिकाइछोड्नुहोस्",
+     "सिकाइलिनुहोस्"
+    ],
+    "answer": 0,
+    "explanation": "दिनु as a vector verb conveys an action performed for the benefit of the speaker/listener (benefactive)."
+   },
+   {
+    "question": "The child finished the entire plate of food rapidly and completely: बच्चाले सबै खाना ___।",
+    "options": [
+     "खाइदियो",
+     "खाइहाल्यो",
+     "खाइरह्यो",
+     "खाइबस्यो"
+    ],
+    "answer": 1,
+    "explanation": "हाल्नु signifies swift, unhesitating, or decisive action."
+   },
+   {
+    "question": "No matter how difficult the exam, he will pass it at all costs: ऊ परीक्षा उत्तीर्ण ___।",
+    "options": [
+     "गरिछोड्छ",
+     "गरिदिन्छ",
+     "गरिलिन्छ",
+     "गरिहाल्छ"
+    ],
+    "answer": 0,
+    "explanation": "छोड्नु used as a vector auxiliary indicates unshakable resolve and persistence to completion."
+   },
+   {
+    "question": "I purchased and secured that land for myself: मैले त्यो जग्गा ___।",
+    "options": [
+     "किनिदिएँ",
+     "किनिछोडेँ",
+     "किनिलिएँ",
+     "किनिबसेँ"
+    ],
+    "answer": 2,
+    "explanation": "लिनु denotes reflexive benefit—performing the action primarily for oneself."
+   }
+  ],
+  "tip": "Think of compound vectors as directional arrows: दिनु points outwards to bless someone else, while लिनु bends inwards to retain the benefit for the doer."
+ },
+ {
+  "id": "ne-b2-complex-conditional-unreal",
+  "level": "b2",
+  "category": "conditionals",
+  "categoryColor": "#DC2626",
+  "emoji": "🔀",
+  "title": "Hypothetical and Counterfactual Conditionals (-ए / -एदेखि ... -थियो)",
+  "subtitle": "Navigating real, unreal, and past counterfactual conditional statements",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Suffix -ए or -एदेखि to the condition verb root and use the past habitual/imperfect suffix -थियो in the result clause to express counterfactual conditions.",
+  "structure": {
+   "headers": [
+    "Condition Type",
+    "Protasis (If-Clause)",
+    "Apodosis (Then-Clause)",
+    "English Parallel"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Real / Probable",
+      "Root + -यो भने",
+      "Future / Imperative",
+      "If it rains, we will stay."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Hypothetical (Present)",
+      "Root + -ए (भने)",
+      "Present / Future / -थियो",
+      "If you studied, you would learn."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Counterfactual",
+      "Root + -एको भए / -एदेखि",
+      "Root-नेथियो / -थियो",
+      "If he had come, I would have met him."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negative Unreal",
+      "न + Root + -ए",
+      "Negative -थिएन",
+      "If it hadn't rained, we would have gone."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Past Regrets and Unfulfilled Events",
+    "example": "समयमै डाक्टरकहाँ गएको भए बिरामी बाँच्नेथियो।",
+    "translation": ""
+   },
+   {
+    "color": "#9333EA",
+    "label": "Hypothetical Future Scenarios",
+    "example": "पैसा भए त म संसार घुम्न जानेथिएँ।",
+    "translation": ""
+   },
+   {
+    "color": "#0891B2",
+    "label": "Everyday Conversational Contingency",
+    "example": "भोलि घाम लागे हामी वनभोज जान्छौँ।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "तिमीले मिहिनेत गरेको भए परीक्षामा उत्तीर्ण हुनेथियौ।",
+    "ko": "",
+    "highlight": "गरेको भए"
+   },
+   {
+    "en": "पानी नपरेको भए हामी समयमै पोखरा पुग्नेथियौँ।",
+    "ko": "",
+    "highlight": "नपरेको भए"
+   },
+   {
+    "en": "उसले मलाई बोलाएदेखि म अवश्य जानेथिएँ।",
+    "ko": "",
+    "highlight": "बोलाएदेखि"
+   },
+   {
+    "en": "राम्रोसँग सोचेको भए यस्तो गल्ती हुने थिएन।",
+    "ko": "",
+    "highlight": "हुने थिएन"
+   },
+   {
+    "en": "सत्य बोलेको भए कसैले तिमीलाई गाली गर्ने थिएन।",
+    "ko": "",
+    "highlight": "बोलेको भए"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "यदि म धनी भयो भने म गाडी किन्थ्यो।",
+    "right": "यदि म धनी भएको भए गाडी किन्नेथिएँ।",
+    "note": "Counterfactual 'would have' conditions require the past conditional stem (-एको भए) paired with -नेथिएँ, matching the first person."
+   },
+   {
+    "wrong": "पानी परे म छाता बोक्थ्यो।",
+    "right": "पानी परे म छाता बोक्नेथिएँ।",
+    "note": "The apodosis must agree in person with the subject (म requires बोक्नेथिएँ, not third-person बोक्थ्यो)."
+   },
+   {
+    "wrong": "समय भएको भए म आउँछ।",
+    "right": "समय भएको भए म आउनेथिएँ।",
+    "note": "A counterfactual hypothetical if-clause cannot resolve in a present indicative verb (आउँछ)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "If you had informed me, I would have arrived at the airport: तिमीले खबर गरेको भए म विमानस्थल ___।",
+    "options": [
+     "आउँछु",
+     "आउनेथिएँ",
+     "आएँ",
+     "आउनेछु"
+    ],
+    "answer": 1,
+    "explanation": "Past unreal counterfactuals with first-person 'I' conclude with -नेथिएँ (आउनेथिएँ)."
+   },
+   {
+    "question": "If it rains tomorrow, we will stay at home: भोलि पानी परे हामी घरमै ___।",
+    "options": [
+     "बस्थ्यौँ",
+     "बस्नेथियौँ",
+     "बस्नेछौँ",
+     "बसिन्थ्यो"
+    ],
+    "answer": 2,
+    "explanation": "A realistic future conditional using -ए resolves naturally with the future indicative बस्नेछौँ."
+   },
+   {
+    "question": "Had he taken the medicine properly, he would not have fallen sick: औषधि खाएको भए ऊ बिरामी ___।",
+    "options": [
+     "हुनेथिएन",
+     "भएन",
+     "हुँदैन",
+     "हुनेछैन"
+    ],
+    "answer": 0,
+    "explanation": "Third-person singular negative counterfactual past uses हुने थिएन."
+   },
+   {
+    "question": "Which suffix attaches to the verb root to construct the conditional clause 'if (one does)':",
+    "options": [
+     "-दा",
+     "-एर",
+     "-ए",
+     "-नु"
+    ],
+    "answer": 2,
+    "explanation": "The suffix -ए (e.g. गरे, गए, खाए) functions as the core synthetic conditional marker in Nepali."
+   }
+  ],
+  "tip": "Think of -एको भए as 'had [verb] happened' and -नेथियो as 'would have happened'—this direct pair is the key to mastering Nepali counterfactuals."
+ }
+]
