@@ -54,6 +54,9 @@ export default function MicroTalkPage() {
   const [messages, setMessages] = useState<ChatMsg[]>([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+  // AI 메시지 모국어 번역: 메시지 인덱스 → 번역문
+  const [translations, setTranslations] = useState<Record<number, string>>({});
+  const [translatingIdx, setTranslatingIdx] = useState<number | null>(null);
   const [isListening, setIsListening] = useState(false);
   const [micGuide, setMicGuide] = useState<MicGuideReason | null>(null); // PR-G: STT 안내
   const [secondsLeft, setSecondsLeft] = useState(MICROTALK_SECONDS);
@@ -110,7 +113,11 @@ export default function MicroTalkPage() {
     const rec = new SR();
     rec.lang = learnLang;
     rec.continuous = false; rec.interimResults = false;
-    rec.onresult = (e: any) => { sendRef.current(e.results[0][0].transcript); };
+    rec.onresult = (e: any) => {
+      const t: string = e.results[0][0].transcript ?? '';
+      setInput(t);
+      try { inputRef.current?.focus(); } catch {}
+    };
     // PR-G: 권한 거부/마이크 없음 시 무음 대신 안내 UI
     rec.onerror = (e: any) => {
       setIsListening(false);
@@ -149,6 +156,29 @@ export default function MicroTalkPage() {
     setMessages(messagesRef.current);
   };
 
+  // 모국어 번역 표시 여부 (모국어==학습언어면 생략)
+  const showTranslation = nativeLang !== learnLang;
+
+  // ── AI 메시지 모국어 번역 (자동 표시, discover per-message 번역 패턴) ───
+  const translateAi = useCallback(async (idx: number, text: string) => {
+    setTranslatingIdx(idx);
+    try {
+      const t = await callGemini(
+        `Translate the following text to language code "${nativeLang}". Return ONLY the translation, nothing else:\n\n"${text}"`, 0.1);
+      const clean = t.replace(/^"|"$/g, '').trim();
+      if (clean) setTranslations(prev => ({ ...prev, [idx]: clean }));
+    } catch { /* 번역 실패 시 원문만 표시 */ }
+    finally { setTranslatingIdx(cur => (cur === idx ? null : cur)); }
+  }, [nativeLang]);
+
+  const pushAiMsg = (text: string) => {
+    pushMsg({ role: 'ai', text });
+    if (showTranslation) {
+      const idx = messagesRef.current.length - 1;
+      translateAi(idx, text);
+    }
+  };
+
   const handleSend = useCallback(async (text?: string) => {
     const txt = (text ?? input).trim();
     if (!txt || loading || phase !== 'chat') return;
@@ -161,16 +191,13 @@ export default function MicroTalkPage() {
     try {
       const reply = await callGemini(
         `${systemPrompt}\n\nConversation so far:\n${history}\n\nRespond as the tutor (max 2 short sentences, one follow-up question):`, 0.8);
-      pushMsg({ role: 'ai', text: reply || '...' });
+      pushAiMsg(reply || '...');
     } catch {
       setError("Couldn't reach the AI. Check your connection and try again.");
     } finally {
       setLoading(false);
     }
-  }, [input, loading, phase, systemPrompt]);
-
-  const sendRef = useRef(handleSend);
-  sendRef.current = handleSend;
+  }, [input, loading, phase, systemPrompt, showTranslation, translateAi]);
 
   // ── 세션 시작 ─────────────────────────────────────────────────────────────
   const startTalk = async () => {
@@ -181,6 +208,7 @@ export default function MicroTalkPage() {
     }
     messagesRef.current = [];
     setMessages([]);
+    setTranslations({}); setTranslatingIdx(null);
     setReport(null);
     setPhase('chat');
     setSecondsLeft(MICROTALK_SECONDS);
@@ -188,7 +216,7 @@ export default function MicroTalkPage() {
     try {
       const opening = await callGemini(
         `${systemPrompt}\n\n${buildOpeningPrompt({ targetLangLabel: learnLangLabel, topicLabel: PURPOSE_LABEL[topic] })}`, 0.7);
-      pushMsg({ role: 'ai', text: opening || '...' });
+      pushAiMsg(opening || '...');
     } catch {
       setError("Couldn't reach the AI. Check your connection.");
     } finally {
@@ -238,6 +266,7 @@ export default function MicroTalkPage() {
     if (timerRef.current) { clearInterval(timerRef.current); timerRef.current = null; }
     messagesRef.current = [];
     setMessages([]); setReport(null); setError(''); setInput('');
+    setTranslations({}); setTranslatingIdx(null);
     setSecondsLeft(MICROTALK_SECONDS);
     setGuestLeft(Math.max(0, GUEST_DAILY_LIMIT - getGuestUsage().count));
     setPhase('topic');
@@ -330,6 +359,13 @@ export default function MicroTalkPage() {
             {messages.map((m, i) => (
               <div key={i} style={m.role === 'user' ? S.uMsg : S.aMsg}>
                 <div>{m.text}</div>
+                {m.role === 'ai' && showTranslation && (
+                  translations[i]
+                    ? <div style={S.trText}>{translations[i]}</div>
+                    : translatingIdx === i
+                      ? <div style={S.trLoading}>Translating…</div>
+                      : null
+                )}
                 {m.role === 'ai' && (
                   <button onClick={() => speak(m.text)} style={S.speakBtn} aria-label="Listen">🔊</button>
                 )}
@@ -417,6 +453,8 @@ const S: Record<string, React.CSSProperties> = {
   msgs: { flex: 1, overflowY: 'auto', padding: '20px 18px', display: 'flex', flexDirection: 'column', gap: 12, minHeight: 200 },
   uMsg: { alignSelf: 'flex-end', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', borderRadius: '18px 18px 4px 18px', padding: '11px 16px', maxWidth: '82%', fontSize: 15, lineHeight: 1.5 },
   aMsg: { alignSelf: 'flex-start', background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.1)', color: '#F1F5F9', borderRadius: '18px 18px 18px 4px', padding: '11px 16px', maxWidth: '86%', fontSize: 15, lineHeight: 1.55, position: 'relative' },
+  trText: { fontSize: 12.5, color: '#94A3B8', marginTop: 7, lineHeight: 1.5, fontStyle: 'italic' },
+  trLoading: { fontSize: 11, color: '#64748B', marginTop: 6 },
   speakBtn: { background: 'none', border: 'none', fontSize: 13, cursor: 'pointer', opacity: 0.6, marginTop: 6, padding: 0 },
   typing: { letterSpacing: 4, color: '#94A3B8' },
   inputRow: { display: 'flex', gap: 8, padding: '12px 18px', borderTop: '1px solid rgba(255,255,255,0.08)' },
