@@ -657,7 +657,7 @@ function DiscoverContent() {
                   {trUnder(f.title, { fontSize:11, color:'rgba(255,255,255,0.85)', marginBottom:4 })}
                   <div style={{ fontSize:12, color:f.accent, fontWeight:700, marginBottom:8 }}>{f.tagline}</div>
                   {trUnder(f.tagline, { fontSize:11, color:'rgba(255,255,255,0.85)', marginBottom:8 })}
-                  <div style={{ fontSize:12, color:'rgba(0,0,0,0.65)', fontWeight:600,
+                  <div style={{ fontSize:12, color:'rgba(255,255,255,0.85)', fontWeight:600,
                     lineHeight:1.5 }}>{f.desc}</div>
                   {trUnder(f.desc, { fontSize:11, color:'rgba(255,255,255,0.85)', lineHeight:1.5, marginTop:3 })}
 
