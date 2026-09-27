@@ -1,0 +1,3336 @@
+[
+ {
+  "id": "lt-a1-noun-declension-classes-nominative",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "🏷️",
+  "title": "Noun Declension Classes and Gender in the Nominative",
+  "subtitle": "Recognizing grammatical gender and primary nominative endings",
+  "color": "#1E88E5",
+  "bg": "#E3F2FD",
+  "keyPoint": "Lithuanian nouns are grammatically masculine or feminine, identifiable in the nominative singular by endings like -as, -is, -ys for masculine and -a, -ė for feminine.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Nominative Singular Ending",
+    "Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine",
+      "-as, -is, -ys",
+      "brolis",
+      "brother"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine",
+      "-a, -ė",
+      "sesuo / mama",
+      "sister / mom"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adjective Agreement (M)",
+      "-as / -us",
+      "geras draugas",
+      "good friend (m.)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Adjective Agreement (F)",
+      "-a / -i",
+      "gera draugė",
+      "good friend (f.)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1E88E5",
+    "label": "Subject of a sentence",
+    "example": "Mokytojas kalba lietuviškai.",
+    "translation": ""
+   },
+   {
+    "color": "#43A047",
+    "label": "Predicate noun naming an identity",
+    "example": "Mano sesuo yra studentė.",
+    "translation": ""
+   },
+   {
+    "color": "#FB8C00",
+    "label": "Direct naming or dictionary entries",
+    "example": "Vilnius yra gražus miestas.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Šis stalas yra naujas.",
+    "ko": "",
+    "highlight": "stalas"
+   },
+   {
+    "en": "Mano katė miega ant kėdės.",
+    "ko": "",
+    "highlight": "katė"
+   },
+   {
+    "en": "Brolis dirba ligoninėje.",
+    "ko": "",
+    "highlight": "Brolis"
+   },
+   {
+    "en": "Knyga yra labai įdomi.",
+    "ko": "",
+    "highlight": "Knyga"
+   },
+   {
+    "en": "Kambarys yra šviesus ir erdvus.",
+    "ko": "",
+    "highlight": "Kambarys"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Geras mergaitė skaito.",
+    "right": "Gera mergaitė skaito.",
+    "note": "Adjectives must match feminine nouns with feminine endings like '-a'."
+   },
+   {
+    "wrong": "Mano kava yra šaltas.",
+    "right": "Mano kava yra šalta.",
+    "note": "The noun 'kava' ends in -a and is feminine, requiring the feminine predicate adjective 'šalta'."
+   },
+   {
+    "wrong": "Šitas namas yra didelė.",
+    "right": "Šitas namas yra didelis.",
+    "note": "The noun 'namas' is masculine, so it requires the masculine adjective 'didelis'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the masculine noun in the list:",
+    "options": [
+     "diena",
+     "kava",
+     "berniukas",
+     "mokykla"
+    ],
+    "answer": 2,
+    "explanation": "Nouns ending in '-as' such as 'berniukas' (boy) are masculine."
+   },
+   {
+    "question": "Choose the correct adjective form: 'Graž___ mergaitė šypsosi.'",
+    "options": [
+     "us",
+     "i",
+     "as",
+     "a"
+    ],
+    "answer": 3,
+    "explanation": "'Mergaitė' is feminine, so the matching adjective ending is '-a' (graži/graža -> graži or regular -a base: 'graži'). Here 'graži' matches 'i' stem, for regular: 'gera'."
+   },
+   {
+    "question": "Which of these words is a feminine noun ending in '-ė'?",
+    "options": [
+     "stalas",
+     "upė",
+     "šuo",
+     "tėtis"
+    ],
+    "answer": 1,
+    "explanation": "'Upė' (river) ends in '-ė' and belongs to the primary feminine declension pattern."
+   },
+   {
+    "question": "Select the proper agreement: 'Mano tėvas yra ___.'",
+    "options": [
+     "geras",
+     "gera",
+     "geros",
+     "gerą"
+    ],
+    "answer": 0,
+    "explanation": "'Tėvas' is masculine singular nominative, requiring 'geras'."
+   }
+  ],
+  "tip": "Almost all native Lithuanian nouns ending in -as, -is, or -ys are masculine, while nearly everything ending in -a or -ė is feminine."
+ },
+ {
+  "id": "lt-a1-present-tense-conjugations",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#43A047",
+  "emoji": "⏳",
+  "title": "Present Tense Conjugation Groups (-a, -i, -o)",
+  "subtitle": "Conjugating verbs in the present using 3rd-person reference vowels",
+  "color": "#2E7D32",
+  "bg": "#E8F5E9",
+  "keyPoint": "Lithuanian present-tense verbs group into three conjugations determined by the 3rd person singular/plural vowel: -a (1st), -i (2nd), or -o (3rd).",
+  "structure": {
+   "headers": [
+    "Group",
+    "3rd Person Stem",
+    "Aš (I)",
+    "Jie / Jos (They)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st (-a-)",
+      "dirba (works)",
+      "dirbu",
+      "dirba"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd (-i-)",
+      "turi (has)",
+      "turiu",
+      "turi"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd (-o-)",
+      "moko (teaches)",
+      "mokau",
+      "moko"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2E7D32",
+    "label": "Describing habitual actions",
+    "example": "Aš kasdien dirbu bibliotekoje.",
+    "translation": ""
+   },
+   {
+    "color": "#1E88E5",
+    "label": "Actions occurring right now",
+    "example": "Dabar mes kalbame apie orą.",
+    "translation": ""
+   },
+   {
+    "color": "#E53935",
+    "label": "Stating continuous states or facts",
+    "example": "Jie gyvena dideliame mieste.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Aš skaitau įdomią knygą.",
+    "ko": "",
+    "highlight": "skaitau"
+   },
+   {
+    "en": "Ar tu kalbi angliškai?",
+    "ko": "",
+    "highlight": "kalbi"
+   },
+   {
+    "en": "Jonas gyvena Vilniuje.",
+    "ko": "",
+    "highlight": "gyvena"
+   },
+   {
+    "en": "Mes suprantame šią užduotį.",
+    "ko": "",
+    "highlight": "suprantame"
+   },
+   {
+    "en": "Jie nemato problemos.",
+    "ko": "",
+    "highlight": "nemato"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jie dirbame kartu.",
+    "right": "Jie dirba kartu.",
+    "note": "The 3rd-person forms (jis, ji, jie, jos) do not take personal plural endings like -me; they use the bare stem 'dirba'."
+   },
+   {
+    "wrong": "Aš kalba lietuviškai.",
+    "right": "Aš kalbu lietuviškai.",
+    "note": "The 1st person singular 'aš' takes the ending -u or -au, never the 3rd-person stem vowel alone."
+   },
+   {
+    "wrong": "Mes turo bilietus.",
+    "right": "Mes turime bilietus.",
+    "note": "'Turėti' belongs to the 2nd conjugation (-i-), so 'mes' takes the ending '-ime' (turime)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'Aš kasdien ___ kavą.' (gerti)",
+    "options": [
+     "geria",
+     "geriu",
+     "geriame",
+     "geri"
+    ],
+    "answer": 1,
+    "explanation": "'Aš' takes the ending '-u', making the form 'geriu'."
+   },
+   {
+    "question": "Fill in the blank: 'Jie Vilniuje ___.' (gyventi)",
+    "options": [
+     "gyvena",
+     "gyvenu",
+     "gyvename",
+     "gyvenate"
+    ],
+    "answer": 0,
+    "explanation": "The 3rd person plural 'jie' uses the base 3rd person form 'gyvena'."
+   },
+   {
+    "question": "Fill in the blank: 'Mes ___ lietuviškai.' (kalbėti)",
+    "options": [
+     "kalba",
+     "kalbu",
+     "kalbi",
+     "kalbame"
+    ],
+    "answer": 3,
+    "explanation": "For 1st person plural 'mes', verbs take '-me', yielding 'kalbame'."
+   },
+   {
+    "question": "Choose the correct form for 'tu' with the verb 'mylėti' (to love):",
+    "options": [
+     "myli",
+     "myliu",
+     "mylia",
+     "mylite"
+    ],
+    "answer": 0,
+    "explanation": "'Tu' for 2nd conjugation takes '-i', resulting in 'myli'."
+   }
+  ],
+  "tip": "In Lithuanian, the 3rd-person verb form is unique: singular (jis/ji) and plural (jie/jos) share the EXACT same verb form!"
+ },
+ {
+  "id": "lt-a1-accusative-direct-object",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "🎯",
+  "title": "Accusative Case for Direct Objects",
+  "subtitle": "Marking targets of transitive verbs and destinations",
+  "color": "#0288D1",
+  "bg": "#E1F5FE",
+  "keyPoint": "The accusative case marks the direct object of an affirmative sentence, typically ending with a nasal vowel letter like -ą, -į, -ų, or -ę in the singular.",
+  "structure": {
+   "headers": [
+    "Nominative Singular",
+    "Accusative Singular",
+    "Accusative Plural",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "namas (-as)",
+      "namą",
+      "namus",
+      "house"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "brolis (-is)",
+      "brolį",
+      "brolius",
+      "brother"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "kava (-a)",
+      "kavą",
+      "kavas",
+      "coffee"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "gėlė (-ė)",
+      "gėlę",
+      "gėles",
+      "flower"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0288D1",
+    "label": "Direct object of transitive actions",
+    "example": "Tomas perka naują automobilį.",
+    "translation": ""
+   },
+   {
+    "color": "#7B1FA2",
+    "label": "Target of perception or feeling",
+    "example": "Aš myliu šitą šalį.",
+    "translation": ""
+   },
+   {
+    "color": "#00796B",
+    "label": "Time expressions denoting duration",
+    "example": "Mes laukiame visą valandą.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Aš geriu karštą arbatą.",
+    "ko": "",
+    "highlight": "arbatą"
+   },
+   {
+    "en": "Jis skaito šitą knygą.",
+    "ko": "",
+    "highlight": "knygą"
+   },
+   {
+    "en": "Mes statome naują namą.",
+    "ko": "",
+    "highlight": "namą"
+   },
+   {
+    "en": "Vaikas mato didelį šunį.",
+    "ko": "",
+    "highlight": "šunį"
+   },
+   {
+    "en": "Ar tu pažįsti šį žmogų?",
+    "ko": "",
+    "highlight": "žmogų"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Aš matau graži gėlė.",
+    "right": "Aš matau gražią gėlę.",
+    "note": "Direct objects of affirmative verbs must take the accusative case with nasal vowels (-ią, -ę)."
+   },
+   {
+    "wrong": "Mes perkame duona.",
+    "right": "Mes perkame duoną.",
+    "note": "'Duona' is in the nominative; direct object position requires the accusative ending '-ą'."
+   },
+   {
+    "wrong": "Jis geria pienas.",
+    "right": "Jis geria pieną.",
+    "note": "'Pienas' must take the accusative masculine singular ending '-ą'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'Tomas rašo ___.' (laiškas)",
+    "options": [
+     "laiško",
+     "laišką",
+     "laiške",
+     "laiškui"
+    ],
+    "answer": 1,
+    "explanation": "The accusative singular for masculine -as nouns ends in '-ą' (laišką)."
+   },
+   {
+    "question": "Fill in the blank: 'Mama verda skanią ___.' (sriuba)",
+    "options": [
+     "sriubą",
+     "sriubos",
+     "sriubai",
+     "sriuba"
+    ],
+    "answer": 0,
+    "explanation": "Feminine nouns ending in '-a' become '-ą' in the accusative singular."
+   },
+   {
+    "question": "Choose the correct accusative form of 'katė':",
+    "options": [
+     "katės",
+     "katę",
+     "katei",
+     "kačių"
+    ],
+    "answer": 1,
+    "explanation": "Feminine nouns ending in '-ė' change to '-ę' in the accusative singular."
+   },
+   {
+    "question": "Complete the sentence: 'Aš matau gerą ___.' (draugas)",
+    "options": [
+     "draugui",
+     "drauge",
+     "draugas",
+     "draugą"
+    ],
+    "answer": 3,
+    "explanation": "'Draugas' changes to 'draugą' to serve as the direct object in the accusative singular."
+   }
+  ],
+  "tip": "Singular accusative nouns always end in a vowel with a tail (ogonek: ą, ę, į, ų), making them easy to spot."
+ },
+ {
+  "id": "lt-a1-genitive-possession-quantities",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "📦",
+  "title": "Genitive Case for Possession, Absence, and Numbers",
+  "subtitle": "Expressing belonging, 'of', counted quantities, and non-existence",
+  "color": "#7B1FA2",
+  "bg": "#F3E5F5",
+  "keyPoint": "The genitive case expresses possession, quantity after numbers greater than nine, and non-existence after 'nėra'.",
+  "structure": {
+   "headers": [
+    "Nominative",
+    "Genitive Singular",
+    "Genitive Plural",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "draugas (-as)",
+      "draugo",
+      "draugų",
+      "Possession (friend's)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "knyga (-a)",
+      "knygos",
+      "knygų",
+      "Quantities (10 knygų)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "cukrus (-us)",
+      "cukraus",
+      "cukrų",
+      "Partitive (a bit of sugar)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "vanduo",
+      "vandens",
+      "vandenų",
+      "Absence with nėra"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7B1FA2",
+    "label": "Possession ('s or of)",
+    "example": "Čia yra mano tėvo mašina.",
+    "translation": ""
+   },
+   {
+    "color": "#D81B60",
+    "label": "Absence or non-existence with nėra",
+    "example": "Šiandien klasėje nėra mokytojo.",
+    "translation": ""
+   },
+   {
+    "color": "#3949AB",
+    "label": "Counted items from 10 to 20 and multiples of ten",
+    "example": "Miestelyje yra dešimt namų.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Tai yra Tomo telefonas.",
+    "ko": "",
+    "highlight": "Tomo"
+   },
+   {
+    "en": "Šaldytuve nėra pieno.",
+    "ko": "",
+    "highlight": "pieno"
+   },
+   {
+    "en": "Aš noriu stiklinės vandens.",
+    "ko": "",
+    "highlight": "vandens"
+   },
+   {
+    "en": "Gatvėje stovi dvidešimt mašinų.",
+    "ko": "",
+    "highlight": "mašinų"
+   },
+   {
+    "en": "Vilniaus universitetas yra labai senas.",
+    "ko": "",
+    "highlight": "Vilniaus"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Čia nėra vanduo.",
+    "right": "Čia nėra vandens.",
+    "note": "The negative existence word 'nėra' strictly requires the genitive case, not nominative."
+   },
+   {
+    "wrong": "Aš turiu dešimt knygos.",
+    "right": "Aš turiu dešimt knygų.",
+    "note": "Numbers from 10 upwards govern the genitive plural (ending in -ų), not singular."
+   },
+   {
+    "wrong": "Tai yra mašina mano brolis.",
+    "right": "Tai yra mano brolio mašina.",
+    "note": "Possession must be marked by the genitive ending ('brolio') and usually precedes the owned noun."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'Lentynoje nėra ___.' (knyga)",
+    "options": [
+     "knygą",
+     "knygoje",
+     "knygos",
+     "knyga"
+    ],
+    "answer": 2,
+    "explanation": "'Nėra' requires genitive singular 'knygos'."
+   },
+   {
+    "question": "Complete the phrase: 'Čia yra Petro ___.' (namas - meaning 'Peter's house')",
+    "options": [
+     "namas",
+     "namo",
+     "namą",
+     "namui"
+    ],
+    "answer": 0,
+    "explanation": "The owner is in the genitive ('Petro'), but the item possessed ('namas') is the subject in nominative."
+   },
+   {
+    "question": "Fill in the blank: 'Mes turime dvidešimt ___.' (studentas)",
+    "options": [
+     "studentai",
+     "studentus",
+     "studento",
+     "studentų"
+    ],
+    "answer": 3,
+    "explanation": "Numerals from 10 to 20 govern the genitive plural, which always ends in '-ų'."
+   },
+   {
+    "question": "Select the correct form: 'Stiklinė ___.' (sultys - glass of juice)",
+    "options": [
+     "sultis",
+     "sulčių",
+     "sultims",
+     "sultyse"
+    ],
+    "answer": 1,
+    "explanation": "The partitive construction requires the genitive plural form 'sulčių'."
+   }
+  ],
+  "tip": "Whenever you express 'someone's' belonging, put that person in the genitive and place them BEFORE the noun they own (e.g., 'Jono raktas' = John's key)."
+ },
+ {
+  "id": "lt-a1-genitive-of-negation",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "🚫",
+  "title": "The Genitive of Negation",
+  "subtitle": "Switching direct objects from accusative to genitive in negative sentences",
+  "color": "#D32F2F",
+  "bg": "#FFEBEE",
+  "keyPoint": "Whenever a transitive verb is negated with the prefix ne-, its direct object obligatorily changes from the accusative to the genitive case.",
+  "structure": {
+   "headers": [
+    "Affirmative (Accusative)",
+    "Negative (Genitive)",
+    "Noun Category",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Skaitau knygą (-ą)",
+      "Neskaitau knygos (-os)",
+      "Feminine singular",
+      "I read / do not read a book"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Geriu pieną (-ą)",
+      "Negeriu pieno (-o)",
+      "Masculine singular",
+      "I drink / do not drink milk"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Perku obuolius (-ius)",
+      "Neperku obuolių (-ių)",
+      "Masculine plural",
+      "I buy / do not buy apples"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Matau drauges (-es)",
+      "Nematau draugių (-ių)",
+      "Feminine plural",
+      "I see / do not see friends"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D32F2F",
+    "label": "Negated direct object (singular)",
+    "example": "Aš nevalgau mėsos.",
+    "translation": ""
+   },
+   {
+    "color": "#C2185B",
+    "label": "Negated direct object (plural)",
+    "example": "Mes neperkame šitų bilietų.",
+    "translation": ""
+   },
+   {
+    "color": "#E64A19",
+    "label": "Refusal or negative habitual action",
+    "example": "Jis niekada nežiūri televizoriaus.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Aš neturiu laiko.",
+    "ko": "",
+    "highlight": "laiko"
+   },
+   {
+    "en": "Mes negeriam šalto pieno.",
+    "ko": "",
+    "highlight": "pieno"
+   },
+   {
+    "en": "Jis nerašo laiško.",
+    "ko": "",
+    "highlight": "laiško"
+   },
+   {
+    "en": "Ji nesupranta taisyklės.",
+    "ko": "",
+    "highlight": "taisyklės"
+   },
+   {
+    "en": "Studentai neskaito šių tekstų.",
+    "ko": "",
+    "highlight": "tekstų"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Aš negeriu kava.",
+    "right": "Aš negeriu kavos.",
+    "note": "Negation forces the object from accusative (kavą) into genitive (kavos), not nominative."
+   },
+   {
+    "wrong": "Jis neturi brolį.",
+    "right": "Jis neturi brolio.",
+    "note": "Learners often mistakenly leave the object in the accusative ('brolį') despite the negative verb."
+   },
+   {
+    "wrong": "Aš nematau problemą.",
+    "right": "Aš nematau problemos.",
+    "note": "'Problema' in a negated clause must shift to the genitive singular 'problemos'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Transform to negative: 'Aš skaitau knygą.' -> 'Aš neskaitau ___.'",
+    "options": [
+     "knygą",
+     "knyga",
+     "knygos",
+     "knygai"
+    ],
+    "answer": 2,
+    "explanation": "The accusative 'knygą' becomes genitive 'knygos' when the verb is negated."
+   },
+   {
+    "question": "Fill in the blank: 'Tomas neturi ___.' (automobilis)",
+    "options": [
+     "automobilio",
+     "automobilį",
+     "automobilis",
+     "automobiliu"
+    ],
+    "answer": 0,
+    "explanation": "With the negative verb 'neturi', the direct object takes genitive singular 'automobilio'."
+   },
+   {
+    "question": "Choose the correct sentence:",
+    "options": [
+     "Aš nevalgau obuolį.",
+     "Aš nevalgau obuoliai.",
+     "Aš nevalgau obuolio.",
+     "Aš nevalgau obuolys."
+    ],
+    "answer": 2,
+    "explanation": "'Obuolio' is the genitive form required by the negated verb 'nevalgau'."
+   },
+   {
+    "question": "Fill in the blank: 'Mes nematom šių ___.' (namai - plural)",
+    "options": [
+     "namus",
+     "namais",
+     "namuose",
+     "namų"
+    ],
+    "answer": 3,
+    "explanation": "Plural direct objects shift into the genitive plural ending in '-ų' under negation."
+   }
+  ],
+  "tip": "Remember: Positive action = Accusative target; Negative action (ne-) = Genitive target. It is one of the most consistent rules in Lithuanian grammar!"
+ },
+ {
+  "id": "lt-a1-locative-static-location",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📍",
+  "title": "Locative Case for Static Position",
+  "subtitle": "Expressing 'in', 'on', or 'at' using noun endings alone",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Lithuanian expresses static location without prepositions by adding locative endings directly to noun stems.",
+  "structure": {
+   "headers": [
+    "Noun Class",
+    "Nominative Base",
+    "Locative Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine (-as)",
+      "namas (house)",
+      "name",
+      "in the house"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masculine (-is / -ys)",
+      "miestas / kambarys",
+      "mieste / kambaryje",
+      "in the city / in the room"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine (-a)",
+      "mokykla (school)",
+      "mokykloje",
+      "at school / in school"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine (-ė)",
+      "aikštė (square)",
+      "aikštėje",
+      "in the square"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Inside Buildings and Rooms",
+    "example": "Mokiniai sėdi klasėje.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Towns, Cities, and Countries",
+    "example": "Mes dabar gyvename Vilniuje.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Open Spaces and Public Squares",
+    "example": "Vaikai žaidžia parke ir gatvėje.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Tėtis dabar yra darbe.",
+    "ko": "",
+    "highlight": "darbe"
+   },
+   {
+    "en": "Knyga guli ant stalo kambaryje.",
+    "ko": "",
+    "highlight": "kambaryje"
+   },
+   {
+    "en": "Mes dažnai atostogaujame Lietuvoje.",
+    "ko": "",
+    "highlight": "Lietuvoje"
+   },
+   {
+    "en": "Ar tu gyveni šiame mieste?",
+    "ko": "",
+    "highlight": "mieste"
+   },
+   {
+    "en": "Raktas visada būna kišenėje.",
+    "ko": "",
+    "highlight": "kišenėje"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Aš gyvenu į Vilnių.",
+    "right": "Aš gyvenu Vilniuje.",
+    "note": "Do not use the preposition 'į' (which takes the accusative and indicates direction into) for static location; use the bare locative."
+   },
+   {
+    "wrong": "Mes esame mokykla.",
+    "right": "Mes esame mokykloje.",
+    "note": "Static position requires the locative ending '-oje' for feminine nouns ending in '-a', not the nominative form."
+   },
+   {
+    "wrong": "Knyga yra stalas.",
+    "right": "Knyga yra ant stalo.",
+    "note": "The bare locative means 'in'; to express 'on a surface', use the preposition 'ant' with the genitive case."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Jonas dabar gyvena ___ (Vilnius).",
+    "options": [
+     "Vilnių",
+     "Vilniuje",
+     "Vilniaus",
+     "Vilniumi"
+    ],
+    "answer": 1,
+    "explanation": "Proper place names ending in -ius take the locative ending -iuje to denote static location."
+   },
+   {
+    "question": "Mano sesuo mokosi ___ (universitetas).",
+    "options": [
+     "universitete",
+     "į universitetą",
+     "universitetu",
+     "universiteto"
+    ],
+    "answer": 0,
+    "explanation": "Masculine nouns ending in -as take the locative ending -e."
+   },
+   {
+    "question": "Vaikai linksmai žaidžia ___ (kiemas).",
+    "options": [
+     "kiemą",
+     "kiemo",
+     "kiemui",
+     "kieme"
+    ],
+    "answer": 3,
+    "explanation": "Kiemas (yard) is a masculine noun ending in -as, so its locative form is kieme."
+   },
+   {
+    "question": "Ar tavo mama dabar yra ___ (virtuvė)?",
+    "options": [
+     "virtuvę",
+     "virtuvės",
+     "virtuvėje",
+     "virtuve"
+    ],
+    "answer": 2,
+    "explanation": "Feminine nouns ending in -ė take the locative ending -ėje."
+   }
+  ],
+  "tip": "Remember that Lithuanian almost never uses prepositions for 'in'; if you mean 'inside' a place or city, the bare locative ending handles the entire job."
+ },
+ {
+  "id": "lt-a2-instrumental-means-accompaniment",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🛠️",
+  "title": "Instrumental Case with and without 'su'",
+  "subtitle": "Distinguishing instruments and transport from accompaniment",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Use the bare instrumental case for tools, means, and transportation, but add the preposition 'su' when expressing accompaniment.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Preposition Requirement",
+    "Lithuanian Pattern",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Means / Tool",
+      "NO preposition (bare instrumental)",
+      "rašyti pieštuku",
+      "to write with a pencil"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Transportation",
+      "NO preposition (bare instrumental)",
+      "važiuoti autobusu",
+      "to travel by bus"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Accompaniment",
+      "WITH preposition 'su'",
+      "eiti su draugu",
+      "to go with a friend"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Attribute / Addition",
+      "WITH preposition 'su'",
+      "kava su pienu",
+      "coffee with milk"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Tools and Instruments",
+    "example": "Duoną pjaustome aštriu peiliu.",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Modes of Transport",
+    "example": "Į darbą kasdien važiuoju traukiniu.",
+    "translation": ""
+   },
+   {
+    "color": "#9333EA",
+    "label": "Social Accompaniment",
+    "example": "Vakare einu į kiną su broliu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Studentas rašo užduotį nauju rašikliu.",
+    "ko": "",
+    "highlight": "rašikliu"
+   },
+   {
+    "en": "Mes skrendame į Londoną lėktuvu.",
+    "ko": "",
+    "highlight": "lėktuvu"
+   },
+   {
+    "en": "Petras kalbasi su mokytoju.",
+    "ko": "",
+    "highlight": "su mokytoju"
+   },
+   {
+    "en": "Ar norėtum arbatos su citrina?",
+    "ko": "",
+    "highlight": "su citrina"
+   },
+   {
+    "en": "Sultis visada geriu šiaudeliu.",
+    "ko": "",
+    "highlight": "šiaudeliu"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Aš važiuoju su autobusu.",
+    "right": "Aš važiuoju autobusu.",
+    "note": "Do not use 'su' for means of transport; transportation uses the bare instrumental."
+   },
+   {
+    "wrong": "Jis pjauna su peiliu.",
+    "right": "Jis pjauna peiliu.",
+    "note": "Tools and instruments take the bare instrumental without 'su'."
+   },
+   {
+    "wrong": "Einu pasivaikščioti seserimi.",
+    "right": "Einu pasivaikščioti su seserimi.",
+    "note": "Accompaniment ('together with someone') requires the preposition 'su'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Mes važiuojame į Kauną ___ (automobilis).",
+    "options": [
+     "automobiliu",
+     "su automobiliu",
+     "automobilyje",
+     "automobilį"
+    ],
+    "answer": 0,
+    "explanation": "Means of transportation take the bare instrumental case without any preposition."
+   },
+   {
+    "question": "Vakar ilgai kalbėjausi ___ (draugas).",
+    "options": [
+     "draugą",
+     "draugu",
+     "su draugu",
+     "drauge"
+    ],
+    "answer": 2,
+    "explanation": "Accompaniment with people requires the preposition 'su' followed by the instrumental form."
+   },
+   {
+    "question": "Vaikas piešia gražų namą ___ (pieštukas).",
+    "options": [
+     "pieštuke",
+     "pieštuku",
+     "su pieštuku",
+     "pieštuką"
+    ],
+    "answer": 1,
+    "explanation": "A tool or instrument used to perform an action takes the bare instrumental."
+   },
+   {
+    "question": "Ryte visada geriu kavą ___ (pienas).",
+    "options": [
+     "pienu",
+     "pieną",
+     "piene",
+     "su pienu"
+    ],
+    "answer": 3,
+    "explanation": "When an ingredient accompanies another, 'su' + instrumental is required."
+   }
+  ],
+  "tip": "Ask yourself: Is this a tool/vehicle I am using, or a companion/addition? If it's a tool or vehicle, drop 'su' entirely."
+ },
+ {
+  "id": "lt-a2-dative-indirect-objects-experiencer",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎁",
+  "title": "Dative Case and Impersonal Experiencer Constructions",
+  "subtitle": "Marking recipients and subjects of physical or mental states",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "The dative marks both the recipient of an action and the experiencer in impersonal state constructions like 'man šalta' or 'man reikia'.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Dative Pronoun / Noun",
+    "Predicate Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Physical State",
+      "Man (to me)",
+      "šalta / karšta",
+      "I am cold / I am hot"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Need / Requirement",
+      "Jam (to him)",
+      "reikia pagalbos",
+      "He needs help"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Age Expression",
+      "Mano dukrai (to my daughter)",
+      "yra dešimt metų",
+      "My daughter is ten years old"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Indirect Recipient",
+      "Draugei (to friend)",
+      "dovanoju gėlę",
+      "I give a flower to my friend"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Physical and Emotional Sensations",
+    "example": "Vaikams lauke labai šalta.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Necessity with 'reikia'",
+    "example": "Mums skubiai reikia naujo kompiuterio.",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Giving and Telling",
+    "example": "Mokytojas paaiškina taisyklę studentams.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Man labai patinka šis filmas.",
+    "ko": "",
+    "highlight": "Man"
+   },
+   {
+    "en": "Ar tau dabar neliūdna?",
+    "ko": "",
+    "highlight": "tau"
+   },
+   {
+    "en": "Jiems reikia daugiau laiko.",
+    "ko": "",
+    "highlight": "Jiems"
+   },
+   {
+    "en": "Tėvams parašiau ilgą laišką.",
+    "ko": "",
+    "highlight": "Tėvams"
+   },
+   {
+    "en": "Kiek tau metų?",
+    "ko": "",
+    "highlight": "tau"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Aš esu šalta.",
+    "right": "Man šalta.",
+    "note": "In Lithuanian, physical sensations use impersonal dative constructions ('Man šalta'), not the nominative pronoun with 'būti'."
+   },
+   {
+    "wrong": "Aš reikiu vandens.",
+    "right": "Man reikia vandens.",
+    "note": "The modal word 'reikia' requires the person who needs something to be in the dative case ('man')."
+   },
+   {
+    "wrong": "Aš patinka ši knyga.",
+    "right": "Man patinka ši knyga.",
+    "note": "'Patikti' (to please/appeal) takes the dative experiencer: literally, 'This book pleases to me'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "___ (Aš) šiandien labai skauda galvą.",
+    "options": [
+     "Aš",
+     "Mane",
+     "Man",
+     "Mano"
+    ],
+    "answer": 2,
+    "explanation": "Pain and physical conditions take the experiencer in the dative case (man)."
+   },
+   {
+    "question": "Ar ___ (tu) reikia naujo žodyno?",
+    "options": [
+     "tu",
+     "tau",
+     "tave",
+     "tavęs"
+    ],
+    "answer": 1,
+    "explanation": "'Reikia' requires the person experiencing the need to be in the dative case (tau)."
+   },
+   {
+    "question": "Gydytojas davė vaistų sergančiam ___ (vaikas).",
+    "options": [
+     "vaikui",
+     "vaiką",
+     "vaiko",
+     "vaiku"
+    ],
+    "answer": 0,
+    "explanation": "The recipient of the medicine takes the masculine singular dative ending -ui."
+   },
+   {
+    "question": "___ (Mes) patinka keliauti po Europą.",
+    "options": [
+     "Mus",
+     "Mūsų",
+     "Mes",
+     "Mums"
+    ],
+    "answer": 3,
+    "explanation": "With the verb 'patikti', the person who likes something must be in the dative case (mums)."
+   }
+  ],
+  "tip": "Whenever you describe how someone feels (hot, cold, boring, interesting) or what they need, switch the subject pronoun to its dative form (man, tau, jam, jai, mums, jums, jiems, joms)."
+ },
+ {
+  "id": "lt-a2-simple-past-two-stems",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#10B981",
+  "emoji": "⏳",
+  "title": "Simple Past Tense with -o and -ė Stems",
+  "subtitle": "Navigating Lithuanian past tense endings and vowel alternations",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "The simple past tense in Lithuanian conjugates using either an -o stem or an -ė stem, which must be learned as a principal part alongside the infinitive.",
+  "structure": {
+   "headers": [
+    "Infinitive",
+    "Past 3rd Person Stem",
+    "Aš (I)",
+    "Mes (We)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "matyti (to see)",
+      "matė (-ė stem)",
+      "mačiau",
+      "matėme"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "sakyti (to say)",
+      "sakė (-ė stem)",
+      "sakiau",
+      "sakėme"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "būti (to be)",
+      "buvo (-o stem)",
+      "buvau",
+      "buvome"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "dirbti (to work)",
+      "dirbo (-o stem)",
+      "dirbau",
+      "dirbome"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Completed Single Actions",
+    "example": "Vakar vakare parašiau svarbų laišką.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Past Events at Definite Times",
+    "example": "Pernai mes ilgai gyvenome užsienyje.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Sequential Past Narratives",
+    "example": "Jis grįžo namo, pavalgė ir užmigo.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Vakar aš visą dieną sunkiai dirbau.",
+    "ko": "",
+    "highlight": "dirbau"
+   },
+   {
+    "en": "Ar tu matei mano telefoną?",
+    "ko": "",
+    "highlight": "matei"
+   },
+   {
+    "en": "Mes buvome koncerte praėjusį penktadienį.",
+    "ko": "",
+    "highlight": "buvome"
+   },
+   {
+    "en": "Jie greitai suprato užduoties prasmę.",
+    "ko": "",
+    "highlight": "suprato"
+   },
+   {
+    "en": "Ji nupirko šviežios duonos parduotuvėje.",
+    "ko": "",
+    "highlight": "nupirko"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Aš buvau matyti filmą.",
+    "right": "Aš mačiau filmą.",
+    "note": "Do not construct past tense with an auxiliary verb like in English compound tenses; use the inflected simple past 'mačiau'."
+   },
+   {
+    "wrong": "Aš matiau tave centre.",
+    "right": "Aš mačiau tave centre.",
+    "note": "In -ė stems, dental consonants 't' and 'd' mutate before '-iau': 't' becomes 'č' (mačiau), and 'd' becomes 'dž' (sėdėjau -> sėdėjau / vedžiau)."
+   },
+   {
+    "wrong": "Vakar mes dirbome su -ė galūne: dirbėme.",
+    "right": "Vakar mes dirbome.",
+    "note": "The verb 'dirbti' belongs to the -o stem past family (dirbo), so 1st person plural is 'dirbome', not 'dirbėme'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Praėjusią vasarą mes ___ (būti) prie jūros.",
+    "options": [
+     "buvote",
+     "buvo",
+     "buvome",
+     "buvau"
+    ],
+    "answer": 2,
+    "explanation": "The past stem for būti is buvo; the 1st person plural (mes) ending is -ome (buvome)."
+   },
+   {
+    "question": "Aš vakar ___ (matyti) tavo brolį bibliotekoje.",
+    "options": [
+     "mačiau",
+     "matau",
+     "matė",
+     "matysi"
+    ],
+    "answer": 0,
+    "explanation": "The 1st person singular past of matyti is mačiau (with dental mutation t -> č before -iau)."
+   },
+   {
+    "question": "Ką jūs vakar ___ (veikti) vakare?",
+    "options": [
+     "veikė",
+     "veikėte",
+     "veikiate",
+     "veikėme"
+    ],
+    "answer": 1,
+    "explanation": "Veikti uses the past stem veikė; the 2nd person plural ending for -ė stems is -ėte (veikėte)."
+   },
+   {
+    "question": "Jonas ir Tomas vakar kartu ___ (sportuoti).",
+    "options": [
+     "sportuoju",
+     "sportavome",
+     "sportavo",
+     "sportavote"
+    ],
+    "answer": 2,
+    "explanation": "Third-person past verbs use the bare stem without a personal suffix: sportavo (both singular and plural)."
+   }
+  ],
+  "tip": "Always learn Lithuanian verbs as a trio: infinitive, present 3rd person, past 3rd person (e.g., matyti, mato, matė). The 3rd person past stem reveals whether you conjugate with -o or -ė."
+ },
+ {
+  "id": "lt-a2-iterative-past-tense",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "Frequentative Past Tense (-davo)",
+  "subtitle": "Expressing habitual, repetitive past actions with the suffix -dav-",
+  "color": "#16A34A",
+  "bg": "#F0FDF4",
+  "keyPoint": "The frequentative past expresses repeated or habitual actions in the past and is formed systematically by replacing the infinitive ending -ti with -davo.",
+  "structure": {
+   "headers": [
+    "Infinitive",
+    "Frequentative Base",
+    "Aš (I used to)",
+    "Mes (We used to)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "būti (to be)",
+      "būdavo",
+      "būdavau",
+      "būdavome"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "skaityti (to read)",
+      "skaitydavo",
+      "skaitydavau",
+      "skaitydavome"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "važiuoti (to travel)",
+      "važiuodavo",
+      "važiuodavau",
+      "važiuodavome"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "žaisti (to play)",
+      "žaisdavo",
+      "žaisdavau",
+      "žaisdavome"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#16A34A",
+    "label": "Past Childhood Habits",
+    "example": "Vaikystėje dažnai žaisdavau lauke su draugais.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Regular Past Routines",
+    "example": "Senelis kiekvieną rytą gerdavo juodą kavą.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Recurring Historic Practices",
+    "example": "Vasarą mes visada važiuodavome pas močiutę.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mano seneliai anksčiau kaimynams dažnai padėdavo.",
+    "ko": "",
+    "highlight": "padėdavo"
+   },
+   {
+    "en": "Vakarais tėtis mums skaitydavo pasakas.",
+    "ko": "",
+    "highlight": "skaitydavo"
+   },
+   {
+    "en": "Ar tu jaunystėje sportuodavai kiekvieną dieną?",
+    "ko": "",
+    "highlight": "sportuodavai"
+   },
+   {
+    "en": "Mes visada kartu pietaudavome šioje kavinėje.",
+    "ko": "",
+    "highlight": "pietaudavome"
+   },
+   {
+    "en": "Sekmadieniais aš ilgai miegodavau.",
+    "ko": "",
+    "highlight": "miegodavau"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Aš buvau įpratęs skaityti knygas.",
+    "right": "Aš skaitydavau knygas.",
+    "note": "Rather than translating English 'I used to read' with wordy constructions, Lithuanian uses the concise -dav- frequentative past form."
+   },
+   {
+    "wrong": "Vakar aš eidavau į teatrą.",
+    "right": "Vakar aš ėjau į teatrą.",
+    "note": "Do not use the frequentative past for one-off actions that happened once at a specific time; use the simple past instead."
+   },
+   {
+    "wrong": "Mes važiuotdavome prie ežero.",
+    "right": "Mes važiuodavome prie ežero.",
+    "note": "Drop the entire infinitive suffix '-ti' before adding '-dav-'; do not leave the 't' attached."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Vaikystėje aš kasdien ___ (plaukti) upėje.",
+    "options": [
+     "plaukdavau",
+     "plaukiau",
+     "plaukiu",
+     "plauksi"
+    ],
+    "answer": 0,
+    "explanation": "Regular repeated past action for 'aš' is formed by replacing -ti with -davau (plaukti -> plaukdavau)."
+   },
+   {
+    "question": "Mano močiutė kiekvieną sekmadienį ___ (kepti) gardžius blynus.",
+    "options": [
+     "kepė",
+     "keps",
+     "kepdavo",
+     "kepa"
+    ],
+    "answer": 2,
+    "explanation": "Habitual past action in the 3rd person takes the suffix -davo."
+   },
+   {
+    "question": "Mes mokykloje dažnai ___ (dainuoti) šią liaudies dainą.",
+    "options": [
+     "dainuojame",
+     "dainuodavome",
+     "dainavome",
+     "dainuosite"
+    ],
+    "answer": 1,
+    "explanation": "The frequentative past 1st person plural (mes) ending is -davome (dainuoti -> dainuodavome)."
+   },
+   {
+    "question": "Ar jūs anksčiau dažnai ___ (keliauti) traukiniu?",
+    "options": [
+     "keliavote",
+     "keliaujate",
+     "keliausite",
+     "keliaudavote"
+    ],
+    "answer": 3,
+    "explanation": "The 2nd person plural (jūs) frequentative past takes the ending -davote (keliauti -> keliaudavote)."
+   }
+  ],
+  "tip": "The frequentative past is completely regular! Just take ANY infinitive, drop '-ti', and add the '-dav-' stem endings: -davau, -davai, -davo, -davome, -davote, -davo."
+ },
+ {
+  "id": "lt-a2-future-and-conditional-moods",
+  "level": "a2",
+  "category": "conditionals",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔮",
+  "title": "Future Tense and Conditional Mood",
+  "subtitle": "Talking about future plans and expressing polite or hypothetical wishes",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "The future tense inserts -s- before person endings, while the conditional mood uses the suffix -tų- with personal suffixes.",
+  "structure": {
+   "headers": [
+    "Mood/Tense",
+    "Form",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Future (1st Sg)",
+      "dirbsiu",
+      "I will work"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Future (3rd)",
+      "dirbs",
+      "he/she/they will work"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Conditional (1st Sg)",
+      "dirbčiau",
+      "I would work"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Conditional (3rd)",
+      "dirbtų",
+      "he/she/they would work"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Future Intentions",
+    "example": "Rytoj aš rašysiu laišką draugui.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Polite Requests",
+    "example": "Ar galėtumėte man padėti?",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Hypothetical Conditions",
+    "example": "Jeigu turėčiau laiko, eičiau į kiną.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Rytoj mes važiuosime prie jūros.",
+    "ko": "",
+    "highlight": "važiuosime"
+   },
+   {
+    "en": "Ką tu veiksi šį vakarą?",
+    "ko": "",
+    "highlight": "veiksi"
+   },
+   {
+    "en": "Aš mielai išgerčiau kavos su pienu.",
+    "ko": "",
+    "highlight": "išgerčiau"
+   },
+   {
+    "en": "Jei lis lietus, mes liktume namuose.",
+    "ko": "",
+    "highlight": "liktume"
+   },
+   {
+    "en": "Jie sakė, kad greitai ateis.",
+    "ko": "",
+    "highlight": "ateis"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jis dirbsi rytoj.",
+    "right": "Jis dirbs rytoj.",
+    "note": "Third-person future never takes personal endings like -i; it always ends in the bare stem with -s."
+   },
+   {
+    "wrong": "Aš noriu arbatos, jei turėsiu.",
+    "right": "Aš norėčiau arbatos, jei turėčiau.",
+    "note": "Use conditional -čiau and -tų forms for polite desires and hypothetical conditions rather than bare future."
+   },
+   {
+    "wrong": "Mes būtumėm ten.",
+    "right": "Mes būtume ten.",
+    "note": "The standard first-person plural conditional ending in Lithuanian is -tume (or colloquially -tumėme), not -tumėm."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Rytoj mes visi ___ naują filmą.",
+    "options": [
+     "žiūrėtume",
+     "žiūrėsime",
+     "žiūrime",
+     "žiūrėjo"
+    ],
+    "answer": 1,
+    "explanation": "'Rytoj' (tomorrow) and 'mes' require the 1st person plural future tense ending -sime."
+   },
+   {
+    "question": "Ar jūs ___ man paduoti druską?",
+    "options": [
+     "galėtumėte",
+     "galėsite",
+     "galite",
+     "galėjote"
+    ],
+    "answer": 0,
+    "explanation": "Polite requests use the conditional form; for 'jūs', the ending is -tumėte."
+   },
+   {
+    "question": "Jei jis turėtų pinigų, jis ___ naują mašiną.",
+    "options": [
+     "pirks",
+     "pirko",
+     "pirktų",
+     "perka"
+    ],
+    "answer": 2,
+    "explanation": "In hypothetical conditional clauses, the 3rd person takes the -tų conditional marker."
+   },
+   {
+    "question": "Aš manau, kad jis greitai ___ namo.",
+    "options": [
+     "grįžčiau",
+     "grįžtų",
+     "grįši",
+     "grįš"
+    ],
+    "answer": 3,
+    "explanation": "The 3rd person future of 'grįžti' (to return) is formed by adding -s to the infinitive stem: grįš."
+   }
+  ],
+  "tip": "In third person, Lithuanian future verbs never add a personal suffix: the stem ending with -s (e.g., bus, dirbs, skaitys) serves for both singular and plural subjects."
+ },
+ {
+  "id": "lt-a2-reflexive-verbs-infixing",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🪞",
+  "title": "Reflexive Particle Placement and Infixing",
+  "subtitle": "Mastering when reflexive -si stays at the end and when it hops into the middle",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "The reflexive particle is attached at the end of simple verbs (-s/-si), but moves between the prefix and the root when a prefix is added.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Example Verb",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Unprefixed Infinitive",
+      "mokytis",
+      "to study / learn"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Prefixed Infinitive",
+      "iš-si-mokyti",
+      "to learn thoroughly"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Unprefixed 1st Sg",
+      "rengiuosi",
+      "I dress myself"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Prefixed 1st Sg",
+      "ap-si-rengiu",
+      "I get dressed"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Self-Directed Actions",
+    "example": "Vaikas prausiasi šiltu vandeniu.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Prefixed Verbs",
+    "example": "Mes greitai apsirengėme ir išėjome.",
+    "translation": ""
+   },
+   {
+    "color": "#DB2777",
+    "label": "Negative Prefix Infixing",
+    "example": "Jis niekada nesidomi politika.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kiekvieną rytą aš anksti keliuosi.",
+    "ko": "",
+    "highlight": "keliuosi"
+   },
+   {
+    "en": "Studentai stropiai mokosi lietuvių kalbos.",
+    "ko": "",
+    "highlight": "mokosi"
+   },
+   {
+    "en": "Kodėl tu neatsisveikinai su mokytoju?",
+    "ko": "",
+    "highlight": "neatsisveikinai"
+   },
+   {
+    "en": "Jie susitiko kavinėje po pamokų.",
+    "ko": "",
+    "highlight": "susitiko"
+   },
+   {
+    "en": "Aš tikiuosi, kad rytoj nelis.",
+    "ko": "",
+    "highlight": "tikiuosi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Aš rengiuosiu drabužius.",
+    "right": "Aš rengiuosi drabužius.",
+    "note": "First person singular reflexive ends in -uosi, never add an extra -u after -si."
+   },
+   {
+    "wrong": "Mes apvilkome-si šiltai.",
+    "right": "Mes apsivilkome šiltai.",
+    "note": "When a prefix like ap- is present, -si- must be placed between the prefix and verb root."
+   },
+   {
+    "wrong": "Jis nemokasi.",
+    "right": "Jis nesimoko.",
+    "note": "Negative prefix ne- acts as a prefix, so -si- infixes right after 'ne-' (ne-si-moko)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Kada tu ryte ___ iš lovos?",
+    "options": [
+     "keliesi",
+     "keliuosi",
+     "keliasi",
+     "keliatės"
+    ],
+    "answer": 0,
+    "explanation": "The 2nd person singular ('tu') reflexive present of 'keltis' is 'keliesi'."
+   },
+   {
+    "question": "Mes vakar vakare ___ su senais draugais.",
+    "options": [
+     "susitikome",
+     "susitikomės",
+     "susitikome-si",
+     "susitikosi"
+    ],
+    "answer": 0,
+    "explanation": "Prefix 'su-' pulls the reflexive particle into an infix: su + si + tikome = susitikome."
+   },
+   {
+    "question": "Jie visai ___ šia sunkia tema.",
+    "options": [
+     "nesidomi",
+     "nedominasi",
+     "nesidomina",
+     "domisi ne"
+    ],
+    "answer": 0,
+    "explanation": "With the negative prefix ne-, -si- is placed between ne- and the stem: ne-si-domi."
+   },
+   {
+    "question": "Vaikai kieme linksmai ___ kamuoliu.",
+    "options": [
+     "žaidžiasi",
+     "žaidžia",
+     "žaidžiasi sau",
+     "žaistųsi"
+    ],
+    "answer": 1,
+    "explanation": "Caution: playing games takes the non-reflexive verb 'žaisti' (žaidžia kamuoliu), not reflexive."
+   }
+  ],
+  "tip": "Whenever you add ANY prefix — including the simple negative 'ne-' — the reflexive marker jumps immediately between that prefix and the root: ne-si-barti, pa-si-imti."
+ },
+ {
+  "id": "lt-b1-verbal-aspect-prefixes",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🎯",
+  "title": "Verbal Aspect and Spatial Prefixes",
+  "subtitle": "Distinguishing ongoing processes from completed actions using directional prefixes",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Lithuanian uses prefixes like pa-, nu-, iš-, and su- to convert imperfective process verbs into perfective completed actions and specify direction.",
+  "structure": {
+   "headers": [
+    "Prefix",
+    "Base Verb",
+    "Prefixed Form",
+    "Aspectual Shift"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "pa- (telic/short)",
+      "rašyti (to write)",
+      "parašyti",
+      "to write completely"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "iš- (out/thorough)",
+      "gerti (to drink)",
+      "išgerti",
+      "to drink up"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "su- (together/done)",
+      "valgyti (to eat)",
+      "suvalgyti",
+      "to eat up fully"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "nu- (away/down)",
+      "nešti (to carry)",
+      "nunešti",
+      "to carry away"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Completed Action",
+    "example": "Aš jau perskaičiau šią įdomią knygą.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Directional Movement",
+    "example": "Paukštis išskrido pro atvirą langą.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Ongoing Process",
+    "example": "Visą vakarą rašiau ilgą straipsnį.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Jis greitai suvalgė visus pusryčius.",
+    "ko": "",
+    "highlight": "suvalgė"
+   },
+   {
+    "en": "Mama nuvažiavo į didelę parduotuvę.",
+    "ko": "",
+    "highlight": "nuvažiavo"
+   },
+   {
+    "en": "Vakar visą dieną skaičiau romaną.",
+    "ko": "",
+    "highlight": "skaičiau"
+   },
+   {
+    "en": "Ar jau parašei šį svarbų laišką?",
+    "ko": "",
+    "highlight": "parašei"
+   },
+   {
+    "en": "Svečiai išgėrė visą šaltą vandenį.",
+    "ko": "",
+    "highlight": "išgėrė"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Aš parašiau laišką tris valandas.",
+    "right": "Aš rašiau laišką tris valandas.",
+    "note": "Use unprefixed imperfective verbs with duration expressions like 'tris valandas'."
+   },
+   {
+    "wrong": "Aš jau skaičiau knygą iki galo.",
+    "right": "Aš jau perskaičiau knygą iki galo.",
+    "note": "Completing an action to the end requires a perfective prefix like per-."
+   },
+   {
+    "wrong": "Mes valgome visą tortą per minutę.",
+    "right": "Mes suvalgėme visą tortą per minutę.",
+    "note": "Accomplishment in a set time limit ('per minutę') requires a perfective verb form."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Vakar aš tris valandas ___ naują romaną.",
+    "options": [
+     "perskaičiau",
+     "skaičiau",
+     "nuskaičiau",
+     "išskaičiau"
+    ],
+    "answer": 1,
+    "explanation": "'Tris valandas' denotes duration without completion, requiring the imperfective form 'skaičiau'."
+   },
+   {
+    "question": "Ar tu jau ___ visą šiltą pieną?",
+    "options": [
+     "gėrei",
+     "išgėrei",
+     "pagėrei",
+     "nugėrei"
+    ],
+    "answer": 1,
+    "explanation": "'Išgerti' indicates drinking completely to completion (eating/drinking up)."
+   },
+   {
+    "question": "Mes pagaliau ___ visus sunkios užduoties darbus.",
+    "options": [
+     "padarėme",
+     "darėme",
+     "darytume",
+     "darydavome"
+    ],
+    "answer": 0,
+    "explanation": "'Pagaliau' (at last) signals the successful completion of an action, requiring the prefix pa-."
+   },
+   {
+    "question": "Traukinys ką tik ___ iš stoties.",
+    "options": [
+     "važiavo",
+     "važiuoja",
+     "išvažiavo",
+     "pavažiuotų"
+    ],
+    "answer": 2,
+    "explanation": "Movement out from a point uses the spatial/perfective prefix iš- ('išvažiavo')."
+   }
+  ],
+  "tip": "When a sentence has duration phrases like 'dvi valandas' (for two hours), use unprefixed verbs; when it has time-frame phrases like 'per dvi valandas' (in two hours), use a prefix."
+ },
+ {
+  "id": "lt-b1-active-participles",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#9333EA",
+  "emoji": "🏃",
+  "title": "Active Participles Across Tenses",
+  "subtitle": "Forming and declining verbal adjectives that describe subjects performing actions",
+  "color": "#7E22CE",
+  "bg": "#FAF5FF",
+  "keyPoint": "Active participles agree with nouns in gender, number, and case, formed with distinct suffixes: present (-ąs/-iąs/-intis), past (-ęs), and future (-siąs).",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Masc Nom Sg",
+    "Fem Nom Sg",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present",
+      "dirbantis / dirbąs",
+      "dirbanti",
+      "working"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past",
+      "dirbęs",
+      "dirbusi",
+      "having worked"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Frequentative Past",
+      "dirbdavęs",
+      "dirbdavusi",
+      "used to work"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Future",
+      "dirbsiąs",
+      "dirbsianti",
+      "going to work"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#9333EA",
+    "label": "Attributive Present",
+    "example": "Gatvėje pamačiau bėgantį berniuką.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Attributive Past",
+    "example": "Grįžęs tėvas atnešė skanių dovanų.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Indirect Speech Predicate",
+    "example": "Jis sakė rytoj atvažiuosiąs.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Matau upėje plaukiantį vyrą.",
+    "ko": "",
+    "highlight": "plaukiantį"
+   },
+   {
+    "en": "Grojanti muzika visiems labai patiko.",
+    "ko": "",
+    "highlight": "Grojanti"
+   },
+   {
+    "en": "Išvykęs brolis parašė ilgą laišką.",
+    "ko": "",
+    "highlight": "Išvykęs"
+   },
+   {
+    "en": "Vaikai, skaitę šią pasaką, viską atsimena.",
+    "ko": "",
+    "highlight": "skaitę"
+   },
+   {
+    "en": "Ji pažinojo moterį, dirbančią ligoninėje.",
+    "ko": "",
+    "highlight": "dirbančią"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Matau dirbantis vyrą.",
+    "right": "Matau dirbantį vyrą.",
+    "note": "Participles modifying nouns must agree in case; accusative masculine requires -antį, not nominative -antis."
+   },
+   {
+    "wrong": "Moteris grįžęs vėlai miegojo.",
+    "right": "Moteris grįžusi vėlai miegojo.",
+    "note": "Participles agree in gender; for feminine nominative past active, use -usi instead of masculine -ęs."
+   },
+   {
+    "wrong": "Mes matėme einančius mergaites.",
+    "right": "Mes matėme einančias mergaites.",
+    "note": "Mergaitės is feminine plural accusative, so the participle must be einančias, not masculine einančius."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Parke sutikome garsiai ___ mergaitę.",
+    "options": [
+     "dainuojanti",
+     "dainuojančią",
+     "dainavusį",
+     "dainuojančiam"
+    ],
+    "answer": 1,
+    "explanation": "The noun 'mergaitę' is feminine singular accusative, so the present active participle must be 'dainuojančią'."
+   },
+   {
+    "question": "Visi mokiniai, gerai ___ namų darbus, gavo dešimtukus.",
+    "options": [
+     "padarę",
+     "padaręs",
+     "padariusi",
+     "padarantis"
+    ],
+    "answer": 0,
+    "explanation": "'Mokiniai' is masculine plural nominative; the past active participle nominative plural ending is -ę (padarę)."
+   },
+   {
+    "question": "Lietuvoje yra daug žmonių, ___ keliomis kalbomis.",
+    "options": [
+     "kalbančius",
+     "kalbantys",
+     "kalbančių",
+     "kalbantiems"
+    ],
+    "answer": 2,
+    "explanation": "'Daug žmonių' requires the genitive plural form; the genitive plural active participle is 'kalbančių'."
+   },
+   {
+    "question": "Aš mačiau draugą, vakar ___ iš Vilniaus.",
+    "options": [
+     "grįžusį",
+     "grįžęs",
+     "grįžusią",
+     "grįžtančio"
+    ],
+    "answer": 0,
+    "explanation": "'Draugą' is masculine singular accusative; past active participle accusative singular is 'grįžusį'."
+   }
+  ],
+  "tip": "For present active participles used attributively before nouns, modern Lithuanian prefers the -antis / -anti nominative endings over archaic -ąs / -anti forms."
+ },
+ {
+  "id": "lt-b1-passive-participles-predicate-forms",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#DC2626",
+  "emoji": "📜",
+  "title": "Passive Participles and Neuter Predicates",
+  "subtitle": "Forming passive constructions and expressing impersonal rules or observations",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "Passive participles use -mas (present) and -tas (past), while neuter forms in -ma and -ta create impersonal predicate sentences.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Masc / Fem Form",
+    "Neuter Impersonal",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present Passive",
+      "skaitomas / skaitoma",
+      "skaitoma",
+      "is (being) read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Passive",
+      "perskaitytas / perskaityta",
+      "perskaityta",
+      "has been read"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Impersonal Rule",
+      "—",
+      "rūkyti draudžiama",
+      "smoking is forbidden"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Impersonal Fact",
+      "—",
+      "viskas padaryta",
+      "everything is done"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Standard Passive Voice",
+    "example": "Šis namas buvo pastatytas prieš šimtą metų.",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Public Notices & Signs",
+    "example": "Čia kalbama lietuviškai.",
+    "translation": ""
+   },
+   {
+    "color": "#4F46E5",
+    "label": "Completed State",
+    "example": "Durys jau seniai uždarytos.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ši graži knyga yra parašyta mano draugo.",
+    "ko": "",
+    "highlight": "parašyta"
+   },
+   {
+    "en": "Muziejuje fotografuoti griežtai draudžiama.",
+    "ko": "",
+    "highlight": "draudžiama"
+   },
+   {
+    "en": "Visi svarbūs laiškai jau buvo išsiųsti.",
+    "ko": "",
+    "highlight": "išsiųsti"
+   },
+   {
+    "en": "Lietuvoje daug kalbama apie krepšinį.",
+    "ko": "",
+    "highlight": "kalbama"
+   },
+   {
+    "en": "Langas buvo atidarytas visą naktį.",
+    "ko": "",
+    "highlight": "atidarytas"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Durys yra uždaryti.",
+    "right": "Durys yra uždarytos.",
+    "note": "'Durys' (door) is a feminine plural noun in Lithuanian (pluralia tantum), so the participle must be feminine plural 'uždarytos'."
+   },
+   {
+    "wrong": "Čia rūkyti draudžiamas.",
+    "right": "Čia rūkyti draudžiama.",
+    "note": "Impersonal expressions referring to infinitive actions take the neuter ending -ma/-ta, not masculine -mas."
+   },
+   {
+    "wrong": "Namas buvo statytas nuo tėvo.",
+    "right": "Namas buvo statytas tėvo.",
+    "note": "Lithuanian marks the passive agent with the simple genitive case (tėvo), never with a preposition like 'nuo'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Šis senas tiltas buvo ___ praėjusiame amžiuje.",
+    "options": [
+     "pastatyta",
+     "pastatytas",
+     "pastatytą",
+     "statomas"
+    ],
+    "answer": 1,
+    "explanation": "'Tiltas' is masculine singular nominative, requiring masculine past passive participle 'pastatytas'."
+   },
+   {
+    "question": "Bibliotekoje kalbėti garsiai yra griežtai ___.",
+    "options": [
+     "draudžiamas",
+     "draudžiama",
+     "draudžiamą",
+     "draudžiamos"
+    ],
+    "answer": 1,
+    "explanation": "Impersonal predicates describing verbal actions ('kalbėti') require the neuter form ending in -ma."
+   },
+   {
+    "question": "Kambario langai visą dieną buvo ___.",
+    "options": [
+     "uždaryta",
+     "uždarytas",
+     "uždaryti",
+     "uždarytus"
+    ],
+    "answer": 2,
+    "explanation": "'Langai' is masculine plural nominative; the agreeing past passive participle is 'uždaryti'."
+   },
+   {
+    "question": "Ši nauja daina dabar dažnai ___ per radiją.",
+    "options": [
+     "grojamas",
+     "grojama",
+     "grojama buvo",
+     "grojantis"
+    ],
+    "answer": 1,
+    "explanation": "'Daina' is feminine singular; the present passive participle is 'grojama'."
+   }
+  ],
+  "tip": "To specify WHO performed the action in a passive sentence, use the simple Genitive case with no preposition: e.g., 'knyga parašyta autoriaus' (the book was written by the author)."
+ },
+ {
+  "id": "lt-b1-pronominal-definite-adjectives",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🏷️",
+  "title": "Definite (Pronominal) Adjectives",
+  "subtitle": "Specifying unique, generic, or definite entities with long forms",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Definite adjectives fuse personal pronouns onto standard adjectival stems to single out a specific item or form a fixed classification.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Masc. Singular",
+    "Fem. Singular",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Indefinite (Base)",
+      "baltas",
+      "balta",
+      "General descriptive attribute"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Definite (Fused)",
+      "baltasis",
+      "baltoji",
+      "Specific item or fixed taxonomic category"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Plural Definite",
+      "baltieji",
+      "baltosios",
+      "Categorical plural references"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Specific Known Item",
+    "example": "Paduok man tą juodąjį pieštuką.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Proper Names and Titles",
+    "example": "Vytautas Didysis valdė Lietuvos Didžiąją Kunigaikštystę.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Taxonomic Categories",
+    "example": "Baltasis gandras yra Lietuvos nacionalinis paukštis.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Paduok man tą juodąjį pieštuką.",
+    "ko": "",
+    "highlight": "juodąjį"
+   },
+   {
+    "en": "Vytautas Didysis valdė Lietuvos valstybę.",
+    "ko": "",
+    "highlight": "Didysis"
+   },
+   {
+    "en": "Baltasis lokys gyvena tolimoje šiaurėje.",
+    "ko": "",
+    "highlight": "Baltasis"
+   },
+   {
+    "en": "Kur yra senoji Vilniaus universiteto biblioteka?",
+    "ko": "",
+    "highlight": "senoji"
+   },
+   {
+    "en": "Mano mažasis brolis šiandien pradeda lankyti mokyklą.",
+    "ko": "",
+    "highlight": "mažasis"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Baltas lokys gyvena šiaurėje.",
+    "right": "Baltasis lokys gyvena šiaurėje.",
+    "note": "Use definite forms for biological species and established scientific terminology."
+   },
+   {
+    "wrong": "Vytautas Didis buvo valdovas.",
+    "right": "Vytautas Didysis buvo valdovas.",
+    "note": "Historical epithets and royal titles require the definite pronominal adjective."
+   },
+   {
+    "wrong": "Noriu pirkti tą raudoną mašiną, o ne mėlyną.",
+    "right": "Noriu pirkti tą raudonąją mašiną, o ne mėlynąją.",
+    "note": "When explicitly contrasting specific identifiable objects with demonstratives, prefer the definite form."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Vandenyne plaukioja didžiulis ___ banginis.",
+    "options": [
+     "mėlynas",
+     "mėlynasis",
+     "mėlynoji",
+     "mėlynam"
+    ],
+    "answer": 1,
+    "explanation": "The blue whale as a biological species name requires the masculine nominative definite form 'mėlynasis'."
+   },
+   {
+    "question": "Mes gyvename tame ___ name gatvės gale.",
+    "options": [
+     "naujajame",
+     "naujas",
+     "naujo",
+     "naujam"
+    ],
+    "answer": 0,
+    "explanation": "Preposition 'tame' (locative masculine) demands the corresponding locative masculine definite ending '-ajame'."
+   },
+   {
+    "question": "Raudonoji aikštė yra Maskvoje, o ___ jūra – rytuose.",
+    "options": [
+     "Juodas",
+     "Juodoji",
+     "Juodąją",
+     "Juodasis"
+    ],
+    "answer": 1,
+    "explanation": "Geographical sea names are feminine ('jūra') and take the feminine definite form 'Juodoji'."
+   },
+   {
+    "question": "Kur dingsta visi ___ paukščiai rudenį?",
+    "options": [
+     "maži",
+     "mažieji",
+     "mažais",
+     "mažąjį"
+    ],
+    "answer": 1,
+    "explanation": "Plural masculine nominative definite form for classifying a group is 'mažieji'."
+   }
+  ],
+  "tip": "Think of the suffix '-sis' / '-ji' as the English definite article 'the' permanently glued onto the end of the adjective."
+ },
+ {
+  "id": "lt-b1-gerund-pusdalyvis-padalyvis",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#10B981",
+  "emoji": "🔀",
+  "title": "Converbs: Pusdalyvis vs Padalyvis",
+  "subtitle": "Expressing concurrent secondary actions with shared vs different subjects",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use pusdalyvis (-damas) when the secondary action shares the main clause subject, and padalyvis (-ant / -us) when subjects differ or action is impersonal.",
+  "structure": {
+   "headers": [
+    "Converb",
+    "Key Formations",
+    "Subject Relation",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Pusdalyvis",
+      "-damas, -dama",
+      "Same as main clause",
+      "Secondary concurrent action of subject"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Padalyvis (Present)",
+      "-ant, -iant",
+      "Different subject / Impersonal",
+      "Simultaneous circumstantial background"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Padalyvis (Past)",
+      "-us, -ius",
+      "Different subject / Impersonal",
+      "Preceding circumstantial background"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Same Subject (Pusdalyvis)",
+    "example": "Eidamas namo, Jonas sutiko seną draugą.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Different Subject (Padalyvis Pres.)",
+    "example": "Lietui lyjant, mes sėdėjome jaukioje kavinėje.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Different Subject (Padalyvis Past)",
+    "example": "Saulei nusileidus, mieste pasidarė vėsu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Eidamas namo, Jonas sutiko seną draugą.",
+    "ko": "",
+    "highlight": "Eidamas"
+   },
+   {
+    "en": "Lietui lyjant, visi skubėjo pasislėpti po stogu.",
+    "ko": "",
+    "highlight": "lyjant"
+   },
+   {
+    "en": "Saulei nusileidus, keliautojai pasiekė kalnų kaimelį.",
+    "ko": "",
+    "highlight": "nusileidus"
+   },
+   {
+    "en": "Gerdama karštą arbatą, mergina skaitė knygą.",
+    "ko": "",
+    "highlight": "Gerdama"
+   },
+   {
+    "en": "Mokytojui kalbant, mokiniai atidžiai konspektavo.",
+    "ko": "",
+    "highlight": "kalbant"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Eidamas į kambarį, telefonas suskambėjo.",
+    "right": "Man einant į kambarį, telefonas suskambėjo.",
+    "note": "The phone was not walking. When the subjects differ, use padalyvis with a dative agent ('man einant')."
+   },
+   {
+    "wrong": "Gerdamas kavą, man patinka žiūrėti pro langą.",
+    "right": "Gerdamas kavą, aš mėgstu žiūrėti pro langą.",
+    "note": "Pusdalyvis needs a nominative subject. Rephrase impersonal constructions like 'man patinka' to 'aš mėgstu'."
+   },
+   {
+    "wrong": "Lietus lyjant, mes laukėme autobuso.",
+    "right": "Lietui lyjant, mes laukėme autobuso.",
+    "note": "The subject of a padalyvis construction must stand in the dative case ('lietui'), not nominative."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "___ gatve, mergaitė pastebėjo mažą kačiuką.",
+    "options": [
+     "Bėgant",
+     "Bėgusi",
+     "Bėgdama",
+     "Bėgta"
+    ],
+    "answer": 2,
+    "explanation": "The subject 'mergaitė' performs both running and noticing, so feminine singular pusdalyvis 'bėgdama' is required."
+   },
+   {
+    "question": "Tėvui ___, vaikai pradėjo ruošti pietus.",
+    "options": [
+     "grįždamas",
+     "grįžus",
+     "grįžęs",
+     "grįžti"
+    ],
+    "answer": 1,
+    "explanation": "The father is in dative ('tėvui') and the main subject is 'vaikai'; different subjects in prior time require padalyvis 'grįžus'."
+   },
+   {
+    "question": "Klausydamasis muzikos, Andrius ___ laišką.",
+    "options": [
+     "rašė",
+     "rašant",
+     "rašius",
+     "rašęs"
+    ],
+    "answer": 0,
+    "explanation": "A pusdalyvis modifies a conjugated finite verb agreeing with the main subject 'Andrius rašė'."
+   },
+   {
+    "question": "Saulei ___, visa gamta pabunda naujai dienai.",
+    "options": [
+     "tekanti",
+     "tekant",
+     "tekėdama",
+     "tekėdamas"
+    ],
+    "answer": 1,
+    "explanation": "Dative subject 'saulei' with an ongoing concurrent event needs present padalyvis 'tekant'."
+   }
+  ],
+  "tip": "Ask: 'Is the actor doing both things?' If yes, reach for '-damas / -dama'. If no, reach for padalyvis and put that actor into dative."
+ },
+ {
+  "id": "lt-b2-indirect-speech-evidential-participles",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🗣️",
+  "title": "Evidential Participles and Indirect Discourse",
+  "subtitle": "Expressing hearsay, reported speech, and narrative detachment",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Lithuanian marks reported speech and unverified hearsay (evidentiality) by replacing finite conjugated verbs with active participles.",
+  "structure": {
+   "headers": [
+    "Tense Reported",
+    "Direct Verb Form",
+    "Evidential Equivalent",
+    "Participle Gender/Number"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present Hearsay",
+      "jis dirba",
+      "jis dirbąs / dirbantis",
+      "Masc. Sg. Present Active"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Hearsay",
+      "jie išvažiavo",
+      "jie išvažiavę",
+      "Masc. Pl. Past Active"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Future Hearsay",
+      "ji atvyks",
+      "ji atvyksianti",
+      "Fem. Sg. Future Active"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Reported Hearsay",
+    "example": "Girdėjau, kad kaimynai parduodą savo didelį namą.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Indirect Speech Complement",
+    "example": "Policija pranešė vagį jau pabėgus į užsienį.",
+    "translation": ""
+   },
+   {
+    "color": "#A78BFA",
+    "label": "Folklore Narrative Tone",
+    "example": "Senais laikais čia stovėjusi didelė galinga pilis.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Girdėjau, kad kaimynai parduodą savo didelį namą.",
+    "ko": "",
+    "highlight": "parduodą"
+   },
+   {
+    "en": "Sakoma, kad ministras rytoj atsistatydinsiąs iš pareigų.",
+    "ko": "",
+    "highlight": "atsistatydinsiąs"
+   },
+   {
+    "en": "Senelė pasakojo ten kadaise buvus gilų ežerą.",
+    "ko": "",
+    "highlight": "buvus"
+   },
+   {
+    "en": "Žmonės kalba jį laimėjus didelį prizą loterijoje.",
+    "ko": "",
+    "highlight": "laimėjus"
+   },
+   {
+    "en": "Jis tvirtina nieko nežinąs apie šį slaptą planą.",
+    "ko": "",
+    "highlight": "nežinąs"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jis sakė, kad jis yra nekaltas.",
+    "right": "Jis sakė esąs nekaltas.",
+    "note": "In advanced literary and journalistic style, oblique participial clauses ('esąs') replace clunky 'kad jis yra' structures."
+   },
+   {
+    "wrong": "Girdėjau, kad jie laimėjo (when signaling strong skepticism).",
+    "right": "Girdėjau juos laimėjus.",
+    "note": "Use accusative + padalyvis/participle to emphasize that the speaker does not personally vouch for the truth."
+   },
+   {
+    "wrong": "Mergina sakė, kad ateisiąs rytoj.",
+    "right": "Mergina sakė ateisianti rytoj.",
+    "note": "Participles in evidential constructions must agree in gender with the subject (feminine 'ateisianti' for 'mergina')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Liudininkas teigė matęs įtariamąjį, tačiau tas tvirtina nieko ___.",
+    "options": [
+     "nematė",
+     "nematęs",
+     "nematanti",
+     "nematęsai"
+    ],
+    "answer": 1,
+    "explanation": "The male subject ('tas') claiming hearsay innocence requires masculine past active participle 'nematęs'."
+   },
+   {
+    "question": "Girdėjome direktorių greitai ___ iš šių pareigų.",
+    "options": [
+     "pasitrauks",
+     "pasitraukti",
+     "pasitrauksiant",
+     "pasitraukė"
+    ],
+    "answer": 2,
+    "explanation": "Indirect discourse with accusative subject ('direktorių') in future reference takes future padalyvis 'pasitrauksiant'."
+   },
+   {
+    "question": "Pasakose pasakojama tolimoje karalystėje ___ karalius.",
+    "options": [
+     "gyveno",
+     "gyvenęs",
+     "gyvenusi",
+     "gyventi"
+    ],
+    "answer": 1,
+    "explanation": "Traditional narrative evidential style uses masculine past participle 'gyvenęs' for the masculine subject 'karalius'."
+   },
+   {
+    "question": "Ji teisinosi visą dieną sunkiai ___ biure.",
+    "options": [
+     "dirbusi",
+     "dirbo",
+     "dirbusią",
+     "dirbti"
+    ],
+    "answer": 0,
+    "explanation": "Nominative feminine subject 'ji' takes the nominative feminine past active participle 'dirbusi'."
+   }
+  ],
+  "tip": "Evidential participles allow Lithuanian speakers to disclaim liability: using 'jis padaręs' instead of 'jis padarė' protects the reporter from libel."
+ },
+ {
+  "id": "lt-b2-complex-prepositional-government",
+  "level": "b2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🧭",
+  "title": "Idiosyncratic Case Government with Complex Prepositions",
+  "subtitle": "Navigating multi-case shifts with po, už, and prieš",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Prepositions like 'po', 'už', and 'prieš' assign different cases (genitive, accusative, or instrumental) based strictly on spatial, temporal, or reciprocal meaning.",
+  "structure": {
+   "headers": [
+    "Preposition",
+    "Governed Case",
+    "Primary Meaning",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "po",
+      "+ Genitive (Kilm.)",
+      "Temporal: 'after'",
+      "po pietų (after lunch)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "po",
+      "+ Instrumental (Įn.)",
+      "Spatial: 'under'",
+      "po stalu (under the table)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "už",
+      "+ Genitive (Kilm.)",
+      "Spatial: 'behind / beyond'",
+      "už durų (behind the door)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "už",
+      "+ Accusative (Gal.)",
+      "Exchange / Cost / Comparison",
+      "ačiū už dovaną (thanks for the gift)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Temporal Sequence ('po' + Gen)",
+    "example": "Po sunkios darbo dienos noriu tik pailsėti.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Spatial Position ('po' + Instr)",
+    "example": "Šuo ramiai miega po dideliu mediniu stalu.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Exchange or Benefit ('už' + Acc)",
+    "example": "Mes sumokėjome didelę kainą už šį butą.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Po sunkios darbo dienos noriu tik pailsėti.",
+    "ko": "",
+    "highlight": "Po sunkios darbo dienos"
+   },
+   {
+    "en": "Šuo ramiai miega po dideliu mediniu stalu.",
+    "ko": "",
+    "highlight": "po dideliu mediniu stalu"
+   },
+   {
+    "en": "Mes sumokėjome didelę kainą už šį butą.",
+    "ko": "",
+    "highlight": "už šį butą"
+   },
+   {
+    "en": "Mano mašina stovi už kampo.",
+    "ko": "",
+    "highlight": "už kampo"
+   },
+   {
+    "en": "Prieš svarbų susirinkimą visi vadovai jaudinosi.",
+    "ko": "",
+    "highlight": "Prieš svarbų susirinkimą"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Susitiksime po vieną valandą.",
+    "right": "Susitiksime po vienos valandos.",
+    "note": "Temporal 'po' (meaning 'after') always requires Genitive, never Accusative."
+   },
+   {
+    "wrong": "Katinas pasislėpė po lova (Genitive).",
+    "right": "Katinas pasislėpė po lova (Instrumental).",
+    "note": "Spatial 'under' requires the Instrumental case ('po kuo?'), even though 'lova' looks similar, ensure instrumental inflection."
+   },
+   {
+    "wrong": "Ačiū už jūsų pagalbą (Instrumental).",
+    "right": "Ačiū už jūsų pagalbą (Accusative).",
+    "note": "'Už' in expressions of gratitude, payment, or representation demands the Accusative case."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Padėk lagaminą po ___ miegamajame.",
+    "options": [
+     "lova",
+     "lovos",
+     "lovą",
+     "lovoje"
+    ],
+    "answer": 0,
+    "explanation": "Spatial 'under' takes the instrumental; feminine singular instrumental of 'lova' is 'lova' (accented differently from nominative)."
+   },
+   {
+    "question": "Mes grįšime namo tik po ___ pabaigos.",
+    "options": [
+     "koncertą",
+     "koncertas",
+     "koncerto",
+     "koncertu"
+    ],
+    "answer": 2,
+    "explanation": "Temporal 'po' (after) governs the genitive case, hence 'koncerto'."
+   },
+   {
+    "question": "Kiek tu sumokėjai už šį naują ___?",
+    "options": [
+     "dviračiu",
+     "dviratį",
+     "dviračio",
+     "dviratyje"
+    ],
+    "answer": 1,
+    "explanation": "Preposition 'už' indicating purchase or exchange strictly governs the accusative case ('dviratį')."
+   },
+   {
+    "question": "Kariai drąsiai kovojo už savo tėvynės ___.",
+    "options": [
+     "laisvė",
+     "laisve",
+     "laisvę",
+     "laisvės"
+    ],
+    "answer": 2,
+    "explanation": "'Kovoti už' (fight for) dictates the accusative case ('laisvę')."
+   }
+  ],
+  "tip": "Mnemonic: 'Po' + Time = Genitive ('po laiko'). 'Po' + Location underneath = Instrumental ('po stalu')."
+ },
+ {
+  "id": "lt-b2-diminutives-and-affective-derivation",
+  "level": "b2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🧸",
+  "title": "Diminutive Suffixation and Semantic Nuances",
+  "subtitle": "Modulating intimacy, tenderness, and politeness through morphology",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Lithuanian diminutives employ a vast tier of suffixes (-elis, -ytis, -iukas, -utėlis) not merely for physical size, but to encode emotional warmth, empathy, and social mitigation.",
+  "structure": {
+   "headers": [
+    "Suffix Group",
+    "Target Stem",
+    "Derived Example",
+    "Affective Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-elis, -elė",
+      "Nouns (M/F)",
+      "namelis, saulutė / saulelė",
+      "Gentle affection, standard smallness"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-iukas, -iukė",
+      "Nouns / Offspring",
+      "šuniukas, kačiukas",
+      "Playful affection, youthful cuteness"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ytis, -ytė",
+      "Nouns (Hypocoristic)",
+      "brolis → broliytis, tėvytis",
+      "Deep familial tenderness"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-(i)utėlis",
+      "Adjectives",
+      "mažutėlis, baltutėlis",
+      "Absolute, delicate intensification"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Mitigating Requests",
+    "example": "Palaukite vieną minutėlę, tuoj ateisiu.",
+    "translation": ""
+   },
+   {
+    "color": "#4F46E5",
+    "label": "Emotional Warmth in Speech",
+    "example": "Mano mieloji mamytė išvirė skanios sriubos.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Sensory Intensification",
+    "example": "Šviežiai iškritęs sniegas buvo baltutėlis.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Palaukite vieną minutėlę, tuoj ateisiu.",
+    "ko": "",
+    "highlight": "minutėlę"
+   },
+   {
+    "en": "Mano mieloji mamytė išvirė skanios sriubos.",
+    "ko": "",
+    "highlight": "mamytė"
+   },
+   {
+    "en": "Šviežiai iškritęs sniegas buvo baltutėlis.",
+    "ko": "",
+    "highlight": "baltutėlis"
+   },
+   {
+    "en": "Kiemelyje bėgioja mažas pūkuotas kačiukas.",
+    "ko": "",
+    "highlight": "kačiukas"
+   },
+   {
+    "en": "Ar galėtum paduoti tą puodelį arbatėlės?",
+    "ko": "",
+    "highlight": "arbatėlės"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Palaukite vieną minutę! (in polite customer service)",
+    "right": "Palaukite vieną minutėlę!",
+    "note": "Unsuffixed commands can sound abrupt; diminutives soften everyday transactional requests."
+   },
+   {
+    "wrong": "Mes nusipirkome baltuką šunį.",
+    "right": "Mes nusipirkome baltutėlį šunį.",
+    "note": "To convey an affective, pure adjectival quality, use adjectival diminutive '-utėlis', not noun suffixes."
+   },
+   {
+    "wrong": "Vaikas glostė mažą šunį (neutral tone).",
+    "right": "Vaikas glostė mažą šuniuką.",
+    "note": "Native speakers almost universally prefer 'šuniukas' or 'kačiukas' when referencing juvenile or beloved pets."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Prašau, įpilkite man nors vieną lašelį šiltos ___.",
+    "options": [
+     "vanduo",
+     "vandenėlio",
+     "vandens",
+     "vandenyje"
+    ],
+    "answer": 1,
+    "explanation": "Polite hospitality requests take genitive diminutive forms like 'vandenėlio' to sound courteous and welcoming."
+   },
+   {
+    "question": "Koks mielas ir švelnus tas tavo mažasis ___!",
+    "options": [
+     "katė",
+     "katytis",
+     "kačiukas",
+     "katinais"
+    ],
+    "answer": 2,
+    "explanation": "The standard affectionate diminutive for a kitten or cute cat is the -iukas derivative 'kačiukas'."
+   },
+   {
+    "question": "Po pirties kūdikio veidelis buvo visiškai ___.",
+    "options": [
+     "raudonas",
+     "raudonutėlis",
+     "raudonai",
+     "raudonumo"
+    ],
+    "answer": 1,
+    "explanation": "The adjective suffix '-utėlis' conveys delicate sensory intensity ('delicately, completely red')."
+   },
+   {
+    "question": "Užeikite į mūsų jaukų ___ miško pakraštyje.",
+    "options": [
+     "namą",
+     "namelis",
+     "namelį",
+     "namams"
+    ],
+    "answer": 2,
+    "explanation": "Accusative singular of masculine diminutive 'namelis' governed by 'į' is 'namelį'."
+   }
+  ],
+  "tip": "Lithuanian uses diminutives far beyond English 'baby talk'; they are indispensable tools of politeness and emotional tact in adult daily life."
+ }
+]

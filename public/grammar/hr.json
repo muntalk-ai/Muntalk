@@ -1,0 +1,3332 @@
+[
+ {
+  "id": "hr-a1-noun-genders-and-nominative",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🏷️",
+  "title": "Grammatical Gender and the Nominative Case",
+  "subtitle": "Discover how word endings reveal masculine, feminine, and neuter nouns in the basic subject form.",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "In the dictionary nominative case, masculine nouns typically end in a consonant, feminine nouns in -a, and neuter nouns in -o or -e.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Typical Ending",
+    "Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine (m)",
+      "Consonant",
+      "grad",
+      "city"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine (f)",
+      "-a",
+      "žena",
+      "woman"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter (n)",
+      "-o / -e",
+      "selo / polje",
+      "village / field"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Masculine Subjects",
+    "example": "Zagreb je lijep grad.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Feminine Subjects",
+    "example": "Knjiga je na stolu.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Neuter Subjects",
+    "example": "More je toplo danas.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ovo je moj brat.",
+    "ko": "",
+    "highlight": "brat"
+   },
+   {
+    "en": "Moja sestra živi ovdje.",
+    "ko": "",
+    "highlight": "sestra"
+   },
+   {
+    "en": "Pivo je hladno.",
+    "ko": "",
+    "highlight": "Pivo"
+   },
+   {
+    "en": "Veliko sunce sja.",
+    "ko": "",
+    "highlight": "sunce"
+   },
+   {
+    "en": "Ovaj auto je brz.",
+    "ko": "",
+    "highlight": "auto"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ovo je lijepa grad.",
+    "right": "Ovo je lijep grad.",
+    "note": "'Grad' ends in a consonant and is masculine, so adjectives modifying it must take masculine forms."
+   },
+   {
+    "wrong": "To selo je lijepa.",
+    "right": "To selo je lijepo.",
+    "note": "'Selo' ends in -o and is neuter, requiring the neuter adjective ending -o."
+   },
+   {
+    "wrong": "Ana je dobar studentica.",
+    "right": "Ana je dobra studentica.",
+    "note": "'Studentica' ends in -a and is feminine, requiring the feminine agreement 'dobra'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which of the following nouns is grammatically feminine?",
+    "options": [
+     "prozor",
+     "kuća",
+     "more",
+     "prijatelj"
+    ],
+    "answer": 1,
+    "explanation": "Nouns ending in -a like 'kuća' (house) are grammatically feminine in the nominative case."
+   },
+   {
+    "question": "Identify the neuter noun among the choices:",
+    "options": [
+     "stolica",
+     "grad",
+     "pismo",
+     "dječak"
+    ],
+    "answer": 2,
+    "explanation": "'Pismo' (letter) ends in -o, which signifies the neuter gender."
+   },
+   {
+    "question": "The noun 'stol' (table) belongs to which grammatical gender?",
+    "options": [
+     "Feminine",
+     "Neuter",
+     "Plural only",
+     "Masculine"
+    ],
+    "answer": 3,
+    "explanation": "'Stol' ends in a consonant (l), which is the standard nominative marker for masculine nouns."
+   },
+   {
+    "question": "Choose the correct sentence where the adjective agrees with the neuter noun 'more':",
+    "options": [
+     "More je plavo.",
+     "More je plav.",
+     "More je plava.",
+     "More je plavi."
+    ],
+    "answer": 0,
+    "explanation": "Neuter adjectives in the nominative singular end in -o (or -e), matching 'more'."
+   }
+  ],
+  "tip": "A small group of masculine male names and professions end in -a (e.g., 'tata', 'Luka'), but they take masculine adjectives despite their feminine-looking ending."
+ },
+ {
+  "id": "a1-present-tense-conjugations",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⚡",
+  "title": "Present Tense Conjugation Classes (-am, -im, -em)",
+  "subtitle": "Conjugate Croatian verbs in the present tense using the three primary ending patterns.",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Remove the infinitive ending to find the stem, then attach present tense suffixes grouped mainly by the first-person singular vowel: -am, -im, or -em.",
+  "structure": {
+   "headers": [
+    "Class",
+    "Infinitive",
+    "ja (1st sg)",
+    "oni/one (3rd pl)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "A-Conjugation",
+      "gledati",
+      "gledam",
+      "gledaju"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "I-Conjugation",
+      "govoriti",
+      "govorim",
+      "govore"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "E-Conjugation",
+      "pisati",
+      "pišem",
+      "pišu"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Habitual Action (-am)",
+    "example": "Svaki dan čitam novine.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Current State (-im)",
+    "example": "Mi sada govorimo hrvatski.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Ongoing Process (-em)",
+    "example": "Oni pišu pismo prijatelju.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ja slušam glazbu svaki dan.",
+    "ko": "",
+    "highlight": "slušam"
+   },
+   {
+    "en": "Govoriš li engleski jezik?",
+    "ko": "",
+    "highlight": "Govoriš"
+   },
+   {
+    "en": "Mi radimo u Zagrebu.",
+    "ko": "",
+    "highlight": "radimo"
+   },
+   {
+    "en": "Što oni piju u kafiću?",
+    "ko": "",
+    "highlight": "piju"
+   },
+   {
+    "en": "Ona živi u Splitu.",
+    "ko": "",
+    "highlight": "živi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ja govoram engleski.",
+    "right": "Ja govorim engleski.",
+    "note": "'Govoriti' belongs to the I-conjugation class (-im, -iš, -i...), not the A-conjugation."
+   },
+   {
+    "wrong": "Oni radidu danas.",
+    "right": "Oni rade danas.",
+    "note": "The 3rd person plural for I-conjugation verbs ends in -e (raditi -> rade), not dialectal forms like '-idu'."
+   },
+   {
+    "wrong": "Ja gledati televiziju sada.",
+    "right": "Ja gledam televiziju sada.",
+    "note": "Croatian requires the verb to be conjugated for person and number, never left in the bare infinitive."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Mi ___ kavu.' (piti - to drink)",
+    "options": [
+     "pijem",
+     "piješ",
+     "pijemo",
+     "piju"
+    ],
+    "answer": 2,
+    "explanation": "The 1st person plural ('mi') ending across all present conjugation classes is -mo."
+   },
+   {
+    "question": "Choose the correct form: 'On dobro ___ hrvatski.' (govoriti)",
+    "options": [
+     "govori",
+     "govore",
+     "govorim",
+     "govoriš"
+    ],
+    "answer": 0,
+    "explanation": "The 3rd person singular ('on/ona/ono') ending for the I-conjugation is -i."
+   },
+   {
+    "question": "What is the 3rd person plural ('oni') form of 'čitati' (to read)?",
+    "options": [
+     "čitaju",
+     "čitamo",
+     "čitate",
+     "čita"
+    ],
+    "answer": 0,
+    "explanation": "A-conjugation verbs add -aju for the 3rd person plural 'oni' (čitati -> čitaju)."
+   },
+   {
+    "question": "Which verb form correctly fills the blank: 'Ti ___ pismo.' (pisati - to write)",
+    "options": [
+     "pišem",
+     "pišu",
+     "piše",
+     "pišeš"
+    ],
+    "answer": 3,
+    "explanation": "The 2nd person singular ('ti') takes the suffix -š, yielding 'pišeš'."
+   }
+  ],
+  "tip": "Subject pronouns (ja, ti, on...) are usually omitted in Croatian because the verb ending already shows who is performing the action."
+ },
+ {
+  "id": "a1-biti-and-clitic-placement",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🧩",
+  "title": "The Auxiliary Verb 'Biti' and Enclitic Positioning",
+  "subtitle": "Master short forms of 'biti' and place them correctly in the clause's second slot.",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Short unstressed forms of 'biti' (sam, si, je, smo, ste, su) are enclitics and must occupy the absolute second grammatical position in a clause.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Short Form (Enclitic)",
+    "Full Form (Stressed)",
+    "Negative Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ja (1st sg)",
+      "sam",
+      "jesam",
+      "nisam"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "on/ona/ono (3rd sg)",
+      "je",
+      "jest / jeste",
+      "nije"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "mi (1st pl)",
+      "smo",
+      "jesmo",
+      "nismo"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "oni/one (3rd pl)",
+      "su",
+      "jesu",
+      "nisu"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Second Position Rule",
+    "example": "Ja sam umoran danas.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Initial Verb Omission",
+    "example": "Umoran sam danas.",
+    "translation": ""
+   },
+   {
+    "color": "#78350F",
+    "label": "Negative Form at Start",
+    "example": "Nisam siguran u to.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "On je moj profesor.",
+    "ko": "",
+    "highlight": "je"
+   },
+   {
+    "en": "Mi smo iz Zagreba.",
+    "ko": "",
+    "highlight": "smo"
+   },
+   {
+    "en": "Danas je vrlo hladno.",
+    "ko": "",
+    "highlight": "je"
+   },
+   {
+    "en": "Jeste li vi student?",
+    "ko": "",
+    "highlight": "Jeste"
+   },
+   {
+    "en": "Oni nisu kod kuće.",
+    "ko": "",
+    "highlight": "nisu"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Sam student iz Amerike.",
+    "right": "Ja sam student iz Amerike.",
+    "note": "An enclitic like 'sam' can never stand in the first position of a sentence. Use 'Ja sam...' or 'Student sam...'"
+   },
+   {
+    "wrong": "Ne sam umoran.",
+    "right": "Nisam umoran.",
+    "note": "To negate 'biti', use the integrated negative forms (nisam, nisi, nije, nismo, niste, nisu), not 'ne' + short form."
+   },
+   {
+    "wrong": "Ivan sutra je u školi.",
+    "right": "Ivan je sutra u školi.",
+    "note": "Enclitics must occupy the second syntactic position, immediately after the first phrase ('Ivan')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank with the correct enclitic: 'Mi ___ prijatelji.'",
+    "options": [
+     "sam",
+     "smo",
+     "ste",
+     "su"
+    ],
+    "answer": 1,
+    "explanation": "The 1st person plural ('mi') short form of 'biti' is 'smo'."
+   },
+   {
+    "question": "Which sentence follows correct clitic placement?",
+    "options": [
+     "Je on dobar čovjek.",
+     "On dobar je čovjek.",
+     "On je dobar čovjek.",
+     "Dobar čovjek on je."
+    ],
+    "answer": 2,
+    "explanation": "The enclitic 'je' must sit in the second position of the sentence, immediately following the subject 'On'."
+   },
+   {
+    "question": "What is the correct negative form: 'Ona ___ ovdje.' (She is not here)",
+    "options": [
+     "ne je",
+     "nije",
+     "nisam",
+     "ne"
+    ],
+    "answer": 1,
+    "explanation": "The negative 3rd person singular form of 'biti' is 'nije'."
+   },
+   {
+    "question": "How do you correctly state 'I am happy' starting with the adjective 'Sretan'?",
+    "options": [
+     "Sretan sam.",
+     "Sam sretan.",
+     "Sretan jesam sam.",
+     "Sretan je."
+    ],
+    "answer": 0,
+    "explanation": "Since an enclitic cannot start a sentence, placing 'Sretan' first allows 'sam' to safely occupy the second slot."
+   }
+  ],
+  "tip": "Never start a Croatian sentence with words like 'sam', 'si', 'je', 'smo', 'ste', or 'su'. If there is no pronoun, put the adjective or noun first!"
+ },
+ {
+  "id": "a1-accusative-case-inanimate-vs-animate",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎯",
+  "title": "Accusative Case and Animacy Distinction",
+  "subtitle": "Form direct objects and distinguish living beings from inanimate things in masculine nouns.",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "In the accusative case, inanimate masculine nouns stay identical to the nominative, while animate masculine nouns take the genitive ending -a.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Nominative (Subject)",
+    "Accusative (Direct Object)",
+    "Rule Summary"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masc. Inanimate",
+      "grad / stol",
+      "grad / stol",
+      "Accusative = Nominative"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masc. Animate",
+      "brat / pas",
+      "brata / psa",
+      "Accusative = Genitive (-a)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine",
+      "knjiga / kava",
+      "knjigu / kavu",
+      "Always ends in -u"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter",
+      "more / pismo",
+      "more / pismo",
+      "Accusative = Nominative"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Inanimate Masculine",
+    "example": "Kupujem novi auto.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Animate Masculine",
+    "example": "Vidim tvoga brata.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Feminine Direct Object",
+    "example": "Pijem toplu kavu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Gledam dobar film.",
+    "ko": "",
+    "highlight": "film"
+   },
+   {
+    "en": "Poznajem ovog čovjeka.",
+    "ko": "",
+    "highlight": "čovjeka"
+   },
+   {
+    "en": "Imam crnu mačku.",
+    "ko": "",
+    "highlight": "mačku"
+   },
+   {
+    "en": "Čitam zanimljivo pismo.",
+    "ko": "",
+    "highlight": "pismo"
+   },
+   {
+    "en": "Čekam prijatelja na trgu.",
+    "ko": "",
+    "highlight": "prijatelja"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Vidim moj brat.",
+    "right": "Vidim moga brata.",
+    "note": "'Brat' is a living person (masculine animate), so its accusative form must end in -a."
+   },
+   {
+    "wrong": "Kupujem novoga stola.",
+    "right": "Kupujem novi stol.",
+    "note": "'Stol' is an inanimate object, so its accusative form stays identical to the nominative."
+   },
+   {
+    "wrong": "Pijem kava.",
+    "right": "Pijem kavu.",
+    "note": "Feminine nouns ending in -a in the nominative change to -u in the accusative direct object."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct accusative form: 'Vidim ___.' (pas - dog, animate)",
+    "options": [
+     "pas",
+     "psu",
+     "psa",
+     "pasom"
+    ],
+    "answer": 2,
+    "explanation": "Because 'pas' is an animate masculine noun, its accusative form takes -a (with fleeting 'a' dropping out: psa)."
+   },
+   {
+    "question": "Choose the correct accusative form: 'Kupujem ___.' (telefon - inanimate)",
+    "options": [
+     "telefona",
+     "telefon",
+     "telefonu",
+     "telefonom"
+    ],
+    "answer": 1,
+    "explanation": "Inanimate masculine nouns like 'telefon' remain unchanged in the accusative singular."
+   },
+   {
+    "question": "Complete the feminine direct object: 'Ana čita ___.' (knjiga)",
+    "options": [
+     "knjigu",
+     "knjiga",
+     "knjige",
+     "knjizi"
+    ],
+    "answer": 0,
+    "explanation": "Feminine nouns ending in -a change to -u when used as direct objects in the accusative."
+   },
+   {
+    "question": "Which sentence contains a masculine animate noun correctly declined in the accusative?",
+    "options": [
+     "Gledam prozor.",
+     "Imam dobar stan.",
+     "Pijem sok.",
+     "Pozdravljam profesora."
+    ],
+    "answer": 3,
+    "explanation": "'Profesor' is animate and correctly takes the -a ending ('profesora') in the accusative case."
+   }
+  ],
+  "tip": "Animals, people, and mythical beings count as animate (accusative in -a). Plants, vehicles, furniture, and abstract ideas count as inanimate (accusative unchanged)."
+ },
+ {
+  "id": "a1-locative-case-with-prepositions",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📍",
+  "title": "Locative Case with 'u', 'na', and 'o'",
+  "subtitle": "Express static locations and topics of conversation with specialized prepositions.",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "The locative case is only used after prepositions (primarily u, na, and o) to describe stationary locations or talking 'about' a topic.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Preposition",
+    "Nominative",
+    "Locative Ending"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine",
+      "u / na / o",
+      "Zagreb",
+      "u Zagreb-u"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine",
+      "u / na / o",
+      "škola",
+      "u škol-i"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter",
+      "u / na / o",
+      "more",
+      "na mor-u"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Inside an Enclosed Space (u)",
+    "example": "Živim u stanu.",
+    "translation": ""
+   },
+   {
+    "color": "#0369A1",
+    "label": "On an Open Surface / Island (na)",
+    "example": "Sjedim na trgu.",
+    "translation": ""
+   },
+   {
+    "color": "#075985",
+    "label": "Topic of Thought / Talk (o)",
+    "example": "Razgovaramo o filmu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Knjiga se nalazi na stolu.",
+    "ko": "",
+    "highlight": "stolu"
+   },
+   {
+    "en": "Djeca su sada u školi.",
+    "ko": "",
+    "highlight": "školi"
+   },
+   {
+    "en": "Oni ljetuju na moru.",
+    "ko": "",
+    "highlight": "moru"
+   },
+   {
+    "en": "Pričamo o novom poslu.",
+    "ko": "",
+    "highlight": "poslu"
+   },
+   {
+    "en": "Radim u velikom uredu.",
+    "ko": "",
+    "highlight": "uredu"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ja sam u Zagreb.",
+    "right": "Ja sam u Zagrebu.",
+    "note": "Stationary location requires the locative case; masculine nouns take the ending -u."
+   },
+   {
+    "wrong": "Oni žive na Hrvatska.",
+    "right": "Oni žive u Hrvatskoj.",
+    "note": "Countries generally take 'u', and feminine nouns ending in -a shift to -i in the locative."
+   },
+   {
+    "wrong": "Mislim o Ivan.",
+    "right": "Mislim o Ivanu.",
+    "note": "The preposition 'o' (about) must govern the locative case ('Ivanu')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the phrase: 'Mi smo sada u ___.' (hotel - masculine)",
+    "options": [
+     "hotela",
+     "hotelu",
+     "hoteli",
+     "hotelom"
+    ],
+    "answer": 1,
+    "explanation": "Masculine nouns add -u in the locative singular ('u hotelu')."
+   },
+   {
+    "question": "Complete the phrase: 'Ona radi u ___.' (ljekarna - feminine pharmacy)",
+    "options": [
+     "ljekarnu",
+     "ljekarne",
+     "ljekarni",
+     "ljekarno"
+    ],
+    "answer": 2,
+    "explanation": "Feminine nouns ending in -a take the ending -i in the locative singular ('u ljekarni')."
+   },
+   {
+    "question": "Which preposition is paired with the locative case to talk 'about' a topic?",
+    "options": [
+     "o",
+     "kod",
+     "do",
+     "iz"
+    ],
+    "answer": 0,
+    "explanation": "'O' takes the locative case and corresponds to English 'about'."
+   },
+   {
+    "question": "Choose the correct locative form for the neuter noun 'selo' (village): 'Baka živi u ___.'",
+    "options": [
+     "sela",
+     "seli",
+     "selu",
+     "selom"
+    ],
+    "answer": 2,
+    "explanation": "Neuter nouns ending in -o/-e change their ending to -u in the locative singular ('u selu')."
+   }
+  ],
+  "tip": "Remember: The locative case is never used alone without a preposition in Croatian. If you see 'u' or 'na' showing where someone is standing or living, think Locative (-u for masc/neut, -i for fem)!"
+ },
+ {
+  "id": "hr-a1-genitive-of-absence-and-quantities",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🥛",
+  "title": "Genitive Case: Absence, Origins, and Quantities",
+  "subtitle": "Expressing what isn't there, where you're from, and amounts",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use the genitive case after 'nema' (there is no), prepositions of origin ('iz', 'od', 'do'), and quantity words.",
+  "structure": {
+   "headers": [
+    "Gender / Context",
+    "Ending Change",
+    "Example Phrase",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine (kruh)",
+      "-a",
+      "Nema kruha",
+      "There is no bread"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine (kava)",
+      "-e",
+      "Šalica kave",
+      "A cup of coffee"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter (mlijeko)",
+      "-a",
+      "Čaša mlijeka",
+      "A glass of milk"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Origin preposition (iz)",
+      "-a / -e",
+      "Dolazim iz Zagreba",
+      "I come from Zagreb"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Absence with 'Nema'",
+    "example": "Danas nema profesora u školi.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Origin with 'Iz / Od'",
+    "example": "Vlak putuje od Splita do Zadra.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Partitive Quantity",
+    "example": "Trebam malo hladne vode.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "U hladnjaku uopće nema sira.",
+    "ko": "",
+    "highlight": "sira"
+   },
+   {
+    "en": "Ana dolazi iz Hrvatske.",
+    "ko": "",
+    "highlight": "iz Hrvatske"
+   },
+   {
+    "en": "Popio sam čašu crnoga vina.",
+    "ko": "",
+    "highlight": "crnoga vina"
+   },
+   {
+    "en": "Ovdje nema slobodnog mjesta.",
+    "ko": "",
+    "highlight": "slobodnog mjesta"
+   },
+   {
+    "en": "Pješačimo od parka do škole.",
+    "ko": "",
+    "highlight": "od parka do škole"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Danas nema Ivan.",
+    "right": "Danas nema Ivana.",
+    "note": "The negative existential verb 'nema' always demands the genitive case, not the nominative."
+   },
+   {
+    "wrong": "Ja sam iz Engleska.",
+    "right": "Ja sam iz Engleske.",
+    "note": "The preposition 'iz' requires the genitive case ending -e for feminine nouns ending in -a."
+   },
+   {
+    "wrong": "Molim vas čašu voda.",
+    "right": "Molim vas čašu vode.",
+    "note": "Quantity expressions require the partitive genitive for the substance being measured."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Danas u uredu nema ___.",
+    "options": [
+     "direktor",
+     "direktora",
+     "direktoru",
+     "direktorom"
+    ],
+    "answer": 1,
+    "explanation": "'Nema' always takes the genitive case, which adds -a for masculine animate/inanimate nouns."
+   },
+   {
+    "question": "Moja prijateljica dolazi iz ___.",
+    "options": [
+     "Kanada",
+     "Kanadu",
+     "Kanade",
+     "Kanadom"
+    ],
+    "answer": 2,
+    "explanation": "The preposition 'iz' governs the genitive case, giving feminine 'Kanada' the ending -e."
+   },
+   {
+    "question": "Želim popiti šalicu toplog ___.",
+    "options": [
+     "čaja",
+     "čaj",
+     "čaju",
+     "čajem"
+    ],
+    "answer": 0,
+    "explanation": "The partitive genitive of masculine noun 'čaj' is 'čaja'."
+   },
+   {
+    "question": "Autobus vozi od Zagreba do ___.",
+    "options": [
+     "Dubrovnik",
+     "Dubrovniku",
+     "Dubrovnikom",
+     "Dubrovnika"
+    ],
+    "answer": 3,
+    "explanation": "Both prepositions 'od' and 'do' take the genitive case, requiring 'Dubrovnika'."
+   }
+  ],
+  "tip": "Whenever you negate existence with 'nema', automatically switch the noun from nominative to genitive!"
+ },
+ {
+  "id": "hr-a2-verbal-aspect-pairs",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "Verbal Aspect: Imperfective vs. Perfective",
+  "subtitle": "Choosing between ongoing processes and completed actions",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Imperfective verbs denote ongoing, repeated, or habitual actions, while perfective verbs express completed single events or results.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Aspect",
+    "Focus",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "čitati",
+      "Imperfective",
+      "Process / Duration",
+      "Čitam knjigu satima."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "pročitati",
+      "Perfective",
+      "Completion / Result",
+      "Pročitao sam knjigu jučer."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "pisati / napisati",
+      "Pair (write)",
+      "Repeated vs. Finished",
+      "Pisanje vs. Gotov tekst"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "kupovati / kupiti",
+      "Pair (buy)",
+      "Habitual vs. Single act",
+      "Svaki dan vs. Samo danas"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Habitual Action (Imperfective)",
+    "example": "Svako jutro pijem kavu bez šećera.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Completed Result (Perfective)",
+    "example": "Popio je kavu i otišao na posao.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Parallel Durations (Imperfective)",
+    "example": "Dok sam kuhao ručak, ona je čitala.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Gledao sam film kad je zazvonio telefon.",
+    "ko": "",
+    "highlight": "Gledao sam"
+   },
+   {
+    "en": "Konačno sam naučio sve nove riječi.",
+    "ko": "",
+    "highlight": "sam naučio"
+   },
+   {
+    "en": "Uvijek kupujem voće na istoj tržnici.",
+    "ko": "",
+    "highlight": "kupujem"
+   },
+   {
+    "en": "Jučer sam kupio novi mobitel.",
+    "ko": "",
+    "highlight": "sam kupio"
+   },
+   {
+    "en": "Dugo je pisala pismo svojoj majci.",
+    "ko": "",
+    "highlight": "pisala"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Svaki dan pročitam novine sat vremena.",
+    "right": "Svaki dan čitam novine sat vremena.",
+    "note": "Use imperfective 'čitati' for repeated habitual actions with duration, not perfective 'pročitati'."
+   },
+   {
+    "wrong": "Jučer sam dva sata napisao pismo.",
+    "right": "Jučer sam dva sata pisao pismo.",
+    "note": "A duration phrase like 'dva sata' indicates process, requiring the imperfective verb 'pisati'."
+   },
+   {
+    "wrong": "Sutra ću kupovati novu jaknu u trgovini.",
+    "right": "Sutra ću kupiti novu jaknu u trgovini.",
+    "note": "For a single discrete goal/purchase in the future, native speakers prefer the perfective 'kupiti'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Marko svaki dan ___ doručak u osam sati.",
+    "options": [
+     "priprema",
+     "pripremi",
+     "pripremiti",
+     "pripremio"
+    ],
+    "answer": 0,
+    "explanation": "Regular daily habits require the present tense of an imperfective verb ('priprema')."
+   },
+   {
+    "question": "Jučer sam napokon ___ cijelu knjigu za ispit.",
+    "options": [
+     "čitao",
+     "pročitati",
+     "pročitao",
+     "čitati"
+    ],
+    "answer": 2,
+    "explanation": "'Napokon' (finally) and completion of the whole book signal the perfective past form 'pročitao'."
+   },
+   {
+    "question": "Dok sam se tuširao, netko je ___ na vrata.",
+    "options": [
+     "kucao",
+     "pokucao",
+     "kucati",
+     "pokucati"
+    ],
+    "answer": 1,
+    "explanation": "A sudden point-in-time interruption during an ongoing process uses a perfective verb ('pokucao')."
+   },
+   {
+    "question": "Petar obično dugo ___ zadaću poslije škole.",
+    "options": [
+     "napiše",
+     "napisati",
+     "piše",
+     "pisati"
+    ],
+    "answer": 2,
+    "explanation": "'Obično dugo' emphasizes habit and long duration, requiring the imperfective 'piše'."
+   }
+  ],
+  "tip": "Time signal test: Words like 'svaki dan', 'često', and 'dugo' demand imperfective; 'odjednom', 'napokon', and 'već' demand perfective."
+ },
+ {
+  "id": "hr-a2-perfekt-past-tense",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#EC4899",
+  "emoji": "⏳",
+  "title": "Past Tense (Perfekt) Formation",
+  "subtitle": "Combining auxiliary 'biti' with gender-agreeing participles",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "The Croatian Perfekt consists of the clitic present of 'biti' (sam, si, je...) plus the active past participle matching subject gender and number.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Auxiliary (biti)",
+    "L-Participle (raditi)",
+    "Combined Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "On (Masculine)",
+      "je",
+      "radio",
+      "On je radio."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ona (Feminine)",
+      "je",
+      "radila",
+      "Ona je radila."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Ono (Neuter)",
+      "je",
+      "radilo",
+      "Dijete je radilo."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Oni / One (Plural)",
+      "su",
+      "radili / radile",
+      "Oni su radili."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Completed Event",
+    "example": "Stigli smo na kolodvor na vrijeme.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Describing Past States",
+    "example": "Bili su vrlo umorni nakon puta.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "First Person Female Agreement",
+    "example": "Ja sam jučer vidjela starog prijatelja.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ivan je zaboravio ključeve u autu.",
+    "ko": "",
+    "highlight": "je zaboravio"
+   },
+   {
+    "en": "Marija je kupila predivnu haljinu.",
+    "ko": "",
+    "highlight": "je kupila"
+   },
+   {
+    "en": "Djeca su zaspala vrlo rano.",
+    "ko": "",
+    "highlight": "su zaspala"
+   },
+   {
+    "en": "Jučer smo proveli cijeli dan na plaži.",
+    "ko": "",
+    "highlight": "smo proveli"
+   },
+   {
+    "en": "Nisam čuo tvoje pitanje.",
+    "ko": "",
+    "highlight": "Nisam čuo"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ona je bio u Zagrebu.",
+    "right": "Ona je bila u Zagrebu.",
+    "note": "The active past participle must agree in gender with the female subject ('bila', not 'bio')."
+   },
+   {
+    "wrong": "Mi smo radili jučer puno i ja radio sam sam.",
+    "right": "Mi smo radili jučer puno i ja sam radio sam.",
+    "note": "The clitic auxiliary 'sam' must occupy second position in its clause ('ja sam radio')."
+   },
+   {
+    "wrong": "On je ne vidio problem.",
+    "right": "On nije vidio problem.",
+    "note": "In negative past tense, combine 'ne' + auxiliary into negative forms like 'nije', never 'je ne'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Luka i Marko ___ nogomet u parku.",
+    "options": [
+     "je igrao",
+     "su igrali",
+     "su igrale",
+     "smo igrali"
+    ],
+    "answer": 1,
+    "explanation": "A masculine plural subject (Luka i Marko) requires the plural auxiliary 'su' and participle 'igrali'."
+   },
+   {
+    "question": "Ana, jesi li ___ novu poruku od mame?",
+    "options": [
+     "vidio",
+     "vidjela",
+     "vidjeli",
+     "vidjeti"
+    ],
+    "answer": 1,
+    "explanation": "Because Ana is female, the 2nd person singular participle must take the feminine suffix -la ('vidjela')."
+   },
+   {
+    "question": "Mi ___ jučer proslavili Petrov rođendan.",
+    "options": [
+     "smo",
+     "su",
+     "ste",
+     "sam"
+    ],
+    "answer": 0,
+    "explanation": "The first-person plural subject pronoun 'mi' pairs with the clitic auxiliary 'smo'."
+   },
+   {
+    "question": "Petar i ja ___ cijeli vikend kod kuće.",
+    "options": [
+     "je ostao",
+     "su ostali",
+     "smo ostale",
+     "smo ostali"
+    ],
+    "answer": 3,
+    "explanation": "'Petar i ja' equals 'we' (mi, with masculine inclusion), requiring 'smo ostali'."
+   }
+  ],
+  "tip": "In everyday speech, Croats often drop subject pronouns ('Ja sam vidio' -> 'Vidio sam'). Notice the participle moves forward when the pronoun drops!"
+ },
+ {
+  "id": "hr-a2-dative-case-and-indirect-objects",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎁",
+  "title": "Dative Case: Recipients and Motion Toward",
+  "subtitle": "Giving to recipients and moving in the direction of something",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "The Dative answers 'komu/čemu?' (to whom/to what) for recipients and follows the directional prepositions 'k' or 'ka'.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Singular Ending",
+    "Plural Ending",
+    "Example Phrase"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine (brat)",
+      "-u",
+      "-ima",
+      "Dajem bratu poklon."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine (sestra)",
+      "-oj",
+      "-ama",
+      "Pišem pismo sestri."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter (selo)",
+      "-u",
+      "-ima",
+      "Približavamo se selu."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Direction (k / ka)",
+      "-u / -oj",
+      "-ima / -ama",
+      "Idem k prijatelju."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Indirect Object (Recipient)",
+    "example": "Konobar je donio račun gostu.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Movement Toward with 'k/ka'",
+    "example": "Polako hodamo ka izlazu iz dvorane.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "State of Well-being / Mood",
+    "example": "Meni je danas jako hladno.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Poslao sam važnu poruku liječniku.",
+    "ko": "",
+    "highlight": "liječniku"
+   },
+   {
+    "en": "Kupio je prekrasno cvijeće svojoj majci.",
+    "ko": "",
+    "highlight": "svojoj majci"
+   },
+   {
+    "en": "Približavamo se velikom gradu.",
+    "ko": "",
+    "highlight": "velikom gradu"
+   },
+   {
+    "en": "Idem k zubaru u tri sata.",
+    "ko": "",
+    "highlight": "k zubaru"
+   },
+   {
+    "en": "Profesor je sve objasnio novim studentima.",
+    "ko": "",
+    "highlight": "novim studentima"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Dajem knjigu moja sestra.",
+    "right": "Dajem knjigu mojoj sestri.",
+    "note": "The indirect recipient of an action requires dative endings (-oj for feminine singular adjective and -i for noun)."
+   },
+   {
+    "wrong": "Idem do liječniku danas.",
+    "right": "Idem k liječniku danas.",
+    "note": "'Do' requires genitive ('do liječnika'), whereas 'k/ka' specifically pairs with dative ('k liječniku')."
+   },
+   {
+    "wrong": "Pomažem moj brat oko zadaće.",
+    "right": "Pomažem svom bratu oko zadaće.",
+    "note": "The Croatian verb 'pomagati' requires its object in the dative case, not accusative."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Mama je kupila novu igračku malom ___.",
+    "options": [
+     "djetetu",
+     "dijete",
+     "djeteta",
+     "djetetom"
+    ],
+    "answer": 0,
+    "explanation": "The recipient of the toy is dative neuter, turning irregular 'dijete' into 'djetetu'."
+   },
+   {
+    "question": "Luka je telefonirao svojoj ___.",
+    "options": [
+     "kći",
+     "majka",
+     "majku",
+     "majci"
+    ],
+    "answer": 3,
+    "explanation": "Feminine nouns ending in -a take -i in the dative, undergoing sibilarizacija (k -> c), yielding 'majci'."
+   },
+   {
+    "question": "Večeras idemo k našim dragim ___.",
+    "options": [
+     "prijatelje",
+     "prijatelji",
+     "prijateljima",
+     "prijatelja"
+    ],
+    "answer": 2,
+    "explanation": "Plural masculine dative nouns and adjectives end in -ima ('prijateljima')."
+   },
+   {
+    "question": "Svi učenici pažljivo prilaze novoj ___.",
+    "options": [
+     "škola",
+     "školi",
+     "škole",
+     "školom"
+    ],
+    "answer": 1,
+    "explanation": "Verbs of approaching ('prilaziti') govern the dative case; feminine singular takes -i ('školi')."
+   }
+  ],
+  "tip": "Use the preposition 'ka' instead of 'k' only before words starting with k, g, h, or consonant clusters like tk, zb (e.g., 'ka gradu' vs. 'k meni')."
+ },
+ {
+  "id": "hr-a2-instrumental-case-with-and-without-s",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🥢",
+  "title": "Instrumental: Means vs. Accompaniment",
+  "subtitle": "Using tools with bare nouns vs. companioning with 's/sa'",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Never use 's/sa' for instruments, vehicles, or tools; only use 's/sa' when indicating company, accompaniment, or ingredients.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Preposition",
+    "Rule",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Instrument / Tool",
+      "NO preposition",
+      "Bare Instrumental",
+      "Pišem olovkom."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Vehicle / Means",
+      "NO preposition",
+      "Bare Instrumental",
+      "Putujem vlakom."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Accompaniment (with)",
+      "s / sa",
+      "Required Preposition",
+      "Šetam s prijateljem."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Phonetic variant 'sa'",
+      "sa",
+      "Before s, š, z, ž or clusters",
+      "Kava sa šećerom."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Tool or Device",
+    "example": "Juhu uvijek jedemo velikom žlicom.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Means of Transport",
+    "example": "Svaki petak na posao putujem autobusom.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Social Accompaniment",
+    "example": "Jučer sam ručao sa svojim bratom.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Rezali smo kruh oštrim nožem.",
+    "ko": "",
+    "highlight": "oštrim nožem"
+   },
+   {
+    "en": "Ana putuje u Split automobilom.",
+    "ko": "",
+    "highlight": "automobilom"
+   },
+   {
+    "en": "Idem u kino s najboljom prijateljicom.",
+    "ko": "",
+    "highlight": "s najboljom prijateljicom"
+   },
+   {
+    "en": "Volim piti čaj s limunom i medom.",
+    "ko": "",
+    "highlight": "s limunom i medom"
+   },
+   {
+    "en": "Dječak crta sliku vodenim bojama.",
+    "ko": "",
+    "highlight": "vodenim bojama"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Putujem u Zagreb s vlakom.",
+    "right": "Putujem u Zagreb vlakom.",
+    "note": "Never use the preposition 's' with modes of transport or instruments; use bare instrumental."
+   },
+   {
+    "wrong": "Pišem zadaću sa olovkom.",
+    "right": "Pišem zadaću olovkom.",
+    "note": "An instrument/tool takes no preposition in Croatian; using 'sa' implies the pencil is your social companion."
+   },
+   {
+    "wrong": "Razgovaram s sestra.",
+    "right": "Razgovaram sa sestrom.",
+    "note": "Accompaniment requires 'sa' before words starting with 's', and the noun takes the instrumental ending -om."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Svako jutro putujem na posao gradskim ___.",
+    "options": [
+     "s autobusom",
+     "autobusom",
+     "autobusa",
+     "sa autobusom"
+    ],
+    "answer": 1,
+    "explanation": "Means of transport require the bare instrumental case without any preposition."
+   },
+   {
+    "question": "Volim provoditi slobodno vrijeme ___ prijateljima.",
+    "options": [
+     "sa",
+     "s",
+     "kod",
+     "bez"
+    ],
+    "answer": 1,
+    "explanation": "Accompaniment uses 's'. 'Sa' is only used before sibilants (s, š, z, ž) or difficult consonant clusters."
+   },
+   {
+    "question": "U restoranu uvijek pijem mineralnu vodu ___ limunom.",
+    "options": [
+     "sa",
+     "iz",
+     "s",
+     "za"
+    ],
+    "answer": 2,
+    "explanation": "'Limun' starts with 'l', so the standard unexpanded preposition 's' is used for addition/accompaniment."
+   },
+   {
+    "question": "Jučer je sestra razgovarala ___ zubarom.",
+    "options": [
+     "s",
+     "sa",
+     "kod",
+     "od"
+    ],
+    "answer": 1,
+    "explanation": "The preposition expands to 'sa' before words beginning with 'z' to ease pronunciation."
+   }
+  ],
+  "tip": "Golden test: Ask yourself 'With what tool/vehicle?' -> No 's'. Ask 'In whose company?' -> Add 's' or 'sa'!"
+ },
+ {
+  "id": "hr-a2-pronominal-clitic-clustering",
+  "level": "a2",
+  "category": "advanced",
+  "categoryColor": "#4F46E5",
+  "emoji": "🧩",
+  "title": "Pronominal Enclitic Ordering and Clustering",
+  "subtitle": "Master the strict second-position sequence for Croatian clitics",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Enclitics must occupy the second syntactic slot in a clause and strictly follow the rigid order: question particle li, auxiliary verb, dative pronoun, genitive/accusative pronoun, and reflexive se.",
+  "structure": {
+   "headers": [
+    "Position",
+    "Clitic Element",
+    "Examples"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st slot",
+      "Question marker li",
+      "li"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd slot",
+      "Verbal auxiliaries (except je)",
+      "sam, si, smo, ste, su / bih, bi..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd to 5th slot",
+      "Pronouns: Dative > Genitive > Accusative > Reflexive",
+      "ti > ga > ga/ju > se"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Final slot",
+      "Auxiliary 'je' (moves to the absolute end)",
+      "je"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Dative + Accusative Pairing",
+    "example": "Danas mi ga Marko donosi.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Auxiliary + Dative + Accusative",
+    "example": "Jučer su mi ga poslali poštom.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Question Clitic + Pronominal Clitic",
+    "example": "Sjećaš li ga se s fakulteta?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Oni su mi ga jučer predali.",
+    "ko": "",
+    "highlight": "su mi ga"
+   },
+   {
+    "en": "Zašto si joj ga kupio za rođendan?",
+    "ko": "",
+    "highlight": "si joj ga"
+   },
+   {
+    "en": "Profesor nam se nije javio.",
+    "ko": "",
+    "highlight": "nam se"
+   },
+   {
+    "en": "Vidiš li ga tamo u daljini?",
+    "ko": "",
+    "highlight": "li ga"
+   },
+   {
+    "en": "Kupio mi ga je prošli tjedan.",
+    "ko": "",
+    "highlight": "mi ga je"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "On je mi ga dao.",
+    "right": "On mi ga je dao.",
+    "note": "The 3rd-person singular auxiliary 'je' must stand at the very end of the clitic cluster, not at the beginning."
+   },
+   {
+    "wrong": "Petar ga mi je donio.",
+    "right": "Petar mi ga je donio.",
+    "note": "Dative clitics (mi) must always precede accusative clitics (ga)."
+   },
+   {
+    "wrong": "Mi ga donosi Marko.",
+    "right": "Marko mi ga donosi.",
+    "note": "Enclitics cannot stand first in a sentence; place a tonic word before the cluster."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He gave it (masculine) to me yesterday: 'Jučer ___ dao.'",
+    "options": [
+     "mi ga je",
+     "je mi ga",
+     "ga mi je",
+     "mi je ga"
+    ],
+    "answer": 0,
+    "explanation": "The order is Dative (mi) + Accusative (ga) + Auxiliary 'je' at the absolute end of the cluster."
+   },
+   {
+    "question": "Did you see him?: 'Vidiš ___ tamo?'",
+    "options": [
+     "ga li",
+     "li ga",
+     "se ga",
+     "ga se"
+    ],
+    "answer": 1,
+    "explanation": "The question particle 'li' always leads the clitic string, before accusative 'ga'."
+   },
+   {
+    "question": "They bought it for her: 'Oni ___ kupili novi auto.'",
+    "options": [
+     "ga joj su",
+     "su ga joj",
+     "su joj ga",
+     "joj ga su"
+    ],
+    "answer": 2,
+    "explanation": "Auxiliary 'su' precedes dative 'joj', which in turn precedes accusative 'ga'."
+   },
+   {
+    "question": "We remembered him: 'Sjetili ___ jučer popodne.'",
+    "options": [
+     "smo se ga",
+     "ga se smo",
+     "smo ga se",
+     "se ga smo"
+    ],
+    "answer": 2,
+    "explanation": "Auxiliary 'smo' comes first, followed by genitive pronoun 'ga', and lastly reflexive 'se'."
+   }
+  ],
+  "tip": "Remember the acronym DAGS: Dative before Accusative/Genitive before Se; and remember that 'je' is a rebel that always goes to the very end!"
+ },
+ {
+  "id": "hr-a2-future-i-formation-and-spelling",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "⏳",
+  "title": "Futur I and Infinitive Stem Truncation",
+  "subtitle": "Forming future actions with 'htjeti' enclitics and mastering the -ti vs. -ći rule",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "When an infinitive ending in -ti precedes the future auxiliary (ću, ćeš, će...), it drops the final 'i' and is written as two separate words, whereas infinitives ending in -ći remain unchanged.",
+  "structure": {
+   "headers": [
+    "Infinitive Class",
+    "Auxiliary First",
+    "Infinitive First",
+    "English Sense"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Regular -ti verbs",
+      "Ja ću raditi",
+      "Radit ću",
+      "I will work"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Irregular -ći verbs",
+      "Ja ću reći",
+      "Reći ću",
+      "I will say"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ti with motion verbs",
+      "Mi ćemo doći",
+      "Doći ćemo",
+      "We will come"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Third person plural",
+      "Oni će pisati",
+      "Pisat će",
+      "They will write"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#B91C1C",
+    "label": "Auxiliary before -ti Infinitive",
+    "example": "Sutra ću pisati pismo.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Truncated -ti Infinitive First",
+    "example": "Pjesmu ćemo naučiti sutra.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Untruncated -ći Infinitive First",
+    "example": "Reći ću ti cijelu istinu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Sutra ćemo gledati novi film.",
+    "ko": "",
+    "highlight": "ćemo gledati"
+   },
+   {
+    "en": "Radit ću cijeli dan u uredu.",
+    "ko": "",
+    "highlight": "Radit ću"
+   },
+   {
+    "en": "Reći ću ti sve detalje sutra.",
+    "ko": "",
+    "highlight": "Reći ću"
+   },
+   {
+    "en": "Pomoći ćeš mi oko zadaće.",
+    "ko": "",
+    "highlight": "Pomoći ćeš"
+   },
+   {
+    "en": "Kupit ćemo novi stan sljedeće godine.",
+    "ko": "",
+    "highlight": "Kupit ćemo"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Raditi ću sutra.",
+    "right": "Radit ću sutra.",
+    "note": "In standard Croatian, drop the final 'i' of -ti infinitives when they precede the auxiliary (radit ću, not raditi ću)."
+   },
+   {
+    "wrong": "Raditću sutra.",
+    "right": "Radit ću sutra.",
+    "note": "Croatian writes the truncated infinitive and the auxiliary as two separate words, unlike Serbian."
+   },
+   {
+    "wrong": "Reć ću ti sutra.",
+    "right": "Reći ću ti sutra.",
+    "note": "Verbs ending in -ći never drop their final vowel in the future tense."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I will read a book tonight: '___ zanimljivu knjigu.'",
+    "options": [
+     "Čitat ću",
+     "Čitatiću",
+     "Čitatu",
+     "Čitajući"
+    ],
+    "answer": 0,
+    "explanation": "Infinitive 'čitati' drops 'i' to become 'čitat' and remains separated from 'ću'."
+   },
+   {
+    "question": "We will help you tomorrow: '___ ti sutra oko posla.'",
+    "options": [
+     "Pomoć ćemo",
+     "Pomoći ćemo",
+     "Pomoćemo",
+     "Pomoćit ćemo"
+    ],
+    "answer": 1,
+    "explanation": "Verbs in -ći like 'pomoći' do not drop any letters when placed before the future auxiliary."
+   },
+   {
+    "question": "They will live in Zagreb: 'Oni ___ u Zagrebu.'",
+    "options": [
+     "živit će",
+     "će živjeti",
+     "će živjet",
+     "živitće"
+    ],
+    "answer": 1,
+    "explanation": "When the pronoun/subject precedes the auxiliary, the full infinitive is used: 'će živjeti'."
+   },
+   {
+    "question": "Will you write the email?: '___ taj važan mail?'",
+    "options": [
+     "Napisatćeš li",
+     "Napisat li ćeš",
+     "Hoćeš pisat",
+     "Hoćeš li napisati"
+    ],
+    "answer": 3,
+    "explanation": "For questions beginning with the verb, use full auxiliary 'hoćeš' + 'li' + full infinitive 'napisati'."
+   }
+  ],
+  "tip": "Remember: -ti loses its 'i' (čitat ću), but -ći keeps its identity (reći ću). Always keep a space between the words in Croatian standard orthography!"
+ },
+ {
+  "id": "hr-b1-paucal-counting-rules",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#2563EB",
+  "emoji": "🔢",
+  "title": "The Paucal Construction (Numbers 2, 3, 4 vs. 5+)",
+  "subtitle": "Distinguishing paucal genitive singular shapes from plural genitives",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Numbers 2, 3, 4 govern the paucal form (identical to the genitive singular in nouns, -a for masculine/neuter adjectives), whereas 5 and above govern the genitive plural.",
+  "structure": {
+   "headers": [
+    "Numeral Category",
+    "Governed Case/Form",
+    "Masculine Example",
+    "Feminine Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Number 1",
+      "Nominative singular",
+      "jedan dobar student",
+      "jedna dobra knjiga"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Numbers 2, 3, 4 (Paucal)",
+      "Paucal (Gen. Sg. shape)",
+      "dva dobra studenta",
+      "tri dobre knjige"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Numbers 5+ (Plural)",
+      "Genitive plural",
+      "pet dobrih studenata",
+      "pet dobrih knjiga"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Compound 21 vs 22",
+      "1-rule vs Paucal",
+      "dvadeset jedan student",
+      "dvadeset dva studenta"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Paucal Masculine Noun",
+    "example": "U sobi stoje tri nova stola.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Paucal Feminine Noun",
+    "example": "Kupio sam četiri svježe jabuke.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Higher Count (5+) Genitive Plural",
+    "example": "Na stolu leži pet novih olovaka.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Imam dva brata i jednu sestru.",
+    "ko": "",
+    "highlight": "dva brata"
+   },
+   {
+    "en": "Vidim tri stara grada u daljini.",
+    "ko": "",
+    "highlight": "tri stara grada"
+   },
+   {
+    "en": "Kupili smo četiri velike sofe za ured.",
+    "ko": "",
+    "highlight": "četiri velike sofe"
+   },
+   {
+    "en": "U razredu sjedi pet marljivih učenika.",
+    "ko": "",
+    "highlight": "pet marljivih učenika"
+   },
+   {
+    "en": "Čekali smo dvadeset četiri sata na odgovor.",
+    "ko": "",
+    "highlight": "dvadeset četiri sata"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Imam tri brati.",
+    "right": "Imam tri brata.",
+    "note": "Numbers 2, 3, 4 do not take nominative plural; masculine nouns take the paucal ending -a."
+   },
+   {
+    "wrong": "U sobi je pet učenika stigli.",
+    "right": "U sobu je stiglo pet učenika.",
+    "note": "Quantified subjects with 5+ trigger neuter singular agreement on the predicate verb."
+   },
+   {
+    "wrong": "Kupio sam pet jabuke.",
+    "right": "Kupio sam pet jabuka.",
+    "note": "5 and above govern the genitive plural (jabuka), not the paucal/genitive singular (jabuke)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Two new professors arrived: 'Na fakultet su došla dva ___.'",
+    "options": [
+     "novi profesori",
+     "nova profesora",
+     "novih profesora",
+     "nove profesore"
+    ],
+    "answer": 1,
+    "explanation": "Masculine adjectives take -a and nouns take the paucal ending -a after 2, 3, 4."
+   },
+   {
+    "question": "She bought four books yesterday: 'Jučer je kupila četiri ___.'",
+    "options": [
+     "knjiga",
+     "knjige",
+     "knjigama",
+     "knjigu"
+    ],
+    "answer": 1,
+    "explanation": "Feminine nouns ending in -a adopt their paucal form in -e after the numerals 2, 3, 4."
+   },
+   {
+    "question": "There are six tall trees in the garden: 'U vrtu raste šest ___.'",
+    "options": [
+     "visoka stabla",
+     "visokih stabala",
+     "visoke stabla",
+     "visokim stablima"
+    ],
+    "answer": 1,
+    "explanation": "Five and higher numbers require the genitive plural for both adjectives and nouns."
+   },
+   {
+    "question": "Twenty-three cars were sold: 'Prodana su dvadeset tri ___.'",
+    "options": [
+     "automobila",
+     "automobil",
+     "automobilaa",
+     "automobile"
+    ],
+    "answer": 0,
+    "explanation": "Compound numbers ending in 2, 3, or 4 govern the paucal form just like bare 2, 3, 4."
+   }
+  ],
+  "tip": "Check only the LAST word in a compound number: 31 follows the 1-rule, 32-34 take the paucal (Gen. Sg.), and 35-40 take the genitive plural."
+ },
+ {
+  "id": "hr-b1-fleeting-a-and-sound-changes",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#2563EB",
+  "emoji": "🔄",
+  "title": "Morphophonemic Changes: Fleeting 'a', Sibilarizacija, and Palatalizacija",
+  "subtitle": "Predict vowel loss and consonant mutations across declension paradigms",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "The fleeting 'a' (nepostojano a) surfaces only in specific forms like the nominative singular and genitive plural, while velars (k, g, h) mutate into dental affricates/fricatives (c, z, s) before 'i' or into prepalatals (č, ž, š) before 'e'.",
+  "structure": {
+   "headers": [
+    "Process",
+    "Base Form",
+    "Shifted Form",
+    "Environment"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Fleeting 'a'",
+      "momak (Nom. Sg.)",
+      "momka (Gen. Sg.)",
+      "Vowel vanishes when suffixes are attached"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Genitive Plural 'a'",
+      "djevojka (Nom. Sg.)",
+      "djevojaka (Gen. Pl.)",
+      "Vowel re-emerges to break consonant cluster"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Sibilarizacija (k/g/h → c/z/s)",
+      "ruka (Nom. Sg.)",
+      "ruci (Dat./Loc. Sg.)",
+      "Occurs before front vowel -i"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Palatalizacija (k/g/h → č/ž/š)",
+      "putnik (Nom. Sg.)",
+      "putniče! (Voc. Sg.)",
+      "Occurs before vocative ending -e"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Fleeting 'a' in Declension",
+    "example": "Vidio sam jednog visokog momka.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Sibilarizacija in Dative/Locative",
+    "example": "U ovoj knjizi ima mnogo slika.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Palatalizacija in Vocative",
+    "example": "Oprosti mi, dragi prijatelju vuče!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Upoznao sam jednog mladog psa.",
+    "ko": "",
+    "highlight": "psa"
+   },
+   {
+    "en": "Daj mi ključ u mojoj ruci.",
+    "ko": "",
+    "highlight": "ruci"
+   },
+   {
+    "en": "Stigli su mnogi hrabri vojnici.",
+    "ko": "",
+    "highlight": "vojnici"
+   },
+   {
+    "en": "Pomogao sam jednoj staroj majci.",
+    "ko": "",
+    "highlight": "majci"
+   },
+   {
+    "en": "U izlogu je pet lijepih pisama.",
+    "ko": "",
+    "highlight": "pisama"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Gledam jednog momaka.",
+    "right": "Gledam jednog momka.",
+    "note": "The fleeting 'a' must disappear in the genitive/accusative singular form of 'momak'."
+   },
+   {
+    "wrong": "Dao sam poklon ruki.",
+    "right": "Dao sam poklon ruci.",
+    "note": "Before the dative singular ending -i, velar 'k' shifts to 'c' via sibilarizacija."
+   },
+   {
+    "wrong": "Čitao sam o Amerike.",
+    "right": "Čitao sam o Americi.",
+    "note": "Geographic feminine nouns in -ka undergo sibilarizacija to -ci in the locative singular."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I don't have a dog: 'Nemam nijednog ___.'",
+    "options": [
+     "pasa",
+     "psa",
+     "pasaa",
+     "pse"
+    ],
+    "answer": 1,
+    "explanation": "The noun 'pas' has a fleeting 'a' in Nom. Sg. that drops in Gen. Sg. yielding 'psa'."
+   },
+   {
+    "question": "He found the ticket in his pocket: 'Karta je bila u ___.'",
+    "options": [
+     "džepu",
+     "džepka",
+     "džepki",
+     "džepce"
+    ],
+    "answer": 0,
+    "explanation": "'Džep' has standard locative 'džepu' without mutation because the stem ends in dental/labial, not velar."
+   },
+   {
+    "question": "The dative singular of 'knjiga' (book) is: 'Pronašao sam grešku u toj ___.'",
+    "options": [
+     "knjigi",
+     "knjizi",
+     "knjiže",
+     "knjige"
+    ],
+    "answer": 1,
+    "explanation": "The velar 'g' mutates to 'z' before the dative/locative singular suffix -i (sibilarizacija)."
+   },
+   {
+    "question": "Vocative singular of 'čovjek' (man/person) is: 'Hej, ___!'",
+    "options": [
+     "čovječe",
+     "čovjeke",
+     "čovjeci",
+     "čovjecu"
+    ],
+    "answer": 0,
+    "explanation": "Before the vocative suffix -e, the velar 'k' transforms into 'č' via palatalizacija."
+   }
+  ],
+  "tip": "To spot a fleeting 'a', check the Genitive Singular: if the vowel drops (pas -> psa, pasac -> psca), it is fleeting and will vanish across almost all other cases!"
+ },
+ {
+  "id": "hr-b1-reflexive-verbs-and-se-particle",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🪞",
+  "title": "Functions of the Particle 'se' (True Reflexive, Reciprocal, Medial)",
+  "subtitle": "Distinguish between direct reflexive, mutual action, and middle voice verbs",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "The enclitic 'se' serves distinct grammatical roles: a true reflexive replacing accusative 'sebe', a reciprocal marker indicating mutual action, an inherent part of reflexive-only verbs, or an impersonal/middle-voice marker.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Role of 'se'",
+    "Croatian Example",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "True Reflexive",
+      "Self-directed (replacable by sebe)",
+      "Ivan se pere",
+      "Ivan washes himself"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Reciprocal",
+      "Mutual interaction (jedan drugoga)",
+      "Ana i Marko se gledaju",
+      "Ana and Marko look at each other"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reflexivum Tantum",
+      "Lexicalized / Inherent (no non-se form)",
+      "On se boji mraka",
+      "He fears the dark"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Medial / Decausative",
+      "Spontaneous event / no external agent",
+      "Vrata se otvaraju",
+      "The door opens"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "True Reflexive Action",
+    "example": "Dječak se briše ručnikom.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Reciprocal Interaction",
+    "example": "Prijatelji se grle na kolodvoru.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Inherent Reflexive (Tantum)",
+    "example": "Bolesnik se nada brzom oporavku.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Svako jutro se brijem prije posla.",
+    "ko": "",
+    "highlight": "se brijem"
+   },
+   {
+    "en": "Oni se često svađaju oko novca.",
+    "ko": "",
+    "highlight": "se često svađaju"
+   },
+   {
+    "en": "Svi se smiju njegovim šalama.",
+    "ko": "",
+    "highlight": "se smiju"
+   },
+   {
+    "en": "Prozor se razbio zbog jakog vjetra.",
+    "ko": "",
+    "highlight": "se razbio"
+   },
+   {
+    "en": "Ovdje se dobro jede i pije.",
+    "ko": "",
+    "highlight": "se dobro jede"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "On boji psa.",
+    "right": "On se boji psa.",
+    "note": "'Bojati se' is a reflexivum tantum; it cannot exist without 'se' when meaning 'to fear'."
+   },
+   {
+    "wrong": "Ja perem se svako jutro.",
+    "right": "Ja se perem svako jutro.",
+    "note": "The reflexive particle 'se' is an enclitic and must take the 2nd syntactic position in the clause."
+   },
+   {
+    "wrong": "Ana i Luka ljube sebe.",
+    "right": "Ana i Luka se ljube.",
+    "note": "'Sebe' implies each kisses themselves; use reciprocal 'se' to express kissing each other."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which sentence demonstrates a RECIPROCAL use of 'se'?: '___'",
+    "options": [
+     "Dijete se kupa u kadi.",
+     "Vrata se zatvaraju polako.",
+     "Maja i Petar se vole već godinama.",
+     "Student se boji teškog ispita."
+    ],
+    "answer": 2,
+    "explanation": "'Maja i Petar se vole' expresses mutual action directed toward one another (each other)."
+   },
+   {
+    "question": "Identify the inherent reflexive verb (reflexivum tantum): '___'",
+    "options": [
+     "prati se",
+     "smijati se",
+     "vidjeti se",
+     "oblačiti se"
+    ],
+    "answer": 1,
+    "explanation": "'Smijati se' (to laugh) has no non-reflexive counterpart *smijati; 'se' is fundamentally built-in."
+   },
+   {
+    "question": "How do you say 'The museum opens at 9 AM'?: 'Muzej ___ u devet sati.'",
+    "options": [
+     "otvara",
+     "otvara se",
+     "sebe otvara",
+     "otvarati"
+    ],
+    "answer": 1,
+    "explanation": "Inanimate subjects undergoing non-agentive middle events require decausative 'se' ('otvara se')."
+   },
+   {
+    "question": "He shaved himself before the mirror: 'On ___ pred ogledalom.'",
+    "options": [
+     "obrijao",
+     "je obrijao",
+     "se obrijao",
+     "sebe je"
+    ],
+    "answer": 2,
+    "explanation": "Past tense requires the reflexive particle 'se' with the truncated participle: 'On se obrijao'."
+   }
+  ],
+  "tip": "Test whether 'se' is true reflexive by replacing it with full 'sebe': 'Brijem se' = 'Brijem sebe' (valid = true reflexive). If it cannot be replaced ('Bojim se' ≠ *'Bojim sebe'), it is inherent!"
+ },
+ {
+  "id": "hr-a1-present-tense-conjugations",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#2563EB",
+  "emoji": "⏱️",
+  "title": "Present Tense Conjugation Classes (-am, -im, -em)",
+  "subtitle": "Mastering Croatian regular present tense endings across the three core verb groups",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Croatian regular verbs belong to one of three main conjugation classes identified by the first-person singular vowel: -am, -im, or -em.",
+  "structure": {
+   "headers": [
+    "Conjugation Class",
+    "Infinitive",
+    "1st Person (ja)",
+    "3rd Person Plural (oni)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-am Class",
+      "gledati",
+      "gledam",
+      "gledaju"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-im Class",
+      "govoriti",
+      "govorim",
+      "govore"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-em Class",
+      "pisati",
+      "pišem",
+      "pišu"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Habitual Actions",
+    "example": "Svako jutro pijem crnu kavu.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Current States",
+    "example": "Sada živimo u Zagrebu.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Immediate Future",
+    "example": "Sutra putujem na more.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ja čitam zanimljivu knjigu svaki dan.",
+    "ko": "",
+    "highlight": "čitam"
+   },
+   {
+    "en": "Oni govore hrvatski jezik vrlo dobro.",
+    "ko": "",
+    "highlight": "govore"
+   },
+   {
+    "en": "Mi radimo u modernom uredu u centru.",
+    "ko": "",
+    "highlight": "radimo"
+   },
+   {
+    "en": "Ti pišeš dugu poruku prijatelju.",
+    "ko": "",
+    "highlight": "pišeš"
+   },
+   {
+    "en": "Djeca piju hladno mlijeko za doručak.",
+    "ko": "",
+    "highlight": "piju"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Oni govoru brzo.",
+    "right": "Oni govore brzo.",
+    "note": "Verbs in the -im class take -e (not -u) in the 3rd person plural (oni)."
+   },
+   {
+    "wrong": "Ja gledim televiziju.",
+    "right": "Ja gledam televiziju.",
+    "note": "'Gledati' belongs to the -am class, so the 1st person singular takes -am."
+   },
+   {
+    "wrong": "Oni gledidu film.",
+    "right": "Oni gledaju film.",
+    "note": "Standard Croatian uses -aju for 3rd person plural of -am verbs, never dialectal -idu."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which form completes the sentence: 'Mi ___ u Splitu.' (živjeti - we live)?",
+    "options": [
+     "živim",
+     "živiš",
+     "živimo",
+     "žive"
+    ],
+    "answer": 2,
+    "explanation": "The 1st person plural ('mi') ending for the -im class is -imo."
+   },
+   {
+    "question": "Which form completes the sentence: 'Oni ___ ručak u podne.' (jesti - they eat)?",
+    "options": [
+     "jedu",
+     "jede",
+     "jedemo",
+     "jedem"
+    ],
+    "answer": 0,
+    "explanation": "Verbs of the -em class take -u in the 3rd person plural ('oni jedu')."
+   },
+   {
+    "question": "Which form completes the sentence: 'Ti ___ engleski jezik.' (učiti - you study)?",
+    "options": [
+     "učim",
+     "uči",
+     "učite",
+     "učiš"
+    ],
+    "answer": 3,
+    "explanation": "The 2nd person singular ('ti') ending for -im class verbs is -iš."
+   },
+   {
+    "question": "Which form completes the sentence: 'Ana ___ novu pjesmu.' (slušati - she listens)?",
+    "options": [
+     "slušam",
+     "sluša",
+     "slušaju",
+     "slušate"
+    ],
+    "answer": 1,
+    "explanation": "The 3rd person singular ('ona') ending for -am class verbs is -a without -m."
+   }
+  ],
+  "tip": "To easily distinguish -am and -im verbs in the 3rd person plural, remember: -am verbs end in -aju, while -im verbs end in -e!"
+ },
+ {
+  "id": "hr-a1-biti-and-clitic-placement",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#7C3AED",
+  "emoji": "🧩",
+  "title": "The Auxiliary Verb 'Biti' and Enclitic Positioning",
+  "subtitle": "Mastering the short forms of 'biti' and strict second-position clitic placement",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Short (unstressed) forms of 'biti' are enclitics that can never start a sentence and must occupy the clause's second grammatical position.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Short Form (Enclitic)",
+    "Full Form (Stressed)",
+    "Negative Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ja (I)",
+      "sam",
+      "jesam",
+      "nisam"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "on / ona / ono (he/she/it)",
+      "je",
+      "jest",
+      "nije"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "mi (we)",
+      "smo",
+      "jesmo",
+      "nismo"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "oni / one / ona (they)",
+      "su",
+      "jesu",
+      "nisu"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Identity & Origin",
+    "example": "Marko je student iz Osijeka.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Emphasis or Starting Sentences",
+    "example": "Jesam li u pravu?",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Negation",
+    "example": "Danas nismo umorni.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Zagreb je glavni grad Hrvatske.",
+    "ko": "",
+    "highlight": "je"
+   },
+   {
+    "en": "Mi smo jako sretni ovdje.",
+    "ko": "",
+    "highlight": "smo"
+   },
+   {
+    "en": "Dobar dan, ja sam Luka.",
+    "ko": "",
+    "highlight": "sam"
+   },
+   {
+    "en": "Oni nisu kod kuće danas.",
+    "ko": "",
+    "highlight": "nisu"
+   },
+   {
+    "en": "Jeste li vi profesori?",
+    "ko": "",
+    "highlight": "Jeste li"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Je lijep dan.",
+    "right": "Lijep je dan.",
+    "note": "Unstressed enclitics like 'je' cannot stand first; place an accented word before them."
+   },
+   {
+    "wrong": "Ja ne sam gladan.",
+    "right": "Ja nisam gladan.",
+    "note": "Negation fuses directly with 'biti' into special forms (nisam, nisi, nije...)."
+   },
+   {
+    "wrong": "Ona je ne liječnica.",
+    "right": "Ona nije liječnica.",
+    "note": "Use 'nije' for negated 3rd person singular, never separate particle 'ne' with short 'je'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which sentence follows correct clitic word order for 'Petar is a professor'?",
+    "options": [
+     "Je Petar profesor.",
+     "Petar je profesor.",
+     "Petar profesor je.",
+     "Je li Petar profesor je."
+    ],
+    "answer": 1,
+    "explanation": "The enclitic 'je' must come in the second slot, directly after the first element 'Petar'."
+   },
+   {
+    "question": "Complete the negative sentence: 'Mi ___ iz Splita.' (We are not)",
+    "options": [
+     "ne smo",
+     "jesmo",
+     "smo ne",
+     "nismo"
+    ],
+    "answer": 3,
+    "explanation": "The negative form of 'biti' for 'mi' is the fused form 'nismo'."
+   },
+   {
+    "question": "Complete the question: '___ li ti student?' (Are you a student?)",
+    "options": [
+     "Jesi",
+     "Si",
+     "Nisi",
+     "Jesam"
+    ],
+    "answer": 0,
+    "explanation": "Questions starting with the verb before 'li' must use the stressed full form ('Jesi li...')."
+   },
+   {
+    "question": "Complete the sentence: 'Oni ___ veseli.' (They are cheerful)",
+    "options": [
+     "sam",
+     "su",
+     "smo",
+     "si"
+    ],
+    "answer": 1,
+    "explanation": "The 3rd person plural unstressed enclitic for 'oni' is 'su'."
+   }
+  ],
+  "tip": "Wackernagel's law rule of thumb: Count the first rhythmic unit of the clause (e.g. 'Danas', 'Ivan i Petar'), and drop your short clitic right after it!"
+ },
+ {
+  "id": "hr-a1-accusative-case-inanimate-vs-animate",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🎯",
+  "title": "Accusative Case and Animacy Distinction",
+  "subtitle": "Distinguishing inanimate vs. animate masculine direct objects in Croatian",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "In the masculine accusative singular, animate nouns (people and animals) end in -a like the genitive, while inanimate nouns (objects and concepts) remain identical to the nominative.",
+  "structure": {
+   "headers": [
+    "Noun Category",
+    "Nominative (Subject)",
+    "Accusative (Direct Object)",
+    "Rule Pattern"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Inanimate",
+      "stol (table)",
+      "Vidim stol.",
+      "Accusative = Nominative"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masculine Animate",
+      "student (student)",
+      "Vidim studenta.",
+      "Accusative = Genitive (-a)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine (-a stems)",
+      "žena (woman)",
+      "Vidim ženu.",
+      "Always -u"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter",
+      "selo (village)",
+      "Vidim selo.",
+      "Accusative = Nominative"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Inanimate Masculine Object",
+    "example": "Kupujem novi auto danas.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Animate Masculine Object",
+    "example": "Poznajem ovog liječnika.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Animals as Direct Objects",
+    "example": "Čuvam malog psa u stanu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Čekam prijatelja ispred kina.",
+    "ko": "",
+    "highlight": "prijatelja"
+   },
+   {
+    "en": "Gledam dobar film večeras.",
+    "ko": "",
+    "highlight": "film"
+   },
+   {
+    "en": "Ivan ima novog psa.",
+    "ko": "",
+    "highlight": "psa"
+   },
+   {
+    "en": "Vozim stari bicikl u park.",
+    "ko": "",
+    "highlight": "bicikl"
+   },
+   {
+    "en": "Pozdravljam profesora na hodniku.",
+    "ko": "",
+    "highlight": "profesora"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Vidim moj brat.",
+    "right": "Vidim moga brata.",
+    "note": "Animate masculine nouns ('brat') must take the genitive ending -a in the accusative."
+   },
+   {
+    "wrong": "Kupujem novoga stola.",
+    "right": "Kupujem novi stol.",
+    "note": "Inanimate masculine objects ('stol') do NOT take -a in the accusative; they match the nominative."
+   },
+   {
+    "wrong": "Imam crnog mačka.",
+    "right": "Imam crnog mačka.",
+    "note": "While 'mačak' drops fleeting 'a' (mačka), treating it as inanimate without -a ('imam mačak') is wrong."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which form correctly completes: 'Vidim ___ na ulici.' (muškarac - a man)?",
+    "options": [
+     "muškarac",
+     "muškarca",
+     "muškarcu",
+     "muškarcem"
+    ],
+    "answer": 1,
+    "explanation": "'Muškarac' is an animate masculine noun, so its accusative singular ends in -a ('muškarca')."
+   },
+   {
+    "question": "Which form correctly completes: 'Kupujem novi ___.' (računalo / kompjuter - computer)?",
+    "options": [
+     "kompjutera",
+     "kompjuteru",
+     "kompjuter",
+     "kompjuterom"
+    ],
+    "answer": 2,
+    "explanation": "'Kompjuter' is inanimate masculine, so its accusative is identical to the nominative ('kompjuter')."
+   },
+   {
+    "question": "Which form correctly completes: 'Imamo bijelog ___.' (pas - dog)?",
+    "options": [
+     "psa",
+     "pas",
+     "psu",
+     "psom"
+    ],
+    "answer": 0,
+    "explanation": "Animals are animate; 'pas' loses fleeting 'a' and adds -a in the accusative: 'psa'."
+   },
+   {
+    "question": "Which form correctly completes: 'Čitam kratki ___.' (tekst - text)?",
+    "options": [
+     "teksta",
+     "tekstu",
+     "tekstom",
+     "tekst"
+    ],
+    "answer": 3,
+    "explanation": "Because 'tekst' is inanimate, the accusative singular matches the nominative ('tekst')."
+   }
+  ],
+  "tip": "Ask yourself: Does it breathe or walk? If yes and it's a masculine noun, add -a in the accusative singular!"
+ },
+ {
+  "id": "hr-a1-locative-case-with-prepositions",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "📍",
+  "title": "Locative Case with 'u', 'na', and 'o'",
+  "subtitle": "Expressing stationary location and topics using the Croatian locative case",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "The locative case is strictly prepositional in Croatian, used with 'u' (in/inside), 'na' (on/at), and 'o' (about) to denote static place or topic.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Nominative Base",
+    "Locative Singular",
+    "Locative Ending"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine",
+      "Zagreb / stol",
+      "u Zagrebu / na stolu",
+      "-u"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter",
+      "more / selo",
+      "na moru / u selu",
+      "-u"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine (-a)",
+      "škola / soba",
+      "u školi / u sobi",
+      "-i"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Inside an Enclosed Space (u)",
+    "example": "Djeca se igraju u sobi.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "On an Open Surface / Event (na)",
+    "example": "Knjiga leži na stolu.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Topic of Thought / Speech (o)",
+    "example": "Često razgovaramo o poslu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Radim u novom uredu u centru grada.",
+    "ko": "",
+    "highlight": "uredu"
+   },
+   {
+    "en": "Tanjur stoji na velikom stolu.",
+    "ko": "",
+    "highlight": "stolu"
+   },
+   {
+    "en": "Sestra živi u lijepoj kući.",
+    "ko": "",
+    "highlight": "kući"
+   },
+   {
+    "en": "Oni sanjaju o dugom odmoru.",
+    "ko": "",
+    "highlight": "odmoru"
+   },
+   {
+    "en": "Ljetujemo na sunčanom otoku.",
+    "ko": "",
+    "highlight": "otoku"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Živim u Zagreb.",
+    "right": "Živim u Zagrebu.",
+    "note": "Static location with 'u' requires the locative ending (-u for masculine cities)."
+   },
+   {
+    "wrong": "Razgovaramo o Ivan.",
+    "right": "Razgovaramo o Ivanu.",
+    "note": "The preposition 'o' (about) always demands the locative case."
+   },
+   {
+    "wrong": "Kava je na stola.",
+    "right": "Kava je na stolu.",
+    "note": "Masculine locative singular takes -u, not the genitive -a."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which form correctly completes: 'Mi živimo u ___.' (Hrvatska - Croatia)?",
+    "options": [
+     "Hrvatsku",
+     "Hrvatska",
+     "Hrvatskoj",
+     "Hrvatskom"
+    ],
+    "answer": 2,
+    "explanation": "Feminine country names ending in -ska take the adjective-like locative ending -oj ('u Hrvatskoj')."
+   },
+   {
+    "question": "Which form correctly completes: 'Ručak je na ___.' (stol - table)?",
+    "options": [
+     "stola",
+     "stolu",
+     "stolom",
+     "stol"
+    ],
+    "answer": 1,
+    "explanation": "Masculine inanimate nouns take -u in the locative singular ('na stolu')."
+   },
+   {
+    "question": "Which form correctly completes: 'Studenti sjede u ___.' (učionica - classroom)?",
+    "options": [
+     "učionici",
+     "učionicu",
+     "učionice",
+     "učionicom"
+    ],
+    "answer": 0,
+    "explanation": "Feminine nouns ending in -a take -i in the locative singular (with sibilarization c -> c: 'učionici')."
+   },
+   {
+    "question": "Which form correctly completes: 'Razmišljam o novom ___.' (posao - job)?",
+    "options": [
+     "poslom",
+     "posla",
+     "poslu",
+     "posao"
+    ],
+    "answer": 2,
+    "explanation": "'Posao' (stem posl-) takes -u in the locative singular: 'o novom poslu'."
+   }
+  ],
+  "tip": "Remember: The locative NEVER appears alone in Croatian—it is the only case that ALWAYS requires a preposition (u, na, o, po, pri)!"
+ },
+ {
+  "id": "hr-b1-relative-pronoun-koji-declension",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔗",
+  "title": "Declension and Agreement of the Relative Pronoun 'Koji'",
+  "subtitle": "Navigating antecedent gender/number agreement and clause-internal case assignment",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "The relative pronoun 'koji' receives its gender and number from its antecedent in the main clause, but its grammatical case is determined solely by its role inside the relative clause.",
+  "structure": {
+   "headers": [
+    "Case & Role",
+    "Masculine Singular",
+    "Feminine Singular",
+    "Neuter Singular"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Nominative (Subject)",
+      "koji",
+      "koja",
+      "koje"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Accusative Inan. / Anim.",
+      "koji / kojeg(a)",
+      "koju",
+      "koje"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Genitive",
+      "kojeg(a)",
+      "koje",
+      "kojeg(a)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Dative / Locative",
+      "kojem(u)",
+      "kojoj",
+      "kojem(u)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Subject of Relative Clause",
+    "example": "Upoznao sam čovjeka koji govori pet jezika.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Animate Direct Object",
+    "example": "To je pisac kojeg svi poštuju.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Prepositional Complement",
+    "example": "Grad u kojem živim ima predivan park.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kupio sam stan koji ima veliki balkon.",
+    "ko": "",
+    "highlight": "koji"
+   },
+   {
+    "en": "Djevojka koju si vidio moja je sestra.",
+    "ko": "",
+    "highlight": "koju"
+   },
+   {
+    "en": "Ovo je restoran u kojem često ručamo.",
+    "ko": "",
+    "highlight": "kojem"
+   },
+   {
+    "en": "Profesor o kojemu govorimo dolazi sutra.",
+    "ko": "",
+    "highlight": "kojemu"
+   },
+   {
+    "en": "Pozvali smo prijatelje s kojima radimo.",
+    "ko": "",
+    "highlight": "kojima"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "To je čovjek koji sam vidio jučer.",
+    "right": "To je čovjek kojeg sam vidio jučer.",
+    "note": "Because 'čovjek' is the direct object of 'vidjeti' inside the subclause, it must take animate accusative 'kojeg', not nominative 'koji'."
+   },
+   {
+    "wrong": "Kuća u koji živim je stara.",
+    "right": "Kuća u kojoj živim je stara.",
+    "note": "'Kuća' is feminine; the locative after preposition 'u' must be feminine singular 'kojoj'."
+   },
+   {
+    "wrong": "Automobil kojega sam kupio je brz.",
+    "right": "Automobil koji sam kupio je brz.",
+    "note": "For inanimate masculine antecedents ('automobil'), the accusative must be 'koji', not animate 'kojega'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct form: 'Knjiga ___ čitam vrlo je poučna.' (The book that I am reading...)",
+    "options": [
+     "koja",
+     "koju",
+     "kojoj",
+     "koje"
+    ],
+    "answer": 1,
+    "explanation": "'Knjiga' is feminine singular, and it serves as the direct object of 'čitam', requiring the feminine accusative singular 'koju'."
+   },
+   {
+    "question": "Select the correct form: 'Prijatelj o ___ pričamo uskoro stiže.' (The friend about whom we talk...)",
+    "options": [
+     "koji",
+     "koga",
+     "kojemu",
+     "kojim"
+    ],
+    "answer": 2,
+    "explanation": "Preposition 'o' demands the locative case; masculine singular locative is 'kojem' or 'kojemu'."
+   },
+   {
+    "question": "Select the correct form: 'Grad ___ posjećujemo ima bogatu povijest.' (The city that we visit...)",
+    "options": [
+     "koji",
+     "kojeg",
+     "kojem",
+     "kojima"
+    ],
+    "answer": 0,
+    "explanation": "'Grad' is masculine inanimate; its accusative direct object form matches the nominative 'koji'."
+   },
+   {
+    "question": "Select the correct form: 'To su studenti s ___ učim za ispit.' (Those are the students with whom...)",
+    "options": [
+     "koje",
+     "kojih",
+     "koji",
+     "kojima"
+    ],
+    "answer": 3,
+    "explanation": "Preposition 's' (with) takes the instrumental case; plural instrumental for all genders is 'kojima'."
+   }
+  ],
+  "tip": "Two-step trick: First look backward at the noun to determine gender and number (e.g. feminine singular). Then look forward at the verb in the clause to choose the case!"
+ }
+]

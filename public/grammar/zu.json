@@ -1,0 +1,3359 @@
+[
+ {
+  "id": "zu-a1-noun-classes-and-prefixes",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🏷️",
+  "title": "Noun Classes and Class Prefixes",
+  "subtitle": "Understanding Zulu noun class prefixes and their initial vowels",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Every Zulu noun begins with a class prefix consisting of a pre-prefix initial vowel and a basic noun prefix that governs all grammatical agreement.",
+  "structure": {
+   "headers": [
+    "Noun Class",
+    "Prefix",
+    "Example Noun",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Class 1/2 (People)",
+      "umu- / aba-",
+      "umuntu / abantu",
+      "person / people"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Class 3/4 (Trees/Objects)",
+      "umu- / imi-",
+      "umuthi / imithi",
+      "tree / trees"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 5/6 (Pairs/General)",
+      "i(li)- / ama-",
+      "itshe / amatshe",
+      "stone / stones"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 7/8 (Things/Languages)",
+      "isi- / izi-",
+      "isihlalo / izihlalo",
+      "chair / chairs"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 9/10 (Animals/Common)",
+      "in- / izin-",
+      "inja / izinja",
+      "dog / dogs"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Human Referents (Classes 1 and 2)",
+    "example": "Abantwana bayafunda esikoleni.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Things and Cultural Items (Classes 7 and 8)",
+    "example": "Isitsha sihlanzekile ekhishini.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Animals and Daily Objects (Classes 9 and 10)",
+    "example": "Inja ilele endlini.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Umfundi ufunda incwadi.",
+    "ko": "",
+    "highlight": "Umfundi"
+   },
+   {
+    "en": "Abazali basebenza kakhulu.",
+    "ko": "",
+    "highlight": "Abazali"
+   },
+   {
+    "en": "Isinkwa simnandi kakhulu.",
+    "ko": "",
+    "highlight": "Isinkwa"
+   },
+   {
+    "en": "Amadoda ahamba edolobheni.",
+    "ko": "",
+    "highlight": "Amadoda"
+   },
+   {
+    "en": "Izinja zikhonkotha ebusuku.",
+    "ko": "",
+    "highlight": "Izinja"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Muntu uhamba manje.",
+    "right": "Umuntu uhamba manje.",
+    "note": "Dropping the initial vowel (u-) in normal statements is ungrammatical; Zulu nouns require the full prefix."
+   },
+   {
+    "wrong": "Abafana udlala ibhola.",
+    "right": "Abafana badlala ibhola.",
+    "note": "The plural noun abafana (Class 2) requires the plural subject concord ba-, not the singular u-."
+   },
+   {
+    "wrong": "Isona sidla inyama.",
+    "right": "Inja idla inyama.",
+    "note": "Do not swap root noun stems with incorrect class prefixes when referencing animals."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the correct plural form of 'umfana' (boy)?",
+    "options": [
+     "izifana",
+     "abafana",
+     "imifana",
+     "amafana"
+    ],
+    "answer": 1,
+    "explanation": "Class 1 nouns with the singular prefix um(u)- take aba- in Class 2 plural."
+   },
+   {
+    "question": "Identify the singular form of 'izitsha' (dishes/plates).",
+    "options": [
+     "ulitsha",
+     "isitsha",
+     "umtsha",
+     "intsha"
+    ],
+    "answer": 1,
+    "explanation": "Class 8 plural izi- pairs with Class 7 singular isi-, making 'isitsha'."
+   },
+   {
+    "question": "Which prefix corresponds to Class 6 plural nouns like 'amadoda' (men)?",
+    "options": [
+     "ama-",
+     "aba-",
+     "imi-",
+     "izi-"
+    ],
+    "answer": 0,
+    "explanation": "Class 6 plural nouns take the prefix ama-."
+   },
+   {
+    "question": "Which noun belongs to Class 9?",
+    "options": [
+     "umfundi",
+     "isihlalo",
+     "ikati",
+     "imbuzi"
+    ],
+    "answer": 3,
+    "explanation": "Imbuzi (goat) starts with the Class 9 prefix im-/in-."
+   }
+  ],
+  "tip": "Always learn a Zulu noun with its starting initial vowel intact because dropping it triggers specific grammatical meanings like negation or vocatives."
+ },
+ {
+  "id": "zu-a1-subject-concord-agreement",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔗",
+  "title": "Subject Concords (Izivumelwano zikamenzi)",
+  "subtitle": "Connecting the subject noun to its verb via prefix agreements",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "In Zulu, every verb stem must agree with its subject noun by attaching that noun class's designated subject concord prefix.",
+  "structure": {
+   "headers": [
+    "Noun Class",
+    "Subject Concord",
+    "Sample Verb",
+    "Full Sentence"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Person Singular (Mina)",
+      "ngi-",
+      "-thanda",
+      "Ngithemba wena"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd Person Singular (Wena)",
+      "u-",
+      "-bona",
+      "Ubona imoto"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 1 (Umuntu)",
+      "u-",
+      "-hamba",
+      "Umuntu uhamba kakhulu"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Class 2 (Abantu)",
+      "ba-",
+      "-cula",
+      "Abantu bacula kahle"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 7 (Isitsha)",
+      "si-",
+      "-wa",
+      "Isitsha siwa phansi"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "First Person Statements",
+    "example": "Ngisebenza edolobheni namhlanje.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Class 1 Singular Agreement",
+    "example": "Uthisha ubhala ebhodini.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Class 2 Plural Agreement",
+    "example": "Abafundi bafunda izincwadi.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ngithanda ukufunda isiZulu.",
+    "ko": "",
+    "highlight": "Ngi"
+   },
+   {
+    "en": "Umama upheka ukudla.",
+    "ko": "",
+    "highlight": "u"
+   },
+   {
+    "en": "Abantwana badlala phandle.",
+    "ko": "",
+    "highlight": "ba"
+   },
+   {
+    "en": "Ikati liphuza ubisi.",
+    "ko": "",
+    "highlight": "li"
+   },
+   {
+    "en": "Inja ilala emnyango.",
+    "ko": "",
+    "highlight": "i"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Umfundi ngifunda incwadi.",
+    "right": "Umfundi ufunda incwadi.",
+    "note": "Class 1 subjects require the 3rd person singular concord u-, not the 1st person ngi-."
+   },
+   {
+    "wrong": "Abafazi upheka ukudla.",
+    "right": "Abafazi bapheka ukudla.",
+    "note": "Abafazi is Class 2 plural, so the subject concord must be ba-, not u-."
+   },
+   {
+    "wrong": "Izinkomo uhamba endleleni.",
+    "right": "Izinkomo zihamba endleleni.",
+    "note": "Class 10 plural nouns require zi- as their subject concord."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the agreement: 'Abazali ___sebenza eThekwini.'",
+    "options": [
+     "ba",
+     "u",
+     "zi",
+     "li"
+    ],
+    "answer": 0,
+    "explanation": "Abazali is Class 2 plural, which requires the subject concord 'ba-'."
+   },
+   {
+    "question": "Complete the agreement: 'Inja ___khonkotha kakhulu.'",
+    "options": [
+     "si",
+     "lu",
+     "i",
+     "ba"
+    ],
+    "answer": 2,
+    "explanation": "Inja is Class 9, requiring the subject concord 'i-'."
+   },
+   {
+    "question": "Complete the sentence: 'Mina ___funa amanzi.'",
+    "options": [
+     "u",
+     "si",
+     "ba",
+     "ngi"
+    ],
+    "answer": 3,
+    "explanation": "First person singular 'mina' requires the subject concord 'ngi-'."
+   },
+   {
+    "question": "Complete the agreement: 'Isitimela ___hamba ngokushesha.'",
+    "options": [
+     "li",
+     "si",
+     "u",
+     "a"
+    ],
+    "answer": 1,
+    "explanation": "Isitimela is Class 7, which pairs with the subject concord 'si-'."
+   }
+  ],
+  "tip": "Subject concords in Zulu are mandatory even when the subject noun is explicitly mentioned in the sentence."
+ },
+ {
+  "id": "zu-a1-present-tense-long-vs-short",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#F59E0B",
+  "emoji": "⏱️",
+  "title": "Present Tense: Long (-ya-) vs Short Form",
+  "subtitle": "Knowing when to insert the infix -ya- in the present tense",
+  "color": "#B45309",
+  "bg": "#FFFBEB",
+  "keyPoint": "The long present tense uses -ya- when the verb ends the clause or carries emphatic focus, whereas the short form drops -ya- whenever an object or adjunct follows.",
+  "structure": {
+   "headers": [
+    "Form",
+    "Pattern",
+    "Zulu Example",
+    "Condition"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Long Form",
+      "SC + ya + Verb Root + a",
+      "Ngiyaphumula.",
+      "Verb ends the sentence entirely"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Short Form",
+      "SC + Verb Root + a + Compl.",
+      "Ngiphumula ekhaya.",
+      "Verb is followed by a complement"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Long Form (Focus)",
+      "SC + ya + Verb Root + a + Obj.",
+      "Ngiyayithanda inyama.",
+      "Emphasizes the action itself"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Short Form (Object)",
+      "SC + Verb Root + a + Obj.",
+      "Ngifunda incwadi.",
+      "Standard transitive statement"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Clause-Final Verbs",
+    "example": "Abantwana bayadlala.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Verbs with Following Objects",
+    "example": "Umfana ubala izibalo.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Verbs with Locative Adverbials",
+    "example": "Sihlala eGoli.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Umama uyapheka.",
+    "ko": "",
+    "highlight": "uyapheka"
+   },
+   {
+    "en": "Umama upheka inyama.",
+    "ko": "",
+    "highlight": "upheka"
+   },
+   {
+    "en": "Abafundi bayafunda.",
+    "ko": "",
+    "highlight": "bayafunda"
+   },
+   {
+    "en": "Abafundi bafunda isiZulu.",
+    "ko": "",
+    "highlight": "bafunda"
+   },
+   {
+    "en": "Ngiyasebenza.",
+    "ko": "",
+    "highlight": "Ngiyasebenza"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ngisebenza.",
+    "right": "Ngiyasebenza.",
+    "note": "A present-tense affirmative verb cannot stand alone without an object or adverbial; it must take the -ya- long form."
+   },
+   {
+    "wrong": "Ngiyadla isinkwa.",
+    "right": "Ngidla isinkwa.",
+    "note": "In neutral statements where the object immediately follows, the short form without -ya- must be used."
+   },
+   {
+    "wrong": "Uyahamba esikoleni.",
+    "right": "Uhamba esikoleni.",
+    "note": "When followed immediately by an adverb of place, use the short form without -ya-."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct sentence to mean 'They are eating' (sentence ends here):",
+    "options": [
+     "Bafunda",
+     "Bayadla",
+     "Badla",
+     "Bayafunda incwadi"
+    ],
+    "answer": 1,
+    "explanation": "'Bayadla' uses the long form -ya- correctly because the verb ends the clause."
+   },
+   {
+    "question": "Fill the blank with an immediate object: 'Sipho ___ ibhola.'",
+    "options": [
+     "udlala",
+     "uyadlala",
+     "badlala",
+     "bendlala"
+    ],
+    "answer": 0,
+    "explanation": "The noun 'ibhola' immediately follows, requiring the short present form 'udlala'."
+   },
+   {
+    "question": "Fill the blank: 'Mina ___ manje.' (verb ends the thought)",
+    "options": [
+     "ngihamba",
+     "hamba",
+     "ngiyahamba",
+     "yahamba"
+    ],
+    "answer": 2,
+    "explanation": "'Ngiyahamba' includes the long form marker -ya- for a standalone action."
+   },
+   {
+    "question": "Which sentence is grammatically correct?",
+    "options": [
+     "Uthisha uyabhala ebhodini.",
+     "Uthisha bhala ebhodini.",
+     "Uthisha ubhala ebhodini.",
+     "Uthisha uyabhala."
+    ],
+    "answer": 2,
+    "explanation": "Since 'ebhodini' follows the verb as an adverbial modifier, the short form 'ubhala' is required."
+   }
+  ],
+  "tip": "Ask yourself: 'Does words come after the verb?' If nothing follows, add '-ya-'. If something follows, drop '-ya-'."
+ },
+ {
+  "id": "zu-a1-locative-formation",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📍",
+  "title": "Locative Formation with e-...-ini",
+  "subtitle": "Forming expressions of place ('in', 'at', 'to', 'from')",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Most Zulu nouns become locatives by substituting the initial vowel with 'e-' and affixing a suffix '-ini' (with vowel alterations and palatalization of labials).",
+  "structure": {
+   "headers": [
+    "Noun Ending",
+    "Suffix Rule",
+    "Noun Base",
+    "Locative Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Ends in -a",
+      "-a + -ini = -eni",
+      "isikole (ends -e)",
+      "esikoleni"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Ends in -i",
+      "-i + -ini = -ini",
+      "imoto (ends -o)",
+      "emotweni"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ends in -u",
+      "-u + -ini = -wini",
+      "umuzi (ends -i)",
+      "emuzini"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Labial Consonant (b, p, m)",
+      "Palatalizes before -o/-u",
+      "isigubhu",
+      "esigujini"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Regular Vowel Mutation",
+    "example": "Abafundi baya esikoleni.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Semi-vowel Insertion (-o/-u)",
+    "example": "Ubaba usebenza emotweni.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Palatalization of Labials",
+    "example": "Amanzi aphelile esigujini.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ngihlala eThekwini.",
+    "ko": "",
+    "highlight": "eThekwini"
+   },
+   {
+    "en": "Izingane ziya esikoleni.",
+    "ko": "",
+    "highlight": "esikoleni"
+   },
+   {
+    "en": "Imali esikhwameni.",
+    "ko": "",
+    "highlight": "esikhwameni"
+   },
+   {
+    "en": "Ugogo uhlezi endlini.",
+    "ko": "",
+    "highlight": "endlini"
+   },
+   {
+    "en": "Umfana ugibela emotweni.",
+    "ko": "",
+    "highlight": "emotweni"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ngiya ku isikole.",
+    "right": "Ngiya esikoleni.",
+    "note": "General nouns form locatives with the circumfix e-...-ini, not by prefixing 'ku'."
+   },
+   {
+    "wrong": "Ulele endlawini.",
+    "right": "Ulele endlini.",
+    "note": "Indlu drops -u and takes -ini directly to yield endlini (not endlawini)."
+   },
+   {
+    "wrong": "Amanzi asezinkomponi.",
+    "right": "Amanzi asezinkonxeni.",
+    "note": "Labials like 'p' palatalize to 'tsh' or 'nx' depending on the noun root before -ini."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the locative form of 'itafula' (table)?",
+    "options": [
+     "etafuleni",
+     "itafuleni",
+     "etafulini",
+     "kutafula"
+    ],
+    "answer": 0,
+    "explanation": "The initial vowel 'i-' becomes 'e-' and final '-a' merges with '-ini' to make '-eni': etafuleni."
+   },
+   {
+    "question": "What is the locative form of 'indlu' (house)?",
+    "options": [
+     "endlwini",
+     "endluni",
+     "endlini",
+     "kwindlu"
+    ],
+    "answer": 2,
+    "explanation": "Indlu irregularly contracts with the locative suffix to yield 'endlini'."
+   },
+   {
+    "question": "Convert 'idolobha' (town/city) into its locative form with palatalization:",
+    "options": [
+     "edolobheni",
+     "edolobhene",
+     "edolobhini",
+     "edolobhana"
+    ],
+    "answer": 0,
+    "explanation": "Idolobha changes 'i-' to 'e-' and '-a' to '-eni', becoming 'edolobheni' (labials before -a do not undergo palatalization)."
+   },
+   {
+    "question": "What is the locative form of 'imoto' (car)?",
+    "options": [
+     "emotweni",
+     "emotoni",
+     "imotoini",
+     "emotini"
+    ],
+    "answer": 0,
+    "explanation": "Nouns ending in '-o' change to '-weni' after prefixing 'e-': emotweni."
+   }
+  ],
+  "tip": "Remember: The initial vowel of the noun always turns into 'e-', and the final vowel blends with '-ini' into '-eni', '-ini', or '-weni'."
+ },
+ {
+  "id": "zu-a1-associative-copulative-na",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🤝",
+  "title": "Associative Marker 'na-' (Possession and 'And')",
+  "subtitle": "Connecting nouns and expressing 'having' through vowel coalescence",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "The associative marker 'na-' merges with the initial vowel of a noun (na + a = na, na + i = ne, na + u = no) to express 'and', 'with', or possession when paired with subject concords.",
+  "structure": {
+   "headers": [
+    "Rule",
+    "Vowel Shift",
+    "Example Combination",
+    "Result Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "na- + a-",
+      "na + a -> na-",
+      "na- + amanzi",
+      "namanzi (and water)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "na- + i-",
+      "na + i -> ne-",
+      "na- + inja",
+      "nenja (with a dog)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "na- + u-",
+      "na + u -> no-",
+      "na- + umntwana",
+      "nomntwana (and a child)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "SC + na- (Possession)",
+      "SC + na + noun",
+      "Ngi- + na- + imoto",
+      "Nginemoto (I have a car)"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Connecting Two Nouns ('and')",
+    "example": "Ngibona ikati nenja.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Expressing 'With' (Instrument / Company)",
+    "example": "Uhamba nobaba wakhe.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Expressing Possession ('to have')",
+    "example": "Umfundi unemibuzo eminingi.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ubaba nomama bayasebenza.",
+    "ko": "",
+    "highlight": "nomama"
+   },
+   {
+    "en": "Nginemali namhlanje.",
+    "ko": "",
+    "highlight": "Nginemali"
+   },
+   {
+    "en": "Sipho unenja enkulu.",
+    "ko": "",
+    "highlight": "unenja"
+   },
+   {
+    "en": "Umfana uhamba nabangane bakhe.",
+    "ko": "",
+    "highlight": "nabangane"
+   },
+   {
+    "en": "Baphuza itiye nobisi.",
+    "ko": "",
+    "highlight": "nobisi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ngina imali.",
+    "right": "Nginemali.",
+    "note": "In Zulu, 'na-' merges directly with the initial vowel: na- + i- becomes ne-."
+   },
+   {
+    "wrong": "Ubaba na umama.",
+    "right": "Ubaba nomama.",
+    "note": "'Na-' cannot stand as a separate word; it must coalesce with 'umama' to make 'nomama'."
+   },
+   {
+    "wrong": "Anginayo imali kodwa ngina imoto.",
+    "right": "Anginamali kodwa nginemoto.",
+    "note": "Remember vowel coalescence: na- + imoto produces nginemoto, never ngina imoto."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I have a dog' (inja)?",
+    "options": [
+     "Nginainja",
+     "Nganenja",
+     "Nginenja",
+     "Nginonja"
+    ],
+    "answer": 2,
+    "explanation": "Subject concord 'ngi-' + 'na-' + 'inja' undergoes coalescence (a + i = e) yielding 'Nginenja'."
+   },
+   {
+    "question": "Combine 'na-' with 'abantwana' (children):",
+    "options": [
+     "nebantwana",
+     "nabantwana",
+     "nobantwana",
+     "nibantwana"
+    ],
+    "answer": 1,
+    "explanation": "na- + a- fuses into na-, resulting in 'nabantwana' (and/with children)."
+   },
+   {
+    "question": "Combine 'na-' with 'umfula' (river):",
+    "options": [
+     "nemfula",
+     "namfula",
+     "nimfula",
+     "nomfula"
+    ],
+    "answer": 3,
+    "explanation": "na- + u- fuses into no-, resulting in 'nomfula'."
+   },
+   {
+    "question": "What does 'Sipho unemoto' mean?",
+    "options": [
+     "Sipho has a car",
+     "Sipho sees a car",
+     "Sipho drives a car",
+     "Sipho wants a car"
+    ],
+    "answer": 0,
+    "explanation": "The concord 'u-' combined with 'na-' + 'imoto' (unemoto) functions as the associative copulative meaning 'has a car'."
+   }
+  ],
+  "tip": "Master the Zulu vowel coalescence trio: a + a = a, a + i = e, and a + u = o. It applies everywhere with 'na-'!"
+ },
+ {
+  "id": "zu-a1-basic-present-negation",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🚫",
+  "title": "Present Tense Negation (a-...-i)",
+  "subtitle": "How to say 'do not' or 'is not doing' in the present tense",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "To negate a present tense verb in isiZulu, prefix 'a-' to the subject concord and change the verb's final vowel to '-i'.",
+  "structure": {
+   "headers": [
+    "Person / Subject",
+    "Affirmative",
+    "Negative Formula",
+    "Negative Verb"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ngi- (I)",
+      "ngifunda",
+      "a- + ngi- + -fund- + -i",
+      "angifundi"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "u- (you sg.)",
+      "ufunda",
+      "a- + wu- + -fund- + -i",
+      "awufundi"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "u- (he/she, cl. 1)",
+      "ufunda",
+      "a- + ka- + -fund- + -i",
+      "akafundi"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "si- (we)",
+      "sifunda",
+      "a- + si- + -fund- + -i",
+      "asifundi"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Denying Habitual Actions",
+    "example": "Angibhemi ugwayi.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Refusing or Not Doing Now",
+    "example": "Asisebenzi namhlanje.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Stating Inability or Dislike",
+    "example": "Akafuni ukudla.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Angifundi isiNgisi.",
+    "ko": "",
+    "highlight": "Angifundi"
+   },
+   {
+    "en": "Abantwana abadlali phandle.",
+    "ko": "",
+    "highlight": "abadlali"
+   },
+   {
+    "en": "Ubaba akasebenzi eGoli.",
+    "ko": "",
+    "highlight": "akasebenzi"
+   },
+   {
+    "en": "Asiphuzi utshwala thina.",
+    "ko": "",
+    "highlight": "Asiphuzi"
+   },
+   {
+    "en": "Awukhulumi isiZulu na?",
+    "ko": "",
+    "highlight": "Awukhulumi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Angifunda isiZulu.",
+    "right": "Angifundi isiZulu.",
+    "note": "Learners often forget to change the final verb vowel from '-a' to '-i'."
+   },
+   {
+    "wrong": "Aufundi isiZulu.",
+    "right": "Awufundi isiZulu.",
+    "note": "For second person 'u-', a semi-vowel 'w' must be inserted after 'a-' to form 'awu-'."
+   },
+   {
+    "wrong": "Aufunda yena.",
+    "right": "Akafundi yena.",
+    "note": "Class 1 (he/she) changes its subject concord 'u-' to 'ka-' in the negative, producing 'aka-'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I do not eat meat. -> ___ inyama.",
+    "options": [
+     "Angidli",
+     "Angidla",
+     "Awudli",
+     "Akadli"
+    ],
+    "answer": 0,
+    "explanation": "'ngi-' becomes 'angi-' and '-dla' becomes '-dli'."
+   },
+   {
+    "question": "The children do not play. -> Abantwana ___.",
+    "options": [
+     "asidlali",
+     "abadlali",
+     "akabadlali",
+     "abafundi"
+    ],
+    "answer": 1,
+    "explanation": "Class 2 subject concord 'ba-' becomes 'aba-' ('a-ba-dlal-i')."
+   },
+   {
+    "question": "You (singular) do not listen. -> ___.",
+    "options": [
+     "Aulaleli",
+     "Akalaleli",
+     "Awulaleli",
+     "Asilaleli"
+    ],
+    "answer": 2,
+    "explanation": "Second person singular takes 'awu-' plus '-laleli'."
+   },
+   {
+    "question": "Sipho does not work today. -> USipho ___ namhlanje.",
+    "options": [
+     "awusebenzi",
+     "angisebenzi",
+     "asisebenzi",
+     "akasebenzi"
+    ],
+    "answer": 3,
+    "explanation": "Third person class 1 (uSipho) takes the negative subject concord 'aka-'."
+   }
+  ],
+  "tip": "Remember the three-part sandwich: 'a-' at the front, adjusted concord in the middle, and '-i' replacing final '-a'!"
+ },
+ {
+  "id": "zu-a2-object-concords",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎯",
+  "title": "Object Concords and Placement",
+  "subtitle": "Using pronominal object markers inside the verb stem",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The object concord agrees with the noun class of the object and must be placed immediately before the root verb stem.",
+  "structure": {
+   "headers": [
+    "Noun Class",
+    "Class Prefix",
+    "Object Concord",
+    "Example with -bona (see)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Class 1 (umu-)",
+      "umfana",
+      "-m-",
+      "ngiyambona"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Class 2 (aba-)",
+      "abafana",
+      "-ba-",
+      "ngiyababona"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 5 (ili-)",
+      "itshe",
+      "-li-",
+      "ngiyalibona"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 9 (in-)",
+      "inja",
+      "-yi-",
+      "ngiyayibona"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Definite Object Reference",
+    "example": "Ngiyawazi umthetho.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Replacing Explicit Nouns",
+    "example": "Uyamthanda na?",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Emphasizing the Recipient",
+    "example": "Udokotela usinike imithi.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ngiyamthanda uSipho kakhulu.",
+    "ko": "",
+    "highlight": "Ngiyamthanda"
+   },
+   {
+    "en": "Umama uyasiphekela ukudla.",
+    "ko": "",
+    "highlight": "uyasiphekela"
+   },
+   {
+    "en": "Ngiyayibona inja yakho.",
+    "ko": "",
+    "highlight": "Ngiyayibona"
+   },
+   {
+    "en": "Umfundi uyawafunda amabhuku.",
+    "ko": "",
+    "highlight": "uyawafunda"
+   },
+   {
+    "en": "Asibalaleli labo bantu.",
+    "ko": "",
+    "highlight": "Asibalaleli"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ngiyabona m yena.",
+    "right": "Ngiyambona yena.",
+    "note": "Object concords are bound morphemes and must be inserted directly before the verb root, never as separate words."
+   },
+   {
+    "wrong": "Ngimbona inja.",
+    "right": "Ngiyiybona inja.",
+    "note": "The object concord must match the noun class; 'inja' is Class 9, requiring '-yi-', not '-m-'."
+   },
+   {
+    "wrong": "Uyam-bona na?",
+    "right": "Uyambona na?",
+    "note": "Do not hyphenate object concords within the conjugated verb form."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I see him (umfana). -> Ngiya___bona umfana.",
+    "options": [
+     "m",
+     "ba",
+     "ku",
+     "wa"
+    ],
+    "answer": 0,
+    "explanation": "Class 1 (umfana) uses '-m-' as its object concord."
+   },
+   {
+    "question": "We like the dogs (izinjana, Cl. 10). -> Siya___thanda.",
+    "options": [
+     "li",
+     "zi",
+     "wa",
+     "m"
+    ],
+    "answer": 1,
+    "explanation": "Class 10 takes the object concord '-zi-'."
+   },
+   {
+    "question": "They are calling us. -> Baya___biza.",
+    "options": [
+     "ni",
+     "ba",
+     "si",
+     "ku"
+    ],
+    "answer": 2,
+    "explanation": "First person plural 'us' uses the object concord '-si-'."
+   },
+   {
+    "question": "Did you buy the book (ibhuku, Cl. 5)? -> Uli___thengile ibhuku na?",
+    "options": [
+     "wa",
+     "zi",
+     "ma",
+     "li"
+    ],
+    "answer": 3,
+    "explanation": "Class 5 (ibhuku) takes the object concord '-li-'."
+   }
+  ],
+  "tip": "Notice that unlike subject concords, the object concord always sits immediately adjacent to the verb root — nothing can come between them!"
+ },
+ {
+  "id": "zu-a2-recent-past-tense-ile",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#10B981",
+  "emoji": "⏳",
+  "title": "Recent Past Tense (-ile vs -e)",
+  "subtitle": "Choosing between long and short past tense forms",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use the full suffix '-ile' when the verb is clause-final or stative, and contract it to '-e' when other words follow the verb.",
+  "structure": {
+   "headers": [
+    "Form",
+    "Suffix",
+    "Usage",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Long Past",
+      "-ile",
+      "End of clause / No complement",
+      "Bahambile."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Contracted Past",
+      "-e",
+      "Followed by object or adverb",
+      "Bahambe izolo."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Stative Present",
+      "-ile",
+      "State of being (expressing 'is ...')",
+      "Ulele (<-lala)."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Completed Action (Sentence End)",
+    "example": "Abafundi bafikile.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Completed Action (With Object)",
+    "example": "Ngithenge imoto entsha.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Describing Current State",
+    "example": "Usaphile kahle.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ubaba ufikile ekhaya.",
+    "ko": "",
+    "highlight": "ufikile"
+   },
+   {
+    "en": "Sifunde kakhulu esikoleni.",
+    "ko": "",
+    "highlight": "Sifunde"
+   },
+   {
+    "en": "Ngithole imali yami.",
+    "ko": "",
+    "highlight": "Ngithole"
+   },
+   {
+    "en": "Izivakashi zihambile.",
+    "ko": "",
+    "highlight": "zihambile"
+   },
+   {
+    "en": "Umntwana ulele embhedeni.",
+    "ko": "",
+    "highlight": "ulele"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ngithengile isinkwa esitolo.",
+    "right": "Ngithenge isinkwa esitolo.",
+    "note": "When followed immediately by an object like 'isinkwa', the past tense contracts to '-e'."
+   },
+   {
+    "wrong": "Abantwana badle.",
+    "right": "Abantwana badlile.",
+    "note": "When nothing follows the verb at the end of the sentence, the full '-ile' form must be used."
+   },
+   {
+    "wrong": "Ngiqede umsebenzi-ile.",
+    "right": "Ngiqede umsebenzi.",
+    "note": "Never place '-ile' after the entire clause; suffixes attach directly to the verb stem."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The visitors have arrived (end of sentence). -> Izivakashi ___.",
+    "options": [
+     "zifikile",
+     "zifike",
+     "zafika",
+     "ziyafika"
+    ],
+    "answer": 0,
+    "explanation": "Clause-final recent past uses the full '-ile' ending: 'zifikile'."
+   },
+   {
+    "question": "I wrote a letter yesterday. -> Ngi___ incwadi izolo.",
+    "options": [
+     "bhalile",
+     "bhale",
+     "bhalayo",
+     "bhala"
+    ],
+    "answer": 1,
+    "explanation": "Because 'incwadi izolo' follows the verb, the contracted '-e' form ('ngibhale') is required."
+   },
+   {
+    "question": "Mother has cooked (clause-final). -> Umama ___.",
+    "options": [
+     "upheke",
+     "uphekileyo",
+     "uphekile",
+     "wapheka"
+    ],
+    "answer": 2,
+    "explanation": "With no following complement, use '-ile' ('uphekile')."
+   },
+   {
+    "question": "We saw the teacher in town. -> Si___ uthisha edolobheni.",
+    "options": [
+     "bonile",
+     "bonayo",
+     "bona",
+     "bone"
+    ],
+    "answer": 3,
+    "explanation": "Followed by the object 'uthisha', the verb uses the contracted ending '-e' ('sibone')."
+   }
+  ],
+  "tip": "Think of '-ile' as a full stop: it usually closes the thought or verb phrase, while '-e' opens the door for words following it."
+ },
+ {
+  "id": "zu-a2-possessive-concords",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#EA580C",
+  "emoji": "🏷️",
+  "title": "Possessive Concord System",
+  "subtitle": "Expressing 'of' and ownership through vowel coalescence",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Possessives combine the subject concord of the possessed noun with 'a-' plus the prefix vowel of the possessor noun via coalescence (a+a=a, a+i=e, a+u=o).",
+  "structure": {
+   "headers": [
+    "Possessed Noun Class",
+    "Formula",
+    "Rule",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Class 1/2 (aba-)",
+      "ba- + a- + umfana",
+      "a + u -> o",
+      "abantwana bomfana"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Class 5 (i- / ili-)",
+      "li- + a- + inja",
+      "a + i -> e",
+      "itshe lenja"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 7 (isi-)",
+      "si- + a- + umfundi",
+      "a + u -> o",
+      "isihlalo somfundi"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 9 (in- / im-)",
+      "i- + a- + abantu",
+      "a + a -> a",
+      "inja yabantu"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Personal Ownership",
+    "example": "Imoto kababa inhle.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Describing Relationships",
+    "example": "Abantwana bakadade bayafunda.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Parts of a Whole",
+    "example": "Isicabha sendlu sivaliwe.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Lezi zicathulo zomntwana zintsha.",
+    "ko": "",
+    "highlight": "zomntwana"
+   },
+   {
+    "en": "Ubone indlu yenkosi na?",
+    "ko": "",
+    "highlight": "yenkosi"
+   },
+   {
+    "en": "Ibhola labafana lilahlekile.",
+    "ko": "",
+    "highlight": "labafana"
+   },
+   {
+    "en": "Isikhwama sikagogo silapha.",
+    "ko": "",
+    "highlight": "sikagogo"
+   },
+   {
+    "en": "Amanzi olwandle amunyu.",
+    "ko": "",
+    "highlight": "olwandle"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "inja ya umfana",
+    "right": "inja yomfana",
+    "note": "Vowel coalescence is mandatory: 'ya-' + 'umfana' coalesces 'a + u' into 'o', forming 'yomfana'."
+   },
+   {
+    "wrong": "isihlalo sa umfundi",
+    "right": "isihlalo somfundi",
+    "note": "Class 7 concord 'sa-' plus 'umfundi' must merge into 'so-' ('somfundi')."
+   },
+   {
+    "wrong": "imoto yababa",
+    "right": "imoto kababa",
+    "note": "Kinship nouns in Class 1a take the special possessive marker 'ka-' instead of regular coalescence."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The dog of the man (inja + umnumzane) -> inja ___.",
+    "options": [
+     "yomnumzane",
+     "yamnumzane",
+     "yemnumzane",
+     "womnumzane"
+    ],
+    "answer": 0,
+    "explanation": "Class 9 'ya-' + 'u-' coalesces to 'yo-': 'yomnumzane'."
+   },
+   {
+    "question": "The children of the teacher (abantwana + uthisha Cl. 1a) -> abantwana ___.",
+    "options": [
+     "kothisha",
+     "bathisha",
+     "kathisha",
+     "yathisha"
+    ],
+    "answer": 2,
+    "explanation": "Class 1a proper/kinship nouns take the direct possessive prefix 'ka-' ('kathisha')."
+   },
+   {
+    "question": "The door of the house (isicabha + indlu) -> isicabha ___.",
+    "options": [
+     "sondlu",
+     "sandlu",
+     "sendlu",
+     "yendlu"
+    ],
+    "answer": 2,
+    "explanation": "Class 7 'sa-' + 'i-' coalesces to 'se-': 'sendlu'."
+   },
+   {
+    "question": "The car of the people (imoto + abantu) -> imoto ___.",
+    "options": [
+     "yobantu",
+     "yebantu",
+     "zabantu",
+     "yabantu"
+    ],
+    "answer": 3,
+    "explanation": "Class 9 'ya-' + 'a-' results in 'ya-': 'yabantu'."
+   }
+  ],
+  "tip": "Master the Zulu vowel math: a + a = a, a + i = e, a + u = o. This three-equation rule solves all regular possessives!"
+ },
+ {
+  "id": "zu-a2-identifying-copulatives",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#EA580C",
+  "emoji": "💡",
+  "title": "Identifying Copulatives (Nouns as Predicates)",
+  "subtitle": "Saying 'it is a...' or 'they are...' using copulative prefixes",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "To turn a noun into 'it is [noun]', drop or modify the initial vowel and attach copulative prefixes like 'ngu-', 'yi-', or 'y-'.",
+  "structure": {
+   "headers": [
+    "Initial Vowel / Class",
+    "Copulative Prefix",
+    "Noun",
+    "Copulative Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Nouns starting with 'u-' (Cl. 1, 1a, 3)",
+      "ngu-",
+      "umfundi",
+      "ngumfundi (he is a student)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Nouns starting with 'i-' (Cl. 4, 9)",
+      "yi-",
+      "inja",
+      "yinja (it is a dog)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Nouns starting with 'a-' (Cl. 2, 6)",
+      "nga- / y-",
+      "amadoda",
+      "ngamadoda / yamadoda"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Nouns starting with 'i-' (Cl. 5, 7, 8)",
+      "y- / si-",
+      "isihlalo",
+      "yisihlalo (it is a chair)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Stating Identity or Profession",
+    "example": "USipho nguthisha.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Identifying Objects",
+    "example": "Lokhu yincwadi yami.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Defining Belonging / Class",
+    "example": "Laba ngabafundi basesikoleni.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ubaba wami ngudokotela.",
+    "ko": "",
+    "highlight": "ngudokotela"
+   },
+   {
+    "en": "Lona yikati lami elihle.",
+    "ko": "",
+    "highlight": "yikati"
+   },
+   {
+    "en": "Leli bhuku yisipho sakhe.",
+    "ko": "",
+    "highlight": "yisipho"
+   },
+   {
+    "en": "Abafana laba ngabadlali.",
+    "ko": "",
+    "highlight": "ngabadlali"
+   },
+   {
+    "en": "Lolu cingo lumqoka.",
+    "ko": "",
+    "highlight": "lumqoka"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "USipho uba nguthisha.",
+    "right": "USipho nguthisha.",
+    "note": "Do not insert an extra verb for 'to be' in the simple present; 'nguthisha' already means 'is a teacher'."
+   },
+   {
+    "wrong": "Yilokhu nguinja.",
+    "right": "Lokhu yinja.",
+    "note": "Class 9 nouns beginning with 'i-' take 'yi-', not 'ngu-' ('yinja')."
+   },
+   {
+    "wrong": "Umama ngu uthisha.",
+    "right": "Umama nguthisha.",
+    "note": "The copulative prefix merges directly onto the noun without a space or vowel clash."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He is a doctor (udokotela). -> USipho ___.",
+    "options": [
+     "ngudokotela",
+     "yidokotela",
+     "kadokotela",
+     "budokotela"
+    ],
+    "answer": 0,
+    "explanation": "Nouns beginning with 'u-' take the identifying copulative prefix 'ngu-'."
+   },
+   {
+    "question": "It is a cat (ikati). -> Lokhu ___.",
+    "options": [
+     "ngikati",
+     "yikati",
+     "sikati",
+     "likati"
+    ],
+    "answer": 1,
+    "explanation": "Nouns beginning with 'i-' like 'ikati' take 'yi-' to mean 'it is a cat'."
+   },
+   {
+    "question": "They are students (abafundi). -> Laba ___.",
+    "options": [
+     "yabafundi",
+     "babafundi",
+     "ngabafundi",
+     "lwabafundi"
+    ],
+    "answer": 2,
+    "explanation": "Class 2 nouns starting with 'a-' prefix 'nga-', yielding 'ngabafundi'."
+   },
+   {
+    "question": "This is a bread (isinkwa). -> Lokhu ___.",
+    "options": [
+     "ngusinkwa",
+     "sisinkwa",
+     "basinkwa",
+     "yisinkwa"
+    ],
+    "answer": 3,
+    "explanation": "Class 7 nouns beginning with 'isi-' take the copulative prefix 'yi-', becoming 'yisinkwa'."
+   }
+  ],
+  "tip": "A quick rule of thumb: nouns starting with 'u-' take 'ngu-', while nouns starting with 'i-' take 'yi-'!"
+ },
+ {
+  "id": "zu-a2-future-tenses-zo-vs-yo",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#2563EB",
+  "emoji": "⏳",
+  "title": "Future Tenses: Definite (-zo-) vs Remote (-yo-)",
+  "subtitle": "Distinguishing near or certain future from distant or contingent events",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use the infix -zo- for actions happening soon or with definite certainty, and -yo- for events taking place in the remote future or when travel elsewhere is required.",
+  "structure": {
+   "headers": [
+    "Tense Marker",
+    "Zulu Pattern",
+    "Meaning & Timing"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-zo-",
+      "Ngizofunda kusasa.",
+      "Near or definite future (tomorrow / soon)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-yo-",
+      "Ngiyofunda ngonyaka ozayo.",
+      "Remote or indefinite future (next year / later)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-zoku- / -yoku-",
+      "Bazokudla manje.",
+      "Retained 'ku-' prefix before vowel or monosyllabic stems"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Immediate / Definite Plan",
+    "example": "Sizobona uthisha namhlanje.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Distant / Indefinite Future",
+    "example": "Uyothenga umuzi omkhulu.",
+    "translation": ""
+   },
+   {
+    "color": "#93C5FD",
+    "label": "Action Involving Going Away",
+    "example": "Ngiyosebenza eGoli.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ngizofika ekhaya masinyane.",
+    "ko": "",
+    "highlight": "Ngizofika"
+   },
+   {
+    "en": "Abantwana bazodlala ebaleni.",
+    "ko": "",
+    "highlight": "bazodlala"
+   },
+   {
+    "en": "Siyobona ugogo ngamaholide.",
+    "ko": "",
+    "highlight": "Siyobona"
+   },
+   {
+    "en": "Uyofunda enyuvesi ngomuso.",
+    "ko": "",
+    "highlight": "Uyofunda"
+   },
+   {
+    "en": "Umalume uzothenga imoto entsha.",
+    "ko": "",
+    "highlight": "uzothenga"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ngizokuya esitolo kusasa.",
+    "right": "Ngizoya esitolo kusasa.",
+    "note": "The verb -ya does not retain the full infinitive prefix 'ku-' after -zo- in standard contraction."
+   },
+   {
+    "wrong": "Ngiyofika manje.",
+    "right": "Ngizofika manje.",
+    "note": "Use -zo- instead of -yo- for immediate or imminent actions taking place now or today."
+   },
+   {
+    "wrong": "Uzo bona udokotela.",
+    "right": "Uzobona udokotela.",
+    "note": "Future prefixes must be written conjunctively as a single orthographic word in isiZulu."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the form meaning 'We will cook dinner tonight (definite near future)':",
+    "options": [
+     "Sizopheka isidlo sakusihlwa.",
+     "Siyopheka isidlo sakusihlwa.",
+     "Sapheka isidlo sakusihlwa.",
+     "Sipheka isidlo sakusihlwa."
+    ],
+    "answer": 0,
+    "explanation": "The near/definite future marker is -zo-, yielding 'sizopheka' for 'we will cook'."
+   },
+   {
+    "question": "Which verb correctly expresses 'They will build a school in the distant future'?",
+    "options": [
+     "Bazosakha",
+     "Bayokwakha",
+     "Bafuna ukwakha",
+     "Bakha"
+    ],
+    "answer": 1,
+    "explanation": "Remote future with vowel verb -akha combines -yo- with -kw- to yield 'bayokwakha'."
+   },
+   {
+    "question": "Fill in the blank for 'I will see you tomorrow': Mina ngi___bona kusasa.",
+    "options": [
+     "yo",
+     "sa",
+     "zo",
+     "ka"
+    ],
+    "answer": 2,
+    "explanation": "Actions occurring tomorrow ('kusasa') use the definite near future tense infix -zo-."
+   },
+   {
+    "question": "What is the primary nuance conveyed by '-yo-' in 'Ngiyosebenza eThekwini'?",
+    "options": [
+     "Past completion",
+     "Continuous present aspect",
+     "Negation of intent",
+     "Remoteness or going away to perform the action"
+    ],
+    "answer": 3,
+    "explanation": "-yo- is derived from the verb -ya (to go) and implies going elsewhere or acting in the distant future."
+   }
+  ],
+  "tip": "Think of -zo- as coming from -za (to come, bringing the event close) and -yo- as coming from -ya (to go, pushing the event far away)."
+ },
+ {
+  "id": "zu-a2-absolute-pronouns",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "👤",
+  "title": "Absolute Pronouns (Mina, Wena, Yena)",
+  "subtitle": "Independent emphatic pronouns across noun classes and persons",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Absolute pronouns stand alone for emphasis, contrast, or after prepositions and conjunctions, always ending in the characteristic suffix -na.",
+  "structure": {
+   "headers": [
+    "Person / Class",
+    "Absolute Pronoun",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Person Sing. / Plur.",
+      "Mina / Thina",
+      "I, me / We, us"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd Person Sing. / Plur.",
+      "Wena / Nina",
+      "You (sing.) / You (plur.)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person Class 1/2",
+      "Yena / Bona",
+      "He, she, him, her / They, them"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Class 3/4 & 5/6",
+      "Wona / Yona & Lona / Wona",
+      "It, they (according to noun class)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Subject Emphasis",
+    "example": "Mina ngithanda itiye, kodwa yena uphuza ikhofi.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "After Associative 'na-'",
+    "example": "Uhamba nathi esontweni.",
+    "translation": ""
+   },
+   {
+    "color": "#6EE7B7",
+    "label": "After Instrumental 'nga-'",
+    "example": "Bakhuluma ngaye njalo.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mina ngisebenza eThekwini.",
+    "ko": "",
+    "highlight": "Mina"
+   },
+   {
+    "en": "Wena uyazi ukuthi kwenzekeni.",
+    "ko": "",
+    "highlight": "Wena"
+   },
+   {
+    "en": "Umfana uhamba nabo.",
+    "ko": "",
+    "highlight": "nabo"
+   },
+   {
+    "en": "Thina asifuni ukulwa.",
+    "ko": "",
+    "highlight": "Thina"
+   },
+   {
+    "en": "Incwadi leyo ibhalwe nguye.",
+    "ko": "",
+    "highlight": "nguye"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mina ngiyabona yena umfana.",
+    "right": "Ngiyambona umfana.",
+    "note": "Do not insert absolute pronouns as regular direct objects; use the object concord (-m-) instead unless extreme contrast is needed."
+   },
+   {
+    "wrong": "Ngikhuluma na yena.",
+    "right": "Ngikhuluma naye.",
+    "note": "When attaching associative 'na-' to absolute pronouns, the terminal '-na' drops and vowel coalesces: na- + yena = naye."
+   },
+   {
+    "wrong": "Woza ku mina.",
+    "right": "Woza kimi.",
+    "note": "The locative prefix 'ku-' irregularly merges with 'mina' to form 'kimi', not 'ku mina'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'As for us, we are resting' using an emphatic absolute pronoun?",
+    "options": [
+     "Niyaphumula.",
+     "Thina siyaphumula.",
+     "Bona bayaphumula.",
+     "Yena uyaphumula."
+    ],
+    "answer": 1,
+    "explanation": "'Thina' is the 1st person plural absolute pronoun meaning 'we / us / as for us'."
+   },
+   {
+    "question": "What is the correct contracted form of 'na-' + 'bona' (with them)?",
+    "options": [
+     "nabona",
+     "nobona",
+     "nabo",
+     "khibona"
+    ],
+    "answer": 2,
+    "explanation": "Prepositional prefixes drop the final -na of the absolute pronoun, giving 'na-' + '-bo' = 'nabo'."
+   },
+   {
+    "question": "Which sentence means 'You (singular) speak isiZulu well' with emphasis on 'you'?",
+    "options": [
+     "Mina ngikhuluma isiZulu kahle.",
+     "Nina nikhuluma isiZulu kahle.",
+     "Bona bakhuluma isiZulu kahle.",
+     "Wena ukhuluma isiZulu kahle."
+    ],
+    "answer": 3,
+    "explanation": "'Wena' is the second person singular absolute pronoun."
+   },
+   {
+    "question": "Class 5 noun 'iqanda' (egg) corresponds to which absolute pronoun?",
+    "options": [
+     "Lona",
+     "Yona",
+     "Wona",
+     "Bona"
+    ],
+    "answer": 0,
+    "explanation": "Class 5 nouns take the concord 'li-', producing the absolute pronoun 'lona'."
+   }
+  ],
+  "tip": "Remember that absolute pronouns drop their final '-na' when combined with proclitics like na- (with), nga- (about/by), and njenga- (like): na- + thina becomes nathi!"
+ },
+ {
+  "id": "zu-b1-verbal-extensions-passive-causative-applied",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#F59E0B",
+  "emoji": "🔄",
+  "title": "Verbal Extensions (-ela, -isa, -wa, -ana)",
+  "subtitle": "Applied, causative, reciprocal, and passive suffixes on verb stems",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Derive new verbal meanings by inserting suffixes between the verb root and final vowel, paying careful attention to labial palatalization in the passive.",
+  "structure": {
+   "headers": [
+    "Extension",
+    "Suffix",
+    "Base Verb",
+    "Extended Verb"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Applied (for/at)",
+      "-ela",
+      "-funda (read)",
+      "-fundela (read for/at)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Causative (cause/help)",
+      "-isa",
+      "-sebenza (work)",
+      "-sebenzisa (use/make work)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reciprocal (each other)",
+      "-ana",
+      "-thanda (love)",
+      "-thandana (love each other)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passive (be done)",
+      "-wa",
+      "-bamba (catch)",
+      "-banjwa (be caught - palatalized)"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Benefactive / Directional",
+    "example": "Umama uphekela izingane ukudla.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Assistance / Causation",
+    "example": "Udokotela usiphuzisa umuthi.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Passive with Palatalization",
+    "example": "Incwadi yabhalwa nguthisha.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ubaba ubaqhashela imoto entsha.",
+    "ko": "",
+    "highlight": "ubaqhashela"
+   },
+   {
+    "en": "Sizosizana kulo msebenzi.",
+    "ko": "",
+    "highlight": "Sizosizana"
+   },
+   {
+    "en": "Isinkwa sidliwa yizingane zonke.",
+    "ko": "",
+    "highlight": "sidliwa"
+   },
+   {
+    "en": "Umfana ubangise udadewabo.",
+    "ko": "",
+    "highlight": "ubangise"
+   },
+   {
+    "en": "Amasela abanjwe ngamaphoyisa.",
+    "ko": "",
+    "highlight": "abanjwe"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Inyama yabambwa yinja.",
+    "right": "Inyama yabanjwa yinja.",
+    "note": "In the passive, labial consonant 'mb' must undergo palatalization to 'nj' before '-wa'."
+   },
+   {
+    "wrong": "Ngipheka umama ukudla.",
+    "right": "Ngiphekela umama ukudla.",
+    "note": "To indicate action performed for someone, use the applied extension -ela, not the bare verb stem."
+   },
+   {
+    "wrong": "Bayabonana umngane.",
+    "right": "Bayabona umngane.",
+    "note": "The reciprocal -ana makes the verb intransitive between mutual participants; do not add an external direct object."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the passive form of the verb '-bopha' (to tie/arrest)?",
+    "options": [
+     "-bophwa",
+     "-botshwa",
+     "-bophisa",
+     "-boshelwa"
+    ],
+    "answer": 1,
+    "explanation": "In isiZulu passive formation, the labial 'ph' palatalizes into 'tsh', yielding '-botshwa'."
+   },
+   {
+    "question": "Which verb means 'to write to / write for someone'?",
+    "options": [
+     "-bhalisa",
+     "-bhalana",
+     "-bhalela",
+     "-bhalwa"
+    ],
+    "answer": 2,
+    "explanation": "The applied extension -ela expresses action directed towards or on behalf of someone."
+   },
+   {
+    "question": "How do you say 'We help each other'?",
+    "options": [
+     "Siyasizana.",
+     "Siyasiza.",
+     "Siyasizisa.",
+     "Siyasizelwa."
+    ],
+    "answer": 0,
+    "explanation": "The suffix -ana creates the reciprocal meaning 'each other': sizana = help each other."
+   },
+   {
+    "question": "What meaning does the suffix '-isa' add to '-funda' in '-fundisa'?",
+    "options": [
+     "To read repeatedly",
+     "To read for someone",
+     "To read together",
+     "To cause/help to read (to teach)"
+    ],
+    "answer": 3,
+    "explanation": "The causative suffix -isa turns 'learn/read' (-funda) into 'cause to learn / teach' (-fundisa)."
+   }
+  ],
+  "tip": "Watch out for labial palatalization in passives: b -> j, p -> tsh, ph -> sh/tsh, mb -> nj, and m -> ny (e.g., luma -> lunywa)."
+ },
+ {
+  "id": "zu-b1-qualificative-relative-construction",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔗",
+  "title": "Relative Clauses and Relatival Concords",
+  "subtitle": "Connecting descriptive stems and subordinate verbal relative clauses",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Relative clauses use a relative concord consisting of an initial vowel fused with the subject concord, ending in the terminal suffix -yo when the verb is clause-final.",
+  "structure": {
+   "headers": [
+    "Noun Class",
+    "Subject Concord",
+    "Relative Concord",
+    "Example with Stem"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Class 1 (umuntu)",
+      "u-",
+      "o-",
+      "umuntu osebenzayo (person who works)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Class 2 (abantu)",
+      "ba-",
+      "aba-",
+      "abantu abaqotho (honest people)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 3 (umuthi)",
+      "u-",
+      "o-",
+      "umuthi obomvu (red tree)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 9 (inja)",
+      "i-",
+      "e-",
+      "inja ekhonkothayo (dog that barks)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Primitive Relative Stems",
+    "example": "Indoda eqotho iyahlonishwa.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Verbal Relative Clause",
+    "example": "Ngibona ingane eculayo.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Relative with Complement",
+    "example": "Abafundi abafunda isiZulu bayaphumelela.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Umama ophekile ukudla usekhaya.",
+    "ko": "",
+    "highlight": "ophekile"
+   },
+   {
+    "en": "Izintombi eziculayo ziyahleka.",
+    "ko": "",
+    "highlight": "eziculayo"
+   },
+   {
+    "en": "Isitsha esiphukile singesami.",
+    "ko": "",
+    "highlight": "esiphukile"
+   },
+   {
+    "en": "Abantu abalambile bafuna ukudla.",
+    "ko": "",
+    "highlight": "abalambile"
+   },
+   {
+    "en": "Imoto egijimayo iyingozi kakhulu.",
+    "ko": "",
+    "highlight": "egijimayo"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Umuntu usebenzayo uyakhathala.",
+    "right": "Umuntu osebenzayo uyakhathala.",
+    "note": "Relative clauses require the relative concord (o- for Class 1), not the standard subject concord (u-)."
+   },
+   {
+    "wrong": "Ingane ecula kahle-yo iyathandeka.",
+    "right": "Ingane ecula kahle iyathandeka.",
+    "note": "The suffix -yo is only appended when the relative verb is clause-final; drop it if followed by an adjunct or complement."
+   },
+   {
+    "wrong": "Inja obomvu ilala phansi.",
+    "right": "Inja ebomvu ilala phansi.",
+    "note": "Class 9 nouns require the relative concord e-, not the class 1/3 concord o-."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which relative concord completes: 'Abafana ___dlala ibhola bayagula' (The boys who play soccer...)?",
+    "options": [
+     "o-",
+     "aba-",
+     "eli-",
+     "esi-"
+    ],
+    "answer": 1,
+    "explanation": "Class 2 nouns (abafana) take the relative concord aba-."
+   },
+   {
+    "question": "When must the relative suffix '-yo' be dropped from a relative verb?",
+    "options": [
+     "In negative sentences",
+     "In past tense verbs",
+     "When an object or adjunct follows the relative verb",
+     "When the noun is plural"
+    ],
+    "answer": 2,
+    "explanation": "The enclitic -yo is exclusively used when the relative verb stands at the end of its clause without complements."
+   },
+   {
+    "question": "Choose the correct phrase for 'a clever girl' (intombazane [Class 9] + -hlakaniphile):",
+    "options": [
+     "intombazane ohlakaniphile",
+     "intombazane bahlakaniphile",
+     "intombazane ehlakaniphile",
+     "intombazane lihlakaniphile"
+    ],
+    "answer": 2,
+    "explanation": "Class 9 uses relative concord e-, producing 'intombazane ehlakaniphile'."
+   },
+   {
+    "question": "What is the relative form of 'umuntu' (Class 1) + verb 'uhamba' standing alone at the end of the clause?",
+    "options": [
+     "umuntu ohambayo",
+     "umuntu uhambayo",
+     "umuntu abahamba",
+     "umuntu ehamba"
+    ],
+    "answer": 0,
+    "explanation": "Class 1 relative concord is o- plus the verb -hamba and final -yo because no complement follows: 'ohambayo'."
+   }
+  ],
+  "tip": "The relative concord is simply the noun class's initial pre-prefix vowel merged with its normal subject concord: a + u = o, a + i = e, and a + ba = aba."
+ },
+ {
+  "id": "zu-b1-participial-subjunctive-moods",
+  "level": "b1",
+  "category": "modals",
+  "categoryColor": "#EC4899",
+  "emoji": "🎭",
+  "title": "Participial and Subjunctive Moods",
+  "subtitle": "Expressing simultaneous action, polite requests, purpose, and consecutive commands",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "The participial mood alters concords (Class 1 becomes e-) for ongoing or simultaneous actions, while the subjunctive changes the terminal verb vowel to -e for polite requests and purpose.",
+  "structure": {
+   "headers": [
+    "Mood",
+    "Subject Concord Shift",
+    "Terminal Vowel",
+    "Example Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Indicative (Base)",
+      "u- (Class 1)",
+      "-a",
+      "Uyahamba. (He is going.)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Participial (Situative)",
+      "e- (Class 1) / be- (Class 2)",
+      "-a",
+      "Nambona ehamba. (I saw him walking.)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Subjunctive (Polite/Purpose)",
+      "a- (Class 1) / regular concords",
+      "-e",
+      "Asihambe! / Ukuze afunde. (Let's go / So that he studies)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EC4899",
+    "label": "Simultaneous Background Action",
+    "example": "Ugogo ukhuluma ehleka.",
+    "translation": ""
+   },
+   {
+    "color": "#DB2777",
+    "label": "Polite Request / Hortative 'A- / Ma-'",
+    "example": "Masifunde isiZulu ndawonye.",
+    "translation": ""
+   },
+   {
+    "color": "#BE185D",
+    "label": "Clause of Purpose ('ukuze')",
+    "example": "Ufunda kakhulu ukuze aphumelele.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ngafika ekhaya abantwana belele.",
+    "ko": "",
+    "highlight": "belele"
+   },
+   {
+    "en": "Ngicela uncede lapha mfowethu.",
+    "ko": "",
+    "highlight": "uncede"
+   },
+   {
+    "en": "Uhamba ecula umfana lo.",
+    "ko": "",
+    "highlight": "ecula"
+   },
+   {
+    "en": "Udokotela ufuna ukuba ngiphumule.",
+    "ko": "",
+    "highlight": "ngiphumule"
+   },
+   {
+    "en": "Asidleni sonke etafuleni.",
+    "ko": "",
+    "highlight": "Asidleni"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Umfana ukhuluma ubala.",
+    "right": "Umfana ukhuluma ebhala.",
+    "note": "In participial clauses showing simultaneous action, Class 1 subject concord must change from u- to e-."
+   },
+   {
+    "wrong": "Ngicela ukuba uhamba manje.",
+    "right": "Ngicela ukuba uhambe manje.",
+    "note": "After verbs of request or conjunctions like 'ukuba/ukuze', the dependent verb must end in subjunctive -e."
+   },
+   {
+    "wrong": "Ukuze upasa izivivinyo.",
+    "right": "Ukuze uphase izivivinyo.",
+    "note": "Subjunctive clauses require the final vowel -e: 'uphase', never indicative '-a'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'Let us go home' using the hortative subjunctive?",
+    "options": [
+     "Siyahamba ekhaya.",
+     "Sahamba ekhaya.",
+     "Asihambe ekhaya.",
+     "Singahamba ekhaya."
+    ],
+    "answer": 2,
+    "explanation": "The hortative prefix A- combined with 1st person plural concord si- and final vowel -e yields 'Asihambe'."
+   },
+   {
+    "question": "Which concord is used for Class 1 (he/she) in the participial mood instead of standard 'u-'?",
+    "options": [
+     "e-",
+     "ba-",
+     "ka-",
+     "a-"
+    ],
+    "answer": 0,
+    "explanation": "In the participial mood, Class 1 subject concord changes from u- to e- (e.g., ecula - while singing)."
+   },
+   {
+    "question": "Fill in the blank for purpose: 'Usebenza kakhulu ukuze ___thenge imoto' (so that he buys a car):",
+    "options": [
+     "u",
+     "a",
+     "e",
+     "i"
+    ],
+    "answer": 1,
+    "explanation": "In the subjunctive mood, Class 1 concord becomes a- before the verb ending in -e: 'athenge'."
+   },
+   {
+    "question": "What is the function of the participial verb in 'Ngemba emgodini ngithuka'?",
+    "options": [
+     "Future intent",
+     "Simultaneous state or action while digging",
+     "Past counterfactual",
+     "Direct command"
+    ],
+    "answer": 1,
+    "explanation": "The participial verb describes the concurrent circumstance or simultaneous action accompanying the main verb."
+   }
+  ],
+  "tip": "Remember: for Class 1 (he/she), Indicative is 'u-', Participial is 'e-', and Subjunctive is 'a-' (e.g., uyapheka -> epheka -> apheke)."
+ },
+ {
+  "id": "zu-b1-stative-verbs",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🛋️",
+  "title": "Stative Verbs and Resultant States",
+  "subtitle": "Express ongoing physical and mental states using perfect morphology",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Stative verbs in Zulu describe entering a state, meaning their perfect tense form conveys that the subject is currently in that resultant state.",
+  "structure": {
+   "headers": [
+    "Infinitive Stem",
+    "Stative Perfect Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-lamba (get hungry)",
+      "ngilambile",
+      "I am hungry"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-hlala (sit down)",
+      "uhlezi / uhleli",
+      "he/she is seated"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-khathala (get tired)",
+      "bakhathalile",
+      "they are tired"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-lala (fall asleep)",
+      "ulele",
+      "he/she is asleep"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Physical Sensation",
+    "example": "Abantwana balambile kakhulu namhlanje.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Bodily Posture",
+    "example": "Ugogo uhlezi esitulweni sakhe egcekeni.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Mental or Physical State",
+    "example": "Sikhathele ngoba sisebenze kakhulu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ngilambile, ngicela ukudla.",
+    "ko": "",
+    "highlight": "Ngilambile"
+   },
+   {
+    "en": "Ubaba uhlezi phansi emthunzini.",
+    "ko": "",
+    "highlight": "uhlezi"
+   },
+   {
+    "en": "Ingane ilele embhedeni wayo.",
+    "ko": "",
+    "highlight": "ilele"
+   },
+   {
+    "en": "Abafundi bakhathele ngemva kokuhlolwa.",
+    "ko": "",
+    "highlight": "bakhathele"
+   },
+   {
+    "en": "Umnyango uvulekile manje.",
+    "ko": "",
+    "highlight": "uvulekile"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ngilamba manje.",
+    "right": "Ngilambile manje.",
+    "note": "Using the present tense implies you are in the process of becoming hungry, not that you are hungry now."
+   },
+   {
+    "wrong": "Uhlele phansi.",
+    "right": "Uhleli phansi.",
+    "note": "The irregular stative stem for -hlala is -hleli or -hlezi, not -hlele."
+   },
+   {
+    "wrong": "Bakhathala namhlanje.",
+    "right": "Bakhathalile namhlanje.",
+    "note": "To state current tiredness, stative verbs must take the stative perfect ending (-ile or contracted -e)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I am tired' in isiZulu?",
+    "options": [
+     "Ngiyakhathala",
+     "Ngikhathele",
+     "Ngakhathala",
+     "Ngingakhathala"
+    ],
+    "answer": 1,
+    "explanation": "The stative verb -khathala forms -khathele to denote the current state of being tired."
+   },
+   {
+    "question": "Complete the sentence to mean 'The baby is asleep': 'Usana ___.'",
+    "options": [
+     "lulala",
+     "lwalala",
+     "lulele",
+     "lulalile"
+    ],
+    "answer": 2,
+    "explanation": "-lala has an irregular stative perfect stem -lele."
+   },
+   {
+    "question": "Which verb form correctly expresses 'We are hungry'?",
+    "options": [
+     "Silambile",
+     "Siyangcolisa",
+     "Salamba",
+     "Silamba"
+    ],
+    "answer": 0,
+    "explanation": "-lamba takes the regular stative suffix -ile to express currently being hungry."
+   },
+   {
+    "question": "What is the meaning of 'Umfundi uhlezi edeskini'?",
+    "options": [
+     "The student sat yesterday",
+     "The student sits repeatedly",
+     "The student will sit down",
+     "The student is seated at the desk"
+    ],
+    "answer": 3,
+    "explanation": "-hlezi is the stative form of -hlala, expressing the continuous state of sitting."
+   }
+  ],
+  "tip": "Think of stative verbs as 'actions of becoming'—to say you ARE something, you must say you HAVE BECOME it using the perfect form."
+ },
+ {
+  "id": "zu-b1-remote-past-tense",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#059669",
+  "emoji": "📜",
+  "title": "Remote Past Tense (-a-)",
+  "subtitle": "Narrate historical and distant events using long contracted concords",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "The remote past tense fuses the subject concord with the remote formative -a-, producing long vowel markers like nga-, wa-, and ba- for actions prior to yesterday.",
+  "structure": {
+   "headers": [
+    "Noun Class / Subject",
+    "Concord + -a-",
+    "Example Verb",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Person Singular (ngi-)",
+      "nga-",
+      "ngafika",
+      "I arrived (long ago)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 1 / 1a (u-)",
+      "wa-",
+      "wahamba",
+      "he/she went (long ago)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Class 2 (ba-)",
+      "ba-",
+      "bakhuluma",
+      "they spoke (long ago)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 9 (i-)",
+      "ya-",
+      "yabonakala",
+      "it appeared (long ago)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Historical Milestones",
+    "example": "INingizimu Afrika yathola inkululeko ngo-1994.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Childhood Memories",
+    "example": "Ngakhulela edolobheni laseThekwini ngenkathi ngisemncane.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Narrative Storytelling",
+    "example": "Kwesukela, kwakukhona inkosi eyayihlakaniphile kakhulu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Inkosi uShaka yakha umbuso wamaZulu onamandla.",
+    "ko": "",
+    "highlight": "yakha"
+   },
+   {
+    "en": "Wafika kuleli zwe eminyakeni eminingi edlule.",
+    "ko": "",
+    "highlight": "Wafika"
+   },
+   {
+    "en": "Sasisebenza ndawonye kudala.",
+    "ko": "",
+    "highlight": "Sasisebenza"
+   },
+   {
+    "en": "Abazali bami bathenga le ndlu ngaphambi kokuba ngizalwe.",
+    "ko": "",
+    "highlight": "bathenga"
+   },
+   {
+    "en": "Ngamtshela iqiniso kodwa akazange anake.",
+    "ko": "",
+    "highlight": "Ngamtshela"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ufike ngo-1990.",
+    "right": "Wafika ngo-1990.",
+    "note": "Recent past (ufike) is strictly for today or yesterday; remote past (wafika) is required for distant years."
+   },
+   {
+    "wrong": "Ngihambe kudala.",
+    "right": "Ngahamba kudala.",
+    "note": "'Kudala' indicates long ago and necessitates the remote concord nga- instead of the recent past ngi-."
+   },
+   {
+    "wrong": "Bafikile ngonyaka odlule.",
+    "right": "Bafika ngonyaka odlule.",
+    "note": "The remote past verb stem ends in standard -a, not the recent past suffix -ile."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the remote past form for 'They built a school last year': 'Bona ___ isikole ngonyaka odlule.'",
+    "options": [
+     "bakha",
+     "bakhile",
+     "bayakha",
+     "bebakha"
+    ],
+    "answer": 0,
+    "explanation": "Class 2 remote past concord ba- combines with -akha to form bakha."
+   },
+   {
+    "question": "Which sentence correctly says 'I grew up in Durban'?",
+    "options": [
+     "Ngikhulele eThekwini.",
+     "Ngakhulela eThekwini.",
+     "Ngiyakhula eThekwini.",
+     "Bakhulela eThekwini."
+    ],
+    "answer": 1,
+    "explanation": "1st person remote past uses the concord nga- with the simple base verb stem: Ngakhulela."
+   },
+   {
+    "question": "What is the remote past prefix for Class 1 (umuntu)?",
+    "options": [
+     "u-",
+     "ya-",
+     "wa-",
+     "ka-"
+    ],
+    "answer": 2,
+    "explanation": "The concord u- fuses with the remote formative -a- to yield wa-."
+   },
+   {
+    "question": "Identify the error in: 'Umkhulu ufike emhlabeni kudala.'",
+    "options": [
+     "'kudala' is misspelled",
+     "'emhlabeni' needs a locative prefix",
+     "'ufike' should be 'wafika'",
+     "'Umkhulu' should be 'Abakhulu'"
+    ],
+    "answer": 2,
+    "explanation": "Actions occurring long ago (kudala) require the remote past concord wa-, thus wafika."
+   }
+  ],
+  "tip": "The remote past verb stem always ends in the default '-a'; the time shift is carried entirely by the vowel '-a-' merged into the subject concord."
+ },
+ {
+  "id": "zu-b2-deficient-auxiliary-verbs",
+  "level": "b2",
+  "category": "modals",
+  "categoryColor": "#7C3AED",
+  "emoji": "🧩",
+  "title": "Deficient Auxiliary Verbs (Izilulamuzi)",
+  "subtitle": "Add nuance like 'already', 'almost', and 'ever' using modal verb roots",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Deficient verbs (izilulamuzi) cannot stand alone; they take their own subject concord and dictate the subjunctive or participial mood of the following verb.",
+  "structure": {
+   "headers": [
+    "Deficient Root",
+    "Meaning",
+    "Required Mood",
+    "Example Construction"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-se",
+      "already / now",
+      "Participial",
+      "usengene (he has entered)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-cishe",
+      "almost / nearly",
+      "Infinitive",
+      "ucishe wawa (he almost fell)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-kade",
+      "long ago / just",
+      "Participial",
+      "kade ngisebenza (I've been working)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-hleze",
+      "lest / might accidentally",
+      "Subjunctive",
+      "ungawi (lest you fall)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Completed State (Already)",
+    "example": "Sesilungile ukuhamba manje.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Near Occurrence (Almost)",
+    "example": "Imoto yaphuma emgwaqweni yacishe yashayisa isihlahla.",
+    "translation": ""
+   },
+   {
+    "color": "#A78BFA",
+    "label": "Precautionary Warnings (Lest)",
+    "example": "Bamba ngesandla hleze uwe.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Sengiqedile umsebenzi wami wesikole.",
+    "ko": "",
+    "highlight": "Sengiqedile"
+   },
+   {
+    "en": "Ucishe walimala engozini yemoto izolo.",
+    "ko": "",
+    "highlight": "Ucishe"
+   },
+   {
+    "en": "Kade ngikufuna usuku lonke namhlanje.",
+    "ko": "",
+    "highlight": "Kade"
+   },
+   {
+    "en": "Ungagijimi kakhulu hleze ukhubeke.",
+    "ko": "",
+    "highlight": "hleze"
+   },
+   {
+    "en": "Umfana usefunde zonke izincwadi.",
+    "ko": "",
+    "highlight": "usefunde"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ngiqeda kakade.",
+    "right": "Sengiqedile.",
+    "note": "To say 'I have already finished', Zulu uses the auxiliary -se (sengiqedile) rather than translating 'already' via an adverb."
+   },
+   {
+    "wrong": "Ucishe uwe izolo.",
+    "right": "Ucishe wawa izolo.",
+    "note": "When using -cishe in the past, the following main verb typically takes the past subjunctive/consecutive concord (wawa)."
+   },
+   {
+    "wrong": "Ngi kade ngisebenza.",
+    "right": "Kade ngisebenza.",
+    "note": "Kade is often impersonal or takes direct prefixes without separated pronouns."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'We are already full / satisfied'?",
+    "options": [
+     "Sisuthile",
+     "Sesisuthi",
+     "Sasuthi",
+     "Siyasusutha"
+    ],
+    "answer": 1,
+    "explanation": "-se infixes into the concord: si- + -se- + suthi gives sesisuthi."
+   },
+   {
+    "question": "Which sentence means 'He almost missed the bus'?",
+    "options": [
+     "Uphuthelwe ibhasi.",
+     "Ucishe waphuthelwa yibhasi.",
+     "Hleze aphuthelwe yibhasi.",
+     "Usaphuthelwa yibhasi."
+    ],
+    "answer": 1,
+    "explanation": "The deficient verb -cishe expresses 'almost' or 'nearly'."
+   },
+   {
+    "question": "What is the function of 'hleze' in complex clauses?",
+    "options": [
+     "To indicate 'already'",
+     "To indicate past continuous",
+     "To express 'lest' or 'in case something bad happens'",
+     "To indicate an action repeated frequently"
+    ],
+    "answer": 2,
+    "explanation": "Hleze warns of an undesirable consequence, translating to 'lest' or 'in case'."
+   },
+   {
+    "question": "Choose the correct prefixation for 'I have already arrived': '___ ngifikile.'",
+    "options": [
+     "Se-",
+     "Sengi-",
+     "Nga-",
+     "Kade-"
+    ],
+    "answer": 1,
+    "explanation": "The auxiliary -se merges with first person ngi- to form sengi-."
+   }
+  ],
+  "tip": "The auxiliary '-se' contracts with subject markers: ngi- becomes 'sengi-', u- becomes 'use-', and ba- becomes 'sebe-'."
+ },
+ {
+  "id": "zu-b2-compound-tenses-with-be",
+  "level": "b2",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "⏳",
+  "title": "Compound Continuous Tenses with 'be'",
+  "subtitle": "Master dual-concord structures for continuous and pluperfect past actions",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Zulu constructs compound past tenses by combining the auxiliary verb root -be with a main verb in the participial mood, often contracting both concords into a single word.",
+  "structure": {
+   "headers": [
+    "Tense Type",
+    "Full Form",
+    "Contracted Form",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Past Continuous (1st Sing.)",
+      "ngangihamba",
+      "ngangihamba",
+      "I was walking"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past Continuous (Class 1)",
+      "wayehamba",
+      "wayehamba",
+      "he/she was walking"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Continuous (Class 2)",
+      "babesebenza",
+      "babesebenza",
+      "they were working"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Pluperfect (Class 1)",
+      "wayefikile",
+      "wayefikile",
+      "he/she had arrived"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Interrupted Past Action",
+    "example": "Ngangifunda incwadi ngenkathi ucingo lukhala.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Habitual Past Description",
+    "example": "Kudala sasihlala eThekwini nomndeni wethu.",
+    "translation": ""
+   },
+   {
+    "color": "#F87171",
+    "label": "Pluperfect / Prior Past",
+    "example": "Amaphoyisa afika sebembalekile abasolwa.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ngangisebenza egalaji ngesikhathi efika.",
+    "ko": "",
+    "highlight": "Ngangisebenza"
+   },
+   {
+    "en": "Wayengazi ukuthi kukhona umhlangano.",
+    "ko": "",
+    "highlight": "Wayengazi"
+   },
+   {
+    "en": "Babephuza itiye phandle egcekeni.",
+    "ko": "",
+    "highlight": "Babephuza"
+   },
+   {
+    "en": "Sasicula esontweni ngenkathi lina izulu.",
+    "ko": "",
+    "highlight": "Sasicula"
+   },
+   {
+    "en": "Imoto yayihamba ngesivinini esikhulu.",
+    "ko": "",
+    "highlight": "yayihamba"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ngangihambe esitolo izolo.",
+    "right": "Ngangihamba esitolo izolo.",
+    "note": "Past continuous requires the participial present stem ending in -a, not the perfect -ile/-e."
+   },
+   {
+    "wrong": "Ubekhuluma naye izolo.",
+    "right": "Wayekhuluma naye izolo.",
+    "note": "Ube- is recent past continuous (earlier today); remote past continuous requires waye-."
+   },
+   {
+    "wrong": "Babengasebenzi ngoba bayagula.",
+    "right": "Babengasebenzi ngoba babegula.",
+    "note": "Tense harmony requires both clauses referring to that past state to use past agreement."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you form the remote past continuous for 'They were singing'?",
+    "options": [
+     "Bacula",
+     "Babecula",
+     "Bayacula",
+     "Bebacula"
+    ],
+    "answer": 1,
+    "explanation": "Dual agreement for remote past Class 2 is ba- + -be- + participial be-cula -> babecula."
+   },
+   {
+    "question": "Which prefix combination indicates 1st person singular remote past continuous ('I was...')?",
+    "options": [
+     "Ngiye-",
+     "Bengiku-",
+     "Ngangi-",
+     "Ngase-"
+    ],
+    "answer": 2,
+    "explanation": "Nga- (remote concord) + ngi- (participial concord) combines to form 'ngangi-'."
+   },
+   {
+    "question": "Translate: 'She was not listening.'",
+    "options": [
+     "Wayengalaleli.",
+     "Akalalelanga.",
+     "Akazange alalele.",
+     "Wayengalalele."
+    ],
+    "answer": 0,
+    "explanation": "The negative participial present with past auxiliary waye- takes -nga- and ends in -i: wayengalaleli."
+   },
+   {
+    "question": "What is the difference between 'bengisebenza' and 'ngangisebenza'?",
+    "options": [
+     "There is no difference in meaning",
+     "bengisebenza is today; ngangisebenza is before today",
+     "bengisebenza is negative; ngangisebenza is positive",
+     "bengisebenza is remote past; ngangisebenza is recent"
+    ],
+    "answer": 1,
+    "explanation": "Bengisebenza uses the recent past auxiliary (today), while ngangisebenza is remote past (before today)."
+   }
+  ],
+  "tip": "To distinguish recent from remote past continuous: recent uses short concords (bengi-, ube-, babe-), while remote past uses long '-a-' concords (ngangi-, waye-, babe-)."
+ },
+ {
+  "id": "zu-b2-clitics-and-enclitics",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#4F46E5",
+  "emoji": "📎",
+  "title": "Enclitics and Discourse Particles (-ke, -ze, -bo, -phi)",
+  "subtitle": "Suffix pragmatic enclitics to verbs to shift tone, question, or emphasize",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Enclitics in Zulu attach to the end of inflected words, altering the sentence's pragmatic force, interrogative meaning, or imperative urgency without counting as separate words.",
+  "structure": {
+   "headers": [
+    "Enclitic",
+    "Function / Meaning",
+    "Base Word",
+    "Affixed Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-ke",
+      "so, then, well (discourse continuation)",
+      "hamba (go)",
+      "hambake (go then)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ni?",
+      "what? (interrogative enclitic)",
+      "ubona (you see)",
+      "ubonani? (what do you see?)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-phi?",
+      "where? (locative interrogative)",
+      "bahlala (they live)",
+      "bahlalaphi? (where do they live?)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-bo",
+      "emphatic imperative / strong insistence",
+      "yiza (come)",
+      "yizabo! (do come!)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Interrogative Compression",
+    "example": "Ufunani lapha ebusuku?",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Narrative Progression (-ke)",
+    "example": "Sahambake safika eGoli ekuseni kakhulu.",
+    "translation": ""
+   },
+   {
+    "color": "#818CF8",
+    "label": "Insistent Command (-bo)",
+    "example": "Thulabo, ungangitsheli amanga!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Uyangizwa na? Ngizokutshela.",
+    "ko": "",
+    "highlight": ""
+   },
+   {
+    "en": "Uvelaphi ngalesi sikhathi?",
+    "ko": "",
+    "highlight": "Uvelaphi"
+   },
+   {
+    "en": "Wenzani lapho endlini?",
+    "ko": "",
+    "highlight": "Wenzani"
+   },
+   {
+    "en": "Sukabo lapho, ngifuna ukudlula!",
+    "ko": "",
+    "highlight": "Sukabo"
+   },
+   {
+    "en": "Bahambaphi abantwana?",
+    "ko": "",
+    "highlight": "Bahambaphi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ufuna ni?",
+    "right": "Ufunani?",
+    "note": "The interrogative '-ni' is an enclitic and must be written conjoined to the verb, not as a standalone word."
+   },
+   {
+    "wrong": "Uhleli phi?",
+    "right": "Uhleliphi?",
+    "note": "The question particle '-phi' attaches directly to the verb predicate without a space."
+   },
+   {
+    "wrong": "Hamba ke.",
+    "right": "Hambake.",
+    "note": "'-ke' attaches directly to the end of words to indicate sequential flow or conversational closure."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you ask 'Where are you going?' using an enclitic?",
+    "options": [
+     "Uyapi?",
+     "Uyaphaphi?",
+     "Uyaphilaphi?",
+     "Uyaphi?"
+    ],
+    "answer": 3,
+    "explanation": "The verb -ya (go) combines with the enclitic -phi to form uyaphi?."
+   },
+   {
+    "question": "What nuance does '-bo' add to an imperative like 'Yizani' -> 'Yizanibo!'?",
+    "options": [
+     "Polite question",
+     "Strong emphasis or impatience",
+     "Doubt and uncertainty",
+     "Past tense completion"
+    ],
+    "answer": 1,
+    "explanation": "The enclitic -bo adds sharpness, urgency, or insistence to commands."
+   },
+   {
+    "question": "Attach the correct interrogative enclitic for 'What are you doing?': 'Ukwenza + ni' -> '___?'",
+    "options": [
+     "Ukwenzani",
+     "Wenzani",
+     "Ukwenzani na",
+     "Ukwenza yini"
+    ],
+    "answer": 1,
+    "explanation": "In spoken and written Zulu, u- + enza + -ni contracts seamlessly to 'Wenzani?'."
+   },
+   {
+    "question": "Which enclitic denotes 'then / therefore' in storytelling?",
+    "options": [
+     "-bo",
+     "-ze",
+     "-ke",
+     "-phi"
+    ],
+    "answer": 2,
+    "explanation": "-ke marks sequential transition or conclusion in discourse."
+   }
+  ],
+  "tip": "Adding an enclitic draws vowel stress forward; in 'hamba', stress is on 'ha-', but in 'hambáke', the penultimate stress shifts directly onto '-ba-'."
+ }
+]

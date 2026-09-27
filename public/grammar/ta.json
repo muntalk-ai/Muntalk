@@ -1,0 +1,3362 @@
+[
+ {
+  "id": "ta-a1-pronouns-and-png-suffixes",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🗣️",
+  "title": "Personal Pronouns and PNG Suffixes",
+  "subtitle": "Match subject pronouns with Person-Number-Gender verb endings",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Tamil finite verbs must agree with their subject pronoun using mandatory Person-Number-Gender (PNG) terminal suffixes.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "PNG Suffix",
+    "Full Verb (Present)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "நான்",
+      "-ஏன்",
+      "படிக்கிறேன்",
+      "I read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "நீ",
+      "-ஆய்",
+      "படிக்கிறாய்",
+      "You (sg.) read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "அவன்",
+      "-ஆன்",
+      "படிக்கிறான்",
+      "He reads"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "அவள்",
+      "-ஆள்",
+      "படிக்கிறாள்",
+      "She reads"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "நாங்கள்",
+      "-ஓம்",
+      "படிக்கிறோம்",
+      "We read"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "First Person Statement",
+    "example": "நான் தமிழில் பேசுகிறேன்.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Second Person Inquiry",
+    "example": "நீ எங்கே போகிறாய்?",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Third Person Gender Agreement",
+    "example": "அவள் ஒரு புத்தகம் எழுதுகிறாள்.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "நான் தினமும் காலையில் ஓடுகிறேன்.",
+    "ko": "",
+    "highlight": "ஓடுகிறேன்"
+   },
+   {
+    "en": "நீ நன்றாகப் பாடுகிறாய்.",
+    "ko": "",
+    "highlight": "பாடுகிறாய்"
+   },
+   {
+    "en": "தம்பி வேகமாக வருகிறான்.",
+    "ko": "",
+    "highlight": "வருகிறான்"
+   },
+   {
+    "en": "அம்மா சுவையாகச் சமைக்கிறாள்.",
+    "ko": "",
+    "highlight": "சமைக்கிறாள்"
+   },
+   {
+    "en": "நாங்கள் மாலையில் விளையாடுகிறோம்.",
+    "ko": "",
+    "highlight": "விளையாடுகிறோம்"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "நான் படிக்கிறான்.",
+    "right": "நான் படிக்கிறேன்.",
+    "note": "The pronoun நான் (1st person singular) requires the ending -ஏன், not the 3rd person masculine -ஆன்."
+   },
+   {
+    "wrong": "அவள் வருகிறான்.",
+    "right": "அவள் வருகிறாள்.",
+    "note": "Feminine singular அவள் must agree with the feminine suffix -ஆள், not the masculine -ஆன்."
+   },
+   {
+    "wrong": "நாங்கள் போகிறேன்.",
+    "right": "நாங்கள் போகிறோம்.",
+    "note": "Plural subject நாங்கள் requires the plural suffix -ஓம் instead of the singular -ஏன்."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct verb to complete: 'நான் பாடம் ___.' (I study a lesson.)",
+    "options": [
+     "படிக்கிறான்",
+     "படிக்கிறேன்",
+     "படிக்கிறாய்",
+     "படிக்கிறாள்"
+    ],
+    "answer": 1,
+    "explanation": "The 1st person singular pronoun நான் requires the PNG suffix -ஏன் (படிக்கிறேன்)."
+   },
+   {
+    "question": "Select the correct verb to complete: 'அவன் சென்னைக்கு ___.' (He goes to Chennai.)",
+    "options": [
+     "போகிறான்",
+     "போகிறாள்",
+     "போகிறேன்",
+     "போகிறாய்"
+    ],
+    "answer": 0,
+    "explanation": "The masculine pronoun அவன் requires the masculine suffix -ஆன் (போகிறான்)."
+   },
+   {
+    "question": "Select the correct verb to complete: 'நீ என்ன ___?' (What are you doing?)",
+    "options": [
+     "செய்கிறான்",
+     "செய்கிறேன்",
+     "செய்கிறோம்",
+     "செய்கிறாய்"
+    ],
+    "answer": 3,
+    "explanation": "The 2nd person pronoun நீ pairs with the suffix -ஆய் (செய்கிறாய்)."
+   },
+   {
+    "question": "Select the correct verb to complete: 'அவள் வேகமாக ___.' (She runs fast.)",
+    "options": [
+     "ஓடுகிறான்",
+     "ஓடுகிறேன்",
+     "ஓடுகிறாள்",
+     "ஓடுகிறோம்"
+    ],
+    "answer": 2,
+    "explanation": "The feminine pronoun அவள் takes the suffix -ஆள் (ஓடுகிறாள்)."
+   }
+  ],
+  "tip": "Because PNG suffixes explicitly indicate person, number, and gender, subject pronouns like நான் or அவள் are frequently dropped in everyday speech."
+ },
+ {
+  "id": "ta-a1-verbless-equational-sentences",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#0EA5E9",
+  "emoji": "🧩",
+  "title": "Equational Sentences (Zero Copula)",
+  "subtitle": "Link two noun phrases without an overt verb 'to be'",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Present-tense identity and classification sentences in Tamil place the subject and predicate noun directly side by side with no copula verb.",
+  "structure": {
+   "headers": [
+    "Subject (Noun)",
+    "Predicate (Noun/Adjective)",
+    "Resulting Clause",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "இவர்",
+      "ஆசிரியர்",
+      "இவர் ஆசிரியர்.",
+      "He is a teacher."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "இது",
+      "புத்தகம்",
+      "இது புத்தகம்.",
+      "This is a book."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "அது",
+      "என் வீடு",
+      "அது என் வீடு.",
+      "That is my house."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "அவர்",
+      "மருத்துவர்",
+      "அவர் மருத்துவர்.",
+      "He/She is a doctor."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Stating Profession",
+    "example": "கண்ணன் ஒரு பொறியாளர்.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Identifying Objects",
+    "example": "இது புதிய கணினி.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Expressing Ownership/Role",
+    "example": "அவள் என் தோழி.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "இவர் எங்கள் ஆசிரியர்.",
+    "ko": "",
+    "highlight": "எங்கள் ஆசிரியர்"
+   },
+   {
+    "en": "இது என் புத்தகம்.",
+    "ko": "",
+    "highlight": "என் புத்தகம்"
+   },
+   {
+    "en": "மதுரை ஒரு பழமையான நகரம்.",
+    "ko": "",
+    "highlight": "பழமையான நகரம்"
+   },
+   {
+    "en": "அவர் ஒரு சிறந்த மருத்துவர்.",
+    "ko": "",
+    "highlight": "மருத்துவர்"
+   },
+   {
+    "en": "அது என்னுடைய பை.",
+    "ko": "",
+    "highlight": "என்னுடைய பை"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "இவர் ஆசிரியர் இருக்கிறார்.",
+    "right": "இவர் ஆசிரியர்.",
+    "note": "Do not insert the existential verb இருக்கிறார் to mean 'is' when stating identity or profession."
+   },
+   {
+    "wrong": "இது ஒரு பேனா இருக்கிறது.",
+    "right": "இது ஒரு பேனா.",
+    "note": "இருக்கிறது indicates location or existence, not equational definition."
+   },
+   {
+    "wrong": "நான் மாணவன் இருக்கிறேன்.",
+    "right": "நான் மாணவன்.",
+    "note": "Simply place the subject and the predicate noun adjacent to one another."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'This is my house' in Tamil?",
+    "options": [
+     "இது என் வீடு.",
+     "இது என் வீடு இருக்கிறது.",
+     "இது என் வீடு ஆகும் இருக்கிறது.",
+     "இது என் வீடு உள்ளது."
+    ],
+    "answer": 0,
+    "explanation": "Equational identity sentences omit the verb 'to be' in the present tense: இது என் வீடு."
+   },
+   {
+    "question": "Complete the equational sentence: 'ராமு ஒரு ___.' (Ramu is a student.)",
+    "options": [
+     "படிக்கிறார்",
+     "இருக்கிறார்",
+     "மாணவன்",
+     "வருகிறார்"
+    ],
+    "answer": 2,
+    "explanation": "A predicate noun (மாணவன்) is placed directly after the subject with no connecting copula verb."
+   },
+   {
+    "question": "Which of the following correctly means 'He is a doctor'?",
+    "options": [
+     "அவர் மருத்துவர் இருக்கிறார்.",
+     "அவர் மருத்துவர் செய்கிறார்.",
+     "அவர் மருத்துவர்.",
+     "அவர் மருத்துவர் ஆகிறார்."
+    ],
+    "answer": 2,
+    "explanation": "In standard present equational sentences, no verb is used: அவர் மருத்துவர்."
+   },
+   {
+    "question": "What is the function of zero copula in 'அது நல்ல புத்தகம்'?",
+    "options": [
+     "To indicate past completed action",
+     "To express nominal identity without a verb",
+     "To express location of the book",
+     "To ask a question"
+    ],
+    "answer": 1,
+    "explanation": "Juxtaposing 'அது' and 'நல்ல புத்தகம்' forms an equational sentence meaning 'That is a good book'."
+   }
+  ],
+  "tip": "Save the verb இரு (இருக்கிறேன், இருக்கிறது) exclusively for location ('I am in Chennai') or existence ('There is water'), never for equivalence."
+ },
+ {
+  "id": "ta-a1-dative-case-and-experiencer-subjects",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#0EA5E9",
+  "emoji": "🎯",
+  "title": "Dative Case (-ukku) and Experiencer Subjects",
+  "subtitle": "Express indirect objects, feelings, desires, and necessity",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Add -க்கு / -உக்கு (-kku / -ukku) to mark recipients, destinations, and subjects experiencing internal sensations or needs.",
+  "structure": {
+   "headers": [
+    "Base Pronoun/Noun",
+    "Dative Form",
+    "Predicative Term",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "நான்",
+      "எனக்கு",
+      "பிடிக்கும்",
+      "To me is pleasing (I like)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "அவன்",
+      "அவனுக்கு",
+      "பசிக்கிறது",
+      "To him is hungry (He is hungry)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "அவள்",
+      "அவளுக்கு",
+      "தெரியும்",
+      "To her is known (She knows)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ஊர்",
+      "ஊருக்கு",
+      "போகிறான்",
+      "He goes to the town"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Expressing Preference",
+    "example": "எனக்கு இனிப்பு பிடிக்கும்.",
+    "translation": ""
+   },
+   {
+    "color": "#E11D48",
+    "label": "Physical/Mental State",
+    "example": "அவனுக்கு இப்போது பசிக்கிறது.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Necessity and Knowledge",
+    "example": "அவளுக்குத் தமிழ் தெரியும்.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "எனக்குத் தேநீர் வேண்டும்.",
+    "ko": "",
+    "highlight": "எனக்கு"
+   },
+   {
+    "en": "தம்பிக்குத் தலை வலிக்கிறது.",
+    "ko": "",
+    "highlight": "தம்பிக்கு"
+   },
+   {
+    "en": "அவளுக்குப் பூக்கள் மிகவும் பிடிக்கும்.",
+    "ko": "",
+    "highlight": "அவளுக்கு"
+   },
+   {
+    "en": "நாளை நாங்கள் மதுரைக்குச் செல்கிறோம்.",
+    "ko": "",
+    "highlight": "மதுரைக்கு"
+   },
+   {
+    "en": "அவருக்கு உண்மை தெரியும்.",
+    "ko": "",
+    "highlight": "அவருக்கு"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "நான் காப்பி பிடிக்கும்.",
+    "right": "எனக்குக் காப்பி பிடிக்கும்.",
+    "note": "Experiencer predicates like பிடிக்கும் require the subject in the dative case (எனக்கு), not the nominative (நான்)."
+   },
+   {
+    "wrong": "அவன் பசிக்கிறது.",
+    "right": "அவனுக்குப் பசிக்கிறது.",
+    "note": "Involuntary sensations like hunger take a dative subject (அவனுக்கு)."
+   },
+   {
+    "wrong": "அவள் தண்ணீர் வேண்டும்.",
+    "right": "அவளுக்குத் தண்ணீர் வேண்டும்.",
+    "note": "Desire or need with வேண்டும் must be paired with the dative marker -உக்கு."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the right pronoun: '___ தமிழ் தெரியும்.' (I know Tamil.)",
+    "options": [
+     "நான்",
+     "என்",
+     "என்னை",
+     "எனக்கு"
+    ],
+    "answer": 3,
+    "explanation": "The stative verb தெரியும் (to know) governs a dative experiencer subject (எனக்கு)."
+   },
+   {
+    "question": "Choose the right form: 'அவன் ___ போகிறான்.' (He goes to the shop.)",
+    "options": [
+     "கடை",
+     "கடைக்கு",
+     "கடையை",
+     "கடையில்"
+    ],
+    "answer": 1,
+    "explanation": "The destination of motion requires the dative case marker -க்கு (கடைக்கு)."
+   },
+   {
+    "question": "Complete the sentence: 'அவருக்குக் காப்பி ___.' (He wants coffee.)",
+    "options": [
+     "வேண்டும்",
+     "வேண்டான்",
+     "செய்கிறார்",
+     "பிடித்தான்"
+    ],
+    "answer": 0,
+    "explanation": "வேண்டும் (want/need) is an impersonal verb paired with the dative experiencer அவருக்கு."
+   },
+   {
+    "question": "Select the correct subject: '___ பசிக்கிறது.' (The child is hungry.)",
+    "options": [
+     "குழந்தை",
+     "குழந்தைக்கு",
+     "குழந்தையை",
+     "குழந்தையால்"
+    ],
+    "answer": 1,
+    "explanation": "Physical sensations take the experiencer in the dative case: குழந்தைக்கு."
+   }
+  ],
+  "tip": "Think of dative experiencers as 'To me it is likable' (எனக்கு பிடிக்கும்) or 'To him it is needed' (அவனுக்கு வேண்டும்) instead of English 'I like' or 'He wants'."
+ },
+ {
+  "id": "ta-a1-accusative-case-marking",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#0EA5E9",
+  "emoji": "🎯",
+  "title": "Accusative Case (-ai) and Object Marking",
+  "subtitle": "Mark definite or animate direct objects with -ஐ",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "The accusative suffix -ஐ (-ai) is mandatory for animate direct objects and definite inanimate objects, but omitted for generic inanimate nouns.",
+  "structure": {
+   "headers": [
+    "Object Type",
+    "Base Noun",
+    "Accusative Form",
+    "Example Clause"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Animate (Human)",
+      "ஆசிரியர்",
+      "ஆசிரியரை",
+      "ஆசிரியரைப் பார்த்தேன்"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Definite Inanimate",
+      "அந்தப் புத்தகம்",
+      "அந்தப் புத்தகத்தை",
+      "புத்தகத்தைப் படி"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Generic Inanimate",
+      "சோறு",
+      "சோறு (No -ஐ)",
+      "சோறு சாப்பிட்டான்"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Pronoun (Always Definite)",
+      "அவன்",
+      "அவனை",
+      "அவனை அழைத்தாள்"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Animate Direct Object",
+    "example": "நான் நரேஷைப் பார்த்தேன்.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Definite Inanimate Object",
+    "example": "அந்தப் பழத்தை எடு.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Unmarked Generic Direct Object",
+    "example": "அவன் தண்ணீர் குடிக்கிறான்.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "நான் என் நண்பனைப் பார்த்தேன்.",
+    "ko": "",
+    "highlight": "நண்பனை"
+   },
+   {
+    "en": "அவள் அந்த கதவைத் திறந்தாள்.",
+    "ko": "",
+    "highlight": "கதவை"
+   },
+   {
+    "en": "மாணவர்கள் பாடம் படிக்கிறார்கள்.",
+    "ko": "",
+    "highlight": "பாடம்"
+   },
+   {
+    "en": "அம்மா குழந்தையைக் கொஞ்சுகிறார்.",
+    "ko": "",
+    "highlight": "குழந்தையை"
+   },
+   {
+    "en": "இந்த கடிதத்தை உடனே படி.",
+    "ko": "",
+    "highlight": "கடிதத்தை"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "நான் மருத்துவர் பார்த்தேன்.",
+    "right": "நான் மருத்துவரைப் பார்த்தேன்.",
+    "note": "Animate human objects must always carry the accusative suffix -ஐ (மருத்துவரை)."
+   },
+   {
+    "wrong": "அவன் நாய் அடிக்கிறான்.",
+    "right": "அவன் நாயை அடிக்கிறான்.",
+    "note": "Animate non-human objects such as animals require -ஐ when they are specific targets of an action."
+   },
+   {
+    "wrong": "அவள் சோற்றை சாப்பிடுகிறாள்.",
+    "right": "அவள் சோறு சாப்பிடுகிறாள்.",
+    "note": "Generic inanimate everyday food or drink objects typically drop the accusative suffix."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct form: 'நான் ___ கூப்பிட்டேன்.' (I called Kumar.)",
+    "options": [
+     "குமார்",
+     "குமாரை",
+     "குமாருக்கு",
+     "குமாரில்"
+    ],
+    "answer": 1,
+    "explanation": "Human direct objects must take the accusative suffix -ஐ (குமாரை)."
+   },
+   {
+    "question": "Which sentence naturally omits the accusative suffix for a generic object?",
+    "options": [
+     "அவன் தண்ணீர் குடித்தான்.",
+     "அவன் தண்ணீரைக் குடித்தான்.",
+     "அவன் தண்ணீருக்குக் குடித்தான்.",
+     "அவன் தண்ணீரை கண்டான்."
+    ],
+    "answer": 0,
+    "explanation": "Drinking water in general does not require -ஐ; plain 'தண்ணீர் குடித்தான்' is natural Differential Object Marking."
+   },
+   {
+    "question": "Select the correct object: 'அந்த ___ எடு.' (Take that book.)",
+    "options": [
+     "புத்தகம்",
+     "புத்தகத்துக்கு",
+     "புத்தகத்தை",
+     "புத்தகத்தில்"
+    ],
+    "answer": 2,
+    "explanation": "Definite specific inanimate nouns (indicated by அந்த) take the accusative marker (புத்தகத்தை)."
+   },
+   {
+    "question": "Fill in the blank: 'அம்மா ___ தூக்கினார்.' (Mother lifted the baby.)",
+    "options": [
+     "குழந்தை",
+     "குழந்தையிடம்",
+     "குழந்தைக்கு",
+     "குழந்தையை"
+    ],
+    "answer": 3,
+    "explanation": "The human object குழந்தை must take the accusative marker -ஐ, becoming குழந்தையை."
+   }
+  ],
+  "tip": "Ask yourself: Is the object human or specific? If yes, attach -ஐ. If it is an indefinite, non-living mass noun like tea or rice, leave it unmarked."
+ },
+ {
+  "id": "ta-a1-negation-illai-vs-alla",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🚫",
+  "title": "Existential vs Categorical Negation (illai vs alla)",
+  "subtitle": "Distinguish non-existence/absence from non-identity",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Use இல்லை (illai) to negate presence, possession, or verbal actions, and அல்ல (alla) to deny category or identity.",
+  "structure": {
+   "headers": [
+    "Type of Negation",
+    "Negator",
+    "Function",
+    "Tamil Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Existential / Absence",
+      "இல்லை",
+      "Something does not exist/is not there",
+      "அங்கே பணம் இல்லை."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Verbal Negation",
+      "இல்லை",
+      "Action did not occur (with infinitive)",
+      "அவன் வரவில்லை."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Categorical / Identity",
+      "அல்ல",
+      "X is not Y (identity rejection)",
+      "இது என் புத்தகம் அல்ல."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Categorical (Spoken)",
+      "இல்லை",
+      "Colloquially replaces அல்ல in speech",
+      "இது என் புத்தகம் இல்லை."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Denying Existence/Presence",
+    "example": "வீட்டில் யாரும் இல்லை.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Denying Classification/Identity",
+    "example": "அவர் திருடன் அல்ல.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Negating Past Action",
+    "example": "நான் நேற்று வரவில்லை.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "மேசை மேல் புத்தகம் இல்லை.",
+    "ko": "",
+    "highlight": "இல்லை"
+   },
+   {
+    "en": "இவர் மருத்துவர் அல்ல, ஆசிரியர்.",
+    "ko": "",
+    "highlight": "அல்ல"
+   },
+   {
+    "en": "எனக்கு இப்போது நேரம் இல்லை.",
+    "ko": "",
+    "highlight": "இல்லை"
+   },
+   {
+    "en": "இது என்னுடைய தவறு அல்ல.",
+    "ko": "",
+    "highlight": "அல்ல"
+   },
+   {
+    "en": "அவள் இன்று பள்ளிக்கு வரவில்லை.",
+    "ko": "",
+    "highlight": "வரவில்லை"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "வீட்டில் பால் அல்ல.",
+    "right": "வீட்டில் பால் இல்லை.",
+    "note": "To say milk is not present in the house, use existential இல்லை, never identity-negating அல்ல."
+   },
+   {
+    "wrong": "நான் நேற்று படிக்க அல்ல.",
+    "right": "நான் நேற்று படிக்கவில்லை.",
+    "note": "Negating verb actions in the past uses the infinitive + இல்லை, not அல்ல."
+   },
+   {
+    "wrong": "அங்கு யாரும் அல்ல.",
+    "right": "அங்கு யாரும் இல்லை.",
+    "note": "Absence of people ('nobody is there') demands இல்லை."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the existential negation: 'பையில் பணம் ___.' (There is no money in the bag.)",
+    "options": [
+     "அல்ல",
+     "இல்லை",
+     "அல்லாது",
+     "இல்லாத"
+    ],
+    "answer": 1,
+    "explanation": "The absence or non-existence of an item in a location is negated with இல்லை."
+   },
+   {
+    "question": "Complete the identity negation: 'அவர் மருத்துவர் ___.' (He is not a doctor.)",
+    "options": [
+     "இல்லாத",
+     "இல்லைக்கு",
+     "அல்ல",
+     "வராது"
+    ],
+    "answer": 2,
+    "explanation": "Denying a nominal category or role ('X is not Y') in formal Tamil uses அல்ல."
+   },
+   {
+    "question": "How do you say 'I did not eat' using the verb infinitive சாப்பிட?",
+    "options": [
+     "நான் சாப்பிட இல்லை.",
+     "நான் சாப்பிட அல்ல.",
+     "நான் சாப்பிடுவது அல்ல.",
+     "நான் சாப்பிட்டான் அல்ல."
+    ],
+    "answer": 0,
+    "explanation": "Verbal past negation is formed with infinitive + இல்லை (சாப்பிடவில்லை / சாப்பிட இல்லை)."
+   },
+   {
+    "question": "What is the primary difference between இல்லை and அல்ல?",
+    "options": [
+     "இல்லை is future, அல்ல is past",
+     "இல்லை negates existence/actions, அல்ல negates noun identity",
+     "இல்லை is only for plurals, அல்ல for singulars",
+     "இல்லை is for questions, அல்ல is for answers"
+    ],
+    "answer": 1,
+    "explanation": "இல்லை marks non-existence, absence, or non-action, whereas அல்ல specifically asserts that a noun is not another noun."
+   }
+  ],
+  "tip": "Simple rule of thumb: If you can replace the sentence with 'There is no...', use இல்லை. If you can rephrase as 'X is not the same as Y', use அல்ல."
+ },
+ {
+  "id": "ta-a1-interrogative-particles",
+  "level": "a1",
+  "category": "questions",
+  "categoryColor": "#3B82F6",
+  "emoji": "❓",
+  "title": "Interrogative Particles (-aa, -ee, -oo)",
+  "subtitle": "Forming questions and expressing doubt with clitics",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Attach the clitic vowel -aa to any word in a sentence to transform it into a polar yes/no question targeting that specific constituent.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Function",
+    "Tamil Suffix Pattern",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-aa (ஆ)",
+      "Polar Question",
+      "அவன் + ஆ = அவனா?",
+      "Is it him?"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ee (ஏ)",
+      "Emphatic Focus",
+      "அவன் + ஏ = அவனே",
+      "He himself / only he"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-oo (ஓ)",
+      "Doubt / Alternative",
+      "அவன் + ஓ = அவனோ?",
+      "Perhaps him?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Yes/No Question Marker",
+    "example": "நீ புத்தகம் வாசித்தாயா?",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Expressing Doubt or Indecision",
+    "example": "அவன் வருவானோ மாட்டானோ?",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Exclusive Emphasis",
+    "example": "நான் மட்டுமே வந்தேன்.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "இது உங்களுடைய வீடா?",
+    "ko": "",
+    "highlight": "வீடா"
+   },
+   {
+    "en": "அவர் ஆசிரியரா?",
+    "ko": "",
+    "highlight": "ஆசிரியரா"
+   },
+   {
+    "en": "இன்றே இந்த வேலையை முடிக்க வேண்டும்.",
+    "ko": "",
+    "highlight": "இன்றே"
+   },
+   {
+    "en": "மழை வருமோ தெரியாது.",
+    "ko": "",
+    "highlight": "வருமோ"
+   },
+   {
+    "en": "நீயா நேற்று பாடினாய்?",
+    "ko": "",
+    "highlight": "நீயா"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "நீ என்ன சாப்பிட்டாயா?",
+    "right": "நீ என்ன சாப்பிட்டாய்?",
+    "note": "Do not attach the yes/no question particle -aa when an interrogative pronoun like 'what' (என்ன) is already present."
+   },
+   {
+    "wrong": "அவன் வருவான் ஆ?",
+    "right": "அவன் வருவானா?",
+    "note": "The particle -aa is a bound clitic and must attach directly to the verb through sandhi rules, not written as an independent word."
+   },
+   {
+    "wrong": "அவளா வந்தாள்?",
+    "right": "அவளா வந்தாள்? / அவள் வந்தாளா?",
+    "note": "Place -aa on the verb for neutral inquiry; attaching it to the subject emphasizes 'Was it SHE who came?'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the question: 'Did you read the book?'",
+    "options": [
+     "நீ புத்தகம் வாசித்தது",
+     "நீ புத்தகம் வாசித்தாய்",
+     "நீ புத்தகம் வாசித்தாயா",
+     "நீ புத்தகம் வாசித்து"
+    ],
+    "answer": 2,
+    "explanation": "The suffix -aa attached to the finite verb வாசித்தாய் produces the question வாசித்தாயா."
+   },
+   {
+    "question": "Identify the word expressing doubt or hesitation: 'Will he come?'",
+    "options": [
+     "வருவானோ",
+     "வருவானா",
+     "வருவானே",
+     "வருவான்"
+    ],
+    "answer": 0,
+    "explanation": "The suffix -oo expresses doubt, uncertainty, or wonder."
+   },
+   {
+    "question": "Select the sentence meaning 'Is this tea?'",
+    "options": [
+     "இது தேநீர்",
+     "இது தேநீரோ",
+     "இது தேநீரே",
+     "இது தேநீரா"
+    ],
+    "answer": 3,
+    "explanation": "Adding -aa to தேநீர் (tea) yields the direct yes/no interrogative தேநீரா."
+   },
+   {
+    "question": "Which sentence means 'Only today did I see him'?",
+    "options": [
+     "இன்றா அவனைப் பார்த்தேன்",
+     "இன்றே அவனைப் பார்த்தேன்",
+     "இன்றோ அவனைப் பார்த்தேன்",
+     "இன்று அவனைப் பார்த்தேன்"
+    ],
+    "answer": 1,
+    "explanation": "The clitic -ee attached to இன்று (today) forms the emphatic இன்றே (only today/this very day)."
+   }
+  ],
+  "tip": "Whichever word gets the -aa suffix becomes the exact focus of your question. Attach it to the verb for a general question, or to the subject/object to ask 'Is it THAT one?'."
+ },
+ {
+  "id": "ta-a2-verbal-participle-vinaiyeccam",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔗",
+  "title": "Verbal Participle (Vinaiyeccam)",
+  "subtitle": "Chaining sequential actions by the same subject",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "The verbal participle (வினைஎச்சம்) replaces finite verb endings to link chronological actions sharing one grammatical subject, leaving only the final verb fully conjugated.",
+  "structure": {
+   "headers": [
+    "Verb Class",
+    "Root",
+    "Participle Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Weak Class (I)",
+      "செய் (do)",
+      "செய்து",
+      "having done"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Weak Class (III)",
+      "எழுது (write)",
+      "எழுதி",
+      "having written"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Strong Class (VI)",
+      "படி (read/study)",
+      "படித்து",
+      "having read/studied"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Strong Class (VII)",
+      "நட (walk)",
+      "நடந்து",
+      "having walked"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Chaining Chronological Actions",
+    "example": "கண்ணன் கடைக்குச் சென்று பழங்கள் வாங்கினான்.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Manner or Adverbial Meaning",
+    "example": "அவள் சிரித்து பேசினாள்.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Compound Aspect Formation",
+    "example": "நான் சாப்பிட்டு முடித்தேன்.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "அம்மா சமைத்து பரிமாறினார்.",
+    "ko": "",
+    "highlight": "சமைத்து"
+   },
+   {
+    "en": "மாணவன் பாடம் படித்து எழுதினான்.",
+    "ko": "",
+    "highlight": "படித்து"
+   },
+   {
+    "en": "நாங்கள் வீட்டிற்குப் போய் தூங்கினோம்.",
+    "ko": "",
+    "highlight": "போய்"
+   },
+   {
+    "en": "தண்ணீர் குடித்துவிட்டு வா.",
+    "ko": "",
+    "highlight": "குடித்து"
+   },
+   {
+    "en": "அவன் ஓடி வந்தான்.",
+    "ko": "",
+    "highlight": "ஓடி"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "நான் உண்டேன் மற்றும் தூங்கினேன்.",
+    "right": "நான் உண்டு தூங்கினேன்.",
+    "note": "Avoid using 'மற்றும்' (and) to connect sequential verbs; Tamil uses the verbal participle (vinaiyeccam)."
+   },
+   {
+    "wrong": "அவன் வந்து நான் போனேன்.",
+    "right": "அவன் வர நான் போனேன்.",
+    "note": "The verbal participle requires the same subject for all linked verbs. Use the infinitive or a conditional clause when the subject changes."
+   },
+   {
+    "wrong": "அவள் படித்துவிட்டாள் போனாள்.",
+    "right": "அவள் படித்துவிட்டுப் போனாள்.",
+    "note": "Do not leave a finite verb in the middle of a clause chain; retain the participial form until the clause concludes."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Chain the verbs: 'Having come home, he ate' (வா + சாப்பிட்டான்).",
+    "options": [
+     "வந்து சாப்பிட்டான்",
+     "வருகிறது சாப்பிட்டான்",
+     "வந்தான் சாப்பிட்டான்",
+     "வர சாப்பிட்டான்"
+    ],
+    "answer": 0,
+    "explanation": "The verbal participle of வா (come) is வந்து, creating the sequential chain வந்து சாப்பிட்டான்."
+   },
+   {
+    "question": "Complete the sequence: 'அவள் கடிதம் ___ தபாலில் சேர்த்தாள்.' (She wrote a letter and posted it)",
+    "options": [
+     "எழுதும்",
+     "எழுதி",
+     "எழுதினாள்",
+     "எழுது"
+    ],
+    "answer": 1,
+    "explanation": "எழுதி is the verbal participle of எழுது (write), linking the sequential actions of writing and posting."
+   },
+   {
+    "question": "What is the verbal participle form of the strong verb பார் (see)?",
+    "options": [
+     "பார்த்தான்",
+     "பார்த்து",
+     "பார்த்த",
+     "பார்க்க"
+    ],
+    "answer": 1,
+    "explanation": "Strong verbs take -த்து to form the verbal participle: பார் + த்து = பார்த்து."
+   },
+   {
+    "question": "Which sentence correctly chains multiple actions?",
+    "options": [
+     "அவன் எழுந்து முகம் கழுவி சாப்பிட்டான்",
+     "அவன் எழுந்தான் முகம் கழுவினான் சாப்பிட்டான்",
+     "அவன் எழுகிறது முகம் கழுவுகிறது சாப்பிட்டான்",
+     "அவன் எழுந்த முகம் கழுவிய சாப்பிட்டான்"
+    ],
+    "answer": 0,
+    "explanation": "Only the final verb takes finite tense/gender markers, while all prior verbs take participial forms (எழுந்து, கழுவி)."
+   }
+  ],
+  "tip": "To form the verbal participle quickly, take the past tense form of any verb and remove the final personal pronoun ending (e.g., படித்தான் minus ஆன் = படித்து)."
+ },
+ {
+  "id": "ta-a2-infinitive-uses",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#F59E0B",
+  "emoji": "🎯",
+  "title": "Infinitive Suffix (-a) and Clause Linking",
+  "subtitle": "Purposive actions, simultaneous events, and verbal complements",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "The infinitive suffix -a attaches to verbal roots to indicate purpose, trigger auxiliary verbs, or signal simultaneous background actions as an event unfolds.",
+  "structure": {
+   "headers": [
+    "Verb Class",
+    "Infinitive Suffix",
+    "Tamil Root & Infinitive",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Weak Class (I)",
+      "-a",
+      "செய் + அ = செய்ய",
+      "to do"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Weak Class (III)",
+      "-a",
+      "பாடு + அ = பாட",
+      "to sing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Strong Class (VI)",
+      "-kka",
+      "படி + க்க = படிக்க",
+      "to study / to read"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Strong Class (VII)",
+      "-kka",
+      "இரு + க்க = இருக்க",
+      "to be"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Expressing Purpose (In order to)",
+    "example": "அவள் புத்தகம் வாங்க கடைக்குச் சென்றாள்.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Simultaneous / Concomitant Action",
+    "example": "மணி அடிக்க மாணவர்கள் வகுப்பிற்குள் நுழைந்தனர்.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Complements for Auxiliaries",
+    "example": "அவன் வேகமாக ஓடத் தொடங்கினான்.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "நான் தமிழ் கற்க விரும்புகிறேன்.",
+    "ko": "",
+    "highlight": "கற்க"
+   },
+   {
+    "en": "அம்மா வர தம்பி மகிழ்ந்தான்.",
+    "ko": "",
+    "highlight": "வர"
+   },
+   {
+    "en": "அவர்கள் விளையாட மைதானத்திற்குச் சென்றார்கள்.",
+    "ko": "",
+    "highlight": "விளையாட"
+   },
+   {
+    "en": "மழை பெய்ய வீதிகள் நனைந்தன.",
+    "ko": "",
+    "highlight": "பெய்ய"
+   },
+   {
+    "en": "அவனை உள்ளே வரச் சொல்.",
+    "ko": "",
+    "highlight": "வர"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "நான் படிக்காகப் போகிறேன்.",
+    "right": "நான் படிக்கப் போகிறேன்.",
+    "note": "Do not attach the dative suffix -aaga to the infinitive to express purpose; the bare infinitive itself already denotes 'in order to'."
+   },
+   {
+    "wrong": "அவன் பாடு தொடங்கினான்.",
+    "right": "அவன் பாடத் தொடங்கினான்.",
+    "note": "Auxiliary verbs like தொடங்கு (begin) must attach to the infinitive form பாட, never the bare imperative root."
+   },
+   {
+    "wrong": "நான் பார்க்க வந்தேன் (for weak root).",
+    "right": "நான் செய்ய வந்தேன்.",
+    "note": "Ensure correct sandhi: weak verbs take -a directly, while strong verbs take -kka."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank for purpose: 'அவன் பழங்கள் ___ கடைக்குச் சென்றான்.' (to buy)",
+    "options": [
+     "வாங்கிய",
+     "வாங்க",
+     "வாங்கி",
+     "வாங்குவான்"
+    ],
+    "answer": 1,
+    "explanation": "The infinitive வாங்க expresses the purpose of going to the shop ('in order to buy')."
+   },
+   {
+    "question": "Choose the simultaneous clause: 'As the sun rose, the birds sang.'",
+    "options": [
+     "சூரியன் உதயமாகப் பறவைகள் பாடின",
+     "சூரியன் உதயம் பறவைகள் பாடின",
+     "சூரியன் உதயமானது பறவைகள் பாடின",
+     "சூரியன் உதயமாய் பறவைகள் பாடின"
+    ],
+    "answer": 0,
+    "explanation": "The infinitive suffix on the verb denotes concurrent action (as/while the sun was rising)."
+   },
+   {
+    "question": "What is the infinitive form of the strong verb கேள் (listen/ask)?",
+    "options": [
+     "கேட்க",
+     "கேட்டு",
+     "கேட்ட",
+     "கேள"
+    ],
+    "answer": 0,
+    "explanation": "The strong verb கேள் forms its infinitive with the suffix -kka, becoming கேட்க via morphophonemic sound change."
+   },
+   {
+    "question": "Identify the infinitive in: 'நாங்கள் பாடம் கற்க பள்ளிக்குச் சென்றோம்.'",
+    "options": [
+     "பள்ளிக்குச்",
+     "சென்றோம்",
+     "கற்க",
+     "பாடம்"
+    ],
+    "answer": 2,
+    "explanation": "கற்க (to learn) is the infinitive form of the root கல்."
+   }
+  ],
+  "tip": "Unlike the verbal participle, the infinitive can easily accommodate a change of subject between the dependent clause and the main clause."
+ },
+ {
+  "id": "ta-a2-modal-auxiliaries-veendum-mudiyum",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#8B5CF6",
+  "emoji": "⚖️",
+  "title": "Modal Auxiliaries (veendum, mudiyum, koodaadhu)",
+  "subtitle": "Obligation, ability, and prohibition with dative/nominative subjects",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Modals like வேண்டும் (must/need) and முடியும் (can) require the main verb to be in the infinitive and typically trigger a dative case subject (-ukku).",
+  "structure": {
+   "headers": [
+    "Modal Form",
+    "Grammatical Function",
+    "Subject Case Required",
+    "Example Phrase"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "வேண்டும் (veendum)",
+      "Obligation / Need (Must)",
+      "Dative (-ukku)",
+      "எனக்கு வர வேண்டும்"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "வேண்டாம் (veendaam)",
+      "Negative Obligation (Need not)",
+      "Dative (-ukku)",
+      "எனக்கு வர வேண்டாம்"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "முடியும் (mudiyum)",
+      "Ability / Potential (Can)",
+      "Dative (-ukku)",
+      "என்னால் / எனக்கு செய்ய முடியும்"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "கூடாது (koodaadhu)",
+      "Prohibition (Must not)",
+      "Nominative or Dative",
+      "பொய் சொல்லக் கூடாது"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Expressing Necessity",
+    "example": "தம்பிக்கு மருந்து கொடுக்க வேண்டும்.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Physical or Mental Ability",
+    "example": "என்னால் வேகமாக ஓட முடியும்.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Strict Prohibition",
+    "example": "இங்கே புகைபிடிக்கக் கூடாது.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "நான் நாளை வர வேண்டும்.",
+    "ko": "",
+    "highlight": "வர வேண்டும்"
+   },
+   {
+    "en": "உங்களுக்கு தமிழ் பேச முடியுமா?",
+    "ko": "",
+    "highlight": "பேச முடியுமா"
+   },
+   {
+    "en": "நீங்கள் அங்கே போகக் கூடாது.",
+    "ko": "",
+    "highlight": "போகக் கூடாது"
+   },
+   {
+    "en": "எனக்கு அந்தப் புத்தகம் வேண்டாம்.",
+    "ko": "",
+    "highlight": "வேண்டாம்"
+   },
+   {
+    "en": "அவனால் இந்த எடையைத் தூக்க முடியும்.",
+    "ko": "",
+    "highlight": "தூக்க முடியும்"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "நான் படிக்க வேண்டும்.",
+    "right": "எனக்கு படிக்க வேண்டும். / நான் படிக்க வேண்டும்.",
+    "note": "While colloquial Tamil often uses nominative with வேண்டும், formal Tamil strictly favors the dative case (எனக்கு) for the experiencer."
+   },
+   {
+    "wrong": "அவன் எழுத முடியும்.",
+    "right": "அவனால் எழுத முடியும். / அவனுக்கு எழுத முடியும்.",
+    "note": "முடியும் requires either the instrumental case (-aal) or dative case (-ukku) on the agent of ability."
+   },
+   {
+    "wrong": "நீ பேச கூடாது.",
+    "right": "நீ பேசக் கூடாது.",
+    "note": "Remember to apply the sandhi rule: the infinitive ending in -a geminates the following stop consonant (க்) before கூடாது."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the prohibition: 'Students must not run inside the library.' -> 'மாணவர்கள் நூலகத்தினுள் ___.'",
+    "options": [
+     "ஓட முடியாது",
+     "ஓட வேண்டாம்",
+     "ஓடக் கூடாது",
+     "ஓட வேண்டும்"
+    ],
+    "answer": 2,
+    "explanation": "கூடாது attached to the infinitive (ஓடக் கூடாது) expresses moral or rule-based prohibition ('must not')."
+   },
+   {
+    "question": "Select the ability form: 'Can you speak English?'",
+    "options": [
+     "உங்களால் ஆங்கிலம் பேச முடியுமா?",
+     "நீங்கள் ஆங்கிலம் பேசுங்கள்?",
+     "உங்களுக்கு ஆங்கிலம் பேச வேண்டும்?",
+     "உங்களால் ஆங்கிலம் பேசக் கூடாதா?"
+    ],
+    "answer": 0,
+    "explanation": "Instrumental pronoun உங்களால் + infinitive பேச + modal interrogative முடியுமா forms 'Can you speak?'."
+   },
+   {
+    "question": "Which sentence means 'I must study now'?",
+    "options": [
+     "நான் இப்போது படிக்க மாட்டேன்",
+     "எனக்கு இப்போது படிக்க வேண்டும்",
+     "எனக்கு இப்போது படிக்க முடியாது",
+     "எனக்கு இப்போது படிக்க வேண்டாம்"
+    ],
+    "answer": 1,
+    "explanation": "The modal வேண்டும் preceded by the infinitive படிக்க marks absolute necessity or obligation."
+   },
+   {
+    "question": "Express refusal or non-necessity: 'You do not need to come.'",
+    "options": [
+     "நீ வரலாம்",
+     "நீ வர வேண்டும்",
+     "நீ வரக் கூடும்",
+     "நீ வர வேண்டாம்"
+    ],
+    "answer": 3,
+    "explanation": "வேண்டாம் is the negative counterpart of வேண்டும், signifying 'need not' or 'do not'."
+   }
+  ],
+  "tip": "Pair the modal with an infinitive for actions (படிக்க வேண்டும் = must read), or attach it directly to a noun to express desire for an object (எனக்கு காப்பி வேண்டும் = I want coffee)."
+ },
+ {
+  "id": "ta-a2-locative-and-sociative-cases",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#EC4899",
+  "emoji": "📍",
+  "title": "Locative (-il, -idam) and Sociative (-oodu, -udan) Cases",
+  "subtitle": "Spatial presence, personal custody, and company markers",
+  "color": "#BE185D",
+  "bg": "#FDF2F8",
+  "keyPoint": "Use -il for inanimate physical locations but -idam for animate beings/custody, and use -oodu/-udan to denote association and accompaniment.",
+  "structure": {
+   "headers": [
+    "Case",
+    "Suffix",
+    "Noun Class",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Locative (Inanimate)",
+      "-il (-இல்)",
+      "Places / Inanimate objects",
+      "வீட்டில் (in the house)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Locative (Animate)",
+      "-idam (-இடம்)",
+      "Humans / Animals",
+      "அவனிடம் (with/at him)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Sociative (Informal)",
+      "-oodu (-ஓடு)",
+      "All nouns (Accompaniment)",
+      "அப்பாவோடு (with father)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Sociative (Formal)",
+      "-udan (-உடன்)",
+      "All nouns (Accompaniment)",
+      "நண்பனுடன் (with a friend)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EC4899",
+    "label": "Physical Location (Inanimate)",
+    "example": "மேசையின் மேல் புத்தகம் இருக்கிறது.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Personal Possession or Custody",
+    "example": "ஆசிரியரிடம் பேனா இருக்கிறது.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Mutual Accompaniment (Sociative)",
+    "example": "நான் என் தம்பியோடு கடைக்குச் சென்றேன்.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "அவனிடம் பணம் இருக்கிறது.",
+    "ko": "",
+    "highlight": "அவனிடம்"
+   },
+   {
+    "en": "பறவைகள் மரத்தில் அமர்ந்தன.",
+    "ko": "",
+    "highlight": "மரத்தில்"
+   },
+   {
+    "en": "நான் தாயுடன் கோவிலுக்குச் சென்றேன்.",
+    "ko": "",
+    "highlight": "தாயுடன்"
+   },
+   {
+    "en": "உன்னோடு யார் பேசினார்கள்?",
+    "ko": "",
+    "highlight": "உன்னோடு"
+   },
+   {
+    "en": "புத்தகம் பையில் உள்ளது.",
+    "ko": "",
+    "highlight": "பையில்"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "அவனில் பேனா இருக்கிறது.",
+    "right": "அவனிடம் பேனா இருக்கிறது.",
+    "note": "Never attach the inanimate locative -il to animate beings; always use -idam for persons or living entities."
+   },
+   {
+    "wrong": "நான் நண்பன் உடன் சென்றேன்.",
+    "right": "நான் நண்பனுடன் சென்றேன்.",
+    "note": "The sociative suffix -udan is a bound inflectional suffix and must fuse phonologically with the base noun."
+   },
+   {
+    "wrong": "வீட்டிடம் புத்தகம் உள்ளது.",
+    "right": "வீட்டில் புத்தகம் உள்ளது.",
+    "note": "Do not attach -idam to static places or buildings; use -il for inanimate spatial locations."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct form: 'The key is with the teacher.'",
+    "options": [
+     "ஆசிரியர்மேல் சாவி உள்ளது",
+     "ஆசிரியருடன் சாவி உள்ளது",
+     "ஆசிரியரிடம் சாவி உள்ளது",
+     "ஆசிரியரில் சாவி உள்ளது"
+    ],
+    "answer": 2,
+    "explanation": "The animate locative suffix -idam is mandatory when referring to something being in a person's custody or possession."
+   },
+   {
+    "question": "Fill in the blank: 'மீன்கள் ___ வாழ்கின்றன.' (Fishes live in water)",
+    "options": [
+     "நீரிடம்",
+     "நீருடன்",
+     "நீரில்",
+     "நீரோடு"
+    ],
+    "answer": 2,
+    "explanation": "Water is an inanimate substance, requiring the inanimate locative suffix -il (நீரில்)."
+   },
+   {
+    "question": "Which sentence means 'I went with my sister'?",
+    "options": [
+     "நான் தங்கையுடன் சென்றேன்",
+     "நான் தங்கையிடம் சென்றேன்",
+     "நான் தங்கையில் சென்றேன்",
+     "நான் தங்கை சென்றேன்"
+    ],
+    "answer": 0,
+    "explanation": "Accompaniment ('together with') is expressed by the sociative marker -udan / -oodu, giving தங்கையுடன்."
+   },
+   {
+    "question": "Select the correct phrase for 'Do you have money with you?'",
+    "options": [
+     "உன்னிடம் பணம் இருக்கிறதா?",
+     "உன்னில் பணம் இருக்கிறதா?",
+     "உன்னோடு பணம் இருக்கிறதா?",
+     "உன்னுடன் பணம் இருக்கிறதா?"
+    ],
+    "answer": 0,
+    "explanation": "Personal custody ('on your person') requires the animate locative suffix -idam on the second-person base, yielding உன்னிடம்."
+   }
+  ],
+  "tip": "Think of -il as 'inside/at a place' and -idam as 'on one's person/in someone's possession'. Never mix them up across human and non-human boundaries!"
+ },
+ {
+  "id": "ta-a2-relative-participle-peyareccam",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔗",
+  "title": "Relative Participle (Peyareccam)",
+  "subtitle": "Connecting verbs to nouns to form relative clauses in Tamil",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Tamil forms relative clauses by dropping the personal ending from a tensed verb to create an adjectival participle ending in '-a' that directly precedes the noun it modifies.",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Participle Form",
+    "Example with Noun",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Past",
+      "செய்த",
+      "செய்த வேலை",
+      "The work that (someone) did"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Present",
+      "செய்கிற",
+      "செய்கிற பையன்",
+      "The boy who does"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Future",
+      "செய்யும்",
+      "செய்யும் செயல்",
+      "The action that will be done"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative",
+      "செய்யாத",
+      "செய்யாத காரியம்",
+      "The deed that was/is not done"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Past Modifier",
+    "example": "நேற்று வந்த மனிதர் ஆசிரியர்.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Present Action Modifier",
+    "example": "பாடுகிற பெண் என் தங்கை.",
+    "translation": ""
+   },
+   {
+    "color": "#818CF8",
+    "label": "Negative Modifier",
+    "example": "படிக்காத பாடம் எனக்குத் தெரியாது.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "நேற்று வந்த நபர் என் நண்பர்.",
+    "ko": "",
+    "highlight": "வந்த"
+   },
+   {
+    "en": "அங்கே ஓடுகிற நாய் யாருடையது?",
+    "ko": "",
+    "highlight": "ஓடுகிற"
+   },
+   {
+    "en": "நாளை வரும் பேருந்து எது?",
+    "ko": "",
+    "highlight": "வரும்"
+   },
+   {
+    "en": "அவன் வாங்கிய புத்தகம் எங்கே?",
+    "ko": "",
+    "highlight": "வாங்கிய"
+   },
+   {
+    "en": "பேசாத குழந்தை அழ ஆரம்பித்தது.",
+    "ko": "",
+    "highlight": "பேசாத"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "அவன் பார்த்தான் படம் நல்ல படம்.",
+    "right": "அவன் பார்த்த படம் நல்ல படம்.",
+    "note": "Do not keep the personal finite ending (-ஆன்) when qualifying a noun; use the participle form (-அ)."
+   },
+   {
+    "wrong": "வந்த மனிதன் யார் என்று எனக்குத் தெரியும் ஆனால் மனிதன் வந்தார்.",
+    "right": "வந்த மனிதன் என் தந்தை.",
+    "note": "Relative clauses precede the modified noun directly without standalone pronouns like English 'who' or 'which'."
+   },
+   {
+    "wrong": "எழுதின புத்தகம்",
+    "right": "எழுதிய புத்தகம்",
+    "note": "Use standard literary relative participles like எழுதிய rather than colloquial spoken truncations in formal writing."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which word completes: 'நேற்று காபி ___ நபர் யார்?' (The person who drank coffee yesterday)",
+    "options": [
+     "குடித்த",
+     "குடித்தார்",
+     "குடிக்கிறான்",
+     "குடிப்பான்"
+    ],
+    "answer": 0,
+    "explanation": "To modify 'நபர்' with a past action, use the past relative participle 'குடித்த' (who drank)."
+   },
+   {
+    "question": "Choose the present relative participle to complete: 'மேடையில் ___ பெண் அருமையாகப் பாடுகிறாள்.' (The girl who is singing on stage)",
+    "options": [
+     "பாடிய",
+     "பாடுகிற",
+     "பாடும்",
+     "பாடாத"
+    ],
+    "answer": 1,
+    "explanation": "'பாடுகிற' is the present relative participle indicating an ongoing action modifying 'பெண்'."
+   },
+   {
+    "question": "Identify the correct future relative participle in: 'அடுத்த வாரம் ___ விழா மிகச் சிறப்பானது.'",
+    "options": [
+     "நடந்த",
+     "நடக்கிற",
+     "நடவாத",
+     "நடக்கும்"
+    ],
+    "answer": 3,
+    "explanation": "Future relative participles generally end in -உம் (-um), making 'நடக்கும்' the correct form for 'the festival that will happen'."
+   },
+   {
+    "question": "Select the negative relative participle for: 'பொய் ___ மனிதன் நல்லவன்.' (A person who does not speak lies)",
+    "options": [
+     "சொல்லுகிற",
+     "சொல்லிய",
+     "சொல்லாத",
+     "சொல்லும்"
+    ],
+    "answer": 2,
+    "explanation": "The negative adjectival participle ends in -ஆத (-aadha), yielding 'சொல்லாத' (who does not speak)."
+   }
+  ],
+  "tip": "Tamil has no relative pronouns like 'who', 'which', or 'that'—simply turn the verb into an adjectival participle and place it immediately before the head noun."
+ },
+ {
+  "id": "ta-a2-postpositions-and-genitive",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "📍",
+  "title": "Genitive Case and Postpositional Stems",
+  "subtitle": "Spatial and directional relationships using oblique cases",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Postpositions in Tamil attach to the genitive or oblique stem of nouns rather than following base nominative nouns.",
+  "structure": {
+   "headers": [
+    "Postposition",
+    "Meaning",
+    "Combined with Noun",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "மேலே",
+      "On / Above",
+      "மேசையின் மேலே",
+      "On the table"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "கீழே",
+      "Under / Below",
+      "மரத்தின் கீழே",
+      "Under the tree"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "முன்னால்",
+      "In front of",
+      "வீட்டின் முன்னால்",
+      "In front of the house"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "உள்ளே",
+      "Inside",
+      "அறையின் உள்ளே",
+      "Inside the room"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Location Above",
+    "example": "புத்தகம் மேசையின் மேலே இருக்கிறது.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Location Below",
+    "example": "பூனை கட்டிலின் கீழே தூங்குகிறது.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Spatial Position In Front",
+    "example": "கோவிலின் முன்னால் பெரிய மரம் உள்ளது.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "பறவை கூரையின் மேலே உட்கார்ந்தது.",
+    "ko": "",
+    "highlight": "கூரையின் மேலே"
+   },
+   {
+    "en": "நாற்காலியின் கீழே பந்து இருக்கிறது.",
+    "ko": "",
+    "highlight": "நாற்காலியின் கீழே"
+   },
+   {
+    "en": "பள்ளிக்கு முன்னால் தோட்டம் இருக்கிறது.",
+    "ko": "",
+    "highlight": "முன்னால்"
+   },
+   {
+    "en": "வீட்டின் பின்னால் தோட்டம் அமைந்தது.",
+    "ko": "",
+    "highlight": "வீட்டின் பின்னால்"
+   },
+   {
+    "en": "அறையின் உள்ளே வெளிச்சம் இல்லை.",
+    "ko": "",
+    "highlight": "அறையின் உள்ளே"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "மேசை மேலே புத்தகம் இருக்கிறது.",
+    "right": "மேசையின் மேலே புத்தகம் இருக்கிறது.",
+    "note": "Nouns ending in -ai must take the genitive marker -in (-இன்) before spatial postpositions."
+   },
+   {
+    "wrong": "மரம் கீழே உட்கார்ந்தான்.",
+    "right": "மரத்தின் கீழே உட்கார்ந்தான்.",
+    "note": "Nouns ending in -am form their oblique stem with -த்து- (-attu-) before taking postpositions."
+   },
+   {
+    "wrong": "என் உடைய வீடு",
+    "right": "என்னுடைய வீடு",
+    "note": "The genitive suffix -உடைய (-udaiya) attaches directly to the oblique pronoun stem 'என்' to form 'என்னுடைய'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase for 'under the tree': 'நாய் ___ படுத்திருக்கிறது.'",
+    "options": [
+     "மரத்தின் கீழே",
+     "மரம் கீழே",
+     "மரத்திற்கு கீழே",
+     "மரத்தில் கீழே"
+    ],
+    "answer": 0,
+    "explanation": "'மரம்' takes the oblique inflected stem 'மரத்து' + genitive 'இன்' -> 'மரத்தின்', followed by 'கீழே'."
+   },
+   {
+    "question": "Which form correctly translates 'inside the house'?",
+    "options": [
+     "வீடு உள்ளே",
+     "வீட்டின் உள்ளே",
+     "வீட்டுக்கு உள்ளே",
+     "வீட்டால் உள்ளே"
+    ],
+    "answer": 1,
+    "explanation": "'வீடு' forms its oblique genitive as 'வீட்டின்' before postpositions like 'உள்ளே'."
+   },
+   {
+    "question": "Fill the blank: 'ஆசிரியர் பள்ளிக்கு ___ நிற்கிறார்.' (In front of)",
+    "options": [
+     "மேலே",
+     "கீழே",
+     "முன்னால்",
+     "உள்ளே"
+    ],
+    "answer": 2,
+    "explanation": "'முன்னால்' means 'in front of' and naturally pairs with dative or genitive noun stems."
+   },
+   {
+    "question": "Select the correct genitive possession: 'இது ___ புத்தகம்.' (my)",
+    "options": [
+     "நான்",
+     "என்னை",
+     "எனக்கு",
+     "என்னுடைய"
+    ],
+    "answer": 3,
+    "explanation": "'என்னுடைய' is the possessive/genitive form for 'my'."
+   }
+  ],
+  "tip": "Neuter nouns ending in -am (like மரம் or பாடம்) always change -am to -attu (மரத்து/பாடத்து) before adding case endings or postpositions."
+ },
+ {
+  "id": "ta-b1-conditional-forms-aal-and-vittaal",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#D97706",
+  "emoji": "🌿",
+  "title": "Conditional Forms (-aal) and Concessives (-aalum)",
+  "subtitle": "Expressing 'if' and 'even if' structures in Tamil",
+  "color": "#B45309",
+  "bg": "#FFFBEB",
+  "keyPoint": "Attach the suffix '-aal' to the past tense stem of any verb to form 'if', and add '-um' to form '-aalum' for 'even if'.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Suffix",
+    "Example Verb",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Conditional",
+      "-ஆல் (-aal)",
+      "மழை பெய்தால்",
+      "If it rains"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negative Cond.",
+      "-விட்டால் (-vittaal)",
+      "படிக்காவிட்டால்",
+      "If (one) does not study"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Concessive",
+      "-ஆலும் (-aalum)",
+      "மழை பெய்தாலும்",
+      "Even if it rains"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Concess.",
+      "-விட்டாலும் (-vittaalum)",
+      "வராவிட்டாலும்",
+      "Even if (one) does not come"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#B45309",
+    "label": "Real Condition",
+    "example": "நீ வந்தால் நான் மகிழ்ச்சி அடைவேன்.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Concessive (Even If)",
+    "example": "அவன் படித்தாலும் தேர்ச்சி பெறவில்லை.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Negative Condition",
+    "example": "நேரத்திற்கு வராவிட்டால் பேருந்து போய்விடும்.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "நன்றாகப் படித்தால் நல்ல மதிப்பெண் பெறலாம்.",
+    "ko": "",
+    "highlight": "படித்தால்"
+   },
+   {
+    "en": "அவர் கூப்பிட்டால் நான் உடனே போவேன்.",
+    "ko": "",
+    "highlight": "கூப்பிட்டால்"
+   },
+   {
+    "en": "வேகமாக ஓடினாலும் இரயிலைப் பிடிக்க முடியாது.",
+    "ko": "",
+    "highlight": "ஓடினாலும்"
+   },
+   {
+    "en": "மருந்து சாப்பிட்டால் நோய் குணமாகும்.",
+    "ko": "",
+    "highlight": "சாப்பிட்டால்"
+   },
+   {
+    "en": "நீ கேட்காவிட்டால் உண்மை தெரியாது.",
+    "ko": "",
+    "highlight": "கேட்காவிட்டால்"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "நீ வருவாய் என்றால் நான் வருவேன்.",
+    "right": "நீ வந்தால் நான் வருவேன்.",
+    "note": "While 'என்றால்' exists, the synthetic suffix '-ஆல்' directly affixed to the past stem is the standard native conditional."
+   },
+   {
+    "wrong": "படிக்கிறான் ஆனால் தேர்ச்சி பெறவில்லை.",
+    "right": "படித்தாலும் தேர்ச்சி பெறவில்லை.",
+    "note": "Use the concessive '-ஆலும்' attached to the past verb stem to express 'even though/even if' smoothly."
+   },
+   {
+    "wrong": "மழை பெய்யதால் குடை எடு.",
+    "right": "மழை பெய்தால் குடை எடு.",
+    "note": "Conditional is '-தால்/-ஆல்' on the past stem (பெய்தால்), not casual causal forms."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the conditional: 'நன்றாக உழைத்___ வெற்றி பெறலாம்.' (If you work hard)",
+    "options": [
+     "தால்",
+     "தாலும்",
+     "தார்கள்",
+     "ததால்"
+    ],
+    "answer": 0,
+    "explanation": "Attaching -தால் (-thaal) to the past stem 'உழைத்-' creates the conditional 'if you work hard'."
+   },
+   {
+    "question": "Which form expresses 'even if he runs'?",
+    "options": [
+     "ஓடினால்",
+     "ஓடினாலும்",
+     "ஓடினான்",
+     "ஓடாததால்"
+    ],
+    "answer": 1,
+    "explanation": "Adding -உம் to the conditional produces the concessive suffix '-ஆலும்' (ஓடினாலும் = even if one runs)."
+   },
+   {
+    "question": "Choose the correct negative conditional: 'நீ உண்மை ___ உன்னை யாரும் நம்ப மாட்டார்கள்.' (If you don't speak)",
+    "options": [
+     "பேசினால்",
+     "பேசினாலும்",
+     "பேசாவிட்டால்",
+     "பேசியதால்"
+    ],
+    "answer": 2,
+    "explanation": "'பேசாவிட்டால்' combines the negative stem with 'விட்டால்' to mean 'if one does not speak'."
+   },
+   {
+    "question": "Choose the correct ending for: 'நீ அழைத்___ நான் வருவேன்.' (If you invite)",
+    "options": [
+     "தாலும்",
+     "தவன்",
+     "தது",
+     "தால்"
+    ],
+    "answer": 3,
+    "explanation": "Past stem அழைத்- + ஆல் produces அழைத்தால் (if you invite)."
+   }
+  ],
+  "tip": "Always build the conditional from the past tense stem: செய் (root) -> செய்த்- (past stem) -> செய்தால் (if you do)."
+ },
+ {
+  "id": "ta-b1-aspectual-auxiliaries",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#DC2626",
+  "emoji": "⚙️",
+  "title": "Aspectual Auxiliaries (vitu, kol, vai)",
+  "subtitle": "Expressing completion, reflexivity, and deliberate preparation",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "Auxiliary verbs attach to the verbal participle (adverbial participle) of the main verb to indicate nuanced aspects such as total completion, self-benefit, or premeditation.",
+  "structure": {
+   "headers": [
+    "Auxiliary",
+    "Primary Meaning",
+    "Combined Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "விடு (vitu)",
+      "Completion / Finality",
+      "சாப்பிட்டுவிட்டான்",
+      "He has eaten up completely"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "கொள் (kol)",
+      "Reflexive / Continuous",
+      "செய்து கொண்டிருக்கிறான்",
+      "He is doing (for himself/ongoing)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "வை (vai)",
+      "Premeditation / Future use",
+      "எழுதி வைத்தேன்",
+      "I wrote it down (for later reference)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "போடு (pootu)",
+      "Haste / Recklessness",
+      "முடித்துப்போட்டான்",
+      "He finished it off abruptly"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#B91C1C",
+    "label": "Definite Completion",
+    "example": "அவன் வேலையை முடித்துவிட்டான்.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Self-directed Action",
+    "example": "அவள் சேலை கட்டிக்கொண்டாள்.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Deliberate Advance Action",
+    "example": "நான் பணத்தை எடுத்து வைத்தேன்.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "நாங்கள் உணவை உண்டுவிட்டோம்.",
+    "ko": "",
+    "highlight": "உண்டுவிட்டோம்"
+   },
+   {
+    "en": "குழந்தை தானாகவே உடுத்திக்கொண்டது.",
+    "ko": "",
+    "highlight": "உடுத்திக்கொண்டது"
+   },
+   {
+    "en": "முகவரியைக் குறிப்பில் எழுதி வைத்தேன்.",
+    "ko": "",
+    "highlight": "எழுதி வைத்தேன்"
+   },
+   {
+    "en": "அவன் பழைய காகிதங்களைக் கிழித்துப் போட்டான்.",
+    "ko": "",
+    "highlight": "கிழித்துப் போட்டான்"
+   },
+   {
+    "en": "பேருந்து புறப்பட்டுவிட்டது.",
+    "ko": "",
+    "highlight": "புறப்பட்டுவிட்டது"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "சாப்பிடு விட்டான்",
+    "right": "சாப்பிட்டுவிட்டான்",
+    "note": "Auxiliary verbs must attach to the verbal participle (சாப்பிட்டு), never directly to the bare verbal root."
+   },
+   {
+    "wrong": "பார்த்துக்கொண்டது பையன்.",
+    "right": "பையன் பார்த்துக்கொண்டான்.",
+    "note": "The auxiliary verb carries the final subject agreement marker; it must agree with the subject in gender and number."
+   },
+   {
+    "wrong": "வைத்து எழுதினான்",
+    "right": "எழுதி வைத்தான்",
+    "note": "The auxiliary verb must follow the main verbal participle, not precede it."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which auxiliary indicates that an action was finished decisively and completely?",
+    "options": [
+     "விடு",
+     "கொள்",
+     "இரு",
+     "பார்"
+    ],
+    "answer": 0,
+    "explanation": "The auxiliary verb 'விடு' (vitu) conveys conclusive, definitive completion."
+   },
+   {
+    "question": "Choose the reflexive/continuous auxiliary to complete: 'அவன் பாடம் படித்துக் ___ இருக்கிறான்.'",
+    "options": [
+     "கொண்டு",
+     "வைத்து",
+     "போட்டு",
+     "விட்டு"
+    ],
+    "answer": 0,
+    "explanation": "'கொண்டு' (from கொள்) forms reflexive actions and continuous aspect chains like படித்துக் கொண்டிருக்கிறான்."
+   },
+   {
+    "question": "Fill the blank with the auxiliary indicating deliberate preparation for the future: 'நான் டிக்கெட் வாங்கி ___.'",
+    "options": [
+     "போட்டேன்",
+     "வைத்தேன்",
+     "கொண்டேன்",
+     "ஆனேன்"
+    ],
+    "answer": 1,
+    "explanation": "'வைத்தேன்' (from வை) expresses doing something intentionally in advance for future use."
+   },
+   {
+    "question": "Complete the sentence expressing that the bus has left completely: 'பேருந்து போய்___.'",
+    "options": [
+     "வைத்தது",
+     "கொண்டது",
+     "விட்டது",
+     "செய்தது"
+    ],
+    "answer": 2,
+    "explanation": "'விட்டது' indicates the irreversible completion of the bus having departed."
+   }
+  ],
+  "tip": "Only the auxiliary verb inflects for tense, person, and number—the main verb stays locked in its adverbial participle (-i / -thu) form."
+ },
+ {
+  "id": "ta-b1-participial-nouns-vinaiyaal-anaiyum-peyar",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#7C3AED",
+  "emoji": "👤",
+  "title": "Participial Nouns (Vinaiyaal Anaiyum Peyar)",
+  "subtitle": "Turning verbs into agent nouns meaning 'the one who does'",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Participial nouns are created by fusing a relative participle stem with third-person pronominal endings, forming words like 'the one who came' or 'the one who does'.",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Stem + Pronoun",
+    "Participial Noun",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Past",
+      "செய்த + அவன்",
+      "செய்தவன்",
+      "He who did / The man who did"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past (Honorific)",
+      "செய்த + அவர்",
+      "செய்தவர்",
+      "The one (polite) who did"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Present",
+      "செய்கிற + அவள்",
+      "செய்கிறவள்",
+      "She who does"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Future",
+      "செய் + பவர்",
+      "செய்பவர்",
+      "The one who will do"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6D28D9",
+    "label": "Subject Agent",
+    "example": "வந்தவர் யார் என்று தெரியவில்லை.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Object in Accusative",
+    "example": "தவறு செய்தவனை ஆசிரியர் தண்டித்தார்.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "General Agent (Proverbial)",
+    "example": "பொறுத்தார் பூமி ஆள்வார்.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "நேற்று பாடியவள் என் தோழி.",
+    "ko": "",
+    "highlight": "பாடியவள்"
+   },
+   {
+    "en": "உண்மையைச் சொன்னவரை எல்லோரும் மதிப்பர்.",
+    "ko": "",
+    "highlight": "சொன்னவரை"
+   },
+   {
+    "en": "அங்கு நிற்பவன் யார்?",
+    "ko": "",
+    "highlight": "நிற்பவன்"
+   },
+   {
+    "en": "வீடு கட்டியவர் ஒரு திறமையான பொறியாளர்.",
+    "ko": "",
+    "highlight": "கட்டியவர்"
+   },
+   {
+    "en": "நன்மை செய்தவர்களுக்கு நல்லதே நடக்கும்.",
+    "ko": "",
+    "highlight": "செய்தவர்களுக்கு"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "வந்த ஆள் யார்?",
+    "right": "வந்தவர் யார்?",
+    "note": "Using the participial noun 'வந்தவர்' is much more natural and respectful in Tamil than appending 'ஆள்'."
+   },
+   {
+    "wrong": "செய்தவன் ஆசிரியர் பாராட்டினார்.",
+    "right": "செய்தவனை ஆசிரியர் பாராட்டினார்.",
+    "note": "Participial nouns are genuine nouns and must take case suffixes when used as objects (e.g. accusative -ஐ)."
+   },
+   {
+    "wrong": "பாடினவள்",
+    "right": "பாடியவள்",
+    "note": "Use standard relative participle roots (பாடிய-) when forming literary participial nouns."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which word translates 'the woman who spoke'?",
+    "options": [
+     "பேசியவள்",
+     "பேசியவன்",
+     "பேசியவர்",
+     "பேசியது"
+    ],
+    "answer": 0,
+    "explanation": "'பேசிய' (past participle) + 'அவள்' (she) yields 'பேசியவள்' (the woman who spoke)."
+   },
+   {
+    "question": "Fill the blank with the respectful form: 'இங்கே ___ என் பெரியப்பா.' (The one who came)",
+    "options": [
+     "வந்தவன்",
+     "வந்தவள்",
+     "வந்தவர்",
+     "வந்தது"
+    ],
+    "answer": 2,
+    "explanation": "'-அவர்' is the polite/respectful third-person ending, giving 'வந்தவர்'."
+   },
+   {
+    "question": "Identify the future participial noun meaning 'the one who will read':",
+    "options": [
+     "படித்தவன்",
+     "படிக்கிறவன்",
+     "படிப்பவன்",
+     "படிக்காதவன்"
+    ],
+    "answer": 2,
+    "explanation": "'படிப்பவன்' is formed from the future stem and masculine ending, meaning 'he who will read'."
+   },
+   {
+    "question": "In the sentence 'ஓடியவனைப் பிடித்தார்கள்', what is the case of 'ஓடியவனை'?",
+    "options": [
+     "Nominative",
+     "Dative",
+     "Instrumental",
+     "Accusative"
+    ],
+    "answer": 3,
+    "explanation": "The suffix '-ஐ' (ஓடியவன் + ஐ = ஓடியவனை) marks the direct object in the accusative case."
+   }
+  ],
+  "tip": "Participial nouns behave entirely like standard nouns: they decline across all cases (e.g., சொன்னவர், சொன்னவரை, சொன்னவருக்கு, சொன்னவரால்)."
+ },
+ {
+  "id": "ta-b1-quotative-complementizer-enru",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#0284C7",
+  "emoji": "💬",
+  "title": "Quotative Marker (enru / endru)",
+  "subtitle": "Reporting speech, internal thoughts, and framing embedded clauses",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "The verbal participle என்று (enru) acts as an indispensable complementizer that closes reported speech, mental states, intentions, and named entities before the main verb.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Tamil Formula",
+    "Example Clause"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Direct Speech",
+      "[Quote] + என்று + சொன்னார்",
+      "நாளை வருகிறேன் என்று சொன்னார்"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Internal Thought",
+      "[Thought] + என்று + நினைத்தேன்",
+      "மழை வரும் என்று நினைத்தேன்"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Naming / Labeling",
+      "[Noun] + என்று + பெயர்",
+      "கண்ணன் என்று பெயர் வைத்தார்"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reason / Purpose",
+      "[Action] + என்று + சென்றார்",
+      "புத்தகம் வாங்கலாம் என்று சென்றார்"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Reporting Direct & Indirect Speech",
+    "example": "அவன் ஊருக்குப் போகிறேன் என்று சொன்னான்.",
+    "translation": ""
+   },
+   {
+    "color": "#0369A1",
+    "label": "Expressing Thoughts or Beliefs",
+    "example": "தேர்வு எளிதாக இருக்கும் என்று நம்புகிறேன்.",
+    "translation": ""
+   },
+   {
+    "color": "#075985",
+    "label": "Stating Reasons or Intentions",
+    "example": "மருத்துவரைப் பார்க்க வேண்டும் என்று கிளம்பினார்.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "நாளை பள்ளிக்கு விடுமுறை என்று ஆசிரியர் கூறினார்.",
+    "ko": "",
+    "highlight": "என்று"
+   },
+   {
+    "en": "அவர் நல்ல மனிதர் என்று அனைவரும் நினைக்கிறார்கள்.",
+    "ko": "",
+    "highlight": "என்று"
+   },
+   {
+    "en": "இந்த ஊருக்கு மதுரை என்று பெயர்.",
+    "ko": "",
+    "highlight": "என்று"
+   },
+   {
+    "en": "உதவி கேட்கலாம் என்று உங்களிடம் வந்தேன்.",
+    "ko": "",
+    "highlight": "என்று"
+   },
+   {
+    "en": "அவள் வரமாட்டாள் என்று எனக்குத் தெரியும்.",
+    "ko": "",
+    "highlight": "என்று"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "அவன் சொன்னான் அவன் வருவான்.",
+    "right": "அவன் வருவேன் என்று சொன்னான்.",
+    "note": "Unlike English, Tamil cannot place the reporting verb first; the embedded clause must precede என்று and the matrix verb."
+   },
+   {
+    "wrong": "மழை பெய்யும் நினைத்தேன்.",
+    "right": "மழை பெய்யும் என்று நினைத்தேன்.",
+    "note": "Embedded clauses representing beliefs or thoughts require என்று before the governing cognitive verb."
+   },
+   {
+    "wrong": "அவர் மருத்துவர் ஆகிறார் என்று பார்த்தேன்.",
+    "right": "அவர் மருத்துவர் என்று அறிந்தேன்.",
+    "note": "Do not insert unnecessary finite copulas inside nominal complement clauses framed by என்று."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the reported statement: 'அவன் வருவான் ___ சொன்னான்.'",
+    "options": [
+     "ஆனால்",
+     "என்று",
+     "அல்லது",
+     "மட்டும்"
+    ],
+    "answer": 1,
+    "explanation": "என்று is the required quotative complementizer connecting the embedded statement to the verb of speaking."
+   },
+   {
+    "question": "Which sentence correctly frames the thought 'It will rain'?",
+    "options": [
+     "மழை வரும் என்று எண்ணினேன்.",
+     "மழை வரும் ஆனால் எண்ணினேன்.",
+     "எண்ணினேன் என்று மழை வரும்.",
+     "மழை என்று வரும் எண்ணினேன்."
+    ],
+    "answer": 0,
+    "explanation": "The thought clause precedes என்று, which immediately precedes the cognitive verb எண்ணினேன்."
+   },
+   {
+    "question": "Identify the purpose construction: 'சாப்பிடலாம் ___ கடைக்குச் சென்றான்.'",
+    "options": [
+     "கூட",
+     "வரை",
+     "என்று",
+     "விட"
+    ],
+    "answer": 2,
+    "explanation": "An intentional verb form followed by என்று conveys the purposive reason for going somewhere."
+   },
+   {
+    "question": "Select the correct naming clause: 'அவருக்கு முருகன் ___ பெயரிட்டார்கள்.'",
+    "options": [
+     "ஆக",
+     "உடன்",
+     "மேல்",
+     "என்று"
+    ],
+    "answer": 3,
+    "explanation": "Appellative naming constructions require the marker என்று preceding பெயரிடு (to name)."
+   }
+  ],
+  "tip": "In everyday spoken Tamil, என்று collapses into the cliticized sound 'ன்னு' (nnu), turning 'வருகிறேன் என்று' into 'வர்றேன்னு'."
+ },
+ {
+  "id": "ta-b1-passive-and-causative-constructions",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#D97706",
+  "emoji": "⚙️",
+  "title": "Passive (padu) and Causative Stems",
+  "subtitle": "Forming formal passives with படு and causatives with -வி/-பி and வை",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Passives attach the auxiliary படு (padu) to the infinitive stem, while causatives employ morphological suffixes (-வி/-பி) or the periphrastic helper வை (vai).",
+  "structure": {
+   "headers": [
+    "Voice / Valency",
+    "Morphological Pattern",
+    "Example Verb"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Passive Voice",
+      "Infinitive + படு (conjugated)",
+      "எழுதப்பட்டது (was written)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Morphological Causative",
+      "Root + -வி / -பி",
+      "செய்வித்தார் / கற்பித்தார்"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Periphrastic Causative",
+      "Infinitive + வை (conjugated)",
+      "பாட வைத்தார் (made/let sing)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Agentive Case in Passive",
+      "Subject + -ஆல் (Instrumental)",
+      "ஆசிரியரால் கற்பிக்கப்பட்டது"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Passive Voice in Formal Discourse",
+    "example": "புதிய பாலம் அரசால் கட்டப்பட்டது.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Periphrastic Causative with 'vai'",
+    "example": "தாய் குழந்தையைத் தூங்க வைத்தார்.",
+    "translation": ""
+   },
+   {
+    "color": "#78350F",
+    "label": "Literary Morphological Causatives",
+    "example": "அரசர் கோயிலை எடுப்பித்தார்.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "இந்த நாவல் பாரதியால் எழுதப்பட்டது.",
+    "ko": "",
+    "highlight": "எழுதப்பட்டது"
+   },
+   {
+    "en": "அவர் மாணவர்களை வேகமாக ஓட வைத்தார்.",
+    "ko": "",
+    "highlight": "ஓட வைத்தார்"
+   },
+   {
+    "en": "திருடன் காவல்துறையினரால் கைது செய்யப்பட்டான்.",
+    "ko": "",
+    "highlight": "செய்யப்பட்டான்"
+   },
+   {
+    "en": "நண்பன் என்னை சிரிக்க வைத்தான்.",
+    "ko": "",
+    "highlight": "சிரிக்க வைத்தான்"
+   },
+   {
+    "en": "பழைய கட்டடம் இடிக்கப்பட்டது.",
+    "ko": "",
+    "highlight": "இடிக்கப்பட்டது"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "நான் பாடம் படிக்கப்பட்டேன்.",
+    "right": "பாடம் என்னால் படிக்கப்பட்டது.",
+    "note": "In a passive construction, the semantic agent must take the instrumental suffix -ஆல் (-aal), not the nominative case."
+   },
+   {
+    "wrong": "அவன் என்னை வேலை செய்யினான்.",
+    "right": "அவன் என்னை வேலை செய்ய வைத்தான்.",
+    "note": "To express causing another person to perform an action, append the auxiliary verb வை to the infinitive."
+   },
+   {
+    "wrong": "மரம் வெட்டுப்பட்டது.",
+    "right": "மரம் வெட்டப்பட்டது.",
+    "note": "The passive auxiliary படு must attach to the infinitive form (வெட்ட), not directly to the crude verbal root (வெட்டு)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'The letter was sent by him'?",
+    "options": [
+     "கடிதம் அவனால் அனுப்பப்பட்டது.",
+     "அவன் கடிதம் அனுப்பியது.",
+     "கடிதம் அவனை அனுப்பியது.",
+     "அவனால் கடிதம் அனுப்புகிறான்."
+    ],
+    "answer": 0,
+    "explanation": "Passives take the instrumental case marker -ஆல் on the agent and the infinitive + படு construction."
+   },
+   {
+    "question": "Choose the periphrastic causative: 'The teacher made the students read.'",
+    "options": [
+     "ஆசிரியர் மாணவர்களைப் படிக்கச் சொன்னார்.",
+     "ஆசிரியர் மாணவர்களைப் படித்தார்.",
+     "ஆசிரியர் மாணவர்களைப் படிக்க வைத்தார்.",
+     "ஆசிரியர் மாணவர்கள் படித்தார்கள்."
+    ],
+    "answer": 2,
+    "explanation": "Infinitive படிக்க + auxiliary வைத்தார் forms the causative 'made to read'."
+   },
+   {
+    "question": "Which suffix converts the agent into the instrumental in passive sentences?",
+    "options": [
+     "-ஐ",
+     "-க்கு",
+     "-இல்",
+     "-ஆல்"
+    ],
+    "answer": 3,
+    "explanation": "The instrumental suffix -ஆல் marks the demoted agent in Tamil passive syntax."
+   },
+   {
+    "question": "Fill the blank: 'அழுத்தமான பேச்சு அனைவரையும் சிந்திக்க ___.'",
+    "options": [
+     "வந்தது",
+     "வைத்தது",
+     "இருந்தது",
+     "சென்றது"
+    ],
+    "answer": 1,
+    "explanation": "சிந்திக்க (infinitive) pairs with வைத்தது (causative of வை) to yield 'caused to think'."
+   }
+  ],
+  "tip": "Passive constructions using படு are common in written journalism and formal reports, but colloquial spoken Tamil strongly prefers active voice or reflexive verbs."
+ },
+ {
+  "id": "ta-b2-diglossic-shifts-spoken-vs-written",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#7C3AED",
+  "emoji": "🗣️",
+  "title": "Spoken vs Written Diglossic Shifts",
+  "subtitle": "Navigating phonological erosion and verbal contraction between registers",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Tamil exhibits strict diglossia where literary written endings systematically contract in spoken speech into nasalized vowels, retroflex mergers, and shortened aspectual markers.",
+  "structure": {
+   "headers": [
+    "Grammatical Category",
+    "Written Literary Tamil",
+    "Spoken Colloquial Tamil"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Neuter Present Tense",
+      "வருகிறது (varukirathu)",
+      "வருது / வருகுது (varuthu)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Honorific Past Aspect",
+      "போய்விட்டார் (poyvittaar)",
+      "போயிட்டாரு (poyittaaru)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Accusative + Pronoun",
+      "அவனை (avanai)",
+      "அவன (avana)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Conditional Ending",
+      "செய்தால் (seythaal)",
+      "செஞ்சா (senjaa)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Vowel Contraction in Aspectual Verbs",
+    "example": "அவன் சாப்பிட்டுவிட்டான் என்பதற்குப் பதில் சாப்பிட்டான் என்கிறோம்.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Phonological Palatalization",
+    "example": "செய்தான் என்பது பேச்சுத் தமிழில் செஞ்சான் என்று மாறுகிறது.",
+    "translation": ""
+   },
+   {
+    "color": "#4C1D95",
+    "label": "Colloquial Dative & Locative Shifts",
+    "example": "வீட்டிற்கு என்பது பேச்சு வழக்கில் வீட்டுக்கு என்று அமைகிறது.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "எழுத்துத் தமிழில் வருகிறது என்பதைப் பேச்சுத் தமிழில் வருது என்பர்.",
+    "ko": "",
+    "highlight": "வருது"
+   },
+   {
+    "en": "அவர் வந்துவிட்டார் என்பதை வந்திட்டாரு என்று சொல்வர்.",
+    "ko": "",
+    "highlight": "வந்திட்டாரு"
+   },
+   {
+    "en": "இதைச் செய்தால் நல்லது என்பதை செஞ்சா நல்லது என்பர்.",
+    "ko": "",
+    "highlight": "செஞ்சா"
+   },
+   {
+    "en": "எனக்குத் தெரியாது என்பதைத் தெரில என்று சுருக்குவர்.",
+    "ko": "",
+    "highlight": "தெரில"
+   },
+   {
+    "en": "அங்கே போக வேண்டாம் என்பதைப் போக வேணாம் என்பர்.",
+    "ko": "",
+    "highlight": "போக வேணாம்"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "அவன் என்னிடம் சொல்லிட்டான் என்று எழுதினேன்.",
+    "right": "அவன் என்னிடம் சொல்லிவிட்டான் என்று எழுதினேன்.",
+    "note": "Spoken contracted auxiliaries like -ிட்டான் (-ittaan) should not be used in formal written Tamil essays."
+   },
+   {
+    "wrong": "பேசும்போது: நேற்று வந்தீர்கள் ஆயிற்று.",
+    "right": "பேசும்போது: நேத்து வந்தீங்க.",
+    "note": "Using literary endings in casual conversation sounds unnaturally stiff and archaic to native speakers."
+   },
+   {
+    "wrong": "அவங்கிட்ட புத்தகத்தை குடுத்தேன் (in formal essay).",
+    "right": "அவனிடம் புத்தகத்தைக் கொடுத்தேன்.",
+    "note": "The postposition -கிட்ட is colloquial; formal writing requires -இடம்."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the spoken colloquial equivalent of the written verb 'செய்கிறான்'?",
+    "options": [
+     "செய்வான்",
+     "செய்யப்பட்டான்",
+     "செய்யலாம்",
+     "செய்றான்"
+    ],
+    "answer": 3,
+    "explanation": "The present marker -கிறு- weakens to -று-, turning செய்கிறான் into செய்றான் in natural spoken Tamil."
+   },
+   {
+    "question": "Which literary form corresponds to the colloquial modal 'வேணாம்' (veanaam)?",
+    "options": [
+     "வேண்டும்",
+     "வேண்டாம்",
+     "கூடாது",
+     "முடியாது"
+    ],
+    "answer": 1,
+    "explanation": "வேண்டாம் (negative optative) contracts phonologically to வேணாம் in daily spoken Tamil."
+   },
+   {
+    "question": "How does the conditional marker '-ஆல்' (e.g., வந்தால்) shift in colloquial speech?",
+    "options": [
+     "வந்தால் -> வந்து",
+     "வந்தால் -> வந்தா",
+     "வந்தால் -> வர",
+     "வந்தால் -> வந்திட்டு"
+    ],
+    "answer": 1,
+    "explanation": "The literary conditional suffix -ஆல் (-aal) regularly drops its lateral coda to become -ஆ (-aa), producing வந்தா."
+   },
+   {
+    "question": "Convert the literary phrase 'பார்த்துக் கொண்டிருக்கிறான்' to natural colloquial speech:",
+    "options": [
+     "பாத்துட்டு இருக்கான்",
+     "பார்த்தான்",
+     "பார்க்க மாட்டான்",
+     "பார்த்துக் கொண்டான்"
+    ],
+    "answer": 0,
+    "explanation": "பார்த்து becomes பாத்து, and the continuous auxiliary கொண்டிருக்கிறான் collapses into -ட்டு இருக்கான்."
+   }
+  ],
+  "tip": "Spoken Tamil regularly drops word-final -ம் and -ன் into nasalization of the preceding vowel, turning மரம் (maram) into 'மரா' (marõ) and அவன் (avan) into 'அவ' (avã)."
+ },
+ {
+  "id": "ta-b2-non-finite-subordinate-chaining",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#059669",
+  "emoji": "⛓️",
+  "title": "Left-Branching Subordinate Verb Chaining",
+  "subtitle": "Constructing complex periodic sentences with non-finite verbal participles",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Tamil constructs long left-branching sentences by linking multiple adverbial participles, conditionals, and infinitives in chronological order before concluding with a single final finite verb.",
+  "structure": {
+   "headers": [
+    "Linkage Type",
+    "Participle Form",
+    "Structural Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Sequential Action",
+      "Verbal Participle (செய்து)",
+      "Chains prior completed actions"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Simultaneous Action",
+      "Infinitive (செய்ய)",
+      "Concurrent backdrop or purposive clause"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Conditional Anchor",
+      "Conditional (செய்தால்)",
+      "Imposes hypothetical prerequisites"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Concessive Link",
+      "Concessive (செய்தாலும்)",
+      "Introduces counter-expectational clauses"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Chronological Serial Chaining",
+    "example": "காலையில் எழுந்து, குளித்து, உண்டு, பள்ளிக்குச் சென்றான்.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Nested Conditional Chaining",
+    "example": "நேரம் கிடைத்துப் பணம் இருந்தால் சுற்றுலா போகலாம்.",
+    "translation": ""
+   },
+   {
+    "color": "#064E3B",
+    "label": "Converbial Contrast Embedding",
+    "example": "அழைத்தும் வராமல் வீட்டில் இருந்துவிட்டான்.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "அவன் அலுவலகத்திற்குப் போய், கோப்புகளை எடுத்துக்கொண்டு, மாலையில் வீடு திரும்பினான்.",
+    "ko": "",
+    "highlight": "போய்"
+   },
+   {
+    "en": "வீட்டை அடைந்து கதவைத் திறந்து விளக்கை ஏற்றினாள்.",
+    "ko": "",
+    "highlight": "திறந்து"
+   },
+   {
+    "en": "மழை நின்று வெயில் அடித்தால் பயிர்கள் செழிக்கும்.",
+    "ko": "",
+    "highlight": "நின்று"
+   },
+   {
+    "en": "பணம் சேர்த்து வைத்திருந்து உரிய காலத்தில் உதவினான்.",
+    "ko": "",
+    "highlight": "வைத்திருந்து"
+   },
+   {
+    "en": "பாடத்தைக் கவனித்துப் புரிந்து கொண்டு விடை எழுதினான்.",
+    "ko": "",
+    "highlight": "புரிந்து கொண்டு"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "அவன் எழுந்தான் மற்றும் குளித்தான்.",
+    "right": "அவன் எழுந்து குளித்தான்.",
+    "note": "Never coordinate actions using English-style conjunctions like 'மற்றும்'; use the verbal participle (எழுந்து) to chain clauses."
+   },
+   {
+    "wrong": "நான் கடைக்கு போனேன், புத்தகம் வாங்கினேன்.",
+    "right": "நான் கடைக்குப் போய்ப் புத்தகம் வாங்கினேன்.",
+    "note": "Avoid comma-splicing independent finite verbs. Subordinate the initial verb into its participial form (போய்)."
+   },
+   {
+    "wrong": "அவள் வந்து பார்த்தாள் பின்னர் சென்றாள்.",
+    "right": "அவள் வந்து பார்த்துவிட்டுச் சென்றாள்.",
+    "note": "Instead of inserting adverbial adverbs like பின்னர் between finite clauses, rely on the serial participle suffix chain."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you coordinate 'He cooked, ate, and slept' in genuine Tamil syntax?",
+    "options": [
+     "அவன் சமைத்து, உண்டு, தூங்கினான்.",
+     "அவன் சமைத்தான் மற்றும் சாப்பிட்டான்.",
+     "அவன் சமைக்க உண்டு தூங்குவான்.",
+     "அவன் சமைத்து மற்றும் உண்டான்."
+    ],
+    "answer": 0,
+    "explanation": "Tamil chains preceding chronological actions using adverbial verbal participles (சமைத்து, உண்டு) terminating in a finite verb (தூங்கினான்)."
+   },
+   {
+    "question": "Which verb form correctly fills the sequential blank: 'அவன் ஊருக்கு ___ தாயைப் பார்த்தான்'?",
+    "options": [
+     "போனான்",
+     "போய்",
+     "போவான்",
+     "போகிறான்"
+    ],
+    "answer": 1,
+    "explanation": "The verbal participle போய் links the prior clause sequentially to the final predicate."
+   },
+   {
+    "question": "What happens to tense marking in long multi-clause Tamil participial chains?",
+    "options": [
+     "Every verb bears independent past tense suffixes.",
+     "Tense is marked solely on the final finite verb.",
+     "All chained verbs take future tense markers.",
+     "Tense is dropped entirely from the sentence."
+    ],
+    "answer": 1,
+    "explanation": "Non-finite participles carry relative aspect, while tense, mood, and person are determined by the final matrix verb."
+   },
+   {
+    "question": "Select the correct combination: 'மழை ___ குடை ___ வெளியே சென்றான்.'",
+    "options": [
+     "பெய்தது / எடுத்தான்",
+     "பெய்தால் / எடுக்க",
+     "பெய்து / எடுத்து",
+     "பெய்ய / எடுத்த"
+    ],
+    "answer": 2,
+    "explanation": "Both subordinate actions preceding the departure must be verbal participles: பெய்து (having rained) and எடுத்து (having taken)."
+   }
+  ],
+  "tip": "Only the final verb in a Tamil periodic sentence receives person-number-gender (PNG) agreements and tense inflection. All preceding actions remain non-finite."
+ },
+ {
+  "id": "ta-b2-affective-discourse-clitics",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#EA580C",
+  "emoji": "🎯",
+  "title": "Affective Discourse Clitics (-ē, -um, -tāṉ, -āvatu)",
+  "subtitle": "Manipulating emphasis, exclusivity, scalar addition, and concession",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Tamil discourse clitics attach directly to the end of any word class to modulate pragmatic stance, indicating exclusivity (-தான்), totality or addition (-உம்), emphasis (-ஏ), or minimal concession (-ஆவது).",
+  "structure": {
+   "headers": [
+    "Clitic",
+    "Semantic Nuance",
+    "Example Word",
+    "Pragmatic Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-தான் (-tāṉ)",
+      "Exclusivity / Focus",
+      "நீதான்",
+      "You alone / definitely you"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-உம் (-um)",
+      "Additive / Universality",
+      "அவனும்",
+      "He too / even he"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ஏ (-ē)",
+      "Intensity / Contrast",
+      "இன்றே",
+      "This very day / today itself"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ஆவது (-āvatu)",
+      "Scalar Minimizer",
+      "ஒன்றாவது",
+      "At least one"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Exclusive Focus with -தான்",
+    "example": "அவள் மட்டும்தான் உண்மையைச் சொன்னாள்.",
+    "translation": ""
+   },
+   {
+    "color": "#C2410C",
+    "label": "Scalar Minimization with -ஆவது",
+    "example": "ஒரு முறையாவது வந்து பார்.",
+    "translation": ""
+   },
+   {
+    "color": "#9A3412",
+    "label": "Immediate Temporal Emphasis with -ஏ",
+    "example": "இப்போதே புறப்படுங்கள்.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "அவர்தான் இந்தத் திட்டத்தைத் தொடங்கினார்.",
+    "ko": "",
+    "highlight": "அவர்தான்"
+   },
+   {
+    "en": "நானும் உன்னோடு வருகிறேன்.",
+    "ko": "",
+    "highlight": "நானும்"
+   },
+   {
+    "en": "அதை நீயே செய்து முடி.",
+    "ko": "",
+    "highlight": "நீயே"
+   },
+   {
+    "en": "பத்து ரூபாயாவது கொடுங்கள்.",
+    "ko": "",
+    "highlight": "ரூபாயாவது"
+   },
+   {
+    "en": "உண்மையையே பேசுங்கள்.",
+    "ko": "",
+    "highlight": "உண்மையையே"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "அவன் கூட வந்தான் தான்.",
+    "right": "அவன்தான் வந்தான்.",
+    "note": "To convey exclusive focus ('he was the one who came'), attach -தான் directly to the subject pronoun."
+   },
+   {
+    "wrong": "எல்லாரும் வந்தார்.",
+    "right": "எல்லாரும் வந்தார்கள்.",
+    "note": "When the universal clitic -உம் attaches to interrogative roots (e.g. எல்லாரும்), the subject is plural and requires plural agreement."
+   },
+   {
+    "wrong": "ஒரு தேநீர் மட்டும் ஆவது கொடுங்கள்.",
+    "right": "ஒரு தேநீராவது கொடுங்கள்.",
+    "note": "Do not duplicate restrictive particles (மட்டும்) with the minimal scalar clitic -ஆவது."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which clitic expresses 'at least': 'ஒரு முறைய___ முயற்சி செய்'?",
+    "options": [
+     "-தான்",
+     "-ஆவது",
+     "-உம்",
+     "-ஏ"
+    ],
+    "answer": 1,
+    "explanation": "-ஆவது is the scalar minimizer clitic denoting 'at least'."
+   },
+   {
+    "question": "Choose the clitic that conveys strict exclusivity: 'அவன் ___ அதைச் செய்தான்' (He alone did it).",
+    "options": [
+     "தான்",
+     "உம்",
+     "ஆவது",
+     "ஓ"
+    ],
+    "answer": 0,
+    "explanation": "-தான் acts as an exclusive focus marker highlighting that specific constituent."
+   },
+   {
+    "question": "How do you emphasize 'right here' using the emphatic vowel clitic?",
+    "options": [
+     "இங்குதான்",
+     "இங்குமட்டும்",
+     "இங்கேயே",
+     "இங்காவது"
+    ],
+    "answer": 2,
+    "explanation": "The clitic -ஏ appended to locatives (இங்கு + ஏ = இங்கேயே) gives the intensified meaning 'right here' / 'here itself'."
+   },
+   {
+    "question": "What is the pragmatic function of '-உம்' in 'அவனும் வந்தான்'?",
+    "options": [
+     "Condition",
+     "Exclusivity",
+     "Additive / Inclusion",
+     "Interrogation"
+    ],
+    "answer": 2,
+    "explanation": "-உம் serves as the additive and inclusive discourse clitic equivalent to 'also' or 'too'."
+   }
+  ],
+  "tip": "When -உம் attaches to an interrogative word like யார் (who) or எங்கு (where), it converts it into a universal quantifier: யாரும் (everyone/anyone) and எங்கும் (everywhere)."
+ }
+]

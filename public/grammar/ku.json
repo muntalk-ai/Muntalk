@@ -1,0 +1,3305 @@
+[
+ {
+  "id": "ku-a1-direct-oblique-pronouns",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "👥",
+  "title": "Direct vs Oblique Personal Pronouns",
+  "subtitle": "Distinguish between caseless subjects and oblique pronouns for objects and possession",
+  "color": "#3B82F6",
+  "bg": "#EFF6FF",
+  "keyPoint": "Direct pronouns mark subjects in present tense, while oblique pronouns mark objects, possessors, and prepositional complements.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Direct (Caseless)",
+    "Oblique",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Sing.",
+      "ez",
+      "min",
+      "I / me / my"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Sing.",
+      "tu",
+      "te",
+      "you / your (sing.)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Sing. (M/F)",
+      "ew",
+      "wî / wê",
+      "he, she / him, her"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "1st/2nd/3rd Pl.",
+      "em / hûn / ew",
+      "me / we / wan",
+      "we, you, they / us, you, them"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Present Tense Subject",
+    "example": "Ez diçim dibistanê.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Possession with Ezafe",
+    "example": "Pirtûka min nû ye.",
+    "translation": ""
+   },
+   {
+    "color": "#1E40AF",
+    "label": "Direct Object in Present",
+    "example": "Ew min dibîne.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ez mamoste me.",
+    "ko": "",
+    "highlight": "Ez"
+   },
+   {
+    "en": "Ew pirtûka min e.",
+    "ko": "",
+    "highlight": "min"
+   },
+   {
+    "en": "Tu wî nas dikî?",
+    "ko": "",
+    "highlight": "wî"
+   },
+   {
+    "en": "Em ji bo wê dixebitin.",
+    "ko": "",
+    "highlight": "wê"
+   },
+   {
+    "en": "Hûn wan dibînin.",
+    "ko": "",
+    "highlight": "wan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Min diçim malê.",
+    "right": "Ez diçim malê.",
+    "note": "Present tense subjects require direct case (ez), not oblique (min)."
+   },
+   {
+    "wrong": "Pirtûka ez li ser maseyê ye.",
+    "right": "Pirtûka min li ser maseyê ye.",
+    "note": "Possession requires the oblique pronoun (min) after the ezafe."
+   },
+   {
+    "wrong": "Ez tu dibînim.",
+    "right": "Ez te dibînim.",
+    "note": "In the present tense, direct objects must take the oblique case (te)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct pronoun for: '___ go to work every day.' (I)",
+    "options": [
+     "Min",
+     "Ez",
+     "Wî",
+     "Me"
+    ],
+    "answer": 1,
+    "explanation": "'Ez' is the 1st person singular direct pronoun required for present tense subjects."
+   },
+   {
+    "question": "Choose the correct pronoun for: 'This is ___ book.' (her)",
+    "options": [
+     "ew",
+     "tu",
+     "wê",
+     "em"
+    ],
+    "answer": 2,
+    "explanation": "The feminine 3rd person singular oblique pronoun 'wê' marks possession."
+   },
+   {
+    "question": "Choose the correct pronoun for: 'Do you see ___?' (him)",
+    "options": [
+     "wî",
+     "ew",
+     "ez",
+     "hûn"
+    ],
+    "answer": 0,
+    "explanation": "'Wî' is the masculine singular oblique pronoun used for direct objects in present tense."
+   },
+   {
+    "question": "Choose the correct pronoun for: 'The teacher called ___.' (us)",
+    "options": [
+     "em",
+     "tu",
+     "ez",
+     "me"
+    ],
+    "answer": 3,
+    "explanation": "'Me' is the 1st person plural oblique pronoun used as an object."
+   }
+  ],
+  "tip": "Always use 'ez, tu, ew' to do the action now, and 'min, te, wî/wê' when someone or something receives the action or owns something."
+ },
+ {
+  "id": "ku-a1-present-copula-enclitics",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔗",
+  "title": "Present Copula Enclitic Endings",
+  "subtitle": "Form sentences with the bound present 'to be' endings",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "The Kurdish present tense verb 'to be' attaches directly to nouns and adjectives as an enclitic personal suffix.",
+  "structure": {
+   "headers": [
+    "Person",
+    "After Consonant",
+    "After Vowel",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Sing. (ez)",
+      "-im / me",
+      "me",
+      "am"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Sing. (tu)",
+      "-î / yî",
+      "yî",
+      "are (singular)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Sing. (ew)",
+      "-e",
+      "ye",
+      "is"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Plural (em/hûn/ew)",
+      "-in / nin",
+      "ne",
+      "are (plural)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Identity / Profession",
+    "example": "Ez xwendekar im.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Adjective Description",
+    "example": "Ev xanî mezin e.",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "Vowel-Ending Stems",
+    "example": "Ew mamoste ye.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ez kurd im.",
+    "ko": "",
+    "highlight": "im"
+   },
+   {
+    "en": "Tu gelek baş î.",
+    "ko": "",
+    "highlight": "î"
+   },
+   {
+    "en": "Ev hevalê min e.",
+    "ko": "",
+    "highlight": "e"
+   },
+   {
+    "en": "Ew jinek zana ye.",
+    "ko": "",
+    "highlight": "ye"
+   },
+   {
+    "en": "Em îro amade ne.",
+    "ko": "",
+    "highlight": "ne"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ez mamoste e.",
+    "right": "Ez mamoste me.",
+    "note": "The 1st person singular copula after a vowel is 'me', not 'e'."
+   },
+   {
+    "wrong": "Ew zîrek in.",
+    "right": "Ew zîrek e.",
+    "note": "Use singular '-e' for 'he/she is'; '-in' is reserved for plural subjects."
+   },
+   {
+    "wrong": "Tu nexweş im.",
+    "right": "Tu nexweş î.",
+    "note": "Match 2nd person pronoun 'tu' with the 2nd person enclitic '-î'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Ez xwendekar ___.' (I am a student)",
+    "options": [
+     "e",
+     "im",
+     "î",
+     "in"
+    ],
+    "answer": 1,
+    "explanation": "The 1st person singular copula after a consonant is '-im'."
+   },
+   {
+    "question": "Complete the sentence: 'Ew mamoste ___.' (She is a teacher)",
+    "options": [
+     "ye",
+     "me",
+     "yî",
+     "im"
+    ],
+    "answer": 0,
+    "explanation": "The 3rd person singular copula after a vowel is 'ye'."
+   },
+   {
+    "question": "Complete the sentence: 'Em heval ___.' (We are friends)",
+    "options": [
+     "im",
+     "î",
+     "in",
+     "ye"
+    ],
+    "answer": 2,
+    "explanation": "The 1st person plural takes the copula suffix '-in' after a consonant."
+   },
+   {
+    "question": "Complete the sentence: 'Tu pir jîr ___.' (You are very smart)",
+    "options": [
+     "e",
+     "me",
+     "ne",
+     "î"
+    ],
+    "answer": 3,
+    "explanation": "The 2nd person singular pronoun 'tu' requires the suffix '-î'."
+   }
+  ],
+  "tip": "If the preceding word ends in a vowel, use the forms starting with 'y' or 'm/n' (me, yî, ye, ne) to prevent vowel clash."
+ },
+ {
+  "id": "ku-a1-ezafe-construct-basics",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "🧩",
+  "title": "The Basic Ezafe Construction",
+  "subtitle": "Connect nouns to adjectives and possessors using gendered linkers",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The Ezafe suffix attaches to a noun to link it with an adjective or possessor, reflecting the noun's gender and number.",
+  "structure": {
+   "headers": [
+    "Noun Category",
+    "Consonant Ending",
+    "Vowel Ending",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Singular",
+      "-ê",
+      "-yê",
+      "kurê min (my son)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine Singular",
+      "-a",
+      "-ya",
+      "keça baş (the good girl)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Plural (M / F)",
+      "-ên",
+      "-yên",
+      "pirtûkên nû (new books)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Noun + Adjective",
+    "example": "Hevalê baş alîkar e.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Noun + Possessor",
+    "example": "Mala Azad pir mezin e.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Plural Modification",
+    "example": "Dersên me hêsan in.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ev hevalê min e.",
+    "ko": "",
+    "highlight": "hevalê"
+   },
+   {
+    "en": "Pirtûka nû li ku ye?",
+    "ko": "",
+    "highlight": "Pirtûka"
+   },
+   {
+    "en": "Dengê bilind tê bihîstin.",
+    "ko": "",
+    "highlight": "Dengê"
+   },
+   {
+    "en": "Xaniyên bajêr kevn in.",
+    "ko": "",
+    "highlight": "Xaniyên"
+   },
+   {
+    "en": "Ew qelema sor e.",
+    "ko": "",
+    "highlight": "qelema"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Pirtûkê min li ser maseyê ye.",
+    "right": "Pirtûka min li ser maseyê ye.",
+    "note": "'Pirtûk' (book) is grammatically feminine, so it takes the feminine ezafe '-a'."
+   },
+   {
+    "wrong": "Hevala baş hat (referring to male friend).",
+    "right": "Hevalê baş hat.",
+    "note": "Use masculine ezafe '-ê' for masculine nouns like male friend."
+   },
+   {
+    "wrong": "Zarokên baş e.",
+    "right": "Zarokên baş in.",
+    "note": "'Zarokên' is plural, requiring the plural copula 'in' instead of singular 'e'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct form for: 'the big house' ('mal' is feminine): 'Mal___ mezin.'",
+    "options": [
+     "-a",
+     "-ê",
+     "-ên",
+     "-yê"
+    ],
+    "answer": 0,
+    "explanation": "Feminine singular nouns take the '-a' ezafe suffix."
+   },
+   {
+    "question": "Choose the correct form for: 'the brother of Azad' ('bira' is masculine, vowel-ending): 'Bira___ Azad.'",
+    "options": [
+     "-a",
+     "-ya",
+     "-yê",
+     "-ên"
+    ],
+    "answer": 2,
+    "explanation": "Masculine nouns ending in a vowel take the '-yê' ezafe connector."
+   },
+   {
+    "question": "Choose the correct form for: 'the new books' ('pirtûk' in plural): 'Pirtûk___ nû.'",
+    "options": [
+     "-a",
+     "-ên",
+     "-ê",
+     "-ya"
+    ],
+    "answer": 1,
+    "explanation": "All plural nouns take '-ên' (or '-yên' after vowels) in the ezafe construction."
+   },
+   {
+    "question": "Choose the correct form for: 'the fast car' ('erebe' is feminine, vowel-ending): 'Erebe___ lez.'",
+    "options": [
+     "-ê",
+     "-yê",
+     "-ên",
+     "-ya"
+    ],
+    "answer": 3,
+    "explanation": "Feminine singular nouns ending in a vowel take '-ya'."
+   }
+  ],
+  "tip": "Think of the ezafe like an apostrophe-S or 'of': it glues a description or an owner directly to the noun."
+ },
+ {
+  "id": "ku-a1-noun-grammatical-gender",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "⚖️",
+  "title": "Grammatical Gender and Demonstratives",
+  "subtitle": "Master masculine and feminine noun distinctions with demonstratives",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "All Kurdish singular nouns are either masculine or feminine, which dictates demonstrative oblique forms and vocative/ezafe agreements.",
+  "structure": {
+   "headers": [
+    "Case & Distance",
+    "Masculine (Nêr)",
+    "Feminine (Mê)",
+    "Plural (Gelek)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Direct: Near",
+      "ev",
+      "ev",
+      "ev"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Direct: Far",
+      "ew",
+      "ew",
+      "ew"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Oblique: Near",
+      "vî",
+      "vê",
+      "van"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Oblique: Far",
+      "wî",
+      "wê",
+      "wan"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Near Demonstrative Object (M)",
+    "example": "Ez vî xanî dibînim.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Near Demonstrative Object (F)",
+    "example": "Ew vê keçê nas dike.",
+    "translation": ""
+   },
+   {
+    "color": "#1E40AF",
+    "label": "Plural Demonstrative",
+    "example": "Ez van pirtûkan dixwînim.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ev kur zîrek e.",
+    "ko": "",
+    "highlight": "Ev"
+   },
+   {
+    "en": "Ez ji vî bajarî hez dikim.",
+    "ko": "",
+    "highlight": "vî"
+   },
+   {
+    "en": "Ew vê pirsê dizane.",
+    "ko": "",
+    "highlight": "vê"
+   },
+   {
+    "en": "Ew kinc li ser wê kursiyê ye.",
+    "ko": "",
+    "highlight": "wê"
+   },
+   {
+    "en": "Mamoste wan pirtûkan dixwîne.",
+    "ko": "",
+    "highlight": "wan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ez vê kur nas dikim.",
+    "right": "Ez vî kurî nas dikim.",
+    "note": "'Kur' (boy) is masculine; it requires the masculine demonstrative 'vî'."
+   },
+   {
+    "wrong": "Ew li vî bajêr dijî (referring to female city/noun).",
+    "right": "Ew li vî bajarî dijî.",
+    "note": "'Bajar' is masculine, so 'vî' is correct, but remember feminine nouns take 'vê'."
+   },
+   {
+    "wrong": "Ez hez ji ev xanî dikim.",
+    "right": "Ez hez ji vî xanî dikim.",
+    "note": "Prepositions trigger the oblique case; demonstrative 'ev' must become 'vî' or 'vê'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the oblique near demonstrative for feminine noun 'jin' (woman): 'Ez ___ jinê nas dikim.'",
+    "options": [
+     "vê",
+     "vî",
+     "van",
+     "ew"
+    ],
+    "answer": 0,
+    "explanation": "'Vê' is the feminine singular oblique near demonstrative."
+   },
+   {
+    "question": "Choose the oblique near demonstrative for masculine noun 'xort' (young man): 'Ez ___ xortî dibînim.'",
+    "options": [
+     "vê",
+     "van",
+     "vî",
+     "wê"
+    ],
+    "answer": 2,
+    "explanation": "'Vî' is the masculine singular oblique near demonstrative."
+   },
+   {
+    "question": "Choose the oblique plural demonstrative for: 'We see ___ children.'",
+    "options": [
+     "vî",
+     "vê",
+     "ew",
+     "van"
+    ],
+    "answer": 3,
+    "explanation": "'Van' is the oblique plural form of 'ev' (these)."
+   },
+   {
+    "question": "Choose the oblique far demonstrative for masculine noun 'mêr' (man): 'Ez bi ___ re dipeyivim.'",
+    "options": [
+     "wê",
+     "wî",
+     "wan",
+     "ev"
+    ],
+    "answer": 1,
+    "explanation": "'Wî' is the masculine singular oblique far demonstrative."
+   }
+  ],
+  "tip": "Most biological females, abstract concepts, tools, and nature words tend to be feminine (mê), while biological males and seasons are masculine (nêr)."
+ },
+ {
+  "id": "ku-a1-present-tense-conjugation",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#F59E0B",
+  "emoji": "⏳",
+  "title": "Present Continuous/Indicative with Di-",
+  "subtitle": "Construct present affirmative actions using prefix di- and personal endings",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "The present tense is formed by placing the prefix 'di-' before the present verbal stem and appending subject agreement endings.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Prefix + Stem (xwîn-)",
+    "Ending",
+    "Full Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ez (1st Sing.)",
+      "di- + xwîn",
+      "-im",
+      "dixwînim"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "tu (2nd Sing.)",
+      "di- + xwîn",
+      "-î",
+      "dixwînî"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ew (3rd Sing.)",
+      "di- + xwîn",
+      "-e",
+      "dixwîne"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "em/hûn/ew (Pl.)",
+      "di- + xwîn",
+      "-in",
+      "dixwînin"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Habitual Action",
+    "example": "Ez her roj diçim zanîngehê.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Action in Progress",
+    "example": "Niha pirtûkekê dixwîne.",
+    "translation": ""
+   },
+   {
+    "color": "#92400E",
+    "label": "General Truth",
+    "example": "Roj ji rojhilat derdikeve.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ez her roj kurdî dixwînim.",
+    "ko": "",
+    "highlight": "dixwînim"
+   },
+   {
+    "en": "Tu nan dixwî?",
+    "ko": "",
+    "highlight": "dixwî"
+   },
+   {
+    "en": "Ew nameyekê dinivîse.",
+    "ko": "",
+    "highlight": "dinivîse"
+   },
+   {
+    "en": "Em li Stenbolê dijîn.",
+    "ko": "",
+    "highlight": "dijîn"
+   },
+   {
+    "en": "Zarok li derve dilîzin.",
+    "ko": "",
+    "highlight": "dilîzin"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ez xwînim kurdî.",
+    "right": "Ez kurdî dixwînim.",
+    "note": "The affirmative present indicative requires the aspectual prefix 'di-'."
+   },
+   {
+    "wrong": "Tu diçim dibistanê.",
+    "right": "Tu diçî dibistanê.",
+    "note": "Match 2nd person subject 'tu' with personal ending '-î', not 1st person '-im'."
+   },
+   {
+    "wrong": "Ew diçe malê (when plural em).",
+    "right": "Em diçin malê.",
+    "note": "Plural subjects take the suffix '-in', contracted with stem 'ç-' to become 'diçin'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the verb: 'Ez pirtûkekê di-nivîs-___.' (I write a book)",
+    "options": [
+     "-î",
+     "-im",
+     "-e",
+     "-in"
+    ],
+    "answer": 1,
+    "explanation": "The 1st person singular ending for verbs in the present tense is '-im'."
+   },
+   {
+    "question": "Complete the verb: 'Ew çayê di-xw-___.' (She drinks/eats tea)",
+    "options": [
+     "-im",
+     "-î",
+     "-e",
+     "-in"
+    ],
+    "answer": 2,
+    "explanation": "The 3rd person singular present personal ending is '-e'."
+   },
+   {
+    "question": "Complete the verb: 'Tu pir baş di-peyiv-___.' (You speak very well)",
+    "options": [
+     "-î",
+     "-im",
+     "-e",
+     "-in"
+    ],
+    "answer": 0,
+    "explanation": "The 2nd person singular personal ending is '-î'."
+   },
+   {
+    "question": "Complete the verb: 'Em kurdî di-bêj-___.' (We speak/say Kurdish)",
+    "options": [
+     "-e",
+     "-î",
+     "-im",
+     "-in"
+    ],
+    "answer": 3,
+    "explanation": "All plural persons (em, hûn, ew) take the ending '-in'."
+   }
+  ],
+  "tip": "Formula: Subject + di- + Present Stem + Personal Suffix (-im, -î, -e, -in)."
+ },
+ {
+  "id": "ku-a1-basic-negation-patterns",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🚫",
+  "title": "Verbal Negation with Ne-, Na-, and Nî-",
+  "subtitle": "Master the essential negative prefixes across tenses and copulas",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Use na- for present indicative verbs, ne- for past tenses and non-indicative moods, and nî- exclusively to negate the present copula.",
+  "structure": {
+   "headers": [
+    "Negation Prefix",
+    "Target Construction",
+    "Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "na-",
+      "Present Indicative",
+      "ez naçim",
+      "I do not go"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ne-",
+      "Past / Subjunctive",
+      "ez neçûm",
+      "I did not go"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "nî-",
+      "Present Copula",
+      "ew nîne",
+      "he/she/it is not"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Negating Present Habitual Actions",
+    "example": "Ew goşt naxwe.",
+    "translation": ""
+   },
+   {
+    "color": "#06B6D4",
+    "label": "Negating Past Completed Events",
+    "example": "Duh ez nehatim malê.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Negating Present Identity or State",
+    "example": "Ev pirtûk ne ya min e, ew nîne.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ez îro nan naxwim.",
+    "ko": "",
+    "highlight": "naxwim"
+   },
+   {
+    "en": "Duh ew neçû dibistanê.",
+    "ko": "",
+    "highlight": "neçû"
+   },
+   {
+    "en": "Mamoste îro li vir nîne.",
+    "ko": "",
+    "highlight": "nîne"
+   },
+   {
+    "en": "Em zimanê wan fehm nakin.",
+    "ko": "",
+    "highlight": "nakin"
+   },
+   {
+    "en": "Wî duh nameyek nenivîsî.",
+    "ko": "",
+    "highlight": "nenivîsî"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ez nexwim nan.",
+    "right": "Ez nan naxwim.",
+    "note": "Use na- instead of ne- for present tense verbs, and keep the verb at the end."
+   },
+   {
+    "wrong": "Ew îro li vir ne ye.",
+    "right": "Ew îro li vir nîne.",
+    "note": "The negative copula in the third person singular combines into nîne rather than ne ye."
+   },
+   {
+    "wrong": "Duh ez naçûm bajêr.",
+    "right": "Duh ez neçûm bajêr.",
+    "note": "Simple past verbs must be negated with ne-, never with the present prefix na-."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I do not drink tea' in the present tense? 'Ez çayê ___.'",
+    "options": [
+     "venaxwim",
+     "venevexim",
+     "venexwarim",
+     "venîxwim"
+    ],
+    "answer": 0,
+    "explanation": "The present continuous/habitual prefix di- is replaced by the negative prefix na-, yielding venaxwim."
+   },
+   {
+    "question": "How do you say 'They did not come yesterday'? 'Duh ew ___.'",
+    "options": [
+     "nayên",
+     "nehatin",
+     "nîhatin",
+     "nehat"
+    ],
+    "answer": 1,
+    "explanation": "The simple past requires the prefix ne- combined with the third-person plural ending -in, giving nehatin."
+   },
+   {
+    "question": "How do you say 'He is not at home right now'? 'Ew niha li malê ___.'",
+    "options": [
+     "nabe",
+     "naxwaze",
+     "nîne",
+     "nake"
+    ],
+    "answer": 2,
+    "explanation": "The negative 3rd person singular present copula meaning 'is not' is nîne."
+   },
+   {
+    "question": "How do you say 'We do not know'? 'Em ___.'",
+    "options": [
+     "nizanin",
+     "nezanîn",
+     "nîzanin",
+     "nazanin"
+    ],
+    "answer": 0,
+    "explanation": "The verb zanîn (to know) uses the irregular present negative stem nizan-, giving nizanin for 'we do not know'."
+   }
+  ],
+  "tip": "Remember that the present tense affirmative marker di- completely disappears when na- is attached, so dixwim becomes naxwim."
+ },
+ {
+  "id": "ku-a2-simple-past-intransitive",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#2563EB",
+  "emoji": "🚶",
+  "title": "Simple Past Conjugation of Intransitive Verbs",
+  "subtitle": "Conjugate verbs of motion and state using direct case pronouns",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Intransitive verbs in the past tense take direct case subjects and agree directly in person and number with the verb suffix.",
+  "structure": {
+   "headers": [
+    "Subject Pronoun",
+    "Past Stem (çû-)",
+    "Ending",
+    "Full Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Ez (1SG)",
+      "çû-",
+      "-m",
+      "ez çûm"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Tu (2SG)",
+      "çû-",
+      "-yî",
+      "tu çûyî"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ew (3SG)",
+      "çû-",
+      "—",
+      "ew çû"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Em / Hûn / Ew (PL)",
+      "çû-",
+      "-n",
+      "em çûn"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Describing Movements Completed in the Past",
+    "example": "Duh em çûn sûkê.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Reporting Arrival and Departure",
+    "example": "Mêvan saet di heştan de hatin.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Indicating Stative Changes",
+    "example": "Zarok zû mezin bûn.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ez hefteya borî ketim ezmûnê.",
+    "ko": "",
+    "highlight": "ketim"
+   },
+   {
+    "en": "Tu çima dereng hatî?",
+    "ko": "",
+    "highlight": "hatî"
+   },
+   {
+    "en": "Xwişka min duh ji zanîngehê zivirî.",
+    "ko": "",
+    "highlight": "zivirî"
+   },
+   {
+    "en": "Em serê sibê zû rabûn.",
+    "ko": "",
+    "highlight": "rabûn"
+   },
+   {
+    "en": "Ew hemû li ber derî man.",
+    "ko": "",
+    "highlight": "man"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Min çûm bajêr.",
+    "right": "Ez çûm bajêr.",
+    "note": "Intransitive past verbs require the direct subject pronoun (Ez), not the oblique pronoun (Min)."
+   },
+   {
+    "wrong": "Ew hevalê min hatin duh.",
+    "right": "Ew hevalê min hat duh.",
+    "note": "If the subject is singular (hevalê min), the verb takes zero suffix in the 3rd person singular, not the plural -in."
+   },
+   {
+    "wrong": "Tu çû bajêr?",
+    "right": "Tu çûyî bajêr?",
+    "note": "The second person singular pronoun tu requires the agreement suffix -î or -yî."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Duh şev ez pir dereng ___.' (I slept)",
+    "options": [
+     "razam",
+     "razayî",
+     "raza",
+     "razan"
+    ],
+    "answer": 0,
+    "explanation": "The direct subject ez requires the 1st person singular past suffix -m, giving razam."
+   },
+   {
+    "question": "Complete the sentence: 'Gelo hûn çima ne___?' (Why didn't you plural come?)",
+    "options": [
+     "nehatim",
+     "nehatî",
+     "nehat",
+     "nehatin"
+    ],
+    "answer": 3,
+    "explanation": "Plural subjects (em, hûn, ew) always take the suffix -n in the simple past, forming nehatin."
+   },
+   {
+    "question": "Complete the sentence: 'Duh hevala min zû ___.' (My friend left/went)",
+    "options": [
+     "çûyî",
+     "çû",
+     "çûm",
+     "çûn"
+    ],
+    "answer": 1,
+    "explanation": "A singular 3rd person subject (hevala min) takes no suffix on the past stem, so çû is correct."
+   },
+   {
+    "question": "Which sentence correctly uses an intransitive verb in the simple past?",
+    "options": [
+     "Min çû malê.",
+     "Ez çû malê.",
+     "Ez çûm malê.",
+     "Min çûm malê."
+    ],
+    "answer": 2,
+    "explanation": "Ez çûm malê uses the direct pronoun ez with the correct 1st person past agreement suffix -m."
+   }
+  ],
+  "tip": "To find any verb's past stem, simply remove the infinitive suffix -in or -an: e.g., hatin → hat-, ketin → ket-."
+ },
+ {
+  "id": "ku-a2-circumpositional-prepositions",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "📍",
+  "title": "Circumpositional Adpositions and the Oblique Case",
+  "subtitle": "Master Kurdish bracket prepositions like li... de and ji... re",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Circumpositions enclose nouns that must take oblique case inflection, marking exact spatial and directional relations.",
+  "structure": {
+   "headers": [
+    "Circumposition",
+    "Function",
+    "Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "li ... de",
+      "Location (in/inside)",
+      "li odeyê de",
+      "in the room"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ji ... re",
+      "Benefactive / Dative (for/to)",
+      "ji hevalê xwe re",
+      "to/for one's friend"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "bi ... re",
+      "Comitative (together with)",
+      "bi min re",
+      "with me"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "di ... re",
+      "Through / Via",
+      "di pencereyê re",
+      "through the window"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Describing Interior Containment",
+    "example": "Pênûs di çenteyî de ye.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Expressing an Addressee or Beneficiary",
+    "example": "Wî ji dayika xwe re got.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Expressing Accompaniment",
+    "example": "Ew bi birayê xwe re dimeşe.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Pirtûk li ser masê de nîne.",
+    "ko": "",
+    "highlight": "li ser masê de"
+   },
+   {
+    "en": "Ew her roj bi hevalê xwe re dipeyive.",
+    "ko": "",
+    "highlight": "bi hevalê xwe re"
+   },
+   {
+    "en": "Min ji xwişka xwe re nameyek şand.",
+    "ko": "",
+    "highlight": "ji xwişka xwe re"
+   },
+   {
+    "en": "Zarok di nav baxçeyî de dileyizin.",
+    "ko": "",
+    "highlight": "di nav baxçeyî de"
+   },
+   {
+    "en": "Diz di pencereya mezin re reviya.",
+    "ko": "",
+    "highlight": "di pencereya mezin re"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ew bi ez re hat.",
+    "right": "Ew bi min re hat.",
+    "note": "Personal pronouns enclosed by adpositions must take their oblique form (min, not ez)."
+   },
+   {
+    "wrong": "Ji dayik re got.",
+    "right": "Ji dayikê re got.",
+    "note": "Feminine singular nouns enclosed by prepositions must take the oblique ending -ê."
+   },
+   {
+    "wrong": "Di xanî de ew hene.",
+    "right": "Di xênî de ew hene.",
+    "note": "Masculine nouns ending in consonants or undergoing internal vowel harmony must show oblique inflection."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the right pronoun: 'Ew dixwaze bi ___ re biçe sînemayê.' (with you [singular])",
+    "options": [
+     "tu",
+     "te",
+     "tew",
+     "hûn"
+    ],
+    "answer": 1,
+    "explanation": "Circumpositions require the oblique case; the oblique form of 'tu' is 'te'."
+   },
+   {
+    "question": "Choose the correct form for 'in the room' (ode - fem.): 'Ew li ___ de rûniştiye.'",
+    "options": [
+     "ode",
+     "odeya",
+     "odeyê",
+     "odeyî"
+    ],
+    "answer": 2,
+    "explanation": "Feminine singular nouns take the oblique ending -ê (with glide -y- after a vowel), resulting in odeyê."
+   },
+   {
+    "question": "How do you say 'He told me' using the benefactive/recipient circumposition? 'Ew ji ___ re got.'",
+    "options": [
+     "ez",
+     "ew",
+     "min",
+     "me"
+    ],
+    "answer": 2,
+    "explanation": "The recipient takes ji... re with the first-person singular oblique pronoun min."
+   },
+   {
+    "question": "Complete the sentence: 'Zarok bi diya xwe ___ dimeşin.'",
+    "options": [
+     "de",
+     "ji",
+     "ve",
+     "re"
+    ],
+    "answer": 3,
+    "explanation": "The preposition bi pairs with the postposition re to denote accompaniment ('together with')."
+   }
+  ],
+  "tip": "Think of circumpositions as verbal bookends: the first element indicates the basic relationship, while the final particle reinforces orientation or completion."
+ },
+ {
+  "id": "ku-a2-imperative-and-prohibitive",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#DC2626",
+  "emoji": "🗣️",
+  "title": "Imperative and Prohibitive Moods with Bi- and Me-",
+  "subtitle": "Issue direct commands and prohibitions using present roots",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Form positive imperatives using the modal prefix bi- on the present stem, and form negative commands (prohibitions) by replacing bi- with me-.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Prefix",
+    "Verb Stem (ç-/bêj-)",
+    "Singular Ending",
+    "Plural Ending"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Positive Imperative",
+      "bi-",
+      "-çe / -bêje",
+      "-e / -∅",
+      "-in"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negative Prohibitive",
+      "me-",
+      "-çe / -bêje",
+      "-e / -∅",
+      "-in"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Preverbal Stem",
+      "∅ (replaces bi-)",
+      "der-keve",
+      "-e",
+      "-in"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Giving Direct Instructions",
+    "example": "Ji kerema xwe re derî veke!",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Issuing Warnings or Prohibitions",
+    "example": "Ji vir nereve!",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Plural Injunctions to Groups",
+    "example": "Zû werin vir!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Vê pirtûka balkêş bixwîne!",
+    "ko": "",
+    "highlight": "bixwîne"
+   },
+   {
+    "en": "Hûn li ser vê kursiyê rûnenên!",
+    "ko": "",
+    "highlight": "rûnenên"
+   },
+   {
+    "en": "Rastiyê ji hevalên xwe re bibêje!",
+    "ko": "",
+    "highlight": "bibêje"
+   },
+   {
+    "en": "Tiştekî wisa qet meke!",
+    "ko": "",
+    "highlight": "meke"
+   },
+   {
+    "en": "Ji vir derkevin û herin malê!",
+    "ko": "",
+    "highlight": "derkevin"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Neçe wir!",
+    "right": "Meçe wir!",
+    "note": "Imperative commands use the prohibitive prefix me-, not the indicative past negation prefix ne-."
+   },
+   {
+    "wrong": "Bixwin nan!",
+    "right": "Nan bixwe!",
+    "note": "Singular commands to one person end in -e or bare stem; -in is reserved for plural addressees."
+   },
+   {
+    "wrong": "Bi derkeve ji odeyê!",
+    "right": "Derkeve ji odeyê!",
+    "note": "Compound verbs with prefixes (like der-) drop the imperative marker bi- completely."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you order a single person: 'Speak!' (axaftin, present stem: axiv-)?",
+    "options": [
+     "biaxive",
+     "biaxivin",
+     "meaxive",
+     "diaxive"
+    ],
+    "answer": 0,
+    "explanation": "The singular imperative is formed by attaching bi- to the present root along with the singular ending -e: biaxive."
+   },
+   {
+    "question": "How do you tell a group: 'Do not go!' (çûn, stem: ç-)?",
+    "options": [
+     "neçin",
+     "meçin",
+     "meçe",
+     "biçin"
+    ],
+    "answer": 1,
+    "explanation": "Prohibitions for plural audiences use the prefix me- followed by stem and the plural suffix -in: meçin."
+   },
+   {
+    "question": "How do you tell someone: 'Do not do that!' (kirin, stem: k-)?",
+    "options": [
+     "neke",
+     "bike",
+     "nîke",
+     "meke"
+    ],
+    "answer": 3,
+    "explanation": "The negative imperative for kirin in singular is meke."
+   },
+   {
+    "question": "What happens to the prefix 'bi-' when the verb already has a spatial prefix like 've-' (vekirin)?",
+    "options": [
+     "It becomes bive-",
+     "It is dropped entirely",
+     "It shifts to the end",
+     "It changes to di-"
+    ],
+    "answer": 1,
+    "explanation": "Preverbal spatial prefixes (like ve-, der-, hil-) displace and drop the imperative prefix bi-."
+   }
+  ],
+  "tip": "Listen for colloquial speech where me- sometimes softens into ne-, but in standard written Kurdish, me- is required for all prohibitions."
+ },
+ {
+  "id": "ku-a2-indefinite-noun-suffixes",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🏷️",
+  "title": "Indefinite Nominal Suffixes (-ek and -in)",
+  "subtitle": "Form indefinite nouns and link them accurately with Ezafe",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Attach -ek to singular nouns for indefinite reference ('a/an') and link adjectives with the indefinite Ezafe marker -e.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Suffix",
+    "Base Noun",
+    "With Adjective (Indefinite Ezafe)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Singular Indefinite",
+      "-ek",
+      "pirtûkek (a book)",
+      "pirtûkeke baş (a good book)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Plural Indefinite",
+      "-in / -an",
+      "rojnaman (some newspapers)",
+      "rojnameyên nû (new newspapers)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Vowel-ending Noun",
+      "-yek",
+      "xaniyek (a house)",
+      "xaniyekî mezin (a big house)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Introducing a Non-specific Singular Item",
+    "example": "Min hevalek dît.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Modifying Indefinite Nouns with Adjectives",
+    "example": "Wî bajarekî pir xweşik dît.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Mentioning Non-specific Quantities",
+    "example": "Li vir hinek pirtûk hene.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Duh min pirtûkek kirî.",
+    "ko": "",
+    "highlight": "pirtûkek"
+   },
+   {
+    "en": "Ew keçeke pir jîr û delal e.",
+    "ko": "",
+    "highlight": "keçeke"
+   },
+   {
+    "en": "Li ser sifrê sêvek sor heye.",
+    "ko": "",
+    "highlight": "sêvek"
+   },
+   {
+    "en": "Me xaniyekî pir kevn dît.",
+    "ko": "",
+    "highlight": "xaniyekî"
+   },
+   {
+    "en": "Mirovekî nenas hat vir.",
+    "ko": "",
+    "highlight": "Mirovekî"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Yek pirtûk li ser masê ye.",
+    "right": "Pirtûkek li ser masê ye.",
+    "note": "Rather than placing the numeral yek before nouns for general 'a/an', attach the suffix -ek to the noun."
+   },
+   {
+    "wrong": "Keçikê rind hat.",
+    "right": "Keçikeke rind hat.",
+    "note": "An indefinite feminine noun followed by an adjective requires the indefinite Ezafe connector -e (-eke total)."
+   },
+   {
+    "wrong": "Mirovek baş hat.",
+    "right": "Mirovekî baş hat.",
+    "note": "Masculine indefinite nouns taking an adjective must use the connector -î (-ekî total), not the bare suffix."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'a woman' (jin)?",
+    "options": [
+     "jinan",
+     "jinek",
+     "jina",
+     "jinikê"
+    ],
+    "answer": 1,
+    "explanation": "The standard singular indefinite suffix is -ek, yielding jinek."
+   },
+   {
+    "question": "Choose the correct phrase for 'a good boy' (kur - masc.):",
+    "options": [
+     "kurek baş",
+     "kurê baş",
+     "kurekî baş",
+     "kureke baş"
+    ],
+    "answer": 2,
+    "explanation": "Masculine nouns marked with -ek take the indefinite Ezafe connector -î before an adjective: kurekî baş."
+   },
+   {
+    "question": "Choose the correct phrase for 'a beautiful city' (bajar - masc.):",
+    "options": [
+     "bajarekî xweşik",
+     "bajareke xweşik",
+     "bajarê xweşik",
+     "bajarek xweşik"
+    ],
+    "answer": 0,
+    "explanation": "Bajar is masculine, so it takes the masculine indefinite Ezafe -ekî before the adjective xweşik."
+   },
+   {
+    "question": "Choose the correct phrase for 'a new car' (erebe - fem.):",
+    "options": [
+     "erebek nû",
+     "erebeyekî nû",
+     "erebeyeke nû",
+     "erebeya nû"
+    ],
+    "answer": 2,
+    "explanation": "Erebe ends in a vowel and is feminine, requiring the glide and feminine indefinite Ezafe -yeke before the adjective."
+   }
+  ],
+  "tip": "Remember the gender difference in indefinite Ezafe: masculine nouns use -ekî (kurekî baş) while feminine nouns use -eke (keçeke baş)."
+ },
+ {
+  "id": "ku-a2-vocative-case-markers",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🗣️",
+  "title": "Vocative Case Endings",
+  "subtitle": "Addressing people directly in Kurdish",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Add the suffix -o to call a masculine person, -ê to call a feminine person, and -ino to address a group directly.",
+  "structure": {
+   "headers": [
+    "Gender/Number",
+    "Vocative Suffix",
+    "Example",
+    "English"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Singular",
+      "-o",
+      "bira -> biro!",
+      "Brother!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine Singular",
+      "-ê",
+      "keçik -> keçikê!",
+      "Girl!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural (General)",
+      "-ino / -no",
+      "heval -> hevalino!",
+      "Friends!"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Calling a Male",
+    "example": "Lê binêre, kuro!",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Calling a Female",
+    "example": "Were vir, dotmamê!",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Addressing a Crowd",
+    "example": "Guh bidin min, hevalino!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kuro, were malê!",
+    "ko": "",
+    "highlight": "Kuro"
+   },
+   {
+    "en": "Keçikê, pirtûkê bixwîne!",
+    "ko": "",
+    "highlight": "Keçikê"
+   },
+   {
+    "en": "Hevalino, em biçin!",
+    "ko": "",
+    "highlight": "Hevalino"
+   },
+   {
+    "en": "Bavo, tu li ku yî?",
+    "ko": "",
+    "highlight": "Bavo"
+   },
+   {
+    "en": "Dayikê, nan hazir e?",
+    "ko": "",
+    "highlight": "Dayikê"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Kurikê, were vir!",
+    "right": "Kuriko, were vir!",
+    "note": "Use -o for masculine nouns; -ê is reserved exclusively for feminine nouns."
+   },
+   {
+    "wrong": "Hevalo, em gişt biçin!",
+    "right": "Hevalino, em gişt biçin!",
+    "note": "When addressing multiple people, use the plural vocative suffix -ino instead of singular -o."
+   },
+   {
+    "wrong": "Ez hevalê dibînim.",
+    "right": "Ez hevalê dibînim, hevalê!",
+    "note": "Do not confuse the feminine oblique ending -ê with the vocative -ê; vocative is strictly for calling someone directly."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you call out to a young boy (kurik)?",
+    "options": [
+     "Kurikê!",
+     "Kuriko!",
+     "Kurikino!",
+     "Kurikên!"
+    ],
+    "answer": 1,
+    "explanation": "Masculine singular nouns take the vocative suffix -o."
+   },
+   {
+    "question": "How do you address your sister (xwişk) directly?",
+    "options": [
+     "Xwişkê!",
+     "Xwişko!",
+     "Xwişkino!",
+     "Xwişka!"
+    ],
+    "answer": 0,
+    "explanation": "Feminine singular nouns take the vocative suffix -ê."
+   },
+   {
+    "question": "How do you get the attention of a group of students (xwendekar)?",
+    "options": [
+     "Xwendekaro!",
+     "Xwendekarê!",
+     "Xwendekarî!",
+     "Xwendekarino!"
+    ],
+    "answer": 3,
+    "explanation": "Plural nouns take the vocative suffix -ino (or -no after vowels)."
+   },
+   {
+    "question": "Which sentence correctly calls an uncle (xal)?",
+    "options": [
+     "Xalê, silav!",
+     "Xalino, silav!",
+     "Xalo, silav!",
+     "Xalan, silav!"
+    ],
+    "answer": 2,
+    "explanation": "Xal is masculine, so it takes the -o vocative ending."
+   }
+  ],
+  "tip": "If a word ends in a vowel, the vocative suffix often contracts or takes a glide, like 'bira' becoming 'biro'."
+ },
+ {
+  "id": "ku-a2-modal-verbs-subjunctive",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🎯",
+  "title": "Basic Subjunctive with Modals",
+  "subtitle": "Expressing ability, desire, and necessity",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Modal verbs like karîn, xwestin, and divê trigger the dependent verb in the present subjunctive, usually marked by the bi- prefix.",
+  "structure": {
+   "headers": [
+    "Modal Verb",
+    "Meaning",
+    "Subjunctive Form",
+    "Full Pattern"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "karîn",
+      "can / to be able to",
+      "bi- + stem + ending",
+      "Ez dikarim bixwînim"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "xwestin",
+      "to want to",
+      "bi- + stem + ending",
+      "Ew dixwaze bibîne"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "divê",
+      "must / should",
+      "bi- + stem + ending",
+      "Divê em herin"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Expressing Ability",
+    "example": "Ez dikarim kurdî biaxivim.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Expressing Desire",
+    "example": "Ew dixwazin pirtûkekê bikirin.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Expressing Obligation",
+    "example": "Divê hûn zû rakevin.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ez dixwazim zimanê kurdî hîn bibim.",
+    "ko": "",
+    "highlight": "hîn bibim"
+   },
+   {
+    "en": "Ew dikarin bi me re bimeşin.",
+    "ko": "",
+    "highlight": "bimeşin"
+   },
+   {
+    "en": "Divê tu derî bigirî.",
+    "ko": "",
+    "highlight": "bigirî"
+   },
+   {
+    "en": "Em naxwazin îro herin bajêr.",
+    "ko": "",
+    "highlight": "herin"
+   },
+   {
+    "en": "Gelo hûn dikarin vî karî çêbikin?",
+    "ko": "",
+    "highlight": "çêbikin"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ez dixwazim dixwînim.",
+    "right": "Ez dixwazim bixwînim.",
+    "note": "The secondary verb must take the subjunctive prefix bi-, not the indicative prefix di-."
+   },
+   {
+    "wrong": "Divê em xwarin dixwin.",
+    "right": "Divê em xwarinê bixwin.",
+    "note": "Impersonal modal 'divê' always requires the subjunctive mood on the following verb."
+   },
+   {
+    "wrong": "Ew nikare biçe ne.",
+    "right": "Ew nikare biçe.",
+    "note": "Double negation is ungrammatical; the negative modal 'nikare' already negates the phrase."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete: 'Ez dixwazim nan ___.' (xwarin)",
+    "options": [
+     "dixwim",
+     "bixwim",
+     "xwar",
+     "bixwe"
+    ],
+    "answer": 1,
+    "explanation": "The first person singular subjunctive form of xwarin is bixwim."
+   },
+   {
+    "question": "Complete: 'Divê tu zû ___.' (hatin)",
+    "options": [
+     "bêyî",
+     "têyî",
+     "hatî",
+     "bihatî"
+    ],
+    "answer": 0,
+    "explanation": "Hatin has an irregular subjunctive stem; 2nd person singular is bêyî (or werî)."
+   },
+   {
+    "question": "Complete: 'Ew dikarin bi kurdî ___.' (axaftin)",
+    "options": [
+     "diaxivin",
+     "biaxive",
+     "biaxivin",
+     "axivîn"
+    ],
+    "answer": 2,
+    "explanation": "The 3rd person plural ending is -in, giving biaxivin in the subjunctive."
+   },
+   {
+    "question": "Which sentence means 'We must study'?",
+    "options": [
+     "Divê em dersê bixebitin.",
+     "Em dixwazin dersê bixebitin.",
+     "Em dikarin dersê dixebitin.",
+     "Divê em dersê dixebitin."
+    ],
+    "answer": 0,
+    "explanation": "Divê + subjunctive (bixebitin) expresses 'must study'."
+   }
+  ],
+  "tip": "Compound verbs that use kirin or bûn drop the prefix bi- and instead conjugate the light verb directly as bikim, bibim, etc."
+ },
+ {
+  "id": "ku-b1-past-tense-ergativity",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⚖️",
+  "title": "Split Ergativity in Past Tenses",
+  "subtitle": "How Kurdish flips subject and object roles in the past",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "In past transitive sentences, the agent stands in the oblique case while the verb agrees exclusively with the direct-case object.",
+  "structure": {
+   "headers": [
+    "Role",
+    "Case Form",
+    "Example (Pronoun)",
+    "Agreement"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Agent (Transitive Subject)",
+      "Oblique",
+      "Min, Te, Wî, Wê, Me, We, Wan",
+      "Never agrees with verb"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Patient (Direct Object)",
+      "Direct (Absolute)",
+      "Ez, Tu, Ew, Em, Hûn, Ew",
+      "Verb agrees fully with this!"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Intransitive Subject",
+      "Direct (Absolute)",
+      "Ez çûm, Tu çûyî, Ew çû",
+      "Standard nominative agreement"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Singular Object Agreement",
+    "example": "Min sêvek xwar.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Plural Object Agreement",
+    "example": "Min sêv xwarin.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Pronoun Patient Agreement",
+    "example": "Wî ez dîtlim.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Min nameyek nivîsand.",
+    "ko": "",
+    "highlight": "Min"
+   },
+   {
+    "en": "Te em dîtin li sûkê.",
+    "ko": "",
+    "highlight": "dîtin"
+   },
+   {
+    "en": "Wî pirtûk xwendin.",
+    "ko": "",
+    "highlight": "xwendin"
+   },
+   {
+    "en": "Wan ez birim nexweşxaneyê.",
+    "ko": "",
+    "highlight": "birim"
+   },
+   {
+    "en": "Me xaniyekî mezin kirî.",
+    "ko": "",
+    "highlight": "kirî"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ez pirtûkek xwend.",
+    "right": "Min pirtûkek xwend.",
+    "note": "The agent of a transitive past action must be in the oblique case (min, not ez)."
+   },
+   {
+    "wrong": "Min ew dîtin.",
+    "right": "Min ew dît.",
+    "note": "If the object 'ew' is singular, the verb must end with the 3rd person singular zero-ending (dît), not plural (-in)."
+   },
+   {
+    "wrong": "Min çûm bajêr.",
+    "right": "Ez çûm bajêr.",
+    "note": "Ergativity only applies to transitive verbs. 'Çûn' is intransitive, so the subject stays in the direct case (Ez)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct agent: '___ sêv xwar.' (I ate an apple)",
+    "options": [
+     "Ez",
+     "Min",
+     "Min re",
+     "Ji min"
+    ],
+    "answer": 1,
+    "explanation": "In past transitive clauses, the subject takes the oblique case 'min'."
+   },
+   {
+    "question": "Complete the verb: 'Wî em ___.' (He saw us)",
+    "options": [
+     "dît",
+     "dîtim",
+     "dîtî",
+     "dîtin"
+    ],
+    "answer": 3,
+    "explanation": "The verb agrees with the direct-case object 'em' (we), taking the plural suffix -in."
+   },
+   {
+    "question": "Complete the sentence: 'Wê ez ___.' (She saw me)",
+    "options": [
+     "dîtin",
+     "dît",
+     "dîtim",
+     "dîtî"
+    ],
+    "answer": 2,
+    "explanation": "The verb agrees with 'ez' (1st person singular), taking the suffix -im."
+   },
+   {
+    "question": "Which sentence is grammatically correct?",
+    "options": [
+     "Wan nan xwar.",
+     "Ew nan xwar.",
+     "Wan nan xwarin ez.",
+     "Ez pirtûk xwend."
+    ],
+    "answer": 0,
+    "explanation": "'Wan' is oblique agent, 'nan' is singular direct object, so the verb 'xwar' is singular."
+   }
+  ],
+  "tip": "Always identify whether the verb is transitive before speaking in the past; if it can take a direct object, use min/te/wî/wê/me/we/wan for the doer!"
+ },
+ {
+  "id": "ku-b1-past-continuous-habitual",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#2563EB",
+  "emoji": "⏳",
+  "title": "Past Continuous and Habitual Aspect",
+  "subtitle": "Narrating ongoing or repeated events in the past",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Prefixing di- to the simple past stem creates the past continuous/habitual tense, still obeying split-ergative rules for transitive verbs.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Construction",
+    "Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Intransitive Habitual",
+      "Subject(Dir) + di- + stem + ending",
+      "Ez diçûm dibistanê",
+      "I was going / used to go to school"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Transitive Habitual",
+      "Agent(Obl) + di- + stem + ending(Obj)",
+      "Min pirtûk dixwendin",
+      "I was reading / used to read books"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negative Past Cont.",
+      "na- replaced by ne- -> nedi-",
+      "Ew nedihatin vir",
+      "They were not coming here"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Ongoing Background Action",
+    "example": "Dema ew hat, min nan dixwar.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Childhood Habitual Event",
+    "example": "Wê demê em her roj dilîstin.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Interrupted Past State",
+    "example": "Baran dibarî dema em derketin.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ez her sal diçûm Amedê.",
+    "ko": "",
+    "highlight": "diçûm"
+   },
+   {
+    "en": "Dema tu hatî, min name dinivîsand.",
+    "ko": "",
+    "highlight": "dinivîsand"
+   },
+   {
+    "en": "Zarokan li derve dilîstin.",
+    "ko": "",
+    "highlight": "dilîstin"
+   },
+   {
+    "en": "Ew nedixwestin bi me re bipeyivin.",
+    "ko": "",
+    "highlight": "nedixwestin"
+   },
+   {
+    "en": "Me her sibeh şîr vedixwar.",
+    "ko": "",
+    "highlight": "vedixwar"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Min diçûm bazarê.",
+    "right": "Ez diçûm bazarê.",
+    "note": "Çûn is intransitive; do not use the oblique agent min even in the past continuous."
+   },
+   {
+    "wrong": "Min pirtûk xwendim.",
+    "right": "Min pirtûk dixwend.",
+    "note": "Past continuous requires the di- aspectual prefix; without it, it is a simple past attempt."
+   },
+   {
+    "wrong": "Ew ne dihat.",
+    "right": "Ew nedihat.",
+    "note": "The negative marker merges with the aspectual prefix as nedi-, not separated."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete for 'I was walking': 'Ez hêdî hêdî ___.' (meşîn)",
+    "options": [
+     "dimeşiyam",
+     "dimeşim",
+     "meşiyam",
+     "bimeşim"
+    ],
+    "answer": 0,
+    "explanation": "Intransitive past continuous: prefix di- + past stem meşiya- + 1st person ending -m."
+   },
+   {
+    "question": "Complete: 'Dema bavê min hat, me nan ___.' (xwarin)",
+    "options": [
+     "xwar",
+     "dixwar",
+     "dixwin",
+     "bixwin"
+    ],
+    "answer": 1,
+    "explanation": "The action of eating bread was ongoing in the past, requiring dixwar (agreeing with singular nan)."
+   },
+   {
+    "question": "How do you say 'He used to not listen'?",
+    "options": [
+     "Ew ne guhdarî kir.",
+     "Ew naguhdarî dikir.",
+     "Ew neguhdarî dikir.",
+     "Ew nedihat guhdarî."
+    ],
+    "answer": 2,
+    "explanation": "The negation of compound past continuous joins as 'neguhdarî dikir' (or 'guhdarî nedikir')."
+   },
+   {
+    "question": "What is the past habitual of 'Ew dibêjin' (They say)?",
+    "options": [
+     "Wan got",
+     "Wan digot",
+     "Ew digotin",
+     "Wan digotin"
+    ],
+    "answer": 1,
+    "explanation": "Gotin is transitive; in the past habitual with a singular omitted speech object, it is 'Wan digot'."
+   }
+  ],
+  "tip": "Remember: The prefix 'di-' serves two roles—present indicative with present stems, and past continuous/habitual with past stems!"
+ },
+ {
+  "id": "ku-b1-compound-verbs-incorporation",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🧩",
+  "title": "Compound Verbs with Kirin and Bûn",
+  "subtitle": "Building active and stative actions with light verbs",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "Most modern Kurdish verbs are compounds made of a noun or adjective plus 'kirin' (to do/make, active) or 'bûn' (to become, passive/stative).",
+  "structure": {
+   "headers": [
+    "Noun/Adj Element",
+    "With Kirin (Transitive)",
+    "With Bûn (Intransitive)",
+    "Meaning Shift"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "germ (warm)",
+      "germ kirin",
+      "germ bûn",
+      "to heat up vs to get warm"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "çê (good/ready)",
+      "çêkirin",
+      "çêbûn",
+      "to build/make vs to happen/occur"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "paqij (clean)",
+      "paqij kirin",
+      "paqij bûn",
+      "to clean vs to get cleaned"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Active Transitive Action",
+    "example": "Dayika min xwarinê çêdike.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Inchoative / Becoming",
+    "example": "Av di zivistanê de sar dibe.",
+    "translation": ""
+   },
+   {
+    "color": "#E11D48",
+    "label": "Ergative Past Compound",
+    "example": "Me odeya xwe paqij kir.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ew her roj malê paqij dikin.",
+    "ko": "",
+    "highlight": "paqij dikin"
+   },
+   {
+    "en": "Zarok zû mezin bûn.",
+    "ko": "",
+    "highlight": "mezin bûn"
+   },
+   {
+    "en": "Te çima derî vekir?",
+    "ko": "",
+    "highlight": "vekir"
+   },
+   {
+    "en": "Ez dixwazim alîkariya te bikim.",
+    "ko": "",
+    "highlight": "alîkariya te bikim"
+   },
+   {
+    "en": "Hewayê îro pir germ bû.",
+    "ko": "",
+    "highlight": "germ bû"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Min xanî çêbû.",
+    "right": "Min xanî çêkir.",
+    "note": "Çêbûn is intransitive (to happen/be made); to express building something actively, use çêkirin."
+   },
+   {
+    "wrong": "Ew dixwazin kar bînin.",
+    "right": "Ew dixwazin bi kar bînin.",
+    "note": "The idiom 'to use' is 'bi kar anîn', requiring the preposition 'bi'."
+   },
+   {
+    "wrong": "Ew zû mezin kir.",
+    "right": "Ew zû mezin bû.",
+    "note": "If the subject grew up by itself without an external object, use bûn instead of kirin."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'We cleaned the car'?",
+    "options": [
+     "Me erebe paqij kir.",
+     "Em erebe paqij bûn.",
+     "Me erebe paqij bû.",
+     "Em erebê paqij dikin."
+    ],
+    "answer": 0,
+    "explanation": "Paqij kirin is transitive; in past tense, agent is oblique (me) and verb is 'kir'."
+   },
+   {
+    "question": "What is the meaning of 'şiyar bûn'?",
+    "options": [
+     "To wake someone up",
+     "To wake up",
+     "To sleep deeply",
+     "To sing a song"
+    ],
+    "answer": 1,
+    "explanation": "Compounds with 'bûn' are intransitive/reflexive: şiyar bûn = to wake up (oneself)."
+   },
+   {
+    "question": "Which verb forms 'to start' transitively (e.g. to start a class)?",
+    "options": [
+     "dest pê bûn",
+     "dest pê kirin",
+     "dest dayîn",
+     "dest xistin"
+    ],
+    "answer": 1,
+    "explanation": "'Dest pê kirin' is transitive 'to start (something)', whereas 'dest pê bûn' is intransitive."
+   },
+   {
+    "question": "Fill in the blank: 'Av zû kel ___.' (The water boiled)",
+    "options": [
+     "kir",
+     "dike",
+     "bû",
+     "dibû"
+    ],
+    "answer": 2,
+    "explanation": "'Kel bûn' means to boil intransitively; in simple past it becomes 'kel bû'."
+   }
+  ],
+  "tip": "Pairing rule: Whenever you see an unfamiliar adjective, you can usually turn it into a verb immediately by appending 'kirin' (to make it X) or 'bûn' (to become X)!"
+ },
+ {
+  "id": "ku-b1-present-perfect-pluperfect",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "⏳",
+  "title": "Present Perfect and Pluperfect Formations",
+  "subtitle": "Expressing actions completed before the present or prior to another past event",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The present perfect attaches clitic copular suffixes to the past stem, while the pluperfect adds the past auxiliary bûyîn.",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Formation",
+    "Kurdish Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present Perfect (Intransitive)",
+      "Past Stem + Copula",
+      "Ez çûme bajêr.",
+      "I have gone to the city."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Present Perfect (Transitive)",
+      "Ergative Agent + Past Stem + Copula",
+      "Min ew pirtûk xwendiye.",
+      "I have read that book."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Pluperfect (Intransitive)",
+      "Past Stem + Bû- + Past Endings",
+      "Ew hatibû malê.",
+      "He/she had come home."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Pluperfect (Transitive)",
+      "Ergative Agent + Past Stem + Bû-",
+      "Wan nan xwaribû.",
+      "They had eaten bread."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Recent Action with Present Relevance",
+    "example": "Min karsaziya xwe qedandiye.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Prior Past Completion",
+    "example": "Dema ew hat, min xwarin xwaribû.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Life Experience",
+    "example": "Te berê Amed dîtiye?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ez îro pir westiyame.",
+    "ko": "",
+    "highlight": "westiyame"
+   },
+   {
+    "en": "Me xaniyê xwe firotiye.",
+    "ko": "",
+    "highlight": "firotiye"
+   },
+   {
+    "en": "Beriya şevê ew gihîştibûn gund.",
+    "ko": "",
+    "highlight": "gihîştibûn"
+   },
+   {
+    "en": "Wê nameyek dirêj nivîsandibû.",
+    "ko": "",
+    "highlight": "nivîsandibû"
+   },
+   {
+    "en": "Gelo te kilîta xwe dîtiye?",
+    "ko": "",
+    "highlight": "dîtiye"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ez pirtûk xwendiye.",
+    "right": "Min pirtûk xwendiye.",
+    "note": "Transitive verbs in perfect tenses require the subject to be in the oblique case due to ergative alignment."
+   },
+   {
+    "wrong": "Min name nivîsî bûm.",
+    "right": "Min name nivîsandibû.",
+    "note": "The pluperfect auxiliary agrees with the direct object (here third-person singular), not the agent."
+   },
+   {
+    "wrong": "Ew çûyî ye.",
+    "right": "Ew çûye.",
+    "note": "The third person singular present perfect suffix is attached directly as -ye to stems ending in vowels."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete with present perfect: 'I have arrived home.' -> 'Ez gihîştime ___.'",
+    "options": [
+     "malê",
+     "mala",
+     "mal",
+     "maldan"
+    ],
+    "answer": 0,
+    "explanation": "Nouns of destination take the oblique ending (-ê for feminine nouns like mal)."
+   },
+   {
+    "question": "Choose the correct pluperfect form: 'She had already bought the car.' -> 'Wê erebe berê ___.'",
+    "options": [
+     "kirî",
+     "kiribû",
+     "dikir",
+     "bikiriba"
+    ],
+    "answer": 1,
+    "explanation": "The pluperfect of kirîn (to buy) matching a singular feminine direct object is kiribû."
+   },
+   {
+    "question": "Which sentence contains a present perfect transitive verb?",
+    "options": [
+     "Ew reviyaye derve.",
+     "Em hatine vir.",
+     "Min nan xwariye.",
+     "Hûn ketibûn xewê."
+    ],
+    "answer": 2,
+    "explanation": "'Min nan xwariye' features an ergative subject (min) and present perfect verb (xwariye)."
+   },
+   {
+    "question": "Identify the incorrect agreement in the pluperfect:",
+    "options": [
+     "Min ew dîtibûn.",
+     "Ew çûbûn bajêr.",
+     "Me sê sêv xwaribûm.",
+     "Te pirtûk xwendibû."
+    ],
+    "answer": 2,
+    "explanation": "The transitive verb agrees with the plural object 'sê sêv', so it must be xwaribûn, not xwaribûm."
+   }
+  ],
+  "tip": "Remember that in both present perfect and pluperfect, transitive verbs agree in person and number with the grammatical patient (object), never the agent!"
+ },
+ {
+  "id": "ku-b1-passive-voice-with-hatin",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "Passive Construction with Hatin + Infinitive",
+  "subtitle": "Using the auxiliary hatin with oblique verbal nouns to form passives",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "The passive voice is formed by conjugating the auxiliary verb hatin to match the patient, followed by the oblique infinitive (-inê/-anê) of the main verb.",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Auxiliary (Hatin)",
+    "Main Verb (Infinitive)",
+    "Full Passive Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present Simple",
+      "tê / tên",
+      "xwarinê",
+      "Nan tê xwarinê."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Simple",
+      "hat / hatin",
+      "dîtinê",
+      "Pirtûk hat dîtinê."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Future",
+      "wê bê / wê bên",
+      "avakirinê",
+      "Pird wê bê avakirinê."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Present Perfect",
+      "hatiye / hatine",
+      "firotinê",
+      "Xanî hatiye firotinê."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Describing Processes",
+    "example": "Kovara nû mehane tê weşandinê.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Unspecified Agent Events",
+    "example": "Diz di şevê de hat girtinê.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Official Announcements",
+    "example": "Dibistan wê sibê bên vekirinê.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dergeh di saet heştan de tê vekirinê.",
+    "ko": "",
+    "highlight": "tê vekirinê"
+   },
+   {
+    "en": "Ew xanî sala borî hat firotinê.",
+    "ko": "",
+    "highlight": "hat firotinê"
+   },
+   {
+    "en": "Gelek stranên xweş hatin strandinê.",
+    "ko": "",
+    "highlight": "hatin strandinê"
+   },
+   {
+    "en": "Name ji aliyê bavê min ve hatiye xwendinê.",
+    "ko": "",
+    "highlight": "hatiye xwendinê"
+   },
+   {
+    "en": "Projeya nû wê zû bê temamkirinê.",
+    "ko": "",
+    "highlight": "bê temamkirinê"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Pirtûk hat xwendin.",
+    "right": "Pirtûk hat xwendinê.",
+    "note": "In standard Kurmanji passive structures, the infinitive must receive the oblique suffix -ê."
+   },
+   {
+    "wrong": "Ez hat dîtinê.",
+    "right": "Ez hatim dîtinê.",
+    "note": "The auxiliary verb hatin must conjugate to agree with the subject in person and number (ez hatim)."
+   },
+   {
+    "wrong": "Karker hatin xanî çêkirinê.",
+    "right": "Xanî hat çêkirinê.",
+    "note": "Passive subjects are patients; do not keep the original active agent as the grammatical subject."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct form: 'The letters were written.' -> 'Name ___ nivîsandinê.'",
+    "options": [
+     "hat",
+     "hatin",
+     "tên",
+     "bûn"
+    ],
+    "answer": 1,
+    "explanation": "The subject 'name' is plural here ('letters'), so hatin agrees with the plural subject in the past."
+   },
+   {
+    "question": "How do you say 'Bread is eaten every morning'?",
+    "options": [
+     "Nan her sibeh tê xwarinê.",
+     "Nan her sibeh tê xwarin.",
+     "Nan her sibeh xwar.",
+     "Nan her sibeh hat xwarinê."
+    ],
+    "answer": 0,
+    "explanation": "Present tense singular passive requires 'tê' followed by the oblique infinitive 'xwarinê'."
+   },
+   {
+    "question": "Which verb acts as the passive auxiliary in Kurmanji?",
+    "options": [
+     "çûn",
+     "bûn",
+     "hatin",
+     "kirin"
+    ],
+    "answer": 2,
+    "explanation": "The auxiliary verb 'hatin' (to come) is uniquely used to form analytic passive constructions."
+   },
+   {
+    "question": "Select the correct future passive: 'The bridge will be repaired.'",
+    "options": [
+     "Pird hate çêkirinê.",
+     "Pird tê çêkirinê.",
+     "Pird hat çêkirinê.",
+     "Pird wê bê çêkirinê."
+    ],
+    "answer": 3,
+    "explanation": "'wê bê' marks the future passive singular corresponding to 'will be'."
+   }
+  ],
+  "tip": "To specify the agent in a passive sentence, use the circumposition 'ji aliyê ... ve' (e.g., ji aliyê polîsan ve = by the police)."
+ },
+ {
+  "id": "ku-b2-causative-verb-derivation",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#8B5CF6",
+  "emoji": "⚙️",
+  "title": "Morphological Causatives (-andin / -andin)",
+  "subtitle": "Deriving transitive and causative verbs from intransitive stems and adjectives",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Appending the suffix -andin to an intransitive root or adjective base converts it into a transitive or causative verb stem.",
+  "structure": {
+   "headers": [
+    "Base Word",
+    "Type",
+    "Causative Infinitive",
+    "Present Stem"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "gerîn (to tour/walk)",
+      "Intransitive Verb",
+      "gerandin (to run/operate)",
+      "-gerîn-"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "revîn (to flee)",
+      "Intransitive Verb",
+      "revandin (to kidnap/abduct)",
+      "-revîn-"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "germ (warm/hot)",
+      "Adjective",
+      "germandin (to heat/warm up)",
+      "-germîn-"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "şewitîn (to burn [intr.])",
+      "Intransitive Verb",
+      "şewitandin (to burn [tr.])",
+      "-şewitîn-"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Making Someone Do Something",
+    "example": "Mamoste şagirt da axaftinê lê wî ders fêhmand.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Direct Causation from Adjectives",
+    "example": "Dê şîr ji bo zarokê xwe germand.",
+    "translation": ""
+   },
+   {
+    "color": "#A78BFA",
+    "label": "Transitivizing Motion Verbs",
+    "example": "Şofêr erebeyê li dora bajêr digerîne.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Wî zarok ji xewê hişyar kir û tirsand.",
+    "ko": "",
+    "highlight": "tirsand"
+   },
+   {
+    "en": "Ew kevirê giran bi hêsanî dihejîne.",
+    "ko": "",
+    "highlight": "dihejîne"
+   },
+   {
+    "en": "Wan xaniyê kevn bi temamî şewitandin.",
+    "ko": "",
+    "highlight": "şewitandin"
+   },
+   {
+    "en": "Karker daran li erdê dirêj dikin û dirizînin.",
+    "ko": "",
+    "highlight": "dirizînin"
+   },
+   {
+    "en": "Dayikê pitika xwe di landikê de hejand.",
+    "ko": "",
+    "highlight": "hejand"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ew agir dişewite.",
+    "right": "Ew agir dişewitîne.",
+    "note": "Şewitîn is intransitive ('catches fire'); şewitandin with present stem -şewitîn- is needed for transitive burning."
+   },
+   {
+    "wrong": "Min hevalê xwe tirsî.",
+    "right": "Min hevalê xwe tirsand.",
+    "note": "Tirsîn is intransitive ('to be afraid'); the transitive causative counterpart is tirsandin ('to scare')."
+   },
+   {
+    "wrong": "Ew kincan zuha bûn.",
+    "right": "Wê kinc zuha kirin.",
+    "note": "Adjectives take causative suffixes (-andin) or verbalizers like kirin to produce transitive actions."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the causative counterpart of the intransitive verb 'firin' (to fly)?",
+    "options": [
+     "firîn",
+     "firandin",
+     "firîngeh",
+     "firotin"
+    ],
+    "answer": 1,
+    "explanation": "The causative suffix -andin attaches to the root 'fir-', giving 'firandin' (to make fly / launch)."
+   },
+   {
+    "question": "In the present tense, causatives in -andin change their suffix to:",
+    "options": [
+     "-e",
+     "-îne",
+     "-in",
+     "-and"
+    ],
+    "answer": 1,
+    "explanation": "The present stem for verbs in -andin regularizes with an -în- infix followed by personal endings (e.g., di-tirs-în-e)."
+   },
+   {
+    "question": "Identify the causative transitive verb in this sentence: 'He scared the birds.'",
+    "options": [
+     "Wî çûk firiya.",
+     "Wî çûk tirsandin.",
+     "Çûk tirsiyan.",
+     "Wî çûk dît."
+    ],
+    "answer": 1,
+    "explanation": "'Tirsandin' is the causative transitive form meaning 'to frighten/scare'."
+   },
+   {
+    "question": "Fill in the blank: 'Min şîr li ser sobeyê ___.' (I warmed up the milk.)",
+    "options": [
+     "germ bû",
+     "germî",
+     "keliya",
+     "germand"
+    ],
+    "answer": 3,
+    "explanation": "'germand' is the simple past tense of the derived causative verb germandin (to heat)."
+   }
+  ],
+  "tip": "Notice the symmetry: intransitive past stems end in -î- (tirsî = was scared), while causative transitive past stems end in -and- (tirsand = scared someone)."
+ },
+ {
+  "id": "ku-b2-past-subjunctive-irrealis-conditionals",
+  "level": "b2",
+  "category": "conditionals",
+  "categoryColor": "#F59E0B",
+  "emoji": "💭",
+  "title": "Past Subjunctive and Counterfactual Conditionals",
+  "subtitle": "Formulating impossible past conditions and hypothetical irrealis scenarios",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Counterfactual conditionals combine the past conditional particle ba with past stems to express unreal past hypotheses.",
+  "structure": {
+   "headers": [
+    "Clause Type",
+    "Marker/Structure",
+    "Kurdish Example",
+    "English Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Protasis (If clause)",
+      "Heke/Ku + Past Stem + -ba-",
+      "Heke tu bihata...",
+      "If you had come..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Apodosis (Result)",
+      "Past Stem + -ba- + Person",
+      "...me ew ê bidîta.",
+      "...we would have seen it."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Protasis",
+      "Heke + Ne- + Past + -ba-",
+      "Heke neçûba bajêr...",
+      "Had he not gone to town..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Wish/Optative",
+      "Xwezî + Past Subjunctive",
+      "Xwezî ez li wir bûma!",
+      "I wish I had been there!"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Unfulfilled Past Hypotheses",
+    "example": "Heke baran nebariya, em ê biçûna seyranê.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Expressing Past Regret",
+    "example": "Xwezî min ew pirtûk zûtir bixwenda.",
+    "translation": ""
+   },
+   {
+    "color": "#FCD34D",
+    "label": "Imagined Alternatives",
+    "example": "Ku te pere daban min, min ê erebeyek bikiriya.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Heke te rastî bigota min, ez ê aciz nebûma.",
+    "ko": "",
+    "highlight": "bigota min"
+   },
+   {
+    "en": "Ku ew zû bihata, em ê negihîştina trênê.",
+    "ko": "",
+    "highlight": "bihata"
+   },
+   {
+    "en": "Xwezî me bi hev re ev pirsgirêk çareser bikira.",
+    "ko": "",
+    "highlight": "bikira"
+   },
+   {
+    "en": "Heke wan em vexwendibana, em ê bê guman biçûna.",
+    "ko": "",
+    "highlight": "vexwendibana"
+   },
+   {
+    "en": "Ku min bizaniba, min ê tu carî wusa nekira.",
+    "ko": "",
+    "highlight": "bizaniba"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Heke tu bê, ez ê kêfxweş bûma.",
+    "right": "Heke tu bihata, ez ê kêfxweş bibûma.",
+    "note": "Counterfactual past conditions require past subjunctive forms with -ba, not present subjunctive verbs like bê."
+   },
+   {
+    "wrong": "Heke min zanî, min digot.",
+    "right": "Heke min bizaniba, min ê bigota.",
+    "note": "Irrealis conditional clauses require the irrealis suffix -ba in both protasis and apodosis."
+   },
+   {
+    "wrong": "Xwezî ez heme.",
+    "right": "Xwezî ez bûma.",
+    "note": "Optative regret takes the past subjunctive (bûma), not the present indicative copula (heme)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct verb to complete: 'Heke me pere hebûna, me ev xanî ___.' (we would have bought)",
+    "options": [
+     "bikiriya",
+     "dikire",
+     "bikire",
+     "kiribû"
+    ],
+    "answer": 0,
+    "explanation": "The counterfactual apodosis requires the past subjunctive irrealis form 'bikiriya'."
+   },
+   {
+    "question": "Complete the wish: 'Xwezî em ___!' (I wish we had known!)",
+    "options": [
+     "bizanin",
+     "dizanin",
+     "bizanibana",
+     "zanibû"
+    ],
+    "answer": 2,
+    "explanation": "'Xwezî' takes the past irrealis subjunctive ending with -ba- and 1st person plural -na: 'bizanibana'."
+   },
+   {
+    "question": "What is the primary marker of counterfactual conditionals attached to past stems?",
+    "options": [
+     "-dê",
+     "-ba",
+     "-in",
+     "-ye"
+    ],
+    "answer": 1,
+    "explanation": "The suffix/particle -ba is the core irrealis conditional marker in Kurmanji past hypotheticals."
+   },
+   {
+    "question": "Choose the correctly formed sentence for: 'If she had phoned, I would have answered.'",
+    "options": [
+     "Heke wê telefon bikira, min ê bersiv bida.",
+     "Heke ew telefon bike, ez ê bibersivînim.",
+     "Heke wê telefon kir, min bersiv da.",
+     "Heke wê telefon dikir, min ê bersiv dabû."
+    ],
+    "answer": 0,
+    "explanation": "Both clauses correctly utilize past subjunctive forms ending in -ba ('bikira' and 'bida')."
+   }
+  ],
+  "tip": "In the apodosis (result clause), Kurmanji often includes the future clitic particle 'ê' before the verb (e.g. min ê bikira) to reinforce hypothetical outcome."
+ },
+ {
+  "id": "ku-b2-relative-clauses-ezafe-resumption",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#EC4899",
+  "emoji": "🔗",
+  "title": "Ezafe-Linked Relative Clauses and Resumptive Pronouns",
+  "subtitle": "Connecting subordinate clauses using yê ku, ya ku, yên ku and resumptive clitics",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "Relative clauses start with an Ezafe-marker plus ku, requiring resumptive pronouns in the dependent clause when modifying oblique positions.",
+  "structure": {
+   "headers": [
+    "Head Gender/Number",
+    "Relative Linker",
+    "Resumptive Example",
+    "Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Singular",
+      "yê ku",
+      "Mirovê yê ku min ew dît...",
+      "The man whom I saw..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine Singular",
+      "ya ku",
+      "Jina ya ku te name jê re şand...",
+      "The woman to whom you sent a letter..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Plural (All Genders)",
+      "yên ku",
+      "Zarokên yên ku em bi wan re axivîn...",
+      "The children with whom we spoke..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Shortened Head Link",
+      "-ê ku / -a ku",
+      "Mala ku em tê de dijîn...",
+      "The house in which we live..."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EC4899",
+    "label": "Subject Relatives",
+    "example": "Ew xwendekarê ku duh hat hevalê min e.",
+    "translation": ""
+   },
+   {
+    "color": "#BE185D",
+    "label": "Prepositional Resumption",
+    "example": "Mirovê ku min jê hez dikir çû Ewropayê.",
+    "translation": ""
+   },
+   {
+    "color": "#F472B6",
+    "label": "Possessive Resumption",
+    "example": "Nivîskarê ku pirtûka wî hat wergerandin li vir e.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Jina ku te jê re kulîlk kirîn kî ye?",
+    "ko": "",
+    "highlight": "jê re"
+   },
+   {
+    "en": "Ew hevalên ku me bi wan re nan xwar hatin.",
+    "ko": "",
+    "highlight": "bi wan re"
+   },
+   {
+    "en": "Pirtûka ku ez li ser wê difikirim gelek girîng e.",
+    "ko": "",
+    "highlight": "li ser wê"
+   },
+   {
+    "en": "Zarokê ku dê û bavê wî çûne bajêr digirî.",
+    "ko": "",
+    "highlight": "bavê wî"
+   },
+   {
+    "en": "Ew xaniyê ku em tê de mezin bûn pir kevn e.",
+    "ko": "",
+    "highlight": "tê de"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mirovê ku ez dît çû.",
+    "right": "Mirovê ku min dît çû.",
+    "note": "Past transitive clauses inside relative clauses still preserve ergative alignment (min dît)."
+   },
+   {
+    "wrong": "Jina ku ez pê re dipeyivîm bê deng ma jina ku...",
+    "right": "Jina ku ez pê re peyivîm bêdeng ma.",
+    "note": "Do not repeat the head noun at the end of the relative clause."
+   },
+   {
+    "wrong": "Mala ku em dijîn xweş e.",
+    "right": "Mala ku em tê de dijîn xweş e.",
+    "note": "A resumptive prepositional phrase (tê de = in it) is required when the relative clause refers to an oblique location."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the feminine singular relative marker: 'The woman who arrived' -> 'Jina ___ hat.'",
+    "options": [
+     "yê ku",
+     "ya ku",
+     "yên ku",
+     "ku yê"
+    ],
+    "answer": 1,
+    "explanation": "Feminine singular heads take the feminine demonstrative Ezafe 'ya ku' (or simply the suffix '-a ku')."
+   },
+   {
+    "question": "Identify the resumptive pronoun element in: 'Ew mirovê ku min jê re got...'",
+    "options": [
+     "ew",
+     "ku",
+     "min",
+     "jê re"
+    ],
+    "answer": 3,
+    "explanation": "'jê re' (to him/her) is the resumptive prepositional pronoun referring back to 'mirovê'."
+   },
+   {
+    "question": "Which sentence correctly translates 'The students whom we teach'?",
+    "options": [
+     "Xwendekarên ku em wan fêr dikin.",
+     "Xwendekarên ku em fêr dikin wan.",
+     "Xwendekarê ku em fêr dikin.",
+     "Xwendekaran ku em wan fêr dikin."
+    ],
+    "answer": 0,
+    "explanation": "'Xwendekarên ku' takes plural agreement and the resumptive clitic pronoun 'wan' before the verb."
+   },
+   {
+    "question": "Fill in the blank with the correct resumptive pronoun: 'Ew nivîsgeha ku ez ___ dixebitim.' (in which I work)",
+    "options": [
+     "jê",
+     "pê",
+     "tê de",
+     "ji bo wê"
+    ],
+    "answer": 2,
+    "explanation": "'tê de' (in it) is the standard resumptive prepositional phrase for location inside something."
+   }
+  ],
+  "tip": "Unlike English, which easily drops relative prepositions ('the place I live in'), Kurmanji almost always demands the resumptive pronoun clitic ('tê de', 'jê re', 'pê re') inside the subordinate clause."
+ }
+]

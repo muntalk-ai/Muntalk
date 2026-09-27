@@ -1,0 +1,3332 @@
+[
+ {
+  "id": "th-a1-basic-word-order-svo",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "💬",
+  "title": "SVO Order and Zero-Copula Adjectives",
+  "subtitle": "Build basic statements and use adjectives directly without 'to be'",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "Thai uses Subject-Verb-Object order, and adjectives function directly as verbs without any copula like 'is' or 'am'.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Thai Pattern",
+    "English Sense"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Action Verb",
+      "ผม กิน ข้าว",
+      "I eat rice"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adjective (No Copula)",
+      "เขา สวย",
+      "She is pretty"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Adverb Modifier",
+      "อาหาร อร่อย มาก",
+      "Food is very delicious"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "SVO + Modifier",
+      "ครู ดื่ม กาแฟ ร้อน",
+      "The teacher drinks hot coffee"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Basic Action",
+    "example": "ฉัน ดื่ม น้ำ",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "Direct Adjective",
+    "example": "บ้าน ใหญ่",
+    "translation": ""
+   },
+   {
+    "color": "#9A3412",
+    "label": "Adjective with Intensifier",
+    "example": "อากาศ ร้อน มาก",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "เขา กิน ก๋วยเตี๋ยว",
+    "ko": "",
+    "highlight": "กิน"
+   },
+   {
+    "en": "พี่สาว สวย มาก",
+    "ko": "",
+    "highlight": "สวย"
+   },
+   {
+    "en": "รถคันนี้ เร็ว",
+    "ko": "",
+    "highlight": "เร็ว"
+   },
+   {
+    "en": "น้องชาย ชอบ แมว",
+    "ko": "",
+    "highlight": "ชอบ"
+   },
+   {
+    "en": "ชา ร้อน",
+    "ko": "",
+    "highlight": "ร้อน"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "เขา เป็น สวย",
+    "right": "เขา สวย",
+    "note": "Do not insert เป็น before adjectives; Thai adjectives act as full predicates by themselves."
+   },
+   {
+    "wrong": "กิน ผม ข้าว",
+    "right": "ผม กิน ข้าว",
+    "note": "Thai follows strict Subject-Verb-Object word order in declarative sentences."
+   },
+   {
+    "wrong": "น้ำ ดื่ม ฉัน",
+    "right": "ฉัน ดื่ม น้ำ",
+    "note": "The subject must precede the transitive verb, followed by the direct object."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which sentence correctly expresses 'The food is delicious' without an unnecessary copula?",
+    "options": [
+     "อาหาร เป็น อร่อย",
+     "อาหาร อร่อย",
+     "อร่อย อาหาร",
+     "อาหาร คือ อร่อย"
+    ],
+    "answer": 1,
+    "explanation": "Thai adjectives function as verbs, so no copula (เป็น or คือ) is used before อร่อย."
+   },
+   {
+    "question": "Choose the correct Subject-Verb-Object order for 'I read a book'.",
+    "options": [
+     "หนังสือ อ่าน ฉัน",
+     "ฉัน อ่าน หนังสือ",
+     "อ่าน ฉัน หนังสือ",
+     "ฉัน หนังสือ อ่าน"
+    ],
+    "answer": 1,
+    "explanation": "Thai strictly follows Subject (ฉัน) + Verb (อ่าน) + Object (หนังสือ)."
+   },
+   {
+    "question": "How do you say 'He is tall'?",
+    "options": [
+     "เขา สูง",
+     "เขา คือ สูง",
+     "สูง เขา",
+     "เขา อยู่ สูง"
+    ],
+    "answer": 0,
+    "explanation": "Adjectives like สูง attach directly to the subject without any form of 'to be'."
+   },
+   {
+    "question": "Complete the sentence: 'Mother drinks tea' -> แม่ ___ ชา",
+    "options": [
+     "ร้อน",
+     "ชอบ",
+     "ดื่ม",
+     "หิว"
+    ],
+    "answer": 2,
+    "explanation": "ดื่ม means 'to drink', completing the SVO sentence แม่ ดื่ม ชา."
+   }
+  ],
+  "tip": "Never translate 'is/am/are' into Thai when describing properties; just say the noun followed directly by the adjective."
+ },
+ {
+  "id": "th-a1-polite-particles",
+  "level": "a1",
+  "category": "advanced",
+  "categoryColor": "#0D9488",
+  "emoji": "🙏",
+  "title": "Gendered Polite Final Particles",
+  "subtitle": "Express respect using speaker-gendered markers at the end of sentences",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "Polite particles depend on the gender of the speaker: males use ครับ, while females use ค่ะ for statements and คะ for questions.",
+  "structure": {
+   "headers": [
+    "Speaker Gender",
+    "Sentence Type",
+    "Particle",
+    "Tone"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Male",
+      "Statement / Question",
+      "ครับ",
+      "High tone"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Female",
+      "Statement / Answer",
+      "ค่ะ",
+      "Falling tone"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Female",
+      "Question / Calling",
+      "คะ",
+      "High tone"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Male (Informal polite)",
+      "Statement",
+      "ครับผม",
+      "Compound polite"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Male Statement or Question",
+    "example": "ขอบคุณ ครับ",
+    "translation": ""
+   },
+   {
+    "color": "#DB2777",
+    "label": "Female Statement",
+    "example": "ยินดี ค่ะ",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Female Question",
+    "example": "สบายดี ไหม คะ",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "สวัสดี ครับ",
+    "ko": "",
+    "highlight": "ครับ"
+   },
+   {
+    "en": "เข้าใจแล้ว ค่ะ",
+    "ko": "",
+    "highlight": "ค่ะ"
+   },
+   {
+    "en": "ไปไหน คะ",
+    "ko": "",
+    "highlight": "คะ"
+   },
+   {
+    "en": "ทานข้าวหรือยัง ครับ",
+    "ko": "",
+    "highlight": "ครับ"
+   },
+   {
+    "en": "ขอโทษ ค่ะ",
+    "ko": "",
+    "highlight": "ค่ะ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ไปไหน ค่ะ",
+    "right": "ไปไหน คะ",
+    "note": "Female speakers must use high-tone คะ for questions, not falling-tone ค่ะ."
+   },
+   {
+    "wrong": "ขอบคุณ คะ",
+    "right": "ขอบคุณ ค่ะ",
+    "note": "Female speakers must use falling-tone ค่ะ for statements and acknowledgments."
+   },
+   {
+    "wrong": "ผม เข้าใจ ค่ะ",
+    "right": "ผม เข้าใจ ครับ",
+    "note": "Male speakers use ครับ; the particle reflects the speaker's own gender, not the listener's."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "A female speaker asking 'Where are you going?' should end her sentence with:",
+    "options": [
+     "ครับ",
+     "ค่ะ",
+     "นะคะ",
+     "คะ"
+    ],
+    "answer": 3,
+    "explanation": "Female speakers use the high-toned คะ for questions."
+   },
+   {
+    "question": "A male speaker saying 'Thank you' should say:",
+    "options": [
+     "ขอบคุณ ครับ",
+     "ขอบคุณ ค่ะ",
+     "ขอบคุณ คะ",
+     "ขอบคุณ จ้ะ"
+    ],
+    "answer": 0,
+    "explanation": "Male speakers consistently use ครับ for both statements and questions."
+   },
+   {
+    "question": "A female speaker confirming 'Yes, that is correct' should end with:",
+    "options": [
+     "ครับ",
+     "ค่ะ",
+     "คะ",
+     "ไหม"
+    ],
+    "answer": 1,
+    "explanation": "Female speakers use the falling-toned ค่ะ for statements, affirmations, and answers."
+   },
+   {
+    "question": "Which pairing of speaker and statement particle is correct?",
+    "options": [
+     "Male speaker: ขอบคุณ ค่ะ",
+     "Female question: สบายดี ไหม ค่ะ",
+     "Female statement: ไม่เป็นไร ค่ะ",
+     "Male speaker: ใช่ คะ"
+    ],
+    "answer": 2,
+    "explanation": "ไม่เป็นไร ค่ะ is correct because a female speaker uses ค่ะ for polite statements."
+   }
+  ],
+  "tip": "Remember: male speakers use ครับ for everything, but female speakers must split between ค่ะ (statements) and คะ (questions)."
+ },
+ {
+  "id": "th-a1-noun-classifiers",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#EA580C",
+  "emoji": "📦",
+  "title": "Numeral Classifiers (Laksananam)",
+  "subtitle": "Count nouns properly using the Noun + Number + Classifier pattern",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "In Thai, counting always requires the word order: Noun + Number + Classifier.",
+  "structure": {
+   "headers": [
+    "Noun Type",
+    "Example Noun",
+    "Classifier",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "People (general)",
+      "คน",
+      "คน",
+      "Person/People"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Standard Counting",
+      "แมว สอง ตัว",
+      "ตัว",
+      "Animals, shirts, chairs"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Vehicles / Machines",
+      "รถ",
+      "คัน",
+      "Cars, bicycles, umbrellas"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Flat objects / Sheets",
+      "กระดาษ",
+      "แผ่น",
+      "Sheets, paper, discs"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Books / Notebooks",
+      "หนังสือ",
+      "เล่ม",
+      "Bound volumes, knives"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Counting Animals",
+    "example": "หมา สาม ตัว",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Counting People",
+    "example": "นักเรียน ห้า คน",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Counting Volumes",
+    "example": "หนังสือ หนึ่ง เล่ม",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ผม มี แมว สอง ตัว",
+    "ko": "",
+    "highlight": "สอง ตัว"
+   },
+   {
+    "en": "เขา ซื้อ กาแฟ หนึ่ง แก้ว",
+    "ko": "",
+    "highlight": "หนึ่ง แก้ว"
+   },
+   {
+    "en": "ครู สาม คน อยู่ ที่นี่",
+    "ko": "",
+    "highlight": "สาม คน"
+   },
+   {
+    "en": "มี รถยนต์ สี่ คัน",
+    "ko": "",
+    "highlight": "สี่ คัน"
+   },
+   {
+    "en": "ฉัน อ่าน หนังสือ สอง เล่ม",
+    "ko": "",
+    "highlight": "สอง เล่ม"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "สอง แมว",
+    "right": "แมว สอง ตัว",
+    "note": "Thai cannot place numerals directly before nouns; you must use Noun + Number + Classifier."
+   },
+   {
+    "wrong": "แมว ตัว สอง",
+    "right": "แมว สอง ตัว",
+    "note": "The number must precede the classifier when counting quantity."
+   },
+   {
+    "wrong": "คน สาม ตัว",
+    "right": "คน สาม คน",
+    "note": "The classifier ตัว is for animals and objects; people take the classifier คน."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the correct Thai order to say 'three dogs'?",
+    "options": [
+     "สาม สุนัข",
+     "สุนัข ตัว สาม",
+     "สุนัข สาม ตัว",
+     "ตัว สาม สุนัข"
+    ],
+    "answer": 2,
+    "explanation": "Thai counting requires Noun (สุนัข) + Number (สาม) + Classifier (ตัว)."
+   },
+   {
+    "question": "Which classifier is used for counting books (หนังสือ)?",
+    "options": [
+     "คน",
+     "ตัว",
+     "คัน",
+     "เล่ม"
+    ],
+    "answer": 3,
+    "explanation": "เล่ม is the numeral classifier for bound volumes like books and notebooks."
+   },
+   {
+    "question": "Complete the phrase for 'one car': รถ ___ หนึ่ง ___",
+    "options": [
+     "คัน / คัน",
+     "รถ / คัน",
+     "— / คัน",
+     "ตัว / เล่ม"
+    ],
+    "answer": 2,
+    "explanation": "The noun comes first, followed by number and classifier: รถ หนึ่ง คัน."
+   },
+   {
+    "question": "Which classifier correctly counts people (e.g., เพื่อน สอง ___)?",
+    "options": [
+     "คน",
+     "ตัว",
+     "ใบ",
+     "อัน"
+    ],
+    "answer": 0,
+    "explanation": "คน is the universal classifier used for people."
+   }
+  ],
+  "tip": "Think of Thai counting as 'Item, Quantity, Unit' — just like saying 'coffee, two cups' or 'paper, three sheets'."
+ },
+ {
+  "id": "th-a1-yes-no-question-particles",
+  "level": "a1",
+  "category": "questions",
+  "categoryColor": "#2563EB",
+  "emoji": "❓",
+  "title": "Yes-No Question Particles",
+  "subtitle": "Form polar, confirmation, and tag questions using sentence-final markers",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Attach ไหม to turn any statement into a yes-no question, or use ใช่ไหม to seek confirmation like an English tag question.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Function",
+    "English Equivalent",
+    "Tone"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ไหม",
+      "Standard yes/no inquiry",
+      "...or not?",
+      "Rising tone"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ใช่ไหม",
+      "Confirmation tag question",
+      "..., right? / isn't it?",
+      "Falling + Rising"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "หรือ",
+      "Alternative / surprised inquiry",
+      "...or? / really?",
+      "Rising tone"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "หรือเปล่า",
+      "Did you or didn't you?",
+      "...or not?",
+      "Falling + Low"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Direct Yes-No Question",
+    "example": "หิว ไหม",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Seeking Confirmation",
+    "example": "คุณ เป็น คนไทย ใช่ไหม",
+    "translation": ""
+   },
+   {
+    "color": "#4B5563",
+    "label": "Alternative Tag",
+    "example": "ไป หรือเปล่า",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "คุณ สบายดี ไหม",
+    "ko": "",
+    "highlight": "ไหม"
+   },
+   {
+    "en": "เขา ชอบ ดื่ม ชา ไหม",
+    "ko": "",
+    "highlight": "ไหม"
+   },
+   {
+    "en": "อันนี้ อร่อย ใช่ไหม",
+    "ko": "",
+    "highlight": "ใช่ไหม"
+   },
+   {
+    "en": "เธอ เข้าใจ หรือเปล่า",
+    "ko": "",
+    "highlight": "หรือเปล่า"
+   },
+   {
+    "en": "พรุ่งนี้ ว่าง ไหม",
+    "ko": "",
+    "highlight": "ไหม"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ไหม คุณ สบายดี",
+    "right": "คุณ สบายดี ไหม",
+    "note": "Question particles in Thai must appear at the very end of the clause, never at the beginning."
+   },
+   {
+    "wrong": "คุณ กิน ข้าว ไม่",
+    "right": "คุณ กิน ข้าว ไหม",
+    "note": "Do not confuse the negative marker ไม่ (falling tone) with the question particle ไหม (rising tone)."
+   },
+   {
+    "wrong": "คุณ เป็น ครู ไหม ครับ ใช่ไหม",
+    "right": "คุณ เป็น ครู ใช่ไหม ครับ",
+    "note": "Do not stack multiple interrogative particles together; pick either ไหม or ใช่ไหม."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you ask 'Are you hungry?' using standard neutral question order?",
+    "options": [
+     "ไหม คุณ หิว",
+     "คุณ ไหม หิว",
+     "หิว ไหม คุณ",
+     "คุณ หิว ไหม"
+    ],
+    "answer": 3,
+    "explanation": "Question particles always go at the end of the sentence: Subject + Verb/Adjective + ไหม."
+   },
+   {
+    "question": "Which particle turns a statement into '..., right?' to confirm an assumption?",
+    "options": [
+     "ใช่ไหม",
+     "ไหม",
+     "อะไร",
+     "ไหน"
+    ],
+    "answer": 0,
+    "explanation": "ใช่ไหม means 'right?' or 'correct?', used to seek confirmation from the listener."
+   },
+   {
+    "question": "What is the difference between ไม่ and ไหม?",
+    "options": [
+     "ไม่ is a question particle; ไหม means no",
+     "ไม่ means not/negation; ไหม is a question particle",
+     "Both words mean exactly the same thing",
+     "ไม่ is formal; ไหม is vulgar"
+    ],
+    "answer": 1,
+    "explanation": "ไม่ (falling tone) is the negative prefix, while ไหม (rising tone) is the sentence-final question particle."
+   },
+   {
+    "question": "Complete the polite question: 'Is this delicious?' -> อันนี้ อร่อย ___ ครับ",
+    "options": [
+     "ที่ไหน",
+     "ไหม",
+     "ใคร",
+     "มาก"
+    ],
+    "answer": 1,
+    "explanation": "ไหม creates the polar question 'Is it delicious?', placed right before the polite final particle ครับ."
+   }
+  ],
+  "tip": "Keep the statement word order completely untouched — just add ไหม at the end and you have an instant yes-no question."
+ },
+ {
+  "id": "th-a1-basic-negation",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#DC2626",
+  "emoji": "🚫",
+  "title": "Negation Patterns (Mai vs Mai-Chai)",
+  "subtitle": "Differentiate action/descriptor negation from nominal identity negation",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Use ไม่ directly before verbs and adjectives, but use ไม่ใช่ before nouns to deny identity or classification.",
+  "structure": {
+   "headers": [
+    "Negative Word",
+    "Followed By",
+    "Thai Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ไม่",
+      "Verb",
+      "ไม่ กิน",
+      "Do not eat"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ไม่",
+      "Adjective",
+      "ไม่ แพง",
+      "Not expensive"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ไม่ใช่",
+      "Noun / Identity",
+      "ไม่ใช่ หมอ",
+      "Is not a doctor"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ไม่ได้",
+      "Past / Inability",
+      "ไม่ได้ ไป",
+      "Did not go"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Negating a Verb",
+    "example": "ฉัน ไม่ ชอบ กาแฟ",
+    "translation": ""
+   },
+   {
+    "color": "#B91C1C",
+    "label": "Negating an Adjective",
+    "example": "ห้องนี้ ไม่ ร้อน",
+    "translation": ""
+   },
+   {
+    "color": "#7F1D1D",
+    "label": "Negating a Noun Identity",
+    "example": "เขา ไม่ใช่ คนญี่ปุ่น",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ผม ไม่ ดื่ม เหล้า",
+    "ko": "",
+    "highlight": "ไม่ ดื่ม"
+   },
+   {
+    "en": "วันนี้ อากาศ ไม่ หนาว",
+    "ko": "",
+    "highlight": "ไม่ หนาว"
+   },
+   {
+    "en": "นี่ ไม่ใช่ โทรศัพท์ ของฉัน",
+    "ko": "",
+    "highlight": "ไม่ใช่"
+   },
+   {
+    "en": "เขา ไม่ใช่ นักเรียน",
+    "ko": "",
+    "highlight": "ไม่ใช่"
+   },
+   {
+    "en": "อาหารจานนี้ ไม่ เผ็ด",
+    "ko": "",
+    "highlight": "ไม่ เผ็ด"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "เขา ไม่ นักเรียน",
+    "right": "เขา ไม่ใช่ นักเรียน",
+    "note": "Nouns cannot be negated with just ไม่; you must use ไม่ใช่ to negate nominal identity."
+   },
+   {
+    "wrong": "ฉัน ไม่ใช่ กิน เผ็ด",
+    "right": "ฉัน ไม่ กิน เผ็ด",
+    "note": "Action verbs are negated with ไม่, not ไม่ใช่."
+   },
+   {
+    "wrong": "เสื้อนี้ ไม่ใช่ สวย",
+    "right": "เสื้อนี้ ไม่ สวย",
+    "note": "Adjectives take direct negation with ไม่, not ไม่ใช่."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you correctly say 'I am not a teacher'?",
+    "options": [
+     "ฉัน ไม่ ครู",
+     "ฉัน ไม่ใช่ ครู",
+     "ฉัน เป็นไม่ ครู",
+     "ฉัน ครู ไม่ใช่"
+    ],
+    "answer": 1,
+    "explanation": "Because ครู (teacher) is a noun, nominal negation requires ไม่ใช่."
+   },
+   {
+    "question": "How do you negate the adjective in 'This soup is not spicy'?",
+    "options": [
+     "ซุปนี้ ไม่ เผ็ด",
+     "ซุปนี้ ไม่ใช่ เผ็ด",
+     "ซุปนี้ เผ็ด ไม่",
+     "ซุปนี้ คือไม่ เผ็ด"
+    ],
+    "answer": 0,
+    "explanation": "Adjectives are negated directly by placing ไม่ immediately before them: ไม่ เผ็ด."
+   },
+   {
+    "question": "Fill in the blank: 'He does not go' -> เขา ___ ไป",
+    "options": [
+     "ไม่ใช่",
+     "ไหม",
+     "ไม่",
+     "อย่า"
+    ],
+    "answer": 2,
+    "explanation": "ไป is an action verb, so it takes the simple verb negator ไม่."
+   },
+   {
+    "question": "Which sentence correctly uses ไม่ใช่?",
+    "options": [
+     "เขา ไม่ใช่ ชอบ ดนตรี",
+     "นี่ ไม่ใช่ ปากกา ของผม",
+     "วันนี้ อากาศ ไม่ใช่ ดี",
+     "ฉัน ไม่ใช่ เข้าใจ"
+    ],
+    "answer": 1,
+    "explanation": "ปากกา (pen) is a noun indicating an object's identity, which correctly takes ไม่ใช่."
+   }
+  ],
+  "tip": "Simple memory rule: if an English sentence uses 'is not a [noun]', use ไม่ใช่; if it negates an action or adjective, use ไม่."
+ },
+ {
+  "id": "th-a1-demonstratives",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "👉",
+  "title": "Demonstrative Pronouns vs Modifiers",
+  "subtitle": "Distinguishing independent demonstratives from modifying demonstratives by tone and syntax",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Falling-tone demonstratives stand alone as independent pronouns, while high-tone demonstratives act as modifiers placed after nouns or classifiers.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Thai Word",
+    "Syntactic Position",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Pronoun (Falling tone)",
+      "นี่",
+      "Sentence initial / Standalone subject",
+      "This (thing)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Modifier (High tone)",
+      "นี้",
+      "Follows Noun + Classifier",
+      "This ..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Pronoun (Falling tone)",
+      "นั่น",
+      "Sentence initial / Standalone subject",
+      "That (thing)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Modifier (High tone)",
+      "นั้น",
+      "Follows Noun + Classifier",
+      "That ..."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Pointing Out an Object (Pronoun)",
+    "example": "นี่คืออะไร",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Specifying a Particular Noun (Modifier)",
+    "example": "หนังสือเล่มนี้ดีมาก",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Referring to Distant Things (Pronoun)",
+    "example": "นั่นแพงเกินไป",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "นี่คือกระเป๋าของฉัน",
+    "ko": "",
+    "highlight": "นี่"
+   },
+   {
+    "en": "คนนี้เป็นเพื่อนของผม",
+    "ko": "",
+    "highlight": "นี้"
+   },
+   {
+    "en": "นั่นไม่ใช่รถของเขา",
+    "ko": "",
+    "highlight": "นั่น"
+   },
+   {
+    "en": "อาหารจานนั้นอร่อยดี",
+    "ko": "",
+    "highlight": "นั้น"
+   },
+   {
+    "en": "บ้านหลังนี้ใหญ่มาก",
+    "ko": "",
+    "highlight": "นี้"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "หนังสือนี้ดี",
+    "right": "หนังสือเล่มนี้ดี",
+    "note": "Demonstrative modifiers normally require an intervening classifier between the noun and modifier in formal and standard Thai."
+   },
+   {
+    "wrong": "นี้คือโทรศัพท์",
+    "right": "นี่คือโทรศัพท์",
+    "note": "Use the falling tone pronoun นี่ when introducing a subject, not the modifier นี้."
+   },
+   {
+    "wrong": "นั่นคนมาจากไหน",
+    "right": "คนนั้นมาจากไหน",
+    "note": "Demonstratives cannot precede nouns like in English; place the classifier and modifier after the noun."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct word to mean 'This is delicious': '___ อร่อยมาก'",
+    "options": [
+     "นี้",
+     "นี่",
+     "นั้น",
+     "โน้น"
+    ],
+    "answer": 1,
+    "explanation": "Use independent pronoun นี่ with falling tone to stand alone as the sentence subject."
+   },
+   {
+    "question": "Complete the phrase: 'เสื้อตัว___ สวยดี' (This shirt looks pretty)",
+    "options": [
+     "นี้",
+     "นี่",
+     "นั่น",
+     "โน่น"
+    ],
+    "answer": 0,
+    "explanation": "The modifier นี้ with high tone follows the classifier ตัว to specify 'this shirt'."
+   },
+   {
+    "question": "Choose the correct sentence to say 'That is a school'.",
+    "options": [
+     "นั้นคือโรงเรียน",
+     "โรงเรียนนั่นคือ",
+     "นั่นคือโรงเรียน",
+     "คือโรงเรียนนั้น"
+    ],
+    "answer": 2,
+    "explanation": "Independent demonstrative นั่น serves as the subject before the copula คือ."
+   },
+   {
+    "question": "Fill in the blank: 'ฉันชอบปากกาแท่ง___' (I like that pen)",
+    "options": [
+     "นี่",
+     "นั่น",
+     "นี้",
+     "นั้น"
+    ],
+    "answer": 3,
+    "explanation": "After the classifier แท่ง, use the high-tone modifier นั้น to indicate 'that'."
+   }
+  ],
+  "tip": "Remember tone marks: mai ek (่) gives a falling tone for standalone pronouns (นี่, นั่น), while mai tho (้) gives a high tone for post-nominal modifiers (นี้, นั้น)."
+ },
+ {
+  "id": "th-a2-copula-distinction",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⚖️",
+  "title": "Copula Verbs: Pen vs Kheue",
+  "subtitle": "Choosing between status copula (เป็น) and definitional identity copula (คือ)",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use เป็น to describe roles, statuses, and conditions, but use คือ to define terms, equate entities, or identify specific referents.",
+  "structure": {
+   "headers": [
+    "Copula",
+    "Primary Meaning",
+    "Common Complements",
+    "Context"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "เป็น",
+      "To be (status/profession)",
+      "Professions, roles, illnesses",
+      "Describes an attribute or qualification"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "คือ",
+      "To be (identity/definition)",
+      "Proper nouns, definitions, nominals",
+      "Asserts A equals B or clarifies identity"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "(Omitted)",
+      "To be (adjectival state)",
+      "Stative verbs (ดี, สวย, ร้อน)",
+      "Adjectives act directly as verbs without copulas"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Expressing Profession / Social Role",
+    "example": "แม่ของฉันเป็นครู",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Defining a Term or Concept",
+    "example": "กรุงเทพฯ คือเมืองหลวงของไทย",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Clarifying Identity or Equivalence",
+    "example": "สิ่งสำคัญที่สุดคือเวลา",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "เขาเป็นหมอที่มีชื่อเสียง",
+    "ko": "",
+    "highlight": "เป็น"
+   },
+   {
+    "en": "นี่คือคำตอบที่ถูกต้อง",
+    "ko": "",
+    "highlight": "คือ"
+   },
+   {
+    "en": "น้องชายของผมเป็นนักเรียน",
+    "ko": "",
+    "highlight": "เป็น"
+   },
+   {
+    "en": "ความสุขของฉันคือการอ่านหนังสือ",
+    "ko": "",
+    "highlight": "คือ"
+   },
+   {
+    "en": "เธอเป็นคนใจดีมาก",
+    "ko": "",
+    "highlight": "เป็น"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "เขาเป็น จอห์น",
+    "right": "เขาคือ จอห์น",
+    "note": "Use คือ when equating someone with their personal name or specific identity."
+   },
+   {
+    "wrong": "ฉันเป็นมีความสุข",
+    "right": "ฉันมีความสุข",
+    "note": "Do not insert เป็น before adjectives or descriptive states; adjectives function directly as predicates."
+   },
+   {
+    "wrong": "พ่อของเขาคือวิศวกร",
+    "right": "พ่อของเขาเป็นวิศวกร",
+    "note": "Professions and occupations take เป็น rather than คือ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct copula: 'พี่สาวของฉัน___ พยาบาล' (My sister is a nurse)",
+    "options": [
+     "เป็น",
+     "คือ",
+     "มี",
+     "อยู่"
+    ],
+    "answer": 0,
+    "explanation": "Occupations and professional titles require เป็น."
+   },
+   {
+    "question": "Choose the correct copula: 'เป้าหมายของเรา___ ชัยชนะ' (Our goal is victory)",
+    "options": [
+     "เป็น",
+     "อยู่",
+     "คือ",
+     "ทำ"
+    ],
+    "answer": 2,
+    "explanation": "Definitions and identity equations ('A is B') use คือ."
+   },
+   {
+    "question": "Choose the correct word: 'นี่___ ใคร' (Who is this?)",
+    "options": [
+     "เป็น",
+     "คือ",
+     "ใช่",
+     "ว่า"
+    ],
+    "answer": 1,
+    "explanation": "Identity questions seeking clarification of who someone is use คือ."
+   },
+   {
+    "question": "Choose the correct sentence to say 'He is an American':",
+    "options": [
+     "เขาอยู่คนอเมริกัน",
+     "เขามีคนอเมริกัน",
+     "เขาคือคนอเมริกันแท้จริง",
+     "เขาเป็นคนอเมริกัน"
+    ],
+    "answer": 3,
+    "explanation": "Expressing nationality or person status regularly takes เป็น."
+   }
+  ],
+  "tip": "Test with an equals sign: if you can replace 'is' with '=' (A = B), use คือ. If it describes what category or job someone belongs to, use เป็น."
+ },
+ {
+  "id": "th-a2-serial-verb-constructions",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔗",
+  "title": "Serial Verb Constructions (SVCs)",
+  "subtitle": "Connecting verbs seamlessly to express direction, purpose, and sequential action",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "In Thai, multiple verbs chain together in chronological order without prepositions or conjunctions like 'to' or 'and'.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Construction Pattern",
+    "Example",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Directional SVC",
+      "Action Verb + ไป / มา",
+      "เดินไป",
+      "Specifies motion away from or toward the speaker"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Purposive SVC",
+      "Motion Verb + Location + Action Verb",
+      "ไปตลาดซื้อผลไม้",
+      "Expresses going somewhere to do something"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Sequential SVC",
+      "Verb 1 + Verb 2",
+      "หยิบมาดู",
+      "Chains actions occurring in immediate sequence"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Resultative SVC",
+      "Action Verb + Complement Verb",
+      "หาไม่เจอ",
+      "Indicates the outcome or achievement of an action"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Movement with Purpose",
+    "example": "เราไปร้านอาหารกินข้าว",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Direction of Transit",
+    "example": "เขาวิ่งกลับบ้านมา",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Taking and Moving Objects",
+    "example": "แม่เอาเงินไปให้ครู",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "เขาเดินไปซื้อกาแฟ",
+    "ko": "",
+    "highlight": "เดินไปซื้อ"
+   },
+   {
+    "en": "นักเรียนวิ่งเข้ามาในห้อง",
+    "ko": "",
+    "highlight": "วิ่งเข้ามา"
+   },
+   {
+    "en": "ฉันพาน้องไปเที่ยวทะเล",
+    "ko": "",
+    "highlight": "พา"
+   },
+   {
+    "en": "เขากลับมาเยี่ยมคุณยาย",
+    "ko": "",
+    "highlight": "กลับมาเยี่ยม"
+   },
+   {
+    "en": "พ่อขับรถไปส่งแม่ที่ทำงาน",
+    "ko": "",
+    "highlight": "ขับรถไปส่ง"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ฉันไปเพื่อซื้ออาหาร",
+    "right": "ฉันไปซื้ออาหาร",
+    "note": "Thai rarely uses conjunctions like เพื่อ ('in order to') in everyday speech; simply place the verbs side by side."
+   },
+   {
+    "wrong": "เขาซื้อกาแฟไปเดิน",
+    "right": "เขาเดินไปซื้อกาแฟ",
+    "note": "Verbs in an SVC must strictly reflect the chronological order of occurrence."
+   },
+   {
+    "wrong": "เธอเอาหนังสือให้เพื่อฉัน",
+    "right": "เธอเอาหนังสือมาให้ฉัน",
+    "note": "Use directional serial verbs like มา/ไป together with ให้ instead of translating prepositions."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'Go eat food' using serial verbs?",
+    "options": [
+     "กินไปข้าว",
+     "ไปกินข้าว",
+     "เพื่อกินไป",
+     "กินข้าวไป"
+    ],
+    "answer": 1,
+    "explanation": "The motion verb ไป precedes the purposeful action กินข้าว."
+   },
+   {
+    "question": "Choose the missing directional verb: 'กรุณาเอาเอกสาร___ ให้ผู้จัดการ' (Please take the document and give it to the manager [away from here])",
+    "options": [
+     "มา",
+     "อยู่",
+     "ไป",
+     "นั่ง"
+    ],
+    "answer": 2,
+    "explanation": "Movement away from the speaker toward another person takes ไป."
+   },
+   {
+    "question": "Complete the chain: 'เขาวิ่ง___ ในห้องเรียน' (He ran into the classroom toward the speaker)",
+    "options": [
+     "ตกไป",
+     "หายมา",
+     "ล้มไป",
+     "เข้ามา"
+    ],
+    "answer": 3,
+    "explanation": "เข้ามา indicates entering in the direction toward the speaker."
+   },
+   {
+    "question": "Which verb phrase means 'bring (something) here'?",
+    "options": [
+     "เอาไป",
+     "เอามา",
+     "ทิ้งไป",
+     "ซื้อมา"
+    ],
+    "answer": 1,
+    "explanation": "เอา (take) + มา (come/toward) forms the compound SVC for bringing an object."
+   }
+  ],
+  "tip": "Always arrange serial verbs in chronological order: the motion happens first, then the arrival, then the purpose (e.g., ไป + ซูเปอร์มาร์เก็ต + ซื้อของ)."
+ },
+ {
+  "id": "th-a2-aspect-markers",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "⏳",
+  "title": "Aspectual Markers (แล้ว, กำลัง, จะ)",
+  "subtitle": "Conveying aspect and temporal perspective without inflecting verbs",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Thai verbs never conjugate for tense; instead, invariant aspect markers like กำลัง (continuous), แล้ว (completed), and จะ (irrealis/intention) modify temporal context.",
+  "structure": {
+   "headers": [
+    "Marker",
+    "Type of Aspect",
+    "Position",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "กำลัง",
+      "Progressive / Ongoing",
+      "Before Verb",
+      "Marks an action currently in progress"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "แล้ว",
+      "Perfective / Change of State",
+      "Clause / Sentence Final",
+      "Marks completed actions or newly realized states"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "จะ",
+      "Irrealis / Future Intention",
+      "Before Verb",
+      "Marks prospective actions, intentions, or events"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "กำลัง...อยู่",
+      "Continuous Frame",
+      "กำลัง before verb, อยู่ final",
+      "Emphasizes an ongoing active state right now"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Actions in Progress",
+    "example": "เขากำลังทำกับข้าวอยู่",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Completed Actions or Milestones",
+    "example": "ฉันกินข้าวเสร็จแล้ว",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Future Intentions or Events",
+    "example": "พรุ่งนี้เราจะไปว่ายน้ำ",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ตอนนี้ฝนกำลังตก",
+    "ko": "",
+    "highlight": "กำลัง"
+   },
+   {
+    "en": "นักเรียนกลับบ้านแล้ว",
+    "ko": "",
+    "highlight": "แล้ว"
+   },
+   {
+    "en": "อาทิตย์หน้าฉันจะไปเที่ยว",
+    "ko": "",
+    "highlight": "จะ"
+   },
+   {
+    "en": "พวกเขากำลังประชุมกันอยู่",
+    "ko": "",
+    "highlight": "กำลัง"
+   },
+   {
+    "en": "รถไฟมาแล้ว",
+    "ko": "",
+    "highlight": "แล้ว"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ฉันกินข้าวจะพรุ่งนี้",
+    "right": "พรุ่งนี้ฉันจะกินข้าว",
+    "note": "The irrealis marker จะ must immediately precede the main verb phrase."
+   },
+   {
+    "wrong": "แล้วฉันทำการบ้าน",
+    "right": "ฉันทำการบ้านแล้ว",
+    "note": "As a completion aspect marker, แล้ว is placed at the end of the verb phrase or sentence, not initially."
+   },
+   {
+    "wrong": "เขากำลังไปแล้ว",
+    "right": "เขาไปแล้ว",
+    "note": "Do not combine incompatible aspect markers like progressive กำลัง with completed แล้ว for simple actions."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct marker for: 'ฉัน___ อ่านหนังสืออยู่' (I am reading a book right now)",
+    "options": [
+     "แล้ว",
+     "เคย",
+     "จะ",
+     "กำลัง"
+    ],
+    "answer": 3,
+    "explanation": "The progressive aspect in progress pairs กำลัง before the verb with อยู่ at the end."
+   },
+   {
+    "question": "Select the correct sentence for 'I have already eaten':",
+    "options": [
+     "ฉันกินข้าวแล้ว",
+     "ฉันจะกินข้าว",
+     "ฉันแล้วกินข้าว",
+     "ฉันกำลังกินข้าวแล้ว"
+    ],
+    "answer": 0,
+    "explanation": "แล้ว placed after the verb phrase denotes completed aspect."
+   },
+   {
+    "question": "Which sentence indicates a planned future action?",
+    "options": [
+     "เขาทำการบ้านแล้ว",
+     "เขาจะไปเชียงใหม่",
+     "เขากำลังนอนหลับ",
+     "เขาเคยไปญี่ปุ่น"
+    ],
+    "answer": 1,
+    "explanation": "The pre-verbal marker จะ signifies future intention or prospective action."
+   },
+   {
+    "question": "Fill in the blank: 'คุณแม่ทำอาหารเสร็จ___' (Mother finished cooking already)",
+    "options": [
+     "จะ",
+     "กำลัง",
+     "แล้ว",
+     "อยู่"
+    ],
+    "answer": 2,
+    "explanation": "เสร็จ (finish) naturally pairs with the completive aspect marker แล้ว."
+   }
+  ],
+  "tip": "Think of แล้ว as meaning 'now changed / done' rather than simple past; a change of state like รู้แล้ว means 'now I know (I didn't before)'."
+ },
+ {
+  "id": "th-a2-possession-structures",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎒",
+  "title": "Possession and Modification with ของ",
+  "subtitle": "Mastering the possessive linker and natural noun-modifier compounding",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Place the linker ของ between the possessed head noun and possessor, though in rapid daily speech ของ is often dropped when possession is obvious.",
+  "structure": {
+   "headers": [
+    "Structure",
+    "Pattern",
+    "Example",
+    "Usage Style"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Formal Possession",
+      "Possessed + ของ + Possessor",
+      "บ้านของฉัน",
+      "Standard, polite, or disambiguating"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Direct Possession",
+      "Possessed + Possessor",
+      "บ้านฉัน",
+      "Casual, colloquial, kinship/close ties"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Category Modifier",
+      "Head Noun + Attribute Noun",
+      "กระเป๋าหนัง",
+      "Direct attribution without ของ (no possession)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Formal or Explicit Ownership",
+    "example": "นี่คือรถยนต์ของอาจารย์",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Casual Everyday Ownership",
+    "example": "โทรศัพท์เพื่อนหาย",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Possessive Predicate ('Belongs to')",
+    "example": "ปากกาด้ามนี้เป็นของใคร",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ห้องนอนของเขาใหญ่มาก",
+    "ko": "",
+    "highlight": "ของ"
+   },
+   {
+    "en": "นี่คือกุญแจของใคร",
+    "ko": "",
+    "highlight": "ของ"
+   },
+   {
+    "en": "รถของพ่อเสียเมื่อวาน",
+    "ko": "",
+    "highlight": "ของ"
+   },
+   {
+    "en": "หนังสือเล่มนั้นเป็นของฉัน",
+    "ko": "",
+    "highlight": "ของ"
+   },
+   {
+    "en": "เพื่อนของสมชายใจดีทุกคน",
+    "ko": "",
+    "highlight": "ของ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ของฉันกระเป๋า",
+    "right": "กระเป๋าของฉัน",
+    "note": "Thai word order is Head Noun + ของ + Possessor, the exact reverse of English 'my bag'."
+   },
+   {
+    "wrong": "โต๊ะของไม้",
+    "right": "โต๊ะไม้",
+    "note": "Do not use ของ for materials or categories; a wooden table is simply โต๊ะไม้."
+   },
+   {
+    "wrong": "รถยนต์ของสีแดง",
+    "right": "รถยนต์สีแดง",
+    "note": "Color descriptors attach directly to the noun without the possessive marker ของ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you translate 'My house' formally?",
+    "options": [
+     "ฉันของบ้าน",
+     "ของฉันบ้าน",
+     "บ้านของฉัน",
+     "บ้านมีฉัน"
+    ],
+    "answer": 2,
+    "explanation": "The head noun (บ้าน) comes first, followed by ของ and the possessor (ฉัน)."
+   },
+   {
+    "question": "Complete the question: 'เสื้อตัวนี้เป็น___ ใคร' (Whose shirt is this?)",
+    "options": [
+     "ที่",
+     "ของ",
+     "กับ",
+     "ให้"
+    ],
+    "answer": 1,
+    "explanation": "เป็นของ translates to 'belongs to / is the property of'."
+   },
+   {
+    "question": "Which phrase correctly shows material modification (not possession)?",
+    "options": [
+     "กระเป๋าผ้า",
+     "กระเป๋าของผ้า",
+     "ผ้าของกระเป๋า",
+     "ของกระเป๋าผ้า"
+    ],
+    "answer": 0,
+    "explanation": "Materials modify nouns directly without ของ; 'cloth bag' is กระเป๋าผ้า."
+   },
+   {
+    "question": "Where does the owner go in a Thai possessive phrase?",
+    "options": [
+     "At the very beginning",
+     "Before the word ของ",
+     "Directly after the verb only",
+     "After the possessed noun (or after ของ)"
+    ],
+    "answer": 3,
+    "explanation": "Thai is head-initial; the owner/possessor always follows the possessed item and the optional linker ของ."
+   }
+  ],
+  "tip": "Only use ของ when indicating true ownership or authorship. For material, composition, or types (like 'mango juice' or 'gold ring'), connect the nouns directly without ของ."
+ },
+ {
+  "id": "th-a2-modal-auxiliaries-ability",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#4F46E5",
+  "emoji": "💪",
+  "title": "Modal Markers of Ability (Dai, Pen, Wai)",
+  "subtitle": "Expressing circumstantial, learned, and physical capability",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Thai distinguishes ability by source: use 'pen' for learned skills, 'wai' for physical or emotional endurance, and 'dai' for circumstantial permission or general possibility.",
+  "structure": {
+   "headers": [
+    "Marker",
+    "Type of Ability",
+    "Thai Example",
+    "English Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "เป็น",
+      "Acquired skill / Know-how",
+      "ว่ายน้ำเป็น",
+      "Know how to swim through practice"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ได้",
+      "Circumstantial / Opportunity",
+      "วันนี้ไปได้",
+      "Able to go because conditions permit"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ไหว",
+      "Physical / Mental stamina",
+      "ยกกล่องนี้ไหว",
+      "Physically capable of lifting the box"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Learned Knowledge (Skill)",
+    "example": "เขาขับรถยนต์เป็นตั้งแต่เด็ก",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Circumstance or Permission",
+    "example": "คืนนี้ผมทำงานเสร็จแล้วจึงไปดูหนังได้",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Stamina or Physical Capacity",
+    "example": "เดินขึ้นเขาเหนื่อยมากแต่ยังเดินไหว",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "น้องสาวพูดภาษาญี่ปุ่นเป็น",
+    "ko": "",
+    "highlight": "เป็น"
+   },
+   {
+    "en": "ตอนนี้ฝนหยุดตกแล้ว เราออกไปข้างนอกได้",
+    "ko": "",
+    "highlight": "ได้"
+   },
+   {
+    "en": "กินข้าวเยอะขนาดนี้คนเดียวไม่ไหว",
+    "ko": "",
+    "highlight": "ไม่ไหว"
+   },
+   {
+    "en": "คุณเล่นเปียโนเป็นไหม",
+    "ko": "",
+    "highlight": "เป็น"
+   },
+   {
+    "en": "อาการป่วยดีขึ้นแล้ว พรุ่งนี้ไปทำงานได้",
+    "ko": "",
+    "highlight": "ได้"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ผมว่ายน้ำได้ แต่ไม่เคยเรียน",
+    "right": "ผมว่ายน้ำไม่เป็น",
+    "note": "Use 'pen' for acquired techniques; if you never learned, you cannot say you swim 'dai' when you lack the skill entirely."
+   },
+   {
+    "wrong": "กระเป๋าหนักมาก ถือไม่ได้",
+    "right": "กระเป๋าหนักมาก ถือไม่ไหว",
+    "note": "When the limitation is physical load, muscle strength, or endurance, use 'wai' instead of 'dai'."
+   },
+   {
+    "wrong": "ขอโทษครับ พูดภาษาไทยไม่ไหว",
+    "right": "ขอโทษครับ พูดภาษาไทยไม่เป็น",
+    "note": "Speaking a language is an intellectual skill requiring 'pen', not physical endurance ('wai')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "To express that you know how to drive a car after taking driving lessons, choose: ฉันขับรถ___",
+    "options": [
+     "ได้",
+     "เป็น",
+     "ไหว",
+     "ออก"
+    ],
+    "answer": 1,
+    "explanation": "Driving is an acquired skill that requires practice and training, so 'pen' is required."
+   },
+   {
+    "question": "To express that an object is too heavy for you to carry physically, choose: ของชิ้นนี้หนักเกินไป ยกไม่___",
+    "options": [
+     "ไหว",
+     "เป็น",
+     "ได้",
+     "ทัน"
+    ],
+    "answer": 0,
+    "explanation": "'Wai' specifically conveys physical strength, endurance, and capability under stress."
+   },
+   {
+    "question": "To indicate that the doctor gave permission for the patient to eat normal food, choose: ตอนนี้คนไข้ทานอาหารปกติ___",
+    "options": [
+     "เป็น",
+     "ไหว",
+     "ได้",
+     "ตก"
+    ],
+    "answer": 2,
+    "explanation": "External permission and circumstantial allowance are marked with 'dai'."
+   },
+   {
+    "question": "After walking 20 kilometers, can you keep walking? Choose: คุณยังเดิน___ไหม",
+    "options": [
+     "เป็น",
+     "ขึ้น",
+     "ถึง",
+     "ไหว"
+    ],
+    "answer": 3,
+    "explanation": "Continuing to walk under fatigue assesses physical stamina, which uses 'wai'."
+   }
+  ],
+  "tip": "Ask yourself: 'Is it in my head (pen), in my muscles (wai), or in the situation (dai)?'"
+ },
+ {
+  "id": "th-a2-directional-verbs",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🧭",
+  "title": "Directional Post-Verbs (Pai, Maa, Khuen, Long)",
+  "subtitle": "Describing vector paths relative to the speaker and vertical axes",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Post-verbal directional markers specify movement away from the speaker ('pai'), toward the speaker ('maa'), upward ('khuen'), or downward ('long').",
+  "structure": {
+   "headers": [
+    "Directional Verb",
+    "Vector Meaning",
+    "Thai Pattern",
+    "Context"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ไป",
+      "Away from speaker",
+      "เดินไป",
+      "Subject moves further from here"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "มา",
+      "Toward speaker",
+      "วิ่งมา",
+      "Subject approaches speaker's location"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ขึ้น",
+      "Ascending / Increase",
+      "ปีนขึ้น",
+      "Vertical rise or conceptual increase"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ลง",
+      "Descending / Decrease",
+      "นั่งลง",
+      "Vertical drop or conceptual reduction"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Deictic Origin (Away vs. Toward)",
+    "example": "เพื่อนส่งของขวัญมาให้ฉันที่บ้าน",
+    "translation": ""
+   },
+   {
+    "color": "#0891B2",
+    "label": "Vertical Ascent",
+    "example": "ทุกคนเดินขึ้นบันไดไปชั้นสาม",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Vertical Descent & Reduction",
+    "example": "ราคาน้ำมันปรับตัวลดลงอย่างรวดเร็ว",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "กรุณาถอดรองเท้าก่อนเดินเข้ามาข้างใน",
+    "ko": "",
+    "highlight": "เข้ามา"
+   },
+   {
+    "en": "เขาโยนขยะลงไปในถัง",
+    "ko": "",
+    "highlight": "ลงไป"
+   },
+   {
+    "en": "ช่วยหยิบหนังสือเล่มนั้นขึ้นมาหน่อย",
+    "ko": "",
+    "highlight": "ขึ้นมา"
+   },
+   {
+    "en": "นกบินหนีไปทางทิศเหนือ",
+    "ko": "",
+    "highlight": "ไป"
+   },
+   {
+    "en": "รถไฟกำลังแล่นลงมาจากภูเขา",
+    "ko": "",
+    "highlight": "ลงมา"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "เขากำลังเดินไปหาฉันที่นี่",
+    "right": "เขากำลังเดินมาหาฉันที่นี่",
+    "note": "If the destination is where the speaker is located, you must use 'maa', not 'pai'."
+   },
+   {
+    "wrong": "กรุณาวางของขึ้นบนโต๊ะ",
+    "right": "กรุณาวางของลงบนโต๊ะ",
+    "note": "Placing an item onto a surface beneath your chest/hand level is viewed as lowering it, hence 'long'."
+   },
+   {
+    "wrong": "อุณหภูมิวันนี้สูงลงมาก",
+    "right": "อุณหภูมิวันนี้สูงขึ้นมาก",
+    "note": "Rising numerical values, intensity, or temperatures combine with 'khuen', never 'long'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "When asking someone outside to step inside to where you are standing, choose: เดินเข้า___สิ",
+    "options": [
+     "ไป",
+     "มา",
+     "ลง",
+     "ออก"
+    ],
+    "answer": 1,
+    "explanation": "The movement is directed inward toward the speaker's current vantage point, demanding 'maa'."
+   },
+   {
+    "question": "The elevator is descending to the ground floor. Choose: ลิฟต์กำลังเคลื่อนที่___",
+    "options": [
+     "ขึ้น",
+     "ลง",
+     "มา",
+     "ไป"
+    ],
+    "answer": 1,
+    "explanation": "'Long' signifies downward trajectory along the vertical axis."
+   },
+   {
+    "question": "You tell your friend to take document papers over to the boss in another room: เอาเอกสารนี้___ให้หัวหน้า",
+    "options": [
+     "มา",
+     "ขึ้น",
+     "ไป",
+     "ตก"
+    ],
+    "answer": 2,
+    "explanation": "Movement directed away from the speaker toward another location requires 'pai'."
+   },
+   {
+    "question": "Prices of vegetables are rising this month: ราคาผักแพง___เรื่อยๆ",
+    "options": [
+     "ลง",
+     "มา",
+     "ไป",
+     "ขึ้น"
+    ],
+    "answer": 3,
+    "explanation": "Increases in price, size, or quality take the post-verbal modifier 'khuen'."
+   }
+  ],
+  "tip": "Directional verbs can stack: primary verb + directional axis (khuen/long/ork/khao) + anchor (pai/maa)."
+ },
+ {
+  "id": "th-b1-resultative-complements",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🎯",
+  "title": "Resultative Verb Complements (Ook, Dai, Than)",
+  "subtitle": "Marking emergence, successful fruition, and temporal punctuality",
+  "color": "#1E40AF",
+  "bg": "#EFF6FF",
+  "keyPoint": "Resultative complements attach after main verbs to indicate whether an action achieved its cognitive, practical, or punctual goal.",
+  "structure": {
+   "headers": [
+    "Complement",
+    "Semantic Result",
+    "Thai Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ออก",
+      "Perceive / Figure out",
+      "คิดออก",
+      "Successfully recalled or solved"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ได้",
+      "Achievement / Realization",
+      "หาเจอจนได้",
+      "Managed to find successfully"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ทัน",
+      "In time / Keep pace with",
+      "วิ่งทัน",
+      "Ran fast enough to catch up"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Deciphering or Solving (Emergence)",
+    "example": "ลายมือหวัดมากจนฉันอ่านไม่ออก",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Actualization of Effort",
+    "example": "ในที่สุดพวกเราก็ปีนขึ้นยอดเขาได้",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Keeping Up Temporally",
+    "example": "ตื่นสายแต่ยังไปสนามบินขึ้นเครื่องบินทัน",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "นึกชื่อเพื่อนคนนี้เท่าไรก็นึกไม่ออก",
+    "ko": "",
+    "highlight": "ไม่ออก"
+   },
+   {
+    "en": "เขาตามบทเรียนในห้องเรียนไม่ทัน",
+    "ko": "",
+    "highlight": "ไม่ทัน"
+   },
+   {
+    "en": "ความพยายามอยู่ที่ไหนความสำเร็จย่อมทำได้",
+    "ko": "",
+    "highlight": "ทำได้"
+   },
+   {
+    "en": "คุณดูออกไหมว่ากระเป๋าใบไหนคือของจริง",
+    "ko": "",
+    "highlight": "ดูออก"
+   },
+   {
+    "en": "ฉันรีบขับรถจนมาส่งเธอทันเวลา",
+    "ko": "",
+    "highlight": "ทัน"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ฉันจำคำศัพท์นี้ไม่ได้ออก",
+    "right": "ฉันนึกคำศัพท์นี้ไม่ออก",
+    "note": "To convey that an idea or memory fails to come out of your head, use 'nuek mai ook'."
+   },
+   {
+    "wrong": "รถไฟออกแล้ว วิ่งตามไม่เป็น",
+    "right": "รถไฟออกแล้ว วิ่งตามไม่ทัน",
+    "note": "Missing a schedule or falling behind in pace requires 'than', not the skill marker 'pen'."
+   },
+   {
+    "wrong": "ฟังเสียงไม่ทัน เลยไม่เข้าใจความหมาย",
+    "right": "ฟังไม่ออก เลยไม่เข้าใจความหมาย",
+    "note": "When you hear the sounds but cannot decode or distinguish the words, use 'fang mai ook'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He stared at the puzzle for hours and finally figured it out: เขาแก้ปัญหานี้___แล้ว",
+    "options": [
+     "ทัน",
+     "ออก",
+     "ตก",
+     "เป็น"
+    ],
+    "answer": 1,
+    "explanation": "'Ook' as a resultative denotes discerning, solving, or bringing a mental solution out into clarity."
+   },
+   {
+    "question": "The train leaves in five minutes, but we can still catch it: พวกเรายังไปขึ้นรถไฟ___",
+    "options": [
+     "ได้",
+     "ออก",
+     "ทัน",
+     "ไหว"
+    ],
+    "answer": 2,
+    "explanation": "Making it within a required timeframe uses 'than'."
+   },
+   {
+    "question": "No matter how much I search, I cannot find the keys: หากุญแจเท่าไรก็หาไม่___",
+    "options": [
+     "เจอ",
+     "ทัน",
+     "ออก",
+     "ขึ้น"
+    ],
+    "answer": 0,
+    "explanation": "The complementary pair for successful visual finding is 'haa joe' (or 'haa mai joe' for negative)."
+   },
+   {
+    "question": "The foreigner spoke so rapidly that I could not decipher the words: เขาพูดเร็วมากจนฉันฟังไม่___",
+    "options": [
+     "เป็น",
+     "ไหว",
+     "เข้า",
+     "ออก"
+    ],
+    "answer": 3,
+    "explanation": "'Fang mai ook' means unable to decode, comprehend, or separate speech acoustic signals into recognizable words."
+   }
+  ],
+  "tip": "Think of 'ook' as an idea bursting OUT of darkness into clarity, and 'than' as keeping pace with a ticking clock."
+ },
+ {
+  "id": "th-b1-nominalization-pre-verbs",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "📦",
+  "title": "Nominalization with Kaan and Khwaam",
+  "subtitle": "Converting action verbs and stative descriptors into abstract nouns",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Prefix 'kaan' transforms dynamic action verbs into gerund-like activity nouns, whereas 'khwaam' converts adjectives and mental/stative predicates into abstract conceptual nouns.",
+  "structure": {
+   "headers": [
+    "Prefix",
+    "Base Category",
+    "Base Word",
+    "Resulting Noun"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "การ",
+      "Dynamic Action Verb",
+      "เดินทาง (travel)",
+      "การเดินทาง (the travel / journey)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ความ",
+      "Stative Verb / Adjective",
+      "สุข (happy)",
+      "ความสุข (happiness)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ความ",
+      "Mental / Cognitive Verb",
+      "คิด (think)",
+      "ความคิด (thought / opinion)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Dynamic Activities (Gerunds)",
+    "example": "การออกกำลังกายทุกวันทำให้ร่างกายแข็งแรง",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Abstract States of Being",
+    "example": "ทุกคนต้องการความรักและความอบอุ่น",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Cognitive Concepts",
+    "example": "ความเข้าใจที่ถูกต้องช่วยลดความขัดแย้ง",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "การเรียนภาษาต่างประเทศต้องใช้เวลาและความอดทน",
+    "ko": "",
+    "highlight": "การเรียน"
+   },
+   {
+    "en": "ความจริงเป็นสิ่งไม่ตาย",
+    "ko": "",
+    "highlight": "ความจริง"
+   },
+   {
+    "en": "การสูบบุหรี่เป็นอันตรายต่อสุขภาพ",
+    "ko": "",
+    "highlight": "การสูบบุหรี่"
+   },
+   {
+    "en": "ความพยายามอยู่ที่ไหน ความสำเร็จอยู่ที่นั่น",
+    "ko": "",
+    "highlight": "ความพยายาม"
+   },
+   {
+    "en": "การประชุมจะเริ่มขึ้นในเวลาเก้าโมงเช้า",
+    "ko": "",
+    "highlight": "การประชุม"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "การดีมีความสำคัญมาก",
+    "right": "ความดีมีความสำคัญมาก",
+    "note": "'Dii' (good) is an adjective describing quality; it must take 'khwaam' to form 'virtue/goodness'."
+   },
+   {
+    "wrong": "ความกินอาหารเช้าเป็นเรื่องจำเป็น",
+    "right": "การกินอาหารเช้าเป็นเรื่องจำเป็น",
+    "note": "'Kin' (eat) is a dynamic physical action, so it requires 'kaan', not 'khwaam'."
+   },
+   {
+    "wrong": "การรู้ของเขาทำให้ครูประทับใจ",
+    "right": "ความรู้ของเขาทำให้ครูประทับใจ",
+    "note": "Knowledge as an abstract noun derived from 'stative knowing' is 'khwaam-ruu'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "To create the abstract noun for 'speed' from the adjective 'reo' (fast), choose: ___เร็ว",
+    "options": [
+     "ความ",
+     "การ",
+     "ผู้",
+     "สิ่ง"
+    ],
+    "answer": 0,
+    "explanation": "Qualities and adjectives take 'khwaam' to become abstract nouns."
+   },
+   {
+    "question": "To convert the verb 'tham ngaan' (to work) into 'the work / working', choose: ___ทำงาน",
+    "options": [
+     "ความ",
+     "น่า",
+     "การ",
+     "ช่าง"
+    ],
+    "answer": 2,
+    "explanation": "Dynamic actions take 'kaan' to form gerunds/activity nouns."
+   },
+   {
+    "question": "The concept of 'cleanliness' derived from 'sa-aad' (clean) is: ___สะอาด",
+    "options": [
+     "การ",
+     "ความ",
+     "ของ",
+     "ที่"
+    ],
+    "answer": 1,
+    "explanation": "'Sa-aad' is an adjective of condition, which couples with 'khwaam'."
+   },
+   {
+    "question": "To describe the activity of 'traveling' as a subject: ___ท่องเที่ยวช่วยเปิดโลกกว้าง",
+    "options": [
+     "ผู้",
+     "ความ",
+     "สิ่ง",
+     "การ"
+    ],
+    "answer": 3,
+    "explanation": "Traveling is a physical activity/action, so 'kaan' is the correct nominalizing prefix."
+   }
+  ],
+  "tip": "If you can physically perform it (run, speak, build), use 'kaan'. If it describes feelings, traits, or states, use 'khwaam'."
+ },
+ {
+  "id": "th-b1-passive-markers",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#DC2626",
+  "emoji": "🛡️",
+  "title": "Adversative vs Neutral Passives (Thuk vs Don vs Rap)",
+  "subtitle": "Navigating negative affliction, informal hardship, and honored receipt",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "Thai passive constructions traditionally convey misfortune using 'thuk' (formal) or 'don' (colloquial), while positive or institutional receipt relies on 'rap'.",
+  "structure": {
+   "headers": [
+    "Passive Auxiliary",
+    "Register",
+    "Affective Tone",
+    "Standard Usage"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ถูก",
+      "Formal / Standard",
+      "Adversative (Harm/Damage)",
+      "Formal reports of accidents or penalties"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "โดน",
+      "Colloquial / Spoken",
+      "Adversative (Displeasure)",
+      "Daily speech for scolding, hitting, teasing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ได้รับ",
+      "Formal / Neutral",
+      "Positive or Neutral",
+      "Honors, awards, services, recognition"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Formal Adversity (Damage/Punishment)",
+    "example": "คนร้ายถูกตำรวจจับกุมเมื่อคืนนี้",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Informal Daily Adversity",
+    "example": "เขาเดินตากฝนจนโดนแม่ดุยกใหญ่",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Beneficial / Positive Passive",
+    "example": "นักเรียนดีเด่นได้รับเชิญให้ขึ้นรับรางวัล",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "กระจกหน้าต่างถูกหินปาแตก",
+    "ko": "",
+    "highlight": "ถูก"
+   },
+   {
+    "en": "เมื่อวานนี้ฉันโดนเพื่อนล้อเรื่องทรงผมใหม่",
+    "ko": "",
+    "highlight": "โดน"
+   },
+   {
+    "en": "อาจารย์ได้รับเลือกเป็นคณบดีคนใหม่",
+    "ko": "",
+    "highlight": "ได้รับ"
+   },
+   {
+    "en": "สุนัขตัวนี้ถูกรถชนแต่รอดชีวิตมาได้",
+    "ko": "",
+    "highlight": "ถูก"
+   },
+   {
+    "en": "เขาทำงานสายจึงโดนหักเงินเดือน",
+    "ko": "",
+    "highlight": "โดน"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ฉันถูกเพื่อนชวนไปงานวันเกิดแสนสนุก",
+    "right": "ฉันได้รับเชิญไปงานวันเกิด หรือ เพื่อนชวนฉันไปงานวันเกิด",
+    "note": "'Thuk' inherently implies victimhood or unpleasantness; do not use it for enjoyable party invitations."
+   },
+   {
+    "wrong": "สมชายโดนเลือกให้รับรางวัลเกียรติยศ",
+    "right": "สมชายได้รับเลือกให้รับรางวัลเกียรติยศ",
+    "note": "Receiving a prestigious award is a positive honor; use 'dai-rap', never the adverse marker 'don'."
+   },
+   {
+    "wrong": "ข้าวของในห้องโดนจัดระเบียบอย่างสวยงาม",
+    "right": "ข้าวของในห้องได้รับการจัดระเบียบอย่างสวยงาม",
+    "note": "Beneficial improvement of items takes 'dai-rap kaan-', not adversative 'don'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "In a news report, a suspect was arrested by officers: ผู้ต้องหา___ตำรวจจับกุม",
+    "options": [
+     "ถูก",
+     "โดน",
+     "ได้รับ",
+     "ยอม"
+    ],
+    "answer": 0,
+    "explanation": "Written journalistic Thai specifies 'thuk' for adversity or arrest."
+   },
+   {
+    "question": "An employee received a special scholarship from the company: พนักงานคนนี้___คัดเลือกให้รับทุน",
+    "options": [
+     "โดน",
+     "ถูก",
+     "ได้รับ",
+     "ตก"
+    ],
+    "answer": 2,
+    "explanation": "'Dai-rap' is used for positive experiences, honors, and prestigious selections."
+   },
+   {
+    "question": "In casual talk, you got stung by a wasp: เมื่อเช้าฉัน___ผึ้งต่อยที่แขน",
+    "options": [
+     "ได้รับ",
+     "ยอม",
+     "โดน",
+     "ถูกใจ"
+    ],
+    "answer": 2,
+    "explanation": "'Don' is the standard conversational passive for experiencing negative physical incidents."
+   },
+   {
+    "question": "Why shouldn't you say 'ฉันถูกชม' when praised? Choose the best explanation:",
+    "options": [
+     "ชม is not a verb",
+     "ถูก is only for animals",
+     "Praise is positive, but ถูก denotes suffering adversity",
+     "Thai has no passive voice"
+    ],
+    "answer": 2,
+    "explanation": "Traditional Thai passives carry an unpleasant connotation; praise is desirable, so active voice or 'dai-rap kham-chom' is preferred."
+   }
+  ],
+  "tip": "Reserve 'thuk' and 'don' for bad news (scolded, hit, fired); use 'dai-rap' for good news (awarded, invited, approved)."
+ },
+ {
+  "id": "th-b1-attitudinal-final-particles",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🗣️",
+  "title": "Attitudinal Final Particles",
+  "subtitle": "Soften, emphasize, contradict, or persuade with conversational nuances",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Attitudinal particles attach to the end of an utterance to convey speaker mood, illocutionary force, and interpersonal stance without altering core propositional meaning.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Core Nuance",
+    "Thai Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "นะ",
+      "Softening / Seeking consent",
+      "ไปด้วยกันนะ",
+      "Let's go together, okay?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "สิ",
+      "Prompting / Natural obviousness",
+      "กินสิ",
+      "Go ahead and eat!"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "หรอก",
+      "Contradicting / Negating assumptions",
+      "ไม่แพงหรอก",
+      "It's not expensive at all (contrary to what you think)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ล่ะ",
+      "Shifting topic / Pointed questioning",
+      "แล้วคุณล่ะ",
+      "And what about you?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Softening Requests",
+    "example": "ช่วยปิดหน้าต่างให้หน่อยนะ",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Gentle Correction",
+    "example": "ฉันไม่ได้โกรธเธอหรอก",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Direct Encouragement",
+    "example": "ลองทำดูสิ",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "อย่าลืมกินยานะ",
+    "ko": "",
+    "highlight": "นะ"
+   },
+   {
+    "en": "ถ้าหิวก็สั่งข้าวสิ",
+    "ko": "",
+    "highlight": "สิ"
+   },
+   {
+    "en": "เรื่องแค่นี้ไม่ยากหรอก",
+    "ko": "",
+    "highlight": "หรอก"
+   },
+   {
+    "en": "พรุ่งนี้จะไปกี่โมงล่ะ",
+    "ko": "",
+    "highlight": "ล่ะ"
+   },
+   {
+    "en": "รอแป๊บเดียวนะ",
+    "ko": "",
+    "highlight": "นะ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ไม่แพงนะ",
+    "right": "ไม่แพงหรอก",
+    "note": "Use หรอก when actively refuting or reassuring someone against their misconception that something is expensive."
+   },
+   {
+    "wrong": "กินหรอก",
+    "right": "กินสิ",
+    "note": "หรอก generally requires a negative clause; use สิ to urge or invite action."
+   },
+   {
+    "wrong": "คุณไปไหนสิ",
+    "right": "คุณไปไหนล่ะ",
+    "note": "Use ล่ะ for focused inquiry rather than imperative particle สิ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Reassure a worried friend: 'It doesn't hurt at all (don't worry)': ไม่เจ็บ___",
+    "options": [
+     "สิ",
+     "หรอก",
+     "ล่ะ",
+     "เถอะ"
+    ],
+    "answer": 1,
+    "explanation": "หรอก follows negatives to counter the listener's assumption or anxiety."
+   },
+   {
+    "question": "Kindly encourage someone to take a turn: 'Try reading it!': ลองอ่านดู___",
+    "options": [
+     "สิ",
+     "หรอก",
+     "หรือ",
+     "มั้ย"
+    ],
+    "answer": 0,
+    "explanation": "สิ marks an encouraging directive or natural consequence."
+   },
+   {
+    "question": "Gentle reminder to a friend: 'Drive carefully, okay?': ขับรถดีๆ ___",
+    "options": [
+     "สิ",
+     "หรอก",
+     "ล่ะ",
+     "นะ"
+    ],
+    "answer": 3,
+    "explanation": "นะ softens the statement and invites gentle agreement."
+   },
+   {
+    "question": "Inquire about a new subject: 'And what about your work?': แล้วงานของคุณ___",
+    "options": [
+     "นะ",
+     "หรอก",
+     "ล่ะ",
+     "สิ"
+    ],
+    "answer": 2,
+    "explanation": "ล่ะ is used to pose questions when contrasting or changing focus."
+   }
+  ],
+  "tip": "Always remember that หรอก is almost exclusively paired with negative words like ไม่, ไม่ได้, or อย่า."
+ },
+ {
+  "id": "th-b1-causative-constructions",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔄",
+  "title": "Causative Constructions",
+  "subtitle": "Directing, causing, and allowing actions with ให้ and its compounds",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Thai uses the pivotal verb ให้ (to give/let) alone or compounded with verbs like ทำ (to do) or บอก (to tell) to express causative, permissive, and indirect agency.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Construction Pattern",
+    "Thai Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Permissive/Direct",
+      "Subject + ให้ + Agent + Verb",
+      "แม่ให้ฉันไปเที่ยว",
+      "Mom lets me go travel."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Indirect Result",
+      "Subject + ทำให้ + Object + Result Verb/Adj",
+      "ฝนตกทำให้รถติด",
+      "The rain causes traffic jams."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Instructional",
+      "Subject + บอกให้ + Agent + Action",
+      "ครูบอกให้นักเรียนอ่าน",
+      "The teacher told the students to read."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Requestive Demand",
+      "Subject + ขอให้ + Agent + Action",
+      "หมอขอให้เขาพักผ่อน",
+      "The doctor asked him to rest."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Inanimate Cause",
+    "example": "ข่าวดีทำให้ทุกคนมีความสุข",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Granting Permission",
+    "example": "หัวหน้าให้พวกเรากลับบ้านเร็ว",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Ordering an Action",
+    "example": "พ่อบอกให้ลูกทำการบ้าน",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ภาพยนตร์เรื่องนี้ทำให้ฉันร้องไห้",
+    "ko": "",
+    "highlight": "ทำให้"
+   },
+   {
+    "en": "อาจารย์ให้พวกเราส่งงานพรุ่งนี้",
+    "ko": "",
+    "highlight": "ให้"
+   },
+   {
+    "en": "หัวหน้าบอกให้เลขาเตรียมเอกสาร",
+    "ko": "",
+    "highlight": "บอกให้"
+   },
+   {
+    "en": "การออกกำลังกายทำให้ร่างกายแข็งแรง",
+    "ko": "",
+    "highlight": "ทำให้"
+   },
+   {
+    "en": "เขาไม่ยอมให้ใครยืมรถคันนี้",
+    "ko": "",
+    "highlight": "ให้"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ฝนตกให้รถติด",
+    "right": "ฝนตกทำให้รถติด",
+    "note": "Use ทำให้ rather than bare ให้ when an event or condition causes an involuntary result."
+   },
+   {
+    "wrong": "แม่ทำฉันกินข้าว",
+    "right": "แม่ให้ฉันกินข้าว",
+    "note": "Do not translate English 'made me do' as bare ทำ; use ให้ for interpersonal directives."
+   },
+   {
+    "wrong": "หมอบอกฉันให้กินยา",
+    "right": "หมอบอกให้ฉันกินยา",
+    "note": "In standard Thai causative ordering, the compound บอกให้ precedes the subordinate agent."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Expressing inanimate causation: 'Coffee ___ me unable to sleep': กาแฟ___ฉันนอนไม่หลับ",
+    "options": [
+     "บอกให้",
+     "ขอให้",
+     "ทำให้",
+     "อยากให้"
+    ],
+    "answer": 2,
+    "explanation": "ทำให้ is required for non-volitional cause-and-effect outcomes."
+   },
+   {
+    "question": "Permissive causative: 'The teacher allowed students to leave early': ครู___นักเรียนกลับบ้านก่อนเวลา",
+    "options": [
+     "ให้",
+     "ทำให้",
+     "บังคับ",
+     "ถูก"
+    ],
+    "answer": 0,
+    "explanation": "Bare ให้ conveys permission or delegation to human agents."
+   },
+   {
+    "question": "Reported directive: 'Boss told Somchai to call the client': เจ้านาย___สมชายโทรหาลูกค้า",
+    "options": [
+     "ทำให้",
+     "บอกให้",
+     "อยากให้",
+     "ยอมให้"
+    ],
+    "answer": 1,
+    "explanation": "บอกให้ specifically translates to telling or ordering an agent to act."
+   },
+   {
+    "question": "Benefactive directive: 'I want him to recover quickly': ฉันอยาก___เขาหายป่วยเร็วๆ",
+    "options": [
+     "ทำ",
+     "บอก",
+     "ว่า",
+     "ให้"
+    ],
+    "answer": 3,
+    "explanation": "อยากให้ pairs desire with a subordinate causative clause for someone else."
+   }
+  ],
+  "tip": "Use ทำให้ for events producing automatic results, and use ให้ or บอกให้ when a human agent directs another human agent."
+ },
+ {
+  "id": "th-b2-elaborate-compounds",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🎨",
+  "title": "Rhyming Elaborate Expressions",
+  "subtitle": "Quadrisyllabic idioms and poetic balance in advanced Thai discourse",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Four-syllable elaborate expressions (คำซ้อนสี่พยางค์) utilize internal vowel rhymes between syllables 2 and 3 or identical semantic repetitions to add elegance and rhythm.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Pattern Schema",
+    "Thai Example",
+    "Literal & Idiomatic Sense"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Rhyming ABAC",
+      "1-2-1-4 (Syllable 1 repeats)",
+      "กินดิบกินดี",
+      "Eat raw, eat well -> Live in luxury"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Rhyming Internal",
+      "A-B-C-D (Rhyme between 2 & 3)",
+      "บ้านเรือนเคหาสน์",
+      "Homes and residences -> Formal dwellings"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Repetitive Doublets",
+      "Synonym + Synonym pair",
+      "เจ็บไข้ได้ป่วย",
+      "Sick-fever-get-ill -> Sickness & ailment"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Antithetical Pair",
+      "Opposites balanced",
+      "ยากดีมีจน",
+      "Difficult-good-have-poor -> Rich or poor"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Expressing Lifestyle",
+    "example": "เขาทำงานหนักจนมีกินมีใช้",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Universal Inclusivity",
+    "example": "ไม่ว่ายากดีมีจนทุกคนต้องเท่าเทียม",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Describing Health",
+    "example": "ช่วงนี้อากาศเปลี่ยนระวังเจ็บไข้ได้ป่วย",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "คนเราเกิดมาต้องช่วยเหลือเกื้อกูลกัน",
+    "ko": "",
+    "highlight": "ช่วยเหลือเกื้อกูล"
+   },
+   {
+    "en": "ครอบครัวของเขามีกินมีใช้อย่างสบาย",
+    "ko": "",
+    "highlight": "มีกินมีใช้"
+   },
+   {
+    "en": "หมั่นดูแลตนเองอย่าให้เจ็บไข้ได้ป่วย",
+    "ko": "",
+    "highlight": "เจ็บไข้ได้ป่วย"
+   },
+   {
+    "en": "กฎหมายนี้คุ้มครองทุกคนไม่ว่ายากดีมีจน",
+    "ko": "",
+    "highlight": "ยากดีมีจน"
+   },
+   {
+    "en": "การเดินทางไปต่างแดนต้องรู้ภาษาหน้าตา",
+    "ko": "",
+    "highlight": "ภาษาหน้าตา"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "เขามีกินมีเงิน",
+    "right": "เขามีกินมีใช้",
+    "note": "Idiomatic four-syllable expressions have fixed collocations; you cannot substitute arbitrary synonyms."
+   },
+   {
+    "wrong": "คนรวยคนจนทุกคนเท่ากัน",
+    "right": "ไม่ว่ายากดีมีจนทุกคนเท่าเทียมกัน",
+    "note": "In formal written Thai, elaborate compounds like ยากดีมีจน convey far greater stylistic maturity."
+   },
+   {
+    "wrong": "ช่วยกันเกื้อกูล",
+    "right": "ช่วยเหลือเกื้อกูล",
+    "note": "Maintain the canonical four-syllable rhythm to preserve poetic cadence."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the standard idiom for having enough wealth to live comfortably: มีกิน___",
+    "options": [
+     "มีสุข",
+     "มีเงิน",
+     "มีใช้",
+     "มีทอง"
+    ],
+    "answer": 2,
+    "explanation": "มีกินมีใช้ is the canonical elaborate doublet meaning to have ample sustenance and means."
+   },
+   {
+    "question": "Complete the mutual aid expression: ช่วยเหลือ___กัน",
+    "options": [
+     "เกื้อกูล",
+     "ทำมา",
+     "รักใคร่",
+     "ปลอดภัย"
+    ],
+    "answer": 0,
+    "explanation": "ช่วยเหลือเกื้อกูล is the standard four-syllable compound meaning to assist and support each other."
+   },
+   {
+    "question": "Expressing vulnerability to illness during seasonal change: ระวังจะ___",
+    "options": [
+     "ตายไปได้",
+     "เจ็บไข้ได้ป่วย",
+     "ยากดีมีจน",
+     "มีกินมีใช้"
+    ],
+    "answer": 1,
+    "explanation": "เจ็บไข้ได้ป่วย is the standard quadruple doublet for falling ill."
+   },
+   {
+    "question": "Complete the socio-economic idiom meaning 'regardless of wealth or poverty': ไม่ว่า___",
+    "options": [
+     "ยากดีมีจน",
+     "คนรวยคนยาก",
+     "มีสุขมีทุกข์",
+     "ไปมาหาสู่"
+    ],
+    "answer": 0,
+    "explanation": "ยากดีมีจน balances difficulty, goodness, possession, and poverty to mean all social strata."
+   }
+  ],
+  "tip": "Pay attention to the rhyme between the 2nd and 3rd syllables (e.g., เหลือ and เกื้อ in ช่วยเหลือเกื้อกูล); matching vowels and tone groups creates the authentic rhythm."
+ },
+ {
+  "id": "th-b2-register-pronoun-hierarchy",
+  "level": "b2",
+  "category": "nouns",
+  "categoryColor": "#F59E0B",
+  "emoji": "👥",
+  "title": "Hierarchical Pronoun System",
+  "subtitle": "Mastering status, intimacy, age, and deference in Thai reference",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Thai pronouns reflect hierarchical distance, gender, and intimacy; speakers often substitute kinship titles or nicknames in place of direct first- and second-person pronouns.",
+  "structure": {
+   "headers": [
+    "Pronoun Pair (1st / 2nd)",
+    "Relative Status & Register",
+    "Thai Example",
+    "Social Setting"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "กระผม/ดิฉัน — ท่าน",
+      "Formal / Utmost Deference",
+      "ดิฉันขอเรียนท่านประธาน",
+      "Official meeting / High dignitary"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ผม/ดิฉัน — คุณ",
+      "Standard Polite / Neutral",
+      "ผมขออนุญาตคุณครูครับ",
+      "Workplace / Public courtesy"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "พี่ — น้อง",
+      "Age Deference / Affectionate",
+      "พี่จะช่วยดูเอกสารให้น้องเอง",
+      "Colleagues / Seniors to juniors"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "เรา — แก/เธอ",
+      "Informal Peer / Intimate",
+      "เราว่าแกพูดถูกนะ",
+      "Close friends / Casual"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Respectful Kinship Deference",
+    "example": "พี่สมชายครับ ขอคำแนะนำเรื่องนี้หน่อยครับ",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "High-Formality Address",
+    "example": "กระผมขอรายงานผลการประชุมต่อท่านครับ",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Professional Peer Polite",
+    "example": "คุณคิดอย่างไรกับข้อเสนอนี้ครับ",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "กระผมขอขอบพระคุณท่านอธิบดีเป็นอย่างยิ่ง",
+    "ko": "",
+    "highlight": "กระผม"
+   },
+   {
+    "en": "วันนี้ดิฉันจะมานำเสนอโครงการใหม่ค่ะ",
+    "ko": "",
+    "highlight": "ดิฉัน"
+   },
+   {
+    "en": "น้องพิมพ์ช่วยส่งไฟล์ให้พี่หน่อยได้ไหม",
+    "ko": "",
+    "highlight": "พี่"
+   },
+   {
+    "en": "ถ้าเธอว่าง เดี๋ยวเราไปกินข้าวกันนะ",
+    "ko": "",
+    "highlight": "เรา"
+   },
+   {
+    "en": "คุณสมศักดิ์ได้รับเอกสารแล้วหรือยังครับ",
+    "ko": "",
+    "highlight": "คุณ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "คุณกินข้าวหรือยังแม่",
+    "right": "แม่กินข้าวหรือยังครับ",
+    "note": "Never address your mother or older relatives as คุณ; use kinship terms directly as pronouns."
+   },
+   {
+    "wrong": "กระผมคุยกับแกเมื่อวาน",
+    "right": "ผมคุยกับเขาเมื่อวาน",
+    "note": "Mixing hyper-formal กระผม with intimate/blunt แก causes register clash."
+   },
+   {
+    "wrong": "ฉันขอเรียนท่านประธาน",
+    "right": "กระผมขอเรียนท่านประธาน",
+    "note": "In high-level official addresses by male speakers, กระผม is preferred over common ฉัน."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Addressing a senior colleague courteously when asking for advice: '___ Somsak, could you help me?': ___สมศักดิ์ช่วยดูให้หน่อยครับ",
+    "options": [
+     "พี่",
+     "แก",
+     "มัน",
+     "ดิฉัน"
+    ],
+    "answer": 0,
+    "explanation": "พี่ marks respectful intimacy toward an older peer or senior colleague."
+   },
+   {
+    "question": "Highest formality self-reference for a male speaker addressing a committee: '___ would like to report...': ___ขอรายงาน...",
+    "options": [
+     "เรา",
+     "ข้า",
+     "กระผม",
+     "กู"
+    ],
+    "answer": 2,
+    "explanation": "กระผม is the most formal male first-person pronoun in official and ceremonial contexts."
+   },
+   {
+    "question": "A woman addressing a business client politely: '___ received the invoice': ___ได้รับใบแจ้งหนี้แล้วค่ะ",
+    "options": [
+     "กู",
+     "ดิฉัน",
+     "ข้าพเจ้า",
+     "พี่"
+    ],
+    "answer": 1,
+    "explanation": "ดิฉัน is the standard formal first-person pronoun for female speakers in professional settings."
+   },
+   {
+    "question": "Addressing a high dignitary or CEO directly: 'I would like to consult with ___': อยากปรึกษา___ครับ",
+    "options": [
+     "แก",
+     "เธอ",
+     "เอ็ง",
+     "ท่าน"
+    ],
+    "answer": 3,
+    "explanation": "ท่าน conveys supreme honorific respect to superiors and esteemed individuals."
+   }
+  ],
+  "tip": "When in doubt in daily life, replace 'you' and 'I' with the person's professional title, kinship term (พี่/น้อง), or given nickname."
+ },
+ {
+  "id": "th-b2-formal-relative-connectors",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#10B981",
+  "emoji": "📜",
+  "title": "Formal Connectives and Relative Markers",
+  "subtitle": "Structuring complex clauses using ซึ่ง, ที่, and อัน in high registers",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "While ที่ serves as the default relative pronoun in everyday Thai, formal and written registers employ ซึ่ง for non-restrictive relative clauses and อัน for abstract or elevated qualities.",
+  "structure": {
+   "headers": [
+    "Marker",
+    "Register / Syntactic Role",
+    "Thai Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ที่",
+      "General / Restrictive modifier",
+      "คนที่ยืนตรงนั้นคือพี่ชายฉัน",
+      "The person who is standing there is my brother."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ซึ่ง",
+      "Formal / Non-restrictive descriptive clause",
+      "โครงการนี้ ซึ่งเริ่มเมื่อปีก่อน ประสบความสำเร็จ",
+      "This project, which began last year, succeeded."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "อัน",
+      "Literary / Elevated abstract modifier",
+      "ความเสียสละอันยิ่งใหญ่",
+      "A sacrifice which is magnificent."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ทั้งนี้",
+      "Administrative transition / 'In this regard'",
+      "ทั้งนี้ โปรดปฏิบัติตามกฎระเบียบ",
+      "In this regard, please strictly follow the regulations."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Descriptive Non-Restrictive Clause",
+    "example": "บริษัทเปิดสาขาใหม่ ซึ่งจะสร้างงานให้ชุมชน",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Abstract Elevated Attribution",
+    "example": "นี่คือความภาคภูมิใจอันหาที่สุดมิได้",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Official Written Qualification",
+    "example": "ทั้งนี้ ข้อกำหนดดังกล่าวมีผลบังคับทันที",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "รัฐบาลออกนโยบายใหม่ ซึ่งส่งผลกระทบต่อเศรษฐกิจ",
+    "ko": "",
+    "highlight": "ซึ่ง"
+   },
+   {
+    "en": "ทหารได้รับเกียรติยศอันสูงส่งจากการปฏิบัติหน้าที่",
+    "ko": "",
+    "highlight": "อัน"
+   },
+   {
+    "en": "เอกสารที่แนบมานี้เป็นข้อมูลลับ",
+    "ko": "",
+    "highlight": "ที่"
+   },
+   {
+    "en": "การประชุมจัดขึ้นที่เชียงใหม่ ซึ่งมีผู้เข้าร่วมจำนวนมาก",
+    "ko": "",
+    "highlight": "ซึ่ง"
+   },
+   {
+    "en": "นี่คือภารกิจอันศักดิ์สิทธิ์ของพวกเราทุกคน",
+    "ko": "",
+    "highlight": "อัน"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "หนังสืออันฉันซื้อเมื่อวาน",
+    "right": "หนังสือที่ฉันซื้อเมื่อวาน",
+    "note": "Do not use poetic อัน for mundane concrete objects; use everyday ที่ for restrictive clauses."
+   },
+   {
+    "wrong": "เขาไม่มา ซึ่งว่าเขาป่วย",
+    "right": "เขาไม่มา เพราะว่าเขาป่วย",
+    "note": "Do not confuse the relative marker ซึ่ง with causal conjunctions like เพราะว่า (because)."
+   },
+   {
+    "wrong": "คนที่ซึ่งมาเมื่อวานนี้",
+    "right": "คนที่มาเมื่อวานนี้",
+    "note": "Never combine ที่ and ซึ่ง sequentially as a single relative pronoun."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Elevated literary modifier: 'An immeasurable devotion': ความจงรักภักดี___หาที่สุดมิได้",
+    "options": [
+     "ที่",
+     "อัน",
+     "เพราะ",
+     "แต่"
+    ],
+    "answer": 1,
+    "explanation": "อัน is selected in elevated prose to modify abstract qualities and noble virtues."
+   },
+   {
+    "question": "Connecting a non-restrictive clausal addendum in formal text: 'New policy was launched, ___ had widespread impact': นโยบายใหม่ประกาศใช้แล้ว ___ ส่งผลกระทบอย่างกว้างขวาง",
+    "options": [
+     "อัน",
+     "ว่า",
+     "ซึ่ง",
+     "ถ้า"
+    ],
+    "answer": 2,
+    "explanation": "ซึ่ง connects an expansive, descriptive subordinate clause in formal exposition."
+   },
+   {
+    "question": "Everyday restrictive modifier: 'The food ___ she cooked is delicious': อาหาร___เธอทำอร่อยมาก",
+    "options": [
+     "ที่",
+     "อัน",
+     "จึง",
+     "ทั้งนี้"
+    ],
+    "answer": 0,
+    "explanation": "ที่ is the natural, default relative marker for tangible objects and day-to-day actions."
+   },
+   {
+    "question": "Administrative directive preamble: '___, participants must register by 9:00 AM': ___, ผู้เข้าร่วมต้องลงทะเบียนก่อนเก้าโมง",
+    "options": [
+     "อันว่า",
+     "ซึ่งหน้า",
+     "เพื่อว่า",
+     "ทั้งนี้"
+    ],
+    "answer": 3,
+    "explanation": "ทั้งนี้ introduces official stipulations and contextual background in formal documentation."
+   }
+  ],
+  "tip": "Reserve อัน almost exclusively for poetic pairings with abstract nouns (ความ/การ) and adjectives like ยิ่งใหญ่ (grand) or สูงส่ง (sublime)."
+ }
+]

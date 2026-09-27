@@ -1,0 +1,3340 @@
+[
+ {
+  "id": "fi-a1-vowel-harmony",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎵",
+  "title": "Vowel Harmony",
+  "subtitle": "Balancing front and back vowels across Finnish suffixes",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Finnish words with back vowels (a, o, u) take back-vowel endings, while words with front vowels (ä, ö, y) take front-vowel endings, with e and i being neutral.",
+  "structure": {
+   "headers": [
+    "Vowel Group",
+    "Vowels Included",
+    "Suffix Example (-lla / -llä)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Back vowels",
+      "a, o, u",
+      "talolla"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Front vowels",
+      "ä, ö, y",
+      "metsällä"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neutral only",
+      "e, i",
+      "pelillä"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Back Vowel Word",
+    "example": "Minä asun Turussa.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Front Vowel Word",
+    "example": "Hän asuu Helsingissä.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Neutral Vowels Only",
+    "example": "Avain on koti-ikkunassa.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "He istuvat talossa.",
+    "ko": "",
+    "highlight": "talossa"
+   },
+   {
+    "en": "Me käymme kesämökillä.",
+    "ko": "",
+    "highlight": "kesämökillä"
+   },
+   {
+    "en": "Kirja on pöydällä.",
+    "ko": "",
+    "highlight": "pöydällä"
+   },
+   {
+    "en": "Olen töissä kaupungissa.",
+    "ko": "",
+    "highlight": "kaupungissa"
+   },
+   {
+    "en": "Juotko teetä mukissa?",
+    "ko": "",
+    "highlight": "mukissa"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Minä asun Helsingissa.",
+    "right": "Minä asun Helsingissä.",
+    "note": "Helsinki contains front/neutral vowels only, so it requires -ssä instead of -ssa."
+   },
+   {
+    "wrong": "Auto on pöydalla.",
+    "right": "Auto on pöydällä.",
+    "note": "Pöytä contains the front vowel ö, so the suffix must be -llä."
+   },
+   {
+    "wrong": "Menen tytön kansa.",
+    "right": "Menen tytön kanssa.",
+    "note": "Tyttö has y and ö, so all attached endings must obey front vowel harmony."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct ending for 'in the sauna' (sauna + inessive):",
+    "options": [
+     "saunässä",
+     "saunassa",
+     "saunasa",
+     "saunää"
+    ],
+    "answer": 1,
+    "explanation": "'Sauna' contains back vowels (a, u), so it takes the back suffix -ssa."
+   },
+   {
+    "question": "Choose the correct form for 'on the table' (pöytä + adessive):",
+    "options": [
+     "pöydällä",
+     "pöydalla",
+     "pöytällä",
+     "pöytalla"
+    ],
+    "answer": 0,
+    "explanation": "'Pöytä' has front vowels (ö, y) and weakens t to d, requiring -llä."
+   },
+   {
+    "question": "Choose the correct form for 'in the city' (kaupunki + inessive):",
+    "options": [
+     "kaupungissä",
+     "kaupunkissa",
+     "kaupungissa",
+     "kaupunkissä"
+    ],
+    "answer": 2,
+    "explanation": "'Kaupunki' contains back vowels (a, u), requiring -ssa after consonant gradation."
+   },
+   {
+    "question": "Choose the correct form for 'in the woods' (metsä + inessive):",
+    "options": [
+     "metsassa",
+     "metsaassa",
+     "metssä",
+     "metsässä"
+    ],
+    "answer": 3,
+    "explanation": "'Metsä' contains ä, a front vowel, so it takes -ssä."
+   }
+  ],
+  "tip": "Neutral vowels e and i can appear with any vowel, but if a word has ONLY e and i (like 'tie' or 'kieli'), treat it as a front-vowel word (-ssä/-llä)."
+ },
+ {
+  "id": "fi-a1-consonant-gradation-basics",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔄",
+  "title": "Consonant Gradation (K-P-T Alternation)",
+  "subtitle": "Alternating between strong and weak stems in Finnish",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "The consonants k, p, and t change between strong and weak grades when suffixes close or open a syllable.",
+  "structure": {
+   "headers": [
+    "Consonant Pair",
+    "Strong Grade",
+    "Weak Grade"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "kk / k",
+      "kukka (flower)",
+      "kukan (of the flower)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "pp / p & p / v",
+      "kuppi / halpa",
+      "kupin / halvan"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "tt / t & t / d",
+      "tyttö / katu",
+      "tytön / kadulla"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "k / disappears",
+      "jalka",
+      "jalassa"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "tt to t in Nouns",
+    "example": "Tyttö leikkii puistossa.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "t to d in Cases",
+    "example": "Me asumme tällä kadulla.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "k Dropping in Stem",
+    "example": "Minulla on kipua jalassa.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Tämä kuppi on uusi.",
+    "ko": "",
+    "highlight": "kuppi"
+   },
+   {
+    "en": "Otan teen tuosta kupista.",
+    "ko": "",
+    "highlight": "kupista"
+   },
+   {
+    "en": "Hän asuu isolla kadulla.",
+    "ko": "",
+    "highlight": "kadulla"
+   },
+   {
+    "en": "Pekka lukee lehteä sohvalla.",
+    "ko": "",
+    "highlight": "lukee"
+   },
+   {
+    "en": "Minä luen joka ilta kirjaa.",
+    "ko": "",
+    "highlight": "luen"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Minä asun katulla.",
+    "right": "Minä asun kadulla.",
+    "note": "Single 't' weakens to 'd' in the adessive case (-lla)."
+   },
+   {
+    "wrong": "Tämä on Pekkan takki.",
+    "right": "Tämä on Pekan takki.",
+    "note": "Double 'kk' weakens to single 'k' in the genitive case (-n)."
+   },
+   {
+    "wrong": "Minä lueen kirjaa.",
+    "right": "Minä luen kirjaa.",
+    "note": "The verb lukea weakens k to nothing in the first person singular: minä luen."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete with the correct form: 'Hän asuu tällä ___.' (katu)",
+    "options": [
+     "katulla",
+     "kadulla",
+     "katula",
+     "katuulla"
+    ],
+    "answer": 1,
+    "explanation": "In katu, the single t weakens to d when -lla is added."
+   },
+   {
+    "question": "Complete with the correct form: 'Minä ___ lehteä.' (lukea)",
+    "options": [
+     "luken",
+     "lukeen",
+     "luen",
+     "lukee"
+    ],
+    "answer": 2,
+    "explanation": "The verb lukea drops 'k' in the first-person singular: minä luen."
+   },
+   {
+    "question": "Complete with the correct form: 'Kenen tämä ___ on?' (hattu + genitive -n)",
+    "options": [
+     "hatun",
+     "hattun",
+     "hadun",
+     "haton"
+    ],
+    "answer": 0,
+    "explanation": "The double tt weakens to a single t: hatun."
+   },
+   {
+    "question": "Complete with the correct form: 'Juon kahvia punaisesta ___.' (kuppi + -sta)",
+    "options": [
+     "kuppista",
+     "kuvasta",
+     "kubista",
+     "kupista"
+    ],
+    "answer": 3,
+    "explanation": "Double pp weakens to single p in the weak grade: kupista."
+   }
+  ],
+  "tip": "Double consonants (kk, pp, tt) always weaken to singles (k, p, t), which makes them the easiest gradation patterns to spot!"
+ },
+ {
+  "id": "fi-a1-verb-types",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🏃",
+  "title": "The Six Verb Types and Present Conjugation",
+  "subtitle": "Stem patterns and personal endings for Finnish verbs",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Finnish verbs fall into six distinct infinitive types, each revealing how to extract the present stem before adding personal endings.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Infinitive Ending",
+    "Stem Rule",
+    "Example (1st Person)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Type 1",
+      "2 vowels (-aa, -ea...)",
+      "Drop final vowel",
+      "puhua -> puhun"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Type 2",
+      "-da / -dä",
+      "Drop -da/-dä",
+      "syödä -> syön"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Type 3",
+      "-la, -na, -ra, -sta",
+      "Add -e- to consonant",
+      "tulla -> tulen"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Type 4",
+      "-ata / -otä / -uta",
+      "Replace -t- with -a-/-ä-",
+      "haluta -> haluan"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Type 1 Verb Conjugation",
+    "example": "Me puhumme suomea kurssilla.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Type 3 Verb Conjugation",
+    "example": "Mihin aikaan sinä tulet kotiin?",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Type 4 Verb Conjugation",
+    "example": "Hän haluaa kupin kahvia.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Minä puhun suomea ja englantia.",
+    "ko": "",
+    "highlight": "puhun"
+   },
+   {
+    "en": "He syövät lounasta ravintolassa.",
+    "ko": "",
+    "highlight": "syövät"
+   },
+   {
+    "en": "Tuletko sinä huomenna kouluun?",
+    "ko": "",
+    "highlight": "Tuletko"
+   },
+   {
+    "en": "Me haluamme oppia uutta.",
+    "ko": "",
+    "highlight": "haluamme"
+   },
+   {
+    "en": "Hän valitsee uuden puhelimen.",
+    "ko": "",
+    "highlight": "valitsee"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Minä tullan kotiin nyt.",
+    "right": "Minä tulen kotiin nyt.",
+    "note": "Type 3 verbs drop the infinitive marker (-la) and insert an connecting 'e': tul + e + n."
+   },
+   {
+    "wrong": "Hän puhuu suomi.",
+    "right": "Hän puhuu suomea.",
+    "note": "The verb puhua requires the partitive case for languages."
+   },
+   {
+    "wrong": "Me halutan nukkua.",
+    "right": "Me haluamme nukkua.",
+    "note": "Type 4 verbs change -t- to vocalic stem halua- before adding personal endings (-mme)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct form: 'Minä ___ teetä.' (juoda, Type 2)",
+    "options": [
+     "juodan",
+     "juon",
+     "juonen",
+     "juotan"
+    ],
+    "answer": 1,
+    "explanation": "Type 2 verbs drop -da/-dä: juo- + -n = juon."
+   },
+   {
+    "question": "Select the correct form: 'Me ___ Helsingissä.' (asua, Type 1)",
+    "options": [
+     "asumme",
+     "asutte",
+     "asuvat",
+     "asuaamme"
+    ],
+    "answer": 0,
+    "explanation": "The personal ending for 'me' (we) is -mme: asumme."
+   },
+   {
+    "question": "Select the correct form: 'Mitä sinä ___?' (tehdä, irregular/Type 2)",
+    "options": [
+     "tehdät",
+     "teet",
+     "teetkö",
+     "teette"
+    ],
+    "answer": 1,
+    "explanation": "Tehdä has the present stem tee-; with 'sinä' ending -t, it becomes teet."
+   },
+   {
+    "question": "Select the correct form: 'He ___ bussipysäkillä.' (seisoa, Type 1)",
+    "options": [
+     "seisoo",
+     "seisomme",
+     "seisotte",
+     "seisovat"
+    ],
+    "answer": 3,
+    "explanation": "The 3rd person plural (he) ending is -vat/-vät: seisovat."
+   }
+  ],
+  "tip": "The standard personal endings (-n, -t, -vowel/-see, -mme, -tte, -vat/-vät) stay consistent across almost all verb types once you find the stem!"
+ },
+ {
+  "id": "fi-a1-internal-external-locatives",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📍",
+  "title": "Internal vs. External Locative Cases",
+  "subtitle": "Navigating -s- and -l- spatial case endings in Finnish",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Internal locatives (-ssa, -sta, -on/-in) indicate containment inside an enclosed space, while external locatives (-lla, -lta, -lle) indicate position on an open surface or proximity.",
+  "structure": {
+   "headers": [
+    "Direction",
+    "Internal (Inside)",
+    "External (On/At)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Where at? (In / On)",
+      "-ssa / -ssä (talossa)",
+      "-lla / -llä (pöydällä)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Where from? (Out of / Off)",
+      "-sta / -stä (talosta)",
+      "-lta / -ltä (pöydältä)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Where to? (Into / Onto)",
+      "Illative: -Vn / -seen (taloon)",
+      "-lle (pöydälle)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Internal: Inside an Area",
+    "example": "Lapset leikkivät koulussa.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "External: Open Surface",
+    "example": "Kirja on isolla pöydällä.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "External: Destination/Target",
+    "example": "Menen huomenna torille.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kahvi on kupissa.",
+    "ko": "",
+    "highlight": "kupissa"
+   },
+   {
+    "en": "Lasi on pöydällä.",
+    "ko": "",
+    "highlight": "pöydällä"
+   },
+   {
+    "en": "Hän tulee ulos talosta.",
+    "ko": "",
+    "highlight": "talosta"
+   },
+   {
+    "en": "Otan laukun lattialta.",
+    "ko": "",
+    "highlight": "lattialta"
+   },
+   {
+    "en": "Menen viikonloppuna mökille.",
+    "ko": "",
+    "highlight": "mökille"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Kirja on pöydässä.",
+    "right": "Kirja on pöydällä.",
+    "note": "A book rests on top of a table surface (-lla), not trapped inside the table structure (-ssa)."
+   },
+   {
+    "wrong": "Olen töissä asemalla ja asun Tampereella.",
+    "right": "Olen töissä asemalla ja asun Tampereella.",
+    "note": "City names vary: Helsinki uses Helsingissä (-ssä), but Tampere traditionally uses Tampereella (-lla)."
+   },
+   {
+    "wrong": "Menen asemassa tapaamaan ystävää.",
+    "right": "Menen asemalle tapaamaan ystävää.",
+    "note": "Movement towards an open station venue takes the allative case (-lle)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Maito on ___.' (jääkaappi - inside)",
+    "options": [
+     "jääkaapilla",
+     "jääkaapille",
+     "jääkaapissa",
+     "jääkaapista"
+    ],
+    "answer": 2,
+    "explanation": "Milk is inside the refrigerator, requiring the inessive case (-ssa/-ssä with consonant gradation: pp -> p)."
+   },
+   {
+    "question": "Complete the sentence: 'Laitatko lautasen ___?' (pöytä - onto)",
+    "options": [
+     "pöytään",
+     "pöydälle",
+     "pöydällä",
+     "pöydästä"
+    ],
+    "answer": 1,
+    "explanation": "Putting something onto a surface uses the allative case (-lle): pöydälle."
+   },
+   {
+    "question": "Complete the sentence: 'Me tulemme kotiin ___.' (koulu - out from school)",
+    "options": [
+     "koulusta",
+     "koululta",
+     "koulussa",
+     "kouluun"
+    ],
+    "answer": 0,
+    "explanation": "Leaving an enclosed building uses the elative case (-sta): koulusta."
+   },
+   {
+    "question": "Complete the sentence: 'Bussi saapuu kohta ___.' (pysäkki - to the stop)",
+    "options": [
+     "pysäkissä",
+     "pysäkkiin",
+     "pysäkiltä",
+     "pysäkille"
+    ],
+    "answer": 3,
+    "explanation": "An open station or bus stop takes the external allative case (-lle): pysäkille."
+   }
+  ],
+  "tip": "Think of S-cases as a closed box (in, out of, into) and L-cases as a flat tabletop or open field (on, off of, onto)!"
+ },
+ {
+  "id": "fi-a1-partitive-case-basics",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🍰",
+  "title": "The Partitive Case (Partitiivi) in Basic Contexts",
+  "subtitle": "Expressing indefinite amounts, negatives, and quantities",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The partitive case (-a/-ä, -ta/-tä, -tta/-ttä) is used for indefinite quantities, after numbers greater than one, and for objects in negative sentences.",
+  "structure": {
+   "headers": [
+    "Context",
+    "Rule",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "After numbers (>1)",
+      "Singular partitive noun",
+      "kaksi omenaa (two apples)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negative sentence",
+      "Object takes partitive",
+      "En osta leipää (I don't buy bread)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Uncountable mass",
+      "Food, substance, drink",
+      "Juon teetä (I drink tea)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ongoing activity",
+      "Unfinished action",
+      "Luen lehteä (I am reading a paper)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "After Cardinal Numbers",
+    "example": "Torilla on viisi kojua.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Negative Sentences",
+    "example": "Minulla ei ole autoa.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Uncountable Food/Drink",
+    "example": "Juotko sinä maitoa aamulla?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Pöydällä on kolme kuppia.",
+    "ko": "",
+    "highlight": "kuppia"
+   },
+   {
+    "en": "Me emme syö lihaa.",
+    "ko": "",
+    "highlight": "lihaa"
+   },
+   {
+    "en": "Minä rakastan sinua.",
+    "ko": "",
+    "highlight": "sinua"
+   },
+   {
+    "en": "Otatko vähän sokeria?",
+    "ko": "",
+    "highlight": "sokeria"
+   },
+   {
+    "en": "Hänellä ei ole rahaa.",
+    "ko": "",
+    "highlight": "rahaa"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Minulla on kaksi kissa.",
+    "right": "Minulla on kaksi kissaa.",
+    "note": "Numbers higher than one require the noun in the singular partitive case (-a/-ä)."
+   },
+   {
+    "wrong": "En osta auto.",
+    "right": "En osta autoa.",
+    "note": "Direct objects of negative sentences must always take the partitive case."
+   },
+   {
+    "wrong": "Minä juon vesi.",
+    "right": "Minä juon vettä.",
+    "note": "Uncountable substances like water require the partitive case (vesi -> vettä)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the negative sentence: 'Minä en tunne tuota ___.' (mies)",
+    "options": [
+     "mies",
+     "miestä",
+     "miehen",
+     "miehellä"
+    ],
+    "answer": 1,
+    "explanation": "In negative sentences, the direct object takes the partitive case: miestä."
+   },
+   {
+    "question": "Complete with the correct number construction: 'Pihalla seisoo neljä ___.' (poika)",
+    "options": [
+     "pojat",
+     "poikaa",
+     "pojan",
+     "pojassa"
+    ],
+    "answer": 1,
+    "explanation": "Numbers greater than one require the following noun in the singular partitive: poikaa."
+   },
+   {
+    "question": "Complete with the correct partitive form: 'Haluatko lisää ___?' (kahvi)",
+    "options": [
+     "kahvin",
+     "kahville",
+     "kahvia",
+     "kahvissa"
+    ],
+    "answer": 2,
+    "explanation": "Uncountable drinks and foods take the partitive ending -a/-ä: kahvia."
+   },
+   {
+    "question": "Complete the negative sentence: 'Meillä ei ole ___.' (talo)",
+    "options": [
+     "taloa",
+     "talon",
+     "talossa",
+     "talotta"
+    ],
+    "answer": 0,
+    "explanation": "Negative existential sentences require the subject to appear in the partitive: taloa."
+   }
+  ],
+  "tip": "Always remember the golden rule: if a sentence has 'ei' (negative verb), its object almost always transforms into the partitive case!"
+ },
+ {
+  "id": "fi-a1-possessive-structure",
+  "level": "a1",
+  "category": "clauses",
+  "categoryColor": "#4A90E2",
+  "emoji": "👜",
+  "title": "Possession Structure ('Minulla on')",
+  "subtitle": "Expressing ownership with the adessive case and 'olla'",
+  "color": "#3B82F6",
+  "bg": "#EFF6FF",
+  "keyPoint": "Finnish has no verb 'to have'; instead, it uses the owner in the adessive case (-lla/-llä) followed by the 3rd person singular verb 'on' or 'ei ole'.",
+  "structure": {
+   "headers": [
+    "Person / Form",
+    "Affirmative",
+    "Negative"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st person singular (I)",
+      "Minulla on koira.",
+      "Minulla ei ole koiraa."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd person singular (You)",
+      "Sinulla on auto.",
+      "Sinulla ei ole autoa."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd person singular (He/She)",
+      "Hänellä on kirja.",
+      "Hänellä ei ole kirjaa."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Noun possessor (e.g. Pekka)",
+      "Pekalla on aikaa.",
+      "Pekalla ei ole aikaa."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Concrete Possession",
+    "example": "Minulla on uusi polkupyörä.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Abstract Concepts",
+    "example": "Onko sinulla nälkä vai jano?",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Negative Possession",
+    "example": "Meillä ei ole paljon aikaa tänään.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Minulla on kaksi kissaa kotona.",
+    "ko": "",
+    "highlight": "Minulla on"
+   },
+   {
+    "en": "Onko sinulla jo avain?",
+    "ko": "",
+    "highlight": "sinulla"
+   },
+   {
+    "en": "Hänellä ei ole omaa huonetta.",
+    "ko": "",
+    "highlight": "Hänellä ei ole"
+   },
+   {
+    "en": "Meillä on huomenna suuri juhla.",
+    "ko": "",
+    "highlight": "Meillä on"
+   },
+   {
+    "en": "Liisalla on uusi punainen takki.",
+    "ko": "",
+    "highlight": "Liisalla on"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Minä haaveen auto.",
+    "right": "Minulla on auto.",
+    "note": "Finnish does not have an active transitive verb for 'to have'; you must use the adessive ending -lla/-llä + on."
+   },
+   {
+    "wrong": "Heillä ovat kaksi lasta.",
+    "right": "Heillä on kaksi lasta.",
+    "note": "The verb olla remains strictly in the 3rd person singular 'on', even when the possessed items are plural."
+   },
+   {
+    "wrong": "Minulla ei ole auto.",
+    "right": "Minulla ei ole autoa.",
+    "note": "In negative possession clauses, the item that is not possessed must be placed in the partitive case."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I have a cat.",
+    "options": [
+     "Minä on kissa.",
+     "Minulla on kissa.",
+     "Minulla ovat kissa.",
+     "Minusta on kissa."
+    ],
+    "answer": 1,
+    "explanation": "The owner takes the adessive case suffix -lla ('Minulla') and the verb is always 3rd person singular 'on'."
+   },
+   {
+    "question": "Do you (singular) have a car?",
+    "options": [
+     "Onko sinulla auto?",
+     "Onko sinulla autoa?",
+     "Sinulla onko auto?",
+     "Oletko sinulla auto?"
+    ],
+    "answer": 0,
+    "explanation": "In an affirmative question asking about a whole count noun, the noun is nominative and the question verb 'onko' comes first."
+   },
+   {
+    "question": "He does not have time.",
+    "options": [
+     "Hänellä on aika.",
+     "Hän ei on aikaa.",
+     "Hänellä ei ole aikaa.",
+     "Hänellä ei olla aikaa."
+    ],
+    "answer": 2,
+    "explanation": "Negative possession uses the adessive owner + 'ei ole' + the possessed noun in the partitive case ('aikaa')."
+   },
+   {
+    "question": "We have three dogs.",
+    "options": [
+     "Meillä ovat kolme koiraa.",
+     "Meillä on kolme koira.",
+     "Me olemme kolme koiraa.",
+     "Meillä on kolme koiraa."
+    ],
+    "answer": 3,
+    "explanation": "Even with multiple items, the verb stays singular 'on', and numbers above one require a partitive singular noun ('kolme koiraa')."
+   }
+  ],
+  "tip": "Always remember: the verb in this structure is fixed as 'on' (or 'ei ole') in the present tense, never change it to 'ovat'!"
+ },
+ {
+  "id": "fi-a2-partitive-vs-accusative-objects",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🎯",
+  "title": "Total vs. Partial Objects (Accusative vs. Partitive)",
+  "subtitle": "Choosing between complete and ongoing actions or quantities",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use the partitive case for ongoing processes, indefinite amounts, and negative sentences; use the accusative (-n or nominative shape) for completed actions affecting a whole object.",
+  "structure": {
+   "headers": [
+    "Object Type",
+    "Case / Form",
+    "Finnish Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Negative Object",
+      "Partitive",
+      "En ostanut kirjaa.",
+      "Didn't buy the book (always partitive)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Partial / Ongoing",
+      "Partitive",
+      "Luen kirjaa.",
+      "I am reading the book (in progress)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Total / Completed (Sg)",
+      "Genitive-Accusative (-n)",
+      "Luin kirjan.",
+      "I read the whole book (completed)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Total Imperative / Passive",
+      "Nominative-Accusative",
+      "Osta kirja!",
+      "Buy the book! (Imperative total object)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Completed Action",
+    "example": "Hän joi kahvin nopeasti loppuun.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Process in Progress",
+    "example": "Mies juo kahvia keittiössä.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Negative Clause",
+    "example": "En nähnyt sitä elokuvaa eilen.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Söin omenan ennen koulua.",
+    "ko": "",
+    "highlight": "omenan"
+   },
+   {
+    "en": "Syön omenaa parhaillaan.",
+    "ko": "",
+    "highlight": "omenaa"
+   },
+   {
+    "en": "En osta tätä takkia.",
+    "ko": "",
+    "highlight": "takkia"
+   },
+   {
+    "en": "Sulje ovi heti!",
+    "ko": "",
+    "highlight": "ovi"
+   },
+   {
+    "en": "Remontoimme talon ensi kesänä.",
+    "ko": "",
+    "highlight": "talon"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "En lukenut kirjan.",
+    "right": "En lukenut kirjaa.",
+    "note": "Any direct object in a negative sentence MUST be in the partitive case without exception."
+   },
+   {
+    "wrong": "Luen kirjan nyt.",
+    "right": "Luen kirjaa nyt.",
+    "note": "If an action is currently incomplete or ongoing ('right now'), use the partitive case, not the genitive-accusative."
+   },
+   {
+    "wrong": "Avaa ikkunan!",
+    "right": "Avaa ikkuna!",
+    "note": "In 1st and 2nd person imperatives, total objects drop the -n suffix and take the nominative form."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I am drinking milk right now (ongoing process).",
+    "options": [
+     "Juon maito.",
+     "Juon maitoa.",
+     "Juon maidon.",
+     "Juon maidossa."
+    ],
+    "answer": 1,
+    "explanation": "An ongoing process or continuous consumption of an indefinite mass noun requires the partitive case ('maitoa')."
+   },
+   {
+    "question": "I drank (all of) the milk.",
+    "options": [
+     "Juon maito.",
+     "Join maidon.",
+     "Join maitoa.",
+     "Join maito."
+    ],
+    "answer": 1,
+    "explanation": "The past completed action affecting a specified full quantity takes the genitive-accusative ending -n ('maidon')."
+   },
+   {
+    "question": "I did not buy the computer.",
+    "options": [
+     "En ostanut tietokone.",
+     "En ostanut tietokoneen.",
+     "En ostanut tietokonetta.",
+     "En ostanut tietokoneella."
+    ],
+    "answer": 2,
+    "explanation": "The object of any negated verb is always in the partitive case ('tietokonetta')."
+   },
+   {
+    "question": "Read this text! (Imperative singular)",
+    "options": [
+     "Lue tämä teksti!",
+     "Lue tämän tekstin!",
+     "Lue tätä tekstiä!",
+     "Lue tämän teksti!"
+    ],
+    "answer": 0,
+    "explanation": "Total objects with imperative forms do not take the -n suffix; they take the nominative form ('tämä teksti')."
+   }
+  ],
+  "tip": "Think of the -n object as a completed target. If the action isn't finished yet or is negated, stick with the partitive!"
+ },
+ {
+  "id": "fi-a2-past-tense-imperfekti",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#F59E0B",
+  "emoji": "🕰️",
+  "title": "Past Tense (Imperfekti) and Stem Changes",
+  "subtitle": "Forming the simple past tense across verb types",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "The Finnish simple past (imperfekti) inserts an -i- between the vocalic stem and personal endings, triggering stem vowel mutations such as a/ä dropping or turning into e/o.",
+  "structure": {
+   "headers": [
+    "Stem Ending",
+    "Rule with -i-",
+    "Present Base",
+    "Past Form (1st Sg)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-o-, -u-, -y-, -ö-",
+      "Stem vowel stays + i",
+      "sano-",
+      "sanoin"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-e-, -i-, -ä-",
+      "Vowel drops before i",
+      "teke- / etsi-",
+      "tein / etsin"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-a- (in 2-syllable word with a/e/i)",
+      "a drops before i",
+      "otta- / anta-",
+      "otin / annoin"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Long vowel / Diphthong",
+      "First vowel drops",
+      "saa- / syö-",
+      "sain / söin"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Completed Event",
+    "example": "Eilen heräsin kello seitsemän aamulla.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Narrative Sequence",
+    "example": "Kävelin kotiin ja tein heti ruokaa.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Negative Past",
+    "example": "Emme nähneet häntä kokouksessa eilen.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ostin uuden puhelimen eilen kaupasta.",
+    "ko": "",
+    "highlight": "Ostin"
+   },
+   {
+    "en": "Söitkö jo lounasta ravintolassa?",
+    "ko": "",
+    "highlight": "Söitkö"
+   },
+   {
+    "en": "Hän nukkui koko viikonlopun rauhassa.",
+    "ko": "",
+    "highlight": "nukkui"
+   },
+   {
+    "en": "Matkustimme junalla suoraan Tampereelle.",
+    "ko": "",
+    "highlight": "Matkustimme"
+   },
+   {
+    "en": "He eivät tulleet ajoissa kurssille.",
+    "ko": "",
+    "highlight": "eivät tulleet"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Minä nukuin eilen paljon.",
+    "right": "Minä nukuin eilen paljon.",
+    "note": "Check consonant gradation: in 1st person 'nukkua' has a weak stem 'nuku-', yielding 'nukuin'."
+   },
+   {
+    "wrong": "Hän osta-i uuden takin.",
+    "right": "Hän osti uuden takin.",
+    "note": "Two-syllable stems ending in -a with a first syllable 'o' drop the 'a' before 'i': osta- + i -> osti."
+   },
+   {
+    "wrong": "En katsoin televisiota eilen.",
+    "right": "En katsonut televisiota eilen.",
+    "note": "The negative past uses the auxiliary verb (en, et, ei...) + the -nut/-nyt participle, not the imperfekti form."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday we worked all day (tehdä -> teke-).",
+    "options": [
+     "Teimme töitä koko päivän.",
+     "Teimmekö töitä koko päivän.",
+     "Tein töitä koko päivän.",
+     "Teette töitä koko päivän."
+    ],
+    "answer": 0,
+    "explanation": "The past tense of tehdä for 'me' is 'teimme' (stem teke- drops the -e- before past marker -i-)."
+   },
+   {
+    "question": "Where did you (singular) go? (mennä -> mene-)",
+    "options": [
+     "Mihin menet?",
+     "Mihin menin?",
+     "Mihin menit?",
+     "Mihin menemme?"
+    ],
+    "answer": 2,
+    "explanation": "The 2nd person singular past tense marker is -i- + -t, yielding 'menit'."
+   },
+   {
+    "question": "He gave me the keys (antaa -> anta-).",
+    "options": [
+     "Hän antaoi avaimet.",
+     "Hän antaa avaimet.",
+     "Hän antoi avaimet.",
+     "Hän antui avaimet."
+    ],
+    "answer": 2,
+    "explanation": "In 2-syllable stems where the first syllable contains 'a', the stem vowel 'a' turns into 'o' before 'i': antoi."
+   },
+   {
+    "question": "They did not sleep well last night.",
+    "options": [
+     "He eivät nukkuivat hyvin.",
+     "He eivät nukkuneet hyvin.",
+     "He ei nukkunut hyvin.",
+     "He eivät nukkua hyvin."
+    ],
+    "answer": 1,
+    "explanation": "Negative past with plural 'he' requires 'eivät' followed by the plural past participle 'nukkuneet'."
+   }
+  ],
+  "tip": "In the negative past, remember you never use the -i- past form! Instead, use 'en/et/ei...' plus the -nut/-nyt participle."
+ },
+ {
+  "id": "fi-a2-rections-verb-noun-government",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔗",
+  "title": "Verb Rections (Rektio)",
+  "subtitle": "Governing correct case endings on dependent nouns",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Finnish verbs require their dependent nouns or objects to appear in specific cases (rections), which must be memorized alongside each verb.",
+  "structure": {
+   "headers": [
+    "Verb",
+    "Required Case",
+    "Question Word",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "pitää / tykätä",
+      "Elative (-sta/-stä)",
+      "Mistä?",
+      "Pidän tästä kirjasta."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "tutustua",
+      "Illative (-an/-en/-iin...)",
+      "Mihin?",
+      "Tutustuin uuteen naapuriin."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "auttaa",
+      "Partitive (-a/-ä/-ta...)",
+      "Ketä / Mitä?",
+      "Voitko auttaa minua?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "rakastua",
+      "Illative (-an/-en/-iin...)",
+      "Mihin / Keneen?",
+      "Hän rakastui Suomeen."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Liking and Disliking",
+    "example": "Pidän kovasti suomalaisesta saunasta.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Meeting and Becoming Familiar",
+    "example": "Haluan tutustua Helsingin kaupunkiin.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Helping and Supporting",
+    "example": "Sisar auttaa pientä veljeään aina.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Pidän modernista arkkitehtuurista.",
+    "ko": "",
+    "highlight": "modernista arkkitehtuurista"
+   },
+   {
+    "en": "Tutustuin eilen mukavaan ihmiseen.",
+    "ko": "",
+    "highlight": "mukavaan ihmiseen"
+   },
+   {
+    "en": "Voitko auttaa minua tämän kanssa?",
+    "ko": "",
+    "highlight": "minua"
+   },
+   {
+    "en": "Rakastuin heti tähän kauniiseen maahan.",
+    "ko": "",
+    "highlight": "tähän kauniiseen maahan"
+   },
+   {
+    "en": "Odotan bussia pysäkillä joka aamu.",
+    "ko": "",
+    "highlight": "bussia"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Minä pidän sinut.",
+    "right": "Minä pidän sinusta.",
+    "note": "The verb 'pitää' (to like) requires the elative case (-sta/-stä), not an accusative object."
+   },
+   {
+    "wrong": "Tutustuin uusi ystävä.",
+    "right": "Tutustuin uuteen ystävään.",
+    "note": "'Tutustua' (to get to know) requires its target to be in the illative case (mihin/keneen)."
+   },
+   {
+    "wrong": "Voitko auttaa minun?",
+    "right": "Voitko auttaa minua?",
+    "note": "'Auttaa' (to help) always demands its object to be in the partitive case."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I like Finnish food. (suomalainen ruoka)",
+    "options": [
+     "Pidän suomalainen ruoka.",
+     "Pidän suomalaisesta ruoasta.",
+     "Pidän suomalaiseen ruokaan.",
+     "Pidän suomalaista ruokaa."
+    ],
+    "answer": 1,
+    "explanation": "'Pitää' governs the elative case (-sta/-stä): 'suomalaisesta ruoasta'."
+   },
+   {
+    "question": "She fell in love with Pekka. (rakastua)",
+    "options": [
+     "Hän rakastui Pekkaan.",
+     "Hän rakastui Pekasta.",
+     "Hän rakastui Pekkaa.",
+     "Hän rakastui Pekan."
+    ],
+    "answer": 0,
+    "explanation": "'Rakastua' (to fall in love) takes the illative case (mihin/keneen): 'Pekkaan'."
+   },
+   {
+    "question": "Could you help us? (auttaa + me)",
+    "options": [
+     "Voitko auttaa meiltä?",
+     "Voitko auttaa meihin?",
+     "Voitko auttaa meitä?",
+     "Voitko auttaa meidät?"
+    ],
+    "answer": 2,
+    "explanation": "'Auttaa' demands the partitive case: 'meitä'."
+   },
+   {
+    "question": "We are getting to know our new neighbours. (tutustua + uudet naapurit)",
+    "options": [
+     "Tutustumme uusia naapureita.",
+     "Tutustumme uusiin naapureihin.",
+     "Tutustumme uusista naapureista.",
+     "Tutustumme uudet naapurit."
+    ],
+    "answer": 1,
+    "explanation": "'Tutustua' requires the illative plural: 'uusiin naapureihin'."
+   }
+  ],
+  "tip": "Whenever you write down a new Finnish verb, always note down its question word (e.g. 'pitää + mistä?') right beside it."
+ },
+ {
+  "id": "fi-a2-necessive-structures",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#EC4899",
+  "emoji": "⚠️",
+  "title": "Necessive Clauses ('Täytyy', 'Pitää')",
+  "subtitle": "Expressing obligation with genitive subjects and fixed verbs",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "In necessive clauses expressing 'must' or 'have to', the person who must act is in the genitive case (-n), and the modal verb (täytyy, pitää) is fixed in the 3rd person singular.",
+  "structure": {
+   "headers": [
+    "Subject (Genitive)",
+    "Modal Verb",
+    "Main Verb (Infinitive)",
+    "Object Case"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Minun (I)",
+      "täytyy / pitää",
+      "ostaa",
+      "uusi lippu (Nominative-Acc)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Sinun (You)",
+      "täytyy / pitää",
+      "mennä",
+      "kotiin"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Meidän (We)",
+      "ei tarvitse",
+      "siivota",
+      "tänään"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Opiskelijan (Student)",
+      "on pakko",
+      "lukea",
+      "tämä kirja (Nominative-Acc)"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DB2777",
+    "label": "Direct Necessity",
+    "example": "Minun täytyy herätä huomenna aikaisin.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "No Obligation (Negative)",
+    "example": "Sinun ei tarvitse maksaa tästä mitään.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Strong Compulsion",
+    "example": "Meidän on pakko lähteä heti asemalle.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Minun täytyy opiskella enemmän suomea.",
+    "ko": "",
+    "highlight": "Minun täytyy"
+   },
+   {
+    "en": "Sinun pitää palauttaa kirja huomenna.",
+    "ko": "",
+    "highlight": "Sinun pitää"
+   },
+   {
+    "en": "Hänen ei tarvitse tulla kokoukseen.",
+    "ko": "",
+    "highlight": "Hänen ei tarvitse"
+   },
+   {
+    "en": "Meidän täytyy ostaa uusi pesukone.",
+    "ko": "",
+    "highlight": "Meidän täytyy"
+   },
+   {
+    "en": "Kaikkien on pakko odottaa vuoroaan.",
+    "ko": "",
+    "highlight": "Kaikkien on pakko"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Minä täytyy mennä.",
+    "right": "Minun täytyy mennä.",
+    "note": "The agent in a necessive construction must be in the genitive case ('minun'), never nominative ('minä')."
+   },
+   {
+    "wrong": "Meidän täytyvät lähteä.",
+    "right": "Meidän täytyy lähteä.",
+    "note": "The modal verb 'täytyy' is strictly impersonal and stays 3rd person singular, even with plural agents."
+   },
+   {
+    "wrong": "Sinun täytyy ostaa auton.",
+    "right": "Sinun täytyy ostaa auto.",
+    "note": "A total object inside a necessive clause takes the nominative-accusative shape, not the genitive -n."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "You (singular) must do this task.",
+    "options": [
+     "Sinä täytyy tehdä tämä tehtävä.",
+     "Sinun täytyy tehdä tämän tehtävän.",
+     "Sinun täytyy tehdä tämä tehtävä.",
+     "Sinun täydyt tehdä tämä tehtävä."
+    ],
+    "answer": 2,
+    "explanation": "The subject is genitive ('Sinun'), the verb is fixed ('täytyy'), and total singular objects take the nominative form ('tämä tehtävä') in necessive clauses."
+   },
+   {
+    "question": "We have to leave now.",
+    "options": [
+     "Meidän pitää lähteä nyt.",
+     "Me pitää lähteä nyt.",
+     "Meidän pitävät lähteä nyt.",
+     "Meille pitää lähteä nyt."
+    ],
+    "answer": 0,
+    "explanation": "'Meidän' is the genitive plural of 'me', followed by the fixed 3rd person singular verb 'pitää'."
+   },
+   {
+    "question": "You do not need to hurry. (ei tarvitse)",
+    "options": [
+     "Sinun et tarvitse kiirehtiä.",
+     "Sinä ei tarvitse kiirehtiä.",
+     "Sinun ei tarvitse kiirehtiä.",
+     "Sinulla ei tarvitse kiirehtiä."
+    ],
+    "answer": 2,
+    "explanation": "In negative necessity clauses, the subject remains genitive ('Sinun') and the negative form is 'ei tarvitse'."
+   },
+   {
+    "question": "The children must go to bed.",
+    "options": [
+     "Lapset täytyy mennä nukkumaan.",
+     "Lasten täytyvät mennä nukkumaan.",
+     "Lapsille täytyy mennä nukkumaan.",
+     "Lasten täytyy mennä nukkumaan."
+    ],
+    "answer": 3,
+    "explanation": "The noun 'lapset' must take the genitive plural form 'lasten', paired with the invariant singular 'täytyy'."
+   }
+  ],
+  "tip": "Remember the double anomaly: the subject gets a genitive -n, while the total object loses its genitive -n!"
+ },
+ {
+  "id": "fi-a2-passive-impersonal-present",
+  "level": "a2",
+  "category": "passive",
+  "categoryColor": "#4F46E5",
+  "emoji": "👥",
+  "title": "Passive Voice in the Present Tense",
+  "subtitle": "Impersonal actions and everyday spoken 'we'",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "The Finnish present passive omits the specific agent and is universally used in spoken Finnish to replace the first-person plural 'me' form.",
+  "structure": {
+   "headers": [
+    "Verb Type",
+    "Formation Rule",
+    "Example Passive",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Type 1 (puhua)",
+      "Weak stem + -taan / -tään",
+      "puhutaan",
+      "one speaks / is spoken"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Type 2 & 3 (syödä, mennä)",
+      "Infinitive stem + -daan / -dään / -nään",
+      "syödään, mennään",
+      "one eats / let's eat, one goes"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Type 4 & 5 (tavata, tarvita)",
+      "Infinitive stem + -taan / -tään",
+      "tavataan, tarvitaan",
+      "one meets / let's meet, one needs"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Spoken 'We'",
+      "Me + passive verb form",
+      "me mennään",
+      "we go / we are going"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Unknown or General Agent",
+    "example": "Suomessa juodaan paljon kahvia.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Spoken First-Person Plural",
+    "example": "Me mennään huomenna torille.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Proposals and Suggestions",
+    "example": "Mennäänkö leffaan tänään?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Täällä puhutaan vain suomea.",
+    "ko": "",
+    "highlight": "puhutaan"
+   },
+   {
+    "en": "Tänään syödään lohikeittoa lounaaksi.",
+    "ko": "",
+    "highlight": "syödään"
+   },
+   {
+    "en": "Me asutaan nyt uudessa asunnossa.",
+    "ko": "",
+    "highlight": "asutaan"
+   },
+   {
+    "en": "Kaupassa myydään tuoretta leipää joka aamu.",
+    "ko": "",
+    "highlight": "myydään"
+   },
+   {
+    "en": "Tavataanko kirjaston edessä kello viisi?",
+    "ko": "",
+    "highlight": "Tavataanko"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Me menemme torille huomenna.",
+    "right": "Me mennään torille huomenna.",
+    "note": "While 'me menemme' is grammatically correct in formal Finnish, standard colloquial Finnish almost exclusively uses the passive 'me mennään'."
+   },
+   {
+    "wrong": "Suomessa puhutaan suomi.",
+    "right": "Suomessa puhutaan suomea.",
+    "note": "The object of an ongoing impersonal passive action takes the partitive case (suomea), not the nominative."
+   },
+   {
+    "wrong": "Täällä ei syödään jäätelöä.",
+    "right": "Täällä ei syödä jäätelöä.",
+    "note": "In the negative present passive, drop the final '-an/-än' ending after the negative auxiliary 'ei'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'We are drinking coffee' in standard spoken Finnish? 'Me ___ kahvia.'",
+    "options": [
+     "juodaan",
+     "juomme",
+     "juovat",
+     "juo"
+    ],
+    "answer": 0,
+    "explanation": "'Me juodaan' uses the passive present form, which functions as colloquial 'we'."
+   },
+   {
+    "question": "What is the passive present form of 'tehdä' (to do/make)? 'Täällä ___ työtä.'",
+    "options": [
+     "tehdään",
+     "tehtään",
+     "tekään",
+     "tehdä"
+    ],
+    "answer": 0,
+    "explanation": "Verb type 2 forms its passive directly from the infinitive stem: teh- + -dään = tehdään."
+   },
+   {
+    "question": "Which form completes the negative passive: 'Siellä ei ___ englantia.'",
+    "options": [
+     "puhutaan",
+     "puhuta",
+     "puhu",
+     "puhuttu"
+    ],
+    "answer": 1,
+    "explanation": "Negative passive present drops the final vowel length and 'n': 'ei puhuta'."
+   },
+   {
+    "question": "Convert the suggestion to Finnish: 'Shall we go to sauna?' '___ saunaan?'",
+    "options": [
+     "Menkää",
+     "Menemmekö",
+     "Mennäänkö",
+     "Meneekö"
+    ],
+    "answer": 2,
+    "explanation": "Adding the question clitic -ko/-kö to the passive form 'mennään' creates a suggestion: 'Mennäänkö?'"
+   }
+  ],
+  "tip": "Whenever you speak Finnish informally, replace the standard 'me + -mme' ending with 'me + passive'—it instantly makes your speech sound natural!"
+ },
+ {
+  "id": "fi-a2-possessive-suffixes",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🏷️",
+  "title": "Possessive Suffixes (Omistusliitteet)",
+  "subtitle": "Marking ownership on nouns and case endings",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Possessive suffixes attach to the very end of noun stems and case markers, causing final genitive 'n' or plural 't' consonants to disappear.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Suffix",
+    "Example (Nom.)",
+    "Example with Case"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Sing. (minun)",
+      "-ni",
+      "kirjani (my book)",
+      "kirjassani (in my book)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd Sing. (sinun)",
+      "-si",
+      "kirjasi (your book)",
+      "kirjallasi (on your book)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Sg./Pl. (hänen/heidän)",
+      "-nsa / -nsä (or -Vn)",
+      "kirjansa (his/their book)",
+      "kirjoissaan (in his/their books)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "1st Pl. (meidän)",
+      "-mme",
+      "automme (our car)",
+      "autossamme (in our car)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd Pl. (teidän)",
+      "-nne",
+      "autonne (your [pl.] car)",
+      "autoonne (into your car)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Expressing Personal Possession",
+    "example": "Tämä on minun uusi puhelimeni.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Combining with Local Cases",
+    "example": "Asun perheeni kanssa omakotitalossa.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Reflexive Third-Person Ownership",
+    "example": "Matti etsii aina avaimiaan.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Missä sinun passisi on?",
+    "ko": "",
+    "highlight": "passisi"
+   },
+   {
+    "en": "Unohdin takkini eilen bussiin.",
+    "ko": "",
+    "highlight": "takkini"
+   },
+   {
+    "en": "Hän asuu ystävänsä luona Helsingissä.",
+    "ko": "",
+    "highlight": "ystävänsä"
+   },
+   {
+    "en": "Viihdymme erittäin hyvin uudessa koulussamme.",
+    "ko": "",
+    "highlight": "koulussamme"
+   },
+   {
+    "en": "Lapsi pesee kätensä ennen ruokailua.",
+    "ko": "",
+    "highlight": "kätensä"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Tämä on minun kirjan.",
+    "right": "Tämä on minun kirjani.",
+    "note": "In standard written Finnish, when you use the possessive pronoun 'minun', the noun must take the possessive suffix '-ni'."
+   },
+   {
+    "wrong": "Hän rakastaa hänen koira.",
+    "right": "Hän rakastaa koiraansa.",
+    "note": "When the subject owns the object, the third-person suffix '-nsa/-nsä' must be used on the noun, and the pronoun 'hänen' is omitted."
+   },
+   {
+    "wrong": "autossani -> autoni-ssa",
+    "right": "autossani",
+    "note": "Case suffixes always precede possessive suffixes: stem + case + possessive suffix (auto + -ssa + -ni)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct standard form for 'my apartment': 'Tämä on minun ___.'",
+    "options": [
+     "asuntoni",
+     "asunton",
+     "asuntosi",
+     "asuntomme"
+    ],
+    "answer": 0,
+    "explanation": "The first-person singular possessive suffix is '-ni', attaching to the vowel stem 'asunto-'."
+   },
+   {
+    "question": "Which sentence correctly places the suffix on 'in your car'?",
+    "options": [
+     "autosisssa",
+     "autossasi",
+     "autossanne",
+     "autosi"
+    ],
+    "answer": 1,
+    "explanation": "The inessive case '-ssa' comes first, followed by the second-person singular suffix '-si': 'autossasi'."
+   },
+   {
+    "question": "How do you say 'Anna meets her (own) friend'? 'Anna tapaa ___.'",
+    "options": [
+     "hänen ystävä",
+     "ystävää",
+     "ystävänsä",
+     "ystäväni"
+    ],
+    "answer": 2,
+    "explanation": "Reflexive third-person possession requires '-nsa/-nsä' on the object noun, without needing 'hänen'."
+   },
+   {
+    "question": "Choose the correct form for 'our summer cottage': 'Tämä on meidän ___.'",
+    "options": [
+     "mökkisi",
+     "mökkini",
+     "mökkinne",
+     "mökkimme"
+    ],
+    "answer": 3,
+    "explanation": "The first-person plural possessive suffix corresponding to 'meidän' is '-mme'."
+   }
+  ],
+  "tip": "Remember the order of suffixes with the formula: STEM + PLURAL (i) + CASE + POSSESSIVE. The possessive suffix is always the final caboose on the train!"
+ },
+ {
+  "id": "fi-b1-infinitive-ma-forms",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🔄",
+  "title": "The Third Infinitive (MA-Infinitive)",
+  "subtitle": "Navigating actions with -maan, -massa, and -masta",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "The MA-infinitive uses internal local case endings to describe moving toward an action (-maan), being engaged in it (-massa), or returning from it (-masta).",
+  "structure": {
+   "headers": [
+    "Case Ending",
+    "Core Meaning",
+    "Typical Trigger Verb",
+    "Example Sentence"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Illative: -maan / -mään",
+      "Going to do (movement towards)",
+      "mennä, lähteä, oppia",
+      "Menen syömään. (I go to eat.)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Inessive: -massa / -mässä",
+      "Currently doing (in the act)",
+      "olla, istua, seistä",
+      "Olen syömässä. (I am eating.)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Elative: -masta / -mästä",
+      "Coming from doing (movement out)",
+      "tulla, palata, lakata",
+      "Tulen syömästä. (I come from eating.)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Abessive: -matta / -mättä",
+      "Without doing",
+      "olla, jäädä",
+      "Olin syömättä. (I went without eating.)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Entering an Activity (-maan)",
+    "example": "Lapset juoksivat ulos leikkimään.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Ongoing State (-massa)",
+    "example": "Äiti on keittiössä laittamassa ruokaa.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Departing an Activity (-masta)",
+    "example": "Palaamme juuri uimasta kotiin.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Menen huomenna salille treenaamaan.",
+    "ko": "",
+    "highlight": "treenaamaan"
+   },
+   {
+    "en": "Isä on autotallissa korjaamassa pyörää.",
+    "ko": "",
+    "highlight": "korjaamassa"
+   },
+   {
+    "en": "Tuletko jo kotiin opiskelemasta?",
+    "ko": "",
+    "highlight": "opiskelemasta"
+   },
+   {
+    "en": "Hän oppi nopeasti puhumaan suomea.",
+    "ko": "",
+    "highlight": "puhumaan"
+   },
+   {
+    "en": "En voi lähteä töistä syömättä lounasta.",
+    "ko": "",
+    "highlight": "syömättä"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Menen uida huomenna.",
+    "right": "Menen uimaan huomenna.",
+    "note": "Movement verbs like 'mennä' require the 3rd infinitive illative (-maan), never the 1st infinitive (basic form)."
+   },
+   {
+    "wrong": "Olen ostamassa kaupassa autooni.",
+    "right": "Olen ostamassa ruokaa.",
+    "note": "Do not confuse the state of doing (-massa) with direction; use -massa specifically with static verbs like 'olla'."
+   },
+   {
+    "wrong": "Hän lakkasi sataa.",
+    "right": "Lakkasi satamasta.",
+    "note": "The verb 'lakata' (to cease/stop) takes the elative MA-infinitive (-masta), meaning literally 'stopping from doing'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct form for 'We are going to sleep': 'Me menemme ___.'",
+    "options": [
+     "nukkumaan",
+     "nukkumassa",
+     "nukkumasta",
+     "nukkua"
+    ],
+    "answer": 0,
+    "explanation": "The movement verb 'mennä' governs the illative 3rd infinitive '-maan'."
+   },
+   {
+    "question": "Complete the sentence: 'Pekka is currently in the library reading': 'Pekka on kirjastossa ___.'",
+    "options": [
+     "lukemaan",
+     "lukemassa",
+     "lukemasta",
+     "lukea"
+    ],
+    "answer": 1,
+    "explanation": "The static auxiliary 'olla' combined with current activity takes inessive '-massa'."
+   },
+   {
+    "question": "Which verb form completes: 'They just returned from swimming': 'He palasivat juuri ___.'",
+    "options": [
+     "uimaan",
+     "uimassa",
+     "uimasta",
+     "uida"
+    ],
+    "answer": 2,
+    "explanation": "Movement out of or returning from an activity requires the elative '-masta'."
+   },
+   {
+    "question": "Complete the phrase 'without speaking': 'Hän istui koko illan ___ mitään.'",
+    "options": [
+     "puhumaan",
+     "puhumassa",
+     "puhumasta",
+     "puhumatta"
+    ],
+    "answer": 3,
+    "explanation": "The abessive form '-matta/-mättä' means 'without doing [action]'."
+   }
+  ],
+  "tip": "Think of the internal cases: -maan = INTO the action, -massa = INSIDE the action, and -masta = OUT OF the action!"
+ },
+ {
+  "id": "fi-b1-participial-attributes",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#7C3AED",
+  "emoji": "🔗",
+  "title": "VA- and NUT-Participles as Adjectives",
+  "subtitle": "Compressing relative clauses into pre-nominal attributes",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Present (-va/-vä) and past (-nut/-nyt) active participles convert verbs into descriptive adjectives that precede nouns and decline in agreement with them.",
+  "structure": {
+   "headers": [
+    "Participle Type",
+    "Marker",
+    "As Relative Clause",
+    "As Pre-Nominal Attribute"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Pres. Active (ongoing)",
+      "-va / -vä",
+      "bussi, joka tulee",
+      "tuleva bussi (the coming bus)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past Active (completed)",
+      "-nut / -nyt",
+      "mies, joka nukkui",
+      "nukkunut mies (the slept/sleeping man)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Pres. Passive (target)",
+      "-tava / -tävä",
+      "kirja, joka luetaan",
+      "luettava kirja (a readable book)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Passive (result)",
+      "-ttu / -tty",
+      "auto, joka korjattiin",
+      "korjattu auto (the repaired car)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6D28D9",
+    "label": "Describing Ongoing Properties",
+    "example": "Juokseva vesi on raikasta.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Describing Completed States",
+    "example": "Pihalla makaa pudonnut lehti.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Passive Modal / Necessity",
+    "example": "Tämä on ehdottomasti tehtävä asia.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Näin kadulla iloisesti nauravan lapsen.",
+    "ko": "",
+    "highlight": "nauravan"
+   },
+   {
+    "en": "Etsin eilen kadonnutta avainta kaikkialta.",
+    "ko": "",
+    "highlight": "kadonnutta"
+   },
+   {
+    "en": "Seuraava juna saapuu laiturille kaksi.",
+    "ko": "",
+    "highlight": "Seuraava"
+   },
+   {
+    "en": "Ostin kaupasta valmiiksi paistettua kalaa.",
+    "ko": "",
+    "highlight": "paistettua"
+   },
+   {
+    "en": "Opettaja korjasi oppilaiden tekemät virheet.",
+    "ko": "",
+    "highlight": "tekemät"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Näin lapsen joka naurava.",
+    "right": "Näin nauravan lapsen.",
+    "note": "Participles function as pre-nominal modifiers. They go directly before the noun, not after relative pronouns."
+   },
+   {
+    "wrong": "kadonnut avaimen (acc)",
+    "right": "kadonneen avaimen",
+    "note": "The past participle '-nut' changes its stem to '-nee-' before adding case endings: kadonnut -> kadonneen."
+   },
+   {
+    "wrong": "laulavat linnut laulavassa metsässä -> laulava linnut",
+    "right": "laulavat linnut",
+    "note": "Like all Finnish adjectives, participial attributes must agree in case and number with the head noun."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you express 'a barking dog' as a pre-nominal modifier? 'Pihalla seisoo ___ koira.'",
+    "options": [
+     "haukkuva",
+     "haukkuvan",
+     "haukkunut",
+     "haukuttava"
+    ],
+    "answer": 0,
+    "explanation": "The present active participle of 'haukkua' is 'haukkuva', agreeing in nominative singular with 'koira'."
+   },
+   {
+    "question": "Select the correct form for 'the departed train' (past active nominative): 'Asemalta lähti jo ___ juna.'",
+    "options": [
+     "lähtevä",
+     "lähtenyt",
+     "lähtevän",
+     "lähtenytä"
+    ],
+    "answer": 1,
+    "explanation": "For an action that has already completed, use the past active participle '-nut/-nyt': 'lähtenyt'."
+   },
+   {
+    "question": "Transform into the genitive: 'of the crying child' -> '___ lapsen'.",
+    "options": [
+     "itkevä",
+     "itkevän",
+     "itkeneen",
+     "itketyn"
+    ],
+    "answer": 1,
+    "explanation": "The participle agrees in case: 'itkevä' becomes 'itkevän' in the genitive case before 'lapsen'."
+   },
+   {
+    "question": "What is the stem change of 'väsynyt' (tired) when adding the inessive ending '-ssä'?",
+    "options": [
+     "väsynytssä",
+     "väsynyttässä",
+     "väsyneessä",
+     "väsynessä"
+    ],
+    "answer": 2,
+    "explanation": "The suffix '-nut/-nyt' changes to the stem '-nee-' before case endings, yielding 'väsyneessä'."
+   }
+  ],
+  "tip": "Using participial attributes instead of 'joka' (who/which) relative clauses is the hallmark of natural B1/B2 level written and formal Finnish!"
+ },
+ {
+  "id": "fi-b1-pl-cases-t-i-stems",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "📚",
+  "title": "Plural Case Stems (Monikon I-Vartalo)",
+  "subtitle": "Forming oblique plural cases with the -i- marker",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "While the nominative plural uses '-t', all other plural cases use the plural marker '-i-' inserted between the vowel stem and the case suffix, triggering specific vowel changes.",
+  "structure": {
+   "headers": [
+    "Stem Ending Vowel",
+    "Vowel Shift Rule",
+    "Singular Inessive",
+    "Plural Inessive"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Short -o, -ö, -u, -y",
+      "Retain vowel + add -i-",
+      "talossa",
+      "taloissa (in houses)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Short -ä, -e",
+      "Vowel drops completely before -i-",
+      "päivässä, lehdessä",
+      "päivissä, lehdissä (in days, in papers)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Short -a (2-syllable, rounded)",
+      "Drop -a or merge to -o-",
+      "koirassa, marjassa",
+      "koirissa, marjoissa (in dogs, in berries)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Double vowels (aa, ee, etc.)",
+      "First vowel drops before -i-",
+      "maassa, puussa",
+      "maissa, puissa (in lands, in trees)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Describing Locations in Plural",
+    "example": "Turistit viihtyvät Suomen vanhoissa kaupungeissa.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Instruments and Means (Adessive)",
+    "example": "Matkustamme usein nopeilla junilla.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Abstract Plural States",
+    "example": "Olemme vaikeissa tilanteissa ennenkin.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kaikissa huoneissa on suuret ikkunat.",
+    "ko": "",
+    "highlight": "huoneissa"
+   },
+   {
+    "en": "Lapset leikkivät syksyllä värikkäissä lehdissä.",
+    "ko": "",
+    "highlight": "lehdissä"
+   },
+   {
+    "en": "Kävelen usein näillä kauniilla kaduilla.",
+    "ko": "",
+    "highlight": "kaduilla"
+   },
+   {
+    "en": "Keskustelimme tärkeistä asioista kokouksessa.",
+    "ko": "",
+    "highlight": "asioista"
+   },
+   {
+    "en": "Linnut istuvat korkeissa puissa laulamassa.",
+    "ko": "",
+    "highlight": "puissa"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "talotssa",
+    "right": "taloissa",
+    "note": "The '-t' plural marker is strictly restricted to the nominative and accusative. All case-bearing plurals use '-i-'."
+   },
+   {
+    "wrong": "päiväissä",
+    "right": "päivissä",
+    "note": "A single short '-ä' or '-e' drops completely when combined with the plural '-i-'."
+   },
+   {
+    "wrong": "maassa -> maaisissa",
+    "right": "maissa",
+    "note": "Long vowels shorten by losing their first component before the plural '-i-': maa + i + ssa -> maissa."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the inessive plural ('in the schools') of 'koulu'?",
+    "options": [
+     "kouluissa",
+     "koulussa",
+     "koulutssa",
+     "kouleissa"
+    ],
+    "answer": 0,
+    "explanation": "The vowel '-u' remains unchanged before '-i-', resulting in 'koulu-' + '-i-' + '-ssa' = 'kouluissa'."
+   },
+   {
+    "question": "Form the plural elative ('from the trees') of 'puu':",
+    "options": [
+     "puusta",
+     "puuista",
+     "puista",
+     "puitsta"
+    ],
+    "answer": 2,
+    "explanation": "The double vowel 'uu' shortens to single 'u' before the plural '-i-': 'puista'."
+   },
+   {
+    "question": "What happens to the short '-e' of 'kirje' in the plural adessive ('with letters')?",
+    "options": [
+     "kirjeillä",
+     "kirjeillästä",
+     "kirjillä",
+     "kirjeissä"
+    ],
+    "answer": 2,
+    "explanation": "The final short '-e' of the stem drops entirely before '-i-': kirje -> kirj- + -i- + -llä = 'kirjillä'."
+   },
+   {
+    "question": "Identify the correct plural form of 'vanha katu' in the inessive case ('in old streets'):",
+    "options": [
+     "vanhoissa kaduissa",
+     "vanhoissa kadoissa",
+     "vanhoilla kaduilla",
+     "vanhissa kaduissa"
+    ],
+    "answer": 0,
+    "explanation": "In 2-syllable stems with 'a' where the first syllable has 'a', the final '-a' shifts to '-o-': vanhoissa; katu has gradation t -> d: kaduissa."
+   }
+  ],
+  "tip": "Whenever you spot an '-i-' squeezed right in front of a case ending like '-ssa', '-lla', or '-sta', you are looking at a plural oblique case!"
+ },
+ {
+  "id": "fi-b1-conditional-mood",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#0284C7",
+  "emoji": "💭",
+  "title": "The Conditional Mood (Konditionaali)",
+  "subtitle": "Forming hypothetical sentences and polite requests using -isi-",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "The conditional mood is formed by inserting the infix -isi- between the strong vowel stem and the personal ending.",
+  "structure": {
+   "headers": [
+    "Infinitive",
+    "Stem + -isi-",
+    "Person",
+    "Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "puhua (to speak)",
+      "puhu- + -isi-",
+      "minä",
+      "puhuisin"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "syödä (to eat)",
+      "sö- + -isi-",
+      "hän",
+      "söisi"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ottaa (to take)",
+      "otta- + -isi-",
+      "me",
+      "ottaisimme"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "olla (to be)",
+      "ol- + -isi-",
+      "he",
+      "olisivat"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Hypothetical Condition",
+    "example": "Jos minulla olisi rahaa, matkustaisin Lappiin.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Polite Request",
+    "example": "Ottaisitko lisää kahvia?",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Wish or Desire",
+    "example": "Haluaisin oppia suomea sujuvasti.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Jos huomenna sataisi, jäisimme kotiin.",
+    "ko": "",
+    "highlight": "sataisi"
+   },
+   {
+    "en": "Voisitko auttaa minua tämän tehtävän kanssa?",
+    "ko": "",
+    "highlight": "Voisitko"
+   },
+   {
+    "en": "Hän ostaisi uuden auton, jos hänellä olisi varaa.",
+    "ko": "",
+    "highlight": "ostaisi"
+   },
+   {
+    "en": "Me emme tekisi sitä ilman sinua.",
+    "ko": "",
+    "highlight": "tekisi"
+   },
+   {
+    "en": "Olisin tullut eilen, jos olisin tiennyt juhlista.",
+    "ko": "",
+    "highlight": "Olisin tullut"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jos minä tietäisin, minä sanon sinulle.",
+    "right": "Jos minä tietäisin, minä sanoisin sinulle.",
+    "note": "Both clauses in a conditional sentence typically require the conditional mood in Finnish, unlike in English where the 'then' clause uses 'would'."
+   },
+   {
+    "wrong": "Ottaisit sinä leipää?",
+    "right": "Ottaisitko leipää?",
+    "note": "Polite requests use the question clitic -ko/-kö directly attached to the conditional verb instead of relying solely on intonation or word order."
+   },
+   {
+    "wrong": "Jos olisin rikas, ostan talon.",
+    "right": "Jos olisin rikas, ostaisin talon.",
+    "note": "Do not switch back to the present indicative in the consequence clause of an unreal hypothetical situation."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Jos minulla ___ aikaa, lukisin enemmän kirjoja.",
+    "options": [
+     "on",
+     "olisi",
+     "ole",
+     "ollessa"
+    ],
+    "answer": 1,
+    "explanation": "The condition clause takes the conditional form 'olisi' with the third-person singular in possessive constructions."
+   },
+   {
+    "question": "___ sinä sulkea ikkunan, kiitos?",
+    "options": [
+     "Voisitko",
+     "Voit",
+     "Voitko",
+     "Voisit"
+    ],
+    "answer": 0,
+    "explanation": "For a polite request, use the conditional form with the question suffix: 'Voisitko' (Could you)."
+   },
+   {
+    "question": "Me ___ mielellämme mukaan konserttiin.",
+    "options": [
+     "tulisimme",
+     "tulimme",
+     "tulemme",
+     "tulla"
+    ],
+    "answer": 0,
+    "explanation": "First-person plural conditional takes the marker -isi- plus the ending -mme: 'tulisimme' (we would come)."
+   },
+   {
+    "question": "Jos he tietäisivät osoitteen, he ___ meille kirjeen.",
+    "options": [
+     "kirjoittaa",
+     "kirjoittavat",
+     "kirjoittivat",
+     "kirjoittaisivat"
+    ],
+    "answer": 3,
+    "explanation": "Third-person plural conditional adds -isi- followed by -vat: 'kirjoittaisivat' (they would write)."
+   }
+  ],
+  "tip": "Long vowels shorten before the infix: aa/ää drops the first vowel (ottaa -> ott- + isi -> ottaisi), while diphthongs ending in -i lose the first element (voida -> vo- + isi -> voisi)."
+ },
+ {
+  "id": "fi-b1-lauseenvastikkeet-participle-constructions",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#4F46E5",
+  "emoji": "📜",
+  "title": "Clause Equivalents (Lauseenvastikkeet)",
+  "subtitle": "Compress 'että' and 'kun' clauses into elegant participial phrases",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Finnish shortens subordinate clauses by replacing 'että' with the participle genitive and 'kun' with the second infinitive in the inessive case.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Full Clause ('että' / 'kun')",
+    "Shortened Construction"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Temporal (same subject)",
+      "Kun heräsin, keitin kahvia.",
+      "Herätessäni keitin kahvia."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Temporal (different subject)",
+      "Kun sade lakkasi, lähdimme ulos.",
+      "Sateen lakatessa lähdimme ulos."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reporting (present / ongoing)",
+      "Näen, että he tulevat.",
+      "Näen heidän tulevan."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reporting (past / completed)",
+      "Tiedän, että hän muutti pois.",
+      "Tiedän hänen muuttaneen pois."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Simultaneous Actions (Kun)",
+    "example": "Kotiin tullessani huomasin ikkunan olevan auki.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Indirect Speech / Perception (Että)",
+    "example": "Kuulin Maijan sanovan sen ääneen.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Past State Perception (Että + past)",
+    "example": "He luulivat meidän jo lähteneen kotiin.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Lukiessani kirjaa nukahdin sohvalle.",
+    "ko": "",
+    "highlight": "Lukiessani"
+   },
+   {
+    "en": "Opettajan saapuessa luokkaan oppilaat hiljenivät.",
+    "ko": "",
+    "highlight": "Opettajan saapuessa"
+   },
+   {
+    "en": "Pekka kertoi ostaneensa uuden polkupyörän.",
+    "ko": "",
+    "highlight": "ostaneensa"
+   },
+   {
+    "en": "Huomasin heidän puhuvan totta.",
+    "ko": "",
+    "highlight": "heidän puhuvan"
+   },
+   {
+    "en": "Sanoitko hänen unohtaneen avaimet kotiin?",
+    "ko": "",
+    "highlight": "hänen unohtaneen"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Kun lukiessani kirjaa, join teetä.",
+    "right": "Lukiessani kirjaa join teetä.",
+    "note": "Never keep the conjunction 'kun' or 'että' when converting to a participle clause equivalent."
+   },
+   {
+    "wrong": "Kuulin että hän tulevan.",
+    "right": "Kuulin hänen tulevan.",
+    "note": "Drop 'että' and put the agent in the genitive case ('hänen') before the participle."
+   },
+   {
+    "wrong": "Syödessäni minä kuuntelin musiikkia.",
+    "right": "Syödessäni kuuntelin musiikkia.",
+    "note": "Do not add a genitive pronoun like 'minun' before the verb if the subject is the same; use only the possessive suffix '-ni'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct equivalent for: 'Kun tulin kotiin, söin heti.'",
+    "options": [
+     "Tullessani kotiin söin heti.",
+     "Kun tullessa kotiin söin heti.",
+     "Tulevani kotiin söin heti.",
+     "Minun tullessa söin heti."
+    ],
+    "answer": 0,
+    "explanation": "With the same subject (I), use the inessive of the 2nd infinitive ('tullessa') plus the 1st person possessive suffix '-ni'."
+   },
+   {
+    "question": "Choose the correct equivalent for: 'Luulin, että sinä tiesit vastauksen.'",
+    "options": [
+     "Luulin sinua tietävän vastauksen.",
+     "Luulin sinun tietäneen vastauksen.",
+     "Luulin että tietäväsi vastauksen.",
+     "Luulin sinun tietää vastauksen."
+    ],
+    "answer": 1,
+    "explanation": "Because the subordinate clause verb was in the past tense ('tiesit'), use the past active participle in genitive: 'sinun tietäneen'."
+   },
+   {
+    "question": "Complete the sentence to mean 'When the sun rose...': 'Auringon ___ heräsimme retkellä.'",
+    "options": [
+     "nousevan",
+     "noussut",
+     "noustessa",
+     "noustaessa"
+    ],
+    "answer": 2,
+    "explanation": "'Auringon noustessa' is the temporal clause equivalent for intransitive 'aurinko nousee' (2nd infinitive inessive: nousta -> nouste- -> noustessa)."
+   },
+   {
+    "question": "Choose the correct equivalent for: 'Hän sanoi, että hän lähtee huomenna.' (same person)",
+    "options": [
+     "Hän sanoi hänen lähtevän huomenna.",
+     "Hän sanoi lähtevänsä huomenna.",
+     "Hän sanoi että lähtevän huomenna.",
+     "Hän sanoi heidän lähtevän huomenna."
+    ],
+    "answer": 1,
+    "explanation": "When the reporting subject and the actor are the same person, use the reflexive possessive suffix '-nsä' instead of a separate genitive pronoun."
+   }
+  ],
+  "tip": "Remember the agent rule: if the agent in the shortcut clause is different from the main clause subject, put that agent in the genitive case (e.g., 'äidin tullessa', 'hänen tietävän')."
+ },
+ {
+  "id": "fi-b2-abessive-comitative-instructive",
+  "level": "b2",
+  "category": "nouns",
+  "categoryColor": "#0284C7",
+  "emoji": "🪡",
+  "title": "Marginal Cases: Abessive, Comitative, and Instructive",
+  "subtitle": "Expressing lack, accompaniment, and manner with specialized case endings",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "The abessive (-tta/-ttä) indicates absence, the comitative (-ineen) marks accompaniment and always requires a possessive suffix, while the instructive (-n) conveys manner or means and almost always appears in the plural.",
+  "structure": {
+   "headers": [
+    "Case",
+    "Suffix Pattern",
+    "Example",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Abessiivi",
+      "-tta / -ttä",
+      "rahatta",
+      "Without / lacking"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Komitatiivi",
+      "-ine- + Possessive",
+      "lapsineen",
+      "Together with"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Instruktiivi",
+      "plural stem + -n",
+      "omin silmin",
+      "By means of / with"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Abessive: Without something",
+    "example": "Hän jäi sanattomaksi ja lähti kotiin luvatta.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Comitative: In company of",
+    "example": "Professori saapui tilaisuuteen puolisoineen.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Instructive: By means of / manner",
+    "example": "Todistaja näki onnettomuuden omin silmin.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Selvisimme pitkästä matkasta vaivoitta.",
+    "ko": "",
+    "highlight": "vaivoitta"
+   },
+   {
+    "en": "Johtaja perheineen muutti uuteen asuntoon.",
+    "ko": "",
+    "highlight": "perheineen"
+   },
+   {
+    "en": "Kuuntelin esitystä herkeämättä suurin korvin.",
+    "ko": "",
+    "highlight": "suurin korvin"
+   },
+   {
+    "en": "Hän teki päätöksen epäröimättä.",
+    "ko": "",
+    "highlight": "epäröimättä"
+   },
+   {
+    "en": "Mies seisoi pakkasessa paljain päin.",
+    "ko": "",
+    "highlight": "paljain päin"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Hän tuli vaimoine.",
+    "right": "Hän tuli vaimoineen.",
+    "note": "The comitative ending -ine- must always be followed by a possessive suffix, usually -en (3rd person) or matching the subject."
+   },
+   {
+    "wrong": "Näin sen omalla silmällä.",
+    "right": "Näin sen omin silmin.",
+    "note": "Idiomatic instructive expressions describing body parts or sensory means are typically formed in the plural with -n."
+   },
+   {
+    "wrong": "Olin siellä ilman rahatta.",
+    "right": "Olin siellä rahatta.",
+    "note": "Do not double up the preposition 'ilman' with the abessive suffix '-tta'; use either 'ilman rahaa' (with partitive) or 'rahatta' alone."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct comitative form: 'Presidentti saapui juhlaan ___.' (with his wife)",
+    "options": [
+     "rouvatta",
+     "rouvalla",
+     "rouvineen",
+     "rouvassa"
+    ],
+    "answer": 2,
+    "explanation": "The comitative case uses the plural marker -i-, suffix -ne-, and a possessive suffix: rouva -> rouvineen."
+   },
+   {
+    "question": "Complete the instructive idiom: 'Hän puolusti kantaansa kynsin ja ___.' (with teeth)",
+    "options": [
+     "hampain",
+     "hampaitta",
+     "hampaineen",
+     "hampaillaan"
+    ],
+    "answer": 0,
+    "explanation": "The set instructive expression 'kynsin ja hampain' (tooth and nail) requires the instructive plural 'hampain'."
+   },
+   {
+    "question": "Which abessive form means 'without permission'?",
+    "options": [
+     "luvalta",
+     "luvatta",
+     "luvassa",
+     "luvitta"
+    ],
+    "answer": 1,
+    "explanation": "The singular abessive of 'lupa' uses the weak stem 'luva-' plus the suffix '-tta', yielding 'luvatta'."
+   },
+   {
+    "question": "Select the correct sentence expressing 'We walked barefoot':",
+    "options": [
+     "Kävelimme paljaille jaloille.",
+     "Kävelimme paljaiden jalkojen.",
+     "Kävelimme paljaine jalkoineen.",
+     "Kävelimme paljain jaloin."
+    ],
+    "answer": 3,
+    "explanation": "The plural instructive case ending '-n' modifies both the adjective and noun: 'paljain jaloin'."
+   }
+  ],
+  "tip": "In modern spoken Finnish, people prefer 'ilman + partitive' over the abessive and 'kanssa + genitive' over the comitative; save these marginal cases for formal writing, literature, and fixed idioms."
+ },
+ {
+  "id": "fi-b2-agent-participle",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#4F46E5",
+  "emoji": "🧑‍🍳",
+  "title": "The Agent Participle (Agenttipartisiippi)",
+  "subtitle": "Forming relative-like modifiers with '-ma/-mä' and a genitive agent",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "The agent participle suffix '-ma/-mä' combines with an agent in the genitive case or a possessive suffix to replace a relative clause meaning 'done by someone'.",
+  "structure": {
+   "headers": [
+    "Structure",
+    "Finnish Example",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Noun agent in genitive + -ma/-mä + head noun",
+      "äidin leipoma leipä",
+      "the bread baked by mother"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Personal pronoun agent (possessive suffix)",
+      "minun ostamani kirja / ostamani kirja",
+      "the book (that was) bought by me"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative agent participle (tekemätön)",
+      "hallituksen tekemätön päätös",
+      "the decision not made by the government"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Inflected head noun (participle agrees in case)",
+      "isän korjaamassa autossa",
+      "in the car repaired by father"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Replacing 'joka' clauses",
+    "example": "Tämä on Pekan kirjoittama artikkeli.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "With possessive suffixes",
+    "example": "Kuuntelin heidän suosittelemaansa musiikkia.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Negation with '-maton/-mätön'",
+    "example": "Pöydällä oli lääkärin allekirjoittamaton resepti.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Tämä kakku on äidin tekemä.",
+    "ko": "",
+    "highlight": "äidin tekemä"
+   },
+   {
+    "en": "Luin eilen sinun suosittelemasi kirjan loppuun.",
+    "ko": "",
+    "highlight": "sinun suosittelemasi"
+   },
+   {
+    "en": "Poliisin löytämä lompakko palautettiin omistajalleen.",
+    "ko": "",
+    "highlight": "Poliisin löytämä"
+   },
+   {
+    "en": "Muutimme arkkitehdin suunnittelemaan taloon.",
+    "ko": "",
+    "highlight": "arkkitehdin suunnittelemaan"
+   },
+   {
+    "en": "Syömme usein isoäidin poimimia marjoja.",
+    "ko": "",
+    "highlight": "isoäidin poimimia"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "äiti tekemä kakku",
+    "right": "äidin tekemä kakku",
+    "note": "The agent must always be in the genitive case (äidin), not the nominative (äiti)."
+   },
+   {
+    "wrong": "minun ostama auto",
+    "right": "minun ostamani auto / ostamani auto",
+    "note": "When the agent is a personal pronoun, the participle must take the corresponding possessive suffix (-ni for 'my')."
+   },
+   {
+    "wrong": "luin kirjailijan kirjoittama kirjan",
+    "right": "luin kirjailijan kirjoittaman kirjan",
+    "note": "The participle functions as an adjective and must agree in case and number with the head noun (kirjan -> kirjoittaman)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase: 'the coffee made by Maija'",
+    "options": [
+     "Maija keitetty kahvi",
+     "Maijan keittämä kahvi",
+     "Maijalla keitettävä kahvi",
+     "Maijan keittänyt kahvi"
+    ],
+    "answer": 1,
+    "explanation": "The agent takes the genitive form ('Maijan') followed by the -mA participle ('keittämä') and the modified noun."
+   },
+   {
+    "question": "Choose the correct translation: 'the car (that was) repaired by me'",
+    "options": [
+     "minun korjaama auto",
+     "minua korjattu auto",
+     "korjaamani auto",
+     "minun korjannut auto"
+    ],
+    "answer": 2,
+    "explanation": "With a 1st person agent, use the possessive suffix '-ni' on the participle ('korjaamani'). The pronoun 'minun' is optional."
+   },
+   {
+    "question": "Fill in the blank: 'Asumme Alvar Aallon ___ talossa.' (We live in a house designed by Alvar Aalto.)",
+    "options": [
+     "suunnitellussa",
+     "suunnittelema",
+     "suunnittelevassa",
+     "suunnittelemassa"
+    ],
+    "answer": 3,
+    "explanation": "The head noun 'talossa' is in the inessive case (-ssa), so the agent participle must agree with it: 'suunnittelemassa'."
+   },
+   {
+    "question": "Which sentence correctly means 'the homework not done by the student'?",
+    "options": [
+     "oppilaan tekemätön läksy",
+     "oppilas ei tehnyt läksy",
+     "oppilaan tekemättä läksy",
+     "oppilaasta tekemätön läksy"
+    ],
+    "answer": 0,
+    "explanation": "The negative form of the agent participle uses the caritive suffix '-maton/-mätön' with the genitive agent ('oppilaan tekemätön läksy')."
+   }
+  ],
+  "tip": "Think of the agent participle as a compact alternative to a relative clause: instead of 'ruoka, jonka äiti teki', say 'äidin tekemä ruoka' to sound much more natural and fluent in formal or written Finnish."
+ },
+ {
+  "id": "fi-b2-potential-mood",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔮",
+  "title": "The Potential Mood (Potentiaali)",
+  "subtitle": "Expressing probability, doubt, and formal speculation using -ne-",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "The potential mood expresses probability or speculation using the marker -ne- (which assimilates to -le-, -re-, or -se- depending on the verb stem) in formal or literary Finnish.",
+  "structure": {
+   "headers": [
+    "Verb Type",
+    "Formation Pattern",
+    "Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Type 1 (Vowel stem)",
+      "Inf. stem + -ne-",
+      "sanoo → sanonee",
+      "probably says"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Type 2 (Consonant stem)",
+      "-l-/-r-/-s- + -le-/-re-/-se-",
+      "tulla → tullee",
+      "will probably come"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Type 3 (Pureskella etc.)",
+      "Consonant stem assimilation",
+      "purra → purree",
+      "probably bites"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Type 4-6 (-t- stems)",
+      "-t- assimilates to -nne-",
+      "tavata → tavannet",
+      "you probably meet"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative potential",
+      "ei / en + potential stem",
+      "ei lienen, emme tullee",
+      "probably am/will not"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Expressing probability or likelihood",
+    "example": "Hän tullee huomenna kokoukseen ajoissa.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Formal or journalistic speculation",
+    "example": "Hallitus tehnee päätöksen asiasta ensi viikolla.",
+    "translation": ""
+   },
+   {
+    "color": "#818CF8",
+    "label": "Polite hesitation or cautious assumption",
+    "example": "Lieneekö tämä riittävä perustelu hankkeelle?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Juna lienee jo saapunut asemalle.",
+    "ko": "",
+    "highlight": "lienee"
+   },
+   {
+    "en": "Hän tietänee vastauksen paremmin kuin me.",
+    "ko": "",
+    "highlight": "tietänee"
+   },
+   {
+    "en": "Asia selvinnee huomisen aikana.",
+    "ko": "",
+    "highlight": "selvinnee"
+   },
+   {
+    "en": "Lääkäri ottanee kantaa tilanteeseen pian.",
+    "ko": "",
+    "highlight": "ottanee"
+   },
+   {
+    "en": "Emme liene valmiita näin suureen muutokseen.",
+    "ko": "",
+    "highlight": "liene"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Hän tulenee huomenna kotiin.",
+    "right": "Hän tullee huomenna kotiin.",
+    "note": "When the consonant stem ends in 'l', 'r', or 's', the marker '-ne-' assimilates to '-le-', '-re-', or '-se-'. Never keep '-ne-' after these consonants."
+   },
+   {
+    "wrong": "Hän ollenee oikeassa.",
+    "right": "Hän lienee oikeassa.",
+    "note": "The verb 'olla' has an irregular suppletive potential stem based on 'liene-', never 'ollene-'."
+   },
+   {
+    "wrong": "En tienne mikä tämä on.",
+    "right": "En tienne, mikä tämä on.",
+    "note": "In negative forms, the auxiliary 'ei' takes the personal ending, while the main verb drops personal suffixes and keeps only the potential stem (tienne)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The train will probably arrive late today: 'Juna ___ tänään myöhässä.'",
+    "options": [
+     "saapunee",
+     "saapuu",
+     "saapune",
+     "saapuisi"
+    ],
+    "answer": 0,
+    "explanation": "Type 1 verb 'saapua' takes the vowel stem 'saapu-' + potential marker '-ne-' + 3rd person singular ending '-e', forming 'saapunee'."
+   },
+   {
+    "question": "Which form correctly replaces 'varmaan on' in formal register? 'Hän ___ oikeassa.'",
+    "options": [
+     "ollenee",
+     "lienee",
+     "onne",
+     "olee"
+    ],
+    "answer": 1,
+    "explanation": "'Olla' forms its potential mood irregularly using the stem 'liene-'. The 3rd person singular is 'lienee'."
+   },
+   {
+    "question": "Complete with the potential form of 'tulla' (she will probably come): 'Hän ___ huomenna.'",
+    "options": [
+     "tulinee",
+     "tulenee",
+     "tullee",
+     "tulisenee"
+    ],
+    "answer": 2,
+    "explanation": "In Type 2 verbs with an 'l' stem like 'tulla' (stem 'tul-'), the suffix '-ne-' assimilates completely to '-le-', yielding 'tullee'."
+   },
+   {
+    "question": "Choose the correct negative potential form: 'Me emme ___ tätä ongelmaa vielä.'",
+    "options": [
+     "ratkaisseet",
+     "ratkaisemme",
+     "ratkaisseneet",
+     "ratkaissee"
+    ],
+    "answer": 3,
+    "explanation": "In negative potential sentences with a plural subject, the main verb appears in the bare potential stem 'ratkaissee' without personal suffix attached."
+   }
+  ],
+  "tip": "In everyday spoken Finnish, people almost always use adverbs like 'varmaan' or 'ehkä' instead of the potential mood, but mastering '-ne-' is essential for reading news, academic articles, and literature."
+ }
+]

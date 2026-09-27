@@ -1,0 +1,3363 @@
+[
+ {
+  "id": "az-a1-vowel-harmony",
+  "level": "a1",
+  "category": "advanced",
+  "categoryColor": "#4B5563",
+  "emoji": "🎵",
+  "title": "Vowel Harmony (Ahəng Qanunu)",
+  "subtitle": "The foundational phonetic law governing all Azerbaijani suffixes",
+  "color": "#4B5563",
+  "bg": "#F3F4F6",
+  "keyPoint": "Azerbaijani suffixes harmonize with the preceding vowel by either a 2-way (-a/-ə) or 4-way (-ı/-i/-u/-ü) alternation rule.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Vowel Group",
+    "Suffix Vowel",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "2-way (qalın)",
+      "a, ı, o, u",
+      "-a / -lar",
+      "kitablar (books)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2-way (incə)",
+      "e, ə, i, ö, ü",
+      "-ə / -lər",
+      "evlər (houses)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "4-way (unrounded)",
+      "a, ı → -ı | e, ə, i → -i",
+      "-ı / -i",
+      "qapı / evimiz"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "4-way (rounded)",
+      "o, u → -u | ö, ü → -ü",
+      "-u / -ü",
+      "yolumuz / gözlər"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Plural Suffixation (-lar / -lər)",
+    "example": "Uşaqlar parkda oynayırlar.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "4-Way Case Endings",
+    "example": "Mən bu kitabı oxudum.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Rounded Harmony with Stems",
+    "example": "Gözlüyün rəngi qaradır.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kitablar masanın üstündədir.",
+    "ko": "",
+    "highlight": "lar"
+   },
+   {
+    "en": "Məktəblər bu gün bağlıdır.",
+    "ko": "",
+    "highlight": "lər"
+   },
+   {
+    "en": "O, qapını astaca bağladı.",
+    "ko": "",
+    "highlight": "nı"
+   },
+   {
+    "en": "Biz onun evini gördük.",
+    "ko": "",
+    "highlight": "ni"
+   },
+   {
+    "en": "Sən bu yolu tanıyırsan?",
+    "ko": "",
+    "highlight": "lu"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "evlar",
+    "right": "evlər",
+    "note": "The root 'ev' contains the front vowel 'e', requiring front vowel suffix '-lər'."
+   },
+   {
+    "wrong": "qapini",
+    "right": "qapını",
+    "note": "The last vowel of 'qapı' is back 'ı', so the accusative must be '-nı', not '-ni'."
+   },
+   {
+    "wrong": "gözlar",
+    "right": "gözlər",
+    "note": "'ö' is a front vowel, so it takes '-lər' rather than '-lar'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct plural form of 'dost' (friend):",
+    "options": [
+     "dostlər",
+     "dostlar",
+     "dostlir",
+     "dostlur"
+    ],
+    "answer": 1,
+    "explanation": "The vowel 'o' in 'dost' is back (qalın), requiring '-lar'."
+   },
+   {
+    "question": "Choose the correct accusative suffix for 'söz' (word):",
+    "options": [
+     "sözü",
+     "sözi",
+     "sözı",
+     "sözu"
+    ],
+    "answer": 0,
+    "explanation": "'ö' is front and rounded, so 4-way harmony selects '-ü'."
+   },
+   {
+    "question": "Choose the correct plural form of 'pəncərə' (window):",
+    "options": [
+     "pəncərəlar",
+     "pəncərəlur",
+     "pəncərələr",
+     "pəncərəlor"
+    ],
+    "answer": 2,
+    "explanation": "'pəncərə' ends in front vowel 'ə', requiring '-lər'."
+   },
+   {
+    "question": "Choose the correct definite accusative form of 'qələm' (pen):",
+    "options": [
+     "qələmu",
+     "qələmı",
+     "qələmə",
+     "qələmi"
+    ],
+    "answer": 3,
+    "explanation": "The last vowel in 'qələm' is front unrounded 'ə', taking '-i'."
+   }
+  ],
+  "tip": "Always look strictly at the very LAST vowel in the stem to determine which suffix variant to attach."
+ },
+ {
+  "id": "az-a1-noun-case-system",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#2563EB",
+  "emoji": "📦",
+  "title": "Six-Case Noun Inflection",
+  "subtitle": "Navigating core relational markers on Azerbaijani nouns",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Azerbaijani nouns take one of six case suffixes depending on syntactic function, inserting buffer 'n' or 'y' after vowel-final stems.",
+  "structure": {
+   "headers": [
+    "Case",
+    "Suffix Pattern",
+    "Stem Ending in Consonant",
+    "Stem Ending in Vowel"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Nominative (Adlıq)",
+      "—",
+      "şəhər",
+      "ana"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Genitive (Yiyəlik)",
+      "-ın⁴ / -nın⁴",
+      "şəhərin",
+      "ananın"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Dative (Yönlük)",
+      "-a² / -ya²",
+      "şəhərə",
+      "anaya"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Locative (Yerlik)",
+      "-da² / -də",
+      "şəhərdə",
+      "anada"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ablative (Çıxışlıq)",
+      "-dan² / -dən",
+      "şəhərdən",
+      "anadan"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Specifying Destination (Dative)",
+    "example": "Tələbələr məktəbə gedirlər.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Expressing Location (Locative)",
+    "example": "Biz hazırda Bakıda yaşayırıq.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Indicating Origin (Ablative)",
+    "example": "Əli dünən kənddən qayıtdı.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mən dünən bazardan meyvə aldım.",
+    "ko": "",
+    "highlight": "bazardan"
+   },
+   {
+    "en": "Kitabı masada qoyma.",
+    "ko": "",
+    "highlight": "masada"
+   },
+   {
+    "en": "Biz sabah tezdən Bakıya gedirik.",
+    "ko": "",
+    "highlight": "Bakıya"
+   },
+   {
+    "en": "Qardaşım bu otaqda işləyir.",
+    "ko": "",
+    "highlight": "otaqda"
+   },
+   {
+    "en": "Müəllim universitetdən çıxdı.",
+    "ko": "",
+    "highlight": "universitetdən"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Bakıa gedirəm.",
+    "right": "Bakıya gedirəm.",
+    "note": "When the dative suffix '-a/-ə' attaches to a vowel-final stem like 'Bakı', buffer 'y' is required ('Bakıya')."
+   },
+   {
+    "wrong": "evda qalıram.",
+    "right": "evdə qalıram.",
+    "note": "'ev' has front vowel 'e', so locative must be '-də', not '-da'."
+   },
+   {
+    "wrong": "kitabı masadən götürdüm.",
+    "right": "kitabı masadan götürdüm.",
+    "note": "'masa' has back vowels, so ablative must be '-dan'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Mən hər gün ___ gedirəm' (to work).",
+    "options": [
+     "işdə",
+     "işə",
+     "işdən",
+     "işin"
+    ],
+    "answer": 1,
+    "explanation": "Destination requires the dative case ending '-ə' on the root 'iş'."
+   },
+   {
+    "question": "Complete the sentence: 'Uşaqlar ___ oynayırlar' (in the park).",
+    "options": [
+     "parkda",
+     "parka",
+     "parkdan",
+     "parkın"
+    ],
+    "answer": 0,
+    "explanation": "Stationary location requires the locative case suffix '-da'."
+   },
+   {
+    "question": "Complete the sentence: 'Aygün ___ gəlir' (from school).",
+    "options": [
+     "məktəbə",
+     "məktəbi",
+     "məktəbdə",
+     "məktəbdən"
+    ],
+    "answer": 3,
+    "explanation": "Direction away from/origin takes the ablative suffix '-dən'."
+   },
+   {
+    "question": "Complete the sentence: 'Biz ___ yaşayırıq' (in Ganja - Gəncə).",
+    "options": [
+     "Gəncəya",
+     "Gəncədan",
+     "Gəncədə",
+     "Gəncənin"
+    ],
+    "answer": 2,
+    "explanation": "'Gəncə' ends in front vowel 'ə', taking locative '-də'."
+   }
+  ],
+  "tip": "Remember that Locative (-da/-də) and Ablative (-dan/-dən) use buffer 'n' only after 3rd person possessive endings, but directly take '-da/-dan' after regular nouns."
+ },
+ {
+  "id": "az-a1-predicative-suffixes",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "👤",
+  "title": "Personal Predicative Suffixes (Xəbərlik Şəkilçiləri)",
+  "subtitle": "Conjugating the present copular verb 'to be' directly onto stems",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "The Azerbaijani copula 'to be' attaches directly to predicates as personal suffixes following 4-way vowel harmony.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Suffix",
+    "Consonant Stem (müəllim)",
+    "Vowel Stem (tələbə)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Mən (I)",
+      "-(y)am / -(y)əm",
+      "müəlliməm",
+      "tələbəyəm"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Sən (You)",
+      "-san / -sən",
+      "müəllimsən",
+      "tələbəsən"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "O (He/She/It)",
+      "-dır⁴ (often omitted)",
+      "müəllimdir",
+      "tələbədir"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Biz (We)",
+      "-(y)ıq⁴ / -(y)ik",
+      "müəllimik",
+      "tələbəyik"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Siz (You pl.)",
+      "-sınız⁴",
+      "müəllimsiniz",
+      "tələbəsiniz"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Stating Identity/Profession",
+    "example": "Mən universitetdə tələbəyəm.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Describing Current State",
+    "example": "Biz bu gün çox yorğunuq.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Negation with 'deyil'",
+    "example": "O qız həkim deyil.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mən bu layihədə mühəndisəm.",
+    "ko": "",
+    "highlight": "mühəndisəm"
+   },
+   {
+    "en": "Sən çox yaxşı insansan.",
+    "ko": "",
+    "highlight": "insansan"
+   },
+   {
+    "en": "Hava bu gün çox soyuqdur.",
+    "ko": "",
+    "highlight": "soyuqdur"
+   },
+   {
+    "en": "Biz hər zaman hazırıq.",
+    "ko": "",
+    "highlight": "hazırıq"
+   },
+   {
+    "en": "Siz Bakıda qonaqsınız.",
+    "ko": "",
+    "highlight": "qonaqsınız"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mən tələbəm.",
+    "right": "Mən tələbəyəm.",
+    "note": "When attaching 1st person '-əm' to a vowel-final stem like 'tələbə', buffer 'y' is compulsory: 'tələbəyəm'."
+   },
+   {
+    "wrong": "Biz yorğunıq.",
+    "right": "Biz yorğunuq.",
+    "note": "'yorğun' has rounded back vowel 'u', requiring rounded suffix '-uq'."
+   },
+   {
+    "wrong": "Mən deyiləm müəllim.",
+    "right": "Mən müəllim deyiləm.",
+    "note": "In negative copular sentences, the negative particle 'deyil' comes after the noun/adjective."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Mən indi evdə___' (I am at home).",
+    "options": [
+     "evdəsən",
+     "evdəyəm",
+     "evdədir",
+     "evdəyik"
+    ],
+    "answer": 1,
+    "explanation": "1st person singular 'mən' requires '-yəm' after vowel 'ə'."
+   },
+   {
+    "question": "Complete the sentence: 'Siz haralı___?' (Where are you from?).",
+    "options": [
+     "haralısınız",
+     "haralısan",
+     "haralıyıq",
+     "haralıdır"
+    ],
+    "answer": 0,
+    "explanation": "2nd person plural 'siz' takes '-sınız⁴' (here '-sınız' following 'ı')."
+   },
+   {
+    "question": "Complete the sentence: 'Biz bu gün şad___' (We are glad).",
+    "options": [
+     "şadam",
+     "şadsan",
+     "şadıq",
+     "şaddır"
+    ],
+    "answer": 2,
+    "explanation": "'Biz' (we) requires 1st person plural suffix '-ıq' to harmonize with back vowel 'a'."
+   },
+   {
+    "question": "Complete the sentence: 'O, həkim ___' (He is not a doctor).",
+    "options": [
+     "yoxdur",
+     "deyiləm",
+     "xeyir",
+     "deyildir"
+    ],
+    "answer": 3,
+    "explanation": "Negation of noun/adjective predicates uses 'deyil' (often with 3rd person '-dir' or standalone 'deyil')."
+   }
+  ],
+  "tip": "In everyday spoken Azerbaijani, the 3rd person suffix '-dır/-dir/-dur/-dür' is frequently dropped, e.g. 'O yaxşıdır' often becomes 'O yaxşı'."
+ },
+ {
+  "id": "az-a1-possessive-suffixes",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#2563EB",
+  "emoji": "🔑",
+  "title": "Possessive Suffixes (Mənsubiyyət Şəkilçiləri)",
+  "subtitle": "Attaching ownership markers to items and forming genitive chains",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Possession in Azerbaijani is marked directly on the possessed noun with personal endings, usually paired with genitive pronouns.",
+  "structure": {
+   "headers": [
+    "Possessor",
+    "Consonant Stem (kitab)",
+    "Vowel Stem (ata)",
+    "English"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "mənim (my)",
+      "kitabım",
+      "atam",
+      "my book / my father"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "sənin (your sg.)",
+      "kitabın",
+      "atan",
+      "your book / your father"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "onun (his/her/its)",
+      "kitabı",
+      "atası",
+      "his/her book / his/her father"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "bizim (our)",
+      "kitabımız",
+      "atamız",
+      "our book / our father"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "sizin (your pl.)",
+      "kitabınız",
+      "atanız",
+      "your book / your father"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Kinship & Personal Relations",
+    "example": "Mənim anam həkim işləyir.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Describing Belongings",
+    "example": "Sənin çantan haradadır?",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Noun-Noun Compound Possession",
+    "example": "Bakı şəhərinin küçələri genişdir.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mənim adım Rəşaddır.",
+    "ko": "",
+    "highlight": "adım"
+   },
+   {
+    "en": "Sənin evin çox rahatdır.",
+    "ko": "",
+    "highlight": "evin"
+   },
+   {
+    "en": "Onun atası mühəndisdir.",
+    "ko": "",
+    "highlight": "atası"
+   },
+   {
+    "en": "Bizim dərsimiz saat doqquzda başlayır.",
+    "ko": "",
+    "highlight": "dərsimiz"
+   },
+   {
+    "en": "Sizin maşınınız haradadır?",
+    "ko": "",
+    "highlight": "maşınınız"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "mənim atamım",
+    "right": "mənim atam",
+    "note": "For vowel stems, 1st person possessive suffix is simply '-m', not '-mım'."
+   },
+   {
+    "wrong": "onun ataı",
+    "right": "onun atası",
+    "note": "Third-person possessive after a vowel requires the buffer 's', giving '-sı/-si/-su/-sü'."
+   },
+   {
+    "wrong": "bizim evimizdə",
+    "right": "bizim evimizdə",
+    "note": "When combining possessive and case suffixes, possessive ALWAYS precedes case."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the phrase: 'mənim qələm___' (my pen).",
+    "options": [
+     "qələmim",
+     "qələmin",
+     "qələmi",
+     "qələmimiz"
+    ],
+    "answer": 0,
+    "explanation": "The 1st person singular possessive suffix after a consonant with front vowel 'ə' is '-im'."
+   },
+   {
+    "question": "Complete the phrase: 'onun maşın___' (his/her car).",
+    "options": [
+     "maşınım",
+     "maşının",
+     "maşını",
+     "maşınız"
+    ],
+    "answer": 2,
+    "explanation": "The 3rd person singular possessive suffix after consonant is '-ı⁴', hence 'maşını'."
+   },
+   {
+    "question": "Complete the phrase: 'sizin otağ___' (your pl. room).",
+    "options": [
+     "otağım",
+     "otağın",
+     "otağı",
+     "otağınız"
+    ],
+    "answer": 3,
+    "explanation": "The 2nd person plural possessive suffix is '-ınız⁴' (here '-ınız' following 'a'). Note root 'otaq' shifts q->ğ."
+   },
+   {
+    "question": "Complete the phrase: 'onun ana___' (his mother).",
+    "options": [
+     "anası",
+     "ananı",
+     "anaya",
+     "anasın"
+    ],
+    "answer": 0,
+    "explanation": "Vowel stems take '-sı⁴' in the 3rd person possessive, yielding 'anası'."
+   }
+  ],
+  "tip": "When 1st or 2nd person possessive suffixes attach to nouns ending in 'k' or 'q', the consonant lenites: 'ürək' -> 'ürəyim', 'otaq' -> 'otağım'."
+ },
+ {
+  "id": "az-a1-definite-past-tense",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "⏳",
+  "title": "Definite Past Tense (-dı⁴)",
+  "subtitle": "Conjugating witnessed and definite past actions with -dı/-di/-du/-dü",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "The definite past suffix -dı⁴ attaches to the verb root and takes special personal endings to indicate completed past actions.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Formula",
+    "Example (yazmaq - to write)",
+    "Example (gəlmək - to come)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Mən",
+      "Root + dı⁴ + m",
+      "yazdım",
+      "gəldim"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Sən",
+      "Root + dı⁴ + n",
+      "yazdın",
+      "gəldin"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "O",
+      "Root + dı⁴",
+      "yazdı",
+      "gəldi"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Biz",
+      "Root + dı⁴ + q/k",
+      "yazdıq",
+      "gəldik"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Onlar",
+      "Root + dı⁴ + lar²",
+      "yazdılar",
+      "gəldilər"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Completed Past Actions",
+    "example": "Dünən axşam maraqlı filmə baxdım.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Witnessed Events",
+    "example": "Müəllim sinfə indicə daxil oldu.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Past Negation with -ma²-",
+    "example": "Biz o məktubu poçtla göndərmədik.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mən səhər tezdən durdum.",
+    "ko": "",
+    "highlight": "durdum"
+   },
+   {
+    "en": "Sən dünən axşam nə etdin?",
+    "ko": "",
+    "highlight": "etdin"
+   },
+   {
+    "en": "O, sualı çox cəld başa düşdü.",
+    "ko": "",
+    "highlight": "düşdü"
+   },
+   {
+    "en": "Biz ötən həftə kəndə getdik.",
+    "ko": "",
+    "highlight": "getdik"
+   },
+   {
+    "en": "Onlar tapşırığı vaxtında bitirdilər.",
+    "ko": "",
+    "highlight": "bitirdilər"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mən dünən getmişəm.",
+    "right": "Mən dünən getdim.",
+    "note": "Definite specific time markers like 'dünən' (yesterday) strongly require the definite past '-dim', not the indefinite past '-mişəm'."
+   },
+   {
+    "wrong": "Biz gəldiq.",
+    "right": "Biz gəldik.",
+    "note": "Because 'gəl-' has front vowel 'ə', the 1st person plural past marker must end in '-k' ('gəldik'), not back '-q'."
+   },
+   {
+    "wrong": "Mən oxumadımım.",
+    "right": "Mən oxumadım.",
+    "note": "The personal ending for 'mən' in the definite past is just '-m', not predicative '-am'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Biz dünən bazara ___' (we went).",
+    "options": [
+     "getdim",
+     "getdin",
+     "getdik",
+     "getdilər"
+    ],
+    "answer": 2,
+    "explanation": "'Biz' takes the past 1st-person plural ending '-ik' / '-uq' / '-k' following '-di', yielding 'getdik'."
+   },
+   {
+    "question": "Complete the sentence: 'Sən bu kitabı ___?' (did you read?).",
+    "options": [
+     "oxudun",
+     "oxudum",
+     "oxudu",
+     "oxudunuz"
+    ],
+    "answer": 0,
+    "explanation": "2nd person singular 'sən' takes root + '-du' + '-n' -> 'oxudun'."
+   },
+   {
+    "question": "Select the correct negation: 'O dərsi ___' (he did not understand).",
+    "options": [
+     "anlamadı",
+     "anlamam",
+     "anlamadın",
+     "anlamaz"
+    ],
+    "answer": 0,
+    "explanation": "Negation inserts '-ma⁴' before the tense marker: root 'anla-' + '-ma-' + '-dı' -> 'anlamadı'."
+   },
+   {
+    "question": "Complete the sentence: 'Mən sənə məktub ___' (I wrote).",
+    "options": [
+     "yazdı",
+     "yazdın",
+     "yazdıq",
+     "yazdım"
+    ],
+    "answer": 3,
+    "explanation": "1st person singular 'mən' takes '-m' after the tense suffix '-dı' -> 'yazdım'."
+   }
+  ],
+  "tip": "The definite past tense uses special concise personal endings (-m, -n, —, -q/-k, -nız⁴, -lar²) instead of the longer predicative copular suffixes."
+ },
+ {
+  "id": "az-a1-present-continuous-tense",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "⏳",
+  "title": "Present Continuous Tense (-ır⁴)",
+  "subtitle": "Expressing actions happening right now or ongoing routines",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The present continuous suffix -ır/-ir/-ur/-ür attaches to verb stems to describe current actions or regular habits.",
+  "structure": {
+   "headers": [
+    "Affirmation / Negation",
+    "Formula",
+    "Azerbaijani Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Positive (Consonant stem)",
+      "Stem + -ır⁴ + Personal",
+      "yazır",
+      "he/she writes / is writing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Positive (Vowel stem)",
+      "Stem (vowel alters) + -y- + -ır⁴",
+      "oxuyur",
+      "he/she reads / is reading"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negative",
+      "Stem + -mır⁴ + Personal",
+      "yazmır",
+      "he/she does not write / isn't writing"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Actions happening right now",
+    "example": "Mən indi maraqlı kitab oxuyuram.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Habitual or everyday routines",
+    "example": "O hər səhər tezdən oyanır.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Negative ongoing actions",
+    "example": "Biz bu gün dərsə getmirik.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Uşaqlar həyətdə futbol oynayırlar.",
+    "ko": "",
+    "highlight": "oynayırlar"
+   },
+   {
+    "en": "Sən indi nə edirsən?",
+    "ko": "",
+    "highlight": "edirsən"
+   },
+   {
+    "en": "Mən Bakıda yaşayıram.",
+    "ko": "",
+    "highlight": "yaşayıram"
+   },
+   {
+    "en": "Müəllim lövhədə yeni sözləri yazır.",
+    "ko": "",
+    "highlight": "yazır"
+   },
+   {
+    "en": "Biz soyuq su içmirik.",
+    "ko": "",
+    "highlight": "içmirik"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mən kitab oxumayıram.",
+    "right": "Mən kitab oxumuram.",
+    "note": "In the negative present continuous, the negation suffix fuses as -mır⁴, dropping the standard broad vowel -ma/-mə."
+   },
+   {
+    "wrong": "O hər gün işləyir.",
+    "right": "O hər gün işləyir.",
+    "note": "When the stem ends in 'ə' (işlə-), the vowel harmony and buffer sound shift it into işləyir or işləyir depending on dialect; standard written form keeps the vowel and adds 'y'."
+   },
+   {
+    "wrong": "Biz çay içirikmi?",
+    "right": "Biz çay içirik?",
+    "note": "In standard Azerbaijani, questions are formed via intonation rather than the Turkish question particle -mi."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I am writing' in Azerbaijani?",
+    "options": [
+     "yazıram",
+     "yazırsan",
+     "yazırıq",
+     "yazırlar"
+    ],
+    "answer": 0,
+    "explanation": "The 1st-person singular ending is -(y)am/-(y)əm, making 'yaz-ır-am'."
+   },
+   {
+    "question": "Complete the sentence: 'Onlar indi kinoya ___.' (They are not going)",
+    "options": [
+     "getmirlər",
+     "getmirik",
+     "getmirsiniz",
+     "getmir"
+    ],
+    "answer": 0,
+    "explanation": "3rd-person plural takes -lər after the negative continuous suffix -mir, producing 'getmirlər'."
+   },
+   {
+    "question": "Which verb correctly fills the blank: 'Sən harada ___?' (Where do you live?)",
+    "options": [
+     "yaşayır",
+     "yaşayıram",
+     "yaşayırsan",
+     "yaşayırlar"
+    ],
+    "answer": 2,
+    "explanation": "The subject 'sən' requires the 2nd-person singular suffix -san, giving 'yaşayırsan'."
+   },
+   {
+    "question": "Choose the correct negative form of 'oxuyur' (he reads):",
+    "options": [
+     "oxumayır",
+     "oxumeyir",
+     "oxumaz",
+     "oxumur"
+    ],
+    "answer": 3,
+    "explanation": "The continuous negative fuses to -mır⁴. For 'oxu-', the harmonic match is 'oxumur'."
+   }
+  ],
+  "tip": "Azerbaijani does not use a question particle like Turkish 'mi'; simply use rising pitch at the end of the sentence to turn any statement into a question!"
+ },
+ {
+  "id": "az-a2-izafet-structures",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🔗",
+  "title": "Noun Compounds (İzafət II and III)",
+  "subtitle": "Differentiating general noun compounds from specific possessive pairs",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Indefinite compounds leave the first noun bare, while definite possessive constructions require the genitive case on the first noun.",
+  "structure": {
+   "headers": [
+    "Structure",
+    "Formula",
+    "Azerbaijani Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "İzafət II (Categorical/Indefinite)",
+      "Noun₁ + Noun₂-(s)ı⁴",
+      "məktəb çantası",
+      "school bag (a type of bag)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "İzafət III (Definite/Possessive)",
+      "Noun₁-(n)ın⁴ + Noun₂-(s)ı⁴",
+      "məktəbin çantası",
+      "the bag of the school (specific)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Personal Possession",
+      "Pronoun-(n)ın⁴ + Noun₂-Possessive",
+      "mənim evim",
+      "my house"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Types and categories of objects (İzafət II)",
+    "example": "Mən yeni diş fırçası aldım.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Specific possession or ownership (İzafət III)",
+    "example": "Əlinin maşını çox köhnədir.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Institutions and public locations",
+    "example": "Bakı Dövlət Universiteti mərkəzdədir.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "O, hər gün avtobus dayanacağında gözləyir.",
+    "ko": "",
+    "highlight": "avtobus dayanacağında"
+   },
+   {
+    "en": "Kitabın səhifəsi cırılıb.",
+    "ko": "",
+    "highlight": "Kitabın səhifəsi"
+   },
+   {
+    "en": "Mən bu gün çay dəsmalı aldım.",
+    "ko": "",
+    "highlight": "çay dəsmalı"
+   },
+   {
+    "en": "Müəllimin otağı ikinci mərtəbədədir.",
+    "ko": "",
+    "highlight": "Müəllimin otağı"
+   },
+   {
+    "en": "Bakı şəhəri çox gözəldir.",
+    "ko": "",
+    "highlight": "Bakı şəhəri"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Məktəb çanta aldım.",
+    "right": "Məktəb çantası aldım.",
+    "note": "Compound nouns (İzafət II) must attach the 3rd-person possessive suffix -(s)ı to the second noun."
+   },
+   {
+    "wrong": "Qapı açarı itdi.",
+    "right": "Qapının açarı itdi.",
+    "note": "When referring to a specific item belonging to a specific object, the first noun must take the genitive ending -(n)ın."
+   },
+   {
+    "wrong": "Mənim ata həkimdir.",
+    "right": "Mənim atam həkimdir.",
+    "note": "When the possessor is a personal pronoun, the possessed noun must take the matching personal possessive suffix (-m, not bare)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which phrase correctly means 'sun glasses' (as a generic item)?",
+    "options": [
+     "günəş eynəyi",
+     "günəşin eynəyi",
+     "günəş eynək",
+     "günəşdə eynək"
+    ],
+    "answer": 0,
+    "explanation": "İzafət II leaves the first noun bare and gives the second noun the 3rd-person suffix: 'günəş eynəyi'."
+   },
+   {
+    "question": "Complete the definite possessive phrase: 'Bu ___ qapısıdır.' (the house's)",
+    "options": [
+     "ev",
+     "evə",
+     "evin",
+     "evdən"
+    ],
+    "answer": 2,
+    "explanation": "Definite noun compounds (İzafət III) require the genitive case -(n)ın on the possessor noun: 'evin'."
+   },
+   {
+    "question": "How do you translate 'Anar's pen'?",
+    "options": [
+     "Anar qələm",
+     "Anar qələmi",
+     "Anarın qələmi",
+     "Anarın qələm"
+    ],
+    "answer": 2,
+    "explanation": "Anar's specific pen is an İzafət III construction: 'Anarın qələmi'."
+   },
+   {
+    "question": "What is the correct form for 'water bottle'?",
+    "options": [
+     "su şüşə",
+     "su şüşələr",
+     "suyun şüşə",
+     "su şüşəsi"
+    ],
+    "answer": 3,
+    "explanation": "Compound nouns take the 3rd-person suffix -(s)ı after vowels, resulting in 'su şüşəsi'."
+   }
+  ],
+  "tip": "Think of İzafət II (çay stəkanı) as a single concept/compound word, whereas İzafət III (Muradın stəkanı) shows true ownership."
+ },
+ {
+  "id": "az-a2-future-tenses",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🚀",
+  "title": "Definite vs. Indefinite Future Tenses (-acaq vs. -ar)",
+  "subtitle": "Certain plans (-acaq⁴) versus hypothetical predictions or offers (-ar²)",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "Use -acaq⁴ for firm plans and inevitable facts, but -ar² for assumptions, uncertain predictions, polite requests, and offers.",
+  "structure": {
+   "headers": [
+    "Future Tense",
+    "Suffix",
+    "Azerbaijani Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Qəti gələcək (Definite)",
+      "-acaq / -əcək",
+      "gedəcəyəm",
+      "I will go (definitely planned)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Qeyri-qəti gələcək (Indefinite)",
+      "-ar / -ər",
+      "gedərəm",
+      "I might go / I would go"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Indefinite",
+      "-maz / -məz",
+      "getmərəm / getməz",
+      "I won't / he wouldn't (reluctance)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Firm decisions and scheduled plans",
+    "example": "Sabah səhər tezdən yola çıxacağıq.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Spontaneous offers or willingness",
+    "example": "Mən sənə kömək edərəm.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Uncertain speculations about future events",
+    "example": "Bəlkə sabah yağış yağar.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Biz gələn həftə yeni evə köçəcəyik.",
+    "ko": "",
+    "highlight": "köçəcəyik"
+   },
+   {
+    "en": "Narahat olma, hər şey yaxşı olar.",
+    "ko": "",
+    "highlight": "yaxşı olar"
+   },
+   {
+    "en": "O, imtahandan mütləq yüksək qiymət alacaq.",
+    "ko": "",
+    "highlight": "alacaq"
+   },
+   {
+    "en": "Zəhmət olmasa, qapını açarsınız?",
+    "ko": "",
+    "highlight": "açarsınız"
+   },
+   {
+    "en": "O bu sözü heç vaxt deməz.",
+    "ko": "",
+    "highlight": "deməz"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mən sabah Bakıya gedərəm.",
+    "right": "Mən sabah Bakıya gedəcəyəm.",
+    "note": "When expressing a concrete scheduled plan for tomorrow, use the definite future -acaq/-əcək instead of -ar."
+   },
+   {
+    "wrong": "Mən getməyərəm.",
+    "right": "Mən getmərəm.",
+    "note": "The negative indefinite future simplifies to -mar² in the 1st person, and -maz² for other persons (not -mayar)."
+   },
+   {
+    "wrong": "Biz gələcəkik.",
+    "right": "Biz gələcəyik.",
+    "note": "Intervocalic 'k' softens to 'y' before personal vowel endings: gələcək + ik = gələcəyik."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which verb form denotes a firm, tickets-bought plan: 'Biz sabah İtaliyaya ___'?",
+    "options": [
+     "gedərik",
+     "gedirik",
+     "gedəcəyik",
+     "getsək"
+    ],
+    "answer": 2,
+    "explanation": "Planned, definite future actions use -acaq/-əcək: 'gedəcəyik'."
+   },
+   {
+    "question": "How do you politely ask someone to pass the bread: 'Çörəyi verə ___?'",
+    "options": [
+     "rsiniz",
+     "cəksiniz",
+     "yirsiniz",
+     "rdiniz"
+    ],
+    "answer": 0,
+    "explanation": "Polite requests use the indefinite future suffix -ar/-ər: 'verərsiniz?'."
+   },
+   {
+    "question": "Choose the correct negative indefinite form: 'O heç vaxt yalan ___.' (He wouldn't lie)",
+    "options": [
+     "danışmayacaq",
+     "danışmaz",
+     "danışmır",
+     "danışmadı"
+    ],
+    "answer": 1,
+    "explanation": "The 3rd-person negative of the indefinite future uses -maz/-məz: 'danışmaz'."
+   },
+   {
+    "question": "Translate the assumption: 'Maybe he will come.' -> 'Bəlkə o ___.'",
+    "options": [
+     "gələr",
+     "gələcək",
+     "gəlir",
+     "gəlmiş"
+    ],
+    "answer": 0,
+    "explanation": "Speculations paired with words like 'bəlkə' (maybe) naturally trigger the indefinite future: 'gələr'."
+   }
+  ],
+  "tip": "Remember consonant mutation: the 'q' in -acaq turns to 'ğ' (yazacağam) and 'k' in -əcək turns to 'y' (gələcəyəm) when adding 1st-person suffixes."
+ },
+ {
+  "id": "az-a2-evidential-past-tense",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "📰",
+  "title": "Evidential / Indefinite Past Tense (-mış⁴ vs. -ıb⁴)",
+  "subtitle": "Unwitnessed occurrences, deductions, and fast narrative recounting",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Use -mış⁴ when relaying hearsay or newly discovered outcomes, while -ıb⁴ functions as an efficient past narrative and resultative marker.",
+  "structure": {
+   "headers": [
+    "Suffix",
+    "Meaning & Use",
+    "Azerbaijani Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-mış⁴",
+      "Hearsay, inference, perfect state",
+      "qar yağırmış / yağmış",
+      "it has snowed (apparently)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ıb⁴",
+      "Past narrative, unwitnessed action",
+      "gəlib",
+      "he/she came / has arrived"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ıb⁴ restriction",
+      "Cannot be used with 1st person",
+      "Mən getmişəm (NOT: getmişəm / getmişəm)",
+      "I have gone"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Information learned from someone else",
+    "example": "Deyirlər ki, o, yeni iş tapıb.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Realizing an event after seeing its result",
+    "example": "Açarı evdə unutmuşam!",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Chaining actions in storytelling",
+    "example": "O, otağa daxil olub pəncərəni açdı.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Eşitdim ki, Murad imtahanı uğurla verib.",
+    "ko": "",
+    "highlight": "verib"
+   },
+   {
+    "en": "Gecə güclü külək əsib, ağaclar aşıb.",
+    "ko": "",
+    "highlight": "külək əsib"
+   },
+   {
+    "en": "Sən çox dəyişmisən, tanıya bilmədim.",
+    "ko": "",
+    "highlight": "dəyişmisən"
+   },
+   {
+    "en": "Qonaqlar artıq çatıblar.",
+    "ko": "",
+    "highlight": "çatıblar"
+   },
+   {
+    "en": "Sən demə, o da bu məktəbdə oxuyurmuş.",
+    "ko": "",
+    "highlight": "oxuyurmuş"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mən dünən getmişəm və görmüşəm.",
+    "right": "Mən dünən getdim və gördüm.",
+    "note": "If you witnessed or directly took part in a concrete past event, use the definite past (-dı⁴), not the evidential form."
+   },
+   {
+    "wrong": "Mən Bakıya gəlibəm.",
+    "right": "Mən Bakıya gəlmişəm.",
+    "note": "The suffix -ıb⁴ is strictly forbidden with the 1st person (mən/biz); use -mış⁴ instead."
+   },
+   {
+    "wrong": "O kinoya getməyibdir.",
+    "right": "O kinoya getməyib.",
+    "note": "In modern spoken and written Azerbaijani, dropping the archaic copula suffix -dir is standard."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Why is 'Mən çörək alıbam' incorrect?",
+    "options": [
+     "'çörək' must take the accusative case",
+     "The verb stem 'al-' cannot take past tense",
+     "-ıb⁴ is never used with 1st-person subjects",
+     "Vowel harmony was violated"
+    ],
+    "answer": 2,
+    "explanation": "The suffix -ıb⁴ cannot combine with 1st-person personal endings (mən/biz); you must say 'almışam'."
+   },
+   {
+    "question": "Complete the hearsay sentence: 'Eşitdim ki, o universitetə daxil ___.'",
+    "options": [
+     "oldu",
+     "olub",
+     "olacaq",
+     "olur"
+    ],
+    "answer": 1,
+    "explanation": "'olub' (or 'olmuşdur') expresses indirect evidentiality/hearsay ('I heard that...')."
+   },
+   {
+    "question": "Which sentence expresses realizing you forgot your keys upon checking your pocket?",
+    "options": [
+     "Açarı evdə unutdum.",
+     "Açarı evdə unuduram.",
+     "Açarı evdə unudaram.",
+     "Açarı evdə unutmuşam."
+    ],
+    "answer": 3,
+    "explanation": "-mış⁴ conveys realization of a past action through present evidence: 'unutmuşam'."
+   },
+   {
+    "question": "Select the correct negative evidential past form for 'O yazdı' (hearsay: 'He hasn't written'):",
+    "options": [
+     "yazmadı",
+     "yazmır",
+     "yazmayıb",
+     "yazmaz"
+    ],
+    "answer": 2,
+    "explanation": "The negative evidential past form combines -ma/-mə with -yıb/-yib: 'yazmayıb'."
+   }
+  ],
+  "tip": "Golden rule: Never attach 1st-person endings (-am / -ıq) to -ıb! For 'I did / We did' (evidential), always pick -mışam / -mışıq."
+ },
+ {
+  "id": "az-a2-postpositions-and-case-government",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🧭",
+  "title": "Postpositions and Case Government (Qoşmalar)",
+  "subtitle": "Mastering words placed after nouns to establish direction, cause, and time",
+  "color": "#0EA5E9",
+  "bg": "#F0F9FF",
+  "keyPoint": "Azerbaijani uses postpositions rather than prepositions, and each postposition requires its preceding noun to take a specific case.",
+  "structure": {
+   "headers": [
+    "Case Required",
+    "Key Postpositions",
+    "Azerbaijani Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Nominative (Genitive for pronouns)",
+      "üçün, kimi, qədər",
+      "dostum üçün / mənim üçün",
+      "for my friend / for me"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Dative (-a / -ə)",
+      "görə, sarı, tərəf",
+      "sənə görə / evə tərəf",
+      "because of you / towards home"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ablative (-dan / -dən)",
+      "əvvəl, sonra, başqa",
+      "dərsdən sonra / səndən başqa",
+      "after class / except for you"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0EA5E9",
+    "label": "Expressing purpose or beneficiary",
+    "example": "Bu hədiyyəni anam üçün almışam.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Describing time relations",
+    "example": "Yeməkdən əvvəl əllərini yu.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Indicating reason or cause",
+    "example": "Yağışa görə konsert təxirə salındı.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Biz dənizə tərəf addımladıq.",
+    "ko": "",
+    "highlight": "dənizə tərəf"
+   },
+   {
+    "en": "Səndən sonra heç kim gəlmədi.",
+    "ko": "",
+    "highlight": "Səndən sonra"
+   },
+   {
+    "en": "O, quş kimi sürətlə qaçırdı.",
+    "ko": "",
+    "highlight": "quş kimi"
+   },
+   {
+    "en": "Hava soyuq olduğuna görə palto geyindim.",
+    "ko": "",
+    "highlight": "olduğuna görə"
+   },
+   {
+    "en": "Məndən başqa hamı oradaydı.",
+    "ko": "",
+    "highlight": "Məndən başqa"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mən üçün bir qələm ver.",
+    "right": "Mənim üçün bir qələm ver.",
+    "note": "Postpositions that take bare nouns (like üçün) require personal pronouns to be in the genitive case: 'mənim üçün', 'sənin üçün'."
+   },
+   {
+    "wrong": "Dərsdən sonra evə getdi.",
+    "right": "Dərsdən sonra evə getdi.",
+    "note": "Make sure 'sonra' governs the ablative case: 'dərsdən sonra' (never 'dərs sonra')."
+   },
+   {
+    "wrong": "Ona tərəfə qaçdı.",
+    "right": "Ona tərəf qaçdı.",
+    "note": "Postpositions already assign directional meaning; do not duplicate case suffixes onto 'tərəf'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill the blank with the right form: 'Biz saat beşdən ___ gözləyirik.' (since)",
+    "options": [
+     "üçün",
+     "sonra",
+     "əvvəl",
+     "bəri"
+    ],
+    "answer": 3,
+    "explanation": "The postposition 'bəri' (since) governs the ablative case (-dan/-dən): 'beşdən bəri'."
+   },
+   {
+    "question": "How do you say 'like you' in Azerbaijani?",
+    "options": [
+     "sənə kimi",
+     "sənin kimi",
+     "səndən kimi",
+     "səndə kimi"
+    ],
+    "answer": 1,
+    "explanation": "'kimi' governs nominative on regular nouns but genitive on personal pronouns: 'sənin kimi'."
+   },
+   {
+    "question": "Which case is required before the postposition 'görə' (because of / according to)?",
+    "options": [
+     "Dative (-a / -ə)",
+     "Ablative (-dan / -dən)",
+     "Accusative (-ı / -i)",
+     "Locative (-da / -də)"
+    ],
+    "answer": 0,
+    "explanation": "'görə' always takes the dative case (e.g., 'buna görə', 'sənə görə')."
+   },
+   {
+    "question": "Choose the correct phrase: '___ əvvəl zəng elə.' (before coming)",
+    "options": [
+     "gəlməkdən",
+     "gəlməyə",
+     "gəlmək",
+     "gəlməkdə"
+    ],
+    "answer": 0,
+    "explanation": "'əvvəl' requires the ablative case suffix -dən: 'gəlməkdən əvvəl'."
+   }
+  ],
+  "tip": "Watch out for personal pronouns: while nouns stay nominative before 'üçün' and 'kimi' (uşaq üçün), pronouns MUST switch to genitive (mənim üçün, onun kimi)."
+ },
+ {
+  "id": "az-a2-necessity-and-obligation",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#8B5CF6",
+  "emoji": "📋",
+  "title": "Necessity and Obligation Moods (-malı vs. Gərək / Lazım)",
+  "subtitle": "Express internal duty with suffixes or external necessity with modal words",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Attach the suffix -malı/-məli directly to a verb stem for personal obligation, or use modal nouns like lazım and gərək with an infinitive or subjunctive for general requirements.",
+  "structure": {
+   "headers": [
+    "Structure",
+    "Azerbaijani Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Stem + -malı⁴ + Personal Suffix",
+      "Mən getməliyəm",
+      "I must go / I ought to go"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Stem + -maq⁴ + lazımdır",
+      "Çox oxumaq lazımdır",
+      "It is necessary to read a lot"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Gərək + Verb (Optative)",
+      "Gərək indi gedək",
+      "We ought to leave now"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Stem + -malı⁴ + deyil + Personal Suffix",
+      "Sən danışmalı deyilsən",
+      "You should not speak"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Direct Personal Duty",
+    "example": "Biz sabah erkən durmalıyıq.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "General Necessity",
+    "example": "Sağlam qalmaq üçün idman etmək lazımdır.",
+    "translation": ""
+   },
+   {
+    "color": "#5B21B6",
+    "label": "Moral Expectation (Gərək)",
+    "example": "Gərək böyüklərə hörmət edəsən.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Biz dərslərimizi vaxtında hazırlamalıyıq.",
+    "ko": "",
+    "highlight": "hazırlamalıyıq"
+   },
+   {
+    "en": "Bu məsələni tez həll etmək lazımdır.",
+    "ko": "",
+    "highlight": "etmək lazımdır"
+   },
+   {
+    "en": "Gərək həqiqəti hamıya deyəsən.",
+    "ko": "",
+    "highlight": "Gərək"
+   },
+   {
+    "en": "Sən bu soyuqda dondurma yeməməlisən.",
+    "ko": "",
+    "highlight": "yeməməlisən"
+   },
+   {
+    "en": "İmtahana girmək üçün şəxsiyyət vəsiqəsi vacibdir.",
+    "ko": "",
+    "highlight": "vacibdir"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mən getmək lazımdır.",
+    "right": "Mənə getmək lazımdır.",
+    "note": "When using lazım with an infinitive for a specific person, the subject must take the dative case (mənə, sənə)."
+   },
+   {
+    "wrong": "O gəlməli deyil idi.",
+    "right": "O gəlməməli idi.",
+    "note": "While 'deyil' can negate -malı in the present, past negated obligations usually attach the negative -ma/-mə directly to the stem."
+   },
+   {
+    "wrong": "Biz gərək gedirik.",
+    "right": "Biz gərək gedək.",
+    "note": "The particle 'gərək' triggers the optative/subjunctive mood suffix (-a/-ə), not the indicative present tense."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Every citizen ___ respect the state laws.",
+    "options": [
+     "hörmət etməlidir",
+     "hörmət edir",
+     "hörmət edəcək",
+     "hörmət etsin"
+    ],
+    "answer": 0,
+    "explanation": "The obligation suffix -malı/-məli with the 3rd person suffix -dır expresses 'must/ought to'."
+   },
+   {
+    "question": "To learn a language, it is necessary ___ words every day.",
+    "options": [
+     "əzbərləməliyik",
+     "əzbərləmək lazımdır",
+     "əzbərləyəsən",
+     "əzbərləməlisən"
+    ],
+    "answer": 1,
+    "explanation": "General impersonal necessity uses the infinitive (-mək) followed by 'lazımdır'."
+   },
+   {
+    "question": "We ___ today; the weather is awful.",
+    "options": [
+     "getməliyik",
+     "getmək lazımdır",
+     "getməməliyik",
+     "getməliyəm"
+    ],
+    "answer": 2,
+    "explanation": "'Getməməliyik' means 'we must not go', incorporating the negative -mə- into -məli- with 1st person plural -yik."
+   },
+   {
+    "question": "You ought to ___ your doctor regularly (using gərək).",
+    "options": [
+     "görərsən",
+     "görməlisən",
+     "görəsən",
+     "görürsən"
+    ],
+    "answer": 2,
+    "explanation": "The modal word 'gərək' pairs naturally with the 2nd person singular optative form 'görəsən'."
+   }
+  ],
+  "tip": "Distinguish personal responsibility from impersonal rules: use '-malı' when pointing directly at the doer, and 'infinitive + lazımdır' when stating an impersonal requirement."
+ },
+ {
+  "id": "az-a2-optative-imperative-moods",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🗣️",
+  "title": "Imperative and Optative Moods (Əmr və Arzu Şəkilləri)",
+  "subtitle": "Issue direct instructions and utter polite wishes or suggestions",
+  "color": "#10B981",
+  "bg": "#ECFDF5",
+  "keyPoint": "The imperative mood employs distinct person-specific endings with no overt suffix on the bare stem for 'you (singular)', whereas the optative utilizes -(y)a/-(y)ə to convey wishes and suggestions.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Imperative (Əmr)",
+    "Optative (Arzu)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Plural (Biz)",
+      "Gələk (Let us come)",
+      "Gələyik (May we come)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd Singular (Sən)",
+      "Gəl! (Come!)",
+      "Gələsən (Wish you would come)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Plural (Siz)",
+      "Gəlin! (Come!)",
+      "Gələsiniz (Wish you would come)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Singular (O)",
+      "Gəlsin (Let him/her come)",
+      "Gələ (May he/she come)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Direct Command",
+    "example": "Qapını bağlayın!",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Friendly Invitation",
+    "example": "Gəl bir yerdə çay içək.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Heartfelt Wish",
+    "example": "Kaş ki, sən də bizimlə gələsən.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Zəhmət olmasa, mənə bir stəkan su verin.",
+    "ko": "",
+    "highlight": "verin"
+   },
+   {
+    "en": "Gəlin bu layihəni birlikdə başlayaq.",
+    "ko": "",
+    "highlight": "başlayaq"
+   },
+   {
+    "en": "Uşaqlar otaqda sakit otursunlar.",
+    "ko": "",
+    "highlight": "otursunlar"
+   },
+   {
+    "en": "Kaş bu gün anam bizə gələ.",
+    "ko": "",
+    "highlight": "gələ"
+   },
+   {
+    "en": "Sən heç vaxt ümidini itirmə!",
+    "ko": "",
+    "highlight": "itirmə"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Sən gəlin!",
+    "right": "Sən gəl!",
+    "note": "'-in/-ın/-un/-ün' is reserved for the polite or plural 'siz'; the bare stem is used for informal singular 'sən'."
+   },
+   {
+    "wrong": "Biz çörək alaq?",
+    "right": "Biz çörək alaq.",
+    "note": "In speech, the 1st person imperative/optative ending '-aq/-ək' functions as 'let us', not as an indicative question without context."
+   },
+   {
+    "wrong": "Kaş o yaxşı oxuyur.",
+    "right": "Kaş o yaxşı oxuya.",
+    "note": "The particle 'kaş' (if only) obligatorily governs the optative mood ending (-a/-ə), not the present indicative."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Please ___ the window, it is cold inside (polite).",
+    "options": [
+     "bağla",
+     "bağlayın",
+     "bağlasın",
+     "bağlayarıq"
+    ],
+    "answer": 1,
+    "explanation": "The polite plural imperative takes -(y)ın/-(y)in/-(y)un/-(y)ün, yielding 'bağlayın'."
+   },
+   {
+    "question": "Let him ___ here and wait for us.",
+    "options": [
+     "gəl",
+     "gəlsin",
+     "gəlin",
+     "gələk"
+    ],
+    "answer": 1,
+    "explanation": "The 3rd person singular imperative suffix is -sın/-sin/-sun/-sün."
+   },
+   {
+    "question": "If only you would ___ the exam successfully!",
+    "options": [
+     "keçəsən",
+     "keç",
+     "keçirsən",
+     "keçməlisən"
+    ],
+    "answer": 0,
+    "explanation": "The optative 2nd person singular suffix -(y)asın/-(y)əsən attaches to 'keç' to make 'keçəsən'."
+   },
+   {
+    "question": "Let's ___ lunch together!",
+    "options": [
+     "yeyin",
+     "yeyir",
+     "yeyək",
+     "yeyirsən"
+    ],
+    "answer": 2,
+    "explanation": "The 1st person plural imperative/hortative suffix is -(y)aq/-(y)ək, making 'yeyək'."
+   }
+  ],
+  "tip": "Use the bare verb root for casual orders to friends ('Bax!'), but always add '-ın/-in' for politeness and respect ('Baxın!')."
+ },
+ {
+  "id": "az-b1-verbal-adverbs-converb-ib",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔗",
+  "title": "Converbs for Sequential and Manner Actions (-(y)ıb and -(y)araq)",
+  "subtitle": "Chain consecutive actions and depict simultaneous manner elegantly",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The converb -(y)ıb expresses an action completed immediately before the main verb, while -(y)araq expresses the manner or a simultaneous background action.",
+  "structure": {
+   "headers": [
+    "Converb Suffix",
+    "Primary Meaning",
+    "Example",
+    "English Sense"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-(y)ıb⁴",
+      "Sequential action (and then)",
+      "Yemək yeyib çıxdı",
+      "He ate and left"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-(y)araq²",
+      "Manner / Simultaneity (by doing / -ing)",
+      "Gülərək danışdı",
+      "She spoke laughing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-mayaraq²",
+      "Negative manner / Concessive (without / despite)",
+      "Baxmayaraq getdi",
+      "He went despite it"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-(y)ıb⁴ ... -(y)ıb⁴",
+      "Repeated sequential events",
+      "Gəzib-görüb öyrəndi",
+      "He traveled and learned"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Chained Sequence",
+    "example": "O, qapını açıb içəri girdi.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Manner of Action",
+    "example": "Müəllim təbəssüm edərək suala cavab verdi.",
+    "translation": ""
+   },
+   {
+    "color": "#1E40AF",
+    "label": "Without Doing Something",
+    "example": "O heç nə deməyərək otaqdan uzaqlaşdı.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kitabı oxuyub rəfə qoydu.",
+    "ko": "",
+    "highlight": "oxuyub"
+   },
+   {
+    "en": "Uşaq qaça-qaça yox, qaçaraq yanımıza gəldi.",
+    "ko": "",
+    "highlight": "qaçaraq"
+   },
+   {
+    "en": "Pəncərəni açıb otağın havasını dəyişdik.",
+    "ko": "",
+    "highlight": "açıb"
+   },
+   {
+    "en": "O, musiqiyə qulaq asaraq rəsm çəkir.",
+    "ko": "",
+    "highlight": "asaraq"
+   },
+   {
+    "en": "Yolda dayanıb dostu ilə salamlaşdı.",
+    "ko": "",
+    "highlight": "dayanıb"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mən kitabı oxudum və rəfə qoydum.",
+    "right": "Kitabı oxuyub rəfə qoydum.",
+    "note": "While 'və' is grammatically possible, native Azerbaijani strongly prefers the converb -(y)ıb to chain related clauses sharing a subject."
+   },
+   {
+    "wrong": "O ağlayıb danışdı.",
+    "right": "O ağlayaraq danışdı.",
+    "note": "If crying describes the manner while speaking, use -(y)araq; -(y)ıb implies she cried first, stopped, and then spoke."
+   },
+   {
+    "wrong": "Mən durub o getdi.",
+    "right": "Mən durdum, o isə getdi.",
+    "note": "The -(y)ıb converb is predominantly restricted to clauses having identical grammatical subjects."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He turned off the computer and ___ to sleep.",
+    "options": [
+     "söndürüb getdi",
+     "söndürərək getdi",
+     "söndürüncə getdi",
+     "söndürsə getdi"
+    ],
+    "answer": 0,
+    "explanation": "Turned off and then left is a direct sequence of actions sharing a subject, requiring -(y)ıb."
+   },
+   {
+    "question": "She explained the rules ___ carefully.",
+    "options": [
+     "izah edib",
+     "izah edərək",
+     "izah edəndə",
+     "izah etdikdə"
+    ],
+    "answer": 1,
+    "explanation": "The suffix -(y)araq indicates manner ('by explaining' / 'explaining')."
+   },
+   {
+    "question": "We did our homework and ___ outside.",
+    "options": [
+     "edərək çıxdıq",
+     "edəndə çıxdıq",
+     "edib çıxdıq",
+     "etsək çıxdıq"
+    ],
+    "answer": 2,
+    "explanation": "'Edib çıxdıq' smoothly joins two sequential actions done by 'biz'."
+   },
+   {
+    "question": "He left the meeting without ___ anything.",
+    "options": [
+     "demədən",
+     "deməyərək",
+     "deyib",
+     "deyərək"
+    ],
+    "answer": 1,
+    "explanation": "The negative converb -mayaraq/-məyərək conveys 'without saying'."
+   }
+  ],
+  "tip": "Avoid repeating 'və' (and) across sequential sentences; replacing the first conjugated verb with '-(y)ıb' instantly makes your speech sound natural and fluent."
+ },
+ {
+  "id": "az-b1-temporal-converbs",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#3B82F6",
+  "emoji": "⏰",
+  "title": "Temporal Converbs (-anda, -dıqda, -ınca)",
+  "subtitle": "Build complex 'when', 'while', and 'as soon as' time clauses",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Attach -anda/-əndə for conversational 'when', -dıqda⁴ for formal temporal contexts, and -(y)ınca⁴ to express the exact boundary 'as soon as' or 'until'.",
+  "structure": {
+   "headers": [
+    "Converb",
+    "Tone / Register",
+    "Meaning",
+    "Azerbaijani Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-(y)anda²",
+      "Conversational",
+      "When / At the time of",
+      "Mən gələndə yatmışdı"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-dıqda⁴",
+      "Formal / Literary",
+      "Upon / When",
+      "Şəhərə çatdıqda xəbər ver"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-(y)ınca⁴",
+      "General / Narrative",
+      "As soon as / Until",
+      "Sən gəlincə işi bitirərəm"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ar... -maz²",
+      "Immediate sequence",
+      "As soon as (instantly)",
+      "Evə çatar-çatmaz zəng vurdu"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Casual 'When' Action",
+    "example": "Bakıya çatanda mənə zəng et.",
+    "translation": ""
+   },
+   {
+    "color": "#0369A1",
+    "label": "Formal Temporal Trigger",
+    "example": "Təhlükə yarandıqda dərhal xilasedicilərə məlumat verin.",
+    "translation": ""
+   },
+   {
+    "color": "#075985",
+    "label": "Immediate Limit / Until",
+    "example": "Yağış kəsincə biz bağda gözlədik.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Zəng çalınanda bütün şagirdlər sinfə qaçdı.",
+    "ko": "",
+    "highlight": "çalınanda"
+   },
+   {
+    "en": "Sənədləri imzaladıqda diqqətli olmaq lazımdır.",
+    "ko": "",
+    "highlight": "imzaladıqda"
+   },
+   {
+    "en": "Mən qayıdınca sən burada gözlə.",
+    "ko": "",
+    "highlight": "qayıdınca"
+   },
+   {
+    "en": "Qapını açanda qarşısında köhnə dostunu gördü.",
+    "ko": "",
+    "highlight": "açanda"
+   },
+   {
+    "en": "Günəş batdıqda hava birdən-birə soyudu.",
+    "ko": "",
+    "highlight": "batdıqda"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Nə vaxt mən gəldim, o yatmışdı.",
+    "right": "Mən gələndə o yatmışdı.",
+    "note": "Do not translate English 'when' with the interrogative 'nə vaxt'; temporal subordinate clauses require converb suffixes like -anda."
+   },
+   {
+    "wrong": "Gələndə mən, sənə deyəcəyəm.",
+    "right": "Mən gələndə sənə deyəcəyəm.",
+    "note": "Subordinate temporal converb clauses must keep their subject inside or before the converb clause."
+   },
+   {
+    "wrong": "Sən gəlincə qədər gözlədim.",
+    "right": "Sən gələnə qədər gözlədim.",
+    "note": "The postposition 'qədər' (until) pairs with the dative participle -(y)an-a, whereas -(y)ınca already incorporates the meaning of 'until/as soon as' on its own."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Call me ___ you reach the airport.",
+    "options": [
+     "çatanda",
+     "çataraq",
+     "çatıb",
+     "çatmalı"
+    ],
+    "answer": 0,
+    "explanation": "The everyday temporal converb 'when you arrive' is formed with -(y)anda: 'çatanda'."
+   },
+   {
+    "question": "In official notices: '___ an alarm, keep calm.'",
+    "options": [
+     "eşidəndə",
+     "eşitdikdə",
+     "eşidincə",
+     "eşidərək"
+    ],
+    "answer": 1,
+    "explanation": "The suffix -dıqda/-dikdə/-duqda/-dükdə conveys formal or written 'upon/when'."
+   },
+   {
+    "question": "Wait here ___ the rain stops.",
+    "options": [
+     "kəsərək",
+     "kəsib",
+     "kəsincə",
+     "kəssə"
+    ],
+    "answer": 2,
+    "explanation": "The converb -(y)ınca implies 'until / as soon as the event occurs'."
+   },
+   {
+    "question": "___ entered the room, everyone stood up.",
+    "options": [
+     "Otağa girəndə",
+     "Otağa girərək",
+     "Otağa girib",
+     "Otağa girsə"
+    ],
+    "answer": 0,
+    "explanation": "'Girəndə' correctly creates the temporal clause 'When (he/she) entered'."
+   }
+  ],
+  "tip": "Think of -anda as the everyday, conversational way to say 'when', and save -dıqda for official writing, news, or formal speeches."
+ },
+ {
+  "id": "az-b1-participial-relative-clauses",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🧩",
+  "title": "Participles and Relative Clauses (-an, -dığı, -acaq)",
+  "subtitle": "Build subject and object relative clauses that precede nouns",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Azerbaijani relative clauses precede the head noun using the subject participle -(y)an or the object participle -dığı (with possessive agreement).",
+  "structure": {
+   "headers": [
+    "Type",
+    "Participle Suffix",
+    "Formula",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Subject Relative",
+      "-(y)an²",
+      "Verb + -an + Noun",
+      "Danışan adam (The man who speaks)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Object Relative",
+      "-dığı⁴ + Possessive",
+      "Verb + -dığı-mız + Noun",
+      "Oxuduğumuz kitab (The book we read)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Future Relative",
+      "-(y)acaq² + Possessive",
+      "Verb + -acağı-m + Noun",
+      "Görəcəyim iş (The work I will do)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Substantivized",
+      "-(y)an² + Plural/Case",
+      "Participle + Suffixes",
+      "Gələnlər (Those who come)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Subject Modifier (Who does)",
+    "example": "Həyətdə oynayan uşaqlar çox şaddır.",
+    "translation": ""
+   },
+   {
+    "color": "#3730A3",
+    "label": "Object Modifier (Which is done)",
+    "example": "Dünən aldığım telefon çox sürətlidir.",
+    "translation": ""
+   },
+   {
+    "color": "#312E81",
+    "label": "Future Attribute",
+    "example": "Sabah gedəcəyimiz muzey çox maraqlıdır.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Qapını açan adam mənim qardaşımdır.",
+    "ko": "",
+    "highlight": "açan"
+   },
+   {
+    "en": "Sənin yazdığın məqaləni hamı bəyəndi.",
+    "ko": "",
+    "highlight": "yazdığın"
+   },
+   {
+    "en": "Bizim qalacağımız otel dəniz kənarındadır.",
+    "ko": "",
+    "highlight": "qalacağımız"
+   },
+   {
+    "en": "Məclisdə oturan qonaqlar musiqiyə qulaq asırdılar.",
+    "ko": "",
+    "highlight": "oturan"
+   },
+   {
+    "en": "Gördüyüm mənzərə məni heyran etdi.",
+    "ko": "",
+    "highlight": "Gördüyüm"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Adam kim qapını açdı, mənim dostumdur.",
+    "right": "Qapını açan adam mənim dostumdur.",
+    "note": "Azerbaijani does not use relative pronouns like 'kim' (who) or 'hansı ki' (which) in native syntax; relative clauses precede the head noun with participles."
+   },
+   {
+    "wrong": "Mən oxuyan kitab çox maraqlıdır.",
+    "right": "Mənim oxuduğum kitab çox maraqlıdır.",
+    "note": "When the head noun is the object of the clause ('the book that I read'), use the -dığı + possessive participle, not the subject participle -an."
+   },
+   {
+    "wrong": "Bizim getdiyimiz adam.",
+    "right": "Bizimlə gedən adam.",
+    "note": "If the head noun is the subject performing the action ('the person going with us'), use -(y)an, not -dığı."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The boy ___ in the garden is my brother.",
+    "options": [
+     "oynayan",
+     "oynadığı",
+     "oynayaraq",
+     "oynandı"
+    ],
+    "answer": 0,
+    "explanation": "The boy is the subject of the playing action, so the subject participle -(y)an is required: 'oynayan'."
+   },
+   {
+    "question": "The meal that my mother ___ was delicious.",
+    "options": [
+     "bişirən",
+     "bişirdiyi",
+     "bişirərək",
+     "bişirəndə"
+    ],
+    "answer": 1,
+    "explanation": "The food is the direct object of mother's cooking, so -dığı + 3rd person possessive (-i) -> 'bişirdiyi' is used."
+   },
+   {
+    "question": "The car that we will ___ tomorrow is new.",
+    "options": [
+     "alırıq",
+     "aldığımız",
+     "alacağımız",
+     "alan"
+    ],
+    "answer": 2,
+    "explanation": "A prospective action on an object uses -(y)acaq + possessive ending: 'alacağımız'."
+   },
+   {
+    "question": "___ should register at the front desk.",
+    "options": [
+     "Gələnlər",
+     "Gəldikləri",
+     "Gələndə",
+     "Gələrək"
+    ],
+    "answer": 0,
+    "explanation": "'Gələnlər' is the substantivized participle meaning 'those who arrived / come'."
+   }
+  ],
+  "tip": "Ask yourself: Is the noun doing the action? Use '-an' (e.g. 'yazan qız' = the girl who writes). Is the noun receiving the action? Use '-dığı' (e.g. 'yazdığı məktub' = the letter that she wrote)."
+ },
+ {
+  "id": "az-b1-conditional-mood-and-hypotheticals",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#0284c7",
+  "emoji": "🔀",
+  "title": "Real and Unreal Conditionals (-sa² and İdi / İsə)",
+  "subtitle": "Express real conditions and hypothetical counterfactuals",
+  "color": "#0369a1",
+  "bg": "#f0f9ff",
+  "keyPoint": "Attach the two-way suffix -sa/-sə directly to the verb stem for real present or future conditions, but attach it to past or imperfective stems combined with the past copula idi to convey unreal counterfactuals.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Form",
+    "Azerbaijani Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Real Condition",
+      "Verb + -sa/-sə",
+      "Gəlsə, görərik.",
+      "If he comes, we will see."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Unreal Counterfactual",
+      "Verb + -saydı/-səydi",
+      "Bilsəydim, gələPositiondim.",
+      "If I had known, I would have come."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Present Habitual Conditional",
+      "Aorist + -sa/-sə",
+      "Oxuyarsa, öyrənər.",
+      "If he reads, he learns."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Unreal Consequence",
+      "Aorist + idi",
+      "Görsəydim, deyərdim.",
+      "If I had seen, I would have said."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284c7",
+    "label": "Real Future Condition",
+    "example": "Sabah hava yaxşı olsa, parka gedəcəyik.",
+    "translation": ""
+   },
+   {
+    "color": "#0ea5e9",
+    "label": "Counterfactual Past Condition",
+    "example": "Vaxtım olsaydı, sənə kömək edərdim.",
+    "translation": ""
+   },
+   {
+    "color": "#38bdf8",
+    "label": "Present Unreal Wish",
+    "example": "İndi Bakıda olsaydım, dənizə baxardım.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Yağış yağsa, evdə qalacağıq.",
+    "ko": "",
+    "highlight": "yağsa"
+   },
+   {
+    "en": "Pulum çox olsaydı, yeni ev alardım.",
+    "ko": "",
+    "highlight": "olsaydı"
+   },
+   {
+    "en": "Dərsi yaxşı oxusan, imtahanı asanlıqla keçərsən.",
+    "ko": "",
+    "highlight": "oxusan"
+   },
+   {
+    "en": "Əgər o vaxt zəng etsəydin, görüşərdik.",
+    "ko": "",
+    "highlight": "etsəydin"
+   },
+   {
+    "en": "Tələssəniz, qatara vaxtında çatarsınız.",
+    "ko": "",
+    "highlight": "Tələssəniz"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Əgər gələcək, mən gedəcəyəm.",
+    "right": "Əgər gəlsə, mən gedəcəyəm.",
+    "note": "Azerbaijani conditional clauses require the conditional suffix -sa/-sə rather than the future tense -acaq."
+   },
+   {
+    "wrong": "Bilsəydim, gələcəkdim.",
+    "right": "Bilsəydim, gələrdim.",
+    "note": "In unreal counterfactual apodoses (result clauses), use the aorist past (-ardı/-ərdi) rather than the future past."
+   },
+   {
+    "wrong": "Gəlsə idi, görərdik.",
+    "right": "Gəlsəydi, görərdik.",
+    "note": "When using idi with a vowel-ending suffix like -sə, insert the buffer consonant 'y' or fuse as -səydi."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "If you study hard, you will pass the exam: 'Çox ___, imtahanı verəcəksən.'",
+    "options": [
+     "oxuyacaqsan",
+     "oxusan",
+     "oxusaydın",
+     "oxumaq"
+    ],
+    "answer": 1,
+    "explanation": "A real future condition takes the direct conditional suffix -san (2nd person singular of -sa)."
+   },
+   {
+    "question": "If I had money right now, I would buy that car: 'Pulum ___, o maşını alardım.'",
+    "options": [
+     "olsaydı",
+     "olarsa",
+     "olsun",
+     "olacaq"
+    ],
+    "answer": 0,
+    "explanation": "An unreal hypothetical conditional uses the compound past conditional suffix -saydı."
+   },
+   {
+    "question": "If we hurry, we can catch the bus: '___, avtobusa çatarıq.'",
+    "options": [
+     "Tələsdik",
+     "Tələssəydik",
+     "Tələssək",
+     "Tələsmək"
+    ],
+    "answer": 2,
+    "explanation": "The 1st person plural real condition suffix is -sək."
+   },
+   {
+    "question": "If she had called me yesterday, I would have answered: 'Dünən mənə zəng ___, cavab verərdim.'",
+    "options": [
+     "etsə",
+     "edər",
+     "edirdi",
+     "etsəydi"
+    ],
+    "answer": 3,
+    "explanation": "Counterfactual conditions referring to past unrealized events require -səydi."
+   }
+  ],
+  "tip": "The introductory conjunction 'əgər' (if) is optional in Azerbaijani; the suffix -sa/-sə alone fully conveys the conditional meaning."
+ },
+ {
+  "id": "az-b1-verbal-noun-inflection",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#16a34a",
+  "emoji": "🏷️",
+  "title": "Verbal Nouns in -maq² and -ma² with Case and Possessives",
+  "subtitle": "Nominalize actions and apply case markers and possessives",
+  "color": "#15803d",
+  "bg": "#f0fdf4",
+  "keyPoint": "Use -maq for abstract infinitives receiving grammatical cases, but switch to the short verbal noun -ma/-mə whenever possessive person suffixes must be attached.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Form",
+    "Azerbaijani Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Full Infinitive + Dative",
+      "-mağa / -məyə",
+      "Oxumağa başladı.",
+      "He began to read."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Short Verbal Noun + Possessive",
+      "-ma + POSS",
+      "Sənin gəlməyin vacibdir.",
+      "Your coming is important."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Full Infinitive + Ablative",
+      "-maqdan / -məkdən",
+      "Yorulmaqdan qorxma.",
+      "Do not fear getting tired."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Short Verbal Noun + Poss + Accusative",
+      "-ma + POSS + -nı",
+      "Onun getməsini istəmirəm.",
+      "I do not want his leaving."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#16a34a",
+    "label": "Infinitive with Case Markers",
+    "example": "İdmanla məşğul olmaqdan zövq alıram.",
+    "translation": ""
+   },
+   {
+    "color": "#22c55e",
+    "label": "Personal Subject of a Clause",
+    "example": "Sizin bizə kömək etməyiniz lazımdır.",
+    "translation": ""
+   },
+   {
+    "color": "#4ade80",
+    "label": "Verbal Noun as Object with Possessive",
+    "example": "Onun bu barədə danışmasını bəyənmədim.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Bakıda yaşamaq çox maraqlıdır.",
+    "ko": "",
+    "highlight": "yaşamaq"
+   },
+   {
+    "en": "Mənim burada qalmağım hamını təəccübləndirdi.",
+    "ko": "",
+    "highlight": "qalmağım"
+   },
+   {
+    "en": "Sən universitetdə oxumağa qərar verdinmi?",
+    "ko": "",
+    "highlight": "oxumağa"
+   },
+   {
+    "en": "Onun gecikməsi planlarımızı pozdu.",
+    "ko": "",
+    "highlight": "gecikməsi"
+   },
+   {
+    "en": "Biz dərsi vaxtında bitirməkdən məmnun olduq.",
+    "ko": "",
+    "highlight": "bitirməkdən"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mənim oxumağım istəyir.",
+    "right": "Mənim oxumağımı istəyir.",
+    "note": "When the possessed verbal noun functions as a definite direct object, it requires the accusative case suffix -ı/-i/-u/-ü."
+   },
+   {
+    "wrong": "Sənin getməkin yaxşıdır.",
+    "right": "Sənin getməyin yaxşıdır.",
+    "note": "Use the short verbal noun (-mə + -yin) for possessives; the infinitive -mək cannot directly take possessive personal suffixes without mutating or sounding ungrammatical."
+   },
+   {
+    "wrong": "O, yazmaqa başladı.",
+    "right": "O, yazmağa başladı.",
+    "note": "Intervocalic 'q' in -maq softens to 'ğ' before vowel suffixes like the dative -a."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Your coming early made us very glad: 'Sənin tez ___ bizi çox sevindirdi.'",
+    "options": [
+     "gəlmək",
+     "gəlməyin",
+     "gələndə",
+     "gəldin"
+    ],
+    "answer": 1,
+    "explanation": "The 2nd person singular possessive attaches to the short verbal noun stem -mə as -məyin."
+   },
+   {
+    "question": "He started to learn the Azerbaijani language: 'O, Azərbaycan dilini ___ başladı.'",
+    "options": [
+     "öyrənməyə",
+     "öyrənmək",
+     "öyrənməsini",
+     "öyrənməkdə"
+    ],
+    "answer": 0,
+    "explanation": "The verb 'başlamaq' governs the dative case (-a/-ə), transforming -mək into -məyə."
+   },
+   {
+    "question": "I am tired of waiting here: 'Burada ___ bezdim.'",
+    "options": [
+     "gözləmək",
+     "gözləməyə",
+     "gözləməkdən",
+     "gözləməm"
+    ],
+    "answer": 2,
+    "explanation": "The verb 'bezmək' requires the ablative case suffix -dən/-dan on the verbal noun."
+   },
+   {
+    "question": "We did not want his departure: 'Biz onun ___ istəmədik.'",
+    "options": [
+     "getmək",
+     "getməkdən",
+     "getməyə",
+     "getməsini"
+    ],
+    "answer": 3,
+    "explanation": "Third person singular possessive (-si) plus the accusative case marker (-ni) yields -məsini."
+   }
+  ],
+  "tip": "Remember: -maq softens to -mağ- before vowels (oxumaq -> oxumağa), while -ma takes -y- before 2nd person possessives (gəlmə-y-in)."
+ },
+ {
+  "id": "az-b2-verb-voice-derivations",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#9333ea",
+  "emoji": "🔄",
+  "title": "Complex Verb Voice Derivations",
+  "subtitle": "Stack passive, causative, reciprocal, and reflexive voice suffixes",
+  "color": "#7e22ce",
+  "bg": "#faf5ff",
+  "keyPoint": "Stack voice suffixes in standard sequence onto the verb root—reflexive/reciprocal or causative, followed by passive—to alter transitivity and agency.",
+  "structure": {
+   "headers": [
+    "Voice",
+    "Suffix",
+    "Azerbaijani Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Passive",
+      "-ıl⁴ / -ın⁴",
+      "Məktub yazıldı.",
+      "The letter was written."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Causative + Passive",
+      "-dır⁴ + -ıl⁴",
+      "Ev təmir etdirildi.",
+      "The house was had renovated."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Reciprocal",
+      "-(ı)ş⁴",
+      "Onlar qucaqlaşdılar.",
+      "They hugged each other."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reflexive",
+      "-(ı)n⁴",
+      "Əli yuyundu.",
+      "Ali washed himself."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#9333ea",
+    "label": "Passive Voice for Impersonal Events",
+    "example": "Bütün qapılar axşam saatlarında bağlandı.",
+    "translation": ""
+   },
+   {
+    "color": "#a855f7",
+    "label": "Causative Action Through Others",
+    "example": "Müəllim tələbəyə mətni oxutdurdu.",
+    "translation": ""
+   },
+   {
+    "color": "#c084fc",
+    "label": "Reciprocal / Mutual Interaction",
+    "example": "Dostlar illər sonra küçədə görüşdülər.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Yeni qanun parlamentdə qəbul edildi.",
+    "ko": "",
+    "highlight": "edildi"
+   },
+   {
+    "en": "Rəhbərlik sənədləri katibəyə imzalatdırdı.",
+    "ko": "",
+    "highlight": "imzalatdırdı"
+   },
+   {
+    "en": "Qonaqlar bir-biri ilə mehribanlıqla salamlaşdılar.",
+    "ko": "",
+    "highlight": "salamlaşdılar"
+   },
+   {
+    "en": "Qız güzgünün qabağında bəzəndi.",
+    "ko": "",
+    "highlight": "bəzəndi"
+   },
+   {
+    "en": "Məktəb binası keçən il tikdirildi.",
+    "ko": "",
+    "highlight": "tikdirildi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Məktub yazındı.",
+    "right": "Məktub yazıldı.",
+    "note": "Use -ıl⁴ for passive when the root ends in a consonant other than 'l'; -ın⁴ is reserved for reflexive or specific roots."
+   },
+   {
+    "wrong": "Uşaq anası tərəfindən geyindirildi.",
+    "right": "Uşaq anası tərəfindən geyindirildi.",
+    "note": "Ensure stacked suffixes follow the strict morphological order: Root + Causative (-dir) + Passive (-il)."
+   },
+   {
+    "wrong": "Onlar bir-birini baxışdılar.",
+    "right": "Onlar bir-birinə baxışdılar.",
+    "note": "Reciprocal verbs often change case government; 'baxışmaq' governs the dative (-ə), not the accusative (-i)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The historical building was restored last year: 'Tarixi bina keçən il ___.'",
+    "options": [
+     "təmir etdi",
+     "təmir etdirildi",
+     "təmir etdirdi",
+     "təmir etmədi"
+    ],
+    "answer": 1,
+    "explanation": "The causative -dir stacked with passive -il yields 'təmir etdirildi' (was made to be restored)."
+   },
+   {
+    "question": "The two old friends met after many years: 'İki köhnə dost illər sonra ___.'",
+    "options": [
+     "gördülər",
+     "göründülər",
+     "görüşdülər",
+     "göstərdilər"
+    ],
+    "answer": 2,
+    "explanation": "The reciprocal voice suffix -(ü)ş indicates mutual action: görüşmək (to meet each other)."
+   },
+   {
+    "question": "The child washed and prepared himself: 'Uşaq səhər tezdən yuyunub ___.'",
+    "options": [
+     "geyinildi",
+     "geyinirdi",
+     "geyindi",
+     "geyindirdi"
+    ],
+    "answer": 2,
+    "explanation": "The reflexive suffix -(i)n indicates an action performed on oneself: geyindi (he dressed himself)."
+   },
+   {
+    "question": "All the tasks were completed on time: 'Bütün tapşırıqlar vaxtında ___.'",
+    "options": [
+     "yerinə yetirildi",
+     "yerinə yetirdi",
+     "yerinə yetirmədi",
+     "yerinə yetirtdi"
+    ],
+    "answer": 0,
+    "explanation": "The passive form of yetirmək is yetirilmək; with past tense it becomes yerinə yetirildi."
+   }
+  ],
+  "tip": "If a verb stem ends in the letter 'l' (like 'al-' to take), the passive suffix shifts from -ıl to -ın (alındı, not alıldı) to prevent awkward consonant repetition."
+ },
+ {
+  "id": "az-b2-compound-modal-aspectual-verbs",
+  "level": "b2",
+  "category": "modals",
+  "categoryColor": "#d97706",
+  "emoji": "⏳",
+  "title": "Compound Verb Formations with Bilmək, Başlamaq, and Qalmaq",
+  "subtitle": "Convey potentiality, inchoative starts, and continuous duration",
+  "color": "#b45309",
+  "bg": "#fffbeb",
+  "keyPoint": "Combine a lexical verb ending in -a/-ə or -maq with auxiliary verbs like bilmək (ability), başlamaq (initiation), or qalmaq (uninterrupted duration).",
+  "structure": {
+   "headers": [
+    "Aspect/Mood",
+    "Formula",
+    "Azerbaijani Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Potentiality",
+      "Stem + -a/-ə bilmək",
+      "Yaza bilirəm.",
+      "I can write."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Inchoative",
+      "Stem + -mağa/-məyə başlamaq",
+      "Danışmağa başladı.",
+      "He began to speak."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Durative Continuous",
+      "Stem + -a/-ə qalmaq",
+      "Baxa qaldım.",
+      "I remained staring (in awe)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Potential",
+      "Stem + -ammamaq / bilməmək",
+      "Gələ bilmirəm.",
+      "I cannot come."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#d97706",
+    "label": "Ability and Possibility",
+    "example": "Mən bu çətin suala cavab verə bilərəm.",
+    "translation": ""
+   },
+   {
+    "color": "#f59e0b",
+    "label": "Commencement of Action",
+    "example": "Qəflətən güclü qar yağmağa başladı.",
+    "translation": ""
+   },
+   {
+    "color": "#fbbf24",
+    "label": "Stupefied or Persistent State",
+    "example": "Gözlənilməz xəbəri eşidəndə donub qala qaldı.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Sən sabahkı tədbirə gələ bilərsənmi?",
+    "ko": "",
+    "highlight": "gələ bilərsənmi"
+   },
+   {
+    "en": "Uşaqlar həyətdə qaçmağa başladılar.",
+    "ko": "",
+    "highlight": "qaçmağa başladılar"
+   },
+   {
+    "en": "O, vitrindəki saata baxa qaldı.",
+    "ko": "",
+    "highlight": "baxa qaldı"
+   },
+   {
+    "en": "Açarımı tapa bilmədiyim üçün qapıda qaldım.",
+    "ko": "",
+    "highlight": "tapa bilmədiyim"
+   },
+   {
+    "en": "Müəllim daxil olanda hamı susmağa başladı.",
+    "ko": "",
+    "highlight": "susmağa başladı"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mən gedmək bilərəm.",
+    "right": "Mən gedə bilərəm.",
+    "note": "Bilmək requires the gerund suffix -a/-ə on the preceding verb, never the full infinitive -mək."
+   },
+   {
+    "wrong": "O oxumaq başladı.",
+    "right": "O oxumağa başladı.",
+    "note": "Başlamaq requires its preceding verbal noun to carry the dative case suffix (-mağa/-məyə)."
+   },
+   {
+    "wrong": "Gözləyə bildi və donub qaldı.",
+    "right": "Gözləyə qaldı.",
+    "note": "To convey continuing in an uninterrupted, transfixed state, use -a/-ə qalmaq rather than bilmək."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Can you speak Azerbaijani fluently?: 'Sən azərbaycanca səlis ___?'",
+    "options": [
+     "danışırsan",
+     "danışmağa başlayırsan",
+     "danışa bilirsənmi",
+     "danışmaq olarsan"
+    ],
+    "answer": 2,
+    "explanation": "Potentiality (can/able to) uses the gerund stem -a/-ə followed by inflected bilmək: danışa bilirsənmi."
+   },
+   {
+    "question": "It started raining suddenly: 'Birdən yağış ___.'",
+    "options": [
+     "yağmağa başladı",
+     "yağa qaldı",
+     "yağdı bildi",
+     "yağmaq etdi"
+    ],
+    "answer": 0,
+    "explanation": "Inchoative aspect (started doing) combines the dative infinitive -mağa with başlamaq."
+   },
+   {
+    "question": "We looked in astonishment after the departing car: 'Gedən maşının arxasınca ___.'",
+    "options": [
+     "baxdıq",
+     "baxa qaldıq",
+     "baxmağa bilirik",
+     "baxsaq"
+    ],
+    "answer": 1,
+    "explanation": "The durative aspect suffix -a/-ə qalmaq describes staying transfixed in an action: baxa qaldıq."
+   },
+   {
+    "question": "Unfortunately, I cannot help you today: 'Təəssüf ki, bu gün sizə kömək ___.'",
+    "options": [
+     "edə bilmərəm",
+     "edə bilmirəm",
+     "etməyə başlamıram",
+     "edə qalmıram"
+    ],
+    "answer": 1,
+    "explanation": "Negative present ability is formed with gerund -ə + bilmirəm: kömək edə bilmirəm."
+   }
+  ],
+  "tip": "In everyday speech, 'gələ bilmirəm' (I cannot come) is frequently contracted into 'gələmmirəm', merging the potential gerund and negative marker."
+ },
+ {
+  "id": "az-b2-complex-clausal-nominalization",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#4f46e5",
+  "emoji": "🔗",
+  "title": "Complex Clausal Nominalization with -dığı üçün and -dığı halda",
+  "subtitle": "Formulate sophisticated causal, concessive, and contrastive subordinate clauses",
+  "color": "#4338ca",
+  "bg": "#eef2ff",
+  "keyPoint": "Attach the relative participle -dıq⁴ followed by possessive agreement suffixes to nominalize embedded clauses before postpositions like üçün (reason) or halda (concession/contrast).",
+  "structure": {
+   "headers": [
+    "Function",
+    "Construction",
+    "Azerbaijani Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Causality (Because)",
+      "-dığı⁴ + üçün",
+      "Xəstələndiyi üçün gəlmədi.",
+      "Because he got sick, he did not come."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Concession (Although)",
+      "-dığı⁴ + halda",
+      "Bildiyi halda susur.",
+      "Although he knows, he stays silent."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Temporal (When/As)",
+      "-dıqda⁴",
+      "Evə çatdıqda zəng etdi.",
+      "When he arrived home, he called."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Contrast (While)",
+      "-dığı⁴ + halda",
+      "O işlədiyi halda, qardaşı yatır.",
+      "While he works, his brother sleeps."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4f46e5",
+    "label": "Expressing Definite Cause",
+    "example": "Qatar gecikdiyi üçün iclasa vaxtında çatmadıq.",
+    "translation": ""
+   },
+   {
+    "color": "#6366f1",
+    "label": "Concessive Contrast ('Although')",
+    "example": "Çox çalışdığı halda, istədiyi nəticəni ala bilmədi.",
+    "translation": ""
+   },
+   {
+    "color": "#818cf8",
+    "label": "Personal Subject Nominalization",
+    "example": "Sənin bu qərarı verdiyin üçün çox şadam.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Hava çox soyuq olduğu üçün qalın geyindik.",
+    "ko": "",
+    "highlight": "olduğu üçün"
+   },
+   {
+    "en": "Dəvət edildiyi halda, ziyafətə gəlməkdən imtina etdi.",
+    "ko": "",
+    "highlight": "edildiyi halda"
+   },
+   {
+    "en": "Mənim xəbərim olmadığı üçün heç nə deyə bilmədim.",
+    "ko": "",
+    "highlight": "olmadığı üçün"
+   },
+   {
+    "en": "Həqiqəti bildiyiniz halda niyə yalan danışırsınız?",
+    "ko": "",
+    "highlight": "bildiyiniz halda"
+   },
+   {
+    "en": "Vaxtımız az olduğu üçün söhbəti qısa kəsdik.",
+    "ko": "",
+    "highlight": "olduğu üçün"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mən gəldiyim üçün o sevindi, çünki mən gəldim.",
+    "right": "Mən gəldiyim üçün o sevindi.",
+    "note": "Do not duplicate the reason clause by pairing the postpositional nominalization (-dığım üçün) with the conjunction çünki in the same sentence."
+   },
+   {
+    "wrong": "O bildiyi üçün danışmır, amma bilir.",
+    "right": "O bildiyi halda danışmır.",
+    "note": "Use 'halda' (not 'üçün') after the inflected participle to mean 'although' or 'even though'."
+   },
+   {
+    "wrong": "Sən dediyin üçün deyil, sənin dediyin halda.",
+    "right": "Sən dediyin üçün.",
+    "note": "Ensure person agreement matches the agent: 'sənin dediy-in üçün' (2nd person singular -in)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Because we missed the bus, we took a taxi: 'Avtobusa ___ görə taksi tutduq.'",
+    "options": [
+     "gecikdiyimiz",
+     "gecikmək",
+     "gecikirik",
+     "geciksək"
+    ],
+    "answer": 0,
+    "explanation": "The 1st person plural participle form gecik-diyimiz followed by görə/üçün expresses 'because we were late'."
+   },
+   {
+    "question": "Although he exercised every day, he did not lose weight: 'Hər gün idman ___ arıqlaya bilmədi.'",
+    "options": [
+     "etdiyi üçün",
+     "etdikdə",
+     "etdiyi halda",
+     "etmək üçün"
+    ],
+    "answer": 2,
+    "explanation": "The nominalized participle with 'halda' (etdiyi halda) forms the concessive meaning 'although he exercised'."
+   },
+   {
+    "question": "Since I did not have your phone number, I could not call you: 'Sənin nömrən ___ zəng edə bilmədim.'",
+    "options": [
+     "olduqda",
+     "olmadığı üçün",
+     "olmayan halda",
+     "olsa da"
+    ],
+    "answer": 1,
+    "explanation": "Negative participle ol-ma-dığ-ı followed by üçün conveys 'because it was not present'."
+   },
+   {
+    "question": "Even though you knew the answer, why did you not raise your hand?: 'Cavabı ___ niyə əl qaldırmadın?'",
+    "options": [
+     "bildiyin üçün",
+     "bilmək üçün",
+     "bilirsən",
+     "bildiyin halda"
+    ],
+    "answer": 3,
+    "explanation": "The 2nd person singular concessive construction is bildiyin halda (although you knew)."
+   }
+  ],
+  "tip": "The suffix -dıq⁴ acts like an adjective or noun stem; when you attach a possessive suffix, the final 'q' or 'k' regularly softens to 'ğ' or 'y' (yazdığım, gördüyün, bildiyi)."
+ }
+]

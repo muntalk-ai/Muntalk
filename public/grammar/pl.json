@@ -1,0 +1,3287 @@
+[
+ {
+  "id": "pl-a1-grammatical-gender-nouns-adjectives",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🏷️",
+  "title": "Grammatical Gender & Adjective-Noun Agreement",
+  "subtitle": "Determine noun gender by its ending and match the modifying adjective.",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "In the nominative case, Polish adjectives must agree in gender with the noun they describe, usually ending in -y/-i for masculine, -a for feminine, and -e for neuter.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Noun Ending",
+    "Adjective Ending",
+    "Example Phrase"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine (m)",
+      "Consonant",
+      "-y / -i",
+      "nowy dom"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine (f)",
+      "-a (or -i)",
+      "-a",
+      "nowa książka"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter (n)",
+      "-o, -e, -ę, -um",
+      "-e",
+      "nowe okno"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Masculine nouns",
+    "example": "Ten stary stół stoi w pokoju.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Feminine nouns",
+    "example": "Ta dobra kawa pachnie wspaniale.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Neuter nouns",
+    "example": "To małe dziecko śpi spokojnie.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Duży pies leży na dywanie.",
+    "ko": "",
+    "highlight": "Duży pies"
+   },
+   {
+    "en": "Nowa szkoła jest bardzo nowoczesna.",
+    "ko": "",
+    "highlight": "Nowa szkoła"
+   },
+   {
+    "en": "To czyste miasto ma piękny park.",
+    "ko": "",
+    "highlight": "czyste miasto"
+   },
+   {
+    "en": "Polski język bywa trudny dla obcokrajowców.",
+    "ko": "",
+    "highlight": "Polski język"
+   },
+   {
+    "en": "Świeże mleko stoi na stole.",
+    "ko": "",
+    "highlight": "Świeże mleko"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "nowy kawa",
+    "right": "nowa kawa",
+    "note": "Kawa ends in -a and is feminine, so the adjective must take the feminine ending -a."
+   },
+   {
+    "wrong": "dobre telefon",
+    "right": "dobry telefon",
+    "note": "Telefon ends in a consonant and is masculine, so it requires the masculine adjective ending -y."
+   },
+   {
+    "wrong": "mała okno",
+    "right": "małe okno",
+    "note": "Okno ends in -o and is neuter, requiring the neuter adjective ending -e."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase for 'a good tea' (herbata is feminine):",
+    "options": [
+     "dobry herbata",
+     "dobra herbata",
+     "dobre herbata",
+     "dobrym herbata"
+    ],
+    "answer": 1,
+    "explanation": "Herbata is feminine singular, so the adjective must end in -a (dobra)."
+   },
+   {
+    "question": "Choose the correct phrase for 'a big car' (samochód is masculine):",
+    "options": [
+     "duży samochód",
+     "duża samochód",
+     "duże samochód",
+     "dużo samochód"
+    ],
+    "answer": 0,
+    "explanation": "Samochód is masculine singular ending in a consonant, taking the masculine ending -y (duży)."
+   },
+   {
+    "question": "Choose the correct phrase for 'a modern apartment' (mieszkanie is neuter):",
+    "options": [
+     "nowoczesny mieszkanie",
+     "nowoczesna mieszkanie",
+     "nowoczesne mieszkanie",
+     "nowocześnie mieszkanie"
+    ],
+    "answer": 2,
+    "explanation": "Mieszkanie ends in -e and is neuter, so the adjective must take the neuter suffix -e (nowoczesne)."
+   },
+   {
+    "question": "Which noun correctly matches the masculine adjective 'drogi' (expensive)?",
+    "options": [
+     "torba",
+     "zegarek",
+     "śniadanie",
+     "woda"
+    ],
+    "answer": 1,
+    "explanation": "Zegarek ends in a consonant and is masculine, matching the masculine adjective drogi."
+   }
+  ],
+  "tip": "Look at the very last letter of a noun: a consonant usually signals masculine, -a signals feminine, and -o/-e/-ę signal neuter."
+ },
+ {
+  "id": "pl-a1-verb-conjugations-present",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⚙️",
+  "title": "Present Tense Conjugation Groups",
+  "subtitle": "Master the personal endings of Polish present tense verbs.",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Polish verbs fall into three major present-tense groups defined by their 1st and 2nd person singular endings: -am/-asz, -ę/-isz (or -ysz), and -ę/-esz.",
+  "structure": {
+   "headers": [
+    "Group",
+    "ja (I)",
+    "ty (you)",
+    "on/ona/ono (he/she/it)",
+    "oni/one (they)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Group 1 (-am/-asz)",
+      "czytam",
+      "czytasz",
+      "czyta",
+      "czytają"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Group 2 (-ę/-isz)",
+      "robię",
+      "robisz",
+      "robi",
+      "robią"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Group 3 (-ę/-esz)",
+      "piszę",
+      "piszesz",
+      "pisze",
+      "piszą"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Group 1 (-am / -asz)",
+    "example": "Codziennie rano czytam wiadomości.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Group 2 (-ę / -isz)",
+    "example": "Mówisz bardzo dobrze po polsku.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Group 3 (-ę / -esz)",
+    "example": "Często piszę listy do rodziny.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mieszkam w Warszawie od dwóch lat.",
+    "ko": "",
+    "highlight": "Mieszkam"
+   },
+   {
+    "en": "Czy znasz tego miłego pana?",
+    "ko": "",
+    "highlight": "znasz"
+   },
+   {
+    "en": "On lubi słuchać muzyki klasycznej.",
+    "ko": "",
+    "highlight": "lubi"
+   },
+   {
+    "en": "Pracujemy razem w biurze projektowym.",
+    "ko": "",
+    "highlight": "Pracujemy"
+   },
+   {
+    "en": "Studenci piszą trudny egzamin z gramatyki.",
+    "ko": "",
+    "highlight": "piszą"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ja czytać książkę.",
+    "right": "Czytam książkę.",
+    "note": "Verbs must be conjugated for person; do not leave verbs in the infinitive (-ć)."
+   },
+   {
+    "wrong": "Ty robić obiad.",
+    "right": "Robisz obiad.",
+    "note": "The second person singular (ty) of robić requires the ending -isz: robisz."
+   },
+   {
+    "wrong": "Oni mieszka tutaj.",
+    "right": "Oni mieszkają tutaj.",
+    "note": "Group 1 verbs take -ają in the third person plural (oni/one), not the singular form -a."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Ja ___ po polsku.' (rozmawiać - Group 1)",
+    "options": [
+     "rozmawiasz",
+     "rozmawiam",
+     "rozmawia",
+     "rozmawiają"
+    ],
+    "answer": 1,
+    "explanation": "For ja (I) in Group 1 verbs, add -am to the stem: rozmawiam."
+   },
+   {
+    "question": "Complete the sentence: 'Czy ty ___ kawę?' (pić - Group 3)",
+    "options": [
+     "piję",
+     "pije",
+     "pijesz",
+     "piją"
+    ],
+    "answer": 2,
+    "explanation": "The second-person singular (ty) ending for Group 3 is -esz: pijesz."
+   },
+   {
+    "question": "Complete the sentence: 'Mój brat ___ w Krakowie.' (mieszkać - Group 1)",
+    "options": [
+     "mieszka",
+     "mieszkam",
+     "mieszkasz",
+     "mieszkają"
+    ],
+    "answer": 0,
+    "explanation": "Third-person singular (on/ona/ono) in Group 1 takes -a: mieszka."
+   },
+   {
+    "question": "Complete the sentence: 'Oni ___ zadanie domowe.' (robić - Group 2)",
+    "options": [
+     "robi",
+     "robimy",
+     "robisz",
+     "robią"
+    ],
+    "answer": 3,
+    "explanation": "The third-person plural (oni) in Group 2 takes -ą: robią."
+   }
+  ],
+  "tip": "Subject pronouns like ja (I) and ty (you) are normally omitted in Polish because the verb suffix already makes the subject crystal clear."
+ },
+ {
+  "id": "pl-a1-instrumental-case-predicates",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "💼",
+  "title": "Instrumental Case for Identity and Profession",
+  "subtitle": "State professions, nationalities, and roles with the verb 'być'.",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "When describing a person's profession, role, or nationality with the verb 'być' (to be), Polish requires both the noun and adjective to be in the instrumental case.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Noun Ending",
+    "Adjective Ending",
+    "Example Pattern"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine (m)",
+      "-em / -iem",
+      "-ym / -im",
+      "Jestem dobrym lekarzem."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine (f)",
+      "-ą",
+      "-ą",
+      "Ona jest polską studentką."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter (n)",
+      "-em / -iem",
+      "-ym / -im",
+      "To jest małym miastem."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Stating a profession",
+    "example": "Mój ojciec jest znanym lekarzem.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Expressing nationality",
+    "example": "Anna jest dumną Polką.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Describing identity or role",
+    "example": "Tomasz jest moim najlepszym przyjacielem.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Marek jest utalentowanym inżynierem.",
+    "ko": "",
+    "highlight": "utalentowanym inżynierem"
+   },
+   {
+    "en": "Ewa jest znakomitą nauczycielką.",
+    "ko": "",
+    "highlight": "znakomitą nauczycielką"
+   },
+   {
+    "en": "Czy jesteś profesjonalnym aktorem?",
+    "ko": "",
+    "highlight": "profesjonalnym aktorem"
+   },
+   {
+    "en": "Mój wujek jest sympatycznym kierowcą.",
+    "ko": "",
+    "highlight": "sympatycznym kierowcą"
+   },
+   {
+    "en": "Moja siostra jest młodą prawniczką.",
+    "ko": "",
+    "highlight": "młodą prawniczką"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jestem student.",
+    "right": "Jestem studentem.",
+    "note": "With the verb 'być', a predicate noun designating a status must be in the instrumental case (-em)."
+   },
+   {
+    "wrong": "Ona jest nauczycielka.",
+    "right": "Ona jest nauczycielką.",
+    "note": "Feminine nouns in the instrumental case take the nasal vowel ending -ą."
+   },
+   {
+    "wrong": "On jest dobrym nauczyciel.",
+    "right": "On jest dobrym nauczycielem.",
+    "note": "Both the adjective AND the noun must decline together into the instrumental case."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Adam jest świetnym ___.' (programista - masculine)",
+    "options": [
+     "programista",
+     "programistą",
+     "programistem",
+     "programistę"
+    ],
+    "answer": 1,
+    "explanation": "Masculine nouns ending in -a decline like feminine nouns in the instrumental, taking -ą (programistą)."
+   },
+   {
+    "question": "Complete the sentence: 'Katarzyna jest miłą ___.' (dziewczyna - feminine)",
+    "options": [
+     "dziewczynę",
+     "dziewczyny",
+     "dziewczyną",
+     "dziewczynie"
+    ],
+    "answer": 2,
+    "explanation": "Feminine nouns take the instrumental singular ending -ą (dziewczyną)."
+   },
+   {
+    "question": "Complete the sentence: 'Mój brat jest ___ kucharzem.' (dobry - masculine adjective)",
+    "options": [
+     "dobrym",
+     "dobry",
+     "dobrą",
+     "dobrego"
+    ],
+    "answer": 0,
+    "explanation": "Masculine adjectives take -ym (or -im after k/g) in the instrumental singular: dobrym."
+   },
+   {
+    "question": "Complete the sentence: 'Magda jest znaną ___.' (aktorka - feminine)",
+    "options": [
+     "aktorką",
+     "aktorce",
+     "aktorki",
+     "aktorka"
+    ],
+    "answer": 0,
+    "explanation": "The feminine instrumental ending is -ą, yielding aktorką."
+   }
+  ],
+  "tip": "Remember the shortcut: masculine instrumental ends in -em (noun) and -ym/-im (adjective), while feminine instrumental ends in -ą for BOTH noun and adjective."
+ },
+ {
+  "id": "pl-a1-accusative-case-direct-objects",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎯",
+  "title": "Accusative Case & Animacy",
+  "subtitle": "Form direct objects and distinguish masculine living things from objects.",
+  "color": "#F59E0B",
+  "bg": "#FFFBEB",
+  "keyPoint": "Direct objects take the accusative case; inanimate masculine nouns look identical to the nominative, whereas animate masculine nouns take the genitive-like ending -a.",
+  "structure": {
+   "headers": [
+    "Noun Category",
+    "Nominative Form",
+    "Accusative Form",
+    "Key Rule"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Feminine (-a)",
+      "dobra kawa",
+      "dobrą kawę",
+      "-a becomes -ę; adj takes -ą"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masc. Inanimate",
+      "nowy stół",
+      "nowy stół",
+      "Identical to Nominative"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masc. Animate",
+      "mały pies",
+      "małego psa",
+      "Takes Genitive form (-ego / -a)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter",
+      "nowe auto",
+      "nowe auto",
+      "Identical to Nominative"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Feminine direct object",
+    "example": "Codziennie rano piję czarną kawę.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Masculine inanimate object",
+    "example": "Kupuję nowy komputer do pracy.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Masculine animate object",
+    "example": "Widzę twojego czarnego kota w ogrodzie.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mam wielką ochotę na lody.",
+    "ko": "",
+    "highlight": "wielką ochotę"
+   },
+   {
+    "en": "Często spotykam mojego dobrego kolegę.",
+    "ko": "",
+    "highlight": "mojego dobrego kolegę"
+   },
+   {
+    "en": "Mój tata czyta codzienną gazetę.",
+    "ko": "",
+    "highlight": "codzienną gazetę"
+   },
+   {
+    "en": "Kupiliśmy wczoraj nowe mieszkanie.",
+    "ko": "",
+    "highlight": "nowe mieszkanie"
+   },
+   {
+    "en": "On ma małego psa i rudego kota.",
+    "ko": "",
+    "highlight": "małego psa"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mam czarna kawa.",
+    "right": "Mam czarną kawę.",
+    "note": "Feminine direct objects change from -a to -ę for the noun and -a to -ą for the adjective."
+   },
+   {
+    "wrong": "Widzę stary doma.",
+    "right": "Widzę stary dom.",
+    "note": "Inanimate masculine objects remain unchanged in the accusative (identical to the nominative)."
+   },
+   {
+    "wrong": "Lubię ten brat.",
+    "right": "Lubię tego brata.",
+    "note": "Brat is a person (animate), so the accusative takes genitive endings: tego brata."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Czytam ciekawą ___.' (książka - feminine)",
+    "options": [
+     "książka",
+     "książką",
+     "książkę",
+     "książki"
+    ],
+    "answer": 2,
+    "explanation": "Feminine singular nouns change from -a to -ę in the accusative case (książkę)."
+   },
+   {
+    "question": "Complete the sentence: 'Kupuję nowy ___.' (telefon - masculine inanimate)",
+    "options": [
+     "telefona",
+     "telefon",
+     "telefonem",
+     "telefonu"
+    ],
+    "answer": 1,
+    "explanation": "Inanimate masculine nouns keep their nominative form in the accusative case (telefon)."
+   },
+   {
+    "question": "Complete the sentence: 'Widzę twojego ___.' (pies - masculine animate)",
+    "options": [
+     "psa",
+     "pies",
+     "psem",
+     "psu"
+    ],
+    "answer": 0,
+    "explanation": "Animate masculine nouns take the ending -a (with a stem shift for pies -> psa)."
+   },
+   {
+    "question": "Complete the sentence: 'Ona ma ___ zupę.' (smaczna - feminine adjective)",
+    "options": [
+     "smaczna",
+     "smaczne",
+     "smacznym",
+     "smaczną"
+    ],
+    "answer": 3,
+    "explanation": "Feminine singular adjectives take the nasal vowel ending -ą in the accusative case (smaczną)."
+   }
+  ],
+  "tip": "Neuter nouns and masculine inanimate things never change in the accusative—they look exactly like their dictionary (nominative) forms."
+ },
+ {
+  "id": "pl-a1-genitive-of-negation",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🚫",
+  "title": "Genitive of Negation",
+  "subtitle": "Transform accusative direct objects into the genitive when negating verbs.",
+  "color": "#EF4444",
+  "bg": "#FEF2F2",
+  "keyPoint": "Whenever a transitive verb that governs the accusative case is negated with 'nie', the direct object MUST switch to the genitive case.",
+  "structure": {
+   "headers": [
+    "Verb Polarity",
+    "Case Required",
+    "Affirmative Example",
+    "Negated Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Positive (+)",
+      "Accusative",
+      "Mam czas.",
+      "I have time."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative (-)",
+      "Genitive",
+      "Nie mam czasu.",
+      "I do not have time."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Positive (+)",
+      "Accusative",
+      "Kupuję chleb.",
+      "I buy bread."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative (-)",
+      "Genitive",
+      "Nie kupuję chleba.",
+      "I do not buy bread."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Negating masculine objects",
+    "example": "Mam ten telefon, ale nie mam tego telefonu.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Negating feminine objects",
+    "example": "Lubię tę kawę, ale nie lubię tej kawy.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Negating neuter objects",
+    "example": "Znam to słowo, ale nie pamiętam tego słowa.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Nie mam dziś wolnego czasu.",
+    "ko": "",
+    "highlight": "wolnego czasu"
+   },
+   {
+    "en": "On nie pije zimnej wody.",
+    "ko": "",
+    "highlight": "zimnej wody"
+   },
+   {
+    "en": "Nie kupiliśmy wczoraj nowego samochodu.",
+    "ko": "",
+    "highlight": "nowego samochodu"
+   },
+   {
+    "en": "Anna nie lubi mleka w kawie.",
+    "ko": "",
+    "highlight": "mleka"
+   },
+   {
+    "en": "Nie znam tego sympatycznego człowieka.",
+    "ko": "",
+    "highlight": "tego sympatycznego człowieka"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Nie mam czas.",
+    "right": "Nie mam czasu.",
+    "note": "Negating the verb 'mieć' triggers the genitive of negation; accusative 'czas' must become 'czasu'."
+   },
+   {
+    "wrong": "Nie lubię czarną kawę.",
+    "right": "Nie lubię czarnej kawy.",
+    "note": "Under negation, feminine accusative (-ą / -ę) shifts to genitive (-ej / -y)."
+   },
+   {
+    "wrong": "Nie kupuję ten chleb.",
+    "right": "Nie kupuję tego chleba.",
+    "note": "Masculine nouns and demonstratives must shift to genitive endings (-ego / -a) under negation."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the negated sentence: 'Mam ochotę, ale on nie ma ___.' (ochota - feminine)",
+    "options": [
+     "ochotę",
+     "ochota",
+     "ochoty",
+     "ochotą"
+    ],
+    "answer": 2,
+    "explanation": "The feminine genitive singular takes the ending -y (ochoty) after a negated verb."
+   },
+   {
+    "question": "Complete the negated sentence: 'Kupuję chleb, ale nie kupuję ___.' (ser - masculine)",
+    "options": [
+     "sera",
+     "ser",
+     "serem",
+     "serowi"
+    ],
+    "answer": 0,
+    "explanation": "In the genitive of negation, masculine food items typically take the -a ending (sera)."
+   },
+   {
+    "question": "Complete the negated sentence: 'Nie znam ___ pana.' (ten nowy - masculine)",
+    "options": [
+     "tym nowym",
+     "tego nowego",
+     "ten nowy",
+     "temu nowemu"
+    ],
+    "answer": 1,
+    "explanation": "Masculine adjectives and demonstratives take -ego in the genitive case (tego nowego)."
+   },
+   {
+    "question": "Complete the negated sentence: 'Dziecko nie pije ___.' (mleko - neuter)",
+    "options": [
+     "mleko",
+     "mlekiem",
+     "mleku",
+     "mleka"
+    ],
+    "answer": 3,
+    "explanation": "Neuter nouns take the genitive singular ending -a (mleka)."
+   }
+  ],
+  "tip": "Think of 'nie' as an automatic switch: whenever 'nie' appears right before a transitive verb, swap the direct object into the genitive case immediately."
+ },
+ {
+  "id": "pl-a1-locative-case-prepositions",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📍",
+  "title": "Locative Case with Static Prepositions",
+  "subtitle": "Talking about static locations and topics using w, na, o, and przy",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The locative case is exclusively governed by prepositions like 'w', 'na', 'o', 'przy', and causes hard stem consonants to soften or mutate before endings like -e or -u.",
+  "structure": {
+   "headers": [
+    "Ending Pattern",
+    "Base Form",
+    "Locative Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Hard stem consonant -> -e (with mutation)",
+      "Polska / stół",
+      "w Polsce / na stole"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Soft stem or velar (k, g, ch) -> -u",
+      "park / Kraków",
+      "w parku / w Krakowie"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine soft stem -> -i / -y",
+      "kawiarnia / ulica",
+      "w kawiarni / na ulicy"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Inside an enclosed space (w / we)",
+    "example": "Mieszkam w Warszawie od roku.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "On an open surface or event (na)",
+    "example": "Książka leży na dużym stole.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Topic of discussion or thought (o)",
+    "example": "Często rozmawiamy o nowej pracy.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Pracuję w nowoczesnym biurze.",
+    "ko": "",
+    "highlight": "w nowoczesnym biurze"
+   },
+   {
+    "en": "Spotkajmy się na stacji kolejowej.",
+    "ko": "",
+    "highlight": "na stacji kolejowej"
+   },
+   {
+    "en": "Mój telefon leży na stole.",
+    "ko": "",
+    "highlight": "na stole"
+   },
+   {
+    "en": "Rozmawiamy o ciekawym filmie.",
+    "ko": "",
+    "highlight": "o ciekawym filmie"
+   },
+   {
+    "en": "Czekam na ciebie przy wejściu.",
+    "ko": "",
+    "highlight": "przy wejściu"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mieszkam w Polska.",
+    "right": "Mieszkam w Polsce.",
+    "note": "Preposition 'w' demands the locative case, mutating 'k' to 'c' with the ending '-e'."
+   },
+   {
+    "wrong": "Jestem w kino.",
+    "right": "Jestem w kinie.",
+    "note": "Neuter nouns ending in '-o' take '-e' in the locative, softening 'n' to 'ni'."
+   },
+   {
+    "wrong": "Książka jest na stół.",
+    "right": "Książka jest na stole.",
+    "note": "Static location with 'na' requires the locative case with stem vowel alternation (ó -> o)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Adam works in an office (biuro). -> Adam pracuje w ___.",
+    "options": [
+     "biurze",
+     "biuro",
+     "biura",
+     "biurom"
+    ],
+    "answer": 0,
+    "explanation": "Neuter noun 'biuro' takes '-e' in the locative, triggering the mutation 'r' -> 'rz'."
+   },
+   {
+    "question": "We are talking about Poland (Polska). -> Rozmawiamy o ___.",
+    "options": [
+     "Polsku",
+     "Polsce",
+     "Polski",
+     "Polska"
+    ],
+    "answer": 1,
+    "explanation": "The feminine noun 'Polska' mutates stem 'k' to 'c' and takes '-e'."
+   },
+   {
+    "question": "The computer is on the table (stół). -> Komputer stoi na ___.",
+    "options": [
+     "stół",
+     "stole",
+     "stolu",
+     "stola"
+    ],
+    "answer": 1,
+    "explanation": "The noun 'stół' changes its stem vowel 'ó' to 'o' and takes '-e' ('stole')."
+   },
+   {
+    "question": "My friends are waiting in the park (park). -> Moi znajomi czekają w ___.",
+    "options": [
+     "parku",
+     "parce",
+     "parkiem",
+     "parki"
+    ],
+    "answer": 0,
+    "explanation": "Masculine nouns ending in velar consonants like 'k' take the '-u' ending in the locative."
+   }
+  ],
+  "tip": "Remember: The locative case is never used alone without a preposition; look out for 'w', 'na', 'o', 'przy', and 'po'."
+ },
+ {
+  "id": "pl-a2-aspect-pairs-imperfective-perfective",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "Verbal Aspect: Imperfective vs. Perfective",
+  "subtitle": "Distinguishing continuous processes and habits from completed results",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Polish verbs come in pairs: imperfective expresses ongoing processes or habits, while perfective denotes single, completed actions with a clear result.",
+  "structure": {
+   "headers": [
+    "Aspect",
+    "Typical Usage",
+    "Example Pair"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Imperfective (Niedokonany)",
+      "Duration, repetition, ongoing in present/past",
+      "czytać (to read / be reading)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Perfective (Dokonany)",
+      "Completed single action, result achieved",
+      "przeczytać (to finish reading)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Suffixation shift",
+      "Secondary imperfectives with -ywać / -iwać",
+      "kupować / kupić (to buy)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Ongoing process in time",
+    "example": "Wczoraj cały wieczór czytałem książkę.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Completed result achieved",
+    "example": "Wreszcie przeczytałem cały ten artykuł.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Repeated habitual action",
+    "example": "Zawsze rano piję kawę.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Wczoraj pisałem raport przez trzy godziny.",
+    "ko": "",
+    "highlight": "pisałem"
+   },
+   {
+    "en": "Napisałem raport i wysłałem go szefowi.",
+    "ko": "",
+    "highlight": "Napisałem"
+   },
+   {
+    "en": "Codziennie rano piję czarną kawę.",
+    "ko": "",
+    "highlight": "piję"
+   },
+   {
+    "en": "Szybko wypiłem herbatę i wyszedłem z domu.",
+    "ko": "",
+    "highlight": "wypiłem"
+   },
+   {
+    "en": "Ona kupiła nowe mieszkanie w centrum.",
+    "ko": "",
+    "highlight": "kupiła"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Wczoraj przeczytałem książkę przez dwie godziny.",
+    "right": "Wczoraj czytałem książkę przez dwie godziny.",
+    "note": "Durational expressions with 'przez' indicate an ongoing process, requiring the imperfective verb 'czytać'."
+   },
+   {
+    "wrong": "Jutro będę napisać list.",
+    "right": "Jutro napiszę list.",
+    "note": "Do not mix 'będę' with a perfective infinitive; perfective verbs express the future using simple conjugated forms."
+   },
+   {
+    "wrong": "Zawsze wypijam herbatę o ósmej.",
+    "right": "Zawsze piję herbatę o ósmej.",
+    "note": "Habitual everyday actions require the imperfective form 'pić'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday I was reading all evening, but I didn't finish. -> Wczoraj cały wieczór ___ książkę.",
+    "options": [
+     "czytałem",
+     "przeczytałem",
+     "będę czytać",
+     "doczytałem"
+    ],
+    "answer": 0,
+    "explanation": "The imperfective 'czytałem' highlights the continuous duration rather than the completed result."
+   },
+   {
+    "question": "I have already finished writing the email. -> Już ___ ten e-mail.",
+    "options": [
+     "piszę",
+     "pisałem",
+     "napisałem",
+     "będę pisać"
+    ],
+    "answer": 2,
+    "explanation": "The perfective verb 'napisałem' conveys a completed action with a concrete outcome."
+   },
+   {
+    "question": "Every day Anna buys fresh bread. -> Anna codziennie ___ świeży chleb.",
+    "options": [
+     "kupi",
+     "kupiła",
+     "kupuje",
+     "kupić"
+    ],
+    "answer": 2,
+    "explanation": "Repeated everyday actions use the imperfective present tense 'kupuje'."
+   },
+   {
+    "question": "Can you open the window? (completed action) -> Czy możesz ___ okno?",
+    "options": [
+     "otwierać",
+     "otworzyć",
+     "otwiera",
+     "otwórz"
+    ],
+    "answer": 1,
+    "explanation": "The perfective infinitive 'otworzyć' expresses completing the specific action once."
+   }
+  ],
+  "tip": "Perfective verbs do NOT have a present tense; conjugating a perfective verb immediately creates a future meaning!"
+ },
+ {
+  "id": "pl-a2-past-tense-gender-endings",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🕰️",
+  "title": "Past Tense Formation and Gender Agreement",
+  "subtitle": "Building past actions with the -ł- stem and matching personal endings",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Polish past-tense verbs consist of the infinitive stem plus the letter 'ł', followed by distinctive suffixes that explicitly agree with the subject's grammatical gender and number.",
+  "structure": {
+   "headers": [
+    "Person & Gender",
+    "Stem + Suffix",
+    "Full Verb Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st person masc. sg. (ja)",
+      "robi- + -ł- + -em",
+      "robiłem"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "1st person fem. sg. (ja)",
+      "robi- + -ł- + -am",
+      "robiłam"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3rd person neut. sg. (ono)",
+      "robi- + -ł- + -o",
+      "robiło"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd person virile pl. (oni)",
+      "robi- + -l- + -i",
+      "robili"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Male speaker describing their past",
+    "example": "Wczoraj byłem bardzo zajęty.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Female speaker describing their past",
+    "example": "Wczoraj byłam w kinie z siostrą.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Plural group containing at least one man",
+    "example": "Moi koledzy pojechali na wakacje.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Czytałem tę książkę wczoraj wieczorem.",
+    "ko": "",
+    "highlight": "Czytałem"
+   },
+   {
+    "en": "Czytałam tę książkę wczoraj wieczorem.",
+    "ko": "",
+    "highlight": "Czytałam"
+   },
+   {
+    "en": "Dziecko spało przez całą noc.",
+    "ko": "",
+    "highlight": "spało"
+   },
+   {
+    "en": "Koledzy rozmawiali o nowym projekcie.",
+    "ko": "",
+    "highlight": "rozmawiali"
+   },
+   {
+    "en": "Studentki poszły na ciekawy wykład.",
+    "ko": "",
+    "highlight": "poszły"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ja (female) robiłem obiad.",
+    "right": "Ja robiłam obiad.",
+    "note": "A female speaker must use the feminine ending '-łam' instead of the masculine '-łem'."
+   },
+   {
+    "wrong": "Dziecko płakał w nocy.",
+    "right": "Dziecko płakało w nocy.",
+    "note": "The noun 'dziecko' is neuter, so the verb requires the neuter past ending '-ło'."
+   },
+   {
+    "wrong": "Marek i Ewa poszły do kina.",
+    "right": "Marek i Ewa poszli do kina.",
+    "note": "Any mixed-gender or male plural subject requires the virile (męskoosobowy) past ending '-li'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "A woman says: 'Yesterday I worked late.' -> Wczoraj ___ do późna.",
+    "options": [
+     "pracowałem",
+     "pracowałam",
+     "pracowało",
+     "pracowała"
+    ],
+    "answer": 1,
+    "explanation": "A female first-person subject uses the ending '-łam' (pracowałam)."
+   },
+   {
+    "question": "The boy fell asleep quickly. -> Chłopiec szybko ___.",
+    "options": [
+     "zasnęłam",
+     "zasnęła",
+     "zasnął",
+     "zasnęli"
+    ],
+    "answer": 2,
+    "explanation": "A masculine singular 3rd person subject takes the bare '-ł' ending (zasnął)."
+   },
+   {
+    "question": "The girls (non-virile plural) sang beautifully. -> Dziewczyny pięknie ___.",
+    "options": [
+     "śpiewały",
+     "śpiewali",
+     "śpiewałem",
+     "śpiewałam"
+    ],
+    "answer": 0,
+    "explanation": "All-female or non-virile plural groups take the '-ły' ending in the past tense."
+   },
+   {
+    "question": "Tom and Mark were at university. -> Tomasz i Marek ___ na uniwersytecie.",
+    "options": [
+     "były",
+     "był",
+     "była",
+     "byli"
+    ],
+    "answer": 3,
+    "explanation": "A masculine personal subject in the plural requires the virile ending '-li' (byli)."
+   }
+  ],
+  "tip": "Notice how the letter 'ł' softens to 'l' before 'i' in virile plural forms: 'mieli', 'byli', 'robili'."
+ },
+ {
+  "id": "pl-a2-future-tense-distinctions",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🚀",
+  "title": "Future Tense: Compound vs. Simple",
+  "subtitle": "Choosing between future forms of imperfective and perfective verbs",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "Imperfective future is compound (future 'być' + infinitive or 3rd-person past form), whereas perfective future is simple, formed by conjugating the perfective verb directly.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Construction Pattern",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Compound (Imperfective)",
+      "będę / będziesz + past participle",
+      "będę pisał / będę pisała"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Compound (Infinitive variant)",
+      "będę / będziesz + infinitive",
+      "będę pisać"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Simple (Perfective)",
+      "prefix/mutation + present conjugation",
+      "napiszę / przeczytam"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6366F1",
+    "label": "Planned continuous process (compound)",
+    "example": "Jutro będę pracować od rana do nocy.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Single completed future task (simple)",
+    "example": "Jutro na pewno skończę ten projekt.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Gender-marked compound past participle",
+    "example": "Będziemy oglądali ciekawy mecz.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Jutro będę gotować obiad dla przyjaciół.",
+    "ko": "",
+    "highlight": "będę gotować"
+   },
+   {
+    "en": "Ona będzie czytała książkę przez całe popołudnie.",
+    "ko": "",
+    "highlight": "będzie czytała"
+   },
+   {
+    "en": "Kiedy zrobisz zakupy na weekend?",
+    "ko": "",
+    "highlight": "zrobisz"
+   },
+   {
+    "en": "Zaraz wypiję kawę i zadzwonię do mamy.",
+    "ko": "",
+    "highlight": "wypiję"
+   },
+   {
+    "en": "Będziemy studiować język polski w Krakowie.",
+    "ko": "",
+    "highlight": "Będziemy studiować"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jutro będę napisać zadanie.",
+    "right": "Jutro napiszę zadanie.",
+    "note": "Never combine 'będę' with a perfective verb; use the simple perfective form 'napiszę'."
+   },
+   {
+    "wrong": "Będę zjeść obiad za godzinę.",
+    "right": "Zjem obiad za godzinę.",
+    "note": "'Zjeść' is perfective, so its future form is the simple conjugated form 'zjem'."
+   },
+   {
+    "wrong": "Oni będą robili zakupy, a potem kupią chleb.",
+    "right": "Oni będą robić zakupy, a potem kupią chleb.",
+    "note": "While 'będą robili' is valid, mixing imperfective compound with simple perfective correctly requires keeping aspectual boundaries clear."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Tomorrow I will be learning (ongoing) Polish all day. -> Jutro cały dzień ___ języka polskiego.",
+    "options": [
+     "będę się uczyć",
+     "nauczę się",
+     "będę nauczyć się",
+     "uczyłem się"
+    ],
+    "answer": 0,
+    "explanation": "An ongoing all-day action requires the compound imperfective future 'będę się uczyć'."
+   },
+   {
+    "question": "I will buy (completed action) this phone tomorrow. -> Jutro ___ ten telefon.",
+    "options": [
+     "będę kupować",
+     "kupię",
+     "będę kupić",
+     "kupowałem"
+    ],
+    "answer": 1,
+    "explanation": "Completing the purchase is expressed by the simple perfective future 'kupię'."
+   },
+   {
+    "question": "What will you be doing this evening? (to a woman) -> Co ___ dzisiaj wieczorem?",
+    "options": [
+     "będziesz zrobiła",
+     "zrobisz",
+     "będziesz robiła",
+     "będziesz robił"
+    ],
+    "answer": 2,
+    "explanation": "Compound future with past-participle agreeing with a woman is 'będziesz robiła'."
+   },
+   {
+    "question": "We will write (finish writing) the test soon. -> Wkrótce ___ ten test.",
+    "options": [
+     "będziemy pisać",
+     "piszemy",
+     "będziemy napisać",
+     "napiszemy"
+    ],
+    "answer": 3,
+    "explanation": "The perfective verb 'napisać' forms the future simply as 'napiszemy'."
+   }
+  ],
+  "tip": "Native speakers favor 'będę' + the 3rd person past form (e.g. 'będę czytał/czytała') because it naturally indicates the speaker's gender!"
+ },
+ {
+  "id": "pl-a2-dative-case-indirect-objects",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎁",
+  "title": "Dative Case for Indirect Objects and Impersonal States",
+  "subtitle": "Giving, helping, and expressing physical or psychological states",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "The dative case marks the recipient or beneficiary of an action and is used in common impersonal state formulas like 'jest mi zimno'.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Typical Ending",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Nouns",
+      "-owi (rarely -u)",
+      "bratu / lekarzowi"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine Nouns",
+      "-e (with mutation) / -i / -y",
+      "kobiecie / mamie / pani"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter Nouns",
+      "-u",
+      "dziecku / oknu"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Pronoun Clitic (ja / ty)",
+      "mi / ci",
+      "Pomóż mi / Dziękuję ci"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Recipient of giving / telling",
+    "example": "Daję bratu ciekawy prezent.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Impersonal feelings and temperatures",
+    "example": "Jest mi dzisiaj bardzo zimno.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Verbs requiring dative (pomagać, dziękować)",
+    "example": "Zawsze chętnie pomagam rodzicom.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kupiłem bratu nowy zegarek.",
+    "ko": "",
+    "highlight": "bratu"
+   },
+   {
+    "en": "Dziękuję mojej mamie za pomoc.",
+    "ko": "",
+    "highlight": "mojej mamie"
+   },
+   {
+    "en": "Lekarz pomaga choremu dziecku.",
+    "ko": "",
+    "highlight": "choremu dziecku"
+   },
+   {
+    "en": "Czy jest ci ciepło w tym pokoju?",
+    "ko": "",
+    "highlight": "jest ci"
+   },
+   {
+    "en": "Nauczyciel tłumaczy studentom nowe reguły.",
+    "ko": "",
+    "highlight": "studentom"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Pomagam mojego brata.",
+    "right": "Pomagam mojemu bratu.",
+    "note": "The verb 'pomagać' requires the dative case ('bratu'), never the accusative or genitive."
+   },
+   {
+    "wrong": "Ja jest zimno.",
+    "right": "Jest mi zimno.",
+    "note": "Physical sensations use impersonal dative pronouns ('mi'), not nominative subject pronouns ('ja')."
+   },
+   {
+    "wrong": "Dziękuję ciebie za wszystko.",
+    "right": "Dziękuję ci za wszystko.",
+    "note": "The verb 'dziękować' governs the dative ('ci'), not the genitive or accusative."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I am cold. -> Jest ___ bardzo zimno.",
+    "options": [
+     "mnie",
+     "mi",
+     "ja",
+     "mną"
+    ],
+    "answer": 1,
+    "explanation": "The short clitic dative pronoun 'mi' is standard for impersonal physical states."
+   },
+   {
+    "question": "Adam bought flowers for his sister (siostra). -> Adam kupił kwiaty swojej ___.",
+    "options": [
+     "siostrze",
+     "siostra",
+     "siostry",
+     "siostrą"
+    ],
+    "answer": 0,
+    "explanation": "Feminine nouns with stem 'r' mutate to 'rz' and take the ending '-e' in the dative case (siostrze)."
+   },
+   {
+    "question": "Can you help the doctor (lekarz)? -> Czy możesz pomóc ___?",
+    "options": [
+     "lekarza",
+     "lekarzem",
+     "lekarzowi",
+     "lekarzu"
+    ],
+    "answer": 2,
+    "explanation": "Most masculine nouns take the ending '-owi' in the dative case (lekarzowi)."
+   },
+   {
+    "question": "We help our parents (rodzice) every weekend. -> Pomagamy naszym ___ w każdy weekend.",
+    "options": [
+     "rodzicach",
+     "rodzicami",
+     "rodzice",
+     "rodzicom"
+    ],
+    "answer": 3,
+    "explanation": "All plural nouns take the ending '-om' in the dative case."
+   }
+  ],
+  "tip": "A tiny group of everyday masculine nouns take '-u' instead of '-owi' in the dative: 'bratu', 'ojcu', 'psu', 'kotu', and 'Bogu'."
+ },
+ {
+  "id": "pl-a2-imperative-mood",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "👉",
+  "title": "Imperative Mood and Polite Requests",
+  "subtitle": "Forming direct commands and softening them with 'proszę'",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Direct commands derive from the 3rd person plural present stem, while polite requests use 'proszę' combined with an infinitive.",
+  "structure": {
+   "headers": [
+    "Mood / Person",
+    "Formation Pattern",
+    "Polish Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Ty (informal singular)",
+      "Stem + zero / -ij / -aj",
+      "Czytaj!",
+      "Read!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "My (inclusive 'let's')",
+      "Ty-form + -my",
+      "Czytajmy!",
+      "Let's read!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Wy (informal plural)",
+      "Ty-form + -cie",
+      "Czytajcie!",
+      "Read! (plural)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Pan / Pani (polite)",
+      "Proszę + Infinitive",
+      "Proszę czytać.",
+      "Please read."
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Direct Command",
+    "example": "Zamknij okno, bo jest zimno.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Group Exhortation",
+    "example": "Chodźmy już do kina.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Polite Request",
+    "example": "Proszę usiąść na tym krześle.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Słuchaj uważnie nauczyciela.",
+    "ko": "",
+    "highlight": "Słuchaj"
+   },
+   {
+    "en": "Napiszcie to zadanie na jutro.",
+    "ko": "",
+    "highlight": "Napiszcie"
+   },
+   {
+    "en": "Zjedzmy obiad w restauracji.",
+    "ko": "",
+    "highlight": "Zjedzmy"
+   },
+   {
+    "en": "Proszę podpisać ten dokument.",
+    "ko": "",
+    "highlight": "Proszę podpisać"
+   },
+   {
+    "en": "Nie rób tego więcej!",
+    "ko": "",
+    "highlight": "Nie rób"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Proszę czytaj tę książkę.",
+    "right": "Proszę czytać tę książkę.",
+    "note": "Use the infinitive after 'proszę' for polite requests, not the imperative stem."
+   },
+   {
+    "wrong": "Zamknijcie drzwi, panie Janie.",
+    "right": "Proszę zamknąć drzwi, panie Janie.",
+    "note": "Use 'proszę + infinitive' (or 'niech Pan zamknie') for formal address, not the informal plural '-cie'."
+   },
+   {
+    "wrong": "Robisz to natychmiast!",
+    "right": "Zrób to natychmiast!",
+    "note": "Use an explicit imperative form rather than an indicative present verb for direct orders."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Tom, ___ okno, proszę! (informal command to one person)",
+    "options": [
+     "otwórz",
+     "otwórzcie",
+     "otwórzmy",
+     "otworzyć"
+    ],
+    "answer": 0,
+    "explanation": "Addressing a friend (ty) directly uses the basic singular imperative form 'otwórz'."
+   },
+   {
+    "question": "Dzieci, ___ natychmiast do pokoju!",
+    "options": [
+     "idź",
+     "idźmy",
+     "idźcie",
+     "iść"
+    ],
+    "answer": 2,
+    "explanation": "Addressing a group informally (wy) requires adding the '-cie' suffix to the stem: 'idźcie'."
+   },
+   {
+    "question": "Szanowni Państwo, ___ chwilę poczekać.",
+    "options": [
+     "proszą",
+     "proszę",
+     "prosimy",
+     "prosisz"
+    ],
+    "answer": 1,
+    "explanation": "The fixed formula for polite requests directed to adults uses the 1st person singular 'proszę' followed by an infinitive."
+   },
+   {
+    "question": "Jest późno, ___ już do domu! (Let's...)",
+    "options": [
+     "wracasz",
+     "wracajcie",
+     "wracać",
+     "wracajmy"
+    ],
+    "answer": 3,
+    "explanation": "First-person plural imperatives (let's) take the ending '-my': 'wracajmy'."
+   }
+  ],
+  "tip": "For negative commands with 'nie', Polish overwhelmingly prefers the imperfective aspect (e.g., 'Nie rób tego!', not 'Nie zrób tego!')."
+ },
+ {
+  "id": "pl-a2-verbs-of-motion-unidirectional-multidirectional",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🚶",
+  "title": "Verbs of Motion: Determinate vs. Indeterminate",
+  "subtitle": "Choosing between unidirectional and multidirectional or habitual movements",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Determinate verbs describe motion in one direction right now, while indeterminate verbs describe round trips, repeated trips, or general abilities.",
+  "structure": {
+   "headers": [
+    "Type",
+    "On Foot",
+    "By Vehicle",
+    "Usage Context"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Determinate (Unidirectional)",
+      "iść",
+      "jechać",
+      "Going in one specific direction right now"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Indeterminate (Habitual / Frequent)",
+      "chodzić",
+      "jeździć",
+      "Repeated, routine journeys over time"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Indeterminate (Multidirectional)",
+      "chodzić",
+      "jeździć",
+      "Wandering, pacing, round trips, or general ability"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Currently Underway",
+    "example": "Teraz idę do sklepu po chleb.",
+    "translation": ""
+   },
+   {
+    "color": "#0369A1",
+    "label": "Habitual Routine",
+    "example": "Codziennie jeżdżę do pracy pociągiem.",
+    "translation": ""
+   },
+   {
+    "color": "#38BDF8",
+    "label": "Round Trip or Aimless",
+    "example": "Dziecko już chodzi samodzielnie.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dokąd teraz idziesz tak szybko?",
+    "ko": "",
+    "highlight": "idziesz"
+   },
+   {
+    "en": "Zwykle jeździmy nad morze latem.",
+    "ko": "",
+    "highlight": "jeździmy"
+   },
+   {
+    "en": "Jutro jadę samochodem do Warszawy.",
+    "ko": "",
+    "highlight": "jadę"
+   },
+   {
+    "en": "On często chodzi na długie spacery.",
+    "ko": "",
+    "highlight": "chodzi"
+   },
+   {
+    "en": "Gdzie jedziecie w ten weekend?",
+    "ko": "",
+    "highlight": "jedziecie"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Codziennie idę na uniwersytet pieszo.",
+    "right": "Codziennie chodzę na uniwersytet pieszo.",
+    "note": "Use indeterminate 'chodzić' for habitual, repeated actions accompanied by 'codziennie'."
+   },
+   {
+    "wrong": "Teraz chodzę na dworzec, bo mam pociąg.",
+    "right": "Teraz idę na dworzec, bo mam pociąg.",
+    "note": "Use determinate 'iść' for an action currently unfolding in one specific direction."
+   },
+   {
+    "wrong": "Czy umiesz jechać na rowerze?",
+    "right": "Czy umiesz jeździć na rowerze?",
+    "note": "General physical ability or recreational movement requires the indeterminate verb 'jeździć'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Cześć Kasia! Gdzie teraz ___?",
+    "options": [
+     "chodzisz",
+     "idziesz",
+     "jeździsz",
+     "poszłaś"
+    ],
+    "answer": 1,
+    "explanation": "The speaker asks about a specific movement happening right now ('teraz'), demanding the determinate verb 'iść' (2nd person: 'idziesz')."
+   },
+   {
+    "question": "Mój brat codziennie ___ tramwajem do szkoły.",
+    "options": [
+     "jedzie",
+     "iść",
+     "jeździ",
+     "chodzić"
+    ],
+    "answer": 2,
+    "explanation": "Habitual transportation requires the indeterminate vehicular verb 'jeździć' in the 3rd person: 'jeździ'."
+   },
+   {
+    "question": "W każdą sobotę ___ na basen.",
+    "options": [
+     "idę",
+     "jadę",
+     "chodzimy",
+     "idziemy"
+    ],
+    "answer": 2,
+    "explanation": "'W każdą sobotę' indicates a weekly routine, demanding the indeterminate verb 'chodzimy'."
+   },
+   {
+    "question": "Uważaj na drodze! Bardzo szybko ___!",
+    "options": [
+     "jedziesz",
+     "jeździsz",
+     "chodzisz",
+     "jeździć"
+    ],
+    "answer": 0,
+    "explanation": "A direct comment on current unidirectional vehicular motion requires 'jechać' (2nd person: 'jedziesz')."
+   }
+  ],
+  "tip": "Think of 'iść/jechać' as a single arrow pointing forward (→), and 'chodzić/jeździć' as repeated loops or back-and-forth arrows (⇄)."
+ },
+ {
+  "id": "pl-b1-virile-nonvirile-plurals",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "👥",
+  "title": "Virile vs. Non-Virile Plural Forms",
+  "subtitle": "Distinguishing męskoosobowy from niemęskoosobowy agreement",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Polish divides all plural forms into virile (groups containing at least one male human) and non-virile (all other people, animals, and things).",
+  "structure": {
+   "headers": [
+    "Category",
+    "Sample Noun",
+    "Adjective Form",
+    "Past Verb Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Virile (Męskoosobowy)",
+      "studenci / polacy",
+      "dobrzy / nowi",
+      "czytali / byli"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Non-Virile (Women)",
+      "studentki / kobiety",
+      "dobre / nowe",
+      "czytały / były"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Non-Virile (Animals/Objects)",
+      "psy / samochody",
+      "dobre / nowe",
+      "biegały / stały"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Male/Mixed Human Groups",
+    "example": "Moi koledzy byli wczoraj w kinie.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "All-Female Human Groups",
+    "example": "Nasze nauczycielki były bardzo miłe.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Inanimate / Animal Plural",
+    "example": "Te nowe samochody stały na parkingu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Polscy lekarze pracowali bardzo ciężko.",
+    "ko": "",
+    "highlight": "Polscy lekarze pracowali"
+   },
+   {
+    "en": "Moje siostry wróciły z wakacji.",
+    "ko": "",
+    "highlight": "Moje siostry wróciły"
+   },
+   {
+    "en": "Dobre studentki zdały trudny egzamin.",
+    "ko": "",
+    "highlight": "Dobre studentki zdały"
+   },
+   {
+    "en": "Oni byli zadowoleni ze spotkania.",
+    "ko": "",
+    "highlight": "Oni byli zadowoleni"
+   },
+   {
+    "en": "One kupiły świeże owoce na targu.",
+    "ko": "",
+    "highlight": "One kupiły"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Moi koledzy były wczoraj w kawiarni.",
+    "right": "Moi koledzy byli wczoraj w kawiarni.",
+    "note": "Groups of men or mixed genders take the virile past ending '-li', never '-ły'."
+   },
+   {
+    "wrong": "Te mądre panowie rozmawiali o polityce.",
+    "right": "Ci mądrzy panowie rozmawiali o polityce.",
+    "note": "Virile nouns require virile demonstratives ('ci') and adjectives ('mądrzy'), not non-virile forms ('te', 'mądre')."
+   },
+   {
+    "wrong": "Kobiety i dzieci byli w parku.",
+    "right": "Kobiety i dzieci były w parku.",
+    "note": "If a group contains women and children but no adult males, it remains grammatically non-virile ('były')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Nowi pracownicy ___ spóźnieni do biura.",
+    "options": [
+     "były",
+     "byli",
+     "był",
+     "była"
+    ],
+    "answer": 1,
+    "explanation": "'Pracownicy' is virile (męskoosobowy), so the past tense plural verb requires the '-li' ending: 'byli'."
+   },
+   {
+    "question": "___ dziewczyny czytały interesującą książkę.",
+    "options": [
+     "Ci mądrzy",
+     "Tamci dobrzy",
+     "Te mądre",
+     "Wszyscy dobrzy"
+    ],
+    "answer": 2,
+    "explanation": "'Dziewczyny' is non-virile (all female), which demands the non-virile demonstrative and adjective: 'Te mądre'."
+   },
+   {
+    "question": "Marek i Anna ___ wczoraj długo w nocy.",
+    "options": [
+     "rozmawiały",
+     "rozmawiali",
+     "rozmawiał",
+     "rozmawiało"
+    ],
+    "answer": 1,
+    "explanation": "A mixed group of at least one male human and any female/inanimate companions behaves as virile: 'rozmawiali'."
+   },
+   {
+    "question": "Wszystkie moje koty ___ smaczne jedzenie.",
+    "options": [
+     "zjedli",
+     "zjadł",
+     "zjadła",
+     "zjadły"
+    ],
+    "answer": 3,
+    "explanation": "Animals are always grammatically non-virile in the plural, taking the '-ły' ending: 'zjadły'."
+   }
+  ],
+  "tip": "Even a group of ninety-nine women and one man triggers the virile forms: 'oni byli', 'nasi znajomi'."
+ },
+ {
+  "id": "pl-b1-numeral-noun-governance",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🔢",
+  "title": "Numeral Syntax and Noun Governance",
+  "subtitle": "Contrasting numbers 2–4 with 5 and higher in subject positions",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "Subject numbers 2–4 take Nominative plural nouns and plural verbs, whereas numbers 5 and up govern Genitive plural nouns and neuter singular verbs.",
+  "structure": {
+   "headers": [
+    "Numeral Category",
+    "Noun Case Required",
+    "Verb Agreement",
+    "Example Clause"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1 (jeden/jedna/jedno)",
+      "Nominative singular",
+      "Singular agreement",
+      "Jeden student czeka."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2, 3, 4 (non-virile)",
+      "Nominative plural",
+      "Plural agreement",
+      "Trzy studentki czekają."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "5–21, 25–30 (higher numbers)",
+      "Genitive plural",
+      "Neuter singular (to / -ło)",
+      "Pięć studentek czekało."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Compound (e.g., 22, 23, 24)",
+      "Nominative plural",
+      "Plural agreement",
+      "Dwadzieścia dwa dni minęły."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Small Quantities (2–4)",
+    "example": "Cztery książki leżą na stole.",
+    "translation": ""
+   },
+   {
+    "color": "#0F766E",
+    "label": "Quantities of 5 and Up",
+    "example": "Siedem kobiet czekało na wizytę.",
+    "translation": ""
+   },
+   {
+    "color": "#14B8A6",
+    "label": "Compound Numbers (Ending in 2-4)",
+    "example": "Dwadzieścia trzy domy zostały sprzedane.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dwa duże psy biegały w ogrodzie.",
+    "ko": "",
+    "highlight": "Dwa duże psy biegały"
+   },
+   {
+    "en": "Sześć małych dzieci bawiło się w parku.",
+    "ko": "",
+    "highlight": "Sześć małych dzieci bawiło się"
+   },
+   {
+    "en": "Trzy nowe okna kosztowały dużo pieniędzy.",
+    "ko": "",
+    "highlight": "Trzy nowe okna kosztowały"
+   },
+   {
+    "en": "Dziesięć osób przyszło na spotkanie.",
+    "ko": "",
+    "highlight": "Dziesięć osób przyszło"
+   },
+   {
+    "en": "Dwadzieścia cztery godziny upłynęły szybko.",
+    "ko": "",
+    "highlight": "Dwadzieścia cztery godziny upłynęły"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Pięć studentki zdały egzamin.",
+    "right": "Pięć studentek zdało egzamin.",
+    "note": "Numerals from 5 upward govern the Genitive plural ('studentek') and a 3rd person neuter singular verb ('zdało')."
+   },
+   {
+    "wrong": "Trzy kotów spało na kanapie.",
+    "right": "Trzy koty spały na kanapie.",
+    "note": "Numbers 2, 3, and 4 (ending without virile syntax) take Nominative plural ('koty') and plural verbs ('spały')."
+   },
+   {
+    "wrong": "Osiem telefonów dzwoniły naraz.",
+    "right": "Osiem telefonów dzwoniło naraz.",
+    "note": "Subject constructions governed by numerals 5+ require neuter singular past verbs ending in '-ło'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Na parkingu stoją ___ nowe samochody.",
+    "options": [
+     "trzy",
+     "pięć",
+     "siedem",
+     "dziesięć"
+    ],
+    "answer": 0,
+    "explanation": "The noun 'samochody' and verb 'stoją' are in the Nominative plural, which pairs with 'trzy' (2-4 pattern)."
+   },
+   {
+    "question": "W klasie było ___ utalentowanych uczniów.",
+    "options": [
+     "trzy",
+     "cztery",
+     "dwie",
+     "piętnaście"
+    ],
+    "answer": 3,
+    "explanation": "The Genitive plural 'uczniów' combined with the neuter singular verb 'było' requires a numeral of 5 or higher: 'piętnaście'."
+   },
+   {
+    "question": "Cztery nowe koleżanki ___ do naszej grupy.",
+    "options": [
+     "dołączyło",
+     "dołączyły",
+     "dołączył",
+     "dołączyliśmy"
+    ],
+    "answer": 1,
+    "explanation": "Non-virile plural subject 'cztery koleżanki' requires regular plural feminine verb agreement: 'dołączyły'."
+   },
+   {
+    "question": "Osiem dziewcząt ___ wczoraj do muzeum.",
+    "options": [
+     "poszły",
+     "poszli",
+     "poszło",
+     "poszedł"
+    ],
+    "answer": 2,
+    "explanation": "Numerals 5 and up take neuter singular verb agreement in the past tense: 'poszło'."
+   }
+  ],
+  "tip": "Check the last word of compound numbers: 22, 33, 44 trigger the 2–4 rule (Nominative plural), but 25, 36, 48 trigger the 5+ rule (Genitive plural)."
+ },
+ {
+  "id": "pl-b1-conditional-mood-movable-endings",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#8B5CF6",
+  "emoji": "💭",
+  "title": "Conditional Mood and Movable Particles",
+  "subtitle": "Forming counterfactual statements with the flexible particle '-by-'",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The conditional particle '-by-' adds personal endings (-m, -ś, -, -śmy, -ście) and can attach directly to the past-tense verb stem or jump to conjunctions.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Attached to Verb",
+    "Attached to Conjunction",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Ja (1st Sing Masc)",
+      "kupiłbym",
+      "gdybym kupił",
+      "I would buy"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Ty (2nd Sing Fem)",
+      "kupiłabyś",
+      "gdybyś kupiła",
+      "you would buy"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "On / Ona (3rd Sing)",
+      "kupiłby / kupiłaby",
+      "gdyby kupił / kupiła",
+      "he / she would buy"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "My (1st Plur Virile)",
+      "kupilibyśmy",
+      "gdybyśmy kupili",
+      "we would buy"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Hypothetical Condition",
+    "example": "Gdybym miał czas, poszedłbym do kina.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Polite Request / Softening",
+    "example": "Chciałabym zapytać o drogę.",
+    "translation": ""
+   },
+   {
+    "color": "#A78BFA",
+    "label": "Detached Particle Clause",
+    "example": "Bardzo chętnie byśmy tam pojechali.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Zrobiłbym to zadanie wcześniej.",
+    "ko": "",
+    "highlight": "Zrobiłbym"
+   },
+   {
+    "en": "Gdybyś uczyła się regularnie, zdałabyś ten test.",
+    "ko": "",
+    "highlight": "Gdybyś uczyła się"
+   },
+   {
+    "en": "Czy mógłby pan otworzyć okno?",
+    "ko": "",
+    "highlight": "mógłby"
+   },
+   {
+    "en": "Gdybyśmy mieli pieniądze, pojechalibyśmy do Włoch.",
+    "ko": "",
+    "highlight": "pojechalibyśmy"
+   },
+   {
+    "en": "Chętnie bym wypił ciepłą herbatę.",
+    "ko": "",
+    "highlight": "bym wypił"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Gdybym ja miał czas, to ja kupiłbym to.",
+    "right": "Gdybym miał czas, to kupiłbym to.",
+    "note": "Avoid doubling pronouns unnecessarily; the personal markers '-m' already specify the subject."
+   },
+   {
+    "wrong": "Gdyby znali prawdę, powiedzieliby tobie.",
+    "right": "Gdyby znali prawdę, powiedzieliby ci.",
+    "note": "Keep clitic pronouns un-stressed ('ci', not 'tobie') unless placed deliberately at sentence beginnings or under contrastive emphasis."
+   },
+   {
+    "wrong": "My chcielibyśmy aby ty przyszedł.",
+    "right": "Chcielibyśmy, żebyś przyszedł.",
+    "note": "Attach the second-person conditional ending to the subordinating conjunction ('żebyś'), not leaving the verb stranded without proper agreement."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Gdybym ___ więcej wolnego czasu, czytałbym książki.",
+    "options": [
+     "miał",
+     "miałem",
+     "mieć",
+     "mam"
+    ],
+    "answer": 0,
+    "explanation": "The conditional marker '-m' has attached to 'gdyby' ('gdybym'), so the following verb appears in the plain past-tense base without personal suffix: 'miał'."
+   },
+   {
+    "question": "Czy ___ mi pomóc z tą walizką? (speaking to an informal male friend)",
+    "options": [
+     "mógłbym",
+     "mógłbyś",
+     "mogłabyś",
+     "mogliście"
+    ],
+    "answer": 1,
+    "explanation": "Addressing an informal male peer (ty) in the conditional requires the masculine stem + '-byś': 'mógłbyś'."
+   },
+   {
+    "question": "Chętnie ___ do teatru w ten weekend. (we, mixed group)",
+    "options": [
+     "poszlibyśmy",
+     "poszłybyśmy",
+     "poszedłby",
+     "poszlibyście"
+    ],
+    "answer": 0,
+    "explanation": "A virile 1st-person plural subject ('we') requires '-libyśmy': 'poszlibyśmy'."
+   },
+   {
+    "question": "Mama prosiła, ___ natychmiast wrócili do domu. (you plural)",
+    "options": [
+     "żebym",
+     "żeby",
+     "żebyście",
+     "żebyśmy"
+    ],
+    "answer": 2,
+    "explanation": "When directing the clause to 'wy' (2nd person plural), attach '-ście' to 'żeby': 'żebyście'."
+   }
+  ],
+  "tip": "Polish conditional personal endings are mobile clitics: 'My byśmy to zrobili' and 'Zrobilibyśmy to' mean the exact same thing."
+ },
+ {
+  "id": "pl-b1-reflexive-pronoun-sie-and-reciprocal-verbs",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🪞",
+  "title": "Functions of 'Się': Reflexive, Reciprocal, and Impersonal",
+  "subtitle": "Master the versatile roles of the clitic 'się' in Polish syntax.",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "The particle 'się' signals whether the subject acts upon itself, interacts reciprocally with another entity, or creates a generalized impersonal statement.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Polish Structure",
+    "Grammatical Role"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "True Reflexive",
+      "Myję się codziennie rano.",
+      "Subject and direct object are identical (oneself)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reciprocal",
+      "Znamy się od wielu lat.",
+      "Mutual action between multiple subjects (each other)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Impersonal / Passive",
+      "Tutaj mówi się po polsku.",
+      "Subjectless general statement (one does / it is done)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Inherent Reflexive",
+      "Często śmieję się z żartów.",
+      "Lexical requirement; verb does not exist without 'się'"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Self-Directed Action",
+    "example": "Dziecko ubiera się samodzielnie przed wyjściem.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Mutual Interaction",
+    "example": "Często spotykamy się w kawiarni w centrum miasta.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "General Rule / Impersonal",
+    "example": "Jak to słowo wymawia się poprawnie?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Codziennie czeszę się przed wielkim lustrem.",
+    "ko": "",
+    "highlight": "czeszę się"
+   },
+   {
+    "en": "Oni bardzo się lubią i wspólnie pracują.",
+    "ko": "",
+    "highlight": "się lubią"
+   },
+   {
+    "en": "W tej restauracji podaje się tradycyjne potrawy.",
+    "ko": "",
+    "highlight": "podaje się"
+   },
+   {
+    "en": "Boję się ciemności w tym starym domu.",
+    "ko": "",
+    "highlight": "Boję się"
+   },
+   {
+    "en": "Wszyscy serdecznie się przywitali na lotnisku.",
+    "ko": "",
+    "highlight": "się przywitali"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ja myję mnie rano.",
+    "right": "Myję się rano.",
+    "note": "Never use the personal accusative pronoun ('mnie', 'cię') for self-directed actions; Polish requires the reflexive particle 'się'."
+   },
+   {
+    "wrong": "Się widzieliśmy wczoraj.",
+    "right": "Widzieliśmy się wczoraj.",
+    "note": "Avoid placing 'się' as the very first element of a sentence; it is a clitic that prefers a post-verbal or unstressed mid-sentence slot."
+   },
+   {
+    "wrong": "Oni kochają jeden drugiego.",
+    "right": "Oni się kochają.",
+    "note": "Polish expresses reciprocity ('each other') naturally with 'się' rather than calquing analytical phrases."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'They help each other regularly' in natural Polish?",
+    "options": [
+     "Oni pomagają się regularnie.",
+     "Oni sobie pomagają regularnie.",
+     "Oni pomagają ich regularnie.",
+     "Oni są pomagani regularnie."
+    ],
+    "answer": 1,
+    "explanation": "Verbs requiring the dative case (like 'pomagać') take the dative reflexive pronoun 'sobie' rather than accusative 'się' for reciprocity."
+   },
+   {
+    "question": "Select the impersonal construction meaning 'One speaks Polish here':",
+    "options": [
+     "Mówi się tutaj po polsku.",
+     "Tutaj mówimy się po polsku.",
+     "Tutaj jest mówione po polsku.",
+     "Mówi tutaj po polsku."
+    ],
+    "answer": 0,
+    "explanation": "The 3rd-person singular verb followed by 'się' forms standard impersonal expressions."
+   },
+   {
+    "question": "Choose the correctly constructed sentence for 'The children are dressing themselves':",
+    "options": [
+     "Dzieci ubierają ich.",
+     "Dzieci ubierają się.",
+     "Dzieci się ubierają nich.",
+     "Dzieci ubiera się."
+    ],
+    "answer": 1,
+    "explanation": "The verb must agree in the 3rd person plural ('ubierają') and use reflexive 'się'."
+   },
+   {
+    "question": "Which sentence demonstrates an inherent reflexive verb (reflexiva tantum)?",
+    "options": [
+     "Marek goli się codziennie.",
+     "Anna i Piotr całują się.",
+     "W gazecie pisze się o kryzysie.",
+     "Student boi się trudnego egzaminu."
+    ],
+    "answer": 3,
+    "explanation": "'Bać się' (to fear) is an inherently reflexive verb; it cannot exist grammatically without 'się'."
+   }
+  ],
+  "tip": "Polish rhythmic rhythm disfavors putting 'się' either at the very beginning or the very end of an utterance; aim to tuck it right after the verb or after the first stressed word."
+ },
+ {
+  "id": "pl-b1-prefixed-verbs-of-motion",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🚶",
+  "title": "Spatial Prefixes on Verbs of Motion",
+  "subtitle": "Encode trajectory, boundary crossing, and aspect onto motion roots.",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Attaching spatial prefixes to determinate motion verbs creates perfective verbs indicating a single, directed movement with specific orientation.",
+  "structure": {
+   "headers": [
+    "Prefix",
+    "Spatial Meaning",
+    "Perfective Form",
+    "Imperfective Counterpart"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "wy-",
+      "Exit / Movement out of",
+      "wyjść (to leave)",
+      "wychodzić"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "w- / we-",
+      "Entry / Movement into",
+      "wejść (to enter)",
+      "wchodzić"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "przy-",
+      "Arrival / Reaching here",
+      "przyjść (to arrive)",
+      "przychodzić"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "prze-",
+      "Crossing / Transit across",
+      "przejść (to cross)",
+      "przechodzić"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Leaving an Enclosed Space",
+    "example": "Marek wyszedł z biura dokładnie o piątej.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Approaching a Boundary",
+    "example": "Kiedy dojdziesz do skrzyżowania, skręć w prawo.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Passing Through or Crossing",
+    "example": "Pies bezpiecznie przeszedł przez ruchliwą ulicę.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Szybko wszedłem do ciepłego pokoju.",
+    "ko": "",
+    "highlight": "wszedłem do"
+   },
+   {
+    "en": "Pociąg właśnie odjechał z drugiego peronu.",
+    "ko": "",
+    "highlight": "odjechał z"
+   },
+   {
+    "en": "O której godzinie przyjedziecie do Krakowa?",
+    "ko": "",
+    "highlight": "przyjedziecie do"
+   },
+   {
+    "en": "Musimy obejść to duże jezioro dookoła.",
+    "ko": "",
+    "highlight": "obejść"
+   },
+   {
+    "en": "Turyści zeszli ze szczytu przed burzą.",
+    "ko": "",
+    "highlight": "zeszli ze"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Wyszedłem w pokoju.",
+    "right": "Wszedłem do pokoju.",
+    "note": "Use the prefix 'w-' with preposition 'do' for entering, whereas 'wy-' means departing from a space."
+   },
+   {
+    "wrong": "On przyjechał z Warszawy do Gdańska na rowerze codziennie.",
+    "right": "On przyjeżdżał z Warszawy do Gdańska na rowerze codziennie.",
+    "note": "Prefixing determinate 'jechać' creates perfective 'przyjechać' (one-off event); use imperfective 'przyjeżdżać' for repeated routines."
+   },
+   {
+    "wrong": "Przeszedłem do domu o ósmej.",
+    "right": "Przyszedłem do domu o ósmej.",
+    "note": "'Przejść' means to cross or transit; use 'przyjść' to denote arrival at one's home."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct verb for 'She left (walked out of) the cinema':",
+    "options": [
+     "Weszła z kina.",
+     "Przeszła z kina.",
+     "Wyszła z kina.",
+     "Doszła z kina."
+    ],
+    "answer": 2,
+    "explanation": "The prefix 'wy-' specifies outward motion and matches the preposition 'z' (+ genitive)."
+   },
+   {
+    "question": "How do you say 'We drove across the bridge'?",
+    "options": [
+     "Przejechaliśmy przez most.",
+     "Odjechaliśmy przez most.",
+     "Wjechaliśmy przez most.",
+     "Zjechaliśmy przez most."
+    ],
+    "answer": 0,
+    "explanation": "The prefix 'prze-' denotes motion across or through an obstacle, matching 'przez' (+ accusative)."
+   },
+   {
+    "question": "Complete the sentence: 'Pociąg zaraz ___ na stację' (The train will arrive at the station soon):",
+    "options": [
+     "odejdzie",
+     "zjedzie",
+     "obejdzie",
+     "przyjedzie"
+    ],
+    "answer": 3,
+    "explanation": "'Przyjechać' (vehicular arrival) matches arrival at a destination indicated by 'na'."
+   },
+   {
+    "question": "Which prefix means moving away from a starting point (departure)?",
+    "options": [
+     "od-",
+     "do-",
+     "w-",
+     "u-"
+    ],
+    "answer": 0,
+    "explanation": "The prefix 'od-' encodes departure or distancing from a reference point (e.g., 'odjechać', 'odejść')."
+   }
+  ],
+  "tip": "Spatial prefixes almost always match paired prepositions: 'w-' takes 'do', 'wy-' takes 'z', 'do-' takes 'do', and 'od-' takes 'od'."
+ },
+ {
+  "id": "pl-b2-adjectival-participles",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#0D9488",
+  "emoji": "📜",
+  "title": "Active and Passive Adjectival Participles",
+  "subtitle": "Form and decline descriptive verbal adjectives in -ący, -ny, and -ty.",
+  "color": "#0F766E",
+  "bg": "#F0FDFA",
+  "keyPoint": "Adjectival participles function syntactically like ordinary adjectives, agreeing in gender, number, and case with the noun they modify.",
+  "structure": {
+   "headers": [
+    "Participle Type",
+    "Formation Base",
+    "Suffixes",
+    "Polish Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Active (Imperfective)",
+      "3rd pl. pres. stem",
+      "-ący, -ąca, -ące",
+      "czytający student (reading student)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passive in -ny (Perf/Imperf)",
+      "Infinitive stem in -a/-e",
+      "-ny, -na, -ne",
+      "napisany list (written letter)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Passive in -ty (Perf/Imperf)",
+      "Monosyllabic / -ić stems",
+      "-ty, -ta, -te",
+      "zamknięte okno (closed window)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Declension Paradigm",
+      "Adjectival endings",
+      "Case matches noun",
+      "o czytającym studencie (Locative)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0F766E",
+    "label": "Active Ongoing Modifier",
+    "example": "Mężczyzna stojący na przystanku czyta gazetę.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Completed State (Passive)",
+    "example": "Wszystkie podpisane dokumenty leżą na biurku.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Resultative Condition",
+    "example": "Drzwi do gabinetu były szczelnie zamknięte.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Widziałem dziewczynę grającą na skrzypcach.",
+    "ko": "",
+    "highlight": "grającą"
+   },
+   {
+    "en": "Kupiłem wczoraj pięknie wydaną książkę.",
+    "ko": "",
+    "highlight": "wydaną"
+   },
+   {
+    "en": "Pies śpiący na dywanie głośno chrapie.",
+    "ko": "",
+    "highlight": "śpiący"
+   },
+   {
+    "en": "Pokoje są regularnie sprzątane przez personel.",
+    "ko": "",
+    "highlight": "sprzątane"
+   },
+   {
+    "en": "Dyskutowaliśmy o artykule opublikowanym wczoraj.",
+    "ko": "",
+    "highlight": "opublikowanym"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Widzę czytający chłopaka.",
+    "right": "Widzę czytającego chłopaka.",
+    "note": "Adjectival participles decline: an animate masculine noun in the accusative requires the ending '-ego'."
+   },
+   {
+    "wrong": "Książka była napisana przez autorem.",
+    "right": "Książka była napisana przez autora.",
+    "note": "The agent in a passive participial construction is expressed with 'przez' + accusative, not the instrumental case."
+   },
+   {
+    "wrong": "To jest zrobiona zadanie.",
+    "right": "To jest zrobione zadanie.",
+    "note": "Neuter nouns like 'zadanie' require the neuter participial ending '-e', not feminine '-a'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the correct participle form: 'Kobieta ___ w pierwszym rzędzie to profesorka' (The woman sitting in the first row):",
+    "options": [
+     "siedząca",
+     "siedzący",
+     "siedzące",
+     "siedzącą"
+    ],
+    "answer": 0,
+    "explanation": "'Kobieta' is nominative feminine singular, so the active participle must take '-ąca'."
+   },
+   {
+    "question": "Complete the passive sentence: 'Rachunki zostały już ___' (The bills have already been paid [rachunki = non-virile pl.]):",
+    "options": [
+     "zapłacona",
+     "zapłacone",
+     "zapłaceni",
+     "zapłacony"
+    ],
+    "answer": 1,
+    "explanation": "Non-virile plural nouns ('rachunki') take the passive participial ending '-e'."
+   },
+   {
+    "question": "Choose the correctly formed passive participle for the verb 'otworzyć' (to open):",
+    "options": [
+     "otworzony",
+     "otwierający",
+     "otwarty",
+     "otworzany"
+    ],
+    "answer": 2,
+    "explanation": "Verbs ending in '-orzyć' take the '-ty' suffix in the passive participle ('otwarty')."
+   },
+   {
+    "question": "Select the correct case agreement: 'Rozmawialiśmy o ___ problemach' (about existing problems - Locative pl.):",
+    "options": [
+     "istniejący",
+     "istniejącym",
+     "istniejących",
+     "istniejące"
+    ],
+    "answer": 2,
+    "explanation": "The locative plural for adjectival endings across all genders is '-ych' / '-ich'."
+   }
+  ],
+  "tip": "Active participles (-ący) can only ever be formed from imperfective verbs; perfective active participles do not exist in modern Polish."
+ },
+ {
+  "id": "pl-b2-adverbial-participles-imieslowy",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#0D9488",
+  "emoji": "⏳",
+  "title": "Contemporaneous and Anterior Adverbial Participles",
+  "subtitle": "Link simultaneous and sequential clauses with -ąc and -wszy/-łszy.",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Adverbial participles are invariable verbal forms that compress subordinate clauses, strictly requiring both actions to share the identical grammatical subject.",
+  "structure": {
+   "headers": [
+    "Participle",
+    "Aspect",
+    "Formation",
+    "Temporal Relationship"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Współczesny (-ąc)",
+      "Imperfective",
+      "Pres. 3rd pl. minus -ą + -ąc",
+      "Simultaneous action (while doing)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Uprzedni (-wszy)",
+      "Perfective",
+      "Past stem in vowel + -wszy",
+      "Prior action (having done)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Uprzedni (-łszy)",
+      "Perfective",
+      "Past stem in consonant + -łszy",
+      "Prior action (having done)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Subject Rule",
+      "Shared Subject",
+      "Subject must match main verb",
+      "Mandatory syntactic constraint"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Simultaneous Action",
+    "example": "Słuchał muzyki, pracując nad nowym projektem.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Preceding Sequence",
+    "example": "Zjadłszy obiad, natychmiast wyszedł z domu.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Formal Narrative Link",
+    "example": "Otrzymawszy wiadomość, prezes zwołał zebranie.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Idąc przez park, spotkałem dawnego przyjaciela.",
+    "ko": "",
+    "highlight": "Idąc"
+   },
+   {
+    "en": "Skończywszy uniwersytet, wyjechała za granicę.",
+    "ko": "",
+    "highlight": "Skończywszy"
+   },
+   {
+    "en": "Odpoczywając nad morzem, zapomniał o stresie.",
+    "ko": "",
+    "highlight": "Odpoczywając"
+   },
+   {
+    "en": "Wszedłszy do pokoju, włączył jasne światło.",
+    "ko": "",
+    "highlight": "Wszedłszy"
+   },
+   {
+    "en": "Nie wiedząc co powiedzieć, zamilkła na chwilę.",
+    "ko": "",
+    "highlight": "Nie wiedząc"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Idąc do szkoły, spadł deszcz.",
+    "right": "Kiedy szedłem do szkoły, spadł deszcz.",
+    "note": "Dangling participle: the rain ('deszcz') was not walking to school. Both clauses must have the same subject."
+   },
+   {
+    "wrong": "Zrobiąc zadanie, poszedł spać.",
+    "right": "Zrobiwszy zadanie, poszedł spać.",
+    "note": "The suffix '-ąc' is exclusive to imperfective verbs; prior completed actions from perfective verbs take '-wszy/-łszy'."
+   },
+   {
+    "wrong": "On czytając książkę, zasnął.",
+    "right": "Czytając książkę, zasnął.",
+    "note": "Do not insert redundant subject pronouns directly next to adverbial participles when the main subject follows."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill the blank for simultaneous action: 'Rozmawiali, ___ kawę w kawiarni' (drinking coffee):",
+    "options": [
+     "pili",
+     "wypiliwszy",
+     "pijąc",
+     "pijący"
+    ],
+    "answer": 2,
+    "explanation": "The imperfective contemporaneity marker is the adverbial participle in '-ąc' ('pijąc')."
+   },
+   {
+    "question": "Which sentence demonstrates a grammatically incorrect subject mismatch (dangling participle)?",
+    "options": [
+     "Otworzywszy okno, powiew wiatru przewrócił wazon.",
+     "Otworzywszy okno, poczułem chłód.",
+     "Czytając raport, notowałem błędy.",
+     "Wróciwszy do domu, wziął prysznic."
+    ],
+    "answer": 0,
+    "explanation": "In option A, the wind ('powiew') is the grammatical subject, but it didn't open the window."
+   },
+   {
+    "question": "Form the anterior adverbial participle of the perfective verb 'napisać':",
+    "options": [
+     "napisawszy",
+     "napisząc",
+     "napisano",
+     "napisawszyście"
+    ],
+    "answer": 0,
+    "explanation": "Vowel stems take '-wszy': 'napisa-' + '-wszy' = 'napisawszy' (having written)."
+   },
+   {
+    "question": "What is the key functional difference between -ąc and -wszy?",
+    "options": [
+     "-ąc is passive; -wszy is active.",
+     "-ąc is simultaneous; -wszy indicates an action completed before the main verb.",
+     "-ąc is used with nouns; -wszy with adjectives.",
+     "-ąc denotes past actions; -wszy denotes future actions."
+    ],
+    "answer": 1,
+    "explanation": "The contemporary participle (-ąc) marks overlapping actions, while the anterior participle (-wszy) marks preceding actions."
+   }
+  ],
+  "tip": "Anterior participles (-wszy/-łszy) sound elevated and literary in modern Polish; in casual conversation, native speakers prefer coordinating clauses with 'kiedy' or 'po tym, jak'."
+ },
+ {
+  "id": "pl-b2-impersonal-past-no-to",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#7C3AED",
+  "emoji": "🏛️",
+  "title": "Impersonal Past Forms Ending in -no and -to",
+  "subtitle": "Convey agentless historical actions and generalized past events.",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Verbal past forms ending in -no and -to create agentless, strictly subjectless statements referring exclusively to human activity in the past.",
+  "structure": {
+   "headers": [
+    "Infinitive Stem",
+    "Derivation Suffix",
+    "Form Example",
+    "Syntactic Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Stem ending in -a/-e",
+      "+ -no",
+      "zbudowano (was built)",
+      "Past impersonal (from -ny passive)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Stem ending in consonant/-i/-y",
+      "+ -to",
+      "zamknięto (was closed)",
+      "Past impersonal (from -ty passive)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Direct Object Case",
+      "Preserved Case",
+      "zbudowano nowy most (Acc.)",
+      "Objects retain accusative (not nominative)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Agent Restriction",
+      "Human Agent Implicit",
+      "never takes 'przez...'",
+      "Refers strictly to human agents"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6D28D9",
+    "label": "Historical Accounts",
+    "example": "W tysiąc dziewięćsetnym roku wzniesiono ten pomnik.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Official / Media Reports",
+    "example": "Podczas wczorajszej konferencji podjęto ważne decyzje.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Generalized Human Events",
+    "example": "Dużo o tym problemie dyskutowano w prasie.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "W centrum Warszawy wybudowano nowoczesny wieżowiec.",
+    "ko": "",
+    "highlight": "wybudowano"
+   },
+   {
+    "en": "Przerwano spotkanie z powodu nagłego alarmu.",
+    "ko": "",
+    "highlight": "Przerwano"
+   },
+   {
+    "en": "Znaleziono stary pamiętnik na strychu.",
+    "ko": "",
+    "highlight": "Znaleziono"
+   },
+   {
+    "en": "Wczoraj zamknięto wszystkie miejskie muzea.",
+    "ko": "",
+    "highlight": "zamknięto"
+   },
+   {
+    "en": "Dużo tańczono i śpiewano na tym weselu.",
+    "ko": "",
+    "highlight": "tańczono i śpiewano"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Nowy most został wybudowano.",
+    "right": "Nowy most został wybudowany.",
+    "note": "Do not mix 'zostać' with '-no/-to'. The '-no/-to' form stands entirely alone as an independent predicate."
+   },
+   {
+    "wrong": "Wybudowano most przez robotników.",
+    "right": "Robotnicy wybudowali most.",
+    "note": "Forms in -no/-to suppress the agent completely; you cannot attach a 'przez...' (by...) agent clause."
+   },
+   {
+    "wrong": "Wczoraj było zimno, więc zmarznięto na przystanku.",
+    "right": "Wczoraj było zimno, więc zmarznięto... [INCORRECT: cannot be used for non-volitional states]",
+    "note": "-no/-to can only be used with conscious, intentional human actions, never involuntary physiological reactions like 'zmarznąć'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Transform into an impersonal past statement: 'Władze otworzyły nowy teatr' (Authorities opened a new theater):",
+    "options": [
+     "Nowy teatr został otworzono.",
+     "Otworzyło się nowy teatr.",
+     "Otwarto nowy teatr.",
+     "Było otwarto nowy teatr."
+    ],
+    "answer": 2,
+    "explanation": "The past impersonal form of 'otworzyć' is 'otwarto', taking the direct object in the accusative ('nowy teatr')."
+   },
+   {
+    "question": "What is the grammatical case of 'szkołę' in 'Zbudowano nową szkołę'?",
+    "options": [
+     "Nominative",
+     "Accusative",
+     "Genitive",
+     "Instrumental"
+    ],
+    "answer": 1,
+    "explanation": "Unlike standard passive voice, the -no/-to construction is active in government: the target remains in the accusative case."
+   },
+   {
+    "question": "Choose the correct impersonal form for 'zorganizować':",
+    "options": [
+     "zorganizowano",
+     "zorganizowato",
+     "zorganizowani",
+     "zorganizować no"
+    ],
+    "answer": 0,
+    "explanation": "Verbs in '-ować' form their passive base in '-owa-', thus taking the '-no' ending: 'zorganizowano'."
+   },
+   {
+    "question": "Which of these sentences is ungrammatical due to an agent phrase?",
+    "options": [
+     "Podpisano umowę wczoraj.",
+     "Aresztowano podejrzanego przez policję.",
+     "Zrobiono wszystko na czas.",
+     "Przyjęto wniosek bez sprzeciwu."
+    ],
+    "answer": 1,
+    "explanation": "Forms in -no/-to strictly forbid an overt agent introduced by 'przez policję'."
+   }
+  ],
+  "tip": "Remember that '-no/-to' predicates are inherently past-tense; never add the auxiliary verb 'być' or 'zostać' to them."
+ }
+]

@@ -1,0 +1,3333 @@
+[
+ {
+  "id": "vi-a1-pronouns-kinship",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "👥",
+  "title": "Kinship Terms as Personal Pronouns",
+  "subtitle": "Addressing others and yourself through social hierarchy",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Vietnamese avoids generic words for 'I' and 'you', instead using family relationship terms reflecting relative age, gender, and social distance.",
+  "structure": {
+   "headers": [
+    "Term",
+    "Used For",
+    "Vietnamese Example",
+    "Role"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "anh",
+      "Slightly older male",
+      "Anh đi đâu đấy?",
+      "Older brother / You"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "chị",
+      "Slightly older female",
+      "Chị có khỏe không?",
+      "Older sister / You"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "em",
+      "Younger person (either gender)",
+      "Em chào anh.",
+      "Younger sibling / I or You"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "cô / chú",
+      "Female / Male of parents' age",
+      "Chào cô ạ.",
+      "Aunt / Uncle / You"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Talking to an Older Male",
+    "example": "Em cảm ơn anh nhiều.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Talking to a Younger Colleague",
+    "example": "Chị sẽ giúp em việc này.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Addressing an Older Woman (Aunt-generation)",
+    "example": "Cháu mời cô uống nước.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Anh ăn cơm chưa?",
+    "ko": "",
+    "highlight": "Anh"
+   },
+   {
+    "en": "Em tên là Nam.",
+    "ko": "",
+    "highlight": "Em"
+   },
+   {
+    "en": "Chị đi làm bằng xe máy.",
+    "ko": "",
+    "highlight": "Chị"
+   },
+   {
+    "en": "Chú có cần giúp không ạ?",
+    "ko": "",
+    "highlight": "Chú"
+   },
+   {
+    "en": "Bác cho cháu gửi lời hỏi thăm gia đình.",
+    "ko": "",
+    "highlight": "cháu"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Tôi yêu bạn.",
+    "right": "Anh yêu em.",
+    "note": "'Tôi' and 'bạn' sound cold and overly detached in everyday personal or romantic relationships."
+   },
+   {
+    "wrong": "Em nói chuyện với bạn.",
+    "right": "Em nói chuyện với chị.",
+    "note": "Maintain symmetrical kinship pairs: if you refer to yourself as 'em', call the older female speaker 'chị'."
+   },
+   {
+    "wrong": "Chào mày!",
+    "right": "Chào anh!",
+    "note": "'Mày' and 'tao' are extremely casual or derogatory; never use them with acquaintances or superiors."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "When speaking to an older female colleague, how should you address her?",
+    "options": [
+     "anh",
+     "chị",
+     "em",
+     "chú"
+    ],
+    "answer": 1,
+    "explanation": "'Chị' is the proper polite kinship pronoun for a slightly older woman."
+   },
+   {
+    "question": "If you call your conversation partner 'anh', how should you refer to yourself?",
+    "options": [
+     "tôi",
+     "chú",
+     "em",
+     "bác"
+    ],
+    "answer": 2,
+    "explanation": "The natural reciprocal pronoun for someone addressing an 'anh' is 'em' (younger sibling)."
+   },
+   {
+    "question": "Which term is appropriate when greeting a male roughly the age of your father?",
+    "options": [
+     "chú",
+     "em",
+     "chị",
+     "bạn"
+    ],
+    "answer": 0,
+    "explanation": "'Chú' refers to a man younger than one's father, commonly used for middle-aged men."
+   },
+   {
+    "question": "Complete the polite self-reference: '___ chào cô ạ.' (speaking to a female teacher/elder)",
+    "options": [
+     "Anh",
+     "Cô",
+     "Chị",
+     "Cháu"
+    ],
+    "answer": 3,
+    "explanation": "When addressing an elder as 'cô', referring to oneself as 'cháu' (niece/nephew/grandchild) is standard and respectful."
+   }
+  ],
+  "tip": "When in doubt about someone's age, err on the side of youth: addressing a woman as 'chị' instead of 'cô' is often received as a compliment."
+ },
+ {
+  "id": "vi-a1-copula-la",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔗",
+  "title": "The Equative Copula 'Là' vs. Predicative Adjectives",
+  "subtitle": "Connecting nouns with 'là' while linking adjectives directly",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use 'là' strictly to equate two nominal elements (A is B), but attach descriptive adjectives directly to the subject without any copula.",
+  "structure": {
+   "headers": [
+    "Pattern",
+    "Structure",
+    "Vietnamese Example",
+    "Note"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Noun Equative",
+      "Noun + là + Noun",
+      "Tôi là sinh viên.",
+      "Requires 'là'"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Descriptive Adjective",
+      "Noun + Adjective",
+      "Cô ấy đẹp.",
+      "No copula allowed"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adjective + Intensifier",
+      "Noun + rất + Adjective",
+      "Phở rất ngon.",
+      "Directly precedes adjective"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Copula",
+      "Noun + không phải là + Noun",
+      "Đây không phải là xe tôi.",
+      "'không phải là' for nouns"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Stating Identity or Profession",
+    "example": "Anh ấy là bác sĩ.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Describing Conditions or Qualities",
+    "example": "Hôm nay trời nóng quá.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Negating a Nominal Identity",
+    "example": "Tôi không phải là người Pháp.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Hà Nội là thủ đô của Việt Nam.",
+    "ko": "",
+    "highlight": "là"
+   },
+   {
+    "en": "Cà phê này ngon lắm.",
+    "ko": "",
+    "highlight": "ngon"
+   },
+   {
+    "en": "Chị Lan là giáo viên tiếng Anh.",
+    "ko": "",
+    "highlight": "là"
+   },
+   {
+    "en": "Căn nhà đó rất lớn.",
+    "ko": "",
+    "highlight": "rất lớn"
+   },
+   {
+    "en": "Đó không phải là sách của em.",
+    "ko": "",
+    "highlight": "không phải là"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Cô ấy là đẹp.",
+    "right": "Cô ấy đẹp.",
+    "note": "Vietnamese adjectives act as stative verbs; placing 'là' before an adjective is ungrammatical."
+   },
+   {
+    "wrong": "Tôi sinh viên.",
+    "right": "Tôi là sinh viên.",
+    "note": "Connecting two nouns requires the explicit copula 'là'."
+   },
+   {
+    "wrong": "Tôi không là bác sĩ.",
+    "right": "Tôi không phải là bác sĩ.",
+    "note": "Standard negation of nominal identity requires 'không phải là', not just 'không là'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct sentence for 'This soup is very delicious':",
+    "options": [
+     "Canh này là rất ngon.",
+     "Canh này rất ngon.",
+     "Canh này ngon là.",
+     "Canh này là ngon."
+    ],
+    "answer": 1,
+    "explanation": "Descriptive adjectives connect directly to the subject without 'là'."
+   },
+   {
+    "question": "Fill in the blank: 'Nam ___ kỹ sư.' (Nam is an engineer)",
+    "options": [
+     "rất",
+     "đẹp",
+     "quá",
+     "là"
+    ],
+    "answer": 3,
+    "explanation": "An equative relationship between subject ('Nam') and noun ('kỹ sư') requires 'là'."
+   },
+   {
+    "question": "How do you say 'I am not a student'?",
+    "options": [
+     "Tôi không là học sinh.",
+     "Tôi không phải học sinh.",
+     "Tôi chưa học sinh.",
+     "Tôi chẳng học sinh."
+    ],
+    "answer": 1,
+    "explanation": "'Không phải' (or 'không phải là') is the correct negation for nominal predicates."
+   },
+   {
+    "question": "Which sentence correctly avoids using 'là'?",
+    "options": [
+     "Thời tiết hôm nay rất lạnh.",
+     "Thời tiết hôm nay là rất lạnh.",
+     "Thời tiết hôm nay là lạnh.",
+     "Thời tiết là hôm nay lạnh."
+    ],
+    "answer": 0,
+    "explanation": "'Lạnh' is an adjective, so no copula 'là' should appear."
+   }
+  ],
+  "tip": "Think of Vietnamese adjectives as already containing the verb 'to be' (e.g., 'đẹp' = 'to be beautiful')."
+ },
+ {
+  "id": "vi-a1-classifiers-counting",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📦",
+  "title": "Noun Classifiers (Con, Cái, Cuốn) and Quantification",
+  "subtitle": "Specifying nouns by shape, animacy, and function",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "When counting or pointing to nouns in Vietnamese, insert a mandatory classifier between the numeral/demonstrative and the noun.",
+  "structure": {
+   "headers": [
+    "Classifier",
+    "Applies To",
+    "Vietnamese Example",
+    "Numeral Structure"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "con",
+      "Animals, living beings, active objects",
+      "hai con mèo",
+      "Number + Classifier + Noun"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "cái",
+      "Inanimate objects, general tools",
+      "ba cái bàn",
+      "Number + Classifier + Noun"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "cuốn / quyển",
+      "Bound volumes (books, notebooks)",
+      "bốn cuốn sách",
+      "Number + Classifier + Noun"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "quả / trái",
+      "Fruits and spherical objects",
+      "một quả táo",
+      "Number + Classifier + Noun"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Counting Living Animals",
+    "example": "Nhà tôi nuôi ba con chó.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Specifying Reading Materials",
+    "example": "Em muốn mua hai cuốn truyện này.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Pointing with Demonstratives",
+    "example": "Cái áo này rất vừa.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Có hai con chim trên cây.",
+    "ko": "",
+    "highlight": "con"
+   },
+   {
+    "en": "Tôi cần mua một cái máy tính mới.",
+    "ko": "",
+    "highlight": "cái"
+   },
+   {
+    "en": "Quyển sách này rất hay.",
+    "ko": "",
+    "highlight": "Quyển"
+   },
+   {
+    "en": "Cho tôi xin một quả cam.",
+    "ko": "",
+    "highlight": "quả"
+   },
+   {
+    "en": "Bác ấy có một ngôi nhà đẹp.",
+    "ko": "",
+    "highlight": "ngôi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "hai chó",
+    "right": "hai con chó",
+    "note": "Numbers cannot directly modify most count nouns; you must insert the classifier 'con' for animals."
+   },
+   {
+    "wrong": "một sách",
+    "right": "một cuốn sách",
+    "note": "Bound items require the volume classifier 'cuốn' or 'quyển'."
+   },
+   {
+    "wrong": "ba cái chó",
+    "right": "ba con chó",
+    "note": "'Cái' is used for inanimate objects, whereas animals require 'con'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase for 'three cats':",
+    "options": [
+     "ba cuốn mèo",
+     "ba quả mèo",
+     "ba con mèo",
+     "ba cái mèo"
+    ],
+    "answer": 2,
+    "explanation": "'Con' is the required classifier for animals."
+   },
+   {
+    "question": "Which classifier is used for counting books?",
+    "options": [
+     "cuốn",
+     "con",
+     "cái",
+     "bức"
+    ],
+    "answer": 0,
+    "explanation": "'Cuốn' (or 'quyển') specifically categorizes bound paper items such as books."
+   },
+   {
+    "question": "Complete the sentence: 'Tôi mua một ___ áo mới.'",
+    "options": [
+     "con",
+     "quả",
+     "ngôi",
+     "cái"
+    ],
+    "answer": 3,
+    "explanation": "'Cái' is the standard classifier for garments, tools, and inanimate objects."
+   },
+   {
+    "question": "Select the proper classifier for an apple: 'hai ___ táo'",
+    "options": [
+     "tờ",
+     "quả",
+     "cây",
+     "con"
+    ],
+    "answer": 1,
+    "explanation": "'Quả' (or 'trái' in the South) is used for fruits and spherical items."
+   }
+  ],
+  "tip": "Remember: Number + Classifier + Noun (e.g., một cái bàn). When using demonstratives, reverse the order: Classifier + Noun + Demonstrative (e.g., cái bàn này)."
+ },
+ {
+  "id": "vi-a1-tense-aspect-markers",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "⏳",
+  "title": "Tense and Aspect Markers (Đã, Đang, Sẽ)",
+  "subtitle": "Locating actions in past, continuous, and future timeframes",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Vietnamese verbs do not conjugate; placing the particles 'đã', 'đang', or 'sẽ' directly before the verb establishes past, progressive, or future meaning.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Function",
+    "Vietnamese Example",
+    "English Parallel"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "đã",
+      "Past / Completed action",
+      "Tôi đã ăn cơm.",
+      "Already / did"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "đang",
+      "Progressive / Ongoing action",
+      "Em đang học bài.",
+      "Currently doing (-ing)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "sẽ",
+      "Future / Intended action",
+      "Ngày mai tôi sẽ đến.",
+      "Will / shall"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "chưa",
+      "Incompletion / Not yet",
+      "Anh chưa xem phim này.",
+      "Have not yet"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Expressing Prior Completion",
+    "example": "Họ đã hoàn thành dự án hôm qua.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Describing Current Actions",
+    "example": "Mẹ đang nấu ăn trong bếp.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Announcing Future Plans",
+    "example": "Tuần sau chúng tôi sẽ đi Đà Nẵng.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Tôi đã đọc xong cuốn sách này.",
+    "ko": "",
+    "highlight": "đã"
+   },
+   {
+    "en": "Bố đang đọc báo buổi sáng.",
+    "ko": "",
+    "highlight": "đang"
+   },
+   {
+    "en": "Năm sau em sẽ tốt nghiệp.",
+    "ko": "",
+    "highlight": "sẽ"
+   },
+   {
+    "en": "Chúng tôi chưa nhận được tin tức.",
+    "ko": "",
+    "highlight": "chưa"
+   },
+   {
+    "en": "Trời đang mưa rất to.",
+    "ko": "",
+    "highlight": "đang"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Hôm qua tôi đi đã.",
+    "right": "Hôm qua tôi đã đi.",
+    "note": "Tense markers must precede the main verb, never follow it."
+   },
+   {
+    "wrong": "Tôi không đã ăn.",
+    "right": "Tôi chưa ăn.",
+    "note": "To negate completed actions, use 'chưa' (not yet) or 'không' directly, not 'không đã'."
+   },
+   {
+    "wrong": "Tôi sẽ hôm qua đi.",
+    "right": "Hôm qua tôi đã đi.",
+    "note": "'Sẽ' marks future actions and cannot be paired with past temporal adverbs like 'hôm qua'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which marker indicates an ongoing action right now?",
+    "options": [
+     "sẽ",
+     "đã",
+     "đang",
+     "rồi"
+    ],
+    "answer": 2,
+    "explanation": "'Đang' placed directly before a verb signifies continuous or progressive aspect."
+   },
+   {
+    "question": "Fill in the blank for a future plan: 'Tối nay tôi ___ đi xem phim.'",
+    "options": [
+     "sẽ",
+     "đã",
+     "chưa",
+     "qua"
+    ],
+    "answer": 0,
+    "explanation": "'Sẽ' marks planned future events."
+   },
+   {
+    "question": "How do you express 'I haven't eaten yet'?",
+    "options": [
+     "Tôi không ăn rồi.",
+     "Tôi chưa ăn.",
+     "Tôi đã không ăn.",
+     "Tôi sẽ chưa ăn."
+    ],
+    "answer": 1,
+    "explanation": "'Chưa' indicates that an action has not occurred up to the present moment."
+   },
+   {
+    "question": "Where does 'đã' belong in a past action statement?",
+    "options": [
+     "After the object",
+     "At the very end of the sentence",
+     "Immediately before the verb",
+     "Before the subject"
+    ],
+    "answer": 2,
+    "explanation": "Aspect markers in Vietnamese strictly precede the main verb (Subject + Marker + Verb)."
+   }
+  ],
+  "tip": "Vietnamese drops aspect markers whenever context or temporal adverbs (like 'hôm qua' or 'ngày mai') make the timeframe clear."
+ },
+ {
+  "id": "vi-a1-polar-questions",
+  "level": "a1",
+  "category": "questions",
+  "categoryColor": "#F59E0B",
+  "emoji": "❓",
+  "title": "Yes/No Questions with 'Có... Không' and 'À / Phải Không'",
+  "subtitle": "Mastering the fundamental patterns for confirmation and inquiries",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Form polar questions either by framing the verb inside the circumfix 'có... không?' or by appending confirmatory tag particles like 'phải không?' or 'à?' to a statement.",
+  "structure": {
+   "headers": [
+    "Question Type",
+    "Pattern",
+    "Vietnamese Example",
+    "Answer Formats"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Neutral Polar",
+      "Subject + có + Verb/Adj + không?",
+      "Bạn có thích phở không?",
+      "Có / Không"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Confirmatory Tag",
+      "Statement + phải không?",
+      "Anh là người Mỹ, phải không?",
+      "Đúng / Không phải"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Informal Discovery",
+      "Statement + à?",
+      "Em mới về à?",
+      "Vâng / Dạ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Completion Polar",
+      "Subject + Verb + chưa?",
+      "Chị ăn cơm chưa?",
+      "Rồi / Chưa"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Inquiring About Habits or States",
+    "example": "Anh có uống cà phê không?",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Seeking Confirmation of Facts",
+    "example": "Đây là chìa khóa của bạn, phải không?",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Checking Completion of Daily Routines",
+    "example": "Bạn làm bài tập về nhà chưa?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Bạn có mệt không?",
+    "ko": "",
+    "highlight": "có mệt không"
+   },
+   {
+    "en": "Chị Lan đi làm rồi, phải không?",
+    "ko": "",
+    "highlight": "phải không"
+   },
+   {
+    "en": "Hôm nay trời mưa à?",
+    "ko": "",
+    "highlight": "à"
+   },
+   {
+    "en": "Em đã làm bài tập chưa?",
+    "ko": "",
+    "highlight": "chưa"
+   },
+   {
+    "en": "Bác có cần thêm nước không?",
+    "ko": "",
+    "highlight": "có cần thêm nước không"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Bạn thích phở có?",
+    "right": "Bạn có thích phở không?",
+    "note": "Do not put 'có' at the end of the sentence; use the split pattern 'có... không?' around the verb."
+   },
+   {
+    "wrong": "Anh ăn cơm rồi không?",
+    "right": "Anh ăn cơm chưa?",
+    "note": "To ask if an action has been completed yet, use the sentence-final particle 'chưa?', not 'không?'."
+   },
+   {
+    "wrong": "Bạn là học sinh không?",
+    "right": "Bạn là học sinh phải không?",
+    "note": "For equative sentences with 'là', use 'phải không?' or 'có phải là... không?' rather than just appending 'không'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you ask someone 'Are you busy?' using the standard neutral pattern?",
+    "options": [
+     "Bạn bận có không?",
+     "Bạn có bận không?",
+     "Bạn bận à không?",
+     "Bạn không bận có?"
+    ],
+    "answer": 1,
+    "explanation": "The standard neutral polar question pattern wraps the adjective/verb inside 'có [verb/adj] không?'."
+   },
+   {
+    "question": "Which question asks 'Have you had breakfast yet?'",
+    "options": [
+     "Bạn ăn sáng phải không?",
+     "Bạn có ăn sáng không?",
+     "Bạn ăn sáng à?",
+     "Bạn ăn sáng chưa?"
+    ],
+    "answer": 3,
+    "explanation": "Sentence-final 'chưa?' specifically asks whether an event has taken place yet."
+   },
+   {
+    "question": "What is the natural affirmative answer to 'Anh có mệt không?'",
+    "options": [
+     "Có.",
+     "Không.",
+     "Đúng rồi.",
+     "Chưa."
+    ],
+    "answer": 0,
+    "explanation": "Questions asked with 'có... không?' are answered affirmatively with 'Có'."
+   },
+   {
+    "question": "Complete the tag question: 'Chị là bác sĩ, ___?' (You are a doctor, right?)",
+    "options": [
+     "chưa",
+     "phải không",
+     "gì",
+     "ai"
+    ],
+    "answer": 1,
+    "explanation": "'Phải không?' acts as a tag question seeking confirmation for a known or assumed fact."
+   }
+  ],
+  "tip": "To make any question softer and more polite when speaking to seniors, prepend 'Dạ' and append the final politeness marker 'ạ'."
+ },
+ {
+  "id": "vi-a1-negation-khong-chua",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🚫",
+  "title": "Negation: Không vs. Chưa",
+  "subtitle": "Distinguishing absolute negation from aspectual 'not yet'",
+  "color": "#EF4444",
+  "bg": "#FEF2F2",
+  "keyPoint": "Use 'không' to state a permanent refusal, habit, or general negative fact, but use 'chưa' when an action has not happened yet but might occur in the future.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Vietnamese Structure",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Absolute Negation",
+      "Chủ ngữ + không + Động từ / Tính từ",
+      "Do not / Will not / Not"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Incomplete Action",
+      "Chủ ngữ + chưa + Động từ / Tính từ",
+      "Have not yet / Not yet"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Question with 'Chưa'",
+      "Chủ ngữ + Động từ + chưa?",
+      "Have you ... yet?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Habits and Refusals",
+    "example": "Tôi không uống cà phê.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Pending or Delayed Actions",
+    "example": "Anh ấy chưa ăn tối.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Life Experience Not Yet Realized",
+    "example": "Chúng tôi chưa đi Hà Nội bao giờ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Tôi không thích ăn món cay.",
+    "ko": "",
+    "highlight": "không"
+   },
+   {
+    "en": "Em chưa làm xong bài tập về nhà.",
+    "ko": "",
+    "highlight": "chưa"
+   },
+   {
+    "en": "Hôm nay trời không mưa nhưng rất lạnh.",
+    "ko": "",
+    "highlight": "không"
+   },
+   {
+    "en": "Chị ấy chưa có gia đình.",
+    "ko": "",
+    "highlight": "chưa"
+   },
+   {
+    "en": "Tôi không biết bơi.",
+    "ko": "",
+    "highlight": "không"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Bạn ăn cơm không?",
+    "right": "Bạn ăn cơm chưa?",
+    "note": "When asking if someone has eaten a meal yet, Vietnamese speakers use 'chưa' at the end, not 'không', which asks if they refuse to eat in general."
+   },
+   {
+    "wrong": "Tôi không kết hôn.",
+    "right": "Tôi chưa kết hôn.",
+    "note": "Use 'chưa kết hôn' (not married yet) instead of 'không kết hôn' unless you intend a permanent lifetime vow to never marry."
+   },
+   {
+    "wrong": "Tôi đã không gặp anh ấy hôm qua.",
+    "right": "Hôm qua tôi không gặp anh ấy.",
+    "note": "Do not put 'đã' directly before 'không'; past tense in negative contexts is expressed via time adverbs rather than 'đã không'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He does not drink beer (as a habit or refusal).",
+    "options": [
+     "Anh ấy chưa uống bia.",
+     "Anh ấy không uống bia.",
+     "Anh ấy có uống bia.",
+     "Anh ấy đã uống bia."
+    ],
+    "answer": 1,
+    "explanation": "'Không' indicates habitual non-action or absolute refusal."
+   },
+   {
+    "question": "Have you done your homework yet? - No, I haven't done it yet.",
+    "options": [
+     "Tôi chưa làm.",
+     "Tôi không làm.",
+     "Tôi đã làm.",
+     "Tôi làm rồi."
+    ],
+    "answer": 0,
+    "explanation": "'Chưa' indicates that the action is pending or not yet finished."
+   },
+   {
+    "question": "Choose the correct question to ask 'Have you eaten lunch yet?':",
+    "options": [
+     "Bạn ăn trưa không?",
+     "Bạn ăn trưa rồi?",
+     "Bạn ăn trưa chưa?",
+     "Bạn chưa ăn trưa không?"
+    ],
+    "answer": 2,
+    "explanation": "Placing 'chưa' at the sentence end creates the standard 'Have you ... yet?' question."
+   },
+   {
+    "question": "My younger brother cannot drive a car because he doesn't know how.",
+    "options": [
+     "Em tôi chưa biết lái xe.",
+     "Em tôi có biết lái xe.",
+     "Em tôi biết lái xe chưa.",
+     "Em tôi không biết lái xe."
+    ],
+    "answer": 3,
+    "explanation": "'Không biết' is used for a factual lack of knowledge or ability."
+   }
+  ],
+  "tip": "When answering a '... chưa?' question, say 'Chưa' if you haven't done it yet, or '[Verb] rồi' if you already have."
+ },
+ {
+  "id": "vi-a2-resultative-verbs",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎯",
+  "title": "Resultative Verb Complements",
+  "subtitle": "Marking outcomes and perception with secondary verbs",
+  "color": "#3B82F6",
+  "bg": "#EFF6FF",
+  "keyPoint": "Vietnamese attaches resultative complements like 'xong' (finished), 'thấy' (perceived), or 'được' (obtained/achieved) directly after the main verb to specify the outcome of an action.",
+  "structure": {
+   "headers": [
+    "Complement",
+    "Function",
+    "Vietnamese Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "xong",
+      "Completion of an activity",
+      "ăn xong, làm xong"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "thấy",
+      "Sensory perception / discovery",
+      "nhìn thấy, nghe thấy, tìm thấy"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "được",
+      "Successful achievement / acquisition",
+      "mua được, bắt được"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "mất",
+      "Loss / negative accidental outcome",
+      "đánh mất, tiêu mất"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Completing a Task",
+    "example": "Tôi đã đọc xong cuốn sách này.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Perceptual Success",
+    "example": "Bạn có nhìn thấy chiếc chìa khóa của tôi không?",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Accidental Loss",
+    "example": "Anh ta đã làm mất ví tiền trên xe buýt.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Chúng ta phải chuẩn bị xong trước tám giờ.",
+    "ko": "",
+    "highlight": "xong"
+   },
+   {
+    "en": "Tôi nghe thấy tiếng ai đó đang gọi cửa.",
+    "ko": "",
+    "highlight": "thấy"
+   },
+   {
+    "en": "Cô ấy vừa mua được một căn nhà đẹp.",
+    "ko": "",
+    "highlight": "được"
+   },
+   {
+    "en": "Tôi tìm thấy điện thoại dưới gầm bàn rồi.",
+    "ko": "",
+    "highlight": "thấy"
+   },
+   {
+    "en": "Gió mạnh đã thổi bay mất chiếc mũ của tôi.",
+    "ko": "",
+    "highlight": "mất"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Tôi đã nhìn bạn nhưng không thấy.",
+    "right": "Tôi đã nhìn nhưng không thấy bạn.",
+    "note": "The resultative compound 'nhìn thấy' typically keeps the direct object after the result complement, or separates them if negated ('nhìn mà không thấy')."
+   },
+   {
+    "wrong": "Tôi ăn rồi xong cơm.",
+    "right": "Tôi ăn xong cơm rồi.",
+    "note": "'Xong' follows the main verb directly; 'rồi' is placed at the very end of the clause."
+   },
+   {
+    "wrong": "Tôi tìm chìa khóa nhưng không gặp.",
+    "right": "Tôi tìm chìa khóa nhưng không thấy.",
+    "note": "Use 'tìm thấy' for inanimate objects; 'gặp' is specifically for meeting or encountering persons."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I have already finished writing the report.",
+    "options": [
+     "Tôi đã viết thấy báo cáo rồi.",
+     "Tôi đã viết được báo cáo rồi.",
+     "Tôi đã viết mất báo cáo rồi.",
+     "Tôi đã viết xong báo cáo rồi."
+    ],
+    "answer": 3,
+    "explanation": "'Viết xong' denotes completing the writing process entirely."
+   },
+   {
+    "question": "Can you hear my voice?",
+    "options": [
+     "Bạn có nghe thấy giọng tôi không?",
+     "Bạn có nghe xong giọng tôi không?",
+     "Bạn có nghe mất giọng tôi không?",
+     "Bạn có nghe được giọng tôi chưa?"
+    ],
+    "answer": 0,
+    "explanation": "'Nghe thấy' marks the sensory perception of hearing a sound."
+   },
+   {
+    "question": "He managed to buy the concert ticket at the last minute.",
+    "options": [
+     "Anh ấy mua mất vé.",
+     "Anh ấy mua được vé.",
+     "Anh ấy mua thấy vé.",
+     "Anh ấy mua xong vé."
+    ],
+    "answer": 1,
+    "explanation": "'Mua được' indicates successfully managing to acquire something."
+   },
+   {
+    "question": "I accidentally lost my passport at the airport.",
+    "options": [
+     "Tôi làm xong hộ chiếu.",
+     "Tôi làm thấy hộ chiếu.",
+     "Tôi làm mất hộ chiếu.",
+     "Tôi làm được hộ chiếu."
+    ],
+    "answer": 2,
+    "explanation": "'Làm mất' expresses the accidental loss of an item."
+   }
+  ],
+  "tip": "'Nhìn' is the physical act of looking, but 'nhìn thấy' means your brain actually saw and registered the object."
+ },
+ {
+  "id": "vi-a2-adversative-passive",
+  "level": "a2",
+  "category": "passive",
+  "categoryColor": "#6366F1",
+  "emoji": "⚖️",
+  "title": "Passives: Được vs. Bị",
+  "subtitle": "Encoding positive vs. adverse fortune in passive sentences",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "Vietnamese requires choosing 'được' when the subject experiences a fortunate or desirable event, and 'bị' when the experience brings harm, pain, or inconvenience.",
+  "structure": {
+   "headers": [
+    "Marker",
+    "Emotional Tone",
+    "Structural Formula"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "được",
+      "Beneficial / Positive / Neutral",
+      "Chủ ngữ + được + (Tác nhân) + Động từ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "bị",
+      "Adverse / Unfortunate / Unpleasant",
+      "Chủ ngữ + bị + (Tác nhân) + Động từ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Agentless",
+      "Omission of the actor",
+      "Chủ ngữ + được/bị + Động từ"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Positive Recognition",
+    "example": "Cô ấy được giám đốc khen ngợi.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Accident or Misfortune",
+    "example": "Anh Nam bị cảnh sát phạt tiền.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Medical Illness / Pain",
+    "example": "Hôm nay tôi bị sốt và đau đầu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Học sinh giỏi được nhận học bổng toàn phần.",
+    "ko": "",
+    "highlight": "được"
+   },
+   {
+    "en": "Chiếc xe máy của tôi bị trộm lấy mất.",
+    "ko": "",
+    "highlight": "bị"
+   },
+   {
+    "en": "Chúng tôi được mời tham dự buổi hòa nhạc.",
+    "ko": "",
+    "highlight": "được"
+   },
+   {
+    "en": "Anh ấy bị gãy tay khi chơi thể thao.",
+    "ko": "",
+    "highlight": "bị"
+   },
+   {
+    "en": "Dự án mới này được mọi người ủng hộ nhiệt tình.",
+    "ko": "",
+    "highlight": "được"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Tôi bị thăng chức hôm qua.",
+    "right": "Tôi được thăng chức hôm qua.",
+    "note": "Promotion is a desirable event, so you must use 'được', never 'bị'."
+   },
+   {
+    "wrong": "Anh ấy được phạt tiền vì đi sai làn.",
+    "right": "Anh ấy bị phạt tiền vì đi sai làn.",
+    "note": "Getting a traffic ticket is a penalty/adversity, which demands 'bị'."
+   },
+   {
+    "wrong": "Cái bàn này được làm bởi bố tôi.",
+    "right": "Cái bàn này do bố tôi làm. / Cái bàn này được bố tôi làm.",
+    "note": "Avoid calquing English 'by' with 'bởi'; in everyday Vietnamese, simply put the agent directly after 'được' or use 'do'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "She ___ praised by the teacher for her high score.",
+    "options": [
+     "bị",
+     "được",
+     "làm",
+     "ở"
+    ],
+    "answer": 1,
+    "explanation": "Being praised is a positive event, requiring 'được'."
+   },
+   {
+    "question": "My phone ___ stolen yesterday at the market.",
+    "options": [
+     "bị",
+     "được",
+     "có",
+     "phải"
+    ],
+    "answer": 0,
+    "explanation": "Theft is an unfortunate outcome, so 'bị' is required."
+   },
+   {
+    "question": "Choose the correct sentence for 'We were invited to his wedding':",
+    "options": [
+     "Chúng tôi bị mời đi đám cưới.",
+     "Chúng tôi phải mời đi đám cưới.",
+     "Chúng tôi được mời đi đám cưới.",
+     "Chúng tôi do mời đi đám cưới."
+    ],
+    "answer": 2,
+    "explanation": "Receiving a wedding invitation is viewed as an honor/benefit, calling for 'được'."
+   },
+   {
+    "question": "He has a stomachache today.",
+    "options": [
+     "Hôm nay anh ấy được đau bụng.",
+     "Hôm nay anh ấy phải đau bụng.",
+     "Hôm nay anh ấy làm đau bụng.",
+     "Hôm nay anh ấy bị đau bụng."
+    ],
+    "answer": 3,
+    "explanation": "Physical ailments and pains regularly pair with 'bị'."
+   }
+  ],
+  "tip": "Think of 'được' as 'to receive the good fortune of...' and 'bị' as 'to suffer the misfortune of...'."
+ },
+ {
+  "id": "vi-a2-demonstratives-nay-kia-do",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "👉",
+  "title": "Demonstratives: Này, Đó, Kia, Kìa",
+  "subtitle": "Indicating relative distance in physical space and discourse",
+  "color": "#10B981",
+  "bg": "#ECFDF5",
+  "keyPoint": "Vietnamese demonstratives are placed strictly after the noun classifier phrase to indicate proximity (này), medium distance or discourse reference (đó/đấy), and far distance (kia/kìa).",
+  "structure": {
+   "headers": [
+    "Word",
+    "Distance / Function",
+    "Vietnamese Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "này",
+      "Proximal (near the speaker: 'this')",
+      "quyển sách này"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "đó / đấy",
+      "Medial / Topic in discourse ('that')",
+      "người đó, việc đấy"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "kia",
+      "Distal (far from both: 'that over there')",
+      "ngôi nhà kia"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "kìa",
+      "Attention-calling distal ('look over there!')",
+      "con mèo kìa!"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Close to Speaker (Here/This)",
+    "example": "Cái áo này rất vừa với tôi.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Reference to Known Fact / That",
+    "example": "Chuyện đó tôi đã nghe từ tuần trước.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Visible Far Object",
+    "example": "Tòa nhà cao tầng kia là bệnh viện quốc tế.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Quán cà phê này có không gian rất yên tĩnh.",
+    "ko": "",
+    "highlight": "này"
+   },
+   {
+    "en": "Bạn có biết người phụ nữ đó không?",
+    "ko": "",
+    "highlight": "đó"
+   },
+   {
+    "en": "Chiếc xe hơi màu đỏ kia chạy rất nhanh.",
+    "ko": "",
+    "highlight": "kia"
+   },
+   {
+    "en": "Nhìn kìa, pháo hoa đang bắn trên bầu trời!",
+    "ko": "",
+    "highlight": "kìa"
+   },
+   {
+    "en": "Tháng này công ty chúng tôi có nhiều dự án lớn.",
+    "ko": "",
+    "highlight": "này"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Này sách rất hay.",
+    "right": "Cuốn sách này rất hay.",
+    "note": "Demonstratives follow the noun in Vietnamese, whereas in English 'this' precedes it."
+   },
+   {
+    "wrong": "Cái bàn nầy màu trắng.",
+    "right": "Cái bàn này màu trắng.",
+    "note": "Be mindful of spelling and tone marks: 'này' carries the falling tone (huyền), not 'nầy'."
+   },
+   {
+    "wrong": "Ai kia?",
+    "right": "Ai đó? / Ai đấy?",
+    "note": "When hearing a knock or footsteps and asking 'Who is that?', use 'đó' or 'đấy', not 'kia'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'this city' in Vietnamese?",
+    "options": [
+     "thành phố kia",
+     "thành phố đó",
+     "thành phố này",
+     "này thành phố"
+    ],
+    "answer": 2,
+    "explanation": "'Này' comes right after the noun to mean 'this'."
+   },
+   {
+    "question": "Look at that mountain over there (far distance)!",
+    "options": [
+     "ngọn núi kia",
+     "ngọn núi này",
+     "này ngọn núi",
+     "ngọn núi đây"
+    ],
+    "answer": 0,
+    "explanation": "'Kia' points to a distant visible entity far from both speaker and listener."
+   },
+   {
+    "question": "I don't agree with that opinion (referring back to what was said).",
+    "options": [
+     "ý kiến này",
+     "ý kiến kìa",
+     "ý kiến đó",
+     "kia ý kiến"
+    ],
+    "answer": 2,
+    "explanation": "'Đó' (or 'đấy') is standard for referring back to mentioned abstract ideas or points in discourse."
+   },
+   {
+    "question": "Look over there, our train is arriving!",
+    "options": [
+     "Kìa, tàu hỏa của chúng ta đang tới!",
+     "Này, tàu hỏa của chúng ta đang tới!",
+     "Đó, tàu hỏa của chúng ta đang tới!",
+     "Đây, tàu hỏa của chúng ta đang tới! "
+    ],
+    "answer": 0,
+    "explanation": "'Kìa' functions as a visual pointer to direct someone's gaze outward toward something distant."
+   }
+  ],
+  "tip": "Remember: Word order is [Classifier + Noun + Demonstrative], for example: 'cái bút này' (this pen)."
+ },
+ {
+  "id": "vi-a2-completive-roi",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#EC4899",
+  "emoji": "⏱️",
+  "title": "Aspect: The Particle 'Rồi'",
+  "subtitle": "Signaling completion and new states of affairs",
+  "color": "#EC4899",
+  "bg": "#FDF2F8",
+  "keyPoint": "Placing 'rồi' at the end of a clause indicates that an action has been completed, a time threshold reached, or a brand-new situation has come into existence.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Pattern",
+    "Vietnamese Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Completed Action",
+      "Chủ ngữ + (đã) + Động từ + rồi",
+      "Tôi ăn tối rồi."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "New State / Change",
+      "Chủ ngữ + Tính từ + rồi",
+      "Trời tối rồi."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Age / Time Threshold",
+      "Chủ ngữ + [Số tuổi / Giờ] + rồi",
+      "Mười hai giờ đêm rồi."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EC4899",
+    "label": "Completed Action",
+    "example": "Tôi đã gửi email cho khách hàng rồi.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Change of State",
+    "example": "Bây giờ cô ấy khỏe rồi.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Time Elapsed or Reached",
+    "example": "Đã muộn rồi, chúng ta về thôi.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Bố mẹ tôi đã về đến nhà rồi.",
+    "ko": "",
+    "highlight": "rồi"
+   },
+   {
+    "en": "Cây cối trong vườn đâm chồi nở hoa rồi.",
+    "ko": "",
+    "highlight": "rồi"
+   },
+   {
+    "en": "Con trai của anh ấy vào lớp một rồi.",
+    "ko": "",
+    "highlight": "rồi"
+   },
+   {
+    "en": "Tôi hiểu rồi, cảm ơn bạn nhiều nhé.",
+    "ko": "",
+    "highlight": "rồi"
+   },
+   {
+    "en": "Trời tạnh mưa rồi, chúng mình đi chơi đi.",
+    "ko": "",
+    "highlight": "rồi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Tôi rồi ăn cơm.",
+    "right": "Tôi ăn cơm rồi.",
+    "note": "'Rồi' functions as an aspectual sentence-final particle in this structure and cannot precede the verb."
+   },
+   {
+    "wrong": "Tôi chưa ăn cơm rồi.",
+    "right": "Tôi chưa ăn cơm.",
+    "note": "Never combine 'chưa' (not yet) with 'rồi' (already) in the same affirmative assertion; they contradict each other."
+   },
+   {
+    "wrong": "Năm ngoái tôi rồi đi du lịch.",
+    "right": "Năm ngoái tôi đã đi du lịch rồi.",
+    "note": "Use 'đã' before the verb if emphasizing anteriority, and place 'rồi' at the end."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "It's already 11:00 PM; we should sleep.",
+    "options": [
+     "Mười một giờ đêm chưa.",
+     "Mười một giờ đêm rồi.",
+     "Mười một giờ đêm không.",
+     "Mười một giờ đêm cũng."
+    ],
+    "answer": 1,
+    "explanation": "'Rồi' expresses that a specific temporal boundary has arrived."
+   },
+   {
+    "question": "I have already understood the teacher's lesson.",
+    "options": [
+     "Tôi hiểu rồi bài giảng của thầy.",
+     "Tôi rồi hiểu bài giảng của thầy.",
+     "Tôi chưa hiểu bài giảng của thầy rồi.",
+     "Tôi hiểu bài giảng của thầy rồi."
+    ],
+    "answer": 3,
+    "explanation": "'Rồi' belongs at the end of the clause or predicate."
+   },
+   {
+    "question": "She has recovered from her illness (change of state: healthy now).",
+    "options": [
+     "Cô ấy khỏi bệnh rồi.",
+     "Cô ấy rồi khỏi bệnh.",
+     "Cô ấy chưa khỏi bệnh rồi.",
+     "Cô ấy không khỏi bệnh rồi."
+    ],
+    "answer": 0,
+    "explanation": "'Khỏi bệnh rồi' marks the transition from being sick to being recovered."
+   },
+   {
+    "question": "Have you bought the train ticket? - Yes, I bought it already.",
+    "options": [
+     "Tôi chưa mua.",
+     "Tôi mua rồi.",
+     "Tôi không mua.",
+     "Tôi sẽ mua."
+    ],
+    "answer": 1,
+    "explanation": "'[Động từ] + rồi' is the canonical affirmative reply to an action completion query."
+   }
+  ],
+  "tip": "While 'đã' marks past time before the verb, sentence-final 'rồi' emphasizes the current completed reality. Colloquially, speakers often drop 'đã' and keep only 'rồi'."
+ },
+ {
+  "id": "vi-a2-directional-verbs",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🧭",
+  "title": "Directional Movement Verbs as Path Markers",
+  "subtitle": "Track motion trajectory and geographic direction using directional complements",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Post-verbal directional markers specify whether movement goes out, in, upward, or downward relative to the speaker or reference point.",
+  "structure": {
+   "headers": [
+    "Direction",
+    "Complement",
+    "Vietnamese Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Outward / Northward",
+      "ra",
+      "Anh ấy đi ra sân bay.",
+      "He goes out to the airport."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Inward / Southward",
+      "vào",
+      "Mời bạn bước vào nhà.",
+      "Please step into the house."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Upward / Inland",
+      "lên",
+      "Chúng tôi leo lên đỉnh núi.",
+      "We climb up to the mountain peak."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Downward / Seaward",
+      "xuống",
+      "Em bé chạy xuống cầu thang.",
+      "The baby runs down the stairs."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Physical trajectory",
+    "example": "Mèo nhảy lên bàn rồi nhảy xuống đất.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "National geography",
+    "example": "Gia đình tôi bay vào Thành phố Hồ Chí Minh tuần sau.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Metaphorical progress",
+    "example": "Mọi người cùng nhau đưa ra ý kiến.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Cô ấy vừa bước ra khỏi phòng họp.",
+    "ko": "",
+    "highlight": "ra"
+   },
+   {
+    "en": "Hãy cất sách vào trong cặp đi.",
+    "ko": "",
+    "highlight": "vào"
+   },
+   {
+    "en": "Chiếc xe buýt đang chạy lên dốc.",
+    "ko": "",
+    "highlight": "lên"
+   },
+   {
+    "en": "Nhiệt độ đã giảm xuống mười lăm độ.",
+    "ko": "",
+    "highlight": "xuống"
+   },
+   {
+    "en": "Bác sĩ khuyên bệnh nhân đi ra ngoài hít thở không khí.",
+    "ko": "",
+    "highlight": "ra"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Tôi đi đến vào phòng ngủ.",
+    "right": "Tôi đi vào phòng ngủ.",
+    "note": "Do not stack the preposition 'đến' directly before the directional verb 'vào'."
+   },
+   {
+    "wrong": "Chúng tôi bay ra Sài Gòn.",
+    "right": "Chúng tôi bay vào Sài Gòn.",
+    "note": "Moving southward inside Vietnam requires 'vào', whereas northward uses 'ra'."
+   },
+   {
+    "wrong": "Anh ấy trèo xuống cây cao.",
+    "right": "Anh ấy trèo từ cây cao xuống.",
+    "note": "Directional verbs typically follow the main verb or appear at the end of the motion predicate."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Please step ___ the living room to have some tea.",
+    "options": [
+     "xuống",
+     "vào",
+     "ra",
+     "lên"
+    ],
+    "answer": 1,
+    "explanation": "Moving inward into an enclosed space uses 'vào'."
+   },
+   {
+    "question": "Tomorrow we travel ___ Hanoi from Da Nang.",
+    "options": [
+     "vào",
+     "lên",
+     "xuống",
+     "ra"
+    ],
+    "answer": 3,
+    "explanation": "Moving toward the north of Vietnam requires the directional marker 'ra'."
+   },
+   {
+    "question": "The elevator is going ___ to the basement floor.",
+    "options": [
+     "xuống",
+     "vào",
+     "ra",
+     "lên"
+    ],
+    "answer": 0,
+    "explanation": "Downward physical trajectory requires 'xuống'."
+   },
+   {
+    "question": "He stepped ___ the bus at the wrong station.",
+    "options": [
+     "vào",
+     "qua",
+     "xuống",
+     "về"
+    ],
+    "answer": 2,
+    "explanation": "Alighting or getting off a vehicle uses 'xuống'."
+   }
+  ],
+  "tip": "Remember Vietnamese geography: moving North is 'ra', moving South is 'vào', and moving inland or to the Central Highlands is 'lên'."
+ },
+ {
+  "id": "vi-a2-modal-verbs-phai-nen",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#059669",
+  "emoji": "⚖️",
+  "title": "Obligation, Advice, and Ability: Phải, Nên, Có Thể",
+  "subtitle": "Expressing necessity, recommendations, and capacity before the verb",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Vietnamese modal verbs precede the main verb directly without any infinitive markers or morphology changes.",
+  "structure": {
+   "headers": [
+    "Modal Verb",
+    "Function",
+    "Vietnamese Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "phải",
+      "Compulsory obligation ('must')",
+      "Học sinh phải làm bài tập.",
+      "Students must do homework."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "nên",
+      "Mild recommendation ('should')",
+      "Trời lạnh, bạn nên mặc áo ấm.",
+      "It is cold, you should wear warm clothes."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "có thể",
+      "Possibility / Capacity ('can')",
+      "Tôi có thể nói một chút tiếng Việt.",
+      "I can speak a little Vietnamese."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "không được",
+      "Strict prohibition ('must not')",
+      "Khách không được hút thuốc ở đây.",
+      "Guests must not smoke here."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "External rules",
+    "example": "Mọi người phải đội mũ bảo hiểm khi đi xe máy.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Friendly advice",
+    "example": "Nếu bạn mệt thì nên nghỉ ngơi sớm.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Learned skills",
+    "example": "Chị ấy có thể bơi rất nhanh.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Chúng ta phải nộp báo cáo trước năm giờ chiều.",
+    "ko": "",
+    "highlight": "phải"
+   },
+   {
+    "en": "Bạn nên uống nhiều nước mỗi ngày.",
+    "ko": "",
+    "highlight": "nên"
+   },
+   {
+    "en": "Hôm nay tôi có thể đi làm bằng xe đạp.",
+    "ko": "",
+    "highlight": "có thể"
+   },
+   {
+    "en": "Em không phải lo lắng về chuyện đó nữa.",
+    "ko": "",
+    "highlight": "phải"
+   },
+   {
+    "en": "Người bệnh nên ăn cháo nóng và nghỉ ngơi.",
+    "ko": "",
+    "highlight": "nên"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Tôi có thể nói tiếng Việt được.",
+    "right": "Tôi có thể nói tiếng Việt.",
+    "note": "Avoid doubling 'có thể' at the front and 'được' at the end unless emphasizing strong accomplishment."
+   },
+   {
+    "wrong": "Bạn phải không đi muộn.",
+    "right": "Bạn không được đi muộn.",
+    "note": "'Phải không' forms a tag question ('right?'); strict prohibition uses 'không được' (must not)."
+   },
+   {
+    "wrong": "Tôi nên làm phải việc này ngay.",
+    "right": "Tôi phải làm việc này ngay.",
+    "note": "Do not stack 'nên' and 'phải' together; choose advice ('nên') or necessity ('phải')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "You look very sick. You ___ see a doctor.",
+    "options": [
+     "có thể",
+     "phải không",
+     "nên",
+     "được"
+    ],
+    "answer": 2,
+    "explanation": "Offering sensible health advice requires 'nên' (should)."
+   },
+   {
+    "question": "To pass the driving test, everyone ___ study traffic rules carefully.",
+    "options": [
+     "phải",
+     "được",
+     "hay",
+     "sẽ có"
+    ],
+    "answer": 0,
+    "explanation": "A mandatory requirement is indicated by 'phải' (must)."
+   },
+   {
+    "question": "He ___ play both the guitar and the piano beautifully.",
+    "options": [
+     "phải",
+     "cần",
+     "nên",
+     "có thể"
+    ],
+    "answer": 3,
+    "explanation": "'Có thể' expresses capacity and physical or acquired skill (can/able to)."
+   },
+   {
+    "question": "You ___ not enter this area without permission.",
+    "options": [
+     "nên",
+     "không được",
+     "chưa",
+     "không phải"
+    ],
+    "answer": 1,
+    "explanation": "'Không được' expresses strict negative prohibition (must not/cannot)."
+   }
+  ],
+  "tip": "Negating 'phải' as 'không phải' means 'not have to' or 'it is not the case', never 'must not'—use 'không được' for prohibitions!"
+ },
+ {
+  "id": "vi-b1-discourse-particles",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#7C3AED",
+  "emoji": "🗣️",
+  "title": "Sentence-Final Pragmatic Particles",
+  "subtitle": "Shape tone, warmth, reminders, and persuasion with utterance-final markers",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Vietnamese sentence-final particles do not alter propositional content but modulate the speaker's emotional stance and interpersonal relationship.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Pragmatic Function",
+    "Vietnamese Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "nhé / nha",
+      "Warm suggestion or checking consent",
+      "Ngày mai mình gặp nhau nhé!",
+      "Let's meet tomorrow, okay?"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "mà",
+      "Emphatic reminder of shared knowledge",
+      "Hôm nay là chủ nhật mà.",
+      "Today is Sunday, remember!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "cơ / kìa",
+      "Playful objection, contrast, or pout",
+      "Em thích cái áo màu đỏ cơ.",
+      "I prefer the red shirt instead!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "đâu",
+      "Strong conversational denial / softening",
+      "Tôi có biết gì đâu.",
+      "I really don't know anything at all."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Affectionate invitation",
+    "example": "Cậu nhớ ăn tối đúng giờ nhé.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Reminding an interlocutor",
+    "example": "Tôi đã dặn bạn ba lần rồi mà.",
+    "translation": ""
+   },
+   {
+    "color": "#A78BFA",
+    "label": "Polite denial of criticism",
+    "example": "Em không có đi chơi bời đâu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Chiều nay tan làm cùng đi uống trà sữa nhé.",
+    "ko": "",
+    "highlight": "nhé"
+   },
+   {
+    "en": "Sao anh lại trách em, em đâu có làm vỡ cốc đâu.",
+    "ko": "",
+    "highlight": "đâu"
+   },
+   {
+    "en": "Đừng vội mua, đồ ở chợ đêm rẻ hơn nhiều mà.",
+    "ko": "",
+    "highlight": "mà"
+   },
+   {
+    "en": "Con không ăn cơm sườn, con muốn ăn phở bò cơ.",
+    "ko": "",
+    "highlight": "cơ"
+   },
+   {
+    "en": "Chào bác cháu về trước nha.",
+    "ko": "",
+    "highlight": "nha"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Nhé chúng ta đi uống cà phê.",
+    "right": "Chúng ta đi uống cà phê nhé.",
+    "note": "Pragmatic particles like 'nhé' are strictly sentence-final and cannot open a clause."
+   },
+   {
+    "wrong": "Tôi không biết đâu người ấy.",
+    "right": "Tôi không biết người ấy đâu.",
+    "note": "The particle 'đâu' must be placed at the very end of the predicate clause."
+   },
+   {
+    "wrong": "Trời đang mưa to nhé.",
+    "right": "Trời đang mưa to mà.",
+    "note": "Use 'mà' when reminding someone why an action shouldn't happen, not 'nhé' which invites agreement."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Let's grab lunch together after work, okay?",
+    "options": [
+     "đâu",
+     "cơ",
+     "nhé",
+     "mà"
+    ],
+    "answer": 2,
+    "explanation": "'Nhé' softens a request into a friendly, cooperative proposal ('okay?')."
+   },
+   {
+    "question": "Why didn't you wear a jacket? It is freezing outside, remember!",
+    "options": [
+     "nha",
+     "mà",
+     "nhé",
+     "đâu"
+    ],
+    "answer": 1,
+    "explanation": "'Mà' expresses an assertive reminder of obvious context or shared facts."
+   },
+   {
+    "question": "The child refuses the candy and insists: 'I want the ice cream instead!'",
+    "options": [
+     "cơ",
+     "hả",
+     "đâu",
+     "nào"
+    ],
+    "answer": 0,
+    "explanation": "'Cơ' conveys an insistence on an alternate choice, often with a slight pouting tone."
+   },
+   {
+    "question": "I didn't say anything bad about him at all!",
+    "options": [
+     "nhé",
+     "nha",
+     "cơ",
+     "đâu"
+    ],
+    "answer": 3,
+    "explanation": "Final particle 'đâu' reinforces total rejection or emphatic denial."
+   }
+  ],
+  "tip": "'Nha' is the informal Southern counterpart of 'nhé', perfect for texting friends and colleagues in casual everyday chats."
+ },
+ {
+  "id": "vi-b1-focus-markers-chinh-moi",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#EA580C",
+  "emoji": "🎯",
+  "title": "Cleft Sentences and Focus Markers: Chính, Mới, Là",
+  "subtitle": "Highlight agent, time, and exclusivity with clefting and restrictive particles",
+  "color": "#C2410C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Placing 'chính' before a subject or 'mới' before the main predicate singles out the element as the unique trigger or true agent.",
+  "structure": {
+   "headers": [
+    "Focus Pattern",
+    "Focus Role",
+    "Vietnamese Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Chính + Subject + là người...",
+      "Agentive identification ('It was X who...')",
+      "Chính Lan là người tìm thấy chìa khóa.",
+      "It was Lan herself who found the keys."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Time/Condition + mới + Verb",
+      "Delayed or exclusive condition ('Only then')",
+      "Có tiền rồi tôi mới mua máy tính mới.",
+      "Only when having money will I buy a new computer."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Chính vì + Cause + nên...",
+      "Direct causal focus ('Precisely because')",
+      "Chính vì lười biếng nên anh ấy trượt kỳ thi.",
+      "Precisely because of laziness he failed the exam."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Subject + mới là...",
+      "Identity contrast ('This is the real...')",
+      "Đây mới là món phở ngon nhất Hà Nội.",
+      "This is truly the most delicious pho in Hanoi."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Singling out the culprit/agent",
+    "example": "Chính anh ấy đã ký vào bản hợp đồng này.",
+    "translation": ""
+   },
+   {
+    "color": "#F97316",
+    "label": "Emphasizing strict prerequisites",
+    "example": "Phải có bằng lái xe bạn mới được lái ô tô.",
+    "translation": ""
+   },
+   {
+    "color": "#FB923C",
+    "label": "Genuine quality assertion",
+    "example": "Trải nghiệm khó khăn này mới là bài học quý giá.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Chính giám đốc đã phê duyệt dự án này.",
+    "ko": "",
+    "highlight": "Chính"
+   },
+   {
+    "en": "Đến mười hai giờ đêm em trai tôi mới về đến nhà.",
+    "ko": "",
+    "highlight": "mới"
+   },
+   {
+    "en": "Chính bạn phải tự chịu trách nhiệm về quyết định của mình.",
+    "ko": "",
+    "highlight": "Chính"
+   },
+   {
+    "en": "Sau khi thi xong đại học chúng tôi mới được đi du lịch.",
+    "ko": "",
+    "highlight": "mới"
+   },
+   {
+    "en": "Chính chiếc váy này làm cho chị trông rất nổi bật.",
+    "ko": "",
+    "highlight": "Chính"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Chính là anh ấy làm vỡ bình hoa.",
+    "right": "Chính anh ấy làm vỡ bình hoa.",
+    "note": "Do not insert 'là' between 'chính' and the noun phrase when focusing the agent directly."
+   },
+   {
+    "wrong": "Tôi mới ăn cơm rồi đi ngủ.",
+    "right": "Tôi ăn cơm xong mới đi ngủ.",
+    "note": "'Mới' indicating temporal sequence must follow the prerequisite condition clause."
+   },
+   {
+    "wrong": "Mới chính Lan đã gọi điện.",
+    "right": "Chính Lan mới là người gọi điện.",
+    "note": "Do not invert 'mới' before 'chính'; 'chính' modifies the noun and 'mới' precedes the predicate."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "It was ___ Nam who solved the most difficult math puzzle.",
+    "options": [
+     "Được",
+     "Mới",
+     "Chính",
+     "Nên"
+    ],
+    "answer": 2,
+    "explanation": "'Chính' is the emphatic cleft marker placed immediately before the focal noun."
+   },
+   {
+    "question": "Only after finishing work ___ she able to rest.",
+    "options": [
+     "thì",
+     "mới",
+     "lại",
+     "chính"
+    ],
+    "answer": 1,
+    "explanation": "'Mới' links a completed condition to its subsequent delayed result."
+   },
+   {
+    "question": "This coffee shop ___ is the oldest in the old quarter.",
+    "options": [
+     "mới là",
+     "chính đã",
+     "phải",
+     "được là"
+    ],
+    "answer": 0,
+    "explanation": "'Mới là' emphasizes true identity ('this indeed is')."
+   },
+   {
+    "question": "Precisely because of the rain, the flight was delayed.",
+    "options": [
+     "Mới vì",
+     "Tuy vì",
+     "Chính vì",
+     "Nếu vì"
+    ],
+    "answer": 2,
+    "explanation": "'Chính vì' emphasizes the exact, undeniable cause behind a consequence."
+   }
+  ],
+  "tip": "Use 'Chính' to clear up ambiguity over who did it, and 'Mới' whenever an event happened later than expected or depends on a precondition."
+ },
+ {
+  "id": "vi-b1-paired-conjunctions",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#DC2626",
+  "emoji": "🔗",
+  "title": "Correlative Conjunctions: Vì... Nên, Tuy... Nhưng",
+  "subtitle": "Build balanced, two-clause sentences for cause, concession, and proportion",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "Vietnamese correlative conjunctions frame two clauses systematically: the subordinate clause introduces the condition while the main clause resolves it.",
+  "structure": {
+   "headers": [
+    "Conjunction Pair",
+    "Relationship",
+    "Vietnamese Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Vì... nên...",
+      "Cause and effect ('Because... therefore...')",
+      "Vì trời mưa to nên đường bị ngập.",
+      "Because it rained heavily, the road flooded."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Tuy... nhưng...",
+      "Concession ('Although... yet...')",
+      "Tuy anh ấy nghèo nhưng sống rất thật thà.",
+      "Although he is poor, he lives very honestly."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Càng... càng...",
+      "Proportional change ('The more... the more...')",
+      "Học càng nhiều càng thấy mình biết ít.",
+      "The more one studies, the more one realizes one knows little."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Không những... mà còn...",
+      "Cumulative addition ('Not only... but also...')",
+      "Cô ấy không những thông minh mà còn chăm chỉ.",
+      "She is not only smart but also hardworking."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Direct cause and effect",
+    "example": "Vì xe hỏng giữa đường nên tôi đến họp trễ.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Contrastive concession",
+    "example": "Tuy bài tập này rất dài nhưng không quá khó.",
+    "translation": ""
+   },
+   {
+    "color": "#F87171",
+    "label": "Parallel growth or decrease",
+    "example": "Trời càng về khuya gió càng lạnh buốt.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Vì bị cảm sốt nên bạn ấy phải nghỉ học hôm nay.",
+    "ko": "",
+    "highlight": "Vì"
+   },
+   {
+    "en": "Tuy giao thông đông đúc nhưng xe buýt vẫn đến đúng giờ.",
+    "ko": "",
+    "highlight": "Tuy"
+   },
+   {
+    "en": "Cuốn sách này càng đọc lại càng thấy ý nghĩa.",
+    "ko": "",
+    "highlight": "càng"
+   },
+   {
+    "en": "Anh Nam không những hát hay mà còn chơi đàn giỏi.",
+    "ko": "",
+    "highlight": "không những"
+   },
+   {
+    "en": "Vì thức khuya làm việc nên sáng nay cô ấy rất mệt mỏi.",
+    "ko": "",
+    "highlight": "Vì"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mặc dù trời mưa nhưng mà vì tôi đi làm muộn.",
+    "right": "Vì trời mưa nên tôi đi làm muộn.",
+    "note": "Do not mix concession pairs ('Mặc dù... nhưng') with causal pairs ('Vì... nên')."
+   },
+   {
+    "wrong": "Tuy trời mưa nhưng mà.",
+    "right": "Tuy trời mưa nhưng tôi vẫn đi học.",
+    "note": "'Nhưng' must lead into a complete predicate clause resolving the concession."
+   },
+   {
+    "wrong": "Càng anh ấy nói càng tôi bực mình.",
+    "right": "Anh ấy càng nói tôi càng bực mình.",
+    "note": "'Càng' must be placed directly before verbs or adjectives, after the subject of each clause."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "___ it was late at night, ___ the doctors kept working tirelessly.",
+    "options": [
+     "Vì / nên",
+     "Tuy / nhưng",
+     "Càng / càng",
+     "Nếu / thì"
+    ],
+    "answer": 1,
+    "explanation": "'Tuy... nhưng...' introduces concession ('Although it was late, yet they kept working')."
+   },
+   {
+    "question": "The ___ you practice speaking Vietnamese, the ___ confident you become.",
+    "options": [
+     "càng / càng",
+     "vì / nên",
+     "không những / mà còn",
+     "tuy / nhưng"
+    ],
+    "answer": 0,
+    "explanation": "'Càng... càng...' matches proportional degrees ('The more... the more...')."
+   },
+   {
+    "question": "Because the flight was cancelled, ___ we had to stay at the hotel one more night.",
+    "options": [
+     "nhưng",
+     "tuy",
+     "nên",
+     "càng"
+    ],
+    "answer": 2,
+    "explanation": "The second clause of a causal construction headed by 'Vì' is introduced by 'nên'."
+   },
+   {
+    "question": "She ___ studies hard, ___ actively helps everyone in class.",
+    "options": [
+     "tuy / nhưng",
+     "vì / nên",
+     "càng / càng",
+     "không những / mà còn"
+    ],
+    "answer": 3,
+    "explanation": "'Không những... mà còn...' adds cumulative complementary qualities ('not only... but also...')."
+   }
+  ],
+  "tip": "Unlike English, where using both 'Although' and 'But' in one sentence is a grammatical error, Vietnamese explicitly prefers both paired words ('Tuy... nhưng...') for balance."
+ },
+ {
+  "id": "vi-b1-reduplication",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#4F46E5",
+  "emoji": "🎨",
+  "title": "Adjective and Verb Reduplication (Từ Láy)",
+  "subtitle": "Modulate intensity, emotion, and sensory nuance through phonological word-doubling",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Reduplicating root words softens an adjective, intensifies vivid imagery, or adds an affectionate or rhythmic nuance to descriptive language.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Root Form",
+    "Reduplicated Form",
+    "Nuance Shift"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Full Reduplication (Attenuation)",
+      "trắng (white)",
+      "trăng trắng",
+      "somewhat white / whitish"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Partial (Rhyming / Initial)",
+      "đẹp (pretty)",
+      "đẹp đẽ",
+      "beautiful, graceful (formal/literary)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Total Reduplication (Emphasis)",
+      "xa (far)",
+      "xa xa",
+      "away in the distance"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Sensory Intensifier",
+      "lạnh (cold)",
+      "lạnh lẽo",
+      "bleak and desolate cold"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Softening/Diminishing Quality",
+    "example": "Cái áo này đo đỏ nhìn rất dễ thương.",
+    "translation": ""
+   },
+   {
+    "color": "#06B6D4",
+    "label": "Sensory and Atmospheric Imagery",
+    "example": "Gió mùa đông thổi qua con đường vắng vẻ.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Vivid Temporal/Spatial Repetition",
+    "example": "Xa xa có vài cánh buồm trắng đang trôi.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Cô ấy có đôi mắt đen lánh rất cuốn hút.",
+    "ko": "",
+    "highlight": "đen lánh"
+   },
+   {
+    "en": "Sau cơn ốm, da dẻ anh ấy trông xanh xao quá.",
+    "ko": "",
+    "highlight": "xanh xao"
+   },
+   {
+    "en": "Nước biển hôm nay âm ấm, rất thích hợp để bơi.",
+    "ko": "",
+    "highlight": "âm ấm"
+   },
+   {
+    "en": "Căn phòng nhỏ bé bỗng trở nên lạnh lẽo khi đêm xuống.",
+    "ko": "",
+    "highlight": "lạnh lẽo"
+   },
+   {
+    "en": "Hai đứa trẻ nói cười ríu rít cả buổi chiều.",
+    "ko": "",
+    "highlight": "ríu rít"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Căn phòng này rất sạch sẽ lắm.",
+    "right": "Căn phòng này rất sạch sẽ.",
+    "note": "Reduplicative adjectives already contain inherent intensification or stylistic weight; pairing them simultaneously with both 'rất' and 'lắm' is redundant and ungrammatical."
+   },
+   {
+    "wrong": "Trời hôm nay đo đỏ quá.",
+    "right": "Trời hôm nay đỏ quá.",
+    "note": "'Đo đỏ' attenuates ('reddish/slightly red'), which contradicts the extreme amplifier 'quá' ('excessively'). Use the base form 'đỏ' with 'quá'."
+   },
+   {
+    "wrong": "Anh ấy làm việc chăm chỉ chỉ.",
+    "right": "Anh ấy làm việc chăm chỉ.",
+    "note": "'Chăm chỉ' is already a fixed reduplicated compound; you cannot stack a third identical syllable to intensify it further."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Her cheeks look slightly pinkish after a short walk: 'Má cô ấy ửng hồng ___.'",
+    "options": [
+     "hồng hào",
+     "hồng hổng",
+     "hồng hoang",
+     "hồng đỏ"
+    ],
+    "answer": 1,
+    "explanation": "'Hồng hổng' is the attenuative reduplicative form meaning 'slightly pinkish/somewhat pink'."
+   },
+   {
+    "question": "Choose the evocative word describing a bleak, lonely, and deserted street: 'Con ngõ đêm khuya trông thật ___.'",
+    "options": [
+     "nhè nhẹ",
+     "trăng trắng",
+     "vắng vẻ",
+     "đo đỏ"
+    ],
+    "answer": 2,
+    "explanation": "'Vắng vẻ' is the literary reduplication of 'vắng' (empty/deserted), evoking a vivid sense of isolation."
+   },
+   {
+    "question": "Select the correct attenuative form of 'vàng' (yellow) meaning 'yellowish':",
+    "options": [
+     "vang vàng",
+     "vàng vàng",
+     "vàng vọt",
+     "vàng vè"
+    ],
+    "answer": 0,
+    "explanation": "Tonal harmonization changes the high/sharp tone of 'vàng' to an even flat tone in the first syllable: 'vang vàng' (yellowish)."
+   },
+   {
+    "question": "Which sentence naturally conveys children chatting and giggling merrily?",
+    "options": [
+     "Lũ trẻ khóc lóc om sòm.",
+     "Lũ trẻ ăn uống êm đẹp.",
+     "Lũ trẻ nói năng cộc cằn.",
+     "Lũ trẻ trò chuyện ríu rít."
+    ],
+    "answer": 3,
+    "explanation": "'Ríu rít' depicts lively, cheerful, bird-like chattering among young children."
+   }
+  ],
+  "tip": "To soften a single-syllable adjective into 'somewhat X', shift the first syllable to an open, flat tone (ngang/huyền): 'đỏ' becomes 'đo đỏ', 'trắng' becomes 'trăng trắng'."
+ },
+ {
+  "id": "vi-b1-habitual-iterative-hay-lai",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🔄",
+  "title": "Iterative and Repetitive Aspect (Lại, Hay, Vừa... Vừa)",
+  "subtitle": "Express recurrence, annoyance, frequency, and concurrent actions with precision",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use 'lại' for repeated or unwelcome resumption of events, 'hay' for frequent habits, and 'vừa... vừa' for simultaneous dual actions.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Position",
+    "Function",
+    "Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "lại",
+      "Before Verb",
+      "Repetition / Resumption",
+      "Action happens again; often carries irritation"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "hay",
+      "Before Verb",
+      "Habitual Frequency",
+      "Regularly, often, inclined to do something"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "vừa... vừa...",
+      "Before Verb 1 & 2",
+      "Simultaneous Actions",
+      "Doing two activities at the exact same time"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "lại còn",
+      "Before Predicate",
+      "Additive Resumption",
+      "On top of that, additionally (often negative)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Unwelcome Recurrence",
+    "example": "Trời lại bắt đầu mưa to rồi.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Habitual Disposition",
+    "example": "Bà tôi hay uống trà xanh vào buổi sáng.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Simultaneous Execution",
+    "example": "Anh ấy vừa nghe nhạc vừa dọn dẹp phòng.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Sao cậu lại quên chìa khóa xe nữa rồi?",
+    "ko": "",
+    "highlight": "lại"
+   },
+   {
+    "en": "Hồi còn ở quê, chúng tôi hay rủ nhau đi câu cá.",
+    "ko": "",
+    "highlight": "hay"
+   },
+   {
+    "en": "Chị gái tôi vừa nấu cơm vừa hát rất vui vẻ.",
+    "ko": "",
+    "highlight": "vừa nấu cơm vừa hát"
+   },
+   {
+    "en": "Nó đã đến muộn lại còn không mang tài liệu.",
+    "ko": "",
+    "highlight": "lại còn"
+   },
+   {
+    "en": "Nghỉ ngơi một chút rồi chúng ta lại đi tiếp nhé.",
+    "ko": "",
+    "highlight": "lại"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Tôi lại đi tập thể dục mỗi ngày.",
+    "right": "Tôi hay đi tập thể dục mỗi ngày.",
+    "note": "'Lại' indicates repetition of a specific occurrence or an unwanted return, whereas 'hay' expresses a regular, repeated daily habit."
+   },
+   {
+    "wrong": "Anh ấy vừa ăn cơm và vừa xem tivi.",
+    "right": "Anh ấy vừa ăn cơm vừa xem tivi.",
+    "note": "Do not insert the conjunction 'và' inside the correlative pair 'vừa... vừa...'."
+   },
+   {
+    "wrong": "Cô ấy hay quên nhưng hôm nay quên lại.",
+    "right": "Cô ấy hay quên nhưng hôm nay lại quên.",
+    "note": "The preverbal aspectual marker 'lại' must precede the verb, not follow it."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He regularly catches a cold whenever the weather shifts: 'Mỗi khi trở trời, anh ấy ___ bị cảm lạnh.'",
+    "options": [
+     "vừa",
+     "hay",
+     "lại còn",
+     "nữa"
+    ],
+    "answer": 1,
+    "explanation": "'Hay' denotes frequency and habitual tendency ('prone to catching a cold')."
+   },
+   {
+    "question": "You complain that the computer crashed again: 'Máy vi tính ___ bị hỏng rồi!'",
+    "options": [
+     "hay",
+     "đang",
+     "lại",
+     "vừa"
+    ],
+    "answer": 2,
+    "explanation": "'Lại' conveys recurrence of an event, particularly an undesirable or exasperating one."
+   },
+   {
+    "question": "Express that Linh studies while listening to instrumental melodies: 'Linh ___ học bài ___ nghe nhạc nhẹ.'",
+    "options": [
+     "vừa / vừa",
+     "lại / lại",
+     "hay / hay",
+     "càng / càng"
+    ],
+    "answer": 0,
+    "explanation": "'Vừa [Action A] vừa [Action B]' denotes two actions being executed concurrently."
+   },
+   {
+    "question": "Express added frustration: 'He arrived late and on top of that forgot his wallet': 'Anh ấy đi muộn, ___ quên ví tiền.'",
+    "options": [
+     "đang khi",
+     "vừa vặn",
+     "chẳng những",
+     "lại còn"
+    ],
+    "answer": 3,
+    "explanation": "'Lại còn' expresses an escalating, compound grievance ('and on top of that / furthermore')."
+   }
+  ],
+  "tip": "Think of 'hay' as 'regularly / prone to' and 'lại' as 'did it again' (often with a sigh!). Place both directly in front of the main verb."
+ },
+ {
+  "id": "vi-b2-topic-prominence",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#7C3AED",
+  "emoji": "🎯",
+  "title": "Topic-Comment Sentence Architecture",
+  "subtitle": "Front thematic elements to master natural Vietnamese information hierarchy",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Vietnamese prioritizes topic over grammatical subject, placing known information or the object first, followed by a comment about it.",
+  "structure": {
+   "headers": [
+    "Position",
+    "Sentence Component",
+    "Grammatical Role",
+    "Function in Discourse"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Fronted (Initial)",
+      "Topic (Chủ đề)",
+      "Direct object, location, or theme",
+      "Establishes shared context"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Optional Linker",
+      "thì / là",
+      "Discourse particle",
+      "Explicitly demarcates topic from comment"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Second Position",
+      "Subject (Chủ ngữ)",
+      "Grammatical agent",
+      "Identifies the actor (can be omitted)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Final Position",
+      "Comment (Vị ngữ)",
+      "Predicate verb phrase",
+      "Delivers new proposition about the topic"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Fronting the Object",
+    "example": "Quyển sách này tôi đọc xong từ tuần trước rồi.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Contrastive Framing with 'thì'",
+    "example": "Cơm thì tôi ăn rồi, còn canh thì chưa.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Domain / Scopal Restriction",
+    "example": "Chuyện công việc thì anh không cần lo lắng.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Tiền bạc thì anh không phải lo, tôi lo được.",
+    "ko": "",
+    "highlight": "Tiền bạc thì"
+   },
+   {
+    "en": "Món phở này ăn ở Hà Nội mới đúng vị.",
+    "ko": "",
+    "highlight": "Món phở này"
+   },
+   {
+    "en": "Tiếng Việt thì ngữ pháp không khó nhưng phát âm khó.",
+    "ko": "",
+    "highlight": "Tiếng Việt thì"
+   },
+   {
+    "en": "Bức thư ấy tôi đã gửi đi từ sáng sớm.",
+    "ko": "",
+    "highlight": "Bức thư ấy"
+   },
+   {
+    "en": "Hoa quả ở chợ này giá cả rất phải chăng.",
+    "ko": "",
+    "highlight": "Hoa quả ở chợ này"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Tôi đã đọc quyển sách này rồi, nhưng quyển sách kia tôi chưa đọc nó.",
+    "right": "Quyển sách này tôi đọc rồi, còn quyển kia thì chưa.",
+    "note": "Vietnamese disfavors repetitive SVO with resumptive pronouns like 'nó'. Front the contrastive objects for natural discourse flow."
+   },
+   {
+    "wrong": "Về cái xe đó, tôi mua nó năm ngoái.",
+    "right": "Cái xe đó tôi mua năm ngoái.",
+    "note": "Learners often translate English 'As for...' with 'Về... nó'. Native Vietnamese simply fronts the bare noun phrase without prepositions or pronouns."
+   },
+   {
+    "wrong": "Thì tôi cơm đã ăn rồi.",
+    "right": "Cơm thì tôi ăn rồi.",
+    "note": "'Thì' must follow the topic noun phrase, never precede the entire clause or sit before the subject alone."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Front the object to make this natural: 'I haven't washed that car yet.'",
+    "options": [
+     "Tôi chưa rửa cái xe đó.",
+     "Cái xe đó tôi chưa rửa.",
+     "Chưa rửa cái xe đó tôi.",
+     "Rửa cái xe đó tôi chưa."
+    ],
+    "answer": 1,
+    "explanation": "'Cái xe đó tôi chưa rửa' puts the known object front and center as the topic, creating idiomatic Vietnamese architecture."
+   },
+   {
+    "question": "Which sentence naturally contrasts two items using topic markers?",
+    "options": [
+     "Trà thì tôi thích, còn cà phê thì tôi không uống được.",
+     "Tôi thích trà và tôi không uống được cà phê thì.",
+     "Thì trà tôi thích còn tôi cà phê không uống.",
+     "Tôi trà thích thì cà phê không uống."
+    ],
+    "answer": 0,
+    "explanation": "'[Topic A] thì... còn [Topic B] thì...' is the quintessential contrastive construction in Vietnamese."
+   },
+   {
+    "question": "Where should the particle 'thì' be placed in: 'Chuyện đó (1) anh (2) đừng (3) bận tâm (4)'?",
+    "options": [
+     "Position (4)",
+     "Position (2)",
+     "Position (1)",
+     "Position (3)"
+    ],
+    "answer": 2,
+    "explanation": "'Thì' sits directly after the fronted topic ('Chuyện đó thì...'), marking the boundary between topic and comment."
+   },
+   {
+    "question": "Which sentence demonstrates proper domain restriction without awkward calquing?",
+    "options": [
+     "Về tiếng Hàn thì phát âm nó rất khó.",
+     "Tiếng Hàn thì phát âm rất khó.",
+     "Phát âm tiếng Hàn nó thì khó.",
+     "Đối với tiếng Hàn thì nó khó phát âm."
+    ],
+    "answer": 1,
+    "explanation": "Native Vietnamese directly presents the domain 'Tiếng Hàn thì...' followed by the subtopic comment 'phát âm rất khó'."
+   }
+  ],
+  "tip": "When speaking Vietnamese, ask yourself 'What am I talking about first?' Put that item at the very beginning, add 'thì', and then state what happened to it."
+ },
+ {
+  "id": "vi-b2-epistemic-stances",
+  "level": "b2",
+  "category": "modals",
+  "categoryColor": "#EA580C",
+  "emoji": "💡",
+  "title": "Epistemic Stance and Mirativity (Hóa Ra, Chẳng Qua Là, Đành)",
+  "subtitle": "Convey realization of surprise, rationalized downplaying, and resignation",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Use 'hóa ra' to express sudden realization of counter-expectations, 'chẳng qua là' to downplay causes, and 'đành' to convey reluctant resignation.",
+  "structure": {
+   "headers": [
+    "Marker",
+    "Core Meaning",
+    "Epistemic Attitude",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "hóa ra / ra là",
+      "Sudden discovery",
+      "Mirative (unexpected revelation)",
+      "it turns out that..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "chẳng qua là",
+      "Diminutive justification",
+      "Downplaying significance",
+      "merely, it's just that..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "đành (phải)",
+      "Resigned acceptance",
+      "No preferable alternative",
+      "have no choice but to..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "tưởng... ai ngờ...",
+      "Expectation vs reality",
+      "Disconfirmed assumption",
+      "thought that... but surprisingly..."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Sudden Realization (Mirativity)",
+    "example": "Hóa ra bấy lâu nay anh ấy là giám đốc công ty.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Downplaying Significance",
+    "example": "Chẳng qua là tôi gặp may mắn thôi chứ không tài giỏi gì.",
+    "translation": ""
+   },
+   {
+    "color": "#64748B",
+    "label": "Reluctant Resignation",
+    "example": "Xe hỏng giữa đường nên tôi đành phải đi bộ về.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Tìm mãi không thấy ví, hóa ra mình để quên ở quán cà phê.",
+    "ko": "",
+    "highlight": "hóa ra"
+   },
+   {
+    "en": "Anh đừng giận, chẳng qua là cô ấy không hiểu ý anh thôi.",
+    "ko": "",
+    "highlight": "chẳng qua là"
+   },
+   {
+    "en": "Hết vé máy bay rồi, chúng tôi đành đi tàu hỏa vậy.",
+    "ko": "",
+    "highlight": "đành"
+   },
+   {
+    "en": "Cứ tưởng hôm nay mưa, ai ngờ trời lại nắng chang chang.",
+    "ko": "",
+    "highlight": "ai ngờ"
+   },
+   {
+    "en": "Ra là cậu giấu mọi người để chuẩn bị sinh nhật bất ngờ.",
+    "ko": "",
+    "highlight": "Ra là"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Tôi không thích đi nhưng tôi phải đành đi.",
+    "right": "Tôi không thích đi nhưng đành phải đi.",
+    "note": "Word order error: 'đành' precedes 'phải' ('đành phải' = reluctantly forced to). You cannot say 'phải đành'."
+   },
+   {
+    "wrong": "Hóa ra là vì anh ấy thông minh nên anh ấy đậu kỳ thi.",
+    "right": "Chẳng qua là anh ấy chăm chỉ hơn thôi.",
+    "note": "Do not confuse 'hóa ra' (mirative discovery: 'turns out') with dismissive justifications; use 'chẳng qua là' to downplay reasons."
+   },
+   {
+    "wrong": "Tôi tưởng anh ấy bận, hóa ra anh ấy đến.",
+    "right": "Tôi tưởng anh ấy bận, ai ngờ anh ấy đến.",
+    "note": "When directly contrasting a mistaken belief with reality inside 'tưởng...', the idiomatic pairing is 'ai ngờ' or 'nào ngờ'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Discovering your lost keys were in your coat pocket all along: '___ chìa khóa nằm ngay trong túi áo!'",
+    "options": [
+     "Đành là",
+     "Chẳng qua",
+     "Hóa ra",
+     "Dẫu sao"
+    ],
+    "answer": 2,
+    "explanation": "'Hóa ra' expresses sudden epistemic discovery ('It turns out that...!')."
+   },
+   {
+    "question": "Modestly brush off praise: 'It's just that I arrived slightly early': '___ tôi đến sớm hơn một chút thôi.'",
+    "options": [
+     "Hóa ra là",
+     "Chẳng qua là",
+     "Đành rằng là",
+     "Ai ngờ là"
+    ],
+    "answer": 1,
+    "explanation": "'Chẳng qua là' serves to downplay an accomplishment or frame an explanation as mere coincidence/minimal effort."
+   },
+   {
+    "question": "Flight was cancelled, so we reluctantly had to sleep at the terminal: 'Chuyến bay bị hủy nên chúng tôi ___ ngủ lại sân bay.'",
+    "options": [
+     "chẳng qua",
+     "hóa ra",
+     "ai ngờ",
+     "đành phải"
+    ],
+    "answer": 3,
+    "explanation": "'Đành phải' indicates acting out of necessity with zero desirable alternatives."
+   },
+   {
+    "question": "Complete the pair expressing shattered assumptions: 'Tôi cứ tưởng anh ấy là người tốt, ___ là kẻ lừa đảo.'",
+    "options": [
+     "ai ngờ",
+     "chẳng qua",
+     "đành chịu",
+     "cho nên"
+    ],
+    "answer": 0,
+    "explanation": "'Tưởng... ai ngờ...' is the standard construct for 'I assumed X, but to my shock Y was true'."
+   }
+  ],
+  "tip": "Use 'hóa ra' at the start of a clause whenever reality delivers an 'aha!' moment that overturns what you previously assumed."
+ },
+ {
+  "id": "vi-b2-sino-vietnamese-nominalization",
+  "level": "b2",
+  "category": "nouns",
+  "categoryColor": "#0891B2",
+  "emoji": "📜",
+  "title": "Sino-Vietnamese Affixation and Formal Nominalizers (Sự, Việc, Tính, Hóa)",
+  "subtitle": "Form academic, administrative, and abstract nouns from verbal predicates",
+  "color": "#0891B2",
+  "bg": "#ECFEFF",
+  "keyPoint": "Grammatical nominalizers ('sự', 'việc') turn verbs into abstract nouns, while Sino-Vietnamese affixes ('-hóa', 'tính-') create formal scientific and policy terminology.",
+  "structure": {
+   "headers": [
+    "Prefix / Suffix",
+    "Target Root Type",
+    "Resulting Meaning",
+    "Example Pair"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "sự + Verb",
+      "Abstract/Action Verb",
+      "Abstract noun of state/event",
+      "phát triển → sự phát triển (development)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "việc + Verb",
+      "Action/Task Verb",
+      "Concrete action, task, matter",
+      "học tập → việc học tập (the act of studying)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "tính + Adj/Noun",
+      "Descriptive Adjective",
+      "Inherent property or '-ability'",
+      "khả thi → tính khả thi (feasibility)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Root + hóa",
+      "Noun / Adjective",
+      "Process of transformation ('-ize')",
+      "hiện đại → hiện đại hóa (modernization)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0891B2",
+    "label": "Formal Abstract Concepts",
+    "example": "Sự kiên trì là yếu tố quyết định thành công.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Evaluating Systemic Feasibility",
+    "example": "Hội đồng đang đánh giá tính khả thi của dự án.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Socio-Economic Processes",
+    "example": "Quá trình công nghiệp hóa diễn ra rất nhanh chóng.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Sự hiểu lầm này đã gây ra nhiều hậu quả đáng tiếc.",
+    "ko": "",
+    "highlight": "Sự hiểu lầm"
+   },
+   {
+    "en": "Việc giải quyết ô nhiễm môi trường cần nhiều thời gian.",
+    "ko": "",
+    "highlight": "Việc giải quyết"
+   },
+   {
+    "en": "Chúng ta cần nâng cao tính kỷ luật trong tập thể.",
+    "ko": "",
+    "highlight": "tính kỷ luật"
+   },
+   {
+    "en": "Chính phủ đang đẩy mạnh tự động hóa trong sản xuất.",
+    "ko": "",
+    "highlight": "tự động hóa"
+   },
+   {
+    "en": "Mọi người đều bất ngờ trước sự ra đi đột ngột của ông ấy.",
+    "ko": "",
+    "highlight": "sự ra đi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Tôi muốn sự ăn cơm bây giờ.",
+    "right": "Tôi muốn ăn cơm bây giờ.",
+    "note": "Do not nominalize verbs indiscriminately. Basic daily bodily activities in conversational Vietnamese stay plain verbs."
+   },
+   {
+    "wrong": "Sự này rất phức tạp và khó giải quyết.",
+    "right": "Việc này rất phức tạp và khó giải quyết.",
+    "note": "'Sự' cannot stand alone as a demonstrative head noun meaning 'this matter'; use 'việc này' or 'chuyện này'."
+   },
+   {
+    "wrong": "Tính hiện đại hóa của dự án rất cao.",
+    "right": "Tính khả thi của dự án rất cao.",
+    "note": "Do not combine '-hóa' (-ization) with 'tính-' unless referring to the nature of a transformation process; evaluate quality with 'tính khả thi' (feasibility)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct nominalizer to express 'The patience of the teacher': '___ nhẫn nại của người thầy.'",
+    "options": [
+     "Việc",
+     "Sự",
+     "Hóa",
+     "Làm"
+    ],
+    "answer": 1,
+    "explanation": "'Sự' nominalizes psychological attributes, states, and abstract concepts like 'sự nhẫn nại' (patience)."
+   },
+   {
+    "question": "Which term properly denotes the sociological process of 'urbanization'?",
+    "options": [
+     "đô thị hóa",
+     "tính đô thị",
+     "sự thành thị",
+     "việc đô thị"
+    ],
+    "answer": 0,
+    "explanation": "The Sino-Vietnamese suffix '-hóa' (-ize / -ization) attaches to 'đô thị' (urban) to produce 'đô thị hóa' (urbanization)."
+   },
+   {
+    "question": "Express the inherent quality of 'security / safety': 'Đề án này cần đảm bảo ___ an toàn.'",
+    "options": [
+     "sự hóa",
+     "việc",
+     "tính",
+     "hóa"
+    ],
+    "answer": 2,
+    "explanation": "'Tính' serves as a prefix equivalent to English '-ness' or '-ity', yielding 'tính an toàn' (safety/security level)."
+   },
+   {
+    "question": "Select the natural phrase for 'Addressing this issue is urgent': '___ xử lý vấn đề này rất cấp bách.'",
+    "options": [
+     "Hóa ra",
+     "Tính chất",
+     "Vẻ",
+     "Việc"
+    ],
+    "answer": 3,
+    "explanation": "'Việc' nominalizes an active procedural task or operational undertaking ('the work/matter of dealing with...')."
+   }
+  ],
+  "tip": "Reserve 'sự' for abstract internal states (sự tự tin, sự im lặng) and 'việc' for actionable external tasks (việc làm, việc đi lại)."
+ }
+]

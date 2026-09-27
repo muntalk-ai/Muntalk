@@ -1,0 +1,3276 @@
+[
+ {
+  "id": "ko-a1-subject-topic-particles",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🏷️",
+  "title": "Topic vs Subject Particles (은/는 vs 이/가)",
+  "subtitle": "Contrast and context setting versus grammatical agency and new information",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Use 은/는 to establish known topics or draw contrasts, and 이/가 to mark the grammatical subject or introduce brand-new information.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "After Final Consonant",
+    "After Final Vowel",
+    "Primary Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Topic (은/는)",
+      "책은",
+      "사과는",
+      "Topic, contrast, old info"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Subject (이/가)",
+      "책이",
+      "사과가",
+      "Specific subject, new info"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Contrast Pair",
+      "사과는 비싸요. 바나나는 싸요.",
+      "Apples are expensive, but bananas are cheap.",
+      "는/은 marks contrast"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Topic & General Statement",
+    "example": "저는 미국 사람이에요.",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "New Information / Identification",
+    "example": "누가 민수예요? 제가 민수예요.",
+    "translation": ""
+   },
+   {
+    "color": "#9D174D",
+    "label": "Contrasting Two Items",
+    "example": "커피는 마셔요. 하지만 차는 안 마셔요.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "오늘은 날씨가 정말 좋아요.",
+    "ko": "",
+    "highlight": "오늘은"
+   },
+   {
+    "en": "이것이 제 가방이에요.",
+    "ko": "",
+    "highlight": "이것이"
+   },
+   {
+    "en": "민수는 학생이고 지수는 선생님이에요.",
+    "ko": "",
+    "highlight": "민수는"
+   },
+   {
+    "en": "어디가 아파요?",
+    "ko": "",
+    "highlight": "어디가"
+   },
+   {
+    "en": "한국어는 재미있지만 문법이 어려워요.",
+    "ko": "",
+    "highlight": "문법이"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "누구는 왔어요?",
+    "right": "누구가 왔어요? / 누가 왔어요?",
+    "note": "Interrogative question words like 'who' introduce unknown information and must take 이/가 (forming 누가), never 은/는."
+   },
+   {
+    "wrong": "선생님은 민수가 아닙니다.",
+    "right": "선생님은 민수가 아니에요. / 민수는 선생님이 아니에요.",
+    "note": "The complement before the negative copula 아니다 always takes 이/가, not 은/는."
+   },
+   {
+    "wrong": "제가 학생은 예뻐요.",
+    "right": "그 학생이 예뻐요.",
+    "note": "Do not stack subject and topic markers randomly; pick the one that matches whether the noun is the main topic or the specific subject."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Who ordered the coffee? '___ ordered the coffee.' (Focus on identifying the person)",
+    "options": [
+     "민수는",
+     "민수가",
+     "민수를",
+     "민수도"
+    ],
+    "answer": 1,
+    "explanation": "When answering 'who' or identifying the agent as new information, use the subject marker 이/가."
+   },
+   {
+    "question": "'As for me, I am a student.' Choose the topic marker for 저 (ends in vowel).",
+    "options": [
+     "저이",
+     "저가",
+     "저는",
+     "저은"
+    ],
+    "answer": 2,
+    "explanation": "Nouns ending in a vowel take 는 for the topic marker; 저 becomes 저는."
+   },
+   {
+    "question": "Contrasting: 'Apples are sweet, but lemons ___ sour.'",
+    "options": [
+     "레몬은",
+     "레몬이",
+     "레몬을",
+     "레몬에"
+    ],
+    "answer": 0,
+    "explanation": "For contrasting two items (apples vs lemons), use the topic marker 은/는. 레몬 ends in a consonant, so it takes 은."
+   },
+   {
+    "question": "'The weather is nice today.' (Today is the topic; the weather is the specific subject).",
+    "options": [
+     "오늘이 날씨는 좋아요.",
+     "오늘은 날씨가 좋아요.",
+     "오늘을 날씨를 좋아요.",
+     "오늘도 날씨도 좋아요."
+    ],
+    "answer": 1,
+    "explanation": "The standard framing uses 오늘은 (topic) and 날씨가 (subject of the adjective 좋아요)."
+   }
+  ],
+  "tip": "If you are answering the question 'Who did it?' use 이/가. If you are sharing facts about yourself or comparing items, reach for 은/는."
+ },
+ {
+  "id": "ko-a1-polite-informal-conjugation",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#DC2626",
+  "emoji": "🗣️",
+  "title": "Polite Informal Style (해요체: -아/어/여요)",
+  "subtitle": "Everyday polite speech based on Korean stem vowel harmony",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "Stems ending in vowels ㅏ or ㅗ take -아요, 하다 verbs become 해요, and all other stem vowels take -어요.",
+  "structure": {
+   "headers": [
+    "Stem Final Vowel",
+    "Ending",
+    "Stem Example",
+    "Conjugated Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Bright Vowels (ㅏ, ㅗ)",
+      "-아요",
+      "가다, 보다",
+      "가요, 봐요"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Dark / Other Vowels (ㅓ, ㅜ, ㅣ, ㅡ, etc.)",
+      "-어요",
+      "먹다, 마시다",
+      "먹어요, 마셔요"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "하다 Verbs",
+      "-여요 (합쳐서 해요)",
+      "공부하다",
+      "공부해요"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ㅂ Irregular (drop ㅂ, add 워요)",
+      "-워요",
+      "덥다",
+      "더워요"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#B91C1C",
+    "label": "Bright Vowels (ㅏ/ㅗ)",
+    "example": "지금 집에 가요.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Dark/Neutral Vowels",
+    "example": "식당에서 밥을 먹어요.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "하다 Routine Verbs",
+    "example": "매일 한국어를 공부해요.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "친구를 극장에서 만나요.",
+    "ko": "",
+    "highlight": "만나요"
+   },
+   {
+    "en": "시원한 물을 마셔요.",
+    "ko": "",
+    "highlight": "마셔요"
+   },
+   {
+    "en": "주말에 방을 청소해요.",
+    "ko": "",
+    "highlight": "청소해요"
+   },
+   {
+    "en": "한국의 겨울은 정말 추워요.",
+    "ko": "",
+    "highlight": "추워요"
+   },
+   {
+    "en": "음악을 들어요.",
+    "ko": "",
+    "highlight": "들어요"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "밥을 먹아요.",
+    "right": "밥을 먹어요.",
+    "note": "먹다 has the stem vowel ㅓ, which requires -어요, not -아요."
+   },
+   {
+    "wrong": "한국어를 공부하요.",
+    "right": "한국어를 공부해요.",
+    "note": "All 하다 verbs contract into 해요 in the polite informal present."
+   },
+   {
+    "wrong": "오늘 날씨가 돕어요.",
+    "right": "오늘 날씨가 더워요.",
+    "note": "Most ㅂ-final descriptive adjectives drop ㅂ and add -워요 (덥다 → 더워요)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Conjugate 앉다 (to sit; stem has vowel ㅏ) into polite informal style.",
+    "options": [
+     "앉아요",
+     "앉어요",
+     "앉해요",
+     "앉워요"
+    ],
+    "answer": 0,
+    "explanation": "The last vowel of the stem 앉- is ㅏ, so it takes -아요, becoming 앉아요."
+   },
+   {
+    "question": "Conjugate 마시다 (to drink; stem ends in ㅣ) into polite informal style.",
+    "options": [
+     "마시아요",
+     "마시어요",
+     "마셔요",
+     "마새요"
+    ],
+    "answer": 2,
+    "explanation": "When an open stem ending in ㅣ meets -어요, ㅣ and ㅓ merge into ㅕ (마시 + 어요 = 마셔요)."
+   },
+   {
+    "question": "Conjugate 돕다 (to help; special ㅂ irregular with ㅗ stem) into polite informal style.",
+    "options": [
+     "돕아요",
+     "도워요",
+     "도와요",
+     "돕어요"
+    ],
+    "answer": 2,
+    "explanation": "돕다 and 곱다 are unique ㅂ irregulars whose vowel ㅗ causes ㅂ to turn into 오, yielding 도와요 (not 도워요)."
+   },
+   {
+    "question": "Conjugate 운동하다 (to exercise) into polite informal style.",
+    "options": [
+     "운동하요",
+     "운동해요",
+     "운동하여요",
+     "운동홰요"
+    ],
+    "answer": 1,
+    "explanation": "하다 regularly contracts to 해요 in standard everyday speech."
+   }
+  ],
+  "tip": "Look strictly at the *final vowel* of the verb stem, not consonants, to decide between -아요 and -어요."
+ },
+ {
+  "id": "ko-a1-copula-and-negation",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#DC2626",
+  "emoji": "🪪",
+  "title": "Copula and Negative Copula (이다 vs 아니다)",
+  "subtitle": "Stating identity with 이에요/예요 and denying it with 이/가 아니에요",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Attach 이에요/예요 directly to a noun to mean 'is', but write 아니다 as a separate word preceded by the subject marker 이/가.",
+  "structure": {
+   "headers": [
+    "Form",
+    "After Consonant",
+    "After Vowel",
+    "Structure"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Positive Copula (이다)",
+      "학생이에요",
+      "의사예요",
+      "[Noun]이에요/예요 (no space)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negative Copula (아니다)",
+      "학생이 아니에요",
+      "의사가 아니에요",
+      "[Noun]이/가 아니에요 (with space)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Formal Style (입니다/아닙니다)",
+      "학생입니다",
+      "학생이 아닙니다",
+      "Used in official/formal settings"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Affirming Identity (Consonant)",
+    "example": "제 직업은 선생님이에요.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Affirming Identity (Vowel)",
+    "example": "저 사람은 제 친구예요.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Denying Identity",
+    "example": "저는 일본 사람이 아니에요.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "이것은 제 휴대폰이에요.",
+    "ko": "",
+    "highlight": "휴대폰이에요"
+   },
+   {
+    "en": "저 건물은 우리 학교예요.",
+    "ko": "",
+    "highlight": "학교예요"
+   },
+   {
+    "en": "저는 미국 사람이 아니에요.",
+    "ko": "",
+    "highlight": "사람이 아니에요"
+   },
+   {
+    "en": "이 모자는 제 것이 아니에요.",
+    "ko": "",
+    "highlight": "것이 아니에요"
+   },
+   {
+    "en": "그분은 간호사가 아니에요.",
+    "ko": "",
+    "highlight": "간호사가 아니에요"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "저는 미국 사람 예요.",
+    "right": "저는 미국 사람이에요.",
+    "note": "사람 ends in a consonant (ㅁ), so it must take 이에요, never 예요."
+   },
+   {
+    "wrong": "저는 학생을 아니에요.",
+    "right": "저는 학생이 아니에요.",
+    "note": "아니다 always requires the subject particle 이/가, never the object marker 을/를."
+   },
+   {
+    "wrong": "그것은 사과아니에요.",
+    "right": "그것은 사과가 아니에요.",
+    "note": "Unlike 이다, 아니다 is an independent adjective and needs both a particle (이/가) and a space before it."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the identity sentence: 'This is water (물).' -> 이것은 물___.",
+    "options": [
+     "예요",
+     "이에요",
+     "가 아니에요",
+     "은이에요"
+    ],
+    "answer": 1,
+    "explanation": "물 ends in final consonant ㄹ, so it attaches directly to 이에요."
+   },
+   {
+    "question": "Complete the denial sentence: 'I am not an employee (회사원).' -> 저는 회사원___.",
+    "options": [
+     "을 아니에요",
+     "는 아니에요",
+     "이 아니에요",
+     "가 아니에요"
+    ],
+    "answer": 2,
+    "explanation": "회사원 ends in consonant ㄴ, so it takes the subject particle 이 followed by 아니에요."
+   },
+   {
+    "question": "Complete the sentence: 'She is a doctor (의사).' -> 그분은 의사___.",
+    "options": [
+     "이에요",
+     "예요",
+     "이예요",
+     "가예요"
+    ],
+    "answer": 1,
+    "explanation": "의사 ends in vowel ㅏ, so it attaches directly to 예요."
+   },
+   {
+    "question": "Complete the denial: 'This is not coffee (커피).' -> 이것은 커피___.",
+    "options": [
+     "가 아니에요",
+     "이 아니에요",
+     "를 아니에요",
+     "아니에요"
+    ],
+    "answer": 0,
+    "explanation": "커피 ends in a vowel, so it takes the subject marker 가 followed by space and 아니에요."
+   }
+  ],
+  "tip": "Remember: 이다 attaches like glue with no space (사과예요), while 아니다 always keeps a particle and a space (사과가 아니에요)."
+ },
+ {
+  "id": "ko-a1-case-particles-e-eseo",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "📍",
+  "title": "Locative Particles: Static vs Dynamic (에 vs 에서)",
+  "subtitle": "Distinguishing existence and destination from dynamic actions and source",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use 에 for static existence (있다/없다), destinations (가다/오다), and times; use 에서 for dynamic actions taking place at a location.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Role",
+    "Trigger Verbs",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "에",
+      "Static location of presence",
+      "있다, 없다, 살다",
+      "집에 있어요"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "에",
+      "Direction / Destination",
+      "가다, 오다, 도착하다",
+      "학교에 가요"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "에서",
+      "Dynamic action in place",
+      "공부하다, 먹다, 일하다",
+      "카페에서 만나요"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "에서",
+      "Starting point / Source",
+      "오다, 출발하다",
+      "서울에서 왔어요"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Static Location / Existence",
+    "example": "고양이가 방에 있어요.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Goal / Destination",
+    "example": "내일 부산에 가요.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Active Doing / Location",
+    "example": "도서관에서 책을 읽어요.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "우리는 식당에서 저녁을 먹어요.",
+    "ko": "",
+    "highlight": "식당에서"
+   },
+   {
+    "en": "동생이 지금 방에 있어요.",
+    "ko": "",
+    "highlight": "방에"
+   },
+   {
+    "en": "오전 아홉 시에 학교에 가요.",
+    "ko": "",
+    "highlight": "학교에"
+   },
+   {
+    "en": "공원에서 친구와 운동해요.",
+    "ko": "",
+    "highlight": "공원에서"
+   },
+   {
+    "en": "미국에서 한국으로 왔어요.",
+    "ko": "",
+    "highlight": "미국에서"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "도서관에 책을 읽어요.",
+    "right": "도서관에서 책을 읽어요.",
+    "note": "Reading (읽다) is an active dynamic verb taking place in the library, so you must use 에서."
+   },
+   {
+    "wrong": "지금 집에 가고 있어요? 아니요, 방에서 있어요.",
+    "right": "방에 있어요.",
+    "note": "State of existence with 있다/없다 takes the static particle 에."
+   },
+   {
+    "wrong": "어디에 커피를 마셔요?",
+    "right": "어디에서 커피를 마셔요?",
+    "note": "Drinking coffee is an action occurring at a venue, demanding 어디에서 (or 어디서)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'I study at the library.' -> 도서관___ 공부해요.",
+    "options": [
+     "에",
+     "을",
+     "에서",
+     "으로"
+    ],
+    "answer": 2,
+    "explanation": "공부하다 is an action taking place at the location, requiring 에서."
+   },
+   {
+    "question": "Fill in the blank: 'My keys are on top of the desk.' -> 책상 위___ 열쇠가 있어요.",
+    "options": [
+     "에",
+     "에서",
+     "으로",
+     "과"
+    ],
+    "answer": 0,
+    "explanation": "The verb 있다 expresses static existence/presence, which takes the particle 에."
+   },
+   {
+    "question": "Fill in the blank: 'I am going to school right now.' -> 지금 학교___ 가요.",
+    "options": [
+     "에서",
+     "을",
+     "도",
+     "에"
+    ],
+    "answer": 3,
+    "explanation": "Verbs of movement toward a destination (가다, 오다) pair with 에 to indicate destination."
+   },
+   {
+    "question": "Fill in the blank: 'I came from America.' -> 저는 미국___ 왔어요.",
+    "options": [
+     "에",
+     "에서",
+     "으로",
+     "까지"
+    ],
+    "answer": 1,
+    "explanation": "When expressing the origin or source ('from a place'), use 에서."
+   }
+  ],
+  "tip": "Ask yourself: Is an action happening inside that place? If yes, pick 에서. Is something simply sitting there or heading there? Pick 에."
+ },
+ {
+  "id": "ko-a1-honorific-subject-marker",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#DC2626",
+  "emoji": "🙇",
+  "title": "Honorific Subject Infix (-(으)시-)",
+  "subtitle": "Showing respect to the person performing the action",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Insert -(으)시- into verb stems and use suppletive verbs when the grammatical subject is someone who warrants respect.",
+  "structure": {
+   "headers": [
+    "Verb Stem Ending",
+    "Infix",
+    "Present Polite Form",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Vowel Stem",
+      "-시-",
+      "-세요",
+      "가다 → 가세요"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Consonant Stem",
+      "-으시-",
+      "-으세요",
+      "읽다 → 읽으세요"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Special Verbs (Suppletive)",
+      "Custom root",
+      "-세요",
+      "드시다 (eat), 주무시다 (sleep)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Honorific Subject Particle",
+      "께서 (replaces 이/가)",
+      "—",
+      "선생님께서 오세요"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Respecting Family Elders",
+    "example": "할머니께서 지금 신문을 읽으세요.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Suppletive Honorifics",
+    "example": "아버지께서 진지를 드세요.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Polite Inquiries / Orders",
+    "example": "선생님, 어디에 가세요?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "선생님께서 교실에서 책을 읽으세요.",
+    "ko": "",
+    "highlight": "읽으세요"
+   },
+   {
+    "en": "어머니는 매일 아침에 운동하세요.",
+    "ko": "",
+    "highlight": "운동하세요"
+   },
+   {
+    "en": "할아버지께서 커피를 드세요.",
+    "ko": "",
+    "highlight": "드세요"
+   },
+   {
+    "en": "부모님께서 서울에 사세요.",
+    "ko": "",
+    "highlight": "사세요"
+   },
+   {
+    "en": "사장님은 지금 사무실에 계세요.",
+    "ko": "",
+    "highlight": "계세요"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "제가 내일 가세요.",
+    "right": "제가 내일 가요.",
+    "note": "Never use the honorific marker -(으)시- to describe your own actions; it is exclusively for honoring others."
+   },
+   {
+    "wrong": "할머니께서 밥을 먹으세요.",
+    "right": "할머니께서 진지를 드세요 / 잡수세요.",
+    "note": "먹다 has dedicated suppletive honorific verbs (드시다 / 잡수시다); do not say 먹으시다."
+   },
+   {
+    "wrong": "선생님께서 방에 있으세요.",
+    "right": "선생님께서 방에 계세요.",
+    "note": "When honoring a person existing in a place, the honorific counterpart of 있다 is 계시다, not 있으시다."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct honorific form of 보다 (to see/watch; vowel stem).",
+    "options": [
+     "보으세요",
+     "보세요",
+     "보계세요",
+     "보드세요"
+    ],
+    "answer": 1,
+    "explanation": "The stem 보- ends in a vowel, so it attaches directly to -세요 to become 보세요."
+   },
+   {
+    "question": "How do you honorably say 'Grandmother is sleeping'?",
+    "options": [
+     "할머니께서 자세요.",
+     "할머니께서 주무세요.",
+     "할머니가 자으세요.",
+     "할머니는 드세요."
+    ],
+    "answer": 1,
+    "explanation": "The verb 자다 (to sleep) changes completely to the suppletive honorific verb 주무시다 (주무세요)."
+   },
+   {
+    "question": "How do you honorably say 'The professor is in the office'?",
+    "options": [
+     "교수님께서 연구실에 있으세요.",
+     "교수님께서 연구실에 가세요.",
+     "교수님께서 연구실에 계세요.",
+     "교수님께서 연구실에 드세요."
+    ],
+    "answer": 2,
+    "explanation": "When an honored person exists or stays in a location, use 계시다 (계세요), not 있으시다."
+   },
+   {
+    "question": "Conjugate 앉다 (to sit; consonant stem) into the polite honorific present form.",
+    "options": [
+     "앉으세요",
+     "앉세요",
+     "앉드세요",
+     "앉계세요"
+    ],
+    "answer": 0,
+    "explanation": "앉- ends in a consonant cluster, requiring -으세요 to ease pronunciation: 앉으세요."
+   }
+  ],
+  "tip": "Never apply -(으)시- to yourself! It is an elevator for the other person; using it on yourself sounds absurdly self-important."
+ },
+ {
+  "id": "ko-a1-basic-clausal-connectors",
+  "level": "a1",
+  "category": "clauses",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔗",
+  "title": "Sequential and Contrastive Connectors (-고, -지만)",
+  "subtitle": "Connecting thoughts with sequential addition and contrast",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Attach -고 or -지만 directly to the verb stem, leaving past-tense markers for the final clause in basic sequences.",
+  "structure": {
+   "headers": [
+    "Connector",
+    "Attaches To",
+    "Function",
+    "Example Pattern"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-고",
+      "Verb / Adj stem",
+      "Listing / Chronology (and)",
+      "먹고 마셔요"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-지만",
+      "Verb / Adj stem",
+      "Direct Contrast (but)",
+      "크지만 비싸요"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-(았/었)지만",
+      "Past base stem",
+      "Past Contrast (even so)",
+      "갔지만 없었어요"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Listing Actions or States",
+    "example": "형은 키가 크고 동생은 작아요.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Sequential Actions",
+    "example": "숙제를 끝내고 친구를 만났어요.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Contrasting Clauses",
+    "example": "한국어는 어렵지만 재미있어요.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "어제 영화를 보고 밥을 먹었어요.",
+    "ko": "",
+    "highlight": "보고"
+   },
+   {
+    "en": "도서관에 가고 서점에도 들렀어요.",
+    "ko": "",
+    "highlight": "가고"
+   },
+   {
+    "en": "이 옷은 예쁘지만 너무 비쌉니다.",
+    "ko": "",
+    "highlight": "예쁘지만"
+   },
+   {
+    "en": "비가 왔지만 우리는 축구를 했어요.",
+    "ko": "",
+    "highlight": "왔지만"
+   },
+   {
+    "en": "사과는 달고 레몬은 셔요.",
+    "ko": "",
+    "highlight": "달고"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "어제 밥을 먹었 고 영화를 봤어요.",
+    "right": "어제 밥을 먹고 영화를 봤어요.",
+    "note": "Do not attach the past-tense suffix -었- to the first clause when using -고 for simple chronological order."
+   },
+   {
+    "wrong": "방이 작고지만 깨끗해요.",
+    "right": "방이 작지만 깨끗해요.",
+    "note": "Do not combine -고 and -지만 together; attach -지만 directly to the adjective stem."
+   },
+   {
+    "wrong": "비싸지만요 좋아요.",
+    "right": "비싸지만 좋아요.",
+    "note": "The polite particle -요 cannot be inserted before the coordinating conjunction -지만 inside the sentence."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct connector for 'I washed my hands and ate dinner': 손을 ___ 저녁을 먹었어요.",
+    "options": [
+     "씻지만",
+     "씻고",
+     "씻어서만",
+     "씻는데도"
+    ],
+    "answer": 1,
+    "explanation": "-고 connects two actions chronologically without needing a tense marker on the first verb."
+   },
+   {
+    "question": "Choose the correct form for 'The price is cheap, but the quality is good': 가격은 ___ 품질이 좋아요.",
+    "options": [
+     "싸고",
+     "싸니까",
+     "싸지만",
+     "싸서"
+    ],
+    "answer": 2,
+    "explanation": "-지만 marks direct contrast ('cheap, but good quality')."
+   },
+   {
+    "question": "Which sentence correctly lists attributes without tense error?",
+    "options": [
+     "날씨가 맑았고 따뜻했어요.",
+     "날씨가 맑고 따뜻했어요.",
+     "날씨가 맑고지만 좋았어요.",
+     "날씨가 맑았지만고 추웠어요."
+    ],
+    "answer": 1,
+    "explanation": "In standard coordinate listing, the first adjective stem (맑-) directly takes -고 while tense is marked on the final predicate."
+   },
+   {
+    "question": "Fill in the blank: 'I studied hard, but the exam was difficult': 열심히 ___ 시험이 어려웠어요.",
+    "options": [
+     "공부하니까",
+     "공부해서",
+     "공부하면",
+     "공부했지만"
+    ],
+    "answer": 3,
+    "explanation": "-지만 (or past form -했지만) conveys contrast against the difficult outcome."
+   }
+  ],
+  "tip": "Remember: -고 holds the tense in suspense! Put all your tense endings (like -았/었-) on the very last verb of the sentence."
+ },
+ {
+  "id": "ko-a2-cause-and-sequential-eo-seo",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#4F46E5",
+  "emoji": "⚖️",
+  "title": "Sequential Linker vs Causal Marker (-아/어서 vs -(으)니까)",
+  "subtitle": "Distinguishing natural consequence from subjective justification",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use -아/어서 for natural chronological cause and effect without imperatives; use -(으)니까 for subjective reasoning, discovery, and commands.",
+  "structure": {
+   "headers": [
+    "Ending",
+    "Imperative / Propositive Allowed?",
+    "Past Tense in Clause?",
+    "Core Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-아/어서",
+      "No (Forbidden)",
+      "No",
+      "Natural cause; tightly linked sequence"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-(으)니까",
+      "Yes (-(으)세요, -자)",
+      "Yes (-(았/었)으니까)",
+      "Subjective reasoning; discovery"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-아/어서 (Sequential)",
+      "No",
+      "No",
+      "Doing action 2 in the state of action 1"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Natural Physical Cause",
+    "example": "배가 아파서 병원에 갔어요.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Reason for Request or Command",
+    "example": "날씨가 추우니까 문을 닫으세요.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Tightly Linked Sequence",
+    "example": "의자에 앉아서 기다리세요.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "눈이 와서 길이 미끄러워요.",
+    "ko": "",
+    "highlight": "와서"
+   },
+   {
+    "en": "시간이 없으니까 빨리 갑시다.",
+    "ko": "",
+    "highlight": "없으니까"
+   },
+   {
+    "en": "카페에 가서 커피를 마셨어요.",
+    "ko": "",
+    "highlight": "가서"
+   },
+   {
+    "en": "늦었으니까 택시를 타세요.",
+    "ko": "",
+    "highlight": "늦었으니까"
+   },
+   {
+    "en": "친구가 반가워서 눈물이 났어요.",
+    "ko": "",
+    "highlight": "반가워서"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "비가 오니까 우산을 썼어요.",
+    "right": "비가 와서 우산을 썼어요.",
+    "note": "For a simple factual past consequence, -아/어서 is natural; -(으)니까 sounds overly emphatic unless justifying a decision."
+   },
+   {
+    "wrong": "더워서 에어컨을 켜세요.",
+    "right": "더우니까 에어컨을 켜세요.",
+    "note": "-아/어서 can never precede imperative endings like -(으)세요 or suggestions like -(으)ㅂ시다."
+   },
+   {
+    "wrong": "어제 피곤했어서 일찍 잤어요.",
+    "right": "어제 피곤해서 일찍 잤어요.",
+    "note": "Never attach past tense markers (-았/었-) directly before -아/어서."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the request: 'Since it is dangerous, please do not go': 위험___ 가지 마세요.",
+    "options": [
+     "하니까",
+     "해서",
+     "한데도",
+     "하지만"
+    ],
+    "answer": 0,
+    "explanation": "With imperative commands (-지 마세요), only -(으)니까 is grammatically valid, never -아/어서."
+   },
+   {
+    "question": "Which sentence correctly expresses 'I went to the library to read'?",
+    "options": [
+     "도서관에 가니까 책을 읽었어요.",
+     "도서관에 가서 책을 읽었어요.",
+     "도서관에 갔어서 책을 읽었어요.",
+     "도서관에 가면 책을 읽었어요."
+    ],
+    "answer": 1,
+    "explanation": "가서 denotes sequential action where the subject moves somewhere to perform the second action."
+   },
+   {
+    "question": "Find the grammatically invalid Korean sentence:",
+    "options": [
+     "배고프니까 밥 먹자.",
+     "친절해서 고마워요.",
+     "시간이 없어서 서두르세요.",
+     "비가 오니까 실내로 가요."
+    ],
+    "answer": 2,
+    "explanation": "-아/어서 cannot be used with an imperative request like 서두르세요 (hurry up)."
+   },
+   {
+    "question": "Complete with natural factual reason: 'I caught a cold, so I rested at home': 감기에 ___ 집에서 쉬었어요.",
+    "options": [
+     "걸리면",
+     "걸렸으니까",
+     "걸리지만",
+     "걸려서"
+    ],
+    "answer": 3,
+    "explanation": "-아/어서 expresses a simple, natural factual cause and outcome in past narrative statements."
+   }
+  ],
+  "tip": "Golden Rule: If the clause ends in -세요 (please do) or -자 (let's), immediately eliminate -아/어서 and pick -(으)니까!"
+ },
+ {
+  "id": "ko-a2-noun-modifying-verb-forms",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🏷️",
+  "title": "Noun-Modifying Verb Endings (관형형: -(으)ㄴ, -는, -(으)ㄹ)",
+  "subtitle": "Transforming verbs into descriptive relative clauses",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Action verbs use -(으)ㄴ for past, -는 for present, and -(으)ㄹ for future, while adjectives use -(으)ㄴ for present description.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Past Form",
+    "Present Form",
+    "Future Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Action Verb",
+      "stem + -(으)ㄴ",
+      "stem + -는",
+      "stem + -(으)ㄹ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Adjective (Descriptive)",
+      "— (usually -던)",
+      "stem + -(으)ㄴ",
+      "stem + -(으)ㄹ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Copula (이다 / 아니다)",
+      "—",
+      "인 / 아닌",
+      "일 / 아닐"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Ongoing Present Action",
+    "example": "지금 음악을 듣는 사람이 민수예요.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Completed Past Action",
+    "example": "어제 읽은 책이 정말 재미있었어요.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Future or Intended Action",
+    "example": "내일 먹을 음식을 미리 샀어요.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "내가 자주 가는 카페는 저기예요.",
+    "ko": "",
+    "highlight": "가는"
+   },
+   {
+    "en": "지난주에 만난 친구한테 전화가 왔어요.",
+    "ko": "",
+    "highlight": "만난"
+   },
+   {
+    "en": "오늘 밤에 볼 영화를 골랐어요.",
+    "ko": "",
+    "highlight": "볼"
+   },
+   {
+    "en": "방이 조용한 도서관을 좋아합니다.",
+    "ko": "",
+    "highlight": "조용한"
+   },
+   {
+    "en": "저기서 신문을 읽는 분이 우리 교수님입니다.",
+    "ko": "",
+    "highlight": "읽는"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "예쁜는 꽃을 샀어요.",
+    "right": "예쁜 꽃을 샀어요.",
+    "note": "Adjectives take -(으)ㄴ in the present tense, never -는 (with irregular exceptions like 있다/없다)."
+   },
+   {
+    "wrong": "어제 먹는 피자가 맛있었어요.",
+    "right": "어제 먹은 피자가 맛있었어요.",
+    "note": "Action verbs that describe a completed past event must take -(으)ㄴ, not -는."
+   },
+   {
+    "wrong": "살는 집이 아주 넓어요.",
+    "right": "사는 집이 아주 넓어요.",
+    "note": "Verbs with a ㄹ-irregular stem drop the ㄹ before -는 (살다 -> 사는)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct phrase for 'The movie I am watching now': 지금 ___ 영화",
+    "options": [
+     "보는",
+     "본",
+     "볼",
+     "보던"
+    ],
+    "answer": 0,
+    "explanation": "Action verbs modifying a noun in the ongoing present take -는."
+   },
+   {
+    "question": "Select the correct phrase for 'The book I will read tomorrow': 내일 ___ 책",
+    "options": [
+     "읽은",
+     "읽는",
+     "읽을",
+     "읽었던"
+    ],
+    "answer": 2,
+    "explanation": "Future or prospective actions modifying a noun take -(으)ㄹ."
+   },
+   {
+    "question": "Which form correctly modifies the noun with the adjective '작다' (small)?",
+    "options": [
+     "작는 가방",
+     "작은 가방",
+     "작을 가방",
+     "작던는 가방"
+    ],
+    "answer": 1,
+    "explanation": "Descriptive verbs (adjectives) take -(으)ㄴ for present state description (작다 + 은 -> 작은)."
+   },
+   {
+    "question": "Fill in the blank with the past modifier of '만들다' (to make): 이것은 제가 어제 ___ 빵이에요.",
+    "options": [
+     "만들은",
+     "만드는",
+     "만들",
+     "만든"
+    ],
+    "answer": 3,
+    "explanation": "For ㄹ-stem verbs like 만들다, the ㄹ drops before -ㄴ in the past modifier form, yielding 만든."
+   }
+  ],
+  "tip": "Watch out for 있다 and 없다! Even though they look like adjectives, they always conjugate with -는 (e.g., 맛있는, 재미없는)."
+ },
+ {
+  "id": "ko-a2-ability-and-potential",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#D97706",
+  "emoji": "🧗",
+  "title": "Expressing Ability and Possibility (-(으)ㄹ 수 있다/없다)",
+  "subtitle": "Stating capability, potential, and impossibility",
+  "color": "#B45309",
+  "bg": "#FFFBEB",
+  "keyPoint": "Combine the prospective modifier -(으)ㄹ with the defective noun 수 and 있다/없다 to state what one can or cannot do.",
+  "structure": {
+   "headers": [
+    "Stem Ending",
+    "Affirmative (Can)",
+    "Negative (Cannot)",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Vowel or ㄹ stem",
+      "-ㄹ 수 있다",
+      "-ㄹ 수 없다",
+      "갈 수 있다 / 살 수 없다"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Consonant stem",
+      "-을 수 있다",
+      "-을 수 없다",
+      "먹을 수 있다 / 읽을 수 없다"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Irregular ㄷ (듣다)",
+      "들 + -을 수 있다",
+      "들 + -을 수 없다",
+      "들을 수 있다"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#B45309",
+    "label": "Learned Capability",
+    "example": "한국어로 말할 수 있어요.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "External Impossibility",
+    "example": "오늘은 바빠서 만날 수 없어요.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Asking Permission / Ability",
+    "example": "여기서 사진을 찍을 수 있습니까?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "저는 매운 음식을 잘 먹을 수 있어요.",
+    "ko": "",
+    "highlight": "먹을 수 있어요"
+   },
+   {
+    "en": "다리를 다쳐서 운동할 수 없어요.",
+    "ko": "",
+    "highlight": "운동할 수 없어요"
+   },
+   {
+    "en": "내일 몇 시에 올 수 있나요?",
+    "ko": "",
+    "highlight": "올 수 있나요"
+   },
+   {
+    "en": "비밀번호를 찾을 수 없습니다.",
+    "ko": "",
+    "highlight": "찾을 수 없습니다"
+   },
+   {
+    "en": "한국 신문을 읽을 수 있습니까?",
+    "ko": "",
+    "highlight": "읽을 수 있습니까"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "수영을 할수있어요.",
+    "right": "수영을 할 수 있어요.",
+    "note": "The bound noun 수 requires a space before and after: -ㄹ 수 있다."
+   },
+   {
+    "wrong": "운전할 수 안 돼요.",
+    "right": "운전할 수 없어요.",
+    "note": "Use 없다 (not 안 되다) as the pairing with -(으)ㄹ 수 when expressing lack of ability."
+   },
+   {
+    "wrong": "한국어를 말하는 수 있어요.",
+    "right": "한국어를 말할 수 있어요.",
+    "note": "The defective noun 수 must always be modified by the prospective ending -(으)ㄹ, never -는."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank for 'I can swim': 저는 수영을 ___ 있어요.",
+    "options": [
+     "하는 수",
+     "할 수",
+     "한 수",
+     "해서 수"
+    ],
+    "answer": 1,
+    "explanation": "하다 takes -ㄹ 수 to formulate capability: 할 수 있어요."
+   },
+   {
+    "question": "Which option means 'I cannot eat because it is hot'?",
+    "options": [
+     "뜨거워서 먹을 수 없어요.",
+     "뜨거우니까 먹는 수 없어요.",
+     "뜨거워서 먹은 수 없어요.",
+     "뜨겁지만 먹을 수 있어요."
+    ],
+    "answer": 0,
+    "explanation": "Consonant stem 먹다 takes -을 수 없다 for inability/impossibility."
+   },
+   {
+    "question": "Choose the correct spelling with proper Korean spacing:",
+    "options": [
+     "갈수있어요",
+     "갈수 있어요",
+     "갈 수있어요",
+     "갈 수 있어요"
+    ],
+    "answer": 3,
+    "explanation": "수 is an independent bound noun, so it must have a space before and after it: 갈 수 있어요."
+   },
+   {
+    "question": "What is the irregular ability form for '듣다' (to hear)?",
+    "options": [
+     "듣을 수 있다",
+     "들을 수 있다",
+     "들은 수 있다",
+     "듣는 수 있다"
+    ],
+    "answer": 1,
+    "explanation": "ㄷ irregular verb 듣다 changes ㄷ to ㄹ before vowels, yielding 들을 수 있다."
+   }
+  ],
+  "tip": "Remember spacing: keep a space between the verb ending -(으)ㄹ and the bound noun 수, and another space before 있다/없다!"
+ },
+ {
+  "id": "ko-a2-volition-and-intentionality",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🤝",
+  "title": "Intentional and Prospective Endings (-(으)ㄹ게요 vs -(으)려고 하다)",
+  "subtitle": "Distinguishing conversational promises from premeditated plans",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use -(으)ㄹ게요 to make a spontaneous commitment or promise to your listener; use -(으)려고 하다 to convey a premeditated plan or intention.",
+  "structure": {
+   "headers": [
+    "Ending",
+    "Perspective",
+    "Pre-planned?",
+    "Listener Dependent?"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-(으)ㄹ게요",
+      "First person only (I/we)",
+      "Spontaneous / Responsive",
+      "Yes (Promise to listener)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-(으)려고 하다",
+      "First / Third person",
+      "Premeditated plan",
+      "No (General intention)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-(으)려고",
+      "Connector (in order to)",
+      "Intent behind action",
+      "No"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Spontaneous Promise to Listener",
+    "example": "제가 먼저 정리할게요.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Planned Future Intent",
+    "example": "다음 주에 새 컴퓨터를 사려고 해요.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Intentional Action Connector",
+    "example": "살을 빼려고 운동을 시작했어요.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "내일 아침에 다시 전화할게요.",
+    "ko": "",
+    "highlight": "전화할게요"
+   },
+   {
+    "en": "이번 주말에 친구들과 여행을 가려고 해요.",
+    "ko": "",
+    "highlight": "가려고 해요"
+   },
+   {
+    "en": "제가 도와드릴게요.",
+    "ko": "",
+    "highlight": "도와드릴게요"
+   },
+   {
+    "en": "한국 역사를 공부하려고 책을 빌렸어요.",
+    "ko": "",
+    "highlight": "공부하려고"
+   },
+   {
+    "en": "약속 시간에 늦지 않을게요.",
+    "ko": "",
+    "highlight": "않을게요"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "내일 비가 올게요.",
+    "right": "내일 비가 올 거예요.",
+    "note": "-(으)ㄹ게요 carries personal volition/promise and can never be used with inanimate subjects or weather forecasts."
+   },
+   {
+    "wrong": "민수 씨가 청소할게요.",
+    "right": "민수 씨가 청소하려고 해요.",
+    "note": "-(으)ㄹ게요 can only be used in the first person (I or we), never with third-person subjects."
+   },
+   {
+    "wrong": "커피를 마실게요?",
+    "right": "커피를 마실래요?",
+    "note": "-(으)ㄹ게요 cannot be used as an interrogative question to ask someone else's will."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which ending fits a spontaneous promise to a coworker: 'I will prepare the documents'?",
+    "options": [
+     "준비하려고 해요",
+     "준비할게요",
+     "준비할까요",
+     "준비하겠어요"
+    ],
+    "answer": 1,
+    "explanation": "-(으)ㄹ게요 is used to make a direct promise or offer of action directly to the conversational partner."
+   },
+   {
+    "question": "Which form describes an existing plan: 'I intend to study abroad next year'?",
+    "options": [
+     "유학 갈게요",
+     "유학 가고 있어요",
+     "유학 가려고 해요",
+     "유학 가세요"
+    ],
+    "answer": 2,
+    "explanation": "-(으)려고 하다 expresses a premeditated intention or plan formulated prior to speaking."
+   },
+   {
+    "question": "Why is '마이클 씨가 올게요' ungrammatical?",
+    "options": [
+     "Because 마이클 is a proper noun.",
+     "Because -(으)ㄹ게요 can only be used with a 1st-person subject.",
+     "Because it lacks past tense.",
+     "Because 올게요 requires an indirect object."
+    ],
+    "answer": 1,
+    "explanation": "-(으)ㄹ게요 is exclusively restricted to first-person statements (I/we will)."
+   },
+   {
+    "question": "Complete the clause: 'I exercise in order to stay healthy': 건강을 ___ 매일 운동해요.",
+    "options": [
+     "지키려고",
+     "지킬게요",
+     "지키지만",
+     "지키니까"
+    ],
+    "answer": 0,
+    "explanation": "-(으)려고 functions as an intentional subordinate linker meaning 'in order to'."
+   }
+  ],
+  "tip": "Think of -(으)ㄹ게요 as 'I will do this for you / I give you my word.' Never use it to ask questions or describe what someone else will do!"
+ },
+ {
+  "id": "ko-a2-experience-and-background",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#4F46E5",
+  "emoji": "🎭",
+  "title": "Background Information and Contrast (-는데/-(으)ㄴ데)",
+  "subtitle": "Provide context, introduce a topic, or signal a soft contrast between two clauses.",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Attach -는데 to action verbs and -(으)ㄴ데 to descriptive adjectives to establish premise, context, or mild contrast before the main clause.",
+  "structure": {
+   "headers": [
+    "Word Type",
+    "Conjugation Rule",
+    "Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Action Verbs (Present)",
+      "Stem + -는데",
+      "먹는데",
+      "I eat, but / as I eat..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Descriptive Adjectives",
+      "Stem + -(으)ㄴ데",
+      "예쁜데",
+      "It is pretty, but / and..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Nouns",
+      "Noun + -인데",
+      "학생인데",
+      "I am a student, and / but..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Tense (All)",
+      "Past stem + -는데",
+      "갔는데",
+      "I went, but / and then..."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Soft Contrast",
+    "example": "한국어는 재미있는데 문법이 조금 어려워요.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Background Context for a Request",
+    "example": "지금 바쁜데 나중에 이야기할까요?",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Setting a Scene",
+    "example": "어제 백화점에 갔는데 친구를 만났어요.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "한국어는 재미있는데 문법이 조금 어려워요.",
+    "ko": "",
+    "highlight": "재미있는데"
+   },
+   {
+    "en": "지금 바쁜데 나중에 이야기할까요?",
+    "ko": "",
+    "highlight": "바쁜데"
+   },
+   {
+    "en": "어제 백화점에 갔는데 친구를 만났어요.",
+    "ko": "",
+    "highlight": "갔는데"
+   },
+   {
+    "en": "밖은 날씨가 좋은데 바람이 많이 불어요.",
+    "ko": "",
+    "highlight": "좋은데"
+   },
+   {
+    "en": "저 사람이 우리 선생님인데 정말 친절해요.",
+    "ko": "",
+    "highlight": "선생님인데"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "비싸는데 안 샀어요.",
+    "right": "비싼데 안 샀어요.",
+    "note": "비싸다 is an adjective (descriptive verb), so it takes -(으)ㄴ데, not -는데."
+   },
+   {
+    "wrong": "밥을 먹은데 전화가 왔어요.",
+    "right": "밥을 먹는데 전화가 왔어요.",
+    "note": "Action verbs take -는데 in the present tense regardless of whether the stem ends in a consonant or vowel."
+   },
+   {
+    "wrong": "학생는데 할인돼요?",
+    "right": "학생인데 할인돼요?",
+    "note": "Nouns require -인데 rather than -는데 directly."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which form correctly completes: '날씨가 ___ 외투를 입으세요.' (It is cold, so wear a coat)?",
+    "options": [
+     "추운데",
+     "춥는데",
+     "추운",
+     "춥고"
+    ],
+    "answer": 0,
+    "explanation": "춥다 is an irregular ㅂ adjective; ㅂ changes to 우, producing 추운데 to set the situational background."
+   },
+   {
+    "question": "Which form correctly completes: '지금 도서관에서 책을 ___ 조용히 해 주세요.' (I am reading a book, so please be quiet)?",
+    "options": [
+     "읽은데",
+     "읽는데",
+     "읽인",
+     "읽고"
+    ],
+    "answer": 1,
+    "explanation": "읽다 is an action verb, so it takes -는데 in the present tense."
+   },
+   {
+    "question": "Which form correctly completes: '어제 영화를 ___ 아주 재미있었어요.' (I watched a movie yesterday, and it was very fun)?",
+    "options": [
+     "봤은데",
+     "보는데",
+     "봤는데",
+     "본데"
+    ],
+    "answer": 2,
+    "explanation": "For past tense background clauses, attach -는데 to the past stem: 보았- + 는데 = 봤는데."
+   },
+   {
+    "question": "Which form correctly completes: '이것은 내 ___ 빌려줄 수 없어.' (This is my pencil, so I cannot lend it)?",
+    "options": [
+     "연필는데",
+     "연필은데",
+     "연필한데",
+     "연필인데"
+    ],
+    "answer": 3,
+    "explanation": "Nouns take -인데 to set the background premise."
+   }
+  ],
+  "tip": "Remember that adjectives containing 있다/없다 (like 맛있다, 재미없다) exceptionally conjugate with -는데 (맛있는데, 재미없는데) like action verbs."
+ },
+ {
+  "id": "ko-a2-obligation-and-permission",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#EA580C",
+  "emoji": "🚦",
+  "title": "Obligation and Permission (-아/어야 하다 vs -아/어도 되다)",
+  "subtitle": "Express what you must do, what you are allowed to do, and what is forbidden.",
+  "color": "#C2410C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Use -아/어야 하다 for duties ('must'), -아/어도 되다 for permission ('may'), and -(으)면 안 되다 for strict prohibition ('must not').",
+  "structure": {
+   "headers": [
+    "Grammar Pattern",
+    "Function",
+    "Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-아/어야 하다 (되다)",
+      "Obligation / Necessity",
+      "가야 해요",
+      "Must go / Have to go"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-아/어도 되다",
+      "Permission / Allowed",
+      "가도 돼요",
+      "May go / It is okay to go"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-(으)면 안 되다",
+      "Prohibition / Forbidden",
+      "가면 안 돼요",
+      "Must not go / Cannot go"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#C2410C",
+    "label": "Expressing Duty",
+    "example": "내일 시험이 있어서 열심히 공부해야 해요.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Asking Permission",
+    "example": "여기 사진을 찍어도 돼요?",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Stating Prohibition",
+    "example": "도서관에서 큰 소리로 떠들면 안 돼요.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "내일 시험이 있어서 열심히 공부해야 해요.",
+    "ko": "",
+    "highlight": "공부해야 해요"
+   },
+   {
+    "en": "여기 사진을 찍어도 돼요?",
+    "ko": "",
+    "highlight": "찍어도 돼요"
+   },
+   {
+    "en": "도서관에서 큰 소리로 떠들면 안 돼요.",
+    "ko": "",
+    "highlight": "떠들면 안 돼요"
+   },
+   {
+    "en": "수업 시간에 휴대전화를 사용하면 안 돼요.",
+    "ko": "",
+    "highlight": "사용하면 안 돼요"
+   },
+   {
+    "en": "약관을 자세히 읽어야 합니다.",
+    "ko": "",
+    "highlight": "읽어야 합니다"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "여기에 앉으면 돼요?",
+    "right": "여기에 앉아도 돼요?",
+    "note": "To ask for permission ('May I...?'), use -아/어도 되다 rather than the conditional -(으)면 되다."
+   },
+   {
+    "wrong": "담배를 피우지 말아야 돼요.",
+    "right": "담배를 피우면 안 돼요.",
+    "note": "While 피우지 말아야 돼요 is grammatically possible, standard prohibition ('Do not smoke') is naturally stated with -(으)면 안 되다."
+   },
+   {
+    "wrong": "가면 해야 해요.",
+    "right": "가야 해요.",
+    "note": "Obligation combines directly with the vowel stem via -아/어야 하다, not with the conditional -(으)면."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the best option: '박물관 안에서는 음식을 ___.' (You must not eat food inside the museum.)",
+    "options": [
+     "먹어야 돼요",
+     "먹어도 돼요",
+     "먹으면 안 돼요",
+     "먹지 않아도 돼요"
+    ],
+    "answer": 2,
+    "explanation": "Prohibition ('must not') is expressed by verb stem + -(으)면 안 되다. Since 먹- ends in a consonant, 먹으면 안 돼요 is correct."
+   },
+   {
+    "question": "Choose the best option: '이 컴퓨터를 ___?' (May I use this computer?)",
+    "options": [
+     "써도 돼요",
+     "쓰면 안 돼요",
+     "써야 해요",
+     "쓸 수 없어요"
+    ],
+    "answer": 0,
+    "explanation": "Asking for permission uses -아/어도 되다. 쓰다 + -어도 되다 becomes 써도 돼요."
+   },
+   {
+    "question": "Choose the best option: '비행기 탑승 전에 여권을 반드시 ___.' (You must show your passport before boarding.)",
+    "options": [
+     "보여줘도 됩니다",
+     "보여주면 안 됩니다",
+     "보여주지 않아도 됩니다",
+     "보여줘야 합니다"
+    ],
+    "answer": 3,
+    "explanation": "Obligation/requirement is expressed with -아/어야 하다 (or 되다). Showing a passport is mandatory."
+   },
+   {
+    "question": "Choose the best option: '내일은 휴일이라서 회사에 ___.' (Tomorrow is a holiday, so you don't have to come to the office.)",
+    "options": [
+     "와야 돼요",
+     "오지 않아도 돼요",
+     "오면 안 돼요",
+     "올 수 없어요"
+    ],
+    "answer": 1,
+    "explanation": "Lack of obligation ('don't have to') is formed using -지 않아도 되다 or 안 -아/어도 되다."
+   }
+  ],
+  "tip": "In daily speech, -아/어야 되다 is used far more frequently than -아/어야 하다, which often sounds slightly more formal or written."
+ },
+ {
+  "id": "ko-b1-reported-speech",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#7C3AED",
+  "emoji": "💬",
+  "title": "Indirect Quotation Endings (간접 화법: -다고/냐고/라고/자고 하다)",
+  "subtitle": "Quote statements, questions, commands, and suggestions secondhand.",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Report statements with -다고, questions with -(느)냐고, commands with -(으)라고, and proposals with -자고 followed by an utterance verb.",
+  "structure": {
+   "headers": [
+    "Speech Type",
+    "Formula (Verb Present)",
+    "Example",
+    "English"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Statement (평서문)",
+      "Stem + -(ㄴ/는)다고 하다",
+      "간다고 해요",
+      "They say they are going"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Question (의문문)",
+      "Stem + -(느)냐고 하다",
+      "가냐고 물어요",
+      "They ask if someone is going"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Command (명령문)",
+      "Stem + -(으)라고 하다",
+      "가라고 해요",
+      "They tell someone to go"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Suggestion (청유문)",
+      "Stem + -자고 하다",
+      "가자고 해요",
+      "They suggest going together"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6D28D9",
+    "label": "Reporting Statements",
+    "example": "민수가 지금 도서관에 간다고 했어요.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Relaying Instructions / Orders",
+    "example": "의사 선생님이 약을 꼭 챙겨 먹으라고 하셨어요.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Relaying Invitations",
+    "example": "친구가 주말에 영화를 같이 보자고 했어요.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "민수가 지금 도서관에 간다고 했어요.",
+    "ko": "",
+    "highlight": "간다고 했어요"
+   },
+   {
+    "en": "의사 선생님이 약을 꼭 챙겨 먹으라고 하셨어요.",
+    "ko": "",
+    "highlight": "먹으라고 하셨어요"
+   },
+   {
+    "en": "친구가 주말에 영화를 같이 보자고 했어요.",
+    "ko": "",
+    "highlight": "보자고 했어요"
+   },
+   {
+    "en": "선생님께서 숙제를 다 했냐고 물어보셨어요.",
+    "ko": "",
+    "highlight": "했냐고 물어보셨어요"
+   },
+   {
+    "en": "지수가 한국 음식을 정말 좋아한다고 들었어요.",
+    "ko": "",
+    "highlight": "좋아한다고 들었어요"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "선생님이 오라고 했어요. (when requesting to give something)",
+    "right": "선생님이 책을 달라고 하셨어요.",
+    "note": "When the speaker requests an item for themselves in indirect speech, use 달라고 하다 instead of 주라고 하다."
+   },
+   {
+    "wrong": "민수가 춥는다고 해요.",
+    "right": "민수가 춥다고 해요.",
+    "note": "Adjectives take -다고 하다 directly without the present modifier ㄴ/는 that action verbs use."
+   },
+   {
+    "wrong": "친구가 내일 영화를 보라고 했어요. (suggesting we go together)",
+    "right": "친구가 내일 영화를 보자고 했어요.",
+    "note": "Suggestions ('Let's do...') require -자고 하다; -(으)라고 하다 is strictly an order ('You do it')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which verb form correctly reports the suggestion: 'Let's eat lunch together' (같이 점심을 ___)?",
+    "options": [
+     "먹는다고 했어요",
+     "먹자고 했어요",
+     "먹으라고 했어요",
+     "먹냐고 했어요"
+    ],
+    "answer": 1,
+    "explanation": "Indirect proposals/suggestions ('Let's...') use -자고 하다."
+   },
+   {
+    "question": "Which verb form reports an order: 'The teacher told me to do my homework' (선생님께서 숙제를 ___)?",
+    "options": [
+     "하라고 하셨어요",
+     "하자고 하셨어요",
+     "한다고 하셨어요",
+     "하냐고 하셨어요"
+    ],
+    "answer": 0,
+    "explanation": "Indirect commands and imperatives ('Do this') use -(으)라고 하다."
+   },
+   {
+    "question": "Which verb form reports a question: 'He asked where I live' (어디에 ___ 물어봤어요)?",
+    "options": [
+     "살자고",
+     "살라고",
+     "사느냐고",
+     "산다고"
+    ],
+    "answer": 2,
+    "explanation": "Indirect questions take -(느)냐고 물어보다/하다."
+   },
+   {
+    "question": "Which verb form reports an adjective statement: 'He said Korean is easy' (한국어가 ___ 했어요)?",
+    "options": [
+     "쉽는다고",
+     "쉽은다고",
+     "쉬우라고",
+     "쉽다고"
+    ],
+    "answer": 3,
+    "explanation": "Adjectives take plain -다고 하다 directly attached to their basic stem (쉽다 -> 쉽다고)."
+   }
+  ],
+  "tip": "In everyday spoken Korean, -다고 해요, -자고 해요, etc., are almost universally contracted to -대요, -재요, -래요, and -(느)냬요."
+ },
+ {
+  "id": "ko-b1-passive-vs-causative-affixes",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "⚙️",
+  "title": "Derivational Passive and Causative Suffixes (-이/히/리/기-)",
+  "subtitle": "Distinguish between actions that happen to a subject vs actions caused by a subject.",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Derivational suffixes -이-, -히-, -리-, and -기- change active verbs into passive verbs (suffering the action) or causative verbs (making someone do the action).",
+  "structure": {
+   "headers": [
+    "Active Verb",
+    "Passive Form",
+    "Causative Form",
+    "Key Difference"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "보다 (to see)",
+      "보이다 (to be seen)",
+      "보이다 (to show)",
+      "Context and particles determine passive vs causative"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "먹다 (to eat)",
+      "먹히다 (to be eaten)",
+      "먹이다 (to feed)",
+      "먹히다 is passive (-히-); 먹이다 is causative (-이-)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "닫다 (to close)",
+      "닫히다 (to be closed)",
+      "—",
+      "문이 닫히다: The door closes/is closed"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "웃다 (to laugh)",
+      "—",
+      "웃기다 (to make laugh)",
+      "웃기다: To make someone laugh / to be funny"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Passive Spontaneity",
+    "example": "멀리서 아름다운 산이 잘 보여요.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Causative Action on an Object",
+    "example": "엄마가 아기에게 우유를 먹여요.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Passive State Result",
+    "example": "바람 때문에 창문이 저절로 닫혔어요.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "멀리서 아름다운 산이 잘 보여요.",
+    "ko": "",
+    "highlight": "보여요"
+   },
+   {
+    "en": "엄마가 아기에게 우유를 먹여요.",
+    "ko": "",
+    "highlight": "먹여요"
+   },
+   {
+    "en": "바람 때문에 창문이 저절로 닫혔어요.",
+    "ko": "",
+    "highlight": "닫혔어요"
+   },
+   {
+    "en": "길에서 지갑을 도둑에게 빼앗겼어요.",
+    "ko": "",
+    "highlight": "빼앗겼어요"
+   },
+   {
+    "en": "그 친구의 이야기가 사람들을 웃겼어요.",
+    "ko": "",
+    "highlight": "웃겼어요"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "산이 날씨 때문에 안 봐요.",
+    "right": "산이 날씨 때문에 안 보여요.",
+    "note": "When the mountain cannot be seen passively, use 보이다 with subject marker 이/가, not 보다 with subject."
+   },
+   {
+    "wrong": "엄마가 아이에게 옷을 입었어요.",
+    "right": "엄마가 아이에게 옷을 입혔어요.",
+    "note": "To dress someone else, you must use the causative affix -히- (입히다), not the active verb 입다."
+   },
+   {
+    "wrong": "문이 바람에 닫았어요.",
+    "right": "문이 바람에 닫혔어요.",
+    "note": "The door doesn't close something else; it gets closed, requiring the passive suffix -히- (닫히다)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which verb completes the passive sentence: '조용한 밤이라 음악 소리가 잘 ___.' (Because it is quiet, the music can be heard well)?",
+    "options": [
+     "들어요",
+     "들려요",
+     "듣겨요",
+     "들여요"
+    ],
+    "answer": 1,
+    "explanation": "The passive form of 듣다 (to listen/hear) uses affix -리- with irregular ㄷ becoming ㄹ: 들리다 (들려요)."
+   },
+   {
+    "question": "Which verb completes the causative sentence: '동생을 ___ 울렸어요.' (I teased my sibling and made them cry)?",
+    "options": [
+     "울게했어요",
+     "울렸어요",
+     "울어졌어요",
+     "울음했어요"
+    ],
+    "answer": 1,
+    "explanation": "울다 takes the causative affix -리- to become 울리다 (to make cry). Past tense: 울렸어요."
+   },
+   {
+    "question": "Which form completes: '경찰이 도둑을 드디어 ___.' (The police finally caught the thief)?",
+    "options": [
+     "잡혔어요",
+     "잡겼어요",
+     "잡았어요",
+     "잡이했어요"
+    ],
+    "answer": 2,
+    "explanation": "The police are performing the active action of catching (잡다), so the active verb 잡았어요 is needed, not passive 잡히다."
+   },
+   {
+    "question": "Which verb completes: '도둑이 마침내 경찰에게 ___.' (The thief was finally caught by the police)?",
+    "options": [
+     "잡았어요",
+     "잡였어요",
+     "잡기했어요",
+     "잡혔어요"
+    ],
+    "answer": 3,
+    "explanation": "The thief undergoes the action passively by the police (경찰에게), taking the passive affix -히-: 잡히다 (잡혔어요)."
+   }
+  ],
+  "tip": "Pay close attention to particles: Causative clauses typically take an agent with -이/가, a recipient with -에게/한테, and a direct object with -을/를, whereas passive verbs rarely take an object marker -을/를."
+ },
+ {
+  "id": "ko-b1-conjecture-and-appearance",
+  "level": "b1",
+  "category": "modals",
+  "categoryColor": "#EA580C",
+  "emoji": "🔍",
+  "title": "Expressing Conjecture and Deductions (-나 보다 vs -(으)ㄴ/ㄹ 것 같다)",
+  "subtitle": "Deduce facts from direct observation versus intuitive guess.",
+  "color": "#9A3412",
+  "bg": "#FFFBEB",
+  "keyPoint": "Use -나 보다 when deducing something based on sensory clues or observed evidence, and -(으)ㄴ/ㄹ 것 같다 for general conjecture or polite opinion.",
+  "structure": {
+   "headers": [
+    "Grammar Pattern",
+    "Basis of Guess",
+    "Nuance",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-나 보다 / -(으)ㄴ가 보다",
+      "External sensory clue",
+      "'It appears/seems that...'",
+      "비가 오나 봐요 (seeing umbrellas outside)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-(으)ㄹ 것 같다",
+      "Intuition, forecast, personal thought",
+      "'I think it will... / seems like...'",
+      "내일 비가 올 것 같아요"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-(으)ㄴ 것 같다",
+      "Past action / Present state guess",
+      "'I think it happened / is...'",
+      "지수가 바쁜 것 같아요"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#9A3412",
+    "label": "Deduction from Physical Clue",
+    "example": "사람들이 우산을 쓰고 있는 걸 보니 밖에 비가 오나 봐요.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Soft Polite Opinion",
+    "example": "이 옷은 저한테 조금 큰 것 같아요.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Future Conjecture",
+    "example": "하늘이 흐려서 곧 비가 올 것 같아요.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "사람들이 우산을 쓰고 있는 걸 보니 밖에 비가 오나 봐요.",
+    "ko": "",
+    "highlight": "오나 봐요"
+   },
+   {
+    "en": "불이 꺼져 있는 걸 보니 민수가 벌써 자나 봐요.",
+    "ko": "",
+    "highlight": "자나 봐요"
+   },
+   {
+    "en": "이 옷은 저한테 조금 큰 것 같아요.",
+    "ko": "",
+    "highlight": "큰 것 같아요"
+   },
+   {
+    "en": "하늘이 흐려서 곧 비가 올 것 같아요.",
+    "ko": "",
+    "highlight": "올 것 같아요"
+   },
+   {
+    "en": "사무실에 아무도 없는 걸 보니 다 퇴근했나 봐요.",
+    "ko": "",
+    "highlight": "퇴근했나 봐요"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "내가 내일 갈나 봐요.",
+    "right": "제가 내일 갈 것 같아요.",
+    "note": "-나 보다 is based on observing evidence outside oneself and cannot be used for your own deliberate future actions."
+   },
+   {
+    "wrong": "방이 조용한 걸 보니 자는 것 같아요. (when observing an obvious physical clue)",
+    "right": "방이 조용한 걸 보니 자나 봐요.",
+    "note": "When deducing explicitly from a concrete clue (like seeing or hearing silence), -나 보다 is more natural and precise than 것 같다."
+   },
+   {
+    "wrong": "비싸나 봐요.",
+    "right": "비싼가 봐요.",
+    "note": "Descriptive adjectives take -(으)ㄴ가 보다 in the present tense; -나 보다 is for action verbs and past tense."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which pattern completes: '음식점 앞에 줄이 긴 걸 보니 여기가 맛집___.' (Seeing the long line outside, it appears this is a famous restaurant)?",
+    "options": [
+     "인 것 같아요",
+     "인가 봐요",
+     "일 것 같아요",
+     "이려고 해요"
+    ],
+    "answer": 1,
+    "explanation": "Noun + 인가 보다 expresses a strong deduction based on directly observed evidence (the long line)."
+   },
+   {
+    "question": "Which option is best for a soft, polite personal opinion: '제 생각에는 이 색깔이 더 ___.' (In my opinion, this color seems better)?",
+    "options": [
+     "좋았나 봐요",
+     "좋나 봐요",
+     "좋은 것 같아요",
+     "좋은가 봐요"
+    ],
+    "answer": 2,
+    "explanation": "Expressing one's subjective assessment or softening an opinion politely is best done with -(으)ㄴ 것 같다."
+   },
+   {
+    "question": "Which form best completes: '전화기가 꺼져 있는 걸 보니 배터리가 ___.' (Seeing the phone is off, it seems the battery died)?",
+    "options": [
+     "다 닳을 것 같아요",
+     "다 닳나 봐요",
+     "다 닳았나 봐요",
+     "다 닳는 것 같아요"
+    ],
+    "answer": 2,
+    "explanation": "The deduction is made in the present about a completed past action based on visible evidence: past stem + -았/었나 봐요."
+   },
+   {
+    "question": "Which sentence is grammatically unnatural in Korean?",
+    "options": [
+     "제가 내일 바쁠 것 같아요.",
+     "친구가 지금 바쁜가 봐요.",
+     "내일 비가 올 것 같아요.",
+     "제가 내일 바쁘나 봐요."
+    ],
+    "answer": 3,
+    "explanation": "You cannot use -나 보다 for your own future states or intended actions because you do not deduce your own feelings by external observation."
+   }
+  ],
+  "tip": "Pairing your sentence with '-(으)ㄴ/는 걸 보니까' (Seeing that...) naturally leads into a deduction with '-나 봐요' or '-(으)ㄴ가 봐요'."
+ },
+ {
+  "id": "ko-b1-discovery-and-recollection",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "👁️",
+  "title": "Retrospective Recollection and Sensory Discovery",
+  "subtitle": "Reporting direct past observations and unexpected outcomes",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use -더라고요 to share personal past sensory observations with a listener, and -았/었더니 to state how your past action triggered a surprising subsequent result or discovery.",
+  "structure": {
+   "headers": [
+    "Grammar Pattern",
+    "Korean Example",
+    "Function / Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-더라고요",
+      "그 식당 음식이 정말 맛있더라고요.",
+      "Recalling a direct sensory experience to the listener"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-았/었더니 (1st person cause)",
+      "커피를 세 잔 마셨더니 잠이 안 와요.",
+      "My action caused an immediate physical result"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-았/었더니 (discovery)",
+      "집에 갔더니 아무도 없었어요.",
+      "I did something and discovered a new situation"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-던데(요)",
+      "어제 비가 많이 오던데 우산 챙겨요.",
+      "Providing background observation or mild contrast"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Sharing Past Experience",
+    "example": "어제 그 영화를 봤는데 생각보다 재미있더라고요.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Action Leading to Consequence",
+    "example": "늦게까지 컴퓨터를 했더니 눈이 너무 아파요.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Discovery Upon Action",
+    "example": "창문을 열었더니 시원한 바람이 들어왔어요.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "그 친구를 오랜만에 만났더니 정말 반가웠어요.",
+    "ko": "",
+    "highlight": "만났더니"
+   },
+   {
+    "en": "부산에 직접 가 보니까 바다가 참 예쁘더라고요.",
+    "ko": "",
+    "highlight": "예쁘더라고요"
+   },
+   {
+    "en": "아침에 일찍 일어났더니 하루가 정말 길어요.",
+    "ko": "",
+    "highlight": "일어났더니"
+   },
+   {
+    "en": "민수 씨한테 물어봤더니 벌써 다 알고 있더라고요.",
+    "ko": "",
+    "highlight": "물어봤더니"
+   },
+   {
+    "en": "백화점에 사람이 너무 많아서 복잡하더라고요.",
+    "ko": "",
+    "highlight": "복잡하더라고요"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "어제 제가 너무 바쁘더라고요.",
+    "right": "어제 제가 너무 바빴어요.",
+    "note": "You cannot normally use -더라고요 to report your own willful actions or internal emotional states, since you experience them directly rather than observing yourself from the outside."
+   },
+   {
+    "wrong": "민수 씨가 운동을 열심히 했더니 살이 빠졌어요.",
+    "right": "민수 씨가 운동을 열심히 해서 살이 빠졌어요.",
+    "note": "When expressing a cause-and-effect with -았/었더니, the subject of the prior clause must typically be the speaker (first person)."
+   },
+   {
+    "wrong": "창문을 열었더니 바람이 불 거예요.",
+    "right": "창문을 열었더니 바람이 불었어요.",
+    "note": "The clause following -았/었더니 must report an already realized fact or observation, not a future conjecture."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday I tried the spicy stew, and I personally found it really spicy: '어제 찌개를 먹어 봤는데 정말 ___.'",
+    "options": [
+     "맵겠어요",
+     "맵더라고요",
+     "매우면 돼요",
+     "맵도록 해요"
+    ],
+    "answer": 1,
+    "explanation": "The speaker is recounting their own past sensory discovery to the listener, which calls for -더라고요."
+   },
+   {
+    "question": "I exercised hard all morning, and as a result, my legs feel sore: '아침에 운동을 많이 ___ 다리가 아파요.'",
+    "options": [
+     "했더니",
+     "하느라면",
+     "하더라도",
+     "하려니"
+    ],
+    "answer": 0,
+    "explanation": "The speaker did an action in the first clause that directly caused the result in the second clause, requiring -았/었더니."
+   },
+   {
+    "question": "I called Jisoo, and it turned out she was sleeping: '지수 씨에게 전화를 ___ 자고 있었어요.'",
+    "options": [
+     "걸거나",
+     "걸 텐데",
+     "걸었더니",
+     "걸어야"
+    ],
+    "answer": 2,
+    "explanation": "First-person action leading directly to discovering a new state requires -았/었더니."
+   },
+   {
+    "question": "Choose the naturally formed sentence reporting an observation about someone else:",
+    "options": [
+     "제가 어제 밥을 먹더라고요.",
+     "영수 씨가 노래를 아주 잘하더라고요.",
+     "내일 비가 오더니 우산을 챙기세요.",
+     "제가 열심히 공부했더니 합격할 거예요."
+    ],
+    "answer": 1,
+    "explanation": "Observing someone else's skill and reporting it retrospectively fits -더라고요 perfectly."
+   }
+  ],
+  "tip": "Remember: -았/었더니 requires you (the speaker) to perform the action in clause 1, whereas -더라고요 is strictly for things you witnessed or noticed about others and external surroundings."
+ },
+ {
+  "id": "ko-b1-nominalization-gi-vs-neun-geot",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "📦",
+  "title": "Nominalization Strategies (-기 vs -는 것)",
+  "subtitle": "Turning verbs into nouns for wishes, lists, habits, and clausal descriptions",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use -기 for fixed lexical expressions, hopes, checklists, and fixed predicates (like -기 시작하다), but use -는 것 to turn entire descriptive clauses into generalized facts or actions.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Form",
+    "Typical Context"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Clausal Nominalizer",
+      "동사 + -는 것",
+      "General acts, abstract facts, perceptual objects ('the act of...')"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Formulaic / Wish",
+      "동사 + -기",
+      "Wishes (-기 바라다), lists, headings, and emotions"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Evaluative Adjectives",
+      "동사 + -기 쉽다/어렵다",
+      "Expressing ease, difficulty, or likelihood"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Aspectual Auxiliaries",
+      "동사 + -기 시작하다/전에",
+      "Starting, finishing, or temporal sequence"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Describing Hobbies / Habits",
+    "example": "제 취미는 주말마다 산에 가는 것입니다.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Expressing Ease or Difficulty",
+    "example": "한국어 발음은 외국인이 배우기 어려워요.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Formal Announcements & Wishes",
+    "example": "모두 건강하시기를 진심으로 바랍니다.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "매일 아침 조깅을 하는 것은 건강에 아주 좋습니다.",
+    "ko": "",
+    "highlight": "하는 것은"
+   },
+   {
+    "en": "비가 너무 많이 와서 운전하기가 힘들어요.",
+    "ko": "",
+    "highlight": "운전하기가"
+   },
+   {
+    "en": "지난달부터 태권도를 배우기 시작했습니다.",
+    "ko": "",
+    "highlight": "배우기"
+   },
+   {
+    "en": "그 사람이 거짓말을 했다는 것을 알고 실망했어요.",
+    "ko": "",
+    "highlight": "했다는 것을"
+   },
+   {
+    "en": "오늘 할 일: 도서관 가기, 방 청소하기, 장보기.",
+    "ko": "",
+    "highlight": "청소하기"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "한국어를 공부하는 것을 시작했어요.",
+    "right": "한국어를 공부하기 시작했어요.",
+    "note": "Aspectual verbs like 시작하다 (to start) and auxiliary constructions like - 전에 (before) exclusively take -기, not -는 것."
+   },
+   {
+    "wrong": "제 취미는 음악을 듣기예요.",
+    "right": "제 취미는 음악을 듣는 거예요.",
+    "note": "When defining an activity or hobby as a predicate noun ('My hobby is doing X'), -는 것 (거예요) is standard in natural conversation."
+   },
+   {
+    "wrong": "이 책은 글씨가 작아서 읽는 것이 힘들어요.",
+    "right": "이 책은 글씨가 작아서 읽기 힘들어요.",
+    "note": "When paired directly with evaluative adjectives like 쉽다, 어렵다, and 힘들다, the verbal root takes -기."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the natural way to say 'Please be safe' in a card: '항상 몸 건강___ 바랍니다.'",
+    "options": [
+     "하시기는",
+     "하시기를",
+     "하시는 것으로",
+     "하시는 것을"
+    ],
+    "answer": 1,
+    "explanation": "The honorific wish formula with 바라다 requires -기를 바랍니다."
+   },
+   {
+    "question": "Fill in the blank: 'Writing an email in Korean is very difficult.' = '한국어로 이메일을 ___ 어려워요.'",
+    "options": [
+     "쓰는 것을",
+     "쓰기로",
+     "쓰기",
+     "쓰는 것은"
+    ],
+    "answer": 2,
+    "explanation": "Ease and difficulty adjectives like 어렵다 and 쉽다 take the pattern -기 (어렵다)."
+   },
+   {
+    "question": "Fill in the blank: 'Did you know that Minwoo moved yesterday?' = '민우 씨가 어제 이사한 ___ 알았어요?'",
+    "options": [
+     "기를",
+     "것을",
+     "기에",
+     "기로"
+    ],
+    "answer": 1,
+    "explanation": "Knowing or not knowing an entire factual event requires clausal nominalization with -는/은 것."
+   },
+   {
+    "question": "Identify the ungrammatical phrase:",
+    "options": [
+     "밥 먹기 전에 손을 씻으세요.",
+     "수영하기 시작했어요.",
+     "외국어를 혼자 공부하기가 쉽지 않아요.",
+     "어제 영화를 보기 알았어요."
+    ],
+    "answer": 3,
+    "explanation": "Complement clauses before '알다/모르다' must use -는 것, never -기."
+   }
+  ],
+  "tip": "Think of -는 것 as a transparent glass box wrapping a whole descriptive sentence ('the fact/matter that...'), while -기 turns the verb into a punchy conceptual badge ('swimming', 'running', 'start to...')."
+ },
+ {
+  "id": "ko-b2-speech-levels-and-formality",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#8B5CF6",
+  "emoji": "👔",
+  "title": "Plain Style vs Formal Styles (해라체 vs 하십시오체)",
+  "subtitle": "Navigating written expository prose, public speaking, and hierarchical registers",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use the plain style (해라체: -(ㄴ/는)다) for non-addressed written texts, essays, and journals, while reserving deferential formal style (하십시오체: -(스)ㅂ니다) for spoken public presentations and direct hierarchy.",
+  "structure": {
+   "headers": [
+    "Mood / Sentence Type",
+    "Plain Style (해라체, Written)",
+    "Deferential Formal (하십시오체)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Declarative (Action Verb)",
+      "동사 + -(ㄴ/는)다 (먹는다, 간다)",
+      "동사 + -(스)ㅂ니다 (먹습니다, 갑니다)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Declarative (Descriptive Verb)",
+      "형용사 원형 (크다, 예쁘다)",
+      "형용사 + -(스)ㅂ니다 (큽니다, 예쁩니다)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Interrogative (Question)",
+      "-느냐? / -(으)냐? / -니?",
+      "-(스)ㅂ니까?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Imperative (Command)",
+      "-(으)라 (책을 읽으라)",
+      "-(으)십시오 (책을 읽으십시오)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Academic Essay or Journal",
+    "example": "현대 사회에서는 정보의 속도가 매우 빠르다.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "News & Formal Broadcast",
+    "example": "오늘 저녁 전국에 많은 비가 내리겠습니다.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Written Exam Instructions",
+    "example": "다음 질문을 읽고 알맞은 답을 고르라.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "지구 온난화는 인류가 직면한 심각한 문제이다.",
+    "ko": "",
+    "highlight": "문제이다"
+   },
+   {
+    "en": "모든 참석자는 안내에 따라 자리에 착석해 주십시오.",
+    "ko": "",
+    "highlight": "착석해 주십시오"
+   },
+   {
+    "en": "그 소설가는 매일 아침 일찍 일어나 소설을 쓴다.",
+    "ko": "",
+    "highlight": "쓴다"
+   },
+   {
+    "en": "지금부터 올해 신제품 발표회를 시작하겠습니다.",
+    "ko": "",
+    "highlight": "시작하겠습니다"
+   },
+   {
+    "en": "자기 개발을 게을리하지 않는 사람이 성공하는 법이다.",
+    "ko": "",
+    "highlight": "법이다"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "이 책은 정말 재미있는다.",
+    "right": "이 책은 정말 재미있다.",
+    "note": "In the plain style, descriptive verbs (adjectives) attach directly in their dictionary form without -ㄴ/는- (재미있다, not 재미있는다)."
+   },
+   {
+    "wrong": "논문 결론: 우리는 이 규칙을 지킵시다.",
+    "right": "논문 결론: 우리는 이 규칙을 준수해야 한다.",
+    "note": "Propositions like -ㅂ시다 are colloquial honorific proposals unsuited for formal academic papers, which require the plain declarative -(ㄴ/는)다."
+   },
+   {
+    "wrong": "시험 문제: 알맞은 번호를 고르십시오.",
+    "right": "시험 문제: 알맞은 번호를 고르라.",
+    "note": "Written tests and impersonal public directives utilize the plain imperative -(으)라 rather than conversational honorific imperatives."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct plain style declarative ending for the adjective '행복하다' in an essay:",
+    "options": [
+     "행복한다",
+     "행복하다",
+     "행복합시다",
+     "행복하느냐"
+    ],
+    "answer": 1,
+    "explanation": "In plain written style (해라체), adjectives take their uninflected basic dictionary form (-다)."
+   },
+   {
+    "question": "How should a written test question command students to 'Write your answer'?",
+    "options": [
+     "답을 쓰세요",
+     "답을 씁니다",
+     "답을 쓰십시오",
+     "답을 쓰라"
+    ],
+    "answer": 3,
+    "explanation": "Impersonal written exam prompts and formal directives use the plain imperative -(으)라."
+   },
+   {
+    "question": "Fill in the blank for a business speech to clients: '오늘 와 주셔서 진심으로 ___.'",
+    "options": [
+     "감사한다",
+     "감사해라",
+     "감사합니다",
+     "감사하자"
+    ],
+    "answer": 2,
+    "explanation": "A direct spoken address to an audience of clients requires deferential formal speech (하십시오체: -감사합니다)."
+   },
+   {
+    "question": "Which action verb is incorrectly conjugated into written plain style (해라체)?",
+    "options": [
+     "웃는다",
+     "만든다",
+     "읽는다",
+     "가다"
+    ],
+    "answer": 3,
+    "explanation": "Action verbs in plain present style require -ㄴ/는다; the correct form is 간다, not the plain root 가다."
+   }
+  ],
+  "tip": "Rule of thumb: If you are typing an essay, newspaper article, or personal diary for no specific reader, use -ㄴ/는다. The second you look a listener in the eye or address a live audience, use -(스)ㅂ니다."
+ },
+ {
+  "id": "ko-b2-advanced-condition-and-concession",
+  "level": "b2",
+  "category": "conditionals",
+  "categoryColor": "#F59E0B",
+  "emoji": "⚖️",
+  "title": "Hypothetical and Concessive Linkers",
+  "subtitle": "Nuanced concessions: -느니 차라리, -(으)ㄹ망정, and -다손 치더라도",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Use -느니 차라리 to state an extreme alternative is preferable to a bad option, -(으)ㄹ망정 to declare an unyielding stance despite severe hardship, and -다손 치더라도 to concede an extreme hypothetical.",
+  "structure": {
+   "headers": [
+    "Connective Ending",
+    "Core Meaning",
+    "Typical Pairing / Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-느니 (차라리)",
+      "I'd rather do Y than do X",
+      "차라리, 차치하고 (rejection of option X)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-(으)ㄹ망정 / -(으)ㄹ지언정",
+      "Even if / Although X may happen, never Y",
+      "Resolution, pride, non-compromise"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-다손 치더라도",
+      "Even granting that X is true...",
+      "Hypothetical admission followed by counter-assertion"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-기로서니",
+      "No matter how much X, how could you Y?",
+      "Rhetorical indignation or mild scolding"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Preferential Refusal",
+    "example": "그런 사람에게 굽신거리느니 차라리 회사를 그만두겠어요.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Steadfast Dignity",
+    "example": "가난하게 살망정 남의 것을 탐내지는 않겠다.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Extreme Concession",
+    "example": "그 말이 사실이다손 치더라도 그렇게 화를 내서는 안 된다.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "주말 내내 방에 누워 있느니 차라리 봉사활동을 하겠다.",
+    "ko": "",
+    "highlight": "누워 있느니"
+   },
+   {
+    "en": "굶어 죽을망정 부정한 돈은 단 한 푼도 받을 수 없다.",
+    "ko": "",
+    "highlight": "죽을망정"
+   },
+   {
+    "en": "실패로 끝난다손 치더라도 우리는 도전할 가치가 있다.",
+    "ko": "",
+    "highlight": "끝난다손 치더라도"
+   },
+   {
+    "en": "아무리 바쁘다손 치더라도 건강을 챙겨야 합니다.",
+    "ko": "",
+    "highlight": "바쁘다손 치더라도"
+   },
+   {
+    "en": "이런 저질 물건을 비싸게 사느니 차라리 안 사고 말지.",
+    "ko": "",
+    "highlight": "사느니"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "비가 오느니 차라리 우산을 쓰세요.",
+    "right": "비가 오니까 우산을 쓰세요.",
+    "note": "-느니 차라리 expresses a strong comparative preference between two active choices, not an environmental cause."
+   },
+   {
+    "wrong": "굶어 죽을망정 행복하게 살겠습니다.",
+    "right": "굶어 죽을망정 남을 속이지는 않겠습니다.",
+    "note": "The clause following -(으)ㄹ망정 must contrast resolutely with the extreme adversity of the first clause, usually featuring strong negative determination."
+   },
+   {
+    "wrong": "그 사람이 올다손 치더라도 기다립시다.",
+    "right": "그 사람이 온다손 치더라도 기다리지 맙시다.",
+    "note": "-다손 치더라도 attaches to the declarative citation base (-ㄴ/는다손 치더라도 for present verbs) and generally leads to a stance unaffected by that extreme premise."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'I would rather stay up all night than leave this work unfinished.' = '일을 끝내지 않고 ___ 차라리 밤을 새우겠다.'",
+    "options": [
+     "자느니",
+     "잘망정",
+     "잔다손 치더라도",
+     "자기로서니"
+    ],
+    "answer": 0,
+    "explanation": "Comparing two undesirable actions and picking the lesser evil ('rather do Y than X') uses -느니 차라리."
+   },
+   {
+    "question": "Fill in the blank: 'Even if I fail, I will never give up on my dream.' = '시험에 ___ 내 꿈을 절대 포기하지 않겠다.'",
+    "options": [
+     "떨어지느니",
+     "떨어질망정",
+     "떨어지자마자",
+     "떨어지는 김에"
+    ],
+    "answer": 1,
+    "explanation": "-(으)ㄹ망정 expresses an unyielding, resolute determination despite facing extreme failure or negative odds."
+   },
+   {
+    "question": "Conceding an opponent's point hypothetically: 'Even granting that you were late because of traffic, you still should have contacted us.' = '차가 ___ 연락은 미리 했어야지요.'",
+    "options": [
+     "막히느니",
+     "막힐망정",
+     "막혔다손 치더라도",
+     "막히는 셈 치고"
+    ],
+    "answer": 2,
+    "explanation": "-다손 치더라도 hypothetically concedes the prior fact while maintaining the speaker's original criticism."
+   },
+   {
+    "question": "Choose the sentence that uses -느니 차라리 correctly:",
+    "options": [
+     "날씨가 좋느니 차라리 소풍을 가요.",
+     "밥을 굶느니 차라리 라면이라도 끓여 먹겠다.",
+     "공부를 잘하느니 차라리 칭찬을 들었다.",
+     "집에 일찍 오느니 차라리 쉬었습니다."
+    ],
+    "answer": 1,
+    "explanation": "Comparing starvation with the less bad option of instant noodles perfectly matches the comparative distaste of -느니 차라리."
+   }
+  ],
+  "tip": "-느니 is your 'over my dead body, I would rather...' connector; -(으)ㄹ망정 protects your moral pride and honor; -다손 치더라도 is your high-level debate tool: 'Even if we grant your point, it still doesn't change anything.'"
+ },
+ {
+  "id": "ko-b2-bound-noun-constructions",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#EC4899",
+  "emoji": "🧩",
+  "title": "Discourse Bound Noun Structures",
+  "subtitle": "Mastering -는 셈 치다, -는 김에, and -(으)ㄹ 리가 없다",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "Use bound noun constructions like -는 셈 치다 to act as if an assumed reality were true, -는 김에 to take opportunistic advantage of a planned movement, and -(으)ㄹ 리가 없다 to declare logical impossibility.",
+  "structure": {
+   "headers": [
+    "Bound Construction",
+    "Literal Sense",
+    "Practical English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-(으)ㄴ 셈 치다",
+      "'to count it as having happened'",
+      "To pretend / consider an action done"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-(으)ㄴ/는 김에",
+      "'in the momentum of the stride'",
+      "While you're at it / taking the opportunity"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-(으)ㄹ 리가 없다",
+      "'there is no logical reason/principle'",
+      "There is no way that... / It's impossible"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-(으)ㄹ 턱이 없다",
+      "'there is no ground/reason'",
+      "Absolutely no reason to believe (strong colloquial)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EC4899",
+    "label": "Psychological Framing",
+    "example": "돈을 잃어버렸지만 불우이웃을 도운 셈 쳤어요.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Incidental Opportunity",
+    "example": "서점에 가는 김에 제 문제집도 한 권 사다 주세요.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Logical Impossibility",
+    "example": "정직한 민수가 남을 속였을 리가 없습니다.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "속는 셈 치고 그 사람의 말을 한 번만 더 믿어 보세요.",
+    "ko": "",
+    "highlight": "속는 셈 치고"
+   },
+   {
+    "en": "외출하는 김에 쓰레기 봉투를 버리고 올게요.",
+    "ko": "",
+    "highlight": "외출하는 김에"
+   },
+   {
+    "en": "평소에 성실한 그 친구가 약속을 잊었을 리가 없어요.",
+    "ko": "",
+    "highlight": "잊었을 리가 없어요"
+   },
+   {
+    "en": "친구에게 맛있는 밥을 한 끼 산 셈 쳤습니다.",
+    "ko": "",
+    "highlight": "산 셈 쳤습니다"
+   },
+   {
+    "en": "제주도에 출장 간 김에 관광지도 구경했어요.",
+    "ko": "",
+    "highlight": "출장 간 김에"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "그 사람이 범인일 리가 있어요.",
+    "right": "그 사람이 범인일 리가 없어요.",
+    "note": "The bound noun construction expressing deduction is overwhelmingly used with negative predicates (없다 or rhetorical 있겠어요?). Saying 'ㄹ 리가 있다' in a simple declarative sentence is ungrammatical."
+   },
+   {
+    "wrong": "일부러 도서관에 가는 김에 친구를 만났어요.",
+    "right": "도서관에 가는 길에 친구를 만났어요.",
+    "note": "-는 김에 emphasizes doing a secondary task spontaneously because the primary opportunity presented itself; it clashes with deliberately planned independent tasks marked by 일부러."
+   },
+   {
+    "wrong": "친구가 밥을 먹은 셈 쳐요.",
+    "right": "내가 밥을 사 준 셈 쳐요.",
+    "note": "-는 셈 치다 entails mental reframing or pretending on the part of the speaker; you cannot impose this internal assumption onto another person's basic physical actions without context."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "You drop your ice cream and decide to think of it as giving to charity: '좋은 일에 기부___.'",
+    "options": [
+     "한 김에 갔어요",
+     "한 셈 쳤어요",
+     "할 리가 없어요",
+     "할 턱을 냈어요"
+    ],
+    "answer": 1,
+    "explanation": "Mentally reframing a loss or situation as if another scenario happened is -(으)ㄴ 셈 치다."
+   },
+   {
+    "question": "Ask a favor since your colleague is already getting up: '커피 타러 ___ 내 것도 한 잔 부탁해.'",
+    "options": [
+     "갈 셈 치고",
+     "가는 김에",
+     "갈 리가 없게",
+     "가다손 치더라도"
+    ],
+    "answer": 1,
+    "explanation": "Doing a secondary action opportunistically while performing a primary action is -는 김에."
+   },
+   {
+    "question": "Express utter disbelief that a kind friend stole something: '그 착한 친구가 도둑질을 ___.'",
+    "options": [
+     "했을 리가 없어요",
+     "하는 김이었어요",
+     "하는 셈 쳤어요",
+     "했을 뿐이에요"
+    ],
+    "answer": 0,
+    "explanation": "Expressing logical disbelief ('there is no way that...') requires -(으)ㄹ 리가 없다."
+   },
+   {
+    "question": "Fill in the blank with the natural expression for taking a leap of faith: '___ 한 번 속는 셈 치고 믿어 봐.'",
+    "options": [
+     "차라리",
+     "다만",
+     "그냥",
+     "설마"
+    ],
+    "answer": 2,
+    "explanation": "The set phrase '속는 셈 치고' (acting as if deceived / giving the benefit of the doubt) naturally collocates with '그냥'."
+   }
+  ],
+  "tip": "Think of '김' as an already rolling snowball (ride the momentum: 'while you're at it'), '셈' as an imaginary mental calculation ('let's chalk it up to...'), and '리' as reason or logic ('there is zero reason why...')."
+ }
+]

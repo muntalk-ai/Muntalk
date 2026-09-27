@@ -1,0 +1,3360 @@
+[
+ {
+  "id": "da-a1-grammatical-gender-and-indefinite-articles",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🏷️",
+  "title": "Grammatical Gender: Common vs. Neuter",
+  "subtitle": "Choosing between 'en' and 'et' for singular indefinite nouns",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Danish nouns belong to one of two grammatical genders: common gender (fælleskøn) takes 'en' and accounts for roughly 75% of nouns, while neuter (intetkøn) takes 'et'.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Indefinite Article",
+    "Danish Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Fælleskøn (Common ~75%)",
+      "en",
+      "en bil",
+      "a car"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Intetkøn (Neuter ~25%)",
+      "et",
+      "et hus",
+      "a house"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Living beings (mostly)",
+      "en",
+      "en hund",
+      "a dog"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Materials/Locations (often)",
+      "et",
+      "et bord",
+      "a table"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Common Gender Nouns",
+    "example": "Jeg drikker en kop kaffe hver morgen.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Neuter Gender Nouns",
+    "example": "Vi bor i et lille hus.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Describing Objects Indefinitely",
+    "example": "Han læser en god bog i dag.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Hun køber en rød cykel i dag.",
+    "ko": "",
+    "highlight": "en rød cykel"
+   },
+   {
+    "en": "Der ligger et æble på bordet.",
+    "ko": "",
+    "highlight": "et æble"
+   },
+   {
+    "en": "Han venter på en ven på gaden.",
+    "ko": "",
+    "highlight": "en ven"
+   },
+   {
+    "en": "Vi har et stort vindue i stuen.",
+    "ko": "",
+    "highlight": "et stort vindue"
+   },
+   {
+    "en": "Vil du have en kop te?",
+    "ko": "",
+    "highlight": "en kop"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "et bil",
+    "right": "en bil",
+    "note": "'Bil' is common gender (fælleskøn) and must always take the article 'en'."
+   },
+   {
+    "wrong": "en hus",
+    "right": "et hus",
+    "note": "'Hus' belongs to the neuter gender (intetkøn), requiring 'et'."
+   },
+   {
+    "wrong": "en barn",
+    "right": "et barn",
+    "note": "Although living beings are usually common gender, 'barn' (child) is an important neuter exception."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct article: 'Peter spiser ___ æble.'",
+    "options": [
+     "en",
+     "et",
+     "den",
+     "det"
+    ],
+    "answer": 1,
+    "explanation": "'Æble' (apple) is a neuter noun (intetkøn), so it requires the indefinite article 'et'."
+   },
+   {
+    "question": "Choose the correct article: 'Jeg læser ___ avis.'",
+    "options": [
+     "et",
+     "en",
+     "det",
+     "de"
+    ],
+    "answer": 1,
+    "explanation": "'Avis' (newspaper) is a common gender noun (fælleskøn), taking 'en'."
+   },
+   {
+    "question": "Choose the correct phrase: 'They live in a large house.'",
+    "options": [
+     "De bor i et stort hus.",
+     "De bor i en stort hus.",
+     "De bor i et stor hus.",
+     "De bor i en stor hus."
+    ],
+    "answer": 0,
+    "explanation": "'Hus' is neuter, which requires 'et' and the neuter adjective form 'stort'."
+   },
+   {
+    "question": "Which of the following nouns is neuter (intetkøn)?",
+    "options": [
+     "kop",
+     "kat",
+     "bil",
+     "bord"
+    ],
+    "answer": 3,
+    "explanation": "'Bord' (table) is neuter ('et bord'), whereas kop, kat, and bil are all common gender ('en')."
+   }
+  ],
+  "tip": "Always memorize Danish nouns together with their indefinite article (e.g., memorize 'et bord', not just 'bord') since gender cannot be inferred reliably from spelling."
+ },
+ {
+  "id": "da-a1-enclitic-definite-articles",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📎",
+  "title": "Enclitic Definite Articles (Suffix Definiteness)",
+  "subtitle": "Attaching -en, -et, and -ne directly to nouns to say 'the'",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Danish marks definiteness ('the') by attaching an enclitic suffix directly to the end of the noun rather than using a separate preceding word.",
+  "structure": {
+   "headers": [
+    "Form",
+    "Suffix",
+    "Indefinite Base",
+    "Definite Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Common Singular",
+      "-en / -n",
+      "en hund",
+      "hunden"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter Singular",
+      "-et / -t",
+      "et hus",
+      "huset"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Standard Plural",
+      "-ne",
+      "biler",
+      "bilerne"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Irregular/Consonant Plural",
+      "-ene",
+      "huse",
+      "husene"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Known Singular Common Object",
+    "example": "Katten sover hele dagen.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Known Singular Neuter Object",
+    "example": "Barnet leger i haven.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Specific Plural Group",
+    "example": "Bøgerne står på hylden.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Manden taler med naboen.",
+    "ko": "",
+    "highlight": "Manden"
+   },
+   {
+    "en": "Vinduet står åbent i nat.",
+    "ko": "",
+    "highlight": "Vinduet"
+   },
+   {
+    "en": "Pigerne spiser frokost sammen.",
+    "ko": "",
+    "highlight": "Pigerne"
+   },
+   {
+    "en": "Bordet er dækket til middag.",
+    "ko": "",
+    "highlight": "Bordet"
+   },
+   {
+    "en": "Hundene løber rundt i parken.",
+    "ko": "",
+    "highlight": "Hundene"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "den mand bor her",
+    "right": "manden bor her",
+    "note": "Without an adjective, Danish uses the suffix ending 'manden' for 'the man', not the demonstrative 'den'."
+   },
+   {
+    "wrong": "hust",
+    "right": "huset",
+    "note": "Neuter nouns ending in a consonant add full '-et' (huset), not just '-t'."
+   },
+   {
+    "wrong": "bileret",
+    "right": "bilerne",
+    "note": "Plural definite nouns use the plural suffix '-ne' or '-ene', never singular '-et'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'the child' in Danish? ('et barn')",
+    "options": [
+     "barnen",
+     "den barn",
+     "barnet",
+     "barne"
+    ],
+    "answer": 2,
+    "explanation": "'Barn' is neuter ('et barn'), so its singular definite form takes the '-et' suffix: 'barnet'."
+   },
+   {
+    "question": "How do you say 'the car' in Danish? ('en bil')",
+    "options": [
+     "bilen",
+     "bilet",
+     "den bil",
+     "bilne"
+    ],
+    "answer": 0,
+    "explanation": "'Bil' is common gender ('en bil'), so the definite suffix is '-en': 'bilen'."
+   },
+   {
+    "question": "How do you say 'the houses' in Danish? (plural of 'et hus' = 'huse')",
+    "options": [
+     "husene",
+     "huserne",
+     "huset",
+     "dehuse"
+    ],
+    "answer": 0,
+    "explanation": "The plural 'huse' takes '-ne', producing 'husene' (the houses)."
+   },
+   {
+    "question": "Complete the sentence: '___ (The girl) sidder på stolen.' ('en pige')",
+    "options": [
+     "Pigen",
+     "Piget",
+     "Pigerne",
+     "Den pige"
+    ],
+    "answer": 0,
+    "explanation": "Nouns ending in unstressed -e just add -n: 'pige' + 'n' = 'pigen'."
+   }
+  ],
+  "tip": "Only use standalone 'den' or 'det' when an adjective comes before the noun (e.g., 'den røde bil'); otherwise, attach the suffix directly ('bilen')."
+ },
+ {
+  "id": "da-a1-v2-word-order-in-main-clauses",
+  "level": "a1",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔄",
+  "title": "V2 Rule in Main Clauses (Inversion)",
+  "subtitle": "Keeping the finite verb strictly in second position",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "In Danish main clauses, the finite verb MUST be the second element; if an element other than the subject starts the sentence, the subject flips behind the verb.",
+  "structure": {
+   "headers": [
+    "Position 1 (Front)",
+    "Position 2 (Verb)",
+    "Position 3 (Subject)",
+    "Rest of Clause"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Jeg (Subject)",
+      "drikker",
+      "—",
+      "kaffe i dag."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "I dag (Adverbial)",
+      "drikker",
+      "jeg",
+      "kaffe."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "I morgen (Time)",
+      "rejser",
+      "hun",
+      "til Odense."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Nu (Time)",
+      "skal",
+      "vi",
+      "spise mad."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Time Expression Fronted",
+    "example": "I dag arbejder jeg hjemme.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Place Expression Fronted",
+    "example": "I København bor min søster.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Direct Object Fronted",
+    "example": "Den bog læste jeg i går.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "I dag læser han en spændende bog.",
+    "ko": "",
+    "highlight": "læser han"
+   },
+   {
+    "en": "I morgen rejser vi til Aarhus.",
+    "ko": "",
+    "highlight": "rejser vi"
+   },
+   {
+    "en": "Nu sover barnet trygt i sengen.",
+    "ko": "",
+    "highlight": "sover barnet"
+   },
+   {
+    "en": "Pludselig åbnede døren sig.",
+    "ko": "",
+    "highlight": "åbnede døren"
+   },
+   {
+    "en": "Her bor min gode veninde.",
+    "ko": "",
+    "highlight": "bor min"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "I dag jeg læser en bog.",
+    "right": "I dag læser jeg en bog.",
+    "note": "Danish strictly obeys the V2 rule; the verb 'læser' must occupy position 2, forcing inversion."
+   },
+   {
+    "wrong": "I morgen vi rejser.",
+    "right": "I morgen rejser vi.",
+    "note": "Fronting the time adverbial 'I morgen' requires the verb 'rejser' before subject 'vi'."
+   },
+   {
+    "wrong": "Nu jeg skal sove.",
+    "right": "Nu skal jeg sove.",
+    "note": "The auxiliary verb 'skal' must take slot 2 immediately after the adverb 'nu'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete with correct word order: 'I dag ___ kaffe.'",
+    "options": [
+     "drikker jeg",
+     "jeg drikker",
+     "jeg drik",
+     "drikker mig"
+    ],
+    "answer": 0,
+    "explanation": "With the time adverb 'I dag' in first position, the finite verb 'drikker' must come second, followed by the subject 'jeg'."
+   },
+   {
+    "question": "Which sentence follows the Danish V2 rule correctly?",
+    "options": [
+     "I morgen vi spiser kage.",
+     "I morgen spiser vi kage.",
+     "I morgen vi spise kage.",
+     "Spiser i morgen vi kage."
+    ],
+    "answer": 1,
+    "explanation": "'I morgen' is position 1, 'spiser' is position 2 (finite verb), and 'vi' is the subject in position 3."
+   },
+   {
+    "question": "Complete the sentence: 'I aften ___ en god film.'",
+    "options": [
+     "ser vi",
+     "vi ser",
+     "vi se",
+     "ser os"
+    ],
+    "answer": 0,
+    "explanation": "The time phrase 'I aften' triggers subject-verb inversion: verb 'ser' then subject 'vi'."
+   },
+   {
+    "question": "Choose the correct sentence starting with 'Nu':",
+    "options": [
+     "Nu bussen kommer.",
+     "Nu den bus kommer.",
+     "Nu bussen kom.",
+     "Nu kommer bussen."
+    ],
+    "answer": 3,
+    "explanation": "'Nu' fills position 1, so the verb 'kommer' must be position 2, followed by the subject 'bussen'."
+   }
+  ],
+  "tip": "Think of the verb as an immovable anchor fixed at position two of every statement; whatever you front pushes the subject right after that verb."
+ },
+ {
+  "id": "da-a1-basic-negation-with-ikke",
+  "level": "a1",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🚫",
+  "title": "Negation with 'ikke' in Main Clauses",
+  "subtitle": "Placing 'ikke' correctly after the verb and subject",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "In Danish main clauses, the central negative adverb 'ikke' stands immediately after the finite verb, or immediately after the subject if the sentence is inverted.",
+  "structure": {
+   "headers": [
+    "Clause Type",
+    "Position 1",
+    "Verb (Pos 2)",
+    "Subject / Adverbial",
+    "Remainder"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Subject First (SVO)",
+      "Jeg",
+      "taler",
+      "ikke",
+      "spansk."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Inverted (Adv-V-S)",
+      "I dag",
+      "taler",
+      "jeg ikke",
+      "spansk."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Compound Verb",
+      "Han",
+      "har",
+      "ikke",
+      "spist frokost."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Question",
+      "Forstår",
+      "du",
+      "ikke",
+      "dansk?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Straightforward Negation",
+    "example": "Jeg forstår ikke spørgsmålet.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Negation with Inversion",
+    "example": "Nu forstår jeg ikke teksten.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Compound Verb Negation",
+    "example": "Hun vil ikke spise kød.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Lars arbejder ikke på fabrikken mere.",
+    "ko": "",
+    "highlight": "arbejder ikke"
+   },
+   {
+    "en": "I aften spiser vi ikke hjemme.",
+    "ko": "",
+    "highlight": "spiser vi ikke"
+   },
+   {
+    "en": "De kan ikke tale tysk.",
+    "ko": "",
+    "highlight": "kan ikke tale"
+   },
+   {
+    "en": "Hvorfor kommer hun ikke til festen?",
+    "ko": "",
+    "highlight": "kommer hun ikke"
+   },
+   {
+    "en": "Det regner ikke i dag.",
+    "ko": "",
+    "highlight": "regner ikke"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jeg ikke forstår.",
+    "right": "Jeg forstår ikke.",
+    "note": "Unlike English ('I do not understand'), Danish places 'ikke' after the main conjugated verb in main clauses."
+   },
+   {
+    "wrong": "I dag jeg spiser ikke kød.",
+    "right": "I dag spiser jeg ikke kød.",
+    "note": "When 'I dag' starts the clause, verb inversion occurs first, placing 'ikke' after both the verb and subject."
+   },
+   {
+    "wrong": "I dag spiser ikke jeg kød.",
+    "right": "I dag spiser jeg ikke kød.",
+    "note": "In inverted clauses, the pronominal subject immediately follows the verb, before 'ikke'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I do not drink milk' in Danish?",
+    "options": [
+     "Jeg ikke drikker mælk.",
+     "Jeg drikker ikke mælk.",
+     "Ikke jeg drikker mælk.",
+     "Jeg mælk drikker ikke."
+    ],
+    "answer": 1,
+    "explanation": "In standard SVO word order, 'ikke' directly follows the finite verb: 'Jeg drikker ikke'."
+   },
+   {
+    "question": "Complete the inverted sentence: 'I dag ___ kaffe.'",
+    "options": [
+     "drikker jeg ikke",
+     "jeg drikker ikke",
+     "drikker ikke jeg",
+     "ikke drikker jeg"
+    ],
+    "answer": 0,
+    "explanation": "V2 word order requires 'drikker' second, then subject 'jeg', followed by the central adverb 'ikke'."
+   },
+   {
+    "question": "Choose the correct sentence:",
+    "options": [
+     "Mette vil tale ikke.",
+     "Mette vil ikke tale.",
+     "Mette ikke vil tale.",
+     "Ikke Mette vil tale."
+    ],
+    "answer": 1,
+    "explanation": "With modal/compound verbs, 'ikke' is placed immediately between the auxiliary verb ('vil') and the infinitive ('tale')."
+   },
+   {
+    "question": "Complete the question: 'Forstår ___ ordet?'",
+    "options": [
+     "du ikke",
+     "ikke du",
+     "du intet ikke",
+     "du aldeles"
+    ],
+    "answer": 0,
+    "explanation": "In verb-first questions, the subject comes first, followed by the negation 'ikke' ('Forstår du ikke...?')."
+   }
+  ],
+  "tip": "Remember the Danish main clause rule formula: Subject + Verb + 'ikke' (or Fronted Element + Verb + Subject + 'ikke'). 'Ikke' never precedes the finite verb in main clauses."
+ },
+ {
+  "id": "da-a1-present-tense-verb-conjugation",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⏱️",
+  "title": "Present Tense: The Universal '-r' Ending",
+  "subtitle": "Forming nutid verbs without changing endings for person or number",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Danish verbs do not conjugate for person or number; virtually every present tense verb ends in '-r' (usually -er) for all subjects alike.",
+  "structure": {
+   "headers": [
+    "Infinitive",
+    "Stem",
+    "Present Tense (-r)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "at tale (to speak)",
+      "tal-",
+      "taler",
+      "speaks / am speaking"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "at bo (to live)",
+      "bo-",
+      "bor",
+      "lives / am living"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "at spise (to eat)",
+      "spis-",
+      "spiser",
+      "eats / am eating"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "at være (to be, irreg.)",
+      "vær-",
+      "er",
+      "is / am / are"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "at have (to have, irreg.)",
+      "hav-",
+      "har",
+      "has / have"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Universal Persons (No Agreement)",
+    "example": "Jeg taler, du taler, og vi taler dansk.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Current Action & Continuous",
+    "example": "Han læser en bog lige nu.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Habits & Scheduled Future",
+    "example": "Toget ankommer klokken otte i morgen.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Hun arbejder på et hospital.",
+    "ko": "",
+    "highlight": "arbejder"
+   },
+   {
+    "en": "Vi bor i en dejlig lejlighed.",
+    "ko": "",
+    "highlight": "bor"
+   },
+   {
+    "en": "De spiser aftensmad klokken seks.",
+    "ko": "",
+    "highlight": "spiser"
+   },
+   {
+    "en": "Jeg er studerende ved universitetet.",
+    "ko": "",
+    "highlight": "er"
+   },
+   {
+    "en": "Peter skriver en vigtig e-mail.",
+    "ko": "",
+    "highlight": "skriver"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jeg spise et æble nu.",
+    "right": "Jeg spiser et æble nu.",
+    "note": "Learners often drop the '-r' because silent pronunciation leads them to confuse the infinitive 'spise' with present 'spiser'."
+   },
+   {
+    "wrong": "Vi ere glade.",
+    "right": "Vi er glade.",
+    "note": "Danish verbs never conjugate for plural subjects; 'er' is used for jeg, du, han, and vi alike."
+   },
+   {
+    "wrong": "Han havr en bil.",
+    "right": "Han har en bil.",
+    "note": "The auxiliary verb 'at have' has an irregular present form: 'har' (not 'haver')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you form the present tense of 'at vente' (to wait)?",
+    "options": [
+     "vent",
+     "venter",
+     "ventede",
+     "ventet"
+    ],
+    "answer": 1,
+    "explanation": "Regular verbs add '-r' to their infinitive ending in -e, making 'venter'."
+   },
+   {
+    "question": "What is the present tense form of 'at være' (to be)?",
+    "options": [
+     "værer",
+     "var",
+     "er",
+     "være"
+    ],
+    "answer": 2,
+    "explanation": "'At være' is irregular; its present tense is 'er' for all persons."
+   },
+   {
+    "question": "Fill in the blank: 'Vi ___ (to live) i København.' ('at bo')",
+    "options": [
+     "bor",
+     "boer",
+     "bore",
+     "bør"
+    ],
+    "answer": 0,
+    "explanation": "Verbs with infinitives ending in a stressed vowel like 'bo' simply append '-r': 'bor'."
+   },
+   {
+    "question": "Select the sentence with the correct present tense verb form:",
+    "options": [
+     "Jeg drikke kaffe hver morgen.",
+     "De taler flydende dansk.",
+     "Han skrive en lang besked.",
+     "Vi bor på hotellet i går."
+    ],
+    "answer": 1,
+    "explanation": "'De taler' has the correct present tense marker '-r' attached to the verb 'tale'."
+   }
+  ],
+  "tip": "Because final '-r' in Danish is often pronounced as vowel coloring rather than a distinct consonant, train yourself to always double-check your spelling for the written '-r' in present tense."
+ },
+ {
+  "id": "da-a1-modal-verbs-with-bare-infinitive",
+  "level": "a1",
+  "category": "modals",
+  "categoryColor": "#4F46E5",
+  "emoji": "🚀",
+  "title": "Modal Verbs and the Bare Infinitive",
+  "subtitle": "Connecting modal verbs directly to the infinitive without 'at'",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "In Danish, modal verbs are followed directly by the bare infinitive of the main verb without the infinitive marker 'at'.",
+  "structure": {
+   "headers": [
+    "Modal Verb",
+    "Infinitive",
+    "Danish Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "kan (kunne)",
+      "tale",
+      "Jeg kan tale dansk.",
+      "I can speak Danish."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "vil (ville)",
+      "rejse",
+      "Vi vil rejse i morgen.",
+      "We want to travel tomorrow."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "skal (skulle)",
+      "købe",
+      "Han skal købe mad.",
+      "He has to buy food."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "må (måtte)",
+      "ryge",
+      "Man må ikke ryge her.",
+      "One must not smoke here."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Expressing ability or permission",
+    "example": "Du kan låne min cykel i dag.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Expressing intention or future",
+    "example": "De vil se en god film i aften.",
+    "translation": ""
+   },
+   {
+    "color": "#818CF8",
+    "label": "Expressing obligation or necessity",
+    "example": "Jeg skal arbejde tidligt i morgen.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Han kan svømme hurtigt.",
+    "ko": "",
+    "highlight": "kan svømme"
+   },
+   {
+    "en": "Vi vil gerne spise nu.",
+    "ko": "",
+    "highlight": "vil gerne spise"
+   },
+   {
+    "en": "Du skal læse lektier i dag.",
+    "ko": "",
+    "highlight": "skal læse"
+   },
+   {
+    "en": "Må jeg åbne vinduet?",
+    "ko": "",
+    "highlight": "Må jeg åbne"
+   },
+   {
+    "en": "De vil ikke vente herude.",
+    "ko": "",
+    "highlight": "vil ikke vente"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jeg vil at spise en sandwich.",
+    "right": "Jeg vil spise en sandwich.",
+    "note": "Never place 'at' directly after a modal verb."
+   },
+   {
+    "wrong": "Hun kan taler engelsk flydende.",
+    "right": "Hun kan tale engelsk flydende.",
+    "note": "Use the bare infinitive after modals, not the present tense (-r)."
+   },
+   {
+    "wrong": "Vi skal at gå i skole.",
+    "right": "Vi skal gå i skole.",
+    "note": "Omit 'at' when using the modal auxiliary 'skal'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I can speak a little Danish: 'Jeg ___ lidt dansk.'",
+    "options": [
+     "kan at tale",
+     "kan tale",
+     "kan taler",
+     "kunne talt"
+    ],
+    "answer": 1,
+    "explanation": "The modal 'kan' requires the bare infinitive 'tale' without 'at'."
+   },
+   {
+    "question": "She wants to buy a new coat: 'Hun vil ___ en ny frakke.'",
+    "options": [
+     "køber",
+     "køb",
+     "købe",
+     "at købe"
+    ],
+    "answer": 2,
+    "explanation": "'Vil' must be followed directly by the bare infinitive 'købe'."
+   },
+   {
+    "question": "You must not park here: 'Du ___ ikke parkere her.'",
+    "options": [
+     "må",
+     "må at",
+     "måtte at",
+     "måtter"
+    ],
+    "answer": 0,
+    "explanation": "'Må' is the present modal auxiliary followed directly by 'parkere'."
+   },
+   {
+    "question": "We have to leave now: 'Vi skal ___ nu.'",
+    "options": [
+     "tager af sted",
+     "at tage af sted",
+     "tog af sted",
+     "tage af sted"
+    ],
+    "answer": 3,
+    "explanation": "'Skal' is followed by the bare infinitive 'tage'."
+   }
+  ],
+  "tip": "Think of English 'I can go' (never 'I can to go')—Danish modals work exactly the same way without 'at'."
+ },
+ {
+  "id": "da-a2-double-definiteness-rule",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🏠",
+  "title": "Adjectival Definiteness (Den/Det/De vs. Suffixes)",
+  "subtitle": "Switching from suffixed nouns to preposed definite articles",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "When an adjective describes a definite noun in Danish, the noun loses its suffix and takes a separate article (den, det, de) plus the weak adjective ending -e.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Without Adjective",
+    "With Adjective",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Fælleskøn (en)",
+      "bilen",
+      "den røde bil",
+      "the red car"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Intetkøn (et)",
+      "huset",
+      "det store hus",
+      "the big house"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural (flertal)",
+      "bøgerne",
+      "de gamle bøger",
+      "the old books"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Common gender definite nouns with an adjective",
+    "example": "Den nye lærer er meget venlig.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Neuter gender definite nouns with an adjective",
+    "example": "Det lille barn sover i vognen.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Plural definite nouns with an adjective",
+    "example": "De grønne æbler smager surt.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Den dyre cykel blev stjålet i går.",
+    "ko": "",
+    "highlight": "Den dyre cykel"
+   },
+   {
+    "en": "Det gamle slot ligger tæt på skoven.",
+    "ko": "",
+    "highlight": "Det gamle slot"
+   },
+   {
+    "en": "De søde hunde leger i parken.",
+    "ko": "",
+    "highlight": "De søde hunde"
+   },
+   {
+    "en": "Hvem ejer den pæne have?",
+    "ko": "",
+    "highlight": "den pæne have"
+   },
+   {
+    "en": "Vi kigger på det høje tårn.",
+    "ko": "",
+    "highlight": "det høje tårn"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Den røde bilen står derovre.",
+    "right": "Den røde bil står derovre.",
+    "note": "Danish does not allow double definiteness; drop the suffix -en when using 'den'."
+   },
+   {
+    "wrong": "Det store huset er pænt.",
+    "right": "Det store hus er pænt.",
+    "note": "Drop the suffix -et from the noun when using 'det'."
+   },
+   {
+    "wrong": "De nye bøgerne koster meget.",
+    "right": "De nye bøger koster meget.",
+    "note": "Use 'bøger' instead of 'bøgerne' when preceded by the article 'de'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The big house is white: '___ store hus er hvidt.'",
+    "options": [
+     "Det",
+     "Den",
+     "De",
+     "Huset"
+    ],
+    "answer": 0,
+    "explanation": "'Hus' is neuter (et hus), so the preposed definite article is 'Det'."
+   },
+   {
+    "question": "The small dog is barking: 'Den lille ___ gøer.'",
+    "options": [
+     "hunden",
+     "hunde",
+     "hund",
+     "hundet"
+    ],
+    "answer": 2,
+    "explanation": "The noun drops its suffix when preceded by 'den lille', returning to base form 'hund'."
+   },
+   {
+    "question": "The blue chairs are comfortable: '___ blå stole er gode.'",
+    "options": [
+     "Den",
+     "Det",
+     "Disse",
+     "De"
+    ],
+    "answer": 3,
+    "explanation": "For plural nouns ('stole'), the preposed definite article is 'De'."
+   },
+   {
+    "question": "The green apple is sour: 'Det ___ æble er surt.'",
+    "options": [
+     "grøn",
+     "grønt",
+     "grønne",
+     "grønnes"
+    ],
+    "answer": 2,
+    "explanation": "Adjectives in the definite construction always take the weak '-e' suffix."
+   }
+  ],
+  "tip": "Remember: Suffix OR Article + Adjective, never both! It's either 'bilen' or 'den røde bil'."
+ },
+ {
+  "id": "da-a2-adjective-agreement-t-and-e",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🎨",
+  "title": "Adjective Gender and Number Agreement",
+  "subtitle": "Matching adjectives to nouns using base, -t, and -e forms",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Danish adjectives agree with nouns by adding -t for indefinite neuter singular and -e for all plurals and definite nouns.",
+  "structure": {
+   "headers": [
+    "Form",
+    "Rule",
+    "Danish Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Fælleskøn (en)",
+      "Base form",
+      "en rød bil",
+      "a red car"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Intetkøn (et)",
+      "Add -t",
+      "et rødt æble",
+      "a red apple"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Flertal (pl.)",
+      "Add -e",
+      "to røde biler",
+      "two red cars"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Bestemt (def.)",
+      "Add -e",
+      "det røde hus",
+      "the red house"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Describing common gender nouns",
+    "example": "Han købte en billig stol.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Describing neuter gender nouns",
+    "example": "De bor i et pænt hus.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Describing plural nouns",
+    "example": "Vi spiste mange søde kager.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Et koldt glas vand smager dejligt.",
+    "ko": "",
+    "highlight": "koldt"
+   },
+   {
+    "en": "En sød kat sidder på taget.",
+    "ko": "",
+    "highlight": "sød"
+   },
+   {
+    "en": "Værelset er meget stort.",
+    "ko": "",
+    "highlight": "stort"
+   },
+   {
+    "en": "Her er tre gode venner.",
+    "ko": "",
+    "highlight": "gode"
+   },
+   {
+    "en": "Bordet er rundt.",
+    "ko": "",
+    "highlight": "rundt"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Et stor bord står i stuen.",
+    "right": "Et stort bord står i stuen.",
+    "note": "Neuter nouns require the adjective to take the -t ending."
+   },
+   {
+    "wrong": "To grøn biler kørte forbi.",
+    "right": "To grønne biler kørte forbi.",
+    "note": "Plural nouns require the adjective to take the -e ending."
+   },
+   {
+    "wrong": "Katten er hvidt.",
+    "right": "Katten er hvid.",
+    "note": "'Kat' is common gender (en kat), so the predicative adjective stays in the base form 'hvid'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "A fast car: 'En ___ bil.'",
+    "options": [
+     "hurtige",
+     "hurtigt",
+     "hurtig",
+     "hurtigere"
+    ],
+    "answer": 2,
+    "explanation": "'En bil' is common gender, so the adjective stays in its base form 'hurtig'."
+   },
+   {
+    "question": "A small child: 'Et ___ barn.'",
+    "options": [
+     "lille",
+     "småt",
+     "lillebitte",
+     "små"
+    ],
+    "answer": 1,
+    "explanation": "The neuter form of the adjective 'lille' used with indefinite nouns is 'småt'."
+   },
+   {
+    "question": "The apples are sweet: 'Æblerne er ___.'",
+    "options": [
+     "sød",
+     "sødt",
+     "søde",
+     "sødes"
+    ],
+    "answer": 2,
+    "explanation": "Plural nouns require the predicative adjective to take the -e ending ('søde')."
+   },
+   {
+    "question": "A green glass: 'Et ___ glas.'",
+    "options": [
+     "grønt",
+     "grøn",
+     "grønne",
+     "grønts"
+    ],
+    "answer": 0,
+    "explanation": "'Et glas' is neuter, requiring the -t suffix: 'grønt'."
+   }
+  ],
+  "tip": "Check the article first: 'en' means base form, 'et' adds -t, and plural or definite always takes -e."
+ },
+ {
+  "id": "da-a2-bisatningsordstilling",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#D97706",
+  "emoji": "🔄",
+  "title": "Subordinate Clause Word Order",
+  "subtitle": "Mastering the S-A-V word order in Danish subordinate clauses",
+  "color": "#B45309",
+  "bg": "#FFFBEB",
+  "keyPoint": "In a Danish subordinate clause (bisætning), central adverbs like 'ikke' must come before the finite verb (Subject - Adverbial - Verb).",
+  "structure": {
+   "headers": [
+    "Clause Type",
+    "Conjunction",
+    "Subject + Adverbial + Verb",
+    "Full Sentence"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Main clause",
+      "—",
+      "S - V - A",
+      "Han kommer ikke i dag."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Subordinate",
+      "fordi",
+      "S - A - V",
+      "Jeg ved, at han ikke kommer."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Subordinate",
+      "da",
+      "S - A - V",
+      "Da vi ofte rejser, har vi pas."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Subordinate",
+      "hvis",
+      "S - A - V",
+      "Hvis du aldrig prøver, lærer du intet."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Clauses introduced by 'fordi' (because)",
+    "example": "Hun ringer, fordi hun ikke kan komme.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Clauses introduced by 'at' (that)",
+    "example": "Jeg tror, at de altid spiser sammen.",
+    "translation": ""
+   },
+   {
+    "color": "#FBBF24",
+    "label": "Clauses introduced by 'hvis' (if)",
+    "example": "Hvis det ikke regner, går vi en tur.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Han siger, at han ikke har tid.",
+    "ko": "",
+    "highlight": "ikke har"
+   },
+   {
+    "en": "Vi bliver hjemme, fordi vi ikke har lyst.",
+    "ko": "",
+    "highlight": "ikke har"
+   },
+   {
+    "en": "Ved du, om hun altid læser om aftenen?",
+    "ko": "",
+    "highlight": "altid læser"
+   },
+   {
+    "en": "Selvom han aldrig træner, er han hurtig.",
+    "ko": "",
+    "highlight": "aldrig træner"
+   },
+   {
+    "en": "Jeg håber, at du snart kommer på besøg.",
+    "ko": "",
+    "highlight": "snart kommer"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jeg ved, at han kommer ikke i dag.",
+    "right": "Jeg ved, at han ikke kommer i dag.",
+    "note": "In a subordinate clause, 'ikke' must precede the verb 'kommer'."
+   },
+   {
+    "wrong": "Hun græder, fordi hun forstår ikke opgaven.",
+    "right": "Hun græder, fordi hun ikke forstår opgaven.",
+    "note": "The conjunction 'fordi' triggers S-A-V order: subject + 'ikke' + verb."
+   },
+   {
+    "wrong": "Hvis du vil ikke spise, kan vi gå.",
+    "right": "Hvis du ikke vil spise, kan vi gå.",
+    "note": "In conditional clauses with 'hvis', the adverb 'ikke' comes before the auxiliary verb 'vil'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I know that she doesn't live here: 'Jeg ved, at hun ___ her.'",
+    "options": [
+     "bor ikke",
+     "ikke bor",
+     "ikke bo",
+     "bor aldrig ikke"
+    ],
+    "answer": 1,
+    "explanation": "In subordinate clauses introduced by 'at', adverbials come before the verb (ikke bor)."
+   },
+   {
+    "question": "He stays home because he isn't well: 'Han bliver hjemme, fordi han ___ rask.'",
+    "options": [
+     "er ikke",
+     "ikke er",
+     "være ikke",
+     "ikke være"
+    ],
+    "answer": 1,
+    "explanation": "After 'fordi', the order is S-A-V: subject (han) + adverb (ikke) + verb (er)."
+   },
+   {
+    "question": "If you don't call, I'll go: 'Hvis du ___, tager jeg af sted.'",
+    "options": [
+     "ikke ringer",
+     "ringer ikke",
+     "vil ringer ikke",
+     "ikke at ringe"
+    ],
+    "answer": 0,
+    "explanation": "In a 'hvis' conditional clause, 'ikke' precedes the finite verb 'ringer'."
+   },
+   {
+    "question": "She asked whether we often eat out: 'Hun spurgte, om vi ___ ude.'",
+    "options": [
+     "spiser ofte",
+     "spiste ofte",
+     "have ofte spist",
+     "ofte spiser"
+    ],
+    "answer": 3,
+    "explanation": "'Om' introduces a subordinate clause, placing the central adverb 'ofte' before the verb 'spiser'."
+   }
+  ],
+  "tip": "Remember the acronym SAV: Subordinate clauses place Subject, then Adverb (like 'ikke'), then Verb."
+ },
+ {
+  "id": "da-a2-reflexive-possessive-sin-vs-hans-hendes",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "👥",
+  "title": "Reflexive Possessives: Sin/Sit/Sine vs. Hans/Hendes",
+  "subtitle": "Distinguishing subject-owned possessions from someone else's",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use sin/sit/sine when the third-person possessive refers back to the clause's own subject; use hans/hendes/deres when referring to someone else.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Gender/Number",
+    "Refers To",
+    "Danish Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "sin",
+      "Fælleskøn (en)",
+      "Subject's own",
+      "Han elsker sin kone."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "sit",
+      "Intetkøn (et)",
+      "Subject's own",
+      "Hun vasker sit tøj."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "sine",
+      "Plural (flertal)",
+      "Subject's own",
+      "De passer sine børn."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "hans / hendes",
+      "Any gender",
+      "Someone else's",
+      "Han elsker hans kone (Peter's)."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Subject owning a common-gender item",
+    "example": "Morten kører i sin nye bil.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Subject owning a neuter-gender item",
+    "example": "Sofie maler sit eget værelse.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Referring to another person's possession",
+    "example": "Lars ringede til hans søster.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Han glemte sin taske i bussen.",
+    "ko": "",
+    "highlight": "sin"
+   },
+   {
+    "en": "Hun elsker sit arbejde.",
+    "ko": "",
+    "highlight": "sit"
+   },
+   {
+    "en": "Peter besøger sine forældre hver søndag.",
+    "ko": "",
+    "highlight": "sine"
+   },
+   {
+    "en": "Hun taler med hendes mor.",
+    "ko": "",
+    "highlight": "hendes"
+   },
+   {
+    "en": "Jens tog sin hat og gik sin vej.",
+    "ko": "",
+    "highlight": "sin"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Peter elsker hans kone.",
+    "right": "Peter elsker sin kone.",
+    "note": "If Peter loves his own wife, use the reflexive possessive 'sin'."
+   },
+   {
+    "wrong": "Hun tog hendes cykel og kørte væk.",
+    "right": "Hun tog sin cykel og kørte væk.",
+    "note": "Use 'sin' because she is taking her own bicycle."
+   },
+   {
+    "wrong": "Han vasker sin hus.",
+    "right": "Han vasker sit hus.",
+    "note": "'Hus' is neuter (et hus), so the neuter reflexive possessive 'sit' must be used."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He kissed his (own) wife: 'Han kyssede ___ kone.'",
+    "options": [
+     "hans",
+     "sin",
+     "sit",
+     "sine"
+    ],
+    "answer": 1,
+    "explanation": "'Kone' is common gender and belongs to the subject 'han', so 'sin' is correct."
+   },
+   {
+    "question": "Anna parked her (own) car: 'Anna parkerede ___ bil.'",
+    "options": [
+     "hendes",
+     "sit",
+     "sin",
+     "sine"
+    ],
+    "answer": 2,
+    "explanation": "Anna owns the car (en bil), so use reflexive common gender 'sin'."
+   },
+   {
+    "question": "He loves his (own) child: 'Han elsker ___ barn.'",
+    "options": [
+     "hans",
+     "sine",
+     "sin",
+     "sit"
+    ],
+    "answer": 3,
+    "explanation": "'Barn' is neuter (et barn), so the reflexive form is 'sit'."
+   },
+   {
+    "question": "Mikkel borrowed his (someone else's) bicycle: 'Mikkel lånte ___ cykel.'",
+    "options": [
+     "hans",
+     "sin",
+     "sit",
+     "sine"
+    ],
+    "answer": 0,
+    "explanation": "Because the bicycle belongs to another man and not Mikkel himself, non-reflexive 'hans' is used."
+   }
+  ],
+  "tip": "Ask yourself: Does this object belong to the subject of this sentence? If YES, pick sin/sit/sine!"
+ },
+ {
+  "id": "da-a2-synes-vs-tror",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#4A90E2",
+  "emoji": "💭",
+  "title": "Expressing Opinion: Synes vs. Tror vs. Mener",
+  "subtitle": "Differentiate personal taste, belief, and principled stance",
+  "color": "#3B82F6",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use 'synes' for subjective taste based on personal experience, 'tror' for factual guesses or beliefs without certainty, and 'mener' for reasoned opinions or formal stances.",
+  "structure": {
+   "headers": [
+    "Verb",
+    "Usage Context",
+    "Danish Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "synes",
+      "Personal taste / experienced directly",
+      "Jeg synes, filmen er god.",
+      "I think (find) the film is good."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "tror",
+      "Assumption / factual uncertainty",
+      "Jeg tror, det regner i morgen.",
+      "I think (believe) it will rain tomorrow."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "mener",
+      "Formal viewpoint / conviction",
+      "Hvad mener du om forslaget?",
+      "What is your opinion on the proposal?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Direct sensory experience",
+    "example": "Jeg synes, maden smager dejligt.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Predicting or guessing",
+    "example": "Jeg tror, bussen kommer nu.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Professional or moral stance",
+    "example": "Politikeren mener, at skatten skal ned.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Jeg synes, København er en smuk by.",
+    "ko": "",
+    "highlight": "synes"
+   },
+   {
+    "en": "Han tror, at hun hedder Maria.",
+    "ko": "",
+    "highlight": "tror"
+   },
+   {
+    "en": "Hvad mener du om den nye reform?",
+    "ko": "",
+    "highlight": "mener"
+   },
+   {
+    "en": "Synes du ikke, kaffen er for kold?",
+    "ko": "",
+    "highlight": "Synes"
+   },
+   {
+    "en": "Vi tror ikke, toget kører til tiden i dag.",
+    "ko": "",
+    "highlight": "tror"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jeg tror, suppen smager godt.",
+    "right": "Jeg synes, suppen smager godt.",
+    "note": "Use 'synes' when you are directly tasting or experiencing something yourself."
+   },
+   {
+    "wrong": "Jeg synes, han kommer klokken otte.",
+    "right": "Jeg tror, han kommer klokken otte.",
+    "note": "Arrival time is a factual guess, not a sensory preference, so 'tror' is required."
+   },
+   {
+    "wrong": "Hvad tror du om den nye lov?",
+    "right": "Hvad mener du om den nye lov?",
+    "note": "For an argued stance or political view, Danish uses 'mener'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I have eaten here before, and I ___ this restaurant is fantastic.",
+    "options": [
+     "tror",
+     "synes",
+     "mener",
+     "ved"
+    ],
+    "answer": 1,
+    "explanation": "'Synes' expresses a subjective evaluation derived from personal experience."
+   },
+   {
+    "question": "Do you ___ it will be sunny this weekend?",
+    "options": [
+     "tror",
+     "synes",
+     "mener",
+     "kan"
+    ],
+    "answer": 0,
+    "explanation": "Weather forecasts are uncertain facts/beliefs, requiring 'tror'."
+   },
+   {
+    "question": "The minister ___ that education should be free for everyone.",
+    "options": [
+     "synes",
+     "tror",
+     "mener",
+     "føler"
+    ],
+    "answer": 2,
+    "explanation": "'Mener' expresses an official stance or philosophical opinion."
+   },
+   {
+    "question": "I haven't met him yet, but I ___ he is from Aarhus.",
+    "options": [
+     "synes",
+     "forstår",
+     "mener",
+     "tror"
+    ],
+    "answer": 3,
+    "explanation": "A factual conjecture without personal experience requires 'tror'."
+   }
+  ],
+  "tip": "Test with 'find': if you can replace 'think' with 'find' in English (e.g., 'I find it beautiful'), Danish almost always demands 'synes'."
+ },
+ {
+  "id": "da-a2-compound-noun-formation",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🧩",
+  "title": "Compound Noun Formation and Interfixes",
+  "subtitle": "Joining roots using bare stems, -s-, and -e- connectors",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Danish compounds are written as a single word, their gender is determined by the final element, and elements join either directly or via the interfixes '-s-' or '-e-'.",
+  "structure": {
+   "headers": [
+    "Connector",
+    "Pattern",
+    "Danish Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Direct joining",
+      "Stem + Noun",
+      "en sol + en brille = en solbrille",
+      "sunglasses"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Interfix -s-",
+      "Noun + s + Noun",
+      "et tidsrum (tid + s + rum)",
+      "period of time"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Interfix -e-",
+      "Noun + e + Noun",
+      "et juletræ (jul + e + træ)",
+      "Christmas tree"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Gender rule",
+      "Determined by final word",
+      "et land + en kort = et landkort",
+      "map (et kort)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Direct combination",
+    "example": "Hun købte en ny tandbørste i morges.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Using linking -s-",
+    "example": "Hans fødselsdag er i næste uge.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Using linking -e-",
+    "example": "Børnene venter på julemanden.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Jeg har glemt mit nye dankort derhjemme.",
+    "ko": "",
+    "highlight": "dankort"
+   },
+   {
+    "en": "Vores børnehave ligger tæt på skoven.",
+    "ko": "",
+    "highlight": "børnehave"
+   },
+   {
+    "en": "Hun lagde bogen på skrivebordet.",
+    "ko": "",
+    "highlight": "skrivebordet"
+   },
+   {
+    "en": "Det var et stort problem for vores arbejdsmiljø.",
+    "ko": "",
+    "highlight": "arbejdsmiljø"
+   },
+   {
+    "en": "Vi mødtes på banegården ved middagstid.",
+    "ko": "",
+    "highlight": "banegården"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jeg spiser en kylling salat til frokost.",
+    "right": "Jeg spiser en kyllingesalat til frokost.",
+    "note": "Danish compounds must never be split with a space ('særskrivning'); join them as one word."
+   },
+   {
+    "wrong": "en skrivebord",
+    "right": "et skrivebord",
+    "note": "The gender comes from the last noun ('et bord'), making the compound neuter ('et skrivebord')."
+   },
+   {
+    "wrong": "arbejdetilladelse",
+    "right": "arbejdstilladelse",
+    "note": "Compounds starting with 'arbejde' take the linking -s- ('arbejdstilladelse')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which is the correct single-word compound for 'coffee cup'?",
+    "options": [
+     "kaffekop",
+     "kaffe kop",
+     "kaffes kop",
+     "kaffens kop"
+    ],
+    "answer": 0,
+    "explanation": "Danish compounds are written together without spaces or hyphens: 'kaffekop'."
+   },
+   {
+    "question": "What determines the grammatical gender of 'et spisebord' (dining table)?",
+    "options": [
+     "The verb stem 'spise'",
+     "The noun 'bord'",
+     "The connector letter",
+     "Random selection"
+    ],
+    "answer": 1,
+    "explanation": "The last element of the compound ('et bord') always determines the gender and declension."
+   },
+   {
+    "question": "Choose the correctly formed compound for 'birthday party' (fødsel + dag + fest).",
+    "options": [
+     "fødselsdagfest",
+     "fødselsdagsfest",
+     "fødseldagfest",
+     "fødselsfestdag"
+    ],
+    "answer": 1,
+    "explanation": "'Fødsel' takes an -s- to bind to 'dag', and 'fødselsdag' takes another -s- to bind to 'fest'."
+   },
+   {
+    "question": "Which linking element is used in 'børnehave' (kindergarten)?",
+    "options": [
+     "-s-",
+     "-er-",
+     "-i-",
+     "-e-"
+    ],
+    "answer": 3,
+    "explanation": "The plural/linking form 'børn-' takes an '-e-' to form 'børnehave'."
+   }
+  ],
+  "tip": "If the first word ends in '-hed', '-skab', '-dom', or '-ing', it almost universally takes a linking '-s-' (e.g., 'lejlighed' -> 'lejlighedssang')."
+ },
+ {
+  "id": "da-b1-directional-vs-stationary-adverbs",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🧭",
+  "title": "Directional vs. Stationary Adverbs of Place",
+  "subtitle": "Mastering the short (motion) vs. long -e (static) locational adverbs",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use the short adverb form for movement toward a destination, and add '-e' for remaining in a static location.",
+  "structure": {
+   "headers": [
+    "Direction (Motion towards)",
+    "Stationary (Rest at place)",
+    "English Direction",
+    "English Location"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ind",
+      "inde",
+      "in / into",
+      "inside"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ud",
+      "ude",
+      "out",
+      "outside"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "op / ned",
+      "oppe / nede",
+      "up / down",
+      "upstairs / downstairs"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "hjem",
+      "hjemme",
+      "home (homeward)",
+      "at home"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Movement towards a place",
+    "example": "Vi går ud i haven nu.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Staying in a place",
+    "example": "Børnene leger ude i haven.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Home vs. At home",
+    "example": "Jeg cykler hjem, fordi mor er hjemme.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Han løb op ad trappen til tredje sal.",
+    "ko": "",
+    "highlight": "op"
+   },
+   {
+    "en": "Bedstefar sidder oppe på loftet og læser.",
+    "ko": "",
+    "highlight": "oppe"
+   },
+   {
+    "en": "Skal vi gå ind i stuen?",
+    "ko": "",
+    "highlight": "ind"
+   },
+   {
+    "en": "Hvem er inde i køkkenet lige nu?",
+    "ko": "",
+    "highlight": "inde"
+   },
+   {
+    "en": "I aften skal vi bare blive hjemme.",
+    "ko": "",
+    "highlight": "hjemme"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jeg vil gerne være hjem i dag.",
+    "right": "Jeg vil gerne være hjemme i dag.",
+    "note": "Use 'hjemme' with stative verbs like 'være', and 'hjem' only with verbs of motion."
+   },
+   {
+    "wrong": "Kom inde, vejret er koldt!",
+    "right": "Kom ind, vejret er koldt!",
+    "note": "'Komme' indicates motion toward the speaker, requiring the short form 'ind'."
+   },
+   {
+    "wrong": "Katten sover op på bordet.",
+    "right": "Katten sover oppe på bordet.",
+    "note": "Sleeping is an ongoing, non-directional state, so it takes the long form 'oppe'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Vi rejser ___ til Frankrig på lørdag.",
+    "options": [
+     "nede",
+     "ud",
+     "hjemme",
+     "inde"
+    ],
+    "answer": 1,
+    "explanation": "'Rejse' describes movement going out to another country, requiring the short form 'ud'."
+   },
+   {
+    "question": "Er Peter ___ på sit værelse?",
+    "options": [
+     "op",
+     "ind",
+     "oppe",
+     "hjem"
+    ],
+    "answer": 2,
+    "explanation": "'Er' (to be) indicates a stationary location, requiring the long form with -e: 'oppe'."
+   },
+   {
+    "question": "Jeg er træt og vil gerne køre ___ nu.",
+    "options": [
+     "hjemme",
+     "ude",
+     "hjem",
+     "oppe"
+    ],
+    "answer": 2,
+    "explanation": "Driving is motion directed towards home, so use the short form 'hjem'."
+   },
+   {
+    "question": "Det regner kraftigt, så vi må blive ___.",
+    "options": [
+     "ind",
+     "ud",
+     "ned",
+     "inde"
+    ],
+    "answer": 3,
+    "explanation": "Remaining indoors is a stationary state without movement, requiring 'inde'."
+   }
+  ],
+  "tip": "Associate the suffix '-e' with 'Eksisterer her' (existing statically here); if there is no movement from A to B, add '-e'."
+ },
+ {
+  "id": "da-b1-s-passive-vs-blive-passive",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#EC4899",
+  "emoji": "⚙️",
+  "title": "The S-Passive vs. Blive-Passive",
+  "subtitle": "Choosing between morphological -s forms and auxiliary blive constructions",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "Use the morphological -s passive for timeless rules, instructions, recipes, and modals, but use 'blive + past participle' for specific, concrete events happening at a definite moment.",
+  "structure": {
+   "headers": [
+    "Passive Type",
+    "Formation",
+    "Best Used For",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "S-Passive",
+      "Verb stem + -(e)s",
+      "Rules, notices, repeated habits",
+      "Døren lukkes klokken 20."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Modal + S-Passive",
+      "Modal + infinitive-s",
+      "Commands, necessity, advice",
+      "Bogen skal læses inden fredag."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Blive-Passive",
+      "blive + datidstillægsform",
+      "Concrete single events, actions in progress",
+      "Bilen blev stjålet i nat."
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DB2777",
+    "label": "Official notices & rules",
+    "example": "Rygning forbydes på hele området.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Instructions & recipes",
+    "example": "Løgene hakkes fint og steges i smør.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Specific single events",
+    "example": "Manden blev anholdt af politiet i går.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dette skilt ses overalt på stationen.",
+    "ko": "",
+    "highlight": "ses"
+   },
+   {
+    "en": "Opgaven skal afleveres senest mandag morgen.",
+    "ko": "",
+    "highlight": "afleveres"
+   },
+   {
+    "en": "Slottet blev bygget i det sekstende århundrede.",
+    "ko": "",
+    "highlight": "blev bygget"
+   },
+   {
+    "en": "Mælk opbevares bedst ved fem grader.",
+    "ko": "",
+    "highlight": "opbevares"
+   },
+   {
+    "en": "Tyven blev opdaget af vagten klokken tre.",
+    "ko": "",
+    "highlight": "blev opdaget"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Huset bygges i går.",
+    "right": "Huset blev bygget i går.",
+    "note": "Specific past events require the blive-passive ('blev bygget'), not the timeless -s passive."
+   },
+   {
+    "wrong": "Maden skal bliver spist.",
+    "right": "Maden skal spises.",
+    "note": "After modal verbs like 'skal' or 'kan', use the infinitive s-passive ('skal spises')."
+   },
+   {
+    "wrong": "Døren åbnes af Peter for to minutter siden.",
+    "right": "Døren blev åbnet af Peter for to minutter siden.",
+    "note": "A concrete historical/past action with an agent ('af Peter') takes 'blev åbnet'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Vinduerne skal ___ inden stormen kommer.",
+    "options": [
+     "lukkes",
+     "bliver lukket",
+     "lukke",
+     "lukket"
+    ],
+    "answer": 0,
+    "explanation": "Following modal verbs like 'skal', Danish prefers the -s passive infinitive ('lukkes')."
+   },
+   {
+    "question": "Hans cykel ___ i går eftermiddags uden for skolen.",
+    "options": [
+     "stjæles",
+     "bliver stjålet",
+     "blev stjålet",
+     "stjæle"
+    ],
+    "answer": 2,
+    "explanation": "A specific past event that took place at a distinct time uses 'blev + datidstillægsform'."
+   },
+   {
+    "question": "Pakken ___ med posten hver torsdag.",
+    "options": [
+     "bliver sendt",
+     "sendes",
+     "sendte",
+     "bliver sende"
+    ],
+    "answer": 1,
+    "explanation": "Habitual or recurring general processes traditionally take the s-passive ('sendes')."
+   },
+   {
+    "question": "Dansk ___ af millioner af mennesker i hele riget.",
+    "options": [
+     "taler",
+     "snakkede",
+     "tales",
+     "bliver tale"
+    ],
+    "answer": 2,
+    "explanation": "A general, ongoing, timeless statement uses the s-passive ('tales')."
+   }
+  ],
+  "tip": "Ask yourself: Is this an instruction manual or a newspaper report of an accident? Manuals and rules prefer '-s', while breaking news and stories prefer 'blev'."
+ },
+ {
+  "id": "da-b1-conjunction-contrasts-da-nar-fordi-for",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#F59E0B",
+  "emoji": "🔗",
+  "title": "Temporal and Causal Conjunctions: Da vs. Når; Fordi vs. For",
+  "subtitle": "Navigating time constraints and distinct clause structures for reasons",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Use 'da' for a single event in the past and 'når' for repeated or future events; use 'fordi' for subordinate reason clauses and 'for' as a coordinating conjunction.",
+  "structure": {
+   "headers": [
+    "Conjunction",
+    "Type",
+    "Function",
+    "Word Order Impact"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "da",
+      "Subordinating",
+      "Single completed past event ('when')",
+      "Subordinate clause (S + A + V)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "når",
+      "Subordinating",
+      "Repeated past event OR any future event ('whenever/when')",
+      "Subordinate clause (S + A + V)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "fordi",
+      "Subordinating",
+      "Direct reason / cause ('because')",
+      "Subordinate clause (S + A + V)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "for",
+      "Coordinating",
+      "Explanatory side-clause ('for / because')",
+      "Main clause (S + V + A)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Single past point in time",
+    "example": "Da jeg var lille, boede vi på Fyn.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Future or recurrent event",
+    "example": "Jeg ringer til dig, når jeg kommer hjem.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Subordinate vs coordinating reason",
+    "example": "Jeg blev hjemme, fordi jeg ikke havde tid.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Da klokken slog tolv, gik vi i seng.",
+    "ko": "",
+    "highlight": "Da"
+   },
+   {
+    "en": "Når det regner, tager jeg altid bussen.",
+    "ko": "",
+    "highlight": "Når"
+   },
+   {
+    "en": "Hun kommer ikke i dag, fordi hun er syg.",
+    "ko": "",
+    "highlight": "fordi"
+   },
+   {
+    "en": "Vi må skynde os, for toget kører snart.",
+    "ko": "",
+    "highlight": "for"
+   },
+   {
+    "en": "Hvad vil du gerne lave, når du bliver færdig?",
+    "ko": "",
+    "highlight": "når"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Når jeg kom hjem i går, sov hunden.",
+    "right": "Da jeg kom hjem i går, sov hunden.",
+    "note": "Use 'da' for a specific, one-time historical past event ('i går')."
+   },
+   {
+    "wrong": "Jeg gør det, da jeg får fri i morgen.",
+    "right": "Jeg gør det, når jeg får fri i morgen.",
+    "note": "'Da' cannot refer to future time; use 'når' for upcoming conditions or events."
+   },
+   {
+    "wrong": "Han kom for sent, fordi han ikke kunne finde nøglen.",
+    "right": "Han kom for sent, for han kunne ikke finde nøglen. (OR: ... fordi han ikke kunne...)",
+    "note": "Notice that 'for' takes main clause word order (V before 'ikke'), while 'fordi' takes subordinate order ('ikke' before V)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "___ jeg mødte ham for første gang, var det vinter.",
+    "options": [
+     "Når",
+     "Fordi",
+     "Da",
+     "For"
+    ],
+    "answer": 2,
+    "explanation": "A one-time event completed in the past ('for første gang') requires 'da'."
+   },
+   {
+    "question": "Vi spiser aftensmad, ___ far kommer hjem fra arbejde.",
+    "options": [
+     "da",
+     "når",
+     "for",
+     "hvis"
+    ],
+    "answer": 1,
+    "explanation": "Future or regular routines require 'når'."
+   },
+   {
+    "question": "Hun aflyste aftalen, ___ hun havde feber.",
+    "options": [
+     "fordi",
+     "når",
+     "da",
+     "mens"
+    ],
+    "answer": 0,
+    "explanation": "'Fordi' introduces the subordinate clause providing the direct reason for her cancellation."
+   },
+   {
+    "question": "Han gik tidligt i seng, ___ han var meget træt.",
+    "options": [
+     "når",
+     "da",
+     "hvis",
+     "for"
+    ],
+    "answer": 3,
+    "explanation": "'For' functions as a coordinating conjunction joining two independent clauses with standard word order."
+   }
+  ],
+  "tip": "Remember the old Danish rhyme: 'Dengang da, hver gang når' (That time in the past = da; every time / whenever = når)."
+ },
+ {
+  "id": "da-b1-relative-pronoun-som-der-omission",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔗",
+  "title": "Relative Clauses: 'Som', 'Der', and Zero Pronoun",
+  "subtitle": "Connecting clauses using relative pronouns and omitting them when acting as objects",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Both 'som' and 'der' can serve as subject relative pronouns, but only 'som' (or zero pronoun) can function as the direct object.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Permitted Pronoun",
+    "Danish Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Subject in clause",
+      "som / der",
+      "Manden, som/der bor her, er flink.",
+      "The man who lives here is kind."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Object in clause",
+      "som / (omission)",
+      "Bogen, (som) jeg læser, er spændende.",
+      "The book (that) I am reading is exciting."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Preposition complement",
+      "som (prep. at end)",
+      "Huset, som vi talte om, er solgt.",
+      "The house that we spoke about is sold."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Subject Relative Clause",
+    "example": "Jeg kender en pige, der taler flydende spansk.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Object Relative Clause (with 'som')",
+    "example": "Kagen, som hun bagte i går, smagte fantastisk.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Relative Pronoun Omission",
+    "example": "Filmen, vi så i biografen, var alt for lang.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Her er kvinden, der vandt konkurrencen i sidste uge.",
+    "ko": "",
+    "highlight": "der vandt"
+   },
+   {
+    "en": "Den lejlighed, som de lige har købt, koster mange penge.",
+    "ko": "",
+    "highlight": "som de lige har købt"
+   },
+   {
+    "en": "Manden, vi mødte på gaden, spurgte om vej til stationen.",
+    "ko": "",
+    "highlight": "vi mødte"
+   },
+   {
+    "en": "Vi besøgte slottet, der ligger tæt ved den store skov.",
+    "ko": "",
+    "highlight": "der ligger"
+   },
+   {
+    "en": "Opgaven, læreren gav os i mandags, var svær.",
+    "ko": "",
+    "highlight": "læreren gav os"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Bogen, der jeg læser, er meget god.",
+    "right": "Bogen, som jeg læser, er meget god.",
+    "note": "Never use 'der' as an object pronoun; use 'som' or omit the pronoun entirely."
+   },
+   {
+    "wrong": "Manden bor ved siden af mig er pensionist.",
+    "right": "Manden, der bor ved siden af mig, er pensionist.",
+    "note": "You cannot omit the relative pronoun when it serves as the grammatical subject of the relative clause."
+   },
+   {
+    "wrong": "Her er musikken om hvilken vi talte.",
+    "right": "Her er musikken, som vi talte om.",
+    "note": "Danish prefers 'som' with the preposition placed at the very end of the subclause rather than 'hvilken' fronting."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Vælg det rigtige pronomen: 'Her er den cykel, ___ blev stjålet i går.'",
+    "options": [
+     "der",
+     "hvad",
+     "hvis",
+     "hvem"
+    ],
+    "answer": 0,
+    "explanation": "The pronoun acts as the subject of 'blev stjålet', so 'der' (or 'som') is required."
+   },
+   {
+    "question": "Hvilken sætning tillader udeladelse af det relative pronomen?",
+    "options": [
+     "Bilen, der holder i indkørslen, er rød.",
+     "Manden, som råbte ad os, var vred.",
+     "Maden, som vi bestilte på restauranten, var kold.",
+     "Drengen, som faldt på cyklen, græd."
+    ],
+    "answer": 2,
+    "explanation": "In 'Maden, som vi bestilte', 'vi' is the subject and 'som' is the object, so it can be omitted ('Maden, vi bestilte...')."
+   },
+   {
+    "question": "Hvilket ord kan IKKE bruges her: 'Den mand, ___ jeg så i morges, hedder Peter.'?",
+    "options": [
+     "som",
+     "(udeladt)",
+     "der",
+     "at"
+    ],
+    "answer": 2,
+    "explanation": "'Der' can never be an object relative pronoun in Danish."
+   },
+   {
+    "question": "Udfyld med korrekt ordstilling: 'Det er en situation, ___.'",
+    "options": [
+     "om som vi ikke tænkte",
+     "vi ikke tænkte om som",
+     "som vi ikke tænkte på",
+     "der vi tænkte på ikke"
+    ],
+    "answer": 2,
+    "explanation": "Relative clauses strand prepositions at the end of the clause ('som vi ikke tænkte på')."
+   }
+  ],
+  "tip": "Test whether you can delete the pronoun: if a noun or pronoun immediately follows it (functioning as the new subject), you can freely delete 'som'!"
+ },
+ {
+  "id": "da-b1-prepositional-verb-regimes",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🎯",
+  "title": "Fixed Prepositional Verbs and Complements",
+  "subtitle": "Mastering non-intuitive verb-preposition combinations before infinitives and clauses",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Danish keeps its preposition intact even when introducing an 'at'-clause or an infinitive phrase, unlike English.",
+  "structure": {
+   "headers": [
+    "Verb + Preposition",
+    "Complement Type",
+    "Danish Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "glæde sig til",
+      "til + at-infinitive / noun",
+      "Jeg glæder mig til at se dig.",
+      "look forward to"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "tænke på",
+      "på + at-clause / noun",
+      "Han tænker på, om det regner.",
+      "think about"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "interessere sig for",
+      "for + noun / pronoun",
+      "Hun interesserer sig for kunst.",
+      "be interested in"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "bede om",
+      "om + at-infinitive / noun",
+      "De bad om at få hjælp hurtigt.",
+      "ask for"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Anticipation with 'glæde sig til'",
+    "example": "Børnene glæder sig til at åbne gaverne juleaften.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Reflection with 'tænke på'",
+    "example": "Jeg tænker tit på at flytte ud på landet.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Doubt or opinion with 'tvivle på'",
+    "example": "Lægen tvivler på, at operationen er nødvendig.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Vi glæder os meget til at rejse til Italien i næste uge.",
+    "ko": "",
+    "highlight": "glæder os meget til at rejse"
+   },
+   {
+    "en": "Han overvejer altid alt grundigt og tænker over konsekvenserne.",
+    "ko": "",
+    "highlight": "tænker over"
+   },
+   {
+    "en": "Hun sørger for, at alle gæsterne har noget koldt at drikke.",
+    "ko": "",
+    "highlight": "sørger for, at"
+   },
+   {
+    "en": "Turisterne spurgte om vej til den nærmeste metrostation.",
+    "ko": "",
+    "highlight": "spurgte om vej"
+   },
+   {
+    "en": "Jeg er holdt op med at ryge for flere måneder siden.",
+    "ko": "",
+    "highlight": "holdt op med at ryge"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jeg glæder mig at se dig i morgen.",
+    "right": "Jeg glæder mig til at se dig i morgen.",
+    "note": "In Danish, you must retain the preposition 'til' before an infinitive complement with 'glæde sig'."
+   },
+   {
+    "wrong": "Hun er bange at køre i mørket.",
+    "right": "Hun er bange for at køre i mørket.",
+    "note": "Adjectives and verbs requiring prepositions keep them before 'at': 'bange for at...'"
+   },
+   {
+    "wrong": "Vi taler om vi skal spise nu.",
+    "right": "Vi taler om, hvorvidt vi skal spise nu.",
+    "note": "Do not omit or replace prepositions carelessly; pairing 'tale om' requires retaining 'om'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Hvilken præposition passer bedst: 'Han glæder sig utrolig meget ___ at begynde på universitetet.'?",
+    "options": [
+     "ved",
+     "på",
+     "til",
+     "om"
+    ],
+    "answer": 2,
+    "explanation": "'At glæde sig' governs the preposition 'til'."
+   },
+   {
+    "question": "Vælg den korrekte præposition: 'Jeg er blevet træt ___ at høre på den samme sang.'",
+    "options": [
+     "af",
+     "med",
+     "for",
+     "ved"
+    ],
+    "answer": 0,
+    "explanation": "The idiom is 'at være træt af noget' (to be tired/sick of something)."
+   },
+   {
+    "question": "Udfyld sætningen: 'De blev hurtigt enige ___ at udskyde mødet til på mandag.'",
+    "options": [
+     "mod",
+     "om",
+     "for",
+     "til"
+    ],
+    "answer": 1,
+    "explanation": "'At blive enig om noget' means to agree on/about something."
+   },
+   {
+    "question": "Find den korrekte konstruktion:",
+    "options": [
+     "Hun drømmer om at købe en lejlighed i Aarhus.",
+     "Hun drømmer til at købe en lejlighed i Aarhus.",
+     "Hun drømmer for at købe en lejlighed i Aarhus.",
+     "Hun drømmer at købe en lejlighed i Aarhus."
+    ],
+    "answer": 0,
+    "explanation": "'At drømme om' takes 'om + at + infinitive'."
+   }
+  ],
+  "tip": "Whenever an English verb takes a gerund (-ing) after a preposition, Danish almost always uses 'preposition + at + infinitive' (e.g., 'look forward to seeing' = 'glæde sig til at se')."
+ },
+ {
+  "id": "da-b2-danish-discourse-particles",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🗣️",
+  "title": "Discourse Modal Particles: Jo, Da, Vel, Nok, Skam",
+  "subtitle": "Navigating nuanced pragmatic particles that signal certainty, doubt, and social alignment",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Danish modal particles do not alter propositional content but convey epistemic stance and shared knowledge between speaker and listener.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Core Pragmatic Function",
+    "Danish Example",
+    "English Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "jo",
+      "Shared knowledge / obvious fact",
+      "Du ved det jo godt.",
+      "As you well know..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "da",
+      "Obvious confirmation / reassurance",
+      "Det kan du da sagtens.",
+      "Of course you can!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "vel",
+      "Tentative assumption / seeking agreement",
+      "Du kommer vel i aften?",
+      "I assume you're coming, right?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "nok",
+      "High probability / reassurance",
+      "Han klarer den nok.",
+      "He will probably be fine."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "skam",
+      "Polite contradiction / earnestness",
+      "Det er skam ganske sandt.",
+      "It is indeed quite true."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Shared Background with 'jo'",
+    "example": "Vi har jo ikke råd til en ny bil lige nu.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Encouragement or Emphasis with 'da'",
+    "example": "Kom da endelig indenfor i varmen!",
+    "translation": ""
+   },
+   {
+    "color": "#A78BFA",
+    "label": "Presumptive Tag with 'vel'",
+    "example": "Du har vel husket nøglerne til lejligheden?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Det vidste du jo godt, før du tog af sted hjemmefra.",
+    "ko": "",
+    "highlight": "jo"
+   },
+   {
+    "en": "Det er da den bedste idé, jeg længe har hørt!",
+    "ko": "",
+    "highlight": "da"
+   },
+   {
+    "en": "Du har vel ikke glemt vores aftale på fredag?",
+    "ko": "",
+    "highlight": "vel"
+   },
+   {
+    "en": "Bare tag det roligt, det skal nok gå alt sammen.",
+    "ko": "",
+    "highlight": "nok"
+   },
+   {
+    "en": "Jeg mener det skam fuldstændig alvorligt.",
+    "ko": "",
+    "highlight": "skam"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Er du hjemme i aften, vel?",
+    "right": "Du er vel hjemme i aften?",
+    "note": "'Vel' is placed in the central adverbial position in declarative statements expecting confirmation, not as an English trailing tag."
+   },
+   {
+    "wrong": "Jo er det koldt i dag.",
+    "right": "Det er jo koldt i dag.",
+    "note": "Modal particles typically sit in the central adverbial field (midt-feltet), never as the initial subject or fronted topic in this sense."
+   },
+   {
+    "wrong": "Han kommer jo? (asking for true information)",
+    "right": "Kommer han?",
+    "note": "Do not use 'jo' to ask genuine questions where you do not know the answer; 'jo' appeals to established common ground."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Hvilken partikel appellerer til fælles viden (som lytteren allerede burde vide)?",
+    "options": [
+     "vel",
+     "jo",
+     "nok",
+     "skam"
+    ],
+    "answer": 1,
+    "explanation": "'Jo' signals that the information is already known or self-evident to both interlocutors."
+   },
+   {
+    "question": "Hvilken partikel udtrykker formodning/spørgende forventning: 'Du har ___ læst lektierne?'",
+    "options": [
+     "da",
+     "skam",
+     "vel",
+     "dog"
+    ],
+    "answer": 2,
+    "explanation": "'Vel' assumes an answer ('I suppose you did read them, didn't you?')."
+   },
+   {
+    "question": "Hvad udtrykker 'nok' i sætningen: 'Hun ringer nok senere.'?",
+    "options": [
+     "Absolut sikkerhed",
+     "Formodning eller sandsynlighed",
+     "En kraftig ordre",
+     "En høflig benægtelse"
+    ],
+    "answer": 1,
+    "explanation": "'Nok' weakens certainty to probable or likely ('She will probably call later')."
+   },
+   {
+    "question": "Vælg sætningen med korrekt naturlig ordstilling for partiklen 'da':",
+    "options": [
+     "Da det er en flot trøje.",
+     "Det er da en flot trøje!",
+     "Det er en da flot trøje!",
+     "Det er en flot trøje da!"
+    ],
+    "answer": 1,
+    "explanation": "Modal particles appear in the central adverbial slot between the finite verb and the non-finite verb/objects."
+   }
+  ],
+  "tip": "Listen for intonation: 'da' carries an energetic or encouraging tone, while 'vel' slightly drops in pitch expecting agreement."
+ },
+ {
+  "id": "da-b2-complex-adverbial-nesting-and-feltanalysen",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#3B82F6",
+  "emoji": "📐",
+  "title": "Diderichsen's Sentence Mechanics (Feltanalysen) in Complex Clauses",
+  "subtitle": "Applying topology models across embedded clauses, multiple adverbials, and clefts",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "In main clauses, central adverbs follow the finite verb (v-a), but in subordinate clauses, they precede the finite verb (a-v).",
+  "structure": {
+   "headers": [
+    "Clause Type",
+    "Field Order (Forfelt - Midtfelt - Slutfelt)",
+    "Danish Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Main Clause",
+      "F (S) | v (V1) | n (S2) | a (Adv)",
+      "Peter læser aldrig avisen om aftenen.",
+      "Peter never reads the paper in the evening."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Subordinate Clause",
+      "k (Conj) | n (S) | a (Adv) | v (V1)",
+      "... fordi Peter aldrig læser avisen.",
+      "... because Peter never reads the paper."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Cleft Sentence",
+      "Det er [X], som [a-v-V]",
+      "Det er Peter, som ikke vil deltage i festen.",
+      "It is Peter who does not want to participate."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Nested Cleft Clause",
+    "example": "Det var min søster, der aldrig havde hørt om det før.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Embedded Subclause with Negation",
+    "example": "Han sagde, at hun sikkert ikke kommer til mødet.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Inverted Main Clause",
+    "example": "I går spiste jeg desværre ikke aftensmad.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Han indrømmede, at han faktisk ikke havde forstået opgaven.",
+    "ko": "",
+    "highlight": "at han faktisk ikke havde forstået"
+   },
+   {
+    "en": "Hvis du virkelig ikke vil med, bliver vi bare hjemme.",
+    "ko": "",
+    "highlight": "Hvis du virkelig ikke vil med"
+   },
+   {
+    "en": "Det er chefen, som altid kritiserer vores rapporter.",
+    "ko": "",
+    "highlight": "som altid kritiserer"
+   },
+   {
+    "en": "I morgen vil han sandsynligvis gerne forklare hele situationen.",
+    "ko": "",
+    "highlight": "vil han sandsynligvis gerne forklare"
+   },
+   {
+    "en": "Selvom bussen sjældent kommer til tiden, tager han den alligevel.",
+    "ko": "",
+    "highlight": "bussen sjældent kommer til tiden"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jeg ved, at han kommer ikke i dag.",
+    "right": "Jeg ved, at han ikke kommer i dag.",
+    "note": "In a subordinate clause, the central adverb ('ikke') must precede the finite verb ('kommer')."
+   },
+   {
+    "wrong": "Det er ham, der ringede ikke i går.",
+    "right": "Det er ham, der ikke ringede i går.",
+    "note": "Relative clauses function as subordinate clauses, meaning central adverbs precede the finite verb."
+   },
+   {
+    "wrong": "Måske han har glemt aftalen.",
+    "right": "Måske har han glemt aftalen. / Han har måske glemt aftalen.",
+    "note": "When 'måske' occupies the initial field (forfeltet), subject-verb inversion (V2) is strictly required."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Hvilken ordstilling er korrekt i ledsætningen?",
+    "options": [
+     "... fordi han ikke vil spise kød.",
+     "... fordi han vil ikke spise kød.",
+     "... fordi ikke han vil spise kød.",
+     "... fordi spise han vil ikke kød."
+    ],
+    "answer": 0,
+    "explanation": "The subordinate clause schema requires: konjunktion ('fordi') + subjekt ('han') + centraladverbial ('ikke') + finit verbum ('vil')."
+   },
+   {
+    "question": "Hvilken sætning er en korrekt kløvet sætning (cleft sentence)?",
+    "options": [
+     "Det er læreren, som forklarede ikke lektien.",
+     "Det var Peter, der aldrig havde prøvet sushi før.",
+     "Det er ham der har altid boet i København.",
+     "Det var i går som vi mødtes ikke."
+    ],
+    "answer": 1,
+    "explanation": "In relative cleft clauses, the central adverbial precedes the finite verb ('der aldrig havde prøvet')."
+   },
+   {
+    "question": "Hvad sker der, når et adverbial placeres i forfeltet i en hovedsætning?",
+    "options": [
+     "Subjektet forbliver foran verbet",
+     "Der sker inversion (verbum før subjekt)",
+     "Ledsætningsordstilling aktiveres",
+     "Adverbialet fordobles"
+    ],
+    "answer": 1,
+    "explanation": "Danish is a strict V2 language: fronting any element into the forfelt pushes the finite verb into position 2 before the subject."
+   },
+   {
+    "question": "Vælg den korrekte sætning med to centraladverbialer i en ledsætning:",
+    "options": [
+     "... da vi desværre ofte må aflyse.",
+     "... da vi må desværre ofte aflyse.",
+     "... da vi må aflyse desværre ofte.",
+     "... da desværre ofte vi må aflyse."
+    ],
+    "answer": 0,
+    "explanation": "In the subordinate clause midtfelt, both central adverbials ('desværre', 'ofte') precede the finite verb ('må')."
+   }
+  ],
+  "tip": "Remember the mnemonic 'S-A-V' for ledsætninger (Subjekt - Adverbial - Verbum) vs. 'S-V-A' for standard hovedsætninger."
+ },
+ {
+  "id": "da-b2-infinitive-clauses-and-adverbial-placement",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🎯",
+  "title": "Infinitive Clauses with 'For At' and Adverbial Placement",
+  "subtitle": "Formulating purpose infinitives and integrating medial adverbs inside non-finite clauses",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Purpose infinitive clauses are introduced by 'for at', and clausal adverbs like 'ikke' or 'aldrig' are placed directly between 'for' and 'at' or immediately following 'at'.",
+  "structure": {
+   "headers": [
+    "Construction",
+    "Placement Pattern",
+    "Danish Example",
+    "English Translation"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Standard Purpose",
+      "for at + Inf",
+      "Han trænede hårdt for at vinde løbet.",
+      "He trained hard to win the race."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negated Infinitive (Standard)",
+      "for ikke at + Inf",
+      "Jeg hviskede for ikke at vække barnet.",
+      "I whispered so as not to wake the child."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negated Infinitive (Split variant)",
+      "for at ikke + Inf",
+      "Han gik tidligt for at ikke komme for sent.",
+      "He left early in order not to arrive late."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Modal Adverb Integration",
+      "for simpelthen at + Inf",
+      "De mødtes for simpelthen at snakke ud.",
+      "They met simply to talk things through."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Expressing Deliberate Purpose",
+    "example": "Hun sparede op i to år for at købe en lejlighed.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Avoidance with 'for ikke at'",
+    "example": "Vi tog af sted i god tid for ikke at misse toget.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Adverbial Nuance in Infinitive",
+    "example": "Han læser avisen hver dag for altid at være opdateret.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Han tog solbriller på for ikke at blive blændet af solen.",
+    "ko": "",
+    "highlight": "for ikke at blive blændet"
+   },
+   {
+    "en": "Hun arbejder over hver dag for hurtigt at afslutte projektet.",
+    "ko": "",
+    "highlight": "for hurtigt at afslutte"
+   },
+   {
+    "en": "De gik over på den anden side af gaden for helt at undgå ham.",
+    "ko": "",
+    "highlight": "for helt at undgå"
+   },
+   {
+    "en": "Man skal øve sig dagligt for virkelig at mestre sproget.",
+    "ko": "",
+    "highlight": "for virkelig at mestre"
+   },
+   {
+    "en": "Han lukkede døren forsigtigt for ikke at larme.",
+    "ko": "",
+    "highlight": "for ikke at larme"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jeg gjorde det for at ikke vække ham.",
+    "right": "Jeg gjorde det for ikke at vække ham.",
+    "note": "While 'for at ikke' occurs in colloquial speech, standard cultivated Danish strongly prefers 'for ikke at + inf'."
+   },
+   {
+    "wrong": "Hun løb til bussen til at nå den.",
+    "right": "Hun løb til bussen for at nå den.",
+    "note": "Use 'for at' to indicate intention or purpose, never 'til at'."
+   },
+   {
+    "wrong": "Vi stoppede for at ryge ikke.",
+    "right": "Vi stoppede for ikke at ryge.",
+    "note": "The adverbial 'ikke' cannot stand at the end of the infinitive complement; it belongs immediately before 'at' (or after)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Hvilken sætning udtrykker hensigt mest korrekt og naturligt i formelt dansk?",
+    "options": [
+     "Jeg skyndte mig for at ikke misse bussen.",
+     "Jeg skyndte mig for ikke at misse bussen.",
+     "Jeg skyndte mig til at ikke misse bussen.",
+     "Jeg skyndte mig for misse ikke bussen."
+    ],
+    "answer": 1,
+    "explanation": "The standard placement puts 'ikke' between 'for' and 'at': 'for ikke at misse bussen'."
+   },
+   {
+    "question": "Hvilken konjunktion udtrykker formål/hensigt sammen med en infinitiv?",
+    "options": [
+     "ved at",
+     "uden at",
+     "for at",
+     "efter at"
+    ],
+    "answer": 2,
+    "explanation": "'For at' specifically marks purpose ('in order to')."
+   },
+   {
+    "question": "Placer adverbiet korrekt: 'Hun studerer hårdt for (virkelig) at bestå sin eksamen.'",
+    "options": [
+     "Hun studerer hårdt for at bestå virkelig sin eksamen.",
+     "Hun studerer hårdt for at virkelig bestå sin eksamen.",
+     "Hun studerer hårdt for virkelig at bestå sin eksamen.",
+     "Hun studerer hårdt for bestå sin eksamen virkelig."
+    ],
+    "answer": 2,
+    "explanation": "Adverbials of degree and manner neatly insert between 'for' and 'at' ('for virkelig at bestå')."
+   },
+   {
+    "question": "Hvad betyder konstruktionen 'uden at' efterfulgt af infinitiv?",
+    "options": [
+     "Formål (in order to)",
+     "Udelukkelse/negation (without doing)",
+     "Tidspunkt (after having done)",
+     "Betingelse (as long as)"
+    ],
+    "answer": 1,
+    "explanation": "'Uden at' denotes 'without doing something'."
+   }
+  ],
+  "tip": "When negating an intention, think of 'for ikke at' as a single inseparable block meaning 'in order NOT to'."
+ }
+]

@@ -1,0 +1,3355 @@
+[
+ {
+  "id": "et-a1-vowel-harmony-and-consonant-gradation-basics",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "🔄",
+  "title": "Consonant Gradation Basics",
+  "subtitle": "Alternation between strong and weak consonant stems in words",
+  "color": "#3B82F6",
+  "bg": "#EFF6FF",
+  "keyPoint": "Estonian words alternate between strong and weak grades, typically weakening consonants like k, p, and t when suffixes are added.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Strong Grade",
+    "Weak Grade",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "k → ∅",
+      "jõgi (stem: jõkk-)",
+      "jõe",
+      "river (nom / gen)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "kk → k",
+      "pank",
+      "panga",
+      "bank (nom / gen)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "t → d",
+      "kodu (stem: kott-)",
+      "kodu",
+      "home (nom / gen)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "pp → p",
+      "sepp",
+      "sepa",
+      "blacksmith (nom / gen)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Weakening in Genitive",
+    "example": "Pangas on palju raha.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Strengthening in Plural Partitive",
+    "example": "Me vaatame neid suuri jõgesid.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Weakening in Present Verbs",
+    "example": "Ma loen huvitavat raamatut.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "See suur tuba on soe.",
+    "ko": "",
+    "highlight": "tuba"
+   },
+   {
+    "en": "Mul on uue toa võti.",
+    "ko": "",
+    "highlight": "toa"
+   },
+   {
+    "en": "Ta loeb ajalehte.",
+    "ko": "",
+    "highlight": "loeb"
+   },
+   {
+    "en": "Meie linnas avatakse uus pank.",
+    "ko": "",
+    "highlight": "pank"
+   },
+   {
+    "en": "Panga ees seisab buss.",
+    "ko": "",
+    "highlight": "Panga"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "panki kaart",
+    "right": "panga kaart",
+    "note": "The noun 'pank' undergoes gradation (kk -> g/ng) in the genitive case to form 'panga'."
+   },
+   {
+    "wrong": "ma lugen raamatut",
+    "right": "ma loen raamatut",
+    "note": "The verb 'lugema' has the weak stem 'loe-' in the first person present tense."
+   },
+   {
+    "wrong": "tubas on soe",
+    "right": "toas on soe",
+    "note": "The word 'tuba' drops the 'b' in the weak grade, yielding the stem 'toa-'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the genitive form: 'See on minu uue ___ (kodu) aadress.'",
+    "options": [
+     "kott",
+     "kodu",
+     "koduse",
+     "koti"
+    ],
+    "answer": 1,
+    "explanation": "'Kodu' retains 'kodu' in the genitive singular (shortening/weak stem)."
+   },
+   {
+    "question": "Choose the correct genitive of 'pank':",
+    "options": [
+     "panga",
+     "panki",
+     "paki",
+     "pandi"
+    ],
+    "answer": 0,
+    "explanation": "The strong cluster 'nk' weakens to 'ng', giving 'panga'."
+   },
+   {
+    "question": "Fill in the blank with the correct verb form: 'Ma ___ (lugema) seda lehte.'",
+    "options": [
+     "lugema",
+     "lugeda",
+     "loen",
+     "loeb"
+    ],
+    "answer": 2,
+    "explanation": "The first-person singular 'ma' requires the weak-stem form 'loen'."
+   },
+   {
+    "question": "Identify the weak-grade form of 'tuba':",
+    "options": [
+     "tubade",
+     "tuba",
+     "tubad",
+     "toa"
+    ],
+    "answer": 3,
+    "explanation": "'Tuba' weakens by losing 'b', leaving the stem 'toa-'."
+   }
+  ],
+  "tip": "Memorize the first three basic forms of every noun together to master gradation effortlessly."
+ },
+ {
+  "id": "et-a1-three-basic-forms-of-nouns",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "🧱",
+  "title": "The Three Base Forms of Nouns",
+  "subtitle": "Nominative, Genitive, and Partitive as the building blocks for all cases",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "All 14 Estonian noun cases are formed by attaching endings to either the Genitive stem (singular cases) or the Partitive stem.",
+  "structure": {
+   "headers": [
+    "Case Name",
+    "Form Question",
+    "Example: raamat",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Nimetav (Nominative)",
+      "Kes? Mis?",
+      "raamat",
+      "book (subject)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Omastav (Genitive)",
+      "Kelle? Mille?",
+      "raamatu",
+      "of the book (base)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Osastav (Partitive)",
+      "Keda? Mida?",
+      "raamatut",
+      "book (object/amount)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6366F1",
+    "label": "Subject of Sentence",
+    "example": "See raamat on väga põnev.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Possession and Case Stems",
+    "example": "Raamatu kaaned on sinised.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Quantities and Numbers",
+    "example": "Mul on kolm raamatut.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Laud on pruun.",
+    "ko": "",
+    "highlight": "Laud"
+   },
+   {
+    "en": "Laua peal on tass.",
+    "ko": "",
+    "highlight": "Laua"
+   },
+   {
+    "en": "Mul on vaja uut lauda.",
+    "ko": "",
+    "highlight": "lauda"
+   },
+   {
+    "en": "See maja on väga vana.",
+    "ko": "",
+    "highlight": "maja"
+   },
+   {
+    "en": "Näen tänaval suurt koera.",
+    "ko": "",
+    "highlight": "koera"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "kaks raamat",
+    "right": "kaks raamatut",
+    "note": "Numbers greater than one require the noun in the Partitive singular."
+   },
+   {
+    "wrong": "laud peal",
+    "right": "laua peal",
+    "note": "Postpositions like 'peal' require the preceding noun to be in the Genitive case."
+   },
+   {
+    "wrong": "ma tahan kohv",
+    "right": "ma tahan kohvi",
+    "note": "Objects of partial or indefinite desire/consumption must be in the Partitive case."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which case is used directly after numbers higher than one (e.g., 'viis ___')?",
+    "options": [
+     "Nimetav (Nominative)",
+     "Omastav (Genitive)",
+     "Osastav (Partitive)",
+     "Kaasaütlev (Comitative)"
+    ],
+    "answer": 2,
+    "explanation": "Numerals (except one) govern the Partitive singular."
+   },
+   {
+    "question": "What is the Genitive singular of 'laud' (table)?",
+    "options": [
+     "lauda",
+     "laua",
+     "lauad",
+     "laud"
+    ],
+    "answer": 1,
+    "explanation": "'Laud' weakens by dropping 'd', resulting in 'laua'."
+   },
+   {
+    "question": "Identify the Nominative form in: 'kass', 'kassi', 'kasse', 'kassiga'.",
+    "options": [
+     "kass",
+     "kassi",
+     "kasse",
+     "kassiga"
+    ],
+    "answer": 0,
+    "explanation": "'Kass' is the basic dictionary/Nominative form."
+   },
+   {
+    "question": "Complete the phrase: 'Ma loen huvitavat ___ (leht)'.",
+    "options": [
+     "lehe",
+     "leht",
+     "lehel",
+     "lehte"
+    ],
+    "answer": 3,
+    "explanation": "The direct object of ongoing reading is Partitive: 'lehte'."
+   }
+  ],
+  "tip": "Always learn vocabulary in triplets: 'raamat, raamatu, raamatut'."
+ },
+ {
+  "id": "et-a1-internal-local-cases",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "📦",
+  "title": "Internal Local Cases",
+  "subtitle": "Moving into, staying inside, and moving out of enclosed spaces",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Internal local cases add -sse (Illative: into), -s (Inessive: inside), and -st (Elative: out of) to the singular Genitive stem.",
+  "structure": {
+   "headers": [
+    "Case",
+    "Suffix",
+    "Question",
+    "Example (maja)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Sisseütlev (Illative)",
+      "-sse / short",
+      "Kuhu? (Where to?)",
+      "majasse / majja"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Seesütlev (Inessive)",
+      "-s",
+      "Kus? (Where at?)",
+      "majas"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Seestütlev (Elative)",
+      "-st",
+      "Kust? (Where from?)",
+      "majast"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Entering an Interior",
+    "example": "Me läheme täna teatrisse.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Being Inside",
+    "example": "Õpilased istuvad klassis.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Exiting an Interior",
+    "example": "Ta tuleb hilja töölt koju ja astub autost välja.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mina elan ilusas linnas.",
+    "ko": "",
+    "highlight": "linnas"
+   },
+   {
+    "en": "Jüri läheb õhtul kooli.",
+    "ko": "",
+    "highlight": "kooli"
+   },
+   {
+    "en": "Võtan kapist puhta taldriku.",
+    "ko": "",
+    "highlight": "kapist"
+   },
+   {
+    "en": "Kas sa oled praegu toas?",
+    "ko": "",
+    "highlight": "toas"
+   },
+   {
+    "en": "Rong saabub Tartusse kell viis.",
+    "ko": "",
+    "highlight": "Tartusse"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "elan Tallinn",
+    "right": "elan Tallinnas",
+    "note": "Expressing location inside a city requires the Inessive suffix -s on the Genitive stem."
+   },
+   {
+    "wrong": "lähen poes",
+    "right": "lähen poodi / poesse",
+    "note": "'Lähen' requires motion into (Illative), not stationary Inessive (-s)."
+   },
+   {
+    "wrong": "tulen kool",
+    "right": "tulen koolist",
+    "note": "Expressing movement from a place requires the Elative ending -st."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which sentence means 'I live in a room'?",
+    "options": [
+     "Lähen tuppa.",
+     "Elan toas.",
+     "Tulen toast.",
+     "Olen toaga."
+    ],
+    "answer": 1,
+    "explanation": "Inessive case ending '-s' denotes staying inside: 'toas'."
+   },
+   {
+    "question": "Choose the correct form for 'out of the forest': 'Tuleme ___ (mets).'",
+    "options": [
+     "metsas",
+     "metsa",
+     "metsast",
+     "metsale"
+    ],
+    "answer": 2,
+    "explanation": "Movement out of an interior uses the Elative suffix '-st' -> 'metsast'."
+   },
+   {
+    "question": "Complete the direction: 'Ta läheb uude ___ (korter).'",
+    "options": [
+     "korterisse",
+     "korteris",
+     "korterist",
+     "korteril"
+    ],
+    "answer": 0,
+    "explanation": "Movement into a place takes the Illative '-sse' -> 'korterisse'."
+   },
+   {
+    "question": "What question word corresponds to the Inessive case (-s)?",
+    "options": [
+     "Kuhu?",
+     "Kust?",
+     "Kellele?",
+     "Kus?"
+    ],
+    "answer": 3,
+    "explanation": "'Kus?' (Where?) asks about location within a place."
+   }
+  ],
+  "tip": "Attach -s, -st, and -sse directly to the Genitive stem (e.g., korteri -> korteris, korterist, korterisse)."
+ },
+ {
+  "id": "et-a1-external-local-cases",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "🏞️",
+  "title": "External Local Cases",
+  "subtitle": "Moving onto surfaces, staying on or at locations, and leaving them",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "External local cases attach -le (Allative: onto), -l (Adessive: on/at), and -lt (Ablative: off of) to the Genitive stem, also expressing possession.",
+  "structure": {
+   "headers": [
+    "Case",
+    "Suffix",
+    "Core Function",
+    "Example (laud)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Alaleütlev (Allative)",
+      "-le",
+      "Onto / to someone",
+      "lauale"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Alalütlev (Adessive)",
+      "-l",
+      "On / at / 'have' construction",
+      "laual / mul"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Alaltütlev (Ablative)",
+      "-lt",
+      "Off of / from someone",
+      "laualt"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Surface Position",
+    "example": "Võtmed on laual.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Possession ('Have' Pattern)",
+    "example": "Mul on uus auto.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Recipient / Direction To",
+    "example": "Saadan emale kirja.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Pliiats kukkus põrandale.",
+    "ko": "",
+    "highlight": "põrandale"
+   },
+   {
+    "en": "Mul on suur pere.",
+    "ko": "",
+    "highlight": "Mul"
+   },
+   {
+    "en": "Taldrikud on riiulil.",
+    "ko": "",
+    "highlight": "riiulil"
+   },
+   {
+    "en": "Võta tass laualt ära.",
+    "ko": "",
+    "highlight": "laualt"
+   },
+   {
+    "en": "Me läheme suvel merele.",
+    "ko": "",
+    "highlight": "merele"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "mina on kass",
+    "right": "mul on kass",
+    "note": "Estonian has no verb 'to have'; use the person in Adessive (mul) + on + thing."
+   },
+   {
+    "wrong": "raamat on laud",
+    "right": "raamat on laual",
+    "note": "To say 'on the table', use the Adessive suffix -l on the genitive stem."
+   },
+   {
+    "wrong": "anna see minule raamat",
+    "right": "anna see raamat mulle",
+    "note": "'Give to me' takes the short allative 'mulle' or full 'minule'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I have a dog' in Estonian?",
+    "options": [
+     "Mina on koer.",
+     "Mul on koer.",
+     "Mul on koera.",
+     "Minust on koer."
+    ],
+    "answer": 1,
+    "explanation": "The possessive structure is [Person in Adessive] + on + [Noun in Nominative]: 'Mul on koer.'"
+   },
+   {
+    "question": "Choose the correct case for movement onto an open area: 'Lapsed lähevad ___ (õu).'",
+    "options": [
+     "õues",
+     "õuest",
+     "õuele",
+     "õuega"
+    ],
+    "answer": 2,
+    "explanation": "Direction onto/towards an open area uses the Allative suffix '-le'."
+   },
+   {
+    "question": "Which suffix marks the Ablative case (from a surface)?",
+    "options": [
+     "-st",
+     "-le",
+     "-s",
+     "-lt"
+    ],
+    "answer": 3,
+    "explanation": "The Ablative ending is '-lt' (e.g., laualt = from the table)."
+   },
+   {
+    "question": "Fill in the blank: 'Sõnastik seisab minu ___ (laud).'",
+    "options": [
+     "laual",
+     "lauale",
+     "laualt",
+     "laudas"
+    ],
+    "answer": 0,
+    "explanation": "Position on top of a table requires the Adessive case '-l': 'laual'."
+   }
+  ],
+  "tip": "The Adessive case (-l) does double duty: spatial position ('on') and ownership ('mul on' = I have)."
+ },
+ {
+  "id": "et-a1-present-tense-and-negation",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⏱️",
+  "title": "Present Tense Conjugation and Negation",
+  "subtitle": "Conjugating personal endings and using the universal negative word 'ei'",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "Add personal endings (-n, -d, -b, -me, -te, -vad) to the present stem, and negate simply by placing 'ei' before the bare stem.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Affirmative Ending",
+    "Affirmative (elama)",
+    "Negative (elama)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "mina (ma)",
+      "-n",
+      "elan",
+      "ei ela"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "sina (sa)",
+      "-d",
+      "elad",
+      "ei ela"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "tema (ta)",
+      "-b",
+      "elab",
+      "ei ela"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "meie / teie / nemad",
+      "-me / -te / -vad",
+      "elame / elate / elavad",
+      "ei ela"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Everyday Habits",
+    "example": "Ma joon igal hommikul kohvi.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Universal Negation",
+    "example": "Me ei ela Tallinnas.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Present State",
+    "example": "Kas te räägite eesti keelt?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mina töötan haiglas.",
+    "ko": "",
+    "highlight": "töötan"
+   },
+   {
+    "en": "Kas sa räägid inglise keelt?",
+    "ko": "",
+    "highlight": "räägid"
+   },
+   {
+    "en": "Nemad ei tea seda aadressi.",
+    "ko": "",
+    "highlight": "ei tea"
+   },
+   {
+    "en": "Meie elame Tartus.",
+    "ko": "",
+    "highlight": "elame"
+   },
+   {
+    "en": "Ta ei taha külma teed.",
+    "ko": "",
+    "highlight": "ei taha"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "mina ei elan siin",
+    "right": "mina ei ela siin",
+    "note": "Never keep personal endings in negative sentences; use 'ei' + bare present stem."
+   },
+   {
+    "wrong": "nemad ei elavad",
+    "right": "nemad ei ela",
+    "note": "The negative stem 'ei ela' is invariant for all persons, singular and plural."
+   },
+   {
+    "wrong": "ta elad Tartus",
+    "right": "ta elab Tartus",
+    "note": "Third-person singular 'tema/ta' takes the personal ending '-b'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you conjugate 'õppima' for 'meie' in the present tense?",
+    "options": [
+     "õpid",
+     "õpib",
+     "õpime",
+     "õpivad"
+    ],
+    "answer": 2,
+    "explanation": "The first-person plural ending is '-me': 'meie õpime'."
+   },
+   {
+    "question": "Choose the correct negative form: 'Nemad ___ siin.'",
+    "options": [
+     "ei tööta",
+     "ei töötavad",
+     "mitte töötavad",
+     "ei töötad"
+    ],
+    "answer": 0,
+    "explanation": "Negation uses invariant 'ei' plus the present stem without personal endings: 'ei tööta'."
+   },
+   {
+    "question": "Select the correct ending for 'sina':",
+    "options": [
+     "-n",
+     "-b",
+     "-te",
+     "-d"
+    ],
+    "answer": 3,
+    "explanation": "Second-person singular 'sina/sa' takes the ending '-d'."
+   },
+   {
+    "question": "Complete the sentence: 'Kas te ___ eesti keelt?' (rääkima)",
+    "options": [
+     "räägin",
+     "räägite",
+     "räägime",
+     "räägivad"
+    ],
+    "answer": 1,
+    "explanation": "'Teie/te' matches the ending '-te': 'räägite'."
+   }
+  ],
+  "tip": "To make any verb negative in the present tense, simply take the 'ma' form (e.g., 'elan'), drop the '-n' ('ela'), and add 'ei' in front: 'ei ela' for all persons!"
+ },
+ {
+  "id": "et-a1-partitive-with-numbers-and-amounts",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔢",
+  "title": "Partitive Singular with Numbers and Quantifiers",
+  "subtitle": "Use the Partitive Singular after numbers two and above as well as quantity words",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "All cardinal numbers from two upwards and indefinite quantifiers require the following countable noun to be in the Partitive Singular.",
+  "structure": {
+   "headers": [
+    "Quantity Type",
+    "Structure",
+    "Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Number 'üks' (one)",
+      "üks + Nominative",
+      "üks tass",
+      "one cup"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Numbers 2+",
+      "Number + Partitive sg.",
+      "kaks tassi",
+      "two cups"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Indefinite amount",
+      "palju / natuke + Partitive sg.",
+      "palju kohvi",
+      "a lot of coffee"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Units of measure",
+      "klaas / liiter + Partitive sg.",
+      "klaas vett",
+      "a glass of water"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Counting Objects (2+)",
+    "example": "Laual on kolm raamatut.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Expressing High/Low Amounts",
+    "example": "Pargis on palju inimesi.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Food & Drink Portions",
+    "example": "Palun mulle üks tass teed.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mul on kodus kaks kassi.",
+    "ko": "",
+    "highlight": "kass"
+   },
+   {
+    "en": "Laual seisab viis suurt õuna.",
+    "ko": "",
+    "highlight": "õuna"
+   },
+   {
+    "en": "Kas sul on natuke aega?",
+    "ko": "",
+    "highlight": "aega"
+   },
+   {
+    "en": "Me ostame poest liitri piima.",
+    "ko": "",
+    "highlight": "piima"
+   },
+   {
+    "en": "Õues kõnnib mitu koera.",
+    "ko": "",
+    "highlight": "koera"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "kaks kassid",
+    "right": "kaks kassi",
+    "note": "Numbers take the Partitive singular, never the Nominative plural."
+   },
+   {
+    "wrong": "üks tassi",
+    "right": "üks tass",
+    "note": "The number 'üks' (one) takes the Nominative singular, not Partitive."
+   },
+   {
+    "wrong": "palju autot",
+    "right": "palju autosid",
+    "note": "While uncountable nouns take Partitive singular, countable nouns after 'palju' usually take Partitive plural."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I need two tickets: 'Mul on vaja kaks ___.'",
+    "options": [
+     "pilet",
+     "piletit",
+     "piletid",
+     "piletite"
+    ],
+    "answer": 1,
+    "explanation": "Cardinal numerals from 2 upwards govern the Partitive singular form 'piletit'."
+   },
+   {
+    "question": "There is only one apple left: 'Laual on ainult üks ___.'",
+    "options": [
+     "õuna",
+     "õunad",
+     "õun",
+     "õunast"
+    ],
+    "answer": 2,
+    "explanation": "The number 'üks' is followed by the Nominative singular form 'õun'."
+   },
+   {
+    "question": "Do you want a cup of coffee: 'Kas sa soovid tassi ___?'",
+    "options": [
+     "kohv",
+     "kohvi",
+     "kohvis",
+     "kohvist"
+    ],
+    "answer": 1,
+    "explanation": "Indefinite substances and items following containers take the Partitive singular 'kohvi'."
+   },
+   {
+    "question": "We have three big rooms: 'Meil on kolm suurt ___.'",
+    "options": [
+     "toad",
+     "tuppa",
+     "toas",
+     "tuba"
+    ],
+    "answer": 3,
+    "explanation": "The Partitive singular of 'tuba' is 'tuba' (with short vowel and grade change), governed by 'kolm'."
+   }
+  ],
+  "tip": "Always learn the first three base forms of every Estonian noun (Nominative, Genitive, Partitive); you cannot count without knowing the 3rd form!"
+ },
+ {
+  "id": "et-a2-ma-vs-da-infinitives",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "The -ma vs. -da Infinitives",
+  "subtitle": "Master when to use the supine (-ma) versus the standard infinitive (-da)",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use the -ma infinitive for motion, starting, and obligation (peama), and use the -da infinitive after modal verbs, preferences, and permissions.",
+  "structure": {
+   "headers": [
+    "Infinitive",
+    "Key Governing Verbs",
+    "Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-ma (Supine)",
+      "minema, hakkama, peama",
+      "Ma pean õppima.",
+      "I must study."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-da (Infinitive)",
+      "tahtma, saama, võima",
+      "Ma tahan süüa.",
+      "I want to eat."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-da with Adjectives",
+      "on hea, on raske, on tore",
+      "On hea teada.",
+      "It is good to know."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-da for Preferences",
+      "meeldima, eelistama",
+      "Mulle meeldib ujuda.",
+      "I like swimming."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Movement and Destination (-ma)",
+    "example": "Lapsed lähevad õue mängima.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Desire and Ability (-da)",
+    "example": "Kas sa oskad eesti keelt rääkida?",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Necessity with 'pidama' (-ma)",
+    "example": "Homme pean ma vara ärkama.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ma hakkan nüüd eesti keelt õppima.",
+    "ko": "",
+    "highlight": "õppima"
+   },
+   {
+    "en": "Ta tahab kohvikus kohvi juua.",
+    "ko": "",
+    "highlight": "juua"
+   },
+   {
+    "en": "Me läheme täna kinno uut filmi vaatama.",
+    "ko": "",
+    "highlight": "vaatama"
+   },
+   {
+    "en": "Kas ma tohin siin istuda?",
+    "ko": "",
+    "highlight": "istuda"
+   },
+   {
+    "en": "Mulle väga meeldib suvel reisida.",
+    "ko": "",
+    "highlight": "reisida"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ma tahan minema.",
+    "right": "Ma tahan minna.",
+    "note": "'Tahtma' (to want) must always govern the -da infinitive ('minna')."
+   },
+   {
+    "wrong": "Ma pean lugeda.",
+    "right": "Ma pean lugema.",
+    "note": "'Pidama' (must/have to) always requires the -ma infinitive."
+   },
+   {
+    "wrong": "Ma lähen magada.",
+    "right": "Ma lähen magama.",
+    "note": "Motion verbs indicating purpose (like 'minema') require the -ma form."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He has to work tomorrow: 'Ta peab homme ___.'",
+    "options": [
+     "töötama",
+     "töötada",
+     "töötad",
+     "töötan"
+    ],
+    "answer": 0,
+    "explanation": "The modal verb 'pidama' strictly requires the -ma infinitive form ('töötama')."
+   },
+   {
+    "question": "We want to sleep: 'Me tahame juba ___.'",
+    "options": [
+     "magame",
+     "magama",
+     "magada",
+     "magasime"
+    ],
+    "answer": 2,
+    "explanation": "'Tahtma' (to want) governs the -da infinitive ('magada')."
+   },
+   {
+    "question": "Are you going outside to play: 'Kas sa lähed õue ___?'",
+    "options": [
+     "mängima",
+     "mängida",
+     "mängid",
+     "mängiti"
+    ],
+    "answer": 0,
+    "explanation": "Verbs of motion like 'minema' demand the -ma supine of purpose."
+   },
+   {
+    "question": "It is very pleasant to live here: 'Siin on väga meeldiv ___.'",
+    "options": [
+     "elama",
+     "elan",
+     "elas",
+     "elada"
+    ],
+    "answer": 3,
+    "explanation": "Expressions of state or impersonal evaluations ('on meeldiv') take the -da infinitive."
+   }
+  ],
+  "tip": "Remember the mnemonic: 'P-H-M' (Pean, Hakkan, Minema) all take -MA; almost all other common verbs like 'tahan' and 'saan' take -DA."
+ },
+ {
+  "id": "et-a2-past-tense-simple-past",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#F59E0B",
+  "emoji": "🕰️",
+  "title": "Simple Past Tense (Lihtminevik)",
+  "subtitle": "Narrate completed past events using the -s and -sid past suffixes",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "The simple past adds -s for the 3rd person singular and regular endings (-n, -d, -me, -te, -sid) to the past stem, which often features -i- or consonant changes.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Past Ending",
+    "Example (elama - to live)",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "mina / sa",
+      "-sin / -sid",
+      "elasin / elasid",
+      "I lived / you lived"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "tema (he/she)",
+      "-s",
+      "elas",
+      "he/she lived"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "meie / teie",
+      "-sime / -site",
+      "elasime / elasite",
+      "we lived / you (pl) lived"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "nemad (they)",
+      "-sid",
+      "elasid",
+      "they lived"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Completed Single Event",
+    "example": "Eile ostsin ma uue telefoni.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Past State or Habit",
+    "example": "Vanaema elas noorena maal.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Chronological Narration",
+    "example": "Ta ärkas, sõi ja läks tööle.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Eile õhtul vaatasin ma huvitavat saadet.",
+    "ko": "",
+    "highlight": "vaatasin"
+   },
+   {
+    "en": "Mati kirjutas sõbrale pika kirja.",
+    "ko": "",
+    "highlight": "kirjutas"
+   },
+   {
+    "en": "Me tulime eile väga hilja koju.",
+    "ko": "",
+    "highlight": "tulime"
+   },
+   {
+    "en": "Nemad ostsid uue ilusa korteri.",
+    "ko": "",
+    "highlight": "ostsid"
+   },
+   {
+    "en": "Kas sa rääkisid sellest oma emale?",
+    "ko": "",
+    "highlight": "rääkisid"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Tema elasin siin.",
+    "right": "Tema elas siin.",
+    "note": "The 3rd person singular past ending is -s, not -sin (which is 1st person)."
+   },
+   {
+    "wrong": "Eile mina lugen raamatut.",
+    "right": "Eile mina lugesin raamatut.",
+    "note": "'Lugen' is present tense; simple past requires the past stem with -sin ('lugesin')."
+   },
+   {
+    "wrong": "Me olime läksime poodi.",
+    "right": "Me läksime poodi.",
+    "note": "Do not combine the verb 'olema' with simple past endings when narrating single past events."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday she wrote an email: 'Eile ___ ta pika e-kirja.'",
+    "options": [
+     "kirjutan",
+     "kirjutas",
+     "kirjutab",
+     "kirjutasid"
+    ],
+    "answer": 1,
+    "explanation": "The 3rd person singular past form of 'kirjutama' is 'kirjutas'."
+   },
+   {
+    "question": "Where did you (plural) travel last summer: 'Kuhu te eelmisel suvel ___?'",
+    "options": [
+     "reisite",
+     "reisisid",
+     "reisivad",
+     "reisisite"
+    ],
+    "answer": 3,
+    "explanation": "The 2nd person plural ending in lihtminevik is -site, giving 'reisisite'."
+   },
+   {
+    "question": "I saw that movie last week: 'Ma ___ seda filmi eelmisel nädalal.'",
+    "options": [
+     "nägin",
+     "näen",
+     "nägid",
+     "nägi"
+    ],
+    "answer": 0,
+    "explanation": "The 1st person singular simple past of 'nägema' is irregular: 'nägin'."
+   },
+   {
+    "question": "They were at home all evening: 'Nemad ___ terve õhtu kodus.'",
+    "options": [
+     "oli",
+     "oleme",
+     "olid",
+     "olite"
+    ],
+    "answer": 2,
+    "explanation": "The 3rd person plural past of 'olema' is 'olid'."
+   }
+  ],
+  "tip": "Many common verbs show a vowel shift to '-i-' in the past stem: 'tegema' becomes 'tegi-', 'nägema' becomes 'nägi-', and 'tulema' becomes 'tuli-'."
+ },
+ {
+  "id": "et-a2-partitive-vs-total-object",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎯",
+  "title": "Direct Object: Partitive vs. Total (Täissihitis vs. Osasihitis)",
+  "subtitle": "Distinguish partial, ongoing, or negative actions from completed whole results",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use the Partitive object for negative, ongoing, or incomplete actions, but the Genitive/Nominative total object when a definite action is fully completed.",
+  "structure": {
+   "headers": [
+    "Object Type",
+    "Case Used",
+    "Example",
+    "Meaning / Aspect"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Negative clause",
+      "Partitive (always)",
+      "Ma ei osta leiba.",
+      "I am not buying (the) bread."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Ongoing / Process",
+      "Partitive",
+      "Ta loeb raamatut.",
+      "He is reading a book (in progress)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Completed / Total",
+      "Genitive (singular)",
+      "Ta luges raamatu läbi.",
+      "He read the book (finished whole)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Imperative Total",
+      "Nominative (singular)",
+      "Osta see raamat!",
+      "Buy this book!"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Negative Sentences (Strict)",
+    "example": "Ma ei söönud seda õuna ära.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Action in Progress (Incomplete)",
+    "example": "Ehitajad ehitavad uut maja.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Completed Whole Action",
+    "example": "Ehitajad ehitasid uue maja valmis.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ma joon hommikuti kuuma kohvi.",
+    "ko": "",
+    "highlight": "kohvi"
+   },
+   {
+    "en": "Ta sõi piruka ära.",
+    "ko": "",
+    "highlight": "piruka"
+   },
+   {
+    "en": "Me ei näinud seda filmi.",
+    "ko": "",
+    "highlight": "filmi"
+   },
+   {
+    "en": "Jüri ostis eile uue auto.",
+    "ko": "",
+    "highlight": "auto"
+   },
+   {
+    "en": "Kirjuta see number üles!",
+    "ko": "",
+    "highlight": "number"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ma ei osta auto.",
+    "right": "Ma ei osta autot.",
+    "note": "Any direct object in a negated sentence MUST be in the Partitive case."
+   },
+   {
+    "wrong": "Ma söön õuna ära.",
+    "right": "Ma söön õuna ära (or: sõin õuna ära).",
+    "note": "With resultative particle 'ära' expressing full completion, singular total object takes Genitive: 'sõin õuna ära' (here Genitive and Partitive of 'õun' differ: Partitive is 'õuna', Genitive is 'õuna'; for distinctive nouns: 'sõin kooki' vs 'sõin koogi ära')."
+   },
+   {
+    "wrong": "Võta pirukat!",
+    "right": "Võta pirukas!",
+    "note": "In affirmative imperative commands targeting the whole item, use the Nominative total object."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I did not find the key: 'Ma ei leidnud ___ üles.'",
+    "options": [
+     "võti",
+     "võtme",
+     "võtit",
+     "võtmed"
+    ],
+    "answer": 2,
+    "explanation": "Negative clauses universally demand the Partitive case object ('võtit')."
+   },
+   {
+    "question": "He drank the cup of tea completely: 'Ta jõi tee ___ ära.'",
+    "options": [
+     "lõpuni",
+     "tassi",
+     "tass",
+     "tassis"
+    ],
+    "answer": 1,
+    "explanation": "Completed result action on a countable noun uses Genitive singular total object ('tassi')."
+   },
+   {
+    "question": "Open the door! (Imperative command): 'Ava ___!'",
+    "options": [
+     "ukse",
+     "uks",
+     "ust",
+     "uksed"
+    ],
+    "answer": 1,
+    "explanation": "Total objects in direct imperative commands appear in the Nominative case ('uks')."
+   },
+   {
+    "question": "The boy is currently writing an essay: 'Poiss kirjutab praegu ___.'",
+    "options": [
+     "kirjandi",
+     "kirjand",
+     "kirjandit",
+     "kirjandisse"
+    ],
+    "answer": 2,
+    "explanation": "Ongoing, uncompleted actions take a Partitive object ('kirjandit')."
+   }
+  ],
+  "tip": "Check for negation first! If the sentence has 'ei', the direct object is automatically Partitive 100% of the time."
+ },
+ {
+  "id": "et-a2-postpositions-and-prepositions",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📍",
+  "title": "Postpositions and Genitive Governance",
+  "subtitle": "Express location, direction, and relations by placing adverbs after Genitive nouns",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Most spatial and relational markers in Estonian are postpositions that follow a noun inflected in the Genitive case.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Postposition",
+    "Construction (Genitive + Word)",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "On top of",
+      "peal / peale",
+      "laua peal",
+      "on the table"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Under",
+      "all / alla",
+      "voodi all",
+      "under the bed"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Behind",
+      "taga / taha",
+      "maja taga",
+      "behind the house"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "In front of",
+      "ees / ette",
+      "ukse ees",
+      "in front of the door"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Static Location (-l / -s)",
+    "example": "Kass magab diivani all.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Movement Onto/Towards (-le / -te)",
+    "example": "Pane võtmed kapi peale.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Abstract or Personal Relations",
+    "example": "Ta teeb seda minu pärast.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Väike laps peitis end voodi alla.",
+    "ko": "",
+    "highlight": "voodi alla"
+   },
+   {
+    "en": "Auto seisab suure poe ees.",
+    "ko": "",
+    "highlight": "poe ees"
+   },
+   {
+    "en": "Koer jooksis rõõmsalt maja taha.",
+    "ko": "",
+    "highlight": "maja taha"
+   },
+   {
+    "en": "Meie kool asub pargi kõrval.",
+    "ko": "",
+    "highlight": "pargi kõrval"
+   },
+   {
+    "en": "Telefon on laua peal.",
+    "ko": "",
+    "highlight": "laua peal"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "peal laud",
+    "right": "laua peal",
+    "note": "Estonian primarily uses postpositions (after the noun), and the noun must be in the Genitive case."
+   },
+   {
+    "wrong": "laud peal",
+    "right": "laua peal",
+    "note": "The noun preceding the postposition must be in Genitive ('laua'), not Nominative ('laud')."
+   },
+   {
+    "wrong": "Ta istus tooli peal.",
+    "right": "Ta istus tooli peale.",
+    "note": "Sitting down is directional motion towards a surface, requiring the directional form '-le' ('peale'), not static 'peal'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The cat is sleeping under the bed: 'Kass magab ___ all.'",
+    "options": [
+     "voodi",
+     "voodit",
+     "voodis",
+     "voodisse"
+    ],
+    "answer": 0,
+    "explanation": "Postpositions govern the Genitive singular case ('voodi')."
+   },
+   {
+    "question": "Place the books onto the table: 'Pane raamatud laua ___.'",
+    "options": [
+     "peal",
+     "peale",
+     "pealt",
+     "peast"
+    ],
+    "answer": 1,
+    "explanation": "'Peale' indicates movement onto a surface (destination), answering 'kuhu?'."
+   },
+   {
+    "question": "The car stopped in front of the house: 'Auto peatus maja ___.'",
+    "options": [
+     "eest",
+     "ette",
+     "ees",
+     "eeni"
+    ],
+    "answer": 2,
+    "explanation": "'Ees' indicates stationary position in front of something, answering 'kus?'."
+   },
+   {
+    "question": "Our pharmacy is next to the shop: 'Apteek on poe ___.'",
+    "options": [
+     "juurde",
+     "kõrvale",
+     "kõrval",
+     "taha"
+    ],
+    "answer": 2,
+    "explanation": "Static location beside something uses 'kõrval' ('kus?')."
+   }
+  ],
+  "tip": "Postpositions follow the same 3-way direction system as noun endings: -le/-te (whither? where to?), -l/-s (where?), and -lt/-st (whence? where from?)."
+ },
+ {
+  "id": "et-a2-plurals-formation-nominative-partitive",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📚",
+  "title": "Plural Formations (Nominative -d and Partitive Plural)",
+  "subtitle": "Forming the plural subject with -d and master the multifaceted partitive plural endings",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The nominative plural simply adds -d to the genitive singular stem, whereas the partitive plural takes endings like -sid, -id, or vowel changes depending on syllable structure.",
+  "structure": {
+   "headers": [
+    "Case",
+    "Stem / Pattern",
+    "Example",
+    "English"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Genitive Sg",
+      "Base stem",
+      "raamatu",
+      "of a book"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Nominative Pl",
+      "Gen. Sg + -d",
+      "raamatud",
+      "books (subject)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Partitive Pl (-sid)",
+      "Polysyllabic stems",
+      "raamatuid / autosid",
+      "cars / books (partitive)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Partitive Pl (-id)",
+      "Vocalic change",
+      "kool / kooli -> koole / kasse",
+      "schools / cats (partitive)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Definite Plural Subjects",
+    "example": "Õpilased loevad klassis.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Indefinite Quantities",
+    "example": "Laual on palju raamatuid.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Negative Plural Objects",
+    "example": "Me ei osta uusi autosid.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Need suured majad on väga vanad.",
+    "ko": "",
+    "highlight": "majad"
+   },
+   {
+    "en": "Mul on kodus kaks kassi ja kolm koera.",
+    "ko": "",
+    "highlight": "kassi"
+   },
+   {
+    "en": "Õpetaja tõi meile huvitavaid raamatuid.",
+    "ko": "",
+    "highlight": "raamatuid"
+   },
+   {
+    "en": "Me näeme pargis ilusaid lilli.",
+    "ko": "",
+    "highlight": "ilusaid lilli"
+   },
+   {
+    "en": "Poes müüakse värskeid õunu.",
+    "ko": "",
+    "highlight": "värskeid õunu"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "raamatd",
+    "right": "raamatud",
+    "note": "Always attach the nominative plural marker -d to the genitive singular stem (raamatu), not the nominative singular."
+   },
+   {
+    "wrong": "palju raamatud",
+    "right": "palju raamatuid",
+    "note": "Quantifying words like 'palju' (many/much) govern the partitive plural, not the nominative plural."
+   },
+   {
+    "wrong": "õunad ei ole",
+    "right": "õunu ei ole",
+    "note": "Existential negative clauses require the subject to be in the partitive plural (õunu), not nominative."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you form the nominative plural of 'maja' (genitive: 'maja')?",
+    "options": [
+     "majad",
+     "majasid",
+     "majaid",
+     "majust"
+    ],
+    "answer": 0,
+    "explanation": "Add -d directly to the genitive singular stem 'maja' to make 'majad'."
+   },
+   {
+    "question": "Choose the correct partitive plural: 'Laual on palju ___ (kass - kassid).'",
+    "options": [
+     "kassid",
+     "kasse",
+     "kassit",
+     "kassas"
+    ],
+    "answer": 1,
+    "explanation": "Short vowel-stem words like 'kass' take the vocalic or shortened partitive plural form 'kasse'."
+   },
+   {
+    "question": "Complete the negative sentence: 'Meil ei ole uusi ___ (arvuti).'",
+    "options": [
+     "arvutid",
+     "arvutit",
+     "arvuteid",
+     "arvutiga"
+    ],
+    "answer": 2,
+    "explanation": "'Arvuti' forms its partitive plural as 'arvuteid' (or 'arvutisid')."
+   },
+   {
+    "question": "Which form represents the nominative plural for 'tüdruk' (genitive: 'tüdruku')?",
+    "options": [
+     "tüdrukid",
+     "tüdruke",
+     "tüdrukud",
+     "tüdrukuid"
+    ],
+    "answer": 2,
+    "explanation": "Add -d to the genitive singular stem 'tüdruku' yielding 'tüdrukud'."
+   }
+  ],
+  "tip": "Always memorize the first three base forms of every Estonian noun: Nominative, Genitive, and Partitive. The Genitive singular is your golden key to building the Nominative plural (-d)."
+ },
+ {
+  "id": "et-a2-impersonal-voice-present",
+  "level": "a2",
+  "category": "passive",
+  "categoryColor": "#8B5CF6",
+  "emoji": "👥",
+  "title": "Impersonal Voice in the Present (Umbisikuline Tegumood)",
+  "subtitle": "Describing actions without mentioning a specific doer using -takse and -dakse",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The impersonal present uses -takse or -dakse attached to the verb stem to express actions done by people in general, corresponding to 'one does', 'people do', or passive voice in English.",
+  "structure": {
+   "headers": [
+    "Infinitive Stem",
+    "Suffix",
+    "Impersonal Present",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "elama (vowel stem)",
+      "-takse",
+      "elatakse",
+      "one lives / people live"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "tegema (irregular/vocalic)",
+      "-hakse / -takse",
+      "tehakse",
+      "one does / is done"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "sööma (long vowel)",
+      "-dakse",
+      "süüakse",
+      "one eats / is eaten"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative present",
+      "ei + impersonal base",
+      "ei räägita",
+      "it is not spoken"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "General Social Customs",
+    "example": "Eestis saunas käiakse sageli.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Public Notices & Rules",
+    "example": "Siin majas ei suitsetata.",
+    "translation": ""
+   },
+   {
+    "color": "#A78BFA",
+    "label": "Unspecified Agents",
+    "example": "Praegu räägitakse sellest palju.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Eestis räägitakse eesti keelt.",
+    "ko": "",
+    "highlight": "räägitakse"
+   },
+   {
+    "en": "Raamatukogus loetakse vaikselt raamatuid.",
+    "ko": "",
+    "highlight": "loetakse"
+   },
+   {
+    "en": "Selles kohvikus tehakse head kohvi.",
+    "ko": "",
+    "highlight": "tehakse"
+   },
+   {
+    "en": "Laupäeviti käiakse tihti saunas.",
+    "ko": "",
+    "highlight": "käiakse"
+   },
+   {
+    "en": "Tänaval ei tohi joosta.",
+    "ko": "",
+    "highlight": "ei tohi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Inimesed räägitakse",
+    "right": "Inimesed räägivad",
+    "note": "Never use personal subjects like 'inimesed' (people) with the impersonal form; impersonal verbs exclude an overt subject agent."
+   },
+   {
+    "wrong": "ei räägitakse",
+    "right": "ei räägita",
+    "note": "The negative impersonal drops the ending '-kse', using 'ei' + impersonal stem (ei räägita)."
+   },
+   {
+    "wrong": "tegetakse",
+    "right": "tehakse",
+    "note": "'Tegema' undergoes stem reduction in the impersonal voice to become 'tehakse'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'Estonian is spoken here' in Estonian?",
+    "options": [
+     "Siin räägib eesti keelt.",
+     "Siin räägitakse eesti keelt.",
+     "Siin rääkima eesti keelt.",
+     "Siin räägikse eesti keelt."
+    ],
+    "answer": 1,
+    "explanation": "'Rääkima' becomes 'räägitakse' in the present impersonal."
+   },
+   {
+    "question": "What is the negative impersonal form of 'sööma' (to eat)?",
+    "options": [
+     "ei sööda",
+     "ei süüa",
+     "ei sööma",
+     "ei süüakse"
+    ],
+    "answer": 0,
+    "explanation": "The negative impersonal combines 'ei' with the impersonal stem: 'ei sööda'."
+   },
+   {
+    "question": "Fill in the blank: 'Koolis ___ palju uusi asju.' (õppima)",
+    "options": [
+     "õpitakse",
+     "õppitakse",
+     "õpib",
+     "õpetakse"
+    ],
+    "answer": 0,
+    "explanation": "Weak grade stem 'õpi-' takes '-takse', yielding 'õpitakse'."
+   },
+   {
+    "question": "Which form means 'coffee is drunk' (jooma)?",
+    "options": [
+     "joob",
+     "juuakse",
+     "joodakse",
+     "jooma"
+    ],
+    "answer": 1,
+    "explanation": "'Jooma' shifts vowels in the impersonal present to form 'juuakse'."
+   }
+  ],
+  "tip": "Notice that when making negative impersonal statements, drop the final '-kse': 'tehakse' becomes 'ei tehta', 'kirjutatakse' becomes 'ei kirjutata'."
+ },
+ {
+  "id": "et-b1-semantic-cases-rajava-olev-ilma-kaasa",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🧭",
+  "title": "Semantic Cases (-ni, -na, -ta, -ga)",
+  "subtitle": "Expressing limit, role, absence, and accompaniment without prepositions",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "The last four Estonian cases (Terminative -ni, Essive -na, Abessive -ta, Comitative -ga) attach their unchanging suffixes directly to the genitive singular or genitive plural stem.",
+  "structure": {
+   "headers": [
+    "Case",
+    "Suffix",
+    "Genitive + Suffix",
+    "Function / Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Terminative (rajava)",
+      "-ni",
+      "kodu -> koduni",
+      "limit in space/time ('until, up to')"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Essive (olev)",
+      "-na",
+      "lapse -> lapsena",
+      "role or state ('as a child')"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Abessive (ilmaütlev)",
+      "-ta",
+      "suhkru -> suhkruta",
+      "lack/absence ('without sugar')"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Comitative (kaasaütlev)",
+      "-ga",
+      "sõbra -> sõbraga",
+      "instrument / accompaniment ('with a friend')"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Time & Distance Limits (-ni)",
+    "example": "Ootan sind kella viieni.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Temporary Roles or States (-na)",
+    "example": "Ta töötab suvel ettekandjana.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Instruments & Transport (-ga)",
+    "example": "Sõidan tööle bussiga.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Jalutasime mere äärde ja seisime seal hommikuni.",
+    "ko": "",
+    "highlight": "hommikuni"
+   },
+   {
+    "en": "Noore tudengina reisis ta palju ringi.",
+    "ko": "",
+    "highlight": "tudengina"
+   },
+   {
+    "en": "Ma joon teed ilma suhkruta.",
+    "ko": "",
+    "highlight": "suhkruta"
+   },
+   {
+    "en": "Peeter läks kinno oma uue sõbraga.",
+    "ko": "",
+    "highlight": "sõbraga"
+   },
+   {
+    "en": "Laps jooksis koolist majani.",
+    "ko": "",
+    "highlight": "majani"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "koos sõber",
+    "right": "sõbraga / koos sõbraga",
+    "note": "The preposition 'koos' requires the comitative case (-ga), never the nominative base form."
+   },
+   {
+    "wrong": "kell viieni",
+    "right": "kella viieni",
+    "note": "The time expression must be in the genitive before attaching the terminative suffix: kella viieni."
+   },
+   {
+    "wrong": "ilma suhkur",
+    "right": "ilma suhkruta",
+    "note": "The preposition 'ilma' takes the abessive case suffix '-ta' on the noun."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you express 'until tomorrow' (homeni vs homseni from 'homme' / 'homse')?",
+    "options": [
+     "hommeni",
+     "homseni",
+     "hommuni",
+     "homsena"
+    ],
+    "answer": 1,
+    "explanation": "Add the terminative -ni to the genitive stem 'homse', giving 'homseni'."
+   },
+   {
+    "question": "Fill in the blank: 'Mari töötab haiglas ___ (arst).' (as a doctor)",
+    "options": [
+     "arstiga",
+     "arstina",
+     "arstita",
+     "arstini"
+    ],
+    "answer": 1,
+    "explanation": "The essive case suffix '-na' expresses functioning in a role or state ('as an X')."
+   },
+   {
+    "question": "Complete the phrase: 'Tulin linna ___ (rong).' (by train)",
+    "options": [
+     "rongina",
+     "rongini",
+     "rongita",
+     "rongiga"
+    ],
+    "answer": 3,
+    "explanation": "Means of transport and instruments take the comitative suffix '-ga' ('rongiga')."
+   },
+   {
+    "question": "Choose the abessive form of 'raha' (money):",
+    "options": [
+     "rahata",
+     "rahana",
+     "rahani",
+     "rahaga"
+    ],
+    "answer": 0,
+    "explanation": "The abessive ending '-ta' signifies 'without' ('rahata' = without money)."
+   }
+  ],
+  "tip": "Unlike the grammatical and interior cases, these four semantic cases never cause internal stem consonant gradation changes of their own—they just latch straight onto the existing genitive form!"
+ },
+ {
+  "id": "et-b1-compound-past-tenses",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#F59E0B",
+  "emoji": "⏳",
+  "title": "Compound Past Tenses (Täisminevik and Enneminevik)",
+  "subtitle": "Connecting past actions to present or previous timeframes using 'olema' and '-nud'",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Compound past tenses combine a conjugated present or past form of 'olema' with the past active participle in '-nud' (or passive '-tud').",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Auxiliary (olema)",
+    "Participle",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Täisminevik (Pres. Perf.)",
+      "olen / oled / on",
+      "-nud",
+      "Olen filmi juba näinud."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Täisminevik (Negative)",
+      "ei ole",
+      "-nud",
+      "Ma ei ole seda teinud."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Enneminevik (Past Perf.)",
+      "olin / olid / oli",
+      "-nud",
+      "Ta oli juba lahkunud."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Enneminevik (Negative)",
+      "ei olnud",
+      "-nud",
+      "Me ei olnud veel söönud."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Life Experience (Present Perfect)",
+    "example": "Kas sa oled kunagi Eestis käinud?",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Prior Past Event (Past Perfect)",
+    "example": "Kui rong saabus, oli ta juba lahkunud.",
+    "translation": ""
+   },
+   {
+    "color": "#FBBF24",
+    "label": "Present Result of Past Action",
+    "example": "Olen oma võtmed ära kaotanud.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ma olen seda raamatut juba lugenud.",
+    "ko": "",
+    "highlight": "olen seda raamatut juba lugenud"
+   },
+   {
+    "en": "Kas te olete juba lõunat söönud?",
+    "ko": "",
+    "highlight": "olete juba lõunat söönud"
+   },
+   {
+    "en": "Eile õhtuks oli ta oma töö lõpetanud.",
+    "ko": "",
+    "highlight": "oma töö lõpetanud"
+   },
+   {
+    "en": "Me ei ole veel seda uut filmi näinud.",
+    "ko": "",
+    "highlight": "ei ole veel seda uut filmi näinud"
+   },
+   {
+    "en": "Politsei tuli, kui varas oli juba põgenenud.",
+    "ko": "",
+    "highlight": "oli juba põgenenud"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ma olen tegi",
+    "right": "Ma olen teinud",
+    "note": "The auxiliary verb 'olema' must be paired with the past participle (-nud), never a finite past tense form."
+   },
+   {
+    "wrong": "Me ei oled näinud",
+    "right": "Me ei ole näinud",
+    "note": "In negative compound tenses, 'olema' uses the invariant negative present auxiliary 'ole' regardless of the plural person."
+   },
+   {
+    "wrong": "Ta oli lugen",
+    "right": "Ta oli lugenud",
+    "note": "The past active participle ending is always '-nud', not just '-n'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you form the present perfect 'We have lived here for five years'?",
+    "options": [
+     "Me elasime siin viis aastat.",
+     "Me oleme siin viis aastat elanud.",
+     "Me olime siin viis aastat elanud.",
+     "Me elame siin viis aastat."
+    ],
+    "answer": 1,
+    "explanation": "'Me oleme ... elanud' uses the present tense of 'olema' (oleme) plus the -nud participle."
+   },
+   {
+    "question": "Choose the past perfect (enneminevik): 'Before dinner, he ___ (finish) the homework.'",
+    "options": [
+     "on lõpetanud",
+     "lõpetas",
+     "oli lõpetanud",
+     "ei lõpeta"
+    ],
+    "answer": 2,
+    "explanation": "The past perfect requires the past form of 'olema' ('oli') plus the past participle ('lõpetanud')."
+   },
+   {
+    "question": "Complete the negative present perfect: 'Nemad ___ veel otsustanud.' (have not)",
+    "options": [
+     "ei ole",
+     "ei olnud",
+     "poleks",
+     "ei on"
+    ],
+    "answer": 0,
+    "explanation": "The negative present auxiliary is 'ei ole' (or 'pole')."
+   },
+   {
+    "question": "What is the past active participle of 'kirjutama'?",
+    "options": [
+     "kirjutanud",
+     "kirjutatud",
+     "kirjutati",
+     "kirjutan"
+    ],
+    "answer": 0,
+    "explanation": "Active past participles form by replacing the '-ma' infinitive marker with '-nud': 'kirjutanud'."
+   }
+  ],
+  "tip": "In conversational Estonian, 'ei ole' is very frequently contracted to 'pole' (e.g., 'Ma pole teinud' instead of 'Ma ei ole teinud'). Both are fully correct."
+ },
+ {
+  "id": "et-b1-conditional-mood",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#EC4899",
+  "emoji": "✨",
+  "title": "Conditional Mood (Tingiv Kõneviis)",
+  "subtitle": "Expressing hypothetical situations and polite requests with the -ks marker",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "The conditional mood is formed by adding -ks (plus personal endings if desired) to the vowel stem of a verb, conveying hypothetical conditions, dreams, or polite requests.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Formation (Stem + -ks)",
+    "Example",
+    "English"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Person Sg",
+      "Stem + -ksin / -ks",
+      "ostaksin / ostaks",
+      "I would buy"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "General / 3rd Sg",
+      "Stem + -ks",
+      "tuleks",
+      "he/she/one would come"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past Conditional",
+      "oleks + -nud participle",
+      "oleksin teinud",
+      "I would have done"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative",
+      "ei + stem + -ks",
+      "ei ütleks",
+      "would not say"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DB2777",
+    "label": "Polite Inquiries & Requests",
+    "example": "Kas ma saaksin ühe kohvi, palun?",
+    "translation": ""
+   },
+   {
+    "color": "#BE185D",
+    "label": "Hypothetical Scenarios",
+    "example": "Kui mul oleks aega, reisiksin rohkem.",
+    "translation": ""
+   },
+   {
+    "color": "#F472B6",
+    "label": "Past Unreal Wishes",
+    "example": "Me oleksime tulnud, kui oleksime teadnud.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kui mul oleks palju raha, ostaksin suure maja.",
+    "ko": "",
+    "highlight": "oleks palju raha, ostaksin"
+   },
+   {
+    "en": "Kas sa aitaksid mind selle ülesandega?",
+    "ko": "",
+    "highlight": "aitaksid"
+   },
+   {
+    "en": "Ma jooks heameelega tassi teed.",
+    "ko": "",
+    "highlight": "jooks"
+   },
+   {
+    "en": "Ta ei teeks seda mitte mingil juhul.",
+    "ko": "",
+    "highlight": "ei teeks"
+   },
+   {
+    "en": "Kui ilm oleks soojem, läheksime randa.",
+    "ko": "",
+    "highlight": "oleks soojem, läheksime"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Kui mul on aega, ma tuleksin.",
+    "right": "Kui mul oleks aega, ma tuleksin.",
+    "note": "In unreal conditional sentences, both clauses must use the conditional mood (-ks), not indicative ('on')."
+   },
+   {
+    "wrong": "Ma tahaksite",
+    "right": "Ma tahaksin",
+    "note": "Ensure personal suffixes match: '-ksin' for 'mina' (1st sg) and '-ksite' for 'teie' (2nd pl)."
+   },
+   {
+    "wrong": "oleks tegin",
+    "right": "oleksin teinud",
+    "note": "Past conditional requires 'oleks' alongside the past active participle ending in '-nud'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you politely ask 'Could I get water?'",
+    "options": [
+     "Kas ma saan vett?",
+     "Kas ma saaksin vett?",
+     "Kas ma sain vett?",
+     "Kas ma saaksite vett?"
+    ],
+    "answer": 1,
+    "explanation": "'Saaksin' uses the conditional marker -ks with 1st person ending -in for a polite request."
+   },
+   {
+    "question": "Complete the hypothetical clause: 'Kui meil ___ aega, me jalutaksime pargis.'",
+    "options": [
+     "on",
+     "oli",
+     "oleks",
+     "olnud"
+    ],
+    "answer": 2,
+    "explanation": "The 'if' clause of a hypothetical condition requires conditional 'oleks'."
+   },
+   {
+    "question": "What is the past conditional of 'nad tulevad' (they would have come)?",
+    "options": [
+     "nad tulid",
+     "nad oleksid tulnud",
+     "nad tuleksid",
+     "nad on tulnud"
+    ],
+    "answer": 1,
+    "explanation": "The past conditional is formed by combining 'oleksid' with the -nud participle 'tulnud'."
+   },
+   {
+    "question": "Which form is the negative conditional 'I would not say'?",
+    "options": [
+     "ma ei ütlen",
+     "ma ei ütleks",
+     "ma ei öelnud",
+     "ma pole ütlema"
+    ],
+    "answer": 1,
+    "explanation": "The negative marker 'ei' plus the -ks conditional form makes 'ei ütleks'."
+   }
+  ],
+  "tip": "In everyday spoken Estonian, speakers often omit the personal ending and use the plain '-ks' across all persons (e.g., 'ma teeks', 'sa teeks', 'me teeks'). You will be understood everywhere!"
+ },
+ {
+  "id": "et-b1-partitive-subject-existential-sentences",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#4F46E5",
+  "emoji": "📍",
+  "title": "Existential Clauses with Partitive Subjects",
+  "subtitle": "Expressing presence, availability, and negation with partitive subjects",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "In existential sentences indicating location or availability, an indefinite or uncountable subject takes the partitive case, and in negative existential sentences, the subject is always partitive.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Word Order & Case",
+    "Estonian Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Affirmative (indefinite)",
+      "Location + Verb + Partitive",
+      "Laual on leiba.",
+      "There is (some) bread on the table."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Affirmative (countable plural)",
+      "Location + Verb + Partitive pl.",
+      "Pargis jalutab inimesi.",
+      "There are people walking in the park."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Existential",
+      "Location + Verb + Partitive (always)",
+      "Külmkapis ei ole piima.",
+      "There is no milk in the fridge."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Definite Subject (Normal clause)",
+      "Nominative + Location + Verb",
+      "Piim on külmkapis.",
+      "The milk is in the fridge."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Indefinite or uncountable quantity",
+    "example": "Tassis on kuuma teed.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Total absence in negative clauses",
+    "example": "Õues ei ole lund.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Emergence of indefinite people/things",
+    "example": "Tuppa astus uusi külalisi.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Laual on värsket leiba.",
+    "ko": "",
+    "highlight": "värsket leiba"
+   },
+   {
+    "en": "Meil ei ole täna vaba aega.",
+    "ko": "",
+    "highlight": "vaba aega"
+   },
+   {
+    "en": "Metsas kasvab palju seeni.",
+    "ko": "",
+    "highlight": "seeni"
+   },
+   {
+    "en": "Bussipeatuses seisab mitu inimest.",
+    "ko": "",
+    "highlight": "mitu inimest"
+   },
+   {
+    "en": "Selles kohvikus ei mängi muusikat.",
+    "ko": "",
+    "highlight": "muusikat"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Külmkapis ei ole piim.",
+    "right": "Külmkapis ei ole piima.",
+    "note": "Negative existential clauses always require the subject to be in the partitive case (piima), never nominative (piim)."
+   },
+   {
+    "wrong": "Õues on koerad.",
+    "right": "Õues on koeri.",
+    "note": "When expressing indefinite existence of plural entities ('there are dogs outside'), use the plural partitive instead of nominative plural."
+   },
+   {
+    "wrong": "Vesi on pudelis.",
+    "right": "Pudelis on vett.",
+    "note": "If you want to say 'there is water in the bottle', start with the location and put the indefinite substance in partitive."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the existential clause: 'Klassiruumis ei ole ___.' (teacher)",
+    "options": [
+     "õpetaja",
+     "õpetajat",
+     "õpetajad",
+     "õpetajale"
+    ],
+    "answer": 1,
+    "explanation": "In negative existential sentences, the subject must be in the partitive case ('õpetajat')."
+   },
+   {
+    "question": "Complete the sentence to show indefinite existence: 'Kaussis on magusat ___.' (apple)",
+    "options": [
+     "õun",
+     "õuna",
+     "õunad",
+     "õunast"
+    ],
+    "answer": 1,
+    "explanation": "Indefinite uncountable or partial quantities in existential clauses take the partitive singular ('õuna')."
+   },
+   {
+    "question": "Which sentence means 'There are children on the street'?",
+    "options": [
+     "Lapsed on tänaval.",
+     "Tänaval on lapsi.",
+     "Tänav on lapsi.",
+     "Lapsi tänaval on."
+    ],
+    "answer": 1,
+    "explanation": "Existential word order puts location first ('Tänaval on') followed by partitive plural for indefinite entities ('lapsi')."
+   },
+   {
+    "question": "Complete the sentence: 'Täna ei ole meil mingit ___.' (problem)",
+    "options": [
+     "probleemi",
+     "probleem",
+     "probleemid",
+     "probleemiga"
+    ],
+    "answer": 0,
+    "explanation": "Negation of existence requires partitive case ('probleemi')."
+   }
+  ],
+  "tip": "Check word order: if the location comes first (e.g., 'Toas on...'), the following subject is almost always partitive if indefinite or negative!"
+ },
+ {
+  "id": "et-b1-deverbal-noun-and-infinitival-forms",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🔄",
+  "title": "Inflected Forms of the -ma Infinitive",
+  "subtitle": "Expressing ongoing actions, origins, and absences with -mas, -mast, and -mata",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Case endings attach directly to the -ma stem: -mas marks continuous presence at an action, -mast indicates returning from it, and -mata expresses 'without doing'.",
+  "structure": {
+   "headers": [
+    "Case & Suffix",
+    "Meaning",
+    "Estonian Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Inessive (-mas)",
+      "In the middle of doing (continuous)",
+      "Ta on poes sisseoste tegemas.",
+      "He is shopping at the store."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Elative (-mast)",
+      "Coming from doing",
+      "Me tuleme jooksmas.",
+      "We are coming from running."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Abessive (-mata)",
+      "Without doing (privative)",
+      "Ta lahkus hüvasti jätmata.",
+      "He left without saying goodbye."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Translative (-maks)",
+      "In order to do (purpose)",
+      "Tulin siia õppimaks eesti keelt.",
+      "I came here in order to learn Estonian."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Ongoing action at a location",
+    "example": "Mari on raamatukogus õppimas.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Returning from an activity",
+    "example": "Isa saabus just töölt söömast.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Action left undone",
+    "example": "Töö jäi õigel ajal tegemata.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Lapsed on õues palli mängimas.",
+    "ko": "",
+    "highlight": "mängimas"
+   },
+   {
+    "en": "Ema tuli just turult toitu ostmast.",
+    "ko": "",
+    "highlight": "ostmast"
+   },
+   {
+    "en": "Ta läks kodust välja söömata.",
+    "ko": "",
+    "highlight": "söömata"
+   },
+   {
+    "en": "Me kuulasime teda sõnagi lausumata.",
+    "ko": "",
+    "highlight": "lausumata"
+   },
+   {
+    "en": "Vanaisa käib igal hommikul pargis jalutamas.",
+    "ko": "",
+    "highlight": "jalutamas"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ta läks ära ilma rääkima.",
+    "right": "Ta läks ära rääkimata.",
+    "note": "To say 'without doing', use the -mata form alone instead of translating 'ilma' with the nominative infinitive."
+   },
+   {
+    "wrong": "Ma olen praegu lugeda.",
+    "right": "Ma olen praegu lugemas.",
+    "note": "To indicate being engaged in an action right now, use 'olema + -mas', never the -da infinitive."
+   },
+   {
+    "wrong": "Me tulime trennist ujuma.",
+    "right": "Me tulime trennist ujumast.",
+    "note": "Coming from an activity requires the elative case form -mast, whereas -ma expresses destination."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct form: 'Marten on köögis lõunasööki ___.' (cooking)",
+    "options": [
+     "valmistab",
+     "valmistama",
+     "valmistamas",
+     "valmistamata"
+    ],
+    "answer": 2,
+    "explanation": "'Olema + -mas' denotes an ongoing physical activity at a location ('is cooking')."
+   },
+   {
+    "question": "Choose the correct form: 'Nad tulid just järve äärest ___.' (swimming)",
+    "options": [
+     "ujumast",
+     "ujuma",
+     "ujumas",
+     "ujumata"
+    ],
+    "answer": 0,
+    "explanation": "The elative form -mast expresses returning from an activity."
+   },
+   {
+    "question": "Choose the correct form: 'Ta vastas küsimusele hetkegi ___.' (without hesitating)",
+    "options": [
+     "kõhklemas",
+     "kõhklemast",
+     "kõhklema",
+     "kõhklemata"
+    ],
+    "answer": 3,
+    "explanation": "The abessive form -mata expresses 'without doing'."
+   },
+   {
+    "question": "Which verb form completes: 'Kirjutasin kirja valmis vigadeta ja pikalt ___.' (without thinking)?",
+    "options": [
+     "mõtlemast",
+     "mõtlemata",
+     "mõtlemas",
+     "mõtlema"
+    ],
+    "answer": 1,
+    "explanation": "'-mata' denotes absence of the action ('without thinking')."
+   }
+  ],
+  "tip": "Think of the -ma infinitive as a noun stem: just like maja -> majas (in the house) -> majast (from the house), sööma -> söömas (eating) -> söömast (from eating)!"
+ },
+ {
+  "id": "et-b2-imperative-and-jussive-moods",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🗣️",
+  "title": "Imperative and Jussive Moods",
+  "subtitle": "Direct commands, prohibitions, and third-person wishes with -ge and -gu",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "The 2nd person singular imperative uses the bare present stem, while plural commands use -ge/-ke and indirect commands for 3rd person (jussive) use -gu/-ku.",
+  "structure": {
+   "headers": [
+    "Person / Form",
+    "Affirmative Marker",
+    "Negative Form",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "2nd person singular (sa)",
+      "Bare stem (kirjuta!)",
+      "ära + stem (ära kirjuta!)",
+      "Loe see raamat läbi!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "1st person plural (me)",
+      "-gem / -kem",
+      "ärgem + -ge/-ke",
+      "Rääkigem eesti keeles!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd person plural (te)",
+      "-ge / -ke",
+      "ärge + -ge/-ke",
+      "Olge palun vaikselt!"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Jussive / 3rd person (tema/nemad)",
+      "-gu / -ku",
+      "ärgu / ärgu + -gu/-ku",
+      "Ta tulgu kohe siia!"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Direct orders & polite requests",
+    "example": "Võtke istet ja oodake!",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Prohibitions (negative imperative)",
+    "example": "Ärge hilinege koosolekule!",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Indirect orders & wishes (jussive)",
+    "example": "Olgu sul alati õnne!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mine kohe koju ja puhka välja!",
+    "ko": "",
+    "highlight": "Mine"
+   },
+   {
+    "en": "Ärge unustage oma dokumente kaasa võtta!",
+    "ko": "",
+    "highlight": "Ärge unustage"
+   },
+   {
+    "en": "Tehkem täna õhtul midagi erilist!",
+    "ko": "",
+    "highlight": "Tehkem"
+   },
+   {
+    "en": "Nemad tehku oma tööd korralikult!",
+    "ko": "",
+    "highlight": "tehku"
+   },
+   {
+    "en": "Ärgu keegi arvaku, et see on lihtne.",
+    "ko": "",
+    "highlight": "Ärgu keegi arvaku"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mitte unusta oma võtmeid!",
+    "right": "Ära unusta oma võtmeid!",
+    "note": "Prohibitions do not use 'mitte'; use the negative imperative auxiliary 'ära' for singular and 'ärge' for plural."
+   },
+   {
+    "wrong": "Ärge rääkida valjusti!",
+    "right": "Ärge rääkige valjusti!",
+    "note": "'Ärge' must be followed by the verb in the -ge/-ke imperative form, never the -da infinitive."
+   },
+   {
+    "wrong": "Ta peab tegema seda, las ta teeb!",
+    "right": "Las ta teeb / Ta tehku seda!",
+    "note": "For formal indirect third-person command, use jussive '-gu/-ku' (tehku) or 'las' with present tense, not just a plain assertion."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct negative command for 'teie': 'Palun ___ siin suitsetage!'",
+    "options": [
+     "ära",
+     "ärge",
+     "ärgem",
+     "ärgu"
+    ],
+    "answer": 1,
+    "explanation": "'Ärge' is the negative command auxiliary for the 2nd person plural ('teie')."
+   },
+   {
+    "question": "Which verb correctly completes the jussive command: 'Igaüks ___ oma vastuse ise.' (should write)",
+    "options": [
+     "kirjutab",
+     "kirjutage",
+     "kirjutagu",
+     "kirjutama"
+    ],
+    "answer": 2,
+    "explanation": "The 3rd person indirect command (jussive) uses suffix -gu/-ku ('kirjutagu')."
+   },
+   {
+    "question": "Form the 1st person plural hortative: '___ koos lahendus!' (Let's find)",
+    "options": [
+     "Leidke",
+     "Leidkem",
+     "Leida",
+     "Leiamegi"
+    ],
+    "answer": 1,
+    "explanation": "The polite cohortative 'let us do' takes the -kem/-gem ending ('Leidkem')."
+   },
+   {
+    "question": "How do you say to one person 'Don't go yet!'?",
+    "options": [
+     "Ära mine veel!",
+     "Ärge minge veel!",
+     "Ärgu minge veel!",
+     "Mitte mine veel!"
+    ],
+    "answer": 0,
+    "explanation": "Single person negative command uses 'ära' + stem ('Ära mine!')."
+   }
+  ],
+  "tip": "Notice the consonant harmony: strong grade uses -ke/-ku (haka-ke, vaa-daku) while vowels or voiced consonants use -ge/-gu (tul-ge, ol-gu)."
+ },
+ {
+  "id": "et-b2-quotative-mood-kaudne-koneviis",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#7C3AED",
+  "emoji": "📰",
+  "title": "Quotative Mood (Kaudne Kõneviis)",
+  "subtitle": "Reporting hearsay and unverified claims using the -vat marker",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "The quotative mood replaces indicative endings with the invariant suffix -vat (present) or 'olevat' + past participle (past) to signal reported speech or hearsay without committing to its truth.",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Formation",
+    "Estonian Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present Quotative",
+      "-da infinitive stem + -vat",
+      "Ta teadvat seda saladust.",
+      "He reportedly knows this secret."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past Quotative",
+      "olevat + -nud / -tud",
+      "Peaminister olevat tagasi astunud.",
+      "The Prime Minister has reportedly resigned."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Present",
+      "ei + -vat",
+      "Ta ei oskavat eesti keelt.",
+      "They say he does not know Estonian."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Past",
+      "ei olevat + -nud / -tud",
+      "Rong ei olevat jaama jõudnud.",
+      "Supposedly the train had not reached the station."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Media and news reporting",
+    "example": "Uus teelõik avatavat juba järgmisel nädalal.",
+    "translation": ""
+   },
+   {
+    "color": "#DB2777",
+    "label": "Everyday gossip and rumors",
+    "example": "Naabrid ostvat uue ja kalli auto.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Distancing oneself from a claim",
+    "example": "Ta olevat haige ja ei tulevat koosolekule.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ilmateade lubavat homseks tugevat tormi.",
+    "ko": "",
+    "highlight": "lubavat"
+   },
+   {
+    "en": "Kuulsin, et Jüri elavat nüüd hoopis Tartus.",
+    "ko": "",
+    "highlight": "elavat"
+   },
+   {
+    "en": "See film olevat selle aasta parim.",
+    "ko": "",
+    "highlight": "olevat"
+   },
+   {
+    "en": "Nad ei teadvat tegelikult asjast mitte midagi.",
+    "ko": "",
+    "highlight": "teadvat"
+   },
+   {
+    "en": "Röövel olevat põgenenud üle piiri välismaale.",
+    "ko": "",
+    "highlight": "olevat põgenenud"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Nad räägivad, et ta on rikas.",
+    "right": "Ta olevat rikas.",
+    "note": "While 'Nad räägivad, et...' is correct grammatically, Estonian stylistically prefers the concise quotative mood 'olevat rikas' in formal and written contexts."
+   },
+   {
+    "wrong": "Ta teadvat-eesti keelt.",
+    "right": "Ta teadvat eesti keelt.",
+    "note": "The suffix -vat is added directly to the -da infinitive stem without hyphens or person agreement (it never conjugates for mina, sina, etc.)."
+   },
+   {
+    "wrong": "Me kuulsime, et nemad elavad seal.",
+    "right": "Nemad elavat seal.",
+    "note": "Using the indicative 'elavad' asserts personal witness or objective truth; use 'elavat' to clearly demarcate hearsay."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you express 'Supposedly he is going to Spain' using the quotative mood?",
+    "options": [
+     "Ta sõidab Hispaaniasse.",
+     "Ta sõitvat Hispaaniasse.",
+     "Ta sõitis Hispaaniasse.",
+     "Ta sõitku Hispaaniasse."
+    ],
+    "answer": 1,
+    "explanation": "The present quotative attaches -vat to the -da stem ('sõita' -> 'sõitvat')."
+   },
+   {
+    "question": "Fill the blank for reported past action: 'Direktor ___ juba lepingu alla kirjutanud.'",
+    "options": [
+     "on",
+     "olevat",
+     "oli",
+     "olgu"
+    ],
+    "answer": 1,
+    "explanation": "The past quotative compound tense is formed with the quotative auxiliary 'olevat' + past participle."
+   },
+   {
+    "question": "What does the invariant suffix '-vat' indicate in Estonian?",
+    "options": [
+     "An obligatory command",
+     "A condition dependent on an event",
+     "Reported hearsay or non-witnessed statement",
+     "Passive agentless action"
+    ],
+    "answer": 2,
+    "explanation": "The quotative mood (-vat) expresses hearsay, rumour, or unverified indirect report."
+   },
+   {
+    "question": "Choose the correct negative quotative: 'Kuulujuttude järgi ta ei ___ tõtt.' (is not speaking)",
+    "options": [
+     "räägi",
+     "räägivat",
+     "rääkinud",
+     "räägita"
+    ],
+    "answer": 1,
+    "explanation": "The negative quotative combines 'ei' with the -vat form: 'ei räägivat'."
+   }
+  ],
+  "tip": "The quotative suffix -vat never changes for grammatical person. Mina tulevat, sina tulevat, nemad tulevat — one invariant ending for all!"
+ },
+ {
+  "id": "et-b2-participles-and-clause-shortening",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#4F46E5",
+  "emoji": "✂️",
+  "title": "Participles in Clause Shortening",
+  "subtitle": "Compressing relative and temporal clauses with -v, -tav, -nud, and -tud",
+  "color": "#3730A3",
+  "bg": "#EEF2FF",
+  "keyPoint": "Subordinate clauses starting with 'kes', 'mis', or 'kui' can be converted into pre-modifying participial phrases where active or passive participles decline in case and number with their head noun.",
+  "structure": {
+   "headers": [
+    "Participle",
+    "Voice & Aspect",
+    "Full Clause",
+    "Shortened Participial Phrase"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-v",
+      "Active Present",
+      "mees, kes laulab",
+      "laulev mees"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-nud",
+      "Active Past",
+      "tüdruk, kes saabus eile",
+      "eile saabunud tüdruk"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-tav / -dav",
+      "Passive Present",
+      "raamat, mida loetakse",
+      "loetav raamat"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-tud / -dud",
+      "Passive Past",
+      "kiri, mis kirjutati eile",
+      "eile kirjutatud kiri"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Replacing relative clauses",
+    "example": "Nägin tänaval jooksvat koera.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Replacing temporal clauses",
+    "example": "Töö lõpetanud, läks ta puhkama.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Adverbial modifier of result/manner",
+    "example": "Ta vastas naeratades ja käsi laiutades.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kohtasin eile Eestisse saabunud delegatsiooni.",
+    "ko": "",
+    "highlight": "saabunud delegatsiooni"
+   },
+   {
+    "en": "Laual lebab hiljuti avaldatud teadusartikkel.",
+    "ko": "",
+    "highlight": "avaldatud teadusartikkel"
+   },
+   {
+    "en": "Rongis magavatele reisijatele jagati tekke.",
+    "ko": "",
+    "highlight": "magavatele reisijatele"
+   },
+   {
+    "en": "Arutlusel oli kõiki puudutav probleem.",
+    "ko": "",
+    "highlight": "puudutav probleem"
+   },
+   {
+    "en": "Kodu poole kõndiv noormees kuulas taskuhäälingut.",
+    "ko": "",
+    "highlight": "kõndiv noormees"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Nägin mees kes jookseb pargis.",
+    "right": "Nägin pargis jooksvat meest.",
+    "note": "When shortened into an adjective-like modifier, the participle ('jooksvat') must agree in case and number with the head noun ('meest' - partitive singular)."
+   },
+   {
+    "wrong": "Eile kirjutatud tüdruk läks ära.",
+    "right": "Eile kirjutanud tüdruk läks ära.",
+    "note": "The active subject who performed the writing requires the active past participle '-nud' (kirjutanud), not the passive '-tud'."
+   },
+   {
+    "wrong": "Auto mis pargitud siin on minu oma.",
+    "right": "Siia pargitud auto on minu oma.",
+    "note": "Participle constructions precede the noun they modify, unlike English and standard relative clauses."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Shorten the clause: 'naine, kes töötab haiglas' -> 'haiglas ___ naine'",
+    "options": [
+     "töötatud",
+     "töötav",
+     "töötavale",
+     "töötanud"
+    ],
+    "answer": 1,
+    "explanation": "Active present relative clause ('kes töötab') is shortened using the -v participle ('töötav')."
+   },
+   {
+    "question": "Select the correct form to agree with the noun: 'Andsin võtme laua taga ___ mehele.' (sitting)",
+    "options": [
+     "istuv",
+     "istuvad",
+     "istuvale",
+     "istuvast"
+    ],
+    "answer": 2,
+    "explanation": "Participles modifying a noun must agree in case and number: 'mehele' is allative singular, so 'istuvale' must also be allative singular."
+   },
+   {
+    "question": "Shorten the passive past clause: 'küsimused, mis arutati koosolekul' -> 'koosolekul ___ küsimused'",
+    "options": [
+     "arutanud",
+     "arutavad",
+     "arutatav",
+     "arutatud"
+    ],
+    "answer": 3,
+    "explanation": "Passive past actions ('mis arutati') shorten to the -tud participle ('arutatud')."
+   },
+   {
+    "question": "Which sentence correctly uses clause shortening for 'The child who woke up early was tired'?",
+    "options": [
+     "Vara äratatud laps oli väsinud.",
+     "Vara ärganud laps oli väsinud.",
+     "Laps kes vara ärganud oli väsinud.",
+     "Vara ärkav laps oli väsinud."
+    ],
+    "answer": 1,
+    "explanation": "'Ärkama' is active intransitive in the past, so the correct active past participle is 'ärganud'."
+   }
+  ],
+  "tip": "Remember agreement: unlike verbs in finite clauses, the -v and -tav participles decline through all 14 Estonian cases just like regular adjectives to match their head noun!"
+ }
+]

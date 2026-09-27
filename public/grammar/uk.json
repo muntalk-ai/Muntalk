@@ -1,0 +1,3330 @@
+[
+ {
+  "id": "uk-a1-grammatical-gender-and-endings",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🏷️",
+  "title": "Noun Gender and Stem Types",
+  "subtitle": "Determine masculine, feminine, and neuter nouns by their final sounds",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Ukrainian nouns belong to one of three genders, identified primarily by whether their dictionary form ends in a consonant, -а/-я, or -о/-е/-я.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Typical Endings",
+    "Stem Group",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine",
+      "Consonant / -ь",
+      "Hard (брат) / Soft (день)",
+      "стіл / учитель"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine",
+      "-а / -я / -ь",
+      "Hard (вода) / Soft (пісня)",
+      "книга / ніч"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter",
+      "-о / -е / -я (-еня)",
+      "Hard (вікно) / Soft (поле)",
+      "місто / море"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Masculine Identification",
+    "example": "Мій брат читає цікавий журнал.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Feminine Identification",
+    "example": "Ця нова школа дуже велика.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Neuter Identification",
+    "example": "Це тепле літо було чудовим.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Студент читає новий підручник.",
+    "ko": "",
+    "highlight": "Студент"
+   },
+   {
+    "en": "Моя мама любить каву.",
+    "ko": "",
+    "highlight": "мама"
+   },
+   {
+    "en": "Сонце яскраво світить щодня.",
+    "ko": "",
+    "highlight": "Сонце"
+   },
+   {
+    "en": "Цей день дуже довгий.",
+    "ko": "",
+    "highlight": "день"
+   },
+   {
+    "en": "Тиха ніч прийшла в село.",
+    "ko": "",
+    "highlight": "ніч"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "велике собака",
+    "right": "великий собака",
+    "note": "In standard Ukrainian, 'собака' (dog) is masculine, despite ending in -а."
+   },
+   {
+    "wrong": "новий машина",
+    "right": "нова машина",
+    "note": "Nouns ending in -а like 'машина' are feminine and require feminine adjective agreements."
+   },
+   {
+    "wrong": "цей ніч",
+    "right": "ця ніч",
+    "note": "Nouns ending in -ь can be masculine or feminine; 'ніч' (along with подорож, тінь) is feminine."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the masculine noun among the choices:",
+    "options": [
+     "кава",
+     "місто",
+     "телефон",
+     "пісня"
+    ],
+    "answer": 2,
+    "explanation": "'Телефон' ends in a hard consonant, which is the classic marker for masculine nouns."
+   },
+   {
+    "question": "Which of the following is a neuter noun?",
+    "options": [
+     "вікно",
+     "стіл",
+     "ручка",
+     "хлопець"
+    ],
+    "answer": 0,
+    "explanation": "Nouns ending in -о, such as 'вікно', are grammatically neuter."
+   },
+   {
+    "question": "Choose the feminine noun:",
+    "options": [
+     "тато",
+     "кімната",
+     "університет",
+     "море"
+    ],
+    "answer": 1,
+    "explanation": "'Кімната' ends in -а, making it feminine."
+   },
+   {
+    "question": "What is the grammatical gender of 'яблуко'?",
+    "options": [
+     "Чоловічий рід (Masculine)",
+     "Жіночий рід (Feminine)",
+     "Середній рід (Neuter)",
+     "Множина (Plural)"
+    ],
+    "answer": 2,
+    "explanation": "'Яблуко' ends in -о, so it is neuter (середній рід)."
+   }
+  ],
+  "tip": "When a noun ends in a soft sign (-ь), check its gender in a vocabulary list: 'день' and 'хлопець' are masculine, but 'ніч' and 'сіль' are feminine."
+ },
+ {
+  "id": "uk-a1-present-tense-conjugations",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⏳",
+  "title": "First and Second Conjugations (Present Tense)",
+  "subtitle": "Conjugate Ukrainian verbs using the -е/-є and -и/-ї vowel markers",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Ukrainian verbs divide into Conjugation I (stem vowel -е/-є in third person singular) and Conjugation II (stem vowel -ить/-їть).",
+  "structure": {
+   "headers": [
+    "Person",
+    "Conjugation I (-е-/-є-)",
+    "Conjugation II (-и-/-ї-)",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Я (I)",
+      "чита-ю",
+      "говор-ю",
+      "I read / I speak"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ти (You sg.)",
+      "чита-єш",
+      "говор-иш",
+      "You read / You speak"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Він/Вона (He/She)",
+      "чита-є",
+      "говор-ить",
+      "He reads / She speaks"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Ми (We)",
+      "чита-ємо",
+      "говор-имо",
+      "We read / We speak"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Вони (They)",
+      "чита-ють",
+      "говор-ять",
+      "They read / They speak"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Conjugation I Habitual Action",
+    "example": "Ми щодня читаємо газети.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Conjugation II Ongoing Action",
+    "example": "Вони зараз говорять про роботу.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Routine Inquiry",
+    "example": "Де ти живеш і де працюєш?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Я знаю правильну відповідь.",
+    "ko": "",
+    "highlight": "знаю"
+   },
+   {
+    "en": "Ти добре розумієш українську мову.",
+    "ko": "",
+    "highlight": "розумієш"
+   },
+   {
+    "en": "Оксана вчить нові слова щоранку.",
+    "ko": "",
+    "highlight": "вчить"
+   },
+   {
+    "en": "Ми робимо домашнє завдання разом.",
+    "ko": "",
+    "highlight": "робимо"
+   },
+   {
+    "en": "Студенти пишуть контрольний тест.",
+    "ko": "",
+    "highlight": "пишуть"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Він читаить книгу.",
+    "right": "Він читає книгу.",
+    "note": "Читати belongs to Conjugation I, so the 3rd person singular takes -є, not -ить."
+   },
+   {
+    "wrong": "Ми говоримоть швидко.",
+    "right": "Ми говоримо швидко.",
+    "note": "The suffix -ть belongs exclusively to 3rd person forms; the 1st person plural ('we') ending is -мо."
+   },
+   {
+    "wrong": "Вони бачать і читають правильно.",
+    "right": "Вони бачать і читають правильно.",
+    "note": "Take care with 3rd plural endings: 'бачити' is Conj. II (вони бачать), while 'читати' is Conj. I (вони читають)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Він щодня ___ українську музику.' (слухати)",
+    "options": [
+     "слухаю",
+     "слухає",
+     "слухаєш",
+     "слухають"
+    ],
+    "answer": 1,
+    "explanation": "'Він' requires the 3rd person singular ending -є for first-conjugation verbs like слухати."
+   },
+   {
+    "question": "Complete the sentence: 'Ми ___ у Києві.' (жити)",
+    "options": [
+     "живемо",
+     "живеш",
+     "живуть",
+     "живу"
+    ],
+    "answer": 0,
+    "explanation": "'Ми' (we) takes the 1st person plural ending -емо/-ємо."
+   },
+   {
+    "question": "Complete the sentence: 'Ви швидко ___.' (говорити)",
+    "options": [
+     "говорить",
+     "говоримо",
+     "говорять",
+     "говорите"
+    ],
+    "answer": 3,
+    "explanation": "'Ви' (you formal/plural) takes -ите in Conjugation II."
+   },
+   {
+    "question": "Complete the sentence: 'Вони ___ листа.' (писати)",
+    "options": [
+     "пишуть",
+     "пишемо",
+     "пишете",
+     "пише"
+    ],
+    "answer": 0,
+    "explanation": "Писати is a first conjugation verb; 'вони' takes -уть (stem change с -> ш: пишуть)."
+   }
+  ],
+  "tip": "Look at the 3rd person plural (вони) form: if it ends in -уть/-ють, it's Conjugation I; if it ends in -ать/-ять, it's Conjugation II."
+ },
+ {
+  "id": "uk-a1-accusative-case-inanimates-and-animates",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎯",
+  "title": "Accusative Case and Animacy",
+  "subtitle": "Form direct objects and distinguish living beings from objects",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "In the accusative case, feminine nouns change -а to -у, inanimate masculine nouns stay unchanged, while animate masculine nouns adopt the genitive ending -а/-я.",
+  "structure": {
+   "headers": [
+    "Noun Category",
+    "Nominative (Subject)",
+    "Accusative (Object)",
+    "Rule"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Feminine (-а/-я)",
+      "книга / пісня",
+      "книг-у / пісн-ю",
+      "Always changes to -у / -ю"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Inanimate Masculine",
+      "стіл / телефон",
+      "стіл / телефон",
+      "Accusative = Nominative"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Animate Masculine",
+      "брат / Андрій",
+      "брат-а / Андрі-я",
+      "Accusative = Genitive (-а/-я)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter (-о/-е)",
+      "місто / море",
+      "місто / море",
+      "Accusative = Nominative"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Direct Object with Feminine Noun",
+    "example": "Я купую свіжу каву.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Animate Person as Direct Object",
+    "example": "Ми бачимо нашого вчителя.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Inanimate Object Direct Object",
+    "example": "Він слухає новий подкаст.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Я читаю цікаву книжку.",
+    "ko": "",
+    "highlight": "книжку"
+   },
+   {
+    "en": "Вона любить свого тата.",
+    "ko": "",
+    "highlight": "тата"
+   },
+   {
+    "en": "Тарас зустрів давнього друга.",
+    "ko": "",
+    "highlight": "друга"
+   },
+   {
+    "en": "Ми купуємо новий комп'ютер.",
+    "ko": "",
+    "highlight": "комп'ютер"
+   },
+   {
+    "en": "Він слухає сучасну музику.",
+    "ko": "",
+    "highlight": "музику"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Я бачу мій друг.",
+    "right": "Я бачу мого друга.",
+    "note": "Because 'друг' is an animate masculine noun, it must take the genitive ending -а in the accusative case."
+   },
+   {
+    "wrong": "Вона читає газета.",
+    "right": "Вона читає газету.",
+    "note": "Feminine nouns ending in -а must change to -у when serving as direct objects."
+   },
+   {
+    "wrong": "Я купив хліба в магазині.",
+    "right": "Я купив хліб в магазині.",
+    "note": "Inanimate masculine nouns like 'хліб' do not take -а when referring to a definite object, matching nominative form."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Я бачу ___.' (сестра)",
+    "options": [
+     "сестрі",
+     "сестри",
+     "сестру",
+     "сестрою"
+    ],
+    "answer": 2,
+    "explanation": "The feminine noun 'сестра' changes ending -а to -у in the accusative case."
+   },
+   {
+    "question": "Complete the sentence: 'Студент слухає ___.' (викладач - animate)",
+    "options": [
+     "викладача",
+     "викладачу",
+     "викладачем",
+     "викладач"
+    ],
+    "answer": 0,
+    "explanation": "Animate masculine nouns take -а/-я in the accusative case (animacy rule)."
+   },
+   {
+    "question": "Complete the sentence: 'Ми купуємо ___.' (стіл - inanimate)",
+    "options": [
+     "стола",
+     "столу",
+     "столі",
+     "стіл"
+    ],
+    "answer": 3,
+    "explanation": "Inanimate masculine nouns keep their nominative form in the accusative case."
+   },
+   {
+    "question": "Complete the sentence: 'Він любить ___.' (музика)",
+    "options": [
+     "музиці",
+     "музику",
+     "музики",
+     "музика"
+    ],
+    "answer": 1,
+    "explanation": "'Музика' is a feminine noun ending in -а; in the accusative case it changes to 'музику'."
+   }
+  ],
+  "tip": "Ask yourself: Is it alive? If it is a masculine human or animal, add -а/-я. If it is an inanimate object or thing, leave it alone!"
+ },
+ {
+  "id": "uk-a1-locative-case-with-prepositions",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📍",
+  "title": "Locative Case with 'в/у' and 'на'",
+  "subtitle": "Describe where objects and events are located",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The locative case is used strictly with prepositions (primarily 'в/у' for inside and 'на' for surfaces or events) to express static location.",
+  "structure": {
+   "headers": [
+    "Noun Ending",
+    "Locative Ending",
+    "Nominative",
+    "Locative Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Hard Consonant / -а",
+      "-і",
+      "парк / кімната",
+      "у парк-у / в кімнат-і"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Soft Stem / -я / -е",
+      "-і / -ї",
+      "музей / станція",
+      "в музе-ї / на станці-ї"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masculine with -к-, -г-, -х-",
+      "-у / -ю",
+      "парк / берег",
+      "у парк-у / на берег-у"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Animate / Professional",
+      "-ові / -еві",
+      "лікар / брат",
+      "на лікар-еві / на брат-ові"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Enclosed Space (у / в)",
+    "example": "Він працює в офісі кожен день.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Open Surface or Event (на)",
+    "example": "Діти гуляють на вулиці.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Geographic City / Country",
+    "example": "Мої друзі живуть у Києві.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Книга лежить на столі.",
+    "ko": "",
+    "highlight": "на столі"
+   },
+   {
+    "en": "Ми зараз перебуваємо в театрі.",
+    "ko": "",
+    "highlight": "в театрі"
+   },
+   {
+    "en": "Вона працює у великому банку.",
+    "ko": "",
+    "highlight": "у великому банку"
+   },
+   {
+    "en": "Картина висить на білій стіні.",
+    "ko": "",
+    "highlight": "на білій стіні"
+   },
+   {
+    "en": "Студенти сидять в аудиторії.",
+    "ko": "",
+    "highlight": "в аудиторії"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Я живу в Київ.",
+    "right": "Я живу в Києві.",
+    "note": "Nouns denoting location after 'в/у' must take the locative ending (Київ -> Києві)."
+   },
+   {
+    "wrong": "Він сидить на стул.",
+    "right": "Він сидить на стільці.",
+    "note": "Location requires the locative case with sound alternation (стілець -> стільці)."
+   },
+   {
+    "wrong": "Книжка лежить в столі.",
+    "right": "Книжка лежить на столі.",
+    "note": "Use 'на' for surfaces (on the table) and 'в/у' for enclosed containers (inside the table/drawer)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Діти зараз граються ___.' (школа)",
+    "options": [
+     "у школі",
+     "у школу",
+     "у школою",
+     "у школа"
+    ],
+    "answer": 0,
+    "explanation": "Feminine nouns ending in -а replace -а with -і in the locative case: 'у школі'."
+   },
+   {
+    "question": "Complete the sentence: 'Ми зустрілися ___.' (концерт)",
+    "options": [
+     "на концертом",
+     "на концерту",
+     "на концерті",
+     "на концерт"
+    ],
+    "answer": 2,
+    "explanation": "Events take the preposition 'на' and standard masculine locative ending -і: 'на концерті'."
+   },
+   {
+    "question": "Complete the sentence: 'Ключі лежать ___.' (стіл)",
+    "options": [
+     "в стола",
+     "на столі",
+     "на столом",
+     "у стіл"
+    ],
+    "answer": 1,
+    "explanation": "'On the table' requires 'на' plus the locative ending -і with vowel change: 'на столі'."
+   },
+   {
+    "question": "Choose the correct locative form for 'парк':",
+    "options": [
+     "у парка",
+     "у парком",
+     "у парку",
+     "у паркі"
+    ],
+    "answer": 2,
+    "explanation": "Masculine nouns ending in velars (-к, -г, -х) take the locative suffix -у: 'у парку'."
+   }
+  ],
+  "tip": "Use 'у' between consonant sounds and 'в' before or after vowels to keep Ukrainian sentences flowing smoothly (милозвучність)."
+ },
+ {
+  "id": "uk-a1-genitive-case-possession-and-negation",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🚫",
+  "title": "Genitive Case: Possession and Negation",
+  "subtitle": "Express ownership, lack of existence, and absence with 'немає'",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The genitive case expresses possession ('whose?') and marks the item or person that does not exist when negated by 'немає' (нема).",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Nominative",
+    "Genitive Ending",
+    "Negation Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine (Hard)",
+      "брат / хліб",
+      "-а / -у",
+      "Немає брат-а / Немає хліб-а"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masculine (Soft)",
+      "учитель / день",
+      "-я",
+      "Немає вчител-я / дн-я"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine (-а / -я)",
+      "сестра / пісня",
+      "-и / -і",
+      "Немає сестр-и / пісн-і"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter (-о / -е)",
+      "вікно / море",
+      "-а / -я",
+      "Немає вікн-а / мор-я"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Absence / Negated Existence",
+    "example": "Сьогодні вдома немає хліба.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Possession / Belonging",
+    "example": "Це автомобіль мого батька.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Absence of a Person",
+    "example": "Олени сьогодні немає на уроці.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "У мене зараз немає часу.",
+    "ko": "",
+    "highlight": "немає часу"
+   },
+   {
+    "en": "Це новий телефон мого друга.",
+    "ko": "",
+    "highlight": "друга"
+   },
+   {
+    "en": "В аудиторії немає світла.",
+    "ko": "",
+    "highlight": "немає світла"
+   },
+   {
+    "en": "Тут немає цукру і молока.",
+    "ko": "",
+    "highlight": "цукру"
+   },
+   {
+    "en": "Це кімната моєї молодшої сестри.",
+    "ko": "",
+    "highlight": "сестри"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "У мене немає час.",
+    "right": "У мене немає часу.",
+    "note": "After 'немає', the noun must be in the genitive case (час -> часу), never the nominative."
+   },
+   {
+    "wrong": "Це авто мій тато.",
+    "right": "Це авто мого тата.",
+    "note": "Possession ('car of my dad') requires both the possessive pronoun and noun in the genitive case."
+   },
+   {
+    "wrong": "Тут немає вода.",
+    "right": "Тут немає води.",
+    "note": "Feminine nouns ending in -а change to -и in the genitive case when negated."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'У магазині немає ___.' (хліб)",
+    "options": [
+     "хлібом",
+     "хліба",
+     "хлібі",
+     "хлібу"
+    ],
+    "answer": 1,
+    "explanation": "'Хліб' takes the genitive ending -а in expressions of absolute absence: 'немає хліба'."
+   },
+   {
+    "question": "Complete the sentence: 'Це підручник ___.' (Оксана)",
+    "options": [
+     "Оксану",
+     "Оксаною",
+     "Оксані",
+     "Оксани"
+    ],
+    "answer": 3,
+    "explanation": "Possession requires the genitive case; feminine 'Оксана' ends in -и ('Оксани')."
+   },
+   {
+    "question": "Complete the sentence: 'Сьогодні немає ___.' (учитель)",
+    "options": [
+     "учителі",
+     "учителя",
+     "учителю",
+     "учителем"
+    ],
+    "answer": 1,
+    "explanation": "Soft masculine nouns take -я in the genitive case: 'немає учителя'."
+   },
+   {
+    "question": "Complete the sentence: 'У мене немає вільного ___.' (час)",
+    "options": [
+     "часу",
+     "часом",
+     "часі",
+     "часа"
+    ],
+    "answer": 0,
+    "explanation": "Abstract masculine nouns typically take the -у genitive ending: 'немає часу'."
+   }
+  ],
+  "tip": "Whenever you say 'немає' (there is no / don't have), automatically switch whatever noun comes next into the Genitive case!"
+ },
+ {
+  "id": "uk-a1-phonetic-alternations-u-v-i-y",
+  "level": "a1",
+  "category": "advanced",
+  "categoryColor": "#4F46E5",
+  "emoji": "🎶",
+  "title": "Euphony Rules: У/В and І/Й Alternation",
+  "subtitle": "Achieve melodic Ukrainian by avoiding awkward consonant clusters and vowel clashes",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Ukrainian alternates between У and В, and І and Й, to maintain an easy flow of sounds by avoiding consecutive consonants or vowels.",
+  "structure": {
+   "headers": [
+    "Environment",
+    "Preposition / Conjunction",
+    "Rule Description"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "After consonant, before consonant",
+      "у / і",
+      "Separates consonants with a vowel"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "After vowel, before vowel",
+      "в / й",
+      "Prevents vowel clashes"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "At the start of a sentence before consonant",
+      "У / І",
+      "Prevents a sentence starting with a cluster"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Before в, ф, or clusters like св, тв",
+      "у / та",
+      "Prevents repeating identical sounds"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Smooth Flow Between Consonants",
+    "example": "Він живе у Києві.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Preventing Vowel Hiatus",
+    "example": "Вона в аудиторії.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Coordination with 'and'",
+    "example": "Книжка і зошит лежать на столі.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Він працює в офісі щодня.",
+    "ko": "",
+    "highlight": "в"
+   },
+   {
+    "en": "Учитель зайшов у клас.",
+    "ko": "",
+    "highlight": "у"
+   },
+   {
+    "en": "Мама й тато зараз відпочивають.",
+    "ko": "",
+    "highlight": "й"
+   },
+   {
+    "en": "Олена живе в Україні.",
+    "ko": "",
+    "highlight": "в"
+   },
+   {
+    "en": "Я читаю ввечері, а брат уранці.",
+    "ko": "",
+    "highlight": "уранці"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Він живе в Києві.",
+    "right": "Він живе у Києві.",
+    "note": "Use 'у' between two consonants ('в' and 'К') to avoid an awkward consonant cluster."
+   },
+   {
+    "wrong": "Вона вчиться у університеті.",
+    "right": "Вона вчиться в університеті.",
+    "note": "Use 'в' before a vowel like 'у' to prevent two identical vowels from colliding."
+   },
+   {
+    "wrong": "Сестра і брат сплять.",
+    "right": "Сестра й брат сплять.",
+    "note": "Between a vowel ('а') and a consonant ('б'), use 'й' instead of 'і' for smoother flow."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct form: 'Вона живе ___ Львові.'",
+    "options": [
+     "у",
+     "в",
+     "й",
+     "із"
+    ],
+    "answer": 0,
+    "explanation": "Before a consonant cluster starting with 'Льв', use 'у' to ensure euphony."
+   },
+   {
+    "question": "Choose the correct conjunction: 'Брат ___ сестра гуляють.'",
+    "options": [
+     "й",
+     "в",
+     "і",
+     "у"
+    ],
+    "answer": 2,
+    "explanation": "After a consonant ('т') and before a consonant ('с'), 'і' is required."
+   },
+   {
+    "question": "Choose the correct preposition: 'Ми зараз відпочиваємо ___ Одесі.'",
+    "options": [
+     "у",
+     "в",
+     "і",
+     "й"
+    ],
+    "answer": 1,
+    "explanation": "Before the vowel 'О', use 'в' to avoid vowel hiatus."
+   },
+   {
+    "question": "Choose the correct conjunction: 'Вона читає ___ пише.'",
+    "options": [
+     "в",
+     "у",
+     "і",
+     "й"
+    ],
+    "answer": 3,
+    "explanation": "After the vowel 'є' and before the consonant 'п', 'й' provides the best phonetic balance."
+   }
+  ],
+  "tip": "Think of Ukrainian as music: whenever your tongue feels tangled by consonants, switch to 'у' or 'і'!"
+ },
+ {
+  "id": "uk-a2-instrumental-case-accompaniment-and-means",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🛠️",
+  "title": "Instrumental Case with and without 'з/із'",
+  "subtitle": "Master the distinction between doing something together and using a tool",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use the Instrumental with the preposition 'з' (with) for human accompaniment, but NEVER use 'з' for tools, means of transport, or professions.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Preposition",
+    "Ukrainian Pattern",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Accompaniment (with someone)",
+      "з / зі / із",
+      "з + Instrumental",
+      "з другом"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Tool / Instrument",
+      "None",
+      "Direct Instrumental",
+      "олівцем"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Means of Transit",
+      "None",
+      "Direct Instrumental",
+      "поїздом"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Profession with 'бути'",
+      "None",
+      "Direct Instrumental",
+      "лікарем"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Accompaniment with People",
+    "example": "Я гуляю в парку з подругою.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Tools and Utensils",
+    "example": "Ми їмо суп ложкою.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Means of Transport",
+    "example": "Він їде на роботу автобусом.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Я пишу листа синьою ручкою.",
+    "ko": "",
+    "highlight": "ручкою"
+   },
+   {
+    "en": "Оксана п'є каву з молоком.",
+    "ko": "",
+    "highlight": "з молоком"
+   },
+   {
+    "en": "Мій батько все життя працював учителем.",
+    "ko": "",
+    "highlight": "учителем"
+   },
+   {
+    "en": "Ми подорожуємо Карпатами поїздом.",
+    "ko": "",
+    "highlight": "поїздом"
+   },
+   {
+    "en": "Андрій розмовляє зі своїм братом.",
+    "ko": "",
+    "highlight": "зі своїм братом"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Я пишу з ручкою.",
+    "right": "Я пишу ручкою.",
+    "note": "Tools never take 'з'. Writing 'з ручкою' implies the pen is a person keeping you company!"
+   },
+   {
+    "wrong": "Ми їдемо з автобусом.",
+    "right": "Ми їдемо автобусом.",
+    "note": "Vehicles take the bare instrumental without any preposition."
+   },
+   {
+    "wrong": "Він хоче стати з лікарем.",
+    "right": "Він хоче стати лікарем.",
+    "note": "Professions after 'стати' (to become) or 'бути' (to be) require the bare instrumental."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Діти малюють картинки ___.' (colored pencils)",
+    "options": [
+     "олівцями",
+     "з олівцями",
+     "в олівцях",
+     "олівців"
+    ],
+    "answer": 0,
+    "explanation": "Tools and instruments take the instrumental case without prepositions."
+   },
+   {
+    "question": "Complete the sentence: 'Максим пішов у театр ___.' (with sister)",
+    "options": [
+     "сестрою",
+     "із сестрою",
+     "сестра",
+     "у сестри"
+    ],
+    "answer": 1,
+    "explanation": "Human accompaniment requires the preposition 'із' or 'з'."
+   },
+   {
+    "question": "Complete the sentence: 'Вона щодня добирається додому ___.' (by metro)",
+    "options": [
+     "з метро",
+     "на метро",
+     "метро",
+     "у метро"
+    ],
+    "answer": 2,
+    "explanation": "'Метро' is an indeclinable noun used here as bare instrumental for means of transit."
+   },
+   {
+    "question": "Complete the sentence: 'Мій брат хоче бути ___.' (architect)",
+    "options": [
+     "архітектор",
+     "з архітектором",
+     "архітектора",
+     "архітектором"
+    ],
+    "answer": 3,
+    "explanation": "Predicative professions take the bare instrumental case."
+   }
+  ],
+  "tip": "Ask yourself: is it a companion or a tool? If companion, add 'з'. If tool or vehicle, drop 'з' entirely!"
+ },
+ {
+  "id": "uk-a2-dative-case-indirect-objects",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🎁",
+  "title": "Dative Case for Indirect Objects and Age",
+  "subtitle": "Give gifts, tell stories, and state ages with the recipient case",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The Dative case marks the recipient of an action and is used in impersonal constructions to express age.",
+  "structure": {
+   "headers": [
+    "Noun Class",
+    "Preferred Ending",
+    "Alternative Ending",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Animate",
+      "-ові / -еві / -єві",
+      "-у / -ю",
+      "братові / брату"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masculine Inanimate",
+      "-у / -ю",
+      "-ові / -еві",
+      "столу / столові"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine (-а / -я)",
+      "-і (with mutation)",
+      "—",
+      "сестрі, руці"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter (-о / -е)",
+      "-у / -ю",
+      "-ові / -еві",
+      "місту / містові"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Indirect Recipient",
+    "example": "Я дарую подарунок сестрі.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Expressing Age",
+    "example": "Моєму братові двадцять років.",
+    "translation": ""
+   },
+   {
+    "color": "#DB2777",
+    "label": "Giving Advice or Information",
+    "example": "Вона розповідає другові новину.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Я телефоную своєму другові щовечора.",
+    "ko": "",
+    "highlight": "другові"
+   },
+   {
+    "en": "Олені зараз двадцять п'ять років.",
+    "ko": "",
+    "highlight": "Олені"
+   },
+   {
+    "en": "Батько купив сину новий велосипед.",
+    "ko": "",
+    "highlight": "сину"
+   },
+   {
+    "en": "Учитель пояснює студентам нове правило.",
+    "ko": "",
+    "highlight": "студентам"
+   },
+   {
+    "en": "Дідусеві подобається читати газети.",
+    "ko": "",
+    "highlight": "Дідусеві"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Я маю двадцять років.",
+    "right": "Мені двадцять років.",
+    "note": "In Ukrainian, age is expressed impersonally using the Dative case of the person ('Мені'), not 'I have'."
+   },
+   {
+    "wrong": "Я телефоную мого друга.",
+    "right": "Я телефоную моєму другові.",
+    "note": "The verb 'телефонувати' governs the Dative case, not Genitive or Accusative."
+   },
+   {
+    "wrong": "Він дав книгу до Івана.",
+    "right": "Він дав книгу Іванові.",
+    "note": "Recipients do not take the preposition 'до'; use the direct Dative case."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I am 30 years old'?",
+    "options": [
+     "Я тридцять років.",
+     "Мене тридцять років.",
+     "Мені тридцять років.",
+     "Моєму тридцять років."
+    ],
+    "answer": 2,
+    "explanation": "Age requires the Dative pronoun 'Мені'."
+   },
+   {
+    "question": "Choose the best form: 'Оксана написала листа ___.' (to her brother)",
+    "options": [
+     "братом",
+     "брата",
+     "браті",
+     "братові"
+    ],
+    "answer": 3,
+    "explanation": "The recipient ending for masculine animate nouns is typically -ові."
+   },
+   {
+    "question": "Choose the correct form: 'Передай привіт ___.' (to mother)",
+    "options": [
+     "мамі",
+     "маму",
+     "мамою",
+     "мама"
+    ],
+    "answer": 0,
+    "explanation": "Feminine nouns ending in -a take -і in the Dative (мама -> мамі)."
+   },
+   {
+    "question": "Which ending is preferred when two masculine nouns appear side-by-side (e.g., 'to friend Ivan')?",
+    "options": [
+     "-ові on both",
+     "другу Іванові (mix endings)",
+     "-у on both",
+     "-ом on both"
+    ],
+    "answer": 1,
+    "explanation": "To avoid repetitive sounds, Ukrainians alternate endings: one gets -у/-ю and the other gets -ові/-еві."
+   }
+  ],
+  "tip": "When you have a name and title together, alternate endings: 'пану Іванові' sounds far better than 'панові Іванові'!"
+ },
+ {
+  "id": "uk-a2-vocative-case",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🗣️",
+  "title": "Vocative Case in Direct Address",
+  "subtitle": "Address friends, family, and colleagues properly without sounding stiff",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Ukrainian has a dedicated 7th grammatical case used exclusively when directly addressing, calling, or greeting someone.",
+  "structure": {
+   "headers": [
+    "Noun Group",
+    "Ending Pattern",
+    "Nominative Base",
+    "Vocative Address"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Hard Consonant",
+      "-е",
+      "Петро / брат",
+      "Петре! / брате!"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masculine Soft Consonant / -й",
+      "-ю",
+      "Сергій / Андрій",
+      "Сергію! / Андрію!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masculine Velar / Sibilant",
+      "-у",
+      "батько / Олег",
+      "батьку! / Олегу!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine (-а / -я)",
+      "-о / -е / -є",
+      "Оксана / Марія",
+      "Оксано! / Маріє!"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Friendly Greetings",
+    "example": "Привіт, Оксано!",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Formal Address",
+    "example": "Доброго дня, пане професоре!",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Calling a Family Member",
+    "example": "Мамо, ходи сюди!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Добрий ранок, пане Олександре!",
+    "ko": "",
+    "highlight": "пане Олександре"
+   },
+   {
+    "en": "Дякую тобі за допомогу, друже!",
+    "ko": "",
+    "highlight": "друже"
+   },
+   {
+    "en": "Мамо, ти бачила мій підручник?",
+    "ko": "",
+    "highlight": "Мамо"
+   },
+   {
+    "en": "Іване, коли ти повернешся додому?",
+    "ko": "",
+    "highlight": "Іване"
+   },
+   {
+    "en": "Скажіть, будь ласка, Ольго, де аптека?",
+    "ko": "",
+    "highlight": "Ольго"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Привіт, Оксана!",
+    "right": "Привіт, Оксано!",
+    "note": "Always address people in the Vocative case (-о), not the Nominative case."
+   },
+   {
+    "wrong": "Доброго дня, пан Богдан!",
+    "right": "Доброго дня, пане Богдане!",
+    "note": "Both the honorific title ('пан') and the given name must take the Vocative ending."
+   },
+   {
+    "wrong": "Дякую, друг!",
+    "right": "Дякую, друже!",
+    "note": "The word 'друг' undergoes a consonant mutation (г -> ж) and takes -е: 'друже!'"
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How should you greet your male friend named 'Андрій'?",
+    "options": [
+     "Привіт, Андріє!",
+     "Привіт, Андрій!",
+     "Привіт, Андрію!",
+     "Привіт, Андрія!"
+    ],
+    "answer": 2,
+    "explanation": "Soft masculine names ending in -й take the Vocative ending -ю."
+   },
+   {
+    "question": "Call your mother to ask a question:",
+    "options": [
+     "Мама, де ти?",
+     "Мамі, де ти?",
+     "Маму, де ти?",
+     "Мамо, де ти?"
+    ],
+    "answer": 3,
+    "explanation": "Feminine nouns ending in hard -a take -o in the Vocative (мама -> мамо)."
+   },
+   {
+    "question": "Address 'пан Тарас' correctly in an email greeting:",
+    "options": [
+     "Пане Тарасе!",
+     "Пан Тарас!",
+     "Пану Тарасу!",
+     "Пана Тараса!"
+    ],
+    "answer": 0,
+    "explanation": "Both elements change into the Vocative: 'пан' becomes 'пане' and 'Тарас' becomes 'Тарасе'."
+   },
+   {
+    "question": "What is the Vocative form of 'сестра'?",
+    "options": [
+     "сестрі!",
+     "сестро!",
+     "сестру!",
+     "сестре!"
+    ],
+    "answer": 1,
+    "explanation": "Feminine hard nouns take the -o ending: 'сестро!'"
+   }
+  ],
+  "tip": "Even in casual texting, Ukrainians naturally use the vocative. Writing 'Мамо' or 'Іване' sounds warm, natural, and respectful!"
+ },
+ {
+  "id": "uk-a2-imperfective-vs-perfective-aspect",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#DC2626",
+  "emoji": "⏳",
+  "title": "Verbal Aspect: Imperfective vs. Perfective",
+  "subtitle": "Distinguish between ongoing processes and completed results",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Imperfective verbs focus on processes, habits, and repeated actions, while Perfective verbs focus on the final outcome or single completion.",
+  "structure": {
+   "headers": [
+    "Feature",
+    "Imperfective (Недоконаний)",
+    "Perfective (Доконаний)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Core Meaning",
+      "Process, duration, repetition",
+      "Result, completion, single event"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Time Markers",
+      "щодня, довго, часто, завжди",
+      "уже, нарешті, за годину"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Present Tense Form",
+      "Exists (читаю, пишеш)",
+      "DOES NOT EXIST (indicates future)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Pair Example",
+      "писати (to be writing)",
+      "написати (to have written)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Ongoing Process",
+    "example": "Я читав книжку весь вечір.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Completed Result",
+    "example": "Я прочитав цю книжку за дві години.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Habitual Repeated Action",
+    "example": "Вона щодня купує свіжий хліб.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ми вчора довго дивилися новий серіал.",
+    "ko": "",
+    "highlight": "дивилися"
+   },
+   {
+    "en": "Він нарешті написав важливий звіт.",
+    "ko": "",
+    "highlight": "написав"
+   },
+   {
+    "en": "Я зазвичай готую вечерю о сьомій годині.",
+    "ko": "",
+    "highlight": "готую"
+   },
+   {
+    "en": "Олена прийшла додому дуже пізно.",
+    "ko": "",
+    "highlight": "прийшла"
+   },
+   {
+    "en": "Ти вже зробив домашнє завдання?",
+    "ko": "",
+    "highlight": "зробив"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Я прочитав книжку три години.",
+    "right": "Я читав книжку три години.",
+    "note": "Duration expressions ('три години', 'весь день') require the imperfective aspect because they emphasize process."
+   },
+   {
+    "wrong": "Він зараз напише листа.",
+    "right": "Він зараз пише листа.",
+    "note": "Perfective verbs cannot refer to actions happening right now in the present moment."
+   },
+   {
+    "wrong": "Я вже робив домашнє завдання (meaning finished).",
+    "right": "Я вже зробив домашнє завдання.",
+    "note": "When emphasizing the finished result and using 'уже' (already), use the perfective aspect."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the verb: 'Вона ___ каву щоранку.' (drinks coffee every morning)",
+    "options": [
+     "випила",
+     "п'є",
+     "вип'є",
+     "попила"
+    ],
+    "answer": 1,
+    "explanation": "Regular repeated habits ('щоранку') take imperfective present tense."
+   },
+   {
+    "question": "Choose the verb: 'Студент нарешті ___ складний іспит.' (finally passed the exam)",
+    "options": [
+     "здавав",
+     "здасть",
+     "здав",
+     "буде здавати"
+    ],
+    "answer": 2,
+    "explanation": "'Нарешті' implies a completed result in the past, requiring perfective past tense."
+   },
+   {
+    "question": "Choose the verb: 'Ми ___ фільм дві години, але не закінчили.' (were watching for 2 hours)",
+    "options": [
+     "подивилися",
+     "дивилися",
+     "подивимося",
+     "дивимося"
+    ],
+    "answer": 1,
+    "explanation": "The duration 'дві години' plus the fact it wasn't finished indicates an imperfective process."
+   },
+   {
+    "question": "Choose the correct sentence: 'Tomorrow I will write the letter completely.'",
+    "options": [
+     "Я буду написати листа.",
+     "Я пишу листа.",
+     "Я напишу листа.",
+     "Я писатиму листа."
+    ],
+    "answer": 2,
+    "explanation": "Perfective future is formed directly with the perfective verb form 'напишу' to express future completion."
+   }
+  ],
+  "tip": "Whenever you spot time words like 'уже' (already) or 'нарешті' (finally), reach for the Perfective aspect!"
+ },
+ {
+  "id": "uk-a2-past-tense-and-gender-agreement",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#4F46E5",
+  "emoji": "⏳",
+  "title": "Past Tense Formation and Gender Agreement",
+  "subtitle": "Forming past tense forms by gender and number rather than person",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Ukrainian past tense verbs drop the infinitive suffix -ти and agree in grammatical gender and number with the subject, not grammatical person.",
+  "structure": {
+   "headers": [
+    "Gender/Number",
+    "Suffix",
+    "Example (читати)",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine (він)",
+      "-в (or zero)",
+      "читав",
+      "he / I / you read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine (вона)",
+      "-ла",
+      "читала",
+      "she / I / you read"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter (воно)",
+      "-ло",
+      "читало",
+      "it read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural (вони/ми/ви)",
+      "-ли",
+      "читали",
+      "they / we / you read"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Male Speaker/Subject",
+    "example": "Я вчора довго працював.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Female Speaker/Subject",
+    "example": "Олена написала новий лист.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Plural Subjects",
+    "example": "Ми разом дивилися цікавий фільм.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Мій брат купив новий телефон.",
+    "ko": "",
+    "highlight": "купив"
+   },
+   {
+    "en": "Сестра вчора читала цікаву книжку.",
+    "ko": "",
+    "highlight": "читала"
+   },
+   {
+    "en": "Дитина спала цілу ніч.",
+    "ko": "",
+    "highlight": "спала"
+   },
+   {
+    "en": "Сонце яскраво світило вранці.",
+    "ko": "",
+    "highlight": "світило"
+   },
+   {
+    "en": "Студенти успішно склали всі іспити.",
+    "ko": "",
+    "highlight": "склали"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Я (female) вчора працював допізна.",
+    "right": "Я вчора працювала допізна.",
+    "note": "Female speakers must use the feminine ending -ла for first-person past statements."
+   },
+   {
+    "wrong": "Вона робив домашнє завдання.",
+    "right": "Вона робила домашнє завдання.",
+    "note": "Third-person singular feminine subjects require -ла, not the masculine -в."
+   },
+   {
+    "wrong": "Ми читали-сьмо книжку.",
+    "right": "Ми читали книжку.",
+    "note": "Standard contemporary Ukrainian uses -ли for plural past without auxiliary person clitics."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct verb form: Вона вчора ___ смачну вечерю.",
+    "options": [
+     "приготував",
+     "приготувала",
+     "приготувало",
+     "приготували"
+    ],
+    "answer": 1,
+    "explanation": "The subject 'Вона' is feminine singular, so the past tense suffix must be -ла."
+   },
+   {
+    "question": "Choose the correct verb form for a male speaker: Я цілий день ___ в офісі.",
+    "options": [
+     "працював",
+     "працювала",
+     "працювало",
+     "працювали"
+    ],
+    "answer": 0,
+    "explanation": "A male speaker referring to himself ('Я') uses the masculine past ending -в."
+   },
+   {
+    "question": "Choose the correct verb form: Діти довго ___ у парку.",
+    "options": [
+     "гуляв",
+     "гуляла",
+     "гуляло",
+     "гуляли"
+    ],
+    "answer": 3,
+    "explanation": "'Діти' (children) is plural, which requires the plural past ending -ли."
+   },
+   {
+    "question": "Choose the correct verb form: Маленьке кошеня ___ молоко.",
+    "options": [
+     "пив",
+     "пила",
+     "пило",
+     "пили"
+    ],
+    "answer": 2,
+    "explanation": "'Кошеня' is a neuter noun, so the verb must take the neuter suffix -ло."
+   }
+  ],
+  "tip": "Ukrainian does not use different personal endings (like -ю, -єш) in the past; only check whether the subject is masculine (-в), feminine (-ла), neuter (-ло), or plural (-ли)!"
+ },
+ {
+  "id": "uk-a2-fleeting-vowels-and-consonant-mutations",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🔄",
+  "title": "Fleeting Vowels and First Velar Palatalization",
+  "subtitle": "Handling vowel drops and predictable consonant shifts across stems",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Fleeting vowels (о/е) disappear when case endings are added, while velar stem consonants systematically shift to palatals or sibilants in specific cases.",
+  "structure": {
+   "headers": [
+    "Shift Pattern",
+    "Nominative Base",
+    "Inflected Form",
+    "Pattern Name"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "о / е drop",
+      "день / хлопець",
+      "дня / хлопця",
+      "Fleeting vowel (випадні голосні)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "г → з / ж",
+      "нога / нога",
+      "нозі / ніжці",
+      "Velar mutation 1 & 2"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "к → ц / ч",
+      "рука / рука",
+      "руці / ручці",
+      "Velar mutation 1 & 2"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "х → с / ш",
+      "муха / вухо",
+      "мусі / у вусі",
+      "Velar mutation 1 & 2"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Genitive Vowel Drop",
+    "example": "У мене немає жодного олівця.",
+    "translation": ""
+   },
+   {
+    "color": "#4F46E5",
+    "label": "Dative/Locative Shift (к → ц)",
+    "example": "Вона тримає ключ у руці.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Locative Shift (г → з)",
+    "example": "На моїй нозі новий черевик.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Сьогодні немає вітру надворі.",
+    "ko": "",
+    "highlight": "вітру"
+   },
+   {
+    "en": "Ми зустріли того хлопця вчора.",
+    "ko": "",
+    "highlight": "хлопця"
+   },
+   {
+    "en": "На цій полиці лежать словники.",
+    "ko": "",
+    "highlight": "полиці"
+   },
+   {
+    "en": "У річці дуже чиста вода.",
+    "ko": "",
+    "highlight": "річці"
+   },
+   {
+    "en": "Дівчинка сиділа на підлозі.",
+    "ko": "",
+    "highlight": "підлозі"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "У мене немає деньа відпочинку.",
+    "right": "У мене немає дня відпочинку.",
+    "note": "The vowel 'е' in 'день' is fleeting and drops out in oblique cases, giving 'дня'."
+   },
+   {
+    "wrong": "Я читаю про це в книгі.",
+    "right": "Я читаю про це в книзі.",
+    "note": "In the locative singular of feminine nouns, 'г' shifts to 'з' before the ending -і."
+   },
+   {
+    "wrong": "Він тримає чашку в рукі.",
+    "right": "Він тримає чашку в руці.",
+    "note": "The consonant 'к' must alternate to 'ц' before the locative/dative ending -і."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank (Genitive of 'сон'): Після довгого ___ я почувався бадьорим.",
+    "options": [
+     "сона",
+     "сону",
+     "сну",
+     "сні"
+    ],
+    "answer": 2,
+    "explanation": "The 'о' in 'сон' is a fleeting vowel that drops out, yielding Genitive 'сну'."
+   },
+   {
+    "question": "Fill in the blank (Locative of 'рука'): Каблучка виблискувала на її ___.",
+    "options": [
+     "руці",
+     "рукі",
+     "ручі",
+     "русі"
+    ],
+    "answer": 0,
+    "explanation": "Before the locative singular ending -і, 'к' shifts to 'ц', giving 'руці'."
+   },
+   {
+    "question": "Fill in the blank (Locative of 'дорога'): На слизькій ___ треба бути обережним.",
+    "options": [
+     "дорогі",
+     "дорожі",
+     "дорозі",
+     "дорожці"
+    ],
+    "answer": 2,
+    "explanation": "Before the case ending -і, velar 'г' mutates to 'з', creating 'дорозі'."
+   },
+   {
+    "question": "Fill in the blank (Genitive of 'стілець'): У кімнаті не вистачає одного ___.",
+    "options": [
+     "стілеця",
+     "стільця",
+     "стольця",
+     "стілця"
+    ],
+    "answer": 1,
+    "explanation": "The 'е' drops and 'л' softens before 'ц', resulting in 'стільця'."
+   }
+  ],
+  "tip": "Remember the three second-palatalization pairs: Г becomes З, К becomes Ц, and Х becomes С whenever you add the feminine Dative/Locative ending -і!"
+ },
+ {
+  "id": "uk-b1-verbs-of-motion-unidirectional-vs-multidirectional",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🚶",
+  "title": "Unidirectional vs. Multidirectional Verbs of Motion",
+  "subtitle": "Contrasting single-trajectory paths with repeated or round-trip journeys",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Unidirectional verbs describe motion proceeding in a single linear trajectory right now, while multidirectional verbs describe round trips, habitual journeys, or general ability.",
+  "structure": {
+   "headers": [
+    "Transport Type",
+    "Unidirectional (In progress)",
+    "Multidirectional (Habit/Return)",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "On foot",
+      "іти (іду, ідеш)",
+      "ходити (ходжу, ходиш)",
+      "to go / walk"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "By vehicle",
+      "їхати (їду, їдеш)",
+      "їздити (їжджу, їздиш)",
+      "to go / ride / drive"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Carrying",
+      "нести (несу, несеш)",
+      "носити (ношу, носиш)",
+      "to carry / bear"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Leading",
+      "вести (веду, ведеш)",
+      "водити (воджу, водиш)",
+      "to lead / drive (vehicle)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Linear Action In Progress",
+    "example": "Зараз я іду на роботу пішки.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Habitual or Regular Commute",
+    "example": "Щодня я ходжу на роботу пішки.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Completed Round Trip (Past)",
+    "example": "Учора ми їздили в Карпати й повернулися.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Куди ти зараз ідеш так швидко?",
+    "ko": "",
+    "highlight": "ідеш"
+   },
+   {
+    "en": "Олена щоранку ходить у спортзал.",
+    "ko": "",
+    "highlight": "ходить"
+   },
+   {
+    "en": "Потяг їде до Львова без зупинок.",
+    "ko": "",
+    "highlight": "їде"
+   },
+   {
+    "en": "Влітку ми часто їздимо до моря.",
+    "ko": "",
+    "highlight": "їздимо"
+   },
+   {
+    "en": "Чому ти несеш таку важку сумку?",
+    "ko": "",
+    "highlight": "несеш"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Я щодня іду до університету пішки.",
+    "right": "Я щодня ходжу до університету пішки.",
+    "note": "For repetitive or habitual everyday actions, use the multidirectional 'ходити', not 'іти'."
+   },
+   {
+    "wrong": "Зараз ми їздимо в театр.",
+    "right": "Зараз ми їдемо в театр.",
+    "note": "An action currently in progress heading in one direction requires unidirectional 'їхати'."
+   },
+   {
+    "wrong": "Минулого тижня я йшов у музей і повернувся додому.",
+    "right": "Минулого тижня я ходив у музей.",
+    "note": "A completed round trip (went and came back) requires the multidirectional verb 'ходив'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the best verb: Зараз о дев'ятій ранку ми ___ на роботу.",
+    "options": [
+     "ходимо",
+     "ідемо",
+     "їздимо",
+     "ходити"
+    ],
+    "answer": 1,
+    "explanation": "The movement is happening right now in one direction, requiring unidirectional 'ідемо'."
+   },
+   {
+    "question": "Choose the best verb: Мій син щодня ___ до школи пішки.",
+    "options": [
+     "іде",
+     "ходить",
+     "їде",
+     "їздить"
+    ],
+    "answer": 1,
+    "explanation": "'Щодня' (every day) signifies a repeated habitual route, so multidirectional 'ходить' is required."
+   },
+   {
+    "question": "Choose the best verb: Минулої суботи ми ___ до Києва і повернулися ввечері.",
+    "options": [
+     "їхали",
+     "пішли",
+     "їздили",
+     "ішли"
+    ],
+    "answer": 2,
+    "explanation": "A completed two-way round trip in the past requires the multidirectional verb 'їздили'."
+   },
+   {
+    "question": "Choose the best verb: Поглянь, он Тарас ___ нові підручники до класу.",
+    "options": [
+     "носить",
+     "несе",
+     "водив",
+     "їздить"
+    ],
+    "answer": 1,
+    "explanation": "Taras is currently carrying them on a single trajectory in the moment, which calls for 'несе'."
+   }
+  ],
+  "tip": "Ask yourself: is it a straight line right now ('іти / їхати'), or a routine loop / round trip ('ходити / їздити')?"
+ },
+ {
+  "id": "uk-b1-prefixed-verbs-of-motion",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🧭",
+  "title": "Prefixed Verbs of Motion",
+  "subtitle": "Forming precise trajectories and aspectual pairs using spatial prefixes",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Adding a spatial prefix to a unidirectional motion verb creates a perfective verb, while prefixing a multidirectional motion verb creates an imperfective verb.",
+  "structure": {
+   "headers": [
+    "Prefix & Meaning",
+    "Perfective (from іти/їхати)",
+    "Imperfective (from ходити/їздити)",
+    "English Translation"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "при- (arrival)",
+      "прийти / приїхати",
+      "приходити / приїжджати",
+      "to arrive / come"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "від- (departure)",
+      "відійти / від'їхати",
+      "відходити / від'їжджати",
+      "to depart / walk away"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ви- (movement out)",
+      "вийти / виїхати",
+      "виходити / виїжджати",
+      "to exit / leave"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "пере- (crossing)",
+      "перейти / переїхати",
+      "переходити / переїжджати",
+      "to cross / move across"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Arriving at a Destination",
+    "example": "Поїзд прибув на першу колію вчасно.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Habitual Arrival Process",
+    "example": "Він завжди приходить на пари без запізнень.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Crossing Physical Boundaries",
+    "example": "Ми обережно перейшли через дорогу.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "О котрій годині ти вчора прийшов додому?",
+    "ko": "",
+    "highlight": "прийшов"
+   },
+   {
+    "en": "Вона щодня виходить з офісу о шостій.",
+    "ko": "",
+    "highlight": "виходить"
+   },
+   {
+    "en": "Ми успішно переїхали в нову квартиру.",
+    "ko": "",
+    "highlight": "переїхали"
+   },
+   {
+    "en": "Автобус уже під'їжджає до нашої зупинки.",
+    "ko": "",
+    "highlight": "під'їжджає"
+   },
+   {
+    "en": "Не заходьте до кімнати у взутті.",
+    "ko": "",
+    "highlight": "заходьте"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Він прийшов щодня о сьомій.",
+    "right": "Він приходив щодня о сьомій.",
+    "note": "With recurring actions ('щодня'), you must use the imperfective prefixed form 'приходив'."
+   },
+   {
+    "wrong": "Ми вчора переходили дорогу і пішли в парк.",
+    "right": "Ми вчора перейшли дорогу і пішли в парк.",
+    "note": "For a completed single traversal of the street, use the perfective 'перейшли'."
+   },
+   {
+    "wrong": "Поїзд відійхав вчасно.",
+    "right": "Поїзд від'їхав вчасно.",
+    "note": "Prefixes ending in a consonant retain the apostrophe before jotated vowels: 'від'їхати'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the best verb: Гості нарешті ___ о шостій вечора.",
+    "options": [
+     "приходити",
+     "прийшли",
+     "приходять",
+     "прийдуть"
+    ],
+    "answer": 1,
+    "explanation": "The guests arrived once at a specific time in the past; this completed action requires perfective 'прийшли'."
+   },
+   {
+    "question": "Choose the best verb: Уважно подивіться ліворуч, коли ___ дорогу.",
+    "options": [
+     "перейшли",
+     "перейти",
+     "переходите",
+     "переїхали"
+    ],
+    "answer": 2,
+    "explanation": "The process of crossing the street in progress uses the imperfective present 'переходите'."
+   },
+   {
+    "question": "Choose the best verb: Студент відчинив двері й повільно ___ з аудиторії.",
+    "options": [
+     "вийшов",
+     "виходити",
+     "виходив",
+     "перейшов"
+    ],
+    "answer": 0,
+    "explanation": "A completed sequential action (opened and stepped out) requires the past perfective 'вийшов'."
+   },
+   {
+    "question": "Choose the best verb: Вона зазвичай ___ додому дуже пізно.",
+    "options": [
+     "прийде",
+     "прийшла",
+     "прийти",
+     "приходить"
+    ],
+    "answer": 3,
+    "explanation": "'Зазвичай' indicates repeated habitual behavior, demanding imperfective 'приходить'."
+   }
+  ],
+  "tip": "Equation to remember: prefix + unidirectional = perfective (result), whereas prefix + multidirectional = imperfective (process or regular habit)."
+ },
+ {
+  "id": "uk-b1-synthetic-and-analytic-future-tenses",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔮",
+  "title": "Synthetic vs. Compound Future Tense",
+  "subtitle": "Mastering the unique Ukrainian synthetic future alongside analytical forms",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Ukrainian imperfective future can be expressed either analytically (буду читати) or synthetically with the suffix -тиму (читатиму), while perfective future uses present personal endings.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Formula / Conjugation",
+    "Example (1st Person)",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Synthetic Imperfective",
+      "Infinitive + -му, -меш, -ме, -мемо, -мете, -муть",
+      "читатиму",
+      "I will read / will be reading"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Analytical Imperfective",
+      "бути (буду, будеш...) + Infinitive",
+      "буду читати",
+      "I will read / will be reading"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Perfective Future",
+      "Prefix + Present Conjugation",
+      "прочитаю",
+      "I will read (to completion)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Synthetic Future in Writing & Speech",
+    "example": "Я пам'ятатиму цей теплий вечір завжди.",
+    "translation": ""
+   },
+   {
+    "color": "#4F46E5",
+    "label": "Analytical Future Alternative",
+    "example": "Ми будемо чекати на тебе біля метро.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Perfective Future Result",
+    "example": "Завтра я обов'язково напишу цього звіта.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Улітку ми відпочиватимемо в горах.",
+    "ko": "",
+    "highlight": "відпочиватимемо"
+   },
+   {
+    "en": "Що ти робитимеш завтра ввечері?",
+    "ko": "",
+    "highlight": "робитимеш"
+   },
+   {
+    "en": "Вони житимуть у новому будинку.",
+    "ko": "",
+    "highlight": "житимуть"
+   },
+   {
+    "en": "Я завжди любитиму рідну землю.",
+    "ko": "",
+    "highlight": "любитиму"
+   },
+   {
+    "en": "Професор пояснюватиме нову тему на лекції.",
+    "ko": "",
+    "highlight": "пояснюватиме"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Я буду прочитати цю книжку завтра.",
+    "right": "Я прочитаю цю книжку завтра.",
+    "note": "Never combine 'буду' with a perfective infinitive; use the simple perfective future 'прочитаю'."
+   },
+   {
+    "wrong": "Він буде робитиме домашнє завдання.",
+    "right": "Він робитиме домашнє завдання.",
+    "note": "Do not combine 'буде' with synthetic '-тиме'; pick either 'буде робити' or 'робитиме'."
+   },
+   {
+    "wrong": "Ми прочитатимемо всю статтю.",
+    "right": "Ми прочитаємо всю статтю.",
+    "note": "The synthetic -тиму endings only attach to imperfective verbs, never to perfective ones."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the synthetic future form for 'ми': Увечері ми ___ новий серіал.",
+    "options": [
+     "дивитимемося",
+     "будемо дивитися",
+     "подивимося",
+     "дивитися"
+    ],
+    "answer": 0,
+    "explanation": "'Дивитимемося' is the first-person plural synthetic future form (-тимемо + -ся)."
+   },
+   {
+    "question": "Identify the INCORRECT future construction in Ukrainian:",
+    "options": [
+     "буду працювати",
+     "працюватиму",
+     "буду попрацювати",
+     "попрацюю"
+    ],
+    "answer": 2,
+    "explanation": "'Буду попрацювати' is ungrammatical; analytical future can only use imperfective infinitives."
+   },
+   {
+    "question": "Choose the synthetic future form for 'ти': Що ти ___ після закінчення школи?",
+    "options": [
+     "робиш",
+     "робитимеш",
+     "зробиш",
+     "був робити"
+    ],
+    "answer": 1,
+    "explanation": "The 2nd-person singular synthetic future ending is -меш added to the infinitive: 'робитимеш'."
+   },
+   {
+    "question": "Choose the synthetic future form for 'вони': Вони завжди ___ правду.",
+    "options": [
+     "казали",
+     "будуть сказати",
+     "казатимуть",
+     "скажуть"
+    ],
+    "answer": 2,
+    "explanation": "The 3rd-person plural synthetic ending is -муть: 'казати' + 'муть' = 'казатимуть'."
+   }
+  ],
+  "tip": "The synthetic future endings (-му, -меш, -ме, -мемо, -мете, -муть) originate from the old auxiliary verb 'мати' fused directly onto the infinitive stem!"
+ },
+ {
+  "id": "uk-b1-impersonal-sentences-dative-predicates",
+  "level": "b1",
+  "category": "modals",
+  "categoryColor": "#3B82F6",
+  "emoji": "🥶",
+  "title": "Impersonal Structures and Predicative Adverbs",
+  "subtitle": "Expressing feelings, physical states, and necessity with dative subjects",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "In Ukrainian impersonal expressions, the experiencer takes the dative case while the state or necessity is conveyed by an adverbial predicate.",
+  "structure": {
+   "headers": [
+    "Structure",
+    "Ukrainian Example",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Dative + треба / потрібно",
+      "Мені треба відпочити.",
+      "Expressing necessity or obligation"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Dative + Adverb (Physical)",
+      "Йому холодно надворі.",
+      "Expressing physical sensations"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Dative + Adverb (Emotional)",
+      "Нам сумно без друзів.",
+      "Expressing emotional states"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Dative + можна / не можна",
+      "Тобі можна зайти.",
+      "Expressing permission or prohibition"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Physical Sensations",
+    "example": "Марині дуже холодно в цій кімнаті.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Modal Necessity",
+    "example": "Студентам треба уважно слухати лекцію.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Emotional States",
+    "example": "Дітям весело гратися разом у парку.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Мені дуже холодно без теплої куртки.",
+    "ko": "",
+    "highlight": "Мені дуже холодно"
+   },
+   {
+    "en": "Тобі треба випити гарячого чаю.",
+    "ko": "",
+    "highlight": "Тобі треба випити"
+   },
+   {
+    "en": "Йому було сумно дивитися цей фільм.",
+    "ko": "",
+    "highlight": "Йому було сумно"
+   },
+   {
+    "en": "Нам потрібно терміново вирішити це завдання.",
+    "ko": "",
+    "highlight": "Нам потрібно"
+   },
+   {
+    "en": "Їм тут не можна голосно розмовляти.",
+    "ko": "",
+    "highlight": "Їм тут не можна"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Я треба купити хліб.",
+    "right": "Мені треба купити хліб.",
+    "note": "Use the dative pronoun 'мені', never the nominative subject 'я', with predicative modals like 'треба'."
+   },
+   {
+    "wrong": "Він є холодно.",
+    "right": "Йому холодно.",
+    "note": "Physical sensations require the experiencer in the dative case ('йому') plus the adverb without the copula 'є'."
+   },
+   {
+    "wrong": "Ми сумно без тебе.",
+    "right": "Нам сумно без тебе.",
+    "note": "Emotional state predicates govern the dative form ('нам'), not the nominative ('ми')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: '___ треба повернутися додому.' (She needs to return home.)",
+    "options": [
+     "Вона",
+     "Її",
+     "Їй",
+     "Нею"
+    ],
+    "answer": 2,
+    "explanation": "The predicative modal 'треба' requires the experiencer in the dative case ('їй')."
+   },
+   {
+    "question": "Complete the sentence: 'Чи ___ тут тепло?' (Are you [plural] warm here?)",
+    "options": [
+     "вам",
+     "ви",
+     "вас",
+     "вами"
+    ],
+    "answer": 0,
+    "explanation": "Impersonal adverbs denoting temperature take a dative experiencer ('вам')."
+   },
+   {
+    "question": "Complete the sentence: 'Студентові ___ підготувати доповідь.' (The student needs to prepare a presentation.)",
+    "options": [
+     "потрібен",
+     "потрібна",
+     "потрібно",
+     "потрібні"
+    ],
+    "answer": 2,
+    "explanation": "With an infinitive verb, the impersonal neuter/adverbial form 'потрібно' is required."
+   },
+   {
+    "question": "Complete the sentence: 'Дітям ___ бігати біля проїжджої частини.' (Children must not run near the roadway.)",
+    "options": [
+     "неможливий",
+     "не можна",
+     "немає",
+     "не треба було"
+    ],
+    "answer": 1,
+    "explanation": "'Не можна' expresses strict prohibition with the dative experiencer 'дітям'."
+   }
+  ],
+  "tip": "To shift these sentences into the past or future, simply add 'було' or 'буде' in the invariable neuter singular (e.g., 'мені було холодно', 'йому буде весело')."
+ },
+ {
+  "id": "uk-b1-adjectival-and-adverbial-comparisons",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "⚖️",
+  "title": "Degrees of Comparison and Prepositions 'за' and 'від'",
+  "subtitle": "Forming comparatives and mastering correct case government in comparisons",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Comparative adjectives use the suffix '-іш-' (or consonant mutation) and compare items directly using 'за' + accusative or 'від' + genitive.",
+  "structure": {
+   "headers": [
+    "Construction",
+    "Ukrainian Pattern",
+    "Case Government"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Preposition 'за'",
+      "швидший за вітер",
+      "за + Accusative"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Preposition 'від'",
+      "вищий від брата",
+      "від + Genitive"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Conjunction 'ніж / як'",
+      "тепліший, ніж учора",
+      "Same case as subject"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Superlative 'най-'",
+      "найкращий у класі",
+      "Superlative prefix + Adj"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Comparison with 'за'",
+    "example": "Цей будинок вищий за сусідній.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Comparison with 'від'",
+    "example": "Мій чай солодший від твого.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Superlative Degree",
+    "example": "Дніпро — найдовша річка України.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Брат вищий за мене на п'ять сантиметрів.",
+    "ko": "",
+    "highlight": "вищий за мене"
+   },
+   {
+    "en": "Ця книжка значно цікавіша від попередньої.",
+    "ko": "",
+    "highlight": "цікавіша від попередньої"
+   },
+   {
+    "en": "Сьогодні на вулиці набагато тепліше, ніж учора.",
+    "ko": "",
+    "highlight": "тепліше, ніж учора"
+   },
+   {
+    "en": "Він обрав найпростіший шлях до мети.",
+    "ko": "",
+    "highlight": "найпростіший шлях"
+   },
+   {
+    "en": "Київ значно старіший за більшість європейських столиць.",
+    "ko": "",
+    "highlight": "старіший за більшість"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Він вищий за його брат.",
+    "right": "Він вищий за свого брата.",
+    "note": "The preposition 'за' requires the accusative case ('брата'), not nominative."
+   },
+   {
+    "wrong": "Ця кава краща від чаю.",
+    "right": "Ця кава краща за чай (або краща від чаю).",
+    "note": "Ensure 'від' governs the genitive case ('чаю'); do not leave the compared noun uninflected."
+   },
+   {
+    "wrong": "Він самий високий хлопець.",
+    "right": "Він найвищий хлопець.",
+    "note": "Avoid using 'самий' to form superlatives; prefix 'най-' directly onto the comparative form."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Цей текст легший ___ торішній.' (This text is easier than last year's.)",
+    "options": [
+     "для",
+     "за",
+     "про",
+     "без"
+    ],
+    "answer": 1,
+    "explanation": "'За' + accusative ('торішній') is the standard way to express comparative standards."
+   },
+   {
+    "question": "Complete the sentence: 'Сестра старша ___ моєї подруги.' (The sister is older than my female friend.)",
+    "options": [
+     "від",
+     "до",
+     "через",
+     "з"
+    ],
+    "answer": 0,
+    "explanation": "The preposition 'від' takes the genitive case ('моєї подруги') to indicate comparison."
+   },
+   {
+    "question": "Choose the correct superlative: 'Він прочитав ___ роман року.' (He read the most interesting novel of the year.)",
+    "options": [
+     "самий цікавий",
+     "більш цікавий",
+     "найцікавіший",
+     "зацікавлений"
+    ],
+    "answer": 2,
+    "explanation": "The proper synthetic superlative is formed by adding 'най-' to the comparative stem ('найцікавіший')."
+   },
+   {
+    "question": "Complete the sentence: 'Сьогодні день довший, ___ ніч.' (Today the day is longer than the night.)",
+    "options": [
+     "ніж",
+     "коли",
+     "що",
+     "якби"
+    ],
+    "answer": 0,
+    "explanation": "The conjunction 'ніж' introduces comparative clauses and preserves equivalent case balance."
+   }
+  ],
+  "tip": "Remember: 'за' demands the accusative ('за сестру'), while 'від' demands the genitive ('від сестри'). Both mean 'than' in comparative statements."
+ },
+ {
+  "id": "uk-b2-adverbial-participles-diyepryslivnyk",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🏃",
+  "title": "Diyepryslivnyk (Adverbial Participles)",
+  "subtitle": "Conveying concurrent and preceding actions using Ukrainian gerunds",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The diyepryslivnyk expresses an action secondary to the main verb, and its implicit subject must always match the grammatical subject of the sentence.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Suffixes",
+    "Ukrainian Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Imperfective (Concurrent)",
+      "-учи / -ючи, -ачи / -ячи",
+      "Читаючи книгу, я пив чай."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Perfective (Preceding, Stem in Vowel)",
+      "-вши",
+      "Прочитавши листа, вона усміхнулася."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Perfective (Preceding, Stem in Consonant)",
+      "-ши",
+      "Принісши квіти, він зайшов до кімнати."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Simultaneous Action",
+    "example": "Слухаючи музику, дівчина малювала портрет.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Preceding Action",
+    "example": "Закінчивши роботу, ми пішли на прогулянку.",
+    "translation": ""
+   },
+   {
+    "color": "#A78BFA",
+    "label": "Manner or Cause",
+    "example": "Побачивши небезпеку, водій різко загальмував.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Гуляючи вечірнім містом, ми згадували дитинство.",
+    "ko": "",
+    "highlight": "Гуляючи вечірнім містом"
+   },
+   {
+    "en": "Зробивши домашнє завдання, учень закрив зошит.",
+    "ko": "",
+    "highlight": "Зробивши домашнє завдання"
+   },
+   {
+    "en": "Повернувшись додому, я одразу ввімкнув світло.",
+    "ko": "",
+    "highlight": "Повернувшись додому"
+   },
+   {
+    "en": "Він сидів мовчки, уважно дивлячись у вікно.",
+    "ko": "",
+    "highlight": "дивлячись у вікно"
+   },
+   {
+    "en": "Склавши всі іспити, студенти поїхали на море.",
+    "ko": "",
+    "highlight": "Склавши всі іспити"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Під'їжджаючи до вокзалу, у мене злетів капелюх.",
+    "right": "Коли я під'їжджав до вокзалу, у мене злетів капелюх.",
+    "note": "The diyepryslivnyk must perform an action belonging to the grammatical subject (here, the hat cannot be 'driving')."
+   },
+   {
+    "wrong": "Він працював, зробивши помилки.",
+    "right": "Він працював, роблячи помилки.",
+    "note": "For continuous simultaneous background actions, use the imperfective suffix (-ячи / -учи), not the perfective (-вши)."
+   },
+   {
+    "wrong": "Написавши лист, радість переповнила її.",
+    "right": "Написавши листа, вона відчула радість.",
+    "note": "The subject of the main clause ('вона') must be the one who performed the action in the participle."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence with a simultaneous gerund: '___ каву, він читав свіжу газету.' (Drinking coffee, he was reading a fresh newspaper.)",
+    "options": [
+     "Випивши",
+     "П'ючи",
+     "Пити",
+     "П'є"
+    ],
+    "answer": 1,
+    "explanation": "'П'ючи' is the imperfective adverbial participle expressing a simultaneous action with 'читав'."
+   },
+   {
+    "question": "Complete the sentence: '___ доповідь, професор відповів на всі запитання.' (Having finished the lecture, the professor answered all questions.)",
+    "options": [
+     "Завершуючи",
+     "Завершувати",
+     "Завершивши",
+     "Завершив"
+    ],
+    "answer": 2,
+    "explanation": "'Завершивши' is the perfective adverbial participle indicating an action completed prior to answering."
+   },
+   {
+    "question": "Which sentence has correct subject-participle agreement?",
+    "options": [
+     "Йдучи лісом, пішов сильний дощ.",
+     "Побачивши вовка, коня охопив страх.",
+     "Прочитавши повідомлення, вона швидко відписала.",
+     "Чекаючи на автобус, час минав повільно."
+    ],
+    "answer": 2,
+    "explanation": "Only in this option does the subject ('вона') actually perform the action of the participle ('прочитавши')."
+   },
+   {
+    "question": "Select the correct participle form of 'допомогти' (having helped):",
+    "options": [
+     "допомагаючи",
+     "допомігши",
+     "допоміг",
+     "допоможучи"
+    ],
+    "answer": 1,
+    "explanation": "The masculine past consonant stem yields 'допомігши' for the perfective gerund."
+   }
+  ],
+  "tip": "Whenever you formulate a sentence with a diyepryslivnyk, pause and double-check: is the grammatical subject of the sentence really the one doing the participle's action?"
+ },
+ {
+  "id": "uk-b2-impersonal-no-to-verb-forms",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#F59E0B",
+  "emoji": "📜",
+  "title": "Resultative Impersonal Forms in -но and -то",
+  "subtitle": "Expressing completed resultative actions without an explicit agent",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Forms ending in '-но' and '-то' are invariable verbal predicates focusing strictly on the result of an action, while the affected object remains in the accusative case.",
+  "structure": {
+   "headers": [
+    "Ending",
+    "Verb Root Pattern",
+    "Ukrainian Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-но (from -ний)",
+      "Suffix -н- base verbs",
+      "Закон ухвалено вчора."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-то (from -тий)",
+      "Suffix -т- / roots in -и-, -у-",
+      "Двері відкрито нарозпах."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Result",
+      "було + -но / -то",
+      "Роботу було зроблено вчасно."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Future Result",
+      "буде + -но / -то",
+      "Міст буде збудовано наступного року."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Official Statements",
+    "example": "Указ підписано президентом країни.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Announcing Completed Work",
+    "example": "Усі квитки на концерт уже продано.",
+    "translation": ""
+   },
+   {
+    "color": "#FBBF24",
+    "label": "Stating Public Notices",
+    "example": "Вхід до музею тимчасово закрито.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Цю цікаву книжку було написано торік.",
+    "ko": "",
+    "highlight": "було написано"
+   },
+   {
+    "en": "Місто звільнено від ворожих сил.",
+    "ko": "",
+    "highlight": "звільнено"
+   },
+   {
+    "en": "Новий міст збудовано за рекордний термін.",
+    "ko": "",
+    "highlight": "збудовано"
+   },
+   {
+    "en": "Усі помилки у звіті виправлено.",
+    "ko": "",
+    "highlight": "виправлено"
+   },
+   {
+    "en": "Університет відкрито для відвідувачів.",
+    "ko": "",
+    "highlight": "відкрито"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Книжка була прочитана мною.",
+    "right": "Я прочитав книжку (або Книжку прочитано).",
+    "note": "Ukrainian prefers active voice or impersonal '-но/-то' with an accusative object over passive participles with an instrumental agent."
+   },
+   {
+    "wrong": "Документи були підписані.",
+    "right": "Документи підписано (або Документи було підписано).",
+    "note": "Resultative state in Ukrainian style favors the indeclinable '-но' form over adjectival passive participle forms."
+   },
+   {
+    "wrong": "Вулицю була перекрито.",
+    "right": "Вулицю було перекрито.",
+    "note": "Auxiliary 'було' must remain invariable neuter singular in impersonal '-но/-то' constructions."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Цей твір ___ відомим письменником.' (This piece was written by a famous writer.)",
+    "options": [
+     "написано",
+     "написаний",
+     "написана",
+     "написали"
+    ],
+    "answer": 0,
+    "explanation": "The invariable resultative predicate ending in '-но' is 'написано'."
+   },
+   {
+    "question": "Complete the sentence: 'Магазин ___ о восьмій годині ранку.' (The store was opened at 8:00 AM.)",
+    "options": [
+     "відкритий",
+     "відкрито",
+     "відкрита",
+     "відкритим"
+    ],
+    "answer": 1,
+    "explanation": "Verbs with '-т-' past participles form the impersonal resultative in '-то' ('відкрито')."
+   },
+   {
+    "question": "Choose the correct past auxiliary form: 'Дорогу ___ відремонтовано ще в травні.' (The road was repaired back in May.)",
+    "options": [
+     "був",
+     "була",
+     "було",
+     "були"
+    ],
+    "answer": 2,
+    "explanation": "Impersonal '-но/-то' constructions require the neutral singular auxiliary 'було' regardless of the object's gender."
+   },
+   {
+    "question": "In the sentence 'Статтю надруковано в журналі', what case is 'статтю'?",
+    "options": [
+     "Nominative",
+     "Genitive",
+     "Dative",
+     "Accusative"
+    ],
+    "answer": 3,
+    "explanation": "In impersonal '-но/-то' sentences, the affected entity is the direct object in the accusative case ('статтю')."
+   }
+  ],
+  "tip": "Whenever you are tempted to use an English-style passive ('The letter was sent'), use '-но/-то' + Accusative ('Лист надіслано') for natural, idiomatic Ukrainian."
+ },
+ {
+  "id": "uk-b2-complex-quantification-and-numeral-noun-agreement",
+  "level": "b2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🔢",
+  "title": "Numeral-Noun Agreement Across Cases",
+  "subtitle": "Navigating singular nominatives, plural genitives, and oblique case declension",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "In the nominative, numbers 2–4 take the nominative plural (with dual stress patterns), 5+ govern the genitive plural, but in all oblique cases numerals agree with nouns in gender and case.",
+  "structure": {
+   "headers": [
+    "Numeral Class",
+    "Noun Form (Nominative)",
+    "Oblique Case Behavior"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1 (один / одна / одне)",
+      "Singular Nominative (один стіл)",
+      "Full adjectival agreement"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2, 3, 4 (два, три, чотири)",
+      "Plural Nominative (два столи, три сестри)",
+      "Numeral agrees with noun's oblique case"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "5+ (п'ять, десять, сто)",
+      "Plural Genitive (п'ять столів, сім сестер)",
+      "Numeral agrees with noun's oblique case"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Compound Numerals",
+      "Governed by the last digit (21, 34, 105)",
+      "Each element inflects in oblique cases"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Counting with 2, 3, 4",
+    "example": "В аудиторії сидять три студенти.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Counting with 5 and Above",
+    "example": "Ми придбали десять комп'ютерів.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Oblique Case Agreement",
+    "example": "Він зустрівся з трьома колегами.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "На полиці стояли чотири товсті книжки.",
+    "ko": "",
+    "highlight": "чотири товсті книжки"
+   },
+   {
+    "en": "У нашому гуртожитку живе двадцять п'ять студентів.",
+    "ko": "",
+    "highlight": "двадцять п'ять студентів"
+   },
+   {
+    "en": "Вона зателефонувала трьом давнім друзям.",
+    "ko": "",
+    "highlight": "трьом давнім друзям"
+   },
+   {
+    "en": "Конференція завершилася після семи годин обговорень.",
+    "ko": "",
+    "highlight": "семи годин"
+   },
+   {
+    "en": "Ми пишаємося чотирма нашими переможцями.",
+    "ko": "",
+    "highlight": "чотирма нашими переможцями"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Два студента прийшли на пару.",
+    "right": "Два студенти прийшли на пару.",
+    "note": "In Ukrainian, 2, 3, and 4 require the nominative plural ('студенти'), not the genitive singular ('студента')."
+   },
+   {
+    "wrong": "Він зустрівся з п'ять друзями.",
+    "right": "Він зустрівся з п'ятьма друзями.",
+    "note": "In oblique cases (here instrumental), the numeral must decline to agree with the noun ('п'ятьма')."
+   },
+   {
+    "wrong": "Двадцять чотири студентів склали іспит.",
+    "right": "Двадцять чотири студенти склали іспит.",
+    "note": "Compound numbers ending in 2, 3, or 4 govern the nominative plural ('студенти'), governed by the last component."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'У парку ростуть три великі ___.' (Three big trees grow in the park.)",
+    "options": [
+     "дерево",
+     "дерева",
+     "дерев",
+     "деревах"
+    ],
+    "answer": 1,
+    "explanation": "The numeral 'три' governs the nominative plural form ('дерева')."
+   },
+   {
+    "question": "Complete the sentence: 'Ми зачекали на ___ друзів.' (We waited for five friends.)",
+    "options": [
+     "п'ятьох",
+     "п'ять",
+     "п'ятеро",
+     "п'ятьма"
+    ],
+    "answer": 0,
+    "explanation": "For animate direct objects with numerals 5+, the genitive/accusative form 'п'ятьох' is standard."
+   },
+   {
+    "question": "Complete the sentence with instrumental case: 'Вона прийшла з ___ братами.' (She came with two brothers.)",
+    "options": [
+     "два",
+     "двом",
+     "двома",
+     "двох"
+    ],
+    "answer": 2,
+    "explanation": "The instrumental form of 'два' is 'двома'."
+   },
+   {
+    "question": "Complete the sentence: 'Він купив сорок шість ___.' (He bought forty-six notebooks.)",
+    "options": [
+     "зошити",
+     "зошита",
+     "зошит",
+     "зошитів"
+    ],
+    "answer": 3,
+    "explanation": "Because the last digit is 'шість' (6), it governs the plural genitive ('зошитів')."
+   }
+  ],
+  "tip": "When in doubt about numbers 2–4, check your nominative plural endings: masculine and feminine nouns take '-и' or '-і', never genitive singular '-а'!"
+ }
+]

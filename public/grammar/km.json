@@ -1,0 +1,3310 @@
+[
+ {
+  "id": "km-a1-svo-and-zero-copula",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🗣️",
+  "title": "SVO Order and Zero Copula",
+  "subtitle": "Mastering basic word order and omitting 'to be' with adjectives",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Khmer follows a standard Subject-Verb-Object word order and naturally omits any copular verb when linking subjects to predicate adjectives.",
+  "structure": {
+   "headers": [
+    "Sentence Type",
+    "Structure",
+    "Khmer Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Transitive Action",
+      "Subject + Verb + Object",
+      "ខ្ញុំញ៉ាំបាយ",
+      "I eat rice"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adjective Predicate",
+      "Subject + Adjective (No Copula)",
+      "គាត់ឃ្លាន",
+      "He is hungry"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Equational Noun",
+      "Subject + ជា + Noun",
+      "នាងជាគ្រូបង្រៀន",
+      "She is a teacher"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Expressing Actions",
+    "example": "ខ្ញុំរៀនភាសាខ្មែរ",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Describing States & Feelings",
+    "example": "ផ្ទះនេះធំ",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Identifying Occupations or Roles",
+    "example": "គាត់ជាវេជ្ជបណ្ឌិត",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ខ្ញុំញ៉ាំបាយ",
+    "ko": "",
+    "highlight": "ញ៉ាំ"
+   },
+   {
+    "en": "គាត់ឃ្លាន",
+    "ko": "",
+    "highlight": "ឃ្លាន"
+   },
+   {
+    "en": "កាហ្វេនេះឆ្ងាញ់",
+    "ko": "",
+    "highlight": "ឆ្ងាញ់"
+   },
+   {
+    "en": "នាងជាសិស្ស",
+    "ko": "",
+    "highlight": "ជា"
+   },
+   {
+    "en": "បងប្រុសទិញផ្លែឈើ",
+    "ko": "",
+    "highlight": "ទិញ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "គាត់ជាឃ្លាន",
+    "right": "គាត់ឃ្លាន",
+    "note": "Do not insert the copula ជា before predicate adjectives in Khmer; adjectives function as predicates directly."
+   },
+   {
+    "wrong": "ខ្ញុំបាយញ៉ាំ",
+    "right": "ខ្ញុំញ៉ាំបាយ",
+    "note": "Khmer strictly follows SVO word order, so the verb must precede the direct object."
+   },
+   {
+    "wrong": "នាងគ្រូបង្រៀន",
+    "right": "នាងជាគ្រូបង្រៀន",
+    "note": "When equating a subject to another noun phrase (like an occupation), the copula ជា is generally required."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct sentence for 'This house is big.'",
+    "options": [
+     "ផ្ទះនេះជាធំ",
+     "ផ្ទះនេះធំ",
+     "ធំផ្ទះនេះ",
+     "ផ្ទះនេះគឺធំ"
+    ],
+    "answer": 1,
+    "explanation": "Predicate adjectives like ធំ directly follow the subject without any copula verb like ជា or គឺ."
+   },
+   {
+    "question": "Choose the correct sentence for 'I drink water.'",
+    "options": [
+     "ខ្ញុំផឹកទឹក",
+     "ខ្ញុំទឹកផឹក",
+     "ផឹកខ្ញុំទឹក",
+     "ទឹកខ្ញុំផឹក"
+    ],
+    "answer": 0,
+    "explanation": "Khmer follows canonical SVO word order: Subject (ខ្ញុំ) + Verb (ផឹក) + Object (ទឹក)."
+   },
+   {
+    "question": "Complete the identity sentence: 'He ___ a doctor.' (គាត់ ___ វេជ្ជបណ្ឌិត)",
+    "options": [
+     "នៅ",
+     "មាន",
+     "ទៅ",
+     "ជា"
+    ],
+    "answer": 3,
+    "explanation": "The copula ជា is used to equate a subject with a noun identity or profession."
+   },
+   {
+    "question": "Identify the natural sentence meaning 'She is happy.'",
+    "options": [
+     "នាងជាសប្បាយ",
+     "នាងនៅសប្បាយ",
+     "នាងសប្បាយ",
+     "សប្បាយជានាង"
+    ],
+    "answer": 2,
+    "explanation": "Adjectives act as complete verbal predicates in Khmer, requiring no linking verb."
+   }
+  ],
+  "tip": "Think of Khmer adjectives as 'stative verbs'—meaning 'to be happy' or 'to be big' is already built into the word itself!"
+ },
+ {
+  "id": "km-a1-noun-numeral-classifier",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🔢",
+  "title": "Noun-Classifier-Numeral Syntax",
+  "subtitle": "Counting objects accurately using numeral classifiers",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "To count objects in Khmer, words must appear in the strict sequence of Noun + Number + Classifier.",
+  "structure": {
+   "headers": [
+    "Target Counted",
+    "Pattern",
+    "Khmer Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "People",
+      "Noun + Num + នាក់",
+      "មនុស្សពីរនាក់",
+      "Two people"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Animals / Fish",
+      "Noun + Num + ក្បាល",
+      "ត្រីបីក្បាល",
+      "Three fish"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "General Objects / Fruit",
+      "Noun + Num + ផ្លែ / គ្រាប់",
+      "ផ្លែក្រូចបួនផ្លែ",
+      "Four oranges"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Books / Volumes",
+      "Noun + Num + ក្បាល",
+      "សៀវភៅមួយក្បាល",
+      "One book"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Counting People",
+    "example": "ខ្ញុំមានមិត្តភក្តិបីនាក់",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Ordering Food and Drinks",
+    "example": "សុំកាហ្វេពីរកែវ",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Counting Household Items",
+    "example": "គាត់ទិញឡានមួយគ្រឿង",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ខ្ញុំមានមិត្តភក្តិបីនាក់",
+    "ko": "",
+    "highlight": "បីនាក់"
+   },
+   {
+    "en": "គាត់ទិញសៀវភៅពីរក្បាល",
+    "ko": "",
+    "highlight": "ពីរក្បាល"
+   },
+   {
+    "en": "សុំកាហ្វេមួយកែវ",
+    "ko": "",
+    "highlight": "មួយកែវ"
+   },
+   {
+    "en": "ឆ្មាពីរភ្នែកមើលមកខ្ញុំ",
+    "ko": "",
+    "highlight": "ពីរ"
+   },
+   {
+    "en": "ផ្ទះនេះមានបន្ទប់បួន",
+    "ko": "",
+    "highlight": "បួន"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "បីនាក់មនុស្ស",
+    "right": "មនុស្សបីនាក់",
+    "note": "In Khmer, the head noun must come first, followed by the number and classifier."
+   },
+   {
+    "wrong": "សៀវភៅពីរនាក់",
+    "right": "សៀវភៅពីរក្បាល",
+    "note": "The classifier នាក់ is reserved for human beings, while books take ក្បាល."
+   },
+   {
+    "wrong": "ពីរកែវទឹក",
+    "right": "ទឹកពីរកែវ",
+    "note": "Containers acting as classifiers must follow the substance noun: ទឹក (water) + ពីរ (two) + កែវ (glasses)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you correctly say 'two teachers' in Khmer?",
+    "options": [
+     "ពីរនាក់គ្រូបង្រៀន",
+     "គ្រូបង្រៀនពីរក្បាល",
+     "គ្រូបង្រៀនពីរនាក់",
+     "ពីរគ្រូបង្រៀននាក់"
+    ],
+    "answer": 2,
+    "explanation": "The order is Noun (គ្រូបង្រៀន) + Numeral (ពីរ) + Classifier for people (នាក់)."
+   },
+   {
+    "question": "Which classifier is correctly used for counting books (សៀវភៅ)?",
+    "options": [
+     "នាក់",
+     "ក្បាល",
+     "កែវ",
+     "ចាន"
+    ],
+    "answer": 1,
+    "explanation": "ក្បាល is the standard classifier used for books and written volumes (as well as animals)."
+   },
+   {
+    "question": "Select the correct phrase for 'three cups/glasses of tea'.",
+    "options": [
+     "តែបីកែវ",
+     "បីកែវតែ",
+     "កែវបីតែ",
+     "តែបីនាក់"
+    ],
+    "answer": 0,
+    "explanation": "Khmer puts the noun first: តែ (tea) + បី (three) + កែវ (glasses/cups)."
+   },
+   {
+    "question": "Complete the phrase: 'I have two cats' (ខ្ញុំមានឆ្មា ___ ក្បាល)",
+    "options": [
+     "មួយ",
+     "បី",
+     "បួន",
+     "ពីរ"
+    ],
+    "answer": 3,
+    "explanation": "The number 'two' is ពីរ, placed immediately before the classifier ក្បាល."
+   }
+  ],
+  "tip": "Remember the formula 'N-N-C': Noun first, Number second, Classifier last!"
+ },
+ {
+  "id": "km-a1-demonstrative-placement",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "👉",
+  "title": "Post-nominal Demonstratives and Modifiers",
+  "subtitle": "Placing adjectives, possessives, and demonstratives after the noun",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "All modifiers in Khmer—including adjectives, possessives, and the demonstratives នេះ (this) and នោះ (that)—must follow the noun they modify.",
+  "structure": {
+   "headers": [
+    "Element",
+    "Position",
+    "Khmer Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Noun + Demonstrative",
+      "Immediately follows noun",
+      "ឡាននេះ",
+      "This car"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Noun + Adjective + Demonstrative",
+      "Adjective before demonstrative",
+      "សៀវភៅធំនេះ",
+      "This big book"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Noun + Possessive + Demonstrative",
+      "Full modifier chain",
+      "ផ្ទះរបស់ខ្ញុំនោះ",
+      "That house of mine"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Pointing Out Near Objects",
+    "example": "ម្ហូបនេះឆ្ងាញ់ណាស់",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Pointing Out Far Objects",
+    "example": "មនុស្សនោះជាអ្នកណា?",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Combining Adjectives and Demonstratives",
+    "example": "ខ្ញុំចូលចិត្តអាវក្រហមនេះ",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ម្ហូបនេះឆ្ងាញ់ណាស់",
+    "ko": "",
+    "highlight": "នេះ"
+   },
+   {
+    "en": "មនុស្សនោះជាអ្នកណា?",
+    "ko": "",
+    "highlight": "នោះ"
+   },
+   {
+    "en": "ខ្ញុំចូលចិត្តអាវក្រហមនេះ",
+    "ko": "",
+    "highlight": "អាវក្រហមនេះ"
+   },
+   {
+    "en": "បន្ទប់តូចនេះស្អាត",
+    "ko": "",
+    "highlight": "បន្ទប់តូចនេះ"
+   },
+   {
+    "en": "សៀវភៅថ្មីនោះថ្លៃ",
+    "ko": "",
+    "highlight": "សៀវភៅថ្មីនោះ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "នេះសៀវភៅ",
+    "right": "សៀវភៅនេះ",
+    "note": "Demonstratives cannot precede the noun in Khmer; នេះ must come directly after សៀវភៅ."
+   },
+   {
+    "wrong": "នេះធំផ្ទះ",
+    "right": "ផ្ទះធំនេះ",
+    "note": "Modifiers stack rightward after the head noun: Noun + Adjective + Demonstrative."
+   },
+   {
+    "wrong": "នោះកាហ្វេឆ្ងាញ់",
+    "right": "កាហ្វេនោះឆ្ងាញ់",
+    "note": "Place នោះ after the noun phrase it specifies."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you translate 'that car'?",
+    "options": [
+     "នោះឡាន",
+     "ឡាននោះ",
+     "ឡាននេះ",
+     "នេះឡាន"
+    ],
+    "answer": 1,
+    "explanation": "ឡាន means 'car' and នោះ means 'that'. Modifiers follow nouns, yielding ឡាននោះ."
+   },
+   {
+    "question": "Which is the correct order for 'this new shirt'?",
+    "options": [
+     "នេះអាវថ្មី",
+     "អាវនេះថ្មី",
+     "ថ្មីអាវនេះ",
+     "អាវថ្មីនេះ"
+    ],
+    "answer": 3,
+    "explanation": "The order is Head Noun (អាវ) + Descriptive Adjective (ថ្មី) + Demonstrative (នេះ)."
+   },
+   {
+    "question": "What is the Khmer equivalent of 'this' in noun modification?",
+    "options": [
+     "នេះ",
+     "នោះ",
+     "ណា",
+     "អ្វី"
+    ],
+    "answer": 0,
+    "explanation": "នេះ means 'this/these', whereas នោះ means 'that/those'."
+   },
+   {
+    "question": "Choose the correctly formed phrase for 'that red car'.",
+    "options": [
+     "នោះឡានក្រហម",
+     "ឡានក្រហមនោះ",
+     "ក្រហមឡាននោះ",
+     "ឡាននោះក្រហម"
+    ],
+    "answer": 1,
+    "explanation": "Modifiers follow the head noun in descending order of specificity: Noun + Adjective + Demonstrative."
+   }
+  ],
+  "tip": "English builds descriptions backwards before the noun; Khmer builds forward starting with the core noun!"
+ },
+ {
+  "id": "km-a1-negation-min-te",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🚫",
+  "title": "Discontinuous Negation with Min/Ot... Te",
+  "subtitle": "Forming negative sentences with pre-verbal markers and final 'te'",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Negation in Khmer wraps around the predicate using a pre-verbal negative marker (មិន or អត់) and ends with the clause-final particle ទេ។",
+  "structure": {
+   "headers": [
+    "Style",
+    "Pattern",
+    "Khmer Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Formal / Written",
+      "មិន + Verb + (Object) + ទេ",
+      "ខ្ញុំមិនដឹងទេ",
+      "I do not know"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Spoken / Informal",
+      "អត់ + Verb + (Object) + ទេ",
+      "គាត់អត់ទៅទេ",
+      "He is not going"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adjective Negation",
+      "មិន / អត់ + Adj + ទេ",
+      "ម្ហូបនេះមិនហឹរទេ",
+      "This food is not spicy"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Denying Knowledge or Actions",
+    "example": "ខ្ញុំមិនយល់ទេ",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Refusing or Declining",
+    "example": "ខ្ញុំអត់ញ៉ាំសាច់ទេ",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Negating Descriptions",
+    "example": "អាកាសធាតុមិនក្តៅទេ",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ខ្ញុំមិនយល់ទេ",
+    "ko": "",
+    "highlight": "មិនយល់ទេ"
+   },
+   {
+    "en": "គាត់អត់ទៅទេ",
+    "ko": "",
+    "highlight": "អត់ទៅទេ"
+   },
+   {
+    "en": "ខ្ញុំអត់ញ៉ាំសាច់ទេ",
+    "ko": "",
+    "highlight": "អត់ញ៉ាំសាច់ទេ"
+   },
+   {
+    "en": "ម្ហូបនេះមិនហឹរទេ",
+    "ko": "",
+    "highlight": "មិនហឹរទេ"
+   },
+   {
+    "en": "នាងមិនមែនជាគ្រូទេ",
+    "ko": "",
+    "highlight": "មិនមែនជាគ្រូទេ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ខ្ញុំមិនដឹង",
+    "right": "ខ្ញុំមិនដឹងទេ",
+    "note": "Leaving out the final particle ទេ sounds abrupt or incomplete in standard conversational Khmer."
+   },
+   {
+    "wrong": "ខ្ញុំដឹងមិនទេ",
+    "right": "ខ្ញុំមិនដឹងទេ",
+    "note": "The negative marker (មិន or អត់) must sit directly before the verb, not after it."
+   },
+   {
+    "wrong": "គាត់ទេទៅ",
+    "right": "គាត់មិនទៅទេ",
+    "note": "ទេ is strictly a clause-final bracket and cannot appear in front of the verb."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'I do not understand.' (ខ្ញុំ ___ យល់ទេ)",
+    "options": [
+     "មាន",
+     "មិន",
+     "ជា",
+     "បាន"
+    ],
+    "answer": 1,
+    "explanation": "មិន is the pre-verbal negation marker, completed by the final particle ទេ."
+   },
+   {
+    "question": "Where does the particle ទេ belong in a negative sentence?",
+    "options": [
+     "Before the subject",
+     "Between negative marker and verb",
+     "Directly after the subject",
+     "At the very end of the negative clause"
+    ],
+    "answer": 3,
+    "explanation": "ទេ is a clause-final particle that closes the discontinuous negation bracket."
+   },
+   {
+    "question": "Which sentence correctly says 'He is not hungry'?",
+    "options": [
+     "គាត់អត់ឃ្លានទេ",
+     "គាត់ឃ្លានអត់ទេ",
+     "អត់គាត់ឃ្លានទេ",
+     "គាត់ឃ្លានមិន"
+    ],
+    "answer": 0,
+    "explanation": "Subject (គាត់) + Pre-verbal negator (អត់) + Adjective predicate (ឃ្លាន) + Final particle (ទេ)."
+   },
+   {
+    "question": "Choose the natural spoken negative sentence for 'I am not going.'",
+    "options": [
+     "ខ្ញុំទៅអត់",
+     "ខ្ញុំទៅទេ",
+     "ខ្ញុំអត់ទៅទេ",
+     "ទេខ្ញុំទៅ"
+    ],
+    "answer": 2,
+    "explanation": "Spoken Khmer prefers អត់ before the verb with ទេ at the sentence end: ខ្ញុំអត់ទៅទេ."
+   }
+  ],
+  "tip": "Think of មិន...ទេ as a pair of verbal bookends: មិន unlocks the negative, and ទេ locks it shut at the end."
+ },
+ {
+  "id": "km-a1-polar-and-content-questions",
+  "level": "a1",
+  "category": "questions",
+  "categoryColor": "#F59E0B",
+  "emoji": "❓",
+  "title": "Question Particles and In-Situ Interrogatives",
+  "subtitle": "Asking yes/no questions and forming wh-questions without changing word order",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Khmer never inverts subject and verb to ask questions; polar questions add a sentence-final particle, while content words remain in situ.",
+  "structure": {
+   "headers": [
+    "Question Type",
+    "Mechanism",
+    "Khmer Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Yes/No (General)",
+      "Add ទេ? / ដែរទេ? at the end",
+      "អ្នកឃ្លានទេ?",
+      "Are you hungry?"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Yes/No (Alternative)",
+      "Add ឬ / ឬទេ? at the end",
+      "អ្នកទៅឬ?",
+      "Are you going (or not)?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Content (Who)",
+      "Keep អ្នកណា in normal noun slot",
+      "គាត់ជាអ្នកណា?",
+      "Who is he?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Content (What)",
+      "Keep អ្វី in object slot",
+      "អ្នកញ៉ាំអ្វី?",
+      "What are you eating?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Asking Yes/No Questions",
+    "example": "អ្នកចូលចិត្តតែទេ?",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Asking About Objects or Actions",
+    "example": "បងធ្វើអ្វី?",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Asking About Locations",
+    "example": "បន្ទប់ទឹកនៅឯណា?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "អ្នកចូលចិត្តតែទេ?",
+    "ko": "",
+    "highlight": "ទេ"
+   },
+   {
+    "en": "គាត់ជាអ្នកណា?",
+    "ko": "",
+    "highlight": "អ្នកណា"
+   },
+   {
+    "en": "បងធ្វើអ្វី?",
+    "ko": "",
+    "highlight": "អ្វី"
+   },
+   {
+    "en": "បន្ទប់ទឹកនៅឯណា?",
+    "ko": "",
+    "highlight": "ឯណា"
+   },
+   {
+    "en": "អ្នកឃ្លានបាយដែរទេ?",
+    "ko": "",
+    "highlight": "ដែរទេ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "អ្វីអ្នកញ៉ាំ?",
+    "right": "អ្នកញ៉ាំអ្វី?",
+    "note": "Khmer does not front interrogative words; អ្វី (what) stays in the object position after the verb."
+   },
+   {
+    "wrong": "តើឃ្លានអ្នកទេ?",
+    "right": "អ្នកឃ្លានទេ?",
+    "note": "Never invert the subject and verb when turning a statement into a question."
+   },
+   {
+    "wrong": "អ្នកណាគាត់ជា?",
+    "right": "គាត់ជាអ្នកណា?",
+    "note": "Keep the standard Subject + Verb + Complement structure intact when using question pronouns."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you ask 'What are you doing?' in Khmer?",
+    "options": [
+     "អ្វីអ្នកធ្វើ?",
+     "អ្នកធ្វើអ្វី?",
+     "ធ្វើអ្វីអ្នក?",
+     "អ្នកអ្វីធ្វើ?"
+    ],
+    "answer": 1,
+    "explanation": "Khmer interrogative pronouns stay in situ: Subject (អ្នក) + Verb (ធ្វើ) + Question word (អ្វី)."
+   },
+   {
+    "question": "Which particle marks a simple yes/no polar question at the end of a sentence?",
+    "options": [
+     "ណា",
+     "អ្វី",
+     "ទេ",
+     "ជា"
+    ],
+    "answer": 2,
+    "explanation": "Adding ទេ (or ដែរទេ) at the end of a declarative statement turns it into a polar yes/no question."
+   },
+   {
+    "question": "Where does the location question word ឯណា (where) belong in 'Where is the market?'",
+    "options": [
+     "At the end after the verb: ផ្សារនៅឯណា?",
+     "At the front: ឯណាផ្សារនៅ?",
+     "Before the subject: ឯណានៅផ្សារ?",
+     "Between subject and verb: ផ្សារឯណានៅ?"
+    ],
+    "answer": 0,
+    "explanation": "The question phrase remains in the predicate position: ផ្សារ (market) + នៅ (located at) + ឯណា (where)."
+   },
+   {
+    "question": "Complete the question: 'Are you hungry?' (អ្នកឃ្លាន ___?)",
+    "options": [
+     "អ្វី",
+     "អ្នកណា",
+     "ឯណា",
+     "ទេ"
+    ],
+    "answer": 3,
+    "explanation": "ទេ is the question particle used to ask polar yes/no questions."
+   }
+  ],
+  "tip": "Never move question words to the front! Simply say the statement normally and put the question word right in the blank spot."
+ },
+ {
+  "id": "km-a1-personal-pronouns-kinship",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "👥",
+  "title": "Social Deixis and Kinship Pronouns",
+  "subtitle": "Navigating hierarchy, intimacy, and respect with Khmer pronouns",
+  "color": "#2B6CB0",
+  "bg": "#EBF8FF",
+  "keyPoint": "Khmer personal pronouns change based on relative age, status, and familial closeness rather than fixed grammatical person.",
+  "structure": {
+   "headers": [
+    "Role / Relationship",
+    "Pronoun",
+    "Function / Social Context"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Older sibling / peer",
+      "បង",
+      "Used for slightly older peers or spouses"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Younger sibling / junior",
+      "អូន",
+      "Used for younger peers, children, or wives"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Uncle / older adult",
+      "ពូ",
+      "Used for male figures approximately a generation older"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "General polite 1st person",
+      "ខ្ញុំ",
+      "Standard formal or neutral 'I' among non-relatives"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3182CE",
+    "label": "Addressing an older peer or vendor",
+    "example": "បងទៅណា?",
+    "translation": ""
+   },
+   {
+    "color": "#DD6B20",
+    "label": "Polite self-reference among elders",
+    "example": "ខ្ញុំសូមជម្រាបសួរពូ។",
+    "translation": ""
+   },
+   {
+    "color": "#38A169",
+    "label": "Affectionate reference to younger sister",
+    "example": "អូនឃ្លានបាយទេ?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "បងចង់ញ៉ាំអី?",
+    "ko": "",
+    "highlight": "បង"
+   },
+   {
+    "en": "ខ្ញុំរៀនភាសាខ្មែររាល់ថ្ងៃ។",
+    "ko": "",
+    "highlight": "ខ្ញុំ"
+   },
+   {
+    "en": "អូនទៅសាលារៀនហើយ។",
+    "ko": "",
+    "highlight": "អូន"
+   },
+   {
+    "en": "ពូជួយទិញផ្លែឈើនេះបន្តិចទៅ។",
+    "ko": "",
+    "highlight": "ពូ"
+   },
+   {
+    "en": "មីងសុខសប្បាយជាទេ?",
+    "ko": "",
+    "highlight": "មីង"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ខ្ញុំទៅណា?",
+    "right": "បងទៅណា?",
+    "note": "Do not address another adult using ខ្ញុំ; use an appropriate kinship title like បង."
+   },
+   {
+    "wrong": "អ្នកញ៉ាំបាយហើយឬនៅ?",
+    "right": "បងញ៉ាំបាយហើយឬនៅ?",
+    "note": "Using អ្នក with people you know can sound overly detached, formal, or even distant; kinship terms sound natural."
+   },
+   {
+    "wrong": "អូនសុំសួរពូមួយ?",
+    "right": "ក្មួយសុំសួរពូមួយ?",
+    "note": "When speaking to an uncle (ពូ), refer to yourself as niece/nephew (ក្មួយ), not younger sibling (អូន)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "When speaking politely to a male vendor slightly older than yourself, what pronoun fits: '___ want to sell this for how much?'",
+    "options": [
+     "បង",
+     "អូន",
+     "កូន",
+     "ចៅ"
+    ],
+    "answer": 0,
+    "explanation": "បង is the polite, customary term for an older peer or vendor of either gender."
+   },
+   {
+    "question": "How should an older person naturally address a young schoolchild?",
+    "options": [
+     "លោកតា",
+     "មីង",
+     "កូន",
+     "លោកគ្រូ"
+    ],
+    "answer": 2,
+    "explanation": "Elders regularly address children as កូន (child) or ក្មួយ (nephew/niece)."
+   },
+   {
+    "question": "Choose the formal neutral pronoun for 'I/me' when speaking respectfully in class: '___ study Khmer.'",
+    "options": [
+     "បង",
+     "អូន",
+     "ឯង",
+     "ខ្ញុំ"
+    ],
+    "answer": 3,
+    "explanation": "ខ្ញុំ is the standard neutral and respectful first-person singular pronoun."
+   },
+   {
+    "question": "When speaking to an aunt-aged woman (មីង), how should you refer to yourself?",
+    "options": [
+     "បង",
+     "ក្មួយ",
+     "ពូ",
+     "តា"
+    ],
+    "answer": 1,
+    "explanation": "If the addressee is an aunt (មីង), the reciprocal pronoun for self is niece/nephew (ក្មួយ)."
+   }
+  ],
+  "tip": "Default to calling peers បង (older) or អូន (younger); using generic pronouns like អ្នក feels unnaturally cold in daily conversation."
+ },
+ {
+  "id": "km-a2-directional-serial-verbs",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#48BB78",
+  "emoji": "🧭",
+  "title": "Directional Serial Verb Constructions",
+  "subtitle": "Combining action verbs with vector roots like tow, mook, laeng, and coh",
+  "color": "#2F855A",
+  "bg": "#F0FFF4",
+  "keyPoint": "Directional verbs following a main verb establish the physical trajectory of the action relative to the speaker.",
+  "structure": {
+   "headers": [
+    "Directional Root",
+    "Core Vector",
+    "Example Verb Phrase"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ទៅ",
+      "Away from speaker",
+      "ដើរទៅ (walk away)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "មក",
+      "Toward speaker",
+      "រត់មក (run toward/here)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ឡើង",
+      "Ascending / upward",
+      "រត់ឡើង (run up)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ចុះ",
+      "Descending / downward",
+      "ដើរចុះ (walk down)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#38A169",
+    "label": "Movement toward the speaker",
+    "example": "គាត់ដើរមកផ្ទះខ្ញុំ។",
+    "translation": ""
+   },
+   {
+    "color": "#D69E2E",
+    "label": "Movement away to a destination",
+    "example": "ខ្ញុំយកសៀវភៅទៅសាលា។",
+    "translation": ""
+   },
+   {
+    "color": "#805AD5",
+    "label": "Vertical movement",
+    "example": "គាត់ឡើងទៅលើភ្នំ។",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "សូមយកទឹកមួយកែវមក។",
+    "ko": "",
+    "highlight": "មក"
+   },
+   {
+    "en": "គាត់ដើរចេញទៅក្រៅ។",
+    "ko": "",
+    "highlight": "ទៅ"
+   },
+   {
+    "en": "កូនក្មេងរត់ឡើងលើផ្ទះ។",
+    "ko": "",
+    "highlight": "ឡើង"
+   },
+   {
+    "en": "ឡានកំពុងបើកចុះពីភ្នំ។",
+    "ko": "",
+    "highlight": "ចុះ"
+   },
+   {
+    "en": "បងជួយផ្ញើសំបុត្រនេះទៅផង។",
+    "ko": "",
+    "highlight": "ទៅ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "គាត់យកសៀវភៅមកសាលា (when speaker is at home)",
+    "right": "គាត់យកសៀវភៅទៅសាលា",
+    "note": "Use ទៅ for motion directed away from the speaker's current location, and មក only when heading toward it."
+   },
+   {
+    "wrong": "ដើរចុះលើភ្នំ",
+    "right": "ដើរឡើងលើភ្នំ",
+    "note": "ឡើង indicates upward motion onto the mountain, whereas ចុះ indicates downward motion."
+   },
+   {
+    "wrong": "សូមមកយកសៀវភៅនេះទៅទីនេះ",
+    "right": "សូមយកសៀវភៅនេះមកទីនេះ",
+    "note": "Directional serial verbs must appear after the main action (យក) and agree with the target deictic point (មកទីនេះ)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which directional verb completes 'Please bring the water here': សូមយកទឹក___?",
+    "options": [
+     "ចុះ",
+     "ឡើង",
+     "មក",
+     "ទៅ"
+    ],
+    "answer": 2,
+    "explanation": "មក indicates motion toward the current speaker location ('bring here')."
+   },
+   {
+    "question": "To express climbing up stairs: គាត់ដើរ___ជណ្តើរ។",
+    "options": [
+     "ឡើង",
+     "ចុះ",
+     "ទៅ",
+     "ចេញ"
+    ],
+    "answer": 0,
+    "explanation": "ឡើង signifies upward or ascending movement."
+   },
+   {
+    "question": "To instruct someone to take an item away to the office: យកឯកសារនេះ___ការិយាល័យ។",
+    "options": [
+     "មក",
+     "ចូល",
+     "ចុះ",
+     "ទៅ"
+    ],
+    "answer": 3,
+    "explanation": "ទៅ denotes vector movement away from the speaker toward another venue."
+   },
+   {
+    "question": "To state that the cat climbed down from the roof: ឆ្មាលោត___ពីដំបូល។",
+    "options": [
+     "ឡើង",
+     "ចុះ",
+     "មក",
+     "ដល់"
+    ],
+    "answer": 1,
+    "explanation": "ចុះ indicates descending motion downwards from a height."
+   }
+  ],
+  "tip": "Always anchor the trajectory to yourself: if the action terminates where you stand, choose មក; if it moves away, pick ទៅ."
+ },
+ {
+  "id": "km-a2-aspect-markers-ban-and-heuy",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#E53E3E",
+  "emoji": "⏱️",
+  "title": "Aspectual Distinctions: Ban vs. Heuy",
+  "subtitle": "Contrasting pre-verbal past attainment with clause-final completed states",
+  "color": "#C53030",
+  "bg": "#FFF5F5",
+  "keyPoint": "Pre-verbal បាន denotes attainment or past opportunity, while clause-final ហើយ indicates that an action is completed or a state is newly realized.",
+  "structure": {
+   "headers": [
+    "Aspect Marker",
+    "Position",
+    "Grammatical Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "បាន",
+      "Pre-verbal",
+      "Past event occurred; obtained the chance to do"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ហើយ",
+      "Clause-final",
+      "Action completed; 'already' / perfective state"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "បាន...ហើយ",
+      "Bracketing verb",
+      "Emphasizes both past realization and completion"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#E53E3E",
+    "label": "Completed action",
+    "example": "ខ្ញុំញ៉ាំបាយហើយ។",
+    "translation": ""
+   },
+   {
+    "color": "#DD6B20",
+    "label": "Past event occurrence",
+    "example": "ម្សិលមិញខ្ញុំបានជួបគាត់។",
+    "translation": ""
+   },
+   {
+    "color": "#3182CE",
+    "label": "Completion of an achieved task",
+    "example": "គាត់បានធ្វើការងារនោះរួចហើយ។",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ខ្ញុំបានទៅលេងខេត្តសៀមរាប។",
+    "ko": "",
+    "highlight": "បាន"
+   },
+   {
+    "en": "ប្អូនស្រីរៀនចប់ហើយ។",
+    "ko": "",
+    "highlight": "ហើយ"
+   },
+   {
+    "en": "តើអ្នកបានទិញសំបុត្រហើយឬនៅ?",
+    "ko": "",
+    "highlight": "បាន"
+   },
+   {
+    "en": "គាត់ញ៉ាំថ្នាំហើយ។",
+    "ko": "",
+    "highlight": "ហើយ"
+   },
+   {
+    "en": "យើងបានពិភាក្សាគ្នារួចហើយ។",
+    "ko": "",
+    "highlight": "បាន"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ខ្ញុំហើយញ៉ាំបាយ",
+    "right": "ខ្ញុំញ៉ាំបាយហើយ",
+    "note": "ហើយ cannot sit directly before the verb to mark completion; place it at the end of the clause."
+   },
+   {
+    "wrong": "ខ្ញុំបានចប់ការងារ",
+    "right": "ខ្ញុំធ្វើការងារចប់ហើយ",
+    "note": "Do not rely solely on បាន to translate English past tense; completed status uses final ហើយ or រួចហើយ."
+   },
+   {
+    "wrong": "ថ្ងៃស្អែកខ្ញុំបានទៅផ្សារ",
+    "right": "ថ្ងៃស្អែកខ្ញុំនឹងទៅផ្សារ",
+    "note": "បាន cannot mark future events; use នឹង or simple bare verbs for future time references."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which marker completes the standard phrase 'I have eaten already': ខ្ញុំញ៉ាំបាយ___?",
+    "options": [
+     "បាន",
+     "នឹង",
+     "ហើយ",
+     "កំពុង"
+    ],
+    "answer": 2,
+    "explanation": "ហើយ is placed at the end of the clause to mark completion ('already')."
+   },
+   {
+    "question": "Complete the sentence to mean 'Yesterday I met him': ម្សិលមិញខ្ញុំ___ជួបគាត់។",
+    "options": [
+     "បាន",
+     "ហើយ",
+     "នឹង",
+     "ដែរ"
+    ],
+    "answer": 0,
+    "explanation": "Pre-verbal បាន specifies that an event occurred in the past."
+   },
+   {
+    "question": "Where does ហើយ sit in a statement of completed action?",
+    "options": [
+     "Before the subject",
+     "Between subject and verb",
+     "Directly before auxiliary verbs",
+     "At the very end of the verb clause"
+    ],
+    "answer": 3,
+    "explanation": "As an aspect marker denoting perfective completion, ហើយ naturally occupies clause-final position."
+   },
+   {
+    "question": "How do you ask 'Have you done it yet?': តើអ្នកធ្វើ___?",
+    "options": [
+     "ហើយនៅ",
+     "បានទេ",
+     "កំពុងណា",
+     "ទៅណា"
+    ],
+    "answer": 0,
+    "explanation": "ហើយនៅ (contracted from ហើយឬនៅ) translates 'already or not yet?'."
+   }
+  ],
+  "tip": "Think of បាន as looking back at an achieved event, and ហើយ as looking at the finished state standing before you now."
+ },
+ {
+  "id": "km-a2-progressive-marker-kampueng",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#48BB78",
+  "emoji": "🔄",
+  "title": "Progressive and Continuous Aspect with Kampueng",
+  "subtitle": "Marking continuous ongoing actions using pre-verbal kampueng and locative now",
+  "color": "#319795",
+  "bg": "#E6FFFA",
+  "keyPoint": "Pre-verbal កំពុង indicates that an action is currently unfolding, often reinforced with នៅ to signal ongoing durative state.",
+  "structure": {
+   "headers": [
+    "Aspect Pattern",
+    "Component Meaning",
+    "Sentence Structure"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "កំពុង + Verb",
+      "In the middle of doing",
+      "Subject + កំពុង + Verb + Object"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "កំពុងតែ + Verb",
+      "Emphatic ongoing action",
+      "Subject + កំពុងតែ + Verb"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "នៅ + Verb",
+      "Continuous / still doing",
+      "Subject + នៅ + Verb + (Object)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "កំពុងនៅ + Place",
+      "Locative continuous state",
+      "Subject + កំពុងនៅ + Location"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#319795",
+    "label": "Action occurring right now",
+    "example": "ខ្ញុំកំពុងរៀនភាសាខ្មែរ។",
+    "translation": ""
+   },
+   {
+    "color": "#805AD5",
+    "label": "Simultaneous ongoing action",
+    "example": "គាត់កំពុងតែចម្អិនម្ហូប។",
+    "translation": ""
+   },
+   {
+    "color": "#D69E2E",
+    "label": "Persisting status with នៅ",
+    "example": "ម៉ាក់នៅធ្វើការនៅឡើយ។",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ក្មេងៗកំពុងលេងបាល់ទាត់។",
+    "ko": "",
+    "highlight": "កំពុង"
+   },
+   {
+    "en": "លោកគ្រូកំពុងតែពន្យល់មេរៀន។",
+    "ko": "",
+    "highlight": "កំពុងតែ"
+   },
+   {
+    "en": "ខ្ញុំកំពុងញ៉ាំអាហារពេលល្ងាច។",
+    "ko": "",
+    "highlight": "កំពុង"
+   },
+   {
+    "en": "បងស្រីនៅដេកលក់នៅឡើយ។",
+    "ko": "",
+    "highlight": "នៅ"
+   },
+   {
+    "en": "ភ្លៀងកំពុងធ្លាក់ខ្លាំងណាស់។",
+    "ko": "",
+    "highlight": "កំពុង"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ខ្ញុំរៀនកំពុង",
+    "right": "ខ្ញុំកំពុងរៀន",
+    "note": "កំពុង must precede the verb, unlike clause-final particles."
+   },
+   {
+    "wrong": "គាត់កំពុងបានញ៉ាំបាយ",
+    "right": "គាត់កំពុងញ៉ាំបាយ",
+    "note": "Do not stack past បាន directly with progressive កំពុង for an active current process."
+   },
+   {
+    "wrong": "ខ្ញុំកំពុងជាសិស្ស",
+    "right": "ខ្ញុំជាសិស្ស",
+    "note": "Static identity verbs like ជា (to be) do not take progressive marker កំពុង."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct progressive marker: ពួកយើង___រៀនភាសាខ្មែរ។",
+    "options": [
+     "បាន",
+     "កំពុង",
+     "ហើយ",
+     "នឹង"
+    ],
+    "answer": 1,
+    "explanation": "កំពុង precedes the main verb to indicate ongoing progressive aspect."
+   },
+   {
+    "question": "Where must កំពុង be situated relative to the action verb?",
+    "options": [
+     "At the end of the sentence",
+     "Immediately before the verb",
+     "After the object noun",
+     "At the very start before the subject"
+    ],
+    "answer": 1,
+    "explanation": "កំពុង sits immediately in front of the active verb predicate."
+   },
+   {
+    "question": "To add strong emphasis that an action is currently happening right this moment: គាត់___អានសៀវភៅ។",
+    "options": [
+     "បានជា",
+     "រួចហើយ",
+     "កំពុងតែ",
+     "ធ្លាប់"
+    ],
+    "answer": 2,
+    "explanation": "កំពុងតែ adds distinct vividness and immediate emphasis to an ongoing activity."
+   },
+   {
+    "question": "How do you express 'He is still working' using durative aspect?",
+    "options": [
+     "គាត់បានធ្វើការ",
+     "គាត់នឹងធ្វើការ",
+     "គាត់ធ្វើការហើយ",
+     "គាត់នៅធ្វើការ"
+    ],
+    "answer": 3,
+    "explanation": "នៅ placed before the verb marks persistence or continuation ('still doing')."
+   }
+  ],
+  "tip": "In everyday spoken Khmer, speakers frequently shorten កំពុងតែ simply to កំពុង or even bare នៅ."
+ },
+ {
+  "id": "km-a2-comparatives-cieng",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#805AD5",
+  "emoji": "📊",
+  "title": "Comparative and Superlative Structures with Cieng",
+  "subtitle": "Expressing degrees of comparison with post-adjectival cieng and cieng-kei",
+  "color": "#6B46C1",
+  "bg": "#FAF5FF",
+  "keyPoint": "Comparatives place ជាង after the adjective, while the superlative adds គេ to produce ជាងគេ.",
+  "structure": {
+   "headers": [
+    "Comparison Degree",
+    "Khmer Construction",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Comparative (more ... than)",
+      "Adjective + ជាង + Target",
+      "ធំជាង (bigger than)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Superlative (the most)",
+      "Adjective + ជាងគេ",
+      "ធំជាងគេ (the biggest)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Equative (as ... as)",
+      "ដូច / ប៉ុន + Target",
+      "ខ្ពស់ដូច (as tall as)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#805AD5",
+    "label": "Comparing two entities",
+    "example": "ផ្ទះនេះធំជាងផ្ទះនោះ។",
+    "translation": ""
+   },
+   {
+    "color": "#3182CE",
+    "label": "Stating the highest superlative",
+    "example": "គាត់រៀនពូកែជាងគេក្នុងថ្នាក់។",
+    "translation": ""
+   },
+   {
+    "color": "#38A169",
+    "label": "Comparing degree of preference",
+    "example": "ខ្ញុំចូលចិត្តតែជាងកាហ្វេ។",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ផ្លែប៉ោមនេះផ្អែមជាងផ្លែក្រូច។",
+    "ko": "",
+    "highlight": "ជាង"
+   },
+   {
+    "en": "ភ្នំពេញធំជាងគេនៅស្រុកខ្មែរ។",
+    "ko": "",
+    "highlight": "ជាងគេ"
+   },
+   {
+    "en": "ឡាននេះលឿនជាងម៉ូតូ។",
+    "ko": "",
+    "highlight": "ជាង"
+   },
+   {
+    "en": "សៀវភៅមួយក្បាលនេះថ្លៃជាងគេ។",
+    "ko": "",
+    "highlight": "ជាងគេ"
+   },
+   {
+    "en": "គាត់ខ្ពស់ជាងបងប្រុសរបស់គាត់។",
+    "ko": "",
+    "highlight": "ជាង"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ផ្ទះនេះជាងធំផ្ទះនោះ",
+    "right": "ផ្ទះនេះធំជាងផ្ទះនោះ",
+    "note": "ជាង must follow the descriptive adjective, never precede it."
+   },
+   {
+    "wrong": "គាត់ពូកែគេ",
+    "right": "គាត់ពូកែជាងគេ",
+    "note": "To construct the superlative, you must use the full compound ជាងគេ, not just គេ."
+   },
+   {
+    "wrong": "ខ្ញុំចូលចិត្តកាហ្វេច្រើនគាត់",
+    "right": "ខ្ញុំចូលចិត្តកាហ្វេច្រើនជាងគាត់",
+    "note": "Comparisons of quantity or preference still require the comparative linking marker ជាង."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank for comparative: 'Today is hotter than yesterday' (ថ្ងៃនេះក្តៅ___ម្សិលមិញ).",
+    "options": [
+     "ជាង",
+     "ដូច",
+     "ហើយ",
+     "ណា"
+    ],
+    "answer": 0,
+    "explanation": "ជាង follows the adjective ក្តៅ to convey 'hotter than'."
+   },
+   {
+    "question": "How do you say 'She is the most beautiful'?: នាងស្អាត___។",
+    "options": [
+     "ណាស់",
+     "ជាង",
+     "ជាងគេ",
+     "ដូចគេ"
+    ],
+    "answer": 2,
+    "explanation": "Adjective + ជាងគេ forms the superlative degree ('the most...')."
+   },
+   {
+    "question": "Where does the word ជាង sit relative to the descriptive adjective?",
+    "options": [
+     "Before the adjective",
+     "After the adjective",
+     "At the very start of the sentence",
+     "Attached before the subject"
+    ],
+    "answer": 1,
+    "explanation": "Khmer places comparative particles immediately after the relevant modifier adjective."
+   },
+   {
+    "question": "Which sentence correctly states 'This book is thicker than that book'?",
+    "options": [
+     "សៀវភៅនេះក្រាស់ដូចសៀវភៅនោះ",
+     "សៀវភៅនេះជាងក្រាស់សៀវភៅនោះ",
+     "សៀវភៅនេះក្រាស់ជាងសៀវភៅនោះ",
+     "សៀវភៅនេះក្រាស់ជាងគេសៀវភៅនោះ"
+    ],
+    "answer": 2,
+    "explanation": "Noun A + Adjective + ជាង + Noun B is the canonical comparative template."
+   }
+  ],
+  "tip": "Remember: ជាង means '-er / more than' and គេ means 'others / they' — so ជាងគេ literally translates to 'more than everyone else'!"
+ },
+ {
+  "id": "km-a2-modal-verbs-truw-and-ac",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#4F46E5",
+  "emoji": "⚖️",
+  "title": "Modals of Necessity and Ability: Truw vs. Ac",
+  "subtitle": "Distinguish external obligations from physical or learned capability",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Use ត្រូវ directly before an action to express necessity or obligation, while អាច paired with បាន expresses capability or permission.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Construction",
+    "Khmer Example",
+    "English Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Obligation",
+      "ត្រូវ + Verb",
+      "ខ្ញុំត្រូវទៅសាលា",
+      "Must / Have to go to school"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Ability (General)",
+      "អាច + Verb + បាន",
+      "គាត់អាចនិយាយខ្មែរបាន",
+      "Can speak Khmer"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Ability",
+      "មិនអាច + Verb + បាន",
+      "ខ្ញុំមិនអាចមកបានទេ",
+      "Cannot come"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Obligation",
+      "មិនបាច់ / មិនត្រូវ + Verb",
+      "កុំបារម្ភ មិនបាច់ទៅទេ",
+      "No need to go / Must not go"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "External Obligation",
+    "example": "អ្នកត្រូវពាក់មួកសុវត្ថិភាពពេលបើកបរ។",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Learned Ability",
+    "example": "ប្អូនស្រីខ្ញុំអាចហែលទឹកបានយ៉ាងលឿន។",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Permission / Circumstance",
+    "example": "តើខ្ញុំអាចចូលរួមកម្មវិធីនេះបានទេ?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ថ្ងៃនេះខ្ញុំត្រូវរៀនប្រឡង។",
+    "ko": "",
+    "highlight": "ត្រូវ"
+   },
+   {
+    "en": "តើលោកអាចជួយខ្ញុំបន្តិចបានទេ?",
+    "ko": "",
+    "highlight": "អាចជួយខ្ញុំបន្តិចបាន"
+   },
+   {
+    "en": "អ្នកដំណើរទាំងអស់ត្រូវបង្ហាញលិខិតឆ្លងដែន។",
+    "ko": "",
+    "highlight": "ត្រូវ"
+   },
+   {
+    "en": "កូនក្មេងមិនអាចញ៉ាំម្ទេសហឹរបានទេ។",
+    "ko": "",
+    "highlight": "មិនអាចញ៉ាំម្ទេសហឹរបាន"
+   },
+   {
+    "en": "យើងត្រូវចេញដំណើរពីព្រលឹមដើម្បីកុំឱ្យយឺត។",
+    "ko": "",
+    "highlight": "ត្រូវ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ខ្ញុំអាចទៅផ្សារ។",
+    "right": "ខ្ញុំអាចទៅផ្សារបាន។",
+    "note": "When expressing capability with អាច, native speakers almost always frame the clause by adding បាន at the end."
+   },
+   {
+    "wrong": "គាត់ត្រូវបើកឡានបាន។",
+    "right": "គាត់អាចបើកឡានបាន។",
+    "note": "Do not mix ត្រូវ with បាន when expressing ability; ត្រូវ signifies obligation ('must'), not ability ('can')."
+   },
+   {
+    "wrong": "អ្នកមិនត្រូវទិញសំបុត្រទេ។",
+    "right": "អ្នកមិនបាច់ទិញសំបុត្រទេ។",
+    "note": "To say 'you do not need to', use មិនបាច់ rather than មិនត្រូវ, which strongly conveys prohibition ('must not')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the word expressing necessity: 'You ___ take medicine every morning.'",
+    "options": [
+     "អាច",
+     "ត្រូវ",
+     "ចង់",
+     "បាន"
+    ],
+    "answer": 1,
+    "explanation": "ត្រូវ expresses external necessity or requirement ('must / have to')."
+   },
+   {
+    "question": "Complete the ability sentence: 'គាត់___បើកបររថយន្តបានយ៉ាងល្អ។'",
+    "options": [
+     "ត្រូវ",
+     "កុំ",
+     "អាច",
+     "ឈប់"
+    ],
+    "answer": 2,
+    "explanation": "Pair អាច with បាន to express capability or skill."
+   },
+   {
+    "question": "Choose the missing complement: 'តើអ្នកអាចញ៉ាំអាហារហឹរ___ទេ?'",
+    "options": [
+     "បាន",
+     "ត្រូវ",
+     "នឹង",
+     "ស្រេច"
+    ],
+    "answer": 0,
+    "explanation": "The circumfix frame for ability requires បាន after the verb object."
+   },
+   {
+    "question": "Which sentence means 'You do not have to leave right now'?",
+    "options": [
+     "អ្នកត្រូវចេញទៅឥឡូវនេះ។",
+     "អ្នកមិនអាចចេញទៅបានទេ។",
+     "អ្នកមិនទាន់ចេញទៅទេ។",
+     "អ្នកមិនបាច់ចេញទៅឥឡូវនេះទេ។"
+    ],
+    "answer": 3,
+    "explanation": "មិនបាច់ indicates lack of necessity ('no need to'), whereas មិនអាច means cannot."
+   }
+  ],
+  "tip": "Think of អាច...បាន as a bracket that wraps around your verb phrase to say 'capable of', while ត្រូវ acts as an immediate command arrow placed right before the verb."
+ },
+ {
+  "id": "km-a2-resultative-verb-compounds",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🎯",
+  "title": "Resultative Verb Compounds",
+  "subtitle": "Pairing action verbs with completion and state complements",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Khmer places a resultative complement verb immediately after the action verb to show that an action successfully achieved its intended outcome.",
+  "structure": {
+   "headers": [
+    "Action Verb",
+    "Complement Verb",
+    "Result Compound",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "មើល (look)",
+      "ឃើញ (see)",
+      "មើលឃើញ",
+      "to perceive visually / see successfully"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ស្តាប់ (listen)",
+      "ឭ (hear)",
+      "ស្តាប់ឭ",
+      "to hear / catch a sound"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "រក (search)",
+      "ឃើញ (find)",
+      "រកឃើញ",
+      "to find / discover"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "វាយ (hit)",
+      "បែក (break/shatter)",
+      "វាយបែក",
+      "to smash / break by hitting"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Sensory Outcome",
+    "example": "ខ្ញុំខំប្រឹងស្តាប់ណាស់តែស្តាប់មិនឭសោះ។",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Discovery & Finding",
+    "example": "នគរបាលបានរកឃើញកាបូបដែលបាត់ហើយ។",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Physical Impact & Damage",
+    "example": "ក្មេងប្រុសបានទាត់បាល់បំបែកកញ្ចក់បង្អួច។",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ខ្ញុំសម្លឹងមើលទៅឆ្ងាយតែមើលមិនឃើញទេ។",
+    "ko": "",
+    "highlight": "មើលមិនឃើញ"
+   },
+   {
+    "en": "តើអ្នកបានរកឃើញសៀវភៅនោះនៅឯណា?",
+    "ko": "",
+    "highlight": "រកឃើញ"
+   },
+   {
+    "en": "លោកគ្រូនាយកនិយាយឮខ្លាំងៗធ្វើឱ្យសិស្សស្តាប់ឭច្បាស់។",
+    "ko": "",
+    "highlight": "ស្តាប់ឭ"
+   },
+   {
+    "en": "ចោរបានគាស់ទ្វារបន្ទប់បាក់អស់រលីង។",
+    "ko": "",
+    "highlight": "គាស់ទ្វារបន្ទប់បាក់"
+   },
+   {
+    "en": "នាងបានរៀនយល់មេរៀនពិបាកនេះហើយ។",
+    "ko": "",
+    "highlight": "រៀនយល់"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ខ្ញុំមើលសៀវភៅរបស់ខ្ញុំឃើញ។",
+    "right": "ខ្ញុំរកសៀវភៅរបស់ខ្ញុំឃើញ។",
+    "note": "To look for and find an item, use the compound រក...ឃើញ, not មើល...ឃើញ (which means visual perception)."
+   },
+   {
+    "wrong": "ខ្ញុំស្តាប់វិទ្យុឭហើយ។",
+    "right": "ខ្ញុំបានឭសំឡេងវិទ្យុហើយ។",
+    "note": "If you merely heard a noise without actively listening first, use ឭ by itself rather than the compound ស្តាប់ឭ."
+   },
+   {
+    "wrong": "គាត់រកឃើញមិនកូនសោ។",
+    "right": "គាត់រកកូនសោមិនឃើញ។",
+    "note": "Negation មិន must sit directly in front of the resultative complement, splitting the action verb and its result when an object is specified."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the search result sentence: 'ខ្ញុំស្វែងរកកូនសោគ្រប់កន្លែងតែរក___ទេ។'",
+    "options": [
+     "មិនឃើញ",
+     "មិនមើល",
+     "មិនបែក",
+     "មិនស្តាប់"
+    ],
+    "answer": 0,
+    "explanation": "រកមិនឃើញ means 'searched but could not find / didn't see'."
+   },
+   {
+    "question": "Which verb compound means 'to successfully hear something'?",
+    "options": [
+     "មើលឃើញ",
+     "ដើរទៅ",
+     "ស្តាប់ឭ",
+     "គិតឃើញ"
+    ],
+    "answer": 2,
+    "explanation": "ស្តាប់ (listen) + ឭ (hear) expresses the successful achievement of hearing."
+   },
+   {
+    "question": "Where does negation belong in an action-result compound? 'ខ្ញុំរកកូនសោ___ឃើញ។'",
+    "options": [
+     "គ្មាន",
+     "មិន",
+     "កុំ",
+     "ពុំដែល"
+    ],
+    "answer": 1,
+    "explanation": "The negator មិន is placed right before the result verb (ឃើញ)."
+   },
+   {
+    "question": "What is the result when an object is shattered by hitting: 'គាត់វាយចាន___។'",
+    "options": [
+     "ឭ",
+     "ឃើញ",
+     "ចប់",
+     "បែក"
+    ],
+    "answer": 3,
+    "explanation": "បែក denotes shattering, so វាយបែក means to break/smash by hitting."
+   }
+  ],
+  "tip": "To negate a result compound, put មិន directly before the second verb (e.g., មើលមិនឃើញ = look-not-see). This emphasizes that the effort happened, but the outcome failed."
+ },
+ {
+  "id": "km-b1-adversative-passive-truw",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#DC2626",
+  "emoji": "⚠️",
+  "title": "Adversative Passive with Truw",
+  "subtitle": "Expressing adverse, unfortunate, or accidental events",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "The passive marker ត្រូវ precedes an optional agent and a transitive verb to describe an action where the subject suffers an unwanted or adverse outcome.",
+  "structure": {
+   "headers": [
+    "Patient (Subject)",
+    "Passive Marker",
+    "Agent (Optional)",
+    "Verb / Predicate"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ចោរ (thief)",
+      "ត្រូវ",
+      "ប៉ូលីស (police)",
+      "ចាប់ខ្លួន (arrest)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "គាត់ (he)",
+      "ត្រូវ",
+      "ឆ្កែ (dog)",
+      "ខាំ (bite)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ឡាន (car)",
+      "ត្រូវ",
+      "— (unspecified)",
+      "បុកខូចខាត (crash/damage)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "កាបូប (bag)",
+      "ត្រូវ",
+      "ចោរ (thief)",
+      "លួចយកទៅ (steal away)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Physical Injury / Attack",
+    "example": "ក្មេងនោះត្រូវឃ្មុំទិចចំដៃកាលពីម្សិលមិញ។",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Punishment or Reprimand",
+    "example": "សិស្សខ្ជិលត្រូវគ្រូបន្ទោសនៅមុខថ្នាក់។",
+    "translation": ""
+   },
+   {
+    "color": "#4B5563",
+    "label": "Loss or Property Damage",
+    "example": "ទូរស័ព្ទរបស់ខ្ញុំត្រូវគេលួចបាត់ហើយ។",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "បុរសម្នាក់នោះត្រូវឡានបុកនៅផ្លូវបំបែក។",
+    "ko": "",
+    "highlight": "ត្រូវឡានបុក"
+   },
+   {
+    "en": "មាន់របស់កសិករត្រូវពស់ស៊ីអស់បីក្បាល។",
+    "ko": "",
+    "highlight": "ត្រូវពស់ស៊ី"
+   },
+   {
+    "en": "គាត់ត្រូវចៅហ្វាយនាយបញ្ឈប់ពីការងារ។",
+    "ko": "",
+    "highlight": "ត្រូវចៅហ្វាយនាយបញ្ឈប់"
+   },
+   {
+    "en": "ផ្ទះចាស់នេះត្រូវខ្យល់ព្យុះបំផ្លាញទាំងស្រុង។",
+    "ko": "",
+    "highlight": "ត្រូវខ្យល់ព្យុះបំផ្លាញ"
+   },
+   {
+    "en": "លុយទាំងអស់នៅក្នុងទូដែកត្រូវចោរប្លន់យក។",
+    "ko": "",
+    "highlight": "ត្រូវចោរប្លន់យក"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ខ្ញុំត្រូវគ្រូសរសើរច្រើនណាស់។",
+    "right": "ខ្ញុំបានទទួលការសរសើរពីគ្រូច្រើនណាស់។",
+    "note": "ត្រូវ passive carries an inherently negative or adverse nuance; for praise or positive experiences, use បាន or ទទួល rather than ត្រូវ."
+   },
+   {
+    "wrong": "គាត់ត្រូវដោយឡានបុក។",
+    "right": "គាត់ត្រូវឡានបុក។",
+    "note": "Do not insert prepositions like ដោយ (by) after ត្រូវ in spoken adversative passives; place the agent immediately after ត្រូវ."
+   },
+   {
+    "wrong": "ឡានបុកត្រូវគាត់។",
+    "right": "គាត់ត្រូវឡានបុក។",
+    "note": "In a passive sentence, the victim/patient must become the subject positioned before ត្រូវ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the verb construction for 'The boy was bitten by a dog': 'ក្មេងប្រុស___ឆ្កែខាំ។'",
+    "options": [
+     "បាន",
+     "ត្រូវ",
+     "ធ្វើ",
+     "ឱ្យ"
+    ],
+    "answer": 1,
+    "explanation": "ត្រូវ marks the adverse passive when the subject suffers an unpleasant event like being bitten."
+   },
+   {
+    "question": "Which sentence correctly expresses an adverse passive event?",
+    "options": [
+     "គាត់ត្រូវគេលួចកង់បាត់។",
+     "គាត់បានគេលួចកង់បាត់។",
+     "គាត់ឱ្យគេលួចកង់បាត់។",
+     "គាត់ធ្វើគេលួចកង់បាត់។"
+    ],
+    "answer": 0,
+    "explanation": "ត្រូវគេលួច correctly forms the adversity passive meaning 'was stolen by someone'."
+   },
+   {
+    "question": "Why is 'ខ្ញុំត្រូវគ្រូឱ្យរង្វាន់' unnatural for receiving a good prize?",
+    "options": [
+     "Because ត្រូវ can only follow verbs.",
+     "Because ត្រូវ conveys adversity, unpleasantness, or misfortune.",
+     "Because ត្រូវ requires two direct objects.",
+     "Because Khmer has no passive voice."
+    ],
+    "answer": 1,
+    "explanation": "ត្រូវ passive almost always carries an adverse connotation, making it unsuited for pleasant rewards."
+   },
+   {
+    "question": "Complete the sentence: 'ផ្ទះឈើចាស់នេះត្រូវភ្លើង___អស់រលីង។'",
+    "options": [
+     "លក់",
+     "ឆេះ",
+     "ទិញ",
+     "សង់"
+    ],
+    "answer": 1,
+    "explanation": "ឆេះ (burn) matches the context of destruction by fire in an adverse passive frame."
+   }
+  ],
+  "tip": "Reserve ត្រូវ-passive sentences for accidents, fines, injuries, or reprimands. If something positive happened to the subject, express it actively or with បានទទួល ('received')."
+ },
+ {
+  "id": "km-b1-causative-constructions-thveu-oy",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🔄",
+  "title": "Periphrastic Causatives with Thveu Oy and Ban",
+  "subtitle": "Distinguishing direct physical causation from permission and facilitation",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use ធ្វើឱ្យ to express direct cause-and-effect that results in a state or emotion, and ឱ្យ to express permission, requests, or enabling someone to act.",
+  "structure": {
+   "headers": [
+    "Causative Marker",
+    "Syntax Pattern",
+    "Core Meaning",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ធ្វើឱ្យ",
+      "Subject + ធ្វើឱ្យ + Object + Adjective/Verb",
+      "To cause / make happen",
+      "ដំណឹងនេះធ្វើឱ្យខ្ញុំសប្បាយចិត្ត"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ឱ្យ",
+      "Subject + ឱ្យ + Person + Action Verb",
+      "To let / allow / tell to do",
+      "ម្តាយឱ្យកូនទៅលេង"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "បណ្តាលឱ្យ",
+      "Event + បណ្តាលឱ្យ + Negative Result",
+      "To lead to / provoke (formal)",
+      "ភ្លៀងធ្លាក់បណ្តាលឱ្យលិចផ្លូវ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ជួយឱ្យ",
+      "Factor + ជួយឱ្យ + Person + Result",
+      "To help / facilitate",
+      "ការហាត់ប្រាណជួយឱ្យមានសុខភាពល្អ"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Emotional / Psychological Effect",
+    "example": "រឿងកំប្លែងនេះធ្វើឱ្យទស្សនិកជនសើចសប្បាយ។",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Permission / Allowance",
+    "example": "គ្រូពេទ្យមិនឱ្យអ្នកជំងឺញ៉ាំអាហារប្រៃពេកទេ។",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Accidental Result",
+    "example": "ការធ្វេសប្រហែសធ្វើឱ្យបាត់បង់ឱកាសល្អ។",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "អាកាសធាតុក្តៅធ្វើឱ្យផ្កាក្នុងសួនក្រៀមស្វិត។",
+    "ko": "",
+    "highlight": "ធ្វើឱ្យផ្កាក្នុងសួនក្រៀមស្វិត"
+   },
+   {
+    "en": "ពាក្យសម្តីរបស់គាត់ធ្វើឱ្យខ្ញុំខឹងខ្លាំងណាស់។",
+    "ko": "",
+    "highlight": "ធ្វើឱ្យខ្ញុំខឹង"
+   },
+   {
+    "en": "ឪពុកម្តាយឱ្យកូនៗរៀនភាសាបរទេសពីតូច។",
+    "ko": "",
+    "highlight": "ឱ្យកូនៗរៀន"
+   },
+   {
+    "en": "ការអានសៀវភៅច្រើនធ្វើឱ្យយើងយល់ដឹងទូលំទូលាយ។",
+    "ko": "",
+    "highlight": "ធ្វើឱ្យយើងយល់ដឹង"
+   },
+   {
+    "en": "មេឃភ្លៀងខ្លាំងធ្វើឱ្យផ្លូវរអិលពិបាកធ្វើដំណើរ។",
+    "ko": "",
+    "highlight": "ធ្វើឱ្យផ្លូវរអិល"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "គាត់ឱ្យខ្ញុំយំដោយពាក្យសម្តីអាក្រក់។",
+    "right": "គាត់ធ្វើឱ្យខ្ញុំយំដោយពាក្យសម្តីអាក្រក់។",
+    "note": "Use ធ្វើឱ្យ when an action directly triggers an emotional state or involuntary response; ឱ្យ implies granting permission or ordering."
+   },
+   {
+    "wrong": "ម្តាយធ្វើឱ្យកូនទៅផ្សារទិញបន្លែ។",
+    "right": "ម្តាយឱ្យកូនទៅផ្សារទិញបន្លែ។",
+    "note": "When a person commands, delegates, or allows someone else to execute an action, use ឱ្យ alone."
+   },
+   {
+    "wrong": "ដំណឹងនោះធ្វើខ្ញុំសប្បាយចិត្ត។",
+    "right": "ដំណឹងនោះធ្វើឱ្យខ្ញុំសប្បាយចិត្ត។",
+    "note": "Do not omit ឱ្យ after ធ្វើ when constructing a causative sentence in standard Khmer."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct causative for 'This sad movie made me cry': 'កុនកំសត់នេះ___ខ្ញុំយំ។'",
+    "options": [
+     "ឱ្យ",
+     "ធ្វើឱ្យ",
+     "ជួយ",
+     "ត្រូវ"
+    ],
+    "answer": 1,
+    "explanation": "ធ្វើឱ្យ is the periphrastic causative for causing involuntary feelings or psychological reactions."
+   },
+   {
+    "question": "Fill the permissive blank: 'ប៉ាមិន___ខ្ញុំបើកឡានទៅឆ្ងាយតែម្នាក់ឯងទេ។'",
+    "options": [
+     "បណ្តាល",
+     "ធ្វើ",
+     "ត្រូវ",
+     "ឱ្យ"
+    ],
+    "answer": 3,
+    "explanation": "ឱ្យ means 'to allow/permit' when applied to human behavior."
+   },
+   {
+    "question": "Which causative conveys formal misfortune or disaster: 'គ្រោះរាំងស្ងួត___ខូចខាតស្រូវ។'",
+    "options": [
+     "បណ្តាលឱ្យ",
+     "សុំឱ្យ",
+     "ចង់ឱ្យ",
+     "ស្គាល់ឱ្យ"
+    ],
+    "answer": 0,
+    "explanation": "បណ្តាលឱ្យ is used in formal or journalistic contexts to mean 'caused / led to damage'."
+   },
+   {
+    "question": "Complete the health benefit sentence: 'ការគេងគ្រប់គ្រាន់___ខួរក្បាលស្រឡះល្អ។'",
+    "options": [
+     "ត្រូវ",
+     "គ្មាន",
+     "ធ្វើឱ្យ",
+     "កុំឱ្យ"
+    ],
+    "answer": 2,
+    "explanation": "ធ្វើឱ្យ creates the causative relationship between sufficient sleep and feeling refreshed."
+   }
+  ],
+  "tip": "Remember: ធ្វើឱ្យ means 'makes (something happen or feel a certain way)', while ឱ្យ on its own means 'lets / tells (someone do something)'."
+ },
+ {
+  "id": "km-b1-relativization-dael",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#7C3AED",
+  "emoji": "🔗",
+  "title": "Relative Clauses with Dael",
+  "subtitle": "Embedding descriptive relative clauses with the invariant particle ដែល",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The invariant relativizer ដែល directly follows any head noun to introduce relative clauses modifying people, places, things, or times.",
+  "structure": {
+   "headers": [
+    "Head Noun",
+    "Relativizer",
+    "Embedded Clause",
+    "English Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "មនុស្ស (person)",
+      "ដែល",
+      "រស់នៅជិតខាងខ្ញុំ",
+      "Subject Relative (who lives next door)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ម្ហូប (food)",
+      "ដែល",
+      "ម្តាយខ្ញុំស្ល",
+      "Object Relative (that my mother cooks)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "កន្លែង (place)",
+      "ដែល",
+      "យើងបានជួបគ្នា",
+      "Locative Relative (where we met)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ថ្ងៃ (day)",
+      "ដែល",
+      "គាត់មកដល់",
+      "Temporal Relative (when he arrives)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Modifying People (Who / Whom)",
+    "example": "បុរសដែលឈរនៅមាត់ទ្វារគឺជាលោកពូរបស់ខ្ញុំ។",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Modifying Inanimate Objects (Which / That)",
+    "example": "ខ្ញុំចូលចិត្តសៀវភៅដែលនិយាយពីប្រវត្តិសាស្ត្រខ្មែរ។",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Defining Specific Locations (Where)",
+    "example": "នេះគឺជាសាលារៀនដែលខ្ញុំធ្លាប់រៀនកាលពីក្មេង។",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "សិស្សដែលប្រឡងជាប់លេខមួយទទួលបានអាហារូបករណ៍។",
+    "ko": "",
+    "highlight": "ដែលប្រឡងជាប់លេខមួយ"
+   },
+   {
+    "en": "ផ្ទះដែលលាបពណ៌សនោះជារបស់គ្រូបង្រៀនខ្ញុំ។",
+    "ko": "",
+    "highlight": "ដែលលាបពណ៌សនោះ"
+   },
+   {
+    "en": "ខ្ញុំបានអានព័ត៌មានដែលគេចុះផ្សាយកាលពីព្រឹកមិញ។",
+    "ko": "",
+    "highlight": "ដែលគេចុះផ្សាយ"
+   },
+   {
+    "en": "នារីដែលកំពុងច្រៀងលើឆាកមានសំឡេងពិរោះណាស់។",
+    "ko": "",
+    "highlight": "ដែលកំពុងច្រៀងលើឆាក"
+   },
+   {
+    "en": "ផ្លែឈើដែលទើបបេះពីដើមមានរសជាតិផ្អែមឆ្ងាញ់។",
+    "ko": "",
+    "highlight": "ដែលទើបបេះពីដើម"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "មនុស្សអ្នកដែលមកពីភ្នំពេញ។",
+    "right": "មនុស្សដែលមកពីភ្នំពេញ។",
+    "note": "Do not insert ผู้ or other pronoun fillers before ដែល; ដែល directly modifies the head noun directly."
+   },
+   {
+    "wrong": "សៀវភៅដែលខ្ញុំទិញវា។",
+    "right": "សៀវភៅដែលខ្ញុំទិញ។",
+    "note": "Khmer relative clauses normally do not retain an overt pronoun copy (វា) in object position within the clause."
+   },
+   {
+    "wrong": "កន្លែងនៅឯណាខ្ញុំកើត។",
+    "right": "កន្លែងដែលខ្ញុំកើត។",
+    "note": "Do not use question words like នៅឯណា (where) to form relative clauses; use ដែល regardless of whether the head noun is a place, person, or object."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the invariant relativizer used for 'The food that I like': 'ម្ហូប___ខ្ញុំចូលចិត្ត'",
+    "options": [
+     "ដែល",
+     "ពីព្រោះ",
+     "ប៉ុន្តែ",
+     "ហើយ"
+    ],
+    "answer": 0,
+    "explanation": "ដែល is the universal invariant relativizer in Khmer for 'who', 'which', and 'that'."
+   },
+   {
+    "question": "Complete the relative clause: 'បុរស___បើកបររថយន្តក្រហមជាពូខ្ញុំ។'",
+    "options": [
+     "នៅ",
+     "នឹង",
+     "ដែល",
+     "បាន"
+    ],
+    "answer": 2,
+    "explanation": "ដែល links the head noun បុរស with the modifying action clause."
+   },
+   {
+    "question": "Why can ដែល modify both មនុស្ស (people) and ឡាន (cars)?",
+    "options": [
+     "Because Khmer uses separate words for gender only.",
+     "Because ដែល changes vowel sound depending on the noun.",
+     "Because ដែល is an invariant relative marker for all noun classes.",
+     "Because relative clauses must follow verbs."
+    ],
+    "answer": 2,
+    "explanation": "Unlike European languages, Khmer uses one invariant word (ដែល) for who, which, that, and where."
+   },
+   {
+    "question": "Translate function: In 'ទីក្រុងដែលខ្ញុំស្រឡាញ់', what role does ដែល play?",
+    "options": [
+     "Question word meaning 'where?'",
+     "Past tense aspect marker",
+     "Conditional marker meaning 'if'",
+     "Relative connector introducing the descriptive clause"
+    ],
+    "answer": 3,
+    "explanation": "ដែល connects the head noun ទីក្រុង (city) to the relative clause ខ្ញុំស្រឡាញ់ (I love)."
+   }
+  ],
+  "tip": "Never translate English relative pronouns into Khmer question words! Khmer doesn't use 'who' (អ្នកណា) or 'where' (ឯណា) for clauses; use ដែល for all of them."
+ },
+ {
+  "id": "km-b1-epistemic-and-attitudinal-particles",
+  "level": "b1",
+  "category": "modals",
+  "categoryColor": "#3B82F6",
+  "emoji": "🗣️",
+  "title": "Utterance-Final Pragmatic Particles",
+  "subtitle": "Softening commands, confirming shared facts, and adding nuance",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Khmer utterance-final particles modulate illocutionary force, transforming blunt statements into gentle requests, shared confirmations, or polite reminders without changing core syntax.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Function",
+    "Khmer Sample",
+    "Pragmatic Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ណា",
+      "Affectionate reminder / tag",
+      "កុំភ្លេចណា",
+      "Don't forget, okay?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ផង",
+      "Polite solicitation / additive plea",
+      "ជួយខ្ញុំផង",
+      "Please help me out"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "តើ",
+      "Contrastive / counter-expectation assertion",
+      "ខ្ញុំបានប្រាប់តើ",
+      "I did tell you (as a matter of fact)!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "មែន",
+      "Confirmation seeker / rhetorical tag",
+      "អ្នកទៅមែន?",
+      "Are you really going?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Softening Requests",
+    "example": "សូមជួយបិទទ្វារផង។",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Gentle Reminders",
+    "example": "ញ៉ាំបាយឱ្យច្រើនណា។",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Stating Counter-evidence",
+    "example": "គាត់នៅទីនេះតើ!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "សូមជួយលើកអីវ៉ាន់នេះផង។",
+    "ko": "",
+    "highlight": "ផង"
+   },
+   {
+    "en": "ស្អែកត្រូវមកឱ្យទាន់ពេលណា។",
+    "ko": "",
+    "highlight": "ណា"
+   },
+   {
+    "en": "ខ្ញុំបានផ្ញើសំបុត្ររួចហើយតើ។",
+    "ko": "",
+    "highlight": "តើ"
+   },
+   {
+    "en": "រឿងនេះពិតជាពិបាកណាស់មែន។",
+    "ko": "",
+    "highlight": "មែន"
+   },
+   {
+    "en": "ប្រយ័ត្នប្រយែងពេលធ្វើដំណើរណា។",
+    "ko": "",
+    "highlight": "ណា"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "សូមជួយខ្ញុំ។",
+    "right": "សូមជួយខ្ញុំផង។",
+    "note": "Leaving out ផង when asking for assistance can sound abrupt and commanding rather than courteous."
+   },
+   {
+    "wrong": "គាត់ទៅផ្ទះណា?",
+    "right": "គាត់ទៅផ្ទះមែន?",
+    "note": "Use មែន to question the reality of a fact; ណា serves as an endearment or softening reminder tag."
+   },
+   {
+    "wrong": "តើខ្ញុំដឹងរឿងនេះ។",
+    "right": "ខ្ញុំដឹងរឿងនេះតើ!",
+    "note": "The particle តើ functions sentence-finally to assert counter-expectation; clause-initial តើ is a formal question marker."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the best particle to make a polite plea when asking someone to help carry luggage: 'សូមជួយខ្ញុំ ___'",
+    "options": [
+     "តើ",
+     "ផង",
+     "ទេ",
+     "ឬ"
+    ],
+    "answer": 1,
+    "explanation": "The particle ផង softens requests and implies 'please lend a hand/also help'."
+   },
+   {
+    "question": "Which particle conveys a warm, caring reminder to a child: 'គេងឱ្យលក់ ___'",
+    "options": [
+     "ណា",
+     "អ្វី",
+     "តើ",
+     "មែន"
+    ],
+    "answer": 0,
+    "explanation": "The particle ណា is an affectionate utterance-final tag indicating encouragement or gentle reminder."
+   },
+   {
+    "question": "Someone claims you didn't call them, but you actually did! You defend yourself: 'ខ្ញុំបានទូរស័ព្ទទៅហើយ ___!'",
+    "options": [
+     "ផង",
+     "ណា",
+     "តើ",
+     "រឺ"
+    ],
+    "answer": 2,
+    "explanation": "Sentence-final តើ expresses insistence against counter-expectation ('I did indeed!')."
+   },
+   {
+    "question": "To ask for confirmation of a surprising statement ('You really won?'): 'អ្នកឈ្នះ ___?'",
+    "options": [
+     "ផង",
+     "ណា",
+     "តើ",
+     "មែន"
+    ],
+    "answer": 3,
+    "explanation": "Sentence-final មែន seeks truth verification akin to 'really?' or 'truly?'."
+   }
+  ],
+  "tip": "Attach ផង to virtually any everyday favor request (like calling a cab or asking directions) to sound immediately polite and natural to native speakers."
+ },
+ {
+  "id": "km-b1-complementizers-tha-and-dael",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔗",
+  "title": "Clausal Complementation with Tha",
+  "subtitle": "Reporting speech, thoughts, beliefs, and attitudes",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The complementizer ថា introduces subordinate finite clauses following verbs of cognition, utterance, and perception, functioning identically to English 'that'.",
+  "structure": {
+   "headers": [
+    "Matrix Verb Type",
+    "Khmer Verb",
+    "Complement Structure",
+    "English Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Speech",
+      "និយាយ / ប្រាប់",
+      "និយាយថា [Clause]",
+      "Say / tell that..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Cognition / Belief",
+      "គិត / ជឿ",
+      "គិតថា [Clause]",
+      "Think / believe that..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Knowledge / Perception",
+      "ដឹង / ឃើញ",
+      "ដឹងថា [Clause]",
+      "Know / see that..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Affective Attitude",
+      "សង្ឃឹម",
+      "សង្ឃឹមថា [Clause]",
+      "Hope that..."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Reported Speech",
+    "example": "គាត់ប្រាប់ខ្ញុំថាមិនបានទៅទេ។",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Expressing Opinions",
+    "example": "ខ្ញុំគិតថាថ្ងៃនេះក្តៅណាស់។",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Cognitive Certainty",
+    "example": "យើងដឹងថាគាត់ជាគ្រូបង្រៀន។",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ខ្ញុំគិតថាយើងគួរតែចេញដំណើរឥឡូវនេះ។",
+    "ko": "",
+    "highlight": "ថា"
+   },
+   {
+    "en": "នាងបាននិយាយថានាងសប្បាយចិត្តណាស់។",
+    "ko": "",
+    "highlight": "ថា"
+   },
+   {
+    "en": "លោកគ្រូដឹងថាអ្នកទាំងអស់គ្នាខិតខំប្រឹងប្រែង។",
+    "ko": "",
+    "highlight": "ថា"
+   },
+   {
+    "en": "ខ្ញុំសង្ឃឹមថាថ្ងៃស្អែកមេឃមិនភ្លៀងទេ។",
+    "ko": "",
+    "highlight": "ថា"
+   },
+   {
+    "en": "ពេទ្យជឿថាជំងឺនេះអាចព្យាបាលបាន។",
+    "ko": "",
+    "highlight": "ថា"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ខ្ញុំគិតដែលគាត់ល្អ។",
+    "right": "ខ្ញុំគិតថាគាត់ល្អ។",
+    "note": "Do not confuse ដែល (relative pronoun 'which/who') with ថា (declarative complementizer 'that')."
+   },
+   {
+    "wrong": "គាត់ប្រាប់ខ្ញុំអំពីគាត់ឈឺ។",
+    "right": "គាត់ប្រាប់ខ្ញុំថាគាត់ឈឺ។",
+    "note": "Use ថា to embed a full propositional clause instead of attempting a prepositional phrase with អំពី."
+   },
+   {
+    "wrong": "ខ្ញុំសង្ឃឹមគាត់មក។",
+    "right": "ខ្ញុំសង្ឃឹមថាគាត់មក។",
+    "note": "While English can omit 'that', formal and natural Khmer requires ថា after psychological verbs like សង្ឃឹម."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the belief clause: 'ខ្ញុំជឿ ___ គាត់និយាយការពិត។'",
+    "options": [
+     "ថា",
+     "ដែល",
+     "នៅ",
+     "និង"
+    ],
+    "answer": 0,
+    "explanation": "Mental attitude verbs like ជឿ (believe) require the declarative complementizer ថា."
+   },
+   {
+    "question": "Fill the blank for reported indirect speech: 'ម្តាយខ្ញុំនិយាយ ___ ត្រូវចូលគេងពីព្រលប់។'",
+    "options": [
+     "ដែល",
+     "ថា",
+     "ពីព្រោះ",
+     "ដើម្បី"
+    ],
+    "answer": 1,
+    "explanation": "Verbs of utterance like និយាយ take ថា to introduce the reported message."
+   },
+   {
+    "question": "Which sentence correctly says 'I know that she is studying'?",
+    "options": [
+     "ខ្ញុំដឹងនាងរៀន។",
+     "ខ្ញុំដឹងដែលនាងរៀន។",
+     "ខ្ញុំដឹងថានាងកំពុងរៀន។",
+     "ខ្ញុំដឹងព្រោះនាងរៀន។"
+    ],
+    "answer": 2,
+    "explanation": "Complementation requires Matrix Verb (ដឹង) + Complementizer (ថា) + Complement Clause."
+   },
+   {
+    "question": "Identify what ថា does in: 'យើងសង្ឃឹមថាអ្នកនឹងបានសុខសប្បាយ។'",
+    "options": [
+     "Shows past tense",
+     "Marks a question",
+     "Negates the predicate",
+     "Connects hope to a complement clause"
+    ],
+    "answer": 3,
+    "explanation": "In this sentence, ថា acts as a clausal complementizer equivalent to English 'that'."
+   }
+  ],
+  "tip": "Think of ថា as an open quotation mark: whenever someone thinks, feels, says, hears, or knows a full clause, slot ថា immediately before that statement."
+ },
+ {
+  "id": "km-b2-focus-clefting-and-topicalization",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#F59E0B",
+  "emoji": "🎯",
+  "title": "Topicalization and Cleft Focus with Keu-cie",
+  "subtitle": "Highlighting key discourse information and constructing clefts",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "In Khmer, discourse focus and clefting are created by preposing the focal element and linking it to the rest of the clause with គឺ or គឺ​ជា.",
+  "structure": {
+   "headers": [
+    "Focus Pattern",
+    "Syntactic Blueprint",
+    "Khmer Example",
+    "Focus Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Simple Cleft",
+      "Focus + គឺ / គឺ​ជា + Relative Clause",
+      "កម្ពុជាគឺជាប្រទេសដែលខ្ញុំស្រឡាញ់",
+      "It is Cambodia that I love."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Agent Cleft",
+      "Focus + គឺ​ជា + អ្នកដែល + VP",
+      "សុខគឺជាអ្នកដែលបានជួយខ្ញុំ",
+      "It was Sok who helped me."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adverbial Fronting",
+      "Time/Place + គឺ​ជា + Focal Event",
+      "ថ្ងៃនេះគឺជាពេលដែលត្រូវសម្រេចចិត្ត",
+      "Today is the time when we must decide."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Identity Emphasis",
+    "example": "សៀវភៅនេះហើយគឺជាអ្វីដែលខ្ញុំចង់បាន។",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Clefting the Subject",
+    "example": "លោកគ្រូគឺជាអ្នកដែលបានបង្រៀនយើង។",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Topicalizing Reasons",
+    "example": "ការខិតខំគឺជាមូលហេតុនាំឱ្យជោគជ័យ។",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ភាសាខ្មែរគឺជាអ្វីដែលខ្ញុំចូលចិត្តរៀនបំផុត។",
+    "ko": "",
+    "highlight": "គឺជា"
+   },
+   {
+    "en": "មិត្តភក្តិម្នាក់នេះហើយគឺជាអ្នកដែលយល់ចិត្តខ្ញុំ។",
+    "ko": "",
+    "highlight": "គឺជាអ្នកដែល"
+   },
+   {
+    "en": "ការអានសៀវភៅគឺជាវិធីដ៏ល្អដើម្បីបង្កើនចំណេះដឹង។",
+    "ko": "",
+    "highlight": "គឺជា"
+   },
+   {
+    "en": "លោកសុខគឺជាមនុស្សដែលបានជួយសង្គ្រោះកុមារនោះ។",
+    "ko": "",
+    "highlight": "គឺជាមនុស្សដែល"
+   },
+   {
+    "en": "សេចក្តីស្មោះត្រង់គឺជាគុណធម៌ដ៏សំខាន់។",
+    "ko": "",
+    "highlight": "គឺជា"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "គាត់ជាអ្នកបានធ្វើវា។",
+    "right": "គាត់គឺជាអ្នកដែលបានធ្វើវា។",
+    "note": "To construct an emphatic cleft, use គឺ or គឺជា combined with the relative marker ដែល."
+   },
+   {
+    "wrong": "គឺជាគាត់បានមក។",
+    "right": "គាត់គឺជាអ្នកដែលបានមក។",
+    "note": "Unlike English 'It is he who...', Khmer does not put គឺជា at the start without the fronted topic preceding it."
+   },
+   {
+    "wrong": "ខ្ញុំគឺស្រឡាញ់គាត់។",
+    "right": "គាត់គឺជាអ្នកដែលខ្ញុំស្រឡាញ់។",
+    "note": "គឺ/គឺជា links noun phrases or headless nominal clauses; it cannot directly precede a lexical verb like ស្រឡាញ់."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase to complete this cleft: 'កញ្ញា ___ បានឈ្នះរង្វាន់។'",
+    "options": [
+     "គឺជាអ្នកដែល",
+     "ថាអ្នកដែល",
+     "ព្រោះដែល",
+     "ដូចជា"
+    ],
+    "answer": 0,
+    "explanation": "The cleft structure for focusing on a person uses គឺជាអ្នកដែល ('is the one who')."
+   },
+   {
+    "question": "Rearrange focus to emphasize 'this book': '___ សៀវភៅដែលខ្ញុំស្វែងរកយូរមកហើយ។'",
+    "options": [
+     "នេះគឺថា",
+     "នេះគឺជា",
+     "នេះព្រោះតែ",
+     "នេះដោយសារ"
+    ],
+    "answer": 1,
+    "explanation": "នេះគឺជា ('this is [the one]') acts as the equative cleft focus marker."
+   },
+   {
+    "question": "Why is 'គឺ' used in: 'សុខភាពគឺជាទ្រព្យសម្បត្តិដ៏មានតម្លៃ'?",
+    "options": [
+     "To mark past tense",
+     "To show possession only",
+     "To equate and focus the subject topic",
+     "To negate the complement"
+    ],
+    "answer": 2,
+    "explanation": "គឺជា serves an equational and focusing function linking the topic (health) to its definition/attribute."
+   },
+   {
+    "question": "Select the correct cleft equivalent of 'It is diligence that brings success':",
+    "options": [
+     "ការឧស្សាហ៍ថាជោគជ័យ។",
+     "ការឧស្សាហ៍នាំមកជោគជ័យគឺ។",
+     "ការឧស្សាហ៍ព្រោះជោគជ័យ។",
+     "ការឧស្សាហ៍គឺជាអ្វីដែលនាំមកនូវភាពជោគជ័យ។"
+    ],
+    "answer": 3,
+    "explanation": "The structure [Topic + គឺជាអ្វីដែល + Clause] forms a complete nominalized cleft sentence."
+   }
+  ],
+  "tip": "Combine the emphatic particle ហើយ with គឺ (e.g. នេះហើយគឺជា...) to create maximum dramatic emphasis equivalent to 'This very thing right here is...!'."
+ },
+ {
+  "id": "km-b2-nominalization-ka-and-seckdei",
+  "level": "b2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "📦",
+  "title": "Abstract Nominalization: Ka- vs. Seckdei-",
+  "subtitle": "Forming abstract nouns from verbs and descriptive adjectives",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "The prefix ការ creates dynamic event and action nominals from verbs, whereas សេចក្តី derives deep conceptual, emotional, and abstract state nouns.",
+  "structure": {
+   "headers": [
+    "Prefix",
+    "Base Type",
+    "Khmer Base",
+    "Derived Noun",
+    "Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ការ-",
+      "Action Verb",
+      "អភិវឌ្ឍ (develop)",
+      "ការអភិវឌ្ឍ",
+      "Development (the process/action)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ការ-",
+      "Everyday Activity",
+      "ងារ (work)",
+      "ការងារ",
+      "Job / task / work"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "សេចក្តី-",
+      "Psychological / State",
+      "ស្រឡាញ់ (love)",
+      "សេចក្តីស្រឡាញ់",
+      "Love (abstract sentiment)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "សេចក្តី-",
+      "Moral / Condition",
+      "សុខ (peaceful)",
+      "សេចក្តីសុខ",
+      "Happiness / well-being"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Action / Process Nominals",
+    "example": "ការរៀនសូត្រត្រូវការការតស៊ូ។",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Emotional / State Nominals",
+    "example": "យើងត្រូវការសេចក្តីស្រឡាញ់និងសេចក្តីសុខ។",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Formal Summaries",
+    "example": "សេចក្តីរាយការណ៍នេះមានព័ត៌មានគ្រប់គ្រាន់។",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ការអប់រំមានសារៈសំខាន់ណាស់សម្រាប់យុវជន។",
+    "ko": "",
+    "highlight": "ការអប់រំ"
+   },
+   {
+    "en": "មនុស្សគ្រប់រូបតែងតែប្រាថ្នាចង់បានសេចក្តីសុខ។",
+    "ko": "",
+    "highlight": "សេចក្តីសុខ"
+   },
+   {
+    "en": "ការផ្លាស់ប្តូរនេះនាំមកនូវផលប្រយោជន៍ជាច្រើន។",
+    "ko": "",
+    "highlight": "ការផ្លាស់ប្តូរ"
+   },
+   {
+    "en": "គាត់បានបង្ហាញសេចក្តីក្លាហានក្នុងការជួយជនរងគ្រោះ។",
+    "ko": "",
+    "highlight": "សេចក្តីក្លាហាន"
+   },
+   {
+    "en": "ការសម្រេចចិត្តរបស់គណៈកម្មការគឺត្រឹមត្រូវ។",
+    "ko": "",
+    "highlight": "ការសម្រេចចិត្ត"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ការសុខ",
+    "right": "សេចក្តីសុខ",
+    "note": "Use សេចក្តី for internal states of being and emotions (happiness, peace), never ការ."
+   },
+   {
+    "wrong": "សេចក្តីហូបបាយ",
+    "right": "ការហូបបាយ",
+    "note": "Physical actions and routine activities take ការ, not សេចក្តី."
+   },
+   {
+    "wrong": "សេចក្តីរត់",
+    "right": "ការរត់",
+    "note": "Verbs of motion and dynamic actions systematically prefix with ការ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which nominal prefix is appropriate for 'hope' based on the verb សង្ឃឹម?",
+    "options": [
+     "ការ",
+     "សេចក្តី",
+     "ភាព",
+     "អ្នក"
+    ],
+    "answer": 1,
+    "explanation": "Deep emotional and psychological concepts pair with សេចក្តី (សេចក្តីសង្ឃឹម = hope)."
+   },
+   {
+    "question": "How do you form the noun for 'construction/building' from សាងសង់?",
+    "options": [
+     "សេចក្តីសាងសង់",
+     "អ្នកសាងសង់",
+     "ការសាងសង់",
+     "ភាពសាងសង់"
+    ],
+    "answer": 2,
+    "explanation": "Physical and technical processes select the active nominalizer ការ (ការសាងសង់)."
+   },
+   {
+    "question": "What is the meaning of the derived noun 'ការស្រាវជ្រាវ'?",
+    "options": [
+     "Researcher",
+     "Research (the active process)",
+     "Deep love",
+     "Academic degree"
+    ],
+    "answer": 1,
+    "explanation": "ការ + ស្រាវជ្រាវ (to research) forms the action nominal meaning 'research'."
+   },
+   {
+    "question": "Choose the correct pairing for 'bravery' (base: ក្លាហាន):",
+    "options": [
+     "ការក្លាហាន",
+     "សេចក្តីក្លាហាន",
+     "ជាងក្លាហាន",
+     "មិនក្លាហាន"
+    ],
+    "answer": 1,
+    "explanation": "Moral and emotional attributes use សេចក្តី to derive the abstract concept (សេចក្តីក្លាហាន)."
+   }
+  ],
+  "tip": "Rule of thumb: If you can see someone physically doing the action, use ការ (like ការដើរ 'walking'). If it is an internal sentiment or abstract state of spirit, use សេចក្តី (like សេចក្តីស្លាប់ 'death', សេចក្តីស្ងប់ 'tranquility')."
+ },
+ {
+  "id": "km-b2-royal-and-monastic-registers",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#F59E0B",
+  "emoji": "👑",
+  "title": "Hierarchical Vocabulary and Suppletive Honorifics",
+  "subtitle": "Navigating Royal Language (Reachasap) and Buddhist Monastic Registers",
+  "color": "#B45309",
+  "bg": "#FFFBEB",
+  "keyPoint": "Khmer employs distinct, suppletive lexemes for everyday bodily actions (eating, sleeping, speaking) and anatomy depending strictly on whether the subject is a royal personage, a Buddhist monk, or a commoner.",
+  "structure": {
+   "headers": [
+    "English Action",
+    "Common Register",
+    "Monastic Register (សង្ឃ)",
+    "Royal Register (រាជសព្ទ)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "To eat",
+      "ញ៉ាំ / ហូប",
+      "ឆាន់",
+      "សោយ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "To sleep",
+      "គេង / ដេក",
+      "សឹង",
+      "ផ្ទុំ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "To bathe",
+      "ងូតទឹក",
+      "ស្រង់ទឹក",
+      "ស្រង់ព្រះសុគន្ធ / ស្រង់ទឹក"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "To speak / tell",
+      "និយាយ / ប្រាប់",
+      "មានថេរដីកា",
+      "មានព្រះរាជឱង្ការ"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#B45309",
+    "label": "Monks' Daily Rituals",
+    "example": "ព្រះសង្ឃកំពុងតែនិមន្តទៅឆាន់ចង្ហាន់។",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Royal Formal Speech",
+    "example": "ព្រះមហាក្សត្រទ្រង់មានព្រះរាជឱង្ការទៅកាន់ប្រជានុរាស្ត្រ។",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Royal Bodily Actions",
+    "example": "ព្រះរាជាកំពុងយាងផ្ទុំនៅក្នុងព្រះបរមរាជវាំង។",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ព្រះសង្ឃកំពុងសឹងនៅក្នុងកុដិ។",
+    "ko": "",
+    "highlight": "សឹង"
+   },
+   {
+    "en": "ព្រះមហាក្សត្រទ្រង់សោយព្រះស្ងោយ។",
+    "ko": "",
+    "highlight": "សោយ"
+   },
+   {
+    "en": "ព្រះសង្ឃនិមន្តមកដល់វត្តអារាមហើយ។",
+    "ko": "",
+    "highlight": "និមន្ត"
+   },
+   {
+    "en": "ព្រះរាជាទ្រង់យាងទៅបំពេញព្រះរាជកិច្ច។",
+    "ko": "",
+    "highlight": "យាង"
+   },
+   {
+    "en": "ព្រះតេជព្រះគុណមានថេរដីកាអប់រំញាតិញោម។",
+    "ko": "",
+    "highlight": "មានថេរដីកា"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "លោកសង្ឃញ៉ាំបាយ។",
+    "right": "ព្រះសង្ឃឆាន់ចង្ហាន់។",
+    "note": "Using common ញ៉ាំ or ហូប for a Buddhist monk is considered impious; always use ឆាន់ and refer to meals as ចង្ហាន់."
+   },
+   {
+    "wrong": "ព្រះមហាក្សត្រដើរទៅផ្សារ។",
+    "right": "ព្រះមហាក្សត្រទ្រង់យាងទៅ...។",
+    "note": "Royalty do not ដើរ (walk); the suppletive royal motion verb is យាង accompanied by the auxiliary marker ទ្រង់."
+   },
+   {
+    "wrong": "ព្រះសង្ឃផ្ទុំនៅក្នុងវត្ត។",
+    "right": "ព្រះសង្ឃសឹងនៅក្នុងវត្ត។",
+    "note": "ផ្ទុំ is exclusively for royalty, whereas the monastic verb for sleeping is សឹង."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct verb for a Buddhist monk eating a meal: 'ព្រះសង្ឃកំពុង ___'",
+    "options": [
+     "ញ៉ាំ",
+     "ហូប",
+     "ឆាន់",
+     "សោយ"
+    ],
+    "answer": 2,
+    "explanation": "The dedicated honorific root for a monk eating is ឆាន់."
+   },
+   {
+    "question": "Which verb describes the King sleeping?",
+    "options": [
+     "ដេក",
+     "សឹង",
+     "គេង",
+     "ផ្ទុំ"
+    ],
+    "answer": 3,
+    "explanation": "The suppletive royal verb for sleep is ផ្ទុំ; សឹង is reserved for monks."
+   },
+   {
+    "question": "How do you politely invite a Buddhist monk to go or come?",
+    "options": [
+     "និមន្ត",
+     "អញ្ជើញ",
+     "ហៅ",
+     "យាង"
+    ],
+    "answer": 0,
+    "explanation": "The verb និមន្ត is used exclusively for monastic movement and invitations."
+   },
+   {
+    "question": "When the King addresses the nation, what noun-phrase refers to his royal speech?",
+    "options": [
+     "ពាក្យសម្តី",
+     "ព្រះរាជឱង្ការ",
+     "ថេរដីកា",
+     "ការនិយាយ"
+    ],
+    "answer": 1,
+    "explanation": "Royal speech is referred to as ព្រះរាជឱង្ការ (monks use ថេរដីកា)."
+   }
+  ],
+  "tip": "To distinguish motion: Commoners ដើរ/មក, Buddhist monks និមន្ត, and Royals យាង. Master these three parallel tracks to navigate Cambodian cultural hierarchies with ease."
+ }
+]

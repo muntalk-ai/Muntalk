@@ -1,0 +1,3413 @@
+[
+ {
+  "id": "uz-a1-agglutinative-plural-and-person",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🧩",
+  "title": "Agglutinative Morphology and Predicative Suffixes",
+  "subtitle": "Forming plural nouns and identifying who you are without using 'to be'",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Uzbek chains suffixes together systematically: plural -lar attaches directly to the stem, followed by person endings like -man or -miz.",
+  "structure": {
+   "headers": [
+    "Person / Number",
+    "Suffix",
+    "Uzbek Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Sing. (I)",
+      "-man",
+      "Men talabaman.",
+      "I am a student."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Sing. (You)",
+      "-san",
+      "Sen o'qituvchisan.",
+      "You are a teacher."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Sing. (He/She)",
+      "— / -dir",
+      "U muhandis.",
+      "He/she is an engineer."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "1st Plur. (We)",
+      "-miz",
+      "Biz do'stlarmiz.",
+      "We are friends."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural Noun",
+      "-lar",
+      "kitoblar",
+      "books"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Expressing Profession / Identity",
+    "example": "Men shifokorman.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Forming Plural Nouns",
+    "example": "Shahar markazida chiroyli binolar ko'p.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Describing Collective State",
+    "example": "Biz bugun juda xursandmiz.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Men yangi talabaman.",
+    "ko": "",
+    "highlight": "talabaman"
+   },
+   {
+    "en": "Siz mehmonsiz, marhamat kiring.",
+    "ko": "",
+    "highlight": "mehmonsiz"
+   },
+   {
+    "en": "Biz hozir talabalarmiz.",
+    "ko": "",
+    "highlight": "talabalarmiz"
+   },
+   {
+    "en": "Ular yaxshi bolalar.",
+    "ko": "",
+    "highlight": "bolalar"
+   },
+   {
+    "en": "Sen juda aqllisan.",
+    "ko": "",
+    "highlight": "aqllisan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Biz talabamizlar.",
+    "right": "Biz talabalarmiz.",
+    "note": "The plural marker -lar must come before the predicative person ending -miz."
+   },
+   {
+    "wrong": "U o'qituvchiman.",
+    "right": "U o'qituvchi.",
+    "note": "The suffix -man is exclusively for the first person (I); third person does not take -man."
+   },
+   {
+    "wrong": "Ular yaxshi odamman.",
+    "right": "Ular yaxshi odamlar.",
+    "note": "Match the 3rd person plural subject 'ular' with the plural suffix -lar instead of first person."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Men o'qituvchi___.' (I am a teacher)",
+    "options": [
+     "-san",
+     "-man",
+     "-miz",
+     "-lar"
+    ],
+    "answer": 1,
+    "explanation": "The first-person singular predicative suffix in Uzbek is '-man'."
+   },
+   {
+    "question": "How do you say 'We are doctors' in Uzbek?",
+    "options": [
+     "Biz shifokormiz.",
+     "Biz shifokorsan.",
+     "Biz shifokorman.",
+     "Biz shifokorlar."
+    ],
+    "answer": 0,
+    "explanation": "For 'we', use the first-person plural ending '-miz'."
+   },
+   {
+    "question": "Choose the correctly stacked form for 'We are students':",
+    "options": [
+     "talabamizlar",
+     "talabalarmiz",
+     "talabalarsiz",
+     "talabalarman"
+    ],
+    "answer": 1,
+    "explanation": "The plural marker '-lar' precedes the person ending '-miz'."
+   },
+   {
+    "question": "Complete the sentence: 'Sen juda mehribon___.' (You are very kind)",
+    "options": [
+     "-man",
+     "-miz",
+     "-dir",
+     "-san"
+    ],
+    "answer": 3,
+    "explanation": "The second-person singular informal ending is '-san'."
+   }
+  ],
+  "tip": "Uzbek has no present-tense copula verb like 'is' or 'am'; simply glue the appropriate personal ending directly onto the noun or adjective!"
+ },
+ {
+  "id": "uz-a1-noun-cases-core",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🧭",
+  "title": "The Six Noun Cases",
+  "subtitle": "Navigating direction, location, origin, and objects with case endings",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Case endings attach to the end of nouns to define their role, such as movement toward (-ga), location at (-da), or origin from (-dan).",
+  "structure": {
+   "headers": [
+    "Case Name",
+    "Suffix",
+    "Uzbek Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Nominative (Bosh)",
+      "—",
+      "maktab",
+      "school (subject)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Genitive (Qaratqich)",
+      "-ning",
+      "maktabning",
+      "of the school"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Dative (Jo'nalish)",
+      "-ga / -ka / -qa",
+      "maktabga",
+      "to the school"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Accusative (Tushum)",
+      "-ni",
+      "maktabni",
+      "the school (object)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Locative (O'rin-payt)",
+      "-da",
+      "maktabda",
+      "at / in the school"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ablative (Chiqish)",
+      "-dan",
+      "maktabdan",
+      "from the school"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Destination & Movement",
+    "example": "Men har kuni bozorga boraman.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Location & Presence",
+    "example": "U hozir kutubxonada o'qiyapti.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Direct Definite Object",
+    "example": "Bu qiziqarli kitobni o'qidim.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Biz Toshkentdan keldik.",
+    "ko": "",
+    "highlight": "Toshkentdan"
+   },
+   {
+    "en": "Akam uyda ishlaydi.",
+    "ko": "",
+    "highlight": "uyda"
+   },
+   {
+    "en": "Eshikni sekin yoping.",
+    "ko": "",
+    "highlight": "Eshikni"
+   },
+   {
+    "en": "U do'konga kirdi.",
+    "ko": "",
+    "highlight": "do'konga"
+   },
+   {
+    "en": "Daraxtning barglari sarg'aydi.",
+    "ko": "",
+    "highlight": "Daraxtning"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Men Toshkent boraman.",
+    "right": "Men Toshkentga boraman.",
+    "note": "Direction towards a place requires the dative case ending -ga."
+   },
+   {
+    "wrong": "U kutubxona o'tirdi.",
+    "right": "U kutubxonada o'tirdi.",
+    "note": "Being located inside or at a place requires the locative case suffix -da."
+   },
+   {
+    "wrong": "Men nonni yedim (when indefinite).",
+    "right": "Men non yedim.",
+    "note": "Use the unmarked nominative for general/indefinite objects; use -ni only for specific, definite objects."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which suffix indicates movement toward a place? ('to')",
+    "options": [
+     "-da",
+     "-dan",
+     "-ga",
+     "-ning"
+    ],
+    "answer": 2,
+    "explanation": "The dative suffix '-ga' denotes movement toward a goal or destination."
+   },
+   {
+    "question": "Complete the sentence: 'Ular Samarqand___ poyezdda kelishdi.' (from Samarkand)",
+    "options": [
+     "-dan",
+     "-ga",
+     "-da",
+     "-ni"
+    ],
+    "answer": 0,
+    "explanation": "The ablative suffix '-dan' means 'from'."
+   },
+   {
+    "question": "Choose the correct locative form for 'in the classroom' (sinf):",
+    "options": [
+     "sinfga",
+     "sinfning",
+     "sinfni",
+     "sinfda"
+    ],
+    "answer": 3,
+    "explanation": "The locative suffix '-da' indicates location within or at a place."
+   },
+   {
+    "question": "Which case marker marks a definite direct object ('the book')?",
+    "options": [
+     "-da",
+     "-ni",
+     "-dan",
+     "-ga"
+    ],
+    "answer": 1,
+    "explanation": "The accusative suffix '-ni' marks specific and definite direct objects."
+   }
+  ],
+  "tip": "Remember that -ga becomes -ka after words ending in 'k' (masalan: bog'cha -> bog'chaga, but erkak -> erkakka) and -qa after 'q' (qishloq -> qishloqqa)."
+ },
+ {
+  "id": "uz-a1-possessive-suffixes",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎒",
+  "title": "Possessive Suffixes and Izafet Constructions",
+  "subtitle": "Expressing ownership and linking compound nouns",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Possession is expressed by attaching personal possessive suffixes (-im, -ing, -i) to the possessed noun, matching the owner.",
+  "structure": {
+   "headers": [
+    "Possessor",
+    "After Consonant",
+    "After Vowel",
+    "Example (Kitob / Oila)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Men (My)",
+      "-im",
+      "-m",
+      "kitobim / oilam"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Sen (Your)",
+      "-ing",
+      "-ng",
+      "kitobing / oilang"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "U (His/Her/Its)",
+      "-i",
+      "-si",
+      "kitobi / oilasi"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Biz (Our)",
+      "-imiz",
+      "-miz",
+      "kitobimiz / oilamiz"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Siz (Your formal)",
+      "-ingiz",
+      "-ngiz",
+      "kitobingiz / oilangiz"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Direct Personal Ownership",
+    "example": "Mening ismim Anvar.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Family Relationships",
+    "example": "Uning onasi shifoxonada ishlaydi.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Noun Compounds (Izafet)",
+    "example": "Toshkent shahri juda qadimiy va go'zal.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mening yangi mashinam bor.",
+    "ko": "",
+    "highlight": "mashinam"
+   },
+   {
+    "en": "Sening do'sting qayerda?",
+    "ko": "",
+    "highlight": "do'sting"
+   },
+   {
+    "en": "Bu universitet talabasi tirishqoq.",
+    "ko": "",
+    "highlight": "talabasi"
+   },
+   {
+    "en": "Bizning uyimiz markazda joylashgan.",
+    "ko": "",
+    "highlight": "uyimiz"
+   },
+   {
+    "en": "O'zbekiston havosi juda toza.",
+    "ko": "",
+    "highlight": "havosi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mening kitob.",
+    "right": "Mening kitobim.",
+    "note": "Even if the possessive pronoun 'mening' is stated, the noun must still carry the possessive suffix -im."
+   },
+   {
+    "wrong": "Uning mashina.",
+    "right": "Uning mashinasi.",
+    "note": "Third-person possession on vowel-ending nouns requires -si."
+   },
+   {
+    "wrong": "Bizning maktabi.",
+    "right": "Bizning maktabimiz.",
+    "note": "The suffix must agree with 'bizning' (our), requiring -imiz, not third person -i."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the phrase: 'Mening ruchka___' (My pen)",
+    "options": [
+     "-m",
+     "-im",
+     "-si",
+     "-ng"
+    ],
+    "answer": 0,
+    "explanation": "Since 'ruchka' ends with a vowel, the first-person singular possessive suffix is '-m'."
+   },
+   {
+    "question": "How do you say 'His/Her house' (uy)?",
+    "options": [
+     "uyi",
+     "uyim",
+     "uying",
+     "uysi"
+    ],
+    "answer": 0,
+    "explanation": "'Uy' ends in a consonant, so the 3rd person singular ending is '-i'."
+   },
+   {
+    "question": "Complete: 'Bizning oila___ juda ahil.' (Our family)",
+    "options": [
+     "-si",
+     "-m",
+     "-miz",
+     "-lar"
+    ],
+    "answer": 2,
+    "explanation": "For words ending in a vowel with 'bizning', use '-miz' (oilamiz)."
+   },
+   {
+    "question": "Which compound correctly forms 'Chilonzor district' (tuman)?",
+    "options": [
+     "Chilonzor tumanda",
+     "Chilonzor tumani",
+     "Chilonzorning tuman",
+     "Chilonzor tumanga"
+    ],
+    "answer": 1,
+    "explanation": "Indefinite noun compounds attach the 3rd person suffix (-i/-si) to the second noun: Chilonzor tumani."
+   }
+  ],
+  "tip": "When a noun ends in -q or -k and receives a vowel-initial possessive suffix, the consonant softens: yurak -> yuragim, quloq -> qulog'im."
+ },
+ {
+  "id": "uz-a1-present-future-tense",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#10B981",
+  "emoji": "⏳",
+  "title": "Present-Future Tense (-a/-y)",
+  "subtitle": "Talking about daily habits, routines, and scheduled future actions",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Form this tense by adding -a (after consonants) or -y (after vowels) to the verb stem, followed by predicative personal endings.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Stem ending in Consonant (yoz-)",
+    "Stem ending in Vowel (o'qi-)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Men (I)",
+      "yoz-a-man",
+      "o'qi-y-man",
+      "I write / will write"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Sen (You)",
+      "yoz-a-san",
+      "o'qi-y-san",
+      "You write / will write"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "U (He/She)",
+      "yoz-a-di",
+      "o'qi-y-di",
+      "He/she writes / will write"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Biz (We)",
+      "yoz-a-miz",
+      "o'qi-y-miz",
+      "We write / will write"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ular (They)",
+      "yoz-a-dilar",
+      "o'qi-y-dilar",
+      "They write / will write"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Habitual Routines",
+    "example": "Men har kuni soat yettida uyg'onaman.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "General Facts",
+    "example": "Quyosh sharqdan chiqadi.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Future Intentions",
+    "example": "Ertaga do'stim bilan kinoga boraman.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "U har kuni ertalab choy ichadi.",
+    "ko": "",
+    "highlight": "ichadi"
+   },
+   {
+    "en": "Biz tez-tez shaxmat o'ynaymiz.",
+    "ko": "",
+    "highlight": "o'ynaymiz"
+   },
+   {
+    "en": "Men har doim vaqtida kelaman.",
+    "ko": "",
+    "highlight": "kelaman"
+   },
+   {
+    "en": "Dars soat to'qqizda boshlanadi.",
+    "ko": "",
+    "highlight": "boshlanadi"
+   },
+   {
+    "en": "Siz o'zbekcha gapirasizmi?",
+    "ko": "",
+    "highlight": "gapirasizmi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Men har kuni dars ishlayman (from ishla-).",
+    "right": "Men har kuni dars ishlayman.",
+    "note": "Always attach -y- to vowel-ending verb stems like ishla- -> ishlayman, never -a-."
+   },
+   {
+    "wrong": "U non yemaydi -> U non yemaydi.",
+    "right": "U non yemaydi.",
+    "note": "Remember negative forms insert -ma- before -y-: ye + ma + y + di = yemaydi."
+   },
+   {
+    "wrong": "Biz kitob o'qiyman.",
+    "right": "Biz kitob o'qiymiz.",
+    "note": "Person ending must agree with subject 'Biz': use -miz instead of singular -man."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you conjugate 'ishla-' (to work) for 'Men' (I)?",
+    "options": [
+     "ishlayman",
+     "ishlaman",
+     "ishlaydi",
+     "ishlaysan"
+    ],
+    "answer": 0,
+    "explanation": "Since the stem 'ishla-' ends in a vowel, take '-y-' followed by '-man': ishlayman."
+   },
+   {
+    "question": "Complete the routine: 'U har kuni sport bilan shug'ullan___.' (He exercises every day)",
+    "options": [
+     "-aman",
+     "-adi",
+     "-aymiz",
+     "-asan"
+    ],
+    "answer": 1,
+    "explanation": "3rd person singular takes -a- + -di: shug'ullanadi."
+   },
+   {
+    "question": "What is the negative form of 'Men boraman' (I will go)?",
+    "options": [
+     "Men bormayman",
+     "Men borman",
+     "Men bormaydi",
+     "Men boraman emas"
+    ],
+    "answer": 0,
+    "explanation": "Add negative suffix -ma- directly to the root: bor + ma + y + man = bormayman."
+   },
+   {
+    "question": "Complete the question: 'Siz choy ich___?' (Do you drink tea?)",
+    "options": [
+     "-asizmi",
+     "-aymanmi",
+     "-asanmi",
+     "-adimi"
+    ],
+    "answer": 0,
+    "explanation": "For formal 'Siz', add stem + -a- + -siz + question particle -mi: ichasizmi?"
+   }
+  ],
+  "tip": "The present-future tense works like both the English simple present ('I work') and simple future ('I will work'). Context makes the timeframe clear!"
+ },
+ {
+  "id": "uz-a1-definite-past-tense",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#10B981",
+  "emoji": "🕰️",
+  "title": "Definite Past Tense (-di)",
+  "subtitle": "Reporting witnessed, completed events with precision",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "The definite past tense attaches -di directly to the verb stem, using short personal endings (-m, -ng, —, -k, -ngiz, -lar).",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Affirmative (keld-)",
+    "Negative (kelma-)",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Men (I)",
+      "keldim",
+      "kelmadim",
+      "I came / didn't come"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Sen (You)",
+      "kelding",
+      "kelmading",
+      "You came / didn't come"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "U (He/She)",
+      "keldi",
+      "kelmadi",
+      "He/she came / didn't come"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Biz (We)",
+      "keldik",
+      "kelmadik",
+      "We came / didn't come"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Siz (You formal)",
+      "keldingiz",
+      "kelmadingiz",
+      "You came / didn't come"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Completed Actions in the Past",
+    "example": "Kecha do'stim bilan ko'rishdim.",
+    "translation": ""
+   },
+   {
+    "color": "#B91C1C",
+    "label": "Directly Witnessed Events",
+    "example": "Yomg'ir to'satdan yog'di.",
+    "translation": ""
+   },
+   {
+    "color": "#4338CA",
+    "label": "Negative Past Actions",
+    "example": "Men bugun nonushta qilmadim.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Men kecha qiziq kitob o'qidim.",
+    "ko": "",
+    "highlight": "o'qidim"
+   },
+   {
+    "en": "Sen kinoni ko'rdingmi?",
+    "ko": "",
+    "highlight": "ko'rdingmi"
+   },
+   {
+    "en": "Biz darsni o'z vaqtida tugatdik.",
+    "ko": "",
+    "highlight": "tugatdik"
+   },
+   {
+    "en": "Ular Toshkentga erta tongda yetib kelishdi.",
+    "ko": "",
+    "highlight": "kelishdi"
+   },
+   {
+    "en": "Men bu xabarni kech eshitdim.",
+    "ko": "",
+    "highlight": "eshitdim"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Biz kecha keldilar.",
+    "right": "Biz kecha keldik.",
+    "note": "The first-person plural ending for the -di past tense is -k (keldik), not -miz or -lar."
+   },
+   {
+    "wrong": "Men xat yozdiman.",
+    "right": "Men xat yozdim.",
+    "note": "The definite past tense uses short endings (-m), not the copular ending (-man)."
+   },
+   {
+    "wrong": "U darsga kelmadi emas.",
+    "right": "U darsga kelmadi.",
+    "note": "Negate past tense verbs using the suffix -ma- on the stem, never the word 'emas'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Men kecha yangi uyga ko'ch___.' (I moved yesterday)",
+    "options": [
+     "-dik",
+     "-dim",
+     "-ding",
+     "-di"
+    ],
+    "answer": 1,
+    "explanation": "The 1st person singular ending in the definite past tense is '-dim'."
+   },
+   {
+    "question": "How do you say 'We saw' (ko'r-) in the definite past?",
+    "options": [
+     "ko'rdik",
+     "ko'rdimiz",
+     "ko'rdim",
+     "ko'rdilar"
+    ],
+    "answer": 0,
+    "explanation": "Past tense for 'we' takes the consonant ending '-k': ko'rdik."
+   },
+   {
+    "question": "Choose the correct negative form for 'She did not write':",
+    "options": [
+     "U yozdi emas",
+     "U yozmadi",
+     "U yozmaydi",
+     "U yozmading"
+    ],
+    "answer": 1,
+    "explanation": "Root yoz- + negative -ma- + past -di = yozmadi."
+   },
+   {
+    "question": "Complete the question: 'Siz bu filmni ko'r___?' (Did you watch this film?)",
+    "options": [
+     "-dingmi",
+     "-dimmi",
+     "-dingizmi",
+     "-dilarmi"
+    ],
+    "answer": 2,
+    "explanation": "For polite/formal 'Siz', use '-dingiz' followed by the question particle '-mi': ko'rdingizmi?"
+   }
+  ],
+  "tip": "Notice that the past tense personal endings (-m, -ng, -k, -ngiz) resemble possessive endings rather than the predicative endings (-man, -san, -miz) used in the present!"
+ },
+ {
+  "id": "uz-a1-existential-predicates",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📦",
+  "title": "Existential Predicates: Bor, Yoʻq, and Emas",
+  "subtitle": "Expressing existence, possession, and nominal negation",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use 'bor' and 'yoʻq' for existence and possession ('there is / have' vs 'there is not / don't have'), but use 'emas' to negate equivalence or descriptions ('is not').",
+  "structure": {
+   "headers": [
+    "Type",
+    "Predicate",
+    "Uzbek Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Affirmative Existence / Possession",
+      "bor",
+      "Kitob bor.",
+      "There is a book / I have a book."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Existence / Possession",
+      "yoʻq",
+      "Kitob yoʻq.",
+      "There is no book / I have no book."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Nominal / Adjectival Negation",
+      "emas",
+      "U talaba emas.",
+      "He/She is not a student."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Expressing Existence",
+    "example": "Xonada stul bor.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Expressing Lack or Non-existence",
+    "example": "Muzlatgichda sut yoʻq.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Negating Identity or Quality",
+    "example": "Bu olma shirin emas.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mening kompyuterim bor.",
+    "ko": "",
+    "highlight": "bor"
+   },
+   {
+    "en": "Bugun vaqtim yoʻq.",
+    "ko": "",
+    "highlight": "yoʻq"
+   },
+   {
+    "en": "Bu mening qalamim emas.",
+    "ko": "",
+    "highlight": "emas"
+   },
+   {
+    "en": "Sinfda oʻqituvchi bormi?",
+    "ko": "",
+    "highlight": "bor"
+   },
+   {
+    "en": "U shifokor emas, u muhandis.",
+    "ko": "",
+    "highlight": "emas"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "U oʻqituvchi yoʻq.",
+    "right": "U oʻqituvchi emas.",
+    "note": "Use 'emas' to negate identity or occupation; 'yoʻq' means 'is absent' or 'does not exist'."
+   },
+   {
+    "wrong": "Menda pul emas.",
+    "right": "Menda pul yoʻq.",
+    "note": "Possession requires 'bor' or 'yoʻq' alongside the locative case suffix '-da'."
+   },
+   {
+    "wrong": "Bu kitob yaxshi yoʻq.",
+    "right": "Bu kitob yaxshi emas.",
+    "note": "Adjectives are negated using 'emas', never 'yoʻq'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the word to say 'I have no money': 'Menda pul ___.'",
+    "options": [
+     "emas",
+     "yoʻq",
+     "bor",
+     "boʻldi"
+    ],
+    "answer": 1,
+    "explanation": "'Yoʻq' expresses the absence of an item or possession."
+   },
+   {
+    "question": "Choose the word to say 'This car is not expensive': 'Bu mashina qimmat ___.'",
+    "options": [
+     "emas",
+     "yoʻq",
+     "bormi",
+     "boʻlmagan"
+    ],
+    "answer": 0,
+    "explanation": "Adjectival negation requires 'emas'."
+   },
+   {
+    "question": "Choose the word to ask 'Is there tea?': 'Choy ___?'",
+    "options": [
+     "emasmi",
+     "emas",
+     "bormi",
+     "yoʻq"
+    ],
+    "answer": 2,
+    "explanation": "Add the question particle '-mi' to 'bor' to ask about existence."
+   },
+   {
+    "question": "Choose the word to say 'Farhod is not at home': 'Farhod uyda ___.'",
+    "options": [
+     "emas",
+     "shunday",
+     "bor",
+     "yoʻq"
+    ],
+    "answer": 3,
+    "explanation": "'Yoʻq' indicates physical absence from a location."
+   }
+  ],
+  "tip": "Remember: 'emas' negates adjectives and noun identities ('is not'), while 'yoʻq' negates presence and possession ('there is not / does not have')."
+ },
+ {
+  "id": "uz-a2-present-continuous-moqda-yap",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#10B981",
+  "emoji": "⏱️",
+  "title": "Present Continuous Aspect (-yotir, -moqda, -yap)",
+  "subtitle": "Distinguishing colloquial vs. formal continuous actions",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use '-yap' in everyday spoken Uzbek and '-moqda' in formal speech, news broadcasts, and written literature to express ongoing actions.",
+  "structure": {
+   "headers": [
+    "Aspect Marker",
+    "Register",
+    "Uzbek Pattern",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-yap-",
+      "Spoken / Informal",
+      "yoz-yap-man",
+      "I am writing (casual/colloquial)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-moqda",
+      "Formal / Written",
+      "yoz-moqda-man",
+      "I am writing (literary/official)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-yotir-",
+      "Poetic / Traditional",
+      "yoz-yotir-man",
+      "I am writing (poetic style)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Conversational Continuous",
+    "example": "Hozir ovqat yeyapman.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Official News / Reports",
+    "example": "Mamlakatda yangi yoʻllar qurilmoqda.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Formal Ongoing State",
+    "example": "Toshkentda yashamoqdaman.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Men hozir dars qilyapman.",
+    "ko": "",
+    "highlight": "qilyapman"
+   },
+   {
+    "en": "Prezident nutq soʻzlamoqda.",
+    "ko": "",
+    "highlight": "soʻzlamoqda"
+   },
+   {
+    "en": "Bolalar bogʻda oʻynayaptilar.",
+    "ko": "",
+    "highlight": "oʻynayaptilar"
+   },
+   {
+    "en": "Havo kundan-kunga soviymoqda.",
+    "ko": "",
+    "highlight": "soviymoqda"
+   },
+   {
+    "en": "Ular televizor koʻryapti.",
+    "ko": "",
+    "highlight": "koʻryapti"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Men hozir kitob oʻqimoq.",
+    "right": "Men hozir kitob oʻqiyapman.",
+    "note": "The infinitive suffix '-moq' must not be confused with continuous '-moqda' or spoken '-yap-'."
+   },
+   {
+    "wrong": "U xat yozayapti.",
+    "right": "U xat yozyapti.",
+    "note": "Do not insert an extra vowel; after consonant stems ending without clusters, attach '-yap-' directly (yoz + yap + ti)."
+   },
+   {
+    "wrong": "Yangiliklar: Narxlar tushyapti.",
+    "right": "Yangiliklar: Narxlar tushmoqda.",
+    "note": "Formal journalism strictly prefers '-moqda' over the conversational '-yap-' suffix."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which verb form best fits official news: 'Universitet yangi bino ___'?",
+    "options": [
+     "quryapman",
+     "qurmoqda",
+     "quradi",
+     "qurmoq"
+    ],
+    "answer": 1,
+    "explanation": "Formal written and media reports use '-moqda'."
+   },
+   {
+    "question": "How do you casually tell a friend 'I am listening to music': 'Men musiqa ___'?",
+    "options": [
+     "eshityapman",
+     "eshitmoqdaman",
+     "eshitganman",
+     "eshitmoq"
+    ],
+    "answer": 0,
+    "explanation": "Conversational speech typically uses the spoken progressive marker '-yap-' with person endings."
+   },
+   {
+    "question": "What is the third-person formal continuous form of 'ishlamoq' (to work)?",
+    "options": [
+     "ishlayapti",
+     "ishlash",
+     "ishlamoqda",
+     "ishlagan"
+    ],
+    "answer": 2,
+    "explanation": "The suffix '-moqda' without personal endings indicates third-person formal continuous."
+   },
+   {
+    "question": "Choose the correct conversational form for 'Where are you going?': 'Qayerga ___?'",
+    "options": [
+     "boryapsiz",
+     "bormoqdasiz",
+     "borasiz",
+     "boryapti"
+    ],
+    "answer": 0,
+    "explanation": "'Boryapsiz' is the natural second-person polite continuous form in daily conversation."
+   }
+  ],
+  "tip": "Use '-yap-' in 95% of daily interactions with friends and coworkers, but switch to '-moqda' when writing essays, official letters, or resumes."
+ },
+ {
+  "id": "uz-a2-indefinite-past-gan",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#10B981",
+  "emoji": "📜",
+  "title": "Indefinite Past and Perfect (-gan)",
+  "subtitle": "Talking about life experiences, unseen past, and completed states",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Attach '-gan' plus personal endings to denote life experiences ('have done'), non-witnessed actions, or resulting past states.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Stem + Suffix",
+    "Full Word",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Person Singular (Men)",
+      "koʻr + gan + man",
+      "koʻrganman",
+      "I have seen"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Person Singular (Sen)",
+      "koʻr + gan + san",
+      "koʻrgansan",
+      "You have seen"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person Singular (U)",
+      "koʻr + gan",
+      "koʻrgan",
+      "He/She has seen"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative (Men)",
+      "koʻr + ma + gan + man",
+      "koʻrmaganman",
+      "I have not seen"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Life Experience (Ever/Never)",
+    "example": "Men Samarqandda boʻlganman.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Resulting State",
+    "example": "U yangi kiyim kiygan.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Reported / Second-hand Past",
+    "example": "Poyezd soat beshda kelgan.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Siz bu filmni koʻrganmisiz?",
+    "ko": "",
+    "highlight": "koʻrganmisiz"
+   },
+   {
+    "en": "Biz ilgari bu restoranda ovqatlanganmiz.",
+    "ko": "",
+    "highlight": "ovqatlanganmiz"
+   },
+   {
+    "en": "Men hech qachon ot minmaganman.",
+    "ko": "",
+    "highlight": "minmaganman"
+   },
+   {
+    "en": "Anvar universitetni oʻtgan yili bitirgan.",
+    "ko": "",
+    "highlight": "bitirgan"
+   },
+   {
+    "en": "Ular allaqachon yetib kelgan.",
+    "ko": "",
+    "highlight": "kelgan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Men Samarqandga bordim, lekin eslolmayman.",
+    "right": "Men Samarqandda boʻlganman.",
+    "note": "Use '-gan' for general experiential background ('have been to'), whereas '-di' denotes a specific direct past event."
+   },
+   {
+    "wrong": "U uxlagan emas.",
+    "right": "U uxlamagan.",
+    "note": "Negate verbs in '-gan' using the verbal negative marker '-ma-' before the suffix, not 'emas'."
+   },
+   {
+    "wrong": "Siz kelganingiz?",
+    "right": "Siz kelganmisiz?",
+    "note": "To form a question with '-gan', append the question particle '-mi' followed by personal predicate suffixes."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I have never read this book'?: 'Men bu kitobni hech qachon ___.'",
+    "options": [
+     "oʻqimadim",
+     "oʻqimaganman",
+     "oʻqimayman",
+     "oʻqigan"
+    ],
+    "answer": 1,
+    "explanation": "Indefinite past experience with 'hech qachon' takes '-maganman'."
+   },
+   {
+    "question": "Which form asks 'Have you (polite) eaten plov before?'",
+    "options": [
+     "Osh yedingizmi?",
+     "Osh yegansiz?",
+     "Osh yeganmisiz?",
+     "Osh yemoqdamisiz?"
+    ],
+    "answer": 2,
+    "explanation": "'Yeganmisiz' combines the experience suffix '-gan' with question marker '-mi' and polite suffix '-siz'."
+   },
+   {
+    "question": "What is the third-person form for 'He has arrived'?: 'U ___.'",
+    "options": [
+     "kelgansan",
+     "kelganman",
+     "kelganlar",
+     "kelgan"
+    ],
+    "answer": 3,
+    "explanation": "The third-person singular needs no additional person suffix: just 'kelgan'."
+   },
+   {
+    "question": "Complete the sentence 'We have worked in this company': 'Biz bu korxonada ___.'",
+    "options": [
+     "ishlaganmiz",
+     "ishlaganman",
+     "ishlagansiz",
+     "ishlayapmiz"
+    ],
+    "answer": 0,
+    "explanation": "'Biz' takes the first-person plural ending '-miz'."
+   }
+  ],
+  "tip": "Think of '-gan' as English 'have done' (present perfect) — perfect for resumes and describing places you've visited or things you've tried."
+ },
+ {
+  "id": "uz-a2-imperative-and-optative",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#F59E0B",
+  "emoji": "🗣️",
+  "title": "Imperative and Voluntative-Optative Moods",
+  "subtitle": "Commands, polite requests, and inclusive 'let's' proposals",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Use the bare stem for informal commands, '-ing' for polite requests, and '-aylik' for collective suggestions ('let's').",
+  "structure": {
+   "headers": [
+    "Person / Tone",
+    "Suffix",
+    "Uzbek Example",
+    "English Translation"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "2nd Person Informal (Sen)",
+      "bare stem / -gin",
+      "Yoz! / Yozgin!",
+      "Write! (intimate/casual)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd Person Polite (Siz)",
+      "-ing / -(i)ngiz",
+      "Yozing! / Yozingiz!",
+      "Please write (respectful)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "1st Person Plural (Biz)",
+      "-(a)ylik",
+      "Yozaylik!",
+      "Let's write! (optative)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person (U / Ular)",
+      "-sin",
+      "Yozsin!",
+      "Let him/them write!"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Polite Instruction / Request",
+    "example": "Marhamat, kiring va oʻtiring.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Casual Suggestion ('Let's')",
+    "example": "Keling, birga choy ichaylik.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Direct Command / Warning",
+    "example": "Tezroq yur, kech qolamiz!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Iltimos, eshikni yoping.",
+    "ko": "",
+    "highlight": "yoping"
+   },
+   {
+    "en": "Bugun kechqurun kinoga boraylik.",
+    "ko": "",
+    "highlight": "boraylik"
+   },
+   {
+    "en": "Bu yerda kutgin, men hozir qaytaman.",
+    "ko": "",
+    "highlight": "kutgin"
+   },
+   {
+    "en": "Mehmonlar kelsin, dasturxon tayyor.",
+    "ko": "",
+    "highlight": "kelsin"
+   },
+   {
+    "en": "Menga haqiqatni ayting.",
+    "ko": "",
+    "highlight": "ayting"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Iltimos, bu yerga kel.",
+    "right": "Iltimos, bu yerga keling.",
+    "note": "Pairing 'iltimos' (please) with the informal bare stem is contradictory; use polite '-ing'."
+   },
+   {
+    "wrong": "Biz kinoga boramiz-chi!",
+    "right": "Biz kinoga boraylik!",
+    "note": "To propose 'let's do something', use the voluntative suffix '-(a)ylik'."
+   },
+   {
+    "wrong": "U darsni boshlang.",
+    "right": "U darsni boshlasin.",
+    "note": "Third person commands ('let him/her') take '-sin', not the second person '-ing'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you politely invite someone to sit down?: 'Iltimos, ___.'",
+    "options": [
+     "oʻtir",
+     "oʻtiring",
+     "oʻtirsin",
+     "oʻtiraylik"
+    ],
+    "answer": 1,
+    "explanation": "Polite requests directed at 'Siz' end with '-ing' / '-ingiz'."
+   },
+   {
+    "question": "Choose the correct form for 'Let's begin': 'Darsni ___.'",
+    "options": [
+     "boshlang",
+     "boshlasin",
+     "boshlaylik",
+     "boshlagin"
+    ],
+    "answer": 2,
+    "explanation": "The optative suffix '-(a)ylik' means 'let us'."
+   },
+   {
+    "question": "How do you tell a friend casually 'Listen to me!'?: 'Meni ___!'",
+    "options": [
+     "eshiting",
+     "eshitsin",
+     "eshitaylik",
+     "eshit"
+    ],
+    "answer": 3,
+    "explanation": "Informal direct commands to peers use the bare verb stem (or '-gin')."
+   },
+   {
+    "question": "Choose the 3rd person command for 'Let Ahmad come': 'Ahmad ___.'",
+    "options": [
+     "kelsin",
+     "keling",
+     "kelaylik",
+     "kelsangiz"
+    ],
+    "answer": 0,
+    "explanation": "Third-person commands use the suffix '-sin'."
+   }
+  ],
+  "tip": "Whenever you enter an Uzbek home or taxi, you will hear '-ing' forms like 'Kiring' (Come in) and 'Oʻtiring' (Sit down) — using '-ing' ensures you remain courteous."
+ },
+ {
+  "id": "uz-a2-postpositions-and-spatial-nouns",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🗺️",
+  "title": "Spatial Relational Nouns and Case Postpositions",
+  "subtitle": "Navigating space and relations with spatial roots and case-governing words",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Uzbek uses relational spatial nouns (ust-, tag-, ich-, old-) with possessive and case endings, alongside primary postpositions (bilan, uchun, keyin).",
+  "structure": {
+   "headers": [
+    "Spatial Root",
+    "Inflected Form",
+    "Meaning",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ust (top)",
+      "ustida",
+      "on / on top of",
+      "stol ustida"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "tag (bottom)",
+      "tagida",
+      "under / beneath",
+      "daraxt tagida"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ich (inside)",
+      "ichida",
+      "inside / in",
+      "bino ichida"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "old (front)",
+      "oldida",
+      "in front of / near",
+      "maktab oldida"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Spatial Position (Noun + Pos + Case)",
+    "example": "Mushuk stolning tagida uxlayapti.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Instrument / Association (Bilan)",
+    "example": "Dostim bilan suhbatlashdim.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Purpose / Benefit (Uchun)",
+    "example": "Bu sovgʻa onam uchun.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kitob stol ustida turibdi.",
+    "ko": "",
+    "highlight": "ustida"
+   },
+   {
+    "en": "Biz maktab oldida uchrashamiz.",
+    "ko": "",
+    "highlight": "oldida"
+   },
+   {
+    "en": "Sumka ichida daftar bor.",
+    "ko": "",
+    "highlight": "ichida"
+   },
+   {
+    "en": "U ukasi bilan boqqa bordi.",
+    "ko": "",
+    "highlight": "bilan"
+   },
+   {
+    "en": "Ishdan keyin dam olamiz.",
+    "ko": "",
+    "highlight": "keyin"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Stolda ustida kitob bor.",
+    "right": "Stol ustida kitob bor.",
+    "note": "Do not put locative '-da' on both nouns; attach it to the spatial noun ('stol ustida' or 'stolning ustida')."
+   },
+   {
+    "wrong": "Dars keyin uyga ketdim.",
+    "right": "Darsdan keyin uyga ketdim.",
+    "note": "'Keyin' (after) governs the ablative case suffix '-dan' on the preceding noun."
+   },
+   {
+    "wrong": "Men doʻst uchun kitob oldim.",
+    "right": "Men doʻstlarim uchun kitob oldim.",
+    "note": "While 'uchun' takes nominative nouns, ensure the noun itself reflects the intended number and possession accurately."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct postposition: 'Men metro ___ ishga boraman.'",
+    "options": [
+     "uchun",
+     "kabi",
+     "haqida",
+     "bilan"
+    ],
+    "answer": 3,
+    "explanation": "'Bilan' means 'by / with' indicating means of transportation."
+   },
+   {
+    "question": "How do you say 'The cat is under the chair'?: 'Mushuk stulning ___.'",
+    "options": [
+     "ustida",
+     "tagida",
+     "ichida",
+     "orqasidan"
+    ],
+    "answer": 1,
+    "explanation": "'Tagida' translates to 'under / beneath' (tag + i + da)."
+   },
+   {
+    "question": "Which case suffix must precede 'keyin' (after)?: 'Tushlik___ keyin uchrashamiz.'",
+    "options": [
+     "-dan",
+     "-ga",
+     "-ni",
+     "-da"
+    ],
+    "answer": 0,
+    "explanation": "'Keyin' requires the preceding noun to take the ablative case ending '-dan'."
+   },
+   {
+    "question": "Fill the blank for 'inside the box': 'Quti ___ nima bor?'",
+    "options": [
+     "ustida",
+     "oldida",
+     "ichida",
+     "bilan"
+    ],
+    "answer": 2,
+    "explanation": "'Ichida' means 'inside' (ich + i + da)."
+   }
+  ],
+  "tip": "Construct spatial positions like a sandwich: [Noun] + [Spatial word] + [Possessive -i] + [Case -da/-ga/-dan] (e.g., uy + old + i + da = uy oldida 'in front of the house')."
+ },
+ {
+  "id": "uz-a2-comparative-and-superlative",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "⚖️",
+  "title": "Comparison with Ablative Case and Eng",
+  "subtitle": "Form comparative and superlative sentences in Uzbek",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Attach the ablative suffix -dan to the point of comparison to express 'than', and place 'eng' directly before adjectives to make superlatives.",
+  "structure": {
+   "headers": [
+    "Degree",
+    "Pattern",
+    "Uzbek Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Positive",
+      "Sifat (Base)",
+      "katta",
+      "big"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Comparative",
+      "Ot + -dan + Sifat",
+      "sendan katta",
+      "bigger than you"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Comparative Suffix",
+      "Sifat + -roq",
+      "kattaroq",
+      "a bit bigger / more big"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Superlative",
+      "eng + Sifat",
+      "eng katta",
+      "the biggest"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Comparing Two Entities",
+    "example": "Toshkent Samarqanddan kattaroq.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Absolute Superlative",
+    "example": "Bu kutubxona shahardagi eng qadimgi bino.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Expressing Preference",
+    "example": "Choy qahvadan yaxshiroq.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mening akam sendan uzunroq.",
+    "ko": "",
+    "highlight": "sendan uzunroq"
+   },
+   {
+    "en": "Bu doʻkonda mevalar bozordan arzon.",
+    "ko": "",
+    "highlight": "bozordan arzon"
+   },
+   {
+    "en": "Alisher guruhdagi eng aʼlochi talaba.",
+    "ko": "",
+    "highlight": "eng aʼlochi"
+   },
+   {
+    "en": "Samolyot poyezddan ancha tez.",
+    "ko": "",
+    "highlight": "poyezddan ancha tez"
+   },
+   {
+    "en": "Dunyoning eng baland choʻqqisi Everestdir.",
+    "ko": "",
+    "highlight": "eng baland"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "U men koʻra baland.",
+    "right": "U mendan baland.",
+    "note": "Use the ablative case suffix -dan directly on the pronoun or noun, not standalone English-like particles."
+   },
+   {
+    "wrong": "Bu kitob eng yaxshiroq.",
+    "right": "Bu kitob eng yaxshi.",
+    "note": "Do not combine the superlative marker 'eng' with the comparative suffix '-roq'."
+   },
+   {
+    "wrong": "U akasi baland.",
+    "right": "U akasidan baland.",
+    "note": "The standard of comparison requires the ablative suffix -dan ('than his brother')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Toshkent Samarqand___ kattaroq.",
+    "options": [
+     "-ga",
+     "-da",
+     "-dan",
+     "-ni"
+    ],
+    "answer": 2,
+    "explanation": "The ablative case ending -dan marks the standard of comparison ('than Samarqand')."
+   },
+   {
+    "question": "Bu dunyodagi ___ chiroyli shahar.",
+    "options": [
+     "eng",
+     "juda",
+     "ham",
+     "yana"
+    ],
+    "answer": 0,
+    "explanation": "The word 'eng' precedes the adjective to form the superlative degree ('the most beautiful')."
+   },
+   {
+    "question": "Mening ukam sen___ chaqqon.",
+    "options": [
+     "-gacha",
+     "-dan",
+     "-ning",
+     "-siz"
+    ],
+    "answer": 1,
+    "explanation": "Comparing two persons requires the ablative suffix -dan on the second person ('faster than you')."
+   },
+   {
+    "question": "Bugun kechagidan ___ sovuq.",
+    "options": [
+     "ancha",
+     "eng",
+     "bir",
+     "qachon"
+    ],
+    "answer": 0,
+    "explanation": "'Ancha' functions as an intensifier meaning 'much/considerably colder than yesterday'."
+   }
+  ],
+  "tip": "Use -roq alone when subtly shading an adjective (e.g. 'yaxshiroq' = 'better / rather good'), but rely on -dan when the comparison target is explicitly stated."
+ },
+ {
+  "id": "uz-a2-converbs-ib-and-a",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔗",
+  "title": "Basic Coordinating Converbs (-ib and -(a)rli)",
+  "subtitle": "Chain actions smoothly using the coordinating converb -ib",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use the converb -ib (or -b after vowels) to link sequential actions sharing the same subject, leaving tense and personal markers for the final verb.",
+  "structure": {
+   "headers": [
+    "Stem Ending",
+    "Converb Suffix",
+    "Uzbek Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Consonant",
+      "-ib",
+      "yozmoq → yozib",
+      "having written / and wrote"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Vowel",
+      "-b",
+      "oʻqimoq → oʻqib",
+      "having read / and read"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negative",
+      "-may / -masdan",
+      "yozmay / yozmasdan",
+      "without writing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Converb Chain",
+      "-ib ... Finite Verb",
+      "choy ichib ketdi",
+      "drank tea and left"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Sequential Actions",
+    "example": "U uyga kelib, dam oldi.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Simultaneous Manner",
+    "example": "Bola kulib javob berdi.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Cause and Effect",
+    "example": "Yomgʻir yogʻib, havo soviydi.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Men nonushta qilib ishga ketdim.",
+    "ko": "",
+    "highlight": "qilib"
+   },
+   {
+    "en": "U kitobni ochib oʻqiy boshladi.",
+    "ko": "",
+    "highlight": "ochib"
+   },
+   {
+    "en": "Doston xatni yozib doʻstiga joʻnatdi.",
+    "ko": "",
+    "highlight": "yozib"
+   },
+   {
+    "en": "Biz bozorga borib meva sotib oldik.",
+    "ko": "",
+    "highlight": "borib"
+   },
+   {
+    "en": "Eshikni yopib xonadan chiqdi.",
+    "ko": "",
+    "highlight": "yopib"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Men bordim va koʻrdim.",
+    "right": "Men borib koʻrdim.",
+    "note": "While 'va' is grammatically possible, natural Uzbek prefers the converb -ib to link sequential verb clauses."
+   },
+   {
+    "wrong": "U kitobni oʻqidi-b ketdi.",
+    "right": "U kitobni oʻqib ketdi.",
+    "note": "Converb -ib attaches directly to the bare verb stem (oʻqi- + -b), not to past tense conjugations."
+   },
+   {
+    "wrong": "Biz ovqatlanibdik.",
+    "right": "Biz ovqatlandik.",
+    "note": "The suffix -ib cannot stand alone without either a finite auxiliary or standard past endings unless intended as an inferential past."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Talaba darsni tingla___ daftarga yozdi.",
+    "options": [
+     "-b",
+     "-sa",
+     "-gan",
+     "-gach"
+    ],
+    "answer": 0,
+    "explanation": "The stem 'tingla-' ends in a vowel, so it takes the coordinating converb ending -b."
+   },
+   {
+    "question": "Ular choy ___ suhbatlashdilar.",
+    "options": [
+     "ichsak",
+     "ichib",
+     "ichgani",
+     "ichmoq"
+    ],
+    "answer": 1,
+    "explanation": "'Ichib' connects the prior action of drinking tea with the conversation verb."
+   },
+   {
+    "question": "Eshikni taqillat___ ichkariga kirdi.",
+    "options": [
+     "-ma",
+     "-gan",
+     "-sa",
+     "-ib"
+    ],
+    "answer": 3,
+    "explanation": "'Taqillat-' ends in a consonant and requires -ib to denote the preceding action."
+   },
+   {
+    "question": "Bolalar darsdan keyin uyga ___ vazifalarini bajardilar.",
+    "options": [
+     "qaytgan",
+     "qaytib",
+     "qaytsa",
+     "qaytmoq"
+    ],
+    "answer": 1,
+    "explanation": "'Qaytib' acts as the chained converb connecting returning home with doing homework."
+   }
+  ],
+  "tip": "Only the final verb in a chain takes personal suffixes (e.g. -man, -san, -di). All preceding verbs take only -ib/-b, dramatically streamlining your sentences!"
+ },
+ {
+  "id": "uz-b1-compound-verbs-yoz-ol-ber",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🧩",
+  "title": "Compound Descriptive Verbs (-ib / -a + Auxiliary)",
+  "subtitle": "Add nuanced shades of meaning using verbal compounds",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Combine a lexical verb ending in -ib or -a/-y with auxiliary verbs like bermoq, koʻrmoq, and olmoq to express benefaction, experimentation, or ability.",
+  "structure": {
+   "headers": [
+    "Auxiliary",
+    "Converb Form",
+    "Uzbek Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "bermoq",
+      "-ib bermoq",
+      "yozib bermoq",
+      "to write for someone (benefactive)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "koʻrmoq",
+      "-ib koʻrmoq",
+      "tatib koʻrmoq",
+      "to try tasting (experimentation)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "olmoq",
+      "-(a) olmoq",
+      "gapira olmoq",
+      "to be able to speak (ability)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "yubormoq",
+      "-ib yubormoq",
+      "kulib yubormoq",
+      "to suddenly burst out laughing"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Benefactive Action",
+    "example": "Menga bu kitobni oʻqib bering.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Trying an Action",
+    "example": "Ushbu taomni yeb koʻrdingizmi?",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Physical or Learned Ability",
+    "example": "Men oʻzbekcha gapira olaman.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "U menga yangi qoidani tushuntirib berdi.",
+    "ko": "",
+    "highlight": "tushuntirib berdi"
+   },
+   {
+    "en": "Bu yangi kiyimni kiyib koʻr.",
+    "ko": "",
+    "highlight": "kiyib koʻr"
+   },
+   {
+    "en": "Siz ertaga majlisga kela olasizmi?",
+    "ko": "",
+    "highlight": "kela olasizmi"
+   },
+   {
+    "en": "U xushxabarni eshitib kulib yubordi.",
+    "ko": "",
+    "highlight": "kulib yubordi"
+   },
+   {
+    "en": "Biz bu masalani hal qilib beramiz.",
+    "ko": "",
+    "highlight": "hal qilib beramiz"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Men oʻzbekcha gapirib olaman.",
+    "right": "Men oʻzbekcha gapira olaman.",
+    "note": "The auxiliary verb 'olmoq' expressing ability requires the -a/-y converb, not -ib."
+   },
+   {
+    "wrong": "Menga yordam qilib koʻr.",
+    "right": "Menga yordam berib yubor / yordam ber.",
+    "note": "'Koʻrmoq' means to test or try out; for doing a favor for someone, use 'bermoq'."
+   },
+   {
+    "wrong": "U eshikni ochmoq berdi.",
+    "right": "U eshikni ochib berdi.",
+    "note": "Auxiliary structures must combine with a converb (-ib), never the infinitive (-moq)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Men bu ogʻir yukni koʻtara ___ .",
+    "options": [
+     "oldim",
+     "berdim",
+     "koʻrdim",
+     "tashladim"
+    ],
+    "answer": 0,
+    "explanation": "The -a converb on 'koʻtara' pairs with 'olmoq' to express ability ('was able to lift')."
+   },
+   {
+    "question": "Iltimos, menga xatni tarjima qilib ___ .",
+    "options": [
+     "koʻring",
+     "yuboring",
+     "bering",
+     "oling"
+    ],
+    "answer": 2,
+    "explanation": "'Qilib bermoq' conveys a polite request to do a favor for the speaker."
+   },
+   {
+    "question": "Bozorga borib yangi anorlardan tatib ___ .",
+    "options": [
+     "oldik",
+     "koʻrdik",
+     "tushdik",
+     "yurdik"
+    ],
+    "answer": 1,
+    "explanation": "'Tatib koʻrmoq' means to try tasting something to test it."
+   },
+   {
+    "question": "U kutilmagan xabardan yigʻlab ___ .",
+    "options": [
+     "berdi",
+     "oldi",
+     "yubordi",
+     "qoldi"
+    ],
+    "answer": 2,
+    "explanation": "'-ib yubormoq' marks a sudden, involuntary burst of emotion or action."
+   }
+  ],
+  "tip": "Pay close attention to the converb vowel: '-a olmoq' signifies possibility and capability, whereas '-ib olmoq' means to do something for one's own benefit!"
+ },
+ {
+  "id": "uz-b1-participles-relative-clauses",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🌲",
+  "title": "Participles as Relative Clauses (-gan, -digan, -adigan)",
+  "subtitle": "Form modifier clauses without relative pronouns using participles",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Uzbek has no relative pronouns like 'who' or 'which'; instead, relative clauses precede nouns using participle suffixes (-gan for past/completed, -(a)digan for habitual/present).",
+  "structure": {
+   "headers": [
+    "Participle",
+    "Time Frame",
+    "Uzbek Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-gan",
+      "Past / Completed",
+      "kelgan mehmon",
+      "the guest who arrived / came"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-(a)digan",
+      "Habitual / Future",
+      "ishlaydigan odam",
+      "the person who works / will work"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-yotgan",
+      "Continuous / Present",
+      "oʻqiyotgan qiz",
+      "the girl who is reading"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-(a)r",
+      "Potential / Future",
+      "oqar suv",
+      "flowing water / water that flows"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Past Completed Relative Clause",
+    "example": "Biz kecha koʻrgan film juda qiziq edi.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Habitual or Permanent Agent",
+    "example": "Toshkentda yashaydigan doʻstim xat yozdi.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Action in Progress",
+    "example": "Hozir nutq soʻzlayotgan kishi bizning dekanimiz.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Men sotib olgan kitob juda qimmat ekan.",
+    "ko": "",
+    "highlight": "sotib olgan"
+   },
+   {
+    "en": "Oʻzbekistonda ishlab chiqariladigan mashinalar xaridorgir.",
+    "ko": "",
+    "highlight": "ishlab chiqariladigan"
+   },
+   {
+    "en": "Kutubxonada dars tayyorlayotgan talabalarga xalaqit bermang.",
+    "ko": "",
+    "highlight": "tayyorlayotgan"
+   },
+   {
+    "en": "Biz yashagan mahalla juda tinch edi.",
+    "ko": "",
+    "highlight": "Biz yashagan"
+   },
+   {
+    "en": "Ertaga boʻladigan uchrashuv qoldirildi.",
+    "ko": "",
+    "highlight": "boʻladigan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Odam kim kecha keldi mening akam.",
+    "right": "Kecha kelgan odam mening akam.",
+    "note": "Uzbek does not use relative pronouns like 'kim' (who) or 'qaysi' (which); place the participle '-gan' directly before the head noun."
+   },
+   {
+    "wrong": "Men oʻqiydigan kitobni kecha sotib oldim.",
+    "right": "Men oʻqiyotgan (or oʻqigan) kitobni kecha sotib oldim.",
+    "note": "Use -gan for completed actions or -yotgan for current progress, reserving -(a)digan for habitual or impending future actions."
+   },
+   {
+    "wrong": "Biz borgan shahar chiroylidir edi.",
+    "right": "Biz borgan shahar chiroyli edi.",
+    "note": "Avoid appending redundant predicate copulas when forming standard past descriptive clauses."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Kecha majlisda nutq soʻzla___ vakil Samarqanddan keldi.",
+    "options": [
+     "-yotgan",
+     "-gan",
+     "-ydigan",
+     "-moqchi"
+    ],
+    "answer": 1,
+    "explanation": "The action occurred yesterday ('kecha'), calling for the past/completed participle -gan."
+   },
+   {
+    "question": "Har kuni bu koʻchadan oʻta___ avtobus qatnovi toʻxtatildi.",
+    "options": [
+     "-digan",
+     "-gan",
+     "-gani",
+     "-yotib"
+    ],
+    "answer": 0,
+    "explanation": "'Har kuni' indicates regular habitual motion, requiring the habitual participle -(a)digan."
+   },
+   {
+    "question": "Hozir choy ich___ mehmonlar bilan gaplashamiz.",
+    "options": [
+     "-gan",
+     "-mas",
+     "-yotgan",
+     "-adigan"
+    ],
+    "answer": 2,
+    "explanation": "'Hozir' marks an action currently in progress, demanding the continuous participle -yotgan."
+   },
+   {
+    "question": "Biz ertaga bor___ qishloq togʻlar orasida joylashgan.",
+    "options": [
+     "-ayotgan",
+     "-gan",
+     "-adigan",
+     "-mish"
+    ],
+    "answer": 2,
+    "explanation": "An action scheduled for tomorrow ('ertaga') takes the future-oriented participle -adigan."
+   }
+  ],
+  "tip": "Think of Uzbek relative clauses as giant adjectives: everything modifying the noun goes BEFORE that noun, ending with -gan or -(a)digan!"
+ },
+ {
+  "id": "uz-b1-verbal-nouns-ish-moq",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🏷️",
+  "title": "Verbal Nouns (-ish and -(u)v) in Complex Clauses",
+  "subtitle": "Turn entire actions into nominal clauses taking noun suffixes",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Verbal nouns formed with -ish (or -(u)v) nominalize verb stems so they can accept possessive affixes, plural suffixes, and case endings.",
+  "structure": {
+   "headers": [
+    "Suffix",
+    "Formation",
+    "Uzbek Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-ish / -sh",
+      "Stem + -ish / -sh",
+      "yashash / oʻqish",
+      "living / reading (general gerund)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-(u)v",
+      "Stem + -(u)v",
+      "saylov / yozuv",
+      "election / writing (official noun)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Possessive + Case",
+      "Stem + -ish + Poss. + Case",
+      "kelishingizdan oldin",
+      "before your coming"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-moqlik",
+      "Stem + -moqlik",
+      "anglamoqlik",
+      "understanding (abstract nominal)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Subject of a Clause",
+    "example": "Chet tillarini oʻrganish juda foydali.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Governed by Postpositions",
+    "example": "Uyga qaytishdan oldin doʻkonga kirdim.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Object with Case Marker",
+    "example": "Uning kelishini sabrsizlik bilan kutdik.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kitob oʻqish inson ongini rivojlantiradi.",
+    "ko": "",
+    "highlight": "oʻqish"
+   },
+   {
+    "en": "Sizning bu yerga kelishingiz bizni xursand qildi.",
+    "ko": "",
+    "highlight": "kelishingiz"
+   },
+   {
+    "en": "Yigʻilish boshlanishidan avval hamma joylashib oldi.",
+    "ko": "",
+    "highlight": "boshlanishidan"
+   },
+   {
+    "en": "Mening maqsadim imtihondan muvaffaqiyatli oʻtish.",
+    "ko": "",
+    "highlight": "oʻtish"
+   },
+   {
+    "en": "U chekishni butunlay tashladi.",
+    "ko": "",
+    "highlight": "chekishni"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Men oʻqimoq yaxshi koʻraman.",
+    "right": "Men oʻqishni yaxshi koʻraman.",
+    "note": "When a nominalized action is the direct object of verbs like 'yaxshi koʻrmoq', use -ish with the accusative suffix -ni, not bare -moq."
+   },
+   {
+    "wrong": "Uning kelmoqdan oldin qoʻngʻiroq qiling.",
+    "right": "Uning kelishidan oldin qoʻngʻiroq qiling.",
+    "note": "Postpositions like 'oldin' require the ablative -dan attached to a verbal noun (-ish + possessive + -dan)."
+   },
+   {
+    "wrong": "Siz kelishi kerak.",
+    "right": "Siz kelishingiz kerak.",
+    "note": "The verbal noun must agree with the subject pronoun in person (siz -> kelishingiz)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Darsga kechik___ sababini tushuntirib bering.",
+    "options": [
+     "-ishning",
+     "-ganda",
+     "-moq",
+     "-gach"
+    ],
+    "answer": 0,
+    "explanation": "The verbal noun takes the genitive suffix -ning to connect with 'sababi' ('the reason of being late')."
+   },
+   {
+    "question": "Sport bilan muntazam shugʻullanish salomatlik uchun ___ .",
+    "options": [
+     "tez",
+     "muhim",
+     "ertaga",
+     "qayerda"
+    ],
+    "answer": 1,
+    "explanation": "'Shugʻullanish' acts as the syntactic subject described by the predicate adjective 'muhim' (important)."
+   },
+   {
+    "question": "Sizning oʻz vaqtida kel___ barcha masalani hal qildi.",
+    "options": [
+     "-sak",
+     "-gan",
+     "-ishingiz",
+     "-gandek"
+    ],
+    "answer": 2,
+    "explanation": "'Sizning' (2nd person formal genitive) requires the verbal noun with matching possessive suffix '-ishingiz'."
+   },
+   {
+    "question": "Mehmonlar kelishidan ___ xonani tozalab qoʻydik.",
+    "options": [
+     "keyin",
+     "oldin",
+     "bilan",
+     "uchun"
+    ],
+    "answer": 1,
+    "explanation": "The ablative nominal phrase 'kelishidan' pairs with the postposition 'oldin' to mean 'before the guests arrived'."
+   }
+  ],
+  "tip": "Whenever you want to use 'before doing' or 'after doing' in Uzbek, build the phrase: Stem + -ish + Possessive + -dan oldin/keyin!"
+ },
+ {
+  "id": "uz-b1-conditional-mood-sa",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#0284c7",
+  "emoji": "🔀",
+  "title": "Conditional Mood (-sa) and Hypotheticals",
+  "subtitle": "Express 'if', 'when', and hypothetical 'would' using the versatile suffix -sa",
+  "color": "#0369a1",
+  "bg": "#f0f9ff",
+  "keyPoint": "Attach the suffix -sa directly to the verb stem followed by personal endings to form real conditions, temporal triggers, or unreal counterfactuals with edi.",
+  "structure": {
+   "headers": [
+    "Structure",
+    "Uzbek Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Stem + -sa + Possessive Ending",
+      "kelsa",
+      "if/when he/she comes"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Stem + -sa + Person + edi",
+      "borsam edi",
+      "if only I had gone / had I gone"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Stem + -masa + Person",
+      "yozmasangiz",
+      "if you do not write"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Stem + -sa ham",
+      "aytsa ham",
+      "even if he/she says"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284c7",
+    "label": "Real Condition",
+    "example": "Ertaga yomgʻir yogʻsa, biz uyda qolamiz.",
+    "translation": ""
+   },
+   {
+    "color": "#0ea5e9",
+    "label": "Temporal Trigger ('When')",
+    "example": "Dars tugasa, doʻkonga boramiz.",
+    "translation": ""
+   },
+   {
+    "color": "#38bdf8",
+    "label": "Unreal / Counterfactual Wish",
+    "example": "Vaqtim koʻp boʻlsa edi, sizga yordam berardim.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ertaga havo yaxshi boʻlsa, toqqa chiqamiz.",
+    "ko": "",
+    "highlight": "boʻlsa"
+   },
+   {
+    "en": "Savolingiz boʻlsa, bemalol soʻrang.",
+    "ko": "",
+    "highlight": "boʻlsa"
+   },
+   {
+    "en": "Pulim yetarli boʻlsa edi, yangi mashina sotib olardim.",
+    "ko": "",
+    "highlight": "boʻlsa edi"
+   },
+   {
+    "en": "Uyga yetib borsangiz, menga qoʻngʻiroq qiling.",
+    "ko": "",
+    "highlight": "borsangiz"
+   },
+   {
+    "en": "Ular taklif etsa ham, bu majlisga bormayman.",
+    "ko": "",
+    "highlight": "taklif etsa ham"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Agar u keladi, biz ketamiz.",
+    "right": "Agar u kelsa, biz ketamiz.",
+    "note": "The conjunction 'agar' (if) requires the verb to carry the conditional suffix -sa, not simple indicative tense."
+   },
+   {
+    "wrong": "Sen borsa, men ham boraman.",
+    "right": "Sen borsang, men ham boraman.",
+    "note": "Conditional verbs must agree in person with the subject (sen borsang, not borsa)."
+   },
+   {
+    "wrong": "Men bilsam edi, aytaman.",
+    "right": "Men bilsam edi, aytardim.",
+    "note": "Counterfactual conditionals with -sa edi require an unreal past or habitual past (-ar edi) in the main result clause."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "If you study hard, you ___ the exam successfully.",
+    "options": [
+     "topshirasiz",
+     "topshirsangiz",
+     "topshirsa",
+     "topshirgan"
+    ],
+    "answer": 0,
+    "explanation": "The 'if' clause already contains the condition; the main clause requires the declarative future/present tense (topshirasiz)."
+   },
+   {
+    "question": "Vaqtingiz boʻsh ___, birga kofe ichaylik.",
+    "options": [
+     "boʻladi",
+     "boʻlsa",
+     "boʻlgan",
+     "boʻlib"
+    ],
+    "answer": 1,
+    "explanation": "-sa marks the conditional clause ('If your time is free')."
+   },
+   {
+    "question": "Agar u rost gapirganida yoki aytganida ___ edi, hamma tushunardi.",
+    "options": [
+     "bilsa",
+     "boʻlsa",
+     "aytgan",
+     "bilar"
+    ],
+    "answer": 1,
+    "explanation": "'boʻlsa edi' completes the counterfactual construction meaning 'if it had been'."
+   },
+   {
+    "question": "Menga xat ___ , darhol javob qaytaraman.",
+    "options": [
+     "yozma",
+     "yozganda",
+     "yozasiz",
+     "yozsangiz"
+    ],
+    "answer": 3,
+    "explanation": "The second person formal conditional suffix is -sangiz ('if you write')."
+   }
+  ],
+  "tip": "Even though 'agar' means 'if', native Uzbek speakers frequently drop 'agar' altogether because -sa on the verb already carries the complete conditional meaning."
+ },
+ {
+  "id": "uz-b1-evidential-past-ibdi",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#16a34a",
+  "emoji": "👁️",
+  "title": "Indirective / Evidential Past (-ibdi)",
+  "subtitle": "Express hearsay, secondhand reports, and unexpected sudden discoveries",
+  "color": "#15803d",
+  "bg": "#f0fdf4",
+  "keyPoint": "Use -ibdi (or -pti after voiceless consonants) when reporting an action you did not witness firsthand or one you just discovered with surprise.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Affix Formula",
+    "Example",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Consonant stem (3rd pers.)",
+      "Stem + -ibdi",
+      "yozibdi",
+      "apparently wrote / has written"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Vowel stem (3rd pers.)",
+      "Stem + -bdi",
+      "uxlabdi",
+      "apparently slept / fell asleep"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Voiceless consonant stem",
+      "Stem + -pti",
+      "ketibdi / aytibdi",
+      "apparently went / said"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "1st person realization",
+      "Stem + -(i)bmi / -(i)pman",
+      "unutibman",
+      "I realized I had forgotten!"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#16a34a",
+    "label": "Hearsay / Secondhand News",
+    "example": "Eshitishimcha, Karim Toshkentga koʻchib oʻtibdi.",
+    "translation": ""
+   },
+   {
+    "color": "#22c55e",
+    "label": "Inference from Physical Evidence",
+    "example": "Koʻchalar hoʻl, tunda qor yogʻibdi.",
+    "translation": ""
+   },
+   {
+    "color": "#4ade80",
+    "label": "Mirative / Sudden Realization",
+    "example": "Voy, hamyonimni uyda qoldiribman!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Doston yangi mashina sotib olibdi.",
+    "ko": "",
+    "highlight": "olibdi"
+   },
+   {
+    "en": "Qarasam, hamma allaqachon ketibdi.",
+    "ko": "",
+    "highlight": "ketibdi"
+   },
+   {
+    "en": "Choy sovib qolibdi, boshqasini damlay.",
+    "ko": "",
+    "highlight": "qolibdi"
+   },
+   {
+    "en": "Kechirasiz, ismingizni esdan chiqaribman.",
+    "ko": "",
+    "highlight": "chiqaribman"
+   },
+   {
+    "en": "Ular kecha toʻyga bormabdi.",
+    "ko": "",
+    "highlight": "bormabdi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Men kecha kinoga bordim-ku, ammo bilmabman.",
+    "right": "Men kecha kinoga bordim.",
+    "note": "Do not use -ibdi for deliberate actions you witnessed and performed knowingly yourself; use direct past -di."
+   },
+   {
+    "wrong": "U imtihondan oʻtdi deb eshitdim.",
+    "right": "U imtihondan oʻtibdi deb eshitdim.",
+    "note": "When repeating reported information that you heard from others, -ibdi is far more natural than the direct witness marker -di."
+   },
+   {
+    "wrong": "Bolalar uxlayapti edi, koʻrdim.",
+    "right": "Bolalar uxlayotgan ekan / uxlabdi.",
+    "note": "When inferring a state after the fact, use the evidential -ibdi or ekan rather than simple indicative statements."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Oh no! I have mistakenly left my keys at the office! (Sudden realization)",
+    "options": [
+     "qoldirdim",
+     "qoldiraman",
+     "qoldiribman",
+     "qoldirsa"
+    ],
+    "answer": 2,
+    "explanation": "The 1st person mirative suffix -ibman expresses sudden discovery of something you did unconsciously."
+   },
+   {
+    "question": "According to the news, the president ___ to Samarkand yesterday.",
+    "options": [
+     "joʻnadi",
+     "joʻnabdi",
+     "joʻnaydi",
+     "joʻnamoqchi"
+    ],
+    "answer": 1,
+    "explanation": "Hearsay and reported information without personal witnessing takes the evidential -ibdi."
+   },
+   {
+    "question": "Tashqariga qara, hamma joy oqarib ketibdi, demak qor ___.",
+    "options": [
+     "yogʻibdi",
+     "yogʻdi",
+     "yogʻadi",
+     "yogʻsa"
+    ],
+    "answer": 0,
+    "explanation": "Drawing a logical inference from observable evidence requires evidential -ibdi."
+   },
+   {
+    "question": "Singlim menga aytdi: akam yangi ishga ___.",
+    "options": [
+     "kirdingiz",
+     "kiradi",
+     "kirsangiz",
+     "kiribdi"
+    ],
+    "answer": 3,
+    "explanation": "Indirect reported news about a third person takes 3rd person evidential -ibdi."
+   }
+  ],
+  "tip": "Think of -ibdi as the 'eureka' or 'rumor' tense: use it whenever your brain processes resultative evidence rather than witnessing the event live."
+ },
+ {
+  "id": "uz-b2-causative-and-passive-voices",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#9333ea",
+  "emoji": "⚙️",
+  "title": "Causative, Passive, and Reflexive Voice Derivation",
+  "subtitle": "Alter verb transitivity using -dir, -t, -ir, and passive -(i)l",
+  "color": "#7e22ce",
+  "bg": "#faf5ff",
+  "keyPoint": "Uzbek changes grammatical voice systematically by inserting derivational affixes directly between the verb root and the tense/mood markers.",
+  "structure": {
+   "headers": [
+    "Voice",
+    "Affix Form",
+    "Base Verb",
+    "Derived Verb"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Causative (Consonant stem)",
+      "-dir / -tir",
+      "kul- (to laugh)",
+      "kuldir- (make laugh)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Causative (Polysyllabic vowel stem)",
+      "-t",
+      "oʻqi- (to read)",
+      "oʻqit- (to teach / cause to read)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Passive (General)",
+      "-(i)l",
+      "yoz- (to write)",
+      "yozil- (to be written)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passive / Reflexive (after l)",
+      "-(i)n",
+      "bil- (to know)",
+      "bilin- (to be noticed / felt)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#9333ea",
+    "label": "Passive Subject Promotion",
+    "example": "Ushbu bino oʻtgan asrda qurilgan.",
+    "translation": ""
+   },
+   {
+    "color": "#a855f7",
+    "label": "Causative Agent Directive",
+    "example": "Ustoz talabalarga matnni tarjima qildirdi.",
+    "translation": ""
+   },
+   {
+    "color": "#c084fc",
+    "label": "Reflexive / Involuntary State",
+    "example": "Uzoqdan bir kishining sharpasi koʻrindi.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Eshik soat sakkizda ochiladi.",
+    "ko": "",
+    "highlight": "ochiladi"
+   },
+   {
+    "en": "Onam bolani erta uxlatdi.",
+    "ko": "",
+    "highlight": "uxlatdi"
+   },
+   {
+    "en": "Xat kecha barcha xodimlarga joʻnatildi.",
+    "ko": "",
+    "highlight": "joʻnatildi"
+   },
+   {
+    "en": "Direktor kotibaga yangi hisobotni yozdirdi.",
+    "ko": "",
+    "highlight": "yozdirdi"
+   },
+   {
+    "en": "Bu yangilik butun shaharga tezda tarqaldi.",
+    "ko": "",
+    "highlight": "tarqaldi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Men doʻstimga xatni yozdim.",
+    "right": "Men doʻstimga xatni yozdirdim.",
+    "note": "If you caused the friend to write it rather than writing it yourself, you must use the causative affix -dir-."
+   },
+   {
+    "wrong": "Kitob kutubxonada oʻqidi.",
+    "right": "Kitob kutubxonada oʻqildi.",
+    "note": "An inanimate patient receiving the action requires the passive voice (-l / -il)."
+   },
+   {
+    "wrong": "Usta mashinani tuzaltdi oʻrniga tuzaldi.",
+    "right": "Usta mashinani tuzatdi / tuzattirdi.",
+    "note": "'Tuzalmoq' is intransitive ('to get cured/better'); to actively fix an object, use the transitive causative form 'tuzatmoq'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The university library was opened last week. Kutubxona oʻtgan haftada ___.",
+    "options": [
+     "ochdi",
+     "ochildi",
+     "ochtirdi",
+     "ochar"
+    ],
+    "answer": 1,
+    "explanation": "The passive form of och- (open) is ochil- (to be opened)."
+   },
+   {
+    "question": "The teacher made the students memorize the poem. Oʻqituvchi oʻquvchilarga sheʼrni ___.",
+    "options": [
+     "yodladi",
+     "yodlandir",
+     "yodlatdi",
+     "yodlanadi"
+    ],
+    "answer": 2,
+    "explanation": "Stems ending in a vowel like yodla- take the causative suffix -t, forming yodlat- ('to make memorize')."
+   },
+   {
+    "question": "Qurilish ishlari nihoyasiga ___.",
+    "options": [
+     "yetkizdi",
+     "yetkazildi",
+     "yetadi",
+     "yetkazadi"
+    ],
+    "answer": 1,
+    "explanation": "Compound passive causative: yet-kaz-il-di means 'was brought to completion'."
+   },
+   {
+    "question": "Shifokor bemorni dori ichishga majbur qildi va dorini ___.",
+    "options": [
+     "ichirdi",
+     "ichdi",
+     "ichildi",
+     "ichin"
+    ],
+    "answer": 0,
+    "explanation": "The root ich- (drink) takes the causative -ir- to mean 'cause to drink / administer'."
+   }
+  ],
+  "tip": "Remember: if a verb root ends in a liquid sound like 'l' (e.g., bil-), it takes -in instead of -il to form the passive (bilinmoq), avoiding an awkward double 'l'."
+ },
+ {
+  "id": "uz-b2-defective-verb-ekan-emish",
+  "level": "b2",
+  "category": "modals",
+  "categoryColor": "#ea580c",
+  "emoji": "🎭",
+  "title": "The Defective Verb E- (Ekan, Emish, Eydi)",
+  "subtitle": "Encode epistemic doubt, reported gossip, and surprise using ekan and emish",
+  "color": "#c2410c",
+  "bg": "#fff7ed",
+  "keyPoint": "The defective root e- cannot stand alone as a bare verb, but its forms ekan (realization/inference) and emish (allegation/hearsay) serve as essential modal qualifiers.",
+  "structure": {
+   "headers": [
+    "Defective Particle",
+    "Epistemic Meaning",
+    "Uzbek Context",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ekan",
+      "Mirative realization / discovery",
+      "U boy ekan!",
+      "Turns out he is rich!"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "emish",
+      "Unverified claim / gossip / irony",
+      "Kelmish / kelar emish",
+      "Supposedly he is coming (allegedly)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "emas",
+      "Negation of nominal predicate",
+      "Talaba emas",
+      "Is not a student"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "edi",
+      "Past copula / counterfactual marker",
+      "Chiroyli edi",
+      "Was beautiful"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#ea580c",
+    "label": "Sudden Admiration / Discovery",
+    "example": "Bu shahar juda goʻzal ekan!",
+    "translation": ""
+   },
+   {
+    "color": "#f97316",
+    "label": "Distanced Rumor / Irony",
+    "example": "U yangi kompaniya ochgan emish.",
+    "translation": ""
+   },
+   {
+    "color": "#fb923c",
+    "label": "Rhetorical Reflection",
+    "example": "Kim buni bilmas ekan?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Bozordagi mevalar ancha arzon ekan.",
+    "ko": "",
+    "highlight": "ekan"
+   },
+   {
+    "en": "Eshitishimcha, ular ajrashayotgan emish.",
+    "ko": "",
+    "highlight": "emish"
+   },
+   {
+    "en": "Sen ham bu sirni bilmasmiding?",
+    "ko": "",
+    "highlight": "bilmasmiding"
+   },
+   {
+    "en": "U oʻzini eng aqlli deb hisoblar emish.",
+    "ko": "",
+    "highlight": "emish"
+   },
+   {
+    "en": "Poyezd allaqachon joʻnab ketgan ekan.",
+    "ko": "",
+    "highlight": "ekan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "U kecha kelgan emish, men koʻrdim.",
+    "right": "U kecha kelgan ekan / keldi, men koʻrdim.",
+    "note": "Do not use 'emish' if you personally observed and vouch for the fact; 'emish' explicitly questions or disclaims credibility."
+   },
+   {
+    "wrong": "Bu ovqat mazali edi! (when tasting it right now)",
+    "right": "Bu ovqat mazali ekan!",
+    "note": "When tasting food and realizing right now that it is delicious, use 'ekan' to express current discovery, not past 'edi'."
+   },
+   {
+    "wrong": "U maktabda emish emas.",
+    "right": "U maktabda emas emish.",
+    "note": "The negative copula 'emas' must precede the hearsay modal 'emish'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I just tasted this tea: 'Turns out this tea is very sweet!'",
+    "options": [
+     "shirin emish",
+     "shirin ekan",
+     "shirin boʻldi",
+     "shirin edi"
+    ],
+    "answer": 1,
+    "explanation": "'ekan' indicates spontaneous firsthand discovery in the present moment."
+   },
+   {
+    "question": "Supposedly (rumor has it), he got promoted to director.",
+    "options": [
+     "tayinlandi",
+     "tayinlansa",
+     "tayinlangan emish",
+     "tayinlanar ekan"
+    ],
+    "answer": 2,
+    "explanation": "'emish' marks hearsay, rumors, or unverified second-hand claims."
+   },
+   {
+    "question": "U oʻz ishini juda yaxshi biladi deb oʻylagandim, ammo hech narsa bilmas ___.",
+    "options": [
+     "boʻlsa",
+     "emish",
+     "ekan",
+     "emas"
+    ],
+    "answer": 2,
+    "explanation": "'bilmas ekan' marks the unexpected revelation that the person in fact knew nothing."
+   },
+   {
+    "question": "Gʻiybatchilarning aytishicha, u qimmatbaho mashina yutib olgan ___.",
+    "options": [
+     "emish",
+     "ekan",
+     "edi",
+     "boʻldi"
+    ],
+    "answer": 0,
+    "explanation": "Gossip ('Gʻiybatchilar') strongly pairs with the skeptical hearsay clitic 'emish'."
+   }
+  ],
+  "tip": "A quick rule of thumb: 'Ekan' means 'Aha! I see it is so!', while 'Emish' means 'So they claim, but who knows?'"
+ },
+ {
+  "id": "uz-b2-complex-temporal-converbs",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#0d9488",
+  "emoji": "⏳",
+  "title": "Specialized Temporal and Purposive Converbs",
+  "subtitle": "Connect complex events with -gach, -guncha, and -gani",
+  "color": "#0f766e",
+  "bg": "#f0fdfa",
+  "keyPoint": "Uzbek uses specialized non-finite verbal converbs like -gach (upon doing), -guncha (until), and -gani (in order to) to link subordinate actions seamlessly without conjunctions.",
+  "structure": {
+   "headers": [
+    "Converb",
+    "Primary Meaning",
+    "Uzbek Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-gach / -kach / -qach",
+      "Immediate sequence / upon",
+      "kelgach",
+      "upon arriving / as soon as he came"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-guncha / -kuncha / -quncha",
+      "Temporal limit ('until / before')",
+      "yetguncha",
+      "until reaching / arriving"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-gani / -kani / -qani",
+      "Direct purposive ('in order to')",
+      "koʻrgani",
+      "in order to see"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-gani uchun",
+      "Causal rationale ('because of doing')",
+      "bormagani uchun",
+      "because he/she did not go"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0d9488",
+    "label": "Upon Completion (-gach)",
+    "example": "Uyga kelgach, darhol dars qilishga oʻtirdi.",
+    "translation": ""
+   },
+   {
+    "color": "#14b8a6",
+    "label": "Duration Until a Boundary (-guncha)",
+    "example": "Yomgʻir tintoʻxtaguncha kutubxonada turamiz.",
+    "translation": ""
+   },
+   {
+    "color": "#2dd4bf",
+    "label": "Movement for Purpose (-gani)",
+    "example": "Doʻstimni koʻrgani kasalxonaga bordim.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Majlis tugagach, barcha qatnashchilar tarqaldi.",
+    "ko": "",
+    "highlight": "tugagach"
+   },
+   {
+    "en": "Quyosh botguncha dalada ishladik.",
+    "ko": "",
+    "highlight": "botguncha"
+   },
+   {
+    "en": "Biz yangi filmni tomosha qilgani kinoteatrga keldik.",
+    "ko": "",
+    "highlight": "qilgani"
+   },
+   {
+    "en": "Universitetni bitirgach, chet elga ketmoqchi.",
+    "ko": "",
+    "highlight": "bitirgach"
+   },
+   {
+    "en": "Avtobus kelguncha kutishga toʻgʻri keladi.",
+    "ko": "",
+    "highlight": "kelguncha"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Men kitobni oʻqish uchun bordim (to the library).",
+    "right": "Men kitob oʻqigani kutubxonaga bordim.",
+    "note": "With verbs of motion like 'bormoq' or 'kelmoq', the converb -gani is far more natural than using the postposition 'uchun'."
+   },
+   {
+    "wrong": "U kelgach paytda gaplashamiz.",
+    "right": "U kelgach, gaplashamiz.",
+    "note": "-gach already contains the temporal relation 'upon/after'; combining it with 'paytda' is redundant."
+   },
+   {
+    "wrong": "Sen qaytguncha qadar kutaman.",
+    "right": "Sen qaytguncha kutaman.",
+    "note": "The suffix -guncha already expresses 'until'; adding 'qadar' is redundant in standard Uzbek."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "We worked non-stop until the sun went down. Quyosh ___ tinimsiz ishladik.",
+    "options": [
+     "botgach",
+     "botguncha",
+     "botgani",
+     "botsa"
+    ],
+    "answer": 1,
+    "explanation": "-guncha expresses 'until' a temporal boundary is met."
+   },
+   {
+    "question": "Immediately upon arriving in Tashkent, he phoned his parents.",
+    "options": [
+     "yetib borguncha",
+     "yetib borgach",
+     "yetib borgani",
+     "yetib borib"
+    ],
+    "answer": 1,
+    "explanation": "-gach signifies 'upon / immediately after doing'."
+   },
+   {
+    "question": "Onam meva sotib ___ bozorga ketdi.",
+    "options": [
+     "olgach",
+     "olguncha",
+     "olgani",
+     "olsa"
+    ],
+    "answer": 2,
+    "explanation": "Motion towards a destination with an objective requires the purposive converb -gani ('in order to buy')."
+   },
+   {
+    "question": "U darsga ___ uchun mavzuni yaxshi tushunmadi.",
+    "options": [
+     "kelmagani",
+     "kelgach",
+     "kelguncha",
+     "kelib"
+    ],
+    "answer": 0,
+    "explanation": "-gani uchun expresses reason/cause ('because he did not come')."
+   }
+  ],
+  "tip": "Pay attention to consonant harmony: the initial 'g' in -gach, -guncha, and -gani hardens to 'k' after voiceless consonants (ek-kach) and to 'q' after back velar 'q' (chiq-qach)."
+ }
+]

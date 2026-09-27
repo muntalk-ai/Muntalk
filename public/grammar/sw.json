@@ -1,0 +1,3373 @@
+[
+ {
+  "id": "sw-a1-noun-classes-m-wa",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "👥",
+  "title": "The M-/Wa- Noun Class and Subject Prefixes",
+  "subtitle": "Human nouns and their mandatory verbal agreements",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Nouns denoting human beings take the prefix m- in the singular and wa- in the plural, governing the verbal subject prefixes a- and wa-.",
+  "structure": {
+   "headers": [
+    "Grammatical Person / Number",
+    "Noun Form",
+    "Subject Prefix",
+    "Example Sentence"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Singular (Class 1)",
+      "mtu (person)",
+      "a-",
+      "Mtu anasoma."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural (Class 2)",
+      "watu (people)",
+      "wa-",
+      "Watu wanasoma."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "1st Person Singular",
+      "mimi (I)",
+      "ni-",
+      "Mimi ninasoma."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd Person Singular",
+      "wewe (you)",
+      "u-",
+      "Wewe unasoma."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Singular Human Subjects",
+    "example": "Mwalimu anafundisha Kiswahili vizuri.",
+    "translation": ""
+   },
+   {
+    "color": "#06B6D4",
+    "label": "Plural Human Subjects",
+    "example": "Wanafunzi wanajifunza darasani leo.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Personal Pronoun Concord",
+    "example": "Mimi ninafurahi kukutana na wewe.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mtoto analala sasa hivi kitandani.",
+    "ko": "",
+    "highlight": "Mtoto analala"
+   },
+   {
+    "en": "Watoto wanalala sasa hivi kitandani.",
+    "ko": "",
+    "highlight": "Watoto wanalala"
+   },
+   {
+    "en": "Mgeni anafika nyumbani leo jioni.",
+    "ko": "",
+    "highlight": "Mgeni anafika"
+   },
+   {
+    "en": "Wageni wanafika nyumbani leo jioni.",
+    "ko": "",
+    "highlight": "Wageni wanafika"
+   },
+   {
+    "en": "Mtu anatembea polepole barabarani.",
+    "ko": "",
+    "highlight": "Mtu anatembea"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mtu wanasoma kitabu hiki.",
+    "right": "Mtu anasoma kitabu hiki.",
+    "note": "A singular noun in the M-/Wa- class must take the singular subject concord 'a-', never plural 'wa-'."
+   },
+   {
+    "wrong": "Wanafunzi anasoma kitabu kile.",
+    "right": "Wanafunzi wanasoma kitabu kile.",
+    "note": "Plural M-/Wa- nouns like wanafunzi require the matching plural agreement prefix 'wa-' on the verb."
+   },
+   {
+    "wrong": "Mimi anasoma Kiswahili chuoni.",
+    "right": "Mimi ninasoma Kiswahili chuoni.",
+    "note": "First person singular 'mimi' triggers the subject prefix 'ni-', not third person 'a-'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The teacher is speaking. -> 'Mwalimu ___sema.'",
+    "options": [
+     "ana",
+     "wana",
+     "nina",
+     "mna"
+    ],
+    "answer": 0,
+    "explanation": "A singular human noun requires the third-person singular prefix 'a-', forming 'anasema'."
+   },
+   {
+    "question": "The children are playing. -> 'Watoto ___cheza.'",
+    "options": [
+     "ana",
+     "wa",
+     "wana",
+     "tuna"
+    ],
+    "answer": 2,
+    "explanation": "Plural human nouns take 'wa-' subject agreement combined with tense prefix '-na-', yielding 'wanacheza'."
+   },
+   {
+    "question": "Choose the correct plural form of 'Mgeni anafika.'",
+    "options": [
+     "Wageni anafika.",
+     "Mageni wanafika.",
+     "Watu anafika.",
+     "Wageni wanafika."
+    ],
+    "answer": 3,
+    "explanation": "'Mgeni' pluralizes to 'wageni' and its verb prefix shifts from 'a-' to 'wa-', giving 'Wageni wanafika.'"
+   },
+   {
+    "question": "You (singular) are reading. -> 'Wewe ___soma.'",
+    "options": [
+     "anasoma",
+     "unasoma",
+     "ninasoma",
+     "wanasoma"
+    ],
+    "answer": 1,
+    "explanation": "Second person singular pronoun 'wewe' takes the subject concord 'u-', resulting in 'unasoma'."
+   }
+  ],
+  "tip": "Always remember: every human being belongs syntactically to the M-/Wa- class, so regardless of biological irregularities, the verb takes 'a-' in the singular and 'wa-' in the plural."
+ },
+ {
+  "id": "sw-a1-present-tense-na",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#2563EB",
+  "emoji": "⏳",
+  "title": "Present Continuous and Habitual Tense Prefix -na-",
+  "subtitle": "Building verbs for current and ongoing actions",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The infix -na- slots directly between the subject prefix and the verb root to indicate ongoing present actions.",
+  "structure": {
+   "headers": [
+    "Prefix Slot",
+    "Component",
+    "Example",
+    "Combined Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Subject Concord",
+      "ni- (I)",
+      "ni-",
+      "I (subject)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Tense Marker",
+      "-na- (present)",
+      "-na-",
+      "am/is/are doing"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Verb Stem",
+      "-penda (like/love)",
+      "-penda",
+      "action core"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Complete Word",
+      "ni + na + penda",
+      "ninapenda",
+      "'I like' or 'I am loving'"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Actions Happening Now",
+    "example": "Ninapika chakula cha jioni jikoni.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Habitual Realities",
+    "example": "Juma anafanya kazi katika benki kubwa.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Current States & Perceptions",
+    "example": "Tunaona mlima mzuri kutoka hapa.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mimi ninakula ndizi tamu sana.",
+    "ko": "",
+    "highlight": "ninakula"
+   },
+   {
+    "en": "Yeye anasoma barua kutoka kwa rafiki.",
+    "ko": "",
+    "highlight": "anasoma"
+   },
+   {
+    "en": "Sisi tunajifunza lugha ya Kiswahili.",
+    "ko": "",
+    "highlight": "tunajifunza"
+   },
+   {
+    "en": "Wao wanatembea bustanini kila asubuhi.",
+    "ko": "",
+    "highlight": "wanatembea"
+   },
+   {
+    "en": "Wewe unaandika barua pepe sasa.",
+    "ko": "",
+    "highlight": "unaandika"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Nienda shuleni asubuhi hii.",
+    "right": "Ninaenda shuleni asubuhi hii.",
+    "note": "Swahili requires an explicit tense prefix; you cannot attach the subject marker directly to the root for present actions."
+   },
+   {
+    "wrong": "Mimi ninasoma kitabu jana.",
+    "right": "Mimi nilisoma kitabu jana.",
+    "note": "The infix '-na-' represents present time; past events require the past tense marker '-li-'."
+   },
+   {
+    "wrong": "Yeye napenda chai tamu.",
+    "right": "Yeye anapenda chai tamu.",
+    "note": "Do not omit the subject marker 'a-'; '-na-' alone cannot carry personhood on standard verbs."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "We are drinking water right now. -> 'Sisi ___kunywa maji.'",
+    "options": [
+     "tunakunywa",
+     "tuna",
+     "wanakunywa",
+     "ninakunywa"
+    ],
+    "answer": 1,
+    "explanation": "The blank precedes 'kunywa', so the subject concord 'tu-' plus present marker '-na-' gives 'tuna'."
+   },
+   {
+    "question": "I am studying today. -> 'Mimi ___ Kiswahili leo.'",
+    "options": [
+     "anasoma",
+     "wanasoma",
+     "ninasoma",
+     "unasoma"
+    ],
+    "answer": 2,
+    "explanation": "First-person singular uses 'ni-' followed by present tense '-na-' and the stem '-soma': 'ninasoma'."
+   },
+   {
+    "question": "Which sentence correctly expresses 'They are arriving'?",
+    "options": [
+     "Wanafika sasa.",
+     "Wafika sasa.",
+     "Anafika sasa.",
+     "Mnafika sasa."
+    ],
+    "answer": 0,
+    "explanation": "'Wao' (they) takes 'wa-' plus present tense '-na-' plus '-fika', yielding 'Wanafika sasa.'"
+   },
+   {
+    "question": "You (plural) are listening. -> 'Ninyi ___sikiliza.'",
+    "options": [
+     "tunasikiliza",
+     "wanasikiliza",
+     "unasikiliza",
+     "mnasikiliza"
+    ],
+    "answer": 3,
+    "explanation": "The second person plural concord is 'm-' (before consonants) / 'mu-', combined with '-na-' to produce 'mnasikiliza'."
+   }
+  ],
+  "tip": "Monosyllabic verbs (like kula 'eat' and kunywa 'drink') keep their infinitive prefix 'ku-' in the present affirmative: ninakula, not *ninala!"
+ },
+ {
+  "id": "sw-a1-simple-negation",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#DC2626",
+  "emoji": "🚫",
+  "title": "Present Tense Negation with ha-...-i",
+  "subtitle": "Forming negative verbs in the present tense",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "To negate the present tense, apply negative subject prefixes, drop the tense marker -na-, and change the final verb vowel from -a to -i.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Affirmative",
+    "Negative Prefix",
+    "Negative Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "mimi (I)",
+      "ninasoma",
+      "si-",
+      "sisomi"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "wewe (you)",
+      "unasoma",
+      "hu-",
+      "husomi"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "yeye (he/she)",
+      "anasoma",
+      "ha-",
+      "hasomi"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "sisi (we)",
+      "tunasoma",
+      "hatu-",
+      "hatusomi"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "wao (they)",
+      "wanasoma",
+      "hawa-",
+      "hawasomi"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Denying Current Actions",
+    "example": "Mimi sisomi gazeti hili leo.",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Refusing or Disliking",
+    "example": "Hatudaki maziwa baridi asubuhi.",
+    "translation": ""
+   },
+   {
+    "color": "#B91C1C",
+    "label": "Absence of Habitual Practice",
+    "example": "Yeye havuti sigara hata kidogo.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mimi sitaki chai ya moto sasa.",
+    "ko": "",
+    "highlight": "sitaki"
+   },
+   {
+    "en": "Wewe huelewi somo hili gumu.",
+    "ko": "",
+    "highlight": "huelewi"
+   },
+   {
+    "en": "Juma halali mchana kamwe.",
+    "ko": "",
+    "highlight": "halali"
+   },
+   {
+    "en": "Sisi hatuendi sokoni leo asubuhi.",
+    "ko": "",
+    "highlight": "hatuendi"
+   },
+   {
+    "en": "Wao hawanywi maji machafu kamwe.",
+    "ko": "",
+    "highlight": "hawanywi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mimi hanasoma kitabu.",
+    "right": "Mimi sisomi kitabu.",
+    "note": "Negation drops '-na-' entirely; for 'mimi', the fused prefix is 'si-', and final '-a' becomes '-i'."
+   },
+   {
+    "wrong": "Yeye halala kitandani sasa.",
+    "right": "Yeye halali kitandani sasa.",
+    "note": "Bantu-origin verbs ending in '-a' must shift their final vowel to '-i' in present negation (lala -> lali)."
+   },
+   {
+    "wrong": "Sisi hatupendi maji.",
+    "right": "Sisi hatupendi maji.",
+    "note": "Verbs borrowed from Arabic (like jaribu, fahamu) do not shift their final vowel to '-i', but native ones do."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I do not want. -> 'Mimi ___.'",
+    "options": [
+     "ninataka",
+     "sitaki",
+     "hutaki",
+     "hataki"
+    ],
+    "answer": 1,
+    "explanation": "First person negative replaces 'ni-' with 'si-', drops '-na-', and changes '-taka' to '-taki'."
+   },
+   {
+    "question": "He does not speak Swahili. -> 'Yeye ___ Kiswahili.'",
+    "options": [
+     "hasemi",
+     "sisemi",
+     "husemi",
+     "hawasemi"
+    ],
+    "answer": 0,
+    "explanation": "Third person singular negative prefix is 'ha-' paired with the modified verb stem 'semi'."
+   },
+   {
+    "question": "They do not know. -> 'Wao ___.'",
+    "options": [
+     "hatujui",
+     "hawajui",
+     "hamjui",
+     "hawajua"
+    ],
+    "answer": 1,
+    "explanation": "'Wao' negates with 'hawa-' + 'jui' (from '-jua' with final vowel shifting to '-i')."
+   },
+   {
+    "question": "What is the negative present form of 'Wewe unafika'?",
+    "options": [
+     "Sifiki",
+     "Hafiki",
+     "Hufiki",
+     "Hatufiki"
+    ],
+    "answer": 2,
+    "explanation": "'Wewe' negates with 'hu-', tense prefix '-na-' drops, and '-fika' becomes '-fiki'."
+   }
+  ],
+  "tip": "Verbs borrowed from Arabic (ending in -e, -i, or -u, such as 'kusamehe', 'kufikiri', 'kujibu') retain their endings in the negative: 'sisamehe', 'sifikiri', 'sijibu'."
+ },
+ {
+  "id": "sw-a1-past-future-li-ta",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#059669",
+  "emoji": "🗓️",
+  "title": "Past (-li-) and Future (-ta-) Tenses and Their Negation",
+  "subtitle": "Talking about yesterday and tomorrow with -li-, -ta-, and negative -ku-",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Past tense uses -li- (negated with -ku-) while future tense uses -ta- (negated with ha-...-ta- without changing the verb's final vowel).",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Affirmative Marker",
+    "Negative Marker",
+    "Example Pair"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Past Affirmative",
+      "-li-",
+      "—",
+      "Nilisoma (I read)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Negative",
+      "—",
+      "-ku- (final -a stays)",
+      "Sikusoma (I didn't read)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Future Affirmative",
+      "-ta-",
+      "—",
+      "Nitasoma (I will read)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Future Negative",
+      "—",
+      "ha-...-ta-",
+      "Sitasoma (I won't read)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Completed Past Events",
+    "example": "Jana nilinunua matunda sokoni.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Past Negative Non-Events",
+    "example": "Hawa watoto hawakuenda shuleni jana.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Future Commitments",
+    "example": "Kesho tutasafiri kwenda mji wa Arusha.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mimi niliona nyota angani jana usiku.",
+    "ko": "",
+    "highlight": "niliona"
+   },
+   {
+    "en": "Sisi hatukuona simba katika mbuga ile.",
+    "ko": "",
+    "highlight": "hatukuona"
+   },
+   {
+    "en": "Wao watakuja kututembelea wiki ijayo.",
+    "ko": "",
+    "highlight": "watakuja"
+   },
+   {
+    "en": "Wewe hutakula chakula chote kile peke yako.",
+    "ko": "",
+    "highlight": "hutakula"
+   },
+   {
+    "en": "Asha alimaliza kazi yake mapema jana.",
+    "ko": "",
+    "highlight": "alimaliza"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mimi sikusomi kitabu jana.",
+    "right": "Mimi sikusoma kitabu jana.",
+    "note": "In past negation with '-ku-', the final vowel remains '-a'; do not change it to '-i'."
+   },
+   {
+    "wrong": "Kesho sitasomi somo hili.",
+    "right": "Kesho sitasoma somo hili.",
+    "note": "Future negation retains the normal final '-a' of the verb root: 'sitasoma', not 'sitasomi'."
+   },
+   {
+    "wrong": "Yeye hakuenda jana.",
+    "right": "Yeye hakuenda jana.",
+    "note": "This spelling is standard, but watch out for confusing past negative 'haku-' with present negative 'ha-'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday she arrived. -> 'Jana yeye ___.'",
+    "options": [
+     "atafika",
+     "alifika",
+     "anafika",
+     "hakufika"
+    ],
+    "answer": 1,
+    "explanation": "Past affirmative for 'yeye' requires subject marker 'a-' and past marker '-li-': 'alifika'."
+   },
+   {
+    "question": "We did not go yesterday. -> 'Sisi ___ jana.'",
+    "options": [
+     "hatutaenda",
+     "hatuendi",
+     "tulienda",
+     "hatukuenda"
+    ],
+    "answer": 3,
+    "explanation": "Past negation for 'sisi' combines negative prefix 'hatu-' with past negative marker '-ku-': 'hatukuenda'."
+   },
+   {
+    "question": "Tomorrow they will dance. -> 'Kesho wao ___.'",
+    "options": [
+     "watacheza",
+     "walicheza",
+     "wanacheza",
+     "hawachezi"
+    ],
+    "answer": 0,
+    "explanation": "Future tense for 'wao' requires prefix 'wa-' with future marker '-ta-': 'watacheza'."
+   },
+   {
+    "question": "I will not drink coffee. -> 'Mimi ___ kahawa.'",
+    "options": [
+     "sikunywa",
+     "sitakunywa",
+     "sinywi",
+     "ninakunywa"
+    ],
+    "answer": 1,
+    "explanation": "Future negative combines 1st person 'si-' + '-ta-' + verb root (monosyllabic retains 'ku-'): 'sitakunywa'."
+   }
+  ],
+  "tip": "Unlike present negation which forces '-a' to turn into '-i', both past negative (-ku-) and future negative (-ta-) KEEP the verb's final -a!"
+ },
+ {
+  "id": "sw-a1-possessive-concords",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#9333EA",
+  "emoji": "🏷️",
+  "title": "Possessive Concords with -a (The Associative Particle)",
+  "subtitle": "Expressing 'my', 'your', 'his/her', and 'of' across noun classes",
+  "color": "#9333EA",
+  "bg": "#FAF5FF",
+  "keyPoint": "Possessive stems (-angu, -ako, -ake) and the preposition 'of' (-a) prefix agreement markers that strictly match the class of the possessed noun.",
+  "structure": {
+   "headers": [
+    "Possessor Stem",
+    "Meaning",
+    "Class 1 (M- Sing.)",
+    "Class 2 (Wa- Plur.)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-angu",
+      "my / mine",
+      "wangu (mtoto wangu)",
+      "wangu (watoto wangu)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ako",
+      "your / yours (sg.)",
+      "wako (rafiki wako)",
+      "wako (marafiki wako)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ake",
+      "his / her / its",
+      "wake (mama wake)",
+      "wake (mama zake/wake)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-a (particle)",
+      "of (associative)",
+      "wa (mwalimu wa shule)",
+      "wa (walimu wa shule)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#9333EA",
+    "label": "Personal Possession",
+    "example": "Huyu ni kaka yangu mpendwa.",
+    "translation": ""
+   },
+   {
+    "color": "#DB2777",
+    "label": "Associative 'Of' Relationships",
+    "example": "Hiki ni kitabu cha mwalimu mkuu.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Plural Possessions",
+    "example": "Mifuko yetu mizito iko mezani.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mtoto wangu anasoma kitabu kizuri.",
+    "ko": "",
+    "highlight": "Mtoto wangu"
+   },
+   {
+    "en": "Kitabu changu kiko juu ya meza.",
+    "ko": "",
+    "highlight": "Kitabu changu"
+   },
+   {
+    "en": "Nyumba yetu ina madirisha makubwa mawili.",
+    "ko": "",
+    "highlight": "Nyumba yetu"
+   },
+   {
+    "en": "Gari la baba lina rangi nyeusi.",
+    "ko": "",
+    "highlight": "Gari la"
+   },
+   {
+    "en": "Rafiki zangu wanafika kesho asubuhi.",
+    "ko": "",
+    "highlight": "Rafiki zangu"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Kitabu wangu kimepotea.",
+    "right": "Kitabu changu kimepotea.",
+    "note": "'Kitabu' belongs to the Ki-/Vi- class (Class 7), so the possessive concord must be 'ch-' (changu), not human 'wangu'."
+   },
+   {
+    "wrong": "Mtoto la mwalimu anacheka.",
+    "right": "Mtoto wa mwalimu anacheka.",
+    "note": "'Mtoto' belongs to the M-/Wa- human class; the associative particle 'of' must take 'w-', becoming 'wa', not 'la'."
+   },
+   {
+    "wrong": "Mimi nina gari ya baba.",
+    "right": "Mimi nina gari la baba.",
+    "note": "'Gari' belongs to the Ji-/Ma- noun class (Class 5), whose associative concord is 'l-', making 'la baba'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "My child is resting. -> 'Mtoto ___ anapumzika.'",
+    "options": [
+     "changu",
+     "yangu",
+     "wangu",
+     "langu"
+    ],
+    "answer": 2,
+    "explanation": "'Mtoto' is a Class 1 (human) noun, requiring the agreement consonant 'w-', yielding 'wangu'."
+   },
+   {
+    "question": "The book of the student. -> 'Kitabu ___ mwanafunzi.'",
+    "options": [
+     "wa",
+     "cha",
+     "ya",
+     "la"
+    ],
+    "answer": 1,
+    "explanation": "'Kitabu' belongs to Class 7 (Ki- class), which takes the associative particle 'cha' (ki + a -> cha)."
+   },
+   {
+    "question": "Our house is large. -> 'Nyumba ___ ni kubwa.'",
+    "options": [
+     "wetu",
+     "chetu",
+     "letu",
+     "yetu"
+    ],
+    "answer": 3,
+    "explanation": "'Nyumba' (Class 9 N-class) takes the possessive concord 'y-', making 'yetu' (our house)."
+   },
+   {
+    "question": "His friend arrived. -> 'Rafiki ___ alifika.'",
+    "options": [
+     "wake",
+     "chake",
+     "lake",
+     "zake"
+    ],
+    "answer": 0,
+    "explanation": "Even though 'rafiki' takes loanword noun patterns, all animate persons take Class 1 agreement 'wake'."
+   }
+  ],
+  "tip": "Possessives always follow the noun they describe in Swahili: say 'kitabu changu' (literally 'book my'), never *changu kitabu!"
+ },
+ {
+  "id": "sw-a1-locative-clitic-ni",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "📍",
+  "title": "Locative Suffix -ni and Spatial Demonstratives",
+  "subtitle": "Turn ordinary nouns into locations and navigate space with precise demonstratives",
+  "color": "#3B82F6",
+  "bg": "#EFF6FF",
+  "keyPoint": "Appending the suffix -ni turns a standard noun into a location, while demonstratives distinguish specific (hapa), general (huku), and interior (humu) spatial dimensions.",
+  "structure": {
+   "headers": [
+    "Dimension",
+    "Locative Class",
+    "Demonstrative",
+    "Locative Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Specific / Definite (Class 16)",
+      "pa-",
+      "hapa",
+      "nyumbani hapa"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "General / Direction (Class 17)",
+      "ku-",
+      "huku",
+      "shuleni huku"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Inside / Interior (Class 18)",
+      "mu-",
+      "humu",
+      "chumbani humu"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Specific spot (Class 16)",
+    "example": "Mwalimu yupo mezani hapa.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Broad area or direction (Class 17)",
+    "example": "Watoto wanakimbia uwanjani huku.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Enclosed inner space (Class 18)",
+    "example": "Kalamu ipo mfukoni humu.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Wanafunzi wote wanasoma darasani sasa.",
+    "ko": "",
+    "highlight": "darasani"
+   },
+   {
+    "en": "Tafadhali kaa hapa mezani.",
+    "ko": "",
+    "highlight": "hapa"
+   },
+   {
+    "en": "Kuna baridi kali huku mjini.",
+    "ko": "",
+    "highlight": "huku"
+   },
+   {
+    "en": "Ingia humu chumbani haraka.",
+    "ko": "",
+    "highlight": "humu"
+   },
+   {
+    "en": "Mama anapika chakula jikoni.",
+    "ko": "",
+    "highlight": "jikoni"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ninakwenda Nairobi-ni.",
+    "right": "Ninakwenda Nairobi.",
+    "note": "Proper nouns of places like cities and countries never take the suffix -ni."
+   },
+   {
+    "wrong": "Kitabu kipo kwa meza.",
+    "right": "Kitabu kipo mezani.",
+    "note": "Do not use 'kwa' for inanimate locations; attach the locative clitic -ni to the noun instead."
+   },
+   {
+    "wrong": "Tupo darasani hapa ndani.",
+    "right": "Tupo darasani humu.",
+    "note": "Use 'humu' directly to denote inside/interior location rather than mixing standard demonstratives with adverbs."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'at home' in Swahili?",
+    "options": [
+     "nyumba",
+     "nyumbani",
+     "kwa nyumba",
+     "kunyumba"
+    ],
+    "answer": 1,
+    "explanation": "Adding -ni to 'nyumba' transforms the noun into the locative form 'nyumbani'."
+   },
+   {
+    "question": "Select the correct demonstrative for 'inside this room': 'Chumbani ___.'",
+    "options": [
+     "hapa",
+     "huku",
+     "humu",
+     "hii"
+    ],
+    "answer": 2,
+    "explanation": "'Humu' is the Class 18 demonstrative denoting interior or contained space ('inside')."
+   },
+   {
+    "question": "Which sentence correctly says 'I am going to Arusha'?",
+    "options": [
+     "Ninakwenda Arushani.",
+     "Ninakwenda Arusha.",
+     "Ninakwenda kwa Arusha.",
+     "Ninakwenda mwa Arusha."
+    ],
+    "answer": 1,
+    "explanation": "Proper city names do not receive the locative suffix -ni."
+   },
+   {
+    "question": "Choose the demonstrative denoting an exact, definite spot nearby: 'Keti ___.'",
+    "options": [
+     "hapa",
+     "humu",
+     "huku",
+     "pale"
+    ],
+    "answer": 0,
+    "explanation": "'Hapa' indicates a specific, definite proximal point (Class 16)."
+   }
+  ],
+  "tip": "Never attach -ni to proper place names like Dar es Salaam, Mombasa, or Kenya."
+ },
+ {
+  "id": "sw-a2-noun-classes-ki-vi-m-mi",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "🌿",
+  "title": "Inanimate Noun Classes (Ki-/Vi- and M-/Mi-)",
+  "subtitle": "Master concord prefixes for concrete objects, tools, plants, and trees",
+  "color": "#10B981",
+  "bg": "#ECFDF5",
+  "keyPoint": "Inanimate nouns dictate all adjectives, verbs, and pronouns in a sentence through strict class concords: ki-/vi- for Class 7/8 and m-/mi- (verb u-/i-) for Class 3/4.",
+  "structure": {
+   "headers": [
+    "Noun Class",
+    "Noun Prefix",
+    "Adjective Prefix",
+    "Subject Verb Prefix"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Class 7 (Ki- Singular)",
+      "ki- / ch-",
+      "ki- / ch-",
+      "ki- / ch-"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Class 8 (Vi- Plural)",
+      "vi- / vy-",
+      "vi- / vy-",
+      "vi- / vy-"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 3 (M- Tree/Singular)",
+      "m- / mw-",
+      "m- / mw-",
+      "u-"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 4 (Mi- Plural)",
+      "mi- / my-",
+      "mi- / my-",
+      "i-"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Artifacts and small objects (Ki-/Vi-)",
+    "example": "Kitabu kidogo kilianguka.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Trees, plants, and natural items (M-/Mi-)",
+    "example": "Mti mrefu umeanguka barabarani.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Plural agreement across class boundaries",
+    "example": "Miti mirefu inaota vizuri.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kiti hiki kizuri kimenunuliwa jana.",
+    "ko": "",
+    "highlight": "kizuri"
+   },
+   {
+    "en": "Viti hivi vipya vilivunjika asubuhi.",
+    "ko": "",
+    "highlight": "vilivunjika"
+   },
+   {
+    "en": "Mlima ule mrefu una theluji nyingi.",
+    "ko": "",
+    "highlight": "mrefu"
+   },
+   {
+    "en": "Mito hii mikubwa inapita hapa.",
+    "ko": "",
+    "highlight": "inapita"
+   },
+   {
+    "en": "Chakula kitamu kiliandaliwa mezani.",
+    "ko": "",
+    "highlight": "kitamu"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mti mmoja uliangua, mti ule ulikuwa mkubwa sana.",
+    "right": "Mti mmoja ulianguka, mti ule ulikuwa mkubwa sana.",
+    "note": "Remember Class 3 takes the subject prefix 'u-', never 'a-' (which is reserved exclusively for people and animals in Class 1)."
+   },
+   {
+    "wrong": "Kitabu yangu kimepotea.",
+    "right": "Kitabu changu kimepotea.",
+    "note": "Possessives must agree with Class 7: 'changu', not the Class 9 form 'yangu'."
+   },
+   {
+    "wrong": "Miti mingi zilianguka.",
+    "right": "Miti mingi ilianguka.",
+    "note": "Class 4 plural nouns require the verbal subject prefix 'i-', not the Class 10 prefix 'zi-'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the agreement: 'Kisu kikali ___ nyama.' (The sharp knife cuts meat)",
+    "options": [
+     "anakata",
+     "kikata",
+     "kinakata",
+     "unakata"
+    ],
+    "answer": 2,
+    "explanation": "Class 7 nouns take the verbal subject prefix 'ki-', resulting in 'kinakata' in the present tense."
+   },
+   {
+    "question": "Which sentence exhibits correct Class 4 concord?",
+    "options": [
+     "Mifuko mizuri imenunuliwa.",
+     "Mifuko nzuri zimenunuliwa.",
+     "Mifuko mizuri zimenunuliwa.",
+     "Mifuko kizuri vimenunuliwa."
+    ],
+    "answer": 0,
+    "explanation": "Class 4 takes adjective prefix 'mi-' (mizuri) and verbal prefix 'i-' (imenunuliwa)."
+   },
+   {
+    "question": "Choose the correct plural form of 'Chombo kile kimevunjika':",
+    "options": [
+     "Vyombo kile vimevunjika.",
+     "Vyombo vile vimevunjika.",
+     "Vyombo hivyo vimevunjika.",
+     "Chombo vile kimevunjika."
+    ],
+    "answer": 1,
+    "explanation": "'Chombo' pluralizes to 'vyombo', and 'kile' pluralizes to 'vile' in Class 8."
+   },
+   {
+    "question": "Complete the sentence: 'Mti huu ___ matunda mengi.' (This tree has many fruits)",
+    "options": [
+     "yina",
+     "zina",
+     "vina",
+     "una"
+    ],
+    "answer": 3,
+    "explanation": "The subject concord for singular Class 3 nouns with the verb of association (-na) is 'u-', giving 'una'."
+   }
+  ],
+  "tip": "Even though Class 3 nouns start with 'm-' like Class 1 humans, their subject prefix on verbs is 'u-' (plural 'i-'), never 'a-' or 'wa-'."
+ },
+ {
+  "id": "sw-a2-object-infixes",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🎯",
+  "title": "Object Infixes and Pronominal Incorporation",
+  "subtitle": "Embed pronouns and direct objects directly inside the Swahili verb",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "Object infixes sit immediately preceding the verb root, and they are grammatically compulsory whenever referring to definite animate beings.",
+  "structure": {
+   "headers": [
+    "Target Object",
+    "Infix Marker",
+    "Full Verb Construction",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Person Sing. (me)",
+      "-ni-",
+      "a-na-ni-ona",
+      "he/she sees me"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person Sing. (him/her)",
+      "-m- / -mw-",
+      "a-na-m-penda",
+      "he/she loves him/her"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Person Plur. (you all)",
+      "-wa- / -ku...-eni",
+      "ni-na-wa-sikia",
+      "I hear you all"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Inanimate (it: Class 7)",
+      "-ki-",
+      "a-na-ki-soma",
+      "he/she is reading it (the book)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6366F1",
+    "label": "Definite animate object",
+    "example": "Ninampenda mtoto huyu sana.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Pronominal substitution (replacing noun)",
+    "example": "Je, unakiona kitabu change? Ndiyo, ninakiona.",
+    "translation": ""
+   },
+   {
+    "color": "#14B8A6",
+    "label": "Definite specific inanimate emphasis",
+    "example": "Niliununua mti ule sokoni.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mwalimu ananifundisha Kiswahili kila siku.",
+    "ko": "",
+    "highlight": "ananifundisha"
+   },
+   {
+    "en": "Je, umemwona Ali leo asubuhi?",
+    "ko": "",
+    "highlight": "umemwona"
+   },
+   {
+    "en": "Wazazi wanatupenda sisi watoto wao.",
+    "ko": "",
+    "highlight": "wanatupenda"
+   },
+   {
+    "en": "Nilikisoma kitabu chote usiku kucha.",
+    "ko": "",
+    "highlight": "Nilikisoma"
+   },
+   {
+    "en": "Askari waliwaona wezi wakikimbia.",
+    "ko": "",
+    "highlight": "waliwaona"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Niliona mtoto jana.",
+    "right": "Nilimwona mtoto jana.",
+    "note": "When the direct object is a specific human or animal, the object infix (-m-/-mw-) is mandatory."
+   },
+   {
+    "wrong": "Ninamwona wewe barabarani.",
+    "right": "Ninakuona barabarani.",
+    "note": "Use the second-person singular object infix '-ku-' when addressing 'you', not '-mw-'."
+   },
+   {
+    "wrong": "Alikula kile chakula bila kukiona.",
+    "right": "Alikila kile chakula bila kukiona.",
+    "note": "Monosyllabic verbs like 'kula' drop the infinitive 'ku-' when taking an object infix: 'ali-ki-la'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Insert the missing infix for 'I see you (singular)': 'Nina___ona.'",
+    "options": [
+     "ni",
+     "ku",
+     "m",
+     "wa"
+    ],
+    "answer": 1,
+    "explanation": "The 2nd person singular object infix is '-ku-' (ninakuona)."
+   },
+   {
+    "question": "Select the sentence where the object infix correctly refers to 'vitabu' (books):",
+    "options": [
+     "Ninavisoma vitabu vyote.",
+     "Ninakiona vitabu vyote.",
+     "Ninazisoma vitabu vyote.",
+     "Ninawasoma vitabu vyote."
+    ],
+    "answer": 0,
+    "explanation": "The object concord for Class 8 (vitabu) is '-vi-', producing 'ninavisoma'."
+   },
+   {
+    "question": "Which verb contains the 1st person plural ('us') object infix?",
+    "options": [
+     "Ananipenda",
+     "Anakupenda",
+     "Anatupenda",
+     "Anawapenda"
+    ],
+    "answer": 2,
+    "explanation": "'-tu-' is the 1st person plural object infix: 'a-na-tu-penda' (he/she loves us)."
+   },
+   {
+    "question": "Why is 'Nilimwona Juma' preferred over 'Niliona Juma'?",
+    "options": [
+     "It is in the past tense.",
+     "It includes a question marker.",
+     "The verb is irregular.",
+     "Specific human objects require an object concord."
+    ],
+    "answer": 3,
+    "explanation": "In Swahili, named or definite animate objects require an incorporated object infix."
+   }
+  ],
+  "tip": "Position rule: Subject Prefix + Tense Marker + [OBJECT INFIX] + Verb Root. The object infix always clings directly to the root!"
+ },
+ {
+  "id": "sw-a2-perfect-tense-me",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#F59E0B",
+  "emoji": "⏱️",
+  "title": "The Perfect Tense -me- vs State Verbs",
+  "subtitle": "Differentiate completed actions, present resultant states, and the negative -ja-",
+  "color": "#F59E0B",
+  "bg": "#FFFBEB",
+  "keyPoint": "The tense marker -me- denotes completed actions with current relevance or present bodily/mental states, while its negative counterpart replaces both subject prefix and tense with negative prefix + -ja-.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Affirmative Formula",
+    "Negative Formula",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Action Completed",
+      "a-me-fika",
+      "ha-ja-fika",
+      "he has arrived / not yet arrived"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Stative (Kusimama)",
+      "a-me-simama",
+      "ha-ja-simama",
+      "he is standing / not yet standing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Stative (Kukaa)",
+      "tu-me-kaa",
+      "ha-tu-ja-kaa",
+      "we are seated / we haven't sat down"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Stative (Kujua)",
+      "wa-me-jua",
+      "ha-wa-ja-jua",
+      "they have realized / don't yet know"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Resultant present state",
+    "example": "Mgonjwa amelala kitandani.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Action completed recently",
+    "example": "Wageni wamewasili salama.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "'Not yet' negation (-ja-)",
+    "example": "Bado hawajala chakula cha jioni.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Nimeshiba sana baada ya chakula kile.",
+    "ko": "",
+    "highlight": "Nimeshiba"
+   },
+   {
+    "en": "Maji ya mto yamekauka yote.",
+    "ko": "",
+    "highlight": "yamekauka"
+   },
+   {
+    "en": "Yule mtoto amesimama mlangoni.",
+    "ko": "",
+    "highlight": "amesimama"
+   },
+   {
+    "en": "Sijala chochote tangu asubuhi ya leo.",
+    "ko": "",
+    "highlight": "Sijala"
+   },
+   {
+    "en": "Je, gari limetengenezwa vizuri?",
+    "ko": "",
+    "highlight": "limetengenezwa"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ninasimama sasa (meaning: I am currently standing on my feet).",
+    "right": "Nimesimama sasa.",
+    "note": "Use '-me-' for stative verbs like 'kusimama' (to stand up) or 'kukaa' (to sit down) to describe the ongoing state of being seated/standing."
+   },
+   {
+    "wrong": "Hakufika bado.",
+    "right": "Hajafika bado.",
+    "note": "To convey 'has not yet done something', use the '-ja-' tense marker instead of the past negative '-ku-'."
+   },
+   {
+    "wrong": "Hajakula chakula.",
+    "right": "Hajala chakula.",
+    "note": "Monosyllabic verbs lose their infinitive 'ku-' prefix in the negative perfect with '-ja-'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'They are seated / sitting down'?",
+    "options": [
+     "Wanakaa",
+     "Wamekaa",
+     "Walikaa",
+     "Hawajakaa"
+    ],
+    "answer": 1,
+    "explanation": "'Kukaa' is a stative verb; the state of being seated uses the perfect marker '-me-', hence 'wamekaa'."
+   },
+   {
+    "question": "Negate the sentence: 'Wanafunzi wameondoka.'",
+    "options": [
+     "Wanafunzi hawajaondoka.",
+     "Wanafunzi hawakuondoka.",
+     "Wanafunzi hawaondoki.",
+     "Wanafunzi hawajaondoka bado."
+    ],
+    "answer": 0,
+    "explanation": "The affirmative perfect '-me-' negates directly with the negative subject prefix plus '-ja-' (hawajaondoka)."
+   },
+   {
+    "question": "Translate: 'I have not yet eaten.'",
+    "options": [
+     "Sili",
+     "Sikula",
+     "Sijala",
+     "Simekula"
+    ],
+    "answer": 2,
+    "explanation": "'Si-' (1st person negative) + '-ja-' (not yet) + '-la' (verb stem of kula without ku-) yields 'sijala'."
+   },
+   {
+    "question": "What does 'Nimechoka' mean?",
+    "options": [
+     "I will get tired.",
+     "I am tired.",
+     "I was tired yesterday.",
+     "I am not tired."
+    ],
+    "answer": 1,
+    "explanation": "'Kuchoka' is a stative verb. 'Nimechoka' translates as the present state 'I am tired'."
+   }
+  ],
+  "tip": "Whenever you want to say 'not yet' in Swahili, immediately reach for the negative prefix + -ja-! You can pair it with the adverb 'bado'."
+ },
+ {
+  "id": "sw-a2-habitual-hu",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "The Habitual Marker hu- and Infinitive Class Ku-",
+  "subtitle": "Express timeless truths, daily routines, and actions functioning as nouns",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "The habitual prefix hu- attaches directly to the verb base without any subject prefix for all persons, while the ku- infinitive functions both as 'to do' and as a verbal noun (Class 15).",
+  "structure": {
+   "headers": [
+    "Type",
+    "Morphology",
+    "Swahili Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Habitual Prefix",
+      "hu- + verb stem",
+      "Yeye huamka mapema",
+      "He/she usually wakes up early"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Habitual General Truth",
+      "hu- + verb stem",
+      "Mvua hunyesha Aprili",
+      "Rain usually falls in April"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Infinitive as Verb",
+      "ku- + stem",
+      "Ninapenda kusoma",
+      "I like to read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 15 Verbal Noun",
+      "ku- agreement (ku-/kwa)",
+      "Kusoma kwake kuzuri",
+      "His/her reading is good"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Universal truths & customs",
+    "example": "Ng'ombe hula majani kila siku.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Regular personal routines",
+    "example": "Mimi huamka alfajiri kufanya mazoezi.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Verbal noun subject (Class 15)",
+    "example": "Kuogelea baharini kunapendeza sana.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Walimu hufundisha wanafunzi shuleni.",
+    "ko": "",
+    "highlight": "hufundisha"
+   },
+   {
+    "en": "Yeye husafiri kwa ndege mara nyingi.",
+    "ko": "",
+    "highlight": "husafiri"
+   },
+   {
+    "en": "Kuvuta sigara kunaharibu afya ya binadamu.",
+    "ko": "",
+    "highlight": "kunaharibu"
+   },
+   {
+    "en": "Sisi hula ugali na samaki jioni.",
+    "ko": "",
+    "highlight": "hula"
+   },
+   {
+    "en": "Kuimba kwake kunapendeza wote.",
+    "ko": "",
+    "highlight": "Kuimba"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mimi ninahuamka mapema.",
+    "right": "Mimi huamka mapema.",
+    "note": "The habitual marker 'hu-' completely replaces the subject prefix and tense marker; never combine it with personal prefixes like 'ni-'."
+   },
+   {
+    "wrong": "Kusoma kile ni mzuri.",
+    "right": "Kusoma kule ni kuzuri.",
+    "note": "Class 15 verbal nouns starting with 'ku-' govern Class 15 concords: 'ku-' and 'kwa-', never Class 1 or 9 forms."
+   },
+   {
+    "wrong": "Yeye hupenda hakula nyama.",
+    "right": "Yeye hupenda kula nyama.",
+    "note": "The infinitive verb acting as a complement must retain standard 'ku-': 'kula'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank with the habitual marker: 'Wakulima ___ mahindi wakati wa masika.' (Farmers usually plant corn...)",
+    "options": [
+     "wanapanda",
+     "hupanda",
+     "hupandwa",
+     "walipanda"
+    ],
+    "answer": 1,
+    "explanation": "'Hupanda' expresses the habitual, timeless routine without personal subject prefixes."
+   },
+   {
+    "question": "How does Class 15 ('ku-') agree with an adjective? 'Kucheza kule ni ___.'",
+    "options": [
+     "mzuri",
+     "kizuri",
+     "kuzuri",
+     "pazuri"
+    ],
+    "answer": 2,
+    "explanation": "Infinitives belonging to Class 15 take the adjective concord 'ku-', producing 'kuzuri'."
+   },
+   {
+    "question": "Which sentence correctly uses the habitual aspect?",
+    "options": [
+     "Ndege huruka angani.",
+     "Ndege anahuruka angani.",
+     "Ndege nihuruka angani.",
+     "Ndege zinaruka angani."
+    ],
+    "answer": 0,
+    "explanation": "'Hu-' attaches directly to the stem 'ruka' without any preceding subject marker."
+   },
+   {
+    "question": "Choose the correct possessive concord for an infinitive: 'Kuandika ___ kumesaidia.' (Your writing has helped)",
+    "options": [
+     "yako",
+     "wako",
+     "chako",
+     "kwako"
+    ],
+    "answer": 3,
+    "explanation": "Class 15 nouns require the possessive concord 'kw-', making 'kwako' (your)."
+   }
+  ],
+  "tip": "The prefix hu- is the easiest verb form in Swahili: whether the subject is 'I', 'you', 'they', or 'elephants', hu- never alters its form or takes subject affixes!"
+ },
+ {
+  "id": "sw-a2-imperatives-subjunctive",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🗣️",
+  "title": "Imperatives and the Polite Subjunctive -e",
+  "subtitle": "Direct commands, plural forms, and polite requests using the final vowel shift",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Direct commands use the bare verb stem in the singular and end in -eni in the plural, while polite requests add subject prefixes and change the final vowel to -e.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Singular",
+    "Plural",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Direct Imperative",
+      "Soma!",
+      "Someni!",
+      "Read!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Monosyllabic Verb",
+      "Kula!",
+      "Kuleni!",
+      "Eat!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Polite Subjunctive",
+      "Usome",
+      "Msome",
+      "Please read / You should read"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Hortative (Let's)",
+      "Tusome",
+      "Tusomeni",
+      "Let's read"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Direct Order",
+    "example": "Funga mlango mara moja!",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Polite Request",
+    "example": "Tafadhali ufungue dirisha.",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Group Proposal",
+    "example": "Tuende pamoja sokoni leo.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ingia ndani sasa!",
+    "ko": "",
+    "highlight": "Ingia"
+   },
+   {
+    "en": "Watoto, someni vitabu vyenu!",
+    "ko": "",
+    "highlight": "someni"
+   },
+   {
+    "en": "Tafadhali, uketi hapa kando yangu.",
+    "ko": "",
+    "highlight": "uketi"
+   },
+   {
+    "en": "Tuanze mkutano bila kuchelewa.",
+    "ko": "",
+    "highlight": "Tuanze"
+   },
+   {
+    "en": "Kula chakula chako chote!",
+    "ko": "",
+    "highlight": "Kula"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "La ugali!",
+    "right": "Kula ugali!",
+    "note": "Monosyllabic verbs retain the infinitive prefix 'ku-' in the singular imperative."
+   },
+   {
+    "wrong": "Tafadhali soma kitabu.",
+    "right": "Tafadhali usome kitabu.",
+    "note": "Polite requests paired with 'tafadhali' require the subjunctive form ending in -e."
+   },
+   {
+    "wrong": "Endeni darasani!",
+    "right": "Endeni darasani! / Nendeni darasani!",
+    "note": "'Kwenda' irregular imperative plural commonly uses 'nendeni' or 'endeni', never combining with extra tense prefixes."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you politely tell one person: 'Please enter'?",
+    "options": [
+     "Uingie",
+     "Ingieni",
+     "Kuingia",
+     "Utaingia"
+    ],
+    "answer": 0,
+    "explanation": "The polite request uses the 2nd-person subject prefix 'u-' and changes the final vowel -a to -e."
+   },
+   {
+    "question": "What is the command telling multiple children to write?",
+    "options": [
+     "Andika",
+     "Uandike",
+     "Andikeni",
+     "Muandika"
+    ],
+    "answer": 2,
+    "explanation": "Plural commands are formed by dropping the final -a and appending -eni."
+   },
+   {
+    "question": "Choose the correct hortative for 'Let's drink water':",
+    "options": [
+     "Kunywa maji",
+     "Tunywe maji",
+     "Mnywe maji",
+     "Tunakunywa maji"
+    ],
+    "answer": 1,
+    "explanation": "The inclusive hortative 'let us' uses prefix 'tu-' with the subjunctive ending '-e'."
+   },
+   {
+    "question": "Which form is the correct direct command for the monosyllabic verb 'kuja' (to come)?",
+    "options": [
+     "Ja!",
+     "Uje!",
+     "Njoo!",
+     "Kuja!"
+    ],
+    "answer": 2,
+    "explanation": "'Kuja' is irregular in the imperative singular, taking the special suppletive form 'njoo!'"
+   }
+  ],
+  "tip": "Whenever you want to sound polite in Swahili, always swap the final -a of the verb to -e and precede it with 'u-' (singular) or 'm-' (plural)."
+ },
+ {
+  "id": "sw-a2-copulas-na-ndiyo",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "📍",
+  "title": "Copular Verbs: ni/si, kuwa na, and Locatives",
+  "subtitle": "Identity with ni/si, possession with -wa na, and location with -ko/-po/-mo",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Swahili distinguishes identity (ni/si), possession (subject marker + na), and relative location (subject marker + ko/po/mo).",
+  "structure": {
+   "headers": [
+    "Type",
+    "Affirmative",
+    "Negative",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Equative (Identity)",
+      "ni",
+      "si",
+      "Is / Are vs Is not / Are not"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Possessive",
+      "nina, una, ana...",
+      "sina, huna, hana...",
+      "To have vs Not to have"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Locative (-ko/-po/-mo)",
+      "yuko, kiko, wako...",
+      "hayuko, hakiko...",
+      "Location (general, specific, inside)"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Identity",
+    "example": "Juma ni mwalimu hodari.",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Possession",
+    "example": "Sisi tuna vitabu vingi.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Location",
+    "example": "Mwalimu yuko darasani sasa.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Yeye ni daktari katika hospitali kuu.",
+    "ko": "",
+    "highlight": "ni"
+   },
+   {
+    "en": "Mimi sina pesa za kutosha.",
+    "ko": "",
+    "highlight": "sina"
+   },
+   {
+    "en": "Kalamu yangu iko mezani.",
+    "ko": "",
+    "highlight": "iko"
+   },
+   {
+    "en": "Wao si wanafunzi wa shule hii.",
+    "ko": "",
+    "highlight": "si"
+   },
+   {
+    "en": "Mama hayuko nyumbani leo.",
+    "ko": "",
+    "highlight": "hayuko"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Yeye anakuwa mwalimu.",
+    "right": "Yeye ni mwalimu.",
+    "note": "Do not use 'anakuwa' for simple present identity; the invariant copula 'ni' is required."
+   },
+   {
+    "wrong": "Mimi nina mwanafunzi.",
+    "right": "Mimi ni mwanafunzi.",
+    "note": "'Nina' means 'I have'; identity requires 'mimi ni' (I am)."
+   },
+   {
+    "wrong": "Chakula kiko ndani ya sufuria.",
+    "right": "Chakula kimo ndani ya sufuria.",
+    "note": "Use '-mo' rather than '-ko' when referencing something specifically inside an enclosed space."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the negative identity: 'Huyu ___ ndugu yangu.' (This is not my brother.)",
+    "options": [
+     "ni",
+     "si",
+     "hana",
+     "hayuko"
+    ],
+    "answer": 1,
+    "explanation": "'Si' is the universal invariant negative copula for identification."
+   },
+   {
+    "question": "Choose the correct translation for 'They have houses':",
+    "options": [
+     "Wako na nyumba",
+     "Wana nyumba",
+     "Wani nyumba",
+     "Wamo nyumba"
+    ],
+    "answer": 1,
+    "explanation": "Possession in the present tense connects the subject prefix 'wa-' directly to 'na' without any copular verb."
+   },
+   {
+    "question": "Which phrase correctly says 'Where are you (singular)?'",
+    "options": [
+     "Uko wapi?",
+     "Upo gani?",
+     "Una wapi?",
+     "Ni wapi wewe?"
+    ],
+    "answer": 0,
+    "explanation": "'Uko wapi?' combines the 2nd person singular subject prefix 'u-' with the general locative enclitic '-ko'."
+   },
+   {
+    "question": "How do you say 'The book is not on the table' (kitabu class 7)?",
+    "options": [
+     "Kitabu si mezani",
+     "Kitabu hakina meza",
+     "Kitabu hakiko mezani",
+     "Kitabu hakimo meza"
+    ],
+    "answer": 2,
+    "explanation": "Noun class 7 (ki-) takes negative prefix 'ha-', concord 'ki-', and locative '-ko' yielding 'hakiko'."
+   }
+  ],
+  "tip": "Remember: -ko is for general/indefinite location, -po is for a specific pinpoint spot, and -mo is strictly inside a volume or enclosure."
+ },
+ {
+  "id": "sw-b1-noun-classes-ji-ma-n",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#EA580C",
+  "emoji": "🏷️",
+  "title": "The Ji-/Ma- and N- Classes and Concord",
+  "subtitle": "Navigating consonant shifts, zero-prefixes, and adjective agreements in Classes 5/6 and 9/10",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Class 5 often has no visible prefix on the noun but triggers li- prefixes on modifiers, whereas Class 9/10 nouns resist change but alter modifying adjectives through nasal assimilation.",
+  "structure": {
+   "headers": [
+    "Noun Class",
+    "Noun Prefix",
+    "Adjective Prefix",
+    "Example Concord"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Class 5 (Ji-)",
+      "Ø- / ji-",
+      "zuri -> zuri / ji-",
+      "Jicho zuri / Tunda kubwa"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 6 (Ma-)",
+      "ma- / me-",
+      "ma- / me-",
+      "Macho mazuri / Matunda makubwa"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Class 9 (N- sing.)",
+      "N- / Ø-",
+      "N- / Ø-",
+      "Nyumba ndogo / Barua fupi"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 10 (N- plur.)",
+      "N- / Ø-",
+      "N- / Ø-",
+      "Nyumba ndogo / Barua fupi"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Class 5/6 Fruits & Items",
+    "example": "Nanasi hili tamu lilianguka chini.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Class 9 Invariant Objects",
+    "example": "Gari langu jipya linakwenda kasi.",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Class 10 Plural Concord",
+    "example": "Nguo hizi zote zimekauka jua.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Gari hili zuri liliharibika jana.",
+    "ko": "",
+    "highlight": "hili zuri liliharibika"
+   },
+   {
+    "en": "Magari haya mapya yamefika bandarini.",
+    "ko": "",
+    "highlight": "haya mapya yamefika"
+   },
+   {
+    "en": "Ndizi moja mbivu imeanguka.",
+    "ko": "",
+    "highlight": "mbivu imeanguka"
+   },
+   {
+    "en": "Ndizi tano mbivu zimeanguka.",
+    "ko": "",
+    "highlight": "mbivu zimeanguka"
+   },
+   {
+    "en": "Neno hili zuri limeandikwa ukutani.",
+    "ko": "",
+    "highlight": "hili zuri limeandikwa"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jina yangu ni Ali.",
+    "right": "Jina langu ni Ali.",
+    "note": "'Jina' is in Class 5 (Ji-), so possessives take the 'l-' concord, yielding 'langu', not 'yangu'."
+   },
+   {
+    "wrong": "Nyumba hii ni kubwa mzuri.",
+    "right": "Nyumba hii ni kubwa nzuri.",
+    "note": "Adjectives modifying Class 9/10 nouns must match N-concord ('nzuri'), never human M/Wa concord ('mzuri')."
+   },
+   {
+    "wrong": "Maji hii ni safi.",
+    "right": "Maji haya ni safi.",
+    "note": "'Maji' (water) is an uncountable Class 6 (Ma-) noun and requires the demonstrative 'haya'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct demonstrative: 'Daraja ___ limevunjika.' (This bridge has broken - Class 5)",
+    "options": [
+     "hii",
+     "hili",
+     "hiki",
+     "huyu"
+    ],
+    "answer": 1,
+    "explanation": "'Daraja' belongs to Class 5, which uses the demonstrative prefix 'li-', resulting in 'hili'."
+   },
+   {
+    "question": "How do you say 'New books' when using 'vitabu' vs 'New pens' using 'kalamu' (Class 10)?",
+    "options": [
+     "Kalamu jipya",
+     "Kalamu mpya",
+     "Kalamu vipya",
+     "Kalamu mapya"
+    ],
+    "answer": 1,
+    "explanation": "The adjective '-pya' with Class 10 (N- class) takes the nasal consonant prefix 'm-', making 'mpya'."
+   },
+   {
+    "question": "Select the proper agreement: 'Macho yangu ___uma.' (My eyes hurt)",
+    "options": [
+     "yana",
+     "zina",
+     "lina",
+     "vina"
+    ],
+    "answer": 0,
+    "explanation": "'Macho' is the plural of 'jicho' (Class 6 Ma-), requiring the verbal subject agreement prefix 'ya-'."
+   },
+   {
+    "question": "Fill in the blank: 'Simba wawili ___kimbia mwituni.'",
+    "options": [
+     "i-",
+     "zi-",
+     "wa-",
+     "ya-"
+    ],
+    "answer": 2,
+    "explanation": "Although 'simba' morphologically belongs to Class 9/10, all animate beings (humans and animals) govern Class 1/2 verbal concord ('wa-')."
+   }
+  ],
+  "tip": "Biological animacy always trumps noun morphology: living creatures take Class 1/2 agreement (a-/wa-) even when their noun looks like Class 5 or Class 9."
+ },
+ {
+  "id": "sw-b1-relative-amba-o-infix",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#0D9488",
+  "emoji": "🔗",
+  "title": "Relative Clauses: amba- vs Synthetic -o-",
+  "subtitle": "Connecting clauses using separate amba- words or synthetic internal relative infixes",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "Swahili can express 'who/which/that' either by affixing the -o of reference to the independent base amba-, or by inserting the relative morpheme directly into the verb after the tense marker.",
+  "structure": {
+   "headers": [
+    "Strategy",
+    "Formula",
+    "Swahili Example",
+    "English Translation"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "amba- Relative",
+      "amba- + O-concord",
+      "mtu ambaye anasoma",
+      "the person who is reading"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Tensed Infix",
+      "SM + Tense + Rel + Root",
+      "mtu anayesoma",
+      "the person who is reading"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Tenseless General",
+      "SM + Root + Rel",
+      "mtu asomaye",
+      "the person who reads (habitual)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Relative",
+      "SM + si + Rel + Root",
+      "mtu asiyesoma",
+      "the person who does not read"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Complex Tenses with amba-",
+    "example": "Kitabu ambacho nimekisoma kimepotea.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Compact Infix in Speech",
+    "example": "Mwanafunzi anayependa lugha atafaulu.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Relative Negation",
+    "example": "Watu wasiokula samaki watapewa kuku.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mtoto anayelia anahitaji msaada.",
+    "ko": "",
+    "highlight": "anayelia"
+   },
+   {
+    "en": "Chakula ambacho kiliandaliwa kilikuwa kitamu sana.",
+    "ko": "",
+    "highlight": "ambacho kiliandaliwa"
+   },
+   {
+    "en": "Nyumba zilizojengwa bondeni ziliharibika.",
+    "ko": "",
+    "highlight": "zilizojengwa"
+   },
+   {
+    "en": "Mtu asiyefanya kazi asile chakula.",
+    "ko": "",
+    "highlight": "asiyefanya"
+   },
+   {
+    "en": "Barua niliyoiandika imefika salama.",
+    "ko": "",
+    "highlight": "niliyoiandika"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mtu anasoma ambaye ni kaka yangu.",
+    "right": "Mtu anayesoma ni kaka yangu. / Mtu ambaye anasoma ni kaka yangu.",
+    "note": "'Amba-' must directly follow the noun it qualifies, or the verb must incorporate the synthetic infix."
+   },
+   {
+    "wrong": "Kitabu anachokisoma Ali ni kizuri.",
+    "right": "Kitabu anachosoma Ali ni kizuri.",
+    "note": "Do not repeat unnecessary object markers inside the relative verb unless emphasis or specificity is needed."
+   },
+   {
+    "wrong": "Gari ambalo lililoanguka...",
+    "right": "Gari ambalo lilianguka... / Gari lililoanguka...",
+    "note": "Never double the relative marker by using both 'amba-' and the internal -o- infix on the same verb."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which sentence correctly says 'The food which cooked is sweet' using an infix?",
+    "options": [
+     "Chakula amekipika ni kitamu.",
+     "Chakula kinachopikwa ni kitamu.",
+     "Chakula kilichopikwa ni kitamu.",
+     "Chakula kilipikwa ambacho ni kitamu."
+    ],
+    "answer": 2,
+    "explanation": "Class 7 past relative: ki- (SM) + li (past) + cho (Class 7 relative) + pikwa (root) = kilichopikwa."
+   },
+   {
+    "question": "Match the correct amba- form for 'nyumba' (Class 10 plural): 'Nyumba ___ zilinunuliwa.'",
+    "options": [
+     "ambazo",
+     "ambao",
+     "ambacho",
+     "ambaye"
+    ],
+    "answer": 0,
+    "explanation": "Class 10 noun agreement requires the reference concord '-zo', yielding 'ambazo'."
+   },
+   {
+    "question": "What is the synthetic negative form of 'Watu wanaokimbia' (People who are running)?",
+    "options": [
+     "Watu hawakimbii",
+     "Watu wasiokimbia",
+     "Watu wasiokimbie",
+     "Watu wasiokimbiapo"
+    ],
+    "answer": 1,
+    "explanation": "Negative relative construction: wa- (SM) + si (negation) + o (Class 2 relative) + kimbia (root) = wasiokimbia."
+   },
+   {
+    "question": "Which tense marker is NOT permitted when using an internal synthetic relative infix?",
+    "options": [
+     "-na- (present)",
+     "-li- (past)",
+     "-me- (perfect)",
+     "-taka- (future)"
+    ],
+    "answer": 2,
+    "explanation": "The perfect tense marker '-me-' cannot host an internal relative infix; one must use 'amba-' instead."
+   }
+  ],
+  "tip": "The internal relative infix only works with -na- (present), -li- (past), and -taka- (future). For all other tenses like -me- or conditionals, use 'amba-'!"
+ },
+ {
+  "id": "sw-b1-verbal-extensions-applicative-causative",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "⚙️",
+  "title": "Verbal Extensions: Prepositional and Causative",
+  "subtitle": "Deriving new verbs with the applicative (-ia/-ea) and causative (-isha/-esha)",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Vowel harmony dictates whether extensions use i or e: verbs with root vowels a, i, u select -ia/-isha, while roots containing e or o take -ea/-esha.",
+  "structure": {
+   "headers": [
+    "Extension",
+    "Harmony Rule",
+    "Base Verb",
+    "Derived Verb"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Applicative (Prepositional)",
+      "after a, i, u -> -ia",
+      "andika (write)",
+      "andikia (write to/for)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Applicative (Prepositional)",
+      "after e, o -> -ea",
+      "soma (read)",
+      "somea (read to/for)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Causative",
+      "after a, i, u -> -isha",
+      "rudi (return)",
+      "rudisha (return / cause to return)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Causative",
+      "after e, o -> -esha",
+      "ona (see)",
+      "onesha (show / cause to see)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Beneficiary Action",
+    "example": "Baba alimnunulia mtoto baiskeli mpya.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Causing an Event",
+    "example": "Mwalimu alichekesha darasa zima.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Instrument / Purpose",
+    "example": "Kisu hiki kinatumika kukatia nyama.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Tafadhali niletee kikombe cha maji.",
+    "ko": "",
+    "highlight": "niletee"
+   },
+   {
+    "en": "Mama anawapikia watoto chakula kizuri.",
+    "ko": "",
+    "highlight": "anawapikia"
+   },
+   {
+    "en": "Dereva alilisimamisha basi haraka.",
+    "ko": "",
+    "highlight": "alilisimamisha"
+   },
+   {
+    "en": "Habari hii inatuhuzunisha sana.",
+    "ko": "",
+    "highlight": "inatuhuzunisha"
+   },
+   {
+    "en": "Aliamua kumpoteza adui yake porini.",
+    "ko": "",
+    "highlight": "kumpoteza"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Alimsomea barua kwa sababu ya vowel -ia: alisomia.",
+    "right": "Alimsomea barua.",
+    "note": "Because 'soma' contains the root vowel 'o', the extension vowel must harmony shift to 'e' (-ea), not 'i' (-ia)."
+   },
+   {
+    "wrong": "Nilinunua keki kwa mama yangu.",
+    "right": "Nilimnunulia mama yangu keki.",
+    "note": "Natural Swahili prefers the applicative verb with an object prefix ('-mnunulia') rather than the clunky loan phrase 'kwa ajili ya'."
+   },
+   {
+    "wrong": "Alifanya mtoto kulia.",
+    "right": "Alimliza mtoto.",
+    "note": "Rather than using 'fanya' + infinitive to express causation, use the causative form ('liza' from 'lia')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the applicative form of 'pika' (to cook)?",
+    "options": [
+     "pikea",
+     "pikia",
+     "pikisha",
+     "pikiana"
+    ],
+    "answer": 1,
+    "explanation": "The root vowel of 'pika' is 'i', so according to vowel harmony, it takes '-ia'."
+   },
+   {
+    "question": "What is the causative form of 'chemka' (to boil)?",
+    "options": [
+     "chemkisha",
+     "chemkea",
+     "chemkesha",
+     "chemkika"
+    ],
+    "answer": 2,
+    "explanation": "The root vowel is 'e', which demands the causative vowel 'e' via harmony: 'chemkesha'."
+   },
+   {
+    "question": "How do you derive 'to explain / make understand' from 'elewa' (to understand)?",
+    "options": [
+     "elewana",
+     "elewisha",
+     "eleza",
+     "eleweka"
+    ],
+    "answer": 2,
+    "explanation": "'Eleza' is the standard lexicalized causative extension derived from the stem 'elewa'."
+   },
+   {
+    "question": "What does 'Aliniandikia barua' mean?",
+    "options": [
+     "He wrote a letter with me.",
+     "He made me write a letter.",
+     "He wrote a letter for/to me.",
+     "He stopped writing me a letter."
+    ],
+    "answer": 2,
+    "explanation": "The applicative extension -ia indicates doing the verbal action for or towards the applied object ('me')."
+   }
+  ],
+  "tip": "Check the verb's last vowel before the final -a: if it is E or O, use -e- extensions (-ea, -esha). If it is A, I, or U, use -i- extensions (-ia, -isha)."
+ },
+ {
+  "id": "sw-b1-verbal-extensions-passive-reciprocal",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔄",
+  "title": "Verbal Extensions: Passive and Reciprocal",
+  "subtitle": "Transforming verbs to show actions received or shared mutually",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Add the passive extension -wa to indicate an action done to the subject, and the reciprocal extension -ana to show that multiple subjects perform the action on each other.",
+  "structure": {
+   "headers": [
+    "Extension Type",
+    "Suffix Form",
+    "Swahili Verb",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Base Verb",
+      "-a",
+      "penda",
+      "love"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passive",
+      "-wa / -lewa / -liwa",
+      "pendwa",
+      "be loved"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Reciprocal",
+      "-ana",
+      "pendana",
+      "love each other"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passive of Reciprocal",
+      "-anwa",
+      "pendanwa",
+      "be mutually loved"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Passive with Agent (na)",
+    "example": "Kitabu kiliandikwa na mwalimu.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Mutual Interaction",
+    "example": "Watoto wanasaidiana kufanya kazi.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Social Meeting & Greeting",
+    "example": "Tulionana sokoni jana asubuhi.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Chakula kitamu kimepikwa na mama.",
+    "ko": "",
+    "highlight": "kimepikwa"
+   },
+   {
+    "en": "Wanafunzi wote wanaheshimiana sana shuleni.",
+    "ko": "",
+    "highlight": "wanaheshimiana"
+   },
+   {
+    "en": "Mlango ulifunguliwa na upepo mkali.",
+    "ko": "",
+    "highlight": "ulifunguliwa"
+   },
+   {
+    "en": "Sisi hupigiana simu kila mwisho wa juma.",
+    "ko": "",
+    "highlight": "hupigiana"
+   },
+   {
+    "en": "Barua hii ilipokewa jana jioni.",
+    "ko": "",
+    "highlight": "ilipokewa"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Chakula kilipikwa kwa mpishi.",
+    "right": "Chakula kilipikwa na mpishi.",
+    "note": "Use 'na' to introduce the agent of a passive verb, never 'kwa'."
+   },
+   {
+    "wrong": "Mimi na Juma tunapendana yeye.",
+    "right": "Mimi na Juma tunapendana.",
+    "note": "Reciprocal verbs already express mutual action; do not add a direct object pronoun like 'yeye'."
+   },
+   {
+    "wrong": "Barua iliandikwa na kalamu.",
+    "right": "Barua iliandikwa kwa kalamu.",
+    "note": "Use 'kwa' for the instrument/tool used, reserving 'na' strictly for the animate agent."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The lost keys were found by Juma: Funguo zilizopotea ___ na Juma.",
+    "options": [
+     "ziliona",
+     "zilionana",
+     "zilionwa",
+     "zilipatikana"
+    ],
+    "answer": 3,
+    "explanation": "'Zilipatikana' (or passive 'zilionwa') expresses being found/available, here correctly matching noun class 10."
+   },
+   {
+    "question": "Amina and Asha help each other: Amina na Asha ___ kila siku.",
+    "options": [
+     "wanasaidia",
+     "wanasaidiwa",
+     "wanasaidiana",
+     "walisaidia"
+    ],
+    "answer": 2,
+    "explanation": "The reciprocal suffix -ana indicates mutual assistance between the two subjects."
+   },
+   {
+    "question": "This beautiful song was sung by children: Wimbo huu mzuri ___ na watoto.",
+    "options": [
+     "uliimbwa",
+     "ulimba",
+     "uliimbana",
+     "waimba"
+    ],
+    "answer": 0,
+    "explanation": "The passive form of 'imba' is 'imbwa' with the agreement prefix 'u-' matching 'wimbo' (Class 3)."
+   },
+   {
+    "question": "We saw each other at the library yesterday: Sisi ___ maktabani jana.",
+    "options": [
+     "tuliona",
+     "tulionana",
+     "tulionwa",
+     "tunaonana"
+    ],
+    "answer": 1,
+    "explanation": "'Tulionana' combines past tense -li- with the reciprocal verb 'onana' (see one another)."
+   }
+  ],
+  "tip": "Verbs ending in double vowels insert -lewa or -liwa for the passive (e.g., pokea becomes pokelewa, nunua becomes nunuliwa) following standard Swahili vowel harmony."
+ },
+ {
+  "id": "sw-b1-conditional-ki-nge-ngali",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#059669",
+  "emoji": "🔀",
+  "title": "Conditionals: Real, Hypothetical, and Counterfactual",
+  "subtitle": "Navigating possibilities, present hypotheticals, and past regrets",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use -ki- for real or probable future conditions, -nge- for present hypothetical situations, and -ngali- for past counterfactual events that cannot be changed.",
+  "structure": {
+   "headers": [
+    "Marker",
+    "Type",
+    "Affirmative Example",
+    "Negative Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-ki-",
+      "Real / Probable",
+      "ukisoma (if you study)",
+      "usiposoma"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-nge-",
+      "Hypothetical / Possible",
+      "ungesoma (if you studied)",
+      "usingesoma"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ngali-",
+      "Counterfactual / Impossible",
+      "ungalisoma (if you had studied)",
+      "usingalisoma"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ngeli-",
+      "Colloquial Counterfactual",
+      "ungelisoma (variant of -ngali-)",
+      "usingelisoma"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Likely Future Conditions (-ki-)",
+    "example": "Mvua ikinyesha, mazao yatakua vizuri.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Present Imaginings (-nge-)",
+    "example": "Ningekuwa na pesa, ningenunua gari jipya.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Past Unfulfilled Conditions (-ngali-)",
+    "example": "Ungalifika mapema, ungalimwona mgeni.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ukifanya mazoezi kila siku, utakuwa na afya bora.",
+    "ko": "",
+    "highlight": "Ukifanya"
+   },
+   {
+    "en": "Ningejua ukweli, ningekwambia mara moja.",
+    "ko": "",
+    "highlight": "Ningejua"
+   },
+   {
+    "en": "Wangalifanya bidii, wangalifaulu mtihani wao.",
+    "ko": "",
+    "highlight": "Wangalifanya"
+   },
+   {
+    "en": "Tukiondoka sasa hivi, tutawahi gari la moshi.",
+    "ko": "",
+    "highlight": "Tukiondoka"
+   },
+   {
+    "en": "Asingekula chakula kile, asingeugua tumbo.",
+    "ko": "",
+    "highlight": "Asingekula"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ukinunua gari, ungenunua zuri.",
+    "right": "Ungenunua gari, ungenunua zuri.",
+    "note": "Maintain tense harmony across both clauses; pair -nge- with -nge-, or -ki- with future -ta-."
+   },
+   {
+    "wrong": "Usikisoma, utafeli mtihani.",
+    "right": "Usiposoma, utafeli mtihani.",
+    "note": "The negative of conditional -ki- is formed with -sipo-, not -si-ki-."
+   },
+   {
+    "wrong": "Kama ningalijua, nitakuja.",
+    "right": "Kama ningalijua, ningalikuja.",
+    "note": "A counterfactual condition (-ngali-) requires a counterfactual result clause, never future -ta-."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "If you study hard, you will pass the exams: ___ kwa bidii, utafaulu mtihani.",
+    "options": [
+     "Ungesoma",
+     "Ungalisoma",
+     "Ukisoma",
+     "Usingesoma"
+    ],
+    "answer": 2,
+    "explanation": "The real condition leading to a future outcome uses the infix -ki-."
+   },
+   {
+    "question": "If I had money right now, I would travel: Ningekuwa na pesa, ___ sasa hivi.",
+    "options": [
+     "nitasafiri",
+     "ningesafiri",
+     "nilisafiri",
+     "ningalisafiri"
+    ],
+    "answer": 1,
+    "explanation": "Present hypothetical conditions pair the protasis -nge- with an apodosis also in -nge-."
+   },
+   {
+    "question": "If they had arrived yesterday, they would have eaten: Wangalifika jana, ___ chakula kizuri.",
+    "options": [
+     "wangalikula",
+     "wangekula",
+     "watakula",
+     "walikula"
+    ],
+    "answer": 0,
+    "explanation": "Past impossible conditions require -ngali- in both the condition and result clauses."
+   },
+   {
+    "question": "If you do not leave now, you will be late: ___ sasa hivi, utachelewa.",
+    "options": [
+     "Usipotoka",
+     "Ukitoka",
+     "Usingetoka",
+     "Hutoki"
+    ],
+    "answer": 0,
+    "explanation": "The negative conditional for real possibilities is formed using the prefix pattern u-sipo-."
+   }
+  ],
+  "tip": "Remember: -ki- looks forward to what may be, -nge- dreams of what could be right now, and -ngali- looks backward at what can never be changed."
+ },
+ {
+  "id": "sw-b2-stative-conversives",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🔓",
+  "title": "Stative and Conversive Extensions",
+  "subtitle": "Expressing intrinsic states, potentiality, and the reversal of actions",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "The stative extension (-ika/-eka) indicates a state of being or intrinsic potential without an agent, while the conversive extension (-ua/-oa) systematically reverses an action.",
+  "structure": {
+   "headers": [
+    "Extension",
+    "Root Verb",
+    "Derived Verb",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Stative (-ika)",
+      "vunja (break)",
+      "vunjika",
+      "be broken / breakable"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Stative (-eka)",
+      "haribu (ruin)",
+      "haribika",
+      "be spoiled / ruined"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Conversive (-ua)",
+      "funga (tie/close)",
+      "fungua",
+      "untie / open"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Conversive Stative",
+      "fungua (open)",
+      "funguka",
+      "be openable / opened"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Resultant State (No Agent)",
+    "example": "Kikombe kimevunjika vipande vipande.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Potentiality / Possibility",
+    "example": "Mlima huu unapandika bila shida.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Action Reversal (Conversive)",
+    "example": "Tafadhali zindua mkutano wetu asubuhi.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mlango mkubwa unafunguka kwa urahisi.",
+    "ko": "",
+    "highlight": "unafunguka"
+   },
+   {
+    "en": "Kazi hii yote inafanyika haraka sana.",
+    "ko": "",
+    "highlight": "inafanyika"
+   },
+   {
+    "en": "Aliamua kufunua sufuria ili kuangalia nyama.",
+    "ko": "",
+    "highlight": "kufunua"
+   },
+   {
+    "en": "Saa yangu imeharibika baada ya kuanguka chini.",
+    "ko": "",
+    "highlight": "imeharibika"
+   },
+   {
+    "en": "Maji haya machafu hayanyweki kamwe.",
+    "ko": "",
+    "highlight": "hayanyweki"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Kikombe kilivunjika na mtoto.",
+    "right": "Kikombe kilivunjwa na mtoto.",
+    "note": "Stative verbs (-ika/-eka) cannot take an agent with 'na'; use the passive (-wa) if the agent is mentioned."
+   },
+   {
+    "wrong": "Chakula hiki kinakula vizuri.",
+    "right": "Chakula hiki kinalika vizuri.",
+    "note": "To indicate edible quality or ability to be eaten, use the stative extension -lika, not the active verb."
+   },
+   {
+    "wrong": "Alifunga barua halafu akaifungia tena.",
+    "right": "Alifunga barua halafu akaifungua tena.",
+    "note": "To reverse 'funga' (tie/close), use conversive 'fungua' (untie/open), not applicative 'fungia'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "This water is not drinkable: Maji haya ___ hata kidogo.",
+    "options": [
+     "hayanywi",
+     "hayanywewi",
+     "hayanyweki",
+     "hayanywiki"
+    ],
+    "answer": 2,
+    "explanation": "The stative form of 'nywa' is 'nyweka' (negative: hayanyweki), expressing the intrinsic capability of being drunk."
+   },
+   {
+    "question": "He unpacked his clothes from the bag: Ali___ nguo zake kutoka kwenye begi.",
+    "options": [
+     "funga",
+     "fungua",
+     "fungisha",
+     "pakua"
+    ],
+    "answer": 3,
+    "explanation": "'Pakua' is the conversive of 'paka' (to load/pack), meaning to unload or unpack."
+   },
+   {
+    "question": "The glass broke unexpectedly on the floor: Kioo ___ sakafuni ghafla.",
+    "options": [
+     "kilivunjika",
+     "kilivunja",
+     "kilivunjwa na mtu",
+     "kilivunjana"
+    ],
+    "answer": 0,
+    "explanation": "'Kilivunjika' denotes an agentless state where an object becomes broken on its own."
+   },
+   {
+    "question": "Can this task be accomplished today?: Kazi hii ___ leo kweli?",
+    "options": [
+     "inafanya",
+     "inafanyika",
+     "inafanywa na",
+     "inafanyana"
+    ],
+    "answer": 1,
+    "explanation": "The stative 'fanyika' indicates whether the task has the feasibility or potential to get done."
+   }
+  ],
+  "tip": "Use vowel harmony: if the root contains vowels A, I, or U, apply -ika / -ua (e.g., vunjika, fungua); if the root has E or O, apply -eka / -oa (e.g., someka, chomoa)."
+ },
+ {
+  "id": "sw-b2-compound-tenses",
+  "level": "b2",
+  "category": "tenses",
+  "categoryColor": "#EA580C",
+  "emoji": "⏳",
+  "title": "Compound Verb Tenses with Auxiliary -kuwa",
+  "subtitle": "Combining auxiliary and main verbs to convey nuanced aspects",
+  "color": "#C2410C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Compound tenses employ an inflected auxiliary form of -kuwa (to be) followed by an inflected main verb to mark precise aspectual combinations like past progressive or future perfect.",
+  "structure": {
+   "headers": [
+    "Tense / Aspect",
+    "Auxiliary (-kuwa)",
+    "Main Verb",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Past Progressive",
+      "alikuwa",
+      "anasoma",
+      "he/she was reading"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Perfect",
+      "alikuwa",
+      "ameshasoma",
+      "he/she had already read"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Future Continuous",
+      "atakuwa",
+      "anapika",
+      "he/she will be cooking"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Conditional Habitual",
+      "angekuwa",
+      "anajifunza",
+      "he/she would be learning"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#C2410C",
+    "label": "Interrupted Past Action",
+    "example": "Nilipofika nyumbani, alikuwa analala kitandani.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Prior Completion (Pluperfect)",
+    "example": "Walipofika kituoni, basi lilikuwa limeondoka.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Future Projection",
+    "example": "Kesho saa nane mchana nitakuwa nikifanya mtihani.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Nilikuwa nikiandika barua mlipopiga hodi.",
+    "ko": "",
+    "highlight": "Nilikuwa nikiandika"
+   },
+   {
+    "en": "Saa tano asubuhi watakuwa wamemaliza kazi zao zote.",
+    "ko": "",
+    "highlight": "watakuwa wamemaliza"
+   },
+   {
+    "en": "Mwizi alikuwa ameshatoroka kabla ya polisi kufika.",
+    "ko": "",
+    "highlight": "alikuwa ameshatoroka"
+   },
+   {
+    "en": "Zamani tulikuwa tukienda pwani kila Jumamosi.",
+    "ko": "",
+    "highlight": "tulikuwa tukienda"
+   },
+   {
+    "en": "Ungalikuja mapema, tungekuwa tunacheza pamoja sasa.",
+    "ko": "",
+    "highlight": "tungekuwa tunacheza"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Nilikuwa soma kitabu jana.",
+    "right": "Nilikuwa nikisoma kitabu jana.",
+    "note": "The main verb in a compound construction must carry full inflection (subject prefix and aspect infix like -na- or -ki-)."
+   },
+   {
+    "wrong": "Alikuwa hapendi kula samaki.",
+    "right": "Alikuwa hapendi kula samaki au hakuwa akipenda kula samaki.",
+    "note": "To negate compound tenses, negate either the auxiliary (hakuwa akienda) or keep the auxiliary affirmative with negative main verb."
+   },
+   {
+    "wrong": "Tutakuwa tumaliza kazi kesho.",
+    "right": "Tutakuwa tumemaliza kazi kesho.",
+    "note": "Ensure the main verb retains its perfective marker -me-, yielding 'tumemaliza', not an uninflected stem."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "When father arrived, the children were sleeping: Baba alipofika, watoto ___ kitandani.",
+    "options": [
+     "walikuwa wanalala",
+     "walilala",
+     "wanalala",
+     "walikuwa kulala"
+    ],
+    "answer": 0,
+    "explanation": "The past progressive uses auxiliary 'walikuwa' combined with progressive 'wanalala' (or continuous 'wakilala')."
+   },
+   {
+    "question": "By tomorrow morning, we will have arrived in Mombasa: Kufikia kesho asubuhi, ___ Mombasa.",
+    "options": [
+     "tulikuwa tumefika",
+     "tutakuwa tumefika",
+     "tunafika",
+     "tutafika"
+    ],
+    "answer": 1,
+    "explanation": "The future perfect pairs the future auxiliary 'tutakuwa' with the perfective main verb 'tumefika'."
+   },
+   {
+    "question": "He had already eaten before the guests arrived: Alikuwa ___ kabla ya wageni kufika.",
+    "options": [
+     "amekula",
+     "anakula",
+     "kula",
+     "alikula"
+    ],
+    "answer": 0,
+    "explanation": "The past perfect (pluperfect) pairs past auxiliary 'alikuwa' with perfective -me- ('amekula')."
+   },
+   {
+    "question": "They were walking to school every day: Walikuwa ___ shuleni kila siku.",
+    "options": [
+     "wakienda",
+     "wameenda",
+     "wakaenda",
+     "wangeenda"
+    ],
+    "answer": 0,
+    "explanation": "The participial -ki- tense ('wakienda') expresses habitual or ongoing background action after auxiliary -kuwa."
+   }
+  ],
+  "tip": "In the main verb of a compound continuous tense, speakers often prefer the participial infix -ki- (e.g., alikuwa akisoma) over -na- (alikuwa anasoma) to clearly distinguish background duration."
+ },
+ {
+  "id": "sw-b2-tense-aspect-ka-po-nga",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#7C3AED",
+  "emoji": "📜",
+  "title": "Narrative -ka-, Relative -po-, and Concessive Markers",
+  "subtitle": "Connecting story sequences, temporal moments, and concessive actions",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Chain sequential story actions using the narrative infix -ka-, embed time and location using relative -po-, and convey concession ('even if / although') with -japo-.",
+  "structure": {
+   "headers": [
+    "Infix",
+    "Function",
+    "Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-ka-",
+      "Consecutive / Narrative",
+      "akaenda sokoni",
+      "and then he went to market"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-po-",
+      "Temporal ('when')",
+      "alipofika nyumbani",
+      "when he arrived home"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-po-",
+      "Locative ('where')",
+      "anapokaa rafiki yangu",
+      "where my friend lives"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-japo-",
+      "Concessive ('although')",
+      "ajapokuwa mgonjwa",
+      "even though he is sick"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6D28D9",
+    "label": "Storytelling Sequence (-ka-)",
+    "example": "Aliingia ndani, akaketi kitini, akaanza kusoma.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Time Climax Clauses (-po-)",
+    "example": "Mwalimu aliposimama, wanafunzi wote walinyamaza.",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Concession Clauses (-japo-)",
+    "example": "Ajapojitahidi sana, hakupata ushindi leo.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Asha aliamka asubuhi na mapema, akapika chai, akaenda kazini.",
+    "ko": "",
+    "highlight": "akapika"
+   },
+   {
+    "en": "Tulipomwona mwalimu wetu, tulimsalimu kwa heshima zote.",
+    "ko": "",
+    "highlight": "Tulipomwona"
+   },
+   {
+    "en": "Ijapokuwa mvua inanyesha kwa wingi, tutasafiri tu.",
+    "ko": "",
+    "highlight": "Ijapokuwa"
+   },
+   {
+    "en": "Mtoto alidondoka chini akalia kwa sauti kuu.",
+    "ko": "",
+    "highlight": "akalia"
+   },
+   {
+    "en": "Mahali wanapofanyia kazi ni mbali sana kutoka hapa.",
+    "ko": "",
+    "highlight": "wanapofanyia"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Alikuja jana na alinunua chakula na alikula.",
+    "right": "Alikuja jana, akanunua chakula, akala.",
+    "note": "Avoid repeating past marker -li- in storytelling; establish past once with -li-, then link subsequent actions with -ka-."
+   },
+   {
+    "wrong": "Wakati alipofika hapa, tulifurahi.",
+    "right": "Alipofika hapa, tulifurahi.",
+    "note": "Using 'wakati' alongside the relative temporal infix -po- is redundant in standard Swahili syntax."
+   },
+   {
+    "wrong": "Hata akijapokuwa tajiri, hana furaha.",
+    "right": "Ajapokuwa tajiri, hana furaha.",
+    "note": "Do not mix conditional -ki- and concessive -japo- in the same verb stem."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He opened the door and then entered the room: Alifungua mlango, ___ chumbani.",
+    "options": [
+     "aliingia",
+     "akaingia",
+     "ataingia",
+     "anaingia"
+    ],
+    "answer": 1,
+    "explanation": "The narrative consecutive infix -ka- carries forward the chain of completed events."
+   },
+   {
+    "question": "When you arrive in Nairobi, call me immediately: ___ Nairobi, nipigie simu mara moja.",
+    "options": [
+     "Utakapofika",
+     "Ukifika",
+     "Ulifika",
+     "Unapofika"
+    ],
+    "answer": 0,
+    "explanation": "'Utakapofika' combines future -ta- with relative temporal -ka-po- to denote 'at the time in the future when you arrive'."
+   },
+   {
+    "question": "Although he is young, he has great wisdom: ___ mdogo, ana hekima kubwa.",
+    "options": [
+     "Alipokuwa",
+     "Ajapokuwa",
+     "Angekuwa",
+     "Akawa"
+    ],
+    "answer": 1,
+    "explanation": "The concessive prefix combination 'ajapokuwa' translates to 'although/even if he is'."
+   },
+   {
+    "question": "The village where they live is very peaceful: Kijiji ___ kina amani tele.",
+    "options": [
+     "wanapoishi",
+     "wanakoishi",
+     "wanamoishi",
+     "waliishi"
+    ],
+    "answer": 0,
+    "explanation": "The relative infix -po- serves as the general temporal and locative marker matching specific place references."
+   }
+  ],
+  "tip": "In rapid storytelling, monosyllabic verb stems retain the infinitive prefix 'ku-' with narrative -ka- (e.g., akala from kula, akaja from kuja)."
+ }
+]

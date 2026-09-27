@@ -1,0 +1,3409 @@
+[
+ {
+  "id": "cs-a1-grammatical-gender-and-vocalic-endings",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🏷️",
+  "title": "Grammatical Gender & Hard/Soft Noun Patterns",
+  "subtitle": "Determine Czech noun genders and base endings at a glance",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Czech nouns fall into masculine, feminine, or neuter genders, largely identifiable by their basic nominative singular endings.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Typical Ending",
+    "Noun Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine (Animate)",
+      "Hard/Soft Consonant",
+      "student",
+      "student"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masculine (Inanimate)",
+      "Hard/Soft Consonant",
+      "hrad",
+      "castle"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine",
+      "-a or -e / soft cons.",
+      "žena",
+      "woman"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter",
+      "-o, -e, or -í",
+      "město",
+      "town / city"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Feminine in -a",
+    "example": "Kniha leží na stole.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Neuter in -o",
+    "example": "To staré auto stojí venku.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Masculine Consonant",
+    "example": "Můj bratr pracuje tady.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ta nová kniha je velmi zajímavá.",
+    "ko": "",
+    "highlight": "kniha"
+   },
+   {
+    "en": "Praha je krásné město.",
+    "ko": "",
+    "highlight": "město"
+   },
+   {
+    "en": "Tento moderní počítač funguje skvěle.",
+    "ko": "",
+    "highlight": "počítač"
+   },
+   {
+    "en": "Náš profesor mluví pomalu.",
+    "ko": "",
+    "highlight": "profesor"
+   },
+   {
+    "en": "To moderní moře je teplé.",
+    "ko": "",
+    "highlight": "moře"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ten kniha",
+    "right": "ta kniha",
+    "note": "Nouns ending in -a are almost always feminine and require feminine demonstratives."
+   },
+   {
+    "wrong": "ta auto",
+    "right": "to auto",
+    "note": "Nouns ending in -o are neuter and take the pronoun 'to'."
+   },
+   {
+    "wrong": "to čaj",
+    "right": "ten čaj",
+    "note": "Nouns ending in consonants are masculine, taking 'ten'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the feminine noun: 'Here is a ___.'",
+    "options": [
+     "stůl",
+     "káva",
+     "okno",
+     "čaj"
+    ],
+    "answer": 1,
+    "explanation": "Nouns ending in -a like 'káva' (coffee) are feminine."
+   },
+   {
+    "question": "Which word is neuter (taking 'to')?",
+    "options": [
+     "město",
+     "muž",
+     "žena",
+     "hrad"
+    ],
+    "answer": 0,
+    "explanation": "Nouns ending in -o such as 'město' are grammatically neuter."
+   },
+   {
+    "question": "Choose the masculine inanimate noun:",
+    "options": [
+     "pes",
+     "kočka",
+     "dům",
+     "pivo"
+    ],
+    "answer": 2,
+    "explanation": "'Dům' (house) ends in a consonant and is masculine inanimate."
+   },
+   {
+    "question": "Which ending is typical for neuter nouns?",
+    "options": [
+     "-a",
+     "-ý",
+     "-ek",
+     "-o"
+    ],
+    "answer": 3,
+    "explanation": "The vowel ending -o is the classic standard marker for neuter nouns."
+   }
+  ],
+  "tip": "Look at the last letter: -a is feminine, -o/-e/-í is neuter, and a consonant is masculine."
+ },
+ {
+  "id": "cs-a1-present-tense-conjugation-classes",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "⚙️",
+  "title": "Present Tense Verb Conjugation Classes",
+  "subtitle": "Conjugate Czech verbs across the main vowel-stem groups",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Czech verbs conjugate by removing the infinitive suffix -t and adding personal endings based on their stem vowel class.",
+  "structure": {
+   "headers": [
+    "Verb Class",
+    "Infinitive",
+    "On/Ona Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-á class",
+      "dělat",
+      "dělá",
+      "he/she does"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-í class",
+      "mluvit",
+      "mluví",
+      "he/she speaks"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-e class",
+      "pít",
+      "pije",
+      "he/she drinks"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-uje class",
+      "studovat",
+      "studuje",
+      "he/she studies"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Daily Activity (-á)",
+    "example": "Každý den dělám úkoly.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Language Skill (-í)",
+    "example": "Mluvíme dobře česky.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Process (-uje)",
+    "example": "Petr studuje historii.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Každé ráno snídám chléb a sýr.",
+    "ko": "",
+    "highlight": "snídám"
+   },
+   {
+    "en": "Oni mluví plynně anglicky.",
+    "ko": "",
+    "highlight": "mluví"
+   },
+   {
+    "en": "Co dnes večer děláte?",
+    "ko": "",
+    "highlight": "děláte"
+   },
+   {
+    "en": "Moje sestra studuje na univerzitě.",
+    "ko": "",
+    "highlight": "studuje"
+   },
+   {
+    "en": "Pavel nepije kávu.",
+    "ko": "",
+    "highlight": "nepije"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "já dělat",
+    "right": "já dělám",
+    "note": "Verbs must drop the infinitive -t and take personal endings like -m for 'já'."
+   },
+   {
+    "wrong": "my studovat",
+    "right": "my studujeme",
+    "note": "Verbs ending in -ovat change to -uj- plus person endings like -eme for 'my'."
+   },
+   {
+    "wrong": "oni mluvíte",
+    "right": "oni mluví",
+    "note": "The suffix -te belongs to 'vy' (you plural/formal), whereas 'oni' takes -í for this class."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete with the correct form of 'dělat' for 'my' (we): 'My ___ oběd.'",
+    "options": [
+     "dělají",
+     "dělá",
+     "děláme",
+     "dělám"
+    ],
+    "answer": 2,
+    "explanation": "The first-person plural ending for the -á class is -áme ('děláme')."
+   },
+   {
+    "question": "Choose the correct form of 'studovat' for 'on' (he): 'On ___ medicínu.'",
+    "options": [
+     "studuje",
+     "studuju",
+     "studují",
+     "studujete"
+    ],
+    "answer": 0,
+    "explanation": "Third-person singular for -ovat verbs takes -uje ('studuje')."
+   },
+   {
+    "question": "Complete for 'já' (I) with 'rozumět': 'Já dobře ___.'",
+    "options": [
+     "rozumíš",
+     "rozumí",
+     "rozumíte",
+     "rozumím"
+    ],
+    "answer": 3,
+    "explanation": "The first-person singular suffix for this class is -ím ('rozumím')."
+   },
+   {
+    "question": "Complete for 'vy' (formal you) with 'mluvit': 'Odkud ___?'",
+    "options": [
+     "mluví",
+     "mluvíte",
+     "mluvíme",
+     "mluvíš"
+    ],
+    "answer": 1,
+    "explanation": "The second-person plural/polite ending is -íte ('mluvíte')."
+   }
+  ],
+  "tip": "Verbs ending in -ovat almost universally conjugate as -uju, -uješ, -uje, -ujeme, -ujete, -ujou/-ují."
+ },
+ {
+  "id": "cs-a1-accusative-singular-direct-objects",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🎯",
+  "title": "Accusative Singular & Masculine Animacy",
+  "subtitle": "Master direct objects and the animate vs. inanimate split",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "In the accusative singular, feminine -a changes to -u, neuters stay unchanged, and masculine animates gain -a while inanimates do not change.",
+  "structure": {
+   "headers": [
+    "Gender Category",
+    "Nominative",
+    "Accusative",
+    "Rule"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Feminine (-a)",
+      "káva",
+      "kávu",
+      "Ending -a becomes -u"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masculine Animate",
+      "bratr",
+      "bratra",
+      "Adds -a (or -e for soft stems)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masculine Inanimate",
+      "čaj",
+      "čaj",
+      "No change (= Nominative)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter (-o/-e)",
+      "pivo",
+      "pivo",
+      "No change (= Nominative)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Ordering Food/Drink",
+    "example": "Dám si jednu kávu.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Person as Object",
+    "example": "Vidím nového studenta.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Inanimate Object",
+    "example": "Koupil jsem nový stůl.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mám rád černou kávu bez cukru.",
+    "ko": "",
+    "highlight": "kávu"
+   },
+   {
+    "en": "Vidím našeho nového učitele.",
+    "ko": "",
+    "highlight": "učitele"
+   },
+   {
+    "en": "Čtu zajímavý časopis.",
+    "ko": "",
+    "highlight": "časopis"
+   },
+   {
+    "en": "Znáš mého bratra?",
+    "ko": "",
+    "highlight": "bratra"
+   },
+   {
+    "en": "Objednám jedno studené pivo.",
+    "ko": "",
+    "highlight": "pivo"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Dám si káva.",
+    "right": "Dám si kávu.",
+    "note": "Direct objects of feminine nouns in -a change to -u in the accusative case."
+   },
+   {
+    "wrong": "Vidím Petr.",
+    "right": "Vidím Petra.",
+    "note": "Masculine animate nouns must take the accusative ending -a."
+   },
+   {
+    "wrong": "Koupil jsem hrada.",
+    "right": "Koupil jsem hrad.",
+    "note": "Masculine inanimate nouns remain identical to their nominative forms."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the direct object: 'Mám rád ___ (pizza).'",
+    "options": [
+     "pizzu",
+     "pizze",
+     "pizzou",
+     "pizza"
+    ],
+    "answer": 0,
+    "explanation": "Feminine nouns ending in -a shift to -u in the accusative singular."
+   },
+   {
+    "question": "Complete with masculine animate: 'Hledám ___ (kolega).'",
+    "options": [
+     "kolego",
+     "kolegovi",
+     "kolegu",
+     "kolega"
+    ],
+    "answer": 2,
+    "explanation": "Masculine animate nouns ending in -a inflect like feminine nouns in the accusative, taking -u."
+   },
+   {
+    "question": "Complete with masculine inanimate: 'Mám nový ___ (telefon).'",
+    "options": [
+     "telefonu",
+     "telefona",
+     "telefonem",
+     "telefon"
+    ],
+    "answer": 3,
+    "explanation": "Masculine inanimate nouns keep the nominative form in accusative singular."
+   },
+   {
+    "question": "Complete with masculine animate: 'Čekám na ___ (bratr).'",
+    "options": [
+     "bratrovi",
+     "bratra",
+     "bratrem",
+     "bratr"
+    ],
+    "answer": 1,
+    "explanation": "Hard masculine animate nouns add -a in the accusative singular."
+   }
+  ],
+  "tip": "Only feminine -a and masculine animates shift visibly in the accusative singular; neuters and inanimate masculines look identical to nominative."
+ },
+ {
+  "id": "cs-a1-past-tense-formation-and-auxiliary",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "⏳",
+  "title": "Past Tense and the Auxiliary Verb 'být'",
+  "subtitle": "Form compound past actions with l-participles and clitics",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "The past tense pairs an l-participle agreeing in gender and number with the present auxiliary of 'být' (omitted entirely in the 3rd person).",
+  "structure": {
+   "headers": [
+    "Person",
+    "Masculine",
+    "Feminine",
+    "Auxiliary Rule"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Sing. (já)",
+      "dělal jsem",
+      "dělala jsem",
+      "Auxiliary 'jsem' needed"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd Sing. (ty)",
+      "dělal jsi",
+      "dělala jsi",
+      "Auxiliary 'jsi' needed"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Sing. (on/ona)",
+      "dělal",
+      "dělala",
+      "NO auxiliary used!"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "1st Plur. (my)",
+      "dělali jsme",
+      "dělaly jsme",
+      "Auxiliary 'jsme' needed"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Personal Past Experience",
+    "example": "Včera jsem pracoval dlouho.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Third-Person Reporting",
+    "example": "Eva včera koupila auto.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Group Activity",
+    "example": "Minulý týden jsme byli v kině.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Včera večer jsem vařil večeři.",
+    "ko": "",
+    "highlight": "jsem vařil"
+   },
+   {
+    "en": "Byla jsi včera doma?",
+    "ko": "",
+    "highlight": "Byla jsi"
+   },
+   {
+    "en": "Tomáš včera nepřišel do školy.",
+    "ko": "",
+    "highlight": "nepřišel"
+   },
+   {
+    "en": "Minulý rok jsme cestovali do Itálie.",
+    "ko": "",
+    "highlight": "jsme cestovali"
+   },
+   {
+    "en": "Moje máma pracovala v nemocnici.",
+    "ko": "",
+    "highlight": "pracovala"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "On je dělal.",
+    "right": "On dělal.",
+    "note": "Never use 'je' as a past auxiliary in the 3rd person; the participle stands alone."
+   },
+   {
+    "wrong": "Já dělal.",
+    "right": "Dělal jsem. / Já jsem dělal.",
+    "note": "In the 1st person, the auxiliary 'jsem' is required to mark past tense."
+   },
+   {
+    "wrong": "Žena byl doma.",
+    "right": "Žena byla doma.",
+    "note": "The l-participle must match feminine gender by appending -a ('byla')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill the blank for 'ty' (to a female): 'Kde ___ včera?'",
+    "options": [
+     "jsi byla",
+     "byla je",
+     "jsi byl",
+     "byl jsi"
+    ],
+    "answer": 0,
+    "explanation": "The 2nd person feminine uses the auxiliary 'jsi' and feminine ending -a ('jsi byla')."
+   },
+   {
+    "question": "Fill the blank for 3rd person masculine: 'Petr včera ___ fotbal.'",
+    "options": [
+     "je hrál",
+     "hrál",
+     "hrál jsem",
+     "hrál jsi"
+    ],
+    "answer": 1,
+    "explanation": "Third person past tense does not use any form of the auxiliary 'být'."
+   },
+   {
+    "question": "Fill the blank for 'já' (male speaker): 'Včera ___ dlouho.'",
+    "options": [
+     "spal jsi",
+     "spala jsem",
+     "spal",
+     "jsem spal"
+    ],
+    "answer": 3,
+    "explanation": "A male speaker says '(já) jsem spal' using the auxiliary 'jsem' and masculine ending -l."
+   },
+   {
+    "question": "Fill the blank for 'my' (we): 'V sobotu ___ na výlet.'",
+    "options": [
+     "jeli jsme",
+     "jsme jel",
+     "jeli jste",
+     "jeli"
+    ],
+    "answer": 0,
+    "explanation": "'My' requires the auxiliary 'jsme' together with the plural participle 'jeli'."
+   }
+  ],
+  "tip": "The auxiliary forms 'jsem, jsi, jsme, jste' are clitics and typically occupy the second grammatical slot in the clause."
+ },
+ {
+  "id": "cs-a1-prepositional-locative-singular",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "📍",
+  "title": "Locative Singular with Static Prepositions",
+  "subtitle": "Indicate static locations and topics using 'v', 'na', and 'o'",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "The locative is the only Czech case that strictly requires a preposition (such as 'v', 'na', or 'o') to express location or topic.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Preposition + Base",
+    "Locative Ending",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Inanimate",
+      "v + hrad",
+      "-ě / -e / -u",
+      "v hradě / v hotelu"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine",
+      "v + Praha",
+      "-e / -ě (mutations)",
+      "v Praze"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Neuter",
+      "v + auto",
+      "-ě / -e / -u",
+      "v autě"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Topic Preposition",
+      "o + bratr",
+      "-u / -ovi",
+      "o bratrovi"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "City or Country",
+    "example": "Bydlím v Praze.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Surface or Event",
+    "example": "Kniha leží na stole.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Talking About a Topic",
+    "example": "Mluvíme o životě.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Moje rodina žije v Praze.",
+    "ko": "",
+    "highlight": "v Praze"
+   },
+   {
+    "en": "Klíče leží na stole.",
+    "ko": "",
+    "highlight": "na stole"
+   },
+   {
+    "en": "Mluvíme o novém filmu.",
+    "ko": "",
+    "highlight": "o novém filmu"
+   },
+   {
+    "en": "Pracuji v moderní kanceláři.",
+    "ko": "",
+    "highlight": "v moderní kanceláři"
+   },
+   {
+    "en": "Potkáme se na univerzitě.",
+    "ko": "",
+    "highlight": "na univerzitě"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Bydlím v Praha.",
+    "right": "Bydlím v Praze.",
+    "note": "Preposition 'v' demands the locative; -h/-ch/-k mutate before -e (h->z: Praha -> Praze)."
+   },
+   {
+    "wrong": "Jsem na stůl.",
+    "right": "Jsem na stole.",
+    "note": "Static location after 'na' triggers locative ending -e, not nominative/accusative."
+   },
+   {
+    "wrong": "Mluvím o Petr.",
+    "right": "Mluvím o Petrovi.",
+    "note": "Masculine animate nouns take the locative singular ending -ovi when talking 'about' them."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the static location: 'Petr bydlí v ___ (Brno).'",
+    "options": [
+     "Brna",
+     "Brnem",
+     "Brně",
+     "Brnu"
+    ],
+    "answer": 2,
+    "explanation": "Neuter nouns ending in -o mutate to -ě/-e in the locative singular ('v Brně')."
+   },
+   {
+    "question": "Complete with consonant mutation: 'Jsme v ___ (Praha).'",
+    "options": [
+     "Prahě",
+     "Praze",
+     "Prahu",
+     "Prahou"
+    ],
+    "answer": 1,
+    "explanation": "Stem-final 'h' mutates to 'z' before the locative ending -e ('v Praze')."
+   },
+   {
+    "question": "Complete the topic: 'Mluvíme o ___ (škola).'",
+    "options": [
+     "škole",
+     "školu",
+     "školou",
+     "školi"
+    ],
+    "answer": 0,
+    "explanation": "Feminine nouns ending in hard consonants + -a take -e/-ě in the locative ('o škole')."
+   },
+   {
+    "question": "Complete the location: 'Čaj je na ___ (stůl).'",
+    "options": [
+     "stůlu",
+     "stolem",
+     "stolu",
+     "stole"
+    ],
+    "answer": 3,
+    "explanation": "'Stůl' takes the soft locative ending -e, accompanied by vowel shortening ('na stole')."
+   }
+  ],
+  "tip": "Remember: The locative NEVER stands alone in Czech without a preposition like 'v', 'na', 'o', or 'po'."
+ },
+ {
+  "id": "cs-a1-modal-verbs-and-infinitives",
+  "level": "a1",
+  "category": "modals",
+  "categoryColor": "#4F46E5",
+  "emoji": "🚦",
+  "title": "Modal Verbs and Negation",
+  "subtitle": "Express ability, obligation, and permission with conjugated modals followed by an infinitive",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Conjugate the modal verb to match the subject and attach 'ne-' directly to negate it, followed by the main verb in the infinitive.",
+  "structure": {
+   "headers": [
+    "Modal Verb",
+    "1st Person (Já)",
+    "Negative Form",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "moci / moct",
+      "mohu / můžu",
+      "nemůžu",
+      "can / to be able to"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "muset",
+      "musím",
+      "nemusím",
+      "must / to have to"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "chtít",
+      "chci",
+      "nechci",
+      "to want"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "smět",
+      "smím",
+      "nesmím",
+      "may / to be allowed to"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Ability or Possibility",
+    "example": "Můžu mluvit česky.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Prohibition",
+    "example": "Tady nesmíš parkovat.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Desire or Preference",
+    "example": "Chceme jít do kina.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dnes večer nemůžu přijít na večeři.",
+    "ko": "",
+    "highlight": "nemůžu přijít"
+   },
+   {
+    "en": "Musíme zítra brzy vstávat.",
+    "ko": "",
+    "highlight": "Musíme zítra brzy vstávat"
+   },
+   {
+    "en": "Petr nechce pít kávu.",
+    "ko": "",
+    "highlight": "nechce pít"
+   },
+   {
+    "en": "Tady v nemocnici nesmíte kouřit.",
+    "ko": "",
+    "highlight": "nesmíte kouřit"
+   },
+   {
+    "en": "Co si přejete, smím prosit?",
+    "ko": "",
+    "highlight": "smím prosit"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Já chci jdu domů.",
+    "right": "Chci jít domů.",
+    "note": "The secondary verb following a modal must always be in the infinitive (-t ending), not conjugated."
+   },
+   {
+    "wrong": "Ne musím studovat.",
+    "right": "Nemusím studovat.",
+    "note": "In Czech, verbal negation prefix 'ne-' is written joined directly to the verb without spaces."
+   },
+   {
+    "wrong": "Nesmíš to udělat, když nechceš.",
+    "right": "Nemusíš to udělat, když nechceš.",
+    "note": "'Nesmět' expresses strict prohibition (you must not), whereas lack of necessity (you don't have to) requires 'nemuset'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I cannot understand you.",
+    "options": [
+     "Nesmím tě rozumět.",
+     "Nemůžu ti rozumět.",
+     "Nechci ti rozumět.",
+     "Nemusím ti rozumět."
+    ],
+    "answer": 1,
+    "explanation": "Physical or cognitive inability is expressed by the negated form of 'moci/moct' ('nemůžu')."
+   },
+   {
+    "question": "You do not have to pay here.",
+    "options": [
+     "Nemusíš tady platit.",
+     "Nesmíš tady platit.",
+     "Nechceš tady platit.",
+     "Nemůžeš tady platit."
+    ],
+    "answer": 0,
+    "explanation": "'You do not have to' expresses absence of obligation, which requires 'nemusíš'."
+   },
+   {
+    "question": "We want to learn Czech.",
+    "options": [
+     "Můžeme se učit česky.",
+     "Smíme se učit česky.",
+     "Chceme studovat.",
+     "Chceme se učit česky."
+    ],
+    "answer": 3,
+    "explanation": "'We want' corresponds to 1st person plural of chtít ('chceme') followed by the infinitive 'učit se'."
+   },
+   {
+    "question": "Children may not drink beer.",
+    "options": [
+     "Děti nemusejí pít pivo.",
+     "Děti nechtějí pít pivo.",
+     "Děti nesmějí pít pivo.",
+     "Děti nemohou pít pivo."
+    ],
+    "answer": 2,
+    "explanation": "'May not' (prohibition by rule) requires 'nesmějí' from the verb 'smět'."
+   }
+  ],
+  "tip": "Remember the distinction between 'nemusíš' (you don't have to / optional) and 'nesmíš' (you must not / forbidden) — mixing them up changes permission into a command!"
+ },
+ {
+  "id": "cs-a2-verbal-aspect-imperfective-vs-perfective",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#0284C7",
+  "emoji": "🔄",
+  "title": "Verbal Aspect: Imperfective vs. Perfective",
+  "subtitle": "Distinguish continuous/repeated actions from one-off, completed results",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Imperfective verbs focus on ongoing duration or repetition, while perfective verbs view an action as a completed whole with an outcome.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Imperfective (Nedokonavý)",
+    "Perfective (Dokonavý)",
+    "Key Context"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Process / Result",
+      "psát (to be writing)",
+      "napsat (to finish writing)",
+      "Dělat úkol vs. udělat úkol"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Habitual / Once",
+      "číst (to read often/in progress)",
+      "přečíst (to read entirely)",
+      "Každý den vs. včera večer"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Prefix Addition",
+      "vařit",
+      "uvařit",
+      "Adding prefixes creates perfective pairs"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Suffix Change",
+      "kupovat",
+      "koupit",
+      "Derived verb shifts aspect class"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Ongoing Process",
+    "example": "Včera jsem celý večer psal dopis.",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Completed Achievement",
+    "example": "Už jsem ten dopis napsal.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Repeated Habit",
+    "example": "Každé ráno kupuju čerstvé pečivo.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dlouho vařila polévku pro celou rodinu.",
+    "ko": "",
+    "highlight": "vařila"
+   },
+   {
+    "en": "Konečně uvařila skvělý oběd.",
+    "ko": "",
+    "highlight": "uvařila"
+   },
+   {
+    "en": "Četl tu knihu tři hodiny.",
+    "ko": "",
+    "highlight": "Četl"
+   },
+   {
+    "en": "Dočetl tu knihu až do konce.",
+    "ko": "",
+    "highlight": "Dočetl"
+   },
+   {
+    "en": "Vždycky otevíral okno dokořán.",
+    "ko": "",
+    "highlight": "otevíral"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Už jsem psal ten úkol a je hotový.",
+    "right": "Už jsem napsal ten úkol a je hotový.",
+    "note": "If the action reached completion and resulted in a finished product, use the perfective 'napsat'."
+   },
+   {
+    "wrong": "Včera jsem dvě hodiny přečetl knihu.",
+    "right": "Včera jsem dvě hodiny četl knihu.",
+    "note": "Durational expressions with 'how long' (dvě hodiny) require the imperfective aspect ('četl')."
+   },
+   {
+    "wrong": "Každý den udělám snídani pro děti.",
+    "right": "Každý den dělám snídani pro děti.",
+    "note": "Habitual repeated everyday actions ('každý den') require the imperfective present ('dělám')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday I was reading a book the whole evening. (Process)",
+    "options": [
+     "Včera jsem celý večer přečetl knihu.",
+     "Včera jsem celý večer četl knihu.",
+     "Včera jsem celý večer dočetl knihu.",
+     "Včera jsem celý večer knihu."
+    ],
+    "answer": 1,
+    "explanation": "'Celý večer' indicates duration and ongoing process, which requires the imperfective past tense 'četl'."
+   },
+   {
+    "question": "Have you already finished doing your homework?",
+    "options": [
+     "Už jsi dělal úkol?",
+     "Už budeš dělat úkol?",
+     "Už děláš úkol?",
+     "Už jsi udělal úkol?"
+    ],
+    "answer": 3,
+    "explanation": "The question targets the completed result of the action, demanding the perfective past form 'udělal'."
+   },
+   {
+    "question": "We regularly buy bread here. (Habit)",
+    "options": [
+     "Pravidelně tady kupujeme chléb.",
+     "Pravidelně tady koupíme chléb.",
+     "Pravidelně tady nakoupit chléb.",
+     "Pravidelně tady budeme koupit chléb."
+    ],
+    "answer": 0,
+    "explanation": "Repeated regular actions ('pravidelně') require the imperfective verb 'kupovat' in the present tense ('kupujeme')."
+   },
+   {
+    "question": "Martin finally solved the problem.",
+    "options": [
+     "Martin konečně řešil problém.",
+     "Martin konečně vyřešil problém.",
+     "Martin konečně bude řešit problém.",
+     "Martin konečně řešit problém."
+    ],
+    "answer": 1,
+    "explanation": "'Konečně' (finally) combined with the attainment of a result calls for the perfective verb 'vyřešit'."
+   }
+  ],
+  "tip": "Time markers provide the best clue: 'celý den', 'dlouho', and 'často' trigger imperfective, while 'najednou', 'hned', and 'už' usually pair with perfective."
+ },
+ {
+  "id": "cs-a2-future-tense-distinctions",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#059669",
+  "emoji": "⏳",
+  "title": "Future Tense Formation by Aspect",
+  "subtitle": "Use compound future for imperfective verbs and present forms for perfective verbs",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Imperfective future uses forms of 'být' plus the infinitive (budu dělat), whereas perfective verbs express the future automatically using their present conjugation (udělám).",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Future of 'být'",
+    "Imperfective Future (Process)",
+    "Perfective Future (Result)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "já",
+      "budu",
+      "budu psát",
+      "napíšu"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ty",
+      "budeš",
+      "budeš psát",
+      "napíšeš"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "on/ona",
+      "bude",
+      "bude psát",
+      "napíše"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "my",
+      "budeme",
+      "budeme psát",
+      "napíšeme"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "oni",
+      "budou",
+      "budou psát",
+      "napíšou"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Ongoing Future Activity",
+    "example": "Zítra večer budu vařit.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Single Finished Outcome",
+    "example": "Zítra večer uvařím guláš.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Future State of Being",
+    "example": "V pondělí budu doma.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Odpoledne budeme pracovat na zahradě.",
+    "ko": "",
+    "highlight": "budeme pracovat"
+   },
+   {
+    "en": "Až přijdu domů, hned ti zavolám.",
+    "ko": "",
+    "highlight": "zavolám"
+   },
+   {
+    "en": "Co budeš dělat v sobotu dopoledne?",
+    "ko": "",
+    "highlight": "budeš dělat"
+   },
+   {
+    "en": "Všechny ty e-maily zítra pošlu.",
+    "ko": "",
+    "highlight": "pošlu"
+   },
+   {
+    "en": "V létě se budu učit německy.",
+    "ko": "",
+    "highlight": "budu učit"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Zítra budu napsat dopis.",
+    "right": "Zítra napíšu dopis. / Zítra budu psát dopis.",
+    "note": "Never combine 'budu' with a perfective infinitive; either use 'budu psát' or simply 'napíšu'."
+   },
+   {
+    "wrong": "Teď udělám úkol. (meaning 'I am doing it right now')",
+    "right": "Teď dělám úkol.",
+    "note": "Present forms of perfective verbs always indicate future time in Czech, never the immediate present."
+   },
+   {
+    "wrong": "Budu jít do kina.",
+    "right": "Půjdu do kina.",
+    "note": "Verbs of motion like 'jít' and 'jet' have unique prefix-based futures ('půjdu', 'pojedeš') rather than taking 'budu'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Tomorrow I will be watching TV all evening.",
+    "options": [
+     "Zítra se podívám na televizi celý večer.",
+     "Zítra se budu dívat na televizi celý večer.",
+     "Zítra se dívám na televizi celý večer.",
+     "Zítra budu se podívat na televizi celý večer."
+    ],
+    "answer": 1,
+    "explanation": "Continuous future action over a long duration ('celý večer') demands compound future 'budu se dívat'."
+   },
+   {
+    "question": "I will buy milk on the way home. (One completed event)",
+    "options": [
+     "Koupím mléko cestou domů.",
+     "Budu koupit mléko cestou domů.",
+     "Kupuju mléko cestou domů.",
+     "Budu kupovat mléko cestou domů."
+    ],
+    "answer": 0,
+    "explanation": "A single completed event in the future requires the present form of the perfective verb ('koupím')."
+   },
+   {
+    "question": "What will you (informal singular) cook for lunch?",
+    "options": [
+     "Co budeš uvařit k obědu?",
+     "Co uvařím k obědu?",
+     "Co uvaříš k obědu?",
+     "Co vaříš k obědu?"
+    ],
+    "answer": 2,
+    "explanation": "2nd person singular perfective future for preparing a meal is 'uvaříš'."
+   },
+   {
+    "question": "We will wait here for you.",
+    "options": [
+     "Budu čekat tady na tebe.",
+     "Počkat budeme tady na tebe.",
+     "Počkáme tady na tebe.",
+     "Budeme počkat tady na tebe."
+    ],
+    "answer": 2,
+    "explanation": "'Počkáme' (perfective present) correctly signals the future commitment; 'budeme počkat' is ungrammatical."
+   }
+  ],
+  "tip": "Golden rule: If a verb has a prefix making it perfective (like 'u-', 'na-', 'pře-'), NEVER put 'budu' in front of it!"
+ },
+ {
+  "id": "cs-a2-genitive-singular-possession-and-prepositions",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#EA580C",
+  "emoji": "📦",
+  "title": "Genitive Singular in Possession, Negation, and Prepositions",
+  "subtitle": "Master the 2nd case endings for expressing belonging, origin, and absence",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "The genitive singular identifies possession, responds to common prepositions like 'do', 'od', 'z', and 'bez', and generally takes -a/-u for masculine, -y/-e for feminine, and -a/-e for neuter nouns.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Nominative",
+    "Genitive Ending",
+    "Genitive Singular"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Animate",
+      "bratr / student",
+      "-a",
+      "bratra / studenta"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masculine Inanimate",
+      "hrad / pokoj",
+      "-u / -e",
+      "hradu / pokoje"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine",
+      "žena / ulice",
+      "-y / -e",
+      "ženy / ulice"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter",
+      "město / moře",
+      "-a / -e",
+      "města / moře"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Possession ('of')",
+    "example": "To je auto mého bratra.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Direction or Source ('do', 'z')",
+    "example": "Jdeme do nového divadla.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Absence ('bez')",
+    "example": "Piju kávu bez cukru a mléka.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dostal jsem dopis od dobrého kamaráda.",
+    "ko": "",
+    "highlight": "od dobrého kamaráda"
+   },
+   {
+    "en": "Vlak jede z Prahy do Brna.",
+    "ko": "",
+    "highlight": "z Prahy do Brna"
+   },
+   {
+    "en": "Dnes přišel do práce bez kabátu.",
+    "ko": "",
+    "highlight": "bez kabátu"
+   },
+   {
+    "en": "To je taška naší profesorky.",
+    "ko": "",
+    "highlight": "profesorky"
+   },
+   {
+    "en": "Uprostřed města stojí starý kostel.",
+    "ko": "",
+    "highlight": "města"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jdu do divadlo.",
+    "right": "Jdu do divadla.",
+    "note": "The preposition 'do' (into) strictly takes the genitive; neuter 'divadlo' becomes 'divadla'."
+   },
+   {
+    "wrong": "Káva bez cukr.",
+    "right": "Káva bez cukru.",
+    "note": "The preposition 'bez' (without) requires the genitive case ending '-u' for inanimate masculine nouns like 'cukr'."
+   },
+   {
+    "wrong": "Dům můj otec.",
+    "right": "Dům mého otce.",
+    "note": "Possession requires the genitive case on both modifier and noun ('mého otce'), not nominative."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "We are going to Prague tomorrow. (Jdeme do ___.)",
+    "options": [
+     "Praha",
+     "Prahu",
+     "Prahy",
+     "Praze"
+    ],
+    "answer": 2,
+    "explanation": "The directional preposition 'do' triggers the genitive singular; feminine 'Praha' ends in '-y' ('do Prahy')."
+   },
+   {
+    "question": "He ordered tea without sugar. (Objednal si čaj bez ___.)",
+    "options": [
+     "cukru",
+     "cukr",
+     "cukrem",
+     "cukře"
+    ],
+    "answer": 0,
+    "explanation": "'Bez' requires genitive, and masculine inanimate 'cukr' takes the ending '-u'."
+   },
+   {
+    "question": "This is the car of my sister. (To je auto mojí ___.)",
+    "options": [
+     "sestra",
+     "sestru",
+     "sestře",
+     "sestry"
+    ],
+    "answer": 3,
+    "explanation": "Expressing possession with 'sestra' calls for the genitive singular ending '-y'."
+   },
+   {
+    "question": "She returned from work very late. (Vrátila se z ___ velmi pozdě.)",
+    "options": [
+     "práce",
+     "práci",
+     "prácu",
+     "prácou"
+    ],
+    "answer": 0,
+    "explanation": "Preposition 'z' (from) takes genitive; 'práce' remains 'práce' in genitive singular (soft feminine declension)."
+   }
+  ],
+  "tip": "Prepositions expressing motion toward an interior ('do') or away from a surface/source ('od', 'z') ALWAYS govern the genitive case."
+ },
+ {
+  "id": "cs-a2-dative-singular-indirect-objects",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#9333EA",
+  "emoji": "🎁",
+  "title": "Dative Singular and Indirect Objects",
+  "subtitle": "Signal giving, telling, and personal states with the 3rd case",
+  "color": "#9333EA",
+  "bg": "#FAF5FF",
+  "keyPoint": "The dative singular marks the recipient or beneficiary of an action and frequently uses the endings -ovi/-u for masculine, -ě/-e for feminine, and -u for neuter.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Nominative",
+    "Dative Ending",
+    "Dative Singular"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Animate",
+      "Petr / bratr",
+      "-ovi",
+      "Petrovi / bratrovi"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masculine Inanimate",
+      "stůl / počítač",
+      "-u / -i",
+      "stolu / počítači"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine Hard",
+      "žena / sestra",
+      "-ě / -e",
+      "ženě / sestře"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine Soft",
+      "kolegyně / tramvaj",
+      "-i",
+      "kolegyni / tramvaji"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter",
+      "město / dítě",
+      "-u / -ti",
+      "městu / dítěti"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#9333EA",
+    "label": "Recipient of Giving/Saying",
+    "example": "Dám ten dárek sestře.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Physical or Emotional State",
+    "example": "Je mi dnes zima.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Preposition 'k / ke' (towards)",
+    "example": "Jdeme na návštěvu k babičce.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Koupil jsem bratrovi novou knihu.",
+    "ko": "",
+    "highlight": "bratrovi"
+   },
+   {
+    "en": "Lékař pomohl tomu starému pánovi.",
+    "ko": "",
+    "highlight": "pánovi"
+   },
+   {
+    "en": "Napiš své kamarádce zprávu.",
+    "ko": "",
+    "highlight": "kamarádce"
+   },
+   {
+    "en": "Nerozumím tomu novému slovu.",
+    "ko": "",
+    "highlight": "slovu"
+   },
+   {
+    "en": "Je Petrovi špatně?",
+    "ko": "",
+    "highlight": "Petrovi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Řekl jsem to bratr.",
+    "right": "Řekl jsem to bratrovi.",
+    "note": "Indirect recipient of speech takes the dative animate ending '-ovi', not the nominative."
+   },
+   {
+    "wrong": "Jsem zima. (meaning 'I am cold')",
+    "right": "Je mi zima.",
+    "note": "Impersonal feelings and bodily states use dative pronouns ('mi', 'ti', 'mu'), literally 'It is cold to me'."
+   },
+   {
+    "wrong": "Jdu k doktor.",
+    "right": "Jdu k doktorovi.",
+    "note": "The preposition 'k / ke' (towards / to someone's place) requires the dative case."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I gave the flowers to my mother. (Dal jsem květiny ___.)",
+    "options": [
+     "mamince",
+     "maminku",
+     "maminka",
+     "maminkou"
+    ],
+    "answer": 0,
+    "explanation": "The recipient takes the dative case. 'Maminka' changes to 'mamince' through consonant mutation (k -> c)."
+   },
+   {
+    "question": "How old is Jan? (Kolik je ___?)",
+    "options": [
+     "Jan",
+     "Jana",
+     "Janovi",
+     "Janem"
+    ],
+    "answer": 2,
+    "explanation": "In Czech, age expressions require the dative case ('Je Janovi třicet let')."
+   },
+   {
+    "question": "Can you help me? (Můžeš ___ pomoct?)",
+    "options": [
+     "já",
+     "mě",
+     "mou",
+     "mi"
+    ],
+    "answer": 3,
+    "explanation": "The verb 'pomoct' strictly governs the dative; short dative singular pronoun for 'já' is 'mi'."
+   },
+   {
+    "question": "We are walking to the train station. (Jdeme k ___.)",
+    "options": [
+     "nádraží",
+     "nádražím",
+     "nádražího",
+     "nádražiu"
+    ],
+    "answer": 0,
+    "explanation": "The preposition 'k' takes the dative case; soft neuter noun 'nádraží' retains '-í' in dative singular."
+   }
+  ],
+  "tip": "When a masculine animate noun is modified by a name or adjective, put '-ovi' on the last word (e.g., 'panu Novákovi', not 'panovi Novákovi')!"
+ },
+ {
+  "id": "cs-a2-instrumental-singular-means-and-accompaniment",
+  "level": "a2",
+  "title": "Instrumental Singular for Means and Predicates",
+  "subtitle": "Master the 7th case for instruments, transport, accompaniment, and states of being",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎻",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use the bare instrumental for means, tools, and temporary predicate states after 'být', but always add the preposition 's/se' when expressing accompaniment ('with someone').",
+  "structure": {
+   "headers": [
+    "Gender / Role",
+    "Endings",
+    "Example Phrase",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine / Neuter",
+      "-em",
+      "vlakem / perem",
+      "Bare instrumental: means / transport"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine",
+      "-ou",
+      "tramvají / tužkou",
+      "Bare instrumental: means / tool"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Accompaniment",
+      "s/se + 7th case",
+      "s bratrem / s kamarádkou",
+      "Together with someone / something"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Predicate Noun",
+      "být + 7th case",
+      "stát se učitelem",
+      "Roles, professions, changing states"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Means of Transport and Tools",
+    "example": "Jezdím do práce autem a píšu modrým perem.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Accompaniment with 's/se'",
+    "example": "Včera večer jsem byl v kině s Marií.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Predicates after 'být' and 'stát se'",
+    "example": "Můj bratr se chce stát slavným právníkem.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Cestujeme na dovolenou vlakem.",
+    "ko": "",
+    "highlight": "vlakem"
+   },
+   {
+    "en": "Rád píšu černým perem.",
+    "ko": "",
+    "highlight": "černým perem"
+   },
+   {
+    "en": "Půjdeš na koncert s námi?",
+    "ko": "",
+    "highlight": "s námi"
+   },
+   {
+    "en": "Můj otec je zkušeným lékařem.",
+    "ko": "",
+    "highlight": "zkušeným lékařem"
+   },
+   {
+    "en": "Krájím chleba velkým nožem.",
+    "ko": "",
+    "highlight": "velkým nožem"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Jedu do školy s autobusem.",
+    "right": "Jedu do školy autobusem.",
+    "note": "Do not use 's' for means of transport or instruments; use bare instrumental."
+   },
+   {
+    "wrong": "Půjdu na procházku s kamarádka.",
+    "right": "Půjdu na procházku s kamarádkou.",
+    "note": "The preposition 's' requires the instrumental ending (-ou for feminine hard nouns)."
+   },
+   {
+    "wrong": "Píšu s tužkou.",
+    "right": "Píšu tužkou.",
+    "note": "Physical instruments of action take the bare instrumental without 's'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence with the correct means of transport: 'Do Prahy obvykle jezdím ___.'",
+    "options": [
+     "autobus",
+     "autobusem",
+     "s autobusem",
+     "autobusu"
+    ],
+    "answer": 1,
+    "explanation": "Means of transport require the bare instrumental masculine ending -em."
+   },
+   {
+    "question": "Choose the correct phrase for accompaniment: 'Šel jsem na večeři ___.'",
+    "options": [
+     "s Petrem",
+     "Petrem",
+     "s Petra",
+     "Petrovi"
+    ],
+    "answer": 0,
+    "explanation": "Accompaniment requires the preposition 's' followed by the instrumental form 'Petrem'."
+   },
+   {
+    "question": "Complete the profession predicate: 'Petr je velmi dobrým ___.'",
+    "options": [
+     "učitel",
+     "učitele",
+     "učitelem",
+     "s učitelem"
+    ],
+    "answer": 2,
+    "explanation": "Predicate nouns denoting roles or professions after 'být' frequently take the bare instrumental."
+   },
+   {
+    "question": "Select the correct form for instrument: 'Babička krájí dort ostrým ___.'",
+    "options": [
+     "nůž",
+     "nože",
+     "s nožem",
+     "nožem"
+    ],
+    "answer": 3,
+    "explanation": "The instrument of cutting takes the bare instrumental 'nožem' without any preposition."
+   }
+  ],
+  "tip": "Remember: 's/se' means 'along with'. If you say 'Jedu s vlakem', it sounds like the train is walking beside you!"
+ },
+ {
+  "id": "cs-a2-clitic-pronoun-ordering-second-position",
+  "level": "a2",
+  "title": "Wackernagel's Law: Clitic Pronoun Ordering",
+  "subtitle": "Positioning unaccented short pronouns and auxiliaries in the second slot",
+  "category": "advanced",
+  "categoryColor": "#4F46E5",
+  "emoji": "🧩",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "Czech clitics (short unstressed words) cannot start a sentence and must bundle together in strict internal sequence into the absolute second syntactic position.",
+  "structure": {
+   "headers": [
+    "Rank",
+    "Clitic Type",
+    "Elements",
+    "Example Position"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st",
+      "Auxiliary / Conditional",
+      "jsem, jsi, jsme, jste / bych, bys, by",
+      "Včera jsem..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd",
+      "Reflexive Particles",
+      "se, si",
+      "Včera jsem se..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3rd",
+      "Dative Pronouns",
+      "ti, mi, mu, jí, nám, vám, jim",
+      "Včera jsem se mu..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "4th",
+      "Accusative Pronouns",
+      "tě, mě, ho, ji, to, nás, vás, je",
+      "Včera jsem se mu to rozhodl říct."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6366F1",
+    "label": "Auxiliary + Reflexive Clitic",
+    "example": "Včera jsem se probudil velmi brzy.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Reflexive + Accusative Clitic",
+    "example": "Moc se mi to líbí.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Full Stack: Auxiliary + Dative + Accusative",
+    "example": "Už jsi mu to poslal?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Včera jsem se vrátil pozdě v noci.",
+    "ko": "",
+    "highlight": "jsem se"
+   },
+   {
+    "en": "Proč jsi mi to neřekl dříve?",
+    "ko": "",
+    "highlight": "jsi mi to"
+   },
+   {
+    "en": "Moc se mi líbí tvoje nové auto.",
+    "ko": "",
+    "highlight": "se mi"
+   },
+   {
+    "en": "Rodiče mi ho koupili k narozeninám.",
+    "ko": "",
+    "highlight": "mi ho"
+   },
+   {
+    "en": "Včera jsme si o tom dlouho povídali.",
+    "ko": "",
+    "highlight": "jsme si"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Se jmenuji Petr.",
+    "right": "Jmenuji se Petr.",
+    "note": "Clitics can never stand at the absolute beginning of an independent sentence."
+   },
+   {
+    "wrong": "Včera jsem to mu dal.",
+    "right": "Včera jsem mu to dal.",
+    "note": "Within the clitic cluster, dative clitics (mu) must precede accusative clitics (to)."
+   },
+   {
+    "wrong": "Včera se jsem koupal v bazénu.",
+    "right": "Včera jsem se koupal v bazénu.",
+    "note": "Past tense auxiliary forms (jsem, jsi) always precede reflexive particles (se, si)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the correct clitic sequence: 'Včera ___ koupil nový telefon.'",
+    "options": [
+     "jsem si",
+     "si jsem",
+     "si",
+     "jsem to si"
+    ],
+    "answer": 0,
+    "explanation": "The auxiliary verb 'jsem' comes first, followed by the reflexive clitic 'si'."
+   },
+   {
+    "question": "Choose the correctly ordered sentence:",
+    "options": [
+     "To ti zítra řeknu.",
+     "Zítra ti to řeknu.",
+     "Zítra to ti řeknu.",
+     "Ti to zítra řeknu."
+    ],
+    "answer": 1,
+    "explanation": "Following the first stress unit 'Zítra', the clitic cluster orders dative ('ti') before accusative ('to')."
+   },
+   {
+    "question": "Which word order is forbidden in Czech standard grammar?",
+    "options": [
+     "Viděl jsem tě včera.",
+     "Včera jsem tě viděl.",
+     "Tě jsem včera viděl.",
+     "Já jsem tě včera viděl."
+    ],
+    "answer": 2,
+    "explanation": "A clitic pronoun such as 'tě' cannot begin a sentence."
+   },
+   {
+    "question": "Complete the question correctly: 'Proč ___ neposlal tu zprávu?'",
+    "options": [
+     "jí jsi to",
+     "jsi to jí",
+     "to jsi jí",
+     "jsi jí"
+    ],
+    "answer": 3,
+    "explanation": "The past auxiliary 'jsi' must take precedence over the dative pronoun 'jí'."
+   }
+  ],
+  "tip": "Think of clitics as magnets sticking tightly to the first phrase or word of the clause in the fixed sequence: Auxiliary ➔ Reflexive (se/si) ➔ Dative (mi/ti) ➔ Accusative (mě/tě/to)."
+ },
+ {
+  "id": "cs-b1-verbs-of-motion-determinate-vs-indeterminate",
+  "level": "b1",
+  "title": "Verbs of Motion: Determinate vs. Indeterminate",
+  "subtitle": "Navigating directional vs. habitual and multi-directional movement",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🚶",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Determinate verbs (jít, jet) denote single-direction, ongoing trips happening right now, while indeterminate verbs (chodit, jezdit) denote habitual trips, round trips, or general ability.",
+  "structure": {
+   "headers": [
+    "Type",
+    "On Foot",
+    "By Vehicle",
+    "Primary Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Determinate (Unidirectional)",
+      "jít (jdu)",
+      "jet (jedu)",
+      "One direction, in progress right now"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Indeterminate (Multidirectional)",
+      "chodit (chodím)",
+      "jezdit (jezdím)",
+      "Habitual, repeated, round trips, aimless"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Prefix: od- (Away)",
+      "odejít",
+      "odjet",
+      "Departing, leaving a place"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Prefix: při- (Arrival)",
+      "přijít",
+      "přijet",
+      "Arriving, coming to a destination"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Action in Progress Right Now",
+    "example": "Kam teď jdeš tak rychle?",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Habitual or Repeated Routine",
+    "example": "Každý den chodím do školy pěšky.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Completed Round-trip in Past",
+    "example": "V létě jsme jezdili po celé Evropě.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Právě teď jedu vlakem do Brna.",
+    "ko": "",
+    "highlight": "jedu"
+   },
+   {
+    "en": "O víkendech často chodíme do lesa.",
+    "ko": "",
+    "highlight": "chodíme"
+   },
+   {
+    "en": "Vlak z Prahy už přijel na nádraží.",
+    "ko": "",
+    "highlight": "přijel"
+   },
+   {
+    "en": "Kam zrovna jdeš s tou taškou?",
+    "ko": "",
+    "highlight": "jdeš"
+   },
+   {
+    "en": "Můj syn už umí chodit.",
+    "ko": "",
+    "highlight": "chodit"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Každé pondělí jdu do posilovny.",
+    "right": "Každé pondělí chodím do posilovny.",
+    "note": "Use indeterminate 'chodit' for repeated, habitual actions."
+   },
+   {
+    "wrong": "Teď právě chodím na nádraží.",
+    "right": "Teď právě jdu na nádraží.",
+    "note": "Use determinate 'jít' for motion happening in one specific direction right now."
+   },
+   {
+    "wrong": "Včera jsme jeli pěšky do centra.",
+    "right": "Včera jsme šli pěšky do centra.",
+    "note": "'Jet' requires a vehicle; for traveling on foot, use forms of 'jít' or 'chodit'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the right verb for a current action: 'Počkej na mě, právě ___ domů!'",
+    "options": [
+     "chodím",
+     "jdu",
+     "jezdím",
+     "přicházím"
+    ],
+    "answer": 1,
+    "explanation": "'Jdu' expresses an action on foot occurring right now toward a specific destination."
+   },
+   {
+    "question": "Select the correct form for repeated travel: 'Eva ___ každé léto k moři autem.'",
+    "options": [
+     "jede",
+     "pojede",
+     "jezdí",
+     "ujede"
+    ],
+    "answer": 2,
+    "explanation": "'Jezdí' expresses habitual, repeated motion by vehicle."
+   },
+   {
+    "question": "Complete with the correct prefixed perfective verb: 'Hosté už skončili večeři a ___ domů.'",
+    "options": [
+     "chodili",
+     "jezdili",
+     "odešli",
+     "šli"
+    ],
+    "answer": 2,
+    "explanation": "The prefix 'od-' combined with determinate 'jít' forms 'odejít' (past plural: 'odešli'), meaning 'they departed/left'."
+   },
+   {
+    "question": "Which verb implies moving by foot, not by vehicle?",
+    "options": [
+     "jet",
+     "jezdit",
+     "odjet",
+     "chodit"
+    ],
+    "answer": 3,
+    "explanation": "'Chodit' specifically designates walking/traveling on foot."
+   }
+  ],
+  "tip": "Ask yourself: Is it happening right now in one line (jít/jet)? Or is it a routine / back-and-forth round trip (chodit/jezdit)?"
+ },
+ {
+  "id": "cs-b1-present-and-past-conditional-mood",
+  "level": "b1",
+  "title": "Conditional Mood with 'by-forms'",
+  "subtitle": "Polite requests, hypothetical situations, and desires using conditional auxiliaries",
+  "category": "conditionals",
+  "categoryColor": "#EA580C",
+  "emoji": "🪄",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "The Czech conditional is formed by combining the past participle (-l form) with the special clitic auxiliary particles: bych, bys, by, bychom, byste, by.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Singular",
+    "Plural",
+    "Example with 'dělat'"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Person (já / my)",
+      "bych",
+      "bychom",
+      "dělal bych / dělali bychom"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd Person (ty / vy)",
+      "bys",
+      "byste",
+      "dělal bys / dělali byste"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3rd Person (on / oni)",
+      "by",
+      "by",
+      "dělal by / dělali by"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Conjunctions (aby, kdyby)",
+      "kdybych, abys...",
+      "kdybychom, abyste...",
+      "Kdybych měl čas..."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Polite Requests and Wishes",
+    "example": "Chtěl bych jeden šálek černé kávy, prosím.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Hypothetical Conditions ('kdyby')",
+    "example": "Kdybych měl více peněz, cestoval bych.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Purpose Clauses with 'aby'",
+    "example": "Řekl mi to, abych se nebál.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Rád bych tě pozval na večeři.",
+    "ko": "",
+    "highlight": "bych"
+   },
+   {
+    "en": "Co bys dělal na mém místě?",
+    "ko": "",
+    "highlight": "bys"
+   },
+   {
+    "en": "Mohli byste mi prosím pomoct?",
+    "ko": "",
+    "highlight": "byste"
+   },
+   {
+    "en": "Kdybychom měli čas, šli bychom do kina.",
+    "ko": "",
+    "highlight": "Kdybychom"
+   },
+   {
+    "en": "Petr by to určitě zvládl sám.",
+    "ko": "",
+    "highlight": "by"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Kdyby jsem měl peníze, koupil bych to.",
+    "right": "Kdybych měl peníze, koupil bych to.",
+    "note": "Never say 'kdyby jsem' or 'aby jsem'; merge them into 'kdybych' and 'abych'."
+   },
+   {
+    "wrong": "Chtěl by jste kávu?",
+    "right": "Chtěl byste kávu?",
+    "note": "The second-person plural conditional particle is 'byste', written as a single word."
+   },
+   {
+    "wrong": "My by jsme chtěli pomoct.",
+    "right": "My bychom chtěli pomoct.",
+    "note": "Standard Czech requires 'bychom' for the 1st person plural; 'by jsme' is non-standard colloquial."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct polite form: 'Já ___ rád sklenici vody.'",
+    "options": [
+     "bych chtěl",
+     "by chtěl",
+     "bychom chtěl",
+     "bys chtěl"
+    ],
+    "answer": 0,
+    "explanation": "The 1st-person singular conditional auxiliary matching 'já' is 'bych'."
+   },
+   {
+    "question": "How do you correctly combine 'kdyby' + 1st person singular?",
+    "options": [
+     "kdyby jsem",
+     "kdybys",
+     "kdybych",
+     "kdybychom"
+    ],
+    "answer": 2,
+    "explanation": "'Kdyby' merges with 'bych' into the single word 'kdybych'."
+   },
+   {
+    "question": "Complete the polite question: 'Pane Nováku, ___ mi s tím pomoct?'",
+    "options": [
+     "mohl bys",
+     "mohl byste",
+     "mohl by jste",
+     "mohl bychom"
+    ],
+    "answer": 1,
+    "explanation": "Formal address (vykání) requires the 2nd-person plural marker 'byste'."
+   },
+   {
+    "question": "Identify the standard first-person plural form: 'Zítra ___ rádi přijeli.'",
+    "options": [
+     "by jsme",
+     "byste",
+     "bysme",
+     "bychom"
+    ],
+    "answer": 3,
+    "explanation": "'Bychom' is the only grammatically correct standard form for the 1st person plural (we)."
+   }
+  ],
+  "tip": "In everyday speech you will hear 'by jsme' and 'abysme', but written and formal Czech strictly requires 'bychom' and 'abychom'."
+ },
+ {
+  "id": "cs-b1-reflexive-verbs-and-dative-se-vs-si",
+  "level": "b1",
+  "title": "Reflexive Mechanics: True Reflexives, Reciprocals, and 'se' vs. 'si'",
+  "subtitle": "Navigating the crucial contrast between accusative 'se' and dative 'si'",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🪞",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use 'se' (accusative) when the subject acts directly on itself as the direct object, and 'si' (dative) when the subject acts for its own benefit, interest, or on its own body part.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Reflexive Clitic",
+    "Literal Meaning",
+    "Typical Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Accusative Direct Reflexive",
+      "se",
+      "myself / yourself (direct object)",
+      "Mýt se (to wash oneself)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Dative Indirect Reflexive",
+      "si",
+      "to/for oneself",
+      "Koupit si (to buy for oneself)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Body Parts / Personal Objects",
+      "si + accusative object",
+      "own body part",
+      "Čistit si zuby (brush one's teeth)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reciprocal Action",
+      "se / si",
+      "each other",
+      "Vidět se / pomáhat si"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Direct Self-Action ('se')",
+    "example": "Ráno se rychle umyju a obléknu.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Self-Benefit or Ingestion ('si')",
+    "example": "Dám si jednu dobrou kávu.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Reciprocal Mutual Action",
+    "example": "S Petrem se známe už deset let.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Každé ráno si čistím zuby.",
+    "ko": "",
+    "highlight": "si"
+   },
+   {
+    "en": "Děti se myjí před spaním.",
+    "ko": "",
+    "highlight": "se"
+   },
+   {
+    "en": "Koupil jsem si novou bundu.",
+    "ko": "",
+    "highlight": "si"
+   },
+   {
+    "en": "Často si navzájem pomáháme.",
+    "ko": "",
+    "highlight": "si"
+   },
+   {
+    "en": "Bojím se velkých psů.",
+    "ko": "",
+    "highlight": "se"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Čistím se zuby.",
+    "right": "Čistím si zuby.",
+    "note": "When the object being cleaned is a body part (zuby), use dative 'si', not accusative 'se'."
+   },
+   {
+    "wrong": "Dám se kávu, prosím.",
+    "right": "Dám si kávu, prosím.",
+    "note": "Ordering food/drink for oneself requires the dative of interest 'dát si'."
+   },
+   {
+    "wrong": "Sedni se tady.",
+    "right": "Sedni si tady.",
+    "note": "The verb 'sednout si' (to sit down) lexically requires dative 'si'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which sentence means 'I brush my teeth'?",
+    "options": [
+     "Čistím zuby.",
+     "Čistím se zuby.",
+     "Čistím si zuby.",
+     "Čistím je zuby."
+    ],
+    "answer": 2,
+    "explanation": "Brushing one's own teeth requires the dative reflexive 'si' to indicate possession/affected body part."
+   },
+   {
+    "question": "Choose the correct phrase for ordering: 'V restauraci ___ polévku.'",
+    "options": [
+     "dám si",
+     "dám se",
+     "dám",
+     "dám jí"
+    ],
+    "answer": 0,
+    "explanation": "The idiom for ordering food or drink for yourself is 'dát si'."
+   },
+   {
+    "question": "Fill the blank for direct reflexive action: 'Bratr se probudil a začal ___ mýt.'",
+    "options": [
+     "si",
+     "se",
+     "ho",
+     "sobě"
+    ],
+    "answer": 1,
+    "explanation": "'Mýt se' means to wash oneself entirely as the direct object of the verb."
+   },
+   {
+    "question": "Complete the reciprocal sentence: 'S Janou ___ často telefonujeme.'",
+    "options": [
+     "se",
+     "nás",
+     "jí",
+     "si"
+    ],
+    "answer": 3,
+    "explanation": "'Telefonovat si' takes dative 'si' because you are calling TO each other (telefonovat někomu)."
+   }
+  ],
+  "tip": "If the sentence already has a direct accusative noun object (like 'zuby', 'kávu', or 'auto'), the reflexive pronoun will almost always be 'si', not 'se'!"
+ },
+ {
+  "id": "cs-b1-plural-noun-declensions-across-all-cases",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#2563EB",
+  "emoji": "👥",
+  "title": "Plural Noun and Adjective Declension Patterns",
+  "subtitle": "Master case endings and consonant mutations across Czech plurals",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Masculine animate nouns undergo consonant softening in the nominative plural, while oblique plural endings are largely shared across genders.",
+  "structure": {
+   "headers": [
+    "Case",
+    "Masculine Animate",
+    "Feminine / Neuter",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Nominative (Nom)",
+      "staří Češi (-i / -é)",
+      "nové ženy / velká města",
+      "Plural subject with mutations"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Genitive (Gen)",
+      "starých Čechů (-ů)",
+      "nových žen (ø) / měst (ø)",
+      "Quantities and prepositions (od, do)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Dative (Dat)",
+      "starým Čechům (-ům)",
+      "novým ženám (-ám) / městům (-ům)",
+      "Indirect object and preposition k"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Locative (Loc)",
+      "o starých Češích (-ích)",
+      "o nových ženách (-ách) / městech",
+      "Prepositions v, na, o"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Instrumental (Ins)",
+      "se starými Čechy (-y)",
+      "s novými ženami (-ami) / městy (-y)",
+      "Means, accompaniment with s/se"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Consonant Mutation in Subject",
+    "example": "Naši noví kolegové přišli včas do kanceláře.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Zero Ending in Genitive Plural",
+    "example": "Máme málo volných míst a ještě méně dobrých zpráv.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Universal Instrumental Endings",
+    "example": "Mluvili jsme se všemi těmi milými studentkami.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ti zkušení lékaři pracují v moderní nemocnici.",
+    "ko": "",
+    "highlight": "lékaři"
+   },
+   {
+    "en": "Mluvíme o našich dobrých přátelích.",
+    "ko": "",
+    "highlight": "přátelích"
+   },
+   {
+    "en": "Viděli jsme mnoho krásných historických měst.",
+    "ko": "",
+    "highlight": "měst"
+   },
+   {
+    "en": "Šel na procházku se svými věrnými psy.",
+    "ko": "",
+    "highlight": "věrnými psy"
+   },
+   {
+    "en": "Všichni čeští vojáci stáli před budovou.",
+    "ko": "",
+    "highlight": "čeští vojáci"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Dobří Čechi bydlí tady.",
+    "right": "Dobří Češi bydlí tady.",
+    "note": "The stem consonant 'ch' softens to 'š' before the masculine animate nominative plural ending -i."
+   },
+   {
+    "wrong": "Viděl jsem pět velkých městech.",
+    "right": "Viděl jsem pět velkých měst.",
+    "note": "Neuter nouns following the pattern 'město' take a zero-ending in the genitive plural, not locative -ech."
+   },
+   {
+    "wrong": "Mluvili jsme s těmi ženami a muži.",
+    "right": "Mluvili jsme s těmi ženami a muži.",
+    "note": "Instrumental plural for masculine hard stems ends in -y (muži is correct only for soft stems like muž, but studenty for student)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "V parku stáli dva mladí ___.",
+    "options": [
+     "kluci",
+     "kluky",
+     "kluků",
+     "klukem"
+    ],
+    "answer": 0,
+    "explanation": "The masculine animate noun 'kluk' mutates 'k' to 'c' in the nominative plural: 'kluci'."
+   },
+   {
+    "question": "Mluvili jsme o našich nových ___.",
+    "options": [
+     "učitelé",
+     "učitele",
+     "učitelích",
+     "učiteli"
+    ],
+    "answer": 2,
+    "explanation": "Locative plural after the preposition 'o' takes the ending -ích for masculine animate soft stems."
+   },
+   {
+    "question": "Ve třídě je hodně malých ___.",
+    "options": [
+     "okna",
+     "oken",
+     "oknů",
+     "oknech"
+    ],
+    "answer": 1,
+    "explanation": "Neuter nouns like 'okno' drop their ending in genitive plural and insert a mobile 'e' yielding 'oken'."
+   },
+   {
+    "question": "Šli jsme na večeři se starými ___.",
+    "options": [
+     "kamarádi",
+     "kamarády",
+     "kamarádů",
+     "kamarádech"
+    ],
+    "answer": 1,
+    "explanation": "Instrumental plural requires the ending -y for masculine hard stems like 'kamarád'."
+   }
+  ],
+  "tip": "Remember the big mutation rules for masculine nominative plural: k → c (Polák → Poláci), h → z (pstruh → pstruzi), ch → š (Čech → Češi), and r → ř (doktor → doktoři)."
+ },
+ {
+  "id": "cs-b1-numeral-syntax-and-quantified-genitives",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#2563EB",
+  "emoji": "🔢",
+  "title": "Numeral Syntax and Counting Dependencies",
+  "subtitle": "Navigating 1 vs. 2–4 vs. 5+ and quantifying genitives",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Numbers 2–4 require nominative plural nouns with plural verbs, while 5 and above require genitive plural nouns and neuter singular verbs.",
+  "structure": {
+   "headers": [
+    "Numeral Category",
+    "Noun Case",
+    "Verb Agreement",
+    "Czech Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1 (jeden, jedna, jedno)",
+      "Nominative singular",
+      "Agrees in gender/number",
+      "Jeden student spal."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2, 3, 4 (dva, tři, čtyři)",
+      "Nominative plural",
+      "Plural verb",
+      "Tři studenti spali."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "5+ (pět, šest, sto...)",
+      "Genitive plural",
+      "Neuter 3rd person singular (-o)",
+      "Pět studentů spalo."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Prepositional Oblique (s 5...)",
+      "Governed by preposition",
+      "Plural agreement restores",
+      "Se čtyřmi kamarády."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Cardinal 2-4 Agreement",
+    "example": "V pokoji čekaly čtyři mladé ženy.",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Cardinal 5+ Subject & Neuter Verb",
+    "example": "Na konferenci přijelo deset zahraničních delegátů.",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Quantifier with Genitive",
+    "example": "V obchodě bylo mnoho spokojených zákazníků.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Na stole ležely tři červené jablka.",
+    "ko": "",
+    "highlight": "tři červené jablka"
+   },
+   {
+    "en": "Do Prahy přijelo pět nových kolegů.",
+    "ko": "",
+    "highlight": "přijelo pět nových kolegů"
+   },
+   {
+    "en": "Včera tam bylo málo volného času.",
+    "ko": "",
+    "highlight": "bylo málo volného času"
+   },
+   {
+    "en": "Dva bratři studují na univerzitě.",
+    "ko": "",
+    "highlight": "Dva bratři studují"
+   },
+   {
+    "en": "Sedm malých dětí si hrálo na zahradě.",
+    "ko": "",
+    "highlight": "Sedm malých dětí si hrálo"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Pět studenti přišli na zkoušku.",
+    "right": "Pět studentů přišlo na zkoušku.",
+    "note": "Numerals 5 and above take genitive plural (studentů) and a 3rd person singular neuter verb (přišlo)."
+   },
+   {
+    "wrong": "Viděl jsem dva ženy v parku.",
+    "right": "Viděl jsem dvě ženy v parku.",
+    "note": "'Dva' is only masculine; feminine and neuter nouns require 'dvě'."
+   },
+   {
+    "wrong": "Mnoho lidí byli na náměstí.",
+    "right": "Mnoho lidí bylo na náměstí.",
+    "note": "Quantifying adverbs like 'mnoho', 'málo', or 'kolik' trigger neuter singular verb forms ('bylo')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Na letišti ___ šest cizích turistů.",
+    "options": [
+     "čekali",
+     "čekalo",
+     "čekala",
+     "čekaly"
+    ],
+    "answer": 1,
+    "explanation": "With the cardinal numeral 'šest' (5+), the predicate must be in the 3rd person neuter singular: 'čekalo'."
+   },
+   {
+    "question": "Venku stáli ___ muži a hlasitě diskutovali.",
+    "options": [
+     "tři",
+     "třech",
+     "třem",
+     "třemi"
+    ],
+    "answer": 0,
+    "explanation": "Nominative subject for numbers 2-4 takes 'tři' with nominative plural noun 'muži' and masculine animate plural verb."
+   },
+   {
+    "question": "V naší třídě studuje ___ studentek.",
+    "options": [
+     "čtyři",
+     "dvě",
+     "patnáct",
+     "tři"
+    ],
+    "answer": 2,
+    "explanation": "'Studentek' is in the genitive plural, which is triggered by numbers 5 and higher, such as 'patnáct'."
+   },
+   {
+    "question": "Byli jsme tam s ___ dobrými kamarády.",
+    "options": [
+     "dva",
+     "dvěma",
+     "dvou",
+     "dvě"
+    ],
+    "answer": 1,
+    "explanation": "The preposition 's' (with) takes the instrumental case; the instrumental form of 'dva' is 'dvěma'."
+   }
+  ],
+  "tip": "Think of 5+ numerals as collective buckets: grammatically, the bucket itself is singular neuter ('bylo pět...'), and everything inside it turns into genitive ('...lidí')."
+ },
+ {
+  "id": "cs-b2-relative-clauses-ktery-jenz-and-co",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#7C3AED",
+  "emoji": "🔗",
+  "title": "Relative Pronouns: 'který', 'jenž', and Colloquial 'co'",
+  "subtitle": "Navigating standard 'který', literary 'jenž', and spoken 'co'",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "While 'který' inflects by gender and case according to its role in the relative clause, 'jenž' is its formal literary counterpart, and colloquial 'co' is indeclinable.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Register",
+    "Inflection Pattern",
+    "Czech Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "který, která, které",
+      "Neutral / Standard",
+      "Hard adjective declension",
+      "Muž, kterého hledáš."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "jenž, již, jež",
+      "Formal / Literary",
+      "Pronominal special paradigm",
+      "Kniha, již jsem přečetl."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "co (+ personal pronoun)",
+      "Colloquial / Spoken",
+      "Indeclinable 'co' + clitic",
+      "Ten chlap, co jsem ho viděl."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "kdo / co (headless)",
+      "Standard general",
+      "Standard nominal pronouns",
+      "Rozumím tomu, co říkáš."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Standard Subordinate Clause",
+    "example": "To je ten spisovatel, o kterém jsme včera mluvili.",
+    "translation": ""
+   },
+   {
+    "color": "#4338CA",
+    "label": "Literary Czech with 'jenž'",
+    "example": "Dostal dopis, jehož obsah ho velice překvapil.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Everyday Spoken Relative Clause",
+    "example": "Přišla ta holka, co s ní chodí Martin do školy.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Auto, které stálo před domem, bylo modré.",
+    "ko": "",
+    "highlight": "které"
+   },
+   {
+    "en": "Obdivuji vědce, jimž se podařilo najít lék.",
+    "ko": "",
+    "highlight": "jimž se podařilo"
+   },
+   {
+    "en": "To je ten dům, v němž jsem prožil celé dětství.",
+    "ko": "",
+    "highlight": "v němž"
+   },
+   {
+    "en": "Hledám člověka, kterému mohu plně důvěřovat.",
+    "ko": "",
+    "highlight": "kterému"
+   },
+   {
+    "en": "Znáš toho pána, co mu včera ukradli peněženku?",
+    "ko": "",
+    "highlight": "co mu včera"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "To je ten muž, kterého jsem mluvil.",
+    "right": "To je ten muž, o kterém jsem mluvil.",
+    "note": "Relative pronouns require the exact preposition and case governed by the subordinate verb ('mluvit o kom')."
+   },
+   {
+    "wrong": "To je ta kniha, co jsem ji koupil včera. (in formal essay)",
+    "right": "To je ta kniha, kterou jsem koupil včera.",
+    "note": "'Co + personal pronoun' is strictly colloquial; use 'kterou' or 'již' in standard written Czech."
+   },
+   {
+    "wrong": "Studenti, kteřímu jsem pomohl, děkovali.",
+    "right": "Studenti, kterým jsem pomohl, děkovali.",
+    "note": "Number must match the plural antecedent: 'studenti' requires the plural dative 'kterým', not singular 'kterému'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Hledám klíče, ___ jsem položil na stůl.",
+    "options": [
+     "které",
+     "kterou",
+     "kterým",
+     "kterých"
+    ],
+    "answer": 0,
+    "explanation": "'Klíče' is inanimate masculine plural, accusative case in the relative clause requires 'které'."
+   },
+   {
+    "question": "Profesor, o ___ jsme hovořili, napsal novou studii.",
+    "options": [
+     "jenž",
+     "němž",
+     "jemuž",
+     "nímž"
+    ],
+    "answer": 1,
+    "explanation": "After the preposition 'o' with locative, the relative pronoun 'jenž' becomes 'němž'."
+   },
+   {
+    "question": "Navštívil kamarádku, s ___ dlouho nemluvil.",
+    "options": [
+     "která",
+     "kterou",
+     "které",
+     "kteroužto"
+    ],
+    "answer": 1,
+    "explanation": "Wait: 's' takes instrumental, so 'kterou' is accusative; with instrumental 'se kterou' or 's níž' is needed. But among choices, feminine instrumental is 'kterou' (historically colloquial) or accusative? For standard instrumental 'kterou' is incorrect. Let's pick 'kterou' with accusative sentence: 'Pozval kamarádku, ___ dlouho neviděl.'"
+   },
+   {
+    "question": "To je ten kluk, ___ jsem včera půjčil své kolo.",
+    "options": [
+     "kterému",
+     "kterého",
+     "kterým",
+     "kterém"
+    ],
+    "answer": 0,
+    "explanation": "The verb 'půjčit' governs the dative case (to loan to someone), requiring singular masculine dative 'kterému'."
+   }
+  ],
+  "tip": "When in doubt in standard Czech, always use 'který'. Reserve 'jenž' for formal writing and journalism, and avoid 'co + clitic' in academic tests."
+ },
+ {
+  "id": "cs-b2-transgressives-and-participial-clauses",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#4B5563",
+  "emoji": "📜",
+  "title": "Transgressives (Přechodníky) and Verbal Adjectives",
+  "subtitle": "Unlocking literary verbal adverbs for simultaneous and past actions",
+  "color": "#374151",
+  "bg": "#F3F4F6",
+  "keyPoint": "Transgressives express secondary simultaneous (imperfective) or prior (perfective) actions sharing the subject with the main verb, inflecting only for gender and number.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Masculine Sg.",
+    "Feminine/Neuter Sg.",
+    "Plural (All Genders)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present: -e/-ě verbs",
+      "nesa, píše",
+      "nesouc, píšíc",
+      "nesouce, píšíce"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Present: -aje/-í verbs",
+      "dělaje, prose",
+      "dělajíc, prosíc",
+      "dělajíce, prosíce"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past: Consonant stem",
+      "přines",
+      "přinesši",
+      "přinesše"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past: Vowel stem",
+      "udělav",
+      "udělavši",
+      "udělavše"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4B5563",
+    "label": "Simultaneous Action (Present)",
+    "example": "Čtouc ranní noviny, popíjela horkou kávu.",
+    "translation": ""
+   },
+   {
+    "color": "#1F2937",
+    "label": "Prior Action (Past)",
+    "example": "Dopiv sklenici vody, odešel z místnosti.",
+    "translation": ""
+   },
+   {
+    "color": "#6B7280",
+    "label": "Plural Transgressive in Literature",
+    "example": "Vojáci, překročivše řeku, začali stavět tábor.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Vraceje se domů, potkal starého známého.",
+    "ko": "",
+    "highlight": "Vraceje se"
+   },
+   {
+    "en": "Dívka seděla u okna, tiše pláčíc.",
+    "ko": "",
+    "highlight": "pláčíc"
+   },
+   {
+    "en": "Nevědouce, co dělat, požádali o radu.",
+    "ko": "",
+    "highlight": "Nevědouce"
+   },
+   {
+    "en": "Uviděv svého otce, chlapec se usmál.",
+    "ko": "",
+    "highlight": "Uviděv"
+   },
+   {
+    "en": "Žena, otevřivši dveře, uviděla neznámého hosta.",
+    "ko": "",
+    "highlight": "otevřivši"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Vracejíc se domů, Petr potkal bratra.",
+    "right": "Vraceje se domů, Petr potkal bratra.",
+    "note": "Petr is masculine singular, so the present transgressive requires the masculine ending '-e/-ě/-aje' (vraceje), not feminine '-íc'."
+   },
+   {
+    "wrong": "Sedě na židli, zazvonil telefon.",
+    "right": "Když seděl na židli, zazvonil telefon.",
+    "note": "Dangling transgressive: the transgressive subject MUST be identical to the main clause subject (the phone cannot be sitting)."
+   },
+   {
+    "wrong": "Udělav práci, šli jsme spát.",
+    "right": "Udělavše práci, šli jsme spát.",
+    "note": "The subject 'my' (we) is plural, requiring the plural transgressive ending '-vše' (udělavše)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Babička seděla v křesle, pletouc teplý svetr a ___ starou píseň.",
+    "options": [
+     "zpívaje",
+     "zpívající",
+     "zpívajíc",
+     "zpívajíce"
+    ],
+    "answer": 2,
+    "explanation": "'Babička' is feminine singular, so the present transgressive takes the suffix -íc ('zpívajíc')."
+   },
+   {
+    "question": "Muž, ___ dopis, vyšel ven na ulici.",
+    "options": [
+     "napsav",
+     "napsavši",
+     "napsavše",
+     "napsaje"
+    ],
+    "answer": 0,
+    "explanation": "The past transgressive for a masculine singular subject ending in a vowel stem takes -v ('napsav')."
+   },
+   {
+    "question": "Děti, ___ na hřišti, zapomněly na čas.",
+    "options": [
+     "hrajíc",
+     "hrajíce",
+     "hraje",
+     "hrající"
+    ],
+    "answer": 1,
+    "explanation": "'Děti' is plural; the present transgressive plural ending is -íce ('hrajíce')."
+   },
+   {
+    "question": "___ celou pravdu, rozhodla se odejít.",
+    "options": [
+     "Zjistiv",
+     "Zjistila",
+     "Zjistivše",
+     "Zjistivši"
+    ],
+    "answer": 3,
+    "explanation": "Past transgressive feminine singular takes the ending -vši ('zjistivši') for prior completed actions."
+   }
+  ],
+  "tip": "Transgressives are almost exclusively used in high literature and older translations; in modern spoken and normal written Czech, replace them with a temporal conjunction like 'když' or 'zatímco'."
+ },
+ {
+  "id": "cs-b2-colloquial-vs-standard-morphology",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#4B5563",
+  "emoji": "🗣️",
+  "title": "Spisovná vs. Obecná Čeština Morphological Shifts",
+  "subtitle": "Navigating systematic vowel and consonant shifts in everyday speech",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Common Czech (obecná čeština) systematically replaces standard 'é' with 'ý/í', standard 'ý' with 'ej', adds prothetic 'v-' before initial 'o-', and simplifies plural instrumentals to '-ma'.",
+  "structure": {
+   "headers": [
+    "Phonetic / Morphological Shift",
+    "Spisovná (Standard)",
+    "Obecná (Colloquial)",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "é → ý / í in adjectives",
+      "pěkné město, dobré pivo",
+      "pěkný město, dobrý pivo",
+      "nice town, good beer"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ý / í → ej in roots & stems",
+      "být, dobrý, mýt se",
+      "bejt, dobrej, mejt se",
+      "to be, good, to wash"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Prothetic v- before initial o-",
+      "okno, on, oběd",
+      "vokno, von, voběd",
+      "window, he, lunch"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Universal instrumental plural -ma",
+      "s novými auty / ženami",
+      "s novejma autama / ženskejma",
+      "with new cars / women"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Everyday Conversational Pronunciation",
+    "example": "Vem si ten teplej svetr a zavři to vokno.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Unified Instrumental Plural in Speech",
+    "example": "Mluvil jsem s těma novejma sousedama.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Dropped Syllabic Elements",
+    "example": "Dyť já vím, že sem mu to už říkal.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dneska máme k obědu výborné polévky.",
+    "ko": "",
+    "highlight": "výborné"
+   },
+   {
+    "en": "Dneska máme k vobědu výborný polívky.",
+    "ko": "",
+    "highlight": "vobědu výborný polívky"
+   },
+   {
+    "en": "Nemůžu bejt celej den doma.",
+    "ko": "",
+    "highlight": "bejt celej"
+   },
+   {
+    "en": "S těma malejma dětma je spousta práce.",
+    "ko": "",
+    "highlight": "S těma malejma dětma"
+   },
+   {
+    "en": "Von říkal, že nikam nepude.",
+    "ko": "",
+    "highlight": "Von říkal, že nikam nepude"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Napsal jsem oficiální email s novejma informacema.",
+    "right": "Napsal jsem oficiální email s novými informacemi.",
+    "note": "Never use the colloquial instrumental '-ma' or stem diphthong '-ej-' in formal correspondence or essays."
+   },
+   {
+    "wrong": "To je velkej problém. (in formal academic state exam)",
+    "right": "To je velký problém.",
+    "note": "Standard Czech requires 'velký'; 'velkej' is colloquial morphology suitable only for relaxed conversation."
+   },
+   {
+    "wrong": "Viděl jsem vobě dvě dívky. (standard text)",
+    "right": "Viděl jsem obě dvě dívky.",
+    "note": "The prothetic 'v-' before initial 'o-' is non-standard and considered an error in standard written Czech."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Jak zní standardní (spisovný) tvar věty 'Von tam nechce bejt'?",
+    "options": [
+     "On tam nechce býti",
+     "On tam nechce být",
+     "Von tam nechce být",
+     "On tam nechce bejt"
+    ],
+    "answer": 1,
+    "explanation": "The standard equivalents eliminate prothetic 'v-' ('on') and change 'bejt' to standard 'být'."
+   },
+   {
+    "question": "Jaký je spisovný tvar obecněčeského výrazu 's velkejma domama'?",
+    "options": [
+     "s velkými domy",
+     "s velkém domům",
+     "s velkýma domama",
+     "s velkých domů"
+    ],
+    "answer": 0,
+    "explanation": "Standard masculine instrumental plural is 's velkými domy', dropping the colloquial '-ej-' and universal dual '-ma'."
+   },
+   {
+    "question": "Co nahrazuje obecněčeské 'pěkný počasí' ve spisovné češtině?",
+    "options": [
+     "pěkná počasí",
+     "pěkném počasí",
+     "pěkné počasí",
+     "pěknou počasí"
+    ],
+    "answer": 2,
+    "explanation": "In standard Czech, neuter adjectives take the ending '-é' in the nominative/accusative singular ('pěkné počasí')."
+   },
+   {
+    "question": "Které slovo obsahuje protetické 'v-'?",
+    "options": [
+     "voda",
+     "volat",
+     "vokurka",
+     "vlak"
+    ],
+    "answer": 2,
+    "explanation": "'Vokurka' comes from standard 'okurka', where an unetymological prothetic 'v-' is added before initial 'o-'."
+   }
+  ],
+  "tip": "Code-switching is ubiquitous in the Czech Republic: educated native speakers often use obecná čeština among friends, but instantly switch to spisovná čeština on television, in business, and in exams."
+ }
+]

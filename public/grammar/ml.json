@@ -1,0 +1,3315 @@
+[
+ {
+  "id": "ml-a1-existential-vs-equative-copula",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "⚖️",
+  "title": "Existential vs. Equative Copula (ഉണ്ട് vs. ആണ്)",
+  "subtitle": "Distinguish between who or what something is versus its location or existence",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use ആണ് to link identity, role, or inherent qualities (X is Y), and use ഉണ്ട് to express physical presence, location, or possession (there is / has).",
+  "structure": {
+   "headers": [
+    "Type",
+    "Malayalam Copula",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Equative",
+      "ആണ്",
+      "Identity, role, or definition (X = Y)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Existential",
+      "ഉണ്ട്",
+      "Existence, physical presence, or location"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Possessive",
+      "ഉണ്ട്",
+      "Possession (paired with dative case)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Identity & Roles",
+    "example": "അവൻ ഒരു അധ്യാപകൻ ആണ്.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Physical Presence",
+    "example": "മേശപ്പുറത്ത് പുസ്തകം ഉണ്ട്.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Possession",
+    "example": "എനിക്ക് ഒരു പൂച്ച ഉണ്ട്.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ഇത് എന്റെ വീട് ആണ്.",
+    "ko": "",
+    "highlight": "ആണ്"
+   },
+   {
+    "en": "അമ്മ അടുക്കളയിൽ ഉണ്ട്.",
+    "ko": "",
+    "highlight": "ഉണ്ട്"
+   },
+   {
+    "en": "അയാൾ ഒരു ഡോക്ടർ ആണ്.",
+    "ko": "",
+    "highlight": "ആണ്"
+   },
+   {
+    "en": "മുറിയിൽ ആളുകൾ ഉണ്ട്.",
+    "ko": "",
+    "highlight": "ഉണ്ട്"
+   },
+   {
+    "en": "ഇന്ന് നല്ല ദിവസമാണ്.",
+    "ko": "",
+    "highlight": "ദിവസമാണ്"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "അവൻ അധ്യാപകൻ ഉണ്ട്.",
+    "right": "അവൻ അധ്യാപകൻ ആണ്.",
+    "note": "Use ആണ് instead of ഉണ്ട് when defining someone's profession or identity."
+   },
+   {
+    "wrong": "മേശപ്പുറത്ത് പുസ്തകം ആണ്.",
+    "right": "മേശപ്പുറത്ത് പുസ്തകം ഉണ്ട്.",
+    "note": "Use ഉണ്ട് to indicate that an object exists or is located in a place."
+   },
+   {
+    "wrong": "എനിക്ക് പണം ആണ്.",
+    "right": "എനിക്ക് പണം ഉണ്ട്.",
+    "note": "Possession requires the existential verb ഉണ്ട് with a dative subject."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "This is my car. -> ഇത് എന്റെ കാർ ___.",
+    "options": [
+     "ഉണ്ട്",
+     "ആണ്",
+     "ഇല്ല",
+     "അല്ല"
+    ],
+    "answer": 1,
+    "explanation": "Defining identity or ownership status uses the equative copula ആണ്."
+   },
+   {
+    "question": "Water is in the glass. -> ഗ്ലാസിൽ വെള്ളം ___.",
+    "options": [
+     "ഉണ്ട്",
+     "ആണ്",
+     "ആയിരുന്നു",
+     "അല്ല"
+    ],
+    "answer": 0,
+    "explanation": "Describing the physical presence or location of an item requires ഉണ്ട്."
+   },
+   {
+    "question": "Rahul is a student. -> രാഹുൽ ഒരു വിദ്യാർത്ഥി ___.",
+    "options": [
+     "ഉണ്ട്",
+     "ഉണ്ടായിരുന്നു",
+     "ആണ്",
+     "ഇല്ല"
+    ],
+    "answer": 2,
+    "explanation": "Equating a person with their role (student) requires ആണ്."
+   },
+   {
+    "question": "I have two sisters. -> എനിക്ക് രണ്ട് സഹോദരിമാർ ___.",
+    "options": [
+     "ആണ്",
+     "അല്ല",
+     "ആകുന്നു",
+     "ഉണ്ട്"
+    ],
+    "answer": 3,
+    "explanation": "Expressing possession with a dative subject requires ഉണ്ട്."
+   }
+  ],
+  "tip": "In everyday speech and writing, ആണ് often contracts directly onto the preceding word (e.g., നല്ലത് + ആണ് becomes നല്ലതാണ്)."
+ },
+ {
+  "id": "ml-a1-dative-subject-construction",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🎯",
+  "title": "Dative Subject Constructions with -ക്ക്",
+  "subtitle": "Expressing feelings, physical sensations, needs, and possession",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "In Malayalam, internal states, physical sensations, likes, and possession mark the experiencing person with the dative suffix -ക്ക് (or -ഇന്) rather than the nominative case.",
+  "structure": {
+   "headers": [
+    "Pronoun Base",
+    "Dative Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ഞാൻ (I)",
+      "എനിക്ക്",
+      "To me / I (experiencer)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "നീ (You)",
+      "നിനക്ക്",
+      "To you / You (experiencer)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "അവൻ (He)",
+      "അവന്",
+      "To him / He (experiencer)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "അവൾ (She)",
+      "അവൾക്ക്",
+      "To her / She (experiencer)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Desires & Needs",
+    "example": "എനിക്ക് ചായ വേണം.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Sensations & States",
+    "example": "അവൾക്ക് വിശക്കുന്നു.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Likes & Preferences",
+    "example": "കുട്ടിക്ക് പാൽ ഇഷ്ടമാണ്.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "എനിക്ക് ദാഹിക്കുന്നു.",
+    "ko": "",
+    "highlight": "എനിക്ക്"
+   },
+   {
+    "en": "നിനക്ക് സുഖമാണോ?",
+    "ko": "",
+    "highlight": "നിനക്ക്"
+   },
+   {
+    "en": "അവന് പനി ഉണ്ട്.",
+    "ko": "",
+    "highlight": "അവന്"
+   },
+   {
+    "en": "അവൾക്ക് മലയാളം അറിയാം.",
+    "ko": "",
+    "highlight": "അവൾക്ക്"
+   },
+   {
+    "en": "രാഹുലിന് വിശപ്പില്ല.",
+    "ko": "",
+    "highlight": "രാഹുലിന്"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ഞാൻ ചായ വേണം.",
+    "right": "എനിക്ക് ചായ വേണം.",
+    "note": "Modal verbs like വേണം (want/need) require the experiencer to be in the dative case (എനിക്ക്), not nominative (ഞാൻ)."
+   },
+   {
+    "wrong": "ഞാൻ വിശക്കുന്നു.",
+    "right": "എനിക്ക് വിശക്കുന്നു.",
+    "note": "Physical sensations like hunger belong to the dative subject construction."
+   },
+   {
+    "wrong": "അവൻ അറിയാം.",
+    "right": "അവന് അറിയാം.",
+    "note": "Knowledge or cognitive verbs take a dative subject marker."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I like music. -> ___ സംഗീതം ഇഷ്ടമാണ്.",
+    "options": [
+     "ഞാൻ",
+     "എനിക്ക്",
+     "എന്റെ",
+     "എന്നെ"
+    ],
+    "answer": 1,
+    "explanation": "The predicate ഇഷ്ടമാണ് (to like) requires the dative pronoun എനിക്ക്."
+   },
+   {
+    "question": "Do you need water? -> ___ വെള്ളം വേണമോ?",
+    "options": [
+     "നിനക്ക്",
+     "നീ",
+     "നിന്റെ",
+     "നിന്നെ"
+    ],
+    "answer": 0,
+    "explanation": "Needs marked by വേണം require the dative pronoun നിനക്ക്."
+   },
+   {
+    "question": "She has a headache. -> ___ തലവേദന ഉണ്ട്.",
+    "options": [
+     "അവൾ",
+     "അവളുടെ",
+     "അവൾക്ക്",
+     "അവളെ"
+    ],
+    "answer": 2,
+    "explanation": "Physical ailments and sensations require the dative marker -ക്ക് on the subject."
+   },
+   {
+    "question": "Rahul knows Malayalam. -> ___ മലയാളം അറിയാം.",
+    "options": [
+     "രാഹുൽ",
+     "രാഹുലിന്റെ",
+     "രാഹുലിനെ",
+     "രാഹുലിന്"
+    ],
+    "answer": 3,
+    "explanation": "Verbs of ability and knowledge like അറിയാം take the dative case suffix -ഇന്."
+   }
+  ],
+  "tip": "Whenever an English sentence starts with 'I feel', 'I want', 'I need', or 'I have', translate 'I' as എനിക്ക്, not ഞാൻ."
+ },
+ {
+  "id": "ml-a1-basic-nominal-case-endings",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🏷️",
+  "title": "Core Nominal Case System (-എ, -ഇൽ, -ഓട്, -ആൽ)",
+  "subtitle": "Master the essential postpositional markers for direct objects, location, association, and means",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "Malayalam attaches suffixes directly to noun stems to mark grammatical relationships: -എ (accusative), -ഇൽ (locative), -ഓട് (sociative), and -ആൽ (instrumental).",
+  "structure": {
+   "headers": [
+    "Case",
+    "Suffix",
+    "Core Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Accusative",
+      "-എ",
+      "Marks animate direct objects"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Locative",
+      "-ഇൽ",
+      "Indicates 'in', 'on', or 'at'"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Sociative",
+      "-ഓട്",
+      "Indicates 'with' or 'towards'"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Instrumental",
+      "-ആൽ",
+      "Indicates 'by means of' or 'because of'"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Direct Object (Accusative)",
+    "example": "അമ്മ കുട്ടിയെ വിളിച്ചു.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Location (Locative)",
+    "example": "അവൻ വീട്ടിൽ ഉണ്ട്.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Communication (Sociative)",
+    "example": "അധ്യാപകനോട് ചോദിക്കൂ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ഞാൻ അവനെ കണ്ടു.",
+    "ko": "",
+    "highlight": "അവനെ"
+   },
+   {
+    "en": "പുസ്തകം മേശയിൽ വെക്കൂ.",
+    "ko": "",
+    "highlight": "മേശയിൽ"
+   },
+   {
+    "en": "അവൾ എന്നോട് സംസാരിച്ചു.",
+    "ko": "",
+    "highlight": "എന്നോട്"
+   },
+   {
+    "en": "കത്തിയെ കൊണ്ട് മുറിച്ചു.",
+    "ko": "",
+    "highlight": "കത്തിയെ"
+   },
+   {
+    "en": "പൂച്ച മരത്തിൽ കയറി.",
+    "ko": "",
+    "highlight": "മരത്തിൽ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ഞാൻ അവൻ കണ്ടു.",
+    "right": "ഞാൻ അവനെ കണ്ടു.",
+    "note": "Animate direct objects must take the accusative case suffix -എ."
+   },
+   {
+    "wrong": "അവൻ വീട് ഉണ്ട്.",
+    "right": "അവൻ വീട്ടിൽ ഉണ്ട്.",
+    "note": "Expressing location requires the locative suffix -ഇൽ (വീട് becomes വീട്ടിൽ)."
+   },
+   {
+    "wrong": "എന്നാൽ സംസാരിക്കൂ.",
+    "right": "എന്നോട് സംസാരിക്കൂ.",
+    "note": "Use the sociative suffix -ഓട് to mean 'talk to / with me', not the instrumental marker."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I saw the teacher. -> ഞാൻ അധ്യാപക___ കണ്ടു.",
+    "options": [
+     "-നെ",
+     "-നിൽ",
+     "-നോട്",
+     "-നാൽ"
+    ],
+    "answer": 0,
+    "explanation": "The accusative suffix for masculine animate nouns ending in sonants is -നെ (stem variant of -എ)."
+   },
+   {
+    "question": "We live in the city. -> ഞങ്ങൾ നഗര___ താമസിക്കുന്നു.",
+    "options": [
+     "-ത്തെ",
+     "-ത്തിൽ",
+     "-ത്തോടു",
+     "-ത്താൽ"
+    ],
+    "answer": 1,
+    "explanation": "The locative suffix meaning 'in' or 'at' is -ഇൽ (with augment: നഗരത്തിൽ)."
+   },
+   {
+    "question": "Speak with the friend. -> സുഹൃത്തി___ സംസാരിക്കൂ.",
+    "options": [
+     "-നെ",
+     "-നാൽ",
+     "-നോട്",
+     "-നിൽ"
+    ],
+    "answer": 2,
+    "explanation": "Speaking 'to' or 'with' a person requires the sociative ending -നോട് / -ഓട്."
+   },
+   {
+    "question": "He was saved by medicine. -> അവൻ മരുന്നി___ രക്ഷപ്പെട്ടു.",
+    "options": [
+     "-നെ",
+     "-ലേക്ക്",
+     "-ൽ",
+     "-നാൽ"
+    ],
+    "answer": 3,
+    "explanation": "Instrumental agency or cause takes the suffix -ആൽ (മരുന്നിനാൽ)."
+   }
+  ],
+  "tip": "Inanimate direct objects (like 'book' or 'apple') often drop the accusative -എ marker, but human and animal objects must always take it."
+ },
+ {
+  "id": "ml-a1-verb-tense-trichotomy",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "⏳",
+  "title": "Basic Tense Markers (-ന്നു, -ഉന്നു, -ഉം)",
+  "subtitle": "Express past, present, and future events without person-number agreement",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Malayalam verbs do not conjugate for gender, number, or person; simply attach past (-ന്നു / -തു), present (-ഉന്നു), or future (-ഉം) suffixes to the verb root.",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Standard Suffix",
+    "Example Verb Root + Ending"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Past",
+      "-ന്നു / -തു",
+      "വന്നു (came) / ചെയ്തു (did)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Present",
+      "-ഉന്നു",
+      "വരുന്നു (comes / is coming)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Future",
+      "-ഉം",
+      "വരും (will come)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Completed Past Action",
+    "example": "ഞാൻ ഇന്നലെ വന്നു.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Present or Habitual",
+    "example": "അവൻ ചോറ് കഴിക്കുന്നു.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Future Expectation",
+    "example": "അവൾ നാളെ പാടും.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "അവൻ പത്രം വായിക്കുന്നു.",
+    "ko": "",
+    "highlight": "വായിക്കുന്നു"
+   },
+   {
+    "en": "ഞങ്ങൾ ഇന്നലെ സിനിമ കണ്ടു.",
+    "ko": "",
+    "highlight": "കണ്ടു"
+   },
+   {
+    "en": "അമ്മ നാളെ വരും.",
+    "ko": "",
+    "highlight": "വരും"
+   },
+   {
+    "en": "കുട്ടി വെള്ളം കുടിക്കുന്നു.",
+    "ko": "",
+    "highlight": "കുടിക്കുന്നു"
+   },
+   {
+    "en": "അവർ പന്ത് കളിച്ചു.",
+    "ko": "",
+    "highlight": "കളിച്ചു"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ഞാൻ വരുന്നുണ്ട്, അവൻ വരുന്നുണ്ട് (trying to match person)",
+    "right": "ഞാൻ വരുന്നു, അവൻ വരുന്നു",
+    "note": "Malayalam verbs never change based on 'I', 'you', or 'they'—the form remains identical across all persons."
+   },
+   {
+    "wrong": "ഞാൻ നാളെ പോകുംന്നു.",
+    "right": "ഞാൻ നാളെ പോകും.",
+    "note": "Future tense suffix is simply -ഉം (പോ + ഉം = പോകും); do not stack present tense markers."
+   },
+   {
+    "wrong": "അവൻ എഴുതു കഴിഞ്ഞു.",
+    "right": "അവൻ എഴുതി.",
+    "note": "Use the standard past inflection (എഴുതി) rather than attaching auxiliary words to bare roots."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "She drinks milk every day. -> അവൾ ദിവസവും പാൽ ___.",
+    "options": [
+     "കുടിച്ചു",
+     "കുടിക്കുന്നു",
+     "കുടിക്കും",
+     "കുടിക്കൂ"
+    ],
+    "answer": 1,
+    "explanation": "Routine or habitual present actions use the present tense marker -ഉന്നു (കുടിക്കുന്നു)."
+   },
+   {
+    "question": "They came yesterday. -> അവർ ഇന്നലെ ___.",
+    "options": [
+     "വന്നു",
+     "വരുന്നു",
+     "വരും",
+     "വരൂ"
+    ],
+    "answer": 0,
+    "explanation": "An event completed in the past uses the past tense suffix (വന്നു)."
+   },
+   {
+    "question": "I will go tomorrow. -> ഞാൻ നാളെ ___.",
+    "options": [
+     "പോയി",
+     "പോകുന്നു",
+     "പോകും",
+     "പോയാൽ"
+    ],
+    "answer": 2,
+    "explanation": "Future actions take the suffix -ഉം (പോകും)."
+   },
+   {
+    "question": "Children are playing in the garden. -> കുട്ടികൾ തോട്ടത്തിൽ കളിക്കി___.",
+    "options": [
+     "-ച്ചു",
+     "-ക്കും",
+     "-ച്ചുണ്ട്",
+     "-ഉന്നു"
+    ],
+    "answer": 3,
+    "explanation": "The present continuous/habitual suffix is -ഉന്നു (കളിക്കുന്നു)."
+   }
+  ],
+  "tip": "Because Malayalam verbs do not change for I/you/he/she/they, you only need to memorize one conjugation rule per tense!"
+ },
+ {
+  "id": "ml-a1-negation-contrasts",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🚫",
+  "title": "Negation System (അല്ല, ഇല്ല, അരുത്/വേണ്ട)",
+  "subtitle": "Choose the right negative marker for identity, absence, or prohibition",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Use അല്ല to negate identities (not X), ഇല്ല to negate existence, possession, or action (does not exist/did not), and വേണ്ട/അരുത് to express prohibitions or refusal.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Malayalam Particle",
+    "Opposite Positive"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Identity / Definition",
+      "അല്ല (is not)",
+      "ആണ് (is)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Absence / Non-existence",
+      "ഇല്ല (is not there / do not)",
+      "ഉണ്ട് (there is / has)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Prohibition / Rejection",
+      "വേണ്ട / അരുത് (do not / must not)",
+      "വേണം (want / must)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Negating Identity",
+    "example": "ഇത് എന്റെ വീടല്ല.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Negating Presence",
+    "example": "മുറിയിൽ ആരും ഇല്ല.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Prohibiting an Action",
+    "example": "ഇവിടെ പുകവലിക്കരുത്.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "അവൻ അധ്യാപകൻ അല്ല.",
+    "ko": "",
+    "highlight": "അല്ല"
+   },
+   {
+    "en": "എന്റെ കയ്യിൽ പണമില്ല.",
+    "ko": "",
+    "highlight": "പണമില്ല"
+   },
+   {
+    "en": "ഞാൻ ഇന്ന് വരുന്നില്ല.",
+    "ko": "",
+    "highlight": "വരുന്നില്ല"
+   },
+   {
+    "en": "അവിടെ പോകരുത്.",
+    "ko": "",
+    "highlight": "പോകരുത്"
+   },
+   {
+    "en": "എനിക്ക് കാപ്പി വേണ്ട.",
+    "ko": "",
+    "highlight": "വേണ്ട"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ഇത് പുസ്തകം ഇല്ല.",
+    "right": "ഇത് പുസ്തകം അല്ല.",
+    "note": "Use അല്ല when negating what an object is ('This is not a book'). ഇല്ല denotes absence."
+   },
+   {
+    "wrong": "അവൻ വീട്ടിൽ അല്ല.",
+    "right": "അവൻ വീട്ടിൽ ഇല്ല.",
+    "note": "Absence from a place is the negative of ഉണ്ട്, so use ഇല്ല."
+   },
+   {
+    "wrong": "വെള്ളം കുടിക്കരുത് വേണ്ട.",
+    "right": "വെള്ളം കുടിക്കരുത്.",
+    "note": "Do not double-negate; -അരുത് directly expresses strong negative commands on verbs."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He is not a doctor. -> അവൻ ഡോക്ടർ ___.",
+    "options": [
+     "ഇല്ല",
+     "അല്ല",
+     "വേണ്ട",
+     "അരുത്"
+    ],
+    "answer": 1,
+    "explanation": "Identity negation (X is not Y) strictly requires അല്ല."
+   },
+   {
+    "question": "There is no sugar in the tea. -> ചായയിൽ പഞ്ചസാര ___.",
+    "options": [
+     "ഇല്ല",
+     "അല്ല",
+     "വേണ്ട",
+     "അരുത്"
+    ],
+    "answer": 0,
+    "explanation": "Absence or non-existence of an item requires ഇല്ല."
+   },
+   {
+    "question": "Do not touch! -> തൊട___!",
+    "options": [
+     "-ണം",
+     "-ല്ല",
+     "-രുത്",
+     "-ആണ്"
+    ],
+    "answer": 2,
+    "explanation": "Direct prohibition commands attach the suffix -അരുത് (-രുത്) to verb bases."
+   },
+   {
+    "question": "I do not want tea. -> എനിക്ക് ചായ ___.",
+    "options": [
+     "അല്ല",
+     "ഇല്ല",
+     "അരുത്",
+     "വേണ്ട"
+    ],
+    "answer": 3,
+    "explanation": "The opposite of needing or wanting (വേണം) is വേണ്ട."
+   }
+  ],
+  "tip": "Remember: അല്ല answers 'What is it not?', ഇല്ല answers 'Where is it not?' or 'What do you lack?', and വേണ്ട answers 'What do you not want?'"
+ },
+ {
+  "id": "ml-a1-polar-and-content-questions",
+  "level": "a1",
+  "category": "questions",
+  "categoryColor": "#0284C7",
+  "emoji": "❓",
+  "title": "Question Particles (-ഓ and -ആണ്/ഏത്)",
+  "subtitle": "Forming polar and content questions without changing word order",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Yes/no questions are formed simply by affixing the particle -ഓ to the verb or focused word, while content questions place interrogatives directly in the standard sentence position without inverting word order.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Affix / Word",
+    "Example",
+    "English Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Polar Question",
+      "-ഓ (-ō)",
+      "വരുന്നുണ്ടോ?",
+      "Are you coming?"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Content (What)",
+      "എന്ത് (enthŭ)",
+      "ഇത് എന്താണ്?",
+      "What is this?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Content (Where)",
+      "എവിടെ (eviṭe)",
+      "അവൻ എവിടെയാണ്?",
+      "Where is he?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Content (Which)",
+      "ഏത് (ēthŭ)",
+      "ഏത് പുസ്തകം വേണം?",
+      "Which book do you want?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Polar (Yes/No) Confirmation",
+    "example": "നിങ്ങൾ ചായ കുടിച്ചോ?",
+    "translation": ""
+   },
+   {
+    "color": "#0369A1",
+    "label": "Direct Identity Inquiries",
+    "example": "നിങ്ങളുടെ പേര് എന്താണ്?",
+    "translation": ""
+   },
+   {
+    "color": "#075985",
+    "label": "Locational Queries",
+    "example": "റെയിൽവേ സ്റ്റേഷൻ എവിടെയാണ്?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "നിങ്ങൾ നാളെ വരുമോ?",
+    "ko": "",
+    "highlight": "വരുമോ"
+   },
+   {
+    "en": "ഇവിടെ ആരാണ് ഉള്ളത്?",
+    "ko": "",
+    "highlight": "ആരാണ്"
+   },
+   {
+    "en": "അവൻ ഇപ്പോൾ എവിടെ പോകുന്നു?",
+    "ko": "",
+    "highlight": "എവിടെ"
+   },
+   {
+    "en": "ഇത് നിങ്ങളുടെ വീടാണോ?",
+    "ko": "",
+    "highlight": "വീടാണോ"
+   },
+   {
+    "en": "നിങ്ങൾക്ക് എന്ത് വേണം?",
+    "ko": "",
+    "highlight": "എന്ത്"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "നിങ്ങൾ എവിടെ പോകുന്നുണ്ടോ?",
+    "right": "നിങ്ങൾ എവിടെ പോകുന്നു?",
+    "note": "Do not attach the polar question marker -ഓ when an interrogative word like എവിടെ is already present."
+   },
+   {
+    "wrong": "ആണ് ഇത് പുസ്തകം?",
+    "right": "ഇത് പുസ്തകമാണോ?",
+    "note": "Malayalam does not invert word order to ask questions; attach -ഓ to the predicate instead of moving copular verbs forward."
+   },
+   {
+    "wrong": "നിങ്ങൾ പേര് എന്താണ്?",
+    "right": "നിങ്ങളുടെ പേര് എന്താണ്?",
+    "note": "Possessive forms are required before nouns like 'name'; use നിങ്ങളുടെ instead of നിങ്ങൾ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the polar question: 'Did you eat food?' -> 'നിങ്ങൾ ഭക്ഷണം ___?'",
+    "options": [
+     "കഴിക്കുന്നു",
+     "കഴിച്ചോ",
+     "കഴിച്ചു",
+     "കഴിക്കാൻ"
+    ],
+    "answer": 1,
+    "explanation": "The polar interrogative marker -ഓ attaches to the past tense verb കഴിച്ചു to yield കഴിച്ചോ."
+   },
+   {
+    "question": "Choose the correct question word for 'Where is the shop?': 'കട ___ ആണ്?'",
+    "options": [
+     "എവിടെ",
+     "എന്ത്",
+     "ആര്",
+     "എപ്പോൾ"
+    ],
+    "answer": 0,
+    "explanation": "എവിടെ means 'where'."
+   },
+   {
+    "question": "Identify the interrogative suffix in 'ഇത് രാഹുലിന്റെ വീടാണോ?':",
+    "options": [
+     "-ന്റെ",
+     "-ഇൽ",
+     "-ആണ്",
+     "-ഓ"
+    ],
+    "answer": 3,
+    "explanation": "The suffix -ഓ attached to ആണ് creates the interrogative form ആണോ."
+   },
+   {
+    "question": "Complete the inquiry: '___ പുസ്തകമാണ് നീ വായിക്കുന്നത്?' (Which book...)",
+    "options": [
+     "ആര്",
+     "എങ്ങനെ",
+     "ഏത്",
+     "എന്ത്"
+    ],
+    "answer": 2,
+    "explanation": "ഏത് means 'which' when modifying a noun like പുസ്തകം."
+   }
+  ],
+  "tip": "Attach -ഓ to any specific constituent you want to question: 'അവനാണോ വന്നത്?' asks 'Was it HE who came?' whereas 'അവൻ വന്നോ?' simply asks 'Did he come?'"
+ },
+ {
+  "id": "ml-a2-verbal-participle-conjunctive",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#16A34A",
+  "emoji": "🔗",
+  "title": "The Conjunctive Participle (വിനയച്ചം)",
+  "subtitle": "Chaining sequential actions smoothly into a single sentence",
+  "color": "#16A34A",
+  "bg": "#F0FDF4",
+  "keyPoint": "The conjunctive participle uses the past verbal base to join chronological actions sharing the same subject without repeating conjunctions like 'and'.",
+  "structure": {
+   "headers": [
+    "Root Verb",
+    "Conjunctive Form",
+    "Chained Clause",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "പോകുക (to go)",
+      "പോയി",
+      "പോയി കണ്ടു",
+      "went and saw"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "വരിക (to come)",
+      "വന്ന്",
+      "വന്ന് ഇരുന്നു",
+      "came and sat"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ചെയ്യുക (to do)",
+      "ചെയ്ത്",
+      "ചെയ്ത് തീർത്തു",
+      "did and finished"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "കഴിക്കുക (to eat)",
+      "കഴിച്ച്",
+      "കഴിച്ച് ഉറങ്ങി",
+      "ate and slept"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#16A34A",
+    "label": "Sequential Actions",
+    "example": "അവൻ കുളിച്ച് ഭക്ഷണം കഴിച്ചു.",
+    "translation": ""
+   },
+   {
+    "color": "#15803D",
+    "label": "Manner / Adverbial Modifier",
+    "example": "കുട്ടി ഓടി വന്നു.",
+    "translation": ""
+   },
+   {
+    "color": "#166534",
+    "label": "Cause and Effect Sequence",
+    "example": "മഴ പെയ്ത് വഴി നനഞ്ഞു.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "അവൾ വീട്ടിൽ പോയി ഉറങ്ങി.",
+    "ko": "",
+    "highlight": "പോയി"
+   },
+   {
+    "en": "ഞാൻ ചായ കുടിച്ച് പത്രം വായിച്ചു.",
+    "ko": "",
+    "highlight": "കുടിച്ച്"
+   },
+   {
+    "en": "അമ്മ വിളിച്ച് കാര്യം പറഞ്ഞു.",
+    "ko": "",
+    "highlight": "വിളിച്ച്"
+   },
+   {
+    "en": "വിദ്യാർത്ഥികൾ വന്ന് ക്ലാസ്സിൽ ഇരുന്നു.",
+    "ko": "",
+    "highlight": "വന്ന്"
+   },
+   {
+    "en": "അവൻ പുസ്തകം തുറന്ന് നോക്കി.",
+    "ko": "",
+    "highlight": "തുറന്ന്"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ഞാൻ പോയി പിന്നെ ഞാൻ കണ്ടു.",
+    "right": "ഞാൻ പോയി കണ്ടു.",
+    "note": "Do not repeat the subject pronoun when actions are chained via the conjunctive participle."
+   },
+   {
+    "wrong": "അവൻ ഭക്ഷണം കഴിച്ചു ഉറങ്ങി.",
+    "right": "അവൻ ഭക്ഷണം കഴിച്ച് ഉറങ്ങി.",
+    "note": "The non-final verb must take the non-finite participial base (കഴിച്ച്), not the finite past tense (കഴിച്ചു)."
+   },
+   {
+    "wrong": "അവൾ എഴുതുന്നു വായിക്കുന്നു.",
+    "right": "അവൾ എഴുതി വായിക്കുന്നു.",
+    "note": "Chaining sequential actions requires the conjunctive participle on prior verbs rather than multiple finite present forms."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill the blank with the conjunctive form of വരിക: 'അവൻ വീട്ടിൽ ___ സംസാരിച്ചു.'",
+    "options": [
+     "വരുന്നു",
+     "വരും",
+     "വന്ന്",
+     "വരുക"
+    ],
+    "answer": 2,
+    "explanation": "വന്ന് is the conjunctive participle base of വരിക (to come)."
+   },
+   {
+    "question": "Choose the correctly chained sentence for 'Having eaten, he slept':",
+    "options": [
+     "അവൻ കഴിച്ച് ഉറങ്ങി.",
+     "അവൻ കഴിച്ചു ഉറങ്ങി.",
+     "അവൻ കഴിക്കും ഉറങ്ങി.",
+     "അവൻ കഴിക്കാൻ ഉറങ്ങി."
+    ],
+    "answer": 0,
+    "explanation": "കഴിച്ച് is the conjunctive participle form of കഴിക്കുക."
+   },
+   {
+    "question": "Fill the blank with the conjunctive participle of ചെയ്യുക: 'ജോലി ___ വിശ്രമിക്കൂ.'",
+    "options": [
+     "ചെയ്യും",
+     "ചെയ്ത്",
+     "ചെയ്യുക",
+     "ചെയ്തു"
+    ],
+    "answer": 1,
+    "explanation": "ചെയ്ത് is the correct conjunctive form for ചെയ്യുക."
+   },
+   {
+    "question": "What is the function of 'ഓടി' in 'കുട്ടി ഓടിപ്പോയി'?",
+    "options": [
+     "Future tense verb",
+     "Negative imperative",
+     "Noun subject",
+     "Conjunctive participle of manner"
+    ],
+    "answer": 3,
+    "explanation": "ഓടി is the conjunctive participle of ഓടുക, modifying the vector verb പോയി."
+   }
+  ],
+  "tip": "The conjunctive participle identical to the past tense base is also essential for compound verbs like ചെയ്തുനോക്കുക (try doing) and എടുത്തിടുക (put aside)."
+ },
+ {
+  "id": "ml-a2-purposive-and-infinitive-forms",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#EA580C",
+  "emoji": "🎯",
+  "title": "The Purposive Infinitive (-വാൻ / -ആൻ)",
+  "subtitle": "Expressing purpose, intent, and complements with verbal suffix -ആൻ",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Appending the suffix -ആൻ (-ān) or -വാൻ (-vān) to a verb stem turns it into an infinitive denoting 'in order to' or serving as a verbal complement.",
+  "structure": {
+   "headers": [
+    "Verb Stem",
+    "Infinitive (-ആൻ)",
+    "Sentence Example",
+    "Usage"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "പഠി- (study)",
+      "പഠിക്കാൻ",
+      "പഠിക്കാൻ പോയി",
+      "Purpose of going"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "കാൺ- (see)",
+      "കാണാൻ",
+      "കാണാൻ വന്നു",
+      "Purpose of coming"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "വാങ്ങു- (buy)",
+      "വാങ്ങാൻ",
+      "വാങ്ങാൻ പണമുണ്ട്",
+      "Complement / Purpose"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "കേൾ- (listen)",
+      "കേൾക്കാൻ",
+      "കേൾക്കാൻ നല്ലതാണ്",
+      "Evaluative complement"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Purpose of Movement",
+    "example": "ഞാൻ സിനിമ കാണാൻ പോയി.",
+    "translation": ""
+   },
+   {
+    "color": "#C2410C",
+    "label": "Desire / Willingness",
+    "example": "എനിക്ക് പാട്ട് പാടാൻ ഇഷ്ടമാണ്.",
+    "translation": ""
+   },
+   {
+    "color": "#9A3412",
+    "label": "Infinitive Subject / Object",
+    "example": "മലയാളം പഠിക്കാൻ എളുപ്പമാണ്.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "അവൻ എന്നെ കാണാൻ വന്നു.",
+    "ko": "",
+    "highlight": "കാണാൻ"
+   },
+   {
+    "en": "നിങ്ങൾക്ക് എന്താണ് കഴിക്കാൻ വേണ്ടത്?",
+    "ko": "",
+    "highlight": "കഴിക്കാൻ"
+   },
+   {
+    "en": "അവൾ വെള്ളം കുടിക്കാൻ നിന്നു.",
+    "ko": "",
+    "highlight": "കുടിക്കാൻ"
+   },
+   {
+    "en": "പുസ്തകം വാങ്ങാൻ കടയിൽ പോയി.",
+    "ko": "",
+    "highlight": "വാങ്ങാൻ"
+   },
+   {
+    "en": "നീന്താൻ പഠിക്കുന്നത് നല്ലതാണ്.",
+    "ko": "",
+    "highlight": "നീന്താൻ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ഞാൻ കാണുന്നത് പോയി.",
+    "right": "ഞാൻ കാണാൻ പോയി.",
+    "note": "Use the purposive infinitive suffix -ആൻ, not the verbal noun suffix -ുന്നത്, to indicate the purpose of movement."
+   },
+   {
+    "wrong": "അവൻ എഴുതാൻ വേണ്ടി വന്നു പോയി.",
+    "right": "അവൻ എഴുതാൻ വന്നു.",
+    "note": "The infinitive suffix -ആൻ already denotes purpose; adding വേണ്ടി redundantly is unnatural in simple motion clauses."
+   },
+   {
+    "wrong": "എനിക്ക് വായിക്ക ഇഷ്ടമാണ്.",
+    "right": "എനിക്ക് വായിക്കാൻ ഇഷ്ടമാണ്.",
+    "note": "Expressing like/dislike with ഇഷ്ടമാണ് requires the infinitive form ending in -ാൻ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'She went to the market ___ vegetables.' -> 'അവൾ പച്ചക്കറി ___ ചന്തയിൽ പോയി.'",
+    "options": [
+     "വാങ്ങും",
+     "വാങ്ങി",
+     "വാങ്ങുന്നു",
+     "വാങ്ങാൻ"
+    ],
+    "answer": 3,
+    "explanation": "വാങ്ങാൻ (to buy) expresses the purpose of going to the market."
+   },
+   {
+    "question": "Which suffix converts the stem പോ- into an infinitive of purpose?",
+    "options": [
+     "-ആൻ",
+     "-ഉന്ന",
+     "-ഇയ",
+     "-ഓ"
+    ],
+    "answer": 0,
+    "explanation": "The suffix -ആൻ forms പോകാൻ (to go)."
+   },
+   {
+    "question": "Complete the complement: 'മലയാളം ___ എളുപ്പമാണ്.' (Learning Malayalam is easy.)",
+    "options": [
+     "പഠിച്ച",
+     "പഠിക്കാൻ",
+     "പഠിക്കും",
+     "പഠിക്കുന്നു"
+    ],
+    "answer": 1,
+    "explanation": "The infinitive പഠിക്കാൻ acts as the verbal complement evaluated by എളുപ്പമാണ്."
+   },
+   {
+    "question": "Identify the infinitive form meaning 'to drink':",
+    "options": [
+     "കുടിക്കും",
+     "കുടിച്ച്",
+     "കുടിക്കാൻ",
+     "കുടിക്കുന്നു"
+    ],
+    "answer": 2,
+    "explanation": "കുടിക്കാൻ is the infinitive form derived from കുടിക്കുക."
+   }
+  ],
+  "tip": "Strong verbs take a doubled -ക്ക- before the suffix (പഠി + ക്കാൻ = പഠിക്കാൻ), while weak verbs append -ആൻ directly to the base (വര് + ആൻ = വരാൻ)."
+ },
+ {
+  "id": "ml-a2-modal-auxiliary-verbs",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🚦",
+  "title": "Modal Auxiliaries (വേണം, പറ്റും, ചെയ്യാം)",
+  "subtitle": "Expressing necessity, capability, and permission with defective modals",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "Modals like വേണം (necessity), പറ്റും (capability), and the suffix -ാം (permission/suggestion) attach to infinitives or verb bases, usually requiring the dative case (-ക്ക്) on the subject.",
+  "structure": {
+   "headers": [
+    "Modal Form",
+    "Grammatical Subject",
+    "Core Meaning",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "വേണം (vēṇaṁ)",
+      "Dative (-ക്ക്)",
+      "Must / Need",
+      "എനിക്ക് പോകണം"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "വേണ്ട (vēṇḍa)",
+      "Dative / Direct",
+      "Must not / Do not want",
+      "അത് ചെയ്യരുത് / വേണ്ട"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "പറ്റും (paṟṟuṁ)",
+      "Dative (-ക്ക്)",
+      "Can / Able to",
+      "അവൾക്ക് വരാൻ പറ്റും"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ാം (-āṁ)",
+      "Nominative",
+      "May / Suggestion",
+      "നമുക്ക് പോകാം"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Obligation / Need",
+    "example": "നിങ്ങൾക്ക് വിശ്രമം വേണം.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Ability / Potential",
+    "example": "എനിക്ക് ഇത് ചെയ്യാൻ പറ്റും.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Joint Proposal / Permission",
+    "example": "നമുക്ക് ഇപ്പോൾ പുറപ്പെടാം.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "നിങ്ങൾ ഇത് കാണണം.",
+    "ko": "",
+    "highlight": "കാണണം"
+   },
+   {
+    "en": "എനിക്ക് നാളെ വരാൻ പറ്റില്ല.",
+    "ko": "",
+    "highlight": "പറ്റില്ല"
+   },
+   {
+    "en": "ഞാൻ അകത്തേക്ക് വരാം.",
+    "ko": "",
+    "highlight": "വരാം"
+   },
+   {
+    "en": "അവൻ ഇന്ന് വരാൻ സാധ്യതയുണ്ട്.",
+    "ko": "",
+    "highlight": "സാധ്യതയുണ്ട്"
+   },
+   {
+    "en": "കുട്ടികൾക്ക് കളിക്കാൻ സമയം വേണം.",
+    "ko": "",
+    "highlight": "വേണം"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ഞാൻ പോകണം.",
+    "right": "എനിക്ക് പോകണം.",
+    "note": "Predicates requiring obligation with വേണം typically assign the dative case (എനിക്ക്) to the experiencing subject."
+   },
+   {
+    "wrong": "അവൻ വരാൻ പറ്റും.",
+    "right": "അവന് വരാൻ പറ്റും.",
+    "note": "Ability with പറ്റും demands the dative marker on the subject (അവന്, not അവൻ)."
+   },
+   {
+    "wrong": "നിങ്ങൾക്ക് പോകാം വേണം.",
+    "right": "നിങ്ങൾക്ക് പോകാം.",
+    "note": "Do not combine multiple modal endings like -ാം and വേണം consecutively onto one verb."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence expressing need: '___ സഹായം വേണം.' (I need help.)",
+    "options": [
+     "ഞാൻ",
+     "എന്നെ",
+     "എനിക്ക്",
+     "എന്റെ"
+    ],
+    "answer": 2,
+    "explanation": "The modal auxiliary വേണം requires the subject in the dative case (എനിക്ക്)."
+   },
+   {
+    "question": "Select the negative of പറ്റും (can):",
+    "options": [
+     "പറ്റില്ല",
+     "വേണ്ട",
+     "അല്ല",
+     "പോര"
+    ],
+    "answer": 0,
+    "explanation": "പറ്റില്ല is the negative counterpart of പറ്റും, meaning 'cannot'."
+   },
+   {
+    "question": "Complete the cooperative proposal: 'നമുക്ക് ചായ ___.' (Let's drink tea.)",
+    "options": [
+     "കുടിക്കും",
+     "കുടിക്കാം",
+     "കുടിക്കണം",
+     "കുടിച്ചു"
+    ],
+    "answer": 1,
+    "explanation": "The modal affix -ാം expresses inclusive suggestions ('let's...'): കുടിക്കാം."
+   },
+   {
+    "question": "Identify the modal expressing requirement in 'നിങ്ങൾ മരുന്ന് കഴിക്കണം':",
+    "options": [
+     "-ഉന്നു",
+     "-ആം",
+     "-ണം",
+     "-ഇൽ"
+    ],
+    "answer": 2,
+    "explanation": "The suffix -ണം (contracted from വേണം) conveys imperative necessity."
+   }
+  ],
+  "tip": "To make വേണം negative, use വേണ്ട; to make പറ്റും negative, use പറ്റില്ല. Both retain the dative subject marking."
+ },
+ {
+  "id": "ml-a2-relative-participial-adjectives",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#4F46E5",
+  "emoji": "🧬",
+  "title": "Relative Clauses with Adjectival Participles (-ന്ന / -ഇയ)",
+  "subtitle": "Modifying nouns directly with past and non-past relative participles",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Malayalam has no relative pronouns like 'who' or 'which'; instead, relative clauses directly precede nouns by transforming the finite verb into an adjectival participle ending in -ന്ന (present/habitual) or past-tense markers.",
+  "structure": {
+   "headers": [
+    "Tense Base",
+    "Participle Suffix",
+    "Clause Example",
+    "Modified Head Noun"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "വരുന്ന (present)",
+      "-ന്ന",
+      "ഇവിടെ വരുന്ന ആൾ",
+      "The person who comes here"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "വന്ന (past)",
+      "-അ / -ഇയ",
+      "ഇന്നലെ വന്ന ആൾ",
+      "The person who came yesterday"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "വായിച്ച (past)",
+      "-അ",
+      "ഞാൻ വായിച്ച പുസ്തകം",
+      "The book that I read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "പാടുന്ന (present)",
+      "-ന്ന",
+      "പാട്ടുപാടുന്ന പെൺകുട്ടി",
+      "The girl who is singing"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Ongoing / Habitual Modification",
+    "example": "അവിടെ നിൽക്കുന്ന ആൾ എന്റെ അച്ഛനാണ്.",
+    "translation": ""
+   },
+   {
+    "color": "#4338CA",
+    "label": "Past Completed Relative Clause",
+    "example": "ഞാൻ ഉണ്ടാക്കിയ ഭക്ഷണം അവൻ കഴിച്ചു.",
+    "translation": ""
+   },
+   {
+    "color": "#3730A3",
+    "label": "Negative Relative Clause",
+    "example": "വരാത്ത ആളുകൾക്ക് അനുവാദമില്ല.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "നിങ്ങൾ പറഞ്ഞ കാര്യം ഞാൻ കേട്ടു.",
+    "ko": "",
+    "highlight": "പറഞ്ഞ"
+   },
+   {
+    "en": "ഇവിടെ താമസിക്കുന്ന കുടുംബം നല്ലതാണ്.",
+    "ko": "",
+    "highlight": "താമസിക്കുന്ന"
+   },
+   {
+    "en": "അവൻ എഴുതിയ കത്ത് മേശപ്പുറത്തുണ്ട്.",
+    "ko": "",
+    "highlight": "എഴുതിയ"
+   },
+   {
+    "en": "ഓടുന്ന കുതിരയെ നോക്കൂ.",
+    "ko": "",
+    "highlight": "ഓടുന്ന"
+   },
+   {
+    "en": "ഇന്നലെ പെയ്ത മഴ വളരെ ശക്തമായിരുന്നു.",
+    "ko": "",
+    "highlight": "പെയ്ത"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ആര് ഇവിടെ വന്നു ആ മനുഷ്യൻ",
+    "right": "ഇവിടെ വന്ന മനുഷ്യൻ",
+    "note": "Do not translate English relative pronouns ('who came that man'); use the pre-nominal participle വന്ന before the noun."
+   },
+   {
+    "wrong": "ഞാൻ കണ്ടു സ്ഥലം മനോഹരമാണ്.",
+    "right": "ഞാൻ കണ്ട സ്ഥലം മനോഹരമാണ്.",
+    "note": "Finite verbs (കണ്ടു) cannot modify nouns; use the adjectival participial form കണ്ട instead."
+   },
+   {
+    "wrong": "പാട്ട് പാടുന്നു പെൺകുട്ടി",
+    "right": "പാട്ട് പാടുന്ന പെൺകുട്ടി",
+    "note": "Finite present tense ending in -ന്നു must become the adjectival participle ending in -ന്ന before modifying a noun."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct participle for 'The book that I bought': 'ഞാൻ ___ പുസ്തകം.'",
+    "options": [
+     "വാങ്ങി",
+     "വാങ്ങുന്ന",
+     "വാങ്ങിയ",
+     "വാങ്ങും"
+    ],
+    "answer": 2,
+    "explanation": "വാങ്ങിയ is the past adjectival participle modifying പുസ്തകം."
+   },
+   {
+    "question": "Fill the blank with the present relative participle: 'അവിടെ ___ ആൾ ആരാണ്?' (The person singing there...)",
+    "options": [
+     "പാടുന്ന",
+     "പാടി",
+     "പാടും",
+     "പാടാൻ"
+    ],
+    "answer": 0,
+    "explanation": "പാടുന്ന is the present/habitual adjectival participle modifying the head noun ആൾ."
+   },
+   {
+    "question": "Transform finite 'വന്നു' into a past relative participle: 'ഇന്നലെ ___ അതിഥി.'",
+    "options": [
+     "വരുന്ന",
+     "വരും",
+     "വരാൻ",
+     "വന്ന"
+    ],
+    "answer": 3,
+    "explanation": "വന്ന is the past adjectival participle of വരിക."
+   },
+   {
+    "question": "Which sentence correctly means 'Look at the playing child'?",
+    "options": [
+     "കുട്ടി കളിച്ചു നോക്കൂ.",
+     "കളിക്കുന്ന കുട്ടിയെ നോക്കൂ.",
+     "കുട്ടി കളിക്കുന്നു നോക്കൂ.",
+     "കളിക്കാൻ കുട്ടി നോക്കൂ."
+    ],
+    "answer": 1,
+    "explanation": "കളിക്കുന്ന modifies കുട്ടിയെ directly as a relative participial adjective."
+   }
+  ],
+  "tip": "Malayalam is strictly head-final: relative clauses must always precede the noun they modify, with no relative pronouns in between."
+ },
+ {
+  "id": "ml-a2-causative-transitive-verb-pairs",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔄",
+  "title": "Transitive vs. Intransitive Verb Morphophonology",
+  "subtitle": "Deriving transitive and causative verbs from intransitive bases",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Malayalam forms transitive or causative verbs from intransitive roots by geminating the stem consonant or affixing suffixes like -ക്കുക or -ത്തുക.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Intransitive (Inchoative)",
+    "Transitive (Causative)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Consonant Gemination",
+      "പിരിയുന്നു",
+      "പിരിക്കുന്നു",
+      "separate / split"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Voiced to Voiceless",
+      "ഉണരുന്നു",
+      "ഉണർത്തുന്നു",
+      "wake up / awaken"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Suffixation (-ത്തുക)",
+      "നടക്കുന്നു",
+      "നടത്തുന്നു",
+      "walk / conduct or run"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Suffixation (-ക്കുക)",
+      "പഠിക്കുന്നു",
+      "പഠിപ്പിക്കുന്നു",
+      "learn / teach"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Self-occurring event",
+    "example": "വാതിൽ തുറന്നു.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Agent performing action",
+    "example": "അവൻ വാതിൽ തുറന്നു.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Causative execution",
+    "example": "അധ്യാപകൻ കുട്ടികളെ പഠിപ്പിക്കുന്നു.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "വെള്ളം തിളച്ചു.",
+    "ko": "",
+    "highlight": "തിളച്ചു"
+   },
+   {
+    "en": "അമ്മ വെള്ളം തിളപ്പിച്ചു.",
+    "ko": "",
+    "highlight": "തിളപ്പിച്ചു"
+   },
+   {
+    "en": "കുട്ടി വേഗം ഉണർന്നു.",
+    "ko": "",
+    "highlight": "ഉണർന്നു"
+   },
+   {
+    "en": "അച്ഛൻ കുട്ടിയെ ഉണർത്തി.",
+    "ko": "",
+    "highlight": "ഉണർത്തി"
+   },
+   {
+    "en": "അവർ ഒരു പുതിയ സംരംഭം നടത്തുന്നു.",
+    "ko": "",
+    "highlight": "നടത്തുന്നു"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "അവൻ വെള്ളം തിളച്ചു.",
+    "right": "അവൻ വെള്ളം തിളപ്പിച്ചു.",
+    "note": "Use the transitive verb form when an explicit agent performs the action on an object."
+   },
+   {
+    "wrong": "അമ്മ എന്നെ ഉണർന്നു.",
+    "right": "അമ്മ എന്നെ ഉണർത്തി.",
+    "note": "The root verb ഉണരുക is intransitive; the causative counterpart ഉണർത്തുക is required when waking someone else up."
+   },
+   {
+    "wrong": "ഞാൻ അവനെ മലയാളം പഠിക്കുന്നു.",
+    "right": "ഞാൻ അവനെ മലയാളം പഠിപ്പിക്കുന്നു.",
+    "note": "Use the causative suffix -പ്പിക്കുക to indicate teaching rather than learning."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The glass broke on its own: ഗ്ലാസ്സ് താഴെ വീണ് ___.",
+    "options": [
+     "പൊട്ടിച്ചു",
+     "പൊട്ടി",
+     "പൊട്ടിക്കുന്നു",
+     "പൊട്ടിക്കും"
+    ],
+    "answer": 1,
+    "explanation": "The intransitive past form പൊട്ടി is required because no agent actively broke the glass."
+   },
+   {
+    "question": "The teacher woke the students up: അധ്യാപിക കുട്ടികളെ ___.",
+    "options": [
+     "ഉണർത്തി",
+     "ഉണർന്നു",
+     "ഉണരുന്നു",
+     "ഉണരാൻ"
+    ],
+    "answer": 0,
+    "explanation": "The transitive/causative form ഉണർത്തി is needed when an agent awakens someone else."
+   },
+   {
+    "question": "Mother is boiling the milk: അമ്മ പാൽ ___.",
+    "options": [
+     "തിളക്കുന്നു",
+     "തിളച്ചു",
+     "തിളപ്പിക്കുന്നു",
+     "തിളങ്ങുന്നു"
+    ],
+    "answer": 2,
+    "explanation": "തിളപ്പിക്കുന്നു is the transitive present form meaning 'boiling (something)'."
+   },
+   {
+    "question": "They are conducting a meeting tomorrow: അവർ നാളെ യോഗം ___.",
+    "options": [
+     "നടക്കുന്നു",
+     "നടന്നു",
+     "നടന്നാൽ",
+     "നടത്തുന്നു"
+    ],
+    "answer": 3,
+    "explanation": "നടത്തുന്നു is the transitive form of നടക്കുന്നു, meaning 'conducts/runs'."
+   }
+  ],
+  "tip": "Verbs ending in -ങ്ങുക (like ഇളങ്ങുക, തുടങ്ങുക) consistently change to -ക്കുക (ഇളക്കുക, തുടങ്ങുക/തുടക്കുക) to express transitivity."
+ },
+ {
+  "id": "ml-a2-inclusive-and-exclusive-we",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "👥",
+  "title": "Inclusive vs. Exclusive We (നമ്മൾ vs. ഞങ്ങൾ)",
+  "subtitle": "Selecting the right first-person plural pronoun based on the listener",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use നമ്മൾ (or നാം) when the listener is included in 'we', and ഞങ്ങൾ when the listener is excluded.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Addressee Included?",
+    "Typical Scope",
+    "Case Stem"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "നമ്മൾ",
+      "Yes (Inclusive)",
+      "Speaker + Listener (+ Others)",
+      "നമ്മൾ- / നമ്മ-"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ഞങ്ങൾ",
+      "No (Exclusive)",
+      "Speaker + Others (Not Listener)",
+      "ഞങ്ങൾ- / ഞങ്ങ-"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "നാം",
+      "Yes (Formal Inclusive)",
+      "Universal / Public",
+      "നമുക്ക് (dative)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Inviting the listener",
+    "example": "നമുക്ക് ഒരുമിച്ച് പോകാം.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Excluding the listener",
+    "example": "ഞങ്ങൾ നാളെ യാത്ര തിരിക്കും.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Shared belonging",
+    "example": "ഇത് നമ്മുടെ വീടാണ്.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "നമ്മൾ നാളെ ഒരുമിച്ച് സിനിമ കാണാൻ പോകുന്നു.",
+    "ko": "",
+    "highlight": "നമ്മൾ"
+   },
+   {
+    "en": "ഞങ്ങൾ ഇന്നലെ തിരുവനന്തപുരത്ത് പോയി.",
+    "ko": "",
+    "highlight": "ഞങ്ങൾ"
+   },
+   {
+    "en": "ഇത് നമ്മുടെ സ്വന്തം നാടാണ്.",
+    "ko": "",
+    "highlight": "നമ്മുടെ"
+   },
+   {
+    "en": "ഞങ്ങളുടെ കോളേജിൽ നാളെ അവധിയാണ്.",
+    "ko": "",
+    "highlight": "ഞങ്ങളുടെ"
+   },
+   {
+    "en": "നമുക്ക് ഇപ്പോൾ ഭക്ഷണം കഴിക്കാം.",
+    "ko": "",
+    "highlight": "നമുക്ക്"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ഞങ്ങൾക്ക് ഒരുമിച്ച് പോകാം.",
+    "right": "നമുക്ക് ഒരുമിച്ച് പോകാം.",
+    "note": "When suggesting a joint activity with the listener, use the inclusive dative നമുക്ക്, not the exclusive ഞങ്ങൾക്ക്."
+   },
+   {
+    "wrong": "ഞാൻ ഡോക്ടറോട് പറഞ്ഞു: 'നമ്മുടെ കുട്ടിക്ക് സുഖമില്ല.'",
+    "right": "ഞാൻ ഡോക്ടറോട് പറഞ്ഞു: 'ഞങ്ങളുടെ കുട്ടിക്ക് സുഖമില്ല.'",
+    "note": "When speaking to an outside professional about your family, use exclusive ഞങ്ങൾ/ഞങ്ങളുടെ unless the doctor is a co-parent."
+   },
+   {
+    "wrong": "നമ്മൾ യാത്ര കഴിഞ്ഞു മടങ്ങിയെത്തി, നിങ്ങൾ എവിടെയായിരുന്നു?",
+    "right": "ഞങ്ങൾ യാത്ര കഴിഞ്ഞു മടങ്ങിയെത്തി, നിങ്ങൾ എവിടെയായിരുന്നു?",
+    "note": "If the listener was not part of the trip, you must use exclusive ഞങ്ങൾ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Speaking to a shopkeeper: '___ are looking for umbrellas.'",
+    "options": [
+     "നമ്മൾ",
+     "ഞങ്ങൾ",
+     "നമുക്ക്",
+     "നമ്മുടെ"
+    ],
+    "answer": 1,
+    "explanation": "The shopkeeper is excluded from the group of shoppers, so the exclusive pronoun ഞങ്ങൾ is required."
+   },
+   {
+    "question": "Proposing to a friend: 'Shall ___ go for tea?' (Dative)",
+    "options": [
+     "ഞങ്ങൾക്ക്",
+     "നിങ്ങൾക്ക്",
+     "നമുക്ക്",
+     "അവർക്ക്"
+    ],
+    "answer": 2,
+    "explanation": "The inclusive dative നമുക്ക് includes the friend who is invited."
+   },
+   {
+    "question": "Addressing fellow citizens: 'India is ___ country.'",
+    "options": [
+     "ഞങ്ങളുടെ",
+     "എന്റെ",
+     "അവരുടെ",
+     "നമ്മുടെ"
+    ],
+    "answer": 3,
+    "explanation": "The inclusive genitive നമ്മുടെ includes both the speaker and the listeners."
+   },
+   {
+    "question": "Telling a neighbor about your family trip: '___ are going to Kochi tomorrow.'",
+    "options": [
+     "ഞങ്ങൾ",
+     "നമ്മൾ",
+     "നാം",
+     "നിങ്ങൾ"
+    ],
+    "answer": 0,
+    "explanation": "Since the neighbor is not coming along, use exclusive ഞങ്ങൾ."
+   }
+  ],
+  "tip": "A quick test: ask yourself 'Am I inviting the person in front of me?' If yes, use നമ്മൾ; if no, use ഞങ്ങൾ."
+ },
+ {
+  "id": "ml-b1-conditional-and-concessive-clauses",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#F59E0B",
+  "emoji": "🔀",
+  "title": "Conditionals and Concessives (-ആൽ and -ഇലും)",
+  "subtitle": "Forming 'if' and 'even though' clauses directly on Malayalam verbs",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Append -ആൽ to the past tense verb stem to mean 'if', and -ഇലും (or -ആലും) to mean 'even if' or 'although'.",
+  "structure": {
+   "headers": [
+    "Clause Type",
+    "Marker",
+    "Base Verb",
+    "Combined Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Conditional ('if')",
+      "-ആൽ",
+      "വന്നു (came)",
+      "വന്നാൽ (if comes)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negative Conditional ('if not')",
+      "-എങ്കിൽ / -ആഞ്ഞാൽ",
+      "വരാതിരുന്നാൽ",
+      "വരാതിരുന്നാൽ (if does not come)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Concessive ('even if')",
+      "-ഇലും / -ആലും",
+      "വന്നു (came)",
+      "വന്നാലും (even if comes)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Concessive Past ('although')",
+      "-ഇട്ടും",
+      "ചെയ്തു (did)",
+      "ചെയ്തിട്ടും (despite doing)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Hypothetical condition",
+    "example": "മഴ പെയ്താൽ ഞാൻ വരില്ല.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Concession ('even if')",
+    "example": "വെയിൽ അടിച്ചാലും തണുപ്പാണ്.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Frustrated action ('despite')",
+    "example": "നന്നായി പഠിച്ചിട്ടും അവൻ തോറ്റു.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "നീ വേഗം വന്നാൽ നമുക്ക് സിനിമയ്ക്ക് പോകാം.",
+    "ko": "",
+    "highlight": "വന്നാൽ"
+   },
+   {
+    "en": "പണം ചോദിച്ചാൽ അവൻ തരുമോ?",
+    "ko": "",
+    "highlight": "ചോദിച്ചാൽ"
+   },
+   {
+    "en": "മഴ പെയ്താലും കളി തുടരും.",
+    "ko": "",
+    "highlight": "പെയ്താലും"
+   },
+   {
+    "en": "വൈകിയെങ്കിലും അവൻ കൃത്യമായി എത്തി.",
+    "ko": "",
+    "highlight": "വൈകിയെങ്കിലും"
+   },
+   {
+    "en": "മരുന്ന് കഴിച്ചിട്ടും പനി കുറഞ്ഞില്ല.",
+    "ko": "",
+    "highlight": "കഴിച്ചിട്ടും"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "നീ വരും എങ്കിൽ ഞാൻ വരും.",
+    "right": "നീ വന്നാൽ ഞാൻ വരും.",
+    "note": "Attach -ആൽ directly to the past stem (വന്ന + ആൽ = വന്നാൽ) for natural conditionals instead of pairing future tense with എങ്കിൽ."
+   },
+   {
+    "wrong": "മഴ പെയ്താൽ ഞാൻ പോകും, പക്ഷേ കുട ഇല്ല.",
+    "right": "മഴ പെയ്താലും ഞാൻ പോകും, കുട ഇല്ലെങ്കിലും.",
+    "note": "Use concessive -ആലും (even if it rains) instead of conditional -ആൽ (if it rains) when the action happens despite the condition."
+   },
+   {
+    "wrong": "അവൻ നന്നായി ഓടി എങ്കിലും തോറ്റു.",
+    "right": "അവൻ നന്നായി ഓടിയിട്ടും തോറ്റു.",
+    "note": "For past frustrated actions ('even though he ran, he lost'), -ഇട്ടും attached to the past participle is much more natural."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "If you study well, you will pass: നന്നായി ___ പരീക്ഷ ജയിക്കും.",
+    "options": [
+     "പഠിച്ചാലും",
+     "പഠിച്ചാൽ",
+     "പഠിക്കുന്നു",
+     "പഠിക്കാൻ"
+    ],
+    "answer": 1,
+    "explanation": "പഠിച്ചാൽ (past stem പഠിച്ചു + ആൽ) forms the regular conditional clause 'if you study'."
+   },
+   {
+    "question": "Even if it rains, we will play football: മഴ ___ ഞങ്ങൾ ഫുട്ബോൾ കളിക്കും.",
+    "options": [
+     "പെയ്യുമ്പോൾ",
+     "പെയ്താൽ",
+     "പെയ്താലും",
+     "പെയ്യാൻ"
+    ],
+    "answer": 2,
+    "explanation": "പെയ്താലും signifies 'even if it rains'."
+   },
+   {
+    "question": "Despite taking medicine, the headache did not go away: മരുന്ന് ___ തലവേദന മാറിയില്ല.",
+    "options": [
+     "കഴിച്ചാൽ",
+     "കഴിക്കുമ്പോൾ",
+     "കഴിക്കാൻ",
+     "കഴിച്ചിട്ടും"
+    ],
+    "answer": 3,
+    "explanation": "-ഇട്ടും expresses 'despite having done', indicating an unfulfilled expectation in the past."
+   },
+   {
+    "question": "If you call him, he will answer immediately: അവനെ ___ അവൻ ഉടൻ മറുപടി നൽകും.",
+    "options": [
+     "വിളിച്ചാൽ",
+     "വിളിച്ചാലും",
+     "വിളിച്ചിട്ടും",
+     "വിളിക്കുന്നത്"
+    ],
+    "answer": 0,
+    "explanation": "വിളിച്ചാൽ is the conditional 'if (you) call'."
+   }
+  ],
+  "tip": "Conditionals always attach to the PAST stem of the verb, never the present or future: പോയി -> പോയാൽ, കണ്ടു -> കണ്ടാൽ."
+ },
+ {
+  "id": "ml-b1-aspectual-compound-verbs",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🧩",
+  "title": "Aspectual Compound Verbs (-ഇടുക, -കളയുക, -വെക്കുക)",
+  "subtitle": "Adding disposal, preparation, and finality using vector auxiliaries",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Malayalam combines a verbal participle with auxiliary verbs like ഇടുക, കളയുക, or വെക്കുക to add aspectual nuances of finality, carelessness, or preparatory action.",
+  "structure": {
+   "headers": [
+    "Auxiliary",
+    "Core Nuance",
+    "Example Combination",
+    "Implied Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "കളയുക",
+      "Irrevocable loss / finality / recklessness",
+      "ചെയ്തു + കളഞ്ഞു",
+      "did it completely / got rid of it"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "വെക്കുക",
+      "Action done in advance / deliberately stored",
+      "വാങ്ങി + വെച്ചു",
+      "bought and kept aside"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ഇടുക",
+      "Temporary state / casual action",
+      "എഴുതി + ഇട്ടു",
+      "jotted down / posted casually"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "തീർക്കുക",
+      "Total completion of an exhaustive task",
+      "വായിച്ചു + തീർത്തു",
+      "finished reading completely"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Irretrievable completion or error",
+    "example": "ഞാൻ താക്കോൽ നഷ്ടപ്പെടുത്തിക്കളഞ്ഞു.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Preparatory action",
+    "example": "അമ്മ ഭക്ഷണം ഉണ്ടാക്കിവെച്ചു.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Informal / temporary insertion",
+    "example": "അവൻ പെട്ടി അവിടെ വെച്ചിട്ടു പോയി.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "അവൻ ദേഷ്യം കൊണ്ട് കത്ത് കീറിക്കളഞ്ഞു.",
+    "ko": "",
+    "highlight": "കീറിക്കളഞ്ഞു"
+   },
+   {
+    "en": "നാളത്തേക്ക് ആവശ്യമായ പണം ഞാൻ എടുത്തുവെച്ചു.",
+    "ko": "",
+    "highlight": "എടുത്തുവെച്ചു"
+   },
+   {
+    "en": "ഫോൺ നമ്പർ ഒരു കടലാസിൽ കുറിച്ചിട്ടു.",
+    "ko": "",
+    "highlight": "കുറിച്ചിട്ടു"
+   },
+   {
+    "en": "അവൾ പുസ്തകം ഒറ്റ ദിവസം കൊണ്ട് വായിച്ചുതീർത്തു.",
+    "ko": "",
+    "highlight": "വായിച്ചുതീർത്തു"
+   },
+   {
+    "en": "അവൻ ആ രഹസ്യം എല്ലാവരോടും പറഞ്ഞുപോയി.",
+    "ko": "",
+    "highlight": "പറഞ്ഞുപോയി"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ഞാൻ ഭക്ഷണം കഴിച്ചുകളഞ്ഞു (when dining politely).",
+    "right": "ഞാൻ ഭക്ഷണം കഴിച്ചു.",
+    "note": "കളയുക implies disposing of something negative or an accidental/reckless deed; do not use it for normal polite eating unless emphasizing gobbling it up greedily."
+   },
+   {
+    "wrong": "അവൻ ഒരു കത്ത് എഴുതി വെച്ചു കളഞ്ഞു.",
+    "right": "അവൻ ഒരു കത്ത് എഴുതിവെച്ചു.",
+    "note": "Do not stack aspectual auxiliaries haphazardly; choose the one matching your specific intent."
+   },
+   {
+    "wrong": "ടിക്കറ്റ് വാങ്ങിയിട്ടു.",
+    "right": "ടിക്കറ്റ് വാങ്ങിവെച്ചു.",
+    "note": "For actions intended for future preparedness, വെക്കുക is far more natural than ഇടുക."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He accidentally drank the spoiled milk: അവൻ കേടായ പാൽ ___.",
+    "options": [
+     "കുടിച്ചുവെച്ചു",
+     "കുടിച്ചിട്ടു",
+     "കുടിച്ചുകളഞ്ഞു",
+     "കുടിച്ചുതീർത്തു"
+    ],
+    "answer": 2,
+    "explanation": "കുടിച്ചുകളഞ്ഞു conveys the irrevocable, inadvertent nature of drinking bad milk."
+   },
+   {
+    "question": "I have prepared and set aside dinner for you: ഞാൻ അത്താഴം ___.",
+    "options": [
+     "ഉണ്ടാക്കിവെച്ചു",
+     "ഉണ്ടാക്കിക്കളഞ്ഞു",
+     "ഉണ്ടാക്കിത്തീർത്തു",
+     "ഉണ്ടാക്കിപ്പോയി"
+    ],
+    "answer": 0,
+    "explanation": "ഉണ്ടാക്കിവെച്ചു denotes cooking ahead and keeping it preserved for later use."
+   },
+   {
+    "question": "She finished reading the entire syllabus: അവൾ പാഠങ്ങളെല്ലാം ___.",
+    "options": [
+     "പഠിച്ചുകളഞ്ഞു",
+     "പഠിച്ചുവെച്ചു",
+     "പഠിച്ചിട്ടു",
+     "പഠിച്ചുതീർത്തു"
+    ],
+    "answer": 3,
+    "explanation": "-തീർത്തു explicitly conveys bringing an exhaustive task to full completion."
+   },
+   {
+    "question": "Please jot this address down casually: ഈ മേൽവിലാസം ഒന്ന് ___.",
+    "options": [
+     "കുറിച്ചുവെക്കുക",
+     "കുറിച്ചിടുക",
+     "കുറിച്ചുകളയുക",
+     "കുറിച്ചുതീർക്കുക"
+    ],
+    "answer": 1,
+    "explanation": "കുറിച്ചിടുക indicates making a quick, informal note."
+   }
+  ],
+  "tip": "Think of കളയുക as 'throwing away'—when attached to another verb, it highlights that the deed is irreversible and completely done."
+ },
+ {
+  "id": "ml-b1-nominalization-with-athu",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "📦",
+  "title": "Clause Nominalization using -അത്",
+  "subtitle": "Converting verb phrases into noun clauses for emphasis and reason",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Appending the third-person neuter pronoun -അത് to relative participles turns entire clauses into abstract nouns ('that which / the fact that').",
+  "structure": {
+   "headers": [
+    "Tense Base",
+    "Relative Participle",
+    "Nominalized Form (-അത്)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Past",
+      "വന്ന (who came)",
+      "വന്നത്",
+      "the fact that (someone) came / who came"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Present",
+      "വരുന്ന (who comes)",
+      "വരുന്നതാണ് / വരുന്നത്",
+      "the act of coming / that (someone) comes"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Future",
+      "വരുന്ന (modal)",
+      "വരുമെന്നത്",
+      "the proposition that (someone) will come"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative",
+      "വരാത്ത (who didn't come)",
+      "വരാത്തത്",
+      "the fact of not coming"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Clefting for emphasis",
+    "example": "അവൻ ഇന്നലെ വന്നതാണ്.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Subject of a complex sentence",
+    "example": "നീ പറഞ്ഞത് ശരിയാണ്.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Expressing cause with -കൊണ്ടാണ്",
+    "example": "മഴ പെയ്തതുകൊണ്ടാണ് ഞാൻ വരാഞ്ഞത്.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "നീ അങ്ങനെ ചെയ്തത് ഒട്ടും ശരിയായില്ല.",
+    "ko": "",
+    "highlight": "ചെയ്തത്"
+   },
+   {
+    "en": "അവൻ പരീക്ഷ ജയിച്ചതിൽ എല്ലാവർക്കും സന്തോഷമുണ്ട്.",
+    "ko": "",
+    "highlight": "ജയിച്ചതിൽ"
+   },
+   {
+    "en": "സത്യം പറയുന്നതാണ് എപ്പോഴും നല്ലത്.",
+    "ko": "",
+    "highlight": "പറയുന്നതാണ്"
+   },
+   {
+    "en": "ഞാൻ വൈകിയത് ബസ് കിട്ടാത്തതുകൊണ്ടാണ്.",
+    "ko": "",
+    "highlight": "കിട്ടാത്തതുകൊണ്ടാണ്"
+   },
+   {
+    "en": "അവർ ചോദിച്ചതിന് ഞാൻ മറുപടി കൊടുത്തു.",
+    "ko": "",
+    "highlight": "ചോദിച്ചതിന്"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "നീ പറഞ്ഞു കാര്യം ശരിയാണ്.",
+    "right": "നീ പറഞ്ഞത് ശരിയാണ്.",
+    "note": "To say 'What you said is correct', nominalize the verb directly as പറഞ്ഞത് rather than leaving a dangling finite verb."
+   },
+   {
+    "wrong": "അവൻ വന്നത് കൊണ്ട് ഞാൻ പോയി.",
+    "right": "അവൻ വന്നതുകൊണ്ട് ഞാൻ പോയി.",
+    "note": "Nominalized verb + instrumental postposition form a single bound phrase without arbitrary spacing: വന്നതുകൊണ്ട്."
+   },
+   {
+    "wrong": "അവൻ പാടിയതിൽ നല്ലതല്ല.",
+    "right": "അവൻ പാടിയത് നല്ലതല്ല.",
+    "note": "Use the nominative nominalization പാടിയത് as the subject of evaluation, not the locative പാടിയതിൽ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What you said is completely true: നിങ്ങൾ ___ തികച്ചും സത്യമാണ്.",
+    "options": [
+     "പറഞ്ഞു",
+     "പറഞ്ഞത്",
+     "പറയുന്നത്",
+     "പറയും"
+    ],
+    "answer": 1,
+    "explanation": "The past nominalized form പറഞ്ഞത് functions as 'that which you said'."
+   },
+   {
+    "question": "It is because it rained that the match was cancelled: കളി ഉപേക്ഷിച്ചത് മഴ ___ ആണ്.",
+    "options": [
+     "പെയ്തത്",
+     "പെയ്യുന്നത്",
+     "പെയ്തതുകൊണ്ട്",
+     "പെയ്യും"
+    ],
+    "answer": 2,
+    "explanation": "പെയ്തതുകൊണ്ട് ('because it rained') consists of the nominalized past verb plus the causal postposition കൊണ്ട്."
+   },
+   {
+    "question": "Everyone rejoiced in his winning: അവൻ ജയിച്ച___ എല്ലാവരും സന്തോഷിച്ചു.",
+    "options": [
+     "തിൽ",
+     "തിനെ",
+     "തോ",
+     "തും"
+    ],
+    "answer": 0,
+    "explanation": "The locative case suffix -ഇൽ attached to nominalized ജയിച്ചത് yields ജയിച്ചതിൽ ('in the fact of winning')."
+   },
+   {
+    "question": "Speaking the truth is always noble: സത്യം ___ ആണ് ഉത്തമം.",
+    "options": [
+     "പറയുന്നു",
+     "പറഞ്ഞു",
+     "പറഞ്ഞത്",
+     "പറയുന്നതാണ്"
+    ],
+    "answer": 3,
+    "explanation": "പറയുന്നതാണ് provides the nominalized present subject with the assertive copula marker -ആണ്."
+   }
+  ],
+  "tip": "Nominalized verbs decline like ordinary inanimate neuter nouns: nominative ചെയ്തത്, accusative ചെയ്തതിനെ, dative ചെയ്തതിന്, locative ചെയ്തതിൽ."
+ },
+ {
+  "id": "ml-b1-temporal-clauses-appol-kondu",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#3B82F6",
+  "emoji": "⏳",
+  "title": "Simultaneous & Temporal Clauses (-മ്പോൾ and -കൊണ്ട്)",
+  "subtitle": "Connecting concurrent actions ('while') and sequential triggers ('when')",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Attach -മ്പോൾ directly to verb bases to express 'when' or 'while', and use converb + കൊണ്ട് to mark simultaneous actions performed alongside a main verb.",
+  "structure": {
+   "headers": [
+    "Grammar Suffix",
+    "Formed With",
+    "Malayalam Example",
+    "English Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-മ്പോൾ (-mbol)",
+      "Future/Base Stem",
+      "വരുമ്പോൾ",
+      "When / While arriving"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ഇരിക്കുമ്പോൾ (-irikkumbol)",
+      "Durative Participle",
+      "വായിച്ചുകൊണ്ടിരിക്കുമ്പോൾ",
+      "While in the middle of reading"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-കൊണ്ട് (-kondu)",
+      "Adverbial Converb",
+      "പാട്ടുപാടിപ്പഠിച്ചുകൊണ്ട്",
+      "Doing while continuously studying"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Point in Time Trigger ('When')",
+    "example": "മഴ പെയ്യുമ്പോൾ ഞാൻ ജനൽ അടയ്ക്കും.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Extended Action Overlap ('While')",
+    "example": "ഭക്ഷണം കഴിക്കുമ്പോൾ സംസാരിക്കരുത്.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Parallel Maneuver ('Doing alongside')",
+    "example": "അവൻ നടക്കുമ്പോൾ സംഗീതം കേൾക്കുന്നു.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "അമ്മ വിളിക്കുമ്പോൾ ഞാൻ പഠിക്കുകയായിരുന്നു.",
+    "ko": "",
+    "highlight": "വിളിക്കുമ്പോൾ"
+   },
+   {
+    "en": "വീട്ടിൽ എത്തുമ്പോൾ എന്നെ വിളിക്കുക.",
+    "ko": "",
+    "highlight": "എത്തുമ്പോൾ"
+   },
+   {
+    "en": "ചായ കുടിച്ചുകൊണ്ട് അവൻ പത്രം വായിച്ചു.",
+    "ko": "",
+    "highlight": "കുടിച്ചുകൊണ്ട്"
+   },
+   {
+    "en": "റോഡ് മുറിച്ചുകടക്കുമ്പോൾ ശ്രദ്ധിക്കണം.",
+    "ko": "",
+    "highlight": "മുറിച്ചുകടക്കുമ്പോൾ"
+   },
+   {
+    "en": "ടിവി കണ്ടുകൊണ്ടിരിക്കുമ്പോൾ അവൾ ഉറങ്ങിപ്പോയി.",
+    "ko": "",
+    "highlight": "കണ്ടുകൊണ്ടിരിക്കുമ്പോൾ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "അവൻ പോയപ്പോൾ ഞാൻ വന്നു.",
+    "right": "അവൻ പോകുമ്പോൾ ഞാൻ വന്നു.",
+    "note": "Do not attach -മ്പോൾ to past tense bases; it attaches to the non-past stem (പോകുമ്പോൾ). Past temporal uses use -പ്പോൾ with relative participle or -പോയപ്പോൾ depending on meaning."
+   },
+   {
+    "wrong": "ഭക്ഷണം കഴിച്ച് കൊണ്ട് അവൻ സംസാരിച്ചു.",
+    "right": "ഭക്ഷണം കഴിച്ചുകൊണ്ട് അവൻ സംസാരിച്ചു.",
+    "note": "Converb + കൊണ്ട് functions as a single bound connector and should not be written as detached words."
+   },
+   {
+    "wrong": "മഴ പെയ്തുകൊണ്ട് ഞാൻ കുട എടുത്തു.",
+    "right": "മഴ പെയ്തപ്പോൾ ഞാൻ കുട എടുത്തു.",
+    "note": "Use -പ്പോൾ for sequential event triggers ('when it rained, I took an umbrella'), not simultaneous concurrent marker -കൊണ്ട്."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Call me ___ you reach the station.' (സ്റ്റേഷനിൽ ___ എന്നെ വിളിക്കൂ.)",
+    "options": [
+     "എത്തുമ്പോൾ",
+     "എത്തിക്കൊണ്ട്",
+     "എത്താൻ",
+     "എത്തുക"
+    ],
+    "answer": 0,
+    "explanation": "എത്തുമ്പോൾ attaches the temporal suffix -മ്പോൾ to indicate 'when you arrive'."
+   },
+   {
+    "question": "Choose the correct phrase for 'while reading the book':",
+    "options": [
+     "പുസ്തകം വായിച്ചാൽ",
+     "പുസ്തകം വായിക്കുമ്പോൾ",
+     "പുസ്തകം വായിച്ചിട്ട്",
+     "പുസ്തകം വായിച്ചേ"
+    ],
+    "answer": 1,
+    "explanation": "വായിക്കുമ്പോൾ combines reading with -മ്പോൾ to yield 'while reading'."
+   },
+   {
+    "question": "Identify the parallel action marker in: 'അവൻ പാട്ടുപാടിക്കൊണ്ട് ജോലി ചെയ്തു.'",
+    "options": [
+     "അവൻ",
+     "ജോലി",
+     "പാടിക്കൊണ്ട്",
+     "ചെയ്തു"
+    ],
+    "answer": 2,
+    "explanation": "പാടിക്കൊണ്ട് shows the concurrent action (singing while working)."
+   },
+   {
+    "question": "Fill in the blank: '___ ഉറങ്ങരുത്.' (Do not sleep while driving.)",
+    "options": [
+     "വണ്ടി ഓടിക്കാൻ",
+     "വണ്ടി ഓടിക്കുക",
+     "വണ്ടി ഓടിച്ചാൽ",
+     "വണ്ടി ഓടിക്കുമ്പോൾ"
+    ],
+    "answer": 3,
+    "explanation": "ഓടിക്കുമ്പോൾ correctly denotes 'while driving'."
+   }
+  ],
+  "tip": "Remember that -മ്പോൾ is a coalescence of the relative participle and അപ്പോൾ ('at that time'); keep the verb in its habitual/future stem shape before adding -മ്പോൾ."
+ },
+ {
+  "id": "ml-b1-quotative-particle-ennu",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#3B82F6",
+  "emoji": "💬",
+  "title": "The Quotative Particle എന്ന് (ennu)",
+  "subtitle": "Embedding direct thoughts, indirect speech, reasoning, and names",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "The indeclinable particle എന്ന് links any cited clause, thought, named entity, or subjective motive directly to the matrix clause.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Clause Structure",
+    "Malayalam Example",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Indirect Speech",
+      "Clause + എന്ന് + പറഞ്ഞു",
+      "വരുമെന്ന് പറഞ്ഞു",
+      "Said that (they) will come"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Subjective Thought",
+      "Clause + എന്ന് + വിചാരിച്ചു",
+      "മഴ പെയ്യുമെന്ന് കരുതി",
+      "Thought that it would rain"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Proper Name / Title",
+      "Name + എന്ന് + പേര്",
+      "ഭാരതം എന്ന് പേരുള്ള",
+      "Named 'Bharatam'"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Intentional Purpose",
+      "Stem-ആം + എന്ന് + വെച്ചു",
+      "പോകാം എന്ന് വെച്ചു",
+      "Decided / intended to go"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Reported Utterance ('said that')",
+    "example": "നാളെ വരാം എന്ന് അവൻ പറഞ്ഞു.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Belief or Assumption ('thought that')",
+    "example": "പരീക്ഷ എളുപ്പമായിരിക്കും എന്ന് ഞാൻ കരുതി.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Naming People and Objects ('named X')",
+    "example": "ആനന്ദ് എന്ന് വിളിക്കുന്ന ഒരു കുട്ടി ഇവിടെയുണ്ട്.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "അവൻ സുഖമാണെന്ന് പറഞ്ഞു.",
+    "ko": "",
+    "highlight": "സുഖമാണെന്ന്"
+   },
+   {
+    "en": "നിങ്ങൾ വരുമെന്ന് ഞാൻ പ്രതീക്ഷിച്ചു.",
+    "ko": "",
+    "highlight": "വരുമെന്ന്"
+   },
+   {
+    "en": "ഇത് സത്യമാണെന്ന് എല്ലാവർക്കും അറിയാം.",
+    "ko": "",
+    "highlight": "സത്യമാണെന്ന്"
+   },
+   {
+    "en": "കേരളം എന്ന് കേൾക്കുമ്പോൾ ഓർമ്മവരുന്നത് പച്ചപ്പാണ്.",
+    "ko": "",
+    "highlight": "കേരളം എന്ന്"
+   },
+   {
+    "en": "വൈകിപ്പോകും എന്ന് വിചാരിച്ച് ഞാൻ വേഗം നടന്നു.",
+    "ko": "",
+    "highlight": "വൈകിപ്പോകും എന്ന്"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "അവൻ പറഞ്ഞു അവൻ വരും.",
+    "right": "അവൻ വരുമെന്ന് പറഞ്ഞു.",
+    "note": "Malayalam requires the quotative particle എന്ന് when subordinating a clause; you cannot simply place clauses adjacent without it."
+   },
+   {
+    "wrong": "ഞാൻ പോകും എന്ന് പറഞ്ഞു അവൻ.",
+    "right": "ഞാൻ വരുമെന്ന് അവൻ പറഞ്ഞു.",
+    "note": "In reported speech, shifting personal pronouns or placing the verb at the sentence final position preserves natural syntax."
+   },
+   {
+    "wrong": "അവൻ വരുമ്പോൾ എന്ന് പറഞ്ഞു.",
+    "right": "അവൻ വരുമെന്ന് പറഞ്ഞു.",
+    "note": "Do not attach quotative എന്ന് to adverbial temporal markers like -മ്പോൾ unless citing that exact conditional phrase."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'He said that he is tired'?",
+    "options": [
+     "അവൻ ക്ഷീണിതനാണ് എന്ന് പറഞ്ഞു.",
+     "അവൻ ക്ഷീണിതനായിരിക്കും.",
+     "അവൻ ക്ഷീണം കൊണ്ട്.",
+     "അവൻ ക്ഷീണിച്ചു കഴിഞ്ഞു."
+    ],
+    "answer": 0,
+    "explanation": "The particle എന്ന് quotes the condition 'അവൻ ക്ഷീണിതനാണ്'."
+   },
+   {
+    "question": "Choose the missing complementizer: 'അവൾ വിജയിക്കും ___ എനിക്ക് ഉറപ്പാണ്.'",
+    "options": [
+     "എങ്കിൽ",
+     "കൊണ്ട്",
+     "എന്ന്",
+     "വരെ"
+    ],
+    "answer": 2,
+    "explanation": "എന്ന് embeds the proposition 'she will win' into 'I am sure that'."
+   },
+   {
+    "question": "Select the correct combination for 'A place called Kochi':",
+    "options": [
+     "കൊച്ചി എന്നാൽ",
+     "കൊച്ചി ആയി",
+     "കൊച്ചി പോലും",
+     "കൊച്ചി എന്ന് പറയുന്ന സ്ഥലം"
+    ],
+    "answer": 3,
+    "explanation": "കൊച്ചി എന്ന് പറയുന്ന qualifies the noun with the quotative attribution."
+   },
+   {
+    "question": "What is the function of എന്ന് in 'മഴ വരും എന്ന് കരുതി'?",
+    "options": [
+     "Marks simultaneous action",
+     "Reports a presumption or thought",
+     "Negates the main verb",
+     "Forms a command"
+    ],
+    "answer": 1,
+    "explanation": "It frames the thought 'rain will come' before the mental verb കരുതി (thought)."
+   }
+  ],
+  "tip": "When എന്ന് attaches to finite verbs ending in -ഉം (like വരും), the words fuse phonologically into വരുമെന്ന് (varum + ennu)."
+ },
+ {
+  "id": "ml-b2-indirect-voice-and-passive-equivalents",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#EC4899",
+  "emoji": "🏛️",
+  "title": "Synthetic Passive with പെടുക vs. Reflexive Usage",
+  "subtitle": "Navigating formal written passivization and experiential verbs",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "Attach -പ്പെടുക to the infinitive stem to form standard institutional passives, while noting that certain intransitive roots use പെടുക inherently with experiential meaning.",
+  "structure": {
+   "headers": [
+    "Form Type",
+    "Construction",
+    "Malayalam Example",
+    "Usage Context"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Formal Passive",
+      "Infinitive + പെടുക",
+      "തീരുമാനിക്കപ്പെട്ടു",
+      "Formal/journalistic passive ('was decided')"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Agentive Instrumental",
+      "Agent + -ആൽ + Passive",
+      "പോലീസിനാൽ അറസ്റ്റ് ചെയ്യപ്പെട്ടു",
+      "Formal agency ('was arrested by police')"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Inherent Experiential",
+      "Noun/Root + പെടുക",
+      "അകപ്പെട്ടു / പെട്ടു",
+      "Involuntary situation ('became trapped')"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Spoken Equivalent",
+      "Active Third Plural",
+      "അയാളെ കണ്ടുപിടിച്ചു",
+      "Colloquial passive equivalent ('found him')"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EC4899",
+    "label": "Bureaucratic / News Reports",
+    "example": "പുതിയ നിയമം പാർലമെന്റിൽ പാസാക്കപ്പെട്ടു.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Historical Attribution",
+    "example": "ഈ ക്ഷേത്രം രാജാവിനാൽ പണിയപ്പെട്ടു.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Involuntary Incurrence ('got caught')",
+    "example": "യാത്രക്കാർ വലിയ കാറ്റിൽ അകപ്പെട്ടു.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "പ്രതി പോലീസിനാൽ പിടിക്കപ്പെട്ടു.",
+    "ko": "",
+    "highlight": "പിടിക്കപ്പെട്ടു"
+   },
+   {
+    "en": "പദ്ധതി വിജയകരമായി നടപ്പിലാക്കപ്പെട്ടു.",
+    "ko": "",
+    "highlight": "നടപ്പിലാക്കപ്പെട്ടു"
+   },
+   {
+    "en": "ഈ പുസ്തകം പല ഭാഷകളിലേക്ക് വിവർത്തനം ചെയ്യപ്പെട്ടിട്ടുണ്ട്.",
+    "ko": "",
+    "highlight": "ചെയ്യപ്പെട്ടിട്ടുണ്ട്"
+   },
+   {
+    "en": "അവർ വനത്തിൽ വെച്ച് വഴിതെറ്റി അപകടത്തിൽ പെട്ടു.",
+    "ko": "",
+    "highlight": "പെട്ടു"
+   },
+   {
+    "en": "നിർദ്ദേശങ്ങൾ യോഗത്തിൽ വെച്ച് സമർപ്പിക്കപ്പെട്ടു.",
+    "ko": "",
+    "highlight": "സമർപ്പിക്കപ്പെട്ടു"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ചോറ് എന്നോട് തിന്നപ്പെട്ടു.",
+    "right": "ഞാൻ ചോറു തിന്നു.",
+    "note": "Do not passivize mundane everyday actions with പെടുക; Malayalam prefers active constructions in non-administrative speech."
+   },
+   {
+    "wrong": "അവൻ പോലീസിനെ പിടിക്കപ്പെട്ടു.",
+    "right": "അവൻ പോലീസിനാൽ പിടിക്കപ്പെട്ടു.",
+    "note": "The agent in a formal പെടുക passive takes the instrumental suffix -ആൽ, not the accusative -എ."
+   },
+   {
+    "wrong": "അവൻ ചതിക്കപ്പെട്ടു അവൻ.",
+    "right": "അവൻ ചതിക്കപ്പെട്ടു.",
+    "note": "Do not repeat the subject pronoun at the tail of a passive verb."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How is 'The agreement was signed' best written in official Malayalam?",
+    "options": [
+     "കരാർ ഒപ്പിട്ടുപോയി.",
+     "കരാർ ഒപ്പിടപ്പെട്ടു.",
+     "കരാർ ഒപ്പുവെക്കപ്പെട്ടു.",
+     "കരാർ ഒപ്പുവെക്കുക."
+    ],
+    "answer": 2,
+    "explanation": "ഒപ്പുവെക്കപ്പെട്ടു utilizes infinitive ഒപ്പുവെക്ക + പെട്ടു for a true formal passive predicate."
+   },
+   {
+    "question": "Identify the agentive marker in: 'ഗ്രന്ഥം കവിനാൽ രചിക്കപ്പെട്ടു.'",
+    "options": [
+     "ഗ്രന്ഥം",
+     "-നാൽ",
+     "രചിക്ക",
+     "പെട്ടു"
+    ],
+    "answer": 1,
+    "explanation": "The instrumental postpositional suffix -നാൽ / -ആൽ denotes 'by the poet'."
+   },
+   {
+    "question": "In everyday conversational Malayalam, what is preferred over 'അവൻ കൊല്ലപ്പെട്ടു'?",
+    "options": [
+     "അവനെ കൊന്നു.",
+     "അവൻ കൊന്നു.",
+     "അവൻ കൊല്ലപ്പെടുന്നുണ്ട്.",
+     "അവനാൽ കൊല്ലാൻ."
+    ],
+    "answer": 0,
+    "explanation": "Colloquial Malayalam prefers the impersonal active 'അവനെ കൊന്നു' over the synthetic പെടുക passive."
+   },
+   {
+    "question": "What is the meaning of 'അവൻ കുടുക്കിൽ അകപ്പെട്ടു'?",
+    "options": [
+     "He purposefully entered a room",
+     "He got entangled in a trap involuntarily",
+     "He arrested someone",
+     "He wrote a letter"
+    ],
+    "answer": 1,
+    "explanation": "അകപ്പെടുക expresses unintentional experiential entry into adversity, not synthetic transitive-to-passive."
+   }
+  ],
+  "tip": "Reserve synthetic -പെടുക verbs for written publications, journalism, and academic treatises; spoken Malayalam heavily favors active phrasing."
+ },
+ {
+  "id": "ml-b2-habitual-and-iterative-aspect",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "Habitual & Frequentative Aspect (-ആറുണ്ട്)",
+  "subtitle": "Expressing recurrent routines, customary tendencies, and life practices",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Affix -ആറുണ്ട് to the verb stem to express customary habits or recurring experiences, and negate it with -ആറില്ല.",
+  "structure": {
+   "headers": [
+    "Polarity",
+    "Stem Fusion",
+    "Malayalam Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Affirmative Routine",
+      "Stem + -ആറുണ്ട്",
+      "പോകാറുണ്ട്",
+      "Usually / customarily goes"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negative Routine",
+      "Stem + -ആറില്ല",
+      "പോകാറില്ല",
+      "Does not usually go / Never does"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Habit",
+      "Verb + -ആറുണ്ടായിരുന്നു",
+      "വരാറുണ്ടായിരുന്നു",
+      "Used to come regularly"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Interrogative Habit",
+      "Stem + -ആറുണ്ടോ?",
+      "വായിക്കാറുണ്ടോ?",
+      "Do you usually read?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Regular Daily Habit",
+    "example": "ഞാൻ എന്നും രാവിലെ വ്യായാമം ചെയ്യാറുണ്ട്.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Negative Habitual Tendency",
+    "example": "അവൻ രാത്രി വൈകി ഭക്ഷണം കഴിക്കാറില്ല.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Discontinued Past Practice",
+    "example": "കുട്ടിക്കാലത്ത് ഞങ്ങൾ ഇവിടെ കളിക്കാറുണ്ടായിരുന്നു.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "അച്ഛൻ വൈകുന്നേരങ്ങളിൽ പത്രം വായിക്കാറുണ്ട്.",
+    "ko": "",
+    "highlight": "വായിക്കാറുണ്ട്"
+   },
+   {
+    "en": "ഞങ്ങൾ അവധി ദിവസങ്ങളിൽ സിനിമ കാണാൻ പോകാറുണ്ട്.",
+    "ko": "",
+    "highlight": "പോകാറുണ്ട്"
+   },
+   {
+    "en": "അവൾ സാധാരണയായി മധുരം കഴിക്കാറില്ല.",
+    "ko": "",
+    "highlight": "കഴിക്കാറില്ല"
+   },
+   {
+    "en": "നിങ്ങൾ ഈ വഴി നടക്കാറുണ്ടോ?",
+    "ko": "",
+    "highlight": "നടക്കാറുണ്ടോ"
+   },
+   {
+    "en": "ഞാൻ പണ്ട് തൃശ്ശൂരിൽ താമസിക്കാറുണ്ടായിരുന്നു.",
+    "ko": "",
+    "highlight": "താമസിക്കാറുണ്ടായിരുന്നു"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ഞാൻ എന്നും കാപ്പി കുടിക്കാറുണ്ട് അല്ല.",
+    "right": "ഞാൻ എന്നും കാപ്പി കുടിക്കാറില്ല.",
+    "note": "To negate habitual -ആറുണ്ട്, replace it with -ആറില്ല; never append അല്ല or ഇല്ല externally."
+   },
+   {
+    "wrong": "അവൻ ഇന്നലെ അവിടെ പോകാറുണ്ട്.",
+    "right": "അവൻ ഇന്നലെ അവിടെ പോയി.",
+    "note": "Do not use -ആറുണ്ട് for specific one-off completed past actions; it is strictly iterative/habitual."
+   },
+   {
+    "wrong": "ഞാൻ പോയിട്ടുണ്ട് ഉണ്ട്.",
+    "right": "ഞാൻ പോകാറുണ്ട്.",
+    "note": "Do not confuse the experiential perfect (-ഇട്ടുണ്ട്, 'have done once') with habitual routine (-ആറുണ്ട്, 'customarily do')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you ask someone 'Do you usually drink tea?'",
+    "options": [
+     "നിങ്ങൾ ചായ കുടിച്ചോ?",
+     "നിങ്ങൾ ചായ കുടിക്കുമോ?",
+     "നിങ്ങൾ ചായ കുടിക്കാറുണ്ടോ?",
+     "നിങ്ങൾ ചായ കുടിക്കുകയാണോ?"
+    ],
+    "answer": 2,
+    "explanation": "കുടിക്കാറുണ്ടോ? combines the root with the interrogative habitual suffix -ആറുണ്ടോ."
+   },
+   {
+    "question": "Select the correct negation for 'അവൻ നീന്താറുണ്ട്' (He swims regularly):",
+    "options": [
+     "അവൻ നീന്താറില്ല.",
+     "അവൻ നീന്തുന്നില്ല.",
+     "അവൻ നീന്തിയില്ല.",
+     "അവൻ നീന്തരുത്."
+    ],
+    "answer": 0,
+    "explanation": "The negative counterpart of the habitual suffix -ആറുണ്ട് is -ആറില്ല."
+   },
+   {
+    "question": "Which sentence means 'We used to visit them in the past'?",
+    "options": [
+     "ഞങ്ങൾ അവരെ സന്ദർശിക്കും.",
+     "ഞങ്ങൾ അവരെ സന്ദർശിക്കാറുണ്ടായിരുന്നു.",
+     "ഞങ്ങൾ അവരെ സന്ദർശിച്ചു കഴിഞ്ഞു.",
+     "ഞങ്ങൾ അവരെ സന്ദർശിക്കുന്നു."
+    ],
+    "answer": 1,
+    "explanation": "Past habitual adds the past auxiliary ഉണ്ടായിരുന്നത് yielding സന്ദർശിക്കാറുണ്ടായിരുന്നു."
+   },
+   {
+    "question": "Complete the thought: 'ഞാൻ പുകവലിക്കാ___.' (I do not smoke habit-wise.)",
+    "options": [
+     "-റുണ്ട്",
+     "-റില്ല",
+     "-ന്നു",
+     "-ട്ടെ"
+    ],
+    "answer": 1,
+    "explanation": "പുകവലിക്കാറില്ല correctly expresses non-habitual lifestyle behaviour."
+   }
+  ],
+  "tip": "Differentiate -ഇട്ടുണ്ട് from -ആറുണ്ട്: ഞാൻ പോയിട്ടുണ്ട് means 'I have visited before (experience)', whereas ഞാൻ പോകാറുണ്ട് means 'I routinely go (habit)'."
+ },
+ {
+  "id": "ml-b2-discourse-enclitics",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🎯",
+  "title": "Pragmatic Focus Clitics (-ഉം, -ഏ, -തന്നേ, -മാത്രം)",
+  "subtitle": "Managing inclusivity, exclusivity, precision, and focus",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Discourse enclitics attach seamlessly to words to subtly modulate meaning: -ഉം marks addition ('also/both'), -ഏ marks exclusivity ('only'), -മാത്രം specifies restriction ('merely'), and തന്നെ intensifies identity ('itself/very').",
+  "structure": {
+   "headers": [
+    "Enclitic",
+    "Pragmatic Value",
+    "Malayalam Example",
+    "English Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-ഉം (-um)",
+      "Additive / Inclusive",
+      "അവനും വന്നു",
+      "He too came (inclusive)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ഏ (-ē)",
+      "Exclusive / Strict Focus",
+      "ഇന്നേ വരൂ",
+      "Will come only today (exclusive)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-മാത്രം (-mātram)",
+      "Delimiting / Bare",
+      "ഒരു ഗ്ലാസ്സ് മാത്രം",
+      "Only / merely one glass"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "തന്നെ (tanne)",
+      "Intensifier / Emphatic",
+      "അവൻ തന്നെ ചെയ്തു",
+      "He did it himself (precise agent)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Universal / Additive Scope (-ഉം)",
+    "example": "അച്ഛനും അമ്മയും വിരുന്നിന് എത്തി.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Exclusionary Limit (-ഏ)",
+    "example": "ഞാൻ സത്യമേ പറയൂ.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Identity Emphasis (തന്നെ)",
+    "example": "ഇന്ന് തന്നെ ജോലി തീർക്കണം.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "രാഹുലും രമ്യയും പരീക്ഷ പാസ്സായി.",
+    "ko": "",
+    "highlight": "രാഹുലും രമ്യയും"
+   },
+   {
+    "en": "നിന്നെ മാത്രമേ ഞാൻ വിശ്വസിക്കുന്നുള്ളൂ.",
+    "ko": "",
+    "highlight": "മാത്രമേ"
+   },
+   {
+    "en": "അവൻ സ്വയം തന്നെ തെറ്റ് സമ്മതിച്ചു.",
+    "ko": "",
+    "highlight": "തന്നെ"
+   },
+   {
+    "en": "അവിടെ വെള്ളം മാത്രമേയുള്ളൂ.",
+    "ko": "",
+    "highlight": "മാത്രമേയുള്ളൂ"
+   },
+   {
+    "en": "ഒരിക്കലും അങ്ങനെ സംസാരിക്കരുത്.",
+    "ko": "",
+    "highlight": "ഒരിക്കലും"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ഞാനും അവനും വന്നു ഇല്ല.",
+    "right": "ഞാനും അവനും വന്നില്ല.",
+    "note": "Clitic -ഉം coordinate structures attach directly to the conjoined nouns, while negation belongs strictly on the verb."
+   },
+   {
+    "wrong": "അവൻ മാത്രം വന്നു അവൻ.",
+    "right": "അവൻ മാത്രമേ വന്നുള്ളൂ.",
+    "note": "When combining -മാത്രം with an exclusive verb, it usually triggers the emphatic/focused auxiliary -ഉള്ളൂ (വന്നുള്ളൂ)."
+   },
+   {
+    "wrong": "ഇന്നേ ദിവസം ഞാൻ പോകും.",
+    "right": "ഇന്ന് തന്നെ ഞാൻ പോകും.",
+    "note": "Use emphatic തന്നെ to mean 'this very day'; -ഏ on an isolated noun without a polarized auxiliary sounds incomplete."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which sentence means 'Only Rahul came'?",
+    "options": [
+     "രാഹുലും വന്നു.",
+     "രാഹുൽ മാത്രമേ വന്നുള്ളൂ.",
+     "രാഹുൽ തന്നെ വന്നു.",
+     "രാഹുൽ വരാറുണ്ട്."
+    ],
+    "answer": 1,
+    "explanation": "മാത്രമേ ... ഉള്ളൂ creates the exclusive 'nobody except Rahul' reading."
+   },
+   {
+    "question": "How do you coordinate two subjects ('Both milk and honey')?",
+    "options": [
+     "പാലും തേനും",
+     "പാൽ തേൻ",
+     "പാലേ തേനേ",
+     "പാൽ മാത്രം തേൻ"
+    ],
+    "answer": 0,
+    "explanation": "Paired -ഉം on both nouns (പാലും തേനും) creates the coordinative 'both X and Y' structure."
+   },
+   {
+    "question": "Choose the emphatic form: 'You must do it today itself.'",
+    "options": [
+     "ഇന്ന് ചെയ്താൽ മതി.",
+     "ഇന്നുകൊണ്ട് ചെയ്യണം.",
+     "ഇന്ന് തന്നെ ചെയ്യണം.",
+     "ഇന്ന് ചെയ്തേക്കാം."
+    ],
+    "answer": 2,
+    "explanation": "തന്നെ places emphatic temporal urgency: 'today itself'."
+   },
+   {
+    "question": "What nuance does -ഏ add in: 'ഞാൻ അവനെയേ വിളിച്ചുള്ളൂ'?",
+    "options": [
+     "I also invited him.",
+     "I invited him repeatedly.",
+     "I might invite him.",
+     "I invited nobody other than him."
+    ],
+    "answer": 3,
+    "explanation": "Accusative + ഏ with auxiliary -ഉള്ളൂ restricts the direct object exclusively to him."
+   }
+  ],
+  "tip": "Watch out for polarity: when -ഉം attaches to interrogative words (ആര് 'who', എവിടെ 'where'), it creates universal pronouns: ആരും ('everyone' or with negative 'no one'), എവിടെയും ('everywhere' or 'nowhere')."
+ }
+]

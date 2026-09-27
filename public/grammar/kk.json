@@ -1,0 +1,3331 @@
+[
+ {
+  "id": "kk-a1-vowel-harmony-and-consonant-assimilation",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔤",
+  "title": "Vowel Harmony and Consonant Assimilation",
+  "subtitle": "The foundational sound rules governing all Kazakh suffixes",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Kazakh suffixes must match the stem's front/back vowel quality and adjust their initial consonants based on whether the preceding sound is voiced, unvoiced, or a vowel.",
+  "structure": {
+   "headers": [
+    "Vowel Class",
+    "Vowels",
+    "Plural Suffix Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Hard (Back)",
+      "а, о, ұ, ы",
+      "бала + лар → балалар"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Soft (Front)",
+      "ә, ө, ү, і, е",
+      "үй + лер → үйлер"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "After Voiceless Consonants",
+      "п, ф, к, қ, т, с, ш, щ, х, ц, ч, һ",
+      "кітап + тар → кітаптар"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "After Voiced / Sonorants",
+      "ж, з, м, н, ң, л, р, й, у",
+      "қалам + дар → қаламдар"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Back Vowel Suffixation",
+    "example": "Оқушылар сыныпта отыр.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Front Vowel Suffixation",
+    "example": "Дәптерлер үстелде жатыр.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Consonant Voicing Assimilation",
+    "example": "Мектептер ашық тұр.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Бөлмелер өте кең және жарық.",
+    "ko": "",
+    "highlight": "лер"
+   },
+   {
+    "en": "Қалада жаңа саябақтар бар.",
+    "ko": "",
+    "highlight": "тар"
+   },
+   {
+    "en": "Адамдар көшеде серуендеп жүр.",
+    "ko": "",
+    "highlight": "дар"
+   },
+   {
+    "en": "Бұл гүлдер қызыл түсті.",
+    "ko": "",
+    "highlight": "дер"
+   },
+   {
+    "en": "Достар бірге шай ішеді.",
+    "ko": "",
+    "highlight": "тар"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "балалер",
+    "right": "балалар",
+    "note": "'Бала' contains back vowels (а), so it requires the back vowel variant -лар."
+   },
+   {
+    "wrong": "мектеплер",
+    "right": "мектептер",
+    "note": "After the voiceless consonant 'п', the suffix must begin with the voiceless consonant 'т'."
+   },
+   {
+    "wrong": "көзтар",
+    "right": "көздер",
+    "note": "'Көз' ends in the voiced consonant 'з' and has a front vowel (ө), requiring -дер."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct plural form of 'кітап' (book):",
+    "options": [
+     "кітаптар",
+     "кітаптер",
+     "кітапдар",
+     "кітаплар"
+    ],
+    "answer": 0,
+    "explanation": "'Кітап' ends in voiceless 'п' and has back vowels, requiring -тар."
+   },
+   {
+    "question": "Choose the correct plural form of 'үй' (house):",
+    "options": [
+     "үйтар",
+     "үйлер",
+     "үйдар",
+     "үйлар"
+    ],
+    "answer": 1,
+    "explanation": "'Үй' ends in semivowel 'й' and contains front vowel 'ү', taking -лер."
+   },
+   {
+    "question": "Choose the correct plural form of 'қалам' (pen):",
+    "options": [
+     "қаламтар",
+     "қаламлар",
+     "қаламдар",
+     "қаламдер"
+    ],
+    "answer": 2,
+    "explanation": "'Қалам' ends in sonorant 'м' and has back vowels, taking -дар."
+   },
+   {
+    "question": "Choose the correct plural form of 'сөз' (word):",
+    "options": [
+     "сөзтар",
+     "сөзлер",
+     "сөзлар",
+     "сөздер"
+    ],
+    "answer": 3,
+    "explanation": "'Сөз' contains front vowel 'ө' and voiced 'з', taking -дер."
+   }
+  ],
+  "tip": "Look at the very last vowel of the stem to choose front vs. back, and the very last letter to choose the initial consonant of the suffix."
+ },
+ {
+  "id": "kk-a1-locative-dative-ablative-cases",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "📍",
+  "title": "Spatial Cases: Locative, Dative, and Ablative",
+  "subtitle": "Expressing location (at/in), destination (to), and origin (from)",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use the Locative (-да/-де/-та/-те) for 'at/in', Dative (-ға/-ге/-қа/-ке) for 'to/towards', and Ablative (-дан/-ден/-тан/-тен/-нан/-нен) for 'from'.",
+  "structure": {
+   "headers": [
+    "Case",
+    "Suffixes",
+    "Function",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Locative (Жатыс)",
+      "-да/-де, -та/-те",
+      "Static location ('in', 'at', 'on')",
+      "Алматыда (in Almaty)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Dative (Барыс)",
+      "-ға/-ге, -қа/-ке",
+      "Direction / goal ('to', 'for')",
+      "мектепке (to school)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ablative (Шығыс)",
+      "-дан/-ден, -тан/-тен, -нан/-нен",
+      "Origin / starting point ('from')",
+      "дүкеннен (from the shop)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Static Location (Locative)",
+    "example": "Біз қазір үйде отырмыз.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Directional Movement (Dative)",
+    "example": "Олар ертең қалаға барады.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Origin or Source (Ablative)",
+    "example": "Мен жұмыстан шаршап келдім.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ол қазір университетте оқиды.",
+    "ko": "",
+    "highlight": "те"
+   },
+   {
+    "en": "Сен бүгін театрға барасың ба?",
+    "ko": "",
+    "highlight": "ға"
+   },
+   {
+    "en": "Балалар сабақтан шықты.",
+    "ko": "",
+    "highlight": "тан"
+   },
+   {
+    "en": "Кітаптар сөреде тұр.",
+    "ko": "",
+    "highlight": "де"
+   },
+   {
+    "en": "Анам базардан алма сатып алды.",
+    "ko": "",
+    "highlight": "дан"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Мен Алматыға тұрамын.",
+    "right": "Мен Алматыда тұрамын.",
+    "note": "Use Locative (-да), not Dative (-ға), for static living/residing."
+   },
+   {
+    "wrong": "Ол үйден барады.",
+    "right": "Ол үйге барады.",
+    "note": "Movement towards a destination takes Dative (-ге), not Ablative (-ден)."
+   },
+   {
+    "wrong": "мектепде",
+    "right": "мектепте",
+    "note": "After voiceless 'п', the Locative suffix must be voiceless '-те'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Студент кітапхана___ отыр' (The student is sitting in the library).",
+    "options": [
+     "да",
+     "ға",
+     "дан",
+     "ны"
+    ],
+    "answer": 0,
+    "explanation": "Library takes Locative -да ('in/at the library')."
+   },
+   {
+    "question": "Complete the sentence: 'Біз ертең ауыл___ барамыз' (We are going to the village tomorrow).",
+    "options": [
+     "да",
+     "ға",
+     "нан",
+     "мен"
+    ],
+    "answer": 1,
+    "explanation": "Destination requires Dative -ға ('to the village')."
+   },
+   {
+    "question": "Complete the sentence: 'Ол жұмыс___ келді' (He came from work).",
+    "options": [
+     "қа",
+     "та",
+     "тан",
+     "ты"
+    ],
+    "answer": 2,
+    "explanation": "Origin after voiceless 'с' takes Ablative -тан ('from work')."
+   },
+   {
+    "question": "Complete the sentence: 'Айгүл дүкен___ нан алды' (Aygul bought bread from the shop).",
+    "options": [
+     "де",
+     "ге",
+     "ді",
+     "нен"
+    ],
+    "answer": 3,
+    "explanation": "After nasal 'н' in 'дүкен', Ablative uses -нен ('from the shop')."
+   }
+  ],
+  "tip": "Locative answers 'Қайда?' (Where?), Dative answers 'Қайда?' (Where to?), and Ablative answers 'Қайдан?' (From where?)."
+ },
+ {
+  "id": "kk-a1-possessive-suffixes-and-genitive-case",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "📦",
+  "title": "Possessive Suffixes and the Genitive Case",
+  "subtitle": "Expressing 'my', 'your', and 'X of Y' relations",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Possession requires attaching the Genitive case to the possessor and a matching possessive suffix to the possessed noun.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Genitive Pronoun",
+    "Possessive Suffix (Vowel / Consonant)",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st sg (My)",
+      "менің",
+      "-м / -ым, -ім",
+      "менің үйім (my house)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd informal (Your)",
+      "сенің",
+      "-ң / -ың, -ің",
+      "сенің атың (your name)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd formal (Your)",
+      "сіздің",
+      "-ңыз / -ыңыз, -іңіз",
+      "сіздің кітабыңыз (your book)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd (His/Her/Its)",
+      "оның",
+      "-сы, -сі / -ы, -і",
+      "оның қаламы (his pen)"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "First Person Ownership",
+    "example": "Менің досым Астанада тұрады.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Polite Address",
+    "example": "Сіздің телефоныңыз үстелде жатыр.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Third-Person Nominal Link",
+    "example": "Қаланың көшелері өте әдемі.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Менің анам дәрігер болып жұмыс істейді.",
+    "ko": "",
+    "highlight": "м"
+   },
+   {
+    "en": "Сенің отбасың үлкен бе?",
+    "ko": "",
+    "highlight": "ң"
+   },
+   {
+    "en": "Оның ағасы университетте оқиды.",
+    "ko": "",
+    "highlight": "сы"
+   },
+   {
+    "en": "Біздің мектебіміз жаңа әрі кең.",
+    "ko": "",
+    "highlight": "іміз"
+   },
+   {
+    "en": "Бұл баланың ойыншығы бар.",
+    "ko": "",
+    "highlight": "ның"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "менің кітап",
+    "right": "менің кітабым",
+    "note": "Kazakh requires the possessive suffix on the noun even when the pronoun 'менің' is present."
+   },
+   {
+    "wrong": "оның дос",
+    "right": "оның досы",
+    "note": "Third-person possession always requires -ы/-і/-сы/-сі on the possessed noun."
+   },
+   {
+    "wrong": "сенің қалам",
+    "right": "сенің қаламың",
+    "note": "Second person singular takes -ың/-ің on the possessed item."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Менің қалам___ жоғалды' (My pen was lost).",
+    "options": [
+     "ым",
+     "ың",
+     "ы",
+     "ымыз"
+    ],
+    "answer": 0,
+    "explanation": "'Менің' (my) takes the 1st person suffix -ым on consonant-ending back-vowel stems."
+   },
+   {
+    "question": "Complete the sentence: 'Сенің үй___ қайда?' (Where is your house?).",
+    "options": [
+     "ім",
+     "ің",
+     "і",
+     "іңіз"
+    ],
+    "answer": 1,
+    "explanation": "'Сенің' (your, informal) takes -ің on front-vowel stems ending in consonants."
+   },
+   {
+    "question": "Complete the sentence: 'Оның әке___ мұғалім' (His father is a teacher).",
+    "options": [
+     "м",
+     "ң",
+     "сі",
+     "міз"
+    ],
+    "answer": 2,
+    "explanation": "'Әке' ends in a vowel, so third person takes -сі."
+   },
+   {
+    "question": "Complete the sentence: 'Айдос___ кітабы үстелде жатыр' (Aydos's book is on the table).",
+    "options": [
+     "ты",
+     "тан",
+     "қа",
+     "тың"
+    ],
+    "answer": 3,
+    "explanation": "Aydos is the possessor, so voiceless ending 'с' requires Genitive -тың."
+   }
+  ],
+  "tip": "Even if you omit the pronoun 'менің' or 'сенің', the suffix on the noun alone makes the owner 100% clear."
+ },
+ {
+  "id": "kk-a1-existential-predicates-bar-and-zhoq",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "✅",
+  "title": "Existential Predicates: Бар and Жоқ",
+  "subtitle": "Expressing 'there is', 'there isn't', and 'to have'",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Kazakh expresses 'have/don't have' by attaching a possessive suffix to the noun and adding 'бар' (there is) or 'жоқ' (there is not).",
+  "structure": {
+   "headers": [
+    "Pattern",
+    "Kazakh Structure",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "There is / exists",
+      "Осында дүкен бар.",
+      "There is a shop here."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "There is not / absent",
+      "Сүт жоқ.",
+      "There is no milk."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "I have (Possession)",
+      "Менің көлігім бар.",
+      "I have a car (My car exists)."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "I do not have",
+      "Менің уақытым жоқ.",
+      "I don't have time (My time does not exist)."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Affirmative Possession",
+    "example": "Менің екі балам бар.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Negative Possession",
+    "example": "Бүгін менің бос уақытым жоқ.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Location Existence",
+    "example": "Тоңазытқышта алма бар ма?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Біздің үйде мысық бар.",
+    "ko": "",
+    "highlight": "бар"
+   },
+   {
+    "en": "Кешіріңіз, қазір нан жоқ.",
+    "ko": "",
+    "highlight": "жоқ"
+   },
+   {
+    "en": "Сенің сұрағың бар ма?",
+    "ko": "",
+    "highlight": "бар ма"
+   },
+   {
+    "en": "Оның телефоны жоқ.",
+    "ko": "",
+    "highlight": "жоқ"
+   },
+   {
+    "en": "Мұнда Wi-Fi бар ма?",
+    "ko": "",
+    "highlight": "бар ма"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Менде бар кітап.",
+    "right": "Менің кітабым бар.",
+    "note": "While 'Менде кітап бар' is sometimes heard colloquially, standard Kazakh uses the genitive + possessive: 'Менің кітабым бар'."
+   },
+   {
+    "wrong": "Сүт емес.",
+    "right": "Сүт жоқ.",
+    "note": "'Емес' negates adjectives and noun qualities ('not milk'); existential absence requires 'жоқ' ('no milk exists')."
+   },
+   {
+    "wrong": "Менің уақыт жоқ.",
+    "right": "Менің уақытым жоқ.",
+    "note": "The noun must take the possessive suffix (-ым) before 'жоқ'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you ask 'Do you have a question?' (informal):",
+    "options": [
+     "Сенің сұрағың бар ма?",
+     "Сен сұрақ бар?",
+     "Сенің сұрақ жоқ па?",
+     "Сенде сұрақ па?"
+    ],
+    "answer": 0,
+    "explanation": "Genitive 'Сенің' + possessive 'сұрағың' + 'бар ма?' correctly asks if you have a question."
+   },
+   {
+    "question": "Choose the correct translation: 'I don't have money':",
+    "options": [
+     "Мен ақша жоқ.",
+     "Менің ақшам жоқ.",
+     "Мен ақша емеспін.",
+     "Менің ақша бар."
+    ],
+    "answer": 1,
+    "explanation": "'Менің ақшам жоқ' literally means 'My money does not exist' = 'I have no money'."
+   },
+   {
+    "question": "Complete the sentence: 'Үстелде қалам бар, бірақ дәптер ___' (There is a pen on the table, but no notebook).",
+    "options": [
+     "емес",
+     "бар",
+     "жоқ",
+     "тұр"
+    ],
+    "answer": 2,
+    "explanation": "Existential absence of the notebook requires 'жоқ'."
+   },
+   {
+    "question": "To negate 'Мұнда дәріхана бар' (There is a pharmacy here), you say:",
+    "options": [
+     "Мұнда дәріхана емес.",
+     "Мұнда дәріхана бар емес.",
+     "Мұнда дәріхана жоқ па?",
+     "Мұнда дәріхана жоқ."
+    ],
+    "answer": 3,
+    "explanation": "The negative counterpart of 'бар' is 'жоқ'."
+   }
+  ],
+  "tip": "Never confuse 'емес' (is not) with 'жоқ' (does not exist / don't have). 'Бұл алма емес' (This is not an apple) vs 'Алма жоқ' (There are no apples)."
+ },
+ {
+  "id": "kk-a1-present-actual-tense-auxiliary-verbs",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "⏳",
+  "title": "Present Actual Tense with Postural Auxiliaries",
+  "subtitle": "Expressing actions happening right now via жатыр, отыр, тұр, and жүр",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Continuous present actions right now are built by attaching converb -ып/-іп/-п to the main verb followed by a conjugated posture verb (жатыр, отыр, тұр, or жүр).",
+  "structure": {
+   "headers": [
+    "Posture Verb",
+    "Literal Meaning",
+    "Typical Usage Context",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "жатыр",
+      "lying down",
+      "actions in progress, resting, reading lying",
+      "оқып жатыр (reading)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "отыр",
+      "sitting",
+      "sedentary actions, writing, dining",
+      "жазып отыр (writing)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "тұр",
+      "standing",
+      "standing actions, visible vertical states",
+      "қарап тұр (looking)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "жүр",
+      "walking/moving",
+      "repetitive, roving, continuous habits",
+      "жұмыс істеп жүр (working)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Sedentary Current Action",
+    "example": "Мен қазір хат жазып отырмын.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Neutral Continuous Action",
+    "example": "Айгүл кітап оқып жатыр.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Ongoing State / Standing",
+    "example": "Ол терезеден қарап тұр.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Біз қазір кино көріп отырмыз.",
+    "ko": "",
+    "highlight": "көріп отырмыз"
+   },
+   {
+    "en": "Олар саябақта жүгіріп жүр.",
+    "ko": "",
+    "highlight": "жүгіріп жүр"
+   },
+   {
+    "en": "Сен не істеп жатырсың?",
+    "ko": "",
+    "highlight": "істеп жатырсың"
+   },
+   {
+    "en": "Автобус аялдамада күтіп тұр.",
+    "ko": "",
+    "highlight": "күтіп тұр"
+   },
+   {
+    "en": "Бала төсекте ұйықтап жатыр.",
+    "ko": "",
+    "highlight": "ұйықтап жатыр"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Мен қазір кітап оқимын.",
+    "right": "Мен қазір кітап оқып жатырмын.",
+    "note": "'Оқимын' is simple present/future (I read/will read). Ongoing actions right now require the compound tense with 'жатыр'."
+   },
+   {
+    "wrong": "Ол хат жаз отыр.",
+    "right": "Ол хат жазып отыр.",
+    "note": "The main verb must take the converb suffix (-ып/-іп/-п) before the auxiliary."
+   },
+   {
+    "wrong": "Біз шай ішіп отыр.",
+    "right": "Біз шай ішіп отырмыз.",
+    "note": "Personal agreement suffixes must attach to the auxiliary verb (-мыз for 'біз')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Мен қазір музыка тыңдап ___' (I am listening to music right now, sitting):",
+    "options": [
+     "отырмын",
+     "отырсың",
+     "отыр",
+     "отырмыз"
+    ],
+    "answer": 0,
+    "explanation": "The 1st person singular ('Мен') takes personal suffix -мын on the auxiliary verb: отырмын."
+   },
+   {
+    "question": "How do you say 'What are you doing right now?' (informal):",
+    "options": [
+     "Сен не істейсің?",
+     "Сен не істеп жатырсың?",
+     "Сен не істедің?",
+     "Сен не істегенсің?"
+    ],
+    "answer": 1,
+    "explanation": "'істеп жатырсың' is the present continuous form addressed to 'сен'."
+   },
+   {
+    "question": "Complete the sentence: 'Оқушылар тақтаға қарап ___' (The students are looking at the blackboard, standing):",
+    "options": [
+     "жатырмын",
+     "тұрсың",
+     "тұр",
+     "жүрсіз"
+    ],
+    "answer": 2,
+    "explanation": "3rd person plural / singular takes bare 'тұр' without extra personal suffixes."
+   },
+   {
+    "question": "What suffix connects the lexical verb stem to the postural auxiliary in Present Actual?",
+    "options": [
+     "-ға/-ге",
+     "-ған/-ген",
+     "-са/-се",
+     "-ып/-іп/-п"
+    ],
+    "answer": 3,
+    "explanation": "The converb suffix -ып/-іп/-п connects the main verb to the auxiliary (e.g., жаз + ып + отыр)."
+   }
+  ],
+  "tip": "'Жатыр' is the most neutral auxiliary for ongoing events, while 'отыр', 'тұр', and 'жүр' preserve a subtle nuance of the subject's physical posture or mobility."
+ },
+ {
+  "id": "kk-a1-nominal-predicates-and-personal-endings",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#2563EB",
+  "emoji": "🧑‍🏫",
+  "title": "Nominal Predicates and Personal Clitics",
+  "subtitle": "Forming 'to be' statements without an overt verb",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Kazakh expresses identity and state by attaching personal agreement suffixes directly to nouns and adjectives without using an overt auxiliary verb.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Suffixes",
+    "Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Sing. (Мен)",
+      "-мын / -мін, -бын / -бін, -пын / -пін",
+      "Мен студентпін.",
+      "I am a student."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Sing. Inf. (Сен)",
+      "-сың / -сің",
+      "Сен дәрігерсің.",
+      "You are a doctor."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd Sing. Pol. (Сіз)",
+      "-сыз / -сіз",
+      "Сіз мұғалімсіз.",
+      "You are a teacher."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person (Ол)",
+      "— (zero suffix)",
+      "Ол оқушы.",
+      "He/she is a pupil."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Stating Profession or Role",
+    "example": "Мен инженермін.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Describing Physical or Emotional States",
+    "example": "Біз шаршадық емес, біз бүгін дайынбыз.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Expressing Nationality or Origin",
+    "example": "Сіз қазақсыз ба?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Мен бүгін өте қуаныштымын.",
+    "ko": "",
+    "highlight": "қуаныштымын"
+   },
+   {
+    "en": "Сен жақсы мамансың.",
+    "ko": "",
+    "highlight": "мамансың"
+   },
+   {
+    "en": "Сіз Алматыдансыз ба?",
+    "ko": "",
+    "highlight": "Алматыдансыз"
+   },
+   {
+    "en": "Біз осы университетте студентпіз.",
+    "ko": "",
+    "highlight": "студентпіз"
+   },
+   {
+    "en": "Олар қазір үйде бос.",
+    "ko": "",
+    "highlight": "бос"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Мен студент болады.",
+    "right": "Мен студентпін.",
+    "note": "Do not insert forms of 'болу' (to be/become) for present tense stative sentences; attach personal endings directly to the noun."
+   },
+   {
+    "wrong": "Мен мұғалімпын.",
+    "right": "Мен мұғаліммін.",
+    "note": "Maintain vowel harmony and consonant assimilation: after sonorant consonants like 'м', use '-мін' instead of '-пын'."
+   },
+   {
+    "wrong": "Ол дәрігердір.",
+    "right": "Ол дәрігер.",
+    "note": "Third-person singular takes no personal suffix in standard everyday Kazakh; avoid adding redundant endings."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Мен мұғалім___.' (I am a teacher.)",
+    "options": [
+     "сіз",
+     "мін",
+     "пын",
+     "біз"
+    ],
+    "answer": 1,
+    "explanation": "The first-person singular suffix after the soft sonorant 'м' is '-мін' due to vowel harmony and consonant voicing rules."
+   },
+   {
+    "question": "Choose the correct ending: 'Сен өте мейірімді___.' (You are very kind.)",
+    "options": [
+     "сің",
+     "сың",
+     "сіз",
+     "мін"
+    ],
+    "answer": 0,
+    "explanation": "'Мейірімді' ends with a front vowel, so the informal second-person suffix takes the soft form '-сің'."
+   },
+   {
+    "question": "Select the correct form for 'We are ready': 'Біз дайын___.'",
+    "options": [
+     "пыз",
+     "быз",
+     "піз",
+     "біз"
+    ],
+    "answer": 1,
+    "explanation": "'Дайын' ends with the consonant 'н' and has back vowels, requiring the first-person plural ending '-быз'."
+   },
+   {
+    "question": "Which sentence correctly says 'You (formal) are a doctor'?",
+    "options": [
+     "Сіз дәрігерсіз.",
+     "Сіз дәрігерсің.",
+     "Сіз дәрігермін.",
+     "Сіз дәрігер."
+    ],
+    "answer": 0,
+    "explanation": "The polite second-person singular pronoun 'Сіз' governs the predicate suffix '-сіз' (front vowel)."
+   }
+  ],
+  "tip": "Personal suffixes mirror the possessive and verbal agreement stems: check the final sound of the root to pick between nasal (м/н), voiced (б), or voiceless (п) variants."
+ },
+ {
+  "id": "kk-a2-accusative-case-and-differential-object-marking",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#2563EB",
+  "emoji": "🎯",
+  "title": "Definite Accusative vs. Unmarked Direct Objects",
+  "subtitle": "Distinguishing specific entities from general concepts",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "A direct object takes the accusative suffix (-ны/-ні, -ды/-ді, -ты/-ті, -н) only when it refers to a specific, definite item; generic non-specific objects stay in the bare nominative.",
+  "structure": {
+   "headers": [
+    "Object Type",
+    "Ending Pattern",
+    "Example",
+    "English Sense"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Definite / Specific",
+      "-ны / -ні (after vowels)",
+      "Мен кітапты оқыдым.",
+      "I read the specific book."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Generic / Non-specific",
+      "Ø (no ending)",
+      "Мен кітап оқыдым.",
+      "I read a book / did book-reading."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Proper Names / Pronouns",
+      "-ды / -ді / -ты / -ті / -ны / -ні",
+      "Айгүлді көрдім.",
+      "I saw Aigul (always definite)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Possessed Nouns (3rd)",
+      "-н",
+      "Оның үйін көрдім.",
+      "I saw his/her house."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Specific Known Objects",
+    "example": "Мына алманы жеңіз.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Indefinite Generic Actions",
+    "example": "Ол күнде алма жейді.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Demonstrative Pronoun Targets",
+    "example": "Анау сөмкені маған берші.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Мен мына қызықты кітапты сатып алдым.",
+    "ko": "",
+    "highlight": "кітапты"
+   },
+   {
+    "en": "Балалар далада доп ойнап жүр.",
+    "ko": "",
+    "highlight": "доп"
+   },
+   {
+    "en": "Ол өз көлігін жуды.",
+    "ko": "",
+    "highlight": "көлігін"
+   },
+   {
+    "en": "Сіз бүгін таңертең шай іштіңіз бе?",
+    "ko": "",
+    "highlight": "шай"
+   },
+   {
+    "en": "Дүкеннен сол сүтті алдың ба?",
+    "ko": "",
+    "highlight": "сүтті"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Мен күнде суды ішемін.",
+    "right": "Мен күнде су ішемін.",
+    "note": "Generic consumable nouns without determiners should not take the accusative case."
+   },
+   {
+    "wrong": "Мен Айдос көрдім.",
+    "right": "Мен Айдосты көрдім.",
+    "note": "Proper nouns are inherently definite and must take the accusative suffix when serving as direct objects."
+   },
+   {
+    "wrong": "Оның анасыны танимын.",
+    "right": "Оның анасын танимын.",
+    "note": "Nouns with the third-person possessive suffix (-ы/-і/-сы/-сі) take the accusative marker '-н', not '-ны/-ні'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct sentence for 'I drink water every day' (generic):",
+    "options": [
+     "Мен күнде су ішемін.",
+     "Мен күнде суды ішемін.",
+     "Мен күнде суты ішемін.",
+     "Мен күнде судың ішемін."
+    ],
+    "answer": 0,
+    "explanation": "Generic direct objects in habitual actions remain in the bare nominative form without case markers."
+   },
+   {
+    "question": "Select the correct form: 'Give me that pen' -> 'Маған мына қалам___ берші.'",
+    "options": [
+     "ге",
+     "мен",
+     "нан",
+     "ды"
+    ],
+    "answer": 3,
+    "explanation": "The demonstrative 'мына' makes the pen definite; 'қалам' ends in a voiced consonant 'м', requiring the accusative suffix '-ды'."
+   },
+   {
+    "question": "How do you correctly say 'Did you see his phone?' -> 'Сен оның телефонын___ көрдің бе?'",
+    "options": [
+     "ды",
+     "ны",
+     "— (bare)",
+     "ді"
+    ],
+    "answer": 2,
+    "explanation": "The third-person possessive form 'телефоны' already receives '-н' for the accusative ('телефонын'), so no further ending is added."
+   },
+   {
+    "question": "Fill in the blank: 'Мен сен___ жақсы түсінемін.' (I understand you well.)",
+    "options": [
+     "де",
+     "і",
+     "ні",
+     "ге"
+    ],
+    "answer": 2,
+    "explanation": "Pronouns are definite; the accusative form of 'сен' is 'сені'."
+   }
+  ],
+  "tip": "If you can place 'the' in front of the English noun, or if it is preceded by 'мына/анау' (this/that), you almost certainly need the accusative case."
+ },
+ {
+  "id": "kk-a2-instrumental-case-and-postpositions",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#2563EB",
+  "emoji": "🧩",
+  "title": "Instrumental Case and Governed Postpositions",
+  "subtitle": "Expressing accompaniment, instruments, and spatial relations",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "The instrumental suffix (-мен/-бен/-пен) marks tools and accompaniment, while postpositions dictate whether preceding nouns must take nominative, dative, or ablative cases.",
+  "structure": {
+   "headers": [
+    "Case Required",
+    "Postposition / Suffix",
+    "Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Instrumental Suffix",
+      "-мен / -бен / -пен",
+      "Қаламмен жаздым.",
+      "I wrote with a pen."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Nominative + Postpos.",
+      "үшін / туралы / арқылы",
+      "Сен үшін келдім.",
+      "I came for you."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Dative + Postpos.",
+      "дейін / қарсы / қарай",
+      "Сағат беске дейін күт.",
+      "Wait until five o'clock."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ablative + Postpos.",
+      "кейін / соң / басқа",
+      "Сабақтан кейін кездесейік.",
+      "Let's meet after class."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Accompaniment & Transportation",
+    "example": "Мен досыммен автобуспен келдім.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Purpose and Reference",
+    "example": "Біз болашақ туралы сөйлестік.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Temporal Boundaries",
+    "example": "Жұмыстан кейін дүкенге бардым.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ол қалаға пойызбен барды.",
+    "ko": "",
+    "highlight": "пойызбен"
+   },
+   {
+    "en": "Анама арнап гүлдер сатып алдым.",
+    "ko": "",
+    "highlight": "Анама"
+   },
+   {
+    "en": "Осы тақырып туралы не ойлайсыз?",
+    "ko": "",
+    "highlight": "туралы"
+   },
+   {
+    "en": "Кешкі астан соң серуендедік.",
+    "ko": "",
+    "highlight": "астан соң"
+   },
+   {
+    "en": "Үйге қарай ақырын жүрдік.",
+    "ko": "",
+    "highlight": "Үйге қарай"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Сабақ кейін кездесеміз.",
+    "right": "Сабақтан кейін кездесеміз.",
+    "note": "The postposition 'кейін' (after) strictly requires the preceding noun to take the ablative case (-дан/-ден/-тан/-тен)."
+   },
+   {
+    "wrong": "Қарындашпенен жаз.",
+    "right": "Қарындашпен жаз.",
+    "note": "The instrumental suffix is '-мен/-бен/-пен'; avoid duplicating syllables."
+   },
+   {
+    "wrong": "Сағат алтыға шейін.",
+    "right": "Сағат алтыға дейін.",
+    "note": "Use 'дейін' (or dialectal variants correctly harmonized): after a vowel or voiced consonant, 'дейін' is standard."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which case does the postposition 'кейін' (after) govern?",
+    "options": [
+     "Genitive",
+     "Ablative (-нан/-дан/-тан)",
+     "Dative (-ға/-ге)",
+     "Accusative (-ны/-ні)"
+    ],
+    "answer": 1,
+    "explanation": "'Кейін' requires its argument to appear in the ablative case, as in 'шайдан кейін' (after tea)."
+   },
+   {
+    "question": "Complete the phrase: 'Дос___ бірге киноға бардым.' (I went to the movies together with a friend.)",
+    "options": [
+     "ыма",
+     "тан",
+     "ыммен",
+     "ында"
+    ],
+    "answer": 2,
+    "explanation": "'With my friend' combines possessive '-ым' and instrumental '-мен' -> 'досыммен'."
+   },
+   {
+    "question": "Choose the correct postposition: 'Үйге ___ жүгірдік.' (We ran towards the house.)",
+    "options": [
+     "туралы",
+     "арқылы",
+     "соң",
+     "қарай"
+    ],
+    "answer": 3,
+    "explanation": "'Қарай' (towards) governs the dative case ('үйге')."
+   },
+   {
+    "question": "What is the proper instrumental ending for 'пышақ' (knife): 'Пышақ___ нанды кесті'?",
+    "options": [
+     "пен",
+     "бен",
+     "мен",
+     "тен"
+    ],
+    "answer": 0,
+    "explanation": "Roots ending in voiceless consonants like 'қ' take the voiceless variant '-пен'."
+   }
+  ],
+  "tip": "Remember: Kazakh has no prepositions. Suffixes attach directly to words, and standalone postposition words always follow the noun they govern."
+ },
+ {
+  "id": "kk-a2-past-definite-tense-with-di",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "🕰️",
+  "title": "Definite Witnessed Past Tense (-ды/-ді)",
+  "subtitle": "Describing actions personally seen, verified, or definitively finished",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "The definite past tense suffix (-ды/-ді, -ты/-ті) attaches to verb stems and uses short personal endings (-м, -ң, -ңыз, -к) to indicate observed or certain past events.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Stem + Tense",
+    "Personal Ending",
+    "Full Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Мен (I)",
+      "кел- + -ді",
+      "-м",
+      "Мен келдім (I came)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Сен (You inf.)",
+      "оқы- + -ды",
+      "-ң",
+      "Сен оқыдың (You read)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Біз (We)",
+      "бар- + -ды",
+      "-қ",
+      "Біз бардық (We went)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Ол (He/She)",
+      "көр- + -ді",
+      "—",
+      "Ол көрді (He/She saw)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Eye-witnessed Events",
+    "example": "Кеше қар жауды.",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Completed Specific Actions",
+    "example": "Мен тапсырманы түгел аяқтадым.",
+    "translation": ""
+   },
+   {
+    "color": "#4F46E5",
+    "label": "Immediate Reactions",
+    "example": "Мен сөзіңді бірден түсіндім.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Кеше достарыммен қызықты фильм көрдім.",
+    "ko": "",
+    "highlight": "көрдім"
+   },
+   {
+    "en": "Сен бүгін таңғы асты іштің бе?",
+    "ko": "",
+    "highlight": "іштің бе"
+   },
+   {
+    "en": "Ол емтиханнан жоғары балл алды.",
+    "ko": "",
+    "highlight": "алды"
+   },
+   {
+    "en": "Біз демалыста тауға бардық.",
+    "ko": "",
+    "highlight": "бардық"
+   },
+   {
+    "en": "Сіздер жаңа ережені естідіңіздер ме?",
+    "ko": "",
+    "highlight": "естідіңіздер ме"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Біз өткен аптада келдібіз.",
+    "right": "Біз өткен аптада келдік.",
+    "note": "The definite past uses Category-1 endings: the 1st person plural is '-қ/-к', not the present nominal ending '-быз/-біз'."
+   },
+   {
+    "wrong": "Мен кітап оқыты.",
+    "right": "Мен кітап оқыдым.",
+    "note": "After a vowel stem ('оқы-'), the voiced affix '-ды' must be used, followed by the personal suffix '-м'."
+   },
+   {
+    "wrong": "Ол кеше келгенді.",
+    "right": "Ол кеше келді.",
+    "note": "Do not mix the participial past '-ған/-ген' with the definite past suffix '-ді'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which form means 'We wrote'?",
+    "options": [
+     "Жаздық",
+     "Жаздыбыз",
+     "Жазғанбыз",
+     "Жазамыз"
+    ],
+    "answer": 0,
+    "explanation": "The past definite tense for 'біз' takes the tense suffix '-ды' plus the Category-1 plural ending '-қ', yielding 'жаздық'."
+   },
+   {
+    "question": "Fill in the blank: 'Сен кеше кімді көр___?' (Whom did you see yesterday?)",
+    "options": [
+     "діңіз",
+     "дің",
+     "дім",
+     "ді"
+    ],
+    "answer": 1,
+    "explanation": "'Сен' (informal 2nd person singular) requires the ending '-ң', hence 'көрдің'."
+   },
+   {
+    "question": "How do you conjugate 'кет-' (to leave) for 'Мен' in definite past?",
+    "options": [
+     "кетдім",
+     "кеттім",
+     "кеткенмін",
+     "кеттің"
+    ],
+    "answer": 1,
+    "explanation": "Because 'кет-' ends in voiceless 'т', the suffix assimilates to voiceless '-ті-', followed by '-м': 'кеттім'."
+   },
+   {
+    "question": "What is the third-person singular form of 'айту' (to say) in definite past?",
+    "options": [
+     "айттым",
+     "айттың",
+     "айтты",
+     "айттық"
+    ],
+    "answer": 2,
+    "explanation": "Third-person singular takes no personal suffix after the tense marker: 'айт-' + '-ты' = 'айтты'."
+   }
+  ],
+  "tip": "Category-1 personal endings used here are identical to the possessive endings on nouns: -м (my/I), -ң (your/you), -қ/-к (our/we)."
+ },
+ {
+  "id": "kk-a2-habitual-and-future-tense-with-ady",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "🔄",
+  "title": "Habitual Present and Probable Future (-а/-е/-й)",
+  "subtitle": "Expressing routines, general truths, and future intentions",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "Attach -а / -е after consonant stems and -й after vowel stems, followed by Category-2 personal endings (-мын, -сың, -ды) to express habits or planned futures.",
+  "structure": {
+   "headers": [
+    "Stem Ending",
+    "Tense Suffix",
+    "Full Conjugation (3rd Person)",
+    "Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Hard Consonant",
+      "-а",
+      "Ол күнде сабақ оқиды / барады.",
+      "He/she goes every day."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Soft Consonant",
+      "-е",
+      "Ол ертең келеді.",
+      "He/she will come tomorrow."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Vowel Stem",
+      "-й",
+      "Ол жиі сөйлейді.",
+      "He/she speaks often."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Stem (-па/-пе)",
+      "-й",
+      "Мен ертең бармаймын.",
+      "I will not go tomorrow."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Daily Routines",
+    "example": "Мен сағат жетіде оянамын.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Universal Facts",
+    "example": "Күн шығыстан шығады.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Future Commitments",
+    "example": "Біз келесі аптада кездесеміз.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Мен күн сайын таңертең жүгіремін.",
+    "ko": "",
+    "highlight": "жүгіремін"
+   },
+   {
+    "en": "Ол қазақ тілінде таза сөйлейді.",
+    "ko": "",
+    "highlight": "сөйлейді"
+   },
+   {
+    "en": "Біз жазда ауылға барамыз.",
+    "ko": "",
+    "highlight": "барамыз"
+   },
+   {
+    "en": "Сен де бізбен бірге шай ішесің бе?",
+    "ko": "",
+    "highlight": "ішесің бе"
+   },
+   {
+    "en": "Олар бүгін келмейді, өйткені бос емес.",
+    "ko": "",
+    "highlight": "келмейді"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Мен ертең баратырмын.",
+    "right": "Мен ертең барамын.",
+    "note": "Use the -а/-е/-й tense for future intentions; auxiliary verbs like 'жатыр' indicate continuous actions happening right now."
+   },
+   {
+    "wrong": "Ол жақсы оқиады.",
+    "right": "Ол жақсы оқиды.",
+    "note": "When the stem already ends in 'и' or a vowel, the suffix merges into '-й' (or contracts to '-иды'), avoid '-иады'."
+   },
+   {
+    "wrong": "Біз театрға барамбыз.",
+    "right": "Біз театрға барамыз.",
+    "note": "The first-person plural Category-2 suffix is '-мыз/-міз' directly attached to the tense suffix, yielding 'барамыз'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I go to work every day'?",
+    "options": [
+     "Мен күнде жұмысқа бардым.",
+     "Мен күнде жұмысқа барамын.",
+     "Мен күнде жұмысқа бара жатырмын.",
+     "Мен күнде жұмысқа бармақпын."
+    ],
+    "answer": 1,
+    "explanation": "Habitual daily action takes the -а/-е/-й suffix with the 1st person ending: 'барамын'."
+   },
+   {
+    "question": "Fill in the blank: 'Ол ертең саған телефон соғ___.' (He will call you tomorrow.)",
+    "options": [
+     "ады",
+     "амын",
+     "асың",
+     "асыз"
+    ],
+    "answer": 0,
+    "explanation": "The third-person ending for consonant-final stems in this tense is '-ады / -еді'."
+   },
+   {
+    "question": "Choose the correct negative form: 'I will not come tomorrow.'",
+    "options": [
+     "Мен ертең келмедім.",
+     "Мен ертең келмейді.",
+     "Мен ертең келмеймін.",
+     "Мен ертең келемін."
+    ],
+    "answer": 2,
+    "explanation": "The negative marker '-ме-' ends in a vowel, taking '-й' + 1st person ending '-мін' -> 'келмеймін'."
+   },
+   {
+    "question": "What is the correct 1st person plural form: 'Біз ертең емтихан тапсыр___'?",
+    "options": [
+     "амыз",
+     "амын",
+     "асыздар",
+     "ады"
+    ],
+    "answer": 0,
+    "explanation": "The 1st-person plural ending is '-мыз/-міз'; after hard stem 'тапсыр-' + '-а', it produces 'тапсырамыз'."
+   }
+  ],
+  "tip": "Context resolves ambiguity: with time words like 'күнде' (daily) this tense is habitual present; with 'ертең' (tomorrow) it operates as the future tense."
+ },
+ {
+  "id": "kk-a2-converbs-in-a-e-y-and-p-for-verb-chaining",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔗",
+  "title": "Coordinating and Linking Converbs (-p and -a/-e/-y)",
+  "subtitle": "Chain consecutive or simultaneous actions smoothly into one sentence",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use the suffix -(ы)п/-(і)п to link actions happening in sequence, and -а/-е/-й to express simultaneous or continuous background actions.",
+  "structure": {
+   "headers": [
+    "Converb Type",
+    "Suffix Form",
+    "Kazakh Example",
+    "English Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Sequential (-p)",
+      "Consonant + ып/іп, Vowel + п",
+      "оқып келді",
+      "Read and then came"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Simultaneous (-a/-e)",
+      "Hard stem + а, Soft stem + е",
+      "күле сөйледі",
+      "Spoke smilingly"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Simultaneous (-y)",
+      "Vowel stem + й",
+      "сұрай берді",
+      "Kept on asking"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Sequential Actions",
+    "example": "Дүкенге барып, нан сатып алдым.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Simultaneous Motion",
+    "example": "Ол ән айта отырды.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Manner of Action",
+    "example": "Бала жүгіре кірді.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ол таңғы ас ішіп, жұмысқа кетті.",
+    "ko": "",
+    "highlight": "ішіп"
+   },
+   {
+    "en": "Біз кітапханаға барып, көп кітап алдық.",
+    "ko": "",
+    "highlight": "барып"
+   },
+   {
+    "en": "Асан күле қарап, қолын бұлғады.",
+    "ko": "",
+    "highlight": "күле"
+   },
+   {
+    "en": "Олар сөйлесейік деп шай іше отырды.",
+    "ko": "",
+    "highlight": "іше"
+   },
+   {
+    "en": "Қонақтар жылы қоштасып үйлеріне қайтты.",
+    "ko": "",
+    "highlight": "қоштасып"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Мен шай іштім және жұмыс істедім.",
+    "right": "Мен шай ішіп, жұмыс істедім.",
+    "note": "Kazakh naturally prefers converbs like -(ы)п over repeating finite verbs with 'және' (and)."
+   },
+   {
+    "wrong": "Ол сөйлеп отыр.",
+    "right": "Ол сөйлей береді.",
+    "note": "To show repeated simultaneous continuous action with consonant/vowel harmony, use -а/-е/-й rather than mixing standard past chains."
+   },
+   {
+    "wrong": "Оқуп шықты.",
+    "right": "Оқып шықты.",
+    "note": "The suffix -(ы)п follows standard fourfold vowel harmony; 'оқы-' takes '-п' directly after a vowel stem."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sequence: 'Үйге ___ тамақ пісірдім.' (I came home and cooked)",
+    "options": [
+     "келіп",
+     "келе",
+     "келген",
+     "келсе"
+    ],
+    "answer": 0,
+    "explanation": "The converb -іп shows the completed first action in a sequential chain."
+   },
+   {
+    "question": "Choose the simultaneous action: 'Ол күлімдей ___ жауап берді.' (She answered smiling)",
+    "options": [
+     "отырып",
+     "тұра",
+     "қарап",
+     "келіп"
+    ],
+    "answer": 1,
+    "explanation": "The converb in -а/-е expresses the ongoing manner or simultaneous state during the main action."
+   },
+   {
+    "question": "Connect 'жазу' (to write) to express 'Wrote and sent': 'Хат ___ жіберді.'",
+    "options": [
+     "жаза",
+     "жазса",
+     "жазып",
+     "жазған"
+    ],
+    "answer": 2,
+    "explanation": "A consonant-ending stem takes -ып/-іп (жаз- + -ып = жазып)."
+   },
+   {
+    "question": "Which sentence correctly chains multiple actions?",
+    "options": [
+     "Ол келді және көрді.",
+     "Ол келіп, бәрін көрді.",
+     "Ол келгенде көрді келіп.",
+     "Ол келе бәрін көрді келіп."
+    ],
+    "answer": 1,
+    "explanation": "'Келіп, бәрін көрді' is natural Kazakh syntax using the sequential converb."
+   }
+  ],
+  "tip": "Only the final verb in a converb chain receives tense and personal agreement endings; all preceding chained verbs take -п or -а/-е/-й."
+ },
+ {
+  "id": "kk-a2-imperative-and-optative-moods",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🗣️",
+  "title": "Imperative and Optative Moods Across Formality Registers",
+  "subtitle": "Command, request, and propose actions across informal, polite, and formal registers",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use bare stems for informal commands (сен), add -(ы)ңыз/-(і)ңіз for polite singular (сіз), and use -(а/е)йық for first-person cohortative proposals ('let's').",
+  "structure": {
+   "headers": [
+    "Register",
+    "Subject",
+    "Suffix",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Informal (2nd)",
+      "Сен",
+      "Bare stem",
+      "Жаз! (Write!)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Polite (2nd)",
+      "Сіз",
+      "-(ы)ңыз / -(і)ңіз",
+      "Жазыңыз! (Please write!)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Formal Plural (2nd)",
+      "Сіздер",
+      "-(ы)ңыздар / -(і)ңіздер",
+      "Жазыңыздар! (Please all write!)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Cohortative (1st pl)",
+      "Біз",
+      "-(а/е)йық / -(а/е)йік",
+      "Жазайық! (Let's write!)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Polite Instruction",
+    "example": "Мұнда отырыңыз.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Group Proposal",
+    "example": "Бірге шай ішейік!",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Direct Command",
+    "example": "Тез кел!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Мына мәтінді мұқият оқыңыз.",
+    "ko": "",
+    "highlight": "оқыңыз"
+   },
+   {
+    "en": "Бүгін кешке киноға барайық.",
+    "ko": "",
+    "highlight": "барайық"
+   },
+   {
+    "en": "Есікті жапшы, өтінемін.",
+    "ko": "",
+    "highlight": "жапшы"
+   },
+   {
+    "en": "Құрметті қонақтар, төрге шығыңыздар!",
+    "ko": "",
+    "highlight": "шығыңыздар"
+   },
+   {
+    "en": "Сен маған ертең хабарлас.",
+    "ko": "",
+    "highlight": "хабарлас"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Сіз маған көмектес!",
+    "right": "Сіз маған көмектесіңіз!",
+    "note": "Addressing 'Сіз' with an informal bare stem is considered rude; always append -(ы)ңыз/-(і)ңіз."
+   },
+   {
+    "wrong": "Біз бірге барамыз!",
+    "right": "Бірге барайық!",
+    "note": "To propose 'Let us go together', use the optative/cohortative -айық/-ейік, not the plain indicative future."
+   },
+   {
+    "wrong": "Оқыңыздаршы сен!",
+    "right": "Оқышы!",
+    "note": "Do not mix plural formal endings with the singular informal pronoun 'сен'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Politely ask your teacher to enter: 'Төрге ___.'",
+    "options": [
+     "кір",
+     "кіріңіз",
+     "кірейік",
+     "кірсін"
+    ],
+    "answer": 1,
+    "explanation": "The suffix -(і)ңіз creates the polite 2nd person (Сіз) imperative."
+   },
+   {
+    "question": "Invite a friend to eat lunch together: 'Түскі ас ___.'",
+    "options": [
+     "ішіңіз",
+     "ішсін",
+     "ішейік",
+     "іш"
+    ],
+    "answer": 2,
+    "explanation": "The optative suffix -ейік conveys 'let us do' for the 1st person plural."
+   },
+   {
+    "question": "Give an informal command to a child: 'Тісіңді ___!'",
+    "options": [
+     "жу",
+     "жуыңыз",
+     "жуайық",
+     "жуыңыздар"
+    ],
+    "answer": 0,
+    "explanation": "The 2nd person singular informal (сен) takes the uninflected bare verb stem."
+   },
+   {
+    "question": "Formally address an audience: 'Сұрақтарыңызды ___.'",
+    "options": [
+     "қой",
+     "қойыңыз",
+     "қойыңыздар",
+     "қояйық"
+    ],
+    "answer": 2,
+    "explanation": "'Сіздер' (formal plural) takes -(ы)ңыздар / -(і)ңіздер."
+   }
+  ],
+  "tip": "Attach -шы/-ші to any imperative stem (e.g., келші, келіңізші) to soften commands into warm, polite requests."
+ },
+ {
+  "id": "kk-b1-compound-verbs-aspectual-auxiliaries",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🧩",
+  "title": "Aspectual Compound Verbs (Qal-, Ket-, Bast-, Ber-)",
+  "subtitle": "Alter nuance, suddenness, and duration by chaining lexical roots with auxiliary verbs",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Attach -(ы)п to the primary lexical verb and inflect auxiliary verbs like қалу (sudden state), кету (completion/departure), or беру (continuity) to modify aspect.",
+  "structure": {
+   "headers": [
+    "Auxiliary",
+    "Nuance",
+    "Kazakh Structure",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "қалу",
+      "Sudden or involuntary state",
+      "ұйықтап қалды",
+      "Accidentally fell asleep"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "кету",
+      "Sudden departure or total completion",
+      "жанып кетті",
+      "Burnt up completely"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "бастау",
+      "Inception / beginning of action",
+      "жаза бастады",
+      "Started writing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "беру",
+      "Uninterrupted continuation",
+      "айта берді",
+      "Kept on speaking"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Sudden Involuntary Event",
+    "example": "Мен шаршап, ұйықтап қалдым.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Completed Departure",
+    "example": "Пойыз жүріп кетті.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Inceptive Action",
+    "example": "Жаңбыр жауа бастады.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ол сабақта кенеттен ұйықтап қалды.",
+    "ko": "",
+    "highlight": "ұйықтап қалды"
+   },
+   {
+    "en": "Автобус тез жүріп кетті.",
+    "ko": "",
+    "highlight": "жүріп кетті"
+   },
+   {
+    "en": "Балалар далада ойнай бастады.",
+    "ko": "",
+    "highlight": "ойнай бастады"
+   },
+   {
+    "en": "Сен өз жұмысыңды істей бер.",
+    "ko": "",
+    "highlight": "істей бер"
+   },
+   {
+    "en": "Кенеттен шай төгіліп қалды.",
+    "ko": "",
+    "highlight": "төгіліп қалды"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ол ұйықтады қалды.",
+    "right": "Ол ұйықтап қалды.",
+    "note": "The primary verb must take the converb form -(ы)п/-(і)п, never a finite past tense ending."
+   },
+   {
+    "wrong": "Ол сөйлеп бастады.",
+    "right": "Ол сөйлей бастады.",
+    "note": "The inchoative auxiliary 'бастау' pairs with the -а/-е/-й converb, not -(ы)п."
+   },
+   {
+    "wrong": "Мен бәрін бітіріп бердім қалдым.",
+    "right": "Мен бәрін бітіріп тастадым.",
+    "note": "Stacking incompatible aspectual auxiliaries distorts meaning; use specific auxiliaries like 'тастау' for decisive completion."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Express that someone fell asleep accidentally: 'Ол шаршап, диванда ___.'",
+    "options": [
+     "ұйықтап кетті",
+     "ұйықтай бастады",
+     "ұйықтап қалды",
+     "ұйықтай берді"
+    ],
+    "answer": 2,
+    "explanation": "The auxiliary 'қалу' after -(ы)п conveys unexpected or unplanned states."
+   },
+   {
+    "question": "Indicate that a train suddenly departed: 'Пойыз станциядан ___.'",
+    "options": [
+     "жүріп кетті",
+     "жүре қалды",
+     "жүріп бастады",
+     "жүре бермейді"
+    ],
+    "answer": 0,
+    "explanation": "'Жүріп кету' marks rapid or decisive departure."
+   },
+   {
+    "question": "Express the start of an event: 'Қар ___.' (It started snowing)",
+    "options": [
+     "жауып қалды",
+     "жауа бастады",
+     "жауып кетті",
+     "жауа берді"
+    ],
+    "answer": 1,
+    "explanation": "'Бастау' selects the -а/-е converb to express the beginning of an event."
+   },
+   {
+    "question": "Tell someone to continue speaking without hesitation: 'Сөзіңді тоқтатпай, ___.'",
+    "options": [
+     "айтып қал",
+     "айта баста",
+     "айтып кет",
+     "айта бер"
+    ],
+    "answer": 3,
+    "explanation": "Converb -а/-е + 'беру' indicates continuing the action freely without pause."
+   }
+  ],
+  "tip": "Pay attention to the linking converb: 'бастау' and 'беру' take -а/-е/-й, while 'қалу', 'кету', and 'тастау' take -(ы)п/-(і)п."
+ },
+ {
+  "id": "kk-b1-past-unwitnessed-and-evidential-tenses",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#F59E0B",
+  "emoji": "🕵️",
+  "title": "Evidential and Resultative Past Tenses (-qan/-gen and -(y)pty)",
+  "subtitle": "Distinguish between direct witness, inferential conclusions, and heard reports",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Use -ды/-ді for personally witnessed facts, -(ы)пты/-(і)пті for unwitnessed surprise/hearsay, and -ған/-ген for established resultative past states.",
+  "structure": {
+   "headers": [
+    "Tense Marker",
+    "Evidential Value",
+    "Kazakh Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-ды / -ді",
+      "Direct witnessed fact",
+      "келді",
+      "Came (I saw it)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-(ы)пты / -(і)пті",
+      "Hearsay or sudden realization",
+      "келіпті",
+      "Apparently came / Turns out he came"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ған / -ген",
+      "Resultative or experienced past",
+      "келген",
+      "Has come / Came in the past"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Sudden Realization",
+    "example": "Далада жаңбыр жауыпты!",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Reported Hearsay",
+    "example": "Айнұр жаңа жұмысқа тұрыпты.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Established Prior Experience",
+    "example": "Мен оны бұрын көргенмін.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Қарасам, қар жауыпты.",
+    "ko": "",
+    "highlight": "жауыпты"
+   },
+   {
+    "en": "Ол өткен жылы Алматыға көшіпті.",
+    "ko": "",
+    "highlight": "көшіпті"
+   },
+   {
+    "en": "Сен бұл кітапты оқығансың ба?",
+    "ko": "",
+    "highlight": "оқығансың"
+   },
+   {
+    "en": "Олар ауылдан кеше келіпті.",
+    "ko": "",
+    "highlight": "келіпті"
+   },
+   {
+    "en": "Мен бұл мұражайға бұрын барғанмын.",
+    "ko": "",
+    "highlight": "барғанмын"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Мен кеше оны көрдім, ол келіпті.",
+    "right": "Мен кеше оны көрдім, ол келді.",
+    "note": "If you witnessed the event directly with your own eyes, use the witnessed past -ды/-ді."
+   },
+   {
+    "wrong": "Ол мектепке барғанды.",
+    "right": "Ол мектепке барған.",
+    "note": "Do not merge the participial past -ған with the indicative witnessed past -ды on the same stem."
+   },
+   {
+    "wrong": "Ол ұйықтағанты.",
+    "right": "Ол ұйықтапты.",
+    "note": "The hearsay/realization suffix on consonant stems is -ыпты/-іпті, directly attached to the stem."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "You look outside and notice puddles: 'Түнде жаңбыр ___.' (Apparently it rained)",
+    "options": [
+     "жауды",
+     "жауыпты",
+     "жауғанды",
+     "жауады"
+    ],
+    "answer": 1,
+    "explanation": "-(ы)пты expresses an inference or realization based on observable aftermath."
+   },
+   {
+    "question": "Confirming your own direct lifelong experience: 'Мен Түркияда ___.' (I have been to Turkey)",
+    "options": [
+     "болғанмын",
+     "болыппын",
+     "болдыңыз",
+     "болатынмын"
+    ],
+    "answer": 0,
+    "explanation": "The resultative past -ған/-ген combined with personal endings marks past experience."
+   },
+   {
+    "question": "Reporting gossip you heard second-hand: 'Ербол үйлен___.' (They say Yerbol got married)",
+    "options": [
+     "ді",
+     "ген",
+     "іпті",
+     "ер"
+    ],
+    "answer": 2,
+    "explanation": "-(і)пті denotes hearsay or second-hand information without direct observation."
+   },
+   {
+    "question": "Which verb explicitly states direct personal eyewitness?",
+    "options": [
+     "Көргенмін",
+     "Көріппін",
+     "Көрдім",
+     "Көрген екем"
+    ],
+    "answer": 2,
+    "explanation": "-ды/-ді specifically denotes events directly witnessed by the speaker."
+   }
+  ],
+  "tip": "Think of -(ы)пты as 'Aha! Apparently...' or 'I hear that...'; it signals that you did not see the action occur firsthand."
+ },
+ {
+  "id": "kk-b1-verbal-nouns-u-and-participial-relativization",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#06B6D4",
+  "emoji": "📑",
+  "title": "Verbal Nouns (-u) and Relative Participles (-qan, -atyn)",
+  "subtitle": "Nominalize verbal actions and build relative clauses modifying head nouns",
+  "color": "#0891B2",
+  "bg": "#ECFEFF",
+  "keyPoint": "Use -у to turn verbs into nouns that decline with case endings, and place participles (-ған past, -атын habitual) directly before nouns to create relative clauses.",
+  "structure": {
+   "headers": [
+    "Form",
+    "Function",
+    "Kazakh Structure",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-у",
+      "Verbal Noun (nominalization)",
+      "оқуды бастау",
+      "Starting the reading"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ған / -ген",
+      "Past / Perfect Participle",
+      "келген қонақ",
+      "The guest who came"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-атын / -етін",
+      "Habitual / Relative Participle",
+      "жазатын адам",
+      "The person who writes"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#06B6D4",
+    "label": "Nominalized Object",
+    "example": "Қазақ тілін үйрену өте қызық.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Past Relative Clause",
+    "example": "Кеше келген кісі қайда?",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Habitual Relative Clause",
+    "example": "Мұнда тұратын адамдар мейірімді.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Спортпен шұғылдану денсаулыққа пайдалы.",
+    "ko": "",
+    "highlight": "шұғылдану"
+   },
+   {
+    "en": "Біз жазған хат оларға жетті.",
+    "ko": "",
+    "highlight": "жазған"
+   },
+   {
+    "en": "Күнде келетін автобус кешікті.",
+    "ko": "",
+    "highlight": "келетін"
+   },
+   {
+    "en": "Кітап оқуды жақсы көремін.",
+    "ko": "",
+    "highlight": "оқуды"
+   },
+   {
+    "en": "Өзім сатып алған пәтер кең.",
+    "ko": "",
+    "highlight": "алған"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Мен сөйлеу жақсы көремін.",
+    "right": "Мен сөйлеуді жақсы көремін.",
+    "note": "Verbal nouns in -у act like real nouns and must take the accusative suffix (-ді/-ды) before transitive verbs like 'жақсы көру'."
+   },
+   {
+    "wrong": "Кісі кім келді кеше менің досым.",
+    "right": "Кеше келген кісі менің досым.",
+    "note": "Kazakh does not use relative pronouns like 'who/which'; the participle directly precedes the noun it modifies."
+   },
+   {
+    "wrong": "Ол оқитын кітапты кеше сатып алды келген.",
+    "right": "Ол кеше келген кітапты сатып алды.",
+    "note": "Keep participial relative clauses strictly positioned immediately before the noun they modify."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Express: 'Learning a language is important.' -> 'Тіл ___ маңызды.'",
+    "options": [
+     "үйрену",
+     "үйренген",
+     "үйренетін",
+     "үйрен"
+    ],
+    "answer": 0,
+    "explanation": "The verbal noun ending -у nominalizes the verb stem 'үйрен-' into 'learning'."
+   },
+   {
+    "question": "Choose the relative clause: 'The boy who read the book.' -> 'Кітапты ___ бала.'",
+    "options": [
+     "оқу",
+     "оқыды",
+     "оқыған",
+     "оқиды"
+    ],
+    "answer": 2,
+    "explanation": "The past participle -ған modifies 'бала' to mean 'the boy who read'."
+   },
+   {
+    "question": "Describe regular habit: 'The train that leaves every morning.' -> 'Әр таңда ___ пойыз.'",
+    "options": [
+     "жүрген",
+     "жүретін",
+     "жүру",
+     "жүрді"
+    ],
+    "answer": 1,
+    "explanation": "-атын/-етін forms habitual participles modifying nouns for repeated or general actions."
+   },
+   {
+    "question": "Add the correct accusative case to the verbal noun: 'Ол көлік ___ үйренді.' (He learned driving a car)",
+    "options": [
+     "жүргізуге",
+     "жүргізуден",
+     "жүргізу",
+     "жүргізуді"
+    ],
+    "answer": 3,
+    "explanation": "The direct object of 'үйренді' requires the accusative case suffix (-ді) on the verbal noun 'жүргізу'."
+   }
+  ],
+  "tip": "Because Kazakh is head-final, put the entire relative modifier (clause + participle) before the noun it describes, with zero relative pronouns."
+ },
+ {
+  "id": "kk-b1-conditional-mood-and-conditional-clauses",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#0284C7",
+  "emoji": "🔀",
+  "title": "Conditional Mood (-sa/-se) and Temporal Clauses",
+  "subtitle": "Expressing hypothetical conditions and 'when' clauses in Kazakh",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Attach the suffix -sa or -se directly to the verb stem followed by personal endings to express 'if' or temporal 'when'.",
+  "structure": {
+   "headers": [
+    "Affix / Pronoun",
+    "Kazakh Structure",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Person Sg (-m)",
+      "бар-са-м",
+      "if I go"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd Person Sg (-ң)",
+      "кел-се-ң",
+      "if you come"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person Sg (—)",
+      "жау-са",
+      "if it rains / when it rains"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "1st Person Pl (-қ/-к)",
+      "оқы-са-қ",
+      "if we study"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Real Condition",
+    "example": "Ертең күн ашық болса, саябаққа барамыз.",
+    "translation": ""
+   },
+   {
+    "color": "#0369A1",
+    "label": "Temporal 'When'",
+    "example": "Үйге келсем, ешкім жоқ екен.",
+    "translation": ""
+   },
+   {
+    "color": "#075985",
+    "label": "Polite Request / Suggestion",
+    "example": "Мүмкін болса, көмектесіп жіберіңізші.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Күн жылы болса, серуендейміз.",
+    "ko": "",
+    "highlight": "болса"
+   },
+   {
+    "en": "Уақытың болса, маған хабарлас.",
+    "ko": "",
+    "highlight": "болса"
+   },
+   {
+    "en": "Сен келсең, біз бірге тамақтанамыз.",
+    "ko": "",
+    "highlight": "келсең"
+   },
+   {
+    "en": "Олар ерте шықса, пойызға үлгереді.",
+    "ko": "",
+    "highlight": "шықса"
+   },
+   {
+    "en": "Жұмысты ерте бітірсек, киноға барамыз.",
+    "ko": "",
+    "highlight": "бітірсек"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Егер сен келесің, мен қуанамын.",
+    "right": "Сен келсең, мен қуанамын.",
+    "note": "Kazakh does not use indicative future tense for conditions; the conditional suffix -sa/-se is required on the verb."
+   },
+   {
+    "wrong": "Мен барса, көремін.",
+    "right": "Мен барсам, көремін.",
+    "note": "The conditional suffix must take person agreement markers corresponding to the subject."
+   },
+   {
+    "wrong": "Ол оқысады, емтиханды тапсырады.",
+    "right": "Ол оқыса, емтиханды тапсырады.",
+    "note": "Third person conditional takes no personal ending; do not append -ды/-ді."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "If you (informal) come tomorrow, we will talk.",
+    "options": [
+     "келсең",
+     "келсе",
+     "келсем",
+     "келсеңіз"
+    ],
+    "answer": 0,
+    "explanation": "The second person singular informal ending is -ң, making 'келсең' the correct form."
+   },
+   {
+    "question": "If it rains tomorrow, we will stay at home.",
+    "options": [
+     "жаусақ",
+     "жауса",
+     "жаусам",
+     "жаусаң"
+    ],
+    "answer": 1,
+    "explanation": "The third person singular subject takes the bare conditional suffix -sa without personal endings."
+   },
+   {
+    "question": "If we buy the book, we can read it together.",
+    "options": [
+     "алсаң",
+     "алсам",
+     "алса",
+     "алсақ"
+    ],
+    "answer": 3,
+    "explanation": "The first person plural ending is -қ/-к, yielding 'алсақ'."
+   },
+   {
+    "question": "If I finish early, I will call you.",
+    "options": [
+     "бітірсең",
+     "бітірсем",
+     "бітірсе",
+     "бітірсек"
+    ],
+    "answer": 1,
+    "explanation": "The first person singular requires the personal ending -м, so 'бітірсем' is correct."
+   }
+  ],
+  "tip": "Even though the conjunction 'егер' (if) exists, it is optional and stylistic; the suffix -sa/-se on the verb is essential."
+ },
+ {
+  "id": "kk-b1-modal-constructions-kerek-qazhet-and-al-u",
+  "level": "b1",
+  "category": "modals",
+  "categoryColor": "#D97706",
+  "emoji": "🛠️",
+  "title": "Modality of Necessity and Ability (-u kerek and -(a) al-)",
+  "subtitle": "Expressing necessity with керек and capability with аламын",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Combine verbal noun suffix -u with possessive suffixes and керек/қажет for necessity, or verb stem + -(a/e/y) with алу for ability.",
+  "structure": {
+   "headers": [
+    "Modality Type",
+    "Pattern",
+    "Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Necessity (Generic)",
+      "Stem + -у керек",
+      "бару керек",
+      "one must go"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Necessity (Personal)",
+      "Stem + -у + Poss + керек",
+      "баруым керек",
+      "I must go"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Ability (Consonant stem)",
+      "Stem + -а/е ал-",
+      "жаза аламын",
+      "I can write"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ability (Vowel stem)",
+      "Stem + -й ал-",
+      "оқи аламын",
+      "I can read"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Personal Obligation",
+    "example": "Маған ертең емханаға баруым керек.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Learned Skill",
+    "example": "Ол қазақ тілінде еркін сөйлей алады.",
+    "translation": ""
+   },
+   {
+    "color": "#92400E",
+    "label": "Physical Possibility",
+    "example": "Сіз мына ауыр қорапты көтере аласыз ба?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Бізге жаңа ережені жақсылап түсіну керек.",
+    "ko": "",
+    "highlight": "түсіну керек"
+   },
+   {
+    "en": "Сен ертең ерте тұруың керек.",
+    "ko": "",
+    "highlight": "тұруың керек"
+   },
+   {
+    "en": "Мен қазақша еркін сөйлей аламын.",
+    "ko": "",
+    "highlight": "сөйлей аламын"
+   },
+   {
+    "en": "Олар бүгін бізге көмектесе алмайды.",
+    "ko": "",
+    "highlight": "көмектесе алмайды"
+   },
+   {
+    "en": "Сен домбыра тарта аласың ба?",
+    "ko": "",
+    "highlight": "тарта аласың ба"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Мен бару керек.",
+    "right": "Маған бару керек. / Менің баруым керек.",
+    "note": "With 'керек', the agent must take either the dative case (маған) or genitive case with a possessive suffix on the verbal noun (менің баруым)."
+   },
+   {
+    "wrong": "Мен жазу аламын.",
+    "right": "Мен жаза аламын.",
+    "note": "Ability with 'алу' requires the converb suffix (-а/-е/-й), not the verbal noun (-у)."
+   },
+   {
+    "wrong": "Ол оқиды алады.",
+    "right": "Ол оқи алады.",
+    "note": "Do not conjugate the main lexical verb before the auxiliary verb 'алу'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I have to leave right now.",
+    "options": [
+     "кетуім керек",
+     "кете аламын",
+     "кетуі керек",
+     "кетемін керек"
+    ],
+    "answer": 0,
+    "explanation": "'кетуім керек' combines verbal noun -у + 1st person possessive -ім + керек to mean 'I must leave'."
+   },
+   {
+    "question": "Can you (informal) speak English?",
+    "options": [
+     "сөйлеу керексің",
+     "сөйлей аласың ба",
+     "сөйлейсің бе",
+     "сөйлеу аласың ба"
+    ],
+    "answer": 1,
+    "explanation": "'сөйлей аласың ба' properly uses converb -й + auxiliary verb 'алу' in the question form."
+   },
+   {
+    "question": "We must complete this work today.",
+    "options": [
+     "бітіруі керек",
+     "бітіре аламыз",
+     "бітіруіміз керек",
+     "бітіру керексің"
+    ],
+    "answer": 2,
+    "explanation": "The 1st person plural possessive marker is -іміз, forming 'бітіруіміз керек'."
+   },
+   {
+    "question": "He cannot swim.",
+    "options": [
+     "жүзе алмайды",
+     "жүзу алмайды",
+     "жүзеді алмайды",
+     "жүзуі керек"
+    ],
+    "answer": 0,
+    "explanation": "Negative ability combines converb -е with 'алмайды', yielding 'жүзе алмайды'."
+   }
+  ],
+  "tip": "To express inability or negative capacity, negate the auxiliary 'алу' (e.g. алмаймын, алмадым) rather than the main verb."
+ },
+ {
+  "id": "kk-b2-causative-and-passive-verb-derivations",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#7C3AED",
+  "emoji": "⚙️",
+  "title": "Voice Derivations: Causative and Passive",
+  "subtitle": "Deriving causative (-тыр/-гіз/-ыр) and passive (-ыл/-ын) verb stems",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Kazakh modifies verb valency by suffixing causative markers to make someone do an action, or passive markers (-ыл/-іл/-л) to demote the subject.",
+  "structure": {
+   "headers": [
+    "Voice",
+    "Morpheme",
+    "Base Stem",
+    "Derived Verb"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Causative",
+      "-тыр / -тір / -дыр / -дір",
+      "кел- (come)",
+      "келтір- (bring)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Causative",
+      "-ғыз / -гіз / -қыз / -кіз",
+      "кір- (enter)",
+      "кіргіз- (let in)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passive",
+      "-ыл / -іл / -л",
+      "жаз- (write)",
+      "жазыл- (be written)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Reflexive",
+      "-ын / -ін / -н",
+      "жу- (wash)",
+      "жуын- (wash oneself)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Passive Process",
+    "example": "Бұл кітап былтыр жазылды.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Causation / Agent",
+    "example": "Мұғалім оқушыларға мәтінді оқытты.",
+    "translation": ""
+   },
+   {
+    "color": "#5B21B6",
+    "label": "Reflexive Action",
+    "example": "Бала таңертең тез киінді.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Хат кеше кешке жазылды.",
+    "ko": "",
+    "highlight": "жазылды"
+   },
+   {
+    "en": "Дәрігер науқасқа дәріні ішкізді.",
+    "ko": "",
+    "highlight": "ішкізді"
+   },
+   {
+    "en": "Жаңа мектеп біздің ауылда салынды.",
+    "ko": "",
+    "highlight": "салынды"
+   },
+   {
+    "en": "Ол баласына бөлмені тазалатты.",
+    "ko": "",
+    "highlight": "тазалатты"
+   },
+   {
+    "en": "Есік ақырын ашылды.",
+    "ko": "",
+    "highlight": "ашылды"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Кітап мен оқылды.",
+    "right": "Кітап мен тарапымнан оқылды. / Кітап оқылды.",
+    "note": "Passive verbs do not take an agent in the nominative case; omit the agent or use 'тарапынан'."
+   },
+   {
+    "wrong": "Мен балама кітап оқыдым.",
+    "right": "Мен балама кітап оқыттым.",
+    "note": "To say 'I made my child read', use causative -т (оқыт-), not base verb (оқы-)."
+   },
+   {
+    "wrong": "Ол бетін жуылды.",
+    "right": "Ол бетін жуды. / Ол жуынды.",
+    "note": "Passive -ыл denotes an action done to a subject, while reflexive -ын denotes self-directed action."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The door was opened quietly.",
+    "options": [
+     "ашты",
+     "ашылды",
+     "аштырды",
+     "ашынды"
+    ],
+    "answer": 1,
+    "explanation": "The passive form of ашу (to open) is 'ашылу', in past tense 'ашылды'."
+   },
+   {
+    "question": "The teacher made the students write an essay.",
+    "options": [
+     "жазды",
+     "жазылды",
+     "жазғызды",
+     "жазынды"
+    ],
+    "answer": 2,
+    "explanation": "The causative form of жазу (to write) is 'жазғызу', so 'жазғызды' expresses having someone write."
+   },
+   {
+    "question": "The meeting will be held tomorrow.",
+    "options": [
+     "өткізді",
+     "өтеді",
+     "өткізіледі",
+     "өткізеді"
+    ],
+    "answer": 2,
+    "explanation": "'өткізіледі' combines causative өткіз- with passive -іл- to mean 'will be conducted/held'."
+   },
+   {
+    "question": "He got dressed and went out.",
+    "options": [
+     "киді",
+     "кигізді",
+     "киілді",
+     "киінді"
+    ],
+    "answer": 3,
+    "explanation": "Reflexive -ін is used for actions performed on oneself, forming 'киінді' (got dressed)."
+   }
+  ],
+  "tip": "In causative sentences, the secondary agent (the person caused to perform the action) takes the dative case (-ға/-ге/-қа/-ке)."
+ },
+ {
+  "id": "kk-b2-temporal-and-causal-converbial-clauses",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#059669",
+  "emoji": "⏳",
+  "title": "Complex Converbial Clauses (-ғанша, -ғалы, -ғандықтан)",
+  "subtitle": "Subordinating clauses expressing time limits, starting points, and causality",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Participles (-ған/-ген) combine with dative, ablative, or lexical postpositions to build complex subordinate clauses of limit, duration, and reason.",
+  "structure": {
+   "headers": [
+    "Converbial Form",
+    "Meaning",
+    "Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-ғанша / -генше",
+      "until, before",
+      "келгенше",
+      "until (someone) comes"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ғалы / -гелі (бері)",
+      "since, for the duration",
+      "көргелі",
+      "since seeing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ғандықтан / -гендіктен",
+      "because, since",
+      "оқығандықтан",
+      "because (someone) studied"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ған соң / кейін",
+      "after",
+      "бітірген соң",
+      "after finishing"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Time Limit ('until')",
+    "example": "Мен келгенше, осы жерде күте тұрыңыз.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Starting Point ('since')",
+    "example": "Оны көрмегелі көп уақыт болды.",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "Logical Cause ('because')",
+    "example": "Ауа райы бұзылғандықтан, сапар кейінге қалды.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Күн батқанша тауда серуендедік.",
+    "ko": "",
+    "highlight": "батқанша"
+   },
+   {
+    "en": "Алматыға келгелі екі жыл болды.",
+    "ko": "",
+    "highlight": "келгелі"
+   },
+   {
+    "en": "Жаңбыр қатты жауғандықтан, үйде қалдық.",
+    "ko": "",
+    "highlight": "жауғандықтан"
+   },
+   {
+    "en": "Жұмыс аяқталғанша ешқайда бармаймын.",
+    "ko": "",
+    "highlight": "аяқталғанша"
+   },
+   {
+    "en": "Ол көп еңбектенгендіктен, жетістікке жетті.",
+    "ko": "",
+    "highlight": "еңбектенгендіктен"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Мен келгенше дейін күт.",
+    "right": "Мен келгенше күт.",
+    "note": "The suffix -ғанша/-генше already includes the limitative meaning 'until'; adding 'дейін' is redundant."
+   },
+   {
+    "wrong": "Оны көрген бері бес жыл өтті.",
+    "right": "Оны көргелі бері бес жыл өтті.",
+    "note": "'Бері' governs the -ғалы/-гелі converb form or an ablative noun, not plain -ған."
+   },
+   {
+    "wrong": "Ауырғандық мен келмедім.",
+    "right": "Ауырғандықтан мен келмедім.",
+    "note": "Causal conjunction requires the ablative suffix -тан/-тен on the derived noun: -ғандықтан."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Wait here until I arrive.",
+    "options": [
+     "келгендіктен",
+     "келгелі",
+     "келгенше",
+     "келген соң"
+    ],
+    "answer": 2,
+    "explanation": "The suffix -ғанша/-генше expresses 'until / up to the point of'."
+   },
+   {
+    "question": "It has been three years since we graduated from school.",
+    "options": [
+     "бітіргелі",
+     "бітіргенше",
+     "бітіргендіктен",
+     "бітірсе"
+    ],
+    "answer": 0,
+    "explanation": "-ғалы/-гелі indicates time elapsed since an initial action ('since graduating')."
+   },
+   {
+    "question": "Since he was ill, he did not come to class.",
+    "options": [
+     "ауырғанша",
+     "ауырғандықтан",
+     "ауырғалы",
+     "ауырған соң"
+    ],
+    "answer": 1,
+    "explanation": "-ғандықтан/-гендіктен expresses logical cause ('because / since he was ill')."
+   },
+   {
+    "question": "Let's drink tea until the rain stops.",
+    "options": [
+     "басылған соң",
+     "басылғалы",
+     "басылғандықтан",
+     "басылғанша"
+    ],
+    "answer": 3,
+    "explanation": "'until it stops' requires -ғанша, making 'басылғанша' correct."
+   }
+  ],
+  "tip": "For negative 'since' constructions (e.g. 'I haven't seen you in ages'), attach -ғалы to the negative stem: 'көрмегелі'."
+ },
+ {
+  "id": "kk-b2-complex-evidential-and-quotative-constructions-de-u",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#4F46E5",
+  "emoji": "💬",
+  "title": "Reported Speech and Quotative Formations with 'De-'",
+  "subtitle": "Embedding quotes, intentions, and thoughts using деп, деген, and десе",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "The verb деу (to say) forms the converb деп to mark direct speech, intentions, and subjective reasons in complex sentences.",
+  "structure": {
+   "headers": [
+    "Form of де-",
+    "Grammatical Role",
+    "Kazakh Structure",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "деп",
+      "Converb (Quotative)",
+      "«Келемін» деп айтты",
+      "said: 'I will come'"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "деп",
+      "Purposive / Intention",
+      "Көрейін деп келдім",
+      "came intending to see"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "деген",
+      "Noun modifier (Apposition)",
+      "Абай деген ақын",
+      "a poet named Abai"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "десе",
+      "Conditional / Topic",
+      "Бағасы қанша десеңіз",
+      "if you ask about the price"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Direct/Indirect Quote",
+    "example": "Мұғалім ертең сабақ болмайды деп айтты.",
+    "translation": ""
+   },
+   {
+    "color": "#4338CA",
+    "label": "Intentional Action",
+    "example": "Мен емтихан тапсырайын деп жүрмін.",
+    "translation": ""
+   },
+   {
+    "color": "#3730A3",
+    "label": "Named Entity / Concept",
+    "example": "«Алатау» деген қонақ үй қайда орналасқан?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ол «ертең келемін» деп уәде берді.",
+    "ko": "",
+    "highlight": "деп"
+   },
+   {
+    "en": "Досыма сыйлық алайын деп дүкенге бардым.",
+    "ko": "",
+    "highlight": "алайын деп"
+   },
+   {
+    "en": "Қазақстанда «Бәйтерек» деген әйгілі монумент бар.",
+    "ko": "",
+    "highlight": "деген"
+   },
+   {
+    "en": "Ол келмей қала ма деп қорықтым.",
+    "ko": "",
+    "highlight": "деп"
+   },
+   {
+    "en": "Жақсы оқысын деп баласына компьютер әперді.",
+    "ko": "",
+    "highlight": "деп"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ол айтты, ол ертең келеді.",
+    "right": "Ол «ертең келемін» деп айтты.",
+    "note": "Kazakh cannot simply juxtapose clauses like English 'He said that...'; you must use the quotative converb 'деп'."
+   },
+   {
+    "wrong": "Мен оған бару үшін деп ойладым.",
+    "right": "Мен оған барайын деп ойладым.",
+    "note": "Intention with thought verbs pairs the voluntative/optative mood (-айын/-ейін) with 'деп'."
+   },
+   {
+    "wrong": "Бір адам аты Арман деп келді.",
+    "right": "Арман деген бір адам келді.",
+    "note": "When introducing someone or something called by a name, use the participial form 'деген'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He said: 'I understand everything'.",
+    "options": [
+     "деген",
+     "деп",
+     "десе",
+     "деу"
+    ],
+    "answer": 1,
+    "explanation": "Quotations are linked to communication verbs via the converb 'деп'."
+   },
+   {
+    "question": "There is a city called Turkistan in southern Kazakhstan.",
+    "options": [
+     "деген",
+     "деп",
+     "дейтінше",
+     "демек"
+    ],
+    "answer": 0,
+    "explanation": "The participle 'деген' functions like 'called' or 'named' modifying a noun."
+   },
+   {
+    "question": "I went out intending to buy bread.",
+    "options": [
+     "аламын деп",
+     "алдым деп",
+     "алайын деп",
+     "алған деп"
+    ],
+    "answer": 2,
+    "explanation": "Intention before 'деп' requires the 1st person optative-voluntative suffix -айын/-ейін ('алайын деп')."
+   },
+   {
+    "question": "She worried that she might be late.",
+    "options": [
+     "қаламын десе",
+     "қалғандықтан",
+     "қалып қоямын деп",
+     "қалу үшін"
+    ],
+    "answer": 2,
+    "explanation": "Thoughts and apprehensions are quoted internally with '...деп қорықты / уайымдады'."
+   }
+  ],
+  "tip": "Combine the 1st person optative (-айын/-ейін) with 'деп тұрмын' or 'деп жүрмін' to express an immediate future intention (e.g. айтайын деп тұрмын = I'm about to say)."
+ }
+]

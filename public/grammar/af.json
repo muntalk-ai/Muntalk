@@ -1,0 +1,3249 @@
+[
+ {
+  "id": "af-a1-stompis-word-order",
+  "level": "a1",
+  "category": "clauses",
+  "categoryColor": "#3B82F6",
+  "emoji": "📐",
+  "title": "Basic STOMPI Word Order",
+  "subtitle": "Master the golden rule of Afrikaans sentence structure",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Standard Afrikaans sentences strictly follow the STOMPI sequence: Subject, Verb 1, Time, Object, Manner, Place, and Verb 2.",
+  "structure": {
+   "headers": [
+    "Acronym",
+    "Component",
+    "Afrikaans Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "S - V1",
+      "Subject + Finite Verb",
+      "Die man lees"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "T - O",
+      "Time + Object",
+      "vandag 'n boek"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "M - P - V2",
+      "Manner + Place + Infinitive/Participle",
+      "vinnig by die huis."
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Simple S-V1-O Sentence",
+    "example": "Ek eet 'n appel.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Full Time-Object-Place Sequence",
+    "example": "Ons drink nou koffie in die kombuis.",
+    "translation": ""
+   },
+   {
+    "color": "#1E40AF",
+    "label": "Auxiliary with Final Verb (V2)",
+    "example": "Hulle sal môre die kar vinnig was.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ek lees elke dag 'n boek.",
+    "ko": "",
+    "highlight": "lees elke dag 'n boek"
+   },
+   {
+    "en": "Hulle ry vandag per trein na die stad.",
+    "ko": "",
+    "highlight": "vandag per trein na die stad"
+   },
+   {
+    "en": "Pa drink nou rustig koffie op die stoep.",
+    "ko": "",
+    "highlight": "nou rustig koffie op die stoep"
+   },
+   {
+    "en": "Ons gaan vanaand lekker kos by die restaurant eet.",
+    "ko": "",
+    "highlight": "gaan vanaand lekker kos by die restaurant eet"
+   },
+   {
+    "en": "Sy sal môre die pakkie vinnig pos toe neem.",
+    "ko": "",
+    "highlight": "sal môre die pakkie vinnig pos toe neem"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ek eet by die huis nou 'n appel.",
+    "right": "Ek eet nou 'n appel by die huis.",
+    "note": "Time must precede Object, and Object must precede Place (T-O-M-P)."
+   },
+   {
+    "wrong": "Sy sal lees 'n boek môre.",
+    "right": "Sy sal môre 'n boek lees.",
+    "note": "Verb 2 belongs at the very end of the clause in compound verb structures."
+   },
+   {
+    "wrong": "Gister ek het geslaap.",
+    "right": "Gister het ek geslaap.",
+    "note": "When starting with Time, Verb 1 must stay in second position, causing subject-verb inversion."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct STOMPI order: 'We are drinking coffee in the garden now.'",
+    "options": [
+     "Ons drink in die tuin nou koffie.",
+     "Ons drink nou koffie in die tuin.",
+     "Ons nou drink koffie in die tuin.",
+     "Ons koffie drink nou in die tuin."
+    ],
+    "answer": 1,
+    "explanation": "Time (nou) must come before Object (koffie), which comes before Place (in die tuin)."
+   },
+   {
+    "question": "Where does the main verb go in: 'Hulle wil môre 'n fliek ___.'",
+    "options": [
+     "kyk",
+     "kyk môre",
+     "môre kyk",
+     "het kyk"
+    ],
+    "answer": 0,
+    "explanation": "In sentences with modal or auxiliary verbs (V1 = wil), the infinitive main verb (V2 = kyk) is placed at the very end."
+   },
+   {
+    "question": "Identify the correct order: 'Môre ___ ons die eksamen skryf.'",
+    "options": [
+     "ons sal",
+     "skryf",
+     "gaan",
+     "sal"
+    ],
+    "answer": 3,
+    "explanation": "Verb 1 (sal) must occupy the second position immediately after the fronted Time phrase (Môre)."
+   },
+   {
+    "question": "Which sentence follows strict STOMPI order?",
+    "options": [
+     "Hy ry met die bus skool toe elke oggend.",
+     "Hy ry elke oggend met die bus skool toe.",
+     "Hy elke oggend ry met die bus skool toe.",
+     "Hy ry skool toe elke oggend met die bus."
+    ],
+    "answer": 1,
+    "explanation": "Time (elke oggend) precedes Manner (met die bus), which precedes Place (skool toe)."
+   }
+  ],
+  "tip": "Remember: STOMPI never fails for statements! If you move Time to the front for emphasis, Verb 1 remains in position 2, immediately followed by the Subject."
+ },
+ {
+  "id": "af-a1-double-negation-nie-nie",
+  "level": "a1",
+  "category": "clauses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🚫",
+  "title": "The Double Negative (Nie ... Nie)",
+  "subtitle": "Mastering the obligatory sentence-final negation marker",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "In Afrikaans, negative statements require a second 'nie' at the end of the sentence or clause, framing the negated information.",
+  "structure": {
+   "headers": [
+    "Sentence Type",
+    "Structure",
+    "Afrikaans Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Short Predicate",
+      "Subject + Verb + nie",
+      "Ek weet nie."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Standard Sentence",
+      "Subject + V1 + nie + ... + nie",
+      "Hy eet nie die vleis nie."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negative Word",
+      "Negative word + ... + nie",
+      "Niemand praat nou nie."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Basic Clause Negation",
+    "example": "Ek verstaan dit nie.",
+    "translation": ""
+   },
+   {
+    "color": "#B91C1C",
+    "label": "Full Negation Frame",
+    "example": "Sy gaan nie vandag skool toe nie.",
+    "translation": ""
+   },
+   {
+    "color": "#991B1B",
+    "label": "Negative Pronoun/Adverb",
+    "example": "Daar is niks in die boks nie.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ek praat nie Engels nie.",
+    "ko": "",
+    "highlight": "nie Engels nie"
+   },
+   {
+    "en": "Ons wil nie nou huis toe gaan nie.",
+    "ko": "",
+    "highlight": "nie nou huis toe gaan nie"
+   },
+   {
+    "en": "Sy sien nooit die son nie.",
+    "ko": "",
+    "highlight": "nooit die son nie"
+   },
+   {
+    "en": "Hulle het nie gister gekom nie.",
+    "ko": "",
+    "highlight": "nie gister gekom nie"
+   },
+   {
+    "en": "Niemand ken die antwoord nie.",
+    "ko": "",
+    "highlight": "Niemand ken die antwoord nie"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ek hou nie van tee.",
+    "right": "Ek hou nie van tee nie.",
+    "note": "Never omit the mandatory second 'nie' at the end of the clause."
+   },
+   {
+    "wrong": "Hy eet nie niks nie.",
+    "right": "Hy eet niks nie.",
+    "note": "Words like 'niks', 'niemand', and 'nooit' already act as the first negative; do not add the first 'nie'."
+   },
+   {
+    "wrong": "Ek weet nie nie.",
+    "right": "Ek weet nie.",
+    "note": "When the verb immediately precedes the end of the clause with no other words, only one 'nie' is used."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the negative sentence: 'Hulle bly nie in Kaapstad ___.'",
+    "options": [
+     "geen",
+     "nie",
+     "niks",
+     "nooit"
+    ],
+    "answer": 1,
+    "explanation": "Standard Afrikaans clauses require a closing 'nie' at the very end."
+   },
+   {
+    "question": "How do you say 'Nobody is coming'?",
+    "options": [
+     "Niemand kom nie.",
+     "Niemand nie kom nie.",
+     "Nie iemand kom nie.",
+     "Niemand kom."
+    ],
+    "answer": 0,
+    "explanation": "'Niemand' functions as the first negative, so you only need the final 'nie' at the end."
+   },
+   {
+    "question": "Which sentence has correct double negation?",
+    "options": [
+     "Ek wil nie slaap.",
+     "Ek wil slaap nie.",
+     "Ek wil nie nou slaap nie.",
+     "Ek wil nooit nie slaap."
+    ],
+    "answer": 2,
+    "explanation": "The first 'nie' comes right after Verb 1 and the second 'nie' closes the sentence."
+   },
+   {
+    "question": "Translate the concept: 'She does not eat meat.'",
+    "options": [
+     "Sy eet geen vleis nie.",
+     "Sy eet nie vleis nie.",
+     "Sy eet nie vleis.",
+     "Beide A en B is korrek."
+    ],
+    "answer": 3,
+    "explanation": "Both 'nie ... nie' and 'geen ... nie' are grammatically valid ways to negate this sentence."
+   }
+  ],
+  "tip": "Think of Afrikaans negation like quotation marks or parentheses: the first marker (nie, nooit, niemand) opens the negative thought, and the final 'nie' closes it."
+ },
+ {
+  "id": "af-a1-present-tense-invariable-verbs",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "✨",
+  "title": "Base Verbs and Lack of Person Conjugation",
+  "subtitle": "No verb endings: one single form for all pronouns",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Afrikaans verbs never change for person or number (I, you, he, we, they all use the exact same form).",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Afrikaans Verb",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Ek / Jy / Hy / Sy",
+      "leer",
+      "I / You / He / She learns"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ons / Julle / Hulle",
+      "leer",
+      "We / You all / They learn"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "All Pronouns (Irregular)",
+      "is / het",
+      "am/is/are / have/has"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Regular Action Verb",
+    "example": "Hy werk elke dag hard.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Irregular 'to be' (wees -> is)",
+    "example": "Hulle is baie gelukkig.",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "Irregular 'to have' (hê -> het)",
+    "example": "Ons het twee honde.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ek drink water en sy drink melk.",
+    "ko": "",
+    "highlight": "drink"
+   },
+   {
+    "en": "Die kinders speel buite in die tuin.",
+    "ko": "",
+    "highlight": "speel"
+   },
+   {
+    "en": "Vandag is die weer baie mooi.",
+    "ko": "",
+    "highlight": "is"
+   },
+   {
+    "en": "Hy het 'n nuwe fiets.",
+    "ko": "",
+    "highlight": "het"
+   },
+   {
+    "en": "Ons verstaan die les baie goed.",
+    "ko": "",
+    "highlight": "verstaan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Hy werks by die bank.",
+    "right": "Hy werk by die bank.",
+    "note": "Do not add an English-style '-s' for third person singular; Afrikaans verbs never inflect."
+   },
+   {
+    "wrong": "Ons bint bly om jou te sien.",
+    "right": "Ons is bly om jou te sien.",
+    "note": "The present tense of 'wees' (to be) is always 'is', regardless of subject."
+   },
+   {
+    "wrong": "Ek he 'n vraag.",
+    "right": "Ek het 'n vraag.",
+    "note": "The present indicative form of the verb 'hê' is always 'het'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'Sy ___ elke oggend koffie.'",
+    "options": [
+     "drink",
+     "drinks",
+     "drinke",
+     "gedrink"
+    ],
+    "answer": 0,
+    "explanation": "Afrikaans verbs keep the bare base form with no person suffixes."
+   },
+   {
+    "question": "Select the correct form: 'Ons ___ moeg na die lang dag.'",
+    "options": [
+     "wees",
+     "ben",
+     "is",
+     "syn"
+    ],
+    "answer": 2,
+    "explanation": "'is' is the invariable present tense of the verb 'wees' for all persons."
+   },
+   {
+    "question": "Complete the sentence: 'Julle ___ baie boeke.'",
+    "options": [
+     "hê",
+     "hef",
+     "has",
+     "het"
+    ],
+    "answer": 3,
+    "explanation": "The present tense form of 'to have' is 'het' for all subjects."
+   },
+   {
+    "question": "Which sentence correctly expresses 'The dogs run'?",
+    "options": [
+     "Die honde hardloop.",
+     "Die honde hardlope.",
+     "Die honde hardloops.",
+     "Die honde te hardloop."
+    ],
+    "answer": 0,
+    "explanation": "Plural subjects take the identical base verb form without endings."
+   }
+  ],
+  "tip": "Afrikaans has zero conjugation tables! Learn the base stem of a verb once, and you can immediately use it with every single pronoun."
+ },
+ {
+  "id": "af-a1-past-tense-ge-het",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#D97706",
+  "emoji": "⏳",
+  "title": "Past Tense with 'Het' and 'Ge-'",
+  "subtitle": "How Afrikaans expresses all past events with one simple structure",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Afrikaans has only one general past tense, formed by putting auxiliary 'het' in Verb 1 position and the main verb with prefix 'ge-' at the end.",
+  "structure": {
+   "headers": [
+    "Component",
+    "Rule",
+    "Afrikaans Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Auxiliary (V1)",
+      "Always 'het'",
+      "Ek het gister"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Regular Past Participle",
+      "'ge-' + base stem at sentence end",
+      "gekoop."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Inseparable Prefixes",
+      "Verbs with be-, ge-, her-, ont-, ver- do NOT take ge-",
+      "het die storie vergeet."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Regular Past Action",
+    "example": "Ek het gister 'n boek gelees.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Past Tense of 'to be' (was)",
+    "example": "Hy was verlede week siek.",
+    "translation": ""
+   },
+   {
+    "color": "#92400E",
+    "label": "Verb with Inseparable Prefix",
+    "example": "Ons het die les dadelik verstaan.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Sy het vanoggend vroeg opgestaan.",
+    "ko": "",
+    "highlight": "het vanoggend vroeg opgestaan"
+   },
+   {
+    "en": "Ons het gister lekker gekook.",
+    "ko": "",
+    "highlight": "het gister lekker gekook"
+   },
+   {
+    "en": "Hulle het die hele koek geëet.",
+    "ko": "",
+    "highlight": "het die hele koek geëet"
+   },
+   {
+    "en": "Ek het my sleutels verloor.",
+    "ko": "",
+    "highlight": "het my sleutels verloor"
+   },
+   {
+    "en": "Hy het verlede jaar 'n huis gekoop.",
+    "ko": "",
+    "highlight": "het verlede jaar 'n huis gekoop"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ek het gister geet 'n appel.",
+    "right": "Ek het gister 'n appel geëet.",
+    "note": "The ge- past participle must go to the Verb 2 position at the end of the clause."
+   },
+   {
+    "wrong": "Ons het die probleem geverstaan.",
+    "right": "Ons het die probleem verstaan.",
+    "note": "Verbs starting with inseparable prefixes like 'ver-', 'be-', or 'ont-' never take an extra 'ge-'."
+   },
+   {
+    "wrong": "Hy het gewees siek.",
+    "right": "Hy was siek.",
+    "note": "The verb 'wees' (to be) uses its simple past form 'was' rather than 'het gewees' in standard everyday speech."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'Hulle het gister sokker ___.'",
+    "options": [
+     "gespeel",
+     "speel",
+     "gespeelt",
+     "speel ge-"
+    ],
+    "answer": 0,
+    "explanation": "Regular verbs form their past participle with 'ge-' + base stem (gespeel) at the end."
+   },
+   {
+    "question": "How do you form the past of 'verkoop' (to sell)?",
+    "options": [
+     "gekoop",
+     "geverkoop",
+     "verkoop",
+     "het geverkoop"
+    ],
+    "answer": 2,
+    "explanation": "Verbs beginning with prefixes like 'ver-' do not add 'ge-'; the form remains 'verkoop'."
+   },
+   {
+    "question": "Where does 'het' go in: 'Gister ___ ek 'n brief geskryf.'",
+    "options": [
+     "geskryf",
+     "gehad",
+     "was",
+     "het"
+    ],
+    "answer": 3,
+    "explanation": "The auxiliary 'het' must take the Verb 1 position, which is position 2 following 'Gister'."
+   },
+   {
+    "question": "Which sentence correctly says 'I made food'?",
+    "options": [
+     "Ek gemaak het kos.",
+     "Ek het kos gemaak.",
+     "Ek het gemaak kos.",
+     "Ek kos het gemaak."
+    ],
+    "answer": 1,
+    "explanation": "Auxiliary 'het' takes position 2 and participle 'gemaak' stands at the very end."
+   }
+  ],
+  "tip": "Good news: Afrikaans has no separate past continuous or past perfect in everyday speech. 'Ek het geëet' translates 'I ate', 'I have eaten', and 'I was eating'!"
+ },
+ {
+  "id": "af-a1-modal-auxiliaries-verb-clustering",
+  "level": "a1",
+  "category": "modals",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🚀",
+  "title": "Modal Auxiliaries and Verb Placement",
+  "subtitle": "Expressing ability, necessity, and desire using kan, moet, and wil",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Modal auxiliaries take the Verb 1 slot in the sentence, sending the bare infinitive of the main action verb to the Verb 2 slot at the end.",
+  "structure": {
+   "headers": [
+    "Modal Verb",
+    "Meaning",
+    "Afrikaans Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "kan",
+      "can / to be able to",
+      "Ek kan vinnig hardloop."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "moet",
+      "must / have to",
+      "Ons moet nou huis toe gaan."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "wil / sal / mag",
+      "want to / will / may",
+      "Hy wil vandag 'n fliek kyk."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Ability (kan)",
+    "example": "Sy kan vlot Afrikaans praat.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Obligation (moet)",
+    "example": "Jy moet jou groente eet.",
+    "translation": ""
+   },
+   {
+    "color": "#5B21B6",
+    "label": "Intention or Future (wil / sal)",
+    "example": "Ons sal môre die werk klaarmaak.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ek wil 'n koppie koffie drink.",
+    "ko": "",
+    "highlight": "wil 'n koppie koffie drink"
+   },
+   {
+    "en": "Jy moet jou kamer vandag skoonmaak.",
+    "ko": "",
+    "highlight": "moet jou kamer vandag skoonmaak"
+   },
+   {
+    "en": "Hulle kan baie goed swem.",
+    "ko": "",
+    "highlight": "kan baie goed swem"
+   },
+   {
+    "en": "Ons sal môre vroeg vertrek.",
+    "ko": "",
+    "highlight": "sal môre vroeg vertrek"
+   },
+   {
+    "en": "Mag ek asseblief die venster oopmaak?",
+    "ko": "",
+    "highlight": "Mag ek asseblief die venster oopmaak"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ek wil om koffie te drink.",
+    "right": "Ek wil koffie drink.",
+    "note": "Modal verbs in Afrikaans take a bare infinitive; do not add 'om ... te'."
+   },
+   {
+    "wrong": "Hy kan praat baie goed Afrikaans.",
+    "right": "Hy kan baie goed Afrikaans praat.",
+    "note": "The main infinitive verb must be sent to the very end of the clause."
+   },
+   {
+    "wrong": "Ons moets nou gaan.",
+    "right": "Ons moet nou gaan.",
+    "note": "Modal verbs never inflect for person or number."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Jy ___ nou jou huiswerk doen.'",
+    "options": [
+     "moet",
+     "moets",
+     "te moet",
+     "gemoet"
+    ],
+    "answer": 0,
+    "explanation": "The invariable present form for 'must/should' is 'moet'."
+   },
+   {
+    "question": "Where does the main verb belong: 'Hulle wil vandag 'n motor ___.'",
+    "options": [
+     "koop",
+     "om te koop",
+     "gekoop",
+     "koop vandag"
+    ],
+    "answer": 0,
+    "explanation": "The bare infinitive (koop) belongs at the end of the clause in Verb 2 position."
+   },
+   {
+    "question": "Which modal expresses permission ('may')?",
+    "options": [
+     "sal",
+     "wil",
+     "mag",
+     "kan"
+    ],
+    "answer": 2,
+    "explanation": "'mag' expresses permission (equivalent to 'may' or 'allowed to')."
+   },
+   {
+    "question": "Select the correct sentence:",
+    "options": [
+     "Ek kan die kitaar speel.",
+     "Ek kan speel die kitaar.",
+     "Ek wil speel kitaar.",
+     "Ek moet te speel kitaar."
+    ],
+    "answer": 0,
+    "explanation": "The modal 'kan' sits in Verb 1 position, while the main action verb 'speel' sits at the end in Verb 2 position."
+   }
+  ],
+  "tip": "Unlike English, Afrikaans modals never take 'to' (om te). Just pair the modal in Verb 1 with the bare main verb kicked to the very end of the clause."
+ },
+ {
+  "id": "af-a1-plural-diminutive-morphology",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "📦",
+  "title": "Noun Plurals and Diminutives",
+  "subtitle": "Adding -e, -s, and diminutive suffixes like -tjie",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Afrikaans nouns form plurals mainly with -e or -s, while diminutives add endings like -tjie or -ie with predictable vowel and consonant adjustments.",
+  "structure": {
+   "headers": [
+    "Form Type",
+    "Rule / Suffix",
+    "Afrikaans Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Regular Plural (-e)",
+      "Add -e; double vowel drops one letter if syllable opens",
+      "boom -> bome",
+      "tree -> trees"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Multi-syllable Plural (-s)",
+      "Add -s on words ending in unaccented syllables or -el/-en/-er",
+      "tafel -> tafels",
+      "table -> tables"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Standard Diminutive (-tjie)",
+      "Add -tjie after vowels, l, n, or r preceded by long vowel/diphthong",
+      "hond -> hondjie / stoel -> stoeltjie",
+      "dog -> little dog / chair -> little chair"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Labial Diminutive (-pie)",
+      "Add -pie after words ending in -m",
+      "boom -> boompie",
+      "tree -> little tree"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Everyday Plurals",
+    "example": "Die honde blaf in die straat.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Small Objects (-tjie / -ie)",
+    "example": "Ek drink 'n koppie koffie by die tafeltjie.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Endearment and Suffix Shifts",
+    "example": "Die klein katjie slaap op die kussing.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Die bome in ons tuin is baie oud.",
+    "ko": "",
+    "highlight": "bome"
+   },
+   {
+    "en": "Sy koop drie nuwe tafels vir die kantoor.",
+    "ko": "",
+    "highlight": "tafels"
+   },
+   {
+    "en": "Daar sit 'n klein voëltjie op die heining.",
+    "ko": "",
+    "highlight": "voëltjie"
+   },
+   {
+    "en": "Ons plant 'n nuwe boompie voor die venster.",
+    "ko": "",
+    "highlight": "boompie"
+   },
+   {
+    "en": "Die kinders speel met hulle speelgoed buite.",
+    "ko": "",
+    "highlight": "kinders"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "twee boome",
+    "right": "twee bome",
+    "note": "When adding -e creates an open syllable, twin vowels (aa, ee, oo, uu) reduce to a single vowel letter."
+   },
+   {
+    "wrong": "een klein tafeltje",
+    "right": "een klein tafeltjie",
+    "note": "Afrikaans diminutive endings use -ie (such as -tjie or -jie), never the Dutch spelling -tje."
+   },
+   {
+    "wrong": "hondejie",
+    "right": "hondjie",
+    "note": "Words ending in -d or -t simply take -jie (forming -tjie or -djie pronounced identically as /ki/)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct plural form of 'man' (man): 'Daar is vyf ___ in die vertrek.'",
+    "options": [
+     "manne",
+     "mans",
+     "mane",
+     "manse"
+    ],
+    "answer": 0,
+    "explanation": "Short vowel words ending in a single consonant double the consonant when taking -e: man -> manne."
+   },
+   {
+    "question": "What is the correct diminutive for 'arm' (arm)?",
+    "options": [
+     "armtjie",
+     "armpie",
+     "armkie",
+     "armie"
+    ],
+    "answer": 1,
+    "explanation": "Nouns ending in -rm or -lm take -pie in the diminutive: arm -> armpie."
+   },
+   {
+    "question": "Choose the correct plural: 'Die onderwyser lees drie ___.'",
+    "options": [
+     "boeke",
+     "boeks",
+     "boekers",
+     "boekte"
+    ],
+    "answer": 0,
+    "explanation": "Most monosyllabic nouns ending in a consonant take -e in the plural: boek -> boeke."
+   },
+   {
+    "question": "What is the diminutive of 'kat' (cat)?",
+    "options": [
+     "katpie",
+     "katse",
+     "katjie",
+     "katetjie"
+    ],
+    "answer": 2,
+    "explanation": "Nouns ending in -t take -jie to form -tjie: kat -> katjie."
+   }
+  ],
+  "tip": "Remember: twin vowels drop a letter in open syllables (boom -> bome), while single short vowels double the consonant (pen -> penne)."
+ },
+ {
+  "id": "af-a2-inflected-attributive-adjectives",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🎨",
+  "title": "Attributive Adjective Inflection",
+  "subtitle": "Adding -e to adjectives placed directly before nouns",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Attributive adjectives before nouns often take an inflected -e ending depending on syllable count, ending consonants, and vowel length.",
+  "structure": {
+   "headers": [
+    "Adjective Class",
+    "Condition",
+    "Afrikaans Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Multi-syllable",
+      "Almost always inflects with -e",
+      "'n wonderlike dag",
+      "a wonderful day"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Short Vowel + d/t/f/s/g",
+      "Inflects and drops/softens consonants",
+      "koud -> koue water",
+      "cold -> cold water"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Colours / Participles",
+      "Basic monosyllabic colours stay uninflected",
+      "'n blou hemp",
+      "a blue shirt"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Uninflected Single Syllables",
+      "Adjectives ending in -r preceded by long vowels/diphthongs",
+      "'n duur motor",
+      "an expensive car"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Describing Objects Directly",
+    "example": "Hy lees 'n interessante boek oor geskiedenis.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Phonetic Dropping (-d to -e)",
+    "example": "Ons stap deur die koue wind.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Predicate (Uninflected) vs Attributive",
+    "example": "Die man is oud, maar hy dra 'n ou jas.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ons bly in 'n pragtige huis naby die see.",
+    "ko": "",
+    "highlight": "pragtige"
+   },
+   {
+    "en": "Hy drink graag koue melk in die oggend.",
+    "ko": "",
+    "highlight": "koue"
+   },
+   {
+    "en": "Sy koop 'n vinnige motor vir werk toe gaan.",
+    "ko": "",
+    "highlight": "vinnige"
+   },
+   {
+    "en": "Dit is 'n hoë boom met baie blare.",
+    "ko": "",
+    "highlight": "hoë"
+   },
+   {
+    "en": "Sy het 'n nuwe rok vir die partytjie gekoop.",
+    "ko": "",
+    "highlight": "nuwe"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Die boek is interessante.",
+    "right": "Die boek is interessant.",
+    "note": "Predicate adjectives (placed after 'is/was' with no noun following) never take the inflected -e."
+   },
+   {
+    "wrong": "'n koude nag",
+    "right": "'n koue nag",
+    "note": "Adjectives ending in -d after a diphthong drop the 'd' completely when taking -e (koud -> koue)."
+   },
+   {
+    "wrong": "'n rooie appel",
+    "right": "'n rooi appel",
+    "note": "Basic monosyllabic colours like rooi, blou, wit, and swart generally remain uninflected before nouns."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Sy woon in 'n ___ dorpie.' (mooi)",
+    "options": [
+     "mooie",
+     "mooiste",
+     "mooi",
+     "mooies"
+    ],
+    "answer": 2,
+    "explanation": "Monosyllabic adjectives ending in a diphthong like 'mooi' or 'vry' typically do not take -e."
+   },
+   {
+    "question": "Complete the sentence: 'Hulle drink ___ sap.' (vars)",
+    "options": [
+     "varste",
+     "varse",
+     "varser",
+     "vars"
+    ],
+    "answer": 3,
+    "explanation": "Monosyllabic adjectives ending in -rs like vars or naar do not take an inflected -e."
+   },
+   {
+    "question": "Complete the sentence: 'Dit was 'n ___ ervaring.' (ongelooflik)",
+    "options": [
+     "ongelooflike",
+     "ongelooflik",
+     "ongeloofliks",
+     "ongelooflikte"
+    ],
+    "answer": 0,
+    "explanation": "Polysyllabic adjectives take -e when used attributively before a noun: ongelooflike."
+   },
+   {
+    "question": "Choose the inflected form of 'oud' (old): 'Hy dra 'n ___ hoed.'",
+    "options": [
+     "oude",
+     "oudte",
+     "ou",
+     "ouder"
+    ],
+    "answer": 2,
+    "explanation": "'Oud' has the irregular attributive form 'ou' before a singular or general noun ('n ou hoed)."
+   }
+  ],
+  "tip": "Adjectives after the verb (predicative) stay bare: 'Die motor is vinnig.' Adjectives right before the noun (attributive) often inflect: ''n Vinnige motor.'"
+ },
+ {
+  "id": "af-a2-separable-inseparable-verbs",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🧩",
+  "title": "Separable vs. Inseparable Verbs",
+  "subtitle": "Distinguishing aanbreek from onthou in past tense",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Separable prefix verbs insert 'ge-' between the prefix and base verb in the past tense, whereas inseparable prefix verbs never take 'ge-'.",
+  "structure": {
+   "headers": [
+    "Verb Class",
+    "Prefix Type",
+    "Past Tense Rule",
+    "Afrikaans Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Separable",
+      "Stressed prepositional (aan-, op-, uit-, af-)",
+      "Prefix + ge- + base verb",
+      "opbel -> het opgebel"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Inseparable",
+      "Unstressed (be-, ge-, her-, er-, ont-, ver-)",
+      "No 'ge-' added at all",
+      "verstaan -> het verstaan"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Present: Separable",
+      "Prefix splits to end of clause in simple present",
+      "Hy tel die tas op.",
+      "He picks up the bag."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Present: Inseparable",
+      "Prefix stays attached to the verb stem",
+      "Sy onthou die antwoord.",
+      "She remembers the answer."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Separable in Present Tense",
+    "example": "Hy maak elke oggend die venster oop.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Separable in Perfect Tense",
+    "example": "Ons het die aansoekvorm gister ingevul.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Inseparable (Zero 'ge-')",
+    "example": "Ek het dadelik my ou onderwyser herken.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Hy bel sy vriend vanaand op.",
+    "ko": "",
+    "highlight": "bel"
+   },
+   {
+    "en": "Die vergadering het reeds begin.",
+    "ko": "",
+    "highlight": "begin"
+   },
+   {
+    "en": "Hulle het al die ligte afgeskakel.",
+    "ko": "",
+    "highlight": "afgeskakel"
+   },
+   {
+    "en": "Ek het jou boodskap gister ontvang.",
+    "ko": "",
+    "highlight": "ontvang"
+   },
+   {
+    "en": "Sy maak die deur vir die gaste oop.",
+    "ko": "",
+    "highlight": "oop"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ek het hom geverstaan.",
+    "right": "Ek het hom verstaan.",
+    "note": "Inseparable prefixes (be-, her-, ont-, ver-) never take 'ge-' in the past tense."
+   },
+   {
+    "wrong": "Hy het geaanhou met praat.",
+    "right": "Hy het aangehou met praat.",
+    "note": "Separable verbs insert -ge- between the prefix and the stem: aan + ge + hou."
+   },
+   {
+    "wrong": "Hy opmaak die boks.",
+    "right": "Hy maak die boks oop.",
+    "note": "In the simple present, separable prefixes split and move to the end of the clause."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct past tense form: 'Ons het gister die nuwe reëls ___.' (aanvaar - inseparable)",
+    "options": [
+     "geaanvaar",
+     "aangevaar",
+     "aanvaar",
+     "aanvaarge"
+    ],
+    "answer": 2,
+    "explanation": "'Aanvaar' is inseparable (accent on -vaar), so it takes no 'ge-' prefix in the past tense: 'het aanvaar'."
+   },
+   {
+    "question": "Choose the correct past tense form: 'Sy het haar ouers ___.' (opbel - separable)",
+    "options": [
+     "geopbel",
+     "opgebeller",
+     "opbel",
+     "opgebel"
+    ],
+    "answer": 3,
+    "explanation": "'Opbel' is separable; the past marker -ge- is inserted between the prefix and stem: op + ge + bel."
+   },
+   {
+    "question": "How do you say in the present: 'He invites his friends' (nooi ... uit)?",
+    "options": [
+     "Hy nooi sy vriende uit.",
+     "Hy uitnooi sy vriende.",
+     "Hy nooi uit sy vriende.",
+     "Hy het sy vriende uitnooi."
+    ],
+    "answer": 0,
+    "explanation": "In simple present clauses, the separable prefix ('uit') shifts to the end of the clause."
+   },
+   {
+    "question": "Complete the past tense: 'Ek het my sleutels ___.' (verloor - inseparable)",
+    "options": [
+     "vergeleen",
+     "verloor",
+     "geverloor",
+     "vergeloor"
+    ],
+    "answer": 1,
+    "explanation": "Verbs beginning with 'ver-' are inseparable and never receive 'ge-': 'het verloor'."
+   }
+  ],
+  "tip": "Mnemonic for inseparable prefixes with zero 'ge-': Be-Her-Er-Ont-Ver-Ge (B-HERO-VG). If it begins with one of these unstressed prefixes, never add 'ge-'!"
+ },
+ {
+  "id": "af-a2-conjunction-groups-word-order",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#7C3AED",
+  "emoji": "🚦",
+  "title": "Conjunction Groups & Word Order",
+  "subtitle": "Navigating Group 1, 2, and 3 conjunctions",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Afrikaans conjunctions dictate word order: Group 1 leaves normal SVO order, Group 2 triggers verb inversion, and Group 3 pushes the verb to the end.",
+  "structure": {
+   "headers": [
+    "Group",
+    "Common Conjunctions",
+    "Word Order Rule",
+    "Afrikaans Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Groep 1 (Coordinating)",
+      "en, maar, want, of",
+      "Subject + Verb unchanged (SVO)",
+      "want hy is siek"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Groep 2 (Adverbial)",
+      "daarom, dan, tog, anders",
+      "Inversion: Verb + Subject",
+      "daarom is hy siek"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Groep 3 (Subordinating)",
+      "dat, omdat, as, toe, terwyl",
+      "Verb moves to the clause end",
+      "omdat hy siek is"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Group 1: Group-neutral Linking",
+    "example": "Hy wil saamkom, maar hy het nie geld nie.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Group 2: Causality with Inversion",
+    "example": "Dit reën hard, daarom bly ons by die huis.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Group 3: Dependent Subordinate Clauses",
+    "example": "Ek weet dat sy elke dag hard leer.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Hy gaan winkel toe, want hy het brood nodig.",
+    "ko": "",
+    "highlight": "want hy het"
+   },
+   {
+    "en": "Ek het my beursie vergeet, daarom kan ek nie betaal nie.",
+    "ko": "",
+    "highlight": "daarom kan ek"
+   },
+   {
+    "en": "Ons bly binne omdat die weer so sleg is.",
+    "ko": "",
+    "highlight": "omdat die weer so sleg is"
+   },
+   {
+    "en": "Toe die son opkom, het die voëls begin sing.",
+    "ko": "",
+    "highlight": "Toe die son opkom"
+   },
+   {
+    "en": "Jy moet nou eet, anders word die kos koud.",
+    "ko": "",
+    "highlight": "anders word die kos"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Hy bly by die huis want hy is siek.",
+    "right": "Hy bly by die huis, want hy is siek.",
+    "note": "In Group 1, 'want' keeps normal order (SVO: hy is), but learners often confuse it with 'omdat' (which sends 'is' to the end)."
+   },
+   {
+    "wrong": "Dit reën, daarom ons bly by die huis.",
+    "right": "Dit reën, daarom bly ons by die huis.",
+    "note": "Group 2 conjunctions (like daarom) require immediate inversion of the verb and subject: daarom + bly + ons."
+   },
+   {
+    "wrong": "Ek weet dat hy kom môre.",
+    "right": "Ek weet dat hy môre kom.",
+    "note": "Group 3 conjunctions (like dat, omdat) push the finite verb to the very end of the sub-clause."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the Group 2 sentence: 'Ek is moeg, daarom ___ ek vroeg slaap.'",
+    "options": [
+     "gaan",
+     "ek gaan",
+     "gaan ek nie",
+     "het gegaan"
+    ],
+    "answer": 0,
+    "explanation": "Group 2 words like 'daarom' cause inversion: Conjunction + Verb + Subject ('daarom gaan ek...')."
+   },
+   {
+    "question": "Complete the Group 3 sentence: 'Sy sê dat sy vanaand 'n fliek ___.'",
+    "options": [
+     "kyk",
+     "kyk sy",
+     "sal kyk",
+     "sal kyk sy"
+    ],
+    "answer": 2,
+    "explanation": "Group 3 conjunction 'dat' forces verbs to the end of the clause ('sal kyk')."
+   },
+   {
+    "question": "Which conjunction belongs to Group 1 (normal SVO order)?",
+    "options": [
+     "omdat",
+     "daarom",
+     "want",
+     "terwyl"
+    ],
+    "answer": 2,
+    "explanation": "'Want' is a Group 1 conjunction; the word order following it remains Subject + Verb."
+   },
+   {
+    "question": "Complete the conditional clause: 'As dit reën, ___ ons nie park toe nie.'",
+    "options": [
+     "ons gaan",
+     "gaan ons",
+     "gaan ons sal",
+     "ons sal gaan"
+    ],
+    "answer": 1,
+    "explanation": "When a subordinate clause (Group 3 with 'As') comes first, the main clause begins with the inverted verb: 'gaan ons'."
+   }
+  ],
+  "tip": "Compare 'want' vs 'omdat': '...want hy IS siek' (Group 1: verb stays second) vs '...omdat hy siek IS' (Group 3: verb goes to end)."
+ },
+ {
+  "id": "af-a2-future-tense-sal",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "⏳",
+  "title": "Future Tense with 'Sal'",
+  "subtitle": "Forming future statements using Verb 1 and Verb 2 brackets",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "To form the future tense, place the auxiliary 'sal' in the Verb 1 slot and push the bare infinitive verb to the end of the clause in Verb 2.",
+  "structure": {
+   "headers": [
+    "Position",
+    "Element",
+    "Role in Sentence",
+    "Example Segment"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Verb 1 (V1)",
+      "sal",
+      "Modal auxiliary in second position",
+      "Ons sal ..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Middle Field",
+      "STOMPI elements",
+      "Time, Object, Manner, Place",
+      "... môre die nuwe motor ..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Verb 2 (V2)",
+      "Infinitive verb",
+      "Bare main verb at end of clause",
+      "... koop."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Expressing Future Intent",
+    "example": "Ek sal jou môreoggend by die kantoor sien.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Future with Negation (Double Nie)",
+    "example": "Hulle sal nie die wedstryd wen nie.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Polite Offers / Promises",
+    "example": "Ons sal die kos vir die gaste voorberei.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ons sal volgende week Kaapstad toe ry.",
+    "ko": "",
+    "highlight": "sal"
+   },
+   {
+    "en": "Ek sal jou vanaand na ete opbel.",
+    "ko": "",
+    "highlight": "opbel"
+   },
+   {
+    "en": "Die trein sal binne tien minute hier aankom.",
+    "ko": "",
+    "highlight": "aankom"
+   },
+   {
+    "en": "Sy sal nie die eksamen sonder voorbereiding slaag nie.",
+    "ko": "",
+    "highlight": "slaag nie"
+   },
+   {
+    "en": "Wat sal jy met daardie geld maak?",
+    "ko": "",
+    "highlight": "maak"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ek sal gaan koop brood.",
+    "right": "Ek sal brood gaan koop.",
+    "note": "The main verb(s) must go to the very end of the clause (Verb 2 position)."
+   },
+   {
+    "wrong": "Ons sal gekoop 'n huis.",
+    "right": "Ons sal 'n huis koop.",
+    "note": "'Sal' takes the plain infinitive without 'ge-'; 'gekoop' is past tense."
+   },
+   {
+    "wrong": "Hy sal kom nie.",
+    "right": "Hy sal nie kom nie.",
+    "note": "Negative sentences with 'sal' require 'nie' after the auxiliary/object and a final 'nie' at the clause end."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the future tense: 'Hulle ___ môre 'n nuwe huis besoek.'",
+    "options": [
+     "het",
+     "sal",
+     "gaan te",
+     "word"
+    ],
+    "answer": 1,
+    "explanation": "The auxiliary verb for future tense in Afrikaans is 'sal'."
+   },
+   {
+    "question": "Where does the main verb go in: 'Ons sal môre die rekening ___' (betaal)?",
+    "options": [
+     "betaal",
+     "gebetaal",
+     "te betaal",
+     "sal betaal"
+    ],
+    "answer": 0,
+    "explanation": "The main verb appears in its base infinitive form at the end of the sentence: 'betaal'."
+   },
+   {
+    "question": "Choose the correct sentence order for future tense:",
+    "options": [
+     "Ek sal koop 'n boek môre.",
+     "Ek sal môre 'n boek koop.",
+     "Ek koop sal môre 'n boek.",
+     "Ek sal gekoop 'n boek môre."
+    ],
+    "answer": 1,
+    "explanation": "STOMPI word order dictates: Subject (Ek) + V1 (sal) + Time (môre) + Object ('n boek) + V2 (koop)."
+   },
+   {
+    "question": "Complete the negative future sentence: 'Hy sal dit nie ___ nie.'",
+    "options": [
+     "verstaan",
+     "verstaan het",
+     "geverstaan",
+     "sal verstaan"
+    ],
+    "answer": 0,
+    "explanation": "In future negative sentences, the base infinitive is placed before the final 'nie': '...nie verstaan nie.'"
+   }
+  ],
+  "tip": "Think of 'sal' and the end verb as bookends: 'sal' opens the action in slot 2, and the infinitive closes the clause right at the end."
+ },
+ {
+  "id": "af-a2-object-marker-vir",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "👥",
+  "title": "Personal Object Marker 'Vir'",
+  "subtitle": "Marking human direct objects to avoid ambiguity and sound natural",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "In Afrikaans, the preposition 'vir' is frequently placed before animate direct objects, especially personal pronouns and proper names, to clearly designate the receiver of an action.",
+  "structure": {
+   "headers": [
+    "Object Type",
+    "Pattern with Vir",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Personal Pronoun",
+      "Ek sien vir hom",
+      "I see him"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Proper Name",
+      "Sy nooi vir Johan",
+      "She invites Johan"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Animate Noun",
+      "Hulle help vir die onderwyser",
+      "They help the teacher"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Inanimate Noun",
+      "Hy lees die boek (no 'vir')",
+      "He reads the book"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Personal Pronouns",
+    "example": "Ons ken vir haar baie goed.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Proper Names",
+    "example": "Hulle soek al die hele oggend vir Pieter.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Disambiguation",
+    "example": "Die leeu byt vir die jagter.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ek sien vir jou by die skool.",
+    "ko": "",
+    "highlight": "vir jou"
+   },
+   {
+    "en": "Het jy gister vir Sarie gebel?",
+    "ko": "",
+    "highlight": "vir Sarie"
+   },
+   {
+    "en": "Die hond jaag vir hom in die tuin rond.",
+    "ko": "",
+    "highlight": "vir hom"
+   },
+   {
+    "en": "Ons wag al lank vir ma.",
+    "ko": "",
+    "highlight": "vir ma"
+   },
+   {
+    "en": "Die polisie soek vir die dief.",
+    "ko": "",
+    "highlight": "vir die dief"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ek lees vir die koerant elke oggend.",
+    "right": "Ek lees die koerant elke oggend.",
+    "note": "Do not insert 'vir' before inanimate objects like books or newspapers."
+   },
+   {
+    "wrong": "Sy sien vir dit op die tafel.",
+    "right": "Sy sien dit op die tafel.",
+    "note": "Inanimate 'dit' should never take the personal object marker 'vir'."
+   },
+   {
+    "wrong": "Hy skop vir die bal oor die heining.",
+    "right": "Hy skop die bal oor die heining.",
+    "note": "'Bal' is an inanimate object, so direct 'vir' cannot be used."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'I am helping Anna today' -> 'Ek help vandag ___.'",
+    "options": [
+     "vir Anna",
+     "aan Anna",
+     "met Anna",
+     "van Anna"
+    ],
+    "answer": 0,
+    "explanation": "In Afrikaans, animate direct objects such as names are preceded by 'vir'."
+   },
+   {
+    "question": "Choose the sentence that incorrectly uses 'vir':",
+    "options": [
+     "Ons wag vir die bus.",
+     "Sy soek vir haar sleutels.",
+     "Ek ken vir Dawid.",
+     "Hulle roep vir my."
+    ],
+    "answer": 1,
+    "explanation": "'Sleutels' (keys) is an inanimate noun and cannot take direct personal 'vir'."
+   },
+   {
+    "question": "How do you say 'We saw him yesterday'?",
+    "options": [
+     "Ons het gister hom gesien.",
+     "Ons het gister aan hom gesien.",
+     "Ons het gister vir hom gesien.",
+     "Ons het gister van hom gesien."
+    ],
+    "answer": 2,
+    "explanation": "Personal pronouns acting as direct objects typically take 'vir' ('vir hom')."
+   },
+   {
+    "question": "Which object can correctly take the personal marker 'vir'?",
+    "options": [
+     "die rekenaar",
+     "die appel",
+     "die motor",
+     "die dokter"
+    ],
+    "answer": 3,
+    "explanation": "'Die dokter' is animate and human, making 'vir die dokter' natural as a direct object."
+   }
+  ],
+  "tip": "Think of 'vir' before a person as an accusative flag: use it when referring to people or beloved pets, but never for inanimate things!"
+ },
+ {
+  "id": "af-a2-pronominal-adverbs-preposition-pronouns",
+  "level": "a2",
+  "category": "advanced",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔗",
+  "title": "Pronominal Adverbs (Daar- and Waar- Compounds)",
+  "subtitle": "Combining adverbs with prepositions instead of using preposition + 'dit'",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "In Afrikaans, you cannot combine a preposition directly with the inanimate pronoun 'dit'; instead, replace 'dit' with 'daar-' (or 'waar-' in questions) fused to the preposition.",
+  "structure": {
+   "headers": [
+    "Incorrect Calque",
+    "Correct Compound",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "*in dit",
+      "daarin",
+      "in it / inside"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "*met dit",
+      "daarmee",
+      "with it / with that"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "*vir dit",
+      "daarvoor",
+      "for it / for that"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "*aan dit",
+      "daaraan",
+      "on it / about it"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Statement with Daar-",
+    "example": "Die boks is leeg, daar is niks daarin nie.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Question with Waar-",
+    "example": "Waarmee sny jy die brood?",
+    "translation": ""
+   },
+   {
+    "color": "#A78BFA",
+    "label": "Separated Compounds",
+    "example": "Daar dink ek glad nie aan nie.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Wat wil jy daarmee doen?",
+    "ko": "",
+    "highlight": "daarmee"
+   },
+   {
+    "en": "Ons praat gereeld daaroor.",
+    "ko": "",
+    "highlight": "daaroor"
+   },
+   {
+    "en": "Waarna kyk julle nou?",
+    "ko": "",
+    "highlight": "Waarna"
+   },
+   {
+    "en": "Ek betaal met graagte daarvoor.",
+    "ko": "",
+    "highlight": "daarvoor"
+   },
+   {
+    "en": "Daar steek geen waarheid daarin nie.",
+    "ko": "",
+    "highlight": "daarin"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ek stem nie saam met dit nie.",
+    "right": "Ek stem nie daarmee saam nie.",
+    "note": "'Met dit' is a direct English calque; use 'daarmee' ('met' mutates to '-mee')."
+   },
+   {
+    "wrong": "Wat dink jy van dit?",
+    "right": "Wat dink jy daarvan?",
+    "note": "Use 'daarvan' rather than 'van dit' when referring to inanimate ideas or things."
+   },
+   {
+    "wrong": "Hy kyk vir dit.",
+    "right": "Hy kyk daarna.",
+    "note": "Preposition 'na' combines with 'daar-' to become 'daarna' when pointing to things."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you ask 'What are you waiting for?' in Afrikaans?",
+    "options": [
+     "Vir wat wag jy?",
+     "Waarvoor wag jy?",
+     "Waatop wag jy?",
+     "Waarin wag jy?"
+    ],
+    "answer": 1,
+    "explanation": "In questions, 'vir' + 'wat' merges into the pronominal adverb 'waarvoor'."
+   },
+   {
+    "question": "Choose the correct replacement for '*met dit':",
+    "options": [
+     "daarmet",
+     "daaraan",
+     "daarmee",
+     "daarop"
+    ],
+    "answer": 2,
+    "explanation": "When combined with 'daar-' or 'waar-', the preposition 'met' irregularily changes into '-mee'."
+   },
+   {
+    "question": "Complete the sentence: 'Die glas val en al die water loop ___ uit.'",
+    "options": [
+     "daarvan",
+     "daaroor",
+     "daarin",
+     "daaruit"
+    ],
+    "answer": 3,
+    "explanation": "'Uit' (out of) combines with 'daar-' to form 'daaruit' (out of it)."
+   },
+   {
+    "question": "Which form is grammatically incorrect in standard Afrikaans?",
+    "options": [
+     "oor dit",
+     "daaroor",
+     "waaroor",
+     "daarop"
+    ],
+    "answer": 0,
+    "explanation": "'Oor dit' is an ungrammatical calque from English; standard Afrikaans requires 'daaroor'."
+   }
+  ],
+  "tip": "Remember special mutating prepositions: 'met' becomes '-mee' (daarmee), and 'tot' becomes '-toe' (daartoe)!"
+ },
+ {
+  "id": "af-b1-passive-voice-word-deur",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#EC4899",
+  "emoji": "🔄",
+  "title": "Passive Voice with 'Word' and 'Is'",
+  "subtitle": "Mastering present passive ('word') and past passive ('is')",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "Afrikaans uses the auxiliary 'word' for the present passive and 'is' (not 'het') for the past passive, introducing the agent with 'deur'.",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Auxiliary + Participle",
+    "Afrikaans Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present Passive",
+      "word + ge-...",
+      "Die brief word geskryf"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past Passive",
+      "is + ge-... (never 'het')",
+      "Die brief is geskryf"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Future Passive",
+      "sal + ge-... + word",
+      "Die brief sal geskryf word"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Agent Marker",
+      "deur + agent",
+      "...deur die man geskryf"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DB2777",
+    "label": "Present Action",
+    "example": "Die motors word daagliks gewas.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Past Event",
+    "example": "Die huis is verlede jaar gebou.",
+    "translation": ""
+   },
+   {
+    "color": "#F472B6",
+    "label": "Known Agent with Deur",
+    "example": "Die toespraak word deur die president gelewer.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Die kos word deur my ouma gekook.",
+    "ko": "",
+    "highlight": "word deur my ouma gekook"
+   },
+   {
+    "en": "Al die kaartjies is gister verkoop.",
+    "ko": "",
+    "highlight": "is gister verkoop"
+   },
+   {
+    "en": "Die venster word nou skoongemaak.",
+    "ko": "",
+    "highlight": "word nou skoongemaak"
+   },
+   {
+    "en": "Die hond is deur 'n veearts behandel.",
+    "ko": "",
+    "highlight": "is deur 'n veearts behandel"
+   },
+   {
+    "en": "Nuwe reëls word vandag aangekondig.",
+    "ko": "",
+    "highlight": "word vandag aangekondig"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Die boek het geskryf deur haar.",
+    "right": "Die boek is deur haar geskryf.",
+    "note": "Never use 'het' for past passive; Afrikaans uses 'is + ge-participle'."
+   },
+   {
+    "wrong": "Die werk word doen van my.",
+    "right": "Die werk word deur my gedoen.",
+    "note": "The agent preposition in passive clauses is 'deur', not 'van'."
+   },
+   {
+    "wrong": "Die lied is geword gesing.",
+    "right": "Die lied is gesing.",
+    "note": "Past passive does not retain 'word'; 'word' is entirely replaced by 'is'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'The car is being washed right now'?",
+    "options": [
+     "Die motor is nou gewas.",
+     "Die motor word nou gewas.",
+     "Die motor sal nou was.",
+     "Die motor het nou gewas."
+    ],
+    "answer": 1,
+    "explanation": "The present passive uses 'word + ge-participle' ('word ... gewas')."
+   },
+   {
+    "question": "Which sentence correctly expresses the past passive: 'The bread was baked by mother'?",
+    "options": [
+     "Die brood het deur ma gebak.",
+     "Die brood was gebak deur ma.",
+     "Die brood is deur ma gebak.",
+     "Die brood word deur ma gebak het."
+    ],
+    "answer": 2,
+    "explanation": "Past passive is formed using 'is' and places the ge-participle clause-finally."
+   },
+   {
+    "question": "What preposition is used to indicate the agent ('by') in a passive sentence?",
+    "options": [
+     "met",
+     "van",
+     "vir",
+     "deur"
+    ],
+    "answer": 3,
+    "explanation": "The agent in Afrikaans passive structures is introduced with 'deur'."
+   },
+   {
+    "question": "Convert active 'Pieter bou die muur' to present passive:",
+    "options": [
+     "Die muur word deur Pieter gebou.",
+     "Die muur is deur Pieter gebou.",
+     "Die muur sal deur Pieter bou.",
+     "Die muur het deur Pieter gebou."
+    ],
+    "answer": 0,
+    "explanation": "'Word + ge-participle' is the correct formulation for the present passive."
+   }
+  ],
+  "tip": "A classic English speaker trap: 'The car is washed' in Afrikaans means it HAS BEEN washed ('is gewas'). If it is happening right now, use 'word gewas'!"
+ },
+ {
+  "id": "af-b1-infinitive-clauses-om-te",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#10B981",
+  "emoji": "🎯",
+  "title": "Infinitive Clauses with 'Om ... Te'",
+  "subtitle": "Framing purpose and complement clauses cleanly at sentence ends",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Infinitive clauses are framed by placing 'om' at the beginning of the clause and the particle 'te' immediately before the main infinitive at the very end.",
+  "structure": {
+   "headers": [
+    "Clause Type",
+    "Frame Structure",
+    "Afrikaans Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Purpose (in order to)",
+      "om ... te + V",
+      "Ek oefen om fiks te bly"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Verb Complement",
+      "probeer om ... te + V",
+      "Hy probeer om vroeg te kom"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adjective Complement",
+      "maklik om ... te + V",
+      "Dit is maklik om te leer"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Frame",
+      "om nie ... te + V + nie",
+      "om nie laat te wees nie"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Expressing Purpose",
+    "example": "Hy gaan winkel toe om kos te koop.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Complements of Desire/Attempt",
+    "example": "Ons beplan om volgende week te trek.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Negative Infinitive Clauses",
+    "example": "Ek belowe om nie weer te jok nie.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dit is lekker om saam te kuier.",
+    "ko": "",
+    "highlight": "om saam te kuier"
+   },
+   {
+    "en": "Sy leer hard om die eksamen te slaag.",
+    "ko": "",
+    "highlight": "om die eksamen te slaag"
+   },
+   {
+    "en": "Hulle het besluit om 'n nuwe motor te koop.",
+    "ko": "",
+    "highlight": "om 'n nuwe motor te koop"
+   },
+   {
+    "en": "Moenie vergeet om die deur te sluit nie.",
+    "ko": "",
+    "highlight": "om die deur te sluit"
+   },
+   {
+    "en": "Dit is belangrik om elke dag water te drink.",
+    "ko": "",
+    "highlight": "om elke dag water te drink"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Hy hardloop te haal die bus.",
+    "right": "Hy hardloop om die bus te haal.",
+    "note": "Unlike English 'to catch', Afrikaans requires the two-part bracket 'om ... te + verb'."
+   },
+   {
+    "wrong": "Dit is moeilik om te verstaan dit.",
+    "right": "Dit is moeilik om dit te verstaan.",
+    "note": "All objects and modifiers must sit between 'om' and 'te'; 'te + verb' must stay at the very end."
+   },
+   {
+    "wrong": "Sy het vergeet om te die melk koop.",
+    "right": "Sy het vergeet om die melk te koop.",
+    "note": "'Te' must directly precede the infinitive verb, not the noun phrase."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the purpose clause: 'Ek werk hard ___ geld ___ verdien.'",
+    "options": [
+     "vir ... te",
+     "om ... te",
+     "om ... vir",
+     "om ... ge-"
+    ],
+    "answer": 1,
+    "explanation": "Infinitive clauses are framed using 'om' at the beginning and 'te' before the verb at the end."
+   },
+   {
+    "question": "Where does the object 'Afrikaans' go in 'Dit is lekker om (leer) (Afrikaans) (te)'?",
+    "options": [
+     "om te leer Afrikaans",
+     "om te Afrikaans leer",
+     "om Afrikaans te leer",
+     "om Afrikaans leer te"
+    ],
+    "answer": 2,
+    "explanation": "The object sits inside the frame: 'om' + [object] + 'te' + [verb]."
+   },
+   {
+    "question": "Which sentence correctly expresses 'He tries not to fall'?",
+    "options": [
+     "Hy probeer om te nie val nie.",
+     "Hy probeer om val nie te nie.",
+     "Hy probeer nie om te val nie.",
+     "Hy probeer om nie te val nie."
+    ],
+    "answer": 3,
+    "explanation": "'Nie' follows 'om', preceding 'te + infinitive', with the second 'nie' closing the clause."
+   },
+   {
+    "question": "Choose the correctly ordered sentence:",
+    "options": [
+     "Ons beplan om môre na die strand te gaan.",
+     "Ons beplan te gaan môre na die strand om.",
+     "Ons beplan om te gaan môre na die strand.",
+     "Ons beplan na die strand om môre te gaan."
+    ],
+    "answer": 0,
+    "explanation": "'Om' opens the clause after the main verb, followed by time and place, ending in 'te gaan'."
+   }
+  ],
+  "tip": "Treat 'om ... te' like a sandwich: 'om' is the top slice of bread, 'te + verb' is the bottom slice, and all objects and details go in the middle!"
+ },
+ {
+  "id": "af-b1-relative-clauses-wat-waar",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#10B981",
+  "emoji": "🧩",
+  "title": "Relative Clauses with 'Wat' and Compound Relatives",
+  "subtitle": "Connecting sentences seamlessly with invariant 'wat' and 'waar-' compounds",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Afrikaans uses the invariant pronoun 'wat' for both persons and things as subject or object, but switches to 'waar-' compounds when the antecedent is governed by a preposition.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Relative Form",
+    "Afrikaans Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Subject (Person or Thing)",
+      "wat",
+      "Die man wat daar loop"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Direct Object",
+      "wat",
+      "Die boek wat ek lees"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Preposition + Thing",
+      "waar- + prep",
+      "Die stoel waarop hy sit"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Preposition + Person",
+      "prep + wie",
+      "Die man met wie sy praat"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Subject Relative",
+    "example": "Die meisie wat daar sing, is my suster.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Compound with Waar-",
+    "example": "Die pen waarmee ek skryf, is blou.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Person with Preposition",
+    "example": "Die vriende aan wie ons dink, bly ver.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Die vrou wat langs my woon, is baie vriendelik.",
+    "ko": "",
+    "highlight": "wat langs my woon"
+   },
+   {
+    "en": "Hier is die huis waarin ons grootgeword het.",
+    "ko": "",
+    "highlight": "waarin ons grootgeword het"
+   },
+   {
+    "en": "Die probleem waaroor almal praat, is ingewikkeld.",
+    "ko": "",
+    "highlight": "waaroor almal praat"
+   },
+   {
+    "en": "Die kinders wat buite speel, maak baie geraas.",
+    "ko": "",
+    "highlight": "wat buite speel"
+   },
+   {
+    "en": "Die man na wie sy luister, is 'n professor.",
+    "ko": "",
+    "highlight": "na wie sy luister"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Die man wie daar staan is lank.",
+    "right": "Die man wat daar staan is lank.",
+    "note": "Use 'wat' as the relative subject pronoun for people, never 'wie'."
+   },
+   {
+    "wrong": "Die tafel op wat die boek lê.",
+    "right": "Die tafel waarop die boek lê.",
+    "note": "Never use 'prep + wat'; merge into a 'waar-' compound ('waarop') for inanimate antecedents."
+   },
+   {
+    "wrong": "Die vrou waarmee hy getroud is.",
+    "right": "Die vrou met wie hy getroud is.",
+    "note": "For human antecedents after a preposition, use '[preposition] + wie', not 'waar-'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'Die student ___ die prys gewen het, is baie slim.'",
+    "options": [
+     "wie",
+     "wat",
+     "waaraan",
+     "wie se"
+    ],
+    "answer": 1,
+    "explanation": "The invariant relative pronoun 'wat' is used for both people and things acting as subjects."
+   },
+   {
+    "question": "How do you say 'The instrument with which he plays'?",
+    "options": [
+     "Die instrument met wat hy speel",
+     "Die instrument met wie hy speel",
+     "Die instrument waarmee hy speel",
+     "Die instrument wat hy mee speel"
+    ],
+    "answer": 2,
+    "explanation": "Inanimate antecedents with prepositions combine into 'waar-' compounds ('waar' + 'met' -> 'waarmee')."
+   },
+   {
+    "question": "Complete the sentence referring to a person: 'Die dokter na ___ sy luister...'",
+    "options": [
+     "wat",
+     "waar",
+     "waarna",
+     "wie"
+    ],
+    "answer": 3,
+    "explanation": "When referring to a person after a preposition ('na'), use 'wie' ('na wie')."
+   },
+   {
+    "question": "Identify the incorrect relative phrase:",
+    "options": [
+     "die huis in wat ons woon",
+     "die huis waarin ons woon",
+     "die huis wat ons koop",
+     "die mense wat daar bly"
+    ],
+    "answer": 0,
+    "explanation": "'In wat' is incorrect; Afrikaans requires the compound 'waarin'."
+   }
+  ],
+  "tip": "Simple rule of thumb: Use 'wat' for regular descriptions (people and things). When a preposition is involved, use '[prep] + wie' for people, and 'waar-[prep]' for things!"
+ },
+ {
+  "id": "af-b1-complex-negation-words",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#4F46E5",
+  "emoji": "🚫",
+  "title": "Complex Negation with Inherent Negative Words",
+  "subtitle": "Master the sentence-final 'nie' when using negative adverbs and pronouns",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "When an inherently negative word like 'nooit', 'niemand', or 'nêrens' begins the negation, the first 'nie' is omitted but the clause-final 'nie' is still required.",
+  "structure": {
+   "headers": [
+    "Negative Word",
+    "Afrikaans Pattern",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "nooit",
+      "Hy kom nooit betyds nie.",
+      "never"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "niemand",
+      "Niemand weet die antwoord nie.",
+      "nobody / no one"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "nêrens",
+      "Ons kan dit nêrens vind nie.",
+      "nowhere"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "geen",
+      "Sy het geen geld oor nie.",
+      "no / none"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6366F1",
+    "label": "Denying frequency with 'nooit'",
+    "example": "Ek het nog nooit daardie fliek gesien nie.",
+    "translation": ""
+   },
+   {
+    "color": "#4338CA",
+    "label": "Denying persons with 'niemand'",
+    "example": "Niemand praat vandag in die klas nie.",
+    "translation": ""
+   },
+   {
+    "color": "#312E81",
+    "label": "Denying location with 'nêrens'",
+    "example": "Hulle kan die verlore sleutels nêrens kry nie.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ek het nooit daardie storie geglo nie.",
+    "ko": "",
+    "highlight": "nooit daardie storie geglo nie"
+   },
+   {
+    "en": "Niemand wil vandag buite in die reën speel nie.",
+    "ko": "",
+    "highlight": "Niemand wil vandag buite in die reën speel nie"
+   },
+   {
+    "en": "Ons het nêrens 'n oop winkel gesien nie.",
+    "ko": "",
+    "highlight": "nêrens 'n oop winkel gesien nie"
+   },
+   {
+    "en": "Daar is geen rede vir kommer nie.",
+    "ko": "",
+    "highlight": "geen rede vir kommer nie"
+   },
+   {
+    "en": "Hy sê niks oor die plan nie.",
+    "ko": "",
+    "highlight": "niks oor die plan nie"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Niemand het die man gesien.",
+    "right": "Niemand het die man gesien nie.",
+    "note": "Inherently negative words still require the closing sentence-final 'nie'."
+   },
+   {
+    "wrong": "Ek het nie nooit gerook nie.",
+    "right": "Ek het nooit gerook nie.",
+    "note": "Do not put a first 'nie' right before or after 'nooit'; the inherent negative word replaces 'nie 1'."
+   },
+   {
+    "wrong": "Hy het nie geen geld nie.",
+    "right": "Hy het geen geld nie.",
+    "note": "Avoid double-marking 'nie' before 'geen'; use only 'geen' plus the sentence-final 'nie'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Niemand ken die pad na die dorp ___.'",
+    "options": [
+     "nie",
+     "geen",
+     "niks",
+     "nooit"
+    ],
+    "answer": 0,
+    "explanation": "'Niemand' acts as the first negative element, so the sentence must close with the final 'nie'."
+   },
+   {
+    "question": "Choose the correct sentence for 'I have never seen him.'",
+    "options": [
+     "Ek het nie hom nooit gesien.",
+     "Ek het hom nooit gesien nie.",
+     "Ek het hom nooit gesien.",
+     "Ek het nie hom gesien nie nooit."
+    ],
+    "answer": 1,
+    "explanation": "'Nooit' replaces the first 'nie', and the clause must conclude with 'nie'."
+   },
+   {
+    "question": "Which word correctly completes: 'Ons soek die hond, maar hy is ___ te vinde nie'?",
+    "options": [
+     "geen",
+     "iemand",
+     "nêrens",
+     "alreeds"
+    ],
+    "answer": 2,
+    "explanation": "'Nêrens' (nowhere) fits the context of searching without success, followed by final 'nie'."
+   },
+   {
+    "question": "Identify the grammatically correct negative statement:",
+    "options": [
+     "Daar is nie water in die beker nie geen.",
+     "Daar is geen water in die beker.",
+     "Daar is nie geen water in die beker nie.",
+     "Daar is geen water in die beker nie."
+    ],
+    "answer": 3,
+    "explanation": "'Geen' takes the place of the first negative marker and requires a final 'nie' at clause end."
+   }
+  ],
+  "tip": "Think of Afrikaans negation as a bracket: inherently negative words like 'niks', 'niemand', and 'nooit' open the bracket, but you must still close it with 'nie' at the end!"
+ },
+ {
+  "id": "af-b1-imperfect-modals-past-auxiliaries",
+  "level": "b1",
+  "category": "modals",
+  "categoryColor": "#059669",
+  "emoji": "⏳",
+  "title": "Modal Past Tenses and 'Sou'",
+  "subtitle": "Use irregular past modals without 'het' or the 'ge-' prefix",
+  "color": "#10B981",
+  "bg": "#ECFDF5",
+  "keyPoint": "Afrikaans expresses past modality and conditional mood directly through 'wou', 'kon', 'moes', and 'sou', keeping the lexical verb in bare infinitive form without 'ge-'.",
+  "structure": {
+   "headers": [
+    "Present Modal",
+    "Past / Conditional",
+    "Example Sentence"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "wil (want to)",
+      "wou (wanted to)",
+      "Ek wou die boek lees."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "kan (can / able)",
+      "kon (could)",
+      "Hy kon die swaar tas dra."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "moet (must / should)",
+      "moes (had to / should have)",
+      "Ons moes vroeg opstaan."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "sal (will)",
+      "sou (would)",
+      "Sy sou ons vandag help."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Past necessity with 'moes'",
+    "example": "Hulle moes die eksamen gister skryf.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Past ability with 'kon'",
+    "example": "Ek kon die probleem maklik oplos.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Hypothetical condition with 'sou'",
+    "example": "As ek ryk was, sou ek reis.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ek wou gister vir jou bel.",
+    "ko": "",
+    "highlight": "wou gister vir jou bel"
+   },
+   {
+    "en": "Die kinders kon nie die boom klim nie.",
+    "ko": "",
+    "highlight": "kon nie die boom klim nie"
+   },
+   {
+    "en": "Ons moes die motor dadelik stop.",
+    "ko": "",
+    "highlight": "moes die motor dadelik stop"
+   },
+   {
+    "en": "Sy sou die kos maak as sy tyd gehad het.",
+    "ko": "",
+    "highlight": "sou die kos maak"
+   },
+   {
+    "en": "Niemand kon die antwoord uitwerk nie.",
+    "ko": "",
+    "highlight": "kon die antwoord uitwerk nie"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ek het gewou huis toe gaan.",
+    "right": "Ek wou huis toe gaan.",
+    "note": "Do not use 'het gewou'. 'Wou' alone serves as the past tense."
+   },
+   {
+    "wrong": "Ons moes die deur gesluit.",
+    "right": "Ons moes die deur sluit.",
+    "note": "The main verb with a modal past does not take the past prefix 'ge-'."
+   },
+   {
+    "wrong": "Hy het gekon swem toe hy jonk was.",
+    "right": "Hy kon swem toe hy jonk was.",
+    "note": "Use 'kon' directly instead of constructing an auxiliary compound like 'het gekon'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the past modal: 'Hulle ___ gister die rekening betaal.' (had to)",
+    "options": [
+     "moet",
+     "gemors",
+     "moes",
+     "het gemoet"
+    ],
+    "answer": 2,
+    "explanation": "'Moes' is the simple past form of 'moet' (had to / should have)."
+   },
+   {
+    "question": "Choose the correct translation: 'I wanted to sleep early.'",
+    "options": [
+     "Ek het gewil vroeg slaap.",
+     "Ek wou vroeg slaap.",
+     "Ek wil vroeg geslaap.",
+     "Ek het vroeg wou slaap."
+    ],
+    "answer": 1,
+    "explanation": "'Wou' is used on its own with the bare infinitive 'slaap' (without 'ge-')."
+   },
+   {
+    "question": "Complete the conditional clause: 'As hy hard studeer het, ___ hy geslaag het.' (would)",
+    "options": [
+     "kan",
+     "sal",
+     "wil",
+     "sou"
+    ],
+    "answer": 3,
+    "explanation": "'Sou' denotes the hypothetical conditional 'would' in counterfactual and conditional statements."
+   },
+   {
+    "question": "Select the sentence with correct verb morphology:",
+    "options": [
+     "Sy kon die hek oopmaak.",
+     "Sy kon die hek geoopmaak.",
+     "Sy het gekon die hek oopmaak.",
+     "Sy het die hek kan oopmaak."
+    ],
+    "answer": 0,
+    "explanation": "'Kon' is paired directly with the bare infinitive 'oopmaak' without 'het' or 'ge-'."
+   }
+  ],
+  "tip": "Even though standard Afrikaans lost most simple past tenses, modals are the shining exception: memorize 'wou', 'kon', 'moes', and 'sou' as standalone past verbs without ever adding 'ge-'!"
+ },
+ {
+  "id": "af-b2-verb-reduplication",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#EA580C",
+  "emoji": "🔄",
+  "title": "Reduplication of Verbs and Adverbs",
+  "subtitle": "Express manner, duration, and intensity with twin words",
+  "color": "#F97316",
+  "bg": "#FFF7ED",
+  "keyPoint": "Reduplicating verbs and adverbs with a hyphen creates adverbials indicating continuous simultaneous action, gradual development, or heightened intensity.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Reduplicated Form",
+    "Semantic Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Motion Verb",
+      "loop-loop",
+      "while walking / incrementally walking"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Perception Verb",
+      "kyk-kyk",
+      "glancing intermittently / peering continuously"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Temporal Adverb",
+      "nou-nou",
+      "in a moment / very shortly"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Degree Adverb",
+      "kort-kort",
+      "repeatedly / at frequent short intervals"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F97316",
+    "label": "Simultaneous motion manner",
+    "example": "Hy het speel-speel die berg geklim.",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Iterative or cautious action",
+    "example": "Die meisie het soek-soek deur die kamer gestap.",
+    "translation": ""
+   },
+   {
+    "color": "#C2410C",
+    "label": "High frequency repetition",
+    "example": "Sy kyk kort-kort op haar horlosie.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Die oupa stap praat-praat langs die see.",
+    "ko": "",
+    "highlight": "praat-praat"
+   },
+   {
+    "en": "Hulle het lag-lag die moeilike taak voltooi.",
+    "ko": "",
+    "highlight": "lag-lag"
+   },
+   {
+    "en": "Ons sal nou-nou by die restaurant aankom.",
+    "ko": "",
+    "highlight": "nou-nou"
+   },
+   {
+    "en": "Die seuntjie het val-val oor die rotse gehardloop.",
+    "ko": "",
+    "highlight": "val-val"
+   },
+   {
+    "en": "Sy het kyk-kyk in die donker gang afgeloop.",
+    "ko": "",
+    "highlight": "kyk-kyk"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Hy het geloop-geloop na die skool.",
+    "right": "Hy het loop-loop na die skool gestap.",
+    "note": "Do not affix 'ge-' to reduplicated verbal adverbs; keep both stems in bare root form."
+   },
+   {
+    "wrong": "Sy het gesing en gesing sonder ophou.",
+    "right": "Sy het sing-sing die werk gedoen.",
+    "note": "While 'gesing en gesing' is emphatic repetition, native idiomatic manner adverbials use the hyphenated reduplication 'sing-sing'."
+   },
+   {
+    "wrong": "Ons kom nou nou.",
+    "right": "Ons kom nou-nou.",
+    "note": "Reduplicated expressions must be hyphenated in standard Afrikaans orthography."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which reduplicated form means 'effortlessly / playfully' in: 'Hy het die toets ___ geslaag'?",
+    "options": [
+     "leer-leer",
+     "lag-lag",
+     "slaap-slaap",
+     "val-val"
+    ],
+    "answer": 1,
+    "explanation": "'Lag-lag' literally means 'laughing-laughing' and idiomatically signifies doing something effortlessly or with ease."
+   },
+   {
+    "question": "Complete the temporal sentence: 'Die bus vertrek ___.' (very soon / in a minute)",
+    "options": [
+     "toe-toe",
+     "daar-daar",
+     "nou-nou",
+     "dan-dan"
+    ],
+    "answer": 2,
+    "explanation": "'Nou-nou' means 'in a short moment' or 'very soon'."
+   },
+   {
+    "question": "Choose the correct spelling for 'repeatedly checking':",
+    "options": [
+     "kyk-kyk",
+     "gekyk-kyk",
+     "kyk-en-kyk",
+     "gekyk-gekyk"
+    ],
+    "answer": 0,
+    "explanation": "Verbal reduplication uses the bare verb root joined by a hyphen without any past participle 'ge-'."
+   },
+   {
+    "question": "In 'Sy het soek-soek haar pad gevind', what does 'soek-soek' express?",
+    "options": [
+     "Direction towards home",
+     "Manner of proceeding cautiously while searching",
+     "A completed past past action",
+     "Future necessity"
+    ],
+    "answer": 1,
+    "explanation": "Reduplicating 'soek' functions adverbially to describe acting while searching along the way."
+   }
+  ],
+  "tip": "Reduplication is one of Afrikaans's unique Khoisan and Malay-influenced syntactic charms; pair identical base verb roots with a hyphen to turn actions into expressive adverbs of manner!"
+ },
+ {
+  "id": "af-b2-subjunctive-indirect-commands",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#2563EB",
+  "emoji": "🗣️",
+  "title": "Indirect Commands and Subjunctive Equivalents",
+  "subtitle": "Report desires, requests, and commands with 'moet', 'laat', and bare infinitives",
+  "color": "#3B82F6",
+  "bg": "#EFF6FF",
+  "keyPoint": "Because Afrikaans has no morphological subjunctive, indirect commands and reported wishes use 'dat ... moet', causative 'laat', or a bare infinitive clause.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Trigger Verb",
+    "Embedded Clause Pattern"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Indirect Order",
+      "beveel / vra dat",
+      "... dat die man dadelik moet kom."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Causative Command",
+      "laat",
+      "Laat hom sy hande was."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Direct Infinitive",
+      "vra om te",
+      "Hy vra om die brief te lees."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Wish / Suggestion",
+      "stel voor dat",
+      "... dat ons nou moet vertrek."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Indirect orders with 'dat ... moet'",
+    "example": "Die dokter beveel aan dat hy meer moet rus.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Permissive or imperative 'laat'",
+    "example": "Laat die kinders dadelik binnekom.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Desire for another agent to act",
+    "example": "Ek wil hê dat jy die waarheid moet praat.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Die polisie beveel dat almal moet staan.",
+    "ko": "",
+    "highlight": "dat almal moet staan"
+   },
+   {
+    "en": "My ma vra dat ons die tafel moet dek.",
+    "ko": "",
+    "highlight": "dat ons die tafel moet dek"
+   },
+   {
+    "en": "Laat hy dadelik sy werk klaarmaak.",
+    "ko": "",
+    "highlight": "Laat hy dadelik sy werk klaarmaak"
+   },
+   {
+    "en": "Ek stel voor dat ons liewer môre moet ry.",
+    "ko": "",
+    "highlight": "dat ons liewer môre moet ry"
+   },
+   {
+    "en": "Sy wil hê dat haar broer moet luister.",
+    "ko": "",
+    "highlight": "dat haar broer moet luister"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Die baas wil hê dat ek doen die werk.",
+    "right": "Die baas wil hê dat ek die werk moet doen.",
+    "note": "Subordinate 'dat' clauses require secondary verbs and modals at the end, and commands require 'moet'."
+   },
+   {
+    "wrong": "Hy beveel my om te moet vertrek.",
+    "right": "Hy beveel my om te vertrek.",
+    "note": "Do not combine 'om te' with 'moet'; use either 'om ... te + verb' or 'dat ... moet'."
+   },
+   {
+    "wrong": "Ek wil dat jy kom.",
+    "right": "Ek wil hê dat jy moet kom.",
+    "note": "In Afrikaans, 'wil' cannot take a 'dat'-clause directly; you must say 'wil hê dat...'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the indirect command: 'Die kaptein beveel dat die bemanning gereed ___.'",
+    "options": [
+     "moet wees",
+     "te wees",
+     "gewees het",
+     "is gewees"
+    ],
+    "answer": 0,
+    "explanation": "Indirect orders introduced by 'dat' rely on the modal auxiliary 'moet' placed clause-finally."
+   },
+   {
+    "question": "Which sentence correctly renders: 'I want you to tell the truth'?",
+    "options": [
+     "Ek wil dat jy die waarheid sê.",
+     "Ek wil hê jy die waarheid te praat.",
+     "Ek wil hê dat jy die waarheid moet praat.",
+     "Ek wil hê vir jou om praat die waarheid."
+    ],
+    "answer": 2,
+    "explanation": "Afrikaans requires 'wil hê dat...' followed by the subject and 'moet' for wanting someone else to perform an act."
+   },
+   {
+    "question": "Select the correct causative construction for 'Let him go':",
+    "options": [
+     "Laat gaan hom.",
+     "Laat hom gaan.",
+     "Laat hy om te gaan.",
+     "Laat hom moet gaan."
+    ],
+    "answer": 1,
+    "explanation": "'Laat' takes an object pronoun and a bare infinitive without 'te': 'Laat hom gaan'."
+   },
+   {
+    "question": "Correct the error: 'Die onderwyser vra dat die klas stil wees.'",
+    "options": [
+     "Die onderwyser vra dat die klas moet stil wees.",
+     "Die onderwyser vra om die klas stil wees.",
+     "Die onderwyser vra dat moet die klas stil wees.",
+     "Die onderwyser vra die klas om stil wees."
+    ],
+    "answer": 0,
+    "explanation": "The subordinate clause with 'dat' requires the modal 'moet' placed at the end: '...moet stil wees'."
+   }
+  ],
+  "tip": "Never translate 'I want you to [do something]' as 'Ek wil dat jy...'. Always remember the formula: 'Ek wil hê dat [onderwerp] moet [werkwoord]'!"
+ },
+ {
+  "id": "af-b2-hendiadys-loop-en-sit-en",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#7C3AED",
+  "emoji": "🪑",
+  "title": "Continuous Aspect through Hendiadys (V1 en V2)",
+  "subtitle": "Form progressive aspect with paired posture verbs 'sit en', 'staan en', 'lê en', and 'loop en'",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "Afrikaans expresses ongoing progressive aspect by joining a posture verb ('sit', 'staan', 'lê', 'loop') with 'en' and a bare second verb without any infinitive markers.",
+  "structure": {
+   "headers": [
+    "Posture Verb",
+    "Hendiadys Pattern",
+    "Progressive Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "sit (sit)",
+      "sit en lees",
+      "is sitting reading / in the middle of reading"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "staan (stand)",
+      "staan en praat",
+      "is standing talking / currently chatting"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "lê (lie)",
+      "lê en slaap",
+      "is lying asleep / resting asleep"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "loop (walk)",
+      "loop en dink",
+      "is pacing thinking / wandering about thinking"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Sedentary ongoing activity",
+    "example": "Ouma sit en brei 'n warm trui.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Upright progressive action",
+    "example": "Hulle staan en wag al vir 'n uur vir die bus.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Past progressive with 'het'",
+    "example": "Hy het die hele middag gelê en slaap.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Pa sit en kyk na die nuus op televisie.",
+    "ko": "",
+    "highlight": "sit en kyk"
+   },
+   {
+    "en": "Die kinders staan en kyk na die voëls.",
+    "ko": "",
+    "highlight": "staan en kyk"
+   },
+   {
+    "en": "Die hond lê en droom in die son.",
+    "ko": "",
+    "highlight": "lê en droom"
+   },
+   {
+    "en": "Hy loop en wonder oor sy toekoms.",
+    "ko": "",
+    "highlight": "loop en wonder"
+   },
+   {
+    "en": "Ons het ure lank gesit en gesels.",
+    "ko": "",
+    "highlight": "gesit en gesels"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Hy sit om te lees 'n koerant.",
+    "right": "Hy sit en lees 'n koerant.",
+    "note": "Afrikaans does not use 'om te' for continuous posture hendiadys; connect with 'en' directly."
+   },
+   {
+    "wrong": "Ons het gesit en lees die boek.",
+    "right": "Ons het gesit en die boek gelees.",
+    "note": "In compound past tenses, the second verb moves to the end of the clause and receives 'ge-' (or both verbs take 'ge-')."
+   },
+   {
+    "wrong": "Sy is besig om te sit en sing.",
+    "right": "Sy sit en sing.",
+    "note": "Avoid clumsy stacking of 'besig om te' with posture verbs; 'sit en sing' already conveys progressive aspect."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase for 'He is lying down listening to music':",
+    "options": [
+     "Hy lê te luister na musiek.",
+     "Hy lê en luister na musiek.",
+     "Hy lê om na musiek te luister.",
+     "Hy is luister en lê na musiek."
+    ],
+    "answer": 1,
+    "explanation": "The continuous hendiadys pairs 'lê' + 'en' + bare verb 'luister'."
+   },
+   {
+    "question": "How do you form the past tense of 'Hy sit en werk'?",
+    "options": [
+     "Hy het gesit en werk.",
+     "Hy het sit en gewerk.",
+     "Hy het gesit en gewerk.",
+     "Hy het sit en werk."
+    ],
+    "answer": 2,
+    "explanation": "In standard past tense hendiadys, both verbal elements generally take the prefix: 'het gesit en gewerk'."
+   },
+   {
+    "question": "Complete the sentence: 'Die studente ___ en gesels voor die biblioteek.' (are standing)",
+    "options": [
+     "val",
+     "staan",
+     "kry",
+     "maak"
+    ],
+    "answer": 1,
+    "explanation": "'Staan en' indicates an ongoing, standing progressive activity."
+   },
+   {
+    "question": "What nuance does 'loop en' convey in 'Hy loop en kla oor die werk'?",
+    "options": [
+     "A completed past action",
+     "A conditional hypothetical state",
+     "Refusal to perform an action",
+     "An ongoing action carried out while moving about"
+    ],
+    "answer": 3,
+    "explanation": "'Loop en [verb]' expresses that an action is taking place continuously or repeatedly while walking/moving around."
+   }
+  ],
+  "tip": "Instead of relying on the English '-ing' form or the cumbersome 'besig om te', native Afrikaans speakers almost always use 'sit en', 'staan en', 'lê en', or 'loop en' to describe what someone is doing right now!"
+ }
+]

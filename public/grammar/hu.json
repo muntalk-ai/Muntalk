@@ -1,0 +1,3333 @@
+[
+ {
+  "id": "hu-a1-vowel-harmony",
+  "level": "a1",
+  "category": "advanced",
+  "categoryColor": "#4B5563",
+  "emoji": "🎵",
+  "title": "Vowel Harmony (Front vs. Back Vowels)",
+  "subtitle": "Match suffixes to the musical character of root vowels",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "Hungarian suffixes adapt their vowels to match whether the stem contains back vowels or front vowels.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Vowels",
+    "Suffix Example (-ban/-ben)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Back (mély)",
+      "a, á, o, ó, u, ú",
+      "házban (in the house)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Front unrounded (magas)",
+      "e, é, i, í",
+      "kertben (in the garden)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Front rounded (ajakkerekítéses)",
+      "ö, ő, ü, ű",
+      "sörben (in the beer)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Back vowel roots",
+    "example": "Budapesten és Londonban élek.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Front unrounded roots",
+    "example": "A kép a könyvben van.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Front rounded roots",
+    "example": "Az ötödik kerületben lakom.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "A fiú az iskolában tanul.",
+    "ko": "",
+    "highlight": "iskolában"
+   },
+   {
+    "en": "Péter a kertben ül.",
+    "ko": "",
+    "highlight": "kertben"
+   },
+   {
+    "en": "A repülőtéren vagyunk most.",
+    "ko": "",
+    "highlight": "repülőtéren"
+   },
+   {
+    "en": "A macska a szobában alszik.",
+    "ko": "",
+    "highlight": "szobában"
+   },
+   {
+    "en": "Két kávét kérek szépen.",
+    "ko": "",
+    "highlight": "kávét"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "házben",
+    "right": "házban",
+    "note": "'ház' contains the back vowel 'á', requiring the back suffix variant '-ban'."
+   },
+   {
+    "wrong": "kertban",
+    "right": "kertben",
+    "note": "'kert' contains the front vowel 'e', requiring the front suffix variant '-ben'."
+   },
+   {
+    "wrong": "autóben",
+    "right": "autóban",
+    "note": "Compound or polysyllabic back-vowel roots require back-harmonic suffixes."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct suffix: 'A lány az autó___ ül.' (in the car)",
+    "options": [
+     "ben",
+     "ban",
+     "bön",
+     "bün"
+    ],
+    "answer": 1,
+    "explanation": "'Autó' contains the back vowels 'a' and 'ó', so it takes the back suffix '-ban'."
+   },
+   {
+    "question": "Choose the correct suffix: 'Egy szép kép van az étterem___.' (in the restaurant)",
+    "options": [
+     "ben",
+     "ban",
+     "bon",
+     "bán"
+    ],
+    "answer": 0,
+    "explanation": "'Étterem' has front vowels (é, e), which requires the front suffix '-ben'."
+   },
+   {
+    "question": "Which word takes the suffix variant '-hoz' (towards)?",
+    "options": [
+     "szék",
+     "orvos",
+     "kéz",
+     "sör"
+    ],
+    "answer": 1,
+    "explanation": "'Orvos' contains back vowels ('o'), taking the back suffix '-hoz'."
+   },
+   {
+    "question": "Which form correctly pairs 'erdő' (forest) with '-ben/-ban'?",
+    "options": [
+     "erdőban",
+     "erdőbon",
+     "erdőbön",
+     "erdőben"
+    ],
+    "answer": 3,
+    "explanation": "'Erdő' has front vowels (e, ő), so it takes the front variant '-ben'."
+   }
+  ],
+  "tip": "When a word contains neutral vowels like 'i' or 'é' mixed with back vowels (e.g., 'kocsi', 'tányér'), the back vowel always wins!"
+ },
+ {
+  "id": "hu-a1-definite-vs-indefinite-conjugation",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🎯",
+  "title": "Definite vs. Indefinite Conjugation",
+  "subtitle": "Select your verb ending based on how specific the object is",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use the definite conjugation when referring to a specific, identifiable direct object, and the indefinite conjugation when the object is general, indefinite, or absent.",
+  "structure": {
+   "headers": [
+    "Object Type",
+    "Conjugation",
+    "Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "No object / General object",
+      "Indefinite",
+      "Olvasok egy könyvet.",
+      "I read a book."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Specific object (the, this, proper noun)",
+      "Definite",
+      "Olvasom a könyvet.",
+      "I read the book."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "First/Second person object (me/you)",
+      "Indefinite / Special",
+      "Látsz engem.",
+      "You see me."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Definite article (a/az)",
+    "example": "Ismerem a tanárt.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Indefinite article (egy) or plural general",
+    "example": "Ismerek egy jó orvost.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Proper name as direct object",
+    "example": "Szeretem Annát.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Látom a buszt az utcán.",
+    "ko": "",
+    "highlight": "Látom"
+   },
+   {
+    "en": "Látok egy madarat a fán.",
+    "ko": "",
+    "highlight": "Látok"
+   },
+   {
+    "en": "Minden nap olvasom ezt a hírlapot.",
+    "ko": "",
+    "highlight": "olvasom"
+   },
+   {
+    "en": "Mit csinálsz most?",
+    "ko": "",
+    "highlight": "csinálsz"
+   },
+   {
+    "en": "Tudod a helyes választ?",
+    "ko": "",
+    "highlight": "Tudod"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Olvasok a könyvet.",
+    "right": "Olvasom a könyvet.",
+    "note": "'A könyvet' has a definite article 'a', so the verb must use the definite conjugation ('olvasom')."
+   },
+   {
+    "wrong": "Látom egy kutyát.",
+    "right": "Látok egy kutyát.",
+    "note": "'Egy kutyát' is indefinite, so the verb must take the indefinite ending ('látok')."
+   },
+   {
+    "wrong": "Szeretek ezt a várost.",
+    "right": "Szeretem ezt a várost.",
+    "note": "Demonstrative pronouns like 'ezt' (this) make the object definite."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'Én ___ a levelet.' (I am writing the letter)",
+    "options": [
+     "írom",
+     "írok",
+     "írsz",
+     "ír"
+    ],
+    "answer": 0,
+    "explanation": "'A levelet' is definite ('the letter'), so 1st person singular requires definite 'írom'."
+   },
+   {
+    "question": "Fill in the blank: 'Péter ___ egy almát.' (Péter eats an apple)",
+    "options": [
+     "eszi",
+     "eszik",
+     "eszem",
+     "eszel"
+    ],
+    "answer": 1,
+    "explanation": "'Egy almát' is indefinite, so 3rd person singular indefinite 'eszik' is required."
+   },
+   {
+    "question": "Fill in the blank: 'Nem ___ ezt a szót.' (We don't understand this word)",
+    "options": [
+     "értünk",
+     "értem",
+     "értjük",
+     "értik"
+    ],
+    "answer": 2,
+    "explanation": "'Ezt a szót' is definite, so 1st person plural takes definite 'értjük'."
+   },
+   {
+    "question": "Fill in the blank: 'Mit ___ ott a földön?' (What do you [informal] see on the ground?)",
+    "options": [
+     "látod",
+     "látja",
+     "látsz",
+     "látom"
+    ],
+    "answer": 2,
+    "explanation": "The question word 'mit' (what) triggers the indefinite conjugation ('látsz')."
+   }
+  ],
+  "tip": "Whenever you see 'a/az' (the), 'ez/az' (this/that), or a person's name as an object, immediately switch to the definite conjugation!"
+ },
+ {
+  "id": "hu-a1-the-accusative-case",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "📦",
+  "title": "The Accusative Case (-t)",
+  "subtitle": "Mark the direct receiver of an action with -t",
+  "color": "#10B981",
+  "bg": "#ECFDF5",
+  "keyPoint": "Direct objects in Hungarian must take the accusative suffix -t, frequently preceded by a linking vowel after consonants.",
+  "structure": {
+   "headers": [
+    "Ending Type",
+    "Rule",
+    "Example",
+    "Accusative"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Vowel stems",
+      "Add -t directly (lengthen a/e to á/é)",
+      "alma, kefe",
+      "almát, kefét"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Easy consonants",
+      "Add -t without linking vowel",
+      "sör, asztal",
+      "sört, asztalt"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Consonant clusters / sibilants",
+      "Use link vowel (-ot/-at/-et/-öt)",
+      "szék, busz",
+      "széket, buszt / asztalt"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Food and drink orders",
+    "example": "Egy teát és egy szendvicset kérek.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Everyday actions",
+    "example": "Veszek egy új telefont holnap.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Definite objects",
+    "example": "Keresem a kulcsomat.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kérek egy kávét tejjel.",
+    "ko": "",
+    "highlight": "kávét"
+   },
+   {
+    "en": "Hol vetted ezt a táskát?",
+    "ko": "",
+    "highlight": "táskát"
+   },
+   {
+    "en": "A fiú egy könyvet olvas csendben.",
+    "ko": "",
+    "highlight": "könyvet"
+   },
+   {
+    "en": "Kenyeret és sajtot vásárolunk.",
+    "ko": "",
+    "highlight": "Kenyeret"
+   },
+   {
+    "en": "Nem találom a tollat.",
+    "ko": "",
+    "highlight": "tollat"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Kérek egy kávé.",
+    "right": "Kérek egy kávét.",
+    "note": "Direct objects of verbs like 'kér' (to request/order) require the accusative '-t'."
+   },
+   {
+    "wrong": "Szeretem a alma.",
+    "right": "Szeretem az almát.",
+    "note": "Final 'a' becomes long 'á' before adding the accusative suffix '-t'."
+   },
+   {
+    "wrong": "Látom a ház.",
+    "right": "Látom a házat.",
+    "note": "'Ház' is the direct object and requires the linking vowel 'a' plus '-t'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Form the accusative: 'Kérek egy pohár ___.' (water / víz)",
+    "options": [
+     "víz",
+     "vízt",
+     "vizet",
+     "vázat"
+    ],
+    "answer": 2,
+    "explanation": "'Víz' shortens its stem vowel to 'i' and takes the linking vowel 'e', yielding 'vizet'."
+   },
+   {
+    "question": "Form the accusative: 'Szeretem ezt a ___.' (car / autó)",
+    "options": [
+     "autót",
+     "autóet",
+     "autótat",
+     "autó"
+    ],
+    "answer": 0,
+    "explanation": "Words ending in long vowels like 'ó' add '-t' directly without a linking vowel: 'autót'."
+   },
+   {
+    "question": "Form the accusative: 'Veszünk egy új ___.' (table / asztal)",
+    "options": [
+     "asztal",
+     "asztalet",
+     "asztalt",
+     "asztalok"
+    ],
+    "answer": 2,
+    "explanation": "After 'l', the accusative '-t' can attach directly: 'asztalt'."
+   },
+   {
+    "question": "Form the accusative: 'Eszem egy piros ___.' (apple / alma)",
+    "options": [
+     "almát",
+     "almat",
+     "alma",
+     "almáet"
+    ],
+    "answer": 0,
+    "explanation": "Final 'a' lengthens to 'á' before suffixes: 'almát'."
+   }
+  ],
+  "tip": "Final short vowels '-a' and '-e' ALWAYS lengthen to '-á-' and '-é-' whenever any suffix (like '-t') is added."
+ },
+ {
+  "id": "hu-a1-spatial-case-triad",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🧭",
+  "title": "The 3x3 Spatial Case System",
+  "subtitle": "Navigate interior, surface, and proximity spaces with 9 suffixes",
+  "color": "#F59E0B",
+  "bg": "#FFFBEB",
+  "keyPoint": "Hungarian specifies spatial location across three dimensions (inside, surface, near) and three directions (moving towards, resting at, moving away).",
+  "structure": {
+   "headers": [
+    "Dimension",
+    "Towards (Where to?)",
+    "Static (Where?)",
+    "From (Where from?)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Interior (In)",
+      "-ba / -be (into)",
+      "-ban / -ben (inside)",
+      "-ból / -ből (out of)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Surface (On)",
+      "-ra / -re (onto)",
+      "-n / -on / -en / -ön (on)",
+      "-ról / -ről (off of)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Proximity (At)",
+      "-hoz / -hez / -höz (towards)",
+      "-nál / -nél (at / near)",
+      "-tól / -től (away from)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Interior movement & rest",
+    "example": "Bemegy a házba, és a szobában marad.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Surface movement & rest",
+    "example": "A macska felugrik az asztalra.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Visiting people / locations",
+    "example": "Az orvoshoz megyek, most az orvosnál vagyok.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "A gyerekek az iskolába mennek.",
+    "ko": "",
+    "highlight": "iskolába"
+   },
+   {
+    "en": "A könyv az asztalon van.",
+    "ko": "",
+    "highlight": "asztalon"
+   },
+   {
+    "en": "Mikor jössz haza a munkából?",
+    "ko": "",
+    "highlight": "munkából"
+   },
+   {
+    "en": "Anna a barátnőjénél alszik ma.",
+    "ko": "",
+    "highlight": "barátnőjénél"
+   },
+   {
+    "en": "A vonat Londonból érkezik.",
+    "ko": "",
+    "highlight": "Londonból"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Megyek a boltban.",
+    "right": "Megyek a boltba.",
+    "note": "Movement into a place requires '-ba' (into), not static '-ban' (inside)."
+   },
+   {
+    "wrong": "Vagyok az orvoshoz.",
+    "right": "Vagyok az orvosnál.",
+    "note": "Being statically at a person's office/place requires '-nál/-nél', not directional '-hoz'."
+   },
+   {
+    "wrong": "A táska a székre van.",
+    "right": "A táska a széken van.",
+    "note": "Static location on a surface requires the locative suffix '-on/-en/-ön/-n', not '-ra'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'Gábor bemegy az iroda___.' (into the office)",
+    "options": [
+     "ban",
+     "ból",
+     "ba",
+     "nál"
+    ],
+    "answer": 2,
+    "explanation": "Movement towards an interior space uses the illative suffix '-ba'."
+   },
+   {
+    "question": "Fill in the blank: 'A tányér az asztal___ hever.' (on the table)",
+    "options": [
+     "on",
+     "ra",
+     "ról",
+     "nál"
+    ],
+    "answer": 0,
+    "explanation": "Static rest on a horizontal surface requires the superessive suffix '-on'."
+   },
+   {
+    "question": "Fill in the blank: 'Péter most jön a posta___.' (out from the post office)",
+    "options": [
+     "ba",
+     "hoz",
+     "ról",
+     "ról / ból"
+    ],
+    "answer": 3,
+    "explanation": "Movement out from a building or institutional space uses '-ból' (or '-ról' if treated as surface, but '-ból' for inside)."
+   },
+   {
+    "question": "Fill in the blank: 'Ma este a barátom___ megyek vendégségbe.' (to my friend's place)",
+    "options": [
+     "nél",
+     "hoz",
+     "től",
+     "ben"
+    ],
+    "answer": 1,
+    "explanation": "Motion toward a person uses the allative suffix '-hoz/-hez/-höz'."
+   }
+  ],
+  "tip": "Remember the 3 questions: 'Hova?' (Where to?), 'Hol?' (Where at?), and 'Honnan?' (Where from?). Every spatial suffix answers exactly one of these."
+ },
+ {
+  "id": "hu-a1-possessive-noun-suffixes",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🏷️",
+  "title": "Singular Possession of Nouns",
+  "subtitle": "Indicate ownership by attaching endings directly to nouns",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "Hungarian shows ownership by suffixing the noun itself (-m for my, -d for your, -a/-e for his/her/its) rather than relying on separate possessive words.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Vowel Stems",
+    "Consonant Stems (Back)",
+    "Consonant Stems (Front)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st sg (my)",
+      "-m (kocsim)",
+      "-om / -am (házam)",
+      "-em / -öm (kertem)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2nd sg (your)",
+      "-d (kocsid)",
+      "-od / -ad (házad)",
+      "-ed / -öd (kerted)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd sg (his/her/its)",
+      "-ja / -je (kocsija)",
+      "-a / -ja (háza)",
+      "-e / -je (kerte)"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6366F1",
+    "label": "Family relations",
+    "example": "Az anyukám tanárnő.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Personal belongings",
+    "example": "Hol van a táskád és a telefonod?",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Parts of the body",
+    "example": "Fáj a fejem és a torkom.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ez az én autóm.",
+    "ko": "",
+    "highlight": "autóm"
+   },
+   {
+    "en": "Hogy hívják a te barátodat?",
+    "ko": "",
+    "highlight": "barátodat"
+   },
+   {
+    "en": "Hol lakik a testvére?",
+    "ko": "",
+    "highlight": "testvére"
+   },
+   {
+    "en": "A kutyám nagyon barátságos.",
+    "ko": "",
+    "highlight": "kutyám"
+   },
+   {
+    "en": "Mi a neved?",
+    "ko": "",
+    "highlight": "neved"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "én ház",
+    "right": "a házam",
+    "note": "Hungarian requires the possessive suffix on the noun ('házam'), not just the personal pronoun."
+   },
+   {
+    "wrong": "a te könyv",
+    "right": "a te könyved",
+    "note": "Even when using 'te' for emphasis, the noun must carry the 2nd person ending '-ed'."
+   },
+   {
+    "wrong": "a barátom autója",
+    "right": "a barátom autója",
+    "note": "Remember that both possessor and possessed can take suffixes in longer chains."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'my apartment' (lakás)?",
+    "options": [
+     "a lakásom",
+     "az én lakás",
+     "a lakásod",
+     "a lakása"
+    ],
+    "answer": 0,
+    "explanation": "'Lakás' is a back-vowel consonant stem, taking '-om' in 1st person singular: 'lakásom'."
+   },
+   {
+    "question": "How do you say 'your (informal) name' (név)?",
+    "options": [
+     "a nevem",
+     "a neved",
+     "a neve",
+     "a nevünk"
+    ],
+    "answer": 1,
+    "explanation": "'Név' changes slightly to 'nev-' and takes the 2nd person singular suffix '-ed': 'neved'."
+   },
+   {
+    "question": "How do you say 'his/her dog' (kutya)?",
+    "options": [
+     "kutyam",
+     "kutyad",
+     "kutyája",
+     "kutyát"
+    ],
+    "answer": 2,
+    "explanation": "Final 'a' lengthens to 'á' and adds the 3rd person suffix '-ja': 'kutyája'."
+   },
+   {
+    "question": "Which sentence means 'My head hurts'?",
+    "options": [
+     "Fáj a fejed.",
+     "Fáj a feje.",
+     "Fáj a fejet.",
+     "Fáj a fejem."
+    ],
+    "answer": 3,
+    "explanation": "1st person singular 'my head' takes '-em': 'fejem'."
+   }
+  ],
+  "tip": "The personal pronouns (én, te, ő) are completely optional and only used for strong emphasis—'a táskám' is completely sufficient for 'my bag'!"
+ },
+ {
+  "id": "hu-a1-zero-copula-predication",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "👻",
+  "title": "Zero Copula in the 3rd Person Present",
+  "subtitle": "Dropping 'van' and 'vannak' when describing identity or qualities",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "In the present tense, third-person singular and plural statements completely omit the verb 'to be' when linking a subject to an adjective or noun.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Pattern",
+    "Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st / 2nd Person",
+      "Explicit copula required",
+      "Én diák vagyok.",
+      "I am a student."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person Singular (ő)",
+      "Subject + Noun / Adjective (NO 'van')",
+      "Péter orvos.",
+      "Péter is a doctor."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3rd Person Plural (ők)",
+      "Subject + Plural Noun / Adjective (NO 'vannak')",
+      "A lányok szépek.",
+      "The girls are pretty."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Location Exception",
+      "Explicit 'van' / 'vannak' retained for place",
+      "Anna a házban van.",
+      "Anna is in the house."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Describing profession or identity",
+    "example": "Gábor mérnök.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Describing attributes with adjectives",
+    "example": "Ez a kávé nagyon meleg.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Plural identity or state",
+    "example": "A tanárok kedvesek.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "János nagyon fáradt ma este.",
+    "ko": "",
+    "highlight": "nagyon fáradt"
+   },
+   {
+    "en": "A szomszédunk ügyes orvos.",
+    "ko": "",
+    "highlight": "ügyes orvos"
+   },
+   {
+    "en": "Ők amerikai turisták.",
+    "ko": "",
+    "highlight": "amerikai turisták"
+   },
+   {
+    "en": "Ez a feladat nehéz.",
+    "ko": "",
+    "highlight": "nehéz"
+   },
+   {
+    "en": "A virágok gyönyörűek a kertben.",
+    "ko": "",
+    "highlight": "gyönyörűek"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Péter van orvos.",
+    "right": "Péter orvos.",
+    "note": "Never use 'van' to link a 3rd person subject to a noun or adjective in the present affirmative."
+   },
+   {
+    "wrong": "A könyvek vannak drágák.",
+    "right": "A könyvek drágák.",
+    "note": "'Vannak' is omitted in 3rd person plural descriptions; the adjective itself takes plural -k."
+   },
+   {
+    "wrong": "Péter a házban.",
+    "right": "Péter a házban van.",
+    "note": "Do not drop 'van' when indicating physical location; zero copula applies only to descriptive/predicative identities."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'The soup is hot'?",
+    "options": [
+     "A leves forró van.",
+     "A leves forró.",
+     "A leves van.",
+     "A leves forrók."
+    ],
+    "answer": 1,
+    "explanation": "Third person singular drops the verb 'to be' entirely when using an adjective."
+   },
+   {
+    "question": "Complete the sentence: 'They are students.' -> 'Ők ___.'",
+    "options": [
+     "diákok",
+     "vannak diákok",
+     "diák",
+     "vagytok"
+    ],
+    "answer": 0,
+    "explanation": "In 3rd person plural descriptive statements, drop 'vannak' and pluralize the noun to 'diákok'."
+   },
+   {
+    "question": "Which sentence correctly retains the copula because it specifies location?",
+    "options": [
+     "A fiú magas.",
+     "A fiú orvos.",
+     "A fiú a szobában van.",
+     "A fiú fáradt."
+    ],
+    "answer": 2,
+    "explanation": "Zero copula does not apply to locational expressions; 'van' must be stated for being in a place."
+   },
+   {
+    "question": "Translate: 'Erika is very kind.'",
+    "options": [
+     "Erika van nagyon kedves.",
+     "Erika nagyon kedvesek.",
+     "Erika vagy nagyon kedves.",
+     "Erika nagyon kedves."
+    ],
+    "answer": 3,
+    "explanation": "No copula is used in 3rd person present descriptive sentences, so 'Erika nagyon kedves' is correct."
+   }
+  ],
+  "tip": "Remember: if you can answer 'What is it like?' or 'What is their job?', drop 'van'. If you answer 'Where is it?', keep 'van'!"
+ },
+ {
+  "id": "hu-a2-ik-verbs",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔄",
+  "title": "Ik-Verbs Conjugation",
+  "subtitle": "Handling the distinct singular forms of Hungarian -ik ending verbs",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Verbs with citation forms ending in -ik take -m (instead of -k) in the 1st person singular present indefinite and display -ik in the 3rd person singular.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Back Vowel (Pl. alszik)",
+    "Front Vowel (Pl. eszik)",
+    "Rule Note"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Sing. (én)",
+      "alszom",
+      "eszem",
+      "Takes -om/-em/-öm instead of regular -ok/-ek/-ök"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Sing. (te)",
+      "alszol",
+      "eszel",
+      "Regular -sz or -ol/-el/-öl endings apply"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Sing. (ő)",
+      "alszik",
+      "eszik",
+      "Retains dictionary suffix -ik in indefinite form"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Plural forms",
+      "alszunk, alszotok, alszanak",
+      "eszünk, esztek, esznek",
+      "Plural forms conjugate identically to regular verbs"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Expressing basic bodily actions",
+    "example": "Minden reggel teát iszom.",
+    "translation": ""
+   },
+   {
+    "color": "#06B6D4",
+    "label": "Everyday habits and states",
+    "example": "Gyakran alszom nyolc órát.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Mental or sensory processes",
+    "example": "Nem emlékszem a nevére.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Én ritkán iszom kávét este.",
+    "ko": "",
+    "highlight": "iszom"
+   },
+   {
+    "en": "A kislány békésen alszik az ágyban.",
+    "ko": "",
+    "highlight": "alszik"
+   },
+   {
+    "en": "Mit eszel reggelire?",
+    "ko": "",
+    "highlight": "eszel"
+   },
+   {
+    "en": "Sajnos nem emlékszem erre a címre.",
+    "ko": "",
+    "highlight": "emlékszem"
+   },
+   {
+    "en": "Hol dolgozik a bátyád?",
+    "ko": "",
+    "highlight": "dolgozik"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Én kávét iszok.",
+    "right": "Én kávét iszom.",
+    "note": "While heard colloquially, standard Hungarian grammar strictly requires -m for the 1st person singular of -ik verbs."
+   },
+   {
+    "wrong": "Ő reggeliz.",
+    "right": "Ő reggelizik.",
+    "note": "In 3rd person singular indefinite, -ik verbs must retain the -ik ending; do not drop it like regular zero-ending verbs."
+   },
+   {
+    "wrong": "Mi alszunkik.",
+    "right": "Mi alszunk.",
+    "note": "The '-ik' characteristic only affects singular conjugations; plural forms follow normal verb patterns."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the standard form: 'I am drinking water.' -> 'Én vizet ___.'",
+    "options": [
+     "iszol",
+     "iszom",
+     "iszik",
+     "iszunk"
+    ],
+    "answer": 1,
+    "explanation": "In standard grammar, 1st person singular of 'iszik' takes the ik-suffix -om: 'iszom'."
+   },
+   {
+    "question": "How do you conjugate 'dolgozik' (to work) for 'ő' (he/she) in the indefinite present?",
+    "options": [
+     "dolgoz",
+     "dolgozok",
+     "dolgozik",
+     "dolgozom"
+    ],
+    "answer": 2,
+    "explanation": "The 3rd person singular indefinite form of an -ik verb retains the suffix -ik."
+   },
+   {
+    "question": "Complete the sentence: 'Do you (te) eat bread?' -> '___ kenyeret?'",
+    "options": [
+     "Eszel",
+     "Eszem",
+     "Eszik",
+     "Esztek"
+    ],
+    "answer": 0,
+    "explanation": "The 2nd person singular familiar form of 'eszik' is 'eszel'."
+   },
+   {
+    "question": "Which of the following is NOT an -ik verb?",
+    "options": [
+     "lakik",
+     "mosakszik",
+     "utazik",
+     "olvas"
+    ],
+    "answer": 3,
+    "explanation": "'Olvas' is a regular verb without an -ik dictionary ending."
+   }
+  ],
+  "tip": "Think of the 'm' in 'én' matching the 'm' in 'iszom', 'alszom', and 'eszem' to easily remember the 1st person ik-ending!"
+ },
+ {
+  "id": "hu-a2-verbal-prefixes-and-word-order",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🧩",
+  "title": "Verbal Prefixes (Igékötők) and Detachment",
+  "subtitle": "Changing aspect and shifting prefixes with negation, focus, and modals",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Verbal prefixes attach before the verb in neutral statements, but detach and move after the verb under negation, strong focus, or when preceding an auxiliary modal verb.",
+  "structure": {
+   "headers": [
+    "Sentence Type",
+    "Prefix Position",
+    "Example",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Neutral / Completed",
+      "Prefix directly attached before verb",
+      "Megírom a levelet.",
+      "I will write the letter."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negation (nem)",
+      "Prefix detaches and follows verb",
+      "Nem írom meg a levelet.",
+      "I am not writing the letter."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Modal auxiliary (akar, kell)",
+      "Prefix precedes modal OR follows infinitive",
+      "Meg akarom írni a levelet.",
+      "I want to write the letter."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Focus on another element",
+      "Prefix pushed behind verb",
+      "A levelet írom meg (nem mást).",
+      "It is the letter that I am writing."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Neutral completed action",
+    "example": "Péter elolvassa a cikket.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Negated action",
+    "example": "Anna ma nem megy el a moziba.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Modal verb construction",
+    "example": "Be kell zárnom az ajtót.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mikor mész el a boltba?",
+    "ko": "",
+    "highlight": "mész el"
+   },
+   {
+    "en": "A diákok már megcsinálták a házi feladatot.",
+    "ko": "",
+    "highlight": "megcsinálták"
+   },
+   {
+    "en": "Nem hívom fel Tamást késő este.",
+    "ko": "",
+    "highlight": "Nem hívom fel"
+   },
+   {
+    "en": "Ki akarja nyitni az ablakot.",
+    "ko": "",
+    "highlight": "Ki akarja nyitni"
+   },
+   {
+    "en": "Most le kell ülnöm egy percre.",
+    "ko": "",
+    "highlight": "le kell ülnöm"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Nem megírom a levelet.",
+    "right": "Nem írom meg a levelet.",
+    "note": "The negator 'nem' attracts the verb directly to itself, forcing the prefix to jump behind the verb."
+   },
+   {
+    "wrong": "Akarok elmenni korán.",
+    "right": "El akarok menni korán.",
+    "note": "In standard modal constructions, the prefix detaches from the infinitive and moves in front of the conjugated modal verb."
+   },
+   {
+    "wrong": "Péter le ül a székre.",
+    "right": "Péter leül a székre.",
+    "note": "In simple neutral affirmative statements, the verbal prefix and verb must be written as one solid word."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you negate: 'Gábor elment tegnap.'?",
+    "options": [
+     "Gábor nem elment tegnap.",
+     "Gábor el nem ment tegnap.",
+     "Gábor nem ment el tegnap.",
+     "Gábor elment nem tegnap."
+    ],
+    "answer": 2,
+    "explanation": "In negation, 'nem' precedes the verb and the prefix follows it: 'nem ment el'."
+   },
+   {
+    "question": "Which sentence correctly places the prefix with the modal verb 'akar' (to want)?",
+    "options": [
+     "Meg akarom nézni ezt a filmet.",
+     "Akarom megnézni ezt a filmet.",
+     "Akarom nézni meg ezt a filmet.",
+     "Nézni akarom meg ezt a filmet."
+    ],
+    "answer": 0,
+    "explanation": "The prefix 'meg' detaches from 'nézni' and attaches directly in front of the modal verb 'akarom'."
+   },
+   {
+    "question": "Choose the correct neutral affirmative sentence:",
+    "options": [
+     "Tomi hív fel engem.",
+     "Tomi felhív engem.",
+     "Tomi fel engem hív.",
+     "Tomi hív engem fel."
+    ],
+    "answer": 1,
+    "explanation": "In neutral word order without special focus or negation, the prefix attaches directly to the front of the verb: 'felhív'."
+   },
+   {
+    "question": "Translate: 'We must start now.' (elindulni / kell)",
+    "options": [
+     "Most kell elindulnunk.",
+     "Most kellünk elindulni.",
+     "Most elindulnunk kell.",
+     "Most el kell indulnunk."
+    ],
+    "answer": 3,
+    "explanation": "The verbal prefix 'el' detaches and precedes the impersonal modal 'kell': 'el kell indulnunk'."
+   }
+  ],
+  "tip": "Think of 'nem' as a magnet: it pulls the verb immediately to itself, kicking the prefix out to the position right behind the verb!"
+ },
+ {
+  "id": "hu-a2-dative-case-and-possession",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🔑",
+  "title": "Possession with 'Nekem van' (Dative + Copula)",
+  "subtitle": "Expressing ownership using the dative case and the verb 'lenni'",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Hungarian has no verb for 'to have'; instead, it expresses possession using the formula: Possessor in Dative (-nak/-nek) + 'van/vannak' + Possessed Item with a possessive suffix.",
+  "structure": {
+   "headers": [
+    "Possessor (Dative)",
+    "Verb (lenni)",
+    "Possessed Item",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Nekem",
+      "van",
+      "egy autóm",
+      "I have a car (To me there is a car)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neked",
+      "van",
+      "egy könyved",
+      "You have a book"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "A tanárnak",
+      "vannak",
+      "kérdései",
+      "The teacher has questions"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Nincs / Nincsenek",
+      "negation",
+      "Nincs időm",
+      "I don't have time (There is no time to me)"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Expressing personal ownership",
+    "example": "Nekem van egy új biciklim.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Expressing lack of possession",
+    "example": "Nincs elég pénzem a jegyre.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Naming a third-party owner",
+    "example": "A lánynak van két testvére.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Nekem sok jó barátom van.",
+    "ko": "",
+    "highlight": "Nekem"
+   },
+   {
+    "en": "Péternek nincs kutyája.",
+    "ko": "",
+    "highlight": "Péternek nincs"
+   },
+   {
+    "en": "Van egy szabad perced?",
+    "ko": "",
+    "highlight": "Van egy szabad perced"
+   },
+   {
+    "en": "A háznak nagy kertje van.",
+    "ko": "",
+    "highlight": "A háznak"
+   },
+   {
+    "en": "Nekünk nincsenek problémáink.",
+    "ko": "",
+    "highlight": "Nekünk nincsenek"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Én birtoklok egy macskát.",
+    "right": "Van egy macskám.",
+    "note": "Hungarian does not use an active transitive 'have' verb in daily speech; use 'nekem van + possessive suffix'."
+   },
+   {
+    "wrong": "Nekem nem van időm.",
+    "right": "Nekem nincs időm.",
+    "note": "'Nem van' is ungrammatical; it always fuses into 'nincs' (or 'nincsenek' for plural items)."
+   },
+   {
+    "wrong": "A diák van egy tolla.",
+    "right": "A diáknak van egy tolla.",
+    "note": "The named owner must take the dative suffix -nak/-nek."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I have a dog'?",
+    "options": [
+     "Nekem van kutyám.",
+     "Én van kutyám.",
+     "Nekem kutya vagyok.",
+     "Engem van kutyám."
+    ],
+    "answer": 0,
+    "explanation": "The possessor takes dative 'nekem', the copula is 'van', and the possessed item takes the 1st person suffix '-m'."
+   },
+   {
+    "question": "What is the correct negative form of 'Nekik van kocsijuk' (They have a car)?",
+    "options": [
+     "Nekik nem van kocsijuk.",
+     "Nekik nincs kocsijuk.",
+     "Nekik nincsenek kocsijuk.",
+     "Nekik ne van kocsijuk."
+    ],
+    "answer": 1,
+    "explanation": "Because 'kocsijuk' is singular, 'nem van' contracts to 'nincs'."
+   },
+   {
+    "question": "Complete the sentence: 'The boy has a ticket.' -> 'A fiú___ van jegye.'",
+    "options": [
+     "-t",
+     "-val",
+     "-nak",
+     "-hoz"
+    ],
+    "answer": 2,
+    "explanation": "A named possessor takes the dative suffix; front-vowel/back-vowel harmony gives 'fiúnak'."
+   },
+   {
+    "question": "Translate: 'We don't have questions.' (kérdés)",
+    "options": [
+     "Nekünk nincs kérdések.",
+     "Nekünk nincsen kérdésünk.",
+     "Nekünk nincsenek kérdéseink.",
+     "Nekünk nem vannak kérdéseink."
+    ],
+    "answer": 2,
+    "explanation": "When the possessed items are plural ('kérdéseink'), the plural negative existential 'nincsenek' must be used."
+   }
+  ],
+  "tip": "The pronouns 'nekem', 'neked', etc., can be dropped if context is clear ('Van egy kutyám'), but named owners must always take '-nak' or '-nek'!"
+ },
+ {
+  "id": "hu-a2-plural-possession",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "📚",
+  "title": "Possession of Multiple Objects (-aim, -aid, -ai)",
+  "subtitle": "Attaching plural possessed suffixes to show multiple owned items",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "When the items possessed are plural, Hungarian inserts an 'i' possessive marker before the personal ending (-aim, -aid, -ai / -eim, -eid, -ei).",
+  "structure": {
+   "headers": [
+    "Possessor",
+    "Back Vowel (Pl. könyv -> könyve-)",
+    "Front Vowel (Pl. ház -> háza-)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Sing. (my ...)",
+      "házaim",
+      "könyveim",
+      "my houses / my books"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Sing. (your ...)",
+      "házaid",
+      "könyveid",
+      "your houses / your books"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Sing. (his/her ...)",
+      "házai",
+      "könyvei",
+      "his/her houses / books"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "1st Plur. (our ...)",
+      "házaink",
+      "könyveink",
+      "our houses / our books"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Talking about family members or friends",
+    "example": "A barátaim Budapesten élnek.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Referring to multiple personal belongings",
+    "example": "Hol vannak a kulcsaim?",
+    "translation": ""
+   },
+   {
+    "color": "#EAB308",
+    "label": "Discussing ideas or responsibilities",
+    "example": "Sok fontos feladatai vannak.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "A szüleim nagyon kedves emberek.",
+    "ko": "",
+    "highlight": "szüleim"
+   },
+   {
+    "en": "Hol vannak a táskáid?",
+    "ko": "",
+    "highlight": "táskáid"
+   },
+   {
+    "en": "Ismered Péter barátait?",
+    "ko": "",
+    "highlight": "barátait"
+   },
+   {
+    "en": "A könyveink az asztalon hevernek.",
+    "ko": "",
+    "highlight": "könyveink"
+   },
+   {
+    "en": "A tanár válaszol a diákok kérdéseire.",
+    "ko": "",
+    "highlight": "kérdéseire"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "A könyvek-em vannak itt.",
+    "right": "A könyveim vannak itt.",
+    "note": "Do not attach the regular plural '-k' before possessive suffixes; use the specialized '-i-' plural possessive marker."
+   },
+   {
+    "wrong": "A barátomok eljöttek.",
+    "right": "A barátaim eljöttek.",
+    "note": "Never add '-ok/-ek' after a possessive suffix. 'My friends' is 'barátaim', not 'barátomok'."
+   },
+   {
+    "wrong": "A kulcsokaim elvesztek.",
+    "right": "A kulcsaim elvesztek.",
+    "note": "Do not stack double plurals; '-aim' already denotes both plurality of the keys and the 1st person owner."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'my books' (singular: könyv)?",
+    "options": [
+     "könyvekem",
+     "könyveim",
+     "könyvöim",
+     "könyveid"
+    ],
+    "answer": 1,
+    "explanation": "'Könyv' takes front-vowel plural possessive endings: 'könyveim'."
+   },
+   {
+    "question": "Choose the correct form for 'his/her friends' (singular: barát):",
+    "options": [
+     "barátjaik",
+     "barátokai",
+     "barátai",
+     "barátjai"
+    ],
+    "answer": 3,
+    "explanation": "'Barát' takes the 3rd person singular possessor + plural possessed suffix '-jai'."
+   },
+   {
+    "question": "Complete the question: 'Where are your (singular informal) keys?' -> 'Hol vannak a kulcs___?'",
+    "options": [
+     "-aid",
+     "-od",
+     "-eid",
+     "-jeid"
+    ],
+    "answer": 0,
+    "explanation": "'Kulcs' is a back-vowel noun, so 'your keys' becomes 'kulcsaid'."
+   },
+   {
+    "question": "What is the meaning of 'a gyerekeink'?",
+    "options": [
+     "our child",
+     "your children",
+     "their child",
+     "our children"
+    ],
+    "answer": 3,
+    "explanation": "The suffix '-eink' indicates 1st person plural possessor ('our') and plural possessed items ('children')."
+   }
+  ],
+  "tip": "Spot the letter 'i'! Whenever you possess MORE THAN ONE thing, an 'i' will always appear in the possessive suffix (e.g., kutyá-m = 1 dog, kutyá-i-m = 2+ dogs)."
+ },
+ {
+  "id": "hu-a2-prepositional-pronouns",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "📍",
+  "title": "Inflected Postpositions and Case Pronouns",
+  "subtitle": "Attaching possessive endings to case suffixes and spatial adverbs",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "Hungarian expresses combinations of pronouns and prepositions by adding possessive endings directly to case markers or postpositions instead of using independent words.",
+  "structure": {
+   "headers": [
+    "Case/Postposition",
+    "1st Person (én)",
+    "2nd Person (te)",
+    "3rd Person (ő)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-ban / -ben (in)",
+      "bennem",
+      "benned",
+      "benne"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-nál / -nél (at)",
+      "nálam",
+      "nálad",
+      "nála"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-hoz / -hez / -höz (to)",
+      "hozzám",
+      "hozzád",
+      "hozzá"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "mögött (behind)",
+      "mögöttem",
+      "mögötted",
+      "mögötte"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Case suffix as pronoun",
+    "example": "Bízz bennem, tudom az utat.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Physical spatial relationship",
+    "example": "A macska mögöttem alszik a fotelben.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Possession or accompaniment",
+    "example": "Van nálad elég pénz a vacsorára?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mindig számíthatsz rám a bajban.",
+    "ko": "",
+    "highlight": "rám"
+   },
+   {
+    "en": "Holnap eljössz hozzánk ebédre?",
+    "ko": "",
+    "highlight": "hozzánk"
+   },
+   {
+    "en": "A kisfiú elbújt mögöttem a parkban.",
+    "ko": "",
+    "highlight": "mögöttem"
+   },
+   {
+    "en": "Nincs nála telefon, ezért nem érjük el.",
+    "ko": "",
+    "highlight": "nála"
+   },
+   {
+    "en": "Sokat mesélt rólad a barátaimnak.",
+    "ko": "",
+    "highlight": "rólad"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ban én",
+    "right": "bennem",
+    "note": "Hungarian never uses independent personal pronouns after raw case endings; the ending itself inflects."
+   },
+   {
+    "wrong": "nál te",
+    "right": "nálad",
+    "note": "Cases like -nál/-nél take personal possessive suffixes rather than stand-alone subject pronouns."
+   },
+   {
+    "wrong": "mögött én",
+    "right": "mögöttem",
+    "note": "Postpositions decline like possessed nouns when referring to personal pronouns."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Can you count on me? -> Számíthatsz ___?",
+    "options": [
+     "rám",
+     "bennem",
+     "hozzám",
+     "nálam"
+    ],
+    "answer": 0,
+    "explanation": "The verb 'számít' takes the sub引导 case (-ra/-re), which becomes 'rám' for 1st person singular."
+   },
+   {
+    "question": "Do you have the keys with you? -> Nálad vannak a kulcsok?",
+    "options": [
+     "velem",
+     "nála",
+     "nálad",
+     "rólad"
+    ],
+    "answer": 2,
+    "explanation": "'Nálad' means 'at you' or 'in your possession' (informal singular)."
+   },
+   {
+    "question": "The dog is walking behind us. -> A kutya ___ sétál.",
+    "options": [
+     "mögötted",
+     "mögötte",
+     "mögöttetek",
+     "mögöttünk"
+    ],
+    "answer": 3,
+    "explanation": "The postposition 'mögött' plus the 1st person plural ending '-ünk' yields 'mögöttünk'."
+   },
+   {
+    "question": "Peter came over to our place yesterday. -> Péter tegnap átjött ___.",
+    "options": [
+     "hozzád",
+     "hozzánk",
+     "hozzájuk",
+     "hozzám"
+    ],
+    "answer": 1,
+    "explanation": "'Hozzánk' is the inflected form of the allative case for 1st person plural (to us / to our place)."
+   }
+  ],
+  "tip": "Think of these words as nouns that own a relationship: 'benn-em' literally behaves like 'in-my-ness', using familiar possessive endings (-m, -d, -e/-a)."
+ },
+ {
+  "id": "hu-a2-topic-focus-word-order",
+  "level": "a2",
+  "category": "advanced",
+  "categoryColor": "#DC2626",
+  "emoji": "🎯",
+  "title": "Topic-Focus Syntax and Pre-Verbal Focus Position",
+  "subtitle": "Manipulating word order to emphasize new or contrastive information",
+  "color": "#EF4444",
+  "bg": "#FEF2F2",
+  "keyPoint": "Hungarian word order is pragmatic rather than grammatical; the element placed immediately before the conjugated verb receives the exclusive focus and primary stress.",
+  "structure": {
+   "headers": [
+    "Role",
+    "Position",
+    "Example",
+    "Information Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Neutral / Topic",
+      "Before verb / prefix intact",
+      "Péter megevett egy almát.",
+      "Peter ate an apple (plain statement)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Focus on Object",
+      "Immediately pre-verbal (splits prefix)",
+      "Péter EGY ALMÁT evett meg.",
+      "It was AN APPLE that Peter ate (not a pear)."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Focus on Subject",
+      "Immediately pre-verbal (splits prefix)",
+      "PÉTER evett meg egy almát.",
+      "PETER was the one who ate an apple."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Focus on Verb",
+      "Verb receives main accent",
+      "Péter MEGevett egy almát.",
+      "Peter DID eat an apple (asserting truth)."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Contrastive identification",
+    "example": "Anna a könyvet olvassa, nem az újságot.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Answering question words",
+    "example": "Tegnap moziba mentünk a barátaimmal.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Verbal prefix detachment",
+    "example": "János nem ment el a buliba tegnap este.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dénes Budapestre utazik holnap reggel.",
+    "ko": "",
+    "highlight": "Budapestre utazik"
+   },
+   {
+    "en": "Nem én törtem el a vázát.",
+    "ko": "",
+    "highlight": "Nem én"
+   },
+   {
+    "en": "Kati kávét iszik a reggelihez.",
+    "ko": "",
+    "highlight": "kávét iszik"
+   },
+   {
+    "en": "Mikor érkezel meg az állomásra?",
+    "ko": "",
+    "highlight": "Mikor érkezel meg"
+   },
+   {
+    "en": "Csak két levelet küldtem el ma.",
+    "ko": "",
+    "highlight": "Csak két levelet küldtem el"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Péter kávét megissza.",
+    "right": "Péter kávét iszik meg.",
+    "note": "When a focused noun occupies the pre-verbal spot, the verbal prefix (meg-) must move behind the verb."
+   },
+   {
+    "wrong": "Ki megérkezett tegnap?",
+    "right": "Ki érkezett meg tegnap?",
+    "note": "Question words naturally occupy the focus slot, requiring the verb prefix to detach and follow the verb."
+   },
+   {
+    "wrong": "Én szeretem csak a teát.",
+    "right": "Én csak a teát szeretem.",
+    "note": "Restricting modifiers like 'csak' (only) must sit inside the pre-verbal focus position together with their noun."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "It was AN APPLE that Anna ate (not a pear). -> Anna ___ evett meg.",
+    "options": [
+     "almát",
+     "egy alma",
+     "az almát",
+     "almával"
+    ],
+    "answer": 0,
+    "explanation": "Placing 'almát' directly before the verb 'evett' stresses that the apple was the specific object consumed."
+   },
+   {
+    "question": "Where does the verbal prefix 'el' go when 'Péter' is emphasized as the doer? -> PÉTER ___ tegnap.",
+    "options": [
+     "elment",
+     "ment el",
+     "ment",
+     "el ment el"
+    ],
+    "answer": 1,
+    "explanation": "When an element takes focus ahead of the verb, separable prefixes like 'el-' are pushed behind the verb: 'PÉTER ment el'."
+   },
+   {
+    "question": "Who called you yesterday? -> Ki ___ fel tegnap?",
+    "options": [
+     "felhívott",
+     "hívott",
+     "meghívott",
+     "hívtál"
+    ],
+    "answer": 1,
+    "explanation": "'Ki' is in focus, so the preverbal prefix 'fel-' must detach to after the verb: 'Ki hívott fel?'"
+   },
+   {
+    "question": "Only Mary understood the lesson. -> Csak Mária ___ meg a leckét.",
+    "options": [
+     "megértette",
+     "értette",
+     "érti meg",
+     "megérti"
+    ],
+    "answer": 1,
+    "explanation": "'Csak Mária' occupies the focus slot, demanding verb inversion where 'értette' precedes 'meg'."
+   }
+  ],
+  "tip": "Spot the focus by locating the verb: whatever sits directly in front of the conjugated stem (and boots the verbal prefix backwards) carries the spotlight."
+ },
+ {
+  "id": "hu-b1-past-tense-conjugation-classes",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#2563EB",
+  "emoji": "⏳",
+  "title": "Past Tense Definite and Indefinite Forms",
+  "subtitle": "Navigating the three stem classes and dual conjugation in the past",
+  "color": "#3B82F6",
+  "bg": "#EFF6FF",
+  "keyPoint": "Past tense verbs attach -t, -tt, or a linking vowel plus -tt before taking indefinite or definite personal markers based on stem phonology and transitivity.",
+  "structure": {
+   "headers": [
+    "Stem Category",
+    "Infinitive",
+    "Indefinite 3rd Sg (-)",
+    "Definite 3rd Sg (-t/-tt + a/e)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Class 1: Stem ending in -l, -r, -n, -ny, -j, -s, -sz, -z, -zs",
+      "tanulni",
+      "tanult",
+      "tanulta"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Class 2: Stem ending in two consonants or long vowel + t",
+      "festeni",
+      "festett",
+      "festette"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Class 3: Short vowel + -t stem",
+      "nyitni",
+      "nyitott",
+      "nyitotta"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Irregular monosyllabic stems",
+      "látni",
+      "látott",
+      "látta"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Completed action with direct object",
+    "example": "Olvastam a könyvet, amit ajánlottál.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Indefinite past action",
+    "example": "Gábor tegnap egy új autót vásárolt.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Past event without an object",
+    "example": "A gyerekek egész délután a kertben játszottak.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Tegnap megírtam a fontos jelentést.",
+    "ko": "",
+    "highlight": "megírtam"
+   },
+   {
+    "en": "A diákok figyelmesen hallgatták a tanárt.",
+    "ko": "",
+    "highlight": "hallgatták"
+   },
+   {
+    "en": "Zsuzsa tegnap este sokat dolgozott.",
+    "ko": "",
+    "highlight": "dolgozott"
+   },
+   {
+    "en": "Láttátok a híres filmet a moziban?",
+    "ko": "",
+    "highlight": "Láttátok"
+   },
+   {
+    "en": "Reggel korán ébredtem, és főztem egy kávét.",
+    "ko": "",
+    "highlight": "főztem"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Én olvasott egy könyvet.",
+    "right": "Én olvastam egy könyvet.",
+    "note": "'-ott' marks 3rd person singular indefinite; 1st person requires '-tam' or '-tem'."
+   },
+   {
+    "wrong": "Láttam a filmet tegnap.",
+    "right": "Láttam a filmet tegnap. / Láttam egy filmet.",
+    "note": "Remember vowel harmony and transitivity: with 'a filmet' (definite), use 'láttam' (definite 1st person matches indefinite here, but 3rd person distinguishes 'látta' vs 'látott')."
+   },
+   {
+    "wrong": "Péter festett a képet.",
+    "right": "Péter festette a képet.",
+    "note": "When the object has a definite article ('a kép'), the definite conjugation suffix '-te' must be used instead of indefinite '-t/-ett'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday they sold the car. -> Tegnap ___ az autót.",
+    "options": [
+     "eladtak",
+     "eladták",
+     "eladott",
+     "eladta"
+    ],
+    "answer": 1,
+    "explanation": "'Az autót' is definite, and the subject is 'they' (3rd person plural), requiring definite '-ták': 'eladták'."
+   },
+   {
+    "question": "I waited for a bus for an hour. -> Egy órát ___ a buszra.",
+    "options": [
+     "vártam",
+     "várt",
+     "vártuk",
+     "vártatok"
+    ],
+    "answer": 0,
+    "explanation": "The 1st person singular past indefinite form of 'várni' is 'vártam'."
+   },
+   {
+    "question": "What did you (informal singular) drink? -> Mit ___ tegnap?",
+    "options": [
+     "ittál",
+     "ivott",
+     "ittam",
+     "ittatok"
+    ],
+    "answer": 0,
+    "explanation": "The past indefinite 2nd person singular of the irregular stem 'iszik' is 'ittál'."
+   },
+   {
+    "question": "The boy opened the door. -> A fiú ___ az ajtót.",
+    "options": [
+     "kinyitott",
+     "kinyitottak",
+     "kinyitotta",
+     "kinyitja"
+    ],
+    "answer": 2,
+    "explanation": "'Az ajtót' is a definite object; 3rd person singular past definite takes '-otta': 'kinyitotta'."
+   }
+  ],
+  "tip": "In 3rd person singular, bare '-t' only appears after sonorant consonants (-l, -r, -n, -ny, -j) or sibilants; clusters of two consonants always demand a linking vowel + '-tt'."
+ },
+ {
+  "id": "hu-b1-first-person-acting-on-second-lak-lek",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🤝",
+  "title": "The First-to-Second Person Suffix (-lak/-lek)",
+  "subtitle": "Connecting 1st person singular subjects to 2nd person objects",
+  "color": "#10B981",
+  "bg": "#ECFDF5",
+  "keyPoint": "Whenever the grammatical subject is 'I' (én) and the direct object is 'you' (téged, titeket, or benneteket), Hungarian contracts the relationship into the dedicated verbal suffix -lak or -lek.",
+  "structure": {
+   "headers": [
+    "Stem Type",
+    "Infinitive",
+    "Meaning with -lak/-lek",
+    "Inflected Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Back vowel verb",
+      "látni (to see)",
+      "I see you",
+      "látlak"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Front unrounded verb",
+      "kérni (to ask)",
+      "I ask you",
+      "kérlek"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Front rounded verb",
+      "küldeni (to send)",
+      "I send you",
+      "küldelek"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past tense marker + -lak/-lek",
+      "szeretni (to love)",
+      "I loved you",
+      "szerettelek"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Direct interpersonal statement",
+    "example": "Nagyon szeretlek téged!",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Polite requests",
+    "example": "Kérlek, csukd be az ablakot!",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Action toward multiple listeners",
+    "example": "Holnap reggel felhívlak titeket.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Már régóta kereslek a városban.",
+    "ko": "",
+    "highlight": "kereslek"
+   },
+   {
+    "en": "Ha megérkezem, azonnal hívlak telefonon.",
+    "ko": "",
+    "highlight": "hívlak"
+   },
+   {
+    "en": "Sajnos tegnap este nem láttalak a színházban.",
+    "ko": "",
+    "highlight": "láttalak"
+   },
+   {
+    "en": "Megtanítalak magyarul beszélni.",
+    "ko": "",
+    "highlight": "Megtanítalak"
+   },
+   {
+    "en": "Kérlek, figyelj rám egy pillanatra!",
+    "ko": "",
+    "highlight": "Kérlek"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Én szeretem téged.",
+    "right": "Szeretlek téged.",
+    "note": "Using the standard definite 1st person suffix (-m) with a 2nd person pronoun object is ungrammatical; -lak/-lek is required."
+   },
+   {
+    "wrong": "Mi látlak téged.",
+    "right": "Mi látunk téged.",
+    "note": "'-lak/-lek' is strictly for a 1st person singular ('én') subject acting on a 2nd person object; plural 'mi' uses normal plural endings."
+   },
+   {
+    "wrong": "Téged kérlek szépen, segíts.",
+    "right": "Kérlek szépen, segíts.",
+    "note": "While pronoun inclusion adds emphasis, adding redundant 'téged' before polite requests like 'kérlek szépen' sounds unnatural."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I hear you very well. -> Nagyon jól ___ téged.",
+    "options": [
+     "hallom",
+     "hallak",
+     "hallasz",
+     "hallaszlak"
+    ],
+    "answer": 1,
+    "explanation": "Subject 'én' + object 'téged' combines with back-vowel stem 'hall-' into 'hallak'."
+   },
+   {
+    "question": "I will invite you (plural) to dinner. -> ___ titeket vacsorára.",
+    "options": [
+     "Meghívok",
+     "Meghívom",
+     "Meghívlak",
+     "Meghívtok"
+    ],
+    "answer": 2,
+    "explanation": "The suffix '-lak/-lek' covers both singular 'you' and plural 'you (titeket)' objects when 'I' perform the action."
+   },
+   {
+    "question": "I waited for you for two hours yesterday. -> Tegnap két órát ___ az állomáson.",
+    "options": [
+     "vártalak",
+     "vártam",
+     "vártad",
+     "vártatok"
+    ],
+    "answer": 0,
+    "explanation": "In past tense, the past marker '-t(a)-' is inserted before '-lak', producing 'vártalak'."
+   },
+   {
+    "question": "Please close the door! -> ___, zárd be az ajtót!",
+    "options": [
+     "Kérem",
+     "Kérlek",
+     "Kérsz",
+     "Kéritek"
+    ],
+    "answer": 1,
+    "explanation": "'Kérlek' (I ask you) is the standard polite formula derived from 'kér' + '-lek'."
+   }
+  ],
+  "tip": "Remember: -lak/-lek is exclusively one-directional: from ME to YOU. It cannot be used if 'we' (mi) do the action, even if the target is 'you'."
+ },
+ {
+  "id": "hu-b1-conditional-mood",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#7C3AED",
+  "emoji": "💭",
+  "title": "Conditional Mood (Present and Past)",
+  "subtitle": "Expressing hypothetical, polite, and counterfactual events",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "The present conditional is built with the -na/-ne/-ná/-né mood markers before personal endings, while the past conditional pairs past tense verbs with the auxiliary particle 'volna'.",
+  "structure": {
+   "headers": [
+    "Mood / Tense",
+    "Vowel Harmony",
+    "Hungarian Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present Indefinite 1st Sg",
+      "Back / Front",
+      "tanulnék / kérnék",
+      "I would learn / I would ask"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Present Definite 3rd Sg",
+      "Back / Front",
+      "tanulná / kérné",
+      "He would learn it / ask it"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Present 1st -> 2nd Person",
+      "Back / Front",
+      "látnálak / kérnélek",
+      "I would see you / ask you"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Conditional (All)",
+      "Past verb + volna",
+      "mentem volna / látta volna",
+      "I would have gone / he would have seen it"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Polite requests and wishes",
+    "example": "Szeretnék kérni egy pohár vizet.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Hypothetical condition (Present)",
+    "example": "Ha lenne elég időm, többet olvasnék.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Counterfactual past regret",
+    "example": "Ha tudtam volna, elmentem volna a találkozóra.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Szívesen segítenék neked a pakolásban.",
+    "ko": "",
+    "highlight": "segítenék"
+   },
+   {
+    "en": "Mit csinálnál, ha nyernél a lottón?",
+    "ko": "",
+    "highlight": "csinálnál"
+   },
+   {
+    "en": "Ha nem esett volna az eső, kirándultunk volna.",
+    "ko": "",
+    "highlight": "kirándultunk volna"
+   },
+   {
+    "en": "Bárcsak itt lennél velünk most!",
+    "ko": "",
+    "highlight": "lennél"
+   },
+   {
+    "en": "Megvenném ezt a kabátot, de túl drága.",
+    "ko": "",
+    "highlight": "Megvenném"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ha tudnék tegnap, segítettem volna.",
+    "right": "Ha tudtam volna tegnap, segítettem volna.",
+    "note": "For unfulfilled conditions in the past, use the past indicative verb + 'volna', never the present conditional."
+   },
+   {
+    "wrong": "Én olvasnám egy könyvet.",
+    "right": "Én olvasnék egy könyvet.",
+    "note": "In 1st person singular present conditional, indefinite uses '-nék' for all vowel harmonies; '-nám/-ném' is definite."
+   },
+   {
+    "wrong": "Ha én lennék gazdag, vennék volna egy házat.",
+    "right": "Ha én gazdag lennék, vennék egy házat.",
+    "note": "Do not mix past conditional marker 'volna' into a purely present hypothetical wish."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I would like to order a coffee. -> ___ kérni egy kávét.",
+    "options": [
+     "Szerettem volna",
+     "Szeretek",
+     "Szeretnék",
+     "Szeretném"
+    ],
+    "answer": 2,
+    "explanation": "'Szeretnék' is the 1st person singular present conditional indefinite form used for polite requests."
+   },
+   {
+    "question": "If you had told me, I would have helped. -> Ha szóltál volna, ___ volna.",
+    "options": [
+     "segítenék",
+     "segítettem",
+     "segítek",
+     "segítettél"
+    ],
+    "answer": 1,
+    "explanation": "Past conditional requires a past tense verb paired with 'volna': 'segítettem volna'."
+   },
+   {
+    "question": "What would you (singular) do in my place? -> Te mit ___ a helyemben?",
+    "options": [
+     "csináltál",
+     "csinálnál",
+     "csinálsz",
+     "csinálnád"
+    ],
+    "answer": 1,
+    "explanation": "The 2nd person singular present conditional indefinite of 'csinál' is 'csinálnál'."
+   },
+   {
+    "question": "If we had enough money, we would buy the flat. -> Ha lenne pénzünk, ___ a lakást.",
+    "options": [
+     "megvennénk",
+     "megvesszük",
+     "megvettünk",
+     "megvettük volna"
+    ],
+    "answer": 0,
+    "explanation": "'A lakást' is a definite object; the 1st person plural present conditional definite suffix is '-nénk': 'megvennénk'."
+   }
+  ],
+  "tip": "Notice that unlike most tenses, 1st person singular indefinite conditional always ends in '-nék' regardless of whether the verb stem contains back or front vowels (e.g., várnék and kérnék)."
+ },
+ {
+  "id": "hu-b1-subjunctive-imperative-mood",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🗣️",
+  "title": "Subjunctive-Imperative Mood (Felszólító mód)",
+  "subtitle": "Forming direct orders, requests, and subordinate wish clauses",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "The subjunctive-imperative is formed using the marker -j-, which often assimilates thoroughly into preceding sibilant and dental stem consonants.",
+  "structure": {
+   "headers": [
+    "Stem Ending",
+    "Suffix Rule",
+    "Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Regular stem",
+      "+ -j- + personal ending",
+      "Várjál!",
+      "Wait!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Stem in -s, -sz, -z, -dz",
+      "j assimilates to stem consonant",
+      "Nézz ide!",
+      "Look here!"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Stem in -t (short vowel + t)",
+      "+ -ss-",
+      "Fussunk!",
+      "Let's run!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Stem in -t (consonant / long vowel + t)",
+      "+ -s-",
+      "Segíts!",
+      "Help!"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Direct Commands",
+    "example": "Csukd be az ablakot, kérlek!",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Subordinate Clauses (hogy)",
+    "example": "Azt akarom, hogy gyere el velünk.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Polite Suggestions (First Person)",
+    "example": "Menjünk ma moziba este!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kérlek, nyisd ki a könyvet a huszadik oldalon!",
+    "ko": "",
+    "highlight": "nyisd ki"
+   },
+   {
+    "en": "Fontos, hogy mindennap olvass egy keveset.",
+    "ko": "",
+    "highlight": "olvass"
+   },
+   {
+    "en": "Ne fuss olyan gyorsan, mert elesel!",
+    "ko": "",
+    "highlight": "fuss"
+   },
+   {
+    "en": "A tanár azt kéri, hogy figyeljünk az órán.",
+    "ko": "",
+    "highlight": "figyeljünk"
+   },
+   {
+    "en": "Segíts a nagymamának cipelni a csomagot!",
+    "ko": "",
+    "highlight": "Segíts"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Azt akarom, hogy mész haza.",
+    "right": "Azt akarom, hogy menj haza.",
+    "note": "Subordinate clauses expressing wishes or requests after 'hogy' require the subjunctive form, not the indicative."
+   },
+   {
+    "wrong": "Olvasj egy könyvet!",
+    "right": "Olvass egy könyvet!",
+    "note": "The suffix -j assimilates completely to sibilants like 's', becoming -ss- instead of retaining 'sj'."
+   },
+   {
+    "wrong": "Kérlek, segítj nekem!",
+    "right": "Kérlek, segíts nekem!",
+    "note": "Verb stems ending in long vowel + t take -s- rather than -j- in the imperative mood."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct imperative form: '___ be a könyvet!' (Close the book! - definite, te)",
+    "options": [
+     "Csukj",
+     "Csukd",
+     "Csukjad",
+     "Csuksz"
+    ],
+    "answer": 1,
+    "explanation": "For a definite object with 'te', 'csuk' takes the definite imperative ending -d, forming 'csukd'."
+   },
+   {
+    "question": "Complete the clause: 'Azt akarom, hogy Péter ___ ide.' (I want Peter to come here.)",
+    "options": [
+     "jön",
+     "jönne",
+     "jöjjön",
+     "jött"
+    ],
+    "answer": 2,
+    "explanation": "Third-person singular subjunctive of the irregular verb 'jön' is 'jöjjön'."
+   },
+   {
+    "question": "Choose the correct command: '___ egy kicsit lassabban!' (Drive a bit slower! - te)",
+    "options": [
+     "Vezess",
+     "Vezessz",
+     "Vezetj",
+     "Vezes"
+    ],
+    "answer": 0,
+    "explanation": "The stem 'vezet' ends in short vowel + t, which mutates to -ss- in the imperative: 'vezess'."
+   },
+   {
+    "question": "Let's go home together! -> '___ haza együtt!'",
+    "options": [
+     "Megyünk",
+     "Mennénk",
+     "Menjünk",
+     "Menjetek"
+    ],
+    "answer": 2,
+    "explanation": "'Menjünk' is the first-person plural (mi) subjunctive form used for 'let us'."
+   }
+  ],
+  "tip": "Remember that whenever a main clause expresses intention, request, or necessity with 'hogy' (e.g., 'kell, hogy...', 'akarom, hogy...'), the verb in the subclause must always be subjunctive."
+ },
+ {
+  "id": "hu-b1-causative-and-reflexive-derivation",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔄",
+  "title": "Causative and Reflexive Derivation",
+  "subtitle": "Deriving actions done to oneself or caused to be done by others",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Causative suffixes (-at/-et/-tat/-tet) make someone do an action, while reflexive endings (-kodik/-kedik/-ködik or -kozik/-kezik/-közik) reflect the action onto the subject.",
+  "structure": {
+   "headers": [
+    "Derivation",
+    "Suffix Pattern",
+    "Base -> Derived Verb",
+    "Meaning Change"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Causative (short stem)",
+      "-at / -et",
+      "mos -> mosat",
+      "wash -> have (sth) washed"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Causative (multisyllable/vowel)",
+      "-tat / -tet",
+      "tisztít -> tisztíttat",
+      "clean -> have cleaned"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Reflexive (behavior)",
+      "-kodik / -kedik / -ködik",
+      "gondol -> gondolkodik",
+      "think -> reflect/contemplate"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reflexive (direct body)",
+      "-kozik / -kezik / -közik",
+      "borotvál -> borotválkozik",
+      "shave -> shave oneself"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Services & Delegated Work",
+    "example": "Holnap megjavíttatom a telefonomat a szervizben.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Personal Hygiene & Care",
+    "example": "Reggelente gyorsan megfésülködöm a tükör előtt.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Active Behavior",
+    "example": "A gyerekek nagyon udvariasan viselkednek az iskolában.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "A mesterrel festetem ki a nappalit a jövő héten.",
+    "ko": "",
+    "highlight": "festetem"
+   },
+   {
+    "en": "Péter minden reggel tíz perc alatt felöltözködik.",
+    "ko": "",
+    "highlight": "felöltözködik"
+   },
+   {
+    "en": "Nem szeretem megváratni a vendégeket az étteremben.",
+    "ko": "",
+    "highlight": "megváratni"
+   },
+   {
+    "en": "A fiú hosszan törülközik az edzés után.",
+    "ko": "",
+    "highlight": "törülközik"
+   },
+   {
+    "en": "Az orvos felíratja a szükséges gyógyszereket.",
+    "ko": "",
+    "highlight": "felíratja"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mosom a kocsimat az autómosóban.",
+    "right": "Mosatom a kocsimat az autómosóban.",
+    "note": "If someone else washes it for you at a facility, use the causative 'mosat' instead of plain 'mos'."
+   },
+   {
+    "wrong": "Én borotválom mindennap.",
+    "right": "Én borotválkozom mindennap.",
+    "note": "Without the reflexive suffix, 'borotválom' requires an external object because it means 'I shave (someone/something)'."
+   },
+   {
+    "wrong": "Megírtatom a levelet.",
+    "right": "Megíratom a levelet.",
+    "note": "The monosyllabic verb 'ír' takes -at, yielding 'írat', not the double-t suffix 'írtat'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I have my hair cut at the barber. -> '___ a hajamat a fodrásszal.'",
+    "options": [
+     "Vágom",
+     "Levágatom",
+     "Vágódom",
+     "Levágok"
+    ],
+    "answer": 1,
+    "explanation": "'Levágat' is the causative form of 'levág', showing that the barber is hired to cut your hair."
+   },
+   {
+    "question": "Anna gets dressed quickly every morning. -> 'Anna minden reggel gyorsan ___.'",
+    "options": [
+     "öltözködik",
+     "ölt",
+     "öltöztet",
+     "ölti"
+    ],
+    "answer": 0,
+    "explanation": "'Öltözködik' is the reflexive form meaning 'to dress oneself'."
+   },
+   {
+    "question": "The teacher makes the students write a test. -> 'A tanár dolgozatot ___ a diákokkal.'",
+    "options": [
+     "íródik",
+     "ír",
+     "iratkozik",
+     "írat"
+    ],
+    "answer": 3,
+    "explanation": "'Írat' is the causative form of 'ír', meaning 'to make/have someone write'."
+   },
+   {
+    "question": "Choose the reflexive verb for 'to introduce oneself':",
+    "options": [
+     "bemutat",
+     "bemutatkozik",
+     "bemutattat",
+     "bemutatódik"
+    ],
+    "answer": 1,
+    "explanation": "'Bemutatkozik' means to introduce oneself, formed with the reflexive suffix -kozik."
+   }
+  ],
+  "tip": "When identifying the person performing the delegated causative task, Hungarian almost always puts that agent in the instrumental case (-val/-vel): 'Péterrel csináltatom meg' (I'll have Peter do it)."
+ },
+ {
+  "id": "hu-b2-potential-verb-suffix",
+  "level": "b2",
+  "category": "modals",
+  "categoryColor": "#059669",
+  "emoji": "🔓",
+  "title": "The Potential Verb Form (-hat/-het)",
+  "subtitle": "Expressing permission and possibility inside the verb stem",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "The productive suffix -hat/-het attaches immediately after the verb root to indicate possibility or permission ('may' or 'can').",
+  "structure": {
+   "headers": [
+    "Vowel Harmony",
+    "Base Verb",
+    "Potential Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Back Vowel (-hat)",
+      "vár (to wait)",
+      "várhat",
+      "can / may wait"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Front Vowel (-het)",
+      "kér (to ask)",
+      "kérhet",
+      "can / may ask"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "With Past Tense",
+      "tanul (to study)",
+      "tanulhatott",
+      "could have studied"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "With Conditional",
+      "megy (to go)",
+      "mehetne",
+      "could / would be able to go"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Asking for Permission",
+    "example": "Bemehetek a terembe egy percre?",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Stating Physical Possibility",
+    "example": "Itt kényelmesen parkolhatsz az autóddal.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Speculation & Likelihood",
+    "example": "Késő van, már alhatnak a szomszédok.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Szabad itt dohányozni, vagy csak kint dohányozhatunk?",
+    "ko": "",
+    "highlight": "dohányozhatunk"
+   },
+   {
+    "en": "Holnap sajnos nem jöhetek a születésnapi bulidra.",
+    "ko": "",
+    "highlight": "jöhetek"
+   },
+   {
+    "en": "Ezt a feladatot könnyen megcsinálhatjátok együtt.",
+    "ko": "",
+    "highlight": "megcsinálhatjátok"
+   },
+   {
+    "en": "Kölcsönvehetném a tolladat néhány percre?",
+    "ko": "",
+    "highlight": "Kölcsönvehetném"
+   },
+   {
+    "en": "Már indulhatunk, mindenki elkészült a pakolással.",
+    "ko": "",
+    "highlight": "indulhatunk"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Tudok jönni holnap? (asking for permission)",
+    "right": "Jöhetek holnap?",
+    "note": "'Tud' denotes learned skill or internal capacity; for permission or circumstantial ability, use the -hat/-het suffix."
+   },
+   {
+    "wrong": "Nem láthatlak téged. (meaning sight is blocked)",
+    "right": "Nem látlak téged.",
+    "note": "'Nem láthatlak' implies a ban or external prohibition; if you simply cannot see someone, use plain 'látlak'."
+   },
+   {
+    "wrong": "Elmehetni akarok.",
+    "right": "El akarok menni.",
+    "note": "Never add -hat/-het directly to an infinitive ending in -ni; it forms an independent conjugable finite verb."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Excuse me, may I ask a question? -> 'Elnézést, ___ egy kérdést?'",
+    "options": [
+     "kérdezhetek",
+     "kérdezhetem",
+     "kérdezhetlek",
+     "kérdezni tudok"
+    ],
+    "answer": 0,
+    "explanation": "'Kérdez' takes back vowel -hat; with indefinite 1st person singular ending -ek, it becomes 'kérdezhetek'."
+   },
+   {
+    "question": "You can leave your coat here. (te, definite) -> 'Itt ___ a kabátodat.'",
+    "options": [
+     "hagyhatsz",
+     "hagyhatod",
+     "hagysz",
+     "hagyhat"
+    ],
+    "answer": 1,
+    "explanation": "Definite direct object ('a kabátodat') with subject 'te' requires the definite suffix: 'hagyhatod'."
+   },
+   {
+    "question": "Could we sit down here? -> '___ ide?'",
+    "options": [
+     "Leülünk",
+     "Leülhetnénk",
+     "Leülnénk",
+     "Leülhetünk"
+    ],
+    "answer": 1,
+    "explanation": "'Leülhetnénk' combines both potential (-het-) and polite conditional (-nénk) moods."
+   },
+   {
+    "question": "He could not sleep last night. -> 'Tegnap este nem ___.'",
+    "options": [
+     "alhat",
+     "aludhatott",
+     "alhatott",
+     "aludt"
+    ],
+    "answer": 2,
+    "explanation": "Past potential combines stem 'al-' + -hat- + past tense marker -ott: 'alhatott'."
+   }
+  ],
+  "tip": "You can stack moods! The potential marker -hat/-het always precedes tense and conditional markers (e.g., vár + hat + na = várhatna 'he could wait')."
+ },
+ {
+  "id": "hu-b2-adverbial-participles",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#7C3AED",
+  "emoji": "⏳",
+  "title": "Adverbial Participles (-va/-ve, -ván/-vén)",
+  "subtitle": "Modifying clauses to express manner, cause, or accompanying state",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Adverbial participles end in -va/-ve (or archaic -ván/-vén) and describe the state of the subject or manner in which an action unfolds.",
+  "structure": {
+   "headers": [
+    "Ending",
+    "Stem Harmony",
+    "Participle",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-va",
+      "Back vowel stem",
+      "áll -> állva",
+      "standing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ve",
+      "Front vowel stem",
+      "nevet -> nevetve",
+      "laughing / smiling"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ván",
+      "Back vowel (literary)",
+      "tud -> tudván",
+      "knowing that / as (one) knows"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-vén",
+      "Front vowel (literary)",
+      "érkez -> érkezvén",
+      "upon arriving / having arrived"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Simultaneous Manner",
+    "example": "Sírdogálva mesélte el a szomorú történetet.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Resulting State with 'van'",
+    "example": "Az ablak szélesre van nyitva egész nap.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Cause / Circumstance (-ván/-vén)",
+    "example": "Látván a nehéz helyzetet, azonnal segített.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "A nagypapa a fotelben ülve olvasta az újságot.",
+    "ko": "",
+    "highlight": "ülve"
+   },
+   {
+    "en": "Minden számla pontosan ki van fizetve.",
+    "ko": "",
+    "highlight": "ki van fizetve"
+   },
+   {
+    "en": "Futva érkezett meg a vasútállomásra, nehogy lekésse a vonatot.",
+    "ko": "",
+    "highlight": "Futva"
+   },
+   {
+    "en": "Ismerve a szokásait, biztosan késni fog negyedórát.",
+    "ko": "",
+    "highlight": "Ismerve"
+   },
+   {
+    "en": "Az ajtó zárva volt, ezért csengetnünk kellett.",
+    "ko": "",
+    "highlight": "zárva volt"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "A könyv írva van általam.",
+    "right": "Én írtam a könyvet.",
+    "note": "Hungarian avoids passive constructions with '-va van' when an active agent is present. Use the active voice instead."
+   },
+   {
+    "wrong": "Ülve voltam a szobában.",
+    "right": "A szobában ültem.",
+    "note": "Dynamic or simple actions use finite past tense; do not use 'ülve voltam' to mimic English continuous tenses."
+   },
+   {
+    "wrong": "Futva a fiú látta a kutyát.",
+    "right": "A fiú futva látta meg a kutyát.",
+    "note": "Word order matters: keep the adverbial participle close to the verb it modifies for natural flow."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "She listened to the concert with eyes closed. -> 'Csukott szemmel, csendben ___ hallgatta a koncertet.'",
+    "options": [
+     "ülvén",
+     "ülve",
+     "ülő",
+     "ült"
+    ],
+    "answer": 1,
+    "explanation": "'Ülve' is the standard modern adverbial participle expressing the manner/state during the action."
+   },
+   {
+    "question": "The store is closed today. -> 'A bolt ma zárva ___.'",
+    "options": [
+     "lesz",
+     "van",
+     "áll",
+     "maradva"
+    ],
+    "answer": 1,
+    "explanation": "The stative construction describing a state uses the adverbial participle + 'van': 'zárva van'."
+   },
+   {
+    "question": "Knowing the truth, he decided not to speak. (literary) -> 'A valóságot ___, úgy döntött, nem szól semmit.'",
+    "options": [
+     "tudott",
+     "tudva",
+     "tudván",
+     "tudó"
+    ],
+    "answer": 2,
+    "explanation": "The literary/archaic form expressing circumstance/cause is '-ván/-vén': 'tudván'."
+   },
+   {
+    "question": "They walked home singing. -> '___ sétáltak hazafelé az utcán.'",
+    "options": [
+     "Énekelve",
+     "Énekelni",
+     "Éneklő",
+     "Énekeltek"
+    ],
+    "answer": 0,
+    "explanation": "'Énekelve' describes the accompanying simultaneous action (singing)."
+   }
+  ],
+  "tip": "Use '-va/-ve van' strictly to express the resulting state of an object (e.g. 'meg van írva' = it is in a written state), never to translate English continuous forms like 'I am writing'."
+ },
+ {
+  "id": "hu-b2-adjectival-participles",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#7C3AED",
+  "emoji": "🏷️",
+  "title": "Adjectival Participles (-ó/-ő, -t/-tt, -andó/-endő)",
+  "subtitle": "Compressing relative clauses into present, past, and future participles",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Hungarian compresses relative clauses into prenominal participles: active present (-ó/-ő), completed past (-t/-tt), and mandatory future (-andó/-endő).",
+  "structure": {
+   "headers": [
+    "Participle Type",
+    "Suffix",
+    "Hungarian Example",
+    "Meaning as Modifier"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present (active)",
+      "-ó / -ő",
+      "a táncoló pár",
+      "the dancing couple"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past (passive/completed)",
+      "-t / -tt",
+      "a megírt levél",
+      "the written letter"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Future (necessity)",
+      "-andó / -endő",
+      "a fizetendő összeg",
+      "the amount to be paid"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past (active intransitive)",
+      "-t / -tt",
+      "az elhervadt virág",
+      "the withered flower"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Simultaneous Action Modifier",
+    "example": "A padon alvó macska nagyon aranyos.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Completed State Modifier",
+    "example": "Az elrontott számítógépet a szervizbe vitték.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Obligation / Future Task",
+    "example": "A megoldandó feladatok listája igen hosszú.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "A sarokban beszélgető diákok nem figyeltek a tanárra.",
+    "ko": "",
+    "highlight": "beszélgető"
+   },
+   {
+    "en": "Gondosan elolvasta a tegnap kapott levelet.",
+    "ko": "",
+    "highlight": "kapott"
+   },
+   {
+    "en": "A jövő héten elvégzendő munkát előre megterveztük.",
+    "ko": "",
+    "highlight": "elvégzendő"
+   },
+   {
+    "en": "A gyorsan múló idő mindenkit emlékeztet a céljaira.",
+    "ko": "",
+    "highlight": "múló"
+   },
+   {
+    "en": "A pincér letette az asztalra a megrendelt ételeket.",
+    "ko": "",
+    "highlight": "megrendelt"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "A fiú aki olvas könyvet ott ül.",
+    "right": "A könyvet olvasó fiú ott ül.",
+    "note": "While relative clauses with 'aki' exist, native Hungarian strongly prefers compressing them into pre-nominal participial phrases."
+   },
+   {
+    "wrong": "A fizetendő számla fizetve kell lennie.",
+    "right": "A számla fizetendő.",
+    "note": "The -andó/-endő participle already carries the meaning of necessity ('must be done'); do not combine it pleonastically with modal verbs."
+   },
+   {
+    "wrong": "A megfőzött anya finom levest adott.",
+    "right": "A megfőzött leves nagyon finom volt.",
+    "note": "Transitive past participles modify the object receiving the action (the soup), never the agent (mother) who cooked it."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The girl singing on the stage is my sister. -> 'A színpadon ___ lány a testvérem.'",
+    "options": [
+     "énekel",
+     "éneklő",
+     "énekelve",
+     "énekelendő"
+    ],
+    "answer": 1,
+    "explanation": "The present active participle ending for 'énekel' is -ő, producing 'éneklő'."
+   },
+   {
+    "question": "I cannot find the purchased ticket. -> 'Nem találom a már ___ jegyet.'",
+    "options": [
+     "megvásárló",
+     "megvásárolt",
+     "megvásárolandó",
+     "vásárolva"
+    ],
+    "answer": 1,
+    "explanation": "'Megvásárolt' is the past participle describing a completed action done to the ticket."
+   },
+   {
+    "question": "Tasks to be completed today must be submitted by 5 PM. -> 'A ma ___ feladatokat ötig le kell adni.'",
+    "options": [
+     "megoldott",
+     "megoldó",
+     "megoldandó",
+     "megoldva"
+    ],
+    "answer": 2,
+    "explanation": "-andó expresses future obligation or actions that need to be carried out ('to be solved')."
+   },
+   {
+    "question": "Choose the correct phrase: 'the decaying fallen leaves'",
+    "options": [
+     "a lehullott levelek",
+     "a lehulló levelek",
+     "a lehullandó levelek",
+     "a lehullva levelek"
+    ],
+    "answer": 0,
+    "explanation": "'Lehullott' is the past participle of the intransitive verb 'lehull' (fallen)."
+   }
+  ],
+  "tip": "In Hungarian, participial phrases always precede the noun they modify, along with all their internal objects and adverbs (e.g., 'a tegnap este Budapesten vásárolt könyv' = the book bought yesterday evening in Budapest)."
+ }
+]

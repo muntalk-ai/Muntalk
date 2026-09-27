@@ -1,0 +1,3373 @@
+[
+ {
+  "id": "tr-a1-vowel-harmony",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎶",
+  "title": "Major and Minor Vowel Harmony",
+  "subtitle": "Master 2-way and 4-way vowel matching across suffixes",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Turkish suffix vowels change systematically to match the backness and lip-rounding of the preceding syllable's vowel.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Vowel Pattern",
+    "Suffix Example",
+    "Sample Word"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "2-Way (A-Type)",
+      "a, ı, o, u → -lar",
+      "Plural (-lar / -ler)",
+      "kitaplar"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "2-Way (E-Type)",
+      "e, i, ö, ü → -ler",
+      "Plural (-lar / -ler)",
+      "evler"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "4-Way (Back Unrounded)",
+      "a, ı → -ı",
+      "Question Particle (-mı)",
+      "kadın mı"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "4-Way (Front Rounded)",
+      "ö, ü → -ü",
+      "Question Particle (-mü)",
+      "gözlük mü"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "2-Way Harmony (Plural & Locative)",
+    "example": "Köpekler bahçede oynuyor.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "4-Way Harmony (Question Particle)",
+    "example": "Bu telefon yeni mi?",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "4-Way Harmony (Definite Accusative)",
+    "example": "Okulda müdürü gördüm.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Masada üç tane kitap var.",
+    "ko": "",
+    "highlight": "Masada"
+   },
+   {
+    "en": "Öğrenciler sınıfta ders dinliyor.",
+    "ko": "",
+    "highlight": "Öğrenciler"
+   },
+   {
+    "en": "Bugün hava çok soğuk mu?",
+    "ko": "",
+    "highlight": "mu"
+   },
+   {
+    "en": "Doktor hastayı dikkatle muayene etti.",
+    "ko": "",
+    "highlight": "hastayı"
+   },
+   {
+    "en": "Kardeşim otobüsü kaçırdı.",
+    "ko": "",
+    "highlight": "otobüsü"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "evlar",
+    "right": "evler",
+    "note": "The vowel 'e' is a front vowel, so it takes the front plural suffix '-ler', not '-lar'."
+   },
+   {
+    "wrong": "araba mi?",
+    "right": "araba mı?",
+    "note": "The final vowel of 'araba' is 'a', which requires the back unrounded 4-way suffix '-mı'."
+   },
+   {
+    "wrong": "gözlerı",
+    "right": "gözleri",
+    "note": "The vowel 'e' in 'gözler' requires the front unrounded suffix '-i'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct plural form of 'kapı' (door): 'Bunlar yeni ___.'",
+    "options": [
+     "kapılar",
+     "kapiler",
+     "kapıler",
+     "kapular"
+    ],
+    "answer": 0,
+    "explanation": "Since 'kapı' ends in the back vowel 'ı', 2-way vowel harmony requires '-lar'."
+   },
+   {
+    "question": "Complete the question: 'Süt soğuk ___?'",
+    "options": [
+     "mı",
+     "mi",
+     "mu",
+     "mü"
+    ],
+    "answer": 2,
+    "explanation": "The last vowel of 'soğuk' is 'u' (back rounded), which matches with '-mu' under 4-way harmony."
+   },
+   {
+    "question": "Choose the correct plural form of 'köy' (village): 'Burada güzel ___ var.'",
+    "options": [
+     "köylar",
+     "köyler",
+     "köyür",
+     "köylor"
+    ],
+    "answer": 1,
+    "explanation": "The vowel 'ö' is front, so 2-way vowel harmony requires '-ler'."
+   },
+   {
+    "question": "Complete the question: 'Bu araba senin ___?'",
+    "options": [
+     "mı",
+     "mu",
+     "mü",
+     "mi"
+    ],
+    "answer": 3,
+    "explanation": "The final vowel of 'senin' is 'i' (front unrounded), requiring '-mi'."
+   }
+  ],
+  "tip": "Remember: 2-way harmony (only -e or -a) handles structural cases and plurals, while 4-way harmony (-i, -ı, -u, -ü) handles modifiers, questions, and possessives."
+ },
+ {
+  "id": "tr-a1-noun-cases",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📍",
+  "title": "Core Noun Case Endings",
+  "subtitle": "Locative, Dative, Ablative, and Accusative case markers",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Turkish noun cases indicate location, movement toward, movement from, or direct objects using suffixes governed by vowel and consonant harmony.",
+  "structure": {
+   "headers": [
+    "Case",
+    "Suffix Pattern",
+    "Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Locative (at/in/on)",
+      "-de / -da / -te / -ta",
+      "evde",
+      "at home"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Dative (to/toward)",
+      "-(y)e / -(y)a",
+      "okula",
+      "to school"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ablative (from)",
+      "-den / -dan / -ten / -tan",
+      "işten",
+      "from work"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Accusative (the [specific])",
+      "-(y)i / -(y)ı / -(y)ü / -(y)u",
+      "evi",
+      "the house (object)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Static Location (-de/-da)",
+    "example": "Ali şu anda kütüphanede çalışıyor.",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Direction & Destination (-e/-a)",
+    "example": "Yarın sabah erkenden pazara gideceğiz.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Origin or Source (-den/-dan)",
+    "example": "Tren saat dokuzda Ankara'dan geliyor.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ahmet şu an parkta oturuyor.",
+    "ko": "",
+    "highlight": "parkta"
+   },
+   {
+    "en": "Annem markete gidiyor.",
+    "ko": "",
+    "highlight": "markete"
+   },
+   {
+    "en": "Babam akşam işten yorgun döndü.",
+    "ko": "",
+    "highlight": "işten"
+   },
+   {
+    "en": "Kitabı masanın üzerine koydum.",
+    "ko": "",
+    "highlight": "Kitabı"
+   },
+   {
+    "en": "Kedi bahçeden eve koştu.",
+    "ko": "",
+    "highlight": "bahçeden"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "okulda gitmek",
+    "right": "okula gitmek",
+    "note": "Verbs of motion like 'gitmek' take the dative case (-a/-e) to indicate movement toward a destination, not locative."
+   },
+   {
+    "wrong": "parkda",
+    "right": "parkta",
+    "note": "After voiceless consonants like 'k', the case suffix consonant 'd' must harden to 't'."
+   },
+   {
+    "wrong": "oda-a",
+    "right": "odaya",
+    "note": "When attaching dative '-a' to a noun ending in a vowel like 'oda', the buffer consonant 'y' is required."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete with the correct dative form: 'Biz her gün ___ gidiyoruz.' (okul)",
+    "options": [
+     "okulda",
+     "okula",
+     "okuldan",
+     "okulu"
+    ],
+    "answer": 1,
+    "explanation": "Going 'to school' requires dative movement marker '-(y)a', hence 'okula'."
+   },
+   {
+    "question": "Complete with the correct locative form: 'Kitaplarım ___ kaldı.' (sınıf)",
+    "options": [
+     "sınıfta",
+     "sınıfda",
+     "sınıfa",
+     "sınıftan"
+    ],
+    "answer": 0,
+    "explanation": "'Sınıf' ends with voiceless 'f' and has back vowel 'ı', requiring the locative '-ta'."
+   },
+   {
+    "question": "Complete with the correct ablative form: 'Mehmet saat altıda ___ çıkıyor.' (ofis)",
+    "options": [
+     "ofise",
+     "ofiste",
+     "ofisi",
+     "ofisten"
+    ],
+    "answer": 3,
+    "explanation": "Exiting 'from the office' requires ablative '-ten' after voiceless 's'."
+   },
+   {
+    "question": "Complete with the correct accusative form: 'Lütfen kapı___ kapatın.' (kapı)",
+    "options": [
+     "kapı",
+     "kapıya",
+     "kapıyı",
+     "kapıda"
+    ],
+    "answer": 2,
+    "explanation": "A specific direct object ending in a vowel requires the buffer 'y' + accusative 'ı' -> 'kapıyı'."
+   }
+  ],
+  "tip": "Use the buffer consonant 'y' before vowel-initial case suffixes whenever the noun base ends in a vowel (e.g., sinema -> sinemaya, köprü -> köprüyü)."
+ },
+ {
+  "id": "tr-a1-possessive-suffixes",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔑",
+  "title": "Possessive Suffixes and 'Var / Yok'",
+  "subtitle": "Express ownership and existence without the verb 'to have'",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Turkish expresses possession by attaching possessive endings to the noun and asserting existence with 'var' (there is) or 'yok' (there is not).",
+  "structure": {
+   "headers": [
+    "Person",
+    "Pronoun",
+    "Suffix (Vowel / Consonant)",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Ben (my)",
+      "benim",
+      "-m / -(i)m",
+      "evim"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Sen (your)",
+      "senin",
+      "-n / -(i)n",
+      "evin"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "O (his/her/its)",
+      "onun",
+      "-(s)i / -(s)ı / -(s)ü / -(s)u",
+      "evi / arabası"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Biz (our)",
+      "bizim",
+      "-miz / -(i)miz",
+      "evimiz"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Expressing 'I have...'",
+    "example": "Benim iki tane kedim var.",
+    "translation": ""
+   },
+   {
+    "color": "#DB2777",
+    "label": "Expressing 'I do not have...'",
+    "example": "Bugün hiç vaktim yok.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Possessive Modifiers",
+    "example": "Senin araban nerede duruyor?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Benim yeni bir arabam var.",
+    "ko": "",
+    "highlight": "arabam var"
+   },
+   {
+    "en": "Onun hiç parası yok.",
+    "ko": "",
+    "highlight": "parası yok"
+   },
+   {
+    "en": "Bizim evimiz denize çok yakın.",
+    "ko": "",
+    "highlight": "evimiz"
+   },
+   {
+    "en": "Sizin pasaportunuz yanınızda mı?",
+    "ko": "",
+    "highlight": "pasaportunuz"
+   },
+   {
+    "en": "Onların çocukları okulda ders çalışıyor.",
+    "ko": "",
+    "highlight": "çocukları"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ben var araba.",
+    "right": "Benim arabam var.",
+    "note": "Turkish uses genitive pronoun + possessive suffix + 'var', never subject pronoun directly with 'var'."
+   },
+   {
+    "wrong": "onun evsi",
+    "right": "onun evi",
+    "note": "The buffer 's' is only used for the 3rd person suffix when the noun stem ends in a vowel (e.g., araba-sı); consonant stems take simple '-i' (ev-i)."
+   },
+   {
+    "wrong": "Benim param değil.",
+    "right": "Benim param yok.",
+    "note": "Use 'yok' to express the non-existence or lack of possession, not 'değil'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'We have a cat'?: 'Bizim bir ___.'",
+    "options": [
+     "kedimiz var",
+     "kedim var",
+     "kediniz yok",
+     "kedileri var"
+    ],
+    "answer": 0,
+    "explanation": "'Bizim' (our) corresponds to the 1st person plural suffix '-miz', so 'kedimiz var' means 'we have a cat'."
+   },
+   {
+    "question": "How do you say 'Do you have time?' to a friend?: 'Senin ___?'",
+    "options": [
+     "vaktin değil mi",
+     "vaktin var mı",
+     "vakti var mı",
+     "vaktiniz yok mu"
+    ],
+    "answer": 1,
+    "explanation": "'Senin' matches 'vaktin', and existence question is 'var mı?'."
+   },
+   {
+    "question": "Complete: 'Onun kırmızı bir ___ var.' (araba)",
+    "options": [
+     "arabası",
+     "arabam",
+     "arabasıy",
+     "arabanı"
+    ],
+    "answer": 0,
+    "explanation": "For 3rd person singular on a vowel stem, buffer 's' + 4-way vowel yields '-sı' -> 'arabası'."
+   },
+   {
+    "question": "Select the sentence meaning 'I don't have a car':",
+    "options": [
+     "Ben araba yokum.",
+     "Arabam değil.",
+     "Benim arabam yok.",
+     "Benim araba yok."
+    ],
+    "answer": 2,
+    "explanation": "'Benim arabam yok' correctly marks the noun with 1st person singular '-m' followed by 'yok'."
+   }
+  ],
+  "tip": "Think of 'Benim arabam var' literally as 'My car exists' rather than 'I have a car'. This prevents literal translation errors from English."
+ },
+ {
+  "id": "tr-a1-present-continuous-tense",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#10B981",
+  "emoji": "⏳",
+  "title": "Present Continuous Tense (-iyor)",
+  "subtitle": "Express ongoing actions and general present habits",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Attach the tense marker '-iyor' (with 4-way connecting vowel) to the verb stem, dropping any existing broad root vowel (a/e).",
+  "structure": {
+   "headers": [
+    "Person",
+    "Formula",
+    "Verb: gel- (to come)",
+    "Verb: yap- (to do)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Ben (I)",
+      "stem + -(i)yor + -um",
+      "geliyorum",
+      "yapıyorum"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Sen (you)",
+      "stem + -(i)yor + -sun",
+      "geliyorsun",
+      "yapıyorsun"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "O (he/she/it)",
+      "stem + -(i)yor",
+      "geliyor",
+      "yapıyor"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Biz (we)",
+      "stem + -(i)yor + -uz",
+      "geliyoruz",
+      "yapıyoruz"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Actions Happening Right Now",
+    "example": "Şu anda Türkçe dersi çalışıyorum.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Habitual or Daily Routines",
+    "example": "Her sabah erkenden sahilde koşuyor.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Imminent Future Plans",
+    "example": "Gelecek hafta İstanbul'a gidiyoruz.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ali şu anda balkonda kahve içiyor.",
+    "ko": "",
+    "highlight": "içiyor"
+   },
+   {
+    "en": "Biz her akşam televizyon izliyoruz.",
+    "ko": "",
+    "highlight": "izliyoruz"
+   },
+   {
+    "en": "Sen neden bu akşam gelmiyorsun?",
+    "ko": "",
+    "highlight": "gelmiyorsun"
+   },
+   {
+    "en": "Çocuklar bahçede top oynuyor.",
+    "ko": "",
+    "highlight": "oynuyor"
+   },
+   {
+    "en": "Şimdi ofise doğru yürüyorum.",
+    "ko": "",
+    "highlight": "yürüyorum"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "başlayor",
+    "right": "başlıyor",
+    "note": "When verb stems end in 'a' or 'e', that vowel drops before '-iyor' and is replaced by harmony ('başla-' -> 'başl-' + 'ıyor' = 'başlıyor')."
+   },
+   {
+    "wrong": "git-iyor",
+    "right": "gidiyor",
+    "note": "The root final 't' in common verbs like 'gitmek' and 'etmek' mutates to 'd' before vowel-initial '-iyor'."
+   },
+   {
+    "wrong": "ben yapıyor",
+    "right": "ben yapıyorum",
+    "note": "The present continuous tense must take personal subject suffixes matching the subject ('-um' for 'ben')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Form the correct 1st person singular form of 'oku-' (to read): 'Ben kitap ___.'",
+    "options": [
+     "okuyor",
+     "okuyorum",
+     "okuyurum",
+     "okuyorsun"
+    ],
+    "answer": 1,
+    "explanation": "The root 'oku-' ends in 'u', so '-yor' attaches directly, followed by 1st person '-um': 'okuyorum'."
+   },
+   {
+    "question": "What is the correct form of 'yemek' (to eat) for 'o' (he/she)?: 'O elma ___.'",
+    "options": [
+     "yeyor",
+     "yiyor",
+     "yemiyor",
+     "yeor"
+    ],
+    "answer": 1,
+    "explanation": "The irregular verb root 'ye-' narrows its vowel to 'i' before '-yor', resulting in 'yiyor'."
+   },
+   {
+    "question": "Complete for 'biz' (we): 'Biz yarın sinemaya ___.' (gitmek)",
+    "options": [
+     "gidiyoruz",
+     "gitiyoruz",
+     "gidiyorsunuz",
+     "gidiyorum"
+    ],
+    "answer": 0,
+    "explanation": "'Git-' undergoes consonant mutation to 'gid-', followed by '-iyor' and 1st plural '-uz' -> 'gidiyoruz'."
+   },
+   {
+    "question": "Complete the negative form for 'sen' (you): 'Sen müzik dinle___.'",
+    "options": [
+     "miyorsun",
+     "dinleyorsun",
+     "meiyorsun",
+     "muyorsun"
+    ],
+    "answer": 0,
+    "explanation": "Negative present continuous uses '-me/-ma' which narrows to '-mi' + '-yor' + '-sun' -> 'dinlemiyorsun'."
+   }
+  ],
+  "tip": "Whenever a verb stem ends in -a or -e (e.g. anla-, dinle-), simply strike that vowel off before attaching -ıyor/-iyor (anl-ıyor, dinl-iyor)."
+ },
+ {
+  "id": "tr-a1-consonant-mutation",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔄",
+  "title": "Consonant Harmony and Mutation",
+  "subtitle": "Master consonant softening (p/ç/t/k) and hardening (d/t)",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Voiceless stops (p, ç, t, k) soften to voiced counterparts (b, c, d, ğ) between vowels, while suffix-initial 'd' hardens to 't' after voiceless consonants.",
+  "structure": {
+   "headers": [
+    "Base Consonant",
+    "Softened Form (Intervocalic)",
+    "Example Base",
+    "With Vowel Suffix"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "k",
+      "ğ",
+      "kitaplık",
+      "kitaplığa"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "p",
+      "b",
+      "kitap",
+      "kitabı"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ç",
+      "c",
+      "ağaç",
+      "ağaca"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "t",
+      "d",
+      "kanat",
+      "kanadı"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Softening with Possessive Suffixes",
+    "example": "Benim köpeğim çok akıllı.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Softening with Accusative/Dative",
+    "example": "Ali mutfaktaki bardağı kırdı.",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Suffix Hardening (Fıstıkçı Şahap)",
+    "example": "Murat sabah saat sekizde sınıftan çıktı.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Çantamda eski bir sözlük var.",
+    "ko": "",
+    "highlight": "sözlük"
+   },
+   {
+    "en": "Öğretmen yeni sözlüğü masaya koydu.",
+    "ko": "",
+    "highlight": "sözlüğü"
+   },
+   {
+    "en": "Ahmet dolabı dikkatle boyadı.",
+    "ko": "",
+    "highlight": "dolabı"
+   },
+   {
+    "en": "Kuşun kanadı yaralanmış.",
+    "ko": "",
+    "highlight": "kanadı"
+   },
+   {
+    "en": "Sokakta hiç insan yoktu.",
+    "ko": "",
+    "highlight": "Sokakta"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "kitapım",
+    "right": "kitabım",
+    "note": "When the stem ends in 'p' and receives a vowel-initial suffix, 'p' mutates to 'b'."
+   },
+   {
+    "wrong": "sokakda",
+    "right": "sokakta",
+    "note": "'Sokak' ends in voiceless consonant 'k', causing locative '-da' to harden into '-ta'."
+   },
+   {
+    "wrong": "köpeki",
+    "right": "köpeği",
+    "note": "Multisyllabic words ending in 'k' soften 'k' to 'ğ' when followed by a vowel suffix."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Add accusative '-ı' to 'bardak' (glass): 'Ahmet ___ düşürdü.'",
+    "options": [
+     "bardakı",
+     "bardağı",
+     "bardaka",
+     "bardaği"
+    ],
+    "answer": 1,
+    "explanation": "The final 'k' softens to 'ğ' between vowels according to consonant mutation rules: 'bardağı'."
+   },
+   {
+    "question": "Add locative '-de/-da' to 'kitap' (book): 'Bu bilgi ___ yazıyor.'",
+    "options": [
+     "kitabda",
+     "kitapda",
+     "kitapta",
+     "kitabta"
+    ],
+    "answer": 2,
+    "explanation": "'Kitap' ends in voiceless 'p', so the suffix consonant must harden from 'd' to 't': 'kitapta'."
+   },
+   {
+    "question": "Add 1st person possessive '-(i)m' to 'ağaç' (tree): 'Bu benim küçük ___.'",
+    "options": [
+     "ağaçım",
+     "ağacım",
+     "ağaşım",
+     "ağatım"
+    ],
+    "answer": 1,
+    "explanation": "The voiceless consonant 'ç' softens to voiced 'c' when a vowel-initial suffix is attached: 'ağacım'."
+   },
+   {
+    "question": "Which of the following demonstrates consonant softening correctly for 'renk' (color) + '-i'?",
+    "options": [
+     "renki",
+     "renği",
+     "rengi",
+     "rençi"
+    ],
+    "answer": 2,
+    "explanation": "In 'renk', the 'k' softens to 'g' (rather than 'ğ' because it follows the consonant 'n'): 'rengi'."
+   }
+  ],
+  "tip": "Remember the Turkish mnemonic phrase 'Fıstıkçı Şahap' (f, s, t, k, ç, ş, h, p) — if a word ends in any of these voiceless letters, suffix consonants 'c' and 'd' must harden to 'ç' and 't'."
+ },
+ {
+  "id": "tr-a1-definite-past-tense",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🕰️",
+  "title": "Definite Past Tense (-di)",
+  "subtitle": "Talking about witnessed past actions and states",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The definite past tense suffix (-dı, -di, -du, -dü and consonant-mutated -tı, -ti, -tu, -tü) marks witnessed events and certain facts.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Suffix Pattern",
+    "Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Ben (I)",
+      "gel-di-m",
+      "Gendim",
+      "I came"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Sen (You)",
+      "git-ti-n",
+      "Gittin",
+      "You went"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "O (He/She/It)",
+      "gör-dü",
+      "Gördü",
+      "He/she saw"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Biz (We)",
+      "oku-du-k",
+      "Okuduk",
+      "We read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Onlar (They)",
+      "yap-tı-lar",
+      "Yaptılar",
+      "They did"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Directly Witnessed Event",
+    "example": "Dün akşam güzel bir film izledik.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Known Objective Fact",
+    "example": "Atatürk 1881 yılında Selanik'te doğdu.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Past State of Being",
+    "example": "Dün bütün gün çok yorgundum.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dün akşam güzel bir film izledik.",
+    "ko": "",
+    "highlight": "izledik"
+   },
+   {
+    "en": "Ahmet sabah erkenden evden çıktı.",
+    "ko": "",
+    "highlight": "çıktı"
+   },
+   {
+    "en": "Biz geçen hafta Ankara'ya gittik.",
+    "ko": "",
+    "highlight": "gittik"
+   },
+   {
+    "en": "Sen dün toplantıya neden gelmedin?",
+    "ko": "",
+    "highlight": "gelmedin"
+   },
+   {
+    "en": "Çocuklar bahçede çok eğlendiler.",
+    "ko": "",
+    "highlight": "eğlendiler"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Dün sinemaya gitdim.",
+    "right": "Dün sinemaya gittim.",
+    "note": "After unvoiced consonants (f, s, t, k, ç, ş, h, p), the suffix starts with 't', not 'd'."
+   },
+   {
+    "wrong": "Biz dün çok güldüm.",
+    "right": "Biz dün çok güldük.",
+    "note": "The first-person plural past tense takes the personal ending -k, not -m."
+   },
+   {
+    "wrong": "O dün evde deyil idi.",
+    "right": "O dün evde değildi.",
+    "note": "Negating past states requires 'değil' combined with past suffixes (değildi)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday I ___ Turkish for two hours.",
+    "options": [
+     "çalıştım",
+     "çalışdım",
+     "çalıştık",
+     "çalıştın"
+    ],
+    "answer": 0,
+    "explanation": "The stem 'çalış-' ends in unvoiced 'ş', so the suffix becomes '-tı-', and 'ben' takes '-m'."
+   },
+   {
+    "question": "Where ___ you (informal singular) go last weekend?",
+    "options": [
+     "gittim",
+     "gittik",
+     "gittin",
+     "gittiler"
+    ],
+    "answer": 2,
+    "explanation": "'Sen' takes the second-person singular suffix '-n', yielding 'gittin'."
+   },
+   {
+    "question": "The students ___ all the homework yesterday.",
+    "options": [
+     "bitirdim",
+     "bitirdi",
+     "bitirdiler",
+     "bitirdik"
+    ],
+    "answer": 2,
+    "explanation": "Plural subject 'öğrenciler' matches with third-person plural '-ler' yielding 'bitirdiler' (or optionally singular 'bitirdi')."
+   },
+   {
+    "question": "We ___ at home yesterday because it rained.",
+    "options": [
+     "kaldım",
+     "kaldık",
+     "kaldın",
+     "kaldınız"
+    ],
+    "answer": 1,
+    "explanation": "'Biz' (we) takes the past personal marker '-k', making 'kaldık'."
+   }
+  ],
+  "tip": "Remember 'Fıstıkçı Şahap': if a verb root ends with one of these consonants (f, s, t, k, ç, ş, h, p), the suffix must harden from -d to -t."
+ },
+ {
+  "id": "tr-a2-noun-compounds",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🔗",
+  "title": "Definite and Indefinite Noun Compounds",
+  "subtitle": "Connecting nouns with genitive and possessive markers",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Indefinite compounds use only the third-person suffix -(s)i on the second noun, while definite compounds mark both the possessor with -(n)ın and the possessed with -(s)i.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Formula",
+    "Turkish Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Indefinite Compound",
+      "Noun1 + Noun2-(s)i",
+      "kahve fincanı",
+      "coffee cup"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Definite Compound",
+      "Noun1-(n)ın + Noun2-(s)i",
+      "Ali'nin evi",
+      "Ali's house"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Chain Compound",
+      "Noun1-(n)ın + Noun2-ı-(n)ın + Noun3-(s)i",
+      "okul müdürünün odası",
+      "the school director's room"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Bare Compound (Material)",
+      "Material + Noun",
+      "altın kolye",
+      "gold necklace"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "General Classification",
+    "example": "Her sabah otobüs durağında bekliyorum.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Specific Ownership",
+    "example": "Ahmet'in telefonu masanın üzerinde duruyor.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Chained Relationships",
+    "example": "Türkiye'nin başkenti Ankara'dır.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Her sabah otobüs durağında bekliyorum.",
+    "ko": "",
+    "highlight": "otobüs durağında"
+   },
+   {
+    "en": "Ahmet'in telefonu masanın üzerinde duruyor.",
+    "ko": "",
+    "highlight": "Ahmet'in telefonu"
+   },
+   {
+    "en": "Güneş gözlüğümü evde unuttum.",
+    "ko": "",
+    "highlight": "Güneş gözlüğümü"
+   },
+   {
+    "en": "Bu evin kapısı çok eski.",
+    "ko": "",
+    "highlight": "evin kapısı"
+   },
+   {
+    "en": "Türk kahvesi içmeyi çok seviyorum.",
+    "ko": "",
+    "highlight": "Türk kahvesi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "araba anahtar",
+    "right": "araba anahtarı",
+    "note": "Indefinite compounds require the compound marker -(s)i on the second noun."
+   },
+   {
+    "wrong": "Ali çanta",
+    "right": "Ali'nin çantası",
+    "note": "To indicate specific possession ('Ali's bag'), the possessor needs -(n)in and the possessed needs -(s)i."
+   },
+   {
+    "wrong": "okul müdür odası",
+    "right": "okul müdürünün odası",
+    "note": "In compound chains, an intermediate compound noun receives the genitive suffix -(n)ün."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase for 'tea glass' (general type):",
+    "options": [
+     "çay bardak",
+     "çayın bardağı",
+     "çay bardağı",
+     "çay bardakta"
+    ],
+    "answer": 2,
+    "explanation": "An indefinite noun compound takes no suffix on the first word and '-(s)i' on the second: çay bardağı."
+   },
+   {
+    "question": "Choose the correct phrase for 'Ayşe's cat':",
+    "options": [
+     "Ayşe kedi",
+     "Ayşe'nin kedisi",
+     "Ayşe kediye",
+     "Ayşe'nin kedi"
+    ],
+    "answer": 1,
+    "explanation": "Definite compounds require genitive '-(n)in' on the possessor and possessive '-(s)i' on the possessed noun."
+   },
+   {
+    "question": "Complete the sentence: 'Bu ___ rengi çok güzel.' (the color of this car)",
+    "options": [
+     "arabanın",
+     "arabaya",
+     "arabadan",
+     "arabada"
+    ],
+    "answer": 0,
+    "explanation": "'Araba' ends in a vowel, so the genitive suffix adds buffer 'n': araba-n-ın."
+   },
+   {
+    "question": "Choose the correct phrase for 'Istanbul's weather':",
+    "options": [
+     "İstanbul hava",
+     "İstanbul havayı",
+     "İstanbul havası",
+     "İstanbul'un havası"
+    ],
+    "answer": 3,
+    "explanation": "A specific location's attribute uses the definite genitive compound: İstanbul'un havası."
+   }
+  ],
+  "tip": "When adding any case ending (like -de, -i, -e) after the compound marker -(s)i, always insert the buffer consonant 'n' first (e.g., otobüs durağı -> otobüs durağı-n-da)."
+ },
+ {
+  "id": "tr-a2-future-tense",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🚀",
+  "title": "Future Tense (-ecek / -acak)",
+  "subtitle": "Expressing planned actions and future occurrences",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The future tense uses -ecek/-acak, inserts 'y' after vowel stems, and mutates the final 'k' to 'ğ' for first-person forms.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Vowel Harmony Variant",
+    "Conjugated Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Ben",
+      "-eceğim / -acağım",
+      "geleceğim",
+      "I will come"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Sen",
+      "-eceksin / -acaksın",
+      "yazacaksın",
+      "You will write"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "O",
+      "-ecek / -acak",
+      "arayacak",
+      "He/she will call"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Biz",
+      "-eceğiz / -acağız",
+      "göreceğiz",
+      "We will see"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Onlar",
+      "-ecekler / -acaklar",
+      "kalacaklar",
+      "They will stay"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Definite Plans",
+    "example": "Gelecek hafta tatile gideceğiz.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Predictions",
+    "example": "Yarın hava çok soğuk olacak.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Promises & Intentions",
+    "example": "Sana söz veriyorum, yarın geleceğim.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Gelecek hafta tatile gideceğiz.",
+    "ko": "",
+    "highlight": "gideceğiz"
+   },
+   {
+    "en": "Yarın hava çok soğuk olacak.",
+    "ko": "",
+    "highlight": "olacak"
+   },
+   {
+    "en": "Sana söz veriyorum, yarın geleceğim.",
+    "ko": "",
+    "highlight": "geleceğim"
+   },
+   {
+    "en": "Sen bu akşam ne pişireceksin?",
+    "ko": "",
+    "highlight": "pişireceksin"
+   },
+   {
+    "en": "Onlar yeni bir ev satın alacaklar.",
+    "ko": "",
+    "highlight": "alacaklar"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ben yarın gelicem.",
+    "right": "Ben yarın geleceğim.",
+    "note": "While 'gelicem' is common in spoken Turkish, standard written Turkish requires 'geleceğim'."
+   },
+   {
+    "wrong": "Ben yarın gel-ecek-im.",
+    "right": "Ben yarın geleceğim.",
+    "note": "The final 'k' of -ecek softens to 'ğ' before the first-person vowel endings -im and -iz."
+   },
+   {
+    "wrong": "O beni anla-acak.",
+    "right": "O beni anlayacak.",
+    "note": "If the verb root ends in a vowel, you must insert the buffer letter 'y' before -acak/-ecek."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I ___ to Istanbul next month.",
+    "options": [
+     "gideceğim",
+     "gidecek",
+     "gitceğim",
+     "gideceksin"
+    ],
+    "answer": 0,
+    "explanation": "'Gitmek' softens 't' to 'd', attaches '-ecek-', and 'k' softens to 'ğ' for 'ben': gideceğim."
+   },
+   {
+    "question": "What ___ you (singular) do tomorrow?",
+    "options": [
+     "yapacaksın",
+     "yapağım",
+     "yapacaksınız",
+     "yapacak"
+    ],
+    "answer": 0,
+    "explanation": "The second-person singular takes '-aksın', resulting in 'yapacaksın'."
+   },
+   {
+    "question": "We ___ you at the station tomorrow.",
+    "options": [
+     "bekleyeceğim",
+     "bekleyecek",
+     "bekleyeceğiz",
+     "bekleyeceksiniz"
+    ],
+    "answer": 2,
+    "explanation": "'Biz' takes the first-person plural ending '-iz', softening 'k' to 'ğ': bekleyeceğiz."
+   },
+   {
+    "question": "They ___ their exam on Friday.",
+    "options": [
+     "yapacaksın",
+     "yapacak",
+     "yapacağım",
+     "yapacaklar"
+    ],
+    "answer": 3,
+    "explanation": "The third-person plural takes '-lar', forming 'yapacaklar'."
+   }
+  ],
+  "tip": "In everyday speech, people often pronounce 'geleceğim' as 'gelicem' and 'yapacağım' as 'yapıcam', but always write them with -eceğim and -acağım!"
+ },
+ {
+  "id": "tr-a2-aorist-tense",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔄",
+  "title": "The Aorist / Simple Present (-r / -er / -ir)",
+  "subtitle": "Habitual actions, universal truths, and polite requests",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The aorist tense (Geniş Zaman) denotes general truths, daily routines, polite requests, and spontaneous promises, negating irregularly with -maz/-mez.",
+  "structure": {
+   "headers": [
+    "Verb Type",
+    "Aorist Suffix",
+    "Turkish Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Vowel Stem",
+      "-r",
+      "okur",
+      "Reads"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Single-syllable Stem (Standard)",
+      "-ar / -er",
+      "yapar",
+      "Does / makes"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Multi-syllable / 13 Exceptions",
+      "-ır / -ir / -ur / -ür",
+      "gelir / bilir",
+      "Comes / knows"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negative (1st person)",
+      "-mam / -mem",
+      "yapmam",
+      "I do not do"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative (other persons)",
+      "-maz / -mez",
+      "yapmaz",
+      "He/she does not do"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Universal Truth / Habit",
+    "example": "Dünya Güneş'in etrafında döner.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Polite Request",
+    "example": "Bana tuzu uzatır mısınız?",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Spontaneous Willingness",
+    "example": "Merak etme, faturayı ben öderim.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dünya Güneş'in etrafında döner.",
+    "ko": "",
+    "highlight": "döner"
+   },
+   {
+    "en": "Bana tuzu uzatır mısınız?",
+    "ko": "",
+    "highlight": "uzatır mısınız"
+   },
+   {
+    "en": "Merak etme, faturayı ben öderim.",
+    "ko": "",
+    "highlight": "öderim"
+   },
+   {
+    "en": "Babam kahvesine hiç şeker atmaz.",
+    "ko": "",
+    "highlight": "atmaz"
+   },
+   {
+    "en": "Hafta sonları genellikle erken kalkarım.",
+    "ko": "",
+    "highlight": "kalkarım"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ben kahve içmeyirim.",
+    "right": "Ben kahve içmem.",
+    "note": "The aorist negative does not use -r; the first person singular uses -mam / -mem."
+   },
+   {
+    "wrong": "O sigara içmer.",
+    "right": "O sigara içmez.",
+    "note": "Negative aorist for third person is -maz / -mez, never combining with -r."
+   },
+   {
+    "wrong": "O her gün erken geler.",
+    "right": "O her gün erken gelir.",
+    "note": "'Gelmek' is one of the 13 irregular monosyllabic verbs taking -ir instead of -er."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Could you please open the window? (polite request): 'Pencereyi ___?'",
+    "options": [
+     "açar mısınız",
+     "açtınız mı",
+     "açıyor musunuz",
+     "açacak mısınız"
+    ],
+    "answer": 0,
+    "explanation": "Polite requests use the aorist question form: aç-ar mısınız?"
+   },
+   {
+    "question": "I don't drink alcohol at all: 'Ben hiç alkol ___.'",
+    "options": [
+     "içmerim",
+     "içmem",
+     "içmezim",
+     "içmiyorum"
+    ],
+    "answer": 1,
+    "explanation": "The first-person singular negative of the aorist is '-mem' (iç-mem)."
+   },
+   {
+    "question": "She never ___ lies: 'O asla yalan ___.'",
+    "options": [
+     "söylemez",
+     "söylemezsin",
+     "söylemem",
+     "söylemezler"
+    ],
+    "answer": 0,
+    "explanation": "Third-person singular negative aorist uses '-mez': söyle-mez."
+   },
+   {
+    "question": "Don't worry, I ___ you help: 'Merak etme, sana yardım ___.'",
+    "options": [
+     "eder",
+     "ederim",
+     "edersin",
+     "ederiz"
+    ],
+    "answer": 1,
+    "explanation": "Spontaneous willingness in the first person singular takes '-er-im': yardım ederim."
+   }
+  ],
+  "tip": "Memorize the 13 common single-syllable verbs that take -ir instead of -er: al-, bil-, bul-, dur-, gel-, gör-, kal-, ol-, öl-, san-, ver-, vur-, var-."
+ },
+ {
+  "id": "tr-a2-optative-imperative",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#EC4899",
+  "emoji": "🗣️",
+  "title": "Optative and Imperative Moods (-elim, -sin)",
+  "subtitle": "Commands, suggestions, and third-person wishes",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "The imperative mood expresses direct commands and wishes (-sin), while the first-person optative (-elim / -alım) serves as 'let's'.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Affix Formula",
+    "Turkish Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Sen (You, informal)",
+      "Bare verb stem",
+      "Gel!",
+      "Come!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Siz (You, formal/plural)",
+      "Stem + -(y)in / -(y)iniz",
+      "Gelin! / Geliniz!",
+      "Come (polite)!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Biz (Let's)",
+      "Stem + -(y)elim / -(y)alım",
+      "Gidelim!",
+      "Let's go!"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "O (Let him/her)",
+      "Stem + -sin / -sın / -sun / -sün",
+      "Gelsin!",
+      "Let him come!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Onlar (Let them)",
+      "Stem + -sinler / -sınlar",
+      "Gelsinler!",
+      "Let them come!"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EC4899",
+    "label": "Cohortative Suggestion ('Let's')",
+    "example": "Haydi sinemaya gidelim!",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Polite Instruction",
+    "example": "Lütfen içeri buyurun ve bekleyin.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Third-Person Wish / Directive",
+    "example": "Ali hemen beni arasın.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Haydi sinemaya gidelim!",
+    "ko": "",
+    "highlight": "gidelim"
+   },
+   {
+    "en": "Lütfen içeri buyurun ve bekleyin.",
+    "ko": "",
+    "highlight": "bekleyin"
+   },
+   {
+    "en": "Ali hemen beni arasın.",
+    "ko": "",
+    "highlight": "arasın"
+   },
+   {
+    "en": "Burada yüksek sesle konuşmayın!",
+    "ko": "",
+    "highlight": "konuşmayın"
+   },
+   {
+    "en": "Bu akşam güzel bir kahve içelim.",
+    "ko": "",
+    "highlight": "içelim"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Biz haydi git!",
+    "right": "Haydi gidelim!",
+    "note": "Commands cannot be addressed to 'biz'; use the cohortative optative form -elim/-alım ('let's')."
+   },
+   {
+    "wrong": "Lütfen kapıyı kapat!",
+    "right": "Lütfen kapıyı kapatın!",
+    "note": "When using 'lütfen' (please) in formal contexts, address listeners with the polite plural imperative -ın/-in."
+   },
+   {
+    "wrong": "O burada bekle!",
+    "right": "O burada beklesin!",
+    "note": "Third person commands require the -sin suffix; bare stems are only for second-person singular (sen)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Let's drink tea together: 'Birlikte çay ___.'",
+    "options": [
+     "için",
+     "içsin",
+     "içelim",
+     "içiniz"
+    ],
+    "answer": 2,
+    "explanation": "'Let us' (biz) takes the optative suffix -(y)elim, giving 'içelim'."
+   },
+   {
+    "question": "Please don't smoke here: 'Lütfen burada sigara ___.'",
+    "options": [
+     "içme",
+     "içmeyin",
+     "içmesin",
+     "içmeyelim"
+    ],
+    "answer": 1,
+    "explanation": "A polite negative command to 'siz' takes the negative -me followed by buffer -y and -in: 'içmeyin'."
+   },
+   {
+    "question": "Tell Mehmet to call me: 'Mehmet beni ___.'",
+    "options": [
+     "ara",
+     "arasın",
+     "arayın",
+     "aralım"
+    ],
+    "answer": 1,
+    "explanation": "A third-person directive (let him/tell him to) uses '-sin/-sın': 'arasın'."
+   },
+   {
+    "question": "Hurry up! (addressing a single friend): 'Acele ___!'",
+    "options": [
+     "et",
+     "edin",
+     "ediniz",
+     "etsin"
+    ],
+    "answer": 0,
+    "explanation": "The informal second-person singular command is simply the bare verb stem: 'et'."
+   }
+  ],
+  "tip": "Turkish has no optative for 'sen' or 'o'; instead, the imperative handles 2nd and 3rd person directives (Git! / Gitsin!), while the optative handles 1st person proposals (Gideyim / Gidelim)."
+ },
+ {
+  "id": "tr-a2-basic-converbs",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔗",
+  "title": "Basic Converbs (-ip, -erek, -ken)",
+  "subtitle": "Connect actions fluidly without using repeating conjunctions",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Converbs attach to verb stems to link sequential actions (-ip), indicate manner (-erek), or express simultaneous background states (-ken) without repeating tense suffixes.",
+  "structure": {
+   "headers": [
+    "Suffix",
+    "Function",
+    "Turkish Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-(y)Ip",
+      "Sequential chain ('and then')",
+      "Gidip gördüm.",
+      "I went and saw."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-(y)erek / -(y)arak",
+      "Manner / Means ('by doing')",
+      "Gülerek konuştu.",
+      "She spoke laughing."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-(y)ken",
+      "Simultaneity ('while / when')",
+      "Evdeyken aradı.",
+      "He called while at home."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Chaining Sequential Actions",
+    "example": "Sabah erkenden kalkıp kahvaltı hazırladı.",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "Expressing Method or Manner",
+    "example": "Müziği kulaklıkla dinleyerek ders çalışıyor.",
+    "translation": ""
+   },
+   {
+    "color": "#9A3412",
+    "label": "Background Time Frame",
+    "example": "Yolda yürürken eski bir dostuma rastladım.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Pazara gidip taze sebzeler aldık.",
+    "ko": "",
+    "highlight": "gidip"
+   },
+   {
+    "en": "Kitap okuyarak yeni kelimeler öğreniyorum.",
+    "ko": "",
+    "highlight": "okuyarak"
+   },
+   {
+    "en": "Çocukken bu parkta saatlerce oynardık.",
+    "ko": "",
+    "highlight": "Çocukken"
+   },
+   {
+    "en": "Kapıyı açıp içeriye hızla girdi.",
+    "ko": "",
+    "highlight": "açıp"
+   },
+   {
+    "en": "Şarkı söyleyerek bulaşıkları yıkadı.",
+    "ko": "",
+    "highlight": "söyleyerek"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Gittim ve gördüm.",
+    "right": "Gidip gördüm.",
+    "note": "While 've' is grammatically possible, native Turkish heavily prefers -(y)Ip to chain sequential verbs sharing the same subject and tense."
+   },
+   {
+    "wrong": "Yemek yerkenim televizyon izledim.",
+    "right": "Yemek yerken televizyon izledim.",
+    "note": "The suffix -(y)ken is an invariable clitic that does not take personal agreement endings; the main verb carries the person."
+   },
+   {
+    "wrong": "Kitabı okuyp bıraktı.",
+    "right": "Kitabı okuyup bıraktı.",
+    "note": "When the verb stem ends in a vowel, insert the buffer 'y' before the 4-way vowel harmony suffix: oku-y-up."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He entered the room and immediately sat down: 'Odaya ___ hemen oturdu.'",
+    "options": [
+     "girerek",
+     "girip",
+     "girken",
+     "girdi ve"
+    ],
+    "answer": 1,
+    "explanation": "The suffix -(y)Ip links sequential actions where the first action precedes the second under the same tense/person."
+   },
+   {
+    "question": "You can improve your Turkish by practicing: 'Pratik ___ Türkçeni geliştirebilirsin.'",
+    "options": [
+     "yaparak",
+     "yapıp",
+     "yaparken",
+     "yapan"
+    ],
+    "answer": 0,
+    "explanation": "The suffix -(y)erek indicates the means or manner by which an action is accomplished ('by practicing')."
+   },
+   {
+    "question": "While I was waiting for the bus, it started raining: 'Otobüs ___ yağmur yağmaya başladı.'",
+    "options": [
+     "bekleyerek",
+     "bekleyip",
+     "beklerken",
+     "beklediğimde"
+    ],
+    "answer": 2,
+    "explanation": "With verbs, -(y)ken attaches to the aorist base (bekle-r-ken) to denote an overlapping temporal background ('while waiting')."
+   },
+   {
+    "question": "She left the house singing happily: 'Neşeyle şarkı ___ evden çıktı.'",
+    "options": [
+     "söylerken",
+     "söyleyip",
+     "söyledi",
+     "söyleyerek"
+    ],
+    "answer": 3,
+    "explanation": "Expressing manner of leaving (singing) requires -(y)erek."
+   }
+  ],
+  "tip": "Remember that -(y)ken never undergoes vowel harmony! It always stays -ken (e.g., okuldayken, hastayken), unlike -erek/-arak and -ip/-ıp/-up/-üp."
+ },
+ {
+  "id": "tr-a2-postpositions-with-cases",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🧭",
+  "title": "Postpositions and Case Governance",
+  "subtitle": "Master Turkish equivalents of prepositions and their required case endings",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Turkish postpositions follow their noun and demand a specific case: nominative/genitive (için, gibi), dative (kadar, göre), or ablative (sonra, önce, beri).",
+  "structure": {
+   "headers": [
+    "Case Required",
+    "Postposition",
+    "Turkish Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Nominative (Genitive w/ pronouns)",
+      "için, gibi, kadar",
+      "Senin için aldım.",
+      "I bought it for you."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Dative (-e / -a)",
+      "kadar, göre, doğru",
+      "Akşama doğru geldiler.",
+      "They came towards evening."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ablative (-den / -dan)",
+      "sonra, önce, beri, başka",
+      "Dersten sonra buluşalım.",
+      "Let's meet after class."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Purpose and Beneficiary (için)",
+    "example": "Annem için güzel bir hediye seçtim.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Comparison and Extent (kadar)",
+    "example": "Sabaha kadar aralıksız kar yağdı.",
+    "translation": ""
+   },
+   {
+    "color": "#4338CA",
+    "label": "Temporal Sequence (önce / sonra)",
+    "example": "Yemekten önce ellerini mutlaka yıka.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Bu çiçekleri senin için getirdim.",
+    "ko": "",
+    "highlight": "senin için"
+   },
+   {
+    "en": "Bana göre bu karar oldukça doğru.",
+    "ko": "",
+    "highlight": "Bana göre"
+   },
+   {
+    "en": "Toplantıdan sonra hemen müdürle görüştü.",
+    "ko": "",
+    "highlight": "Toplantıdan sonra"
+   },
+   {
+    "en": "Dünden beri hiçbir şey yemedi.",
+    "ko": "",
+    "highlight": "Dünden beri"
+   },
+   {
+    "en": "Kuş gibi özgürce uçmak istiyor.",
+    "ko": "",
+    "highlight": "Kuş gibi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ben için bir çay al.",
+    "right": "Benim için bir çay al.",
+    "note": "Personal pronouns take the genitive case before 'için' and 'gibi' (benim için, senin gibi), except for 'onlar' (onlar için)."
+   },
+   {
+    "wrong": "Evden kadar yürüdük.",
+    "right": "Eve kadar yürüdük.",
+    "note": "'Kadar' in the sense of destination ('as far as / up to') governs the dative case (-e/-a), not ablative."
+   },
+   {
+    "wrong": "Yemek sonra sinemaya gittik.",
+    "right": "Yemekten sonra sinemaya gittik.",
+    "note": "'Sonra' and 'önce' strictly require the ablative case (-den/-dan) on the preceding noun."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "According to Ali, the test was easy: 'Ali'___ göre sınav çok kolaydı.'",
+    "options": [
+     "ye",
+     "den",
+     "nin",
+     "e"
+    ],
+    "answer": 0,
+    "explanation": "'Göre' governs the dative case; with a proper noun ending in a vowel, we add apostrophe + buffer y + e: Ali'ye göre."
+   },
+   {
+    "question": "We have been living in this city since two years: 'İki yıl___ beri bu şehirde yaşıyoruz.'",
+    "options": [
+     "a",
+     "dan",
+     "la",
+     "da"
+    ],
+    "answer": 1,
+    "explanation": "'Beri' (since) requires the ablative suffix: yıldan beri."
+   },
+   {
+    "question": "Are you coming with us?: 'Bizim___ geliyor musun?'",
+    "options": [
+     "için",
+     "gibi",
+     "kadar",
+     "ile"
+    ],
+    "answer": 3,
+    "explanation": "'İle' (with) combines with personal pronouns in the genitive: bizimle / bizim ile."
+   },
+   {
+    "question": "She ran towards the school: 'Okul___ doğru hızla koştu.'",
+    "options": [
+     "un",
+     "a",
+     "dan",
+     "da"
+    ],
+    "answer": 1,
+    "explanation": "'Doğru' in the directional sense ('towards') governs the dative case: okula doğru."
+   }
+  ],
+  "tip": "Test personal pronouns first: if 'ben' becomes 'benim' (benim için, benim gibi), you are dealing with nominative/genitive postpositions. If it becomes 'bana' (bana göre, bana doğru), it requires dative!"
+ },
+ {
+  "id": "tr-b1-evidential-past",
+  "level": "b1",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "👂",
+  "title": "Indefinite Past Tense (-miş)",
+  "subtitle": "Convey hearsay, indirect evidence, and sudden realization",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "The evidential suffix -miş encodes events the speaker did not directly witness (hearsay/inference) or spontaneous discoveries made in the present moment (mirativity).",
+  "structure": {
+   "headers": [
+    "Context",
+    "Base + Suffix",
+    "Turkish Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Hearsay / Rumor",
+      "Stem + -miş + Person",
+      "Ahmet dün evlenmiş.",
+      "Apparently Ahmet got married yesterday."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Inference / Deductive",
+      "Stem + -miş + Person",
+      "Dün gece çok yağmur yağmış.",
+      "It must have rained heavily last night."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Mirativity / Realization",
+      "Stem + -miş + Person",
+      "Cüzdanımı evde unutmuşum!",
+      "Oh no, I've left my wallet at home!"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Reported Information / Hearsay",
+    "example": "Haberlere göre petrol fiyatları yine artmış.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Physical Evidence & Deduction",
+    "example": "Yerler ıslak; sokaktan temizlik aracı geçmiş.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Sudden Surprise or Self-Discovery",
+    "example": "A, çayım tamamen soğumuş!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Filmi hiç beğenmemişler.",
+    "ko": "",
+    "highlight": "beğenmemişler"
+   },
+   {
+    "en": "Meğer yıllardır aynı mahallede oturuyormuşuz.",
+    "ko": "",
+    "highlight": "oturuyormuşuz"
+   },
+   {
+    "en": "Sınav sonuçları bu sabah açıklanmış.",
+    "ko": "",
+    "highlight": "açıklanmış"
+   },
+   {
+    "en": "Anahtarı kapının üzerinde unutmuşum.",
+    "ko": "",
+    "highlight": "unutmuşum"
+   },
+   {
+    "en": "Bebek mışıl mışıl uyumuş.",
+    "ko": "",
+    "highlight": "uyumuş"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Dün kendi gözümle gördüm, kaza olmuş.",
+    "right": "Dün kendi gözümle gördüm, kaza oldu.",
+    "note": "If you directly witnessed the event with your own eyes, you must use the definite past -di, not -miş."
+   },
+   {
+    "wrong": "Ben bilerek vazoyu kırmışım.",
+    "right": "Ben bilerek vazoyu kırdım.",
+    "note": "-miş with the first person implies lack of deliberate awareness or accidental realization. A deliberate act uses -di."
+   },
+   {
+    "wrong": "Onlar gelmemiş misin?",
+    "right": "Onlar gelmemiş mi?",
+    "note": "Match the question particle's personal ending to the correct subject: 3rd person plural is -ler mi or -mişler mi."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "You see wet ground and deduce: 'Dün gece kar ___.'",
+    "options": [
+     "yağdı",
+     "yağmış",
+     "yağıyor",
+     "yağacak"
+    ],
+    "answer": 1,
+    "explanation": "Inference based on visible evidence (wet ground) without having seen the event directly calls for -miş."
+   },
+   {
+    "question": "Looking in the mirror, you realize: 'Gömleğimi ters ___!'",
+    "options": [
+     "giymişim",
+     "giydim",
+     "giyiyorum",
+     "giyerim"
+    ],
+    "answer": 0,
+    "explanation": "Mirativity (unwitting action discovered upon reflection in the present moment) uses 1st person -miş: giymişim."
+   },
+   {
+    "question": "According to rumors, the boss quit: 'Duyduğuma göre müdür istifa ___.'",
+    "options": [
+     "etti",
+     "ediyor",
+     "etmiş",
+     "edecek"
+    ],
+    "answer": 2,
+    "explanation": "Hearsay / second-hand news strictly takes -miş (etmiş)."
+   },
+   {
+    "question": "Directly witnessed historical fact: 'Atatürk 1881 yılında ___.'",
+    "options": [
+     "doğmuş",
+     "doğdu",
+     "doğuyor",
+     "doğsa"
+    ],
+    "answer": 1,
+    "explanation": "Standard confirmed historical milestones known directly as common factual knowledge in Turkish history instruction use definite past -di (doğdu)."
+   }
+  ],
+  "tip": "Use the word 'meğer' (it turns out that...) to unlock the evidential mindset; sentences with 'meğer' almost always trigger the -miş past tense!"
+ },
+ {
+  "id": "tr-b1-participial-relative-clauses",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#4F46E5",
+  "emoji": "🧩",
+  "title": "Relative Clauses (-en vs -dik)",
+  "subtitle": "Form complex modifier phrases using subject and object participles",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Use -(y)en when the modified noun is the grammatical subject of the clause, and -dik / -(y)ecek plus possessive endings when the modified noun is the object.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Participle Suffix",
+    "Turkish Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Subject Relative",
+      "-(y)en / -(y)an",
+      "Koşan çocuk düştü.",
+      "The child who was running fell."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Object Relative (Past/Pres)",
+      "-dik + Possessive",
+      "Okuduğum kitap harikaydı.",
+      "The book that I read was great."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Object Relative (Future)",
+      "-(y)ecek + Possessive",
+      "Gideceğimiz otel çok yakın.",
+      "The hotel that we will go to is very close."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Modifying the Subject of Action",
+    "example": "Kapıda bekleyen misafirleri içeri davet etti.",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Modifying the Object (Completed/Present)",
+    "example": "Dün izlediğimiz film herkesi çok etkiledi.",
+    "translation": ""
+   },
+   {
+    "color": "#DB2777",
+    "label": "Modifying Future Objects",
+    "example": "Yarın yapacağın sunum için başarılar dilerim.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Otobüste uyuyan adam durağı kaçırdı.",
+    "ko": "",
+    "highlight": "uyuyan"
+   },
+   {
+    "en": "Annemin pişirdiği yemekler çok lezzetlidir.",
+    "ko": "",
+    "highlight": "pişirdiği"
+   },
+   {
+    "en": "Bize yardım eden komşumuza teşekkür ettik.",
+    "ko": "",
+    "highlight": "yardım eden"
+   },
+   {
+    "en": "Satın alacağımız ev denize çok yakın.",
+    "ko": "",
+    "highlight": "alacağımız"
+   },
+   {
+    "en": "Senin bahsettiğin konuyu hiç duymadım.",
+    "ko": "",
+    "highlight": "bahsettiğin"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Benim okuyan kitap çok uzun.",
+    "right": "Benim okuduğum kitap çok uzun.",
+    "note": "The book does not read; it is read. When the modified head noun is the direct/indirect object, use -dik + possessive, not -(y)en."
+   },
+   {
+    "wrong": "Yemek yapan adamı gördüğüm.",
+    "right": "Yemek yapan adamı gördüm.",
+    "note": "Do not confuse the participial suffix -dik inside the noun phrase with the main sentence's final past tense verb."
+   },
+   {
+    "wrong": "Gittiğin yer güzel mi?",
+    "right": "Gittiğin yer güzel mi?",
+    "note": "Remember consonant softening (k -> ğ): git-dik-in becomes gittiğin."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The girl who speaks five languages works here: 'Beş dil ___ kız burada çalışıyor.'",
+    "options": [
+     "konuştuğu",
+     "konuşan",
+     "konuşacağı",
+     "konuşmuş"
+    ],
+    "answer": 1,
+    "explanation": "The girl herself is the subject doing the speaking, so the subject participle -(y)en is required: konuşan."
+   },
+   {
+    "question": "Where is the letter that you wrote?: '___ mektup nerede?'",
+    "options": [
+     "Yazan",
+     "Yazdığın",
+     "Yazacağın",
+     "Yazdığı"
+    ],
+    "answer": 1,
+    "explanation": "The letter is the object written by 'you' (senin), demanding -dik + 2nd person singular possessive: yazdığın."
+   },
+   {
+    "question": "The project that we will submit tomorrow is ready: 'Yarın teslim ___ proje hazır.'",
+    "options": [
+     "ettiğimiz",
+     "eden",
+     "edeceğimiz",
+     "edecek"
+    ],
+    "answer": 2,
+    "explanation": "A future object relative clause for 'we' takes -(y)ecek + possessive -imiz: edeceğimiz."
+   },
+   {
+    "question": "People who drink coffee every morning: 'Her sabah kahve ___ insanlar.'",
+    "options": [
+     "içtikleri",
+     "içtiği",
+     "içeceği",
+     "içen"
+    ],
+    "answer": 3,
+    "explanation": "The people perform the action of drinking (subject relative), so use -(y)en: içen."
+   }
+  ],
+  "tip": "Ask: 'Is the modified noun doing the verb?' If YES -> use -(y)en. If NO (someone else is doing it to that noun) -> use -dik / -ecek + possessive!"
+ },
+ {
+  "id": "tr-b1-nominalization",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🏗️",
+  "title": "Verbal Nouns & Nominalization (-mek, -me, -iş)",
+  "subtitle": "Convert dynamic verbs into functional nouns and embedded clauses",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Turn verbs into nouns using the infinitive -mek for general concepts, the short infinitive -me for possessives and specific case-marked objects, and -iş for the style or manner of an action.",
+  "structure": {
+   "headers": [
+    "Suffix",
+    "Grammatical Role",
+    "Turkish Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-mek / -mak",
+      "Heavy infinitive; general activity",
+      "Sigara içmek yasaktır.",
+      "Smoking is forbidden."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-me / -ma",
+      "Light verbal noun; takes possessive/case",
+      "Gelmene çok sevindim.",
+      "I am very glad that you came."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-(y)Iş",
+      "Manner, style, or dynamic event",
+      "Onun gülüşü çok güzel.",
+      "Her way of laughing is very beautiful."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Subject / Direct General Concept (-mek)",
+    "example": "Düzenli spor yapmak insanı zinde tutar.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Subordinate Clause as Object (-me + case)",
+    "example": "Yalan söylemeni asla kabul edemem.",
+    "translation": ""
+   },
+   {
+    "color": "#E11D48",
+    "label": "Manner and Style of Action (-iş)",
+    "example": "Hocanın konuyu anlatışı herkesi büyüledi.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Onunla tekrar konuşmayı deneyeceğim.",
+    "ko": "",
+    "highlight": "konuşmayı"
+   },
+   {
+    "en": "Burada yüksek sesle konuşmak yasaktır.",
+    "ko": "",
+    "highlight": "konuşmak"
+   },
+   {
+    "en": "Sanatçının sahneye çıkışı büyük alkış aldı.",
+    "ko": "",
+    "highlight": "çıkışı"
+   },
+   {
+    "en": "Bana gerçeği söylemeni istiyorum.",
+    "ko": "",
+    "highlight": "söylemeni"
+   },
+   {
+    "en": "Tatile erken gitmeye karar verdik.",
+    "ko": "",
+    "highlight": "gitmeye"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Senin gelmekini bekliyorum.",
+    "right": "Senin gelmeni bekliyorum.",
+    "note": "The heavy infinitive -mek cannot take possessive suffixes. Use the short infinitive -me + possessive + case: gel-me-n-i."
+   },
+   {
+    "wrong": "Yüzmekyi çok seviyorum.",
+    "right": "Yüzmeyi çok seviyorum.",
+    "note": "Verbs taking the accusative case (sevmek, istemek, beklemek) require the short infinitive -me with buffer 'y' (yüzme-y-i), not -mekyi."
+   },
+   {
+    "wrong": "Gitmek karar verdik.",
+    "right": "Gitmeye karar verdik.",
+    "note": "The verb 'karar vermek' governs the dative case (-e/-a). You must use -me + dative: git-me-y-e."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I want you to learn Turkish: 'Türkçe ___ istiyorum.'",
+    "options": [
+     "öğrenmeni",
+     "öğrenmekini",
+     "öğrenişini",
+     "öğrenmek"
+    ],
+    "answer": 0,
+    "explanation": "Targeted desire for another person requires -me + 2nd person possessive -n + accusative -i: öğrenmeni."
+   },
+   {
+    "question": "Learning a new language requires patience: 'Yeni bir dil ___ sabır gerektirir.'",
+    "options": [
+     "öğreniş",
+     "öğrenmene",
+     "öğrenmek",
+     "öğrenmeye"
+    ],
+    "answer": 2,
+    "explanation": "The abstract subject of a general statement takes the primary infinitive -mek: öğrenmek."
+   },
+   {
+    "question": "I don't like his walk: 'Onun ___ hiç beğenmiyorum.'",
+    "options": [
+     "yürümeyi",
+     "yürümek",
+     "yürümesine",
+     "yürüyüşünü"
+    ],
+    "answer": 3,
+    "explanation": "Referring to the style or manner of an action ('his way of walking') requires -(y)Iş: yürüyüşünü."
+   },
+   {
+    "question": "We gave up on buying the car: 'Arabayı ___ vazgeçtik.'",
+    "options": [
+     "almaktan",
+     "almaya",
+     "almak",
+     "alıştan"
+    ],
+    "answer": 0,
+    "explanation": "The verb 'vazgeçmek' (to give up) governs the ablative case (-den/-dan). With infinitives without personal reference, -mek + ablative (-mekten / -maktan) is used."
+   }
+  ],
+  "tip": "Whenever you need to attach a personal possessive suffix ('my going', 'your coming'), -mek is immediately banned; you MUST switch to -me (gitmem, gelmen, kalması)!"
+ },
+ {
+  "id": "tr-b1-conditional-mood",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔀",
+  "title": "Real and Unreal Conditionals (-se / ise)",
+  "subtitle": "Master open conditions, general truths, and hypothetical 'what if' scenarios",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Attach -se/-sa directly to the verb stem for hypothetical wishes, or attach it after a tense suffix to form real conditions.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Formula",
+    "Turkish Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Hypothetical / Unreal",
+      "Stem + -se/sa + Person",
+      "Param olsa alırım",
+      "If I had money, I would buy it"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Real / Present",
+      "Stem + Aorist + -se/sa",
+      "Vaktin varsa gel",
+      "If you have time, come"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Unreal",
+      "Stem + -se/sa + -ydI",
+      "Çalışsaydın geçerdin",
+      "If you had studied, you would have passed"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Nominal Predicate",
+      "Noun/Adj + -(y)se/sa",
+      "Hava soğuksa çıkma",
+      "If the weather is cold, don't go out"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Real Condition",
+    "example": "Yarın yağmur yağarsa evde kalacağız.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Hypothetical Scenario",
+    "example": "Piyangoyu kazansam dünyayı gezerim.",
+    "translation": ""
+   },
+   {
+    "color": "#1E40AF",
+    "label": "Past Counterfactual",
+    "example": "Erken kalksaydık uçağı kaçırmazdık.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Yarın yağmur yağarsa evde kalırız.",
+    "ko": "",
+    "highlight": "yağarsa"
+   },
+   {
+    "en": "Param olsa hemen yeni bir araba alırım.",
+    "ko": "",
+    "highlight": "olsa"
+   },
+   {
+    "en": "Bize haber verseydin seni havaalanından alırdık.",
+    "ko": "",
+    "highlight": "verseydin"
+   },
+   {
+    "en": "Ders çalışırsan sınavı kolayca geçersin.",
+    "ko": "",
+    "highlight": "çalışırsan"
+   },
+   {
+    "en": "Yorgunsan biraz dinlenmelisin.",
+    "ko": "",
+    "highlight": "Yorgunsan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Eğer vaktim var ise gelirim.",
+    "right": "Eğer vaktim varsa gelirim.",
+    "note": "While 'ise' written separately is grammatically valid, modern Turkish strongly prefers the suffixed clitic -(y)se/sa in natural speech and writing."
+   },
+   {
+    "wrong": "Gelseydim yaparım.",
+    "right": "Gelseydim yapardım.",
+    "note": "Unreal past conditions in the 'if' clause require a past conditional (-rdi / -ecekti) in the main result clause."
+   },
+   {
+    "wrong": "Sen gelsen sevinirim.",
+    "right": "Sen gelirsen sevinirim.",
+    "note": "Use the real conditional (-irsen / -ersen) for plausible future possibilities rather than bare hypothetical -se."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "If you are free this evening, let's drink coffee.",
+    "options": [
+     "müsaitsen",
+     "müsaitsin",
+     "müsaitseydin",
+     "müsait olsan"
+    ],
+    "answer": 0,
+    "explanation": "A nominal condition for the 2nd person singular attaches -(y)sen directly to the adjective stem."
+   },
+   {
+    "question": "If I knew his address, I would write him a letter.",
+    "options": [
+     "bilsem",
+     "bilseydim",
+     "bilirsem",
+     "biliyorum"
+    ],
+    "answer": 1,
+    "explanation": "Hypothetical past or counterfactual present knowledge takes the unreal past condition marker -seydim."
+   },
+   {
+    "question": "If it snows tomorrow, schools will be closed.",
+    "options": [
+     "yağsa",
+     "yağardı",
+     "yağarsa",
+     "yağıyorsa"
+    ],
+    "answer": 2,
+    "explanation": "A realistic future conditional uses the aorist followed by the conditional suffix: yağ-ar-sa."
+   },
+   {
+    "question": "If we had listened to you, we wouldn't have lost our way.",
+    "options": [
+     "dinlesek",
+     "dinlersek",
+     "dinliyoruz",
+     "dinleseydik"
+    ],
+    "answer": 3,
+    "explanation": "Past unrealized condition requires stem + -se + past clitic -ydI + personal ending: dinle-se-ydi-k."
+   }
+  ],
+  "tip": "Remember that 'eğer' is purely optional in Turkish; the suffix -se/-sa attached to the verb already conveys 'if' completely on its own."
+ },
+ {
+  "id": "tr-b1-necessitative-and-ability",
+  "level": "b1",
+  "category": "modals",
+  "categoryColor": "#10B981",
+  "emoji": "🛠️",
+  "title": "Modal Suffixes: Potential (-ebil) and Necessitative (-meli)",
+  "subtitle": "Express capability, permission, impossibility, and obligation directly on the stem",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use -(y)ebil for capability and -meli for obligation, but watch out: impossibility uses -(y)eme, dropping the -bil completely.",
+  "structure": {
+   "headers": [
+    "Mood",
+    "Affirmative",
+    "Negative",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Potential (Can)",
+      "Stem + -(y)ebil-ir",
+      "Stem + -(y)eme-z",
+      "Can do / Cannot do"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Possibility (May)",
+      "Stem + -(y)ebil-ir",
+      "Stem + -meyebil-ir",
+      "Might do / Might not do"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Necessitative (Must)",
+      "Stem + -meli/malı",
+      "Stem + -memeli/mamalı",
+      "Must do / Must not do"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Necessity",
+      "Stem + -meliydi",
+      "Stem + -memeliydi",
+      "Should have / Shouldn't have"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Physical Ability",
+    "example": "Ben beş kilometre yüzebilirim.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Strict Impossibility",
+    "example": "Bu ağır kutuyu tek başıma kaldıramam.",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "Strong Recommendation",
+    "example": "Sağlığın için sigarayı hemen bırakmalısın.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Türkçe gazete ve kitapları rahatça okuyabiliyorum.",
+    "ko": "",
+    "highlight": "okuyabiliyorum"
+   },
+   {
+    "en": "Bugün çok hastayım, işe gelemem.",
+    "ko": "",
+    "highlight": "gelemem"
+   },
+   {
+    "en": "Yarın toplantıya geç kalabilirler.",
+    "ko": "",
+    "highlight": "kalabilirler"
+   },
+   {
+    "en": "Bu projeyi akşama kadar bitirmeliyiz.",
+    "ko": "",
+    "highlight": "bitirmeliyiz"
+   },
+   {
+    "en": "Ona bu kadar sert konuşmamalıydın.",
+    "ko": "",
+    "highlight": "konuşmamalıydın"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Yarın partiye gelebilmem.",
+    "right": "Yarın partiye gelemem.",
+    "note": "Impossibility replaces '-ebil' with '-(y)e' before the standard negative suffix: gel-e-me-m, not gelebilmem."
+   },
+   {
+    "wrong": "Sen oraya gitmek melisin.",
+    "right": "Sen oraya gitmelisin.",
+    "note": "Modal suffixes attach directly to the bare verb root (git-), never to the infinitive (gitmek-)."
+   },
+   {
+    "wrong": "Belki o gelemez.",
+    "right": "Belki o gelmeyebilir.",
+    "note": "When expressing uncertainty ('might not come'), use -meyebilir. Using 'gelemez' means absolute impossibility ('he cannot come')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I looked everywhere but I ___ find my keys.",
+    "options": [
+     "bulamadım",
+     "bulabilmedim",
+     "bulmadım",
+     "bulamazdım"
+    ],
+    "answer": 0,
+    "explanation": "Past inability combines the ability vowel -(y)e with the past negative: bul-a-ma-dı-m."
+   },
+   {
+    "question": "You look exhausted; you ___ go to bed early tonight.",
+    "options": [
+     "uyumalısın",
+     "uyuyabilirsin",
+     "uyumalısın idi",
+     "uyumazsın"
+    ],
+    "answer": 0,
+    "explanation": "For advice or obligation directed at the 2nd person singular, use stem + -meli + -sin."
+   },
+   {
+    "question": "He ___ speak three languages fluently.",
+    "options": [
+     "konuşur",
+     "konuşmalı",
+     "konuşabiliyor",
+     "konuşamaz"
+    ],
+    "answer": 2,
+    "explanation": "Current active ability is expressed with stem + -(y)ebil- + present continuous: konuş-abil-iyor."
+   },
+   {
+    "question": "It's cloudy outside; it ___ rain in the afternoon.",
+    "options": [
+     "yağmalı",
+     "yağamaz",
+     "yağmaz",
+     "yağabilir"
+    ],
+    "answer": 3,
+    "explanation": "Epistemic possibility ('it may/might rain') is formed by stem + -(y)ebil-ir."
+   }
+  ],
+  "tip": "To distinguish 'cannot' from 'might not', remember that -(y)eme means inability, whereas -meyebil means uncertain possibility."
+ },
+ {
+  "id": "tr-b2-compound-tenses",
+  "level": "b2",
+  "category": "tenses",
+  "categoryColor": "#F59E0B",
+  "emoji": "⏳",
+  "title": "Compound Verb Tenses (İdi, İmiş, İse Combinations)",
+  "subtitle": "Form past habits, unfulfilled intentions, and reported progressive actions",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Stacking the past auxiliary -(y)di or evidential -(y)miş onto tense stems produces nuanced past continuous, reported, or intentional meanings.",
+  "structure": {
+   "headers": [
+    "Compound Form",
+    "Turkish Construction",
+    "Core Meaning",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Past Continuous",
+      "Stem + -Iyor + -(y)dI",
+      "Past ongoing state/habit",
+      "Was doing / Used to do"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past Future",
+      "Stem + -(y)EcEk + -(y)dI",
+      "Unfulfilled intention",
+      "Was going to do"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reported Continuous",
+      "Stem + -Iyor + -mIş",
+      "Hearsay / Surprising state",
+      "Appears to be doing"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Habitual Past",
+      "Stem + -r/-Er + -(y)dI",
+      "Regular past routine",
+      "Used to do (routinely)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Past Interrupted Action",
+    "example": "Telefon çaldığında duş alıyordum.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Unfulfilled Intention",
+    "example": "Dün seni arayacaktım ama fırsat bulamadım.",
+    "translation": ""
+   },
+   {
+    "color": "#92400E",
+    "label": "Reported Action",
+    "example": "Ali yeni bir ev satın alıyormuş.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Eskiden her sabah sahilde bir saat koşardım.",
+    "ko": "",
+    "highlight": "koşardım"
+   },
+   {
+    "en": "Biz kapıdan çıkarken şiddetli bir fırtına başlıyordu.",
+    "ko": "",
+    "highlight": "başlıyordu"
+   },
+   {
+    "en": "O konsere biz de sizinle gelecektik.",
+    "ko": "",
+    "highlight": "gelecektik"
+   },
+   {
+    "en": "Meğerse yıllardır o şirkette genel müdür olarak çalışıyormuş.",
+    "ko": "",
+    "highlight": "çalışıyormuş"
+   },
+   {
+    "en": "Gençken hiç sebze yemezdim ama şimdi çok seviyorum.",
+    "ko": "",
+    "highlight": "yemezdim"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ben dün gelecektim ama sen evde yok idin.",
+    "right": "Ben dün gelecektim ama sen evde yoktun.",
+    "note": "While 'yok idin' is archaic or hyper-formal, standard modern Turkish attaches the copula suffix: yoktun."
+   },
+   {
+    "wrong": "Eskiden sigara içiyordum.",
+    "right": "Eskiden sigara içerdim.",
+    "note": "For long-term defunct habits ('used to'), the aorist past (-erdi/ardı) is far more idiomatic than -iyordu."
+   },
+   {
+    "wrong": "Dün araba alacaktıydım.",
+    "right": "Dün araba alacaktım.",
+    "note": "Do not double-suffix past auxiliaries; attach the past clitic -(y)dI once to the future tense marker."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "When I was a child, I ___ chocolate every day.",
+    "options": [
+     "yerdim",
+     "yiyorum",
+     "yemişim",
+     "yiyecektim"
+    ],
+    "answer": 0,
+    "explanation": "Past routine habits over a broad lifespan take the aorist past: ye-r-di-m."
+   },
+   {
+    "question": "I was going to buy that jacket, but I didn't have enough money.",
+    "options": [
+     "alırım",
+     "alacaktım",
+     "alıyordum",
+     "almıştım"
+    ],
+    "answer": 1,
+    "explanation": "An unfulfilled intention in the past takes the future + past compound suffix: al-acak-tı-m."
+   },
+   {
+    "question": "Apparently, Ayşe ___ to Germany next month according to rumor.",
+    "options": [
+     "taşınırdı",
+     "taşınacaktı",
+     "taşınıyormuş",
+     "taşındıydı"
+    ],
+    "answer": 2,
+    "explanation": "Hearsay or reported progressive actions use the compound suffix -iyormuş."
+   },
+   {
+    "question": "While we ___ dinner, the electricity went out.",
+    "options": [
+     "yemişiz",
+     "yiyoruz",
+     "yerdik",
+     "yiyorduk"
+    ],
+    "answer": 3,
+    "explanation": "An interrupted ongoing past action requires the past continuous: ye-iyor-du-k."
+   }
+  ],
+  "tip": "Think of compound tenses as building blocks: the first suffix tells you the aspect (ongoing, scheduled, habitual), while the second specifies time or evidentiality."
+ },
+ {
+  "id": "tr-b2-voice-suffixes",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔄",
+  "title": "Passive, Causative, and Reciprocal Verb Voices",
+  "subtitle": "Transform verb valency with layered derivational morphemes",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Derive passive verbs using -il (or -in after vowels and /l/), causative verbs with -dir/-t, and reciprocal verbs with -iş.",
+  "structure": {
+   "headers": [
+    "Voice",
+    "Key Suffixes",
+    "Base Verb -> Derived Verb",
+    "Meaning Shift"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Passive",
+      "-il, -ın, -n",
+      "yazmak -> yazılmak",
+      "To write -> To be written"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Causative",
+      "-dir, -t, -ir",
+      "yapmak -> yaptırmak",
+      "To do -> To have done"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reciprocal",
+      "-iş, -ış, -ş",
+      "görmek -> görüşmek",
+      "To see -> To meet each other"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Causative-Passive",
+      "-dir + -il",
+      "imzalamak -> imzalattırılmak",
+      "To sign -> To be made to sign"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Passive State / Action",
+    "example": "Mektup dün akşam postaya verildi.",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Causative Action",
+    "example": "Annem kardeşime odasını temizletti.",
+    "translation": ""
+   },
+   {
+    "color": "#5B21B6",
+    "label": "Reciprocal / Mutual",
+    "example": "Eski arkadaşlar sokakta sarılıp selamlaştılar.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Bu bina 1920 yılında inşa edildi.",
+    "ko": "",
+    "highlight": "inşa edildi"
+   },
+   {
+    "en": "Patron bütün raporları sekretere hazırlattı.",
+    "ko": "",
+    "highlight": "hazırlattı"
+   },
+   {
+    "en": "İki lider barış anlaşması için nihayet el sıkıştı.",
+    "ko": "",
+    "highlight": "sıkıştı"
+   },
+   {
+    "en": "Kapı rüzgârın şiddetiyle aniden kapandı.",
+    "ko": "",
+    "highlight": "kapandı"
+   },
+   {
+    "en": "Tüm faturalar banka aracılığıyla ödendi.",
+    "ko": "",
+    "highlight": "ödendi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Yemek yapıldı Ayşe tarafından.",
+    "right": "Yemeği Ayşe yaptı.",
+    "note": "Turkish avoids the passive voice when the agent is known and active; 'tarafından' is reserved for formal or legal writing."
+   },
+   {
+    "wrong": "Ali saçını berbere kesti.",
+    "right": "Ali saçını berbere kestirdi.",
+    "note": "When you have someone else perform an action for you, you must use the causative suffix (-dir/-t)."
+   },
+   {
+    "wrong": "Onlar her gün telefonda konuşur.",
+    "right": "Onlar her gün telefonda konuşurlar.",
+    "note": "While 'konuş-' is already inherently reciprocal, derived reciprocals like 'selamlaşmak' specifically require mutual collective markers."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The lost documents ___ found in the archives yesterday.",
+    "options": [
+     "bulundu",
+     "buldurdu",
+     "buluştu",
+     "buldu"
+    ],
+    "answer": 0,
+    "explanation": "Because 'bulmak' ends in the liquid consonant 'l', its passive takes -un: bul-un-du."
+   },
+   {
+    "question": "I had my car ___ by a professional mechanic.",
+    "options": [
+     "tamir etti",
+     "tamir ettirdi",
+     "tamir ettirdim",
+     "tamir edildim"
+    ],
+    "answer": 2,
+    "explanation": "Causative with 1st person singular agent: stem + -t (causative) + -dir (double causative) + -di-m."
+   },
+   {
+    "question": "We ___ with our old school friends in Ankara last week.",
+    "options": [
+     "görüldük",
+     "görüştük",
+     "gösterdik",
+     "gördürdük"
+    ],
+    "answer": 1,
+    "explanation": "Meeting/seeing each other mutually uses the reciprocal voice -üş: gör-üş-tü-k."
+   },
+   {
+    "question": "The stolen jewels ___ everywhere by the police.",
+    "options": [
+     "arattı",
+     "araştı",
+     "aranıyor",
+     "arandırdı"
+    ],
+    "answer": 2,
+    "explanation": "The verb 'aramak' ends in a vowel, so its passive marker is -n: ara-n-ıyor."
+   }
+  ],
+  "tip": "Pay close attention to stem endings: if a root ends in a vowel or the letter 'l', use -in/-ın for passive instead of -il to prevent tongue-twisting."
+ },
+ {
+  "id": "tr-b2-advanced-converbs",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#EC4899",
+  "emoji": "🔗",
+  "title": "Advanced Adverbial Clauses (-dıkça, -meksizin, -esiye)",
+  "subtitle": "Express proportion, absolute exclusion, and extreme intensity without conjunctions",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "Advanced converbs convert entire clauses into concise adverbials denoting proportion (-dıkça), absence (-meksizin), or extreme degree (-esiye).",
+  "structure": {
+   "headers": [
+    "Converb",
+    "Core Meaning",
+    "Turkish Example",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-dıkça / -dikçe",
+      "Proportional / Whenever",
+      "Yaşlandıkça anlıyorum",
+      "The more I age, the more I understand"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-meksizin / -maksızın",
+      "Without doing (formal)",
+      "Durmaksızın yürüdü",
+      "Walked without stopping"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-(y)esiye / -asıya",
+      "To the point of / Intensely",
+      "Doyasıya eğlendik",
+      "Had fun to our heart's content"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-(y)ececesine",
+      "As if / Manner",
+      "Ölürcesine sevmek",
+      "To love as if dying"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DB2777",
+    "label": "Proportional Increase",
+    "example": "Kitap okudukça kelime hazineniz zenginleşir.",
+    "translation": ""
+   },
+   {
+    "color": "#BE185D",
+    "label": "Formal Exclusion",
+    "example": "Hiçbir ayrım gözetmeksizin herkese eşit davrandı.",
+    "translation": ""
+   },
+   {
+    "color": "#9D174D",
+    "label": "Extreme Degree",
+    "example": "Tatil boyunca çocuklar gibi doyasıya oynadılar.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Zaman geçtikçe gerçekleri daha berrak görüyorsun.",
+    "ko": "",
+    "highlight": "geçtikçe"
+   },
+   {
+    "en": "Hiçbir mazeret bildirmeksizin toplantıya katılmadı.",
+    "ko": "",
+    "highlight": "bildirmeksizin"
+   },
+   {
+    "en": "Yaz tatilinde deniz kenarında doyasıya dinlendik.",
+    "ko": "",
+    "highlight": "doyasıya"
+   },
+   {
+    "en": "Sanki her şeyi biliyormuşçasına konuşuyordu.",
+    "ko": "",
+    "highlight": "biliyormuşçasına"
+   },
+   {
+    "en": "Yukarı çıktıkça havanın sıcaklığı hızla düşüyor.",
+    "ko": "",
+    "highlight": "çıktıkça"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Okumak olmadan öğrenemezsin.",
+    "right": "Okumaksızın öğrenemezsin.",
+    "note": "Do not translate English 'without doing' word-for-word using 'olmadan' with infinitives; use -meksizin or -meden."
+   },
+   {
+    "wrong": "Ne kadar spor yaparsan, o kadar zayıflarsın.",
+    "right": "Spor yaptıkça zayıflarsın.",
+    "note": "While 'ne kadar... o kadar' is understood, native Turkish heavily prefers the compact -dıkça suffix for correlation."
+   },
+   {
+    "wrong": "Yoruldukça devam etti.",
+    "right": "Yorulmasına rağmen devam etti.",
+    "note": "Do not confuse -dıkça (the more / as long as) with concessive clauses (-mesine rağmen / although)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The more you practice Turkish, the faster you will learn.",
+    "options": [
+     "Pratik yaparken",
+     "Pratik yaptıkça",
+     "Pratik yapasıya",
+     "Pratik yapmaksızın"
+    ],
+    "answer": 1,
+    "explanation": "The proportional converb suffix -dıkça expresses 'the more... the more...'."
+   },
+   {
+    "question": "He resigned from his position without giving any explanation.",
+    "options": [
+     "açıklamasıya",
+     "açıkladıkça",
+     "açıklamaksızın",
+     "açıklamadan önce"
+    ],
+    "answer": 2,
+    "explanation": "-meksizin / -maksızın is the formal adverbial suffix meaning 'without doing'."
+   },
+   {
+    "question": "They danced ___ at the wedding party until dawn.",
+    "options": [
+     "oynadıkça",
+     "oynamaksızın",
+     "oynayınca",
+     "oynasıya"
+    ],
+    "answer": 3,
+    "explanation": "The suffix -(y)esiye / -(y)asıya expresses performing an action to the utmost saturation or limit."
+   },
+   {
+    "question": "As we climbed higher up the mountain, breathing became harder.",
+    "options": [
+     "Tırmandıkça",
+     "Tırmanmaksızın",
+     "Tırmanasıya",
+     "Tırmanınca"
+    ],
+    "answer": 0,
+    "explanation": "Proportional correlation over an ongoing progression is marked by tırman-dıkça."
+   }
+  ],
+  "tip": "Use -dıkça paired with another -dıkça or a comparative adjective to effortlessly replicate English 'the more..., the more...' sentences."
+ }
+]

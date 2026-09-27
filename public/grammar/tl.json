@@ -1,0 +1,3319 @@
+[
+ {
+  "id": "tl-a1-predicate-first-word-order",
+  "level": "a1",
+  "category": "advanced",
+  "categoryColor": "#4A5568",
+  "emoji": "🔄",
+  "title": "Predicate-Initial Word Order and the 'Ay' Inversion",
+  "subtitle": "Discover the natural predicate-first structure and formal inversion in Filipino",
+  "color": "#3182CE",
+  "bg": "#EBF8FF",
+  "keyPoint": "Natural conversational Filipino places the predicate before the subject, whereas using the particle 'ay' moves the subject to the beginning for formal or literary emphasis.",
+  "structure": {
+   "headers": [
+    "Order Type",
+    "Structure",
+    "Filipino Sentence",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Natural Order",
+      "Predicate + Subject",
+      "Guro ang babae.",
+      "The woman is a teacher."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Inverted Order",
+      "Subject + ay + Predicate",
+      "Ang babae ay guro.",
+      "The woman is a teacher (formal)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Natural Verbal",
+      "Verb + Subject",
+      "Kumakain ang bata.",
+      "The child is eating."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Inverted Verbal",
+      "Subject + ay + Verb",
+      "Ang bata ay kumakain.",
+      "The child is eating (formal)."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3182CE",
+    "label": "Everyday Conversation",
+    "example": "Mabait ang doktor.",
+    "translation": ""
+   },
+   {
+    "color": "#DD6B20",
+    "label": "Formal Speeches or Writing",
+    "example": "Ang doktor ay mabait.",
+    "translation": ""
+   },
+   {
+    "color": "#38A169",
+    "label": "Action Focus in Daily Talk",
+    "example": "Nagluluto si Maria.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Maganda ang umaga.",
+    "ko": "",
+    "highlight": "Maganda ang"
+   },
+   {
+    "en": "Masaya ang mga mag-aaral.",
+    "ko": "",
+    "highlight": "Masaya ang mga mag-aaral"
+   },
+   {
+    "en": "Nars ang kapatid ko.",
+    "ko": "",
+    "highlight": "Nars ang"
+   },
+   {
+    "en": "Ang Pilipinas ay maganda.",
+    "ko": "",
+    "highlight": "ay"
+   },
+   {
+    "en": "Umiinom ng tubig ang lalaki.",
+    "ko": "",
+    "highlight": "Umiinom ng tubig ang"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ang lalaki nars.",
+    "right": "Nars ang lalaki.",
+    "note": "Filipino does not use English SVO without the particle 'ay'; you must lead with the predicate or insert 'ay'."
+   },
+   {
+    "wrong": "Guro ay si Juan.",
+    "right": "Guro si Juan.",
+    "note": "Do not insert 'ay' when the predicate already leads the sentence."
+   },
+   {
+    "wrong": "Kumakain ay ang bata.",
+    "right": "Kumakain ang bata.",
+    "note": "The particle 'ay' only links a fronted subject to its following predicate, never a fronted verb to its subject."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you naturally say 'The dog is big' in everyday spoken Filipino?",
+    "options": [
+     "Ang aso malaki.",
+     "Malaki ang aso.",
+     "Malaki ay ang aso.",
+     "Aso ang malaki."
+    ],
+    "answer": 1,
+    "explanation": "Conversational Filipino naturally follows Predicate (Malaki) + Subject (ang aso)."
+   },
+   {
+    "question": "Which sentence correctly uses the formal inversion particle 'ay'?",
+    "options": [
+     "Matalino ay ang guro.",
+     "Ay matalino ang guro.",
+     "Ang guro ay matalino.",
+     "Ang guro matalino ay."
+    ],
+    "answer": 2,
+    "explanation": "'Ay' is placed strictly between the fronted topic/subject and the predicate."
+   },
+   {
+    "question": "Complete the natural spoken sentence: '___ ang bahay.' (New is the house)",
+    "options": [
+     "Bago",
+     "Ay bago",
+     "Bago ay",
+     "Ang bago"
+    ],
+    "answer": 0,
+    "explanation": "The predicate adjective 'Bago' belongs right at the start of a predicate-initial sentence."
+   },
+   {
+    "question": "Convert 'Masipag ang nanay' into the inverted 'ay' order:",
+    "options": [
+     "Masipag ay nanay.",
+     "Ay masipag ang nanay.",
+     "Nanay ay masipag ang.",
+     "Ang nanay ay masipag."
+    ],
+    "answer": 3,
+    "explanation": "The subject 'Ang nanay' moves to the front, followed by 'ay', followed by 'masipag'."
+   }
+  ],
+  "tip": "Speak like a native by avoiding 'ay' in everyday conversation; start directly with the adjective, noun, or verb predicate."
+ },
+ {
+  "id": "tl-a1-ang-ng-sa-markers",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#48BB78",
+  "emoji": "🏷️",
+  "title": "Direct, Indirect, and Oblique Markers (Ang, Ng, Sa)",
+  "subtitle": "Master the primary case-marking particles for common nouns in Filipino",
+  "color": "#38A169",
+  "bg": "#F0FFF4",
+  "keyPoint": "'Ang' marks the central topic/focus, 'ng' marks the direct object or possessor, and 'sa' marks location, direction, or recipient.",
+  "structure": {
+   "headers": [
+    "Marker",
+    "Case / Function",
+    "Filipino Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ang",
+      "Topic / Trigger (Nominative)",
+      "Bumili ang bata ng saging.",
+      "The child bought a banana."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ng",
+      "Object / Possessor (Genitive)",
+      "Kotse ng lalaki.",
+      "Car of the man."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "sa",
+      "Location / Direction (Oblique)",
+      "Pumunta siya sa tindahan.",
+      "He/She went to the store."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "mga (pluralizer)",
+      "Plural Common Marker",
+      "ang mga libro",
+      "the books"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#38A169",
+    "label": "Topic Identification",
+    "example": "Malamig ang tubig.",
+    "translation": ""
+   },
+   {
+    "color": "#805AD5",
+    "label": "Possession and Objects",
+    "example": "Binasa ko ang libro ng bata.",
+    "translation": ""
+   },
+   {
+    "color": "#DD6B20",
+    "label": "Location and Direction",
+    "example": "Nasa mesa ang pagkain.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kumain ang pusa ng isda.",
+    "ko": "",
+    "highlight": "ang pusa ng isda"
+   },
+   {
+    "en": "Nasa kusina ang nanay.",
+    "ko": "",
+    "highlight": "ang nanay"
+   },
+   {
+    "en": "Ito ang susi ng bahay.",
+    "ko": "",
+    "highlight": "ang susi ng bahay"
+   },
+   {
+    "en": "Naglakad ang mag-aaral sa paaralan.",
+    "ko": "",
+    "highlight": "sa paaralan"
+   },
+   {
+    "en": "Malinis ang mga silid.",
+    "ko": "",
+    "highlight": "ang mga silid"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Kumain ang bata ang tinapay.",
+    "right": "Kumain ang bata ng tinapay.",
+    "note": "An actor-focus verb can only have one 'ang' phrase; the object takes 'ng'."
+   },
+   {
+    "wrong": "Pumunta ako ng Maynila.",
+    "right": "Pumunta ako sa Maynila.",
+    "note": "Destinations take the oblique marker 'sa', not 'ng'."
+   },
+   {
+    "wrong": "Bahay sa guro.",
+    "right": "Bahay ng guro.",
+    "note": "Possession is marked with 'ng' (e.g., 'bahay ng guro'), not 'sa'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct marker for the object: 'Uminom ang lalaki ___ gatas.'",
+    "options": [
+     "sa",
+     "ang",
+     "ng",
+     "kay"
+    ],
+    "answer": 2,
+    "explanation": "In an actor-focus sentence, the direct object is marked with 'ng'."
+   },
+   {
+    "question": "Select the marker indicating location: 'Nasa ___ mesa ang tasa.'",
+    "options": [
+     "sa",
+     "ng",
+     "ang",
+     "si"
+    ],
+    "answer": 0,
+    "explanation": "The location marker for common nouns is 'sa'."
+   },
+   {
+    "question": "Select the focused subject marker: 'Mabilis ___ kabayo.'",
+    "options": [
+     "ng",
+     "sa",
+     "ni",
+     "ang"
+    ],
+    "answer": 3,
+    "explanation": "'Ang' marks the grammatical subject/topic of the predicate 'mabilis'."
+   },
+   {
+    "question": "Select the marker showing possession: 'Ito ang kotse ___ doktor.'",
+    "options": [
+     "sa",
+     "ng",
+     "ang",
+     "kay"
+    ],
+    "answer": 1,
+    "explanation": "'Ng' marks the possessor ('of the doctor')."
+   }
+  ],
+  "tip": "Remember: 'ang' = the focus (like a spotlight), 'ng' = of / non-focus object, and 'sa' = to / in / on."
+ },
+ {
+  "id": "tl-a1-si-ni-kay-markers",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#48BB78",
+  "emoji": "👤",
+  "title": "Personal Proper Noun Markers (Si, Ni, Kay)",
+  "subtitle": "Mark personal names accurately across focus, genitive, and oblique cases",
+  "color": "#D69E2E",
+  "bg": "#FEFCBF",
+  "keyPoint": "Use 'si', 'ni', and 'kay' exclusively before names of individuals instead of the common noun markers 'ang', 'ng', and 'sa'.",
+  "structure": {
+   "headers": [
+    "Case",
+    "Common Noun",
+    "Personal Name (Singular)",
+    "Personal Names (Plural)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Topic / Focus",
+      "ang",
+      "si Juan",
+      "sina Juan at Maria"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Genitive / Actor / Possessive",
+      "ng",
+      "ni Juan",
+      "nina Juan at Maria"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Oblique / Direction / Recipient",
+      "sa",
+      "kay Juan",
+      "kina Juan at Maria"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D69E2E",
+    "label": "Person as Focus",
+    "example": "Mabait si Pedro.",
+    "translation": ""
+   },
+   {
+    "color": "#3182CE",
+    "label": "Possession by a Person",
+    "example": "Kotse ito ni Pedro.",
+    "translation": ""
+   },
+   {
+    "color": "#E53E3E",
+    "label": "Direction / Recipient (Person)",
+    "example": "Ibigay mo ito kay Pedro.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Doktor si Rosa.",
+    "ko": "",
+    "highlight": "si Rosa"
+   },
+   {
+    "en": "Gawa ito ni Carlo.",
+    "ko": "",
+    "highlight": "ni Carlo"
+   },
+   {
+    "en": "Pumunta kami kay Miguel.",
+    "ko": "",
+    "highlight": "kay Miguel"
+   },
+   {
+    "en": "Dumating sina nanay at tatay.",
+    "ko": "",
+    "highlight": "sina nanay at tatay"
+   },
+   {
+    "en": "Sulat ito mula kina Ana.",
+    "ko": "",
+    "highlight": "kina Ana"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mabait ang Juan.",
+    "right": "Mabait si Juan.",
+    "note": "Use 'si' instead of 'ang' for personal names."
+   },
+   {
+    "wrong": "Libro ng Maria ito.",
+    "right": "Libro ni Maria ito.",
+    "note": "Use 'ni' instead of 'ng' when marking possession by a person."
+   },
+   {
+    "wrong": "Ibigay mo sa Juan.",
+    "right": "Ibigay mo kay Juan.",
+    "note": "Use 'kay' instead of 'sa' for personal recipient or destination."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'Nagluto ___ Nanay ng hapunan.'",
+    "options": [
+     "ang",
+     "si",
+     "ni",
+     "kay"
+    ],
+    "answer": 1,
+    "explanation": "'Si' marks a single person's name or familial title as the topic."
+   },
+   {
+    "question": "Fill in the blank: 'Ito ang bag ___ Elena.'",
+    "options": [
+     "ni",
+     "ng",
+     "kay",
+     "si"
+    ],
+    "answer": 0,
+    "explanation": "'Ni' marks possession by a named person."
+   },
+   {
+    "question": "Fill in the blank: 'Ipaabot mo ang ulam ___ Tatay.'",
+    "options": [
+     "sa",
+     "si",
+     "ni",
+     "kay"
+    ],
+    "answer": 3,
+    "explanation": "'Kay' marks the personal recipient."
+   },
+   {
+    "question": "How do you mark two named subjects as focus: 'Aalis na ___ Marco at Luis.'?",
+    "options": [
+     "nina",
+     "kina",
+     "sina",
+     "ang"
+    ],
+    "answer": 2,
+    "explanation": "'Sina' is the plural nominative marker for personal names."
+   }
+  ],
+  "tip": "Pair them in your head: 'ang = si', 'ng = ni', 'sa = kay'. If it's a person's name, switch to the rhyming personal set!"
+ },
+ {
+  "id": "tl-a1-personal-pronouns",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#48BB78",
+  "emoji": "👥",
+  "title": "Three-Case Pronoun Sets (Ako, Ko, Akin)",
+  "subtitle": "Choose the right pronoun set for focus, actor/possessor, and beneficiary",
+  "color": "#805AD5",
+  "bg": "#FAF5FF",
+  "keyPoint": "Filipino pronouns correspond to the three noun cases: Ang-set (topic), Ng-set (actor/possessor), and Sa-set (location/beneficiary/preposed possessor).",
+  "structure": {
+   "headers": [
+    "Person",
+    "Ang-Set (Topic)",
+    "Ng-Set (Actor / Possessor)",
+    "Sa-Set (Beneficiary / Locative)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Person (I / Me / Mine)",
+      "ako",
+      "ko",
+      "akin"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Person (You / Yours)",
+      "ikaw / ka",
+      "mo",
+      "iyo"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person (He / She / It)",
+      "siya",
+      "niya",
+      "kaniya"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "1st Person Pl. Excl. (We / Us)",
+      "kami",
+      "namin",
+      "amin"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#805AD5",
+    "label": "Topic / Subject Pronoun",
+    "example": "Masaya ako ngayon.",
+    "translation": ""
+   },
+   {
+    "color": "#3182CE",
+    "label": "Post-nominal Possessor",
+    "example": "Ito ang bahay ko.",
+    "translation": ""
+   },
+   {
+    "color": "#38A169",
+    "label": "Pre-nominal Possessor / Beneficiary",
+    "example": "Akin ang librong ito.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Gusto ko ng mangga.",
+    "ko": "",
+    "highlight": "ko"
+   },
+   {
+    "en": "Mabait siya sa amin.",
+    "ko": "",
+    "highlight": "siya"
+   },
+   {
+    "en": "Kinuha mo ba ang payong?",
+    "ko": "",
+    "highlight": "mo"
+   },
+   {
+    "en": "Para sa kaniya ang bulaklak.",
+    "ko": "",
+    "highlight": "sa kaniya"
+   },
+   {
+    "en": "Nagsasalita kami ng Tagalog.",
+    "ko": "",
+    "highlight": "kami"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Bahay ako ito.",
+    "right": "Bahay ko ito.",
+    "note": "Use the Ng-set pronoun 'ko' for possession, not the Ang-set 'ako'."
+   },
+   {
+    "wrong": "Gusto ako matulog.",
+    "right": "Gusto kong matulog.",
+    "note": "Pseudo-verbs like 'gusto' take the Ng-set pronoun ('ko') to express who desires the action."
+   },
+   {
+    "wrong": "Para sa ako.",
+    "right": "Para sa akin.",
+    "note": "After prepositions like 'para sa', use the Sa-set pronoun ('akin')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct pronoun: 'Pumunta ___ sa palengke kahapon.' (I)",
+    "options": [
+     "ko",
+     "akin",
+     "ako",
+     "kami"
+    ],
+    "answer": 2,
+    "explanation": "'Ako' is the Ang-set pronoun used as the subject of an actor-focus verb."
+   },
+   {
+    "question": "Choose the correct pronoun: 'Kinain ___ ang saging.' (by you / you ate)",
+    "options": [
+     "mo",
+     "ka",
+     "iyo",
+     "ikaw"
+    ],
+    "answer": 0,
+    "explanation": "'Mo' is the Ng-set pronoun marking the non-subject agent in object-focus sentences."
+   },
+   {
+    "question": "Choose the correct pronoun: 'Sa ___ ba ang kotseng ito?' (yours)",
+    "options": [
+     "ikaw",
+     "ka",
+     "mo",
+     "iyo"
+    ],
+    "answer": 3,
+    "explanation": "'Iyo' is the Sa-set pronoun indicating ownership after 'sa'."
+   },
+   {
+    "question": "Choose the correct pronoun: 'Nagluto si nanay para sa ___.' (him/her)",
+    "options": [
+     "siya",
+     "kaniya",
+     "niya",
+     "ako"
+    ],
+    "answer": 1,
+    "explanation": "'Kaniya' is the Sa-set pronoun required after the prepositional marker 'sa'."
+   }
+  ],
+  "tip": "Short Ng-set pronouns like 'ko' and 'mo' are enclitic: they never stand alone at the very beginning of a sentence and always attach tightly after the first word."
+ },
+ {
+  "id": "tl-a1-equational-existential-may-wala",
+  "level": "a1",
+  "category": "advanced",
+  "categoryColor": "#4A5568",
+  "emoji": "📦",
+  "title": "Existential and Possessive Markers (May, Mayroon, Wala)",
+  "subtitle": "Express presence, possession, and absence with non-verbal predicates",
+  "color": "#DD6B20",
+  "bg": "#FFFAF0",
+  "keyPoint": "Use 'may' directly before nouns/verbs without a linker, 'mayroon' when followed by enclitics or standing alone, and 'wala' to state absence or non-possession.",
+  "structure": {
+   "headers": [
+    "Marker",
+    "Rule / Position",
+    "Filipino Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "may",
+      "Followed directly by noun/verb (no linker)",
+      "May pagkain sa mesa.",
+      "There is food on the table."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "mayroon",
+      "Followed by monosyllabic pronoun or linker (-g/-ng)",
+      "Mayroon akong kapatid.",
+      "I have a sibling."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "mayroon",
+      "Short affirmative answer ('Yes, there is / I have')",
+      "Mayroon.",
+      "There is / Yes, I have."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "wala",
+      "Negation of may/mayroon; requires linker before noun",
+      "Walang tubig sa baso.",
+      "There is no water in the glass."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#38A169",
+    "label": "Simple Existence / Presence",
+    "example": "May tao sa loob.",
+    "translation": ""
+   },
+   {
+    "color": "#3182CE",
+    "label": "Possession with Pronouns",
+    "example": "Mayroon siyang bagong kotse.",
+    "translation": ""
+   },
+   {
+    "color": "#E53E3E",
+    "label": "Absence or Lack",
+    "example": "Walang pasok ngayon.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "May pera ka ba?",
+    "ko": "",
+    "highlight": "May pera"
+   },
+   {
+    "en": "Mayroon kaming bisita.",
+    "ko": "",
+    "highlight": "Mayroon kaming"
+   },
+   {
+    "en": "Walang problema dito.",
+    "ko": "",
+    "highlight": "Walang"
+   },
+   {
+    "en": "May aso sa bakuran.",
+    "ko": "",
+    "highlight": "May aso"
+   },
+   {
+    "en": "Wala akong pera ngayon.",
+    "ko": "",
+    "highlight": "Wala akong"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "May isang mansanas ako.",
+    "right": "Mayroon akong isang mansanas.",
+    "note": "If an enclitic pronoun like 'ako' immediately follows the existential predicate, you must use 'mayroon', not 'may'."
+   },
+   {
+    "wrong": "May na pera sa mesa.",
+    "right": "Mayroon nang pera sa mesa.",
+    "note": "Never attach enclitic particles or linkers directly onto 'may'; use 'mayroon' instead."
+   },
+   {
+    "wrong": "Wala problema.",
+    "right": "Walang problema.",
+    "note": "'Wala' must connect to the following noun or pronoun using the ligature -ng / na."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the existential sentence: '___ pusa sa ilalim ng kama.' (There is a cat...)",
+    "options": [
+     "Wala",
+     "Mayroon",
+     "May",
+     "Mayroong"
+    ],
+    "answer": 2,
+    "explanation": "'May' is placed directly before a bare noun without any linker or enclitic pronoun intervening."
+   },
+   {
+    "question": "Which sentence correctly expresses 'I have a question'?",
+    "options": [
+     "Mayroon akong tanong.",
+     "May akong tanong.",
+     "Wala akong tanong.",
+     "Mayroon tanong ako."
+    ],
+    "answer": 0,
+    "explanation": "When an enclitic pronoun ('ako') follows immediately, 'mayroon' must be used with the ligature ('akong')."
+   },
+   {
+    "question": "Select the correct form to say 'There is no rice':",
+    "options": [
+     "Wala kanin.",
+     "May kanin.",
+     "Walang kanin.",
+     "Mayroong kanin."
+    ],
+    "answer": 2,
+    "explanation": "'Wala' attaches the ligature '-ng' to the succeeding word: 'Walang kanin'."
+   },
+   {
+    "question": "How do you answer a simple yes/no existence question affirmatively ('Do you have coffee? - Yes, I have')?",
+    "options": [
+     "Wala.",
+     "May.",
+     "Akin.",
+     "Mayroon."
+    ],
+    "answer": 3,
+    "explanation": "'Mayroon' can stand independently as a complete affirmative answer, while 'may' can never stand alone."
+   }
+  ],
+  "tip": "Quick trick: 'May' is glued straight to the noun ('May libro'). If you need to slip in a pronoun first ('ako', 'ka', 'siya'), expand it to 'Mayroon' ('Mayroon akong libro')."
+ },
+ {
+  "id": "tl-a1-demonstrative-pronouns",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "👉",
+  "title": "Demonstrative Pronoun Systems",
+  "subtitle": "Master spatial proximity with ito, iyan, and iyon across cases",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Filipino demonstratives distinguish three distances (near speaker, near listener, far from both) across nominative, genitive, and locative cases.",
+  "structure": {
+   "headers": [
+    "Distance",
+    "Nominative (Ang)",
+    "Genitive (Ng)",
+    "Locative (Sa)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Near speaker (This)",
+      "ito",
+      "nito",
+      "dito"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Near listener (That)",
+      "iyan",
+      "niyan",
+      "diyan"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Far from both (Yonder)",
+      "iyon",
+      "noon",
+      "doon"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Pointing to an object near you",
+    "example": "Masarap ang manggang ito.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Indicating possession or source",
+    "example": "Uminom siya ng tubig mula rito.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Specifying a distant location",
+    "example": "Nakatira ang lola ko roon.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ano ang ibig sabihin nito?",
+    "ko": "",
+    "highlight": "nito"
+   },
+   {
+    "en": "Gusto ko ang sapatos na ito.",
+    "ko": "",
+    "highlight": "ito"
+   },
+   {
+    "en": "Pumunta ka roon sa tindahan.",
+    "ko": "",
+    "highlight": "roon"
+   },
+   {
+    "en": "Hawakan mo iyan nang maayos.",
+    "ko": "",
+    "highlight": "iyan"
+   },
+   {
+    "en": "Maganda ang tanawin doon.",
+    "ko": "",
+    "highlight": "doon"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Gusto ko ito mansanas.",
+    "right": "Gusto ko ang mansanas na ito.",
+    "note": "Demonstratives acting as adjectives require the linker na/-ng after the noun."
+   },
+   {
+    "wrong": "Nasa dito ang susi.",
+    "right": "Nandito ang susi.",
+    "note": "Use 'nandito' or simply 'dito' rather than combining 'nasa' with 'dito'."
+   },
+   {
+    "wrong": "Kumain ako niyan kanina sa bahay ko.",
+    "right": "Kumain ako nito kanina sa bahay ko.",
+    "note": "Use 'nito' for things close to the speaker, not 'niyan' which points near the listener."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the correct nominative demonstrative for something close to the listener? '___ ang payong mo.'",
+    "options": [
+     "Ito",
+     "Iyan",
+     "Iyon",
+     "Nito"
+    ],
+    "answer": 1,
+    "explanation": "'Iyan' refers to objects near the person being addressed."
+   },
+   {
+    "question": "Choose the genitive pronoun for an object held by the speaker: 'Uminom ka ___.'",
+    "options": [
+     "nito",
+     "niyan",
+     "noon",
+     "dito"
+    ],
+    "answer": 0,
+    "explanation": "'Nito' is the genitive/object marker for things proximate to the speaker."
+   },
+   {
+    "question": "Fill in the blank for a location far from both speaker and listener: 'Magkita tayo ___ bukas.'",
+    "options": [
+     "dito",
+     "diyan",
+     "rito",
+     "doon"
+    ],
+    "answer": 3,
+    "explanation": "'Doon' indicates a location distant from both interlocutors."
+   },
+   {
+    "question": "Identify the locative form for a place right next to the listener: 'Ilagay mo ang bag ___.'",
+    "options": [
+     "nito",
+     "diyan",
+     "iyon",
+     "dito"
+    ],
+    "answer": 1,
+    "explanation": "'Diyan' indicates proximity to the listener."
+   }
+  ],
+  "tip": "Locative forms change their initial 'd' to 'r' (dito -> rito, doon -> roon) when the preceding word ends in a vowel."
+ },
+ {
+  "id": "tl-a2-actor-focus-um-mag",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🏃",
+  "title": "Actor Focus Verbs: -Um- vs. Mag-",
+  "subtitle": "Distinguish internal actions from deliberate, external activities",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "The infix -um- typically marks internal, reflexive, or natural movements, whereas the prefix mag- indicates deliberate, repetitive, or transitive actions.",
+  "structure": {
+   "headers": [
+    "Affix",
+    "Primary Semantic Nuance",
+    "Infinitive Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-um-",
+      "Internal / Natural / Involuntary",
+      "kumain",
+      "to eat"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "mag-",
+      "Deliberate / Transitive / Social",
+      "magluto",
+      "to cook"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Contrast",
+      "bili: bumili (buy) vs magbili (sell)",
+      "bumili / magbili",
+      "buy vs. sell/retail"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Expressing natural physical acts",
+    "example": "Uminom siya ng malamig na tubig.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Executing deliberate occupational tasks",
+    "example": "Nagtatrabaho ang kuya ko sa ospital.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Pairing reciprocal or outward motions",
+    "example": "Naglalaro ang mga bata sa labas.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Pumunta kami sa Maynila kahapon.",
+    "ko": "",
+    "highlight": "Pumunta"
+   },
+   {
+    "en": "Nagsipilyo siya bago matulog.",
+    "ko": "",
+    "highlight": "Nagsipilyo"
+   },
+   {
+    "en": "Umulan nang malakas kagabi.",
+    "ko": "",
+    "highlight": "Umulan"
+   },
+   {
+    "en": "Mag-aaral ako ng Filipino mamaya.",
+    "ko": "",
+    "highlight": "Mag-aaral"
+   },
+   {
+    "en": "Bumangon ang bata nang maaga.",
+    "ko": "",
+    "highlight": "Bumangon"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Nag-ulan nang malakas kahapon.",
+    "right": "Umulan nang malakas kahapon.",
+    "note": "Weather occurrences and natural phenomena take -um-, never mag-."
+   },
+   {
+    "wrong": "Gusto ko magkain ng pansit.",
+    "right": "Gusto kong kumain ng pansit.",
+    "note": "'Kain' takes the -um- affix (kumain) for personal consumption, not mag-."
+   },
+   {
+    "wrong": "Umaral ako kagabi para sa pagsusulit.",
+    "right": "Nag-aral ako kagabi para sa pagsusulit.",
+    "note": "'Aral' takes mag- (nag-aral) when meaning studying intensely."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct verb for drinking water: 'Mabilis siyang ___ ng gatas.'",
+    "options": [
+     "uminom",
+     "nag-inom",
+     "mag-inom",
+     "nainom"
+    ],
+    "answer": 0,
+    "explanation": "'Inom' standardly forms an actor-focus verb with -um- (uminom)."
+   },
+   {
+    "question": "Which verb correctly expresses deliberate cooking? 'Si Nanay ay ___ ng adobo.'",
+    "options": [
+     "lumuto",
+     "nagluluto",
+     "kumain",
+     "umalis"
+    ],
+    "answer": 1,
+    "explanation": "'Luto' takes mag- in actor focus; the imperfective form is 'nagluluto'."
+   },
+   {
+    "question": "Select the correct form for weather: 'Biglang ___ ang hangin kanina.'",
+    "options": [
+     "naglakas",
+     "lumakas",
+     "maglakas",
+     "paglakas"
+    ],
+    "answer": 1,
+    "explanation": "Natural shifts in state or weather use -um- (lumakas)."
+   },
+   {
+    "question": "Fill in the blank with the appropriate verb for cleaning: '___ ako ng maruming kuwarto.'",
+    "options": [
+     "Umlinis",
+     "Linisin",
+     "Naglinis",
+     "Umalis"
+    ],
+    "answer": 2,
+    "explanation": "'Linis' in actor focus commonly takes mag- (naglinis in past/completed aspect)."
+   }
+  ],
+  "tip": "If a root begins with a vowel, prefix 'um-' directly (e.g., umalis); if it begins with a consonant, insert '-um-' after the first consonant (e.g., s-um-ulat)."
+ },
+ {
+  "id": "tl-a2-three-aspect-system",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#F59E0B",
+  "emoji": "⏳",
+  "title": "Aspectual Conjugation",
+  "subtitle": "Master Contemplated, Imperfective, and Perfective aspects",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Filipino verbs mark aspect (completion of action) rather than tense, utilizing first-syllable reduplication and affix shifts.",
+  "structure": {
+   "headers": [
+    "Aspect",
+    "Formation Rule (-um-)",
+    "Example (Sulat)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Perfective (Completed)",
+      "Infix -um- without reduplication",
+      "sumulat",
+      "wrote"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Imperfective (Incompleted)",
+      "Infix -um- + reduplicate first syllable",
+      "sumusulat",
+      "is writing / writes"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Contemplated (Unstarted)",
+      "Reduplicate first syllable + stem (no -um-)",
+      "susulat",
+      "will write"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Describing finished actions (Perfective)",
+    "example": "Kumanta ang mang-aawit sa entablado.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Describing ongoing or habitual actions (Imperfective)",
+    "example": "Kumakanta siya tuwing umaga.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Describing future or intended actions (Contemplated)",
+    "example": "Kakanta kami sa pista bukas.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Bumabasa siya ng bagong aklat ngayon.",
+    "ko": "",
+    "highlight": "Bumabasa"
+   },
+   {
+    "en": "Tatakbo ako sa parke bukas ng madaling-araw.",
+    "ko": "",
+    "highlight": "Tatakbo"
+   },
+   {
+    "en": "Tumawag ang doktor kaninang tanghali.",
+    "ko": "",
+    "highlight": "Tumawag"
+   },
+   {
+    "en": "Nagsasalita ang guro sa harap ng klase.",
+    "ko": "",
+    "highlight": "Nagsasalita"
+   },
+   {
+    "en": "Magluluto si Tatay ng hapunan mamaya.",
+    "ko": "",
+    "highlight": "Magluluto"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Sumulat ako bukas sa aking kaibigan.",
+    "right": "Susulat ako bukas sa aking kaibigan.",
+    "note": "The contemplated aspect drops the -um- infix and only reduplicates the first CV syllable (susulat)."
+   },
+   {
+    "wrong": "Kahapon ay kakain siya sa restawran.",
+    "right": "Kahapon ay kumain siya sa restawran.",
+    "note": "'Kakain' is contemplated (future); use the perfective 'kumain' for actions completed yesterday."
+   },
+   {
+    "wrong": "Kasalukuyang nagluto ang ate ko ngayon.",
+    "right": "Kasalukuyang nagluluto ang ate ko ngayon.",
+    "note": "Ongoing actions require the imperfective form with reduplication (nagluluto)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the contemplated (unstarted) aspect of 'alis': '___ kami mamayang gabi.'",
+    "options": [
+     "Umalis",
+     "Umaalis",
+     "Aalis",
+     "Nag-alis"
+    ],
+    "answer": 2,
+    "explanation": "Contemplated aspect duplicates the first syllable: a- + alis = 'aalis'."
+   },
+   {
+    "question": "Which verb form denotes an ongoing action right now? 'Si Pedro ay ___ sa telepono.'",
+    "options": [
+     "tumawag",
+     "tumatawag",
+     "tatawag",
+     "nagtatawag"
+    ],
+    "answer": 1,
+    "explanation": "'Tumatawag' uses the -um- infix with first-syllable reduplication for progressive/habitual aspect."
+   },
+   {
+    "question": "Choose the perfective (completed) aspect for 'tulong': '___ sila sa aming proyekto kahapon.'",
+    "options": [
+     "Tumulong",
+     "Tumutulong",
+     "Tutulong",
+     "Magtulong"
+    ],
+    "answer": 0,
+    "explanation": "'Tumulong' represents completed action without syllable reduplication."
+   },
+   {
+    "question": "What is the imperfective form of the mag- verb 'aral'? 'Siya ay palaging ___ gabi-gabi.'",
+    "options": [
+     "nag-aral",
+     "mag-aaral",
+     "nag-aaral",
+     "umiiaral"
+    ],
+    "answer": 2,
+    "explanation": "Mag- verbs become nag- + CV reduplication (nag-aaral) in the imperfective aspect."
+   }
+  ],
+  "tip": "Reduplication in Filipino always copies just the initial consonant and vowel (CV) of the root, never consonant clusters (e.g., 'prito' becomes 'piprito')."
+ },
+ {
+  "id": "tl-a2-object-focus-in",
+  "level": "a2",
+  "category": "passive",
+  "categoryColor": "#EC4899",
+  "emoji": "🎯",
+  "title": "Patient/Object Focus with -In Verbs",
+  "subtitle": "Promote the direct recipient of an action to the ang-trigger role",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "In object-focus sentences, the suffix -in/-hin targets the patient as the subject (marked by ang), while the agent takes the genitive marker (ng).",
+  "structure": {
+   "headers": [
+    "Aspect",
+    "Affix & Shift",
+    "Example (Kain)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Infinitive",
+      "Root + -in / -hin",
+      "kainin",
+      "to eat (something)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Perfective",
+      "Infix -in- (no suffix)",
+      "kinain",
+      "ate (something)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Imperfective",
+      "Infix -in- + reduplication",
+      "kinakain",
+      "is eating (something)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Contemplated",
+      "Reduplication + suffix -in",
+      "kakainin",
+      "will eat (something)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EC4899",
+    "label": "Emphasizing a specific object acted upon",
+    "example": "Ininom ng bata ang sariwang gatas.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Issuing direct patient-oriented commands",
+    "example": "Basahin mo ang maikling kuwento.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Describing habitual object-focused actions",
+    "example": "Lulutuin ni Nanay ang paborito mong ulam.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Kinain ng pusa ang isda sa mesa.",
+    "ko": "",
+    "highlight": "Kinain"
+   },
+   {
+    "en": "Tawagin mo ang iyong kapatid ngayon.",
+    "ko": "",
+    "highlight": "Tawagin"
+   },
+   {
+    "en": "Binabasa ni Maria ang makapal na libro.",
+    "ko": "",
+    "highlight": "Binabasa"
+   },
+   {
+    "en": "Gagawin ko ang aking takdang-aralin mamaya.",
+    "ko": "",
+    "highlight": "Gagawin"
+   },
+   {
+    "en": "Linisin natin ang buong bahay bukas.",
+    "ko": "",
+    "highlight": "Linisin"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Kinain ako ang tinapay.",
+    "right": "Kinain ko ang tinapay.",
+    "note": "In patient focus, the actor must take the genitive pronoun (ko), not the nominative (ako)."
+   },
+   {
+    "wrong": "Babasahin ko ng libro.",
+    "right": "Babasahin ko ang libro.",
+    "note": "The patient of an object-focus verb must be flagged with the trigger marker 'ang', not 'ng'."
+   },
+   {
+    "wrong": "Kinainin niya ang mangga kanina.",
+    "right": "Kinain niya ang mangga kanina.",
+    "note": "In the completed aspect, the suffix -in drops when the infix -in- is added."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the correct actor pronoun: 'Gagawin ___ ang proyekto bukas.'",
+    "options": [
+     "ako",
+     "ikaw",
+     "ko",
+     "siya"
+    ],
+    "answer": 2,
+    "explanation": "Patient-focus verbs require the actor to be in the genitive case ('ko')."
+   },
+   {
+    "question": "Select the correct contemplated form of 'bili': '___ ni Juan ang bagong kotse sa susunod na taon.'",
+    "options": [
+     "Binili",
+     "Bibibilin",
+     "Bibilhin",
+     "Bumibili"
+    ],
+    "answer": 2,
+    "explanation": "'Bili' takes -hin with reduplication to form 'bibilhin' in the contemplated aspect."
+   },
+   {
+    "question": "What is the perfective form of 'luto' in patient focus? '___ ni Nanay ang masarap na sinigang.'",
+    "options": [
+     "Niluto",
+     "Lulutuin",
+     "Linuluto",
+     "Nagluto"
+    ],
+    "answer": 0,
+    "explanation": "Roots starting with /l/ undergo metathesis: 'linuto' regularly becomes 'niluto'."
+   },
+   {
+    "question": "Complete the command: '___ mo ang gamot pagkatapos kumain.'",
+    "options": [
+     "Uminom",
+     "Inumin",
+     "Uminomin",
+     "Inom"
+    ],
+    "answer": 1,
+    "explanation": "Direct object-focused commands use the infinitive suffix form: root 'inom' + '-in' = 'inumin'."
+   }
+  ],
+  "tip": "When a root ends in an open vowel without a glottal stop, use the suffix '-hin' instead of '-in' (e.g., basa -> basahin)."
+ },
+ {
+  "id": "tl-a2-ligatures-na-ng",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔗",
+  "title": "The Ligature (Na / -ng)",
+  "subtitle": "Connect modifiers, adjectives, and clauses smoothly",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "The ligature links modifiers to their head words using '-ng' attached after vowels or 'n', and the standalone word 'na' following consonants.",
+  "structure": {
+   "headers": [
+    "Preceding Sound",
+    "Ligature Variant",
+    "Filipino Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Ends in a vowel",
+      "Attach -ng",
+      "magandang babae",
+      "beautiful woman"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Ends in consonant (except n)",
+      "Separate word na",
+      "masipag na mag-aaral",
+      "diligent student"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ends in the letter 'n'",
+      "Drop 'n' and add -ng",
+      "mauling gabi (maulan + -ng)",
+      "rainy night"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Linking adjectives to nouns",
+    "example": "Bumili siya ng matamis na mangga.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Linking numbers or quantifiers to nouns",
+    "example": "May tatlong pusa sa ilalim ng mesa.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Embedding subordinate or relative clauses",
+    "example": "Ito ang bahay na itinayo ng aking ama.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Malamig na tubig ang gusto kong inumin.",
+    "ko": "",
+    "highlight": "na"
+   },
+   {
+    "en": "May limang aklat sa ibabaw ng lamesa.",
+    "ko": "",
+    "highlight": "limang"
+   },
+   {
+    "en": "Mabait na bata ang anak ni Teresa.",
+    "ko": "",
+    "highlight": "na"
+   },
+   {
+    "en": "Pumasok ang bagong guro sa aming silid.",
+    "ko": "",
+    "highlight": "bagong"
+   },
+   {
+    "en": "Masarap na pagkain ang inihanda nila.",
+    "ko": "",
+    "highlight": "na"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Maganda babae ang kapatid ko.",
+    "right": "Magandang babae ang kapatid ko.",
+    "note": "Modifiers cannot directly precede nouns without a ligature (-ng/na)."
+   },
+   {
+    "wrong": "Matalino na estudyante si Jose.",
+    "right": "Matalinong estudyante si Jose.",
+    "note": "Since 'matalino' ends in a vowel (o), you must attach '-ng' directly rather than using separate 'na'."
+   },
+   {
+    "wrong": "Malamign tubig ang ininom ko.",
+    "right": "Malamig na tubig ang ininom ko.",
+    "note": "Because 'malamig' ends in a consonant (g), the standalone particle 'na' is mandatory."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Connect 'mainit' (hot) to 'kape' (coffee): 'Gusto ko ng ___ kape.'",
+    "options": [
+     "mainit na",
+     "mainit ng",
+     "mainit-ng",
+     "mainit nang"
+    ],
+    "answer": 0,
+    "explanation": "'Mainit' ends in the consonant 't', which requires the separate ligature particle 'na'."
+   },
+   {
+    "question": "Connect 'lima' (five) to 'tao' (people): 'May ___ pumunta sa handaan.'",
+    "options": [
+     "lima na",
+     "limang",
+     "lima",
+     "limang na"
+    ],
+    "answer": 1,
+    "explanation": "'Lima' ends in a vowel, so '-ng' attaches directly to the word: 'limang'."
+   },
+   {
+    "question": "What is the correct form for 'ulan' (rain/rainy) + ligature connecting to 'panahon' (season)?",
+    "options": [
+     "ulanna",
+     "ulan ng",
+     "ulang",
+     "ulan na"
+    ],
+    "answer": 2,
+    "explanation": "Words ending in 'n' drop the final 'n' and add '-ng' (ulan -> ulang) or assimilate directly."
+   },
+   {
+    "question": "Choose the correct sentence featuring proper ligature usage:",
+    "options": [
+     "Mura damit ang binili ko.",
+     "Masarap na prutas ito.",
+     "Matalino bata si Ana.",
+     "Mabilis na kotse ang dumaang."
+    ],
+    "answer": 1,
+    "explanation": "'Masarap' ends in a consonant, correctly taking the separate linker 'na' before 'prutas'."
+   }
+  ],
+  "tip": "Filipino ligatures are bidirectional: 'mabuting tao' and 'taong mabuti' mean the exact same thing."
+ },
+ {
+  "id": "tl-a2-negation-hindi-huwag-wala",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🚫",
+  "title": "Split Negation System (Hindi, Huwag, Wala)",
+  "subtitle": "Master the three core negative particles of Filipino",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Filipino uses three distinct negative words depending on whether you are negating predicates (hindi), issuing prohibitions (huwag), or expressing non-existence and lack of possession (wala).",
+  "structure": {
+   "headers": [
+    "Negative Particle",
+    "Function",
+    "Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Hindi",
+      "Negates adjectives, nouns, and indicative verbs",
+      "Hindi masarap ang sopas.",
+      "The soup is not delicious."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Huwag",
+      "Prohibits actions / negative commands",
+      "Huwag kang umalis.",
+      "Do not leave."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Wala",
+      "Negates existence, presence, or possession",
+      "Walang pera si Juan.",
+      "Juan has no money."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Denying Facts or Predicates",
+    "example": "Hindi ako pupunta sa opisina bukas.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Issuing Prohibitions",
+    "example": "Huwag mong hawakan ang baso.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Asserting Absence or Non-possession",
+    "example": "Wala siyang dalang payong.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Hindi siya kumain ng tanghalian kanina.",
+    "ko": "",
+    "highlight": "Hindi"
+   },
+   {
+    "en": "Huwag kayong maingay sa loob ng silid-aklatan.",
+    "ko": "",
+    "highlight": "Huwag"
+   },
+   {
+    "en": "Wala nang kape sa tasa.",
+    "ko": "",
+    "highlight": "Wala"
+   },
+   {
+    "en": "Hindi totoo ang balitang narinig mo.",
+    "ko": "",
+    "highlight": "Hindi"
+   },
+   {
+    "en": "Huwag kang matakot sumubok muli.",
+    "ko": "",
+    "highlight": "Huwag"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Hindi ka tumakbo!",
+    "right": "Huwag kang tumakbo!",
+    "note": "Use 'huwag' instead of 'hindi' when commanding someone not to do something."
+   },
+   {
+    "wrong": "Hindi ako may pera.",
+    "right": "Wala akong pera.",
+    "note": "Possession and presence are negated using 'wala' rather than 'hindi'."
+   },
+   {
+    "wrong": "Wala siya tamad.",
+    "right": "Hindi siya tamad.",
+    "note": "Adjectives and descriptive predicates must be negated with 'hindi', not 'wala'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct negative word: '___ kang mag-alala tungkol sa pagsusulit.' (Don't worry about the exam.)",
+    "options": [
+     "Hindi",
+     "Huwag",
+     "Wala",
+     "Bawal"
+    ],
+    "answer": 1,
+    "explanation": "'Huwag' is required for negative imperatives (prohibitions)."
+   },
+   {
+    "question": "Choose the correct negative word: '___ pa dumadating ang guro.' (The teacher hasn't arrived yet.)",
+    "options": [
+     "Wala",
+     "Baka",
+     "Hindi",
+     "Huwag"
+    ],
+    "answer": 2,
+    "explanation": "Verbal predicates expressing facts are negated using 'hindi'."
+   },
+   {
+    "question": "Choose the correct negative word: '___ tao sa loob ng bahay.' (There is no one inside the house.)",
+    "options": [
+     "Walang",
+     "Huwag",
+     "Hindi",
+     "Dili"
+    ],
+    "answer": 0,
+    "explanation": "Absence or lack of existence requires 'wala' (here combined with the ligature -ng: 'walang')."
+   },
+   {
+    "question": "Choose the correct negative word: '___ asukal sa kusina.' (There is no sugar in the kitchen.)",
+    "options": [
+     "Huwag",
+     "Hindi",
+     "Ayaw",
+     "Walang"
+    ],
+    "answer": 3,
+    "explanation": "'Walang' (wala + -ng) is used to express the absence of a noun."
+   }
+  ],
+  "tip": "Remember: 'Hindi' says it isn't so, 'Huwag' says don't do it, and 'Wala' says there isn't any!"
+ },
+ {
+  "id": "tl-a2-enclitic-particles",
+  "level": "a2",
+  "category": "advanced",
+  "categoryColor": "#4F46E5",
+  "emoji": "🧩",
+  "title": "Enclitic Particles (Ba, Na, Pa, Din/Rin, Naman, Kasi)",
+  "subtitle": "Master second-position enclitics to sound natural",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "Enclitic particles cannot begin a sentence and must cling to the very first stressed word of the clause in a fixed order.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Core Meaning",
+    "Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ba",
+      "Yes/no question marker",
+      "Kumain ka na ba?",
+      "Have you eaten already?"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "na / pa",
+      "Already / Still, yet",
+      "Bukas pa ang dating niya.",
+      "Her arrival is still tomorrow."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "din / rin",
+      "Also, too",
+      "Pupunta rin ako roon.",
+      "I will go there too."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "naman",
+      "Contrast, shift, or mildness",
+      "Ikaw naman ang magbasa.",
+      "It is your turn to read."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Asking Clarifying Questions",
+    "example": "Nandito na ba ang sundo mo?",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Expressing Completion vs. Continuance",
+    "example": "Natutulog pa ang sanggol kanina.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Polite Turn-taking or Contrast",
+    "example": "Ako naman ang susubok ngayon.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Gusto mo ba ng malamig na tubig?",
+    "ko": "",
+    "highlight": "ba"
+   },
+   {
+    "en": "Tapos na ang klase namin kanina.",
+    "ko": "",
+    "highlight": "na"
+   },
+   {
+    "en": "Nagluluto pa si Nanay ng hapunan.",
+    "ko": "",
+    "highlight": "pa"
+   },
+   {
+    "en": "Sasama rin ba ang kapatid mo?",
+    "ko": "",
+    "highlight": "rin ba"
+   },
+   {
+    "en": "Bakit kasi hindi ka nagtanong agad?",
+    "ko": "",
+    "highlight": "kasi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ba ikaw ay gutom?",
+    "right": "Gutom ka na ba?",
+    "note": "Enclitic particles like 'ba' can never appear at the very beginning of a sentence."
+   },
+   {
+    "wrong": "Kumain din ako na.",
+    "right": "Kumain na rin ako.",
+    "note": "The particle 'na' must precede 'din/rin' when multiple enclitics cluster together."
+   },
+   {
+    "wrong": "Hindi daw ako.",
+    "right": "Hindi raw ako.",
+    "note": "Use 'raw/rin' instead of 'daw/din' when following a word that ends in a vowel or semivowel (w, y)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the natural word order: 'Are you still studying?'",
+    "options": [
+     "Nag-aaral ka pa ba?",
+     "Pa ba nag-aaral ka?",
+     "Nag-aaral ba pa ka?",
+     "Ka pa ba nag-aaral?"
+    ],
+    "answer": 0,
+    "explanation": "Monosyllabic pronoun 'ka' precedes enclitics 'pa' and 'ba' right after the initial verb."
+   },
+   {
+    "question": "Fill in the blank for 'already': 'Umalis ___ ang tren papuntang probinsya.'",
+    "options": [
+     "pa",
+     "na",
+     "ba",
+     "rin"
+    ],
+    "answer": 1,
+    "explanation": "'Na' indicates an action that has already taken place."
+   },
+   {
+    "question": "Which sentence correctly places 'din' (also) after a consonant?",
+    "options": [
+     "Doktor rin siya.",
+     "Doktor din siya.",
+     "Din doktor siya.",
+     "Doktor siya rin."
+    ],
+    "answer": 1,
+    "explanation": "After consonant endings (except w and y), use 'din' rather than 'rin'."
+   },
+   {
+    "question": "Select the correct particle indicating cause or explanation ('because'): 'Huli na ako ___ nasiraan ang bus.'",
+    "options": [
+     "naman",
+     "pa",
+     "kasi",
+     "ba"
+    ],
+    "answer": 2,
+    "explanation": "'Kasi' indicates cause, reason, or mild justification."
+   }
+  ],
+  "tip": "Short one-syllable personal pronouns like 'ka' jump ahead of enclitic particles, while longer pronouns come after them!"
+ },
+ {
+  "id": "tl-b1-locative-benefactive-focus",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#0EA5E9",
+  "emoji": "🎯",
+  "title": "Directional and Benefactive Focus (I- and -An)",
+  "subtitle": "Promote destinations, locations, and beneficiaries to the subject",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "The prefix i- typically focuses on the beneficiary for whom an action is performed, while the suffix -an focuses on the location, direction, or recipient of the action.",
+  "structure": {
+   "headers": [
+    "Affix",
+    "Focus Type",
+    "Trigger Marker",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "i-",
+      "Benefactive (for whom)",
+      "ang / si (Beneficiary)",
+      "Ipagluto mo si Maria."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-an",
+      "Locative / Directional",
+      "ang (Place / Goal)",
+      "Hulugan mo ang alkansya."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-an",
+      "Recipient / Target",
+      "si (Recipient)",
+      "Sulatan mo ang iyong lolo."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Doing an Action for Someone",
+    "example": "Ibili mo ng bagong damit si Bunso.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Targeting a Specific Place",
+    "example": "Pinuntahan ng mga turista ang magandang talon.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Performing an Action onto an Object",
+    "example": "Punasan mo ang maruming mesa.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ibinili ni Pedro ng bulaklak ang kaniyang kasintahan.",
+    "ko": "",
+    "highlight": "Ibinili"
+   },
+   {
+    "en": "Hinigupan niya ng mainit na sabaw ang mangkok.",
+    "ko": "",
+    "highlight": "Hinigupan"
+   },
+   {
+    "en": "Ipanghiram mo ng aklat ang kapatid mo sa silid-aklatan.",
+    "ko": "",
+    "highlight": "Ipanghiram"
+   },
+   {
+    "en": "Tinakpan ng nanay ang ulam sa lamesa.",
+    "ko": "",
+    "highlight": "Tinakpan"
+   },
+   {
+    "en": "Igawa mo ng saranggola ang pamangkin mo.",
+    "ko": "",
+    "highlight": "Igawa"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Bumili ako para sa kaniya ng prutas. (benefactive trigger)",
+    "right": "Ibinili ko siya ng prutas.",
+    "note": "Filipino naturally promotes the beneficiary to the trigger using 'i-' rather than relying on periphrastic 'para sa'."
+   },
+   {
+    "wrong": "Puntahan ko sa tindahan.",
+    "right": "Pupuntahan ko ang tindahan.",
+    "note": "In locative focus (-an), the location takes the trigger article 'ang', not the directional preposition 'sa'."
+   },
+   {
+    "wrong": "Ibukas mo ang pinto.",
+    "right": "Buksan mo ang pinto.",
+    "note": "Opening a door targets a surface/location of action, requiring suffix '-an' (buksan), not prefix 'i-'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the benefactive verb: '___ mo ng kape si Tatay.' (Make some coffee for Dad.)",
+    "options": [
+     "Ipagtimpla",
+     "Magtimpla",
+     "Timplahan",
+     "Tumimpla"
+    ],
+    "answer": 0,
+    "explanation": "'Ipagtimpla' (i- + pag-) places the beneficiary 'si Tatay' as the syntactic trigger."
+   },
+   {
+    "question": "Choose the locative verb: '___ ng pintor ang lumang dingding.' (The painter painted on the old wall.)",
+    "options": [
+     "Nagpintura",
+     "Ipamintura",
+     "Pininturahan",
+     "Magpipintura"
+    ],
+    "answer": 2,
+    "explanation": "The suffix '-an' (in completed aspect 'pininturahan') focuses on the surface or location being painted."
+   },
+   {
+    "question": "Complete the benefactive sentence: '___ ko ng pasalubong ang aking kapatid.' (I bought souvenirs for my sibling.)",
+    "options": [
+     "Bumili",
+     "Binilhan",
+     "Nagbili",
+     "Ibinili"
+    ],
+    "answer": 3,
+    "explanation": "'Ibinili' uses benefactive focus to elevate the recipient sibling to the 'ang' phrase."
+   },
+   {
+    "question": "What is the trigger role in: 'Hinugasan ni Ana ang plato'?",
+    "options": [
+     "Actor",
+     "Locative / Patient goal",
+     "Beneficiary",
+     "Instrument"
+    ],
+    "answer": 1,
+    "explanation": "The suffix '-an' in 'hinugasan' makes the plate ('ang plato') the locative/patient focus target."
+   }
+  ],
+  "tip": "Think of 'i-' as offering something out toward someone (beneficiary), and '-an' as applying an action onto a surface or spot (location)!"
+ },
+ {
+  "id": "tl-b1-ability-involuntary-maka-ma",
+  "level": "b1",
+  "category": "modals",
+  "categoryColor": "#F59E0B",
+  "emoji": "⚡",
+  "title": "Abilitative and Involuntary Moods (Maka- vs. Ma-)",
+  "subtitle": "Distinguish deliberate actions from potential or accidental outcomes",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Prefixes maka- (Actor Focus) and ma- (Patient Focus) convey either the ability to perform an act or that an event occurred accidentally and without deliberate intention.",
+  "structure": {
+   "headers": [
+    "Affix",
+    "Focus",
+    "Aspect",
+    "Example Sentence"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "maka-",
+      "Actor Focus (Ability/Involuntary)",
+      "Contemplated",
+      "Makakakain ka ba ng maanghang?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "nakapag- / naka-",
+      "Actor Focus (Completed)",
+      "Completed",
+      "Nakita ko ang nawawalang susi."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ma-",
+      "Patient Focus (Ability/Involuntary)",
+      "Incompleted",
+      "Naririnig mo ba ang tugtog?"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "na-",
+      "Patient Focus (Completed)",
+      "Completed",
+      "Nabasag ko ang baso nang hindi sinasadya."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Expressing Accidental Actions",
+    "example": "Naiwan ko ang pitaka ko sa sasakyan.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Claiming Capability or Potential",
+    "example": "Makakatapos din tayo ng pag-aaral sa wakas.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Perceptions Beyond Direct Will",
+    "example": "Naamoy mo ba ang mabangong sampaguita?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Hindi ako nakatulog kagabi dahil sa ingay.",
+    "ko": "",
+    "highlight": "nakatulog"
+   },
+   {
+    "en": "Nabasag ang mamahaling plorera kanina.",
+    "ko": "",
+    "highlight": "Nabasag"
+   },
+   {
+    "en": "Makakapunta ka ba sa kasal sa Sabado?",
+    "ko": "",
+    "highlight": "Makakapunta"
+   },
+   {
+    "en": "Nakalimutan kong dalhin ang libro mo.",
+    "ko": "",
+    "highlight": "Nakalimutan"
+   },
+   {
+    "en": "Nauunawaan mo ba ang sinabi ng guro?",
+    "ko": "",
+    "highlight": "Nauunawaan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Sinira ko ang salamin kahapon nang aksidente.",
+    "right": "Nasira ko ang salamin kahapon nang aksidente.",
+    "note": "Use 'na-' instead of deliberate focus '-in-' when an action is accidental or unintentional."
+   },
+   {
+    "wrong": "Pumunta ako sa pulong kahapon dahil may lagnat ako.",
+    "right": "Hindi ako nakapunta sa pulong kahapon dahil may lagnat ako.",
+    "note": "Use 'naka-' or 'nakapag-' to express being able (or unable) to attend an event."
+   },
+   {
+    "wrong": "Makanood ako ng telebisyon bukas.",
+    "right": "Makakanood ako ng telebisyon bukas.",
+    "note": "Abilitative future tense requires reduplication of the first syllable of the root: maka-ka-nood."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the verb meaning 'accidentally dropped': '___ niya ang telepono sa sahig kanina.'",
+    "options": [
+     "Nalaglag",
+     "Naglaglag",
+     "Maglalaglag",
+     "Lumaglag"
+    ],
+    "answer": 0,
+    "explanation": "'Nalaglag' expresses an involuntary or accidental dropping of something."
+   },
+   {
+    "question": "Choose the verb meaning 'can speak': '___ ka ba ng wikang Tagalog?'",
+    "options": [
+     "Nagsasalita",
+     "Magsalita",
+     "Makapagsalita",
+     "Sumasalita"
+    ],
+    "answer": 2,
+    "explanation": "'Makapagsalita' denotes the physical or acquired ability to speak."
+   },
+   {
+    "question": "What does 'Nabasag ko ang baso' specifically imply compared to 'Binasag ko ang baso'?",
+    "options": [
+     "It was done on purpose.",
+     "The speaker did not break it.",
+     "It was broken accidentally.",
+     "The glass was already broken."
+    ],
+    "answer": 2,
+    "explanation": "The prefix 'na-' signals involuntary/accidental mood, meaning you broke it by accident."
+   },
+   {
+    "question": "Complete the potential ability sentence: 'Hindi siya ___ lumangoy sa malalim na dagat.' (He cannot swim in deep seas.)",
+    "options": [
+     "naglangoy",
+     "lumalangoy",
+     "lumangoy",
+     "makalangoy"
+    ],
+    "answer": 3,
+    "explanation": "'Makalangoy' expresses the ability to swim."
+   }
+  ],
+  "tip": "Whenever you did something by accident, apologize using 'na-' verbs (e.g., 'Nasagi kita!' instead of 'Sinagi kita!'), so people know you didn't do it intentionally!"
+ },
+ {
+  "id": "tl-b1-pseudo-verbs-gusto-ayaw-dapat",
+  "level": "b1",
+  "category": "modals",
+  "categoryColor": "#F59E0B",
+  "emoji": "⚖️",
+  "title": "Pseudo-Verbal Modal Constructions (Gusto, Nais, Ayaw, Dapat, Kailangan)",
+  "subtitle": "Form compound clauses expressing desires, obligations, and necessities",
+  "color": "#16A34A",
+  "bg": "#F0FDF4",
+  "keyPoint": "Pseudo-verbs like gusto, ayaw, kailangan, and dapat act as modal predicates that link to complementary verbs using the ligature (-ng / na) and take either genitive or nominative actors depending on clause structure.",
+  "structure": {
+   "headers": [
+    "Modal Word",
+    "Meaning",
+    "Actor Case",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Gusto / Nais",
+      "Want / Desire",
+      "Genitive (ng / ko)",
+      "Gusto kong magbasa."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Ayaw",
+      "Dislike / Refusal",
+      "Genitive (ng / ko)",
+      "Ayaw nilang umalis."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Kailangan",
+      "Need / Must",
+      "Genitive or Nominative",
+      "Kailangan nating mag-aral."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Dapat",
+      "Ought / Should",
+      "Nominative / Genitive",
+      "Dapat kang magpahinga."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#16A34A",
+    "label": "Expressing Desires and Preferences",
+    "example": "Gusto kong maglakbay sa iba't ibang bansa.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Expressing Refusal or Aversion",
+    "example": "Ayaw niyang kumain ng gulay.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Stating Obligations and Necessity",
+    "example": "Dapat tayong rumespeto sa kapwa tao.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Gusto kong matutong magsalita ng Filipino.",
+    "ko": "",
+    "highlight": "Gusto kong"
+   },
+   {
+    "en": "Ayaw nilang maghintay nang matagal sa pila.",
+    "ko": "",
+    "highlight": "Ayaw nilang"
+   },
+   {
+    "en": "Kailangan mong magsumite ng takdang-aralin ngayon.",
+    "ko": "",
+    "highlight": "Kailangan mong"
+   },
+   {
+    "en": "Dapat tayong magtulungan upang matapos ang gawain.",
+    "ko": "",
+    "highlight": "Dapat tayong"
+   },
+   {
+    "en": "Nais ng pangulo na magpatayo ng mga bagong paaralan.",
+    "ko": "",
+    "highlight": "Nais ng"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Gusto ako kumain ng mangga.",
+    "right": "Gusto kong kumain ng mangga.",
+    "note": "'Gusto' requires a genitive actor pronoun ('ko') and the linker '-ng', not the nominative pronoun 'ako'."
+   },
+   {
+    "wrong": "Dapat ka mag-aral.",
+    "right": "Dapat kang mag-aral.",
+    "note": "Always attach the linker (-ng) to the pronoun preceding the complement verb."
+   },
+   {
+    "wrong": "Ayaw ko na kumain. (spoken omission)",
+    "right": "Ayaw kong kumain.",
+    "note": "The personal actor pronoun after 'ayaw' must bind to the infinitive via the ligature '-ng'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct pronoun and ligature: 'Gusto ___ magpahinga sa bahay.' (I want to rest at home.)",
+    "options": [
+     "kong",
+     "akong",
+     "ikaw",
+     "ko"
+    ],
+    "answer": 0,
+    "explanation": "Gusto takes genitive actor 'ko' combined with the ligature '-ng' before the verb."
+   },
+   {
+    "question": "Complete the obligation: 'Dapat ___ sumunod sa batas trapiko.' (We [inclusive] should obey traffic laws.)",
+    "options": [
+     "natin",
+     "tayong",
+     "nating",
+     "tayo"
+    ],
+    "answer": 1,
+    "explanation": "With 'dapat', the nominative pronoun 'tayo' with ligature '-ng' is standard: 'tayong sumunod'."
+   },
+   {
+    "question": "Choose the modal for refusal: '___ uminom ng gamot ang bata dahil mapait.' (The child refuses to take medicine because it's bitter.)",
+    "options": [
+     "Dapat",
+     "Gusto",
+     "Ayaw",
+     "Kailangan"
+    ],
+    "answer": 2,
+    "explanation": "'Ayaw' means to dislike, reject, or refuse to do an action."
+   },
+   {
+    "question": "Select the proper form of necessity: 'Kailangan ___ magmadali dahil mahuhuli na tayo.' (You need to hurry because we will be late.)",
+    "options": [
+     "mo",
+     "ka",
+     "mong",
+     "ikaw"
+    ],
+    "answer": 2,
+    "explanation": "'Kailangan' takes the genitive pronoun 'mo' plus the ligature '-ng' ('mong') before the complement verb."
+   }
+  ],
+  "tip": "Always check for the ligature! Whether it is 'Gusto kong...', 'Dapat kang...', or 'Kailangan nating...', pseudo-verbs almost always demand a bridge particle (-ng / na) into the main action!"
+ },
+ {
+  "id": "tl-b1-pluralization-and-intensifiers",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔄",
+  "title": "Reduplicative Morphology for Plurality and Intensity",
+  "subtitle": "Repeat roots and syllables to show moderation, intensification, or distribution",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Reduplicating root words with a linker denotes moderation or pretense, while doubling adjectives or roots expresses plural agreement or heightened intensity.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Morphological Pattern",
+    "Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Moderative / Pretend",
+      "Root + -ng/-ng + Root",
+      "bahay-bahayan",
+      "toy house / playing house"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Plural Adjective",
+      "CV-reduplication of root",
+      "magaganda",
+      "beautiful (plural)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Diminutive Verb",
+      "CV-reduplication + Root-Root",
+      "naglalakad-lakad",
+      "strolling / walking aimlessly"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Intense / Hyperbolic",
+      "Napakaganda / Root-ng-Root",
+      "gandang-ganda",
+      "utterly captivated by beauty"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Plural Adjective Agreement",
+    "example": "Magaganda ang mga tanawin sa probinsya.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Diminutive or Leisurely Action",
+    "example": "Nagbasa-basa muna siya habang naghihintay.",
+    "translation": ""
+   },
+   {
+    "color": "#818CF8",
+    "label": "Imitation or Pretend State",
+    "example": "Naglalaro ang mga bata ng lutu-lutuan.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Magagaling ang mga mang-aawit kagabi.",
+    "ko": "",
+    "highlight": "Magagaling"
+   },
+   {
+    "en": "Umiinog-inog ang maliit na trumpo.",
+    "ko": "",
+    "highlight": "Umiinog-inog"
+   },
+   {
+    "en": "Tawa nang tawa ang mga manonood sa sinehan.",
+    "ko": "",
+    "highlight": "Tawa nang tawa"
+   },
+   {
+    "en": "Nagsakit-sakitan ang bata para hindi pumasok sa klase.",
+    "ko": "",
+    "highlight": "Nagsakit-sakitan"
+   },
+   {
+    "en": "Bumili sila ng sari-saring prutas sa palengke.",
+    "ko": "",
+    "highlight": "sari-saring"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Magaganda ang kotse.",
+    "right": "Maganda ang kotse.",
+    "note": "Do not reduplicate the adjective when modifying a singular noun."
+   },
+   {
+    "wrong": "Nagluto ang nanay nang nagluto.",
+    "right": "Luto nang luto ang nanay.",
+    "note": "For continuous or frequentative repetitive action with 'nang', use the bare root before and after, not full inflected verbs."
+   },
+   {
+    "wrong": "Kumakain-kain siya sa pormal na hapunan.",
+    "right": "Kumakain siya sa pormal na hapunan.",
+    "note": "Reduplicating the verb root implies casual, distracted, or snacking actions, which contradicts a formal dinner context."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct plural form: 'The students are all smart.' -> '___ ang mga estudyante.'",
+    "options": [
+     "Matalino",
+     "Matatalino",
+     "Talino-talino",
+     "Matalinuhin"
+    ],
+    "answer": 1,
+    "explanation": "Plural adjectives formed with 'ma-' reduplicate the first consonant-vowel syllable of the root (ta -> matatalino)."
+   },
+   {
+    "question": "Which verb means 'to browse or read casually without deep concentration'?",
+    "options": [
+     "nagbasa-basa",
+     "magbasa",
+     "binasa",
+     "pagbasa"
+    ],
+    "answer": 0,
+    "explanation": "Reduplicating the root ('basa-basa') creates a diminutive or moderative action indicating casual or leisurely activity."
+   },
+   {
+    "question": "Identify the expression meaning 'playing doctor' or 'make-believe doctor':",
+    "options": [
+     "doktor",
+     "doktor-doktoral",
+     "doktor-doktoran",
+     "madoktor"
+    ],
+    "answer": 2,
+    "explanation": "Adding reduplication plus the suffix '-an' (doktor-doktoran) denotes imitation, make-believe, or pretend play."
+   },
+   {
+    "question": "Which sentence indicates unceasing, repetitive crying?",
+    "options": [
+     "Umiyak siya buong araw.",
+     "Iyak nang iyak ang sanggol.",
+     "Nag-iiyak ang sanggol.",
+     "Iiyak-iyak ang sanggol."
+    ],
+    "answer": 1,
+    "explanation": "'Root + nang + root' (Iyak nang iyak) expresses an intense, relentless, and repetitive occurrence of the action."
+   }
+  ],
+  "tip": "To describe an activity done aimlessly or to pass the time, simply reduplicate the verb's root after its normal aspect prefix (e.g., nag-isip-isip = pondered lightly)."
+ },
+ {
+  "id": "tl-b1-social-politeness-po-opo-clitics",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#059669",
+  "emoji": "🙏",
+  "title": "Honorific Syntax and Formality Markers",
+  "subtitle": "Positioning respect markers and honorific plural pronouns correctly in enclitic chains",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "The honorific particles 'po' and 'ho' occupy a specific slot within post-verbal enclitic clusters, immediately following monosyllabic pronouns but preceding multisyllabic pronouns.",
+  "structure": {
+   "headers": [
+    "Target Register",
+    "Particle",
+    "Syntax Rule",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Formal / Deferential",
+      "po / opo",
+      "After 1-syllable clitics (ko, mo, na, pa)",
+      "Salamat po."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Semi-formal / Familiar",
+      "ho / oho",
+      "Placed before disyllabic pronouns",
+      "Kumusta ho kayo?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Honorific Plural Pronoun",
+      "kayo / sila",
+      "Singular referent addressed politely",
+      "Kayo po ba si Dr. Reyes?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Affirmation Particle",
+      "opo / oho",
+      "Used as standalone polite 'yes'",
+      "Opo, tapos na po."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Affirmative Deference",
+    "example": "Opo, natanggap ko na po ang liham.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Polite Inquiry to a Single Elder",
+    "example": "Ano po ang maitutulong ko sa inyo?",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Clitic Ordering with Monosyllables",
+    "example": "Hindi ko na po alam ang sagot.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Magandang umaga po sa inyong lahat.",
+    "ko": "",
+    "highlight": "po"
+   },
+   {
+    "en": "Nais ko po sanang magtanong ukol sa proyekto.",
+    "ko": "",
+    "highlight": "ko po sanang"
+   },
+   {
+    "en": "Saan po kayo pupunta bukas?",
+    "ko": "",
+    "highlight": "po kayo"
+   },
+   {
+    "en": "Opo, darating na ho sila mamaya.",
+    "ko": "",
+    "highlight": "Opo"
+   },
+   {
+    "en": "Huwag na po ninyong intindihin iyon.",
+    "ko": "",
+    "highlight": "na po ninyong"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Salamat opo.",
+    "right": "Salamat po.",
+    "note": "Use 'opo' exclusively as a standalone 'yes'; use 'po' inside sentences and greetings."
+   },
+   {
+    "wrong": "Bakit po mo ginawa iyon?",
+    "right": "Bakit mo po ginawa iyon?",
+    "note": "Monosyllabic clitic pronouns like 'mo' and 'ko' must precede 'po'."
+   },
+   {
+    "wrong": "Kumusta ka po?",
+    "right": "Kumusta po kayo?",
+    "note": "When using 'po', shift second-person pronouns to the plural ('kayo', 'ninyo', 'inyo') even for a single listener."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete politely: 'Bakit ___ tinawag?'",
+    "options": [
+     "po mo ako",
+     "mo po ako",
+     "ako po mo",
+     "mo ako po"
+    ],
+    "answer": 1,
+    "explanation": "Monosyllabic pronouns like 'mo' come before 'po', which comes before disyllabic pronouns like 'ako'."
+   },
+   {
+    "question": "Which response is the correct polite 'Yes' to an elder?",
+    "options": [
+     "Oo",
+     "Opo",
+     "Po",
+     "Sila"
+    ],
+    "answer": 1,
+    "explanation": "'Opo' is the standard polite affirmative particle for 'yes'."
+   },
+   {
+    "question": "Select the properly ordered enclitic string: 'Hindi ___ nakita.'",
+    "options": [
+     "ko pa po siya",
+     "po ko pa siya",
+     "pa po siya ko",
+     "ko siya pa po"
+    ],
+    "answer": 0,
+    "explanation": "Order: monosyllabic pronoun ('ko') + monosyllabic particle ('pa') + politeness marker ('po') + disyllabic pronoun ('siya')."
+   },
+   {
+    "question": "How should you politely ask a single senior manager 'Where are you going?'",
+    "options": [
+     "Saan ka pupunta po?",
+     "Saan kayo pupunta po?",
+     "Saan po kayo pupunta?",
+     "Saan po ikaw pupunta?"
+    ],
+    "answer": 2,
+    "explanation": "'Kayo' replaces 'ka' for singular polite address, and 'po' precedes disyllabic 'kayo'."
+   }
+  ],
+  "tip": "Remember the 1-syllable rule: monosyllabic clitics like 'ko', 'mo', 'na', and 'pa' always jump in front of 'po' (e.g., 'na po', 'ko po')."
+ },
+ {
+  "id": "tl-b2-causative-magpa-pa-in",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🏗️",
+  "title": "Causative Verbal Affixes",
+  "subtitle": "Expressing induced, commanded, or permitted actions via Magpa- and Pa-...-in",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Causative affixes insert an instigator who directs or allows an intermediary agent to execute an action upon a patient.",
+  "structure": {
+   "headers": [
+    "Affix",
+    "Focus Trigger",
+    "Typical Meaning",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "magpa-",
+      "Causer / Actor",
+      "Causer orders or permits someone to act",
+      "Nagpalinis siya ng bahay."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "pa-...-in",
+      "Intermediate Actor",
+      "Induces someone to do an intransitive/transitive base",
+      "Pauwiin mo na ang bata."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ipapa-",
+      "Undergoer / Patient",
+      "Object ordered to undergo an action",
+      "Ipinaluto niya ang isda."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "papag-...-in",
+      "Intermediate Actor",
+      "Causes intermediary to perform a mag- verb",
+      "Papag-aralin mo sila."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Causer as Grammatical Subject",
+    "example": "Nagpagawa si Maria ng bagong mesa sa karpintero.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Directing an Agent to Act",
+    "example": "Pinakain ng nars ang pasyente ng gamot.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Focusing the Patient to Be Handled",
+    "example": "Ipapadala ko ang dokumento sa koreo mamaya.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Nagpagupit siya ng buhok sa bagong barbero.",
+    "ko": "",
+    "highlight": "Nagpagupit"
+   },
+   {
+    "en": "Pinatulog ng ina ang sanggol sa duyan.",
+    "ko": "",
+    "highlight": "Pinatulog"
+   },
+   {
+    "en": "Huwag mong papasukin ang mga aso sa sala.",
+    "ko": "",
+    "highlight": "papasukin"
+   },
+   {
+    "en": "Ipagawa mo kay Pedro ang sirang pinto.",
+    "ko": "",
+    "highlight": "Ipagawa"
+   },
+   {
+    "en": "Papaglinisin ng guro ang mga estudyante ng silid-aralan.",
+    "ko": "",
+    "highlight": "Papaglinisin"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Naggupit siya ng buhok kahapon sa salon.",
+    "right": "Nagpagupit siya ng buhok kahapon sa salon.",
+    "note": "Use causative 'magpa-' when having a service done by someone else; 'naggupit' means you held the scissors yourself."
+   },
+   {
+    "wrong": "Pinakain ko ang mangga sa bata.",
+    "right": "Ipinakain ko ang mangga sa bata.",
+    "note": "When the edible item (mangga) is the focus, use 'i- / ipa-', not patient focus 'pa-...-in' which triggers the eater."
+   },
+   {
+    "wrong": "Nagpaluto ang adobo ng nanay.",
+    "right": "Nagpaluto ng adobo ang nanay.",
+    "note": "In 'magpa-' actor-focus clauses, the causer takes 'ang' and the caused action's object takes 'ng'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which verb means 'to order/have someone clean the car' focusing on the owner who orders it?",
+    "options": [
+     "Linisin",
+     "Magpalinis",
+     "Palinisin",
+     "Ipalinis"
+    ],
+    "answer": 1,
+    "explanation": "'Magpalinis' focuses on the causer who commissions the cleaning."
+   },
+   {
+    "question": "Choose the verb form focusing on the child sent home: '___ mo na ang bata.'",
+    "options": [
+     "Magpauwi",
+     "Umuwi",
+     "Pauwiin",
+     "Ipauwi"
+    ],
+    "answer": 2,
+    "explanation": "'Pa-...-in' promotes the intermediary actor (the child who is ordered to go home) to focus."
+   },
+   {
+    "question": "How do you focus the car that needs repair: '___ ko ang kotse sa mekaniko.'",
+    "options": [
+     "Ipapaayos",
+     "Magpapaayos",
+     "Paayusin",
+     "Nagpaayos"
+    ],
+    "answer": 0,
+    "explanation": "'Ipapaayos' puts the patient/object being acted upon (ang kotse) into primary focus."
+   },
+   {
+    "question": "Which prefix is used to command someone to perform a 'mag-' verb (like mag-aral)?",
+    "options": [
+     "pa-...-an",
+     "papag-...-in",
+     "maki-",
+     "ipag-"
+    ],
+    "answer": 1,
+    "explanation": "'Papag-...-in' is the causative affix reserved specifically for verbs whose base takes 'mag-'."
+   }
+  ],
+  "tip": "Distinguish between 'pinakain' (fed someone = person is focus) and 'ipinakain' (fed something to someone = food is focus)."
+ },
+ {
+  "id": "tl-b2-instrumental-reference-focus-ipang",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#D97706",
+  "emoji": "🔧",
+  "title": "Instrumental Focus (I- / Ipang-)",
+  "subtitle": "Elevating tools, instruments, and abstract reasons into the core subject trigger",
+  "color": "#B45309",
+  "bg": "#FFFBEB",
+  "keyPoint": "Instrumental focus affixes 'i-' and 'ipang-' elevate the utensil, tool, or cause used to execute an action into the 'ang'-phrase.",
+  "structure": {
+   "headers": [
+    "Aspect",
+    "Affix Pattern",
+    "Example",
+    "Subject Trigger"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Infinitive / Imperative",
+      "ipang- + root (nasal assimil.)",
+      "Ipanggupit mo ito sa tela.",
+      "Ang gunting / ito (tool)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Completed (Past)",
+      "ipinang- + root",
+      "Ipinangguhit niya ang lapis.",
+      "Ang lapis (instrument)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Incompleted (Present)",
+      "ipinang- + CV-reduplication",
+      "Ipinampupunas niya ang basahan.",
+      "Ang basahan (cloth)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Contemplated (Future)",
+      "ipang- + CV-reduplication",
+      "Ipambibili ko ang perang ito.",
+      "Ang pera (funds/means)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#B45309",
+    "label": "Physical Tool Promotion",
+    "example": "Ang kutsilyo ang ipinanghiwa niya sa karne.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Financial Resource as Means",
+    "example": "Ipinambayad niya sa matrikula ang kanyang ipon.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Abstract Reason or Motivation",
+    "example": "Ang kaligtasan ng pamilya ang ikinilos niya nang ganoon.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ipinangsulat niya ang lumang pluma sa liham.",
+    "ko": "",
+    "highlight": "Ipinangsulat"
+   },
+   {
+    "en": "Ano ang ipambubukas mo sa de-lata?",
+    "ko": "",
+    "highlight": "ipambubukas"
+   },
+   {
+    "en": "Ang bolpen na ito ang ipinangpirma ng pangulo sa kasunduan.",
+    "ko": "",
+    "highlight": "ipinangpirma"
+   },
+   {
+    "en": "Ipinampunas ng weytres ang tuyong basahan sa maruming mesa.",
+    "ko": "",
+    "highlight": "Ipinampunas"
+   },
+   {
+    "en": "Huwag mong ipanghiwa ng karne ang mapurol na kutsilyo.",
+    "ko": "",
+    "highlight": "ipanghiwa"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Hinugasan ko ang pinggan gamit ang espongha.",
+    "right": "Ipinanghugas ko sa pinggan ang espongha.",
+    "note": "While 'gamit ang' is spoken colloquial shorthand, idiomatic Filipino promotes the instrument directly using 'ipinang-'."
+   },
+   {
+    "wrong": "Ipinangsulat ko ang papel.",
+    "right": "Ipinangsulat ko ang bolpen.",
+    "note": "The instrument marked by 'ang' must be the tool used (bolpen), not the surface written upon (papel, which takes 'sa' or locative focus)."
+   },
+   {
+    "wrong": "Ipinaglinis niya ang walis sa sahig.",
+    "right": "Ipinanglinis niya ang walis sa sahig.",
+    "note": "'Ipag-' is benefactive focus (for someone), whereas 'ipang-' is instrumental focus (using an object)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the sentence where the instrument is the focus trigger:",
+    "options": [
+     "Pumutol siya ng kahoy gamit ang palakol.",
+     "Pinutol niya ang kahoy sa gubat.",
+     "Ipinamputol niya ng kahoy ang palakol.",
+     "Pinuputol ang palakol sa kahoy."
+    ],
+    "answer": 2,
+    "explanation": "'Ipinamputol' triggers 'ang palakol' (the ax) as the grammatical instrument subject."
+   },
+   {
+    "question": "What is the future instrumental form of 'bili' (nasal assimilation /b/ -> /m/)?",
+    "options": [
+     "ipambibili",
+     "ipangbibili",
+     "ipamili",
+     "ibibili"
+    ],
+    "answer": 0,
+    "explanation": "Before labial consonants /p/ and /b/, 'ipang-' assimilates to 'ipam-' followed by reduplication: 'ipambibili'."
+   },
+   {
+    "question": "Which affix expresses Benefactive focus (doing for someone) instead of Instrumental (using a tool)?",
+    "options": [
+     "ipang-",
+     "ipag-",
+     "ika-",
+     "ma-"
+    ],
+    "answer": 1,
+    "explanation": "'Ipag-' focuses on the beneficiary/benefactor, whereas 'ipang-' focuses on the instrument/tool."
+   },
+   {
+    "question": "Complete the sentence with the correct instrument trigger: 'Ipinansungkit niya ng mangga ang ___.'",
+    "options": [
+     "puno",
+     "bata",
+     "mahabang kawayan",
+     "matamis na bunga"
+    ],
+    "answer": 2,
+    "explanation": "The instrumental verb 'ipinansungkit' requires the tool used (ang mahabang kawayan) to be the focus."
+   }
+  ],
+  "tip": "Watch nasal assimilation rules with 'ipang-': it becomes 'ipam-' before p/b (ipambura) and 'ipan-' before d/l/r/s/t (ipantali)."
+ },
+ {
+  "id": "tl-b2-reciprocal-collective-maki-makipag",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🤝",
+  "title": "Sociative and Reciprocal Affixes",
+  "subtitle": "Joining collective undertakings, requesting favors, and mutual interactions",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Prefixes 'maki-' and 'makipag-' indicate participation in collective activities or requests for cooperation, while 'mag-...-an' captures mutual reciprocal actions.",
+  "structure": {
+   "headers": [
+    "Affix",
+    "Function",
+    "Syntactic Behaviour",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "maki-",
+      "Sociative / Polite Request",
+      "Joining an ongoing event / asking a favor",
+      "Makiraan nga po."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "makipag-",
+      "Concerted Mutual Action",
+      "Initiating reciprocal interaction with another party",
+      "Makipag-usap ka sa kanya."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "mag-...-an",
+      "Symmetrical Reciprocal",
+      "Dual or plural actors acting upon one another",
+      "Nagtulungan ang magkakapitbahay."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "pakikipag-",
+      "Gerundial Reciprocity",
+      "Nominalized reciprocal action",
+      "Ang pakikipagkapwa-tao ay mahalaga."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Reciprocal Mutual Engagement",
+    "example": "Nagyakapan ang magkaibigan matapos ang matagal na pagkawalay.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Joining a Group Activity",
+    "example": "Nakisalo siya sa hapag-kainan ng pamilya.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Polite Formulaic Requests",
+    "example": "Makisuyo nga po ng basong iyan sa mesa.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Nakipagkasundo ang unyon sa pamunuan ng kumpanya.",
+    "ko": "",
+    "highlight": "Nakipagkasundo"
+   },
+   {
+    "en": "Makikipagkita ako sa abogado bukas ng hapon.",
+    "ko": "",
+    "highlight": "Makikipagkita"
+   },
+   {
+    "en": "Nagsisihan ang dalawang drayber sa banggaan.",
+    "ko": "",
+    "highlight": "Nagsisihan"
+   },
+   {
+    "en": "Gusto kong makilaro sa inyong koponan.",
+    "ko": "",
+    "highlight": "makilaro"
+   },
+   {
+    "en": "Naghalikan ang mag-asawa pagkatapos ng seremonya.",
+    "ko": "",
+    "highlight": "Naghalikan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Nagusap kami ni Juan.",
+    "right": "Nag-usap kami ni Juan.",
+    "note": "Reciprocal conversation between two parties requires 'nag-...-an' (nag-usapan) or reciprocal 'nag-usap' with hyphens before vowels."
+   },
+   {
+    "wrong": "Makisabay ka kay Pedro.",
+    "right": "Makipagsabay ka kay Pedro.",
+    "note": "When entering into a coordinated reciprocal activity with another entity introduced by 'kay/sa', use 'makipag-'."
+   },
+   {
+    "wrong": "Nagsuntok sila sa kalsada.",
+    "right": "Nagsuntukan sila sa kalsada.",
+    "note": "To denote fighting each other mutually, the reciprocal suffix combination 'mag-...-an' (nagsuntukan) is mandatory."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which verb means 'to talk with / engage in conversation with someone'?",
+    "options": [
+     "mag-usap",
+     "makipag-usap",
+     "pakiusap",
+     "kausapin"
+    ],
+    "answer": 1,
+    "explanation": "'Makipag-usap' indicates reaching out or engaging in reciprocal dialogue with a counterpart."
+   },
+   {
+    "question": "Choose the reciprocal form: 'The siblings helped each other.' -> 'Ang magkapatid ay ___.'",
+    "options": [
+     "tumulong",
+     "tinulungan",
+     "nagtulungan",
+     "makitulong"
+    ],
+    "answer": 2,
+    "explanation": "'Mag-...-an' ('nagtulungan' in completed aspect) signifies symmetrical mutual action among group members."
+   },
+   {
+    "question": "What is the polite formula to ask to pass through a crowded doorway?",
+    "options": [
+     "Dumaan ka!",
+     "Makikiraan po.",
+     "Para po!",
+     "Pakidaan."
+    ],
+    "answer": 1,
+    "explanation": "'Makikiraan po' uses the sociative polite prefix 'maki-' to ask permission to pass through."
+   },
+   {
+    "question": "Identify the completed sociative verb meaning 'joined in eating':",
+    "options": [
+     "kumain",
+     "nakikain",
+     "ipinagkain",
+     "pakikain"
+    ],
+    "answer": 1,
+    "explanation": "'Nakikain' is the completed aspect of 'makikain', meaning to participate in eating alongside others."
+   }
+  ],
+  "tip": "Use 'maki-' with simple roots for polite requests (Makihiram = May I borrow), and use 'makipag-' with roots for reciprocal joint actions (Makipaglaro = Play together)."
+ }
+]

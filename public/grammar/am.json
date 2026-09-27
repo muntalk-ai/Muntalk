@@ -1,0 +1,3336 @@
+[
+ {
+  "id": "am-a1-fidel-and-gemination",
+  "level": "a1",
+  "category": "advanced",
+  "categoryColor": "#4A5568",
+  "emoji": "🔤",
+  "title": "Fidel Phonotactics & Gemination",
+  "subtitle": "Sixth-order vowel realization and consonant doubling (T'əbiq')",
+  "color": "#3182CE",
+  "bg": "#EBF8FF",
+  "keyPoint": "The sixth order vowel can either be pronounced as an epenthetic schwa or remain completely silent depending on syllable structure, while consonant doubling alters lexical meaning despite being completely unmarked in writing.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Amharic Word",
+    "Phonological Rule"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Silent 6th Order",
+      "ቤት",
+      "Final 6th order consonant has no vowel (bet)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Spoken Schwa",
+      "ስም",
+      "Initial/medial clusters trigger epenthetic vowel (sɨm)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Geminated (T'əbiq')",
+      "አለ",
+      "Doubled middle consonant changes meaning: al-lə ('there is')"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Non-Geminated (Salas)",
+      "አለ",
+      "Single middle consonant: a-lə ('he said')"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3182CE",
+    "label": "Distinguishing Verb Stems",
+    "example": "እሱ አለ።",
+    "translation": ""
+   },
+   {
+    "color": "#805AD5",
+    "label": "Distinguishing Words by T'əbiq'",
+    "example": "ዋጋው ውድ ነው።",
+    "translation": ""
+   },
+   {
+    "color": "#38A169",
+    "label": "Cluster Breaking with Schwa",
+    "example": "ስራ እሰራለሁ።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "እሱ እውነት አለ።",
+    "ko": "",
+    "highlight": "አለ"
+   },
+   {
+    "en": "እዚህ ብዙ ሰው አለ።",
+    "ko": "",
+    "highlight": "አለ"
+   },
+   {
+    "en": "አባቴ ዛሬ መጣ።",
+    "ko": "",
+    "highlight": "መጣ"
+   },
+   {
+    "en": "አዲሱ ቤት ትልቅ ነው።",
+    "ko": "",
+    "highlight": "ትልቅ"
+   },
+   {
+    "en": "ስሜ ዳዊት ይባላል።",
+    "ko": "",
+    "highlight": "ስሜ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ስእም",
+    "right": "ስም",
+    "note": "Do not insert additional vowel characters to represent the sixth-order epenthetic schwa."
+   },
+   {
+    "wrong": "አለለ",
+    "right": "አለ",
+    "note": "Amharic Fidel never writes doubled consonants twice; gemination is mental and unmarked in standard script."
+   },
+   {
+    "wrong": "ውድድ",
+    "right": "ውድ",
+    "note": "Do not repeat the consonant character to represent intensity or geminated pronunciation."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which word represents 'he said' with a single, ungeminated middle consonant?",
+    "options": [
+     "አለ",
+     "ቀለለ",
+     "መጣ",
+     "ቆመ"
+    ],
+    "answer": 0,
+    "explanation": "In speech, አለ with an ungeminated 'l' means 'he said', whereas geminated 'allə' means 'there is'."
+   },
+   {
+    "question": "In the word 'ትምህርት', where does the silent 6th order vowel occur?",
+    "options": [
+     "ክ",
+     "ም",
+     "ህ",
+     "ት"
+    ],
+    "answer": 3,
+    "explanation": "Word-final sixth order consonants in Amharic are typically realized with zero vowel (as a bare coda)."
+   },
+   {
+    "question": "How is consonant doubling (t'əbiq') indicated in standard printed Amharic?",
+    "options": [
+     "With a special top accent mark",
+     "By writing the Fidel twice",
+     "It is not written orthographically",
+     "By adding a vowel character"
+    ],
+    "answer": 2,
+    "explanation": "Gemination is entirely unmarked in standard Amharic orthography and must be learned through vocabulary and context."
+   },
+   {
+    "question": "Which of these words starts with an epenthetic vowel sound (sɨ-) rather than a silent consonant?",
+    "options": [
+     "ሰው",
+     "ውሻ",
+     "ስም",
+     "ልጅ"
+    ],
+    "answer": 2,
+    "explanation": "The word ስም cannot end a cluster at the start of a word, so the 6th order 'ስ' is pronounced as [sɨ]."
+   }
+  ],
+  "tip": "Always learn new Amharic verbs by actively listening to whether the medial root consonant is pronounced single (salas) or doubled (t'əbiq')."
+ },
+ {
+  "id": "am-a1-copulas-new-and-awoq",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#319795",
+  "emoji": "🤝",
+  "title": "Equative Copula (ነው) & Negation (አይደለም)",
+  "subtitle": "Forming identity and descriptive sentences in the present tense",
+  "color": "#319795",
+  "bg": "#E6FFFA",
+  "keyPoint": "Amharic uses the suffixed present copula ነው (and its person forms) to link subjects with nouns or adjectives, but switches to the irregular stem አይደለም for all present negative assertions.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Positive Copula",
+    "Negative Copula"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "እኔ (I)",
+      "ነኝ",
+      "አይደለሁም"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "እሱ (He)",
+      "ነው",
+      "አይደለም"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "እሷ (She)",
+      "ናት / ነች",
+      "አይደለችም"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "እነሱ (They)",
+      "ናቸው",
+      "አይደሉም"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#319795",
+    "label": "Expressing Profession/Identity",
+    "example": "እኔ ተማሪ ነኝ።",
+    "translation": ""
+   },
+   {
+    "color": "#DD6B20",
+    "label": "Describing Quality/State",
+    "example": "ቤቱ ትልቅ ነው።",
+    "translation": ""
+   },
+   {
+    "color": "#E53E3E",
+    "label": "Denying an Identity or Attribute",
+    "example": "እሱ አስተማሪ አይደለም።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "እኔ ዶክተር ነኝ።",
+    "ko": "",
+    "highlight": "ነኝ"
+   },
+   {
+    "en": "እሱ ጎበዝ ተማሪ ነው።",
+    "ko": "",
+    "highlight": "ነው"
+   },
+   {
+    "en": "እሷ ኢትዮጵያዊት ናት።",
+    "ko": "",
+    "highlight": "ናት"
+   },
+   {
+    "en": "እኛ ሰነፎች አይደለንም።",
+    "ko": "",
+    "highlight": "አይደለንም"
+   },
+   {
+    "en": "ይህ መጽሐፍ የእኔ አይደለም።",
+    "ko": "",
+    "highlight": "አይደለም"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "እሱ አልነውም።",
+    "right": "እሱ አይደለም።",
+    "note": "The present copula ነው cannot be negated with the prefix አል-; you must use አይደለም."
+   },
+   {
+    "wrong": "እኔ ተማሪ ነው",
+    "right": "እኔ ተማሪ ነኝ",
+    "note": "The copula must agree in person with the subject; use ነኝ for first person singular."
+   },
+   {
+    "wrong": "እሷ አስተማሪ ነኝ።",
+    "right": "እሷ አስተማሪ ናት።",
+    "note": "Use ናት or ነች for a third-person feminine singular subject."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete: እሷ ቆንጆ ___።",
+    "options": [
+     "ነኝ",
+     "ነው",
+     "ናት",
+     "ነህ"
+    ],
+    "answer": 2,
+    "explanation": "እሷ (she) takes the 3rd person singular feminine copula ናት (or ነች)."
+   },
+   {
+    "question": "Complete the negative sentence: እኔ ኢትዮጵያዊ ___።",
+    "options": [
+     "አይደለሁም",
+     "አይደለም",
+     "አይደለችም",
+     "አይደሉም"
+    ],
+    "answer": 0,
+    "explanation": "The 1st person singular negative copula ('I am not') is አይደለሁም."
+   },
+   {
+    "question": "Complete: እኛ ደስተኞች ___።",
+    "options": [
+     "ነን",
+     "ናቸው",
+     "ናት",
+     "ነው"
+    ],
+    "answer": 0,
+    "explanation": "The 1st person plural ('we are') copula suffix is ነን."
+   },
+   {
+    "question": "Complete: እሱ ሰነፍ ___። (He is not lazy)",
+    "options": [
+     "አይደለሁም",
+     "አልሆነም",
+     "አይደለንም",
+     "አይደለም"
+    ],
+    "answer": 3,
+    "explanation": "The 3rd person singular masculine negative copula ('he is not') is አይደለም."
+   }
+  ],
+  "tip": "The affirmative copula behaves like an enclitic attaching rhythmically to the predicate complement at the end of the sentence."
+ },
+ {
+  "id": "am-a1-existential-allə-and-possession",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#319795",
+  "emoji": "📍",
+  "title": "Existential 'አለ', 'የለም', and Possession",
+  "subtitle": "Expressing existence, presence, and ownership",
+  "color": "#D69E2E",
+  "bg": "#FEFCBF",
+  "keyPoint": "Physical presence is expressed with the existential verb አለ (negative: የለም), while possession ('to have') is formed by attaching object pronoun suffixes directly onto አለ.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Positive Pattern",
+    "Negative Pattern"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Existence (There is/isn't)",
+      "አለ",
+      "የለም"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "I have / I don't have",
+      "አለኝ",
+      "የለኝም"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "He has / He doesn't have",
+      "አለው",
+      "የለውም"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "She has / She doesn't have",
+      "አላት",
+      "የላትም"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D69E2E",
+    "label": "Stating Physical Location/Presence",
+    "example": "አባቴ ቤት ውስጥ አለ።",
+    "translation": ""
+   },
+   {
+    "color": "#38A169",
+    "label": "Expressing Personal Possession",
+    "example": "አንድ መኪና አለኝ።",
+    "translation": ""
+   },
+   {
+    "color": "#E53E3E",
+    "label": "Negating Possession",
+    "example": "ምንም ገንዘብ የለኝም።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ዛሬ በቂ ጊዜ አለኝ።",
+    "ko": "",
+    "highlight": "አለኝ"
+   },
+   {
+    "en": "በክፍሉ ውስጥ ማንም የለም።",
+    "ko": "",
+    "highlight": "የለም"
+   },
+   {
+    "en": "እሷ ሁለት ወንድሞች አሏት።",
+    "ko": "",
+    "highlight": "አሏት"
+   },
+   {
+    "en": "እሱ ስልክ የለውም።",
+    "ko": "",
+    "highlight": "የለውም"
+   },
+   {
+    "en": "እኛ አዲስ ቤት አለን።",
+    "ko": "",
+    "highlight": "አለን"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "እኔ ገንዘብ አለ።",
+    "right": "እኔ ገንዘብ አለኝ።",
+    "note": "To say 'I have', you must affix the 1st person object suffix -ኝ to አለ, creating አለኝ."
+   },
+   {
+    "wrong": "እሱ መጽሐፍ አልአለውም።",
+    "right": "እሱ መጽሐፍ የለውም።",
+    "note": "The negative of the existential verb uses the stem የለ-, resulting in የለውም for 'he doesn't have'."
+   },
+   {
+    "wrong": "እዚህ ውሃ አይደለም።",
+    "right": "እዚህ ውሃ የለም።",
+    "note": "Use የለም for non-existence ('there is no water'), not the identity copula አይደለም."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'She has a book' in Amharic?",
+    "options": [
+     "መጽሐፍ አለኝ።",
+     "መጽሐፍ አላት።",
+     "መጽሐፍ አለው።",
+     "መጽሐፍ አለን።"
+    ],
+    "answer": 1,
+    "explanation": "The suffix -አት attached to አለ produces አላት, meaning 'she has'."
+   },
+   {
+    "question": "Complete: እኔ መኪና ___። (I do not have)",
+    "options": [
+     "የለም",
+     "አይደለሁም",
+     "የለኝም",
+     "የለውም"
+    ],
+    "answer": 2,
+    "explanation": "The negative form for 'I do not have' is የለኝም."
+   },
+   {
+    "question": "Which word signifies 'There is no / absent' without reference to a specific possessor?",
+    "options": [
+     "የለም",
+     "ነው",
+     "አለኝ",
+     "አይደለም"
+    ],
+    "answer": 0,
+    "explanation": "የለም is the base 3rd person masculine negative existential meaning 'there is none / he is not present'."
+   },
+   {
+    "question": "Complete: እኛ ጥያቄ ___። (We have a question)",
+    "options": [
+     "አላቸው",
+     "አላችሁ",
+     "አላት",
+     "አለን"
+    ],
+    "answer": 3,
+    "explanation": "The 1st person plural suffix for possession is -ን, making አለን ('we have')."
+   }
+  ],
+  "tip": "Think of አለኝ literally as 'there is to me'; Amharic treats the item possessed as the grammatical subject and the owner as the object."
+ },
+ {
+  "id": "am-a1-possessive-pronominal-suffixes",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4C51BF",
+  "emoji": "🏷️",
+  "title": "Possessive Pronominal Enclitics",
+  "subtitle": "Attaching possessive suffixes to consonant and vowel stems",
+  "color": "#6B46C1",
+  "bg": "#FAF5FF",
+  "keyPoint": "Possession is expressed by attaching enclitic suffixes directly to the noun stem, with distinct variants depending on whether the noun ends in a consonant or a vowel.",
+  "structure": {
+   "headers": [
+    "Possessor",
+    "After Consonant (ቤት)",
+    "After Vowel (ውሻ)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "My (-e / -ye)",
+      "ቤቴ",
+      "ውሻዬ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Your (m.) (-ɨh / -h)",
+      "ቤትህ",
+      "ውሻህ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Your (f.) (-ɨsh / -sh)",
+      "ቤትሽ",
+      "ውሻሽ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "His (-u / -w)",
+      "ቤቱ",
+      "ውሻው"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6B46C1",
+    "label": "Possession on Consonant Stem",
+    "example": "ደብተሬ ጠፋብኝ።",
+    "translation": ""
+   },
+   {
+    "color": "#3182CE",
+    "label": "Possession on Vowel Stem",
+    "example": "ውሻዬ በጣም ፈጣን ነው።",
+    "translation": ""
+   },
+   {
+    "color": "#38A169",
+    "label": "Plural Ownership",
+    "example": "ትምህርት ቤታችን ትልቅ ነው።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ይህ የእኔ ቤቴ ነው።",
+    "ko": "",
+    "highlight": "ቤቴ"
+   },
+   {
+    "en": "እናትሽ ዛሬ ትመጣለች?",
+    "ko": "",
+    "highlight": "እናትሽ"
+   },
+   {
+    "en": "የልጁ ስሙ ማን ይባላል?",
+    "ko": "",
+    "highlight": "ስሙ"
+   },
+   {
+    "en": "አባታችን ደግ ሰው ናቸው።",
+    "ko": "",
+    "highlight": "አባታችን"
+   },
+   {
+    "en": "ጌታዬ ሆይ፣ ሰላም ላንተ ይሁን።",
+    "ko": "",
+    "highlight": "ጌታዬ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ውሻኤ",
+    "right": "ውሻዬ",
+    "note": "When a noun ends in a vowel like /a/, insert the glide -ዬ (-ye) for 'my', not the bare vowel suffix."
+   },
+   {
+    "wrong": "ቤቴዬ",
+    "right": "ቤቴ",
+    "note": "Consonant-ending stems take simple -e (e.g. ቤት -> ቤቴ), never -ye."
+   },
+   {
+    "wrong": "የእኔ ቤትህ",
+    "right": "የእኔ ቤቴ",
+    "note": "Possessive pronouns must agree with the possessor; -ህ is 2nd person masculine, not 1st person."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'My sister' starting from the stem እህት?",
+    "options": [
+     "እህቴ",
+     "እህትዬ",
+     "እህትሽ",
+     "እህቷ"
+    ],
+    "answer": 0,
+    "explanation": "Because እህት ends in a consonant, it takes the first-person suffix -e, resulting in እህቴ."
+   },
+   {
+    "question": "Choose the correct form for 'Your (feminine singular) car' from መኪና:",
+    "options": [
+     "መኪናህ",
+     "መኪናሽ",
+     "መኪናዬ",
+     "መኪናው"
+    ],
+    "answer": 1,
+    "explanation": "The 2nd person feminine singular possessive suffix after a vowel is -ሽ (-sh), giving መኪናሽ."
+   },
+   {
+    "question": "What does 'ወንድማችን' mean?",
+    "options": [
+     "My brother",
+     "Your brother",
+     "Our brother",
+     "Their brother"
+    ],
+    "answer": 2,
+    "explanation": "The suffix -አችን (-achɨn) denotes 1st person plural ('our')."
+   },
+   {
+    "question": "Complete for 'His bag': ቦርሳ___",
+    "options": [
+     "ዬ",
+     "ሽ",
+     "ችን",
+     "ው"
+    ],
+    "answer": 3,
+    "explanation": "Vowel-final nouns take -ው (-w) for third-person masculine singular possession: ቦርሳው."
+   }
+  ],
+  "tip": "If a noun stem ends in a consonant, 1st person 'my' changes the final character to its 5th order vowel sound (e.g., ቤት -> ቤቴ)."
+ },
+ {
+  "id": "am-a1-definite-article-gender-marking",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4C51BF",
+  "emoji": "🔎",
+  "title": "Suffixed Definiteness & Gender Markers",
+  "subtitle": "Definite articles (-u/-w and -wa) and diminutive usage",
+  "color": "#DD6B20",
+  "bg": "#FEEBC8",
+  "keyPoint": "The Amharic definite article is suffixed to nouns using -u / -w for masculine and -wa / -itu for feminine, with the feminine form also frequently conveying smallness or endearment.",
+  "structure": {
+   "headers": [
+    "Gender",
+    "Consonant-Final",
+    "Vowel-Final"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masculine Definite",
+      "-ኡ (-u) : ቤቱ",
+      "-ው (-w) : ውሻው"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Feminine Definite",
+      "-ዋ (-wa) : እህቷ",
+      "-ይቱ / -ዋ : ላሟ / ዶሮዋ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Diminutive / Affection",
+      "ድመቷ (The sweet/little cat)",
+      "ልጅቷ (The little girl)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DD6B20",
+    "label": "Specifying Masculine Definite Noun",
+    "example": "መጽሐፉ ጠረጴዛው ላይ ነው።",
+    "translation": ""
+   },
+   {
+    "color": "#D53F8C",
+    "label": "Specifying Feminine Definite Noun",
+    "example": "ሴቷ ወደ ከተማ ሄደች።",
+    "translation": ""
+   },
+   {
+    "color": "#805AD5",
+    "label": "Expressing Diminutive Endearment",
+    "example": "ትንሿ ድመቷ ተኛች።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ልጁ ኳስ ይጫወታል።",
+    "ko": "",
+    "highlight": "ልጁ"
+   },
+   {
+    "en": "ላሟ ብዙ ወተት ትሰጣለች።",
+    "ko": "",
+    "highlight": "ላሟ"
+   },
+   {
+    "en": "መኪናው አዲስ ነው።",
+    "ko": "",
+    "highlight": "መኪናው"
+   },
+   {
+    "en": "ትልቋ ከተማ አዲስ አበባ ናት።",
+    "ko": "",
+    "highlight": "ትልቋ"
+   },
+   {
+    "en": "ልጅቷ በሩን ከፈተች።",
+    "ko": "",
+    "highlight": "ልጅቷ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "መጽሐፍው",
+    "right": "መጽሐፉ",
+    "note": "Use -u (-ኡ) for consonant-final stems like መጽሐፍ, not the glide -w (-ው)."
+   },
+   {
+    "wrong": "ውሻኡ",
+    "right": "ውሻው",
+    "note": "Use -w (-ው) for vowel-final stems like ውሻ, avoiding awkward double vowel hiatus."
+   },
+   {
+    "wrong": "ትልቅዋ",
+    "right": "ትልቋ",
+    "note": "In orthography, the consonant and -wa fuse into a labialized Fidel character (e.g., ቋ instead of ቅዋ)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which is the correct definite form for the masculine noun 'ሰው' (man / person)?",
+    "options": [
+     "ሰውዬው",
+     "ሰዉ",
+     "ሰዋ",
+     "ሰውዋ"
+    ],
+    "answer": 1,
+    "explanation": "Since ሰው ends in a consonant glide phonetically, adding the masculine suffix yields ሰዉ (or colloquial ሰውዬው)."
+   },
+   {
+    "question": "How do you make the vowel-final noun 'ቦርሳ' (bag) definitely masculine?",
+    "options": [
+     "ቦርሳው",
+     "ቦርሳኡ",
+     "ቦርሳዬ",
+     "ቦርሳቱ"
+    ],
+    "answer": 0,
+    "explanation": "Vowel-final masculine nouns take the suffix -ው (-w), giving ቦርሳው ('the bag')."
+   },
+   {
+    "question": "What nuance can applying the feminine definite suffix (-ዋ) have to an inherently neutral noun like 'ድመት' (cat)?",
+    "options": [
+     "Plurality",
+     "Formality",
+     "Affection or smallness (diminutive)",
+     "Past tense"
+    ],
+    "answer": 2,
+    "explanation": "In Amharic, feminine marking on neutral nouns frequently acts as an affective diminutive, indicating smallness or cuteness."
+   },
+   {
+    "question": "Select the properly fused definite feminine form of 'እህት' (sister):",
+    "options": [
+     "እህቲቱ",
+     "እህቱ",
+     "እህትዋ",
+     "እህቷ"
+    ],
+    "answer": 3,
+    "explanation": "The suffix -wa fuses with the 6th order character ት to become the labialized Fidel ቷ, yielding እህቷ."
+   }
+  ],
+  "tip": "When an adjective precedes a noun, the definite article attaches to the ADJECTIVE (e.g., ትልቁ ቤት = 'the big house'), not to the noun itself."
+ },
+ {
+  "id": "am-a1-basic-verb-stems-type-a-vs-b",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔨",
+  "title": "Triradical Root Classes: Type A vs Type B Past Tense Conjugation",
+  "subtitle": "Distinguishing simple and inherently geminated medial roots in the perfective past",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Type A verbs only double their middle consonant in the perfective aspect, whereas Type B verbs maintain middle consonant gemination across every conjugation.",
+  "structure": {
+   "headers": [
+    "Verb Class",
+    "Root / Perfective Form",
+    "Inherent Property",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Type A",
+      "ሰበረ",
+      "Medial geminates only in perfective (säbbärä)",
+      "He broke"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Type A",
+      "ነገረ",
+      "Medial geminates only in perfective (näggärä)",
+      "He told"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Type B",
+      "ፈለገ",
+      "Medial permanently geminated (fällägä)",
+      "He wanted / searched"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Type B",
+      "ጀመረ",
+      "Medial permanently geminated (jämmärä)",
+      "He started"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Type A Perfective Action",
+    "example": "ልጁ ብርጭቆ ሰበረ።",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "Type B Constant Gemination",
+    "example": "አስተማሪው ትምህርት ጀመረ።",
+    "translation": ""
+   },
+   {
+    "color": "#92400E",
+    "label": "Expressing Desire / Need",
+    "example": "እሱ ውሃ ፈለገ።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "እሱ ትናንትና አዲስ መጽሐፍ ገዛ።",
+    "ko": "",
+    "highlight": "ገዛ"
+   },
+   {
+    "en": "አባቴ ትልቅ ቤት ሠራ።",
+    "ko": "",
+    "highlight": "ሠራ"
+   },
+   {
+    "en": "እሷ እውነት ተናገረች።",
+    "ko": "",
+    "highlight": "ተናገረች"
+   },
+   {
+    "en": "ተማሪው ትምህርቱን ጀመረ።",
+    "ko": "",
+    "highlight": "ጀመረ"
+   },
+   {
+    "en": "እሱ ሌላ ሥራ ፈለገ።",
+    "ko": "",
+    "highlight": "ፈለገ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "እሱ ትምህርት ጀመረ እና ይጀምራል።",
+    "right": "እሱ ትምህርት ጀመረ እና ይጀምራል።",
+    "note": "Learners often un-geminate the medial consonant in Type B non-past forms; remember that Type B keeps gemination in all stems."
+   },
+   {
+    "wrong": "እሷ በር ከፈተ።",
+    "right": "እሷ በር ከፈተች።",
+    "note": "Always pair the verb with the correct gender suffix; female singular subjects require the -ች suffix in the perfective."
+   },
+   {
+    "wrong": "እነሱ ፈለገ።",
+    "right": "እነሱ ፈለጉ።",
+    "note": "Third-person plural subjects take the -u suffix (-ኡ) regardless of whether the root is Type A or Type B."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which verb belongs to Type B with an inherently geminated medial consonant?",
+    "options": [
+     "ነገረ",
+     "ፈለገ",
+     "ሰበረ",
+     "ቀደደ"
+    ],
+    "answer": 1,
+    "explanation": "ፈለገ (fällägä - to want/seek) is a quintessential Type B verb, retaining middle radical doubling across all derived stems."
+   },
+   {
+    "question": "He ___ the window yesterday. (Type A: to break)",
+    "options": [
+     "ሰበረ",
+     "ፈለገ",
+     "ጀመረ",
+     "ቀየረ"
+    ],
+    "answer": 0,
+    "explanation": "ሰበረ (säbbärä) means 'he broke' and is a Type A triradical root."
+   },
+   {
+    "question": "She ___ a new language course. (Type B: to start)",
+    "options": [
+     "ሰበረች",
+     "ነገረች",
+     "ጀመረች",
+     "ከፈተች"
+    ],
+    "answer": 2,
+    "explanation": "ጀመረች (jämmäräčč) is the feminine 3rd-person singular perfective form of the Type B verb ጀመረ."
+   },
+   {
+    "question": "They ___ water after the run. (Type B: to want/look for)",
+    "options": [
+     "ፈለገ",
+     "ፈለገች",
+     "ፈለግህ",
+     "ፈለጉ"
+    ],
+    "answer": 3,
+    "explanation": "The 3rd-person plural ending for both Type A and Type B perfective verbs is -u (ፈለጉ)."
+   }
+  ],
+  "tip": "In dictionary entries, Amharic verbs are listed in the 3rd person singular masculine past form. Listen closely or look up the imperfective to verify whether a stem keeps its medial double consonant."
+ },
+ {
+  "id": "am-a2-accusative-marker-n",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🎯",
+  "title": "Definite Direct Object Marker suffix (-n)",
+  "subtitle": "Marking definite direct objects, proper names, and modified noun phrases",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Attach the suffix -ን (-n) to direct objects only when they are definite, modified by a demonstrative or possessive, or refer to proper names and pronouns.",
+  "structure": {
+   "headers": [
+    "Object Type",
+    "Indefinite (Unmarked)",
+    "Definite / Specific (-ን)",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Generic Noun",
+      "መጽሐፍ አነበበ",
+      "መጽሐፉን አነበበ",
+      "He read a book vs. He read the book"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Proper Noun",
+      "—",
+      "ዮሐንስን አየሁት",
+      "I saw Yohannes"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Possessive Noun",
+      "—",
+      "ቤቴን አጸዳሁ",
+      "I cleaned my house"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Demonstrative Phrase",
+      "—",
+      "ያንን ሰው አውቀዋለሁ",
+      "I know that man"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Definite Noun Direct Object",
+    "example": "ልጁ ውሻውን ወደደ።",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Proper Name Object",
+    "example": "አልማዝን ትላንት አየኋት።",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Possessive Object",
+    "example": "ወንድሜ መኪናዬን ወሰደ።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "እኔ መጽሐፉን አነበብኩ።",
+    "ko": "",
+    "highlight": "መጽሐፉን"
+   },
+   {
+    "en": "ውሻውን በሜዳው ላይ አየሁት።",
+    "ko": "",
+    "highlight": "ውሻውን"
+   },
+   {
+    "en": "መምህሩ ተማሪውን ጠራ።",
+    "ko": "",
+    "highlight": "ተማሪውን"
+   },
+   {
+    "en": "እሱ ዳቦ በላ።",
+    "ko": "",
+    "highlight": "ዳቦ"
+   },
+   {
+    "en": "እሷ ያንን ሸሚዝ ገዛች።",
+    "ko": "",
+    "highlight": "ያንን"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "እኔ ዳቦን በላሁ። (when meaning 'I ate bread' generally)",
+    "right": "እኔ ዳቦ በላሁ።",
+    "note": "Do not attach -ን to indefinite non-specific direct objects."
+   },
+   {
+    "wrong": "እሱ አበበ አየ።",
+    "right": "እሱ አበበን አየ።",
+    "note": "Proper names acting as direct objects are inherently definite and require the accusative suffix -ን."
+   },
+   {
+    "wrong": "ትልቁን ቤቱን ገዛ።",
+    "right": "ትልቁን ቤት ገዛ።",
+    "note": "In an adjective-noun noun phrase, the definiteness and accusative marker attach to the modifier (adjective), not repeated on both."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I read the book. (Definite object: መጽሐፍ)",
+    "options": [
+     "እኔ መጽሐፍ አነበብኩ።",
+     "እኔ መጽሐፉን አነበብኩ።",
+     "እኔ መጽሐፉ አነበብኩ።",
+     "እኔ መጽሐፎች አነበብኩ።"
+    ],
+    "answer": 1,
+    "explanation": "The definite article suffix is -u, followed by the accusative marker -ን, yielding መጽሐፉን."
+   },
+   {
+    "question": "We met Abebe at the cafe. (Proper noun direct object: አበበ)",
+    "options": [
+     "አበበን አገኘነው።",
+     "አበበ አገኘነው።",
+     "አበበው አገኘነው።",
+     "አበበስ አገኘነው።"
+    ],
+    "answer": 0,
+    "explanation": "Proper nouns serving as specific direct objects must take -ን, giving አበበን."
+   },
+   {
+    "question": "She drank milk (generic / indefinite).",
+    "options": [
+     "ወተቱን ጠጣች።",
+     "ወተት ጠጣች።",
+     "ወተትን ጠጣች።",
+     "ያንን ወተት ጠጣች።"
+    ],
+    "answer": 1,
+    "explanation": "Generic or non-specific direct objects remain bare without the accusative marker -ን."
+   },
+   {
+    "question": "He sold his car. (መኪና + possessive -ዬ + accusative)",
+    "options": [
+     "መኪና ሸጠ።",
+     "መኪናው ሸጠ።",
+     "መኪናዬ ሸጠ።",
+     "መኪናዬን ሸጠ።"
+    ],
+    "answer": 3,
+    "explanation": "Possessive-marked direct objects are inherently definite and take the accusative marker -ን (መኪናዬን)."
+   }
+  ],
+  "tip": "If a noun phrase contains an adjective before the noun (e.g., 'the red car'), the definite suffix and the accusative -n attach to the adjective: ቀዩን መኪና, not ቀይ መኪናውን."
+ },
+ {
+  "id": "am-a2-compound-pre-postpositions",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "📦",
+  "title": "Circumpositional Frame Adpositions (Prefix + Suffix)",
+  "subtitle": "Combining bound prefixes with postpositional relator nouns",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Amharic commonly sandwiches nouns inside a circumpositional frame consisting of a prepositional prefix (በ-, ከ-, ወደ-) and a specific postpositional noun (ውስጥ, ላይ, ጋር, ስር).",
+  "structure": {
+   "headers": [
+    "Prefix",
+    "Postposition",
+    "Combined Meaning",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "በ- (bä-)",
+      "ውስጥ (wïst')",
+      "inside of / in",
+      "በቤቱ ውስጥ (in the house)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "በ- (bä-)",
+      "ላይ (lay)",
+      "on top of / upon",
+      "በጠረጴዛው ላይ (on the table)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ከ- (kä-)",
+      "ጋር (gar)",
+      "together with",
+      "ከጓደኛዬ ጋር (with my friend)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ከ- (kä-)",
+      "በኋላ (bähwala)",
+      "after",
+      "ከትምህርት በኋላ (after class)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Spatial Location (Inside)",
+    "example": "ዕቃው በሣጥኑ ውስጥ አለ።",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Spatial Surface (On)",
+    "example": "ስልኩ በጠረጴዛው ላይ ነው።",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Comitative (Accompaniment)",
+    "example": "ከእህቴ ጋር ወደ ገበያ ሄድኩ።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "መጽሐፉ በጠረጴዛው ላይ አለ።",
+    "ko": "",
+    "highlight": "በጠረጴዛው ላይ"
+   },
+   {
+    "en": "ውሻው በዛፉ ስር ተኛ።",
+    "ko": "",
+    "highlight": "በዛፉ ስር"
+   },
+   {
+    "en": "እሷ ከእናትዋ ጋር መጣች።",
+    "ko": "",
+    "highlight": "ከእናትዋ ጋር"
+   },
+   {
+    "en": "ልብሶቹ በሣጥን ውስጥ ናቸው።",
+    "ko": "",
+    "highlight": "በሣጥን ውስጥ"
+   },
+   {
+    "en": "ከምሳ በኋላ ሻይ ጠጣን።",
+    "ko": "",
+    "highlight": "ከምሳ በኋላ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "እኔ ጋር ጓደኛዬ ሄድኩ።",
+    "right": "እኔ ከጓደኛዬ ጋር ሄድኩ።",
+    "note": "The postposition ጋር requires the prefix ከ- attached directly to the companion noun."
+   },
+   {
+    "wrong": "ድመቷ ጠረጴዛው ላይ ተኛች።",
+    "right": "ድመቷ በጠረጴዛው ላይ ተኛች።",
+    "note": "Do not omit the bound prefix በ- when framing locational relations like 'on top of'."
+   },
+   {
+    "wrong": "ከእሱ ጋር ውስጥ ገባ።",
+    "right": "ከእሱ ጋር ወደ ውስጥ ገባ።",
+    "note": "Directional motion towards an interior requires the directional prefix ወደ- rather than leaving the noun unlinked."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The keys are inside the bag. (ሣጥን / ቦርሳ)",
+    "options": [
+     "በቦርሳው ላይ",
+     "በቦርሳው ውስጥ",
+     "ከቦርሳው ጋር",
+     "ወደ ቦርሳው"
+    ],
+    "answer": 1,
+    "explanation": "The frame 'በ- ... ውስጥ' denotes 'inside of'."
+   },
+   {
+    "question": "I went to the cinema ___ my brother.",
+    "options": [
+     "ከወንድሜ ጋር",
+     "በወንድሜ ላይ",
+     "ለወንድሜ ስር",
+     "ከወንድሜ ውስጥ"
+    ],
+    "answer": 0,
+    "explanation": "'With someone' is framed using 'ከ- ... ጋር'."
+   },
+   {
+    "question": "The cat is sleeping under the tree. (ዛፍ = tree, ስር = under)",
+    "options": [
+     "ከዛፉ ጋር",
+     "ወደ ዛፉ ውስጥ",
+     "በዛፉ ስር",
+     "ለዛፉ ላይ"
+    ],
+    "answer": 2,
+    "explanation": "Location underneath something uses the frame 'በ- ... ስር'."
+   },
+   {
+    "question": "We will meet ___ the meeting. (ስብሰባ = meeting; በኋላ = after)",
+    "options": [
+     "በስብሰባው ላይ",
+     "ወደ ስብሰባው ስር",
+     "በስብሰባው ውስጥ",
+     "ከስብሰባው በኋላ"
+    ],
+    "answer": 3,
+    "explanation": "'After an event' uses the circumpositional frame 'ከ- ... በኋላ'."
+   }
+  ],
+  "tip": "Think of Amharic circumpositions as brackets: the bound prefix opens the location bracket on the left, and the postposition closes it on the right (e.g. በ-[noun]-ውስጥ)."
+ },
+ {
+  "id": "am-a2-imperfective-and-auxiliary-allə",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "⏳",
+  "title": "Present/Future Imperfective with Auxiliary 'allə'",
+  "subtitle": "Conjugating present continuous and habitual actions with compound verbs",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Form the modern present and present-continuous tense by attaching the person-conjugated auxiliary አለ (allä) directly to the prefix-conjugated imperfective verb stem.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Imperfective Stem",
+    "Auxiliary (-all-)",
+    "Combined Form (Present)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "እኔ (I)",
+      "እበላ-",
+      "-ለሁ",
+      "እበላለሁ (I eat / I am eating)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "እሱ (He)",
+      "ይበላ-",
+      "-ል",
+      "ይበላል (He eats / He is eating)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "እሷ (She)",
+      "ትበላ-",
+      "-ለች",
+      "ትበላለች (She eats / She is eating)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "እኛ (We)",
+      "እንበላ-",
+      "-ለን",
+      "እንበላለን (We eat / We are eating)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Current Progressive Action",
+    "example": "አሁን አማርኛ አጠናለሁ።",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Habitual Daily Routine",
+    "example": "እሱ ሁልጊዜ ጠዋት ቡና ይጠጣል።",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Near Future Intention",
+    "example": "ነገ ወደ አዲስ አበባ እንሄዳለን።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "እኔ አሁን ደብዳቤ እጽፋለሁ።",
+    "ko": "",
+    "highlight": "እጽፋለሁ"
+   },
+   {
+    "en": "እሱ በኢትዮጵያ ውስጥ ይኖራል።",
+    "ko": "",
+    "highlight": "ይኖራል"
+   },
+   {
+    "en": "እሷ በዩኒቨርሲቲ ታስተምራለች።",
+    "ko": "",
+    "highlight": "ታስተምራለች"
+   },
+   {
+    "en": "ልጆቹ ኳስ ይጫወታሉ።",
+    "ko": "",
+    "highlight": "ይጫወታሉ"
+   },
+   {
+    "en": "እኛ አብረን እንሠራለን።",
+    "ko": "",
+    "highlight": "እንሠራለን"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "እኔ መጽሐፍ ያነባል አለኝ።",
+    "right": "እኔ መጽሐፍ አነባለሁ።",
+    "note": "Do not treat the auxiliary as a separate independent word; it fuses with the prefix-conjugated stem (እ-...-አለሁ -> እ-...-ለሁ)."
+   },
+   {
+    "wrong": "እሷ ትምህርት ቤት ይሄዳል።",
+    "right": "እሷ ትምህርት ቤት ትሄዳለች።",
+    "note": "Ensure feminine subject agreement: use the prefix ት- and suffix -አለች (-alläčč) for 3rd-person singular female."
+   },
+   {
+    "wrong": "እኛ እንሄዳለሁ።",
+    "right": "እኛ እንሄዳለን።",
+    "note": "The auxiliary suffix must agree with the 1st-person plural subject (-allän / -ለን), not 1st-person singular (-allähu / -ለሁ)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I am writing a letter right now. (መጻፍ)",
+    "options": [
+     "ይጽፋል",
+     "እጽፋለሁ",
+     "ትጽፋለች",
+     "እንጽፋለን"
+    ],
+    "answer": 1,
+    "explanation": "The 1st-person singular form is constructed with እ- prefix and -ለሁ suffix: እጽፋለሁ."
+   },
+   {
+    "question": "She works at the hospital. (መሥራት)",
+    "options": [
+     "ይሠራል",
+     "ትሠራለች",
+     "ትሠራለህ",
+     "እሠራለሁ"
+    ],
+    "answer": 1,
+    "explanation": "For 3rd-person singular feminine (እሷ), the imperfective uses ት- prefix and -አለች suffix: ትሠራለች."
+   },
+   {
+    "question": "They play football every Sunday. (መጫወት)",
+    "options": [
+     "ይጫወታሉ",
+     "ይጫወታል",
+     "እንጫወታለን",
+     "ትጫወታላችሁ"
+    ],
+    "answer": 0,
+    "explanation": "The 3rd-person plural uses the circumfix ይ-...-ኡ followed by auxiliary -አል: ይጫወታሉ."
+   },
+   {
+    "question": "We will travel tomorrow. (መጓዝ)",
+    "options": [
+     "እጓዛለሁ",
+     "ይጓዛል",
+     "እንጓዛለን",
+     "ይጓዛሉ"
+    ],
+    "answer": 2,
+    "explanation": "The 1st-person plural subject 'እኛ' takes the prefix እን- and suffix -ለን: እንጓዛለን."
+   }
+  ],
+  "tip": "When adding the auxiliary -all- to a vowel-final imperfective stem, vowel contraction occurs: ይሄዳል (yïhedal) instead of ይሄድ-አለ."
+ },
+ {
+  "id": "am-a2-verbal-negation-al-m",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🚫",
+  "title": "Verbal Negation Circumfixes (al-...-m and ay-...-m)",
+  "subtitle": "Negating past perfective and present imperfective verbs",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Main clause verbs are negated using circumfixes: አል-...-ም (al-...-m) surrounds past perfective verbs, while አይ-...-ም (ay-...-m) surrounds present/future imperfective verbs.",
+  "structure": {
+   "headers": [
+    "Tense / Aspect",
+    "Affirmative",
+    "Negative Formula",
+    "Negative Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Past (Perfective)",
+      "ሰበረ (He broke)",
+      "አል- + Root + -ም",
+      "አልሰበረም (He didn't break)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past 1st Person",
+      "ሄድኩ (I went)",
+      "አል- + Root + -ም",
+      "አልሄድኩም (I didn't go)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Present/Future (3rd m.)",
+      "ይበላል (He eats)",
+      "አይ- + Stem + -ም",
+      "አይበላም (He doesn't eat)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Present/Future (1st s.)",
+      "እበላለሁ (I eat)",
+      "አል- + Stem + -ም",
+      "አልበላም (I don't eat)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Negating Past Event",
+    "example": "ትላንትና ወደ ትምህርት ቤት አልሄደም።",
+    "translation": ""
+   },
+   {
+    "color": "#4F46E5",
+    "label": "Negating Present Habit",
+    "example": "እሱ ሥጋ አይበላም።",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Negating 1st Person Future",
+    "example": "ነገ ሥራ አልሠራም።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "እኔ ትናንትና አልመጣሁም።",
+    "ko": "",
+    "highlight": "አልመጣሁም"
+   },
+   {
+    "en": "እሱ ስልክ አልደወለም።",
+    "ko": "",
+    "highlight": "አልደወለም"
+   },
+   {
+    "en": "እሷ ቡና አትጠጣም።",
+    "ko": "",
+    "highlight": "አትጠጣም"
+   },
+   {
+    "en": "እነሱ ዛሬ አይመጡም።",
+    "ko": "",
+    "highlight": "አይመጡም"
+   },
+   {
+    "en": "እኛ ምንም ነገር አላየንም።",
+    "ko": "",
+    "highlight": "አላየንም"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "እሱ አልሄደ። (in an independent clause)",
+    "right": "እሱ አልሄደም።",
+    "note": "In main clauses, negation requires the final -ም (-m) particle; omitting it is only permissible in subordinate clauses."
+   },
+   {
+    "wrong": "እሱ አይበላልም።",
+    "right": "እሱ አይበላም።",
+    "note": "When negating the imperfective present, drop the affirmative auxiliary -all- (-አል) entirely before adding -m."
+   },
+   {
+    "wrong": "እሷ አልጠጣም። (meaning 'She doesn't drink')",
+    "right": "እሷ አትጠጣም።",
+    "note": "In the present imperfective, 3rd-person feminine takes the negative prefix አት- (at-), not አል- (al-)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He did not come yesterday. (መጣ)",
+    "options": [
+     "አይመጣም",
+     "አልመጣም",
+     "አልመጣምም",
+     "አልመጣ"
+    ],
+    "answer": 1,
+    "explanation": "Past negation frames the perfective verb with አል-...-ም: አልመጣም."
+   },
+   {
+    "question": "He does not eat meat. (Imperfective negation: መብላት)",
+    "options": [
+     "አይበላም",
+     "አልበላም",
+     "አይበላልም",
+     "አይበላ"
+    ],
+    "answer": 0,
+    "explanation": "3rd-person masculine non-past negation uses the prefix አይ- and suffix -ም without the auxiliary: አይበላም."
+   },
+   {
+    "question": "I did not see the movie. (ማየት)",
+    "options": [
+     "አላየሁም",
+     "አላየሁ",
+     "አያለሁም",
+     "አይታይም"
+    ],
+    "answer": 0,
+    "explanation": "The 1st-person singular past negative is አል- + አየሁ + -ም, which contracts to አላየሁም."
+   },
+   {
+    "question": "She does not drink coffee. (መጠጣት)",
+    "options": [
+     "አይጠጣም",
+     "አልጠጣችም",
+     "አትጠጣም",
+     "አትጠጣችም"
+    ],
+    "answer": 2,
+    "explanation": "For 3rd-person singular feminine in the present tense, the prefix is አት- with final -ም: አትጠጣም."
+   }
+  ],
+  "tip": "Notice that the auxiliary verb -allä vanishes completely in the negative present! Compare: affirmative 'ይሄዳል' (yïhedal) vs negative 'አይሄድም' (ayhedïm)."
+ },
+ {
+  "id": "am-a2-contingent-conjunction-ənji",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔗",
+  "title": "Conjunctive Particles: Enclitic '-m' vs Disjunctive 'ənji'",
+  "subtitle": "Joining phrases with '-m' and correcting clauses with 'ənji'",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "The enclitic suffix -ም attaches to nouns or verbs to mean 'also' or 'and', while እንጂ occurs at the clause boundary to reject a prior alternative and assert a correction ('rather/instead').",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Pattern",
+    "Function & English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-ም (-m)",
+      "ስም + ም / ግስ + ም",
+      "Inclusive coordinator ('also', 'too', 'and')"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "እንጂ (ənji)",
+      "አረፍተ ነገር + እንጂ",
+      "Contrastive corrector ('but rather', 'instead')"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ም ... -ም",
+      "ስም-ም ... ስም-ም",
+      "Correlative conjunction ('both ... and')"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Additive Suffix (-m)",
+    "example": "አልማዝ መጽሐፍ አነበበች፤ ዮናስም አነበበ።",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Corrective Contrast (ənji)",
+    "example": "ሻይ አልፈልግም፤ ቡና እንጂ።",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Paired Inclusivity",
+    "example": "ዳቦም ወተትም ገዛሁ።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "እኔም ወደ ገበያ እሄዳለሁ።",
+    "ko": "",
+    "highlight": "እኔም"
+   },
+   {
+    "en": "ውሸት አይደለም፤ እውነት ነው እንጂ።",
+    "ko": "",
+    "highlight": "እንጂ"
+   },
+   {
+    "en": "ውሻም ድመትም አለኝ።",
+    "ko": "",
+    "highlight": "ውሻም ድመትም"
+   },
+   {
+    "en": "አልተኛም፤ እያጠና ነው እንጂ።",
+    "ko": "",
+    "highlight": "እንጂ"
+   },
+   {
+    "en": "እሱ አስተማሪ ነው፤ እሷም አስተማሪ ናት።",
+    "ko": "",
+    "highlight": "እሷም"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ሻይ አልፈልግም፤ ግን ቡና እፈልጋለሁ።",
+    "right": "ሻይ አልፈልግም፤ ቡና እንጂ።",
+    "note": "While 'ግን' means 'but', native speakers prefer 'እንጂ' at the end of the phrase when directly correcting a negated choice."
+   },
+   {
+    "wrong": "እኔ እና ወደ ትምህርት ቤት ሄድኩ።",
+    "right": "እኔም ወደ ትምህርት ቤት ሄድኩ።",
+    "note": "Do not use 'እና' (and) to mean 'also/too'; use the enclitic suffix '-ም' attached to the pronoun or noun."
+   },
+   {
+    "wrong": "እንጂ እውነት ነው።",
+    "right": "እውነት ነው እንጂ።",
+    "note": "'እንጂ' cannot initiate a clause like English 'rather'; it must sit as a postposed boundary particle."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I don't drink beer; I drink water ___.",
+    "options": [
+     "እና",
+     "ግን",
+     "እንጂ",
+     "ወይም"
+    ],
+    "answer": 2,
+    "explanation": "'እንጂ' is placed at the end of a corrective statement to mean 'rather/instead'."
+   },
+   {
+    "question": "Abebe came, and Aster ___ came.",
+    "options": [
+     "አስቴርም",
+     "አስቴርና",
+     "አስቴር እንጂ",
+     "አስቴር ግን"
+    ],
+    "answer": 0,
+    "explanation": "The suffix '-ም' attaches to 'አስቴር' to indicate 'Aster too/also'."
+   },
+   {
+    "question": "He bought ___ bread and milk (both... and).",
+    "options": [
+     "ዳቦ ግን ወተት",
+     "ዳቦም ወተትም",
+     "ዳቦ ወይም ወተት",
+     "ዳቦ እንጂ ወተት"
+    ],
+    "answer": 1,
+    "explanation": "Repeating '-ም' on both coordinated elements yields the correlative 'both ... and'."
+   },
+   {
+    "question": "It is not cold; it is hot ___.",
+    "options": [
+     "እንጂ",
+     "ነውም",
+     "እና",
+     "ከ"
+    ],
+    "answer": 0,
+    "explanation": "'እንጂ' follows the affirmed clause that replaces the negated premise."
+   }
+  ],
+  "tip": "Attach -ም directly to the final consonant or vowel of the word. If a word ends in a sixth-order consonant, adding -ም vocalizes naturally without inserting an extra carrier syllable."
+ },
+ {
+  "id": "am-a2-object-pronominal-verb-suffixes",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🎯",
+  "title": "Bound Direct & Indirect Object Pronouns",
+  "subtitle": "Fusing pronominal targets directly into conjugated verbs",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Direct and indirect object pronouns in Amharic are bound suffixes suffixed to the finite verb, with indirect objects signaled by the infixed prepositions -ል- (for) or -ብ- (against/on).",
+  "structure": {
+   "headers": [
+    "Object Type",
+    "Affix Formula",
+    "Example Verb",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Direct Object (3M)",
+      "ግስ + -ው / -ት",
+      "አየሁት",
+      "I saw him"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Direct Object (3F)",
+      "ግስ + -አት",
+      "አያት",
+      "He saw her"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Benefactive (Indirect)",
+      "ግስ + -ል- + ተውላጠ ስም",
+      "ነገረልኝ",
+      "He told (it) for me"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adversative (Indirect)",
+      "ግስ + -ብ- + ተውላጠ ስም",
+      "ወሰደብኝ",
+      "He took (it) to my detriment"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Direct Object Suffix",
+    "example": "መጽሐፉን ሰጠኝ።",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Benefactive (-ል-)",
+    "example": "በሩን ከፈተለት።",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Adversative (-ብ-)",
+    "example": "ገንዘብ ጠፋብኝ።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ትላንት ማታ በስልክ ደወለችልኝ።",
+    "ko": "",
+    "highlight": "ደወለችልኝ"
+   },
+   {
+    "en": "ልጁን በመንገድ ላይ አየሁት።",
+    "ko": "",
+    "highlight": "አየሁት"
+   },
+   {
+    "en": "እባክህን እውነቱን ንገረኝ።",
+    "ko": "",
+    "highlight": "ንገረኝ"
+   },
+   {
+    "en": "ምሳ አዘጋጀችልን።",
+    "ko": "",
+    "highlight": "አዘጋጀችልን"
+   },
+   {
+    "en": "ቁልፉ ጠፋብን።",
+    "ko": "",
+    "highlight": "ጠፋብን"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "እኔን አየ።",
+    "right": "አየኝ።",
+    "note": "While independent pronouns can add emphasis (እኔን አየኝ), object marking must be incorporated into the verb itself using the bound suffix (-ኝ)."
+   },
+   {
+    "wrong": "ደብዳቤ ጻፈ ለ እኔ።",
+    "right": "ደብዳቤ ጻፈልኝ።",
+    "note": "Do not leave prepositions as detached analytical phrases when pointing to pronominal recipients; infix them with -ል- on the verb."
+   },
+   {
+    "wrong": "አየሁት እሷን።",
+    "right": "አየኋት።",
+    "note": "Gender concord on object clitics is mandatory; use -ኣት for feminine direct objects, not masculine -ው/-ት."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He gave me the book.",
+    "options": [
+     "ሰጠህ",
+     "ሰጠው",
+     "ሰጠኝ",
+     "ሰጣት"
+    ],
+    "answer": 2,
+    "explanation": "The 1st person singular direct object suffix is '-ኝ' (ሰጠ + ኝ = ሰጠኝ)."
+   },
+   {
+    "question": "She opened the door for him.",
+    "options": [
+     "ከፈተችለት",
+     "ከፈተችልኝ",
+     "ከፈተችበት",
+     "ከፈተችው"
+    ],
+    "answer": 0,
+    "explanation": "The benefactive marker is '-ል-' combined with 3rd masculine '-sound/-ለት' yields 'ከፈተችለት'."
+   },
+   {
+    "question": "I saw them in the market.",
+    "options": [
+     "አየሁት",
+     "አየኋቸው",
+     "አየናት",
+     "አየናቸው"
+    ],
+    "answer": 1,
+    "explanation": "'አየኋቸው' combines 'አየሁ' (I saw) with '-አቸው' (them)."
+   },
+   {
+    "question": "My money was lost (lost to my detriment).",
+    "options": [
+     "ጠፋልኝ",
+     "ጠፋላት",
+     "ጠፋብኝ",
+     "ጠፋብህ"
+    ],
+    "answer": 2,
+    "explanation": "The infix '-ብ-' denotes detriment/loss affecting the speaker ('-ኝ')."
+   }
+  ],
+  "tip": "Direct object markers merge smoothly onto 3rd person singular masculine past verbs with just -ው, but after vowel-ending conjugations, -ው switches to -ት (e.g., አየሁ + ት = አየሁት)."
+ },
+ {
+  "id": "am-b1-converb-impersonal-gerund",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⏳",
+  "title": "The Gerundive / Converb",
+  "subtitle": "Chaining sequential actions and forming compound tenses",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "The Amharic converb (ነግሮ stem) inflects for person and expresses an action prior to or attendant upon the main finite verb, eliminating repetitive full conjugations.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Converb Form",
+    "Compound Present Perfect",
+    "Compound Past Perfect"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "3rd Masc (እሱ)",
+      "ሰብሮ (having broken)",
+      "ሰብሯል (he has broken)",
+      "ሰብሮ ነበር (he had broken)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3rd Fem (እሷ)",
+      "ሰብራ (having broken)",
+      "ሰብራለች (she has broken)",
+      "ሰብራ ነበር (she had broken)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "1st Sing (እኔ)",
+      "ሰብሬ (having broken)",
+      "ሰብሬያለሁ (I have broken)",
+      "ሰብሬ ነበር (I had broken)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Plur (እነሱ)",
+      "ሰብረው (having broken)",
+      "ሰብረዋል (they have broken)",
+      "ሰብረው ነበር (they had broken)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Sequential Action Chain",
+    "example": "እራት በልቶ ተኛ።",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Present Perfect (+ አለ)",
+    "example": "ስራዬን ጨርሻለሁ።",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Past Perfect (+ ነበር)",
+    "example": "ወደ አዲስ አበባ ሄዶ ነበር።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ልብሱን አጥቦ አሰጣ።",
+    "ko": "",
+    "highlight": "አጥቦ"
+   },
+   {
+    "en": "ተነስተን ፊታችንን ታጠብን።",
+    "ko": "",
+    "highlight": "ተነስተን"
+   },
+   {
+    "en": "ትምህርቷን ጨርሳ ወደ ቤቷ ሄደች።",
+    "ko": "",
+    "highlight": "ጨርሳ"
+   },
+   {
+    "en": "እኔ ደብዳቤውን ጽፌ ጨረስኩ።",
+    "ko": "",
+    "highlight": "ጽፌ"
+   },
+   {
+    "en": "እነሱ መጥተው ምግብ በሉ።",
+    "ko": "",
+    "highlight": "መጥተው"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "እራት በላሁ እና ተኛሁ።",
+    "right": "እራት በልቼ ተኛሁ።",
+    "note": "While grammatical, chaining finite verbs with 'እና' sounds unnatural in Amharic; use the converb for prior consecutive events."
+   },
+   {
+    "wrong": "እሷ በልቶ ሄደች።",
+    "right": "እሷ በልታ ሄደች።",
+    "note": "The converb must agree in person, gender, and number with its subject; feminine singular takes the -አ suffix (በልታ)."
+   },
+   {
+    "wrong": "መጽሐፍ አንብቤ አለሁ።",
+    "right": "መጽሐፍ አንብቤያለሁ።",
+    "note": "In the present perfect compound tense, the auxiliary 'አለ' contracts and fuses with the converb stem."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Having eaten lunch, she went out.",
+    "options": [
+     "በልቶ",
+     "በልታ",
+     "በልቼ",
+     "በልተው"
+    ],
+    "answer": 1,
+    "explanation": "The subject is 3rd person feminine singular ('she'), requiring the feminine converb ending '-ኣ' (በልታ)."
+   },
+   {
+    "question": "We woke up and came (Having woken up, we came).",
+    "options": [
+     "ተነስተህ",
+     "ተነስተሽ",
+     "ተነስተን",
+     "ተነስተው"
+    ],
+    "answer": 2,
+    "explanation": "The 1st person plural ('we') converb suffix is '-አን' / '-ኤን' yielding 'ተነስተን'."
+   },
+   {
+    "question": "I have finished the job.",
+    "options": [
+     "ጨርሻለሁ",
+     "ጨርሷል",
+     "ጨርሳለች",
+     "ጨርሰዋል"
+    ],
+    "answer": 0,
+    "explanation": "1st person singular converb (ጨርሼ) + auxiliary (አለሁ) fuses to 'ጨርሻለሁ'."
+   },
+   {
+    "question": "He washed his hands and ate.",
+    "options": [
+     "ታጥባ",
+     "ታጥበው",
+     "ታጥቦ",
+     "ታጥቤ"
+    ],
+    "answer": 2,
+    "explanation": "3rd person masculine singular converb takes '-ኦ' ending (ታጥቦ)."
+   }
+  ],
+  "tip": "When chaining three or four actions in a row, every preceding clause takes a converb matching the subject, and ONLY the final verb carries the full finite tense marker."
+ },
+ {
+  "id": "am-b1-subordinating-verbal-prefixes",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🧩",
+  "title": "Subordinating Verbal Prefixes",
+  "subtitle": "Forming dependent clauses with si-, bi-, and lï- on imperfect stems",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "When subordinating conjunctions like ስ- (when/while), ብ- (if), and ል- (in order to) attach to the imperfective verb, the auxiliary አለ is dropped.",
+  "structure": {
+   "headers": [
+    "Prefix",
+    "Base Imperfective",
+    "Subordinated Form",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ስ- (temporal: while/when)",
+      "ይሄዳል (he goes)",
+      "ሲሄድ",
+      "when/while he goes"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ብ- (conditional: if)",
+      "ይሰራል (he works)",
+      "ቢሰራ",
+      "if he works / were to work"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ል- (purposive: in order to)",
+      "ይበላል (he eats)",
+      "ሊበላ",
+      "in order that he eats / to eat"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "እንድ- (purposive/mandate)",
+      "ይመጣል (he comes)",
+      "እንዲመጣ",
+      "so that he comes"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Simultaneous Action (ስ-)",
+    "example": "ሻይ ሲጠጣ ጋዜጣ ያነባል።",
+    "translation": ""
+   },
+   {
+    "color": "#EAB308",
+    "label": "Hypothetical Condition (ብ-)",
+    "example": "ገንዘብ ቢኖረኝ መኪና እገዛለሁ።",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Purposive Intent (ል-)",
+    "example": "ጓደኛዬን ልጠይቅ ወጣሁ።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "እሱ ወደ ቤት ሲገባ ዘነበ።",
+    "ko": "",
+    "highlight": "ሲገባ"
+   },
+   {
+    "en": "እውነት ብትናገር ሰዎች ያምኑሃል።",
+    "ko": "",
+    "highlight": "ብትናገር"
+   },
+   {
+    "en": "ውሃ ልትጠጣ ወደ ማዕድ ቤት ሄደች።",
+    "ko": "",
+    "highlight": "ልትጠጣ"
+   },
+   {
+    "en": "እኔ ስሰራ እሱ ሙዚቃ ያዳምጣል።",
+    "ko": "",
+    "highlight": "ስሰራ"
+   },
+   {
+    "en": "ፈተናውን እንዲያልፍ ጠንክሮ አጠና።",
+    "ko": "",
+    "highlight": "እንዲያልፍ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ሲሄዳል አየሁት።",
+    "right": "ሲሄድ አየሁት።",
+    "note": "Never keep the auxiliary suffix '-ኣል' when attaching a subordinating conjunction prefix to an imperfective verb."
+   },
+   {
+    "wrong": "ስለ መብላት ሄደ።",
+    "right": "ሊበላ ሄደ።",
+    "note": "To state intention with verbs of motion, attach prefix 'ል-' directly to the contingent imperfective rather than paraphrasing with nominal prepositions."
+   },
+   {
+    "wrong": "ቢሄደ ኖሮ እደሰታለሁ።",
+    "right": "ቢሄድ እደሰታለሁ።",
+    "note": "Do not attach prefix 'ብ-' to perfective stems (ሄደ); it requires the prefix-conjugation imperfect stem (ይሄድ -> ቢሄድ)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "While she was cooking, the phone rang.",
+    "options": [
+     "ስትሰራ",
+     "ሲሰራ",
+     "ብትሰራ",
+     "ልትሰራ"
+    ],
+    "answer": 0,
+    "explanation": "Subordinating prefix 'ስ-' + 3rd person feminine imperfective 'ትሰራ' = 'ስትሰራ' (while she works/cooks)."
+   },
+   {
+    "question": "If you (masc.) study, you will pass.",
+    "options": [
+     "ስታጠና",
+     "ብታጠና",
+     "ልታጠና",
+     "እንድታጠና"
+    ],
+    "answer": 1,
+    "explanation": "The hypothetical conditional prefix 'ብ-' + 'ታጠና' yields 'ብታጠና' (if you study)."
+   },
+   {
+    "question": "He went to the library to read (in order to read).",
+    "options": [
+     "ሊያነብ",
+     "ሲያነብ",
+     "ቢያነብ",
+     "እንዲያነብ"
+    ],
+    "answer": 0,
+    "explanation": "The prefix 'ል-' indicates intention/purpose on verbs ('ል' + 'ያነብ' = 'ሊያነብ')."
+   },
+   {
+    "question": "When I arrived in Addis Ababa, it was raining.",
+    "options": [
+     "ሲደርስ",
+     "ብደርስ",
+     "ስደርስ",
+     "ልደርስ"
+    ],
+    "answer": 2,
+    "explanation": "'ስ-' prefixed to 1st person singular imperfective 'እደርስ' merges phonologically into 'ስደርስ'."
+   }
+  ],
+  "tip": "Notice phonological assimilation: when the prefix ስ- or ብ- meets the 3rd person prefix ይ- (yï-), they merge to form ሲ- (si-) and ቢ- (bi-)."
+ },
+ {
+  "id": "am-b1-relative-clause-marker-yə",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🏷️",
+  "title": "Relative Clauses with 'yə-' and 'yəmmï-'",
+  "subtitle": "Building modifying clauses preceding head nouns",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Amharic relative clauses strictly precede the noun they modify, using the prefix የ- (yə-) with past-tense perfective verbs and የሚ- (yəmmï-) with non-past imperfective verbs.",
+  "structure": {
+   "headers": [
+    "Tense of Verb",
+    "Relative Prefix",
+    "Verbal Phrase Example",
+    "Meaning as Modifier"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Past (Perfective)",
+      "የ- (yə-)",
+      "የመጣው ሰው",
+      "The man who came"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Present/Future (Imperfective)",
+      "የሚ- (yəmmï-)",
+      "የሚመጣው ሰው",
+      "The man who will come"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Past",
+      "ያል- (yal-)",
+      "ያልመጣው ሰው",
+      "The man who did not come"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Present",
+      "የማይ- (yəmay-)",
+      "የማይመጣው ሰው",
+      "The man who does not come"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Past Modifier (የ-)",
+    "example": "ትላንት የገዛሁት መጽሐፍ ጠፋ።",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Present Modifier (የሚ-)",
+    "example": "እዚህ የሚኖሩ ሰዎች ደጎች ናቸው።",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Negative Modifier (የማይ-)",
+    "example": "የማይሰሩ ተማሪዎች ውጤት አያገኙም።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "የፈረሰው ቤት ተሰራ።",
+    "ko": "",
+    "highlight": "የፈረሰው"
+   },
+   {
+    "en": "በጣም የሚጣፍጥ ምግብ በላን።",
+    "ko": "",
+    "highlight": "የሚጣፍጥ"
+   },
+   {
+    "en": "ወደ አሜሪካ የሄደችው እህቴ ናት።",
+    "ko": "",
+    "highlight": "የሄደችው"
+   },
+   {
+    "en": "እውነት የማይናገር ሰው አላምንም።",
+    "ko": "",
+    "highlight": "የማይናገር"
+   },
+   {
+    "en": "ያልተከፈለው ገንዘብ ብዙ ነው።",
+    "ko": "",
+    "highlight": "ያልተከፈለው"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ሰውየው የ መጣ እሱ ነው።",
+    "right": "የመጣው ሰው እሱ ነው።",
+    "note": "Amharic relative clauses must precede the head noun, never follow it like English 'the man who came'."
+   },
+   {
+    "wrong": "ትላንት የሚመጣው ሰው",
+    "right": "ትላንት የመጣው ሰው",
+    "note": "Use 'የ-' for completed past events. 'የሚ-' is reserved strictly for non-past habitual or future actions."
+   },
+   {
+    "wrong": "የማይመጣ ሰው ትላንት አየሁ።",
+    "right": "ያልመጣውን ሰው ትላንት አየሁ።",
+    "note": "Negative past relative requires 'ያል-' (yal-); 'የማይ-' (yəmay-) is only for present/future negative relatives."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The food that she cooked is delicious.",
+    "options": [
+     "ያበሰለችው",
+     "የምታበስለው",
+     "የሚያበስል",
+     "ያልበሰለው"
+    ],
+    "answer": 0,
+    "explanation": "Past relative marker 'የ-' attached to 3rd fem perfective 'አበሰለች' + definite marker '-ው' = 'ያበሰለችው'."
+   },
+   {
+    "question": "The students who study every day pass the exam.",
+    "options": [
+     "ያጠኑት",
+     "የሚያጠኑ",
+     "ያላጠኑ",
+     "የማያጠኑ"
+    ],
+    "answer": 1,
+    "explanation": "Habitual non-past relative requires 'የሚ-' prefixed to the plural imperfective 'ያጠኑ' = 'የሚያጠኑ'."
+   },
+   {
+    "question": "The guest who did not come yesterday called today.",
+    "options": [
+     "የሚመጣው",
+     "የማይመጣው",
+     "ያልመጣው",
+     "የመጣው"
+    ],
+    "answer": 2,
+    "explanation": "Negative past relative uses 'ያል-' + perfective stem = 'ያልመጣው'."
+   },
+   {
+    "question": "The car that I will buy tomorrow is red.",
+    "options": [
+     "የገዛሁት",
+     "የምገዛው",
+     "ያልገዛሁት",
+     "የማልገዛው"
+    ],
+    "answer": 1,
+    "explanation": "Future/imperfective relative with 1st person prefix 'እገዛ' becomes 'የምገዛው' (the one I will buy)."
+   }
+  ],
+  "tip": "The definite article suffix (-ው or -ዋ) attaches to the end of the relative verb phrase itself (e.g., የሄደ-ው ልጅ) rather than to the head noun."
+ },
+ {
+  "id": "am-b1-prepositional-incorporation-bə-lə",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔗",
+  "title": "Applicative Suffixes: -bbət and -llət",
+  "subtitle": "Attaching prepositions directly into Amharic verb morphology",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "Prepositional clitics blend into the end of the verb stem to express instrument or disadvantage with -bb- and benefit with -ll-.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Morphology",
+    "Amharic Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Benefactive (for/to)",
+      "Verb + -ll- + Pronoun",
+      "ጻፈለት",
+      "He wrote for him"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Malefactive/Locative (on/against)",
+      "Verb + -bb- + Pronoun",
+      "ፈረደበት",
+      "He judged against him"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Instrumental (with/by)",
+      "Verb + -bb- + Pronoun",
+      "ቆረጠበት",
+      "He cut with it"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "First Person Plural Benefactive",
+      "Verb + -ll- + -ən",
+      "ገዛልን",
+      "He bought for us"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Advantage / For the benefit of",
+    "example": "እህቴ ቆንጆ ምግብ ሰራችልኝ።",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Disadvantage / Adversity",
+    "example": "ዝናብ ስለ ዘነበ መንገዱ ተዘጋባቸው።",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Tool or Medium Used",
+    "example": "በዚህ እስክሪብቶ ደብዳቤ ጻፈበት።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "አባቴ አዲስ ጫማ ገዛልኝ።",
+    "ko": "",
+    "highlight": "ገዛልኝ"
+   },
+   {
+    "en": "በሩን በቁልፍ ከፈተበት።",
+    "ko": "",
+    "highlight": "ከፈተበት"
+   },
+   {
+    "en": "ልጁ ብርጭቆውን ሰበረባት።",
+    "ko": "",
+    "highlight": "ሰበረባት"
+   },
+   {
+    "en": "መምህሩ መልሱን ነገረላቸው።",
+    "ko": "",
+    "highlight": "ነገረላቸው"
+   },
+   {
+    "en": "ሌባው ገንዘቡን ወሰደባቸው።",
+    "ko": "",
+    "highlight": "ወሰደባቸው"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ለእኔ ምግብ ሰራ።",
+    "right": "ምግብ ሰራልኝ።",
+    "note": "While free prepositions exist, natural Amharic strongly incorporates benefactive pronouns directly onto the verb with -ll-."
+   },
+   {
+    "wrong": "በእሱ ላይ ፈረደለት።",
+    "right": "ፈረደበት።",
+    "note": "-ll- indicates advantage or favor, whereas -bb- is required for adverse actions like judging against someone."
+   },
+   {
+    "wrong": "በቢላዋ ቆረጠላት።",
+    "right": "በቢላዋ ቆረጠበት።",
+    "note": "Instruments used to perform an action require -bb- (with it), not the benefactive marker -ll-."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the verb meaning 'He opened (the door) for her':",
+    "options": [
+     "ከፈተላት",
+     "ከፈተላቸው",
+     "ከፈተባት",
+     "ከፈተችለት"
+    ],
+    "answer": 0,
+    "explanation": "ከፈተ (he opened) + -ላት (for her) makes ከፈተላት."
+   },
+   {
+    "question": "Choose the verb meaning 'He wrote with it (masculine)':",
+    "options": [
+     "ጻፈላት",
+     "ጻፈበት",
+     "ጻፈባት",
+     "ጻፈልን"
+    ],
+    "answer": 1,
+    "explanation": "The instrumental suffix for a 3rd person masculine object is -በት (-bbət)."
+   },
+   {
+    "question": "Which verb means 'They took (it) from/against us'?",
+    "options": [
+     "ወሰዱልን",
+     "ወሰደብን",
+     "ወሰዱብን",
+     "ወሰድንበት"
+    ],
+    "answer": 2,
+    "explanation": "ወሰዱ (they took) + -ብን (against us) correctly produces ወሰዱብን."
+   },
+   {
+    "question": "Complete: እናቴ ቆንጆ ልብስ ___ (She sewed for me).",
+    "options": [
+     "ሰፋችበት",
+     "ሰፋልኝ",
+     "ሰፋችልኝ",
+     "ሰፋችው"
+    ],
+    "answer": 2,
+    "explanation": "እናቴ (my mother, fem.) needs feminine subject inflection ሰፋች plus -ልኝ (for me), yielding ሰፋችልኝ."
+   }
+  ],
+  "tip": "Think of -ll- as a helping hand (benefit/for) and -bb- as a heavy stone (adversity/on/against or tool/with)."
+ },
+ {
+  "id": "am-b1-passive-and-reflexive-tə-stem",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#059669",
+  "emoji": "🛡️",
+  "title": "Passive and Reflexive Verbs: The ተ- (tə-) Prefix",
+  "subtitle": "Transforming active transitive verbs into passive and reflexive stems",
+  "color": "#10B981",
+  "bg": "#ECFDF5",
+  "keyPoint": "Prefixing ተ- (tə-) to the derived verbal stem turns transitive actions into passive states or reflexive actions performed on oneself.",
+  "structure": {
+   "headers": [
+    "Voice",
+    "Prefix Pattern",
+    "Amharic Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Active Base",
+      "C1əC2C3ə",
+      "ሰበረ",
+      "He broke (something)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passive / Middle",
+      "ተ- + Base",
+      "ተሰበረ",
+      "It was broken"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Active Base",
+      "C1əC2C3ə",
+      "አጠበ",
+      "He washed (something)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reflexive",
+      "ተ- + Base",
+      "ታጠበ",
+      "He washed himself"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Passive Result",
+    "example": "ቤቱ ባለፈው ሳምንት ተሸጠ።",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Reflexive Self-Action",
+    "example": "ልጁ ጠዋት ፊቱን ታጠበ።",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Passive Discovery / Inception",
+    "example": "የጠፋው ቦርሳ መንገድ ላይ ተገኘ።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ትላንት ማታ መስኮቱ ተሰበረ።",
+    "ko": "",
+    "highlight": "ተሰበረ"
+   },
+   {
+    "en": "እሱ ገላውን ታጠበ።",
+    "ko": "",
+    "highlight": "ታጠበ"
+   },
+   {
+    "en": "ይህ መጽሐፍ በብዙ ሰዎች ተነበበ።",
+    "ko": "",
+    "highlight": "ተነበበ"
+   },
+   {
+    "en": "ስብሰባው ዛሬ ተጀመረ።",
+    "ko": "",
+    "highlight": "ተጀመረ"
+   },
+   {
+    "en": "ስጋው በቢላዋ ተቆረጠ።",
+    "ko": "",
+    "highlight": "ተቆረጠ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "መስኮቱ ሰበረ።",
+    "right": "መስኮቱ ተሰበረ።",
+    "note": "Without the ተ- prefix, ሰበረ means 'he broke (something)'. Passive requires ተሰበረ."
+   },
+   {
+    "wrong": "እሱ እራሱን አጠበ።",
+    "right": "እሱ ታጠበ።",
+    "note": "Natural Amharic uses the reflexive ተ- stem (ታጠበ < ተ-አጠበ) rather than the active verb with an explicit reflexive noun."
+   },
+   {
+    "wrong": "መኪናው ሸጠ።",
+    "right": "መኪናው ተሸጠ።",
+    "note": "A car cannot sell itself; passive voice via ተሸጠ (it was sold) must be used."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'The door was opened'?",
+    "options": [
+     "በሩ ከፈተ።",
+     "በሩ አስከፈተ።",
+     "በሩ ተከፈተ።",
+     "በሩ ይከፈታል።"
+    ],
+    "answer": 2,
+    "explanation": "The passive form of ከፈተ (he opened) is formed by prefixing ተ-, yielding ተከፈተ."
+   },
+   {
+    "question": "What is the meaning of 'ደብዳቤው ተጻፈ'?",
+    "options": [
+     "He wrote the letter.",
+     "The letter was written.",
+     "She wrote the letter.",
+     "He made someone write the letter."
+    ],
+    "answer": 1,
+    "explanation": "ተጻፈ is the 3rd person masculine passive stem of ጻፈ, meaning 'it was written'."
+   },
+   {
+    "question": "Choose the reflexive form meaning 'She got dressed / dressed herself':",
+    "options": [
+     "ለበሰች",
+     "ተለበሰች",
+     "አለበሰች",
+     "ተላበሰች"
+    ],
+    "answer": 1,
+    "explanation": "The reflexive passive with feminine agreement for 'she dressed herself' is ተለበሰች."
+   },
+   {
+    "question": "Complete: እውነቱ በመጨረሻ ___ (The truth was known).",
+    "options": [
+     "ታወቀ",
+     "አወቀ",
+     "አስታወቀ",
+     "ተዋወቀ"
+    ],
+    "answer": 0,
+    "explanation": "The root አወቀ (to know) combines with ተ- to contract into ታወቀ (was known)."
+   }
+  ],
+  "tip": "When a root starts with a vowel or guttural consonant, ተ- merges phonologically: ተ + አጠበ becomes ታጠበ."
+ },
+ {
+  "id": "am-b2-causative-stems-as-vs-a",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "⚡",
+  "title": "Causative Stems: Direct አ- (a-) vs Mediated አስ- (as-)",
+  "subtitle": "Distinguishing between direct physical causation and mediated agency",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use the simple prefix አ- (a-) for direct causative or transitive transitivization, and አስ- (as-) when having an agent perform the action.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Prefix",
+    "Amharic Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Base Intransitive",
+      "None",
+      "ፈረደ / ቀለጠ",
+      "He judged / It melted"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Direct Causative",
+      "አ- (a-)",
+      "አቀለጠ",
+      "He melted it directly"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Mediated / Factitive",
+      "አስ- (as-)",
+      "አስፈረደ",
+      "He had someone judge"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Agentive Causative",
+      "አስ- (as-)",
+      "አስጻፈ",
+      "He made someone write"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Direct Physical Causation",
+    "example": "ሼፉ ቅቤውን በእሳት አቀለጠ።",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Ordering an Agent (Factitive)",
+    "example": "አለቃው ጸሐፊዋን ደብዳቤ አስጻፈ።",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Causing an Emotion or Reaction",
+    "example": "ቀልዱ ሁሉንም ሰው አስቀactor / አስሳቀ።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "እሱ ልጁን አስፈራራ።",
+    "ko": "",
+    "highlight": "አስፈራራ"
+   },
+   {
+    "en": "ገበሬው በሬዎቹን አበላ።",
+    "ko": "",
+    "highlight": "አበላ"
+   },
+   {
+    "en": "እሷ ቤቷን አስጠረገች።",
+    "ko": "",
+    "highlight": "አስጠረገች"
+   },
+   {
+    "en": "መምህሩ ተማሪዎቹን አነበበ ሳይሆን አስነበበ።",
+    "ko": "",
+    "highlight": "አስነበበ"
+   },
+   {
+    "en": "እሳቱ በረዶውን አቀለጠው።",
+    "ko": "",
+    "highlight": "አቀለጠው"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "እሱ ቤቱን አጠረገ።",
+    "right": "እሱ ቤቱን አስጠረገ።",
+    "note": "If he hired or instructed someone else to sweep the house, አስጠረገ (mediated causative) must be used instead of አጠረገ."
+   },
+   {
+    "wrong": "በረዶውን አስቀለጠ።",
+    "right": "በረዶውን አቀለጠ።",
+    "note": "Direct physical melting carried out by heat or an individual uses direct causative አቀለጠ, not mediated አስ-."
+   },
+   {
+    "wrong": "እሷ ልብሱን አስለበሰች።",
+    "right": "እሷ ልጁን ልብስ አለበሰች።",
+    "note": "Directly dressing a child takes the direct causative አለበሰ, whereas አስለበሰ implies arranging for a third party to dress them."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which verb means 'He had the car repaired' (commissioned a mechanic)?",
+    "options": [
+     "አጠገነ",
+     "አስጠገነ",
+     "ተጠገነ",
+     "ጠገነ"
+    ],
+    "answer": 1,
+    "explanation": "አስጠገነ uses the mediated causative prefix አስ- to indicate having someone else do the repair."
+   },
+   {
+    "question": "Choose the correct form for 'She fed (caused to eat directly) the baby':",
+    "options": [
+     "በላች",
+     "አበላች",
+     "አስበላች",
+     "ተበላች"
+    ],
+    "answer": 1,
+    "explanation": "Direct causation for 'to eat' (በላ) is አበላ; with 3rd fem. sing. it becomes አበላች."
+   },
+   {
+    "question": "What does 'አስመጣ' mean in contrast to 'መጣ'?",
+    "options": [
+     "He arrived",
+     "He made someone/something come (ordered/imported)",
+     "He was brought",
+     "He came with"
+    ],
+    "answer": 1,
+    "explanation": "መጣ is 'he came'; አስመጣ is the causative 'he caused to come' or 'he imported/ordered'."
+   },
+   {
+    "question": "Complete: ዳይሬክተሩ አዲስ ደንብ ___ (The director enforced/made known a rule).",
+    "options": [
+     "አወጣ",
+     "አስወጣ",
+     "ተወጣ",
+     "ወጣ"
+    ],
+    "answer": 0,
+    "explanation": "Producing or issuing a proclamation directly uses the direct transitive causative አወጣ."
+   }
+  ],
+  "tip": "Use አ- when you perform the direct action on an object; use አስ- when you act as the commissioner or boss who delegates the task."
+ },
+ {
+  "id": "am-b2-reciprocal-stems-and-reduplication",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#D97706",
+  "emoji": "🔄",
+  "title": "Reciprocal and Frequentative Stems: Reduplication",
+  "subtitle": "Expressing mutual exchange and repeated actions through stem internal reduplication",
+  "color": "#F59E0B",
+  "bg": "#FFFBEB",
+  "keyPoint": "Reduplicating the penultimate root consonant with a lengthened 'a' vowel produces frequentative or reciprocal verb stems.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Stem Formula",
+    "Amharic Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Simple Base",
+      "C1əC2C3ə",
+      "ሰበረ",
+      "He broke"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Frequentative Active",
+      "C1ə-C2a-C2C3ə",
+      "ሰባበረ",
+      "He shattered repeatedly"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Reciprocal Stem",
+      "ተ-C1aC2C3u",
+      "ተገደሉ",
+      "They killed one another"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Frequentative Reciprocal",
+      "ተ-C1əC2aC2C3u",
+      "ተሰባበሩ",
+      "They shattered to pieces"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Mutual Reciprocal Interaction",
+    "example": "ጓደኛሞች መንገድ ላይ ተያዩ።",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Intensive Repeated Crushing/Breaking",
+    "example": "ድንጋዩ መኪናውን ሰባበረው።",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Collective Interaction Among Groups",
+    "example": "ተማሪዎቹ በክፍል ውስጥ ተነጋገሩ።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ሁለቱ ሰዎች በመንገድ ላይ ተደባደቡ።",
+    "ko": "",
+    "highlight": "ተደባደቡ"
+   },
+   {
+    "en": "ብርጭቆው ወድቆ ተሰባበረ።",
+    "ko": "",
+    "highlight": "ተሰባበረ"
+   },
+   {
+    "en": "ትላንት ማታ በስልክ ተነጋገሩ።",
+    "ko": "",
+    "highlight": "ተነጋገሩ"
+   },
+   {
+    "en": "ልጆቹ ኳስ ተቀባበሉ።",
+    "ko": "",
+    "highlight": "ተቀባበሉ"
+   },
+   {
+    "en": "እነሱ በፍቅር ተያዩ።",
+    "ko": "",
+    "highlight": "ተያዩ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "እነሱ እርስ በእርስ ገደሉ ሰዎችን።",
+    "right": "እነሱ ተገዳደሉ / ተጋደሉ።",
+    "note": "Reciprocal meaning is encoded in the verb with stem vowel lengthening and ተ- prefixation, not by inserting wordy analytical phrases alone."
+   },
+   {
+    "wrong": "ብርጭቆው ተሰበረ ተሰበረ።",
+    "right": "ብርጭቆው ተሰባበረ።",
+    "note": "Do not repeat the entire verb word; Amharic reduplicates the internal consonant (ተሰባበረ) for frequentative shattering."
+   },
+   {
+    "wrong": "ተማሪዎቹ ተናገሩ።",
+    "right": "ተማሪዎቹ ተነጋገሩ።",
+    "note": "ተናገሩ means 'they spoke'; mutual conversation requires the frequentative reciprocal stem ተነጋገሩ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which verb expresses that two or more people 'helped each other'?",
+    "options": [
+     "ተረዱ",
+     "ተረዳዱ",
+     "አረዱ",
+     "ረዳዱ"
+    ],
+    "answer": 1,
+    "explanation": "The reciprocal frequentative form of ረዳ is ተረዳዱ (they helped one another)."
+   },
+   {
+    "question": "What is the meaning of 'ተሰባበረ' compared to 'ተሰበረ'?",
+    "options": [
+     "It was repaired",
+     "It was broken once",
+     "It shattered into numerous pieces",
+     "It did not break"
+    ],
+    "answer": 2,
+    "explanation": "Consonant reduplication (ባ-በ) intensifies the action into a repeated, thorough shattering."
+   },
+   {
+    "question": "Choose the correct Amharic verb for 'They greeted each other':",
+    "options": [
+     "ተሰላመቱ",
+     "ሰላም አደረጉ",
+     "ሰላም ሆኑ",
+     "አሰላመቱ"
+    ],
+    "answer": 0,
+    "explanation": "The reciprocal form of greeting mutually is ተሰላመቱ (from ሰላም/ተሳለሙ)."
+   },
+   {
+    "question": "Complete: ሁለቱ ወንድማማቾች እጅ ለእጅ ___ (held each other's hands).",
+    "options": [
+     "ያዙ",
+     "ተያዙ",
+     "ተያያዙ",
+     "አያያዙ"
+    ],
+    "answer": 2,
+    "explanation": "Reciprocal mutual clasping/holding uses the reduplicated reciprocal ተያያዙ."
+   }
+  ],
+  "tip": "Notice the distinct 'a' vowel vowel-glide in the middle of the stem: C1-a-C2 denotes mutual interaction, while reduplicating (C2-a-C2) adds intensive repetition."
+ },
+ {
+  "id": "am-b2-jussive-imperative-and-negative-vetitive",
+  "level": "b2",
+  "category": "modals",
+  "categoryColor": "#7C3AED",
+  "emoji": "⛔",
+  "title": "Jussive Mood and the Prohibitive Vetitive (አት-)",
+  "subtitle": "Forming direct commands, third-person wishes, and negative prohibitions",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "While positive 2nd-person commands use the imperative stem, negative prohibitions (vetitive) combine አት- (at-) with the reduced jussive stem.",
+  "structure": {
+   "headers": [
+    "Mood / Polarity",
+    "Pattern Formula",
+    "Amharic Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Positive Imperative (2ms)",
+      "Stem CCəC",
+      "ስበር",
+      "Break!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Vetitive / Prohibitive (2ms)",
+      "አት- + Jussive",
+      "አትስበር",
+      "Do not break!"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3rd Person Jussive (3ms)",
+      "ይ- + Jussive",
+      "ይስበር",
+      "Let him break"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Jussive (3ms)",
+      "አይ- + Jussive",
+      "አይስበር",
+      "Let him not break"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Prohibitive Command (Don't!)",
+    "example": "እባክህ በሩን አትክፈት።",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Wish / Permission (Let him/them)",
+    "example": "ፈተናውን በሰላም ይጨርሱ።",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Polite Negative Injunction",
+    "example": "ምስጢሩን ለማንም እንዳትነግር።",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "እባክህን እዚህ አትቁም።",
+    "ko": "",
+    "highlight": "አትቁም"
+   },
+   {
+    "en": "እግዚአብሔር ይማርህ።",
+    "ko": "",
+    "highlight": "ይማርህ"
+   },
+   {
+    "en": "ወደ ውጭ አትሂዱ።",
+    "ko": "",
+    "highlight": "አትሂዱ"
+   },
+   {
+    "en": "ስራውን ቶሎ ይጨርስ።",
+    "ko": "",
+    "highlight": "ይጨርስ"
+   },
+   {
+    "en": "ውሸት አትናገሩ።",
+    "ko": "",
+    "highlight": "አትናገሩ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "አልሂድ!",
+    "right": "አትሂድ!",
+    "note": "To say 'Don't go!', use the 2nd person vetitive prefix አት-, not the past negative prefix አል-."
+   },
+   {
+    "wrong": "አትስበረው እንዳትል!",
+    "right": "አትስበረው!",
+    "note": "The vetitive prefix አት- already means 'do not'; do not compound it with redundant prohibitive particles."
+   },
+   {
+    "wrong": "አትሂድ (to a female)",
+    "right": "አትሂጂ!",
+    "note": "When addressing a female, the vetitive retains the 2nd person feminine palatalized ending -i/-ji: አትሂጂ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you tell a female 'Do not open (the door)!'?",
+    "options": [
+     "አትክፈት",
+     "አትክፈቺ",
+     "አይክፈት",
+     "አትክፈቱ"
+    ],
+    "answer": 1,
+    "explanation": "2nd person singular feminine takes the palatalized jussive ending: አትክፈቺ."
+   },
+   {
+    "question": "What does the jussive phrase 'ይግባ' mean?",
+    "options": [
+     "He entered",
+     "Let him enter / May he enter",
+     "He will not enter",
+     "Do not enter!"
+    ],
+    "answer": 1,
+    "explanation": "ይ- prefixed to the jussive stem ገባ forms the 3rd person masculine wish/command 'Let him enter'."
+   },
+   {
+    "question": "Choose the plural prohibition meaning 'Do not eat!':",
+    "options": [
+     "አትብላ",
+     "አትብይ",
+     "አይብሉ",
+     "አትብሉ"
+    ],
+    "answer": 3,
+    "explanation": "Plural 2nd person prohibitive prefix is አት- with plural ending -u: አትብሉ."
+   },
+   {
+    "question": "Complete the blessing: እግዚአብሔር ___ (May God give you health/life).",
+    "options": [
+     "ይስጥህ",
+     "ሰጠህ",
+     "አይስጥህ",
+     "ትሰጣለህ"
+    ],
+    "answer": 0,
+    "explanation": "Blessings standardly employ the 3rd person masculine jussive: ይስጥህ (May He give you)."
+   }
+  ],
+  "tip": "Never negate an imperative by adding አል-. Prohibitions always require replacing the imperative prefix with አት- (or እንዳ- in subordinates) attached to the jussive stem."
+ }
+]

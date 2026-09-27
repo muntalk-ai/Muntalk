@@ -1,0 +1,3348 @@
+[
+ {
+  "id": "ur-a1-sov-word-order-and-copula",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🏛️",
+  "title": "SOV Word Order and the Copula (ہونا)",
+  "subtitle": "Build basic Urdu sentences with Subject-Object-Verb order and the verb 'to be'",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Urdu strictly places verbs at the very end of clauses, with the copula ہونا (hona) conjugating to match person and number.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Present Copula",
+    "Past Copula (M/F)",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "میں",
+      "ہوں",
+      "تھا / تھی",
+      "I am / was"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "یہ / وہ (واحد)",
+      "ہے",
+      "تھا / تھی",
+      "He/She/It is / was"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ہم / آپ / یہ / وہ (جمع)",
+      "ہیں",
+      "تھے / تھیں",
+      "We/You/They are / were"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "تم",
+      "ہو",
+      "تھے / تھیں",
+      "You (informal) are / were"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Stating Identity or Profession",
+    "example": "میں استاد ہوں۔",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Describing Conditions or Adjectives",
+    "example": "یہ کتاب اچھی ہے۔",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Past State of Being",
+    "example": "وہ کل گھر پر تھا۔",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "احمد طالب علم ہے۔",
+    "ko": "",
+    "highlight": "ہے"
+   },
+   {
+    "en": "میں کراچی میں ہوں۔",
+    "ko": "",
+    "highlight": "ہوں"
+   },
+   {
+    "en": "ہم کمرے میں تھے۔",
+    "ko": "",
+    "highlight": "تھے"
+   },
+   {
+    "en": "کیا آپ ٹھیک ہیں؟",
+    "ko": "",
+    "highlight": "ہیں"
+   },
+   {
+    "en": "وہ لڑکی اداس تھی۔",
+    "ko": "",
+    "highlight": "تھی"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "میں ہوں استاد۔",
+    "right": "میں استاد ہوں۔",
+    "note": "Urdu requires the verb/copula at the very end of the sentence (SOV), never in the middle like English SVO."
+   },
+   {
+    "wrong": "میں طالب علم ہے۔",
+    "right": "میں طالب علم ہوں۔",
+    "note": "The pronoun میں (I) must pair with ہوں in the present tense, never ہے۔"
+   },
+   {
+    "wrong": "لڑکیاں حاضر تھے",
+    "right": "لڑکیاں حاضر تھیں",
+    "note": "Feminine plural subjects require the nasalized feminine past copula تھیں۔"
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I am a doctor. -> میں ڈاکٹر ___",
+    "options": [
+     "ہوں",
+     "ہے",
+     "ہو",
+     "ہیں"
+    ],
+    "answer": 0,
+    "explanation": "The first-person pronoun میں requires the copula ہوں."
+   },
+   {
+    "question": "The book was on the table. -> کتاب میز پر ___",
+    "options": [
+     "تھا",
+     "تھے",
+     "تھی",
+     "تھیں"
+    ],
+    "answer": 2,
+    "explanation": "کتاب (book) is grammatically feminine singular, requiring تھی in the past."
+   },
+   {
+    "question": "Where are you (formal)? -> آپ کہاں ___؟",
+    "options": [
+     "ہوں",
+     "ہو",
+     "تھا",
+     "ہیں"
+    ],
+    "answer": 3,
+    "explanation": "The formal pronoun آپ always takes the plural honorific copula ہیں۔"
+   },
+   {
+    "question": "He is a student. -> وہ طالب علم ___",
+    "options": [
+     "ہوں",
+     "ہے",
+     "تھیں",
+     "ہو"
+    ],
+    "answer": 1,
+    "explanation": "Singular third person وہ takes the copula ہے in the present tense."
+   }
+  ],
+  "tip": "Always position the finite verb as the absolute anchor at the end of your sentence."
+ },
+ {
+  "id": "ur-a1-grammatical-gender-and-inflection",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🚻",
+  "title": "Grammatical Gender and Marked Nouns",
+  "subtitle": "Differentiate masculine and feminine nouns and form standard direct plurals",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Every Urdu noun has gender: marked masculine nouns ending in -a/-ah change to -e in the plural, while unmarked masculine nouns remain unchanged.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Singular Ending",
+    "Plural Ending",
+    "Examples"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Marked Masculine",
+      "ا / ہ (-a)",
+      "ے (-e)",
+      "لڑکا -> لڑکے"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Unmarked Masculine",
+      "Consonant",
+      "No Change",
+      "گھر -> گھر"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Marked Feminine",
+      "ی (-i)",
+      "یاں (-iyan)",
+      "لڑکی -> لڑکیاں"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Unmarked Feminine",
+      "Consonant",
+      "یں (-en)",
+      "میز -> میزیں"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Marked Masculine Pluralization",
+    "example": "کمرہ بڑا ہے لیکن کمرے بڑے ہیں۔",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Feminine Pluralization with -i",
+    "example": "ایک گاڑی، دو گاڑیاں",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Unmarked Consonant Feminines",
+    "example": "یہ کتابیں نئی ہیں۔",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "یہ نیا کمرہ ہے۔",
+    "ko": "",
+    "highlight": "کمرہ"
+   },
+   {
+    "en": "یہ نئے کمرے ہیں۔",
+    "ko": "",
+    "highlight": "کمرے"
+   },
+   {
+    "en": "میرے پاس دو گاڑیاں ہیں۔",
+    "ko": "",
+    "highlight": "گاڑیاں"
+   },
+   {
+    "en": "سب دروازے کھلے ہیں۔",
+    "ko": "",
+    "highlight": "دروازے"
+   },
+   {
+    "en": "کتابیں میز پر ہیں۔",
+    "ko": "",
+    "highlight": "کتابیں"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "دو گھراں",
+    "right": "دو گھر",
+    "note": "Unmarked masculine nouns ending in consonants do not take suffixes in the direct plural."
+   },
+   {
+    "wrong": "دو لڑکیں",
+    "right": "دو لڑکیاں",
+    "note": "Feminine nouns ending in -i form plurals with -iyan (یاں), not -en (یں)."
+   },
+   {
+    "wrong": "یہ کتابیں اچھا ہیں۔",
+    "right": "یہ کتابیں اچھی ہیں۔",
+    "note": "Adjectives and verbs must agree with feminine plural nouns."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the plural of لڑکا (boy)?",
+    "options": [
+     "لڑکیاں",
+     "لڑکے",
+     "لڑکوں",
+     "لڑکان"
+    ],
+    "answer": 1,
+    "explanation": "Marked masculine nouns ending in alif replace the ending with bari ye (ے) in the direct plural."
+   },
+   {
+    "question": "What is the plural of میز (feminine table)?",
+    "options": [
+     "میزیں",
+     "میزے",
+     "میزیاں",
+     "میزوں"
+    ],
+    "answer": 0,
+    "explanation": "Feminine nouns ending in consonants take -en (یں) in the direct plural."
+   },
+   {
+    "question": "What is the plural of سیب (masculine apple)?",
+    "options": [
+     "سیبے",
+     "سیبیں",
+     "سیب",
+     "سیبیاں"
+    ],
+    "answer": 2,
+    "explanation": "Unmarked masculine nouns ending in a consonant stay unchanged in the direct plural."
+   },
+   {
+    "question": "What is the plural of بیٹی (daughter)?",
+    "options": [
+     "بیٹیاں",
+     "بیٹیں",
+     "بیٹے",
+     "بیٹیوں"
+    ],
+    "answer": 0,
+    "explanation": "Feminine nouns ending in choti ye take -iyan (یاں)."
+   }
+  ],
+  "tip": "If a masculine noun ends in alif or choti he, change it to bari ye for the plural; if it ends in a consonant, leave it alone!"
+ },
+ {
+  "id": "ur-a1-direct-and-oblique-noun-cases",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🔄",
+  "title": "Direct vs. Oblique Cases in Nouns",
+  "subtitle": "Inflect nouns and adjectives when followed by postpositions",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "When any noun is followed by a postposition, it shifts into the oblique case: singular marked masculines become -e, and all plurals take -on.",
+  "structure": {
+   "headers": [
+    "Noun Class",
+    "Direct Singular",
+    "Oblique Singular",
+    "Oblique Plural"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Marked Masc. (لڑکا)",
+      "لڑکا",
+      "لڑکے (کو)",
+      "لڑکوں (کو)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Unmarked Masc. (شہر)",
+      "شہر",
+      "شہر (میں)",
+      "شہروں (میں)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Marked Fem. (لڑکی)",
+      "لڑکی",
+      "لڑکی (سے)",
+      "لڑکیوں (سے)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Unmarked Fem. (میز)",
+      "میز",
+      "میز (پر)",
+      "میزوں (پر)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Singular Marked Masculine Oblique",
+    "example": "بڑے لڑکے کو بلاؤ۔",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Plural Oblique with Postposition",
+    "example": "کتابوں میں کیا ہے؟",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Modifying Adjective Agreement",
+    "example": "اس نئے کمرے میں چلو۔",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "لڑکے نے خط لکھا۔",
+    "ko": "",
+    "highlight": "لڑکے نے"
+   },
+   {
+    "en": "میں اس کمرے میں رہتا ہوں۔",
+    "ko": "",
+    "highlight": "کمرے میں"
+   },
+   {
+    "en": "ان لڑکوں کو پانی دو۔",
+    "ko": "",
+    "highlight": "لڑکوں کو"
+   },
+   {
+    "en": "گاڑیوں کی رفتار تیز تھی۔",
+    "ko": "",
+    "highlight": "گاڑیوں کی"
+   },
+   {
+    "en": "پرانے گھروں سے آواز آئی۔",
+    "ko": "",
+    "highlight": "گھروں سے"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "لڑکا کو بلاؤ۔",
+    "right": "لڑکے کو بلاؤ۔",
+    "note": "Postposition کو forces marked masculine لڑکا into its singular oblique form لڑکے."
+   },
+   {
+    "wrong": "میزیں پر کتاب ہے",
+    "right": "میزوں پر کتاب ہے",
+    "note": "Plural nouns before postpositions must end in the oblique plural marker -وں (-on), never direct -یں."
+   },
+   {
+    "wrong": "بڑا کمرے میں",
+    "right": "بڑے کمرے میں",
+    "note": "Marked adjectives modifying an oblique noun must also inflect to the oblique form."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill the blank: ___ کو کھانا دو (Give food to the boy).",
+    "options": [
+     "لڑکا",
+     "لڑکے",
+     "لڑکوں",
+     "لڑکی"
+    ],
+    "answer": 1,
+    "explanation": "Before the postposition کو, singular marked masculine لڑکا becomes oblique لڑکے."
+   },
+   {
+    "question": "Fill the blank: ___ پر کتابیں رکھی ہیں (Books are on the tables).",
+    "options": [
+     "میزیں",
+     "میزے",
+     "میزوں",
+     "میز"
+    ],
+    "answer": 2,
+    "explanation": "In the plural oblique before پر, all nouns take the ending -وں (mezon)."
+   },
+   {
+    "question": "Choose the correct phrase: 'In the big room'",
+    "options": [
+     "بڑا کمرہ میں",
+     "بڑا کمرے میں",
+     "بڑے کمرے میں",
+     "بڑے کمرہ میں"
+    ],
+    "answer": 2,
+    "explanation": "Both the marked adjective (بڑا -> بڑے) and noun (کمرہ -> کمرے) must turn oblique before میں."
+   },
+   {
+    "question": "What is the oblique plural of دوست (friend)?",
+    "options": [
+     "دوستیں",
+     "دوستوں",
+     "دوستے",
+     "دوستاں"
+    ],
+    "answer": 1,
+    "explanation": "All Urdu nouns, regardless of gender, take -وں in the oblique plural."
+   }
+  ],
+  "tip": "Whenever you spot a postposition like میں, پر, سے, or کو, check the preceding noun immediately—it cannot stay in its direct form!"
+ },
+ {
+  "id": "ur-a1-core-postpositions-and-possessive-ka",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "📍",
+  "title": "Postpositions and the Genitive (کا / کے / کی)",
+  "subtitle": "Master Urdu postpositions and genitive agreement with the possessed noun",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Urdu uses postpositions after nouns instead of prepositions, and the genitive marker کا agrees in gender, number, and case with the possessed object.",
+  "structure": {
+   "headers": [
+    "Possessed Item",
+    "Genitive Form",
+    "Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masc. Sing. Direct",
+      "کا (ka)",
+      "احمد کا گھر",
+      "Ahmad's house"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masc. Plural / Oblique",
+      "کے (ke)",
+      "احمد کے دوست",
+      "Ahmad's friends"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Feminine (All)",
+      "کی (ki)",
+      "احمد کی گاڑی",
+      "Ahmad's car"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Core Postpositions",
+      "میں, پر, سے, تک, کو",
+      "گھر سے اسکول تک",
+      "From home to school"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Spatial Relationships",
+    "example": "بلی میز کے نیچے ہے۔",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Possession Agreement",
+    "example": "یہ استاد کی کتاب ہے۔",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Origin and Destination",
+    "example": "لاہور سے اسلام آباد تک",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "یہ علی کا قلم ہے۔",
+    "ko": "",
+    "highlight": "کا"
+   },
+   {
+    "en": "فاطمہ کے بھائی آئے ہیں۔",
+    "ko": "",
+    "highlight": "کے"
+   },
+   {
+    "en": "وہ بازار سے آیا۔",
+    "ko": "",
+    "highlight": "سے"
+   },
+   {
+    "en": "اس کی بات سنو۔",
+    "ko": "",
+    "highlight": "کی"
+   },
+   {
+    "en": "گاڑی سڑک پر ہے۔",
+    "ko": "",
+    "highlight": "پر"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "احمد کا گاڑی",
+    "right": "احمد کی گاڑی",
+    "note": "کا/کے/کی agrees with the possessed object (گاڑی is feminine), NOT with the possessor (احمد)."
+   },
+   {
+    "wrong": "میں کمرہ",
+    "right": "کمرے میں",
+    "note": "Urdu has postpositions, meaning they follow the noun, never precede it."
+   },
+   {
+    "wrong": "علی کے بہن",
+    "right": "علی کی بہن",
+    "note": "Feminine possessed nouns take کی, regardless of whether the sister is singular or plural."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "This is Tariq's sister. -> یہ طارق ___ بہن ہے۔",
+    "options": [
+     "کا",
+     "کے",
+     "کی",
+     "کو"
+    ],
+    "answer": 2,
+    "explanation": "بہن (sister) is feminine singular, so the possessive particle must be کی."
+   },
+   {
+    "question": "From morning until evening. -> صبح ___ شام تک۔",
+    "options": [
+     "میں",
+     "سے",
+     "پر",
+     "کا"
+    ],
+    "answer": 1,
+    "explanation": "The postposition meaning 'from' is سے."
+   },
+   {
+    "question": "Asim's sons are intelligent. -> عاصم ___ بیٹے ذہین ہیں۔",
+    "options": [
+     "کے",
+     "کا",
+     "کی",
+     "کو"
+    ],
+    "answer": 0,
+    "explanation": "بیٹے (sons) is masculine plural, requiring کے."
+   },
+   {
+    "question": "The water is in the glass. -> پانی گلاس ___ ہے۔",
+    "options": [
+     "پر",
+     "سے",
+     "تک",
+     "میں"
+    ],
+    "answer": 3,
+    "explanation": "The postposition meaning 'in' or 'inside' is میں."
+   }
+  ],
+  "tip": "To choose between کا, کے, and کی, ignore the possessor entirely and look only at the gender and number of the item owned."
+ },
+ {
+  "id": "ur-a1-habitual-present-aspect",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#DC2626",
+  "emoji": "⏰",
+  "title": "Present Habitual Aspect (تا / تی / تے ہے)",
+  "subtitle": "Express regular routines and universal truths with the habitual aspect",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "The present habitual combines the verb root plus aspectual suffix (-ta, -te, -ti) with the present copula (hona) agreeing in gender and number.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Suffix Pattern",
+    "Example",
+    "Translation"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masc. Sing. (وہ / میں)",
+      "روٹ + تا + ہے / ہوں",
+      "وہ پڑھتا ہے",
+      "He reads"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Fem. Sing. (وہ / میں)",
+      "روٹ + تی + ہے / ہوں",
+      "وہ پڑھتی ہے",
+      "She reads"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masc. Plur. (ہم / وہ / آپ)",
+      "روٹ + تے + ہیں",
+      "وہ پڑھتے ہیں",
+      "They (m.) read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Fem. Plur. (ہم / وہ)",
+      "روٹ + تی + ہیں",
+      "وہ پڑھتی ہیں",
+      "They (f.) read"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#B91C1C",
+    "label": "Daily Routines",
+    "example": "میں روزانہ ورزش کرتا ہوں۔",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "General Truths",
+    "example": "سورج مشرق سے نکلتا ہے۔",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Permanent States & Occupations",
+    "example": "وہ انگلینڈ میں رہتے ہیں۔",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "علی صبح چائے پیتا ہے۔",
+    "ko": "",
+    "highlight": "پیتا ہے"
+   },
+   {
+    "en": "سارہ روزانہ اسکول جاتی ہے۔",
+    "ko": "",
+    "highlight": "جاتی ہے"
+   },
+   {
+    "en": "ہم اردو بولتے ہیں۔",
+    "ko": "",
+    "highlight": "بولتے ہیں"
+   },
+   {
+    "en": "بچے پارک میں کھیلتے ہیں۔",
+    "ko": "",
+    "highlight": "کھیلتے ہیں"
+   },
+   {
+    "en": "لڑکیاں گانا گاتی ہیں۔",
+    "ko": "",
+    "highlight": "گاتی ہیں"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "وہ جاتا",
+    "right": "وہ جاتا ہے۔",
+    "note": "Urdu habitual present requires the copula ہے at the end; omitting it produces a past habitual or conditional meaning."
+   },
+   {
+    "wrong": "لڑکی خط لکھتا ہے۔",
+    "right": "لڑکی خط لکھتی ہے۔",
+    "note": "The participle suffix must agree with the feminine subject: -تی, not -تا."
+   },
+   {
+    "wrong": "ہم پانی پیتے ہو",
+    "right": "ہم پانی پیتے ہیں۔",
+    "note": "The pronoun ہم requires ہیں as the auxiliary, not ہو."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "He writes a letter. -> وہ خط ___",
+    "options": [
+     "لکھتی ہے",
+     "لکھتا ہے",
+     "لکھتے ہیں",
+     "لکھتا ہوں"
+    ],
+    "answer": 1,
+    "explanation": "A masculine singular third-person subject takes the participle suffix تا with ہے."
+   },
+   {
+    "question": "We speak Urdu. -> ہم اردو ___",
+    "options": [
+     "بولتے ہیں",
+     "بولتا ہوں",
+     "بولتی ہے",
+     "بولتے ہو"
+    ],
+    "answer": 0,
+    "explanation": "The first-person plural ہم takes the masculine/default plural participle تے and auxiliary ہیں."
+   },
+   {
+    "question": "Fatima drinks water. -> فاطمہ پانی ___",
+    "options": [
+     "پیتا ہے",
+     "پیتے ہیں",
+     "پیتی ہے",
+     "پیتی ہوں"
+    ],
+    "answer": 2,
+    "explanation": "فاطمہ is feminine singular, requiring the participle پیتی with copula ہے۔"
+   },
+   {
+    "question": "Where do you (informal) live? -> تم کہاں ___؟",
+    "options": [
+     "رہتا ہوں",
+     "رہتے ہیں",
+     "رہتی ہے",
+     "رہتے ہو"
+    ],
+    "answer": 3,
+    "explanation": "The informal pronoun تم takes the participle suffix تے and the matching auxiliary ہو."
+   }
+  ],
+  "tip": "Think of the formula: [Verb Root] + [تا / تی / تے] + [Present Copula]. Never forget the copula at the end!"
+ },
+ {
+  "id": "ur-a1-imperatives-and-politeness-levels",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🗣️",
+  "title": "Three Tiers of Imperatives (Tu, Tum, Aap)",
+  "subtitle": "Direct, familiar, and respectful commands in Urdu",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Urdu imperatives change form based on three levels of politeness: the bare stem for intimate 'tu', stem plus '-o' for familiar 'tum', and stem plus '-iye' for respectful 'aap'.",
+  "structure": {
+   "headers": [
+    "Pronoun Tier",
+    "Formation Rule",
+    "Verb Example (بیٹھنا)",
+    "Politeness Level"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "تو (Tu)",
+      "Bare Root",
+      "بیٹھ",
+      "Intimate / Blunt"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "تم (Tum)",
+      "Root + و (-o)",
+      "بیٹھو",
+      "Familiar / Informal"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "آپ (Aap)",
+      "Root + یئے (-iye)",
+      "بیٹھیے",
+      "Polite / Respectful"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "آپ (Aap - Future)",
+      "Infinitive + گا / گی",
+      "بیٹھئے گا",
+      "Ultra-polite Request"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Polite Instruction to Elders/Strangers",
+    "example": "براہ کرم یہاں تشریف رکھیے۔",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Casual Request to Friends or Peers",
+    "example": "دروازہ بند کرو۔",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Intimate or High-Urgency Command",
+    "example": "ادھر سن!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "آپ چائے پیجیے۔",
+    "ko": "",
+    "highlight": "پیجیے"
+   },
+   {
+    "en": "تم یہ کتاب پڑھو۔",
+    "ko": "",
+    "highlight": "پڑھو"
+   },
+   {
+    "en": "یہاں آ!",
+    "ko": "",
+    "highlight": "آ"
+   },
+   {
+    "en": "اپنا سبق یاد کرو۔",
+    "ko": "",
+    "highlight": "کرو"
+   },
+   {
+    "en": "کل وقت پر آئیے گا۔",
+    "ko": "",
+    "highlight": "آئیے گا"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "آپ ادھر آؤ۔",
+    "right": "آپ ادھر آئیے۔",
+    "note": "Pair the polite pronoun 'aap' exclusively with the '-iye' ending, not the informal 'tum' ending '-o'."
+   },
+   {
+    "wrong": "تم خط لکھئے۔",
+    "right": "تم خط لکھو۔",
+    "note": "Mixing the familiar pronoun 'tum' with the honorific imperative '-iye' is grammatically mismatched."
+   },
+   {
+    "wrong": "مت جاؤ۔ نہیں جاؤ۔",
+    "right": "مت جاؤ۔",
+    "note": "Use 'مت' (mat) or 'نہ' (na) to negate imperative commands, never 'نہیں' (nahin)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Addressing an elder politely: 'Please sit down.' (آپ یہاں ___۔)",
+    "options": [
+     "بیٹھو",
+     "بیٹھ",
+     "بیٹھیے",
+     "بیٹھتا"
+    ],
+    "answer": 2,
+    "explanation": "The respectful pronoun 'آپ' requires the honorific imperative suffix '-iye', yielding 'بیٹھیے'."
+   },
+   {
+    "question": "Speaking to a close friend: 'Listen to me!' (میری بات ___۔)",
+    "options": [
+     "سنو",
+     "سنیے",
+     "سن",
+     "سنتا"
+    ],
+    "answer": 0,
+    "explanation": "For peers and friends (tum-level), add '-o' to the bare stem 'سن' to make 'سنو'."
+   },
+   {
+    "question": "Negative command to a peer: 'Do not go there!' (وہاں ___ جاؤ۔)",
+    "options": [
+     "نہیں",
+     "مت",
+     "بے",
+     "نا"
+    ],
+    "answer": 1,
+    "explanation": "Standard prohibitive negative commands in Urdu use 'مت' (or 'نہ') rather than 'نہیں'."
+   },
+   {
+    "question": "Ultra-polite future request to a guest: 'Please come tomorrow.' (کل ضرور ___۔)",
+    "options": [
+     "آؤ",
+     "آ",
+     "آتے",
+     "آئیے گا"
+    ],
+    "answer": 3,
+    "explanation": "Adding '-ga' to the honorific imperative creates an extremely polite future request: 'آئیے گا'."
+   }
+  ],
+  "tip": "Four very common verbs have slightly irregular polite forms: 'کیجیے' (kijiye - from karna), 'دیجیے' (dijiye - from dena), 'لیجیے' (lijiye - from lena), and 'پیجیے' (pijiye - from pina)."
+ },
+ {
+  "id": "ur-a2-ergative-alignment-with-ne",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⚖️",
+  "title": "Split Ergativity with the Postposition 'Ne'",
+  "subtitle": "How transitive past actions shift agreement to the object",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "In perfective tenses of transitive verbs, the subject takes the postposition 'ne' (نے) and the verb agrees in gender and number with the direct object.",
+  "structure": {
+   "headers": [
+    "Subject + نے",
+    "Direct Object",
+    "Verb Form",
+    "Agreement Target"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "علی نے (M)",
+      "سیب (M.Sg)",
+      "کھایا",
+      "Agrees with سیب (M.Sg)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "علی نے (M)",
+      "روٹی (F.Sg)",
+      "کھائی",
+      "Agrees with روٹی (F.Sg)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "لڑکی نے (F)",
+      "کتابیں (F.Pl)",
+      "پڑھیں",
+      "Agrees with کتابیں (F.Pl)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ہم نے (Pl)",
+      "خط (M.Sg) کو",
+      "پڑھا",
+      "Default Neutral (M.Sg)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Transitive Subject with Masculine Object",
+    "example": "احمد نے ایک نیا مکان خریدا۔",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Transitive Subject with Feminine Object",
+    "example": "فاطمہ نے مزیدار چائے بنائی۔",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Object Marked with 'Ko' (Default Neutral)",
+    "example": "بچوں نے کتاب کو دیکھا۔",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "اس نے خط لکھا۔",
+    "ko": "",
+    "highlight": "اس نے"
+   },
+   {
+    "en": "عائشہ نے کہانیاں پڑھیں۔",
+    "ko": "",
+    "highlight": "پڑھیں"
+   },
+   {
+    "en": "ہم نے پانی پیا۔",
+    "ko": "",
+    "highlight": "پیا"
+   },
+   {
+    "en": "استاد نے سبق پڑھایا۔",
+    "ko": "",
+    "highlight": "استاد نے"
+   },
+   {
+    "en": "تم نے روٹی کھائی۔",
+    "ko": "",
+    "highlight": "کھائی"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "وہ خط لکھا۔",
+    "right": "اس نے خط لکھا۔",
+    "note": "Transitive past verbs require 'نے' on the subject, triggering the oblique pronoun form ('اس نے', not 'وہ')."
+   },
+   {
+    "wrong": "لڑکی نے سیب کھائی۔",
+    "right": "لڑکی نے سیب کھایا۔",
+    "note": "The verb must agree with the object 'سیب' (masculine), not the feminine subject marked by 'نے'."
+   },
+   {
+    "wrong": "میں نے گیا تھا۔",
+    "right": "میں گیا تھا۔",
+    "note": "Intransitive verbs like 'جانا' (to go) never take 'نے', even in the past tense."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Ahmad wrote a letter: 'احمد ___ خط لکھا۔'",
+    "options": [
+     "کو",
+     "نے",
+     "سے",
+     "کا"
+    ],
+    "answer": 1,
+    "explanation": "Transitive verbs in perfective aspect require the ergative subject marker 'نے'."
+   },
+   {
+    "question": "Sara read the books: 'سارہ نے کتابیں ___۔'",
+    "options": [
+     "پڑھی",
+     "پڑھا",
+     "پڑھیں",
+     "پڑھے"
+    ],
+    "answer": 2,
+    "explanation": "The verb agrees with the plural feminine direct object 'کتابیں', so it takes the feminine plural ending 'پڑھیں'."
+   },
+   {
+    "question": "He drank water: '___ پانی پیا۔'",
+    "options": [
+     "وہ نے",
+     "اس نے",
+     "وہ",
+     "اس کو"
+    ],
+    "answer": 1,
+    "explanation": "Adding 'نے' to the third-person pronoun 'وہ' changes it into its oblique case: 'اس نے'."
+   },
+   {
+    "question": "Ali ate a chapati (feminine): 'علی نے روٹی ___۔'",
+    "options": [
+     "کھائی",
+     "کھایا",
+     "کھائے",
+     "کھائیں"
+    ],
+    "answer": 0,
+    "explanation": "Because 'روٹی' is feminine singular and unmarked by 'کو', the verb agrees with it: 'کھائی'."
+   }
+  ],
+  "tip": "If the direct object also takes 'کو' (ko), the verb gets blocked from agreeing with both subject and object, defaulting automatically to masculine singular ('-a')."
+ },
+ {
+  "id": "ur-a2-dative-subjects-ko-constructions",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🎯",
+  "title": "Dative Subject Constructions with 'Ko'",
+  "subtitle": "Expressing feelings, physical needs, and obligations",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "In Urdu experiential sentences, the logical subject is marked with 'ko' (کو), and the verb or adjective agrees with the grammatical stimulus or defaults to masculine singular.",
+  "structure": {
+   "headers": [
+    "Experiencer + کو",
+    "Stimulus / Condition",
+    "Predicate",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "مجھے (Mujhe)",
+      "بھوک (F)",
+      "لگی ہے",
+      "I feel hungry"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "اس کو (Us ko)",
+      "بخار (M)",
+      "ہے",
+      "He/she has a fever"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ہم کو (Ham ko)",
+      "جانا (M.Inf)",
+      "چاہیے",
+      "We ought to go"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "آپ کو (Aap ko)",
+      "یہ بات (F)",
+      "معلوم ہے",
+      "You know this matter"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Physical and Emotional States",
+    "example": "بچے کو پیاس لگی ہے۔",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Obligation or Necessity with چاہیے",
+    "example": "آپ کو آرام کرنا چاہیے۔",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Knowledge, Likes, and Needs",
+    "example": "مجھے اردو زبان پسند ہے۔",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "مجھے کتاب چاہیے۔",
+    "ko": "",
+    "highlight": "مجھے"
+   },
+   {
+    "en": "اس کو بہت سردی لگ رہی ہے۔",
+    "ko": "",
+    "highlight": "اس کو"
+   },
+   {
+    "en": "علی کو سچ معلوم تھا۔",
+    "ko": "",
+    "highlight": "علی کو"
+   },
+   {
+    "en": "ہمیں اب نکلنا چاہیے۔",
+    "ko": "",
+    "highlight": "ہمیں"
+   },
+   {
+    "en": "کیا آپ کو بھوک لگی ہے؟",
+    "ko": "",
+    "highlight": "آپ کو"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "میں بھوک لگی ہے۔",
+    "right": "مجھے بھوک لگی ہے۔",
+    "note": "Feelings and bodily sensations require the dative subject pronoun 'مجھے' (or 'مجھ کو'), not the nominative 'میں'."
+   },
+   {
+    "wrong": "ہم جانا چاہیے ہے۔",
+    "right": "ہمیں جانا چاہیے۔",
+    "note": "'چاہیے' directly expresses necessity on a dative subject ('ہمیں'); do not add auxiliary 'ہے' after 'چاہیے'."
+   },
+   {
+    "wrong": "اس کو چائے پسند ہے۔ وہ چائے پسند کرتا ہے۔",
+    "right": "اس کو چائے پسند ہے۔",
+    "note": "When using the adjective 'پسند' (liked), the experiencer must be marked with 'کو'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I like this book: '___ یہ کتاب پسند ہے۔'",
+    "options": [
+     "میں",
+     "میرا",
+     "مجھے",
+     "مجھ سے"
+    ],
+    "answer": 2,
+    "explanation": "'پسند ہونا' requires a dative experiencer: 'مجھے' (or 'مجھ کو')."
+   },
+   {
+    "question": "You should study: 'آپ کو پڑھائی ___۔'",
+    "options": [
+     "چاہیے",
+     "چاہتا",
+     "ہوگا",
+     "سکتا"
+    ],
+    "answer": 0,
+    "explanation": "The invariable modal particle 'چاہیے' denotes moral obligation or advice with a dative subject."
+   },
+   {
+    "question": "He is feeling cold: 'اس کو سردی ___ ہے۔'",
+    "options": [
+     "لگا",
+     "لگے",
+     "لگی",
+     "لگیں"
+    ],
+    "answer": 2,
+    "explanation": "'سردی' (cold) is feminine singular, so the sensory verb 'لگنا' inflects to feminine singular 'لگی'."
+   },
+   {
+    "question": "Ali has a fever: '___ بخار ہے۔'",
+    "options": [
+     "علی کو",
+     "علی نے",
+     "علی سے",
+     "علی کا"
+    ],
+    "answer": 0,
+    "explanation": "Illnesses and physical symptoms are framed with the dative postposition 'کو' on the person experiencing them."
+   }
+  ],
+  "tip": "The pronouns 'میں' and 'ہم' fuse with 'کو' into elegant alternative forms: 'مجھے' (mujhe) and 'ہمیں' (hamein)."
+ },
+ {
+  "id": "ur-a2-simple-past-and-perfective-aspect",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "🕰️",
+  "title": "Perfective Aspect and Irregular Past Stems",
+  "subtitle": "Conjugating completed actions and mastering irregular roots",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "The simple past consists of the bare verb root plus the gender/number endings (-a, -i, -e, -in) without any auxiliary, but five key verbs alter their root completely.",
+  "structure": {
+   "headers": [
+    "Infinitive Root",
+    "Masculine Sg.",
+    "Feminine Sg.",
+    "Masculine Pl.",
+    "Feminine Pl."
+   ],
+   "rows": [
+    {
+     "cells": [
+      "جانا (To go)",
+      "گیا",
+      "گئی",
+      "گئے",
+      "گئیں"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "کرنا (To do)",
+      "کیا",
+      "کی",
+      "کئے / کیے",
+      "کیں"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ہونا (To be)",
+      "ہوا",
+      "ہوئی",
+      "ہوئے",
+      "ہوئیں"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "دینا (To give)",
+      "دیا",
+      "دی",
+      "دیے",
+      "دیں"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "لینا (To take)",
+      "لیا",
+      "لی",
+      "لیے",
+      "لیں"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Completed Irregular Intransitive Motion",
+    "example": "وہ کل شام کو لاہور گیا۔",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Regular Regular Perfective Actions",
+    "example": "ہم نے بازار سے پھل خریدے۔",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "State Changes with ہونا",
+    "example": "رات کو اچانک بارش ہوئی۔",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "وہ گھر گئی ہے۔ نہیں، وہ گھر گئی۔",
+    "ko": "",
+    "highlight": "گئی"
+   },
+   {
+    "en": "میں نے اپنا کام کیا۔",
+    "ko": "",
+    "highlight": "کیا"
+   },
+   {
+    "en": "امی نے مجھے تحفہ دیا۔",
+    "ko": "",
+    "highlight": "دیا"
+   },
+   {
+    "en": "کل رات بہت دیر ہوئی۔",
+    "ko": "",
+    "highlight": "ہوئی"
+   },
+   {
+    "en": "ہم نے چائے پی۔",
+    "ko": "",
+    "highlight": "پی"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "وہ کل گیا ہے تھا۔",
+    "right": "وہ کل گیا۔",
+    "note": "Simple past refers to completed single events without adding 'ہے' or 'تھا'."
+   },
+   {
+    "wrong": "اس نے کام کرنا کیا۔",
+    "right": "اس نے کام کیا۔",
+    "note": "The irregular past of 'کرنا' is simply 'کیا' (masculine) or 'کی' (feminine)."
+   },
+   {
+    "wrong": "وہ کل بازار جایا۔",
+    "right": "وہ کل بازار گیا۔",
+    "note": "The past stem of 'جانا' is fully irregular ('گیا', 'گئی', 'گئے'), not regularized as 'جایا'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Yesterday she went home: 'وہ کل گھر ___۔'",
+    "options": [
+     "جائی",
+     "گئی",
+     "گیا",
+     "گئیں"
+    ],
+    "answer": 1,
+    "explanation": "The verb 'جانا' changes to the irregular stem 'گ-', matching a feminine singular subject: 'گئی'."
+   },
+   {
+    "question": "Ali gave me a pen: 'علی نے مجھے قلم ___۔'",
+    "options": [
+     "دیا",
+     "دی",
+     "دینا",
+     "دئے"
+    ],
+    "answer": 0,
+    "explanation": "'قلم' is masculine singular, so the irregular past of 'دینا' takes the masculine form 'دیا'."
+   },
+   {
+    "question": "They (men) went to the market: 'وہ سب بازار ___۔'",
+    "options": [
+     "گئیں",
+     "گیا",
+     "گئے",
+     "گئی"
+    ],
+    "answer": 2,
+    "explanation": "Plural masculine subjects taking the intransitive verb 'جانا' take 'گئے'."
+   },
+   {
+    "question": "The girl drank water: 'لڑکی نے پانی ___۔'",
+    "options": [
+     "پیا",
+     "پی",
+     "پئیں",
+     "پیے"
+    ],
+    "answer": 0,
+    "explanation": "Because 'پانی' (water) is grammatically masculine in Urdu, the verb agrees with it: 'پیا'."
+   }
+  ],
+  "tip": "The verb 'پینا' (to drink) also shortens in the simple past: masculine singular is 'پیا' and feminine singular is 'پی'."
+ },
+ {
+  "id": "ur-a2-continuous-aspect-raha-hai",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "⏳",
+  "title": "Continuous Aspect with 'Raha'",
+  "subtitle": "Expressing progressive and ongoing actions in any tense",
+  "color": "#EC4899",
+  "bg": "#FDF2F8",
+  "keyPoint": "Urdu expresses progressive actions by taking the bare verb root, appending the inflected aspect marker 'رہا / رہی / رہے', and finishing with a present or past auxiliary.",
+  "structure": {
+   "headers": [
+    "Subject Form",
+    "Root + رہا Marker",
+    "Auxiliary (ہونا)",
+    "Full Continuous Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "لڑکا (M.Sg)",
+      "بول رہا",
+      "ہے",
+      "The boy is speaking"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "لڑکی (F.Sg)",
+      "لکھ رہی",
+      "ہے",
+      "The girl is writing"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "طلبہ (M.Pl)",
+      "پڑھ رہے",
+      "ہیں",
+      "The students are studying"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ہم (Pl.Past)",
+      "سو رہے",
+      "تھے",
+      "We were sleeping"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EC4899",
+    "label": "Actions Happening Right Now",
+    "example": "باہر تیز بارش ہو رہی ہے۔",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Past Ongoing Actions (Past Continuous)",
+    "example": "ہم کل اس وقت سفر کر رہے تھے۔",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Continuous Questions",
+    "example": "آپ کیا سوچ رہے ہیں؟",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "احمد کھانا کھا رہا ہے۔",
+    "ko": "",
+    "highlight": "کھا رہا ہے"
+   },
+   {
+    "en": "عائشہ گانا گا رہی ہے۔",
+    "ko": "",
+    "highlight": "گا رہی ہے"
+   },
+   {
+    "en": "بچے میدان میں کھیل رہے ہیں۔",
+    "ko": "",
+    "highlight": "کھیل رہے ہیں"
+   },
+   {
+    "en": "وہ کل رات پڑھ رہی تھی۔",
+    "ko": "",
+    "highlight": "پڑھ رہی تھی"
+   },
+   {
+    "en": "ہم آپ کا انتظار کر رہے تھے۔",
+    "ko": "",
+    "highlight": "کر رہے تھے"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "وہ پانی پینا رہا ہے۔",
+    "right": "وہ پانی پی رہا ہے۔",
+    "note": "Use the bare verbal stem ('پی'), never the full infinitive ('پینا'), before 'رہا ہے'."
+   },
+   {
+    "wrong": "عائشہ کتاب پڑھ رہا ہے۔",
+    "right": "عائشہ کتاب پڑھ رہی ہے۔",
+    "note": "'رہا' must agree with the feminine subject 'عائشہ', changing to 'رہی'."
+   },
+   {
+    "wrong": "احمد نے کھانا کھا رہا ہے۔",
+    "right": "احمد کھانا کھا رہا ہے۔",
+    "note": "Never use the ergative marker 'نے' in continuous aspect, even with transitive verbs."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fatima is reading a book: 'فاطمہ کتاب پڑھ ___ ہے۔'",
+    "options": [
+     "رہا",
+     "رہی",
+     "رہے",
+     "رہیں"
+    ],
+    "answer": 1,
+    "explanation": "The feminine singular subject 'فاطمہ' requires the continuous marker 'رہی'."
+   },
+   {
+    "question": "The boys were playing: 'لڑکے کھیل رہے ___۔'",
+    "options": [
+     "تھا",
+     "تھی",
+     "تھیں",
+     "تھے"
+    ],
+    "answer": 3,
+    "explanation": "Plural masculine subjects in the past continuous require the auxiliary 'تھے'."
+   },
+   {
+    "question": "What are you doing? (to a man respectfully): 'آپ کیا کر ___ ہیں؟'",
+    "options": [
+     "رہے",
+     "رہا",
+     "رہی",
+     "رہیں"
+    ],
+    "answer": 0,
+    "explanation": "The honorific pronoun 'آپ' always takes plural grammatical agreement, so 'رہا' becomes 'رہے'."
+   },
+   {
+    "question": "I (female) am writing: 'میں لکھ ___ ہوں۔'",
+    "options": [
+     "رہا",
+     "رہے",
+     "رہی",
+     "رہیں"
+    ],
+    "answer": 2,
+    "explanation": "A female speaker refers to herself using the feminine continuous marker 'رہی'."
+   }
+  ],
+  "tip": "Transitive verbs in continuous aspect ('رہا ہے / رہا تھا') never take the ergative postposition 'نے'; the subject stays in the nominative case."
+ },
+ {
+  "id": "ur-a2-modal-verbs-sakna-chukna-pana",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔑",
+  "title": "Stem-Modifying Modals (Sakna, Chukna, Pana)",
+  "focus": "Attach ability (sakna), completion (chukna), and managed actions (pana) directly to the uninflected bare verb stem.",
+  "subtitle": "Expressing ability, completion, and opportunity with bare stems",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Attach modal verbs directly to the uninflected bare verb stem without any infinitive ending or postposition.",
+  "structure": {
+   "headers": [
+    "Modal Verb",
+    "Core Function",
+    "Urdu Formation",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "سکنا",
+      "Physical/Mental Ability",
+      "میں بول سکتا ہوں",
+      "I can speak"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "چکنا",
+      "Definite Completion",
+      "وہ کھانا کھا چکا ہے",
+      "He has already eaten"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "پانا",
+      "Manage / Find Opportunity",
+      "ہم وقت پر نہ پہنچ پائے",
+      "We could not manage to arrive on time"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Ability with Sakna",
+    "example": "کیا آپ اردو پڑھ سکتے ہیں؟",
+    "translation": ""
+   },
+   {
+    "color": "#A78BFA",
+    "label": "Completion with Chukna",
+    "example": "ٹرین پلیٹ فارم سے جا چکی ہے۔",
+    "translation": ""
+   },
+   {
+    "color": "#C4B5FD",
+    "label": "Managed Action with Pana",
+    "example": "میں مصروفیت کی وجہ سے نہیں آ پایا۔",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "احمد یہ بھاری صندوق اٹھا سکتا ہے۔",
+    "ko": "",
+    "highlight": "اٹھا سکتا ہے"
+   },
+   {
+    "en": "سورج نکلنے سے پہلے وہ نکل چکے تھے۔",
+    "ko": "",
+    "highlight": "نکل چکے تھے"
+   },
+   {
+    "en": "شور کی وجہ سے میں کچھ سن نہیں پایا۔",
+    "ko": "",
+    "highlight": "سن نہیں پایا"
+   },
+   {
+    "en": "کیا تم کل میرے دفتر آ سکتے ہو؟",
+    "ko": "",
+    "highlight": "آ سکتے ہو"
+   },
+   {
+    "en": "ہم اپنا سارا کام ختم کر چکے ہیں۔",
+    "ko": "",
+    "highlight": "کر چکے ہیں"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "میں پڑھنے سکتا ہوں۔",
+    "right": "میں پڑھ سکتا ہوں۔",
+    "note": "Never use the inflected infinitive before 'sakna'; use only the bare verb stem."
+   },
+   {
+    "wrong": "اس نے خط لکھ چکا ہے۔",
+    "right": "وہ خط لکھ چکا ہے۔",
+    "note": "'Chukna' converts the sentence into an intransitive structure, so the ergative marker 'ne' is never used."
+   },
+   {
+    "wrong": "ہم گاڑی چلا نہ پائے سکا۔",
+    "right": "ہم گاڑی نہیں چلا پائے۔",
+    "note": "Do not combine 'pana' and 'sakna' together as both serve the modal function of capability."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase to complete: 'She can write very well' -> وہ بہت اچھا ___ ہے۔",
+    "options": [
+     "لکھ سکتی",
+     "لکھنے سکتی",
+     "لکھا سکتی",
+     "لکھ کر سکتی"
+    ],
+    "answer": 0,
+    "explanation": "'Sakna' directly follows the bare stem 'likh' and inflects for feminine singular as 'sakti'."
+   },
+   {
+    "question": "Which sentence correctly expresses: 'They had already slept'?",
+    "options": [
+     "انہوں نے سو چکا تھا۔",
+     "وہ سو چکے تھے۔",
+     "وہ سونے چکے تھے۔",
+     "انہوں نے سویا چکا تھا۔"
+    ],
+    "answer": 1,
+    "explanation": "'Chukna' does not take the ergative postposition 'ne' and takes the bare stem 'so'."
+   },
+   {
+    "question": "Complete the sentence expressing missed opportunity: 'Due to traffic, I could not reach' -> ٹریفک کی وجہ سے میں نہ ___۔",
+    "options": [
+     "پہنچنے پایا",
+     "پہنچا پایا",
+     "پہنچ پایا",
+     "پہنچ کے پایا"
+    ],
+    "answer": 2,
+    "explanation": "'Pana' requires the bare stem 'pahunch' without any inflected suffixes."
+   },
+   {
+    "question": "Identify the grammatically correct sentence.",
+    "options": [
+     "ہم کھانا کھا چکیں گے۔",
+     "ہم کھانا کھانے چکیں گے۔",
+     "ہم کھانا کھائے چکیں گے۔",
+     "ہم نے کھانا کھا چکا ہوگا۔"
+    ],
+    "answer": 0,
+    "explanation": "Bare stem 'kha' combines directly with the conjugated future form of 'chukna'."
+   }
+  ],
+  "tip": "Remember that 'chukna' makes the entire compound intransitive in the perfective aspect, which means you must drop the subject marker 'ne' entirely."
+ },
+ {
+  "id": "ur-a2-future-tense-conjugation",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#3B82F6",
+  "emoji": "⏳",
+  "title": "Synthetic Future Tense Formations",
+  "focus": "Add gender- and person-inflected future suffixes (-unga, -ega, -enge) directly to verb roots.",
+  "subtitle": "Conjugating direct future endings on Urdu verb stems",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Form the Urdu future tense synthetically by attaching combined person, number, and gender suffixes directly to the verb root.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Masculine Ending",
+    "Feminine Ending",
+    "Example (Stem: جا)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "میں (I)",
+      "وں گا-",
+      "وں گی-",
+      "میں جاؤں گا / جاؤں گی"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "وہ / یہ (He / She / It)",
+      "ے گا-",
+      "ے گی-",
+      "وہ جائے گا / جائے گی"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ہم / آپ / وہ (We / You / They)",
+      "یں گے-",
+      "یں گی-",
+      "ہم جائیں گے / جائیں گی"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "First Person Intentions",
+    "example": "میں کل صبح لاہور روانہ ہوں گا۔",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Third Person Predictions",
+    "example": "کل شام کو تیز بارش ہوگی۔",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Polite Future Inquiries",
+    "example": "کیا آپ چائے پئیں گے؟",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ہم کل رات کو نئی فلم دیکھیں گے۔",
+    "ko": "",
+    "highlight": "دیکھیں گے"
+   },
+   {
+    "en": "فاطمہ اگلے سال کالج جائے گی۔",
+    "ko": "",
+    "highlight": "جائے گی"
+   },
+   {
+    "en": "میں تمہاری مدد ضرور کروں گا۔",
+    "ko": "",
+    "highlight": "کروں گا"
+   },
+   {
+    "en": "کیا تم میرے ساتھ بازار چلو گے؟",
+    "ko": "",
+    "highlight": "چلو گے"
+   },
+   {
+    "en": "استاد صاحب کل نیا سبق پڑھائیں گے۔",
+    "ko": "",
+    "highlight": "پڑھائیں گے"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "میں کل خط لکھتا ہوں گا۔",
+    "right": "میں کل خط لکھوں گا۔",
+    "note": "Do not attach the habitual suffix '-ta' before future endings; attach endings directly to the root."
+   },
+   {
+    "wrong": "ہم بازار جائیں گا?",
+    "right": "ہم بازار جائیں گے?",
+    "note": "The plural pronoun 'ham' requires the masculine plural future ending '-enge', not singular '-ga'."
+   },
+   {
+    "wrong": "لڑکیاں گانا گائے گی۔",
+    "right": "لڑکیاں گانا گائیں گی۔",
+    "note": "Plural feminine subjects require the nasalized plural feminine suffix '-ingi' or '-engi'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct verb form: 'I (female) will speak to him tomorrow' -> میں کل اس سے ___۔",
+    "options": [
+     "بات کرتی ہوں",
+     "بات کروں گی",
+     "بات کرے گی",
+     "بات کرو گی"
+    ],
+    "answer": 1,
+    "explanation": "First-person feminine singular takes the suffix combination '-ungi', yielding 'karungi'."
+   },
+   {
+    "question": "Complete the sentence: 'The boys will play cricket' -> لڑکے کرکٹ ___۔",
+    "options": [
+     "کھیلے گا",
+     "کھیلیں گی",
+     "کھیلیں گے",
+     "کھیلتا ہوگا"
+    ],
+    "answer": 2,
+    "explanation": "Masculine plural subjects (larke) trigger the third-person masculine plural ending '-enge'."
+   },
+   {
+    "question": "Which form completes: 'Will you (formal/aap) come today?' -> کیا آپ آج ___؟",
+    "options": [
+     "آئیں گے",
+     "آئے گا",
+     "آؤں گا",
+     "آتی ہے"
+    ],
+    "answer": 0,
+    "explanation": "Respectful second person 'aap' takes the plural suffix '-enge'."
+   },
+   {
+    "question": "Select the correct feminine singular future form for 'وہ' (She will buy a book).",
+    "options": [
+     "وہ کتاب خریدیں گے۔",
+     "وہ کتاب خریدوں گی۔",
+     "وہ کتاب خریدے گی",
+     "وہ کتاب خریدے گا۔"
+    ],
+    "answer": 2,
+    "explanation": "Third-person singular feminine takes the root plus '-egi', resulting in 'kharidegi'."
+   }
+  ],
+  "tip": "The future tense in Urdu is simply the subjunctive form plus the suffix '-ga', '-ge', or '-gi'."
+ },
+ {
+  "id": "ur-b1-compound-verbs-vector-roots",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🏹",
+  "title": "Compound Verbs and Vector Verbs (Jana, Dena, Lena, Dalna)",
+  "focus": "Combine bare verb stems with vector auxiliaries to express telicity, suddenness, intentionality, or beneficiary of action.",
+  "subtitle": "Adding nuance, completeness, and directionality via auxiliary vectors",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "A compound verb pairs a bare lexical stem with an inflected vector verb that injects aspectual nuance such as completeness or direction.",
+  "structure": {
+   "headers": [
+    "Vector Verb",
+    "Semantic Nuance",
+    "Urdu Compound",
+    "English Sense"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "جانا (Jana)",
+      "Completion / Involuntary Change",
+      "وہ گر گیا",
+      "He fell down completely"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "دینا (Dena)",
+      "Action directed outward / For others",
+      "اس نے پیسے دے دیے",
+      "He paid out the money"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "لینا (Lena)",
+      "Action directed inward / For self",
+      "اس نے بات سمجھ لی",
+      "He grasped the point (for himself)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ڈالنا (Dalna)",
+      "Violence / Forcefulness / Rashness",
+      "اس نے خط پھاڑ ڈالا",
+      "He tore the letter to shreds"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Outward Beneficiary (Dena)",
+    "example": "میں نے اپنا مکان دوست کو بیچ دیا۔",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Self Beneficiary (Lena)",
+    "example": "بچے نے سارا دودھ پی لیا۔",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Total Completion (Jana)",
+    "example": "میرا بٹوہ بس میں گر گیا۔",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "اس نے اپنا سارا ہوم ورک ختم کر لیا۔",
+    "ko": "",
+    "highlight": "کر لیا"
+   },
+   {
+    "en": "احمد نے دروازہ زور سے بند کر دیا۔",
+    "ko": "",
+    "highlight": "کر دیا"
+   },
+   {
+    "en": "مریض اسپتال پہنچتے ہی مر گیا۔",
+    "ko": "",
+    "highlight": "مر گیا"
+   },
+   {
+    "en": "غصے میں اس نے موبائل توڑ ڈالا۔",
+    "ko": "",
+    "highlight": "توڑ ڈالا"
+   },
+   {
+    "en": "مہمان کھانا کھا کر چلے گئے۔",
+    "ko": "",
+    "highlight": "چلے گئے"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "اس نے پانی پی گیا-",
+    "right": "وہ پانی پی گیا۔",
+    "note": "When the vector verb is 'jana', the compound is treated as intransitive, so never use 'ne'."
+   },
+   {
+    "wrong": "میں نے دوست کو قلم لے لیا۔",
+    "right": "میں نے دوست کو قلم دے دیا۔",
+    "note": "Use 'dena' when the action benefits someone else; 'lena' signifies the subject benefits."
+   },
+   {
+    "wrong": "وہ کام کرنے دیا-",
+    "right": "اس نے کام کر دیا۔",
+    "note": "Compound verbs require the primary verb in bare stem form ('kar'), not an inflected infinitive ('karne')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the vector verb that implies doing something for someone else: 'I explained the lesson to Ali' -> میں نے علی کو سبق سمجھا ___۔",
+    "options": [
+     "گیا",
+     "لیا",
+     "دیا",
+     "ڈالا"
+    ],
+    "answer": 2,
+    "explanation": "'Dena' signals that the action is directed outward for another person's benefit."
+   },
+   {
+    "question": "Which sentence correctly reflects an inward, self-benefiting action?",
+    "options": [
+     "اس نے سبق یاد کر لیا۔",
+     "اس نے سبق یاد کر دیا۔",
+     "اس نے سبق یاد کر ڈالا۔",
+     "اس نے سبق یاد کر گیا."
+    ],
+    "answer": 0,
+    "explanation": "'Lena' conveys that the subject internalized or completed the learning for their own benefit."
+   },
+   {
+    "question": "Why is 'ne' omitted in: 'وہ جلدی سے بیٹھ گیا'?",
+    "options": [
+     "Because the subject is singular.",
+     "Because the main verb is transitive.",
+     "Because the vector verb 'jana' makes the compound intransitive.",
+     "Because the sentence is in the present tense."
+    ],
+    "answer": 2,
+    "explanation": "Vector auxiliaries dictate transitivity; 'jana' is intransitive, prohibiting the ergative marker 'ne'."
+   },
+   {
+    "question": "Complete the sentence to convey intense, forceful action: 'He threw down the phone in anger' -> اس نے غصے میں فون پٹخ ___۔",
+    "options": [
+     "لیا",
+     "گیا",
+     "دیا",
+     "ڈالا"
+    ],
+    "answer": 3,
+    "explanation": "'Dalna' adds the semantic layer of violence, rashness, or decisive force."
+   }
+  ],
+  "tip": "Transitivity in compound verbs is determined entirely by the vector verb (the second verb), not the main verb."
+ },
+ {
+  "id": "ur-b1-conjunctive-participle-kar-ke",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#F59E0B",
+  "emoji": "🔗",
+  "title": "Conjunctive Participles with 'Kar / Kar Ke'",
+  "focus": "Chain sequential actions sharing the same subject using the invariant verb stem + 'kar/karke' construction.",
+  "subtitle": "Connecting chronological actions smoothly without repeating subjects",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Attach 'kar' or 'karke' directly to the bare verb stem to express 'having done X, the subject did Y'.",
+  "structure": {
+   "headers": [
+    "Bare Stem",
+    "Conjunctive Form",
+    "Urdu Clause",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "جا (Go)",
+      "جا کر / جا کے",
+      "گھر جا کر سو جاؤ",
+      "Go home and sleep"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "دیکھ (See)",
+      "دیکھ کر / دیکھ کے",
+      "وہ مجھے دیکھ کر مسکرائی",
+      "Having seen me, she smiled"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "کر (Do)",
+      "کر کے",
+      "کام کر کے واپس آؤ",
+      "Finish the work and return"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Immediate Sequence",
+    "example": "وہ نہا کر دفتر چلا گیا۔",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Cause and Effect",
+    "example": "بچہ شور سن کر جاگ اٹھا۔",
+    "translation": ""
+   },
+   {
+    "color": "#FBBF24",
+    "label": "Manner of Action",
+    "example": "وہ سوچ سمجھ کر بولتا ہے۔",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ہم کھانا کھا کر سیر کے لیے گئے۔",
+    "ko": "",
+    "highlight": "کھا کر"
+   },
+   {
+    "en": "خط پڑھ کر اس کی آنکھوں میں آنسو آگئے۔",
+    "ko": "",
+    "highlight": "پڑھ کر"
+   },
+   {
+    "en": "وہ صبح سویرے اٹھ کر ورزش کرتا ہے۔",
+    "ko": "",
+    "highlight": "اٹھ کر"
+   },
+   {
+    "en": "استاد کی بات سن کے طلبہ خاموش ہو گئے۔",
+    "ko": "",
+    "highlight": "سن کے"
+   },
+   {
+    "en": "علی بازار جا کر تازہ پھل لایا۔",
+    "ko": "",
+    "highlight": "جا کر"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "وہ نے کام کر کر گیا۔",
+    "right": "وہ کام کر کے گیا۔",
+    "note": "When the root verb is itself 'karna', use only 'karke', never 'kar kar'."
+   },
+   {
+    "wrong": "کھانے کر وہ سو گیا۔",
+    "right": "کھانا کھا کر وہ سو گیا۔",
+    "note": "Attach 'kar' to the uninflected root ('kha'), not to an inflected oblique infinitive ('khane')."
+   },
+   {
+    "wrong": "بارش ہو کر ہم رک گئے۔",
+    "right": "بارش ہونے کی وجہ سے ہم رک گئے۔",
+    "note": "Conjunctive participles require both clauses to share the exact same subject."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill the blank: 'Having drank water, he set out' -> وہ پانی پی ___ روانہ ہو گیا۔",
+    "options": [
+     "کر",
+     "کے کر",
+     "کرتا",
+     "کرنے"
+    ],
+    "answer": 0,
+    "explanation": "The bare stem 'pi' directly takes 'kar' to form the sequential clause."
+   },
+   {
+    "question": "What is the correct conjunctive form of the verb 'کرنا' (to do)?",
+    "options": [
+     "کر کر",
+     "کر کے",
+     "کرنا کر",
+     "کرتے کر"
+    ],
+    "answer": 1,
+    "explanation": "To prevent repetition with the verb 'karna', 'karke' is the standard accepted form."
+   },
+   {
+    "question": "Choose the correctly constructed conjunctive sentence.",
+    "options": [
+     "وہ سن کر کے رو پڑی۔",
+     "وہ خبر سنی کر رو پڑی۔",
+     "وہ خبر سن کر رو پڑی۔",
+     "وہ خبر سنتا کر رو پڑی۔"
+    ],
+    "answer": 2,
+    "explanation": "'Sun kar' uses the bare verbal root 'sun' followed immediately by 'kar'."
+   },
+   {
+    "question": "Conjunctive participles can only be used when:",
+    "options": [
+     "The main verb is in the future tense.",
+     "Both clauses share the identical subject.",
+     "The object of both clauses is masculine.",
+     "The ergative marker 'ne' is omitted."
+    ],
+    "answer": 1,
+    "explanation": "The conjunctive participle construction requires the dependent action and main action to share the same grammatical agent."
+   }
+  ],
+  "tip": "Both 'kar' and 'ke' are interchangeable in colloquial Urdu, but 'kar' is preferred in formal writing."
+ },
+ {
+  "id": "ur-b1-causative-verb-derivations",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#EC4899",
+  "emoji": "🔄",
+  "title": "First and Second Causative Verb Formations",
+  "focus": "Derive transitive and double-transitive verbs systematically by inserting '-a-' and '-wa-' infix stems.",
+  "subtitle": "Forming direct and indirect causatives from basic verbal roots",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "Insert '-a-' to form direct first causatives (doing through someone directly) and '-wa-' for indirect second causatives (having an agent do it).",
+  "structure": {
+   "headers": [
+    "Base Verb (Intransitive/Transitive)",
+    "First Causative (-a-)",
+    "Second Causative (-wa-)",
+    "Meaning Progression"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "پڑھنا (To read)",
+      "پڑھانا (To teach)",
+      "پڑھوانا (To have taught)",
+      "Read -> Teach -> Have taught"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "لکھنا (To write)",
+      "لکھانا (To dictate/cause to write)",
+      "لکھوانا (To get written by third party)",
+      "Write -> Dictate -> Have written"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "پکنا (To cook / be cooked)",
+      "پکانا (To cook something)",
+      "پکوانا (To have cooked)",
+      "Cook (intr.) -> Cook (tr.) -> Have cooked"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DB2777",
+    "label": "Direct Causation (-ana)",
+    "example": "ماں بچے کو کھانا کھلاتی ہے۔",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Indirect Agent Causation (-wana)",
+    "example": "میں نے درزی سے نیا سوٹ سلوایا۔",
+    "translation": ""
+   },
+   {
+    "color": "#F472B6",
+    "label": "Institutional/Delegated Action",
+    "example": "ہم نے مزدوروں سے سڑک بنوائی۔",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "استاد بچوں سے سبق پڑھواتا ہے۔",
+    "ko": "",
+    "highlight": "پڑھواتا ہے"
+   },
+   {
+    "en": "اس نے اپنا مکان پینٹ کروایا۔",
+    "ko": "",
+    "highlight": "کروایا"
+   },
+   {
+    "en": "نرس نے مریض کو دوا پلائی۔",
+    "ko": "",
+    "highlight": "پلائی"
+   },
+   {
+    "en": "تم مجھے کیوں ہنسا رہے ہو؟",
+    "ko": "",
+    "highlight": "ہنسا رہے ہو"
+   },
+   {
+    "en": "ہم نے گاڑی مکینک سے ٹھیک کروائی۔",
+    "ko": "",
+    "highlight": "کروائی"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "میں نے درزی سے کرتا سلایا۔",
+    "right": "میں نے درزی سے کرتا سلوایا۔",
+    "note": "When getting an intermediary agent to do the job, use the second causative infix '-wa-'."
+   },
+   {
+    "wrong": "استاد نے بچے کو پڑھوایا۔",
+    "right": "استاد نے بچے کو پڑھایا۔",
+    "note": "Use the first causative '-a-' when the subject performs the teaching action directly."
+   },
+   {
+    "wrong": "ماں نے بچے کو دودھ پیا۔",
+    "right": "ماں نے بچے کو دودھ پلایا۔",
+    "note": "'Pina' is intransitive/direct 'to drink'; 'to feed/make drink' requires the causative form 'pilana'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct verb: 'The teacher teaches (causes to learn) Urdu' -> استاد اردو ___ ہے۔",
+    "options": [
+     "پڑھتا",
+     "پڑھواتا",
+     "پڑھاتا",
+     "پڑھائے"
+    ],
+    "answer": 2,
+    "explanation": "Direct causation (teaching yourself) takes the first causative 'parhana'."
+   },
+   {
+    "question": "Which sentence means: 'I had the house cleaned by the servant'?",
+    "options": [
+     "میں نے نوکر سے گھر صاف کرایا۔",
+     "میں نے نوکر سے گھر صاف کروایا۔",
+     "میں نے نوکر سے گھر صاف کیا۔",
+     "میں نوکر سے گھر صاف کروں گا۔"
+    ],
+    "answer": 1,
+    "explanation": "Second causative '-wana' (karwaya) is used when the work is mediated through an agent marked with 'se'."
+   },
+   {
+    "question": "What is the second causative of 'دیکھنا' (to see)?",
+    "options": [
+     "دکھانا",
+     "دیکھوانا",
+     "دکھلوانا",
+     "دیکھنا"
+    ],
+    "answer": 2,
+    "explanation": "Long root vowels shorten before causatives; 'dekh-' transforms into 'dikhana' (1st) and 'dikhwana' or 'dikhlwana' (2nd)."
+   },
+   {
+    "question": "The secondary agent who performs the induced action is marked by which postposition?",
+    "options": [
+     "کو (ko)",
+     "سے (se)",
+     "پر (par)",
+     "کا (ka)"
+    ],
+    "answer": 1,
+    "explanation": "The intermediary or instrumental agent in causative sentences is marked with 'se' (e.g., 'darzi se')."
+   }
+  ],
+  "tip": "Long vowels in the root verb shorten when forming causatives: 'a' becomes short 'a', 'e' becomes 'i', and 'o' becomes 'u' (e.g., بولنا becomes بلانا)."
+ },
+ {
+  "id": "ur-b1-subjunctive-mood",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "💭",
+  "title": "The Subjunctive Mood for Doubt, Desire, and Politeness",
+  "subtitle": "Express possibilities, wishes, and polite requests without gender endings",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "The Urdu subjunctive is formed by adding personal agreement suffixes directly to the verb stem without any gender markers or the future suffix -ga.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Stem + Suffix",
+    "Full Verb",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "میں (Main)",
+      "کر + وں",
+      "کروں",
+      "I may do"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "وہ / یہ (Singular)",
+      "کر + ے",
+      "کرے",
+      "He/She may do"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ہم / وہ (Plural)",
+      "کر + یں",
+      "کریں",
+      "We/They may do"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "آپ (Aap)",
+      "کر + یں",
+      "کریں",
+      "You (formal) may do"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Polite Permission",
+    "example": "کیا اب ہم اندر آئیں؟",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "Wishes & Desires",
+    "example": "میں چاہتا ہوں کہ وہ سچ بولے۔",
+    "translation": ""
+   },
+   {
+    "color": "#9D174D",
+    "label": "Doubt & Uncertainty",
+    "example": "شاید آج رات بارش ہو۔",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "کیا میں اب گھر جاؤں؟",
+    "ko": "",
+    "highlight": "جاؤں"
+   },
+   {
+    "en": "شاید وہ کل ہمارے ہاں آئے۔",
+    "ko": "",
+    "highlight": "آئے"
+   },
+   {
+    "en": "ضروری ہے کہ آپ وقت پر پہنچیں۔",
+    "ko": "",
+    "highlight": "پہنچیں"
+   },
+   {
+    "en": "ہم چاہتے ہیں کہ سب لوگ خوش رہیں۔",
+    "ko": "",
+    "highlight": "رہیں"
+   },
+   {
+    "en": "خدا کرے تم امتحان میں کامیاب ہو جاؤ۔",
+    "ko": "",
+    "highlight": "ہو جاؤ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "کیا میں اب گھر جاؤں گا؟",
+    "right": "کیا میں اب گھر جاؤں؟",
+    "note": "Adding the future suffix -ga turns a polite request or permission into an assertive statement about the future."
+   },
+   {
+    "wrong": "وہ چاہتی ہے کہ میں خط لکھتی ہوں۔",
+    "right": "وہ چاہتی ہے کہ میں خط لکھوں۔",
+    "note": "Verbs inside complement clauses following desires must be in the subjunctive, not the habitual present."
+   },
+   {
+    "wrong": "شاید وہ کل آئے گی شاید۔",
+    "right": "شاید وہ کل آئے۔",
+    "note": "When expressing uncertainty introduced by shayad, use the subjunctive rather than the indicative future."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the polite request: 'کیا ہم اندر ___؟' (May we come inside?)",
+    "options": [
+     "آئیں",
+     "آئیں گے",
+     "آتے ہیں",
+     "آئے"
+    ],
+    "answer": 0,
+    "explanation": "The plural first-person subjunctive ending for 'hum' is -ein (آئیں)."
+   },
+   {
+    "question": "Complete the wish: 'میں چاہتا ہوں کہ تم کتاب ___۔' (I want you to read the book.)",
+    "options": [
+     "پڑھیں",
+     "پڑھو",
+     "پڑھتا ہے",
+     "پڑھے گا"
+    ],
+    "answer": 1,
+    "explanation": "With the informal pronoun 'tum', the subjunctive suffix is -o (پڑھو)."
+   },
+   {
+    "question": "Complete the sentence expressing doubt: 'شاید آج گاڑی وقت پر نہ ___۔' (Perhaps the train might not arrive on time today.)",
+    "options": [
+     "آئی تھی",
+     "آتی ہے",
+     "آئے",
+     "آئے گی"
+    ],
+    "answer": 2,
+    "explanation": "With the singular subject 'gaari' after 'shayad', the singular subjunctive suffix -e (آئے) is required."
+   },
+   {
+    "question": "Which verb form correctly expresses formal advice: 'بہتر ہے کہ آپ آرام ___۔' (It is better that you rest.)",
+    "options": [
+     "کریں گے",
+     "کرتا ہوں",
+     "کیے",
+     "کریں"
+    ],
+    "answer": 3,
+    "explanation": "Formal second-person 'aap' takes the subjunctive suffix -ein (کریں)."
+   }
+  ],
+  "tip": "Remember that the subjunctive completely strips away gender: both men and women say 'main bolun' and 'aap bolein' without changing vowels for gender."
+ },
+ {
+  "id": "ur-b1-infinitive-based-compulsion-and-obligation",
+  "level": "b1",
+  "category": "modals",
+  "categoryColor": "#059669",
+  "emoji": "⚖️",
+  "title": "Expressions of Compulsion (Infinitive + Hona / Parna)",
+  "subtitle": "Distinguish between duty, moral obligation, and unavoidable external force",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Mark the logical subject with 'ko' and attach 'hona' for inherent moral duty or planned necessity, but 'parna' for forced, unpleasant external compulsion.",
+  "structure": {
+   "headers": [
+    "Structure",
+    "Subject Case",
+    "Conjugated Verb",
+    "Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Infinitive + Chahiye",
+      "Subject + ko",
+      "چاہیے",
+      "Moral duty / general advice"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Infinitive + Hona",
+      "Subject + ko",
+      "ہونا (ہوتا ہے / تھا)",
+      "Internal obligation / scheduled task"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Infinitive + Parna",
+      "Subject + ko",
+      "پڑنا (پڑتا ہے / پڑا)",
+      "External compulsion / involuntary burden"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Moral Obligation",
+    "example": "آپ کو سچ بولنا چاہیے۔",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Scheduled Necessity",
+    "example": "مجھے کل دفتر جانا ہے۔",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Unavoidable Force",
+    "example": "بارش کی وجہ سے ہمیں رکنا پڑا۔",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "بچوں کو روزانہ وقت پر سونا چاہیے۔",
+    "ko": "",
+    "highlight": "سونا چاہیے"
+   },
+   {
+    "en": "ہمیں کل صبح لاہور جانا ہے۔",
+    "ko": "",
+    "highlight": "جانا ہے"
+   },
+   {
+    "en": "گاڑی خراب تھی اس لیے مجھے پیدل چلنا پڑا۔",
+    "ko": "",
+    "highlight": "چلنا پڑا"
+   },
+   {
+    "en": "طالب علموں کو سخت محنت کرنی پڑتی ہے۔",
+    "ko": "",
+    "highlight": "کرنی پڑتی ہے"
+   },
+   {
+    "en": "کیا آپ کو یہ دوائی ہر روز لینی ہے؟",
+    "ko": "",
+    "highlight": "لینی ہے"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "میں جانا ہے دفتر۔",
+    "right": "مجھے دفتر جانا ہے۔",
+    "note": "Obligation constructions require the dative subject marked by 'ko' (main + ko = mujhe)."
+   },
+   {
+    "wrong": "مجھے خط لکھنا چاہیے تھا۔ (intended: I had to write unwillingly)",
+    "right": "مجھے خط لکھنا پڑا۔",
+    "note": "'Chahiye tha' denotes 'should have', whereas 'parna' denotes having had no choice but to do it."
+   },
+   {
+    "wrong": "ہم کو کتاب پڑھنا ہے۔",
+    "right": "ہم کو کتاب پڑھنی ہے۔",
+    "note": "The infinitive and verb must agree in gender with the direct object when no postposition follows it (kitab is feminine)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Express external compulsion: 'The road was closed, so we had to return' (راستہ بند تھا اس لیے ہمیں واپس ___۔)",
+    "options": [
+     "آنا چاہیں",
+     "آنا پڑا",
+     "آئے تھے",
+     "آنا ہوا"
+    ],
+    "answer": 1,
+    "explanation": "'Parna' in the past (پڑا) denotes an involuntary action caused by outside circumstances."
+   },
+   {
+    "question": "Complete the moral advice: 'ہر شہری کو قانون کا احترام ___۔'",
+    "options": [
+     "کرنا پڑے گا",
+     "کر دیا",
+     "کرنا چاہیے",
+     "کرنا پڑا"
+    ],
+    "answer": 2,
+    "explanation": "General civic duty and ethical recommendations use the modal 'chahiye' (کرنا چاہیے)."
+   },
+   {
+    "question": "Choose the correct planned duty: 'I have to cook dinner tonight.' (آج رات مجھے کھانا ___۔)",
+    "options": [
+     "پکایا",
+     "پکاؤں",
+     "پکاتے ہیں",
+     "پکانا ہے"
+    ],
+    "answer": 3,
+    "explanation": "Personal scheduled obligation uses Infinitive + Hona (پکانا ہے)."
+   },
+   {
+    "question": "Select the correct agreement: 'اسے ایک نیا سبق ___۔' (He had to learn a new lesson.)",
+    "options": [
+     "سیکھنا پڑا",
+     "سیکھنی پڑی",
+     "سیکھنا چاہیے",
+     "سیکھنے پڑے"
+    ],
+    "answer": 0,
+    "explanation": "'Sabaq' is masculine singular, so both the infinitive and 'parna' remain masculine singular (سیکھنا پڑا)."
+   }
+  ],
+  "tip": "Remember: if you have no choice and dislike the obligation, use 'parna'. If it is simply a schedule or personal choice, use 'hona'."
+ },
+ {
+  "id": "ur-b2-relative-correlative-clauses",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#7C3AED",
+  "emoji": "🔗",
+  "title": "Relative-Correlative Syntactic Structures (Jo... Vo, Jahan... Vahan)",
+  "subtitle": "Pair dependent and independent clauses using Urdu's correlative pronoun system",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Urdu relative clauses begin with a 'J-' relative pronoun and must be mirrored by a matching 'V-' correlative pronoun in the main clause.",
+  "structure": {
+   "headers": [
+    "Domain",
+    "Relative (J-)",
+    "Correlative (V-)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Entity / Person",
+      "جو (Jo)",
+      "وہ (Vo / So)",
+      "The one who... that one"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Place",
+      "جہاں (Jahan)",
+      "وہاں (Vahan)",
+      "Where... there"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Time",
+      "جب (Jab)",
+      "تب / تو (Tab / To)",
+      "When... then"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Manner",
+      "جیسا (Jaisa)",
+      "ویسا (Vaisa)",
+      "As... so"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Pronominal Relative",
+    "example": "جو محنت کرے گا وہ کامیاب ہوگا۔",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Spatial Correlative",
+    "example": "جہاں تم جاؤ گے وہاں میں جاؤں گا۔",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Temporal Clause",
+    "example": "جب بارش رکے گی تو ہم نکلیں گے۔",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "جو کتاب میز پر ہے وہ میری ہے۔",
+    "ko": "",
+    "highlight": "جو"
+   },
+   {
+    "en": "جہاں گلاب کھلتے ہیں وہاں کانٹے بھی ہوتے ہیں۔",
+    "ko": "",
+    "highlight": "جہاں"
+   },
+   {
+    "en": "جب گھنٹی بجی تو طلبہ باہر آئے۔",
+    "ko": "",
+    "highlight": "تو"
+   },
+   {
+    "en": "جیسا کرو گے ویسا بھرو گے۔",
+    "ko": "",
+    "highlight": "ویسا"
+   },
+   {
+    "en": "جس نے یہ تصویر بنائی ہے میں اس کو جانتا ہوں۔",
+    "ko": "",
+    "highlight": "جس نے"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "وہ آدمی جو آیا میرا بھائی ہے۔ (calqued English)",
+    "right": "جو آدمی آیا وہ میرا بھائی ہے۔",
+    "note": "Urdu prefers placing the relative 'jo' clause first, followed by the correlative 'vo' clause."
+   },
+   {
+    "wrong": "جب تم آؤ گے وہاں میں آؤں گا۔",
+    "right": "جب تم آؤ گے تب میں آؤں گا۔",
+    "note": "Do not mix spatial and temporal markers; 'jab' pairs with 'tab' or 'to', while 'jahan' pairs with 'vahan'."
+   },
+   {
+    "wrong": "جو محنت کی اس نے پھل پایا۔",
+    "right": "جس نے محنت کی اس نے پھل پایا۔",
+    "note": "If the relative pronoun governs an ergative verb with 'ne', 'jo' must take its oblique form 'jis'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the proverb: '___ کرو گے ویسا بھرو گے۔'",
+    "options": [
+     "جیسا",
+     "جہاں",
+     "جو",
+     "جب"
+    ],
+    "answer": 0,
+    "explanation": "'Vaisa' (manner) corresponds to the relative manner marker 'jaisa' (جیسا)."
+   },
+   {
+    "question": "Choose the correct correlative for time: 'جب سورج طلوع ہوا ___ پرندے چہچہانے لگے۔'",
+    "options": [
+     "وہاں",
+     "کیونکہ",
+     "تو",
+     "ویسا"
+    ],
+    "answer": 2,
+    "explanation": "'Jab' (when) is correlatively answered by 'to' or 'tab' (then)."
+   },
+   {
+    "question": "Complete the oblique relative clause: '___ آپ نے فون کیا تھا وہ موجود نہیں ہے۔'",
+    "options": [
+     "جو",
+     "جس کو",
+     "جس نے",
+     "جنہوں نے"
+    ],
+    "answer": 1,
+    "explanation": "The recipient of a phone call takes the dative/accusative oblique marker 'jis ko' (جس کو)."
+   },
+   {
+    "question": "Select the correlative locative pair: 'جہاں امن ہوتا ہے ___ ترقی ہوتی ہے۔'",
+    "options": [
+     "وہ",
+     "تب",
+     "ویسا",
+     "وہاں"
+    ],
+    "answer": 3,
+    "explanation": "'Jahan' (where) demands the correlative adverb of place 'vahan' (there)."
+   }
+  ],
+  "tip": "Think of relative sentences as mirror halves: the 'J-' word introduces the condition or target, and the 'V-' word resolves it."
+ },
+ {
+  "id": "ur-b2-passive-voice-with-jana",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#EA580C",
+  "emoji": "🛡️",
+  "title": "Passive Voice and the Instrumental Incapacity Construction",
+  "subtitle": "Master formal passive constructions and involuntary inability using se",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Form the passive by combining the perfective participle of the main verb with conjugated forms of 'jana', agreeing with the patient in gender and number.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Formula",
+    "Urdu Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Canonical Passive",
+      "Participle + jana",
+      "خط لکھا گیا",
+      "The letter was written"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Habitual Passive",
+      "Participle + jata hai",
+      "اردو بولی جاتی ہے",
+      "Urdu is spoken"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Incapacity",
+      "Subject-se + Passive + nahin",
+      "مجھ سے چلا نہیں جاتا",
+      "I am unable to walk"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Formal Objective Style",
+    "example": "یہ عمارت پچھلے سال بنائی گئی۔",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Unknown Agent",
+    "example": "چور رات کے اندھیرے میں پکڑا گیا۔",
+    "translation": ""
+   },
+   {
+    "color": "#B91C1C",
+    "label": "Physical Inability",
+    "example": "بیماری کی وجہ سے مجھ سے کھایا نہیں جاتا۔",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "یہ کتابیں پچھلے سال چھاپی گئیں۔",
+    "ko": "",
+    "highlight": "چھاپی گئیں"
+   },
+   {
+    "en": "کل شام ایک اہم فیصلہ کیا جائے گا۔",
+    "ko": "",
+    "highlight": "کیا جائے گا"
+   },
+   {
+    "en": "اس فیکٹری میں کپڑا بنایا جاتا ہے۔",
+    "ko": "",
+    "highlight": "بنایا جاتا ہے"
+   },
+   {
+    "en": "شدید درد کے باعث مریض سے ہلا نہیں گیا۔",
+    "ko": "",
+    "highlight": "ہلا نہیں گیا"
+   },
+   {
+    "en": "ہم سے اتنی لمبی مسافت طے نہیں کی جاتی۔",
+    "ko": "",
+    "highlight": "طے نہیں کی جاتی"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "خط لکھا گیا۔ (agreeing with a feminine noun e.g. چٹھی)",
+    "right": "چٹھی لکھی گئی۔",
+    "note": "The perfective participle and the auxiliary 'jana' must both inflect for the gender and number of the grammatical subject."
+   },
+   {
+    "wrong": "مجھ کو یہ روٹی کھائی نہیں جاتی۔",
+    "right": "مجھ سے یہ روٹی کھائی نہیں جاتی۔",
+    "note": "The incapacity construction requires the instrumental postposition 'se' on the agent, never the dative 'ko'."
+   },
+   {
+    "wrong": "احمد نے کھانا کھایا گیا تھا۔",
+    "right": "احمد سے کھانا کھایا گیا تھا۔",
+    "note": "The ergative marker 'ne' can never be used in passive sentences; use the instrumental 'se' if the agent is mentioned."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the passive sentence: 'تمام کمرے صاف ___۔' (All rooms were cleaned - masculine plural).",
+    "options": [
+     "کی گئی",
+     "کیے گئے",
+     "کیا گیا",
+     "کر دیا"
+    ],
+    "answer": 1,
+    "explanation": "'Kamre' is masculine plural, so both the participle and 'jana' must be masculine plural (کیے گئے)."
+   },
+   {
+    "question": "Express physical incapacity: 'I cannot bear this burden' (مجھ سے یہ بوجھ اٹھایا ___۔)",
+    "options": [
+     "نہیں جاتا",
+     "نہیں تھا",
+     "نہیں گیا ہوگا",
+     "نہ کریں"
+    ],
+    "answer": 0,
+    "explanation": "Incapacity in the present is expressed with the passive auxiliary 'jata' + 'nahin' (نہیں جاتا)."
+   },
+   {
+    "question": "Complete the future passive: 'کل اخبار میں نیا اشتہار ___۔' (A new advertisement will be published tomorrow.)",
+    "options": [
+     "شائع کرتی ہے",
+     "شائع ہو گئے",
+     "شائع ہوا",
+     "شائع کیا جائے گا"
+    ],
+    "answer": 3,
+    "explanation": "Singular masculine future passive uses participle + 'jaega' (شائع کیا جائے گا)."
+   },
+   {
+    "question": "Identify the correct agentive marker for incapacity: '___ یہ سردی برداشت نہیں ہوئی۔'",
+    "options": [
+     "اسد کو",
+     "اسد نے",
+     "اسد سے",
+     "اسد کا"
+    ],
+    "answer": 2,
+    "explanation": "Incapacity constructions mark the logical agent strictly with 'se' (اسد سے)."
+   }
+  ],
+  "tip": "Urdu passives do not merely show that an action was received; adding 'se' to an active person turns the passive into an expression of physical disability or helplessness."
+ },
+ {
+  "id": "ur-b2-izafat-and-perso-arabic-compounding",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#0F766E",
+  "emoji": "📜",
+  "title": "The Izafat Construction and Perso-Arabic Enclitics",
+  "subtitle": "Parse and construct high-register literary phrases linked by the vowel -e-",
+  "color": "#0F766E",
+  "bg": "#F0FDFA",
+  "keyPoint": "The izafat is a short vowel '-e-' (zer) appended to the end of a head noun to establish possession, description, or qualification with the following word.",
+  "structure": {
+   "headers": [
+    "Orthographic Ending",
+    "Izafat Representation",
+    "Urdu Script Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Consonant ending",
+      "Subscript Zer ( ِ )",
+      "دردِ دل (Dard-e-dil)",
+      "Pain of the heart"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Silent Chhoti He (ہ)",
+      "Hamza over he (ۂ)",
+      "قطرۂ آب (Qatra-e-aab)",
+      "Drop of water"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Long vowel Alif (ا)",
+      "Hamza-ye (ئے)",
+      "صدائے دل (Sada-e-dil)",
+      "Voice of the heart"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Long vowel Chhoti Ye (ی)",
+      "Hamza over ye (ئ)",
+      "روئے زمین (Roo-e-zameen)",
+      "Surface of the earth"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0F766E",
+    "label": "Possessive Genitive",
+    "example": "شاعرِ مشرق نے قوم کو بیدار کیا۔",
+    "translation": ""
+   },
+   {
+    "color": "#1E40AF",
+    "label": "Descriptive Modifier",
+    "example": "شہرِ لاہور اپنی ثقافت کے لیے مشہور ہے۔",
+    "translation": ""
+   },
+   {
+    "color": "#831843",
+    "label": "Qualifying Title",
+    "example": "وزیرِ اعظم نے تقریب سے خطاب کیا۔",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "علامہ اقبال کو شاعرِ مشرق کہا جاتا ہے۔",
+    "ko": "",
+    "highlight": "شاعرِ مشرق"
+   },
+   {
+    "en": "ہمیں آبِ حیات کی تلاش میں نہیں نکلنا چاہیے۔",
+    "ko": "",
+    "highlight": "آبِ حیات"
+   },
+   {
+    "en": "طالب علم جذبۂ حب الوطنی سے سرشار تھے۔",
+    "ko": "",
+    "highlight": "جذبۂ حب الوطنی"
+   },
+   {
+    "en": "یہ قطرۂ خون حقیقت کا آئینہ دار ہے۔",
+    "ko": "",
+    "highlight": "قطرۂ خون"
+   },
+   {
+    "en": "وزیرِ خارجہ کل غیر ملکی دورے پر روانہ ہوں گے۔",
+    "ko": "",
+    "highlight": "وزیرِ خارجہ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "پانیِ دریا",
+    "right": "دریائی پانی / دریا کا پانی",
+    "note": "Izafat can only be applied to Perso-Arabic loanwords, never to native Sanskrit/Prakrit Indic roots like 'paani'."
+   },
+   {
+    "wrong": "درد کا دل (intended: Pain of the heart)",
+    "right": "دردِ دل",
+    "note": "When using izafat, the head noun appears first followed by the possessor, the inverse of native 'ka/ki' word order."
+   },
+   {
+    "wrong": "قطرہِ آب",
+    "right": "قطرۂ آب",
+    "note": "When a word ends in a silent he (ہ), the izafat is written as a hamza above it, not as a separate zer underneath."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which of the following compounds is an authentic, valid Izafat construction?",
+    "options": [
+     "گھرِ دل",
+     "راتِ تاریک",
+     "مردِ مومن",
+     "روٹیِ گندم"
+    ],
+    "answer": 2,
+    "explanation": "'Mard-e-momin' consists purely of Perso-Arabic vocabulary suitable for the izafat connector."
+   },
+   {
+    "question": "How is the Izafat represented on a word ending in Alif (ا) such as 'صدا'?",
+    "options": [
+     "Zer ( ِ )",
+     "Hamza-ye (ئے)",
+     "Tashdeed ( ّ )",
+     "Tanween ( ً )"
+    ],
+    "answer": 1,
+    "explanation": "Words ending in long vowels like Alif take 'hamza-ye' (ئے) to link to the next word (صدائے دل)."
+   },
+   {
+    "question": "Identify the head noun meaning 'Minister' in the title 'وزیرِ اعظم':",
+    "options": [
+     "اعظم",
+     "وزیرِ",
+     "وزیر",
+     "وزارت"
+    ],
+    "answer": 2,
+    "explanation": "In an izafat phrase, the qualified head noun comes first (وزیر)."
+   },
+   {
+    "question": "Choose the correct spelling for 'drop of water':",
+    "options": [
+     "قطرہ آب",
+     "قطرہ کا آب",
+     "قطرہِ آب",
+     "قطرۂ آب"
+    ],
+    "answer": 3,
+    "explanation": "A noun ending in silent 'chhoti he' marks izafat with a hamza perched atop the final letter (قطرۂ)."
+   }
+  ],
+  "tip": "Remember word order reversal: 'Qaumi Tarana' has the adjective first, but with izafat it flips: 'Tarana-e-Qaumi' (Anthem of the Nation)."
+ }
+]

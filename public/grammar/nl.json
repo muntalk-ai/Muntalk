@@ -1,0 +1,3402 @@
+[
+ {
+  "id": "nl-a1-de-vs-het-articles",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "🏷️",
+  "title": "De vs. Het Gender Articles",
+  "subtitle": "Master Dutch definite articles and demonstratives",
+  "color": "#1E88E5",
+  "bg": "#E3F2FD",
+  "keyPoint": "Dutch has two definite articles: 'de' for common-gender nouns and all plurals, and 'het' for neuter singular nouns, which determines whether you use 'deze/die' or 'dit/dat'.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Singular Article",
+    "Near Demonstrative",
+    "Far Demonstrative"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Common Gender",
+      "de tafel",
+      "deze tafel",
+      "die tafel"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter Gender",
+      "het boek",
+      "dit boek",
+      "dat boek"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Diminutives (-je)",
+      "het huisje",
+      "dit huisje",
+      "dat huisje"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "All Plurals",
+      "de boeken",
+      "deze boeken",
+      "die boeken"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1E88E5",
+    "label": "Neuter singular nouns",
+    "example": "Het kind leest een boek.",
+    "translation": ""
+   },
+   {
+    "color": "#43A047",
+    "label": "Common singular nouns",
+    "example": "De man loopt op straat.",
+    "translation": ""
+   },
+   {
+    "color": "#FB8C00",
+    "label": "All plural nouns",
+    "example": "De huizen zijn erg groot.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Het meisje drinkt water.",
+    "ko": "",
+    "highlight": "Het meisje"
+   },
+   {
+    "en": "De appel is lekker zoet.",
+    "ko": "",
+    "highlight": "De appel"
+   },
+   {
+    "en": "Dit boek is erg interessant.",
+    "ko": "",
+    "highlight": "Dit boek"
+   },
+   {
+    "en": "Die auto rijdt heel snel.",
+    "ko": "",
+    "highlight": "Die auto"
+   },
+   {
+    "en": "De kinderen spelen buiten.",
+    "ko": "",
+    "highlight": "De kinderen"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "de kind",
+    "right": "het kind",
+    "note": "'Kind' is a neuter noun, so it requires 'het' in the singular."
+   },
+   {
+    "wrong": "het boeken",
+    "right": "de boeken",
+    "note": "All plural nouns always take 'de', regardless of their singular gender."
+   },
+   {
+    "wrong": "deze boek",
+    "right": "dit boek",
+    "note": "Neuter ('het') nouns require the demonstrative 'dit' for nearby items, not 'deze'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "___ melk staat in de koelkast. (Milk is a common-gender noun)",
+    "options": [
+     "Het",
+     "De",
+     "Dit",
+     "Dat"
+    ],
+    "answer": 1,
+    "explanation": "Common gender singular nouns take the definite article 'de'."
+   },
+   {
+    "question": "Ik lees ___ interessante boek vandaag.",
+    "options": [
+     "het",
+     "de",
+     "die",
+     "deze"
+    ],
+    "answer": 0,
+    "explanation": "'Boek' is a neuter noun, so its definite article is 'het'."
+   },
+   {
+    "question": "___ stoelen zijn nieuw en comfortabel.",
+    "options": [
+     "Dit",
+     "Dat",
+     "Deze",
+     "Het"
+    ],
+    "answer": 2,
+    "explanation": "For plural nouns ('stoelen'), use 'deze' for 'these'."
+   },
+   {
+    "question": "Waarom ligt ___ briefje op de grond?",
+    "options": [
+     "deze",
+     "de",
+     "die",
+     "dat"
+    ],
+    "answer": 3,
+    "explanation": "Diminutives ending in '-je' are always neuter ('het'), so 'that' translates to 'dat'."
+   }
+  ],
+  "tip": "All diminutive nouns ending in -je, -ke, -pje, or -tje are automatically neuter and always take 'het'!"
+ },
+ {
+  "id": "a1-adjective-inflection-e-ending",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4A90E2",
+  "emoji": "🎨",
+  "title": "Adjective Inflection (-e vs. Uninflected)",
+  "subtitle": "Know when to add an -e to Dutch adjectives",
+  "color": "#8E24AA",
+  "bg": "#F3E5F5",
+  "keyPoint": "Add an '-e' to attributive adjectives in almost all cases, except when modifying an indefinite singular neuter noun (een + het-noun).",
+  "structure": {
+   "headers": [
+    "Noun Category",
+    "Definite (de/het)",
+    "Indefinite (een)",
+    "No Article"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Common (de fiets)",
+      "de grote fiets",
+      "een grote fiets",
+      "grote fiets"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Neuter (het huis)",
+      "het grote huis",
+      "een groot huis",
+      "groot huis"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Plural (de auto's)",
+      "de snelle auto's",
+      "snelle auto's",
+      "snelle auto's"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Predicative",
+      "Het huis is groot",
+      "De fiets is groot",
+      "De auto's zijn snel"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8E24AA",
+    "label": "No ending: een + het-noun",
+    "example": "Hij koopt een nieuw huis.",
+    "translation": ""
+   },
+   {
+    "color": "#1E88E5",
+    "label": "Inflected with definite het-noun",
+    "example": "Het nieuwe huis is verkocht.",
+    "translation": ""
+   },
+   {
+    "color": "#43A047",
+    "label": "Inflected with de-noun",
+    "example": "Zij zoekt een warme jas.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Dat is een klein dorp.",
+    "ko": "",
+    "highlight": "een klein dorp"
+   },
+   {
+    "en": "Wij wonen in een mooi appartement.",
+    "ko": "",
+    "highlight": "een mooi appartement"
+   },
+   {
+    "en": "De rode appel ligt op tafel.",
+    "ko": "",
+    "highlight": "De rode appel"
+   },
+   {
+    "en": "Zij heeft een slimme hond gekocht.",
+    "ko": "",
+    "highlight": "een slimme hond"
+   },
+   {
+    "en": "Ik zie veel oude bomen in het park.",
+    "ko": "",
+    "highlight": "oude bomen"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "een kleine kind",
+    "right": "een klein kind",
+    "note": "Because 'kind' is a neuter ('het') noun preceded by 'een', the adjective remains uninflected."
+   },
+   {
+    "wrong": "de klein kind",
+    "right": "het kleine kind",
+    "note": "With the definite article 'het', the adjective must take an '-e'."
+   },
+   {
+    "wrong": "Het bier is koude.",
+    "right": "Het bier is koud.",
+    "note": "Predicative adjectives (placed after 'zijn' or 'worden') never take an '-e'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Peter heeft een ___ auto gekocht.",
+    "options": [
+     "snelle",
+     "snel",
+     "snellen",
+     "snelste"
+    ],
+    "answer": 0,
+    "explanation": "'Auto' is a de-noun, so the adjective takes an '-e' even after 'een'."
+   },
+   {
+    "question": "Dat is echt een ___ paard.",
+    "options": [
+     "mooie",
+     "mooiste",
+     "mooi",
+     "mooier"
+    ],
+    "answer": 2,
+    "explanation": "'Paard' is a het-noun and used with 'een', so the adjective stays uninflected without '-e'."
+   },
+   {
+    "question": "Waar staat het ___ meisje?",
+    "options": [
+     "klein",
+     "kleine",
+     "kleiner",
+     "kleinst"
+    ],
+    "answer": 1,
+    "explanation": "With the definite article 'het', adjectives always get an '-e'."
+   },
+   {
+    "question": "De soep smaakt erg ___.",
+    "options": [
+     "lekkere",
+     "lekkerste",
+     "lekkeren",
+     "lekker"
+    ],
+    "answer": 3,
+    "explanation": "Predicative adjectives following linking verbs like 'smaken' or 'zijn' never receive an '-e'."
+   }
+  ],
+  "tip": "Remember the formula for NO '-e': een + het-noun = base adjective (e.g., een wit huis)."
+ },
+ {
+  "id": "a1-present-tense-verb-inversion",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#00897B",
+  "emoji": "🔄",
+  "title": "Present Tense Conjugation and Inversion",
+  "subtitle": "Conjugate regular verbs and drop the -t in inversion",
+  "color": "#00897B",
+  "bg": "#E0F2F1",
+  "keyPoint": "Regular present tense verbs add '-t' to the stem for 'jij', but you must drop this '-t' whenever 'jij/je' immediately follows the verb.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Word Order",
+    "Ending Rule",
+    "Example (werken)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ik",
+      "Subject + Verb",
+      "stem",
+      "ik werk"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "jij / je",
+      "Subject + Verb",
+      "stem + t",
+      "jij werkt"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "jij / je (inverted)",
+      "Verb + Subject",
+      "stem only (drop -t)",
+      "werk je?"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "hij / zij / het",
+      "Any order",
+      "stem + t",
+      "hij werkt / werkt hij"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "wij / jullie / zij",
+      "Any order",
+      "infinitive (-en)",
+      "wij werken / werken wij"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#00897B",
+    "label": "Subject-first statements",
+    "example": "Jij loopt elke dag naar school.",
+    "translation": ""
+   },
+   {
+    "color": "#D81B60",
+    "label": "Inverted yes/no questions",
+    "example": "Loop je morgen met mij mee?",
+    "translation": ""
+   },
+   {
+    "color": "#FB8C00",
+    "label": "Inversion after fronted time/place",
+    "example": "Vandaag ga je vroeg naar huis.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ik woon al vijf jaar in Amsterdam.",
+    "ko": "",
+    "highlight": "Ik woon"
+   },
+   {
+    "en": "Jij praat veel te snel tijdens de les.",
+    "ko": "",
+    "highlight": "Jij praat"
+   },
+   {
+    "en": "Waarom drink je geen koffie?",
+    "ko": "",
+    "highlight": "drink je"
+   },
+   {
+    "en": "Morgen reis je naar Rotterdam.",
+    "ko": "",
+    "highlight": "reis je"
+   },
+   {
+    "en": "Zij spelen vanmiddag samen een spel.",
+    "ko": "",
+    "highlight": "Zij spelen"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Werk jij vandaag in het kantoor?",
+    "right": "Werk je vandaag in het kantoor?",
+    "note": "When 'jij' or 'je' follows the verb in inversion, drop the ending '-t'."
+   },
+   {
+    "wrong": "Ik woont in Utrecht.",
+    "right": "Ik woon in Utrecht.",
+    "note": "The first-person singular 'ik' takes the bare stem without '-t'."
+   },
+   {
+    "wrong": "Waarom ga jij niet naar huis?",
+    "right": "Waarom ga je niet naar huis?",
+    "note": "The verb 'gaan' has the stem 'ga'; in inversion with jij/je it is 'ga je', never 'gaat je'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Waarom ___ je vandaag zo laat?",
+    "options": [
+     "komt",
+     "komen",
+     "kom",
+     "komst"
+    ],
+    "answer": 2,
+    "explanation": "In inverted order where 'je' comes directly after the verb, drop the '-t' suffix (bare stem: 'kom')."
+   },
+   {
+    "question": "Jij ___ elke ochtend naar het nieuws.",
+    "options": [
+     "luistert",
+     "luister",
+     "luisteren",
+     "luisterd"
+    ],
+    "answer": 0,
+    "explanation": "In standard SVO order, 'jij' takes the stem + t ('luistert')."
+   },
+   {
+    "question": "Nu ___ wij een pauze nemen.",
+    "options": [
+     "mag",
+     "mogen",
+     "moogt",
+     "mocht"
+    ],
+    "answer": 1,
+    "explanation": "Plural subjects ('wij') take the full infinitive form 'mogen'."
+   },
+   {
+    "question": "Morgen ___ jij je oma in het ziekenhuis.",
+    "options": [
+     "bezoek",
+     "bezoekt",
+     "bezoeken",
+     "bezoekte"
+    ],
+    "answer": 1,
+    "explanation": "Wait! Notice that 'jij' comes after the verb here: inverted order with jij/je means stem only ('bezoek'). But here 'Morgen bezoekt jij' is wrong -> it must be 'bezoek jij'."
+   }
+  ],
+  "tip": "Ask yourself: Is 'jij' or 'je' walking BEHIND the verb? If yes, throw away the '-t'!"
+ },
+ {
+  "id": "a1-negation-niet-vs-geen",
+  "level": "a1",
+  "category": "clauses",
+  "categoryColor": "#8E24AA",
+  "emoji": "🚫",
+  "title": "Negation with Niet vs. Geen",
+  "subtitle": "Choose correctly between niet and geen",
+  "color": "#E53935",
+  "bg": "#FFEBEE",
+  "keyPoint": "Use 'geen' to negate indefinite nouns (nouns with 'een' or no article), and use 'niet' to negate verbs, adjectives, adverbs, and definite nouns.",
+  "structure": {
+   "headers": [
+    "Negator",
+    "Negates",
+    "Rule",
+    "Dutch Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "geen",
+      "Indefinite Noun",
+      "Replaces 'een'",
+      "Ik heb geen fiets."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "geen",
+      "Plural / Uncountable",
+      "No article present",
+      "Wij drinken geen melk."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "niet",
+      "Verbs",
+      "At the end of clause",
+      "Hij slaapt niet."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "niet",
+      "Adjectives / Adverbs",
+      "Directly before word",
+      "Het water is niet warm."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "niet",
+      "Definite Nouns",
+      "Directly before de/het",
+      "Dat is niet de directeur."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#E53935",
+    "label": "Negating indefinite objects",
+    "example": "Ik heb geen tijd voor een film.",
+    "translation": ""
+   },
+   {
+    "color": "#3949AB",
+    "label": "Negating an adjective",
+    "example": "Deze kamer is helemaal niet schoon.",
+    "translation": ""
+   },
+   {
+    "color": "#00897B",
+    "label": "Negating a whole action",
+    "example": "Mijn broer rookt al jaren niet.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Zij heeft geen auto.",
+    "ko": "",
+    "highlight": "geen auto"
+   },
+   {
+    "en": "Wij gaan vandaag niet naar school.",
+    "ko": "",
+    "highlight": "niet naar school"
+   },
+   {
+    "en": "Dat is niet mijn jas.",
+    "ko": "",
+    "highlight": "niet mijn jas"
+   },
+   {
+    "en": "Ik snap deze vraag niet.",
+    "ko": "",
+    "highlight": "niet"
+   },
+   {
+    "en": "Er is geen brood meer.",
+    "ko": "",
+    "highlight": "geen brood"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ik heb niet een pen.",
+    "right": "Ik heb geen pen.",
+    "note": "Never say 'niet een'; replace 'een' with 'geen'."
+   },
+   {
+    "wrong": "Het boek is geen interessant.",
+    "right": "Het boek is niet interessant.",
+    "note": "Adjectives are negated with 'niet', not 'geen'."
+   },
+   {
+    "wrong": "Zij spreekt geen Nederlands niet.",
+    "right": "Zij spreekt geen Nederlands.",
+    "note": "Dutch avoids double negatives; use only 'geen'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Heeft Thomas een auto? Nee, hij heeft ___ auto.",
+    "options": [
+     "niet",
+     "geen",
+     "geeneen",
+     "niets"
+    ],
+    "answer": 1,
+    "explanation": "Negating an indefinite noun ('een auto') requires 'geen'."
+   },
+   {
+    "question": "Ik vind dit examen helemaal ___ moeilijk.",
+    "options": [
+     "geen",
+     "niet",
+     "nooit",
+     "niets"
+    ],
+    "answer": 1,
+    "explanation": "Adjectives like 'moeilijk' are negated with 'niet'."
+   },
+   {
+    "question": "Nee, dat is ___ mijn sleutel.",
+    "options": [
+     "geen",
+     "geens",
+     "niet",
+     "niets"
+    ],
+    "answer": 2,
+    "explanation": "Definite nouns with possessives ('mijn sleutel') are negated with 'niet'."
+   },
+   {
+    "question": "Wij eten vanavond ___ vis omdat we vegetariër zijn.",
+    "options": [
+     "niet",
+     "niets",
+     "geen",
+     "geene"
+    ],
+    "answer": 2,
+    "explanation": "Uncountable indefinite nouns without an article ('vis') use 'geen'."
+   }
+  ],
+  "tip": "Think of 'geen' as equivalent to English 'no' or 'none' (e.g., geen geld = no money)."
+ },
+ {
+  "id": "a1-separable-verbs-prefix-splitting",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#00897B",
+  "emoji": "🧩",
+  "title": "Separable Verbs (Scheidbare Werkwoorden)",
+  "subtitle": "Separate the prefix and send it to the end",
+  "color": "#FB8C00",
+  "bg": "#FFF3E0",
+  "keyPoint": "In a Dutch main clause in the present tense, the stressed prefix detaches from the verb stem and travels to the very end of the clause.",
+  "structure": {
+   "headers": [
+    "Infinitive",
+    "Stem Verb (V2)",
+    "Middle of Clause",
+    "Separated Prefix (End)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "opbellen",
+      "Ik bel",
+      "mijn moeder vanavond",
+      "op."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "meenemen",
+      "Hij neemt",
+      "een paraplu",
+      "mee."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "schoonmaken",
+      "Wij maken",
+      "de hele keuken",
+      "schoon."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "uitnodigen",
+      "Zij nodigt",
+      "al haar vrienden",
+      "uit."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#FB8C00",
+    "label": "Everyday actions",
+    "example": "Ik sta elke ochtend om zeven uur op.",
+    "translation": ""
+   },
+   {
+    "color": "#00897B",
+    "label": "Inviting and socializing",
+    "example": "Zij nodigt ons voor haar feestje uit.",
+    "translation": ""
+   },
+   {
+    "color": "#1E88E5",
+    "label": "Cleaning and chores",
+    "example": "Ruim jij straks je slaapkamer op?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "De trein komt om drie uur aan.",
+    "ko": "",
+    "highlight": "komt om drie uur aan"
+   },
+   {
+    "en": "Doe alsjeblieft de deur dicht.",
+    "ko": "",
+    "highlight": "Doe alsjeblieft de deur dicht"
+   },
+   {
+    "en": "Wij nodigen alle buren uit.",
+    "ko": "",
+    "highlight": "nodigen alle buren uit"
+   },
+   {
+    "en": "Ik bel je straks even op.",
+    "ko": "",
+    "highlight": "bel je straks even op"
+   },
+   {
+    "en": "Hij trekt zijn warme jas aan.",
+    "ko": "",
+    "highlight": "trekt zijn warme jas aan"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ik opsta om zeven uur.",
+    "right": "Ik sta om zeven uur op.",
+    "note": "In a present tense main clause, the prefix must separate and move to the end."
+   },
+   {
+    "wrong": "Hij belt op zijn vader.",
+    "right": "Hij belt zijn vader op.",
+    "note": "The separated prefix belongs at the very end of the clause, after objects."
+   },
+   {
+    "wrong": "Zij vertrekt om tien uur uit.",
+    "right": "Zij vertrekt om tien uur.",
+    "note": "'Vertrekken' has an inseparable prefix (ver-), so do not split it."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Jan ___ zijn kamer elk weekend netjes ___.",
+    "options": [
+     "ruimt / op",
+     "opruimt / -",
+     "ruim / op",
+     "op / ruimt"
+    ],
+    "answer": 0,
+    "explanation": "The conjugated verb 'ruimt' takes position 2, and the separable prefix 'op' moves to the end."
+   },
+   {
+    "question": "Hoe laat ___ de film vanavond ___?",
+    "options": [
+     "begint / aan",
+     "vangt / aan",
+     "aanvangt / -",
+     "vang / aan"
+    ],
+    "answer": 1,
+    "explanation": "The separable verb 'aanvangen' conjugates to 'vangt' in position 2 with 'aan' at the end."
+   },
+   {
+    "question": "Ik ___ altijd mijn paraplu ___ als het regent.",
+    "options": [
+     "neem / mee",
+     "meeneem / -",
+     "neemt / mee",
+     "nam / mee"
+    ],
+    "answer": 0,
+    "explanation": "'Ik' requires the bare stem 'neem', and the prefix 'mee' goes to the end of the clause."
+   },
+   {
+    "question": "Waarom ___ je me niet even ___?",
+    "options": [
+     "bel / op",
+     "opbel / -",
+     "belt / op",
+     "bellen / op"
+    ],
+    "answer": 0,
+    "explanation": "In inversion with 'je', drop the '-t' on the verb stem ('bel') and place 'op' at the end."
+   }
+  ],
+  "tip": "Listen to the stress: separable prefixes are always stressed (OPstaan, MEEbrengen), while inseparable prefixes (be-, ver-, ont-, her-, ge-) are never stressed!"
+ },
+ {
+  "id": "nl-a1-diminutives-formation-and-het-rule",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🧸",
+  "title": "Diminutives and Automatic 'Het' Gender",
+  "subtitle": "Forming small things and mastering the automatic neuter article",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Every diminutive noun in Dutch automatically takes the neuter definite article 'het', regardless of its original gender.",
+  "structure": {
+   "headers": [
+    "Ending Pattern",
+    "Suffix",
+    "Example",
+    "Rule"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Standard consonants / -p, -t, -k",
+      "-je",
+      "het huisje",
+      "Basic diminutive suffix"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Vowels, dipthongs, -l, -r, -n",
+      "-tje",
+      "het stoeltje",
+      "Add -tje after long vowels or sonorant consonants"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Short vowel + m",
+      "-pje",
+      "het boompje",
+      "-m preceded by long vowel/diphthong takes -pje"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Short vowel + single consonant",
+      "-etje",
+      "het kat善etje -> katje / mannetje",
+      "Doubles consonant with short stressed vowel"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Unstressed -en, -el, -er + m",
+      "-kje",
+      "het kettinkje",
+      "Words ending in unstressed -ing become -inkje"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Physical Smallness",
+    "example": "Kijk naar dat kleine hondje in het park.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Affection or Endearment",
+    "example": "Wil je een lekker kopje koffie drinken?",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Downplaying Importance",
+    "example": "Ik moet nog even een klusje afmaken.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Het meisje leest een spannend boek in de tuin.",
+    "ko": "",
+    "highlight": "Het meisje"
+   },
+   {
+    "en": "Mag ik alsjeblieft een koekje bij de thee?",
+    "ko": "",
+    "highlight": "koekje"
+   },
+   {
+    "en": "We wonen in een schattig huisje aan de gracht.",
+    "ko": "",
+    "highlight": "huisje"
+   },
+   {
+    "en": "Dat kleine mannetje loopt heel snel naar school.",
+    "ko": "",
+    "highlight": "mannetje"
+   },
+   {
+    "en": "Zij kocht een nieuw boompje voor op het balkon.",
+    "ko": "",
+    "highlight": "boompje"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "de koekje",
+    "right": "het koekje",
+    "note": "All singular diminutives take 'het', even if the base noun takes 'de' (de koek -> het koekje)."
+   },
+   {
+    "wrong": "het boometje",
+    "right": "het boompje",
+    "note": "Nouns ending in -m preceded by a long vowel take the suffix -pje, not -etje."
+   },
+   {
+    "wrong": "de kleine stoeltje",
+    "right": "het kleine stoeltje",
+    "note": "Adjectives before 'het-words' preceded by an indefinite article drop the -e, but after 'het' they keep -e; the article must be 'het'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct diminutive form: 'de hond' becomes ___",
+    "options": [
+     "het hondje",
+     "de hondje",
+     "het hondetje",
+     "het hondtje"
+    ],
+    "answer": 0,
+    "explanation": "Nouns ending in -d take the standard suffix -je, and always use 'het'."
+   },
+   {
+    "question": "Choose the correct diminutive for 'de bloem': ___",
+    "options": [
+     "het bloemetje",
+     "het bloempje",
+     "de bloempje",
+     "het bloemje"
+    ],
+    "answer": 1,
+    "explanation": "'Bloem' has a long vowel sound followed by -m, which requires the -pje suffix (het bloempje). Note: bloemetje exists colloquially for cut flowers, but regular formation for 'bloem' is bloempje."
+   },
+   {
+    "question": "Choose the correct definite article for any singular diminutive: ___",
+    "options": [
+     "een",
+     "de",
+     "het",
+     "der"
+    ],
+    "answer": 2,
+    "explanation": "Every singular diminutive noun without exception is a neuter 'het-word'."
+   },
+   {
+    "question": "What is the diminutive form of 'de man'?",
+    "options": [
+     "het manje",
+     "het mantje",
+     "de mannetje",
+     "het mannetje"
+    ],
+    "answer": 3,
+    "explanation": "'Man' has a short stressed vowel, so the final consonant doubles before adding -etje: het mannetje."
+   }
+  ],
+  "tip": "No matter what article the original noun has, slapping any diminutive ending immediately turns it into a 'het' noun in the singular!"
+ },
+ {
+  "id": "nl-a2-v2-word-order-and-inversion",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔀",
+  "title": "V2 Word Order and Subject-Verb Inversion",
+  "subtitle": "Keeping the finite verb strictly in second position in main clauses",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "In a Dutch main clause, the conjugated finite verb must always occupy the second grammatical position, causing subject-verb inversion when another element comes first.",
+  "structure": {
+   "headers": [
+    "Position 1 (Topic)",
+    "Position 2 (Finite Verb)",
+    "Position 3 (Subject)",
+    "Rest of Clause"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Vandaag",
+      "werk",
+      "ik",
+      "de hele dag thuis."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "In Amsterdam",
+      "wonen",
+      "mijn ouders",
+      "al twintig jaar."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Soms",
+      "drinkt",
+      "hij",
+      "een kopje koffie."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Dat boek",
+      "heeft",
+      "zij",
+      "gisteren gekocht."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Time Adverb Fronted",
+    "example": "Morgen gaan wij samen naar de markt.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Place Adverb Fronted",
+    "example": "Hier vind je de beste verse stroopwafels.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Object Fronted for Emphasis",
+    "example": "Die film heb ik al drie keer gezien.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Gisteren kocht Lisa een nieuwe fiets op de markt.",
+    "ko": "",
+    "highlight": "kocht Lisa"
+   },
+   {
+    "en": "Om acht uur begint de les Nederlands.",
+    "ko": "",
+    "highlight": "begint de les"
+   },
+   {
+    "en": "Daarom reis ik liever met de trein.",
+    "ko": "",
+    "highlight": "reis ik"
+   },
+   {
+    "en": "In de winter schaatsen veel mensen op het ijs.",
+    "ko": "",
+    "highlight": "schaatsen veel mensen"
+   },
+   {
+    "en": "Helaas kan hij niet naar het feest komen.",
+    "ko": "",
+    "highlight": "kan hij"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Morgen ik ga naar school.",
+    "right": "Morgen ga ik naar school.",
+    "note": "Dutch requires V2 order. If 'morgen' is in position 1, the verb 'ga' must be in position 2, placing 'ik' behind it."
+   },
+   {
+    "wrong": "Gisteren hij heeft gewerkt.",
+    "right": "Gisteren heeft hij gewerkt.",
+    "note": "Do not follow English word order when starting with an adverbial; invert the subject and auxiliary verb."
+   },
+   {
+    "wrong": "Daarom ik wil koffie.",
+    "right": "Daarom wil ik koffie.",
+    "note": "'Daarom' is an adverb occupying position 1, so the finite verb 'wil' must come immediately next."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete with correct word order: 'Vandaag ___ naar kantoor.'",
+    "options": [
+     "ga ik",
+     "ik ga",
+     "gaat ik",
+     "ik gaan"
+    ],
+    "answer": 0,
+    "explanation": "Because 'Vandaag' takes position 1, the verb 'ga' must take position 2, triggering subject inversion (ga ik)."
+   },
+   {
+    "question": "Complete with correct word order: 'In de zomer ___ wij vaak buiten.'",
+    "options": [
+     "wij eten",
+     "eten wij",
+     "eten wezen",
+     "wij gegeten"
+    ],
+    "answer": 1,
+    "explanation": "The prepositional phrase 'In de zomer' sits in position 1, requiring the verb 'eten' in position 2 before the subject 'wij'."
+   },
+   {
+    "question": "Complete with correct word order: 'Daarom ___ hij niet mee.'",
+    "options": [
+     "hij komt",
+     "hij komen",
+     "komt hij",
+     "komt hem"
+    ],
+    "answer": 2,
+    "explanation": "'Daarom' takes the first position, so the verb 'komt' must precede the subject pronoun 'hij'."
+   },
+   {
+    "question": "Complete with correct word order: 'Nu ___ jij aan de beurt.'",
+    "options": [
+     "jij bent",
+     "bent u",
+     "is jij",
+     "ben jij"
+    ],
+    "answer": 3,
+    "explanation": "'Nu' occupies the first spot, placing the verb 'ben' in position 2, followed by subject 'jij' (with no -t due to inversion with jij)."
+   }
+  ],
+  "tip": "Think of position 1 as a single chair: only one element can sit there. Once it's occupied by anything other than the subject, the verb jumps into second position before the subject!"
+ },
+ {
+  "id": "nl-a2-subordinate-clause-sov-word-order",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔗",
+  "title": "Subordinate Clause Word Order (SOV)",
+  "subtitle": "Kicking all verbs to the end of subordinate clauses",
+  "color": "#6D28D9",
+  "bg": "#EDE9FE",
+  "keyPoint": "Subordinating conjunctions send all verbs—both auxiliary and main—to the very end of the subordinate clause in SOV order.",
+  "structure": {
+   "headers": [
+    "Conjunction",
+    "Subject",
+    "Middle Field",
+    "Verb Cluster (End)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "omdat",
+      "hij",
+      "vandaag ziek",
+      "is"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "dat",
+      "wij",
+      "morgen naar Amsterdam",
+      "gaan"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "als",
+      "je",
+      "de Nederlandse taal",
+      "wilt leren"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "hoewel",
+      "zij",
+      "weinig vrije tijd",
+      "heeft gehad"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6D28D9",
+    "label": "Reason with 'omdat'",
+    "example": "Ik blijf thuis omdat het hard regent.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Indirect Statement with 'dat'",
+    "example": "Zij zegt dat Peter Nederlands leert.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Condition with 'als'",
+    "example": "We gaan wandelen als de zon schijnt.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ik kan niet komen omdat ik veel huiswerk moet maken.",
+    "ko": "",
+    "highlight": "moet maken"
+   },
+   {
+    "en": "Hij vertelt dat hij volgend jaar gaat verhuizen.",
+    "ko": "",
+    "highlight": "gaat verhuizen"
+   },
+   {
+    "en": "Als het morgen mooi weer is, gaan we naar het strand.",
+    "ko": "",
+    "highlight": "mooi weer is"
+   },
+   {
+    "en": "Zij vraagt of jij vanavond koffie wilt drinken.",
+    "ko": "",
+    "highlight": "wilt drinken"
+   },
+   {
+    "en": "Hoewel hij moe was, werkte hij de hele avond door.",
+    "ko": "",
+    "highlight": "moe was"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ik weet dat hij is ziek.",
+    "right": "Ik weet dat hij ziek is.",
+    "note": "In a subordinate clause introduced by 'dat', the verb must go to the very end."
+   },
+   {
+    "wrong": "Omdat hij heeft geen tijd, komt hij niet.",
+    "right": "Omdat hij geen tijd heeft, komt hij niet.",
+    "note": "'Omdat' introduces a subclause; the finite verb 'heeft' belongs at the end."
+   },
+   {
+    "wrong": "Als je wilt brood kopen...",
+    "right": "Als je brood wilt kopen...",
+    "note": "Objects like 'brood' must precede the final verbal cluster ('wilt kopen')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the subordinate clause: 'Hij blijft binnen omdat hij ziek ___.'",
+    "options": [
+     "is",
+     "zijn",
+     "heeft",
+     "wordt geweest"
+    ],
+    "answer": 0,
+    "explanation": "The finite verb 'is' is pushed to the very end of the clause following 'omdat'."
+   },
+   {
+    "question": "Complete the subordinate clause: 'Ik denk dat Thomas morgen ___.'",
+    "options": [
+     "komt niet",
+     "komt",
+     "komen",
+     "is gekomen niet"
+    ],
+    "answer": 1,
+    "explanation": "The finite verb 'komt' must go to the end of the clause introduced by 'dat'."
+   },
+   {
+    "question": "Complete the subordinate clause: 'We eten als vader het eten klaar ___.'",
+    "options": [
+     "maakt heeft",
+     "heeft gemaakt niet",
+     "heeft gemaakt",
+     "maken heeft"
+    ],
+    "answer": 2,
+    "explanation": "At the end of a subordinate clause, verb combinations like auxiliary + participle cluster together (heeft gemaakt)."
+   },
+   {
+    "question": "Choose the correctly ordered sentence:",
+    "options": [
+     "Zij weet dat hij koopt een auto.",
+     "Zij weet dat koopt hij een auto.",
+     "Zij weet dat hij een auto koopt.",
+     "Zij weet dat koopt een auto hij."
+    ],
+    "answer": 2,
+    "explanation": "'Dat' introduces a subordinate clause: Subject (hij) + Object (een auto) + Verb at the end (koopt)."
+   }
+  ],
+  "tip": "Remember: conjunctions like 'omdat', 'dat', and 'als' act like giant magnets that drag every verb all the way to the end of the sentence clause!"
+ },
+ {
+  "id": "nl-a2-perfectum-hebben-vs-zijn-auxiliary",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#EF4444",
+  "emoji": "⚖️",
+  "title": "Voltooid Tegenwoordige Tijd: Hebben vs. Zijn",
+  "subtitle": "Choosing the right auxiliary verb for present perfect compound tenses",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Use 'hebben' for most transitive and stationary verbs, but use 'zijn' for verbs expressing a change of state, transition, or directional movement.",
+  "structure": {
+   "headers": [
+    "Auxiliary",
+    "Verb Class",
+    "Key Indicator",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "hebben",
+      "Transitive verbs",
+      "Takes a direct object",
+      "Ik heb een appel gegeten."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "hebben",
+      "Stationary actions",
+      "No directional change",
+      "Wij hebben urenlang gewandeld."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "zijn",
+      "Change of state",
+      "Mutation/Transition",
+      "De baby is gisteren geboren."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "zijn",
+      "Directional motion",
+      "Movement to/from destination",
+      "Zij is naar Amsterdam gefietst."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "zijn",
+      "Key intransitives",
+      "zijn, blijven, worden",
+      "Ik ben thuis gebleven."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Standard Action with 'hebben'",
+    "example": "Wij hebben gisteren een nieuw huis gekocht.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Change of State with 'zijn'",
+    "example": "De oude boom is in de storm omgevallen.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Movement to Destination with 'zijn'",
+    "example": "Zij zijn vanochtend naar Parijs gereden.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ik heb gisteren de hele avond een spannend boek gelezen.",
+    "ko": "",
+    "highlight": "heb"
+   },
+   {
+    "en": "Mijn broer is vorig jaar naar Utrecht verhuisd.",
+    "ko": "",
+    "highlight": "is"
+   },
+   {
+    "en": "Wij zijn zondag lekker lang in bed gebleven.",
+    "ko": "",
+    "highlight": "zijn"
+   },
+   {
+    "en": "Zij heeft vanochtend een kopje zwarte koffie gedronken.",
+    "ko": "",
+    "highlight": "heeft"
+   },
+   {
+    "en": "Hoe laat ben jij vanmorgen opgestaan?",
+    "ko": "",
+    "highlight": "ben"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ik heb naar school gelopen.",
+    "right": "Ik ben naar school gelopen.",
+    "note": "When a motion verb includes a specific direction or destination ('naar school'), use 'zijn', not 'hebben'."
+   },
+   {
+    "wrong": "Hij heeft gisteren gestorven.",
+    "right": "Hij is gisteren gestorven.",
+    "note": "'Sterven' expresses a change of state and strictly requires 'zijn'."
+   },
+   {
+    "wrong": "Zij heeft in Amsterdam gebleven.",
+    "right": "Zij is in Amsterdam gebleven.",
+    "note": "'Blijven' always conjugates with 'zijn' in compound past tenses."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the perfect tense: 'Wij ___ gisteren naar Utrecht gereisd.'",
+    "options": [
+     "zijn",
+     "hebben",
+     "hadden",
+     "worden"
+    ],
+    "answer": 0,
+    "explanation": "'Reizen' indicates directional movement toward a destination, so it takes 'zijn'."
+   },
+   {
+    "question": "Complete the perfect tense: 'Wat ___ jij gisteravond gekookt?'",
+    "options": [
+     "ben",
+     "hebt",
+     "was",
+     "bent"
+    ],
+    "answer": 1,
+    "explanation": "'Koken' is a transitive action verb with a direct object, requiring 'hebben' (jij hebt)."
+   },
+   {
+    "question": "Complete the perfect tense: 'Zij ___ de hele middag in de tuin gebleven.'",
+    "options": [
+     "heeft",
+     "hield",
+     "is",
+     "werd"
+    ],
+    "answer": 2,
+    "explanation": "The verb 'blijven' always takes 'zijn' in the present perfect (zij is gebleven)."
+   },
+   {
+    "question": "Complete the perfect tense: 'De kinderen ___ snel in slaap gevallen.'",
+    "options": [
+     "hebben",
+     "hadden",
+     "waren",
+     "zijn"
+    ],
+    "answer": 3,
+    "explanation": "'Vallen' (and 'in slaap vallen') denotes a transition / change of state, which requires 'zijn' (kinderen zijn)."
+   }
+  ],
+  "tip": "Ask two questions: Is there a destination, or did someone's state change? If yes to either, choose 'zijn'! Otherwise, 'hebben' is your safe bet."
+ },
+ {
+  "id": "nl-a2-past-participle-formation-kofschip",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#10B981",
+  "emoji": "🚢",
+  "title": "Past Participle and Imperfect Endings ('t Kofschip)",
+  "subtitle": "Using the voiceless consonant rule to pick -t or -d endings",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "If the raw stem of an infinitive (minus -en) ends in a voiceless consonant from ''t kofschip' (t, k, f, s, ch, p), regular past forms take -te/-t; otherwise, they take -de/-d.",
+  "structure": {
+   "headers": [
+    "Infinitive",
+    "Stem minus -en",
+    "In 't kofschip?",
+    "Imperfect / Participle"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "werken",
+      "werk- (k)",
+      "Yes (k)",
+      "werkte / gewerkt"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "hopen",
+      "hoop- (p)",
+      "Yes (p)",
+      "hoopte / gehoopt"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "leren",
+      "leer- (r)",
+      "No",
+      "leerde / geleerd"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "leven",
+      "leev- -> leef (v originally)",
+      "No (original 'v')",
+      "leefde / geleefd"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "reizen",
+      "reiz- -> reis (z originally)",
+      "No (original 'z')",
+      "reisde / gereisd"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Voiceless Consonant (-t)",
+    "example": "Hij heeft gisteren hard gewerkt.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Voiced Consonant (-d)",
+    "example": "Zij heeft Nederlands geleerd.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Original V/Z Stems (-d)",
+    "example": "Wij hebben vorig jaar veel gereisd.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ik heb gisteren een appeltaart gebakken.",
+    "ko": "",
+    "highlight": "gebakken"
+   },
+   {
+    "en": "Zij kookte vroeger elke dag verse soep.",
+    "ko": "",
+    "highlight": "kookte"
+   },
+   {
+    "en": "Wij hebben naar mooie muziek geluisterd.",
+    "ko": "",
+    "highlight": "geluisterd"
+   },
+   {
+    "en": "De dokter praatte rustig met de patiënt.",
+    "ko": "",
+    "highlight": "praatte"
+   },
+   {
+    "en": "Hij heeft zijn hele leven in Breda gewoond.",
+    "ko": "",
+    "highlight": "gewoond"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "geleeft",
+    "right": "geleefd",
+    "note": "The infinitive is 'leven'. Remove -en to reveal the stem ending 'v' (voiced). Since 'v' is not in ''t kofschip', the participle ends in -d."
+   },
+   {
+    "wrong": "gereist",
+    "right": "gereisd",
+    "note": "Infinitive is 'reizen'. The stem before -en ends in 'z'. Because 'z' is voiced and not in ''t kofschip', it ends in -d."
+   },
+   {
+    "wrong": "ik hoorde hem geklopd",
+    "right": "ik hoorde hem geklopt",
+    "note": "The stem of 'kloppen' ends in -p, which is part of ''t kofschip', so the participle must end in -t."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the past participle of 'maken' (stem ending in -k)?",
+    "options": [
+     "gemaakt",
+     "gemaakd",
+     "gemaken",
+     "gemaket"
+    ],
+    "answer": 0,
+    "explanation": "Remove -en from 'maken' gives stem 'mak-'. The consonant 'k' is in ''t kofschip', so it takes -t (gemaakt)."
+   },
+   {
+    "question": "What is the past participle of 'verhuizen' (stem originally ending in -z)?",
+    "options": [
+     "verhuizen",
+     "verhuisd",
+     "verhuist",
+     "geverhuisd"
+    ],
+    "answer": 1,
+    "explanation": "'Verhuizen' minus -en has original stem ending 'z', which is not in ''t kofschip'. Thus it ends in -d (verhuisd). Prefixes like ver- do not add ge-."
+   },
+   {
+    "question": "What is the imperfect (past) singular form of 'praten'?",
+    "options": [
+     "praatde",
+     "praatte",
+     "praate",
+     "gepraat"
+    ],
+    "answer": 1,
+    "explanation": "'Praten' minus -en ends in 't', which is in ''t kofschip'. The imperfect adds -te, giving double t: 'praatte'."
+   },
+   {
+    "question": "What is the past participle of 'wandelen' (stem ending in -l)?",
+    "options": [
+     "gewandelt",
+     "gewandelen",
+     "gewandeldt",
+     "gewandeld"
+    ],
+    "answer": 3,
+    "explanation": "Stem 'wandel-' ends in 'l', which is not in ''t kofschip', therefore the ending is -d (gewandeld)."
+   }
+  ],
+  "tip": "Always inspect the letter before -en in the infinitive (the raw stem), NOT the spelling after you write the word! This prevents getting tricked by changed letters like v->f or z->s."
+ },
+ {
+  "id": "nl-a2-pronominal-er-existential-and-prepositions",
+  "level": "a2",
+  "category": "advanced",
+  "categoryColor": "#7C3AED",
+  "emoji": "📍",
+  "title": "Functions of 'Er': Locative, Existential, and Prepositions",
+  "subtitle": "Master the versatile Dutch dummy subject and pronominal adverb",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "Use 'er' as a dummy subject for indefinite things (there is/are) or merge it directly with prepositions to refer to things instead of people.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Dutch Structure",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Existential dummy subject",
+      "Er is / Er zijn ...",
+      "There is / There are ..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Locative replacement",
+      "Ik woon er.",
+      "I live there."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Preposition + thing",
+      "er + preposition (over -> erover)",
+      "about it / of it"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Preposition with 'met'",
+      "er + mee (ermee)",
+      "with it"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Existential (There is/are)",
+    "example": "Er staat een auto voor de deur.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Locative reference",
+    "example": "Ben je in Amsterdam? Ja, ik woon er nu.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Prepositional object (thing)",
+    "example": "Wat doe je ermee?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Er ligt een boek op tafel.",
+    "ko": "",
+    "highlight": "Er ligt"
+   },
+   {
+    "en": "Er zijn veel mensen op het plein.",
+    "ko": "",
+    "highlight": "Er zijn"
+   },
+   {
+    "en": "Ik denk er vaak over na.",
+    "ko": "",
+    "highlight": "er vaak over"
+   },
+   {
+    "en": "We praten er morgen over.",
+    "ko": "",
+    "highlight": "er morgen over"
+   },
+   {
+    "en": "Heb je de sleutel? Nee, ik zoek ernaar.",
+    "ko": "",
+    "highlight": "ernaar"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ik praat over het.",
+    "right": "Ik praat erover.",
+    "note": "Prepositions cannot directly combine with 'het' for things; you must use 'er + preposition'."
+   },
+   {
+    "wrong": "Zijn veel toeristen in de stad.",
+    "right": "Er zijn veel toeristen in de stad.",
+    "note": "Dutch requires the existential dummy subject 'er' when introducing indefinite entities."
+   },
+   {
+    "wrong": "Ik schrijf met het.",
+    "right": "Ik schrijf ermee.",
+    "note": "'Met' transforms into the combined form 'mee' when fused with 'er' ('ermee')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "___ ligt een brief op je bureau.",
+    "options": [
+     "Het",
+     "Er",
+     "Daar",
+     "Hier"
+    ],
+    "answer": 1,
+    "explanation": "'Er' serves as the dummy subject for indefinite nouns ('een brief')."
+   },
+   {
+    "question": "Wat ga je ___ doen?",
+    "options": [
+     "ermee",
+     "met het",
+     "daarmet",
+     "met er"
+    ],
+    "answer": 0,
+    "explanation": "'Met + het' becomes 'ermee' when referring to an inanimate object."
+   },
+   {
+    "question": "Hebben jullie ___ gesproken?",
+    "options": [
+     "van het",
+     "over het",
+     "erover",
+     "het over"
+    ],
+    "answer": 2,
+    "explanation": "'Over + het' becomes the pronominal adverb 'erover'."
+   },
+   {
+    "question": "Denk je nog ___?",
+    "options": [
+     "aan het",
+     "ernaar",
+     "aan er",
+     "eraan"
+    ],
+    "answer": 3,
+    "explanation": "'Aan + het' turns into 'eraan'."
+   }
+  ],
+  "tip": "Remember that 'met' turns into 'mee' (ermee) and 'tot' turns into 'toe' (ertoe) when combined with 'er'."
+ },
+ {
+  "id": "nl-a2-modal-verbs-with-infinitive-bracket",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#EA580C",
+  "emoji": "🧱",
+  "title": "Modal Auxiliaries and Verbal Brackets",
+  "subtitle": "Frame sentences with modal verbs at V2 and infinitives at the end",
+  "color": "#F97316",
+  "bg": "#FFF7ED",
+  "keyPoint": "In a Dutch main clause, the conjugated modal verb stands in second position, while the main action verb is pushed to the absolute end as an infinitive.",
+  "structure": {
+   "headers": [
+    "Position",
+    "Component",
+    "Example Element"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Position 1",
+      "Topic / Subject",
+      "Morgen"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Position 2 (V2)",
+      "Conjugated Modal",
+      "wil"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Middle Field",
+      "Objects / Adverbs",
+      "ik een nieuw boek"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Final Position",
+      "Infinitive Lexical Verb",
+      "kopen."
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Expressing desire (willen)",
+    "example": "Ik wil vanavond graag pizza eten.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Expressing ability (kunnen)",
+    "example": "Zij kan heel snel Nederlands spreken.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Expressing necessity (moeten)",
+    "example": "Wij moeten voor vrijdag het verslag afmaken.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ik kan je morgen om acht uur bellen.",
+    "ko": "",
+    "highlight": "kan je morgen om acht uur bellen"
+   },
+   {
+    "en": "Wij moeten nu naar huis gaan.",
+    "ko": "",
+    "highlight": "moeten nu naar huis gaan"
+   },
+   {
+    "en": "Zij wil een kopje koffie drinken.",
+    "ko": "",
+    "highlight": "wil een kopje koffie drinken"
+   },
+   {
+    "en": "Mag ik hier even rustig zitten?",
+    "ko": "",
+    "highlight": "Mag ik hier even rustig zitten"
+   },
+   {
+    "en": "Jullie hoeven vandaag niet te werken.",
+    "ko": "",
+    "highlight": "hoeven vandaag niet te werken"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ik wil kopen een nieuwe fiets.",
+    "right": "Ik wil een nieuwe fiets kopen.",
+    "note": "Do not follow English word order; the lexical verb infinitive must go to the end of the clause."
+   },
+   {
+    "wrong": "Zij kan goed spreekt Nederlands.",
+    "right": "Zij kan goed Nederlands spreken.",
+    "note": "The secondary verb following a modal verb must be an infinitive, never conjugated."
+   },
+   {
+    "wrong": "Wij moeten gaan naar de supermarkt.",
+    "right": "Wij moeten naar de supermarkt gaan.",
+    "note": "Directional prepositional phrases stay inside the bracket before the final infinitive."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Ik ___ vandaag een lange wandeling maken.",
+    "options": [
+     "wil",
+     "wilt",
+     "willen",
+     "gewild"
+    ],
+    "answer": 0,
+    "explanation": "The first-person singular 'ik' requires the modal form 'wil' (or 'wilt')."
+   },
+   {
+    "question": "Kunnen jullie mij vanmiddag even ___?",
+    "options": [
+     "helpt",
+     "geholpen",
+     "helpen",
+     "hielpen"
+    ],
+    "answer": 2,
+    "explanation": "The secondary verb governed by modal 'kunnen' appears at the end as an infinitive: 'helpen'."
+   },
+   {
+    "question": "We moeten morgen vroeg ___.",
+    "options": [
+     "opstaan",
+     "staan op",
+     "opgestaan",
+     "op te staan"
+    ],
+    "answer": 0,
+    "explanation": "Separable verbs rejoin into a single bare infinitive at the end of a modal bracket."
+   },
+   {
+    "question": "Waarom mag hij niet mee naar de bioscoop ___?",
+    "options": [
+     "ging",
+     "gaat",
+     "gegaan",
+     "gaan"
+    ],
+    "answer": 3,
+    "explanation": "Modal 'mag' takes the infinitive 'gaan' at the very end."
+   }
+  ],
+  "tip": "Think of the modal verb and the final infinitive as bookends holding all nouns, times, and places neatly in the middle."
+ },
+ {
+  "id": "nl-b1-er-quantitative-partitive",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#7C3AED",
+  "emoji": "🔢",
+  "title": "Quantitative 'Er' with Numbers and Quantifiers",
+  "subtitle": "Use 'er' whenever counting or quantifying a previously mentioned noun",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "Dutch strictly requires 'er' alongside numbers, numerals, or quantifiers when the quantified noun itself is omitted.",
+  "structure": {
+   "headers": [
+    "Prompt Question",
+    "Dutch Answer with 'Er'",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Heb je appels?",
+      "Ja, ik heb er twee.",
+      "Yes, I have two (of them)."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Hoeveel zusters heb je?",
+      "Ik heb er drie.",
+      "I have three (sisters)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Zijn er koekjes?",
+      "Er liggen er veel in de kast.",
+      "There are many (of them) in the cupboard."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Heb je koffie?",
+      "Nee, ik heb er geen.",
+      "No, I don't have any (of it)."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "With exact numerals",
+    "example": "Hoeveel boeken kocht je? Ik kocht er vier.",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "With quantifiers (veel/weinig)",
+    "example": "Zijn er fouten? Nee, er zijn er weinig.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "With 'geen' (none/zero)",
+    "example": "Zoek je pennen? Ik heb er geen.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Hoeveel broers heb je? Ik heb er twee.",
+    "ko": "",
+    "highlight": "heb er twee"
+   },
+   {
+    "en": "Zij zocht postzegels en kocht er tien.",
+    "ko": "",
+    "highlight": "kocht er tien"
+   },
+   {
+    "en": "Er stonden tien glazen, maar ik brak er één.",
+    "ko": "",
+    "highlight": "brak er één"
+   },
+   {
+    "en": "Heeft het team genoeg spelers? Ja, we hebben er genoeg.",
+    "ko": "",
+    "highlight": "hebben er genoeg"
+   },
+   {
+    "en": "Wie wil er een koekje? Ik wil er wel een.",
+    "ko": "",
+    "highlight": "wil er wel een"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ik heb twee.",
+    "right": "Ik heb er twee.",
+    "note": "Unlike English ('I have two'), Dutch cannot leave the number stranded without 'er'."
+   },
+   {
+    "wrong": "Hoeveel katten heb je? Ik heb drie katten er.",
+    "right": "Ik heb er drie.",
+    "note": "'Er' replaces the repeated noun; do not use both the explicit noun and quantitative 'er' together."
+   },
+   {
+    "wrong": "Er liggen veel op het bord.",
+    "right": "Er liggen er veel op het bord.",
+    "note": "When combining existential 'er' and quantitative 'er', both can appear in the same sentence."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Heb je al kaartjes gekocht? Ja, ik heb ___ twee gekocht.",
+    "options": [
+     "ze",
+     "er",
+     "die",
+     "hen"
+    ],
+    "answer": 1,
+    "explanation": "Quantitative reference with a number requires 'er', not a definite pronoun like 'ze'."
+   },
+   {
+    "question": "Hoeveel studenten zijn aanwezig? Ik zie ___ twintig.",
+    "options": [
+     "ze",
+     "hun",
+     "er",
+     "daar"
+    ],
+    "answer": 2,
+    "explanation": "With the numeral 'twintig' specifying an omitted noun, 'er' is mandatory."
+   },
+   {
+    "question": "Wil je nog koffie? Nee dank je, ik heb ___ al genoeg gehad.",
+    "options": [
+     "er",
+     "het",
+     "dat",
+     "die"
+    ],
+    "answer": 0,
+    "explanation": "Quantifier 'genoeg' requires 'er' when referring back to coffee."
+   },
+   {
+    "question": "Heb jij nog postzegels? Nee, ik heb ___ geen meer.",
+    "options": [
+     "van",
+     "er",
+     "die",
+     "ze"
+    ],
+    "answer": 1,
+    "explanation": "'Geen' acting on an omitted noun requires 'er'."
+   }
+  ],
+  "tip": "Whenever you answer 'how many?' with just a number or quantity in Dutch, make sure 'er' slips in right near the conjugated verb."
+ },
+ {
+  "id": "nl-b1-infinitive-clauses-om-te-structure",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#0284C7",
+  "emoji": "🎯",
+  "title": "Infinitive Constructions with 'Om ... Te'",
+  "subtitle": "Express purpose and infinitival complements with precision",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Use 'om' to begin the clause, place all details in the middle, and close the construction with 'te' + the infinitive at the very end.",
+  "structure": {
+   "headers": [
+    "Element",
+    "Position",
+    "Clause Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Main Clause",
+      "Start",
+      "Hij gaat naar de markt"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Conjunction",
+      "Middle Start",
+      "om"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Objects / Modifiers",
+      "Middle Field",
+      "verse groenten"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Te + Infinitive",
+      "End",
+      "te kopen."
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Expressing purpose (in order to)",
+    "example": "Ik leer Nederlands om een goede baan te vinden.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Adjective complement",
+    "example": "Het is moeilijk om deze tekst te begrijpen.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Fixed verb complement (proberen/vergeten)",
+    "example": "Vergeet niet om de lamp uit te doen.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Zij sport veel om gezond te blijven.",
+    "ko": "",
+    "highlight": "om gezond te blijven"
+   },
+   {
+    "en": "Het is leuk om nieuwe mensen te ontmoeten.",
+    "ko": "",
+    "highlight": "om nieuwe mensen te ontmoeten"
+   },
+   {
+    "en": "Hij doet zijn best om de toets te halen.",
+    "ko": "",
+    "highlight": "om de toets te halen"
+   },
+   {
+    "en": "Vergeet niet om je huiswerk op te schrijven.",
+    "ko": "",
+    "highlight": "om je huiswerk op te schrijven"
+   },
+   {
+    "en": "Ik heb geen tijd om vandaag te koken.",
+    "ko": "",
+    "highlight": "om vandaag te koken"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ik ga naar de stad voor kopen schoenen.",
+    "right": "Ik ga naar de stad om schoenen te kopen.",
+    "note": "Dutch never uses 'voor + infinitive' for purpose; always use 'om ... te + infinitive'."
+   },
+   {
+    "wrong": "Het is leuk om te ontmoeten vrienden.",
+    "right": "Het is leuk om vrienden te ontmoeten.",
+    "note": "The direct object ('vrienden') must precede 'te + infinitive'."
+   },
+   {
+    "wrong": "om opbellen hem",
+    "right": "om hem op te bellen",
+    "note": "With separable verbs, 'te' is inserted between the prefix and base verb ('op te bellen')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Zij studeert hard om haar diploma ___.",
+    "options": [
+     "te behalen",
+     "behalen te",
+     "behaalt",
+     "om te halen"
+    ],
+    "answer": 0,
+    "explanation": "'Te' precedes the infinitive at the very end of the 'om ... te' clause."
+   },
+   {
+    "question": "Het is belangrijk om elke dag verse groenten ___.",
+    "options": [
+     "eten",
+     "te eten",
+     "gegeten",
+     "eet"
+    ],
+    "answer": 1,
+    "explanation": "Infinitival complements introduced by 'om' require 'te + infinitive'."
+   },
+   {
+    "question": "Vergeet niet om de deur goed ___.",
+    "options": [
+     "gesloten",
+     "sluiten",
+     "af te sluiten",
+     "te afsluiten"
+    ],
+    "answer": 2,
+    "explanation": "For separable verb 'afsluiten', 'te' splits prefix and root: 'af te sluiten'."
+   },
+   {
+    "question": "Hij reist naar Spanje ___ Spaans te leren.",
+    "options": [
+     "voor",
+     "om",
+     "zodat",
+     "naar"
+    ],
+    "answer": 1,
+    "explanation": "Purpose with an infinitive clause begins with 'om'."
+   }
+  ],
+  "tip": "With separable verbs, remember the sandwich rule: prefix + te + verb root (e.g., 'schoon' + 'te' + 'maken' = 'schoon te maken')."
+ },
+ {
+  "id": "nl-b1-relative-clauses-die-vs-dat-and-waar-compounds",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#0284C7",
+  "emoji": "🔗",
+  "title": "Relative Pronouns (Die/Dat) and Pronominal Adverbs",
+  "subtitle": "Connect clauses accurately based on noun gender and prepositions",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "Use 'die' for de-words and all plurals, 'dat' for het-words, and convert preposition + thing into a 'waar-' compound.",
+  "structure": {
+   "headers": [
+    "Antecedent Type",
+    "Relative Marker",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "De-word / Plural",
+      "die",
+      "de man die daar loopt / de boeken die hier liggen"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Het-word (singular)",
+      "dat",
+      "het huis dat te koop staat"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Preposition + Person",
+      "preposition + wie",
+      "de vrouw aan wie ik denk"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Preposition + Thing",
+      "waar + preposition",
+      "de pen waarmee (waar + met) ik schrijf"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "De-words & plurals",
+    "example": "De studenten die slagen, krijgen een diploma.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Het-words",
+    "example": "Het schilderij dat daar hangt, is prachtig.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Inanimate + Preposition",
+    "example": "Het plan waarover we praten, is geheim.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "De man die daar loopt, is mijn leraar.",
+    "ko": "",
+    "highlight": "die daar loopt"
+   },
+   {
+    "en": "Het meisje dat gisteren zong, heeft gewonnen.",
+    "ko": "",
+    "highlight": "dat gisteren zong"
+   },
+   {
+    "en": "De auto waarin wij rijden, is elektrisch.",
+    "ko": "",
+    "highlight": "waarin wij rijden"
+   },
+   {
+    "en": "Het instrument waarop hij speelt, is zeldzaam.",
+    "ko": "",
+    "highlight": "waarop hij speelt"
+   },
+   {
+    "en": "De collega met wie ik lunch, woont in Utrecht.",
+    "ko": "",
+    "highlight": "met wie ik lunch"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Het kind die buiten speelt.",
+    "right": "Het kind dat buiten speelt.",
+    "note": "'Kind' is a het-word, so the relative pronoun must be 'dat', not 'die'."
+   },
+   {
+    "wrong": "Het boek over dat ik spreek.",
+    "right": "Het boek waarover ik spreek.",
+    "note": "Never use 'preposition + dat' for things; merge into 'waar + preposition' ('waarover')."
+   },
+   {
+    "wrong": "De vriend waar ik mee praat.",
+    "right": "De vriend met wie ik praat.",
+    "note": "For humans, use 'preposition + wie', not a 'waar-' compound."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "De brief ___ vanmorgen aankwam, is heel belangrijk.",
+    "options": [
+     "dat",
+     "die",
+     "wat",
+     "wie"
+    ],
+    "answer": 1,
+    "explanation": "'Brief' is a de-word ('de brief'), so the relative pronoun is 'die'."
+   },
+   {
+    "question": "Het hotel ___ wij verbleven, had uitzicht op zee.",
+    "options": [
+     "waarin",
+     "in dat",
+     "in wat",
+     "waarin dat"
+    ],
+    "answer": 0,
+    "explanation": "Preposition 'in' referring to an inanimate object combines into 'waarin'."
+   },
+   {
+    "question": "Dit is het interessante museum ___ ik bezocht heb.",
+    "options": [
+     "die",
+     "wie",
+     "dat",
+     "waar"
+    ],
+    "answer": 2,
+    "explanation": "'Museum' is a het-word, so it takes relative pronoun 'dat'."
+   },
+   {
+    "question": "De docent ___ ik de vraag stelde, was erg vriendelijk.",
+    "options": [
+     "waaraan",
+     "aan wie",
+     "aan die",
+     "waartoe"
+    ],
+    "answer": 1,
+    "explanation": "For a human antecedent ('de docent'), use 'preposition + wie' ('aan wie')."
+   }
+  ],
+  "tip": "Ask yourself two checks: 1) Person or thing? (Person = preposition + wie; Thing = waar-compound). 2) De or Het? (De + plurals = die; Het = dat)."
+ },
+ {
+  "id": "nl-b1-durative-constructions-aan-het-and-posture-verbs",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "⏳",
+  "title": "Continuous Aspect: 'Aan het' and Posture Verbs",
+  "subtitle": "Expressing actions currently in progress",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Express ongoing actions using 'zijn aan het + infinitive' or posture verbs like 'zitten/staan/liggen/lopen te + infinitive'.",
+  "structure": {
+   "headers": [
+    "Construction",
+    "Structure",
+    "Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "General progressive",
+      "zijn + aan het + inf",
+      "Ik ben aan het lezen.",
+      "I am reading."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Sitting posture",
+      "zitten + te + inf",
+      "Hij zit een boek te lezen.",
+      "He is sitting reading a book."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Standing posture",
+      "staan + te + inf",
+      "Zij staan te wachten.",
+      "They are standing waiting."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Lying posture",
+      "liggen + te + inf",
+      "Wij liggen te slapen.",
+      "We are lying asleep."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "General ongoing action",
+    "example": "We zijn het avondeten aan het koken.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Physical posture with activity",
+    "example": "Opa zit in de tuin de krant te lezen.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Annoying ongoing state",
+    "example": "Loop toch niet zo te klagen!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ik ben momenteel aan het koken.",
+    "ko": "",
+    "highlight": "ben momenteel aan het koken"
+   },
+   {
+    "en": "Zij zit rustig een roman te lezen.",
+    "ko": "",
+    "highlight": "zit rustig een roman te lezen"
+   },
+   {
+    "en": "De studenten staan bij de halte te wachten.",
+    "ko": "",
+    "highlight": "staan bij de halte te wachten"
+   },
+   {
+    "en": "De kat ligt op de bank te slapen.",
+    "ko": "",
+    "highlight": "ligt op de bank te slapen"
+   },
+   {
+    "en": "Waarom loop je de hele tijd te ijsberen?",
+    "ko": "",
+    "highlight": "loop je de hele tijd te ijsberen"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ik ben lezend een boek.",
+    "right": "Ik ben een boek aan het lezen.",
+    "note": "Dutch never uses the present participle (-end) to express the English '-ing' continuous tense."
+   },
+   {
+    "wrong": "Hij zit te lezen een boek.",
+    "right": "Hij zit een boek te lezen.",
+    "note": "Direct objects must come before the 'te + infinitive' cluster."
+   },
+   {
+    "wrong": "Wij zijn aan het een brief schrijven.",
+    "right": "Wij zijn een brief aan het schrijven.",
+    "note": "Specific direct objects typically precede 'aan het'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct continuous form: 'We are eating right now.'",
+    "options": [
+     "Wij zijn nu aan het eten.",
+     "Wij zijn nu etend.",
+     "Wij hebben nu aan het eten.",
+     "Wij staan nu het eten."
+    ],
+    "answer": 0,
+    "explanation": "'Zijn aan het + infinitive' corresponds directly to the ongoing progressive aspect."
+   },
+   {
+    "question": "Choose the correct form: 'He is lying down listening to music.'",
+    "options": [
+     "Hij ligt muziek luisteren.",
+     "Hij ligt naar muziek te luisteren.",
+     "Hij is naar muziek te luisteren.",
+     "Hij ligt aan het luisteren naar muziek."
+    ],
+    "answer": 1,
+    "explanation": "Posture verbs take 'te + infinitive', with the prepositional object preceding 'te'."
+   },
+   {
+    "question": "Complete the sentence: 'Wat loop je daar toch ___?'",
+    "options": [
+     "aan het zeuren",
+     "voor zeuren",
+     "te zeuren",
+     "gezeurd"
+    ],
+    "answer": 2,
+    "explanation": "'Lopen' as a durative verb requires 'te + infinitive'."
+   },
+   {
+    "question": "Identify the natural progressive sentence:",
+    "options": [
+     "Zij zijn werkend in de tuin.",
+     "Zij doen in de tuin werken.",
+     "Zij zitten de tuin werken.",
+     "Zij zijn in de tuin aan het werken."
+    ],
+    "answer": 3,
+    "explanation": "'Zijn aan het werken' correctly renders the progressive action in progress."
+   }
+  ],
+  "tip": "If a physical posture is involved or visible, native speakers overwhelmingly prefer 'zitten/staan/liggen te' over 'aan het'."
+ },
+ {
+  "id": "nl-b1-double-infinitive-rule-ipp",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔗",
+  "title": "Infinitivus Pro Participio (IPP) and Verb Clusters",
+  "subtitle": "Double infinitives replacing past participles in perfect tenses",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "When an auxiliary verb governs another verb in a compound tense, its past participle is replaced by an infinitive.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Main Auxiliary",
+    "Cluster (Final)",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Modal auxiliary",
+      "heeft",
+      "kunnen vinden",
+      "has been able to find"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Perception verb",
+      "heeft",
+      "zien vertrekken",
+      "saw (someone) leave"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Causative verb",
+      "heeft",
+      "laten repareren",
+      "had (something) repaired"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Durative posture",
+      "heeft",
+      "zitten wachten",
+      "has been sitting waiting"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6366F1",
+    "label": "Modals in perfect tenses",
+    "example": "Ik heb gisteren niet kunnen komen.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Causative 'laten'",
+    "example": "Zij heeft haar fiets laten maken.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Perception verbs",
+    "example": "Wij hebben hem zien wegrennen.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Ik heb mijn huiswerk niet kunnen maken.",
+    "ko": "",
+    "highlight": "heb mijn huiswerk niet kunnen maken"
+   },
+   {
+    "en": "Mijn vader heeft zijn auto laten wassen.",
+    "ko": "",
+    "highlight": "heeft zijn auto laten wassen"
+   },
+   {
+    "en": "We hebben de buurman horen zingen.",
+    "ko": "",
+    "highlight": "hebben de buurman horen zingen"
+   },
+   {
+    "en": "Zij heeft de hele ochtend zitten lezen.",
+    "ko": "",
+    "highlight": "heeft de hele ochtend zitten lezen"
+   },
+   {
+    "en": "Hij heeft gisteren willen helpen.",
+    "ko": "",
+    "highlight": "heeft gisteren willen helpen"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ik heb niet gekund komen.",
+    "right": "Ik heb niet kunnen komen.",
+    "note": "Because 'kunnen' governs 'komen', its participle 'gekund' must become the infinitive 'kunnen'."
+   },
+   {
+    "wrong": "Zij heeft haar haar gelaten knippen.",
+    "right": "Zij heeft haar haar laten knippen.",
+    "note": "The IPP rule requires 'laten' instead of 'gelaten' before another infinitive."
+   },
+   {
+    "wrong": "Ik heb hem zien gerend.",
+    "right": "Ik heb hem zien rennen.",
+    "note": "The dependent verb must always be in the bare infinitive form."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the perfect tense: 'Wij hebben gisteren lang moeten ___.'",
+    "options": [
+     "gewacht",
+     "wachten",
+     "wacht",
+     "te wachten"
+    ],
+    "answer": 1,
+    "explanation": "The cluster takes two bare infinitives: 'moeten wachten'."
+   },
+   {
+    "question": "Which sentence contains a correct IPP construction?",
+    "options": [
+     "Ik heb een taart gebakken.",
+     "Ik heb hem een taart zien bakken.",
+     "Ik heb hem een taart gezien bakken.",
+     "Ik heb hem een taart zien gebakken."
+    ],
+    "answer": 1,
+    "explanation": "'Zien' replaces 'gezien' when followed by another infinitive ('bakken')."
+   },
+   {
+    "question": "Choose the correct verbal cluster: 'Hij heeft zijn computer niet ___.'",
+    "options": [
+     "kunnen repareren",
+     "gekund repareren",
+     "kunnen gerepareerd",
+     "gekund te repareren"
+    ],
+    "answer": 0,
+    "explanation": "Under IPP, both verbs in the final cluster appear as infinitives: 'kunnen repareren'."
+   },
+   {
+    "question": "Complete: 'Zij heeft haar broer de hele middag horen ___.'",
+    "options": [
+     "gespeeld",
+     "te spelen",
+     "spelen",
+     "gespelen"
+    ],
+    "answer": 2,
+    "explanation": "Perception verbs govern a bare infinitive in an IPP construction."
+   }
+  ],
+  "tip": "Whenever you have two verbs at the end of a perfect tense clause, expect them both to end in -en (double infinitive)."
+ },
+ {
+  "id": "nl-b2-passive-voice-worden-vs-zijn-and-impersonal-er",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🛡️",
+  "title": "Passive Voice: Dynamic 'Worden' vs. Stative 'Zijn'",
+  "subtitle": "Distinguishing ongoing processes from completed states and impersonal structures",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use 'worden' for dynamic actions in progress and 'zijn' for resulting states or perfect passive actions.",
+  "structure": {
+   "headers": [
+    "Passive Type",
+    "Auxiliary",
+    "Structure",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Dynamic (present)",
+      "worden",
+      "o.t.t. van worden + volt. dw.",
+      "De brief wordt geschreven."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Dynamic (imperfect)",
+      "werden",
+      "o.v.t. van worden + volt. dw.",
+      "De brief werd geschreven."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Stative / Perfect",
+      "zijn",
+      "o.t.t. van zijn + volt. dw.",
+      "De brief is geschreven."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Impersonal Passive",
+      "er + worden",
+      "Er wordt + volt. dw.",
+      "Er wordt hier gewerkt."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Ongoing dynamic process",
+    "example": "De brug wordt momenteel gerenoveerd.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Completed state (stative)",
+    "example": "De winkel is op zondag gesloten.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Impersonal passive with 'er'",
+    "example": "Er wordt vanavond veel gedanst.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Het rapport wordt morgen door de commissie gelezen.",
+    "ko": "",
+    "highlight": "wordt morgen door de commissie gelezen"
+   },
+   {
+    "en": "Het oude kasteel werd in de negentiende eeuw verwoest.",
+    "ko": "",
+    "highlight": "werd in de negentiende eeuw verwoest"
+   },
+   {
+    "en": "Alle deuren zijn al voor de nacht vergrendeld.",
+    "ko": "",
+    "highlight": "zijn al voor de nacht vergrendeld"
+   },
+   {
+    "en": "Er wordt luid gelachen in de vergaderzaal.",
+    "ko": "",
+    "highlight": "Er wordt luid gelachen"
+   },
+   {
+    "en": "Er is gisteren hevig geprotesteerd tegen de plannen.",
+    "ko": "",
+    "highlight": "Er is gisteren hevig geprotesteerd"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Het huis is gebouwd nu.",
+    "right": "Het huis wordt nu gebouwd.",
+    "note": "An ongoing process in the present requires 'worden', not 'zijn'."
+   },
+   {
+    "wrong": "De brief is gisteren geschreven geworden.",
+    "right": "De brief is gisteren geschreven.",
+    "note": "Dutch never uses 'geworden' in the present perfect passive; simply use 'zijn + participle'."
+   },
+   {
+    "wrong": "Het wordt veel geklaagd in Nederland.",
+    "right": "Er wordt veel geklaagd in Nederland.",
+    "note": "Impersonal passive sentences without a specific subject begin with 'er', never 'het'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the sentence describing an action happening right now: 'The stadium is being built.'",
+    "options": [
+     "Het stadion is gebouwd.",
+     "Het stadion heeft gebouwd.",
+     "Het stadion wordt gebouwd.",
+     "Het stadion werd gebouwd."
+    ],
+    "answer": 2,
+    "explanation": "'Wordt gebouwd' signifies a dynamic present process."
+   },
+   {
+    "question": "How do you translate: 'People are dancing in the streets' using an impersonal passive?",
+    "options": [
+     "Er wordt op straat gedanst.",
+     "Het wordt op straat dansen.",
+     "Er is op straat gedanst geworden.",
+     "Er bent op straat dansend."
+    ],
+    "answer": 0,
+    "explanation": "Impersonal passive of intransitive verbs takes 'Er wordt + past participle'."
+   },
+   {
+    "question": "What is the perfect passive form of 'De auto wordt gerepareerd'?",
+    "options": [
+     "De auto is gerepareerd geworden.",
+     "De auto werd gerepareerd.",
+     "De auto heeft gerepareerd.",
+     "De auto is gerepareerd."
+    ],
+    "answer": 3,
+    "explanation": "Dutch uses 'zijn + participle' for the perfect passive without adding 'geworden'."
+   },
+   {
+    "question": "Complete the past progressive passive: 'Tijdens de oorlog ___ de stad gebombardeerd.'",
+    "options": [
+     "was",
+     "werd",
+     "is",
+     "wordt"
+    ],
+    "answer": 1,
+    "explanation": "'Werd' expresses the past dynamic process (was being bombed)."
+   }
+  ],
+  "tip": "English uses 'to be' for both process and state ('is repaired' vs 'is being repaired'). In Dutch, remember: process = worden, result/state = zijn."
+ },
+ {
+  "id": "nl-b2-modal-particles-nuance-markers",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#EC4899",
+  "emoji": "🎭",
+  "title": "Modal Particles (Toch, Eens, Even, Maar, Wel)",
+  "subtitle": "Unlocking pragmatic tone, softening commands, and adding nuance",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "Modal particles modify the tone and pragmatic expectation of a sentence without altering its core factual meaning.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Primary Nuance",
+    "Example",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "even",
+      "Brief action / polite softening",
+      "Kijk even mee.",
+      "Just take a quick look."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "maar",
+      "Encouragement / inevitability",
+      "Ga maar zitten.",
+      "Go ahead and sit down."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "toch",
+      "Contradiction / seeking agreement",
+      "Je komt toch wel?",
+      "You are coming, right?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "eens",
+      "Casual suggestion / once",
+      "Kom eens hier.",
+      "Come here for a second."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DB2777",
+    "label": "Softening an imperative",
+    "example": "Geef me de suiker even aan, alsjeblieft.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Challenging an assumption",
+    "example": "Ik heb het je toch al drie keer uitgelegd!",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Gentle permission / invitation",
+    "example": "Kom er maar lekker in.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mag ik even jouw pen lenen?",
+    "ko": "",
+    "highlight": "even"
+   },
+   {
+    "en": "Dat weet je toch allang?",
+    "ko": "",
+    "highlight": "toch"
+   },
+   {
+    "en": "Neem gerust maar een koekje.",
+    "ko": "",
+    "highlight": "maar"
+   },
+   {
+    "en": "Dat zal wel waar zijn.",
+    "ko": "",
+    "highlight": "wel"
+   },
+   {
+    "en": "Laat me dat eens bekijken.",
+    "ko": "",
+    "highlight": "eens"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Geef mij de sleutel! (too blunt)",
+    "right": "Geef mij de sleutel even.",
+    "note": "Bare imperatives in Dutch often sound aggressive without softening particles like 'even' or 'maar'."
+   },
+   {
+    "wrong": "Ik ga maar naar huis omdat ik wil.",
+    "right": "Ik ga maar naar huis (er is niets beters te doen).",
+    "note": "'Maar' implies resignation or lack of better options; avoid it if expressing strong enthusiasm."
+   },
+   {
+    "wrong": "Kom toch hier! (friendly invitation)",
+    "right": "Kom eens hier!",
+    "note": "'Toch' in commands can sound impatient or frustrated rather than friendly."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which particle best softens this polite request: 'Mag ik ___ je telefoon gebruiken?'",
+    "options": [
+     "eens",
+     "toch",
+     "even",
+     "wel"
+    ],
+    "answer": 2,
+    "explanation": "'Even' politely minimizes the duration or imposition of the requested act."
+   },
+   {
+    "question": "How do you reassure someone by saying 'Go ahead and take it'?",
+    "options": [
+     "Pak het toch.",
+     "Pak het maar.",
+     "Pak het wel.",
+     "Pak het eens."
+    ],
+    "answer": 1,
+    "explanation": "'Maar' serves as an encouraging 'go right ahead' particle with imperatives."
+   },
+   {
+    "question": "What nuance does 'toch' express in: 'Je hebt het rapport toch gestuurd?'",
+    "options": [
+     "Uncertainty about identity",
+     "Seeking confirmation of an expected fact ('right?')",
+     "Desire to postpone the action",
+     "Complete disbelief"
+    ],
+    "answer": 1,
+    "explanation": "'Toch' appeals to shared knowledge, expecting the listener to confirm what was assumed."
+   },
+   {
+    "question": "Select the sentence where particles make the command friendly and unforced:",
+    "options": [
+     "Kom hier.",
+     "Kom hier nu.",
+     "Kom toch nu hier.",
+     "Kom eens even kijken."
+    ],
+    "answer": 3,
+    "explanation": "Combining 'eens even' makes an imperative casual, friendly, and non-threatening."
+   }
+  ],
+  "tip": "Native Dutch speakers frequently stack modal particles (e.g., 'doe maar even', 'kom toch eens'); learn them in pairs to sound natural."
+ },
+ {
+  "id": "nl-b2-conditional-and-concessive-verb-first-clauses",
+  "level": "b2",
+  "category": "conditionals",
+  "categoryColor": "#F59E0B",
+  "emoji": "🔀",
+  "title": "Conditional Inversion and Concessive Clauses",
+  "subtitle": "Forming conditions without 'als' and concessions without 'hoewel'",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Starting a clause with a finite verb eliminates 'als' (conditional) or 'hoewel' (concessive), linking to 'dan' or 'toch' in the main clause.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Verb-First Clause",
+    "Main Clause Connective",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Conditional (hypothetical)",
+      "Finite Verb + Subject...",
+      "dan...",
+      "Regent het, dan blijven we thuis."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Counterfactual",
+      "Mocht/Zou + Subject...",
+      "dan...",
+      "Mocht hij bellen, zeg dan niets."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Concessive (contrast)",
+      "Finite Verb + Subject...",
+      "toch / nog...",
+      "Is hij arm, hij is toch eerlijk."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Inverted Imperative Condition",
+      "Kom je te laat...",
+      "dan...",
+      "Kom je te laat, dan mis je de trein."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Stylistic conditional without 'als'",
+    "example": "Heb je hulp nodig, bel me dan meteen.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Low probability condition with 'mocht'",
+    "example": "Mocht het gaan sneeuwen, dan sluit de school.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Concessive contrast without 'hoewel'",
+    "example": "Werkt zij nog zo hard, toch haalt ze de deadline niet.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Heb je dorst, dan pak je maar een glas water.",
+    "ko": "",
+    "highlight": "Heb je dorst, dan pak je maar"
+   },
+   {
+    "en": "Mocht u vragen hebben, neem dan gerust contact op.",
+    "ko": "",
+    "highlight": "Mocht u vragen hebben, neem dan"
+   },
+   {
+    "en": "Komt hij morgen niet opdagen, dan zoeken we een vervanger.",
+    "ko": "",
+    "highlight": "Komt hij morgen niet opdagen, dan zoeken we"
+   },
+   {
+    "en": "Was het gisteren zonnig geweest, dan waren we naar het strand gegaan.",
+    "ko": "",
+    "highlight": "Was het gisteren zonnig geweest, dan waren we"
+   },
+   {
+    "en": "Is de test moeilijk, toch geven we de moed niet op.",
+    "ko": "",
+    "highlight": "Is de test moeilijk, toch geven we"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Als heb je dorst, neem een glas water.",
+    "right": "Heb je dorst, neem dan een glas water.",
+    "note": "If you drop 'als', the verb must move to position 1. Do not combine 'als' with V1 inversion."
+   },
+   {
+    "wrong": "Heb je tijd, je kunt me bellen.",
+    "right": "Heb je tijd, dan kun je me bellen.",
+    "note": "The consequent clause after an inverted condition normally begins with 'dan' followed by inversion."
+   },
+   {
+    "wrong": "Mocht het regenen, alsdan blijven we thuis.",
+    "right": "Mocht het regenen, dan blijven we thuis.",
+    "note": "'Alsdan' is archaic; modern Dutch standardly uses 'dan'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Rephrase 'Als je morgen tijd hebt, kom dan langs' using conditional inversion:",
+    "options": [
+     "Heb je morgen tijd, kom dan langs.",
+     "Morgen heb je tijd, kom dan langs.",
+     "Tijd heb je morgen, kom dan langs.",
+     "Je hebt morgen tijd, kom dan langs."
+    ],
+    "answer": 0,
+    "explanation": "Placing the conjugated verb 'Heb' first turns the clause into an 'als'-free conditional."
+   },
+   {
+    "question": "Complete the counterfactual conditional: '___ hij op tijd vertrokken, dan had hij de bus gehaald.'",
+    "options": [
+     "Heeft",
+     "Zou",
+     "Was",
+     "Werd"
+    ],
+    "answer": 2,
+    "explanation": "'Vertrekken' forms its perfect tense with 'zijn', so counterfactual inversion requires past auxiliary 'was'."
+   },
+   {
+    "question": "How does the main clause typically begin after a verb-first condition?",
+    "options": [
+     "Met 'hoewel'",
+     "Met 'want'",
+     "Met 'omdat'",
+     "Met 'dan'"
+    ],
+    "answer": 3,
+    "explanation": "'Dan' is the correlative resumer used at the start of the following main clause."
+   },
+   {
+    "question": "Which sentence expresses a concessive relationship ('Even though...') using inversion?",
+    "options": [
+     "Heeft hij geld, dan koopt hij een auto.",
+     "Is hij ziek, toch gaat hij naar het feest.",
+     "Mocht hij ziek zijn, dan blijft hij thuis.",
+     "Komt hij ziek aan, dan sturen we hem weg."
+    ],
+    "answer": 1,
+    "explanation": "The pairing of V1 ('Is hij ziek') with 'toch' creates a concessive contrast without needing 'hoewel'."
+   }
+  ],
+  "tip": "Use 'mocht(en) + subject + infinitive' at the start of formal emails for professional conditions: 'Mocht u vragen hebben, dan...'"
+ }
+]

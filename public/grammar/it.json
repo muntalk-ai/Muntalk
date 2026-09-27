@@ -1,0 +1,3427 @@
+[
+ {
+  "id": "it-a1-gender-number-articles",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "📦",
+  "title": "Noun Gender, Pluralization, and Definite Articles",
+  "subtitle": "Determine Italian noun gender and pair words with the correct definite article",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Italian definite articles change according to gender, number, and the initial letter of the following word.",
+  "structure": {
+   "headers": [
+    "Noun Type",
+    "Singular Article & Ending",
+    "Plural Article & Ending",
+    "Example (Singular -> Plural)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Masc. (consonant)",
+      "il libro (-o)",
+      "i libri (-i)",
+      "il libro -> i libri"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Masc. (s+cons, z, gn, ps)",
+      "lo studente (-o)",
+      "gli studenti (-i)",
+      "lo studente -> gli studenti"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Masc. (vowel)",
+      "l'amico (-o)",
+      "gli amici (-i)",
+      "l'amico -> gli amici"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Fem. (consonant)",
+      "la casa (-a)",
+      "le case (-e)",
+      "la casa -> le case"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Fem. (vowel)",
+      "l'amica (-a)",
+      "le amiche (-e)",
+      "l'amica -> le amiche"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Standard Masculine Noun",
+    "example": "Il ragazzo legge un libro interessante.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Special Consonant Noun",
+    "example": "Lo zaino blu è molto pesante.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Feminine Plural Noun",
+    "example": "Le finestre della camera sono aperte.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Il gatto dorme sul divano comodo.",
+    "ko": "",
+    "highlight": "Il gatto"
+   },
+   {
+    "en": "Lo zio di Marco abita a Roma.",
+    "ko": "",
+    "highlight": "Lo zio"
+   },
+   {
+    "en": "Gli studenti ascoltano il professore.",
+    "ko": "",
+    "highlight": "Gli studenti"
+   },
+   {
+    "en": "La pizza napoletana è deliziosa.",
+    "ko": "",
+    "highlight": "La pizza"
+   },
+   {
+    "en": "Le chiavi sono sul tavolo di legno.",
+    "ko": "",
+    "highlight": "Le chiavi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "il studente",
+    "right": "lo studente",
+    "note": "Masculine nouns starting with s + consonant take 'lo' instead of 'il'."
+   },
+   {
+    "wrong": "i amici",
+    "right": "gli amici",
+    "note": "Masculine plural nouns starting with vowels take 'gli', not 'i'."
+   },
+   {
+    "wrong": "la problema",
+    "right": "il problema",
+    "note": "Greek-origin nouns ending in -ma like 'problema' are masculine."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete with the correct article: '___ zaino è nuovo.'",
+    "options": [
+     "Il",
+     "Lo",
+     "La",
+     "L'"
+    ],
+    "answer": 1,
+    "explanation": "Nouns beginning with 'z' require the masculine article 'lo'."
+   },
+   {
+    "question": "What is the plural of 'la borsa'?",
+    "options": [
+     "i borsi",
+     "le borsi",
+     "le borse",
+     "gli borse"
+    ],
+    "answer": 2,
+    "explanation": "Feminine nouns ending in -a form their plural in -e and take the article 'le'."
+   },
+   {
+    "question": "Complete with the correct article: '___ alberi sono alti.'",
+    "options": [
+     "Gli",
+     "I",
+     "Le",
+     "Lo"
+    ],
+    "answer": 0,
+    "explanation": "Masculine plural nouns starting with a vowel take 'gli'."
+   },
+   {
+    "question": "Complete with the correct article: '___ ragazza studia.'",
+    "options": [
+     "Il",
+     "Lo",
+     "Le",
+     "La"
+    ],
+    "answer": 3,
+    "explanation": "Singular feminine nouns starting with a consonant take 'la'."
+   }
+  ],
+  "tip": "Remember 'lo' and its plural 'gli' are triggered by s+consonant, z, gn, ps, and x."
+ },
+ {
+  "id": "it-a1-essere-avere-present",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⚡",
+  "title": "Present Tense of Essere and Avere",
+  "subtitle": "Conjugate and distinguish the two vital irregular auxiliary verbs in Italian",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use essere for identity, origin, and characteristics, while avere denotes possession, age, and physical sensations.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Essere (to be)",
+    "Avere (to have)",
+    "Context"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "io",
+      "sono",
+      "ho",
+      "sono italiano / ho un cane"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "tu",
+      "sei",
+      "hai",
+      "sei stanco / hai freddo"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "lui/lei",
+      "è",
+      "ha",
+      "è gentile / ha vent'anni"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "noi",
+      "siamo",
+      "abbiamo",
+      "siamo a casa / abbiamo fame"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "loro",
+      "sono",
+      "hanno",
+      "sono contenti / hanno tempo"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Identity & Origin",
+    "example": "Noi siamo studenti di lingue a Bologna.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Age & Bodily Sensation",
+    "example": "Mio fratello ha vent'anni e ha fame.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Possession",
+    "example": "Loro hanno una macchina nuova e veloce.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Io sono felice di essere qui oggi.",
+    "ko": "",
+    "highlight": "sono"
+   },
+   {
+    "en": "Lui ha un gatto nero molto vivace.",
+    "ko": "",
+    "highlight": "ha"
+   },
+   {
+    "en": "Noi abbiamo molto lavoro questa settimana.",
+    "ko": "",
+    "highlight": "abbiamo"
+   },
+   {
+    "en": "Tu sei sempre gentile con tutti.",
+    "ko": "",
+    "highlight": "sei"
+   },
+   {
+    "en": "Loro sono a scuola fino alle quattro.",
+    "ko": "",
+    "highlight": "sono"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Io sono 20 anni.",
+    "right": "Io ho vent'anni.",
+    "note": "Age is expressed with 'avere' (to have), never 'essere' (to be)."
+   },
+   {
+    "wrong": "Lui e felice.",
+    "right": "Lui è felice.",
+    "note": "'e' without an accent means 'and', whereas 'è' with a grave accent means 'is'."
+   },
+   {
+    "wrong": "Loro anno una casa.",
+    "right": "Loro hanno una casa.",
+    "note": "The present form of avere for loro starts with a silent 'h': 'hanno'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'Noi ___ molta sete.'",
+    "options": [
+     "siamo",
+     "abbiamo",
+     "avete",
+     "hanno"
+    ],
+    "answer": 1,
+    "explanation": "Thirst is expressed with 'avere fame/sete', and the 'noi' form is 'abbiamo'."
+   },
+   {
+    "question": "Complete the sentence: 'Marta ___ una dottoressa bravissima.'",
+    "options": [
+     "è",
+     "ha",
+     "sei",
+     "sono"
+    ],
+    "answer": 0,
+    "explanation": "Professions and identities take 'essere'; the third-person singular is 'è'."
+   },
+   {
+    "question": "Complete the sentence: 'Quanti anni ___ tu?'",
+    "options": [
+     "sei",
+     "ha",
+     "hanno",
+     "hai"
+    ],
+    "answer": 3,
+    "explanation": "Age uses 'avere', and the second-person singular (tu) form is 'hai'."
+   },
+   {
+    "question": "Complete the sentence: 'I ragazzi ___ a teatro adesso.'",
+    "options": [
+     "hanno",
+     "sono",
+     "è",
+     "siamo"
+    ],
+    "answer": 1,
+    "explanation": "'I ragazzi' is equivalent to 'loro', which takes 'sono' for location."
+   }
+  ],
+  "tip": "Remember that the 'h' in ho, hai, ha, and hanno is completely silent in spoken Italian."
+ },
+ {
+  "id": "it-a1-regular-present-verbs",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "📝",
+  "title": "Present Indicative of Regular Verbs (-are, -ere, -ire)",
+  "subtitle": "Master Italian regular conjugations across the three verb families",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Drop the infinitive endings (-are, -ere, -ire) and append personal endings, inserting -isc- for specific third-conjugation verbs.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "-are (parlare)",
+    "-ere (prendere)",
+    "-ire (dormire / capire)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "io",
+      "parlo",
+      "prendo",
+      "dormo / capisco"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "tu",
+      "parli",
+      "prendi",
+      "dormi / capisci"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "lui/lei",
+      "parla",
+      "prende",
+      "dorme / capisce"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "noi",
+      "parliamo",
+      "prendiamo",
+      "dormiamo / capiamo"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "loro",
+      "parlano",
+      "prendono",
+      "dormono / capiscono"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Routine Action (-are)",
+    "example": "Io parlo con mia madre ogni domenica.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Everyday Choice (-ere)",
+    "example": "Noi prendiamo un caffè al bar del centro.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Infix -isc- Verb (-ire)",
+    "example": "Loro capiscono la lezione di grammatica.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Marco abita in centro vicino alla stazione.",
+    "ko": "",
+    "highlight": "abita"
+   },
+   {
+    "en": "Noi scriviamo una lettera lunga in italiano.",
+    "ko": "",
+    "highlight": "scriviamo"
+   },
+   {
+    "en": "Io preferisco il tè caldo al caffè.",
+    "ko": "",
+    "highlight": "preferisco"
+   },
+   {
+    "en": "Voi leggete molti libri interessanti ogni mese.",
+    "ko": "",
+    "highlight": "leggete"
+   },
+   {
+    "en": "Il treno parte dal binario numero quattro.",
+    "ko": "",
+    "highlight": "parte"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Io parla italiano.",
+    "right": "Io parlo italiano.",
+    "note": "The first-person singular 'io' ending is almost always -o across all groups."
+   },
+   {
+    "wrong": "Loro capeno tutto.",
+    "right": "Loro capiscono tutto.",
+    "note": "'Capire' inserts the -isc- infix in io, tu, lui/lei, and loro forms."
+   },
+   {
+    "wrong": "Noi parlamo spesso.",
+    "right": "Noi parliamo spesso.",
+    "note": "The 'noi' ending is always -iamo, regardless of verb conjugation."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Conjugate 'leggere' for 'tu': 'Tu ___ un libro giallo.'",
+    "options": [
+     "legge",
+     "leggi",
+     "leggo",
+     "leggiamo"
+    ],
+    "answer": 1,
+    "explanation": "The 'tu' ending for regular verbs is -i: 'tu leggi'."
+   },
+   {
+    "question": "Conjugate 'pulire' for 'io': 'Io ___ la mia stanza.'",
+    "options": [
+     "pulisco",
+     "pulo",
+     "pulisce",
+     "puliamo"
+    ],
+    "answer": 0,
+    "explanation": "'Pulire' is an -isc- verb, giving 'pulisco' for the first-person singular."
+   },
+   {
+    "question": "Conjugate 'prendere' for 'loro': 'Loro ___ l'autobus.'",
+    "options": [
+     "prendi",
+     "prende",
+     "prendete",
+     "prendono"
+    ],
+    "answer": 3,
+    "explanation": "The 'loro' ending for -ere verbs is -ono: 'prendono'."
+   },
+   {
+    "question": "Conjugate 'ascoltare' for 'noi': 'Noi ___ la musica.'",
+    "options": [
+     "ascoltano",
+     "ascoltate",
+     "ascoltiamo",
+     "ascolti"
+    ],
+    "answer": 2,
+    "explanation": "The 'noi' ending for all regular Italian verbs is -iamo: 'ascoltiamo'."
+   }
+  ],
+  "tip": "Notice that 'noi' ALWAYS ends in -iamo across every regular Italian conjugation without exception."
+ },
+ {
+  "id": "it-a1-articulated-prepositions",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔗",
+  "title": "Preposizioni Articolate (Combined Prepositions)",
+  "subtitle": "Combine simple prepositions with definite articles seamlessly",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "When di, a, da, in, or su precede a definite article, they merge into a single compound word.",
+  "structure": {
+   "headers": [
+    "Preposition",
+    "+ il",
+    "+ lo",
+    "+ la",
+    "+ i / gli / le"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "di (of/from)",
+      "del",
+      "dello",
+      "della",
+      "dei / degli / delle"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "a (to/at)",
+      "al",
+      "allo",
+      "alla",
+      "ai / agli / alle"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "da (from/by)",
+      "dal",
+      "dallo",
+      "dalla",
+      "dai / dagli / dalle"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "in (in/into)",
+      "nel",
+      "nello",
+      "nella",
+      "nei / negli / nelle"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "su (on)",
+      "sul",
+      "sullo",
+      "sulla",
+      "sui / sugli / sulle"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Origin or Source",
+    "example": "Il treno arriva dal binario tre adesso.",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Location Inside",
+    "example": "I libri sono nella borsa di pelle.",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Surface Location",
+    "example": "La tazza si trova sul tavolo bianco.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Vado al cinema con i miei amici.",
+    "ko": "",
+    "highlight": "al"
+   },
+   {
+    "en": "Il quaderno è nello zaino di scuola.",
+    "ko": "",
+    "highlight": "nello"
+   },
+   {
+    "en": "Parliamo dell'esame difficile di oggi.",
+    "ko": "",
+    "highlight": "dell'"
+   },
+   {
+    "en": "Torniamo dagli zii domenica prossima.",
+    "ko": "",
+    "highlight": "dagli"
+   },
+   {
+    "en": "Le chiavi sono sulle sedie in salotto.",
+    "ko": "",
+    "highlight": "sulle"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "in il cassetto",
+    "right": "nel cassetto",
+    "note": "'in + il' must contract into the articulated form 'nel'."
+   },
+   {
+    "wrong": "a la stazione",
+    "right": "alla stazione",
+    "note": "'a + la' must merge and double the 'l' to form 'alla'."
+   },
+   {
+    "wrong": "di il professore",
+    "right": "del professore",
+    "note": "'di + il' merges into 'del'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Combine 'in + la': 'Le chiavi sono ___ borsa.'",
+    "options": [
+     "in la",
+     "alla",
+     "nella",
+     "sulla"
+    ],
+    "answer": 2,
+    "explanation": "The preposition 'in' plus the feminine article 'la' becomes 'nella'."
+   },
+   {
+    "question": "Combine 'su + il': 'Il gatto dorme ___ tetto.'",
+    "options": [
+     "sul",
+     "sullo",
+     "nel",
+     "al"
+    ],
+    "answer": 0,
+    "explanation": "'su + il' contracts to 'sul'."
+   },
+   {
+    "question": "Combine 'da + gli': 'Vado ___ amici di Marco.'",
+    "options": [
+     "dai",
+     "degli",
+     "ai",
+     "dagli"
+    ],
+    "answer": 3,
+    "explanation": "The preposition 'da' plus the masculine plural article 'gli' becomes 'dagli'."
+   },
+   {
+    "question": "Combine 'a + il': 'Domani andiamo ___ mare insieme.'",
+    "options": [
+     "del",
+     "al",
+     "nel",
+     "dal"
+    ],
+    "answer": 1,
+    "explanation": "'a + il' contracts to 'al'."
+   }
+  ],
+  "tip": "Think of preposizioni articolate like simple math: base preposition stem + matching definite article suffix."
+ },
+ {
+  "id": "it-a1-ci-sono-e-ce",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "📍",
+  "title": "Existential Constructions: C'è and Ci sono",
+  "subtitle": "State the existence or location of things using Italian equivalents of 'there is' and 'there are'",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use c'è with singular nouns and ci sono with plural nouns to assert that something exists or is present.",
+  "structure": {
+   "headers": [
+    "Construction",
+    "Agreement",
+    "Italian Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "C'è",
+      "Singular noun",
+      "C'è una mela sul tavolo.",
+      "There is an apple on the table."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Ci sono",
+      "Plural noun",
+      "Ci sono due gatti in giardino.",
+      "There are two cats in the garden."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Non c'è",
+      "Singular negative",
+      "Non c'è pane a casa.",
+      "There is no bread at home."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Non ci sono",
+      "Plural negative",
+      "Non ci sono problemi qui.",
+      "There are no problems here."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Singular Presence",
+    "example": "C'è un ristorante tipico in questa piazza.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Plural Count",
+    "example": "Ci sono molti parchi verdi a Milano.",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Absence or Negation",
+    "example": "Non c'è latte fresco nel frigorifero.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "C'è una lettera importante per te oggi.",
+    "ko": "",
+    "highlight": "C'è"
+   },
+   {
+    "en": "Ci sono molte persone alla fermata del bus.",
+    "ko": "",
+    "highlight": "Ci sono"
+   },
+   {
+    "en": "Non c'è tempo da perdere stamattina.",
+    "ko": "",
+    "highlight": "Non c'è"
+   },
+   {
+    "en": "In centro ci sono tanti bei negozi storici.",
+    "ko": "",
+    "highlight": "ci sono"
+   },
+   {
+    "en": "C'è un problema con la prenotazione online.",
+    "ko": "",
+    "highlight": "C'è"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ci sono un errore.",
+    "right": "C'è un errore.",
+    "note": "Use 'c'è' for singular nouns; 'ci sono' is reserved for plural nouns."
+   },
+   {
+    "wrong": "Ce un gatto.",
+    "right": "C'è un gatto.",
+    "note": "'C'è' requires an apostrophe and accent, representing the elision of 'ci è'."
+   },
+   {
+    "wrong": "È molte persone.",
+    "right": "Ci sono molte persone.",
+    "note": "To state presence of plural objects, use 'ci sono', not just the verb 'essere'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase: '___ tre studenti in biblioteca.'",
+    "options": [
+     "C'è",
+     "Ci sono",
+     "È",
+     "Ha"
+    ],
+    "answer": 1,
+    "explanation": "'Tre studenti' is plural, requiring 'ci sono' (there are)."
+   },
+   {
+    "question": "Choose the correct phrase: '___ un buon caffè in cucina.'",
+    "options": [
+     "Ci sono",
+     "Sono",
+     "Hanno",
+     "C'è"
+    ],
+    "answer": 3,
+    "explanation": "'Un buon caffè' is singular, so it requires 'c'è' (there is)."
+   },
+   {
+    "question": "Choose the correct phrase: 'Non ___ nessuno in casa.'",
+    "options": [
+     "c'è",
+     "ci sono",
+     "sono",
+     "hanno"
+    ],
+    "answer": 0,
+    "explanation": "'Nessuno' (nobody) behaves as a singular noun and triggers 'non c'è'."
+   },
+   {
+    "question": "Choose the correct phrase: '___ molte finestre aperte.'",
+    "options": [
+     "C'è",
+     "Ce",
+     "Ci sono",
+     "È"
+    ],
+    "answer": 2,
+    "explanation": "'Molte finestre' is feminine plural, requiring 'ci sono'."
+   }
+  ],
+  "tip": "To form questions, Italian simply raises the pitch at the end: 'C'è un bancomat?' means 'Is there an ATM?'"
+ },
+ {
+  "id": "it-a1-piacere-basics",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🍕",
+  "title": "Verbs of Liking: Piacere in the Present Tense",
+  "subtitle": "Expressing likes and dislikes with inverted subject-verb structure",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "With piacere, the item liked is the grammatical subject, so the verb agrees with that item (piace for singular/infinitive, piacciono for plural) while the person who likes receives an indirect pronoun.",
+  "structure": {
+   "headers": [
+    "Pronoun + Verb",
+    "Subject Type",
+    "Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Mi piace",
+      "Singular noun",
+      "Mi piace la pizza",
+      "I like pizza (Pizza pleases me)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Mi piace",
+      "Verb infinitive",
+      "Mi piace viaggiare",
+      "I like to travel (Traveling pleases me)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Mi piacciono",
+      "Plural noun",
+      "Mi piacciono i libri",
+      "I like books (Books please me)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "A Marco piace",
+      "Proper name with 'a'",
+      "A Marco piace il caffè",
+      "Marco likes coffee (To Marco pleases coffee)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Singular Objects",
+    "example": "Ti piace questo film?",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Plural Objects",
+    "example": "Non ci piacciono gli esami.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Actions (Infinitives)",
+    "example": "Le piace cucinare la domenica.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mi piace molto questa canzone.",
+    "ko": "",
+    "highlight": "Mi piace"
+   },
+   {
+    "en": "A noi piacciono gli spaghetti al dente.",
+    "ko": "",
+    "highlight": "piacciono"
+   },
+   {
+    "en": "Ti piace leggere romanzi storici?",
+    "ko": "",
+    "highlight": "Ti piace"
+   },
+   {
+    "en": "A Giorgio non piacciono i funghi.",
+    "ko": "",
+    "highlight": "non piacciono"
+   },
+   {
+    "en": "Gli piace passeggiare lungo il mare.",
+    "ko": "",
+    "highlight": "Gli piace"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Io piaccio la mela.",
+    "right": "Mi piace la mela.",
+    "note": "Never use subject pronouns like 'io' as the doer; 'la mela' is the subject and requires the indirect pronoun 'mi'."
+   },
+   {
+    "wrong": "A me mi piacciono i gatti.",
+    "right": "A me piacciono i gatti.",
+    "note": "Combining 'a me' and 'mi' is a redundant double indirect pronoun in standard written Italian; use one or the other."
+   },
+   {
+    "wrong": "Mi piace le scarpe.",
+    "right": "Mi piacciono le scarpe.",
+    "note": "Because 'le scarpe' is plural, the verb must match it in the plural form 'piacciono'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I like Italian art. -> ___ l'arte italiana.",
+    "options": [
+     "Mi piacciono",
+     "Mi piace",
+     "Io piaccio",
+     "A me piace l'arte"
+    ],
+    "answer": 1,
+    "explanation": "'L'arte italiana' is a singular noun, so use the singular form 'piace' with the indirect pronoun 'mi'."
+   },
+   {
+    "question": "Do you like foreign languages? -> Ti ___ le lingue straniere?",
+    "options": [
+     "piacciono",
+     "piace",
+     "piaci",
+     "piacete"
+    ],
+    "answer": 0,
+    "explanation": "The subject 'le lingue straniere' is plural, requiring 'piacciono'."
+   },
+   {
+    "question": "Marco likes studying in the library. -> A Marco ___ studiare in biblioteca.",
+    "options": [
+     "piacciono",
+     "piacciono a",
+     "piace",
+     "piaci"
+    ],
+    "answer": 2,
+    "explanation": "When an infinitive verb ('studiare') follows, 'piacere' stays singular: 'piace'."
+   },
+   {
+    "question": "They don't like winter fruits. -> Non ___ i frutti invernali.",
+    "options": [
+     "a loro piace",
+     "gli piace",
+     "piacciono loro",
+     "a loro piacciono"
+    ],
+    "answer": 3,
+    "explanation": "'I frutti invernali' is plural, so we need 'piacciono', preceded by the indirect indirect marker 'A loro'."
+   }
+  ],
+  "tip": "Think of 'piacere' as meaning 'to be pleasing to': 'Mi piacciono i cani' literally translates as 'Dogs are pleasing to me'."
+ },
+ {
+  "id": "it-a2-passato-prossimo-auxiliaries",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "⏳",
+  "title": "Passato Prossimo: Essere vs Avere Selection",
+  "subtitle": "Mastering auxiliary choice and past participle agreement",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use avere for transitive actions (participle unchanging), but use essere for movement, change of state, and reflexive verbs, matching the participle in gender and number with the subject.",
+  "structure": {
+   "headers": [
+    "Auxiliary",
+    "Verb Category",
+    "Agreement Rule",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Avere",
+      "Transitive verbs (take direct object)",
+      "No agreement (-o invariable)",
+      "Ho mangiato una mela"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Essere",
+      "Movement & State (andare, uscire, stare)",
+      "Agrees with Subject (-o/-a/-i/-e)",
+      "Siamo andati a Roma"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Essere",
+      "Reflexive & Reciprocal verbs",
+      "Agrees with Subject (-o/-a/-i/-e)",
+      "Maria si è alzata presto"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Essere",
+      "Passive & Unaccusative verbs",
+      "Agrees with Subject (-o/-a/-i/-e)",
+      "Il pacco è arrivato"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Completed Transitive Action",
+    "example": "Abbiamo finito tutti i compiti ieri sera.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Movement Direction/Destination",
+    "example": "Lucia è tornata dalle vacanze stamattina.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Change of State/Condition",
+    "example": "I fiori sono morti a causa del freddo.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Paolo ha comprato un nuovo appartamento.",
+    "ko": "",
+    "highlight": "ha comprato"
+   },
+   {
+    "en": "Francesca è andata alla stazione centrale.",
+    "ko": "",
+    "highlight": "è andata"
+   },
+   {
+    "en": "I miei amici sono partiti per la Spagna.",
+    "ko": "",
+    "highlight": "sono partiti"
+   },
+   {
+    "en": "Le ragazze si sono svegliate alle sette.",
+    "ko": "",
+    "highlight": "si sono svegliate"
+   },
+   {
+    "en": "Voi avete capito la spiegazione del professore?",
+    "ko": "",
+    "highlight": "avete capito"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Maria ha andata al cinema ieri.",
+    "right": "Maria è andata al cinema ieri.",
+    "note": "'Andare' is a verb of directed movement and must take 'essere' as auxiliary."
+   },
+   {
+    "wrong": "Noi siamo mangiato una pizza grande.",
+    "right": "Abbiamo mangiato una pizza grande.",
+    "note": "'Mangiare' is a transitive verb that requires 'avere', not 'essere'."
+   },
+   {
+    "wrong": "Le ragazze sono arrivati in ritardo.",
+    "right": "Le ragazze sono arrivate in ritardo.",
+    "note": "With 'essere', the past participle must agree with feminine plural subject 'le ragazze' (-e ending)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Giulia ___ a teatro ieri sera.",
+    "options": [
+     "ha andata",
+     "è andata",
+     "è andato",
+     "ha andato"
+    ],
+    "answer": 1,
+    "explanation": "'Andare' takes 'essere', and feminine singular 'Giulia' requires the participle ending in -a: 'è andata'."
+   },
+   {
+    "question": "Noi (masculine) ___ a Firenze in treno.",
+    "options": [
+     "siamo arrivati",
+     "abbiamo arrivato",
+     "siamo arrivate",
+     "avete arrivati"
+    ],
+    "answer": 0,
+    "explanation": "'Arrivare' takes 'essere' and agrees with masculine plural 'noi' as 'arrivati'."
+   },
+   {
+    "question": "Ieri sera loro ___ una deliziosa cena.",
+    "options": [
+     "sono cucinati",
+     "hanno cucinate",
+     "sono cucinate",
+     "hanno cucinato"
+    ],
+    "answer": 3,
+    "explanation": "'Cucinare' takes 'avere'; its participle does not agree with the subject, staying '-o'."
+   },
+   {
+    "question": "Chiara e Silvia ___ stanche dopo il viaggio.",
+    "options": [
+     "hanno state",
+     "sono stati",
+     "sono state",
+     "hanno stati"
+    ],
+    "answer": 2,
+    "explanation": "'Stare' takes 'essere'; the feminine plural subject 'Chiara e Silvia' turns the participle into 'state'."
+   }
+  ],
+  "tip": "Remember the acronym CASA or common verbs of movement (andare, venire, partire, arrivare, entrare, uscire)—all of them require essere and matching endings!"
+ },
+ {
+  "id": "it-a2-imperfetto-vs-passato-prossimo",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🎞️",
+  "title": "Passato Prossimo vs Imperfetto",
+  "subtitle": "Completed events vs ongoing background descriptions in the past",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "Passato prossimo narrate pinpointed, completed events that advance the story, whereas imperfetto sets the scene, describing habitual actions, physical states, emotions, and ongoing background events.",
+  "structure": {
+   "headers": [
+    "Aspect",
+    "Tense Used",
+    "Typical Trigger Words",
+    "Italian Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Completed / Single Action",
+      "Passato Prossimo",
+      "ieri, improvvisamente, una volta",
+      "Ieri ho visto un film bellissimo."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Habitual / Repeated Past Action",
+      "Imperfetto",
+      "sempre, da bambino, ogni estate",
+      "Da piccolo andavo sempre al parco."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Background Interrupted Action",
+      "Imperfetto + Passato Prossimo",
+      "mentre... quando...",
+      "Mentre dormivo, il telefono ha squillato."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Physical / Emotional Description",
+      "Imperfetto",
+      "era bello, faceva caldo, ero felice",
+      "Faceva molto freddo e nevicava."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6366F1",
+    "label": "Interrupted Background Action",
+    "example": "Mentre leggevo un libro, è andata via la luce.",
+    "translation": ""
+   },
+   {
+    "color": "#14B8A6",
+    "label": "Childhood Habits",
+    "example": "Da bambino mangiavo sempre pane e cioccolato.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Specific Sequential Events",
+    "example": "Mi sono svegliato, ho fatto la doccia e sono uscito.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Quando abitavo a Napoli, mangiavo spesso la pizza.",
+    "ko": "",
+    "highlight": "abitavo a Napoli, mangiavo"
+   },
+   {
+    "en": "Mentre guidavo verso casa, è iniziato a piovere.",
+    "ko": "",
+    "highlight": "Mentre guidavo"
+   },
+   {
+    "en": "Ieri ho comprato un vestito perché costava poco.",
+    "ko": "",
+    "highlight": "ho comprato un vestito perché costava"
+   },
+   {
+    "en": "Faceva bel tempo e gli uccelli cantavano felici.",
+    "ko": "",
+    "highlight": "Faceva bel tempo e gli uccelli cantavano"
+   },
+   {
+    "en": "Alle dieci è suonato il campanello.",
+    "ko": "",
+    "highlight": "è suonato"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mentre ho studiato, Marco è arrivato.",
+    "right": "Mentre studiavo, Marco è arrivato.",
+    "note": "Use 'imperfetto' for ongoing background actions introduced by 'mentre' (while)."
+   },
+   {
+    "wrong": "Da bambino sono andato al mare ogni domenica.",
+    "right": "Da bambino andavo al mare ogni domenica.",
+    "note": "Repeated, habitual actions in the past require the 'imperfetto'."
+   },
+   {
+    "wrong": "Ieri alle tre camminavo e sono caduto, poi andavo all'ospedale.",
+    "right": "Ieri alle tre camminavo e sono caduto, poi sono andato all'ospedale.",
+    "note": "Sequential subsequent events that occurred as single actions must be in the 'passato prossimo'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Da piccolo Marco non ___ mai le verdure.",
+    "options": [
+     "ha mangiato",
+     "mangiava",
+     "mangia",
+     "avrebbe mangiato"
+    ],
+    "answer": 1,
+    "explanation": "'Da piccolo' and 'non... mai' indicate a continuous past childhood habit, requiring the imperfetto ('mangiava')."
+   },
+   {
+    "question": "Mentre noi facevamo colazione, la mamma ___ a casa.",
+    "options": [
+     "è tornata",
+     "tornava",
+     "ha tornato",
+     "ritornava"
+    ],
+    "answer": 0,
+    "explanation": "The sudden completed action that interrupts or happens during a background activity takes the passato prossimo ('è tornata')."
+   },
+   {
+    "question": "Ieri sera all'improvviso ___ la luce.",
+    "options": [
+     "spegneva",
+     "è spenta",
+     "si spegneva",
+     "si è spenta"
+    ],
+    "answer": 3,
+    "explanation": "'All'improvviso' marks an immediate, completed event, so the reflexive passato prossimo 'si è spenta' is required."
+   },
+   {
+    "question": "Ieri a mezzogiorno ___ un'ottima pasta al pesto.",
+    "options": [
+     "ho mangiato",
+     "mangiavo",
+     "sono mangiato",
+     "mangio"
+    ],
+    "answer": 0,
+    "explanation": "A precise past time frame with a completed singular activity demands the passato prossimo ('ho mangiato')."
+   }
+  ],
+  "tip": "Think of the imperfetto as the scenery and music in a movie, while the passato prossimo represents the actors stepping in and doing things."
+ },
+ {
+  "id": "it-a2-direct-indirect-pronouns",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "🎯",
+  "title": "Direct and Indirect Object Pronouns",
+  "subtitle": "Distinguishing direct (chi? che cosa?) from indirect (a chi?) clitics",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Direct pronouns (mi, ti, lo, la, ci, vi, li, le) replace objects without prepositions and cause past participle agreement, while indirect pronouns (mi, ti, gli, le, ci, vi, gli/loro) answer 'to whom' and do not trigger agreement.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Direct (whom? what?)",
+    "Indirect (to whom?)",
+    "Contrast Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "3rd Sing. Masc.",
+      "lo (him / it)",
+      "gli (to him)",
+      "Lo vedo (I see him) vs Gli parlo (I talk to him)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "3rd Sing. Fem.",
+      "la (her / it)",
+      "le (to her)",
+      "La chiamo (I call her) vs Le telefono (I phone to her)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Plur. Masc.",
+      "li (them)",
+      "gli (a loro) (to them)",
+      "Li compro (I buy them) vs Gli scrivo (I write to them)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Passato Prossimo",
+      "Participle must agree with lo/la/li/le",
+      "No participle agreement",
+      "Le ho viste (I saw them) vs Ho telefonato loro"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Direct Object Replacement",
+    "example": "Hai comprato le mele? Sì, le ho comprate.",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Indirect Object (To Someone)",
+    "example": "Cosa regali a tua madre? Le regalo un profumo.",
+    "translation": ""
+   },
+   {
+    "color": "#84CC16",
+    "label": "Direct Pronoun with Participle",
+    "example": "I compiti? Li ho già finiti tutti.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Non trovo le chiavi: dove le hai messe?",
+    "ko": "",
+    "highlight": "le hai messe"
+   },
+   {
+    "en": "Ho visto Paolo ieri sera e gli ho spiegato tutto.",
+    "ko": "",
+    "highlight": "gli ho spiegato"
+   },
+   {
+    "en": "Questa borsa è magnifica: la compro subito.",
+    "ko": "",
+    "highlight": "la compro"
+   },
+   {
+    "en": "Se vedi Maria, le puoi dare questo libro?",
+    "ko": "",
+    "highlight": "le puoi dare"
+   },
+   {
+    "en": "I tuoi genitori ti hanno chiamato stamattina?",
+    "ko": "",
+    "highlight": "ti hanno chiamato"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ho visto Marco e l'ho parlato.",
+    "right": "Ho visto Marco e gli ho parlato.",
+    "note": "'Parlare' takes an indirect object introduced by 'a' (parlare a qualcuno), so use 'gli', not the direct clitic 'lo/l''.'"
+   },
+   {
+    "wrong": "Ho comprato le scarpe e le ho comprato online.",
+    "right": "Ho comprato le scarpe e le ho comprate online.",
+    "note": "With 3rd person direct pronouns (le, li, la, lo), the past participle must agree: 'le ho comprate'."
+   },
+   {
+    "wrong": "Telefona a Sara e gli dici la verità.",
+    "right": "Telefona a Sara e le dici la verità.",
+    "note": "Use 'le' for 'to her' (feminine singular indirect pronoun), reserving 'gli' for 'to him'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Hai invitato le tue cugine? -> Sì, ___ ho invitate.",
+    "options": [
+     "le",
+     "li",
+     "la",
+     "gli"
+    ],
+    "answer": 0,
+    "explanation": "'Le cugine' is feminine plural, requiring direct pronoun 'le' (which matches the participle 'invitate')."
+   },
+   {
+    "question": "Cosa hai detto a Roberto? -> ___ ho detto di venire presto.",
+    "options": [
+     "L'",
+     "Lo",
+     "Gli",
+     "Le"
+    ],
+    "answer": 2,
+    "explanation": "'Dire a Roberto' takes an indirect object, requiring 'gli' (to him)."
+   },
+   {
+    "question": "Ho incontrato Sara e ___ ho dato il regalo.",
+    "options": [
+     "la",
+     "le",
+     "gli",
+     "l'"
+    ],
+    "answer": 1,
+    "explanation": "'Dare a Sara' requires the feminine indirect object pronoun 'le' (to her)."
+   },
+   {
+    "question": "Dove sono finiti i documenti? -> Non ___ trovo da nessuna parte.",
+    "options": [
+     "le",
+     "gli",
+     "lo",
+     "li"
+    ],
+    "answer": 3,
+    "explanation": "'I documenti' is masculine plural direct object, replaced by 'li'."
+   }
+  ],
+  "tip": "Ask 'Chi / Che cosa?' for direct pronouns, and 'A chi?' for indirect pronouns. Only direct pronouns force past participle endings to change!"
+ },
+ {
+  "id": "it-a2-ne-and-ci-clitics",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#3B82F6",
+  "emoji": "📍",
+  "title": "The Clitic Particles 'Ci' and 'Ne'",
+  "subtitle": "Replacing places, specified quantities, and prepositional phrases",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use 'ci' to replace locations ('there') or 'a + noun' phrases, and use 'ne' to indicate quantities ('of it/them') or replace 'di + noun' phrases.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Replaces",
+    "Key Question Answered",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Ci",
+      "Places (in/a/su/da + place)",
+      "Dove? (Where to/at?)",
+      "Vai a Milano? Sì, ci vado domani."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Ci",
+      "a + thing/action (pensare a)",
+      "A che cosa? (About what?)",
+      "Pensi all'esame? Sì, ci penso sempre."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Ne",
+      "Quantities + numbers/indefinites",
+      "Quanti / Di che cosa?",
+      "Quanti caffè bevi? Ne bevo due."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Ne",
+      "di + topic/thing (parlare di)",
+      "Di chi / Di che cosa?",
+      "Parliamo della riunione? Ne parliamo dopo."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Replacing Place (There)",
+    "example": "Sei mai andato a Firenze? No, non ci sono mai stato.",
+    "translation": ""
+   },
+   {
+    "color": "#0891B2",
+    "label": "Partial Quantities (Of Them)",
+    "example": "Quante caramelle vuoi? Ne prendo tre, grazie.",
+    "translation": ""
+   },
+   {
+    "color": "#854D0E",
+    "label": "Prepositional 'di' Phrase",
+    "example": "Hai saputo la notizia? Sì, tutti ne parlano.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Quanti libri compri? Ne compro tre.",
+    "ko": "",
+    "highlight": "Ne compro tre"
+   },
+   {
+    "en": "Vai al supermercato oggi? No, ci vado domani mattina.",
+    "ko": "",
+    "highlight": "ci vado"
+   },
+   {
+    "en": "Hai pensato alla proposta di lavoro? Sì, ci ho pensato.",
+    "ko": "",
+    "highlight": "ci ho pensato"
+   },
+   {
+    "en": "Di questa storia preferisco non parlarne più.",
+    "ko": "",
+    "highlight": "parlarne"
+   },
+   {
+    "en": "Quante fette di torta hai mangiato? Ne ho mangiate due.",
+    "ko": "",
+    "highlight": "Ne ho mangiate due"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Quanti fratelli hai? Ho due.",
+    "right": "Quanti fratelli hai? Ne ho due.",
+    "note": "In Italian, when answering with a number or quantity without restating the noun, you must include 'ne'."
+   },
+   {
+    "wrong": "Vado al supermercato: ci vado a comprare latte.",
+    "right": "Vado al supermercato: vado lì / ci vado.",
+    "note": "Do not duplicate the location with 'ci' when the location is already explicitly kept in the same clause without dislocation."
+   },
+   {
+    "wrong": "Quante mele hai comprato? Ne ho comprato quattro.",
+    "right": "Quante mele hai comprato? Ne ho comprate quattro.",
+    "note": "When 'ne' refers to a quantified noun in passato prossimo, the past participle must agree with the gender and number of that noun ('mele' -> 'comprate')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Vuoi un po' di pane? -> No grazie, non ___ mangio.",
+    "options": [
+     "lo",
+     "ci",
+     "ne",
+     "la"
+    ],
+    "answer": 2,
+    "explanation": "'Pane' here is an unspecified partitive quantity ('un po' di'), which is replaced by 'ne'."
+   },
+   {
+    "question": "Vai spesso al cinema? -> Sì, ___ vado ogni venerdì sera.",
+    "options": [
+     "ci",
+     "ne",
+     "lo",
+     "vi"
+    ],
+    "answer": 0,
+    "explanation": "'Al cinema' represents a destination/place ('in/a quel posto'), which is replaced by locative clitic 'ci'."
+   },
+   {
+    "question": "Quante pizze avete ordinato? -> ___ abbiamo ordinate quattro!",
+    "options": [
+     "Li",
+     "Ci",
+     "Le",
+     "Ne"
+    ],
+    "answer": 3,
+    "explanation": "Referring to an exact quantity of a noun ('quattro pizze') requires 'ne' (notice the participle agreement 'ordinate')."
+   },
+   {
+    "question": "Credi ancora a Babbo Natale? -> No, non ___ credo più.",
+    "options": [
+     "lo",
+     "ci",
+     "ne",
+     "gli"
+    ],
+    "answer": 1,
+    "explanation": "The verb 'credere a qualcosa' takes the preposition 'a', which is replaced by the clitic 'ci'."
+   }
+  ],
+  "tip": "Quick shortcut: If the phrase has 'a' or is a place, use 'ci'. If it involves a number, a quantity, or the preposition 'di', use 'ne'!"
+ },
+ {
+  "id": "it-a2-reflexive-reciprocal-verbs",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🪞",
+  "title": "Reflexive and Reciprocal Verbs",
+  "subtitle": "Talking about daily routines, reciprocal actions, and past events with essere",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Reflexive and reciprocal verbs require reflexive pronouns and always take essere as their auxiliary in compound tenses, requiring the past participle to agree in gender and number.",
+  "structure": {
+   "headers": [
+    "Subject & Pronoun",
+    "Presente (svegliarsi)",
+    "Passato Prossimo (alzarsi)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "io mi",
+      "mi sveglio",
+      "mi sono alzato/a"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "tu ti",
+      "ti svegli",
+      "ti sei alzato/a"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "lui/lei si",
+      "si sveglia",
+      "si è alzato/a"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "noi ci",
+      "ci svegliamo",
+      "ci siamo alzati/e"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "loro si",
+      "si svegliano",
+      "si sono alzati/e"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Daily Routine (Direct Reflexive)",
+    "example": "Ogni mattina mi lavo i denti prima di fare colazione.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Reciprocal Actions (Mutual)",
+    "example": "Marco e Chiara si conoscono da molti anni.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Compound Past with Agreement",
+    "example": "Ieri sera le ragazze si sono divertite alla festa.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "La mattina mi alzo sempre alle sette.",
+    "ko": "",
+    "highlight": "mi alzo"
+   },
+   {
+    "en": "Paolo si è vestito con una giacca elegante.",
+    "ko": "",
+    "highlight": "si è vestito"
+   },
+   {
+    "en": "Noi ci vediamo spesso in centro per un caffè.",
+    "ko": "",
+    "highlight": "ci vediamo"
+   },
+   {
+    "en": "Le mie sorelle si sono addormentate sul divano.",
+    "ko": "",
+    "highlight": "si sono addormentate"
+   },
+   {
+    "en": "A che ora ti prepari per andare al lavoro?",
+    "ko": "",
+    "highlight": "ti prepari"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ieri ho svegliato alle sei.",
+    "right": "Ieri mi sono svegliato alle sei.",
+    "note": "When the action is reflexive, you must use the reflexive pronoun and auxiliary essere instead of avere."
+   },
+   {
+    "wrong": "Marta si è lavato i capelli.",
+    "right": "Marta si è lavata i capelli.",
+    "note": "Because reflexive verbs use essere, the past participle must agree with the subject in gender and number."
+   },
+   {
+    "wrong": "Loro hanno guardati durante la lezione.",
+    "right": "Loro si sono guardati durante la lezione.",
+    "note": "Reciprocal verbs like guardarsi require reciprocal pronouns and the auxiliary essere."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Every morning Sofia ___ at seven.",
+    "options": [
+     "si sveglia",
+     "sveglia",
+     "ti svegli",
+     "si è svegliata"
+    ],
+    "answer": 0,
+    "explanation": "Third-person singular requires the pronoun 'si' and the present tense verb form 'sveglia'."
+   },
+   {
+    "question": "Yesterday evening we ___ at the cinema.",
+    "options": [
+     "abbiamo incontrato",
+     "ci siamo incontrati",
+     "si sono incontrati",
+     "ci abbiamo incontrato"
+    ],
+    "answer": 1,
+    "explanation": "Reciprocal actions in the past with 'noi' require pronoun 'ci', auxiliary 'siamo', and plural agreement '-ti'."
+   },
+   {
+    "question": "Maria, why haven't you ___ yet?",
+    "options": [
+     "ti sei preparato",
+     "ti hai preparata",
+     "ti sei preparata",
+     "si è preparata"
+    ],
+    "answer": 2,
+    "explanation": "Addressing female 'tu' in the past requires 'ti sei' and the feminine ending '-a'."
+   },
+   {
+    "question": "Marco and Luca ___ on the street.",
+    "options": [
+     "ci vediamo",
+     "si salutano",
+     "vi salutate",
+     "si saluta"
+    ],
+    "answer": 1,
+    "explanation": "Marco and Luca is 'loro', which uses the reciprocal pronoun 'si' with third-person plural 'salutano'."
+   }
+  ],
+  "tip": "Whenever you spot a reflexive verb in the past, remember the rule: 'Essere means Agreement'—always match the ending (-o, -a, -i, -e) to your subject!"
+ },
+ {
+  "id": "it-a2-informal-imperative",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🗣️",
+  "title": "The Informal Imperative",
+  "subtitle": "Giving orders, advice, and instructions to friends, family, and groups",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "The informal imperative uses present tense forms for noi and voi, but for tu, -are verbs take -a while -ere/-ire verbs take -i, and negative tu commands simply use non + infinitive.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "-are (Parlare)",
+    "-ere (Prendere)",
+    "-ire (Dormire)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "tu (affirmative)",
+      "parla!",
+      "prendi!",
+      "dormi!"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "tu (negative)",
+      "non parlare!",
+      "non prendere!",
+      "non dormire!"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "noi",
+      "parliamo!",
+      "prendiamo!",
+      "dormiamo!"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "voi",
+      "parlate!",
+      "prendete!",
+      "dormite!"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Affirmative tu Command",
+    "example": "Ascolta questa canzone fantastica!",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Negative tu Command (non + inf)",
+    "example": "Non mangiare tutto quel cioccolato adesso.",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Irregular Monosyllabic Command",
+    "example": "Fa' attenzione quando attraversi la strada!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Guarda questo splendido tramonto sul mare!",
+    "ko": "",
+    "highlight": "Guarda"
+   },
+   {
+    "en": "Non aprire quella finestra, fa troppo freddo.",
+    "ko": "",
+    "highlight": "Non aprire"
+   },
+   {
+    "en": "Prendiamo un caffè insieme prima di iniziare.",
+    "ko": "",
+    "highlight": "Prendiamo"
+   },
+   {
+    "en": "Ragazzi, finite i compiti prima di uscire!",
+    "ko": "",
+    "highlight": "finite"
+   },
+   {
+    "en": "Dimmi tutta la verità adesso.",
+    "ko": "",
+    "highlight": "Dimmi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Non parli a voce così alta!",
+    "right": "Non parlare a voce così alta!",
+    "note": "Negative tu commands always use 'non' followed by the verb's infinitive form, never the conjugated verb."
+   },
+   {
+    "wrong": "Tu, prendi la mela e mangi!",
+    "right": "Tu, prendi la mela e mangia!",
+    "note": "Regular -are verbs end in -a for the affirmative tu imperative (mangia, parla, guarda)."
+   },
+   {
+    "wrong": "Fa la spesa prima di tornare a casa.",
+    "right": "Fa' la spesa prima di tornare a casa.",
+    "note": "Truncated monosyllabic imperatives like fare (fa'), andare (va'), dare (da'), dire (di'), and stare (sta') take an apostrophe."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "(To a friend) ___ careful with that hot coffee!",
+    "options": [
+     "Sei",
+     "Fa'",
+     "Fai",
+     "Fai'"
+    ],
+    "answer": 1,
+    "explanation": "The irregular affirmative tu imperative of fare is 'fa'' (with an apostrophe)."
+   },
+   {
+    "question": "(To a friend) Don't ___ out so late tonight!",
+    "options": [
+     "esci",
+     "non esci",
+     "uscire",
+     "non esce"
+    ],
+    "answer": 2,
+    "explanation": "With the negative tu command, the structure is 'non' followed by the infinitive: 'non uscire'."
+   },
+   {
+    "question": "(To children) Guys, ___ the door, please!",
+    "options": [
+     "chiudete",
+     "chiudi",
+     "chiudere",
+     "chiuda"
+    ],
+    "answer": 0,
+    "explanation": "The voi imperative matches the present tense: 'chiudete'."
+   },
+   {
+    "question": "(To a friend) ___ me your phone number!",
+    "options": [
+     "Dai",
+     "Dammi",
+     "Dimi",
+     "Dati"
+    ],
+    "answer": 1,
+    "explanation": "When attaching a pronoun to monosyllabic imperatives like da', the consonant doubles: da' + mi = dammi."
+   }
+  ],
+  "tip": "Notice the inversion: in the present indicative, -are verbs end in -i (tu parli) and -ere verbs end in -e (tu prendi). In the imperative, they swap: parla! and prendi!"
+ },
+ {
+  "id": "it-b1-combined-pronouns",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🧩",
+  "title": "Combined Pronouns",
+  "subtitle": "Stacking indirect and direct object pronouns or 'ne' seamlessly",
+  "color": "#0D9488",
+  "bg": "#F0FDFA",
+  "keyPoint": "When indirect pronouns precede direct pronouns (lo, la, li, le) or ne, i-changes to -e (mi -> me), while gli and le merge into glielo, gliela, glieli, gliele, or gliene.",
+  "structure": {
+   "headers": [
+    "Indirect",
+    "+ lo / la",
+    "+ li / le",
+    "+ ne"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "mi / ti / ci / vi",
+      "me lo / te la / ce lo",
+      "me li / te le / ve li",
+      "me ne / te ne / ce ne"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "gli / le / Le",
+      "glielo / gliela",
+      "glieli / gliele",
+      "gliene"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "si (reflexive)",
+      "se lo / se la",
+      "se li / se le",
+      "se ne"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0D9488",
+    "label": "Giving an Item to Someone (glielo)",
+    "example": "Marco voleva il libro, quindi glielo ho prestato ieri.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Confirming Information (me lo)",
+    "example": "Se sai la risposta, me la puoi dire subito?",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Specifying Quantities (gliene)",
+    "example": "Aveva bisogno di mele e gliene ho comprate tre chili.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Chi ti ha dato questa bella borsa? Me l'ha regalata mia madre.",
+    "ko": "",
+    "highlight": "Me l'ha regalata"
+   },
+   {
+    "en": "Hai spedito la lettera al direttore? Sì, gliela ho mandata ieri.",
+    "ko": "",
+    "highlight": "gliela ho mandata"
+   },
+   {
+    "en": "Se ti piacciono questi biscotti, te ne offro volentieri uno.",
+    "ko": "",
+    "highlight": "te ne offro"
+   },
+   {
+    "en": "Non conosco il motivo di questa decisione, spiegacelo subito!",
+    "ko": "",
+    "highlight": "spiegacelo"
+   },
+   {
+    "en": "Quanti soldi hai in tasca? Me ne rimangono soltanto dieci.",
+    "ko": "",
+    "highlight": "Me ne rimangono"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Mi lo puoi dare per favore?",
+    "right": "Me lo puoi dare per favore?",
+    "note": "Indirect pronouns ending in -i change their vowel to -e when combined with direct object pronouns."
+   },
+   {
+    "wrong": "Ho visto Anna e le lo ho spiegato.",
+    "right": "Ho visto Anna e glielo ho spiegato.",
+    "note": "To female 'le', both masculine and feminine indirect forms turn into the single unified cluster 'glielo/gliela'."
+   },
+   {
+    "wrong": "Glielo ho comprati ieri al mercato.",
+    "right": "Glieli ho comprati ieri al mercato.",
+    "note": "The direct pronoun ending inside 'glie-' must agree in gender and number with plural direct objects (-li for masculine plural)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Did you lend your car to Luca? Yes, I lent it to him: Sì, ___ ho prestata.",
+    "options": [
+     "gliela",
+     "me la",
+     "te lo",
+     "glielo"
+    ],
+    "answer": 0,
+    "explanation": "The direct object is feminine ('la macchina' -> 'la') and the indirect object is 'a Luca' ('gli'). Combined, it forms 'gliela'."
+   },
+   {
+    "question": "Can you bring me the keys? ___ puoi portare fra un'ora?",
+    "options": [
+     "Mi le",
+     "Me le",
+     "Ce le",
+     "Ve li"
+    ],
+    "answer": 1,
+    "explanation": "'Mi' turns into 'me' before plural feminine direct object 'le', yielding 'me le'."
+   },
+   {
+    "question": "Did you tell your parents the truth? Yes, ___ ho detta.",
+    "options": [
+     "glielo",
+     "se la",
+     "gliela",
+     "me l'"
+    ],
+    "answer": 2,
+    "explanation": "'A loro' uses 'glie-', and 'la verità' is feminine singular, combining into 'gliela' (which agrees with past participle 'detta')."
+   },
+   {
+    "question": "Do you have any sugar? No, ___ è rimasto affatto.",
+    "options": [
+     "te lo",
+     "non me ne",
+     "non me lo",
+     "ce n'"
+    ],
+    "answer": 1,
+    "explanation": "For zero quantity of an uncounted noun referring to oneself ('to me'), use 'non me ne'."
+   }
+  ],
+  "tip": "Remember: 'glie-' is a universal master key! It covers 'to him' (gli), 'to her' (le), and 'to them' (loro), always fusing into one written word: glielo, gliela, glieli, gliele, gliene."
+ },
+ {
+  "id": "it-b1-condizionale-presente-passato",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#D97706",
+  "emoji": "⏳",
+  "title": "Present and Past Conditional",
+  "subtitle": "Mastering politeness, unfulfilled wishes, and the future-in-the-past",
+  "color": "#B45309",
+  "bg": "#FFFBEB",
+  "keyPoint": "The condizionale presente expresses polite requests or present wishes, while condizionale passato expresses unfulfilled past actions and reports the future from a past perspective.",
+  "structure": {
+   "headers": [
+    "Subject",
+    "Presente (-are/-ere/-ire)",
+    "Passato (avrebbe fatto)",
+    "Passato (sarebbe andato/a)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "io",
+      "parlerei / vorrei",
+      "avrei mangiato",
+      "sarei andato/a"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "tu",
+      "parleresti / vorresti",
+      "avresti mangiato",
+      "saresti andato/a"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "lui/lei",
+      "parlerebbe / vorrebbe",
+      "avrebbe mangiato",
+      "sarebbe andato/a"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "noi",
+      "parleremmo / vorremmo",
+      "avremmo mangiato",
+      "saremmo andati/e"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "loro",
+      "parlerebbero / vorrebbero",
+      "avrebbero mangiato",
+      "sarebbero andati/e"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Polite Request / Softening",
+    "example": "Vorrei un bicchiere d'acqua naturale, per favore.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Unfulfilled Wish in the Past",
+    "example": "Sarei venuto volentieri alla festa, ma ero malato.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Future in the Past",
+    "example": "Sapevo che Luca sarebbe arrivato puntuale alla riunione.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Mi daresti una mano ad aprire questo barattolo?",
+    "ko": "",
+    "highlight": "daresti"
+   },
+   {
+    "en": "Al tuo posto, accetterei subito quella proposta di lavoro.",
+    "ko": "",
+    "highlight": "accetterei"
+   },
+   {
+    "en": "Ieri avrei voluto dormire fino a tardi, ma ho dovuto alzarmi.",
+    "ko": "",
+    "highlight": "avrei voluto"
+   },
+   {
+    "en": "Paolo ci ha promesso che ci avrebbe aiutato con il trasloco.",
+    "ko": "",
+    "highlight": "avrebbe aiutato"
+   },
+   {
+    "en": "Con un milione di euro, compreremmo una casa al mare.",
+    "ko": "",
+    "highlight": "compreremmo"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Io volerei un cappuccino, per favore.",
+    "right": "Io vorrei un cappuccino, per favore.",
+    "note": "The conditional stem of volere is irregular and doubles the 'r': vorr- (vorrei), not voler-."
+   },
+   {
+    "wrong": "Noi parleremo con il professore se fosse qui.",
+    "right": "Noi parleremmo con il professore se fosse qui.",
+    "note": "Do not confuse future tense (-remo with one 'm') with conditional present (-remmo with double 'm')."
+   },
+   {
+    "wrong": "Ha detto che arriverà tardi ieri sera.",
+    "right": "Ha detto che sarebbe arrivato tardi ieri sera.",
+    "note": "To express the future seen from a past moment ('future-in-the-past'), Italian uses the past conditional, not the future indicative."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "(Polite) Excuse me, ___ you tell me what time it is?",
+    "options": [
+     "puoi",
+     "potresti",
+     "potrai",
+     "potevi"
+    ],
+    "answer": 1,
+    "explanation": "The present conditional 'potresti' softens requests politely ('could you?')."
+   },
+   {
+    "question": "We ___ bought that car, but we didn't have enough money.",
+    "options": [
+     "avremmo",
+     "avremmo comprato",
+     "saremmo comprati",
+     "abbiamo comprato"
+    ],
+    "answer": 1,
+    "explanation": "An unachieved past action with avere takes past conditional: 'avremmo comprato'."
+   },
+   {
+    "question": "Marco told me yesterday that he ___ by train today.",
+    "options": [
+     "partirà",
+     "è partito",
+     "sarebbe partito",
+     "partiva"
+    ],
+    "answer": 2,
+    "explanation": "The future in the past (promising in the past to do something later) requires the past conditional: 'sarebbe partito'."
+   },
+   {
+    "question": "If we had more time, we ___ around the world.",
+    "options": [
+     "viaggeremo",
+     "viaggiamo",
+     "viaggerei",
+     "viaggeremmo"
+    ],
+    "answer": 3,
+    "explanation": "The 'noi' conditional form for viaggiare is 'viaggeremmo' (notice the double 'mm')."
+   }
+  ],
+  "tip": "Listen carefully to the 'm'! Future tense has one 'm' (parleremo = we will speak), while conditional has a double 'm' (parleremmo = we would speak)."
+ },
+ {
+  "id": "it-b1-congiuntivo-presente-passato",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#7C3AED",
+  "emoji": "💭",
+  "title": "Present and Past Subjunctive",
+  "subtitle": "Sharing opinions, emotions, uncertainties, and hopes with confidence",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "The subjunctive mood is triggered in subordinate 'che' clauses following verbs of opinion, emotion, desire, doubt, or impersonal necessity, using congiuntivo presente for current actions and passato for prior actions.",
+  "structure": {
+   "headers": [
+    "Trigger Verb",
+    "che + Subject",
+    "Congiuntivo Presente",
+    "Congiuntivo Passato"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Penso che...",
+      "io / tu / lui / lei",
+      "parli / creda / dorma",
+      "abbia parlato / sia andato/a"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Spero che...",
+      "noi",
+      "parliamo / crediamo",
+      "abbiamo parlato / siamo andati/e"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Temo che...",
+      "voi",
+      "parliate / crediate",
+      "abbiate parlato / siate andati/e"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Dubito che...",
+      "loro",
+      "parlino / credano",
+      "abbiano parlato / siano andati/e"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Expressing Opinion and Belief",
+    "example": "Credo che Marco abbia ragione su questo argomento.",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Expressing Emotion or Hope",
+    "example": "Sono felice che tu sia venuto a trovarmi oggi.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Impersonal Necessity",
+    "example": "È necessario che tutti arrivino prima dell'inizio dello spettacolo.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Penso che questo ristorante sia il migliore della città.",
+    "ko": "",
+    "highlight": "sia"
+   },
+   {
+    "en": "Spero che tu possa venire alla mia festa di laurea.",
+    "ko": "",
+    "highlight": "possa"
+   },
+   {
+    "en": "Dubito che loro abbiano capito le istruzioni del test.",
+    "ko": "",
+    "highlight": "abbiano capito"
+   },
+   {
+    "en": "È importante che voi facciate attenzione durante la guida.",
+    "ko": "",
+    "highlight": "facciate"
+   },
+   {
+    "en": "Temo che il treno sia già partito dal binario tre.",
+    "ko": "",
+    "highlight": "sia già partito"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Penso che lui è un bravo ragazzo.",
+    "right": "Penso che lui sia un bravo ragazzo.",
+    "note": "Verbs of thinking and opinion like pensare che take the subjunctive (sia), not the indicative (è)."
+   },
+   {
+    "wrong": "Spero che io vada in vacanza presto.",
+    "right": "Spero di andare in vacanza presto.",
+    "note": "When the subject of the main clause and the subordinate clause is the same, use 'di + infinitive' instead of 'che + congiuntivo'."
+   },
+   {
+    "wrong": "Credo che tu hai finito i compiti.",
+    "right": "Credo che tu abbia finito i compiti.",
+    "note": "To express an opinion about a past action, use the congiuntivo passato (abbia finito), not the passato prossimo indicativo."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I think that Francesca ___ very smart.",
+    "options": [
+     "è",
+     "sia",
+     "sarà",
+     "fosse"
+    ],
+    "answer": 1,
+    "explanation": "'Penso che' expresses an opinion, requiring the present subjunctive form of essere: 'sia'."
+   },
+   {
+    "question": "We are glad that you (plural) ___ to our party yesterday.",
+    "options": [
+     "siete venuti",
+     "siate venuti",
+     "abbiate venuto",
+     "sarete venuti"
+    ],
+    "answer": 1,
+    "explanation": "Expressing emotion about a prior event takes congiuntivo passato: 'siate venuti' (with essere for venire)."
+   },
+   {
+    "question": "I doubt that they ___ the truth.",
+    "options": [
+     "sanno",
+     "sapessero",
+     "sappiano",
+     "saprebbero"
+    ],
+    "answer": 2,
+    "explanation": "'Dubito che' expresses doubt, which requires third-person plural subjunctive 'sappiano'."
+   },
+   {
+    "question": "It is necessary that we ___ early tomorrow.",
+    "options": [
+     "partiamo",
+     "partiremo",
+     "partiate",
+     "partivamo"
+    ],
+    "answer": 0,
+    "explanation": "The 'noi' form of both indicative and present subjunctive is identical: 'partiamo'."
+   }
+  ],
+  "tip": "Use the acronym WEIRDO to trigger the subjunctive: Wishes, Emotions, Impersonal expressions, Recommendations, Doubt, and Opinion. If the subject does not change, drop the 'che' and use 'di + infinitive'!"
+ },
+ {
+  "id": "it-b1-relative-pronouns",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#4F46E5",
+  "emoji": "🔗",
+  "title": "Relative Pronouns: Che, Cui, and Il Quale",
+  "subtitle": "Connect Italian clauses seamlessly using invariant and prepositional relative pronouns",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Use invariant 'che' for subject and direct object references, but switch to preposition + 'cui' whenever an indirect relation is needed.",
+  "structure": {
+   "headers": [
+    "Pronoun",
+    "Function",
+    "Italian Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "che",
+      "Subject / Direct Object",
+      "Il ragazzo che parla",
+      "The boy who speaks"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "prep. + cui",
+      "Indirect Object",
+      "La casa in cui vivo",
+      "The house in which I live"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "art. + cui",
+      "Possessive (Whose)",
+      "Lo studente il cui libro è perso",
+      "The student whose book is lost"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "il/la quale",
+      "Formal Alternative",
+      "Le amiche con le quali esco",
+      "The friends with whom I go out"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Subject / Object Linking",
+    "example": "Il libro che ho letto ieri sera è davvero avvincente.",
+    "translation": ""
+   },
+   {
+    "color": "#3730A3",
+    "label": "Prepositional Complement",
+    "example": "La donna a cui ho chiesto aiuto è stata gentilissima.",
+    "translation": ""
+   },
+   {
+    "color": "#312E81",
+    "label": "Possession (Whose)",
+    "example": "L'autore la cui opera ha vinto il premio è molto giovane.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "La ragazza che lavora in pasticceria è mia cugina.",
+    "ko": "",
+    "highlight": "che lavora"
+   },
+   {
+    "en": "Questo è il motivo per cui non sono venuto alla festa.",
+    "ko": "",
+    "highlight": "per cui"
+   },
+   {
+    "en": "Il medico a cui mi sono rivolto ha risolto il problema.",
+    "ko": "",
+    "highlight": "a cui"
+   },
+   {
+    "en": "La città in cui siamo nati è cambiata moltissimo.",
+    "ko": "",
+    "highlight": "in cui"
+   },
+   {
+    "en": "Ecco il professore le cui lezioni sono sempre piene.",
+    "ko": "",
+    "highlight": "le cui"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "La ragazza chi lavora qui è gentile.",
+    "right": "La ragazza che lavora qui è gentile.",
+    "note": "'Chi' only means 'the person who' or 'whoever' on its own; use 'che' to connect directly to an antecedent noun."
+   },
+   {
+    "wrong": "L'amico che vado al cinema con...",
+    "right": "L'amico con cui vado al cinema...",
+    "note": "Italian prepositions cannot be stranded at the end; place the preposition directly before 'cui'."
+   },
+   {
+    "wrong": "Il film di che parliamo è famoso.",
+    "right": "Il film di cui parliamo è famoso.",
+    "note": "After a preposition, you must use 'cui' (or 'il quale'), never 'che'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Ho incontrato il professore ___ insegna fisica.",
+    "options": [
+     "che",
+     "cui",
+     "di cui",
+     "il quale a"
+    ],
+    "answer": 0,
+    "explanation": "'Che' acts as the subject of the subordinate clause 'insegna fisica'."
+   },
+   {
+    "question": "Questo è l'argomento ___ ti ho parlato ieri.",
+    "options": [
+     "che",
+     "di cui",
+     "a cui",
+     "in cui"
+    ],
+    "answer": 1,
+    "explanation": "The verb 'parlare' requires the preposition 'di', leading to 'di cui'."
+   },
+   {
+    "question": "La città ___ vive Marco è molto caotica.",
+    "options": [
+     "da cui",
+     "a che",
+     "in cui",
+     "il cui"
+    ],
+    "answer": 2,
+    "explanation": "Living in a place takes 'in', which yields 'in cui' (in which / where)."
+   },
+   {
+    "question": "Lo scrittore ___ romanzo è famoso farà una conferenza.",
+    "options": [
+     "che il",
+     "di cui",
+     "a cui il",
+     "il cui"
+    ],
+    "answer": 3,
+    "explanation": "Possession ('whose') is formed with 'il/la/i/le cui' agreeing with the possessed noun."
+   }
+  ],
+  "tip": "Think of 'che' as your default for 'who/that/which' when no preposition is involved; the second a preposition pops up, grab 'cui'!"
+ },
+ {
+  "id": "it-b1-pronominal-verbs",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#059669",
+  "emoji": "🎭",
+  "title": "Idiomatic Pronominal Verbs (Verbi Pronominali)",
+  "subtitle": "Master verbs that carry idiomatic clitic packages like andarsene, farcela, and cavarsela",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Pronominal verbs incorporate fixed clitic particles (like -la, -ne, or -ci) that transform the verb's root meaning into a distinct idiomatic expression.",
+  "structure": {
+   "headers": [
+    "Infinitive",
+    "Particles",
+    "Conjugated (Io)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "andarsene",
+      "si + ne",
+      "me ne vado",
+      "to leave / walk away"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "farcela",
+      "ci + la",
+      "ce la faccio",
+      "to manage / succeed"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "cavarsela",
+      "si + la",
+      "me la cavo",
+      "to get by / cope"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "prendersela",
+      "si + la",
+      "me la prendo",
+      "to take offense / get upset"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Leaving a Scene (Andarsene)",
+    "example": "È tardi e sono stanco, me ne vado a casa.",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "Overcoming Obstacles (Farcela)",
+    "example": "Nonostante le difficoltà, ce l'ho fatta a finire il progetto.",
+    "translation": ""
+   },
+   {
+    "color": "#064E3B",
+    "label": "Getting By Skillfully (Cavarsela)",
+    "example": "Non parlo tedesco fluentemente, ma me la cavo abbastanza bene.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Non te la prendere per una sciocchezza del genere!",
+    "ko": "",
+    "highlight": "te la prendere"
+   },
+   {
+    "en": "Dopo molte ore di lavoro intenso, ce l'abbiamo fatta.",
+    "ko": "",
+    "highlight": "ce l'abbiamo fatta"
+   },
+   {
+    "en": "Se la situazione peggiora, ce ne andiamo subito.",
+    "ko": "",
+    "highlight": "ce ne andiamo"
+   },
+   {
+    "en": "Con l'inglese me la cavo senza problemi durante i viaggi.",
+    "ko": "",
+    "highlight": "me la cavo"
+   },
+   {
+    "en": "I ragazzi se ne sono andati prima della fine del concerto.",
+    "ko": "",
+    "highlight": "se ne sono andati"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Io faccio ce la a superare l'esame.",
+    "right": "Ce la faccio a superare l'esame.",
+    "note": "Clitic particles must stay together and precede the conjugated verb (or attach to the infinitive)."
+   },
+   {
+    "wrong": "Noi siamo andati se ne alle dieci.",
+    "right": "Ce ne siamo andati alle dieci.",
+    "note": "In compound tenses, particles precede the auxiliary: 'ce ne siamo andati'."
+   },
+   {
+    "wrong": "Ce l'ho fatto ieri sera.",
+    "right": "Ce l'ho fatta ieri sera.",
+    "note": "Because of the direct object clitic '-la', the past participle must agree in feminine singular: 'fatta'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Ho provato a risolvere il problema, ma non ___.",
+    "options": [
+     "ce l'ho fatta",
+     "faccio ce la",
+     "me ne sono andato",
+     "me la sono presa"
+    ],
+    "answer": 0,
+    "explanation": "'Non ce l'ho fatta' correctly expresses 'I didn't manage to do it' with participle agreement in -a."
+   },
+   {
+    "question": "Non ti preoccupare per l'esame: vedrai che ___!",
+    "options": [
+     "te ne vai",
+     "te la cavi",
+     "ce la prendi",
+     "ci fai"
+    ],
+    "answer": 1,
+    "explanation": "'Cavarsela' means to get by or manage nicely; the tu-form is 'te la cavi'."
+   },
+   {
+    "question": "Perché sei arrabbiato? ___ con me?",
+    "options": [
+     "Te ne vai",
+     "Ce la fai",
+     "Te la prendi",
+     "Te la cavi"
+    ],
+    "answer": 2,
+    "explanation": "'Prendersela con qualcuno' means to take offense at or get annoyed with someone."
+   },
+   {
+    "question": "La conferenza è noiosa, quindi noi ___ subito.",
+    "options": [
+     "ce la facciamo",
+     "ce la caviamo",
+     "ci prendiamo",
+     "ce ne andiamo"
+    ],
+    "answer": 3,
+    "explanation": "'Andarsene' for 'noi' conjugates as 'ce ne andiamo' (we leave)."
+   }
+  ],
+  "tip": "Whenever a pronominal verb contains the direct feminine clitic '-la' (like farcela or cavarsela), the past participle in compound tenses MUST end in -a (e.g., 'ce l'ho fatta')."
+ },
+ {
+  "id": "it-b2-congiuntivo-imperfetto-trapassato",
+  "level": "b2",
+  "category": "tenses",
+  "categoryColor": "#EA580C",
+  "emoji": "⏳",
+  "title": "Imperfect and Pluperfect Subjunctive",
+  "subtitle": "Conjugate past subjunctive forms for nuanced past doubts, wishes, and subordinate clauses",
+  "color": "#C2410C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Use the imperfect subjunctive for contemporaneous past events and the pluperfect subjunctive for actions completed prior to a past reference point.",
+  "structure": {
+   "headers": [
+    "Mood & Tense",
+    "Root Formation",
+    "Example (Parlare)",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Imperfetto (io/tu)",
+      "stem + -ssi",
+      "parlassi",
+      "that I/you spoke"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Imperfetto (lui/lei)",
+      "stem + -sse",
+      "parlasse",
+      "that he/she spoke"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Imperfetto (loro)",
+      "stem + -ssero",
+      "parlassero",
+      "that they spoke"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Trapassato",
+      "avessi/fossi + part.",
+      "avessi parlato",
+      "that I had spoken"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#C2410C",
+    "label": "Simultaneous Past Subordination",
+    "example": "Credevo che Marco vivesse ancora a Firenze.",
+    "translation": ""
+   },
+   {
+    "color": "#9A3412",
+    "label": "Prior Action in the Past",
+    "example": "Temevo che tutti fossero già partiti per le vacanze.",
+    "translation": ""
+   },
+   {
+    "color": "#7C2D12",
+    "label": "Unreal Wish / Regret",
+    "example": "Magari avessi studiato di più prima di questo esame!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Speravo che tu venissi alla mia festa di compleanno.",
+    "ko": "",
+    "highlight": "tu venissi"
+   },
+   {
+    "en": "Non immaginavo che avessero già finito tutti i preparativi.",
+    "ko": "",
+    "highlight": "avessero già finito"
+   },
+   {
+    "en": "Benché piovesse a dirotto, decisero di fare una passeggiata.",
+    "ko": "",
+    "highlight": "piovesse"
+   },
+   {
+    "en": "Se solo fossi rimasto a casa quel giorno, avrei evitato l'incidente.",
+    "ko": "",
+    "highlight": "fossi rimasto"
+   },
+   {
+    "en": "Era necessario che ognuno facesse la propria parte con impegno.",
+    "ko": "",
+    "highlight": "facesse"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Pensavo che lui ha già finito ieri.",
+    "right": "Pensavo che lui avesse già finito ieri.",
+    "note": "A past main clause expressing opinion ('pensavo') requires the pluperfect subjunctive for an earlier action, not the indicative."
+   },
+   {
+    "wrong": "Volevo che tu parleresti con il direttore.",
+    "right": "Volevo che tu parlassi con il direttore.",
+    "note": "Subordinate desire clauses take the subjunctive, never the conditional ('parleresti')."
+   },
+   {
+    "wrong": "Se io sapessi la verità ieri, avrei parlato.",
+    "right": "Se io avessi saputo la verità ieri, avrei parlato.",
+    "note": "Past counterfactual events demand the pluperfect subjunctive ('avessi saputo'), not the imperfect."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Dubitavo che loro ___ il treno in tempo stamattina.",
+    "options": [
+     "prendessero",
+     "prendano",
+     "prenderebbero",
+     "prendevano"
+    ],
+    "answer": 0,
+    "explanation": "A past main verb of doubt ('dubitavo') triggers the imperfect subjunctive 'prendessero'."
+   },
+   {
+    "question": "Non sapevo che voi ___ già a Roma prima di quest'anno.",
+    "options": [
+     "siete stati",
+     "foste stati",
+     "sarete stati",
+     "eravate stati"
+    ],
+    "answer": 1,
+    "explanation": "An event prior to a past frame of reference requires the pluperfect subjunctive 'foste stati'."
+   },
+   {
+    "question": "Magari ___ ascoltato il consiglio del medico l'anno scorso!",
+    "options": [
+     "ho",
+     "avessi",
+     "ebbi",
+     "avrei"
+    ],
+    "answer": 1,
+    "explanation": "'Magari' expresses an unrealizable past wish when followed by the pluperfect subjunctive ('avessi ascoltato')."
+   },
+   {
+    "question": "I genitori volevano che il figlio ___ ogni giorno.",
+    "options": [
+     "studia",
+     "studiasse",
+     "studi",
+     "studierebbe"
+    ],
+    "answer": 1,
+    "explanation": "Past volition ('volevano che') requires the imperfect subjunctive 'studiasse'."
+   }
+  ],
+  "tip": "Look for the double 's' (parlassi, credesse, finissimo)—it is the signature phonetic marker of the Italian imperfect subjunctive!"
+ },
+ {
+  "id": "it-b2-periodo-ipotetico",
+  "level": "b2",
+  "category": "conditionals",
+  "categoryColor": "#2563EB",
+  "emoji": "🎲",
+  "title": "The Hypothetical System (Periodo Ipotetico)",
+  "subtitle": "Construct real, possible, and counterfactual conditional clauses with total confidence",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Match your 'se' condition strictly to the correct mood: Type 1 uses indicative, Type 2 takes imperfect subjunctive + present conditional, and Type 3 takes pluperfect subjunctive + past conditional.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Condition (Se-Clause)",
+    "Result Clause",
+    "Significance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Type 1 (Realtà)",
+      "Se + Indicativo",
+      "Indicativo / Futuro",
+      "Real or highly probable"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Type 2 (Possibilità)",
+      "Se + Congiuntivo Imp.",
+      "Condizionale Presente",
+      "Hypothetical / imaginary"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Type 3 (Irrealtà)",
+      "Se + Congiuntivo Trap.",
+      "Condizionale Passato",
+      "Impossible past counterfactual"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Type 3 (Misto)",
+      "Se + Congiuntivo Trap.",
+      "Condizionale Presente",
+      "Past condition, present outcome"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Reality / Real Condition (Type 1)",
+    "example": "Se domani fa bel tempo, faremo una gita in montagna.",
+    "translation": ""
+   },
+   {
+    "color": "#1E40AF",
+    "label": "Possibility / Fantasy (Type 2)",
+    "example": "Se avessi un milione di euro, comprerei una villa sul mare.",
+    "translation": ""
+   },
+   {
+    "color": "#172554",
+    "label": "Past Counterfactual (Type 3)",
+    "example": "Se avessi saputo della riunione, sarei arrivato in orario.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Se studi regolarmente, superi tutti gli esami senza ansia.",
+    "ko": "",
+    "highlight": "Se studi"
+   },
+   {
+    "en": "Se potessi viaggiare nel tempo, andrei nell'antica Roma.",
+    "ko": "",
+    "highlight": "Se potessi"
+   },
+   {
+    "en": "Se avessimo preso la mappa, non ci saremmo persi nel bosco.",
+    "ko": "",
+    "highlight": "Se avessimo preso"
+   },
+   {
+    "en": "Se tu mi avessi ascoltato ieri, adesso non saresti nei guai.",
+    "ko": "",
+    "highlight": "non saresti"
+   },
+   {
+    "en": "Se vincessi la lotteria, lascerei subito questo impiego.",
+    "ko": "",
+    "highlight": "Se vincessi"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Se avrei tempo, verrei volentieri.",
+    "right": "Se avessi tempo, verrei volentieri.",
+    "note": "Never put the conditional directly after 'se' in a hypothetical condition; use the subjunctive instead."
+   },
+   {
+    "wrong": "Se fossi ricco, comprato una barca.",
+    "right": "Se fossi ricco, comprerei una barca.",
+    "note": "The apodosis (result clause) of a Type 2 conditional requires the present conditional ('comprerei')."
+   },
+   {
+    "wrong": "Se avessi studiato, avrei passato secoli fa.",
+    "right": "Se avessi studiato, avrei passato l'esame.",
+    "note": "Ensure you balance the pluperfect subjunctive with the past conditional for completed past unreal actions."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Se domani piove, noi non ___ al mare.",
+    "options": [
+     "andremmo",
+     "andavamo",
+     "andremo",
+     "fossi andato"
+    ],
+    "answer": 2,
+    "explanation": "In Type 1 (reality), an indicative present in the 'se' clause pairs with the future ('andremo') or present."
+   },
+   {
+    "question": "Se io ___ più tempo libero, leggerei molti più libri.",
+    "options": [
+     "avrei",
+     "avessi",
+     "abbia",
+     "avrò"
+    ],
+    "answer": 1,
+    "explanation": "Type 2 (possibility) requires the imperfect subjunctive ('avessi') in the 'se' clause."
+   },
+   {
+    "question": "Se ci fossimo svegliati prima, non ___ il treno.",
+    "options": [
+     "perdavamo",
+     "avremmo perso",
+     "avessimo perso",
+     "perderemmo"
+    ],
+    "answer": 1,
+    "explanation": "Type 3 (past counterfactual) takes the past conditional ('avremmo perso') in the main clause."
+   },
+   {
+    "question": "Se tu ___ meno stanco, potremmo uscire stasera.",
+    "options": [
+     "fossi",
+     "eri",
+     "saresti",
+     "sia"
+    ],
+    "answer": 0,
+    "explanation": "Type 2 hypothetical clauses introduce the condition with 'se' + imperfect subjunctive ('fossi')."
+   }
+  ],
+  "tip": "Golden rule to memorize: 'Se' NEVER takes the conditional! Whenever you write 'se', your brain must reach for either the indicative or the subjunctive."
+ },
+ {
+  "id": "it-b2-passiva-si-passivante",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#0891B2",
+  "emoji": "⚙️",
+  "title": "Passive Voice and the Si Passivante / Si Impersonale",
+  "subtitle": "Differentiate periphrastic passives with essere/venire from the everyday passivating 'si'",
+  "color": "#0E7490",
+  "bg": "#ECFEFF",
+  "keyPoint": "Use 'venire' for dynamic simple tenses, 'essere' for all tenses, and 'si passivante' when the verb agrees with an explicit third-person patient without naming the agent.",
+  "structure": {
+   "headers": [
+    "Construction",
+    "Form",
+    "Example",
+    "Usage Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Essere + Participle",
+      "Tutti i tempi",
+      "La casa fu costruita nel 1920",
+      "State or completed action"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Venire + Participle",
+      "Solo tempi semplici",
+      "Il pane viene sfornato ogni mattina",
+      "Dynamic process in progress"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Andare + Participle",
+      "Necessità / Dovere",
+      "I documenti vanno firmati subito",
+      "Duty/necessity (= devono essere)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Si Passivante",
+      "Si + Verbo (3a pers.)",
+      "In Italia si mangia molta pasta",
+      "Ubiquitous impersonal-passive"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0E7490",
+    "label": "Dynamic Passive (Venire)",
+    "example": "Le nuove leggi vengono approvate dal Parlamento.",
+    "translation": ""
+   },
+   {
+    "color": "#155E75",
+    "label": "Obligation / Necessity (Andare)",
+    "example": "Questa regola va rispettata da tutti senza eccezioni.",
+    "translation": ""
+   },
+   {
+    "color": "#164E63",
+    "label": "Passive with 'Si' (Si Passivante)",
+    "example": "In quel negozio si vendono prodotti tipici toscani.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Durante il festival si proiettano molti film indipendenti.",
+    "ko": "",
+    "highlight": "si proiettano"
+   },
+   {
+    "en": "Il pacco è stato consegnato dal corriere questa mattina.",
+    "ko": "",
+    "highlight": "è stato consegnato"
+   },
+   {
+    "en": "I libri presi in prestito vanno restituiti entro venerdì.",
+    "ko": "",
+    "highlight": "vanno restituiti"
+   },
+   {
+    "en": "Il museo viene visitato da migliaia di turisti ogni settimana.",
+    "ko": "",
+    "highlight": "viene visitato"
+   },
+   {
+    "en": "A Roma si parlano molte lingue straniere nei musei.",
+    "ko": "",
+    "highlight": "si parlano"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "La pizza è venuta mangiata da Luca ieri.",
+    "right": "La pizza è stata mangiata da Luca ieri.",
+    "note": "'Venire' can only form passive constructions in simple tenses (presente, imperfetto, futuro), never in compound tenses with 'avere' or 'essere'."
+   },
+   {
+    "wrong": "In Italia si mangiano bene nei ristoranti.",
+    "right": "In Italia si mangia bene nei ristoranti.",
+    "note": "When there is no direct object plural noun, use the singular 'si impersonale': 'si mangia bene'."
+   },
+   {
+    "wrong": "In edicola si vende i giornali stranieri.",
+    "right": "In edicola si vendono i giornali stranieri.",
+    "note": "In 'si passivante', the verb must agree in number with the plural grammatical subject ('i giornali' -> 'si vendono')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Questo modulo ___ compilato in tutte le sue parti con penna nera.",
+    "options": [
+     "va",
+     "viene stato",
+     "fa",
+     "si"
+    ],
+    "answer": 0,
+    "explanation": "'Andare' + participle expresses necessity ('it must be filled out')."
+   },
+   {
+    "question": "In quel mercato rionale si ___ sempre frutta e verdura fresche.",
+    "options": [
+     "trova",
+     "trovano",
+     "trovi",
+     "trovavano a"
+    ],
+    "answer": 1,
+    "explanation": "The noun phrase 'frutta e verdura' functions as the plural subject of 'si passivante', requiring the plural verb 'trovano'."
+   },
+   {
+    "question": "L'antico monumento ___ restaurato l'anno scorso.",
+    "options": [
+     "ha",
+     "è stato",
+     "viene stato",
+     "va"
+    ],
+    "answer": 1,
+    "explanation": "Compound tenses of the passive must use 'essere' ('è stato restaurato'); 'venire' cannot be used in compound tenses."
+   },
+   {
+    "question": "I quadri dell'esposizione ___ ammirati da molti critici d'arte.",
+    "options": [
+     "hanno",
+     "vanno",
+     "vengono",
+     "si"
+    ],
+    "answer": 2,
+    "explanation": "'Vengono ammirati' is a natural dynamic simple-tense passive showing ongoing action."
+   }
+  ],
+  "tip": "To decide between 'si mangia' and 'si mangiano', look at what follows: if it's plural ('si mangiano gli spaghetti'), conjugate in the plural; if it's singular or an adverb ('si mangia bene'), stay in the singular!"
+ }
+]

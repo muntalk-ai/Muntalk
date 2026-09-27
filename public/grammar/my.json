@@ -1,0 +1,3364 @@
+[
+ {
+  "id": "my-a1-sov-basic-sentence-order",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🔄",
+  "title": "SOV Word Order & Declarative Endings",
+  "subtitle": "Master core Burmese sentence structure with realis and irrealis verb markers",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Burmese consistently follows Subject-Object-Verb order, ending declarative clauses with တယ် for realis (present/past) or မယ် for irrealis (future/intent).",
+  "structure": {
+   "headers": [
+    "Function",
+    "Pattern",
+    "Burmese Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Realis (Present/Past)",
+      "Verb + တယ်",
+      "သူ ထမင်း စားတယ်။",
+      "S/he eats / ate rice."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Irrealis (Future/Intent)",
+      "Verb + မယ်",
+      "သူ ထမင်း စားမယ်။",
+      "S/he will eat rice."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Basic Intransitive",
+      "Subject + Verb",
+      "မိုး ရွာတယ်။",
+      "It is raining / rained."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Motion Destination",
+      "Noun + သွား + Ending",
+      "ကျွန်တော် ဈေး သွားမယ်။",
+      "I will go to the market."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Describing Ongoing or Past Facts",
+    "example": "ကျွန်မ ကော်ဖီ သောက်တယ်။",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Expressing Future Intentions",
+    "example": "မနက်ဖြန် ရုံး သွားမယ်။",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Stating General Truths",
+    "example": "သူ အင်္ဂလိပ်စာ သင်တယ်။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ညီမလေး စာအုပ် ဖတ်တယ်။",
+    "ko": "",
+    "highlight": "ဖတ်တယ်"
+   },
+   {
+    "en": "ကျွန်တော် ရေ သောက်မယ်။",
+    "ko": "",
+    "highlight": "သောက်မယ်"
+   },
+   {
+    "en": "သူငယ်ချင်း ရန်ကုန် သွားတယ်။",
+    "ko": "",
+    "highlight": "သွားတယ်"
+   },
+   {
+    "en": "အမေ ထမင်း ချက်မယ်။",
+    "ko": "",
+    "highlight": "ချက်မယ်"
+   },
+   {
+    "en": "ဆရာ မြန်မာစာ သင်တယ်။",
+    "ko": "",
+    "highlight": "သင်တယ်"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ကျွန်တော် စားတယ် ထမင်း။",
+    "right": "ကျွန်တော် ထမင်း စားတယ်။",
+    "note": "Burmese requires strict Subject-Object-Verb order; the verb must appear at the end."
+   },
+   {
+    "wrong": "မနက်ဖြန် သူ လာတယ်။",
+    "right": "မနက်ဖြန် သူ လာမယ်။",
+    "note": "Use the irrealis marker မယ် rather than realis တယ် for future actions."
+   },
+   {
+    "wrong": "သူ ထမင်း စား။",
+    "right": "သူ ထမင်း စားတယ်။",
+    "note": "Finite declarative main clauses require an aspect/modal particle like တယ် or မယ်, never bare stems."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the future statement: 'Tomorrow I will buy a book.' မနက်ဖြန် ကျွန်တော် စာအုပ် ___။",
+    "options": [
+     "ဝယ်တယ်",
+     "ဝယ်မယ်",
+     "ဝယ်ပါ",
+     "ဝယ်ဘူး"
+    ],
+    "answer": 1,
+    "explanation": "The particle မယ် marks future plans and irrealis events."
+   },
+   {
+    "question": "Choose the correct sentence meaning 'Mother cooks rice.'",
+    "options": [
+     "ထမင်း ချက်တယ် အမေ။",
+     "အမေ ချက်တယ် ထမင်း။",
+     "အမေ ထမင်း ချက်တယ်။",
+     "ချက်တယ် အမေ ထမင်း။"
+    ],
+    "answer": 2,
+    "explanation": "Burmese uses Subject (အမေ) + Object (ထမင်း) + Verb (ချက်တယ်)."
+   },
+   {
+    "question": "Which verb phrase indicates an action that routinely happens or already happened?",
+    "options": [
+     "သွားတယ်",
+     "သွားမယ်",
+     "သွားလား",
+     "သွားလဲ"
+    ],
+    "answer": 0,
+    "explanation": "The declarative ending တယ် marks realis (current, habitual, or completed) reality."
+   },
+   {
+    "question": "Complete: 'My younger brother drinks water.' ညီလေး ရေ ___။",
+    "options": [
+     "သောက်ပါ",
+     "သောက်လဲ",
+     "သောက်မယ်",
+     "သောက်တယ်"
+    ],
+    "answer": 3,
+    "explanation": "A factual declarative statement in the present uses သောက်တယ်."
+   }
+  ],
+  "tip": "Think of တယ် as 'actual fact' and မယ် as 'prospective action'; both complete a statement grammatically."
+ },
+ {
+  "id": "my-a1-basic-negation-ma-bu",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#DC2626",
+  "emoji": "🚫",
+  "title": "Basic Negation with မ...ဘူး",
+  "subtitle": "Form standard negative present and past statements using a circumfix",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Negate finite Burmese verbs in the present and past by wrapping the verb stem with the circumfix မ-VERB-ဘူး.",
+  "structure": {
+   "headers": [
+    "Affirmative Form",
+    "Negative Construction",
+    "Burmese Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "စားတယ် (eats)",
+      "မ + စား + ဘူး",
+      "သူ မစားဘူး။",
+      "S/he does not / did not eat."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "သိတယ် (knows)",
+      "မ + သိ + ဘူး",
+      "ကျွန်တော် မသိဘူး။",
+      "I do not know."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ကြိုက်တယ် (likes)",
+      "မ + ကြိုက် + ဘူး",
+      "သူ မကြိုက်ဘူး။",
+      "S/he does not like it."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "သွားတယ် (goes)",
+      "မ + သွား + ဘူး",
+      "သူ မသွားဘူး။",
+      "S/he does not / did not go."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Denying Current States or Habits",
+    "example": "ကျွန်တော် အသား မစားဘူး။",
+    "translation": ""
+   },
+   {
+    "color": "#B91C1C",
+    "label": "Stating Past Inaction",
+    "example": "မနေ့က သူ ကျောင်း မလာဘူး။",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Expressing Lack of Knowledge or Ability",
+    "example": "ဒီအကြောင်း ကျွန်မ မသိဘူး။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ကျွန်တော် ကော်ဖီ မသောက်ဘူး။",
+    "ko": "",
+    "highlight": "မသောက်ဘူး"
+   },
+   {
+    "en": "သူ စာအုပ် မဖတ်ဘူး။",
+    "ko": "",
+    "highlight": "မဖတ်ဘူး"
+   },
+   {
+    "en": "ညီမလေး ရုပ်ရှင် မကြည့်ဘူး။",
+    "ko": "",
+    "highlight": "မကြည့်ဘူး"
+   },
+   {
+    "en": "ယနေ့ ရုံး မဖွင့်ဘူး။",
+    "ko": "",
+    "highlight": "မဖွင့်ဘူး"
+   },
+   {
+    "en": "သူ မုန့် မဝယ်ဘူး။",
+    "ko": "",
+    "highlight": "မဝယ်ဘူး"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "သူ ထမင်း မစားတယ်။",
+    "right": "သူ ထမင်း မစားဘူး။",
+    "note": "When negating with မ-, the declarative marker တယ် must be replaced by ဘူး."
+   },
+   {
+    "wrong": "ကျွန်တော် မသိ။",
+    "right": "ကျွန်တော် မသိဘူး။",
+    "note": "Spoken colloquial negation requires both the prefix မ- and the closing particle ဘူး."
+   },
+   {
+    "wrong": "သူ စားဘူး။",
+    "right": "သူ မစားဘူး။",
+    "note": "Without the prefix မ-, ဘူး alone does not negate the clause (it can mean 'have experienced')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I do not drink tea'?",
+    "options": [
+     "ကျွန်တော် လက်ဖက်ရည် သောက်တယ်",
+     "ကျွန်တော် လက်ဖက်ရည် မသောက်ဘူး",
+     "ကျွန်တော် လက်ဖက်ရည် သောက်မယ်",
+     "ကျွန်တော် လက်ဖက်ရည် မသောက်နဲ့"
+    ],
+    "answer": 1,
+    "explanation": "The standard declarative negation wraps သောက် into မသောက်ဘူး."
+   },
+   {
+    "question": "Complete the negative sentence: 'He did not go.' သူ ___။",
+    "options": [
+     "မသွားတယ်",
+     "သွားဘူး",
+     "မသွားဘူး",
+     "မသွားလား"
+    ],
+    "answer": 2,
+    "explanation": "Negation drops the affirmative particle and takes the circumfix မ-သွား-ဘူး."
+   },
+   {
+    "question": "What is the negative form of ကြိုက်တယ် (to like)?",
+    "options": [
+     "မကြိုက်ဘူး",
+     "ကြိုက်ဘူး",
+     "မကြိုက်တယ်",
+     "မကြိုက်နဲ့"
+    ],
+    "answer": 0,
+    "explanation": "ကြိုက်တယ် becomes မကြိုက်ဘူး in the negative."
+   },
+   {
+    "question": "Complete: 'I do not understand.' ကျွန်မ နား___။",
+    "options": [
+     "လည်တယ်",
+     "လည်မယ်",
+     "မလည်လား",
+     "မလည်ဘူး"
+    ],
+    "answer": 3,
+    "explanation": "Compound verb နားလည် negates the main verbal root: နားမလည်ဘူး."
+   }
+  ],
+  "tip": "Remember: The prefix မ- replaces the starting slot and ဘူး replaces the affirmative ending တယ်/မယ်."
+ },
+ {
+  "id": "my-a1-question-particles-la-le",
+  "level": "a1",
+  "category": "questions",
+  "categoryColor": "#7C3AED",
+  "emoji": "❓",
+  "title": "Polar and Content Question Particles",
+  "subtitle": "Distinguish yes/no questions (လား) from wh-question clauses (လဲ)",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use လား for yes-or-no polar questions, and switch to လဲ whenever an interrogative question-word (who, what, where) is present.",
+  "structure": {
+   "headers": [
+    "Question Type",
+    "Trigger",
+    "Burmese Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Yes/No (Polar)",
+      "No wh-word present",
+      "ထမင်း စားပြီးပြီလား။",
+      "Have you eaten rice?"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Content (Wh-)",
+      "ဘယ်သူ (Who)",
+      "ဘယ်သူ လာသလဲ။ / ဘယ်သူ လာလဲ။",
+      "Who is coming?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Content (Wh-)",
+      "ဘာ (What)",
+      "ဘာ စားမလဲ။",
+      "What will you eat?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Content (Wh-)",
+      "ဘယ် (Where)",
+      "ဘယ် သွားမလဲ။",
+      "Where will you go?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Asking Simple Yes/No Inquiries",
+    "example": "နေကောင်းလား။",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Asking About Choices or Identity",
+    "example": "ဒါ ဘာလဲ။",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Inquiring About Destinations",
+    "example": "ဘယ်ကို သွားမလဲ။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ကော်ဖီ သောက်မလား။",
+    "ko": "",
+    "highlight": "သောက်မလား"
+   },
+   {
+    "en": "နာမည် ဘယ်လိုခေါ်လဲ။",
+    "ko": "",
+    "highlight": "ခေါ်လဲ"
+   },
+   {
+    "en": "အိမ်မှာ ရှိလား။",
+    "ko": "",
+    "highlight": "ရှိလား"
+   },
+   {
+    "en": "ဘယ်အချိန် လာမလဲ။",
+    "ko": "",
+    "highlight": "လာမလဲ"
+   },
+   {
+    "en": "ဒီစာအုပ် ကြိုက်လား။",
+    "ko": "",
+    "highlight": "ကြိုက်လား"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ဘာ စားမလား။",
+    "right": "ဘာ စားမလဲ။",
+    "note": "Because ဘာ (what) is a question-word, the clause must end with လဲ, not the yes/no marker လား."
+   },
+   {
+    "wrong": "နေကောင်းလဲ။",
+    "right": "နေကောင်းလား။",
+    "note": "'How are you?' is a yes/no health inquiry with no wh-pronoun, so it requires လား."
+   },
+   {
+    "wrong": "ဘယ်သူ လာတယ်။",
+    "right": "ဘယ်သူ လာလဲ။",
+    "note": "An interrogative clause with ဘယ်သူ (who) cannot take the declarative ending တယ်."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the yes/no question: 'Are you going to the market?' ဈေး သွားမ___။",
+    "options": [
+     "လား",
+     "လဲ",
+     "တယ်",
+     "ဘူး"
+    ],
+    "answer": 0,
+    "explanation": "There is no question-word in this sentence, so it is a polar question marked by လား."
+   },
+   {
+    "question": "Complete the question: 'What are you doing?' ဘာ လုပ်နေ___။",
+    "options": [
+     "လား",
+     "ဘူး",
+     "လဲ",
+     "တယ်"
+    ],
+    "answer": 2,
+    "explanation": "The word ဘာ (what) is a wh-word, which requires the content question particle လဲ."
+   },
+   {
+    "question": "Which sentence correctly asks 'Who bought this book?'",
+    "options": [
+     "ဒီစာအုပ် ဘယ်သူ ဝယ်လဲ။",
+     "ဒီစာအုပ် ဘယ်သူ ဝယ်လား။",
+     "ဒီစာအုပ် ဘယ်သူ ဝယ်တယ်။",
+     "ဒီစာအုပ် ဘယ်သူ ဝယ်မလဲလား။"
+    ],
+    "answer": 0,
+    "explanation": "Questions containing ဘယ်သူ (who) take the ending particle လဲ."
+   },
+   {
+    "question": "How do you ask: 'Is it delicious?'",
+    "options": [
+     "ကောင်းလဲ။",
+     "ကောင်းတယ်လဲ။",
+     "ကောင်းသလားလဲ။",
+     "ကောင်းလား။"
+    ],
+    "answer": 3,
+    "explanation": "A direct polar inquiry without wh-words uses ကောင်းလား."
+   }
+  ],
+  "tip": "Spot the wh-word (ဘာ, ဘယ်သူ, ဘယ်မှာ, ဘယ်လို): if one is present, choose လဲ; otherwise, choose လား."
+ },
+ {
+  "id": "my-a1-noun-numeral-classifiers",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🔢",
+  "title": "Numeral Classifiers and Counting Structure",
+  "subtitle": "Count nouns correctly using the [Noun + Numeral + Classifier] order",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "In Burmese, objects are counted using the rigid order of Noun + Number + Classifier, matching the specific classifier to the category of noun.",
+  "structure": {
+   "headers": [
+    "Classifier",
+    "Applies To",
+    "Burmese Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ယောက်",
+      "Humans (general)",
+      "လူ နှစ် ယောက်",
+      "Two people"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ကောင်",
+      "Animals / living creatures",
+      "ခွေး သုံး ကောင်",
+      "Three dogs"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ခု",
+      "Inanimate objects / generic items",
+      "ပန်းသီး လေး ခု",
+      "Four apples"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "အုပ်",
+      "Books / bound volumes",
+      "စာအုပ် တစ် အုပ်",
+      "One book"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Counting People",
+    "example": "ကျောင်းသား ငါး ယောက် ရှိတယ်။",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Counting Animals",
+    "example": "ကြောင် နှစ် ကောင် အိပ်နေတယ်။",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Counting Objects & Things",
+    "example": "ခဲတံ သုံး ချောင်း ဝယ်မယ်။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ဆရာမ သုံး ယောက် လာတယ်။",
+    "ko": "",
+    "highlight": "သုံး ယောက်"
+   },
+   {
+    "en": "ကြက် တစ် ကောင် ဝယ်တယ်။",
+    "ko": "",
+    "highlight": "တစ် ကောင်"
+   },
+   {
+    "en": "စာအုပ် နှစ် အုပ် ဖတ်မယ်။",
+    "ko": "",
+    "highlight": "နှစ် အုပ်"
+   },
+   {
+    "en": "ကား လေး စီး ရှိတယ်။",
+    "ko": "",
+    "highlight": "လေး စီး"
+   },
+   {
+    "en": "အင်္ကျီ ငါး ထည် ဝယ်တယ်။",
+    "ko": "",
+    "highlight": "ငါး ထည်"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "နှစ် လူ",
+    "right": "လူ နှစ် ယောက်",
+    "note": "Burmese never puts the number before the noun without a classifier; use Noun + Number + Classifier."
+   },
+   {
+    "wrong": "လူ သုံး ကောင်",
+    "right": "လူ သုံး ယောက်",
+    "note": "The classifier ကောင် is reserved for animals; humans require ယောက် (or ဦး for venerated persons)."
+   },
+   {
+    "wrong": "ခွေး နှစ် ယောက်",
+    "right": "ခွေး နှစ် ကောင်",
+    "note": "Animals must be counted with ကောင်, never ယောက်."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'three students'?",
+    "options": [
+     "ကျောင်းသား သုံး ကောင်",
+     "သုံး ယောက် ကျောင်းသား",
+     "ကျောင်းသား သုံး ယောက်",
+     "ကျောင်းသား သုံး ခု"
+    ],
+    "answer": 2,
+    "explanation": "Human counting takes the order Noun (ကျောင်းသား) + Numeral (သုံး) + Classifier (ယောက်)."
+   },
+   {
+    "question": "Which classifier is used for counting cats and birds?",
+    "options": [
+     "ယောက်",
+     "ခု",
+     "အုပ်",
+     "ကောင်"
+    ],
+    "answer": 3,
+    "explanation": "ကောင် is the dedicated classifier for animals and living creatures."
+   },
+   {
+    "question": "Complete the phrase: 'One book' စာအုပ် တစ် ___။",
+    "options": [
+     "အုပ်",
+     "ယောက်",
+     "ကောင်",
+     "စီး"
+    ],
+    "answer": 0,
+    "explanation": "Bound books take the specific classifier အုပ်."
+   },
+   {
+    "question": "Choose the correct expression for 'two cars':",
+    "options": [
+     "နှစ် ကား",
+     "ကား နှစ် စီး",
+     "ကား နှစ် ယောက်",
+     "ကား စီး နှစ်"
+    ],
+    "answer": 1,
+    "explanation": "Vehicles take the classifier စီး in the order Noun + Numeral + Classifier (ကား နှစ် စီး)."
+   }
+  ],
+  "tip": "Always remember the cadence: Noun first, then Number, then Classifier (e.g., စာအုပ် တစ် အုပ်)."
+ },
+ {
+  "id": "my-a1-polite-imperatives-ba-ne",
+  "level": "a1",
+  "category": "modals",
+  "categoryColor": "#D97706",
+  "emoji": "🙏",
+  "title": "Polite Requests and Prohibitions",
+  "subtitle": "Form softening commands with ပါ and prohibitions with မ...နဲ့",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Add the polite marker ပါ to soften direct imperatives, and wrap the verb in မ-VERB-နဲ့ to form standard negative commands and prohibitions.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Construction",
+    "Burmese Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Polite Imperative",
+      "Verb + ပါ",
+      "ထိုင်ပါ။",
+      "Please sit down."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Soft Prohibition",
+      "မ + Verb + ပါနဲ့",
+      "မသွားပါနဲ့။",
+      "Please do not go."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Direct Prohibition",
+      "မ + Verb + နဲ့",
+      "မပြောနဲ့။",
+      "Do not speak."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Polite Offer/Come in",
+      "Verb + ပါဦး",
+      "ဝင်ပါဦး။",
+      "Please do come in."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Inviting or Directing Politely",
+    "example": "ဒီမှာ ခဏ စောင့်ပါ။",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Asking Someone Not to Do Something",
+    "example": "အဲဒါ မစားပါနဲ့။",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Expressing Hospitality",
+    "example": "ရေနွေးကြမ်း သောက်ပါဦး။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ကျေးဇူးပြု၍ ထမင်း စားပါ။",
+    "ko": "",
+    "highlight": "စားပါ"
+   },
+   {
+    "en": "အသံကျယ်ကျယ် မအော်နဲ့။",
+    "ko": "",
+    "highlight": "မအော်နဲ့"
+   },
+   {
+    "en": "တံခါး ပိတ်ပါ။",
+    "ko": "",
+    "highlight": "ပိတ်ပါ"
+   },
+   {
+    "en": "ဒီကို မလာပါနဲ့။",
+    "ko": "",
+    "highlight": "မလာပါနဲ့"
+   },
+   {
+    "en": "လက်ဖက်ရည် သောက်ပါ။",
+    "ko": "",
+    "highlight": "သောက်ပါ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ဒီမှာ ထိုင်တယ်!",
+    "right": "ဒီမှာ ထိုင်ပါ။",
+    "note": "Do not use the declarative ending တယ် for requests; attach ပါ instead."
+   },
+   {
+    "wrong": "မသွားဘူး!",
+    "right": "မသွားနဲ့!",
+    "note": "မ...ဘူး is for stating factual past/present negation ('does not go'); use မ...နဲ့ for negative imperatives ('don't go')."
+   },
+   {
+    "wrong": "မစားပါဘူးနဲ့။",
+    "right": "မစားပါနဲ့။",
+    "note": "Do not mix the statement negation ဘူး with prohibitive နဲ့; polite prohibition is မ...ပါနဲ့."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'Please drink' politely?",
+    "options": [
+     "သောက်တယ်",
+     "သောက်မယ်",
+     "သောက်လား",
+     "သောက်ပါ"
+    ],
+    "answer": 3,
+    "explanation": "Adding ပါ to the verb stem creates a polite request."
+   },
+   {
+    "question": "Which sentence means 'Don't go!' (informal prohibition)?",
+    "options": [
+     "မသွားနဲ့။",
+     "မသွားဘူး။",
+     "သွားပါ။",
+     "သွားမယ်။"
+    ],
+    "answer": 0,
+    "explanation": "The pattern မ-VERB-နဲ့ is used for direct prohibitions."
+   },
+   {
+    "question": "Complete the polite prohibition: 'Please do not do that.' အဲဒါ မလုပ်___။",
+    "options": [
+     "တယ်",
+     "ပါနဲ့",
+     "ဘူး",
+     "လား"
+    ],
+    "answer": 1,
+    "explanation": "မ...ပါနဲ့ combines politeness (ပါ) with prohibition (နဲ့)."
+   },
+   {
+    "question": "Complete the instruction: 'Please read this book.' ဒီစာအုပ် ဖတ်___။",
+    "options": [
+     "လဲ",
+     "ပါ",
+     "ဘူး",
+     "နဲ့"
+    ],
+    "answer": 1,
+    "explanation": "ဖတ်ပါ is the polite imperative form meaning 'please read'."
+   }
+  ],
+  "tip": "Distinguish statements from commands: မ...ဘူး means 'I don't / didn't do it', while မ...နဲ့ means 'Don't you do it!'."
+ },
+ {
+  "id": "my-a1-possessive-particle-ye",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "🏷️",
+  "title": "Possessive Particle ရဲ့ (ye)",
+  "subtitle": "Marking ownership and relationships between nouns",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Attach the particle ရဲ့ immediately to a noun or pronoun to indicate possession, association, or origin.",
+  "structure": {
+   "headers": [
+    "Possessor",
+    "Marker",
+    "Possessed Noun",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ကျွန်တော်",
+      "ရဲ့",
+      "စာအုပ်",
+      "Personal ownership (My book)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ဆရာ",
+      "ရဲ့",
+      "ကား",
+      "Third-person possession (Teacher's car)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ရန်ကုန်",
+      "ရဲ့",
+      "ရာသီဥတု",
+      "Attributive association (Yangon's weather)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "သူငယ်ချင်း",
+      "၏",
+      "အိမ်",
+      "Formal written style (Friend's house)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Direct Ownership",
+    "example": "ဒါ ကျွန်တော့်ရဲ့ အိတ်ပါ။",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Interpersonal Relationship",
+    "example": "သူ မောင်မောင့်ရဲ့ ညီမ ဖြစ်ပါတယ်။",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Locational Attribute",
+    "example": "မန္တလေးရဲ့ ညနေခင်းက အရမ်းလှတယ်။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ဒါ ကျွန်မရဲ့ အိမ်ပါ။",
+    "ko": "",
+    "highlight": "ရဲ့"
+   },
+   {
+    "en": "သူမရဲ့ နာမည် ဘာလဲ။",
+    "ko": "",
+    "highlight": "ရဲ့"
+   },
+   {
+    "en": "ကိုကို့ရဲ့ ဖုန်း ဘယ်မှာလဲ။",
+    "ko": "",
+    "highlight": "ရဲ့"
+   },
+   {
+    "en": "ဒါ မြန်မာပြည်ရဲ့ ယဉ်ကျေးမှု ဖြစ်ပါတယ်။",
+    "ko": "",
+    "highlight": "ရဲ့"
+   },
+   {
+    "en": "ဆရာမကြီး၏ အခန်း ဒီမှာပါ။",
+    "ko": "",
+    "highlight": "၏"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "စာအုပ် ကျွန်တော့်ရဲ့ ပါ။",
+    "right": "ဒါ ကျွန်တော့်ရဲ့ စာအုပ်ပါ။",
+    "note": "Burmese possessive phrases strictly precede the noun possessed (Possessor + ရဲ့ + Noun)."
+   },
+   {
+    "wrong": "သူ ရဲ့ ကား အသစ်ပါ။",
+    "right": "သူ့ရဲ့ ကား အသစ်ပါ။",
+    "note": "Pronouns like သူ (thu) contract to creaky tone သူ့ (thu') when paired with possessive markers in natural speech."
+   },
+   {
+    "wrong": "ကျွန်တော် ၏ စာအုပ် ဖြစ်တယ်",
+    "right": "ကျွန်တော့်ရဲ့ စာအုပ် ဖြစ်တယ်",
+    "note": "Avoid mixing formal ၏ into colloquial conversation; use colloquial ရဲ့ instead."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'This is my bag' -> ဒါ ကျွန်တော့်___ အိတ်ပါ။",
+    "options": [
+     "မှာ",
+     "ကို",
+     "ရဲ့",
+     "က"
+    ],
+    "answer": 2,
+    "explanation": "The particle ရဲ့ marks the possessor (ကျွန်တော် -> ကျွန်တော့်)."
+   },
+   {
+    "question": "Identify the formal written equivalent of colloquial ရဲ့ in: စာရေးဆရာ___ ဝတ္ထု။",
+    "options": [
+     "၏",
+     "နဲ့",
+     "မှ",
+     "ကို"
+    ],
+    "answer": 0,
+    "explanation": "In formal and literary Burmese, ၏ replaces spoken ရဲ့ as the genitive marker."
+   },
+   {
+    "question": "Which sentence correctly means 'Teacher's pen'?",
+    "options": [
+     "ဆရာရဲ့ ဖောင်တိန်",
+     "ဖောင်တိန်ရဲ့ ဆရာ",
+     "ဆရာကို ဖောင်တိန်",
+     "ဆရာမှာ ဖောင်တိန်"
+    ],
+    "answer": 0,
+    "explanation": "The owner (ဆရာ) must precede the marker ရဲ့ and the possessed noun (ဖောင်တိန်)."
+   },
+   {
+    "question": "Fill in the blank: 'Where is her watch?' -> သူ့___ နာရီ ဘယ်မှာလဲ။",
+    "options": [
+     "နဲ့",
+     "ကို",
+     "က",
+     "ရဲ့"
+    ],
+    "answer": 3,
+    "explanation": "သူ့ရဲ့ connects the pronoun 'her' to 'watch' (နာရီ)."
+   }
+  ],
+  "tip": "In everyday speech, ရဲ့ is often dropped entirely if the pronoun uses the creaky tone, so 'ကျွန်တော့်စာအုပ်' is just as common as 'ကျွန်တော့်ရဲ့စာအုပ်'."
+ },
+ {
+  "id": "my-a2-core-case-markers-ga-go-hma",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#4F46E5",
+  "emoji": "📍",
+  "title": "Postpositional Case Markers (က, ကို, မှာ)",
+  "subtitle": "Distinguishing subject focus, direct object, and spatial location",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use က to mark subjects or agents, ကို to mark direct or indirect objects, and မှာ to pinpoint physical location or time.",
+  "structure": {
+   "headers": [
+    "Case Marker",
+    "Grammatical Role",
+    "Example Phrase",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "က",
+      "Subject / Agent Focus",
+      "မင်းက သွားပါ",
+      "You go (as for you)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ကို",
+      "Direct / Indirect Object",
+      "ထမင်းကို စားတယ်",
+      "Eat rice"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "မှာ",
+      "Locative / Temporal Position",
+      "အိမ်မှာ ရှိတယ်",
+      "Be at home"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "က",
+      "Source / Starting Point",
+      "ရန်ကုန်က လာတယ်",
+      "Come from Yangon"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Subject Emphasis",
+    "example": "အမေက ဟင်းချက်နေတယ်။",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Object Marking",
+    "example": "ကျွန်တော် ကော်ဖီကို သောက်မယ်။",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Location Marking",
+    "example": "စာအုပ်က စားပွဲပေါ်မှာ ရှိတယ်။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ညီမလေးက စာဖတ်နေတယ်။",
+    "ko": "",
+    "highlight": "က"
+   },
+   {
+    "en": "သူငယ်ချင်းကို ဖုန်းဆက်လိုက်တယ်။",
+    "ko": "",
+    "highlight": "ကို"
+   },
+   {
+    "en": "မောင်မောင် ဆေးရုံမှာ အလုပ်လုပ်တယ်။",
+    "ko": "",
+    "highlight": "မှာ"
+   },
+   {
+    "en": "ဆရာက ကျောင်းသားကို စာအုပ်ပေးတယ်။",
+    "ko": "",
+    "highlight": "ကို"
+   },
+   {
+    "en": "ဒီပစ္စည်း ဘယ်ဆိုင်မှာ ဝယ်တာလဲ။",
+    "ko": "",
+    "highlight": "မှာ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ကျွန်တော် ရန်ကုန်မှာ လာပါတယ်။",
+    "right": "ကျွန်တော် ရန်ကုန်က လာပါတယ်။",
+    "note": "To denote origin ('from'), use က, not the static locative မှာ ('at')."
+   },
+   {
+    "wrong": "သူ ကားမှာ မောင်းတယ်။",
+    "right": "သူ ကားကို မောင်းတယ်။",
+    "note": "The vehicle being driven is the direct object and takes ကို, not the locative marker မှာ."
+   },
+   {
+    "wrong": "ထမင်းက စားပြီးပြီ။",
+    "right": "ထမင်းကို စားပြီးပြီ။",
+    "note": "Food is the object consumed, requiring ကို rather than the subject marker က."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct particle for destination/object: 'I am calling my friend' -> သူငယ်ချင်း___ ဖုန်းခေါ်တယ်။",
+    "options": [
+     "မှာ",
+     "ကို",
+     "က",
+     "နဲ့"
+    ],
+    "answer": 1,
+    "explanation": "The recipient of the phone call is the object, marked by ကို."
+   },
+   {
+    "question": "Choose the correct marker for location: 'He is at the market' -> သူ ဈေး___ ရှိတယ်။",
+    "options": [
+     "ကို",
+     "က",
+     "မှာ",
+     "ရဲ့"
+    ],
+    "answer": 2,
+    "explanation": "Static presence in a physical place takes the locative marker မှာ."
+   },
+   {
+    "question": "Select the agent marker: 'Teacher explains the lesson' -> ဆရာ___ စာရှင်းပြတယ်။",
+    "options": [
+     "က",
+     "ကို",
+     "မှာ",
+     "သို့"
+    ],
+    "answer": 0,
+    "explanation": "The teacher is the active subject/agent performing the action, taking က."
+   },
+   {
+    "question": "Choose the right particle for origin: 'I arrived from Mandalay' -> မန္တလေး___ ရောက်လာတယ်။",
+    "options": [
+     "ကို",
+     "မှာ",
+     "သို့",
+     "က"
+    ],
+    "answer": 3,
+    "explanation": "Apart from subject marking, က serves as an ablative marker meaning 'from'."
+   }
+  ],
+  "tip": "In rapid colloquial Burmese, speakers often drop ကို on inanimate objects (e.g., ထမင်းစားတယ် instead of ထမင်းကိုစားတယ်), but keep it for human beings to prevent ambiguity."
+ },
+ {
+  "id": "my-a2-sequential-conjunctions-pi-yin",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#0D9488",
+  "emoji": "🔗",
+  "title": "Sequential Connectives (ပြီး, ပြီးတော့, ရင်)",
+  "subtitle": "Chaining sequential actions and formulating conditions",
+  "color": "#0F766E",
+  "bg": "#F0FDFA",
+  "keyPoint": "Use ပြီး or ပြီးတော့ to connect chronological actions ('and then'), and suffix verb stems with ရင် to express 'if' or 'when'.",
+  "structure": {
+   "headers": [
+    "Connective",
+    "Placement",
+    "Grammatical Role",
+    "English Equiv."
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ပြီး",
+      "Verb stem + ပြီး",
+      "Immediate sequence",
+      "after doing... / and"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ပြီးတော့",
+      "Sentence opener",
+      "Discourse transition",
+      "and then / moreover"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ရင်",
+      "Verb stem + ရင်",
+      "Condition / Time link",
+      "if / when..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ပြီးရင်",
+      "Verb stem + ပြီးရင်",
+      "Sequential conditional",
+      "after doing... then"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0F766E",
+    "label": "Chained Actions",
+    "example": "ရေချိုးပြီး ထမင်းစားမယ်။",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Sentence Continuation",
+    "example": "ဈေးဝယ်မယ်။ ပြီးတော့ ရုပ်ရှင်ကြည့်မယ်။",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Conditional Requirement",
+    "example": "မိုးရွာရင် အိမ်မှာပဲနေမယ်။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "လက်ဆေးပြီး စားပါ။",
+    "ko": "",
+    "highlight": "ပြီး"
+   },
+   {
+    "en": "စာဖတ်မယ်။ ပြီးတော့ အိပ်မယ်။",
+    "ko": "",
+    "highlight": "ပြီးတော့"
+   },
+   {
+    "en": "အချိန်ရရင် လာလည်ပါ။",
+    "ko": "",
+    "highlight": "ရင်"
+   },
+   {
+    "en": "အလုပ်ပြီးရင် ဖုန်းဆက်လိုက်မယ်။",
+    "ko": "",
+    "highlight": "ပြီးရင်"
+   },
+   {
+    "en": "ဈေးသက်သာရင် ဝယ်လိုက်ပါ။",
+    "ko": "",
+    "highlight": "ရင်"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "မိုးရွာတယ် ပြီးတော့ အိမ်မှာနေမယ်။",
+    "right": "မိုးရွာရင် အိမ်မှာနေမယ်။",
+    "note": "Use conditional ရင် for hypothetical situations ('if it rains'), not sequential ပြီးတော့ ('and then')."
+   },
+   {
+    "wrong": "စားပြီးတော့ ပါ။",
+    "right": "စားပြီးပါပြီ။",
+    "note": "ပြီးတော့ is a sentence-initial or clause linker, not a clause-final polite aspect ending."
+   },
+   {
+    "wrong": "ရင် မိုးရွာ သွားမယ်။",
+    "right": "မိုးရွာရင် သွားမယ်။",
+    "note": "Unlike English 'if', Burmese conjunctions are postpositional and must attach to the end of the condition verb."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Connect two actions: 'Wash hands and eat' -> လက်ဆေး___ ထမင်းစားပါ။",
+    "options": [
+     "ရင်",
+     "သို့",
+     "ပြီး",
+     "မှာ"
+    ],
+    "answer": 2,
+    "explanation": "Attaching ပြီး directly to the verb stem ဆေး denotes sequential action (having washed, eat)."
+   },
+   {
+    "question": "Select the conditional suffix: 'If you have money, buy it' -> ပိုက်ဆံရှိ___ ဝယ်လိုက်ပါ။",
+    "options": [
+     "ရင်",
+     "ကို",
+     "ပြီးတော့",
+     "က"
+    ],
+    "answer": 0,
+    "explanation": "ရင် attached to ရှိ creates the conditional clause 'if there is money'."
+   },
+   {
+    "question": "Choose the best connector for a new sentence: 'I'll study. And then, I will sleep.' -> စာကျက်မယ်။ ___ အိပ်မယ်။",
+    "options": [
+     "ရင်",
+     "မှာ",
+     "ကို",
+     "ပြီးတော့"
+    ],
+    "answer": 3,
+    "explanation": "ပြီးတော့ begins the independent following clause meaning 'and then / afterwards'."
+   },
+   {
+    "question": "Formulate 'When/After finishing work, call me' -> အလုပ်ပြီး___ ဖုန်းဆက်ပါ။",
+    "options": [
+     "ကို",
+     "ရင်",
+     "က",
+     "မှာ"
+    ],
+    "answer": 1,
+    "explanation": "The composite ပြီးရင် (finished + when) denotes 'after doing something'."
+   }
+  ],
+  "tip": "Combining ပြီး + ရင် into ပြီးရင် gives you the everyday conversational phrase for 'after that...' or 'once that is done'."
+ },
+ {
+  "id": "my-a2-directional-aspectual-verbs",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#EA580C",
+  "emoji": "🧭",
+  "title": "Auxiliary Verbs (သွား, လာ, နေ)",
+  "subtitle": "Adding directional motion and continuous aspect to actions",
+  "color": "#C2410C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Append သွား for movement away, လာ for movement toward the speaker, and နေ to indicate ongoing action in progress.",
+  "structure": {
+   "headers": [
+    "Auxiliary",
+    "Primary Meaning",
+    "Aspectual Effect",
+    "Combined Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "သွား",
+      "To go",
+      "Action moving away / change of state",
+      "ယူသွားတယ် (take away)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "လာ",
+      "To come",
+      "Action moving toward speaker",
+      "ယူလာတယ် (bring here)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "နေ",
+      "To stay / reside",
+      "Continuous progressive aspect (-ing)",
+      "လုပ်နေတယ် (is doing)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "သွား + ပြီ",
+      "Gone / completed",
+      "Sudden or irreversible change",
+      "ပျက်သွားပြီ (got broken)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Continuous Progress",
+    "example": "သူ အခု စာဖတ်နေတယ်။",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Direction: Away",
+    "example": "ဒီစာအုပ် ပြန်ယူသွားပါ။",
+    "translation": ""
+   },
+   {
+    "color": "#16A34A",
+    "label": "Direction: Toward",
+    "example": "မုန့်တွေ ဝယ်လာခဲ့တယ်။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ညီမလေး အိပ်ပျော်နေတယ်။",
+    "ko": "",
+    "highlight": "နေ"
+   },
+   {
+    "en": "ထမင်းဘူး ယူသွားဖို့ မမေ့နဲ့နော်။",
+    "ko": "",
+    "highlight": "သွား"
+   },
+   {
+    "en": "အဝတ်အစားတွေ လျှော်နေပါတယ်။",
+    "ko": "",
+    "highlight": "နေ"
+   },
+   {
+    "en": "ဧည့်သည် ရောက်လာပြီ။",
+    "ko": "",
+    "highlight": "လာ"
+   },
+   {
+    "en": "ဖုန်း ကျကွဲသွားတယ်။",
+    "ko": "",
+    "highlight": "သွား"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "သူ အခု ထမင်းစားတယ်။",
+    "right": "သူ အခု ထမင်းစားနေတယ်။",
+    "note": "Without နေ, the sentence sounds like a habitual statement rather than an action happening right now."
+   },
+   {
+    "wrong": "အိမ်ကို လက်ဆောင် ယူလာသွားပါ။",
+    "right": "အိမ်ကို လက်ဆောင် ယူသွားပါ။",
+    "note": "Do not stack conflicting directional auxiliaries; use သွား for taking away to somewhere else."
+   },
+   {
+    "wrong": "နေစားတယ်",
+    "right": "စားနေတယ်",
+    "note": "Auxiliary aspect verbs always follow the main verb stem; they never precede it."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Express ongoing action: 'He is drinking water right now' -> သူ ရေသောက်___တယ်။",
+    "options": [
+     "သွား",
+     "နေ",
+     "လာ",
+     "ပြီ"
+    ],
+    "answer": 1,
+    "explanation": "နေ creates the continuous progressive aspect ('is drinking')."
+   },
+   {
+    "question": "Express bringing something toward the speaker: 'Bring the umbrella!' -> ထီး ယူ___ပါ။",
+    "options": [
+     "နေ",
+     "သွား",
+     "လာ",
+     "ခွင့်"
+    ],
+    "answer": 2,
+    "explanation": "ယူလာ combines ယူ (take) + လာ (come), meaning 'bring toward speaker'."
+   },
+   {
+    "question": "Express an action moving away: 'Take this letter with you' -> ဒီစာအုပ် ယူ___ပါ။",
+    "options": [
+     "သွား",
+     "လာ",
+     "နေ",
+     "စမ်း"
+    ],
+    "answer": 0,
+    "explanation": "ယူသွား combines ယူ (take) + သွား (go), meaning 'take away'."
+   },
+   {
+    "question": "Identify the progressive marker in: ဆရာမ စာသင်နေပါတယ်။",
+    "options": [
+     "ဆရာမ",
+     "စာသင်",
+     "နေ",
+     "ပါတယ်"
+    ],
+    "answer": 2,
+    "explanation": "နေ attached to the verb stem သင် indicates the ongoing action of teaching."
+   }
+  ],
+  "tip": "Beyond physical motion, သွား often marks an irreversible transition of state into the past, as in ပျက်သွားပြီ ('it broke down/ruined completely')."
+ },
+ {
+  "id": "my-a2-desire-and-ability-chin-naing-tat",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#9333EA",
+  "emoji": "🎯",
+  "title": "Modals of Desire & Ability (ချင်, နိုင်, တတ်)",
+  "subtitle": "Expressing wishes, physical capability, and acquired skills",
+  "color": "#7E22CE",
+  "bg": "#FAF5FF",
+  "keyPoint": "Attach ချင် to express wanting to do something, နိုင် for physical possibility, and တတ် for learned skills or tendencies.",
+  "structure": {
+   "headers": [
+    "Modal Particle",
+    "Meaning",
+    "Context",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ချင်",
+      "Want to / desire",
+      "Personal subjective wish",
+      "သွားချင်တယ် (want to go)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "နိုင်",
+      "Can / able to",
+      "Physical or situational power",
+      "မနိုင်တယ် (able to lift)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "တတ်",
+      "Know how to / can",
+      "Learned skill or knowledge",
+      "ရေကူးတတ်တယ် (can swim)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "မ...ချင်ဘူး",
+      "Do not want to",
+      "Negative volition",
+      "မစားချင်ဘူး (don't want to eat)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#9333EA",
+    "label": "Desire / Wish",
+    "example": "မြန်မာပြည်ကို သွားလည်ချင်တယ်။",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Physical Capacity",
+    "example": "ဒီအိတ် အရမ်းလေးလို့ မမနိုင်ဘူး။",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Learned Knowledge",
+    "example": "သူ ကားကျွမ်းကျင်စွာ မောင်းတတ်တယ်။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ကျွန်တော် ကော်ဖီသောက်ချင်တယ်။",
+    "ko": "",
+    "highlight": "ချင်"
+   },
+   {
+    "en": "ဒီနေ့ အလုပ်အရမ်းများလို့ မလာနိုင်ဘူး။",
+    "ko": "",
+    "highlight": "နိုင်"
+   },
+   {
+    "en": "ညီမလေး မြန်မာစာ ရေးတတ်တယ်။",
+    "ko": "",
+    "highlight": "တတ်"
+   },
+   {
+    "en": "ခေါင်းကိုက်နေလို့ ဘာမှ မစားချင်ဘူး။",
+    "ko": "",
+    "highlight": "ချင်"
+   },
+   {
+    "en": "မနက်ဖြန် မနက် စောစော ထနိုင်မလား။",
+    "ko": "",
+    "highlight": "နိုင်"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "သူ ကားမောင်းနိုင်တယ် (referring to driving license skill)",
+    "right": "သူ ကားမောင်းတတ်တယ်။",
+    "note": "Use တတ် for learned skills like driving, cooking, or languages. နိုင် denotes situational or physical ability."
+   },
+   {
+    "wrong": "မချင်စားဘူး",
+    "right": "မစားချင်ဘူး",
+    "note": "Negation starts with မ immediately followed by the verb stem (စား) and then modal (ချင်) + ဘူး."
+   },
+   {
+    "wrong": "ကျွန်တော် သွားဖို့ ချင်တယ်",
+    "right": "ကျွန်တော် သွားချင်တယ်",
+    "note": "Do not insert postpositions between verb stems and modals; attach ချင် directly to the verb stem."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Express a wish: 'I want to drink tea' -> လက်ဖက်ရည် သောက်___တယ်။",
+    "options": [
+     "နိုင်",
+     "တတ်",
+     "ချင်",
+     "နေ"
+    ],
+    "answer": 2,
+    "explanation": "ချင် attached to the verb stem သောက် means 'want to drink'."
+   },
+   {
+    "question": "Express learned skill: 'Do you know how to swim?' -> ရေကူး___သလား။",
+    "options": [
+     "တတ်",
+     "နိုင်",
+     "ချင်",
+     "သွား"
+    ],
+    "answer": 0,
+    "explanation": "Swimming is a learned skill, which strictly calls for the modal တတ်."
+   },
+   {
+    "question": "Express situational inability: 'I'm busy so I cannot come' -> အလုပ်များလို့ မလာ___ဘူး။",
+    "options": [
+     "ချင်",
+     "တတ်",
+     "နေ",
+     "နိုင်"
+    ],
+    "answer": 3,
+    "explanation": "Circumstantial or physical capacity requires နိုင် (မလာနိုင်ဘူး = cannot come)."
+   },
+   {
+    "question": "Choose the negative desire form: 'I do not want to go' -> မသွား___ဘူး။",
+    "options": [
+     "တတ်",
+     "ချင်",
+     "နိုင်",
+     "ပြီး"
+    ],
+    "answer": 1,
+    "explanation": "မ...ချင်ဘူး forms negative volition ('do not want to')."
+   }
+  ],
+  "tip": "A quick shortcut: use တတ် when asking 'Do you know how to...?' and နိုင် when asking 'Are you free/physically capable of...?'."
+ },
+ {
+  "id": "my-a2-experiential-aspect-phu",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🗺️",
+  "title": "Experiential Aspect Marker ဖူး",
+  "subtitle": "Expressing life experiences: 'have done' or 'have never done'",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Attach ဖူး directly after a verb root to indicate having ever experienced an action, or wrap it with မ...ဖူး for negative experiences.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Grammar Pattern",
+    "Burmese Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Affirmative",
+      "Verb + ဖူးတယ်",
+      "သွားဖူးတယ်",
+      "have visited/gone"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negative",
+      "မ + Verb + ဖူးပါဘူး",
+      "မစားဖူးပါဘူး",
+      "have never eaten"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Question",
+      "Verb + ဖူးသလား",
+      "ရောက်ဖူးသလား",
+      "have you ever arrived/been?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Past Travel Experience",
+    "example": "ကျွန်တော် ဂျပန်နိုင်ငံကို သွားဖူးတယ်။",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Food Never Tried",
+    "example": "သူ ဒီဟင်းကို တစ်ခါမှ မစားဖူးဘူး။",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Asking About Encounters",
+    "example": "ဆရာကြီးနဲ့ တွေ့ဖူးပါသလား။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ကျွန်မ ရန်ကုန်မှာ နေဖူးတယ်။",
+    "ko": "",
+    "highlight": "နေဖူးတယ်"
+   },
+   {
+    "en": "ဒီစာအုပ်ကို မဖတ်ဖူးပါဘူး။",
+    "ko": "",
+    "highlight": "မဖတ်ဖူးပါဘူး"
+   },
+   {
+    "en": "သူ မြန်မာအစားအစာ ချက်ဖူးတယ်။",
+    "ko": "",
+    "highlight": "ချက်ဖူးတယ်"
+   },
+   {
+    "en": "ပင်လယ်ကမ်းခြေကို သွားဖူးပါသလား။",
+    "ko": "",
+    "highlight": "သွားဖူးပါသလား"
+   },
+   {
+    "en": "ကျွန်တော် ဆင် မစီးဖူးဘူး။",
+    "ko": "",
+    "highlight": "မစီးဖူးဘူး"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ကျွန်တော် ဂျပန် သွားခဲ့တယ် (meaning 'I have been to Japan once in my life')",
+    "right": "ကျွန်တော် ဂျပန် သွားဖူးတယ်။",
+    "note": "Use ဖူး for life experiences; ခဲ့ denotes a completed past displacement rather than experiential background."
+   },
+   {
+    "wrong": "မဖူးစားဘူး",
+    "right": "မစားဖူးဘူး",
+    "note": "The negative marker မ must attach directly to the main verb root, not to ဖူး."
+   },
+   {
+    "wrong": "စားဖူးမရှိဘူး",
+    "right": "မစားဖူးဘူး",
+    "note": "Burmese negates verbs directly with မ...ဘူး rather than compounding with 'exist/have' markers like ရှိ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I have been to Bagan before: 'ကျွန်မ ပုဂံကို ___။'",
+    "options": [
+     "ရောက်ဖူးတယ်",
+     "ရောက်တယ်",
+     "ရောက်မယ်",
+     "ရောက်နေတယ်"
+    ],
+    "answer": 0,
+    "explanation": "ရောက်ဖူးတယ် uses ဖူး to indicate the experiential past ('have been')."
+   },
+   {
+    "question": "Complete the negative sentence: 'He has never eaten durian' -> 'သူ ဒူးရင်းသီး ___။'",
+    "options": [
+     "စားဖူးဘူး",
+     "မစားဖူးဘူး",
+     "မစားခဲ့ဘူး",
+     "စားမဖူးဘူး"
+    ],
+    "answer": 1,
+    "explanation": "Negative experiential sentences take the pattern မ + Verb + ဖူး + ဘူး/ပါဘူး."
+   },
+   {
+    "question": "Which question asks 'Have you ever met the teacher?'",
+    "options": [
+     "ဆရာနဲ့ တွေ့မှာလား",
+     "ဆရာနဲ့ တွေ့နေသလား",
+     "ဆရာနဲ့ တွေ့ဖူးသလား",
+     "ဆရာနဲ့ တွေ့ခဲ့သလား"
+    ],
+    "answer": 2,
+    "explanation": "တွေ့ဖူးသလား explicitly asks whether the action was ever experienced in one's life."
+   },
+   {
+    "question": "How do you politely say 'I have never done this'?",
+    "options": [
+     "မလုပ်ဘူးပါ",
+     "လုပ်မဖူးပါဘူး",
+     "မလုပ်ပါဘူး",
+     "မလုပ်ဖူးပါဘူး"
+    ],
+    "answer": 3,
+    "explanation": "The polite experiential negative formula is မ + Verb + ဖူးပါဘူး."
+   }
+  ],
+  "tip": "Think of ဖူး as the English 'have ever'; pairing it with တစ်ခါမှ (never once) creates the natural phrase 'have never in my life'."
+ },
+ {
+  "id": "my-a2-adjective-nominalization-hmu-chin",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🎨",
+  "title": "Adjective Reduplication and Attributive Modification",
+  "subtitle": "Doubling descriptive words for manner, intensity, and modification",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Reduplicating a descriptive verb or adjective turns it into an adverb of manner or intensifies its descriptive quality.",
+  "structure": {
+   "headers": [
+    "Root Adjective",
+    "Reduplicated Form",
+    "Syntactic Function",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ကောင်း (good)",
+      "ကောင်းကောင်း",
+      "Adverbial modifier",
+      "well / thoroughly"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ဖြည်း (slow)",
+      "ဖြည်းဖြည်း",
+      "Adverbial modifier",
+      "slowly / gently"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "လှ (pretty)",
+      "လှလှပပ",
+      "Rhyming elaboration",
+      "prettily / beautifully"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "များ (many/much)",
+      "များများ",
+      "Adverbial intensifier",
+      "generously / a lot"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Manner Adverbial",
+    "example": "ထမင်းကို ကောင်းကောင်း စားပါ။",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Speed and Caution",
+    "example": "ကားကို ဖြည်းဖြည်း မောင်းပါ။",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Quantity Intensifier",
+    "example": "ရေ များများ သောက်ရမယ်။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ဒီအကြောင်းကို သေချာချာ စဉ်းစားပါ။",
+    "ko": "",
+    "highlight": "သေချာချာ"
+   },
+   {
+    "en": "စာကို ကောင်းကောင်း ကျက်ကြပါ။",
+    "ko": "",
+    "highlight": "ကောင်းကောင်း"
+   },
+   {
+    "en": "သူ စကားကို မြန်မြန် ပြောတယ်။",
+    "ko": "",
+    "highlight": "မြန်မြန်"
+   },
+   {
+    "en": "လမ်းကို သတိထားပြီး ဖြည်းဖြည်း လျှောက်ပါ။",
+    "ko": "",
+    "highlight": "ဖြည်းဖြည်း"
+   },
+   {
+    "en": "ပန်းတွေကို လှလှပပ ပြင်ဆင်ထားတယ်။",
+    "ko": "",
+    "highlight": "လှလှပပ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "သူ ကောင်း ပြောတယ်။",
+    "right": "သူ ကောင်းကောင်း ပြောတယ်။",
+    "note": "To modify an action as an adverb, monosyllabic descriptive roots must be reduplicated."
+   },
+   {
+    "wrong": "ဖြည်းစွာ ကားမောင်းပါ (in daily conversation)",
+    "right": "ဖြည်းဖြည်း ကားမောင်းပါ။",
+    "note": "Adding -စွာ is high literary style; colloquial spoken Burmese almost exclusively uses reduplication."
+   },
+   {
+    "wrong": "များစွာ စားပါ (at dinner)",
+    "right": "များများ စားပါ။",
+    "note": "Use များများ colloquially when inviting someone to eat plenty."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Please drive slowly: 'ကားကို ___ မောင်းပါ။'",
+    "options": [
+     "ဖြည်း",
+     "ဖြည်းဖြည်း",
+     "ဖြည်းတယ်",
+     "ဖြည်းမယ်"
+    ],
+    "answer": 1,
+    "explanation": "ဖြည်းဖြည်း is the reduplicated adverbial form of ဖြည်း (slow)."
+   },
+   {
+    "question": "Study well before exams: 'စာကို ___ လုပ်ပါ။'",
+    "options": [
+     "ကောင်းတယ်",
+     "ကောင်း",
+     "ကောင်းကောင်း",
+     "ကောင်းဖို့"
+    ],
+    "answer": 2,
+    "explanation": "ကောင်းကောင်း functions as the adverb 'well/thoroughly' modifying လုပ်ပါ။"
+   },
+   {
+    "question": "Drink a lot of water: 'ရေ ___ သောက်ပါ။'",
+    "options": [
+     "များ",
+     "များခြင်း",
+     "များတာ",
+     "များများ"
+    ],
+    "answer": 3,
+    "explanation": "Reduplicating များ into များများ means 'plentifully / a lot'."
+   },
+   {
+    "question": "Which phrase correctly uses a rhyming reduplicated adverb?",
+    "options": [
+     "လှလှပပ",
+     "ပပလှလှ",
+     "လှလှလှလှ",
+     "လှပလှပ"
+    ],
+    "answer": 0,
+    "explanation": "လှလှပပ is the standard AB -> AABB poetic reduplication of the compound root လှပ (beautiful)."
+   }
+  ],
+  "tip": "When encountering a compound adjective with two syllables (like လှပ), Burmese often reduplicates each syllable in sequence (လှလှပပ) to add elegance and descriptive flair."
+ },
+ {
+  "id": "my-b1-relative-clauses-te-me",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#059669",
+  "emoji": "🔗",
+  "title": "Relative Clauses with တဲ့ and မယ့်",
+  "subtitle": "Connecting descriptive clauses to nouns in realis and prospective moods",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Place the modifying clause before the noun: use တဲ့ for past or habitual realis actions, and မယ့် for future or intended actions.",
+  "structure": {
+   "headers": [
+    "Aspect/Mood",
+    "Clause Particle",
+    "Example Clause + Noun",
+    "English Translation"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Realis (Actual/Past)",
+      "တဲ့",
+      "ဝယ်တဲ့ ပစ္စည်း",
+      "the goods that (I) bought"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Irrealis (Prospective/Future)",
+      "မယ့်",
+      "သွားမယ့် လူ",
+      "the person who will go"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Realis",
+      "မ...တဲ့",
+      "မလာတဲ့ မိတ်ဆွေ",
+      "the friend who did not come"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Irrealis",
+      "မ...မယ့်",
+      "မဝယ်မယ့် ပစ္စည်း",
+      "goods that (one) will not buy"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Completed Action Modifier",
+    "example": "မနေ့က ရောက်တဲ့ ဧည့်သည် ဖြစ်ပါတယ်။",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Future Event Modifier",
+    "example": "မနက်ဖြန် စီးမယ့် လေယာဉ်လက်မှတ် ရှိသလား။",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Negative Habitual Modifier",
+    "example": "အသား မစားတဲ့ လူတွေအတွက် ဟင်းသီးဟင်းရွက် ရှိတယ်။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ကျွန်တော် ဖတ်တဲ့ စာအုပ် ကောင်းပါတယ်။",
+    "ko": "",
+    "highlight": "ဖတ်တဲ့"
+   },
+   {
+    "en": "နောက်အပတ် ဖွင့်မယ့် ဆိုင် အသစ်ပါ။",
+    "ko": "",
+    "highlight": "ဖွင့်မယ့်"
+   },
+   {
+    "en": "ဟိုမှာ ထိုင်နေတဲ့လူကို သိသလား။",
+    "ko": "",
+    "highlight": "ထိုင်နေတဲ့"
+   },
+   {
+    "en": "မနက်ဖြန် လာမယ့် ဧည့်သည်တွေ ဘယ်သူတွေလဲ။",
+    "ko": "",
+    "highlight": "လာမယ့်"
+   },
+   {
+    "en": "အရက် မသောက်တဲ့ မိတ်ဆွေတွေ များတယ်။",
+    "ko": "",
+    "highlight": "မသောက်တဲ့"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "လူ ဝယ်တဲ့ စာအုပ် (intended: 'the book that the person bought')",
+    "right": "လူ ဝယ်တဲ့ စာအုပ် (Note head direction: head noun always goes at the END)",
+    "note": "In Burmese relative clauses, the modified noun must always follow the relative verb phrase, never precede it."
+   },
+   {
+    "wrong": "မနက်ဖြန် သွားတဲ့ လူ",
+    "right": "မနက်ဖြန် သွားမယ့် လူ",
+    "note": "For upcoming or future events (မနက်ဖြန်), use the prospective relative marker မယ့် instead of realis တဲ့."
+   },
+   {
+    "wrong": "မနေ့က ဝယ်မယ့် အင်္ကျီ",
+    "right": "မနေ့က ဝယ်တဲ့ အင်္ကျီ",
+    "note": "Use တဲ့ for past completed actions; မယ့် is reserved for actions that have not yet occurred."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The person who will arrive tomorrow: 'မနက်ဖြန် ___ ဧည့်သည်'?",
+    "options": [
+     "ရောက်တဲ့",
+     "ရောက်မယ်",
+     "ရောက်မယ့်",
+     "ရောက်တယ်"
+    ],
+    "answer": 2,
+    "explanation": "Future/prospective modifier before a head noun requires the adnominal particle မယ့်."
+   },
+   {
+    "question": "The book that I read yesterday: 'မနေ့က ကျွန်တော် ___ စာအုပ်'?",
+    "options": [
+     "ဖတ်မယ့်",
+     "ဖတ်တဲ့",
+     "ဖတ်တယ်",
+     "ဖတ်မယ်"
+    ],
+    "answer": 1,
+    "explanation": "Realis past modifier modifying စာအုပ် requires တဲ့."
+   },
+   {
+    "question": "Vegetarians are people who do not eat meat: 'အသား ___ လူများ'?",
+    "options": [
+     "မစားတဲ့",
+     "မစားမယ့်",
+     "မစားဘူး",
+     "မစားတာ"
+    ],
+    "answer": 0,
+    "explanation": "မ...တဲ့ forms the negative realis relative clause describing a present habitual state."
+   },
+   {
+    "question": "Which sentence correctly says 'I know the girl sitting over there'?",
+    "options": [
+     "ဟိုမှာ မိန်းကလေး ထိုင်တဲ့ သိတယ်။",
+     "ဟိုမှာ ထိုင်တဲ့ မိန်းကလေးကို သိတယ်။",
+     "မိန်းကလေး ထိုင်တဲ့ ဟိုမှာ သိတယ်။",
+     "ဟိုမှာ မိန်းကလေးကို ထိုင်မယ့် သိတယ်။"
+    ],
+    "answer": 1,
+    "explanation": "The modifier clause (ဟိုမှာ ထိုင်တဲ့) correctly precedes the head noun (မိန်းကလေးကို)."
+   }
+  ],
+  "tip": "Remember: Spoken sentence-ending တယ် becomes adnominal တဲ့ before a noun, and sentence-ending မယ် becomes adnominal မယ့်!"
+ },
+ {
+  "id": "my-b1-spoken-vs-written-registers",
+  "level": "b1",
+  "category": "advanced",
+  "categoryColor": "#7C3AED",
+  "emoji": "📜",
+  "title": "Diglossia: Spoken vs Literary Register Particles",
+  "subtitle": "Navigating everyday speech (စကားပြော) and formal written prose (စာရေး)",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Burmese exhibits strict diglossia where essential grammatical endings in speech systematically shift to classical counterparts in writing.",
+  "structure": {
+   "headers": [
+    "Grammatical Role",
+    "Spoken (စကားပြော)",
+    "Literary (စာရေး)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Statement Realis",
+      "တယ်",
+      "သည်",
+      "is / does (realis ending)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Statement Irrealis",
+      "မယ်",
+      "မည် / အံ့",
+      "will / shall (future)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Location / Time",
+      "မှာ",
+      "၌ / တွင်",
+      "at / in / on"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Object Marker",
+      "ကို",
+      "အား / ကို",
+      "direct/indirect object"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Formal News Headline",
+    "example": "သမ္မတကြီး ရန်ကုန်သို့ ကြွရောက်သည်။",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Everyday Conversation",
+    "example": "ကျွန်တော် အိမ်မှာ ထမင်း စားတယ်။",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Written Sign / Notice",
+    "example": "ဤနေရာတွင် အမှိုက် မပစ်ရ။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "သူသည် ကျောင်းသား ဖြစ်သည်။",
+    "ko": "",
+    "highlight": "သည်"
+   },
+   {
+    "en": "မနက်ဖြန် အစည်းအဝေး ကျင်းပမည်။",
+    "ko": "",
+    "highlight": "မည်"
+   },
+   {
+    "en": "ရန်ကုန်မြို့တွင် မိုးသည်းထန်စွာ ရွာသွန်းသည်။",
+    "ko": "",
+    "highlight": "တွင်"
+   },
+   {
+    "en": "မိဘတို့အား ရိုသေလေးစားရမည်။",
+    "ko": "",
+    "highlight": "အား"
+   },
+   {
+    "en": "ဆရာက တပည့်များသို့ စာရေးသားပေးပို့သည်။",
+    "ko": "",
+    "highlight": "သို့"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ကျွန်တော် ထမင်း စားသည် (in casual phone call to a friend)",
+    "right": "ကျွန်တော် ထမင်း စားတယ်။",
+    "note": "Using literary သည် in daily spoken interaction sounds unnaturally stiff and robotic."
+   },
+   {
+    "wrong": "သမ္မတ ရန်ကုန်မှာ လာမယ် (in an official government gazette)",
+    "right": "သမ္မတ ရန်ကုန်သို့ ကြွရောက်မည်။",
+    "note": "Official publications strictly prohibit colloquial particles like မှာ and မယ်."
+   },
+   {
+    "wrong": "သူသည် စာအုပ် ဖတ်တယ် (mixing registers)",
+    "right": "သူသည် စာအုပ် ဖတ်သည် (or သူ စာအုပ် ဖတ်တယ်)",
+    "note": "Never mix spoken and literary markers within the same sentence; keep the register consistent."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which is the literary equivalent of the future particle မယ်?",
+    "options": [
+     "သည်",
+     "ပြီ",
+     "မည်",
+     "သော"
+    ],
+    "answer": 2,
+    "explanation": "In formal written Burmese, မယ် corresponds to မည် (or အံ့ in classical texts)."
+   },
+   {
+    "question": "How does the location particle မှာ appear in formal literary texts?",
+    "options": [
+     "သို့",
+     "၌",
+     "နှင့်",
+     "မှ"
+    ],
+    "answer": 1,
+    "explanation": "Colloquial မှာ (at/in) corresponds to literary ၌ or တွင်."
+   },
+   {
+    "question": "Convert spoken 'သူ ရန်ကုန်ကို သွားတယ်' to standard written prose:",
+    "options": [
+     "သူ ရန်ကုန်သို့ သွားသည်",
+     "သူ ရန်ကုန်ကို သွားမယ်",
+     "သူ ရန်ကုန်မှာ သွားတယ်",
+     "သူ ရန်ကုန်၌ သွားတဲ့"
+    ],
+    "answer": 0,
+    "explanation": "Literary register replaces destination marker ကို with သို့ and the verb ending တယ် with သည်."
+   },
+   {
+    "question": "Which sentence is written in pure formal literary Burmese?",
+    "options": [
+     "ဒီနေရာမှာ ကားမရပ်ရဘူး။",
+     "ဤနေရာ၌ မော်တော်ယာဉ် မရပ်ရ။",
+     "ဒီနေရာမှာ မော်တော်ယာဉ် မရပ်ရ။",
+     "ဤနေရာမှာ ကားမရပ်ရ။"
+    ],
+    "answer": 1,
+    "explanation": "ဤနေရာ၌ မော်တော်ယာဉ် မရပ်ရ uses entirely literary vocabulary (ဤ, ၌, မော်တော်ယာဉ်) without spoken contamination."
+   }
+  ],
+  "tip": "When reading newspapers, notices, or official signs, expect သည် instead of တယ်, မည် instead of မယ်, and ၌/တွင် instead of မှာ."
+ },
+ {
+  "id": "my-b1-nominalization-markers-ta-hta",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#EA580C",
+  "emoji": "📦",
+  "title": "Nominalization with တာ, မှု, and ခြင်း",
+  "subtitle": "Transforming verbs and actions into abstract nouns and gerunds",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Attach တာ in conversation to form gerunds ('doing'), while using ခြင်း or မှု in formal contexts to construct abstract nouns.",
+  "structure": {
+   "headers": [
+    "Marker",
+    "Register",
+    "Application",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "တာ",
+      "Colloquial",
+      "Gerunds / Concrete acts ('the fact that')",
+      "သွားတာ (going)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ခြင်း",
+      "Literary / Formal",
+      "Standard gerund / process nominalizer",
+      "ဖွံ့ဖြိုးခြင်း (developing)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "မှု",
+      "Formal / Abstract",
+      "Abstract nouns / matters / qualities",
+      "လွတ်လပ်မှု (freedom)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Spoken Gerund Subject",
+    "example": "မနက်စောစော ထတာ ကျန်းမာရေးအတွက် ကောင်းတယ်။",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Formal Process / Action",
+    "example": "တရားဥပဒေ စိုးမိုးခြင်းသည် အရေးကြီးသည်။",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Abstract Concept",
+    "example": "ငြိမ်းချမ်းမှုကို အားလုံး လိုလားကြသည်။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "လေ့ကျင့်ခန်း လုပ်တာ ကောင်းပါတယ်။",
+    "ko": "",
+    "highlight": "လုပ်တာ"
+   },
+   {
+    "en": "သူ စာဖတ်ခြင်းကို ဝါသနာပါသည်",
+    "ko": "",
+    "highlight": "ဖတ်ခြင်း"
+   },
+   {
+    "en": "ညီညွတ်မှုကို တည်ဆောက်ကြရမယ်။",
+    "ko": "",
+    "highlight": "ညီညွတ်မှု"
+   },
+   {
+    "en": "မြန်မာစာ လေ့လာတာ စိတ်ဝင်စားဖို့ ကောင်းတယ်။",
+    "ko": "",
+    "highlight": "လေ့လာတာ"
+   },
+   {
+    "en": "စည်းကမ်း လိုက်နာခြင်းသည် ကောင်းသော အလေ့အကျင့် ဖြစ်သည်။",
+    "ko": "",
+    "highlight": "လိုက်နာခြင်း"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "သူ လာတယ်တာ ကောင်းတယ်",
+    "right": "သူ လာတာ ကောင်းတယ်။",
+    "note": "Do not leave the finite verbal marker တယ် before တာ; တာ replaces တယ် directly on the verb root."
+   },
+   {
+    "wrong": "ထမင်း စားမှု (intended: 'eating food')",
+    "right": "ထမင်း စားတာ",
+    "note": "မှု forms abstract concept nouns (e.g., လုံခြုံမှု - security); concrete everyday gerunds take တာ or ခြင်း."
+   },
+   {
+    "wrong": "လွတ်လပ်တာ (in an academic paper on civil liberties)",
+    "right": "လွတ်လပ်မှု",
+    "note": "Abstract philosophical or political concepts require the formal suffix မှု rather than conversational တာ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Drinking plenty of water is good: 'ရေများများ သောက်___ ကျန်းမာရေးနဲ့ ညီညွတ်တယ်။'",
+    "options": [
+     "တာ",
+     "တယ်",
+     "မယ်",
+     "တဲ့"
+    ],
+    "answer": 0,
+    "explanation": "သောက်တာ turns the verb 'drink' into the noun phrase subject 'drinking water'."
+   },
+   {
+    "question": "Which noun means 'peace' using an abstract nominalizer on ငြိမ်းချမ်း (peaceful)?",
+    "options": [
+     "ငြိမ်းချမ်းတာ",
+     "ငြိမ်းချမ်းခြင်း",
+     "ငြိမ်းချမ်းမှု",
+     "ငြိမ်းချမ်းသည်"
+    ],
+    "answer": 2,
+    "explanation": "ငြိမ်းချမ်းမှု is the standard abstract noun for the state of 'peace'."
+   },
+   {
+    "question": "Formal rule: 'Smoking is prohibited' -> 'ဆေးလိပ် သောက်___ တားမြစ်သည်။'",
+    "options": [
+     "တာ",
+     "တဲ့",
+     "မယ်",
+     "ခြင်း"
+    ],
+    "answer": 3,
+    "explanation": "သောက်ခြင်း is the formal gerund preferred on official notices and signs."
+   },
+   {
+    "question": "What is the colloquial spoken form of 'စာဖတ်ခြင်း' (reading books)?",
+    "options": [
+     "စာဖတ်တဲ့",
+     "စာဖတ်တာ",
+     "စာဖတ်မယ်",
+     "စာဖတ်မှု"
+    ],
+    "answer": 1,
+    "explanation": "The literary gerund marker ခြင်း corresponds directly to conversational တာ."
+   }
+  ],
+  "tip": "Quick rule of thumb: use တာ when speaking with friends, ခြင်း for formal instructions/signage, and မှု for concepts ending in '-ness' or '-tion' (လုံခြုံမှု = security)."
+ },
+ {
+  "id": "my-b1-causative-and-passive-constructions",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#3B82F6",
+  "emoji": "🔄",
+  "title": "Causatives and Passives in Burmese",
+  "subtitle": "Shifting agency through consonant alternation and auxiliaries",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Burmese expresses causation either lexically through consonant aspiration or analytically via auxiliaries like စေ and ခိုင်း, while passive experiences are marked by ခံရ.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Morphological Pattern",
+    "Burmese Example",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Lexical Causative",
+      "Unvoiced / Aspiration shift",
+      "ကျ (fall) → ချ (drop)",
+      "Direct physical causation"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Directive Causative",
+      "Verb + ခိုင်း",
+      "သူ့ကို ဝယ်ခိုင်းတယ်",
+      "Ordering someone to do an action"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Permissive/Formal Causative",
+      "Verb + စေ",
+      "ပျော်ရွှင်စေချင်တယ်",
+      "Causing or allowing an emotional/formal state"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adversative Passive",
+      "Verb + ခံရ",
+      "ဆူတာ ခံရတယ်",
+      "Undergoing an adverse or involuntary action"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Ordering an action",
+    "example": "အမေက ကလေးကို အခန်းသန့်ရှင်းရေး လုပ်ခိုင်းတယ်။",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Formal or literary causation",
+    "example": "ဤဆေးသည် ဝေဒနာကို သက်သာစေပါသည်။",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Undergoing an unpleasant event",
+    "example": "သူ မနေ့က သူခိုးဆီမှာ ပိုက်ဆံ အခိုးခံရတယ်။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ခွက်ကို လက်ကနေ မတော်တဆ ချလိုက်မိတယ်။",
+    "ko": "",
+    "highlight": "ချလိုက်မိတယ်"
+   },
+   {
+    "en": "ဆရာက တပည့်တွေကို စာဖတ်ခိုင်းတယ်။",
+    "ko": "",
+    "highlight": "စာဖတ်ခိုင်းတယ်"
+   },
+   {
+    "en": "အေးချမ်းမှုက စိတ်ကို တည်ငြိမ်စေတယ်။",
+    "ko": "",
+    "highlight": "တည်ငြိမ်စေတယ်"
+   },
+   {
+    "en": "သူ ခွေးကိုက်တာ ခံရတယ်။",
+    "ko": "",
+    "highlight": "ခံရတယ်"
+   },
+   {
+    "en": "အလုပ်သမားတွေကို အလုပ်အမြန် ပြီးခိုင်းလိုက်ပါ။",
+    "ko": "",
+    "highlight": "ပြီးခိုင်းလိုက်ပါ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "သူ့ကို အိမ်ပြန်စေတယ်",
+    "right": "သူ့ကို အိမ်ပြန်ခိုင်းတယ်",
+    "note": "Use ခိုင်း for interpersonal directives in everyday speech; စေ is literary or expresses indirect causation."
+   },
+   {
+    "wrong": "ပန်းကန်ကို ကျလိုက်တယ်",
+    "right": "ပန်းကန်ကို ချလိုက်တယ်",
+    "note": "ကျ means 'to fall' (intransitive); you must use the aspirated transitive counterpart ချ for 'to drop'."
+   },
+   {
+    "wrong": "ဆု ရတာ ခံရတယ်",
+    "right": "ဆု ရတယ်",
+    "note": "Do not use ခံရ for positive achievements; it denotes adversative or undesirable passive experiences."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the verb form meaning 'to drop/lower something' rather than 'to fall':",
+    "options": [
+     "ကျတယ်",
+     "ချတယ်",
+     "ခံရတယ်",
+     "ပြုတ်ကျတယ်"
+    ],
+    "answer": 1,
+    "explanation": "ချ is the transitive/causative counterpart formed by aspirating the simplex intransitive verb ကျ (to fall)."
+   },
+   {
+    "question": "Which sentence means 'The teacher made the students write an essay'?",
+    "options": [
+     "ဆရာက ကျောင်းသားတွေကို စာစီစာကုံး ရေးခိုင်းတယ်။",
+     "ဆရာက ကျောင်းသားတွေကို စာစီစာကုံး ရေးခံရတယ်။",
+     "ဆရာက ကျောင်းသားတွေကို စာစီစာကုံး ရေးစေချင်တယ်။",
+     "ဆရာက ကျောင်းသားတွေကို စာစီစာကုံး ရေးကျတယ်။"
+    ],
+    "answer": 0,
+    "explanation": "The auxiliary ခိုင်း conveys directing or ordering an agent to perform an action."
+   },
+   {
+    "question": "The passive auxiliary ခံရ is predominantly reserved for:",
+    "options": [
+     "Formal polite announcements",
+     "Intentional positive milestones",
+     "Adverse or undesirable experiences",
+     "Reflexive daily routines"
+    ],
+    "answer": 2,
+    "explanation": "ခံရ carries an adversative meaning, marking experiences where the subject suffers an unwanted occurrence."
+   },
+   {
+    "question": "Complete the formal sentence 'Medicine makes pain subside': ဤဆေးသည် နာကျင်မှုကို သက်သာ___။",
+    "options": [
+     "ခိုင်းသည်",
+     "ကျသည်",
+     "ခံရသည်",
+     "စေသည်"
+    ],
+    "answer": 3,
+    "explanation": "စေ is the formal causative suffix used for abstract, medical, or inanimate causation."
+   }
+  ],
+  "tip": "Pairs like ကျ/ချ (fall/drop) and ပျက်/ဖျက် (ruined/destroy) follow an ancient Tibeto-Burman aspiration rule: unaspirated initials are intransitive, aspirated are causative."
+ },
+ {
+  "id": "my-b1-concessive-clauses-pe-me-lae",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#10B981",
+  "emoji": "⚖️",
+  "title": "Concessive Clauses in Burmese",
+  "subtitle": "Contrasting ideas with ပေမယ့် and သော်လည်း",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Concessive clauses ('although/even though') attach ပေမယ့် in spoken speech and သော်လည်း in written Burmese directly to the bare verb root.",
+  "structure": {
+   "headers": [
+    "Conjunction",
+    "Register",
+    "Pattern",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ပေမယ့်",
+      "Spoken",
+      "Verb Root + ပေမယ့်",
+      "although / even though"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "သော်လည်း",
+      "Written / Formal",
+      "Verb Root + သော်လည်း",
+      "although / albeit"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ငြားသော်လည်း",
+      "Literary",
+      "Verb Root + ငြားသော်လည်း",
+      "even though (poetic)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "သို့သော်",
+      "All Registers",
+      "Sentence 1 ။ သို့သော် Sentence 2",
+      "however / but"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Conversational contrast",
+    "example": "မိုးရွာပေမယ့် ကျွန်တော် ကျောင်းသွားမယ်။",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Formal written concession",
+    "example": "ခက်ခဲသော်လည်း စိတ်မလျှော့ဘဲ ကြိုးစားသင့်သည်။",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Contrasting contrasting facts",
+    "example": "ဈေးကြီးပေမယ့် အရည်အသွေး ကောင်းတယ်။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "နေမကောင်းပေမယ့် ရုံးတက်ခဲ့ရတယ်။",
+    "ko": "",
+    "highlight": "ပေမယ့်"
+   },
+   {
+    "en": "သူငယ်ရွယ်သော်လည်း အသိပညာ ကြွယ်ဝသည်။",
+    "ko": "",
+    "highlight": "သော်လည်း"
+   },
+   {
+    "en": "ကြိုးစားပေမယ့် အောင်မြင်မှု မရသေးပါဘူး။",
+    "ko": "",
+    "highlight": "ပေမယ့်"
+   },
+   {
+    "en": "မိုးသည်းထန်စွာ ရွာသွန်းသော်လည်း ပွဲတော်ကို ဆက်လက်ကျင်းပသည်။",
+    "ko": "",
+    "highlight": "သော်လည်း"
+   },
+   {
+    "en": "အဝေးကြီးဖြစ်ပေမယ့် လမ်းလျှောက်သွားကြမယ်။",
+    "ko": "",
+    "highlight": "ပေမယ့်"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "သွားတယ်ပေမယ့် မတွေ့ဘူး",
+    "right": "သွားပေမယ့် မတွေ့ဘူး",
+    "note": "Attach ပေမယ့် directly to the bare verb stem without realis tense markers like တယ်/သည်။"
+   },
+   {
+    "wrong": "မိုးရွာပေမယ့် အစည်းအဝေးကို ပြီးဆုံးစေခဲ့သည်။",
+    "right": "မိုးရွာသော်လည်း အစည်းအဝေးကို ပြီးဆုံးစေခဲ့သည်။",
+    "note": "Do not mix colloquial ပေမယ့် with literary sentence-final markers like သည်။"
+   },
+   {
+    "wrong": "ပေမယ့် မိုးရွာတယ်၊ သွားမယ်",
+    "right": "မိုးရွာပေမယ့် သွားမယ်",
+    "note": "Concessive markers are postpositional clausal suffixes; they cannot be placed at the beginning of a clause."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct spoken form: 'Although it is expensive, I will buy it.'",
+    "options": [
+     "ဈေးကြီးတယ်ပေမယ့် ဝယ်မယ်။",
+     "ဈေးကြီးသော်လည်း ဝယ်မယ်။",
+     "ဈေးကြီးပေမယ့် ဝယ်မယ်။",
+     "ပေမယ့် ဈေးကြီးတယ် ဝယ်မယ်။"
+    ],
+    "answer": 2,
+    "explanation": "In spoken Burmese, attach ပေမယ့် directly to the verb stem (ကြီး)."
+   },
+   {
+    "question": "Which particle is the formal written equivalent of ပေမယ့်?",
+    "options": [
+     "ကြောင့်",
+     "သော်လည်း",
+     "ရင်",
+     "လျှင်"
+    ],
+    "answer": 1,
+    "explanation": "သော်လည်း is the standard literary concessive marker meaning 'although'."
+   },
+   {
+    "question": "Complete the literary sentence: ပင်ပန်း___ ဆက်လက်လုပ်ကိုင်ခဲ့သည်။",
+    "options": [
+     "ပေမယ့်",
+     "ရင်",
+     "တုန်းက",
+     "သော်လည်း"
+    ],
+    "answer": 3,
+    "explanation": "The literary sentence ending ခဲ့သည် requires the literary concessive connective သော်လည်း."
+   },
+   {
+    "question": "Identify the ungrammatical segment in: 'စားတယ်ပေမယ့် ဗိုက်ဆာတယ်'?",
+    "options": [
+     "The use of တယ် before ပေမယ့်",
+     "The word order of ဗိုက်ဆာ",
+     "The choice of စား",
+     "The missing subject marker"
+    ],
+    "answer": 0,
+    "explanation": "Subordinating particles attach directly to the verb stem; tense auxiliaries like တယ် cannot precede ပေမယ့်."
+   }
+  ],
+  "tip": "Match your registers: use ပေမယ့် with sentence endings like တယ်/မယ်, and pair သော်လည်း with formal endings like သည်။/မည်။"
+ },
+ {
+  "id": "my-b2-epistemic-modality-particles",
+  "level": "b2",
+  "category": "modals",
+  "categoryColor": "#8B5CF6",
+  "emoji": "💡",
+  "title": "Epistemic Modality Markers",
+  "subtitle": "Signaling certainty, obviousness, and projection with final particles",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Burmese sentence-final particles modulate epistemic stance: ပေါ့ asserts mutual obviousness, လေ offers gentle reminder, and လိမ့်မယ် expresses inferred future probability.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Semantic Nuance",
+    "Burmese Example",
+    "Pragmatic Tone"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ပေါ့ / တာပေါ့",
+      "Obviousness / Natural outcome",
+      "သိတာပေါ့",
+      "'Of course' / Shared knowledge"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "လေ",
+      "Friendly persuasion / Obvious fact",
+      "ပြောပြီးပြီလေ",
+      "'As you already know'"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "လိမ့်မယ်",
+      "Strong epistemic likelihood",
+      "မိုးရွာလိမ့်မယ်",
+      "Prediction based on inference"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "မှာပေါ့",
+      "Confident future assertion",
+      "လာမှာပေါ့",
+      "'He will surely come'"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Asserting shared obviousness",
+    "example": "သူ ဒီအကြောင်းကို ကြားပြီးပြီပေါ့။",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Making an inferential forecast",
+    "example": "မနက်ဖြန်ဆိုရင် အလုပ်အားလုံး ပြီးသွားလိမ့်မယ်။",
+    "translation": ""
+   },
+   {
+    "color": "#A78BFA",
+    "label": "Gentle assertion of known truth",
+    "example": "ကျွန်တော်တို့ အတူတူ သွားကြမယ်လေ။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ဒါကတော့ ဒီလိုပဲ ဖြစ်ရမှာပေါ့။",
+    "ko": "",
+    "highlight": "မှာပေါ့"
+   },
+   {
+    "en": "သူ အခုလောက်ဆို အိမ်ရောက်နေလိမ့်မယ်။",
+    "ko": "",
+    "highlight": "လိမ့်မယ်"
+   },
+   {
+    "en": "ခင်ဗျားလည်း သိတဲ့အတိုင်းပဲလေ။",
+    "ko": "",
+    "highlight": "လေ"
+   },
+   {
+    "en": "ဟုတ်တာပေါ့၊ သံသယဖြစ်စရာ မလိုပါဘူး။",
+    "ko": "",
+    "highlight": "တာပေါ့"
+   },
+   {
+    "en": "အချိန်တန်ရင် အမှန်တရား ပေါ်လာလိမ့်မယ်။",
+    "ko": "",
+    "highlight": "လိမ့်မယ်"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "သူ မနက်ဖြန် လာတယ်ပေါ့",
+    "right": "သူ မနက်ဖြန် လာမှာပေါ့",
+    "note": "For future events marked by ပေါ့, use the future nominalizer မှာ, resulting in မှာပေါ့ rather than တယ်ပေါ့."
+   },
+   {
+    "wrong": "မိုးရွာမယ်ထင်တယ်လိမ့်မယ်",
+    "right": "မိုးရွာလိမ့်မယ်",
+    "note": "လိမ့်မယ် already encodes speculative prediction; combining it directly with ထင်တယ် is redundant."
+   },
+   {
+    "wrong": "ဆရာက မေးတော့ သူ မသိဘူးလေ",
+    "right": "ဆရာက မေးတော့ သူ မသိဘူးပေါ့",
+    "note": "Use ပေါ့ to mark a natural consequence or logical conclusion resulting from an antecedent event."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which marker indicates an outcome that is completely natural or obvious ('of course')?",
+    "options": [
+     "လိမ့်မယ်",
+     "ပေါ့",
+     "ဘူး",
+     "လား"
+    ],
+    "answer": 1,
+    "explanation": "ပေါ့ asserts that the state or conclusion is self-evident or universally acknowledged."
+   },
+   {
+    "question": "How do you say 'He will probably arrive soon' based on your assessment?",
+    "options": [
+     "သူ မကြာခင် ရောက်တယ်။",
+     "သူ မကြာခင် ရောက်ခဲ့တယ်။",
+     "သူ မကြာခင် ရောက်လိမ့်မယ်။",
+     "သူ မကြာခင် ရောက်ဖူးတယ်။"
+    ],
+    "answer": 2,
+    "explanation": "လိမ့်မယ် expresses high likelihood or epistemic projection regarding an upcoming or unseen state."
+   },
+   {
+    "question": "The particle လေ attached to an assertion often functions to:",
+    "options": [
+     "Express severe condemnation",
+     "Mark an imperative demand",
+     "Gently remind the listener of shared context",
+     "Inquire about past actions"
+    ],
+    "answer": 2,
+    "explanation": "လေ softens the utterance and references knowledge both speakers share or ought to share."
+   },
+   {
+    "question": "Complete the phrase expressing confident affirmative agreement: 'ဟုတ်___!'",
+    "options": [
+     "တာပေါ့",
+     "လိမ့်မယ်",
+     "မယ်လေ",
+     "ချင်တယ်"
+    ],
+    "answer": 0,
+    "explanation": "ဟုတ်တာပေါ့ is the idiomatic expression for 'Of course!' or 'Naturally so!'."
+   }
+  ],
+  "tip": "Be cautious with tone: while ပေါ့ clarifies shared common sense among friends, using it with unfamiliar superiors can sometimes sound dismissive or overly informal."
+ },
+ {
+  "id": "my-b2-honorifics-and-buddhist-register",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#F59E0B",
+  "emoji": "🙏",
+  "title": "Honorifics and Clerical Register",
+  "subtitle": "Navigating sacred and royal verbs with တော်မူ and Sangha vocabulary",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Burmese honors monks and royalty by attaching the auxiliary တော်မူ to verbs and substituting everyday verbs with designated monastic terms.",
+  "structure": {
+   "headers": [
+    "Everyday Word",
+    "Monastic Equivalent",
+    "Gloss",
+    "Structure/Grammar"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "စားသည် (eat)",
+      "ဘုဉ်းပေးသည်",
+      "to partake (of food)",
+      "Monastic lexical substitute"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "အိပ်သည် (sleep)",
+      "ကျိန်းစက်သည်",
+      "to rest / sleep",
+      "Monastic lexical substitute"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "သေသည် (die)",
+      "ပျံလွန်တော်မူသည်",
+      "to pass away",
+      "Monastic substitute + တော်မူ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Verb + သည်",
+      "Verb + တော်မူသည်",
+      "Honorific verbal action",
+      "Affix applied to royal/monastic agents"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Describing a monk eating",
+    "example": "ဆရာတော် နေ့ဆွမ်း ဘုဉ်းပေးနေပါသည်။",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Honoring a revered monk's journey",
+    "example": "ဆရာတော်သည် ကျောင်းတိုက်သို့ ကြွရောက်တော်မူသည်။",
+    "translation": ""
+   },
+   {
+    "color": "#FBBF24",
+    "label": "Clerical passing away",
+    "example": "သက်တော်ရှည် ဆရာတော်ကြီး ယမန်နေ့က ပျံလွန်တော်မူခဲ့သည်။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ဆရာတော် ဘုရား ကျိန်းစက်တော်မူနေပါပြီ။",
+    "ko": "",
+    "highlight": "ကျိန်းစက်တော်မူနေပါပြီ"
+   },
+   {
+    "en": "သံဃာတော်များ ဆွမ်း ဘုဉ်းပေးကြသည်။",
+    "ko": "",
+    "highlight": "ဘုဉ်းပေးကြသည်"
+   },
+   {
+    "en": "ဆရာတော်က တရားဟောကြားတော်မူပါသည်။",
+    "ko": "",
+    "highlight": "ဟောကြားတော်မူပါသည်"
+   },
+   {
+    "en": "ဆရာတော် သီတင်းသုံးရာ ကျောင်းသို့ သွားရောက်ဖူးမြော်သည်။",
+    "ko": "",
+    "highlight": "သီတင်းသုံးရာ"
+   },
+   {
+    "en": "ဗုဒ္ဓမြတ်စွာဘုရားသည် နိဗ္ဗာန်သို့ ဝင်စံတော်မူခဲ့သည်။",
+    "ko": "",
+    "highlight": "ဝင်စံတော်မူခဲ့သည်"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ဆရာတော် ထမင်းစားတယ်",
+    "right": "ဆရာတော် ဆွမ်း ဘုဉ်းပေးတယ်",
+    "note": "Never use the secular terms ထမင်း or စား for a monk; use the clerical terms ဆွမ်း (alms-food) and ဘုဉ်းပေး (partake)."
+   },
+   {
+    "wrong": "ကျွန်တော် တရားဟောတော်မူမယ်",
+    "right": "ကျွန်တော် တရားဟောမယ်",
+    "note": "Never apply တော်မူ to oneself; honorific affixes are reserved strictly for third persons of venerated status."
+   },
+   {
+    "wrong": "ဘုန်းကြီး သေသွားပြီ",
+    "right": "ဘုန်းကြီး ပျံလွန်တော်မူသွားပြီ",
+    "note": "Secular verbs for death (သေ) are offensive when referring to monks; use ပျံလွန်တော်မူ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which verb correctly describes an ordained Buddhist monk eating alms?",
+    "options": [
+     "စားသည်",
+     "သောက်သည်",
+     "ဘုဉ်းပေးသည်",
+     "ကျိန်းသည်"
+    ],
+    "answer": 2,
+    "explanation": "ဘုဉ်းပေး is the sacred lexical verb used exclusively for monks consuming food or drink."
+   },
+   {
+    "question": "Select the proper clerical equivalent for 'to sleep / rest':",
+    "options": [
+     "အိပ်သည်",
+     "ကျိန်းစက်သည်",
+     "နားသည်",
+     "ပျံလွန်သည်"
+    ],
+    "answer": 1,
+    "explanation": "Monks do not 'အိပ်'; they 'ကျိန်းစက်' (or simply 'ကျိန်း')."
+   },
+   {
+    "question": "The honorific auxiliary တော်မူ can be attached to:",
+    "options": [
+     "Any action performed by the speaker",
+     "Inanimate objects undergoing change",
+     "Actions performed by monks, the Buddha, or royalty",
+     "Actions of animals and children"
+    ],
+    "answer": 2,
+    "explanation": "တော်မူ is exclusively reserved for venerable figures like the Buddha, members of the Sangha, and kings."
+   },
+   {
+    "question": "Complete the sentence: မထေရ်ကြီးသည် ရန်ကုန်မြို့သို့ ကြွရောက်___။",
+    "options": [
+     "တော်မူသည်",
+     "ရသည်",
+     "ခံရသည်",
+     "ကျသည်"
+    ],
+    "answer": 0,
+    "explanation": "ကြွရောက် (to travel/arrive) requires တော်မူသည် when applied to high monks."
+   }
+  ],
+  "tip": "Remember: The Sangha does not merely have different honorific endings; their entire lexicon for daily activities (eating = ဘုဉ်းပေး, staying = သီတင်းသုံး, dying = ပျံလွန်တော်မူ) is completely distinct."
+ },
+ {
+  "id": "my-b2-literary-clausal-connectives",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#10B981",
+  "emoji": "📜",
+  "title": "Literary Clausal Connectives",
+  "subtitle": "Complex linkages for causality, temporality, and boundary in formal prose",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Literary Burmese links complex propositions with archaic particles such as သဖြင့် for direct causation, စဉ် for simultaneous time, and တိုင်အောင် for temporal bounds.",
+  "structure": {
+   "headers": [
+    "Connective",
+    "Function",
+    "Colloquial Equivalent",
+    "Literary Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "သဖြင့်",
+      "Causal Linkage",
+      "လို့ / မို့လို့",
+      "မိုးရွာသဖြင့် မလာနိုင်ပါ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "သောကြောင့်",
+      "Explanatory Reason",
+      "ကြောင့်",
+      "လေ့လာသောကြောင့် တတ်မြောက်သည်"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "စဉ် / စဉ်တွင်",
+      "Simultaneous Duration",
+      "တုန်းက / ရင်း",
+      "လမ်းလျှောက်စဉ် တွေးတောသည်"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "တိုင်အောင်",
+      "Extreme Temporal Limit",
+      "အထိ",
+      "ယနေ့တိုင်အောင် အမှတ်ရနေဆဲဖြစ်သည်"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#047857",
+    "label": "Expressing formal consequence",
+    "example": "ငွေကြေးချို့တဲ့သဖြင့် ပညာသင်စရိတ် လျှောက်ထားခဲ့သည်။",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Linking simultaneous background actions",
+    "example": "စာမေးပွဲ ဖြေဆိုနေစဉ် စကားမပြောရ။",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Stating continuous duration up to an endpoint",
+    "example": "နေဝင်သည်တိုင်အောင် လယ်တောတွင် အလုပ်လုပ်ကြသည်။",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ခရီးဝေးလွန်းသဖြင့် အချိန်မီ မရောက်ရှိနိုင်ခဲ့ပါ။",
+    "ko": "",
+    "highlight": "သဖြင့်"
+   },
+   {
+    "en": "မိဘတို့၏ ဆိုဆုံးမမှုကို နာခံသောကြောင့် အောင်မြင်ခဲ့သည်။",
+    "ko": "",
+    "highlight": "သောကြောင့်"
+   },
+   {
+    "en": "ကျောင်းသားဘဝတွင် နေထိုင်စဉ် စာပေများစွာ ဖတ်ရှုခဲ့သည်။",
+    "ko": "",
+    "highlight": "စဉ်"
+   },
+   {
+    "en": "သေသည်တိုင်အောင် ဤကတိသစ္စာကို စောင့်ထိန်းမည်။",
+    "ko": "",
+    "highlight": "တိုင်အောင်"
+   },
+   {
+    "en": "လေပြင်းတိုက်ခတ်သဖြင့် သစ်ပင်ကြီးများ ပြိုလဲသွားသည်။",
+    "ko": "",
+    "highlight": "သဖြင့်"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "မိုးရွာလို့ အစည်းအဝေးကို ရွှေ့ဆိုင်းခဲ့သည်။",
+    "right": "မိုးရွာသဖြင့် အစည်းအဝေးကို ရွှေ့ဆိုင်းခဲ့သည်။",
+    "note": "Do not mix colloquial causal connectives like လို့ with literary endings like ခဲ့သည်။; use သဖြင့် or သောကြောင့်."
+   },
+   {
+    "wrong": "သူ လာစဉ်မှာ မိုးရွာတယ်",
+    "right": "သူ လာစဉ် မိုးရွာသည်",
+    "note": "စဉ် is a literary connective and should agree with the formal sentence ender သည် rather than colloquial တယ်."
+   },
+   {
+    "wrong": "စားသောက်စဉ်အထိ စောင့်ပါ",
+    "right": "စားသောက်သည်တိုင်အောင် စောင့်ပါ",
+    "note": "In formal prose, တိုင်အောင် marks the outer temporal boundary rather than simply affixing အထိ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the standard literary particle used for 'because/owing to' (formal consequence):",
+    "options": [
+     "တုန်းက",
+     "သဖြင့်",
+     "ပေမယ့်",
+     "လို့"
+    ],
+    "answer": 1,
+    "explanation": "သဖြင့် is the primary literary subordinate conjunction used to indicate cause and immediate consequence."
+   },
+   {
+    "question": "Which conjunction marks an action occurring simultaneously during another in formal texts ('while/as')?",
+    "options": [
+     "စဉ်",
+     "တိုင်အောင်",
+     "သော်လည်း",
+     "သို့သော်"
+    ],
+    "answer": 0,
+    "explanation": "စဉ် (or စဉ်တွင်) attaches directly to verb stems to signify 'while' or 'during' in formal Burmese."
+   },
+   {
+    "question": "Choose the correct connective to express 'Until/Up to the point of': နေဝင်သည်___ စောင့်ဆိုင်းခဲ့ကြသည်။",
+    "options": [
+     "သဖြင့်",
+     "သောကြောင့်",
+     "စဉ်",
+     "တိုင်အောင်"
+    ],
+    "answer": 3,
+    "explanation": "တိုင်အောင် functions as the literary postposition denoting 'until / up to the culmination of'."
+   },
+   {
+    "question": "Which sentence maintains pure literary register consistency?",
+    "options": [
+     "မိုးရွာလို့ မလာနိုင်ပါဘူး။",
+     "မိုးရွာသဖြင့် မလာနိုင်ခဲ့ပါ။",
+     "မိုးရွာသဖြင့် မလာနိုင်ဘူး။",
+     "မိုးရွာလို့ မလာနိုင်ခဲ့သည်။"
+    ],
+    "answer": 1,
+    "explanation": "မိုးရွာသဖြင့် မလာနိုင်ခဲ့ပါ။ pairs the formal causal marker သဖြင့် with the polite formal terminal structure."
+   }
+  ],
+  "tip": "In formal Burmese news and essays, verb clauses rarely end in colloquial တယ်. Look out for the literary markers: သဖြင့် replaces လို့, စဉ် replaces တုန်း, and သည်။ replaces တယ်."
+ }
+]

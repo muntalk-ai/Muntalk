@@ -1,0 +1,3382 @@
+[
+ {
+  "id": "kn-a1-pronouns-and-nominal-inflection",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "👤",
+  "title": "Personal Pronouns and Oblique Bases",
+  "subtitle": "Nominative forms and essential stem modifications before case endings",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Personal pronouns often shift into distinct oblique bases before attaching any case suffix.",
+  "structure": {
+   "headers": [
+    "Person",
+    "Nominative",
+    "Oblique Stem",
+    "English"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Person Singular",
+      "ನಾನು",
+      "ನನ್-",
+      "I / me"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Person Singular (Informal)",
+      "ನೀನು",
+      "ನಿನ್-",
+      "you"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Person Proximate (Masc)",
+      "ಇವನು",
+      "ಇವನ್-",
+      "he / him (close)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "1st Person Plural (Inclusive)",
+      "ನಾವು",
+      "ನಮ್-",
+      "we / us"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Subject Role",
+    "example": "ನಾನು ಶಾಲೆಗೆ ಹೋಗುತ್ತೇನೆ.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Plural Respect",
+    "example": "ನೀವು ತುಂಬಾ ಒಳ್ಳೆಯವರು.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Demonstrative Distal",
+    "example": "ಅವರು ನಿನ್ನೆ ಬಂದರು.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ನಾನು ಕನ್ನಡ ಕಲಿಯುತ್ತಿದ್ದೇನೆ.",
+    "ko": "",
+    "highlight": "ನಾನು"
+   },
+   {
+    "en": "ನೀನು ಎಲ್ಲಿ ವಾಸಿಸುತ್ತೀಯ?",
+    "ko": "",
+    "highlight": "ನೀನು"
+   },
+   {
+    "en": "ಅವಳು ಪ್ರತಿದಿನ ಓದುತ್ತಾಳೆ.",
+    "ko": "",
+    "highlight": "ಅವಳು"
+   },
+   {
+    "en": "ನಾವು ನಾಳೆ ಮೈಸೂರಿಗೆ ಹೋಗುತ್ತೇವೆ.",
+    "ko": "",
+    "highlight": "ನಾವು"
+   },
+   {
+    "en": "ಅವರು ನಮ್ಮ ಹೊಸ ಅಧ್ಯಾಪಕರು.",
+    "ko": "",
+    "highlight": "ಅವರು"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ನಾನುಗೆ ಪುಸ್ತಕ ಕೊಡು.",
+    "right": "ನನಗೆ ಪುಸ್ತಕ ಕೊಡು.",
+    "note": "Pronoun 'ನಾನು' shortens to the oblique base 'ನನ್-' producing 'ನನಗೆ' in the dative."
+   },
+   {
+    "wrong": "ನೀನು ಮನೆ ಎಲ್ಲಿ?",
+    "right": "ನಿನ್ನ ಮನೆ ಎಲ್ಲಿ?",
+    "note": "Use the oblique genitive stem 'ನಿನ್ನ' rather than the nominative 'ನೀನು' for possession."
+   },
+   {
+    "wrong": "ಅವನುಗಳು ಬಂದರು.",
+    "right": "ಅವರು ಬಂದರು.",
+    "note": "The plural/honorific for third person is 'ಅವರು', not 'ಅವನುಗಳು'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the correct 1st person singular pronoun for 'I':",
+    "options": [
+     "ನೀನು",
+     "ನಾನು",
+     "ಅವನು",
+     "ನಾವು"
+    ],
+    "answer": 1,
+    "explanation": "'ನಾನು' means 'I' in Kannada."
+   },
+   {
+    "question": "Which form represents the polite or plural 'you'?",
+    "options": [
+     "ಅವರು",
+     "ನೀನು",
+     "ಇವಳು",
+     "ನೀವು"
+    ],
+    "answer": 3,
+    "explanation": "'ನೀವು' is the respectful or plural second-person pronoun."
+   },
+   {
+    "question": "What is the oblique base of 'ನಾವು' (we)?",
+    "options": [
+     "ನಮ್-",
+     "ನನ್-",
+     "ನಿಮ್-",
+     "ತಮ್-"
+    ],
+    "answer": 0,
+    "explanation": "'ನಾವು' shifts to 'ನಮ್-' before adding case endings (e.g., ನಮಗೆ, ನಮ್ಮ)."
+   },
+   {
+    "question": "Which pronoun refers to 'she' (distal/far)?",
+    "options": [
+     "ಇವನು",
+     "ಇವಳು",
+     "ಅವಳು",
+     "ಅವನು"
+    ],
+    "answer": 2,
+    "explanation": "The prefix 'ಅ-' indicates distal, so 'ಅವಳು' means 'that woman' or 'she'."
+   }
+  ],
+  "tip": "Remember that initial 'ಇ' indicates proximity (this person here) while 'ಅ' denotes distance (that person there)."
+ },
+ {
+  "id": "kn-a1-core-case-markers",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🏷️",
+  "title": "Vibhakti Pratyaya (Core Case Markers)",
+  "subtitle": "Accusative, Instrumental, and Dative suffixes on nouns",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Case markers modify nouns depending on whether the noun stem ends in a consonant, front vowel, or back vowel.",
+  "structure": {
+   "headers": [
+    "Case",
+    "Suffix",
+    "Kannada Example",
+    "Function"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Accusative (2nd)",
+      "-ಅನ್ನು (-annu)",
+      "ಹಣ್ಣನ್ನು",
+      "Direct Object"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Instrumental/Ablative (3rd)",
+      "-ಇಂದ (-inda)",
+      "ಪೆನ್ನಿನಿಂದ",
+      "By / With / From"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Dative (4th - Non-neuter)",
+      "-ಇಗೆ (-ige)",
+      "ರಾಮನಿಗೆ",
+      "To / For (Human)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Dative (4th - Neuter)",
+      "-ಅಕ್ಕೆ (-akke)",
+      "ಮನೆಗೆ / ಊರಿಗೆ",
+      "To / For (Place/Inanimate)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Direct Object",
+    "example": "ಅವನು ಹಾಲನ್ನು ಕುಡಿಯುತ್ತಾನೆ.",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Means / Origin",
+    "example": "ನಾವು ಬಸ್ಸಿನಿಂದ ಬಂದೆವು.",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Destination / Recipient",
+    "example": "ಅಪ್ಪ ಮಗನಿಗೆ ಉಡುಗೊರೆ ಕೊಟ್ಟರು.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ಅವನು ಪತ್ರವನ್ನು ಬರೆದನು.",
+    "ko": "",
+    "highlight": "ಪತ್ರವನ್ನು"
+   },
+   {
+    "en": "ರೈತ ಚಾಕುವಿನಿಂದ ಹಣ್ಣು ಕತ್ತರಿಸಿದನು.",
+    "ko": "",
+    "highlight": "ಚಾಕುವಿನಿಂದ"
+   },
+   {
+    "en": "ಶಿಕ್ಷಕ ವಿದ್ಯಾರ್ಥಿಗೆ ಪಾಠ ಕಲಿಸಿದರು.",
+    "ko": "",
+    "highlight": "ವಿದ್ಯಾರ್ಥಿಗೆ"
+   },
+   {
+    "en": "ತಾಯಿ ಮಗುವಿಗೆ ಹಾಲು ಕೊಟ್ಟಳು.",
+    "ko": "",
+    "highlight": "ಮಗುವಿಗೆ"
+   },
+   {
+    "en": "ಅಣ್ಣ ಬೆಂಗಳೂರಿಗೆ ಹೋದನು.",
+    "ko": "",
+    "highlight": "ಬೆಂಗಳೂರಿಗೆ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ನಾನು ಬೆಂಗಳೂರುಗೆ ಹೋಗುತ್ತೇನೆ.",
+    "right": "ನಾನು ಬೆಂಗಳೂರಿಗೆ ಹೋಗುತ್ತೇನೆ.",
+    "note": "Vowel-ending stems take the euphonic bridge '-ಗೆ' or '-ಕ್ಕೆ', changing to 'ಬೆಂಗಳೂರಿಗೆ'."
+   },
+   {
+    "wrong": "ಅವನು ಕೈಯಿಂದ ಬರೆದನು (uninflected base).",
+    "right": "ಅವನು ಕೈಯಿಂದ ಬರೆದನು.",
+    "note": "Ensure glide insertion ('ಯ') occurs properly between terminal diphthongs and '-ಇಂದ'."
+   },
+   {
+    "wrong": "ಪುಸ್ತಕನ್ನು ಓದು.",
+    "right": "ಪುಸ್ತಕವನ್ನು ಓದು.",
+    "note": "Inanimate nouns ending in 'ಅ' require euphonic glide 'ವ್' yielding 'ಪುಸ್ತಕವನ್ನು'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which suffix marks the direct object (accusative)?",
+    "options": [
+     "-ಇಂದ",
+     "-ಅನ್ನು",
+     "-ಅಲ್ಲಿ",
+     "-ಓಸುಗ"
+    ],
+    "answer": 1,
+    "explanation": "'-ಅನ್ನು' (-annu) is the standard accusative marker."
+   },
+   {
+    "question": "Choose the correct dative form of 'ಮನೆ' (house):",
+    "options": [
+     "ಮನೆಗೆ",
+     "ಮನೆಯನ್ನು",
+     "ಮನೆಯಿಂದ",
+     "ಮನೆಯಲ್ಲಿ"
+    ],
+    "answer": 0,
+    "explanation": "Nouns ending in -e take '-ಗೆ' in the dative case, forming 'ಮನೆಗೆ'."
+   },
+   {
+    "question": "What meaning does the suffix '-ಇಂದ' (-inda) convey?",
+    "options": [
+     "Into / At",
+     "To / Toward",
+     "From / By",
+     "Of / Belonging to"
+    ],
+    "answer": 2,
+    "explanation": "'-ಇಂದ' serves as both the instrumental ('by/with') and ablative ('from') marker."
+   },
+   {
+    "question": "Select the properly inflected accusative form for 'ಪುಸ್ತಕ' (book):",
+    "options": [
+     "ಪುಸ್ತಕಕ್ಕೆ",
+     "ಪುಸ್ತಕದಿಂದ",
+     "ಪುಸ್ತಕದ",
+     "ಪುಸ್ತಕವನ್ನು"
+    ],
+    "answer": 3,
+    "explanation": "'ಪುಸ್ತಕ' inserts 'ವ್' yielding 'ಪುಸ್ತಕವನ್ನು'."
+   }
+  ],
+  "tip": "For words ending in -ಅ (like ಮರ), dative becomes -ಕ್ಕೆ (ಮರಕ್ಕೆ), but for human nouns in -ಅ, it becomes -ನಿಗೆ (ರಾಮನಿಗೆ)."
+ },
+ {
+  "id": "kn-a1-genitive-and-locative",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#3B82F6",
+  "emoji": "🏡",
+  "title": "Genitive (-a) and Locative (-alli) Cases",
+  "subtitle": "Forming possessives and expressing location in time and space",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Possession uses the suffix '-ಅ' while spatial or temporal inclusion takes '-ನಲ್ಲಿ' or '-ನಲ್ಲಿ/ಅಲ್ಲಿ'.",
+  "structure": {
+   "headers": [
+    "Case",
+    "Suffix",
+    "Kannada Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Genitive (Inanimate)",
+      "-ದ (-da)",
+      "ಮರದ",
+      "of the tree"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Genitive (Human Masc)",
+      "-ನ (-na)",
+      "ಅವನ",
+      "his / of him"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Locative (Neuter)",
+      "-ನಲ್ಲಿ / -ಅಲ್ಲಿ",
+      "ಊರಿನಲ್ಲಿ",
+      "in the town"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Locative (Pronouns)",
+      "ಅಲ್ಲಿ (with oblique)",
+      "ನನ್ನಲ್ಲಿ",
+      "in me / with me"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Possession",
+    "example": "ಇದು ರಾಜುವಿನ ಸೈಕಲ್.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Physical Location",
+    "example": "ಪುಸ್ತಕ ಮೇಜಿನ ಮೇಲೆ ಇದೆ.",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Contained Space",
+    "example": "ನೀರು ಲೋಟದಲ್ಲಿ ಇದೆ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ನನ್ನ ಊರು ಮೈಸೂರು.",
+    "ko": "",
+    "highlight": "ನನ್ನ"
+   },
+   {
+    "en": "ಅವಳ ಹೆಸರು ಲತಾ.",
+    "ko": "",
+    "highlight": "ಅವಳ"
+   },
+   {
+    "en": "ಮನೆಯಲ್ಲಿ ಯಾರೂ ಇಲ್ಲ.",
+    "ko": "",
+    "highlight": "ಮನೆಯಲ್ಲಿ"
+   },
+   {
+    "en": "ಶಾಲೆ ತೋಟದ ಹತ್ತಿರ ಇದೆ.",
+    "ko": "",
+    "highlight": "ತೋಟದ"
+   },
+   {
+    "en": "ಬ್ಯಾಂಕಿನಲ್ಲಿ ಹಣವಿದೆ.",
+    "ko": "",
+    "highlight": "ಬ್ಯಾಂಕಿನಲ್ಲಿ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ಮನೆನಲ್ಲಿ ಯಾರಿದ್ದಾರೆ?",
+    "right": "ಮನೆಯಲ್ಲಿ ಯಾರಿದ್ದಾರೆ?",
+    "note": "Nouns ending in -e take '-ಯಲ್ಲಿ' rather than '-ನಲ್ಲಿ'."
+   },
+   {
+    "wrong": "ರಾಮು ಮನೆ ಸುಂದರವಾಗಿದೆ.",
+    "right": "ರಾಮುವಿನ ಮನೆ ಸುಂದರವಾಗಿದೆ.",
+    "note": "A proper noun must take the genitive marker ('-ಇನ / -ವಿನ') to denote ownership."
+   },
+   {
+    "wrong": "ನಾನು ಕಾರಿನಲ್ಲಿ ಹೋಗು.",
+    "right": "ನಾನು ಕಾರಿನಲ್ಲಿ ಹೋಗುತ್ತೇನೆ.",
+    "note": "Do not omit proper finite verb conjugation when using locative instrumental contexts."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'in the house' in Kannada?",
+    "options": [
+     "ಮನೆಗೆ",
+     "ಮನೆಯಿಂದ",
+     "ಮನೆಯಲ್ಲಿ",
+     "ಮನೆಯನ್ನು"
+    ],
+    "answer": 2,
+    "explanation": "'ಮನೆ' + '-ಯಲ್ಲಿ' becomes 'ಮನೆಯಲ್ಲಿ' (in the house)."
+   },
+   {
+    "question": "What is the genitive (possessive) form of 'ಅವನು' (he)?",
+    "options": [
+     "ಅವನ",
+     "ಅವಳಿಗೆ",
+     "ಅವನನ್ನು",
+     "ಅವನಲ್ಲಿ"
+    ],
+    "answer": 0,
+    "explanation": "The possessive form of 'ಅವನು' is 'ಅವನ' (his)."
+   },
+   {
+    "question": "Identify the locative case suffix in Kannada:",
+    "options": [
+     "-ಇಂದ",
+     "-ಅನ್ನು",
+     "-ಅಕ್ಕೆ",
+     "-ಅಲ್ಲಿ"
+    ],
+    "answer": 3,
+    "explanation": "'-ಅಲ್ಲಿ' (or '-ನಲ್ಲಿ' / '-ಯಲ್ಲಿ') marks location (in/at)."
+   },
+   {
+    "question": "Which word correctly translates 'of the tree' (ಮರ)?",
+    "options": [
+     "ಮರಕ್ಕೆ",
+     "ಮರದ",
+     "ಮರವನ್ನು",
+     "ಮರದಿಂದ"
+    ],
+    "answer": 1,
+    "explanation": "Neuter nouns ending in -ಅ add '-ದ' to form the genitive: 'ಮರದ'."
+   }
+  ],
+  "tip": "Locative is generally used only for inanimates; for humans, use 'ಹತ್ತಿರ' (near/with) instead of '-ನಲ್ಲಿ' (e.g., ಅವನ ಹತ್ತಿರ ಇದೆ)."
+ },
+ {
+  "id": "kn-a1-simple-present-verb-conjugation",
+  "level": "a1",
+  "category": "tenses",
+  "categoryColor": "#EC4899",
+  "emoji": "⏳",
+  "title": "Simple Present-Future Verb Conjugation",
+  "subtitle": "Combining verbal stems, tense markers, and pronominal endings",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "Verbs conjugate by joining the verbal root, the present tense infix (-ಉತ್ತ-/-ತ್-), and person-number-gender agreement suffixes.",
+  "structure": {
+   "headers": [
+    "Person / Subject",
+    "Root",
+    "Present Infix",
+    "Full Conjugated Verb"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1st Singular (ನಾನು)",
+      "ಮಾಡು",
+      "-ಉತ್ತ- + -ಏನೆ",
+      "ಮಾಡುತ್ತೇನೆ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "2nd Singular (ನೀನು)",
+      "ಮಾಡು",
+      "-ಉತ್ತ- + -ಈ",
+      "ಮಾಡುತ್ತೀ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Masc Sing (ಅವನು)",
+      "ಮಾಡು",
+      "-ಉತ್ತ- + -ಆನೆ",
+      "ಮಾಡುತ್ತಾನೆ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Fem Sing (ಅವಳು)",
+      "ಮಾಡು",
+      "-ಉತ್ತ- + -ಆಳೆ",
+      "ಮಾಡುತ್ತಾಳೆ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "3rd Plural / Honorific (ಅವರು)",
+      "ಮಾಡು",
+      "-ಉತ್ತ- + -ಆರೆ",
+      "ಮಾಡುತ್ತಾರೆ"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DB2777",
+    "label": "Habitual Action",
+    "example": "ಅವನು ದಿನವೂ ಹಾಲು ಕುಡಿಯುತ್ತಾನೆ.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "General Truth",
+    "example": "ಸೂರ್ಯ ಪೂರ್ವದಲ್ಲಿ ಮೂಡುತ್ತಾನೆ.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Future Intention",
+    "example": "ನಾಳೆ ನಾನು ಬರುತ್ತೇನೆ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ನಾನು ಪ್ರತಿದಿನ ಕನ್ನಡ ಓದುತ್ತೇನೆ.",
+    "ko": "",
+    "highlight": "ಓದುತ್ತೇನೆ"
+   },
+   {
+    "en": "ನೀನು ಕಾಫಿ ಕುಡಿಯುತ್ತೀಯಾ?",
+    "ko": "",
+    "highlight": "ಕುಡಿಯುತ್ತೀಯಾ"
+   },
+   {
+    "en": "ಅವನು ಕಚೇರಿಯಲ್ಲಿ ಕೆಲಸ ಮಾಡುತ್ತಾನೆ.",
+    "ko": "",
+    "highlight": "ಮಾಡುತ್ತಾನೆ"
+   },
+   {
+    "en": "ಅವಳು ಹಾಡು ಹಾಡುತ್ತಾಳೆ.",
+    "ko": "",
+    "highlight": "ಹಾಡುತ್ತಾಳೆ"
+   },
+   {
+    "en": "ಅವರು ನಾಳೆ ಬರುತ್ತಾರೆ.",
+    "ko": "",
+    "highlight": "ಬರುತ್ತಾರೆ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ನಾನು ಊಟ ಮಾಡುತ್ತದೆ.",
+    "right": "ನಾನು ಊಟ ಮಾಡುತ್ತೇನೆ.",
+    "note": "'-ಉತ್ತದೆ' is for neuter singular subjects (it). For 'ನಾನು', use '-ಉತ್ತೇನೆ'."
+   },
+   {
+    "wrong": "ಅವಳು ಪತ್ರ ಬರೆಯುತ್ತಾನೆ.",
+    "right": "ಅವಳು ಪತ್ರ ಬರೆಯುತ್ತಾಳೆ.",
+    "note": "A feminine subject ('ಅವಳು') requires the feminine suffix '-ಆಳೆ', not masculine '-ಆನೆ'."
+   },
+   {
+    "wrong": "ಅವರು ನಾಳೆ ಬರುತ್ತದೆ.",
+    "right": "ಅವರು ನಾಳೆ ಬರುತ್ತಾರೆ.",
+    "note": "Plural/honorific human subjects ('ಅವರು') require the ending '-ಆರೆ'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct verb form for 'ನಾನು' (I read):",
+    "options": [
+     "ಓದುತ್ತಾನೆ",
+     "ಓದುತ್ತಾಳೆ",
+     "ಓದುತ್ತೇನೆ",
+     "ಓದುತ್ತಾರೆ"
+    ],
+    "answer": 2,
+    "explanation": "The first-person singular suffix is '-ಏನೆ', forming 'ಓದುತ್ತೇನೆ'."
+   },
+   {
+    "question": "Select the correct verb form for 'ಅವಳು' (she comes):",
+    "options": [
+     "ಬರುತ್ತಾಳೆ",
+     "ಬರುತ್ತಾನೆ",
+     "ಬರುತ್ತೇನೆ",
+     "ಬರುತ್ತಾರೆ"
+    ],
+    "answer": 0,
+    "explanation": "The feminine third-person ending is '-ಆಳೆ', giving 'ಬರುತ್ತಾಳೆ'."
+   },
+   {
+    "question": "What is the agreement ending for 3rd person honorific 'ಅವರು'?",
+    "options": [
+     "-ಆನೆ",
+     "-ಆಳೆ",
+     "-ಇದೆ",
+     "-ಆರೆ"
+    ],
+    "answer": 3,
+    "explanation": "The respectful/human plural suffix is '-ಆರೆ' (making 'ಮಾಡುತ್ತಾರೆ')."
+   },
+   {
+    "question": "How does 'ನೀನು' (you informal) conjugate with 'ನೋಡು' (to see)?",
+    "options": [
+     "ನೋಡುತ್ತೇನೆ",
+     "ನೋಡುತ್ತೀಯ",
+     "ನೋಡುತ್ತಾನೆ",
+     "ನೋಡುತ್ತಾರೆ"
+    ],
+    "answer": 1,
+    "explanation": "'ನೀನು' pairs with the second-person suffix '-ಈ / -ಈಯ', forming 'ನೋಡುತ್ತೀಯ'."
+   }
+  ],
+  "tip": "Spoken Kannada often contracts '-ಉತ್ತೇನೆ' to '-ತೀನಿ' (ಮಾಡುತ್ತೀನಿ), but written Kannada maintains the full '-ಉತ್ತೇನೆ'."
+ },
+ {
+  "id": "kn-a1-defective-existential-verbs",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⚖️",
+  "title": "Existential vs Qualitative Copula (Ide vs Agide)",
+  "subtitle": "Distinguishing existence/location from intrinsic qualities and identity",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use 'ಇದೆ' (ide) for existence, location, or possession, and 'ಆಗಿದೆ' (agide) for qualitative state or condition.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Verb",
+    "Kannada Example",
+    "Negative Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Existential / Location",
+      "ಇದೆ (ide)",
+      "ಪುಸ್ತಕ ಮೇಜಿನ ಮೇಲಿದೆ.",
+      "ಇಲ್ಲ (illa)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Qualitative / State",
+      "ಆಗಿದೆ (agide)",
+      "ಕಾಫಿ ಬಿಸಿಯಾಗಿದೆ.",
+      "ಆಗಿಲ್ಲ (agilla)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Identity / Equational",
+      "ಆಗಿದ್ದಾನೆ/ಆಗಿದ್ದಾಳೆ",
+      "ಅವನು ವೈದ್ಯನಾಗಿದ್ದಾನೆ.",
+      "ಅಲ್ಲ (alla)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Spatial Existence",
+    "example": "ಕೋಣೆಯಲ್ಲಿ ಫ್ಯಾನ್ ಇದೆ.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Inherent State",
+    "example": "ಈ ಊಟ ರುಚಿಯಾಗಿದೆ.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Negating Identity vs Existence",
+    "example": "ಇದು ನನ್ನದಲ್ಲ, ಇಲ್ಲಿ ಇಲ್ಲ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ನನ್ನ ಬಳಿ ಒಂದು ಕಾರು ಇದೆ.",
+    "ko": "",
+    "highlight": "ಇದೆ"
+   },
+   {
+    "en": "ಇವತ್ತು ಹವಾಮಾನ ತಂಪಾಗಿದೆ.",
+    "ko": "",
+    "highlight": "ತಂಪಾಗಿದೆ"
+   },
+   {
+    "en": "ಅಲ್ಲಿ ಯಾರೂ ಇಲ್ಲ.",
+    "ko": "",
+    "highlight": "ಇಲ್ಲ"
+   },
+   {
+    "en": "ಈ ಸೇಬು ತುಂಬಾ ಸಿಹಿಯಾಗಿದೆ.",
+    "ko": "",
+    "highlight": "ಸಿಹಿಯಾಗಿದೆ"
+   },
+   {
+    "en": "ಅದು ಹಾಲು ಅಲ್ಲ, ನೀರು.",
+    "ko": "",
+    "highlight": "ಅಲ್ಲ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ಕಾಫಿ ಬಿಸಿ ಇದೆ.",
+    "right": "ಕಾಫಿ ಬಿಸಿಯಾಗಿದೆ.",
+    "note": "An adjective describing a state requires the copula 'ಆಗಿದೆ', not raw 'ಇದೆ'."
+   },
+   {
+    "wrong": "ಅವನು ಶಿಕ್ಷಕ ಇಲ್ಲ.",
+    "right": "ಅವನು ಶಿಕ್ಷಕ ಅಲ್ಲ.",
+    "note": "To negate category or identity ('he is not a teacher'), use 'ಅಲ್ಲ', not existential 'ಇಲ್ಲ'."
+   },
+   {
+    "wrong": "ಮನೆಯಲ್ಲಿ ನೀರು ಅಲ್ಲ.",
+    "right": "ಮನೆಯಲ್ಲಿ ನೀರು ಇಲ್ಲ.",
+    "note": "To state non-existence of an item in a place, use 'ಇಲ್ಲ'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which verb correctly fills: 'ಊಟ ತುಂಬಾ ರುಚಿ ___' (The meal is tasty)?",
+    "options": [
+     "ಇದೆ",
+     "ಆಗಿದೆ",
+     "ಅಲ್ಲ",
+     "ಇಲ್ಲ"
+    ],
+    "answer": 1,
+    "explanation": "Qualities and adjectives take 'ಆಗಿದೆ' (ರುಚಿಯಾಗಿದೆ) to express condition."
+   },
+   {
+    "question": "How do you say 'The book is on the table'?",
+    "options": [
+     "ಪುಸ್ತಕ ಮೇಜಿನ ಮೇಲೆ ಆಗಿದೆ.",
+     "ಪುಸ್ತಕ ಮೇಜಿನ ಮೇಲೆ ಅಲ್ಲ.",
+     "ಪುಸ್ತಕ ಮೇಜಿನ ಮೇಲೆ ಇದೆ.",
+     "ಪುಸ್ತಕ ಮೇಜಿನ ಮೇಲೆ ಇಲ್ಲವಾಗಿದೆ."
+    ],
+    "answer": 2,
+    "explanation": "Physical presence or location is denoted by the existential verb 'ಇದೆ'."
+   },
+   {
+    "question": "Which negative particle denies identity ('He is NOT a doctor')?",
+    "options": [
+     "ಇಲ್ಲ",
+     "ಆಗಿಲ್ಲ",
+     "ಬೇಡ",
+     "ಅಲ್ಲ"
+    ],
+    "answer": 3,
+    "explanation": "'ಅಲ್ಲ' negates identity or equivalence, whereas 'ಇಲ್ಲ' negates existence."
+   },
+   {
+    "question": "Choose the correct phrase for 'I do not have money':",
+    "options": [
+     "ನನ್ನ ಬಳಿ ಹಣ ಇಲ್ಲ.",
+     "ನನ್ನ ಬಳಿ ಹಣ ಅಲ್ಲ.",
+     "ನನ್ನ ಬಳಿ ಹಣ ಆಗಿದೆ.",
+     "ನನ್ನ ಬಳಿ ಹಣ ಉಂಟು."
+    ],
+    "answer": 0,
+    "explanation": "Lack of possession/presence requires 'ಇಲ್ಲ'."
+   }
+  ],
+  "tip": "Simple trick: if you can answer 'Where?' or 'Do you have it?', use 'ಇದೆ/ಇಲ್ಲ'. If you answer 'How is it?', use 'ಆಗಿದೆ/ಆಗಿಲ್ಲ'."
+ },
+ {
+  "id": "kn-a1-imperatives-and-politeness",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4A90E2",
+  "emoji": "🗣️",
+  "title": "Imperative and Prohibitive Forms",
+  "subtitle": "Giving commands, polite requests, and negative instructions in Kannada",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use the bare verb root for informal commands, add -i or -iri for polite and plural commands, and append -beda to the root for prohibitions.",
+  "structure": {
+   "headers": [
+    "Politeness Level",
+    "Ending",
+    "Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Informal (singular)",
+      "Bare root",
+      "ಬರೆ",
+      "Write! (informal)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Polite / Plural",
+      "-i / -iri",
+      "ಬರೆಯಿರಿ",
+      "Please write / Write (formal)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Informal Negative",
+      "-ಬೇಡ",
+      "ಬರೆಯಬೇಡ",
+      "Don't write! (informal)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Polite Negative",
+      "-ಬೇಡಿ",
+      "ಬರೆಯಬೇಡಿ",
+      "Please do not write"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Informal instruction to friends or children",
+    "example": "ಬೇಗ ಬಾ.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Respectful request to elders or strangers",
+    "example": "ದಯವಿಟ್ಟು ಕುಳಿತುಕೊಳ್ಳಿ.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Polite prohibition or warning",
+    "example": "ಇಲ್ಲಿ ಮಾತನಾಡಬೇಡಿ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ನೀವು ಒಳಗೆ ಬನ್ನಿ.",
+    "ko": "",
+    "highlight": "ಬನ್ನಿ"
+   },
+   {
+    "en": "ದಯವಿಟ್ಟು ಈ ಪುಸ್ತಕ ಓದಿ.",
+    "ko": "",
+    "highlight": "ಓದಿ"
+   },
+   {
+    "en": "ನೀನು ಅಲ್ಲಿಗೆ ಹೋಗಬೇಡ.",
+    "ko": "",
+    "highlight": "ಹೋಗಬೇಡ"
+   },
+   {
+    "en": "ದಯವಿಟ್ಟು ಅಲ್ಲಿ ಕುಳಿತುಕೊಳ್ಳಬೇಡಿ.",
+    "ko": "",
+    "highlight": "ಕುಳಿತುಕೊಳ್ಳಬೇಡಿ"
+   },
+   {
+    "en": "ಈ ನೀರನ್ನು ಕುಡಿ.",
+    "ko": "",
+    "highlight": "ಕುಡಿ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ನೀವು ಅಲ್ಲಿ ಹೋಗು.",
+    "right": "ನೀವು ಅಲ್ಲಿ ಹೋಗಿ.",
+    "note": "With the polite pronoun 'ನೀವು', always use the honorific imperative ending (-i / -iri), never the informal bare root."
+   },
+   {
+    "wrong": "ಹೋಗಿಬೇಡ",
+    "right": "ಹೋಗಬೇಡಿ",
+    "note": "To form polite negative commands, attach '-ಬೇಡಿ' to the crude infinitive/root, not directly after the honorific suffix."
+   },
+   {
+    "wrong": "ನೀನು ಬನ್ನಿ.",
+    "right": "ನೀನು ಬಾ.",
+    "note": "'ನೀನು' is informal singular and matches the simple imperative 'ಬಾ', not the honorific 'ಬನ್ನಿ'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct polite imperative: 'Please sit inside.' (ನೀವು ಒಳಗೆ ___.)",
+    "options": [
+     "ಕುಳಿತುಕೋ",
+     "ಕುಳಿತುಕೊಳ್ಳಿ",
+     "ಕುಳಿತುಕೊಬೇಡ",
+     "ಕುಳಿತುಕೊಳ್ಳಬೇಡ"
+    ],
+    "answer": 1,
+    "explanation": "With the formal subject 'ನೀವು', the polite imperative ending '-ಇ / -ಕೊಳ್ಳಿ' is required."
+   },
+   {
+    "question": "Choose the informal prohibition: 'Don't go there!' (ನೀನು ಅಲ್ಲಿಗೆ ___.)",
+    "options": [
+     "ಹೋಗಬೇಡ",
+     "ಹೋಗಬೇಡಿ",
+     "ಹೋಗು",
+     "ಹೋಗಿ"
+    ],
+    "answer": 0,
+    "explanation": "Addressing 'ನೀನು' casually requires the informal prohibitive marker '-ಬೇಡ'."
+   },
+   {
+    "question": "Which form politely asks someone not to speak loudly? (ಜೋರಾಗಿ ಮಾತನಾಡ___.)",
+    "options": [
+     "ಬೇಡ",
+     "ಬೇಡಿರಿ",
+     "ಬೇಡಿ",
+     "ಬೇಡ್ರಿ"
+    ],
+    "answer": 2,
+    "explanation": "The standard polite prohibitive suffix added to the verb is '-ಬೇಡಿ'."
+   },
+   {
+    "question": "Choose the irregular polite command for 'Come!' addressing an elder:",
+    "options": [
+     "ಬಾ",
+     "ಬನ್ನಿ",
+     "ಬರುವುದು",
+     "ಬಾರೋ"
+    ],
+    "answer": 1,
+    "explanation": "The root 'ಬಾ' (come) changes irregularly to 'ಬನ್ನಿ' in the honorific/plural imperative."
+   }
+  ],
+  "tip": "Verbs ending in 'ಉ' drop the vowel before adding '-ಇ' (ಮಾಡು -> ಮಾಡಿ), but roots like 'ಬಾ' (ಬನ್ನಿ) and 'ಹೋಗು' (ಹೋಗಿ) have slightly distinct standard polite stems."
+ },
+ {
+  "id": "kn-a2-past-tense-formation",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#F59E0B",
+  "emoji": "⏳",
+  "title": "Past Tense Stem Formation",
+  "subtitle": "Navigating the three regular past markers (-id-, -d-, -t-) in Kannada",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Kannada verbs form the past tense by joining a past marker (-id-, -d-, or -t-) to the root before attaching personal agreement suffixes.",
+  "structure": {
+   "headers": [
+    "Verb Class",
+    "Past Marker",
+    "Root -> Past Stem",
+    "Example (I did...)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Weak Class (Regular -u verbs)",
+      "-id- (ಇದ)",
+      "ಮಾಡು -> ಮಾಡಿದ-",
+      "ನಾನು ಮಾಡಿದೆ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Middle Class (-l, -r, -y stems)",
+      "-d- (ದ)",
+      "ಬರೆ -> ಬರೆದ-",
+      "ನಾನು ಬರೆದೆ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Strong Class (-n, -l, irregulars)",
+      "-t- (ತ) / Geminates",
+      "ತಿನ್ನು -> ತಿಂದ- / ಕೊಲ್ಲು -> ಕೊಂದ-",
+      "ನಾನು ತಿಂದೆ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Irregular monosyllables",
+      "Vowel shifts",
+      "ಹೋಗು -> ಹೋದ-",
+      "ನಾನು ಹೋದೆ"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Completed action with regular -id- marker",
+    "example": "ಅವನು ನಿನ್ನೆ ಕೆಲಸ ಮಾಡಿದನು.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Action with -d- stem class",
+    "example": "ನಾವು ಕಳೆದ ವಾರ ಪತ್ರ ಬರೆದೆವು.",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Common irregular past verb",
+    "example": "ಅವಳು ಶಾಲೆಗೆ ಹೋದಳು.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ನಾನು ನಿನ್ನೆ ಕಥೆ ಪುಸ್ತಕವನ್ನು ಓದಿದೆನು.",
+    "ko": "",
+    "highlight": "ಓದಿದೆನು"
+   },
+   {
+    "en": "ರಾಮು ಮಧ್ಯಾಹ್ನ ಊಟ ಮಾಡಿದನು.",
+    "ko": "",
+    "highlight": "ಮಾಡಿದನು"
+   },
+   {
+    "en": "ಅವರು ಊರಿಗೆ ಹೋದರು.",
+    "ko": "",
+    "highlight": "ಹೋದರು"
+   },
+   {
+    "en": "ನೀನು ಹಾಲು ಕುಡಿದೆ.",
+    "ko": "",
+    "highlight": "ಕುಡಿದೆ"
+   },
+   {
+    "en": "ನಾವು ಹೊಸ ಚಿತ್ರವನ್ನು ನೋಡಿದೆವು.",
+    "ko": "",
+    "highlight": "ನೋಡಿದೆವು"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ನಾನು ಬರೆದೆನು ಬದಲಿಗೆ ನಾನು ಬರಿದೆನು",
+    "right": "ನಾನು ಬರೆದೆನು",
+    "note": "Root vowels do not randomly harmonize; the stem for 'ಬರೆ' in past is 'ಬರೆದ-'."
+   },
+   {
+    "wrong": "ಅವನು ಹೋದಿದನು.",
+    "right": "ಅವನು ಹೋದನು.",
+    "note": "'ಹೋಗು' is irregular: its past stem is 'ಹೋದ-', not '*ಹೋಗಿದ-'."
+   },
+   {
+    "wrong": "ನಾವು ಅನ್ನ ಮಾಡಿದೆ.",
+    "right": "ನಾವು ಅನ್ನ ಮಾಡಿದೆವು.",
+    "note": "The personal suffix must agree with the plural subject 'ನಾವು' (-ಎವು), not singular (-ಎ)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'Yesterday Raju ___ cricket.' (ನಿನ್ನೆ ರಾಜು ಕ್ರಿಕೆಟ್ ___.)",
+    "options": [
+     "ಆಡಿದೆ",
+     "ಆಡಿದನು",
+     "ಆಡಿದರು",
+     "ಆಡಿದೆವು"
+    ],
+    "answer": 1,
+    "explanation": "'ರಾಜು' is third-person masculine singular, demanding the past suffix '-ಇದನು' (ಆಡಿದನು)."
+   },
+   {
+    "question": "What is the correct past form for 'We saw' from verb 'ನೋಡು'?",
+    "options": [
+     "ನೋಡಿದೆವು",
+     "ನೋಡಿದನು",
+     "ನೋಡಿದರು",
+     "ನೋಡಿದಳು"
+    ],
+    "answer": 0,
+    "explanation": "'ನಾವು' (we) requires the first-person plural agreement '-ಎವು', forming 'ನೋಡಿದೆವು'."
+   },
+   {
+    "question": "Identify the irregular past form of 'ಹೋಗು' (to go) for 'She went':",
+    "options": [
+     "ಹೋಗಿದಳು",
+     "ಹೋಗ್ತಾಳೆ",
+     "ಹೋದಳು",
+     "ಹೋಗಿದ್ದಾಳೆ"
+    ],
+    "answer": 2,
+    "explanation": "The past stem of 'ಹೋಗು' is 'ಹೋದ-', and with feminine singular '-ಅಳು' it becomes 'ಹೋದಳು'."
+   },
+   {
+    "question": "Fill in the blank: 'I drank water.' (ನಾನು ನೀರು ___.)",
+    "options": [
+     "ಕುಡಿಯುತ್ತೇನೆ",
+     "ಕುಡಿದನು",
+     "ಕುಡಿಯಿರಿ",
+     "ಕುಡಿದೆನು"
+    ],
+    "answer": 3,
+    "explanation": "'ನಾನು' (I) takes the first-person singular suffix '-ಎನು' / '-ಎ', yielding 'ಕುಡಿದೆನು'."
+   }
+  ],
+  "tip": "Most verbs ending in two-syllable 'ಉ' preceded by a consonant (like ಮಾಡು, ಓದು, ನೋಡು) take the regular '-ಇದ್-' past marker."
+ },
+ {
+  "id": "kn-a2-dative-subject-constructions",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🎯",
+  "title": "Dative Subject Constructions",
+  "subtitle": "Expressing wants, feelings, physical sensations, and knowledge with -ಗೆ",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "In Kannada, verbs of need, physical sensation, preference, and knowledge require the experiencer to take the dative case (-ಗೆ / -ಕ್ಕೆ) rather than the nominative case.",
+  "structure": {
+   "headers": [
+    "Experiencer (Dative)",
+    "Predicate Element",
+    "Example",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ನನಗೆ (to me)",
+      "ಬೇಕು (is needed)",
+      "ನನಗೆ ನೀರು ಬೇಕು.",
+      "I want water."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ಅವನಿಗೆ (to him)",
+      "ಗೊತ್ತು (is known)",
+      "ಅವನಿಗೆ ಕನ್ನಡ ಗೊತ್ತು.",
+      "He knows Kannada."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ಅವರಿಗೆ (to them)",
+      "ಇಷ್ಟ (liking)",
+      "ಅವರಿಗೆ ಹಾಡು ಇಷ್ಟ.",
+      "They like songs."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ಮಗುವಿಗೆ (to child)",
+      "ಹಸಿವು (hunger)",
+      "ಮಗುವಿಗೆ ಹಸಿವಾಗಿದೆ.",
+      "The child is hungry."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Expressing necessity or wanting with ಬೇಕು",
+    "example": "ನಮಗೆ ವಿಶ್ರಾಂತಿ ಬೇಕು.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Expressing knowledge or mental state",
+    "example": "ನಿಮಗೆ ಈ ಊರು ಗೊತ್ತಾ?",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Expressing physical sensation or pain",
+    "example": "ಅವಳಿಗೆ ತಲೆನೋವು ಇದೆ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ನನಗೆ ಈಗ ಬಿಸಿ ಕಾಫಿ ಬೇಕು.",
+    "ko": "",
+    "highlight": "ನನಗೆ"
+   },
+   {
+    "en": "ನಿನಗೆ ಈ ವಿಷಯ ಗೊತ್ತೇ?",
+    "ko": "",
+    "highlight": "ನಿನಗೆ"
+   },
+   {
+    "en": "ಅವರಿಗೆ ಈ ಊಟ ಇಷ್ಟವಿಲ್ಲ.",
+    "ko": "",
+    "highlight": "ಅವರಿಗೆ"
+   },
+   {
+    "en": "ರಮೇಶನಿಗೆ ಜ್ವರ ಬಂದಿದೆ.",
+    "ko": "",
+    "highlight": "ರಮೇಶನಿಗೆ"
+   },
+   {
+    "en": "ನನ್ನ ತಾಯಿಗೆ ಕನ್ನಡ ಭಾಷೆ ಚೆನ್ನಾಗಿ ತಿಳಿಯುತ್ತದೆ.",
+    "ko": "",
+    "highlight": "ತಾಯಿಗೆ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ನಾನು ಪುಸ್ತಕ ಬೇಕು.",
+    "right": "ನನಗೆ ಪುಸ್ತಕ ಬೇಕು.",
+    "note": "With 'ಬೇಕು' (want/need), the experiencer must be dative 'ನನಗೆ', never nominative 'ನಾನು'."
+   },
+   {
+    "wrong": "ಅವನು ಕನ್ನಡ ಗೊತ್ತು.",
+    "right": "ಅವನಿಗೆ ಕನ್ನಡ ಗೊತ್ತು.",
+    "note": "Knowledge predicates like 'ಗೊತ್ತು' require a dative subject ('ಅವನಿಗೆ')."
+   },
+   {
+    "wrong": "ನನಗೆ ಇಷ್ಟ ಇದ್ದೇನೆ.",
+    "right": "ನನಗೆ ಇಷ್ಟ ಇದೆ.",
+    "note": "Dative constructions take impersonal third-person neuter agreement ('ಇದೆ'), not first-person ('ಇದ್ದೇನೆ')."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'I need coffee.' (___ ಕಾಫಿ ಬೇಕು.)",
+    "options": [
+     "ನಾನು",
+     "ನನ್ನ",
+     "ನನಗೆ",
+     "ನನ್ನಿಂದ"
+    ],
+    "answer": 2,
+    "explanation": "The predicate 'ಬೇಕು' obligatorily triggers the dative case on the experiencer ('ನನಗೆ')."
+   },
+   {
+    "question": "Fill in the blank: 'Do you know English?' (___ ಇಂಗ್ಲಿಷ್ ಗೊತ್ತಾ?)",
+    "options": [
+     "ನೀವು",
+     "ನಿಮಗೆ",
+     "ನಿಮ್ಮ",
+     "ನಿಮ್ಮನ್ನು"
+    ],
+    "answer": 1,
+    "explanation": "'ಗೊತ್ತು' (known) takes the dative experiencer 'ನಿಮಗೆ' (to you)."
+   },
+   {
+    "question": "Which sentence correctly says 'Suresh has a headache'?",
+    "options": [
+     "ಸುರೇಶ ತಲೆನೋವು ಇದೆ.",
+     "ಸುರೇಶನಿಗೆ ತಲೆನೋವು ಇದೆ.",
+     "ಸುರೇಶನನ್ನು ತಲೆನೋವು ಇದೆ.",
+     "ಸುರೇಶನಲ್ಲಿ ತಲೆನೋವು ಇದೆ."
+    ],
+    "answer": 1,
+    "explanation": "Proper names ending in consonants or 'ಅ' take the dative ending '-ನಿಗೆ' (ಸುರೇಶನಿಗೆ)."
+   },
+   {
+    "question": "Choose the correct predicate for: 'They do not want tea.' (ಅವರಿಗೆ ಚಹಾ ___.)",
+    "options": [
+     "ಬೇಡ",
+     "ಇಲ್ಲ",
+     "ಅಲ್ಲ",
+     "ಗೊತ್ತಿಲ್ಲ"
+    ],
+    "answer": 0,
+    "explanation": "The negative counterpart of 'ಬೇಕು' (want/need) is 'ಬೇಡ'."
+   }
+  ],
+  "tip": "English says 'I want X', but Kannada literally thinks 'To-me X is-wanted' (ನನಗೆ X ಬೇಕು). Never use 'ನಾನು' before 'ಬೇಕು' or 'ಗೊತ್ತು'!"
+ },
+ {
+  "id": "kn-a2-verbal-participles-converb",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔗",
+  "title": "Verbal Participle / Converb (-i / -du)",
+  "subtitle": "Chaining consecutive actions performed by the same subject",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Chain sequential actions by converting all preceding verbs into verbal participles ending in -i or -du, inflecting only the final verb for tense and person.",
+  "structure": {
+   "headers": [
+    "Verb Stem Type",
+    "Participle Ending",
+    "Root -> Participle",
+    "Example in Chain"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Weak Verbs (-id- class)",
+      "-i (ಇ)",
+      "ಮಾಡು -> ಮಾಡಿ",
+      "ಕೆಲಸ ಮಾಡಿ ಬಂದನು (Did work and came)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Middle Verbs (-d- class)",
+      "-du (ದು)",
+      "ತಿನ್ನು -> ತಿಂದು",
+      "ಹಣ್ಣು ತಿಂದು ಮಲಗಿದನು (Ate fruit and slept)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Strong/Contraction Verbs",
+      "-ದು / -ತು",
+      "ಹೋಗು -> ಹೋಗಿ / ಬರು -> ಬಂದು",
+      "ಮನೆಗೆ ಬಂದು ಓದಿದಳು (Came home and read)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Verbal base in -e",
+      "-ದು",
+      "ಬರೆ -> ಬರೆದು",
+      "ಪತ್ರ ಬರೆದು ಕಳುಹಿಸಿದನು (Wrote letter and sent)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Expressing 'having done X, did Y'",
+    "example": "ಅವಳು ಸ್ನಾನ ಮಾಡಿ ಪೂಜೆ ಮಾಡಿದಳು.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Compound verbs with auxiliary actions",
+    "example": "ಪುಸ್ತಕವನ್ನು ಮೇಜಿನ ಮೇಲೆ ಇಟ್ಟು ಹೋದನು.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Chaining three or more actions",
+    "example": "ಅವನು ಎದ್ದು, ಮುಖ ತೊಳೆದು, ಕಾಫಿ ಕುಡಿದನು.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ನಾನು ಮನೆಗೆ ಹೋಗಿ ಊಟ ಮಾಡಿದೆನು.",
+    "ko": "",
+    "highlight": "ಹೋಗಿ"
+   },
+   {
+    "en": "ಅವನು ಅಂಗಡಿಗೆ ಹೋಗಿ ಹಾಲು ತಂದನು.",
+    "ko": "",
+    "highlight": "ಹೋಗಿ"
+   },
+   {
+    "en": "ಮಕ್ಕಳು ಆಟವಾಡಿ ಮನೆಗೆ ಬಂದರು.",
+    "ko": "",
+    "highlight": "ಆಟವಾಡಿ"
+   },
+   {
+    "en": "ಅವಳು ಪತ್ರವನ್ನು ಬರೆದು ಪೋಸ್ಟ್ ಮಾಡಿದಳು.",
+    "ko": "",
+    "highlight": "ಬರೆದು"
+   },
+   {
+    "en": "ನಾವು ಕಾಫಿ ಕುಡಿದು ಮಾತನಾಡಿದೆವು.",
+    "ko": "",
+    "highlight": "ಕುಡಿದು"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ನಾನು ಶಾಲೆಗೆ ಹೋದೆನು ಮತ್ತು ಪಾಠ ಕೇಳಿದೆನು.",
+    "right": "ನಾನು ಶಾಲೆಗೆ ಹೋಗಿ ಪಾಠ ಕೇಳಿದೆನು.",
+    "note": "While 'ಮತ್ತು' (and) exists, natural Kannada strongly prefers the verbal participle ('ಹೋಗಿ') to link sequential clauses."
+   },
+   {
+    "wrong": "ಅವನು ಊಟ ಮಾಡಿದ್ದು ಹೋದನು.",
+    "right": "ಅವನು ಊಟ ಮಾಡಿ ಹೋದನು.",
+    "note": "'ಮಾಡಿದ್ದು' is a past relative/nominalized form; the converb for 'ಮಾಡು' is 'ಮಾಡಿ'."
+   },
+   {
+    "wrong": "ಅವಳು ಬಂದು ನಾನು ಹೋದೆನು.",
+    "right": "ಅವಳು ಬಂದ ನಂತರ ನಾನು ಹೋದೆನು.",
+    "note": "The verbal participle chain requires the same subject across both clauses; use '-ನಂತರ' (after) for differing subjects."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'Raju ate food and slept.' (ರಾಜು ಊಟ ___ ಮಲಗಿದನು.)",
+    "options": [
+     "ತಿಂದು",
+     "ತಿಂದನು",
+     "ತಿನ್ನುತ್ತಾನೆ",
+     "ತಿನ್ನಲು"
+    ],
+    "answer": 0,
+    "explanation": "The past verbal participle of 'ತಿನ್ನು' (to eat) is 'ತಿಂದು', chaining into the final finite verb."
+   },
+   {
+    "question": "Combine: 'She went home' and 'She rested.' (ಅವಳು ಮನೆಗೆ ___ ವಿಶ್ರಾಂತಿ ಪಡೆದಳು.)",
+    "options": [
+     "ಹೋದಳು",
+     "ಹೋಗಿ",
+     "ಹೋಗುವುದು",
+     "ಹೋಗಲು"
+    ],
+    "answer": 1,
+    "explanation": "'ಹೋಗಿ' is the converb (participle) of 'ಹೋಗು', chaining the prior action."
+   },
+   {
+    "question": "What is the verbal participle of 'ಮಾಡು' (to do)?",
+    "options": [
+     "ಮಾಡಿದನು",
+     "ಮಾಡಿ",
+     "ಮಾಡಲು",
+     "ಮಾಡುವ"
+    ],
+    "answer": 1,
+    "explanation": "Weak class verbs form their verbal participle simply with '-i', giving 'ಮಾಡಿ'."
+   },
+   {
+    "question": "Fill in the blank: 'Write the homework and give it.' (ಮನೆಕೆಲಸ ___ ಕೊಡಿ.)",
+    "options": [
+     "ಬರೆಯಿರಿ",
+     "ಬರೆದರು",
+     "ಬರೆದು",
+     "ಬರೆಯುವುದು"
+    ],
+    "answer": 2,
+    "explanation": "The converb of 'ಬರೆ' is 'ಬರೆದು', creating the sequence 'write and give'."
+   }
+  ],
+  "tip": "Only the final verb in a Kannada sentence receives personal gender/number agreement; every preceding linked action stays in its short participle form (-i or -du)."
+ },
+ {
+  "id": "kn-a2-modal-auxiliary-verbs",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#EC4899",
+  "emoji": "🎛️",
+  "title": "Modal Auxiliaries (Bahudu, Koodadu, Beku)",
+  "subtitle": "Expressing permission, prohibition, and obligation with the infinitive",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "Attach invariant modals like -ಬಹುದು (may/can), -ಕೂಡದು (must not), and -ಬೇಕು (must/should) directly to the verb infinitive to express modality.",
+  "structure": {
+   "headers": [
+    "Modal Form",
+    "Meaning",
+    "Verb + Modal Combination",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-ಬಹುದು (-bahudu)",
+      "May / Can (Permission, possibility)",
+      "ಮಾಡ + ಬಹುದು -> ಮಾಡಬಹುದು",
+      "ನೀವು ಬರಬಹುದು (You may come)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ಕೂಡದು (-koodadu)",
+      "Must not (Strict prohibition)",
+      "ಹೋಗ + ಕೂಡದು -> ಹೋಗಕೂಡದು",
+      "ಹೋಗಕೂಡದು (One must not go)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ಬೇಕು (-beku)",
+      "Must / Should (Obligation)",
+      "ಓದ + ಬೇಕು -> ಓದಬೇಕು",
+      "ನೀನು ಓದಬೇಕು (You must study)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ಬಾರದು (-baaradu)",
+      "Should not (Moral prohibitive)",
+      "ಹೇಳ + ಬಾರದು -> ಹೇಳಬಾರದು",
+      "ಸುಳ್ಳು ಹೇಳಬಾರದು (One shouldn't lie)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Granting permission or stating possibility",
+    "example": "ನೀವು ಈಗ ಒಳಗೆ ಬರಬಹುದು.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Expressing strict rule or social prohibition",
+    "example": "ಇಲ್ಲಿ ವಾಹನ ನಿಲ್ಲಿಸಕೂಡದು.",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Expressing personal obligation or duty",
+    "example": "ನಾವು ಪ್ರತಿದಿನ ವ್ಯಾಯಾಮ ಮಾಡಬೇಕು.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ನೀವು ಈಗ ಮನೆಗೆ ಹೋಗಬಹುದು.",
+    "ko": "",
+    "highlight": "ಹೋಗಬಹುದು"
+   },
+   {
+    "en": "ವಿದ್ಯಾರ್ಥಿಗಳು ತರಗತಿಯಲ್ಲಿ ಮೊಬೈಲ್ ಬಳಸಕೂಡದು.",
+    "ko": "",
+    "highlight": "ಬಳಸಕೂಡದು"
+   },
+   {
+    "en": "ನಾವು ಸಮಯಕ್ಕೆ ಸರಿಯಾಗಿ ಶಾಲೆಗೆ ತಲುಪಬೇಕು.",
+    "ko": "",
+    "highlight": "ತಲುಪಬೇಕು"
+   },
+   {
+    "en": "ಯಾರೂ ಸುಳ್ಳು ಮಾತನಾಡಬಾರದು.",
+    "ko": "",
+    "highlight": "ಮಾತನಾಡಬಾರದು"
+   },
+   {
+    "en": "ನಾನು ನಿಮ್ಮ ಪುಸ್ತಕವನ್ನು ನೋಡಬಹುದೇ?",
+    "ko": "",
+    "highlight": "ನೋಡಬಹುದೇ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ನೀನು ಹೋಗಿಬಹುದು.",
+    "right": "ನೀನು ಹೋಗಬಹುದು.",
+    "note": "Attach '-ಬಹುದು' to the infinitive ending in '-ಅ' (ಹೋಗ-), never to the past verbal participle ('ಹೋಗಿ')."
+   },
+   {
+    "wrong": "ನೀವು ಬರಬೇಕು ಇಲ್ಲ.",
+    "right": "ನೀವು ಬರಬೇಕಾಗಿಲ್ಲ.",
+    "note": "To say 'need not', use '-ಬೇಕಾಗಿಲ್ಲ', not '*ಬೇಕು ಇಲ್ಲ'."
+   },
+   {
+    "wrong": "ಅವನು ಓದಬೇಡ.",
+    "right": "ಅವನು ಓದಬಾರದು.",
+    "note": "'-ಬೇಡ' is only for direct imperative commands ('Don't study!'). For third-person statements ('He should not study'), use '-ಬಾರದು' or '-ಕೂಡದು'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: 'You may ask questions.' (ನೀವು ಪ್ರಶ್ನೆಗಳನ್ನು ___.)",
+    "options": [
+     "ಕೇಳಬಹುದು",
+     "ಕೇಳಬೇಡ",
+     "ಕೇಳಬೇಕು",
+     "ಕೇಳಕೂಡದು"
+    ],
+    "answer": 0,
+    "explanation": "'-ಬಹುದು' signifies permission ('may ask')."
+   },
+   {
+    "question": "How do you say 'One must not smoke here' in Kannada? (ಇಲ್ಲಿ ಧೂಮಪಾನ ___.)",
+    "options": [
+     "ಮಾಡಬಹುದು",
+     "ಮಾಡಬೇಕು",
+     "ಮಾಡಬೇಡ",
+     "ಮಾಡಕೂಡದು"
+    ],
+    "answer": 3,
+    "explanation": "'-ಕೂಡದು' expresses strict official or public prohibition ('must not do')."
+   },
+   {
+    "question": "Fill in the blank for obligation: 'We must help everyone.' (ನಾವು ಎಲ್ಲರಿಗೂ ಸಹಾಯ ___.)",
+    "options": [
+     "ಮಾಡಬಹುದು",
+     "ಮಾಡಬೇಕು",
+     "ಮಾಡಬಾರದು",
+     "ಮಾಡಕೂಡದು"
+    ],
+    "answer": 1,
+    "explanation": "'-ಬೇಕು' combined with an infinitive indicates duty/obligation ('must help')."
+   },
+   {
+    "question": "Select the correct form: 'May I come in?' (ನಾನು ಒಳಗೆ ___?)",
+    "options": [
+     "ಬರಬೇಡಿ",
+     "ಬರಕೂಡದು",
+     "ಬರಬಹುದೇ",
+     "ಬರಬೇಡವೇ"
+    ],
+    "answer": 2,
+    "explanation": "Adding the question marker '-ಏ' to '-ಬಹುದು' produces '-ಬಹುದೇ' ('May I...?')."
+   }
+  ],
+  "tip": "These modal auxiliaries are defective verbs: they do not conjugate for gender, number, or person. 'ಮಾಡಬೇಕು' stays the same whether the subject is ನಾನು, ಅವಳು, or ಅವರು."
+ },
+ {
+  "id": "kn-a2-clitic-particles",
+  "level": "a2",
+  "category": "questions",
+  "categoryColor": "#0284C7",
+  "emoji": "🔤",
+  "title": "Discourse Particles (-aa, -ve, -oo, -uu)",
+  "subtitle": "Modifying clause meaning with interrogative, inclusive, and alternative clitics",
+  "color": "#0369A1",
+  "bg": "#F0F9FF",
+  "keyPoint": "In Kannada, single-vowel clitics attach directly to the end of inflected words to turn statements into polar questions, express doubt, or mean 'also' and 'either/or'.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Function",
+    "Kannada Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-ಆ (-aa)",
+      "Yes/No Question",
+      "ಅವನು ಬಂದನಾ?",
+      "Did he come?"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ವೂ / -ಊ (-uu)",
+      "Inclusivity ('also', 'even')",
+      "ನಾನೂ ಬರುತ್ತೇನೆ.",
+      "I will also come."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ಓ (-oo)",
+      "Alternative / Uncertainty ('or')",
+      "ಇವತ್ತೋ ನಾಳೆಯೋ?",
+      "Today or tomorrow?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ವೇ (-ve)",
+      "Emphasis / Exclusivity",
+      "ಅವನೇ ಮಾಡಿದನು.",
+      "He himself did it."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Polar Question Formation",
+    "example": "ನೀವು ಕಾಫಿ ಕುಡಿಯುತ್ತೀರಾ?",
+    "translation": ""
+   },
+   {
+    "color": "#0EA5E9",
+    "label": "Inclusivity and Conjunction",
+    "example": "ನನಗೂ ಅದು ಬೇಕು.",
+    "translation": ""
+   },
+   {
+    "color": "#38BDF8",
+    "label": "Doubt or Disjunction",
+    "example": "ಅವನಿಗೆ ನೆನಪಿದೆಯೋ ಇಲ್ಲವೋ ಗೊತ್ತಿಲ್ಲ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ನೀವು ಕನ್ನಡ ಮಾತನಾಡುತ್ತೀರಾ?",
+    "ko": "",
+    "highlight": "ಮಾತನಾಡುತ್ತೀರಾ"
+   },
+   {
+    "en": "ನನಗೂ ಪುಸ್ತಕಗಳು ಇಷ್ಟ.",
+    "ko": "",
+    "highlight": "ನನಗೂ"
+   },
+   {
+    "en": "ಇವತ್ತೋ ನಾಳೆಯೋ ಆ ಕೆಲಸ ಮುಗಿಯುತ್ತದೆ.",
+    "ko": "",
+    "highlight": "ಇವತ್ತೋ"
+   },
+   {
+    "en": "ಅವಳೇ ಈ ಹಾಡನ್ನು ಹಾಡಿದಳು.",
+    "ko": "",
+    "highlight": "ಅವಳೇ"
+   },
+   {
+    "en": "ಮನೆಯಲ್ಲಿ ಯಾರೂ ಇಲ್ಲ.",
+    "ko": "",
+    "highlight": "ಯಾರೂ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ನೀವು ಕಾಫಿ ಕುಡಿಯುತ್ತೀರಿ ಏನು?",
+    "right": "ನೀವು ಕಾಫಿ ಕುಡಿಯುತ್ತೀರಾ?",
+    "note": "Do not simply place ಏನು at the end for yes/no questions; attach the interrogative clitic -ಆ (-aa) to the finite verb."
+   },
+   {
+    "wrong": "ನಾನು ಮತ್ತು ಬರುತ್ತೇನೆ.",
+    "right": "ನಾನೂ ಬರುತ್ತೇನೆ.",
+    "note": "Use the clitic -ಊ (-uu) on the noun/pronoun to express 'also', not the conjunction ಮತ್ತು ('and')."
+   },
+   {
+    "wrong": "ಅವನು ಅಥವಾ ಅವಳು ಬರುತ್ತಾರೆ?",
+    "right": "ಅವನೋ ಅವಳೋ ಬರುತ್ತಾರಾ?",
+    "note": "In conversational Kannada, alternatives within clauses are typically marked with -ಓ (-oo) rather than using the formal word ಅಥವಾ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Convert 'He came' (ಅವನು ಬಂದನು) into 'Did he come?'",
+    "options": [
+     "ಅವನು ಬಂದನು ಏನು",
+     "ಅವನು ಬಂದನಾ",
+     "ಅವನು ಬಂದನೋ",
+     "ಅವನು ಬಂದನೂ"
+    ],
+    "answer": 1,
+    "explanation": "The clitic -ಆ (-aa) turns a declarative finite verb into a polar (yes/no) question, yielding ಬಂದನಾ."
+   },
+   {
+    "question": "Which sentence means 'I will also go'?",
+    "options": [
+     "ನಾನು ಕೂಡ ಹೋಗು",
+     "ನಾನು ಅಥವಾ ಹೋಗುತ್ತೇನೆ",
+     "ನಾನೂ ಹೋಗುತ್ತೇನೆ",
+     "ನಾನೇ ಹೋಗುವುದಿಲ್ಲ"
+    ],
+    "answer": 2,
+    "explanation": "Attaching the clitic -ಊ (-uu) to ನಾನು produces ನಾನೂ, meaning 'I also'."
+   },
+   {
+    "question": "Select the sentence meaning 'Tea or coffee?' using particles:",
+    "options": [
+     "ಚಹಾವೋ ಕಾಫಿಯೋ?",
+     "ಚಹಾ ಮತ್ತು ಕಾಫಿ?",
+     "ಚಹಾ ಕಾಫಿ ಏನು?",
+     "ಚಹಾ ಅಥವಾ ಕಾಫಿ ಅಲ್ಲ?"
+    ],
+    "answer": 0,
+    "explanation": "Attaching -ಓ (-oo) with glide insertion creates ಚಹಾವೋ ಕಾಫಿಯೋ?, expressing 'tea or coffee?'."
+   },
+   {
+    "question": "How do you say 'Nobody came' using the interrogative pronoun ಯಾರು?",
+    "options": [
+     "ಯಾರೇ ಬಂದರು",
+     "ಯಾರೋ ಬಂದರು",
+     "ಯಾರಾ ಬಂದರು",
+     "ಯಾರೂ ಬರಲಿಲ್ಲ"
+    ],
+    "answer": 3,
+    "explanation": "An interrogative word + -ಊ followed by a negative verb forms a universal negative: ಯಾರೂ ಬರಲಿಲ್ಲ (no one came)."
+   }
+  ],
+  "tip": "Remember glide rules when attaching clitics: words ending in -i, -e, -ai take a -y- glide (ಮನೆ + -ಆ = ಮನೆಯಾ), while words ending in -u, -o take a -v- glide (ಗುರು + -ಆ = ಗುರುವೋ / ಗುರುವೂ)."
+ },
+ {
+  "id": "kn-a2-continuous-aspect",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#16A34A",
+  "emoji": "⏳",
+  "title": "Continuous Aspect Formation",
+  "subtitle": "Forming present and past continuous verbs with the auxiliary ಇರು",
+  "color": "#15803D",
+  "bg": "#F0FDF4",
+  "keyPoint": "Continuous forms are built by taking the present participle stem (-ುತ್ತ / -ಉತ್ತ) and attaching the conjugated forms of the auxiliary verb ಇರು (to be).",
+  "structure": {
+   "headers": [
+    "Person / Pronoun",
+    "Verb Stem + Participle",
+    "Auxiliary (ಇರು)",
+    "Combined Continuous Form"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ಅವನು (He)",
+      "ಮಾಡು + ತ್ತ",
+      "ಇದ್ದಾನೆ",
+      "ಮಾಡುತ್ತಿದ್ದಾನೆ"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ಅವಳು (She)",
+      "ಓದು + ತ್ತ",
+      "ಇದ್ದಾಳೆ",
+      "ಓದುತ್ತಿದ್ದಾಳೆ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ಅವರು (They)",
+      "ಬರೆ + ಯುತ್ತ",
+      "ಇದ್ದಾರೆ",
+      "ಬರೆಯುತ್ತಿದ್ದಾರೆ"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ನಾನು (I - Past)",
+      "ತಿನ್ನು + ತ್ತ",
+      "ಇದ್ದೆನು",
+      "ತಿನ್ನುತ್ತಿದ್ದೆನು"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#16A34A",
+    "label": "Ongoing Present Action",
+    "example": "ರವಿ ಈಗ ಊಟ ಮಾಡುತ್ತಿದ್ದಾನೆ.",
+    "translation": ""
+   },
+   {
+    "color": "#22C55E",
+    "label": "Ongoing Past Event",
+    "example": "ನಿನ್ನೆ ಮಳೆ ಬರುತ್ತಿತ್ತು.",
+    "translation": ""
+   },
+   {
+    "color": "#4ADE80",
+    "label": "Current Habitual / Progressive State",
+    "example": "ನಾವು ಬೆಂಗಳೂರಿನಲ್ಲಿ ವಾಸಿಸುತ್ತಿದ್ದೇವೆ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ಮಕ್ಕಳು ಶಾಲೆಯಲ್ಲಿ ಆಟವಾಡುತ್ತಿದ್ದಾರೆ.",
+    "ko": "",
+    "highlight": "ಆಟವಾಡುತ್ತಿದ್ದಾರೆ"
+   },
+   {
+    "en": "ಅವಳು ಪುಸ್ತಕವನ್ನು ಓದುತ್ತಿದ್ದಾಳೆ.",
+    "ko": "",
+    "highlight": "ಓದುತ್ತಿದ್ದಾಳೆ"
+   },
+   {
+    "en": "ನಾನು ನಿನ್ನೆ ಸಂಜೆ ಕೆಲಸ ಮಾಡುತ್ತಿದ್ದೆ.",
+    "ko": "",
+    "highlight": "ಮಾಡುತ್ತಿದ್ದೆ"
+   },
+   {
+    "en": "ಅಮ್ಮ ಅಡುಗೆ ಕೋಣೆಯಲ್ಲಿ ಅಡುಗೆ ಮಾಡುತ್ತಿದ್ದಾಳೆ.",
+    "ko": "",
+    "highlight": "ಮಾಡುತ್ತಿದ್ದಾಳೆ"
+   },
+   {
+    "en": "ರೈಲು ನಿಲ್ದಾಣಕ್ಕೆ ಬರುತ್ತಿದೆ.",
+    "ko": "",
+    "highlight": "ಬರುತ್ತಿದೆ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ಅವನು ಮಾಡುತ್ತಾನೆ ಇದ್ದಾನೆ.",
+    "right": "ಅವನು ಮಾಡುತ್ತಿದ್ದಾನೆ.",
+    "note": "Do not write the finite simple present and auxiliary separately; merge the participle stem (-ುತ್ತ) directly with the auxiliary ಇರು."
+   },
+   {
+    "wrong": "ಅವಳು ಊಟ ಮಾಡಿದೆ ಇದ್ದಾಳೆ.",
+    "right": "ಅವಳು ಊಟ ಮಾಡುತ್ತಿದ್ದಾಳೆ.",
+    "note": "Use the present verbal participle suffix -ತ್ತ (doing), not the past participle suffix -ದು/-ದೆ (having done), for continuous aspect."
+   },
+   {
+    "wrong": "ನಾನು ಓದುತ್ತಿದ್ದಾನೆ.",
+    "right": "ನಾನು ಓದುತ್ತಿದ್ದೇನೆ.",
+    "note": "The auxiliary verb ಇರು must agree in person, number, and gender with the subject (ನಾನು requires -ೇನೆ / ಇದ್ದೇನೆ, not -ಆನೆ / ಇದ್ದಾನೆ)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'ಅವಳು ಕಾಗದ ___.' (She is writing a letter)",
+    "options": [
+     "ಬರೆಯುತ್ತಿದ್ದಾನೆ",
+     "ಬರೆಯುತ್ತಿದ್ದಾಳೆ",
+     "ಬರೆದಳು",
+     "ಬರೆಯುತ್ತಿದ್ದರು"
+    ],
+    "answer": 1,
+    "explanation": "The feminine 3rd-person singular pronoun ಅವಳು requires the auxiliary ending ಇದ್ದಾಳೆ, giving ಬರೆಯುತ್ತಿದ್ದಾಳೆ."
+   },
+   {
+    "question": "Which verb form represents 'We were speaking' (past continuous)?",
+    "options": [
+     "ಮಾತನಾಡುತ್ತೇವೆ",
+     "ಮಾತನಾಡುತ್ತಿದ್ದೇವೆ",
+     "ಮಾತನಾಡುತ್ತಿದ್ದೆವು",
+     "ಮಾತನಾಡಿದ್ದೆವು"
+    ],
+    "answer": 2,
+    "explanation": "The past auxiliary for ನಾವು (1st person plural) is ಇದ್ದೆವು, combining into ಮಾತನಾಡುತ್ತಿದ್ದೆವು."
+   },
+   {
+    "question": "Identify the correct continuous verb form for 'ಅವರು' (They):",
+    "options": [
+     "ಮಾಡುತ್ತಿದ್ದಾನೆ",
+     "ಮಾಡುತ್ತಿದ್ದಾಳೆ",
+     "ಮಾಡುತ್ತಿದ್ದೀಯ",
+     "ಮಾಡುತ್ತಿದ್ದಾರೆ"
+    ],
+    "answer": 3,
+    "explanation": "The honorific/plural 3rd-person pronoun ಅವರು takes ಇದ್ದಾರೆ, yielding ಮಾಡುತ್ತಿದ್ದಾರೆ."
+   },
+   {
+    "question": "What is the continuous form of 'ನಾನು' (I) with the verb 'ನೋಡು' (to watch)?",
+    "options": [
+     "ನೋಡುತ್ತಿದ್ದೇನೆ",
+     "ನೋಡುತ್ತಿದ್ದಾನೆ",
+     "ನೋಡುತ್ತಿದ್ದೀರಿ",
+     "ನೋಡುತ್ತಿದ್ದೇವೆ"
+    ],
+    "answer": 0,
+    "explanation": "The 1st-person singular ending is ಇದ್ದೇನೆ, combining with ನೋಡು + ತ್ತ to form ನೋಡುತ್ತಿದ್ದೇನೆ."
+   }
+  ],
+  "tip": "In spoken Kannada, the suffix -ತ್ತಿದ್ದಾನೆ (-uttiddane) often contracts smoothly to -್ತಾನೆ / -ತಾವ್ನೆ (e.g., ಮಾಡ್ತಿದ್ದಾನೆ / ಮಾಡ್ತಾನೆ), but written standard Kannada keeps -ತ್ತಿದ್ದಾನೆ intact."
+ },
+ {
+  "id": "kn-b1-relative-participles",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#9333EA",
+  "emoji": "🔗",
+  "title": "Adjectival (Relative) Participles",
+  "subtitle": "Forming relative clauses that qualify nouns without relative pronouns",
+  "color": "#7E22CE",
+  "bg": "#FAF5FF",
+  "keyPoint": "Kannada has no relative pronouns like 'who' or 'which'; instead, clauses turn into adjective phrases ending in -ದ (past), -ವ/-ಉವ (present/future), or -ದ (negative) placed directly before the noun.",
+  "structure": {
+   "headers": [
+    "Participle Type",
+    "Marker Pattern",
+    "Relative Participle",
+    "Modified Noun Phrase"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Past Relative",
+      "Past Stem + -ಅ (-a)",
+      "ಮಾಡಿದ (did)",
+      "ಮಾಡಿದ ಕೆಲಸ (the work that [someone] did)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Present/Future",
+      "Root + -ಉವ (-uva)",
+      "ಬರುವ (coming/will come)",
+      "ಬರುವ ವಾರ (the coming week)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Relative",
+      "Root + -ಅದ (-ada)",
+      "ತಿನ್ನದ (not eating/eaten)",
+      "ತಿನ್ನದ ಊಟ (the food that was not eaten)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Stative",
+      "Root + ನಿಂತ / ಕುಳಿತ",
+      "ಕುಳಿತ (sitting)",
+      "ಕುಳಿತ ವ್ಯಕ್ತಿ (the person who is seated)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#9333EA",
+    "label": "Past Completed Relative Clause",
+    "example": "ನಿನ್ನೆ ಬಂದ ಅತಿಥಿ ಇವರೇ.",
+    "translation": ""
+   },
+   {
+    "color": "#A855F7",
+    "label": "Habitual or Future Relative Clause",
+    "example": "ನಾಳೆ ಹೊರಡುವ ರೈಲು ಇಲ್ಲಿದೆ.",
+    "translation": ""
+   },
+   {
+    "color": "#C084FC",
+    "label": "Negative Relative Clause",
+    "example": "ಯಾರೂ ಕೇಳದ ಪ್ರಶ್ನೆ ಇದು.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ನೀವು ಕೊಟ್ಟ ಪುಸ್ತಕ ತುಂಬಾ ಚೆನ್ನಾಗಿದೆ.",
+    "ko": "",
+    "highlight": "ಕೊಟ್ಟ"
+   },
+   {
+    "en": "ಹಾಡುವ ಹುಡುಗಿ ನನ್ನ ತಂಗಿ.",
+    "ko": "",
+    "highlight": "ಹಾಡುವ"
+   },
+   {
+    "en": "ಅಲ್ಲಿ ನಿಂತಿರುವ ಮನುಷ್ಯ ಯಾರು?",
+    "ko": "",
+    "highlight": "ನಿಂತಿರುವ"
+   },
+   {
+    "en": "ಮನೆಯಲ್ಲಿ ಉಳಿದ ಆಹಾರವನ್ನು ಬಡವರಿಗೆ ಕೊಡಿ.",
+    "ko": "",
+    "highlight": "ಉಳಿದ"
+   },
+   {
+    "en": "ಬರೆಯದ ಪತ್ರವನ್ನು ಕಳುಹಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.",
+    "ko": "",
+    "highlight": "ಬರೆಯದ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ಯಾರು ಬಂದರು ಆ ಮನುಷ್ಯ ನನ್ನ ಗೆಳೆಯ.",
+    "right": "ಬಂದ ಮನುಷ್ಯ ನನ್ನ ಗೆಳೆಯ.",
+    "note": "Kannada does not use interrogative words as relative pronouns (e.g. do not say 'ಯಾರು ಬಂದರು ಆ ಮನುಷ್ಯ'); use the relative participle ಬಂದ before the noun."
+   },
+   {
+    "wrong": "ಅವನು ಮಾಡಿದನು ಕೆಲಸ ಒಳ್ಳೆಯದು.",
+    "right": "ಅವನು ಮಾಡಿದ ಕೆಲಸ ಒಳ್ಳೆಯದು.",
+    "note": "The verb in a relative clause must not take person-number-gender finite endings; it must drop the finite suffix and end in the participle vowel -ಅ (-a)."
+   },
+   {
+    "wrong": "ಹೋಗದ ವ್ಯಕ್ತಿ ಹೋಗುವುದಿಲ್ಲ.",
+    "right": "ಹೋಗದ ವ್ಯಕ್ತಿ ಮನೆಯಲ್ಲೇ ಇದ್ದಾನೆ.",
+    "note": "Ensure negative participles (-ಅದ) are not confused with negative finite verbs (-ವುದಿಲ್ಲ / -ಲಿಲ್ಲ)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct phrase for 'The book that I read':",
+    "options": [
+     "ನಾನು ಓದಿದೆ ಪುಸ್ತಕ",
+     "ನಾನು ಓದಿದ ಪುಸ್ತಕ",
+     "ನಾನು ಓದಿದನು ಪುಸ್ತಕ",
+     "ನಾನು ಓದುವ ಪುಸ್ತಕ"
+    ],
+    "answer": 1,
+    "explanation": "The past relative participle of ಓದು is ಓದಿದ. Preceding the noun, it forms 'ನಾನು ಓದಿದ ಪುಸ್ತಕ'."
+   },
+   {
+    "question": "How do you say 'The train that leaves tomorrow'?",
+    "options": [
+     "ನಾಳೆ ಹೊರಡುವ ರೈಲು",
+     "ನಾಳೆ ಹೊರಟ ರೈಲು",
+     "ನಾಳೆ ಹೊರಡದ ರೈಲು",
+     "ನಾಳೆ ಹೊರಡುತ್ತದೆ ರೈಲು"
+    ],
+    "answer": 0,
+    "explanation": "Future or imminent events use the present/future participle -ಉವ (-uva): ಹೊರಡುವ ರೈಲು."
+   },
+   {
+    "question": "Translate: 'The song that she sang':",
+    "options": [
+     "ಅವಳು ಹಾಡಿದರು ಹಾಡು",
+     "ಅವಳು ಹಾಡುವ ಹಾಡು",
+     "ಅವಳು ಹಾಡಿದ ಹಾಡು",
+     "ಅವಳು ಹಾಡದ ಹಾಡು"
+    ],
+    "answer": 2,
+    "explanation": "The past relative participle of ಹಾಡು is ಹಾಡಿದ, producing 'ಅವಳು ಹಾಡಿದ ಹಾಡು'."
+   },
+   {
+    "question": "What is the negative relative participle in: 'ತಿಳಿಯದ ವಿಷಯವನ್ನು ಮಾತನಾಡಬೇಡಿ'?",
+    "options": [
+     "ವಿಷಯವನ್ನು",
+     "ಮಾತನಾಡಬೇಡಿ",
+     "ತಿಳಿಯದ",
+     "ತಿಳಿಯ"
+    ],
+    "answer": 2,
+    "explanation": "The word ತಿಳಿಯದ (not known / unknown) is the negative adjectival participle modifying ವಿಷಯವನ್ನು."
+   }
+  ],
+  "tip": "To easily form a past relative participle from any verb, take its 3rd-person neuter past form (e.g., ಮಾಡಿತು / ಬಂತು) and replace the final syllable with -ದ / -ದ (ಮಾಡಿದ, ಬಂದ, ತಿಂದ)."
+ },
+ {
+  "id": "kn-b1-gerunds-and-verbal-nouns",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#EA580C",
+  "emoji": "📝",
+  "title": "Verbal Nouns (-uvudu / -odu)",
+  "subtitle": "Turning verbs into inflectable abstract nouns and clause complements",
+  "color": "#C2410C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Verbal nouns (gerunds) are formed by adding -ಉವುದು (-uvudu) in formal Kannada or -ವೋದು/-ಓದು (-oodu) in spoken Kannada, and they decline like ordinary neuter nouns.",
+  "structure": {
+   "headers": [
+    "Verb Root",
+    "Verbal Noun (Formal)",
+    "Dative Case (-ಕ್ಕೆ / -ದಕ್ಕೆ)",
+    "Accusative Case (-ವನ್ನು)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ಮಾಡು (to do)",
+      "ಮಾಡುವುದು",
+      "ಮಾಡುವುದಕ್ಕೆ (for doing)",
+      "ಮಾಡುವುದನ್ನು (doing - obj)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ಹೋಗು (to go)",
+      "ಹೋಗುವುದು",
+      "ಹೋಗುವುದಕ್ಕೆ (for going)",
+      "ಹೋಗುವುದನ್ನು (going - obj)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ಓದು (to read)",
+      "ಓದುವುದು",
+      "ಓದುವುದಕ್ಕೆ (for reading)",
+      "ಓದುವುದನ್ನು (reading - obj)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ಹೇಳು (to say)",
+      "ಹೇಳುವುದು",
+      "ಹೇಳುವುದಕ್ಕೆ (for saying)",
+      "ಹೇಳುವುದನ್ನು (saying - obj)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Subject of a Sentence",
+    "example": "ಕನ್ನಡ ಕಲಿಯುವುದು ಸುಲಭ.",
+    "translation": ""
+   },
+   {
+    "color": "#F97316",
+    "label": "Purpose with Dative Case",
+    "example": "ಊಟ ಮಾಡುವುದಕ್ಕೆ ಸಮಯವಾಯಿತು.",
+    "translation": ""
+   },
+   {
+    "color": "#FB923C",
+    "label": "Object of Perception / Speech",
+    "example": "ಅವನು ಬರುವುದನ್ನು ನಾನು ನೋಡಿದೆ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ಪ್ರತಿದಿನ ನಡೆಯುವುದು ಆರೋಗ್ಯಕ್ಕೆ ಒಳ್ಳೆಯದು.",
+    "ko": "",
+    "highlight": "ನಡೆಯುವುದು"
+   },
+   {
+    "en": "ಅವರು ನಿಜ ಹೇಳುವುದನ್ನು ನಾನು ಕೇಳಿದೆ.",
+    "ko": "",
+    "highlight": "ಹೇಳುವುದನ್ನು"
+   },
+   {
+    "en": "ನೀರು ಕುಡಿಯುವುದಕ್ಕೆ ಲೋಟ ಕೊಡಿ.",
+    "ko": "",
+    "highlight": "ಕುಡಿಯುವುದಕ್ಕೆ"
+   },
+   {
+    "en": "ಸಿನಿಮಾ ನೋಡುವುದು ನನಗೆ ಇಷ್ಟವಿಲ್ಲ.",
+    "ko": "",
+    "highlight": "ನೋಡುವುದು"
+   },
+   {
+    "en": "ಅವಳು ಬೇಗ ಬರುವುದಾಗಿ ತಿಳಿಸಿದಳು.",
+    "ko": "",
+    "highlight": "ಬರುವುದಾಗಿ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ಕಲಿಯಲು ಸುಲಭ ಇದೆ.",
+    "right": "ಕಲಿಯುವುದು ಸುಲಭ.",
+    "note": "While the infinitive (-ಅಲು) expresses intention, the verbal noun (-ಉವುದು) is preferred as the grammatical subject meaning 'learning'."
+   },
+   {
+    "wrong": "ನಾನು ಅವನು ಬರುತ್ತಾನೆ ನೋಡಿದೆ.",
+    "right": "ನಾನು ಅವನು ಬರುವುದನ್ನು ನೋಡಿದೆ.",
+    "note": "Clausal objects of verbs like 'see' or 'hear' require the verbal noun in the accusative case (-ವುದನ್ನು), not a finite verb."
+   },
+   {
+    "wrong": "ಹೋಗುವುದರಲ್ಲಿ ಆಸಕ್ತಿ ಇಲ್ಲ.",
+    "right": "ಹೋಗುವುದಕ್ಕೆ ಆಸಕ್ತಿ ಇಲ್ಲ.",
+    "note": "Use the dative case (-ಉವುದಕ್ಕೆ) rather than the locative when expressing purpose, desire, or interest toward an activity."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct subject: '___ is good for health' (Walking):",
+    "options": [
+     "ನಡೆಯಿರಿ",
+     "ನಡೆಯುವುದು",
+     "ನಡೆದನು",
+     "ನಡೆದು"
+    ],
+    "answer": 1,
+    "explanation": "The verbal noun ನಡೆಯುವುದು functions as the nominal subject meaning 'walking'."
+   },
+   {
+    "question": "How do you decline 'ತಿನ್ನುವುದು' (eating) into the dative case ('for eating')?",
+    "options": [
+     "ತಿನ್ನುವುದರಲ್ಲಿ",
+     "ತಿನ್ನುವುದನ್ನು",
+     "ತಿನ್ನುವುದರ",
+     "ತಿನ್ನುವುದಕ್ಕೆ"
+    ],
+    "answer": 3,
+    "explanation": "The dative case marker -ಕ್ಕೆ attached to the verbal noun stem yields ತಿನ್ನುವುದಕ್ಕೆ."
+   },
+   {
+    "question": "Translate the complement clause: 'I know that you will come' -> 'ನೀವು ___ ನನಗೆ ಗೊತ್ತು.'",
+    "options": [
+     "ಬರುತ್ತೀರಿ",
+     "ಬರುವುದು",
+     "ಬಂದಿರಿ",
+     "ಬಂದರೆ"
+    ],
+    "answer": 1,
+    "explanation": "Verbal complementation with 'ಗೊತ್ತು' (know) uses the verbal noun ಬರುವುದು ('your coming')."
+   },
+   {
+    "question": "What is the colloquial spoken equivalent of 'ಮಾಡುವುದು'?",
+    "options": [
+     "ಮಾಡೋದು",
+     "ಮಾಡಲು",
+     "ಮಾಡುತ",
+     "ಮಾಡಲಿ"
+    ],
+    "answer": 0,
+    "explanation": "In spoken Kannada, the formal -ಉವುದು contracts consistently into -ಓದು (ಮಾಡೋದು, ಬರೋದು, ತಿನ್ನೋದು)."
+   }
+  ],
+  "tip": "Treat verbal nouns syntactically just like standard singular neuter nouns (such as ಮರ or ಪುಸ್ತಕ) — they take identical case suffixes (-ಇಂದ, -ಕ್ಕೆ, -ಅನ್ನು, -ಅಲ್ಲಿ)."
+ },
+ {
+  "id": "kn-b1-conditional-and-concessive-mood",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#DC2626",
+  "emoji": "🔀",
+  "title": "Conditional (-re) and Concessive (-ruu) Forms",
+  "subtitle": "Expressing 'if' and 'even if' conditions using past-stem suffixes",
+  "color": "#B91C1C",
+  "bg": "#FEF2F2",
+  "keyPoint": "Conditionals ('if') are formed by attaching -ರೆ (-re) to the past verbal stem, while concessives ('even if') append -ರೂ (-ruu).",
+  "structure": {
+   "headers": [
+    "Verb Root",
+    "Past Stem",
+    "Conditional: -ರೆ (If...)",
+    "Concessive: -ರೂ (Even if...)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ಮಾಡು (do)",
+      "ಮಾಡಿ-",
+      "ಮಾಡಿದರೆ (if [one] does)",
+      "ಮಾಡಿದರೂ (even if [one] does)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ಬರು (come)",
+      "ಬಂ-",
+      "ಬಂದರೆ (if [one] comes)",
+      "ಬಂದರೂ (even if [one] comes)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ಹೋಗು (go)",
+      "ಹೋದ-",
+      "ಹೋದರೆ (if [one] goes)",
+      "ಹೋದರೂ (even if [one] goes)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ಇರು (be)",
+      "ಇದ್ದ-",
+      "ಇದ್ದರೆ (if there is / if [one] is)",
+      "ಇದ್ದರೂ (even if [one] is)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Real Conditional ('If')",
+    "example": "ಮಳೆ ಬಂದರೆ ನಾನು ಬರುವುದಿಲ್ಲ.",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Concessive ('Even though / Even if')",
+    "example": "ಅವನು ಓದಿದರೂ ಪಾಸಾಗಲಿಲ್ಲ.",
+    "translation": ""
+   },
+   {
+    "color": "#F87171",
+    "label": "Polite Request / Suggestion",
+    "example": "ನೀವು ಸಹಾಯ ಮಾಡಿದರೆ ಒಳ್ಳೆಯದು.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ನೀವು ಕರೆದರೆ ನಾನು ಬರುತ್ತೇನೆ.",
+    "ko": "",
+    "highlight": "ಕರೆದರೆ"
+   },
+   {
+    "en": "ಕಷ್ಟಪಟ್ಟರೂ ಫಲ ಸಿಗಲಿಲ್ಲ.",
+    "ko": "",
+    "highlight": "ಕಷ್ಟಪಟ್ಟರೂ"
+   },
+   {
+    "en": "ಸಮಯವಿದ್ದರೆ ಕಾಫಿ ಕುಡಿಯೋಣ.",
+    "ko": "",
+    "highlight": "ಸಮಯವಿದ್ದರೆ"
+   },
+   {
+    "en": "ಬೇಗ ಹೋದರೆ ಬಸ್ಸು ಸಿಗುತ್ತದೆ.",
+    "ko": "",
+    "highlight": "ಹೋದರೆ"
+   },
+   {
+    "en": "ಎಷ್ಟೇ ಹೇಳಿದರೂ ಅವನು ಕೇಳುವುದಿಲ್ಲ.",
+    "ko": "",
+    "highlight": "ಹೇಳಿದರೂ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ಒಂದು ವೇಳೆ ನೀನು ಬರುತ್ತಿ ರೆ ನಾನು ಇರುತ್ತೇನೆ.",
+    "right": "ನೀನು ಬಂದರೆ ನಾನು ಇರುತ್ತೇನೆ.",
+    "note": "Never attach -ರೆ to the present tense base; it attaches strictly to the past stem (ಬಂದರೆ, not ಬರುತ್ತಿರೆ)."
+   },
+   {
+    "wrong": "ಮಳೆ ಬಂದರೆ ಆದರೂ ನಾನು ಹೋಗುತ್ತೇನೆ.",
+    "right": "ಮಳೆ ಬಂದರೂ ನಾನು ಹೋಗುತ್ತೇನೆ.",
+    "note": "Do not combine -ರೆ with ಆದರೂ; the concessive clitic -ರೂ attaches directly to the past stem to mean 'even if' (ಬಂದರೂ)."
+   },
+   {
+    "wrong": "ಅವನು ಊಟ ಮಾಡಿದರೆ ಆದರೆ ತೃಪ್ತಿ ಇಲ್ಲ.",
+    "right": "ಅವನು ಊಟ ಮಾಡಿದರೂ ತೃಪ್ತಿ ಇಲ್ಲ.",
+    "note": "Avoid inserting redundant coordinating conjunctions like ಆದರೆ ('but') when using concessive -ರೂ."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the conditional sentence: 'ನೀವು ಚೆನ್ನಾಗಿ ___ ಪರೀಕ್ಷೆಯಲ್ಲಿ ಗೆಲ್ಲುತ್ತೀರಿ.' (If you study)",
+    "options": [
+     "ಓದಿದರೆ",
+     "ಓದಿದರೂ",
+     "ಓದುತ್ತಿದ್ದೀರಿ",
+     "ಓದುವುದು"
+    ],
+    "answer": 0,
+    "explanation": "The past stem ಓದಿ- + -ದರೆ yields the conditional ಓದಿದರೆ ('if you study')."
+   },
+   {
+    "question": "Which word translates 'Even if he comes'?",
+    "options": [
+     "ಬಂದರೆ",
+     "ಬಂದರೂ",
+     "ಬರುತ್ತಾನೆ",
+     "ಬರುವುದು"
+    ],
+    "answer": 1,
+    "explanation": "The concessive suffix -ರೂ attached to the past stem produces ಬಂದರೂ ('even if he comes')."
+   },
+   {
+    "question": "What is the conditional form of 'ಇರು' (to be / to exist)?",
+    "options": [
+     "ಇದ್ದರೆ",
+     "ಇರುತ್ತರೆ",
+     "ಇದ್ದರೂ",
+     "ಇರುವುದರಿಂದ"
+    ],
+    "answer": 0,
+    "explanation": "The past stem of ಇರು is ಇದ್ದ-, which combines with -ರೆ to give ಇದ್ದರೆ ('if present / if one has')."
+   },
+   {
+    "question": "How do you express 'If not' or 'Otherwise' using the negative conditional?",
+    "options": [
+     "ಇಲ್ಲವೇ",
+     "ಅಲ್ಲವೇ",
+     "ಇಲ್ಲದಿದ್ದರೆ",
+     "ಇಲ್ಲದಿದ್ದರೂ"
+    ],
+    "answer": 2,
+    "explanation": "ಇಲ್ಲದಿದ್ದರೆ (from ಇಲ್ಲ + ಇದ್ದರೆ) literally means 'if it is not so' or 'otherwise'."
+   }
+  ],
+  "tip": "The prefix phrase ಒಂದು ವೇಳೆ (on the chance that / in case) can optionally be added to the start of a conditional clause for emphasis, but the verb must still end in -ರೆ."
+ },
+ {
+  "id": "kn-b1-quotative-marker-anta",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#4A6FA5",
+  "emoji": "💬",
+  "title": "Quotative Marker (Anta / Endu)",
+  "subtitle": "Report speech, express thoughts, intentions, and reasons",
+  "color": "#3B82F6",
+  "bg": "#EFF6FF",
+  "keyPoint": "The particle 'anta' (spoken) or 'endu' (written) attaches directly to finite clauses or nouns to report speech, frame intentions, or state reasons.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Construction",
+    "Kannada Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Reported Speech",
+      "Finite Clause + ಅಂತ",
+      "ಅವನು ಬರುತ್ತೇನೆ ಅಂತ ಹೇಳಿದನು",
+      "He said that he would come"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Intention / Thought",
+      "Infinitive/Desire + ಅಂತ",
+      "ಕಾಫಿ ಕುಡಿಯಬೇಕು ಅಂತ ಇದ್ದೇನೆ",
+      "I am thinking of drinking coffee"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Reason / Cause",
+      "Fact Clause + ಅಂತ",
+      "ಮಳೆ ಬಂತು ಅಂತ ಛತ್ರಿ ತಂದೆ",
+      "Because it rained, I brought an umbrella"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Naming / Labeling",
+      "Noun + ಅಂತ",
+      "ಬೆಂಗಳೂರು ಅಂತ ಊರು",
+      "A city called Bengaluru"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Direct & Indirect Speech",
+    "example": "ಅವಳು ನಾಳೆ ಬರುತ್ತೇನೆ ಅಂತ ಹೇಳಿದಳು.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Expressing Intentions",
+    "example": "ನಾನು ಹೊಸ ಕಾರು ಕೊಳ್ಳಬೇಕು ಅಂತ ಯೋಚಿಸುತ್ತಿದ್ದೇನೆ.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Stating Reasons or Causes",
+    "example": "ತಡವಾಯಿತು ಅಂತ ಆಟೋ ಹತ್ತಿದೆ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ಅವನು ನಾಳೆ ಬರುತ್ತೇನೆ ಅಂತ ಹೇಳಿದನು.",
+    "ko": "",
+    "highlight": "ಅಂತ ಹೇಳಿದನು"
+   },
+   {
+    "en": "ನೀನು ಬರುತ್ತೀಯಾ ಅಂತ ನನಗೆ ಗೊತ್ತು.",
+    "ko": "",
+    "highlight": "ಅಂತ"
+   },
+   {
+    "en": "ಪುಸ್ತಕ ಓದಬೇಕು ಅಂತ ಕುಳಿತೆನು.",
+    "ko": "",
+    "highlight": "ಅಂತ ಕುಳಿತೆನು"
+   },
+   {
+    "en": "ರಾಜು ಅಂತ ಒಬ್ಬ ಹುಡುಗ ಬಂದಿದ್ದನು.",
+    "ko": "",
+    "highlight": "ಅಂತ"
+   },
+   {
+    "en": "ಬಿಸಿಲಿದೆ ಅಂತ ಟೋಪಿ ಧರಿಸಿದೆನು.",
+    "ko": "",
+    "highlight": "ಅಂತ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ಅವನು ಬರ್ತಾನೆ ಎಂದು ನಾನು ಯೋಚಿಸಿದೆ (in informal speech)",
+    "right": "ಅವನು ಬರ್ತಾನೆ ಅಂತ ನಾನು ಯೋಚಿಸಿದೆ",
+    "note": "Use 'ಅಂತ' in casual daily speech; 'ಎಂದು' is reserved for formal writing and literature."
+   },
+   {
+    "wrong": "ಅವನು ಬರುತ್ತಾನೆ ಎಂದು ಹೇಳಿದನು (with adjusted pronoun shifts inside)",
+    "right": "ಅವನು ನಾನು ಬರುತ್ತೇನೆ ಅಂತ ಹೇಳಿದನು",
+    "note": "Kannada quotation often retains the original speaker's exact first-person perspective before 'ಅಂತ'."
+   },
+   {
+    "wrong": "ಮಳೆ ಬಂತು ಕಾರಣ ನಾನು ಹೋಗಲಿಲ್ಲ",
+    "right": "ಮಳೆ ಬಂತು ಅಂತ ನಾನು ಹೋಗಲಿಲ್ಲ",
+    "note": "English 'because' is colloquially rendered using clause + 'ಅಂತ', not by borrowing formal nouns like 'ಕಾರಣ'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct quotative marker: 'ಅವನು ಊರಿಗೆ ಹೋಗುತ್ತಾನೆ ___ ಹೇಳಿದನು.'",
+    "options": [
+     "ಆಗಿ",
+     "ಅಂತ",
+     "ಕೂಡ",
+     "ಮೇಲೆ"
+    ],
+    "answer": 1,
+    "explanation": "'ಅಂತ' is the quotative marker used to quote statements or thoughts."
+   },
+   {
+    "question": "Complete the intention clause: 'ನಾನು ಕನ್ನಡ ಕಲಿಯಬೇಕು ___ ಆಸೆಪಟ್ಟೆನು.'",
+    "options": [
+     "ಅಲ್ಲಿ",
+     "ಇಂದ",
+     "ಅಂತ",
+     "ಬಗ್ಗೆ"
+    ],
+    "answer": 2,
+    "explanation": "Attaching 'ಅಂತ' after a modal form (ಕಲಿಯಬೇಕು) denotes intention or desire."
+   },
+   {
+    "question": "Identify the causal expression: 'ಹಸಿವಾಯಿತು ___ ಊಟ ಮಾಡಿದೆನು.'",
+    "options": [
+     "ಅಂತ",
+     "ವರೆಗೆ",
+     "ಹೊರತು",
+     "ಅಥವಾ"
+    ],
+    "answer": 0,
+    "explanation": "In colloquial Kannada, 'ಅಂತ' follows a past clause to mean 'because' or 'since'."
+   },
+   {
+    "question": "Select the formal literary equivalent of 'ಅಂತ': 'ಗುರುಗಳು ಸತ್ಯ ನುಡಿಯಿರಿ ___ ಬೋಧಿಸಿದರು.'",
+    "options": [
+     "ಆದರೆ",
+     "ಬಗ್ಗೆ",
+     "ಎಂದು",
+     "ಜೊತೆ"
+    ],
+    "answer": 2,
+    "explanation": "'ಎಂದು' is the literary, formal equivalent of spoken 'ಅಂತ'."
+   }
+  ],
+  "tip": "Think of 'ಅಂತ' as a universal closing quotation mark that simultaneously acts as 'that', 'because', and 'named'!"
+ },
+ {
+  "id": "kn-b1-aspectual-compound-verbs",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "Compound Auxiliary Verbs (Kollu, Bidu, Haku)",
+  "subtitle": "Modify aspect for reflexive, completive, and definitive nuances",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Appending auxiliaries like 'ಕೊಳ್ಳು' (reflexive/self-benefit), 'ಬಿಡು' (finality/relief), or 'ಹಾಕು' (deliberate completion) to past verbal participles radically alters Aktionsart.",
+  "structure": {
+   "headers": [
+    "Auxiliary",
+    "Core Meaning",
+    "Kannada Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ಕೊಳ್ಳು (kollu)",
+      "Reflexive / Self-benefit",
+      "ಅವನು ಬಟ್ಟೆ ಒಗೆದುಕೊಂಡನು",
+      "He washed clothes for himself"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ಬಿಡು (bidu)",
+      "Completion / Abandonment",
+      "ಅವಳು ಪತ್ರವನ್ನು ಬರೆದುಬಿಟ್ಟಳು",
+      "She finished writing the letter completely"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ಹಾಕು (haku)",
+      "Forceful / Total Disposal",
+      "ಅವನು ಹಳೆಯ ಕಾಗದಗಳನ್ನು ಹರಿದುಹಾಕಿದನು",
+      "He tore up and threw out the old papers"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ಇರು (iru)",
+      "Perfective State",
+      "ಬಾಗಿಲು ಮುಚ್ಚಿರುತ್ತದೆ",
+      "The door remains closed"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Self-Directed Actions (ಕೊಳ್ಳು)",
+    "example": "ಮಗು ತಾನೇ ಊಟ ಮಾಡಿಕೊಂಡಿತು.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Irreversible Completion (ಬಿಡು)",
+    "example": "ರೈಲು ಹೊರಟುಬಿಟ್ಟಿತು.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Decisive Actions (ಹಾಕು)",
+    "example": "ಅವನು ಎಲ್ಲಾ ಮಾತ್ರೆಗಳನ್ನು ನುಂಗಿಹಾಕಿದನು.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ನಾನು ಹೊಸ ಅಂಗಿ ಕೊಂಡುಕೊಂಡೆನು.",
+    "ko": "",
+    "highlight": "ಕೊಂಡುಕೊಂಡೆನು"
+   },
+   {
+    "en": "ಅವನು ಊಟವನ್ನು ಬೇಗ ತಿಂದುಬಿಟ್ಟನು.",
+    "ko": "",
+    "highlight": "ತಿಂದುಬಿಟ್ಟನು"
+   },
+   {
+    "en": "ಕಸವನ್ನು ಹೊರಗೆ ಚೆಲ್ಲಿಹಾಕು.",
+    "ko": "",
+    "highlight": "ಚೆಲ್ಲಿಹಾಕು"
+   },
+   {
+    "en": "ನಾವು ವಿಷಯವನ್ನು ಮಾತನಾಡಿ ಮುಗಿಸಿಬಿಟ್ಟೆವು.",
+    "ko": "",
+    "highlight": "ಮುಗಿಸಿಬಿಟ್ಟೆವು"
+   },
+   {
+    "en": "ಅವಳು ತಲೆ ಬಾಚಿಕೊಂಡಳು.",
+    "ko": "",
+    "highlight": "ಬಾಚಿಕೊಂಡಳು"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ನಾನು ಊಟ ತಿನ್ನಿಕೊಂಡೆ",
+    "right": "ನಾನು ಊಟ ಮಾಡಿಕೊಂಡೆ / ತಿಂದುಕೊಂಡೆ",
+    "note": "Auxiliary verbs must attach to the past verbal participle (e.g. ತಿಂದು), never the infinitive stem."
+   },
+   {
+    "wrong": "ಅವನು ಹಣ ಕಳೆದುಹಾಕಿದನು (for accidental loss)",
+    "right": "ಅವನು ಹಣ ಕಳೆದುಕೊಂಡನು / ಕಳೆದುಬಿಟ್ಟನು",
+    "note": "'ಹಾಕು' conveys deliberate or decisive disposal; accidental loss takes 'ಬಿಡು' or reflexive 'ಕೊಳ್ಳು'."
+   },
+   {
+    "wrong": "ಅವಳು ನನಗಾಗಿ ಅಡುಗೆ ಮಾಡಿಕೊಂಡಳು",
+    "right": "ಅವಳು ನನಗಾಗಿ ಅಡುಗೆ ಮಾಡಿದಳು",
+    "note": "'ಮಾಡಿಕೊಳ್ಳು' implies self-benefit; do not use it when the action is explicitly done for someone else."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the verb form indicating the subject combed her own hair: 'ಅವಳು ತಲೆ ___.'",
+    "options": [
+     "ಬಾಚಿದಳು",
+     "ಬಾಚಿಕೊಂಡಳು",
+     "ಬಾಚಿಹಾಕಿದಳು",
+     "ಬಾಚಿಬಿಟ್ಟಳು"
+    ],
+    "answer": 1,
+    "explanation": "'ಬಾಚಿಕೊಂಡಳು' uses 'ಕೊಳ್ಳು' to denote an action performed on/for oneself."
+   },
+   {
+    "question": "Express decisive disposal: 'ಅವನು ಆ ಕಾಗದವನ್ನು ಹರಿದು___.'",
+    "options": [
+     "ಕೊಂಡನು",
+     "ಬಿಟ್ಟನು",
+     "ಹಾಕಿದನು",
+     "ಇಟ್ಟನು"
+    ],
+    "answer": 2,
+    "explanation": "'ಹಾಕು' as an auxiliary emphasizes forceful, deliberate, or discarding completion."
+   },
+   {
+    "question": "The train already left with irreversible finality: 'ರೈಲು ಈಗಾಗಲೇ ಹೊರಟು___.'",
+    "options": [
+     "ಬಿಟ್ಟಿತು",
+     "ಕೊಂಡಿತು",
+     "ಹಾಕಿತು",
+     "ಆಯಿತು"
+    ],
+    "answer": 0,
+    "explanation": "'ಹೊರಟುಬಿಟ್ಟಿತು' uses 'ಬಿಡು' to express definitive completion and irreversibility."
+   },
+   {
+    "question": "Past verbal participle of 'ಮಾಡು' combined with reflexive past third-person masculine: 'ಅವನು ಕೆಲಸ ___.'",
+    "options": [
+     "ಮಾಡಿಕೊಂಡಳು",
+     "ಮಾಡಿಕೊಂಡನು",
+     "ಮಾಡಿಹಾಕಿದರು",
+     "ಮಾಡಿಕೊಂಡೆ"
+    ],
+    "answer": 1,
+    "explanation": "The past masculine singular form matching 'ಅವನು' is 'ಮಾಡಿಕೊಂಡನು'."
+   }
+  ],
+  "tip": "Attach auxiliaries solely to the 'I-form' or 'U-form' past participle (ಮಾಡಿ, ತಿಂದು, ಬರೆದು), never directly to root verbs."
+ },
+ {
+  "id": "kn-b2-causative-verb-formation",
+  "level": "b2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⚙️",
+  "title": "Morphological Causatives (-isu)",
+  "subtitle": "Derive causative stems and assign intermediary agent cases",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "Suffixing '-ಇಸು' (-isu) converts intransitive or basic transitive verb stems into causatives, with the intermediary agent marked by the instrumental case '-ಇಂದ' (-inda).",
+  "structure": {
+   "headers": [
+    "Base Verb",
+    "Causative Form",
+    "Kannada Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ಮಾಡು (to do)",
+      "ಮಾಡಿಸು (to make do)",
+      "ಅವನು ಕೆಲಸ ಮಾಡಿಸಿದನು",
+      "He had the work done"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ಓದು (to read)",
+      "ಓದಿಸು (to cause to read / educate)",
+      "ತಾಯಿ ಮಗನಿಗೆ ಓದಿಸಿದಳು",
+      "The mother made the son read"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ತಿನ್ನು (to eat)",
+      "ತಿನ್ನಿಸು (to feed)",
+      "ಅಕ್ಕ ತಮ್ಮನಿಗೆ ಊಟ ತಿನ್ನಿಸಿದಳು",
+      "The elder sister fed the younger brother"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ಕಟ್ಟು (to build)",
+      "ಕಟ್ಟಿಸು (to have built)",
+      "ಅವರು ಮನೆ ಕಟ್ಟಿಸಿದರು",
+      "They had a house built"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Physical Feeding / Direct Causation",
+    "example": "ತಾಯಿ ಮಗುವಿಗೆ ಹಾಲನ್ನು ಕುಡಿಸಿದಳು.",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Delegation through Agents",
+    "example": "ಮೇಸ್ಟ್ರು ಕೆಲಸಗಾರರಿಂದ ಗೋಡೆ ಕಟ್ಟಿಸಿದರು.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Encouragement / Enabling",
+    "example": "ಶಿಕ್ಷಕರು ವಿದ್ಯಾರ್ಥಿಗಳಿಂದ ಪಾಠ ಓದಿಸಿದರು.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ತಾಯಿ ಮಗುವಿಗೆ ಊಟ ತಿನ್ನಿಸಿದಳು.",
+    "ko": "",
+    "highlight": "ತಿನ್ನಿಸಿದಳು"
+   },
+   {
+    "en": "ಅಧಿಕಾರಿಯು ಗುಮಾಸ್ತನಿಂದ ಕಡತ ಸಿದ್ಧಪಡಿಸಿದನು.",
+    "ko": "",
+    "highlight": "ಸಿದ್ಧಪಡಿಸಿದನು"
+   },
+   {
+    "en": "ನಾವು ಬಡಗಿಯಿಂದ ಹೊಸ ಮೇಜು ಮಾಡಿಸಿದೆವು.",
+    "ko": "",
+    "highlight": "ಮಾಡಿಸಿದೆವು"
+   },
+   {
+    "en": "ವೈದ್ಯರು ರೋಗಿಗೆ ನೀರು ಕುಡಿಸಿದರು.",
+    "ko": "",
+    "highlight": "ಕುಡಿಸಿದರು"
+   },
+   {
+    "en": "ಅವಳು ನಮಗೆ ಸುಂದರ ಸ್ಥಳಗಳನ್ನು ತೋರಿಸಿದಳು.",
+    "ko": "",
+    "highlight": "ತೋರಿಸಿದಳು"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ಅವನು ಕೆಲಸಗಾರನಿಗೆ ಮನೆ ಕಟ್ಟಿಸಿದನು (for intermediary doer)",
+    "right": "ಅವನು ಕೆಲಸಗಾರನಿಂದ ಮನೆ ಕಟ್ಟಿಸಿದನು",
+    "note": "Use the instrumental case '-ಇಂದ' on intermediary agents who perform the physical task."
+   },
+   {
+    "wrong": "ತಾಯಿ ಮಗುವಿನಿಂದ ಹಾಲು ಕುಡಿಸಿದಳು",
+    "right": "ತಾಯಿ ಮಗುವಿಗೆ ಹಾಲು ಕುಡಿಸಿದಳು",
+    "note": "Direct recipients of ingestive causatives (feed, give drink) take the dative '-ಗೆ', not the instrumental."
+   },
+   {
+    "wrong": "ಅವನು ನನ್ನನ್ನು ನಗಿಸಿದನು (using non-causative with adverb)",
+    "right": "ಅವನು ನನ್ನನ್ನು ನಗಿಸಿದನು",
+    "note": "Do not translate causatives with English-style phrasal verbs; apply '-ಇಸು' directly to 'ನಗು' -> 'ನಗಿಸು'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct causative for 'He had a table made by the carpenter': 'ಅವನು ಬಡಗಿ___ ಮೇಜು ಮಾಡಿಸಿದನು.'",
+    "options": [
+     "ಯಲ್ಲಿ",
+     "ಗೆ",
+     "ಯಿಂದ",
+     "ಯನ್ನು"
+    ],
+    "answer": 2,
+    "explanation": "The intermediary agent who performs delegated labour takes the instrumental suffix '-ಇಂದ' (ಬಡಗಿಯಿಂದ)."
+   },
+   {
+    "question": "Choose the causative form of 'ಓದು' (to read):",
+    "options": [
+     "ಓದಿಸು",
+     "ಓದಿಕೊಳ್ಳು",
+     "ಓದಿಹಾಕು",
+     "ಓದಲಾಗು"
+    ],
+    "answer": 0,
+    "explanation": "'ಓದಿಸು' is the causative form meaning 'to make someone read' or 'to educate'."
+   },
+   {
+    "question": "Fill the blank: 'ತಾಯಿ ಮಗುವಿಗೆ ಹಾಲು ___.'",
+    "options": [
+     "ಕುಡಿಯಿತು",
+     "ಕುಡಿದಳು",
+     "ಕುಡಿಸಿದಳು",
+     "ಕುಡಿಯಿಸಿದಳು"
+    ],
+    "answer": 2,
+    "explanation": "The causative past form of 'ಕುಡಿ' is 'ಕುಡಿಸಿದಳು' (she fed / made drink)."
+   },
+   {
+    "question": "Convert 'ತಿನ್ನು' into its third person plural past causative:",
+    "options": [
+     "ತಿಂದರು",
+     "ತಿನ್ನಿಸಿದರು",
+     "ತಿನ್ನುತ್ತಾರೆ",
+     "ತಿಂದುಕೊಂಡರು"
+    ],
+    "answer": 1,
+    "explanation": "'ತಿನ್ನಿಸಿದರು' is the past third-person human plural causative ('they fed')."
+   }
+  ],
+  "tip": "Distinguish between recipient agents (Dative: ಮಗುವಿಗೆ ತಿನ್ನಿಸು - feed the child) and proxy agents (Instrumental: ನೌಕರನಿಂದ ಮಾಡಿಸು - have the servant do it)."
+ },
+ {
+  "id": "kn-b2-non-finite-temporal-clauses",
+  "level": "b2",
+  "category": "clauses",
+  "categoryColor": "#4A6FA5",
+  "emoji": "⏳",
+  "title": "Temporal Converbial Suffixes (-aga, -ottige, -tanaka)",
+  "subtitle": "Form complex concurrent, immediate, and delimiting temporal clauses",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Temporal markers attach directly to relative participles: past participle + '-ಆಗ' (-aga) signifies 'when', while '-ತನಕ' (-tanaka) signifies 'until'.",
+  "structure": {
+   "headers": [
+    "Suffix / Particle",
+    "Function",
+    "Kannada Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-ಆಗ (-aga)",
+      "Point in time / 'When'",
+      "ನಾನು ಮನೆಗೆ ಬಂದಾಗ ಮಳೆ ಬಂತು",
+      "When I arrived home, it rained"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ಒಡನೆ / -ಕೂಡಲೇ (-odane / -kudale)",
+      "Immediate sequence / 'As soon as'",
+      "ಅವನು ಕರೆದಕೂಡಲೇ ನಾನು ಹೋದೆನು",
+      "As soon as he called, I went"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ತನಕ / -ವರೆಗೆ (-tanaka / -varege)",
+      "Boundary / 'Until'",
+      "ನಾವು ಬರುವವರೆಗೆ ಕಾಯಿರಿ",
+      "Wait until we come"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-ಅಷ್ಟರಲ್ಲಿ (-ashtaralli)",
+      "Interruption / 'By the time'",
+      "ನಾವು ತಲುಪುವಷ್ಟರಲ್ಲಿ ಕತ್ತಲಾಯಿತು",
+      "By the time we reached, it grew dark"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Simultaneous or sequential occurrence (-ಆಗ)",
+    "example": "ಅಜ್ಜ ಪತ್ರಿಕೆ ಓದುವಾಗ ನಿದ್ರೆ ಮಾಡಿದರು.",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Immediate succession (-ಕೂಡಲೇ)",
+    "example": "ಗಂಟೆ ಬಾರಿಸಿದಕೂಡಲೇ ಮಕ್ಕಳು ಓಡಿದರು.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Temporal boundary (-ವರೆಗೆ / -ತನಕ)",
+    "example": "ಮಳೆ ನಿಲ್ಲುವವರೆಗೆ ಇಲ್ಲೇ ಇರಿ.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ಅವಳು ಮನೆಗೆ ಬಂದಾಗ ಎಲ್ಲರೂ ನಿದ್ರಿಸುತ್ತಿದ್ದರು.",
+    "ko": "",
+    "highlight": "ಬಂದಾಗ"
+   },
+   {
+    "en": "ನಾನು ಊಟ ಮಾಡುವಾಗ ಮಾತನಾಡಬೇಡ.",
+    "ko": "",
+    "highlight": "ಮಾಡುವಾಗ"
+   },
+   {
+    "en": "ಅವನು ಪತ್ರ ತಲುಪಿದಕೂಡಲೇ ಉತ್ತರ ಬರೆದನು.",
+    "ko": "",
+    "highlight": "ತಲುಪಿದಕೂಡಲೇ"
+   },
+   {
+    "en": "ಸೂರ್ಯ ಮುಳುಗುವವರೆಗೆ ನಾವು ಆಡಿದೆವು.",
+    "ko": "",
+    "highlight": "ಮುಳುಗುವವರೆಗೆ"
+   },
+   {
+    "en": "ರೈಲು ಹೊರಡುವಷ್ಟರಲ್ಲಿ ನಾನು ನಿಲ್ದಾಣ ತಲುಪಿದೆನು.",
+    "ko": "",
+    "highlight": "ಹೊರಡುವಷ್ಟರಲ್ಲಿ"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ನಾನು ಬಂದಾಗ ಸಮಯದಲ್ಲಿ ಅವನು ಇದ್ದನು",
+    "right": "ನಾನು ಬಂದಾಗ ಅವನು ಇದ್ದನು",
+    "note": "Do not append 'ಸಮಯದಲ್ಲಿ' after '-ಆಗ'; '-ಆಗ' already encapsulates 'at the time when'."
+   },
+   {
+    "wrong": "ಅವನು ಬರುವ ತನಕ ನಾನು ಊಟ ಮಾಡಿದೆ (for waiting)",
+    "right": "ಅವನು ಬರುವವರೆಗೆ ನಾನು ಕಾದೆನು",
+    "note": "Relative participle preceding '-ವರೆಗೆ / -ತನಕ' must take the non-past stem (ಬರುವ), not past (ಬಂದ)."
+   },
+   {
+    "wrong": "ನಾವು ಹೋಗುವಾಗ ಮಳೆ ಬಂದಿತು (for an immediate trigger)",
+    "right": "ನಾವು ಹೊರಟಕೂಡಲೇ ಮಳೆ ಬಂದಿತು",
+    "note": "Use '-ಕೂಡಲೇ' / '-ಒಡನೆ' for instantaneous reaction, reserving '-ಆಗ' for broad concurrent duration."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence for 'When I was reading': 'ನಾನು ಪುಸ್ತಕ ___ ದೂರವಾಣಿ ರಿಂಗಣಿಸಿತು.'",
+    "options": [
+     "ಓದಿದಾಗ",
+     "ಓದುವಾಗ",
+     "ಓದಿದಕೂಡಲೇ",
+     "ಓದುವವರೆಗೆ"
+    ],
+    "answer": 1,
+    "explanation": "Present relative participle + '-ಆಗ' (ಓದುವ + ಆಗ = ಓದುವಾಗ) conveys 'while / during the process of reading'."
+   },
+   {
+    "question": "Select the suffix meaning 'as soon as': 'ಶಿಕ್ಷಕರು ತರಗತಿಗೆ ಬಂದ___ ವಿದ್ಯಾರ್ಥಿಗಳು ಎದ್ದು ನಿಂತರು.'",
+    "options": [
+     "ತನಕ",
+     "ಕೂಡಲೇ",
+     "ಮೇಲೆ",
+     "ಬಗ್ಗೆ"
+    ],
+    "answer": 1,
+    "explanation": "'-ಕೂಡಲೇ' attaches to relative participles to mean 'as soon as'."
+   },
+   {
+    "question": "Choose the correct phrase for 'Until father returns': 'ಅಪ್ಪ ಮನೆಗೆ ___ ಕಾಯಿ.'",
+    "options": [
+     "ಬಂದಾಗ",
+     "ಬಂದಕೂಡಲೇ",
+     "ಬರುವವರೆಗೆ",
+     "ಬರುವಾಗ"
+    ],
+    "answer": 2,
+    "explanation": "Non-past relative participle + 'ವರೆಗೆ' (ಬರುವವರೆಗೆ) marks the terminating limit 'until'."
+   },
+   {
+    "question": "'By the time we reached...': 'ನಾವು ತಲುಪುವ___ ಸಭೆ ಮುಗಿದಿತ್ತು.'",
+    "options": [
+     "ಅಷ್ಟರಲ್ಲಿ",
+     "ಆಗ",
+     "ಕೂಡಲೇ",
+     "ಹೊರತು"
+    ],
+    "answer": 0,
+    "explanation": "'-ಅಷ್ಟರಲ್ಲಿ' expresses 'by the time that' or 'within that brief window'."
+   }
+  ],
+  "tip": "Past stem + ಆಗ (ಬಂದಾಗ) = 'When (completed event)'. Present stem + ಆಗ (ಬರುವಾಗ) = 'While (in-progress action)'."
+ },
+ {
+  "id": "kn-b2-passive-and-impersonal-constructions",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🏛️",
+  "title": "Passive and Impersonal Voice (-padu / -badu)",
+  "subtitle": "Transform active verbs into formal passive constructions using 'ಪಡು'",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "The passive voice is formed by appending the auxiliary verb 'ಪಡು' (-padu / -badu) to the infinitive stem (-ಅಲು / -ಅ), primarily used in formal or legal registers.",
+  "structure": {
+   "headers": [
+    "Active Form",
+    "Passive Equivalent",
+    "Kannada Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ತಿಳಿಸು (to inform)",
+      "ತಿಳಿಯಪಡಿಸು / ತಿಳಿಸಲಾಗು",
+      "ವಿಷಯವು ತಿಳಿಸಲ್ಪಟ್ಟಿತು",
+      "The matter was informed / notified"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "ಆಯ್ಕೆ ಮಾಡು (to select)",
+      "ಆಯ್ಕೆ ಮಾಡಲ್ಪಡು",
+      "ಅವನು ಅಧ್ಯಕ್ಷನಾಗಿ ಆಯ್ಕೆ ಮಾಡಲ್ಪಟ್ಟನು",
+      "He was chosen as president"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ಬರೆ (to write)",
+      "ಬರೆಯಲ್ಪಡಿತು",
+      "ಈ ಗ್ರಂಥವು ವ್ಯಾಸರಿಂದ ಬರೆಯಲ್ಪಟ್ಟಿತು",
+      "This book was written by Vyasa"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ನಿರ್ಧರಿಸು (to decide)",
+      "ನಿರ್ಧರಿಸಲ್ಪಡು",
+      "ದಿನಾಂಕವು ನಿರ್ಧರಿಸಲ್ಪಟ್ಟಿತು",
+      "The date was finalized"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6366F1",
+    "label": "Formal Media & News Reports",
+    "example": "ಚುನಾವಣೆಯ ಫಲಿತಾಂಶವು ಪ್ರಕಟಿಸಲ್ಪಟ್ಟಿತು.",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Legal and Official Proclamations",
+    "example": "ಕಾನೂನು ಉಲ್ಲಂಘಿಸಿದವರು ಶಿಕ್ಷಿಸಲ್ಪಡುತ್ತಾರೆ.",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Historical Authorship / Deeds",
+    "example": "ಈ ದೇವಸ್ಥಾನವು ಹೊಯ್ಸಳರಿಂದ ನಿರ್ಮಿಸಲ್ಪಟ್ಟಿತು.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "ಈ ಗ್ರಂಥವು ವಿದ್ವಾಂಸರಿಂದ ರಚಿಸಲ್ಪಟ್ಟಿತು.",
+    "ko": "",
+    "highlight": "ರಚಿಸಲ್ಪಟ್ಟಿತು"
+   },
+   {
+    "en": "ಕಳ್ಳನು ಪೊಲೀಸರಿಂದ ಬಂಧಿಸಲ್ಪಟ್ಟನು.",
+    "ko": "",
+    "highlight": "ಬಂಧಿಸಲ್ಪಟ್ಟನು"
+   },
+   {
+    "en": "ಸಭೆಯಲ್ಲಿ ಹೊಸ ನಿಯಮಗಳು ಪ್ರಸ್ತಾಪಿಸಲ್ಪಟ್ಟವು.",
+    "ko": "",
+    "highlight": "ಪ್ರಸ್ತಾಪಿಸಲ್ಪಟ್ಟವು"
+   },
+   {
+    "en": "ಎಲ್ಲಾ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೂ ಪ್ರಶಸ್ತಿ ನೀಡಲಾಯಿತು.",
+    "ko": "",
+    "highlight": "ನೀಡಲಾಯಿತು"
+   },
+   {
+    "en": "ಆಸ್ಪತ್ರೆಯು ಸಚಿವರ ಮೂಲಕ ಉದ್ಘಾಟಿಸಲ್ಪಟ್ಟಿತು.",
+    "ko": "",
+    "highlight": "ಉದ್ಘಾಟಿಸಲ್ಪಟ್ಟಿತು"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "ನಾನು ಊಟ ತಿನ್ನಲ್ಪಟ್ಟೆ (for 'I was fed / ate')",
+    "right": "ನಾನು ಊಟ ಮಾಡಿದೆ",
+    "note": "Never use the morphological passive for everyday colloquial events; it sounds unnatural and synthetic."
+   },
+   {
+    "wrong": "ಶಿಕ್ಷಕರಿಂದ ಪಾಠ ಕಲಿಯಲ್ಪಟ್ಟಿತು (learner using direct English passive)",
+    "right": "ವಿದ್ಯಾರ್ಥಿಗಳು ಶಿಕ್ಷಕರಿಂದ ಪಾಠ ಕಲಿತರು",
+    "note": "Kannada strongly prefers active constructions unless writing legal, bureaucratic, or formal journalistic text."
+   },
+   {
+    "wrong": "ಕಳ್ಳನು ಬಂಧಿಸಲ್ಪಟ್ಟಿತು",
+    "right": "ಕಳ್ಳನು ಬಂಧಿಸಲ್ಪಟ್ಟನು",
+    "note": "The passive auxiliary 'ಪಡು' must still agree in gender, number, and person with the grammatical subject."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Identify the passive verb in: 'ಕಾನೂನು ಉಲ್ಲಂಘಿಸಿದವರು ದಂಡಿಸಲ್ಪಡುತ್ತಾರೆ.'",
+    "options": [
+     "ಉಲ್ಲಂಘಿಸಿದವರು",
+     "ದಂಡಿಸಲ್ಪಡುತ್ತಾರೆ",
+     "ಕಾನೂನು",
+     "ದಂಡ"
+    ],
+    "answer": 1,
+    "explanation": "'ದಂಡಿಸಲ್ಪಡುತ್ತಾರೆ' contains infinitive 'ದಂಡಿಸಲ್' + 'ಪಡುತ್ತಾರೆ' forming the passive voice."
+   },
+   {
+    "question": "Select the correct masculine past agreement: 'ಅಪರಾಧಿಯು ಪೊಲೀಸರಿಂದ ಬಂಧಿಸಲ್ಪ___.'",
+    "options": [
+     "ಟ್ಟಿತು",
+     "ಟ್ಟರು",
+     "ಟ್ಟನು",
+     "ಟ್ಟಳು"
+    ],
+    "answer": 2,
+    "explanation": "The grammatical subject 'ಅಪರಾಧಿಯು' (male culprit) requires masculine singular agreement '-ಟ್ಟನು'."
+   },
+   {
+    "question": "Fill the blank with formal impersonal passive: 'ಈ ಆದೇಶವು ತಕ್ಷಣವೇ ಜಾರಿಗೆ ತರ___.'",
+    "options": [
+     "ಲಾಯಿತು",
+     "ಬಂದಿತು",
+     "ಮಾಡಿತು",
+     "ಹೋಯಿತು"
+    ],
+    "answer": 0,
+    "explanation": "'-ಲಾಯಿತು' (ತರಲಾಯಿತು) is the high-frequency administrative impersonal passive suffix formed with 'ಆಗು'."
+   },
+   {
+    "question": "Which case does the agent take in a passive construction? 'ಕಾವ್ಯವು ಕವಿ___ ರಚಿಸಲ್ಪಟ್ಟಿತು.'",
+    "options": [
+     "ಯನ್ನು",
+     "ಯಿಂದ",
+     "ಯಲ್ಲಿ",
+     "ಗೆ"
+    ],
+    "answer": 1,
+    "explanation": "The agent in a formal passive sentence takes the instrumental case suffix '-ಇಂದ' (ಕವಿಯಿಂದ = by the poet)."
+   }
+  ],
+  "tip": "Spoken Kannada replaces cumbersome '-ಪಡಿಸಲ್ಪಡು' forms with the effortless impersonal 'ಆಗು' construction: 'ಕೆಲಸ ಆಯಿತು' (the work was done)."
+ }
+]

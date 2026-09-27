@@ -1,0 +1,3409 @@
+[
+ {
+  "id": "bn-a1-pronoun-honorifics",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "👥",
+  "title": "Pronoun Honorific Tiers and Subject-Verb Agreement",
+  "subtitle": "Mastering intimate, familiar, and polite registers and their verb endings",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "In Bengali, every second- and third-person pronoun belongs to a specific honorific tier that demands an exact matching verb suffix.",
+  "structure": {
+   "headers": [
+    "Tier",
+    "Pronoun",
+    "Verb Suffix (Present)",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Intimate (Very close/Younger)",
+      "তুই",
+      "-ইস্",
+      "তুই করিস"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Familiar (Friends/Family)",
+      "তুমি",
+      "-ও",
+      "তুমি করো"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Polite / Formal (Elders/Strangers)",
+      "আপনি",
+      "-েন",
+      "আপনি করেন"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Third-Person Familiar",
+      "সে / এরা",
+      "-ে",
+      "সে করে"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Third-Person Polite",
+      "তিনি / ওঁরা",
+      "-েন",
+      "তিনি করেন"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Formal Address",
+    "example": "আপনি কি চা খান?",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Familiar Conversation",
+    "example": "তুমি কোথায় থাকো?",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Intimate Register",
+    "example": "তুই কখন আসবি?",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "আপনি কি বাংলা বলেন?",
+    "ko": "",
+    "highlight": "বলেন"
+   },
+   {
+    "en": "তুমি আজ স্কুলে যাও।",
+    "ko": "",
+    "highlight": "যাও"
+   },
+   {
+    "en": "তুই এখন বই পড়িস।",
+    "ko": "",
+    "highlight": "পড়িস"
+   },
+   {
+    "en": "তিনি প্রতিদিন সকালে হাঁটেন।",
+    "ko": "",
+    "highlight": "হাঁটেন"
+   },
+   {
+    "en": "সে রোজ গান শোনে।",
+    "ko": "",
+    "highlight": "শোনে"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "আপনি কি চা খাও?",
+    "right": "আপনি কি চা খান?",
+    "note": "Pairing the formal pronoun আপনি with familiar suffix -ও is ungrammatical; use -েন."
+   },
+   {
+    "wrong": "তুমি কোথায় যান?",
+    "right": "তুমি কোথায় যাও?",
+    "note": "The pronoun তুমি requires the familiar suffix -ও, not the formal suffix -েন."
+   },
+   {
+    "wrong": "তিনি ভালো গান গায়।",
+    "right": "তিনি ভালো গান গান।",
+    "note": "Third-person honorific তিনি takes the polite ending -েন, not familiar -ে."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete with the correct verb form: 'আপনি কেমন ___?'",
+    "options": [
+     "আছিস",
+     "আছো",
+     "আছেন",
+     "আছে"
+    ],
+    "answer": 2,
+    "explanation": "The polite pronoun আপনি requires the verb ending -েন (আছেন)."
+   },
+   {
+    "question": "Complete with the correct pronoun: '___ কি ভাত খাবি?'",
+    "options": [
+     "তুই",
+     "তুমি",
+     "আপনি",
+     "সে"
+    ],
+    "answer": 0,
+    "explanation": "The verbal ending -বি / -ইস্ pairs uniquely with the intimate pronoun তুই."
+   },
+   {
+    "question": "Complete with the correct verb form: 'তুমি কি কাজ ___?'",
+    "options": [
+     "করিস",
+     "করেন",
+     "করে",
+     "করো"
+    ],
+    "answer": 3,
+    "explanation": "The familiar pronoun তুমি requires the verbal suffix -ও (করো)."
+   },
+   {
+    "question": "Complete with the correct pronoun: '___ প্রতিদিন বিকেলে আসেন।'",
+    "options": [
+     "তুই",
+     "তিনি",
+     "সে",
+     "তুমি"
+    ],
+    "answer": 1,
+    "explanation": "The polite 3rd person verb ending -েন (আসেন) agrees with the honorific pronoun তিনি."
+   }
+  ],
+  "tip": "Default to আপনি with adult strangers and professionals; it is always safe and prevents accidental disrespect."
+ },
+ {
+  "id": "bn-a1-definitive-clitics",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🏷️",
+  "title": "Definitive Clitics and Classifiers (-ta, -ti, -gulo, -khana)",
+  "subtitle": "Applying mandatory classifiers and definiteness markers to nouns",
+  "color": "#10B981",
+  "bg": "#ECFDF5",
+  "keyPoint": "Bengali attaches definitive classifiers directly to noun stems or numerals to make nouns specific or count them accurately.",
+  "structure": {
+   "headers": [
+    "Marker",
+    "Function / Meaning",
+    "Example",
+    "Sense"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-টা",
+      "Neutral definite (the / singular)",
+      "বইটা",
+      "the book"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-টি",
+      "Polite / diminutive definite",
+      "কলমটি",
+      "the (little/nice) pen"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-গুলো",
+      "Plural definite (the ...-s)",
+      "আমগুলো",
+      "the mangoes"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "-খানা",
+      "Flat, broad singular items",
+      "চিঠিখানা",
+      "the letter"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Singular Definiteness",
+    "example": "ছেলেটা খুব শান্ত।",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Plural Definiteness",
+    "example": "ফুলগুলো অনেক সুন্দর।",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Numeral Classifier Pattern",
+    "example": "আমাকে তিনটি কাগজ দিন।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "বইটা টেবিলের ওপর রাখো।",
+    "ko": "",
+    "highlight": "বইটা"
+   },
+   {
+    "en": "এই পাখিটি দেখতে চমৎকার।",
+    "ko": "",
+    "highlight": "পাখিটি"
+   },
+   {
+    "en": "ঘরের ছবিগুলো কে তুলেছে?",
+    "ko": "",
+    "highlight": "ছবিগুলো"
+   },
+   {
+    "en": "আমি একখানা নতুন জামা কিনেছি।",
+    "ko": "",
+    "highlight": "একখানা"
+   },
+   {
+    "en": "দোকান থেকে দুটো ডিম আনো।",
+    "ko": "",
+    "highlight": "দুটো"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "তিন বই দাও।",
+    "right": "তিনটে বই দাও।",
+    "note": "Numerals preceding nouns require a classifier clitic like -টে / -টা."
+   },
+   {
+    "wrong": "বইগুলোটা এখানে আছে।",
+    "right": "বইগুলো এখানে আছে।",
+    "note": "Do not stack singular -টা onto the plural clitic -গুলো."
+   },
+   {
+    "wrong": "এই মানুষগুলোটি ভালো।",
+    "right": "এই মানুষগুলো ভালো।",
+    "note": "Classifiers cannot be doubled together; choose either singular -টি or plural -গুলো."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the form meaning 'the book':",
+    "options": [
+     "বইগুলো",
+     "বইটা",
+     "বইরা",
+     "বইগণ"
+    ],
+    "answer": 1,
+    "explanation": "Attaching the clitic -টা to বই forms the definite singular 'the book'."
+   },
+   {
+    "question": "Fill in the blank: 'টেবিলের ওপর ___ কলম আছে।' (three pens)",
+    "options": [
+     "তিন",
+     "তিনজন",
+     "তিনটি",
+     "তিনগুলো"
+    ],
+    "answer": 2,
+    "explanation": "Inanimate objects counted with the numeral 3 require the classifier -টি or -টে (তিনটি)."
+   },
+   {
+    "question": "Choose the form meaning 'the mangoes':",
+    "options": [
+     "আমখানা",
+     "আমটি",
+     "আমটা",
+     "আমগুলো"
+    ],
+    "answer": 3,
+    "explanation": "The clitic -গুলো marks inanimate or general plural nouns definitely."
+   },
+   {
+    "question": "Complete the sentence: 'এই ___ খুব মিষ্টি।' (the small bird)",
+    "options": [
+     "পাখিটি",
+     "পাখিখানা",
+     "পাখিটাগুলো",
+     "পাখিরা"
+    ],
+    "answer": 0,
+    "explanation": "-টি denotes affection, diminutive size, or polite specification for animals and objects."
+   }
+  ],
+  "tip": "Attach -টা/-টি directly to numerals before the noun (পাঁচটি কলম), or directly to the noun stem without numerals (কলমটি)."
+ },
+ {
+  "id": "bn-a1-copula-omission-achhe",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "⚖️",
+  "title": "Zero Copula vs. Existential 'Achhe'",
+  "subtitle": "Distinguishing present identity from presence and possession",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Bengali omits the verb 'to be' in present identity/attribution statements, but explicitly uses আছে for physical presence, location, and possession.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Grammar Rule",
+    "Bengali Pattern",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Identity / Equative",
+      "Zero Copula (Ø verb)",
+      "Subject + Noun/Adj",
+      "তিনি শিক্ষক।"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Existence / Location",
+      "Use আছে (achhe)",
+      "Subject + Place + আছে",
+      "তিনি ঘরে আছেন।"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Possession",
+      "Genitive + আছে",
+      "Subject-র/এর + Noun + আছে",
+      "আমার গাড়ি আছে।"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negation (Identity)",
+      "Use নয় (nôy)",
+      "Subject + Predicate + নয়",
+      "সে চোর নয়।"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negation (Existence)",
+      "Use নেই (nei)",
+      "Subject + নেই",
+      "টাকা নেই।"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Identity Equation",
+    "example": "আমার ভাই ডাক্তার।",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Physical Location",
+    "example": "মা রান্নাঘরে আছেন।",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Possession",
+    "example": "আমাদের একটি বাগান আছে।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "আমি একজন ছাত্র।",
+    "ko": "",
+    "highlight": "ছাত্র"
+   },
+   {
+    "en": "কলমটি ব্যাগের ভেতর আছে।",
+    "ko": "",
+    "highlight": "আছে"
+   },
+   {
+    "en": "তোমার কি সময় আছে?",
+    "ko": "",
+    "highlight": "আছে"
+   },
+   {
+    "en": "এটা আমার বাড়ি নয়।",
+    "ko": "",
+    "highlight": "নয়"
+   },
+   {
+    "en": "আজ দোকানে চিনি নেই।",
+    "ko": "",
+    "highlight": "নেই"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "আমি হই একজন শিক্ষক।",
+    "right": "আমি একজন শিক্ষক।",
+    "note": "Do not insert হই/হয় for present identity; standard Bengali utilizes a zero copula."
+   },
+   {
+    "wrong": "টেবিলে বই নয়।",
+    "right": "টেবিলে বই নেই।",
+    "note": "Use নেই for absence or non-existence, never নয় (which negates identity)."
+   },
+   {
+    "wrong": "আমি গাড়ি আছে।",
+    "right": "আমার গাড়ি আছে।",
+    "note": "Possession requires the possessor in the genitive case (আমার, not আমি)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'She is a student' in Bengali?",
+    "options": [
+     "সে ছাত্রী আছে।",
+     "সে ছাত্রী।",
+     "সে হয় ছাত্রী আছে।",
+     "তার ছাত্রী আছে।"
+    ],
+    "answer": 1,
+    "explanation": "Present equational sentences link subject and noun complement directly with no copula verb."
+   },
+   {
+    "question": "How do you say 'I do not have money'?",
+    "options": [
+     "আমার টাকা নেই।",
+     "আমি টাকা নয়।",
+     "আমার টাকা নয়।",
+     "আমি টাকা নেই।"
+    ],
+    "answer": 0,
+    "explanation": "Lack of possession uses the genitive subject (আমার) plus the negative existential নেই."
+   },
+   {
+    "question": "Complete: 'বাবা এখন অফিসে ___।' (Father is at the office)",
+    "options": [
+     "হয়",
+     "নয়",
+     "নেই",
+     "আছেন"
+    ],
+    "answer": 3,
+    "explanation": "Physical location for an honorific person requires the polite existential verb আছেন."
+   },
+   {
+    "question": "Complete: 'ইনি ডাক্তার ___।' (He is not a doctor)",
+    "options": [
+     "নেই",
+     "নয়",
+     "না",
+     "নেন"
+    ],
+    "answer": 1,
+    "explanation": "Identity statements are negated using নয় (or polite নন), whereas নেই indicates non-existence."
+   }
+  ],
+  "tip": "Remember: A = B uses no verb ('তিনি শিক্ষক'), but 'A is located in B' requires আছে ('তিনি ঘরে আছেন')."
+ },
+ {
+  "id": "bn-a1-genitive-locative-cases",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🗺️",
+  "title": "Genitive (-r/-er) and Locative (-e/-te) Inflections",
+  "subtitle": "Inflecting nouns for possession, origin, space, and time",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Add -র / -এর to indicate possession and -এ / -তে to denote location, choosing between them based on whether the stem ends in a vowel or a consonant.",
+  "structure": {
+   "headers": [
+    "Case",
+    "After Vowel",
+    "After Consonant",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Genitive ('s / of)",
+      "-র (বাড়ি -> বাড়ির)",
+      "-এর (বই -> বইয়ের / হাত -> হাতের)",
+      "বইয়ের পাতা"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Locative (in/at/on)",
+      "-তে (নদী -> নদীতে)",
+      "-এ (ঘর -> ঘরে)",
+      "ঘরে বসে"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Locative (-য় variant)",
+      "-য় (ঢাকা -> ঢাকায়)",
+      "N/A",
+      "ঢাকায় বাস"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Possession / Genitive",
+    "example": "রহিমের ভাই ভালো গান গায়।",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Spatial Location",
+    "example": "আমরা এখন কলকাতায় আছি।",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Temporal Location",
+    "example": "সে সোমবারে আসবে।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "রমার হাতের রান্না খুব ভালো।",
+    "ko": "",
+    "highlight": "হাতের"
+   },
+   {
+    "en": "শিশুটি বিছানায় ঘুমাচ্ছে।",
+    "ko": "",
+    "highlight": "বিছানায়"
+   },
+   {
+    "en": "তিনি এই শহরের মানুষ।",
+    "ko": "",
+    "highlight": "শহরের"
+   },
+   {
+    "en": "মা এখন বাজারে আছেন।",
+    "ko": "",
+    "highlight": "বাজারে"
+   },
+   {
+    "en": "গাড়ির চাকা নষ্ট হয়ে গেছে।",
+    "ko": "",
+    "highlight": "গাড়ির"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "আমি ঢাকাতে থাকি।",
+    "right": "আমি ঢাকায় থাকি।",
+    "note": "Nouns ending in the open vowel -আ conventionally take the locative suffix -য় (ঢাকায়)."
+   },
+   {
+    "wrong": "স্কুলর সামনে দেখা হবে।",
+    "right": "স্কুলের সামনে দেখা হবে।",
+    "note": "Consonant-ending stems like স্কুল require -এর, not just -র."
+   },
+   {
+    "wrong": "টেবিলতে একটি বই আছে।",
+    "right": "টেবিলে একটি বই আছে।",
+    "note": "Consonant-ending টেবিল takes the locative -এ (টেবিলে), not -তে."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which is the correct locative form of 'ঘর' (room/house)?",
+    "options": [
+     "ঘরতে",
+     "ঘরে",
+     "ঘরয়",
+     "ঘরর"
+    ],
+    "answer": 1,
+    "explanation": "Consonant-final stems take the locative inflection -এ, yielding ঘরে."
+   },
+   {
+    "question": "Which is the correct genitive form of 'ছেলে' (boy)?",
+    "options": [
+     "ছেলেতে",
+     "ছেলেরে",
+     "ছেলের",
+     "ছেলেয়ের"
+    ],
+    "answer": 2,
+    "explanation": "Vowel-ending stems take the simple genitive suffix -র, yielding ছেলের."
+   },
+   {
+    "question": "Complete the sentence: 'মাখন দুধ___ তৈরি হয়।' (Butter is made of milk)",
+    "options": [
+     "দুধে",
+     "দুধতে",
+     "দুধের",
+     "দুধর"
+    ],
+    "answer": 2,
+    "explanation": "Consonant-final দুধ takes -এর (দুধের) to show genitive derivation/possession."
+   },
+   {
+    "question": "Complete the sentence: 'মাছ ___ থাকে।' (Fish lives in water)",
+    "options": [
+     "জলে",
+     "জলতে",
+     "জলর",
+     "জলকে"
+    ],
+    "answer": 0,
+    "explanation": "Consonant-final জল takes the locative suffix -এ (জলে)."
+   }
+  ],
+  "tip": "Vowel ending? Think '-র' and '-তে' (or '-য়' after -আ). Consonant ending? Think '-এর' and '-এ'."
+ },
+ {
+  "id": "bn-a1-objective-case-marking",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🎯",
+  "title": "Differential Object Marking (-ke)",
+  "subtitle": "Determining accusative and dative marking on objects",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "The objective suffix -কে is mandatory for all indirect objects and specific animate direct objects, but omitted for inanimate or generic direct objects.",
+  "structure": {
+   "headers": [
+    "Object Type",
+    "Rule for -কে",
+    "Bengali Example",
+    "Status"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Pronouns / Persons",
+      "Mandatory",
+      "আমাকে ডাকো",
+      "Animate & Definite"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Specific Human Direct Object",
+      "Mandatory",
+      "ডাক্তারকে বলো",
+      "Definite Animate"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Inanimate Direct Object",
+      "Omitted (Bare)",
+      "ভাত খাও",
+      "Inanimate"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Indirect Object (Dative)",
+      "Mandatory",
+      "ভিক্ষুককে দান করো",
+      "Recipient"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Specific Human Object",
+    "example": "পুলিশ চোরকে ধরল।",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Indirect Object (Recipient)",
+    "example": "শিক্ষক ছাত্রকে একটি বই দিলেন।",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Unmarked Inanimate Object",
+    "example": "আমি রোজ সকালে খবরের কাগজ পড়ি।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "তুমি আমাকে চেনো?",
+    "ko": "",
+    "highlight": "আমাকে"
+   },
+   {
+    "en": "মা শিশুকে খাওয়াচ্ছেন।",
+    "ko": "",
+    "highlight": "শিশুকে"
+   },
+   {
+    "en": "দয়া করে দরজা খোলো।",
+    "ko": "",
+    "highlight": "দরজা"
+   },
+   {
+    "en": "তিনি বাবাকে চিঠি লিখেছেন।",
+    "ko": "",
+    "highlight": "বাবাকে"
+   },
+   {
+    "en": "আমরা রাতে ভাত খাব।",
+    "ko": "",
+    "highlight": "ভাত"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "আমি বইকে পড়ছি।",
+    "right": "আমি বই পড়ছি।",
+    "note": "Inanimate direct objects like বই must not take the accusative marker -কে."
+   },
+   {
+    "wrong": "আমি তুমি ভালোবাসি।",
+    "right": "আমি তোমাকে ভালোবাসি।",
+    "note": "Pronoun direct objects are definite animates and must carry -কে (তোমাকে)."
+   },
+   {
+    "wrong": "ভাই চিঠিকে পাঠাল।",
+    "right": "ভাই চিঠি পাঠাল।",
+    "note": "Direct inanimate objects like চিঠি remain unmarked in standard Bengali."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence: 'আমি একটি ___ দেখছি।' (movie)",
+    "options": [
+     "সিনেমাকে",
+     "সিনেমা",
+     "সিনেমাতে",
+     "সিনেমার"
+    ],
+    "answer": 1,
+    "explanation": "Inanimate direct objects like সিনেমা remain in the bare, unmarked nominative form."
+   },
+   {
+    "question": "Complete the sentence: 'তুমি ___ চেনো?' (him/her - polite)",
+    "options": [
+     "তিনি",
+     "তার",
+     "তাঁকে",
+     "সে"
+    ],
+    "answer": 2,
+    "explanation": "Personal pronoun direct objects require the objective suffix -কে (তাঁকে)."
+   },
+   {
+    "question": "Complete the sentence: 'মা ___ ডাকছেন।' (Ratan)",
+    "options": [
+     "রতন",
+     "রতনকে",
+     "রতনের",
+     "রতনতে"
+    ],
+    "answer": 1,
+    "explanation": "Specific human direct objects must take the objective case ending -কে."
+   },
+   {
+    "question": "Which sentence correctly marks the direct object?",
+    "options": [
+     "আমি আপেলকে খাই।",
+     "আমি কলমকে খুঁজি।",
+     "আমি জলকে পান করি।",
+     "আমি বন্ধুকে দেখি।"
+    ],
+    "answer": 3,
+    "explanation": "Only the human direct object (বন্ধু -> বন্ধুকে) takes -কে; foods, fluids, and tools remain unmarked."
+   }
+  ],
+  "tip": "Ask yourself: Is the object human or a pronoun? If yes, attach -কে. Is it an inanimate thing? Leave it suffix-free."
+ },
+ {
+  "id": "bn-a1-basic-negation-na-nei",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🚫",
+  "title": "Post-Verbal 'Na' vs. Existential 'Nei'",
+  "subtitle": "Negating actions with final না versus negating presence and possession with নেই",
+  "color": "#DC2626",
+  "bg": "#FEF2F2",
+  "keyPoint": "Use clause-final না to negate action verbs, but use নেই to negate existence, presence, or possession in the present tense.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Negative Marker",
+    "Bengali Example",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Action Negation",
+      "না (clause-final)",
+      "আমি ভাত খাই না।",
+      "I do not eat rice."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Existential Absence",
+      "নেই (replaces আছে)",
+      "ঘরে কেউ নেই।",
+      "There is no one in the room."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negative Possession",
+      "নেই (with Genitive)",
+      "আমার টাকা নেই।",
+      "I do not have money."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Past Action Completion",
+      "নি (contracted na)",
+      "সে যায়নি।",
+      "He did not go."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Negating Habitual Action",
+    "example": "রাহুল চা খায় না।",
+    "translation": ""
+   },
+   {
+    "color": "#EA580C",
+    "label": "Stating Absence / Lack of Existence",
+    "example": "টেবিলের ওপর বই নেই।",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Expressing Lack of Possession",
+    "example": "আজ আমার সময় নেই।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "আমি মাংস খাই না।",
+    "ko": "",
+    "highlight": "খাই না"
+   },
+   {
+    "en": "দোকানে কোনো মিষ্টি নেই।",
+    "ko": "",
+    "highlight": "নেই"
+   },
+   {
+    "en": "আমাদের কাছে অতিরিক্ত চাবি নেই।",
+    "ko": "",
+    "highlight": "নেই"
+   },
+   {
+    "en": "তারা প্রতিদিন গান শোনে না।",
+    "ko": "",
+    "highlight": "শোনে না"
+   },
+   {
+    "en": "আজ বাইরে বাতাস নেই।",
+    "ko": "",
+    "highlight": "নেই"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "আমার কলম আছে না।",
+    "right": "আমার কলম নেই।",
+    "note": "Do not combine the positive existential 'আছে' with 'না'; the suppletive negative form is always 'নেই'."
+   },
+   {
+    "wrong": "আমি না যাই।",
+    "right": "আমি যাই না।",
+    "note": "Standard indicative negation places 'না' strictly after the finite verb, not before it."
+   },
+   {
+    "wrong": "ঘরে মানুষ না।",
+    "right": "ঘরে মানুষ নেই।",
+    "note": "To state non-existence or physical absence at a location, use 'নেই' rather than 'না'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I do not drink tea. -> আমি চা ___।",
+    "options": [
+     "নেই",
+     "খাই না",
+     "খায় না",
+     "নাই"
+    ],
+    "answer": 1,
+    "explanation": "'খাই না' matches the first-person subject 'আমি' and correctly places 'না' after the finite verb."
+   },
+   {
+    "question": "There is no water in the bottle. -> বোতলে জল ___।",
+    "options": [
+     "নেই",
+     "না",
+     "নয়",
+     "হবে না"
+    ],
+    "answer": 0,
+    "explanation": "Physical absence or non-existence in the present tense requires the existential negative 'নেই'."
+   },
+   {
+    "question": "We do not have a car. -> আমাদের গাড়ি ___।",
+    "options": [
+     "আছেন না",
+     "না",
+     "নেই",
+     "নয়"
+    ],
+    "answer": 2,
+    "explanation": "Possession in Bengali uses a genitive possessor plus 'আছে/নেই'. The negative form is 'নেই'."
+   },
+   {
+    "question": "They do not speak English. -> তারা ইংরেজি ___।",
+    "options": [
+     "বলে নেই",
+     "নেই বলে",
+     "না বলে",
+     "বলে না"
+    ],
+    "answer": 3,
+    "explanation": "Regular action negation places 'না' right after the conjugated third-person verb 'বলে'."
+   }
+  ],
+  "tip": "Think of নেই as the exact opposite of আছে (exists/has), while না simply negates any standard conjugated action verb."
+ },
+ {
+  "id": "bn-a2-experiencer-dative-construction",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🧠",
+  "title": "Genitive/Dative Experiencer Subject Constructions",
+  "subtitle": "Expressing internal states, physical sensations, and desires with indirect subjects",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "In Bengali, physical sensations, feelings, and hunger require the experiencer to take the genitive (-র / -এর) or dative (-কে) case with an impersonal third-person predicate.",
+  "structure": {
+   "headers": [
+    "Case of Subject",
+    "Experiencer Form",
+    "Sensory / Modal Noun",
+    "Verb (3rd Person)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Genitive (Physical sensation)",
+      "আমার (I-GEN)",
+      "ক্ষিদে (hunger)",
+      "পেয়েছে (has caught)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Genitive (Feelings/Liking)",
+      "তার (He/She-GEN)",
+      "ভালো (good)",
+      "লাগছে (is feeling)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Genitive (Sickness/Pain)",
+      "বাবার (Father-GEN)",
+      "মাথা ব্যথা (headache)",
+      "করছে (is doing)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Genitive (Cold/Heat)",
+      "তোমাদের (You all-GEN)",
+      "ঠান্ডা (cold)",
+      "লাগছে (is feeling)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Hunger and Thirst",
+    "example": "আমার খুব ক্ষিদে পেয়েছে।",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Emotional or Aesthetic Reactions",
+    "example": "গানটি শুনে আমার ভালো লাগল।",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Physical Discomfort or Ailments",
+    "example": "রিয়ার মাথা যন্ত্রণা করছে।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "আমার খুব জলতেষ্টা পেয়েছে।",
+    "ko": "",
+    "highlight": "আমার"
+   },
+   {
+    "en": "তার কি শীত করছে?",
+    "ko": "",
+    "highlight": "তার"
+   },
+   {
+    "en": "আমাদের এই শহরটা খুব ভালো লাগে।",
+    "ko": "",
+    "highlight": "আমাদের"
+   },
+   {
+    "en": "ছেলেটির খুব ভয় করছে।",
+    "ko": "",
+    "highlight": "ছেলেটির"
+   },
+   {
+    "en": "তোমার কি ঘুম পাচ্ছে?",
+    "ko": "",
+    "highlight": "তোমার"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "আমি ক্ষিদে পেয়েছি।",
+    "right": "আমার ক্ষিদে পেয়েছে।",
+    "note": "Hunger happens to you; the subject must be in the genitive case ('আমার'), not nominative ('আমি')."
+   },
+   {
+    "wrong": "আমি এই সিনেমাটি ভালো লাগে।",
+    "right": "আমার এই সিনেমাটি ভালো লাগে।",
+    "note": "The verb 'লাগা' (to appeal/feel) takes an experiencer in the genitive case ('আমার')."
+   },
+   {
+    "wrong": "সে মাথা ব্যথা করছে।",
+    "right": "তার মাথা ব্যথা করছে।",
+    "note": "Bodily symptoms use the genitive pronoun 'তার' because the body part or feeling is the grammatical focus."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I am feeling cold. -> ___ ঠান্ডা লাগছে।",
+    "options": [
+     "আমার",
+     "আমি",
+     "আমাকে",
+     "আমায়"
+    ],
+    "answer": 0,
+    "explanation": "Sensory experiences like feeling cold ('ঠান্ডা লাগা') require the genitive pronoun 'আমার'."
+   },
+   {
+    "question": "Does he feel sleepy? -> ___ কি ঘুম পাচ্ছে?",
+    "options": [
+     "সে",
+     "তিনি",
+     "তার",
+     "তাকে"
+    ],
+    "answer": 2,
+    "explanation": "Sleepiness ('ঘুম পাওয়া') takes the genitive form of the experiencer ('তার')."
+   },
+   {
+    "question": "We like this place. -> ___ এই জায়গাটি পছন্দ হয়েছে।",
+    "options": [
+     "আমরা",
+     "আমাদেরকে",
+     "আমাদের",
+     "আমাদিগকে"
+    ],
+    "answer": 2,
+    "explanation": "Mental impressions and approval constructions take the genitive case 'আমাদের'."
+   },
+   {
+    "question": "The girl is feeling scared. -> ___ ভয় করছে।",
+    "options": [
+     "মেয়েটি",
+     "মেয়েটিকে",
+     "মেয়েরা",
+     "মেয়েটির"
+    ],
+    "answer": 3,
+    "explanation": "'ভয় করা' (to feel fear) requires the genitive case marker '-র/-এর', making it 'মেয়েটির'."
+   }
+  ],
+  "tip": "Whenever you express bodily needs (hunger, thirst, sleepiness) or feelings (cold, fear, liking), turn 'I' into 'আমার' and use a fixed 3rd-person verb like পাচ্ছে or করছে."
+ },
+ {
+  "id": "bn-a2-verbal-noun-form",
+  "level": "a2",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🏷️",
+  "title": "The Verbal Noun (-a/-ano) and its Case Declensions",
+  "subtitle": "Forming gerunds and adding genitive or locative endings for purpose, rules, and need",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Adding -আ or -আনো to a verb root creates a verbal noun, which inflects with -র for obligation (দরকার/উচিত) and -তে for purpose or entry.",
+  "structure": {
+   "headers": [
+    "Root",
+    "Verbal Noun (Gerund)",
+    "Genitive (-র) Form",
+    "Purposive/Locative (-তে)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "কর- (do)",
+      "করা (doing)",
+      "করার (of doing / to do)",
+      "করতে (in order to do)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "খা- (eat)",
+      "খাওয়া (eating)",
+      "খাওয়ার (for eating)",
+      "খেতে (to eat)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "যা- (go)",
+      "যাওয়া (going)",
+      "যাওয়ার (of going)",
+      "যেতে (to go)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "শেখা- (teach)",
+      "শেখানো (teaching)",
+      "শেখানোর (of teaching)",
+      "শেখাতে (to teach)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Expressing Obligation & Need (with দরকার)",
+    "example": "তোমার এখন বিশ্রাম নেওয়া দরকার।",
+    "translation": ""
+   },
+   {
+    "color": "#0D9488",
+    "label": "Prohibitions and General Statements",
+    "example": "এখানে ধূমপান করা নিষেধ।",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Indicating Purpose with Genitive Noun",
+    "example": "এটা পড়ার সময় হয়েছে।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "সকালে হাঁটা স্বাস্থ্যের জন্য ভালো।",
+    "ko": "",
+    "highlight": "হাঁটা"
+   },
+   {
+    "en": "আমাদের সত্যি কথা বলা উচিত।",
+    "ko": "",
+    "highlight": "বলা"
+   },
+   {
+    "en": "এখন সেখানে যাওয়ার কোনো দরকার নেই।",
+    "ko": "",
+    "highlight": "যাওয়ার"
+   },
+   {
+    "en": "তিনি গান গাওয়া পছন্দ করেন।",
+    "ko": "",
+    "highlight": "গাওয়া"
+   },
+   {
+    "en": "এই জল পানের যোগ্য নয়।",
+    "ko": "",
+    "highlight": "পানের"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "তোমার পড়া উচিত নেই।",
+    "right": "তোমার পড়ার দরকার নেই।",
+    "note": "'উচিত' means 'ought/should'; to state 'no need', use the genitive verbal noun plus 'দরকার নেই'."
+   },
+   {
+    "wrong": "আমি সাঁতার করা ভালোবাসি।",
+    "right": "আমি সাঁতার কাটা ভালোবাসি।",
+    "note": "Use the natural verbal collocation 'সাঁতার কাটা' (swimming) rather than forcing 'করা'."
+   },
+   {
+    "wrong": "এখানে কথা বলতে বারণ।",
+    "right": "এখানে কথা বলা বারণ।",
+    "note": "Prohibitions stating that an activity is forbidden ('বারণ' / 'নিষেধ') govern the basic verbal noun ('বলা'), not the infinitive in '-তে'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Smoking is prohibited here. -> এখানে ধূমপান ___ নিষেধ।",
+    "options": [
+     "করা",
+     "করার",
+     "করতে",
+     "করে"
+    ],
+    "answer": 0,
+    "explanation": "General prohibitions directly follow the nominative verbal noun 'করা'."
+   },
+   {
+    "question": "You need to go now. -> তোমার এখন ___ দরকার।",
+    "options": [
+     "যায়",
+     "যাওয়ার",
+     "গেলে",
+     "যেতে"
+    ],
+    "answer": 1,
+    "explanation": "Expressions with 'দরকার' (need) take the genitive verbal noun 'যাওয়ার' (or the basic 'যাওয়া')."
+   },
+   {
+    "question": "Reading books is a good habit. -> বই ___ ভালো অভ্যাস।",
+    "options": [
+     "পড়ে",
+     "পড়তে",
+     "পড়া",
+     "পড়ার"
+    ],
+    "answer": 2,
+    "explanation": "The subject of the sentence is the gerund 'পড়া' (reading)."
+   },
+   {
+    "question": "It is time to leave. -> রওনা ___ সময় হয়েছে।",
+    "options": [
+     "হতে",
+     "হওয়া",
+     "হয়ে",
+     "হওয়ার"
+    ],
+    "answer": 3,
+    "explanation": "Modifying a noun like 'সময়' (time) requires the genitive case suffix '-র', giving 'হওয়ার'."
+   }
+  ],
+  "tip": "Pair the bare verbal noun (-আ) with 'উচিত' (should) and 'নিষেধ' (forbidden), but use the genitive form (-আর) with 'দরকার' (need) and 'সময়' (time)."
+ },
+ {
+  "id": "bn-a2-conjunctive-participle-e",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#2563EB",
+  "emoji": "🔗",
+  "title": "Conjunctive Participle (-e Form) for Chaining",
+  "subtitle": "Connecting chronological actions seamlessly with the non-finite -এ suffix",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Attach the suffix -এ (or -িয়ে for causative stems) to a verb root to join chronological actions done by the same subject without repeating conjunctions.",
+  "structure": {
+   "headers": [
+    "Verb Root",
+    "-এ Participle",
+    "Full Predicate Clause",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "খা- (eat)",
+      "খেয়ে (having eaten)",
+      "ভাত খেয়ে স্কুলে যাব।",
+      "I will go to school after eating rice."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "দেখ- (see)",
+      "দেখে (having seen)",
+      "সে আমাকে দেখে হাসল।",
+      "Seeing me, she smiled."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "যা- (go)",
+      "গিয়ে (having gone)",
+      "বাজারে গিয়ে মাছ কিনব।",
+      "Going to the market, I'll buy fish."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "বস- (sit)",
+      "বসে (having sat)",
+      "চা খেয়ে বই পড়ছি।",
+      "Having had tea, I'm reading a book."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Sequential Actions (After doing X, Y)",
+    "example": "হাত ধুয়ে খাবার খাও।",
+    "translation": ""
+   },
+   {
+    "color": "#4F46E5",
+    "label": "Simultaneous or Manner Relationships",
+    "example": "সে হেঁটে হেঁটে বাড়ি ফিরল।",
+    "translation": ""
+   },
+   {
+    "color": "#0284C7",
+    "label": "Cause and Consequence",
+    "example": "খবরটা শুনে আমরা চমকে গেলাম।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "আমি বাড়ি ফিরে হাত-মুখ ধোব।",
+    "ko": "",
+    "highlight": "ফিরে"
+   },
+   {
+    "en": "তারা কাজ শেষ করে বাড়ি চলে গেল।",
+    "ko": "",
+    "highlight": "করে"
+   },
+   {
+    "en": "চিঠিটা পড়ে মা খুব খুশি হলেন।",
+    "ko": "",
+    "highlight": "পড়ে"
+   },
+   {
+    "en": "ওষুধ খেয়ে তুমি ঘুমিয়ে পড়ো।",
+    "ko": "",
+    "highlight": "খেয়ে"
+   },
+   {
+    "en": "আমরা স্টেশনে গিয়ে ট্রেনের অপেক্ষা করলাম।",
+    "ko": "",
+    "highlight": "গিয়ে"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "আমি খাব এবং যাব।",
+    "right": "আমি খেয়ে যাব।",
+    "note": "While 'এবং' is grammatically possible, natural spoken Bengali strongly prefers chaining with the '-এ' participle."
+   },
+   {
+    "wrong": "আমি তাকে দেখে সে পালাল।",
+    "right": "আমি তাকে দেখলে সে পালাল।",
+    "note": "The '-এ' participle requires both actions to share the same subject; different subjects require a conditional or temporal clause (-লে)."
+   },
+   {
+    "wrong": "সে চা খায়ে বেরিয়ে গেল।",
+    "right": "সে চা খেয়ে বেরিয়ে গেল।",
+    "note": "Verbs with high-vowel mutation shift: 'খা-' becomes 'খেয়ে', not 'খায়ে'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Wash your hands and eat. -> হাত ___ ভাত খাও।",
+    "options": [
+     "ধোয়া",
+     "ধুতে",
+     "ধুয়ে",
+     "ধোও"
+    ],
+    "answer": 2,
+    "explanation": "'ধুয়ে' is the correct conjunctive participle of 'ধোয়া' (to wash)."
+   },
+   {
+    "question": "Having finished the work, he slept. -> কাজ শেষ ___ সে ঘুমাল।",
+    "options": [
+     "করে",
+     "করল",
+     "করার",
+     "করতে"
+    ],
+    "answer": 0,
+    "explanation": "'করে' links the prior action of finishing the work directly to the main verb."
+   },
+   {
+    "question": "Go to the market and buy sweets. -> বাজারে ___ মিষ্টি কিনবে।",
+    "options": [
+     "যায়",
+     "যাওয়া",
+     "গেল",
+     "গিয়ে"
+    ],
+    "answer": 3,
+    "explanation": "The irregular conjunctive participle of 'যাওয়া' (to go) is 'গিয়ে'."
+   },
+   {
+    "question": "Hearing the news, we were surprised. -> সংবাদটি ___ আমরা অবাক হলাম।",
+    "options": [
+     "শুনে",
+     "শোনা",
+     "শুনতে",
+     "শুনল"
+    ],
+    "answer": 0,
+    "explanation": "'শুনে' connects the perception with the emotional outcome in a single clause chain."
+   }
+  ],
+  "tip": "Watch out for vowel harmony (অভিশ্রুতি): the stem vowel often raises when -এ is attached (দেখা -> দেখে, বসা -> বসে, খাওয়া -> খেয়ে)."
+ },
+ {
+  "id": "bn-a2-compound-verbs-vectors",
+  "level": "a2",
+  "category": "advanced",
+  "categoryColor": "#B45309",
+  "emoji": "🚀",
+  "title": "Compound Verbs with Aspectual Vectors (fela, jaowa, tola)",
+  "subtitle": "Adding nuance, completeness, and finality using auxiliary vector verbs",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "A conjunctive participle (-এ) paired with a conjugated vector verb (ফেলা, যাওয়া, ওঠা, বসা) alters aspect to signal completeness, irrevocability, or suddenness.",
+  "structure": {
+   "headers": [
+    "Main (-এ) + Vector",
+    "Vector Function",
+    "Bengali Example",
+    "Nuance Converted"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ফেলা (to drop/throw)",
+      "Irrevocable / Total completion",
+      "সে সব খেয়ে ফেলল।",
+      "He ate it all up completely."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "যাওয়া (to go)",
+      "Gradual transition / Exhaustion",
+      "দুধটা নষ্ট হয়ে গেল।",
+      "The milk went bad entirely."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ওঠা (to rise)",
+      "Sudden burst / Breakthrough",
+      "বাচ্চাটি কেঁদে উঠল।",
+      "The child burst into tears."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "বসা (to sit)",
+      "Rash or impulsive action",
+      "সে এটা বলে বসল! ",
+      "He went and said it blurted out!"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Decisive / Complete Action (ফেলা)",
+    "example": "চিঠিটা তাড়াতাড়ি লিখে ফেলো।",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "State Transformation (যাওয়া)",
+    "example": "গাছটি শুকিয়ে গেছে।",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Sudden Outburst (ওঠা)",
+    "example": "মেঘ ডেকে উঠল।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "আমি কাজটা শেষ করে ফেললাম।",
+    "ko": "",
+    "highlight": "ফেললাম"
+   },
+   {
+    "en": "সূর্য ডুবে গেল।",
+    "ko": "",
+    "highlight": "ডুবে গেল"
+   },
+   {
+    "en": "কথাটা শুনে সে চমকে উঠল।",
+    "ko": "",
+    "highlight": "চমকে উঠল"
+   },
+   {
+    "en": "তুমি সব গোপন কথা বলে দিলে।",
+    "ko": "",
+    "highlight": "বলে দিলে"
+   },
+   {
+    "en": "চা ঠান্ডা হয়ে যাচ্ছে।",
+    "ko": "",
+    "highlight": "হয়ে যাচ্ছে"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "আমি ভাত খেয়ে ফেলেছিলাম না।",
+    "right": "আমি ভাত খাইনি।",
+    "note": "Compound verbs with vector auxiliaries are generally avoided in straightforward past negative clauses; negate the simple verb instead."
+   },
+   {
+    "wrong": "সে কেঁদে গেল।",
+    "right": "সে কেঁদে উঠল।",
+    "note": "Sudden bodily or vocal outbursts take 'ওঠা' (burst forth), not 'যাওয়া'."
+   },
+   {
+    "wrong": "আমি বই পড়ে ফেলে।",
+    "right": "আমি বই পড়ে ফেললাম।",
+    "note": "Only the second verb (vector) conjugates for tense and person; the first verb remains invariable in the -এ form."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Finish reading the book completely! -> বইটি পড়ে ___!",
+    "options": [
+     "ওঠো",
+     "ফেলো",
+     "যাও",
+     "বসো"
+    ],
+    "answer": 1,
+    "explanation": "'ফেলা' as a vector marks thorough, decisive completion of an intentional action."
+   },
+   {
+    "question": "The patient suddenly cried out. -> রোগী চিৎকার করে ___।",
+    "options": [
+     "ফেলল",
+     "গেল",
+     "উঠল",
+     "দিল"
+    ],
+    "answer": 2,
+    "explanation": "'ওঠা' signifies sudden eruption or inception of an involuntary noise or feeling."
+   },
+   {
+    "question": "My phone broke down entirely. -> আমার ফোনটি ভেঙে ___।",
+    "options": [
+     "নিল",
+     "বসল",
+     "তুলল",
+     "গেল"
+    ],
+    "answer": 3,
+    "explanation": "'যাওয়া' indicates a natural process of irreversible change or destruction (ভেঙে গেল)."
+   },
+   {
+    "question": "He gave away the secret impulsively. -> সে গোপন কথাটি ফাঁস করে ___।",
+    "options": [
+     "দিল",
+     "নিল",
+     "উঠল",
+     "গেল"
+    ],
+    "answer": 0,
+    "explanation": "'দেওয়া' as a vector signifies an action directed outward for or to someone else."
+   }
+  ],
+  "tip": "Remember: The first verb holds the dictionary meaning, while the second vector verb loses its literal meaning and acts as an emotional or aspectual amplifier."
+ },
+ {
+  "id": "bn-a2-habitual-past-tense",
+  "level": "a2",
+  "category": "tenses",
+  "categoryColor": "#4A90E2",
+  "emoji": "🕰️",
+  "title": "Habitual Past Tense (-tam Inflections)",
+  "subtitle": "Talking about past routines, customary habits, and unreal counterfactual wishes",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Add personal suffixes containing the characteristic consonant 'ত' (-t-) directly to verb stems to describe actions you 'used to' do or 'would' do.",
+  "structure": {
+   "headers": [
+    "Person / Pronoun",
+    "Suffix",
+    "Example Verb (করা)",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "আমি / আমরা (1st person)",
+      "-তাম (-tam)",
+      "করতাম",
+      "I / we used to do"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "তুমি / তোমরা (2nd familiar)",
+      "-তে (-te)",
+      "করতে",
+      "you used to do"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "তুই / তোরা (2nd intimate)",
+      "-তিস (-tis)",
+      "করতিস",
+      "you used to do"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "সে / তারা (3rd ordinary)",
+      "-ত (-to)",
+      "করত",
+      "(s)he / they used to do"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "আপনি / তিনি (Polite/Honorific)",
+      "-তেন (-ten)",
+      "করতেন",
+      "you / (s)he used to do"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Past Habits & Routines",
+    "example": "ছোটবেলায় আমি রোজ বিকেলে ফুটবল খেলতাম।",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Past Continuous States",
+    "example": "দাদু নদীর ধারে একটি সুন্দর বাড়িতে থাকতেন।",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Hypothetical Counterfactuals",
+    "example": "তুমি ডাকলে আমি অবশ্যই তোমার বাড়ি যেতাম।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "আমি ছোটবেলায় প্রতিদিন দুধ খেতাম।",
+    "ko": "",
+    "highlight": "খেতাম"
+   },
+   {
+    "en": "তুমি কি আগে এই স্কুলে পড়তে?",
+    "ko": "",
+    "highlight": "পড়তে"
+   },
+   {
+    "en": "বাবা সকালে উঠে চা খেতেন।",
+    "ko": "",
+    "highlight": "খেতেন"
+   },
+   {
+    "en": "বৃষ্টি না হলে আমরা মাঠে যেতাম।",
+    "ko": "",
+    "highlight": "যেতাম"
+   },
+   {
+    "en": "সে প্রায়ই বন্ধুদের চিঠি লিখত।",
+    "ko": "",
+    "highlight": "লিখত"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "আমি প্রতিদিন ফুটবল খেললাম।",
+    "right": "আমি প্রতিদিন ফুটবল খেলতাম।",
+    "note": "The simple past (-lam) denotes a single completed past event, whereas habitual past (-tam) is required for recurrent habits."
+   },
+   {
+    "wrong": "তিনি এই শহরে থাকত।",
+    "right": "তিনি এই শহরে থাকতেন।",
+    "note": "Honorific 3rd person (তিনি) requires the honorific ending -তেন (-ten), not ordinary -ত (-to)."
+   },
+   {
+    "wrong": "তুমি গান গাইতে পারতাম।",
+    "right": "তুমি গান গাইতে পারতে।",
+    "note": "The subject 'তুমি' demands the 2nd person familiar inflection -তে (-te), while -তাম (-tam) is strictly 1st person."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "When I lived in the village, I used to swim every morning: আমি গ্রামে থাকার সময় রোজ সকালে পুকুরে ___।",
+    "options": [
+     "সাঁতার কাটতাম",
+     "সাঁতার কাটতে",
+     "সাঁতার কাটল",
+     "সাঁতার কাটি"
+    ],
+    "answer": 0,
+    "explanation": "The 1st-person subject 'আমি' requires the habitual past ending -তাম (-tam)."
+   },
+   {
+    "question": "What did you (familiar) use to read before sleeping? তুমি ঘুমানোর আগে কী ___?",
+    "options": [
+     "পড়তাম",
+     "পড়তেন",
+     "পড়তে",
+     "পড়ত"
+    ],
+    "answer": 2,
+    "explanation": "The familiar 2nd-person pronoun 'তুমি' takes the inflection -তে (-te)."
+   },
+   {
+    "question": "Mother used to tell wonderful stories every night: মা রোজ রাতে সুন্দর গল্প ___।",
+    "options": [
+     "বলতেন",
+     "বলতাম",
+     "বলতিস",
+     "বলবে"
+    ],
+    "answer": 0,
+    "explanation": "Parents receive honorific agreement in standard Bengali, triggering the -তেন (-ten) ending."
+   },
+   {
+    "question": "If you had invited him, he would have come: তুমি ডাকলে সে নিশ্চয়ই ___।",
+    "options": [
+     "আসতাম",
+     "আসতে",
+     "আসবেন",
+     "আসত"
+    ],
+    "answer": 3,
+    "explanation": "The 3rd-person non-honorific pronoun 'সে' requires the habitual/conditional past ending -ত (-to)."
+   }
+  ],
+  "tip": "The habitual past tense forms double as conditional counterfactual verbs ('would have done') when paired with an 'if' clause."
+ },
+ {
+  "id": "bn-a2-modal-infinitives-lagbe-hobe",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#F59E0B",
+  "emoji": "📌",
+  "title": "Obligation and Compulsion Structures (হবে, লাগবে, পড়বে)",
+  "subtitle": "Expressing necessity, external obligation, and compulsory duties in Bengali",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Mark the logical subject in the genitive case (-র / -এর) and attach modal auxiliaries (হবে, লাগবে, or পড়বে) to an infinitive (-তে) or verbal noun (-আ).",
+  "structure": {
+   "headers": [
+    "Subject Case",
+    "Verb Form",
+    "Modal Auxiliary",
+    "Nuance of Obligation"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Genitive (আমাকে)",
+      "Infinitive (যেতে)",
+      "হবে (hobe)",
+      "General obligation / must"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Genitive (তোমাকে)",
+      "Infinitive (করতে)",
+      "লাগবে (lagbe)",
+      "Direct need or requirement"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Genitive (তাকে)",
+      "Infinitive (যেতে)",
+      "হয়েছিল (hoye-chhilo)",
+      "Past obligation (had to)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Genitive (আমাদের)",
+      "Infinitive (মানতে)",
+      "পড়বে (porbe)",
+      "Forced external compulsion"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#D97706",
+    "label": "Everyday Obligations",
+    "example": "আমাকে কাল সকালে তাড়াতাড়ি উঠতে হবে।",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Compulsory Requirements",
+    "example": "এই ফর্মটি পূরণ করতে আপনার সই লাগবে।",
+    "translation": ""
+   },
+   {
+    "color": "#FBBF24",
+    "label": "Forced Inevitability",
+    "example": "আইন ভাঙলে জরিমানা দিতে পড়বে।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "আমাকে আজই কলকাতা যেতে হবে।",
+    "ko": "",
+    "highlight": "যেতে হবে"
+   },
+   {
+    "en": "তোমার আর কতক্ষণ অপেক্ষা করতে লাগবে?",
+    "ko": "",
+    "highlight": "করতে লাগবে"
+   },
+   {
+    "en": "অসুস্থতার কারণে তাকে ওষুধ খেতে হয়েছিল।",
+    "ko": "",
+    "highlight": "খেতে হয়েছিল"
+   },
+   {
+    "en": "দেরি করলে আমাদের পুরো পথ হাঁটতে পড়বে।",
+    "ko": "",
+    "highlight": "হাঁটতে পড়বে"
+   },
+   {
+    "en": "আপনাকে এই কাজটি কালকের মধ্যে শেষ করতে হবে।",
+    "ko": "",
+    "highlight": "করতে হবে"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "আমি যেতে হবে।",
+    "right": "আমাকে যেতে হবে।",
+    "note": "Obligation modals with infinitives govern a genitive or objective case subject (আমাকে), never the nominative (আমি)."
+   },
+   {
+    "wrong": "তোমার কাজটা করা লাগবে না।",
+    "right": "তোমার কাজটা করতে লাগবে না।",
+    "note": "Pair 'লাগবে' with the conditional/infinitive in -তে (করতে) rather than uninflected stems when conveying an action to do."
+   },
+   {
+    "wrong": "আমাদের কাল পরীক্ষা দিতে হবে না ছিল।",
+    "right": "আমাদের কাল পরীক্ষা দিতে হয়নি।",
+    "note": "To negate past obligations, use 'হয়নি' (hoy-ni) with the infinitive, not 'হবে না ছিল'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I have to read this book today: ___ আজ এই বইটি পড়তে হবে।",
+    "options": [
+     "আমি",
+     "আমাকে",
+     "আমার",
+     "আমায়কে"
+    ],
+    "answer": 1,
+    "explanation": "The modal 'হবে' requires the dative/objective subject 'আমাকে'."
+   },
+   {
+    "question": "You will have to pay the rent tomorrow: তোমাকে কাল বাড়িভাড়া ___।",
+    "options": [
+     "দিতে হবে",
+     "দেওয়া হল",
+     "দিতে চায়",
+     "দেবে হলো"
+    ],
+    "answer": 0,
+    "explanation": "'Infinitive in -তে + হবে' (দিতে হবে) denotes future obligation 'will have to give/pay'."
+   },
+   {
+    "question": "He had to leave the office early yesterday: গতকাল তাকে অফিস থেকে তাড়াতাড়ি ___।",
+    "options": [
+     "বের হতে হবে",
+     "বের হতে হবে না",
+     "বের হতে হয়েছিল",
+     "বের হয় লাগবে"
+    ],
+    "answer": 2,
+    "explanation": "Past obligation ('had to') is formed with infinitive + হয়েছিল (বের হতে হয়েছিল)."
+   },
+   {
+    "question": "Do we need to buy tickets right now? আমাদের কি এখনই টিকিট ___?",
+    "options": [
+     "কাটতে লাগবে",
+     "কাটা গেল",
+     "কাটতে হয়তো",
+     "কাটব হবে"
+    ],
+    "answer": 0,
+    "explanation": "Infinitive 'কাটতে' + modal 'লাগবে' denotes procedural requirement or need."
+   }
+  ],
+  "tip": "Think of 'আমাকে যেতে হবে' literally as 'For me, to go will happen'—this explains why the subject is in the objective/genitive case!"
+ },
+ {
+  "id": "bn-a2-postposition-case-governance",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🧭",
+  "title": "Postpositions and Case Governance",
+  "subtitle": "Mastering whether postpositions demand nominative or genitive noun endings",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Most Bengali postpositions require the preceding noun to take the genitive case (-র / -এর), while a small closed group governs the bare nominative.",
+  "structure": {
+   "headers": [
+    "Case Required",
+    "Common Postpositions",
+    "Example",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Genitive (-র / -এর)",
+      "জন্য, সাথে, আগে, পরে, কাছে",
+      "বাড়ির কাছে",
+      "near the house"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Genitive (-র / -এর)",
+      "ভিতরে, বাইরে, নিচে, উপরে",
+      "টেবিলের উপরে",
+      "on top of the table"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Nominative (Bare)",
+      "দিয়ে, দ্বারা, ছাড়া, পর্যন্ত",
+      "কলম দিয়ে",
+      "with a pen"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Locative (-এ / -য়ে)",
+      "করে, নিয়ে",
+      "বাসে করে",
+      "by bus"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Genitive with Spatial Relators",
+    "example": "গাছের নিচে একটি হরিণ বিশ্রাম নিচ্ছে।",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Nominative Instrumental",
+    "example": "তিনি চামচ দিয়ে পায়েস খাচ্ছেন।",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Exclusion with Nominative",
+    "example": "তুমি ছাড়া আমার আর কেউ নেই।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "আমার জন্য এক কাপ চা বানাও।",
+    "ko": "",
+    "highlight": "আমার জন্য"
+   },
+   {
+    "en": "স্কুলের সামনে একটা বড় খেলার মাঠ আছে।",
+    "ko": "",
+    "highlight": "স্কুলের সামনে"
+   },
+   {
+    "en": "হাত দিয়ে স্পর্শ করবেন না।",
+    "ko": "",
+    "highlight": "হাত দিয়ে"
+   },
+   {
+    "en": "তিনি বাবার সাথে বাজারে গেলেন।",
+    "ko": "",
+    "highlight": "বাবার সাথে"
+   },
+   {
+    "en": "সকাল থেকে সন্ধ্যা পর্যন্ত বৃষ্টি হচ্ছিল।",
+    "ko": "",
+    "highlight": "সন্ধ্যা পর্যন্ত"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "আমি জন্য অপেক্ষা করো।",
+    "right": "আমার জন্য অপেক্ষা করো।",
+    "note": "'জন্য' (for) strictly governs the genitive case; 'আমি' must become 'আমার'."
+   },
+   {
+    "wrong": "কলমের দিয়ে লেখো।",
+    "right": "কলম দিয়ে লেখো।",
+    "note": "The instrumental postposition 'দিয়ে' takes the bare nominative case for inanimate tools, not the genitive."
+   },
+   {
+    "wrong": "ঘর বাইরে কে দাঁড়িয়ে আছে?",
+    "right": "ঘরের বাইরে কে দাঁড়িয়ে আছে?",
+    "note": "Locational postpositions like 'বাইরে' (outside) require the genitive suffix (-এর)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Sit next to me: ___ পাশে বসো।",
+    "options": [
+     "আমার",
+     "আমি",
+     "আমাতে",
+     "আমায়"
+    ],
+    "answer": 0,
+    "explanation": "'পাশে' (beside) governs the genitive case, turning 'আমি' into 'আমার'."
+   },
+   {
+    "question": "Cut the mango with a knife: ___ দিয়ে আমটি কাটো।",
+    "options": [
+     "ছুরি",
+     "ছুরির",
+     "ছুরিতে",
+     "ছুরিকে"
+    ],
+    "answer": 0,
+    "explanation": "The instrumental postposition 'দিয়ে' governs the bare nominative form for inanimate objects."
+   },
+   {
+    "question": "There is a deep pond behind the house: ___ পিছনে একটি গভীর পুকুর আছে।",
+    "options": [
+     "বাড়ি",
+     "বাড়িতে",
+     "বাড়ির",
+     "বাড়িকে"
+    ],
+    "answer": 2,
+    "explanation": "'পিছনে' (behind) requires its complement noun in the genitive case (বাড়ির)."
+   },
+   {
+    "question": "Nobody knows this secret except him: সে ___ এই গোপন কথা কেউ জানে না।",
+    "options": [
+     "সাথে",
+     "কাছে",
+     "ভিতরে",
+     "ছাড়া"
+    ],
+    "answer": 3,
+    "explanation": "'ছাড়া' (except / without) directly pairs with the nominative pronoun 'সে'."
+   }
+  ],
+  "tip": "If a postposition is derived from a physical noun or location (যেমন: সামনে, পিছনে, উপরে, কাছে), it almost always demands the genitive -র/-এর case."
+ },
+ {
+  "id": "bn-b1-conditional-participle-le",
+  "level": "b1",
+  "category": "conditionals",
+  "categoryColor": "#8B5CF6",
+  "emoji": "🔀",
+  "title": "Conditional Participle (-le Form)",
+  "subtitle": "Building concise 'if' and 'when' clauses with non-finite verb stems",
+  "color": "#7C3AED",
+  "bg": "#F5F3FF",
+  "keyPoint": "Suffixing -লে (-le) directly to a verb stem turns it into an invariant conditional participle meaning 'if X happens' or 'once X happens'.",
+  "structure": {
+   "headers": [
+    "Verb Stem",
+    "Conditional (-লে)",
+    "Subject Clause",
+    "Result Clause"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "যা- (go)",
+      "গেলে",
+      "তুমি গেলে",
+      "আমি যাব (If you go, I will go)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "আস্- (come)",
+      "আসলে",
+      "বৃষ্টি আসলে",
+      "খেলা বন্ধ হবে (If it rains...)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "পড়্- (read/study)",
+      "পড়লে",
+      "মন দিয়ে পড়লে",
+      "পাস করবে (If you study hard...)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "খাঁ- (eat)",
+      "খেলে",
+      "ওষুধ খেলে",
+      "সেরে যাবে (If you take medicine...)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Direct Conditions (If)",
+    "example": "মেঘ কাটলে রোদ উঠবে।",
+    "translation": ""
+   },
+   {
+    "color": "#6D28D9",
+    "label": "Sequential Time (When / Once)",
+    "example": "অফিস শেষ হলে আমি তোমাকে ফোন করব।",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Switch-Reference Clauses",
+    "example": "তুমি বললে আমি এখুনি রওনা হব।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "রোদে বেশিক্ষণ থাকলে মাথা ব্যথা করবে।",
+    "ko": "",
+    "highlight": "থাকলে"
+   },
+   {
+    "en": "সময় পেলে আমাকে দেখতে এসো।",
+    "ko": "",
+    "highlight": "পেলে"
+   },
+   {
+    "en": "টাকা দিলে টিকিট পাওয়া যাবে।",
+    "ko": "",
+    "highlight": "দিলে"
+   },
+   {
+    "en": "সে বাড়ি পৌঁছালে আমাকে জানিও।",
+    "ko": "",
+    "highlight": "পৌঁছালে"
+   },
+   {
+    "en": "ভালো করে খুঁজলে চাবিটা পেয়ে যাবে।",
+    "ko": "",
+    "highlight": "খুঁজলে"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "তুমি আসলে পর আমি যাব।",
+    "right": "তুমি আসলে আমি যাব।",
+    "note": "The suffix -লে already encodes temporal/conditional sequencing; adding 'পর' is redundant."
+   },
+   {
+    "wrong": "যদি তুমি যাবে, আমি খুশি হব।",
+    "right": "তুমি গেলে আমি খুশি হব।",
+    "note": "Using finite future tense in both clauses is unnatural; use the concise non-finite -লে form in the condition."
+   },
+   {
+    "wrong": "সে পড়িলে ভালো করত।",
+    "right": "সে পড়লে ভালো করত।",
+    "note": "'পড়িলে' is archaic Sadhu Bhasha; modern standard Bengali (Cholit) uses the contracted 'পড়লে'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "If you don't listen, you will regret it: কথা না ___ বিপদে পড়বে।",
+    "options": [
+     "শুনলে",
+     "শুনবে",
+     "শুনে",
+     "শুনল"
+    ],
+    "answer": 0,
+    "explanation": "The conditional participle -লে on the stem 'শুন-' produces 'শুনলে' (if you listen)."
+   },
+   {
+    "question": "When the teacher enters the room, stand up: শিক্ষক ক্লাসে ___ উঠে দাঁড়াবে।",
+    "options": [
+     "এলে",
+     "আসতে",
+     "এলেন",
+     "আসেন"
+    ],
+    "answer": 0,
+    "explanation": "Stem আস্- takes the conditional form 'এলে' (or 'আসলে'), meaning 'when/if [he] enters'."
+   },
+   {
+    "question": "If you wake up early, your body will stay healthy: সকালে তাড়াতাড়ি ___ শরীর ভালো থাকে।",
+    "options": [
+     "উঠব",
+     "উঠল",
+     "উঠলে",
+     "উঠতে"
+    ],
+    "answer": 2,
+    "explanation": "The general condition 'if one wakes up' requires the participle 'উঠলে'."
+   },
+   {
+    "question": "If you give me the book, I will read it: তুমি বইটি ___ আমি পড়ব।",
+    "options": [
+     "দিলে",
+     "দেবে",
+     "দিয়েছিল",
+     "দিচ্ছ"
+    ],
+    "answer": 0,
+    "explanation": "The conditional participle 'দিলে' correctly links the dependent clause with the main clause."
+   }
+  ],
+  "tip": "Unlike European languages, the subject of the -লে participle clause does not need to match the main clause subject—Bengali handles switch-reference seamlessly!"
+ },
+ {
+  "id": "bn-b1-relative-correlative-pairs",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#EC4899",
+  "emoji": "🔗",
+  "title": "Relative-Correlative Clauses (যে...সে, যা...তা, যখন...তখন)",
+  "subtitle": "Connecting dependent thoughts using paired J- and T-/S- pronouns and adverbs",
+  "color": "#DB2777",
+  "bg": "#FDF2F8",
+  "keyPoint": "Bengali creates relative constructions using twin markers: a relative word starting with 'য' (j-) in the dependent clause, matched by a correlative word starting with 'ত' or 'স' (t-/s-) in the independent clause.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Relative (য-)",
+    "Correlative (ত- / স-)",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Person",
+      "যে (je)",
+      "সে / তিনি (se / tini)",
+      "the person who... that person"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Inanimate Thing",
+      "যা (ja)",
+      "তা (ta)",
+      "whatever / that which... that"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Time",
+      "যখন (jokhon)",
+      "তখন (tokhon)",
+      "when... then"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Place",
+      "যেখানে (jekhane)",
+      "সেখানে (sekhane)",
+      "where... there"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Manner",
+      "যেমন (jemon)",
+      "তেমন (temon)",
+      "as / like... so"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DB2777",
+    "label": "Person Relative Clauses",
+    "example": "যে পরিশ্রম করে, সে সফলতা পায়।",
+    "translation": ""
+   },
+   {
+    "color": "#BE185D",
+    "label": "Temporal Synchronicity",
+    "example": "যখন বৃষ্টি শুরু হলো, তখন আমরা বাড়ি ফিরলাম।",
+    "translation": ""
+   },
+   {
+    "color": "#F472B6",
+    "label": "Abstract Equivalences",
+    "example": "যা ঘটে গেছে, তা ভুলে যাও।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "যিনি গতকাল এসেছিলেন, তিনি আমার শিক্ষক।",
+    "ko": "",
+    "highlight": "যিনি"
+   },
+   {
+    "en": "তুমি যা চাও, আমি তা দিতে পারি।",
+    "ko": "",
+    "highlight": "যা চাও, আমি তা"
+   },
+   {
+    "en": "যেখানে শান্তি নেই, সেখানে আমি থাকি না।",
+    "ko": "",
+    "highlight": "যেখানে"
+   },
+   {
+    "en": "যতটুকু প্রয়োজন, ততটুকু নাও।",
+    "ko": "",
+    "highlight": "যতটুকু"
+   },
+   {
+    "en": "যেমন কর্ম, তেমন ফল।",
+    "ko": "",
+    "highlight": "যেমন কর্ম, তেমন"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "যে মানুষটা এসেছিল, আমি চিনি।",
+    "right": "যে মানুষটা এসেছিল, তাকে আমি চিনি।",
+    "note": "Leaving out the correlative pronoun (তাকে) leaves the Bengali sentence incomplete; correlative pairs must balance each other."
+   },
+   {
+    "wrong": "যিনি ডাকছেন, সে আমার কাকা।",
+    "right": "যিনি ডাকছেন, তিনি আমার কাকা।",
+    "note": "Honorific agreement must match across clauses: honorific relative 'যিনি' requires honorific correlative 'তিনি', not 'সে'."
+   },
+   {
+    "wrong": "যখন তুমি আসবে, আমি সেখানে যাব।",
+    "right": "যখন তুমি আসবে, তখন আমি যাব।",
+    "note": "Pair 'যখন' with the temporal correlative 'তখন' (then), not spatial 'সেখানে' (there), unless specifying a separate location."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "As you sow, so you reap: ___ বীজ বুনবে, তেমনই ফসল পাবে।",
+    "options": [
+     "যেমন",
+     "যখন",
+     "যেখানে",
+     "যা"
+    ],
+    "answer": 0,
+    "explanation": "'যেমন' (as/in the manner) correlates with 'তেমনই' (so/in that manner)."
+   },
+   {
+    "question": "Whatever happened yesterday, forget it: কাল ___ হয়েছে, তা ভুলে যাও।",
+    "options": [
+     "যে",
+     "যা",
+     "যিনি",
+     "যত"
+    ],
+    "answer": 1,
+    "explanation": "Inanimate things or events take the neuter relative pronoun 'যা' (ja) to match 'তা' (ta)."
+   },
+   {
+    "question": "Where there is smoke, there is fire: যেখানে ধোঁয়া থাকে, ___ আগুন থাকে।",
+    "options": [
+     "তখন",
+     "তেমন",
+     "সেখানে",
+     "সে"
+    ],
+    "answer": 2,
+    "explanation": "The spatial relative marker 'যেখানে' (where) pairs strictly with 'সেখানে' (there)."
+   },
+   {
+    "question": "The boy who came first, he got the prize: যে ছেলেটি প্রথম হলো, ___ পুরষ্কার পেল।",
+    "options": [
+     "তা",
+     "সে",
+     "তেমন",
+     "তখন"
+    ],
+    "answer": 1,
+    "explanation": "An ordinary 3rd-person human relative 'যে' requires the nominative correlative pronoun 'সে'."
+   }
+  ],
+  "tip": "Always check honorific symmetry: if your relative clause starts with honorific 'যিনি' (jini) or 'যাঁকে' (jãke), the main clause MUST answer with 'তিনি' (tini) or 'তাঁকে' (tãke)!"
+ },
+ {
+  "id": "bn-b1-continuous-participle-te",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🏃",
+  "title": "The Imperfective/Infinitive Participle (-te Form)",
+  "subtitle": "Expressing purpose, simultaneous action, and continuous states with the -তে suffix",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Attach the suffix -তে to the basic verb stem to express intention with verbs of motion, simultaneous background action via reduplication, or an infinitive complement.",
+  "structure": {
+   "headers": [
+    "Function",
+    "Morphological Pattern",
+    "Bengali Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Purpose with Motion",
+      "Stem + -তে + Motion Verb",
+      "আমি পড়তে যাচ্ছি",
+      "I am going to study"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Simultaneous Action",
+      "Reduplicated Stem-তে",
+      "সে হাঁটতে হাঁটতে গান গায়",
+      "He sings while walking"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Inceptive / Continuous",
+      "Stem-তে + লাগা / থাকা",
+      "বৃষ্টি পড়তে লাগল",
+      "It started raining"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Modal Complement",
+      "Stem-তে + পারা / চাওয়া",
+      "তুমি কি বলতে পারো?",
+      "Can you say it?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Purpose of Motion",
+    "example": "আমরা বাজারে মাছ কিনতে গেলাম।",
+    "translation": ""
+   },
+   {
+    "color": "#1D4ED8",
+    "label": "Simultaneous Activity",
+    "example": "তারা কথা বলতে বলতে রাস্তা পার হলো।",
+    "translation": ""
+   },
+   {
+    "color": "#60A5FA",
+    "label": "Onset of Action",
+    "example": "শিশুটিকে দেখে সে হাসতে শুরু করল।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "আমি এক কাপ চা খেতে চাই।",
+    "ko": "",
+    "highlight": "খেতে"
+   },
+   {
+    "en": "তিনি বই পড়তে পড়তে ঘুমিয়ে পড়লেন।",
+    "ko": "",
+    "highlight": "পড়তে পড়তে"
+   },
+   {
+    "en": "মা রান্না করতে রান্নাঘরে গেলেন।",
+    "ko": "",
+    "highlight": "করতে"
+   },
+   {
+    "en": "হঠাৎ বাতাস জোরে বইতে লাগল।",
+    "ko": "",
+    "highlight": "বইতে"
+   },
+   {
+    "en": "তুমি কি এই কাজটা করতে পারবে?",
+    "ko": "",
+    "highlight": "করতে"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "আমি বাজারে যেতে কিনেছি।",
+    "right": "আমি বাজারে কিনতে গেছি।",
+    "note": "The verb indicating the main action or movement takes the final conjugated position, while the purpose verb takes the -তে form."
+   },
+   {
+    "wrong": "সে গান গেয়ে গেয়ে হাঁটছে।",
+    "right": "সে গান গাইতে গাইতে হাঁটছে।",
+    "note": "Simultaneous ongoing action requires the imperfective reduplication in -তে (-তে -তে), not the perfective conjunctive participle in -এ (-এ -এ)."
+   },
+   {
+    "wrong": "আমি বই পড়ার চাই।",
+    "right": "আমি বই পড়তে চাই।",
+    "note": "Complementary verbs like চাওয়া (to want) require the verbal participle in -তে, not the genitive verbal noun (-র)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence to mean 'They went to watch a movie': তারা সিনেমা ___ গেল।",
+    "options": [
+     "দেখে",
+     "দেখতে",
+     "দেখার",
+     "দেখল"
+    ],
+    "answer": 1,
+    "explanation": "The imperfective suffix -তে expresses the purpose of a motion verb (গেল)."
+   },
+   {
+    "question": "Choose the correct simultaneous form: রীতা কাঁদতে কাঁদতে কথা ___।",
+    "options": [
+     "বলল",
+     "বলতে",
+     "বলে",
+     "বলুন"
+    ],
+    "answer": 0,
+    "explanation": "The sentence requires a conjugated finite verb at the end; বলল completes the past action while কাঁদতে কাঁদতে marks the accompanying action."
+   },
+   {
+    "question": "Select the correct option to say 'It started to rain': বৃষ্টি ___ লাগল।",
+    "options": [
+     "পড়ে",
+     "পড়ার",
+     "পড়তে",
+     "পড়ল"
+    ],
+    "answer": 2,
+    "explanation": "The inceptive auxiliary লাগল requires the preceding verb in the -তে infinitive form."
+   },
+   {
+    "question": "Which verb correctly fills the blank: আপনি কি বাংলা ___ পারেন?",
+    "options": [
+     "বললেন",
+     "বললে",
+     "বলিয়া",
+     "বলতে"
+    ],
+    "answer": 3,
+    "explanation": "Ability modals such as পারা take a complement marked with -তে."
+   }
+  ],
+  "tip": "To express two actions happening at the exact same time by the same subject, double the -তে verb (e.g., খেতে খেতে = while eating)."
+ },
+ {
+  "id": "bn-b1-causative-verb-stems",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#2563EB",
+  "emoji": "🔄",
+  "title": "Morphological Causative Verb Formation",
+  "subtitle": "Deriving causative stems with the -আনো suffix and root vowel mutations",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Turn basic verbs into causatives by appending the suffix -আনো (-ano) to the consonant stem, which systematically raises or alters the root vowel (e.g., কড়া to করানো, শেখা to শেখানো).",
+  "structure": {
+   "headers": [
+    "Base Root",
+    "Base Meaning",
+    "Causative Stem (-আনো)",
+    "Causative Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "কর- (kôr)",
+      "to do",
+      "করানো (kôrano)",
+      "to cause to do / to have done"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "খা- (kha)",
+      "to eat",
+      "খাওয়ানো (khaowano)",
+      "to feed"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "শিখ- (shikh)",
+      "to learn",
+      "শেখানো (shekhano)",
+      "to teach"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "দেখ- (dekh)",
+      "to see",
+      "দেখানো (dekhano)",
+      "to show"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Making Someone Act",
+    "example": "বাবা মিস্ত্রিকে দিয়ে টেবিলটি তৈরি করালেন।",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Feeding or Nurturing",
+    "example": "মা সন্তানকে ভাত খাওয়াচ্ছেন।",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Instructing or Demonstrating",
+    "example": "শিক্ষক ছাত্রদের নতুন নিয়ম শেখাচ্ছেন।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "আমি তাকে ছবিগুলো দেখালাম।",
+    "ko": "",
+    "highlight": "দেখালাম"
+   },
+   {
+    "en": "তিনি ডাক্তার দিয়ে রোগীর চিকিৎসা করালেন।",
+    "ko": "",
+    "highlight": "করালেন"
+   },
+   {
+    "en": "মা শিশুকে দুধ খাওয়াচ্ছেন।",
+    "ko": "",
+    "highlight": "খাওয়াচ্ছেন"
+   },
+   {
+    "en": "ওরা আমাদের পথ দেখিয়ে দিল।",
+    "ko": "",
+    "highlight": "দেখিয়ে"
+   },
+   {
+    "en": "শিক্ষিকা ছাত্রীদের সুন্দর কবিতাটি শেখালেন।",
+    "ko": "",
+    "highlight": "শেখালেন"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "আমি তাকে বই পড়লাম।",
+    "right": "আমি তাকে বই পড়ালাম।",
+    "note": "পড়লাম means 'I read', whereas পড়ালাম is the causative form meaning 'I caused him/her to read' or 'I taught'."
+   },
+   {
+    "wrong": "মা শিশুকে ভাত খেলেন।",
+    "right": "মা শিশুকে ভাত খাওয়ালেন।",
+    "note": "খেলেন means the mother ate it herself. The causative খাওয়ালেন indicates she fed the child."
+   },
+   {
+    "wrong": "আমি জামাটা ধোয়াচ্ছি।",
+    "right": "আমি জামাটা ধোয়াচ্ছি না বলে কাচাচ্ছি বা ধোয়ানো হচ্ছে।",
+    "note": "When using verbs whose stems end in vowels like ধো- (to wash), ensure the glided causative form ধোয়ানো is used rather than irregular truncations."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the causative form that means 'to teach' (derived from শেখা 'to learn'):",
+    "options": [
+     "শেখানো",
+     "শেখা",
+     "শিখানো",
+     "শিখতে"
+    ],
+    "answer": 0,
+    "explanation": "The causative stem of শেখা/শিখ- regularly takes the -আনো ending with standard stem vowel rules to become শেখানো."
+   },
+   {
+    "question": "Fill in the blank: মা শিশুকে ঘুমাতে ___।",
+    "options": [
+     "শোবেন",
+     "শুচ্ছেন",
+     "শোয়ালেন",
+     "শুলেন"
+    ],
+    "answer": 2,
+    "explanation": "The causative verb শোয়ানো (in simple past: শোয়ালেন) means 'laid down / put to sleep'."
+   },
+   {
+    "question": "Complete the sentence to mean 'He showed me his house': সে আমাকে তার বাড়ি ___।",
+    "options": [
+     "দেখল",
+     "দেখাল",
+     "দেখবে",
+     "দেখে"
+    ],
+    "answer": 1,
+    "explanation": "The simple verb দেখল means 'saw', whereas the causative দেখাল means 'showed'."
+   },
+   {
+    "question": "Identify the causative verb in this sentence: 'শিক্ষক তাকে কাজটি করালেন।'",
+    "options": [
+     "শিক্ষক",
+     "তাকে",
+     "কাজটি",
+     "করালেন"
+    ],
+    "answer": 3,
+    "explanation": "করালেন is the third-person polite past form of the causative verb করানো (to cause to do)."
+   }
+  ],
+  "tip": "When deriving causatives from monosyllabic roots containing an open vowel, the agent who is made to do the action is typically marked with দিয়ে (e.g., তাকে দিয়ে কাজ করানো)."
+ },
+ {
+  "id": "bn-b1-echo-words-reduplication",
+  "level": "b1",
+  "category": "nouns",
+  "categoryColor": "#10B981",
+  "emoji": "🗣️",
+  "title": "Onomatopoeic Reduplication and Echo Words (T-alternation)",
+  "subtitle": "Expressing 'and such', generalizations, and sensory intensity via phonetic pairing",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Form echo words by replacing the initial consonant of the base word with ট- (or ফ- / স-) to signify 'and the like' or general category membership.",
+  "structure": {
+   "headers": [
+    "Base Noun/Adjective",
+    "Echo Formation",
+    "Semantic Value",
+    "English Gloss"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "জল (jol)",
+      "জল-টল (jol-tol)",
+      "Generalization",
+      "water and related drinks"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "চা (cha)",
+      "চা-টা (cha-ta)",
+      "Informal category",
+      "tea or snacks/refreshments"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "বই (boi)",
+      "বই-টই (boi-toi)",
+      "Broadening",
+      "books and study material"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "কাপড় (kapor)",
+      "কাপড়-চোপড় (kapor-chopor)",
+      "Paired echo idiom",
+      "clothes and garments"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Offering Hospitality",
+    "example": "একটু চা-টা খেয়ে যান।",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Loose Categories",
+    "example": "টেবিলের উপর বই-টই কিছু আছে কি?",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Sensory Vividness (Dhonatmak)",
+    "example": "বাইরে ঝমঝম করে বৃষ্টি পড়ছে।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "এখানে কি কোনো জল-টল পাওয়া যাবে?",
+    "ko": "",
+    "highlight": "জল-টল"
+   },
+   {
+    "en": "সন্ধ্যায় একটু চা-টা খাওয়া দরকার।",
+    "ko": "",
+    "highlight": "চা-টা"
+   },
+   {
+    "en": "পরীক্ষার আগে বই-টই গুছিয়ে রাখো।",
+    "ko": "",
+    "highlight": "বই-টই"
+   },
+   {
+    "en": "উৎসবের জন্য নতুন কাপড়-চোপড় কিনতে হবে।",
+    "ko": "",
+    "highlight": "কাপড়-চোপড়"
+   },
+   {
+    "en": "তার মাথাটা কেমন ঝিমঝিম করছে।",
+    "ko": "",
+    "highlight": "ঝিমঝিম"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "তুমি চা-চা খাবে কি?",
+    "right": "তুমি চা-টা খাবে কি?",
+    "note": "Echo formation uses a consonant shift (typically substituting the first consonant with ট-), not mere identity reduplication, when meaning 'and similar things'."
+   },
+   {
+    "wrong": "টাকা-টাকা নিয়ে আসো।",
+    "right": "টাকা-পয়সা নিয়ে আসো। / টাকা-টুকা নিয়ে আসো।",
+    "note": "To convey 'money and related things', Bengali uses natural echo forms like টাকা-টুকা or fixed pairs like টাকা-পয়সা."
+   },
+   {
+    "wrong": "বৃষ্টি টলটল করে পড়ছে।",
+    "right": "বৃষ্টি ঝমঝম করে পড়ছে।",
+    "note": "Use specific onomatopoeic collocations: ঝমঝম describes heavy rainfall, whereas টলটল describes clear liquid brimming in a container."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which echo construction means 'tea and light refreshments'?",
+    "options": [
+     "চা-চা",
+     "চা-টা",
+     "চা-মা",
+     "চা-দা"
+    ],
+    "answer": 1,
+    "explanation": "The consonant ট replaces the original onset to yield the ubiquitous echo phrase চা-টা."
+   },
+   {
+    "question": "Complete the echo pair for general reading materials: এখানে কোনো বই-___ নেই।",
+    "options": [
+     "বই",
+     "টই",
+     "খাতা",
+     "পত্র"
+    ],
+    "answer": 1,
+    "explanation": "বই becomes বই-টই by substituting the initial consonant with ট-."
+   },
+   {
+    "question": "What onomatopoeic reduplication describes the sound of heavy downpour?",
+    "options": [
+     "চকচক",
+     "বনবন",
+     "খটখট",
+     "ঝমঝম"
+    ],
+    "answer": 3,
+    "explanation": "ঝমঝম specifically evokes the acoustic sensation of pouring rain."
+   },
+   {
+    "question": "How do you turn 'জল' (water) into an echo word meaning 'water or other fluids'?",
+    "options": [
+     "জল-টল",
+     "জল-মল",
+     "জল-জল",
+     "জল-ফল"
+    ],
+    "answer": 0,
+    "explanation": "জল takes the standard echo onset ট- to form জল-টল."
+   }
+  ],
+  "tip": "If the base word already begins with the letter ট (such as টাকা 'taka'), change the echo onset to an alternative like ফ- or স- (e.g., টাকা-ফাকা or টাকা-সাকা)."
+ },
+ {
+  "id": "bn-b2-passive-impersonal-constructions",
+  "level": "b2",
+  "category": "passive",
+  "categoryColor": "#7C3AED",
+  "emoji": "🏛️",
+  "title": "Periphrastic Passives and Impersonal Structures (jaowa/haowa)",
+  "subtitle": "Constructing objective, formal, and agentless discourse with যাওয়া and হওয়া",
+  "color": "#6D28D9",
+  "bg": "#F5F3FF",
+  "keyPoint": "Form passive and impersonal structures by combining a verbal noun (-আ ending) with conjugated forms of যাওয়া (for dynamic passives) or হওয়া (for stative and potential states).",
+  "structure": {
+   "headers": [
+    "Construction Type",
+    "Morphological Formula",
+    "Bengali Example",
+    "Discourse Nuance"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Dynamic Passive",
+      "Verbal Noun + যাওয়া",
+      "চিঠিটি পাঠানো হয়েছে",
+      "The letter has been sent (Action)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Impersonal Feasibility",
+      "Verbal Noun + যায় না",
+      "এখানে ধূমপান করা যায় না",
+      "Smoking cannot be done here"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Stative / Event Passive",
+      "Verbal Noun + হওয়া",
+      "কাল সভা অনুষ্ঠিত হবে",
+      "Tomorrow the meeting will be held"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Overt Agent Marker",
+      "Agent + কর্তৃক / দ্বারা",
+      "সরকার কর্তৃক আইনটি পাস হলো",
+      "The law was passed by the government"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#6D28D9",
+    "label": "Formal Announcement",
+    "example": "যাত্রীদের সতর্ক থাকার অনুরোধ করা যাচ্ছে।",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "General Feasibility",
+    "example": "এই জল কোনোভাবেই খাওয়া যায় না।",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Agentless Reporting",
+    "example": "গতকাল চোরটিকে ধরা হয়েছে।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "পুস্তিকাটি গত সপ্তাহে প্রকাশিত হয়েছে।",
+    "ko": "",
+    "highlight": "প্রকাশিত হয়েছে"
+   },
+   {
+    "en": "এত রাতে এই কাজ করা যাবে না।",
+    "ko": "",
+    "highlight": "করা যাবে না"
+   },
+   {
+    "en": "সমস্ত নথি সাবধানে সংরক্ষণ করা হলো।",
+    "ko": "",
+    "highlight": "সংরক্ষণ করা হলো"
+   },
+   {
+    "en": "কথাটা আর সহ্য করা যায় না।",
+    "ko": "",
+    "highlight": "সহ্য করা যায় না"
+   },
+   {
+    "en": "পুলিস দ্বারা চোর ধরা পড়েছে।",
+    "ko": "",
+    "highlight": "ধরা পড়েছে"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "চিঠিটা পাঠানো গেল। (meaning completed formal passive)",
+    "right": "চিঠিটা পাঠানো হয়েছে।",
+    "note": "Use the present perfect passive (হয়েছে/গিয়েছে) rather than simple past if the focus is on the current accomplished state of the transaction."
+   },
+   {
+    "wrong": "আমি এই বইটা পড়া যায়।",
+    "right": "এই বইটা পড়া যায়।",
+    "note": "The auxiliary formation with যায় is impersonal and objective; it does not take a first-person nominative subject 'আমি'."
+   },
+   {
+    "wrong": "কাজটা আমাকে দিয়ে হলো না।",
+    "right": "কাজটা আমার দ্বারা হলো না। / আমি করতে পারলাম না।",
+    "note": "In formal written passive sentences, mark explicit agents with দ্বারা or কর্তৃক rather than colloquial accusative strings."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct verbal phrase for 'This path cannot be traversed': এই পথ দিয়ে ___ না।",
+    "options": [
+     "যাওয়া যায়",
+     "যেতে হবে",
+     "গেল না",
+     "হয়ে যাবে"
+    ],
+    "answer": 0,
+    "explanation": "The construction যাওয়া যায় না expresses objective impossibility or prohibition."
+   },
+   {
+    "question": "How do you complete: 'The decision was made yesterday'? গতকাল সিদ্ধান্ত ___।",
+    "options": [
+     "নিয়েছে",
+     "নেওয়া হলো",
+     "নেবেন",
+     "নিয়েছিল"
+    ],
+    "answer": 1,
+    "explanation": "নেওয়া হলো uses the verbal noun নেওয়া plus simple past হলো to form the completed passive predicate."
+   },
+   {
+    "question": "In formal written Bengali, which postposition marks the formal agent ('by')?",
+    "options": [
+     "থেকে",
+     "জন্য",
+     "কর্তৃক",
+     "কাছে"
+    ],
+    "answer": 2,
+    "explanation": "কর্তৃক is the formal postposition used to mark the demoted agent in passive constructions."
+   },
+   {
+    "question": "Complete the potential impersonal clause: 'Can this fish be eaten?': এই মাছটা কি ___ যায়?",
+    "options": [
+     "খাওয়া",
+     "খেয়ে",
+     "খায়",
+     "খাবো"
+    ],
+    "answer": 0,
+    "explanation": "The verbal noun ending in -আ (খাওয়া) combines with the auxiliary যায় to denote potentiality."
+   }
+  ],
+  "tip": "Whenever you see 'verbal noun in -আ + যায়', it almost always equates to the English modal notion '-able / can be done' (e.g., দেখা যায় = can be seen / is visible)."
+ },
+ {
+  "id": "bn-b2-discourse-particles",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#4F46E5",
+  "emoji": "🎭",
+  "title": "Enclitic Discourse and Evidential Particles (to, i, o, je, na)",
+  "subtitle": "Modulating emphasis, obviousness, focus, and presupposition with clitics",
+  "color": "#4338CA",
+  "bg": "#EEF2FF",
+  "keyPoint": "Bengali discourse particles (তো, ই, ও, যে, না) attach directly after words or clauses to signal shared knowledge, exclusive emphasis, inclusion, or rhetorical appeal without altering lexical truth value.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Core Discourse Function",
+    "Bengali Example",
+    "Pragmatic Force"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "-ই (-i)",
+      "Exclusive focus / exactness",
+      "আমি আজই যাব",
+      "I will go this very day (no other)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ও (-o)",
+      "Inclusive focus / additive",
+      "তুমিও খাবে",
+      "You too will eat"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "তো (to)",
+      "Presupposition / reminder",
+      "আমি তো আগেই বলেছি",
+      "As you know / surely I said it before"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "না (na)",
+      "Tag / persuasive plea",
+      "একটু বসুন না",
+      "Won't you please sit down?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4338CA",
+    "label": "Exclusive Focus (-ই)",
+    "example": "এই কাজটি তুমিই করতে পারবে।",
+    "translation": ""
+   },
+   {
+    "color": "#4F46E5",
+    "label": "Appealing Tag (না)",
+    "example": "আমার কথাটা শুনুন না!",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Mutual Ground / Reminder (তো)",
+    "example": "তুমি তো জানো কাল ছুটি।",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "তিনি নিজেই সেখানে গিয়েছিলেন।",
+    "ko": "",
+    "highlight": "নিজেই"
+   },
+   {
+    "en": "আমরাও এই অনুষ্ঠানে অংশ নেব।",
+    "ko": "",
+    "highlight": "আমরাও"
+   },
+   {
+    "en": "সে তো গতকালই সব কাজ শেষ করেছে।",
+    "ko": "",
+    "highlight": "তো"
+   },
+   {
+    "en": "ব্যাপারটা যে কী, আমি বুঝতে পারছি না।",
+    "ko": "",
+    "highlight": "যে"
+   },
+   {
+    "en": "চলুন না, ঘুরে আসি।",
+    "ko": "",
+    "highlight": "না"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "আমি ও যাব।",
+    "right": "আমিও যাব।",
+    "note": "The additive focus clitic -ও is bound directly to the noun or pronoun as a suffix (আমিও), distinguishing it from the coordinating conjunction ও ('and')."
+   },
+   {
+    "wrong": "তুমি তো না জানো।",
+    "right": "তুমি তো জানোই না। / তুমি তো জানো না।",
+    "note": "Place তো adjacent to the topical element it refers to, rather than clustering it randomly before the negative particle."
+   },
+   {
+    "wrong": "আজকে যাবই না হবে।",
+    "right": "আজকে যাবই না।",
+    "note": "The intensifying enclitic -ই attaches directly to the verb or adverb being emphasized; adding redundant existential auxiliaries breaks native idiom."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which particle denotes exclusive emphasis ('only / precisely this one'): 'This very person did it' -> 'তিনি___ করেছেন'?",
+    "options": [
+     "ও",
+     "ই",
+     "তো",
+     "না"
+    ],
+    "answer": 1,
+    "explanation": "The bound particle -ই specifies exclusivity or absolute focus (তিনিই = he himself / none other)."
+   },
+   {
+    "question": "Select the sentence where 'তো' marks shared background knowledge or a reminder:",
+    "options": [
+     "সে তো আসবেই না।",
+     "তুমি তো জানো আমি ব্যস্ত।",
+     "ভাত তো খাও।",
+     "তো কি হলো?"
+    ],
+    "answer": 1,
+    "explanation": "In 'তুমি তো জানো...', the particle 'তো' explicitly invokes common ground ('As you already well know')."
+   },
+   {
+    "question": "How do you render an endearing invitation: 'Please have a cup of tea, won't you?'",
+    "options": [
+     "চা খান?",
+     "চা খান কি!",
+     "চা খান না!",
+     "চা খান তো?"
+    ],
+    "answer": 2,
+    "explanation": "Appended to an imperative verb, 'না' softens the command into a persuasive, polite request."
+   },
+   {
+    "question": "Where does the additive clitic attach in 'Even Rahim knows this'?",
+    "options": [
+     "রহিমও",
+     "রহিম তো",
+     "রহিমই",
+     "রহিম যে"
+    ],
+    "answer": 0,
+    "explanation": "The inclusive clitic -ও attaches directly to Rahim (রহিম + ও = রহিমও) to mean 'Rahim as well / even Rahim'."
+   }
+  ],
+  "tip": "Beware of writing -ও as a separate word: when acting as an inclusive clitic ('also/even'), it must merge with the word (e.g., আমিও, ওটাও), unlike the conjunction ও ('and')."
+ }
+]

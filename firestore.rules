@@ -172,5 +172,13 @@ service cloud.firestore {
       allow write: if isAdmin();
     }
 
+    // ── Grammar Hub 다국어 팩 캐시 ────────────────────────────────────
+    // 학습용 공개 콘텐츠: 누구나 읽기 가능, 쓰기는 서버(Admin SDK) 전용.
+    // on-demand 생성 팩·수정본이 정적 팩(public/grammar)보다 우선 서빙됨.
+    match /grammar_cache/{docId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
   }
 }

@@ -1,0 +1,3270 @@
+[
+ {
+  "id": "zh-a1-word-order-svo-time-place",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "⏱️",
+  "title": "Basic SVO Word Order and Time/Place Positioning",
+  "subtitle": "Placing time and location elements before the verb",
+  "color": "#6366F1",
+  "bg": "#EEF2FF",
+  "keyPoint": "In Chinese, time and place adverbials must strictly appear before the verb, either right after or right before the subject.",
+  "structure": {
+   "headers": [
+    "Position",
+    "Sentence Pattern",
+    "English Order Comparison"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Standard SVO",
+      "我喝茶。",
+      "Subject + Verb + Object"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Time & Place",
+      "我明天在图书馆看书。",
+      "Subject + Time + Place + Verb + Object"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Fronted Time",
+      "明天我在图书馆看书。",
+      "Time + Subject + Place + Verb + Object"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Time before Verb",
+    "example": "我晚上看电视。",
+    "translation": ""
+   },
+   {
+    "color": "#06B6D4",
+    "label": "Place before Verb",
+    "example": "我们在饭馆吃饭。",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Time and Place Combined",
+    "example": "他今天在学校学中文。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "我明天去北京。",
+    "ko": "",
+    "highlight": "明天"
+   },
+   {
+    "en": "老师在教室上课。",
+    "ko": "",
+    "highlight": "在教室"
+   },
+   {
+    "en": "昨天我们在家看电影。",
+    "ko": "",
+    "highlight": "昨天我们在家"
+   },
+   {
+    "en": "爸爸下午在办公室喝咖啡。",
+    "ko": "",
+    "highlight": "下午在办公室"
+   },
+   {
+    "en": "星期天朋友在商店买衣服。",
+    "ko": "",
+    "highlight": "星期天朋友在商店"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我看书在图书馆。",
+    "right": "我在图书馆看书。",
+    "note": "Place phrases using 在 (zài) must precede the main action verb, never follow it."
+   },
+   {
+    "wrong": "他去中国明年。",
+    "right": "他明年去中国。",
+    "note": "Time words like 明年 (next year) cannot be placed at the very end of an English-style sentence."
+   },
+   {
+    "wrong": "我吃早饭七点。",
+    "right": "我七点吃早饭。",
+    "note": "Exact time markers must appear before the verb or before the subject."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct sentence for 'I read books at home today':",
+    "options": [
+     "我今天在家看书。",
+     "我看书在家今天。",
+     "我在家看书今天。",
+     "我今天看书在家。"
+    ],
+    "answer": 0,
+    "explanation": "Both time (今天) and place (在家) must precede the verb (看书)."
+   },
+   {
+    "question": "Where does the time word 'tomorrow' belong in: '妈妈 ___ 去超市'?",
+    "options": [
+     "去超市明天",
+     "明天",
+     "在明天去",
+     "了明天"
+    ],
+    "answer": 1,
+    "explanation": "Time words occur directly before the verb or at the very start of the clause."
+   },
+   {
+    "question": "Identify the natural sentence order:",
+    "options": [
+     "学生学中文在学校。",
+     "学生在学校学中文。",
+     "在学校学中文学生。",
+     "学中文学生在学校。"
+    ],
+    "answer": 1,
+    "explanation": "Subject (学生) + Place (在学校) + Action (学中文) is the canonical order."
+   },
+   {
+    "question": "Complete the sentence: '他们星期六 ___ 踢足球。'",
+    "options": [
+     "操场在",
+     "去操场在",
+     "在操场",
+     "操场"
+    ],
+    "answer": 2,
+    "explanation": "Locational phrases require '在 + location' before the verb."
+   }
+  ],
+  "tip": "Think of Chinese word order as setting the stage first (when and where), and then performing the action."
+ },
+ {
+  "id": "zh-a1-negation-bu-vs-mei",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#DC2626",
+  "emoji": "🚫",
+  "title": "Negation: 不 (bù) vs. 没 (méi)",
+  "subtitle": "Choosing between habitual/future refusal and factual/past non-occurrence",
+  "color": "#EF4444",
+  "bg": "#FEF2F2",
+  "keyPoint": "Use 不 for habits, intentions, present states, and future actions, but use 没 for past occurrences and to negate the verb 有.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Function",
+    "Example Sentence"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "不 (bù)",
+      "Present habits, future intent, adjectives",
+      "我不喝咖啡。 (Habitual refusal)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "没 (méi)",
+      "Past events, incomplete actions, negating 有",
+      "我没喝咖啡。 (Did not happen)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "没有 (méiyǒu)",
+      "Expressing non-possession",
+      "我没有书。 (Possession negation)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#DC2626",
+    "label": "Habits & Intentions (不)",
+    "example": "我不吃肉。",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Past Occurrences (没)",
+    "example": "昨天他没来。",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Negating Possession (没有)",
+    "example": "我没有自行车。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "他不是学生。",
+    "ko": "",
+    "highlight": "不"
+   },
+   {
+    "en": "我今天不想去买东西。",
+    "ko": "",
+    "highlight": "不"
+   },
+   {
+    "en": "妹妹昨天没吃早饭。",
+    "ko": "",
+    "highlight": "没"
+   },
+   {
+    "en": "我们没有多余的钱。",
+    "ko": "",
+    "highlight": "没有"
+   },
+   {
+    "en": "明天不会下雨。",
+    "ko": "",
+    "highlight": "不"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我不去学校昨天。",
+    "right": "我昨天没去学校。",
+    "note": "Use 没 for past occurrences, and place the time expression before the verb."
+   },
+   {
+    "wrong": "我不是有钱包。",
+    "right": "我没有钱包。",
+    "note": "The verb 有 (to have) can only ever be negated by 没, never by 不."
+   },
+   {
+    "wrong": "今天天气不冷了昨天没冷。",
+    "right": "昨天不冷 / 昨天没冷。",
+    "note": "Adjectives describing simple states (like 'cold') almost always take 不 even in the past unless describing a change."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'I do not drink alcohol' (habit)?",
+    "options": [
+     "我没喝酒。",
+     "我没有喝酒。",
+     "我不喝酒。",
+     "我不有喝酒。"
+    ],
+    "answer": 2,
+    "explanation": "Habitual actions and general preferences are negated with 不."
+   },
+   {
+    "question": "Fill in the blank for past non-occurrence: '他昨天 ___ 去上班。'",
+    "options": [
+     "不",
+     "没",
+     "无",
+     "未曾"
+    ],
+    "answer": 1,
+    "explanation": "Past completed actions that did not take place use 没."
+   },
+   {
+    "question": "Which sentence correctly negates possession?",
+    "options": [
+     "他不有汉语词典。",
+     "他没是汉语词典。",
+     "他不是有汉语词典。",
+     "他没有汉语词典。"
+    ],
+    "answer": 3,
+    "explanation": "The possession verb 有 is strictly negated as 没有."
+   },
+   {
+    "question": "Negate the state 'She is not busy': '她 ___ 忙。'",
+    "options": [
+     "没",
+     "不",
+     "没有",
+     "别"
+    ],
+    "answer": 1,
+    "explanation": "Adjectives acting as predicates are negated with 不."
+   }
+  ],
+  "tip": "Never say 不有! The verb 有 can only pair with 没."
+ },
+ {
+  "id": "zh-a1-nominal-classifiers",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#059669",
+  "emoji": "🔢",
+  "title": "Core Classifiers (Measure Words)",
+  "subtitle": "Essential counting particles between numbers and nouns",
+  "color": "#10B981",
+  "bg": "#ECFDF5",
+  "keyPoint": "A measure word is strictly required whenever a noun is counted by a number or pointed to with a demonstrative like 这 or 那.",
+  "structure": {
+   "headers": [
+    "Measure Word",
+    "Noun Category",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "个 (gè)",
+      "People, general objects, default",
+      "三个人 (three people)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "本 (běn)",
+      "Bound volumes (books, magazines)",
+      "两本书 (two books)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "张 (zhāng)",
+      "Flat objects (paper, tables, tickets)",
+      "一张票 (one ticket)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "杯 (bēi)",
+      "Cups and glasses of liquid",
+      "一杯茶 (a cup of tea)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "General Counting (个)",
+    "example": "一个苹果",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Bound Items (本)",
+    "example": "我看了一本书。",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "With Demonstratives (这/那)",
+    "example": "这把椅子很好。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "桌子上有三本书。",
+    "ko": "",
+    "highlight": "本"
+   },
+   {
+    "en": "我想买一个新手机。",
+    "ko": "",
+    "highlight": "个"
+   },
+   {
+    "en": "请给我一张纸。",
+    "ko": "",
+    "highlight": "张"
+   },
+   {
+    "en": "服务员，来两杯水。",
+    "ko": "",
+    "highlight": "杯"
+   },
+   {
+    "en": "那只猫非常可爱。",
+    "ko": "",
+    "highlight": "只"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我有三书。",
+    "right": "我有三本书。",
+    "note": "You cannot place a numeral directly next to a noun without a measure word."
+   },
+   {
+    "wrong": "这人是我的老师。",
+    "right": "这个人是我的老师。",
+    "note": "Demonstratives (这/那) also require a measure word before the noun in standard speech."
+   },
+   {
+    "wrong": "二个人去商场。",
+    "right": "两个人去商场。",
+    "note": "When quantifying with measure words, use 两 (liǎng) instead of 二 (èr) for 'two'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct measure word for books: '两 ___ 书'",
+    "options": [
+     "张",
+     "个",
+     "本",
+     "只"
+    ],
+    "answer": 2,
+    "explanation": "本 is the obligatory classifier for bound items like books."
+   },
+   {
+    "question": "Which phrase is grammatically correct for 'one table'?",
+    "options": [
+     "一张桌子",
+     "一桌子",
+     "一个张桌子",
+     "两张桌子一"
+    ],
+    "answer": 0,
+    "explanation": "张 is used for flat-surfaced furniture like tables, following 'number + measure word + noun'."
+   },
+   {
+    "question": "Choose the correct phrase for 'this cup of coffee':",
+    "options": [
+     "这咖啡杯",
+     "杯这咖啡",
+     "这杯咖啡",
+     "这一咖啡"
+    ],
+    "answer": 2,
+    "explanation": "Demonstrative + measure word + noun = 这 + 杯 + 咖啡."
+   },
+   {
+    "question": "Fill in the blank: '我们班有二十 ___ 学生。'",
+    "options": [
+     "只",
+     "本",
+     "张",
+     "个"
+    ],
+    "answer": 3,
+    "explanation": "个 is the universal and standard classifier for people and students."
+   }
+  ],
+  "tip": "When in doubt for everyday physical nouns, 个 is your safest default classifier, though specific items like books (本) always need their dedicated word."
+ },
+ {
+  "id": "zh-a1-possessive-attributive-de",
+  "level": "a1",
+  "category": "nouns",
+  "categoryColor": "#2563EB",
+  "emoji": "🔗",
+  "title": "Attributive Particle 的 (de)",
+  "subtitle": "Connecting modifiers, possessors, and descriptions to nouns",
+  "color": "#3B82F6",
+  "bg": "#EFF6FF",
+  "keyPoint": "The particle 的 links a modifier to the noun it modifies, functioning like 's, an adjective marker, or a relative clause connector.",
+  "structure": {
+   "headers": [
+    "Modifier Type",
+    "Pattern",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Possession",
+      "Noun/Pronoun + 的 + Noun",
+      "我的老师 (my teacher)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Adjective Description",
+      "Multi-syllable Adj + 的 + Noun",
+      "漂亮的衣服 (beautiful clothes)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Action Clause Modifier",
+      "Verb phrase + 的 + Noun",
+      "我买的苹果 (apples that I bought)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#2563EB",
+    "label": "Possessive Relationships",
+    "example": "这是他的电脑。",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Descriptive Modifiers",
+    "example": "红色的汽车很贵。",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Verbal/Relative Modifiers",
+    "example": "昨天来的人是谁？",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "那是我的汉语书。",
+    "ko": "",
+    "highlight": "我的"
+   },
+   {
+    "en": "她穿了一件漂亮的衬衫。",
+    "ko": "",
+    "highlight": "漂亮的"
+   },
+   {
+    "en": "妈妈做的菜最好吃。",
+    "ko": "",
+    "highlight": "妈妈做的"
+   },
+   {
+    "en": "这是我们学校的图书馆。",
+    "ko": "",
+    "highlight": "学校的"
+   },
+   {
+    "en": "开车的司机很热情。",
+    "ko": "",
+    "highlight": "开车的"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "衣服漂亮的是我的。",
+    "right": "漂亮的衣服是我的。",
+    "note": "In Chinese, modifiers must always precede the noun they describe."
+   },
+   {
+    "wrong": "我买书的商店很高。",
+    "right": "我买书的商店很大。",
+    "note": "Make sure the modifying clause '我买书的' accurately attributes the intended noun head."
+   },
+   {
+    "wrong": "爸爸车在外面。",
+    "right": "爸爸的车在外面。",
+    "note": "Non-kinship possession requires 的 (unlike close family members where 的 can sometimes be omitted)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you translate 'my computer'?",
+    "options": [
+     "我电脑的",
+     "我的电脑",
+     "电脑的我",
+     "是我的电脑"
+    ],
+    "answer": 1,
+    "explanation": "Possessor + 的 + possessed item = 我的电脑."
+   },
+   {
+    "question": "Fill in the blank: '新买 ___ 手机很好用。'",
+    "options": [
+     "得",
+     "地",
+     "的",
+     "在"
+    ],
+    "answer": 2,
+    "explanation": "The attributive particle 的 links the verbal clause '新买' to the head noun '手机'."
+   },
+   {
+    "question": "Which phrase correctly means 'delicious food'?",
+    "options": [
+     "好吃菜",
+     "菜好吃的",
+     "好吃的菜",
+     "的好吃菜"
+    ],
+    "answer": 2,
+    "explanation": "Multi-syllable adjectives precede the noun connected by 的: 好吃的菜."
+   },
+   {
+    "question": "Translate: 'the person who came yesterday':",
+    "options": [
+     "昨天来的人",
+     "人昨天来的",
+     "来的昨天人",
+     "的人昨天来"
+    ],
+    "answer": 0,
+    "explanation": "The entire relative clause '昨天来' stands before 的 and the head noun '人'."
+   }
+  ],
+  "tip": "Everything that describes a noun in Chinese goes in front of it, joined together by 的."
+ },
+ {
+  "id": "zh-a1-copula-and-adjectival-predicates",
+  "level": "a1",
+  "category": "verbs",
+  "categoryColor": "#7C3AED",
+  "emoji": "⚖️",
+  "title": "Copula 是 (shì) vs. Adjectival Predicates with 很 (hěn)",
+  "subtitle": "Connecting nouns with 是 versus linking adjectives with 很",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use 是 to equate nouns with other nouns, but never use 是 to connect a subject with a simple adjective; use 很 instead.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Grammar Formula",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Noun Equivalence",
+      "Subject + 是 + Noun",
+      "他是老师。 (He is a teacher.)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Adjectival Predicate",
+      "Subject + 很 + Adjective",
+      "他很高。 (He is tall.)"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negated Adjective",
+      "Subject + 不 + Adjective",
+      "他不忙。 (He is not busy.)"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#7C3AED",
+    "label": "Identity / Profession (是)",
+    "example": "我是中国人。",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Descriptive State (很)",
+    "example": "今天天气很好。",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Negated Description (不)",
+    "example": "汉语不难。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "我是美国人。",
+    "ko": "",
+    "highlight": "是"
+   },
+   {
+    "en": "我哥哥很高。",
+    "ko": "",
+    "highlight": "很"
+   },
+   {
+    "en": "这里的咖啡很贵。",
+    "ko": "",
+    "highlight": "很"
+   },
+   {
+    "en": "这本词典是我的。",
+    "ko": "",
+    "highlight": "是"
+   },
+   {
+    "en": "弟弟今天不高兴。",
+    "ko": "",
+    "highlight": "不"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我是很高兴。",
+    "right": "我很高兴。",
+    "note": "Do not insert 是 before a descriptive adjective. 很 serves as the default linking adverb."
+   },
+   {
+    "wrong": "他很学生。",
+    "right": "他是学生。",
+    "note": "很 cannot link two nouns; use the copula 是 for noun equivalence."
+   },
+   {
+    "wrong": "今天很不大。",
+    "right": "今天不大。",
+    "note": "When negating an adjectival predicate with 不, the structural filler 很 is dropped."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "How do you say 'She is tall'?",
+    "options": [
+     "她是高。",
+     "她很高。",
+     "她是很大。",
+     "她高是。"
+    ],
+    "answer": 1,
+    "explanation": "Simple adjectives do not take 是; they use 很 as a neutral linking device."
+   },
+   {
+    "question": "How do you say 'We are doctors'?",
+    "options": [
+     "我们很医生。",
+     "我们是医生。",
+     "我们有医生。",
+     "我们在医生。"
+    ],
+    "answer": 1,
+    "explanation": "Equating subjects to nouns (doctor) requires the copula 是."
+   },
+   {
+    "question": "Complete the negative sentence: 'This room is not big' -> '这个房间 ___ 大。'",
+    "options": [
+     "没有",
+     "没",
+     "不",
+     "不是很"
+    ],
+    "answer": 2,
+    "explanation": "Adjectival predicates are negated with 不 directly before the adjective."
+   },
+   {
+    "question": "In the neutral statement '今天很热', what does '很' primarily do?",
+    "options": [
+     "Means 'extremely'",
+     "Marks past tense",
+     "Links subject to adjective",
+     "Forms a question"
+    ],
+    "answer": 2,
+    "explanation": "In unmarked affirmative sentences, 很 primarily serves as a grammatical placeholder linking noun and adjective."
+   }
+  ],
+  "tip": "In Chinese, adjectives act as verbs! They carry 'to be' within themselves, so adding 是 creates an error."
+ },
+ {
+  "id": "zh-a1-question-formation",
+  "level": "a1",
+  "category": "questions",
+  "categoryColor": "#3B82F6",
+  "emoji": "❓",
+  "title": "Basic Question Forms: 吗 and Question Words",
+  "subtitle": "Turn statements into questions without changing word order",
+  "color": "#2563EB",
+  "bg": "#EFF6FF",
+  "keyPoint": "Chinese keeps standard statement word order in questions, merely adding the particle 吗 at the end for yes/no questions or placing question words directly in the slot of the missing information.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Sentence Structure",
+    "Chinese Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Yes/No Question",
+      "Statement + 吗？",
+      "你是老师吗？",
+      "Are you a teacher?"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Asking 'What'",
+      "Subject + Verb + 什么？",
+      "你喝什么？",
+      "What are you drinking?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Asking 'Who'",
+      "谁 + Verb / Verb + 谁？",
+      "谁是李华？",
+      "Who is Li Hua?"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Asking 'Where'",
+      "Subject + 在 + 哪儿？",
+      "你在哪儿？",
+      "Where are you?"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#3B82F6",
+    "label": "Yes/No Confirmation",
+    "example": "他是学生吗？",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Asking for Objects",
+    "example": "你想买什么？",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Locating People or Things",
+    "example": "洗手间在哪儿？",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "你喜欢中国菜吗？",
+    "ko": "",
+    "highlight": "吗"
+   },
+   {
+    "en": "这是什么书？",
+    "ko": "",
+    "highlight": "什么"
+   },
+   {
+    "en": "谁想喝茶？",
+    "ko": "",
+    "highlight": "谁"
+   },
+   {
+    "en": "你的手机在哪儿？",
+    "ko": "",
+    "highlight": "哪儿"
+   },
+   {
+    "en": "明天你来不来？",
+    "ko": "",
+    "highlight": "来不来"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "你叫什么名字吗？",
+    "right": "你叫什么名字？",
+    "note": "Never combine question words (like 什么) with the polar question particle 吗."
+   },
+   {
+    "wrong": "什么你想吃？",
+    "right": "你想吃什么？",
+    "note": "Do not invert word order to bring question words to the front; keep them in the object slot."
+   },
+   {
+    "wrong": "是他是医生吗？",
+    "right": "他是医生吗？",
+    "note": "Do not add an extra auxiliary verb at the start to imitate English inversion."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Convert 'He likes tea' into a yes/no question: 他喜欢茶 ___？",
+    "options": [
+     "吗",
+     "呢",
+     "吧",
+     "了"
+    ],
+    "answer": 0,
+    "explanation": "Add the polar question particle 吗 to the end of a declarative sentence to form a yes/no question."
+   },
+   {
+    "question": "Ask 'What does she drink?': 她喝 ___？",
+    "options": [
+     "谁",
+     "什么",
+     "哪儿",
+     "几"
+    ],
+    "answer": 1,
+    "explanation": "什么 means 'what' and takes the object position directly after the verb."
+   },
+   {
+    "question": "Ask 'Where is the school?': 学校在 ___？",
+    "options": [
+     "什么",
+     "谁",
+     "哪儿",
+     "怎么"
+    ],
+    "answer": 2,
+    "explanation": "哪儿 is used to inquire about location after the verb 在."
+   },
+   {
+    "question": "Choose the correctly formed question asking 'Who is he?':",
+    "options": [
+     "他是谁吗？",
+     "谁他是？",
+     "谁是不是他？",
+     "他是谁？"
+    ],
+    "answer": 3,
+    "explanation": "Questions with question words like 谁 keep S-V-O word order and do not use 吗."
+   }
+  ],
+  "tip": "To ask a content question in Chinese, formulate the statement first and then simply swap the unknown word for the question pronoun (e.g., 他是老师 -> 他是谁)."
+ },
+ {
+  "id": "zh-a2-aspect-particle-le",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🔄",
+  "title": "Aspect Particle 了: Completion vs. Change of State",
+  "subtitle": "Master verb-suffix 了 and sentence-final 了",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "Verbal 了 right after a verb signals the completion of an action, whereas modal 了 at the very end of a sentence signals a change of state or a newly emergent situation.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Position",
+    "Chinese Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Verbal 了 (Aspect)",
+      "Verb + 了 (+ Object)",
+      "我买了三本书。",
+      "I bought three books."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Sentence-final 了 (Modal)",
+      "Sentence + 了",
+      "下雨了。",
+      "It is raining now (change of state)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Double 了 (Ongoing)",
+      "Verb + 了 + Obj + 了",
+      "我学了一年汉语了。",
+      "I have studied Chinese for a year (and still do)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Completion",
+      "没(有) + Verb (drop 了)",
+      "我没买那本书。",
+      "I didn't buy that book."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Completed Action",
+    "example": "昨天我喝了两杯咖啡。",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "New Situation Arising",
+    "example": "天黑了，我们回家吧。",
+    "translation": ""
+   },
+   {
+    "color": "#EC4899",
+    "label": "Action Duration to Date",
+    "example": "他在北京住了三年了。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "我吃了早饭就去上班。",
+    "ko": "",
+    "highlight": "吃了"
+   },
+   {
+    "en": "现在八点半了。",
+    "ko": "",
+    "highlight": "了"
+   },
+   {
+    "en": "我看了两个电影了。",
+    "ko": "",
+    "highlight": "看了"
+   },
+   {
+    "en": "秋天到了，树叶黄了。",
+    "ko": "",
+    "highlight": "黄了"
+   },
+   {
+    "en": "她找到了新工作。",
+    "ko": "",
+    "highlight": "找到了"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "昨天我没看了电影。",
+    "right": "昨天我没看电影。",
+    "note": "When negating completed actions with 没(有), always drop the aspect marker 了."
+   },
+   {
+    "wrong": "我是昨天来了。",
+    "right": "我是昨天来的。",
+    "note": "Do not use 了 with the 是...的 focus construction for past details like time and place."
+   },
+   {
+    "wrong": "我天天吃了晚饭去散步。",
+    "right": "我天天吃晚饭去散步。",
+    "note": "Do not use 了 for habitual everyday routines that have no bounded completion."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Indicate that you finished drinking the medicine: 我喝 ___ 药。",
+    "options": [
+     "着",
+     "过",
+     "了",
+     "在"
+    ],
+    "answer": 2,
+    "explanation": "Verbal 了 right after 喝 indicates completion of the action."
+   },
+   {
+    "question": "Express that leaves have turned yellow (change of state): 树叶红 ___。",
+    "options": [
+     "了",
+     "过",
+     "得",
+     "着"
+    ],
+    "answer": 0,
+    "explanation": "Sentence-final 了 indicates a new condition or change of state."
+   },
+   {
+    "question": "Negate 'I ate lunch': 我 ___ 吃午饭。",
+    "options": [
+     "不",
+     "没",
+     "没吃了",
+     "不吃了"
+    ],
+    "answer": 1,
+    "explanation": "Completed action is negated with 没 (or 没有) before the verb, without 了."
+   },
+   {
+    "question": "Which sentence means 'I have lived here for 2 years and still live here'?",
+    "options": [
+     "我住这里两年。",
+     "我住了这里两年。",
+     "我这里住两年过。",
+     "我在这里住了两年了。"
+    ],
+    "answer": 3,
+    "explanation": "Double 了 (after the verb and at sentence end) conveys that an action began in the past and continues into the present."
+   }
+  ],
+  "tip": "Think of sentence-final 了 as meaning 'now' or 'it wasn't the case before, but it is now' rather than a past tense marker."
+ },
+ {
+  "id": "zh-a2-experiential-and-durative-particles",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "⏳",
+  "title": "Experiential 过 and Durative 着",
+  "subtitle": "Mark life experiences and ongoing states",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "Attach 过 directly to a verb to express having had an indefinite past experience, and attach 着 to describe a sustained state or simultaneous background posture.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Function",
+    "Chinese Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "过 (Experiential)",
+      "Verb + 过 (+ Object)",
+      "我去过中国。",
+      "I have been to China before."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negation of 过",
+      "没(有) + Verb + 过",
+      "我没吃过北京烤鸭。",
+      "I have never eaten Peking duck."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "着 (Durative State)",
+      "Verb + 着 (+ Object)",
+      "门开着呢。",
+      "The door is open."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Accompanying Action",
+      "Verb 1 + 着 + Verb 2",
+      "他站着说话。",
+      "He is speaking while standing."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Life Experience",
+    "example": "你看过这部电影吗？",
+    "translation": ""
+   },
+   {
+    "color": "#6366F1",
+    "label": "Continuous Static State",
+    "example": "墙上挂着一张中国地图。",
+    "translation": ""
+   },
+   {
+    "color": "#F59E0B",
+    "label": "Manner of Action",
+    "example": "大家笑着走进教室。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "我以前学过一点儿法文。",
+    "ko": "",
+    "highlight": "学过"
+   },
+   {
+    "en": "你见过我的猫吗？",
+    "ko": "",
+    "highlight": "见过"
+   },
+   {
+    "en": "老师穿着一件红色的衣服。",
+    "ko": "",
+    "highlight": "穿着"
+   },
+   {
+    "en": "桌子上放着很多书。",
+    "ko": "",
+    "highlight": "放着"
+   },
+   {
+    "en": "我们坐着聊天吧。",
+    "ko": "",
+    "highlight": "坐着"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我去过中国去年。",
+    "right": "我去年去过中国。",
+    "note": "Time adverbs like 去年 must precede the verb or the subject, never placed at the end."
+   },
+   {
+    "wrong": "他不吃过日本菜。",
+    "right": "他没吃过日本菜。",
+    "note": "Always negate experiential 过 with 没 or 没有, never 不."
+   },
+   {
+    "wrong": "我正看着书了。",
+    "right": "我正看着书呢。",
+    "note": "Durative 着 pairs with modal 呢 for continuous progress, not change-of-state 了."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Say you have never seen this person before: 我没 ___ 这个人。",
+    "options": [
+     "在",
+     "过",
+     "见",
+     "见过"
+    ],
+    "answer": 3,
+    "explanation": "The experiential structure with negation requires 没 + verb + 过 (没见过)."
+   },
+   {
+    "question": "Indicate that the window remains open right now: 窗户开 ___ 呢。",
+    "options": [
+     "了",
+     "过",
+     "着",
+     "得"
+    ],
+    "answer": 2,
+    "explanation": "Durative 着 marks a static sustained state resulting from an earlier action."
+   },
+   {
+    "question": "Express doing an action in a seated position: 请你 ___ 听音乐。",
+    "options": [
+     "坐着",
+     "坐了",
+     "坐过",
+     "坐在"
+    ],
+    "answer": 0,
+    "explanation": "Verb1 + 着 + Verb2 indicates that action 1 is the continuous manner/posture for action 2."
+   },
+   {
+    "question": "Which sentence means 'Have you ever climbed this mountain?'",
+    "options": [
+     "你爬这个山吗？",
+     "你爬了这个山吗？",
+     "你爬过这座山吗？",
+     "你爬着这座山吗？"
+    ],
+    "answer": 2,
+    "explanation": "过 denotes past indefinite experience ('ever done')."
+   }
+  ],
+  "tip": "Distinguish 了 and 过: 了 means an action occurred at a specific time, while 过 emphasizes having had the experience at least once in your lifetime."
+ },
+ {
+  "id": "zh-a2-directional-and-resultative-complements",
+  "level": "a2",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "🎯",
+  "title": "Basic Resultative and Directional Complements",
+  "subtitle": "Indicate outcome, impact, and physical direction",
+  "color": "#047857",
+  "bg": "#ECFDF5",
+  "keyPoint": "In Chinese, verbs only describe the attempt; you must attach a result complement (e.g. 完, 懂, 见) or directional complement (来, 去) immediately after the verb to show whether it succeeded and where movement headed.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Formula",
+    "Chinese Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Result: Completion",
+      "Verb + 完",
+      "我吃完了。",
+      "I finished eating."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Result: Perception",
+      "看 / 听 + 见 / 到",
+      "我听懂了。",
+      "I understood what I heard."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Direction: Towards speaker",
+      "Verb + 来",
+      "请你进来。",
+      "Please come in (towards speaker)."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Direction: Away from speaker",
+      "Verb + 去",
+      "他跑出去了。",
+      "He ran out (away from speaker)."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Signaling Finished State",
+    "example": "作业我都做好了。",
+    "translation": ""
+   },
+   {
+    "color": "#3B82F6",
+    "label": "Confirming Perception",
+    "example": "你看见我的钥匙了吗？",
+    "translation": ""
+   },
+   {
+    "color": "#8B5CF6",
+    "label": "Spatial Movement",
+    "example": "爸爸从楼上下去了。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "我听懂了老师的话。",
+    "ko": "",
+    "highlight": "听懂"
+   },
+   {
+    "en": "你看完那本书了吗？",
+    "ko": "",
+    "highlight": "看完"
+   },
+   {
+    "en": "快拿出来你的票。",
+    "ko": "",
+    "highlight": "拿出来"
+   },
+   {
+    "en": "他买到了最后一张火车票。",
+    "ko": "",
+    "highlight": "买到"
+   },
+   {
+    "en": "小猫跳上去了。",
+    "ko": "",
+    "highlight": "跳上去"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我看那本书完了。",
+    "right": "我看完了那本书。",
+    "note": "Result complements must adhere directly to the verb; do not separate them with the object."
+   },
+   {
+    "wrong": "他回去了北京。",
+    "right": "他回北京去了。",
+    "note": "When a directional verb has a location object, the location must sit before 来/去 (Verb + Location + 来/去)."
+   },
+   {
+    "wrong": "我没听懂了。",
+    "right": "我没听懂。",
+    "note": "Negating a result complement requires 没 before the verb and dropping sentence 了."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Express that you finished writing: 我写 ___ 了。",
+    "options": [
+     "着",
+     "去",
+     "完",
+     "过"
+    ],
+    "answer": 2,
+    "explanation": "完 attached directly to 写 denotes completing the writing action."
+   },
+   {
+    "question": "The speaker is inside the room and asks someone to enter: 请你进 ___。",
+    "options": [
+     "去",
+     "来",
+     "到",
+     "着"
+    ],
+    "answer": 1,
+    "explanation": "Use 来 when movement is directed toward the speaker's current location."
+   },
+   {
+    "question": "Say you searched but could not see clearly: 我没看 ___。",
+    "options": [
+     "完",
+     "见",
+     "去",
+     "着"
+    ],
+    "answer": 1,
+    "explanation": "见 acts as a complement of sensory result: 看见 (to see / perceive)."
+   },
+   {
+    "question": "Order the elements correctly for 'go home' (speaker is away from home):",
+    "options": [
+     "回家去",
+     "回去家",
+     "去回家",
+     "家里去回"
+    ],
+    "answer": 0,
+    "explanation": "Place location objects between the motion verb and directional complement: 回 (verb) + 家 (place) + 去 (direction away)."
+   }
+  ],
+  "tip": "Chinese verbs express the action itself (看 = to look), not the result (看见 = to successfully see). Always use a complement when the outcome matters!"
+ },
+ {
+  "id": "zh-a2-modal-verbs-energy-ability",
+  "level": "a2",
+  "category": "modals",
+  "categoryColor": "#F59E0B",
+  "emoji": "💪",
+  "title": "Modal Verbs: 会, 能, and 可以",
+  "subtitle": "Distinguish learned skills, natural ability, and permission",
+  "color": "#D97706",
+  "bg": "#FFFBEB",
+  "keyPoint": "Use 会 for skills acquired through learning, 能 for physical capability or objective possibility, and 可以 for permission or polite suggestions.",
+  "structure": {
+   "headers": [
+    "Modal Verb",
+    "Primary Meaning",
+    "Chinese Example",
+    "English Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "会 (huì)",
+      "Acquired learned skill / Future prediction",
+      "我会说一点儿汉语。",
+      "I can speak a little Chinese."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "能 (néng)",
+      "Physical capacity / Objective conditions",
+      "我今天感冒，不能去学校。",
+      "I have a cold today and cannot go to school."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "可以 (kěyǐ)",
+      "Permission / Politeness / Feasibility",
+      "这里可以抽烟吗？",
+      "Can one smoke here? (Is it permitted?)"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negation (All)",
+      "不 + Modal Verb",
+      "他不会游泳。",
+      "He cannot swim."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Learned Skill",
+    "example": "我妹妹会弹钢琴。",
+    "translation": ""
+   },
+   {
+    "color": "#EF4444",
+    "label": "Temporary Physical Limits",
+    "example": "我喝了酒，现在不能开车。",
+    "translation": ""
+   },
+   {
+    "color": "#10B981",
+    "label": "Asking Permission",
+    "example": "我可以坐这儿吗？",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "你会开车吗？",
+    "ko": "",
+    "highlight": "会"
+   },
+   {
+    "en": "他一只手能拿三个球。",
+    "ko": "",
+    "highlight": "能"
+   },
+   {
+    "en": "明天可能会下雨。",
+    "ko": "",
+    "highlight": "会"
+   },
+   {
+    "en": "你现在可以进去考试了。",
+    "ko": "",
+    "highlight": "可以"
+   },
+   {
+    "en": "我不渴，不能喝太多水。",
+    "ko": "",
+    "highlight": "不能"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我不可以用电脑，因为坏了。",
+    "right": "我不能用电脑，因为坏了。",
+    "note": "Use 不能 rather than 不可以 for objective impossibility or broken circumstances."
+   },
+   {
+    "wrong": "我没会做中国菜。",
+    "right": "我不会做中国菜。",
+    "note": "Negate modal verbs using 不, not 没."
+   },
+   {
+    "wrong": "他生病了，所以他不会来。",
+    "right": "他生病了，所以他不能来。",
+    "note": "Use 能/不能 for physical inability due to illness, not 会 (which refers to learned ability)."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Express having acquired the skill to swim: 我 ___ 游泳。",
+    "options": [
+     "可以",
+     "能",
+     "会",
+     "要"
+    ],
+    "answer": 2,
+    "explanation": "会 is used for skills acquired through study and practice."
+   },
+   {
+    "question": "Politely ask permission to use a phone: 我 ___ 用一下你的手机吗？",
+    "options": [
+     "会",
+     "可以",
+     "想",
+     "得"
+    ],
+    "answer": 1,
+    "explanation": "可以 is standard when asking for or granting permission."
+   },
+   {
+    "question": "Explain that an injured leg physically prevents running: 我的腿疼，___ 跑步。",
+    "options": [
+     "不能",
+     "不会",
+     "不要",
+     "没能"
+    ],
+    "answer": 0,
+    "explanation": "不能 expresses physical inability or objective hindrance."
+   },
+   {
+    "question": "Express likelihood that it will snow tomorrow: 明天 ___ 下雪。",
+    "options": [
+     "可以",
+     "能",
+     "得",
+     "会"
+    ],
+    "answer": 3,
+    "explanation": "会 also serves as a predictive modal indicating future probability ('will')."
+   }
+  ],
+  "tip": "Quick rule: if you had to take lessons or practice to do it (languages, cooking, driving), choose 会!"
+ },
+ {
+  "id": "zh-a2-structural-particles-trio",
+  "level": "a2",
+  "category": "clauses",
+  "categoryColor": "#0284C7",
+  "emoji": "🎯",
+  "title": "The Structural Trio: 的, 得, and 地",
+  "subtitle": "Master the three essential 'de' particles for noun modification, manner, and degree",
+  "color": "#0284C7",
+  "bg": "#F0F9FF",
+  "keyPoint": "Use 的 before nouns to modify them, 地 before verbs to describe how an action is performed, and 得 after verbs or adjectives to introduce a complement of degree.",
+  "structure": {
+   "headers": [
+    "Particle",
+    "Position & Function",
+    "Structure",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "的",
+      "Before Noun (Attributive)",
+      "Modifier + 的 + Noun",
+      "漂亮的衣服"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "地",
+      "Before Verb (Adverbial)",
+      "Manner + 地 + Verb",
+      "高兴地跳舞"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "得",
+      "After Verb/Adj (Degree Complement)",
+      "Verb + 得 + Degree",
+      "跑得很快"
+     ],
+     "highlight": true
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0284C7",
+    "label": "Modifying Nouns (的)",
+    "example": "这是我买的新电脑。",
+    "translation": ""
+   },
+   {
+    "color": "#0EA5E9",
+    "label": "Describing Manner of Action (地)",
+    "example": "老师认真地回答了问题。",
+    "translation": ""
+   },
+   {
+    "color": "#38BDF8",
+    "label": "Assessing Extent or Ability (得)",
+    "example": "他汉语说得非常流利。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "红色的苹果很甜。",
+    "ko": "",
+    "highlight": "红色的"
+   },
+   {
+    "en": "孩子们开心地玩游戏。",
+    "ko": "",
+    "highlight": "开心地"
+   },
+   {
+    "en": "妹妹今天起得非常早。",
+    "ko": "",
+    "highlight": "得"
+   },
+   {
+    "en": "这是王老师写的书。",
+    "ko": "",
+    "highlight": "王老师写的"
+   },
+   {
+    "en": "他累得一步也走不动了。",
+    "ko": "",
+    "highlight": "得"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "他跑的很快。",
+    "right": "他跑得很快。",
+    "note": "Use 得 (not 的) immediately after a verb to evaluate how well or fast the action is done."
+   },
+   {
+    "wrong": "慢慢的走，别着急。",
+    "right": "慢慢地走，别着急。",
+    "note": "Use 地 (not 的) when placing a descriptive adjective before an action verb to describe manner."
+   },
+   {
+    "wrong": "新地书放在桌子上。",
+    "right": "新的书放在桌子上。",
+    "note": "Use 的 (not 地) to link an adjective modifier to a noun."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete with the correct particle: '弟弟高兴___笑了。'",
+    "options": [
+     "的",
+     "地",
+     "得",
+     "了"
+    ],
+    "answer": 1,
+    "explanation": "高兴 modifies the verb 笑了 as an adverbial of manner, so 地 is required."
+   },
+   {
+    "question": "Complete with the correct particle: '姐姐做饭做___很好吃。'",
+    "options": [
+     "地",
+     "的",
+     "着",
+     "得"
+    ],
+    "answer": 3,
+    "explanation": "The complement follows the verb phrase 做饭做 to evaluate the outcome/degree, requiring 得."
+   },
+   {
+    "question": "Complete with the correct particle: '那是昨天买___新鲜水果。'",
+    "options": [
+     "的",
+     "得",
+     "地",
+     "过"
+    ],
+    "answer": 0,
+    "explanation": "昨天买 modifies the noun phrase 新鲜水果, so the noun modifier marker 的 is needed."
+   },
+   {
+    "question": "Complete with the correct particle: '他写字写___真漂亮。'",
+    "options": [
+     "的",
+     "地",
+     "得",
+     "与"
+    ],
+    "answer": 2,
+    "explanation": "Evaluating how well someone writes requires placing 得 directly after the repeated verb 写."
+   }
+  ],
+  "tip": "Remember the visual memory anchor: '白勺 的' belongs to nouns, '土也 地' touches ground-level action verbs, and '双人 得' scores a person's performance."
+ },
+ {
+  "id": "zh-a2-comparisons-bi-and-meiyou",
+  "level": "a2",
+  "category": "advanced",
+  "categoryColor": "#8B5CF6",
+  "emoji": "⚖️",
+  "title": "Comparisons with 比 and 没有",
+  "subtitle": "Express differences in degree and negative equality with precision",
+  "color": "#8B5CF6",
+  "bg": "#F5F3FF",
+  "keyPoint": "Use A 比 B + Adjective to show that A exceeds B, and use A 没有 B + Adjective to state that A does not reach B's degree.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Formula",
+    "Example",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Positive Comparison",
+      "A 比 B + Adj",
+      "哥哥比我高。",
+      "Older brother is taller than me."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Specific Difference",
+      "A 比 B + Adj + Quantity",
+      "哥哥比我高五厘米。",
+      "Older brother is 5 cm taller than me."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Comparison",
+      "A 没有 B (+ 那么/这么) + Adj",
+      "我不比哥哥高 / 我没有哥哥高。",
+      "I am not as tall as my older brother."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#8B5CF6",
+    "label": "Superiority (比)",
+    "example": "今天比昨天冷得多。",
+    "translation": ""
+   },
+   {
+    "color": "#A78BFA",
+    "label": "Definite Discrepancy",
+    "example": "这件衣服比那件贵五十块钱。",
+    "translation": ""
+   },
+   {
+    "color": "#C4B5FD",
+    "label": "Inferiority / Not Reaching (没有)",
+    "example": "坐公共汽车没有坐地铁快。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "高铁比普通火车快很多。",
+    "ko": "",
+    "highlight": "比"
+   },
+   {
+    "en": "西瓜比苹果重。",
+    "ko": "",
+    "highlight": "比"
+   },
+   {
+    "en": "我的手机没有他的新。",
+    "ko": "",
+    "highlight": "没有"
+   },
+   {
+    "en": "北京冬天的天气比上海冷。",
+    "ko": "",
+    "highlight": "比"
+   },
+   {
+    "en": "妹妹没有姐姐那么喜欢看书。",
+    "ko": "",
+    "highlight": "没有"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "今天比昨天很冷。",
+    "right": "今天比昨天冷得多。",
+    "note": "Never put degree adverbs like 很, 非常, or 太 directly before the adjective in a standard 比 construction."
+   },
+   {
+    "wrong": "我不比他高得多。",
+    "right": "我没有他那么高。",
+    "note": "To state 'A is not as tall as B', use 没有 rather than 不比 with degree modifiers."
+   },
+   {
+    "wrong": "他比我大三岁年。",
+    "right": "他比我大三岁。",
+    "note": "Age differences take 岁 directly without adding 年."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the natural way to say 'This phone is cheaper than that one': '这个手机___那个便宜。'",
+    "options": [
+     "从",
+     "比",
+     "往",
+     "过"
+    ],
+    "answer": 1,
+    "explanation": "The marker 比 introduces the standard of comparison (that one)."
+   },
+   {
+    "question": "Which sentence incorrectly includes a prohibited degree adverb?",
+    "options": [
+     "今天比昨天冷得多。",
+     "今天比昨天冷一点儿。",
+     "今天比昨天很冷。",
+     "今天比昨天冷。"
+    ],
+    "answer": 2,
+    "explanation": "Sentences with 比 cannot use general degree adverbs like 很 before the adjective predicate."
+   },
+   {
+    "question": "Say 'Today is not as hot as yesterday': '今天___昨天那么热。'",
+    "options": [
+     "不比",
+     "没有",
+     "别",
+     "未"
+    ],
+    "answer": 1,
+    "explanation": "The standard construction for 'A is not as [adj] as B' uses 没有 (+ 那么/这么) + Adjective."
+   },
+   {
+    "question": "Complete the exact measure: '他比弟弟高___。'",
+    "options": [
+     "十分",
+     "五厘米",
+     "很",
+     "非常"
+    ],
+    "answer": 1,
+    "explanation": "Specific numeric differentials (like 五厘米) are placed right after the adjective in comparative sentences."
+   }
+  ],
+  "tip": "Never place 很 inside a 比 sentence. If you want to say 'much more', place 得多 or 多了 after the adjective instead."
+ },
+ {
+  "id": "zh-b1-disposal-ba-construction",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#10B981",
+  "emoji": "📦",
+  "title": "The Disposal 把 Construction",
+  "subtitle": "Front the object to focus on handling, moving, or changing things",
+  "color": "#10B981",
+  "bg": "#ECFDF5",
+  "keyPoint": "Use 把 to bring a specific, known object before the verb to express an action that alters, moves, or disposes of it.",
+  "structure": {
+   "headers": [
+    "Element",
+    "Role",
+    "Example",
+    "English Equivalent"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Subject",
+      "Doer of the action",
+      "我",
+      "I"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "把 + Definite Object",
+      "Disposed target",
+      "把作业",
+      "the homework"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Verb + Other Element",
+      "Action & result",
+      "做完了",
+      "finished completely"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#10B981",
+    "label": "Change of Location",
+    "example": "请把书放在桌子上。",
+    "translation": ""
+   },
+   {
+    "color": "#34D399",
+    "label": "Change of State",
+    "example": "他把杯子打破了。",
+    "translation": ""
+   },
+   {
+    "color": "#6EE7B7",
+    "label": "Handing Over / Disposal",
+    "example": "我已经把护照交给了签证官。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "妈妈把晚饭做好了。",
+    "ko": "",
+    "highlight": "把"
+   },
+   {
+    "en": "请把门关上。",
+    "ko": "",
+    "highlight": "把"
+   },
+   {
+    "en": "他把那瓶水喝完了。",
+    "ko": "",
+    "highlight": "把"
+   },
+   {
+    "en": "别把脏衣服扔在地上。",
+    "ko": "",
+    "highlight": "把"
+   },
+   {
+    "en": "我把钱包忘在出租车里了。",
+    "ko": "",
+    "highlight": "把"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我把书看。",
+    "right": "我看书。/ 我把书看完了。",
+    "note": "A 把 sentence cannot end with an unmodified bare verb; it must include a result, directional complement, or 了."
+   },
+   {
+    "wrong": "我把一本书买了。",
+    "right": "我把那本书买了。",
+    "note": "The noun after 把 must be specific or known to both speaker and listener, not an indefinite 'one book'."
+   },
+   {
+    "wrong": "把药没吃。",
+    "right": "没把药吃完。/ 他没吃药。",
+    "note": "Negation markers (不, 没) must precede 把, never appear after it."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Where does the negative marker 没 go in this sentence? '我 [1] 把 [2] 房间 [3] 打扫 [4] 好。'",
+    "options": [
+     "[4]",
+     "[3]",
+     "[2]",
+     "[1]"
+    ],
+    "answer": 3,
+    "explanation": "Negative adverbs like 没 or 没有 must precede the preposition 把."
+   },
+   {
+    "question": "Complete the request: '请你___垃圾扔出去。'",
+    "options": [
+     "把",
+     "被",
+     "在",
+     "向"
+    ],
+    "answer": 0,
+    "explanation": "The disposal particle 把 moves the definite object 垃圾 before the verb phrase 扔出去."
+   },
+   {
+    "question": "Which of these is a grammatical disposal sentence?",
+    "options": [
+     "我把作业写。",
+     "我把作业写完了。",
+     "我写把作业。",
+     "作业我把写。"
+    ],
+    "answer": 1,
+    "explanation": "A 把 construction requires additional result markers such as 完了 after the verb."
+   },
+   {
+    "question": "Complete the sentence: '小明把钥匙___。'",
+    "options": [
+     "丢了",
+     "丢",
+     "看",
+     "想"
+    ],
+    "answer": 0,
+    "explanation": "The verb cannot stand alone; it requires a complement or particle like 了 (丢了 = lost)."
+   }
+  ],
+  "quizTip": "Remember that 把 commands or statements always demand an 'other element' (compliment, 了, or direction) after the verb!",
+  "tip": "Think of 把 as 'take': 'I took the cup and broke it' (我把杯子打破了). If the action doesn't produce an outcome or relocation, do not use 把."
+ },
+ {
+  "id": "zh-b1-passive-bei-construction",
+  "level": "b1",
+  "category": "passive",
+  "categoryColor": "#EF4444",
+  "emoji": "🛡️",
+  "title": "Passive Voice with 被, 叫, and 让",
+  "subtitle": "Indicate how a subject is acted upon, often with an adverse or unexpected outcome",
+  "color": "#EF4444",
+  "bg": "#FEF2F2",
+  "keyPoint": "In passive sentences, the receiver of the action sits first, followed by 被/叫/让 and the agent, showing an action affecting the subject.",
+  "structure": {
+   "headers": [
+    "Subject (Receiver)",
+    "Passive Marker",
+    "Agent (Optional for 被)",
+    "Predicate + Result"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "我的自行车",
+      "被",
+      "(小偷)",
+      "偷走了。"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "蛋糕",
+      "叫",
+      "弟弟",
+      "吃光了。"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "雨伞",
+      "让",
+      "大风",
+      "刮跑了。"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EF4444",
+    "label": "Formal / Universal Passive (被)",
+    "example": "他的新书被翻译成了五种语言。",
+    "translation": ""
+   },
+   {
+    "color": "#F87171",
+    "label": "Spoken Adversity (叫)",
+    "example": "他的钱包叫小偷偷走了。",
+    "translation": ""
+   },
+   {
+    "color": "#FCA5A5",
+    "label": "Colloquial Passive (让)",
+    "example": "衣服让大雨淋湿了。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "苹果被小狗吃了。",
+    "ko": "",
+    "highlight": "被"
+   },
+   {
+    "en": "我的手机被摔坏了。",
+    "ko": "",
+    "highlight": "被"
+   },
+   {
+    "en": "那个坏人被警察抓住了。",
+    "ko": "",
+    "highlight": "被"
+   },
+   {
+    "en": "新衣服叫咖啡弄脏了。",
+    "ko": "",
+    "highlight": "叫"
+   },
+   {
+    "en": "风筝让大风刮到了树上。",
+    "ko": "",
+    "highlight": "让"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "衣服让淋湿了。",
+    "right": "衣服被淋湿了。/ 衣服让人淋湿了。",
+    "note": "While 被 can omit the agent (被 + Verb), colloquial passive markers 叫 and 让 MUST have an explicit agent."
+   },
+   {
+    "wrong": "钱包被我没有偷走。",
+    "right": "钱包没被小偷偷走。",
+    "note": "Negation markers like 没 must be placed before 被, never after."
+   },
+   {
+    "wrong": "他被打了李四。",
+    "right": "他被李四打了。",
+    "note": "The agent must appear immediately after 被, before the action verb."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the passive sentence: '桌上的咖啡___小猫碰倒了。'",
+    "options": [
+     "从",
+     "把",
+     "给",
+     "被"
+    ],
+    "answer": 3,
+    "explanation": "The coffee suffered the action of being knocked over by the cat, requiring the passive marker 被."
+   },
+   {
+    "question": "Which marker can omit the agent entirely (e.g. '水果___吃了。')?",
+    "options": [
+     "被",
+     "叫",
+     "让",
+     "把"
+    ],
+    "answer": 0,
+    "explanation": "Only 被 permits omitting the agent entirely; 叫 and 让 require an expressed agent."
+   },
+   {
+    "question": "Where should the negative word 没 be placed? '[1] 电脑 [2] 被 [3] 弟弟 [4] 弄坏。'",
+    "options": [
+     "[4]",
+     "[1]",
+     "[2]",
+     "[3]"
+    ],
+    "answer": 2,
+    "explanation": "Negation (没/没有) must directly precede the passive marker 被."
+   },
+   {
+    "question": "Identify the correct spoken passive sentence with an agent:",
+    "options": [
+     "作业让写完了。",
+     "作业叫写完了。",
+     "作业叫弟弟写完了。",
+     "作业让把写完了。"
+    ],
+    "answer": 2,
+    "explanation": "叫 requires a stated agent (弟弟) between the marker and the verb phrase."
+   }
+  ],
+  "tip": "Remember: 叫 and 让 cannot stand alone before a verb—they always need a doer (agent) right behind them. When in doubt, stick with 被!"
+ },
+ {
+  "id": "zh-b1-potential-complements",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#F59E0B",
+  "emoji": "🔓",
+  "title": "Potential Complements: 得 vs. 不",
+  "subtitle": "Insert 得 or 不 between verbs and their complements to indicate feasibility",
+  "color": "#F59E0B",
+  "bg": "#FFFBEB",
+  "keyPoint": "Insert 得 between a verb and its resultative/directional complement to express 'can accomplish', or insert 不 to express 'cannot accomplish'.",
+  "structure": {
+   "headers": [
+    "Type",
+    "Verb",
+    "Infix",
+    "Complement",
+    "Meaning"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Affirmative Potential",
+      "看",
+      "得",
+      "见",
+      "able to see"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Negative Potential",
+      "看",
+      "不",
+      "见",
+      "unable to see"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Affirmative Potential",
+      "吃",
+      "得",
+      "完",
+      "able to finish eating"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Potential",
+      "吃",
+      "不",
+      "完",
+      "unable to finish eating"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#F59E0B",
+    "label": "Sensory Perception",
+    "example": "这么远，你听得清老师的声音吗？",
+    "translation": ""
+   },
+   {
+    "color": "#FBBF24",
+    "label": "Capacity & Capacity Limits",
+    "example": "这辆车太小，坐不下五个人。",
+    "translation": ""
+   },
+   {
+    "color": "#FCD34D",
+    "label": "Time & Availability Constraints",
+    "example": "今天的作业太多，我做不完。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "字太小了，我看不清楚。",
+    "ko": "",
+    "highlight": "看不清楚"
+   },
+   {
+    "en": "这么多菜，我们吃得完吗？",
+    "ko": "",
+    "highlight": "吃得完"
+   },
+   {
+    "en": "老师说得太快，我听不懂。",
+    "ko": "",
+    "highlight": "听不懂"
+   },
+   {
+    "en": "明天早上七点我起得来。",
+    "ko": "",
+    "highlight": "起得来"
+   },
+   {
+    "en": "门太窄了，大沙发进不去。",
+    "ko": "",
+    "highlight": "进不去"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我不能看清楚字。",
+    "right": "我看不清楚字。",
+    "note": "Native speakers favor the potential complement 看不清楚 over 不能看清楚 when physical clarity/ability is hindered."
+   },
+   {
+    "wrong": "他做没完这些工作。",
+    "right": "他做不完这些工作。",
+    "note": "Potential complements are negated strictly with the infix 不, never 没."
+   },
+   {
+    "wrong": "听得懂吗？我没听得懂。",
+    "right": "听得懂吗？我听不懂。",
+    "note": "The negative counterpart of 听得懂 is 听不懂."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Express 'I cannot finish eating this': '这么多我吃___。'",
+    "options": [
+     "没完",
+     "完不",
+     "不完",
+     "不好了"
+    ],
+    "answer": 2,
+    "explanation": "The negative potential complement inserts 不 between the verb 吃 and complement 完 to form 吃不完."
+   },
+   {
+    "question": "Select the affirmative potential complement: '你能找___你的钥匙吗？'",
+    "options": [
+     "得着",
+     "不着",
+     "了",
+     "过"
+    ],
+    "answer": 0,
+    "explanation": "找得到/找得着 denotes the positive capability of finding something."
+   },
+   {
+    "question": "Complete the phrase for 'cannot hear clearly': '太吵了，我听___。'",
+    "options": [
+     "很清楚",
+     "不清楚",
+     "没清楚",
+     "没听到"
+    ],
+    "answer": 1,
+    "explanation": "听不清楚 uses the negative infix 不 to denote inability to perceive clearly."
+   },
+   {
+    "question": "How do you ask 'Can you understand spoken Chinese?': '你中文听___听不懂？'",
+    "options": [
+     "得懂",
+     "得完",
+     "了",
+     "不到"
+    ],
+    "answer": 0,
+    "explanation": "The affirmative-negative question form for potential complements pairs [Verb + 得 + Comp] with [Verb + 不 + Comp] (听得懂听不懂)."
+   }
+  ],
+  "tip": "Potential complements are much more common in spoken Chinese than using 不能 + Verb. Use 看得见 rather than 能看见 whenever dealing with inherent sensory capability!"
+ },
+ {
+  "id": "zh-b1-shi-de-cleft-construction",
+  "level": "b1",
+  "category": "verbs",
+  "categoryColor": "#4F46E5",
+  "emoji": "🎯",
+  "title": "The 是……的 (shì...de) Focus Construction",
+  "subtitle": "Highlighting time, place, manner, or agent of known past events",
+  "color": "#4F46E5",
+  "bg": "#EEF2FF",
+  "keyPoint": "Use 是……的 to emphasize the specific details like time, location, or method of an action that has already occurred.",
+  "structure": {
+   "headers": [
+    "Element Emphasized",
+    "Pattern",
+    "Chinese Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Time",
+      "Subject + 是 + Time + Verb + 的",
+      "我是昨天来的。"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Location",
+      "Subject + 是 + 在 Place + Verb + 的",
+      "我们是在北京认识的。"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Manner / Method",
+      "Subject + 是 + Manner + Verb + 的",
+      "他是坐飞机去的。"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Negative Form",
+      "Subject + 不是 + Focus + Verb + 的",
+      "这件衣服不是在网上买的。"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#4F46E5",
+    "label": "Emphasizing Time of Past Action",
+    "example": "这本书我是上个月买的。",
+    "translation": ""
+   },
+   {
+    "color": "#065F46",
+    "label": "Emphasizing Manner or Transport",
+    "example": "大家都是走路过来的。",
+    "translation": ""
+   },
+   {
+    "color": "#B45309",
+    "label": "Emphasizing Location or Setting",
+    "example": "会议是在三楼会议室开的。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "我是去年九月来到中国的。",
+    "ko": "",
+    "highlight": "是去年九月来到中国的"
+   },
+   {
+    "en": "你是一个人去旅行的吗？",
+    "ko": "",
+    "highlight": "是一个人去旅行的"
+   },
+   {
+    "en": "他们不是坐高铁来的，是坐大巴来的。",
+    "ko": "",
+    "highlight": "不是坐高铁来的"
+   },
+   {
+    "en": "这个决定是经理昨天做出的。",
+    "ko": "",
+    "highlight": "是经理昨天做出的"
+   },
+   {
+    "en": "这台电脑我是在官方网站买的。",
+    "ko": "",
+    "highlight": "是在官方网站买的"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "我是昨天来了。",
+    "right": "我是昨天来的。",
+    "note": "Do not use the completed action marker 了 inside the 是……的 construction; the particle 的 at the end already conveys past occurrence."
+   },
+   {
+    "wrong": "我没是在北京认识他的。",
+    "right": "我不是在北京认识他的。",
+    "note": "To negate a 是……的 sentence, place 不 directly before 是; never use 没."
+   },
+   {
+    "wrong": "他是明天去的。",
+    "right": "他是明天去。",
+    "note": "The 是……的 focus pattern is strictly reserved for events that have already taken place, not future actions."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete the sentence to emphasize method: 'We traveled by train': 我们___坐火车去上海的。",
+    "options": [
+     "会",
+     "是",
+     "了",
+     "在"
+    ],
+    "answer": 1,
+    "explanation": "The particle 是 is placed immediately before the emphasized detail (here, the transport method 坐火车)."
+   },
+   {
+    "question": "Select the correct negative cleft sentence: 'I didn't buy this phone online.'",
+    "options": [
+     "这部手机我没是在网上买的。",
+     "这部手机我不是在网上买的。",
+     "这部手机我是在网上没买的。",
+     "这部手机我不是在网上买了。"
+    ],
+    "answer": 1,
+    "explanation": "Negation requires 不是 directly before the prepositional phrase or focused element, without 了."
+   },
+   {
+    "question": "Identify the incorrect sentence that wrongly applies the cleft marker to the future:",
+    "options": [
+     "他是上周回国的。",
+     "我是自己做这道菜的。",
+     "他是下个月结婚的。",
+     "我们是在学校图书馆碰见的。"
+    ],
+    "answer": 2,
+    "explanation": "The 是……的 construction cannot be used for future actions like 'getting married next month' (下个月)."
+   },
+   {
+    "question": "Where does the particle 的 belong in: '小王昨天晚上到北京___'?",
+    "options": [
+     "过",
+     "着",
+     "的",
+     "了的"
+    ],
+    "answer": 2,
+    "explanation": "When 是 is omitted in affirmative cleft sentences, the final 的 completes the focus frame."
+   }
+  ],
+  "tip": "In affirmative sentences, the word 是 is frequently omitted in colloquial speech, but the final 的 must remain (e.g., 我昨天来的)."
+ },
+ {
+  "id": "zh-b1-topic-comment-structure",
+  "level": "b1",
+  "category": "clauses",
+  "categoryColor": "#059669",
+  "emoji": "🗣️",
+  "title": "Topic-Comment Sentence Structure",
+  "subtitle": "Fronting known context followed by analysis, remark, or question",
+  "color": "#059669",
+  "bg": "#ECFDF5",
+  "keyPoint": "In Chinese, known information is frequently moved to the absolute beginning of the sentence to establish the topic before delivering the main comment.",
+  "structure": {
+   "headers": [
+    "Topic Type",
+    "Fronted Topic",
+    "Comment"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Fronted Object",
+      "这本书",
+      "我已经看完了。"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Part-to-Whole",
+      "水果",
+      "我最喜欢吃西瓜。"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Time / Location Frame",
+      "北京的天气",
+      "秋天最舒服。"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Condition / Shared Knowledge",
+      "这件事",
+      "你千万别告诉别人。"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#059669",
+    "label": "Shifting the Object Forward as Topic",
+    "example": "那封邮件我今天早上发出去了。",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Categorical Scoping (Scope to Detail)",
+    "example": "中国菜我特别喜欢吃水煮鱼。",
+    "translation": ""
+   },
+   {
+    "color": "#D97706",
+    "label": "Contrasting Multiple Topics",
+    "example": "笔我带了，本子我没带。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "今天的作业你写完了没有？",
+    "ko": "",
+    "highlight": "今天的作业你写完了没有"
+   },
+   {
+    "en": "他的脾气大家都清楚。",
+    "ko": "",
+    "highlight": "他的脾气大家都清楚"
+   },
+   {
+    "en": "那家新开的饭馆，我们昨天去尝了尝。",
+    "ko": "",
+    "highlight": "那家新开的饭馆"
+   },
+   {
+    "en": "手机我借给他了，充电器还在我这里。",
+    "ko": "",
+    "highlight": "手机我借给他了"
+   },
+   {
+    "en": "这几位外国客人，经理亲自去接待了。",
+    "ko": "",
+    "highlight": "这几位外国客人"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "关于那件事，我已经办好了它。",
+    "right": "那件事我已经办好了。",
+    "note": "Do not insert redundant pronouns like 它 once the object is fronted to the topic position."
+   },
+   {
+    "wrong": "一本书我看完了。",
+    "right": "那本书我看完了。",
+    "note": "Topics must represent definite, identifiable information; indefinite nouns with 一 (like 一本书) cannot serve as topics without specific determiners like 那."
+   },
+   {
+    "wrong": "被那部电影我看了三遍。",
+    "right": "那部电影我看了三遍。",
+    "note": "Topic fronting is not a passive construction; do not add 被 when you simply front an object to emphasize shared context."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Convert '我还没喝完那杯咖啡' into a natural topic-comment structure:",
+    "options": [
+     "那杯咖啡我还没喝完。",
+     "我还没喝完被那杯咖啡。",
+     "喝完我还没那杯咖啡。",
+     "那杯咖啡被我还没喝完了。"
+    ],
+    "answer": 0,
+    "explanation": "Fronting the specific object 那杯咖啡 to the very start of the sentence establishes the topic cleanly."
+   },
+   {
+    "question": "Why is '一个苹果我吃了' unnatural as a topic sentence?",
+    "options": [
+     "Apples cannot be topics.",
+     "The topic must refer to definite, known information rather than an arbitrary indefinite entity.",
+     "The verb 吃 must come first.",
+     "It must always contain the preposition 把."
+    ],
+    "answer": 1,
+    "explanation": "A topic must denote definite or generic reference already understood in context; indefinite phrases like 一个苹果 fail this requirement."
+   },
+   {
+    "question": "Choose the most natural sentence contrasting two items:",
+    "options": [
+     "衬衫我买了，可是外套没有买。",
+     "我买了衬衫可是买了外套没有。",
+     "买了我衬衫外套没有买。",
+     "被衬衫买了可是外套没有。"
+    ],
+    "answer": 0,
+    "explanation": "Placing both contrastive elements (衬衫 and 外套) as the respective topics creates an idiomatic parallel structure."
+   },
+   {
+    "question": "Which component in '这种茶味道非常清香' is the fronted topic?",
+    "options": [
+     "味道",
+     "非常",
+     "清香",
+     "这种茶"
+    ],
+    "answer": 3,
+    "explanation": "这种茶 ('this kind of tea') sets the primary frame of reference for the subsequent comment on its aroma."
+   }
+  ],
+  "tip": "Whenever you want to organize a conversation around an already familiar object or concept, place it before the subject."
+ },
+ {
+  "id": "zh-b2-paired-connectives-subordination",
+  "level": "b2",
+  "category": "conditionals",
+  "categoryColor": "#EA580C",
+  "emoji": "🔗",
+  "title": "Complex Paired Conjunctions and Correlatives",
+  "subtitle": "Navigating nuanced deduction, steadfast preference, and paradoxical outcome",
+  "color": "#EA580C",
+  "bg": "#FFF7ED",
+  "keyPoint": "Paired correlative conjunctions lock clauses together to establish logical relationships like premise-resolution, stubborn choice, or contrary results.",
+  "structure": {
+   "headers": [
+    "Connective Pair",
+    "Logical Relation",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "既然……就……",
+      "Established Premise → Deduction",
+      "既然来了，就多玩几天吧。"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "宁可……也……",
+      "Costly Choice → Unyielding Resolve",
+      "我宁可辞职，也不向他妥协。"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "不仅没……反而……",
+      "Contrary Result → Opposite Escalation",
+      "雨不仅没停，反而越下越大了。"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "与其……不如……",
+      "Comparative Evaluation → Preference",
+      "与其在这里抱怨，不如赶紧行动。"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#EA580C",
+    "label": "Drawing Actionable Inferences from Facts",
+    "example": "既然大家都同意，我们就按这个计划执行。",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Expressing Uncompromising Resolve",
+    "example": "工程师宁可加班整夜，也要保证系统准时上线。",
+    "translation": ""
+   },
+   {
+    "color": "#7C3AED",
+    "label": "Describing Unforeseen Opposite Outcomes",
+    "example": "吃了药以后，病情不仅没好转，反而更严重了。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "既然你身体不舒服，就留在宿舍休息吧。",
+    "ko": "",
+    "highlight": "既然你身体不舒服，就"
+   },
+   {
+    "en": "他宁可自己多吃点苦，也不愿意给父母添麻烦。",
+    "ko": "",
+    "highlight": "宁可自己多吃点苦，也不愿意"
+   },
+   {
+    "en": "批评不仅没有让他改正，反而激起了他的逆反心理。",
+    "ko": "",
+    "highlight": "不仅没有让他改正，反而"
+   },
+   {
+    "en": "既然合同已经签字生效，双方就必须遵守各项条款。",
+    "ko": "",
+    "highlight": "既然合同已经签字生效，双方就"
+   },
+   {
+    "en": "这个产品降价后不仅没多卖，反而让顾客怀疑质量有问题。",
+    "ko": "",
+    "highlight": "不仅没多卖，反而"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "因为你不想去，所以就别去了吧。",
+    "right": "既然你不想去，就别去了吧。",
+    "note": "Use 既然……就 when reasoning from an acknowledged premise to offer advice or suggestions; 因为……所以 expresses objective cause-and-effect."
+   },
+   {
+    "wrong": "我宁可坐普通火车，就不要坐飞机。",
+    "right": "我宁可坐普通火车，也不要坐飞机。",
+    "note": "The pair for 宁可 (would rather) correlates with 也 / 决不 in the second clause, never 就."
+   },
+   {
+    "wrong": "太阳出来以后，天气不仅没暖和，就变冷了。",
+    "right": "太阳出来以后，天气不仅没暖和，反而变冷了。",
+    "note": "When the outcome defies the expected trend into the polar opposite, paired 反而 must be used."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Fill in the blank: '___你已经决定了，我们___全力支持你。'",
+    "options": [
+     "即使……也",
+     "既然……就",
+     "虽然……但是",
+     "哪怕……还"
+    ],
+    "answer": 1,
+    "explanation": "既然……就 is used to state a known premise ('now that you have decided') and present the natural consequence or resolution."
+   },
+   {
+    "question": "Complete the sentence expressing tough resolution: '他___承认错误，___肯低头道歉。'",
+    "options": [
+     "与其……不如",
+     "宁可……也不",
+     "不仅……反而",
+     "因为……所以"
+    ],
+    "answer": 1,
+    "explanation": "宁可……也不 conveys choosing an undesirable situation over yielding or doing something unacceptable."
+   },
+   {
+    "question": "Select the correlative that shows an unexpected contrary outcome: '听了他的劝告，小张不仅没冷静下来，___更激动了。'",
+    "options": [
+     "反而",
+     "而且",
+     "因此",
+     "那么"
+    ],
+    "answer": 0,
+    "explanation": "不仅没……反而…… indicates that instead of calming down, the subject exhibited the exact opposite behavior."
+   },
+   {
+    "question": "Which pair is used to reject option A in favor of superior option B?",
+    "options": [
+     "宁可……也不",
+     "因为……所以",
+     "既然……就",
+     "与其……不如"
+    ],
+    "answer": 3,
+    "explanation": "与其 A 不如 B means 'rather than A, it is better to B'."
+   }
+  ],
+  "tip": "Pay close attention to clause subjects: with 既然, the subject can precede or follow it; with 宁可, the subject almost always precedes 宁可 if both clauses share the same agent."
+ },
+ {
+  "id": "zh-b2-idiomatic-prepositional-frameworks",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#0891B2",
+  "emoji": "📐",
+  "title": "Formal Prepositional Frames: 在……下/上 and 对……而言",
+  "subtitle": "Circumpositional structures for conditions, domains, and viewpoints",
+  "color": "#0891B2",
+  "bg": "#ECFEFF",
+  "keyPoint": "Formal Chinese relies on circumpositional frames wrapping around abstract nouns to delimit scopes, perspectives, or prevailing conditions.",
+  "structure": {
+   "headers": [
+    "Framework",
+    "Function",
+    "Example Sentence"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "在……下",
+      "Under conditions / influence / help",
+      "在老师的指导下，论文完成了。"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "在……上",
+      "In terms of / in the aspect of",
+      "他在专业技能上有显著优势。"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "对……而言 / 来说",
+      "From the standpoint / perspective of",
+      "对初学者而言，发音非常关键。"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "在……中",
+      "In the process / course of",
+      "在交流中，我们增进了了解。"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0891B2",
+    "label": "Specifying Environmental Condition or Guidance",
+    "example": "在朋友们的鼓励下，他终于走出了低谷。",
+    "translation": ""
+   },
+   {
+    "color": "#2563EB",
+    "label": "Delimiting a Specific Domain or Aspect",
+    "example": "两国在经济文化交流上取得了巨大突破。",
+    "translation": ""
+   },
+   {
+    "color": "#4F46E5",
+    "label": "Stating Target-Specific Perspectives",
+    "example": "对这家跨国企业而言，控制成本是当务之急。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "在导师的悉心指导下，这项科研实验顺利结束。",
+    "ko": "",
+    "highlight": "在导师的悉心指导下"
+   },
+   {
+    "en": "这两款手机在外观设计上没有任何区别。",
+    "ko": "",
+    "highlight": "在外观设计上"
+   },
+   {
+    "en": "对广大青年学子而言，树立远大目标至关重要。",
+    "ko": "",
+    "highlight": "对广大青年学子而言"
+   },
+   {
+    "en": "在正常情况下，包裹会在四十八小时内送达。",
+    "ko": "",
+    "highlight": "在正常情况下"
+   },
+   {
+    "en": "双方在诸多关键问题上达成了高度共识。",
+    "ko": "",
+    "highlight": "在诸多关键问题上"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "在老师的帮助上，我通过了考试。",
+    "right": "在老师的帮助下，我通过了考试。",
+    "note": "Assistance, conditions, leadership, or influence must be framed with 在……下, never 在……上."
+   },
+   {
+    "wrong": "在工作下，他一直非常认真负责。",
+    "right": "在工作上，他一直非常认真负责。",
+    "note": "Abstract fields, professions, aspects, or domains require 在……上 (in the domain of)."
+   },
+   {
+    "wrong": "为我而言，这个方案不太现实。",
+    "right": "对我而言，这个方案不太现实。",
+    "note": "The fixed formal viewpoint formula is 对……而言; 为 cannot replace 对 here."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the correct frame for guidance: '___教练的严格训练___，运动员的成绩大幅提升。'",
+    "options": [
+     "在……上",
+     "在……下",
+     "对……而言",
+     "在……中"
+    ],
+    "answer": 1,
+    "explanation": "Under the direction, supervision, or training of someone requires 在……下."
+   },
+   {
+    "question": "Fill in the blank for domain: '这家公司___技术创新___投入了大量资金。'",
+    "options": [
+     "在……下",
+     "从……到",
+     "在……上",
+     "对……来说"
+    ],
+    "answer": 2,
+    "explanation": "Specifying an area or field of endeavor (技术创新) requires the framework 在……上."
+   },
+   {
+    "question": "Choose the correct phrase to introduce a formal viewpoint: '___传统零售业___，数字化转型迫在眉睫。'",
+    "options": [
+     "从……上",
+     "在……下",
+     "由……看来",
+     "对……而言"
+    ],
+    "answer": 3,
+    "explanation": "对……而言 is the formal register expression for 'as far as [subject] is concerned' or 'from the perspective of [subject]'."
+   },
+   {
+    "question": "Which frame correctly completes '___这个大背景___，双边贸易持续增长。'?",
+    "options": [
+     "在……下",
+     "对……而言",
+     "在……里",
+     "朝……前"
+    ],
+    "answer": 0,
+    "explanation": "Conditions, circumstances, and historical backgrounds take 在……下 (under the background of / under these conditions)."
+   }
+  ],
+  "tip": "Think of 在……下 as 'under the influence/umbrella of' (help, pressure, conditions) and 在……上 as 'on the plane of' (theory, policy, life, work)."
+ },
+ {
+  "id": "zh-b2-rhetorical-and-emphatic-markers",
+  "level": "b2",
+  "category": "advanced",
+  "categoryColor": "#9333EA",
+  "emoji": "⚡",
+  "title": "Emphatic and Rhetorical Markers: 倒 (dào), 究竟 (jiūjìng), and 并 (bìng)",
+  "subtitle": "Pragmatic adverbs signaling contrast, persistence, and categorical negation",
+  "color": "#9333EA",
+  "bg": "#FAF5FF",
+  "keyPoint": "Use 倒 to convey contrary-to-expectation softness or contrast, 究竟 to press for bedrock truth in interrogatives, and 并 to forcefully refute false assumptions.",
+  "structure": {
+   "headers": [
+    "Adverb",
+    "Pragmatic Function",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "倒 (dào)",
+      "Unexpected contrast / concession",
+      "这道菜看起来普通，味道倒不错。"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "究竟 (jiūjìng)",
+      "Intense inquiry ('on earth / after all')",
+      "你究竟想说什么？快点告诉我。"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "并 (bìng)",
+      "Refuting an assumption (并+不/没)",
+      "实际情况并不是你想的那样。"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "到底 (dàodǐ)",
+      "Ultimate outcome / persistence",
+      "经过反复测试，实验到底成功了。"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#9333EA",
+    "label": "Refuting an Inaccurate Presumption with 并",
+    "example": "学好外语并没有捷径，必须每天坚持练习。",
+    "translation": ""
+   },
+   {
+    "color": "#BE185D",
+    "label": "Pressing for Truth in Questions with 究竟",
+    "example": "会议推迟的具体原因究竟是什么？",
+    "translation": ""
+   },
+   {
+    "color": "#047857",
+    "label": "Conceding an Unexpected Positive with 倒",
+    "example": "价格虽然稍微贵了一点，质量倒挺让人放心。",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "大家都赞成，他倒提出了完全相反的意见。",
+    "ko": "",
+    "highlight": "他倒提出了"
+   },
+   {
+    "en": "这件事的幕后主使究竟是谁？",
+    "ko": "",
+    "highlight": "究竟是谁"
+   },
+   {
+    "en": "我并没有答应过你的无理要求。",
+    "ko": "",
+    "highlight": "并没有答应"
+   },
+   {
+    "en": "屋里虽小，打扫得倒挺干净整洁。",
+    "ko": "",
+    "highlight": "打扫得倒挺"
+   },
+   {
+    "en": "大家以为他会生气，他听了并没发火。",
+    "ko": "",
+    "highlight": "并没发火"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "你究竟去不去？（在陈述句里使用）",
+    "right": "你究竟去不去？",
+    "note": "Remember that 究竟 is an interrogative adverb pressing for clarification; it cannot modify an ordinary affirmative statement unless meaning 'after all/all things considered'."
+   },
+   {
+    "wrong": "我并没昨天去学校。",
+    "right": "我昨天并没有去学校。",
+    "note": "The emphatic negative adverb 并 directly precedes the negation markers 不 or 没/没有, not arbitrary time words."
+   },
+   {
+    "wrong": "他虽然个子小，倒力气很大。（倒位置错误）",
+    "right": "他虽然个子小，力气倒很大。",
+    "note": "倒 as an adverb of contrast must be placed immediately before the predicate verb or adjective phrase, never before the subject/topic."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Select the adverb that emphatically refutes an assumption: '很多人以为学中文很难，但其实___不是这样。'",
+    "options": [
+     "并",
+     "倒",
+     "究竟",
+     "却"
+    ],
+    "answer": 0,
+    "explanation": "并 combines with 不 / 没 to emphatically dispel a preconceived misconception or wrong assumption."
+   },
+   {
+    "question": "Insert the adverb demanding bottom-line truth: '你东张西望的，___在找什么东西？'",
+    "options": [
+     "并",
+     "反",
+     "倒",
+     "究竟"
+    ],
+    "answer": 3,
+    "explanation": "究竟 is used in questions to intensify inquiry, equivalent to 'what on earth' or 'what actually'."
+   },
+   {
+    "question": "Choose the sentence with the correct placement of 倒:",
+    "options": [
+     "倒他虽然累，但是很开心。",
+     "他虽然累，精神倒挺好。",
+     "倒他的精神挺好虽然累。",
+     "他虽然累倒，精神挺好。"
+    ],
+    "answer": 1,
+    "explanation": "倒 is an adverb and must sit right before the predicate adjective or verb phrase (精神倒挺好)."
+   },
+   {
+    "question": "Which sentence contains an error in the use of 并?",
+    "options": [
+     "我并不知道这件事情的来龙去脉。",
+     "他并不是有意伤害你的。",
+     "他们并没去过那个海岛。",
+     "他并不天天下班跑步。"
+    ],
+    "answer": 3,
+    "explanation": "While grammatically allowable in rare contexts, 并 usually refutes a definitive proposition rather than habitual frequency like 天天 unless set in direct contradiction to an accusation."
+   }
+  ],
+  "tip": "Use 并 before 不 or 没 when you can sense the listener is assuming the opposite; it serves as a polite but firm corrective brake on their misunderstanding."
+ }
+]
