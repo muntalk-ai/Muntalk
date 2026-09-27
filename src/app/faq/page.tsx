@@ -81,7 +81,7 @@ If you signed up with Google, you don't have a password — just click "Continue
   },
   {
     q: 'Can I change my learning language after signing up?',
-    a: `Yes! Go to the main Lingua page and tap on your current language flag at the top. You can switch to any of the 65+ available languages at any time. Your progress for each language is saved separately, so switching won't erase your existing progress.`,
+    a: `Yes! Go to the main Lingua page and tap on your current language flag at the top. You can switch to any of the 90+ available languages at any time. Your progress for each language is saved separately, so switching won't erase your existing progress.`,
     tags: ['account', 'lesson'],
   },
   {
@@ -122,7 +122,7 @@ Sign up for a free account to ensure your progress is always saved to the cloud.
               ['Placement test',       '❌',               '✅',                  '✅'],
               ['Word Bank + SRS',      '❌',               '❌',                  '✅'],
               ['League system',        '❌',               '✅',                  '✅'],
-              ['All 65 languages',     '❌',               '❌',                  '✅'],
+              ['All 90+ languages',     '❌',               '❌',                  '✅'],
             ].map(([f, g, fr, p], i) => (
               <tr key={i} style={{ borderBottom: '1px solid #F1F5F9', background: i % 2 === 0 ? '#FAFAFA' : '#fff' }}>
                 <td style={{ padding: '8px 4px', fontWeight: 700, color: '#374151' }}>{f}</td>
@@ -166,11 +166,22 @@ Premium members have unlimited AI sessions with no daily limits.`,
   {
     q: 'The subtitles / translations are not showing up during lessons.',
     a: `Translations are powered by the Gemini AI API. If they're not appearing:
-1. Make sure you have selected your native language in Settings (the language flag on the home screen)
+1. Make sure you have selected your native language at Profile → My native language. (The language flag on the home screen changes your learning language, not your native language.)
 2. Check your internet connection — translation requires an active connection
 3. Try refreshing the page
 4. If the issue persists, the translation service may be temporarily unavailable — try again in a few minutes`,
     tags: ['lesson', 'tech'],
+  },
+  {
+    q: 'Translations are showing in the wrong language. What should I do?',
+    a: (
+      <span>
+        Translations and explanations follow your <strong>native language</strong> setting — not your learning language. If they appear in an unexpected language, check your setting at{' '}
+        <a href="/profile" style={{ color: '#6366F1', fontWeight: 800 }}>Profile → My native language</a>.
+        After changing it, refresh the page — new translations will use the updated language.
+      </span>
+    ),
+    tags: ['lesson', 'account'],
   },
 
   // ── 결제 ────────────────────────────────────────────────────
@@ -256,7 +267,7 @@ We recommend Chrome for the best experience. Internet Explorer is not supported.
   },
   {
     q: 'How many languages can I learn at the same time?',
-    a: `Free plan members can study up to 2 languages simultaneously. Premium members can study all 65+ languages with no limits. You can switch between languages anytime from the home screen.`,
+    a: `Free plan members can study up to 2 languages simultaneously. Premium members can study all 90+ languages with no limits. You can switch between languages anytime from the home screen.`,
     tags: ['trial', 'lesson'],
   },
   {
