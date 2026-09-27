@@ -845,7 +845,7 @@ LANGUAGE RULES:
         </div>
 
         {/* Word card */}
-        <div key={w.word}
+        <div key={w.word} className="tth-btn"
           onClick={voiceSupported ? () => speak(w.word) : undefined}
           style={{ background: 'white', borderRadius: 28, padding: '40px 56px',
             textAlign: 'center', cursor: voiceSupported ? 'pointer' : 'default', marginBottom: 28,
@@ -864,7 +864,7 @@ LANGUAGE RULES:
               {(w as any).meaning}
             </div>
           )}
-          <div style={{ display:'inline-flex', alignItems:'center', justifyContent:'center',
+          <div className="tth-btn" style={{ display:'inline-flex', alignItems:'center', justifyContent:'center',
             minHeight: 56, padding: '12px 36px', borderRadius: 99, marginBottom: 0,
             fontSize: 17, color: voiceSupported ? ACCENT : '#94A3B8', fontWeight: 800,
             background: voiceSupported ? `${ACCENT}14` : '#F1F5F9',
@@ -936,6 +936,7 @@ LANGUAGE RULES:
 
       {/* Listen button */}
       <button onClick={() => speak(listenWord.word)} disabled={!voiceSupported}
+        className="tth-btn"
         style={{ ...btnBase, width: 120, height: 120, borderRadius: '50%',
           background: voiceSupported ? `linear-gradient(135deg, ${ACCENT}, #818CF8)` : '#E2E8F0',
           color: 'white', fontSize: 48, marginBottom: 48,
@@ -1125,6 +1126,7 @@ LANGUAGE RULES:
           marginBottom: 24 }}>Say this word out loud:</div>
 
         <div onClick={voiceSupported ? () => speak(w.word) : undefined}
+          className="tth-btn"
           style={{ background: 'white', borderRadius: 24, padding: '36px 48px',
             textAlign: 'center', cursor: voiceSupported ? 'pointer' : 'default', marginBottom: 40,
             boxShadow: '0 8px 40px rgba(99,102,241,0.12)' }}>
@@ -1134,7 +1136,7 @@ LANGUAGE RULES:
           <div style={{ fontSize: 15, color: '#94A3B8', fontStyle: 'italic' }}>
             {w.phonetic}
           </div>
-          <div style={{ display:'inline-flex', alignItems:'center', justifyContent:'center',
+          <div className="tth-btn" style={{ display:'inline-flex', alignItems:'center', justifyContent:'center',
             minHeight: 52, padding: '10px 32px', borderRadius: 99, marginTop: 14,
             fontSize: 16, color: voiceSupported ? ACCENT : '#94A3B8', fontWeight: 700,
             background: voiceSupported ? `${ACCENT}14` : '#F1F5F9',
