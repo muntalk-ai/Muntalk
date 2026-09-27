@@ -3,6 +3,7 @@ import { apiFetch } from '@/lib/apiClient';
 import { runWithAiRetry, AI_TIMEOUT_MS } from '@/lib/aiRetry';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
+import type { CSSProperties } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 import { useAuth } from '@/context/AuthContext';
@@ -98,6 +99,59 @@ function DreamStudioContent() {
   const sameLanguage = langId === subLang || (langId.startsWith('en') && subLang.startsWith('en'));
   const isPremiumUser = isAdmin || planId !== 'free';
   const tutor = getTutorById(tutorId);
+
+  // ── Menu translations: English → learner's native language, shown under English ──
+  const [menuT, setMenuT] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    if (subLang.startsWith('en')) { setMenuT({}); return; }
+    const strings: string[] = [];
+    STUDIO_GENRES.forEach(g => { strings.push(g.title, g.tagline, g.description, ...g.examples); });
+    const modeLabels = [`🌐 ${targetLang}`, `🏠 ${nativeLang}`, 'Switch freely'];
+    const modeSubs = ['Study language while creating', 'Work in your native language', 'Best of both'];
+    strings.push(...modeLabels, ...modeSubs);
+    const day = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+    const cacheKey = `mt_dream_menu_t_${subLang}_${langId}_${day}`;
+    try {
+      const cached = localStorage.getItem(cacheKey);
+      if (cached) { setMenuT(JSON.parse(cached)); return; }
+    } catch { /* noop */ }
+    let cancelled = false;
+    (async () => {
+      try {
+        const numbered = strings.map((s, i) => `${i + 1}. ${s}`).join('\n');
+        const res = await apiFetch('/api/gemini', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            uid: user?.uid ?? null, temperature: 0.1,
+            prompt: `Translate each numbered English UI string below to language code "${subLang}". Return ONLY a JSON array of translated strings in the same order, no numbering, no extra text.\n\n${numbered}`,
+          }),
+          timeoutMs: AI_TIMEOUT_MS,
+        });
+        const data = await res.json();
+        const text: string = data.text?.trim() || '';
+        const m = text.match(/\[[\s\S]*\]/);
+        if (!m) return;
+        const arr = JSON.parse(m[0]);
+        if (!Array.isArray(arr) || arr.length !== strings.length) return;
+        const map: Record<string, string> = {};
+        strings.forEach((s, i) => {
+          if (typeof arr[i] === 'string' && arr[i].trim()) map[s] = arr[i].trim();
+        });
+        if (cancelled) return;
+        setMenuT(map);
+        try { localStorage.setItem(cacheKey, JSON.stringify(map)); } catch { /* noop */ }
+      } catch { /* silent: fall back to English only */ }
+    })();
+    return () => { cancelled = true; };
+  }, [subLang, langId, user?.uid]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // 영어 아래 작고 흐린 번역문
+  const trUnder = (en: string, style: CSSProperties) => {
+    const t = menuT[en];
+    if (!t || t === en) return null;
+    return <div style={style}>{t}</div>;
+  };
 
   useEffect(() => {
     const ll = localStorage.getItem('mt_learn_lang') || 'en-US';
@@ -531,7 +585,11 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
                   boxShadow: langMode===opt.id ? `0 4px 14px ${opt.color}40` : 'none',
                   transition:'all .15s' }}>
                 <div style={{ fontSize:13, fontWeight:800 }}>{opt.label}</div>
+                {trUnder(opt.label, { fontSize:10, fontWeight:600, marginTop:1,
+                  color: langMode===opt.id ? 'rgba(255,255,255,0.7)' : '#94A3B8' })}
                 <div style={{ fontSize:10, fontWeight:600, opacity:.8 }}>{opt.sub}</div>
+                {trUnder(opt.sub, { fontSize:10, fontWeight:600, marginTop:1,
+                  color: langMode===opt.id ? 'rgba(255,255,255,0.7)' : '#94A3B8' })}
               </button>
             ))}
           </div>
@@ -580,7 +638,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
 
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(280px,1fr))', gap:14 }}>
           {STUDIO_GENRES.map((genre,i) => (
-            <GenreCard key={genre.id} genre={genre} index={i}
+            <GenreCard key={genre.id} genre={genre} index={i} menuT={menuT}
               locked={!isPremiumUser}
               onSelect={(title) => isPremiumUser ? startNewProject(genre, title) : setShowPaywall(true)} />
           ))}
@@ -822,15 +880,23 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
 
 // ── Genre Card Component ──────────────────────────────────────────────────────
 
-function GenreCard({ genre, index, onSelect, locked = false }: {
+function GenreCard({ genre, index, menuT, onSelect, locked = false }: {
   genre: typeof STUDIO_GENRES[0];
   index: number;
+  menuT: Record<string, string>;
   onSelect: (title: string) => void;
   locked?: boolean;
 }) {
   const [expanded, setExpanded] = useState(false);
   const [titleInput, setTitleInput] = useState('');
   const [hovIdx, setHovIdx] = useState<number|null>(null);
+
+  // 영어 아래 작고 흐린 번역문
+  const trUnder = (en: string, style: CSSProperties) => {
+    const t = menuT[en];
+    if (!t || t === en) return null;
+    return <div style={style}>{t}</div>;
+  };
 
   return (
     <div className="genre-card"
@@ -852,10 +918,13 @@ function GenreCard({ genre, index, onSelect, locked = false }: {
             )}
           </div>
           <div style={{ fontSize:17, fontWeight:900, color:'#fff', marginBottom:3 }}>{genre.title}</div>
+          {trUnder(genre.title, { fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:3 })}
           <div style={{ fontSize:11, color:genre.accent, fontWeight:700, marginBottom:6 }}>{genre.tagline}</div>
+          {trUnder(genre.tagline, { fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:6 })}
           <div style={{ fontSize:12, color:'#475569', fontWeight:600, lineHeight:1.5 }}>
             {genre.description}
           </div>
+          {trUnder(genre.description, { fontSize:11, color:'rgba(255,255,255,0.55)', lineHeight:1.5, marginTop:3 })}
         </div>
       </div>
 
@@ -876,7 +945,8 @@ function GenreCard({ genre, index, onSelect, locked = false }: {
                   color: hovIdx===i ? genre.accent : '#94A3B8',
                   fontSize:11, fontWeight:700, textAlign:'left',
                   fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", transition:'all .12s' }}>
-                {ex}
+                <div>{ex}</div>
+                {trUnder(ex, { fontSize:10, color:'#94A3B8', fontWeight:600, marginTop:1 })}
               </button>
             ))}
           </div>
