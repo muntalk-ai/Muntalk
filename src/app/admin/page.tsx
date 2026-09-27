@@ -2,6 +2,7 @@
 import { apiFetch } from '@/lib/apiClient';
 
 import { useState, useEffect, useCallback } from 'react';
+import type { CSSProperties } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { db } from '@/lib/firebase';
@@ -18,6 +19,7 @@ interface UserRow {
   uid: string; email: string; displayName: string;
   planId: PlanId; planStatus: string; expiry: string;
   xp: number; streak: number; createdAt: string;
+  learnLang: string; nativeLang: string;
 }
 interface LogEntry {
   id: string; action: string; targetEmail: string;
@@ -30,6 +32,28 @@ const PLAN_LABELS: Record<PlanId, string> = {
 const PLAN_COLORS: Record<PlanId, string> = {
   free:'#94A3B8', monthly:'#6366F1', biannual:'#8B5CF6', annual:'#F59E0B',
 };
+
+// Language code → readable name (fallback: raw code)
+const LANG_NAMES: Record<string,string> = {
+  'en-US':'English','ko-KR':'Korean','ja-JP':'Japanese','zh-CN':'Chinese (Simplified)','zh-TW':'Chinese (Traditional)',
+  'fr-FR':'French','de-DE':'German','es-ES':'Spanish','it-IT':'Italian','pt-BR':'Portuguese','ru-RU':'Russian',
+  'ar-XA':'Arabic','ar-SA':'Arabic','hi-IN':'Hindi','vi-VN':'Vietnamese','th-TH':'Thai','id-ID':'Indonesian','tr-TR':'Turkish',
+};
+const langLabel = (code: string) => (code && code !== '—') ? (LANG_NAMES[code] || code) : '—';
+
+// ── Shared design tokens ────────────────────────────────────────────────────
+const FONT = "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif";
+const CARD: CSSProperties = { background:'#fff', borderRadius:16, border:'1px solid #E9EDF3' };
+const SECTION_TITLE: CSSProperties = { fontSize:16, fontWeight:900, color:'#0F172A', margin:0 };
+const SECTION_SUB: CSSProperties = { fontSize:13, color:'#64748B', fontWeight:600, margin:'6px 0 0' };
+const FIELD_LABEL: CSSProperties = { fontSize:11, fontWeight:900, color:'#94A3B8', letterSpacing:1.5, textTransform:'uppercase', marginBottom:8 };
+const INPUT: CSSProperties = { width:'100%', padding:'11px 14px', borderRadius:10, border:'1.5px solid #E5E7EB', fontSize:14, fontFamily:FONT, outline:'none', boxSizing:'border-box', background:'#fff', color:'#0F172A' };
+const TH: CSSProperties = { textAlign:'left', padding:'12px 16px', fontSize:10, fontWeight:900, color:'#94A3B8', letterSpacing:1.2, textTransform:'uppercase', background:'#F8FAFC', position:'sticky', top:0, zIndex:1, whiteSpace:'nowrap' };
+const TH_NUM: CSSProperties = { ...TH, textAlign:'right' };
+const TD: CSSProperties = { padding:'14px 16px', fontSize:12, borderTop:'1px solid #F1F5F9', verticalAlign:'middle' };
+const TD_NUM: CSSProperties = { ...TD, textAlign:'right' };
+const BTN_SM: CSSProperties = { padding:'6px 11px', borderRadius:8, border:'none', fontSize:11, fontWeight:900, cursor:'pointer', fontFamily:FONT, whiteSpace:'nowrap' };
+const BTN_GHOST: CSSProperties = { ...BTN_SM, border:'1.5px solid #E5E7EB', background:'#fff', color:'#374151' };
 
 function addMonths(d: Date, m: number) { const r = new Date(d); r.setMonth(r.getMonth() + m); return r; }
 function defaultExpiry(p: PlanId) {
@@ -118,6 +142,7 @@ export default function AdminPage() {
             uid:d.id, email:u.email||'', displayName:u.displayName||u.name||'—',
             planId, planStatus, expiry, xp:u.xp||0, streak:u.streak||0,
             createdAt:u.createdAt?.toDate?.()?.toISOString?.()?.slice(0,10)||u.createdAt?.slice?.(0,10)||'',
+            learnLang:u.learnLang||'—', nativeLang:u.nativeLang||'—',
           });
         }
         rows.sort((a,b)=>(a.planId==='free'?1:-1)-(b.planId==='free'?1:-1)||b.xp-a.xp);
@@ -222,7 +247,9 @@ export default function AdminPage() {
 
   const filtered = users.filter(u =>
     !search || u.email.toLowerCase().includes(search.toLowerCase()) ||
-    u.displayName.toLowerCase().includes(search.toLowerCase())
+    u.displayName.toLowerCase().includes(search.toLowerCase()) ||
+    langLabel(u.learnLang).toLowerCase().includes(search.toLowerCase()) ||
+    langLabel(u.nativeLang).toLowerCase().includes(search.toLowerCase())
   );
 
   const actionColors: Record<string,string> = {
@@ -230,7 +257,7 @@ export default function AdminPage() {
   };
 
   if (loading||fetching) return (
-    <div style={{minHeight:'100vh',background:'#F8FAFC',display:'flex',alignItems:'center',justifyContent:'center',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
+    <div style={{minHeight:'100vh',background:'#F8FAFC',display:'flex',alignItems:'center',justifyContent:'center',fontFamily:FONT}}>
       <div style={{textAlign:'center'}}>
         <div style={{width:40,height:40,border:'4px solid #E5E7EB',borderTopColor:'#6366F1',borderRadius:'50%',animation:'spin .8s linear infinite',margin:'0 auto 14px'}}/>
         <div style={{color:'#94A3B8',fontWeight:700,fontSize:14}}>Loading admin panel...</div>
@@ -240,44 +267,47 @@ export default function AdminPage() {
   );
 
   return (
-    <div style={{minHeight:'100vh',background:'#F8FAFC',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
+    <div style={{minHeight:'100vh',background:'#F8FAFC',fontFamily:FONT,color:'#0F172A'}}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{__html:`
         @keyframes spin{to{transform:rotate(360deg)}}
         @keyframes su{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-        .urow:hover{background:#F8FAFC!important}
+        .admin-table{width:100%;border-collapse:collapse}
+        .admin-table tbody tr.urow:hover{background:#EEF2FF!important}
         .tab-btn{transition:all .15s}
+        .tab-btn:hover:not(.active){background:#F8FAFC}
         textarea{resize:vertical}
+        input:focus,textarea:focus{border-color:#6366F1!important}
       `}}/>
 
       {/* Toast */}
-      {toast&&<div style={{position:'fixed',top:18,left:'50%',transform:'translateX(-50%)',background:'#1E293B',color:'#fff',padding:'11px 22px',borderRadius:12,fontWeight:800,fontSize:13,zIndex:9999,animation:'su .2s ease',whiteSpace:'nowrap'}}>{toast}</div>}
+      {toast&&<div style={{position:'fixed',top:18,left:'50%',transform:'translateX(-50%)',background:'#1E293B',color:'#fff',padding:'11px 22px',borderRadius:12,fontWeight:800,fontSize:13,zIndex:9999,animation:'su .2s ease',whiteSpace:'nowrap',maxWidth:'90vw',overflow:'hidden',textOverflow:'ellipsis'}}>{toast}</div>}
 
       {/* Nav */}
-      <nav style={{background:'#fff',borderBottom:'1px solid #F1F5F9',height:54,display:'flex',alignItems:'center',padding:'0 24px',gap:14}}>
-        <button onClick={()=>router.push('/lingua')} style={{background:'none',border:'none',color:'#94A3B8',cursor:'pointer',fontWeight:700,fontSize:13,fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>← Back</button>
+      <nav style={{background:'#fff',borderBottom:'1px solid #E9EDF3',height:56,display:'flex',alignItems:'center',padding:'0 24px',gap:14,position:'sticky',top:0,zIndex:50}}>
+        <button onClick={()=>router.push('/lingua')} style={{background:'none',border:'none',color:'#94A3B8',cursor:'pointer',fontWeight:700,fontSize:13,fontFamily:FONT}}>← Back</button>
         <div style={{fontWeight:900,fontSize:16,color:'#0F172A'}}>🛡️ Admin Panel</div>
-        <div style={{marginLeft:'auto',fontSize:12,color:'#94A3B8',fontWeight:700}}>
+        <div style={{marginLeft:'auto',fontSize:12,color:'#64748B',fontWeight:700,background:'#F1F5F9',padding:'5px 12px',borderRadius:999}}>
           {users.length} users · {users.filter(u=>u.planId!=='free').length} premium
         </div>
       </nav>
 
-      <div style={{maxWidth:1080,margin:'0 auto',padding:'24px 20px'}}>
+      <div style={{maxWidth:1080,margin:'0 auto',padding:'28px 20px 48px'}}>
 
         {/* Stats */}
-        <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:10,marginBottom:24}}>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:24}}>
           {(['free','monthly','biannual','annual'] as PlanId[]).map(p=>(
-            <div key={p} style={{background:'#fff',borderRadius:12,padding:'14px 16px',border:'1px solid #F1F5F9'}}>
-              <div style={{fontSize:22,fontWeight:900,color:PLAN_COLORS[p]}}>{users.filter(u=>u.planId===p).length}</div>
-              <div style={{fontSize:11,color:'#64748B',fontWeight:700,marginTop:2}}>{PLAN_LABELS[p]}</div>
+            <div key={p} style={{...CARD,padding:'16px 18px'}}>
+              <div style={{fontSize:24,fontWeight:900,color:PLAN_COLORS[p]}}>{users.filter(u=>u.planId===p).length}</div>
+              <div style={{fontSize:11,color:'#64748B',fontWeight:700,marginTop:4}}>{PLAN_LABELS[p]}</div>
             </div>
           ))}
         </div>
 
         {/* Tabs */}
-        <div style={{display:'flex',gap:6,marginBottom:20,background:'#fff',padding:6,borderRadius:14,border:'1px solid #F1F5F9',width:'fit-content'}}>
+        <div style={{display:'flex',gap:6,marginBottom:24,background:'#fff',padding:6,borderRadius:14,border:'1px solid #E9EDF3',width:'fit-content'}}>
           {([['users','👥 Users'],['email','✉️ Email'],['logs','📋 Logs'],['settings','⚙️ Settings']] as [Tab,string][]).map(([t,label])=>(
-            <button key={t} className="tab-btn" onClick={()=>setTab(t)}
-              style={{padding:'8px 20px',borderRadius:10,border:'none',background:tab===t?'#EEF2FF':'transparent',color:tab===t?'#6366F1':'#64748B',fontWeight:tab===t?900:700,fontSize:13,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
+            <button key={t} className={`tab-btn${tab===t?' active':''}`} onClick={()=>setTab(t)}
+              style={{padding:'9px 22px',borderRadius:10,border:'none',background:tab===t?'#EEF2FF':'transparent',color:tab===t?'#6366F1':'#64748B',fontWeight:tab===t?900:700,fontSize:13,cursor:'pointer',fontFamily:FONT}}>
               {label}
             </button>
           ))}
@@ -286,56 +316,84 @@ export default function AdminPage() {
         {/* -- USERS TAB -- */}
         {tab==='users'&&(
           <>
+            <div style={{display:'flex',justifyContent:'space-between',alignItems:'baseline',marginBottom:14}}>
+              <h2 style={{...SECTION_TITLE,fontSize:18}}>Users</h2>
+              <div style={{fontSize:12,color:'#94A3B8',fontWeight:700}}>{filtered.length} of {users.length} shown</div>
+            </div>
             <input value={search} onChange={e=>setSearch(e.target.value)}
-              placeholder="🔍 Search by email or name..."
-              style={{width:'100%',padding:'11px 16px',borderRadius:12,border:'1.5px solid #E5E7EB',fontSize:14,fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",outline:'none',marginBottom:14,background:'#fff',boxSizing:'border-box'}}
+              placeholder="🔍 Search by email, name, or language..."
+              style={{...INPUT,marginBottom:16}}
             />
-            <div style={{background:'#fff',borderRadius:16,border:'1px solid #F1F5F9',overflow:'hidden'}}>
-              <div style={{display:'grid',gridTemplateColumns:'1.5fr 1fr 110px 90px 60px 160px',padding:'10px 16px',background:'#F8FAFC',borderBottom:'1px solid #F1F5F9',fontSize:10,fontWeight:900,color:'#94A3B8',letterSpacing:1.2,textTransform:'uppercase'}}>
-                <div>Email</div><div>Name</div><div>Plan</div><div>Expires</div><div>XP</div><div>Actions</div>
+            <div style={{...CARD,overflow:'hidden'}}>
+              <div style={{overflowX:'auto',maxHeight:'70vh',overflowY:'auto'}}>
+                <table className="admin-table" style={{minWidth:980}}>
+                  <thead>
+                    <tr>
+                      <th style={TH}>Email</th>
+                      <th style={TH}>Name</th>
+                      <th style={TH}>Plan</th>
+                      <th style={TH}>Joined</th>
+                      <th style={TH}>Learning</th>
+                      <th style={TH}>Native</th>
+                      <th style={TH_NUM}>XP</th>
+                      <th style={TH}>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {filtered.length===0&&(
+                      <tr><td colSpan={8} style={{padding:48,textAlign:'center',color:'#94A3B8',fontWeight:700,fontSize:13}}>No users found</td></tr>
+                    )}
+                    {filtered.map((u,i)=>(
+                      <tr key={u.uid} className="urow" style={{background:i%2?'#FAFBFD':'#fff'}}>
+                        <td style={{...TD,fontWeight:700,color:'#0F172A',maxWidth:220,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}} title={u.email}>{u.email}</td>
+                        <td style={{...TD,color:'#475569',fontWeight:700,maxWidth:140,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}} title={u.displayName}>{u.displayName}</td>
+                        <td style={TD}>
+                          <span style={{padding:'4px 10px',borderRadius:8,background:PLAN_COLORS[u.planId]+'1A',color:PLAN_COLORS[u.planId],fontSize:10,fontWeight:900,whiteSpace:'nowrap'}}>{PLAN_LABELS[u.planId]}</span>
+                        </td>
+                        <td style={{...TD,color:'#64748B',fontWeight:700,whiteSpace:'nowrap'}}>{u.createdAt||'—'}</td>
+                        <td style={{...TD,color:'#475569',fontWeight:700,whiteSpace:'nowrap'}} title={u.learnLang}>{langLabel(u.learnLang)}</td>
+                        <td style={{...TD,color:'#475569',fontWeight:700,whiteSpace:'nowrap'}} title={u.nativeLang}>{langLabel(u.nativeLang)}</td>
+                        <td style={{...TD_NUM,fontWeight:900,color:'#6366F1',whiteSpace:'nowrap'}}>{u.xp.toLocaleString()}</td>
+                        <td style={{...TD,whiteSpace:'nowrap'}}>
+                          <div style={{display:'flex',gap:6}}>
+                            <button onClick={()=>openGrant(u)} disabled={saving===u.uid}
+                              style={{...BTN_SM,background:'#EEF2FF',color:'#6366F1',opacity:saving===u.uid?0.5:1}}>
+                              ⭐ Grant
+                            </button>
+                            {u.planId!=='free'&&<>
+                              <button onClick={()=>openExtend(u)} disabled={saving===u.uid}
+                                style={{...BTN_SM,background:'#F0FDF4',color:'#059669',opacity:saving===u.uid?0.5:1}}>
+                                +Extend
+                              </button>
+                              <button onClick={()=>handleRevoke(u)} disabled={saving===u.uid} title="Revoke premium"
+                                style={{...BTN_SM,background:'#FFF1F2',color:'#E11D48',opacity:saving===u.uid?0.5:1}}>
+                                🔒
+                              </button>
+                            </>}
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
-              {filtered.length===0&&<div style={{padding:40,textAlign:'center',color:'#94A3B8',fontWeight:700}}>No users found</div>}
-              {filtered.map((u,i)=>(
-                <div key={u.uid} className="urow" style={{display:'grid',gridTemplateColumns:'1.5fr 1fr 110px 90px 60px 160px',padding:'12px 16px',borderBottom:i<filtered.length-1?'1px solid #F8FAFC':'none',alignItems:'center',background:'#fff',transition:'background .1s'}}>
-                  <div style={{fontSize:12,fontWeight:700,color:'#0F172A',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{u.email}</div>
-                  <div style={{fontSize:12,color:'#64748B',fontWeight:700,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{u.displayName}</div>
-                  <div><span style={{padding:'3px 9px',borderRadius:7,background:PLAN_COLORS[u.planId]+'18',color:PLAN_COLORS[u.planId],fontSize:10,fontWeight:900}}>{PLAN_LABELS[u.planId]}</span></div>
-                  <div style={{fontSize:11,color:u.expiry&&u.expiry<new Date().toISOString().slice(0,10)?'#E11D48':'#94A3B8',fontWeight:700}}>{u.expiry||'—'}</div>
-                  <div style={{fontSize:12,fontWeight:900,color:'#6366F1'}}>{u.xp.toLocaleString()}</div>
-                  <div style={{display:'flex',gap:5}}>
-                    <button onClick={()=>openGrant(u)} disabled={saving===u.uid}
-                      style={{padding:'5px 10px',borderRadius:7,border:'none',background:'#EEF2FF',color:'#6366F1',fontSize:10,fontWeight:900,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
-                      ⭐ Grant
-                    </button>
-                    {u.planId!=='free'&&<>
-                      <button onClick={()=>openExtend(u)} disabled={saving===u.uid}
-                        style={{padding:'5px 10px',borderRadius:7,border:'none',background:'#F0FDF4',color:'#059669',fontSize:10,fontWeight:900,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
-                        +Extend
-                      </button>
-                      <button onClick={()=>handleRevoke(u)} disabled={saving===u.uid}
-                        style={{padding:'5px 8px',borderRadius:7,border:'none',background:'#FFF1F2',color:'#E11D48',fontSize:10,fontWeight:900,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
-                        🔒
-                      </button>
-                    </>}
-                  </div>
-                </div>
-              ))}
             </div>
           </>
         )}
 
         {/* -- EMAIL TAB -- */}
         {tab==='email'&&(
-          <div style={{background:'#fff',borderRadius:16,border:'1px solid #F1F5F9',padding:'28px'}}>
-            <h2 style={{fontSize:16,fontWeight:900,color:'#0F172A',margin:'0 0 20px'}}>✉️ Send Email to Users</h2>
+          <div style={{...CARD,padding:'28px'}}>
+            <h2 style={SECTION_TITLE}>✉️ Send Email to Users</h2>
+            <p style={SECTION_SUB}>Compose and send an email via the admin mailer. Recipients are counted live below.</p>
 
             {/* Target */}
-            <div style={{marginBottom:18}}>
-              <div style={{fontSize:11,fontWeight:900,color:'#94A3B8',letterSpacing:1.5,textTransform:'uppercase',marginBottom:8}}>Send To</div>
+            <div style={{margin:'22px 0 18px'}}>
+              <div style={FIELD_LABEL}>Send To</div>
               <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
                 {([['single','Single User'],['all','All Users'],['premium','Premium Only'],['free','Free Only']] as [typeof emailTarget,string][]).map(([v,l])=>(
                   <button key={v} onClick={()=>setEmailTarget(v)}
-                    style={{padding:'8px 16px',borderRadius:10,border:`1.5px solid ${emailTarget===v?'#6366F1':'#E5E7EB'}`,background:emailTarget===v?'#EEF2FF':'#fff',color:emailTarget===v?'#6366F1':'#374151',fontSize:12,fontWeight:800,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
+                    style={{padding:'9px 18px',borderRadius:10,border:`1.5px solid ${emailTarget===v?'#6366F1':'#E5E7EB'}`,background:emailTarget===v?'#EEF2FF':'#fff',color:emailTarget===v?'#6366F1':'#374151',fontSize:12,fontWeight:800,cursor:'pointer',fontFamily:FONT}}>
                     {l} {v!=='single'&&`(${v==='all'?users.length:users.filter(u=>v==='premium'?u.planId!=='free':u.planId==='free').length})`}
                   </button>
                 ))}
@@ -344,46 +402,43 @@ export default function AdminPage() {
 
             {emailTarget==='single'&&(
               <div style={{marginBottom:16}}>
-                <div style={{fontSize:11,fontWeight:900,color:'#94A3B8',letterSpacing:1.5,textTransform:'uppercase',marginBottom:6}}>Email Address</div>
+                <div style={FIELD_LABEL}>Email Address</div>
                 <input value={emailTo} onChange={e=>setEmailTo(e.target.value)}
-                  placeholder="user@example.com"
-                  style={{width:'100%',padding:'10px 14px',borderRadius:10,border:'1.5px solid #E5E7EB',fontSize:14,fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",outline:'none',boxSizing:'border-box'}}
+                  placeholder="user@example.com" style={INPUT}
                 />
               </div>
             )}
 
             <div style={{marginBottom:16}}>
-              <div style={{fontSize:11,fontWeight:900,color:'#94A3B8',letterSpacing:1.5,textTransform:'uppercase',marginBottom:6}}>Subject</div>
+              <div style={FIELD_LABEL}>Subject</div>
               <input value={emailSubject} onChange={e=>setEmailSubject(e.target.value)}
-                placeholder="e.g. Special offer just for you 🎁"
-                style={{width:'100%',padding:'10px 14px',borderRadius:10,border:'1.5px solid #E5E7EB',fontSize:14,fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",outline:'none',boxSizing:'border-box'}}
+                placeholder="e.g. Special offer just for you 🎁" style={INPUT}
               />
             </div>
 
             <div style={{marginBottom:16}}>
-              <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:6}}>
-                <div style={{fontSize:11,fontWeight:900,color:'#94A3B8',letterSpacing:1.5,textTransform:'uppercase'}}>Message Body</div>
+              <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:8}}>
+                <div style={{...FIELD_LABEL,marginBottom:0}}>Message Body</div>
                 <button onClick={()=>setEmailPreview(!emailPreview)}
-                  style={{background:'none',border:'none',color:'#6366F1',fontSize:12,fontWeight:800,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
+                  style={{background:'none',border:'none',color:'#6366F1',fontSize:12,fontWeight:800,cursor:'pointer',fontFamily:FONT}}>
                   {emailPreview?'✏️ Edit':'👁 Preview'}
                 </button>
               </div>
               {emailPreview?(
-                <div style={{padding:'16px',borderRadius:10,border:'1.5px solid #E5E7EB',minHeight:160,fontSize:14,color:'#374151',lineHeight:1.7}}
+                <div style={{...INPUT,minHeight:160,lineHeight:1.7,color:'#374151'}}
                   dangerouslySetInnerHTML={{__html:emailBody.replace(/\n/g,'<br/>')}}/>
               ):(
                 <textarea value={emailBody} onChange={e=>setEmailBody(e.target.value)}
                   placeholder={`Hi there!\n\nWe wanted to share something special with you...\n\nBest,\nMunTalk Team`}
-                  rows={8}
-                  style={{width:'100%',padding:'12px 14px',borderRadius:10,border:'1.5px solid #E5E7EB',fontSize:14,fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",outline:'none',boxSizing:'border-box',lineHeight:1.6}}
+                  rows={8} style={{...INPUT,lineHeight:1.6}}
                 />
               )}
-              <div style={{fontSize:11,color:'#94A3B8',fontWeight:700,marginTop:4}}>Tip: line breaks become &lt;br&gt; in the email</div>
+              <div style={{fontSize:11,color:'#94A3B8',fontWeight:700,marginTop:6}}>Tip: line breaks become &lt;br&gt; in the email</div>
             </div>
 
             {/* Quick templates */}
-            <div style={{marginBottom:20}}>
-              <div style={{fontSize:11,fontWeight:900,color:'#94A3B8',letterSpacing:1.5,textTransform:'uppercase',marginBottom:8}}>Quick Templates</div>
+            <div style={{marginBottom:22}}>
+              <div style={FIELD_LABEL}>Quick Templates</div>
               <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
                 {[
                   {label:'🎁 Free → Premium Offer', subject:'Upgrade to Premium — Special Offer Inside',
@@ -394,7 +449,7 @@ export default function AdminPage() {
                    body:`Welcome to MunTalk Premium!\n\nYou now have access to:\n✅ All 6 levels (A1 → C2)\n✅ Unlimited AI tutor sessions\n✅ 18,000+ Word Bank (verbs, adjectives, adverbs, phrases)\n✅ League system & weekly rankings\n✅ Unlimited hearts\n\nJump back in and start learning!\n\nThe MunTalk Team`},
                 ].map(t=>(
                   <button key={t.label} onClick={()=>{setEmailSubject(t.subject);setEmailBody(t.body);}}
-                    style={{padding:'7px 14px',borderRadius:9,border:'1px solid #E5E7EB',background:'#F8FAFC',color:'#374151',fontSize:11,fontWeight:800,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
+                    style={{...BTN_GHOST,background:'#F8FAFC',fontSize:11,padding:'8px 14px'}}>
                     {t.label}
                   </button>
                 ))}
@@ -402,7 +457,7 @@ export default function AdminPage() {
             </div>
 
             <button onClick={handleSendEmail} disabled={emailSending}
-              style={{width:'100%',padding:'13px',borderRadius:12,border:'none',background:emailSending?'#C7D2FE':'linear-gradient(135deg,#6366F1,#8B5CF6)',color:'#fff',fontWeight:900,fontSize:14,cursor:emailSending?'default':'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
+              style={{width:'100%',padding:'14px',borderRadius:12,border:'none',background:emailSending?'#C7D2FE':'linear-gradient(135deg,#6366F1,#8B5CF6)',color:'#fff',fontWeight:900,fontSize:14,cursor:emailSending?'default':'pointer',fontFamily:FONT}}>
               {emailSending?'Sending...':'✉️ Send Email'}
             </button>
           </div>
@@ -412,50 +467,64 @@ export default function AdminPage() {
         {tab==='logs'&&(
           <div>
             <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:14}}>
-              <div style={{fontSize:14,fontWeight:900,color:'#0F172A'}}>📋 Activity Logs</div>
+              <h2 style={{...SECTION_TITLE,fontSize:18}}>📋 Activity Logs</h2>
               <button onClick={fetchLogs}
-                style={{padding:'7px 16px',borderRadius:9,border:'1px solid #E5E7EB',background:'#fff',color:'#6366F1',fontSize:12,fontWeight:800,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
+                style={{...BTN_GHOST,color:'#6366F1',padding:'8px 18px',fontSize:12}}>
                 🔄 Refresh
               </button>
             </div>
-            <div style={{background:'#fff',borderRadius:16,border:'1px solid #F1F5F9',overflow:'hidden'}}>
-              <div style={{display:'grid',gridTemplateColumns:'100px 1fr 1fr 1fr 140px',padding:'10px 16px',background:'#F8FAFC',borderBottom:'1px solid #F1F5F9',fontSize:10,fontWeight:900,color:'#94A3B8',letterSpacing:1.2,textTransform:'uppercase'}}>
-                <div>Action</div><div>Target</div><div>Detail</div><div>Admin</div><div>Time</div>
+            <div style={{...CARD,overflow:'hidden'}}>
+              <div style={{overflowX:'auto',maxHeight:'70vh',overflowY:'auto'}}>
+                <table className="admin-table" style={{minWidth:820}}>
+                  <thead>
+                    <tr>
+                      <th style={{...TH,width:110}}>Action</th>
+                      <th style={TH}>Target</th>
+                      <th style={TH}>Detail</th>
+                      <th style={TH}>Admin</th>
+                      <th style={{...TH,width:150}}>Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {logs.length===0&&(
+                      <tr><td colSpan={5} style={{padding:48,textAlign:'center',color:'#94A3B8',fontWeight:700,fontSize:13}}>No logs yet</td></tr>
+                    )}
+                    {logs.map((l,i)=>(
+                      <tr key={l.id} className="urow" style={{background:i%2?'#FAFBFD':'#fff'}}>
+                        <td style={TD}>
+                          <span style={{padding:'4px 10px',borderRadius:8,background:(actionColors[l.action]||'#94A3B8')+'1A',color:actionColors[l.action]||'#94A3B8',fontSize:10,fontWeight:900,textTransform:'capitalize',whiteSpace:'nowrap'}}>
+                            {l.action}
+                          </span>
+                        </td>
+                        <td style={{...TD,color:'#0F172A',fontWeight:700,maxWidth:220,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}} title={l.targetEmail}>{l.targetEmail}</td>
+                        <td style={{...TD,color:'#475569',fontWeight:600,maxWidth:280,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}} title={l.detail}>{l.detail}</td>
+                        <td style={{...TD,color:'#94A3B8',fontWeight:700,maxWidth:180,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}} title={l.adminEmail}>{l.adminEmail}</td>
+                        <td style={{...TD,color:'#64748B',fontWeight:700,whiteSpace:'nowrap'}}>{l.ts}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
-              {logs.length===0&&<div style={{padding:40,textAlign:'center',color:'#94A3B8',fontWeight:700}}>No logs yet</div>}
-              {logs.map((l,i)=>(
-                <div key={l.id} style={{display:'grid',gridTemplateColumns:'100px 1fr 1fr 1fr 140px',padding:'12px 16px',borderBottom:i<logs.length-1?'1px solid #F8FAFC':'none',alignItems:'center',background:'#fff'}}>
-                  <div>
-                    <span style={{padding:'3px 9px',borderRadius:7,background:(actionColors[l.action]||'#94A3B8')+'18',color:actionColors[l.action]||'#94A3B8',fontSize:10,fontWeight:900,textTransform:'capitalize'}}>
-                      {l.action}
-                    </span>
-                  </div>
-                  <div style={{fontSize:12,color:'#0F172A',fontWeight:700,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{l.targetEmail}</div>
-                  <div style={{fontSize:11,color:'#64748B',fontWeight:700,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{l.detail}</div>
-                  <div style={{fontSize:11,color:'#94A3B8',fontWeight:700,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{l.adminEmail}</div>
-                  <div style={{fontSize:11,color:'#94A3B8',fontWeight:700}}>{l.ts}</div>
-                </div>
-              ))}
             </div>
           </div>
         )}
 
+        {/* -- SETTINGS TAB -- */}
         {tab==='settings'&&(
           <div>
-            <div style={{fontSize:18,fontWeight:900,color:'#0F172A',marginBottom:8}}>System Settings</div>
-            <div style={{fontSize:13,color:'#64748B',marginBottom:24,fontWeight:600}}>Configure how lesson content is generated for learners.</div>
+            <h2 style={{...SECTION_TITLE,fontSize:18}}>System Settings</h2>
+            <p style={{...SECTION_SUB,marginBottom:24}}>Configure how lesson content is generated for learners.</p>
 
-            <div style={{background:'#fff',borderRadius:16,border:'1px solid #E9ECEF',padding:24,marginBottom:20}}>
-              <div style={{fontSize:15,fontWeight:800,color:'#0F172A',marginBottom:4}}>Lesson Content Source</div>
-              <div style={{fontSize:13,color:'#64748B',marginBottom:20,lineHeight:1.7,fontWeight:600}}>
+            <div style={{...CARD,padding:26,marginBottom:20}}>
+              <div style={{fontSize:15,fontWeight:800,color:'#0F172A',marginBottom:6}}>Lesson Content Source</div>
+              <div style={{fontSize:13,color:'#64748B',marginBottom:22,lineHeight:1.7,fontWeight:600}}>
                 <strong>API Mode:</strong> Gemini AI generates content in real-time. Falls back to JSON if unavailable.<br/>
                 <strong>JSON Mode:</strong> Uses pre-generated JSON files first. Falls back to Gemini if file not found.
               </div>
               <div style={{display:'flex',gap:12,flexWrap:'wrap'}}>
                 <button
                   onClick={()=>{ setCurriculumMode('api'); localStorage.setItem('mt_curriculum_mode','api'); }}
-                  style={{padding:'13px 28px',borderRadius:12,border:'none',cursor:'pointer',
-                    fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",fontWeight:900,fontSize:14,
+                  style={{padding:'13px 28px',borderRadius:12,border:'none',cursor:'pointer',fontFamily:FONT,fontWeight:900,fontSize:14,
                     background:curriculumMode==='api'?'linear-gradient(135deg,#6366F1,#8B5CF6)':'#F1F5F9',
                     color:curriculumMode==='api'?'#fff':'#64748B',
                     boxShadow:curriculumMode==='api'?'0 4px 14px rgba(99,102,241,0.3)':'none',
@@ -464,8 +533,7 @@ export default function AdminPage() {
                 </button>
                 <button
                   onClick={()=>{ setCurriculumMode('json'); localStorage.setItem('mt_curriculum_mode','json'); }}
-                  style={{padding:'13px 28px',borderRadius:12,border:'none',cursor:'pointer',
-                    fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",fontWeight:900,fontSize:14,
+                  style={{padding:'13px 28px',borderRadius:12,border:'none',cursor:'pointer',fontFamily:FONT,fontWeight:900,fontSize:14,
                     background:curriculumMode==='json'?'linear-gradient(135deg,#10B981,#059669)':'#F1F5F9',
                     color:curriculumMode==='json'?'#fff':'#64748B',
                     boxShadow:curriculumMode==='json'?'0 4px 14px rgba(16,185,129,0.3)':'none',
@@ -474,7 +542,7 @@ export default function AdminPage() {
                 </button>
               </div>
 
-              <div style={{marginTop:16,padding:'12px 16px',borderRadius:10,
+              <div style={{marginTop:18,padding:'14px 18px',borderRadius:12,
                 background:curriculumMode==='api'?'#EEF2FF':'#ECFDF5',
                 border:'1.5px solid '+(curriculumMode==='api'?'#C7D2FE':'#A7F3D0')}}>
                 <div style={{fontSize:13,fontWeight:800,color:curriculumMode==='api'?'#6366F1':'#10B981',marginBottom:4}}>
@@ -488,8 +556,8 @@ export default function AdminPage() {
               </div>
             </div>
 
-            <div style={{background:'#FFF7ED',borderRadius:12,border:'1px solid #FED7AA',padding:16}}>
-              <div style={{fontSize:12,fontWeight:800,color:'#EA580C',marginBottom:8}}>When to use each mode</div>
+            <div style={{background:'#FFF7ED',borderRadius:14,border:'1px solid #FED7AA',padding:18}}>
+              <div style={{fontSize:12,fontWeight:800,color:'#EA580C',marginBottom:10}}>When to use each mode</div>
               <div style={{fontSize:12,color:'#78350F',lineHeight:1.9,fontWeight:600}}>
                 Use <strong>API Mode</strong> when Gemini is working well and you want real-time personalised content<br/>
                 Use <strong>JSON Mode</strong> when Gemini is slow, rate-limited, or pre-generated files are ready<br/>
@@ -508,37 +576,41 @@ export default function AdminPage() {
             <div style={{fontSize:16,fontWeight:900,color:'#0F172A',marginBottom:4}}>
               {modalMode==='grant'?'⭐ Grant Premium':'⏳ Extend Subscription'}
             </div>
-            <div style={{fontSize:12,color:'#64748B',fontWeight:700,marginBottom:22}}>{modal.email}</div>
+            <div style={{fontSize:12,color:'#64748B',fontWeight:700,marginBottom:8}}>{modal.email}</div>
+            <div style={{fontSize:12,color:'#64748B',fontWeight:700,marginBottom:8}}>
+              Learning: <strong style={{color:'#374151'}}>{langLabel(modal.learnLang)}</strong>
+              {' · '}Native: <strong style={{color:'#374151'}}>{langLabel(modal.nativeLang)}</strong>
+            </div>
             {modal.expiry&&<div style={{fontSize:12,color:'#94A3B8',fontWeight:700,marginBottom:16}}>
               Current expiry: <strong style={{color:'#374151'}}>{modal.expiry}</strong>
             </div>}
 
-            <div style={{fontSize:10,fontWeight:900,color:'#94A3B8',letterSpacing:1.5,textTransform:'uppercase',marginBottom:8}}>Plan</div>
+            <div style={{...FIELD_LABEL,marginBottom:8}}>Plan</div>
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:8,marginBottom:18}}>
               {(['monthly','biannual','annual'] as PlanId[]).map(p=>(
                 <button key={p} onClick={()=>{setSelPlan(p); setSelExpiry(modalMode==='extend'?extendExpiry(modal.expiry,p):defaultExpiry(p));}}
-                  style={{padding:'9px 6px',borderRadius:10,border:`2px solid ${selPlan===p?PLAN_COLORS[p]:'#E5E7EB'}`,background:selPlan===p?PLAN_COLORS[p]+'18':'#fff',color:selPlan===p?PLAN_COLORS[p]:'#374151',fontSize:11,fontWeight:900,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
+                  style={{padding:'9px 6px',borderRadius:10,border:`2px solid ${selPlan===p?PLAN_COLORS[p]:'#E5E7EB'}`,background:selPlan===p?PLAN_COLORS[p]+'1A':'#fff',color:selPlan===p?PLAN_COLORS[p]:'#374151',fontSize:11,fontWeight:900,cursor:'pointer',fontFamily:FONT}}>
                   {PLAN_LABELS[p]}
                 </button>
               ))}
             </div>
 
-            <div style={{fontSize:10,fontWeight:900,color:'#94A3B8',letterSpacing:1.5,textTransform:'uppercase',marginBottom:6}}>
+            <div style={{...FIELD_LABEL,marginBottom:6}}>
               {modalMode==='extend'?'New Expiry (auto-calculated)':'Expiry Date'}
             </div>
             <input type="date" value={selExpiry} onChange={e=>setSelExpiry(e.target.value)}
               readOnly={modalMode==='extend'}
               title={modalMode==='extend'?'Auto-calculated from current expiry':undefined}
-              style={{width:'100%',padding:'10px 14px',borderRadius:10,border:'1.5px solid #E5E7EB',fontSize:14,fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",outline:'none',marginBottom:22,boxSizing:'border-box',background:modalMode==='extend'?'#F8FAFC':'#fff',color:modalMode==='extend'?'#94A3B8':'#0F172A'}}
+              style={{...INPUT,marginBottom:22,background:modalMode==='extend'?'#F8FAFC':'#fff',color:modalMode==='extend'?'#94A3B8':'#0F172A'}}
             />
 
             <div style={{display:'flex',gap:10}}>
               <button onClick={()=>setModal(null)}
-                style={{flex:1,padding:'11px',borderRadius:11,border:'1.5px solid #E5E7EB',background:'#fff',color:'#374151',fontWeight:700,fontSize:13,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
+                style={{flex:1,padding:'11px',borderRadius:11,border:'1.5px solid #E5E7EB',background:'#fff',color:'#374151',fontWeight:700,fontSize:13,cursor:'pointer',fontFamily:FONT}}>
                 Cancel
               </button>
               <button onClick={handleSavePlan} disabled={saving===modal.uid}
-                style={{flex:2,padding:'11px',borderRadius:11,border:'none',background:saving===modal.uid?'#C7D2FE':'linear-gradient(135deg,#6366F1,#8B5CF6)',color:'#fff',fontWeight:900,fontSize:13,cursor:saving===modal.uid?'default':'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
+                style={{flex:2,padding:'11px',borderRadius:11,border:'none',background:saving===modal.uid?'#C7D2FE':'linear-gradient(135deg,#6366F1,#8B5CF6)',color:'#fff',fontWeight:900,fontSize:13,cursor:saving===modal.uid?'default':'pointer',fontFamily:FONT}}>
                 {saving===modal.uid?'Saving...':`${modalMode==='extend'?'Extend':'Grant'} ${PLAN_LABELS[selPlan]}`}
               </button>
             </div>
