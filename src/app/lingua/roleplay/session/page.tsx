@@ -487,8 +487,14 @@ Reply as ${npc.name} in ${targetLang}:`;
   // ── RESULT ────────────────────────────────────────────────────────────────
   if (phase==='result') return (
     <div style={{minHeight:'100vh',background:'#F8FAFC',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
-      display:'flex',alignItems:'center',justifyContent:'center',padding:24}}>
+      display:'flex',alignItems:'center',justifyContent:'center',padding:24,position:'relative'}}>
       <style dangerouslySetInnerHTML={{__html:`@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');`}}/>
+      <button onClick={()=>router.push('/lingua/roleplay')} aria-label="Back to roleplay"
+        style={{position:'absolute',top:16,left:16,width:42,height:42,borderRadius:14,background:'#fff',
+          border:'1px solid #E2E8F0',fontSize:20,fontWeight:800,cursor:'pointer',color:'#0F172A',
+          display:'flex',alignItems:'center',justifyContent:'center',boxShadow:'0 2px 8px rgba(0,0,0,0.06)'}}>
+        ←
+      </button>
       <div style={{maxWidth:520,width:'100%'}}>
         {!result ? (
           <div style={{textAlign:'center',color:'#94A3B8'}}>
