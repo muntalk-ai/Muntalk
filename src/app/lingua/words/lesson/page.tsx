@@ -9,6 +9,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { POS_META, PartOfSpeech, getSetKey } from '@/data/wordSets';
 import { getTutorById } from '@/data/tutors';
 import { hasTts, getLangLabel } from '@/data/languages';
+import { speakWithDeviceTts, deviceTtsAvailable } from '@/lib/deviceTts';
 
 interface WordData {
   word: string;
@@ -50,7 +51,7 @@ function WordLessonContent() {
     setTutorId(localStorage.getItem('mt_tutor_id') || 't01');
   }, []);
   const tutor = getTutorById(tutorId);
-  const ttsAvailable = hasTts(lang);
+  const ttsAvailable = hasTts(lang) || deviceTtsAvailable();
 
   // -- State ------------------------------------------------------------------
   const [words, setWords]               = useState<string[]>([]);
@@ -108,6 +109,11 @@ function WordLessonContent() {
   const speakText = async (text: string, onEnd?: () => void) => {
     stopAudio();
     setIsSpeaking(true);
+    // 서버 음성 미지원 언어(예: 버마어)는 기기 내장 음성으로 폴백
+    if (!hasTts(lang)) {
+      await speakWithDeviceTts(text, lang, () => { setIsSpeaking(false); onEnd?.(); });
+      return;
+    }
     try {
       const res = await apiFetch('/api/tts', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },

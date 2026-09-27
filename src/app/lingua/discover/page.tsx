@@ -7,6 +7,8 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { getUserProfile } from '@/lib/userProfile';
 import { getTutorById } from '@/data/tutors';
+import { hasTts } from '@/data/languages';
+import { speakWithDeviceTts } from '@/lib/deviceTts';
 import { getSubscription, isAdminEmail } from '@/lib/subscription';
 import { truncateHistory } from '@/lib/history';
 import PaywallModal from '@/components/PaywallModal';
@@ -204,6 +206,11 @@ function DiscoverContent() {
     try {
       const t = getTutorById(tutorId);
       const spkLang = chatMode === 'native' ? subLang : langId;
+      // 서버 음성 미지원 언어(예: 버마어)는 기기 내장 음성으로 폴백
+      if (!hasTts(spkLang)) {
+        await speakWithDeviceTts(clean, spkLang, () => setIsSpeaking(false));
+        return;
+      }
       const res = await apiFetch('/api/tts', { method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ text:clean, lang:spkLang, gender:t.gender, level:'b1' }) });
       const data = await res.json();

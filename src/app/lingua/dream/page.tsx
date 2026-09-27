@@ -8,6 +8,8 @@ import { Suspense } from 'react';
 import { useAuth } from '@/context/AuthContext';
 import { getUserProfile } from '@/lib/userProfile';
 import { getTutorById } from '@/data/tutors';
+import { hasTts } from '@/data/languages';
+import { speakWithDeviceTts } from '@/lib/deviceTts';
 import { getSubscription, isAdminEmail } from '@/lib/subscription';
 import PaywallModal from '@/components/PaywallModal';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
@@ -152,6 +154,11 @@ function DreamStudioContent() {
     setIsSpeaking(true);
     try {
       const spkLang = langMode === 'native' ? subLang : langId;
+      // 서버 음성 미지원 언어(예: 버마어)는 기기 내장 음성으로 폴백
+      if (!hasTts(spkLang)) {
+        await speakWithDeviceTts(clean, spkLang, () => setIsSpeaking(false));
+        return;
+      }
       const res = await apiFetch('/api/tts', { method:'POST',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ text:clean, lang:spkLang, gender:tutor.gender, level:'b1' }) });

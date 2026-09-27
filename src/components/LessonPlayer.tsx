@@ -7,6 +7,7 @@ import { useAuth } from '@/context/AuthContext';
 import { CURRICULUM } from '@/data/curriculum';
 import { getTutorById, getTutorForLang } from '@/data/tutors';
 import { LEARN_LANGUAGES, promptLangName } from '@/data/languages';
+import { speakWithDeviceTts, deviceTtsAvailable } from '@/lib/deviceTts';
 import TrialExpiredModal from '@/components/TrialExpiredModal';
 import { getTrialData, initTrial, isTrialExpired, isPremium, TRIAL_MAX_UNITS } from '@/lib/trialPolicy';
 import { isAdminEmail } from '@/lib/subscription';
@@ -149,13 +150,11 @@ export default function LessonPlayer({
   const [translatingIdx,  setTranslatingIdx]  = useState<number|null>(null);
   const [xpEarned, setXpEarned] = useState(0);
   const [audioToast, setAudioToast] = useState(false); // PR-I #5: TTS 실패 피드백
-  const [audioToastDetail, setAudioToastDetail] = useState(''); // DIAG (temporary): Google error detail
   const audioToastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const showAudioToast = useCallback((detail?: string) => {
-    setAudioToastDetail(detail || '');
+  const showAudioToast = useCallback(() => {
     setAudioToast(true);
     if (audioToastTimer.current) clearTimeout(audioToastTimer.current);
-    audioToastTimer.current = setTimeout(() => { setAudioToast(false); setAudioToastDetail(''); }, 4000);
+    audioToastTimer.current = setTimeout(() => setAudioToast(false), 2500);
   }, []);
   const [showXPPop, setShowXPPop] = useState(false);
   const [xpPopVal, setXpPopVal] = useState(0);
@@ -504,8 +503,13 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
   const speakText = async (text: string, onEnd?: () => void): Promise<void> => {
     const cleanText = stripForTts(text);
     if (!cleanText) { onEnd?.(); return; }
-    // TTS 미지원 언어면 바로 콜백만 실행
-    if (!hasTts(langId)) { onEnd?.(); return; }
+    // 서버 TTS 미지원 언어(예: 버마어 — Google에 음성 없음)는 기기 내장 음성으로 폴백
+    if (!hasTts(langId)) {
+      stopAll();
+      setIsSpeaking(true);
+      await speakWithDeviceTts(cleanText, langId, () => { setIsSpeaking(false); onEnd?.(); });
+      return;
+    }
     stopAll();
     setIsSpeaking(true);
     try {
@@ -514,14 +518,9 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: cleanText, lang: langId, gender: tutor?.gender || 'female', level: levelId }),
       });
-      if (!res.ok) {
-        setIsSpeaking(false);
-        let d = '';
-        try { d = (await res.clone().json())?.detail || ''; } catch {}
-        showAudioToast(d); onEnd?.(); return;
-      }
+      if (!res.ok) { setIsSpeaking(false); showAudioToast(); onEnd?.(); return; }
       const data = await res.json();
-      if (!data.audioContent) { setIsSpeaking(false); showAudioToast(data.detail); onEnd?.(); return; }
+      if (!data.audioContent) { setIsSpeaking(false); showAudioToast(); onEnd?.(); return; }
       const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
       audioRef.current = audio;
       audio.onended = () => { setIsSpeaking(false); audioRef.current = null; onEnd?.(); };
@@ -641,6 +640,8 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
     if (!vocabItem) return;
     await speakText(vocabItem.example);
   };
+  // 서버 TTS 또는 기기 내장 음성 중 하나라도 있으면 발음 듣기 가능
+  const canHear = hasTts(langId) || deviceTtsAvailable();
 
   // Save current vocab word to the SRS Review deck
   const handleSaveToReview = async () => {
@@ -940,9 +941,9 @@ RULES:
       {audioToast && (
         <div style={{ position:'fixed', left:'50%', bottom:88, transform:'translateX(-50%)',
           background:'rgba(15,23,42,0.92)', color:'#fff', fontSize:13, fontWeight:800,
-          padding:'10px 18px', borderRadius:16, zIndex:9500, maxWidth:'86vw', textAlign:'center',
+          padding:'10px 18px', borderRadius:99, zIndex:9500, whiteSpace:'nowrap',
           boxShadow:'0 8px 24px rgba(0,0,0,0.25)' }}>
-          🔇 Audio unavailable{audioToastDetail ? `: ${audioToastDetail}` : ''}
+          🔇 Audio unavailable
         </div>
       )}
 
@@ -1133,11 +1134,11 @@ RULES:
                 </div>
               )}
               <button
-                style={{ ...styles.speakBtn, background: isSpeaking ? '#9CA3AF' : hasTts(langId) ? level.accent : '#E5E7EB', color: hasTts(langId) ? '#fff' : '#92400E', cursor: hasTts(langId) ? 'pointer' : 'default' }}
-                onClick={hasTts(langId) ? handleSpeakVocab : undefined}
-                disabled={isSpeaking || !hasTts(langId)}
+                style={{ ...styles.speakBtn, background: isSpeaking ? '#9CA3AF' : canHear ? level.accent : '#E5E7EB', color: canHear ? '#fff' : '#92400E', cursor: canHear ? 'pointer' : 'default' }}
+                onClick={canHear ? handleSpeakVocab : undefined}
+                disabled={isSpeaking || !canHear}
               >
-                {isSpeaking ? '🔊 Playing...' : hasTts(langId) ? '🔊 Hear example' : '🔇 Voice unavailable'}
+                {isSpeaking ? '🔊 Playing...' : canHear ? '🔊 Hear example' : '🔇 Voice unavailable'}
               </button>
               {hasStt(langId) && (
                 <button

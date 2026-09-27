@@ -15,6 +15,7 @@ import {
 } from '@/data/roleplay';
 import { getUserProfile, recordActivity } from '@/lib/userProfile';
 import { truncateHistory } from '@/lib/history';
+import { speakWithDeviceTts } from '@/lib/deviceTts';
 import { purposePromptBlock, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
 import { awardXp } from '@/lib/xpClient';
@@ -158,7 +159,14 @@ function SessionContent() {
   // TTS
   const speak = useCallback(async (text: string, gender: 'male'|'female', npcId: string) => {
     const clean = stripEmoji(text);
-    if (!hasTts(langId) || !clean) return;
+    if (!clean) return;
+    if (!hasTts(langId)) {
+      // 서버 음성 미지원 언어(예: 버마어)는 기기 내장 음성으로 폴백
+      if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; }
+      setSpeakingId(npcId); setIsSpeaking(true);
+      await speakWithDeviceTts(clean, langId, () => { setIsSpeaking(false); setSpeakingId(null); });
+      return;
+    }
     if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; }
     setSpeakingId(npcId); setIsSpeaking(true);
     return new Promise<void>(resolve => {
