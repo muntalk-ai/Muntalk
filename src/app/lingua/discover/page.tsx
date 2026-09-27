@@ -216,7 +216,7 @@ function DiscoverContent() {
         body: JSON.stringify({ text:clean, lang:spkLang, gender:t.gender, level:'b1' }) });
       const data = await res.json();
       if (!data.audioContent) { setIsSpeaking(false); return; }
-      const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
+      const audio = new Audio(`data:${data.mimeType || 'audio/mp3'};base64,${data.audioContent}`);
       audioRef.current = audio;
       audio.onended = () => { setIsSpeaking(false); audioRef.current = null; };
       audio.onerror = () => { setIsSpeaking(false); audioRef.current = null; };

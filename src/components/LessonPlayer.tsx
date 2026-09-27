@@ -531,7 +531,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
       if (!res.ok) { setIsSpeaking(false); showAudioToast(); onEnd?.(); return; }
       const data = await res.json();
       if (!data.audioContent) { setIsSpeaking(false); showAudioToast(); onEnd?.(); return; }
-      const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
+      const audio = new Audio(`data:${data.mimeType || 'audio/mp3'};base64,${data.audioContent}`);
       audioRef.current = audio;
       audio.onended = () => { setIsSpeaking(false); audioRef.current = null; onEnd?.(); };
       audio.onerror = () => { setIsSpeaking(false); audioRef.current = null; showAudioToast(); onEnd?.(); };
