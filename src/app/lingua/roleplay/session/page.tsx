@@ -475,7 +475,7 @@ Reply as ${npc.name} in ${targetLang}:`;
       <div style={{textAlign:'center'}}>
         <div style={{fontSize:48,marginBottom:12}}>😕</div>
         <div style={{fontWeight:700,marginBottom:16,color:'#0F172A'}}>Scenario not found</div>
-        <button onClick={()=>router.push('/lingua/roleplay')}
+        <button onClick={()=>router.replace('/lingua/roleplay')}
           style={{padding:'12px 24px',borderRadius:12,border:'none',background:'#6366F1',
             color:'#fff',fontWeight:700,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
           Back to Roleplay
@@ -489,7 +489,7 @@ Reply as ${npc.name} in ${targetLang}:`;
     <div style={{minHeight:'100vh',background:'#F8FAFC',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
       display:'flex',alignItems:'center',justifyContent:'center',padding:24,position:'relative'}}>
       <style dangerouslySetInnerHTML={{__html:`@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');`}}/>
-      <button onClick={()=>router.push('/lingua/roleplay')} aria-label="Back to roleplay"
+      <button onClick={()=>router.replace('/lingua/roleplay')} aria-label="Back to roleplay"
         style={{position:'absolute',top:16,left:16,width:42,height:42,borderRadius:14,background:'#fff',
           border:'1px solid #E2E8F0',fontSize:20,fontWeight:800,cursor:'pointer',color:'#0F172A',
           display:'flex',alignItems:'center',justifyContent:'center',boxShadow:'0 2px 8px rgba(0,0,0,0.06)'}}>
@@ -558,7 +558,7 @@ Reply as ${npc.name} in ${targetLang}:`;
                   color:'#475569',fontWeight:700,fontSize:14,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
                 Replay
               </button>
-              <button onClick={()=>router.push('/lingua/roleplay')}
+              <button onClick={()=>router.replace('/lingua/roleplay')}
                 style={{padding:'13px',borderRadius:13,border:'none',
                   background:`linear-gradient(135deg,${accentColor},${accentColor}cc)`,
                   color:'#fff',fontWeight:800,fontSize:14,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
