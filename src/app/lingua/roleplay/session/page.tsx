@@ -62,6 +62,20 @@ function SessionContent() {
   const targetLang = promptLangName(langId);
   const nativeLang = promptLangName(subLang);
   const showNative = subLang !== 'en-US' && subLang !== 'en-GB';
+  // "Analysing..." loading text in the user's native language
+  const ANALYSING_NATIVE: Record<string,string> = {
+    ko:'대화 분석 중...', ja:'会話を分析中…', zh:'正在分析你的表现…',
+    es:'Analizando tu desempeño…', fr:'Analyse de ta performance…',
+    th:'กำลังวิเคราะห์บทสนทนา…', de:'Deine Leistung wird analysiert…',
+    pt:'Analisando seu desempenho…', ru:'Анализируем твой результат…',
+    vi:'Đang phân tích cuộc hội thoại…', id:'Menganalisis performamu…',
+    it:"Analisi della tua performance…", nl:'Je prestatie wordt geanalyseerd…',
+    pl:'Analizujemy Twoje wyniki…', tr:'Performansın analiz ediliyor…',
+    ar:'جارٍ تحليل أدائك…', hi:'आपके प्रदर्शन का विश्लेषण हो रहा है…',
+  };
+  const analysingText = showNative
+    ? (ANALYSING_NATIVE[subLang.split('-')[0]] || 'Analysing your performance...')
+    : 'Analysing your performance...';
 
   const everyday = EVERYDAY_SCENARIOS.find(s => s.id === scenarioId);
   const world    = WORLD_SCENARIOS.find(s => s.id === scenarioId);
@@ -479,7 +493,7 @@ Reply as ${npc.name} in ${targetLang}:`;
         {!result ? (
           <div style={{textAlign:'center',color:'#94A3B8'}}>
             <div style={{fontSize:40,marginBottom:12}}>🤖</div>
-            <div style={{fontWeight:700}}>Analysing your performance...</div>
+            <div style={{fontWeight:700}}>{analysingText}</div>
           </div>
         ) : (
           <>
