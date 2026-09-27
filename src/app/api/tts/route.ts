@@ -146,12 +146,11 @@ export async function POST(req: NextRequest) {
       try {
         const isFemale = !gender || gender === 'female' || gender === 'FEMALE';
         const voiceName = isFemale ? 'Kore' : 'Charon';
-        // Slow down for beginners: explicit level (a1/a2) or a slow speed
-        // request (e.g. starter passes speed 0.78). Gemini TTS has no
-        // speaking-rate param, so this is a prompt instruction instead.
-        const slow = level === 'a1' || level === 'a2' ||
-          (typeof speed === 'number' && speed < 0.9) ? ', slowly and clearly' : '';
-        const ttsText = `Read aloud in Burmese${slow}: ${text.trim()}`;
+        // Send the raw text only. Any instruction prefix (e.g. "Read aloud
+        // in Burmese, slowly and clearly:") gets vocalized by the model —
+        // the user hears it spoken before every word. Gemini auto-detects
+        // the language from the script; no prefix needed.
+        const ttsText = text.trim();
         const gres = await fetchWithTimeout(
           `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash-tts:generateContent?key=${gemKey}`,
           { method: 'POST', headers: { 'Content-Type': 'application/json' },
