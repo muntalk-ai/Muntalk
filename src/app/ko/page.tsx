@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'MunTalk — AI 영어 회화 | 무료 스피킹 연습',
   description:
     'AI 튜터와 매일 영어 회화. 150개 이상의 실전 상황극, 발음 교정, 스피킹 레벨 테스트 무료. 카드 등록 없이 시작하세요.',
+  alternates: { canonical: '/ko' },
 };
 
 const FONT = "'Nunito','Noto Sans KR',-apple-system,sans-serif";
