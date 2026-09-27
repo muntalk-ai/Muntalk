@@ -156,8 +156,12 @@ export async function POST(req: NextRequest) {
     if (!res.ok) {
       const err = await res.text();
       console.error(`[tts] Google TTS error lang=${lang} voice=${voiceName}:`, err);
+      // DIAG (temporary): surface Google's error message so the client toast can show it
+      let detail = '';
+      try { detail = String(JSON.parse(err)?.error?.message ?? err).slice(0, 140); }
+      catch { detail = err.slice(0, 140); }
       // Return empty instead of error so UI doesn't break
-      return NextResponse.json({ audioContent: null, error: 'TTS failed' });
+      return NextResponse.json({ audioContent: null, error: 'TTS failed', detail });
     }
 
     const data = await res.json();

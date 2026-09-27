@@ -149,11 +149,13 @@ export default function LessonPlayer({
   const [translatingIdx,  setTranslatingIdx]  = useState<number|null>(null);
   const [xpEarned, setXpEarned] = useState(0);
   const [audioToast, setAudioToast] = useState(false); // PR-I #5: TTS 실패 피드백
+  const [audioToastDetail, setAudioToastDetail] = useState(''); // DIAG (temporary): Google error detail
   const audioToastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const showAudioToast = useCallback(() => {
+  const showAudioToast = useCallback((detail?: string) => {
+    setAudioToastDetail(detail || '');
     setAudioToast(true);
     if (audioToastTimer.current) clearTimeout(audioToastTimer.current);
-    audioToastTimer.current = setTimeout(() => setAudioToast(false), 2500);
+    audioToastTimer.current = setTimeout(() => { setAudioToast(false); setAudioToastDetail(''); }, 4000);
   }, []);
   const [showXPPop, setShowXPPop] = useState(false);
   const [xpPopVal, setXpPopVal] = useState(0);
@@ -512,9 +514,14 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: cleanText, lang: langId, gender: tutor?.gender || 'female', level: levelId }),
       });
-      if (!res.ok) { setIsSpeaking(false); showAudioToast(); onEnd?.(); return; }
+      if (!res.ok) {
+        setIsSpeaking(false);
+        let d = '';
+        try { d = (await res.clone().json())?.detail || ''; } catch {}
+        showAudioToast(d); onEnd?.(); return;
+      }
       const data = await res.json();
-      if (!data.audioContent) { setIsSpeaking(false); showAudioToast(); onEnd?.(); return; }
+      if (!data.audioContent) { setIsSpeaking(false); showAudioToast(data.detail); onEnd?.(); return; }
       const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
       audioRef.current = audio;
       audio.onended = () => { setIsSpeaking(false); audioRef.current = null; onEnd?.(); };
@@ -933,9 +940,9 @@ RULES:
       {audioToast && (
         <div style={{ position:'fixed', left:'50%', bottom:88, transform:'translateX(-50%)',
           background:'rgba(15,23,42,0.92)', color:'#fff', fontSize:13, fontWeight:800,
-          padding:'10px 18px', borderRadius:99, zIndex:9500, whiteSpace:'nowrap',
+          padding:'10px 18px', borderRadius:16, zIndex:9500, maxWidth:'86vw', textAlign:'center',
           boxShadow:'0 8px 24px rgba(0,0,0,0.25)' }}>
-          🔇 Audio unavailable
+          🔇 Audio unavailable{audioToastDetail ? `: ${audioToastDetail}` : ''}
         </div>
       )}
 
