@@ -202,6 +202,7 @@ function StarterContent() {
   }, [user, refreshProfile]);
 
   const audioRef   = useRef<HTMLAudioElement|null>(null);
+  const speakSeq   = useRef(0); // latest speak() call id — stale fetches never play (no overlap)
   const chatEndRef = useRef<HTMLDivElement>(null);
   const recRef     = useRef<any>(null);
   const [isListening, setIsListening] = useState(false);
@@ -261,7 +262,11 @@ function StarterContent() {
 
   // ── TTS ────────────────────────────────────────────────────────────────────
   const speak = useCallback(async (text: string) => {
-    audioRef.current?.pause();
+    const mySeq = ++speakSeq.current;
+    // Stop any in-flight/playing audio first so rapid taps never overlap.
+    const prev = audioRef.current;
+    if (prev) { try { prev.pause(); prev.currentTime = 0; } catch { /* noop */ } }
+    audioRef.current = null;
     setIsSpeaking(false);
     // 서버 음성 미지원 언어(예: 버마어)는 기기 내장 음성으로 폴백
     if (!hasTts(langId)) {
@@ -276,6 +281,7 @@ function StarterContent() {
         body: JSON.stringify({ text, lang: langId, gender: tutor.gender, speed: 0.78 }),
       });
       const data = await res.json();
+      if (speakSeq.current !== mySeq) return; // superseded by a newer tap — stay silent
       if (!data.audioContent) return;
       const audio = new Audio(`data:${data.mimeType || 'audio/mp3'};base64,${data.audioContent}`);
       audioRef.current = audio;
@@ -858,7 +864,11 @@ LANGUAGE RULES:
               {(w as any).meaning}
             </div>
           )}
-          <div style={{ fontSize: 14, color: voiceSupported ? ACCENT : '#94A3B8', fontWeight: 800, marginBottom: 0 }}>
+          <div style={{ display:'inline-flex', alignItems:'center', justifyContent:'center',
+            minHeight: 56, padding: '12px 36px', borderRadius: 99, marginBottom: 0,
+            fontSize: 17, color: voiceSupported ? ACCENT : '#94A3B8', fontWeight: 800,
+            background: voiceSupported ? `${ACCENT}14` : '#F1F5F9',
+            border: `2px solid ${voiceSupported ? `${ACCENT}35` : '#E2E8F0'}` }}>
             {voiceSupported ? '🔊 Tap to hear' : '🔇 Voice not available'}
           </div>
         </div>
@@ -1124,7 +1134,11 @@ LANGUAGE RULES:
           <div style={{ fontSize: 15, color: '#94A3B8', fontStyle: 'italic' }}>
             {w.phonetic}
           </div>
-          <div style={{ fontSize: 13, color: voiceSupported ? ACCENT : '#94A3B8', fontWeight: 700, marginTop: 10 }}>
+          <div style={{ display:'inline-flex', alignItems:'center', justifyContent:'center',
+            minHeight: 52, padding: '10px 32px', borderRadius: 99, marginTop: 14,
+            fontSize: 16, color: voiceSupported ? ACCENT : '#94A3B8', fontWeight: 700,
+            background: voiceSupported ? `${ACCENT}14` : '#F1F5F9',
+            border: `2px solid ${voiceSupported ? `${ACCENT}35` : '#E2E8F0'}` }}>
             {voiceSupported ? '🔊 Tap to hear again' : '🔇 Voice not available'}
           </div>
         </div>
