@@ -4,7 +4,7 @@ import { useEffect, useState, Suspense } from 'react';
 import EmptyState from '@/components/EmptyState';
 import { ListSkeleton } from '@/components/Skeleton';
 import { useRouter } from 'next/navigation';
-import { POS_META, POS_SET_COUNT, PartOfSpeech } from '@/data/wordSets';
+import { POS_META, POS_SET_COUNT, PartOfSpeech, getSetTitle } from '@/data/wordSets';
 import { useAuth } from '@/context/AuthContext';
 import { isAdminEmail } from '@/lib/subscription';
 import { getSubscription } from '@/lib/subscription';
@@ -182,8 +182,8 @@ function WordsContent() {
                         {POS_META[selectedPos].icon}
                       </div>
                       <div>
-                        <div style={{ fontSize:14, fontWeight:900, color:'#0F172A' }}>Set {si + 1}</div>
-                        <div style={{ fontSize:11, color:'#94A3B8', fontWeight:700 }}>words {si * 50 + 1}–{(si + 1) * 50}</div>
+                        <div style={{ fontSize:14, fontWeight:900, color:'#0F172A' }}>{getSetTitle(selectedPos, si + 1)}</div>
+                        <div style={{ fontSize:11, color:'#94A3B8', fontWeight:700 }}>Set {si + 1} · words {si * 50 + 1}–{(si + 1) * 50}</div>
                       </div>
                     </div>
                     <div style={{ display:'grid', gridTemplateColumns:'repeat(5,1fr)', gap:8 }}>
