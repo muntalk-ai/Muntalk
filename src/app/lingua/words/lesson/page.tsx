@@ -6,7 +6,7 @@ import { useEffect, useState, useRef, Suspense } from 'react';
 import RtlDir from '@/components/RtlDir';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { POS_META, PartOfSpeech, getSetKey } from '@/data/wordSets';
+import { POS_META, PartOfSpeech, getSetKey, getSetTitle } from '@/data/wordSets';
 import { getTutorById } from '@/data/tutors';
 import { hasTts, getLangLabel } from '@/data/languages';
 import { speakWithDeviceTts, deviceTtsAvailable } from '@/lib/deviceTts';
@@ -295,7 +295,7 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
         <button onClick={() => { stopAudio(); router.push('/lingua/words'); }} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 20, color: '#64748B' }}>←</button>
         <div>
           <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: 2, color: accent, textTransform: 'uppercase' }}>
-            {meta?.icon} {pos.replace(/\d/g, '')} · Set {setIdx} · Lesson {lessonIdx}
+            {meta?.icon} {pos.replace(/\d/g, '')} · {getSetTitle(pos, setIdx)} · Lesson {lessonIdx}
           </div>
           <div style={{ fontSize: 12, color: '#94A3B8' }}>words {(setIdx-1)*50+(lessonIdx-1)*10+1}–{(setIdx-1)*50+lessonIdx*10}</div>
         </div>

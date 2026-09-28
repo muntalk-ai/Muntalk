@@ -38,6 +38,41 @@ export const POS_SET_COUNT: Record<PartOfSpeech, number> = {
   Phrases: 9,
 };
 
+// Intuitive set titles — derived from content analysis (2026-09-28):
+// - Verbs/Adjectives/Adverbs: sets are ordered by frequency/difficulty
+//   (Set 1 = most common words → later sets = rarer, more advanced words)
+// - Phrases: sets are grouped by situation/domain
+//   (survival → shopping/dining/travel → opinions → social → business →
+//    idioms → formal letters → proverbs → news & current affairs)
+export const SET_TITLES: Record<PartOfSpeech, string[]> = {
+  Verbs: [
+    'Essential Verbs', 'Everyday Verbs', 'Action Verbs',
+    'Formal Verbs', 'Academic Verbs',
+    'Advanced Verbs I', 'Advanced Verbs II',
+    'Expert Verbs I', 'Expert Verbs II',
+  ],
+  Adjectives: [
+    'Essential Adjectives', 'Everyday Adjectives', 'Formal Adjectives',
+    'Advanced Adjectives I', 'Advanced Adjectives II',
+    'Expert Adjectives I', 'Expert Adjectives II', 'Master Adjectives',
+  ],
+  Adverbs: [
+    'Essential Adverbs', 'Everyday Adverbs', 'Common Adverbs', 'Formal Adverbs',
+    'Advanced Adverbs I', 'Advanced Adverbs II',
+    'Expert Adverbs', 'Master Adverbs',
+  ],
+  Phrases: [
+    'First Words', 'Shopping, Dining & Travel', 'Opinions & Feelings',
+    'Socializing', 'Business Meetings', 'Everyday Idioms',
+    'Formal Letters', 'Proverbs', 'News & Current Affairs',
+  ],
+};
+
+// Get the intuitive title for a given POS + setIndex (1-based)
+export function getSetTitle(pos: PartOfSpeech, setIndex: number): string {
+  return SET_TITLES[pos]?.[setIndex - 1] ?? `Set ${setIndex}`;
+}
+
 // Get all 50 words for a given lang + POS + setIndex
 export function getWords(
   data: Record<string, Record<string, string[]>>,
