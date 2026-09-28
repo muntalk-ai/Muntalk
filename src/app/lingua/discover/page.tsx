@@ -258,6 +258,12 @@ function DiscoverContent() {
   }, [messages, translateMsg]);
 
   // Build system prompt per feature
+  // /api/gemini SAFETY_PREAMBLE("You are a language-learning assistant. Refuse requests
+  // unrelated to language learning...") 대응: Discover 대화 프롬프트(spark/news/world/
+  // character/story)에 어학 목적이 명시되어 있지 않으면 모델이 요청을 거부할 수 있음
+  // (Dream Studio PR #83과 동일 패턴). 모든 채팅 프롬프트 앞에 이 프레이밍을 붙임.
+  const PRACTICE_FRAMING = 'This is a MunTalk language-learning chat session. ';
+
   const buildPrompt = useCallback((userText: string): string => {
     const t = getTutorById(tutorId);
     const history = truncateHistory(messages, 10).map(m=>`${m.role==='user'?'User':t.name}: ${m.text}`).join('\n');
@@ -318,7 +324,7 @@ function DiscoverContent() {
       const res = await apiFetch('/api/gemini', { method:'POST',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ uid:user?.uid??null, temperature:0.85,
-          prompt: buildPrompt(msg) }),
+          prompt: PRACTICE_FRAMING + buildPrompt(msg) }),
         timeoutMs: AI_TIMEOUT_MS });
       const data = await res.json();
       const aiText = data.text?.trim() || 'Interesting — tell me more.';
@@ -354,7 +360,7 @@ function DiscoverContent() {
     // All others: AI speaks first
     setLoading(true);
     try {
-      const prompt = buildOpeningPrompt(id, channelId);
+      const prompt = PRACTICE_FRAMING + buildOpeningPrompt(id, channelId);
       const res = await apiFetch('/api/gemini', { method:'POST',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ uid:user?.uid??null, temperature:0.9, prompt }),
