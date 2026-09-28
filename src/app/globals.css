@@ -37,6 +37,13 @@ body {
     system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 
+/* 메뉴/네브 UI: 클릭·탭 시 텍스트가 딸려 선택되지 않게 차단.
+   레슨 본문·어휘·예문 등 학습 콘텐츠는 선택 가능 유지 (사전 찾기·복사용). */
+nav, nav * {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 /* Starter "Tap to hear" 버튼 — 탭 시 텍스트 선택/안드로이드 구글 팝업 차단 + 눌림 피드백.
    div 기반 버튼에 user-select:none을 걸어 주변 글자가 탭으로 인식되지 않게 함.
    :active에서 밝기+축소로 클릭 표시. */
