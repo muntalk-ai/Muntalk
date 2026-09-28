@@ -120,7 +120,7 @@ function DreamStudioContent() {
     (async () => {
       try {
         const numbered = strings.map((s, i) => `${i + 1}. ${s}`).join('\n');
-        const res = await apiFetch('/api/gemini', {
+        const res = await apiFetch('/api/dream', {
           method: 'POST', headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             uid: user?.uid ?? null, temperature: 0.1,
@@ -233,7 +233,7 @@ function DreamStudioContent() {
   const translateMsg = useCallback(async (msgIdx: number, text: string) => {
     setTranslating(msgIdx);
     try {
-      const res = await apiFetch('/api/gemini', {
+      const res = await apiFetch('/api/dream', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           uid: user?.uid ?? null, temperature: 0.1,
@@ -312,7 +312,7 @@ Open with genuine excitement about this specific project. Ask ONE sharp, specifi
 Do NOT be generic. React to the actual title "${title}". 2-3 sentences.
 Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
 
-      const res = await apiFetch('/api/gemini', { method:'POST',
+      const res = await apiFetch('/api/dream', { method:'POST',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ uid:user.uid, temperature:0.9, prompt:openingPrompt }),
         timeoutMs: AI_TIMEOUT_MS,
@@ -355,7 +355,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
       // PR-G: fetch만 재시도 래핑 (문서 append 등 side-effect는 1회만)
       let data: any = null;
       const failed = await runWithAiRetry(async () => {
-        const res = await apiFetch('/api/gemini', { method:'POST',
+        const res = await apiFetch('/api/dream', { method:'POST',
           headers:{'Content-Type':'application/json'},
           body: JSON.stringify({ uid:user?.uid??null, temperature:0.85, prompt }),
           timeoutMs: AI_TIMEOUT_MS });
