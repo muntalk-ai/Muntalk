@@ -667,7 +667,7 @@ function DiscoverContent() {
                       background:'#E2E8F0', fontSize:11, color:'#475569',
                       fontWeight:600 }}>
                       Today: <strong>{todayPersona.name}</strong> — {todayPersona.role.slice(0,50)}...
-                      {trUnder(`${todayPersona.role.slice(0,50)}...`, { fontSize:10, color:'rgba(255,255,255,0.8)', marginTop:3 })}
+                      {trUnder(`${todayPersona.role.slice(0,50)}...`, { fontSize:10, color:'#475569', marginTop:3 })}
                     </div>
                   )}
 
@@ -688,7 +688,7 @@ function DiscoverContent() {
                         <button key={ch.id} className="ch-btn"
                           onClick={(e) => { e.stopPropagation(); openFeature('world', ch.id); }}
                           style={{ padding:'5px 12px', borderRadius:99, border:'none',
-                            background:'#F1F5F9', color:'#fff',
+                            background:ch.bg, color:ch.color,
                             fontSize:11, fontWeight:800, cursor:'pointer',
                             fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                           {ch.emoji} {ch.label}
