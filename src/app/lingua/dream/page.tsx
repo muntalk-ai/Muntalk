@@ -446,7 +446,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
           an AI collaborator — in your language, on your terms.
         </p>
         <p style={{ fontSize:13, color:'#475569', marginBottom:32, fontWeight:600 }}>
-          ✍️ 6 creative formats &nbsp;·&nbsp; 🌐 Any language &nbsp;·&nbsp; © 100% your copyright
+          ✍️ 6 creative formats &nbsp;·&nbsp; 🌐 Any language &nbsp;·&nbsp; © 100% yours
         </p>
         <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
           {!user ? (
@@ -558,10 +558,10 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
           <div style={{ fontSize:24 }}>©</div>
           <div>
             <div style={{ fontSize:13, fontWeight:800, color:'#fbbf24', marginBottom:2 }}>
-              100% Your Copyright
+              Your creations, 100% yours
             </div>
             <div style={{ fontSize:12, color:'#475569', fontWeight:600 }}>
-              Everything created here belongs entirely to you. MunTalk AI is your collaborator, not your author. Download anytime with a copyright declaration included.
+              MunTalk claims no rights over what you make. MunTalk AI is your collaborator, not your author. Download anytime.
             </div>
           </div>
         </div>
