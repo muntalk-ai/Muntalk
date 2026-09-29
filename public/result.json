@@ -50,7 +50,8 @@
       "pay",
       "meet",
       "include",
-      "begin"
+      "begin",
+      "Share"
     ],
     "Adjectives": [
       "good",
@@ -154,7 +155,7 @@
       "well",
       "far",
       "near",
-      "slowly"
+      "here"
     ],
     "Phrases": [
       "thank you",
@@ -172,14 +173,9 @@
       "how much is it",
       "can you help me",
       "I am looking for",
-      "break the ice",
-      "piece of cake",
-      "under the weather",
-      "call it a day",
       "get over it",
       "by the way",
       "for example",
-      "in my opinion",
       "let me see",
       "long time no see",
       "of course",
@@ -198,7 +194,6 @@
       "in fact",
       "make sure",
       "no way",
-      "on the other hand",
       "right now",
       "sooner or later",
       "turn out",
@@ -206,19 +201,25 @@
       "with pleasure",
       "without a doubt",
       "you know",
-      "as soon as possible"
+      "as soon as possible",
+      "Bye-bye",
+      "All done",
+      "Night night",
+      "All gone",
+      "More please",
+      "Thank you"
     ],
     "Phrases2": [
       "I'm on my way", "What's going on?", "I'll be right back", "It depends", "Are you sure?",
-      "That makes sense", "Keep in touch", "I don't mind", "Let's get started", "I have no idea",
-      "Give me a hand", "Take your time", "Believe it or not", "Just a moment", "I'm looking forward to it",
-      "How was your weekend?", "What do you mean?", "I'm not sure", "It's up to you", "Good for you",
-      "I'm starving", "What a relief!", "Can I ask a favor?", "Don't worry about it", "It's not a big deal",
-      "I'll think about it", "Let me know", "I'm exhausted", "That's a good point", "Wait a second",
-      "I'm bored", "What's the matter?", "Have a good one", "I'm impressed", "No problem",
-      "I agree with you", "Tell me more", "I'm busy", "I hope so", "That's too bad",
-      "You're right", "I'm lost", "Can you repeat that?", "I'm almost there", "What's your plan?",
-      "I'll call you later", "Let's go", "Is everything okay?", "It's my pleasure", "Not yet"
+      "That makes sense", "Keep in touch", "I don't mind", "I have no idea", "Give me a hand",
+      "Take your time", "Believe it or not", "Just a moment", "I'm looking forward to it", "How was your weekend?",
+      "What do you mean?", "I'm not sure", "It's up to you", "Good for you", "I'm starving",
+      "What a relief!", "Can I ask a favor?", "Don't worry about it", "It's not a big deal", "I'll think about it",
+      "Let me know", "I'm exhausted", "That's a good point", "Wait a second", "I'm bored",
+      "What's the matter?", "Have a good one", "I'm impressed", "No problem", "I agree with you",
+      "Tell me more", "I'm busy", "I hope so", "That's too bad", "You're right",
+      "I'm lost", "Can you repeat that?", "I'm almost there", "What's your plan?", "I'll call you later",
+      "Let's go", "Is everything okay?", "It's my pleasure", "Not yet", "Off the beaten path"
     ],
     "Phrases3": [
       "In the meantime", "As far as I know", "On the tip of my tongue", "Check it out", "Make yourself at home",
@@ -227,34 +228,36 @@
       "To make a long story short", "I can't wait", "I'll get back to you", "Is that so?", "No offense",
       "That's enough", "What's the catch?", "I'm not following", "Count me in", "I'm feeling blue",
       "In case of", "Take a look", "I'm kidding", "Don't give up", "It's worth it",
-      "I'll handle it", "Speak of the devil", "The sooner the better", "That's interesting", "Get well soon",
-      "I'm fond of it", "Out of the blue", "Once in a while", "By the time", "In any case",
-      "For some reason", "That's exactly it", "I appreciate it", "Come on", "Everything is ready",
-      "I'm not interested", "Good luck", "How about you?", "Let's see", "Whatever you want"
+      "I'll handle it", "The sooner the better", "That's interesting", "Get well soon", "I'm fond of it",
+      "Out of the blue", "Once in a while", "By the time", "In any case", "For some reason",
+      "That's exactly it", "I appreciate it", "Come on", "Everything is ready", "I'm not interested",
+      "Good luck", "How about you?", "Let's see", "Whatever you want", "in my opinion",
+      "on the other hand"
     ],
     "Phrases4": [
-      "Beat around the bush", "Blessing in disguise", "Cut to the chase", "Hit the books", "Under the table",
-      "Pull yourself together", "On the fence", "Break a leg", "Call it a night", "Get out of hand",
-      "No pain, no gain", "Hang in there", "Through thick and thin", "Bite off more than you can chew", "Easy does it",
-      "Keep an eye on", "Sleep on it", "A change of heart", "Back to square one", "Be that as it may",
-      "Come up with", "Feel like a million bucks", "Get a grip", "In a nutshell", "Keep your chin up",
-      "Look on the bright side", "Make a long story short", "Miss the boat", "Not my cup of tea", "Off the hook",
-      "On the same page", "Out of the question", "Play it by ear", "Put yourself in my shoes", "Rule of thumb",
-      "Safe and sound", "See eye to eye", "Stand your ground", "Stay in touch", "The best of both worlds",
-      "The bottom line", "The last straw", "Think outside the box", "Time flies", "To say the least",
-      "Twist someone's arm", "Up in the air", "Watch your step", "When pigs fly", "Your guess is as good as mine"
+      "Beat around the bush", "Blessing in disguise", "Cut to the chase", "Under the table", "Pull yourself together",
+      "On the fence", "Break a leg", "Call it a night", "Get out of hand", "Hang in there",
+      "Through thick and thin", "Bite off more than you can chew", "Easy does it", "Keep an eye on", "Sleep on it",
+      "A change of heart", "Back to square one", "Be that as it may", "Come up with", "Feel like a million bucks",
+      "Get a grip", "In a nutshell", "Keep your chin up", "Look on the bright side", "Make a long story short",
+      "Miss the boat", "Not my cup of tea", "Off the hook", "On the same page", "Out of the question",
+      "Play it by ear", "Put yourself in my shoes", "Rule of thumb", "Safe and sound", "See eye to eye",
+      "Stand your ground", "Stay in touch", "The best of both worlds", "The bottom line", "The last straw",
+      "Think outside the box", "Time flies", "To say the least", "Twist someone's arm", "Up in the air",
+      "Watch your step", "When pigs fly", "Your guess is as good as mine", "How have you been?", "Long time no see!"
     ],
     "Phrases5": [
       "In light of", "At the end of the day", "Prior to", "With regard to", "In accordance with",
       "Broadly speaking", "For the most part", "To some extent", "Needless to say", "In all honesty",
       "Bear fruit", "A bitter pill to swallow", "Across the board", "Back to the drawing board", "Bite the bullet",
-      "By and large", "Cold feet", "Cut corners", "Down the road", "Every cloud has a silver lining",
-      "Face the music", "From scratch", "Get the hang of it", "Give someone the cold shoulder", "Go the extra mile",
-      "Hands down", "Hit the nail on the head", "In the heat of the moment", "Jump the gun", "Keep someone in the loop",
-      "Kill two birds with one stone", "Learn the ropes", "Let the cat out of the bag", "On top of the world", "Out of hand",
-      "Piece of cake", "Read between the lines", "Rock the boat", "Set the record straight", "Shoot for the stars",
-      "Sit tight", "Small talk", "Spill the beans", "Take it with a grain of salt", "The elephant in the room",
-      "The whole nine yards", "Touch base", "Under your nose", "Up to speed", "Walk on air"
+      "By and large", "Cold feet", "Cut corners", "Down the road", "Face the music",
+      "From scratch", "Get the hang of it", "Give someone the cold shoulder", "Go the extra mile", "Hands down",
+      "Hit the nail on the head", "In the heat of the moment", "Jump the gun", "Keep someone in the loop", "Learn the ropes",
+      "Let the cat out of the bag", "On top of the world", "Out of hand", "Piece of cake", "Read between the lines",
+      "Rock the boat", "Set the record straight", "Shoot for the stars", "Sit tight", "Small talk",
+      "Spill the beans", "Take it with a grain of salt", "The elephant in the room", "The whole nine yards", "Touch base",
+      "Under your nose", "Up to speed", "Walk on air", "Let's get started", "Breach of contract",
+      "Core competency", "Deliver a presentation", "Facilitate a meeting", "Key performance indicator", "Synergy between departments"
     ],
     "Phrases6": [
       "Above and beyond", "As a matter of fact", "At a glance", "Be on the lookout", "Behind the scenes",
@@ -266,7 +269,9 @@
       "Point of no return", "Raise the bar", "Read the room", "Run of the mill", "Save for a rainy day",
       "Second to none", "Silver lining", "Sink or swim", "Slip of the tongue", "Stand out",
       "State of the art", "Take the lead", "The big picture", "Through the grapevine", "To each their own",
-      "Turn a blind eye", "Up for grabs", "Water under the bridge", "Win-win situation", "Word of mouth"
+      "Turn a blind eye", "Up for grabs", "Water under the bridge", "Win-win situation", "Word of mouth",
+      "break the ice", "piece of cake", "under the weather", "call it a day", "Speak of the devil",
+      "Hit the books"
     ],
     "Phrases7": [
       "Against all odds", "All things considered", "Barking up the wrong tree", "Between a rock and a hard place", "Burning the midnight oil",
@@ -276,213 +281,225 @@
       "Heard it through the grapevine", "Ignorance is bliss", "In the nick of time", "It takes two to tango", "Jump on the bandwagon",
       "Keep your eyes peeled", "Kill them with kindness", "Leave no stone unturned", "Let sleeping dogs lie", "Level playing field",
       "Like a breath of fresh air", "Make a mountain out of a molehill", "Method to the madness", "Neck and neck", "No stone unturned",
-      "Off the beaten path", "On a roll", "Once bitten, twice shy", "Out of the woods", "Penny for your thoughts",
-      "Play it safe", "Practice what you preach", "Pull someone's leg", "Put a lid on it", "Put all your eggs in one basket",
-      "Rain on someone's parade", "Skeleton in the closet", "Take a rain check", "The ball is in your court", "The icing on the cake"
+      "On a roll", "Once bitten, twice shy", "Out of the woods", "Penny for your thoughts", "Play it safe",
+      "Practice what you preach", "Pull someone's leg", "Put a lid on it", "Put all your eggs in one basket", "Rain on someone's parade",
+      "Skeleton in the closet", "Take a rain check", "The ball is in your court", "The icing on the cake", "I look forward to hearing from you."
     ],
     "Phrases8": [
       "A blessing in disguise", "A dime a dozen", "Absence makes the heart grow fonder", "Actions speak louder than words", "Add insult to injury",
       "All in all", "Around the clock", "As far as it goes", "At your earliest convenience", "Back against the wall",
-      "Ballpark figure", "Barking up the wrong tree", "Beating a dead horse", "Better late than never", "Beyond a shadow of a doubt",
-      "Bite the hand that feeds you", "Blow off steam", "Burn bridges", "By the skin of your teeth", "Call it a day",
-      "Change of pace", "Close but no cigar", "Come rain or shine", "Common ground", "Cut to the chase",
-      "Diamonds in the rough", "Do more harm than good", "Down to earth", "Drop the ball", "Easy as pie",
-      "Every now and then", "Face to face", "Fall short", "Few and far between", "Follow your gut",
-      "Food for thought", "From time to time", "Get out of your system", "Get wind of", "Go cold turkey",
-      "Have a heart of gold", "Hit the roof", "Hold your horses", "In the long run", "Keep at bay",
-      "Keep it under wraps", "Leave well alone", "Let your hair down", "Live and learn", "Make a point of"
+      "Ballpark figure", "Beating a dead horse", "Better late than never", "Beyond a shadow of a doubt", "Bite the hand that feeds you",
+      "Blow off steam", "Burn bridges", "By the skin of your teeth", "Call it a day", "Change of pace",
+      "Close but no cigar", "Come rain or shine", "Common ground", "Diamonds in the rough", "Do more harm than good",
+      "Down to earth", "Drop the ball", "Easy as pie", "Every now and then", "Face to face",
+      "Fall short", "Few and far between", "Follow your gut", "Food for thought", "From time to time",
+      "Get out of your system", "Get wind of", "Go cold turkey", "Have a heart of gold", "Hit the roof",
+      "Hold your horses", "Keep at bay", "Keep it under wraps", "Leave well alone", "Let your hair down",
+      "Live and learn", "Make a point of", "A stitch in time saves nine", "Beggar's belief", "Birds of a feather flock together",
+      "No pain, no gain", "Every cloud has a silver lining", "Kill two birds with one stone"
     ],
     "Phrases9": [
-      "Adhere to the policy", "Amplify the impact", "Breach of contract", "Bridge the gap", "Catalyst for change",
-      "Commence the operation", "Compliance with regulations", "Conducive to success", "Core competency", "Culminate in a result",
-      "Data-driven approach", "Deliver a presentation", "Disseminate information", "Draw an analogy", "Driven by innovation",
-      "Elevate the conversation", "Embrace diversity", "Empower the team", "Engage in dialogue", "Envisage the future",
-      "Establish a rapport", "Exceed expectations", "Facilitate a meeting", "Foster a relationship", "Gain traction",
-      "Harmonize the process", "Harness the potential", "Implications of the decision", "Incentivize performance", "Initiate a project",
-      "Integrate the systems", "Iterative process", "Key performance indicator", "Leverage assets", "Mitigate risks",
+      "Adhere to the policy", "Amplify the impact", "Bridge the gap", "Catalyst for change", "Commence the operation",
+      "Compliance with regulations", "Conducive to success", "Culminate in a result", "Data-driven approach", "Disseminate information",
+      "Draw an analogy", "Driven by innovation", "Elevate the conversation", "Embrace diversity", "Empower the team",
+      "Engage in dialogue", "Envisage the future", "Establish a rapport", "Exceed expectations", "Foster a relationship",
+      "Gain traction", "Harmonize the process", "Harness the potential", "Implications of the decision", "Incentivize performance",
+      "Initiate a project", "Integrate the systems", "Iterative process", "Leverage assets", "Mitigate risks",
       "Mutually beneficial", "Optimize resources", "Paradigm shift", "Pioneer a new field", "Pragmatic approach",
       "Proactive measures", "Reach a consensus", "Scale the business", "Stakeholder engagement", "Strategic alignment",
-      "Streamline operations", "Synergy between departments", "Testament to hard work", "Underpin the strategy", "Viable alternative"
+      "Streamline operations", "Testament to hard work", "Underpin the strategy", "Viable alternative", "breaking news",
+      "making headlines", "a developing story", "according to reports", "live on the scene", "off the record"
     ],
   
        "Verbs2": [
-      "Allow", "Believe", "Buy", "Change", "Choose", "Continue", "Consider", "Create", "Decide", "Expect", 
-      "Follow", "Grow", "Hold", "Hope", "Improve", "Increase", "Lead", "Learn", "Let", "Lie", 
-      "Like", "Listen", "Mean", "Open", "Produce", "Suggest", "Raise", "Receive", "Remember", "Report", 
-      "Require", "Sell", "Send", "Serve", "Set", "Spend", "Stay", "Stop", "Study", "Support", 
-      "Understand", "Wait", "Walk", "Watch", "Win", "Offer", "Provide", "Reach", "Read", "Reduce"
-    ],
+      "Allow", "Believe", "Buy", "Change", "Choose", "Continue", "Consider", "Create", "Decide", "Expect",
+      "Follow", "Grow", "Hold", "Hope", "Improve", "Increase", "Lead", "Learn", "Let", "Lie",
+      "Like", "Listen", "Mean", "Open", "Produce", "Suggest", "Raise", "Receive", "Remember", "Report",
+      "Require", "Sell", "Send", "Serve", "Set", "Spend", "Stay", "Stop", "Study", "Support",
+      "Understand", "Wait", "Walk", "Watch", "Win", "Offer", "Provide", "Reach", "Read", "Reduce",
+      "Remind"
+       ],
     "Verbs3": [
-      "Accept", "Agree", "Appear", "Arrive", "Become", "Borrow", "Break", "Bring", "Build", "Carry", 
-      "Catch", "Check", "Close", "Count", "Cover", "Cut", "Dance", "Describe", "Die", "Draw", 
-      "Drink", "Drive", "Eat", "Enjoy", "Explain", "Fall", "Fill", "Finish", "Fly", "Forget", 
-      "Guess", "Hang", "Hear", "Hurt", "Join", "Jump", "Kill", "Kiss", "Laugh", "Lift", 
-      "Lose", "Love", "Marry", "Meet", "Miss", "Order", "Pay", "Ride", "Sing", "Sleep"
+      "Accept", "Agree", "Appear", "Arrive", "Become", "Borrow", "Break", "Bring", "Build", "Carry",
+      "Catch", "Check", "Close", "Count", "Cover", "Cut", "Dance", "Describe", "Die", "Draw",
+      "Drink", "Drive", "Eat", "Enjoy", "Explain", "Fall", "Fill", "Finish", "Fly", "Forget",
+      "Guess", "Hang", "Hear", "Hurt", "Join", "Jump", "Kill", "Kiss", "Laugh", "Lift",
+      "Lose", "Love", "Marry", "Meet", "Miss", "Order", "Pay", "Ride", "Sing", "Sleep",
+      "Hesitate", "Calculate", "Harvest", "Locate"
     ],
     "Verbs4": [
-      "Advise", "Affect", "Announce", "Apply", "Argue", "Arrange", "Avoid", "Cause", "Celebrate", "Compare", 
-      "Complain", "Confirm", "Connect", "Control", "Deliver", "Depend", "Design", "Discover", "Discuss", "Earn", 
-      "Encourage", "Establish", "Examine", "Experience", "Explore", "Force", "Form", "Handle", "Imagine", "Indicate", 
-      "Inform", "Introduce", "Invite", "Manage", "Mention", "Notice", "Observe", "Organize", "Perform", "Prepare", 
-      "Present", "Prevent", "Promise", "Protect", "Prove", "Realize", "Replace", "Search", "Share", "Solve"
+      "Advise", "Affect", "Announce", "Apply", "Argue", "Arrange", "Avoid", "Cause", "Celebrate", "Compare",
+      "Complain", "Confirm", "Connect", "Control", "Deliver", "Depend", "Design", "Discover", "Discuss", "Earn",
+      "Encourage", "Establish", "Examine", "Experience", "Explore", "Force", "Form", "Handle", "Imagine", "Indicate",
+      "Inform", "Introduce", "Invite", "Manage", "Mention", "Notice", "Observe", "Organize", "Perform", "Prepare",
+      "Present", "Prevent", "Promise", "Protect", "Prove", "Realize", "Replace", "Search", "Solve", "Accomplish",
+      "Echo", "Emerge", "Exclude", "Filter", "Inherit", "Oppose", "Preserve", "Restore", "Resemble"
     ],
     "Verbs5": [
-      "Analyze", "Anticipate", "Appreciate", "Approve", "Assume", "Attempt", "Benefit", "Challenge", "Claim", "Combine", 
-      "Commit", "Concentrate", "Conduct", "Convince", "Criticize", "Define", "Demand", "Deny", "Deserve", "Determine", 
-      "Distribute", "Emphasize", "Enable", "Ensure", "Evaluate", "Feature", "Focus", "Generate", "Identify", "Ignore", 
-      "Imply", "Impress", "Incorporate", "Influence", "Investigate", "Involve", "Maintain", "Monitor", "Negotiate", "Obtain", 
-      "Participate", "Persuade", "Predict", "Pursue", "Recommend", "Reflect", "Regret", "Rely", "Remind", "Respond"
+      "Analyze", "Anticipate", "Appreciate", "Approve", "Assume", "Attempt", "Benefit", "Challenge", "Claim", "Combine",
+      "Commit", "Concentrate", "Conduct", "Convince", "Criticize", "Define", "Demand", "Deny", "Deserve", "Determine",
+      "Distribute", "Emphasize", "Enable", "Ensure", "Evaluate", "Feature", "Focus", "Generate", "Identify", "Ignore",
+      "Imply", "Impress", "Incorporate", "Influence", "Investigate", "Involve", "Maintain", "Monitor", "Negotiate", "Obtain",
+      "Participate", "Persuade", "Predict", "Pursue", "Recommend", "Reflect", "Regret", "Rely", "Respond", "collaborate",
+      "enhance", "implement", "integrate"
     ],
     "Verbs6": [
-      "Abolish", "Accumulate", "Acquire", "Adapt", "Advocate", "Allocate", "Alter", "Amplify", "Assert", "Assess", 
-      "Assimilate", "Augment", "Clarify", "Collaborate", "Comply", "Compromise", "Concede", "Consolidate", "Contradict", "Cultivate", 
-      "Deduce", "Depict", "Derive", "Diminish", "Disclose", "Elaborate", "Eliminate", "Embrace", "Encounter", "Enhance", 
-      "Envision", "Exaggerate", "Facilitate", "Fluctuate", "Formulate", "Foster", "Hesitate", "Implement", "Initiate", "Innovate", 
-      "Inspect", "Interpret", "Justify", "Manifest", "Modify", "Overcome", "Perceive", "Reinforce", "Stimulate", "Utilize"
+      "Abolish", "Accumulate", "Acquire", "Adapt", "Advocate", "Allocate", "Alter", "Amplify", "Assert", "Assess",
+      "Assimilate", "Augment", "Clarify", "Collaborate", "Comply", "Compromise", "Concede", "Consolidate", "Contradict", "Cultivate",
+      "Deduce", "Depict", "Derive", "Diminish", "Disclose", "Elaborate", "Eliminate", "Embrace", "Encounter", "Enhance",
+      "Envision", "Exaggerate", "Facilitate", "Fluctuate", "Formulate", "Foster", "Implement", "Initiate", "Innovate", "Inspect",
+      "Interpret", "Justify", "Manifest", "Modify", "Overcome", "Perceive", "Reinforce", "Stimulate", "Utilize", "empower",
+      "liberate"
     ],
     "Verbs7": [
-      "Accomplish", "Administer", "Articulate", "Bargain", "Calculate", "Coincide", "Commence", "Compel", "Complement", "Conceive", 
-      "Condense", "Confront", "Consent", "Coordinate", "Counsel", "Delegate", "Designate", "Differentiate", "Divert", "Dominate", 
-      "Echo", "Elude", "Embody", "Emerge", "Empower", "Endorse", "Enforce", "Enlighten", "Enrich", "Entail", 
-      "Equip", "Evolve", "Exceed", "Exclude", "Exert", "Exploit", "Extract", "Fabricate", "Filter", "Flourish", 
-      "Grasp", "Halt", "Harvest", "Hinder", "Hypothesize", "Illuminate", "Impose", "Induce", "Inherit", "Inhibit"
+      "Administer", "Articulate", "Bargain", "Coincide", "Commence", "Compel", "Complement", "Conceive", "Condense", "Confront",
+      "Consent", "Coordinate", "Counsel", "Delegate", "Designate", "Differentiate", "Divert", "Dominate", "Elude", "Embody",
+      "Empower", "Endorse", "Enforce", "Enlighten", "Enrich", "Entail", "Equip", "Evolve", "Exceed", "Exert",
+      "Exploit", "Extract", "Fabricate", "Flourish", "Grasp", "Halt", "Hinder", "Hypothesize", "Illuminate", "Impose",
+      "Induce", "Inhibit", "adumbrate", "calumniate", "coruscate", "excoriate", "extirpate", "gainsay", "ratiocinate", "vituperate"
     ],
     "Verbs8": [
-      "Intervene", "Kindle", "Liberate", "Locate", "Magnify", "Manipulate", "Merge", "Mobilize", "Nurture", "Oblige", 
-      "Obscure", "Oppose", "Outperform", "Overhaul", "Oversee", "Paralyze", "Penetrate", "Preserve", "Preside", "Prevail", 
-      "Prioritize", "Proclaim", "Prolong", "Propel", "Prosper", "Provoke", "Ratify", "Reconcile", "Rectify", "Refine", 
-      "Regulate", "Rehabilitate", "Reiterate", "Relinquish", "Render", "Renovate", "Repel", "Resemble", "Restore", "Retain", 
-      "Retreat", "Retrieve", "Revere", "Revive", "Scrutinize", "Shatter", "Simulate", "Speculate", "Surpass", "Thrive"
+      "Intervene", "Kindle", "Liberate", "Magnify", "Manipulate", "Merge", "Mobilize", "Nurture", "Oblige", "Obscure",
+      "Outperform", "Overhaul", "Oversee", "Paralyze", "Penetrate", "Preside", "Prevail", "Prioritize", "Proclaim", "Prolong",
+      "Propel", "Prosper", "Provoke", "Ratify", "Reconcile", "Rectify", "Refine", "Regulate", "Rehabilitate", "Reiterate",
+      "Relinquish", "Render", "Renovate", "Repel", "Retain", "Retreat", "Retrieve", "Revere", "Revive", "Scrutinize",
+      "Shatter", "Simulate", "Speculate", "Surpass", "Thrive", "obfuscate", "promulgate", "ameliorate", "extrapolate", "substantiate"
     ],
     "Adjectives2": [
-      "Ancient", "Anxious", "Awful", "Bitter", "Bright", "Broad", "Calm", "Cheap", "Clever", "Cruel", 
-      "Deep", "Dirty", "Dry", "Empty", "Fair", "False", "Famous", "Fancy", "Flat", "Fresh", 
-      "Gentle", "Glad", "Grand", "Guilty", "Harsh", "Healthy", "Hollow", "Huge", "Hungry", "Loud", 
-      "Lucky", "Mad", "Narrow", "Nasty", "Odd", "Plain", "Polite", "Proud", "Pure", "Rare", 
+      "Ancient", "Anxious", "Awful", "Bitter", "Bright", "Broad", "Calm", "Cheap", "Clever", "Cruel",
+      "Deep", "Dirty", "Dry", "Empty", "Fair", "False", "Famous", "Fancy", "Flat", "Fresh",
+      "Gentle", "Glad", "Grand", "Guilty", "Harsh", "Healthy", "Hollow", "Huge", "Hungry", "Loud",
+      "Lucky", "Mad", "Narrow", "Nasty", "Odd", "Plain", "Polite", "Proud", "Pure", "Rare",
       "Rough", "Sharp", "Slight", "Smooth", "Solid", "Sour", "Steady", "Stiff", "Tough", "Wild"
     ],
     "Adjectives3": [
-      "Accurate", "Adequate", "Annual", "Artificial", "Automatic", "Available", "Basic", "Capable", "Civil", "Classic", 
-      "Complex", "Constant", "Critical", "Current", "Definite", "Distinct", "Domestic", "Efficient", "Entire", "Evident", 
-      "External", "Flexible", "Frequent", "Global", "Internal", "Legal", "Logical", "Maximum", "Mental", "Minimum", 
-      "Minor", "Mobile", "Mutual", "Negative", "Normal", "Obvious", "Original", "Passive", "Physical", "Positive", 
-      "Precise", "Primary", "Relevant", "Severe", "Similar", "Specific", "Stable", "Standard", "Technical", "Typical"
+      "Accurate", "Adequate", "Annual", "Artificial", "Automatic", "Available", "Basic", "Capable", "Civil", "Classic",
+      "Complex", "Constant", "Critical", "Current", "Definite", "Distinct", "Domestic", "Efficient", "Entire", "Evident",
+      "External", "Flexible", "Frequent", "Global", "Internal", "Legal", "Logical", "Maximum", "Mental", "Minimum",
+      "Minor", "Mobile", "Mutual", "Negative", "Normal", "Obvious", "Original", "Passive", "Physical", "Positive",
+      "Precise", "Primary", "Relevant", "Severe", "Similar", "Specific", "Stable", "Standard", "Technical", "Typical",
+      "vague"
     ],
     "Adjectives4": [
-      "Abundant", "Ambitious", "Appropriate", "Bizarre", "Cautious", "Coherent", "Comparable", "Comprehensive", "Considerable", "Controversial", 
-      "Decisive", "Deliberate", "Desperate", "Dominant", "Drastic", "Elaborate", "Elegant", "Enormous", "Essential", "Exclusive", 
-      "Exotic", "Extensive", "Fascinating", "Genuine", "Hostile", "Identical", "Inevitable", "Infectious", "Inherent", "Intense", 
-      "Invisible", "Isolated", "Marginal", "Modest", "Mysterious", "Notable", "Optimistic", "Peculiar", "Persistent", "Plausible", 
-      "Precious", "Profound", "Prosperous", "Reluctant", "Remarkable", "Significant", "Sophisticated", "Substantial", "Sufficient", "Vulnerable"
+      "Abundant", "Ambitious", "Appropriate", "Bizarre", "Cautious", "Coherent", "Comparable", "Comprehensive", "Considerable", "Controversial",
+      "Decisive", "Deliberate", "Desperate", "Dominant", "Drastic", "Elaborate", "Elegant", "Enormous", "Essential", "Exclusive",
+      "Exotic", "Extensive", "Fascinating", "Genuine", "Hostile", "Identical", "Inevitable", "Infectious", "Inherent", "Intense",
+      "Invisible", "Isolated", "Marginal", "Modest", "Mysterious", "Notable", "Optimistic", "Peculiar", "Persistent", "Plausible",
+      "Precious", "Profound", "Prosperous", "Reluctant", "Remarkable", "Significant", "Sophisticated", "Substantial", "Sufficient", "Vulnerable",
+      "aesthetic", "discreet", "indigenous", "atypical"
     ],
     "Adjectives5": [
-      "Abstract", "Aesthetic", "Ambiguous", "Anonymous", "Arbitrary", "Authentic", "Benevolent", "Cognitive", "Complacent", "Conspicuous", 
-      "Cynical", "Deficient", "Diligent", "Dubious", "Eccentric", "Eloquent", "Empirical", "Ephemeral", "Equivocal", "Exemplary", 
-      "Fallacious", "Feasible", "Frivolous", "Gregarious", "Impeccable", "Implicit", "Indifferent", "Inevitable", "Innocuous", "Insidious", 
-      "Intricate", "Intuitive", "Judicious", "Lethargic", "Lucid", "Meticulous", "Negligible", "Obsolete", "Omnipotent", "Opaque", 
-      "Pensive", "Pervalent", "Pragmatic", "Redundant", "Resilient", "Scrupulous", "Spontaneous", "Superfluous", "Trivial", "Versatile"
+      "Abstract", "Aesthetic", "Ambiguous", "Anonymous", "Arbitrary", "Authentic", "Benevolent", "Cognitive", "Complacent", "Conspicuous",
+      "Cynical", "Deficient", "Diligent", "Dubious", "Eccentric", "Eloquent", "Empirical", "Ephemeral", "Equivocal", "Exemplary",
+      "Fallacious", "Feasible", "Frivolous", "Gregarious", "Impeccable", "Implicit", "Indifferent", "Innocuous", "Insidious", "Intricate",
+      "Intuitive", "Judicious", "Lethargic", "Lucid", "Meticulous", "Negligible", "Obsolete", "Omnipotent", "Opaque", "Pensive",
+      "Pervalent", "Pragmatic", "Redundant", "Resilient", "Scrupulous", "Spontaneous", "Superfluous", "Trivial", "Versatile", "Autonomous"
     ],
     "Adverbs2": [
-      "Actually", "Already", "Anyway", "Basically", "Briefly", "Certainly", "Clearly", "Closely", "Completely", "Directly", 
-      "Easily", "Entirely", "Especially", "Exactly", "Extremely", "Finally", "Frequently", "Fully", "Gently", "Hardly", 
-      "Highly", "Immediately", "Instead", "Lately", "Mainly", "Merely", "Mostly", "Nearly", "Necessarily", "Particularly", 
-      "Perfectly", "Possibly", "Precisely", "Previously", "Probably", "Properly", "Quickly", "Quietly", "Rarely", "Recently", 
+      "Actually", "Already", "Anyway", "Basically", "Briefly", "Certainly", "Clearly", "Closely", "Completely", "Directly",
+      "Easily", "Entirely", "Especially", "Exactly", "Extremely", "Finally", "Frequently", "Fully", "Gently", "Hardly",
+      "Highly", "Immediately", "Instead", "Lately", "Mainly", "Merely", "Mostly", "Nearly", "Necessarily", "Particularly",
+      "Perfectly", "Possibly", "Precisely", "Previously", "Probably", "Properly", "Quickly", "Quietly", "Rarely", "Recently",
       "Relatively", "Roughly", "Seriously", "Shortly", "Simply", "Slightly", "Slowly", "Totally", "Usually", "Widely"
     ],
     
   "Verbs9": [
-    "advocate", "alleviate", "amplify", "articulate", "ascertain", "collaborate", "compile", "concede", "concur", "consolidate",
-    "constrain", "contemplate", "corroborate", "curtail", "decipher", "deduce", "delineate", "depict", "derive", "deviate",
-    "disseminate", "elucidate", "embody", "empower", "encompass", "engender", "enhance", "envisage", "evoke", "exacerbate",
-    "exemplify", "expedite", "facilitate", "fluctuate", "foster", "garner", "hinder", "implement", "instigate", "integrate",
-    "liberate", "mitigate", "nurture", "obviate", "orchestrate", "perpetuate", "reconcile", "scrutinize", "transcend", "uphold"
+    "advocate", "alleviate", "amplify", "articulate", "ascertain", "compile", "concede", "concur", "consolidate", "constrain",
+    "contemplate", "corroborate", "curtail", "decipher", "deduce", "delineate", "depict", "derive", "deviate", "disseminate",
+    "elucidate", "embody", "encompass", "engender", "envisage", "evoke", "exacerbate", "exemplify", "expedite", "facilitate",
+    "fluctuate", "foster", "garner", "hinder", "instigate", "mitigate", "nurture", "obviate", "orchestrate", "perpetuate",
+    "reconcile", "scrutinize", "transcend", "uphold", "disembogue", "excogitate", "obnubilate", "objurgate", "tergiversate", "vaticinate"
   ],
   "Adjectives6": [
     "abundant", "ambiguous", "benevolent", "coherent", "complacent", "conspicuous", "diligent", "eloquent", "erratic", "exquisite",
     "feasible", "frivolous", "gullible", "hypocritical", "impartial", "indifferent", "inherent", "innate", "intricate", "judicious",
     "lucid", "meticulous", "mundane", "nebulous", "oblivious", "obscure", "obsolete", "ominous", "ostentatious", "pensive",
     "perceptive", "plausible", "pragmatic", "precarious", "profound", "prudent", "redundant", "resilient", "skeptical", "spontaneous",
-    "stringent", "subtle", "superficial", "tangible", "tenacious", "trivial", "unanimous", "vague", "versatile", "vibrant"
+    "stringent", "subtle", "superficial", "tangible", "tenacious", "trivial", "unanimous", "versatile", "vibrant", "anfractuous"
   ],
   "Adjectives7": [
-    "aesthetic", "altruistic", "archaic", "astute", "austere", "belligerent", "capricious", "caustic", "charlatan", "cogent",
-    "contentious", "convivial", "copious", "decorous", "didactic", "discreet", "disparate", "dogmatic", "ebullient", "eclectic",
-    "egregious", "ephemeral", "equanimous", "esoteric", "facetious", "fastidious", "fortuitous", "gregarious", "iconoclastic", "immutable",
-    "impervious", "impetuous", "indigenous", "ineffable", "insatiable", "insidious", "intransigent", "inveterate", "loquacious", "magnanimous",
-    "mercurial", "mordant", "nefarious", "obsequious", "parsimonious", "perfidious", "perfunctory", "pernicious", "perspicacious", "phlegmatic"
+    "altruistic", "archaic", "astute", "austere", "belligerent", "capricious", "caustic", "charlatan", "cogent", "contentious",
+    "convivial", "copious", "decorous", "didactic", "disparate", "dogmatic", "ebullient", "eclectic", "egregious", "ephemeral",
+    "equanimous", "esoteric", "facetious", "fastidious", "fortuitous", "gregarious", "iconoclastic", "immutable", "impervious", "impetuous",
+    "ineffable", "insatiable", "insidious", "intransigent", "inveterate", "loquacious", "magnanimous", "mercurial", "mordant", "nefarious",
+    "obsequious", "parsimonious", "perfidious", "perfunctory", "pernicious", "perspicacious", "phlegmatic", "autochthonous", "campestral", "sesquipedalian"
   ],
   "Adjectives8": [
-    "abstruse", "acerbic", "anachronistic", "anomalous", "antipathetic", "antithetical", "ascetic", "assiduous", "atypical", "audacious",
-    "avuncular", "bucolic", "burgeoning", "cacophonous", "canonical", "circuitous", "circumspect", "clandestine", "commensurate", "compendious",
-    "concomitant", "contingent", "deleterious", "demagogic", "desultory", "diaphanous", "dichotomous", "disingenuous", "effete", "efficacious",
-    "effrontery", "enervating", "enigmatic", "enormity", "epistemological", "equivocal", "erudite", "evanescent", "exigent", "exorbitant",
-    "expiatory", "extant", "extraneous", "facetious", "fallacious", "fatuous", "feckless", "felicitous", "fractious", "fulsome"
+    "abstruse", "acerbic", "anachronistic", "anomalous", "antipathetic", "antithetical", "ascetic", "assiduous", "audacious", "avuncular",
+    "bucolic", "burgeoning", "cacophonous", "canonical", "circuitous", "circumspect", "clandestine", "commensurate", "compendious", "concomitant",
+    "contingent", "deleterious", "demagogic", "desultory", "diaphanous", "dichotomous", "disingenuous", "effete", "efficacious", "effrontery",
+    "enervating", "enigmatic", "enormity", "epistemological", "equivocal", "erudite", "evanescent", "exigent", "exorbitant", "expiatory",
+    "extant", "extraneous", "fallacious", "fatuous", "feckless", "felicitous", "fractious", "fulsome", "recondite", "eleemosynary"
   ],
   "Adverbs3": [
-    "accordingly", "admittedly", "altogether", "annually", "anxiously", "apparently", "automatically", "barely", "briefly", "certainly",
-    "closely", "completely", "constantly", "currently", "definitely", "deliberately", "directly", "dramatically", "entirely", "equally",
-    "especially", "eventually", "exactly", "extremely", "frequently", "gradually", "hardly", "highly", "immediately", "initially",
-    "instantly", "largely", "literally", "mainly", "merely", "naturally", "nearly", "necessarily", "obviously", "perfectly",
-    "precisely", "previously", "primarily", "probably", "relatively", "recently", "separately", "shortly", "similarly", "totally"
+    "accordingly", "admittedly", "altogether", "annually", "anxiously", "apparently", "automatically", "barely", "briefly", "closely",
+    "completely", "constantly", "currently", "definitely", "deliberately", "dramatically", "entirely", "equally", "especially", "eventually",
+    "extremely", "frequently", "gradually", "immediately", "initially", "instantly", "largely", "literally", "mainly", "merely",
+    "naturally", "nearly", "necessarily", "obviously", "perfectly", "precisely", "previously", "primarily", "relatively", "recently",
+    "separately", "shortly", "similarly", "actively", "badly", "bravely", "cheerfully", "confidently", "daily", "defensively",
+    "blatantly", "deceptively"
   ],
   "Adverbs4": [
     "abruptly", "adequately", "adversely", "allegedly", "approximately", "artificially", "broadly", "clumsily", "comparatively", "consequently",
     "considerably", "conveniently", "decisively", "densely", "distinctly", "eagerly", "effectively", "efficiently", "elaborately", "excessively",
-    "exclusively", "explicitly", "extensively", "faithfully", "formally", "fundamentally", "genuinely", "henceforth", "ideally", "implicitly",
-    "incidentally", "indefinitely", "inevitably", "invariably", "markedly", "moderately", "mutually", "notably", "occasionally", "partially",
-    "persistently", "potentially", "presumably", "radically", "reluctantly", "remarkably", "seemingly", "subsequently", "sufficiently", "virtually"
+    "exclusively", "explicitly", "extensively", "faithfully", "formally", "fundamentally", "genuinely", "ideally", "implicitly", "incidentally",
+    "indefinitely", "inevitably", "invariably", "markedly", "moderately", "mutually", "notably", "occasionally", "partially", "persistently",
+    "potentially", "presumably", "radically", "reluctantly", "remarkably", "seemingly", "subsequently", "sufficiently", "virtually", "articulately",
+    "precariously"
   ],
   "Adverbs5": [
-    "altogether", "ambiguously", "benevolently", "chronologically", "coincidentally", "comprehensively", "conclusively", "concurrently", "confidentialy", "conscientiously",
-    "controversially", "correspondingly", "curiously", "definitively", "demonstrably", "disastrously", "disproportionately", "distinctively", "drastically", "emphatically",
-    "erroneously", "exceptionally", "exertively", "extravagantly", "feasibly", "fiercefully", "formidably", "frantically", "graphically", "harmoniously",
-    "haphazardly", "illustratively", "imaginatively", "immensely", "impeccably", "imperatively", "indisputably", "infinitely", "inherently", "innovatively",
-    "intelligently", "intensively", "intermittently", "intuitively", "irresistibly", "meticulously", "momentarily", "notoriously", "optimistically", "paramountly"
+    "ambiguously", "benevolently", "chronologically", "coincidentally", "comprehensively", "conclusively", "concurrently", "confidentialy", "conscientiously", "controversially",
+    "correspondingly", "curiously", "definitively", "demonstrably", "disastrously", "disproportionately", "distinctively", "drastically", "emphatically", "erroneously",
+    "exceptionally", "extravagantly", "feasibly", "formidably", "frantically", "graphically", "harmoniously", "haphazardly", "illustratively", "imaginatively",
+    "immensely", "impeccably", "imperatively", "indisputably", "infinitely", "inherently", "innovatively", "intelligently", "intensively", "intermittently",
+    "intuitively", "irresistibly", "meticulously", "momentarily", "notoriously", "optimistically", "paramountly", "inexorably", "precipitously", "ostensibly"
   ],
   "Adverbs6": [
-    "abstractly", "arbitrarily", "assiduously", "audaciously", "austerefully", "axiomatically", "belligerently", "blatantly", "capriciously", "categorically",
-    "caustically", "clandestinely", "cogently", "compulsively", "condescendingly", "conjecturally", "conspicuously", "contemptuously", "copiously", "cynically",
-    "deceptively", "decorously", "deferencefully", "derisively", "desolately", "diametrically", "didactically", "disdainfully", "disparately", "dogmatically",
-    "ebulliently", "eclectically", "egregiously", "eloquently", "enigmatically", "equivocally", "eruditely", "esoterically", "euphemistically", "evasively",
-    "exasperatingly", "exemplarily", "exorbitantly", "expediently", "explicitly", "exquisitely", "extemporaneously", "facetiously", "fallaciously", "fastidiously"
+    "abstractly", "arbitrarily", "assiduously", "audaciously", "austerefully", "axiomatically", "belligerently", "capriciously", "categorically", "caustically",
+    "clandestinely", "cogently", "compulsively", "condescendingly", "conjecturally", "conspicuously", "contemptuously", "copiously", "cynically", "decorously",
+    "deferencefully", "derisively", "desolately", "diametrically", "didactically", "disdainfully", "disparately", "dogmatically", "ebulliently", "eclectically",
+    "egregiously", "eloquently", "enigmatically", "equivocally", "eruditely", "esoterically", "euphemistically", "evasively", "exasperatingly", "exemplarily",
+    "exorbitantly", "expediently", "exquisitely", "extemporaneously", "facetiously", "fallaciously", "fastidiously", "anomalistically", "unabashedly", "serendipitously"
   ],
   "Adverbs7": [
-    "abstrusefully", "anachronistically", "anomalously", "antithetically", "archaicly", "articulately", "ascetically", "astutely", "atypically", "avuncularly",
-    "bucolically", "cacophonously", "canonically", "circuitously", "circumspectly", "commensurately", "compendiously", "concomitantly", "contingently", "deleteriously",
-    "demagogically", "desultorily", "diaphanously", "dichotomously", "disingenuously", "dispassionately", "efficaciously", "effronteryly", "enervatingly", "epistemologically",
-    "evanescently", "exultantly", "felicitously", "fortuitously", "fractiously", "fulsomely", "gregariously", "iconoclastically", "idiosyncratically", "ignominiously",
-    "immutably", "impassively", "impecuniously", "imperiously", "impetuously", "implacably", "indigenously", "ineffably", "ineluctably", "infinitesimally"
+    "abstrusefully", "anachronistically", "anomalously", "antithetically", "archaicly", "ascetically", "astutely", "atypically", "avuncularly", "bucolically",
+    "cacophonously", "canonically", "circuitously", "circumspectly", "commensurately", "compendiously", "concomitantly", "contingently", "deleteriously", "demagogically",
+    "desultorily", "diaphanously", "dichotomously", "disingenuously", "dispassionately", "efficaciously", "effronteryly", "enervatingly", "epistemologically", "evanescently",
+    "exultantly", "felicitously", "fortuitously", "fractiously", "fulsomely", "gregariously", "iconoclastically", "idiosyncratically", "ignominiously", "immutably",
+    "impassively", "impecuniously", "imperiously", "impetuously", "implacably", "indigenously", "ineffably", "ineluctably", "infinitesimally", "henceforth"
   ],
   "Adverbs8": [
     "insidiously", "intransigently", "inveterately", "invidiously", "irascibly", "itinerantly", "judiciously", "laconically", "loquaciously", "lugubriously",
     "magnanimously", "malevolently", "mercurially", "mordantly", "munificently", "nefariously", "obsequiously", "obstreperously", "officiously", "omnisciently",
     "onerously", "opprobriously", "parsimoniously", "pedantically", "penuriously", "peremptorily", "perfidiously", "perfunctorily", "peripatetically", "perniciously",
-    "perspicaciously", "phlegmatically", "platitudinously", "precariously", "precipitously", "preternaturally", "prodigiously", "profligately", "propitiously", "puerilely",
-    "pugnaciously", "punctiliously", "pusillanimously", "querulously", "quixotically", "recalcitrantly", "reconditely", "redoubtably", "refulgently", "remonstratively"
+    "perspicaciously", "phlegmatically", "platitudinously", "preternaturally", "prodigiously", "profligately", "propitiously", "puerilely", "pugnaciously", "punctiliously",
+    "pusillanimously", "querulously", "quixotically", "recalcitrantly", "reconditely", "redoubtably", "refulgently", "remonstratively", "exertively", "fiercefully"
   ]
   },
 
   "ko-KR": {
     "Verbs": [
-      "이다/있다", "가지다", "하다", "말하다", "가다", "얻다", "만들다", "알다", "취하다", "보다",
-      "오다", "생각하다", "보다", "원하다", "주다", "사용하다", "찾다", "말하다", "묻다", "일하다",
-      "보이다", "느끼다", "노력하다", "떠나다", "부르다", "해야 한다", "할지도 모른다", "해야만 한다", "유지하다", "시작하다",
-      "돕다", "이야기하다", "돌다", "보여주다", "듣다", "놀다", "달리다", "움직이다", "살다", "믿다",
-      "가져오다", "일어나다", "쓰다", "앉다", "서다", "잃다", "지불하다", "만나다", "포함하다", "시작하다"
+      "이다/있다", "가지다", "하다", "말하다", "가다", "얻다", "만들다", "알다", "보다", "오다",
+      "생각하다", "원하다", "주다", "사용하다", "찾다", "묻다", "일하다", "보이다", "느끼다", "노력하다",
+      "떠나다", "부르다", "해야 한다", "할지도 모른다", "해야만 한다", "유지하다", "시작하다", "돕다", "이야기하다", "돌다",
+      "보여주다", "듣다", "놀다", "달리다", "움직이다", "살다", "믿다", "가져오다", "일어나다", "쓰다",
+      "앉다", "서다", "잃다", "지불하다", "만나다", "포함하다", "입다", "씻다", "쉬다", "벌다",
+      "준비하다", "소개하다", "축하하다", "모으다"
     ],
     "Adjectives": [
       "좋은", "새로운", "첫 번째의", "마지막의", "긴", "큰", "작은", "자신의", "다른", "낡은",
-      "오른쪽의", "큰", "높은", "다른", "작은", "큰", "다음의", "이른", "젊은", "중요한",
-      "적은", "공공의", "나쁜", "같은", "할 수 있는", "실제의", "최고의", "더 나은", "경제적인", "강한",
-      "가능한", "전체의", "자유로운", "진실한", "가득 찬", "특별한", "쉬운", "명확한", "최근의", "늦은",
-      "어려운", "주요한", "행복한", "아름다운", "빠른", "느린", "짧은", "어두운", "가벼운", "싼"
+      "오른쪽의", "높은", "다음의", "이른", "젊은", "중요한", "적은", "나쁜", "같은", "할 수 있는",
+      "실제의", "최고의", "더 나은", "강한", "가능한", "전체의", "자유로운", "진실한", "가득 찬", "특별한",
+      "쉬운", "최근의", "늦은", "어려운", "주요한", "행복한", "아름다운", "빠른", "느린", "짧은",
+      "어두운", "가벼운", "싼", "더운", "추운", "많은", "깨끗한", "소중한", "부족한", "좋다"
     ],
     "Adverbs": [
       "위로", "아래로", "매우", "방금", "오직", "또한", "정말로", "조차", "항상", "결코",
       "때때로", "자주", "이미", "여전히", "아직", "빨리", "천천히", "갑자기", "조심스럽게", "직접",
-      "실제로", "정확히", "아마도", "아마도", "어쩌면", "꽤", "다소", "거의", "거의", "충분히",
-      "매우", "완전히", "마침내", "곧", "나중에", "다시", "대신에", "두 번", "함께", "어디든",
-      "어디에나", "어딘가에", "확실히", "보통", "깊이", "빨리", "잘", "멀리", "가까이", "천천히"
+      "실제로", "정확히", "아마도", "어쩌면", "꽤", "다소", "거의", "충분히", "완전히", "마침내",
+      "곧", "나중에", "다시", "대신에", "두 번", "함께", "어디든", "어디에나", "어딘가에", "확실히",
+      "보통", "깊이", "잘", "멀리", "가까이", "가장", "벌써", "따로따로", "매일", "아주",
+      "열심히", "가끔", "그후에", "슬프게"
     ],
     "Phrases": [
       "안녕하세요", "감사합니다", "네", "아니요", "이름이 뭐예요?", "만나서 반가워요", "안녕히 계세요", "안녕히 가세요", "제 이름은 ...입니다", "실례합니다",
@@ -523,8 +540,8 @@
       "식은 죽 먹기죠", "누워서 떡 먹기예요", "땅 짚고 헤엄치기네요", "발 벗고 나서서 도와줄게요", "눈이 너무 높으신 거 아니에요?", "입이 무거운 사람이에요", "귀가 얇아서 문제예요", "얼굴이 두껍네요", "콧대가 높아요", "손이 커서 음식을 많이 해요",
       "발이 넓어서 아는 사람이 많아요", "간이 콩알만 해졌어요", "배보다 배꼽이 더 크네요", "가슴이 벅차올라요", "어깨가 무거워요", "머리가 잘 돌아가네요", "뒷북치지 마세요", "딴전 피우지 마세요", "시치미 떼지 마세요", "바람맞았어요",
       "애를 먹었네요", "속을 썩이네요", "마음이 놓여요", "정신이 없어요", "넉살이 좋네요", "허풍이 심해요", "허세 부리지 마세요", "생색내지 마세요", "기가 막히네요", "어이가 없어요",
-      "기운 차리세요", "분위기 파악 좀 하세요", "찬물을 끼얹지 마세요", "비행기 태우지 마세요", "입을 모아 칭찬했어요", "발등에 불이 떨어졌어요", "산 넘어 산이네요", "금강산도 식후경이죠", "가는 날이 장날이네요", "밑 빠진 독에 물 붓기예요",
-      "우물 안 개구리예요", "그림의 떡이죠", "떡 본 김에 제사 지내요", "꿩 대신 닭이에요", "도토리 키 재기네요", "등잔 밑이 어둡네요", "소 잃고 외양간 고치지 마세요", "티끌 모아 태산이에요", "세 살 버릇 여든까지 가요", "시작이 반이에요"
+      "기운 차리세요", "분위기 파악 좀 하세요", "찬물을 끼얹지 마세요", "비행기 태우지 마세요", "입을 모아 칭찬했어요", "발등에 불이 떨어졌어요", "산 넘어 산이네요", "발이 넓다", "귀가 얇다", "손이 크다",
+      "입이 무겁다", "눈이 높다", "간이 콩알만 해지다", "배가 아프다", "속을 썩이다", "비행기를 태우다", "발 벗고 나서다", "눈코 뜰 새 없다", "국수를 먹다", "미역국을 먹다"
     ],
     "Phrases7": [
       "귀사의 무궁한 발전을 기원합니다", "문의하신 사항에 대해 답변드립니다", "심심한 사과의 말씀을 올립니다", "규정에 의거하여 처리하였습니다", "절차에 따라 진행될 예정입니다", "공문 확인 부탁드립니다", "협약 체결을 제안합니다", "서명 후 회신 바랍니다", "첨부 파일을 참조하십시오", "기한 내에 제출해 주십시오",
@@ -538,7 +555,9 @@
       "설상가상의 상황이지만 포기하지 맙시다", "금상첨화인 상황이네요", "자업자득이니 누구를 원망하겠습니까", "동병상련의 마음을 느낍니다", "결자해지의 자세로 임하십시오", "막상막하의 실력을 보여주었습니다", "천고마비의 계절이 왔네요", "온고지신의 정신을 계승합시다", "권선징악의 교훈을 담고 있습니다", "일취월장한 실력에 놀랐습니다",
       "심사숙고 끝에 내린 결정입니다", "우여곡절 끝에 성공했습니다", "유구무언이라 할 말이 없습니다", "천차만별의 취향을 존중합시다", "절치부심하며 때를 기다렸습니다", "와신상담의 세월을 보냈습니다", "파죽지세로 성장하고 있습니다", "승승장구하시길 기원합니다", "화룡점정의 역할을 해주셨습니다", "부화뇌동하지 말고 중심을 잡으세요",
       "탁상공론만 해서는 안 됩니다", "마이동풍처럼 듣지 않네요", "동문서답하지 말고 똑바로 말하세요", "적반하장도 유분수지 말입니다", "감언이설에 속지 마세요", "토사구팽당하지 않게 조심하십시오", "침소봉대하여 말하지 마세요", "견물생심이라더니 욕심이 나네요", "개과천선한 모습이 보기 좋습니다", "살신성인의 자세로 헌신했습니다",
-      "임기응변으로 위기를 넘겼습니다", "주객전도된 상황이네요", "천양지차의 결과를 보였습니다", "함흥차사라 소식이 없네요", "우이독경인 사람과는 대화가 안 됩니다", "조변석개하는 정책은 신뢰를 잃습니다", "구사일생으로 살아남았습니다", "단도직입적으로 묻겠습니다", "명실상부한 업계 1위입니다", "안하무인 격으로 행동하지 마세요"
+      "임기응변으로 위기를 넘겼습니다", "주객전도된 상황이네요", "천양지차의 결과를 보였습니다", "함흥차사라 소식이 없네요", "우이독경인 사람과는 대화가 안 됩니다", "조변석개하는 정책은 신뢰를 잃습니다", "구사일생으로 살아남았습니다", "단도직입적으로 묻겠습니다", "명실상부한 업계 1위입니다", "안하무인 격으로 행동하지 마세요",
+      "금강산도 식후경이죠", "가는 날이 장날이네요", "밑 빠진 독에 물 붓기예요", "우물 안 개구리예요", "그림의 떡이죠", "떡 본 김에 제사 지내요", "꿩 대신 닭이에요", "도토리 키 재기네요", "등잔 밑이 어둡네요", "소 잃고 외양간 고치지 마세요",
+      "티끌 모아 태산이에요", "세 살 버릇 여든까지 가요", "시작이 반이에요"
     ],
     "Phrases9": [
       "지속 가능한 발전은 인류의 과제입니다", "경제적 성장 동력을 확보해야 합니다", "법적 제도적 장치를 마련하겠습니다", "전략적 파트너십을 강화해야 합니다", "혁신적인 패러다임의 변화가 필요합니다", "디지털 트랜스포메이션을 가속화합시다", "사회적 가치 창출에 기여해야 합니다", "ESG 경영을 본격화하고 있습니다", "글로벌 경쟁력을 제고해야 합니다", "원천 기술 확보가 관건입니다",
@@ -547,28 +566,28 @@
       "다자간 협력 체계를 구축합시다", "보호무역주의 확산에 대응해야 합니다", "문화 콘텐츠의 경쟁력을 강화합시다", "소프트 파워의 영향력을 확대합니다", "사이버 보안 체계를 강화하십시오", "데이터 주권을 확보해야 합니다", "스마트 시티 인프라를 확충합시다", "모빌리티 혁신을 선도합시다", "바이오 산업의 주도권을 잡읍시다", "우주 항공 산업에 도전합니다",
       "재생 에너지 비중을 확대하십시오", "탄소 중립 달성을 목표로 합니다", "순환 경제 모델을 도입합시다", "노동 시장의 유연성을 확보해야 합니다", "기본 소득 논의를 구체화합시다", "정밀 의료 시스템을 구축합니다", "양자 컴퓨팅 기술을 선점합시다", "블록체인 기술을 고도화하십시오", "메타버스 생태계를 확장합니다", "미래 성장 잠재력을 확충하십시오"
     ],
-    "Verbs2": ["허용하다", "믿다", "사다", "바꾸다", "선택하다", "계속하다", "고려하다", "창조하다", "결정하다", "기대하다", "따르다", "성장하다", "잡다", "희망하다", "개선하다", "증가하다", "이끌다", "배우다", "하게하다", "눕다", "좋아하다", "듣다", "의미하다", "열다", "생산하다", "제안하다", "올리다", "받다", "기억하다", "보고하다", "요구하다", "팔다", "보내다", "봉사하다", "설정하다", "소비하다", "머무르다", "멈추다", "공부하다", "지원하다", "이해하다", "기다리다", "걷다", "보다", "이기다", "제공하다", "공급하다", "도달하다", "읽다", "줄이다"],
-    "Verbs3": ["받아들이다", "동의하다", "나타나다", "도착하다", "되다", "빌리다", "깨뜨리다", "가져오다", "짓다", "운반하다", "잡다", "확인하다", "닫다", "세다", "덮다", "자르다", "춤추다", "묘사하다", "죽다", "그리다", "마시다", "운전하다", "먹다", "즐기다", "설명하다", "떨어지다", "채우다", "끝내다", "날다", "잊다", "추측하다", "걸다", "듣다", "희망하다", "다치다", "가입하다", "뛰다", "죽이다", "키스하다", "웃다", "들어올리다", "잃다", "사랑하다", "결혼하다", "만나다", "그리워하다", "주문하다", "지불하다", "타다", "노래하다", "자다"],
-    "Verbs4": ["조언하다", "영향을주다", "발표하다", "지원하다", "주장하다", "정리하다", "피하다", "원인이되다", "축하하다", "비교하다", "불평하다", "확인하다", "연결하다", "조절하다", "배달하다", "의존하다", "설계하다", "발견하다", "토론하다", "벌다", "격려하다", "설립하다", "검사하다", "경험하다", "탐험하다", "강요하다", "형성하다", "다루다", "상상하다", "나타내다", "알리다", "소개하다", "초대하다", "관리하다", "언급하다", "알아차리다", "관찰하다", "조직하다", "수행하다", "준비하다", "제시하다", "예방하다", "약속하다", "보호하다", "증명하다", "깨닫다", "교체하다", "검색하다", "공유하다", "해결하다"],
-    "Verbs5": ["분석하다", "예상하다", "감상하다", "승인하다", "가정하다", "시도하다", "혜택을주다", "도전하다", "주장하다", "결합하다", "전념하다", "집중하다", "수행하다", "설득하다", "비판하다", "정의하다", "요구하다", "부인하다", "가치가있다", "결정하다", "배포하다", "강조하다", "가능하게하다", "보장하다", "평가하다", "특징으로하다", "집중하다", "생성하다", "확인하다", "무시하다", "암시하다", "인상을주다", "포함하다", "영향을미치다", "조사하다", "관련시키다", "유지하다", "감시하다", "협상하다", "얻다", "참여하다", "설득하다", "예측하다", "추구하다", "추천하다", "반영하다", "후회하다", "의지하다", "상기시키다", "응답하다"],
-    "Verbs6": ["폐지하다", "축적하다", "획득하다", "적응하다", "옹호하다", "할당하다", "변경하다", "증폭하다", "단언하다", "평가하다", "흡수하다", "증강하다", "명확하게하다", "협력하다", "준수하다", "타협하다", "인정하다", "통합하다", "반박하다", "경작하다", "추론하다", "묘사하다", "유래하다", "감소하다", "공개하다", "상술하다", "제거하다", "포용하다", "직면하다", "향상시키다", "상상하다", "과장하다", "촉진하다", "변동하다", "공식화하다", "육성하다", "주저하다", "시행하다", "개시하다", "혁신하다", "검사하다", "해석하다", "정당화하다", "나타내다", "수정하다", "극복하다", "인지하다", "강화하다", "자극하다", "활용하다"],
-    "Verbs7": ["성취하다", "관리하다", "명확히말하다", "협상하다", "계산하다", "일치하다", "시작하다", "강요하다", "보완하다", "구상하다", "압축하다", "직면하다", "동의하다", "조정하다", "상담하다", "위임하다", "지정하다", "차별화하다", "전환하다", "지배하다", "반향하다", "회피하다", "구현하다", "나타나다", "권한을부여하다", "승인하다", "집행하다", "계몽하다", "풍요롭게하다", "수반하다", "갖추다", "진화하다", "초과하다", "제외하다", "행사하다", "착취하다", "추출하다", "날조하다", "여과하다", "번창하다", "파악하다", "중단하다", "수확하다", "방해하다", "가정하다", "밝히다", "부과하다", "유도하다", "상속하다", "억제하다"],
-    "Verbs8": ["개입하다", "불을붙이다", "해방하다", "위치를찾다", "확대하다", "조종하다", "합병하다", "동원하다", "양육하다", "강요하다", "모호하게하다", "반대하다", "능가하다", "점검하다", "감독하다", "마비시키다", "관통하다", "보존하다", "주재하다", "우세하다", "우선순위를정하다", "선포하다", "연장하다", "추진하다", "번영하다", "도발하다", "비준하다", "화해시키다", "교정하다", "개선하다", "규제하다", "재활시키다", "반복하다", "포기하다", "제공하다", "개조하다", "격퇴하다", "닮다", "회복하다", "보유하다", "후퇴하다", "회수하다", "숭배하다", "회생시키다", "조사하다", "산산조각내다", "시뮬레이션하다", "추측하다", "능가하다", "번창하다"],
-    "Adjectives2": ["고대의", "불안한", "지독한", "쓴", "밝은", "넓은", "차분한", "저렴한", "영리한", "잔인한", "깊은", "더러운", "마른", "비어있는", "공정한", "거짓의", "유명한", "화려한", "평평한", "신선한", "부드러운", "기쁜", "웅장한", "유죄의", "가혹한", "건강한", "공허한", "거대한", "배고픈", "시끄러운", "운좋은", "화난", "좁은", "불쾌한", "이상한", "평범한", "예의바른", "자랑스러운", "순수한", "희귀한", "거친", "날카로운", "약간의", "매끄러운", "단단한", "신", "안정된", "뻣뻣한", "강인한", "야생의"],
-    "Adjectives3": ["정확한", "적절한", "연간의", "인공적인", "자동의", "이용가능한", "기초적인", "능력있는", "시민의", "고전적인", "복잡한", "끊임없는", "비판적인", "현재의", "명확한", "별개의", "국내의", "효율적인", "전체의", "명백한", "외부의", "유연한", "빈번한", "글로벌한", "내부의", "법적인", "논리적인", "최대의", "정신적인", "최소의", "사소한", "이동식의", "상호간의", "부정적인", "보통의", "명백한", "독창적인", "수동적인", "신체적인", "긍정적인", "정밀한", "주요한", "관련된", "심각한", "유사한", "특정한", "안정된", "표준의", "기술적인", "전형적인"],
-    "Adjectives4": ["풍부한", "야심찬", "적절한", "기이한", "신중한", "일관성있는", "비교가능한", "포괄적인", "상당한", "논란이되는", "결정적인", "의도적인", "필사적인", "지배적인", "과감한", "정교한", "우아한", "거대한", "필수적인", "독점적인", "이국적인", "광범위한", "매혹적인", "진실한", "적대적인", "동일한", "피할수없는", "전염성의", "고유한", "강렬한", "보이지않는", "고립된", "미미한", "겸손한", "신비로운", "주목할만한", "낙관적인", "독특한", "끈질긴", "그럴듯한", "소중한", "심오한", "번영하는", "꺼려하는", "놀라운", "중요한", "세련된", "실질적인", "충분한", "취약한"],
-    "Adjectives5": ["추상적인", "미적인", "모호한", "익명의", "임의의", "인증된", "자비로운", "인지적인", "자기만족의", "눈에띄는", "냉소적인", "부족한", "부지런한", "의심스러운", "괴짜의", "웅변적인", "경험적인", "덧없는", "모호한", "모범적인", "오류가있는", "실행가능한", "경솔한", "사교적인", "결점없는", "암시적인", "무관심한", "피할수없는", "무해한", "교활한", "복잡한", "직관적인", "신중한", "기면의", "명쾌한", "꼼꼼한", "무시해도될", "구식의", "전능한", "불투명한", "수심에잠긴", "널리퍼진", "실용적인", "불필요한", "회복력있는", "양심적인", "자발적인", "과잉의", "사소한", "다재다능한"],
-    "Adverbs2": ["실제로", "이미", "어쨌든", "기본적으로", "짧게", "확실히", "분명히", "밀접하게", "완전히", "직접", "쉽게", "전적으로", "특히", "정확히", "매우", "마침내", "빈번하게", "충분히", "부드럽게", "거의않다", "매우", "즉시", "대신에", "최근에", "주로", "단지", "대부분", "거의", "필연적으로", "특히", "완벽하게", "아마도", "정확하게", "이전에", "아마도", "적절하게", "빨리", "조용히", "드물게", "최근에", "상대적으로", "대략", "심각하게", "곧", "단순히", "약간", "천천히", "전적으로", "보통", "널리"],
-    "Verbs9": ["옹호하다", "완화하다", "증폭시키다", "또렷하게말하다", "확인하다", "협력하다", "편집하다", "인정하다", "동의하다", "통합하다", "제한하다", "심사숙고하다", "확증하다", "축소하다", "해독하다", "추론하다", "묘사하다", "그리다", "유래하다", "벗어나다", "유포하다", "설명하다", "구현하다", "권한을부여하다", "포괄하다", "낳다", "향상시키다", "상상하다", "환기시키다", "악화시키다", "전형이되다", "촉진시키다", "용이하게하다", "변동하다", "육성하다", "모으다", "방해하다", "이행하다", "부추기다", "통합시키다", "해방시키다", "경감하다", "양육하다", "제거하다", "편성하다", "영속시키다", "화해시키다", "면밀히조사하다", "초월하다", "유지하다"],
-  "Adjectives6": ["풍부한", "모호한", "자비로운", "일관성있는", "자기만족적인", "눈에띄는", "근면한", "설득력있는", "변덕스러운", "정교한", "실행가능한", "경솔한", "잘속는", "위선적인", "공정한", "무관심한", "고유의", "타고난", "복잡한", "신중한", "명쾌한", "꼼꼼한", "세속적인", "희미한", "망각하는", "모호한", "구식의", "불길한", "과시하는", "생각에잠긴", "통찰력있는", "그럴듯한", "실용적인", "불안정한", "심오한", "검소한", "불필요한", "회복력있는", "회의적인", "자발적인", "엄격한", "미묘한", "피상적인", "유형의", "끈기있는", "사소한", "만장일치의", "막연한", "다재다능한", "활기찬"],
-  "Adjectives7": ["미적인", "이타적인", "고대의", "기민한", "엄격한", "호전적인", "변덕스러운", "신랄한", "속임수의", "설득력있는", "논쟁적인", "연회하기좋은", "풍부한", "품위있는", "설교적인", "신중한", "이질적인", "독단적인", "열성적인", "절충적인", "지독한", "수명이짧은", "침착한", "심오한", "경박한", "까다로운", "우연한", "사교적인", "우상파괴적인", "불변의", "영향받지않는", "성급한", "토착의", "말할수없는", "탐욕스러운", "교활한", "비협조적인", "뿌리깊은", "수다스러운", "관대한", "변덕스러운", "통렬한", "사악한", "아첨하는", "인색한", "불성실한", "형식적인", "치명적인", "명민한", "냉담한"],
-  "Adjectives8": ["심오한", "신랄한", "시대착오적인", "변칙적인", "반감을가지는", "대조적인", "금욕적인", "부지런한", "비전형적인", "대담한", "아저씨같은", "전원적인", "급성장하는", "불협화음의", "정전의", "우회하는", "신중한", "비밀의", "상응하는", "간결한", "수반되는", "조건부의", "해로운", "선동적인", "산만한", "투명한", "이분법적인", "솔직하지못한", "쇠퇴한", "효과적인", "철면피의", "기운을빼는", "수수께끼같은", "거대함", "인식론적인", "모호한", "박식한", "덧없는", "절박한", "과도한", "속죄의", "현존하는", "관련없는", "익살맞은", "허위의", "어리석은", "무능한", "적절한", "성미까다로운", "지나친"],
-  "Adverbs3": ["그에따라", "인정하건대", "완전히", "매년", "불안하게", "겉보기에는", "자동으로", "간신히", "잠시", "확실히", "밀접하게", "완전히", "끊임없이", "현재", "명확하게", "의도적으로", "직접", "극적으로", "전적으로", "똑같이", "특히", "결국", "정확히", "매우", "자주", "점차", "거의않다", "매우", "즉시", "처음에", "즉각", "주로", "말그대로", "주로", "단지", "자연스럽게", "거의", "필연적으로", "분명히", "완벽하게", "정확히", "이전에", "주로", "아마도", "상대적으로", "최근에", "따로", "조만간", "비슷하게", "전적으로"],
-  "Adverbs4": ["갑자기", "적절하게", "불리하게", "주장하는바에의하면", "대략", "인위적으로", "널리", "서투르게", "비교적", "결과적으로", "상당히", "편리하게", "결정적으로", "밀집하여", "뚜렷하게", "열심히", "효과적으로", "효율적으로", "정교하게", "과도하게", "독점적으로", "명시적으로", "광범위하게", "충실히", "공식적으로", "근본적으로", "진심으로", "향후", "이상적으로", "암시적으로", "부수적으로", "무기한으로", "필연적으로", "변함없이", "현저하게", "적당히", "상호간에", "특히", "가끔", "부분적으로", "지속적으로", "잠재적으로", "아마도", "근본적으로", "기꺼이않는", "현저하게", "보기에", "그후에", "충분히", "사실상"],
-  "Adverbs5": ["완전히", "모호하게", "자비롭게", "연대순으로", "우연히", "포괄적으로", "결정적으로", "동시에", "비밀리에", "양심적으로", "논란이되게", "상응하여", "기묘하게", "확정적으로", "증명할수있게", "비참하게", "불균형하게", "독특하게", "격렬하게", "단호하게", "잘못되게", "예외적으로", "노력하여", "사치스럽게", "실행가능하게", "격렬하게", "가공할정도로", "미친듯이", "생생하게", "조화롭게", "무턱대고", "설명적으로", "상상력이풍부하게", "엄청나게", "완벽하게", "명령조로", "반박의여지없이", "무한히", "본질적으로", "혁신적으로", "지능적으로", "집중적으로", "간헐적으로", "직관적으로", "거부할수없게", "꼼꼼하게", "일시적으로", "악명높게", "낙관적으로", "최고로"],
-  "Adverbs6": ["추상적으로", "임의로", "부지런히", "대담하게", "엄격하게", "자명하게", "호전적으로", "노골적으로", "변덕스럽게", "단호하게", "신랄하게", "비밀리에", "설득력있게", "강박적으로", "거만하게", "추측상으로", "눈에띄게", "경멸적으로", "풍부하게", "냉소적으로", "기만적으로", "품위있게", "경의를표하며", "조롱하듯", "황량하게", "정반대로", "교훈적으로", "경멸적으로", "이질적으로", "독단적으로", "열성적으로", "절충적으로", "지독하게", "설득력있게", "수수께끼같이", "모호하게", "박식하게", "비법으로", "완곡하게", "회피적으로", "화나게", "모범적으로", "과도하게", "편의상", "명시적으로", "정교하게", "즉흥적으로", "익살맞게", "허위로", "까다롭게"],
-  "Adverbs7": ["심오하게", "시대착오적으로", "변칙적으로", "대조적으로", "고풍스럽게", "또렷하게", "금욕적으로", "기민하게", "비전형적으로", "아저씨같이", "전원적으로", "불협화음으로", "정전대로", "우회적으로", "신중하게", "상응하게", "간결하게", "수반하여", "조건부로", "해롭게", "선동적으로", "산만하게", "투명하게", "이분법적으로", "솔직하지못하게", "냉정하게", "효과적으로", "뻔뻔스럽게", "기운빠지게", "인식론적으로", "덧없이", "기뻐하며", "적절하게", "우연히", "성미까다롭게", "지나치게", "사교적으로", "우상파괴적으로", "특이하게", "수치스럽게", "불변하게", "무표정하게", "무일푼으로", "오만하게", "성급하게", "달랠수없게", "토착적으로", "말로다할수없게", "피할수없게", "미세하게"],
-  "Adverbs8": ["교활하게", "비협조적으로", "뿌리깊게", "불쾌하게", "성미급하게", "순회하며", "신중하게", "간결하게", "수다스럽게", "슬프게", "관대하게", "악의적으로", "변덕스럽게", "통렬하게", "후하게", "사악하게", "아첨하며", "날카롭게", "참견하며", "전지하게", "번거롭게", "치욕스럽게", "인색하게", "현학적으로", "가난하게", "단호하게", "불성실하게", "형식적으로", "순회하며", "치명적으로", "명민하게", "냉담하게", "진부하게", "위태롭게", "가파르게", "초자연적으로", "엄청나게", "방탕하게", "상서롭게", "철없이", "호전적으로", "꼼꼼하게", "겁많게", "불평하며", "몽상가같이", "반항적으로", "심오하게", "당당하게", "빛나게", "항의하듯"]
+    "Verbs2": ["허용하다", "사다", "바꾸다", "선택하다", "계속하다", "고려하다", "결정하다", "기대하다", "따르다", "성장하다", "잡다", "희망하다", "개선하다", "증가하다", "이끌다", "배우다", "하게하다", "눕다", "좋아하다", "의미하다", "열다", "생산하다", "제안하다", "올리다", "받다", "기억하다", "보고하다", "요구하다", "팔다", "보내다", "봉사하다", "설정하다", "소비하다", "머무르다", "멈추다", "공부하다", "지원하다", "이해하다", "기다리다", "걷다", "이기다", "제공하다", "공급하다", "도달하다", "읽다", "줄이다", "벗다", "신다", "던지다", "집중하다", "추천하다", "후회하다", "계산하다", "불을붙이다", "위치를찾다", "반대하다", "포기하다", "닮다", "낳다"],
+    "Verbs3": ["받아들이다", "동의하다", "나타나다", "도착하다", "되다", "빌리다", "깨뜨리다", "짓다", "운반하다", "확인하다", "닫다", "세다", "덮다", "자르다", "춤추다", "묘사하다", "죽다", "그리다", "마시다", "운전하다", "먹다", "즐기다", "설명하다", "떨어지다", "채우다", "끝내다", "날다", "잊다", "추측하다", "걸다", "다치다", "가입하다", "뛰다", "죽이다", "키스하다", "웃다", "들어올리다", "사랑하다", "결혼하다", "그리워하다", "주문하다", "타다", "노래하다", "자다", "감추다", "건네다", "물러서다", "붙잡다", "살펴보다", "지켜보다", "감소하다", "인정하다", "극복하다", "상담하다", "방해하다", "밝히다", "반복하다", "회복하다", "벗어나다"],
+    "Verbs4": ["조언하다", "영향을주다", "발표하다", "주장하다", "정리하다", "피하다", "원인이되다", "비교하다", "불평하다", "연결하다", "조절하다", "배달하다", "의존하다", "설계하다", "발견하다", "토론하다", "격려하다", "설립하다", "검사하다", "경험하다", "탐험하다", "강요하다", "형성하다", "다루다", "상상하다", "나타내다", "알리다", "초대하다", "관리하다", "언급하다", "알아차리다", "관찰하다", "조직하다", "수행하다", "제시하다", "예방하다", "약속하다", "보호하다", "증명하다", "깨닫다", "교체하다", "검색하다", "공유하다", "해결하다", "검토하다", "협의하다", "취하다", "제한하다", "편집하다", "축소하다"],
+    "Verbs5": ["분석하다", "예상하다", "감상하다", "승인하다", "가정하다", "시도하다", "혜택을주다", "도전하다", "결합하다", "전념하다", "설득하다", "비판하다", "정의하다", "부인하다", "가치가있다", "배포하다", "강조하다", "가능하게하다", "보장하다", "평가하다", "특징으로하다", "생성하다", "무시하다", "암시하다", "인상을주다", "영향을미치다", "조사하다", "관련시키다", "감시하다", "협상하다", "참여하다", "예측하다", "추구하다", "반영하다", "의지하다", "상기시키다", "응답하다", "고찰하다", "규명하다", "도출하다", "분류하다", "수렴하다", "정립하다", "제고하다", "종합하다", "총괄하다", "창조하다", "완화하다", "병치하다", "함축하다"],
+    "Verbs6": ["폐지하다", "축적하다", "획득하다", "적응하다", "옹호하다", "할당하다", "변경하다", "증폭하다", "단언하다", "흡수하다", "증강하다", "명확하게하다", "협력하다", "준수하다", "타협하다", "통합하다", "반박하다", "경작하다", "추론하다", "유래하다", "공개하다", "상술하다", "제거하다", "포용하다", "직면하다", "향상시키다", "과장하다", "촉진하다", "변동하다", "공식화하다", "육성하다", "주저하다", "시행하다", "개시하다", "혁신하다", "해석하다", "정당화하다", "수정하다", "인지하다", "강화하다", "자극하다", "활용하다", "타파하다", "수렴되다", "배척하다", "규탄하다", "고취하다", "지양하다", "괴리되다", "견지하다"],
+    "Verbs7": ["성취하다", "명확히말하다", "일치하다", "보완하다", "구상하다", "압축하다", "조정하다", "위임하다", "지정하다", "차별화하다", "전환하다", "지배하다", "반향하다", "회피하다", "구현하다", "권한을부여하다", "집행하다", "계몽하다", "풍요롭게하다", "수반하다", "갖추다", "진화하다", "초과하다", "제외하다", "행사하다", "착취하다", "추출하다", "날조하다", "여과하다", "번창하다", "파악하다", "중단하다", "수확하다", "부과하다", "유도하다", "상속하다", "억제하다", "간주하다", "고갈시키다", "상쇄하다", "선행하다", "은폐하다", "일축하다", "잠식하다", "절충하다", "체계화하다", "답습하다", "폄훼하다", "발흥하다", "질곡되다"],
+    "Verbs8": ["개입하다", "해방하다", "확대하다", "조종하다", "합병하다", "동원하다", "양육하다", "모호하게하다", "능가하다", "점검하다", "감독하다", "마비시키다", "관통하다", "보존하다", "주재하다", "우세하다", "우선순위를정하다", "선포하다", "연장하다", "추진하다", "번영하다", "도발하다", "비준하다", "화해시키다", "교정하다", "규제하다", "재활시키다", "개조하다", "격퇴하다", "보유하다", "후퇴하다", "회수하다", "숭배하다", "회생시키다", "산산조각내다", "시뮬레이션하다", "박탈하다", "간과하다", "폄하하다", "부각하다", "천명하다", "도모하다", "일임하다", "설파하다", "상찬하다", "호도하다", "도외시하다", "형해화하다", "일갈하다", "부침하다"],
+    "Adjectives2": ["고대의", "불안한", "지독한", "쓴", "밝은", "넓은", "차분한", "저렴한", "영리한", "잔인한", "깊은", "더러운", "마른", "비어있는", "공정한", "거짓의", "유명한", "화려한", "평평한", "신선한", "부드러운", "기쁜", "웅장한", "가혹한", "건강한", "공허한", "거대한", "배고픈", "시끄러운", "운좋은", "화난", "좁은", "불쾌한", "이상한", "평범한", "예의바른", "자랑스러운", "순수한", "희귀한", "거친", "날카로운", "약간의", "매끄러운", "단단한", "신", "안정된", "뻣뻣한", "강인한", "야생의", "부지런한", "비밀의"],
+    "Adjectives3": ["정확한", "적절한", "연간의", "인공적인", "자동의", "이용가능한", "기초적인", "능력있는", "시민의", "고전적인", "복잡한", "끊임없는", "비판적인", "현재의", "별개의", "국내의", "효율적인", "명백한", "외부의", "유연한", "빈번한", "글로벌한", "내부의", "법적인", "논리적인", "최대의", "정신적인", "최소의", "사소한", "이동식의", "상호간의", "부정적인", "보통의", "독창적인", "수동적인", "신체적인", "긍정적인", "정밀한", "관련된", "심각한", "유사한", "특정한", "표준의", "기술적인", "전형적인", "일시적인", "공식적인", "합리적인", "객관적인", "주관적인", "활기찬", "희미한", "엄격한", "변덕스러운", "타고난", "까다로운", "침착한", "말할수없는", "투명한", "효과적인", "어리석은"],
+    "Adjectives4": ["풍부한", "야심찬", "기이한", "신중한", "일관성있는", "비교가능한", "포괄적인", "상당한", "논란이되는", "결정적인", "의도적인", "필사적인", "지배적인", "과감한", "정교한", "우아한", "필수적인", "독점적인", "이국적인", "광범위한", "매혹적인", "적대적인", "동일한", "피할수없는", "전염성의", "고유한", "강렬한", "보이지않는", "고립된", "미미한", "겸손한", "신비로운", "주목할만한", "낙관적인", "독특한", "끈질긴", "그럴듯한", "심오한", "번영하는", "꺼려하는", "놀라운", "세련된", "실질적인", "충분한", "취약한", "치밀한", "탁월한", "기발한", "엄밀한", "공공의", "경제적인", "명확한", "성급한", "치명적인", "형식적인", "수명이짧은", "해로운"],
+    "Adjectives5": ["추상적인", "미적인", "모호한", "익명의", "임의의", "인증된", "자비로운", "인지적인", "자기만족의", "눈에띄는", "냉소적인", "의심스러운", "괴짜의", "웅변적인", "경험적인", "덧없는", "모범적인", "오류가있는", "실행가능한", "경솔한", "사교적인", "결점없는", "암시적인", "무관심한", "무해한", "교활한", "직관적인", "명쾌한", "꼼꼼한", "무시해도될", "구식의", "전능한", "불투명한", "수심에잠긴", "널리퍼진", "실용적인", "불필요한", "회복력있는", "양심적인", "자발적인", "과잉의", "다재다능한", "초월적인", "상징적인", "사변적인", "잠재적인", "원초적인", "유죄의", "생경하다", "오롯하다"],
+    "Adverbs2": ["어쨌든", "기본적으로", "짧게", "분명히", "밀접하게", "쉽게", "전적으로", "특히", "부드럽게", "거의않다", "즉시", "최근에", "주로", "단지", "대부분", "완벽하게", "정확하게", "이전에", "적절하게", "조용히", "드물게", "상대적으로", "대략", "심각하게", "단순히", "약간", "널리", "간단히", "솔직히", "깨끗이", "늘", "더욱", "많이", "마치", "따뜻하게", "편안하게", "즐겁게", "재미있게", "행복하게", "바쁘게", "길게", "높이", "낮게", "밝게", "어둡게", "건강하게", "사이좋게", "가볍게", "우연히", "동시에", "엄청나게", "최고로", "부지런히", "화나게", "아저씨같이", "가난하게", "빛나게"],
+    "Verbs9": ["증폭시키다", "분절하다", "심사숙고하다", "확증하다", "해독하다", "유포하다", "포괄하다", "환기시키다", "악화시키다", "체화하다", "촉진시키다", "용이하게하다", "이행하다", "부추기다", "통합시키다", "해방시키다", "경감하다", "편성하다", "영속시키다", "천착하다", "초월하다", "가늠하다", "갈파하다", "격하하다", "곡해하다", "교사하다", "도륙하다", "만끽하다", "몰각하다", "묵과하다", "반추하다", "발췌하다", "봉합하다", "부합하다", "빙자하다", "상정하다", "엄습하다", "예속하다", "유예하다", "이간하다", "잠입하다", "전도하다", "추인하다", "경도되다", "비화하다", "함양하다", "통섭하다", "발포하다", "질타하다", "추입하다"],
+  "Adjectives6": ["자기만족적인", "근면한", "설득력있는", "잘속는", "위선적인", "고유의", "세속적인", "망각하는", "불길한", "과시하는", "생각에잠긴", "통찰력있는", "불안정한", "검소한", "회의적인", "미묘한", "피상적인", "유형의", "끈기있는", "만장일치의", "막연한", "과유불급의", "교조적인", "괴이쩍은", "난해한", "노회한", "단편적인", "몰염치한", "무위도식하는", "방약무인한", "배타적인", "변죽울리는", "불가해한", "비분강개한", "사리사욕의", "서슬퍼런", "소회적인", "시종일관한", "아전인수격인", "안하무인의", "어수룩한", "오만한", "외유내강의", "우유부단한", "자의적인", "구절양장하다", "다기망양하다", "오매불망하다", "자중지난하다", "파죽지세하다"],
+  "Adjectives7": ["이타적인", "기민한", "호전적인", "신랄한", "속임수의", "논쟁적인", "표연하다", "품위있는", "설교적인", "이질적인", "독단적인", "열성적인", "절충적인", "경박한", "우연한", "우상파괴적인", "불변의", "막역하다", "토착의", "탐욕스러운", "비협조적인", "뿌리깊은", "수다스러운", "관대한", "통렬한", "사악한", "아첨하는", "인색한", "불성실한", "명민한", "냉담한", "천편일률적인", "권모술수적인", "유아독존적인", "파렴치한", "일망타진의", "표리부동한", "묵시적인", "적반하장격인", "난공불락의", "호시탐탐하는", "견문발검식의", "호의호식하는", "구순하다", "괴괴하다", "무람없다", "방자하다", "소슬하다", "자늑자늑하다", "헙수룩하다"],
+  "Adjectives8": ["시대착오적인", "변칙적인", "반감을가지는", "대조적인", "금욕적인", "비전형적인", "대담한", "아저씨같은", "전원적인", "급성장하는", "불협화음의", "정전의", "우회하는", "상응하는", "간결한", "수반되는", "조건부의", "선동적인", "산만한", "이분법적인", "솔직하지못한", "쇠퇴한", "철면피의", "기운을빼는", "수수께끼같은", "혁혁하다", "인식론적인", "박식한", "절박한", "과도한", "속죄의", "현존하는", "관련없는", "익살맞은", "허위의", "무능한", "성미까다로운", "지나친", "유아무야한", "피안적인", "현학적인", "유폐적인", "몽환적인", "격조높은", "형이상학적인", "기면의", "엄혹하다", "괴이하다", "진중하다", "신랄하다"],
+  "Adverbs3": ["그에따라", "매년", "불안하게", "겉보기에는", "자동으로", "간신히", "잠시", "끊임없이", "현재", "명확하게", "의도적으로", "극적으로", "똑같이", "결국", "점차", "처음에", "즉각", "말그대로", "자연스럽게", "따로", "조만간", "비슷하게", "간소하게", "개별적으로", "공통적으로", "궁극적으로", "기존에", "다행히", "당연히", "무사히", "바람직하게", "사전에", "순조롭게", "안정적으로", "애초에", "우선적으로", "원래", "원활하게", "유연하게", "의외로", "일반적으로", "자발적으로", "정기적으로", "주기적으로", "철저하게", "통상적으로", "평소에", "필히", "지나치게", "특이하게", "철없이", "날카롭게", "당당하게"],
+  "Adverbs4": ["불리하게", "주장하는바에의하면", "인위적으로", "서투르게", "비교적", "결과적으로", "상당히", "편리하게", "결정적으로", "밀집하여", "뚜렷하게", "효과적으로", "효율적으로", "정교하게", "과도하게", "독점적으로", "명시적으로", "광범위하게", "충실히", "공식적으로", "근본적으로", "진심으로", "향후", "이상적으로", "암시적으로", "부수적으로", "무기한으로", "변함없이", "현저하게", "적당히", "상호간에", "부분적으로", "지속적으로", "잠재적으로", "모름지기", "보기에", "사실상", "체계적으로", "합리적으로", "일관되게", "구체적으로", "엄밀하게", "우세하게", "타당하게", "포괄하여", "독자적으로", "가시적으로", "신중하게", "또렷하게", "성급하게", "냉정하게"],
+  "Adverbs5": ["모호하게", "자비롭게", "연대순으로", "포괄적으로", "비밀리에", "양심적으로", "논란이되게", "상응하여", "기묘하게", "확정적으로", "증명할수있게", "비참하게", "불균형하게", "독특하게", "격렬하게", "단호하게", "잘못되게", "예외적으로", "노력하여", "사치스럽게", "실행가능하게", "가공할정도로", "미친듯이", "생생하게", "조화롭게", "무턱대고", "설명적으로", "상상력이풍부하게", "명령조로", "반박의여지없이", "무한히", "본질적으로", "혁신적으로", "지능적으로", "집중적으로", "간헐적으로", "직관적으로", "거부할수없게", "꼼꼼하게", "일시적으로", "악명높게", "낙관적으로", "단편적으로", "체념하듯", "회고조로", "가식적으로", "빈번하게", "자못", "극구", "응당"],
+  "Adverbs6": ["추상적으로", "임의로", "대담하게", "엄격하게", "자명하게", "호전적으로", "노골적으로", "변덕스럽게", "신랄하게", "설득력있게", "강박적으로", "거만하게", "추측상으로", "눈에띄게", "경멸적으로", "풍부하게", "냉소적으로", "기만적으로", "품위있게", "경의를표하며", "조롱하듯", "황량하게", "정반대로", "교훈적으로", "이질적으로", "독단적으로", "열성적으로", "절충적으로", "지독하게", "수수께끼같이", "박식하게", "비법으로", "완곡하게", "회피적으로", "모범적으로", "편의상", "즉흥적으로", "익살맞게", "허위로", "까다롭게", "묵시적으로", "선험적으로", "파괴적으로", "위선적으로", "우발적으로", "비약적으로", "배타적으로", "맹목적으로", "필연적으로", "인정하건대", "총체적으로"],
+  "Adverbs7": ["심오하게", "시대착오적으로", "변칙적으로", "대조적으로", "고풍스럽게", "금욕적으로", "기민하게", "비전형적으로", "전원적으로", "불협화음으로", "정전대로", "우회적으로", "상응하게", "간결하게", "수반하여", "조건부로", "해롭게", "선동적으로", "산만하게", "투명하게", "이분법적으로", "솔직하지못하게", "뻔뻔스럽게", "기운빠지게", "인식론적으로", "덧없이", "흔연히", "성미까다롭게", "사교적으로", "우상파괴적으로", "수치스럽게", "불변하게", "무표정하게", "무일푼으로", "오만하게", "달랠수없게", "토착적으로", "말로다할수없게", "피할수없게", "미세하게", "변증법적으로", "통시적으로", "초월적으로", "차마", "비단", "하물며", "여간", "기어이", "십시일반", "외람되이"],
+  "Adverbs8": ["교활하게", "비협조적으로", "뿌리깊게", "불쾌하게", "성미급하게", "순회하며", "수다스럽게", "관대하게", "악의적으로", "통렬하게", "후하게", "사악하게", "아첨하며", "참견하며", "전지하게", "번거롭게", "치욕스럽게", "인색하게", "현학적으로", "불성실하게", "형식적으로", "치명적으로", "명민하게", "냉담하게", "진부하게", "위태롭게", "가파르게", "초자연적으로", "방탕하게", "상서롭게", "겁많게", "불평하며", "몽상가같이", "반항적으로", "항의하듯", "간악하게", "괴기스럽게", "간교하게", "음흉하게", "표독스럽게", "간특하게", "치졸하게", "외람되게", "오롯하게", "공교롭게도", "비일비재하게", "어처구니없이", "일목요연하게", "자초지종", "파죽지세로"]
   },
 
   
