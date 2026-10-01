@@ -20,6 +20,7 @@ interface UserRow {
   planId: PlanId; planStatus: string; expiry: string;
   xp: number; streak: number; createdAt: string;
   learnLang: string; nativeLang: string;
+  lastActive: string; lessonsDone: number;
 }
 interface LogEntry {
   id: string; action: string; targetEmail: string;
@@ -143,6 +144,7 @@ export default function AdminPage() {
             planId, planStatus, expiry, xp:u.xp||0, streak:u.streak||0,
             createdAt:u.createdAt?.toDate?.()?.toISOString?.()?.slice(0,10)||u.createdAt?.slice?.(0,10)||'',
             learnLang:u.learnLang||'—', nativeLang:u.nativeLang||'—',
+            lastActive:u.lastActive||'', lessonsDone:Array.isArray(u.completedLessons)?u.completedLessons.length:0,
           });
         }
         rows.sort((a,b)=>(a.planId==='free'?1:-1)-(b.planId==='free'?1:-1)||b.xp-a.xp);
@@ -336,12 +338,14 @@ export default function AdminPage() {
                       <th style={TH}>Learning</th>
                       <th style={TH}>Native</th>
                       <th style={TH_NUM}>XP</th>
+                      <th style={TH}>Last active</th>
+                      <th style={TH_NUM}>Lessons</th>
                       <th style={TH}>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     {filtered.length===0&&(
-                      <tr><td colSpan={8} style={{padding:48,textAlign:'center',color:'#94A3B8',fontWeight:700,fontSize:13}}>No users found</td></tr>
+                      <tr><td colSpan={10} style={{padding:48,textAlign:'center',color:'#94A3B8',fontWeight:700,fontSize:13}}>No users found</td></tr>
                     )}
                     {filtered.map((u,i)=>(
                       <tr key={u.uid} className="urow" style={{background:i%2?'#FAFBFD':'#fff'}}>
@@ -354,6 +358,8 @@ export default function AdminPage() {
                         <td style={{...TD,color:'#475569',fontWeight:700,whiteSpace:'nowrap'}} title={u.learnLang}>{langLabel(u.learnLang)}</td>
                         <td style={{...TD,color:'#475569',fontWeight:700,whiteSpace:'nowrap'}} title={u.nativeLang}>{langLabel(u.nativeLang)}</td>
                         <td style={{...TD_NUM,fontWeight:900,color:'#6366F1',whiteSpace:'nowrap'}}>{u.xp.toLocaleString()}</td>
+                        <td style={{...TD,color:'#64748B',fontWeight:700,whiteSpace:'nowrap'}}>{u.lastActive||'—'}</td>
+                        <td style={{...TD_NUM,color:'#475569',fontWeight:700,whiteSpace:'nowrap'}}>{u.lessonsDone}</td>
                         <td style={{...TD,whiteSpace:'nowrap'}}>
                           <div style={{display:'flex',gap:6}}>
                             <button onClick={()=>openGrant(u)} disabled={saving===u.uid}
