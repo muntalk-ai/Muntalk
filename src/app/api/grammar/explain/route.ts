@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import {
-  getIdentity, checkRateLimit, clientIp, apiError, fetchWithTimeout,
+  getIdentity, checkRateLimit, clientIp, apiError, fetchWithTimeout, apiSafeError,
 } from '@/lib/apiGuard';
 import { getAdminDb } from '@/lib/serverAuth';
 import { LEARN_LANGUAGES } from '@/data/languages';
@@ -249,9 +249,6 @@ export async function POST(req: NextRequest) {
     }
     return NextResponse.json({ ...record, source: 'generated' });
   } catch (e) {
-    // TEMP DIAGNOSTIC — revert after identifying the 500 cause
-    const msg = e instanceof Error ? `${e.name}: ${e.message}` : String(e);
-    console.error('[grammar-explain] route error:', e);
-    return NextResponse.json({ error: 'Internal server error', debug: msg }, { status: 500 });
+    return apiSafeError('[grammar-explain] route error:', e);
   }
 }
