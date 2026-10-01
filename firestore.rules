@@ -180,5 +180,12 @@ service cloud.firestore {
       allow write: if false;
     }
 
+    // ── Grammar Hub 모국어 설명 캐시 ─────────────────────────────────
+    // 학습용 공개 콘텐츠: 누구나 읽기 가능, 쓰기는 서버(Admin SDK) 전용.
+    match /grammar_nl/{docId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
   }
 }
