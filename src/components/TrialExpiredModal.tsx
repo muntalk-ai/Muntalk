@@ -21,7 +21,7 @@ interface Props {
 const MESSAGES: Record<Reason, { emoji: string; title: string; body: (langLabel?: string) => string }> = {
   expired: {
     emoji: '⏰',
-    title: '14-Day Trial Ended',
+    title: '7-Day Trial Ended',
     body: () => 'Your free trial has expired. Upgrade to Premium to continue learning.',
   },
   language_limit: {
