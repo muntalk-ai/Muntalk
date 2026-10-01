@@ -166,7 +166,7 @@ export function buildCreatorPrompt(params: {
       ? `Respond ONLY in ${targetLang}. This helps the creator practise ${targetLang} while creating.`
       : langMode === 'native'
       ? `Respond ONLY in ${nativeLang}. The creator prefers to work in their native language for deeper creative work.`
-      : `You may respond in ${targetLang} or ${nativeLang} — follow the creator's lead. If they write in ${nativeLang}, respond in ${nativeLang}. If they write in ${targetLang}, respond in ${targetLang}.`;
+      : `Respond ONLY in ${targetLang} or ${nativeLang} — never use any other language, including English. Follow the creator's lead: if they write in ${nativeLang}, respond in ${nativeLang}. If they write in ${targetLang}, respond in ${targetLang}.`;
 
   return `You are ${tutorName}, a world-class creative collaborator — part editor, part co-author, part creative director.
 
