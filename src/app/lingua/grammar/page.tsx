@@ -18,6 +18,31 @@ const LANG_LABEL: Record<string,string> = Object.fromEntries(
   LEARN_LANGUAGES.map(l => [l.code, l.label] as const),
 );
 
+// ── Native-language endonyms for the NL-explanation toggle ──────────────────
+
+const NL_ENDONYM: Record<string,string> = {
+  zh:'中文', es:'Español', hi:'हिन्दी', ar:'العربية', pt:'Português', bn:'বাংলা',
+  ru:'Русский', ja:'日本語', pa:'ਪੰਜਾਬੀ', de:'Deutsch', ko:'한국어', fr:'Français',
+  tr:'Türkçe', vi:'Tiếng Việt', te:'తెలుగు', it:'Italiano', th:'ไทย', mr:'मराठी',
+  ta:'தமிழ்', ur:'اردو', id:'Bahasa Indonesia', gu:'ગુજરાતી', pl:'Polski',
+  uk:'Українська', fa:'فارسی', my:'မြန်မာ', tl:'Filipino', ms:'Bahasa Melayu',
+  nl:'Nederlands', jv:'Basa Jawa', sw:'Kiswahili',
+};
+
+// ── Native-language explanation (from /api/grammar/explain) ────────────────
+
+interface NlExplanation {
+  subtitle: string;
+  keyPoint: string;
+  useCases: { label: string; note: string }[];
+  mistakes: { note: string }[];
+  tip: string;
+  quiz: { explanation: string }[];
+  exampleTranslations: string[];
+}
+
+const nlBaseOf = (code: string) => code.split('-')[0].toLowerCase();
+
 // ── Quiz state ────────────────────────────────────────────────────────────────
 
 interface QuizState {
@@ -51,6 +76,10 @@ export default function GrammarPage() {
   const [aiLoading,   setAiLoading]   = useState(false);
   const [showAI,      setShowAI]      = useState(false);
   const [completedIds,setCompletedIds]= useState<Set<string>>(new Set());
+  // Native-language explanation
+  const [nlExp,       setNlExp]       = useState<NlExplanation|null>(null);
+  const [nlLoading,   setNlLoading]   = useState(false);
+  const [showNl,      setShowNl]      = useState(true); // default ON
 
   const chatRef = useRef<HTMLDivElement>(null);
 
@@ -93,6 +122,37 @@ export default function GrammarPage() {
   // Chapters now teach the LEARNER'S language (per-language packs), so the
   // AI coach always works in the learning language.
 
+  // Native-language explanation: available unless native == learning language.
+  const nlAvailable = nlBaseOf(nativeLang) !== nlBaseOf(learnLang);
+  const nlEndonym = NL_ENDONYM[nlBaseOf(nativeLang)] || nativeLangName;
+
+  const loadNlExplanation = useCallback(async (ch: GrammarChapter) => {
+    if (nlBaseOf(nativeLang) === nlBaseOf(learnLang)) return;
+    setNlLoading(true);
+    try {
+      const res = await apiFetch('/api/grammar/explain', {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ chapterId: ch.id, learnLang, nativeLang }),
+        timeoutMs: 60000,
+      });
+      const data = await res.json();
+      if (data && typeof data.subtitle === 'string' && Array.isArray(data.exampleTranslations)) {
+        setNlExp(data as NlExplanation);
+      } else {
+        setNlExp(null);
+      }
+    } catch {
+      setNlExp(null); // fall back to the original English text
+    }
+    setNlLoading(false);
+  }, [learnLang, nativeLang]);
+
+  const toggleNl = () => {
+    const next = !showNl;
+    setShowNl(next);
+    if (next && !nlExp && !nlLoading && selChapter) loadNlExplanation(selChapter);
+  };
+
   const openChapter = (ch: GrammarChapter) => {
     setSelChapter(ch);
     setView('chapter');
@@ -100,6 +160,11 @@ export default function GrammarPage() {
     setQuiz({ current:0, selected:null, answered:false, score:0, done:false });
     setAiChat([]);
     setShowAI(false);
+    // Native-language explanation (default ON when available)
+    setNlExp(null);
+    if (showNl && nlBaseOf(nativeLang) !== nlBaseOf(learnLang)) {
+      loadNlExplanation(ch);
+    }
   };
 
   const markComplete = (id: string) => {
@@ -203,17 +268,34 @@ ${tutor.name}:`;
             <div style={{ fontSize:14, fontWeight:900, color:'#0F172A' }}>
               {ch.emoji} {ch.title}
             </div>
-            <div style={{ fontSize:10, color:'#94A3B8', fontWeight:700 }}>{ch.subtitle}</div>
+            <div style={{ fontSize:10, color:'#94A3B8', fontWeight:700 }}>{showNl && nlExp ? nlExp.subtitle : ch.subtitle}</div>
           </div>
           <div style={{ ...S.levelBadge, background:lvInfo.color, color:'#fff' }}>{lvInfo.label}</div>
         </nav>
 
         <div style={S.chapterBody}>
 
+          {/* Native-language explanation toggle */}
+          {nlAvailable && (
+            <div style={{ display:'flex', justifyContent:'flex-end', marginBottom:2 }}>
+              <button onClick={toggleNl}
+                style={{
+                  padding:'7px 14px', borderRadius:20, cursor:'pointer',
+                  border: showNl ? 'none' : '1.5px solid #CBD5E1',
+                  background: showNl ? ch.color : '#fff',
+                  color: showNl ? '#fff' : '#64748B',
+                  fontSize:12, fontWeight:800,
+                  fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
+                }}>
+                {nlLoading ? '⏳' : '🌐'} {nlEndonym}로 설명 보기{showNl && !nlLoading ? ' ✓' : ''}
+              </button>
+            </div>
+          )}
+
           {/* Key point banner */}
           <div style={{ ...S.keyPoint, borderLeft:`4px solid ${ch.color}` }}>
             <span style={{ fontSize:16, marginRight:8 }}>💡</span>
-            <span style={{ fontSize:14, fontWeight:700, color:'#1E293B', lineHeight:1.6 }}>{ch.keyPoint}</span>
+            <span style={{ fontSize:14, fontWeight:700, color:'#1E293B', lineHeight:1.6 }}>{showNl && nlExp ? nlExp.keyPoint : ch.keyPoint}</span>
           </div>
 
           {/* Structure Table */}
@@ -252,9 +334,12 @@ ${tutor.name}:`;
             <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
               {ch.useCases.map((uc,i) => (
                 <div key={i} style={{ ...S.useCase, borderLeft:`3px solid ${uc.color}` }}>
-                  <span style={{ ...S.useCaseLabel, background:`${uc.color}15`, color:uc.color }}>{uc.label}</span>
+                  <span style={{ ...S.useCaseLabel, background:`${uc.color}15`, color:uc.color }}>{showNl && nlExp?.useCases[i] ? nlExp.useCases[i].label : uc.label}</span>
                   <div style={{ marginTop:6 }}>
                     <div style={{ fontSize:14, fontWeight:700, color:'#0F172A', fontFamily:"Georgia,serif" }}>{uc.example}</div>
+                    {showNl && nlExp?.useCases[i]?.note ? (
+                      <div style={{ fontSize:12, color:'#64748B', fontWeight:600, marginTop:4 }}>💬 {nlExp.useCases[i].note}</div>
+                    ) : null}
                     {uc.translation ? (
                       <div style={{ fontSize:12, color:'#64748B', fontWeight:600, marginTop:2 }}>{uc.translation}</div>
                     ) : null}
@@ -280,9 +365,11 @@ ${tutor.name}:`;
                   </span>
                 ))}
               </div>
-              {nativeLang === 'ko-KR' && (
+              {(showNl && nlExp?.exampleTranslations?.[exampleIdx]) ? (
+                <div style={{ fontSize:13, color:'#64748B', fontWeight:600 }}>{nlExp.exampleTranslations[exampleIdx]}</div>
+              ) : nativeLang === 'ko-KR' ? (
                 <div style={{ fontSize:13, color:'#64748B', fontWeight:600 }}>{ch.examples[exampleIdx].ko}</div>
-              )}
+              ) : null}
               <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginTop:14 }}>
                 <button onClick={() => setExampleIdx(i => Math.max(0,i-1))}
                   disabled={exampleIdx===0}
@@ -312,7 +399,7 @@ ${tutor.name}:`;
                     <span style={S.wrongTag}>❌ {m.wrong}</span>
                     <span style={S.rightTag}>✅ {m.right}</span>
                   </div>
-                  <div style={{ fontSize:12, color:'#64748B', fontWeight:600 }}>💬 {m.note}</div>
+                  <div style={{ fontSize:12, color:'#64748B', fontWeight:600 }}>💬 {showNl && nlExp?.mistakes[i] ? nlExp.mistakes[i].note : m.note}</div>
                 </div>
               ))}
             </div>
@@ -322,7 +409,7 @@ ${tutor.name}:`;
           {ch.tip && (
             <div style={S.tipBox}>
               <span style={{ fontSize:18, marginRight:8 }}>🌟</span>
-              <span style={{ fontSize:13, fontWeight:700, color:'#92400E', lineHeight:1.6 }}>{ch.tip}</span>
+              <span style={{ fontSize:13, fontWeight:700, color:'#92400E', lineHeight:1.6 }}>{showNl && nlExp && nlExp.tip ? nlExp.tip : ch.tip}</span>
             </div>
           )}
 
@@ -397,7 +484,7 @@ ${tutor.name}:`;
                       {quiz.selected===ch.quiz[quiz.current].answer ? '✅ Correct!' : '❌ Wrong'}
                     </div>
                     <div style={{ fontSize:12, color:'#475569', fontWeight:600, marginTop:4 }}>
-                      {ch.quiz[quiz.current].explanation}
+                      {showNl && nlExp?.quiz[quiz.current] ? nlExp.quiz[quiz.current].explanation : ch.quiz[quiz.current].explanation}
                     </div>
                     <button onClick={nextQuiz}
                       style={{ marginTop:10, padding:'8px 20px', borderRadius:10, border:'none',
