@@ -4,6 +4,10 @@ import { useEffect, useMemo, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import RtlDir from '@/components/RtlDir';
 import { useTtsSpeak } from '@/components/useTtsSpeak';
+import { useAuth } from '@/context/AuthContext';
+import { apiFetch } from '@/lib/apiClient';
+import { AI_TIMEOUT_MS } from '@/lib/aiRetry';
+import { LEARN_LANGUAGES, promptLangName } from '@/data/languages';
 import {
   LANG_TO_ALPHABET,
   ALPHABET_FONT_STACKS,
@@ -18,6 +22,17 @@ function AlphabetContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const langParam = searchParams.get('lang') || '';
+  const { user, profile } = useAuth();
+
+  // 모국어: 프로필 → localStorage → 브라우저 언어 → 영어 (About 섹션 번역용)
+  const navLang = typeof window !== 'undefined' ? (navigator.language || 'en-US') : 'en-US';
+  const navBase = navLang.split('-')[0].toLowerCase();
+  const nativeLang = profile?.nativeLang
+    || (typeof window !== 'undefined' ? localStorage.getItem('mt_native_lang') : null)
+    || LEARN_LANGUAGES.find(l => l.code.toLowerCase() === navLang.toLowerCase())?.code
+    || LEARN_LANGUAGES.find(l => l.code.toLowerCase().startsWith(navBase))?.code
+    || 'en-US';
+  const isEnglishNative = nativeLang.toLowerCase().startsWith('en');
 
   const [lang, setLang] = useState(langParam);
   const [systemId, setSystemId] = useState<string | null>(null);
@@ -53,6 +68,65 @@ function AlphabetContent() {
     () => (system ? system.groups.flatMap(g => g.letters) : []),
     [system]
   );
+
+  // ── "About this script" 모국어 번역 ──────────────────────────────────────
+  // 영어 원문을 먼저 보여주고(깜빡임 방지), 번역 완료되면 교체. 실패 시 원문 유지.
+  const [aboutT, setAboutT] = useState<{ title: string; overview: string[]; notes: string[] } | null>(null);
+  useEffect(() => {
+    if (!system || isEnglishNative) { setAboutT(null); return; }
+    const cacheKey = `mt_alphabet_about_${system.id}_${nativeLang}`;
+    try {
+      const cached = localStorage.getItem(cacheKey);
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        if (parsed && Array.isArray(parsed.overview) && parsed.overview.length === system.overview.length
+          && Array.isArray(parsed.notes) && parsed.notes.length === system.notes.length) {
+          setAboutT({ title: parsed.title || 'About this script', overview: parsed.overview, notes: parsed.notes });
+          return;
+        }
+      }
+    } catch { /* 캐시 읽기 실패 → 번역 시도 */ }
+    setAboutT(null);
+    let cancelled = false;
+    (async () => {
+      try {
+        const nativeLabel = promptLangName(nativeLang);
+        const paras = system.overview.map((p, i) => `${i + 1}. ${p}`).join('\n');
+        const tips = system.notes.map((n, i) => `${i + 1}. ${n}`).join('\n');
+        const prompt =
+          `Translate the following description of the "${system.name}" writing system into ${nativeLabel} (the learner's native language). ` +
+          `Keep it natural and beginner-friendly. Do not add explanations.\n\n` +
+          `Paragraphs:\n${paras}\n\n` +
+          `Tips:\n${tips}\n\n` +
+          `Return ONLY valid JSON, no markdown:\n` +
+          `{"title":"TRANSLATED_TITLE","overview":["..."],"notes":["..."]}\n` +
+          `Rules:\n` +
+          `- "title": translate "About this script" into ${nativeLabel}\n` +
+          `- "overview": same number of paragraphs in the same order\n` +
+          `- "notes": same number of tips in the same order`;
+        const res = await apiFetch('/api/gemini', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ uid: user?.uid ?? null, prompt, temperature: 0.3 }),
+          timeoutMs: AI_TIMEOUT_MS,
+        });
+        const data = await res.json();
+        const clean = (data.text || '').replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim();
+        const parsed = JSON.parse(clean);
+        if (cancelled) return;
+        if (!parsed || !Array.isArray(parsed.overview) || parsed.overview.length !== system.overview.length
+          || !Array.isArray(parsed.notes) || parsed.notes.length !== system.notes.length) return;
+        const result = {
+          title: typeof parsed.title === 'string' && parsed.title ? parsed.title : 'About this script',
+          overview: parsed.overview,
+          notes: parsed.notes,
+        };
+        try { localStorage.setItem(cacheKey, JSON.stringify(result)); } catch { /* 저장 실패 무시 */ }
+        setAboutT(result);
+      } catch { /* 번역 실패 → 영어 원문 유지 (조용히 폴백) */ }
+    })();
+    return () => { cancelled = true; };
+  }, [system?.id, nativeLang]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // 퀴즈 순서 셔플
   useEffect(() => {
@@ -159,13 +233,13 @@ function AlphabetContent() {
             <>
               {/* 개요 */}
               <div style={{ background: '#fff', borderRadius: 16, padding: 18, marginBottom: 16, boxShadow: '0 1px 3px rgba(0,0,0,0.06)' }}>
-                <div style={{ fontSize: 15, fontWeight: 900, color: '#0F172A', marginBottom: 10 }}>About this script</div>
-                {system.overview.map((p, i) => (
+                <div style={{ fontSize: 15, fontWeight: 900, color: '#0F172A', marginBottom: 10 }}>{aboutT?.title || 'About this script'}</div>
+                {(aboutT?.overview || system.overview).map((p, i) => (
                   <p key={i} style={{ margin: '0 0 8px', fontSize: 13.5, lineHeight: 1.6, color: '#475569' }}>{p}</p>
                 ))}
-                {system.notes.length > 0 && (
+                {(aboutT?.notes || system.notes).length > 0 && (
                   <div style={{ marginTop: 10, background: '#FFFBEB', borderRadius: 10, padding: '10px 12px' }}>
-                    {system.notes.map((n, i) => (
+                    {(aboutT?.notes || system.notes).map((n, i) => (
                       <div key={i} style={{ fontSize: 12.5, color: '#92400E', fontWeight: 600, marginBottom: 4 }}>💡 {n}</div>
                     ))}
                   </div>
