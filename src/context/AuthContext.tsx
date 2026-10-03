@@ -6,7 +6,8 @@ import { createContext, useContext, useEffect, useState, ReactNode } from 'react
 import { onAuthStateChanged, User } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import {
-  getUserProfile, createUserProfile, migrateFromLocalStorage,
+  getUserProfile,
+  ensureFirstLoginSetup,
   UserProfile,
 } from '@/lib/userProfile';
 
@@ -40,16 +41,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         // 프로필 로드는 백그라운드에서 비동기 처리
         let p = await getUserProfile(u.uid);
         if (!p) {
-          // 첫 로그인 — 프로필 생성 + localStorage 마이그레이션
-          p = await createUserProfile(
-            u.uid,
-            u.email || '',
-            u.displayName || 'Learner',
-            u.photoURL || '',
-          );
-          await migrateFromLocalStorage(u.uid);
-          // 첫 로그인 → 7일 체험 자동 시작
-          await import('@/lib/trialPolicy').then(({ initTrial }) => initTrial(u.uid)).catch(() => {});
+          // 첫 로그인 — 프로필 생성 + localStorage 마이그레이션 + 7일 체험 자동 시작
+          // ensureFirstLoginSetup은 idempotent: 이메일 가입(handleSignup)과 동시 실행돼도
+          // 중복 생성·이중 마이그레이션 없이 한 번만 수행됨
+          await ensureFirstLoginSetup(u.uid, {
+            email: u.email || '',
+            displayName: u.displayName || 'Learner',
+            photoURL: u.photoURL || '',
+          });
           p = (await getUserProfile(u.uid)) || p;
         } else {
           // 기존 유저 — email/displayName/photoURL 항상 최신 Firebase Auth 값으로 동기화

@@ -210,6 +210,43 @@ export async function migrateFromLocalStorage(uid: string) {
   }
 }
 
+// --- 첫 로그인 셋업 보장 (idempotent) -----------------------------------------
+// 이메일 가입(handleSignup)과 AuthContext의 onAuthStateChanged가 동시에 프로필
+// 생성을 시도하던 레이스를 제거하기 위한 단일 진입점.
+//  - 프로필이 없으면 생성, 이미 있으면 그대로 사용 (생성 overwrite 레이스 제거)
+//  - trial 초기화 (initTrial은 doc 존재 시 no-op이라 항상 안전)
+//  - localStorage → Firestore 마이그레이션은 "프로필이 없던 경우(=진짜 첫 로그인)"에만 1회
+//  - 동시 호출은 같은 promise를 공유 → 중복 마이그레이션/XP 이중 지급 방지
+const firstLoginSetupPromises = new Map<string, Promise<void>>();
+
+export async function ensureFirstLoginSetup(
+  uid: string,
+  fallback: { email?: string; displayName?: string; photoURL?: string } = {},
+): Promise<void> {
+  const inFlight = firstLoginSetupPromises.get(uid);
+  if (inFlight) { await inFlight; return; }
+  const run = (async () => {
+    const existing = await getUserProfile(uid);
+    const isFirstLogin = !existing;
+    if (isFirstLogin) {
+      await createUserProfile(
+        uid,
+        fallback.email || '',
+        fallback.displayName || 'Learner',
+        fallback.photoURL || '',
+      );
+    }
+    // trial 보장 (이미 있으면 no-op)
+    await import('./trialPolicy').then(({ initTrial }) => initTrial(uid)).catch(() => {});
+    // 게스트 데이터 이관은 첫 로그인 시에만 1회
+    if (isFirstLogin) {
+      await migrateFromLocalStorage(uid);
+    }
+  })();
+  firstLoginSetupPromises.set(uid, run);
+  try { await run; } finally { firstLoginSetupPromises.delete(uid); }
+}
+
 // --- 구독 필드 추가 ----------------------------------------------------------
 // UserProfile에 subscription 캐시 필드 추가
 export interface UserProfileWithSub extends UserProfile {
