@@ -7,11 +7,14 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { updateUserProfile } from '@/lib/userProfile';
 import { LEARN_LANGUAGES } from '@/data/languages';
+import RtlDir from '@/components/RtlDir';
 
 // -- Constants -----------------------------------------------------------------
 const LEVEL_XP: Record<string, number> = {
   a1: 0, a2: 800, b1: 1400, b2: 2400, c1: 4000, c2: 6500,
 };
+// 재응시 쿨다운: 24시간에 1회 (Gemini 비용 보호 — 서버 측 시간당 6회 제한과 병행)
+const RETAKE_COOLDOWN_MS = 24 * 60 * 60 * 1000;
 const LEVEL_META: Record<string, { label: string; desc: string; emoji: string; color: string }> = {
   a1: { label: 'A1 · Beginner',           desc: 'Start with the basics',        emoji: '🌱', color: '#059669' },
   a2: { label: 'A2 · Elementary',         desc: 'Everyday conversations',        emoji: '🌿', color: '#0D9488' },
@@ -62,6 +65,25 @@ const TRACK_QUESTIONS = [
 interface Question {
   id: number; level: string;
   q: string; options: string[]; answer: number;
+}
+
+// Gemini 응답 정규화 — 오형식 문항은 제외 (맞출 수 없는 문항·채점 왜곡 방지)
+function normalizeQuestions(raw: any): Question[] {
+  if (!Array.isArray(raw)) return [];
+  const validLevels = ['a1', 'a2', 'b1', 'b2', 'c1'];
+  const out: Question[] = [];
+  raw.forEach((item: any, i: number) => {
+    const level = String(item?.level || '').toLowerCase();
+    const qText = String(item?.q || '').trim();
+    const options = Array.isArray(item?.options) ? item.options.map((o: any) => String(o)) : [];
+    const answer = Number(item?.answer);
+    if (!validLevels.includes(level)) return;
+    if (!qText) return;
+    if (options.length !== 4) return;
+    if (!Number.isInteger(answer) || answer < 0 || answer > 3) return;
+    out.push({ id: Number(item?.id) || i + 1, level, q: qText, options, answer });
+  });
+  return out;
 }
 
 type Phase = 'intro' | 'track' | 'loading' | 'cefr' | 'result' | 'error';
@@ -123,11 +145,18 @@ function PlacementInner() {
   const { user, profile, refreshProfile } = useAuth();
 
   const learnLang  = profile?.learnLang  || (typeof window !== 'undefined' ? localStorage.getItem('mt_learn_lang') : null)  || searchParams.get('lang')  || 'en-US';
-  const nativeLang = profile?.nativeLang || (typeof window !== 'undefined' ? localStorage.getItem('mt_native_lang') : null) || 'ko-KR';
+  // 모국어 폴백: 프로필 → localStorage → 브라우저 언어 → 영어 (ko-KR 하드코딩 제거)
+  const navLang = typeof window !== 'undefined' ? (navigator.language || 'en-US') : 'en-US';
+  const navBase = navLang.split('-')[0].toLowerCase();
+  const nativeLang = profile?.nativeLang
+    || (typeof window !== 'undefined' ? localStorage.getItem('mt_native_lang') : null)
+    || LEARN_LANGUAGES.find(l => l.code.toLowerCase() === navLang.toLowerCase())?.code
+    || LEARN_LANGUAGES.find(l => l.code.toLowerCase().startsWith(navBase))?.code
+    || 'en-US';
   const langInfo   = LEARN_LANGUAGES.find(l => l.code === learnLang);
   const nativeInfo = LEARN_LANGUAGES.find(l => l.code === nativeLang);
   const langLabel   = langInfo?.native   || langInfo?.label   || 'English';
-  const nativeLabel = nativeInfo?.native || nativeInfo?.label || 'Korean';
+  const nativeLabel = nativeInfo?.native || nativeInfo?.label || 'English';
 
   const [phase, setPhase]           = useState<Phase>('intro');
   const [trackStep, setTrackStep]   = useState(0);
@@ -143,6 +172,7 @@ function PlacementInner() {
 
   const [loadErr, setLoadErr]       = useState('');
   const [saving, setSaving]         = useState(false);
+  const [applyErr, setApplyErr]     = useState('');
   const timerRef = useRef<ReturnType<typeof setTimeout>|null>(null);
 
   // -- Conversation style card (Phase 2-1 Track 2-A) -----------------------------
@@ -178,44 +208,27 @@ function PlacementInner() {
     }
   };
 
-  // -- CEFR: load pregenerated JSON first, fallback to Gemini -------------
+  // -- CEFR: Gemini 실시간 생성 -------------------------------------------
   const generateCefrQuestions = async () => {
     setLoadErr('');
     try {
-      // 1️⃣ 사전 생성 JSON 먼저 시도 (빠름, API 호출 없음)
-      let qs: Question[] | null = null;
-      try {
-        const preRes = await fetch(`/placement-questions/${learnLang}.json`);
-        if (preRes.ok) {
-          const preData = await preRes.json();
-          if (Array.isArray(preData.questions) && preData.questions.length >= 8) {
-            // 매번 같은 문제 방지 — 랜덤 셔플
-            const shuffled = [...preData.questions].sort(() => Math.random() - 0.5);
-            qs = shuffled.slice(0, 10);
-            console.log(`[placement] ✅ Loaded pregenerated questions for ${learnLang}`);
-          }
-        }
-      } catch { /* pregenerated 없으면 Gemini로 fallback */ }
-
-      // 2️⃣ 사전 생성 없으면 Gemini 실시간 생성
-      if (!qs) {
-        console.log(`[placement] 🤖 Generating with Gemini for ${learnLang}...`);
-        const res = await apiFetch('/api/gemini', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            uid:         user?.uid || null,
-            purpose:     'placement',
-            prompt:      buildGeminiPrompt(langLabel, nativeLabel),
-            temperature: 0.4,
-          }),
-        });
-        const data = await res.json();
-        if (!res.ok || !data.text) throw new Error(data.message || 'AI generation failed');
-        const clean = data.text.replace(/```json\s*/gi,'').replace(/```\s*/g,'').trim();
-        const parsed = JSON.parse(clean);
-        qs = parsed.questions;
-      }
+      console.log(`[placement] 🤖 Generating with Gemini for ${learnLang}...`);
+      const res = await apiFetch('/api/gemini', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          uid:         user?.uid || null,
+          purpose:     'placement',
+          prompt:      buildGeminiPrompt(langLabel, nativeLabel),
+          temperature: 0.4,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.text) throw new Error(data.error || data.message || 'AI generation failed');
+      const clean = data.text.replace(/```json\s*/gi,'').replace(/```\s*/g,'').trim();
+      const parsed = JSON.parse(clean);
+      // 오형식 문항 제외 (정규화)
+      const qs = normalizeQuestions(parsed.questions);
 
       if (!Array.isArray(qs) || qs.length < 5) throw new Error('Invalid response format');
       setQuestions(qs);
@@ -226,7 +239,9 @@ function PlacementInner() {
       setPhase('cefr');
     } catch (e: any) {
       console.error('[placement]', e);
-      setLoadErr('We couldn\'t build your test questions — check your connection, then hit "Start Placement" to try again.');
+      setLoadErr(e?.message && /limit exceeded/i.test(e.message)
+        ? 'Too many placement attempts — please try again later.'
+        : 'We couldn\'t build your test questions — check your connection, then hit "Start Placement" to try again.');
       setPhase('error');
       setTrackAnswers([]);
     }
@@ -321,14 +336,23 @@ function PlacementInner() {
     // 0~39%, 80~100%: 퀴즈 결과 그대로
 
     setCefrLevel(result);
+    // 테스트 완료 시각 기록 (재응시 쿨다운용)
+    try { localStorage.setItem('mt_placement_last', String(Date.now())); } catch { /* noop */ }
     setPhase('result');
   };
 
   // -- SAVE & GO ------------------------------------------------------------
+  // XP는 올리기만 하고 내리지 않음 — 재응시로 기존 XP가 깎이는 일 없음
   const handleApply = async () => {
     if (!trackResult) return;
     setSaving(true);
-    const xp = LEVEL_XP[cefrLevel] || 0;
+    setApplyErr('');
+    const levelXp = LEVEL_XP[cefrLevel] || 0;
+    const currentXp = Math.max(
+      profile?.xp ?? 0,
+      typeof window !== 'undefined' ? parseInt(localStorage.getItem('mt_xp') || '0', 10) : 0,
+    );
+    const xp = Math.max(currentXp, levelXp);
     try {
       if (user) {
         await updateUserProfile(user.uid, {
@@ -343,9 +367,15 @@ function PlacementInner() {
       localStorage.setItem('mt_placement_done',  'true');
       localStorage.setItem('mt_placement_level', cefrLevel);
       localStorage.setItem('mt_track',           trackResult.track);
-    } catch (e) { console.error(e); }
-    setSaving(false);
-    router.push(`/lingua/learn/${cefrLevel}?lang=${learnLang}&subLang=${nativeLang}`);
+      localStorage.setItem('mt_placement_last',  String(Date.now()));
+      setSaving(false);
+      router.push(`/lingua/learn/${cefrLevel}?lang=${learnLang}&subLang=${nativeLang}`);
+    } catch (e) {
+      // 저장 실패 시 이동하지 않고 재시도 안내
+      console.error('[placement] save failed', e);
+      setSaving(false);
+      setApplyErr('Could not save your result — check your connection and try again.');
+    }
   };
 
   const resetAll = () => {
@@ -355,6 +385,22 @@ function PlacementInner() {
     setCefrSelected(null); setCefrRevealed(false);
     setLoadErr('');
     setStyleData(null); setShareNote('');
+  };
+
+  // -- Back navigation ------------------------------------------------------
+  // track: 이전 문항으로 (오탭 정정), 첫 문항에서는 intro로
+  const handleTrackBack = () => {
+    if (trackStep > 0) {
+      setTrackStep(s => s - 1);
+      setTrackAnswers(a => a.slice(0, -1));
+    } else {
+      setPhase('intro');
+    }
+  };
+  // cefr: 테스트 중단 — 진행 중 타이머 정리 후 intro로
+  const handleCefrExit = () => {
+    if (timerRef.current) { clearTimeout(timerRef.current); timerRef.current = null; }
+    resetAll();
   };
 
   // -- Conversation style analysis: fetch once on result -------------------------
@@ -444,6 +490,19 @@ function PlacementInner() {
   const trackInfo   = trackResult ? TRACK_META[trackResult.track] : null;
   const totalTrackScore = trackResult ? Object.values(trackResult.scores).reduce((a,b)=>a+b,0) : 1;
   const cefrCorrect = cefrAnswers.filter((a,i) => questions[i] && a === questions[i].answer).length;
+  // 적용될 XP (기존 XP와 레벨 기준 XP 중 큰 값 — 깎이지 않음)
+  const currentXp = Math.max(profile?.xp ?? 0, typeof window !== 'undefined' ? parseInt(localStorage.getItem('mt_xp') || '0', 10) : 0);
+  const displayXp = Math.max(currentXp, LEVEL_XP[cefrLevel] || 0);
+  // 재응시 쿨다운 상태 (24시간)
+  const lastPlacementAt = typeof window !== 'undefined' ? parseInt(localStorage.getItem('mt_placement_last') || '0', 10) : 0;
+  const canRetake = Date.now() >= lastPlacementAt + RETAKE_COOLDOWN_MS;
+  const retakeWaitText = (() => {
+    if (canRetake) return '';
+    const ms = Math.max(0, lastPlacementAt + RETAKE_COOLDOWN_MS - Date.now());
+    const h = Math.floor(ms / 3600000);
+    const m = Math.ceil((ms % 3600000) / 60000);
+    return h > 0 ? `${h}h ${m}m` : `${m}m`;
+  })();
 
   // ════════════════════════════════════════════════════════════════════════════
   // ERROR
@@ -496,7 +555,7 @@ function PlacementInner() {
         </h1>
         <p style={{ fontSize:15, color:'#94A3B8', lineHeight:1.7, margin:'0 0 28px' }}>
           <strong style={{ color:'#CBD5E1' }}>2 steps · ~4 minutes</strong><br/>
-          5 questions to find your track, then 10 questions to pinpoint your CEFR level.<br/>
+          5 questions to find your track, then an AI quiz to pinpoint your CEFR level.<br/>
           <span style={{ color:'#A5B4FC' }}>Your results unlock a study plan built around your exact level.</span>
         </p>
 
@@ -504,7 +563,7 @@ function PlacementInner() {
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginBottom:28 }}>
           {[
             { emoji:'🧭', label:'Step 1', desc:'Track match\n5 questions', color:'#F59E0B' },
-            { emoji:'🎯', label:'Step 2', desc:`${langLabel} level\n10 questions`, color:'#6366F1' },
+            { emoji:'🎯', label:'Step 2', desc:`${langLabel} level\nAI quiz`, color:'#6366F1' },
           ].map((s,i) => (
             <div key={i} style={{ background:'#1E293B', borderRadius:14, padding:'16px', border:'1px solid #334155' }}>
               <div style={{ fontSize:28, marginBottom:8 }}>{s.emoji}</div>
@@ -559,6 +618,12 @@ function PlacementInner() {
           .topt:hover{border-color:#F59E0B!important;background:#F59E0B15!important;transform:translateX(4px)!important;}
         `}} />
 
+        {/* Back — 이전 문항 / 첫 문항에서는 intro로 */}
+        <button onClick={handleTrackBack}
+          style={{ position:'absolute', top:20, left:20, background:'#1E293B', border:'1px solid #334155', color:'#94A3B8', borderRadius:10, padding:'8px 14px', fontSize:13, fontWeight:800, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+          ← Back
+        </button>
+
         <div style={{ width:'100%', maxWidth:520, marginBottom:28 }}>
           <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:10 }}>
             <div style={{ display:'flex', alignItems:'center', gap:8 }}>
@@ -571,6 +636,7 @@ function PlacementInner() {
         </div>
 
         <div style={{ maxWidth:520, width:'100%', animation:'fadeUp .3s ease' }} key={`tq-${trackStep}`}>
+        <RtlDir lang={learnLang}>
           <div style={{ background:'#1E293B', borderRadius:18, padding:'26px', border:'1px solid #334155', marginBottom:14, textAlign:'center' }}>
             <div style={{ fontSize:11, fontWeight:900, color:'#F59E0B', letterSpacing:1.5, textTransform:'uppercase', marginBottom:10 }}>
               Question {trackStep+1}
@@ -581,7 +647,7 @@ function PlacementInner() {
             {tq.options.map((opt, i) => (
               <button key={i} className="topt"
                 onClick={() => handleTrackAnswer(i)}
-                style={{ borderRadius:12, padding:'15px 18px', fontSize:15, fontWeight:800, textAlign:'left', cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display:'flex', alignItems:'center', gap:12 }}>
+                style={{ borderRadius:12, padding:'15px 18px', fontSize:15, fontWeight:800, textAlign:'start', cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display:'flex', alignItems:'center', gap:12 }}>
                 <span style={{ width:26, height:26, borderRadius:'50%', background:'#334155', display:'flex', alignItems:'center', justifyContent:'center', fontSize:11, fontWeight:900, color:'#CBD5E1', flexShrink:0 }}>
                   {String.fromCharCode(65+i)}
                 </span>
@@ -589,6 +655,7 @@ function PlacementInner() {
               </button>
             ))}
           </div>
+        </RtlDir>
         </div>
       </div>
     );
@@ -618,7 +685,7 @@ function PlacementInner() {
           Generating your {langLabel} level test…
         </div>
         <div style={{ fontSize:13, color:'#94A3B8', fontWeight:700, animation:'pulse2 1.5s infinite' }}>
-          AI is crafting 10 personalised questions
+          AI is crafting your personalised questions
         </div>
       </div>
     </div>
@@ -634,6 +701,12 @@ function PlacementInner() {
         @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
         .copt{transition:all .15s!important}.copt:hover:not(:disabled){transform:translateX(4px)!important}
       `}} />
+
+      {/* Exit — 테스트 중단 후 intro로 */}
+      <button onClick={handleCefrExit}
+        style={{ position:'absolute', top:20, left:20, background:'#1E293B', border:'1px solid #334155', color:'#94A3B8', borderRadius:10, padding:'8px 14px', fontSize:13, fontWeight:800, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+        ← Back
+      </button>
 
       {/* Track reminder badge */}
       {trackResult && (
@@ -662,6 +735,7 @@ function PlacementInner() {
       </div>
 
       <div style={{ maxWidth:520, width:'100%', animation:'fadeUp .3s ease' }} key={`cq-${cefrStep}`}>
+      <RtlDir lang={learnLang}>
         <div style={{ background:'#1E293B', borderRadius:18, padding:'24px', border:'1px solid #334155', marginBottom:12, textAlign:'center' }}>
           <div style={{ fontSize:18, fontWeight:900, color:'#F1F5F9', lineHeight:1.6 }}>{cefrQ.q}</div>
         </div>
@@ -675,7 +749,7 @@ function PlacementInner() {
             } else if (isSel)  { bg='#1E3A8A'; border='1px solid #6366F1'; color='#fff'; }
             return (
               <button key={i} className="copt" onClick={() => handleCefrAnswer(i)} disabled={cefrRevealed}
-                style={{ background:bg, border, borderRadius:12, padding:'14px 18px', color, fontSize:15, fontWeight:800, textAlign:'left', cursor:cefrRevealed?'default':'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display:'flex', alignItems:'center', gap:12 }}>
+                style={{ background:bg, border, borderRadius:12, padding:'14px 18px', color, fontSize:15, fontWeight:800, textAlign:'start', cursor:cefrRevealed?'default':'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", display:'flex', alignItems:'center', gap:12 }}>
                 <span style={{ width:26, height:26, borderRadius:'50%', background:cefrRevealed&&isCorr?'#059669':cefrRevealed&&isSel?'#DC2626':'#334155', display:'flex', alignItems:'center', justifyContent:'center', fontSize:11, fontWeight:900, flexShrink:0, color:cefrRevealed&&(isCorr||isSel)?'#fff':'#64748B' }}>
                   {cefrRevealed&&isCorr?'✓':cefrRevealed&&isSel&&!isCorr?'✗':String.fromCharCode(65+i)}
                 </span>
@@ -691,6 +765,7 @@ function PlacementInner() {
             </button>
           </div>
         )}
+      </RtlDir>
       </div>
     </div>
   );
@@ -829,17 +904,29 @@ function PlacementInner() {
 
         {/* XP note */}
         <div style={{ background:'#1E293B', borderRadius:12, padding:'11px 16px', marginBottom:16, border:'1px solid #334155', fontSize:13, color:'#94A3B8', fontWeight:700, textAlign:'center' }}>
-          Starting XP → <strong style={{ color:levelInfo.color }}>{LEVEL_XP[cefrLevel].toLocaleString()} XP</strong> &nbsp;·&nbsp; unlocks all content up to <strong style={{ color:'#fff' }}>{cefrLevel.toUpperCase()}</strong>
+          Starting XP → <strong style={{ color:levelInfo.color }}>{displayXp.toLocaleString()} XP</strong> &nbsp;·&nbsp; unlocks all content up to <strong style={{ color:'#fff' }}>{cefrLevel.toUpperCase()}</strong>
         </div>
+
+        {applyErr && (
+          <div style={{ background:'#450A0A', border:'1px solid #DC2626', borderRadius:12, padding:'11px 16px', marginBottom:12, color:'#FCA5A5', fontSize:13, fontWeight:700, textAlign:'center' }}>
+            ⚠️ {applyErr}
+          </div>
+        )}
 
         <button onClick={handleApply} disabled={saving}
           style={{ width:'100%', padding:'14px', borderRadius:14, border:'none', background:saving?'#334155':`linear-gradient(135deg,${levelInfo.color},${levelInfo.color}bb)`, color:'#fff', fontSize:16, fontWeight:900, cursor:saving?'default':'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", boxShadow:saving?'none':`0 8px 22px ${levelInfo.color}44`, marginBottom:10 }}>
           {saving ? 'Saving...' : `Start ${trackInfo.emoji} ${trackInfo.label} at ${cefrLevel.toUpperCase()} →`}
         </button>
         <div style={{ textAlign:'center' }}>
-          <button onClick={resetAll} style={{ background:'none', border:'none', color:'#475569', fontSize:13, fontWeight:700, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
-            Retake the test
-          </button>
+          {canRetake ? (
+            <button onClick={resetAll} style={{ background:'none', border:'none', color:'#475569', fontSize:13, fontWeight:700, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+              Retake the test
+            </button>
+          ) : (
+            <div style={{ fontSize:13, color:'#475569', fontWeight:700 }}>
+              You can retake this test in {retakeWaitText}
+            </div>
+          )}
         </div>
       </div>
     </div>

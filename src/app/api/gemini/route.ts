@@ -21,7 +21,7 @@ const MODELS = (process.env.GEMINI_MODEL || 'gemini-3.8-flash,gemini-2.5-flash')
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { prompt, temperature = 0.7 } = body;
+    const { prompt, temperature = 0.7, purpose } = body;
 
     // ── PR-F: abuse guards ──
     // 로그인 유저: UID 기준 분당 60회. 게스트(Micro-Talk 등): IP 기준 분당 20회.
@@ -29,6 +29,13 @@ export async function POST(req: NextRequest) {
     const rlKey = id ? `gemini:uid:${id.uid}` : `gemini:ip:${clientIp(req)}`;
     const rl = checkRateLimit(rlKey, id ? 60 : 20, 60_000);
     if (!rl.ok) return apiError('Rate limit exceeded', 429, { retryAfterSec: rl.retryAfterSec });
+
+    // ── Placement 전용 추가 제한 ──
+    // 1회 응시 = 2회 호출(문항 생성 + 스타일 분석). 시간당 3회분(6회)으로 제한.
+    if (purpose === 'placement' || purpose === 'placement-style') {
+      const pl = checkRateLimit(`gemini:placement:${rlKey}`, 6, 3_600_000);
+      if (!pl.ok) return apiError('Placement test limit exceeded — please try again later', 429, { retryAfterSec: pl.retryAfterSec });
+    }
 
     if (typeof prompt !== 'string' || !prompt.trim()) {
       return apiError('Missing prompt', 400);
