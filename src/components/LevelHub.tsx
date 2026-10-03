@@ -100,6 +100,12 @@ export default function LevelHub() {
   const [pendingLevelId, setPendingLevelId] = useState<string | null>(null);
   const [langStep, setLangStep]             = useState<'learn' | 'native'>('learn');
   const [showPlacementModal, setShowPlacementModal] = useState(false);
+  // placement 완료 여부 (게스트: localStorage / 로그인: Firestore+localStorage)
+  const [placementDone, setPlacementDone] = useState(false);
+  // 상시 유도 배너 닫기 (세션당 1회)
+  const [nudgeDismissed, setNudgeDismissed] = useState(() => {
+    try { return sessionStorage.getItem('mt_placement_nudge_off') === '1'; } catch { return false; }
+  });
 
   // -- Testimonials (landing social proof — only fetched for logged-out visitors)
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
@@ -179,7 +185,9 @@ export default function LevelHub() {
     } catch { setStreak(0); }
   };
 
-  // -- 진단 테스트 리다이렉트 ------------------------------------------------
+  // -- 진단 테스트: 자동 팝업 제거 → 메뉴 기본 진입 ("선택 보상형") --
+  // placement 미완료여도 모달을 띄우지 않음. 대신 메뉴 상단 상시 배너 + 잠긴 레벨 카드에서 유도.
+  // 모달(showPlacementModal)은 배너·히어로·잠긴 카드의 수동 트리거용으로 유지.
   useEffect(() => {
     if (authLoading) return; // 아직 auth 확인 중 → 대기
 
@@ -187,17 +195,16 @@ export default function LevelHub() {
       // -- 비로그인 게스트 --------------------------------------------------
       // localStorage 기준으로 판단 (계정 무관)
       const lsPlaced = localStorage.getItem('mt_placement_done');
+      setPlacementDone(lsPlaced === 'true');
       if (!lsPlaced) {
-        // 한 번도 테스트 안 함 → 언어 선택됐으면 placement 팝업, 아니면 언어 먼저
+        // 한 번도 테스트 안 함 → 언어 미선택이면 언어 모달만 (placement 팝업 없음)
         const lang = localStorage.getItem('mt_learn_lang') || '';
         if (!lang || lang === 'en-US') {
           setShowLangModal(true);
           setLangStep('learn');
-        } else {
-          setShowPlacementModal(true);
         }
+        // placement는 히어로 CTA에서 유도
       }
-      // lsPlaced 있으면 → 그대로 LevelHub 표시
       return;
     }
 
@@ -210,8 +217,10 @@ export default function LevelHub() {
     // Firestore 또는 localStorage 둘 중 하나라도 완료면 통과
     if (firestoreDone || localDone) {
       localStorage.setItem('mt_placement_done', 'true');
+      setPlacementDone(true);
       return;
     }
+    setPlacementDone(false);
 
     const lang = profile.learnLang || localStorage.getItem('mt_learn_lang') || '';
     if (!lang || lang === 'en-US') {
@@ -221,15 +230,7 @@ export default function LevelHub() {
       return;
     }
 
-    // placement 미완료 → 세션당 1회만 안내 ('Skip for now'를 존중한 리마인드)
-    // ※ 예전에는 effect가 재실행될 때마다 'pending'으로 덮고 모달을 다시 띄워서
-    //    스킵이 무효화됐음
-    try {
-      if (sessionStorage.getItem('mt_placement_nagged')) return;
-      sessionStorage.setItem('mt_placement_nagged', '1');
-    } catch { /* sessionStorage 미지원 환경 무시 */ }
-    localStorage.setItem('mt_placement_done', 'pending');
-    setShowPlacementModal(true);
+    // placement 미완료라도 모달 팝업 없음 — 상시 배너 + 잠긴 카드에서 유도
 
   }, [user, authLoading, profile]);
 
@@ -378,6 +379,8 @@ export default function LevelHub() {
     if (!unlocked) return;
     // 구독 레벨 잠금 체크
     if (!isAdmin && isLevelLocked(levelId, planId, false, placementLevel)) {
+      // Free + 테스트 미완료 → 테스트 유도 모달 (선택 보상형). 테스트 후에도 잠김이면 paywall.
+      if (planId === 'free' && !placementDone) { setShowPlacementModal(true); return; }
       setPaywallReason('level_locked');
       setShowPaywall(true);
       return;
@@ -430,11 +433,7 @@ export default function LevelHub() {
       router.push(`/lingua/learn/${pendingLevelId}?lang=${learn}&subLang=${native}&tutor=${savedTutor}`);
       return;
     }
-
-    const placed = localStorage.getItem('mt_placement_done');
-    if (!placed || placed === 'pending') {
-      setShowPlacementModal(true);
-    }
+    // placement 자동 팝업 제거 — 상시 배너에서 유도 (선택 보상형)
   };
 
   const learnLangInfo  = LEARN_LANGUAGES.find(l => l.code === learnLang);
@@ -971,6 +970,43 @@ export default function LevelHub() {
         </div>
       </div>
 
+      {/* -- Placement nudge 배너: 테스트 미완료 로그인 유저용 상시 유도 (선택 보상형) -- */}
+      {/* 게스트는 히어로에 placement CTA가 이미 있어 제외 */}
+      {!authLoading && user && !placementDone && !nudgeDismissed && (
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '18px 24px 0', width: '100%' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12,
+            background: 'linear-gradient(135deg,#EEF2FF,#F5F3FF)',
+            border: '2px solid #DDD6FE', borderRadius: 18, padding: '14px 18px',
+            position: 'relative' }}>
+            <div style={{ fontSize: 28 }}>📊</div>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div style={{ fontSize: 14, fontWeight: 900, color: '#0F172A',
+                fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+                Know your level already?
+              </div>
+              <div style={{ fontSize: 12.5, color: '#64748B', fontWeight: 600,
+                fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+                Take the quick placement test to unlock lessons up to your level — free.
+              </div>
+            </div>
+            <button onClick={() => router.push(`/lingua/placement?lang=${learnLang}`)}
+              style={{ border: 'none', borderRadius: 99, cursor: 'pointer', padding: '10px 22px',
+                fontSize: 14, fontWeight: 800, color: '#fff', whiteSpace: 'nowrap',
+                background: 'linear-gradient(135deg,#6366F1,#8B5CF6)',
+                boxShadow: '0 4px 14px rgba(99,102,241,0.35)',
+                fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+              Take the test →
+            </button>
+            <button aria-label="Dismiss"
+              onClick={() => { try { sessionStorage.setItem('mt_placement_nudge_off', '1'); } catch { /* noop */ } setNudgeDismissed(true); }}
+              style={{ position: 'absolute', top: 6, right: 8, background: 'none', border: 'none',
+                color: '#94A3B8', fontSize: 14, cursor: 'pointer', fontWeight: 800 }}>
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* -- 30초 첫 문장 말하기 와우 체험 (게스트 전용, 히어로 하단) -- */}
       {!authLoading && !user && <WowFirstPhrase />}
 
@@ -1247,9 +1283,19 @@ export default function LevelHub() {
               {/* 구독 잠금 */}
               {unlocked && subLocked && (
                 <div style={{ ...styles.lockOverlay, background: 'linear-gradient(135deg,rgba(99,102,241,0.92),rgba(139,92,246,0.92))' }}>
-                  <span style={{ fontSize: 28 }}>⭐</span>
-                  <span style={{ ...styles.lockText, color: '#fff' }}>Premium only</span>
-                  <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.8)', marginTop: 4, fontWeight: 700 }}>Tap to upgrade</div>
+                  {planId === 'free' && !placementDone ? (
+                    <>
+                      <span style={{ fontSize: 28 }}>📊</span>
+                      <span style={{ ...styles.lockText, color: '#fff' }}>Test to unlock</span>
+                      <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.8)', marginTop: 4, fontWeight: 700 }}>Quick test · free</div>
+                    </>
+                  ) : (
+                    <>
+                      <span style={{ fontSize: 28 }}>⭐</span>
+                      <span style={{ ...styles.lockText, color: '#fff' }}>Premium only</span>
+                      <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.8)', marginTop: 4, fontWeight: 700 }}>Tap to upgrade</div>
+                    </>
+                  )}
                 </div>
               )}
               <div style={styles.cardTop}>
@@ -1290,10 +1336,17 @@ export default function LevelHub() {
                 </button>
               )}
               {subLocked && (
-                <button style={{ ...styles.cardBtn, background: 'linear-gradient(135deg,#6366F1,#8B5CF6)' }}
-                  onClick={e => { e.stopPropagation(); setPaywallReason('level_locked'); setShowPaywall(true); }}>
-                  🔓 Unlock with Premium
-                </button>
+                planId === 'free' && !placementDone ? (
+                  <button style={{ ...styles.cardBtn, background: 'linear-gradient(135deg,#6366F1,#8B5CF6)' }}
+                    onClick={e => { e.stopPropagation(); setShowPlacementModal(true); }}>
+                    📊 Unlock with placement test
+                  </button>
+                ) : (
+                  <button style={{ ...styles.cardBtn, background: 'linear-gradient(135deg,#6366F1,#8B5CF6)' }}
+                    onClick={e => { e.stopPropagation(); setPaywallReason('level_locked'); setShowPaywall(true); }}>
+                    🔓 Unlock with Premium
+                  </button>
+                )
               )}
             </div>
           );
