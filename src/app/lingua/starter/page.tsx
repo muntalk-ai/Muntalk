@@ -479,6 +479,8 @@ Rules:
 
   const handleMatchTap = useCallback((item: string, side: 'left'|'right') => {
     if (matchDone.includes(item)) return;
+    // 학습언어(왼쪽) 탭 시 발음 재생 — 어려운 철자를 읽지 못하는 초보자 보조
+    if (side === 'left') speak(item);
     if (!matchSel) {
       setMatchSel(`${side}:${item}`);
       return;
@@ -501,7 +503,7 @@ Rules:
       setMatchWrong([leftWord, rightWord]);
       setTimeout(() => { setMatchWrong([]); setMatchSel(null); }, 800);
     }
-  }, [matchSel, matchDone, matchTranslations, subLang, words]);
+  }, [matchSel, matchDone, matchTranslations, subLang, words, speak]);
 
   // ── SPEAK phase ─────────────────────────────────────────────────────────────
   const startSpeakPhase = useCallback(() => {
@@ -1117,6 +1119,16 @@ LANGUAGE RULES:
         </div>
       )}
 
+      <div style={{ width: '100%', maxWidth: 360, marginBottom: 4 }}>
+        <button onClick={startListenPhase}
+          style={{ ...btnBase, padding: '8px 18px', fontSize: 14,
+            color: '#64748B', background: 'white',
+            border: '2px solid #E2E8F0',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
+          ‹ Back
+        </button>
+      </div>
+
       <div style={{ fontSize: 13, fontWeight: 800, color: '#94A3B8',
         letterSpacing: 1, marginBottom: 8 }}>MATCH PAIRS</div>
 
@@ -1136,7 +1148,7 @@ LANGUAGE RULES:
               opacity:isSpeaking?1:0, transition:'opacity .25s' }}/>
         </div>
         <div style={{ fontSize:14, color:'#64748B', fontWeight:600, lineHeight:1.4 }}>
-          Connect each word to its meaning
+          🔊 Tap a word to hear it · Connect each word to its meaning
         </div>
       </div>
 
