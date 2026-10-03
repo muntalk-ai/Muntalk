@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { signOut } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
@@ -223,17 +223,32 @@ export default function LevelHub() {
   }, [user, authLoading, profile]);
 
   // Firestore 프로필 우선, 없으면 localStorage fallback
+  // ※ 단, 로컬에서 변경한 언어가 아직 프로필에 반영되지 않았으면(stale profile)
+  //    덮어쓰지 않음 — 라오어 선택 후 뒤로가기 시 스페인어로 되돌아가는 버그 방지
   useEffect(() => {
     if (profile) {
       setXp(profile.xp || 0);
       setStreak(profile.streak || 0);
       setFreezes(profile.streakFreezes ?? 1);
-      setLearnLang(profile.learnLang || 'en-US');
+      const lsLearn = (() => { try { return localStorage.getItem('mt_learn_lang'); } catch { return null; } })();
+      const lsNative = (() => { try { return localStorage.getItem('mt_native_lang'); } catch { return null; } })();
+      const profileLearn = profile.learnLang || 'en-US';
+      const profileNative = profile.nativeLang || 'ko-KR';
+      if (pendingLangSyncRef.current && lsLearn === pendingLangSyncRef.current && lsLearn !== profileLearn) {
+        // 반영 대기 중 → 로컬 값 유지 (state도 로컬 값으로 맞춤)
+        setLearnLang(lsLearn);
+        setNativeLang(lsNative || profileNative);
+      } else {
+        pendingLangSyncRef.current = null;
+        setLearnLang(profileLearn);
+        setNativeLang(profileNative);
+        try {
+          localStorage.setItem('mt_learn_lang', profileLearn);
+          localStorage.setItem('mt_native_lang', profileNative);
+        } catch { /* ignore */ }
+      }
       setPlacementLevel((profile as any).placementLevel || localStorage.getItem('mt_placement_level') || '');
-      setNativeLang(profile.nativeLang || 'ko-KR');
       setCompletedLessons(new Set(profile.completedLessons || []));
-      localStorage.setItem('mt_learn_lang', profile.learnLang || 'en-US');
-      localStorage.setItem('mt_native_lang', profile.nativeLang || 'ko-KR');
       // tutorId: localStorage에 이미 값이 있고 profile이 default 't01'이면 localStorage 우선
       const storedTutor = localStorage.getItem('mt_tutor_id');
       if (profile.tutorId && profile.tutorId !== 't01') {
@@ -288,12 +303,24 @@ export default function LevelHub() {
     }).catch(() => {});
   }, [user?.uid]);
 
-  const saveLangPrefs = (learn: string, native: string) => {
+  // 언어 변경 직후: Firestore/메모리에 반영되기 전 stale profile이
+  // localStorage의 새 값을 덮어쓰는 버그 방지용 플래그
+  const pendingLangSyncRef = useRef<string | null>(null);
+
+  const saveLangPrefs = async (learn: string, native: string) => {
     try {
       localStorage.setItem('mt_learn_lang', learn);
       localStorage.setItem('mt_native_lang', native);
-      if (user) updateUserProfile(user.uid, { learnLang: learn, nativeLang: native });
     } catch { /* ignore */ }
+    if (!user) return;
+    pendingLangSyncRef.current = learn; // Firestore/메모리 반영 대기 표시
+    try {
+      await updateUserProfile(user.uid, { learnLang: learn, nativeLang: native });
+      await refreshProfile(); // 메모리상 profile도 최신화 (stale 값으로 덮어쓰기 방지)
+      // refreshProfile 후 [profile] effect가 실행되면서 값이 일치 → 플래그는 effect에서 해제
+    } catch {
+      pendingLangSyncRef.current = null; // 실패 시 플래그 해제
+    }
   };
 
   const handleSignOut = async () => {
@@ -382,7 +409,7 @@ export default function LevelHub() {
       }
     }
 
-    saveLangPrefs(learn, native);
+    await saveLangPrefs(learn, native);
     setLearnLang(learn);
     setNativeLang(native);
     setShowLangModal(false);
