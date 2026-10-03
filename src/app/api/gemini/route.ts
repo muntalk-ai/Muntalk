@@ -37,15 +37,45 @@ export async function POST(req: NextRequest) {
       if (!pl.ok) return apiError('Placement test limit exceeded — please try again later', 429, { retryAfterSec: pl.retryAfterSec });
     }
 
-    if (typeof prompt !== 'string' || !prompt.trim()) {
-      return apiError('Missing prompt', 400);
+    // ── WowFirstPhrase 전용: 1줄 영어 발음 분석 ──
+    // 클라이언트는 프롬프트를 보내지 않고 필드만 보냄 → 서버가 프롬프트 생성 (프록시 남용 방지).
+    // 3분 세션에서 현실적인 최대 시도(~15회)를 시간당 상한으로 설정.
+    let safePrompt: string;
+    let temp: number;
+    let maxTokens = 4096;
+    let wowMode = false;
+    if (purpose === 'wow-pron') {
+      wowMode = true;
+      const { wowTarget, wowTranscript, wowLang, wowMeaning } = body;
+      if (typeof wowTarget !== 'string' || !wowTarget.trim()
+        || typeof wowTranscript !== 'string' || !wowTranscript.trim()) {
+        return apiError('Missing wow fields', 400);
+      }
+      const wl = checkRateLimit(`gemini:wow:${rlKey}`, 15, 3_600_000);
+      if (!wl.ok) return apiError('Wow analysis limit reached — please try again later', 429, { retryAfterSec: wl.retryAfterSec });
+      const target = wowTarget.slice(0, 200);
+      const transcript = wowTranscript.slice(0, 200);
+      const langLabel = typeof wowLang === 'string' ? wowLang.slice(0, 40) : 'the target language';
+      const meaning = typeof wowMeaning === 'string' ? wowMeaning.slice(0, 120) : '';
+      safePrompt = SAFETY_PREAMBLE
+        + `You are a pronunciation coach for a complete beginner learning ${langLabel}.\n`
+        + `The student tried to say: "${target}"${meaning ? ` (meaning: ${meaning})` : ''}.\n`
+        + `Speech recognition heard them say: "${transcript}".\n`
+        + `Compare what they said vs the target. Reply with ONLY JSON, no markdown, no code fences:\n`
+        + `{"score":<0-100 integer>,"line":"<one short English sentence. If great (80+), praise briefly and specifically. Otherwise name the exact sound that was off and give one quick concrete tip to fix it (e.g. tongue position, sound length). Max 20 words.>"}`
+      temp = 0.4;
+      maxTokens = 300;
+    } else {
+      if (typeof prompt !== 'string' || !prompt.trim()) {
+        return apiError('Missing prompt', 400);
+      }
+      // 안전 지시를 먼저 합친 뒤 합산 기준으로 8000자 캡 적용
+      safePrompt = SAFETY_PREAMBLE + prompt;
+      if (safePrompt.length > 8000) {
+        return apiError('Prompt too long (max 8000 chars)', 413);
+      }
+      temp = Math.min(2, Math.max(0, Number(temperature) || 0));
     }
-    // 안전 지시를 먼저 합친 뒤 합산 기준으로 8000자 캡 적용
-    const safePrompt = SAFETY_PREAMBLE + prompt;
-    if (safePrompt.length > 8000) {
-      return apiError('Prompt too long (max 8000 chars)', 413);
-    }
-    const temp = Math.min(2, Math.max(0, Number(temperature) || 0));
 
     const apiKey = process.env.GEMINI_API_KEY || '';
 
@@ -65,13 +95,25 @@ export async function POST(req: NextRequest) {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             contents: [{ parts: [{ text: safePrompt }] }],
-            generationConfig: { temperature: temp, maxOutputTokens: 4096 },
+            generationConfig: { temperature: temp, maxOutputTokens: maxTokens },
           }),
         }, 30000);
 
         if (res.ok) {
           const data = await res.json();
           const text = data?.candidates?.[0]?.content?.parts?.[0]?.text ?? '';
+          if (wowMode) {
+            // JSON 추출 시도 — 실패해도 text는 그대로 반환 (클라이언트 폴백)
+            let score: number | null = null;
+            let line: string | null = null;
+            try {
+              const m = text.match(/\{[\s\S]*\}/);
+              const parsed = m ? JSON.parse(m[0]) : null;
+              if (parsed && typeof parsed.score === 'number') score = Math.max(0, Math.min(100, Math.round(parsed.score)));
+              if (parsed && typeof parsed.line === 'string' && parsed.line.trim()) line = parsed.line.trim().slice(0, 200);
+            } catch { /* noop — 클라이언트 폴백 */ }
+            return NextResponse.json({ text, score, line });
+          }
           return NextResponse.json({ text });
         }
 
