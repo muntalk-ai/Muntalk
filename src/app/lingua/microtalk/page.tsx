@@ -3,7 +3,7 @@ import { apiFetch } from '@/lib/apiClient';
 import { runWithAiRetry, AI_TIMEOUT_MS } from '@/lib/aiRetry';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import RtlDir from '@/components/RtlDir';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
@@ -275,6 +275,19 @@ export default function MicroTalkPage() {
   const mm = `${Math.floor(secondsLeft / 60)}:${String(secondsLeft % 60).padStart(2, '0')}`;
   const sttOn = hasStt(learnLang);
 
+  // 폭죽 조각 (마운트 시 1회 생성) — 리포트 킥용
+  const confetti = useMemo(
+    () => Array.from({ length: 50 }, (_, i) => ({
+      left: Math.random() * 100,
+      delay: Math.random() * 0.8,
+      duration: 2.2 + Math.random() * 2.2,
+      color: ['#6366F1', '#EC4899', '#F59E0B', '#10B981', '#38BDF8', '#FB7185'][i % 6],
+      size: 6 + Math.random() * 8,
+      round: Math.random() > 0.5,
+    })),
+    []
+  );
+
   // ── 리포트 공유: Web Share API → 미지원 시 클립보드 복사 + "Copied!" ──
   const shareResult = async () => {
     if (!report) return;
@@ -346,6 +359,19 @@ export default function MicroTalkPage() {
             </>
           )}
           <div style={S.langNote}>Speaking: <strong>{learnLangLabel}</strong></div>
+          {/* 사이트 장점 스트립 — 직관적인 메뉴라 유입이 많은 지점 */}
+          <div style={S.advWrap}>
+            {[
+              ['💬', 'Real conversation, not flashcards'],
+              ['🗣️', `Your tutor speaks ${learnLangLabel} like a human`],
+              ['⚡', '60 seconds → instant recap with a new phrase'],
+            ].map(([icon, text]) => (
+              <div key={text} style={S.advRow}>
+                <span style={S.advIcon}>{icon}</span>
+                <span style={S.advText}>{text}</span>
+              </div>
+            ))}
+          </div>
         </div>
       )}
 
@@ -393,10 +419,23 @@ export default function MicroTalkPage() {
       {/* ── Phase: report ── */}
       {phase === 'report' && (
         <div style={S.reportOverlay}>
-          <div style={S.reportCard}>
+          <style>{`@keyframes mtfall { 0%{transform:translateY(-10vh) rotate(0deg);opacity:1} 100%{transform:translateY(110vh) rotate(720deg);opacity:0.6} }`}</style>
+          {/* 킥: 리포트 오픈 시 폭죽 */}
+          {report && (
+            <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', overflow: 'hidden' }}>
+              {confetti.map((c, i) => (
+                <div key={i} style={{ position: 'absolute', top: '-4vh', left: `${c.left}%`,
+                  width: c.size, height: c.size * (c.round ? 1 : 0.5),
+                  background: c.color, borderRadius: c.round ? '50%' : 2,
+                  animation: `mtfall ${c.duration}s ease-in ${c.delay}s forwards` }} />
+              ))}
+            </div>
+          )}
+          <div style={{ ...S.reportCard, position: 'relative', zIndex: 1 }}>
             <div style={S.reportBadge}>⚡ Your 60-second recap</div>
             {report ? (
               <>
+                <div style={S.reportHeadline}>🎉 You just chatted in {learnLangLabel}!</div>
                 <div style={S.reportRow}><span>🗣️</span><span>You spoke <strong>{report.utterances}</strong> time{report.utterances === 1 ? '' : 's'}</span></div>
                 <div style={S.reportBlock}>
                   <div style={S.reportLabel}>✨ New phrase</div>
@@ -406,13 +445,22 @@ export default function MicroTalkPage() {
                   <div style={S.reportLabel}>💡 Feedback</div>
                   <div style={S.reportText}>{report.feedback}</div>
                 </div>
+                {/* 사이트 장점 어필 — 진짜 AI 튜터라는 킥 */}
+                <div style={S.advCallout}>
+                  💡 That was a real AI tutor — not a scripted chatbot. Imagine 10 minutes a day.
+                </div>
               </>
             ) : (
               <div style={S.loadingText}>Writing your recap…</div>
             )}
             <div style={S.reportBtns}>
+              {!user && report && (
+                <button style={S.startBtn} onClick={() => router.push('/signup?next=/lingua/microtalk')}>
+                  🚀 Sign up free to save your phrases
+                </button>
+              )}
               {report && <button style={S.ghostBtn} onClick={shareResult}>📤 {shared ? 'Copied!' : 'Share'}</button>}
-              <button style={S.startBtn} onClick={reset}>🔁 Talk again</button>
+              <button style={user ? S.startBtn : S.ghostBtn} onClick={reset}>🔁 Talk again</button>
               <button style={S.ghostBtn} onClick={() => router.push('/lingua/roleplay')}>🎭 More in Roleplay</button>
               <button style={S.ghostBtn} onClick={() => router.push('/lingua')}>← Home</button>
             </div>
@@ -471,4 +519,12 @@ const S: Record<string, React.CSSProperties> = {
   reportLabel: { fontSize: 12, fontWeight: 800, color: '#94A3B8', marginBottom: 6, letterSpacing: 0.5 },
   reportText: { fontSize: 15, lineHeight: 1.6 },
   reportBtns: { display: 'flex', flexDirection: 'column', gap: 10, marginTop: 20 },
+  // 킥: 입장 화면 장점 스트립
+  advWrap: { marginTop: 30, display: 'flex', flexDirection: 'column', gap: 10, textAlign: 'left', maxWidth: 420, marginLeft: 'auto', marginRight: 'auto' },
+  advRow: { display: 'flex', alignItems: 'center', gap: 12, background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 14, padding: '11px 16px' },
+  advIcon: { fontSize: 20, flexShrink: 0 },
+  advText: { fontSize: 13.5, fontWeight: 600, color: '#CBD5E1', lineHeight: 1.45 },
+  // 킥: 리포트 헤드라인 + 장점 콜아웃
+  reportHeadline: { fontSize: 21, fontWeight: 900, color: '#fff', marginBottom: 14, letterSpacing: -0.3 },
+  advCallout: { background: 'rgba(99,102,241,0.14)', border: '1px solid rgba(129,140,248,0.4)', borderRadius: 14, padding: '12px 16px', fontSize: 13.5, lineHeight: 1.6, color: '#C7D2FE', fontWeight: 600, marginTop: 4 },
 };
