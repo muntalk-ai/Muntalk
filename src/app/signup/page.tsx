@@ -10,7 +10,7 @@ import {
   updateProfile,
 } from 'firebase/auth';
 import { auth, googleProvider } from '@/lib/firebase';
-import { createUserProfile } from '@/lib/userProfile';
+import { ensureFirstLoginSetup, updateUserProfile } from '@/lib/userProfile';
 import { useAuth } from '@/context/AuthContext';
 import { getNextPath, stashNextPath } from '@/lib/returnUrl';
 
@@ -70,7 +70,12 @@ export default function SignupPage() {
     try {
       const cred = await createUserWithEmailAndPassword(auth, email, password);
       await updateProfile(cred.user, { displayName: name });
-      await createUserProfile(cred.user.uid, email, name, '');
+      // 첫 로그인 셋업 보장 (프로필 생성·게스트 이관·7일 트라이얼).
+      // AuthContext의 onAuthStateChanged와 동시 실행돼도 ensureFirstLoginSetup이
+      // 중복을 방지하므로, 예전처럼 프로필 overwrite·이관 누락 레이스가 없음.
+      await ensureFirstLoginSetup(cred.user.uid, { email, displayName: name, photoURL: '' });
+      // 표시 이름 확정 (리스너가 먼저 프로필을 만든 레이스에서도 이름 보장)
+      await updateUserProfile(cred.user.uid, { displayName: name }).catch(() => {});
       router.replace(getNextPath());
     } catch (e: any) {
       setError(friendlyError(e.code) || 'Sign up failed. Please try again.');

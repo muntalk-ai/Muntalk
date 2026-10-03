@@ -212,14 +212,23 @@ export default function LevelHub() {
       return;
     }
 
-    localStorage.setItem('mt_placement_done', 'pending');
     const lang = profile.learnLang || localStorage.getItem('mt_learn_lang') || '';
     if (!lang || lang === 'en-US') {
+      // 언어 미선택 → 언어 선택 모달 (온보딩 진행 단계이므로 세션 가드 없이 표시)
       setShowLangModal(true);
       setLangStep('learn');
-    } else {
-      setShowPlacementModal(true);
+      return;
     }
+
+    // placement 미완료 → 세션당 1회만 안내 ('Skip for now'를 존중한 리마인드)
+    // ※ 예전에는 effect가 재실행될 때마다 'pending'으로 덮고 모달을 다시 띄워서
+    //    스킵이 무효화됐음
+    try {
+      if (sessionStorage.getItem('mt_placement_nagged')) return;
+      sessionStorage.setItem('mt_placement_nagged', '1');
+    } catch { /* sessionStorage 미지원 환경 무시 */ }
+    localStorage.setItem('mt_placement_done', 'pending');
+    setShowPlacementModal(true);
 
   }, [user, authLoading, profile]);
 
