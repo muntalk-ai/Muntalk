@@ -12,6 +12,7 @@ import { LEARN_LANGUAGES, UI_LANGUAGES } from '@/data/languages';
 import { isNonLatinLang } from '@/data/alphabets/types';
 import { getSubscription, getHearts, getLocalHearts, isLevelLocked, isAdminEmail, PlanId, Hearts } from '@/lib/subscription';
 import PaywallModal from '@/components/PaywallModal';
+import WowFirstPhrase from '@/components/WowFirstPhrase';
 import TrialBanner from '@/components/TrialBanner';
 import TrialExpiredModal from '@/components/TrialExpiredModal';
 import { getTrialData, isTrialExpired, trialDaysRemaining, addTrialLanguage, TRIAL_MAX_LANGUAGES, TrialData } from '@/lib/trialPolicy';
@@ -960,6 +961,9 @@ export default function LevelHub() {
           )}
         </div>
       </div>
+
+      {/* -- 30초 첫 문장 말하기 와우 체험 (게스트 전용, 히어로 하단) -- */}
+      {!authLoading && !user && <WowFirstPhrase />}
 
       {/* -- Micro-Talk card (Phase 2-1 Track 2-B) -- */}
       {!authLoading && (
