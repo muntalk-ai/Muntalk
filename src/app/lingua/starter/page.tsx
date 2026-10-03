@@ -97,7 +97,7 @@ const UNITS = [
 ];
 
 type Phase = 'goal' | 'lobby' | 'learn' | 'listen' | 'match' | 'speak' | 'chat' | 'complete';
-type Word = { word: string; emoji: string; phonetic: string; example?: string };
+type Word = { word: string; emoji: string; phonetic: string; example?: string; exampleMeaning?: string };
 type TranslatedUnit = { word: string; emoji: string; phonetic: string; original: string; meaning?: string; example?: string }[];
 
 // BCP-47 -> display name for prompts (target + native language names)
@@ -352,7 +352,7 @@ English words: ${wordList}
 Example sentences (same order, one per word): ${exampleList}
 
 Return ONLY a JSON array, no markdown, no explanation:
-[{"word":"TRANSLATED_WORD","phonetic":"ROMANIZED_PRONUNCIATION","original":"ENGLISH_WORD","meaning":"MEANING_IN_${nativeLang.toUpperCase()}","example":"TRANSLATED_EXAMPLE"},...]
+[{"word":"TRANSLATED_WORD","phonetic":"ROMANIZED_PRONUNCIATION","original":"ENGLISH_WORD","meaning":"MEANING_IN_${nativeLang.toUpperCase()}","example":"TRANSLATED_EXAMPLE","exampleMeaning":"EXAMPLE_MEANING_IN_${nativeLang.toUpperCase()}"},...]
 
 Rules:
 - word: the word in ${targetLang} script
@@ -360,6 +360,7 @@ Rules:
 - original: the original English word exactly as given
 - meaning: the meaning of the word in ${nativeLang} (the learner's native language)
 - example: translate the example sentence into ${targetLang}, keeping it natural and beginner-friendly
+- exampleMeaning: the meaning of the example sentence in ${nativeLang} (the learner's native language)
 - Keep the same order as the input
 - Return exactly ${currentUnit.words.length} items`;
 
@@ -383,6 +384,8 @@ Rules:
           meaning:  item.meaning  || item.original || currentUnit.words[i].word,
           // 예문도 목표 언어로 번역 (없으면 영어 원문으로 폴백)
           example:  item.example  || currentUnit.words[i].example,
+          // 예문의 모국어 뜻 (없으면 영어 원문으로 폴백)
+          exampleMeaning: item.exampleMeaning || currentUnit.words[i].example,
         }));
         setTranslatedWords(merged);
       }
@@ -894,6 +897,12 @@ LANGUAGE RULES:
     if (isTranslating) return (
       <div style={{ minHeight:'100vh', background:BG, display:'flex',
         flexDirection:'column', alignItems:'center', justifyContent:'center', gap:16 }}>
+        <button onClick={() => setPhase('lobby')}
+          style={{ ...btnBase, position: 'absolute', top: 20, left: 20,
+            padding: '8px 16px', background: 'white', color: '#64748B',
+            fontSize: 14, boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
+          ← Back
+        </button>
         <div style={{ width:40, height:40, border:'4px solid #E0E7FF',
           borderTopColor:ACCENT, borderRadius:'50%', animation:'spin .8s linear infinite' }}/>
         <style dangerouslySetInnerHTML={{ __html:'@keyframes spin{to{transform:rotate(360deg)}}' }}/>
@@ -913,6 +922,14 @@ LANGUAGE RULES:
           @keyframes xppop { 0%{opacity:1;transform:translateY(0)} 100%{opacity:0;transform:translateY(-40px)} }
           @keyframes spin { to{transform:rotate(360deg)} }
         `}} />
+
+        {/* Back to lobby */}
+        <button onClick={() => setPhase('lobby')}
+          style={{ ...btnBase, position: 'absolute', top: 20, left: 20,
+            padding: '8px 16px', background: 'white', color: '#64748B',
+            fontSize: 14, boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
+          ← Back
+        </button>
 
         {/* Tutor Video */}
         <div style={{ position:'relative', width:140, height:140,
@@ -973,7 +990,14 @@ LANGUAGE RULES:
                 background: '#F8FAFC', border: '1.5px dashed #CBD5E1',
                 borderRadius: 12, padding: '10px 14px',
                 cursor: voiceSupported ? 'pointer' : 'default' }}>
-              💬 {w.example}
+              <div>💬 {w.example}</div>
+              {/* 예문의 모국어 번역 */}
+              {w.exampleMeaning && w.exampleMeaning !== w.example && (
+                <div style={{ fontSize: 12, color: '#94A3B8', fontWeight: 600,
+                  marginTop: 4, lineHeight: 1.5 }}>
+                  {w.exampleMeaning}
+                </div>
+              )}
             </div>
           )}
           <div className="tth-btn" style={{ display:'inline-flex', alignItems:'center', justifyContent:'center',
@@ -1024,6 +1048,14 @@ LANGUAGE RULES:
           +10 ⭐
         </div>
       )}
+
+      {/* Back to learn phase */}
+      <button onClick={startLearn}
+        style={{ ...btnBase, position: 'absolute', top: 20, left: 20,
+          padding: '8px 16px', background: 'white', color: '#64748B',
+          fontSize: 14, boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
+        ← Back
+      </button>
 
       <div style={{ fontSize: 13, fontWeight: 800, color: '#94A3B8',
         letterSpacing: 1, marginBottom: 20 }}>
@@ -1222,6 +1254,14 @@ LANGUAGE RULES:
         <style dangerouslySetInnerHTML={{ __html: `
           @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
         `}} />
+
+        {/* Back to match phase */}
+        <button onClick={() => setPhase('match')}
+          style={{ ...btnBase, position: 'absolute', top: 20, left: 20,
+            padding: '8px 16px', background: 'white', color: '#64748B',
+            fontSize: 14, boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
+          ← Back
+        </button>
 
         <div style={{ fontSize: 13, fontWeight: 800, color: '#94A3B8',
           letterSpacing: 1, marginBottom: 20 }}>
