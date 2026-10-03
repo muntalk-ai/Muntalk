@@ -9,6 +9,7 @@ import { PURPOSE_OPTIONS, PURPOSE_LABEL, isLearningPurpose } from '@/lib/purpose
 import type { LearningPurpose } from '@/lib/purpose';
 import { CURRICULUM, getCurrentLevel } from '@/data/curriculum';
 import { LEARN_LANGUAGES, UI_LANGUAGES } from '@/data/languages';
+import { isNonLatinLang } from '@/data/alphabets/types';
 import { getSubscription, getHearts, getLocalHearts, isLevelLocked, isAdminEmail, PlanId, Hearts } from '@/lib/subscription';
 import PaywallModal from '@/components/PaywallModal';
 import TrialBanner from '@/components/TrialBanner';
@@ -985,6 +986,23 @@ export default function LevelHub() {
             {!user && (
               <div style={styles.mtGuest}>🎁 {mtGuestLeft} free talk{mtGuestLeft === 1 ? '' : 's'} left today · no sign-up needed</div>
             )}
+          </div>
+        </div>
+      )}
+
+      {/* -- Alphabet card: 비라틴 문자 학습 언어일 때만 표시 -- */}
+      {!authLoading && isNonLatinLang(learnLang) && (
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '26px 24px 0', width: '100%' }}>
+          <div style={styles.mtCard}>
+            <div style={styles.mtHead}>
+              <div>
+                <div style={styles.mtTitle}>🔤 Alphabet <span style={styles.mtSec}>· Pre-A1</span></div>
+                <div style={styles.mtDesc}>Master the writing system first — tap any letter to hear it.</div>
+              </div>
+              <button style={styles.mtStart} onClick={() => router.push(`/lingua/alphabet?lang=${learnLang}`)}>
+                🔤 Learn letters
+              </button>
+            </div>
           </div>
         </div>
       )}
