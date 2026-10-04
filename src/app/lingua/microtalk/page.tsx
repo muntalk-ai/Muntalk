@@ -64,6 +64,9 @@ export default function MicroTalkPage() {
   const [error, setError] = useState('');
   const [guestLeft, setGuestLeft] = useState(GUEST_DAILY_LIMIT);
   const [shared, setShared] = useState(false);
+  // 튜터 음성 자동 재생 (기본 ON)
+  const [voiceOn, setVoiceOn] = useState(true);
+  const voiceOnRef = useRef(true);
 
   const messagesRef = useRef<ChatMsg[]>([]);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -134,6 +137,7 @@ export default function MicroTalkPage() {
     if (!rec) { setMicGuide('unsupported'); return; }
     if (isListening) { try { rec.stop(); } catch {} return; }
     setIsListening(true);
+    try { window.speechSynthesis?.cancel(); } catch {} // 듣기 시작 시 튜터 음성 중단
     try { rec.start(); } catch { setIsListening(false); }
   };
 
@@ -148,6 +152,13 @@ export default function MicroTalkPage() {
       u.lang = learnLang;
       synth.speak(u);
     } catch { /* ignore */ }
+  };
+
+  const toggleVoice = () => {
+    const next = !voiceOnRef.current;
+    voiceOnRef.current = next;
+    setVoiceOn(next);
+    if (!next) { try { window.speechSynthesis?.cancel(); } catch {} }
   };
 
   // ── 메시지 전송 ───────────────────────────────────────────────────────────
@@ -177,6 +188,8 @@ export default function MicroTalkPage() {
       const idx = messagesRef.current.length - 1;
       translateAi(idx, text);
     }
+    // 튜터 음성 자동 재생 (스피커 탭 없이)
+    if (voiceOnRef.current) speak(text);
   };
 
   const handleSend = useCallback(async (text?: string) => {
@@ -243,7 +256,7 @@ export default function MicroTalkPage() {
     const fallback: MicroTalkReport = {
       utterances: userCount,
       newPhrase: messagesRef.current.filter(m => m.role === 'ai').slice(-1)[0]?.text ?? '—',
-      feedback: 'Nice work showing up for 60 seconds — consistency beats intensity!',
+      feedback: 'Nice work showing up for 3 minutes — consistency beats intensity!',
     };
     try {
       const raw = await callGemini(buildReportPrompt({
@@ -291,7 +304,7 @@ export default function MicroTalkPage() {
   // ── 리포트 공유: Web Share API → 미지원 시 클립보드 복사 + "Copied!" ──
   const shareResult = async () => {
     if (!report) return;
-    const shareText = `I just did a 60-second Micro-Talk in ${learnLangLabel} on MunTalk! 🗣️ Spoke ${report.utterances} time${report.utterances === 1 ? '' : 's'} · ✨ New phrase: ${report.newPhrase} · 💡 ${report.feedback} — Try a 1-min free chat: https://muntalk.com/lingua/microtalk`;
+    const shareText = `I just did a 3-minute Micro-Talk in ${learnLangLabel} on MunTalk! 🗣️ Spoke ${report.utterances} time${report.utterances === 1 ? '' : 's'} · ✨ New phrase: ${report.newPhrase} · 💡 ${report.feedback} — Try a 3-min free chat: https://muntalk.com/lingua/microtalk`;
     const nav = navigator as Navigator & { share?: (d: { title: string; text: string; url: string }) => Promise<void> };
     if (nav.share) {
       try {
@@ -319,13 +332,20 @@ export default function MicroTalkPage() {
       <nav style={S.nav}>
         <button onClick={() => router.push('/lingua')} style={S.navBack}>← Home</button>
         <div style={S.navCenter}><span style={S.navTitle}>⚡ Micro-Talk</span></div>
-        <div style={S.navTimer}>{phase === 'chat' ? `⏱ ${mm}` : ''}</div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          {phase === 'chat' && (
+            <button onClick={toggleVoice} style={S.voiceBtn} aria-label="Toggle tutor voice">
+              {voiceOn ? '🔊' : '🔇'}
+            </button>
+          )}
+          <div style={S.navTimer}>{phase === 'chat' ? `⏱ ${mm}` : ''}</div>
+        </div>
       </nav>
 
       {/* ── Phase: topic ── */}
       {phase === 'topic' && (
         <div style={S.topicWrap}>
-          <div style={S.topicBadge}>⚡ 60 seconds</div>
+          <div style={S.topicBadge}>⚡ 3 minutes</div>
           <h1 style={S.topicTitle}>Pick a topic</h1>
           <p style={S.topicDesc}>One quick chat with your AI tutor — no pressure, just talking.</p>
           <div style={S.chipRow}>
@@ -343,7 +363,7 @@ export default function MicroTalkPage() {
                 You've used all {GUEST_DAILY_LIMIT} free Micro-Talks today.
               </div>
               <div style={{ fontSize: 13, color: '#64748B', marginBottom: 10 }}>
-                Sign in for unlimited 1-minute chats — it's free.
+                Sign in for unlimited 3-minute chats — it's free.
               </div>
               <div style={{ fontSize: 12.5, color: '#94A3B8', marginBottom: 14 }}>
                 Sign in to save your vocabulary &amp; daily streaks!
@@ -352,7 +372,7 @@ export default function MicroTalkPage() {
             </div>
           ) : (
             <>
-              <button style={S.startBtn} onClick={startTalk}>🎤 Start 1-min talk</button>
+              <button style={S.startBtn} onClick={startTalk}>🎤 Start 3-min talk</button>
               {!user && (
                 <div style={S.guestNote}>🎁 {guestLeft} free talk{guestLeft === 1 ? '' : 's'} left today · no sign-up needed</div>
               )}
@@ -364,7 +384,7 @@ export default function MicroTalkPage() {
             {[
               ['💬', 'Real conversation, not flashcards'],
               ['🗣️', `Your tutor speaks ${learnLangLabel} like a human`],
-              ['⚡', '60 seconds → instant recap with a new phrase'],
+              ['⚡', '3 minutes → instant recap with a new phrase'],
             ].map(([icon, text]) => (
               <div key={text} style={S.advRow}>
                 <span style={S.advIcon}>{icon}</span>
@@ -432,7 +452,7 @@ export default function MicroTalkPage() {
             </div>
           )}
           <div style={{ ...S.reportCard, position: 'relative', zIndex: 1 }}>
-            <div style={S.reportBadge}>⚡ Your 60-second recap</div>
+            <div style={S.reportBadge}>⚡ Your 3-minute recap</div>
             {report ? (
               <>
                 <div style={S.reportHeadline}>🎉 You just chatted in {learnLangLabel}!</div>
@@ -481,6 +501,7 @@ const S: Record<string, React.CSSProperties> = {
   navCenter: { flex: 1, textAlign: 'center' },
   navTitle: { fontSize: 16, fontWeight: 900 },
   navTimer: { minWidth: 70, textAlign: 'right', fontSize: 15, fontWeight: 800, color: '#FBBF24', fontVariantNumeric: 'tabular-nums' },
+  voiceBtn: { background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.16)', borderRadius: 99, width: 34, height: 34, fontSize: 16, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' },
   topicWrap: { maxWidth: 560, margin: '0 auto', padding: '48px 24px', textAlign: 'center', width: '100%' },
   topicBadge: { display: 'inline-block', fontSize: 12, fontWeight: 800, letterSpacing: 1.5, color: '#FBBF24', background: 'rgba(251,191,36,0.12)', border: '1px solid rgba(251,191,36,0.35)', borderRadius: 99, padding: '6px 16px', marginBottom: 18 },
   topicTitle: { fontSize: 30, fontWeight: 900, margin: '0 0 8px', letterSpacing: -0.5 },
