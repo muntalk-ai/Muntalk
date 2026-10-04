@@ -142,7 +142,11 @@ async function geminiTts(text: string, gender: string, lang: string) {
     if (!gres.ok) {
       const err = await gres.text();
       console.error(`[tts] Gemini TTS error lang=${lang}:`, err.slice(0, 200));
-      return NextResponse.json({ audioContent: null, error: 'TTS failed' });
+      // DIAG-ONLY (temporary): surface Google's message to diagnose the my-MM outage
+      let detail = '';
+      try { detail = String(JSON.parse(err)?.error?.message ?? err).slice(0, 200); }
+      catch { detail = err.slice(0, 200); }
+      return NextResponse.json({ audioContent: null, error: 'TTS failed', detail });
     }
     const gdata = await gres.json();
     const parts: any[] = gdata?.candidates?.[0]?.content?.parts ?? [];
