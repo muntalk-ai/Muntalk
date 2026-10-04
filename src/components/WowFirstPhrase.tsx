@@ -9,7 +9,15 @@ import { FIRST_PHRASES, FirstPhrase, WowItem } from '@/data/first-phrase';
 import { getTutorForLang, getTutorById } from '@/data/tutors';
 import { LEARN_LANGUAGES, promptLangName } from '@/data/languages';
 
-type Step = 'pick' | 'try' | 'listening' | 'analyzing' | 'feedback' | 'done';
+type Step = 'pick' | 'tier' | 'try' | 'listening' | 'analyzing' | 'feedback' | 'done';
+
+export type Tier = 'beginner' | 'intermediate' | 'advanced';
+const TIERS: { id: Tier; emoji: string; label: string; desc: string }[] = [
+  { id: 'beginner', emoji: '🌱', label: 'Beginner', desc: 'Simple words to warm up' },
+  { id: 'intermediate', emoji: '🌿', label: 'Intermediate', desc: 'Short everyday phrases' },
+  { id: 'advanced', emoji: '🌳', label: 'Advanced', desc: 'Longer real-life phrases' },
+];
+const TIER_LABEL: Record<Tier, string> = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'Advanced' };
 
 const FONT = "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif";
 const ACCENT = '#6366F1';
@@ -69,9 +77,24 @@ export default function WowFirstPhrase() {
   const router = useRouter();
   const [step, setStep] = useState<Step>('pick');
   const [fp, setFp] = useState<FirstPhrase | null>(null);
+  const [tier, setTier] = useState<Tier | null>(null);
   const [itemIdx, setItemIdx] = useState(0);
   const [usedIdx, setUsedIdx] = useState<number[]>([]);
   const [timeLeft, setTimeLeft] = useState<number | null>(null);
+
+  // 세션 대화 로그 (Micro-Talk처럼 계속 표시)
+  type LogEntry = { id: number; who: 'you' | 'coach' | 'sys'; text: string; score?: number | null };
+  const [log, setLog] = useState<LogEntry[]>([]);
+  const logIdRef = useRef(0);
+  const logEndRef = useRef<HTMLDivElement | null>(null);
+  const addLog = (who: LogEntry['who'], text: string, score?: number | null) => {
+    logIdRef.current += 1;
+    const id = logIdRef.current;
+    setLog(prev => [...prev, { id, who, text, score }]);
+  };
+  useEffect(() => {
+    logEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, [log]);
 
   // 세션 스탯
   const [attempts, setAttempts] = useState(0);
@@ -214,10 +237,22 @@ export default function WowFirstPhrase() {
   const pickLanguage = (p: FirstPhrase) => {
     stopAll();
     setFp(p);
+    setTier(null);
     setItemIdx(0);
     setUsedIdx([]);
     resetItemState();
     if (timeLeft === null) setTimeLeft(SESSION_SEC);
+    setStep('tier');
+  };
+
+  const selectTier = (t: Tier) => {
+    if (!fp) return;
+    stopAll();
+    setTier(t);
+    const first = fp.items.findIndex((it, idx) => it.tier === t && !usedIdx.includes(idx));
+    setItemIdx(first >= 0 ? first : 0);
+    resetItemState();
+    addLog('sys', `${fp.label} · ${TIER_LABEL[t]}`);
     setStep('try');
     // 사용자 제스처 직후라 자동재생 시도 (막히면 🔊 버튼으로)
     setTimeout(() => playItemRef.current(), 350);
@@ -233,6 +268,7 @@ export default function WowFirstPhrase() {
 
   const backToPick = () => {
     stopAll();
+    setTier(null);
     resetItemState();
     setStep('pick');
   };
@@ -240,8 +276,11 @@ export default function WowFirstPhrase() {
   const resetSession = () => {
     stopAll();
     setFp(null);
+    setTier(null);
     setItemIdx(0);
     setUsedIdx([]);
+    setLog([]);
+    logIdRef.current = 0;
     setTimeLeft(null);
     setAttempts(0);
     setScoredAttempts(0);
@@ -289,6 +328,9 @@ export default function WowFirstPhrase() {
     } catch { /* fallthrough to fallback */ }
     if (!line) line = FALLBACK_LINES[Math.floor(Math.random() * FALLBACK_LINES.length)];
     setAnalysis({ score, line });
+    // 대화 로그에 기록
+    addLog('you', `"${transcript}"`);
+    addLog('coach', line, score);
 
     // 스탯 업데이트
     const newAttempts = attempts + 1;
@@ -381,13 +423,19 @@ export default function WowFirstPhrase() {
     setLastXp(10);
     setUsedIdx(prev => (prev.includes(itemIdx) ? prev : [...prev, itemIdx]));
     setAnalysis({ score: null, line: 'Great effort! Tap 🔊 to listen again, or pick your next below.' });
+    addLog('you', `🎉 Said "${item.text}" out loud`);
+    addLog('coach', 'Great effort! Tap 🔊 to listen again, or pick your next below.');
     if (newAttempts === 3) setMilestone("🔥 You're on a roll — 3 down, keep going!");
     setStep('feedback');
   };
 
-  const remaining = fp ? fp.items.map((it, i) => ({ it, i })).filter(({ i }) => !usedIdx.includes(i)) : [];
-  const remainingPhrases = remaining.filter(({ it }) => it.kind === 'phrase');
-  const remainingWords = remaining.filter(({ it }) => it.kind === 'word');
+  // 현재 난이도 내에서 남은 아이템
+  const remaining = (fp && tier)
+    ? fp.items.map((it, i) => ({ it, i }))
+        .filter(({ it, i }) => it.tier === tier && !usedIdx.includes(i))
+    : [];
+  const tierIdx = tier ? TIERS.findIndex(t => t.id === tier) : -1;
+  const nextTierUp = tier && tierIdx >= 0 && tierIdx < TIERS.length - 1 ? TIERS[tierIdx + 1] : null;
   const showConfetti = step === 'done' || (step === 'feedback' && (analysis?.score ?? 0) >= 85);
   const avgScore = scoredAttempts > 0 ? Math.round(totalScore / scoredAttempts) : null;
 
@@ -404,7 +452,7 @@ export default function WowFirstPhrase() {
     );
   };
 
-  const itemKindLabel = item ? (item.kind === 'phrase' ? '📝 PHRASE' : '🔤 WORD') : '';
+  const tierMeta = tier ? TIERS.find(t => t.id === tier) : null;
 
   return (
     <div style={{ maxWidth: 900, margin: '0 auto', padding: '26px 24px 0', width: '100%', fontFamily: FONT }}>
@@ -469,6 +517,39 @@ export default function WowFirstPhrase() {
           </div>
         )}
 
+        {step === 'tier' && fp && (
+          <div style={{ textAlign: 'center', animation: 'wowpop .35s ease' }}>
+            <button onClick={backToPick}
+              style={{ background: 'none', border: 'none', color: '#94A3B8',
+                fontSize: 13, fontWeight: 800, cursor: 'pointer',
+                marginBottom: 12, fontFamily: FONT }}>
+              ← Choose another language
+            </button>
+            <div style={{ fontSize: 15, fontWeight: 900, color: '#0F172A', marginBottom: 6 }}>
+              {fp.flag} {fp.label} — pick your level
+            </div>
+            <div style={{ fontSize: 13, color: '#64748B', fontWeight: 600, marginBottom: 20 }}>
+              Start where you're comfortable. Move up anytime.
+            </div>
+            <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
+              {TIERS.map(t => {
+                const count = fp.items.filter(it => it.tier === t.id).length;
+                return (
+                  <button key={t.id} onClick={() => selectTier(t.id)}
+                    style={{ border: '2px solid #E0E7FF', borderRadius: 20, background: '#F8FAFF',
+                      padding: '18px 22px', cursor: 'pointer', fontFamily: FONT,
+                      minWidth: 150, boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
+                    <div style={{ fontSize: 34, marginBottom: 6 }}>{t.emoji}</div>
+                    <div style={{ fontSize: 15, fontWeight: 900, color: '#0F172A', marginBottom: 2 }}>{t.label}</div>
+                    <div style={{ fontSize: 12, color: '#64748B', fontWeight: 600, marginBottom: 4 }}>{t.desc}</div>
+                    <div style={{ fontSize: 11, color: '#94A3B8', fontWeight: 700 }}>{count} items</div>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
         {(step === 'try' || step === 'listening' || step === 'analyzing') && fp && item && (
           <div style={{ animation: 'wowpop .35s ease' }}>
             <button onClick={backToPick}
@@ -498,7 +579,7 @@ export default function WowFirstPhrase() {
               <div style={{ flex: 1, minWidth: 220 }}>
                 <div style={{ fontSize: 12, fontWeight: 800, color: '#94A3B8',
                   letterSpacing: 1, marginBottom: 6 }}>
-                  {fp.flag} {itemKindLabel} · {fp.label.toUpperCase()}
+                  {fp.flag} {tierMeta ? `${tierMeta.emoji} ${tierMeta.label.toUpperCase()}` : ''} · {fp.label.toUpperCase()}
                 </div>
                 <div dir="auto" style={{ fontSize: 30, fontWeight: 900, color: '#0F172A',
                   marginBottom: 4, lineHeight: 1.3 }}>{item.text}</div>
@@ -623,48 +704,47 @@ export default function WowFirstPhrase() {
             {remaining.length > 0 ? (
               <div>
                 <div style={{ textAlign: 'center', fontSize: 14, fontWeight: 900, color: '#0F172A', marginBottom: 10 }}>
-                  👇 Pick your next {fp.label} {remainingPhrases.length > 0 && remainingWords.length > 0 ? 'word or phrase' : remainingPhrases.length > 0 ? 'phrase' : 'word'}
+                  👇 Pick your next {tier ? TIER_LABEL[tier].toLowerCase() : ''} {remaining[0].it.kind === 'word' ? 'word' : 'phrase'}
                 </div>
-                {remainingPhrases.length > 0 && (
-                  <div style={{ marginBottom: 10 }}>
-                    <div style={{ fontSize: 11, fontWeight: 800, color: '#94A3B8', letterSpacing: 1, marginBottom: 6 }}>📝 PHRASES</div>
-                    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                      {remainingPhrases.map(({ it, i }) => (
-                        <button key={i} onClick={() => selectItem(i)}
-                          style={{ border: '2px solid #E0E7FF', borderRadius: 14, background: '#F8FAFF',
-                            padding: '8px 14px', cursor: 'pointer', fontFamily: FONT, textAlign: 'left' }}>
-                          <div dir="auto" style={{ fontSize: 14, fontWeight: 800, color: '#0F172A' }}>{it.text}</div>
-                          <TranslatedMeaning text={it.meaning}
-                            cacheKey={`mt_wow_meaning_${fp.code}_${i}_${nativeLang}`}
-                            nativeLang={nativeLang} isEnglishNative={isEnglishNative}
-                            style={{ fontSize: 11, color: '#94A3B8', fontWeight: 600 }} />
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {remainingWords.length > 0 && (
-                  <div>
-                    <div style={{ fontSize: 11, fontWeight: 800, color: '#94A3B8', letterSpacing: 1, marginBottom: 6 }}>🔤 WORDS</div>
-                    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                      {remainingWords.map(({ it, i }) => (
-                        <button key={i} onClick={() => selectItem(i)}
-                          style={{ border: '2px solid #E0E7FF', borderRadius: 14, background: '#F8FAFF',
-                            padding: '8px 14px', cursor: 'pointer', fontFamily: FONT, textAlign: 'left' }}>
-                          <div dir="auto" style={{ fontSize: 14, fontWeight: 800, color: '#0F172A' }}>{it.text}</div>
-                          <TranslatedMeaning text={it.meaning}
-                            cacheKey={`mt_wow_meaning_${fp.code}_${i}_${nativeLang}`}
-                            nativeLang={nativeLang} isEnglishNative={isEnglishNative}
-                            style={{ fontSize: 11, color: '#94A3B8', fontWeight: 600 }} />
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
+                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'center' }}>
+                  {remaining.map(({ it, i }) => (
+                    <button key={i} onClick={() => selectItem(i)}
+                      style={{ border: '2px solid #E0E7FF', borderRadius: 14, background: '#F8FAFF',
+                        padding: '8px 14px', cursor: 'pointer', fontFamily: FONT, textAlign: 'left' }}>
+                      <div dir="auto" style={{ fontSize: 14, fontWeight: 800, color: '#0F172A' }}>{it.text}</div>
+                      <TranslatedMeaning text={it.meaning}
+                        cacheKey={`mt_wow_meaning_${fp.code}_${i}_${nativeLang}`}
+                        nativeLang={nativeLang} isEnglishNative={isEnglishNative}
+                        style={{ fontSize: 11, color: '#94A3B8', fontWeight: 600 }} />
+                    </button>
+                  ))}
+                </div>
               </div>
             ) : (
-              <div style={{ textAlign: 'center', fontSize: 14, fontWeight: 700, color: '#64748B' }}>
-                You tried everything in {fp.label}! 🎉 Pick another language above to keep going.
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ fontSize: 40, marginBottom: 8 }}>🎉</div>
+                <div style={{ fontSize: 18, fontWeight: 900, color: '#0F172A', marginBottom: 6 }}>
+                  {tier ? TIER_LABEL[tier] : ''} complete!
+                </div>
+                <div style={{ fontSize: 13, color: '#64748B', fontWeight: 600, marginBottom: 14 }}>
+                  {nextTierUp ? `Nice work — ready for ${nextTierUp.label}?` : `You finished every level in ${fp.label}! Amazing.`}
+                </div>
+                <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
+                  {nextTierUp && (
+                    <button onClick={() => selectTier(nextTierUp.id)}
+                      style={{ border: 'none', borderRadius: 99, cursor: 'pointer',
+                        padding: '11px 26px', fontSize: 14, fontWeight: 800, color: '#fff',
+                        background: `linear-gradient(135deg, ${ACCENT}, #818CF8)`, fontFamily: FONT }}>
+                      {nextTierUp.emoji} Try {nextTierUp.label} →
+                    </button>
+                  )}
+                  <button onClick={backToPick}
+                    style={{ border: '2px solid #E2E8F0', borderRadius: 99, cursor: 'pointer',
+                      padding: '10px 24px', fontSize: 14, fontWeight: 800, color: '#64748B',
+                      background: '#fff', fontFamily: FONT }}>
+                    ← Another language
+                  </button>
+                </div>
               </div>
             )}
           </div>
@@ -724,6 +804,40 @@ export default function WowFirstPhrase() {
           </div>
         )}
       </div>
+
+      {/* -- 세션 대화 로그: Micro-Talk처럼 시도가 계속 화면에 표시 -- */}
+      {log.length > 0 && step !== 'pick' && (
+        <div style={{ background: '#fff', borderRadius: 20, marginTop: 12, padding: '18px 20px',
+          border: '2px solid #EEF2FF', boxShadow: '0 8px 32px rgba(99,102,241,0.08)' }}>
+          <div style={{ fontSize: 12, fontWeight: 900, color: '#94A3B8', letterSpacing: 1, marginBottom: 10 }}>
+            📝 SESSION LOG
+          </div>
+          <div style={{ maxHeight: 260, overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: 8 }}>
+            {log.map(e => e.who === 'sys' ? (
+              <div key={e.id} style={{ textAlign: 'center', fontSize: 12, fontWeight: 700, color: '#94A3B8' }}>
+                — {e.text} —
+              </div>
+            ) : e.who === 'you' ? (
+              <div key={e.id} style={{ alignSelf: 'flex-end', background: `linear-gradient(135deg, ${ACCENT}, #818CF8)`,
+                color: '#fff', borderRadius: '16px 16px 4px 16px', padding: '9px 14px',
+                maxWidth: '85%', fontSize: 14, fontWeight: 600 }}>
+                🗣️ <span dir="auto">{e.text}</span>
+              </div>
+            ) : (
+              <div key={e.id} style={{ alignSelf: 'flex-start', background: '#F1F5F9',
+                borderRadius: '16px 16px 16px 4px', padding: '9px 14px', maxWidth: '85%', fontSize: 14 }}>
+                {e.score != null && (
+                  <span style={{ fontWeight: 900,
+                    color: e.score >= 85 ? '#059669' : e.score >= 70 ? '#D97706' : '#4F46E5' }}>
+                    🎯 {e.score} · </span>
+                )}
+                <span style={{ color: '#0F172A', fontWeight: 600 }}>{e.text}</span>
+              </div>
+            ))}
+            <div ref={logEndRef} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
