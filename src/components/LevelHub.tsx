@@ -951,7 +951,7 @@ export default function LevelHub() {
                 {/* E-2: 1분 무료 대화 체험 CTA 최상단 — /lingua/microtalk */}
                 <button style={{ ...styles.heroBtn1, fontSize: 16, padding: '15px 36px' }}
                   onClick={() => router.push('/lingua/microtalk')}>
-                  ⚡ Try a 1-min free chat
+                  ⚡ Try a 3-min free chat
                 </button>
                 <button style={styles.heroBtn2} onClick={() => router.push('/signup')}>
                   🚀 Start Learning Free
@@ -1016,11 +1016,11 @@ export default function LevelHub() {
           <div style={styles.mtCard}>
             <div style={styles.mtHead}>
               <div>
-                <div style={styles.mtTitle}>⚡ Micro-Talk <span style={styles.mtSec}>· 60 seconds</span></div>
+                <div style={styles.mtTitle}>⚡ Micro-Talk <span style={styles.mtSec}>· 3 minutes</span></div>
                 <div style={styles.mtDesc}>One quick chat with your AI tutor — no pressure, just talking.</div>
               </div>
               <button style={styles.mtStart} onClick={() => router.push('/lingua/microtalk')}>
-                🎤 Start 1-min talk
+                🎤 Start 3-min talk
               </button>
             </div>
             <div style={styles.mtChips}>
@@ -1061,7 +1061,7 @@ export default function LevelHub() {
         <div style={styles.trustStrip}>
           {([
             ['🌱', 'Growing with our beta testers'],
-            ['🎤', 'Try 1-min speaking, no sign-up'],
+            ['🎤', 'Try 3-min speaking, no sign-up'],
             ['💬', 'Real AI conversation, free to try'],
           ] as [string, string][]).map(([icon, label]) => (
             <div key={label} style={styles.trustItem}>

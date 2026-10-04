@@ -1,11 +1,11 @@
 // lib/microtalk.ts
-// Micro-Talk (Phase 2-1 Track 2-B) — 60초 스낵 회화 헬퍼
+// Micro-Talk (Phase 2-1 Track 2-B) — 3분 회화 헬퍼
 // 순수 함수 모음: 프롬프트 빌더, 게스트 일일 제한, 리포트 파싱
 
 import { PURPOSE_LABEL, PURPOSE_REGISTER, isLearningPurpose } from './purpose';
 import type { LearningPurpose } from './purpose';
 
-export const MICROTALK_SECONDS = 60;
+export const MICROTALK_SECONDS = 180;
 export const GUEST_DAILY_LIMIT = 3;
 const GUEST_KEY = 'mt_microtalk';
 
@@ -25,7 +25,7 @@ export function buildMicroTalkPrompt(o: {
     o.purpose && isLearningPurpose(o.purpose)
       ? `Learner's goal: ${PURPOSE_LABEL[o.purpose]}. ${PURPOSE_REGISTER[o.purpose]}`
       : '';
-  return `You are a friendly ${o.targetLangLabel} conversation partner for a 60-second micro chat.
+  return `You are a friendly ${o.targetLangLabel} conversation partner for a 3-minute chat.
 Topic: ${o.topicLabel}.
 ${purposeLine}
 Rules:
@@ -38,7 +38,7 @@ Rules:
 
 /** AI 첫 발화 생성용 프롬프트 */
 export function buildOpeningPrompt(o: { targetLangLabel: string; topicLabel: string }): string {
-  return `Start a 60-second casual chat in ${o.targetLangLabel} about "${o.topicLabel}".
+  return `Start a 3-minute casual chat in ${o.targetLangLabel} about "${o.topicLabel}".
 Write ONLY the opening line: one short, warm question (max 15 words) a friendly tutor would ask.
 No greeting prefix, no explanation — just the question, in ${o.targetLangLabel}.`;
 }
@@ -55,7 +55,7 @@ export function buildReportPrompt(o: {
   nativeLangLabel: string;
   transcript: string;
 }): string {
-  return `Summarize this 60-second ${o.targetLangLabel} micro-chat in JSON:
+  return `Summarize this 3-minute ${o.targetLangLabel} micro-chat in JSON:
 {"utterances": N, "newPhrase": "...", "feedback": "..."}
 - "utterances": number of times the LEARNER spoke (count their messages below)
 - "newPhrase": the single most useful expression from the chat, in ${o.targetLangLabel} + ${o.nativeLangLabel} translation in parentheses
