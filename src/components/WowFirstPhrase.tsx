@@ -2,11 +2,12 @@
 // WowFirstPhrase v2 — 랜딩 게스트용 "Try it now" 3분 말하기 체험
 // 언어 선택 → 3분 타이머 시작 → 듣기/말하기 반복 → 매 시도 1줄 영어 분석 → 다음 문장/단어 선택 → 종료 시 성적표
 // 비로그인 전용. localStorage에 흔적을 남기지 않음.
-import { useState, useRef, useMemo, useEffect } from 'react';
+import { useState, useRef, useMemo, useEffect, type CSSProperties } from 'react';
 import { useRouter } from 'next/navigation';
 import { apiFetch } from '@/lib/apiClient';
 import { FIRST_PHRASES, FirstPhrase, WowItem } from '@/data/first-phrase';
 import { getTutorForLang, getTutorById } from '@/data/tutors';
+import { LEARN_LANGUAGES, promptLangName } from '@/data/languages';
 
 type Step = 'pick' | 'try' | 'listening' | 'analyzing' | 'feedback' | 'done';
 
@@ -25,6 +26,43 @@ function fmtTime(s: number) {
   const m = Math.floor(s / 60);
   const r = s % 60;
   return `${m}:${r.toString().padStart(2, '0')}`;
+}
+
+// ── 문장/단어 뜻 모국어 번역 (PR #101 패턴: 영어 원문 먼저 표시 → 번역 교체, localStorage 캐시) ──
+// 게스트 전용이라 프로필 없이 localStorage → 브라우저 언어 → 영어로 모국어 판별.
+function TranslatedMeaning({ text, cacheKey, nativeLang, isEnglishNative, style }: {
+  text: string; cacheKey: string; nativeLang: string; isEnglishNative: boolean; style?: CSSProperties;
+}) {
+  const [translated, setTranslated] = useState<string | null>(null);
+  useEffect(() => {
+    if (isEnglishNative || !text) { setTranslated(null); return; }
+    try {
+      const cached = localStorage.getItem(cacheKey);
+      if (cached) { setTranslated(cached); return; }
+    } catch { /* 캐시 읽기 실패 → 번역 시도 */ }
+    setTranslated(null);
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await apiFetch('/api/gemini', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            prompt: `Translate the following short phrase into ${promptLangName(nativeLang)} (the learner's native language). Return ONLY the translation, no quotes, no explanation:\n\n"${text}"`,
+            temperature: 0.2,
+          }),
+          timeoutMs: 15000,
+        });
+        const data = await res.json();
+        const t = (data?.text || '').trim().replace(/^"|"$/g, '');
+        if (cancelled || !t || t.length > 200) return;
+        try { localStorage.setItem(cacheKey, t); } catch { /* 저장 실패 무시 */ }
+        setTranslated(t);
+      } catch { /* 번역 실패 → 영어 원문 유지 (조용히 폴백) */ }
+    })();
+    return () => { cancelled = true; };
+  }, [cacheKey, isEnglishNative, text, nativeLang]);
+  return <div dir="auto" style={style}>= {translated || text}</div>;
 }
 
 export default function WowFirstPhrase() {
@@ -65,6 +103,21 @@ export default function WowFirstPhrase() {
     if (fp.code === 'ar-XA') return getTutorById('t09');
     return getTutorForLang(fp.code);
   }, [fp]);
+
+  // 모국어 판별 (게스트): localStorage → 브라우저 언어 → 영어
+  const nativeLang = useMemo(() => {
+    if (typeof window === 'undefined') return 'en-US';
+    try {
+      const stored = localStorage.getItem('mt_native_lang');
+      if (stored) return stored;
+    } catch { /* noop */ }
+    const nav = (navigator.language || 'en-US');
+    const base = nav.split('-')[0].toLowerCase();
+    return LEARN_LANGUAGES.find(l => l.code.toLowerCase() === nav.toLowerCase())?.code
+      || LEARN_LANGUAGES.find(l => l.code.toLowerCase().startsWith(base))?.code
+      || 'en-US';
+  }, []);
+  const isEnglishNative = nativeLang.toLowerCase().startsWith('en');
 
   // 폭죽 조각 (마운트 시 1회 생성)
   const confetti = useMemo(
@@ -451,8 +504,10 @@ export default function WowFirstPhrase() {
                   marginBottom: 4, lineHeight: 1.3 }}>{item.text}</div>
                 <div style={{ fontSize: 14, color: '#94A3B8', fontWeight: 700,
                   fontStyle: 'italic', marginBottom: 2 }}>{item.romanized}</div>
-                <div style={{ fontSize: 13, color: '#64748B', fontWeight: 600,
-                  marginBottom: 18 }}>= {item.meaning}</div>
+                <TranslatedMeaning text={item.meaning}
+                  cacheKey={`mt_wow_meaning_${fp.code}_${itemIdx}_${nativeLang}`}
+                  nativeLang={nativeLang} isEnglishNative={isEnglishNative}
+                  style={{ fontSize: 13, color: '#64748B', fontWeight: 600, marginBottom: 18 }} />
 
                 {step === 'try' ? (
                   <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
@@ -579,7 +634,10 @@ export default function WowFirstPhrase() {
                           style={{ border: '2px solid #E0E7FF', borderRadius: 14, background: '#F8FAFF',
                             padding: '8px 14px', cursor: 'pointer', fontFamily: FONT, textAlign: 'left' }}>
                           <div dir="auto" style={{ fontSize: 14, fontWeight: 800, color: '#0F172A' }}>{it.text}</div>
-                          <div style={{ fontSize: 11, color: '#94A3B8', fontWeight: 600 }}>= {it.meaning}</div>
+                          <TranslatedMeaning text={it.meaning}
+                            cacheKey={`mt_wow_meaning_${fp.code}_${i}_${nativeLang}`}
+                            nativeLang={nativeLang} isEnglishNative={isEnglishNative}
+                            style={{ fontSize: 11, color: '#94A3B8', fontWeight: 600 }} />
                         </button>
                       ))}
                     </div>
@@ -594,7 +652,10 @@ export default function WowFirstPhrase() {
                           style={{ border: '2px solid #E0E7FF', borderRadius: 14, background: '#F8FAFF',
                             padding: '8px 14px', cursor: 'pointer', fontFamily: FONT, textAlign: 'left' }}>
                           <div dir="auto" style={{ fontSize: 14, fontWeight: 800, color: '#0F172A' }}>{it.text}</div>
-                          <div style={{ fontSize: 11, color: '#94A3B8', fontWeight: 600 }}>= {it.meaning}</div>
+                          <TranslatedMeaning text={it.meaning}
+                            cacheKey={`mt_wow_meaning_${fp.code}_${i}_${nativeLang}`}
+                            nativeLang={nativeLang} isEnglishNative={isEnglishNative}
+                            style={{ fontSize: 11, color: '#94A3B8', fontWeight: 600 }} />
                         </button>
                       ))}
                     </div>
