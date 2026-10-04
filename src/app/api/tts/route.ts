@@ -90,6 +90,29 @@ const VOICE_MAP: Record<string, { f: string; m: string; lang: string }> = {
   'am-ET': { f: 'am-ET-Standard-A',  m: 'am-ET-Standard-B',  lang: 'am-ET' },
 };
 
+// ── In-memory LRU cache: identical (lang, gender, speed, level, text)
+// requests reuse previously generated audio instead of burning another
+// TTS API call (quota). Module scope = shared across requests in this
+// serverless instance. Only successful audio is cached — failures never.
+const TTS_CACHE_MAX = 300;
+const ttsCache = new Map<string, { audioContent: string; mimeType?: string }>();
+function ttsCacheKey(lang: string, gender: string, speed: unknown, level: unknown, text: string) {
+  return `${lang}:${gender}:${speed ?? ''}:${level ?? ''}:${text}`;
+}
+function ttsCacheGet(key: string) {
+  const hit = ttsCache.get(key);
+  if (hit) { ttsCache.delete(key); ttsCache.set(key, hit); } // refresh LRU order
+  return hit;
+}
+function ttsCacheSet(key: string, val: { audioContent: string; mimeType?: string }) {
+  if (ttsCache.has(key)) ttsCache.delete(key);
+  else if (ttsCache.size >= TTS_CACHE_MAX) {
+    const oldest = ttsCache.keys().next().value;
+    if (oldest !== undefined) ttsCache.delete(oldest);
+  }
+  ttsCache.set(key, val);
+}
+
 // Prepend a 44-byte WAV header (16-bit PCM mono 24kHz) to raw audio bytes.
 // Gemini TTS models return either WAV (gemini-3.8-flash-tts) or raw PCM
 // (older preview models); this normalizes the latter so the client can
@@ -119,7 +142,7 @@ function addWavHeader(pcm: Uint8Array): Buffer {
  * so the user would hear it spoken before every word. Gemini auto-detects
  * the language from the script; no prefix needed.
  */
-async function geminiTts(text: string, gender: string, lang: string) {
+async function geminiTts(text: string, gender: string, lang: string, cacheKey: string) {
   const gemKey = process.env.GEMINI_API_KEY;
   if (!gemKey) {
     return NextResponse.json({ error: 'GEMINI_API_KEY not set' }, { status: 500 });
@@ -157,7 +180,9 @@ async function geminiTts(text: string, gender: string, lang: string) {
     const wav: Buffer = decoded.subarray(0, 4).toString() !== 'RIFF'
       ? addWavHeader(decoded)
       : decoded;
-    return NextResponse.json({ audioContent: wav.toString('base64'), mimeType: 'audio/wav' });
+    const out = { audioContent: wav.toString('base64'), mimeType: 'audio/wav' };
+    ttsCacheSet(cacheKey, out);
+    return NextResponse.json(out);
   } catch (e) {
     console.error('[tts] Gemini TTS exception:', e);
     return NextResponse.json({ audioContent: null, error: 'TTS failed' });
@@ -187,6 +212,15 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ audioContent: null });
     }
 
+    // ── Cache hit: serve previously generated audio without an API call ──
+    const key = ttsCacheKey(lang, gender, speed, level, cleanText);
+    const cached = ttsCacheGet(key);
+    if (cached) {
+      return NextResponse.json(cached.mimeType
+        ? { audioContent: cached.audioContent, mimeType: cached.mimeType }
+        : { audioContent: cached.audioContent });
+    }
+
     // ── Gemini TTS fallback: any language Google Cloud TTS has no voice ──
     // for is served by Gemini's native speech generation instead of
     // returning unsupported_language. Verified 2026-09-27 with
@@ -195,7 +229,7 @@ export async function POST(req: NextRequest) {
     // (Never fall back to an en-US voice: wrong-language audio is worse than none.)
     const voiceEntry = VOICE_MAP[lang];
     if (!voiceEntry) {
-      return geminiTts(cleanText, gender, lang);
+      return geminiTts(cleanText, gender, lang, key);
     }
 
     const apiKey = process.env.GOOGLE_TTS_API_KEY;
@@ -243,6 +277,7 @@ export async function POST(req: NextRequest) {
     }
 
     const data = await res.json();
+    if (data.audioContent) ttsCacheSet(key, { audioContent: data.audioContent });
     return NextResponse.json({ audioContent: data.audioContent });
 
   } catch (e: any) {
