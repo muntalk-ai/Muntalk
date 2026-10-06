@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { signOut } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
@@ -58,8 +58,32 @@ const XP_BOUNDS: Record<string, [number, number]> = {
   c1: [4000, 6500], c2: [6500, 9999],
 };
 
+// -- 릴스 유입자용 히어로 카피 (PR #110: ?r=1|2|3, 게스트 전용, 메인(/) 100% 영어) --
+const REEL_HERO: Record<string, { headline: string; desc: string; cta: string }> = {
+  '1': {
+    headline: 'Start speaking from your first minute',
+    desc: 'Watch how AI tutors get you talking — try it free, no sign-up.',
+    cta: '🎤 Try it now — 30 seconds',
+  },
+  '2': {
+    headline: 'See your pronunciation scored in real time',
+    desc: 'The correction screen from the video — try it yourself, free.',
+    cta: '🎤 Test my pronunciation',
+  },
+  '3': {
+    headline: 'Phone English costs $300. This is $0.',
+    desc: 'Unlimited AI conversation — free to try, no sign-up.',
+    cta: '🎤 Try free now',
+  },
+};
+
 export default function LevelHub() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  // PR #110: 릴스 유입 파라미터 — ?trial=1 (체험 직행), ?r=1|2|3 (릴스별 히어로 매치)
+  const trialFirst = searchParams.get('trial') === '1';
+  const reelTag = searchParams.get('r');
+  const reelHero = reelTag === '1' || reelTag === '2' || reelTag === '3' ? REEL_HERO[reelTag] : null;
   const { user, profile, loading: authLoading, refreshProfile } = useAuth();
   const [xp, setXp] = useState(0);
   const [streak, setStreak] = useState(0);
@@ -88,6 +112,39 @@ export default function LevelHub() {
   useEffect(() => {
     if (toast) { const t = setTimeout(() => setToast(null), 2500); return () => clearTimeout(t); }
   }, [toast]);
+
+  // -- PR #110: 릴스 유입 체험 직행 (?trial=1) — 게스트 전용 WowFirstPhrase로 스크롤 + 펄스 강조 --
+  const trialRef = useRef<HTMLDivElement>(null);
+  const [trialHighlight, setTrialHighlight] = useState(false);
+  const scrollToTrial = () => {
+    trialRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setTrialHighlight(true);
+    setTimeout(() => setTrialHighlight(false), 2600);
+  };
+  // -- PR #110: 히어로 CTA 클릭 측정 (기존 /api/client-log 에러 수집 인프라 재사용, 실패 시 조용히 무시) --
+  const logReelCta = (ctaId: string) => {
+    try {
+      const rLog = reelHero && reelTag ? reelTag : 'none';
+      fetch('/api/client-log', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          kind: 'error',
+          message: `[reel_cta_click] r=${rLog} cta=${ctaId}`,
+          url: typeof window !== 'undefined' ? window.location.href.slice(0, 200) : '/',
+        }),
+      }).catch(() => {});
+    } catch { /* 측정 실패는 UX에 영향 없음 */ }
+  };
+  useEffect(() => {
+    if (!trialFirst || authLoading || user) return;
+    const t1 = setTimeout(() => {
+      trialRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTrialHighlight(true);
+    }, 700);
+    const t2 = setTimeout(() => setTrialHighlight(false), 3300);
+    return () => { clearTimeout(t1); clearTimeout(t2); };
+  }, [trialFirst, authLoading, user]);
   const [completedLessons, setCompletedLessons] = useState<Set<string>>(new Set());
 
   // 언어 설정 (localStorage 저장)
@@ -945,20 +1002,28 @@ export default function LevelHub() {
                   <span style={styles.newTag}>FREE</span>
                 </div>
               </div>
-              <h1 style={styles.heroTitle}>Speak 90+ languages<br />with 150+ AI tutors</h1>
-              <p style={styles.heroDesc}>Stop matching words. Start real conversations.<br />Our AI tutors get total beginners talking in under 10 minutes.</p>
+              <h1 style={styles.heroTitle}>{reelHero ? reelHero.headline : (<>Speak 90+ languages<br />with 150+ AI tutors</>)}</h1>
+              <p style={styles.heroDesc}>{reelHero ? reelHero.desc : (<>Stop matching words. Start real conversations.<br />Our AI tutors get total beginners talking in under 10 minutes.</>)}</p>
               <div style={styles.heroBtnRow}>
                 {/* E-2: 1분 무료 대화 체험 CTA 최상단 — /lingua/microtalk */}
+                {/* PR #110: ?r= 태그 유입 시 체험 CTA 1개만 남김 (가입/테스트 버튼 숨김, 선체험 후가입) → 체험 섹션으로 스크롤 */}
                 <button style={{ ...styles.heroBtn1, fontSize: 16, padding: '15px 36px' }}
-                  onClick={() => router.push('/lingua/microtalk')}>
-                  ⚡ Try a 3-min free chat
+                  onClick={() => {
+                    logReelCta(reelHero ? 'trial-primary' : 'microtalk');
+                    if (reelHero) scrollToTrial(); else router.push('/lingua/microtalk');
+                  }}>
+                  {reelHero ? reelHero.cta : '⚡ Try a 3-min free chat'}
                 </button>
-                <button style={styles.heroBtn2} onClick={() => router.push('/signup')}>
-                  🚀 Start Learning Free
-                </button>
-                <button style={styles.heroBtn2} onClick={() => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); }}>
-                  🎯 Free Placement Test
-                </button>
+                {!reelHero && (
+                  <>
+                    <button style={styles.heroBtn2} onClick={() => { logReelCta('signup'); router.push('/signup'); }}>
+                      🚀 Start Learning Free
+                    </button>
+                    <button style={styles.heroBtn2} onClick={() => { logReelCta('placement'); setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); }}>
+                      🎯 Free Placement Test
+                    </button>
+                  </>
+                )}
               </div>
               {/* Positioning: competing AI tutors 대비 */}
               <div style={{ marginTop: 20, display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.16)', border: '1px solid rgba(255,255,255,0.35)', borderRadius: 99, padding: '8px 18px', fontSize: 12.5, fontWeight: 700, color: '#fff', backdropFilter: 'blur(6px)' }}>
@@ -1008,7 +1073,16 @@ export default function LevelHub() {
       )}
 
       {/* -- 30초 첫 문장 말하기 와우 체험 (게스트 전용, 히어로 하단) -- */}
-      {!authLoading && !user && <WowFirstPhrase />}
+      {/* PR #110: ?trial=1 / 히어로 CTA에서 스크롤 대상으로 사용 + 펄스 강조 */}
+      {!authLoading && !user && (
+        <div ref={trialRef} id="trial-first-phrase" style={trialHighlight ? {
+          borderRadius: 24,
+          animation: 'mt-trial-pulse 1.3s ease-out 2',
+        } : undefined}>
+          <style>{`@keyframes mt-trial-pulse { 0% { box-shadow: 0 0 0 0 rgba(99,102,241,0.55); } 70% { box-shadow: 0 0 0 18px rgba(99,102,241,0); } 100% { box-shadow: 0 0 0 0 rgba(99,102,241,0); } }`}</style>
+          <WowFirstPhrase />
+        </div>
+      )}
 
       {/* -- Micro-Talk card (Phase 2-1 Track 2-B) -- */}
       {!authLoading && (
