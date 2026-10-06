@@ -479,6 +479,8 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
 
   // -- Stop all audio ----------------------------------------------------------
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  // PR-112: vocab 자동재생 중복 방지 — 마지막으로 재생한 카드 키
+  const lastAutoPlayKey = useRef<string>('');
 
   const stopAll = useCallback(() => {
     if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; }
@@ -500,9 +502,10 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
       .trim();
   };
 
-  const speakText = async (text: string, onEnd?: () => void): Promise<void> => {
+  const speakText = async (text: string, onEnd?: () => void, quiet = false): Promise<void> => {
     const cleanText = stripForTts(text);
     if (!cleanText) { onEnd?.(); return; }
+    const notifyFail = () => { if (!quiet) showAudioToast(); };
     // 서버 TTS 미지원 언어(예: 버마어 — Google에 음성 없음)는 기기 내장 음성으로 폴백
     if (!hasTts(langId)) {
       stopAll();
@@ -517,7 +520,8 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
       );
       // 기기 음성도 없으면 무음이 아닌 토스트로 알림 (silent failure 방지)
       // (speakWithDeviceTts가 이미 onEnd를 호출했으므로 여기서는 토스트만)
-      if (!ok) showAudioToast();
+      // quiet 모드(자동재생)에서는 토스트를 띄우지 않음
+      if (!ok) notifyFail();
       return;
     }
     stopAll();
@@ -528,17 +532,17 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: cleanText, lang: langId, gender: tutor?.gender || 'female', level: levelId }),
       });
-      if (!res.ok) { setIsSpeaking(false); showAudioToast(); onEnd?.(); return; }
+      if (!res.ok) { setIsSpeaking(false); notifyFail(); onEnd?.(); return; }
       const data = await res.json();
-      if (!data.audioContent) { setIsSpeaking(false); showAudioToast(); onEnd?.(); return; }
+      if (!data.audioContent) { setIsSpeaking(false); notifyFail(); onEnd?.(); return; }
       const audio = new Audio(`data:${data.mimeType || 'audio/mp3'};base64,${data.audioContent}`);
       audioRef.current = audio;
       audio.onended = () => { setIsSpeaking(false); audioRef.current = null; onEnd?.(); };
-      audio.onerror = () => { setIsSpeaking(false); audioRef.current = null; showAudioToast(); onEnd?.(); };
+      audio.onerror = () => { setIsSpeaking(false); audioRef.current = null; notifyFail(); onEnd?.(); };
       await audio.play();
     } catch {
       setIsSpeaking(false);
-      showAudioToast();
+      notifyFail();
       onEnd?.();
     }
   };
@@ -650,6 +654,22 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
     if (!vocabItem) return;
     await speakText(vocabItem.example);
   };
+
+  // PR-112: vocab 카드가 바뀌면(Next·첫 진입) 예문 오디오 자동재생.
+  // - "Hear example" 버튼은 반복 재생용으로 그대로 유지 (수동 호출은 토스트 표시)
+  // - 자동재생 실패는 조용히 무시 (매 페이지마다 토스트가 뜨면 노이즈)
+  // - 같은 카드 키는 스킵 (번역 도착 등 리렌더로 인한 중복 재생 방지)
+  // - 퀴즈/채팅 페이즈는 건드리지 않음
+  useEffect(() => {
+    if (phase !== 'vocab' || !vocabItem) return;
+    const key = `${lessonId}:${vocabIdx}`;
+    if (lastAutoPlayKey.current === key) return;
+    lastAutoPlayKey.current = key;
+    const text = vocabItem.example || vocabItem.word;
+    if (!text) return;
+    speakText(text, undefined, true).catch(() => { /* 자동재생 실패 무시 */ });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, vocabIdx, lessonId]);
   // 서버 TTS 또는 기기 내장 음성 중 하나라도 있으면 발음 듣기 가능
   const canHear = hasTts(langId) || deviceTtsAvailable();
 
@@ -1450,7 +1470,7 @@ RULES:
                   {/* Demand translation result */}
                   {msg.role === 'tutor' && msgTranslations[i] && (
                     <div style={{ marginTop:6, paddingTop:6, borderTop:`1px solid ${level.accent}30`,
-                      fontSize:12, color:'#6B7280', fontStyle:'italic', lineHeight:1.5 }}>
+                      fontSize:12, color:'#374151', lineHeight:1.5 }}>
                       {msgTranslations[i]}
                     </div>
                   )}
@@ -1549,7 +1569,7 @@ const styles: Record<string, React.CSSProperties> = {
   vocabWord: { fontSize: 32, fontWeight: 900, marginBottom: 8, overflowWrap: 'break-word', wordBreak: 'break-word' },
   vocabPhonetic: { fontSize: 14, color: '#9CA3AF', fontStyle: 'italic', marginBottom: 12 },
   vocabMeaning: { fontSize: 16, fontWeight: 700, marginBottom: 16 },
-  vocabExample: { fontSize: 14, color: '#6B7280', lineHeight: 1.6, marginBottom: 20, fontStyle: 'italic' },
+  vocabExample: { fontSize: 15, color: '#1F2937', lineHeight: 1.6, marginBottom: 20 },
   speakBtn: { padding: '10px 24px', borderRadius: 99, border: 'none', color: '#fff', fontWeight: 800, fontSize: 13, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
   btnRow: { display: 'flex', gap: 12, justifyContent: 'center' },
   prevBtn: { padding: '14px 28px', borderRadius: 14, border: '2px solid #E9ECEF', background: '#fff', color: '#6B7280', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
@@ -1586,7 +1606,7 @@ const styles: Record<string, React.CSSProperties> = {
   completeBtns: { display: 'flex', gap: 12, justifyContent: 'center' },
   nextLessonBtn: { padding: '14px 28px', borderRadius: 14, border: 'none', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
   homeBtn: { padding: '14px 20px', borderRadius: 14, border: '2px solid #E9ECEF', background: '#fff', color: '#6B7280', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
-  txLine: { fontSize: 12, color: '#6B7280', fontStyle: 'italic', marginTop: 6, padding: '4px 10px', background: 'rgba(0,0,0,0.04)', borderRadius: 8 },
+  txLine: { fontSize: 12, color: '#374151', marginTop: 6, padding: '4px 10px', background: 'rgba(0,0,0,0.04)', borderRadius: 8 },
   txMeaning: { fontSize: 11, color: '#9CA3AF', marginTop: 2 },
   txBubble: { fontSize: 12, color: '#6B7280', fontStyle: 'italic', marginTop: 6, padding: '4px 8px', background: 'rgba(0,0,0,0.04)', borderRadius: 8 },
 };

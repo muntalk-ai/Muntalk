@@ -588,7 +588,7 @@ export default function WowFirstPhrase() {
                 <TranslatedMeaning text={item.meaning}
                   cacheKey={`mt_wow_meaning_${fp.code}_${itemIdx}_${nativeLang}`}
                   nativeLang={nativeLang} isEnglishNative={isEnglishNative}
-                  style={{ fontSize: 13, color: '#64748B', fontWeight: 600, marginBottom: 18 }} />
+                  style={{ fontSize: 13, color: '#374151', fontWeight: 600, marginBottom: 18 }} />
 
                 {step === 'try' ? (
                   <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
