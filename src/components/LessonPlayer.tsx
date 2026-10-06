@@ -1470,7 +1470,7 @@ RULES:
                   {/* Demand translation result */}
                   {msg.role === 'tutor' && msgTranslations[i] && (
                     <div style={{ marginTop:6, paddingTop:6, borderTop:`1px solid ${level.accent}30`,
-                      fontSize:12, color:'#6B7280', fontStyle:'italic', lineHeight:1.5 }}>
+                      fontSize:12, color:'#374151', lineHeight:1.5 }}>
                       {msgTranslations[i]}
                     </div>
                   )}
@@ -1569,7 +1569,7 @@ const styles: Record<string, React.CSSProperties> = {
   vocabWord: { fontSize: 32, fontWeight: 900, marginBottom: 8, overflowWrap: 'break-word', wordBreak: 'break-word' },
   vocabPhonetic: { fontSize: 14, color: '#9CA3AF', fontStyle: 'italic', marginBottom: 12 },
   vocabMeaning: { fontSize: 16, fontWeight: 700, marginBottom: 16 },
-  vocabExample: { fontSize: 14, color: '#6B7280', lineHeight: 1.6, marginBottom: 20, fontStyle: 'italic' },
+  vocabExample: { fontSize: 15, color: '#1F2937', lineHeight: 1.6, marginBottom: 20 },
   speakBtn: { padding: '10px 24px', borderRadius: 99, border: 'none', color: '#fff', fontWeight: 800, fontSize: 13, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
   btnRow: { display: 'flex', gap: 12, justifyContent: 'center' },
   prevBtn: { padding: '14px 28px', borderRadius: 14, border: '2px solid #E9ECEF', background: '#fff', color: '#6B7280', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
@@ -1606,7 +1606,7 @@ const styles: Record<string, React.CSSProperties> = {
   completeBtns: { display: 'flex', gap: 12, justifyContent: 'center' },
   nextLessonBtn: { padding: '14px 28px', borderRadius: 14, border: 'none', color: '#fff', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
   homeBtn: { padding: '14px 20px', borderRadius: 14, border: '2px solid #E9ECEF', background: '#fff', color: '#6B7280', fontWeight: 800, fontSize: 14, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" },
-  txLine: { fontSize: 12, color: '#6B7280', fontStyle: 'italic', marginTop: 6, padding: '4px 10px', background: 'rgba(0,0,0,0.04)', borderRadius: 8 },
+  txLine: { fontSize: 12, color: '#374151', marginTop: 6, padding: '4px 10px', background: 'rgba(0,0,0,0.04)', borderRadius: 8 },
   txMeaning: { fontSize: 11, color: '#9CA3AF', marginTop: 2 },
   txBubble: { fontSize: 12, color: '#6B7280', fontStyle: 'italic', marginTop: 6, padding: '4px 8px', background: 'rgba(0,0,0,0.04)', borderRadius: 8 },
 };
