@@ -1,6 +1,7 @@
 ﻿import { NextRequest, NextResponse } from 'next/server';
 import {
-  getIdentity, checkRateLimit, clientIp, fetchWithTimeout,
+  getIdentity, checkRateLimit, clientIp, fetchWithTimeout, isAdminEmail,
+  checkDailyLimit, DAILY_CAP_TTS_USER, DAILY_CAP_TTS_GUEST,
 } from '@/lib/apiGuard';
 import { cleanTtsText } from '@/lib/stripEmojis';
 
@@ -203,6 +204,17 @@ export async function POST(req: NextRequest) {
     const rl = checkRateLimit(rlKey, id ? 30 : 10, 60_000);
     if (!rl.ok) {
       return NextResponse.json({ audioContent: null, error: 'Rate limit exceeded' }, { status: 429 });
+    }
+    // ── PR #111: 유저당 일일 상한 (영속 카운터, 어드민 제외) ──
+    if (!isAdminEmail(id?.email)) {
+      const dailyMax = id ? DAILY_CAP_TTS_USER : DAILY_CAP_TTS_GUEST;
+      const dl = await checkDailyLimit('tts', id ? `uid:${id.uid}` : `ip:${clientIp(req)}`, dailyMax);
+      if (!dl.ok) {
+        return NextResponse.json(
+          { audioContent: null, error: `Daily TTS limit reached (${dailyMax}/day) — resets at midnight UTC`, retryAfterSec: dl.retryAfterSec },
+          { status: 429 },
+        );
+      }
     }
     if (cleanText.length > 500) {
       return NextResponse.json({ audioContent: null, error: 'Text too long (max 500 chars)' }, { status: 413 });

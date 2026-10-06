@@ -115,3 +115,71 @@ export function isAdminEmail(email?: string): boolean {
     .filter(Boolean);
   return list.includes(email.toLowerCase());
 }
+
+// ── 영속 일일 사용량 상한 (PR #111) ──────────────────────────────────
+// Vercel 서버리스는 인스턴스별 인메모리 카운터가 공유되지 않으므로,
+// 일일 상한은 Firestore에 저장한다 (Admin SDK → security rules 우회,
+// 별도 콘솔 작업 불필요). 일일 키이므로 문서 ID에 UTC 날짜를 포함.
+// 상수는 env로 오버라이드 가능.
+function numEnv(name: string, fallback: number): number {
+  const v = Number(process.env[name]);
+  return Number.isFinite(v) && v > 0 ? Math.floor(v) : fallback;
+}
+
+/** 로그인 유저: TTS 200회/일 */
+export const DAILY_CAP_TTS_USER = numEnv('DAILY_CAP_TTS_USER', 200);
+/** 게스트: TTS 30회/일 */
+export const DAILY_CAP_TTS_GUEST = numEnv('DAILY_CAP_TTS_GUEST', 30);
+/** 로그인 유저: Gemini 텍스트 300회/일 */
+export const DAILY_CAP_GEMINI_USER = numEnv('DAILY_CAP_GEMINI_USER', 300);
+/** 게스트: Gemini 텍스트 60회/일 */
+export const DAILY_CAP_GEMINI_GUEST = numEnv('DAILY_CAP_GEMINI_GUEST', 60);
+
+const DAILY_USAGE_COLLECTION = 'api_daily_usage';
+
+function getAdminDb() {
+  getAdminAuth(); // 앱 초기화 보장
+  return admin.firestore();
+}
+
+function utcDayKey(): string {
+  return new Date().toISOString().slice(0, 10); // YYYY-MM-DD (UTC)
+}
+
+/**
+ * 유저당 일일 상한 체크 (영속 카운터, 트랜잭션으로 원자적 증가).
+ * - identityKey: `uid:<uid>` 또는 `ip:<ip>` 형태 (호출자가 구성)
+ * - 상한 초과 시 ok:false + 자정(UTC)까지 남은 초 반환
+ * - Firestore 장애 시 fail-open (분당 인메모리 제한이 1차 방어선으로 유지)
+ */
+export async function checkDailyLimit(
+  scope: 'tts' | 'gemini',
+  identityKey: string,
+  max: number,
+): Promise<{ ok: boolean; retryAfterSec: number; remaining: number }> {
+  const day = utcDayKey();
+  const docId = `${scope}:${identityKey}:${day}`;
+  try {
+    const db = getAdminDb();
+    const ref = db.collection(DAILY_USAGE_COLLECTION).doc(docId);
+    const allowed = await db.runTransaction(async (tx) => {
+      const snap = await tx.get(ref);
+      const count = snap.exists ? Number(snap.data()?.count ?? 0) : 0;
+      if (count >= max) return false;
+      tx.set(
+        ref,
+        { count: count + 1, updatedAt: admin.firestore.FieldValue.serverTimestamp() },
+        { merge: true },
+      );
+      return true;
+    });
+    if (!allowed) {
+      const msLeft = Date.parse(day + 'T00:00:00Z') + 86_400_000 - Date.now();
+      return { ok: false, retryAfterSec: Math.max(1, Math.ceil(msLeft / 1000)), remaining: 0 };
+    }
+    return { ok: true, retryAfterSec: 0, remaining: -1 }; // remaining은 참고용(트랜잭션 내 계산 생략)
+  } catch (e) {
+    console.error('[apiGuard] checkDailyLimit failed (fail-open):', e);
+    return { ok: true, retryAfterSec: 0, remaining: -1 };
+  }
+}

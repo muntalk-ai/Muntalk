@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import {
   getIdentity, checkRateLimit, clientIp, apiError, fetchWithTimeout, apiSafeError,
+  isAdminEmail, checkDailyLimit, DAILY_CAP_GEMINI_USER, DAILY_CAP_GEMINI_GUEST,
 } from '@/lib/apiGuard';
 
 // 완전히 단순화된 Gemini route
@@ -29,6 +30,19 @@ export async function POST(req: NextRequest) {
     const rlKey = id ? `gemini:uid:${id.uid}` : `gemini:ip:${clientIp(req)}`;
     const rl = checkRateLimit(rlKey, id ? 60 : 20, 60_000);
     if (!rl.ok) return apiError('Rate limit exceeded', 429, { retryAfterSec: rl.retryAfterSec });
+
+    // ── PR #111: 유저당 일일 상한 (영속 카운터, 어드민 제외) ──
+    if (!isAdminEmail(id?.email)) {
+      const dailyMax = id ? DAILY_CAP_GEMINI_USER : DAILY_CAP_GEMINI_GUEST;
+      const dl = await checkDailyLimit('gemini', id ? `uid:${id.uid}` : `ip:${clientIp(req)}`, dailyMax);
+      if (!dl.ok) {
+        return apiError(
+          `Daily AI limit reached (${dailyMax}/day) — resets at midnight UTC`,
+          429,
+          { retryAfterSec: dl.retryAfterSec },
+        );
+      }
+    }
 
     // ── Placement 전용 추가 제한 ──
     // 1회 응시 = 2회 호출(문항 생성 + 스타일 분석). 시간당 3회분(6회)으로 제한.
