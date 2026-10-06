@@ -34,6 +34,11 @@ export interface UserProfile {
   purposeSetAt?:   string;   // ISO 날짜 (YYYY-MM-DD)
   emailNotifications?: boolean;
   pushNotifications?:  boolean;
+  // 추천 프로그램 (PR #114) — optional: 기존 유저 문서에 변경 불필요
+  referralCode?:       string;   // 내 추천 코드 (예: "KX7Q2M9A")
+  referredBy?:         string;   // 나를 초대한 유저 UID
+  referralRewardPaid?: boolean;  // 추천인 리워드 지급 완료 여부 (추천받은 유저당 1회)
+  referralCount?:      number;   // 내가 초대한 가입자 수
   // 메타
   createdAt:    any;
   updatedAt:    any;
@@ -235,6 +240,22 @@ export async function ensureFirstLoginSetup(
         fallback.displayName || 'Learner',
         fallback.photoURL || '',
       );
+      // 추천 연결 (PR #114) — /r/{code} 방문 시 저장된 코드를 서버에서 검증·연결.
+      // 웰컴 XP는 서버(/api/referral/attach)가 원자적으로 지급. 실패해도 가입 흐름은 계속.
+      try {
+        const { REFERRAL_CODE_KEY } = await import('./referral');
+        const code = localStorage.getItem(REFERRAL_CODE_KEY);
+        if (code) {
+          const { apiFetch } = await import('./apiClient');
+          await apiFetch('/api/referral/attach', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ code }),
+          }).catch(() => {});
+          // 코드는 1회성 — 결과와 무관하게 소비
+          localStorage.removeItem(REFERRAL_CODE_KEY);
+        }
+      } catch { /* ignore */ }
     }
     // trial 보장 (이미 있으면 no-op)
     await import('./trialPolicy').then(({ initTrial }) => initTrial(uid)).catch(() => {});
