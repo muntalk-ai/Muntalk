@@ -305,6 +305,38 @@ export default function AdminPage() {
           ))}
         </div>
 
+        {/* Activation funnel: signup → return → XP → first lesson */}
+        {(()=>{
+          const total = users.length;
+          const returned = users.filter(u=>u.lastActive&&u.lastActive!=='—').length;
+          const engaged = users.filter(u=>u.xp>0).length;
+          const lessonDone = users.filter(u=>u.lessonsDone>0).length;
+          const steps = [
+            {label:'Signed up', value:total, pct:null as number|null},
+            {label:'Returned', value:returned, pct:total?pct(returned,total):null},
+            {label:'Earned XP', value:engaged, pct:returned?pct(engaged,returned):null},
+            {label:'Finished lesson', value:lessonDone, pct:engaged?pct(lessonDone,engaged):null},
+          ];
+          function pct(a:number,b:number){ return Math.round(a/b*100); }
+          return (
+            <div style={{...CARD,padding:'18px 20px',marginBottom:24}}>
+              <div style={{fontSize:14,fontWeight:900,color:'#0F172A',marginBottom:12}}>📊 Activation Funnel</div>
+              <div style={{display:'flex',alignItems:'stretch',gap:0}}>
+                {steps.map((s,i)=>(
+                  <div key={s.label} style={{flex:1,display:'flex',alignItems:'center'}}>
+                    <div style={{flex:1}}>
+                      <div style={{fontSize:22,fontWeight:900,color:'#0F172A'}}>{s.value}</div>
+                      <div style={{fontSize:11,color:'#64748B',fontWeight:700,marginTop:2}}>{s.label}</div>
+                      {s.pct!==null&&<div style={{fontSize:11,fontWeight:900,color:s.pct>=50?'#10B981':'#F59E0B',marginTop:2}}>{s.pct}% →</div>}
+                    </div>
+                    {i<steps.length-1&&<div style={{fontSize:18,color:'#CBD5E1',padding:'0 4px'}}>→</div>}
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        })()}
+
         {/* Tabs */}
         <div style={{display:'flex',gap:6,marginBottom:24,background:'#fff',padding:6,borderRadius:14,border:'1px solid #E9EDF3',width:'fit-content'}}>
           {([['users','👥 Users'],['email','✉️ Email'],['logs','📋 Logs'],['settings','⚙️ Settings']] as [Tab,string][]).map(([t,label])=>(
