@@ -135,21 +135,58 @@ export default function AgoraPage() {
     chatRef.current?.scrollTo({ top: chatRef.current.scrollHeight, behavior: 'smooth' });
   }, [messages, loading]);
 
-  useEffect(() => {
+  // STT — 탭할 때마다 새 인식기 생성.
+  // 구 방식(마운트 시 1회 생성)은 onresult가 첫 handleSend 클로저를 물고 있어
+  // 하위 주제 진입 후 topic=null인 옛 복사본 때문에 받아쓴 내용이 버려지는 버그가 있었음.
+  // + no-speech 등 실패는 안내 표시 (무음 실패 금지)
+  const listeningRef = useRef(false); // touchstart+mousedown 이중 호출 가드
+  const handleSendRef = useRef((t?: string) => Promise.resolve());
+  const startListening = useCallback(() => {
+    if (listeningRef.current || isListening || loading) return;
     const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (!SR) return;
-    const rec = new SR();
-    rec.lang = learnLang; rec.continuous = false; rec.interimResults = false;
-    rec.onresult = (e: any) => handleSend(e.results[0][0].transcript);
-    rec.onerror = (e: any) => {
-      setIsListening(false);
-      const code = e?.error;
-      if (code === 'not-allowed' || code === 'service-not-allowed') setMicGuide('denied');
-      else if (code === 'audio-capture') setMicGuide('no-mic');
-    };
-    rec.onend   = () => setIsListening(false);
-    recRef.current = rec;
-  }, [learnLang]); // eslint-disable-line
+    if (!SR) { setMicGuide('unsupported'); return; }
+    listeningRef.current = true;
+    try {
+      const rec = new SR();
+      rec.lang = learnLang; rec.continuous = false; rec.interimResults = false;
+      rec.onresult = (e: any) => {
+        const transcript = e.results[0][0].transcript;
+        try { rec.stop(); } catch {}
+        recRef.current = null;
+        setIsListening(false);
+        listeningRef.current = false;
+        if (transcript && transcript.trim()) handleSendRef.current(transcript);
+      };
+      rec.onerror = (e: any) => {
+        try { rec.stop(); } catch {}
+        recRef.current = null;
+        setIsListening(false);
+        listeningRef.current = false;
+        const code = e?.error;
+        if (code === 'not-allowed' || code === 'service-not-allowed') setMicGuide('denied');
+        else if (code === 'audio-capture') setMicGuide('no-mic');
+        else if (code === 'no-speech') setMicGuide('no-speech');
+      };
+      rec.onend = () => {
+        recRef.current = null;
+        setIsListening(false);
+        listeningRef.current = false;
+      };
+      recRef.current = rec;
+      rec.start();
+      setIsListening(true);
+    } catch {
+      listeningRef.current = false;
+      setMicGuide('unsupported');
+    }
+  }, [isListening, loading, learnLang]);
+
+  const stopListening = useCallback(() => {
+    try { recRef.current?.stop(); } catch {}
+    recRef.current = null;
+    setIsListening(false);
+    listeningRef.current = false;
+  }, []);
 
   const translateMsg = useCallback(async (msgIdx: number, text: string) => {
     setTranslating(msgIdx);
@@ -222,6 +259,9 @@ Conversation:\n${history}\n\nuser: ${txt}\n\nassistant:`,
     }
     setLoading(false);
   }, [input, loading, topic, subtopic, messages, activeSide, user]);
+
+  // 인식기 콜백이 항상 최신 handleSend를 호출하도록 ref에 대입
+  handleSendRef.current = handleSend;
 
   // ── LOBBY ─────────────────────────────────────────────────────────────────
   if (view === 'lobby') return (
@@ -367,7 +407,8 @@ Conversation:\n${history}\n\nuser: ${txt}\n\nassistant:`,
 
       <div style={S.inputBar}>
         {micGuide && <MicGuide reason={micGuide} onDismiss={() => setMicGuide(null)} />}
-        <button onMouseDown={()=>{if(!recRef.current){setMicGuide('unsupported');return;} if(isListening||loading)return;try{recRef.current.start();setIsListening(true);}catch{}}}
+        <button onMouseDown={(e)=>{e.preventDefault(); isListening?stopListening():startListening();}}
+          onTouchStart={(e)=>{e.preventDefault(); isListening?stopListening():startListening();}}
           style={{...S.micBtn,background:isListening?'linear-gradient(135deg,#EF4444,#DC2626)':'#F1F5F9',
             color:isListening?'#fff':'#64748B',animation:isListening?'pulse .8s infinite':'none'}}>
           {isListening?'⏹':'🎤'}

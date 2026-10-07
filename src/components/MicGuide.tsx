@@ -22,7 +22,7 @@ const COPY: Record<MicGuideReason, { icon: string; title: string; body: string }
   'no-speech': {
     icon: '🎤',
     title: "Didn't catch that",
-    body: "No speech was recognized. Try speaking clearly in the selected language mode (🌐 target / 🏠 native) — or just type instead.",
+    body: "No speech was recognized. Try speaking clearly — or just type instead.",
   },
 };
 
