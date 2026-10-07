@@ -5,7 +5,8 @@ import { runWithAiRetry, AI_TIMEOUT_MS } from '@/lib/aiRetry';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
-import { getLangLabel } from '@/data/languages';
+import { getLangLabel, hasTts } from '@/data/languages';
+import { speakWithDeviceTts } from '@/lib/deviceTts';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 import RtlDir from '@/components/RtlDir';
 
@@ -127,6 +128,9 @@ export default function AgoraPage() {
 
   const chatRef = useRef<HTMLDivElement>(null);
   const recRef  = useRef<any>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  // 브라우저 자동재생 차단 시 마지막 AI 메시지에 "🔊 듣기" 버튼 표시
+  const [speakBlocked, setSpeakBlocked] = useState(false);
 
   const nativeLang = typeof window !== 'undefined' ? (localStorage.getItem('mt_native_lang') || 'ko-KR') : 'ko-KR';
   const learnLang  = typeof window !== 'undefined' ? (localStorage.getItem('mt_learn_lang')  || 'en-US') : 'en-US';
@@ -134,6 +138,14 @@ export default function AgoraPage() {
   useEffect(() => {
     chatRef.current?.scrollTo({ top: chatRef.current.scrollHeight, behavior: 'smooth' });
   }, [messages, loading]);
+
+  // 페이지 이탈 시 오디오/인식기 정리
+  useEffect(() => {
+    return () => {
+      if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; }
+      if (recRef.current) { try { recRef.current.stop(); } catch {} }
+    };
+  }, []);
 
   // STT — 탭할 때마다 새 인식기 생성.
   // 구 방식(마운트 시 1회 생성)은 onresult가 첫 handleSend 클로저를 물고 있어
@@ -188,6 +200,34 @@ export default function AgoraPage() {
     listeningRef.current = false;
   }, []);
 
+  // TTS — AI 답변 음성 출력 (Discover/Dream과 동일 패턴: 서버 TTS + 미지원 언어 기기 음성)
+  const speak = useCallback(async (text: string) => {
+    const clean = text.replace(/[\u{1F000}-\u{1FFFF}]/gu, '').trim();
+    if (!clean) return;
+    if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; }
+    try {
+      if (!hasTts(learnLang)) {
+        await speakWithDeviceTts(clean, learnLang, () => {});
+        return;
+      }
+      const res = await apiFetch('/api/tts', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: clean, lang: learnLang, level: 'b1' }),
+      });
+      const data = await res.json();
+      if (!data.audioContent) return;
+      const audio = new Audio(`data:${data.mimeType || 'audio/mp3'};base64,${data.audioContent}`);
+      audioRef.current = audio;
+      audio.onended = () => { audioRef.current = null; };
+      audio.onerror = () => { audioRef.current = null; };
+      // 자동재생 정책 차단 시 조용히 삼키지 말고 "🔊 듣기" 버튼 표시
+      audio.play().then(() => setSpeakBlocked(false)).catch((e) => {
+        if (e && e.name === 'NotAllowedError') setSpeakBlocked(true);
+        audioRef.current = null;
+      });
+    } catch { /* TTS 실패는 조용히 무시 (텍스트는 표시됨) */ }
+  }, [learnLang]);
+
   const translateMsg = useCallback(async (msgIdx: number, text: string) => {
     setTranslating(msgIdx);
     try {
@@ -217,10 +257,13 @@ export default function AgoraPage() {
 
   const startDebate = async (t: DebateTopic, sub: string) => {
     setTopic(t); setSubtopic(sub); setMessages([]); setView('debate');
+    setSpeakBlocked(false);
+    const opening = `Welcome to the Agora. Today's motion:\n\n"${sub}"\n\nI will present rigorous arguments from BOTH sides — For and Against. Which side would you like me to argue first?`;
     setMessages([{
       id: ++msgId, role: 'ai', ts: Date.now(),
-      text: `Welcome to the Agora. Today's motion:\n\n"${sub}"\n\nI will present rigorous arguments from BOTH sides — For and Against. Which side would you like me to argue first?`,
+      text: opening,
     }]);
+    speak(opening);
   };
 
   const handleSend = useCallback(async (text?: string) => {
@@ -249,16 +292,18 @@ Conversation:\n${history}\n\nuser: ${txt}\n\nassistant:`,
         timeoutMs: AI_TIMEOUT_MS,
       });
       const data = await res.json();
+      const aiText = data.text?.trim() || 'Could not generate a response.';
       setMessages(prev => [...prev, {
         id: ++msgId, role: 'ai', ts: Date.now(),
-        text: data.text?.trim() || 'Could not generate a response.',
+        text: aiText,
       }]);
+      speak(aiText);
     });
     if (failed) {
       setMessages(prev => [...prev, { id: ++msgId, role: 'ai', ts: Date.now(), text: 'Connection error.' }]);
     }
     setLoading(false);
-  }, [input, loading, topic, subtopic, messages, activeSide, user]);
+  }, [input, loading, topic, subtopic, messages, activeSide, user, speak]);
 
   // 인식기 콜백이 항상 최신 handleSend를 호출하도록 ref에 대입
   handleSendRef.current = handleSend;
@@ -368,9 +413,19 @@ Conversation:\n${history}\n\nuser: ${txt}\n\nassistant:`,
               boxShadow:msg.role==='ai'?'0 2px 8px rgba(0,0,0,0.06)':'none'}}>
               {msg.text}
             </div>
-            {/* Translation button — AI only */}
+            {/* Translation + tap-to-listen buttons — AI only */}
             {msg.role==='ai'&&(
               <div style={{display:'flex',alignItems:'flex-start',gap:6,marginTop:5,paddingLeft:2,flexWrap:'wrap',maxWidth:'84%'}}>
+                {/* 자동재생 차단 시: 탭 한 번으로 듣기 */}
+                {speakBlocked && idx === messages.length - 1 && (
+                  <button onClick={() => { setSpeakBlocked(false); speak(msg.text); }}
+                    title="Tap to listen"
+                    style={{background:'#FEF3C7',border:'1px solid #FCD34D',borderRadius:8,
+                      padding:'3px 10px',fontSize:12,cursor:'pointer',color:'#92400E',fontWeight:700,
+                      flexShrink:0}}>
+                    🔊 듣기
+                  </button>
+                )}
                 <button onClick={()=>toggleTranslation(idx)} disabled={translating===idx} style={S.translateBtn} title="Translate to your language">
                   {translating===idx?'⏳':msg.showTranslation?'🌐 ✓':'🌐'}
                 </button>
