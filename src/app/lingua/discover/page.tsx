@@ -140,6 +140,8 @@ function DiscoverContent() {
     return isLearningPurpose(s) ? s : undefined;
   });
   const [isSpeaking, setIsSpeaking] = useState(false);
+  // 브라우저 자동재생 차단 시 해당 AI 메시지에 "🔊 다시듣기" 버튼을 띄우기 위한 플래그
+  const [speakBlocked, setSpeakBlocked] = useState(false);
   const [isListening,setIsListening]= useState(false);
   const [micGuide, setMicGuide] = useState<MicGuideReason | null>(null); // UX-infra: STT 안내
   const [translating,setTranslating]= useState<number|null>(null);
@@ -220,7 +222,12 @@ function DiscoverContent() {
       audioRef.current = audio;
       audio.onended = () => { setIsSpeaking(false); audioRef.current = null; };
       audio.onerror = () => { setIsSpeaking(false); audioRef.current = null; };
-      audio.play().catch(() => setIsSpeaking(false));
+      // 자동재생 정책에 막히면 조용히 삼키지 말고 "🔊 다시듣기" 버튼을 띄운다
+      audio.play().then(() => setSpeakBlocked(false)).catch((e) => {
+        if (e && e.name === 'NotAllowedError') setSpeakBlocked(true);
+        setIsSpeaking(false);
+        audioRef.current = null;
+      });
     } catch { setIsSpeaking(false); }
   }, [langId, subLang, chatMode, tutorId]);
 
@@ -344,6 +351,7 @@ function DiscoverContent() {
     if (!isPremiumUser) { setShowPaywall(true); return; }
     setActive(id);
     setMessages([]);
+    setSpeakBlocked(false);
     setMirrorDone(false);
     setSelChannel(channelId||null);
     setInput('');
@@ -807,6 +815,18 @@ function DiscoverContent() {
               {!isUser && (
                 <div style={{ display:'flex', alignItems:'flex-start', gap:6,
                   marginTop:4, paddingLeft:36, flexWrap:'wrap', maxWidth:'80%' }}>
+                  {/* 자동재생 차단 시: 탭 한 번으로 듣기 (제스처 안에서는 play() 허용됨) */}
+                  {speakBlocked && i === messages.length - 1 && (
+                    <button
+                      onClick={() => { setSpeakBlocked(false); speak(msg.text); }}
+                      title="Tap to listen"
+                      style={{ background:'#FEF3C7', border:'1px solid #FCD34D',
+                        borderRadius:8, padding:'3px 10px', fontSize:12, cursor:'pointer',
+                        fontFamily:"'Nunito','Noto Sans KR',sans-serif", color:'#92400E', fontWeight:700,
+                        flexShrink:0, transition:'all .15s' }}>
+                      🔊 듣기
+                    </button>
+                  )}
                   <button
                     onClick={() => toggleTranslation(i)}
                     disabled={translating === i}
