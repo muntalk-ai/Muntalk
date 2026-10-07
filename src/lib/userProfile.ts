@@ -5,6 +5,27 @@ import { doc, getDoc, setDoc, updateDoc, serverTimestamp } from 'firebase/firest
 import { db } from './firebase';
 import { awardXp } from './xpClient';
 import type { LearningPurpose } from './purpose';
+import { UI_LANGUAGES } from '@/data/languages';
+
+/** 브라우저 로케일에서 모국어 코드 감지 (신규 가입 기본값용)
+ *  navigator.language(e.g. 'vi', 'vi-VN')를 UI_LANGUAGES 코드와 매칭.
+ *  매칭 실패 시 기존 기본값 'ko-KR' 유지. SSR 가드 포함. */
+export function detectBrowserNativeLang(): string {
+  const FALLBACK = 'ko-KR';
+  try {
+    if (typeof navigator === 'undefined' || !navigator.language) return FALLBACK;
+    const nav = navigator.language.toLowerCase();
+    const codes = UI_LANGUAGES.map(l => l.code);
+    // 1) 정확히 일치 (대소문자 무시)
+    const exact = codes.find(c => c.toLowerCase() === nav);
+    if (exact) return exact;
+    // 2) 언어 subtag만 일치 (e.g. 'vi' -> 'vi-VN', 'pt' -> 'pt-BR')
+    const subtag = nav.split('-')[0];
+    const prefix = codes.find(c => c.toLowerCase().startsWith(subtag + '-'));
+    if (prefix) return prefix;
+  } catch { /* ignore */ }
+  return FALLBACK;
+}
 
 export interface UserProfile {
   uid:          string;
@@ -70,6 +91,7 @@ export async function createUserProfile(
   const profile: UserProfile = {
     uid, email, displayName, photoURL,
     ...DEFAULT_PROFILE,
+    nativeLang: detectBrowserNativeLang(),
     createdAt: serverTimestamp(),
     updatedAt: serverTimestamp(),
   };
@@ -187,7 +209,7 @@ export async function migrateFromLocalStorage(uid: string) {
   const done    = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
   const dates   = JSON.parse(localStorage.getItem('mt_activity_dates') || '[]') as string[];
   const learn   = localStorage.getItem('mt_learn_lang') || 'en-US';
-  const native  = localStorage.getItem('mt_native_lang') || 'ko-KR';
+  const native  = localStorage.getItem('mt_native_lang') || detectBrowserNativeLang();
   const tutorId = localStorage.getItem('mt_tutor_id') || 't01';
   // UX-infra #6: placement 결과도 이관 (기기 변경 시 소실 방지)
   const placementLevel = localStorage.getItem('mt_placement_level');
