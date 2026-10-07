@@ -5,6 +5,9 @@ import { signOut } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
 import { updateUserProfile } from '@/lib/userProfile';
+import { db } from '@/lib/firebase';
+import { doc, getDoc } from 'firebase/firestore';
+import PushPrimeCard from './PushPrimeCard';
 import { PURPOSE_OPTIONS, PURPOSE_LABEL, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
 import { CURRICULUM, getCurrentLevel } from '@/data/curriculum';
@@ -146,6 +149,21 @@ export default function LevelHub() {
     return () => { clearTimeout(t1); clearTimeout(t2); };
   }, [trialFirst, authLoading, user]);
   const [completedLessons, setCompletedLessons] = useState<Set<string>>(new Set());
+  const [showPushPrime, setShowPushPrime] = useState(false);
+
+  // 푸시 옵트인 카드: 첫 레슨 완료 + 토큰 없음 + 미거부 시 1회 노출
+  useEffect(() => {
+    if (authLoading || !user || completedLessons.size < 1) return;
+    try {
+      if (localStorage.getItem('mt_push_prime_dismissed')) return;
+    } catch { /* ignore */ }
+    (async () => {
+      try {
+        const snap = await getDoc(doc(db, 'fcm_tokens', user.uid));
+        if (!snap.exists()) setShowPushPrime(true);
+      } catch { /* ignore */ }
+    })();
+  }, [authLoading, user, completedLessons]);
 
   // 언어 설정 (localStorage 저장)
   const [learnLang, setLearnLang]   = useState('en-US');
@@ -539,6 +557,13 @@ export default function LevelHub() {
           daysLeft={trialDaysLeft}
           onDismiss={() => setTrialBannerDismissed(true)}
         />
+      )}
+
+      {/* -- Push 옵트인 카드 (첫 레슨 완료 후 1회) -- */}
+      {showPushPrime && user && (
+        <div style={{ maxWidth: 1080, margin: '12px auto 0', padding: '0 20px' }}>
+          <PushPrimeCard uid={user.uid} onDone={() => setShowPushPrime(false)} />
+        </div>
       )}
 
       {/* -- Placement Test 안내 모달 -- */}

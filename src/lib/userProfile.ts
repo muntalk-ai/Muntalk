@@ -34,6 +34,7 @@ export interface UserProfile {
   purposeSetAt?:   string;   // ISO 날짜 (YYYY-MM-DD)
   emailNotifications?: boolean;
   pushNotifications?:  boolean;
+  timezone?: string;   // IANA 타임존 (저녁 푸시 리마인드용, 로그인 시 갱신)
   // 메타
   createdAt:    any;
   updatedAt:    any;
@@ -242,6 +243,11 @@ export async function ensureFirstLoginSetup(
     if (isFirstLogin) {
       await migrateFromLocalStorage(uid);
     }
+    // 타임존 저장/갱신 (저녁 푸시 리마인드용 — 이동 시 자동 갱신)
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (tz) await updateUserProfile(uid, { timezone: tz } as Partial<UserProfile>);
+    } catch { /* ignore */ }
   })();
   firstLoginSetupPromises.set(uid, run);
   try { await run; } finally { firstLoginSetupPromises.delete(uid); }
