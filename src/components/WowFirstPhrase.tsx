@@ -8,6 +8,8 @@ import { apiFetch } from '@/lib/apiClient';
 import { FIRST_PHRASES, FirstPhrase, WowItem } from '@/data/first-phrase';
 import { getTutorForLang, getTutorById } from '@/data/tutors';
 import { LEARN_LANGUAGES, promptLangName } from '@/data/languages';
+import ShareSheet from './ShareSheet';
+import { REFERRAL_COPY } from '@/lib/referral';
 
 type Step = 'pick' | 'tier' | 'try' | 'listening' | 'analyzing' | 'feedback' | 'done';
 
@@ -794,6 +796,16 @@ export default function WowFirstPhrase() {
                   boxShadow: `0 6px 24px ${ACCENT}50`, fontFamily: FONT }}>
                 Create free account →
               </button>
+            </div>
+            {/* 추천 공유 (PR #114) — 게스트는 일반 링크 공유 */}
+            <div style={{ marginTop: 12 }}>
+              <ShareSheet
+                url={typeof window !== 'undefined' ? window.location.origin : 'https://www.muntalk.com'}
+                title={REFERRAL_COPY.trialShareTitle}
+                text={REFERRAL_COPY.trialShareText}
+                buttonLabel={REFERRAL_COPY.trialShareCta}
+                variant="secondary"
+              />
             </div>
             <button onClick={resetSession}
               style={{ background: 'none', border: 'none', color: '#94A3B8',

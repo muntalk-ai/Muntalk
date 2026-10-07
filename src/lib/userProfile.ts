@@ -5,6 +5,27 @@ import { doc, getDoc, setDoc, updateDoc, serverTimestamp } from 'firebase/firest
 import { db } from './firebase';
 import { awardXp } from './xpClient';
 import type { LearningPurpose } from './purpose';
+import { UI_LANGUAGES } from '@/data/languages';
+
+/** 브라우저 로케일에서 모국어 코드 감지 (신규 가입 기본값용)
+ *  navigator.language(e.g. 'vi', 'vi-VN')를 UI_LANGUAGES 코드와 매칭.
+ *  매칭 실패 시 기존 기본값 'ko-KR' 유지. SSR 가드 포함. */
+export function detectBrowserNativeLang(): string {
+  const FALLBACK = 'ko-KR';
+  try {
+    if (typeof navigator === 'undefined' || !navigator.language) return FALLBACK;
+    const nav = navigator.language.toLowerCase();
+    const codes = UI_LANGUAGES.map(l => l.code);
+    // 1) 정확히 일치 (대소문자 무시)
+    const exact = codes.find(c => c.toLowerCase() === nav);
+    if (exact) return exact;
+    // 2) 언어 subtag만 일치 (e.g. 'vi' -> 'vi-VN', 'pt' -> 'pt-BR')
+    const subtag = nav.split('-')[0];
+    const prefix = codes.find(c => c.toLowerCase().startsWith(subtag + '-'));
+    if (prefix) return prefix;
+  } catch { /* ignore */ }
+  return FALLBACK;
+}
 
 export interface UserProfile {
   uid:          string;
@@ -35,6 +56,11 @@ export interface UserProfile {
   emailNotifications?: boolean;
   pushNotifications?:  boolean;
   timezone?: string;   // IANA 타임존 (저녁 푸시 리마인드용, 로그인 시 갱신)
+  // 추천 프로그램 (PR #114) — optional: 기존 유저 문서에 변경 불필요
+  referralCode?:       string;   // 내 추천 코드 (예: "KX7Q2M9A")
+  referredBy?:         string;   // 나를 초대한 유저 UID
+  referralRewardPaid?: boolean;  // 추천인 리워드 지급 완료 여부 (추천받은 유저당 1회)
+  referralCount?:      number;   // 내가 초대한 가입자 수
   // 메타
   createdAt:    any;
   updatedAt:    any;
@@ -71,6 +97,7 @@ export async function createUserProfile(
   const profile: UserProfile = {
     uid, email, displayName, photoURL,
     ...DEFAULT_PROFILE,
+    nativeLang: detectBrowserNativeLang(),
     createdAt: serverTimestamp(),
     updatedAt: serverTimestamp(),
   };
@@ -188,7 +215,7 @@ export async function migrateFromLocalStorage(uid: string) {
   const done    = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
   const dates   = JSON.parse(localStorage.getItem('mt_activity_dates') || '[]') as string[];
   const learn   = localStorage.getItem('mt_learn_lang') || 'en-US';
-  const native  = localStorage.getItem('mt_native_lang') || 'ko-KR';
+  const native  = localStorage.getItem('mt_native_lang') || detectBrowserNativeLang();
   const tutorId = localStorage.getItem('mt_tutor_id') || 't01';
   // UX-infra #6: placement 결과도 이관 (기기 변경 시 소실 방지)
   const placementLevel = localStorage.getItem('mt_placement_level');
@@ -236,6 +263,22 @@ export async function ensureFirstLoginSetup(
         fallback.displayName || 'Learner',
         fallback.photoURL || '',
       );
+      // 추천 연결 (PR #114) — /r/{code} 방문 시 저장된 코드를 서버에서 검증·연결.
+      // 웰컴 XP는 서버(/api/referral/attach)가 원자적으로 지급. 실패해도 가입 흐름은 계속.
+      try {
+        const { REFERRAL_CODE_KEY } = await import('./referral');
+        const code = localStorage.getItem(REFERRAL_CODE_KEY);
+        if (code) {
+          const { apiFetch } = await import('./apiClient');
+          await apiFetch('/api/referral/attach', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ code }),
+          }).catch(() => {});
+          // 코드는 1회성 — 결과와 무관하게 소비
+          localStorage.removeItem(REFERRAL_CODE_KEY);
+        }
+      } catch { /* ignore */ }
     }
     // trial 보장 (이미 있으면 no-op)
     await import('./trialPolicy').then(({ initTrial }) => initTrial(uid)).catch(() => {});

@@ -6,6 +6,7 @@ import type { CSSProperties } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { db } from '@/lib/firebase';
+import { getLangLabel } from '@/data/languages';
 import {
   collection, getDocs, doc, setDoc, getDoc, addDoc,
   serverTimestamp, query, orderBy, limit, where,
@@ -34,13 +35,8 @@ const PLAN_COLORS: Record<PlanId, string> = {
   free:'#94A3B8', monthly:'#6366F1', biannual:'#8B5CF6', annual:'#F59E0B',
 };
 
-// Language code → readable name (fallback: raw code)
-const LANG_NAMES: Record<string,string> = {
-  'en-US':'English','ko-KR':'Korean','ja-JP':'Japanese','zh-CN':'Chinese (Simplified)','zh-TW':'Chinese (Traditional)',
-  'fr-FR':'French','de-DE':'German','es-ES':'Spanish','it-IT':'Italian','pt-BR':'Portuguese','ru-RU':'Russian',
-  'ar-XA':'Arabic','ar-SA':'Arabic','hi-IN':'Hindi','vi-VN':'Vietnamese','th-TH':'Thai','id-ID':'Indonesian','tr-TR':'Turkish',
-};
-const langLabel = (code: string) => (code && code !== '—') ? (LANG_NAMES[code] || code) : '—';
+// Language code → readable name (full list from @/data/languages, fallback: raw code)
+const langLabel = (code: string) => (code && code !== '—') ? getLangLabel(code) : '—';
 
 // ── Shared design tokens ────────────────────────────────────────────────────
 const FONT = "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif";
@@ -304,6 +300,38 @@ export default function AdminPage() {
             </div>
           ))}
         </div>
+
+        {/* Activation funnel: signup → return → XP → first lesson */}
+        {(()=>{
+          const total = users.length;
+          const returned = users.filter(u=>u.lastActive&&u.lastActive!=='—').length;
+          const engaged = users.filter(u=>u.xp>0).length;
+          const lessonDone = users.filter(u=>u.lessonsDone>0).length;
+          const steps = [
+            {label:'Signed up', value:total, pct:null as number|null},
+            {label:'Returned', value:returned, pct:total?pct(returned,total):null},
+            {label:'Earned XP', value:engaged, pct:returned?pct(engaged,returned):null},
+            {label:'Finished lesson', value:lessonDone, pct:engaged?pct(lessonDone,engaged):null},
+          ];
+          function pct(a:number,b:number){ return Math.round(a/b*100); }
+          return (
+            <div style={{...CARD,padding:'18px 20px',marginBottom:24}}>
+              <div style={{fontSize:14,fontWeight:900,color:'#0F172A',marginBottom:12}}>📊 Activation Funnel</div>
+              <div style={{display:'flex',alignItems:'stretch',gap:0}}>
+                {steps.map((s,i)=>(
+                  <div key={s.label} style={{flex:1,display:'flex',alignItems:'center'}}>
+                    <div style={{flex:1}}>
+                      <div style={{fontSize:22,fontWeight:900,color:'#0F172A'}}>{s.value}</div>
+                      <div style={{fontSize:11,color:'#64748B',fontWeight:700,marginTop:2}}>{s.label}</div>
+                      {s.pct!==null&&<div style={{fontSize:11,fontWeight:900,color:s.pct>=50?'#10B981':'#F59E0B',marginTop:2}}>{s.pct}% →</div>}
+                    </div>
+                    {i<steps.length-1&&<div style={{fontSize:18,color:'#CBD5E1',padding:'0 4px'}}>→</div>}
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        })()}
 
         {/* Tabs */}
         <div style={{display:'flex',gap:6,marginBottom:24,background:'#fff',padding:6,borderRadius:14,border:'1px solid #E9EDF3',width:'fit-content'}}>

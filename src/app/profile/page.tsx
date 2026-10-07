@@ -12,6 +12,7 @@ import { apiFetch } from '@/lib/apiClient';
 import { LEARN_LANGUAGES, UI_LANGUAGES, getLangLabel } from '@/data/languages';
 import { PURPOSE_OPTIONS, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
+import ReferTab from '@/components/ReferTab';
 
 // 선택된 언어 코드 → 국기 이모지 (요약 줄 표시용)
 const flagOf = (code: string) =>
@@ -55,7 +56,7 @@ export default function ProfilePage() {
   const [saving,   setSaving]   = useState(false);
   const [success,  setSuccess]  = useState('');
   const [error,    setError]    = useState('');
-  const [tab,      setTab]      = useState<'profile' | 'password' | 'notifications' | 'subscription' | 'danger'>('profile');
+  const [tab,      setTab]      = useState<'profile' | 'password' | 'notifications' | 'subscription' | 'danger' | 'refer'>('profile');
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [deletePw, setDeletePw] = useState('');
 
@@ -219,6 +220,7 @@ export default function ProfilePage() {
           {!isGoogle && <button style={tabStyle('password')} onClick={() => setTab('password')}>🔒 Password</button>}
           <button style={tabStyle('notifications')} onClick={() => setTab('notifications')}>🔔 Alerts</button>
           <button style={tabStyle('subscription')} onClick={() => setTab('subscription')}>💳 Plan</button>
+          <button style={tabStyle('refer')} onClick={() => setTab('refer')}>🎁 Refer</button>
           <button style={tabStyle('danger')} onClick={() => setTab('danger')}>⚠️ Account</button>
         </div>
 
@@ -414,6 +416,9 @@ export default function ProfilePage() {
             </div>
           </div>
         )}
+
+        {/* ── REFER TAB (PR #114) ── */}
+        {tab === 'refer' && <ReferTab />}
 
         {/* ── DANGER TAB ── */}
         {tab === 'danger' && (

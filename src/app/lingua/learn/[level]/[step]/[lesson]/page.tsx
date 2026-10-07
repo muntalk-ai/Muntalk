@@ -9,6 +9,8 @@ import { updateUserProfile, getUserProfile, recordActivity } from '@/lib/userPro
 import { addCardToSRS } from '@/lib/spacedRepetition';
 import { checkAndAwardCertificate, Certificate } from '@/lib/certificates';
 import { awardXp } from '@/lib/xpClient';
+import { apiFetch } from '@/lib/apiClient';
+import { REFERRAL_REWARDS } from '@/lib/referral';
 import RtlDir from '@/components/RtlDir';
 
 // 비로그인 허용 레슨 (A1 첫 레슨만)
@@ -97,6 +99,16 @@ export default function LessonPage({
           const sessionSec = Math.max(1, Math.round((Date.now() - lessonStartRef.current) / 1000));
           await awardXp({ source: 'lesson', xp: xpEarned, sessionSec, meta: { lessonId: lesson } });
           console.log('[lesson] Firestore saved — lessons:', doneParsed.length);
+
+          // 추천 리워드 확인 (PR #114) — N개 레슨 완료 시 추천인에게 XP.
+          // 서버가 모든 조건(추천인 존재·미지급·레슨 수)을 검증. fire-and-forget.
+          if (doneParsed.length >= REFERRAL_REWARDS.LESSONS_REQUIRED) {
+            apiFetch('/api/referral/claim', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: '{}',
+            }).catch(() => {});
+          }
         } catch (e) {
           console.error('[lesson] Firestore save FAILED:', e);
         }

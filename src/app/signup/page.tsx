@@ -12,7 +12,7 @@ import {
 import { auth, googleProvider } from '@/lib/firebase';
 import { ensureFirstLoginSetup, updateUserProfile } from '@/lib/userProfile';
 import { useAuth } from '@/context/AuthContext';
-import { getNextPath, stashNextPath } from '@/lib/returnUrl';
+import { getNextPath, getSignupNextPath, stashNextPath } from '@/lib/returnUrl';
 
 export default function SignupPage() {
   const router = useRouter();
@@ -45,7 +45,7 @@ export default function SignupPage() {
   useEffect(() => {
     getRedirectResult(auth)
       .then(result => {
-        if (result?.user) router.replace(getNextPath());
+        if (result?.user) router.replace(getSignupNextPath());
       })
       .catch((e: any) => {
         const msg = friendlyError(e.code);
@@ -76,7 +76,7 @@ export default function SignupPage() {
       await ensureFirstLoginSetup(cred.user.uid, { email, displayName: name, photoURL: '' });
       // 표시 이름 확정 (리스너가 먼저 프로필을 만든 레이스에서도 이름 보장)
       await updateUserProfile(cred.user.uid, { displayName: name }).catch(() => {});
-      router.replace(getNextPath());
+      router.replace(getSignupNextPath());
     } catch (e: any) {
       setError(friendlyError(e.code) || 'Sign up failed. Please try again.');
     } finally { setEmailLoading(false); }
@@ -88,7 +88,7 @@ export default function SignupPage() {
     try {
       // Popup 방식 — 즉시 로그인 후 바로 이동
       const result = await signInWithPopup(auth, googleProvider);
-      if (result.user) router.replace(getNextPath());
+      if (result.user) router.replace(getSignupNextPath());
     } catch (e: any) {
       if (e.code === 'auth/popup-blocked') {
         try { stashNextPath(getNextPath()); await signInWithRedirect(auth, googleProvider); }
