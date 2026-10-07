@@ -23,20 +23,66 @@ interface WelcomeEmailUser {
 
 function welcomeHtml(name: string): string {
   const firstName = (name || 'there').split(' ')[0];
-  return `
-<div style="font-family:sans-serif;max-width:560px;margin:0 auto;color:#1f2937">
-  <h2 style="color:#4f46e5">👋 Hi ${firstName}, still there?</h2>
-  <p>You signed up for <strong>MunTalk</strong> yesterday — your AI English speaking coach is ready when you are.</p>
-  <p>Most people quit before their <strong>first 30 seconds</strong>. Don't be most people 🙂</p>
-  <p>Tap below and say your first sentence out loud. It takes 30 seconds, no pressure:</p>
-  <p style="margin:24px 0">
+  // Duolingo-style: single column, big rounded CTA, playful emoji anchors,
+  // table layout + inline styles for Gmail/Apple Mail/Outlook.
+  return `<!DOCTYPE html><html><body style="margin:0;padding:0;background-color:#F1F5F9;">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Say your first English sentence out loud — it takes 30 seconds.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#F1F5F9;padding:32px 16px;">
+<tr><td align="center">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#ffffff;border-radius:20px;overflow:hidden;">
+  <tr><td style="background-color:#4F46E5;padding:28px 32px;text-align:center;">
+    <div style="font-family:Arial,sans-serif;font-size:22px;font-weight:bold;color:#ffffff;">🌍 MunTalk</div>
+    <div style="font-family:Arial,sans-serif;font-size:13px;color:#C7D2FE;margin-top:4px;">Your AI English speaking coach</div>
+  </td></tr>
+  <tr><td style="padding:36px 32px 8px;text-align:center;">
+    <div style="font-size:52px;line-height:1;">🎤</div>
+    <h1 style="font-family:Arial,sans-serif;font-size:26px;font-weight:bold;color:#0F172A;margin:16px 0 8px;">Hi ${firstName}, your first<br/>30 seconds are waiting</h1>
+    <p style="font-family:Arial,sans-serif;font-size:15px;line-height:1.7;color:#475569;margin:0;">
+      You signed up yesterday — nice first step. Now comes the fun part:
+      <strong style="color:#0F172A;">saying your first English sentence out loud.</strong>
+      No pressure, no judgment, just you and your AI coach.
+    </p>
+  </td></tr>
+  <tr><td style="padding:20px 32px;text-align:center;">
     <a href="https://www.muntalk.com/lingua/placement"
-       style="background:#4f46e5;color:#fff;padding:12px 28px;border-radius:10px;text-decoration:none;font-weight:bold">
-      🎤 Start my first 30 seconds
-    </a>
-  </p>
-  <p style="color:#6b7280;font-size:13px">Built solo by Jay — reply to this email anytime, I read everything.</p>
-</div>`;
+       style="display:inline-block;background-color:#4F46E5;color:#ffffff;font-family:Arial,sans-serif;font-size:17px;font-weight:bold;padding:16px 40px;border-radius:999px;text-decoration:none;">Start my first 30 seconds →</a>
+    <p style="font-family:Arial,sans-serif;font-size:12px;color:#94A3B8;margin:12px 0 0;">Takes 30 seconds · Free forever plan</p>
+  </td></tr>
+  <tr><td style="padding:8px 32px 12px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="33%" style="text-align:center;padding:12px 8px;vertical-align:top;">
+          <div style="font-size:28px;">💬</div>
+          <div style="font-family:Arial,sans-serif;font-size:13px;font-weight:bold;color:#0F172A;margin-top:6px;">Real conversations</div>
+          <div style="font-family:Arial,sans-serif;font-size:12px;color:#64748B;margin-top:4px;">150+ roleplays, not boring drills</div>
+        </td>
+        <td width="33%" style="text-align:center;padding:12px 8px;vertical-align:top;">
+          <div style="font-size:28px;">🗣️</div>
+          <div style="font-family:Arial,sans-serif;font-size:13px;font-weight:bold;color:#0F172A;margin-top:6px;">Instant feedback</div>
+          <div style="font-family:Arial,sans-serif;font-size:12px;color:#64748B;margin-top:4px;">Pronunciation correction on the spot</div>
+        </td>
+        <td width="33%" style="text-align:center;padding:12px 8px;vertical-align:top;">
+          <div style="font-size:28px;">🔥</div>
+          <div style="font-family:Arial,sans-serif;font-size:13px;font-weight:bold;color:#0F172A;margin-top:6px;">Streaks that stick</div>
+          <div style="font-family:Arial,sans-serif;font-size:12px;color:#64748B;margin-top:4px;">Small daily wins, big progress</div>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+  <tr><td style="padding:4px 32px 32px;text-align:center;">
+    <p style="font-family:Arial,sans-serif;font-size:14px;line-height:1.7;color:#475569;margin:0;background-color:#EEF2FF;border-radius:14px;padding:16px 20px;">
+      👀 Most people quit <em>before</em> their first 30 seconds.<br/>Don't be most people 🙂
+    </p>
+  </td></tr>
+  <tr><td style="padding:20px 32px 28px;text-align:center;border-top:1px solid #F1F5F9;">
+    <p style="font-family:Arial,sans-serif;font-size:12px;line-height:1.8;color:#94A3B8;margin:0;">
+      Built solo by Jay — reply to this email anytime, I read everything.<br/>
+      <a href="https://www.muntalk.com" style="color:#4F46E5;text-decoration:none;">muntalk.com</a>
+    </p>
+  </td></tr>
+</table>
+</td></tr></table>
+</body></html>`;
 }
 
 export async function GET(req: NextRequest) {
