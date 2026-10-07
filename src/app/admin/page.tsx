@@ -6,6 +6,7 @@ import type { CSSProperties } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { db } from '@/lib/firebase';
+import { getLangLabel } from '@/data/languages';
 import {
   collection, getDocs, doc, setDoc, getDoc, addDoc,
   serverTimestamp, query, orderBy, limit, where,
@@ -34,13 +35,8 @@ const PLAN_COLORS: Record<PlanId, string> = {
   free:'#94A3B8', monthly:'#6366F1', biannual:'#8B5CF6', annual:'#F59E0B',
 };
 
-// Language code → readable name (fallback: raw code)
-const LANG_NAMES: Record<string,string> = {
-  'en-US':'English','ko-KR':'Korean','ja-JP':'Japanese','zh-CN':'Chinese (Simplified)','zh-TW':'Chinese (Traditional)',
-  'fr-FR':'French','de-DE':'German','es-ES':'Spanish','it-IT':'Italian','pt-BR':'Portuguese','ru-RU':'Russian',
-  'ar-XA':'Arabic','ar-SA':'Arabic','hi-IN':'Hindi','vi-VN':'Vietnamese','th-TH':'Thai','id-ID':'Indonesian','tr-TR':'Turkish',
-};
-const langLabel = (code: string) => (code && code !== '—') ? (LANG_NAMES[code] || code) : '—';
+// Language code → readable name (full list from @/data/languages, fallback: raw code)
+const langLabel = (code: string) => (code && code !== '—') ? getLangLabel(code) : '—';
 
 // ── Shared design tokens ────────────────────────────────────────────────────
 const FONT = "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif";
