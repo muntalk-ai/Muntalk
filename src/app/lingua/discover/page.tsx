@@ -206,7 +206,9 @@ function DiscoverContent() {
     setIsSpeaking(true);
     try {
       const t = getTutorById(tutorId);
-      const spkLang = chatMode === 'native' ? subLang : langId;
+      // Mirror 세션의 AI 답변은 모국어로 나가므로 TTS 음성도 모국어로 맞춰야 함
+      // (학습 언어 음성으로 모국어 텍스트를 읽으면 어색해지는 버그 수정)
+      const spkLang = (chatMode === 'native' || active === 'mirror') ? subLang : langId;
       // 서버 음성 미지원 언어(예: 버마어)는 기기 내장 음성으로 폴백
       if (!hasTts(spkLang)) {
         await speakWithDeviceTts(clean, spkLang, () => setIsSpeaking(false));
@@ -222,7 +224,7 @@ function DiscoverContent() {
       audio.onerror = () => { setIsSpeaking(false); audioRef.current = null; };
       audio.play().catch(() => setIsSpeaking(false));
     } catch { setIsSpeaking(false); }
-  }, [langId, subLang, chatMode, tutorId]);
+  }, [langId, subLang, chatMode, tutorId, active]);
 
   const addMsg = (m: Omit<ChatMsg,'ts'>) => {
     const msg = {...m, ts:Date.now()};
