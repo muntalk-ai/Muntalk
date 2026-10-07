@@ -1,7 +1,7 @@
 'use client';
 // components/MicGuide.tsx — STT 사용 불가 시 안내 UI (PR-G)
 // 마이크 권한 거부 / 브라우저 미지원 / 마이크 없음 → 무음 처리 대신 안내.
-export type MicGuideReason = 'denied' | 'unsupported' | 'no-mic';
+export type MicGuideReason = 'denied' | 'unsupported' | 'no-mic' | 'no-speech';
 
 const COPY: Record<MicGuideReason, { icon: string; title: string; body: string }> = {
   denied: {
@@ -18,6 +18,11 @@ const COPY: Record<MicGuideReason, { icon: string; title: string; body: string }
     icon: '🎤',
     title: "No microphone found",
     body: "We couldn't find a microphone on this device. Please type your message instead.",
+  },
+  'no-speech': {
+    icon: '🎤',
+    title: "Didn't catch that",
+    body: "No speech was recognized. Try speaking clearly in the selected language mode (🌐 target / 🏠 native) — or just type instead.",
   },
 };
 

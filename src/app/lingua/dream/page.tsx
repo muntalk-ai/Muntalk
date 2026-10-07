@@ -74,6 +74,8 @@ function DreamStudioContent() {
   const [showDoc,    setShowDoc]    = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isListening,setIsListening]= useState(false);
+  // 브라우저 자동재생 차단 시 마지막 AI 메시지에 "🔊 듣기" 버튼 표시
+  const [speakBlocked, setSpeakBlocked] = useState(false);
   const [micGuide, setMicGuide] = useState<MicGuideReason | null>(null); // UX-infra: STT 안내
   const [saving,     setSaving]     = useState(false);
   const [toast,      setToast]      = useState('');
@@ -181,23 +183,60 @@ function DreamStudioContent() {
     chatRef.current?.scrollTo({ top:chatRef.current.scrollHeight, behavior:'smooth' });
   }, [messages, loading]);
 
-  // STT
-  useEffect(() => {
+  // STT — 탭할 때마다 새 인식기 생성 (모바일 크롬의 인식기 재사용 불안정 회피)
+  // + no-speech 등 실패는 안내 표시 (무음 실패 금지)
+  const listeningRef = useRef(false); // touchstart+mousedown 이중 호출 가드
+  const startListening = useCallback(() => {
+    if (listeningRef.current || isListening || loading) return;
     const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (!SR) return;
-    const rec = new SR();
-    rec.lang = langMode === 'native' ? subLang : langId;
-    rec.continuous = false; rec.interimResults = false;
-    rec.onresult = (e: any) => sendMessage(e.results[0][0].transcript);
-    rec.onerror  = (e: any) => {
-      setIsListening(false);
-      const code = e?.error;
-      if (code === 'not-allowed' || code === 'service-not-allowed') setMicGuide('denied');
-      else if (code === 'audio-capture') setMicGuide('no-mic');
-    };
-    rec.onend    = () => setIsListening(false);
-    recRef.current = rec;
-  }, [langId, subLang, langMode]); // eslint-disable-line
+    if (!SR) { setMicGuide('unsupported'); return; }
+    listeningRef.current = true;
+    try {
+      const rec = new SR();
+      rec.lang = langMode === 'native' ? subLang : langId;
+      rec.continuous = false; rec.interimResults = false;
+      rec.onresult = (e: any) => {
+        const transcript = e.results[0][0].transcript;
+        try { rec.stop(); } catch {}
+        recRef.current = null;
+        setIsListening(false);
+        listeningRef.current = false;
+        if (transcript && transcript.trim()) sendMessageRef.current(transcript);
+      };
+      rec.onerror = (e: any) => {
+        try { rec.stop(); } catch {}
+        recRef.current = null;
+        setIsListening(false);
+        listeningRef.current = false;
+        const code = e?.error;
+        if (code === 'not-allowed' || code === 'service-not-allowed') setMicGuide('denied');
+        else if (code === 'audio-capture') setMicGuide('no-mic');
+        else if (code === 'no-speech') setMicGuide('no-speech');
+      };
+      rec.onend = () => {
+        recRef.current = null;
+        setIsListening(false);
+        listeningRef.current = false;
+      };
+      recRef.current = rec;
+      rec.start();
+      setIsListening(true);
+    } catch {
+      listeningRef.current = false;
+      setMicGuide('unsupported');
+    }
+  }, [isListening, loading, langMode, subLang, langId]);
+
+  const stopListening = useCallback(() => {
+    try { recRef.current?.stop(); } catch {}
+    recRef.current = null;
+    setIsListening(false);
+    listeningRef.current = false;
+  }, []);
+
+  // sendMessage 최신 참조 (인식기 콜백에서 stale closure 방지)
+  const sendMessageRef = useRef((t: string) => {});
+  // (아래 sendMessage 정의 뒤에 대입)
 
   // TTS
   const speak = useCallback(async (text: string) => {
@@ -222,7 +261,11 @@ function DreamStudioContent() {
       audioRef.current = audio;
       audio.onended = () => { setIsSpeaking(false); audioRef.current = null; };
       audio.onerror = () => { setIsSpeaking(false); audioRef.current = null; };
-      audio.play().catch(()=>setIsSpeaking(false));
+      audio.play().then(() => setSpeakBlocked(false)).catch((e) => {
+        // 자동재생 정책 차단 시 조용히 삼키지 말고 "🔊 듣기" 버튼 표시
+        if (e && e.name === 'NotAllowedError') setSpeakBlocked(true);
+        setIsSpeaking(false);
+      });
     } catch { setIsSpeaking(false); }
   }, [langId, subLang, langMode, tutor.gender]);
 
@@ -297,6 +340,7 @@ function DreamStudioContent() {
     setDocContent('');
     setOutline('');
     setMessages([]);
+    setSpeakBlocked(false);
     setPhase('idea');
     setSelGenre(genre);
     setView('studio');
@@ -399,6 +443,9 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
     setLoading(false);
   }, [input, loading, selGenre, activeProj, phase, langMode, targetLang, nativeLang,
       tutor.name, docContent, outline, user, speak, saveProject, purpose]); // eslint-disable-line
+
+  // 인식기 콜백이 항상 최신 sendMessage를 호출하도록 ref에 대입
+  sendMessageRef.current = sendMessage;
 
   // Download project
   const downloadProject = () => {
@@ -610,6 +657,7 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
                       setDocContent(p.content); setOutline(p.outline);
                       setPhase(p.phase); setLangMode(p.langMode);
                       setMessages([]);
+                      setSpeakBlocked(false);
                       setView('studio');
                     }}
                     style={{ background:'#fff',
@@ -777,9 +825,21 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
                   fontSize:14, fontWeight:600, lineHeight:1.65 }}>
                   {msg.text}
                 </div>
-                {/* Translate button — AI messages only */}
+                {/* Translate + tap-to-listen buttons — AI messages only */}
                 {!isUser && (
                   <div style={{ display:'flex', alignItems:'flex-start', gap:6, marginTop:4, flexWrap:'wrap', maxWidth:'82%' }}>
+                    {/* 자동재생 차단 시: 탭 한 번으로 듣기 */}
+                    {speakBlocked && i === messages.length - 1 && (
+                      <button
+                        onClick={() => { setSpeakBlocked(false); speak(msg.text); }}
+                        title="Tap to listen"
+                        style={{ background:'#FEF3C7', border:'1px solid #FCD34D', borderRadius:8,
+                          padding:'3px 10px', fontSize:12, cursor:'pointer',
+                          fontFamily:"'Nunito','Noto Sans KR',sans-serif", color:'#92400E', fontWeight:700,
+                          flexShrink:0, transition:'all .15s' }}>
+                        🔊 듣기
+                      </button>
+                    )}
                     <button
                       onClick={() => toggleTranslation(i)}
                       disabled={translating === i}
@@ -848,8 +908,8 @@ Respond in ${langMode === 'native' ? nativeLang : targetLang}.`;
         </div>
         <div style={{ display:'flex', gap:8, alignItems:'flex-end' }}>
           <button
-            onMouseDown={() => { if(!recRef.current){setMicGuide('unsupported');return;} if(isListening||loading) return; try{recRef.current.start();setIsListening(true);}catch{} }}
-            onTouchStart={() => { if(!recRef.current){setMicGuide('unsupported');return;} if(isListening||loading) return; try{recRef.current.start();setIsListening(true);}catch{} }}
+            onMouseDown={(e) => { e.preventDefault(); isListening ? stopListening() : startListening(); }}
+            onTouchStart={(e) => { e.preventDefault(); isListening ? stopListening() : startListening(); }}
             style={{ width:44, height:44, borderRadius:'50%', border:'none', flexShrink:0,
               background:isListening?'linear-gradient(135deg,#EF4444,#DC2626)':'#F1F5F9',
               color:isListening?'#fff':'#64748B', fontSize:18, cursor:'pointer',
