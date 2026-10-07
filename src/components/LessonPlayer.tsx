@@ -851,9 +851,8 @@ Generate a warm 1-2 sentence opening. End with a simple question.`,
       subtitle: subLang !== langId ? "Let's start practicing conversation!" : undefined,
     };
     setChatMsgs([openingMsg]);
-    await speakText(openingMsg.text, () => {
-      setTimeout(startListening, 400);
-    });
+    // AI가 읽은 뒤 마이크 자동 시작하지 않음 — 사용자가 탭하면 켜짐
+    await speakText(openingMsg.text);
   };
 
   const handleUserMessage = async (text: string) => {
@@ -921,9 +920,7 @@ RULES:
       const msgKey = `chat-${chatHistory.length}`;
       translateText(replyText, msgKey);
 
-      await speakText(replyText, () => {
-        setTimeout(startListening, 400);
-      });
+      await speakText(replyText);
     } catch (err) {
       console.error(err);
     } finally {
