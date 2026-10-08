@@ -5,7 +5,7 @@ import { runWithAiRetry, AI_TIMEOUT_MS } from '@/lib/aiRetry';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
-import { getLangLabel, hasTts } from '@/data/languages';
+import { getLangLabel, promptLangName, hasTts } from '@/data/languages';
 import { speakWithDeviceTts } from '@/lib/deviceTts';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 import RtlDir from '@/components/RtlDir';
@@ -111,7 +111,7 @@ let msgId = 0;
 
 export default function AgoraPage() {
   const router = useRouter();
-  const { user } = useAuth();
+  const { user, profile } = useAuth();
 
   const [view, setView]                 = useState<'lobby'|'debate'>('lobby');
   const [topic, setTopic]               = useState<DebateTopic|null>(null);
@@ -132,8 +132,13 @@ export default function AgoraPage() {
   // 브라우저 자동재생 차단 시 마지막 AI 메시지에 "🔊 듣기" 버튼 표시
   const [speakBlocked, setSpeakBlocked] = useState(false);
 
-  const nativeLang = typeof window !== 'undefined' ? (localStorage.getItem('mt_native_lang') || 'ko-KR') : 'ko-KR';
-  const learnLang  = typeof window !== 'undefined' ? (localStorage.getItem('mt_learn_lang')  || 'en-US') : 'en-US';
+  // PR-126: 학습/모국어는 Firestore 프로필이 우선. localStorage만 보면
+  // 프로필과 어긋날 때 en-US로 떨어져 "학습언어도 아닌 영어"가 디폴트가 됨.
+  // (Discover/Dream은 이미 프로필 우선 패턴)
+  const nativeLang = profile?.nativeLang
+    || (typeof window !== 'undefined' ? localStorage.getItem('mt_native_lang') : null) || 'ko-KR';
+  const learnLang  = profile?.learnLang
+    || (typeof window !== 'undefined' ? localStorage.getItem('mt_learn_lang') : null)  || 'en-US';
 
   useEffect(() => {
     chatRef.current?.scrollTo({ top: chatRef.current.scrollHeight, behavior: 'smooth' });
@@ -258,7 +263,23 @@ export default function AgoraPage() {
   const startDebate = async (t: DebateTopic, sub: string) => {
     setTopic(t); setSubtopic(sub); setMessages([]); setView('debate');
     setSpeakBlocked(false);
-    const opening = `Welcome to the Agora. Today's motion:\n\n"${sub}"\n\nI will present rigorous arguments from BOTH sides — For and Against. Which side would you like me to argue first?`;
+    const enOpening = `Welcome to the Agora. Today's motion:\n\n"${sub}"\n\nI will present rigorous arguments from BOTH sides — For and Against. Which side would you like me to argue first?`;
+    // PR-126: 오프닝도 학습 언어로 (영어 하드코딩이면 주제 페이지가 영어로 보임)
+    let opening = enOpening;
+    if (learnLang !== 'en-US') {
+      try {
+        const res = await apiFetch('/api/gemini', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            uid: user?.uid ?? null, temperature: 0.1,
+            prompt: `Translate the following to ${promptLangName(learnLang)}. Return ONLY the translation:\n\n"${enOpening}"`,
+          }),
+          timeoutMs: AI_TIMEOUT_MS,
+        });
+        const tr = (await res.json()).text?.trim();
+        if (tr) opening = tr;
+      } catch { /* 폴백: 영어 원문 */ }
+    }
     setMessages([{
       id: ++msgId, role: 'ai', ts: Date.now(),
       text: opening,
