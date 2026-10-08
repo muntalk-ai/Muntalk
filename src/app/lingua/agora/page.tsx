@@ -132,13 +132,32 @@ export default function AgoraPage() {
   // 브라우저 자동재생 차단 시 마지막 AI 메시지에 "🔊 듣기" 버튼 표시
   const [speakBlocked, setSpeakBlocked] = useState(false);
 
-  // PR-126: 학습/모국어는 Firestore 프로필이 우선. localStorage만 보면
-  // 프로필과 어긋날 때 en-US로 떨어져 "학습언어도 아닌 영어"가 디폴트가 됨.
-  // (Discover/Dream은 이미 프로필 우선 패턴)
-  const nativeLang = profile?.nativeLang
-    || (typeof window !== 'undefined' ? localStorage.getItem('mt_native_lang') : null) || 'ko-KR';
-  const learnLang  = profile?.learnLang
-    || (typeof window !== 'undefined' ? localStorage.getItem('mt_learn_lang') : null)  || 'en-US';
+  // 학습/모국어 결정: localStorage(기기 명시 선택) → Firestore 프로필 → 기본값.
+  // PR-126에서 프로필 우선으로 바꿨다가 stale profile(en-US)이 로컬 선택을 덮어써
+  // 회귀 발생 ("argue against"가 영어로). LevelHub의 stale-profile 보호 패턴과
+  // 동일하게 로컬 우선으로 복원. 프로필 fallback 시에는 localStorage에 동기화.
+  const lsNative = typeof window !== 'undefined' ? localStorage.getItem('mt_native_lang') : null;
+  const lsLearn = typeof window !== 'undefined' ? localStorage.getItem('mt_learn_lang') : null;
+  const nativeLang = lsNative || profile?.nativeLang || 'ko-KR';
+  const learnLang = lsLearn || profile?.learnLang || 'en-US';
+
+  useEffect(() => {
+    try {
+      if (!lsLearn && profile?.learnLang) localStorage.setItem('mt_learn_lang', profile.learnLang);
+      if (!lsNative && profile?.nativeLang) localStorage.setItem('mt_native_lang', profile.nativeLang);
+    } catch {}
+  }, [profile, lsLearn, lsNative]);
+
+  // PR-127: 이어듣기 큐 — startListening보다 먼저 선언 (사용 순서상 필요)
+  const speechQueueRef = useRef<string[]>([]);
+  const [speechProgress, setSpeechProgress] = useState<{ done: number; total: number; msgId: number } | null>(null);
+  const stopSpeech = useCallback(() => {
+    try { audioRef.current?.pause(); } catch {}
+    audioRef.current = null;
+    speechQueueRef.current = [];
+    setSpeechProgress(null);
+    setSpeakBlocked(false);
+  }, []);
 
   useEffect(() => {
     chatRef.current?.scrollTo({ top: chatRef.current.scrollHeight, behavior: 'smooth' });
@@ -148,6 +167,7 @@ export default function AgoraPage() {
   useEffect(() => {
     return () => {
       if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; }
+      speechQueueRef.current = [];
       if (recRef.current) { try { recRef.current.stop(); } catch {} }
     };
   }, []);
@@ -160,6 +180,7 @@ export default function AgoraPage() {
   const handleSendRef = useRef((t?: string) => Promise.resolve());
   const startListening = useCallback(() => {
     if (listeningRef.current || isListening || loading) return;
+    stopSpeech(); // 마이크 켜면 AI 음성 중단
     const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
     if (!SR) { setMicGuide('unsupported'); return; }
     listeningRef.current = true;
@@ -196,7 +217,7 @@ export default function AgoraPage() {
       listeningRef.current = false;
       setMicGuide('unsupported');
     }
-  }, [isListening, loading, learnLang]);
+  }, [isListening, loading, learnLang, stopSpeech]);
 
   const stopListening = useCallback(() => {
     try { recRef.current?.stop(); } catch {}
@@ -205,33 +226,87 @@ export default function AgoraPage() {
     listeningRef.current = false;
   }, []);
 
+  // ── TTS 청크 분할 + 이어듣기 (PR-127 하이브리드) ──
+  // /api/tts는 500자 캡 → 긴 토론 답변(150~200단어)은 문장 경계에서 분할.
+  // 첫 청크만 자동 재생, 나머지는 "🔊 계속 듣기" 버튼으로 이어듣기.
+  // 기기 TTS(서버 미지원 언어)는 길이 제한이 없어 통째로 재생.
+  // (speechQueueRef/speechProgress/stopSpeech는 상단에서 선언)
+  const chunkForTts = (text: string, maxLen = 450): string[] => {
+    const sentences = text.match(/[^.!?。！？\n]+[.!?。！？\n]+/g) || [text];
+    const chunks: string[] = [];
+    let cur = '';
+    const push = (c: string) => { const t = c.trim(); if (t) chunks.push(t); };
+    for (const s of sentences) {
+      const piece = s.trim();
+      if (!piece) continue;
+      if (piece.length > 500) {
+        if (cur) { push(cur); cur = ''; }
+        for (let i = 0; i < piece.length; i += 450) push(piece.slice(i, i + 450));
+      } else if ((cur ? cur.length + 1 + piece.length : piece.length) > maxLen) {
+        push(cur); cur = piece;
+      } else {
+        cur = cur ? cur + ' ' + piece : piece;
+      }
+    }
+    push(cur);
+    return chunks.length ? chunks : [text];
+  };
+
+  const playChunkText = useCallback((chunkText: string) => {
+    try { audioRef.current?.pause(); } catch {}
+    audioRef.current = null;
+    (async () => {
+      try {
+        if (!hasTts(learnLang)) {
+          await speakWithDeviceTts(chunkText, learnLang, () => {});
+          return;
+        }
+        const res = await apiFetch('/api/tts', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text: chunkText, lang: learnLang, level: 'b1' }),
+        });
+        const data = await res.json();
+        if (!data.audioContent) return;
+        const audio = new Audio(`data:${data.mimeType || 'audio/mp3'};base64,${data.audioContent}`);
+        audioRef.current = audio;
+        audio.onended = () => { if (audioRef.current === audio) audioRef.current = null; };
+        audio.onerror = () => { if (audioRef.current === audio) audioRef.current = null; };
+        // 자동재생 정책 차단 시 조용히 삼키지 말고 "🔊 듣기" 버튼 표시
+        await audio.play().then(() => setSpeakBlocked(false)).catch((e) => {
+          if (e && e.name === 'NotAllowedError') setSpeakBlocked(true);
+          if (audioRef.current === audio) audioRef.current = null;
+        });
+      } catch { /* TTS 실패는 조용히 무시 (텍스트는 표시됨) */ }
+    })();
+  }, [learnLang]);
+
   // TTS — AI 답변 음성 출력 (Discover/Dream과 동일 패턴: 서버 TTS + 미지원 언어 기기 음성)
-  const speak = useCallback(async (text: string) => {
+  const speak = useCallback((text: string, msgId?: number) => {
     const clean = text.replace(/[\u{1F000}-\u{1FFFF}]/gu, '').trim();
     if (!clean) return;
-    if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; }
-    try {
-      if (!hasTts(learnLang)) {
-        await speakWithDeviceTts(clean, learnLang, () => {});
-        return;
-      }
-      const res = await apiFetch('/api/tts', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text: clean, lang: learnLang, level: 'b1' }),
-      });
-      const data = await res.json();
-      if (!data.audioContent) return;
-      const audio = new Audio(`data:${data.mimeType || 'audio/mp3'};base64,${data.audioContent}`);
-      audioRef.current = audio;
-      audio.onended = () => { audioRef.current = null; };
-      audio.onerror = () => { audioRef.current = null; };
-      // 자동재생 정책 차단 시 조용히 삼키지 말고 "🔊 듣기" 버튼 표시
-      audio.play().then(() => setSpeakBlocked(false)).catch((e) => {
-        if (e && e.name === 'NotAllowedError') setSpeakBlocked(true);
-        audioRef.current = null;
-      });
-    } catch { /* TTS 실패는 조용히 무시 (텍스트는 표시됨) */ }
-  }, [learnLang]);
+    stopSpeech();
+    if (!hasTts(learnLang)) {
+      playChunkText(clean);
+      return;
+    }
+    const chunks = chunkForTts(clean);
+    playChunkText(chunks[0]);
+    if (chunks.length > 1) {
+      speechQueueRef.current = chunks.slice(1);
+      setSpeechProgress({ done: 1, total: chunks.length, msgId: msgId ?? -1 });
+    }
+  }, [learnLang, playChunkText, stopSpeech]);
+
+  const continueSpeech = useCallback(() => {
+    const next = speechQueueRef.current.shift();
+    if (!next) { setSpeechProgress(null); return; }
+    playChunkText(next);
+    setSpeechProgress(prev => {
+      if (!prev) return null;
+      const done = prev.done + 1;
+      return done >= prev.total ? null : { ...prev, done };
+    });
+  }, [playChunkText]);
 
   const translateMsg = useCallback(async (msgIdx: number, text: string) => {
     setTranslating(msgIdx);
@@ -280,16 +355,18 @@ export default function AgoraPage() {
         if (tr) opening = tr;
       } catch { /* 폴백: 영어 원문 */ }
     }
+    const openingId = ++msgId;
     setMessages([{
-      id: ++msgId, role: 'ai', ts: Date.now(),
+      id: openingId, role: 'ai', ts: Date.now(),
       text: opening,
     }]);
-    speak(opening);
+    speak(opening, openingId);
   };
 
   const handleSend = useCallback(async (text?: string) => {
     const txt = (text ?? input).trim();
     if (!txt || loading || !topic) return;
+    stopSpeech();
     setInput('');
     setMessages(prev => [...prev, { id: ++msgId, role: 'user', side: activeSide, text: txt, ts: Date.now() }]);
     setLoading(true);
@@ -306,25 +383,30 @@ export default function AgoraPage() {
           prompt: `You are a world-class debate moderator for MunTalk language learning.
 Topic: "${subtopic}"
 Stance guidance: ${stanceNote}
-Rules: Present FOR 🔵 and AGAINST 🔴 sides with intellectual depth. Be Socratic. 150-200 words. Respond ONLY in ${getLangLabel(learnLang)}.
+Rules: Present FOR 🔵 and AGAINST 🔴 sides with intellectual depth. Be Socratic. 150-200 words.
 
-Conversation:\n${history}\n\nuser: ${txt}\n\nassistant:`,
+Conversation:\n${history}\n\nuser: ${txt}
+
+LANGUAGE RULE: Write your entire response ONLY in ${getLangLabel(learnLang)}.${learnLang === 'en-US' ? '' : ' The topic and conversation above are in English, but your response must NOT be in English.'}
+
+assistant:`,
         }),
         timeoutMs: AI_TIMEOUT_MS,
       });
       const data = await res.json();
       const aiText = data.text?.trim() || 'Could not generate a response.';
+      const aiId = ++msgId;
       setMessages(prev => [...prev, {
-        id: ++msgId, role: 'ai', ts: Date.now(),
+        id: aiId, role: 'ai', ts: Date.now(),
         text: aiText,
       }]);
-      speak(aiText);
+      speak(aiText, aiId);
     });
     if (failed) {
       setMessages(prev => [...prev, { id: ++msgId, role: 'ai', ts: Date.now(), text: 'Connection error.' }]);
     }
     setLoading(false);
-  }, [input, loading, topic, subtopic, messages, activeSide, user, speak]);
+  }, [input, loading, topic, subtopic, messages, activeSide, user, speak, stopSpeech]);
 
   // 인식기 콜백이 항상 최신 handleSend를 호출하도록 ref에 대입
   handleSendRef.current = handleSend;
@@ -388,7 +470,7 @@ Conversation:\n${history}\n\nuser: ${txt}\n\nassistant:`,
     <div style={S.debatePage}>
       <style>{CSS}</style>
       <nav style={{...S.nav,borderBottom:'1px solid #E2E8F0'}}>
-        <button onClick={()=>setView('lobby')} style={S.navBack}>← Topics</button>
+        <button onClick={()=>{stopSpeech(); setView('lobby');}} style={S.navBack}>← Topics</button>
         <div style={{textAlign:'center',flex:1}}>
           <div style={{fontSize:13,fontWeight:900,color:'#0F172A'}}>{topic.emoji} {topic.titleEn}</div>
           <div style={{fontSize:10,color:'#94A3B8',fontWeight:700,marginTop:1}}>{subtopic}</div>
@@ -439,12 +521,22 @@ Conversation:\n${history}\n\nuser: ${txt}\n\nassistant:`,
               <div style={{display:'flex',alignItems:'flex-start',gap:6,marginTop:5,paddingLeft:2,flexWrap:'wrap',maxWidth:'84%'}}>
                 {/* 자동재생 차단 시: 탭 한 번으로 듣기 */}
                 {speakBlocked && idx === messages.length - 1 && (
-                  <button onClick={() => { setSpeakBlocked(false); speak(msg.text); }}
+                  <button onClick={() => { setSpeakBlocked(false); speak(msg.text, msg.id); }}
                     title="Tap to listen"
                     style={{background:'#FEF3C7',border:'1px solid #FCD34D',borderRadius:8,
                       padding:'3px 10px',fontSize:12,cursor:'pointer',color:'#92400E',fontWeight:700,
                       flexShrink:0}}>
                     🔊 듣기
+                  </button>
+                )}
+                {/* 긴 답변: 첫 부분만 자동 재생, 나머지는 이어듣기 */}
+                {speechProgress && speechProgress.msgId === msg.id && (
+                  <button onClick={continueSpeech}
+                    title="Continue listening to the rest"
+                    style={{background:'#EEF2FF',border:'1px solid #C7D2FE',borderRadius:8,
+                      padding:'3px 10px',fontSize:12,cursor:'pointer',color:'#4338CA',fontWeight:700,
+                      flexShrink:0}}>
+                    🔊 계속 듣기 ({speechProgress.done}/{speechProgress.total})
                   </button>
                 )}
                 <button onClick={()=>toggleTranslation(idx)} disabled={translating===idx} style={S.translateBtn} title="Translate to your language">
