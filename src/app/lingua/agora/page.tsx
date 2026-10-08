@@ -132,13 +132,21 @@ export default function AgoraPage() {
   // 브라우저 자동재생 차단 시 마지막 AI 메시지에 "🔊 듣기" 버튼 표시
   const [speakBlocked, setSpeakBlocked] = useState(false);
 
-  // PR-126: 학습/모국어는 Firestore 프로필이 우선. localStorage만 보면
-  // 프로필과 어긋날 때 en-US로 떨어져 "학습언어도 아닌 영어"가 디폴트가 됨.
-  // (Discover/Dream은 이미 프로필 우선 패턴)
-  const nativeLang = profile?.nativeLang
-    || (typeof window !== 'undefined' ? localStorage.getItem('mt_native_lang') : null) || 'ko-KR';
-  const learnLang  = profile?.learnLang
-    || (typeof window !== 'undefined' ? localStorage.getItem('mt_learn_lang') : null)  || 'en-US';
+  // 학습/모국어 결정: localStorage(기기 명시 선택) → Firestore 프로필 → 기본값.
+  // PR-126에서 프로필 우선으로 바꿨다가 stale profile(en-US)이 로컬 선택을 덮어써
+  // 회귀 발생 ("argue against"가 영어로). LevelHub의 stale-profile 보호 패턴과
+  // 동일하게 로컬 우선으로 복원. 프로필 fallback 시에는 localStorage에 동기화.
+  const lsNative = typeof window !== 'undefined' ? localStorage.getItem('mt_native_lang') : null;
+  const lsLearn = typeof window !== 'undefined' ? localStorage.getItem('mt_learn_lang') : null;
+  const nativeLang = lsNative || profile?.nativeLang || 'ko-KR';
+  const learnLang = lsLearn || profile?.learnLang || 'en-US';
+
+  useEffect(() => {
+    try {
+      if (!lsLearn && profile?.learnLang) localStorage.setItem('mt_learn_lang', profile.learnLang);
+      if (!lsNative && profile?.nativeLang) localStorage.setItem('mt_native_lang', profile.nativeLang);
+    } catch {}
+  }, [profile, lsLearn, lsNative]);
 
   // PR-127: 이어듣기 큐 — startListening보다 먼저 선언 (사용 순서상 필요)
   const speechQueueRef = useRef<string[]>([]);
