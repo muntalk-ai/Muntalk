@@ -63,7 +63,7 @@ export default function LangSetupPrompt() {
         </div>
 
         <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#475569', marginBottom: 6 }}>
-          My native language · 모국어
+          my native language
         </label>
         <select
           value={curNative}
@@ -76,7 +76,7 @@ export default function LangSetupPrompt() {
         </select>
 
         <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#475569', marginBottom: 6, marginTop: 16 }}>
-          Language I want to learn · 배우고 싶은 언어
+          language I want to learn
         </label>
         <select
           value={curLearn}
