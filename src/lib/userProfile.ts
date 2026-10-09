@@ -36,6 +36,10 @@ export interface UserProfile {
   learnLang:    string;   // 학습 언어 코드 (e.g. 'en-US')
   nativeLang:   string;   // 모국어 코드
   tutorId:      string;   // 선택한 튜터
+  // 언어 설정 확정 여부 — 신규 가입 시 자동 감지/기본값으로 채워지므로,
+  // LangSetupPrompt에서 사용자가 직접 선택하면 true. 기존 유저(필드 없음)는
+  // DEFAULT_PROFILE 병합으로 true 취급 → 팝업 안 뜸.
+  langsConfirmed?: boolean;
   // 진도
   xp:           number;
   streak:       number;
@@ -70,6 +74,7 @@ const DEFAULT_PROFILE: Omit<UserProfile, 'uid' | 'email' | 'displayName' | 'phot
   learnLang:        'en-US',
   nativeLang:       'ko-KR',
   tutorId:          't01',
+  langsConfirmed:   true, // 기존 유저(필드 없음)는 확정 취급 — 팝업 스킵
   xp:               0,
   streak:           0,
   lastActive:       '',
@@ -98,6 +103,7 @@ export async function createUserProfile(
     uid, email, displayName, photoURL,
     ...DEFAULT_PROFILE,
     nativeLang: detectBrowserNativeLang(),
+    langsConfirmed: false, // 신규 가입 — LangSetupPrompt에서 직접 선택할 때까지 미확정
     createdAt: serverTimestamp(),
     updatedAt: serverTimestamp(),
   };
