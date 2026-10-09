@@ -10,6 +10,7 @@ import {
   ensureFirstLoginSetup,
   UserProfile,
 } from '@/lib/userProfile';
+import LangSetupPrompt from '@/components/LangSetupPrompt';
 
 interface AuthCtx {
   user:     User | null;
@@ -84,7 +85,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return unsub;
   }, []);
 
-  return <Ctx.Provider value={{ user, profile, loading, refreshProfile }}>{children}</Ctx.Provider>;
+  return (
+    <Ctx.Provider value={{ user, profile, loading, refreshProfile }}>
+      {children}
+      {/* 신규 가입자 언어 확정 팝업 — langsConfirmed===false일 때만 표시 */}
+      <LangSetupPrompt />
+    </Ctx.Provider>
+  );
 }
 
 export const useAuth = () => useContext(Ctx);

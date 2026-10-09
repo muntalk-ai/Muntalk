@@ -107,7 +107,7 @@ export default function ProfilePage() {
     setSaving(true); setError('');
     try {
       await updateProfile(user, { displayName });
-      await updateUserProfile(user.uid, { learnLang, nativeLang, displayName, purpose: purpose || null });
+      await updateUserProfile(user.uid, { learnLang, nativeLang, displayName, purpose: purpose || null, langsConfirmed: true });
       localStorage.setItem('mt_learn_lang', learnLang);
       localStorage.setItem('mt_native_lang', nativeLang);
       if (purpose) localStorage.setItem('mt_purpose', purpose);
