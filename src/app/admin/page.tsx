@@ -1,7 +1,7 @@
 'use client';
 import { apiFetch } from '@/lib/apiClient';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import type { CSSProperties } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
@@ -83,6 +83,20 @@ export default function AdminPage() {
   const [search, setSearch] = useState('');
   const [saving, setSaving] = useState<string | null>(null);
   const [toast, setToast] = useState('');
+
+  // Users table sorting (null = default fetch order: premium first, then XP desc)
+  type SortKey = 'email'|'name'|'plan'|'joined'|'learning'|'native'|'xp'|'lastActive'|'lessons';
+  const [sortKey, setSortKey] = useState<SortKey | null>(null);
+  const [sortDir, setSortDir] = useState<'asc'|'desc'>('asc');
+  // All columns: 1st click = ascending, 2nd click = descending, 3rd = ascending again
+  const SORT_DEFAULT_DIR: Record<SortKey,'asc'|'desc'> = {
+    email:'asc', name:'asc', plan:'asc', joined:'asc', learning:'asc',
+    native:'asc', xp:'asc', lastActive:'asc', lessons:'asc',
+  };
+  const toggleSort = (key: SortKey) => {
+    if (sortKey === key) setSortDir(d => d==='asc'?'desc':'asc');
+    else { setSortKey(key); setSortDir(SORT_DEFAULT_DIR[key]); }
+  };
 
   // Grant modal
   const [modal, setModal] = useState<UserRow | null>(null);
@@ -250,6 +264,41 @@ export default function AdminPage() {
     langLabel(u.nativeLang).toLowerCase().includes(search.toLowerCase())
   );
 
+  // Sorting: text columns sort case-insensitively, dates are ISO strings (string compare OK)
+  const PLAN_RANK: Record<PlanId, number> = { free:0, monthly:1, biannual:2, annual:3 };
+  const sortVal = (u: UserRow, key: SortKey): string | number => {
+    switch (key) {
+      case 'email': return (u.email||'').toLowerCase();
+      case 'name': return (u.displayName||'').toLowerCase();
+      case 'plan': return PLAN_RANK[u.planId];
+      case 'joined': return u.createdAt || '';
+      case 'learning': return langLabel(u.learnLang).toLowerCase();
+      case 'native': return langLabel(u.nativeLang).toLowerCase();
+      case 'xp': return u.xp;
+      case 'lastActive': return u.lastActive || '';
+      case 'lessons': return u.lessonsDone;
+    }
+  };
+  const sorted = useMemo(() => {
+    if (!sortKey) return filtered;
+    const dir = sortDir==='asc' ? 1 : -1;
+    return [...filtered].sort((a,b) => {
+      const va = sortVal(a, sortKey), vb = sortVal(b, sortKey);
+      if (typeof va==='number' && typeof vb==='number') return (va-vb)*dir;
+      return String(va).localeCompare(String(vb)) * dir;
+    });
+  }, [filtered, sortKey, sortDir]);
+
+  const SortTH = ({ k, label, numeric }: { k: SortKey; label: string; numeric?: boolean }) => (
+    <th
+      style={{ ...(numeric?TH_NUM:TH), cursor:'pointer', userSelect:'none' }}
+      onClick={() => toggleSort(k)}
+      title="Click to sort"
+    >
+      {label}{sortKey===k ? (sortDir==='asc'?' ▲':' ▼') : ''}
+    </th>
+  );
+
   const actionColors: Record<string,string> = {
     grant:'#059669', extend:'#6366F1', revoke:'#E11D48', email:'#F59E0B',
   };
@@ -359,15 +408,15 @@ export default function AdminPage() {
                 <table className="admin-table" style={{minWidth:980}}>
                   <thead>
                     <tr>
-                      <th style={TH}>Email</th>
-                      <th style={TH}>Name</th>
-                      <th style={TH}>Plan</th>
-                      <th style={TH}>Joined</th>
-                      <th style={TH}>Learning</th>
-                      <th style={TH}>Native</th>
-                      <th style={TH_NUM}>XP</th>
-                      <th style={TH}>Last active</th>
-                      <th style={TH_NUM}>Lessons</th>
+                      <SortTH k="email" label="Email" />
+                      <SortTH k="name" label="Name" />
+                      <SortTH k="plan" label="Plan" />
+                      <SortTH k="joined" label="Joined" />
+                      <SortTH k="learning" label="Learning" />
+                      <SortTH k="native" label="Native" />
+                      <SortTH k="xp" label="XP" numeric />
+                      <SortTH k="lastActive" label="Last active" />
+                      <SortTH k="lessons" label="Lessons" numeric />
                       <th style={TH}>Actions</th>
                     </tr>
                   </thead>
@@ -375,7 +424,7 @@ export default function AdminPage() {
                     {filtered.length===0&&(
                       <tr><td colSpan={10} style={{padding:48,textAlign:'center',color:'#94A3B8',fontWeight:700,fontSize:13}}>No users found</td></tr>
                     )}
-                    {filtered.map((u,i)=>(
+                    {sorted.map((u,i)=>(
                       <tr key={u.uid} className="urow" style={{background:i%2?'#FAFBFD':'#fff'}}>
                         <td style={{...TD,fontWeight:700,color:'#0F172A',maxWidth:220,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}} title={u.email}>{u.email}</td>
                         <td style={{...TD,color:'#475569',fontWeight:700,maxWidth:140,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}} title={u.displayName}>{u.displayName}</td>
