@@ -161,7 +161,9 @@ export default function AdminPage() {
           });
         }
         rows.sort((a,b)=>(a.planId==='free'?1:-1)-(b.planId==='free'?1:-1)||b.xp-a.xp);
-        setUsers(rows);
+        // 운영자 본인 계정은 학습자 통계에서 제외 (사이트 점검용으로 수시 접속)
+        const visible = rows.filter(r => r.email.toLowerCase() !== 'muntalkofficial@gmail.com');
+        setUsers(visible);
       } catch(e) { console.error(e); }
       setFetching(false);
     })();
