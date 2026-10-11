@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     description: 'Master any language with AI-powered lessons, spaced repetition, and live tutors.',
     images: ['/logo.png'],
   },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
