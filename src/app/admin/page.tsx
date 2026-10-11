@@ -22,6 +22,7 @@ interface UserRow {
   xp: number; streak: number; createdAt: string;
   learnLang: string; nativeLang: string;
   lastActive: string; lessonsDone: number;
+  visitDays: number; activityDates: string[];
 }
 interface LogEntry {
   id: string; action: string; targetEmail: string;
@@ -85,13 +86,13 @@ export default function AdminPage() {
   const [toast, setToast] = useState('');
 
   // Users table sorting (null = default fetch order: premium first, then XP desc)
-  type SortKey = 'email'|'name'|'plan'|'joined'|'learning'|'native'|'xp'|'lastActive'|'lessons';
+  type SortKey = 'email'|'name'|'plan'|'joined'|'learning'|'native'|'xp'|'lastActive'|'visits'|'lessons';
   const [sortKey, setSortKey] = useState<SortKey | null>(null);
   const [sortDir, setSortDir] = useState<'asc'|'desc'>('asc');
   // All columns: 1st click = ascending, 2nd click = descending, 3rd = ascending again
   const SORT_DEFAULT_DIR: Record<SortKey,'asc'|'desc'> = {
     email:'asc', name:'asc', plan:'asc', joined:'asc', learning:'asc',
-    native:'asc', xp:'asc', lastActive:'asc', lessons:'asc',
+    native:'asc', xp:'asc', lastActive:'asc', visits:'asc', lessons:'asc',
   };
   const toggleSort = (key: SortKey) => {
     if (sortKey === key) setSortDir(d => d==='asc'?'desc':'asc');
@@ -155,6 +156,8 @@ export default function AdminPage() {
             createdAt:u.createdAt?.toDate?.()?.toISOString?.()?.slice(0,10)||u.createdAt?.slice?.(0,10)||'',
             learnLang:u.learnLang||'—', nativeLang:u.nativeLang||'—',
             lastActive:u.lastActive||'', lessonsDone:Array.isArray(u.completedLessons)?u.completedLessons.length:0,
+            activityDates:Array.isArray(u.activityDates)?u.activityDates:[],
+            visitDays:Array.isArray(u.activityDates)?u.activityDates.length:0,
           });
         }
         rows.sort((a,b)=>(a.planId==='free'?1:-1)-(b.planId==='free'?1:-1)||b.xp-a.xp);
@@ -276,6 +279,7 @@ export default function AdminPage() {
       case 'native': return langLabel(u.nativeLang).toLowerCase();
       case 'xp': return u.xp;
       case 'lastActive': return u.lastActive || '';
+      case 'visits': return u.visitDays;
       case 'lessons': return u.lessonsDone;
     }
   };
@@ -382,6 +386,55 @@ export default function AdminPage() {
           );
         })()}
 
+        {/* Retention: D1 / D7 / D30 + revisit rate (from activityDates) */}
+        {(()=>{
+          const total = users.length;
+          // YYYY-MM-DD 문자열을 달력 날짜로 취급해 N일 가감 (뷰어 타임존 영향 없음)
+          const addDays = (ymd:string,n:number):string => {
+            const [y,m,d] = ymd.split('-').map(Number);
+            return new Date(Date.UTC(y,m-1,d+n)).toISOString().slice(0,10);
+          };
+          const todayStr = new Date().toISOString().slice(0,10);
+          const retention = (n:number) => {
+            const cohort = users.filter(u=>u.createdAt && u.createdAt<=addDays(todayStr,-n));
+            const retained = cohort.filter(u=>u.activityDates.includes(addDays(u.createdAt,n)));
+            return {cohort:cohort.length, retained:retained.length};
+          };
+          const r1 = retention(1), r7 = retention(7), r30 = retention(30);
+          const revisit = users.filter(u=>u.visitDays>=2).length;
+          const cells = [
+            {label:'D1 retention', ...r1},
+            {label:'D7 retention', ...r7},
+            {label:'D30 retention', ...r30},
+            {label:'Revisit rate (≥2 visits)', cohort:total, retained:revisit},
+          ];
+          const pctOf = (a:number,b:number)=>b?Math.round(a/b*100):null as number|null;
+          return (
+            <div style={{...CARD,padding:'18px 20px',marginBottom:24}}>
+              <div style={{fontSize:14,fontWeight:900,color:'#0F172A',marginBottom:12}}>🔁 Retention</div>
+              <div style={{display:'flex',alignItems:'stretch',gap:0}}>
+                {cells.map((c,i)=>{
+                  const p = pctOf(c.retained,c.cohort);
+                  return (
+                    <div key={c.label} style={{flex:1,display:'flex',alignItems:'center'}}>
+                      <div style={{flex:1}}>
+                        <div style={{fontSize:22,fontWeight:900,color:'#0F172A'}}>
+                          {p===null?'—':`${p}%`}
+                        </div>
+                        <div style={{fontSize:11,color:'#64748B',fontWeight:700,marginTop:2}}>{c.label}</div>
+                        <div style={{fontSize:11,fontWeight:900,color:p!==null&&p>=50?'#10B981':'#F59E0B',marginTop:2}}>
+                          {c.cohort?`${c.retained}/${c.cohort}`:'—'}
+                        </div>
+                      </div>
+                      {i<cells.length-1&&<div style={{fontSize:18,color:'#CBD5E1',padding:'0 4px'}}>→</div>}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })()}
+
         {/* Tabs */}
         <div style={{display:'flex',gap:6,marginBottom:24,background:'#fff',padding:6,borderRadius:14,border:'1px solid #E9EDF3',width:'fit-content'}}>
           {([['users','👥 Users'],['email','✉️ Email'],['logs','📋 Logs'],['settings','⚙️ Settings']] as [Tab,string][]).map(([t,label])=>(
@@ -405,7 +458,7 @@ export default function AdminPage() {
             />
             <div style={{...CARD,overflow:'hidden'}}>
               <div style={{overflowX:'auto',maxHeight:'70vh',overflowY:'auto'}}>
-                <table className="admin-table" style={{minWidth:980}}>
+                <table className="admin-table" style={{minWidth:1040}}>
                   <thead>
                     <tr>
                       <SortTH k="email" label="Email" />
@@ -416,13 +469,14 @@ export default function AdminPage() {
                       <SortTH k="native" label="Native" />
                       <SortTH k="xp" label="XP" numeric />
                       <SortTH k="lastActive" label="Last active" />
+                      <SortTH k="visits" label="Visits" numeric />
                       <SortTH k="lessons" label="Lessons" numeric />
                       <th style={TH}>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     {filtered.length===0&&(
-                      <tr><td colSpan={10} style={{padding:48,textAlign:'center',color:'#94A3B8',fontWeight:700,fontSize:13}}>No users found</td></tr>
+                      <tr><td colSpan={11} style={{padding:48,textAlign:'center',color:'#94A3B8',fontWeight:700,fontSize:13}}>No users found</td></tr>
                     )}
                     {sorted.map((u,i)=>(
                       <tr key={u.uid} className="urow" style={{background:i%2?'#FAFBFD':'#fff'}}>
@@ -436,6 +490,7 @@ export default function AdminPage() {
                         <td style={{...TD,color:'#475569',fontWeight:700,whiteSpace:'nowrap'}} title={u.nativeLang}>{langLabel(u.nativeLang)}</td>
                         <td style={{...TD_NUM,fontWeight:900,color:'#6366F1',whiteSpace:'nowrap'}}>{u.xp.toLocaleString()}</td>
                         <td style={{...TD,color:'#64748B',fontWeight:700,whiteSpace:'nowrap'}}>{u.lastActive||'—'}</td>
+                        <td style={{...TD_NUM,color:'#475569',fontWeight:700,whiteSpace:'nowrap'}}>{u.visitDays}</td>
                         <td style={{...TD_NUM,color:'#475569',fontWeight:700,whiteSpace:'nowrap'}}>{u.lessonsDone}</td>
                         <td style={{...TD,whiteSpace:'nowrap'}}>
                           <div style={{display:'flex',gap:6}}>
