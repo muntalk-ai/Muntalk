@@ -701,7 +701,7 @@ export default function LevelHub() {
       {/* -- NAV -- */}
       <nav style={styles.nav}>
         <div style={styles.navLogo} onClick={() => router.push('/')}>
-          <div style={styles.navLogoIcon}>🌍</div>
+          <div style={styles.navLogoIcon}><img src="/logo.png" alt="MunTalk" style={{ width: 36, height: 36, borderRadius: 12 }} /></div>
           <span style={styles.navLogoText}>MunTalk</span>
           <span style={styles.navBeta}>BETA</span>
         </div>
@@ -1504,7 +1504,7 @@ const styles: Record<string, React.CSSProperties> = {
   page: { minHeight: '100vh', background: '#F8F9FA', color: '#111', fontFamily: "'Nunito','Noto Sans KR',sans-serif" },
   nav: { background: '#fff', borderBottom: '1px solid #F1F5F9', height: 62, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 24px', position: 'sticky', top: 0, zIndex: 200 },
   navLogo: { display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer' },
-  navLogoIcon: { width: 36, height: 36, background: 'linear-gradient(135deg,#38BDF8,#818CF8)', borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20 },
+  navLogoIcon: { width: 36, height: 36, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' },
   navLogoText: { fontWeight: 900, fontSize: 19, color: '#0F172A', letterSpacing: '-0.5px' },
   navBeta: { background: '#EFF6FF', color: '#38BDF8', fontSize: 10, fontWeight: 800, padding: '2px 8px', borderRadius: 20 },
   navStreak: { display: 'flex', alignItems: 'center', gap: 5, background: '#FFF7ED', padding: '6px 12px', borderRadius: 20 },
