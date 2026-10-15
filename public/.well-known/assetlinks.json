@@ -1,8 +1,15 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.muntalk.app",
-    "sha256_cert_fingerprints": ["E8:E4:B3:A7:E3:9F:50:1E:B7:77:9A:5D:80:D5:F6:03:89:8E:B7:AB:1F:67:64:B4:9F:AE:EF:E8:3F:B0:79:5D"]
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.muntalk.app",
+      "sha256_cert_fingerprints": [
+        "E8:E4:B3:A7:E3:9F:50:1E:B7:77:9A:5D:80:D5:F6:03:89:8E:B7:AB:1F:67:64:B4:9F:AE:EF:E8:3F:B0:79:5D",
+        "22:2F:1A:FA:BC:16:DB:CE:61:E7:3E:7D:1F:66:F6:DB:3D:B2:94:42:7E:FC:C2:2A:10:2C:4D:C7:64:E0:73:7D"
+      ]
+    }
   }
-}]
+]
