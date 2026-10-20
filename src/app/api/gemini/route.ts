@@ -116,6 +116,7 @@ export async function POST(req: NextRequest) {
               // 중간에 잘리는 문제 실측됨 (thoughtsTokenCount 3,930 / 4,096, finishReason=MAX_TOKENS).
               // 번역·채팅 경로는 thinking이 불필요하므로 2.5-flash에서만 비활성화.
               // 다른 모델(3.x 계열)은 thinkingBudget 미지원/오류 가능이라 적용하지 않음.
+              // 참고: thinking을 끄면 같은 레슨 번역 호출이 ~21초 → ~6초로 단축되는 것도 실측됨.
               ...(model.includes('2.5-flash') ? { thinkingConfig: { thinkingBudget: 0 } } : {}),
             },
           }),
