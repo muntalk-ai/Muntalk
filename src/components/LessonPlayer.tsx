@@ -359,6 +359,9 @@ export default function LessonPlayer({
     console.log(`[lesson] 🤖 Gemini API: translating to ${targetLang}...`);
     callGeminiFallback(lsn, targetLang, nativeLang);
 
+    // 벌크 레슨 번역은 응답이 커서(실측 ~21s) 전역 AI_TIMEOUT_MS(35s)로는 여유가 부족함 — 이 호출 전용 90s 제한시간
+    const LESSON_TRANSLATE_TIMEOUT_MS = 90_000;
+
     function callGeminiFallback(lsn: typeof lesson, targetLang: string, nativeLang: string, attempt = 0) {
       // Slim payload — exclude tutorPrompt to reduce token count ~40%
       // NOTE: example is included so the model TRANSLATES it (never invents a new one)
@@ -393,7 +396,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ uid: user?.uid ?? null, prompt, temperature: 0.3 }),
-        timeoutMs: AI_TIMEOUT_MS,
+        timeoutMs: LESSON_TRANSLATE_TIMEOUT_MS,
       })
         .then(async r => {
           const data = await r.json();
@@ -461,6 +464,12 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
           setIsTranslating(false);
         })
         .catch(e => {
+          // 타임아웃/네트워크 실패 시 1회 재시도 (검증 실패 재시도와 attempt 카운터 공유 — 총 최대 2회 시도)
+          if (attempt < 1) {
+            console.warn('[lesson] Gemini API error — retrying once...', e?.message || e);
+            callGeminiFallback(lsn, targetLang, nativeLang, attempt + 1);
+            return;
+          }
           // API 모드: JSON fallback 없음 — 에러 표시
           console.error('[lesson] Gemini API error:', e.message || e);
           setTxError(e?.message || 'Translation failed. Please try again.');
