@@ -2,6 +2,8 @@
 
 import { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { signOut } from 'firebase/auth';
+import { auth } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
 import { PLANS, PlanId, getSubscription } from '@/lib/subscription';
 import { apiFetch } from '@/lib/apiClient';
@@ -12,6 +14,7 @@ function PricingContent() {
   const searchParams = useSearchParams();
 
   const [selected,    setSelected]    = useState<PlanId>((searchParams.get('plan') as PlanId) || 'biannual');
+  const [showUserMenu, setShowUserMenu] = useState(false);
   const [loading,     setLoading]     = useState(false);
   const [currentPlan, setCurrentPlan] = useState<PlanId>('free');
   const [openFaq,     setOpenFaq]     = useState<number | null>(null);
@@ -19,6 +22,12 @@ function PricingContent() {
   useEffect(() => {
     if (user) getSubscription(user.uid).then(s => setCurrentPlan(s.planId));
   }, [user]);
+
+  const handleSignOut = async () => {
+    await signOut(auth);
+    setShowUserMenu(false);
+    router.push('/login');
+  };
 
   const handleCheckout = async (planId: PlanId) => {
     if (planId === 'free') return;
@@ -72,11 +81,31 @@ function PricingContent() {
           🗣️ MunTalk
         </div>
         {user && (
-          <div style={{ marginLeft:'auto' }}>
-            {user.photoURL
-              ? <img loading="lazy" src={user.photoURL} style={{ width:28,height:28,borderRadius:'50%',objectFit:'cover' }} alt="" />
-              : <div style={{ width:28,height:28,borderRadius:'50%',background:'linear-gradient(135deg,#6366F1,#8B5CF6)',display:'flex',alignItems:'center',justifyContent:'center',color:'#fff',fontWeight:900,fontSize:12 }}>{(user.displayName||'U')[0]}</div>
-            }
+          <div style={{ marginLeft:'auto', position:'relative' }}>
+            <button onClick={() => setShowUserMenu(m => !m)}
+              style={{ background:'none', border:'none', padding:0, cursor:'pointer', display:'block' }}
+              aria-label="Account menu">
+              {user.photoURL
+                ? <img loading="lazy" src={user.photoURL} style={{ width:28,height:28,borderRadius:'50%',objectFit:'cover', display:'block' }} alt="" />
+                : <div style={{ width:28,height:28,borderRadius:'50%',background:'linear-gradient(135deg,#6366F1,#8B5CF6)',display:'flex',alignItems:'center',justifyContent:'center',color:'#fff',fontWeight:900,fontSize:12 }}>{(user.displayName||'U')[0]}</div>
+              }
+            </button>
+            {showUserMenu && (
+              <>
+                <div onClick={() => setShowUserMenu(false)}
+                  style={{ position:'fixed', inset:0, zIndex:200, background:'transparent' }} />
+                <div style={{ position:'absolute', right:0, top:38, background:'#fff', borderRadius:14, boxShadow:'0 8px 32px rgba(0,0,0,0.12)', border:'1px solid #F1F5F9', minWidth:160, zIndex:300, overflow:'hidden' }}>
+                  <button onClick={() => { router.push('/profile'); setShowUserMenu(false); }}
+                    style={{ width:'100%', padding:'11px 16px', background:'none', border:'none', textAlign:'left', fontSize:13, fontWeight:700, color:'#374151', cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+                    Profile
+                  </button>
+                  <button onClick={handleSignOut}
+                    style={{ width:'100%', padding:'11px 16px', background:'none', border:'none', textAlign:'left', fontSize:13, fontWeight:700, color:'#EF4444', cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+                    Log out
+                  </button>
+                </div>
+              </>
+            )}
           </div>
         )}
       </nav>

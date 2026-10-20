@@ -5,6 +5,9 @@
  */
 
 import { useRouter } from 'next/navigation';
+import { signOut } from 'firebase/auth';
+import { auth } from '@/lib/firebase';
+import { useAuth } from '@/context/AuthContext';
 import { TRIAL_MAX_LANGUAGES, TRIAL_MAX_UNITS, TRIAL_DAILY_CHATS } from '@/lib/trialPolicy';
 
 type Reason = 'expired' | 'language_limit' | 'lesson_limit' | 'chat_limit' | 'level_test_done' | 'premium_only' | 'check_failed';
@@ -59,6 +62,12 @@ const MESSAGES: Record<Reason, { emoji: string; title: string; body: (langLabel?
 
 export default function TrialExpiredModal({ reason, langFlag, langLabel, onClose, onRetry }: Props) {
   const router = useRouter();
+  const { user } = useAuth();
+  // 만료 모달이 화면을 덮어 다른 로그아웃 경로에 닿을 수 없으므로 모달에서 바로 로그아웃 제공
+  const handleSignOut = async () => {
+    await signOut(auth);
+    router.push('/login');
+  };
   const msg = MESSAGES[reason] || MESSAGES.expired;
   // PR-H: 연결 실패 화면에서는 업셀 UI를 숨기고 재시도만 제공
   const isCheckFailed = reason === 'check_failed';
@@ -143,6 +152,12 @@ export default function TrialExpiredModal({ reason, langFlag, langLabel, onClose
             <button onClick={onClose}
               style={{ padding: '12px', borderRadius: 12, border: 'none', background: 'transparent', color: '#4B5563', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
               ← Go back
+            </button>
+          )}
+          {user && (
+            <button onClick={handleSignOut}
+              style={{ padding: '12px', borderRadius: 12, border: 'none', background: 'transparent', color: '#4B5563', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+              Log out
             </button>
           )}
         </div>
