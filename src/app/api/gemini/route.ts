@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
     // 3분 세션에서 현실적인 최대 시도(~15회)를 시간당 상한으로 설정.
     let safePrompt: string;
     let temp: number;
-    let maxTokens = 4096;
+    let maxTokens = 8192;
     let wowMode = false;
     if (purpose === 'wow-pron') {
       wowMode = true;
@@ -109,13 +109,24 @@ export async function POST(req: NextRequest) {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             contents: [{ parts: [{ text: safePrompt }] }],
-            generationConfig: { temperature: temp, maxOutputTokens: maxTokens },
+            generationConfig: {
+              temperature: temp,
+              maxOutputTokens: maxTokens,
+              // gemini-2.5-flash 기본 thinking이 출력 토큰 예산을 잠식해 긴 번역이
+              // 중간에 잘리는 문제 실측됨 (thoughtsTokenCount 3,930 / 4,096, finishReason=MAX_TOKENS).
+              // 번역·채팅 경로는 thinking이 불필요하므로 2.5-flash에서만 비활성화.
+              // 다른 모델(3.x 계열)은 thinkingBudget 미지원/오류 가능이라 적용하지 않음.
+              ...(model.includes('2.5-flash') ? { thinkingConfig: { thinkingBudget: 0 } } : {}),
+            },
           }),
         }, 30000);
 
         if (res.ok) {
           const data = await res.json();
-          const text = data?.candidates?.[0]?.content?.parts?.[0]?.text ?? '';
+          // 멀티 파트 응답에서도 잘리지 않도록 parts 전체 텍스트를 결합
+          const text = (data?.candidates?.[0]?.content?.parts ?? [])
+            .map((p: any) => p?.text ?? '')
+            .join('');
           if (wowMode) {
             // JSON 추출 시도 — 실패해도 text는 그대로 반환 (클라이언트 폴백)
             let score: number | null = null;
