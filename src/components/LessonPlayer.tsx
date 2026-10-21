@@ -12,6 +12,7 @@ import TrialExpiredModal from '@/components/TrialExpiredModal';
 import { getTrialData, initTrial, isTrialExpired, isPremium, TRIAL_MAX_UNITS } from '@/lib/trialPolicy';
 import { isAdminEmail } from '@/lib/subscription';
 import { addCardToSRS } from '@/lib/spacedRepetition';
+import { LESSON_TRANSLATION_CACHE_VERSION } from '@/lib/lessonTranslationCache';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 
 const hasStt = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.stt ?? false;
@@ -354,10 +355,46 @@ export default function LessonPlayer({
       return;
     }
 
-    // API 모드 (기본값) — Gemini만 사용, JSON fallback 없음
-    // 학습창은 항상 이 경로로 실행됨
-    console.log(`[lesson] 🤖 Gemini API: translating to ${targetLang}...`);
-    callGeminiFallback(lsn, targetLang, nativeLang);
+    // API 모드 (기본값) — 학습창은 항상 이 경로로 실행됨
+    // 1차: Firestore 번역 캐시 조회 — 검증 통과한 번역이 저장돼 있으면 Gemini 생략.
+    // 미스/실패/타임아웃 시 기존 Gemini 생성 흐름으로 fail-open (JSON fallback은 없음).
+    let cacheStale = false;
+    if (lessonId && langId && subLang) {
+      apiFetch('/api/lesson-translation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'get',
+          lessonId,
+          targetLang: langId,
+          nativeLang: subLang,
+          version: LESSON_TRANSLATION_CACHE_VERSION,
+        }),
+        timeoutMs: 3500,
+      })
+        .then(async r => {
+          if (!r.ok) throw new Error(`lesson-translation ${r.status}`);
+          const res = await r.json();
+          if (cacheStale) return;
+          const cached = res?.hit ? res.data : null;
+          if (cached && Array.isArray(cached.vocab) && Array.isArray(cached.quiz)) {
+            console.log('[lesson] ⚡ Translation cache hit — Gemini skipped');
+            setTranslatedLesson({ ...lsn, ...cached });
+            setIsTranslating(false);
+            return;
+          }
+          console.log(`[lesson] 🤖 Gemini API: translating to ${targetLang}...`);
+          callGeminiFallback(lsn, targetLang, nativeLang);
+        })
+        .catch(() => {
+          if (cacheStale) return;
+          console.log(`[lesson] 🤖 Gemini API: translating to ${targetLang}...`);
+          callGeminiFallback(lsn, targetLang, nativeLang);
+        });
+    } else {
+      console.log(`[lesson] 🤖 Gemini API: translating to ${targetLang}...`);
+      callGeminiFallback(lsn, targetLang, nativeLang);
+    }
 
     // 벌크 레슨 번역은 응답이 커서(실측 ~21s) 전역 AI_TIMEOUT_MS(35s)로는 여유가 부족함 — 이 호출 전용 90s 제한시간
     const LESSON_TRANSLATE_TIMEOUT_MS = 90_000;
@@ -462,6 +499,23 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
 
           setTranslatedLesson({ ...lsn!, ...parsed });
           setIsTranslating(false);
+
+          // 검증 통과한 번역만 캐시에 저장 — fire-and-forget (UI 블로킹 금지, 실패 무시)
+          if (lessonId && subLang && Array.isArray(parsed.vocab) && Array.isArray(parsed.quiz)) {
+            apiFetch('/api/lesson-translation', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                action: 'put',
+                lessonId,
+                targetLang: langId,
+                nativeLang: subLang,
+                version: LESSON_TRANSLATION_CACHE_VERSION,
+                data: { vocab: parsed.vocab, quiz: parsed.quiz },
+              }),
+              timeoutMs: 5000,
+            }).catch(() => { /* 캐시 저장 실패는 무시 — 다음 진입 때 재생성됨 */ });
+          }
         })
         .catch(e => {
           // 타임아웃/네트워크 실패 시 1회 재시도 (검증 실패 재시도와 attempt 카운터 공유 — 총 최대 2회 시도)
@@ -476,6 +530,9 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
           setIsTranslating(false);
         });
     }
+
+    // 캐시 조회가 늦게 끝나 이전 레슨의 결과를 덮어쓰지 않도록 무효화
+    return () => { cacheStale = true; };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lessonId, langId, subLang, user?.uid, txAttempt]);
 
