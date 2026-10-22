@@ -8,6 +8,7 @@ import {
   signInWithPopup,
   getRedirectResult,
   sendPasswordResetEmail,
+  fetchSignInMethodsForEmail,
 } from 'firebase/auth';
 import { auth, googleProvider } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
@@ -44,6 +45,22 @@ export default function LoginPage() {
     }
   };
 
+  // 구글 전용 가입 계정(비번 수단 없음) 안내 문구 — Jay 승인 (2026-10-21)
+  const GOOGLE_ONLY_MESSAGE = "This account signs in with Google only. Use 'Continue with Google' above — or tap 'Forgot password?' below to add a password for email sign-in.";
+
+  // 자격증명 계열 에러일 때만 가입 수단을 확인한다. 구글 전용 계정이면 전용 문구를,
+  // 판별 불가(빈 배열·조회 실패 등)면 null을 반환해 기본 문구를 유지한다 (fail-open).
+  const googleOnlyMessageIfApplicable = async (code: string): Promise<string | null> => {
+    if (friendlyError(code) !== 'Incorrect email or password.') return null;
+    try {
+      const methods = await fetchSignInMethodsForEmail(auth, email);
+      if (methods.length > 0 && !methods.includes('password') && methods.includes('google.com')) {
+        return GOOGLE_ONLY_MESSAGE;
+      }
+    } catch { /* 조회 실패 시 기본 문구 유지 */ }
+    return null;
+  };
+
   // 리디렉션 복귀 시 결과 처리
   useEffect(() => {
     getRedirectResult(auth)
@@ -70,7 +87,8 @@ export default function LoginPage() {
       await signInWithEmailAndPassword(auth, email, password);
       router.push(getNextPath());
     } catch (e: any) {
-      setError(friendlyError(e.code) || 'Sign in failed. Please try again.');
+      const googleOnlyMsg = await googleOnlyMessageIfApplicable(e.code);
+      setError(googleOnlyMsg || friendlyError(e.code) || 'Sign in failed. Please try again.');
     } finally { setEmailLoading(false); }
   };
 
