@@ -230,14 +230,19 @@ export default function ExchangePage() {
     <button
       key={t.id}
       onClick={() => setTab(t.id)}
-      className={`flex ${vertical ? 'w-full items-center gap-3 rounded-xl px-4 py-3 text-left' : 'flex-1 flex-col items-center gap-0.5 py-2 text-[11px]'} font-semibold transition ${
-        tab === t.id ? 'bg-violet-600 text-white shadow' : 'text-slate-600 hover:bg-violet-50'
+      aria-current={tab === t.id ? 'page' : undefined}
+      className={`flex ${vertical ? 'w-full items-center gap-3 rounded-xl px-4 py-3 text-left' : 'min-h-[56px] flex-1 flex-col items-center justify-center gap-0.5 py-2 text-[11px]'} font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-violet-500 ${
+        tab === t.id
+          ? vertical
+            ? 'bg-violet-600 text-white shadow-md shadow-violet-600/25'
+            : 'bg-violet-600 text-white'
+          : 'text-slate-600 hover:bg-violet-50 active:bg-violet-100'
       }`}
     >
       <span className="text-lg leading-none">{t.icon}</span>
       <span>{t.label}</span>
       {t.id === 'chats' && chats.length > 0 && vertical && (
-        <span className="ml-auto rounded-full bg-violet-100 px-2 py-0.5 text-xs text-violet-700">{chats.length}</span>
+        <span className="ml-auto rounded-full bg-white/25 px-2 py-0.5 text-xs text-white">{chats.length}</span>
       )}
     </button>
   );
@@ -245,10 +250,10 @@ export default function ExchangePage() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
       {/* Header */}
-      <header className="border-b bg-white">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-4">
+      <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 shadow-[0_1px_0_rgba(15,23,42,0.02)] backdrop-blur">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3.5">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-indigo-900 via-violet-600 to-violet-400 text-lg font-bold text-white">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-indigo-900 via-violet-600 to-violet-400 text-lg font-bold text-white shadow-md shadow-violet-600/25 ring-1 ring-white/40">
               M
             </div>
             <div>
@@ -263,14 +268,14 @@ export default function ExchangePage() {
         </div>
       </header>
 
-      <div className="mx-auto flex max-w-6xl gap-6 px-4 py-6 pb-28 md:pb-8">
+      <div className="mx-auto flex max-w-6xl gap-6 px-4 py-6 pb-32 md:pb-10 md:py-8">
         {/* Desktop sidebar */}
         <aside className="hidden w-56 shrink-0 md:block">
-          <nav className="sticky top-6 flex flex-col gap-1 rounded-2xl border bg-white p-3 shadow-sm">
+          <nav className="sticky top-20 flex flex-col gap-1 rounded-2xl border border-slate-200/80 bg-white p-2 shadow-sm">
             {TABS.map((t) => tabButton(t, true))}
           </nav>
-          <div className="mt-4 rounded-2xl border bg-white p-4 text-xs leading-relaxed text-slate-500 shadow-sm">
-            <p className="font-bold text-slate-700">Daily new chats</p>
+          <div className="mt-4 rounded-2xl border border-slate-200/80 bg-white p-4 text-xs leading-relaxed text-slate-500 shadow-sm">
+            <p className="text-sm font-bold text-slate-700">Daily new chats</p>
             <p className="mt-1">Free: 20 / day · Pro: 50 / day</p>
             <p>Ongoing chats are unlimited.</p>
             <p className="mt-2">New accounts (first 7 days): 5 / day.</p>
@@ -289,7 +294,7 @@ export default function ExchangePage() {
                 {PARTNERS.map((p) => {
                   const status = statuses[p.id] || 'idle';
                   return (
-                    <article key={p.id} className="rounded-2xl border bg-white p-4 shadow-sm">
+                    <article key={p.id} className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm transition-shadow hover:shadow-md sm:p-5">
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex items-center gap-3">
                           <span className="text-3xl">{p.flag}</span>
@@ -311,21 +316,21 @@ export default function ExchangePage() {
                           {p.match}% match
                         </span>
                       </div>
-                      <p className="mt-3 text-sm text-slate-600">{p.bio}</p>
+                      <p className="mt-3 text-sm leading-relaxed text-slate-600 [overflow-wrap:anywhere]">{p.bio}</p>
                       <div className="mt-3 flex flex-wrap gap-1.5">
                         {p.interests.map((i) => (
-                          <span key={i} className="rounded-full bg-slate-100 px-2 py-0.5 text-xs text-slate-600">{i}</span>
+                          <span key={i} className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">{i}</span>
                         ))}
                       </div>
                       <button
                         onClick={() => sayHello(p)}
                         disabled={status !== 'idle'}
-                        className={`mt-4 w-full rounded-xl py-2.5 font-bold transition ${
+                        className={`mt-4 w-full rounded-xl py-3 font-bold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98] disabled:cursor-default ${
                           status === 'matched'
                             ? 'bg-emerald-100 text-emerald-700'
                             : status === 'pending'
                               ? 'bg-slate-200 text-slate-500'
-                              : 'bg-violet-600 text-white hover:bg-violet-700'
+                              : 'bg-violet-600 text-white shadow-sm hover:bg-violet-700'
                         }`}
                       >
                         {status === 'matched' ? '✓ Matched — open Chats' : status === 'pending' ? 'Waiting for accept…' : 'Say hello'}
@@ -354,7 +359,7 @@ export default function ExchangePage() {
                     <button
                       key={c.id}
                       onClick={() => setActiveChatId(c.id)}
-                      className="flex items-center gap-3 rounded-2xl border bg-white p-4 text-left shadow-sm hover:border-violet-300"
+                      className="flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white p-4 text-left shadow-sm transition hover:border-violet-300 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
                     >
                       <span className="text-3xl">{c.flag}</span>
                       <span className="min-w-0 flex-1">
@@ -363,19 +368,19 @@ export default function ExchangePage() {
                           {c.messages.length > 0 ? c.messages[c.messages.length - 1].text || '🎤 Voice message' : 'New match — say hi!'}
                         </span>
                       </span>
-                      <span className="text-slate-300">›</span>
+                      <span className="shrink-0 text-lg text-slate-300">›</span>
                     </button>
                   ))}
                 </div>
               ) : (
-                <div className="mt-4 rounded-2xl border bg-white shadow-sm">
-                  <div className="flex items-center gap-3 border-b p-4">
-                    <button onClick={() => setActiveChatId(null)} className="font-bold text-violet-600">← Back</button>
+                <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm">
+                  <div className="flex items-center gap-3 border-b border-slate-100 p-3 sm:p-4">
+                    <button onClick={() => setActiveChatId(null)} className="min-h-[44px] rounded-lg px-2 font-bold text-violet-600 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">← Back</button>
                     <span className="text-2xl">{activeChat.flag}</span>
                     <span className="font-bold">{activeChat.name}</span>
                     <button
                       onClick={() => setReportChat(activeChat)}
-                      className="ml-auto rounded-full border px-3 py-1 text-xs font-bold text-red-600"
+                      className="ml-auto min-h-[36px] rounded-full border border-red-200 px-3 py-1 text-xs font-bold text-red-600 hover:bg-red-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
                     >
                       Report
                     </button>
@@ -386,8 +391,10 @@ export default function ExchangePage() {
                       return (
                         <div key={m.id} className={`flex ${m.from === 'me' ? 'justify-end' : 'justify-start'}`}>
                           <div
-                            className={`max-w-[80%] rounded-2xl px-3 py-2 text-sm ${
-                              m.from === 'me' ? 'bg-violet-600 text-white' : 'bg-slate-100 text-slate-800'
+                            className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed shadow-sm [overflow-wrap:anywhere] sm:max-w-[75%] ${
+                              m.from === 'me'
+                                ? 'rounded-br-md bg-violet-600 text-white'
+                                : 'rounded-bl-md bg-slate-100 text-slate-800'
                             }`}
                           >
                             {m.voice ? (
@@ -441,15 +448,15 @@ export default function ExchangePage() {
                       );
                     })}
                   </div>
-                  <div className="flex gap-2 border-t p-3">
+                  <div className="flex gap-2 border-t border-slate-100 p-3">
                     <input
                       value={input}
                       onChange={(e) => setInput(e.target.value)}
                       onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
                       placeholder="Write a message… (try a phone number to see the guard)"
-                      className="min-w-0 flex-1 rounded-xl border px-3 py-2 text-sm outline-none focus:border-violet-400"
+                      className="min-w-0 flex-1 rounded-xl border border-slate-200 px-3.5 py-2.5 text-sm outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
                     />
-                    <button onClick={sendMessage} className="rounded-xl bg-violet-600 px-4 py-2 text-sm font-bold text-white">
+                    <button onClick={sendMessage} className="min-h-[44px] rounded-xl bg-violet-600 px-4 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98]">
                       Send
                     </button>
                   </div>
@@ -465,7 +472,7 @@ export default function ExchangePage() {
                 Based on your demo chat with Emma. Free: 1 review per week. Pro: unlimited.
               </p>
               <div className="mt-4 grid gap-4">
-                <div className="rounded-2xl border bg-white p-4 shadow-sm">
+                <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
                   <h3 className="font-bold">Corrections from this week (3)</h3>
                   <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-600">
                     <li><span className="line-through">I think its correct</span> → <b>I think it&apos;s correct</b> — &quot;its&quot; is possessive; &quot;it&apos;s&quot; means &quot;it is&quot;.</li>
@@ -473,7 +480,7 @@ export default function ExchangePage() {
                     <li><span className="line-through">He go to school</span> → <b>He goes to school</b> — third person adds -s.</li>
                   </ul>
                 </div>
-                <div className="rounded-2xl border bg-white p-4 shadow-sm">
+                <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
                   <h3 className="font-bold">More natural expressions</h3>
                   <p className="mt-2 text-sm text-slate-600">
                     Instead of &quot;Thanks! That helps a lot.&quot;, try &quot;That really clears it up, thanks!&quot; — warmer and more native.
@@ -485,7 +492,7 @@ export default function ExchangePage() {
                     ))}
                   </div>
                 </div>
-                <div className="rounded-2xl border bg-white p-4 shadow-sm">
+                <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
                   <h3 className="font-bold">This week</h3>
                   <div className="mt-3 flex items-end gap-2">
                     {[3, 5, 2, 6, 4, 7, 1].map((h, i) => (
@@ -497,14 +504,14 @@ export default function ExchangePage() {
                   </div>
                   <p className="mt-2 text-xs text-slate-500">Messages exchanged per day (demo data).</p>
                 </div>
-                <div className="relative overflow-hidden rounded-2xl border bg-white p-4 shadow-sm">
+                <div className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
                   <h3 className="font-bold">Weekly report</h3>
                   {!pro ? (
                     <div className="mt-2">
                       <p className="text-sm text-slate-500">Your full weekly report, progress trends and weak-area summary.</p>
                       <div className="mt-3 rounded-xl bg-slate-100 p-4 text-center">
                         <p className="font-bold text-slate-600">🔒 Pro only</p>
-                        <button onClick={() => setTab('pro')} className="mt-2 rounded-xl bg-violet-600 px-4 py-2 text-sm font-bold text-white">
+                        <button onClick={() => setTab('pro')} className="mt-2 min-h-[44px] rounded-xl bg-violet-600 px-4 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98]">
                           See Pro
                         </button>
                       </div>
@@ -529,17 +536,17 @@ export default function ExchangePage() {
             <section>
               <h2 className="text-xl font-extrabold">MunTalk Exchange Pro</h2>
               <p className="mt-1 text-sm text-slate-500">People talk. AI reviews. Pro removes the limits.</p>
-              <div className="mt-4 flex gap-2">
+              <div className="mt-4 flex gap-3">
                 <button
                   onClick={() => setBilling('monthly')}
-                  className={`flex-1 rounded-2xl border p-4 text-left ${billing === 'monthly' ? 'border-violet-600 bg-violet-50' : 'bg-white'}`}
+                  className={`flex-1 rounded-2xl border p-4 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 sm:p-5 ${billing === 'monthly' ? 'border-violet-600 bg-violet-50 shadow-sm ring-1 ring-violet-600' : 'border-slate-200/80 bg-white hover:border-violet-300'}`}
                 >
                   <p className="font-bold">Monthly</p>
                   <p className="text-2xl font-extrabold">$8<span className="text-sm font-normal text-slate-500">/mo</span></p>
                 </button>
                 <button
                   onClick={() => setBilling('yearly')}
-                  className={`flex-1 rounded-2xl border p-4 text-left ${billing === 'yearly' ? 'border-violet-600 bg-violet-50' : 'bg-white'}`}
+                  className={`flex-1 rounded-2xl border p-4 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 sm:p-5 ${billing === 'yearly' ? 'border-violet-600 bg-violet-50 shadow-sm ring-1 ring-violet-600' : 'border-slate-200/80 bg-white hover:border-violet-300'}`}
                 >
                   <p className="font-bold">Yearly <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-xs text-emerald-700">Save 33%</span></p>
                   <p className="text-2xl font-extrabold">$64<span className="text-sm font-normal text-slate-500">/yr</span></p>
@@ -559,7 +566,7 @@ export default function ExchangePage() {
                   showToast('7-day trial started (demo). PRO badge is now active.');
                 }}
                 disabled={pro}
-                className={`mt-4 w-full rounded-xl py-3 font-bold ${pro ? 'bg-emerald-100 text-emerald-700' : 'bg-violet-600 text-white hover:bg-violet-700'}`}
+                className={`mt-4 w-full rounded-xl py-3 font-bold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98] disabled:cursor-default ${pro ? 'bg-emerald-100 text-emerald-700' : 'bg-violet-600 text-white shadow-sm hover:bg-violet-700'}`}
               >
                 {pro ? '✓ Trial active — you are PRO (demo)' : 'Start 7-day free trial'}
               </button>
@@ -572,11 +579,11 @@ export default function ExchangePage() {
               <h2 className="text-xl font-extrabold">My Exchange profile</h2>
               <p className="mt-1 text-sm text-slate-500">Only nickname, languages, level and interests are shown to partners.</p>
               <div className="mt-4 grid gap-4">
-                <div className="rounded-2xl border bg-white p-4 shadow-sm">
+                <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
                   <div className="grid gap-3 sm:grid-cols-3">
                     <label className="block text-sm font-semibold">
                       Native language
-                      <select value={nativeLang} onChange={(e) => setNativeLang(e.target.value)} className="mt-1 w-full rounded-xl border px-3 py-2 font-normal">
+                      <select value={nativeLang} onChange={(e) => setNativeLang(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
                         {['English', 'Korean', 'Spanish', 'Japanese', 'Portuguese'].map((l) => (
                           <option key={l}>{l}</option>
                         ))}
@@ -584,7 +591,7 @@ export default function ExchangePage() {
                     </label>
                     <label className="block text-sm font-semibold">
                       Learning
-                      <select value={targetLang} onChange={(e) => setTargetLang(e.target.value)} className="mt-1 w-full rounded-xl border px-3 py-2 font-normal">
+                      <select value={targetLang} onChange={(e) => setTargetLang(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
                         {['English', 'Korean', 'Spanish', 'Japanese', 'Portuguese'].map((l) => (
                           <option key={l}>{l}</option>
                         ))}
@@ -592,7 +599,7 @@ export default function ExchangePage() {
                     </label>
                     <label className="block text-sm font-semibold">
                       Level
-                      <select value={level} onChange={(e) => setLevel(e.target.value)} className="mt-1 w-full rounded-xl border px-3 py-2 font-normal">
+                      <select value={level} onChange={(e) => setLevel(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
                         {['Beginner', 'Intermediate', 'Advanced'].map((l) => (
                           <option key={l}>{l}</option>
                         ))}
@@ -605,14 +612,14 @@ export default function ExchangePage() {
                       <button
                         key={i}
                         onClick={() => toggleInterest(i)}
-                        className={`rounded-full px-3 py-1 text-xs font-semibold ${interestSel.includes(i) ? 'bg-violet-600 text-white' : 'bg-slate-100 text-slate-600'}`}
+                        className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${interestSel.includes(i) ? 'bg-violet-600 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
                       >
                         {i}
                       </button>
                     ))}
                   </div>
                 </div>
-                <div className="rounded-2xl border bg-white p-4 shadow-sm">
+                <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
                   <h3 className="font-bold">Verification</h3>
                   <ul className="mt-2 space-y-1 text-sm text-slate-600">
                     <li>✓ Phone verified</li>
@@ -637,7 +644,7 @@ export default function ExchangePage() {
                 </div>
                 <button
                   onClick={() => showToast('Profile saved (demo — stored in this browser session only).')}
-                  className="rounded-xl bg-violet-600 py-3 font-bold text-white hover:bg-violet-700"
+                  className="rounded-xl bg-violet-600 py-3 font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98]"
                 >
                   Save profile
                 </button>
@@ -648,14 +655,14 @@ export default function ExchangePage() {
       </div>
 
       {/* Mobile bottom tab bar */}
-      <nav className="fixed inset-x-0 bottom-0 z-40 flex border-t bg-white shadow-[0_-2px_10px_rgba(0,0,0,0.06)] md:hidden">
+      <nav className="fixed inset-x-0 bottom-0 z-40 flex border-t border-slate-200 bg-white/95 shadow-[0_-2px_10px_rgba(0,0,0,0.06)] backdrop-blur pb-[env(safe-area-inset-bottom)] md:hidden">
         {TABS.map((t) => tabButton(t, false))}
       </nav>
 
       {/* Report modal */}
       {reportChat && (
-        <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 p-4 sm:items-center">
-          <div className="w-full max-w-sm rounded-2xl bg-white p-5 shadow-xl">
+        <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 p-4 backdrop-blur-[2px] sm:items-center">
+          <div className="w-full max-w-sm rounded-3xl bg-white p-5 shadow-xl">
             {!reportReason ? (
               <>
                 <h3 className="font-extrabold">Report {reportChat.name}?</h3>
@@ -665,13 +672,13 @@ export default function ExchangePage() {
                     <button
                       key={r}
                       onClick={() => setReportReason(r)}
-                      className="rounded-xl border px-3 py-2.5 text-left text-sm font-semibold hover:border-red-300"
+                      className="rounded-xl border border-slate-200 px-3 py-3 text-left text-sm font-semibold transition hover:border-red-300 hover:bg-red-50/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
                     >
                       {r}
                     </button>
                   ))}
                 </div>
-                <button onClick={() => setReportChat(null)} className="mt-3 w-full py-2 text-sm font-bold text-slate-500">
+                <button onClick={() => setReportChat(null)} className="mt-3 min-h-[44px] w-full py-2 text-sm font-bold text-slate-500 hover:text-slate-700">
                   Cancel
                 </button>
               </>
@@ -681,10 +688,10 @@ export default function ExchangePage() {
                 <p className="mt-1 text-sm text-slate-500">
                   Step 2 of 2 — {reportChat.name} will be blocked, this chat will be removed, and you will not be notified of each other again.
                 </p>
-                <button onClick={reportAndBlock} className="mt-4 w-full rounded-xl bg-red-600 py-2.5 font-bold text-white">
+                <button onClick={reportAndBlock} className="mt-4 min-h-[48px] w-full rounded-xl bg-red-600 py-3 font-bold text-white shadow-sm hover:bg-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 active:scale-[0.98]">
                   Report &amp; block
                 </button>
-                <button onClick={() => setReportReason('')} className="mt-2 w-full py-2 text-sm font-bold text-slate-500">
+                <button onClick={() => setReportReason('')} className="mt-2 min-h-[44px] w-full py-2 text-sm font-bold text-slate-500 hover:text-slate-700">
                   Back
                 </button>
               </>
