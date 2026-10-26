@@ -43,14 +43,14 @@ export default function PushPrimeCard({ uid, onDone }: { uid: string; onDone: ()
       <div style={{ fontSize: 32, flexShrink: 0 }}>🔔</div>
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ fontWeight: 900, fontSize: 14, color: '#1E1B4B', marginBottom: 4 }}>
-          {result === 'ok' ? '알림이 켜졌어요! 🎉' : '내일도 이어서 학습할 수 있게 알려드릴까요?'}
+          {result === 'ok' ? 'Notifications on! 🎉' : 'Want a reminder to keep learning tomorrow?'}
         </div>
         <div style={{ fontSize: 12.5, color: '#4F46E5', fontWeight: 600, lineHeight: 1.5 }}>
           {result === 'ok'
-            ? '오늘 학습을 마치면 저녁에 알려드려요.'
+            ? "We'll remind you in the evening once you've finished today's lesson."
             : result === 'denied'
-              ? '브라우저에서 알림이 차단됐어요. 주소창 옆 🔒 아이콘에서 허용할 수 있어요.'
-              : '매일 저녁, 오늘의 학습을 마치면 알려드려요. 스트릭이 끊기지 않게요.'}
+              ? 'Notifications are blocked in your browser. You can allow them from the 🔒 icon next to the address bar.'
+              : "Every evening, we'll remind you once you've finished today's lesson — so your streak never breaks."}
         </div>
         {result !== 'ok' && (
           <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>
@@ -60,20 +60,20 @@ export default function PushPrimeCard({ uid, onDone }: { uid: string; onDone: ()
                 padding: '8px 20px', fontWeight: 900, fontSize: 13, cursor: 'pointer',
                 opacity: loading ? 0.6 : 1, fontFamily: 'inherit',
               }}>
-              {loading ? '켜는 중…' : '🔔 알림 켜기'}
+              {loading ? 'Turning on…' : '🔔 Turn on notifications'}
             </button>
             <button onClick={dismiss}
               style={{
                 background: 'transparent', color: '#6B7280', border: 'none',
                 fontWeight: 700, fontSize: 13, cursor: 'pointer', fontFamily: 'inherit',
               }}>
-              나중에
+              Later
             </button>
           </div>
         )}
       </div>
       {result !== 'ok' && (
-        <button onClick={dismiss} aria-label="닫기"
+        <button onClick={dismiss} aria-label="Close"
           style={{ background: 'none', border: 'none', color: '#9CA3AF', fontSize: 18, cursor: 'pointer', flexShrink: 0, alignSelf: 'flex-start' }}>
           ×
         </button>
