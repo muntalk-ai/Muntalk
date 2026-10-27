@@ -747,6 +747,7 @@ export default function ExchangePage() {
                       </button>
                     ))}
                   </div>
+                  <p className="mt-2 text-xs text-slate-500">[진단] 현재 선택: {interestSel.length ? interestSel.join(', ') : '(없음)'}</p>
                 </div>
                 <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
                   <label className="block text-sm font-semibold">
