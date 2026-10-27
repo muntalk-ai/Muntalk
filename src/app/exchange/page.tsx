@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { doc, getDoc, serverTimestamp, setDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
@@ -159,6 +159,10 @@ export default function ExchangePage() {
   const [targetLang, setTargetLang] = useState('Korean');
   const [level, setLevel] = useState('Intermediate');
   const [interestSel, setInterestSel] = useState<string[]>(['Travel', 'Cooking']);
+  // Set when the user taps an interest chip. The Firestore load below must
+  // never overwrite a selection the user already made (load resolving after
+  // a tap used to wipe it, so a tap looked dead and never persisted).
+  const interestEditedRef = useRef(false);
   const [nickname, setNickname] = useState('');
   const [bio, setBio] = useState('');
   const [hideOnline, setHideOnline] = useState(false);
@@ -176,11 +180,14 @@ export default function ExchangePage() {
   useEffect(() => {
     if (authLoading) return;
     if (!user) {
+      interestEditedRef.current = false;
       setProfileLoaded(false);
       setProfileError('');
       return;
     }
     let cancelled = false;
+    // A fresh load for this user: user edits from here on win over the doc.
+    interestEditedRef.current = false;
     setProfileLoading(true);
     getDoc(doc(db, 'exchange_profiles', user.uid))
       .then((snap) => {
@@ -190,7 +197,7 @@ export default function ExchangePage() {
           if (typeof d.nativeLang === 'string') setNativeLang(d.nativeLang);
           if (typeof d.targetLang === 'string') setTargetLang(d.targetLang);
           if (typeof d.level === 'string') setLevel(d.level);
-          if (Array.isArray(d.interests)) setInterestSel(d.interests.filter((i): i is string => typeof i === 'string'));
+          if (!interestEditedRef.current && Array.isArray(d.interests)) setInterestSel(d.interests.filter((i): i is string => typeof i === 'string'));
           if (typeof d.nickname === 'string') setNickname(d.nickname);
           if (typeof d.bio === 'string') setBio(d.bio);
         }
@@ -308,8 +315,19 @@ export default function ExchangePage() {
     setReportReason('');
   };
 
-  const toggleInterest = (interest: string) =>
-    setInterestSel((sel) => (sel.includes(interest) ? sel.filter((i) => i !== interest) : [...sel, interest]));
+  // Interest chips save immediately when signed in: a tap must never depend
+  // on a later Save press, and must survive a page reload on its own.
+  // Signed-out users keep the previous demo behaviour (local state only).
+  const toggleInterest = (interest: string) => {
+    interestEditedRef.current = true;
+    const next = interestSel.includes(interest) ? interestSel.filter((i) => i !== interest) : [...interestSel, interest];
+    setInterestSel(next);
+    if (user) {
+      setDoc(doc(db, 'exchange_profiles', user.uid), { interests: next, updatedAt: serverTimestamp() }, { merge: true }).catch(() => {
+        showToast('Could not save interests. Please try again.');
+      });
+    }
+  };
 
   const tabButton = (t: { id: Tab; label: string; icon: string }, vertical: boolean) => (
     <button
