@@ -1,11 +1,15 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { doc, getDoc, serverTimestamp, setDoc } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
+import { useAuth } from '@/context/AuthContext';
 
 /*
  * MunTalk Exchange — hidden demo page (NOT linked from navigation).
- * Demo data only: no Firestore, Auth, payments, or push wiring.
- * Real backend wiring follows the MVP spec in a later step.
+ * Discover / Chats / AI Review / Pro tabs are demo data only.
+ * The Profile tab is wired to Firestore for signed-in users
+ * (collection `exchange_profiles`), other tabs stay demo-only.
  */
 
 type Tab = 'discover' | 'chats' | 'review' | 'pro' | 'profile';
@@ -155,9 +159,90 @@ export default function ExchangePage() {
   const [targetLang, setTargetLang] = useState('Korean');
   const [level, setLevel] = useState('Intermediate');
   const [interestSel, setInterestSel] = useState<string[]>(['Travel', 'Cooking']);
+  const [nickname, setNickname] = useState('');
+  const [bio, setBio] = useState('');
   const [hideOnline, setHideOnline] = useState(false);
   const [verifiedOnly, setVerifiedOnly] = useState(true);
   const [allowVoice, setAllowVoice] = useState(true);
+
+  // Firestore wiring for the Profile tab only.
+  // Only nickname / languages / level / interests / bio are stored —
+  // never real name, email, or contact details.
+  const { user, loading: authLoading } = useAuth();
+  const [profileLoading, setProfileLoading] = useState(false);
+  const [profileLoaded, setProfileLoaded] = useState(false);
+  const [profileError, setProfileError] = useState('');
+
+  useEffect(() => {
+    if (authLoading) return;
+    if (!user) {
+      setProfileLoaded(false);
+      setProfileError('');
+      return;
+    }
+    let cancelled = false;
+    setProfileLoading(true);
+    getDoc(doc(db, 'exchange_profiles', user.uid))
+      .then((snap) => {
+        if (cancelled) return;
+        if (snap.exists()) {
+          const d = snap.data();
+          if (typeof d.nativeLang === 'string') setNativeLang(d.nativeLang);
+          if (typeof d.targetLang === 'string') setTargetLang(d.targetLang);
+          if (typeof d.level === 'string') setLevel(d.level);
+          if (Array.isArray(d.interests)) setInterestSel(d.interests.filter((i): i is string => typeof i === 'string'));
+          if (typeof d.nickname === 'string') setNickname(d.nickname);
+          if (typeof d.bio === 'string') setBio(d.bio);
+        }
+        setProfileLoaded(true);
+        setProfileError('');
+      })
+      .catch((err) => {
+        if (cancelled) return;
+        // Never fail silently: keep demo values but say so.
+        setProfileError(
+          (err as { code?: string }).code === 'permission-denied'
+            ? 'Could not load your saved profile: Exchange profile permissions are not published yet. Showing demo values.'
+            : 'Could not load your saved profile. Showing demo values.'
+        );
+      })
+      .finally(() => {
+        if (!cancelled) setProfileLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [user, authLoading]);
+
+  const saveProfile = async () => {
+    if (!user) {
+      showToast('Sign in to save your Exchange profile to your account.');
+      return;
+    }
+    try {
+      await setDoc(
+        doc(db, 'exchange_profiles', user.uid),
+        {
+          nickname: nickname.trim(),
+          nativeLang,
+          targetLang,
+          level,
+          interests: interestSel,
+          bio: bio.trim(),
+          updatedAt: serverTimestamp(),
+        },
+        { merge: true }
+      );
+      setProfileLoaded(true);
+      showToast('Profile saved to your Exchange account.');
+    } catch (err) {
+      showToast(
+        (err as { code?: string }).code === 'permission-denied'
+          ? 'Could not save: Exchange profile permissions are not published yet. Your changes are kept on this page.'
+          : 'Could not save your profile. Please try again.'
+      );
+    }
+  };
 
   const showToast = (text: string) => {
     setToast(text);
@@ -263,7 +348,7 @@ export default function ExchangePage() {
           </div>
           {pro && <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-800">PRO</span>}
           <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-500">
-            Demo — no real data, no backend yet
+            Demo — other tabs use demo data; Profile saves to your account when signed in
           </span>
         </div>
       </header>
@@ -578,9 +663,35 @@ export default function ExchangePage() {
             <section>
               <h2 className="text-xl font-extrabold">My Exchange profile</h2>
               <p className="mt-1 text-sm text-slate-500">Only nickname, languages, level and interests are shown to partners.</p>
+              {authLoading ? (
+                <p className="mt-2 text-sm text-slate-500">Checking sign-in…</p>
+              ) : user ? (
+                <p className="mt-2 text-sm text-slate-500">
+                  Signed in — your profile loads from and saves to your Exchange account.
+                  {profileLoading && ' Loading saved profile…'}
+                  {profileLoaded && !profileLoading && ' ✓ Loaded.'}
+                </p>
+              ) : (
+                <p className="mt-2 text-sm text-slate-500">
+                  Not signed in — sign in to save this profile to your account. Until then, changes stay in this browser session.
+                </p>
+              )}
+              {profileError && (
+                <p className="mt-2 rounded-xl bg-amber-50 px-3 py-2 text-sm font-semibold text-amber-800">{profileError}</p>
+              )}
               <div className="mt-4 grid gap-4">
                 <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
-                  <div className="grid gap-3 sm:grid-cols-3">
+                  <label className="block text-sm font-semibold">
+                    Nickname (shown to partners)
+                    <input
+                      value={nickname}
+                      onChange={(e) => setNickname(e.target.value)}
+                      placeholder="Pick a nickname — not your real name"
+                      maxLength={40}
+                      className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
+                    />
+                  </label>
+                  <div className="mt-3 grid gap-3 sm:grid-cols-3">
                     <label className="block text-sm font-semibold">
                       Native language
                       <select value={nativeLang} onChange={(e) => setNativeLang(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
@@ -620,6 +731,19 @@ export default function ExchangePage() {
                   </div>
                 </div>
                 <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
+                  <label className="block text-sm font-semibold">
+                    About me
+                    <textarea
+                      value={bio}
+                      onChange={(e) => setBio(e.target.value)}
+                      placeholder="A short intro partners will see"
+                      maxLength={200}
+                      rows={3}
+                      className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
+                    />
+                  </label>
+                </div>
+                <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
                   <h3 className="font-bold">Verification</h3>
                   <ul className="mt-2 space-y-1 text-sm text-slate-600">
                     <li>✓ Phone verified</li>
@@ -643,11 +767,15 @@ export default function ExchangePage() {
                   </div>
                 </div>
                 <button
-                  onClick={() => showToast('Profile saved (demo — stored in this browser session only).')}
-                  className="rounded-xl bg-violet-600 py-3 font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98]"
+                  onClick={saveProfile}
+                  disabled={authLoading || profileLoading}
+                  className="rounded-xl bg-violet-600 py-3 font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98] disabled:cursor-wait disabled:opacity-60"
                 >
-                  Save profile
+                  {authLoading || profileLoading ? 'Loading…' : user ? 'Save profile' : 'Save profile (sign in to store it)'}
                 </button>
+                {!user && !authLoading && (
+                  <p className="-mt-2 text-center text-xs text-slate-400">Signing in uses the existing MunTalk login — no new login flow on this page.</p>
+                )}
               </div>
             </section>
           )}
