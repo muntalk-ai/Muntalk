@@ -288,7 +288,7 @@ export default function ExchangePage() {
             <section>
               <h2 className="text-xl font-extrabold">Discover partners</h2>
               <p className="mt-1 text-sm text-slate-500">
-                5 partner suggestions today. Say hello — they accept before a chat opens. No open DMs.
+                4 partner suggestions today. Say hello — they accept before a chat opens. No open DMs.
               </p>
               <div className="mt-4 grid gap-4 sm:grid-cols-2">
                 {PARTNERS.map((p) => {
