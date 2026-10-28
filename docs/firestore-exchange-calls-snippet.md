@@ -109,25 +109,21 @@ match /exchange_calls/{callId} {
 3. 여전히 `permission-denied`가 나오면, 삽입 위치가 와일드카드 블록 뒤가
    아닌지, 그리고 `exchange_profiles` 읽기 규칙도 게시되어 있는지 확인합니다.
 
-## ⚠️ Jay 결정 필요 — 파트너 목록 조회 규칙 (이 PR의 통화 기능과 별개)
+## ✅ Jay 결정: A안 확정 (2026-10-27) — 콘솔에 아래 2건을 함께 게시할 것
 
-Discover 탭은 `exchange_profiles` 전체를 조회(`limit(50)`)해서 파트너를
-나열합니다. 그런데 콘솔의 기존 `exchange_profiles` 읽기 규칙은
-`allow read: if isOwner(uid) || isAdmin()` — 본인 문서만 읽을 수 있는
-규칙입니다. 이 상태로는 **위 `exchange_calls` 스니펫만 게시해도
-파트너 목록 조회가 `permission-denied`로 막히고**, Discover는 빈 상태나
-오류 안내만 보여줍니다. 통화 자체의 시그널링은 스니펫만으로 되지만,
-"파트너를 찾아서 전화를 거는" 흐름은 이 결정 없이는 동작하지 않습니다.
+**1건 — `exchange_profiles` 블록의 `allow read` 줄 교체:**
+기존 줄 `allow read: if isOwner(uid) || isAdmin();`를 아래 줄로 교체합니다.
 
-선택지 (Jay가 콘솔에서 직접 결정·게시할 것 — 이 파일은 규칙을 바꾸지 않음):
+```js
+allow read: if isSignedIn();
+```
 
-- **A안 — 로그인 유저에게 프로필 목록 읽기 허용 (교환 서비스의 정상 형태):**
-  `exchange_profiles` 읽기 규칙을 `allow read: if isSignedIn();` 수준으로
-  완화합니다. 닉네임·언어·레벨·관심사·bio가 로그인 유저에게 노출됩니다
-  (실명·연락처는 프로필에 저장하지 않는 설계이므로 노출되지 않음).
-- **B안 — 현행 owner-only 유지:** 파트너 목록은 비어 있고, 통화는
-  상대 uid를 아는 경우에만(예: 기존 대화 상대) 시작할 수 있습니다.
-  사실상 Discover 경유 통화는 동작하지 않습니다.
+(닉네임·언어·레벨·관심사·bio만 저장하는 설계라, 로그인 유저에게 노출되는 정보는
+그 범위 안에 머무릅니다. 실명·연락처는 프로필에 저장하지 않습니다.)
 
-A안을 선택하면 `exchange_profiles` 블록의 `allow read` 줄만 교체하면 되고,
-이 스니펫의 `exchange_calls` 규칙은 그대로 둡니다.
+**2건 — 위 `exchange_calls` 규칙 본문 전체를 `exchange_profiles` 블록 바로 뒤에 삽입**
+(삽입 위치·전제 조건은 위 "삽입 위치"/"전제" 절과 동일합니다.)
+
+두 건을 함께 게시해야 "파트너 목록 보기 → 전화 걸기 → 수신 알림 → 연결" 흐름이
+끝까지 동작합니다. `exchange_calls`만 게시하면 목록이 비어 보이고,
+`exchange_profiles`만 바꾸면 통화 시그널링이 막힙니다.
