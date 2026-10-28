@@ -9,6 +9,14 @@
 // portraits of fictional AI-generated adults in their early 20s; they do not
 // depict any real person. Persona profiles are language, interest, and
 // personality settings for a study partner only — never a dating setup.
+//
+// Gallery: each partner has ~5 lifestyle photos tied to their interests
+// (travel full-body, cafe, sport, reading, cooking, etc.) under
+// public/exchange-ai-avatars/<name>/N.jpg, generated with the partner's
+// avatar as reference and a fixed appearance description for face
+// consistency. NO swimwear beach photos: the one beach scene (Chloe) is an
+// everyday-clothes beach-promenade walk. Emily has 4 gallery photos, not
+// 5: her 5th (inline skating) could not be generated and was not retried.
 
 export const AI_DISCLOSURE =
   'These partners are AI, not real people.';
@@ -24,6 +32,8 @@ export type AiPartner = {
   greeting: string;
   /** Photorealistic fictional-adult portrait under public/exchange-ai-avatars/. */
   avatar: string;
+  /** Lifestyle gallery (public/exchange-ai-avatars/<name>/N.jpg). */
+  gallery: string[];
 };
 
 export const AI_PARTNERS: AiPartner[] = [
@@ -38,6 +48,7 @@ export const AI_PARTNERS: AiPartner[] = [
     greeting:
       "Hi! I'm Jiyoung, an AI practice partner. Let's practice English together — what did you cook recently?",
     avatar: '/exchange-ai-avatars/jiyoung.png',
+    gallery: ['/exchange-ai-avatars/jiyoung/1.jpg', '/exchange-ai-avatars/jiyoung/2.jpg', '/exchange-ai-avatars/jiyoung/3.jpg', '/exchange-ai-avatars/jiyoung/4.jpg', '/exchange-ai-avatars/jiyoung/5.jpg'],
   },
   {
     id: 'ai-minho',
@@ -50,6 +61,7 @@ export const AI_PARTNERS: AiPartner[] = [
     greeting:
       "Hello! I'm Minho, an AI practice partner. Let's practice easy English — do you like football or movies more?",
     avatar: '/exchange-ai-avatars/minho.png',
+    gallery: ['/exchange-ai-avatars/minho/1.jpg', '/exchange-ai-avatars/minho/2.jpg', '/exchange-ai-avatars/minho/3.jpg', '/exchange-ai-avatars/minho/4.jpg', '/exchange-ai-avatars/minho/5.jpg'],
   },
   {
     id: 'ai-hana',
@@ -62,6 +74,7 @@ export const AI_PARTNERS: AiPartner[] = [
     greeting:
       "Hi, I'm Hana, an AI practice partner. Let's practice English — what are you reading these days?",
     avatar: '/exchange-ai-avatars/hana.png',
+    gallery: ['/exchange-ai-avatars/hana/1.jpg', '/exchange-ai-avatars/hana/2.jpg', '/exchange-ai-avatars/hana/3.jpg', '/exchange-ai-avatars/hana/4.jpg', '/exchange-ai-avatars/hana/5.jpg'],
   },
   {
     id: 'ai-daehyun',
@@ -74,6 +87,7 @@ export const AI_PARTNERS: AiPartner[] = [
     greeting:
       "Hello! I'm Daehyun, an AI practice partner. Let's practice English — where did you last go hiking?",
     avatar: '/exchange-ai-avatars/daehyun.png',
+    gallery: ['/exchange-ai-avatars/daehyun/1.jpg', '/exchange-ai-avatars/daehyun/2.jpg', '/exchange-ai-avatars/daehyun/3.jpg', '/exchange-ai-avatars/daehyun/4.jpg', '/exchange-ai-avatars/daehyun/5.jpg'],
   },
   {
     id: 'ai-seoyeon',
@@ -86,6 +100,7 @@ export const AI_PARTNERS: AiPartner[] = [
     greeting:
       "Hi! I'm Seoyeon, an AI practice partner. Let's practice easy English — do you like music or movies more?",
     avatar: '/exchange-ai-avatars/seoyeon.png',
+    gallery: ['/exchange-ai-avatars/seoyeon/1.jpg', '/exchange-ai-avatars/seoyeon/2.jpg', '/exchange-ai-avatars/seoyeon/3.jpg', '/exchange-ai-avatars/seoyeon/4.jpg', '/exchange-ai-avatars/seoyeon/5.jpg'],
   },
   {
     id: 'ai-alex',
@@ -98,6 +113,7 @@ export const AI_PARTNERS: AiPartner[] = [
     greeting:
       "Hi! I'm Alex, an AI practice partner. Let's practice Korean together — have you tried Korean coffee shops?",
     avatar: '/exchange-ai-avatars/alex.png',
+    gallery: ['/exchange-ai-avatars/alex/1.jpg', '/exchange-ai-avatars/alex/2.jpg', '/exchange-ai-avatars/alex/3.jpg', '/exchange-ai-avatars/alex/4.jpg', '/exchange-ai-avatars/alex/5.jpg'],
   },
   {
     id: 'ai-maya',
@@ -110,6 +126,7 @@ export const AI_PARTNERS: AiPartner[] = [
     greeting:
       "Hello! I'm Maya, an AI practice partner. Let's practice easy Korean — what music do you like?",
     avatar: '/exchange-ai-avatars/maya.png',
+    gallery: ['/exchange-ai-avatars/maya/1.jpg', '/exchange-ai-avatars/maya/2.jpg', '/exchange-ai-avatars/maya/3.jpg', '/exchange-ai-avatars/maya/4.jpg', '/exchange-ai-avatars/maya/5.jpg'],
   },
   {
     id: 'ai-tom',
@@ -122,6 +139,7 @@ export const AI_PARTNERS: AiPartner[] = [
     greeting:
       "Hi, I'm Tom, an AI practice partner. Let's practice Korean — what book have you enjoyed recently?",
     avatar: '/exchange-ai-avatars/tom.png',
+    gallery: ['/exchange-ai-avatars/tom/1.jpg', '/exchange-ai-avatars/tom/2.jpg', '/exchange-ai-avatars/tom/3.jpg', '/exchange-ai-avatars/tom/4.jpg', '/exchange-ai-avatars/tom/5.jpg'],
   },
   {
     id: 'ai-emily',
@@ -134,6 +152,7 @@ export const AI_PARTNERS: AiPartner[] = [
     greeting:
       "Hello! I'm Emily, an AI practice partner. Let's practice Korean — do you like hiking?",
     avatar: '/exchange-ai-avatars/emily.png',
+    gallery: ['/exchange-ai-avatars/emily/1.jpg', '/exchange-ai-avatars/emily/2.jpg', '/exchange-ai-avatars/emily/3.jpg', '/exchange-ai-avatars/emily/4.jpg'],
   },
   {
     id: 'ai-chloe',
@@ -146,6 +165,7 @@ export const AI_PARTNERS: AiPartner[] = [
     greeting:
       "Hi! I'm Chloe, an AI practice partner. Let's practice Korean — what food do you like to cook?",
     avatar: '/exchange-ai-avatars/chloe.png',
+    gallery: ['/exchange-ai-avatars/chloe/1.jpg', '/exchange-ai-avatars/chloe/2.jpg', '/exchange-ai-avatars/chloe/3.jpg', '/exchange-ai-avatars/chloe/4.jpg', '/exchange-ai-avatars/chloe/5.jpg'],
   },
 ];
 

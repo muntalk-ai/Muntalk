@@ -466,6 +466,24 @@ export default function ExchangePage() {
                             <span key={i} className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">{i}</span>
                           ))}
                         </div>
+                        <div className="mt-3">
+                          <p className="text-xs font-bold text-slate-500">
+                            Photos{' '}
+                            <span className="rounded-full bg-violet-600 px-1.5 py-0.5 text-[10px] font-extrabold text-white">AI</span>
+                            <span className="font-normal"> — lifestyle photos of this AI partner</span>
+                          </p>
+                          <div className="mt-2 flex gap-2 overflow-x-auto pb-1">
+                            {p.gallery.map((g, i) => (
+                              <img
+                                key={g}
+                                src={g}
+                                alt={`Lifestyle photo ${i + 1} of AI partner ${p.name}`}
+                                loading="lazy"
+                                className="h-20 w-20 shrink-0 rounded-xl object-cover ring-1 ring-slate-200"
+                              />
+                            ))}
+                          </div>
+                        </div>
                         <button
                           onClick={() => startAiChat(p)}
                           className="mt-4 w-full rounded-xl bg-violet-600 py-3 font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98]"
