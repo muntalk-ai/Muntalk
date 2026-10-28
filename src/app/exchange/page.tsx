@@ -1,130 +1,63 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { doc, getDoc, serverTimestamp, setDoc } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, query, serverTimestamp, setDoc, where } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
+import { AI_PARTNERS, AI_DISCLOSURE, type AiPartner } from '@/lib/exchangeAiPartners';
 import { useAuth } from '@/context/AuthContext';
 
 /*
- * MunTalk Exchange — hidden demo page (NOT linked from navigation).
- * Discover / Chats / AI Review / Pro tabs are demo data only.
- * The Profile tab is wired to Firestore for signed-in users
- * (collection `exchange_profiles`), other tabs stay demo-only.
+ * MunTalk Exchange — hidden lounge page (NOT linked from navigation).
+ * Discover is split into two rooms:
+ *   - AI Rooms: the 10 pilot AI partners only. A fixed banner at the top of
+ *     the room and an "AI" badge on every AI card and AI message state
+ *     plainly that these partners are AI, not real people.
+ *   - People Rooms (AI-first waitlist): NO user list is shown here, and no
+ *     demo or AI profiles are ever shown here. Visitors pick a language
+ *     pair (Korean ↔ English first, plus other pairs) and join that pair's
+ *     waitlist, stored in Firestore collection `exchange_waitlist`
+ *     (fields: uid, pair, pairId, createdAt — minimal). The waiting count
+ *     is the real document count, or it says it is unavailable; a fake
+ *     count is never shown. If the console rules for the new collection
+ *     are not published yet, join/count fail gracefully with a notice.
+ *     Console snippet for Jay to paste: firestore-snippets/exchange-waitlist.rules.txt
+ *     (repo firestore.rules is intentionally NOT touched).
+ *   - Exchange opens on the AI room by default (AI-first).
+ * AI chats call /api/exchange-ai-chat (Gemini) and live in browser state
+ * only for this pilot.
+ * AI Review / Pro tabs are still demo data. The Profile tab is wired to
+ * Firestore for signed-in users (collection `exchange_profiles`).
  */
 
 type Tab = 'discover' | 'chats' | 'review' | 'pro' | 'profile';
 
-type PartnerStatus = 'idle' | 'pending' | 'matched';
+type Room = 'ai' | 'people';
 
-type Partner = {
-  id: string;
-  name: string;
-  flag: string;
-  native: string;
-  learning: string;
-  level: string;
-  match: number;
-  interests: string[];
-  verified: boolean;
-  bio: string;
-  reply: string;
-};
+// Waitlist language pairs. Pilot focus is Korean ↔ English; the rest are
+// selectable so other pairs can gather without a code change.
+const WAITLIST_PAIRS = [
+  { id: 'ko-en', label: 'Korean ↔ English' },
+  { id: 'en-es', label: 'English ↔ Spanish' },
+  { id: 'en-ja', label: 'English ↔ Japanese' },
+  { id: 'en-pt', label: 'English ↔ Portuguese' },
+  { id: 'ko-ja', label: 'Korean ↔ Japanese' },
+  { id: 'en-fr', label: 'English ↔ French' },
+];
 
 type Msg = {
   id: number;
   from: 'me' | 'partner';
   text: string;
-  voice?: boolean;
-  translation?: string;
-  correction?: { before: string; after: string; note: string };
+  ai?: boolean;
 };
 
 type Chat = {
   id: string;
   partnerId: string;
   name: string;
-  flag: string;
+  avatar: string;
+  isAi: boolean;
   messages: Msg[];
-  heldBack?: boolean;
-};
-
-const PARTNERS: Partner[] = [
-  {
-    id: 'mateo',
-    name: 'Mateo',
-    flag: '🇲🇽',
-    native: 'Spanish',
-    learning: 'English',
-    level: 'Intermediate',
-    match: 94,
-    interests: ['Football', 'Cooking', 'Travel'],
-    verified: true,
-    bio: 'Mexican student who wants to practice English by talking about food and football.',
-    reply: 'Hey! Nice to meet you. I love talking about food — what did you cook recently?',
-  },
-  {
-    id: 'emma',
-    name: 'Emma',
-    flag: '🇺🇸',
-    native: 'English',
-    learning: 'Korean',
-    level: 'Beginner',
-    match: 91,
-    interests: ['K-pop', 'Movies', 'Coffee'],
-    verified: true,
-    bio: 'Learning Korean and happy to help with natural English in return.',
-    reply: 'That sounds great! I was just watching a Korean movie last night.',
-  },
-  {
-    id: 'kenji',
-    name: 'Kenji',
-    flag: '🇯🇵',
-    native: 'Japanese',
-    learning: 'English',
-    level: 'Intermediate',
-    match: 88,
-    interests: ['Anime', 'Hiking', 'Photography'],
-    verified: true,
-    bio: 'Office worker in Osaka. I want to get comfortable speaking English at work.',
-    reply: 'Hi! Hiking is my weekend thing. Where do you usually go?',
-  },
-  {
-    id: 'sofia',
-    name: 'Sofia',
-    flag: '🇧🇷',
-    native: 'Portuguese',
-    learning: 'English',
-    level: 'Advanced',
-    match: 86,
-    interests: ['Music', 'Reading', 'Running'],
-    verified: false,
-    bio: 'Book lover from São Paulo. Looking for someone to trade English and Portuguese.',
-    reply: 'Hello! Just finished a great novel — do you like reading too?',
-  },
-];
-
-const EMMA_CHAT: Chat = {
-  id: 'emma',
-  partnerId: 'emma',
-  name: 'Emma',
-  flag: '🇺🇸',
-  messages: [
-    { id: 1, from: 'partner', text: 'Hi! I am studying Korean these days.', translation: '안녕! 요즘 한국어를 공부하고 있어.' },
-    { id: 2, from: 'me', text: 'I think its correct', correction: { before: 'I think its correct', after: "I think it's correct", note: "“its” is possessive. For “it is”, use the contraction “it's”." } },
-    { id: 3, from: 'partner', text: 'Thanks! That helps a lot.', translation: '고마워! 정말 도움이 돼.' },
-    { id: 4, from: 'partner', text: '', voice: true },
-  ],
-};
-
-const KENJI_CHAT: Chat = {
-  id: 'kenji',
-  partnerId: 'kenji',
-  name: 'Kenji',
-  flag: '🇯🇵',
-  messages: [
-    { id: 1, from: 'partner', text: 'Hello! Nice to meet you.', translation: '안녕하세요! 만나서 반가워요.' },
-    { id: 2, from: 'me', text: 'Nice to meet you too! Do you like hiking?' },
-  ],
 };
 
 const CONTACT_GUARD = /(\b\d{2,4}[- ]?\d{3,4}[- ]?\d{4}\b|https?:\/\/|www\.|[\w.+-]+@[\w-]+\.[\w.]+|kakao|t\.me|instagram\.com)/i;
@@ -141,8 +74,16 @@ let msgSeq = 100;
 
 export default function ExchangePage() {
   const [tab, setTab] = useState<Tab>('discover');
-  const [statuses, setStatuses] = useState<Record<string, PartnerStatus>>({});
-  const [chats, setChats] = useState<Chat[]>([EMMA_CHAT, KENJI_CHAT]);
+  const [room, setRoom] = useState<Room>('ai');
+  const [chats, setChats] = useState<Chat[]>([]);
+  const [aiSending, setAiSending] = useState(false);
+  const [waitlistPair, setWaitlistPair] = useState('ko-en');
+  const [waitlistCount, setWaitlistCount] = useState<number | null>(null);
+  const [waitlistJoined, setWaitlistJoined] = useState(false);
+  const [waitlistLoading, setWaitlistLoading] = useState(false);
+  const [waitlistJoining, setWaitlistJoining] = useState(false);
+  const [waitlistError, setWaitlistError] = useState('');
+  const [waitlistReload, setWaitlistReload] = useState(0);
   const [activeChatId, setActiveChatId] = useState<string | null>(null);
   const [input, setInput] = useState('');
   const [toast, setToast] = useState('');
@@ -150,9 +91,6 @@ export default function ExchangePage() {
   const [billing, setBilling] = useState<'monthly' | 'yearly'>('yearly');
   const [reportChat, setReportChat] = useState<Chat | null>(null);
   const [reportReason, setReportReason] = useState('');
-  const [translated, setTranslated] = useState<Record<number, boolean>>({});
-  const [aiChecked, setAiChecked] = useState<Record<number, boolean>>({});
-  const [heldIds, setHeldIds] = useState<number[]>([]);
 
   // Profile (demo, browser state only)
   const [nativeLang, setNativeLang] = useState('English');
@@ -221,6 +159,67 @@ export default function ExchangePage() {
     };
   }, [user, authLoading]);
 
+  // People room = waitlist (AI-first). The count is the real number of
+  // exchange_waitlist documents for the selected pair. If the console
+  // rules for the new collection are not published yet, the query fails
+  // with permission-denied: the count stays unknown (never faked) and a
+  // notice is shown instead.
+  useEffect(() => {
+    if (room !== 'people' || !user) return;
+    let cancelled = false;
+    setWaitlistLoading(true);
+    setWaitlistError('');
+    setWaitlistJoined(false);
+    getDocs(query(collection(db, 'exchange_waitlist'), where('pairId', '==', waitlistPair)))
+      .then((snap) => {
+        if (cancelled) return;
+        setWaitlistCount(snap.size);
+        setWaitlistJoined(snap.docs.some((d) => d.data().uid === user.uid));
+      })
+      .catch((err) => {
+        if (cancelled) return;
+        setWaitlistCount(null);
+        setWaitlistError(
+          (err as { code?: string }).code === 'permission-denied'
+            ? 'Waiting count is not available yet: waitlist read permissions are not published yet.'
+            : 'Waiting count could not be loaded.'
+        );
+      })
+      .finally(() => {
+        if (!cancelled) setWaitlistLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [room, user, waitlistPair, waitlistReload]);
+
+  // One waitlist entry per user per pair: doc id `${uid}_${pairId}`.
+  // Only uid / pair / pairId / createdAt are stored — nothing else.
+  const joinWaitlist = async () => {
+    if (!user || waitlistJoining) return;
+    const pair = WAITLIST_PAIRS.find((p) => p.id === waitlistPair) || WAITLIST_PAIRS[0];
+    setWaitlistJoining(true);
+    try {
+      await setDoc(
+        doc(db, 'exchange_waitlist', `${user.uid}_${pair.id}`),
+        { uid: user.uid, pair: pair.label, pairId: pair.id, createdAt: serverTimestamp() },
+        { merge: true }
+      );
+      setWaitlistJoined(true);
+      setWaitlistError('');
+      setWaitlistReload((r) => r + 1);
+      showToast(`Joined the waitlist for ${pair.label}.`);
+    } catch (err) {
+      setWaitlistError(
+        (err as { code?: string }).code === 'permission-denied'
+          ? 'Could not join yet: waitlist permissions are not published yet. Your spot was not saved.'
+          : 'Could not join the waitlist. Please try again.'
+      );
+    } finally {
+      setWaitlistJoining(false);
+    }
+  };
+
   const saveProfile = async () => {
     if (!user) {
       showToast('Sign in to save your Exchange profile to your account.');
@@ -256,54 +255,66 @@ export default function ExchangePage() {
     window.setTimeout(() => setToast(''), 4000);
   };
 
-  const sayHello = (p: Partner) => {
-    setStatuses((s) => ({ ...s, [p.id]: 'pending' }));
-    window.setTimeout(() => {
-      setStatuses((s) => ({ ...s, [p.id]: 'matched' }));
-      setChats((cs) =>
-        cs.some((c) => c.id === p.id)
-          ? cs
-          : [...cs, { id: p.id, partnerId: p.id, name: p.name, flag: p.flag, messages: [] }]
-      );
-      showToast(`${p.name} accepted your hello! A chat was created.`);
-    }, 2500);
+  const startAiChat = (p: AiPartner) => {
+    setChats((cs) =>
+      cs.some((c) => c.id === p.id)
+        ? cs
+        : [
+            ...cs,
+            {
+              id: p.id,
+              partnerId: p.id,
+              name: p.name,
+              avatar: p.avatar,
+              isAi: true,
+              messages: [{ id: msgSeq++, from: 'partner', text: p.greeting, ai: true }],
+            },
+          ]
+    );
+    setActiveChatId(p.id);
+    setTab('chats');
   };
 
   const activeChat = chats.find((c) => c.id === activeChatId) || null;
 
-  const sendMessage = () => {
+  const sendAiMessage = async () => {
     const text = input.trim();
-    if (!text || !activeChat) return;
+    if (!text || !activeChat || !activeChat.isAi || aiSending) return;
     if (CONTACT_GUARD.test(text)) {
-      const id = msgSeq++;
-      setHeldIds((h) => [...h, id]);
-      setChats((cs) =>
-        cs.map((c) =>
-          c.id === activeChat.id
-            ? { ...c, messages: [...c.messages, { id, from: 'me', text }], heldBack: true }
-            : c
-        )
-      );
       setInput('');
       showToast('Held back: phone numbers, links and contact IDs cannot be sent here.');
       return;
     }
+    const history = activeChat.messages.slice(-20).map((m) => ({
+      role: m.from === 'me' ? ('user' as const) : ('ai' as const),
+      text: m.text,
+    }));
     const id = msgSeq++;
     setChats((cs) =>
-      cs.map((c) => (c.id === activeChat.id ? { ...c, messages: [...c.messages, { id, from: 'me', text }] } : c))
+      cs.map((c) => (c.id === activeChat.id ? { ...c, messages: [...c.messages, { id, from: 'me' as const, text }] } : c))
     );
     setInput('');
-    const partner = PARTNERS.find((p) => p.id === activeChat.partnerId);
-    window.setTimeout(() => {
+    setAiSending(true);
+    try {
+      const res = await fetch('/api/exchange-ai-chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ partnerId: activeChat.partnerId, message: text, history }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(typeof data.error === 'string' ? data.error : 'AI reply failed');
       const rid = msgSeq++;
+      const reply = typeof data.text === 'string' && data.text ? data.text : 'Sorry, I could not reply just now.';
       setChats((cs) =>
         cs.map((c) =>
-          c.id === activeChat.id
-            ? { ...c, messages: [...c.messages, { id: rid, from: 'partner', text: partner ? partner.reply : 'Nice! Tell me more.' }] }
-            : c
+          c.id === activeChat.id ? { ...c, messages: [...c.messages, { id: rid, from: 'partner' as const, text: reply, ai: true }] } : c
         )
       );
-    }, 1500);
+    } catch (err) {
+      showToast(err instanceof Error ? err.message : 'AI reply failed. Please try again.');
+    } finally {
+      setAiSending(false);
+    }
   };
 
   const reportAndBlock = () => {
@@ -351,7 +362,7 @@ export default function ExchangePage() {
   );
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="min-h-screen bg-[#FAF6EF] text-slate-900">
       {/* Header */}
       <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 shadow-[0_1px_0_rgba(15,23,42,0.02)] backdrop-blur">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3.5">
@@ -366,7 +377,7 @@ export default function ExchangePage() {
           </div>
           {pro && <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-800">PRO</span>}
           <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-500">
-            Demo — other tabs use demo data; Profile saves to your account when signed in
+            Pilot — AI rooms are the main experience; People room is a waitlist
           </span>
         </div>
       </header>
@@ -389,59 +400,178 @@ export default function ExchangePage() {
         <main className="min-w-0 flex-1">
           {tab === 'discover' && (
             <section>
-              <h2 className="text-xl font-extrabold">Discover partners</h2>
+              <h2 className="text-xl font-extrabold">Exchange lounge</h2>
               <p className="mt-1 text-sm text-slate-500">
-                4 partner suggestions today. Say hello — they accept before a chat opens. No open DMs.
+                A warm room for language practice. AI Rooms are the main experience; People Rooms are a waitlist that opens when people gather.
               </p>
-              <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                {PARTNERS.map((p) => {
-                  const status = statuses[p.id] || 'idle';
-                  return (
-                    <article key={p.id} className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm transition-shadow hover:shadow-md sm:p-5">
-                      <div className="flex items-start justify-between gap-2">
-                        <div className="flex items-center gap-3">
-                          <span className="text-3xl">{p.flag}</span>
-                          <div>
+              <div className="mt-3 flex items-center gap-2 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-semibold text-amber-900">
+                <span className="inline-block h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500" aria-hidden="true" />
+                <span>
+                  Online now: {AI_PARTNERS.length} AI partners ready to practice
+                </span>
+              </div>
+              <div role="tablist" aria-label="Room type" className="mt-4 flex gap-2">
+                <button
+                  role="tab"
+                  aria-selected={room === 'ai'}
+                  onClick={() => setRoom('ai')}
+                  className={`min-h-[44px] flex-1 rounded-xl px-4 py-2.5 text-sm font-bold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${room === 'ai' ? 'bg-violet-600 text-white shadow-sm' : 'border border-slate-200 bg-white text-slate-600 hover:border-violet-300'}`}
+                >
+                  AI Rooms
+                </button>
+                <button
+                  role="tab"
+                  aria-selected={room === 'people'}
+                  onClick={() => setRoom('people')}
+                  className={`min-h-[44px] flex-1 rounded-xl px-4 py-2.5 text-sm font-bold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${room === 'people' ? 'bg-violet-600 text-white shadow-sm' : 'border border-slate-200 bg-white text-slate-600 hover:border-violet-300'}`}
+                >
+                  People Rooms
+                </button>
+              </div>
+
+              {room === 'ai' && (
+                <>
+                  <div className="sticky top-[68px] z-20 mt-4 rounded-2xl border border-violet-300 bg-violet-600 px-4 py-3 text-sm font-bold text-white shadow-md">
+                    🤖 {AI_DISCLOSURE} Every AI card and AI message here is marked &ldquo;AI&rdquo;.
+                  </div>
+                  <p className="mt-3 text-sm text-slate-500">
+                    10 AI practice partners for Korean ↔ English. They are always online — start a chat and get a real AI reply.
+                  </p>
+                  <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                    {AI_PARTNERS.map((p) => (
+                      <article key={p.id} className="rounded-2xl border border-amber-100 bg-white p-4 shadow-sm transition-shadow hover:shadow-md sm:p-5">
+                        <div className="flex items-start gap-3">
+                          <img src={p.avatar} alt={`${p.name} AI partner avatar`} className="h-14 w-14 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />
+                          <div className="min-w-0 flex-1">
                             <p className="font-bold">
                               {p.name}{' '}
-                              {p.verified ? (
-                                <span title="Phone verified" className="text-sky-600">✓</span>
-                              ) : (
-                                <span title="Not verified yet" className="text-xs font-semibold text-slate-400">Unverified</span>
-                              )}
+                              <span className="rounded-full bg-violet-600 px-2 py-0.5 text-[11px] font-extrabold text-white">AI</span>
                             </p>
                             <p className="text-xs text-slate-500">
-                              {p.native} → {p.learning} · {p.level}
+                              {p.level} · {p.personality}
                             </p>
                           </div>
+                          <span className="flex shrink-0 items-center gap-1.5 text-xs font-bold text-emerald-700">
+                            <span className="inline-block h-2.5 w-2.5 rounded-full bg-emerald-500" aria-hidden="true" />
+                            Online
+                          </span>
                         </div>
-                        <span className="rounded-full bg-violet-100 px-2 py-1 text-xs font-bold text-violet-700">
-                          {p.match}% match
-                        </span>
-                      </div>
-                      <p className="mt-3 text-sm leading-relaxed text-slate-600 [overflow-wrap:anywhere]">{p.bio}</p>
-                      <div className="mt-3 flex flex-wrap gap-1.5">
-                        {p.interests.map((i) => (
-                          <span key={i} className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">{i}</span>
-                        ))}
-                      </div>
+                        <p className="mt-3">
+                          <span className="inline-block rounded-full bg-violet-600 px-3.5 py-1.5 text-base font-extrabold text-white">
+                            {p.native} → {p.learning}
+                          </span>
+                        </p>
+                        <div className="mt-3 flex flex-wrap gap-1.5">
+                          {p.interests.map((i) => (
+                            <span key={i} className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">{i}</span>
+                          ))}
+                        </div>
+                        <div className="mt-3">
+                          <p className="text-xs font-bold text-slate-500">
+                            Photos{' '}
+                            <span className="rounded-full bg-violet-600 px-1.5 py-0.5 text-[10px] font-extrabold text-white">AI</span>
+                            <span className="font-normal"> — lifestyle photos of this AI partner</span>
+                          </p>
+                          <div className="mt-2 flex gap-2 overflow-x-auto pb-1">
+                            {p.gallery.map((g, i) => (
+                              <img
+                                key={g}
+                                src={g}
+                                alt={`Lifestyle photo ${i + 1} of AI partner ${p.name}`}
+                                loading="lazy"
+                                className="h-20 w-20 shrink-0 rounded-xl object-cover ring-1 ring-slate-200"
+                              />
+                            ))}
+                          </div>
+                        </div>
+                        <button
+                          onClick={() => startAiChat(p)}
+                          className="mt-4 w-full rounded-xl bg-violet-600 py-3 font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98]"
+                        >
+                          Start AI chat
+                        </button>
+                      </article>
+                    ))}
+                  </div>
+                </>
+              )}
+
+              {room === 'people' && (
+                <>
+                  <p className="mt-4 text-sm text-slate-500">
+                    People rooms open when people gather for a language pair. Pick a pair and join its waitlist — the waiting number below is the real
+                    count of waitlist entries, never a made-up number.
+                  </p>
+                  <div className="mt-4 rounded-2xl border border-amber-100 bg-white p-4 shadow-sm sm:p-5">
+                    <p className="text-sm font-bold">Choose a language pair</p>
+                    <div className="mt-2 flex flex-wrap gap-1.5">
+                      {WAITLIST_PAIRS.map((pair) => (
+                        <button
+                          key={pair.id}
+                          onClick={() => setWaitlistPair(pair.id)}
+                          aria-pressed={waitlistPair === pair.id}
+                          className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${waitlistPair === pair.id ? 'bg-violet-600 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
+                        >
+                          {pair.label}
+                        </button>
+                      ))}
+                    </div>
+                    <div className="mt-4 rounded-xl bg-violet-50 px-4 py-3">
+                      {waitlistLoading ? (
+                        <p className="text-sm font-semibold text-slate-500">Loading waiting count…</p>
+                      ) : waitlistCount !== null ? (
+                        <p className="text-sm font-extrabold text-slate-800">
+                          {waitlistCount} {waitlistCount === 1 ? 'person' : 'people'} waiting for {(WAITLIST_PAIRS.find((p) => p.id === waitlistPair) || WAITLIST_PAIRS[0]).label}
+                        </p>
+                      ) : (
+                        <p className="text-sm font-semibold text-slate-600">Waiting count is not available yet.</p>
+                      )}
+                      {waitlistJoined && (
+                        <p className="mt-1 text-sm font-bold text-emerald-700">
+                          ✓ You are on the waitlist for {(WAITLIST_PAIRS.find((p) => p.id === waitlistPair) || WAITLIST_PAIRS[0]).label}. This language pair will open when people gather.
+                        </p>
+                      )}
+                      {waitlistError && <p className="mt-1 text-sm font-semibold text-amber-800">{waitlistError}</p>}
+                    </div>
+                    {!user ? (
+                      <p className="mt-3 text-sm text-slate-500">Sign in to join the waitlist. Until then, you can still practice with an AI partner.</p>
+                    ) : waitlistJoined ? (
+                      <p className="mt-3 text-sm font-semibold text-slate-600">You are on this waitlist. Check back here — this pair opens when people gather.</p>
+                    ) : (
                       <button
-                        onClick={() => sayHello(p)}
-                        disabled={status !== 'idle'}
-                        className={`mt-4 w-full rounded-xl py-3 font-bold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98] disabled:cursor-default ${
-                          status === 'matched'
-                            ? 'bg-emerald-100 text-emerald-700'
-                            : status === 'pending'
-                              ? 'bg-slate-200 text-slate-500'
-                              : 'bg-violet-600 text-white shadow-sm hover:bg-violet-700'
-                        }`}
+                        onClick={joinWaitlist}
+                        disabled={waitlistJoining}
+                        className="mt-3 min-h-[44px] w-full rounded-xl bg-violet-600 py-3 font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98] disabled:opacity-60"
                       >
-                        {status === 'matched' ? '✓ Matched — open Chats' : status === 'pending' ? 'Waiting for accept…' : 'Say hello'}
+                        {waitlistJoining ? 'Joining…' : `Join waitlist for ${(WAITLIST_PAIRS.find((p) => p.id === waitlistPair) || WAITLIST_PAIRS[0]).label}`}
                       </button>
-                    </article>
-                  );
-                })}
-              </div>
+                    )}
+                  </div>
+                  <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+                    <p className="font-extrabold">No people here yet</p>
+                    <p className="mt-1 text-sm text-slate-500">
+                      No people here yet — practice with an AI partner, or join the waitlist and we&apos;ll let you know when people gather.
+                    </p>
+                    <div className="mt-4 flex flex-col justify-center gap-2 sm:flex-row">
+                      <button
+                        onClick={() => setRoom('ai')}
+                        className="min-h-[44px] rounded-xl bg-violet-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98]"
+                      >
+                        Practice with an AI partner
+                      </button>
+                      {user && !waitlistJoined && (
+                        <button
+                          onClick={joinWaitlist}
+                          disabled={waitlistJoining}
+                          className="min-h-[44px] rounded-xl border border-violet-300 bg-white px-5 py-2.5 text-sm font-bold text-violet-700 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 disabled:opacity-60"
+                        >
+                          Join the waitlist
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                </>
+              )}
             </section>
           )}
 
@@ -449,13 +579,13 @@ export default function ExchangePage() {
             <section>
               <h2 className="text-xl font-extrabold">Chats</h2>
               <p className="mt-1 text-sm text-slate-500">
-                Tap a chat to open it. Phone numbers, links and contact IDs are blocked before sending.
+                AI chats are marked AI throughout. Phone numbers, links and contact IDs are blocked before sending.
               </p>
               {!activeChat ? (
                 <div className="mt-4 grid gap-3">
                   {chats.length === 0 && (
                     <p className="rounded-2xl border bg-white p-6 text-center text-sm text-slate-500">
-                      No chats yet. Say hello on Discover to start one.
+                      No chats yet. Start one from an AI Room on Discover.
                     </p>
                   )}
                   {chats.map((c) => (
@@ -464,11 +594,14 @@ export default function ExchangePage() {
                       onClick={() => setActiveChatId(c.id)}
                       className="flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white p-4 text-left shadow-sm transition hover:border-violet-300 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
                     >
-                      <span className="text-3xl">{c.flag}</span>
+                      <img src={c.avatar} alt="" className="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />
                       <span className="min-w-0 flex-1">
-                        <span className="block font-bold">{c.name}</span>
+                        <span className="block font-bold">
+                          {c.name}{' '}
+                          {c.isAi && <span className="rounded-full bg-violet-600 px-2 py-0.5 text-[11px] font-extrabold text-white">AI</span>}
+                        </span>
                         <span className="block truncate text-sm text-slate-500">
-                          {c.messages.length > 0 ? c.messages[c.messages.length - 1].text || '🎤 Voice message' : 'New match — say hi!'}
+                          {c.messages.length > 0 ? c.messages[c.messages.length - 1].text : 'New match — say hi!'}
                         </span>
                       </span>
                       <span className="shrink-0 text-lg text-slate-300">›</span>
@@ -479,8 +612,11 @@ export default function ExchangePage() {
                 <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm">
                   <div className="flex items-center gap-3 border-b border-slate-100 p-3 sm:p-4">
                     <button onClick={() => setActiveChatId(null)} className="min-h-[44px] rounded-lg px-2 font-bold text-violet-600 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">← Back</button>
-                    <span className="text-2xl">{activeChat.flag}</span>
-                    <span className="font-bold">{activeChat.name}</span>
+                    <img src={activeChat.avatar} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />
+                    <span className="font-bold">
+                      {activeChat.name}{' '}
+                      {activeChat.isAi && <span className="rounded-full bg-violet-600 px-2 py-0.5 text-[11px] font-extrabold text-white">AI</span>}
+                    </span>
                     <button
                       onClick={() => setReportChat(activeChat)}
                       className="ml-auto min-h-[36px] rounded-full border border-red-200 px-3 py-1 text-xs font-bold text-red-600 hover:bg-red-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
@@ -488,79 +624,41 @@ export default function ExchangePage() {
                       Report
                     </button>
                   </div>
+                  {activeChat.isAi && (
+                    <div className="border-b border-violet-100 bg-violet-50 px-4 py-2.5 text-xs font-bold text-violet-800">
+                      🤖 {AI_DISCLOSURE}
+                    </div>
+                  )}
                   <div className="flex flex-col gap-3 p-4">
-                    {activeChat.messages.map((m) => {
-                      const held = heldIds.includes(m.id);
-                      return (
-                        <div key={m.id} className={`flex ${m.from === 'me' ? 'justify-end' : 'justify-start'}`}>
-                          <div
-                            className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed shadow-sm [overflow-wrap:anywhere] sm:max-w-[75%] ${
-                              m.from === 'me'
-                                ? 'rounded-br-md bg-violet-600 text-white'
-                                : 'rounded-bl-md bg-slate-100 text-slate-800'
-                            }`}
-                          >
-                            {m.voice ? (
-                              <span className="flex items-center gap-2">
-                                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/30">▶</span>
-                                Voice message · 0:12
-                                <span className="text-xs opacity-70">(pronunciation score: UI preview)</span>
-                              </span>
-                            ) : (
-                              <span>{m.text}</span>
-                            )}
-                            {held && (
-                              <span className="mt-1 block rounded-lg bg-red-100 px-2 py-1 text-xs font-bold text-red-700">
-                                Held back — not sent. Contact details cannot be shared here.
-                              </span>
-                            )}
-                            {!held && m.translation && translated[m.id] && (
-                              <span className="mt-1 block border-t border-slate-200 pt-1 text-xs opacity-80">{m.translation}</span>
-                            )}
-                            {!held && m.correction && aiChecked[m.id] && (
-                              <span className="mt-2 block rounded-lg bg-emerald-50 px-2 py-1.5 text-xs text-emerald-900">
-                                <span className="font-bold">AI check: </span>
-                                <span className="line-through opacity-60">{m.correction.before}</span>
-                                {' → '}
-                                <span className="font-bold">{m.correction.after}</span>
-                                <span className="mt-0.5 block text-emerald-700">{m.correction.note}</span>
-                              </span>
-                            )}
-                            {!held && (
-                              <span className="mt-1.5 flex gap-2">
-                                {m.translation && (
-                                  <button
-                                    onClick={() => setTranslated((t) => ({ ...t, [m.id]: !t[m.id] }))}
-                                    className="text-xs font-bold underline opacity-80"
-                                  >
-                                    {translated[m.id] ? 'Hide translation' : 'Translate'}
-                                  </button>
-                                )}
-                                {m.correction && (
-                                  <button
-                                    onClick={() => setAiChecked((t) => ({ ...t, [m.id]: !t[m.id] }))}
-                                    className="text-xs font-bold underline opacity-80"
-                                  >
-                                    AI check
-                                  </button>
-                                )}
-                              </span>
-                            )}
-                          </div>
+                    {activeChat.messages.map((m) => (
+                      <div key={m.id} className={`flex ${m.from === 'me' ? 'justify-end' : 'justify-start'}`}>
+                        <div
+                          className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed shadow-sm [overflow-wrap:anywhere] sm:max-w-[75%] ${
+                            m.from === 'me'
+                              ? 'rounded-br-md bg-violet-600 text-white'
+                              : 'rounded-bl-md bg-slate-100 text-slate-800'
+                          }`}
+                        >
+                          {m.ai && (
+                            <span className="mb-1 block text-[11px] font-extrabold tracking-wide text-violet-700">AI</span>
+                          )}
+                          <span>{m.text}</span>
                         </div>
-                      );
-                    })}
+                      </div>
+                    ))}
+                    {aiSending && <p className="text-xs font-semibold text-slate-400">AI is generating a reply…</p>}
                   </div>
                   <div className="flex gap-2 border-t border-slate-100 p-3">
                     <input
                       value={input}
                       onChange={(e) => setInput(e.target.value)}
-                      onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
-                      placeholder="Write a message… (try a phone number to see the guard)"
+                      onKeyDown={(e) => e.key === 'Enter' && sendAiMessage()}
+                      placeholder="Write a message…"
+                      maxLength={500}
                       className="min-w-0 flex-1 rounded-xl border border-slate-200 px-3.5 py-2.5 text-sm outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
                     />
-                    <button onClick={sendMessage} className="min-h-[44px] rounded-xl bg-violet-600 px-4 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98]">
-                      Send
+                    <button onClick={sendAiMessage} disabled={aiSending} className="min-h-[44px] rounded-xl bg-violet-600 px-4 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98] disabled:opacity-60">
+                      {aiSending ? 'Sending…' : 'Send'}
                     </button>
                   </div>
                 </div>

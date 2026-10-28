@@ -1,0 +1,42 @@
+# MunTalk Exchange — Firestore console snippet: exchange_waitlist
+#
+# HOW TO APPLY (Jay, in the Firebase console — NOT via repo firestore.rules):
+#   Firebase console → Firestore Database → Rules → paste the `match` block
+#   below inside `rules_version = '2'; service cloud.firestore { ... }`,
+#   next to the existing exchange_profiles rule, then Publish.
+#   The repo file firestore.rules is intentionally NOT changed by this PR
+#   (it is out of sync with the live console rules).
+#
+# WHAT THE APP WRITES (client code: src/app/exchange/page.tsx):
+#   collection: exchange_waitlist
+#   doc id:    `${uid}_${pairId}`  (one entry per user per language pair)
+#   fields:    uid (string), pair (string label, e.g. "Korean ↔ English"),
+#              pairId (string, e.g. "ko-en"), createdAt (server timestamp)
+#   Nothing else is stored — no real name, email, or contact details.
+#
+# WHY SIGNED-IN READ IS INCLUDED:
+#   The People room shows the REAL waiting count (snap.size). That count
+#   is only honest if signed-in users can read the pair's entries. Until
+#   this rule is published, the app shows "Waiting count is not available
+#   yet" and never invents a number, and join attempts fail gracefully.
+#   If public counts are ever unwanted, replace the read rule with a
+#   Cloud Function counter instead — do not fake the count client-side.
+#
+# Paste this block into the console rules:
+#
+#   match /exchange_waitlist/{docId} {
+#     // Join: signed-in users may create ONLY their own entry, with only
+#     // the four allowed fields, and the doc id must match uid_pairId.
+#     allow create: if request.auth != null
+#       && request.resource.data.uid == request.auth.uid
+#       && docId == request.auth.uid + '_' + request.resource.data.pairId
+#       && request.resource.data.keys().hasOnly(['uid', 'pair', 'pairId', 'createdAt']);
+#     // Count: any signed-in user may read entries (needed for the real
+#     // waiting count). Entries contain no personal data beyond uid.
+#     allow read: if request.auth != null;
+#     // Leave: users may delete only their own entry.
+#     allow delete: if request.auth != null && resource.data.uid == request.auth.uid;
+#     // No updates: re-join with setDoc(merge) only ever re-creates the
+#     // same four fields, and edits are not a product feature.
+#     allow update: if false;
+#   }
