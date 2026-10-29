@@ -12,6 +12,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/about', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/pricing', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/faq', priority: 0.7, changeFrequency: 'monthly' },
+    // SEO pilot: /learn article hub + 10 articles (2026-10-29).
+    { path: '/learn', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/learn/im-bored-not-boring', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/learn/i-have-plans-not-promise', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/learn/go-for-it-not-fighting', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/learn/cell-phone-not-hand-phone', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/learn/on-the-house-not-service', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/learn/cheat-sheet-not-cunning-paper', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/learn/going-home-not-to-home', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/learn/im-interested-not-interesting', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/learn/same-same-vs-its-the-same', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/learn/embarazada-vs-embarrassed', priority: 0.7, changeFrequency: 'monthly' },
   ];
   const now = new Date();
   return pages.map((p) => ({
