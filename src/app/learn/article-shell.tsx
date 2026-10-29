@@ -101,20 +101,7 @@ export default function ArticleShell({ lang, kicker, title, practice, videoHref,
         }}
       >
         <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none', color: 'inherit' }}>
-          <div
-            style={{
-              width: 36,
-              height: 36,
-              background: 'linear-gradient(135deg,#38BDF8,#818CF8)',
-              borderRadius: 12,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: 20,
-            }}
-          >
-            🌐
-          </div>
+          <img src="/logo.png" alt="MunTalk" style={{ width: 36, height: 36, borderRadius: 12 }} />
           <span style={{ fontWeight: 900, fontSize: 19, letterSpacing: '-0.5px' }}>MunTalk</span>
           <span style={{ background: '#EFF6FF', color: '#0284C7', fontSize: 10, fontWeight: 800, padding: '2px 8px', borderRadius: 20 }}>
             BETA
@@ -219,9 +206,7 @@ export default function ArticleShell({ lang, kicker, title, practice, videoHref,
 
         {/* Developer note */}
         <p style={{ fontSize: 13, color: '#94A3B8', fontWeight: 600, lineHeight: 1.7, margin: 0, textAlign: 'center' }}>
-          {ko
-            ? '이 글은 muntalk 개발자가 직접 작성했습니다. 영상은 AI로 제작된 오리지널 캐릭터 이야기입니다.'
-            : 'Written by the developer of muntalk. The video features an original AI-generated character story.'}
+          Written by the developer of muntalk. The video features an original AI-generated character story.
         </p>
       </div>
 
