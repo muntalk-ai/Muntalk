@@ -15,6 +15,7 @@ export default function Page() {
       kicker="✚ TINGLISH ER"
       title={'"Same Same" Is Tinglish, Not English'}
       practice="It's the same."
+      videoHref="https://www.youtube.com/shorts/U1ZR8z3p4AQ"
     >
       <Card>
         <SectionTitle>The phrase</SectionTitle>
