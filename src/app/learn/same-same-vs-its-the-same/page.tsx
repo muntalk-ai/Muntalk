@@ -42,9 +42,9 @@ export default function Page() {
         <SectionTitle>Examples</SectionTitle>
         <BulletList
           items={[
-            <>It's the same as yesterday. (어제랑 똑같아.)</>,
-            <>These two are the same. (이 두 개는 똑같아.)</>,
-            <>It's the same thing. (똑같은 거야.)</>,
+            <>It's the same as yesterday. (เหมือนเมื่อวาน)</>,
+            <>These two are the same. (สองอันนี้เหมือนกัน)</>,
+            <>It's the same thing. (อันเดียวกัน)</>,
           ]}
         />
       </Card>

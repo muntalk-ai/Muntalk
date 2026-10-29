@@ -49,8 +49,8 @@ export default function Page() {
         <Quote>“I'm embarrassed.” — Estoy avergonzado/a.</Quote>
         <BulletList
           items={[
-            <>I'm so embarrassed! (¡Qué vergüenza! / 너무 민망해!)</>,
-            <>I was embarrassed in front of everyone. (모두 앞에서 민망했어.)</>,
+            <>I'm so embarrassed! (¡Qué vergüenza!)</>,
+            <>I was embarrassed in front of everyone. (Me dio vergüenza delante de todos.)</>,
           ]}
         />
       </Card>
