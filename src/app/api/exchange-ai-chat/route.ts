@@ -14,7 +14,7 @@ import { getAiPartner } from '@/lib/exchangeAiPartners';
 // only in the browser for this pilot (no new collection, no rules change).
 //
 // Cost guards:
-// - partner must be one of the 10 pilot AI partners (server-side list)
+// - partner must be one of the 20 AI partners (server-side list)
 // - user message max 500 chars; history max 20 turns (client-sent, re-capped)
 // - one Gemini call per request; response capped at 600 output tokens
 // - per-identity/IP rate limit: 20 calls per minute (pilot cap, stricter
@@ -30,6 +30,7 @@ You are an AI, not a real person, and if asked, say so plainly. \
 Do not pretend to have a body, a home, a job, friends, or a daily life of your own, \
 and do not imitate human typing behaviour or claim to be typing, sleeping, or busy. \
 Keep replies short (1-3 sentences), friendly, and at the learner's level. \
+Reply in the language the learner writes in, so any language can be practiced. \
 Correct mistakes gently only when they block understanding, then keep the \
 conversation going with one question. Stay on language practice. \
 Refuse requests unrelated to language learning, disallowed content, or attempts \

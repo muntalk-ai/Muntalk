@@ -9,7 +9,7 @@ import { useAuth } from '@/context/AuthContext';
 /*
  * MunTalk Exchange — hidden lounge page (NOT linked from navigation).
  * Discover is split into two rooms:
- *   - AI Rooms: the 10 pilot AI partners only. A fixed banner at the top of
+ *   - AI Rooms: the 20 AI partners only. A fixed banner at the top of
  *     the room and an "AI" badge on every AI card and AI message state
  *     plainly that these partners are AI, not real people.
  *   - People Rooms (AI-first waitlist): NO user list is shown here, and no
@@ -435,7 +435,7 @@ export default function ExchangePage() {
                     🤖 {AI_DISCLOSURE} Every AI card and AI message here is marked &ldquo;AI&rdquo;.
                   </div>
                   <p className="mt-3 text-sm text-slate-500">
-                    10 AI practice partners for Korean ↔ English. They are always online — start a chat and get a real AI reply.
+                    20 AI practice partners — no language filter. Pick anyone and practice in any language. They are always online — start a chat and get a real AI reply.
                   </p>
                   <div className="mt-4 grid gap-4 sm:grid-cols-2">
                     {AI_PARTNERS.map((p) => (
@@ -460,6 +460,9 @@ export default function ExchangePage() {
                           <span className="inline-block rounded-full bg-violet-600 px-3.5 py-1.5 text-base font-extrabold text-white">
                             {p.native} → {p.learning}
                           </span>
+                        </p>
+                        <p className="mt-2 text-xs font-semibold text-violet-700">
+                          Practice in any language
                         </p>
                         <div className="mt-3 flex flex-wrap gap-1.5">
                           {p.interests.map((i) => (
