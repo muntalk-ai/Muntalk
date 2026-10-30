@@ -615,7 +615,7 @@ export default function ExchangePage() {
                 <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm">
                   <div className="flex items-center gap-3 border-b border-slate-100 p-3 sm:p-4">
                     <button onClick={() => setActiveChatId(null)} className="min-h-[44px] rounded-lg px-2 font-bold text-violet-600 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">← Back</button>
-                    <img src={activeChat.avatar} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />
+                    <img src={activeChat.avatar} alt={`${activeChat.name} AI partner`} className="h-14 w-14 shrink-0 rounded-full object-cover ring-2 ring-violet-200 sm:h-16 sm:w-16" />
                     <span className="font-bold">
                       {activeChat.name}{' '}
                       {activeChat.isAi && <span className="rounded-full bg-violet-600 px-2 py-0.5 text-[11px] font-extrabold text-white">AI</span>}
@@ -634,7 +634,10 @@ export default function ExchangePage() {
                   )}
                   <div className="flex flex-col gap-3 p-4">
                     {activeChat.messages.map((m) => (
-                      <div key={m.id} className={`flex ${m.from === 'me' ? 'justify-end' : 'justify-start'}`}>
+                      <div key={m.id} className={`flex items-start gap-2 ${m.from === 'me' ? 'justify-end' : 'justify-start'}`}>
+                        {m.from !== 'me' && (
+                          <img src={activeChat.avatar} alt="" className="mt-0.5 h-8 w-8 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />
+                        )}
                         <div
                           className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed shadow-sm [overflow-wrap:anywhere] sm:max-w-[75%] ${
                             m.from === 'me'
