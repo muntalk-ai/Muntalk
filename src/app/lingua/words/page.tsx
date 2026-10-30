@@ -8,6 +8,7 @@ import { POS_META, POS_SET_COUNT, PartOfSpeech, getSetTitle } from '@/data/wordS
 import { useAuth } from '@/context/AuthContext';
 import { isAdminEmail } from '@/lib/subscription';
 import { getSubscription } from '@/lib/subscription';
+import { resolveNativeLang } from '@/lib/userProfile';
 
 const POS_LIST: PartOfSpeech[] = ['Verbs', 'Adjectives', 'Adverbs', 'Phrases'];
 
@@ -16,14 +17,14 @@ function WordsContent() {
   const { user, loading: authLoading } = useAuth();
 
   const [lang,        setLang]        = useState('en-US');
-  const [subLang,     setSubLang]     = useState('ko-KR');
+  const [subLang,     setSubLang]     = useState('en-US');
   const [selectedPos, setSelectedPos] = useState<PartOfSpeech | null>(null);
   const [isPremium,   setIsPremium]   = useState(false);
   const [subChecked,  setSubChecked]  = useState(false);
 
   useEffect(() => {
     setLang(localStorage.getItem('mt_learn_lang') || 'en-US');
-    setSubLang(localStorage.getItem('mt_native_lang') || 'ko-KR');
+    setSubLang(resolveNativeLang());
   }, []);
 
   useEffect(() => {

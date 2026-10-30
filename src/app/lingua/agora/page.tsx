@@ -6,6 +6,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { getLangLabel, promptLangName, hasTts } from '@/data/languages';
+import { detectBrowserNativeLang } from '@/lib/userProfile';
 import { speakWithDeviceTts } from '@/lib/deviceTts';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 import RtlDir from '@/components/RtlDir';
@@ -138,7 +139,7 @@ export default function AgoraPage() {
   // 동일하게 로컬 우선으로 복원. 프로필 fallback 시에는 localStorage에 동기화.
   const lsNative = typeof window !== 'undefined' ? localStorage.getItem('mt_native_lang') : null;
   const lsLearn = typeof window !== 'undefined' ? localStorage.getItem('mt_learn_lang') : null;
-  const nativeLang = lsNative || profile?.nativeLang || 'ko-KR';
+  const nativeLang = lsNative || profile?.nativeLang || detectBrowserNativeLang();
   const learnLang = lsLearn || profile?.learnLang || 'en-US';
 
   useEffect(() => {

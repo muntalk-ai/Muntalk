@@ -10,6 +10,7 @@ import { POS_META, PartOfSpeech, getSetKey, getSetTitle } from '@/data/wordSets'
 import { getTutorById } from '@/data/tutors';
 import { hasTts, getLangLabel } from '@/data/languages';
 import { speakWithDeviceTts, deviceTtsAvailable } from '@/lib/deviceTts';
+import { resolveNativeLang } from '@/lib/userProfile';
 
 interface WordData {
   word: string;
@@ -41,7 +42,7 @@ function WordLessonContent() {
   const setIdx  = parseInt(searchParams.get('set')    || '1');
   const lessonIdx = parseInt(searchParams.get('lesson') || '1');
   const lang    = searchParams.get('lang')    || 'en-US';
-  const subLang = searchParams.get('subLang') || 'ko-KR';
+  const subLang = searchParams.get('subLang') || resolveNativeLang();
 
   const meta = POS_META[pos];
 
