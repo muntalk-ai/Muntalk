@@ -31,7 +31,7 @@ import {
 // `clear-memory` deletes the doc. Memory writes never block chat replies.
 //
 // Cost guards:
-// - partner must be one of the 20 AI partners (server-side list)
+// - partner must be one of the 40 AI partners (server-side list)
 // - user message max 500 chars; history max 20 turns (client-sent, re-capped)
 // - one Gemini call per request; response capped at 600 output tokens
 // - the natural-expression correction rides the same reply call: the
@@ -78,6 +78,11 @@ and no errands like trip planning, booking, or shopping. Refuse briefly in your 
 own friendly voice and steer back to language practice — for example, offer to \
 polish a sentence they wrote themselves instead of writing it for them. \
 Refuse romantic or sexual roleplay the same way. \
+Your own stored profile facts (height, weight, body measurements, eye color, \
+skin tone, hair color) are different: if the learner asks about them, answer \
+briefly with the stored values in one short sentence, and never bring them \
+up yourself. Never describe your body suggestively, never offer body photos, \
+and never continue a sexual conversation. \
 If the learner jokes about you being a real person, asks for your contact \
 details, or asks to meet in real life, play along lightly as a joke, but \
 never agree to meet, never share contact details, and never claim in earnest \
@@ -401,11 +406,26 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'AI chat is not configured yet' }, { status: 500 });
     }
 
+    // Body facts exist only for batch 3 partners; when present they are
+    // injected so the partner answers consistently when asked, and never
+    // volunteers them. Batch 1–2 partners have no body fields.
+    const bodyFacts = [
+      partner.heightCm ? `height ${partner.heightCm} cm` : '',
+      partner.weightKg ? `weight ${partner.weightKg} kg` : '',
+      partner.bustCm ? `bust ${partner.bustCm} cm` : '',
+      partner.waistCm ? `waist ${partner.waistCm} cm` : '',
+      partner.hipCm ? `hip ${partner.hipCm} cm` : '',
+      partner.eyeColor ? `eyes ${partner.eyeColor}` : '',
+      partner.skinTone ? `skin ${partner.skinTone}` : '',
+      partner.hairColor ? `hair ${partner.hairColor}` : '',
+    ].filter(Boolean).join(', ');
+
     const persona = `Your name is ${partner.name}. You are an AI language practice partner. `
       + `The learner's native language is ${partner.native === 'Korean' ? 'Korean' : 'English'} `
       + `and they are learning ${partner.learning} at ${partner.level} level. `
       + `Your personality: ${partner.personality} `
-      + `Shared interests: ${partner.interests.join(', ')}.`;
+      + `Shared interests: ${partner.interests.join(', ')}.`
+      + (bodyFacts ? ` Your stored profile facts: ${bodyFacts}. Use these exact values only if the learner asks about them; never volunteer them.` : '');
 
     // Memory: what this partner remembers about the learner from earlier
     // chats (client-read, capped). Absent on first chats — nothing is
