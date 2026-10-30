@@ -49,6 +49,8 @@ type Msg = {
   from: 'me' | 'partner';
   text: string;
   ai?: boolean;
+  /** Gallery photo shared with this AI reply (public/exchange-ai-avatars/...). */
+  photo?: string;
 };
 
 type Chat = {
@@ -289,6 +291,15 @@ export default function ExchangePage() {
       role: m.from === 'me' ? ('user' as const) : ('ai' as const),
       text: m.text,
     }));
+    // Gallery photo state for the server's frequency guard: photos already
+    // shared in this chat, and learner turns since the last shared photo.
+    const sentPhotos = activeChat.messages.filter((m) => m.from === 'partner' && m.photo).map((m) => m.photo as string);
+    let turnsSincePhoto = 0;
+    for (let i = activeChat.messages.length - 1; i >= 0; i--) {
+      const m = activeChat.messages[i];
+      if (m.from === 'partner' && m.photo) break;
+      if (m.from === 'me') turnsSincePhoto++;
+    }
     const id = msgSeq++;
     setChats((cs) =>
       cs.map((c) => (c.id === activeChat.id ? { ...c, messages: [...c.messages, { id, from: 'me' as const, text }] } : c))
@@ -299,15 +310,19 @@ export default function ExchangePage() {
       const res = await fetch('/api/exchange-ai-chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ partnerId: activeChat.partnerId, message: text, history }),
+        body: JSON.stringify({ partnerId: activeChat.partnerId, message: text, history, sentPhotos, turnsSincePhoto }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(typeof data.error === 'string' ? data.error : 'AI reply failed');
       const rid = msgSeq++;
       const reply = typeof data.text === 'string' && data.text ? data.text : 'Sorry, I could not reply just now.';
+      // Only accept a photo that is actually in this partner's gallery —
+      // the server must never be able to inject an arbitrary image URL.
+      const partnerGallery = AI_PARTNERS.find((p) => p.id === activeChat.partnerId)?.gallery ?? [];
+      const photo = typeof data.photo === 'string' && partnerGallery.includes(data.photo) ? data.photo : undefined;
       setChats((cs) =>
         cs.map((c) =>
-          c.id === activeChat.id ? { ...c, messages: [...c.messages, { id: rid, from: 'partner' as const, text: reply, ai: true }] } : c
+          c.id === activeChat.id ? { ...c, messages: [...c.messages, { id: rid, from: 'partner' as const, text: reply, ai: true, photo }] } : c
         )
       );
     } catch (err) {
@@ -647,6 +662,16 @@ export default function ExchangePage() {
                         >
                           {m.ai && (
                             <span className="mb-1 block text-[11px] font-extrabold tracking-wide text-violet-700">AI</span>
+                          )}
+                          {m.photo && (
+                            <a href={m.photo} target="_blank" rel="noreferrer" className="mb-2 block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500" aria-label="Open shared gallery photo full size">
+                              <img
+                                src={m.photo}
+                                alt="Photo shared by this AI partner from their gallery"
+                                loading="lazy"
+                                className="max-h-56 w-auto max-w-full rounded-xl object-cover"
+                              />
+                            </a>
                           )}
                           <span>{m.text}</span>
                         </div>
