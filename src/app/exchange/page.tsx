@@ -64,6 +64,8 @@ type Msg = {
   ai?: boolean;
   /** Gallery photo shared with this AI reply (public/exchange-ai-avatars/...). */
   photo?: string;
+  /** Natural rephrasing of the learner's previous message, when it could be improved. */
+  correction?: string;
 };
 
 type Chat = {
@@ -366,9 +368,15 @@ export default function ExchangePage() {
       // the server must never be able to inject an arbitrary image URL.
       const partnerGallery = AI_PARTNERS.find((p) => p.id === activeChat.partnerId)?.gallery ?? [];
       const photo = typeof data.photo === 'string' && partnerGallery.includes(data.photo) ? data.photo : undefined;
+      // Natural-expression correction: one short rephrasing of the learner's
+      // message, shown inside the AI reply. Absent when already natural.
+      const correction =
+        typeof data.correction === 'string' && data.correction.trim()
+          ? data.correction.trim().slice(0, 200)
+          : undefined;
       setChats((cs) =>
         cs.map((c) =>
-          c.id === activeChat.id ? { ...c, messages: [...c.messages, { id: rid, from: 'partner' as const, text: reply, ai: true, photo }] } : c
+          c.id === activeChat.id ? { ...c, messages: [...c.messages, { id: rid, from: 'partner' as const, text: reply, ai: true, photo, correction }] } : c
         )
       );
     } catch (err) {
@@ -787,6 +795,11 @@ export default function ExchangePage() {
                             </a>
                           )}
                           <span>{m.text}</span>
+                          {m.correction && (
+                            <span className="mt-1.5 block border-t border-slate-200 pt-1.5 text-xs leading-relaxed text-violet-700">
+                              💡 자연스럽게: {m.correction}
+                            </span>
+                          )}
                         </div>
                       </div>
                     ))}
