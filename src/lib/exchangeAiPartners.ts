@@ -1501,7 +1501,7 @@ export const AI_PARTNERS: AiPartner[] = [
     greeting:
       "Hello! I'm Emily, an AI practice partner. Let's practice Korean — do you like hiking?",
     avatar: '/exchange-ai-avatars/emily.png',
-    gallery: ['/exchange-ai-avatars/emily/1.jpg', '/exchange-ai-avatars/emily/2.jpg', '/exchange-ai-avatars/emily/3.jpg', '/exchange-ai-avatars/emily/4.jpg'],
+    gallery: ['/exchange-ai-avatars/emily/1.jpg', '/exchange-ai-avatars/emily/2.jpg', '/exchange-ai-avatars/emily/3.jpg', '/exchange-ai-avatars/emily/4.jpg', '/exchange-ai-avatars/emily/5.jpg'],
     heightCm: 173,
     weightKg: 55,
     bustCm: 84,
