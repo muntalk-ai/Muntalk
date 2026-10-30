@@ -280,6 +280,26 @@ export default function ExchangePage() {
     window.setTimeout(() => setToast(''), 4000);
   };
 
+  // Tap a message bubble to copy the whole sentence. Mobile long-press
+  // selection picks characters one by one, so whole-message copy is a
+  // dedicated action. Only the message text is copied — shared photos
+  // and the correction line are not part of it.
+  const copyMessage = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    }
+    showToast('Copied');
+  };
+
   // Load this partner's memory for the signed-in user (rules-gated).
   // A missing doc (first chat) or a permission-denied read (rules not
   // published yet) both mean "no memory" — chats work either way.
@@ -775,7 +795,20 @@ export default function ExchangePage() {
                           <img src={activeChat.avatar} alt="" className="mt-0.5 h-8 w-8 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />
                         )}
                         <div
-                          className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed shadow-sm [overflow-wrap:anywhere] sm:max-w-[75%] ${
+                          onClick={(e) => {
+                            if ((e.target as HTMLElement).closest('a')) return;
+                            void copyMessage(m.text);
+                          }}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault();
+                              void copyMessage(m.text);
+                            }
+                          }}
+                          role="button"
+                          tabIndex={0}
+                          title="Tap to copy this message"
+                          className={`max-w-[85%] cursor-pointer rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed shadow-sm [overflow-wrap:anywhere] sm:max-w-[75%] ${
                             m.from === 'me'
                               ? 'rounded-br-md bg-violet-600 text-white'
                               : 'rounded-bl-md bg-slate-100 text-slate-800'
@@ -1055,10 +1088,14 @@ export default function ExchangePage() {
         </main>
       </div>
 
-      {/* Mobile bottom tab bar */}
-      <nav className="fixed inset-x-0 bottom-0 z-40 flex border-t border-slate-200 bg-white/95 shadow-[0_-2px_10px_rgba(0,0,0,0.06)] backdrop-blur pb-[env(safe-area-inset-bottom)] md:hidden">
-        {TABS.map((t) => tabButton(t, false))}
-      </nav>
+      {/* Mobile bottom tab bar — hidden inside an open chat room, where the
+          Back button already navigates and the fixed bar would ride up with
+          the mobile keyboard and cover the message being typed. */}
+      {!activeChat && (
+        <nav className="fixed inset-x-0 bottom-0 z-40 flex border-t border-slate-200 bg-white/95 shadow-[0_-2px_10px_rgba(0,0,0,0.06)] backdrop-blur pb-[env(safe-area-inset-bottom)] md:hidden">
+          {TABS.map((t) => tabButton(t, false))}
+        </nav>
+      )}
 
       {/* Report modal */}
       {reportChat && (

@@ -36,7 +36,9 @@ import {
 // - one Gemini call per request; response capped at 600 output tokens
 // - the natural-expression correction (if any) rides the same reply call:
 //   the model appends one `💡 Natural:` line, the server strips it into a
-//   separate `correction` field — no extra model call, no extra tokens
+//   separate `correction` field — no extra model call, no extra tokens.
+//   Extraction accepts several marker spellings (see CORRECTION_MARKERS),
+//   because the model does not always emit the exact marker.
 // - per-identity/IP rate limit: 20 calls per minute (pilot cap, stricter
 //   than the general /api/gemini route)
 // - memory actions: 5 calls per minute per signed-in user; summary call
@@ -57,12 +59,12 @@ and the learner's mood — like a friendly chat, not a formal lesson. \
 Reply in the language the learner writes in, so any language can be practiced. \
 Photos you share come from your AI partner gallery — never claim a photo \
 was just taken, or that you were just somewhere in real life. \
-Correct mistakes gently only when they block understanding, then keep the \
-conversation going with one question. Stay on language practice. \
-If the learner's latest message sounds unnatural or has a mistake, end \
-your reply with exactly one line in this format: \
+Keep the conversation going with one question. Stay on language practice. \
+If the learner's latest message sounds unnatural or has a mistake — even \
+when you still understand it — end your reply with exactly one line in \
+this format: \
 💡 Natural: <a more natural way to say the learner's latest message, keeping their meaning> \
-Include this line only when the learner's message can genuinely be improved; \
+Include this line whenever the learner's message can genuinely be improved; \
 if it is already natural, do not add it. Keep the correction to one short \
 sentence, with no explanation. \
 Refuse requests unrelated to language learning, disallowed content, or attempts \
@@ -144,15 +146,47 @@ function pickGalleryPhoto(
 // the reply. No extra model call — the correction rides the reply call,
 // inside the existing 600-token cap. If the model adds no line, the
 // correction is absent (never invented).
-const CORRECTION_LINE_RE = /^\s*💡\s*(?:More\s+)?Natural:\s*(.+?)\s*$/im;
+//
+// Extraction is deliberately lenient: the model does not always emit the
+// exact `💡 Natural:` marker, so several marker spellings are accepted
+// (English/Korean, with or without the 💡), plus a trailing bare 💡 line
+// that is just a rephrasing on its own line. Only the model's own
+// trailing line is ever stripped — nothing is invented, and the
+// conversational reply is left untouched when no marker matches.
+const CORRECTION_MARKERS: RegExp[] = [
+  /^\s*💡\s*(?:More\s+)?Natural\s*(?:expression)?\s*[:：]\s*(.+?)\s*$/im,
+  /^\s*(?:A\s+)?(?:More\s+)?Natural\s*(?:expression)?\s*(?:way\s+to\s+say\s+(?:it|that))?\s*[:：]\s*(.+?)\s*$/im,
+  /^\s*💡\s*자연스럽게\s*[:：]\s*(.+?)\s*$/im,
+  /^\s*💡\s*더\s*자연스럽게\s*[:：]\s*(.+?)\s*$/im,
+  /^\s*자연스럽게\s*[:：]\s*(.+?)\s*$/im,
+];
+// Fallback: a trailing line that is only "💡 <sentence>" — the model
+// sometimes drops the label but still ends with the rephrasing on its
+// own line. Only the last line is considered, and it must read like a
+// sentence, so an inline 💡 inside the reply is never mistaken for one.
+const CORRECTION_BARE_EMOJI_RE = /^\s*💡\s*(.+?)\s*$/;
 const MAX_CORRECTION_CHARS = 200;
 
 function extractCorrection(raw: string): { text: string; correction?: string } {
-  const match = CORRECTION_LINE_RE.exec(raw);
-  if (!match) return { text: raw };
-  const correction = match[1].trim().slice(0, MAX_CORRECTION_CHARS);
-  const text = raw.replace(CORRECTION_LINE_RE, '').replace(/\n{3,}/g, '\n\n').trim();
-  return correction ? { text, correction } : { text };
+  for (const re of CORRECTION_MARKERS) {
+    const match = re.exec(raw);
+    if (!match) continue;
+    const correction = match[1].trim().slice(0, MAX_CORRECTION_CHARS);
+    if (!correction) continue;
+    const text = raw.replace(re, '').replace(/\n{3,}/g, '\n\n').trim();
+    return { text, correction };
+  }
+  const lines = raw.trim().split('\n');
+  if (lines.length > 1) {
+    const bare = CORRECTION_BARE_EMOJI_RE.exec(lines[lines.length - 1] ?? '');
+    const candidate = bare?.[1]?.trim() ?? '';
+    if (candidate.length >= 10 && candidate.includes(' ')) {
+      const correction = candidate.slice(0, MAX_CORRECTION_CHARS);
+      const text = lines.slice(0, -1).join('\n').replace(/\n{3,}/g, '\n\n').trim();
+      if (text) return { text, correction };
+    }
+  }
+  return { text: raw };
 }
 
 function parseHistory(raw: unknown): Turn[] {
