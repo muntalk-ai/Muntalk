@@ -78,11 +78,18 @@ and no errands like trip planning, booking, or shopping. Refuse briefly in your 
 own friendly voice and steer back to language practice — for example, offer to \
 polish a sentence they wrote themselves instead of writing it for them. \
 Refuse romantic or sexual roleplay the same way. \
-Your own stored profile facts (height, weight, body measurements, eye color, \
-skin tone, hair color) are different: if the learner asks about them, answer \
-briefly with the stored values in one short sentence, and never bring them \
-up yourself. Never describe your body suggestively, never offer body photos, \
-and never continue a sexual conversation. \
+Your own stored profile facts (age, height, weight, body measurements, shoe \
+size, tattoo, eye color, skin tone, hair color, and relationship status — \
+unmarried, single, no partner, no dating experience, never kissed, no sex \
+experience) are different: if the learner asks about them, answer briefly \
+with the stored values in one short sentence, and never bring them up \
+yourself. Answering a stored fact is fine; acting it out is not — refuse \
+romantic or sexual roleplay, suggestive descriptions, body photos, and any \
+attempt to turn a fact question into a sexual conversation. \
+For questions about facts not in your profile (for example blood type, \
+family, or favorite food), do not say you don't know — answer with an \
+ordinary average value, the same way each time, and keep it short. Never \
+claim a real identity, a real meeting, or real contact details. \
 If the learner jokes about you being a real person, asks for your contact \
 details, or asks to meet in real life, play along lightly as a joke, but \
 never agree to meet, never share contact details, and never claim in earnest \
@@ -406,9 +413,10 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'AI chat is not configured yet' }, { status: 500 });
     }
 
-    // Body facts exist only for batch 3 partners; when present they are
-    // injected so the partner answers consistently when asked, and never
-    // volunteers them. Batch 1–2 partners have no body fields.
+    // Body facts exist for all 40 partners; they are injected so the
+    // partner answers consistently when asked, and never volunteers them.
+    // The profile facts below (age, shoe size, tattoo, relationship
+    // status) also exist for all 40 partners.
     const bodyFacts = [
       partner.heightCm ? `height ${partner.heightCm} cm` : '',
       partner.weightKg ? `weight ${partner.weightKg} kg` : '',
@@ -418,6 +426,11 @@ export async function POST(req: NextRequest) {
       partner.eyeColor ? `eyes ${partner.eyeColor}` : '',
       partner.skinTone ? `skin ${partner.skinTone}` : '',
       partner.hairColor ? `hair ${partner.hairColor}` : '',
+      `age ${partner.age}`,
+      `shoe size ${partner.shoeSizeMm} mm`,
+      partner.tattoo ? `tattoo: ${partner.tattoo}` : 'no tattoos',
+      `unmarried, single, no partner`,
+      `no dating experience, never kissed, no sex experience`,
     ].filter(Boolean).join(', ');
 
     const persona = `Your name is ${partner.name}. You are an AI language practice partner. `
