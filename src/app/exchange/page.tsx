@@ -814,6 +814,11 @@ export default function ExchangePage() {
                               : 'rounded-bl-md bg-slate-100 text-slate-800'
                           }`}
                         >
+                          {m.correction && (
+                            <span className="-mx-3.5 -mt-2.5 mb-2 block rounded-t-2xl bg-amber-100 px-3.5 pb-2 pt-2.5 text-xs leading-relaxed text-violet-700">
+                              💡 자연스럽게: {m.correction}
+                            </span>
+                          )}
                           {m.ai && (
                             <span className="mb-1 block text-[11px] font-extrabold tracking-wide text-violet-700">AI</span>
                           )}
@@ -828,11 +833,6 @@ export default function ExchangePage() {
                             </a>
                           )}
                           <span>{m.text}</span>
-                          {m.correction && (
-                            <span className="mt-1.5 block border-t border-slate-200 pt-1.5 text-xs leading-relaxed text-violet-700">
-                              💡 자연스럽게: {m.correction}
-                            </span>
-                          )}
                         </div>
                       </div>
                     ))}
