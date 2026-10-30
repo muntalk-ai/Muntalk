@@ -7,7 +7,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import RtlDir from '@/components/RtlDir';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
-import { getUserProfile } from '@/lib/userProfile';
+import { getUserProfile, resolveNativeLang } from '@/lib/userProfile';
 import { purposePromptBlock, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
 import { getTutorById } from '@/data/tutors';
@@ -194,7 +194,7 @@ export default function CoachPage() {
     if (authLoading) return;
     const build = async () => {
       const learnLang  = localStorage.getItem('mt_learn_lang')  || 'en-US';
-      const nativeLang = localStorage.getItem('mt_native_lang') || 'ko-KR';
+      const nativeLang = resolveNativeLang();
       const xp         = parseInt(localStorage.getItem('mt_xp') || '0', 10);
       const streak     = parseInt(localStorage.getItem('mt_streak') || '0', 10);
       const doneParsed = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
