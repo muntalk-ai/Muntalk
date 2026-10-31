@@ -58,7 +58,7 @@ export type AiPartner = {
   id: string;
   name: string;
   native: 'Korean' | 'English';
-  learning: 'English' | 'Korean';
+  learning: 'English' | 'Korean' | 'Spanish' | 'French' | 'Chinese';
   level: 'Beginner' | 'Intermediate' | 'Advanced';
   interests: string[];
   personality: string;
@@ -329,12 +329,12 @@ export const AI_PARTNERS: AiPartner[] = [
     id: 'ai-sofia',
     name: 'Sofia',
     native: 'English',
-    learning: 'Korean',
+    learning: 'Spanish',
     level: 'Intermediate',
     interests: ['Salsa dancing', 'Cooking', 'Travel'],
     personality: 'Warm and lively; loves Latin music, family recipes, and beach trips.',
     greeting:
-      "Hi! I'm Sofia, an AI practice partner. Let's practice Korean — shall we start with food words?",
+      "Hi! I'm Sofia, an AI practice partner. Let's practice Spanish — shall we start with food words?",
     avatar: '/exchange-ai-avatars/sofia.png',
     gallery: ['/exchange-ai-avatars/sofia/1.jpg', '/exchange-ai-avatars/sofia/2.jpg', '/exchange-ai-avatars/sofia/3.jpg', '/exchange-ai-avatars/sofia/4.jpg', '/exchange-ai-avatars/sofia/5.jpg'],
     heightCm: 172,
@@ -359,12 +359,12 @@ export const AI_PARTNERS: AiPartner[] = [
     id: 'ai-amara',
     name: 'Amara',
     native: 'English',
-    learning: 'Korean',
+    learning: 'Chinese',
     level: 'Intermediate',
     interests: ['Afrobeats', 'Running', 'Photography'],
     personality: 'Bright and confident; loves Afrobeats, morning runs, and city photography.',
     greeting:
-      "Hi! I'm Amara, an AI practice partner. Let's practice Korean — what's your favorite song lately?",
+      "Hi! I'm Amara, an AI practice partner. Let's practice Chinese — what's your favorite song lately?",
     avatar: '/exchange-ai-avatars/amara.png',
     gallery: ['/exchange-ai-avatars/amara/1.jpg', '/exchange-ai-avatars/amara/2.jpg', '/exchange-ai-avatars/amara/3.jpg', '/exchange-ai-avatars/amara/4.jpg', '/exchange-ai-avatars/amara/5.jpg'],
     heightCm: 173,
@@ -1524,12 +1524,12 @@ export const AI_PARTNERS: AiPartner[] = [
     id: 'ai-chloe',
     name: 'Chloe',
     native: 'English',
-    learning: 'Korean',
+    learning: 'French',
     level: 'Intermediate',
     interests: ['Cooking', 'Travel'],
     personality: 'Friendly and curious; a Slavic girl who loves swapping recipes and travel stories.',
     greeting:
-      "Hi! I'm Chloe, an AI practice partner. Let's practice Korean — what food do you like to cook?",
+      "Hi! I'm Chloe, an AI practice partner. Let's practice French — what food do you like to cook?",
     avatar: '/exchange-ai-avatars/chloe.png',
     gallery: ['/exchange-ai-avatars/chloe/1.jpg', '/exchange-ai-avatars/chloe/2.jpg', '/exchange-ai-avatars/chloe/3.jpg', '/exchange-ai-avatars/chloe/4.jpg', '/exchange-ai-avatars/chloe/5.jpg'],
     heightCm: 171,
