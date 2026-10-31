@@ -19,6 +19,10 @@ const KO_ARTICLES = [
   { slug: 'cheat-sheet-not-cunning-paper', wrong: 'cunning paper', right: 'cheat sheet', desc: '컨닝 페이퍼 — cunning은 교활한' },
   { slug: 'going-home-not-to-home', wrong: "I'm going to home", right: "I'm going home", desc: '집에 가요 — home 앞에는 to 없음' },
   { slug: 'im-interested-not-interesting', wrong: "I'm interesting", right: "I'm interested", desc: '관심 있어요 — -ed/-ing 2탄' },
+  { slug: 'didnt-go-not-didnt-went', wrong: "I didn't went", right: "I didn't go", desc: "didn't 뒤에는 동사원형 — 과거 두 번 표시 금지" },
+  { slug: 'what-time-it-is-not-is-it', wrong: 'Do you know what time is it?', right: 'Do you know what time it is?', desc: '간접의문문 — 어순은 안 바뀐다' },
+  { slug: 'pronunciation-not-pronounce', wrong: 'My pronounce is bad', right: 'My pronunciation is bad', desc: '발음은 명사 pronunciation — pronounce는 동사' },
+  { slug: 'there-are-many-people', wrong: 'There is many people', right: 'There are many people', desc: 'there is/are — 뒤 명사에 맞추다' },
 ];
 
 const EN_ARTICLES = [
