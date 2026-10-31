@@ -3,13 +3,20 @@
 import { useEffect, useRef, useState } from 'react';
 import { collection, doc, getDoc, getDocs, query, serverTimestamp, setDoc, where } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
+import { apiFetch } from '@/lib/apiClient';
 import { AI_PARTNERS, AI_DISCLOSURE, type AiPartner } from '@/lib/exchangeAiPartners';
+import {
+  EXCHANGE_MEMORIES_COLLECTION,
+  formatMemoryForPrompt,
+  memoryDocId,
+  type ExchangeMemory,
+} from '@/lib/exchangeMemory';
 import { useAuth } from '@/context/AuthContext';
 
 /*
  * MunTalk Exchange — hidden lounge page (NOT linked from navigation).
  * Discover is split into two rooms:
- *   - AI Rooms: the 10 pilot AI partners only. A fixed banner at the top of
+ *   - AI Rooms: the 20 AI partners only. A fixed banner at the top of
  *     the room and an "AI" badge on every AI card and AI message state
  *     plainly that these partners are AI, not real people.
  *   - People Rooms (AI-first waitlist): NO user list is shown here, and no
@@ -24,7 +31,13 @@ import { useAuth } from '@/context/AuthContext';
  *     (repo firestore.rules is intentionally NOT touched).
  *   - Exchange opens on the AI room by default (AI-first).
  * AI chats call /api/exchange-ai-chat (Gemini) and live in browser state
- * only for this pilot.
+ * only for this pilot. Memory: the browser reads the signed-in user's
+ * memory doc (`exchange_memories/${uid}_${partnerId}`) and sends it with
+ * the chat call so the partner can recall earlier chats; leaving a chat
+ * saves new facts via the same API (one small summary call, only when
+ * there are new learner turns). Until the console rules for the new
+ * collection are published, memory reads fail with permission-denied and
+ * chats simply work without memory.
  * AI Review / Pro tabs are still demo data. The Profile tab is wired to
  * Firestore for signed-in users (collection `exchange_profiles`).
  */
@@ -49,6 +62,10 @@ type Msg = {
   from: 'me' | 'partner';
   text: string;
   ai?: boolean;
+  /** Gallery photo shared with this AI reply (public/exchange-ai-avatars/...). */
+  photo?: string;
+  /** Natural rephrasing of the learner's previous message, when it could be improved. */
+  correction?: string;
 };
 
 type Chat = {
@@ -91,6 +108,14 @@ export default function ExchangePage() {
   const [billing, setBilling] = useState<'monthly' | 'yearly'>('yearly');
   const [reportChat, setReportChat] = useState<Chat | null>(null);
   const [reportReason, setReportReason] = useState('');
+
+  // AI partner memory (per partner, loaded once per page load).
+  // memoryRef: partnerId -> formatted memory text sent with chat calls.
+  // memorySavedRef: chatId -> learner turns already saved, so leaving a
+  // chat only triggers a summary call when there are new turns.
+  const memoryRef = useRef<Record<string, string>>({});
+  const memorySavedRef = useRef<Record<string, number>>({});
+  const [memoryClearing, setMemoryClearing] = useState(false);
 
   // Profile (demo, browser state only)
   const [nativeLang, setNativeLang] = useState('English');
@@ -255,6 +280,50 @@ export default function ExchangePage() {
     window.setTimeout(() => setToast(''), 4000);
   };
 
+  // Tap a message bubble to copy the whole sentence. Mobile long-press
+  // selection picks characters one by one, so whole-message copy is a
+  // dedicated action. Only the message text is copied — shared photos
+  // and the correction line are not part of it.
+  const copyMessage = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    }
+    showToast('Copied');
+  };
+
+  // Load this partner's memory for the signed-in user (rules-gated).
+  // A missing doc (first chat) or a permission-denied read (rules not
+  // published yet) both mean "no memory" — chats work either way.
+  const loadMemoryForPartner = async (partnerId: string) => {
+    if (!user || memoryRef.current[partnerId] !== undefined) return;
+    memoryRef.current[partnerId] = '';
+    try {
+      const snap = await getDoc(doc(db, EXCHANGE_MEMORIES_COLLECTION, memoryDocId(user.uid, partnerId)));
+      if (!snap.exists()) return;
+      const d = snap.data() as Partial<ExchangeMemory>;
+      const mem: ExchangeMemory = {
+        uid: user.uid,
+        partnerId,
+        nickname: typeof d.nickname === 'string' ? d.nickname : undefined,
+        interests: Array.isArray(d.interests) ? d.interests.filter((i): i is string => typeof i === 'string') : undefined,
+        facts: Array.isArray(d.facts) ? d.facts.filter((f): f is string => typeof f === 'string') : [],
+      };
+      memoryRef.current[partnerId] = formatMemoryForPrompt(mem);
+    } catch {
+      // Never surface an error for memory: the chat works without it.
+      memoryRef.current[partnerId] = '';
+    }
+  };
+
   const startAiChat = (p: AiPartner) => {
     setChats((cs) =>
       cs.some((c) => c.id === p.id)
@@ -273,6 +342,7 @@ export default function ExchangePage() {
     );
     setActiveChatId(p.id);
     setTab('chats');
+    void loadMemoryForPartner(p.id);
   };
 
   const activeChat = chats.find((c) => c.id === activeChatId) || null;
@@ -289,6 +359,15 @@ export default function ExchangePage() {
       role: m.from === 'me' ? ('user' as const) : ('ai' as const),
       text: m.text,
     }));
+    // Gallery photo state for the server's frequency guard: photos already
+    // shared in this chat, and learner turns since the last shared photo.
+    const sentPhotos = activeChat.messages.filter((m) => m.from === 'partner' && m.photo).map((m) => m.photo as string);
+    let turnsSincePhoto = 0;
+    for (let i = activeChat.messages.length - 1; i >= 0; i--) {
+      const m = activeChat.messages[i];
+      if (m.from === 'partner' && m.photo) break;
+      if (m.from === 'me') turnsSincePhoto++;
+    }
     const id = msgSeq++;
     setChats((cs) =>
       cs.map((c) => (c.id === activeChat.id ? { ...c, messages: [...c.messages, { id, from: 'me' as const, text }] } : c))
@@ -299,21 +378,89 @@ export default function ExchangePage() {
       const res = await fetch('/api/exchange-ai-chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ partnerId: activeChat.partnerId, message: text, history }),
+        body: JSON.stringify({ partnerId: activeChat.partnerId, message: text, history, sentPhotos, turnsSincePhoto, memory: memoryRef.current[activeChat.partnerId] || undefined }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(typeof data.error === 'string' ? data.error : 'AI reply failed');
       const rid = msgSeq++;
       const reply = typeof data.text === 'string' && data.text ? data.text : 'Sorry, I could not reply just now.';
+      // Only accept a photo that is actually in this partner's gallery —
+      // the server must never be able to inject an arbitrary image URL.
+      const partnerGallery = AI_PARTNERS.find((p) => p.id === activeChat.partnerId)?.gallery ?? [];
+      const photo = typeof data.photo === 'string' && partnerGallery.includes(data.photo) ? data.photo : undefined;
+      // Natural-expression correction: one short rephrasing of the learner's
+      // message, shown inside the AI reply. Absent when already natural.
+      const correction =
+        typeof data.correction === 'string' && data.correction.trim()
+          ? data.correction.trim().slice(0, 200)
+          : undefined;
       setChats((cs) =>
         cs.map((c) =>
-          c.id === activeChat.id ? { ...c, messages: [...c.messages, { id: rid, from: 'partner' as const, text: reply, ai: true }] } : c
+          c.id === activeChat.id ? { ...c, messages: [...c.messages, { id: rid, from: 'partner' as const, text: reply, ai: true, photo, correction }] } : c
         )
       );
     } catch (err) {
       showToast(err instanceof Error ? err.message : 'AI reply failed. Please try again.');
     } finally {
       setAiSending(false);
+    }
+  };
+
+  // Save new facts when leaving an AI chat: at most one small summary
+  // call per leave, only when at least 4 new learner turns arrived since
+  // the last save. Failures are silent — memory must never break chatting.
+  const saveMemoryForChat = async (chat: Chat) => {
+    if (!chat.isAi || !user) return;
+    const userTurns = chat.messages.filter((m) => m.from === 'me').length;
+    const lastSaved = memorySavedRef.current[chat.id] ?? 0;
+    if (userTurns - lastSaved < 4) return;
+    try {
+      const history = chat.messages.slice(-20).map((m) => ({
+        role: m.from === 'me' ? ('user' as const) : ('ai' as const),
+        text: m.text,
+      }));
+      const res = await apiFetch('/api/exchange-ai-chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'save-memory',
+          partnerId: chat.partnerId,
+          history,
+          nickname: nickname.trim(),
+          interests: interestSel,
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.saved) memorySavedRef.current[chat.id] = userTurns;
+    } catch {
+      /* background save: never interrupt the user */
+    }
+  };
+
+  const leaveAiChat = () => {
+    const chat = activeChat;
+    setActiveChatId(null);
+    if (chat) void saveMemoryForChat(chat);
+  };
+
+  const clearMemoryForChat = async () => {
+    if (!activeChat?.isAi || !user || memoryClearing) return;
+    if (!window.confirm(`Clear what ${activeChat.name} remembers about you? This cannot be undone.`)) return;
+    setMemoryClearing(true);
+    try {
+      const res = await apiFetch('/api/exchange-ai-chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'clear-memory', partnerId: activeChat.partnerId }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(typeof data.error === 'string' ? data.error : 'Could not clear memory');
+      delete memoryRef.current[activeChat.partnerId];
+      showToast('Memory cleared.');
+    } catch (err) {
+      showToast(err instanceof Error ? err.message : 'Could not clear memory. Please try again.');
+    } finally {
+      setMemoryClearing(false);
     }
   };
 
@@ -435,7 +582,7 @@ export default function ExchangePage() {
                     🤖 {AI_DISCLOSURE} Every AI card and AI message here is marked &ldquo;AI&rdquo;.
                   </div>
                   <p className="mt-3 text-sm text-slate-500">
-                    10 AI practice partners for Korean ↔ English. They are always online — start a chat and get a real AI reply.
+                    20 AI practice partners — no language filter. Pick anyone and practice in any language. They are always online — start a chat and get a real AI reply.
                   </p>
                   <div className="mt-4 grid gap-4 sm:grid-cols-2">
                     {AI_PARTNERS.map((p) => (
@@ -460,6 +607,9 @@ export default function ExchangePage() {
                           <span className="inline-block rounded-full bg-violet-600 px-3.5 py-1.5 text-base font-extrabold text-white">
                             {p.native} → {p.learning}
                           </span>
+                        </p>
+                        <p className="mt-2 text-xs font-semibold text-violet-700">
+                          Practice in any language
                         </p>
                         <div className="mt-3 flex flex-wrap gap-1.5">
                           {p.interests.map((i) => (
@@ -611,15 +761,24 @@ export default function ExchangePage() {
               ) : (
                 <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm">
                   <div className="flex items-center gap-3 border-b border-slate-100 p-3 sm:p-4">
-                    <button onClick={() => setActiveChatId(null)} className="min-h-[44px] rounded-lg px-2 font-bold text-violet-600 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">← Back</button>
-                    <img src={activeChat.avatar} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />
+                    <button onClick={leaveAiChat} className="min-h-[44px] rounded-lg px-2 font-bold text-violet-600 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">← Back</button>
+                    <img src={activeChat.avatar} alt={`${activeChat.name} AI partner`} className="h-14 w-14 shrink-0 rounded-full object-cover ring-2 ring-violet-200 sm:h-16 sm:w-16" />
                     <span className="font-bold">
                       {activeChat.name}{' '}
                       {activeChat.isAi && <span className="rounded-full bg-violet-600 px-2 py-0.5 text-[11px] font-extrabold text-white">AI</span>}
                     </span>
+                    {activeChat.isAi && user && (
+                      <button
+                        onClick={clearMemoryForChat}
+                        disabled={memoryClearing}
+                        className="ml-auto min-h-[36px] rounded-full border border-slate-200 px-3 py-1 text-xs font-bold text-slate-500 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 disabled:opacity-60"
+                      >
+                        {memoryClearing ? 'Clearing…' : 'Clear memory'}
+                      </button>
+                    )}
                     <button
                       onClick={() => setReportChat(activeChat)}
-                      className="ml-auto min-h-[36px] rounded-full border border-red-200 px-3 py-1 text-xs font-bold text-red-600 hover:bg-red-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
+                      className="min-h-[36px] rounded-full border border-red-200 px-3 py-1 text-xs font-bold text-red-600 hover:bg-red-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
                     >
                       Report
                     </button>
@@ -631,16 +790,47 @@ export default function ExchangePage() {
                   )}
                   <div className="flex flex-col gap-3 p-4">
                     {activeChat.messages.map((m) => (
-                      <div key={m.id} className={`flex ${m.from === 'me' ? 'justify-end' : 'justify-start'}`}>
+                      <div key={m.id} className={`flex items-start gap-2 ${m.from === 'me' ? 'justify-end' : 'justify-start'}`}>
+                        {m.from !== 'me' && (
+                          <img src={activeChat.avatar} alt="" className="mt-0.5 h-8 w-8 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />
+                        )}
                         <div
-                          className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed shadow-sm [overflow-wrap:anywhere] sm:max-w-[75%] ${
+                          onClick={(e) => {
+                            if ((e.target as HTMLElement).closest('a')) return;
+                            void copyMessage(m.text);
+                          }}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault();
+                              void copyMessage(m.text);
+                            }
+                          }}
+                          role="button"
+                          tabIndex={0}
+                          title="Tap to copy this message"
+                          className={`max-w-[85%] cursor-pointer rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed shadow-sm [overflow-wrap:anywhere] sm:max-w-[75%] ${
                             m.from === 'me'
                               ? 'rounded-br-md bg-violet-600 text-white'
                               : 'rounded-bl-md bg-slate-100 text-slate-800'
                           }`}
                         >
+                          {m.correction && (
+                            <span className="-mx-3.5 -mt-2.5 mb-2 block rounded-t-2xl bg-amber-100 px-3.5 pb-2 pt-2.5 text-xs leading-relaxed text-violet-700">
+                              💡 자연스럽게: {m.correction}
+                            </span>
+                          )}
                           {m.ai && (
                             <span className="mb-1 block text-[11px] font-extrabold tracking-wide text-violet-700">AI</span>
+                          )}
+                          {m.photo && (
+                            <a href={m.photo} target="_blank" rel="noreferrer" className="mb-2 block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500" aria-label="Open shared gallery photo full size">
+                              <img
+                                src={m.photo}
+                                alt="Photo shared by this AI partner from their gallery"
+                                loading="lazy"
+                                className="max-h-56 w-auto max-w-full rounded-xl object-cover"
+                              />
+                            </a>
                           )}
                           <span>{m.text}</span>
                         </div>
@@ -898,10 +1088,14 @@ export default function ExchangePage() {
         </main>
       </div>
 
-      {/* Mobile bottom tab bar */}
-      <nav className="fixed inset-x-0 bottom-0 z-40 flex border-t border-slate-200 bg-white/95 shadow-[0_-2px_10px_rgba(0,0,0,0.06)] backdrop-blur pb-[env(safe-area-inset-bottom)] md:hidden">
-        {TABS.map((t) => tabButton(t, false))}
-      </nav>
+      {/* Mobile bottom tab bar — hidden inside an open chat room, where the
+          Back button already navigates and the fixed bar would ride up with
+          the mobile keyboard and cover the message being typed. */}
+      {!activeChat && (
+        <nav className="fixed inset-x-0 bottom-0 z-40 flex border-t border-slate-200 bg-white/95 shadow-[0_-2px_10px_rgba(0,0,0,0.06)] backdrop-blur pb-[env(safe-area-inset-bottom)] md:hidden">
+          {TABS.map((t) => tabButton(t, false))}
+        </nav>
+      )}
 
       {/* Report modal */}
       {reportChat && (
