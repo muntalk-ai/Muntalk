@@ -23,6 +23,7 @@ const KO_ARTICLES = [
   { slug: 'what-time-it-is-not-is-it', wrong: 'Do you know what time is it?', right: 'Do you know what time it is?', desc: '간접의문문 — 어순은 안 바뀐다' },
   { slug: 'pronunciation-not-pronounce', wrong: 'My pronounce is bad', right: 'My pronunciation is bad', desc: '발음은 명사 pronunciation — pronounce는 동사' },
   { slug: 'there-are-many-people', wrong: 'There is many people', right: 'There are many people', desc: 'there is/are — 뒤 명사에 맞추다' },
+  { slug: 'window-shopping-not-eye-shopping', wrong: 'eye shopping', right: 'window shopping', desc: '구경만 하는 쇼핑 — eye shopping은 없는 말' },
 ];
 
 const EN_ARTICLES = [
