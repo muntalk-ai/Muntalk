@@ -15,6 +15,7 @@ export default function Page() {
       kicker="✚ 콩글리시 응급실"
       title="“I'm boring”이 아니라 “I'm bored”입니다"
       practice="I'm bored."
+      videoHref="https://www.instagram.com/reel/DfSePxfk0n_/"
     >
       <Card>
         <SectionTitle>틀린 표현</SectionTitle>
