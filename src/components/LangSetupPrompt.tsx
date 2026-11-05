@@ -1,8 +1,9 @@
 'use client';
 // components/LangSetupPrompt.tsx
 // 신규 가입자 언어 설정 확정 팝업.
-// 가입 시 모국어(브라우저 감지/ko-KR 폴백)·학습 언어(en-US 기본값)가 자동으로
-// 채워지므로, 사용자가 직접 선택할 때까지 1회 팝업으로 확정받는다.
+// 모국어·학습 언어가 미리 선택되어 있지 않으므로, 사용자가 직접 선택할 때까지
+// 1회 팝업으로 확정받는다. 옵션은 자국어 표기 우선({flag} {native} ({label}))
+// 으로 보여줘 영어를 모르는 유저도 자기 언어를 알아볼 수 있다.
 // profile.langsConfirmed === false 일 때만 표시. 기존 유저(필드 없음)는
 // DEFAULT_PROFILE 병합으로 true 취급되어 팝업이 뜨지 않는다.
 
@@ -21,11 +22,14 @@ export default function LangSetupPrompt() {
   // 표시 조건: 로그인 + 프로필 로드 + 미확정 + 이번 세션에서 닫지 않음
   if (!user || !profile || profile.langsConfirmed !== false || dismissed) return null;
 
-  const curNative = nativeLang ?? profile.nativeLang ?? 'ko-KR';
-  const curLearn = learnLang ?? profile.learnLang ?? 'en-US';
+  // 미리 선택 없음: 선택 전에는 빈 값. 프로필의 감지값/기본값(ko-KR 등)을
+  // 현재값으로 쓰지 않는다 — 그대로 저장되면 모국어가 잘못 확정된다.
+  const curNative = nativeLang ?? '';
+  const curLearn = learnLang ?? '';
+  const canSave = curNative !== '' && curLearn !== '';
 
   const handleSave = async () => {
-    if (!user || saving) return;
+    if (!user || saving || !canSave) return;
     setSaving(true);
     try {
       await updateUserProfile(user.uid, {
@@ -70,8 +74,9 @@ export default function LangSetupPrompt() {
           onChange={e => setNativeLang(e.target.value)}
           style={selectStyle}
         >
+          <option value="" disabled>🌐 —</option>
           {UI_LANGUAGES.map(l => (
-            <option key={l.code} value={l.code}>{l.flag} {l.label}</option>
+            <option key={l.code} value={l.code}>{l.flag} {l.native}{l.label ? ` (${l.label})` : ''}</option>
           ))}
         </select>
 
@@ -83,18 +88,19 @@ export default function LangSetupPrompt() {
           onChange={e => setLearnLang(e.target.value)}
           style={selectStyle}
         >
+          <option value="" disabled>🌐 —</option>
           {LEARN_LANGUAGES.map(l => (
-            <option key={l.code} value={l.code}>{l.flag} {l.label}</option>
+            <option key={l.code} value={l.code}>{l.flag} {l.native}{l.label ? ` (${l.label})` : ''}</option>
           ))}
         </select>
 
         <button
           onClick={handleSave}
-          disabled={saving}
+          disabled={!canSave || saving}
           style={{
             width: '100%', marginTop: 22, padding: '14px 0', border: 'none', borderRadius: 12,
-            background: saving ? '#93C5FD' : '#2563EB', color: '#fff',
-            fontSize: 16, fontWeight: 800, cursor: saving ? 'wait' : 'pointer',
+            background: !canSave || saving ? '#93C5FD' : '#2563EB', color: '#fff',
+            fontSize: 16, fontWeight: 800, cursor: !canSave || saving ? 'not-allowed' : 'pointer',
             fontFamily: 'inherit',
           }}
         >

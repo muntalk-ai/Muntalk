@@ -1,0 +1,40 @@
+# Muntuz.com — Firestore console snippet: muntuz_waitlist
+#
+# HOW TO APPLY (Jay, in the Firebase console — NOT via repo firestore.rules):
+#   Firebase console → Firestore Database → Rules → paste the `match` block
+#   below inside `rules_version = '2'; service cloud.firestore { ... }`,
+#   next to the existing rules, then Publish.
+#   The repo file firestore.rules is intentionally NOT changed by this PR
+#   (it is out of sync with the live console rules).
+#
+# WHAT THE APP WRITES (client code: src/app/muntuz/MuntuzLandingClient.tsx):
+#   collection: muntuz_waitlist
+#   doc id:    auto-id (addDoc)
+#   fields:    email (string), createdAt (server timestamp)
+#   Nothing else is stored — no real name, phone, or contact details.
+#
+# WHY THIS RULE EXISTS:
+#   The Muntuz Coming Soon landing page lets anonymous visitors join the
+#   waitlist with just an email. Until this rule is published, the write
+#   fails with permission-denied and the form shows its graceful
+#   "waitlist opens soon" fallback instead of claiming success.
+#
+# SECURITY NOTES:
+#   - Create only, and only with exactly the two allowed fields, with the
+#     email in a valid shape. No read/update/delete: nobody can list or
+#     scrape waitlist emails from the client.
+#   - This is a public, unauthenticated write endpoint by design (same as
+#     any newsletter signup). If spam becomes a problem, tighten later
+#     (e.g. move the write behind an API route with rate limiting).
+#
+# Paste this block into the console rules:
+#
+#   match /muntuz_waitlist/{docId} {
+#     // Anyone may join the waitlist with an email only. No reads: the
+#     // email list is never exposed to clients.
+#     allow create: if request.resource.data.keys().hasOnly(['email', 'createdAt'])
+#       && request.resource.data.email is string
+#       && request.resource.data.email.size() <= 254
+#       && request.resource.data.email.matches('^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$');
+#     allow read, update, delete: if false;
+#   }

@@ -1,25 +1,32 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { collection, doc, getDoc, getDocs, query, serverTimestamp, setDoc, where } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, limit, query, serverTimestamp, setDoc, where } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { AI_PARTNERS, AI_DISCLOSURE, type AiPartner } from '@/lib/exchangeAiPartners';
 import { useAuth } from '@/context/AuthContext';
+import {
+  createCallDoc,
+  declineCall,
+  endCallDoc,
+  listenIncomingCalls,
+  VoiceCallSession,
+  type ConnectionState,
+} from '@/lib/exchangeCall';
 
+/*
 /*
  * MunTalk Exchange — hidden lounge page (NOT linked from navigation).
  * Discover is split into two rooms:
  *   - AI Rooms: the 10 pilot AI partners only. A fixed banner at the top of
  *     the room and an "AI" badge on every AI card and AI message state
  *     plainly that these partners are AI, not real people.
- *   - People Rooms (AI-first waitlist): NO user list is shown here, and no
- *     demo or AI profiles are ever shown here. Visitors pick a language
- *     pair (Korean ↔ English first, plus other pairs) and join that pair's
- *     waitlist, stored in Firestore collection `exchange_waitlist`
- *     (fields: uid, pair, pairId, createdAt — minimal). The waiting count
- *     is the real document count, or it says it is unavailable; a fake
- *     count is never shown. If the console rules for the new collection
- *     are not published yet, join/count fail gracefully with a notice.
+ *   - People Rooms: a language-pair waitlist (stored in Firestore
+ *     collection `exchange_waitlist`) plus the real Exchange profiles
+ *     below it. Real cards show no match percentage and no verification
+ *     badge (those fields do not exist in profile docs). Say hello —
+ *     they accept before a chat opens — and voice calls use Firestore
+ *     signaling in `exchange_calls` (see src/lib/exchangeCall.ts).
  *     Console snippet for Jay to paste: firestore-snippets/exchange-waitlist.rules.txt
  *     (repo firestore.rules is intentionally NOT touched).
  *   - Exchange opens on the AI room by default (AI-first).
@@ -44,6 +51,71 @@ const WAITLIST_PAIRS = [
   { id: 'en-fr', label: 'English ↔ French' },
 ];
 
+type PartnerStatus = 'idle' | 'pending' | 'matched';
+
+// Real partner from Firestore `exchange_profiles` — never invented.
+// `match` / `verified` do not exist in profile docs, so real cards show no
+// match percentage and no verification badge (showing one would be fake).
+type RealPartner = {
+  uid: string;
+  name: string;
+  flag: string;
+  native: string;
+  learning: string;
+  level: string;
+  interests: string[];
+  bio: string;
+};
+
+const LANG_FLAG: Record<string, string> = {
+  English: '🇺🇸',
+  Korean: '🇰🇷',
+  Spanish: '🇪🇸',
+  Japanese: '🇯🇵',
+  Portuguese: '🇧🇷',
+  French: '🇫🇷',
+  German: '🇩🇪',
+  Indonesian: '🇮🇩',
+  Hindi: '🇮🇳',
+  Arabic: '🇸🇦',
+  Mongolian: '🇲🇳',
+  Persian: '🇮🇷',
+  Lao: '🇱🇦',
+  Polish: '🇵🇱',
+  Vietnamese: '🇻🇳',
+  Thai: '🇹🇭',
+  Burmese: '🇲🇲',
+  Russian: '🇷🇺',
+  Chinese: '🇨🇳',
+};
+
+const profileToPartner = (uid: string, d: Record<string, unknown>): RealPartner => {
+  const str = (v: unknown, fallback: string) => (typeof v === 'string' && v.trim() ? v : fallback);
+  const native = str(d.nativeLang, '—');
+  return {
+    uid,
+    name: str(d.nickname, 'Partner'),
+    flag: LANG_FLAG[native] || '🌐',
+    native,
+    learning: str(d.targetLang, '—'),
+    level: str(d.level, '—'),
+    interests: Array.isArray(d.interests) ? d.interests.filter((i): i is string => typeof i === 'string') : [],
+    bio: str(d.bio, ''),
+  };
+};
+
+// Voice call UI state. `phase` is the only thing rendered; the live
+// RTCPeerConnection lives in the session ref below, never in React state.
+type CallUi = {
+  callId: string;
+  peerUid: string;
+  peerName: string;
+  phase: 'outgoing' | 'incoming' | 'active';
+  connection: ConnectionState;
+  muted: boolean;
+  startedAt: number | null;
+};
+
 type Msg = {
   id: number;
   from: 'me' | 'partner';
@@ -56,6 +128,7 @@ type Chat = {
   partnerId: string;
   name: string;
   avatar: string;
+  flag?: string;
   isAi: boolean;
   messages: Msg[];
 };
@@ -114,6 +187,284 @@ export default function ExchangePage() {
   const [profileLoading, setProfileLoading] = useState(false);
   const [profileLoaded, setProfileLoaded] = useState(false);
   const [profileError, setProfileError] = useState('');
+
+  // ── Discover: real partners from `exchange_profiles` ──────────────
+  // Signed-in users only (profile reads need auth). No demo users here:
+  // empty query results render the empty state, never fake cards.
+  const [realPartners, setRealPartners] = useState<RealPartner[] | null>(null);
+  const [partnersLoading, setPartnersLoading] = useState(false);
+  const [partnersError, setPartnersError] = useState('');
+  const [statuses, setStatuses] = useState<Record<string, PartnerStatus>>({});
+
+  useEffect(() => {
+    if (authLoading) return;
+    if (!user) {
+      setRealPartners(null);
+      setPartnersError('');
+      return;
+    }
+    let cancelled = false;
+    setPartnersLoading(true);
+    setPartnersError('');
+    // Client-side filter on purpose: `status` is absent on most profile
+    // docs, and Firestore `!=` / `not-in` queries exclude docs where the
+    // field is missing — a server-side filter would hide real partners.
+    getDocs(query(collection(db, 'exchange_profiles'), limit(50)))
+      .then((snap) => {
+        if (cancelled) return;
+        const list = snap.docs
+          .filter((d) => d.id !== user.uid)
+          .filter((d) => {
+            const s = d.data().status;
+            return s !== 'paused' && s !== 'banned';
+          })
+          .map((d) => profileToPartner(d.id, d.data()));
+        setRealPartners(list);
+      })
+      .catch((err) => {
+        if (cancelled) return;
+        setRealPartners([]);
+        setPartnersError(
+          (err as { code?: string }).code === 'permission-denied'
+            ? 'Could not load partners: Exchange profile read permissions are not published yet.'
+            : 'Could not load partners. Please try again.'
+        );
+      })
+      .finally(() => {
+        if (!cancelled) setPartnersLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [user, authLoading]);
+
+  // ── Voice call state ───────────────────────────────────────────────
+  const [call, setCall] = useState<CallUi | null>(null);
+  const [elapsed, setElapsed] = useState(0);
+  const callRef = useRef<CallUi | null>(null);
+  callRef.current = call;
+  const sessionRef = useRef<VoiceCallSession | null>(null);
+  const remoteAudioRef = useRef<HTMLAudioElement | null>(null);
+
+  // Elapsed timer while a call is active.
+  useEffect(() => {
+    if (!call || call.phase !== 'active' || !call.startedAt) {
+      setElapsed(0);
+      return;
+    }
+    const tick = () => setElapsed(Math.floor((Date.now() - (call.startedAt as number)) / 1000));
+    tick();
+    const id = window.setInterval(tick, 1000);
+    return () => window.clearInterval(id);
+  }, [call?.phase, call?.startedAt]);
+
+  const clearCallLocally = () => {
+    sessionRef.current?.dispose();
+    sessionRef.current = null;
+    setCall(null);
+  };
+
+  const peerDisplayName = async (uid: string): Promise<string> => {
+    try {
+      const snap = await getDoc(doc(db, 'exchange_profiles', uid));
+      if (snap.exists() && typeof snap.data().nickname === 'string' && snap.data().nickname.trim()) {
+        return snap.data().nickname as string;
+      }
+    } catch {
+      // Fall through to the generic label.
+    }
+    return 'Partner';
+  };
+
+  // Incoming ringing calls for this user. While a call UI is already open,
+  // new ringing calls are ignored (1:1 only — no call waiting).
+  useEffect(() => {
+    if (authLoading || !user) return;
+    const unsub = listenIncomingCalls(user.uid, (ringing) => {
+      const current = callRef.current;
+      if (current) {
+        // Our own incoming banner disappears if the caller hung up first.
+        if (current.phase === 'incoming' && !ringing.some((c) => c.id === current.callId)) {
+          sessionRef.current?.dispose();
+          sessionRef.current = null;
+          setCall(null);
+        }
+        return;
+      }
+      const first = ringing[0];
+      if (!first) return;
+      void peerDisplayName(first.callerId).then((name) => {
+        if (callRef.current) return; // something started meanwhile
+        setCall({
+          callId: first.id,
+          peerUid: first.callerId,
+          peerName: name,
+          phase: 'incoming',
+          connection: 'new',
+          muted: false,
+          startedAt: null,
+        });
+      });
+    });
+    return unsub;
+  }, [user, authLoading]);
+
+  // Never leak a mic or a PeerConnection on unmount / navigation away.
+  useEffect(
+    () => () => {
+      sessionRef.current?.dispose();
+      sessionRef.current = null;
+    },
+    []
+  );
+
+  const startVoiceCall = async (partner: RealPartner) => {
+    if (!user) {
+      showToast('Sign in to start a voice call.');
+      return;
+    }
+    if (callRef.current) {
+      showToast('You are already in a call.');
+      return;
+    }
+    const callId = await createCallDoc(user.uid, partner.uid).catch((err) => {
+      showToast(
+        (err as { code?: string }).code === 'permission-denied'
+          ? 'Could not start the call: Exchange call permissions are not published yet.'
+          : 'Could not start the call. Please try again.'
+      );
+      return null;
+    });
+    if (!callId) return;
+    const session = new VoiceCallSession(callId, user.uid, true, {
+      onRemoteStream: (stream) => {
+        if (remoteAudioRef.current) remoteAudioRef.current.srcObject = stream;
+      },
+      onConnectionState: (state) => {
+        setCall((c) => (c && c.callId === callId ? { ...c, connection: state } : c));
+      },
+      onCallStatus: (status, doc) => {
+        if (status === 'declined') {
+          sessionRef.current?.dispose();
+          sessionRef.current = null;
+          setCall(null);
+          showToast(`${partner.name} declined the call.`);
+        } else if (status === 'ended') {
+          sessionRef.current?.dispose();
+          sessionRef.current = null;
+          setCall(null);
+          showToast('Call ended.');
+        } else if (status === 'active' && doc.answer) {
+          setCall((c) => (c && c.callId === callId ? { ...c, phase: 'active', startedAt: Date.now() } : c));
+        }
+      },
+    });
+    sessionRef.current = session;
+    setCall({
+      callId,
+      peerUid: partner.uid,
+      peerName: partner.name,
+      phase: 'outgoing',
+      connection: 'new',
+      muted: false,
+      startedAt: null,
+    });
+    try {
+      await session.startAsCaller();
+    } catch (err) {
+      // Mic denied, or offer write failed: no half-open call left behind.
+      session.dispose();
+      sessionRef.current = null;
+      setCall(null);
+      await endCallDoc(callId);
+      showToast(
+        err instanceof DOMException && err.name === 'NotAllowedError'
+          ? 'Microphone access was denied. Allow the mic to make a voice call.'
+          : 'Could not start the call. Please try again.'
+      );
+    }
+  };
+
+  const acceptIncomingCall = async () => {
+    const current = callRef.current;
+    if (!current || current.phase !== 'incoming' || !user) return;
+    const { callId } = current;
+    let offer: RTCSessionDescriptionInit | undefined;
+    try {
+      const snap = await getDoc(doc(db, 'exchange_calls', callId));
+      if (!snap.exists() || snap.data().status !== 'ringing') {
+        setCall(null);
+        showToast('This call is no longer ringing.');
+        return;
+      }
+      offer = snap.data().offer as RTCSessionDescriptionInit | undefined;
+    } catch {
+      showToast('Could not accept the call. Please try again.');
+      return;
+    }
+    if (!offer) {
+      showToast('Could not accept the call: no offer from the caller yet.');
+      return;
+    }
+    const session = new VoiceCallSession(callId, user.uid, false, {
+      onRemoteStream: (stream) => {
+        if (remoteAudioRef.current) remoteAudioRef.current.srcObject = stream;
+      },
+      onConnectionState: (state) => {
+        setCall((c) => (c && c.callId === callId ? { ...c, connection: state } : c));
+      },
+      onCallStatus: (status) => {
+        if (status === 'ended' || status === 'declined') {
+          sessionRef.current?.dispose();
+          sessionRef.current = null;
+          setCall(null);
+          showToast('Call ended.');
+        }
+      },
+    });
+    sessionRef.current = session;
+    try {
+      await session.acceptAsCallee(offer);
+      setCall((c) => (c && c.callId === callId ? { ...c, phase: 'active', startedAt: Date.now() } : c));
+    } catch (err) {
+      session.dispose();
+      sessionRef.current = null;
+      setCall(null);
+      showToast(
+        err instanceof DOMException && err.name === 'NotAllowedError'
+          ? 'Microphone access was denied. Allow the mic to answer a voice call.'
+          : 'Could not accept the call. Please try again.'
+      );
+    }
+  };
+
+  const declineIncomingCall = async () => {
+    const current = callRef.current;
+    if (!current || current.phase !== 'incoming') return;
+    const callId = current.callId;
+    setCall(null);
+    try {
+      await declineCall(callId);
+    } catch {
+      // Caller already hung up — banner is gone either way.
+    }
+  };
+
+  const endVoiceCall = async () => {
+    const session = sessionRef.current;
+    setCall(null);
+    if (session) {
+      await session.hangup();
+      sessionRef.current = null;
+    }
+  };
+
+  const toggleCallMute = () => {
+    const session = sessionRef.current;
+    if (!session) return;
+    const muted = session.toggleMute();
+    setCall((c) => (c ? { ...c, muted } : c));
+  };
 
   useEffect(() => {
     if (authLoading) return;
@@ -275,6 +626,19 @@ export default function ExchangePage() {
     setTab('chats');
   };
 
+const sayHello = (p: { id: string; name: string; flag: string }) => {
+    setStatuses((s) => ({ ...s, [p.id]: 'pending' }));
+    window.setTimeout(() => {
+      setStatuses((s) => ({ ...s, [p.id]: 'matched' }));
+      setChats((cs) =>
+        cs.some((c) => c.id === p.id)
+          ? cs
+          : [...cs, { id: p.id, partnerId: p.id, name: p.name, avatar: '', flag: p.flag, isAi: false, messages: [] }]
+      );
+      showToast(`${p.name} accepted your hello! A chat was created.`);
+    }, 2500);
+  };
+
   const activeChat = chats.find((c) => c.id === activeChatId) || null;
 
   const sendAiMessage = async () => {
@@ -315,6 +679,28 @@ export default function ExchangePage() {
     } finally {
       setAiSending(false);
     }
+  };
+
+  // Real (human) chats: messages stay in browser state only for this
+  // pilot. No auto-reply — the partner is a real person, never a fake.
+  const sendMessage = () => {
+    const text = input.trim();
+    if (!text || !activeChat || activeChat.isAi) return;
+    if (CONTACT_GUARD.test(text)) {
+      setInput('');
+      showToast('Held back: phone numbers, links and contact IDs cannot be sent here.');
+      return;
+    }
+    const id = msgSeq++;
+    setChats((cs) =>
+      cs.map((c) => (c.id === activeChat.id ? { ...c, messages: [...c.messages, { id, from: 'me' as const, text }] } : c))
+    );
+    setInput('');
+  };
+
+  const sendCurrentMessage = () => {
+    if (activeChat?.isAi) void sendAiMessage();
+    else sendMessage();
   };
 
   const reportAndBlock = () => {
@@ -377,7 +763,7 @@ export default function ExchangePage() {
           </div>
           {pro && <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-800">PRO</span>}
           <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-500">
-            Pilot — AI rooms are the main experience; People room is a waitlist
+Pilot — AI rooms are the main experience; People room is a waitlist
           </span>
         </div>
       </header>
@@ -547,28 +933,75 @@ export default function ExchangePage() {
                       </button>
                     )}
                   </div>
-                  <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
-                    <p className="font-extrabold">No people here yet</p>
-                    <p className="mt-1 text-sm text-slate-500">
-                      No people here yet — practice with an AI partner, or join the waitlist and we&apos;ll let you know when people gather.
+                  <h3 className="mt-6 text-base font-extrabold">People here now</h3>
+                  <p className="mt-1 text-sm text-slate-500">
+                    Real Exchange profiles. Say hello — they accept before a chat opens. No open DMs.
+                  </p>
+                  {!user && !authLoading && (
+                    <p className="mt-4 rounded-2xl border border-slate-200/80 bg-white p-6 text-center text-sm text-slate-500">
+                      Sign in to see real Exchange partners and start a voice call.
                     </p>
-                    <div className="mt-4 flex flex-col justify-center gap-2 sm:flex-row">
-                      <button
-                        onClick={() => setRoom('ai')}
-                        className="min-h-[44px] rounded-xl bg-violet-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98]"
-                      >
-                        Practice with an AI partner
-                      </button>
-                      {user && !waitlistJoined && (
-                        <button
-                          onClick={joinWaitlist}
-                          disabled={waitlistJoining}
-                          className="min-h-[44px] rounded-xl border border-violet-300 bg-white px-5 py-2.5 text-sm font-bold text-violet-700 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 disabled:opacity-60"
-                        >
-                          Join the waitlist
-                        </button>
-                      )}
-                    </div>
+                  )}
+                  {partnersLoading && (
+                    <p className="mt-4 rounded-2xl border border-slate-200/80 bg-white p-6 text-center text-sm text-slate-500">
+                      Loading partners…
+                    </p>
+                  )}
+                  {partnersError && (
+                    <p className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-center text-sm font-semibold text-amber-800">
+                      {partnersError}
+                    </p>
+                  )}
+                  {user && !partnersLoading && !partnersError && realPartners && realPartners.length === 0 && (
+                    <p className="mt-4 rounded-2xl border border-slate-200/80 bg-white p-6 text-center text-sm text-slate-500">
+                      아직 파트너가 없어요. Complete your profile on the Profile tab so others can find you.
+                    </p>
+                  )}
+                  <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                    {(realPartners || []).map((p) => {
+                      const status = statuses[p.uid] || 'idle';
+                      return (
+                        <article key={p.uid} className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm transition-shadow hover:shadow-md sm:p-5">
+                          <div className="flex items-start justify-between gap-2">
+                            <div className="flex items-center gap-3">
+                              <span className="text-3xl">{p.flag}</span>
+                              <div>
+                                <p className="font-bold">{p.name}</p>
+                                <p className="text-xs text-slate-500">
+                                  {p.native} → {p.learning} · {p.level}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <p className="mt-3 text-sm leading-relaxed text-slate-600 [overflow-wrap:anywhere]">{p.bio}</p>
+                          <div className="mt-3 flex flex-wrap gap-1.5">
+                            {p.interests.map((i) => (
+                              <span key={i} className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">{i}</span>
+                            ))}
+                          </div>
+                          <button
+                            onClick={() => sayHello({ id: p.uid, name: p.name, flag: p.flag })}
+                            disabled={status !== 'idle'}
+                            className={`mt-4 w-full rounded-xl py-3 font-bold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98] disabled:cursor-default ${
+                              status === 'matched'
+                                ? 'bg-emerald-100 text-emerald-700'
+                                : status === 'pending'
+                                  ? 'bg-slate-200 text-slate-500'
+                                  : 'bg-violet-600 text-white shadow-sm hover:bg-violet-700'
+                            }`}
+                          >
+                            {status === 'matched' ? '✓ Matched — open Chats' : status === 'pending' ? 'Waiting for accept…' : 'Say hello'}
+                          </button>
+                          <button
+                            onClick={() => void startVoiceCall(p)}
+                            disabled={call !== null}
+                            className="mt-2 w-full rounded-xl border border-violet-200 bg-violet-50 py-3 font-bold text-violet-700 transition hover:bg-violet-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98] disabled:cursor-default disabled:opacity-60"
+                          >
+                            🎤 음성 통화
+                          </button>
+                        </article>
+                      );
+                    })}
                   </div>
                 </>
               )}
@@ -594,7 +1027,7 @@ export default function ExchangePage() {
                       onClick={() => setActiveChatId(c.id)}
                       className="flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white p-4 text-left shadow-sm transition hover:border-violet-300 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
                     >
-                      <img src={c.avatar} alt="" className="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />
+                      {c.avatar ? (<img src={c.avatar} alt="" className="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />) : (<span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-2xl ring-2 ring-violet-200">{c.flag || '🌐'}</span>)}
                       <span className="min-w-0 flex-1">
                         <span className="block font-bold">
                           {c.name}{' '}
@@ -612,7 +1045,7 @@ export default function ExchangePage() {
                 <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm">
                   <div className="flex items-center gap-3 border-b border-slate-100 p-3 sm:p-4">
                     <button onClick={() => setActiveChatId(null)} className="min-h-[44px] rounded-lg px-2 font-bold text-violet-600 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">← Back</button>
-                    <img src={activeChat.avatar} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />
+                    {activeChat.avatar ? (<img src={activeChat.avatar} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />) : (<span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xl ring-2 ring-violet-200">{activeChat.flag || '🌐'}</span>)}
                     <span className="font-bold">
                       {activeChat.name}{' '}
                       {activeChat.isAi && <span className="rounded-full bg-violet-600 px-2 py-0.5 text-[11px] font-extrabold text-white">AI</span>}
@@ -652,12 +1085,12 @@ export default function ExchangePage() {
                     <input
                       value={input}
                       onChange={(e) => setInput(e.target.value)}
-                      onKeyDown={(e) => e.key === 'Enter' && sendAiMessage()}
+                      onKeyDown={(e) => e.key === 'Enter' && sendCurrentMessage()}
                       placeholder="Write a message…"
                       maxLength={500}
                       className="min-w-0 flex-1 rounded-xl border border-slate-200 px-3.5 py-2.5 text-sm outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
                     />
-                    <button onClick={sendAiMessage} disabled={aiSending} className="min-h-[44px] rounded-xl bg-violet-600 px-4 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98] disabled:opacity-60">
+                    <button onClick={sendCurrentMessage} disabled={aiSending} className="min-h-[44px] rounded-xl bg-violet-600 px-4 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98] disabled:opacity-60">
                       {aiSending ? 'Sending…' : 'Send'}
                     </button>
                   </div>
@@ -940,6 +1373,75 @@ export default function ExchangePage() {
                 </button>
               </>
             )}
+          </div>
+        </div>
+      )}
+
+      {/* Voice call: remote audio plays here (audio-only, no video element). */}
+      <audio ref={remoteAudioRef} autoPlay playsInline className="hidden" />
+
+      {/* Outgoing / active call bar */}
+      {call && call.phase !== 'incoming' && (
+        <div className="fixed inset-x-0 bottom-20 z-50 mx-auto w-fit max-w-[92%] rounded-3xl bg-slate-900 px-5 py-4 text-center text-white shadow-xl md:bottom-8">
+          <p className="font-extrabold">
+            {call.phase === 'outgoing' ? `📞 Calling ${call.peerName}…` : `🎤 On a call with ${call.peerName}`}
+          </p>
+          {call.phase === 'active' && (
+            <p className="mt-1 text-sm text-slate-300">
+              {String(Math.floor(elapsed / 60)).padStart(2, '0')}:{String(elapsed % 60).padStart(2, '0')}
+              {' · '}
+              {call.connection === 'connected'
+                ? '연결됨'
+                : call.connection === 'failed'
+                  ? '연결 실패 — 네트워크를 확인하세요'
+                  : call.connection === 'closed'
+                    ? '종료됨'
+                    : '연결 중…'}
+            </p>
+          )}
+          {call.phase === 'outgoing' && <p className="mt-1 text-sm text-slate-300">Waiting for them to pick up…</p>}
+          <div className="mt-3 flex justify-center gap-2">
+            {call.phase === 'active' && (
+              <button
+                onClick={toggleCallMute}
+                className="min-h-[44px] rounded-xl bg-white/15 px-4 py-2 text-sm font-bold hover:bg-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              >
+                {call.muted ? '🔇 Unmute' : '🎤 Mute'}
+              </button>
+            )}
+            <button
+              onClick={() => void endVoiceCall()}
+              className="min-h-[44px] rounded-xl bg-red-600 px-5 py-2 text-sm font-bold hover:bg-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
+            >
+              {call.phase === 'outgoing' ? 'Cancel call' : 'End call'}
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Incoming call */}
+      {call && call.phase === 'incoming' && (
+        <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 p-4 backdrop-blur-[2px] sm:items-center">
+          <div className="w-full max-w-sm rounded-3xl bg-white p-5 text-center shadow-xl">
+            <p className="text-4xl">📞</p>
+            <h3 className="mt-2 font-extrabold">Incoming voice call</h3>
+            <p className="mt-1 text-sm text-slate-500">
+              {call.peerName} wants to talk. Audio only — no video.
+            </p>
+            <div className="mt-4 flex gap-2">
+              <button
+                onClick={() => void declineIncomingCall()}
+                className="min-h-[48px] flex-1 rounded-xl bg-slate-200 py-3 font-bold text-slate-700 hover:bg-slate-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+              >
+                거절
+              </button>
+              <button
+                onClick={() => void acceptIncomingCall()}
+                className="min-h-[48px] flex-1 rounded-xl bg-emerald-600 py-3 font-bold text-white shadow-sm hover:bg-emerald-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+              >
+                받기
+              </button>
+            </div>
           </div>
         </div>
       )}

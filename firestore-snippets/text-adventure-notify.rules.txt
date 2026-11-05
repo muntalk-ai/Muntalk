@@ -1,0 +1,17 @@
+// Firestore rules snippet — Text Adventure notify list.
+// Publish in the Firebase console (NOT via the repo firestore.rules file —
+// console rules are the live source of truth; a repo-file edit could
+// overwrite live rules). Target: Sunday console bundle 2026-11-08.
+// Until this is published, the /watch notify form fails with
+// permission-denied and shows the "opens soon" fallback (by design).
+
+match /text_adventure_notify/{docId} {
+  allow read: if isAdmin();
+  allow create: if onlyAllowedFields(['email', 'ep', 'createdAt'])
+    && request.resource.data.email is string
+    && request.resource.data.email.size() > 3
+    && request.resource.data.email.size() < 200
+    && request.resource.data.ep is int
+    && request.resource.data.ep >= 1;
+  allow update, delete: if isAdmin();
+}
