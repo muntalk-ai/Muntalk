@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 };
 
 // Muntuz.com Coming Soon landing page.
-// Shown as the first screen on the muntuz.com host (see src/middleware.ts).
-// Also reachable directly at /muntuz on any host (e.g. Vercel Preview).
+// Reachable directly at /muntuz on any host (e.g. Vercel Preview).
+// The first screen on the muntuz.com host is /exchange (see src/middleware.ts).
 export default function MuntuzLandingPage() {
   return <MuntuzLandingClient />;
 }
