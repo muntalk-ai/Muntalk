@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import { collection, doc, getDoc, getDocs, limit, query, serverTimestamp, setDoc, where } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { apiFetch } from '@/lib/apiClient';
@@ -181,6 +182,38 @@ export default function ExchangePage() {
   const [billing, setBilling] = useState<'monthly' | 'yearly'>('yearly');
   const [reportChat, setReportChat] = useState<Chat | null>(null);
   const [reportReason, setReportReason] = useState('');
+
+  // Photo lightbox — tap a partner avatar or gallery photo to see the
+  // original high-resolution file. `images` enables prev/next inside a
+  // gallery; a single photo has no list.
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string; images?: string[]; index?: number } | null>(null);
+  const openLightbox = (src: string, alt: string, images?: string[]) =>
+    setLightbox({ src, alt, images, index: images ? images.indexOf(src) : undefined });
+  const stepLightbox = (dir: 1 | -1) => {
+    setLightbox((cur) => {
+      if (!cur || !cur.images || cur.images.length === 0) return cur;
+      const next = ((((cur.index ?? 0) + dir) % cur.images.length) + cur.images.length) % cur.images.length;
+      return { ...cur, index: next, src: cur.images[next] };
+    });
+  };
+
+  // Lightbox keys + scroll lock while open.
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setLightbox(null);
+      if (e.key === 'ArrowRight') stepLightbox(1);
+      if (e.key === 'ArrowLeft') stepLightbox(-1);
+    };
+    document.addEventListener('keydown', onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps — stepLightbox only uses the stable setLightbox.
+  }, [lightbox]);
 
   // AI partner memory (per partner, loaded once per page load).
   // memoryRef: partnerId -> formatted memory text sent with chat calls.
@@ -974,7 +1007,14 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                     {AI_PARTNERS.map((p) => (
                       <article key={p.id} className="rounded-2xl border border-amber-100 bg-white p-4 shadow-sm transition-shadow hover:shadow-md sm:p-5">
                         <div className="flex items-start gap-3">
-                          <img src={p.avatar} alt={`${p.name} AI partner avatar`} className="h-14 w-14 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />
+                          <button
+                            type="button"
+                            onClick={() => openLightbox(p.avatar, `${p.name} AI partner photo`)}
+                            aria-label={`View ${p.name}'s photo full size`}
+                            className="h-14 w-14 shrink-0 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+                          >
+                            <Image src={p.avatar} alt={`${p.name} AI partner avatar`} width={112} height={112} className="h-14 w-14 rounded-full object-cover ring-2 ring-violet-200" />
+                          </button>
                           <div className="min-w-0 flex-1">
                             <p className="font-bold">
                               {p.name}{' '}
@@ -1010,13 +1050,21 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                           </p>
                           <div className="mt-2 flex gap-2 overflow-x-auto pb-1">
                             {p.gallery.map((g, i) => (
-                              <img
+                              <button
                                 key={g}
-                                src={g}
-                                alt={`Lifestyle photo ${i + 1} of AI partner ${p.name}`}
-                                loading="lazy"
-                                className="h-20 w-20 shrink-0 rounded-xl object-cover ring-1 ring-slate-200"
-                              />
+                                type="button"
+                                onClick={() => openLightbox(g, `Lifestyle photo ${i + 1} of AI partner ${p.name}`, p.gallery)}
+                                aria-label={`View lifestyle photo ${i + 1} of ${p.name} full size`}
+                                className="h-20 w-20 shrink-0 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+                              >
+                                <Image
+                                  src={g}
+                                  alt={`Lifestyle photo ${i + 1} of AI partner ${p.name}`}
+                                  width={120}
+                                  height={120}
+                                  className="h-20 w-20 rounded-xl object-cover ring-1 ring-slate-200"
+                                />
+                              </button>
                             ))}
                           </div>
                         </div>
@@ -1177,7 +1225,7 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                       onClick={() => setActiveChatId(c.id)}
                       className="flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white p-4 text-left shadow-sm transition hover:border-violet-300 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
                     >
-                      {c.avatar ? (<img src={c.avatar} alt="" className="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />) : (<span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-2xl ring-2 ring-violet-200">{c.flag || '🌐'}</span>)}
+                      {c.avatar ? (<Image src={c.avatar} alt="" width={96} height={96} className="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />) : (<span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-2xl ring-2 ring-violet-200">{c.flag || '🌐'}</span>)}
                       <span className="min-w-0 flex-1">
                         <span className="block font-bold">
                           {c.name}{' '}
@@ -1195,7 +1243,7 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                 <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm">
                   <div className="flex items-center gap-3 border-b border-slate-100 p-3 sm:p-4">
                     <button onClick={leaveAiChat} className="min-h-[44px] rounded-lg px-2 font-bold text-violet-600 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">← Back</button>
-                    {activeChat.avatar ? (<img src={activeChat.avatar} alt={`${activeChat.name} AI partner`} className="h-14 w-14 shrink-0 rounded-full object-cover ring-2 ring-violet-200 sm:h-16 sm:w-16" />) : (<span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-slate-100 text-2xl ring-2 ring-violet-200 sm:h-16 sm:w-16">{activeChat.flag || '🌐'}</span>)}
+                    {activeChat.avatar ? (<button type="button" onClick={() => openLightbox(activeChat.avatar, `${activeChat.name} AI partner photo`)} aria-label={`View ${activeChat.name}'s photo full size`} className="h-14 w-14 shrink-0 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 sm:h-16 sm:w-16"><Image src={activeChat.avatar} alt={`${activeChat.name} AI partner`} width={112} height={112} className="h-14 w-14 rounded-full object-cover ring-2 ring-violet-200 sm:h-16 sm:w-16" /></button>) : (<span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-slate-100 text-2xl ring-2 ring-violet-200 sm:h-16 sm:w-16">{activeChat.flag || '🌐'}</span>)}
                     <span className="font-bold">
                       {activeChat.name}{' '}
                       {activeChat.isAi && <span className="rounded-full bg-violet-600 px-2 py-0.5 text-[11px] font-extrabold text-white">AI</span>}
@@ -1224,9 +1272,9 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                   <div className="flex flex-col gap-3 p-4">
                     {activeChat.messages.map((m) => (
                       <div key={m.id} className={`flex items-start gap-2 ${m.from === 'me' ? 'justify-end' : 'justify-start'}`}>
-                        {m.from !== 'me' && (
-                          <img src={activeChat.avatar} alt="" className="mt-0.5 h-8 w-8 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />
-                        )}
+                        {m.from !== 'me' && activeChat.avatar ? (
+                          <Image src={activeChat.avatar} alt="" width={64} height={64} className="mt-0.5 h-8 w-8 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />
+                        ) : null}
                         <div
                           onClick={(e) => {
                             if ((e.target as HTMLElement).closest('a')) return;
@@ -1257,11 +1305,12 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                           )}
                           {m.photo && (
                             <a href={m.photo} target="_blank" rel="noreferrer" className="mb-2 block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500" aria-label="Open shared gallery photo full size">
-                              <img
+                              <Image
                                 src={m.photo}
                                 alt="Photo shared by this AI partner from their gallery"
-                                loading="lazy"
-                                className="max-h-56 w-auto max-w-full rounded-xl object-cover"
+                                width={448}
+                                height={672}
+                                className="h-auto max-h-56 w-auto max-w-full rounded-xl object-cover"
                               />
                             </a>
                           )}
@@ -1644,6 +1693,64 @@ Pilot — AI rooms are the main experience; People room is a waitlist
       {toast && (
         <div className="fixed inset-x-0 bottom-20 z-50 mx-auto w-fit max-w-[90%] rounded-full bg-slate-900 px-4 py-2.5 text-center text-sm font-semibold text-white shadow-lg md:bottom-8">
           {toast}
+        </div>
+      )}
+
+      {/* Photo lightbox — original high-resolution file (not the thumbnail) */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4"
+          onClick={() => setLightbox(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={lightbox.alt}
+        >
+          <button
+            type="button"
+            onClick={() => setLightbox(null)}
+            aria-label="Close photo viewer"
+            className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-2xl font-bold text-white hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          >
+            ×
+          </button>
+          {lightbox.images && lightbox.images.length > 1 && (
+            <>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  stepLightbox(-1);
+                }}
+                aria-label="Previous photo"
+                className="absolute left-2 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-2xl font-bold text-white hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:left-4"
+              >
+                ‹
+              </button>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  stepLightbox(1);
+                }}
+                aria-label="Next photo"
+                className="absolute right-2 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-2xl font-bold text-white hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:right-4"
+              >
+                ›
+              </button>
+            </>
+          )}
+          {/* eslint-disable-next-line @next/next/no-img-element — the lightbox must show the original full-resolution file, not an optimized variant */}
+          <img
+            src={lightbox.src}
+            alt={lightbox.alt}
+            onClick={(e) => e.stopPropagation()}
+            className="max-h-[85vh] max-w-[92vw] rounded-xl object-contain shadow-2xl"
+          />
+          {lightbox.images && lightbox.images.length > 1 && (
+            <p className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-black/60 px-3 py-1 text-xs font-bold text-white">
+              {(lightbox.index ?? 0) + 1} / {lightbox.images.length}
+            </p>
+          )}
         </div>
       )}
     </div>
