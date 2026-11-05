@@ -1,0 +1,41 @@
+# MunTalk Exchange — Firestore console snippet: exchange_memories
+#
+# HOW TO APPLY (Jay, in the Firebase console — NOT via repo firestore.rules):
+#   Firebase console → Firestore Database → Rules → paste the `match` block
+#   below inside `rules_version = '2'; service cloud.firestore { ... }`,
+#   next to the existing exchange_profiles rule, then Publish.
+#   The repo file firestore.rules is intentionally NOT changed by this PR
+#   (it is out of sync with the live console rules).
+#
+# WHAT THE APP WRITES (client code: src/app/exchange/page.tsx,
+# server code: src/app/api/exchange-ai-chat/route.ts):
+#   collection: exchange_memories
+#   doc id:    `${uid}_${partnerId}`  (one memory per user per AI partner)
+#   fields:    uid (string), partnerId (string, e.g. "ai-jiyoung"),
+#              nickname (string, Exchange profile nickname — never a real
+#              name), interests (string array), facts (string array, at
+#              most 10 short lines), updatedAt (server timestamp)
+#   Nothing else is stored — no real name, email, or contact details.
+#
+# WHY THIS RULE EXISTS:
+#   The browser reads its own memory doc to send it with the AI chat call,
+#   so the partner can recall earlier chats. Until this rule is published,
+#   that read fails with permission-denied and AI chats simply work
+#   WITHOUT memory (no crash, no fake memory). Memory saving and clearing
+#   run server-side (admin) and do not depend on this rule.
+#
+# Paste this block into the console rules:
+#
+#   match /exchange_memories/{docId} {
+#     // Read/delete: signed-in users may only touch their own memory docs,
+#     // and the doc id must match uid_partnerId.
+#     allow read, delete: if request.auth != null
+#       && resource.data.uid == request.auth.uid
+#       && docId == request.auth.uid + '_' + resource.data.partnerId;
+#     // Create/update (client path): only the owner, only the six allowed
+#     // fields. The server-side summary write (admin) bypasses rules.
+#     allow create, update: if request.auth != null
+#       && request.resource.data.uid == request.auth.uid
+#       && docId == request.auth.uid + '_' + request.resource.data.partnerId
+#       && request.resource.data.keys().hasOnly(['uid', 'partnerId', 'nickname', 'interests', 'facts', 'updatedAt']);
+#   }
