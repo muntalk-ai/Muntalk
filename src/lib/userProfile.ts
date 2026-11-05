@@ -9,9 +9,9 @@ import { UI_LANGUAGES } from '@/data/languages';
 
 /** 브라우저 로케일에서 모국어 코드 감지 (신규 가입 기본값용)
  *  navigator.language(e.g. 'vi', 'vi-VN')를 UI_LANGUAGES 코드와 매칭.
- *  매칭 실패 시 기존 기본값 'ko-KR' 유지. SSR 가드 포함. */
+ *  매칭 실패 시 기본값 'en-US'. SSR 가드 포함. */
 export function detectBrowserNativeLang(): string {
-  const FALLBACK = 'ko-KR';
+  const FALLBACK = 'en-US';
   try {
     if (typeof navigator === 'undefined' || !navigator.language) return FALLBACK;
     const nav = navigator.language.toLowerCase();
@@ -25,6 +25,20 @@ export function detectBrowserNativeLang(): string {
     if (prefix) return prefix;
   } catch { /* ignore */ }
   return FALLBACK;
+}
+
+/** 모국어 해석 체인 (배치 테스트 페이지와 동일 패턴)
+ *  프로필 → localStorage('mt_native_lang') → 브라우저 언어 감지 → 'en-US'.
+ *  'ko-KR' 하드코딩 기본값 없음. SSR 가드 포함. */
+export function resolveNativeLang(profileNative?: string | null): string {
+  if (profileNative) return profileNative;
+  try {
+    if (typeof window !== 'undefined') {
+      const ls = localStorage.getItem('mt_native_lang');
+      if (ls) return ls;
+    }
+  } catch { /* ignore */ }
+  return detectBrowserNativeLang();
 }
 
 export interface UserProfile {

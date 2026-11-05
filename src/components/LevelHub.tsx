@@ -4,7 +4,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { signOut } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
-import { updateUserProfile } from '@/lib/userProfile';
+import { updateUserProfile, detectBrowserNativeLang, resolveNativeLang } from '@/lib/userProfile';
 import { db } from '@/lib/firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import PushPrimeCard from './PushPrimeCard';
@@ -168,7 +168,7 @@ export default function LevelHub() {
   // 언어 설정 (localStorage 저장)
   const [learnLang, setLearnLang]   = useState('en-US');
   const [placementLevel, setPlacementLevel] = useState<string>('');
-  const [nativeLang, setNativeLang] = useState('ko-KR');
+  const [nativeLang, setNativeLang] = useState('en-US');
 
   // 언어 선택 모달
   const [showLangModal, setShowLangModal]   = useState(false);
@@ -320,7 +320,7 @@ export default function LevelHub() {
       const lsLearn = (() => { try { return localStorage.getItem('mt_learn_lang'); } catch { return null; } })();
       const lsNative = (() => { try { return localStorage.getItem('mt_native_lang'); } catch { return null; } })();
       const profileLearn = profile.learnLang || 'en-US';
-      const profileNative = profile.nativeLang || 'ko-KR';
+      const profileNative = profile.nativeLang || detectBrowserNativeLang();
       if (pendingLangSyncRef.current && lsLearn === pendingLangSyncRef.current && lsLearn !== profileLearn) {
         // 반영 대기 중 → 로컬 값 유지 (state도 로컬 값으로 맞춤)
         setLearnLang(lsLearn);
@@ -351,7 +351,7 @@ export default function LevelHub() {
         const savedXp     = parseInt(localStorage.getItem('mt_xp') || '0', 10);
         const savedDone   = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
         const savedLearn  = localStorage.getItem('mt_learn_lang') || 'en-US';
-        const savedNative = localStorage.getItem('mt_native_lang') || 'ko-KR';
+        const savedNative = resolveNativeLang();
         setXp(savedXp);
         setCompletedLessons(new Set(savedDone));
         setLearnLang(savedLearn);

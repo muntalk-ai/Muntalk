@@ -5,7 +5,7 @@ import LessonPlayer from '@/components/LessonPlayer';
 import CertificateModal from '@/components/CertificateModal';
 import TestimonialPrompt from '@/components/TestimonialPrompt';
 import { useAuth } from '@/context/AuthContext';
-import { updateUserProfile, getUserProfile, recordActivity } from '@/lib/userProfile';
+import { updateUserProfile, getUserProfile, recordActivity, resolveNativeLang } from '@/lib/userProfile';
 import { addCardToSRS } from '@/lib/spacedRepetition';
 import { checkAndAwardCertificate, Certificate } from '@/lib/certificates';
 import { awardXp } from '@/lib/xpClient';
@@ -27,7 +27,7 @@ export default function LessonPage({
   const { user, loading: authLoading, refreshProfile } = useAuth();
 
   const [langId,  setLangId]  = useState(searchParams.get('lang')    || 'en-US');
-  const [subLang, setSubLang] = useState(searchParams.get('subLang') || 'ko-KR');
+  const [subLang, setSubLang] = useState(searchParams.get('subLang') || 'en-US');
 
   const [xp, setXp] = useState(0);
   const [loaded, setLoaded] = useState(false);
@@ -57,8 +57,7 @@ export default function LessonPage({
         if (lsLang) setLangId(lsLang);
       }
       if (!searchParams.get('subLang')) {
-        const lsNative = localStorage.getItem('mt_native_lang');
-        if (lsNative) setSubLang(lsNative);
+        setSubLang(resolveNativeLang());
       }
     } catch { /* ignore */ }
     setLoaded(true);

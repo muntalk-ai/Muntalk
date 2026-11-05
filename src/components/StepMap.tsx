@@ -13,7 +13,7 @@ interface StepMapProps {
   isAdmin?: boolean;
 }
 
-export default function StepMap({ levelId, langId = 'en-US', subLang = 'ko-KR', xp = 0, completedLessons = new Set(), tutorId = 't01', isAdmin = false }: StepMapProps) {
+export default function StepMap({ levelId, langId = 'en-US', subLang = 'en-US', xp = 0, completedLessons = new Set(), tutorId = 't01', isAdmin = false }: StepMapProps) {
   const router = useRouter();
   const level = CURRICULUM.find(l => l.id === levelId);
   if (!level) return <div style={{ color: '#fff', padding: 40 }}>Level not found</div>;

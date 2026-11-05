@@ -6,7 +6,7 @@ import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
 import type { CSSProperties } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
-import { getUserProfile } from '@/lib/userProfile';
+import { getUserProfile, resolveNativeLang } from '@/lib/userProfile';
 import { getTutorById } from '@/data/tutors';
 import { hasTts } from '@/data/languages';
 import { speakWithDeviceTts } from '@/lib/deviceTts';
@@ -123,7 +123,7 @@ function DiscoverContent() {
   const [input,      setInput]      = useState('');
   const [loading,    setLoading]    = useState(false);
   const [langId,     setLangId]     = useState('en-US');
-  const [subLang,    setSubLang]    = useState('ko-KR'); // 모국어 기본값: 영어 대신 학습자 모국어 (Coach와 동일)
+  const [subLang,    setSubLang]    = useState('en-US'); // 첫 페인트 기본값은 영어 — useEffect에서 저장값/프로필/브라우저 언어로 해석
   const [tutorId,    setTutorId]    = useState('t01');
   const [planId,     setPlanId]     = useState<string>('free');
   const [isAdmin,    setIsAdmin]    = useState(false);
@@ -153,7 +153,7 @@ function DiscoverContent() {
 
   useEffect(() => {
     const ll = localStorage.getItem('mt_learn_lang') || 'en-US';
-    const sl = localStorage.getItem('mt_native_lang') || 'ko-KR'; // 영어 대신 모국어 기본값 (Coach와 동일)
+    const sl = resolveNativeLang();
     const ti = localStorage.getItem('mt_tutor_id') || 't01';
     setLangId(ll); setSubLang(sl); setTutorId(ti);
     if (user) {

@@ -18,6 +18,7 @@ import {
   parseReportJson, resolveTopic, getGuestUsage, consumeGuestSession,
   type MicroTalkReport,
 } from '@/lib/microtalk';
+import { detectBrowserNativeLang, resolveNativeLang } from '@/lib/userProfile';
 
 interface ChatMsg { role: 'user' | 'ai'; text: string }
 
@@ -50,7 +51,7 @@ export default function MicroTalkPage() {
   const [topic, setTopic] = useState<LearningPurpose>('daily');
   const [purpose, setPurpose] = useState<LearningPurpose | null>(null);
   const [learnLang, setLearnLang] = useState('en-US');
-  const [nativeLang, setNativeLang] = useState('ko-KR');
+  const [nativeLang, setNativeLang] = useState('en-US');
   const [messages, setMessages] = useState<ChatMsg[]>([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -89,12 +90,12 @@ export default function MicroTalkPage() {
     if (authLoading) return;
     if (profile) {
       setLearnLang(profile.learnLang || 'en-US');
-      setNativeLang(profile.nativeLang || 'ko-KR');
+      setNativeLang(profile.nativeLang || detectBrowserNativeLang());
       setPurpose(profile.purpose ?? null);
     } else {
       try {
         setLearnLang(localStorage.getItem('mt_learn_lang') || 'en-US');
-        setNativeLang(localStorage.getItem('mt_native_lang') || 'ko-KR');
+        setNativeLang(resolveNativeLang());
         const gp = localStorage.getItem('mt_purpose');
         setPurpose(gp === 'business' || gp === 'travel' || gp === 'daily' || gp === 'exam' || gp === 'hobby' ? gp : null);
       } catch { /* ignore */ }
