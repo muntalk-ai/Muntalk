@@ -24,12 +24,14 @@ const PROTECTED_PREFIXES = [
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // ── Muntuz.com host branch (Coming Soon landing, PR: feature/muntuz-landing)
-  // muntuz.com (and www / subdomains) shows the /muntuz landing page as its
-  // first screen, until Exchange is ready to replace it. muntalk.com and
-  // every other host fall through to the normal rules below unchanged.
-  // Static assets (avatars, images, …) and API routes pass through so the
-  // landing page's own images keep loading.
+  // ── Muntuz.com host branch (Exchange as first screen, PR: feature/muntuz-middleware)
+  // muntuz.com / www.muntuz.com root ('/') rewrites to /exchange — the Exchange
+  // app is the first screen on the Muntuz host. Every other path on the Muntuz
+  // host passes through unchanged, so /exchange, /muntuz (Coming Soon landing)
+  // and the rest of the app keep working. muntalk.com and every other host
+  // fall through to the normal rules below unchanged.
+  // (Previously, all Muntuz-host paths rewrote to /muntuz — the Coming Soon
+  // landing — which is why muntuz.com/exchange showed the landing page.)
   // Host detection: `request.nextUrl.hostname` is NOT reliable — a bare
   // `next start` server reports its own listen address (localhost) there
   // and ignores the Host header (verified 2026-10-30). Read the headers
@@ -44,19 +46,9 @@ export function middleware(request: NextRequest) {
     .trim()
     .split(':')[0]
     .toLowerCase();
-  const isMuntuz =
-    hostname === 'muntuz.com' ||
-    hostname === 'www.muntuz.com' ||
-    hostname.endsWith('.muntuz.com');
-  if (isMuntuz) {
-    const isAsset =
-      pathname.startsWith('/muntuz-avatars/') ||
-      pathname.startsWith('/exchange-ai-avatars/') ||
-      /\.(png|jpg|jpeg|webp|avif|svg|ico|css|js|json|webmanifest|txt)$/i.test(pathname);
-    if (pathname === '/muntuz' || pathname.startsWith('/api/') || isAsset) {
-      return NextResponse.next();
-    }
-    return NextResponse.rewrite(new URL('/muntuz', request.url));
+  const isMuntuz = hostname === 'muntuz.com' || hostname === 'www.muntuz.com';
+  if (isMuntuz && pathname === '/') {
+    return NextResponse.rewrite(new URL('/exchange', request.url));
   }
 
   // 공개 경로 → 통과
@@ -78,5 +70,8 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next/static|_next/image|favicon.ico|api/).*)'],
+  // Root only: the only path this middleware ever rewrites is '/'
+  // (Muntuz host → /exchange). Every other branch above returns
+  // NextResponse.next(), so no other path needs to invoke it.
+  matcher: ['/'],
 };
