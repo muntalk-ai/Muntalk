@@ -12,8 +12,9 @@
 //   ko lzMweQ2eu7k · vi YW7kVv3eij0 · ja 3acrup801sI · zh qoEwn-CL0gM
 //   th lCLo7pgUoSY · id yAhcBMHek1A · hi Yxzh3k5Ozvc · es n_sMEvAnyxo
 //   pt gJJjkM6GWmI · fr FQM4oTaBRMo
-// Ep1 ru/de/ar have no video ID yet (daily upload limit + Ralsim channel
-// login) — they stay "준비 중" until their uploads finish.
+// Ep1 ru 8RPaaqO3Wi8 (@Ralsim.muntalk, unlisted, 2026-11-04).
+// Ep1 de/ar have no video ID yet (daily upload limit) — they stay "준비 중"
+// until their uploads finish.
 // Ep2 has no YouTube IDs yet (renders exist for ko/vi/hi/zh, uploads pending).
 
 export type Lang =
@@ -69,7 +70,8 @@ export const EPISODES: Episode[] = [
       es: 'n_sMEvAnyxo',
       pt: 'gJJjkM6GWmI',
       fr: 'FQM4oTaBRMo',
-      // de, ar, ru: no video ID yet — uploads pending (see header comment).
+      ru: '8RPaaqO3Wi8',
+      // de, ar: no video ID yet — uploads pending (see header comment).
     },
     siteDate: '2026-11-05',
     // Planned: goes Public when Ep2 goes live on the site (this PR).
