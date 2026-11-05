@@ -29,6 +29,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/learn/same-same-vs-its-the-same', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/learn/embarazada-vs-embarrassed', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/learn/window-shopping-not-eye-shopping', priority: 0.7, changeFrequency: 'monthly' },
+    // Text Adventure: /watch hub + episodes (2026-11-04). New episodes are
+    // added here as they go live; videos are unlisted YouTube embeds.
+    { path: '/watch', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/watch/ep-01', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/watch/ep-02', priority: 0.7, changeFrequency: 'monthly' },
   ];
   const now = new Date();
   return pages.map((p) => ({

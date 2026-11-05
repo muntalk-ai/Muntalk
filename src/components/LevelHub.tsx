@@ -712,6 +712,7 @@ export default function LevelHub() {
             { label: '🎭 Roleplay',  action: () => router.push('/lingua/roleplay') },
             { label: '🔁 Review',    action: () => router.push('/lingua/review') },
             { label: '🧭 AI Coach',  action: () => router.push('/lingua/coach') },
+            { label: '📺 Watch',     action: () => router.push('/watch') },
           ]).map(({ label, action }, i) => (
             <button key={label} className={`mt-nav-tab${i === 0 ? ' active' : ''}`}
               onClick={action}>{label}</button>
@@ -895,6 +896,7 @@ export default function LevelHub() {
             { header: 'LAB' },
             { emoji: '✨', label: 'Discover',       action: () => router.push('/lingua/discover') },
             { emoji: '🌟', label: 'Dream Studio',   action: () => router.push('/lingua/dream') },
+            { emoji: '📺', label: 'Text Adventure', action: () => router.push('/watch') },
             { header: 'MORE' },
             { emoji: '📚', label: 'Word Bank',      action: () => router.push('/lingua/words') },
             { emoji: '👩‍🏫', label: 'Tutors',       action: () => router.push('/lingua/tutors') },
@@ -1057,6 +1059,35 @@ export default function LevelHub() {
               </div>
             </>
           )}
+        </div>
+      </div>
+
+      {/* -- Text Adventure card: new episodes first on muntalk.com (2026-11-04) -- */}
+      <div style={{ maxWidth: 1080, margin: '24px auto 0', padding: '0 24px' }}>
+        <div
+          onClick={() => router.push('/watch/ep-02')}
+          style={{
+            display: 'flex', alignItems: 'center', gap: 16, cursor: 'pointer',
+            background: 'linear-gradient(135deg,#EEF2FF,#FDF2F8)',
+            border: '1.5px solid #C7D2FE', borderRadius: 20, padding: '18px 22px',
+            boxShadow: '0 2px 12px rgba(99,102,241,0.10)',
+          }}
+        >
+          <div style={{ fontSize: 34, lineHeight: 1 }}>🎬</div>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ fontSize: 15, fontWeight: 900, color: '#0F172A', lineHeight: 1.4 }}>
+              Text Adventure — Episode 2 is out first on muntalk.com
+            </div>
+            <div style={{ fontSize: 13, fontWeight: 600, color: '#64748B', lineHeight: 1.5, marginTop: 2 }}>
+              Mia picked her drink. Warm hands or iced coffee in the rain? Watch the 35-second story in 13 languages.
+            </div>
+          </div>
+          <div style={{
+            flexShrink: 0, background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff',
+            fontSize: 13, fontWeight: 900, borderRadius: 99, padding: '10px 18px', whiteSpace: 'nowrap',
+          }}>
+            ▶ Watch now
+          </div>
         </div>
       </div>
 
