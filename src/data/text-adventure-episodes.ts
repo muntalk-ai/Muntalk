@@ -14,10 +14,15 @@
 //   pt gJJjkM6GWmI · fr FQM4oTaBRMo
 // Ep1 ru 8RPaaqO3Wi8 (@Ralsim.muntalk, unlisted, 2026-11-04).
 // Ep1 de cHqWniJ6A-c · ar 250RB35Jmno (@Muntalk_official, unlisted, 2026-11-05).
+// Ep1 new 9 langs (2026-11-05, unlisted, language channels):
+//   my z57dE5eqWN8 (muntalk-my) · fil Y2Hlv5eNGXc (muntalk-fil)
+//   ms EdoSCTGsKOM (muntalk-ms) · mn aT4Tr-Ka7BE (muntalk-mn)
+//   tk biNTpg2JIvc · tg rYQPA2kuZg8 · ky 0xZ8AlX-hKg · uz _hiz1LfsDNk · kk DHRSGinzdV8 (muntalk-stan).
 // Ep2 has no YouTube IDs yet (renders exist for ko/vi/hi/zh, uploads pending).
 
 export type Lang =
-  | 'ko' | 'vi' | 'es' | 'ja' | 'th' | 'zh' | 'id' | 'hi' | 'pt' | 'fr' | 'de' | 'ar' | 'ru';
+  | 'ko' | 'vi' | 'es' | 'ja' | 'th' | 'zh' | 'id' | 'hi' | 'pt' | 'fr' | 'de' | 'ar' | 'ru'
+  | 'my' | 'fil' | 'ms' | 'mn' | 'tk' | 'tg' | 'ky' | 'uz' | 'kk';
 
 export const LANGS: { code: Lang; name: string; native: string }[] = [
   { code: 'ko', name: 'Korean', native: '한국어' },
@@ -33,6 +38,15 @@ export const LANGS: { code: Lang; name: string; native: string }[] = [
   { code: 'de', name: 'German', native: 'Deutsch' },
   { code: 'ar', name: 'Arabic', native: 'العربية' },
   { code: 'ru', name: 'Russian', native: 'Русский' },
+  { code: 'my', name: 'Burmese', native: 'မြန်မာဘာသာ' },
+  { code: 'fil', name: 'Tagalog', native: 'Tagalog' },
+  { code: 'ms', name: 'Malay', native: 'Bahasa Melayu' },
+  { code: 'mn', name: 'Mongolian', native: 'Монгол' },
+  { code: 'tk', name: 'Turkmen', native: 'Türkmençe' },
+  { code: 'tg', name: 'Tajik', native: 'Тоҷикӣ' },
+  { code: 'ky', name: 'Kyrgyz', native: 'Кыргызча' },
+  { code: 'uz', name: 'Uzbek', native: 'Oʻzbekcha' },
+  { code: 'kk', name: 'Kazakh', native: 'Қазақша' },
 ];
 
 export type Episode = {
@@ -72,6 +86,15 @@ export const EPISODES: Episode[] = [
       ru: '8RPaaqO3Wi8',
       de: 'cHqWniJ6A-c',
       ar: '250RB35Jmno',
+      my: 'z57dE5eqWN8',
+      fil: 'Y2Hlv5eNGXc',
+      ms: 'EdoSCTGsKOM',
+      mn: 'aT4Tr-Ka7BE',
+      tk: 'biNTpg2JIvc',
+      tg: 'rYQPA2kuZg8',
+      ky: '0xZ8AlX-hKg',
+      uz: '_hiz1LfsDNk',
+      kk: 'DHRSGinzdV8',
     },
     siteDate: '2026-11-05',
     // Planned: goes Public when Ep2 goes live on the site (this PR).
