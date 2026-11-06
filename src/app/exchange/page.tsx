@@ -14,6 +14,23 @@ import {
 } from '@/lib/exchangeMemory';
 import { useAuth } from '@/context/AuthContext';
 import {
+  AGE_BANDS,
+  COMM_MODES,
+  CORRECTION_PREFS,
+  COUNTRIES,
+  DAYS,
+  GENDERS,
+  GOALS,
+  TIME_SLOTS,
+  ageBandForAge,
+  calcAge,
+  saveExchangeProfile,
+  utcLabel,
+  type AgeBand,
+  type Gender,
+  type LearningGoal,
+} from '@/lib/exchangeProfile';
+import {
   createCallDoc,
   declineCall,
   endCallDoc,
@@ -48,6 +65,12 @@ import {
  * chats simply work without memory.
  * AI Review / Pro tabs are still demo data. The Profile tab is wired to
  * Firestore for signed-in users (collection `exchange_profiles`).
+ * Header: the shared /logo.png M-ring badge with "Muntuz" (Jay
+ * 2026-11-05 — same file the /muntuz landing uses, no new logo), plus a
+ * Log in button for signed-out users (/login?next=/exchange; the /login
+ * page already honours ?next=, so the global login flow is untouched).
+ * Signed-in users without a profile get a banner to /exchange/setup,
+ * the onboarding page that collects the same fields as the Profile tab.
  * Phase 1 profile fields (learning goal, country, gender, age band,
  * timezone, availability, comm mode, correction preference, same-gender
  * safety setting) are stored there too. The exact birthdate is never in
@@ -105,18 +128,10 @@ type RealPartner = {
   sameGenderOnly: boolean;
 };
 
-// Phase 1 human-profile fields (see goals/muntalk-exchange/files/
+// Phase 1 human-profile fields live in src/lib/exchangeProfile.ts so the
+// Profile tab and the /exchange/setup onboarding page share one source of
+// truth (Jay 2026-11-05, PR #169, B안 — see goals/muntalk-exchange/files/
 // human-exchange-profile-fields-analysis-2026-11-05.md).
-const GOALS = ['Conversation', 'Exam', 'Travel', 'Work', 'Friends'] as const;
-type LearningGoal = (typeof GOALS)[number];
-const GENDERS = ['Female', 'Male', 'Non-binary', 'Prefer not to say'] as const;
-type Gender = (typeof GENDERS)[number];
-const AGE_BANDS = ['18–24', '25–34', '35–44', '45+'] as const;
-type AgeBand = (typeof AGE_BANDS)[number];
-const COMM_MODES = ['Text', 'Voice', 'Both'] as const;
-const CORRECTION_PREFS = ['Often', 'Sometimes', 'Never'] as const;
-const TIME_SLOTS = ['Morning', 'Afternoon', 'Evening', 'Night'] as const;
-const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] as const;
 // Local hour ranges for each slot, used for timezone-overlap matching.
 const SLOT_HOURS: Record<string, [number, number]> = {
   Morning: [6, 12],
@@ -124,47 +139,7 @@ const SLOT_HOURS: Record<string, [number, number]> = {
   Evening: [18, 24],
   Night: [0, 6],
 };
-const COUNTRIES = [
-  'Argentina', 'Australia', 'Austria', 'Bangladesh', 'Belgium', 'Brazil', 'Canada',
-  'Chile', 'China', 'Colombia', 'Egypt', 'France', 'Germany', 'Hong Kong', 'India',
-  'Indonesia', 'Iran', 'Ireland', 'Israel', 'Italy', 'Japan', 'Kazakhstan', 'Kenya',
-  'Malaysia', 'Mexico', 'Mongolia', 'Morocco', 'Myanmar', 'Nepal', 'Netherlands',
-  'New Zealand', 'Nigeria', 'Pakistan', 'Peru', 'Philippines', 'Poland', 'Portugal',
-  'Russia', 'Saudi Arabia', 'Singapore', 'South Africa', 'South Korea', 'Spain',
-  'Sri Lanka', 'Switzerland', 'Taiwan', 'Thailand', 'Turkey', 'Ukraine',
-  'United Arab Emirates', 'United Kingdom', 'United States', 'Uzbekistan', 'Vietnam',
-  'Other',
-];
-
-function calcAge(birthdate: string): number | null {
-  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(birthdate);
-  if (!m) return null;
-  const y = Number(m[1]);
-  const mo = Number(m[2]);
-  const d = Number(m[3]);
-  const born = new Date(y, mo - 1, d);
-  if (born.getFullYear() !== y || born.getMonth() !== mo - 1 || born.getDate() !== d) return null;
-  const now = new Date();
-  let age = now.getFullYear() - y;
-  if (now.getMonth() < mo - 1 || (now.getMonth() === mo - 1 && now.getDate() < d)) age -= 1;
-  return age;
-}
-
-function ageBandForAge(age: number): AgeBand | '' {
-  if (age < 18) return '';
-  if (age <= 24) return '18–24';
-  if (age <= 34) return '25–34';
-  if (age <= 44) return '35–44';
-  return '45+';
-}
-
-function utcLabel(offsetMin: number): string {
-  const sign = offsetMin < 0 ? '-' : '+';
-  const abs = Math.abs(offsetMin);
-  const h = String(Math.floor(abs / 60)).padStart(2, '0');
-  const mi = String(abs % 60).padStart(2, '0');
-  return `UTC${sign}${h}:${mi}`;
-}
+// (calcAge / ageBandForAge / utcLabel live in src/lib/exchangeProfile.ts.)
 
 // Do any of `aSlots` (at UTC offset aOff) overlap any of `bSlots`
 // (at UTC offset bOff)? Slots are local hour ranges; each is converted
@@ -449,6 +424,10 @@ export default function ExchangePage() {
   const [profileLoading, setProfileLoading] = useState(false);
   const [profileLoaded, setProfileLoaded] = useState(false);
   const [profileError, setProfileError] = useState('');
+  // Whether a public `exchange_profiles/{uid}` doc exists. null = not
+  // known yet (logged out or still loading). Drives the setup banner:
+  // signed-in users without a profile get pointed to /exchange/setup.
+  const [profileExists, setProfileExists] = useState<boolean | null>(null);
 
   // ── Discover: real partners from `exchange_profiles` ──────────────
   // Signed-in users only (profile reads need auth). No demo users here:
@@ -784,6 +763,7 @@ export default function ExchangePage() {
     if (!user) {
       interestEditedRef.current = false;
       setProfileLoaded(false);
+      setProfileExists(null);
       setProfileError('');
       return;
     }
@@ -794,6 +774,7 @@ export default function ExchangePage() {
     getDoc(doc(db, 'exchange_profiles', user.uid))
       .then((snap) => {
         if (cancelled) return;
+        setProfileExists(snap.exists());
         if (snap.exists()) {
           const d = snap.data();
           if (typeof d.nativeLang === 'string') setNativeLang(d.nativeLang);
@@ -911,91 +892,57 @@ export default function ExchangePage() {
     }
   };
 
+  // Save goes through the shared module (src/lib/exchangeProfile.ts) so
+  // the Profile tab and the /exchange/setup onboarding page write exactly
+  // the same doc shape with the same 18+ gate. Toast wording is kept
+  // identical to the pre-refactor behaviour.
   const saveProfile = async () => {
     if (!user) {
       showToast('Sign in to save your Exchange profile to your account.');
       return;
     }
     setSaveError('');
-    // 18+ gate: Exchange is adults-only. Only the derived age band is
-    // stored in the public doc or shown to anyone — never the exact date
-    // or age.
-    if (!birthdate) {
-      setSaveError('Add your date of birth to save your profile. Exchange is 18+ only — your exact birthdate is never shown to anyone.');
-      return;
-    }
-    const age = calcAge(birthdate);
-    if (age === null) {
-      setSaveError('That date of birth does not look valid.');
-      return;
-    }
-    if (age < 18) {
-      setSaveError('You must be 18 or older to use MunTalk Exchange.');
-      return;
-    }
-    const band = ageBandForAge(age);
-    // Re-detect the timezone at save time (the user may have travelled).
-    let tz = timezone;
-    let off = utcOffsetMin;
-    try {
-      tz = Intl.DateTimeFormat().resolvedOptions().timeZone || tz || 'UTC';
-      off = -new Date().getTimezoneOffset();
-    } catch {
-      // Keep the values detected on mount.
-    }
-    try {
-      await setDoc(
-        doc(db, 'exchange_profiles', user.uid),
-        {
-          nickname: nickname.trim(),
-          nativeLang,
-          targetLang,
-          level,
-          interests: interestSel,
-          bio: bio.trim(),
-          learningGoal,
-          country,
-          gender,
-          ageBand: band,
-          timezone: tz,
-          utcOffsetMin: off,
-          availability: { days: availDays, slots: availSlots, perWeek: availPerWeek },
-          commMode,
-          correctionPref,
-          sameGenderOnly,
-          updatedAt: serverTimestamp(),
-        },
-        { merge: true }
-      );
-      setAgeBand(band);
-      setTimezone(tz);
-      setUtcOffsetMin(off);
-      setProfileLoaded(true);
-      // The exact birthdate goes to the owner-only private subcollection,
-      // never to the public doc (any signed-in user can read public docs).
-      // Until the console rule for it is published this write fails with
-      // permission-denied — the public profile above is already saved,
-      // so say so plainly instead of failing the whole save.
-      try {
-        await setDoc(
-          doc(db, 'exchange_profiles', user.uid, 'private', 'identity'),
-          { birthdate, ageBand: band, updatedAt: serverTimestamp() },
-          { merge: true }
-        );
-        showToast('Profile saved to your Exchange account.');
-      } catch (e) {
-        if ((e as { code?: string }).code === 'permission-denied') {
-          showToast('Profile saved, but your date of birth could not be stored yet (age-check rule not published). Your age band was saved.');
-        } else {
-          showToast('Profile saved, but your date of birth could not be stored. Please try saving again.');
-        }
+    const result = await saveExchangeProfile(user.uid, {
+      nickname,
+      nativeLang,
+      targetLang,
+      level,
+      interests: interestSel,
+      bio,
+      learningGoal,
+      country,
+      gender,
+      birthdate,
+      commMode,
+      correctionPref,
+      availDays,
+      availSlots,
+      availPerWeek,
+      sameGenderOnly,
+    });
+    if (result.ok === false) {
+      if (result.error === 'validation') {
+        setSaveError(result.message || 'Could not save your profile.');
+        return;
       }
-    } catch (err) {
       showToast(
-        (err as { code?: string }).code === 'permission-denied'
+        result.error === 'permission-denied'
           ? 'Could not save: Exchange profile permissions are not published yet. Your changes are kept on this page.'
           : 'Could not save your profile. Please try again.'
       );
+      return;
+    }
+    setAgeBand(result.band);
+    setTimezone(result.timezone);
+    setUtcOffsetMin(result.utcOffsetMin);
+    setProfileLoaded(true);
+    setProfileExists(true);
+    if (result.birthdateSaved === true) {
+      showToast('Profile saved to your Exchange account.');
+    } else if (result.birthdateError === 'permission-denied') {
+      showToast('Profile saved, but your date of birth could not be stored yet (age-check rule not published). Your age band was saved.');
+    } else {
+      showToast('Profile saved, but your date of birth could not be stored. Please try saving again.');
     }
   };
 
@@ -1360,19 +1307,39 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
       {/* Header */}
       <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 shadow-[0_1px_0_rgba(15,23,42,0.02)] backdrop-blur">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3.5">
-          <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-indigo-900 via-violet-600 to-violet-400 text-lg font-bold text-white shadow-md shadow-violet-600/25 ring-1 ring-white/40">
-              M
-            </div>
-            <div>
-              <h1 className="text-lg font-extrabold leading-tight">MunTalk Exchange</h1>
-              <p className="text-xs text-slate-500">Talk with people. Review with AI.</p>
-            </div>
-          </div>
+          {/* Brand: the shared /logo.png M-ring badge (same file the
+              /muntuz landing uses) with "Muntuz" beside it — not
+              "MunTalk", so the Exchange app reads as its own product
+              (Jay 2026-11-05). Tapping it goes back to Discover. */}
+          <button
+            onClick={() => {
+              setTab('discover');
+              window.scrollTo({ top: 0 });
+            }}
+            aria-label="Muntuz — back to Discover"
+            className="flex items-center gap-3 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+          >
+            <Image src="/logo.png" alt="Muntuz" width={40} height={40} className="h-10 w-10 rounded-full object-cover shadow-md" />
+            <span className="text-left">
+              <span className="block text-lg font-extrabold leading-tight">Muntuz</span>
+              <span className="block text-xs text-slate-500">Talk with people. Review with AI.</span>
+            </span>
+          </button>
           {pro && <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-800">PRO</span>}
           <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-500">
 Pilot — AI rooms are the main experience; People room is a waitlist
           </span>
+          {/* Log in — signed-out users only. The existing /login page
+              already honours ?next=, so signing in returns here; the
+              global login flow is untouched. */}
+          {!authLoading && !user && (
+            <a
+              href="/login?next=/exchange"
+              className="ml-auto rounded-full bg-violet-600 px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2"
+            >
+              Log in
+            </a>
+          )}
         </div>
       </header>
 
@@ -1392,6 +1359,22 @@ Pilot — AI rooms are the main experience; People room is a waitlist
 
         {/* Main */}
         <main className="min-w-0 flex-1">
+          {/* Signed-in but no Exchange profile yet: point at the setup
+              page. Shown only once the profile load has resolved, so a
+              slow load never flashes a wrong prompt. */}
+          {user && profileLoaded && profileExists === false && (
+            <div className="mb-4 flex flex-wrap items-center gap-3 rounded-2xl border border-violet-200 bg-violet-50 p-4 shadow-sm">
+              <p className="min-w-0 flex-1 text-sm font-semibold text-violet-900">
+                Set up your Exchange profile so real partners can find you.
+              </p>
+              <a
+                href="/exchange/setup"
+                className="shrink-0 rounded-full bg-violet-600 px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2"
+              >
+                Set up profile
+              </a>
+            </div>
+          )}
           {tab === 'discover' && (
             <section>
               <h2 className="text-xl font-extrabold">Exchange lounge</h2>
