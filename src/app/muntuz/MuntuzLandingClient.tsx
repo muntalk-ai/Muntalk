@@ -13,6 +13,7 @@
 import { useState } from 'react';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
+import { useAuth } from '@/context/AuthContext';
 
 type Friend = {
   id: string;
@@ -71,6 +72,7 @@ const FRIENDS: Friend[] = [
 type FormStatus = 'idle' | 'loading' | 'done' | 'soon' | 'invalid';
 
 export default function MuntuzLandingClient() {
+  const { user, loading: authLoading } = useAuth();
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<FormStatus>('idle');
 
@@ -98,6 +100,17 @@ export default function MuntuzLandingClient() {
   return (
     <main className="min-h-screen bg-[#FAF6EF] text-slate-900">
       <div className="mx-auto max-w-md px-5 pb-12 pt-10 sm:max-w-2xl">
+        {/* Log in — signed-out users only; returns to /exchange after sign-in. */}
+        {!authLoading && !user && (
+          <div className="flex justify-end">
+            <a
+              href="/login?next=/exchange"
+              className="rounded-full bg-white px-4 py-2 text-sm font-bold text-violet-700 shadow-sm ring-1 ring-slate-200 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+            >
+              Log in
+            </a>
+          </div>
+        )}
         {/* Hero */}
         <header className="text-center">
           <img
