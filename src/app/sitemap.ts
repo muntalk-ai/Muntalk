@@ -34,6 +34,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/watch', priority: 0.8, changeFrequency: 'weekly' },
     { path: '/watch/ep-01', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/watch/ep-02', priority: 0.7, changeFrequency: 'monthly' },
+    // Konglish ER: /konglish hub (2026-11-06). Past episodes free, next
+    // episode is members-only early access (1–2 days before release).
+    { path: '/konglish', priority: 0.8, changeFrequency: 'weekly' },
   ];
   const now = new Date();
   return pages.map((p) => ({
