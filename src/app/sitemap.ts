@@ -29,14 +29,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/learn/same-same-vs-its-the-same', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/learn/embarazada-vs-embarrassed', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/learn/window-shopping-not-eye-shopping', priority: 0.7, changeFrequency: 'monthly' },
-    // Text Adventure: /watch hub + episodes (2026-11-04). New episodes are
-    // added here as they go live; videos are unlisted YouTube embeds.
+    // Text Adventure + Konglish ER: /watch hub with two tabs (2026-11-06).
+    // /konglish redirects to /watch?tab=konglish, so it is not listed
+    // separately — a redirect URL does not belong in the sitemap.
     { path: '/watch', priority: 0.8, changeFrequency: 'weekly' },
     { path: '/watch/ep-01', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/watch/ep-02', priority: 0.7, changeFrequency: 'monthly' },
-    // Konglish ER: /konglish hub (2026-11-06). Past episodes free, next
-    // episode is members-only early access (1–2 days before release).
-    { path: '/konglish', priority: 0.8, changeFrequency: 'weekly' },
   ];
   const now = new Date();
   return pages.map((p) => ({

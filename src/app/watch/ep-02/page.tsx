@@ -12,6 +12,6 @@ export const metadata: Metadata = {
 export default function WatchEp02Page() {
   const episode = EPISODES[1];
   const prevEp = EPISODES[0] ?? null;
-  const nextEp = null;
+  const nextEp = EPISODES[2] ?? null;
   return <EpisodePageClient episode={episode} prevEp={prevEp} nextEp={nextEp} />;
 }

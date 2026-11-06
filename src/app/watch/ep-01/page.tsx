@@ -5,7 +5,7 @@ import { EPISODES } from '@/data/text-adventure-episodes';
 export const metadata: Metadata = {
   title: "Episode 1 — Mia's Café Choice — Text Adventure — MunTalk",
   description:
-    'Mia is stuck in a rainy London café: hot chocolate or iced Americano? Watch in 13 languages and vote for your choice.',
+    'Mia is stuck in a rainy London café: hot chocolate or iced Americano? Watch in 22 languages and vote for your choice.',
   alternates: { canonical: '/watch/ep-01' },
 };
 

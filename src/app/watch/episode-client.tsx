@@ -14,66 +14,9 @@
 import { useEffect, useState } from 'react';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
-import { LANGS, type Episode, type Lang } from '@/data/text-adventure-episodes';
-
-const FONT =
-  "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif";
-
-function WatchHeader() {
-  return (
-    <div
-      style={{
-        background: '#fff',
-        borderBottom: '1px solid #F1F5F9',
-        height: 62,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '0 24px',
-        position: 'sticky',
-        top: 0,
-        zIndex: 200,
-      }}
-    >
-      <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none', color: 'inherit' }}>
-        <img src="/logo.png" alt="MunTalk" style={{ width: 36, height: 36, borderRadius: 12 }} />
-        <span style={{ fontWeight: 900, fontSize: 19, letterSpacing: '-0.5px' }}>MunTalk</span>
-        <span style={{ background: '#EFF6FF', color: '#0284C7', fontSize: 10, fontWeight: 800, padding: '2px 8px', borderRadius: 20 }}>
-          BETA
-        </span>
-      </a>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
-        <a href="/watch" style={{ color: '#0F172A', fontWeight: 800, fontSize: 13, textDecoration: 'none' }}>
-          📺 Watch
-        </a>
-        <a href="/learn" style={{ color: '#0F172A', fontWeight: 800, fontSize: 13, textDecoration: 'none' }}>
-          📚 Learn
-        </a>
-        <a href="/signup" style={{ color: '#6366F1', fontWeight: 800, fontSize: 13, textDecoration: 'none' }}>
-          Start Free
-        </a>
-      </div>
-    </div>
-  );
-}
-
-function WatchFooter() {
-  return (
-    <footer style={{ textAlign: 'center', padding: 28, color: '#6B7280', fontSize: 13, borderTop: '1px solid #E9ECEF', background: '#fff', marginTop: 48 }}>
-      <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 10 }}>
-        <a href="/" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>🏠 Home</a>
-        <a href="/watch" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>📺 Watch</a>
-        <a href="/about" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>About</a>
-        <a href="/pricing" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>💎 Pricing</a>
-        <a href="/faq" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>💬 Help &amp; FAQ</a>
-      </div>
-      <div style={{ fontSize: 12, color: '#64748B', marginBottom: 6 }}>
-        Text Adventure is an AI-generated fictional story. Built by Jay, an independent developer.
-      </div>
-      <div style={{ fontSize: 11, color: '#CBD5E1' }}>&copy; {new Date().getFullYear()} MunTalk. All rights reserved.</div>
-    </footer>
-  );
-}
+import { useAuth } from '@/context/AuthContext';
+import { LANGS, textAdventureStatus, type Episode, type Lang } from '@/data/text-adventure-episodes';
+import { FONT, LockCard, useNow, WatchFooter, WatchHeader } from './watch-shared';
 
 export default function EpisodePageClient({
   episode,
@@ -89,6 +32,13 @@ export default function EpisodePageClient({
   const [vote, setVote] = useState<'A' | 'B' | null>(null);
   const [email, setEmail] = useState('');
   const [notifyStatus, setNotifyStatus] = useState<'idle' | 'loading' | 'done' | 'soon' | 'invalid'>('idle');
+  // Early-access gate (shared rule, see src/lib/early-access.ts):
+  // released = free for everyone; early = members only; upcoming = no
+  // videos yet. The clock re-checks every minute so the episode turns
+  // free on its own once its publicDate passes.
+  const { user, loading: authLoading } = useAuth();
+  const now = useNow();
+  const status = textAdventureStatus(episode, now);
 
   useEffect(() => {
     try {
@@ -163,28 +113,66 @@ export default function EpisodePageClient({
           {episode.summary}
         </p>
 
-        {/* Player — one youtube-nocookie iframe, 9:16, no autoplay */}
-        {videoId ? (
+        {/* Player — one youtube-nocookie iframe, 9:16, no autoplay.
+            Gated by the shared early-access rule: released episodes play
+            for everyone; the next episode plays only for signed-in
+            members (signed-out visitors get the lock card); an episode
+            with no videos yet shows the "being prepared" placeholder. */}
+        {status === 'early' && !authLoading && !user ? (
+          <LockCard
+            accent="indigo"
+            title={`Episode ${episode.ep} — members watch first`}
+            line="This episode is not public yet — members can watch it now. Sign in with a free account to watch it 1–2 days early."
+            loginNext={`/watch/${episode.slug}`}
+          />
+        ) : status === 'early' && authLoading ? (
           <div
             style={{
               maxWidth: 360,
               margin: '0 auto 24px',
               aspectRatio: '9 / 16',
               borderRadius: 20,
-              overflow: 'hidden',
-              background: '#000',
-              boxShadow: '0 8px 32px rgba(0,0,0,0.16)',
+              background: '#1E293B',
+              color: '#fff',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 24,
+              textAlign: 'center',
+              fontSize: 14,
+              fontWeight: 800,
             }}
           >
-            <iframe
-              key={videoId}
-              src={`https://www.youtube-nocookie.com/embed/${videoId}`}
-              title={`${episode.title} — ${LANGS.find((l) => l.code === lang)?.name ?? ''}`}
-              style={{ width: '100%', height: '100%', border: 0 }}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
+            Checking sign-in…
           </div>
+        ) : videoId ? (
+          <>
+            {status === 'early' && (
+              <p style={{ fontSize: 12, fontWeight: 800, color: '#4F46E5', textAlign: 'center', margin: '0 0 12px' }}>
+                🔒 You are watching early as a member — this episode opens to everyone soon.
+              </p>
+            )}
+            <div
+              style={{
+                maxWidth: 360,
+                margin: '0 auto 24px',
+                aspectRatio: '9 / 16',
+                borderRadius: 20,
+                overflow: 'hidden',
+                background: '#000',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.16)',
+              }}
+            >
+              <iframe
+                key={videoId}
+                src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+                title={`${episode.title} — ${LANGS.find((l) => l.code === lang)?.name ?? ''}`}
+                style={{ width: '100%', height: '100%', border: 0 }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </>
         ) : (
           <div
             style={{
@@ -243,7 +231,7 @@ export default function EpisodePageClient({
           })}
         </div>
         <p style={{ fontSize: 12, color: '#94A3B8', fontWeight: 600, margin: '0 0 32px' }}>
-          {available.length} of 13 languages ready — more appear as each version is uploaded.
+          {available.length} of {LANGS.length} languages ready — more appear as each version is uploaded.
         </p>
 
         {/* A/B vote — client-side only */}

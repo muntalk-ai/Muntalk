@@ -446,13 +446,13 @@ export const KONGLISH_EPISODES: KonglishEpisode[] = [
 
 export type KonglishStatus = 'released' | 'early' | 'upcoming';
 
-const EARLY_WINDOW_MS = 48 * 60 * 60 * 1000; // early access opens 48h before release
+import { gateStatus } from '@/lib/early-access';
 
+// Status is the shared gateStatus from src/lib/early-access.ts — the same
+// rule as Text Adventure: released = free, early = members-only 48h
+// before release, upcoming = further out.
 export function episodeStatus(ep: KonglishEpisode, now: number = Date.now()): KonglishStatus {
-  const release = Date.parse(ep.releaseAt);
-  if (now >= release) return 'released';
-  if (now >= release - EARLY_WINDOW_MS) return 'early';
-  return 'upcoming';
+  return gateStatus(ep.releaseAt, now);
 }
 
 export function episodesForLang(lang: KonglishLang): KonglishEpisode[] {
