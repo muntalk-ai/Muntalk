@@ -41,3 +41,16 @@ export function stashNextPath(path: string): void {
   if (typeof window === 'undefined') return;
   sessionStorage.setItem(KEY, sanitize(path));
 }
+
+// 보관된 복귀 경로를 꺼내서 소비한다. 없으면 호출자가 준 폴백을 반환한다.
+// (getNextPath의 폴백은 /lingua라서 Exchange 페이지에서는 쓸 수 없다 —
+//  setup 저장 후에는 원래 가려던 Exchange 경로로 돌아가야 한다.)
+export function takeStashedNextPath(fallback: string): string {
+  if (typeof window === 'undefined') return fallback;
+  const stored = sessionStorage.getItem(KEY);
+  if (stored) {
+    sessionStorage.removeItem(KEY);
+    return sanitize(stored);
+  }
+  return fallback;
+}

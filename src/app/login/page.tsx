@@ -1,6 +1,6 @@
 ﻿'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import {
   signInWithEmailAndPassword,
@@ -13,6 +13,7 @@ import {
 import { auth, googleProvider } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
 import { getNextPath, stashNextPath } from '@/lib/returnUrl';
+import { isExchangeProfileComplete } from '@/lib/exchangeProfile';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -25,9 +26,27 @@ export default function LoginPage() {
   const [redirectChecking, setRedirectChecking] = useState(true);
 
   // 이미 로그인된 상태면 바로 메인으로 (next 파라미터가 있으면 해당 경로로 복귀)
+  // Exchange로 가는 경우: 프로필이 없거나 필수 항목이 비어 있으면
+  // /exchange/setup을 먼저 거친다 (Jay, 2026-11-06). /lingua 등
+  // Exchange 밖의 목적지는 이 게이트를 타지 않는다.
+  const routedRef = useRef(false);
+  const routeAfterSignIn = async (u: { uid: string }) => {
+    if (routedRef.current) return;
+    routedRef.current = true;
+    const dest = getNextPath();
+    if (dest === '/exchange' || dest.startsWith('/exchange/')) {
+      const complete = await isExchangeProfileComplete(u.uid).catch(() => false);
+      if (!complete) {
+        stashNextPath(dest);
+        router.replace('/exchange/setup');
+        return;
+      }
+    }
+    router.replace(dest);
+  };
   useEffect(() => {
     if (!authLoading && user) {
-      router.replace(getNextPath());
+      void routeAfterSignIn(user);
     }
   }, [user, authLoading]);
   const [resetSent,  setResetSent]  = useState(false);
@@ -66,8 +85,9 @@ export default function LoginPage() {
     getRedirectResult(auth)
       .then(result => {
         if (result?.user) {
-          // onAuthStateChanged가 자동으로 감지해서 위의 useEffect가 이동
-          router.replace(getNextPath());
+          // onAuthStateChanged가 자동으로 감지해서 위의 useEffect도 이동을
+          // 시도한다 — routeAfterSignIn의 가드가 중복 이동을 막는다.
+          void routeAfterSignIn(result.user);
         }
       })
       .catch((e: any) => {
@@ -84,8 +104,8 @@ export default function LoginPage() {
     if (!email || !password) { setError('Please fill in all fields.'); return; }
     setEmailLoading(true); setError('');
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      router.push(getNextPath());
+      const cred = await signInWithEmailAndPassword(auth, email, password);
+      await routeAfterSignIn(cred.user);
     } catch (e: any) {
       const googleOnlyMsg = await googleOnlyMessageIfApplicable(e.code);
       setError(googleOnlyMsg || friendlyError(e.code) || 'Sign in failed. Please try again.');
@@ -99,7 +119,7 @@ export default function LoginPage() {
       // Popup 방식 — 페이지 이탈 없이 즉시 로그인
       // (Popup 차단 시 redirect로 폴백)
       const result = await signInWithPopup(auth, googleProvider);
-      if (result.user) router.replace(getNextPath());
+      if (result.user) await routeAfterSignIn(result.user);
     } catch (e: any) {
       if (e.code === 'auth/popup-blocked') {
         // 팝업 차단 시 redirect 방식으로 폴백 (복귀 경로 보관)
