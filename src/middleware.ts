@@ -24,14 +24,16 @@ const PROTECTED_PREFIXES = [
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // ── Muntuz.com host branch (Exchange as first screen, PR: feature/muntuz-middleware)
-  // muntuz.com / www.muntuz.com root ('/') rewrites to /exchange — the Exchange
-  // app is the first screen on the Muntuz host. Every other path on the Muntuz
-  // host passes through unchanged, so /exchange, /muntuz (Coming Soon landing)
-  // and the rest of the app keep working. muntalk.com and every other host
-  // fall through to the normal rules below unchanged.
-  // (Previously, all Muntuz-host paths rewrote to /muntuz — the Coming Soon
-  // landing — which is why muntuz.com/exchange showed the landing page.)
+  // ── Muntuz.com host branch (landing as first screen, PR: feature/muntuz-root-landing)
+  // muntuz.com / www.muntuz.com root ('/') rewrites to /muntuz — the redesigned
+  // landing (Why Muntuz / How it works / Meet the house / waitlist) is the first
+  // screen on the Muntuz host. The Exchange app lives at /exchange (linked from
+  // the landing's "Start chatting" CTA). Every other path on the Muntuz host
+  // passes through unchanged, so /exchange, /muntuz and the rest of the app keep
+  // working. muntalk.com and every other host fall through to the normal rules
+  // below unchanged.
+  // (Previously, the root rewrote to /exchange — the Exchange app was the first
+  // screen. PR #165 set that; this change moves the landing to the front door.)
   // Host detection: `request.nextUrl.hostname` is NOT reliable — a bare
   // `next start` server reports its own listen address (localhost) there
   // and ignores the Host header (verified 2026-10-30). Read the headers
@@ -48,7 +50,7 @@ export function middleware(request: NextRequest) {
     .toLowerCase();
   const isMuntuz = hostname === 'muntuz.com' || hostname === 'www.muntuz.com';
   if (isMuntuz && pathname === '/') {
-    return NextResponse.rewrite(new URL('/exchange', request.url));
+    return NextResponse.rewrite(new URL('/muntuz', request.url));
   }
 
   // 공개 경로 → 통과
@@ -71,7 +73,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   // Root only: the only path this middleware ever rewrites is '/'
-  // (Muntuz host → /exchange). Every other branch above returns
+  // (Muntuz host → /muntuz). Every other branch above returns
   // NextResponse.next(), so no other path needs to invoke it.
   matcher: ['/'],
 };
