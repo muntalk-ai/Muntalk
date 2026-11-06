@@ -48,6 +48,15 @@ import {
  * chats simply work without memory.
  * AI Review / Pro tabs are still demo data. The Profile tab is wired to
  * Firestore for signed-in users (collection `exchange_profiles`).
+ * Phase 1 profile fields (learning goal, country, gender, age band,
+ * timezone, availability, comm mode, correction preference, same-gender
+ * safety setting) are stored there too. The exact birthdate is never in
+ * the public doc — it lives in `exchange_profiles/{uid}/private/identity`
+ * (owner-only; console snippet:
+ * firestore-snippets/exchange-profiles-phase1-private.rules.txt).
+ * Discover People Rooms filter the real profiles by language, level,
+ * interest, goal, gender, age band and timezone overlap. The gender
+ * filter is free (Jay 2026-11-05, B안).
  */
 
 type Tab = 'discover' | 'chats' | 'review' | 'pro' | 'profile';
@@ -70,6 +79,11 @@ type PartnerStatus = 'idle' | 'pending' | 'matched';
 // Real partner from Firestore `exchange_profiles` — never invented.
 // `match` / `verified` do not exist in profile docs, so real cards show no
 // match percentage and no verification badge (showing one would be fake).
+// Phase 1 fields: goal / age band / country / timezone / availability /
+// comm mode / correction preference / gender are public on the card.
+// The exact birthdate is never in this doc — it lives in the private
+// `private/identity` subcollection, owner-only (see
+// firestore-snippets/exchange-profiles-phase1-private.rules.txt).
 type RealPartner = {
   uid: string;
   name: string;
@@ -79,7 +93,122 @@ type RealPartner = {
   level: string;
   interests: string[];
   bio: string;
+  gender: Gender;
+  ageBand: AgeBand | '';
+  country: string;
+  goal: LearningGoal;
+  timezone: string;
+  utcOffsetMin: number;
+  availability: { days: string[]; slots: string[]; perWeek: number };
+  commMode: string;
+  correctionPref: string;
+  sameGenderOnly: boolean;
 };
+
+// Phase 1 human-profile fields (see goals/muntalk-exchange/files/
+// human-exchange-profile-fields-analysis-2026-11-05.md).
+const GOALS = ['Conversation', 'Exam', 'Travel', 'Work', 'Friends'] as const;
+type LearningGoal = (typeof GOALS)[number];
+const GENDERS = ['Female', 'Male', 'Non-binary', 'Prefer not to say'] as const;
+type Gender = (typeof GENDERS)[number];
+const AGE_BANDS = ['18–24', '25–34', '35–44', '45+'] as const;
+type AgeBand = (typeof AGE_BANDS)[number];
+const COMM_MODES = ['Text', 'Voice', 'Both'] as const;
+const CORRECTION_PREFS = ['Often', 'Sometimes', 'Never'] as const;
+const TIME_SLOTS = ['Morning', 'Afternoon', 'Evening', 'Night'] as const;
+const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] as const;
+// Local hour ranges for each slot, used for timezone-overlap matching.
+const SLOT_HOURS: Record<string, [number, number]> = {
+  Morning: [6, 12],
+  Afternoon: [12, 18],
+  Evening: [18, 24],
+  Night: [0, 6],
+};
+const COUNTRIES = [
+  'Argentina', 'Australia', 'Austria', 'Bangladesh', 'Belgium', 'Brazil', 'Canada',
+  'Chile', 'China', 'Colombia', 'Egypt', 'France', 'Germany', 'Hong Kong', 'India',
+  'Indonesia', 'Iran', 'Ireland', 'Israel', 'Italy', 'Japan', 'Kazakhstan', 'Kenya',
+  'Malaysia', 'Mexico', 'Mongolia', 'Morocco', 'Myanmar', 'Nepal', 'Netherlands',
+  'New Zealand', 'Nigeria', 'Pakistan', 'Peru', 'Philippines', 'Poland', 'Portugal',
+  'Russia', 'Saudi Arabia', 'Singapore', 'South Africa', 'South Korea', 'Spain',
+  'Sri Lanka', 'Switzerland', 'Taiwan', 'Thailand', 'Turkey', 'Ukraine',
+  'United Arab Emirates', 'United Kingdom', 'United States', 'Uzbekistan', 'Vietnam',
+  'Other',
+];
+
+function calcAge(birthdate: string): number | null {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(birthdate);
+  if (!m) return null;
+  const y = Number(m[1]);
+  const mo = Number(m[2]);
+  const d = Number(m[3]);
+  const born = new Date(y, mo - 1, d);
+  if (born.getFullYear() !== y || born.getMonth() !== mo - 1 || born.getDate() !== d) return null;
+  const now = new Date();
+  let age = now.getFullYear() - y;
+  if (now.getMonth() < mo - 1 || (now.getMonth() === mo - 1 && now.getDate() < d)) age -= 1;
+  return age;
+}
+
+function ageBandForAge(age: number): AgeBand | '' {
+  if (age < 18) return '';
+  if (age <= 24) return '18–24';
+  if (age <= 34) return '25–34';
+  if (age <= 44) return '35–44';
+  return '45+';
+}
+
+function utcLabel(offsetMin: number): string {
+  const sign = offsetMin < 0 ? '-' : '+';
+  const abs = Math.abs(offsetMin);
+  const h = String(Math.floor(abs / 60)).padStart(2, '0');
+  const mi = String(abs % 60).padStart(2, '0');
+  return `UTC${sign}${h}:${mi}`;
+}
+
+// Do any of `aSlots` (at UTC offset aOff) overlap any of `bSlots`
+// (at UTC offset bOff)? Slots are local hour ranges; each is converted
+// to UTC and compared on a 24h circle (wrapping intervals are split).
+function slotsOverlap(aSlots: string[], aOff: number, bSlots: string[], bOff: number): boolean {
+  const toUtcRanges = (slots: string[], off: number): [number, number][] => {
+    const out: [number, number][] = [];
+    for (const s of slots) {
+      const r = SLOT_HOURS[s];
+      if (!r) continue;
+      const start = (((r[0] * 60 - off) % 1440) + 1440) % 1440;
+      const end = (((r[1] * 60 - off) % 1440) + 1440) % 1440;
+      if (end <= start) {
+        out.push([start, 1440]);
+        out.push([0, end]);
+      } else {
+        out.push([start, end]);
+      }
+    }
+    return out;
+  };
+  const a = toUtcRanges(aSlots, aOff);
+  const b = toUtcRanges(bSlots, bOff);
+  return a.some(([as, ae]) => b.some(([bs, be]) => as < be && bs < ae));
+}
+
+// Chat list time label, HelloTalk-style: today shows the clock time,
+// yesterday shows "Yesterday HH:MM", this week shows the weekday,
+// older shows M/D.
+function relativeTime(ts: number | undefined): string {
+  if (!ts) return '';
+  const d = new Date(ts);
+  const now = new Date();
+  const sameDay = (a: Date, b: Date) => a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+  const yesterday = new Date(now);
+  yesterday.setDate(now.getDate() - 1);
+  const hh = String(d.getHours()).padStart(2, '0');
+  const mm = String(d.getMinutes()).padStart(2, '0');
+  if (sameDay(d, now)) return `${hh}:${mm}`;
+  if (sameDay(d, yesterday)) return `Yesterday ${hh}:${mm}`;
+  const diffDays = Math.floor((now.getTime() - d.getTime()) / 86400000);
+  if (diffDays < 7) return ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][d.getDay()];
+  return `${d.getMonth() + 1}/${d.getDate()}`;
+}
 
 const LANG_FLAG: Record<string, string> = {
   English: '🇺🇸',
@@ -105,7 +234,9 @@ const LANG_FLAG: Record<string, string> = {
 
 const profileToPartner = (uid: string, d: Record<string, unknown>): RealPartner => {
   const str = (v: unknown, fallback: string) => (typeof v === 'string' && v.trim() ? v : fallback);
+  const strArr = (v: unknown): string[] => (Array.isArray(v) ? v.filter((i): i is string => typeof i === 'string') : []);
   const native = str(d.nativeLang, '—');
+  const avail = (d.availability && typeof d.availability === 'object' ? d.availability : {}) as Record<string, unknown>;
   return {
     uid,
     name: str(d.nickname, 'Partner'),
@@ -113,8 +244,22 @@ const profileToPartner = (uid: string, d: Record<string, unknown>): RealPartner 
     native,
     learning: str(d.targetLang, '—'),
     level: str(d.level, '—'),
-    interests: Array.isArray(d.interests) ? d.interests.filter((i): i is string => typeof i === 'string') : [],
+    interests: strArr(d.interests),
     bio: str(d.bio, ''),
+    gender: (GENDERS as readonly string[]).includes(d.gender as string) ? (d.gender as Gender) : 'Prefer not to say',
+    ageBand: (AGE_BANDS as readonly string[]).includes(d.ageBand as string) ? (d.ageBand as AgeBand) : '',
+    country: str(d.country, ''),
+    goal: (GOALS as readonly string[]).includes(d.goal as string) ? (d.goal as LearningGoal) : 'Conversation',
+    timezone: str(d.timezone, ''),
+    utcOffsetMin: typeof d.utcOffsetMin === 'number' ? d.utcOffsetMin : 0,
+    availability: {
+      days: strArr(avail.days),
+      slots: strArr(avail.slots),
+      perWeek: typeof avail.perWeek === 'number' ? avail.perWeek : 0,
+    },
+    commMode: typeof d.commMode === 'string' && d.commMode ? d.commMode : 'Both',
+    correctionPref: typeof d.correctionPref === 'string' && d.correctionPref ? d.correctionPref : 'Sometimes',
+    sameGenderOnly: d.sameGenderOnly === true,
   };
 };
 
@@ -135,6 +280,8 @@ type Msg = {
   from: 'me' | 'partner';
   text: string;
   ai?: boolean;
+  /** Unix ms when the message was created — drives the chat list time label. */
+  at?: number;
   /** Gallery photo shared with this AI reply (public/exchange-ai-avatars/...). */
   photo?: string;
   /** Natural rephrasing of the learner's previous message, when it could be improved. */
@@ -261,9 +408,43 @@ export default function ExchangePage() {
   const [verifiedOnly, setVerifiedOnly] = useState(true);
   const [allowVoice, setAllowVoice] = useState(true);
 
+  // Phase 1 human-profile fields.
+  const [learningGoal, setLearningGoal] = useState<LearningGoal>('Conversation');
+  const [country, setCountry] = useState('');
+  const [gender, setGender] = useState<Gender>('Prefer not to say');
+  // Birthdate is the user's own input for the 18+ gate. Only the derived
+  // age band is ever stored in the public profile doc or shown to anyone;
+  // the exact date goes to the private subcollection (see saveProfile).
+  const [birthdate, setBirthdate] = useState('');
+  const [ageBand, setAgeBand] = useState<AgeBand | ''>('');
+  const [commMode, setCommMode] = useState('Both');
+  const [correctionPref, setCorrectionPref] = useState('Sometimes');
+  const [availDays, setAvailDays] = useState<string[]>(['Sat', 'Sun']);
+  const [availSlots, setAvailSlots] = useState<string[]>(['Evening']);
+  const [availPerWeek, setAvailPerWeek] = useState(3);
+  const [sameGenderOnly, setSameGenderOnly] = useState(false);
+  const [timezone, setTimezone] = useState('');
+  const [utcOffsetMin, setUtcOffsetMin] = useState(0);
+  const [saveError, setSaveError] = useState('');
+
+  // Timezone is detected from the device, not typed in. Recompute on
+  // every save too, in case the user travelled since the page loaded.
+  useEffect(() => {
+    try {
+      setTimezone(Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC');
+      setUtcOffsetMin(-new Date().getTimezoneOffset());
+    } catch {
+      setTimezone('UTC');
+      setUtcOffsetMin(0);
+    }
+  }, []);
+
   // Firestore wiring for the Profile tab only.
-  // Only nickname / languages / level / interests / bio are stored —
-  // never real name, email, or contact details.
+  // Stored in `exchange_profiles`: nickname / languages / level /
+  // interests / bio / learningGoal / country / gender / ageBand /
+  // timezone / utcOffsetMin / availability / commMode / correctionPref /
+  // sameGenderOnly — never real name, email, contact details, or the
+  // exact birthdate (see saveProfile for where the birthdate goes).
   const { user, loading: authLoading } = useAuth();
   const [profileLoading, setProfileLoading] = useState(false);
   const [profileLoaded, setProfileLoaded] = useState(false);
@@ -318,6 +499,57 @@ export default function ExchangePage() {
       cancelled = true;
     };
   }, [user, authLoading]);
+
+  // ── Discover filters (People Rooms) ──────────────────────────────
+  // Free for everyone, including the gender filter (Jay 2026-11-05, B안).
+  // Filters apply to the real `exchange_profiles` list above — never to
+  // the AI room, which has no language filter by design.
+  const [fNative, setFNative] = useState('All');
+  const [fLevel, setFLevel] = useState('All');
+  const [fInterest, setFInterest] = useState('All');
+  const [fGoal, setFGoal] = useState<LearningGoal | 'All'>('All');
+  const [fGender, setFGender] = useState<Gender | 'All'>('All');
+  const [fAgeBand, setFAgeBand] = useState<AgeBand | 'All'>('All');
+  const [fOverlap, setFOverlap] = useState(false);
+
+  const filterNatives = Array.from(new Set((realPartners || []).map((p) => p.native))).sort();
+  const filterInterests = Array.from(new Set((realPartners || []).flatMap((p) => p.interests))).sort();
+  const filtersActive =
+    fNative !== 'All' || fLevel !== 'All' || fInterest !== 'All' || fGoal !== 'All' || fGender !== 'All' || fAgeBand !== 'All' || fOverlap;
+  const clearFilters = () => {
+    setFNative('All');
+    setFLevel('All');
+    setFInterest('All');
+    setFGoal('All');
+    setFGender('All');
+    setFAgeBand('All');
+    setFOverlap(false);
+  };
+
+  const visiblePartners = (realPartners || []).filter((p) => {
+    if (fNative !== 'All' && p.native !== fNative) return false;
+    if (fLevel !== 'All' && p.level !== fLevel) return false;
+    if (fInterest !== 'All' && !p.interests.includes(fInterest)) return false;
+    if (fGoal !== 'All' && p.goal !== fGoal) return false;
+    if (fGender !== 'All' && p.gender !== fGender) return false;
+    if (fAgeBand !== 'All' && p.ageBand !== fAgeBand) return false;
+    // Timezone overlap: at least one of the partner's available slots
+    // overlaps one of mine, after converting both to UTC. Uses my
+    // Profile availability (defaults: Sat–Sun evenings) and the
+    // device-detected timezone until the profile is saved.
+    if (
+      fOverlap &&
+      (availSlots.length === 0 ||
+        p.availability.slots.length === 0 ||
+        !slotsOverlap(p.availability.slots, p.utcOffsetMin, availSlots, utcOffsetMin))
+    )
+      return false;
+    // Safety: a partner who only wants to be found by the same gender is
+    // hidden from everyone else — including signed-out viewers, whose
+    // gender is "Prefer not to say".
+    if (p.sameGenderOnly && (gender === 'Prefer not to say' || p.gender !== gender)) return false;
+    return true;
+  });
 
   // ── Voice call state ───────────────────────────────────────────────
   const [call, setCall] = useState<CallUi | null>(null);
@@ -570,6 +802,19 @@ export default function ExchangePage() {
           if (!interestEditedRef.current && Array.isArray(d.interests)) setInterestSel(d.interests.filter((i): i is string => typeof i === 'string'));
           if (typeof d.nickname === 'string') setNickname(d.nickname);
           if (typeof d.bio === 'string') setBio(d.bio);
+          if (typeof d.learningGoal === 'string' && (GOALS as readonly string[]).includes(d.learningGoal)) setLearningGoal(d.learningGoal as LearningGoal);
+          if (typeof d.country === 'string') setCountry(d.country);
+          if (typeof d.gender === 'string' && (GENDERS as readonly string[]).includes(d.gender)) setGender(d.gender as Gender);
+          if (typeof d.ageBand === 'string' && (AGE_BANDS as readonly string[]).includes(d.ageBand)) setAgeBand(d.ageBand as AgeBand);
+          if (typeof d.commMode === 'string' && d.commMode) setCommMode(d.commMode);
+          if (typeof d.correctionPref === 'string' && d.correctionPref) setCorrectionPref(d.correctionPref);
+          if (typeof d.sameGenderOnly === 'boolean') setSameGenderOnly(d.sameGenderOnly);
+          if (d.availability && typeof d.availability === 'object') {
+            const a = d.availability as Record<string, unknown>;
+            if (Array.isArray(a.days)) setAvailDays(a.days.filter((x): x is string => typeof x === 'string'));
+            if (Array.isArray(a.slots)) setAvailSlots(a.slots.filter((x): x is string => typeof x === 'string'));
+            if (typeof a.perWeek === 'number') setAvailPerWeek(a.perWeek);
+          }
         }
         setProfileLoaded(true);
         setProfileError('');
@@ -585,6 +830,20 @@ export default function ExchangePage() {
       })
       .finally(() => {
         if (!cancelled) setProfileLoading(false);
+      });
+    // Birthdate lives in the private subcollection, owner-only (see
+    // firestore-snippets/exchange-profiles-phase1-private.rules.txt).
+    // Best-effort: until that rule is published the read fails with
+    // permission-denied and the date input simply stays empty — the
+    // public profile still loads and the age band still comes from it.
+    getDoc(doc(db, 'exchange_profiles', user.uid, 'private', 'identity'))
+      .then((snap) => {
+        if (cancelled || !snap.exists()) return;
+        const d = snap.data();
+        if (typeof d.birthdate === 'string') setBirthdate(d.birthdate);
+      })
+      .catch(() => {
+        // Silent: a missing rule must never break the profile load.
       });
     return () => {
       cancelled = true;
@@ -657,6 +916,33 @@ export default function ExchangePage() {
       showToast('Sign in to save your Exchange profile to your account.');
       return;
     }
+    setSaveError('');
+    // 18+ gate: Exchange is adults-only. Only the derived age band is
+    // stored in the public doc or shown to anyone — never the exact date
+    // or age.
+    if (!birthdate) {
+      setSaveError('Add your date of birth to save your profile. Exchange is 18+ only — your exact birthdate is never shown to anyone.');
+      return;
+    }
+    const age = calcAge(birthdate);
+    if (age === null) {
+      setSaveError('That date of birth does not look valid.');
+      return;
+    }
+    if (age < 18) {
+      setSaveError('You must be 18 or older to use MunTalk Exchange.');
+      return;
+    }
+    const band = ageBandForAge(age);
+    // Re-detect the timezone at save time (the user may have travelled).
+    let tz = timezone;
+    let off = utcOffsetMin;
+    try {
+      tz = Intl.DateTimeFormat().resolvedOptions().timeZone || tz || 'UTC';
+      off = -new Date().getTimezoneOffset();
+    } catch {
+      // Keep the values detected on mount.
+    }
     try {
       await setDoc(
         doc(db, 'exchange_profiles', user.uid),
@@ -667,12 +953,43 @@ export default function ExchangePage() {
           level,
           interests: interestSel,
           bio: bio.trim(),
+          learningGoal,
+          country,
+          gender,
+          ageBand: band,
+          timezone: tz,
+          utcOffsetMin: off,
+          availability: { days: availDays, slots: availSlots, perWeek: availPerWeek },
+          commMode,
+          correctionPref,
+          sameGenderOnly,
           updatedAt: serverTimestamp(),
         },
         { merge: true }
       );
+      setAgeBand(band);
+      setTimezone(tz);
+      setUtcOffsetMin(off);
       setProfileLoaded(true);
-      showToast('Profile saved to your Exchange account.');
+      // The exact birthdate goes to the owner-only private subcollection,
+      // never to the public doc (any signed-in user can read public docs).
+      // Until the console rule for it is published this write fails with
+      // permission-denied — the public profile above is already saved,
+      // so say so plainly instead of failing the whole save.
+      try {
+        await setDoc(
+          doc(db, 'exchange_profiles', user.uid, 'private', 'identity'),
+          { birthdate, ageBand: band, updatedAt: serverTimestamp() },
+          { merge: true }
+        );
+        showToast('Profile saved to your Exchange account.');
+      } catch (e) {
+        if ((e as { code?: string }).code === 'permission-denied') {
+          showToast('Profile saved, but your date of birth could not be stored yet (age-check rule not published). Your age band was saved.');
+        } else {
+          showToast('Profile saved, but your date of birth could not be stored. Please try saving again.');
+        }
+      }
     } catch (err) {
       showToast(
         (err as { code?: string }).code === 'permission-denied'
@@ -732,6 +1049,7 @@ export default function ExchangePage() {
   };
 
   const startAiChat = (p: AiPartner) => {
+    const gid = msgSeq++;
     setChats((cs) =>
       cs.some((c) => c.id === p.id)
         ? cs
@@ -742,11 +1060,14 @@ export default function ExchangePage() {
               partnerId: p.id,
               name: p.name,
               avatar: p.avatar,
+              flag: LANG_FLAG[p.native] || '🌐',
               isAi: true,
-              messages: [{ id: msgSeq++, from: 'partner', text: p.greeting, ai: true }],
+              messages: [{ id: gid, from: 'partner', text: p.greeting, ai: true, at: Date.now() }],
             },
           ]
     );
+    // The greeting is read at once (the chat opens immediately).
+    setSeenMsgId((s) => ({ ...s, [p.id]: Math.max(s[p.id] ?? 0, gid) }));
     setActiveChatId(p.id);
     setTab('chats');
     void loadMemoryForPartner(p.id);
@@ -766,6 +1087,57 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
   };
 
   const activeChat = chats.find((c) => c.id === activeChatId) || null;
+
+  // ── Chats list: search + filter chips (HelloTalk list layout, MunTalk style)
+  const [chatQuery, setChatQuery] = useState('');
+  type ChatFilter = 'all' | 'online' | 'unread' | 'myturn' | 'proximity';
+  const [chatFilter, setChatFilter] = useState<ChatFilter>('all');
+  // Last message id the user has seen per chat (in-memory only) — drives
+  // the Unread filter and the unread dot. Marked when a chat is opened
+  // and when leaving it, so replies seen in the open chat never count.
+  const [seenMsgId, setSeenMsgId] = useState<Record<string, number>>({});
+  const markChatSeen = (c: Chat) => {
+    const last = c.messages[c.messages.length - 1];
+    if (last) setSeenMsgId((s) => ({ ...s, [c.id]: Math.max(s[c.id] ?? 0, last.id) }));
+  };
+  const openChat = (c: Chat) => {
+    markChatSeen(c);
+    setActiveChatId(c.id);
+  };
+  const chatIsUnread = (c: Chat) => {
+    const last = c.messages[c.messages.length - 1];
+    return !!last && last.from === 'partner' && last.id > (seenMsgId[c.id] ?? 0);
+  };
+  const chatIsMyTurn = (c: Chat) => {
+    const last = c.messages[c.messages.length - 1];
+    return !last || last.from === 'partner';
+  };
+  // AI partners are always online. Real-person presence is not tracked
+  // yet (no heartbeat), so Online currently lists AI chats only.
+  const chatIsOnline = (c: Chat) => c.isAi;
+  // Timezone distance in minutes from me; AI has no timezone and is
+  // always available, so it sorts first under Timezone proximity.
+  const chatTzDistance = (c: Chat): number => {
+    if (c.isAi) return 0;
+    const p = (realPartners || []).find((rp) => rp.uid === c.partnerId);
+    if (!p || !p.timezone) return Number.POSITIVE_INFINITY;
+    return Math.abs(p.utcOffsetMin - utcOffsetMin);
+  };
+  const visibleChats = chats.filter((c) => {
+    if (chatQuery) {
+      const q = chatQuery.trim().toLowerCase();
+      const last = c.messages[c.messages.length - 1];
+      const hay = `${c.name} ${last ? last.text : ''}`.toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    if (chatFilter === 'online' && !chatIsOnline(c)) return false;
+    if (chatFilter === 'unread' && !chatIsUnread(c)) return false;
+    if (chatFilter === 'myturn' && !chatIsMyTurn(c)) return false;
+    return true;
+  });
+  // "Timezone proximity" is a sort, not a filter: closest timezone first.
+  const sortedChats =
+    chatFilter === 'proximity' ? [...visibleChats].sort((a, b) => chatTzDistance(a) - chatTzDistance(b)) : visibleChats;
 
   const sendAiMessage = async () => {
     const text = input.trim();
@@ -790,7 +1162,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
     }
     const id = msgSeq++;
     setChats((cs) =>
-      cs.map((c) => (c.id === activeChat.id ? { ...c, messages: [...c.messages, { id, from: 'me' as const, text }] } : c))
+      cs.map((c) => (c.id === activeChat.id ? { ...c, messages: [...c.messages, { id, from: 'me' as const, text, at: Date.now() }] } : c))
     );
     setInput('');
     setAiSending(true);
@@ -816,7 +1188,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
           : undefined;
       setChats((cs) =>
         cs.map((c) =>
-          c.id === activeChat.id ? { ...c, messages: [...c.messages, { id: rid, from: 'partner' as const, text: reply, ai: true, photo, correction }] } : c
+          c.id === activeChat.id ? { ...c, messages: [...c.messages, { id: rid, from: 'partner' as const, text: reply, ai: true, at: Date.now(), photo, correction }] } : c
         )
       );
     } catch (err) {
@@ -859,6 +1231,8 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
 
   const leaveAiChat = () => {
     const chat = activeChat;
+    // Replies read while the chat was open must not show as unread later.
+    if (chat) markChatSeen(chat);
     setActiveChatId(null);
     if (chat) void saveMemoryForChat(chat);
   };
@@ -896,7 +1270,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
     }
     const id = msgSeq++;
     setChats((cs) =>
-      cs.map((c) => (c.id === activeChat.id ? { ...c, messages: [...c.messages, { id, from: 'me' as const, text }] } : c))
+      cs.map((c) => (c.id === activeChat.id ? { ...c, messages: [...c.messages, { id, from: 'me' as const, text, at: Date.now() }] } : c))
     );
     setInput('');
   };
@@ -928,6 +1302,23 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
       });
     }
   };
+
+  // Availability chips save with the profile (Save button), unlike
+  // interests which save on tap.
+  const toggleAvailDay = (d: string) =>
+    setAvailDays((cur) => (cur.includes(d) ? cur.filter((x) => x !== d) : [...cur, d]));
+  const toggleAvailSlot = (s: string) =>
+    setAvailSlots((cur) => (cur.includes(s) ? cur.filter((x) => x !== s) : [...cur, s]));
+
+  // Live preview for the birthdate field: only the band is ever shown,
+  // never the exact age. Used for the inline hint under the date input.
+  const birthdateAge = birthdate ? calcAge(birthdate) : null;
+  const birthdateBand = birthdateAge === null ? '' : ageBandForAge(birthdateAge);
+  const maxBirthdate = (() => {
+    const t = new Date();
+    t.setFullYear(t.getFullYear() - 18);
+    return t.toISOString().slice(0, 10);
+  })();
 
   const tabButton = (t: { id: Tab; label: string; icon: string }, vertical: boolean) => (
     <button
@@ -1158,6 +1549,84 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                   <p className="mt-1 text-sm text-slate-500">
                     Real Exchange profiles. Say hello — they accept before a chat opens. No open DMs.
                   </p>
+                  {user && !partnersLoading && !partnersError && realPartners && realPartners.length > 0 && (
+                    <div className="mt-4 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
+                      <div className="flex items-center justify-between gap-2">
+                        <h4 className="font-bold">Filter people</h4>
+                        {filtersActive && (
+                          <button
+                            onClick={clearFilters}
+                            className="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-bold text-slate-600 hover:bg-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+                          >
+                            Clear filters
+                          </button>
+                        )}
+                      </div>
+                      <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                        <label className="block text-sm font-semibold">
+                          Speaks
+                          <select value={fNative} onChange={(e) => setFNative(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
+                            <option>All</option>
+                            {filterNatives.map((l) => (
+                              <option key={l}>{l}</option>
+                            ))}
+                          </select>
+                        </label>
+                        <label className="block text-sm font-semibold">
+                          Level
+                          <select value={fLevel} onChange={(e) => setFLevel(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
+                            <option>All</option>
+                            {['Beginner', 'Intermediate', 'Advanced'].map((l) => (
+                              <option key={l}>{l}</option>
+                            ))}
+                          </select>
+                        </label>
+                        <label className="block text-sm font-semibold">
+                          Interest
+                          <select value={fInterest} onChange={(e) => setFInterest(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
+                            <option>All</option>
+                            {filterInterests.map((i) => (
+                              <option key={i}>{i}</option>
+                            ))}
+                          </select>
+                        </label>
+                        <label className="block text-sm font-semibold">
+                          Learning goal
+                          <select value={fGoal} onChange={(e) => setFGoal(e.target.value as LearningGoal | 'All')} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
+                            <option>All</option>
+                            {GOALS.map((g) => (
+                              <option key={g}>{g}</option>
+                            ))}
+                          </select>
+                        </label>
+                        <label className="block text-sm font-semibold">
+                          Gender
+                          <select value={fGender} onChange={(e) => setFGender(e.target.value as Gender | 'All')} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
+                            <option>All</option>
+                            {['Female', 'Male', 'Non-binary'].map((g) => (
+                              <option key={g}>{g}</option>
+                            ))}
+                          </select>
+                        </label>
+                        <label className="block text-sm font-semibold">
+                          Age band
+                          <select value={fAgeBand} onChange={(e) => setFAgeBand(e.target.value as AgeBand | 'All')} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
+                            <option>All</option>
+                            {AGE_BANDS.map((b) => (
+                              <option key={b}>{b}</option>
+                            ))}
+                          </select>
+                        </label>
+                      </div>
+                      <label className="mt-3 flex items-center gap-2 text-sm font-semibold">
+                        <input type="checkbox" checked={fOverlap} onChange={(e) => setFOverlap(e.target.checked)} className="h-5 w-5 accent-violet-600" />
+                        Overlapping hours with me (uses my Profile availability + timezone)
+                      </label>
+                      <p className="mt-2 text-xs text-slate-500">
+                        Showing {visiblePartners.length} of {realPartners.length} {realPartners.length === 1 ? 'person' : 'people'}.
+                      </p>
+                    </div>
+                  )}
                   {!user && !authLoading && (
                     <p className="mt-4 rounded-2xl border border-slate-200/80 bg-white p-6 text-center text-sm text-slate-500">
                       Sign in to see real Exchange partners and start a voice call.
@@ -1178,8 +1647,13 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                       아직 파트너가 없어요. Complete your profile on the Profile tab so others can find you.
                     </p>
                   )}
+                  {user && !partnersLoading && !partnersError && realPartners && realPartners.length > 0 && visiblePartners.length === 0 && (
+                    <p className="mt-4 rounded-2xl border border-slate-200/80 bg-white p-6 text-center text-sm text-slate-500">
+                      No partners match these filters yet. Try clearing a filter.
+                    </p>
+                  )}
                   <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                    {(realPartners || []).map((p) => {
+                    {visiblePartners.map((p) => {
                       const status = statuses[p.uid] || 'idle';
                       return (
                         <article key={p.uid} className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm transition-shadow hover:shadow-md sm:p-5">
@@ -1191,6 +1665,16 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                                 <p className="text-xs text-slate-500">
                                   {p.native} → {p.learning} · {p.level}
                                 </p>
+                                {(p.country || p.ageBand || p.goal || p.timezone) && (
+                                  <p className="mt-0.5 text-xs text-slate-500">
+                                    {[p.country, p.gender !== 'Prefer not to say' ? p.gender : '', p.ageBand, p.goal, p.timezone ? utcLabel(p.utcOffsetMin) : ''].filter(Boolean).join(' · ')}
+                                  </p>
+                                )}
+                                {p.availability.slots.length > 0 && (
+                                  <p className="mt-0.5 text-xs text-slate-500">
+                                    Available {p.availability.days.length > 0 ? `${p.availability.days.join(', ')} · ` : ''}{p.availability.slots.join(', ')}
+                                  </p>
+                                )}
                               </div>
                             </div>
                           </div>
@@ -1236,31 +1720,100 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                 AI chats are marked AI throughout. Phone numbers, links and contact IDs are blocked before sending.
               </p>
               {!activeChat ? (
-                <div className="mt-4 grid gap-3">
-                  {chats.length === 0 && (
-                    <p className="rounded-2xl border bg-white p-6 text-center text-sm text-slate-500">
-                      No chats yet. Start one from an AI Room on Discover.
-                    </p>
-                  )}
-                  {chats.map((c) => (
-                    <button
-                      key={c.id}
-                      onClick={() => setActiveChatId(c.id)}
-                      className="flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white p-4 text-left shadow-sm transition hover:border-violet-300 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
-                    >
-                      {c.avatar ? (<Image src={c.avatar} alt="" width={96} height={96} className="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />) : (<span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-2xl ring-2 ring-violet-200">{c.flag || '🌐'}</span>)}
-                      <span className="min-w-0 flex-1">
-                        <span className="block font-bold">
-                          {c.name}{' '}
-                          {c.isAi && <span className="rounded-full bg-violet-600 px-2 py-0.5 text-[11px] font-extrabold text-white">AI</span>}
-                        </span>
-                        <span className="block truncate text-sm text-slate-500">
-                          {c.messages.length > 0 ? c.messages[c.messages.length - 1].text : 'New match — say hi!'}
-                        </span>
-                      </span>
-                      <span className="shrink-0 text-lg text-slate-300">›</span>
-                    </button>
-                  ))}
+                <div className="mt-4">
+                  <div className="relative">
+                    <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-base text-slate-400" aria-hidden="true">🔍</span>
+                    <input
+                      value={chatQuery}
+                      onChange={(e) => setChatQuery(e.target.value)}
+                      placeholder="Search chats"
+                      aria-label="Search chats"
+                      className="w-full rounded-full border border-slate-200 bg-slate-100 py-2.5 pl-10 pr-9 text-sm outline-none placeholder:text-slate-400 focus:border-violet-400 focus:bg-white focus:ring-2 focus:ring-violet-100"
+                    />
+                    {chatQuery && (
+                      <button
+                        onClick={() => setChatQuery('')}
+                        aria-label="Clear search"
+                        className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full px-1 text-sm text-slate-400 hover:text-slate-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+                      >
+                        ✕
+                      </button>
+                    )}
+                  </div>
+                  <div className="mt-3 flex gap-2 overflow-x-auto pb-1" role="tablist" aria-label="Chat filters">
+                    {(
+                      [
+                        ['all', 'All'],
+                        ['online', 'Online'],
+                        ['unread', 'Unread'],
+                        ['myturn', 'My turn'],
+                        ['proximity', 'Timezone proximity'],
+                      ] as const
+                    ).map(([id, label]) => (
+                      <button
+                        key={id}
+                        role="tab"
+                        aria-selected={chatFilter === id}
+                        onClick={() => setChatFilter(id)}
+                        className={`shrink-0 rounded-full px-3.5 py-1.5 text-xs font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${chatFilter === id ? 'bg-violet-600 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                  <div className="mt-2 grid gap-3">
+                    {chats.length === 0 && (
+                      <p className="rounded-2xl border bg-white p-6 text-center text-sm text-slate-500">
+                        No chats yet. Start one from an AI Room on Discover.
+                      </p>
+                    )}
+                    {chats.length > 0 && sortedChats.length === 0 && (
+                      <p className="rounded-2xl border bg-white p-6 text-center text-sm text-slate-500">
+                        No chats match this filter.
+                      </p>
+                    )}
+                    {sortedChats.map((c) => {
+                      const last = c.messages[c.messages.length - 1];
+                      const unread = chatIsUnread(c);
+                      return (
+                        <button
+                          key={c.id}
+                          onClick={() => openChat(c)}
+                          className="flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white p-4 text-left shadow-sm transition hover:border-violet-300 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+                        >
+                          <span className="relative h-12 w-12 shrink-0">
+                            {c.avatar ? (
+                              <Image src={c.avatar} alt="" width={96} height={96} className="h-12 w-12 rounded-full object-cover ring-2 ring-violet-200" />
+                            ) : (
+                              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-violet-100 text-xl font-bold text-violet-700 ring-2 ring-violet-200">
+                                {c.name.charAt(0)}
+                              </span>
+                            )}
+                            <span className="absolute -bottom-0.5 -left-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-white text-[11px] ring-1 ring-slate-200" aria-hidden="true">
+                              {c.flag || '🌐'}
+                            </span>
+                          </span>
+                          <span className="min-w-0 flex-1">
+                            <span className="block truncate font-bold">
+                              {c.name}{' '}
+                              {c.isAi && <span className="rounded-full bg-violet-600 px-2 py-0.5 text-[11px] font-extrabold text-white">AI</span>}
+                            </span>
+                            <span className={`block truncate text-sm ${unread ? 'font-semibold text-slate-700' : 'text-slate-500'}`}>
+                              {last ? last.text || (last.photo ? '📷 Photo' : '') : 'New match — say hi!'}
+                            </span>
+                          </span>
+                          <span className="flex shrink-0 flex-col items-end gap-1.5">
+                            <span className="whitespace-nowrap text-xs text-slate-400">{relativeTime(last?.at)}</span>
+                            {unread ? (
+                              <span className="h-2.5 w-2.5 rounded-full bg-violet-600" aria-label="Unread" />
+                            ) : (
+                              <span className="text-lg leading-none text-slate-300">›</span>
+                            )}
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
               ) : (
                 <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm">
@@ -1453,7 +2006,7 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                 <li>50 new chats per day (free: 20)</li>
                 <li>Unlimited AI reviews + weekly report</li>
                 <li>Unlimited translations</li>
-                <li>Advanced filters: region, timezone, goals, verified-only</li>
+                <li>Advanced filters: region, verified-only</li>
                 <li>Safety tools (report, block, contact guard) are free for everyone</li>
               </ul>
               <button
@@ -1473,7 +2026,7 @@ Pilot — AI rooms are the main experience; People room is a waitlist
           {tab === 'profile' && (
             <section>
               <h2 className="text-xl font-extrabold">My Exchange profile</h2>
-              <p className="mt-1 text-sm text-slate-500">Only nickname, languages, level and interests are shown to partners.</p>
+              <p className="mt-1 text-sm text-slate-500">Partners see your nickname, languages, level, interests, goal, age band, country, timezone and availability. Your exact date of birth is never shown to anyone.</p>
               {authLoading ? (
                 <p className="mt-2 text-sm text-slate-500">Checking sign-in…</p>
               ) : user ? (
@@ -1542,6 +2095,111 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                   </div>
                 </div>
                 <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
+                  <h3 className="font-bold">Matching</h3>
+                  <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                    <label className="block text-sm font-semibold">
+                      Learning goal
+                      <select value={learningGoal} onChange={(e) => setLearningGoal(e.target.value as LearningGoal)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
+                        {GOALS.map((g) => (
+                          <option key={g}>{g}</option>
+                        ))}
+                      </select>
+                    </label>
+                    <label className="block text-sm font-semibold">
+                      Country
+                      <select value={country} onChange={(e) => setCountry(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
+                        <option value="">Select a country</option>
+                        {COUNTRIES.map((c) => (
+                          <option key={c}>{c}</option>
+                        ))}
+                      </select>
+                    </label>
+                    <label className="block text-sm font-semibold">
+                      How I like to practice
+                      <select value={commMode} onChange={(e) => setCommMode(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
+                        {COMM_MODES.map((m) => (
+                          <option key={m}>{m}</option>
+                        ))}
+                      </select>
+                    </label>
+                    <label className="block text-sm font-semibold">
+                      Corrections
+                      <select value={correctionPref} onChange={(e) => setCorrectionPref(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
+                        {CORRECTION_PREFS.map((c) => (
+                          <option key={c}>{c}</option>
+                        ))}
+                      </select>
+                    </label>
+                  </div>
+                  <p className="mt-2 text-xs text-slate-500">Corrections: how often you want partners to correct you (Often / Sometimes / Never).</p>
+                </div>
+                <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
+                  <h3 className="font-bold">Age &amp; gender</h3>
+                  <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                    <label className="block text-sm font-semibold">
+                      Date of birth (18+ only)
+                      <input
+                        type="date"
+                        value={birthdate}
+                        max={maxBirthdate}
+                        onChange={(e) => setBirthdate(e.target.value)}
+                        className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
+                      />
+                    </label>
+                    <label className="block text-sm font-semibold">
+                      Gender
+                      <select value={gender} onChange={(e) => setGender(e.target.value as Gender)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
+                        {GENDERS.map((g) => (
+                          <option key={g}>{g}</option>
+                        ))}
+                      </select>
+                    </label>
+                  </div>
+                  <p className="mt-2 text-xs text-slate-500">
+                    Your exact birthdate is never shown to anyone — only your age band
+                    {birthdateBand ? ` (${birthdateBand})` : ageBand ? ` (${ageBand})` : ''} is shown on your card.
+                    {birthdateAge !== null && birthdateAge < 18 ? ' You must be 18 or older to save.' : ''}
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
+                  <h3 className="font-bold">Availability</h3>
+                  <p className="mt-1 text-sm text-slate-600">
+                    Timezone: {timezone ? `${timezone} (${utcLabel(utcOffsetMin)})` : 'detecting…'} — detected from your device.
+                  </p>
+                  <p className="mt-4 text-sm font-semibold">Days</p>
+                  <div className="mt-2 flex flex-wrap gap-1.5">
+                    {DAYS.map((d) => (
+                      <button
+                        key={d}
+                        onClick={() => toggleAvailDay(d)}
+                        className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${availDays.includes(d) ? 'bg-violet-600 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
+                      >
+                        {d}
+                      </button>
+                    ))}
+                  </div>
+                  <p className="mt-4 text-sm font-semibold">Times of day</p>
+                  <div className="mt-2 flex flex-wrap gap-1.5">
+                    {TIME_SLOTS.map((s) => (
+                      <button
+                        key={s}
+                        onClick={() => toggleAvailSlot(s)}
+                        className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${availSlots.includes(s) ? 'bg-violet-600 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
+                      >
+                        {s}
+                      </button>
+                    ))}
+                  </div>
+                  <label className="mt-4 block text-sm font-semibold">
+                    Sessions per week
+                    <select value={availPerWeek} onChange={(e) => setAvailPerWeek(Number(e.target.value))} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100 sm:w-48">
+                      {[1, 2, 3, 4, 5].map((n) => (
+                        <option key={n} value={n}>{n === 5 ? '5+' : n}</option>
+                      ))}
+                    </select>
+                  </label>
+                </div>
+                <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
                   <label className="block text-sm font-semibold">
                     About me
                     <textarea
@@ -1558,7 +2216,7 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                   <h3 className="font-bold">Verification</h3>
                   <ul className="mt-2 space-y-1 text-sm text-slate-600">
                     <li>✓ Phone verified</li>
-                    <li>✓ 18+ confirmed</li>
+                    <li>{ageBand ? '✓ 18+ confirmed' : '◷ 18+ check — add your date of birth above'}</li>
                     <li>◷ Profile photo review pending</li>
                   </ul>
                   <h3 className="mt-4 font-bold">Safety settings</h3>
@@ -1575,8 +2233,16 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                       Allow voice messages
                       <input type="checkbox" checked={allowVoice} onChange={(e) => setAllowVoice(e.target.checked)} className="h-5 w-5 accent-violet-600" />
                     </label>
+                    <label className="flex items-center justify-between gap-3">
+                      Only people of the same gender can find me
+                      <input type="checkbox" checked={sameGenderOnly} onChange={(e) => setSameGenderOnly(e.target.checked)} className="h-5 w-5 accent-violet-600" />
+                    </label>
                   </div>
+                  <p className="mt-2 text-xs text-slate-500">Safety settings are free for everyone — including the gender filter on Discover.</p>
                 </div>
+                {saveError && (
+                  <p className="rounded-xl bg-red-50 px-3 py-2 text-sm font-semibold text-red-800">{saveError}</p>
+                )}
                 <button
                   onClick={saveProfile}
                   disabled={authLoading || profileLoading}
