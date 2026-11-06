@@ -1,0 +1,67 @@
+# MunTalk Exchange — Firestore console snippet: admin page (Phase 1)
+#
+# HOW TO APPLY (in the Firebase console — NOT via repo firestore.rules):
+#   Firebase console → Firestore Database → Rules → apply the three items
+#   below, then Publish. The repo file firestore.rules is intentionally NOT
+#   changed by this PR (it is out of sync with the live console rules).
+#
+# WHAT IT ENABLES (admin page: /exchange/admin, PR #171):
+#   - Admin pause/ban: the admin page sets `status` ('paused' / 'banned' /
+#     'active') on another user's exchange_profiles doc. Discover already
+#     hides paused/banned profiles client-side.
+#   - Report queue: when a user reports a people chat partner, the client
+#     writes one doc to the NEW collection `exchange_reports`. The admin
+#     page lists it and marks it resolved/dismissed.
+#   - Waitlist: the admin page lists all exchange_waitlist docs.
+#
+# WHAT IT DOES NOT ENABLE:
+#   - No payment/revenue (there is none yet). No real names, emails, or
+#     contacts (profiles don't store them). No raw birthdates: birthdate
+#     lives in exchange_profiles/{uid}/private/identity (owner-only, item 6
+#     of the console bundle) and the admin page cannot read it.
+#
+# UNTIL THIS IS PUBLISHED, the admin page still loads and the user list
+# works (exchange_profiles read is already `allow read: if isSignedIn()`),
+# but pause/ban, report actions, and the report/waitlist lists fail with
+# permission-denied — the page shows a clear message instead of crashing.
+#
+# ── Item 1: admin status update on exchange_profiles ─────────────────────
+# Add this ONE line inside the EXISTING `match /exchange_profiles/{uid} { ... }`
+# block in the console rules (do not create a second block for the same path):
+#
+#   allow update: if isAdmin();
+#
+# It lets the admin account (muntalkofficial@gmail.com) change another
+# user's profile status. The client only ever writes `status` + `updatedAt`
+# for this action. Owners keep their existing update rights; this line only
+# adds the admin.
+#
+# ── Item 2: exchange_reports (NEW collection) ────────────────────────────
+# Paste this whole block into the console rules:
+#
+#   match /exchange_reports/{docId} {
+#     // Read/update/delete: admin only.
+#     allow read, update, delete: if isAdmin();
+#     // Create: any signed-in user reporting a chat partner. The reporter
+#     // must be the requester, and only the six listed fields are allowed.
+#     allow create: if isSignedIn()
+#       && request.resource.data.reporterUid == request.auth.uid
+#       && request.resource.data.status == 'open'
+#       && request.resource.data.keys().hasOnly(['reporterUid', 'reportedUid', 'reportedName', 'reason', 'status', 'createdAt'])
+#       && request.resource.data.reportedUid is string
+#       && request.resource.data.reportedName is string
+#       && request.resource.data.reason is string;
+#   }
+#
+# Fields written by the client (src/app/exchange/page.tsx reportAndBlock):
+#   reporterUid, reportedUid, reportedName, reason, status ('open'),
+#   createdAt. People chats only — AI chats never write here.
+#
+# ── Item 3: admin read on exchange_waitlist ──────────────────────────────
+# Add this ONE line inside the EXISTING `match /exchange_waitlist/{docId} { ... }`
+# block in the console rules (the block was published 2026-10-31):
+#
+#   allow read: if isAdmin();
+#
+# It lets the admin page list all waitlist entries. Owners keep their
+# existing read rights.
