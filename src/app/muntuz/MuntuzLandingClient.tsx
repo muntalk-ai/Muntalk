@@ -159,6 +159,23 @@ export default function MuntuzLandingClient() {
             AI friends you can talk with, in the language you&rsquo;re
             learning. Real conversations, zero judgment.
           </p>
+          {/* Hero photo strip — the five house friends (same photos as
+              Meet the house below, so the first screen shows faces). */}
+          <div className="mt-6 flex justify-center">
+            <div className="flex -space-x-3">
+              {FRIENDS.map((f) => (
+                <img
+                  key={f.id}
+                  src={f.photo}
+                  alt={`${f.name}, AI friend`}
+                  className="h-14 w-14 rounded-full object-cover shadow-md ring-2 ring-white"
+                />
+              ))}
+            </div>
+          </div>
+          <p className="mt-2 text-sm font-bold text-slate-700">
+            Say hi to Jiyoung, Emily, Chloe, Sofia &amp; Amara
+          </p>
           <a
             href="/exchange"
             className="mt-6 inline-block rounded-full bg-violet-600 px-8 py-3 text-base font-bold text-white shadow-md hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2"
