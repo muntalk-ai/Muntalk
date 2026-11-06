@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { collection, doc, getDoc, getDocs, limit, query, serverTimestamp, setDoc, where } from 'firebase/firestore';
+import { addDoc, collection, doc, getDoc, getDocs, limit, query, serverTimestamp, setDoc, where } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { apiFetch } from '@/lib/apiClient';
 import { AI_PARTNERS, AI_DISCLOSURE, type AiPartner } from '@/lib/exchangeAiPartners';
@@ -1282,6 +1282,20 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
 
   const reportAndBlock = () => {
     if (!reportChat) return;
+    // People chats only: file a server-side report for the admin
+    // moderation queue (/exchange/admin). AI chats stay local-only
+    // (nothing to moderate). Best-effort: a missing console rule must
+    // never break the local block below.
+    if (!reportChat.isAi && user) {
+      addDoc(collection(db, 'exchange_reports'), {
+        reporterUid: user.uid,
+        reportedUid: reportChat.partnerId,
+        reportedName: reportChat.name,
+        reason: reportReason || 'Other',
+        status: 'open',
+        createdAt: serverTimestamp(),
+      }).catch(() => {});
+    }
     setChats((cs) => cs.filter((c) => c.id !== reportChat.id));
     if (activeChatId === reportChat.id) setActiveChatId(null);
     showToast(`${reportChat.name} reported (${reportReason}) and blocked.`);
