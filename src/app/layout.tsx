@@ -2,6 +2,7 @@
 import './globals.css';
 import { AuthProvider } from '@/context/AuthContext';
 import GlobalOverlays from '@/components/GlobalOverlays';
+import InAppNavTracker from '@/components/InAppNavTracker';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.muntalk.com'),
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body style={{ margin: 0, padding: 0 }}>
         <AuthProvider>{children}</AuthProvider>
+        <InAppNavTracker />
         <GlobalOverlays />
       </body>
     </html>

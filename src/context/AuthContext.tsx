@@ -33,11 +33,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, async (u) => {
+    // Cold load에서 onAuthStateChanged는 저장된 세션을 복원하기 전
+    // null을 먼저 내보내고, 복원된 유저로 한 번 더 호출된다. 예전
+    // 코드는 첫 콜백에서 바로 loading을 풀어서 로그인된 유저에게
+    // "Log in" 버튼이 번쩍 보였다 사라지는 깜빡임이 생겼다.
+    // authStateReady()는 초기 상태가 확정될 때까지 기다리므로,
+    // 그 뒤에 구독하면 첫 콜백부터 복원된 유저가 들어 있다.
+    const handleAuthChange = async (u: User | null) => {
       // Firestore auth token이 준비될 때까지 대기 (권한 에러 방지)
       if (u) await u.getIdToken().catch(() => {});
       setUser(u);
-      setLoading(false); // ← user 확정 즉시 loading 해제 (UI flicker 방지)
+      setLoading(false); // 초기 상태 확정 후에만 해제 — "Log in" 버튼 깜빡임 방지
       if (u) {
         // 프로필 로드는 백그라운드에서 비동기 처리
         let p = await getUserProfile(u.uid);
@@ -81,8 +87,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       } else {
         setProfile(null);
       }
-    });
-    return unsub;
+    };
+    let unsub: (() => void) | undefined;
+    let cancelled = false;
+    void auth
+      .authStateReady()
+      .catch(() => {})
+      .then(() => {
+        if (cancelled) return;
+        unsub = onAuthStateChanged(auth, handleAuthChange);
+      });
+    return () => {
+      cancelled = true;
+      unsub?.();
+    };
   }, []);
 
   return (
