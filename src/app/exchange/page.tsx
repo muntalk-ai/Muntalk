@@ -185,10 +185,12 @@ export default function ExchangePage() {
 
   // Photo lightbox — tap a partner avatar or gallery photo to see the
   // original high-resolution file. `images` enables prev/next inside a
-  // gallery; a single photo has no list.
-  const [lightbox, setLightbox] = useState<{ src: string; alt: string; images?: string[]; index?: number } | null>(null);
-  const openLightbox = (src: string, alt: string, images?: string[]) =>
-    setLightbox({ src, alt, images, index: images ? images.indexOf(src) : undefined });
+  // gallery; a single photo has no list. The alt text is derived from the
+  // current photo (name + index) at render time, so it stays correct
+  // while stepping through a gallery.
+  const [lightbox, setLightbox] = useState<{ src: string; name: string; images?: string[]; index?: number } | null>(null);
+  const openLightbox = (src: string, name: string, images?: string[]) =>
+    setLightbox({ src, name, images, index: images ? images.indexOf(src) : undefined });
   const stepLightbox = (dir: 1 | -1) => {
     setLightbox((cur) => {
       if (!cur || !cur.images || cur.images.length === 0) return cur;
@@ -196,6 +198,27 @@ export default function ExchangePage() {
       return { ...cur, index: next, src: cur.images[next] };
     });
   };
+  const lightboxAlt =
+    lightbox && lightbox.images && lightbox.images.length > 1
+      ? `Lifestyle photo ${(lightbox.index ?? 0) + 1} of AI partner ${lightbox.name}`
+      : lightbox
+        ? `${lightbox.name} AI partner photo`
+        : '';
+
+  // Lightbox image load state — the original file is large, so show a
+  // spinner while it loads and a message if it fails, instead of a blank
+  // dark screen. Reset on every photo change (open or step).
+  const lightboxImgRef = useRef<HTMLImageElement | null>(null);
+  const [lightboxLoading, setLightboxLoading] = useState(true);
+  const [lightboxError, setLightboxError] = useState(false);
+  useEffect(() => {
+    if (!lightbox) return;
+    setLightboxLoading(true);
+    setLightboxError(false);
+    // A cached image may already be complete before onLoad fires.
+    const img = lightboxImgRef.current;
+    if (img && img.complete && img.naturalWidth > 0) setLightboxLoading(false);
+  }, [lightbox]);
 
   // Lightbox keys + scroll lock while open.
   useEffect(() => {
@@ -1009,7 +1032,7 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                         <div className="flex items-start gap-3">
                           <button
                             type="button"
-                            onClick={() => openLightbox(p.avatar, `${p.name} AI partner photo`)}
+                            onClick={() => openLightbox(p.avatar, p.name)}
                             aria-label={`View ${p.name}'s photo full size`}
                             className="h-14 w-14 shrink-0 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
                           >
@@ -1053,7 +1076,7 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                               <button
                                 key={g}
                                 type="button"
-                                onClick={() => openLightbox(g, `Lifestyle photo ${i + 1} of AI partner ${p.name}`, p.gallery)}
+                                onClick={() => openLightbox(g, p.name, p.gallery)}
                                 aria-label={`View lifestyle photo ${i + 1} of ${p.name} full size`}
                                 className="h-20 w-20 shrink-0 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
                               >
@@ -1243,7 +1266,7 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                 <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm">
                   <div className="flex items-center gap-3 border-b border-slate-100 p-3 sm:p-4">
                     <button onClick={leaveAiChat} className="min-h-[44px] rounded-lg px-2 font-bold text-violet-600 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">← Back</button>
-                    {activeChat.avatar ? (<button type="button" onClick={() => openLightbox(activeChat.avatar, `${activeChat.name} AI partner photo`)} aria-label={`View ${activeChat.name}'s photo full size`} className="h-14 w-14 shrink-0 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 sm:h-16 sm:w-16"><Image src={activeChat.avatar} alt={`${activeChat.name} AI partner`} width={112} height={112} className="h-14 w-14 rounded-full object-cover ring-2 ring-violet-200 sm:h-16 sm:w-16" /></button>) : (<span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-slate-100 text-2xl ring-2 ring-violet-200 sm:h-16 sm:w-16">{activeChat.flag || '🌐'}</span>)}
+                    {activeChat.avatar ? (<button type="button" onClick={() => openLightbox(activeChat.avatar, activeChat.name)} aria-label={`View ${activeChat.name}'s photo full size`} className="h-14 w-14 shrink-0 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 sm:h-16 sm:w-16"><Image src={activeChat.avatar} alt={`${activeChat.name} AI partner`} width={112} height={112} className="h-14 w-14 rounded-full object-cover ring-2 ring-violet-200 sm:h-16 sm:w-16" /></button>) : (<span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-slate-100 text-2xl ring-2 ring-violet-200 sm:h-16 sm:w-16">{activeChat.flag || '🌐'}</span>)}
                     <span className="font-bold">
                       {activeChat.name}{' '}
                       {activeChat.isAi && <span className="rounded-full bg-violet-600 px-2 py-0.5 text-[11px] font-extrabold text-white">AI</span>}
@@ -1703,7 +1726,7 @@ Pilot — AI rooms are the main experience; People room is a waitlist
           onClick={() => setLightbox(null)}
           role="dialog"
           aria-modal="true"
-          aria-label={lightbox.alt}
+          aria-label={lightboxAlt}
         >
           <button
             type="button"
@@ -1741,11 +1764,28 @@ Pilot — AI rooms are the main experience; People room is a waitlist
           )}
           {/* eslint-disable-next-line @next/next/no-img-element — the lightbox must show the original full-resolution file, not an optimized variant */}
           <img
+            key={lightbox.src}
+            ref={lightboxImgRef}
             src={lightbox.src}
-            alt={lightbox.alt}
+            alt={lightboxAlt}
+            onLoad={() => setLightboxLoading(false)}
+            onError={() => {
+              setLightboxLoading(false);
+              setLightboxError(true);
+            }}
             onClick={(e) => e.stopPropagation()}
             className="max-h-[85vh] max-w-[92vw] rounded-xl object-contain shadow-2xl"
           />
+          {lightboxLoading && !lightboxError && (
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center" role="status" aria-label="Loading photo">
+              <div className="h-12 w-12 animate-spin rounded-full border-4 border-white/30 border-t-white" />
+            </div>
+          )}
+          {lightboxError && (
+            <p className="pointer-events-none absolute inset-0 flex items-center justify-center px-6 text-center text-sm font-bold text-white">
+              Couldn&apos;t load this photo.
+            </p>
+          )}
           {lightbox.images && lightbox.images.length > 1 && (
             <p className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-black/60 px-3 py-1 text-xs font-bold text-white">
               {(lightbox.index ?? 0) + 1} / {lightbox.images.length}
