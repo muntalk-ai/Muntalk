@@ -316,6 +316,15 @@ const TABS: { id: Tab; label: string; icon: string }[] = [
 let msgSeq = 100;
 
 export default function ExchangePage() {
+  // 뒤로가기 폴백 (Jay 2026-11-06): muntuz.com 호스트에서는 랜딩이
+  // `/`에 있으므로 `/`로, 그 외 호스트(Preview·muntalk.com)에서는
+  // Muntuz 랜딩 라우트인 `/muntuz`로. 클릭 시에만 쓰이고 렌더 결과에
+  // 안 쓰이므로 SSR/하이드레이션에 영향이 없다.
+  const backFallback = (() => {
+    if (typeof window === 'undefined') return '/muntuz';
+    const host = window.location.hostname;
+    return host === 'muntuz.com' || host.endsWith('.muntuz.com') ? '/' : '/muntuz';
+  })();
   const [tab, setTab] = useState<Tab>('discover');
   const [room, setRoom] = useState<Room>('ai');
   const [chats, setChats] = useState<Chat[]>([]);
@@ -1575,8 +1584,9 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
       {/* Header */}
       <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 shadow-[0_1px_0_rgba(15,23,42,0.02)] backdrop-blur">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3.5">
-          {/* Back — Muntuz pages only (Jay 2026-11-06). No history: /muntuz. */}
-          <BackButton fallback="/muntuz" />
+          {/* Back — Muntuz pages only (Jay 2026-11-06). No history:
+              muntuz.com host → `/`, other hosts → `/muntuz`. */}
+          <BackButton fallback={backFallback} />
           {/* Brand: the shared /logo.png M-ring badge (same file the
               /muntuz landing uses) with "Muntuz" beside it — not
               "MunTalk", so the Exchange app reads as its own product
