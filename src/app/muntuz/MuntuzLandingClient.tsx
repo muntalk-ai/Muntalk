@@ -1,7 +1,7 @@
 'use client';
 
 // Muntuz landing page (client part).
-// Hero + features + how it works + People Rooms (waitlist notice)
+// Hero + how it works + People Rooms (waitlist notice)
 // + Meet the house (5 AI friends) + waitlist email signup
 // (Firestore `muntuz_waitlist`) + Muntuz footer. English, mobile-first.
 //
@@ -72,39 +72,6 @@ const FRIENDS: Friend[] = [
     native: 'English',
     learning: 'Chinese',
     line: 'Learning Chinese over morning runs.',
-  },
-];
-
-const FEATURES: { emoji: string; title: string; body: string }[] = [
-  {
-    emoji: '💬',
-    title: '50 AI partners, always online',
-    body: 'Pick anyone and start chatting. They are always online — in any language.',
-  },
-  {
-    emoji: '🎤',
-    title: 'Voice calls',
-    body: 'Talk, don’t just type. Voice-only calls with your AI partners.',
-  },
-  {
-    emoji: '💡',
-    title: 'Natural corrections',
-    body: 'Every reply can include one natural way to say it better — right inside the chat.',
-  },
-  {
-    emoji: '🖼️',
-    title: 'Photos in chat',
-    body: 'Your AI friends share photos from their day, right in the conversation.',
-  },
-  {
-    emoji: '🌍',
-    title: 'Any language',
-    body: 'Practice in any language. No language filter — one partner, any language.',
-  },
-  {
-    emoji: '🆓',
-    title: 'Free to start',
-    body: 'No tutor, no scheduling, no pressure. Just start talking.',
   },
 ];
 
@@ -192,6 +159,23 @@ export default function MuntuzLandingClient() {
             AI friends you can talk with, in the language you&rsquo;re
             learning. Real conversations, zero judgment.
           </p>
+          {/* Hero photo strip — the five house friends (same photos as
+              Meet the house below, so the first screen shows faces). */}
+          <div className="mt-6 flex justify-center">
+            <div className="flex -space-x-3">
+              {FRIENDS.map((f) => (
+                <img
+                  key={f.id}
+                  src={f.photo}
+                  alt={`${f.name}, AI friend`}
+                  className="h-14 w-14 rounded-full object-cover shadow-md ring-2 ring-white"
+                />
+              ))}
+            </div>
+          </div>
+          <p className="mt-2 text-sm font-bold text-slate-700">
+            Say hi to Jiyoung, Emily, Chloe, Sofia &amp; Amara
+          </p>
           <a
             href="/exchange"
             className="mt-6 inline-block rounded-full bg-violet-600 px-8 py-3 text-base font-bold text-white shadow-md hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2"
@@ -202,23 +186,6 @@ export default function MuntuzLandingClient() {
             Free — no tutor, no scheduling.
           </p>
         </header>
-
-        {/* Features */}
-        <section className="mt-12">
-          <h2 className="text-center text-lg font-bold">Why Muntuz</h2>
-          <ul className="mt-4 grid gap-4 sm:grid-cols-2">
-            {FEATURES.map((f) => (
-              <li
-                key={f.title}
-                className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-100"
-              >
-                <div className="text-2xl">{f.emoji}</div>
-                <h3 className="mt-2 text-base font-bold">{f.title}</h3>
-                <p className="mt-1 text-sm text-slate-600">{f.body}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
 
         {/* How it works */}
         <section className="mt-12">
