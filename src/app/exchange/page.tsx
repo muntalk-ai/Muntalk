@@ -2,16 +2,29 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { addDoc, collection, doc, getDoc, getDocs, limit, query, serverTimestamp, setDoc, where } from 'firebase/firestore';
+import { addDoc, collection, doc, getDoc, getDocs, limit, query, serverTimestamp, setDoc, updateDoc, where } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { apiFetch } from '@/lib/apiClient';
 import { AI_PARTNERS, AI_DISCLOSURE, type AiPartner } from '@/lib/exchangeAiPartners';
 import {
   EXCHANGE_MEMORIES_COLLECTION,
+  MAX_MEMORY_FACTS,
   formatMemoryForPrompt,
   memoryDocId,
   type ExchangeMemory,
 } from '@/lib/exchangeMemory';
+import {
+  EXCHANGE_REVIEWS_COLLECTION,
+  EXCHANGE_VOCAB_COLLECTION,
+  buildOpener,
+  loadOpenerEnabled,
+  markOpenerSent,
+  openerSentToday,
+  saveOpenerEnabled,
+  vocabDocId,
+  type ExchangeVocabItem,
+  type SessionReview,
+} from '@/lib/exchangeMemoryReview';
 import { useAuth } from '@/context/AuthContext';
 import {
   AGE_BANDS,
@@ -63,7 +76,22 @@ import {
  * there are new learner turns). Until the console rules for the new
  * collection are published, memory reads fail with permission-denied and
  * chats simply work without memory.
- * AI Review / Pro tabs are still demo data. The Profile tab is wired to
+ * Memory + review pilot (Jay 2026-11-06): (1) Vocabulary notebook —
+ * finishing a chat with "Finish & review" runs one short Gemini call
+ * that returns top mistakes + new words + one-line summary and saves
+ * them server-side (`exchange_reviews`, `exchange_vocab`); the AI
+ * Review tab shows the real words and corrections instead of demo
+ * data, with a "words to review" card and mark-as-known. (2) Post-chat
+ * review card — rendered inline in the chat room from the same call,
+ * so it works even before the console rules for the two collections
+ * are published. (3) AI speaks first — when the user opens the Chats
+ * tab, an AI partner whose last message was answered may greet the
+ * learner first with a recalled memory fact (template-based, $0, no
+ * model call), at most once per partner per day; Profile settings can
+ * turn it off. Console snippet for the two collections:
+ * firestore-snippets/exchange-memory-review.rules.txt (repo
+ * firestore.rules is intentionally NOT touched).
+ * AI Review / Pro tabs are otherwise still demo data. The Profile tab is wired to
  * Firestore for signed-in users (collection `exchange_profiles`).
  * Header: the shared /logo.png M-ring badge with "Muntuz" (Jay
  * 2026-11-05 — same file the /muntuz landing uses, no new logo), plus a
@@ -367,6 +395,24 @@ export default function ExchangePage() {
   const memoryRef = useRef<Record<string, string>>({});
   const memorySavedRef = useRef<Record<string, number>>({});
   const [memoryClearing, setMemoryClearing] = useState(false);
+  // Raw memory fact lines per partner (for the "AI speaks first" opener —
+  // the formatted prompt text in memoryRef is not usable for quoting).
+  const memoryFactsRef = useRef<Record<string, string[]>>({});
+
+  // Memory + review pilot state.
+  // `review` is the latest session review for the open chat (rendered
+  // inline in the chat room); it is cleared when the chat changes.
+  const [review, setReview] = useState<SessionReview | null>(null);
+  const [reviewLoading, setReviewLoading] = useState(false);
+  // AI Review tab data (signed-in only, rules-gated reads). Loaded lazily
+  // when the tab opens; empty until the console rules are published.
+  const [vocabItems, setVocabItems] = useState<ExchangeVocabItem[]>([]);
+  const [reviewItems, setReviewItems] = useState<SessionReview[]>([]);
+  const [reviewDataLoaded, setReviewDataLoaded] = useState(false);
+  const [reviewDataLoading, setReviewDataLoading] = useState(false);
+  // "AI speaks first" toggle — pilot setting, browser-local (localStorage).
+  // Default on; the opener itself is capped at once per partner per day.
+  const [aiOpeners, setAiOpeners] = useState<boolean>(() => loadOpenerEnabled());
 
   // Profile (demo, browser state only)
   const [nativeLang, setNativeLang] = useState('English');
@@ -989,9 +1035,11 @@ export default function ExchangePage() {
         facts: Array.isArray(d.facts) ? d.facts.filter((f): f is string => typeof f === 'string') : [],
       };
       memoryRef.current[partnerId] = formatMemoryForPrompt(mem);
+      memoryFactsRef.current[partnerId] = mem.facts.slice(0, MAX_MEMORY_FACTS);
     } catch {
       // Never surface an error for memory: the chat works without it.
       memoryRef.current[partnerId] = '';
+      memoryFactsRef.current[partnerId] = [];
     }
   };
 
@@ -1015,6 +1063,7 @@ export default function ExchangePage() {
     );
     // The greeting is read at once (the chat opens immediately).
     setSeenMsgId((s) => ({ ...s, [p.id]: Math.max(s[p.id] ?? 0, gid) }));
+    setReview(null);
     setActiveChatId(p.id);
     setTab('chats');
     void loadMemoryForPartner(p.id);
@@ -1049,6 +1098,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
   };
   const openChat = (c: Chat) => {
     markChatSeen(c);
+    setReview(null);
     setActiveChatId(c.id);
   };
   const chatIsUnread = (c: Chat) => {
@@ -1085,6 +1135,15 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
   // "Timezone proximity" is a sort, not a filter: closest timezone first.
   const sortedChats =
     chatFilter === 'proximity' ? [...visibleChats].sort((a, b) => chatTzDistance(a) - chatTzDistance(b)) : visibleChats;
+
+  // ── AI Review tab: derived real data ────────────────────────────────
+  // Due words: saved, not marked known, and past their review time.
+  const dueVocab = vocabItems.filter((v) => !v.known && v.nextReviewAtMs > 0 && v.nextReviewAtMs <= Date.now());
+  // Latest corrections across saved reviews (newest first, at most 5).
+  const recentMistakes = reviewItems
+    .flatMap((r) => r.mistakes.map((m) => ({ ...m, partnerName: r.partnerName, at: r.createdAtMs })))
+    .slice(0, 5);
+  const latestReview = reviewItems[0] ?? null;
 
   const sendAiMessage = async () => {
     const text = input.trim();
@@ -1180,6 +1239,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
     const chat = activeChat;
     // Replies read while the chat was open must not show as unread later.
     if (chat) markChatSeen(chat);
+    setReview(null);
     setActiveChatId(null);
     if (chat) void saveMemoryForChat(chat);
   };
@@ -1197,6 +1257,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(typeof data.error === 'string' ? data.error : 'Could not clear memory');
       delete memoryRef.current[activeChat.partnerId];
+      memoryFactsRef.current[activeChat.partnerId] = [];
       showToast('Memory cleared.');
     } catch (err) {
       showToast(err instanceof Error ? err.message : 'Could not clear memory. Please try again.');
@@ -1204,6 +1265,197 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
       setMemoryClearing(false);
     }
   };
+
+  // ── Memory + review pilot ────────────────────────────────────────────
+  // Load the signed-in user's saved words and session reviews for the
+  // AI Review tab. Single-field equality queries only (no composite
+  // index needed); sorting happens client-side. A permission-denied read
+  // (console rules not published yet) leaves the empty/example state.
+  const loadReviewData = async () => {
+    if (!user || reviewDataLoading) return;
+    setReviewDataLoading(true);
+    try {
+      const vSnap = await getDocs(
+        query(collection(db, EXCHANGE_VOCAB_COLLECTION), where('uid', '==', user.uid), limit(50))
+      );
+      const items: ExchangeVocabItem[] = [];
+      vSnap.forEach((d) => {
+        const data = d.data() as Partial<ExchangeVocabItem>;
+        if (typeof data.word !== 'string' || !data.word) return;
+        items.push({
+          uid: user.uid,
+          word: data.word,
+          meaning: typeof data.meaning === 'string' ? data.meaning : '',
+          example: typeof data.example === 'string' ? data.example : '',
+          partnerId: typeof data.partnerId === 'string' ? data.partnerId : '',
+          partnerName: typeof data.partnerName === 'string' ? data.partnerName : '',
+          firstSeenAtMs: typeof data.firstSeenAtMs === 'number' ? data.firstSeenAtMs : 0,
+          lastSeenAtMs: typeof data.lastSeenAtMs === 'number' ? data.lastSeenAtMs : 0,
+          nextReviewAtMs: typeof data.nextReviewAtMs === 'number' ? data.nextReviewAtMs : 0,
+          reviewCount: typeof data.reviewCount === 'number' ? data.reviewCount : 0,
+          known: data.known === true,
+        });
+      });
+      items.sort((a, b) => b.lastSeenAtMs - a.lastSeenAtMs);
+      setVocabItems(items);
+      const rSnap = await getDocs(
+        query(collection(db, EXCHANGE_REVIEWS_COLLECTION), where('uid', '==', user.uid), limit(10))
+      );
+      const reviews: SessionReview[] = [];
+      rSnap.forEach((d) => {
+        const data = d.data() as Partial<SessionReview>;
+        if (typeof data.partnerId !== 'string') return;
+        reviews.push({
+          partnerId: data.partnerId,
+          partnerName: typeof data.partnerName === 'string' ? data.partnerName : '',
+          summary: typeof data.summary === 'string' ? data.summary : '',
+          mistakes: Array.isArray(data.mistakes) ? (data.mistakes as SessionReview['mistakes']) : [],
+          vocab: Array.isArray(data.vocab) ? (data.vocab as SessionReview['vocab']) : [],
+          userTurns: typeof data.userTurns === 'number' ? data.userTurns : 0,
+          createdAtMs: typeof data.createdAtMs === 'number' ? data.createdAtMs : 0,
+        });
+      });
+      reviews.sort((a, b) => b.createdAtMs - a.createdAtMs);
+      setReviewItems(reviews);
+    } catch {
+      // Rules not published yet — keep the empty/example state.
+    } finally {
+      setReviewDataLoaded(true);
+      setReviewDataLoading(false);
+    }
+  };
+
+  // Finish a chat with a review: one short Gemini call (server-side)
+  // that returns top mistakes + new words + one-line summary and saves
+  // them. The review card renders inline from the response, so it works
+  // even before the console rules are published.
+  const requestSessionReview = async () => {
+    const chat = activeChat;
+    if (!chat?.isAi || !user || reviewLoading) return;
+    const userTurns = chat.messages.filter((m) => m.from === 'me').length;
+    if (userTurns < 4) {
+      showToast('Chat a little more first — a review needs at least 4 messages from you.');
+      return;
+    }
+    // Pair each 💡 correction with the learner message it corrects.
+    const corrections: { from: string; to: string }[] = [];
+    for (let i = 0; i < chat.messages.length; i++) {
+      const m = chat.messages[i];
+      if (!m.correction) continue;
+      let from = '';
+      for (let j = i - 1; j >= 0; j--) {
+        if (chat.messages[j].from === 'me') {
+          from = chat.messages[j].text;
+          break;
+        }
+      }
+      if (from) corrections.push({ from, to: m.correction });
+    }
+    const history = chat.messages.slice(-12).map((m) => ({
+      role: m.from === 'me' ? ('user' as const) : ('ai' as const),
+      text: m.text,
+    }));
+    setReviewLoading(true);
+    try {
+      const res = await apiFetch('/api/exchange-ai-chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'session-review',
+          partnerId: chat.partnerId,
+          history,
+          corrections,
+          nativeLang,
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(typeof data.error === 'string' ? data.error : 'Review failed');
+      if (data.reviewed && data.review) {
+        const r = data.review as SessionReview;
+        setReview(r);
+        setReviewItems((prev) => [r, ...prev].slice(0, 10));
+        void loadReviewData();
+        showToast('Review ready — your top corrections and new words are below.');
+      } else {
+        showToast('Not enough to review yet — chat a little more and try again.');
+      }
+    } catch (err) {
+      showToast(err instanceof Error ? err.message : 'Review failed. Please try again.');
+    } finally {
+      setReviewLoading(false);
+    }
+  };
+
+  // Mark a saved word as known: it leaves the "words to review" list.
+  // Owner-only client update (rules-gated); a missing rule fails silent
+  // with a toast instead of breaking the tab.
+  const markVocabKnown = async (item: ExchangeVocabItem) => {
+    if (!user) return;
+    try {
+      await updateDoc(doc(db, EXCHANGE_VOCAB_COLLECTION, vocabDocId(user.uid, item.word)), {
+        known: true,
+        reviewCount: item.reviewCount + 1,
+        nextReviewAtMs: Date.now() + 365 * 24 * 60 * 60 * 1000,
+      });
+      setVocabItems((prev) => prev.map((v) => (v.word === item.word ? { ...v, known: true } : v)));
+      showToast(`"${item.word}" marked as known.`);
+    } catch {
+      showToast('Could not save that yet — try again later.');
+    }
+  };
+
+  // AI speaks first: when the user opens the Chats list, an AI partner
+  // whose conversation already has at least one learner turn may greet
+  // the learner first — with a recalled memory fact when one exists.
+  // Template-based ($0, no model call), at most once per partner per
+  // day, and only while the user is on the list (never inside an open
+  // chat). The message carries the AI badge like any AI message.
+  const maybeSendOpeners = () => {
+    if (!aiOpeners || !user || activeChatId) return;
+    const now = Date.now();
+    const pending: { chatId: string; partnerId: string; text: string }[] = [];
+    for (const c of chats) {
+      if (!c.isAi) continue;
+      if (c.messages.filter((m) => m.from === 'me').length < 1) continue;
+      const last = c.messages[c.messages.length - 1];
+      if (!last || last.from !== 'partner') continue;
+      if (openerSentToday(c.partnerId)) continue;
+      const partner = AI_PARTNERS.find((p) => p.id === c.partnerId);
+      if (!partner) continue;
+      const daysSince = last.at ? Math.floor((now - last.at) / (24 * 60 * 60 * 1000)) : 0;
+      pending.push({
+        chatId: c.id,
+        partnerId: c.partnerId,
+        text: buildOpener({
+          partnerName: partner.name,
+          interests: partner.interests,
+          memoryFacts: memoryFactsRef.current[c.partnerId] ?? [],
+          daysSinceLastChat: daysSince,
+        }),
+      });
+    }
+    if (pending.length === 0) return;
+    for (const p of pending) markOpenerSent(p.partnerId);
+    setChats((cs) =>
+      cs.map((c) => {
+        const p = pending.find((x) => x.chatId === c.id);
+        if (!p) return c;
+        return { ...c, messages: [...c.messages, { id: msgSeq++, from: 'partner' as const, text: p.text, ai: true, at: Date.now() }] };
+      })
+    );
+  };
+
+  // Openers fire when the user switches to the Chats tab (list view).
+  useEffect(() => {
+    if (tab === 'chats') maybeSendOpeners();
+    // eslint-disable-next-line react-hooks/exhaustive-deps — run on tab switch only.
+  }, [tab]);
+
+  // AI Review tab data: load once when the tab opens (signed-in only).
+  useEffect(() => {
+    if (tab === 'review' && user && !reviewDataLoaded) void loadReviewData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps — run on tab switch only.
+  }, [tab, user]);
 
 // Real (human) chats: messages stay in browser state only for this
   // pilot. No auto-reply — the partner is a real person, never a fake.
@@ -1821,6 +2073,15 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                       {activeChat.name}{' '}
                       {activeChat.isAi && <span className="rounded-full bg-violet-600 px-2 py-0.5 text-[11px] font-extrabold text-white">AI</span>}
                     </span>
+                    {activeChat.isAi && user && activeChat.messages.filter((m) => m.from === 'me').length >= 4 && (
+                      <button
+                        onClick={requestSessionReview}
+                        disabled={reviewLoading}
+                        className="ml-auto min-h-[36px] rounded-full bg-violet-600 px-3 py-1 text-xs font-bold text-white hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 disabled:opacity-60"
+                      >
+                        {reviewLoading ? 'Reviewing…' : '✏️ Finish & review'}
+                      </button>
+                    )}
                     {activeChat.isAi && user && (
                       <button
                         onClick={clearMemoryForChat}
@@ -1893,6 +2154,50 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                     ))}
                     {aiSending && <p className="text-xs font-semibold text-slate-400">AI is generating a reply…</p>}
                   </div>
+                  {review && review.partnerId === activeChat.partnerId && (
+                    <div className="border-t border-violet-100 bg-violet-50 p-4">
+                      <div className="flex items-start justify-between gap-3">
+                        <h3 className="font-bold text-violet-900">
+                          📝 Session review with {review.partnerName}{' '}
+                          <span className="rounded-full bg-violet-600 px-2 py-0.5 text-[11px] font-extrabold text-white">AI</span>
+                        </h3>
+                        <button
+                          onClick={() => setReview(null)}
+                          aria-label="Dismiss review"
+                          className="min-h-[32px] rounded-full px-2 text-sm font-bold text-violet-700 hover:bg-violet-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+                        >
+                          ✕
+                        </button>
+                      </div>
+                      {review.summary && <p className="mt-1 text-sm text-violet-800">{review.summary}</p>}
+                      {review.mistakes.length > 0 && (
+                        <div className="mt-3">
+                          <h4 className="text-xs font-extrabold uppercase tracking-wide text-violet-700">Top corrections</h4>
+                          <ul className="mt-1.5 list-disc space-y-1 pl-5 text-sm text-slate-700">
+                            {review.mistakes.map((m, i) => (
+                              <li key={i}>
+                                <span className="line-through">{m.from}</span> → <b>{m.to}</b>
+                                {m.why ? <span className="text-slate-500"> — {m.why}</span> : null}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      {review.vocab.length > 0 && (
+                        <div className="mt-3">
+                          <h4 className="text-xs font-extrabold uppercase tracking-wide text-violet-700">New words — saved to your vocabulary</h4>
+                          <div className="mt-1.5 flex flex-wrap gap-1.5">
+                            {review.vocab.map((w) => (
+                              <span key={w.word} title={w.example || w.meaning} className="rounded-full bg-violet-100 px-2 py-1 text-xs font-semibold text-violet-700">
+                                {w.word}{w.meaning ? ` — ${w.meaning}` : ''}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                      <p className="mt-3 text-xs text-violet-700">Saved to AI Review — review these words again tomorrow.</p>
+                    </div>
+                  )}
                   <div className="flex gap-2 border-t border-slate-100 p-3">
                     <input
                       value={input}
@@ -1915,28 +2220,90 @@ Pilot — AI rooms are the main experience; People room is a waitlist
             <section>
               <h2 className="text-xl font-extrabold">AI Review</h2>
               <p className="mt-1 text-sm text-slate-500">
-                Based on your demo chat with Emma. Free: 1 review per week. Pro: unlimited.
+                {!user
+                  ? 'Sign in to see your real reviews and vocabulary.'
+                  : 'Based on your AI chats. Finish a chat and tap “Finish & review” to save a review here.'}
               </p>
               <div className="mt-4 grid gap-4">
+                {dueVocab.length > 0 && (
+                  <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 shadow-sm sm:p-5">
+                    <h3 className="font-bold">📚 Words to review ({dueVocab.length})</h3>
+                    <p className="mt-1 text-sm text-slate-600">
+                      These came up in your chats yesterday or earlier. Tap “Got it” when you know one — or practice it with the partner who taught it.
+                    </p>
+                    <ul className="mt-3 space-y-2">
+                      {dueVocab.slice(0, 5).map((v) => {
+                        const partner = AI_PARTNERS.find((p) => p.id === v.partnerId);
+                        return (
+                          <li key={v.word} className="flex flex-wrap items-center gap-2 rounded-xl bg-white p-3 shadow-sm">
+                            <span className="min-w-0 flex-1">
+                              <b>{v.word}</b>
+                              {v.meaning ? <span className="text-sm text-slate-600"> — {v.meaning}</span> : null}
+                              {v.example ? <span className="block text-xs text-slate-500">{v.example}</span> : null}
+                            </span>
+                            {partner && (
+                              <button
+                                onClick={() => startAiChat(partner)}
+                                className="min-h-[36px] rounded-full border border-violet-200 px-3 py-1 text-xs font-bold text-violet-700 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+                              >
+                                💬 Practice with {v.partnerName || partner.name}
+                              </button>
+                            )}
+                            <button
+                              onClick={() => void markVocabKnown(v)}
+                              className="min-h-[36px] rounded-full bg-violet-600 px-3 py-1 text-xs font-bold text-white hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+                            >
+                              Got it ✓
+                            </button>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                )}
                 <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
-                  <h3 className="font-bold">Corrections from this week (3)</h3>
-                  <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-600">
-                    <li><span className="line-through">I think its correct</span> → <b>I think it&apos;s correct</b> — &quot;its&quot; is possessive; &quot;it&apos;s&quot; means &quot;it is&quot;.</li>
-                    <li><span className="line-through">I am agree</span> → <b>I agree</b> — &quot;agree&quot; is already a verb.</li>
-                    <li><span className="line-through">He go to school</span> → <b>He goes to school</b> — third person adds -s.</li>
-                  </ul>
+                  <h3 className="font-bold">Corrections from your chats{recentMistakes.length > 0 ? ` (${recentMistakes.length})` : ''}</h3>
+                  {recentMistakes.length > 0 ? (
+                    <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-600">
+                      {recentMistakes.map((m, i) => (
+                        <li key={i}>
+                          <span className="line-through">{m.from}</span> → <b>{m.to}</b>
+                          {m.why ? <span> — {m.why}</span> : null}
+                          {m.partnerName ? <span className="text-slate-400"> ({m.partnerName})</span> : null}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="mt-2 text-sm text-slate-600">
+                      No reviews yet — this is an example: <span className="line-through">I am agree</span> → <b>I agree</b> — &quot;agree&quot; is already a verb. Finish an AI chat and tap “Finish &amp; review” to see your real corrections here.
+                    </p>
+                  )}
                 </div>
                 <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
-                  <h3 className="font-bold">More natural expressions</h3>
-                  <p className="mt-2 text-sm text-slate-600">
-                    Instead of &quot;Thanks! That helps a lot.&quot;, try &quot;That really clears it up, thanks!&quot; — warmer and more native.
-                  </p>
-                  <h3 className="mt-4 font-bold">Vocabulary from your chats</h3>
-                  <div className="mt-2 flex flex-wrap gap-1.5">
-                    {['clear up', 'in return', 'comfortable', 'practice', 'recently'].map((w) => (
-                      <span key={w} className="rounded-full bg-violet-100 px-2 py-1 text-xs font-semibold text-violet-700">{w}</span>
-                    ))}
-                  </div>
+                  <h3 className="font-bold">Vocabulary from your chats</h3>
+                  {vocabItems.length > 0 ? (
+                    <div className="mt-2 flex flex-wrap gap-1.5">
+                      {vocabItems.slice(0, 12).map((v) => (
+                        <span
+                          key={v.word}
+                          title={v.example || v.meaning}
+                          className={`rounded-full px-2 py-1 text-xs font-semibold ${v.known ? 'bg-slate-100 text-slate-500 line-through' : 'bg-violet-100 text-violet-700'}`}
+                        >
+                          {v.word}
+                          {v.known ? ' ✓' : ''}
+                        </span>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="mt-2 text-sm text-slate-600">
+                      No saved words yet — finish a chat to save new words here. Words you mark as known show struck through.
+                    </p>
+                  )}
+                  {latestReview?.summary && (
+                    <p className="mt-3 text-sm text-slate-600">
+                      <b>Latest review{latestReview.partnerName ? ` (${latestReview.partnerName})` : ''}:</b> {latestReview.summary}
+                    </p>
+                  )}
                 </div>
                 <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
                   <h3 className="font-bold">This week</h3>
@@ -1971,7 +2338,9 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                 <div className="rounded-2xl border border-violet-200 bg-violet-50 p-4 shadow-sm">
                   <h3 className="font-bold">Next mission</h3>
                   <p className="mt-1 text-sm text-slate-600">
-                    Ask Emma about her weekend plans using &quot;going to&quot; — then review the corrections together.
+                    {latestReview && latestReview.vocab.length > 0
+                      ? `Use “${latestReview.vocab[0].word}” in a sentence with ${latestReview.partnerName || 'your AI partner'} — then review the corrections together.`
+                      : 'Ask Emma about her weekend plans using "going to" — then review the corrections together.'}
                   </p>
                 </div>
               </div>
@@ -2233,8 +2602,20 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                       Only people of the same gender can find me
                       <input type="checkbox" checked={sameGenderOnly} onChange={(e) => setSameGenderOnly(e.target.checked)} className="h-5 w-5 accent-violet-600" />
                     </label>
+                    <label className="flex items-center justify-between gap-3">
+                      AI partners can message me first
+                      <input
+                        type="checkbox"
+                        checked={aiOpeners}
+                        onChange={(e) => {
+                          setAiOpeners(e.target.checked);
+                          saveOpenerEnabled(e.target.checked);
+                        }}
+                        className="h-5 w-5 accent-violet-600"
+                      />
+                    </label>
                   </div>
-                  <p className="mt-2 text-xs text-slate-500">Safety settings are free for everyone — including the gender filter on Discover.</p>
+                  <p className="mt-2 text-xs text-slate-500">Safety settings are free for everyone — including the gender filter on Discover. AI first messages come at most once a day per partner, and only from AI partners (marked AI).</p>
                 </div>
                 {saveError && (
                   <p className="rounded-xl bg-red-50 px-3 py-2 text-sm font-semibold text-red-800">{saveError}</p>
