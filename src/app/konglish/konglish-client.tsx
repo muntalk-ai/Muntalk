@@ -272,7 +272,7 @@ export default function KonglishClient() {
             }}
           >
             <h2 style={{ fontSize: 16, fontWeight: 900, margin: '0 0 6px' }}>
-              🔓 Next episode — Episode {nextEp.ep}: “{nextEp.topic}”
+              🔒 Next episode — Episode {nextEp.ep}: “{nextEp.topic}”
             </h2>
             <p style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.85)', margin: '0 0 16px', lineHeight: 1.7 }}>
               Opens to everyone {fmtRelease(nextEp.releaseAt)} (Vancouver time).
