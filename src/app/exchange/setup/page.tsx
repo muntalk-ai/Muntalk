@@ -17,6 +17,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { useAuth } from '@/context/AuthContext';
+import { takeStashedNextPath } from '@/lib/returnUrl';
 import {
   AGE_BANDS,
   COMM_MODES,
@@ -144,7 +145,9 @@ export default function ExchangeSetupPage() {
     if (result.birthdateSaved === false && result.birthdateError === 'permission-denied') {
       // Continue to Exchange: the profile itself is saved.
     }
-    router.push('/exchange');
+    // Back to where the user was headed (stashed by the post-login setup
+    // gate); otherwise back to Exchange.
+    router.push(takeStashedNextPath('/exchange'));
   };
 
   return (

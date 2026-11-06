@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { addDoc, collection, doc, getDoc, getDocs, limit, query, serverTimestamp, setDoc, updateDoc, where } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
@@ -467,6 +468,7 @@ export default function ExchangePage() {
   // sameGenderOnly — never real name, email, contact details, or the
   // exact birthdate (see saveProfile for where the birthdate goes).
   const { user, loading: authLoading } = useAuth();
+  const router = useRouter();
   const [profileLoading, setProfileLoading] = useState(false);
   const [profileLoaded, setProfileLoaded] = useState(false);
   const [profileError, setProfileError] = useState('');
@@ -1043,7 +1045,18 @@ export default function ExchangePage() {
     }
   };
 
+  // Chat needs sign-in (Jay, 2026-11-06): the lounge stays browsable
+  // logged-out, but opening an AI chat or sending an AI message sends
+  // the user to login first (and back to Exchange after). Returns true
+  // when the user is signed in.
+  const requireChatLogin = (): boolean => {
+    if (user) return true;
+    router.push('/login?next=/exchange');
+    return false;
+  };
+
   const startAiChat = (p: AiPartner) => {
+    if (!requireChatLogin()) return;
     const gid = msgSeq++;
     setChats((cs) =>
       cs.some((c) => c.id === p.id)
@@ -1097,6 +1110,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
     if (last) setSeenMsgId((s) => ({ ...s, [c.id]: Math.max(s[c.id] ?? 0, last.id) }));
   };
   const openChat = (c: Chat) => {
+    if (c.isAi && !requireChatLogin()) return;
     markChatSeen(c);
     setReview(null);
     setActiveChatId(c.id);
@@ -1146,6 +1160,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
   const latestReview = reviewItems[0] ?? null;
 
   const sendAiMessage = async () => {
+    if (!requireChatLogin()) return;
     const text = input.trim();
     if (!text || !activeChat || !activeChat.isAi || aiSending) return;
     if (CONTACT_GUARD.test(text)) {

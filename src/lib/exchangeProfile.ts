@@ -299,3 +299,28 @@ export async function loadExchangeProfile(uid: string): Promise<LoadedExchangePr
   }
   return out;
 }
+
+// Post-login setup gate (Jay, 2026-11-06): true only when the PUBLIC
+// profile doc exists with the fields the setup form collects. Reads the
+// public doc ONLY — never the private/identity subcollection (its
+// Firestore rule is not published yet, so that read would fail). A failed
+// read counts as incomplete: the setup page prefills from the public doc,
+// so the user just saves again instead of hitting a dead end.
+export async function isExchangeProfileComplete(uid: string): Promise<boolean> {
+  try {
+    const snap = await getDoc(doc(db, 'exchange_profiles', uid));
+    if (!snap.exists()) return false;
+    const d = snap.data();
+    const nonEmpty = (v: unknown): boolean => typeof v === 'string' && v.trim().length > 0;
+    return (
+      nonEmpty(d.nickname) &&
+      nonEmpty(d.nativeLang) &&
+      nonEmpty(d.targetLang) &&
+      nonEmpty(d.country) &&
+      typeof d.ageBand === 'string' &&
+      (AGE_BANDS as readonly string[]).includes(d.ageBand)
+    );
+  } catch {
+    return false;
+  }
+}
