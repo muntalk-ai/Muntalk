@@ -16,6 +16,15 @@ import {
   MAX_MEMORY_FACTS,
   memoryDocId,
 } from '@/lib/exchangeMemory';
+import {
+  EXCHANGE_REVIEWS_COLLECTION,
+  EXCHANGE_VOCAB_COLLECTION,
+  VOCAB_REVIEW_AFTER_MS,
+  normalizeVocabWord,
+  reviewDocId,
+  vocabDocId,
+  type SessionReview,
+} from '@/lib/exchangeMemoryReview';
 
 // MunTalk Exchange AI chat (pilot).
 // One Gemini call per user message. Chat history lives only in the browser
@@ -31,7 +40,7 @@ import {
 // `clear-memory` deletes the doc. Memory writes never block chat replies.
 //
 // Cost guards:
-// - partner must be one of the 40 AI partners (server-side list)
+// - partner must be one of the 50 AI partners (server-side list)
 // - user message max 500 chars; history max 20 turns (client-sent, re-capped)
 // - one Gemini call per request; response capped at 600 output tokens
 // - the natural-expression correction rides the same reply call: the
@@ -46,6 +55,8 @@ import {
 //   than the general /api/gemini route)
 // - memory actions: 5 calls per minute per signed-in user; summary call
 //   capped at 300 output tokens, facts capped at 10 lines per partner
+// - session reviews: 10 calls per minute per signed-in user; review call
+//   capped at 250 output tokens, at most 3 mistakes + 5 vocab words
 
 const MODELS = (process.env.GEMINI_MODEL || 'gemini-3.8-flash,gemini-2.5-flash')
   .split(',')
@@ -250,9 +261,17 @@ function parseHistory(raw: unknown): Turn[] {
 // call; any failure returns { ok: true, saved: false } so the client does
 // not retry in a loop — and chat replies are never affected (separate call).
 // `clear-memory`: delete the doc. Both require a signed-in user.
+// `session-review`: one short Gemini call at the end of a chat that
+// returns the session review (top 3 mistakes + up to 5 new words +
+// one-line summary) and saves it to `exchange_reviews` plus the words
+// to `exchange_vocab` (server-side, admin). The client renders the
+// review card inline from the response, so the card works even before
+// the console rules for the two collections are published; the AI
+// Review tab reads those collections client-side (rules-gated) and
+// shows the empty/example state until then.
 const MEMORY_SUMMARY_PROMPT = `You are summarizing a language-practice chat to help an AI partner remember this learner in later chats. Extract ONLY stable personal facts about the learner (what they go by, interests, learning goals, home city or country, job or study, plans, things they like). Output 0-10 short lines, one fact per line, no greeting, no commentary, no numbering. Never include real names, email addresses, phone numbers, street addresses, or passwords. If nothing stable was shared, output exactly: NOTHING.`;
 
-async function generateSummaryText(prompt: string): Promise<string | null> {
+async function generateShortText(prompt: string, maxOutputTokens: number): Promise<string | null> {
   const apiKey = process.env.GEMINI_API_KEY || '';
   if (!apiKey) return null;
   for (const model of MODELS) {
@@ -267,7 +286,7 @@ async function generateSummaryText(prompt: string): Promise<string | null> {
             contents: [{ parts: [{ text: prompt }] }],
             generationConfig: {
               temperature: 0,
-              maxOutputTokens: 300,
+              maxOutputTokens,
               ...(model.includes('2.5-flash') ? { thinkingConfig: { thinkingBudget: 0 } } : {}),
             },
           }),
@@ -282,10 +301,167 @@ async function generateSummaryText(prompt: string): Promise<string | null> {
         .trim();
       if (text) return text;
     } catch (e) {
-      console.error(`[exchange-ai-chat] summary ${model} exception:`, (e as Error).message);
+      console.error(`[exchange-ai-chat] short-text ${model} exception:`, (e as Error).message);
     }
   }
   return null;
+}
+
+async function generateSummaryText(prompt: string): Promise<string | null> {
+  return generateShortText(prompt, 300);
+}
+
+// ── Session review ────────────────────────────────────────────────────
+// One short Gemini call per finished chat. The client sends the
+// corrections it already collected (the 💡 rephrasings from this chat)
+// plus the last turns, so the review is grounded in what actually
+// happened — nothing is invented. Output is strict JSON:
+//   {"mistakes":[{"from","to","why"}], "vocab":[{"word","meaning","example"}], "summary":"..."}
+// Meanings are written in the learner's native language (client-sent).
+const REVIEW_PROMPT = `You are reviewing a language-practice chat session. Return JSON only, no other text, no markdown fences. Shape:
+{"mistakes": [{"from": "what the learner wrote", "to": "the more natural version", "why": "one short reason"}], "vocab": [{"word": "a useful word from this chat", "meaning": "short meaning in the learner's native language", "example": "one example sentence using the word"}], "summary": "one encouraging sentence about this session"}
+Rules: at most 3 mistakes (pick the most useful ones, prefer the corrections already listed below); at most 5 vocab words (prefer words the learner used or saw in this chat that are worth remembering — never invent words that did not appear); the summary is warm and specific, never generic praise. If a correction below is already in the mistakes, reuse it. The learner's native language is: `;
+
+type RawCorrection = { from: string; to: string };
+
+function parseReviewJson(raw: string): {
+  mistakes: { from: string; to: string; why: string }[];
+  vocab: { word: string; meaning: string; example: string }[];
+  summary: string;
+} | null {
+  const cleaned = raw
+    .replace(/^```(?:json)?\s*/i, '')
+    .replace(/\s*```$/i, '')
+    .trim();
+  let data: unknown;
+  try {
+    data = JSON.parse(cleaned);
+  } catch {
+    return null;
+  }
+  if (!data || typeof data !== 'object') return null;
+  const d = data as Record<string, unknown>;
+  const mistakes = (Array.isArray(d.mistakes) ? d.mistakes : [])
+    .filter(
+      (m): m is Record<string, unknown> =>
+        !!m && typeof m === 'object' && typeof (m as Record<string, unknown>).from === 'string' && typeof (m as Record<string, unknown>).to === 'string'
+    )
+    .map((m) => ({
+      from: (m.from as string).trim().slice(0, 200),
+      to: (m.to as string).trim().slice(0, 200),
+      why: typeof m.why === 'string' ? m.why.trim().slice(0, 200) : '',
+    }))
+    .filter((m) => m.from && m.to && m.from !== m.to)
+    .slice(0, 3);
+  const vocab = (Array.isArray(d.vocab) ? d.vocab : [])
+    .filter(
+      (v): v is Record<string, unknown> =>
+        !!v && typeof v === 'object' && typeof (v as Record<string, unknown>).word === 'string'
+    )
+    .map((v) => ({
+      word: (v.word as string).trim().slice(0, 60),
+      meaning: typeof v.meaning === 'string' ? v.meaning.trim().slice(0, 200) : '',
+      example: typeof v.example === 'string' ? v.example.trim().slice(0, 200) : '',
+    }))
+    .filter((v) => v.word && normalizeVocabWord(v.word).length > 0)
+    .slice(0, 5);
+  const summary = typeof d.summary === 'string' && d.summary.trim() ? d.summary.trim().slice(0, 300) : '';
+  if (mistakes.length === 0 && vocab.length === 0 && !summary) return null;
+  return { mistakes, vocab, summary };
+}
+
+async function handleSessionReview(req: NextRequest, body: Record<string, unknown>) {
+  const id = await getIdentity(req);
+  if (!id) return apiError('Sign in required for a session review', 401);
+  const partnerId = typeof body.partnerId === 'string' ? body.partnerId : '';
+  const partner = getAiPartner(partnerId);
+  if (!partner) return apiError('Unknown AI partner', 400);
+  const history = parseHistory(body.history);
+  const userTurns = history.filter((t) => t.role === 'user').length;
+  // Same bar as save-memory: a one-line chat has nothing to review.
+  if (userTurns < 4) return NextResponse.json({ ok: true, reviewed: false });
+
+  const rl = checkRateLimit(`exchange-review:uid:${id.uid}`, 10, 60_000);
+  if (!rl.ok) return apiError('Too many reviews — please wait a minute and try again', 429, { retryAfterSec: rl.retryAfterSec });
+
+  const corrections: RawCorrection[] = (Array.isArray(body.corrections) ? body.corrections : [])
+    .filter(
+      (c): c is RawCorrection =>
+        !!c && typeof c === 'object' && typeof (c as RawCorrection).from === 'string' && typeof (c as RawCorrection).to === 'string'
+    )
+    .map((c) => ({ from: c.from.slice(0, 200), to: c.to.slice(0, 200) }))
+    .filter((c) => c.from && c.to)
+    .slice(0, 10);
+  const nativeLang = typeof body.nativeLang === 'string' && body.nativeLang.trim() ? body.nativeLang.trim().slice(0, 40) : 'English';
+
+  try {
+    const transcript = history
+      .slice(-12)
+      .map((t) => `${t.role === 'user' ? 'Learner' : 'AI partner'}: ${t.text}`)
+      .join('\n');
+    const correctionLines = corrections.map((c) => `- Learner wrote: "${c.from}" → more natural: "${c.to}"`).join('\n');
+    const prompt =
+      `${REVIEW_PROMPT}${nativeLang}.\n\n` +
+      (correctionLines ? `Corrections already made in this chat:\n${correctionLines}\n\n` : '') +
+      `Chat transcript (last turns):\n${transcript}`;
+    const raw = await generateShortText(prompt, 250);
+    if (!raw) return NextResponse.json({ ok: true, reviewed: false });
+    const parsed = parseReviewJson(raw);
+    if (!parsed) return NextResponse.json({ ok: true, reviewed: false });
+
+    const nowMs = Date.now();
+    const review: SessionReview = {
+      partnerId,
+      partnerName: partner.name,
+      summary: parsed.summary || 'Nice chat — keep practicing!',
+      mistakes: parsed.mistakes,
+      vocab: parsed.vocab,
+      userTurns,
+      createdAtMs: nowMs,
+    };
+
+    // Save server-side (admin): the review doc plus one vocab doc per
+    // word. A known word stays known; a seen word gets its review clock
+    // reset to +24h. Failures are silent — the client still renders the
+    // review card from the response below.
+    try {
+      const db = getAdminDb();
+      await db
+        .collection(EXCHANGE_REVIEWS_COLLECTION)
+        .doc(reviewDocId(id.uid, partnerId, nowMs))
+        .set({ uid: id.uid, ...review, createdAt: FieldValue.serverTimestamp() });
+      for (const w of parsed.vocab) {
+        const ref = db.collection(EXCHANGE_VOCAB_COLLECTION).doc(vocabDocId(id.uid, w.word));
+        const snap = await ref.get();
+        const prev = snap.exists ? (snap.data() as Record<string, unknown>) : null;
+        const prevCount = typeof prev?.reviewCount === 'number' ? (prev.reviewCount as number) : 0;
+        const prevFirst = typeof prev?.firstSeenAtMs === 'number' ? (prev.firstSeenAtMs as number) : nowMs;
+        await ref.set(
+          {
+            uid: id.uid,
+            word: w.word,
+            meaning: w.meaning,
+            example: w.example,
+            partnerId,
+            partnerName: partner.name,
+            firstSeenAtMs: prevFirst,
+            lastSeenAtMs: nowMs,
+            nextReviewAtMs: nowMs + VOCAB_REVIEW_AFTER_MS,
+            reviewCount: prevCount + 1,
+            known: prev?.known === true ? true : false,
+            updatedAt: FieldValue.serverTimestamp(),
+          },
+          { merge: true }
+        );
+      }
+    } catch (err) {
+      console.error('[exchange-ai-chat] session-review save failed:', (err as Error).message);
+    }
+    return NextResponse.json({ ok: true, reviewed: true, review });
+  } catch (err) {
+    console.error('[exchange-ai-chat] session-review failed:', (err as Error).message);
+    return NextResponse.json({ ok: true, reviewed: false });
+  }
 }
 
 async function handleSaveMemory(req: NextRequest, body: Record<string, unknown>) {
@@ -372,6 +548,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     if (body.action === 'save-memory') return handleSaveMemory(req, body);
     if (body.action === 'clear-memory') return handleClearMemory(req, body);
+    if (body.action === 'session-review') return handleSessionReview(req, body);
     const partnerId = typeof body.partnerId === 'string' ? body.partnerId : '';
     const partner = getAiPartner(partnerId);
     if (!partner) return apiError('Unknown AI partner', 400);

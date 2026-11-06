@@ -1,0 +1,71 @@
+# MunTalk Exchange — Firestore console snippet: session reviews + vocabulary
+#
+# HOW TO APPLY (Jay, in the Firebase console — NOT via repo firestore.rules):
+#   Firebase console → Firestore Database → Rules → paste the two `match`
+#   blocks below inside `rules_version = '2'; service cloud.firestore { ... }`,
+#   next to the existing exchange_memories rule, then Publish.
+#   The repo file firestore.rules is intentionally NOT changed by this PR
+#   (it is out of sync with the live console rules).
+#
+# WHAT THE APP WRITES (server code: src/app/api/exchange-ai-chat/route.ts,
+# action `session-review`; client code: src/app/exchange/page.tsx):
+#   collection: exchange_reviews
+#   doc id:    `${uid}_${partnerId}_${createdAtMs}` (one review per finished
+#              chat, per user per AI partner)
+#   fields:    uid (string), partnerId (string, e.g. "ai-emma"),
+#              partnerName (string), summary (string, one sentence),
+#              mistakes (array of {from, to, why}, at most 3),
+#              vocab (array of {word, meaning, example}, at most 5),
+#              userTurns (number), createdAtMs (number),
+#              createdAt (server timestamp)
+#   collection: exchange_vocab
+#   doc id:    `${uid}_${normalizedWord}` (one doc per user per word;
+#              the word is lowercased and spaces become "-")
+#   fields:    uid (string), word (string), meaning (string),
+#              example (string), partnerId (string), partnerName (string),
+#              firstSeenAtMs (number), lastSeenAtMs (number),
+#              nextReviewAtMs (number — due when <= now),
+#              reviewCount (number), known (boolean),
+#              updatedAt (server timestamp)
+#   Nothing else is stored — no real name, email, or contact details.
+#   The words and corrections come from the user's own chats.
+#
+# WHY THESE RULES EXIST:
+#   The browser reads its own review + vocab docs for the AI Review tab
+#   (words to review, corrections, vocabulary chips). Until these rules
+#   are published, those reads fail with permission-denied and the tab
+#   shows the empty/example state — the in-chat review card still works,
+#   because the server returns the review inline in the API response.
+#   Review + vocab saving runs server-side (admin) and does not depend
+#   on these rules. The one client write is "mark as known" on a vocab
+#   doc, limited to the known / reviewCount / nextReviewAtMs fields.
+#
+# NOTE on the vocab doc id: the id uses the NORMALIZED word
+# ("clear up" -> "clear-up"), so the rule cannot check docId equality
+# against the stored word. Ownership is proven by the stored `uid`
+# field instead — same strength as the waitlist rule.
+#
+# Paste these blocks into the console rules:
+#
+#   match /exchange_reviews/{docId} {
+#     // Read: signed-in users may only read their own review docs.
+#     allow read: if request.auth != null
+#       && resource.data.uid == request.auth.uid;
+#     // No client writes: reviews are written server-side (admin) only.
+#     allow create, update, delete: if false;
+#   }
+#
+#   match /exchange_vocab/{docId} {
+#     // Read: signed-in users may only read their own vocab docs.
+#     allow read: if request.auth != null
+#       && resource.data.uid == request.auth.uid;
+#     // Update (client path: "mark as known"): only the owner, and only
+#     // the three review-progress fields may change. The server-side
+#     // vocab save (admin) bypasses rules.
+#     allow update: if request.auth != null
+#       && resource.data.uid == request.auth.uid
+#       && request.resource.data.uid == request.auth.uid
+#       && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['known', 'reviewCount', 'nextReviewAtMs']);
+#     // No client create/delete: vocab docs are created server-side only.
+#     allow create, delete: if false;
+#   }
