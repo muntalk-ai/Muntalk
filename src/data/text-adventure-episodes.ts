@@ -144,6 +144,24 @@ export const EPISODES: Episode[] = [
     // Goes Public when the Ep2 public flip happens (after all 15 uploads
     // land) — set publicDate then and the episode turns free automatically.
   },
+  {
+    ep: 3,
+    slug: 'ep-03',
+    title: 'The Missing Wallet',
+    summary:
+      'Mia finished dinner. The bill is £21.38 — and her wallet is gone. What would you do?',
+    choiceA: '💳 Pay by card',
+    choiceB: '👛 I can\'t find my wallet!',
+    voteQuestion: 'What would you do?',
+    videos: {
+      // No Unlisted uploads yet — renders as COMING SOON (see header comment).
+      // Renders done 22/22 (2026-11-06), Jay render confirmation pending;
+      // add the Unlisted video IDs here when they land (Ep2 goes Public first).
+    },
+    siteDate: '2026-11-06',
+    // Goes Public after Ep2 — set publicDate then and the episode turns
+    // free automatically.
+  },
 ];
 
 export function getEpisode(slug: string): Episode | undefined {
