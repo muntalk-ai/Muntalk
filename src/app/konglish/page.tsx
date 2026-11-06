@@ -1,13 +1,8 @@
-import type { Metadata } from 'next';
-import KonglishClient from './konglish-client';
-
-export const metadata: Metadata = {
-  title: 'Konglish ER — Fix One English Mistake a Day — MunTalk',
-  description:
-    'Short videos that fix the English mistakes speakers of 17 languages make most. Past episodes are free for everyone — sign in to watch the next episode 1–2 days early.',
-  alternates: { canonical: '/konglish' },
-};
+// /konglish now redirects to the Konglish ER tab of the /watch hub
+// (Jay 2026-11-06 — one page, two series). The old URL keeps working:
+// https://www.muntalk.com/konglish lands on /watch?tab=konglish.
+import { redirect } from 'next/navigation';
 
 export default function KonglishPage() {
-  return <KonglishClient />;
+  redirect('/watch?tab=konglish');
 }

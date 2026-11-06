@@ -2,11 +2,15 @@
 // One source of truth for /watch. New episode = one entry here;
 // new language version = one videoId line. No video files in the repo —
 // every video is an unlisted YouTube upload, embedded via youtube-nocookie.
+
+import type { GateStatus } from '@/lib/early-access';
 //
-// Public rule (Jay 2026-11-04): an episode goes Public when the NEXT episode
-// goes live on the site (Ep1 → Public when Ep2 goes live, Ep2 → Public when
-// Ep3 goes live). `publicDate` records that date; never change a video's
-// visibility from code — flip it in YouTube Studio and update the date here.
+// Public rule (Jay 2026-11-06, supersedes the 2026-11-04 "next episode"
+// rule): episodes go Public in order — Ep1 → Public, then Ep2 uploads
+// → Public, then Ep3. `publicDate` records that date; never change a
+// video's visibility from code — flip it in YouTube Studio and update
+// the date here. An episode is free on the site once its publicDate has
+// passed; before that, its Unlisted videos are members-only early access.
 //
 // Video IDs (Ep1, 2026-11-04, @Muntalk_official, unlisted):
 //   ko lzMweQ2eu7k · vi YW7kVv3eij0 · ja 3acrup801sI · zh qoEwn-CL0gM
@@ -18,7 +22,21 @@
 //   my z57dE5eqWN8 (muntalk-my) · fil Y2Hlv5eNGXc (muntalk-fil)
 //   ms EdoSCTGsKOM (muntalk-ms) · mn aT4Tr-Ka7BE (muntalk-mn)
 //   tk biNTpg2JIvc · tg rYQPA2kuZg8 · ky 0xZ8AlX-hKg · uz _hiz1LfsDNk · kk DHRSGinzdV8 (muntalk-stan).
-// Ep2 has no YouTube IDs yet (renders exist for ko/vi/hi/zh, uploads pending).
+// Ep1 went Public 2026-11-06 (all 22, verified in Studio).
+// Ep2 Unlisted IDs (2026-11-06, verified in Studio; 9/15 — the other 6
+// hi/es/pt/fr/de/ar hit the official-channel daily limit and retry
+// 2026-11-06 22:40; add them here when they land):
+//   ru 4KwNXVAJQ6c (Ralsim) · mn 4l5QuTmL460 (muntalk-mn) · my RtNdcUgOUQE (muntalk-my)
+//   ko hEKGsYmSG2k · vi hVGasbJdgfw · ja 4xeN6hF6sjE · zh NIYtSy6_pWk · th jQKQ9VSLkcA · id tdCeWY4QGh8
+//   (@Muntalk_official). id was still processing (SD) when saved — re-check it.
+//   These 9 are Unlisted early-access videos until the Ep2 public flip.
+//
+// Early-access rule (Jay 2026-11-06, shared with Konglish ER — see
+// src/lib/early-access.ts): a released episode (publicDate past) is free
+// for everyone; the next episode (Unlisted videos exist, not public yet)
+// is members-only early access; an episode with no videos yet is coming
+// soon. Never change a video's visibility from code — flip it in YouTube
+// Studio and set publicDate here.
 
 export type Lang =
   | 'ko' | 'vi' | 'es' | 'ja' | 'th' | 'zh' | 'id' | 'hi' | 'pt' | 'fr' | 'de' | 'ar' | 'ru'
@@ -97,8 +115,8 @@ export const EPISODES: Episode[] = [
       kk: 'DHRSGinzdV8',
     },
     siteDate: '2026-11-05',
-    // Planned: goes Public when Ep2 goes live on the site (this PR).
-    publicDate: '2026-11-05',
+    // Went Public 2026-11-06 (all 22 languages, verified in Studio).
+    publicDate: '2026-11-06',
   },
   {
     ep: 2,
@@ -110,12 +128,21 @@ export const EPISODES: Episode[] = [
     choiceB: '🧊 Iced coffee in the rain',
     voteQuestion: 'Which ending did you like?',
     videos: {
-      // No YouTube IDs yet — ko/vi/hi/zh renders exist, uploads pending.
-      // Add videoId lines here as each language is uploaded; the language
-      // selector lights up automatically.
+      // Unlisted early-access IDs (2026-11-06, 9/15) — see header comment.
+      // The other 6 (hi/es/pt/fr/de/ar) land after the 22:40 retry.
+      ru: '4KwNXVAJQ6c',
+      mn: '4l5QuTmL460',
+      my: 'RtNdcUgOUQE',
+      ko: 'hEKGsYmSG2k',
+      vi: 'hVGasbJdgfw',
+      ja: '4xeN6hF6sjE',
+      zh: 'NIYtSy6_pWk',
+      th: 'jQKQ9VSLkcA',
+      id: 'tdCeWY4QGh8',
     },
     siteDate: '2026-11-05',
-    // Goes Public when Ep3 goes live on the site — set the date then.
+    // Goes Public when the Ep2 public flip happens (after all 15 uploads
+    // land) — set publicDate then and the episode turns free automatically.
   },
 ];
 
@@ -125,4 +152,14 @@ export function getEpisode(slug: string): Episode | undefined {
 
 export function availableLangs(ep: Episode): Lang[] {
   return LANGS.filter((l) => ep.videos[l.code]).map((l) => l.code);
+}
+
+// Gate status for a text-adventure episode (shared GateStatus, see
+// src/lib/early-access.ts). Released = publicDate is set and past.
+// Early = not public yet but at least one Unlisted video exists — the
+// members-only early-access window. Upcoming = no videos yet.
+export function textAdventureStatus(ep: Episode, now: number = Date.now()): GateStatus {
+  if (ep.publicDate && Date.parse(ep.publicDate) <= now) return 'released';
+  if (availableLangs(ep).length > 0) return 'early';
+  return 'upcoming';
 }
