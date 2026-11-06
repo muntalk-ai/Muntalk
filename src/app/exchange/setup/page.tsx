@@ -17,6 +17,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { useAuth } from '@/context/AuthContext';
+import BackButton from '@/components/BackButton';
 import { takeStashedNextPath } from '@/lib/returnUrl';
 import {
   AGE_BANDS,
@@ -156,6 +157,8 @@ export default function ExchangeSetupPage() {
           M-ring badge with "Muntuz", back to Discover. */}
       <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-2xl items-center gap-3 px-4 py-3.5">
+          {/* Back — Muntuz pages only (Jay 2026-11-06). No history: /exchange. */}
+          <BackButton fallback="/exchange" />
           <a href="/exchange" className="flex items-center gap-3 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500" aria-label="Muntuz — back to Exchange">
             <Image src="/logo.png" alt="Muntuz" width={40} height={40} className="h-10 w-10 rounded-full object-cover shadow-md" />
             <span className="text-left">

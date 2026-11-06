@@ -14,10 +14,20 @@ import { auth, googleProvider } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
 import { getNextPath, stashNextPath } from '@/lib/returnUrl';
 import { isExchangeProfileComplete } from '@/lib/exchangeProfile';
+import BackButton from '@/components/BackButton';
 
 export default function LoginPage() {
   const router = useRouter();
   const { user, loading: authLoading } = useAuth();
+  // 뒤로가기 폴백: ?next= 목적지 (없으면 Exchange). getNextPath()는
+  // sessionStorage 보관값을 소비하므로 로그인 복귀 경로를 깨뜨리지
+  // 않게 쿼리만 직접 읽는다. 렌더 결과에 안 쓰이고 클릭 시에만
+  // 쓰이므로 SSR/하이드레이션에 영향이 없다.
+  const backFallback = (() => {
+    if (typeof window === 'undefined') return '/exchange';
+    const next = new URLSearchParams(window.location.search).get('next');
+    return next && next.startsWith('/') && !next.startsWith('//') ? next : '/exchange';
+  })();
   const [email,      setEmail]      = useState('');
   const [password,   setPassword]   = useState('');
   const [error,      setError]      = useState('');
@@ -153,6 +163,12 @@ export default function LoginPage() {
 
   return (
     <div style={styles.page}>
+      {/* Back — top-left. The login page has no header row, so the
+          button sits absolute at the page corner (Jay 2026-11-06).
+          No history: ?next= destination or /exchange. */}
+      <div style={{ position: 'absolute', top: 16, left: 16, zIndex: 2 }}>
+        <BackButton fallback={backFallback} />
+      </div>
       {/* suppressHydrationWarning: SSR/CSR 따옴표 인코딩 불일치 방지 */}
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
 * { box-sizing: border-box; }
