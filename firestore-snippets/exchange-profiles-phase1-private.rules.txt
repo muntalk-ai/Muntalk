@@ -1,0 +1,43 @@
+# MunTalk Exchange — Firestore console snippet: private birthdate (Phase 1)
+#
+# HOW TO APPLY (Jay, in the Firebase console — NOT via repo firestore.rules):
+#   Firebase console → Firestore Database → Rules → paste the `match` block
+#   below inside `rules_version = '2'; service cloud.firestore { ... }`,
+#   next to the existing exchange_profiles rule, then Publish.
+#   The repo file firestore.rules is intentionally NOT changed by this PR
+#   (it is out of sync with the live console rules).
+#
+# WHAT THE APP WRITES (client code: src/app/exchange/page.tsx):
+#   collection: exchange_profiles/{uid}/private/identity
+#   doc id:    `identity`  (one private doc per user)
+#   fields:    birthdate (string, YYYY-MM-DD — 18+ gate only),
+#              ageBand (string, e.g. "25–34" — same value as the public doc),
+#              updatedAt (server timestamp)
+#   Nothing else is stored there — no real name, email, or contact details.
+#
+# WHY THIS RULE EXISTS:
+#   The public `exchange_profiles` doc is readable by any signed-in user
+#   (`allow read: if isSignedIn()`), which is what Discover needs — so the
+#   exact birthdate must NOT live in that doc. It lives in this private
+#   subcollection instead, readable and writable by the owner only. The
+#   public doc only carries the derived age band (18–24 / 25–34 / 35–44 /
+#   45+), which is what cards and the age-band filter show.
+#
+#   Until this rule is published, the client save of the birthdate fails
+#   with permission-denied — the code handles that gracefully: the public
+#   profile (including the age band) still saves, and a toast says the
+#   birthdate could not be stored yet. Loading the profile also works
+#   without this rule (the date input simply stays empty). Nothing crashes.
+#
+# Paste this block into the console rules:
+#
+#   match /exchange_profiles/{uid}/private/{docId} {
+#     // Read/delete: the owner only. No other signed-in user may read
+#     // another user's birthdate. (The admin SDK bypasses rules.)
+#     allow read, delete: if request.auth != null && request.auth.uid == uid;
+#     // Create/update: the owner only, and only the three allowed fields.
+#     allow create, update: if request.auth != null
+#       && request.auth.uid == uid
+#       && request.resource.data.keys().hasOnly(['birthdate', 'ageBand', 'updatedAt'])
+#       && request.resource.data.birthdate is string;
+#   }
