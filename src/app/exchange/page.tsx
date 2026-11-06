@@ -26,7 +26,7 @@ import {
 /*
  * MunTalk Exchange — hidden lounge page (NOT linked from navigation).
  * Discover is split into two rooms:
- *   - AI Rooms: the 20 AI partners only. A fixed banner at the top of
+ *   - AI Rooms: the AI partners only. A fixed banner at the top of
  *     the room and an "AI" badge on every AI card and AI message state
  *     plainly that these partners are AI, not real people.
  *   - People Rooms: a language-pair waitlist (stored in Firestore
@@ -1415,7 +1415,7 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                     🤖 {AI_DISCLOSURE} Every AI card and AI message here is marked &ldquo;AI&rdquo;.
                   </div>
                   <p className="mt-3 text-sm text-slate-500">
-                    20 AI practice partners — no language filter. Pick anyone and practice in any language. They are always online — start a chat and get a real AI reply.
+                    {AI_PARTNERS.length} AI practice partners — no language filter. Pick anyone and practice in any language. They are always online — start a chat and get a real AI reply.
                   </p>
                   <div className="mt-4 grid gap-4 sm:grid-cols-2">
                     {AI_PARTNERS.map((p) => (
@@ -2006,7 +2006,6 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                 <li>50 new chats per day (free: 20)</li>
                 <li>Unlimited AI reviews + weekly report</li>
                 <li>Unlimited translations</li>
-                <li>Advanced filters: region, verified-only</li>
                 <li>Safety tools (report, block, contact guard) are free for everyone</li>
               </ul>
               <button
