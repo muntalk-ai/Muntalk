@@ -23,13 +23,14 @@ import type { GateStatus } from '@/lib/early-access';
 //   ms EdoSCTGsKOM (muntalk-ms) · mn aT4Tr-Ka7BE (muntalk-mn)
 //   tk biNTpg2JIvc · tg rYQPA2kuZg8 · ky 0xZ8AlX-hKg · uz _hiz1LfsDNk · kk DHRSGinzdV8 (muntalk-stan).
 // Ep1 went Public 2026-11-06 (all 22, verified in Studio).
-// Ep2 Unlisted IDs (2026-11-06, verified in Studio; 9/15 — the other 6
-// hi/es/pt/fr/de/ar hit the official-channel daily limit and retry
-// 2026-11-06 22:40; add them here when they land):
+// Ep2 Unlisted IDs (2026-11-06, verified in Studio; 15/15 — the last 6
+// hi/es/pt/fr/de/ar landed on the 22:40 retry after the official-channel
+// daily limit; id confirmed Unlisted, no longer Pending):
 //   ru 4KwNXVAJQ6c (Ralsim) · mn 4l5QuTmL460 (muntalk-mn) · my RtNdcUgOUQE (muntalk-my)
 //   ko hEKGsYmSG2k · vi hVGasbJdgfw · ja 4xeN6hF6sjE · zh NIYtSy6_pWk · th jQKQ9VSLkcA · id tdCeWY4QGh8
-//   (@Muntalk_official). id was still processing (SD) when saved — re-check it.
-//   These 9 are Unlisted early-access videos until the Ep2 public flip.
+//   hi YF9YHVnczik · es UnY0no7cnvE · pt l9EsB8sSdaM · fr SQmO6NuJ6mk · de oK_v1sY7oXk · ar WSPqXG2Kr5c
+//   (@Muntalk_official).
+// Ep2 went Public 2026-11-06 (all 15 languages; Studio flip with this PR).
 //
 // Early-access rule (Jay 2026-11-06, shared with Konglish ER — see
 // src/lib/early-access.ts): a released episode (publicDate past) is free
@@ -128,8 +129,7 @@ export const EPISODES: Episode[] = [
     choiceB: '🧊 Iced coffee in the rain',
     voteQuestion: 'Which ending did you like?',
     videos: {
-      // Unlisted early-access IDs (2026-11-06, 9/15) — see header comment.
-      // The other 6 (hi/es/pt/fr/de/ar) land after the 22:40 retry.
+      // All 15 Unlisted IDs (2026-11-06) — see header comment.
       ru: '4KwNXVAJQ6c',
       mn: '4l5QuTmL460',
       my: 'RtNdcUgOUQE',
@@ -139,10 +139,16 @@ export const EPISODES: Episode[] = [
       zh: 'NIYtSy6_pWk',
       th: 'jQKQ9VSLkcA',
       id: 'tdCeWY4QGh8',
+      hi: 'YF9YHVnczik',
+      es: 'UnY0no7cnvE',
+      pt: 'l9EsB8sSdaM',
+      fr: 'SQmO6NuJ6mk',
+      de: 'oK_v1sY7oXk',
+      ar: 'WSPqXG2Kr5c',
     },
     siteDate: '2026-11-05',
-    // Goes Public when the Ep2 public flip happens (after all 15 uploads
-    // land) — set publicDate then and the episode turns free automatically.
+    // Went Public 2026-11-06 (all 15 languages; Studio flip with this PR).
+    publicDate: '2026-11-06',
   },
   {
     ep: 3,
