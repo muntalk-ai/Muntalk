@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/about', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/pricing', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/faq', priority: 0.7, changeFrequency: 'monthly' },
-    // SEO pilot: /learn article hub + 10 articles (2026-10-29) + 4 daily drafts (2026-10-31) + 1 RX.01 article (2026-11-02).
+    // SEO pilot: /learn article hub + 10 articles (2026-10-29) + 4 daily drafts (2026-10-31) + 1 RX.01 article (2026-11-02) + 5 daily drafts (2026-11-12).
     { path: '/learn', priority: 0.8, changeFrequency: 'weekly' },
     { path: '/learn/im-bored-not-boring', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/learn/i-have-plans-not-promise', priority: 0.7, changeFrequency: 'monthly' },
@@ -29,6 +29,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/learn/same-same-vs-its-the-same', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/learn/embarazada-vs-embarrassed', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/learn/window-shopping-not-eye-shopping', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/learn/did-you-eat-rice-vs-have-you-eaten', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/learn/how-about-going-not-how-about-to-go', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/learn/every-day-not-everyday', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/learn/live-in-seoul-not-the-seoul', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/learn/work-at-samsung-not-work-in-samsung', priority: 0.7, changeFrequency: 'monthly' },
     // Text Adventure + Konglish ER: /watch hub with two tabs (2026-11-06).
     // /konglish redirects to /watch?tab=konglish, so it is not listed
     // separately — a redirect URL does not belong in the sitemap.

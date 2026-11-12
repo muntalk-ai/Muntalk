@@ -24,6 +24,11 @@ const KO_ARTICLES = [
   { slug: 'pronunciation-not-pronounce', wrong: 'My pronounce is bad', right: 'My pronunciation is bad', desc: '발음은 명사 pronunciation — pronounce는 동사' },
   { slug: 'there-are-many-people', wrong: 'There is many people', right: 'There are many people', desc: 'there is/are — 뒤 명사에 맞추다' },
   { slug: 'window-shopping-not-eye-shopping', wrong: 'eye shopping', right: 'window shopping', desc: '구경만 하는 쇼핑 — eye shopping은 없는 말' },
+  { slug: 'did-you-eat-rice-vs-have-you-eaten', wrong: 'Did you eat rice?', right: 'Have you eaten?', desc: '밥 먹었어? — rice는 쌀이라는 음식' },
+  { slug: 'how-about-going-not-how-about-to-go', wrong: 'How about to go?', right: 'How about going?', desc: 'how about 뒤에는 -ing — to + 동사는 안 됨' },
+  { slug: 'every-day-not-everyday', wrong: 'I study English everyday', right: 'I study English every day', desc: '매일 — everyday는 형용사, every day는 부사' },
+  { slug: 'live-in-seoul-not-the-seoul', wrong: 'I live in the Seoul', right: 'I live in Seoul', desc: '도시 이름 앞에는 the 없음' },
+  { slug: 'work-at-samsung-not-work-in-samsung', wrong: 'I work in Samsung', right: 'I work at Samsung', desc: '회사 이름 앞에는 at/for — in은 분야·부서 앞' },
 ];
 
 const EN_ARTICLES = [
