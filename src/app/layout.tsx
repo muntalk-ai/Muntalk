@@ -6,19 +6,22 @@ import InAppNavTracker from '@/components/InAppNavTracker';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.muntalk.com'),
-  title: 'MunTalk — Learn Languages with AI',
-  description: 'Master any language with AI-powered lessons, spaced repetition, and live tutors.',
+  // Brand homepage title — the definitive result for the "muntalk" query
+  // (2026-11-13 SEO: the old generic title was shared by 4 legal pages,
+  // so Google ranked /about and /terms above the homepage).
+  title: 'MunTalk — AI Language Tutor | Learn Languages by Speaking',
+  description: 'Learn to speak 90+ languages with 150+ AI tutors. Real conversations from day one — free to start.',
   openGraph: {
     type: 'website',
     siteName: 'MunTalk',
-    title: 'MunTalk — Learn Languages with AI',
-    description: 'Master any language with AI-powered lessons, spaced repetition, and live tutors.',
+    title: 'MunTalk — AI Language Tutor | Learn Languages by Speaking',
+    description: 'Learn to speak 90+ languages with 150+ AI tutors. Real conversations from day one — free to start.',
     images: ['/logo.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MunTalk — Learn Languages with AI',
-    description: 'Master any language with AI-powered lessons, spaced repetition, and live tutors.',
+    title: 'MunTalk — AI Language Tutor | Learn Languages by Speaking',
+    description: 'Learn to speak 90+ languages with 150+ AI tutors. Real conversations from day one — free to start.',
     images: ['/logo.png'],
   },
   icons: {
@@ -51,6 +54,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link
           href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Syne:wght@700;800&family=DM+Sans:wght@400;600&family=Noto+Sans+Arabic:wght@400;600;700&family=Noto+Sans+Hebrew:wght@400;600;700&family=Noto+Sans+Thai:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+KR:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans+Bengali:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&family=Noto+Sans+Telugu:wght@400;600;700&family=Noto+Sans+Kannada:wght@400;600;700&family=Noto+Sans+Malayalam:wght@400;600;700&family=Noto+Sans+Gujarati:wght@400;600;700&family=Noto+Sans+Gurmukhi:wght@400;600;700&family=Noto+Sans+Sinhala:wght@400;600;700&family=Noto+Sans+Myanmar:wght@400;600;700&family=Noto+Sans+Lao:wght@400;600;700&family=Noto+Sans+Khmer:wght@400;600;700&family=Noto+Sans+Armenian:wght@400;600;700&family=Noto+Sans+Ethiopic:wght@400;600;700&family=Noto+Serif+Georgian:wght@400;600;700&display=swap"
           rel="stylesheet"
+        />
+        {/* Brand entity for Google: Organization + WebSite (2026-11-13 SEO) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'Organization',
+                  name: 'MunTalk',
+                  url: 'https://www.muntalk.com/',
+                  logo: 'https://www.muntalk.com/logo.png',
+                  sameAs: [
+                    'https://www.youtube.com/@Muntalk_official',
+                    'https://www.instagram.com/muntalk.global/',
+                    'https://www.tiktok.com/@muntakasia',
+                  ],
+                },
+                { '@type': 'WebSite', name: 'MunTalk', url: 'https://www.muntalk.com/' },
+              ],
+            }),
+          }}
         />
         <style>{`
           * { box-sizing: border-box; }
