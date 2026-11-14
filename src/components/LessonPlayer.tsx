@@ -114,7 +114,7 @@ interface LessonPlayerProps {
 
 export default function LessonPlayer({
   levelId, stepId, lessonId,
-  langId = 'en-US', tutorId, subLang = 'ko-KR',
+  langId = 'en-US', tutorId, subLang = 'en-US',
   onComplete,
 }: LessonPlayerProps) {
   const router = useRouter();

@@ -7,7 +7,7 @@ import type { CSSProperties } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 import { useAuth } from '@/context/AuthContext';
-import { getUserProfile } from '@/lib/userProfile';
+import { getUserProfile, resolveNativeLang } from '@/lib/userProfile';
 import { getTutorById } from '@/data/tutors';
 import { hasTts } from '@/data/languages';
 import { speakWithDeviceTts } from '@/lib/deviceTts';
@@ -49,7 +49,7 @@ function DreamStudioContent() {
 
   // User settings
   const [langId,     setLangId]     = useState('en-US');
-  const [subLang,    setSubLang]    = useState('ko-KR'); // 모국어 기본값: 영어 대신 학습자 모국어 (Coach와 동일)
+  const [subLang,    setSubLang]    = useState('en-US'); // 첫 페인트 기본값은 영어 — useEffect에서 저장값/프로필/브라우저 언어로 해석
   const [tutorId,    setTutorId]    = useState('t01');
   const [userName,   setUserName]   = useState('Creator');
   const [purpose,    setPurpose]    = useState<LearningPurpose | undefined>(() => {
@@ -157,7 +157,7 @@ function DreamStudioContent() {
 
   useEffect(() => {
     const ll = localStorage.getItem('mt_learn_lang') || 'en-US';
-    const sl = localStorage.getItem('mt_native_lang') || 'ko-KR'; // 영어 대신 모국어 기본값 (Coach와 동일)
+    const sl = resolveNativeLang();
     const ti = localStorage.getItem('mt_tutor_id') || 't01';
     setLangId(ll); setSubLang(sl); setTutorId(ti);
     if (user) {

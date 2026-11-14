@@ -4,6 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import StepMap from '@/components/StepMap';
 import { useAuth } from '@/context/AuthContext';
 import { isAdminEmail } from '@/lib/subscription';
+import { resolveNativeLang } from '@/lib/userProfile';
 
 export default function LevelPage({ params }: { params: { level: string } }) {
   const { level } = params;
@@ -11,7 +12,7 @@ export default function LevelPage({ params }: { params: { level: string } }) {
   // URL param 우선, 없으면 localStorage(프로필에서 저장된 학습 언어) 폴백 — lesson 페이지와 동일 패턴.
   // (Back 버튼 등이 ?lang= 없이 들어와도 학습 언어가 en-US로 리셋되지 않도록)
   const [langId, setLangId]   = useState(searchParams.get('lang')    || 'en-US');
-  const [subLang, setSubLang] = useState(searchParams.get('subLang') || 'ko-KR');
+  const [subLang, setSubLang] = useState(searchParams.get('subLang') || 'en-US');
 
   const { user, loading: authLoading } = useAuth();
 
@@ -33,8 +34,7 @@ export default function LevelPage({ params }: { params: { level: string } }) {
         if (lsLang) setLangId(lsLang);
       }
       if (!searchParams.get('subLang')) {
-        const lsNative = localStorage.getItem('mt_native_lang');
-        if (lsNative) setSubLang(lsNative);
+        setSubLang(resolveNativeLang());
       }
     } catch { /* ignore */ }
     setLocalLoaded(true);
