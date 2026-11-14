@@ -134,6 +134,12 @@ export const DAILY_CAP_TTS_GUEST = numEnv('DAILY_CAP_TTS_GUEST', 30);
 export const DAILY_CAP_GEMINI_USER = numEnv('DAILY_CAP_GEMINI_USER', 300);
 /** 게스트: Gemini 텍스트 60회/일 */
 export const DAILY_CAP_GEMINI_GUEST = numEnv('DAILY_CAP_GEMINI_GUEST', 60);
+/** 로그인 유저: Exchange AI 채팅 200회/일 */
+export const DAILY_CAP_EXCHANGE_CHAT_USER = numEnv('DAILY_CAP_EXCHANGE_CHAT_USER', 200);
+/** 게스트: Exchange AI 채팅 60회/일 */
+export const DAILY_CAP_EXCHANGE_CHAT_GUEST = numEnv('DAILY_CAP_EXCHANGE_CHAT_GUEST', 60);
+/** Exchange AI 채팅 시간당 100회 */
+export const HOURLY_CAP_EXCHANGE_CHAT = numEnv('HOURLY_CAP_EXCHANGE_CHAT', 100);
 
 const DAILY_USAGE_COLLECTION = 'api_daily_usage';
 
@@ -153,7 +159,7 @@ function utcDayKey(): string {
  * - Firestore 장애 시 fail-open (분당 인메모리 제한이 1차 방어선으로 유지)
  */
 export async function checkDailyLimit(
-  scope: 'tts' | 'gemini',
+  scope: 'tts' | 'gemini' | 'exchange-chat',
   identityKey: string,
   max: number,
 ): Promise<{ ok: boolean; retryAfterSec: number; remaining: number }> {

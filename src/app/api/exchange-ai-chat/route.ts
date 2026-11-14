@@ -2,11 +2,16 @@ import { NextRequest, NextResponse } from 'next/server';
 import { FieldValue } from 'firebase-admin/firestore';
 import {
   checkRateLimit,
+  checkDailyLimit,
+  isAdminEmail,
   clientIp,
   apiError,
   fetchWithTimeout,
   apiSafeError,
   getIdentity,
+  DAILY_CAP_EXCHANGE_CHAT_USER,
+  DAILY_CAP_EXCHANGE_CHAT_GUEST,
+  HOURLY_CAP_EXCHANGE_CHAT,
 } from '@/lib/apiGuard';
 import { getAdminDb } from '@/lib/serverAuth';
 import { getAiPartner } from '@/lib/exchangeAiPartners';
@@ -53,6 +58,11 @@ import {
 //   because the model does not always emit the exact marker.
 // - per-identity/IP rate limit: 20 calls per minute (pilot cap, stricter
 //   than the general /api/gemini route)
+// - hourly cap: 100 calls per hour per identity/IP (in-memory); daily cap:
+//   200/day signed-in user, 60/day guest (Firestore api_daily_usage, same
+//   store as /api/gemini). Per-call tokens are bounded (message ≤500 chars,
+//   output ≤600 tokens), so call caps bound token spend too. Admin emails
+//   are exempt from the daily cap, as on /api/gemini.
 // - memory actions: 5 calls per minute per signed-in user; summary call
 //   capped at 300 output tokens, facts capped at 10 lines per partner
 // - session reviews: 10 calls per minute per signed-in user; review call
@@ -73,6 +83,14 @@ and the learner's mood — like a friendly chat, not a formal lesson. \
 Reply in the language the learner writes in, so any language can be practiced. \
 Photos you share come from your AI partner gallery — never claim a photo \
 was just taken, or that you were just somewhere in real life. \
+You cannot create, generate, or take new photos or videos — the gallery \
+is all you have. If the learner asks for a new photo or video of you, \
+or for one in a particular style, decline briefly in your own friendly \
+voice and offer a gallery photo instead if one is still available, or \
+steer back to language practice. \
+Do not imitate the distinctive style of a specific artist, studio, or \
+franchise — for example, never make anything "in the style of Studio \
+Ghibli". Decline briefly and offer a language-practice alternative instead. \
 Keep the conversation going with one question. Stay on language practice. \
 Always end your reply with exactly one line in this format: \
 💡 Natural: <a more natural way to say the learner's latest message, keeping their meaning> \
@@ -583,6 +601,19 @@ export async function POST(req: NextRequest) {
     const rlKey = id ? `exchange-ai:uid:${id.uid}` : `exchange-ai:ip:${clientIp(req)}`;
     const rl = checkRateLimit(rlKey, 20, 60_000);
     if (!rl.ok) return apiError('Too many AI messages — please wait a minute and try again', 429, { retryAfterSec: rl.retryAfterSec });
+
+    // Hourly + daily caps: one user burning tokens in a burst is bounded
+    // even when they stay under the per-minute rate. Per-call tokens are
+    // already bounded (message ≤500 chars, output ≤600 tokens), so these
+    // call caps bound token spend too.
+    const identityKey = id ? `uid:${id.uid}` : `ip:${clientIp(req)}`;
+    const hourlyRl = checkRateLimit(`exchange-ai-hourly:${identityKey}`, HOURLY_CAP_EXCHANGE_CHAT, 3_600_000);
+    if (!hourlyRl.ok) return apiError('Too many AI messages this hour — please try again later', 429, { retryAfterSec: hourlyRl.retryAfterSec });
+    if (!isAdminEmail(id?.email)) {
+      const dailyMax = id ? DAILY_CAP_EXCHANGE_CHAT_USER : DAILY_CAP_EXCHANGE_CHAT_GUEST;
+      const dl = await checkDailyLimit('exchange-chat', identityKey, dailyMax);
+      if (!dl.ok) return apiError(`Daily AI chat limit reached (${dailyMax}/day) — please try again tomorrow`, 429, { retryAfterSec: dl.retryAfterSec });
+    }
 
     const apiKey = process.env.GEMINI_API_KEY || '';
     if (!apiKey) {
