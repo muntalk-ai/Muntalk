@@ -67,11 +67,23 @@ import {
 //   capped at 300 output tokens, facts capped at 10 lines per partner
 // - session reviews: 10 calls per minute per signed-in user; review call
 //   capped at 250 output tokens, at most 3 mistakes + 5 vocab words
+// - guest trial: a signed-out visitor gets 5 minutes of AI chat from
+//   their first guest message, keyed by a stable device id the client
+//   sends (localStorage). The record lives in Firestore `guest_trials`
+//   (admin SDK — no rules change). After the window the guest gets 403
+//   `trial_expired` and must sign in; the per-IP daily cap (60/day
+//   guest) still bounds total guest usage. IP is never the trial
+//   identity: carrier NAT shares IPs across people and mobile IPs
+//   rotate.
 
 const MODELS = (process.env.GEMINI_MODEL || 'gemini-3.8-flash,gemini-2.5-flash')
   .split(',')
   .map((m) => m.trim())
   .filter(Boolean);
+
+// Guest trial: 5 minutes from the first guest message, per device id.
+const GUEST_TRIAL_MS = 5 * 60 * 1000;
+const GUEST_TRIALS_COLLECTION = 'guest_trials';
 
 const SYSTEM_PROMPT = `You are an AI language practice partner, never claim to be human. \
 You are an AI, not a real person, and if asked, say so plainly. \
@@ -613,6 +625,28 @@ export async function POST(req: NextRequest) {
       const dailyMax = id ? DAILY_CAP_EXCHANGE_CHAT_USER : DAILY_CAP_EXCHANGE_CHAT_GUEST;
       const dl = await checkDailyLimit('exchange-chat', identityKey, dailyMax);
       if (!dl.ok) return apiError(`Daily AI chat limit reached (${dailyMax}/day) — please try again tomorrow`, 429, { retryAfterSec: dl.retryAfterSec });
+    }
+
+    // Guest trial: signed-in users skip this. A guest's first chat call
+    // creates the trial record; later calls check the 5-minute window.
+    // A guest who cleared localStorage gets a new device id, but the
+    // per-IP daily cap (60/day) still bounds total guest usage — the
+    // trial is a conversion nudge, not a perfect lock.
+    if (!id) {
+      const deviceId = typeof body.deviceId === 'string' ? body.deviceId.trim().slice(0, 128) : '';
+      if (deviceId) {
+        const ref = getAdminDb().collection(GUEST_TRIALS_COLLECTION).doc(deviceId);
+        const snap = await ref.get();
+        const nowMs = Date.now();
+        if (!snap.exists) {
+          await ref.set({ deviceId, startedAt: nowMs, ip: clientIp(req), createdAt: FieldValue.serverTimestamp() });
+        } else {
+          const startedAt = typeof snap.data()?.startedAt === 'number' ? (snap.data()?.startedAt as number) : 0;
+          if (nowMs - startedAt > GUEST_TRIAL_MS) {
+            return apiError('trial_expired', 403);
+          }
+        }
+      }
     }
 
     const apiKey = process.env.GEMINI_API_KEY || '';
