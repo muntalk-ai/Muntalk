@@ -1822,7 +1822,7 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                   role="tab"
                   aria-selected={room === 'ai'}
                   onClick={() => setRoom('ai')}
-                  className={`min-h-[44px] flex-1 rounded-xl px-4 py-2.5 text-sm font-bold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${room === 'ai' ? 'bg-violet-600 text-white shadow-sm' : 'border border-slate-200 bg-white text-slate-600 hover:border-violet-300'}`}
+                  className={`min-h-[44px] flex-1 rounded-xl px-4 py-2.5 text-sm font-bold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${room === 'ai' ? 'bg-violet-100 text-violet-900 shadow-sm' : 'border border-slate-200 bg-white text-slate-600 hover:border-violet-300'}`}
                 >
                   AI Rooms
                 </button>
@@ -1838,7 +1838,7 @@ Pilot — AI rooms are the main experience; People room is a waitlist
 
               {room === 'ai' && (
                 <>
-                  <div className="sticky top-[68px] z-20 mt-4 rounded-2xl border border-violet-300 bg-violet-600 px-4 py-3 text-sm font-bold text-white shadow-md">
+                  <div className="sticky top-[68px] z-20 mt-4 rounded-2xl border border-violet-200 bg-violet-50 px-4 py-3 text-sm font-bold text-slate-700">
                     🤖 {AI_DISCLOSURE} Every AI card and AI message here is marked &ldquo;AI&rdquo;.
                   </div>
                   <p className="mt-3 text-sm text-slate-500">
@@ -1876,7 +1876,7 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                           </span>
                         </div>
                         <p className="mt-3">
-                          <span className="inline-block rounded-full bg-violet-600 px-3.5 py-1.5 text-base font-extrabold text-white">
+                          <span className="text-base font-extrabold text-slate-600">
                             Multilingual · speaks every language
                           </span>
                         </p>
