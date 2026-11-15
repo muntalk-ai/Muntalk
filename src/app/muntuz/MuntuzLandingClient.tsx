@@ -120,7 +120,9 @@ const EXTRA_LANGS: { code: string; name: string }[] = [
   { code: "su", name: "Basa Sunda" },
   { code: "ceb", name: "Bisaya" },
 ];
-const PRACTICE_LANGS = LANGS.map(([code, name]) => ({ code, name })).concat(EXTRA_LANGS);
+// Practice-language codes are display identifiers (94 languages), not the
+// 12 UI-translation languages (Lang), so the list is typed with string codes.
+const PRACTICE_LANGS = LANGS.map(([code, name]): { code: string; name: string } => ({ code, name })).concat(EXTRA_LANGS);
 
 // 65 UI strings x 12 languages, ported from the approved design prototype
 // (I18N + GROUP_EXTRA role/song keys + PICK_EXTRA modal keys), plus the
