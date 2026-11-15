@@ -94,6 +94,10 @@ export type ExchangeProfileForm = {
   nickname: string;
   nativeLang: string;
   targetLang: string;
+  // Tandem-style: languages the user speaks fluently besides their
+  // native language. Multi-select (chips) — a person can be fluent in
+  // several languages. Stored as an array in the public profile doc.
+  fluentLangs: string[];
   level: string;
   interests: string[];
   bio: string;
@@ -114,6 +118,7 @@ export function defaultExchangeProfileForm(): ExchangeProfileForm {
     nickname: '',
     nativeLang: 'English',
     targetLang: 'Korean',
+    fluentLangs: [],
     level: 'Intermediate',
     interests: ['Travel', 'Cooking'],
     bio: '',
@@ -186,6 +191,7 @@ export async function saveExchangeProfile(
         nickname: form.nickname.trim(),
         nativeLang: form.nativeLang,
         targetLang: form.targetLang,
+        fluentLangs: form.fluentLangs.filter((l) => (LANGUAGES as readonly string[]).includes(l)),
         level: form.level,
         interests: form.interests,
         bio: form.bio.trim(),
@@ -255,6 +261,9 @@ export async function loadExchangeProfile(uid: string): Promise<LoadedExchangePr
     const d = snap.data();
     if (typeof d.nativeLang === 'string') out.form.nativeLang = d.nativeLang;
     if (typeof d.targetLang === 'string') out.form.targetLang = d.targetLang;
+    if (Array.isArray(d.fluentLangs)) {
+      out.form.fluentLangs = d.fluentLangs.filter((l): l is string => typeof l === 'string');
+    }
     if (typeof d.level === 'string') out.form.level = d.level;
     if (Array.isArray(d.interests)) {
       out.form.interests = d.interests.filter((i): i is string => typeof i === 'string');
