@@ -141,7 +141,7 @@ export const DAILY_CAP_EXCHANGE_CHAT_GUEST = numEnv('DAILY_CAP_EXCHANGE_CHAT_GUE
 /** Exchange AI 채팅 시간당 100회 */
 export const HOURLY_CAP_EXCHANGE_CHAT = numEnv('HOURLY_CAP_EXCHANGE_CHAT', 100);
 
-const DAILY_USAGE_COLLECTION = 'api_daily_usage';
+export const DAILY_USAGE_COLLECTION = 'api_daily_usage';
 
 function getAdminDb() {
   getAdminAuth(); // 앱 초기화 보장

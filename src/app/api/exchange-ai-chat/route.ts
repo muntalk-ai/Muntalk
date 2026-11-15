@@ -12,6 +12,7 @@ import {
   DAILY_CAP_EXCHANGE_CHAT_USER,
   DAILY_CAP_EXCHANGE_CHAT_GUEST,
   HOURLY_CAP_EXCHANGE_CHAT,
+  DAILY_USAGE_COLLECTION,
 } from '@/lib/apiGuard';
 import { getAdminDb } from '@/lib/serverAuth';
 import { getAiPartner } from '@/lib/exchangeAiPartners';
@@ -32,8 +33,9 @@ import {
 } from '@/lib/exchangeMemoryReview';
 
 // MunTalk Exchange AI chat (pilot).
-// One Gemini call per user message. Chat history lives only in the browser
-// for this pilot (no new collection, no rules change).
+// One Gemini call per user message. Chat history lives in the browser
+// for this pilot (localStorage on muntuz.com, in-memory elsewhere —
+// no new collection, no rules change).
 //
 // Memory ("the partner remembers you"): the browser reads the signed-in
 // user's memory doc (`exchange_memories/${uid}_${partnerId}`, client-side,
@@ -422,6 +424,34 @@ function parseReviewJson(raw: string): {
   return { mistakes, vocab, summary };
 }
 
+// H-1: real per-day AI-message counts for the AI Review "This week"
+// chart. Reads the same api_daily_usage store the daily caps
+// increment — one doc per identity per UTC day — so no new collection
+// and no invented data. Muntuz-only: the shared route also serves
+// muntalk.com. Read-only and rate-limited like the other actions.
+async function handleUsageWeek(req: NextRequest) {
+  if (!isMuntuzHost(req)) return apiError('Not available on this host', 403);
+  const id = await getIdentity(req);
+  const identityKey = id ? `uid:${id.uid}` : `ip:${clientIp(req)}`;
+  const rl = checkRateLimit(`exchange-ai-usage-week:${identityKey}`, 30, 60_000);
+  if (!rl.ok) return apiError('Too many requests — please wait a minute and try again', 429, { retryAfterSec: rl.retryAfterSec });
+  const db = getAdminDb();
+  const days: { day: string; count: number }[] = [];
+  const now = new Date();
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - i));
+    const day = d.toISOString().slice(0, 10);
+    try {
+      const snap = await db.collection(DAILY_USAGE_COLLECTION).doc(`exchange-chat:${identityKey}:${day}`).get();
+      const n = Number(snap.data()?.count ?? 0);
+      days.push({ day, count: Number.isFinite(n) ? n : 0 });
+    } catch {
+      days.push({ day, count: 0 });
+    }
+  }
+  return NextResponse.json({ ok: true, days });
+}
+
 async function handleSessionReview(req: NextRequest, body: Record<string, unknown>) {
   const id = await getIdentity(req);
   if (!id) return apiError('Sign in required for a session review', 401);
@@ -696,6 +726,7 @@ export async function POST(req: NextRequest) {
     if (body.action === 'save-memory') return handleSaveMemory(req, body);
     if (body.action === 'clear-memory') return handleClearMemory(req, body);
     if (body.action === 'session-review') return handleSessionReview(req, body);
+    if (body.action === 'usage-week') return handleUsageWeek(req);
     const partnerId = typeof body.partnerId === 'string' ? body.partnerId : '';
     const partner = getAiPartner(partnerId);
     if (!partner) return apiError('Unknown AI partner', 400);
