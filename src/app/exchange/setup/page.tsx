@@ -112,6 +112,13 @@ export default function ExchangeSetupPage() {
         ? cur.interests.filter((i) => i !== interest)
         : [...cur.interests, interest],
     }));
+  const toggleFluent = (lang: string) =>
+    setForm((cur) => ({
+      ...cur,
+      fluentLangs: cur.fluentLangs.includes(lang)
+        ? cur.fluentLangs.filter((l) => l !== lang)
+        : [...cur.fluentLangs, lang],
+    }));
   const toggleDay = (d: string) =>
     setForm((cur) => ({
       ...cur,
@@ -246,6 +253,14 @@ export default function ExchangeSetupPage() {
                     ))}
                   </select>
                 </label>
+              </div>
+              <p className="mt-4 text-sm font-semibold">Fluent languages (besides your native language)</p>
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {LANGUAGES.filter((l) => l !== form.nativeLang).map((l) => (
+                  <button key={l} type="button" onClick={() => toggleFluent(l)} className={chipCls(form.fluentLangs.includes(l))}>
+                    {l}
+                  </button>
+                ))}
               </div>
               <p className="mt-4 text-sm font-semibold">Interests</p>
               <div className="mt-2 flex flex-wrap gap-1.5">

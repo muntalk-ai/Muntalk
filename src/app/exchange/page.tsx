@@ -118,15 +118,6 @@ type Room = 'ai' | 'people';
 
 // Waitlist language pairs. Pilot focus is Korean ↔ English; the rest are
 // selectable so other pairs can gather without a code change.
-const WAITLIST_PAIRS = [
-  { id: 'ko-en', label: 'Korean ↔ English' },
-  { id: 'en-es', label: 'English ↔ Spanish' },
-  { id: 'en-ja', label: 'English ↔ Japanese' },
-  { id: 'en-pt', label: 'English ↔ Portuguese' },
-  { id: 'ko-ja', label: 'Korean ↔ Japanese' },
-  { id: 'en-fr', label: 'English ↔ French' },
-];
-
 type PartnerStatus = 'idle' | 'pending' | 'matched';
 
 // Real partner from Firestore `exchange_profiles` — never invented.
@@ -142,6 +133,8 @@ type RealPartner = {
   name: string;
   flag: string;
   native: string;
+  // Tandem-style: languages spoken fluently besides the native one.
+  fluent: string[];
   learning: string;
   level: string;
   interests: string[];
@@ -247,6 +240,7 @@ const profileToPartner = (uid: string, d: Record<string, unknown>): RealPartner 
     name: str(d.nickname, 'Partner'),
     flag: LANG_FLAG[native] || '🌐',
     native,
+    fluent: strArr(d.fluentLangs),
     learning: str(d.targetLang, '—'),
     level: str(d.level, '—'),
     interests: strArr(d.interests),
@@ -329,7 +323,6 @@ export default function ExchangePage() {
   const [room, setRoom] = useState<Room>('ai');
   const [chats, setChats] = useState<Chat[]>([]);
   const [aiSending, setAiSending] = useState(false);
-  const [waitlistPair, setWaitlistPair] = useState('ko-en');
   const [waitlistCount, setWaitlistCount] = useState<number | null>(null);
   const [waitlistJoined, setWaitlistJoined] = useState(false);
   const [waitlistLoading, setWaitlistLoading] = useState(false);
@@ -428,12 +421,16 @@ export default function ExchangePage() {
   // Profile (demo, browser state only)
   const [nativeLang, setNativeLang] = useState('English');
   const [targetLang, setTargetLang] = useState('Korean');
+  const [fluentLangs, setFluentLangs] = useState<string[]>([]);
   const [level, setLevel] = useState('Intermediate');
   const [interestSel, setInterestSel] = useState<string[]>(['Travel', 'Cooking']);
   // Set when the user taps an interest chip. The Firestore load below must
   // never overwrite a selection the user already made (load resolving after
   // a tap used to wipe it, so a tap looked dead and never persisted).
   const interestEditedRef = useRef(false);
+  // Same guard as interests: the Firestore load must never overwrite a
+  // fluent-language tap that landed before the load resolved.
+  const fluentEditedRef = useRef(false);
   const [nickname, setNickname] = useState('');
   const [bio, setBio] = useState('');
   const [hideOnline, setHideOnline] = useState(false);
@@ -541,7 +538,12 @@ export default function ExchangePage() {
   // Free for everyone, including the gender filter (Jay 2026-11-05, B안).
   // Filters apply to the real `exchange_profiles` list above — never to
   // the AI room, which has no language filter by design.
-  const [fNative, setFNative] = useState('All');
+  // Tandem-style search: "Speaks" matches a partner's native language
+  // OR any of their fluent languages; "Learning" matches what they are
+  // learning, and "Level" is their level in that language
+  // (Beginner / Intermediate / Advanced).
+  const [fSpeaks, setFSpeaks] = useState('All');
+  const [fLearning, setFLearning] = useState('All');
   const [fLevel, setFLevel] = useState('All');
   const [fInterest, setFInterest] = useState('All');
   const [fGoal, setFGoal] = useState<LearningGoal | 'All'>('All');
@@ -549,12 +551,14 @@ export default function ExchangePage() {
   const [fAgeBand, setFAgeBand] = useState<AgeBand | 'All'>('All');
   const [fOverlap, setFOverlap] = useState(false);
 
-  const filterNatives = Array.from(new Set((realPartners || []).map((p) => p.native))).sort();
+  const filterSpeaks = Array.from(new Set((realPartners || []).flatMap((p) => [p.native, ...p.fluent]))).sort();
+  const filterLearnings = Array.from(new Set((realPartners || []).map((p) => p.learning))).sort();
   const filterInterests = Array.from(new Set((realPartners || []).flatMap((p) => p.interests))).sort();
   const filtersActive =
-    fNative !== 'All' || fLevel !== 'All' || fInterest !== 'All' || fGoal !== 'All' || fGender !== 'All' || fAgeBand !== 'All' || fOverlap;
+    fSpeaks !== 'All' || fLearning !== 'All' || fLevel !== 'All' || fInterest !== 'All' || fGoal !== 'All' || fGender !== 'All' || fAgeBand !== 'All' || fOverlap;
   const clearFilters = () => {
-    setFNative('All');
+    setFSpeaks('All');
+    setFLearning('All');
     setFLevel('All');
     setFInterest('All');
     setFGoal('All');
@@ -564,7 +568,8 @@ export default function ExchangePage() {
   };
 
   const visiblePartners = (realPartners || []).filter((p) => {
-    if (fNative !== 'All' && p.native !== fNative) return false;
+    if (fSpeaks !== 'All' && p.native !== fSpeaks && !p.fluent.includes(fSpeaks)) return false;
+    if (fLearning !== 'All' && p.learning !== fLearning) return false;
     if (fLevel !== 'All' && p.level !== fLevel) return false;
     if (fInterest !== 'All' && !p.interests.includes(fInterest)) return false;
     if (fGoal !== 'All' && p.goal !== fGoal) return false;
@@ -820,6 +825,7 @@ export default function ExchangePage() {
     if (authLoading) return;
     if (!user) {
       interestEditedRef.current = false;
+      fluentEditedRef.current = false;
       setProfileLoaded(false);
       setProfileExists(null);
       setProfileError('');
@@ -828,6 +834,7 @@ export default function ExchangePage() {
     let cancelled = false;
     // A fresh load for this user: user edits from here on win over the doc.
     interestEditedRef.current = false;
+    fluentEditedRef.current = false;
     setProfileLoading(true);
     getDoc(doc(db, 'exchange_profiles', user.uid))
       .then((snap) => {
@@ -838,6 +845,7 @@ export default function ExchangePage() {
           if (typeof d.nativeLang === 'string') setNativeLang(d.nativeLang);
           if (typeof d.targetLang === 'string') setTargetLang(d.targetLang);
           if (typeof d.level === 'string') setLevel(d.level);
+          if (!fluentEditedRef.current && Array.isArray(d.fluentLangs)) setFluentLangs(d.fluentLangs.filter((l): l is string => typeof l === 'string'));
           if (!interestEditedRef.current && Array.isArray(d.interests)) setInterestSel(d.interests.filter((i): i is string => typeof i === 'string'));
           if (typeof d.nickname === 'string') setNickname(d.nickname);
           if (typeof d.bio === 'string') setBio(d.bio);
@@ -890,17 +898,19 @@ export default function ExchangePage() {
   }, [user, authLoading]);
 
   // People room = waitlist (AI-first). The count is the real number of
-  // exchange_waitlist documents for the selected pair. If the console
-  // rules for the new collection are not published yet, the query fails
-  // with permission-denied: the count stays unknown (never faked) and a
-  // notice is shown instead.
+  // exchange_waitlist documents — one per user, no language pair:
+  // people are matched by their own native / fluent / learning
+  // languages (Tandem-style), so the waitlist no longer splits by pair.
+  // If the console rules for the new collection are not published yet,
+  // the query fails with permission-denied: the count stays unknown
+  // (never faked) and a notice is shown instead.
   useEffect(() => {
     if (room !== 'people' || !user) return;
     let cancelled = false;
     setWaitlistLoading(true);
     setWaitlistError('');
     setWaitlistJoined(false);
-    getDocs(query(collection(db, 'exchange_waitlist'), where('pairId', '==', waitlistPair)))
+    getDocs(query(collection(db, 'exchange_waitlist')))
       .then((snap) => {
         if (cancelled) return;
         setWaitlistCount(snap.size);
@@ -921,24 +931,24 @@ export default function ExchangePage() {
     return () => {
       cancelled = true;
     };
-  }, [room, user, waitlistPair, waitlistReload]);
+  }, [room, user, waitlistReload]);
 
-  // One waitlist entry per user per pair: doc id `${uid}_${pairId}`.
-  // Only uid / pair / pairId / createdAt are stored — nothing else.
+  // One waitlist entry per user: doc id is the uid. Only uid and
+  // createdAt are stored — the user's languages already live in their
+  // Exchange profile, so no pair is recorded.
   const joinWaitlist = async () => {
     if (!user || waitlistJoining) return;
-    const pair = WAITLIST_PAIRS.find((p) => p.id === waitlistPair) || WAITLIST_PAIRS[0];
     setWaitlistJoining(true);
     try {
       await setDoc(
-        doc(db, 'exchange_waitlist', `${user.uid}_${pair.id}`),
-        { uid: user.uid, pair: pair.label, pairId: pair.id, createdAt: serverTimestamp() },
+        doc(db, 'exchange_waitlist', user.uid),
+        { uid: user.uid, createdAt: serverTimestamp() },
         { merge: true }
       );
       setWaitlistJoined(true);
       setWaitlistError('');
       setWaitlistReload((r) => r + 1);
-      showToast(`Joined the waitlist for ${pair.label}.`);
+      showToast('Joined the People Rooms waitlist.');
     } catch (err) {
       setWaitlistError(
         (err as { code?: string }).code === 'permission-denied'
@@ -964,6 +974,7 @@ export default function ExchangePage() {
       nickname,
       nativeLang,
       targetLang,
+      fluentLangs,
       level,
       interests: interestSel,
       bio,
@@ -1541,6 +1552,13 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
     }
   };
 
+  // Fluent languages save with the profile (Save button), unlike
+  // interests which save on tap.
+  const toggleFluent = (lang: string) => {
+    fluentEditedRef.current = true;
+    setFluentLangs((cur) => (cur.includes(lang) ? cur.filter((l) => l !== lang) : [...cur, lang]));
+  };
+
   // Availability chips save with the profile (Save button), unlike
   // interests which save on tap.
   const toggleAvailDay = (d: string) =>
@@ -1774,36 +1792,23 @@ Pilot — AI rooms are the main experience; People room is a waitlist
               {room === 'people' && (
                 <>
                   <p className="mt-4 text-sm text-slate-500">
-                    People rooms open when people gather for a language pair. Pick a pair and join its waitlist — the waiting number below is the real
-                    count of waitlist entries, never a made-up number.
+                    People rooms open when people gather. Join the waitlist — the waiting number below is the real count of waitlist entries, never a
+                    made-up number. Matching uses your profile languages (native / fluent / learning), not a fixed pair.
                   </p>
                   <div className="mt-4 rounded-2xl border border-amber-100 bg-white p-4 shadow-sm sm:p-5">
-                    <p className="text-sm font-bold">Choose a language pair</p>
-                    <div className="mt-2 flex flex-wrap gap-1.5">
-                      {WAITLIST_PAIRS.map((pair) => (
-                        <button
-                          key={pair.id}
-                          onClick={() => setWaitlistPair(pair.id)}
-                          aria-pressed={waitlistPair === pair.id}
-                          className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${waitlistPair === pair.id ? 'bg-violet-600 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
-                        >
-                          {pair.label}
-                        </button>
-                      ))}
-                    </div>
-                    <div className="mt-4 rounded-xl bg-violet-50 px-4 py-3">
+                    <div className="rounded-xl bg-violet-50 px-4 py-3">
                       {waitlistLoading ? (
                         <p className="text-sm font-semibold text-slate-500">Loading waiting count…</p>
                       ) : waitlistCount !== null ? (
                         <p className="text-sm font-extrabold text-slate-800">
-                          {waitlistCount} {waitlistCount === 1 ? 'person' : 'people'} waiting for {(WAITLIST_PAIRS.find((p) => p.id === waitlistPair) || WAITLIST_PAIRS[0]).label}
+                          {waitlistCount} {waitlistCount === 1 ? 'person' : 'people'} waiting for People Rooms
                         </p>
                       ) : (
                         <p className="text-sm font-semibold text-slate-600">Waiting count is not available yet.</p>
                       )}
                       {waitlistJoined && (
                         <p className="mt-1 text-sm font-bold text-emerald-700">
-                          ✓ You are on the waitlist for {(WAITLIST_PAIRS.find((p) => p.id === waitlistPair) || WAITLIST_PAIRS[0]).label}. This language pair will open when people gather.
+                          ✓ You are on the waitlist. People Rooms will open when people gather.
                         </p>
                       )}
                       {waitlistError && <p className="mt-1 text-sm font-semibold text-amber-800">{waitlistError}</p>}
@@ -1811,14 +1816,14 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                     {!user ? (
                       <p className="mt-3 text-sm text-slate-500">Sign in to join the waitlist. Until then, you can still practice with an AI partner.</p>
                     ) : waitlistJoined ? (
-                      <p className="mt-3 text-sm font-semibold text-slate-600">You are on this waitlist. Check back here — this pair opens when people gather.</p>
+                      <p className="mt-3 text-sm font-semibold text-slate-600">You are on this waitlist. Check back here — People Rooms open when people gather.</p>
                     ) : (
                       <button
                         onClick={joinWaitlist}
                         disabled={waitlistJoining}
                         className="mt-3 min-h-[44px] w-full rounded-xl bg-violet-600 py-3 font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98] disabled:opacity-60"
                       >
-                        {waitlistJoining ? 'Joining…' : `Join waitlist for ${(WAITLIST_PAIRS.find((p) => p.id === waitlistPair) || WAITLIST_PAIRS[0]).label}`}
+                        {waitlistJoining ? 'Joining…' : 'Join the People Rooms waitlist'}
                       </button>
                     )}
                   </div>
@@ -1842,9 +1847,18 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                       <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                         <label className="block text-sm font-semibold">
                           Speaks
-                          <select value={fNative} onChange={(e) => setFNative(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
+                          <select value={fSpeaks} onChange={(e) => setFSpeaks(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
                             <option>All</option>
-                            {filterNatives.map((l) => (
+                            {filterSpeaks.map((l) => (
+                              <option key={l}>{l}</option>
+                            ))}
+                          </select>
+                        </label>
+                        <label className="block text-sm font-semibold">
+                          Learning
+                          <select value={fLearning} onChange={(e) => setFLearning(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
+                            <option>All</option>
+                            {filterLearnings.map((l) => (
                               <option key={l}>{l}</option>
                             ))}
                           </select>
@@ -1940,7 +1954,11 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                               <div>
                                 <p className="font-bold">{p.name}</p>
                                 <p className="text-xs text-slate-500">
-                                  {p.native} → {p.learning} · {p.level}
+                                  Native: {p.native}
+                                  {p.fluent.length > 0 ? ` · Fluent: ${p.fluent.join(', ')}` : ''}
+                                </p>
+                                <p className="text-xs text-slate-500">
+                                  Learning: {p.learning} · {p.level}
                                 </p>
                                 {(p.country || p.ageBand || p.goal || p.timezone) && (
                                   <p className="mt-0.5 text-xs text-slate-500">
@@ -2473,6 +2491,20 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                         ))}
                       </select>
                     </label>
+                  </div>
+                  <p className="mt-4 text-sm font-semibold">Fluent languages (besides your native language)</p>
+                  <div className="mt-2 flex flex-wrap gap-1.5">
+                    {['English', 'Korean', 'Spanish', 'Japanese', 'Portuguese']
+                      .filter((l) => l !== nativeLang)
+                      .map((l) => (
+                        <button
+                          key={l}
+                          onClick={() => toggleFluent(l)}
+                          className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${fluentLangs.includes(l) ? 'bg-violet-600 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
+                        >
+                          {l}
+                        </button>
+                      ))}
                   </div>
                   <p className="mt-4 text-sm font-semibold">Interests</p>
                   <div className="mt-2 flex flex-wrap gap-1.5">
