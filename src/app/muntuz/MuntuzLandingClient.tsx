@@ -9,8 +9,9 @@
 // Friend room content is English, and Korean when lang is ko (as in the
 // final-design prototype). Photos use the locked official faces; the hero
 // group photo is the sunny-plaza version the user approved ("저 광장").
-// Voice is shown as an animated waveform + tone tags, not real audio
-// (see the prototype note under Night Voices).
+// Voice: each friend has a fixed TTS voice; the room Listen button plays
+// their opening line and Night Voices plays Emily's night note. The waveform
+// animates while audio is playing.
 //
 // Only features that actually work are shown: 50 AI partners, voice-only
 // calls, natural-expression corrections, gallery photos in chat, any
@@ -23,7 +24,7 @@
 // and the form falls back to a "waitlist opens soon" message instead of
 // claiming the signup succeeded. Rules snippet:
 //   firestore-snippets/muntuz-waitlist.rules.txt
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
@@ -124,6 +125,9 @@ const DICT: Record<Lang, Record<string, string>> = {
     "debutKicker": "The debut · MUNTUZ",
     "debutGreeting": "Say hi, we are MUNTUZ!",
     "debutSub": "The five housemates are debuting as a group — MUNTUZ. Their first single is the sound of this house: bright, fast, and impossible to sit still through.",
+    "heroBadge": "AI language exchange",
+    "langStrip": "Practice any language — with 50 AI friends",
+    "debutLearn": "Learn the hook, sing it back — the chorus is your first lesson.",
     "songLabel": "Debut single",
     "songMeta": "Fast, exciting K-pop dance-pop · 128 BPM",
     "listenBtn": "▶ Listen to “Say Hi” on Suno",
@@ -224,6 +228,9 @@ const DICT: Record<Lang, Record<string, string>> = {
     "debutKicker": "데뷔 · MUNTUZ",
     "debutGreeting": "Say hi, we are MUNTUZ!",
     "debutSub": "다섯 하우스메이트가 그룹 MUNTUZ로 데뷔합니다. 첫 싱글은 이 집의 소리 그대로 — 밝고, 빠르고, 가만히 앉아 있을 수 없는 곡이에요.",
+    "heroBadge": "AI 언어교환",
+    "langStrip": "어떤 언어든 연습해요 — 50명의 AI 친구와 함께",
+    "debutLearn": "후크를 배우고 따라 불러봐요 — 코러스가 첫 수업이에요.",
     "songLabel": "데뷔 싱글",
     "songMeta": "빠르고 신나는 K-pop 댄스팝 · 128 BPM",
     "listenBtn": "▶ Suno에서 “Say Hi” 듣기",
@@ -324,6 +331,9 @@ const DICT: Record<Lang, Record<string, string>> = {
     "debutKicker": "デビュー · MUNTUZ",
     "debutGreeting": "Say hi, we are MUNTUZ!",
     "debutSub": "5人のハウスメイトがグループMUNTUZとしてデビューします。ファーストシングルはこの家の音そのもの — 明るく、速く、じっと座っていられない曲です。",
+    "heroBadge": "AI言語交換",
+    "langStrip": "どんな言語でも練習 — 50人のAIフレンドと",
+    "debutLearn": "フックを覚えて歌ってみよう — コーラスが最初のレッスン。",
     "songLabel": "デビューシングル",
     "songMeta": "速くてワクワクするK-popダンスポップ · 128 BPM",
     "listenBtn": "▶ Sunoで「Say Hi」を聴く",
@@ -424,6 +434,9 @@ const DICT: Record<Lang, Record<string, string>> = {
     "debutKicker": "El debut · MUNTUZ",
     "debutGreeting": "Say hi, we are MUNTUZ!",
     "debutSub": "Las cinco compañeras de casa debutan como grupo: MUNTUZ. Su primer sencillo suena como esta casa: brillante, rápido e imposible de escuchar sentado.",
+    "heroBadge": "Intercambio de idiomas con IA",
+    "langStrip": "Practica cualquier idioma — con 50 amigos de IA",
+    "debutLearn": "Aprende el estribillo y cántalo — el coro es tu primera lección.",
     "songLabel": "Sencillo debut",
     "songMeta": "Dance-pop K-pop rápido y emocionante · 128 BPM",
     "listenBtn": "▶ Escucha “Say Hi” en Suno",
@@ -524,6 +537,9 @@ const DICT: Record<Lang, Record<string, string>> = {
     "debutKicker": "Les débuts · MUNTUZ",
     "debutGreeting": "Say hi, we are MUNTUZ!",
     "debutSub": "Les cinq colocataires débutent en groupe — MUNTUZ. Leur premier single sonne comme cette maison : lumineux, rapide, impossible à écouter assis.",
+    "heroBadge": "Échange linguistique avec l'IA",
+    "langStrip": "Pratiquez n'importe quelle langue — avec 50 amis IA",
+    "debutLearn": "Apprends le refrain et chante-le — le refrain est ta première leçon.",
     "songLabel": "Single de début",
     "songMeta": "Dance-pop K-pop rapide et excitante · 128 BPM",
     "listenBtn": "▶ Écouter « Say Hi » sur Suno",
@@ -624,6 +640,9 @@ const DICT: Record<Lang, Record<string, string>> = {
     "debutKicker": "Das Debüt · MUNTUZ",
     "debutGreeting": "Say hi, we are MUNTUZ!",
     "debutSub": "Die fünf Mitbewohnerinnen debütieren als Gruppe — MUNTUZ. Ihre erste Single klingt wie dieses Haus: hell, schnell, und man kann nicht still sitzen.",
+    "heroBadge": "Sprachaustausch mit KI",
+    "langStrip": "Übe jede Sprache — mit 50 KI-Freunden",
+    "debutLearn": "Lern den Hook und sing ihn nach — der Refrain ist deine erste Lektion.",
     "songLabel": "Debütsingle",
     "songMeta": "Schneller, aufregender K-pop Dance-Pop · 128 BPM",
     "listenBtn": "▶ „Say Hi“ auf Suno anhören",
@@ -724,6 +743,9 @@ const DICT: Record<Lang, Record<string, string>> = {
     "debutKicker": "A estreia · MUNTUZ",
     "debutGreeting": "Say hi, we are MUNTUZ!",
     "debutSub": "As cinco colegas de casa estreiam como grupo — MUNTUZ. O primeiro single soa como esta casa: brilhante, rápido e impossível de ouvir sentado.",
+    "heroBadge": "Intercâmbio de idiomas com IA",
+    "langStrip": "Pratique qualquer idioma — com 50 amigos de IA",
+    "debutLearn": "Aprenda o refrão e cante junto — o coro é a sua primeira lição.",
     "songLabel": "Single de estreia",
     "songMeta": "Dance-pop K-pop rápido e empolgante · 128 BPM",
     "listenBtn": "▶ Ouça “Say Hi” no Suno",
@@ -824,6 +846,9 @@ const DICT: Record<Lang, Record<string, string>> = {
     "debutKicker": "出道 · MUNTUZ",
     "debutGreeting": "Say hi, we are MUNTUZ!",
     "debutSub": "五位室友以组合 MUNTUZ 出道。她们的首支单曲就是这栋房子的声音：明亮、快速、让人坐不住。",
+    "heroBadge": "AI 语言交换",
+    "langStrip": "练习任何语言 — 与50位AI朋友一起",
+    "debutLearn": "学会副歌，跟着唱 — 副歌就是你的第一课。",
     "songLabel": "出道单曲",
     "songMeta": "快速、令人兴奋的 K-pop 舞曲流行 · 128 BPM",
     "listenBtn": "▶ 在 Suno 收听 “Say Hi”",
@@ -924,6 +949,9 @@ const DICT: Record<Lang, Record<string, string>> = {
     "debutKicker": "Il debutto · MUNTUZ",
     "debutGreeting": "Say hi, we are MUNTUZ!",
     "debutSub": "Le cinque coinquiline debuttano come gruppo — MUNTUZ. Il loro primo singolo suona come questa casa: luminoso, veloce, impossibile da ascoltare da seduti.",
+    "heroBadge": "Scambio linguistico con l'IA",
+    "langStrip": "Esercitati in qualsiasi lingua — con 50 amici IA",
+    "debutLearn": "Impara il ritornello e cantalo — il coro è la tua prima lezione.",
     "songLabel": "Singolo di debutto",
     "songMeta": "Dance-pop K-pop veloce ed entusiasmante · 128 BPM",
     "listenBtn": "▶ Ascolta “Say Hi” su Suno",
@@ -1024,6 +1052,9 @@ const DICT: Record<Lang, Record<string, string>> = {
     "debutKicker": "Màn ra mắt · MUNTUZ",
     "debutGreeting": "Say hi, we are MUNTUZ!",
     "debutSub": "Năm người bạn cùng nhà ra mắt với tư cách một nhóm — MUNTUZ. Đĩa đơn đầu tiên nghe đúng như ngôi nhà này: tươi sáng, nhanh và không thể ngồi yên.",
+    "heroBadge": "Trao đổi ngôn ngữ với AI",
+    "langStrip": "Luyện bất kỳ ngôn ngữ nào — cùng 50 người bạn AI",
+    "debutLearn": "Học đoạn hook và hát theo — điệp khúc là bài học đầu tiên của bạn.",
     "songLabel": "Đĩa đơn ra mắt",
     "songMeta": "Dance-pop K-pop nhanh và sôi động · 128 BPM",
     "listenBtn": "▶ Nghe “Say Hi” trên Suno",
@@ -1124,6 +1155,9 @@ const DICT: Record<Lang, Record<string, string>> = {
     "debutKicker": "डेब्यू · MUNTUZ",
     "debutGreeting": "Say hi, we are MUNTUZ!",
     "debutSub": "पाँचों सह-निवासी MUNTUZ नाम के ग्रुप के रूप में डेब्यू कर रही हैं। उनका पहला सिंगल इस घर की आवाज़ है: चमकदार, तेज़, और बैठकर सुनना नामुमकिन।",
+    "heroBadge": "AI भाषा विनिमय",
+    "langStrip": "कोई भी भाषा सीखें — 50 AI दोस्तों के साथ",
+    "debutLearn": "हुक सीखें और गाएँ — कोरस ही आपका पहला पाठ है।",
     "songLabel": "डेब्यू सिंगल",
     "songMeta": "तेज़, रोमांचक K-pop डांस-पॉप · 128 BPM",
     "listenBtn": "▶ Suno पर “Say Hi” सुनें",
@@ -1224,6 +1258,9 @@ const DICT: Record<Lang, Record<string, string>> = {
     "debutKicker": "الظهور الأول · MUNTUZ",
     "debutGreeting": "Say hi, we are MUNTUZ!",
     "debutSub": "زميلات السكن الخمس يظهرن لأول مرة كمجموعة — MUNTUZ. أغنيتهن الأولى تبدو مثل هذا البيت: مشرقة وسريعة ويستحيل سماعها جالساً.",
+    "heroBadge": "تبادل لغوي بالذكاء الاصطناعي",
+    "langStrip": "تدرّب على أي لغة — مع 50 صديقًا بالذكاء الاصطناعي",
+    "debutLearn": "تعلّم اللازمة وغنِّها — اللازمة هي درسك الأول.",
     "songLabel": "الأغنية الأولى",
     "songMeta": "دانس-بوب كوري سريع ومثير · 128 BPM",
     "listenBtn": "▶ استمع إلى “Say Hi” على Suno",
@@ -1240,7 +1277,7 @@ const DICT: Record<Lang, Record<string, string>> = {
 type ChatTurn = [string, string]; // 'friend' | 'me', text
 
 type FriendContent = {
-  id: string; name: string; img: string; avatar: string;
+  id: string; name: string; img: string; avatar: string; voice: string;
   memo: string; doing: string; cap: string; tone: string; fix: string;
   chat: ChatTurn[]; memory: string;
   pers: string; hobby: string; places: string; now: string;
@@ -1252,6 +1289,7 @@ const FRIENDS_EN: FriendContent[] = [
     "name": "Emily",
     "img": "/muntuz/emily-latte.webp",
     "avatar": "/muntuz-avatars/emily.jpg",
+    "voice": "/muntuz/voices/emily.mp3",
     "memo": "found my life latte!",
     "doing": "at the alley café",
     "cap": "found my life latte!! ☕",
@@ -1282,6 +1320,7 @@ const FRIENDS_EN: FriendContent[] = [
     "name": "Jiyoung",
     "img": "/muntuz/jiyoung-kimbap.webp",
     "avatar": "/muntuz-avatars/jiyoung.jpg",
+    "voice": "/muntuz/voices/jiyoung.mp3",
     "memo": "rolling kimbap, 3rd try",
     "doing": "in the kitchen",
     "cap": "kimbap attempt #3 — almost!! 🍙",
@@ -1312,6 +1351,7 @@ const FRIENDS_EN: FriendContent[] = [
     "name": "Chloe",
     "img": "/muntuz/chloe-shoot.webp",
     "avatar": "/muntuz-avatars/chloe.jpg",
+    "voice": "/muntuz/voices/chloe.mp3",
     "memo": "lost in a Paris bookshop",
     "doing": "between the shelves",
     "cap": "shoot day — braid check!! 📸",
@@ -1342,6 +1382,7 @@ const FRIENDS_EN: FriendContent[] = [
     "name": "Sofia",
     "img": "/muntuz/sofia-pasta.webp",
     "avatar": "/muntuz-avatars/sofia.jpg",
+    "voice": "/muntuz/voices/sofia.mp3",
     "memo": "salsa while the pasta boils",
     "doing": "dancing in the kitchen",
     "cap": "salsa + pasta night!! 💃",
@@ -1372,6 +1413,7 @@ const FRIENDS_EN: FriendContent[] = [
     "name": "Amara",
     "img": "/muntuz/amara-sun.webp",
     "avatar": "/muntuz-avatars/amara.jpg",
+    "voice": "/muntuz/voices/amara.mp3",
     "memo": "night-market exploring",
     "doing": "under the lanterns",
     "cap": "gold beads & sunshine ✨",
@@ -1405,6 +1447,7 @@ const FRIENDS_KO: FriendContent[] = [
     "name": "Emily",
     "img": "/muntuz/emily-latte.webp",
     "avatar": "/muntuz-avatars/emily.jpg",
+    "voice": "/muntuz/voices/emily.mp3",
     "memo": "인생 라떼를 찾았어요!",
     "doing": "골목 카페에서",
     "cap": "인생 라떼 찾았다!! ☕",
@@ -1435,6 +1478,7 @@ const FRIENDS_KO: FriendContent[] = [
     "name": "지영",
     "img": "/muntuz/jiyoung-kimbap.webp",
     "avatar": "/muntuz-avatars/jiyoung.jpg",
+    "voice": "/muntuz/voices/jiyoung.mp3",
     "memo": "김밥 말기, 세 번째 도전",
     "doing": "부엌에서",
     "cap": "김밥 세 번째 도전 — 거의 다 왔어!! 🍙",
@@ -1465,6 +1509,7 @@ const FRIENDS_KO: FriendContent[] = [
     "name": "Chloe",
     "img": "/muntuz/chloe-shoot.webp",
     "avatar": "/muntuz-avatars/chloe.jpg",
+    "voice": "/muntuz/voices/chloe.mp3",
     "memo": "파리 서점에서 길 잃음",
     "doing": "책장 사이에서",
     "cap": "촬영날 — 땋은 머리 체크!! 📸",
@@ -1495,6 +1540,7 @@ const FRIENDS_KO: FriendContent[] = [
     "name": "Sofia",
     "img": "/muntuz/sofia-pasta.webp",
     "avatar": "/muntuz-avatars/sofia.jpg",
+    "voice": "/muntuz/voices/sofia.mp3",
     "memo": "파스타 끓는 동안 살사",
     "doing": "부엌에서 춤추는 중",
     "cap": "살사 + 파스타 나이트!! 💃",
@@ -1525,6 +1571,7 @@ const FRIENDS_KO: FriendContent[] = [
     "name": "Amara",
     "img": "/muntuz/amara-sun.webp",
     "avatar": "/muntuz-avatars/amara.jpg",
+    "voice": "/muntuz/voices/amara.mp3",
     "memo": "야시장 탐험 중",
     "doing": "등불 아래에서",
     "cap": "골드 비즈 & 햇살 ✨",
@@ -1699,6 +1746,8 @@ export default function MuntuzLandingClient() {
   const [nightPlaying, setNightPlaying] = useState(false);
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<FormStatus>('idle');
+  const roomAudioRef = useRef<HTMLAudioElement | null>(null);
+  const nightAudioRef = useRef<HTMLAudioElement | null>(null);
 
   const t = (key: string) => DICT[lang][key] ?? DICT.en[key] ?? key;
   const friends = lang === 'ko' ? FRIENDS_KO : FRIENDS_EN;
@@ -1718,9 +1767,24 @@ export default function MuntuzLandingClient() {
   }, [lang]);
 
   function selectFriend(i: number) {
+    roomAudioRef.current?.pause();
     setFriendIdx(i);
     setShowMemory(false);
     setRoomPlaying(false);
+  }
+
+  function toggleRoomAudio() {
+    const a = roomAudioRef.current;
+    if (!a) return;
+    if (roomPlaying) a.pause();
+    else void a.play();
+  }
+
+  function toggleNightAudio() {
+    const a = nightAudioRef.current;
+    if (!a) return;
+    if (nightPlaying) a.pause();
+    else void a.play();
   }
 
   async function joinWaitlist(e: React.FormEvent) {
@@ -1819,7 +1883,10 @@ export default function MuntuzLandingClient() {
       <div id="top" className="mx-auto max-w-md px-5 pb-12 pt-8 sm:max-w-2xl">
         {/* Hero — magazine cover */}
         <header className="text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+          <p className="inline-block rounded-full bg-violet-600 px-3 py-1 text-xs font-bold text-white">
+            {t('heroBadge')}
+          </p>
+          <p className="mt-3 text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
             {t('issue')}
           </p>
           <h1 className="mt-3 text-6xl font-extrabold tracking-tight sm:text-7xl">
@@ -1885,6 +1952,20 @@ export default function MuntuzLandingClient() {
           </div>
           <p className="mt-3 text-sm text-slate-500">{t('langNote')}</p>
         </header>
+
+        {/* Languages — what this is for */}
+        <section aria-label="Languages" className="mt-10 rounded-3xl bg-white p-5 shadow-sm ring-1 ring-slate-100">
+          <p className="text-center text-sm font-bold text-slate-800">
+            {t('langStrip')}
+          </p>
+          <div className="mt-3 flex flex-wrap justify-center gap-2">
+            {['English', '한국어', '日本語', 'Español', 'Français', 'Deutsch', 'Português', '中文', 'Italiano', 'Tiếng Việt', 'हिन्दी', 'العربية'].map((l) => (
+              <span key={l} className="rounded-full bg-violet-50 px-3 py-1 text-xs font-bold text-violet-700 ring-1 ring-violet-100">
+                {l}
+              </span>
+            ))}
+          </div>
+        </section>
 
         {/* How it works */}
         <section className="mt-12">
@@ -1995,11 +2076,19 @@ export default function MuntuzLandingClient() {
             <div className="mt-4 flex flex-wrap items-center gap-3">
               <button
                 type="button"
-                onClick={() => setRoomPlaying((v) => !v)}
+                onClick={toggleRoomAudio}
                 className="rounded-full bg-violet-600 px-4 py-2 text-sm font-bold text-white hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
               >
                 {roomPlaying ? '⏸' : '▶'} {t('listen')}
               </button>
+              <audio
+                ref={roomAudioRef}
+                src={friend.voice}
+                preload="none"
+                onPlay={() => setRoomPlaying(true)}
+                onPause={() => setRoomPlaying(false)}
+                onEnded={() => setRoomPlaying(false)}
+              />
               <button
                 type="button"
                 onClick={() => setShowMemory((v) => !v)}
@@ -2104,18 +2193,23 @@ export default function MuntuzLandingClient() {
           <div className="mt-4 flex items-center gap-3">
             <button
               type="button"
-              onClick={() => setNightPlaying((v) => !v)}
+              onClick={toggleNightAudio}
               className="rounded-full bg-amber-400 px-4 py-2 text-sm font-bold text-slate-900 hover:bg-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-200"
             >
               {nightPlaying ? '⏸' : '▶'} {t('nightPlay')}
             </button>
+            <audio
+              ref={nightAudioRef}
+              src="/muntuz/voices/emily-night.mp3"
+              preload="none"
+              onPlay={() => setNightPlaying(true)}
+              onPause={() => setNightPlaying(false)}
+              onEnded={() => setNightPlaying(false)}
+            />
             <span className="text-amber-300">
               <Waveform playing={nightPlaying} />
             </span>
           </div>
-          <p className="mt-3 text-xs leading-relaxed text-slate-500">
-            {t('nightNote')}
-          </p>
         </section>
 
         {/* Photo Room */}
@@ -2187,6 +2281,9 @@ export default function MuntuzLandingClient() {
           </h2>
           <p className="mt-2 text-center text-sm leading-relaxed text-slate-600">
             {t('debutSub')}
+          </p>
+          <p className="mt-3 text-center text-sm font-bold text-violet-700">
+            {t('debutLearn')}
           </p>
           <div className="mt-6 rounded-3xl bg-white p-5 shadow-md ring-1 ring-slate-100">
             <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
