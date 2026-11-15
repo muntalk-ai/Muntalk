@@ -6730,7 +6730,7 @@ export default function MuntuzLandingClient() {
   const { user, loading: authLoading } = useAuth();
   const [lang, setLang] = useState<Lang>('en');
   const [langOpen, setLangOpen] = useState(false);
-  const [practice, setPractice] = useState('ko');
+  const [practice, setPractice] = useState('en');
   const [langsOpen, setLangsOpen] = useState(false);
   const [friendIdx, setFriendIdx] = useState(0);
   const [voicePlaying, setVoicePlaying] = useState(false);
