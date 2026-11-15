@@ -1715,7 +1715,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
     <div className="min-h-screen bg-[#FAF6EF] text-slate-900">
       {/* Header */}
       <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 shadow-[0_1px_0_rgba(15,23,42,0.02)] backdrop-blur">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3.5">
+        <div className="mx-auto flex max-w-6xl flex-nowrap items-center gap-2 px-3 py-2 sm:px-4">
           {/* Back — Muntuz pages only (Jay 2026-11-06). No history:
               muntuz.com host → `/`, other hosts → `/muntuz`. */}
           <BackButton fallback={backFallback} />
@@ -1729,25 +1729,22 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
               window.scrollTo({ top: 0 });
             }}
             aria-label="Muntuz — back to Discover"
-            className="flex items-center gap-3 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+            className="flex min-w-0 items-center gap-2 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
           >
-            <Image src="/logo.png" alt="Muntuz" width={40} height={40} className="h-10 w-10 rounded-full object-cover shadow-md" />
-            <span className="text-left">
-              <span className="block text-lg font-extrabold leading-tight">Muntuz</span>
-              <span className="block text-xs text-slate-500">Talk with people. Review with AI.</span>
+            <Image src="/logo.png" alt="Muntuz" width={40} height={40} className="h-8 w-8 shrink-0 rounded-full object-cover shadow-md sm:h-10 sm:w-10" />
+            <span className="min-w-0 text-left">
+              <span className="block truncate text-lg font-extrabold leading-tight">Muntuz</span>
+              <span className="hidden text-xs text-slate-500 sm:block">Talk with people. Review with AI.</span>
             </span>
           </button>
           {pro && <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-800">PRO</span>}
-          <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-500">
-Pilot — AI rooms are the main experience; People room is a waitlist
-          </span>
           {/* Log in — signed-out users only. The existing /login page
               already honours ?next=, so signing in returns here; the
               global login flow is untouched. */}
           {!authLoading && !user && (
             <a
               href="/login?next=/exchange"
-              className="ml-auto rounded-full bg-violet-600 px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2"
+              className="ml-auto shrink-0 rounded-full bg-violet-600 px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2"
             >
               Log in
             </a>
@@ -1756,15 +1753,15 @@ Pilot — AI rooms are the main experience; People room is a waitlist
               this, a signed-in user cannot tell their login state —
               the header showed nothing at all when signed in. */}
           {!authLoading && user && (
-            <span className="ml-auto flex items-center gap-2">
-              <span className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-700 ring-1 ring-emerald-200">
-                <span className="inline-block h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
-                {user.displayName || user.email?.split('@')[0] || 'Learner'} · Signed in
+            <span className="ml-auto flex min-w-0 items-center gap-2">
+              <span className="flex min-w-0 items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1.5 text-xs font-bold text-emerald-700 ring-1 ring-emerald-200">
+                <span className="inline-block h-2 w-2 shrink-0 rounded-full bg-emerald-500" aria-hidden="true" />
+                <span className="min-w-0 truncate">{user.displayName || user.email?.split('@')[0] || 'Learner'}<span className="hidden sm:inline"> · Signed in</span></span>
               </span>
               <button
                 type="button"
                 onClick={() => void handleSignOut()}
-                className="rounded-full border border-slate-200 px-3 py-1.5 text-xs font-bold text-slate-600 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+                className="shrink-0 rounded-full border border-slate-200 px-3 py-1.5 text-xs font-bold text-slate-600 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
               >
                 Log out
               </button>
@@ -1773,7 +1770,7 @@ Pilot — AI rooms are the main experience; People room is a waitlist
         </div>
       </header>
 
-      <div className="mx-auto flex max-w-6xl gap-6 px-4 py-6 pb-32 md:pb-10 md:py-8">
+      <div className="mx-auto flex max-w-6xl gap-6 px-4 py-6 md:pb-10 md:py-8">
         {/* Desktop sidebar */}
         <aside className="hidden w-56 shrink-0 md:block">
           <nav className="sticky top-20 flex flex-col gap-1 rounded-2xl border border-slate-200/80 bg-white p-2 shadow-sm">
@@ -2865,15 +2862,6 @@ Pilot — AI rooms are the main experience; People room is a waitlist
           )}
         </main>
       </div>
-
-      {/* Mobile bottom tab bar — hidden inside an open chat room, where the
-          Back button already navigates and the fixed bar would ride up with
-          the mobile keyboard and cover the message being typed. */}
-      {!activeChat && (
-        <nav className="fixed inset-x-0 bottom-0 z-40 flex border-t border-slate-200 bg-white/95 shadow-[0_-2px_10px_rgba(0,0,0,0.06)] backdrop-blur pb-[env(safe-area-inset-bottom)] md:hidden">
-          {TABS.map((t) => tabButton(t, false))}
-        </nav>
-      )}
 
       {/* Report modal */}
       {reportChat && (
