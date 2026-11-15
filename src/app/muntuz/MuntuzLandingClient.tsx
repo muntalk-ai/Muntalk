@@ -2,8 +2,11 @@
 
 // Muntuz landing page (client part) — hybrid final design port.
 // Photo hero -> Muntuz House (5 rooms) -> Night Voices -> Photo Room
-// -> Debut (MUNTUZ first single "Say Hi") -> Pricing -> People Rooms
+// -> MUNTUZ group teaser -> Pricing pointer -> People Rooms
 // -> waitlist (Firestore `muntuz_waitlist`) -> final CTA -> footer.
+// The full Debut + dorm episodes live on their own page (/muntuz/group);
+// full pricing lives on /pricing. The main page stays a simple
+// language-exchange landing (Tandem / HelloTalk / Speaky pattern).
 //
 // Whole-page language switching in 12 languages (Native language button).
 // Friend room content is English, and Korean when lang is ko (as in the
@@ -26,7 +29,8 @@
 //   firestore-snippets/muntuz-waitlist.rules.txt
 import { useEffect, useRef, useState } from 'react';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
+import { signOut } from 'firebase/auth';
+import { auth, db } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
 
 type Lang = 'en' | 'ko' | 'ja' | 'es' | 'fr' | 'de' | 'pt' | 'zh' | 'it' | 'vi' | 'hi' | 'ar';
@@ -41,6 +45,13 @@ const DICT: Record<Lang, Record<string, string>> = {
     "navNight": "Night Voices",
     "navPhotos": "Photo Room",
     "navPricing": "Pricing",
+    "groupTeaserKicker": "Just debuted · MUNTUZ",
+    "groupTeaserSub": "The five housemates just debuted as a group — hear their first single “Say Hi” and peek at life in the house.",
+    "groupTeaserCta": "Meet the group →",
+    "priceTeaserSub": "Free forever to start. Premium from $9.99 a month — see plans and what's included.",
+    "priceTeaserCta": "See pricing →",
+    "loginBtn": "Log in",
+    "logoutBtn": "Log out",
     "native": "Native language",
     "startFree": "Start talking — free",
     "langNote": "Pick your language — the whole page switches, not just the greeting.",
@@ -48,7 +59,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "multi": "Multilingual · speaks every language",
     "heroEm": "five friends,",
     "heroOne": "one house.",
-    "heroSub": "Five friends live here. Come say hi.",
+    "heroSub": "Practice any language with AI friends who feel real.",
     "heroSub2": "They talk first — about their day, their latte, their cat. You just answer, and a language sticks. No lessons. No pressure. Just people.",
     "meetBtn": "Meet the five ↓",
     "coverStory": "Cover story",
@@ -99,18 +110,6 @@ const DICT: Record<Lang, Record<string, string>> = {
     "feel3t": "Tiny wins, noticed",
     "feel3": "You said one full sentence today? They noticed. They'll tell you. Immediately, and like they mean it.",
     "priceTitle": "Simple pricing",
-    "priceSub": "Start free. Stay because the house feels like yours.",
-    "prF1": "Meet all five friends",
-    "prF2": "Daily chats & one-line fixes",
-    "prF3": "Photo Room browsing",
-    "prP1": "Unlimited voice & calls",
-    "prP2": "Memory that remembers everything",
-    "prP3": "Night Voices, full length",
-    "prBest": "Best value — about half the monthly price",
-    "mo": "Monthly",
-    "mos": "months",
-    "yr": "Yearly",
-    "goPremium": "Go Premium",
     "foot": "Five friends, one house, every language.",
     "soon": "coming soon",
     "ctaTitle": "Your room in the house is ready.",
@@ -122,51 +121,21 @@ const DICT: Record<Lang, Record<string, string>> = {
     "youLabel": "You",
     "memTag": "remembered ✦",
     "navDebut": "Debut",
-    "debutKicker": "The debut · MUNTUZ",
-    "debutGreeting": "Say hi, we are MUNTUZ!",
-    "debutSub": "The five housemates are debuting as a group — MUNTUZ. Their first single is the sound of this house: bright, fast, and impossible to sit still through.",
     "heroBadge": "AI language exchange",
     "langStrip": "Practice any language — with 50 AI friends",
-    "debutLearn": "Learn the hook, sing it back — the chorus is your first lesson.",
-    "songLabel": "Debut single",
-    "songMeta": "Fast, exciting K-pop dance-pop · 128 BPM",
-    "listenBtn": "▶ Listen to “Say Hi” on Suno",
-    "hookLabel": "The chorus hook — picked by Fan Vote #1",
-    "hookMeaning": "Means: “Say it — in your language.”",
-    "hookPron": "Say it with them: mal-hae-bwa, neo-ui eon-eo-ro",
-    "hookMission": "Learn the hook, then sing it back — that's the whole first mission.",
-    "debutRoles": "Emily — main vocal · Jiyoung — leader · Chloe — rapper & lyricist · Sofia — main dancer · Amara — sub-vocal",
-    "fandomLabel": "Fandom name",
-    "fandomText": "“Roomies” is the leading proposal — not final yet. The official name lands before the debut stage.",
-    "debutJust": "Just debuted — our first single “Say Hi” is out!",
-    "epKicker": "Life in the house",
-    "epTitle": "Dorm episodes — living, practicing, debuting together",
-    "epSub": "Little moments from the house — the nights, the kitchen, the practice room. New episodes land here as the story grows.",
-    "epFilterAll": "All",
-    "epAllTag": "All five",
-    "epMoreNote": "More episodes are on the way — the house keeps living, and the story keeps growing.",
-    "ep1Title": "The night before debut",
-    "ep1Text": "Nobody could sleep. Five mugs, one last run-through of the fan chant, and Jiyoung's pep talk: 'We don't need perfect. We just need to try.' — the line that ended up in the song.",
-    "ep2Title": "Midnight kimbap",
-    "ep2Text": "Jiyoung's mom's kimbap, made at midnight for the members before the first recording. The recipe is a house secret — the taste is not.",
-    "ep3Title": "The life latte",
-    "ep3Text": "Emily found her life latte in an alley café — and the chorus hook was born on the walk home. 'Say it in your language' started as a joke over coffee.",
-    "ep4Title": "Salsa in the kitchen",
-    "ep4Text": "Pasta night turned into choreography practice. Sofia stirs the sauce with one hand and counts the point-choreo beat with the other.",
-    "ep5Title": "Lyrics in the margins",
-    "ep5Text": "Chloe writes the bridge in the margins of her notebook — every crossed-out line is a verse that didn't make it. The bridge that survived is Emily's Korean one.",
-    "ep6Title": "Sunrise run",
-    "ep6Text": "Amara runs at sunrise before practice — the house is still quiet, the city is waking up, and by the time she's back, the playlist is already on.",
-    "ep7Title": "First fan chant, live in the plaza",
-    "ep7Text": "The first time all five shouted the fan chant together in the plaza — M! U! N! T! U! Z! Say hi! The fountain was the only audience, and it was enough.",
-    "ep8Title": "Kitchen takeover",
-    "ep8Text": "Sofia took over the kitchen, Amara chopped, Chloe taste-tested, Emily set the table, Jiyoung supervised. Dinner was late. Nobody minded."
   },
   "ko": {
     "navHouse": "하우스",
     "navNight": "밤의 목소리",
     "navPhotos": "사진방",
     "navPricing": "요금",
+    "groupTeaserKicker": "막 데뷔했어요 · MUNTUZ",
+    "groupTeaserSub": "다섯 하우스메이트가 그룹으로 막 데뷔했어요 — 첫 싱글 “Say Hi”를 듣고 합숙 생활도 살짝 엿보세요.",
+    "groupTeaserCta": "그룹 만나기 →",
+    "priceTeaserSub": "무료로 시작, 평생 무료 플랜이 있어요. Premium은 월 $9.99부터 — 플랜과 혜택을 확인하세요.",
+    "priceTeaserCta": "요금 보기 →",
+    "loginBtn": "로그인",
+    "logoutBtn": "로그아웃",
     "native": "모국어",
     "startFree": "무료로 대화 시작하기",
     "langNote": "언어를 고르면 인사말만이 아니라 페이지 전체가 바뀝니다.",
@@ -174,7 +143,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "multi": "다개국어 구사 가능 · 모든 언어를 말해요",
     "heroEm": "다섯 친구,",
     "heroOne": "하나의 집.",
-    "heroSub": "이 집에 다섯 친구가 살아요. 인사하러 오세요.",
+    "heroSub": "진짜 같은 AI 친구와 어떤 언어든 연습해요.",
     "heroSub2": "먼저 말을 거는 건 친구들이에요 — 오늘 하루, 인생 라떼, 키우는 고양이 이야기. 당신은 답만 하면, 언어가 어느새 붙어 있어요.",
     "meetBtn": "다섯 친구 만나기 ↓",
     "coverStory": "커버 스토리",
@@ -225,18 +194,6 @@ const DICT: Record<Lang, Record<string, string>> = {
     "feel3t": "작은 성취를 알아봐요",
     "feel3": "오늘 문장 하나를 끝까지 말했다고요? 그들이 알아채고, 바로, 진심으로 말해줘요.",
     "priceTitle": "심플한 요금",
-    "priceSub": "무료로 시작하세요. 머무는 이유는 이 집이 내 집 같아지기 때문일 거예요.",
-    "prF1": "다섯 친구 모두 만나기",
-    "prF2": "매일 대화 & 한 줄 교정",
-    "prF3": "사진방 둘러보기",
-    "prP1": "무제한 음성 & 통화",
-    "prP2": "모든 것을 기억하는 메모리",
-    "prP3": "나이트 보이스 전체 이용",
-    "prBest": "최고 가성비 — 월간 대비 약 절반 가격",
-    "mo": "월간",
-    "mos": "개월",
-    "yr": "연간",
-    "goPremium": "프리미엄 시작",
     "foot": "다섯 친구, 하나의 집, 모든 언어.",
     "soon": "준비 중",
     "ctaTitle": "이 집에 당신의 방이 준비돼 있어요.",
@@ -248,51 +205,21 @@ const DICT: Record<Lang, Record<string, string>> = {
     "youLabel": "나",
     "memTag": "기억해 냈어요 ✦",
     "navDebut": "데뷔",
-    "debutKicker": "데뷔 · MUNTUZ",
-    "debutGreeting": "Say hi, we are MUNTUZ!",
-    "debutSub": "다섯 하우스메이트가 그룹 MUNTUZ로 데뷔합니다. 첫 싱글은 이 집의 소리 그대로 — 밝고, 빠르고, 가만히 앉아 있을 수 없는 곡이에요.",
     "heroBadge": "AI 언어교환",
     "langStrip": "어떤 언어든 연습해요 — 50명의 AI 친구와 함께",
-    "debutLearn": "후크를 배우고 따라 불러봐요 — 코러스가 첫 수업이에요.",
-    "songLabel": "데뷔 싱글",
-    "songMeta": "빠르고 신나는 K-pop 댄스팝 · 128 BPM",
-    "listenBtn": "▶ Suno에서 “Say Hi” 듣기",
-    "hookLabel": "후렴 후크 — 팬 투표 1번으로 확정",
-    "hookMeaning": "뜻: “말해봐, 너의 언어로.”",
-    "hookPron": "함께 말해봐요: 말해봐, 너의 언어로 (mal-hae-bwa, neo-ui eon-eo-ro)",
-    "hookMission": "후크를 먼저 배우고, 따라 부르는 것 — 그게 첫 번째 미션이에요.",
-    "debutRoles": "Emily — 메인 보컬 · 지영 — 리더 · Chloe — 래퍼 & 작사 · Sofia — 메인 댄서 · Amara — 서브 보컬",
-    "fandomLabel": "팬덤명",
-    "fandomText": "“Roomies”는 현재 유력한 제안 — 아직 확정은 아니에요. 공식 이름은 데뷔 무대 전에 공개됩니다.",
-    "debutJust": "막 데뷔했어요 — 첫 싱글 “Say Hi”가 나왔어요!",
-    "epKicker": "집에서의 생활",
-    "epTitle": "합숙 에피소드 — 함께 살고, 연습하고, 데뷔하기까지",
-    "epSub": "집에서 생긴 작은 순간들 — 밤, 부엌, 연습실. 이야기가 자랄수록 새 에피소드가 여기에 올라와요.",
-    "epFilterAll": "전체",
-    "epAllTag": "다섯 명 모두",
-    "epMoreNote": "더 많은 에피소드가 올 거예요 — 집은 계속 살아가고, 이야기는 계속 자라니까요.",
-    "ep1Title": "데뷔 전날 밤",
-    "ep1Text": "아무도 잠을 못 잤어요. 다섯 잔의 차, 팬챈트 마지막 연습, 그리고 지영의 한마디 — '완벽할 필요 없어. 그냥 해보자.' 그 말이 결국 노래 가사가 됐어요.",
-    "ep2Title": "한밤의 김밥",
-    "ep2Text": "첫 녹음 전날 밤, 지영이 엄마 레시피대로 멤버들을 위해 싼 김밥. 레시피는 집안의 비밀, 맛은 비밀이 아니에요.",
-    "ep3Title": "인생 라떼",
-    "ep3Text": "Emily가 골목 카페에서 인생 라떼를 찾았어요. 후크는 집으로 돌아오는 길에 태어났죠. '말해봐, 너의 언어로'는 커피 한 잔 위의 농담에서 시작됐어요.",
-    "ep4Title": "부엌에서 살사",
-    "ep4Text": "파스타를 끓이다 안무 연습이 됐어요. Sofia는 한 손으로 소스를 저으면서 다른 한 손으로 포인트 안무 박자를 세요.",
-    "ep5Title": "여백에 쓴 가사",
-    "ep5Text": "Chloe는 노트 여백에 브릿지를 써요. 지워진 줄마다 탈락한 가사가 있죠. 살아남은 브릿지는 Emily의 한국어 파트예요.",
-    "ep6Title": "일출 러닝",
-    "ep6Text": "Amara는 연습 전 일출 러닝을 해요. 집은 아직 조용하고, 도시가 깨어나는 시간. 돌아오면 플레이리스트는 이미 켜져 있어요.",
-    "ep7Title": "첫 팬챈트, 광장 무대에서",
-    "ep7Text": "다섯 명이 처음으로 광장에서 함께 팬챈트를 외친 날 — M! U! N! T! U! Z! Say hi! 관객은 분수뿐이었지만, 그걸로 충분했어요.",
-    "ep8Title": "부엌 점령",
-    "ep8Text": "Sofia가 부엌을 접수하고, Amara가 썰고, Chloe가 간을 보고, Emily가 상을 차리고, 지영이 감독했어요. 저녁은 늦어졌지만 아무도 신경 쓰지 않았어요."
   },
   "ja": {
     "navHouse": "ザ・ハウス",
     "navNight": "ナイトボイス",
     "navPhotos": "フォトルーム",
     "navPricing": "料金",
+    "groupTeaserKicker": "デビューしたばかり · MUNTUZ",
+    "groupTeaserSub": "5人のハウスメイトがグループとしてデビューしたばかり — ファーストシングル「Say Hi」を聴いて、合宿生活をのぞいてみよう。",
+    "groupTeaserCta": "グループに会う →",
+    "priceTeaserSub": "無料で始められて、無料プランはずっと無料。Premiumは月額$9.99から — プランと内容を見る。",
+    "priceTeaserCta": "料金を見る →",
+    "loginBtn": "ログイン",
+    "logoutBtn": "ログアウト",
     "native": "母国語",
     "startFree": "無料で話し始める",
     "langNote": "言語を選ぶと、挨拶だけでなくページ全体が切り替わります。",
@@ -300,7 +227,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "multi": "多言語対応 · すべての言語を話します",
     "heroEm": "5人の友達、",
     "heroOne": "ひとつの家。",
-    "heroSub": "この家には5人の友達が住んでいます。挨拶しに来てね。",
+    "heroSub": "本物のようなAIフレンドと、どんな言語でも練習しよう。",
     "heroSub2": "先に話しかけるのは友達のほう。今日のこと、人生ラテ、飼い猫の話。あなたは答えるだけ、気づけば言語が身についています。レッスンなし、プレッシャーなし。ただ人と話すだけ。",
     "meetBtn": "5人に会う ↓",
     "coverStory": "カバーストーリー",
@@ -351,18 +278,6 @@ const DICT: Record<Lang, Record<string, string>> = {
     "feel3t": "小さな成功に気づく",
     "feel3": "今日、一文を最後まで言えた？彼女たちは気づいて、すぐに、心から伝えてくれます。",
     "priceTitle": "シンプルな料金",
-    "priceSub": "無料で始めて。残りたくなる理由は、この家が自分の家みたいに感じられるから。",
-    "prF1": "5人全員に会える",
-    "prF2": "毎日のチャットと一行修正",
-    "prF3": "フォトルーム閲覧",
-    "prP1": "無制限の音声と通話",
-    "prP2": "すべてを覚えるメモリー",
-    "prP3": "ナイトボイス全編",
-    "prBest": "一番お得 — 月額の約半額",
-    "mo": "月額",
-    "mos": "か月",
-    "yr": "年額",
-    "goPremium": "プレミアムにする",
     "foot": "5人の友達、ひとつの家、すべての言語。",
     "soon": "近日公開",
     "ctaTitle": "家の中のあなたの部屋、準備できています。",
@@ -374,35 +289,21 @@ const DICT: Record<Lang, Record<string, string>> = {
     "youLabel": "あなた",
     "memTag": "思い出した ✦",
     "navDebut": "デビュー",
-    "debutKicker": "デビュー · MUNTUZ",
-    "debutGreeting": "Say hi, we are MUNTUZ!",
-    "debutSub": "5人のハウスメイトがグループMUNTUZとしてデビューします。ファーストシングルはこの家の音そのもの — 明るく、速く、じっと座っていられない曲です。",
     "heroBadge": "AI言語交換",
     "langStrip": "どんな言語でも練習 — 50人のAIフレンドと",
-    "debutLearn": "フックを覚えて歌ってみよう — コーラスが最初のレッスン。",
-    "songLabel": "デビューシングル",
-    "songMeta": "速くてワクワクするK-popダンスポップ · 128 BPM",
-    "listenBtn": "▶ Sunoで「Say Hi」を聴く",
-    "hookLabel": "サビのフック — ファン投票1位で決定",
-    "hookMeaning": "意味：「言ってみて、あなたの言語で。」",
-    "hookPron": "一緒に言ってみて：マルヘバ、ノエ オノロ",
-    "hookMission": "フックを覚えて歌い返す — それが最初のミッションです。",
-    "debutRoles": "Emily — メインボーカル · ジヨン — リーダー · Chloe — ラッパー＆作詞 · Sofia — メインダンサー · Amara — サブボーカル",
-    "fandomLabel": "ファンダム名",
-    "fandomText": "「Roomies」は有力な候補 — まだ決定ではありません。正式名称はデビューステージ前に発表されます。",
-    "debutJust": "デビューしたばかり — ファーストシングル「Say Hi」発売！",
-    "epKicker": "ハウスでの生活",
-    "epTitle": "合宿エピソード — 一緒に暮らし、練習し、デビューするまで",
-    "epSub": "ハウスで生まれた小さな瞬間 — 夜、キッチン、練習室。物語が育つにつれて新しいエピソードがここに追加されます。",
-    "epFilterAll": "すべて",
-    "epAllTag": "5人全員",
-    "epMoreNote": "さらにエピソードが続きます — ハウスの生活は続き、物語は育ちます。"
   },
   "es": {
     "navHouse": "La casa",
     "navNight": "Voces nocturnas",
     "navPhotos": "Sala de fotos",
     "navPricing": "Precios",
+    "groupTeaserKicker": "Recién debutadas · MUNTUZ",
+    "groupTeaserSub": "Las cinco compañeras acaban de debutar como grupo: escucha su primer sencillo “Say Hi” y echa un vistazo a la vida en la casa.",
+    "groupTeaserCta": "Conoce al grupo →",
+    "priceTeaserSub": "Empieza gratis, para siempre. Premium desde $9.99 al mes — ver planes y qué incluyen.",
+    "priceTeaserCta": "Ver precios →",
+    "loginBtn": "Iniciar sesión",
+    "logoutBtn": "Cerrar sesión",
     "native": "Idioma nativo",
     "startFree": "Empieza a hablar — gratis",
     "langNote": "Elige tu idioma: cambia toda la página, no solo el saludo.",
@@ -410,7 +311,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "multi": "Multilingüe · habla todos los idiomas",
     "heroEm": "cinco amigas,",
     "heroOne": "una casa.",
-    "heroSub": "Cinco amigas viven aquí. Ven a saludar.",
+    "heroSub": "Practica cualquier idioma con amigos de IA que se sienten reales.",
     "heroSub2": "Ellas hablan primero: de su día, su latte, su gato. Tú solo respondes, y el idioma se queda. Sin lecciones. Sin presión. Solo personas.",
     "meetBtn": "Conoce a las cinco ↓",
     "coverStory": "Historia de portada",
@@ -461,18 +362,6 @@ const DICT: Record<Lang, Record<string, string>> = {
     "feel3t": "Pequeñas victorias, notadas",
     "feel3": "¿Hoy dijiste una frase completa? Lo notaron. Y te lo dirán. Al instante, y de verdad.",
     "priceTitle": "Precios simples",
-    "priceSub": "Empieza gratis. Quédate porque la casa se siente tuya.",
-    "prF1": "Conoce a las cinco amigas",
-    "prF2": "Chats diarios y correcciones en una línea",
-    "prF3": "Explorar la sala de fotos",
-    "prP1": "Voz y llamadas ilimitadas",
-    "prP2": "Memoria que lo recuerda todo",
-    "prP3": "Voces Nocturnas, completas",
-    "prBest": "Mejor valor: casi la mitad del precio mensual",
-    "mo": "Mensual",
-    "mos": "meses",
-    "yr": "Anual",
-    "goPremium": "Hazte Premium",
     "foot": "Cinco amigas, una casa, todos los idiomas.",
     "soon": "muy pronto",
     "ctaTitle": "Tu habitación en la casa está lista.",
@@ -484,35 +373,21 @@ const DICT: Record<Lang, Record<string, string>> = {
     "youLabel": "Tú",
     "memTag": "recordó ✦",
     "navDebut": "Debut",
-    "debutKicker": "El debut · MUNTUZ",
-    "debutGreeting": "Say hi, we are MUNTUZ!",
-    "debutSub": "Las cinco compañeras de casa debutan como grupo: MUNTUZ. Su primer sencillo suena como esta casa: brillante, rápido e imposible de escuchar sentado.",
     "heroBadge": "Intercambio de idiomas con IA",
     "langStrip": "Practica cualquier idioma — con 50 amigos de IA",
-    "debutLearn": "Aprende el estribillo y cántalo — el coro es tu primera lección.",
-    "songLabel": "Sencillo debut",
-    "songMeta": "Dance-pop K-pop rápido y emocionante · 128 BPM",
-    "listenBtn": "▶ Escucha “Say Hi” en Suno",
-    "hookLabel": "El gancho del coro — elegido en la Votación de Fans n.º 1",
-    "hookMeaning": "Significa: “Dilo, en tu idioma.”",
-    "hookPron": "Dilo con ellas: mal-hae-bwa, neo-ui eon-eo-ro",
-    "hookMission": "Aprende el gancho y cántalo de vuelta: esa es toda la primera misión.",
-    "debutRoles": "Emily — vocalista principal · Jiyoung — líder · Chloe — rapera y letrista · Sofia — bailarina principal · Amara — vocalista secundaria",
-    "fandomLabel": "Nombre del fandom",
-    "fandomText": "“Roomies” es la propuesta principal, aún no es definitiva. El nombre oficial llegará antes del escenario debut.",
-    "debutJust": "¡Recién debutadas — nuestro primer sencillo “Say Hi” ya está aquí!",
-    "epKicker": "La vida en la casa",
-    "epTitle": "Episodios de convivencia — vivir, ensayar y debutar juntas",
-    "epSub": "Pequeños momentos de la casa: las noches, la cocina, la sala de ensayo. Nuevos episodios llegarán aquí a medida que crezca la historia.",
-    "epFilterAll": "Todas",
-    "epAllTag": "Las cinco",
-    "epMoreNote": "Más episodios están en camino: la casa sigue viviendo y la historia sigue creciendo."
   },
   "fr": {
     "navHouse": "La maison",
     "navNight": "Voix de nuit",
     "navPhotos": "Galerie photo",
     "navPricing": "Tarifs",
+    "groupTeaserKicker": "Tout juste débuté · MUNTUZ",
+    "groupTeaserSub": "Les cinq colocataires viennent de débuter en groupe — écoutez leur premier single « Say Hi » et jetez un œil à la vie dans la maison.",
+    "groupTeaserCta": "Rencontrer le groupe →",
+    "priceTeaserSub": "Gratuit pour commencer, pour toujours. Premium dès 9,99 $ par mois — voir les formules et ce qu’elles incluent.",
+    "priceTeaserCta": "Voir les tarifs →",
+    "loginBtn": "Se connecter",
+    "logoutBtn": "Se déconnecter",
     "native": "Langue maternelle",
     "startFree": "Commence à parler — gratuit",
     "langNote": "Choisissez votre langue : toute la page change, pas seulement le bonjour.",
@@ -520,7 +395,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "multi": "Multilingue · parle toutes les langues",
     "heroEm": "cinq amies,",
     "heroOne": "une maison.",
-    "heroSub": "Cinq amies vivent ici. Viens dire bonjour.",
+    "heroSub": "Pratiquez n'importe quelle langue avec des amis IA qui semblent réels.",
     "heroSub2": "Elles parlent en premier — de leur journée, de leur latte, de leur chat. Tu réponds, et la langue s'installe. Pas de leçons. Pas de pression. Juste des gens.",
     "meetBtn": "Rencontrer les cinq ↓",
     "coverStory": "À la une",
@@ -571,18 +446,6 @@ const DICT: Record<Lang, Record<string, string>> = {
     "feel3t": "Les petites victoires, remarquées",
     "feel3": "Tu as dit une phrase entière aujourd'hui ? Elles l'ont remarqué. Et elles te le diront. Tout de suite, et sincèrement.",
     "priceTitle": "Des tarifs simples",
-    "priceSub": "Commence gratuitement. Reste parce que la maison devient la tienne.",
-    "prF1": "Rencontrer les cinq amies",
-    "prF2": "Discussions quotidiennes et corrections en une ligne",
-    "prF3": "Parcourir la galerie photo",
-    "prP1": "Voix et appels illimités",
-    "prP2": "Une mémoire qui retient tout",
-    "prP3": "Voix de nuit, en entier",
-    "prBest": "Meilleur prix — environ la moitié du tarif mensuel",
-    "mo": "Mensuel",
-    "mos": "mois",
-    "yr": "Annuel",
-    "goPremium": "Passer Premium",
     "foot": "Cinq amies, une maison, toutes les langues.",
     "soon": "bientôt",
     "ctaTitle": "Ta chambre dans la maison est prête.",
@@ -594,35 +457,21 @@ const DICT: Record<Lang, Record<string, string>> = {
     "youLabel": "Toi",
     "memTag": "s'est souvenu ✦",
     "navDebut": "Débuts",
-    "debutKicker": "Les débuts · MUNTUZ",
-    "debutGreeting": "Say hi, we are MUNTUZ!",
-    "debutSub": "Les cinq colocataires débutent en groupe — MUNTUZ. Leur premier single sonne comme cette maison : lumineux, rapide, impossible à écouter assis.",
     "heroBadge": "Échange linguistique avec l'IA",
     "langStrip": "Pratiquez n'importe quelle langue — avec 50 amis IA",
-    "debutLearn": "Apprends le refrain et chante-le — le refrain est ta première leçon.",
-    "songLabel": "Single de début",
-    "songMeta": "Dance-pop K-pop rapide et excitante · 128 BPM",
-    "listenBtn": "▶ Écouter « Say Hi » sur Suno",
-    "hookLabel": "Le refrain accroche — choisi par le vote des fans n°1",
-    "hookMeaning": "Signification : « Dis-le, dans ta langue. »",
-    "hookPron": "Dis-le avec elles : mal-hae-bwa, neo-ui eon-eo-ro",
-    "hookMission": "Apprends le refrain, puis chante-le en retour — c'est toute la première mission.",
-    "debutRoles": "Emily — voix principale · Jiyoung — leader · Chloe — rappeuse & parolière · Sofia — danseuse principale · Amara — voix secondaire",
-    "fandomLabel": "Nom du fandom",
-    "fandomText": "« Roomies » est la proposition en tête — pas encore définitive. Le nom officiel arrivera avant la scène des débuts.",
-    "debutJust": "Tout juste débuté — notre premier single « Say Hi » est sorti !",
-    "epKicker": "La vie dans la maison",
-    "epTitle": "Épisodes de colocation — vivre, répéter et débuter ensemble",
-    "epSub": "Petits moments de la maison — les nuits, la cuisine, la salle de répétition. De nouveaux épisodes arriveront ici à mesure que l'histoire grandit.",
-    "epFilterAll": "Toutes",
-    "epAllTag": "Les cinq",
-    "epMoreNote": "D'autres épisodes arrivent — la maison continue de vivre et l'histoire de grandir."
   },
   "de": {
     "navHouse": "Das Haus",
     "navNight": "Nachtstimmen",
     "navPhotos": "Fotozimmer",
     "navPricing": "Preise",
+    "groupTeaserKicker": "Frisch debütiert · MUNTUZ",
+    "groupTeaserSub": "Die fünf Mitbewohnerinnen sind gerade als Gruppe debütiert — hör ihre erste Single „Say Hi“ und wirf einen Blick ins Hausleben.",
+    "groupTeaserCta": "Die Gruppe kennenlernen →",
+    "priceTeaserSub": "Kostenlos starten, für immer. Premium ab 9,99 $ pro Monat — Pläne und Leistungen ansehen.",
+    "priceTeaserCta": "Preise ansehen →",
+    "loginBtn": "Anmelden",
+    "logoutBtn": "Abmelden",
     "native": "Muttersprache",
     "startFree": "Losreden — kostenlos",
     "langNote": "Wähle deine Sprache — die ganze Seite wechselt, nicht nur die Begrüßung.",
@@ -630,7 +479,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "multi": "Mehrsprachig · spricht jede Sprache",
     "heroEm": "fünf Freundinnen,",
     "heroOne": "ein Haus.",
-    "heroSub": "Fünf Freundinnen wohnen hier. Komm, sag hallo.",
+    "heroSub": "Übe jede Sprache mit KI-Freunden, die sich echt anfühlen.",
     "heroSub2": "Sie sprechen zuerst — über ihren Tag, ihren Latte, ihre Katze. Du antwortest einfach, und eine Sprache bleibt hängen. Keine Lektionen. Kein Druck. Nur Menschen.",
     "meetBtn": "Die fünf kennenlernen ↓",
     "coverStory": "Titelgeschichte",
@@ -681,18 +530,6 @@ const DICT: Record<Lang, Record<string, string>> = {
     "feel3t": "Kleine Siege, bemerkt",
     "feel3": "Du hast heute einen ganzen Satz gesagt? Sie haben es bemerkt. Und sie sagen es dir. Sofort, und sie meinen es ernst.",
     "priceTitle": "Einfache Preise",
-    "priceSub": "Starte kostenlos. Bleib, weil sich das Haus wie deins anfühlt.",
-    "prF1": "Alle fünf Freundinnen treffen",
-    "prF2": "Tägliche Chats & Ein-Zeilen-Korrekturen",
-    "prF3": "Im Fotozimmer stöbern",
-    "prP1": "Unbegrenzte Stimme & Anrufe",
-    "prP2": "Ein Gedächtnis, das sich alles merkt",
-    "prP3": "Nachtstimmen, in voller Länge",
-    "prBest": "Bester Wert — etwa die Hälfte des Monatspreises",
-    "mo": "Monatlich",
-    "mos": "Monate",
-    "yr": "Jährlich",
-    "goPremium": "Premium holen",
     "foot": "Fünf Freundinnen, ein Haus, jede Sprache.",
     "soon": "kommt bald",
     "ctaTitle": "Dein Zimmer im Haus ist bereit.",
@@ -704,35 +541,21 @@ const DICT: Record<Lang, Record<string, string>> = {
     "youLabel": "Du",
     "memTag": "erinnert ✦",
     "navDebut": "Debüt",
-    "debutKicker": "Das Debüt · MUNTUZ",
-    "debutGreeting": "Say hi, we are MUNTUZ!",
-    "debutSub": "Die fünf Mitbewohnerinnen debütieren als Gruppe — MUNTUZ. Ihre erste Single klingt wie dieses Haus: hell, schnell, und man kann nicht still sitzen.",
     "heroBadge": "Sprachaustausch mit KI",
     "langStrip": "Übe jede Sprache — mit 50 KI-Freunden",
-    "debutLearn": "Lern den Hook und sing ihn nach — der Refrain ist deine erste Lektion.",
-    "songLabel": "Debütsingle",
-    "songMeta": "Schneller, aufregender K-pop Dance-Pop · 128 BPM",
-    "listenBtn": "▶ „Say Hi“ auf Suno anhören",
-    "hookLabel": "Der Refrain-Hook — gewählt bei Fan-Voting Nr. 1",
-    "hookMeaning": "Bedeutet: „Sag es — in deiner Sprache.“",
-    "hookPron": "Sag es mit ihnen: mal-hae-bwa, neo-ui eon-eo-ro",
-    "hookMission": "Lerne den Hook und sing ihn zurück — das ist die ganze erste Mission.",
-    "debutRoles": "Emily — Hauptgesang · Jiyoung — Leader · Chloe — Rapperin & Songwriterin · Sofia — Haupttänzerin · Amara — Nebengesang",
-    "fandomLabel": "Fandom-Name",
-    "fandomText": "„Roomies“ ist der führende Vorschlag — noch nicht final. Der offizielle Name kommt vor der Debütbühne.",
-    "debutJust": "Frisch debütiert — unsere erste Single „Say Hi“ ist da!",
-    "epKicker": "Leben im Haus",
-    "epTitle": "WG-Episoden — zusammen leben, üben und debütieren",
-    "epSub": "Kleine Momente aus dem Haus — die Nächte, die Küche, der Probenraum. Neue Episoden kommen hier dazu, während die Geschichte wächst.",
-    "epFilterAll": "Alle",
-    "epAllTag": "Alle fünf",
-    "epMoreNote": "Weitere Episoden folgen — das Haus lebt weiter und die Geschichte wächst."
   },
   "pt": {
     "navHouse": "A Casa",
     "navNight": "Vozes da Noite",
     "navPhotos": "Sala de Fotos",
     "navPricing": "Preços",
+    "groupTeaserKicker": "Acabamos de estrear · MUNTUZ",
+    "groupTeaserSub": "As cinco colegas de casa acabaram de estrear como grupo — ouça o primeiro single “Say Hi” e espie a vida na casa.",
+    "groupTeaserCta": "Conheça o grupo →",
+    "priceTeaserSub": "Comece grátis, para sempre. Premium a partir de $9.99 por mês — ver planos e o que incluem.",
+    "priceTeaserCta": "Ver preços →",
+    "loginBtn": "Entrar",
+    "logoutBtn": "Sair",
     "native": "Idioma nativo",
     "startFree": "Comece a conversar — grátis",
     "langNote": "Escolha seu idioma: a página inteira muda, não só a saudação.",
@@ -740,7 +563,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "multi": "Multilíngue · fala todos os idiomas",
     "heroEm": "cinco amigas,",
     "heroOne": "uma casa.",
-    "heroSub": "Cinco amigas moram aqui. Vem dizer oi.",
+    "heroSub": "Pratique qualquer idioma com amigos de IA que parecem reais.",
     "heroSub2": "Elas falam primeiro: do dia delas, do latte, do gato. Você só responde, e o idioma fica. Sem lições. Sem pressão. Só pessoas.",
     "meetBtn": "Conheça as cinco ↓",
     "coverStory": "Matéria de capa",
@@ -791,18 +614,6 @@ const DICT: Record<Lang, Record<string, string>> = {
     "feel3t": "Pequenas vitórias, notadas",
     "feel3": "Você falou uma frase inteira hoje? Elas notaram. E vão te contar. Na hora, e de verdade.",
     "priceTitle": "Preços simples",
-    "priceSub": "Comece grátis. Fique porque a casa parece sua.",
-    "prF1": "Conheça as cinco amigas",
-    "prF2": "Conversas diárias e correções em uma linha",
-    "prF3": "Explorar a Sala de Fotos",
-    "prP1": "Voz e chamadas ilimitadas",
-    "prP2": "Memória que lembra de tudo",
-    "prP3": "Vozes da Noite, completas",
-    "prBest": "Melhor custo — cerca de metade do preço mensal",
-    "mo": "Mensal",
-    "mos": "meses",
-    "yr": "Anual",
-    "goPremium": "Virar Premium",
     "foot": "Cinco amigas, uma casa, todos os idiomas.",
     "soon": "em breve",
     "ctaTitle": "Seu quarto na casa está pronto.",
@@ -814,35 +625,21 @@ const DICT: Record<Lang, Record<string, string>> = {
     "youLabel": "Você",
     "memTag": "lembrou ✦",
     "navDebut": "Estreia",
-    "debutKicker": "A estreia · MUNTUZ",
-    "debutGreeting": "Say hi, we are MUNTUZ!",
-    "debutSub": "As cinco colegas de casa estreiam como grupo — MUNTUZ. O primeiro single soa como esta casa: brilhante, rápido e impossível de ouvir sentado.",
     "heroBadge": "Intercâmbio de idiomas com IA",
     "langStrip": "Pratique qualquer idioma — com 50 amigos de IA",
-    "debutLearn": "Aprenda o refrão e cante junto — o coro é a sua primeira lição.",
-    "songLabel": "Single de estreia",
-    "songMeta": "Dance-pop K-pop rápido e empolgante · 128 BPM",
-    "listenBtn": "▶ Ouça “Say Hi” no Suno",
-    "hookLabel": "O gancho do refrão — escolhido na Votação dos Fãs nº 1",
-    "hookMeaning": "Significa: “Diga — no seu idioma.”",
-    "hookPron": "Diga com elas: mal-hae-bwa, neo-ui eon-eo-ro",
-    "hookMission": "Aprenda o gancho e cante de volta — essa é toda a primeira missão.",
-    "debutRoles": "Emily — vocal principal · Jiyoung — líder · Chloe — rapper e letrista · Sofia — dançarina principal · Amara — vocal de apoio",
-    "fandomLabel": "Nome do fandom",
-    "fandomText": "“Roomies” é a proposta principal — ainda não é final. O nome oficial chega antes do palco de estreia.",
-    "debutJust": "Acabamos de estrear — nosso primeiro single “Say Hi” já saiu!",
-    "epKicker": "A vida na casa",
-    "epTitle": "Episódios da convivência — viver, ensaiar e estrear juntas",
-    "epSub": "Pequenos momentos da casa — as noites, a cozinha, a sala de ensaio. Novos episódios chegam aqui à medida que a história cresce.",
-    "epFilterAll": "Todas",
-    "epAllTag": "As cinco",
-    "epMoreNote": "Mais episódios estão a caminho — a casa continua vivendo e a história crescendo."
   },
   "zh": {
     "navHouse": "这栋房子",
     "navNight": "夜晚的声音",
     "navPhotos": "照片房",
     "navPricing": "价格",
+    "groupTeaserKicker": "刚刚出道 · MUNTUZ",
+    "groupTeaserSub": "五位室友刚刚以组合身份出道——听听首支单曲《Say Hi》，再看看小屋生活。",
+    "groupTeaserCta": "认识这个组合 →",
+    "priceTeaserSub": "免费开始，永久免费。Premium 每月 $9.99 起——查看套餐和包含内容。",
+    "priceTeaserCta": "查看价格 →",
+    "loginBtn": "登录",
+    "logoutBtn": "退出",
     "native": "母语",
     "startFree": "开始聊天 — 免费",
     "langNote": "选择你的语言——整个页面都会切换，不只是问候语。",
@@ -850,7 +647,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "multi": "多语言 · 会说所有语言",
     "heroEm": "五位朋友，",
     "heroOne": "一栋房子。",
-    "heroSub": "这里住着五位朋友。来打个招呼吧。",
+    "heroSub": "和感觉真实的 AI 朋友练习任何语言。",
     "heroSub2": "先开口的总是她们——聊今天，聊人生拿铁，聊她们的猫。你只需要回答，语言不知不觉就记住了。没有课程，没有压力，只有人。",
     "meetBtn": "认识五位朋友 ↓",
     "coverStory": "封面故事",
@@ -901,18 +698,6 @@ const DICT: Record<Lang, Record<string, string>> = {
     "feel3t": "小小的成就被看见",
     "feel3": "今天你说完了一整句话？她们注意到了。她们会告诉你。立刻，而且是真心的。",
     "priceTitle": "简单的价格",
-    "priceSub": "免费开始。留下来的理由，是这栋房子会变得像你自己的家。",
-    "prF1": "认识全部五位朋友",
-    "prF2": "每日聊天和一行纠正",
-    "prF3": "浏览照片房",
-    "prP1": "无限语音和通话",
-    "prP2": "记住一切的记忆",
-    "prP3": "夜晚的声音，完整版",
-    "prBest": "最划算——约为月价的一半",
-    "mo": "月付",
-    "mos": "个月",
-    "yr": "年付",
-    "goPremium": "升级 Premium",
     "foot": "五位朋友，一栋房子，所有语言。",
     "soon": "即将推出",
     "ctaTitle": "你在房子里的房间已经准备好了。",
@@ -924,35 +709,21 @@ const DICT: Record<Lang, Record<string, string>> = {
     "youLabel": "你",
     "memTag": "想起来了 ✦",
     "navDebut": "出道",
-    "debutKicker": "出道 · MUNTUZ",
-    "debutGreeting": "Say hi, we are MUNTUZ!",
-    "debutSub": "五位室友以组合 MUNTUZ 出道。她们的首支单曲就是这栋房子的声音：明亮、快速、让人坐不住。",
     "heroBadge": "AI 语言交换",
     "langStrip": "练习任何语言 — 与50位AI朋友一起",
-    "debutLearn": "学会副歌，跟着唱 — 副歌就是你的第一课。",
-    "songLabel": "出道单曲",
-    "songMeta": "快速、令人兴奋的 K-pop 舞曲流行 · 128 BPM",
-    "listenBtn": "▶ 在 Suno 收听 “Say Hi”",
-    "hookLabel": "副歌钩子 — 由粉丝投票第 1 名选定",
-    "hookMeaning": "意思是：“说出来吧，用你的语言。”",
-    "hookPron": "跟着她们说：mal-hae-bwa, neo-ui eon-eo-ro",
-    "hookMission": "学会这句钩子，再唱回去——这就是第一个任务。",
-    "debutRoles": "Emily — 主唱 · Jiyoung — 队长 · Chloe — 说唱 & 作词 · Sofia — 主舞 · Amara — 副主唱",
-    "fandomLabel": "粉丝名",
-    "fandomText": "“Roomies”是目前领先的提案——尚未最终确定。官方名称将在出道舞台前公布。",
-    "debutJust": "刚刚出道——首支单曲《Say Hi》已发布！",
-    "epKicker": "小屋生活",
-    "epTitle": "合宿故事——一起生活、练习、出道",
-    "epSub": "小屋里的小瞬间——夜晚、厨房、练习室。故事继续，新剧集会陆续来到这里。",
-    "epFilterAll": "全部",
-    "epAllTag": "五个人",
-    "epMoreNote": "更多剧集正在路上——小屋的生活还在继续，故事还在生长。"
   },
   "it": {
     "navHouse": "La casa",
     "navNight": "Voci notturne",
     "navPhotos": "Stanza delle foto",
     "navPricing": "Prezzi",
+    "groupTeaserKicker": "Appena debuttato · MUNTUZ",
+    "groupTeaserSub": "Le cinque coinquiline hanno appena debuttato come gruppo — ascolta il primo singolo “Say Hi” e sbircia la vita in casa.",
+    "groupTeaserCta": "Conosci il gruppo →",
+    "priceTeaserSub": "Inizia gratis, per sempre. Premium da $9.99 al mese — vedi i piani e cosa includono.",
+    "priceTeaserCta": "Vedi i prezzi →",
+    "loginBtn": "Accedi",
+    "logoutBtn": "Esci",
     "native": "Lingua madre",
     "startFree": "Inizia a parlare — gratis",
     "langNote": "Scegli la tua lingua: cambia tutta la pagina, non solo il saluto.",
@@ -960,7 +731,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "multi": "Multilingue · parla tutte le lingue",
     "heroEm": "cinque amiche,",
     "heroOne": "una casa.",
-    "heroSub": "Qui vivono cinque amiche. Vieni a salutare.",
+    "heroSub": "Esercitati in qualsiasi lingua con amici IA che sembrano veri.",
     "heroSub2": "Parlano loro per prime: della loro giornata, del loro latte, del loro gatto. Tu rispondi e la lingua resta. Niente lezioni. Niente pressioni. Solo persone.",
     "meetBtn": "Conosci le cinque ↓",
     "coverStory": "Storia di copertina",
@@ -1011,18 +782,6 @@ const DICT: Record<Lang, Record<string, string>> = {
     "feel3t": "Piccole vittorie, notate",
     "feel3": "Oggi hai detto una frase intera? L'hanno notato. E te lo diranno. Subito, e sul serio.",
     "priceTitle": "Prezzi semplici",
-    "priceSub": "Inizia gratis. Resta perché la casa sembra la tua.",
-    "prF1": "Conosci tutte e cinque le amiche",
-    "prF2": "Chat quotidiane e correzioni in una riga",
-    "prF3": "Sfoglia la stanza delle foto",
-    "prP1": "Voce e chiamate illimitate",
-    "prP2": "Una memoria che ricorda tutto",
-    "prP3": "Voci Notturne, complete",
-    "prBest": "Miglior valore — circa metà del prezzo mensile",
-    "mo": "Mensile",
-    "mos": "mesi",
-    "yr": "Annuale",
-    "goPremium": "Passa a Premium",
     "foot": "Cinque amiche, una casa, tutte le lingue.",
     "soon": "presto in arrivo",
     "ctaTitle": "La tua stanza in casa è pronta.",
@@ -1034,35 +793,21 @@ const DICT: Record<Lang, Record<string, string>> = {
     "youLabel": "Tu",
     "memTag": "ha ricordato ✦",
     "navDebut": "Debutto",
-    "debutKicker": "Il debutto · MUNTUZ",
-    "debutGreeting": "Say hi, we are MUNTUZ!",
-    "debutSub": "Le cinque coinquiline debuttano come gruppo — MUNTUZ. Il loro primo singolo suona come questa casa: luminoso, veloce, impossibile da ascoltare da seduti.",
     "heroBadge": "Scambio linguistico con l'IA",
     "langStrip": "Esercitati in qualsiasi lingua — con 50 amici IA",
-    "debutLearn": "Impara il ritornello e cantalo — il coro è la tua prima lezione.",
-    "songLabel": "Singolo di debutto",
-    "songMeta": "Dance-pop K-pop veloce ed entusiasmante · 128 BPM",
-    "listenBtn": "▶ Ascolta “Say Hi” su Suno",
-    "hookLabel": "Il gancio del ritornello — scelto dal Voto dei Fan n. 1",
-    "hookMeaning": "Significa: “Dillo — nella tua lingua.”",
-    "hookPron": "Dillo con loro: mal-hae-bwa, neo-ui eon-eo-ro",
-    "hookMission": "Impara il gancio e cantalo di rimando — è tutta la prima missione.",
-    "debutRoles": "Emily — voce principale · Jiyoung — leader · Chloe — rapper e paroliera · Sofia — ballerina principale · Amara — voce secondaria",
-    "fandomLabel": "Nome del fandom",
-    "fandomText": "“Roomies” è la proposta in testa — non ancora definitiva. Il nome ufficiale arriverà prima del palco di debutto.",
-    "debutJust": "Appena debuttato — il nostro primo singolo “Say Hi” è uscito!",
-    "epKicker": "La vita in casa",
-    "epTitle": "Episodi di convivenza — vivere, provare e debuttare insieme",
-    "epSub": "Piccoli momenti della casa — le notti, la cucina, la sala prove. Nuovi episodi arriveranno qui mentre la storia cresce.",
-    "epFilterAll": "Tutte",
-    "epAllTag": "Tutte e cinque",
-    "epMoreNote": "Altri episodi in arrivo — la casa continua a vivere e la storia a crescere."
   },
   "vi": {
     "navHouse": "Ngôi nhà",
     "navNight": "Giọng nói ban đêm",
     "navPhotos": "Phòng ảnh",
     "navPricing": "Bảng giá",
+    "groupTeaserKicker": "Vừa ra mắt · MUNTUZ",
+    "groupTeaserSub": "Năm người bạn cùng nhà vừa ra mắt với tư cách nhóm — nghe đĩa đơn đầu tiên “Say Hi” và ghé xem cuộc sống trong nhà.",
+    "groupTeaserCta": "Gặp gỡ nhóm →",
+    "priceTeaserSub": "Bắt đầu miễn phí, mãi mãi. Premium từ $9.99/tháng — xem các gói và quyền lợi.",
+    "priceTeaserCta": "Xem bảng giá →",
+    "loginBtn": "Đăng nhập",
+    "logoutBtn": "Đăng xuất",
     "native": "Ngôn ngữ mẹ đẻ",
     "startFree": "Bắt đầu trò chuyện — miễn phí",
     "langNote": "Chọn ngôn ngữ của bạn — toàn bộ trang sẽ chuyển đổi, không chỉ lời chào.",
@@ -1070,7 +815,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "multi": "Đa ngôn ngữ · nói được mọi ngôn ngữ",
     "heroEm": "năm người bạn,",
     "heroOne": "một ngôi nhà.",
-    "heroSub": "Năm người bạn sống ở đây. Ghé chào nhé.",
+    "heroSub": "Luyện bất kỳ ngôn ngữ nào với những người bạn AI chân thật.",
     "heroSub2": "Họ là người bắt chuyện trước — về ngày của họ, ly latte của họ, con mèo của họ. Bạn chỉ cần trả lời, và ngôn ngữ sẽ ở lại. Không bài học. Không áp lực. Chỉ là con người.",
     "meetBtn": "Gặp cả năm người ↓",
     "coverStory": "Câu chuyện bìa",
@@ -1121,18 +866,6 @@ const DICT: Record<Lang, Record<string, string>> = {
     "feel3t": "Chiến thắng nhỏ được ghi nhận",
     "feel3": "Hôm nay bạn nói trọn một câu? Họ đã nhận ra. Và họ sẽ nói với bạn. Ngay lập tức, và thật lòng.",
     "priceTitle": "Bảng giá đơn giản",
-    "priceSub": "Bắt đầu miễn phí. Ở lại vì ngôi nhà này dần giống nhà của bạn.",
-    "prF1": "Gặp cả năm người bạn",
-    "prF2": "Trò chuyện hằng ngày & sửa một dòng",
-    "prF3": "Dạo Phòng Ảnh",
-    "prP1": "Giọng nói & cuộc gọi không giới hạn",
-    "prP2": "Trí nhớ ghi nhớ mọi thứ",
-    "prP3": "Giọng Nói Ban Đêm, bản đầy đủ",
-    "prBest": "Tiết kiệm nhất — khoảng nửa giá tháng",
-    "mo": "Hàng tháng",
-    "mos": "tháng",
-    "yr": "Hàng năm",
-    "goPremium": "Nâng cấp Premium",
     "foot": "Năm người bạn, một ngôi nhà, mọi ngôn ngữ.",
     "soon": "sắp ra mắt",
     "ctaTitle": "Căn phòng của bạn trong ngôi nhà đã sẵn sàng.",
@@ -1144,35 +877,21 @@ const DICT: Record<Lang, Record<string, string>> = {
     "youLabel": "Bạn",
     "memTag": "đã nhớ ra ✦",
     "navDebut": "Ra mắt",
-    "debutKicker": "Màn ra mắt · MUNTUZ",
-    "debutGreeting": "Say hi, we are MUNTUZ!",
-    "debutSub": "Năm người bạn cùng nhà ra mắt với tư cách một nhóm — MUNTUZ. Đĩa đơn đầu tiên nghe đúng như ngôi nhà này: tươi sáng, nhanh và không thể ngồi yên.",
     "heroBadge": "Trao đổi ngôn ngữ với AI",
     "langStrip": "Luyện bất kỳ ngôn ngữ nào — cùng 50 người bạn AI",
-    "debutLearn": "Học đoạn hook và hát theo — điệp khúc là bài học đầu tiên của bạn.",
-    "songLabel": "Đĩa đơn ra mắt",
-    "songMeta": "Dance-pop K-pop nhanh và sôi động · 128 BPM",
-    "listenBtn": "▶ Nghe “Say Hi” trên Suno",
-    "hookLabel": "Câu hook điệp khúc — được chọn bởi Bình chọn Fan số 1",
-    "hookMeaning": "Nghĩa là: “Hãy nói đi — bằng ngôn ngữ của bạn.”",
-    "hookPron": "Nói cùng họ: mal-hae-bwa, neo-ui eon-eo-ro",
-    "hookMission": "Học câu hook rồi hát lại — đó là toàn bộ nhiệm vụ đầu tiên.",
-    "debutRoles": "Emily — giọng ca chính · Jiyoung — trưởng nhóm · Chloe — rapper & viết lời · Sofia — vũ công chính · Amara — giọng ca phụ",
-    "fandomLabel": "Tên fandom",
-    "fandomText": "“Roomies” là đề xuất đang dẫn đầu — chưa phải quyết định cuối cùng. Tên chính thức sẽ đến trước sân khấu ra mắt.",
-    "debutJust": "Vừa ra mắt — đĩa đơn đầu tiên “Say Hi” đã phát hành!",
-    "epKicker": "Cuộc sống trong nhà",
-    "epTitle": "Những tập ở chung — cùng sống, cùng tập, cùng ra mắt",
-    "epSub": "Những khoảnh khắc nhỏ trong nhà — buổi tối, bếp, phòng tập. Các tập mới sẽ xuất hiện tại đây khi câu chuyện tiếp tục.",
-    "epFilterAll": "Tất cả",
-    "epAllTag": "Cả năm",
-    "epMoreNote": "Sẽ còn nhiều tập nữa — ngôi nhà vẫn sống và câu chuyện vẫn tiếp tục."
   },
   "hi": {
     "navHouse": "घर",
     "navNight": "रात की आवाज़ें",
     "navPhotos": "फ़ोटो रूम",
     "navPricing": "कीमतें",
+    "groupTeaserKicker": "अभी-अभी डेब्यू · MUNTUZ",
+    "groupTeaserSub": "पाँचों हाउसमेट्स ने ग्रुप के रूप में अभी-अभी डेब्यू किया है — उनका पहला सिंगल “Say Hi” सुनें और घर की ज़िंदगी झाँकें।",
+    "groupTeaserCta": "ग्रुप से मिलें →",
+    "priceTeaserSub": "मुफ़्त में शुरू करें, हमेशा मुफ़्त। Premium $9.99/माह से — प्लान और सुविधाएँ देखें।",
+    "priceTeaserCta": "कीमतें देखें →",
+    "loginBtn": "लॉग इन",
+    "logoutBtn": "लॉग आउट",
     "native": "मातृभाषा",
     "startFree": "बात शुरू करें — मुफ़्त",
     "langNote": "अपनी भाषा चुनें — सिर्फ़ अभिवादन नहीं, पूरा पेज बदल जाता है।",
@@ -1180,7 +899,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "multi": "बहुभाषी · हर भाषा बोलता है",
     "heroEm": "पाँच दोस्त,",
     "heroOne": "एक घर।",
-    "heroSub": "यहाँ पाँच दोस्त रहते हैं। नमस्ते कहने आइए।",
+    "heroSub": "असली जैसे लगने वाले AI दोस्तों के साथ कोई भी भाषा सीखें।",
     "heroSub2": "पहले वे बात शुरू करते हैं — अपने दिन, अपनी लाटे, अपनी बिल्ली के बारे में। आप बस जवाब दीजिए, और भाषा टिक जाती है। कोई पाठ नहीं। कोई दबाव नहीं। बस लोग।",
     "meetBtn": "पाँचों से मिलिए ↓",
     "coverStory": "कवर स्टोरी",
@@ -1231,18 +950,6 @@ const DICT: Record<Lang, Record<string, string>> = {
     "feel3t": "छोटी जीतें, नोटिस की गईं",
     "feel3": "आज आपने एक पूरा वाक्य कहा? उन्होंने नोटिस किया। और वे आपको बताएँगे। तुरंत, और दिल से।",
     "priceTitle": "सरल कीमतें",
-    "priceSub": "मुफ़्त शुरू करें। रुकिए क्योंकि यह घर आपका अपना लगने लगता है।",
-    "prF1": "पाँचों दोस्तों से मिलें",
-    "prF2": "रोज़ की चैट और एक-पंक्ति सुधार",
-    "prF3": "फ़ोटो रूम देखें",
-    "prP1": "असीमित आवाज़ और कॉल",
-    "prP2": "वह याददाश्त जो सब याद रखती है",
-    "prP3": "रात की आवाज़ें, पूरी लंबाई",
-    "prBest": "सबसे किफ़ायती — मासिक कीमत का लगभग आधा",
-    "mo": "मासिक",
-    "mos": "महीने",
-    "yr": "वार्षिक",
-    "goPremium": "Premium लें",
     "foot": "पाँच दोस्त, एक घर, हर भाषा।",
     "soon": "जल्द आ रहा है",
     "ctaTitle": "घर में आपका कमरा तैयार है।",
@@ -1254,35 +961,21 @@ const DICT: Record<Lang, Record<string, string>> = {
     "youLabel": "आप",
     "memTag": "याद आया ✦",
     "navDebut": "डेब्यू",
-    "debutKicker": "डेब्यू · MUNTUZ",
-    "debutGreeting": "Say hi, we are MUNTUZ!",
-    "debutSub": "पाँचों सह-निवासी MUNTUZ नाम के ग्रुप के रूप में डेब्यू कर रही हैं। उनका पहला सिंगल इस घर की आवाज़ है: चमकदार, तेज़, और बैठकर सुनना नामुमकिन।",
     "heroBadge": "AI भाषा विनिमय",
     "langStrip": "कोई भी भाषा सीखें — 50 AI दोस्तों के साथ",
-    "debutLearn": "हुक सीखें और गाएँ — कोरस ही आपका पहला पाठ है।",
-    "songLabel": "डेब्यू सिंगल",
-    "songMeta": "तेज़, रोमांचक K-pop डांस-पॉप · 128 BPM",
-    "listenBtn": "▶ Suno पर “Say Hi” सुनें",
-    "hookLabel": "कोरस हुक — फ़ैन वोट नं. 1 से चुना गया",
-    "hookMeaning": "मतलब: “कहो — अपनी भाषा में।”",
-    "hookPron": "उनके साथ कहो: mal-hae-bwa, neo-ui eon-eo-ro",
-    "hookMission": "हुक सीखो और गाकर वापस सुनाओ — यही पहला मिशन है।",
-    "debutRoles": "Emily — मुख्य गायिका · Jiyoung — लीडर · Chloe — रैपर और गीतकार · Sofia — मुख्य डांसर · Amara — सह-गायिका",
-    "fandomLabel": "फ़ैंडम नाम",
-    "fandomText": "“Roomies” अग्रणी प्रस्ताव है — अभी अंतिम नहीं। आधिकारिक नाम डेब्यू स्टेज से पहले आएगा।",
-    "debutJust": "अभी-अभी डेब्यू हुआ — हमारा पहला सिंगल “Say Hi” आ गया है!",
-    "epKicker": "घर में ज़िंदगी",
-    "epTitle": "हॉस्टल के किस्से — साथ रहना, रियाज़ करना, डेब्यू करना",
-    "epSub": "घर के छोटे-छोटे पल — रातें, रसोई, रियाज़ का कमरा। कहानी बढ़ेगी तो नए एपिसोड यहाँ आएँगे।",
-    "epFilterAll": "सभी",
-    "epAllTag": "पाँचों",
-    "epMoreNote": "और एपिसोड आ रहे हैं — घर जीता रहेगा और कहानी बढ़ती रहेगी।"
   },
   "ar": {
     "navHouse": "البيت",
     "navNight": "أصوات الليل",
     "navPhotos": "غرفة الصور",
     "navPricing": "الأسعار",
+    "groupTeaserKicker": "ظهرنا للتو · MUNTUZ",
+    "groupTeaserSub": "ظهرت زميلات السكن الخمس للتو كمجموعة — استمعي إلى أغنيتهن الأولى «Say Hi» وألقي نظرة على الحياة في المنزل.",
+    "groupTeaserCta": "تعرّفي على المجموعة →",
+    "priceTeaserSub": "ابدأ مجاناً، إلى الأبد. Premium من $9.99 شهرياً — شاهد الخطط وما تشمله.",
+    "priceTeaserCta": "شاهد الأسعار →",
+    "loginBtn": "تسجيل الدخول",
+    "logoutBtn": "تسجيل الخروج",
     "native": "اللغة الأم",
     "startFree": "ابدأ الحديث — مجاناً",
     "langNote": "اختر لغتك — الصفحة بأكملها تتبدل، وليس التحية فقط.",
@@ -1290,7 +983,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "multi": "متعدد اللغات · يتحدث كل اللغات",
     "heroEm": "خمس صديقات،",
     "heroOne": "بيت واحد.",
-    "heroSub": "خمس صديقات يعشن هنا. تعال وقل مرحباً.",
+    "heroSub": "تدرّب على أي لغة مع أصدقاء ذكاء اصطناعي يبدون حقيقيين.",
     "heroSub2": "هنّ يبدأن الحديث أولاً — عن يومهن، ولاتيه حياتهن، وقطتهن. ما عليك سوى الرد، وستلتصق اللغة بك. لا دروس. لا ضغط. مجرد أشخاص.",
     "meetBtn": "قابل الخمس ↓",
     "coverStory": "قصة الغلاف",
@@ -1341,18 +1034,6 @@ const DICT: Record<Lang, Record<string, string>> = {
     "feel3t": "انتصارات صغيرة تُلاحظ",
     "feel3": "قلت جملة كاملة اليوم؟ لقد لاحظن ذلك. وسيخبرنك. فوراً، وبصدق.",
     "priceTitle": "أسعار بسيطة",
-    "priceSub": "ابدأ مجاناً. وابقَ لأن البيت يصبح كأنه بيتك.",
-    "prF1": "قابل الصديقات الخمس",
-    "prF2": "محادثات يومية وتصحيحات في سطر واحد",
-    "prF3": "تصفح غرفة الصور",
-    "prP1": "صوت ومكالمات غير محدودة",
-    "prP2": "ذاكرة تتذكر كل شيء",
-    "prP3": "أصوات الليل، كاملة",
-    "prBest": "أفضل قيمة — نحو نصف السعر الشهري",
-    "mo": "شهري",
-    "mos": "أشهر",
-    "yr": "سنوي",
-    "goPremium": "اشترك في Premium",
     "foot": "خمس صديقات، بيت واحد، كل اللغات.",
     "soon": "قريباً",
     "ctaTitle": "غرفتك في البيت جاهزة.",
@@ -1364,29 +1045,8 @@ const DICT: Record<Lang, Record<string, string>> = {
     "youLabel": "أنت",
     "memTag": "تذكّرت ✦",
     "navDebut": "الظهور الأول",
-    "debutKicker": "الظهور الأول · MUNTUZ",
-    "debutGreeting": "Say hi, we are MUNTUZ!",
-    "debutSub": "زميلات السكن الخمس يظهرن لأول مرة كمجموعة — MUNTUZ. أغنيتهن الأولى تبدو مثل هذا البيت: مشرقة وسريعة ويستحيل سماعها جالساً.",
     "heroBadge": "تبادل لغوي بالذكاء الاصطناعي",
     "langStrip": "تدرّب على أي لغة — مع 50 صديقًا بالذكاء الاصطناعي",
-    "debutLearn": "تعلّم اللازمة وغنِّها — اللازمة هي درسك الأول.",
-    "songLabel": "الأغنية الأولى",
-    "songMeta": "دانس-بوب كوري سريع ومثير · 128 BPM",
-    "listenBtn": "▶ استمع إلى “Say Hi” على Suno",
-    "hookLabel": "خطاف الكورس — اختاره تصويت المعجبين رقم 1",
-    "hookMeaning": "يعني: \"قلها — بلغتك.\"",
-    "hookPron": "قلها معهن: mal-hae-bwa, neo-ui eon-eo-ro",
-    "hookMission": "تعلّم الخطاف وغنِّه رداً — هذه هي المهمة الأولى كلها.",
-    "debutRoles": "Emily — الغناء الرئيسي · Jiyoung — القائدة · Chloe — رابر وكاتبة كلمات · Sofia — الراقصة الرئيسية · Amara — غناء مساند",
-    "fandomLabel": "اسم الفاندوم",
-    "fandomText": "\"Roomies\" هو الاقتراح الرائد — ليس نهائياً بعد. الاسم الرسمي سيأتي قبل مسرح الظهور الأول.",
-    "debutJust": "لقد ظهرنا للتو — أغنيتنا الأولى «Say Hi» صدرت!",
-    "epKicker": "الحياة في المنزل",
-    "epTitle": "حلقات السكن المشترك — نعيش ونتدرب ونظهر معاً",
-    "epSub": "لحظات صغيرة من المنزل — الليالي، المطبخ، غرفة التدريب. ستصل حلقات جديدة هنا مع نمو القصة.",
-    "epFilterAll": "الكل",
-    "epAllTag": "الخمسة",
-    "epMoreNote": "المزيد من الحلقات قادمة — المنزل يواصل الحياة والقصة تواصل النمو."
   }
 };
 
@@ -1777,24 +1437,7 @@ const PHOTOS: { img: string; era: PhotoEra; who: string; cap: string; hand: stri
   }
 ];
 
-const SUNO_SAY_HI = 'https://suno.com/song/3abdeff9-b70e-43b3-afc8-bc59cf8a8ef0';
 
-// Dorm episodes — the MUNTUZ Special gallery. To add an episode: drop
-// its photo into public/muntuz/, add one line here, and add its title
-// + text keys (epNTitle / epNText) to DICT in en and ko (other
-// languages fall back to English). `who` is the member the episode is
-// about, or 'All' for a whole-house moment.
-type Episode = { id: string; who: string; img: string; titleKey: string; textKey: string };
-const EPISODES: Episode[] = [
-  { id: 'ep1', who: 'All', img: '/muntuz/ep-livingroom-night.webp', titleKey: 'ep1Title', textKey: 'ep1Text' },
-  { id: 'ep2', who: 'Jiyoung', img: '/muntuz/jiyoung-kimbap.webp', titleKey: 'ep2Title', textKey: 'ep2Text' },
-  { id: 'ep3', who: 'Emily', img: '/muntuz/emily-latte.webp', titleKey: 'ep3Title', textKey: 'ep3Text' },
-  { id: 'ep4', who: 'Sofia', img: '/muntuz/sofia-pasta.webp', titleKey: 'ep4Title', textKey: 'ep4Text' },
-  { id: 'ep5', who: 'Chloe', img: '/muntuz/chloe-shoot.webp', titleKey: 'ep5Title', textKey: 'ep5Text' },
-  { id: 'ep6', who: 'Amara', img: '/muntuz/amara-sun.webp', titleKey: 'ep6Title', textKey: 'ep6Text' },
-  { id: 'ep7', who: 'All', img: '/muntuz/ep-plaza-stage.webp', titleKey: 'ep7Title', textKey: 'ep7Text' },
-  { id: 'ep8', who: 'All', img: '/muntuz/ep-kitchen-together.webp', titleKey: 'ep8Title', textKey: 'ep8Text' },
-];
 const STEPS_EN: { n: string; title: string; body: string }[] = [
   {
     n: '1',
@@ -1874,7 +1517,6 @@ export default function MuntuzLandingClient() {
   const [langOpen, setLangOpen] = useState(false);
   const [friendIdx, setFriendIdx] = useState(0);
   const [photoFilter, setPhotoFilter] = useState<'all' | PhotoEra>('all');
-  const [epFilter, setEpFilter] = useState('All');
   const [showMemory, setShowMemory] = useState(false);
   const [roomPlaying, setRoomPlaying] = useState(false);
   const [nightPlaying, setNightPlaying] = useState(false);
@@ -1921,6 +1563,14 @@ export default function MuntuzLandingClient() {
     else void a.play();
   }
 
+  async function handleSignOut() {
+    try {
+      await signOut(auth);
+    } catch {
+      // Stay signed in; the header keeps showing the account.
+    }
+  }
+
   async function joinWaitlist(e: React.FormEvent) {
     e.preventDefault();
     const cleaned = email.trim().toLowerCase();
@@ -1961,10 +1611,10 @@ export default function MuntuzLandingClient() {
             <a href="#photos" className="hover:text-violet-700">
               {t('navPhotos')}
             </a>
-            <a href="#debut" className="hover:text-violet-700">
+            <a href="/muntuz/group" className="hover:text-violet-700">
               {t('navDebut')}
             </a>
-            <a href="#pricing" className="hover:text-violet-700">
+            <a href="/pricing" className="hover:text-violet-700">
               {t('navPricing')}
             </a>
           </nav>
@@ -2007,8 +1657,25 @@ export default function MuntuzLandingClient() {
                 href="/login?next=/exchange"
                 className="rounded-full bg-white px-4 py-2 text-sm font-bold text-violet-700 shadow-sm ring-1 ring-slate-200 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
               >
-                Log in
+                {t('loginBtn')}
               </a>
+            )}
+            {!authLoading && user && (
+              <span className="flex items-center gap-2">
+                <span className="flex items-center gap-1.5 text-sm font-bold text-slate-700">
+                  <span className="inline-block h-2 w-2 rounded-full bg-green-500" aria-hidden="true" />
+                  <span className="max-w-[90px] truncate">
+                    {user.displayName || user.email?.split('@')[0] || 'Learner'}
+                  </span>
+                </span>
+                <button
+                  type="button"
+                  onClick={handleSignOut}
+                  className="rounded-full bg-white px-3 py-2 text-sm font-bold text-slate-600 shadow-sm ring-1 ring-slate-200 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+                >
+                  {t('logoutBtn')}
+                </button>
+              </span>
             )}
           </div>
         </div>
@@ -2405,206 +2072,44 @@ export default function MuntuzLandingClient() {
           </div>
         </section>
 
-        {/* Debut — MUNTUZ first single "Say Hi" */}
-        <section id="debut" className="mt-14 scroll-mt-20">
-          <p className="mx-auto w-fit rounded-full bg-amber-400 px-4 py-1.5 text-xs font-extrabold text-slate-900">
-            🎉 {t('debutJust')}
-          </p>
-          <p className="mt-3 text-center text-xs font-bold uppercase tracking-[0.2em] text-violet-600">
-            {t('debutKicker')}
-          </p>
-          <h2 className="mt-2 text-center text-2xl font-extrabold">
-            {t('debutGreeting')}
-          </h2>
-          <p className="mt-2 text-center text-sm leading-relaxed text-slate-600">
-            {t('debutSub')}
-          </p>
-          <p className="mt-3 text-center text-sm font-bold text-violet-700">
-            {t('debutLearn')}
-          </p>
-          <div className="mt-6 rounded-3xl bg-white p-5 shadow-md ring-1 ring-slate-100">
+        {/* MUNTUZ group — teaser linking to the group page (debut + dorm episodes live there). */}
+        <section className="mt-14">
+          <div className="overflow-hidden rounded-3xl bg-white shadow-md ring-1 ring-slate-100">
             <img
               src="/muntuz/ep-studio-stage.webp"
               alt="MUNTUZ performing “Say Hi” on the debut stage"
-              className="h-auto w-full rounded-2xl object-cover"
+              className="h-auto w-full object-cover"
               loading="lazy"
             />
-            <p className="mt-4 text-xs font-bold uppercase tracking-wider text-slate-400">
-              {t('songLabel')}
-            </p>
-            <p className="mt-1 text-xl font-extrabold">“Say Hi”</p>
-            <p className="mt-1 text-sm text-slate-600">{t('songMeta')}</p>
-            <a
-              href={SUNO_SAY_HI}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-block rounded-full bg-amber-400 px-5 py-2.5 text-sm font-bold text-slate-900 hover:bg-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
-            >
-              {t('listenBtn')}
-            </a>
-            <div className="mt-5 rounded-2xl bg-violet-50 p-4 ring-1 ring-violet-100">
-              <p className="text-xs font-bold uppercase tracking-wider text-violet-600">
-                {t('hookLabel')}
+            <div className="p-5 text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-violet-600">
+                {t('groupTeaserKicker')}
               </p>
-              <p className="mt-2 text-2xl font-extrabold text-violet-900">
-                말해봐, 너의 언어로
+              <h2 className="mt-2 text-xl font-extrabold">Say hi, we are MUNTUZ!</h2>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                {t('groupTeaserSub')}
               </p>
-              <p className="mt-2 text-sm text-slate-700">{t('hookMeaning')}</p>
-              <p className="mt-1 text-sm text-slate-700">{t('hookPron')}</p>
-              <p className="mt-2 text-sm font-semibold text-violet-800">
-                {t('hookMission')}
-              </p>
+              <a
+                href="/muntuz/group"
+                className="mt-4 inline-block rounded-full bg-violet-600 px-5 py-2.5 text-sm font-bold text-white hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+              >
+                {t('groupTeaserCta')}
+              </a>
             </div>
-            <p className="mt-4 text-sm leading-relaxed text-slate-700">
-              {t('debutRoles')}
-            </p>
-            <div className="mt-4 rounded-2xl bg-[#FAF6EF] p-4 ring-1 ring-slate-100">
-              <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                {t('fandomLabel')}
-              </p>
-              <p className="mt-1 text-sm leading-relaxed text-slate-700">
-                {t('fandomText')}
-              </p>
-            </div>
-          </div>
-
-          {/* Dorm episodes — the MUNTUZ Special: stories from living together. */}
-          <div className="mt-12">
-            <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-violet-600">
-              {t('epKicker')}
-            </p>
-            <h3 className="mt-2 text-center text-xl font-extrabold">{t('epTitle')}</h3>
-            <p className="mt-2 text-center text-sm leading-relaxed text-slate-600">{t('epSub')}</p>
-            <div className="mt-4 flex flex-wrap justify-center gap-1.5">
-              {['All', 'Jiyoung', 'Emily', 'Chloe', 'Sofia', 'Amara'].map((m) => (
-                <button
-                  key={m}
-                  onClick={() => setEpFilter(m)}
-                  aria-pressed={epFilter === m}
-                  className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${epFilter === m ? 'bg-violet-600 text-white shadow-sm' : 'bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50'}`}
-                >
-                  {m === 'All' ? t('epFilterAll') : m}
-                </button>
-              ))}
-            </div>
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
-              {EPISODES.filter((e) => epFilter === 'All' || e.who === epFilter || e.who === 'All').map((ep) => (
-                <article key={ep.id} className="overflow-hidden rounded-3xl bg-white shadow-md ring-1 ring-slate-100">
-                  <img src={ep.img} alt={t(ep.titleKey)} className="h-52 w-full object-cover sm:h-56" loading="lazy" />
-                  <div className="p-4">
-                    <p className="text-xs font-bold uppercase tracking-wider text-violet-600">
-                      {ep.who === 'All' ? t('epAllTag') : ep.who}
-                    </p>
-                    <h4 className="mt-1 font-extrabold">{t(ep.titleKey)}</h4>
-                    <p className="mt-1 text-sm leading-relaxed text-slate-600">{t(ep.textKey)}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-            <p className="mt-4 text-center text-xs text-slate-500">{t('epMoreNote')}</p>
           </div>
         </section>
 
-        {/* Pricing */}
-        <section id="pricing" className="mt-14 scroll-mt-20">
-          <h2 className="text-center text-2xl font-extrabold">
-            {t('priceTitle')}
-          </h2>
-          <p className="mt-2 text-center text-sm text-slate-600">
-            {t('priceSub')}
-          </p>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            {/* Free */}
-            <div className="rounded-3xl bg-white p-5 shadow-sm ring-1 ring-slate-100">
-              <p className="text-sm font-bold text-slate-500">Free</p>
-              <p className="mt-1 text-3xl font-extrabold">
-                $0
-                <span className="text-base font-bold text-slate-500">
-                  {' '}
-                  / {t('mo')}
-                </span>
-              </p>
-              <ul className="mt-3 space-y-1.5 text-sm text-slate-700">
-                <li>✓ {t('prF1')}</li>
-                <li>✓ {t('prF2')}</li>
-                <li>✓ {t('prF3')}</li>
-              </ul>
-              <a
-                href="/exchange"
-                className="mt-4 inline-block rounded-full bg-white px-5 py-2.5 text-sm font-bold text-violet-700 ring-1 ring-violet-200 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
-              >
-                {t('startFree')}
-              </a>
-            </div>
-            {/* Monthly */}
-            <div className="rounded-3xl bg-white p-5 shadow-sm ring-1 ring-slate-100">
-              <p className="text-sm font-bold text-slate-500">Premium</p>
-              <p className="mt-1 text-3xl font-extrabold">
-                $9.99
-                <span className="text-base font-bold text-slate-500">
-                  {' '}
-                  / {t('mo')}
-                </span>
-              </p>
-              <ul className="mt-3 space-y-1.5 text-sm text-slate-700">
-                <li>✓ {t('prP1')}</li>
-                <li>✓ {t('prP2')}</li>
-                <li>✓ {t('prP3')}</li>
-              </ul>
-              <a
-                href="/pricing"
-                className="mt-4 inline-block rounded-full bg-violet-600 px-5 py-2.5 text-sm font-bold text-white hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
-              >
-                {t('goPremium')}
-              </a>
-            </div>
-            {/* 6 months */}
-            <div className="rounded-3xl bg-white p-5 shadow-sm ring-1 ring-slate-100">
-              <p className="text-sm font-bold text-slate-500">Premium</p>
-              <p className="mt-1 text-3xl font-extrabold">
-                $39.99
-                <span className="text-base font-bold text-slate-500">
-                  {' '}
-                  / 6 {t('mos')}
-                </span>
-              </p>
-              <ul className="mt-3 space-y-1.5 text-sm text-slate-700">
-                <li>✓ {t('prP1')}</li>
-                <li>✓ {t('prP2')}</li>
-                <li>✓ {t('prP3')}</li>
-              </ul>
-              <a
-                href="/pricing"
-                className="mt-4 inline-block rounded-full bg-white px-5 py-2.5 text-sm font-bold text-violet-700 ring-1 ring-violet-200 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
-              >
-                {t('goPremium')}
-              </a>
-            </div>
-            {/* Yearly — best value */}
-            <div className="relative rounded-3xl bg-violet-600 p-5 text-white shadow-md">
-              <span className="absolute -top-3 right-4 rounded-full bg-amber-400 px-3 py-1 text-xs font-extrabold text-slate-900">
-                {t('prBest')}
-              </span>
-              <p className="text-sm font-bold text-violet-100">Premium</p>
-              <p className="mt-1 text-3xl font-extrabold">
-                $59.99
-                <span className="text-base font-bold text-violet-200">
-                  {' '}
-                  / {t('yr')}
-                </span>
-              </p>
-              <ul className="mt-3 space-y-1.5 text-sm text-violet-100">
-                <li>✓ {t('prP1')}</li>
-                <li>✓ {t('prP2')}</li>
-                <li>✓ {t('prP3')}</li>
-              </ul>
-              <a
-                href="/pricing"
-                className="mt-4 inline-block rounded-full bg-white px-5 py-2.5 text-sm font-bold text-violet-700 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-              >
-                {t('goPremium')}
-              </a>
-            </div>
+        {/* Pricing lives on its own page — a short pointer, not the full table. */}
+        <section className="mt-14">
+          <div className="rounded-3xl bg-white p-5 text-center shadow-sm ring-1 ring-slate-100">
+            <h2 className="text-lg font-extrabold">{t('priceTitle')}</h2>
+            <p className="mt-1 text-sm text-slate-600">{t('priceTeaserSub')}</p>
+            <a
+              href="/pricing"
+              className="mt-3 inline-block rounded-full bg-violet-600 px-5 py-2.5 text-sm font-bold text-white hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+            >
+              {t('priceTeaserCta')}
+            </a>
           </div>
         </section>
 
