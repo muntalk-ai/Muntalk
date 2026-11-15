@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { addDoc, collection, doc, getDoc, getDocs, limit, query, serverTimestamp, setDoc, updateDoc, where } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, limit, query, serverTimestamp, setDoc, updateDoc, where } from 'firebase/firestore';
 import { signOut } from 'firebase/auth';
 import { auth, db } from '@/lib/firebase';
 import { apiFetch } from '@/lib/apiClient';
@@ -293,6 +293,7 @@ type Chat = {
   partnerId: string;
   name: string;
   avatar: string;
+  gallery?: string[];
   flag?: string;
   isAi: boolean;
   messages: Msg[];
@@ -335,8 +336,6 @@ export default function ExchangePage() {
   const [toast, setToast] = useState('');
   const [pro, setPro] = useState(false);
   const [billing, setBilling] = useState<'monthly' | 'yearly'>('yearly');
-  const [reportChat, setReportChat] = useState<Chat | null>(null);
-  const [reportReason, setReportReason] = useState('');
   // Guest trial (5 minutes, no sign-in — see requireChatAccess).
   const [guestTrial, setGuestTrial] = useState<GuestTrial | null>(null);
   const [trialLeftMs, setTrialLeftMs] = useState<number | null>(null);
@@ -403,7 +402,6 @@ export default function ExchangePage() {
   // chat only triggers a summary call when there are new turns.
   const memoryRef = useRef<Record<string, string>>({});
   const memorySavedRef = useRef<Record<string, number>>({});
-  const [memoryClearing, setMemoryClearing] = useState(false);
   // Raw memory fact lines per partner (for the "AI speaks first" opener —
   // the formatted prompt text in memoryRef is not usable for quoting).
   const memoryFactsRef = useRef<Record<string, string[]>>({});
@@ -1171,6 +1169,7 @@ export default function ExchangePage() {
               partnerId: p.id,
               name: p.name,
               avatar: p.avatar,
+              gallery: p.gallery,
               flag: LANG_FLAG[p.native] || '🌐',
               isAi: true,
               messages: [{ id: gid, from: 'partner', text: p.greeting, ai: true, at: Date.now() }],
@@ -1394,28 +1393,6 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
     if (chat) void saveMemoryForChat(chat);
   };
 
-  const clearMemoryForChat = async () => {
-    if (!activeChat?.isAi || !user || memoryClearing) return;
-    if (!window.confirm(`Clear what ${activeChat.name} remembers about you? This cannot be undone.`)) return;
-    setMemoryClearing(true);
-    try {
-      const res = await apiFetch('/api/exchange-ai-chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'clear-memory', partnerId: activeChat.partnerId }),
-      });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(typeof data.error === 'string' ? data.error : 'Could not clear memory');
-      delete memoryRef.current[activeChat.partnerId];
-      memoryFactsRef.current[activeChat.partnerId] = [];
-      showToast('Memory cleared.');
-    } catch (err) {
-      showToast(err instanceof Error ? err.message : 'Could not clear memory. Please try again.');
-    } finally {
-      setMemoryClearing(false);
-    }
-  };
-
   // ── Memory + review pilot ────────────────────────────────────────────
   // Load the signed-in user's saved words and session reviews for the
   // AI Review tab. Single-field equality queries only (no composite
@@ -1629,29 +1606,6 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
     else sendMessage();
   };
 
-  const reportAndBlock = () => {
-    if (!reportChat) return;
-    // People chats only: file a server-side report for the admin
-    // moderation queue (/exchange/admin). AI chats stay local-only
-    // (nothing to moderate). Best-effort: a missing console rule must
-    // never break the local block below.
-    if (!reportChat.isAi && user) {
-      addDoc(collection(db, 'exchange_reports'), {
-        reporterUid: user.uid,
-        reportedUid: reportChat.partnerId,
-        reportedName: reportChat.name,
-        reason: reportReason || 'Other',
-        status: 'open',
-        createdAt: serverTimestamp(),
-      }).catch(() => {});
-    }
-    setChats((cs) => cs.filter((c) => c.id !== reportChat.id));
-    if (activeChatId === reportChat.id) setActiveChatId(null);
-    showToast(`${reportChat.name} reported (${reportReason}) and blocked.`);
-    setReportChat(null);
-    setReportReason('');
-  };
-
   // Interest chips save immediately when signed in: a tap must never depend
   // on a later Save press, and must survive a page reload on its own.
   // Signed-out users keep the previous demo behaviour (local state only).
@@ -1726,6 +1680,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
           <button
             onClick={() => {
               setTab('discover');
+              setRoom('ai');
               window.scrollTo({ top: 0 });
             }}
             aria-label="Muntuz — back to Discover"
@@ -1789,7 +1744,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
           {/* Signed-in but no Exchange profile yet: point at the setup
               page. Shown only once the profile load has resolved, so a
               slow load never flashes a wrong prompt. */}
-          {user && profileLoaded && profileExists === false && (
+          {user && profileLoaded && profileExists === false && tab !== 'chats' && (
             <div className="mb-4 flex flex-wrap items-center gap-3 rounded-2xl border border-violet-200 bg-violet-50 p-4 shadow-sm">
               <p className="min-w-0 flex-1 text-sm font-semibold text-violet-900">
                 Set up your Exchange profile so real partners can find you.
@@ -1813,6 +1768,23 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                 <span>
                   Online now: {AI_PARTNERS.length} AI partners ready to practice
                 </span>
+              </div>
+              {/* Mobile-only entry points: the sidebar tab switcher is
+                  desktop-only (hidden md:block), so on phones AI Review
+                  and Profile had no in-page path. */}
+              <div className="mt-3 flex gap-2 md:hidden">
+                <button
+                  onClick={() => setTab('review')}
+                  className="min-h-[44px] flex-1 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-slate-600 transition hover:border-violet-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+                >
+                  🤖 AI Review
+                </button>
+                <button
+                  onClick={() => setTab('profile')}
+                  className="min-h-[44px] flex-1 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-slate-600 transition hover:border-violet-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+                >
+                  👤 Profile
+                </button>
               </div>
               <div role="tablist" aria-label="Room type" className="mt-4 flex gap-2">
                 <button
@@ -1852,7 +1824,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                         <div className="flex items-start gap-3">
                           <button
                             type="button"
-                            onClick={() => openLightbox(p.avatar, p.name)}
+                            onClick={() => openLightbox(p.avatar, p.name, p.gallery)}
                             aria-label={`View ${p.name}'s photo full size`}
                             className="h-14 w-14 shrink-0 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
                           >
@@ -2245,10 +2217,10 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                   </div>
                 </div>
               ) : (
-                <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm">
-                  <div className="flex items-center gap-3 border-b border-slate-100 p-3 sm:p-4">
-                    <button onClick={leaveAiChat} className="min-h-[44px] rounded-lg px-2 font-bold text-violet-600 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">← Back</button>
-                    {activeChat.avatar ? (<button type="button" onClick={() => openLightbox(activeChat.avatar, activeChat.name)} aria-label={`View ${activeChat.name}'s photo full size`} className="h-14 w-14 shrink-0 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 sm:h-16 sm:w-16"><Image src={activeChat.avatar} alt={`${activeChat.name} AI partner`} width={112} height={112} className="h-14 w-14 rounded-full object-cover ring-2 ring-violet-200 sm:h-16 sm:w-16" /></button>) : (<span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-slate-100 text-2xl ring-2 ring-violet-200 sm:h-16 sm:w-16">{activeChat.flag || '🌐'}</span>)}
+                <div className="mt-3 overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm">
+                  <div className="flex items-center gap-2 border-b border-slate-100 p-2 sm:p-3">
+                    <button onClick={leaveAiChat} className="min-h-[36px] rounded-lg px-1.5 font-bold text-violet-600 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">← Back</button>
+                    {activeChat.avatar ? (<button type="button" onClick={() => openLightbox(activeChat.avatar, activeChat.name, activeChat.gallery)} aria-label={`View ${activeChat.name}'s photo full size`} className="h-10 w-10 shrink-0 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 sm:h-12 sm:w-12"><Image src={activeChat.avatar} alt={`${activeChat.name} AI partner`} width={112} height={112} className="h-10 w-10 rounded-full object-cover ring-2 ring-violet-200 sm:h-12 sm:w-12" /></button>) : (<span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-100 text-2xl ring-2 ring-violet-200 sm:h-12 sm:w-12">{activeChat.flag || '🌐'}</span>)}
                     <span className="font-bold">
                       {activeChat.name}{' '}
                       {activeChat.isAi && <span className="rounded-full bg-violet-600 px-2 py-0.5 text-[11px] font-extrabold text-white">AI</span>}
@@ -2262,35 +2234,20 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                         {reviewLoading ? 'Reviewing…' : '✏️ Finish & review'}
                       </button>
                     )}
-                    {activeChat.isAi && user && (
-                      <button
-                        onClick={clearMemoryForChat}
-                        disabled={memoryClearing}
-                        className="ml-auto min-h-[36px] rounded-full border border-slate-200 px-3 py-1 text-xs font-bold text-slate-500 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 disabled:opacity-60"
-                      >
-                        {memoryClearing ? 'Clearing…' : 'Clear memory'}
-                      </button>
-                    )}
-                    <button
-                      onClick={() => setReportChat(activeChat)}
-                      className="min-h-[36px] rounded-full border border-red-200 px-3 py-1 text-xs font-bold text-red-600 hover:bg-red-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
-                    >
-                      Report
-                    </button>
                   </div>
                   {activeChat.isAi && (
-                    <div className="border-b border-violet-100 bg-violet-50 px-4 py-2.5 text-xs font-bold text-violet-800">
+                    <div className="border-b border-violet-100 bg-violet-50 px-3 py-1.5 text-xs font-bold text-violet-800">
                       🤖 {AI_DISCLOSURE}
                     </div>
                   )}
                   {activeChat.isAi && !user && (
-                    <div className="border-b border-amber-100 bg-amber-50 px-4 py-2 text-xs font-bold text-amber-800">
+                    <div className="border-b border-amber-100 bg-amber-50 px-3 py-1.5 text-xs font-bold text-amber-800">
                       {guestTrial && trialLeftMs !== null && trialLeftMs > 0
                         ? `⏱️ Free trial ${Math.floor(trialLeftMs / 60000)}:${String(Math.floor((trialLeftMs % 60000) / 1000)).padStart(2, '0')} left — sign up to keep chatting free.`
                         : '💬 Try free for 5 minutes, no sign-in — the trial starts with your first message.'}
                     </div>
                   )}
-                  <div className="flex flex-col gap-3 p-4">
+                  <div className="flex flex-col gap-2 p-3">
                     {activeChat.messages.map((m) => (
                       <div key={m.id} className={`flex items-start gap-2 ${m.from === 'me' ? 'justify-end' : 'justify-start'}`}>
                         {m.from !== 'me' && activeChat.avatar ? (
@@ -2310,7 +2267,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                           role="button"
                           tabIndex={0}
                           title="Tap to copy this message"
-                          className={`max-w-[85%] cursor-pointer rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed shadow-sm [overflow-wrap:anywhere] sm:max-w-[75%] ${
+                          className={`max-w-[85%] cursor-pointer rounded-2xl px-3 py-2 text-sm leading-relaxed shadow-sm [overflow-wrap:anywhere] sm:max-w-[75%] ${
                             m.from === 'me'
                               ? 'rounded-br-md bg-violet-600 text-white'
                               : 'rounded-bl-md bg-slate-100 text-slate-800'
@@ -2342,7 +2299,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                     {aiSending && <p className="text-xs font-semibold text-slate-400">AI is generating a reply…</p>}
                   </div>
                   {review && review.partnerId === activeChat.partnerId && (
-                    <div className="border-t border-violet-100 bg-violet-50 p-4">
+                    <div className="border-t border-violet-100 bg-violet-50 p-3">
                       <div className="flex items-start justify-between gap-3">
                         <h3 className="font-bold text-violet-900">
                           📝 Session review with {review.partnerName}{' '}
@@ -2385,16 +2342,16 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                       <p className="mt-3 text-xs text-violet-700">Saved to AI Review — review these words again tomorrow.</p>
                     </div>
                   )}
-                  <div className="flex gap-2 border-t border-slate-100 p-3">
+                  <div className="flex gap-2 border-t border-slate-100 p-2">
                     <input
                       value={input}
                       onChange={(e) => setInput(e.target.value)}
                       onKeyDown={(e) => e.key === 'Enter' && sendCurrentMessage()}
                       placeholder="Write a message…"
                       maxLength={500}
-                      className="min-w-0 flex-1 rounded-xl border border-slate-200 px-3.5 py-2.5 text-sm outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
+                      className="min-w-0 flex-1 rounded-xl border border-slate-200 px-3.5 py-2 text-sm outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
                     />
-                    <button onClick={sendCurrentMessage} disabled={aiSending} className="min-h-[44px] rounded-xl bg-violet-600 px-4 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98] disabled:opacity-60">
+                    <button onClick={sendCurrentMessage} disabled={aiSending} className="min-h-[44px] rounded-xl bg-violet-600 px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98] disabled:opacity-60">
                       {aiSending ? 'Sending…' : 'Send'}
                     </button>
                   </div>
@@ -2748,8 +2705,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                     </label>
                   </div>
                   <p className="mt-2 text-xs text-slate-500">
-                    Your exact birthdate is never shown to anyone — only your age band
-                    {birthdateBand ? ` (${birthdateBand})` : ageBand ? ` (${ageBand})` : ''} is shown on your card.
+                    {`Your exact birthdate is never shown to anyone — only your age band${birthdateBand ? ` (${birthdateBand})` : ageBand ? ` (${ageBand})` : ''} is shown on your card.`}
                     {birthdateAge !== null && birthdateAge < 18 ? ' You must be 18 or older to save.' : ''}
                   </p>
                 </div>
@@ -2862,47 +2818,6 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
           )}
         </main>
       </div>
-
-      {/* Report modal */}
-      {reportChat && (
-        <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 p-4 backdrop-blur-[2px] sm:items-center">
-          <div className="w-full max-w-sm rounded-3xl bg-white p-5 shadow-xl">
-            {!reportReason ? (
-              <>
-                <h3 className="font-extrabold">Report {reportChat.name}?</h3>
-                <p className="mt-1 text-sm text-slate-500">Step 1 of 2 — pick a reason.</p>
-                <div className="mt-3 grid gap-2">
-                  {['Spam', 'Inappropriate content', 'Asking for money', 'Other'].map((r) => (
-                    <button
-                      key={r}
-                      onClick={() => setReportReason(r)}
-                      className="rounded-xl border border-slate-200 px-3 py-3 text-left text-sm font-semibold transition hover:border-red-300 hover:bg-red-50/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
-                    >
-                      {r}
-                    </button>
-                  ))}
-                </div>
-                <button onClick={() => setReportChat(null)} className="mt-3 min-h-[44px] w-full py-2 text-sm font-bold text-slate-500 hover:text-slate-700">
-                  Cancel
-                </button>
-              </>
-            ) : (
-              <>
-                <h3 className="font-extrabold">Report &amp; block?</h3>
-                <p className="mt-1 text-sm text-slate-500">
-                  Step 2 of 2 — {reportChat.name} will be blocked, this chat will be removed, and you will not be notified of each other again.
-                </p>
-                <button onClick={reportAndBlock} className="mt-4 min-h-[48px] w-full rounded-xl bg-red-600 py-3 font-bold text-white shadow-sm hover:bg-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 active:scale-[0.98]">
-                  Report &amp; block
-                </button>
-                <button onClick={() => setReportReason('')} className="mt-2 min-h-[44px] w-full py-2 text-sm font-bold text-slate-500 hover:text-slate-700">
-                  Back
-                </button>
-              </>
-            )}
-          </div>
-        </div>
-      )}
 
       {/* Voice call: remote audio plays here (audio-only, no video element). */}
       <audio ref={remoteAudioRef} autoPlay playsInline className="hidden" />
