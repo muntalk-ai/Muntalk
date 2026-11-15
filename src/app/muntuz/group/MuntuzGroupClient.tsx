@@ -6,7 +6,7 @@
 // Photos use the locked official faces; the debut-stage photo is a still
 // from the "Say Hi" MV, the episode photos are the house photos + MV stills.
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { EPISODES, GROUP_DICT, LANGS } from './groupData';
 import type { Lang } from './groupData';
 
@@ -16,6 +16,19 @@ export default function MuntuzGroupClient() {
   const [lang, setLang] = useState<Lang>('en');
   const [epFilter, setEpFilter] = useState('All');
   const [showMv, setShowMv] = useState(false);
+  const mvRef = useRef<HTMLVideoElement>(null);
+
+  // Explicit fullscreen button: the native controls' fullscreen button can
+  // be missing/disabled when the page sits in an iframe without
+  // allowfullscreen or on iOS quirks, so offer one directly.
+  const enterMvFullscreen = () => {
+    const video = mvRef.current;
+    if (!video) return;
+    const req = video.requestFullscreen();
+    // requestFullscreen() returns a promise in modern browsers; fullscreen
+    // can be denied (e.g. user gesture rules), so swallow the rejection.
+    if (req && typeof req.catch === 'function') req.catch(() => {});
+  };
 
   const t = (key: string) => GROUP_DICT[lang][key] ?? GROUP_DICT.en[key] ?? key;
 
@@ -191,16 +204,30 @@ export default function MuntuzGroupClient() {
             >
               <div className="flex items-center justify-between px-4 py-2">
                 <p className="text-sm font-bold text-white">MUNTUZ — “Say Hi”</p>
-                <button
-                  type="button"
-                  onClick={() => setShowMv(false)}
-                  aria-label="Close"
-                  className="rounded-full bg-white/10 px-3 py-1 text-sm font-bold text-white hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-                >
-                  ✕
-                </button>
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      enterMvFullscreen();
+                    }}
+                    aria-label="Fullscreen"
+                    className="rounded-full bg-white/10 px-3 py-1 text-sm font-bold text-white hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  >
+                    ⛶
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setShowMv(false)}
+                    aria-label="Close"
+                    className="rounded-full bg-white/10 px-3 py-1 text-sm font-bold text-white hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  >
+                    ✕
+                  </button>
+                </div>
               </div>
               <video
+                ref={mvRef}
                 src="/muntuz/say-hi-mv.mp4"
                 poster="/muntuz/ep-studio-stage.webp"
                 controls

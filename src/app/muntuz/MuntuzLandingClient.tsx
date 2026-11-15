@@ -199,6 +199,16 @@ const DICT: Record<Lang, Record<string, string>> = {
     "pickSoon": "The other 45 friends are on their way — start with the five house friends today.",
     "pickClose": "Close",
     "chatNow": "Start chatting",
+    "footerOurStory": "Our Story",
+    "footerHelpFaq": "Help & FAQ",
+    "footerPrivacy": "Privacy Policy",
+    "footerTerms": "Terms of Service",
+    "footerRefund": "Refund Policy",
+    "footerCookie": "Cookie Policy",
+    "aiDisclaimer": "These friends are AI, not real people.",
+    "allRightsReserved": "All rights reserved.",
+    "muntalkProject": "Muntuz — a MunTalk project.",
+    "pageTitle": "Muntuz — Meet your AI friends",
   },
   "ko": {
     "navHow": "이용 방법",
@@ -267,6 +277,16 @@ const DICT: Record<Lang, Record<string, string>> = {
     "pickSoon": "다른 45명의 친구는 준비 중이에요 — 오늘은 다섯 명의 하우스 친구부터 시작해 보세요.",
     "pickClose": "닫기",
     "chatNow": "채팅 시작하기",
+    "footerOurStory": "우리의 이야기",
+    "footerHelpFaq": "도움말 & FAQ",
+    "footerPrivacy": "개인정보처리방침",
+    "footerTerms": "이용약관",
+    "footerRefund": "환불 정책",
+    "footerCookie": "쿠키 정책",
+    "aiDisclaimer": "이 친구들은 AI이며 실제 사람이 아닙니다.",
+    "allRightsReserved": "All rights reserved.",
+    "muntalkProject": "Muntuz — MunTalk 프로젝트.",
+    "pageTitle": "Muntuz — AI 친구들을 만나보세요",
   },
   "ja": {
     "navHow": "使い方",
@@ -6666,13 +6686,13 @@ const GROUP_ORDER: { id: string; roleKey: string }[] = [
   { id: 'amara', roleKey: 'roleAmara' },
 ];
 
-const FOOTER_LINKS: { label: string; href: string }[] = [
-  { label: '👋 Our Story', href: '/about' },
-  { label: '💬 Help & FAQ', href: '/faq' },
-  { label: 'Privacy Policy', href: '/privacy' },
-  { label: 'Terms of Service', href: '/terms' },
-  { label: 'Refund Policy', href: '/refund' },
-  { label: 'Cookie Policy', href: '/cookies' },
+const FOOTER_LINKS: { emoji: string; labelKey: string; href: string }[] = [
+  { emoji: '👋', labelKey: 'footerOurStory', href: '/about' },
+  { emoji: '💬', labelKey: 'footerHelpFaq', href: '/faq' },
+  { emoji: '', labelKey: 'footerPrivacy', href: '/privacy' },
+  { emoji: '', labelKey: 'footerTerms', href: '/terms' },
+  { emoji: '', labelKey: 'footerRefund', href: '/refund' },
+  { emoji: '', labelKey: 'footerCookie', href: '/cookies' },
 ];
 
 type FormStatus = 'idle' | 'loading' | 'done' | 'soon' | 'invalid';
@@ -6745,6 +6765,7 @@ export default function MuntuzLandingClient() {
   useEffect(() => {
     document.documentElement.lang = lang;
     document.documentElement.dir = RTL_LANGS.has(lang) ? 'rtl' : 'ltr';
+    document.title = t('pageTitle');
     // The prototype stops the song when the UI language changes.
     songAudioRef.current?.pause();
     setSongPlaying(false);
@@ -7003,9 +7024,11 @@ export default function MuntuzLandingClient() {
               onClick={openPick}
               className="rounded-full bg-[#FF6A4D] px-[30px] py-[15px] text-[17.5px] font-extrabold text-white shadow-lg hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E7C66]"
             >
-              {t('cta')}
+              {user ? t('chatNow') : t('cta')}
             </button>
-            <span className="text-sm font-semibold text-[#5D6C63]">{t('note')}</span>
+            {!user && (
+              <span className="text-sm font-semibold text-[#5D6C63]">{t('note')}</span>
+            )}
           </div>
         </div>
         <div className="mx-auto max-w-[1180px] px-5">
@@ -7364,7 +7387,7 @@ export default function MuntuzLandingClient() {
           onClick={openPick}
           className="mt-7 rounded-full bg-[#FF6A4D] px-[30px] py-[15px] text-[17.5px] font-extrabold text-white shadow-lg hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E7C66]"
         >
-          {t('cta')}
+          {user ? t('chatNow') : t('cta')}
         </button>
       </div>
 
@@ -7397,19 +7420,20 @@ export default function MuntuzLandingClient() {
                 href={l.href}
                 className="text-xs font-bold text-[#0E7C66] no-underline hover:underline"
               >
-                {l.label}
+                {l.emoji ? `${l.emoji} ` : ''}
+                {t(l.labelKey)}
               </a>
             ))}
           </nav>
           <p className="mt-4 text-center text-xs leading-relaxed text-[#5D6C63]">
-            These friends are AI, not real people.
+            {t('aiDisclaimer')}
           </p>
           <div className="mt-7 flex flex-wrap justify-between gap-[18px] text-sm text-[#5D6C63]">
             <span>{t('rights')}</span>
             <span>{t('multi')}</span>
           </div>
           <p className="mt-3 text-center text-[11px] leading-relaxed text-[#5D6C63]">
-            &copy; {new Date().getFullYear()} Muntuz. All rights reserved. |
+            &copy; {new Date().getFullYear()} Muntuz. {t('allRightsReserved')} |
             British Columbia, Canada |{' '}
             <a
               href="mailto:muntuz.official@gmail.com"
@@ -7419,7 +7443,7 @@ export default function MuntuzLandingClient() {
             </a>
           </p>
           <p className="mt-1 text-center text-[11px] text-[#5D6C63]">
-            Muntuz — a MunTalk project.
+            {t('muntalkProject')}
           </p>
         </div>
       </footer>
