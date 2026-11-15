@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { addDoc, collection, doc, getDoc, getDocs, limit, query, serverTimestamp, setDoc, updateDoc, where } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
+import { signOut } from 'firebase/auth';
+import { auth, db } from '@/lib/firebase';
 import { apiFetch } from '@/lib/apiClient';
 import { AI_PARTNERS, AI_DISCLOSURE, type AiPartner } from '@/lib/exchangeAiPartners';
 import {
@@ -343,6 +344,10 @@ export default function ExchangePage() {
   const [billing, setBilling] = useState<'monthly' | 'yearly'>('yearly');
   const [reportChat, setReportChat] = useState<Chat | null>(null);
   const [reportReason, setReportReason] = useState('');
+  // Guest trial (5 minutes, no sign-in — see requireChatAccess).
+  const [guestTrial, setGuestTrial] = useState<GuestTrial | null>(null);
+  const [trialLeftMs, setTrialLeftMs] = useState<number | null>(null);
+  const [showTrialExpired, setShowTrialExpired] = useState(false);
 
   // Photo lightbox — tap a partner avatar or gallery photo to see the
   // original high-resolution file. `images` enables prev/next inside a
@@ -1055,18 +1060,95 @@ export default function ExchangePage() {
     }
   };
 
-  // Chat needs sign-in (Jay, 2026-11-06): the lounge stays browsable
-  // logged-out, but opening an AI chat or sending an AI message sends
-  // the user to login first (and back to Exchange after). Returns true
-  // when the user is signed in.
-  const requireChatLogin = (): boolean => {
+  // ── Guest trial (5 minutes, no sign-in) ──────────────────────────
+  // A first-time visitor can chat with an AI partner for 5 minutes
+  // from their first guest message. After that, sign-in is required
+  // to keep chatting (the free tier continues after sign-up).
+  // Anti-repeat is soft on purpose: the trial record lives in
+  // localStorage keyed by a stable device id, and the server enforces
+  // the same 5-minute window per device id (Firestore `guest_trials`).
+  // IP is NOT used as an identity — it only feeds the existing
+  // per-IP rate limits, because carrier NAT shares IPs across people
+  // and mobile IPs rotate.
+  const GUEST_TRIAL_MS = 5 * 60 * 1000;
+  const GUEST_TRIAL_KEY = 'muntuz_guest_trial';
+  const DEVICE_ID_KEY = 'muntuz_device_id';
+
+  type GuestTrial = { deviceId: string; startedAt: number };
+
+  function getDeviceId(): string {
+    if (typeof window === 'undefined') return '';
+    try {
+      let id = window.localStorage.getItem(DEVICE_ID_KEY);
+      if (!id) {
+        id = window.crypto?.randomUUID
+          ? window.crypto.randomUUID()
+          : `dev-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+        window.localStorage.setItem(DEVICE_ID_KEY, id);
+      }
+      return id;
+    } catch {
+      return '';
+    }
+  }
+
+  function readGuestTrial(): GuestTrial | null {
+    if (typeof window === 'undefined') return null;
+    try {
+      const raw = window.localStorage.getItem(GUEST_TRIAL_KEY);
+      if (!raw) return null;
+      const t = JSON.parse(raw) as GuestTrial;
+      if (typeof t?.startedAt !== 'number' || typeof t?.deviceId !== 'string') return null;
+      return t;
+    } catch {
+      return null;
+    }
+  }
+
+  function writeGuestTrial(t: GuestTrial) {
+    try {
+      window.localStorage.setItem(GUEST_TRIAL_KEY, JSON.stringify(t));
+    } catch {
+      // Private mode: the trial lives in memory only for this session.
+    }
+  }
+
+  // Chat access: signed-in users always pass. Guests get one 5-minute
+  // trial from their first guest message; after it expires they are
+  // sent to sign-up (the free tier continues after sign-up). Returns
+  // true when the caller may proceed. Opening a chat does not start
+  // the trial — only the first guest message does.
+  const requireChatAccess = (): boolean => {
     if (user) return true;
-    router.push('/login?next=/exchange');
-    return false;
+    const now = Date.now();
+    const existing = guestTrial ?? readGuestTrial();
+    if (existing && now - existing.startedAt < GUEST_TRIAL_MS) return true;
+    if (existing) {
+      // Trial used up.
+      setShowTrialExpired(true);
+      return false;
+    }
+    // First guest chat message: start the trial.
+    const trial: GuestTrial = { deviceId: getDeviceId(), startedAt: now };
+    writeGuestTrial(trial);
+    setGuestTrial(trial);
+    return true;
+  };
+
+  // Sign out from the header indicator (also lets the user test the
+  // guest trial). The page re-renders as a guest; chats stay in
+  // browser state for this session.
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+      setActiveChatId(null);
+      showToast('Signed out. You are browsing as a guest.');
+    } catch {
+      showToast('Could not sign out. Please try again.');
+    }
   };
 
   const startAiChat = (p: AiPartner) => {
-    if (!requireChatLogin()) return;
     const gid = msgSeq++;
     setChats((cs) =>
       cs.some((c) => c.id === p.id)
@@ -1107,6 +1189,31 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
 
   const activeChat = chats.find((c) => c.id === activeChatId) || null;
 
+  // Load any earlier guest trial once (localStorage is client-only, so
+  // this runs after mount to avoid a hydration mismatch).
+  useEffect(() => {
+    setGuestTrial(readGuestTrial());
+  }, []);
+
+  // Guest trial countdown: ticks once a second while a guest trial is
+  // active. At zero the sign-up prompt opens if an AI chat is on
+  // screen; otherwise it opens on the next send attempt.
+  useEffect(() => {
+    if (user || !guestTrial) {
+      setTrialLeftMs(null);
+      return;
+    }
+    const tick = () => {
+      const left = guestTrial.startedAt + GUEST_TRIAL_MS - Date.now();
+      setTrialLeftMs(Math.max(0, left));
+      if (left <= 0 && activeChat?.isAi) setShowTrialExpired(true);
+    };
+    tick();
+    const iv = window.setInterval(tick, 1000);
+    return () => window.clearInterval(iv);
+    // eslint-disable-next-line react-hooks/exhaustive-deps — tick on trial/user/chat change only.
+  }, [user, guestTrial, activeChatId]);
+
   // ── Chats list: search + filter chips (HelloTalk list layout, MunTalk style)
   const [chatQuery, setChatQuery] = useState('');
   type ChatFilter = 'all' | 'online' | 'unread' | 'myturn' | 'proximity';
@@ -1120,7 +1227,6 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
     if (last) setSeenMsgId((s) => ({ ...s, [c.id]: Math.max(s[c.id] ?? 0, last.id) }));
   };
   const openChat = (c: Chat) => {
-    if (c.isAi && !requireChatLogin()) return;
     markChatSeen(c);
     setReview(null);
     setActiveChatId(c.id);
@@ -1170,7 +1276,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
   const latestReview = reviewItems[0] ?? null;
 
   const sendAiMessage = async () => {
-    if (!requireChatLogin()) return;
+    if (!requireChatAccess()) return;
     const text = input.trim();
     if (!text || !activeChat || !activeChat.isAi || aiSending) return;
     if (CONTACT_GUARD.test(text)) {
@@ -1201,10 +1307,18 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
       const res = await fetch('/api/exchange-ai-chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ partnerId: activeChat.partnerId, message: text, history, sentPhotos, turnsSincePhoto, memory: memoryRef.current[activeChat.partnerId] || undefined }),
+        body: JSON.stringify({ partnerId: activeChat.partnerId, message: text, history, sentPhotos, turnsSincePhoto, memory: memoryRef.current[activeChat.partnerId] || undefined, deviceId: getDeviceId() || undefined }),
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(typeof data.error === 'string' ? data.error : 'AI reply failed');
+      if (!res.ok) {
+        // Server-side trial expiry (e.g. localStorage was cleared): open
+        // the sign-up prompt instead of a generic error toast.
+        if (data.error === 'trial_expired') {
+          setShowTrialExpired(true);
+          return;
+        }
+        throw new Error(typeof data.error === 'string' ? data.error : 'AI reply failed');
+      }
       const rid = msgSeq++;
       const reply = typeof data.text === 'string' && data.text ? data.text : 'Sorry, I could not reply just now.';
       // Only accept a photo that is actually in this partner's gallery —
@@ -1620,6 +1734,24 @@ Pilot — AI rooms are the main experience; People room is a waitlist
               Log in
             </a>
           )}
+          {/* Signed-in indicator: name + green dot + Log out. Without
+              this, a signed-in user cannot tell their login state —
+              the header showed nothing at all when signed in. */}
+          {!authLoading && user && (
+            <span className="ml-auto flex items-center gap-2">
+              <span className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-700 ring-1 ring-emerald-200">
+                <span className="inline-block h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
+                {user.displayName || user.email?.split('@')[0] || 'Learner'} · Signed in
+              </span>
+              <button
+                type="button"
+                onClick={() => void handleSignOut()}
+                className="rounded-full border border-slate-200 px-3 py-1.5 text-xs font-bold text-slate-600 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+              >
+                Log out
+              </button>
+            </span>
+          )}
         </div>
       </header>
 
@@ -1694,6 +1826,11 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                   <p className="mt-3 text-sm text-slate-500">
                     {AI_PARTNERS.length} AI practice partners — no language filter. Pick anyone and practice in any language. They are always online — start a chat and get a real AI reply.
                   </p>
+                  {!user && !authLoading && (
+                    <p className="mt-2 text-sm font-semibold text-violet-700">
+                      No sign-in needed to try — chat free for 5 minutes, then sign up to keep going free.
+                    </p>
+                  )}
                   <div className="mt-4 grid gap-4 sm:grid-cols-2">
                     {AI_PARTNERS.map((p) => (
                       <article key={p.id} className="rounded-2xl border border-amber-100 bg-white p-4 shadow-sm transition-shadow hover:shadow-md sm:p-5">
@@ -2131,6 +2268,13 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                       🤖 {AI_DISCLOSURE}
                     </div>
                   )}
+                  {activeChat.isAi && !user && (
+                    <div className="border-b border-amber-100 bg-amber-50 px-4 py-2 text-xs font-bold text-amber-800">
+                      {guestTrial && trialLeftMs !== null && trialLeftMs > 0
+                        ? `⏱️ Free trial ${Math.floor(trialLeftMs / 60000)}:${String(Math.floor((trialLeftMs % 60000) / 1000)).padStart(2, '0')} left — sign up to keep chatting free.`
+                        : '💬 Try free for 5 minutes, no sign-in — the trial starts with your first message.'}
+                    </div>
+                  )}
                   <div className="flex flex-col gap-3 p-4">
                     {activeChat.messages.map((m) => (
                       <div key={m.id} className={`flex items-start gap-2 ${m.from === 'me' ? 'justify-end' : 'justify-start'}`}>
@@ -2242,6 +2386,32 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                 </div>
               )}
             </section>
+          )}
+
+          {/* Guest trial ended: sign up to keep chatting (free). The
+              conversation stays in browser state, so it picks up
+              where it left off after sign-in. */}
+          {showTrialExpired && (
+            <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 p-4 sm:items-center" role="dialog" aria-modal="true" aria-label="Free trial ended">
+              <div className="w-full max-w-sm rounded-3xl bg-white p-5 shadow-xl">
+                <h3 className="text-lg font-extrabold">Your 5-minute free trial ended</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                  Sign up to keep chatting — it is free, and this conversation picks up where it left off.
+                </p>
+                <button
+                  onClick={() => router.push('/login?next=/exchange')}
+                  className="mt-4 w-full rounded-xl bg-violet-600 py-3 font-bold text-white hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+                >
+                  Sign up and keep chatting
+                </button>
+                <button
+                  onClick={() => setShowTrialExpired(false)}
+                  className="mt-2 w-full rounded-xl border border-slate-200 py-3 font-bold text-slate-600 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+                >
+                  Later
+                </button>
+              </div>
+            </div>
           )}
 
           {tab === 'review' && (
