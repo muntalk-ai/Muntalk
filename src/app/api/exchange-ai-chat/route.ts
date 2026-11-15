@@ -48,6 +48,8 @@ import {
 // - partner must be one of the 50 AI partners (server-side list)
 // - user message max 500 chars; history max 20 turns (client-sent, re-capped)
 // - one Gemini call per request; response capped at 600 output tokens
+//   (1,200 on muntuz.com — S-1 fix; a MAX_TOKENS cut there is retried
+//   once at 2,400 instead of being served as a complete reply)
 // - the natural-expression correction rides the same reply call: the
 //   model MUST end every reply with one `💡 Natural:` line (writing
 //   `none` when the learner's message is already natural), and the
@@ -80,6 +82,19 @@ const MODELS = (process.env.GEMINI_MODEL || 'gemini-3.8-flash,gemini-2.5-flash')
   .split(',')
   .map((m) => m.trim())
   .filter(Boolean);
+
+// Host check, same rule as src/middleware.ts: muntuz.com /
+// www.muntuz.com only. Vercel sets x-forwarded-host to the real domain;
+// a plain Host header works everywhere else. Preview deployments on
+// *.vercel.app are NOT Muntuz hosts, so they run the legacy behaviour.
+function isMuntuzHost(req: NextRequest): boolean {
+  const rawHost =
+    req.headers.get('x-forwarded-host') ??
+    req.headers.get('host') ??
+    req.nextUrl.hostname;
+  const hostname = rawHost.split(',')[0].trim().split(':')[0].toLowerCase();
+  return hostname === 'muntuz.com' || hostname === 'www.muntuz.com';
+}
 
 // Guest trial: 5 minutes from the first guest message, per device id.
 const GUEST_TRIAL_MS = 5 * 60 * 1000;
@@ -301,7 +316,11 @@ function parseHistory(raw: unknown): Turn[] {
 // shows the empty/example state until then.
 const MEMORY_SUMMARY_PROMPT = `You are summarizing a language-practice chat to help an AI partner remember this learner in later chats. Extract ONLY stable personal facts about the learner (what they go by, interests, learning goals, home city or country, job or study, plans, things they like). Output 0-10 short lines, one fact per line, no greeting, no commentary, no numbering. Never include real names, email addresses, phone numbers, street addresses, or passwords. If nothing stable was shared, output exactly: NOTHING.`;
 
-async function generateShortText(prompt: string, maxOutputTokens: number): Promise<string | null> {
+async function generateShortText(
+  prompt: string,
+  maxOutputTokens: number,
+  noThinking = false
+): Promise<string | null> {
   const apiKey = process.env.GEMINI_API_KEY || '';
   if (!apiKey) return null;
   for (const model of MODELS) {
@@ -317,7 +336,10 @@ async function generateShortText(prompt: string, maxOutputTokens: number): Promi
             generationConfig: {
               temperature: 0,
               maxOutputTokens,
-              ...(model.includes('2.5-flash') ? { thinkingConfig: { thinkingBudget: 0 } } : {}),
+              // S-1: hidden thinking tokens eat the same output budget.
+              // On Muntuz, disable thinking for every model, not just
+              // 2.5-flash; other hosts keep the old behaviour.
+              ...(noThinking || model.includes('2.5-flash') ? { thinkingConfig: { thinkingBudget: 0 } } : {}),
             },
           }),
         },
@@ -337,8 +359,8 @@ async function generateShortText(prompt: string, maxOutputTokens: number): Promi
   return null;
 }
 
-async function generateSummaryText(prompt: string): Promise<string | null> {
-  return generateShortText(prompt, 300);
+async function generateSummaryText(prompt: string, noThinking = false): Promise<string | null> {
+  return generateShortText(prompt, 300, noThinking);
 }
 
 // ── Session review ────────────────────────────────────────────────────
@@ -434,7 +456,7 @@ async function handleSessionReview(req: NextRequest, body: Record<string, unknow
       `${REVIEW_PROMPT}${nativeLang}.\n\n` +
       (correctionLines ? `Corrections already made in this chat:\n${correctionLines}\n\n` : '') +
       `Chat transcript (last turns):\n${transcript}`;
-    const raw = await generateShortText(prompt, 250);
+    const raw = await generateShortText(prompt, 250, isMuntuzHost(req));
     if (!raw) return NextResponse.json({ ok: true, reviewed: false });
     const parsed = parseReviewJson(raw);
     if (!parsed) return NextResponse.json({ ok: true, reviewed: false });
@@ -514,7 +536,10 @@ async function handleSaveMemory(req: NextRequest, body: Record<string, unknown>)
 
   try {
     const transcript = history.map((t) => `${t.role === 'user' ? 'Learner' : 'AI partner'}: ${t.text}`).join('\n');
-    const summary = await generateSummaryText(`${MEMORY_SUMMARY_PROMPT}\n\nChat transcript:\n${transcript}`);
+    const summary = await generateSummaryText(
+      `${MEMORY_SUMMARY_PROMPT}\n\nChat transcript:\n${transcript}`,
+      isMuntuzHost(req)
+    );
     if (!summary || /^NOTHING\.?$/i.test(summary.trim())) {
       return NextResponse.json({ ok: true, saved: false });
     }
@@ -573,6 +598,98 @@ async function handleClearMemory(req: NextRequest, body: Record<string, unknown>
   }
 }
 
+// ── Chat reply call (S-1) ───────────────────────────────────────────────
+// One Gemini generateContent call per user message. On Muntuz hosts the
+// call runs with a bigger output budget and thinking disabled for every
+// model, and a MAX_TOKENS cut is retried once instead of being served
+// as a complete reply. Other hosts keep the old behaviour unchanged.
+//
+// Why: the old code capped output at 600 tokens and set
+// thinkingBudget: 0 only for models named *2.5-flash* — the first-tried
+// gemini-3.8-flash got none, so hidden thinking tokens could eat the
+// budget and leave ~40-50 chars of visible reply. It also never read
+// finishReason or usageMetadata, so a MAX_TOKENS cut reached the client
+// looking like a normal complete reply.
+const CHAT_MAX_OUTPUT_TOKENS = 1200;
+const CHAT_MAX_OUTPUT_TOKENS_RETRY = 2400;
+
+type GeminiUsage = {
+  promptTokenCount?: number;
+  candidatesTokenCount?: number;
+  thoughtsTokenCount?: number;
+  totalTokenCount?: number;
+};
+
+type GeminiChatResult =
+  | {
+      ok: true;
+      text: string;
+      finishReason?: string;
+      usage?: GeminiUsage;
+    }
+  | { ok: false; status: number; body: unknown };
+
+async function callGeminiChat(
+  model: string,
+  prompt: string,
+  maxOutputTokens: number,
+  noThinking: boolean
+): Promise<GeminiChatResult> {
+  const apiKey = process.env.GEMINI_API_KEY || '';
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+  const res = await fetchWithTimeout(
+    url,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: prompt }] }],
+        generationConfig: {
+          temperature: 0.7,
+          maxOutputTokens,
+          ...(noThinking || model.includes('2.5-flash') ? { thinkingConfig: { thinkingBudget: 0 } } : {}),
+        },
+      }),
+    },
+    30000
+  );
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({}));
+    return { ok: false, status: res.status, body };
+  }
+  const data = await res.json();
+  const text = (data?.candidates?.[0]?.content?.parts ?? [])
+    .map((p: { text?: string }) => p?.text ?? '')
+    .join('')
+    .trim();
+  return {
+    ok: true,
+    text,
+    finishReason:
+      typeof data?.candidates?.[0]?.finishReason === 'string'
+        ? (data.candidates[0].finishReason as string)
+        : undefined,
+    usage: (data?.usageMetadata ?? undefined) as GeminiUsage | undefined,
+  };
+}
+
+function logChatUsage(model: string, result: Extract<GeminiChatResult, { ok: true }>, attempt: string): void {
+  console.log(
+    `[exchange-ai-chat] ${model} ${attempt} finishReason=${result.finishReason ?? '?'} usage=${JSON.stringify(result.usage ?? {})}`
+  );
+}
+
+type ChatReply = { text: string; photo?: string; correction?: string; truncated?: boolean };
+
+function buildChatReply(text: string, photoUrl: string | null, truncated: boolean): ChatReply {
+  const parsed = extractCorrection(text);
+  const reply: ChatReply = { text: parsed.text.slice(0, 2000) };
+  if (photoUrl) reply.photo = photoUrl;
+  if (parsed.correction) reply.correction = parsed.correction;
+  if (truncated) reply.truncated = true;
+  return reply;
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -616,8 +733,9 @@ export async function POST(req: NextRequest) {
 
     // Hourly + daily caps: one user burning tokens in a burst is bounded
     // even when they stay under the per-minute rate. Per-call tokens are
-    // already bounded (message ≤500 chars, output ≤600 tokens), so these
-    // call caps bound token spend too.
+    // already bounded (message ≤500 chars, output ≤600 tokens — ≤1,200 on
+    // muntuz.com, ≤2,400 on a MAX_TOKENS retry), so these call caps bound
+    // token spend too.
     const identityKey = id ? `uid:${id.uid}` : `ip:${clientIp(req)}`;
     const hourlyRl = checkRateLimit(`exchange-ai-hourly:${identityKey}`, HOURLY_CAP_EXCHANGE_CHAT, 3_600_000);
     if (!hourlyRl.ok) return apiError('Too many AI messages this hour — please try again later', 429, { retryAfterSec: hourlyRl.retryAfterSec });
@@ -707,45 +825,53 @@ export async function POST(req: NextRequest) {
 
     const prompt = `${SYSTEM_PROMPT}\n\n${persona}${memoryContext}${photoContext}\n\nConversation so far:\n${transcript}`;
 
+    // S-1 fix (Muntuz hosts only — see callGeminiChat): bigger output
+    // budget, no thinking tokens for any model, and a MAX_TOKENS cut is
+    // retried once with a larger budget instead of being served as a
+    // complete reply. Other hosts keep the old 600-token behaviour.
+    const isMuntuz = isMuntuzHost(req);
+    const chatMaxTokens = isMuntuz ? CHAT_MAX_OUTPUT_TOKENS : 600;
     for (const model of MODELS) {
       try {
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-        const res = await fetchWithTimeout(
-          url,
-          {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              contents: [{ parts: [{ text: prompt }] }],
-              generationConfig: {
-                temperature: 0.7,
-                maxOutputTokens: 600,
-                ...(model.includes('2.5-flash') ? { thinkingConfig: { thinkingBudget: 0 } } : {}),
-              },
-            }),
-          },
-          30000
-        );
-        if (res.ok) {
-          const data = await res.json();
-          const text = (data?.candidates?.[0]?.content?.parts ?? [])
-            .map((p: { text?: string }) => p?.text ?? '')
-            .join('')
-            .trim();
-          if (text) {
-            const parsed = extractCorrection(text);
-            const reply: { text: string; photo?: string; correction?: string } = { text: parsed.text.slice(0, 2000) };
-            if (photoPick) reply.photo = photoPick.url;
-            if (parsed.correction) reply.correction = parsed.correction;
-            return NextResponse.json(reply);
+        const result = await callGeminiChat(model, prompt, chatMaxTokens, isMuntuz);
+        // NOTE: explicit `=== false` — this repo runs tsc with
+        // strictNullChecks off, under which `if (!result.ok)` does NOT
+        // narrow the discriminated union (verified 2026-11-15).
+        if (result.ok === false) {
+          console.warn(`[exchange-ai-chat] ${model} failed: ${result.status}`, result.body);
+          if (result.status === 400 || result.status === 403) {
+            return NextResponse.json({ error: 'AI chat is temporarily unavailable' }, { status: 500 });
           }
-          return NextResponse.json({ error: 'Empty AI reply — please try again' }, { status: 502 });
+          continue;
         }
-        const errData = await res.json().catch(() => ({}));
-        console.warn(`[exchange-ai-chat] ${model} failed: ${res.status}`, errData);
-        if (res.status === 400 || res.status === 403) {
-          return NextResponse.json({ error: 'AI chat is temporarily unavailable' }, { status: 500 });
+        logChatUsage(model, result, 'attempt=1');
+        if (result.text) {
+          if (isMuntuz && result.finishReason === 'MAX_TOKENS') {
+            // The reply was cut by the token cap: retry once with a
+            // larger budget instead of serving the cut text as complete.
+            try {
+              const retry = await callGeminiChat(model, prompt, CHAT_MAX_OUTPUT_TOKENS_RETRY, true);
+              if (retry.ok === true) {
+                logChatUsage(model, retry, 'attempt=2');
+                if (retry.text) {
+                  return NextResponse.json(
+                    buildChatReply(retry.text, photoPick ? photoPick.url : null, retry.finishReason === 'MAX_TOKENS')
+                  );
+                }
+              } else {
+                console.warn(`[exchange-ai-chat] ${model} retry failed: ${retry.status}`, retry.body);
+              }
+            } catch (retryErr) {
+              console.error(`[exchange-ai-chat] ${model} retry exception:`, (retryErr as Error).message);
+            }
+            // Retry failed, empty, or still cut: return the first reply
+            // but flag it, so the client never mistakes a cut reply
+            // for a complete one.
+            return NextResponse.json(buildChatReply(result.text, photoPick ? photoPick.url : null, true));
+          }
+          return NextResponse.json(buildChatReply(result.text, photoPick ? photoPick.url : null, false));
         }
+        return NextResponse.json({ error: 'Empty AI reply — please try again' }, { status: 502 });
       } catch (e) {
         console.error(`[exchange-ai-chat] ${model} exception:`, (e as Error).message);
       }
