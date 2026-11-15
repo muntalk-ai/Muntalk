@@ -137,7 +137,30 @@ const DICT: Record<Lang, Record<string, string>> = {
     "hookMission": "Learn the hook, then sing it back — that's the whole first mission.",
     "debutRoles": "Emily — main vocal · Jiyoung — leader · Chloe — rapper & lyricist · Sofia — main dancer · Amara — sub-vocal",
     "fandomLabel": "Fandom name",
-    "fandomText": "“Roomies” is the leading proposal — not final yet. The official name lands before the debut stage."
+    "fandomText": "“Roomies” is the leading proposal — not final yet. The official name lands before the debut stage.",
+    "debutJust": "Just debuted — our first single “Say Hi” is out!",
+    "epKicker": "Life in the house",
+    "epTitle": "Dorm episodes — living, practicing, debuting together",
+    "epSub": "Little moments from the house — the nights, the kitchen, the practice room. New episodes land here as the story grows.",
+    "epFilterAll": "All",
+    "epAllTag": "All five",
+    "epMoreNote": "More episodes are on the way — the house keeps living, and the story keeps growing.",
+    "ep1Title": "The night before debut",
+    "ep1Text": "Nobody could sleep. Five mugs, one last run-through of the fan chant, and Jiyoung's pep talk: 'We don't need perfect. We just need to try.' — the line that ended up in the song.",
+    "ep2Title": "Midnight kimbap",
+    "ep2Text": "Jiyoung's mom's kimbap, made at midnight for the members before the first recording. The recipe is a house secret — the taste is not.",
+    "ep3Title": "The life latte",
+    "ep3Text": "Emily found her life latte in an alley café — and the chorus hook was born on the walk home. 'Say it in your language' started as a joke over coffee.",
+    "ep4Title": "Salsa in the kitchen",
+    "ep4Text": "Pasta night turned into choreography practice. Sofia stirs the sauce with one hand and counts the point-choreo beat with the other.",
+    "ep5Title": "Lyrics in the margins",
+    "ep5Text": "Chloe writes the bridge in the margins of her notebook — every crossed-out line is a verse that didn't make it. The bridge that survived is Emily's Korean one.",
+    "ep6Title": "Sunrise run",
+    "ep6Text": "Amara runs at sunrise before practice — the house is still quiet, the city is waking up, and by the time she's back, the playlist is already on.",
+    "ep7Title": "First fan chant, live in the plaza",
+    "ep7Text": "The first time all five shouted the fan chant together in the plaza — M! U! N! T! U! Z! Say hi! The fountain was the only audience, and it was enough.",
+    "ep8Title": "Kitchen takeover",
+    "ep8Text": "Sofia took over the kitchen, Amara chopped, Chloe taste-tested, Emily set the table, Jiyoung supervised. Dinner was late. Nobody minded."
   },
   "ko": {
     "navHouse": "하우스",
@@ -240,7 +263,30 @@ const DICT: Record<Lang, Record<string, string>> = {
     "hookMission": "후크를 먼저 배우고, 따라 부르는 것 — 그게 첫 번째 미션이에요.",
     "debutRoles": "Emily — 메인 보컬 · 지영 — 리더 · Chloe — 래퍼 & 작사 · Sofia — 메인 댄서 · Amara — 서브 보컬",
     "fandomLabel": "팬덤명",
-    "fandomText": "“Roomies”는 현재 유력한 제안 — 아직 확정은 아니에요. 공식 이름은 데뷔 무대 전에 공개됩니다."
+    "fandomText": "“Roomies”는 현재 유력한 제안 — 아직 확정은 아니에요. 공식 이름은 데뷔 무대 전에 공개됩니다.",
+    "debutJust": "막 데뷔했어요 — 첫 싱글 “Say Hi”가 나왔어요!",
+    "epKicker": "집에서의 생활",
+    "epTitle": "합숙 에피소드 — 함께 살고, 연습하고, 데뷔하기까지",
+    "epSub": "집에서 생긴 작은 순간들 — 밤, 부엌, 연습실. 이야기가 자랄수록 새 에피소드가 여기에 올라와요.",
+    "epFilterAll": "전체",
+    "epAllTag": "다섯 명 모두",
+    "epMoreNote": "더 많은 에피소드가 올 거예요 — 집은 계속 살아가고, 이야기는 계속 자라니까요.",
+    "ep1Title": "데뷔 전날 밤",
+    "ep1Text": "아무도 잠을 못 잤어요. 다섯 잔의 차, 팬챈트 마지막 연습, 그리고 지영의 한마디 — '완벽할 필요 없어. 그냥 해보자.' 그 말이 결국 노래 가사가 됐어요.",
+    "ep2Title": "한밤의 김밥",
+    "ep2Text": "첫 녹음 전날 밤, 지영이 엄마 레시피대로 멤버들을 위해 싼 김밥. 레시피는 집안의 비밀, 맛은 비밀이 아니에요.",
+    "ep3Title": "인생 라떼",
+    "ep3Text": "Emily가 골목 카페에서 인생 라떼를 찾았어요. 후크는 집으로 돌아오는 길에 태어났죠. '말해봐, 너의 언어로'는 커피 한 잔 위의 농담에서 시작됐어요.",
+    "ep4Title": "부엌에서 살사",
+    "ep4Text": "파스타를 끓이다 안무 연습이 됐어요. Sofia는 한 손으로 소스를 저으면서 다른 한 손으로 포인트 안무 박자를 세요.",
+    "ep5Title": "여백에 쓴 가사",
+    "ep5Text": "Chloe는 노트 여백에 브릿지를 써요. 지워진 줄마다 탈락한 가사가 있죠. 살아남은 브릿지는 Emily의 한국어 파트예요.",
+    "ep6Title": "일출 러닝",
+    "ep6Text": "Amara는 연습 전 일출 러닝을 해요. 집은 아직 조용하고, 도시가 깨어나는 시간. 돌아오면 플레이리스트는 이미 켜져 있어요.",
+    "ep7Title": "첫 팬챈트, 광장 무대에서",
+    "ep7Text": "다섯 명이 처음으로 광장에서 함께 팬챈트를 외친 날 — M! U! N! T! U! Z! Say hi! 관객은 분수뿐이었지만, 그걸로 충분했어요.",
+    "ep8Title": "부엌 점령",
+    "ep8Text": "Sofia가 부엌을 접수하고, Amara가 썰고, Chloe가 간을 보고, Emily가 상을 차리고, 지영이 감독했어요. 저녁은 늦어졌지만 아무도 신경 쓰지 않았어요."
   },
   "ja": {
     "navHouse": "ザ・ハウス",
@@ -343,7 +389,14 @@ const DICT: Record<Lang, Record<string, string>> = {
     "hookMission": "フックを覚えて歌い返す — それが最初のミッションです。",
     "debutRoles": "Emily — メインボーカル · ジヨン — リーダー · Chloe — ラッパー＆作詞 · Sofia — メインダンサー · Amara — サブボーカル",
     "fandomLabel": "ファンダム名",
-    "fandomText": "「Roomies」は有力な候補 — まだ決定ではありません。正式名称はデビューステージ前に発表されます。"
+    "fandomText": "「Roomies」は有力な候補 — まだ決定ではありません。正式名称はデビューステージ前に発表されます。",
+    "debutJust": "デビューしたばかり — ファーストシングル「Say Hi」発売！",
+    "epKicker": "ハウスでの生活",
+    "epTitle": "合宿エピソード — 一緒に暮らし、練習し、デビューするまで",
+    "epSub": "ハウスで生まれた小さな瞬間 — 夜、キッチン、練習室。物語が育つにつれて新しいエピソードがここに追加されます。",
+    "epFilterAll": "すべて",
+    "epAllTag": "5人全員",
+    "epMoreNote": "さらにエピソードが続きます — ハウスの生活は続き、物語は育ちます。"
   },
   "es": {
     "navHouse": "La casa",
@@ -446,7 +499,14 @@ const DICT: Record<Lang, Record<string, string>> = {
     "hookMission": "Aprende el gancho y cántalo de vuelta: esa es toda la primera misión.",
     "debutRoles": "Emily — vocalista principal · Jiyoung — líder · Chloe — rapera y letrista · Sofia — bailarina principal · Amara — vocalista secundaria",
     "fandomLabel": "Nombre del fandom",
-    "fandomText": "“Roomies” es la propuesta principal, aún no es definitiva. El nombre oficial llegará antes del escenario debut."
+    "fandomText": "“Roomies” es la propuesta principal, aún no es definitiva. El nombre oficial llegará antes del escenario debut.",
+    "debutJust": "¡Recién debutadas — nuestro primer sencillo “Say Hi” ya está aquí!",
+    "epKicker": "La vida en la casa",
+    "epTitle": "Episodios de convivencia — vivir, ensayar y debutar juntas",
+    "epSub": "Pequeños momentos de la casa: las noches, la cocina, la sala de ensayo. Nuevos episodios llegarán aquí a medida que crezca la historia.",
+    "epFilterAll": "Todas",
+    "epAllTag": "Las cinco",
+    "epMoreNote": "Más episodios están en camino: la casa sigue viviendo y la historia sigue creciendo."
   },
   "fr": {
     "navHouse": "La maison",
@@ -549,7 +609,14 @@ const DICT: Record<Lang, Record<string, string>> = {
     "hookMission": "Apprends le refrain, puis chante-le en retour — c'est toute la première mission.",
     "debutRoles": "Emily — voix principale · Jiyoung — leader · Chloe — rappeuse & parolière · Sofia — danseuse principale · Amara — voix secondaire",
     "fandomLabel": "Nom du fandom",
-    "fandomText": "« Roomies » est la proposition en tête — pas encore définitive. Le nom officiel arrivera avant la scène des débuts."
+    "fandomText": "« Roomies » est la proposition en tête — pas encore définitive. Le nom officiel arrivera avant la scène des débuts.",
+    "debutJust": "Tout juste débuté — notre premier single « Say Hi » est sorti !",
+    "epKicker": "La vie dans la maison",
+    "epTitle": "Épisodes de colocation — vivre, répéter et débuter ensemble",
+    "epSub": "Petits moments de la maison — les nuits, la cuisine, la salle de répétition. De nouveaux épisodes arriveront ici à mesure que l'histoire grandit.",
+    "epFilterAll": "Toutes",
+    "epAllTag": "Les cinq",
+    "epMoreNote": "D'autres épisodes arrivent — la maison continue de vivre et l'histoire de grandir."
   },
   "de": {
     "navHouse": "Das Haus",
@@ -652,7 +719,14 @@ const DICT: Record<Lang, Record<string, string>> = {
     "hookMission": "Lerne den Hook und sing ihn zurück — das ist die ganze erste Mission.",
     "debutRoles": "Emily — Hauptgesang · Jiyoung — Leader · Chloe — Rapperin & Songwriterin · Sofia — Haupttänzerin · Amara — Nebengesang",
     "fandomLabel": "Fandom-Name",
-    "fandomText": "„Roomies“ ist der führende Vorschlag — noch nicht final. Der offizielle Name kommt vor der Debütbühne."
+    "fandomText": "„Roomies“ ist der führende Vorschlag — noch nicht final. Der offizielle Name kommt vor der Debütbühne.",
+    "debutJust": "Frisch debütiert — unsere erste Single „Say Hi“ ist da!",
+    "epKicker": "Leben im Haus",
+    "epTitle": "WG-Episoden — zusammen leben, üben und debütieren",
+    "epSub": "Kleine Momente aus dem Haus — die Nächte, die Küche, der Probenraum. Neue Episoden kommen hier dazu, während die Geschichte wächst.",
+    "epFilterAll": "Alle",
+    "epAllTag": "Alle fünf",
+    "epMoreNote": "Weitere Episoden folgen — das Haus lebt weiter und die Geschichte wächst."
   },
   "pt": {
     "navHouse": "A Casa",
@@ -755,7 +829,14 @@ const DICT: Record<Lang, Record<string, string>> = {
     "hookMission": "Aprenda o gancho e cante de volta — essa é toda a primeira missão.",
     "debutRoles": "Emily — vocal principal · Jiyoung — líder · Chloe — rapper e letrista · Sofia — dançarina principal · Amara — vocal de apoio",
     "fandomLabel": "Nome do fandom",
-    "fandomText": "“Roomies” é a proposta principal — ainda não é final. O nome oficial chega antes do palco de estreia."
+    "fandomText": "“Roomies” é a proposta principal — ainda não é final. O nome oficial chega antes do palco de estreia.",
+    "debutJust": "Acabamos de estrear — nosso primeiro single “Say Hi” já saiu!",
+    "epKicker": "A vida na casa",
+    "epTitle": "Episódios da convivência — viver, ensaiar e estrear juntas",
+    "epSub": "Pequenos momentos da casa — as noites, a cozinha, a sala de ensaio. Novos episódios chegam aqui à medida que a história cresce.",
+    "epFilterAll": "Todas",
+    "epAllTag": "As cinco",
+    "epMoreNote": "Mais episódios estão a caminho — a casa continua vivendo e a história crescendo."
   },
   "zh": {
     "navHouse": "这栋房子",
@@ -858,7 +939,14 @@ const DICT: Record<Lang, Record<string, string>> = {
     "hookMission": "学会这句钩子，再唱回去——这就是第一个任务。",
     "debutRoles": "Emily — 主唱 · Jiyoung — 队长 · Chloe — 说唱 & 作词 · Sofia — 主舞 · Amara — 副主唱",
     "fandomLabel": "粉丝名",
-    "fandomText": "“Roomies”是目前领先的提案——尚未最终确定。官方名称将在出道舞台前公布。"
+    "fandomText": "“Roomies”是目前领先的提案——尚未最终确定。官方名称将在出道舞台前公布。",
+    "debutJust": "刚刚出道——首支单曲《Say Hi》已发布！",
+    "epKicker": "小屋生活",
+    "epTitle": "合宿故事——一起生活、练习、出道",
+    "epSub": "小屋里的小瞬间——夜晚、厨房、练习室。故事继续，新剧集会陆续来到这里。",
+    "epFilterAll": "全部",
+    "epAllTag": "五个人",
+    "epMoreNote": "更多剧集正在路上——小屋的生活还在继续，故事还在生长。"
   },
   "it": {
     "navHouse": "La casa",
@@ -961,7 +1049,14 @@ const DICT: Record<Lang, Record<string, string>> = {
     "hookMission": "Impara il gancio e cantalo di rimando — è tutta la prima missione.",
     "debutRoles": "Emily — voce principale · Jiyoung — leader · Chloe — rapper e paroliera · Sofia — ballerina principale · Amara — voce secondaria",
     "fandomLabel": "Nome del fandom",
-    "fandomText": "“Roomies” è la proposta in testa — non ancora definitiva. Il nome ufficiale arriverà prima del palco di debutto."
+    "fandomText": "“Roomies” è la proposta in testa — non ancora definitiva. Il nome ufficiale arriverà prima del palco di debutto.",
+    "debutJust": "Appena debuttato — il nostro primo singolo “Say Hi” è uscito!",
+    "epKicker": "La vita in casa",
+    "epTitle": "Episodi di convivenza — vivere, provare e debuttare insieme",
+    "epSub": "Piccoli momenti della casa — le notti, la cucina, la sala prove. Nuovi episodi arriveranno qui mentre la storia cresce.",
+    "epFilterAll": "Tutte",
+    "epAllTag": "Tutte e cinque",
+    "epMoreNote": "Altri episodi in arrivo — la casa continua a vivere e la storia a crescere."
   },
   "vi": {
     "navHouse": "Ngôi nhà",
@@ -1064,7 +1159,14 @@ const DICT: Record<Lang, Record<string, string>> = {
     "hookMission": "Học câu hook rồi hát lại — đó là toàn bộ nhiệm vụ đầu tiên.",
     "debutRoles": "Emily — giọng ca chính · Jiyoung — trưởng nhóm · Chloe — rapper & viết lời · Sofia — vũ công chính · Amara — giọng ca phụ",
     "fandomLabel": "Tên fandom",
-    "fandomText": "“Roomies” là đề xuất đang dẫn đầu — chưa phải quyết định cuối cùng. Tên chính thức sẽ đến trước sân khấu ra mắt."
+    "fandomText": "“Roomies” là đề xuất đang dẫn đầu — chưa phải quyết định cuối cùng. Tên chính thức sẽ đến trước sân khấu ra mắt.",
+    "debutJust": "Vừa ra mắt — đĩa đơn đầu tiên “Say Hi” đã phát hành!",
+    "epKicker": "Cuộc sống trong nhà",
+    "epTitle": "Những tập ở chung — cùng sống, cùng tập, cùng ra mắt",
+    "epSub": "Những khoảnh khắc nhỏ trong nhà — buổi tối, bếp, phòng tập. Các tập mới sẽ xuất hiện tại đây khi câu chuyện tiếp tục.",
+    "epFilterAll": "Tất cả",
+    "epAllTag": "Cả năm",
+    "epMoreNote": "Sẽ còn nhiều tập nữa — ngôi nhà vẫn sống và câu chuyện vẫn tiếp tục."
   },
   "hi": {
     "navHouse": "घर",
@@ -1167,7 +1269,14 @@ const DICT: Record<Lang, Record<string, string>> = {
     "hookMission": "हुक सीखो और गाकर वापस सुनाओ — यही पहला मिशन है।",
     "debutRoles": "Emily — मुख्य गायिका · Jiyoung — लीडर · Chloe — रैपर और गीतकार · Sofia — मुख्य डांसर · Amara — सह-गायिका",
     "fandomLabel": "फ़ैंडम नाम",
-    "fandomText": "“Roomies” अग्रणी प्रस्ताव है — अभी अंतिम नहीं। आधिकारिक नाम डेब्यू स्टेज से पहले आएगा।"
+    "fandomText": "“Roomies” अग्रणी प्रस्ताव है — अभी अंतिम नहीं। आधिकारिक नाम डेब्यू स्टेज से पहले आएगा।",
+    "debutJust": "अभी-अभी डेब्यू हुआ — हमारा पहला सिंगल “Say Hi” आ गया है!",
+    "epKicker": "घर में ज़िंदगी",
+    "epTitle": "हॉस्टल के किस्से — साथ रहना, रियाज़ करना, डेब्यू करना",
+    "epSub": "घर के छोटे-छोटे पल — रातें, रसोई, रियाज़ का कमरा। कहानी बढ़ेगी तो नए एपिसोड यहाँ आएँगे।",
+    "epFilterAll": "सभी",
+    "epAllTag": "पाँचों",
+    "epMoreNote": "और एपिसोड आ रहे हैं — घर जीता रहेगा और कहानी बढ़ती रहेगी।"
   },
   "ar": {
     "navHouse": "البيت",
@@ -1270,7 +1379,14 @@ const DICT: Record<Lang, Record<string, string>> = {
     "hookMission": "تعلّم الخطاف وغنِّه رداً — هذه هي المهمة الأولى كلها.",
     "debutRoles": "Emily — الغناء الرئيسي · Jiyoung — القائدة · Chloe — رابر وكاتبة كلمات · Sofia — الراقصة الرئيسية · Amara — غناء مساند",
     "fandomLabel": "اسم الفاندوم",
-    "fandomText": "\"Roomies\" هو الاقتراح الرائد — ليس نهائياً بعد. الاسم الرسمي سيأتي قبل مسرح الظهور الأول."
+    "fandomText": "\"Roomies\" هو الاقتراح الرائد — ليس نهائياً بعد. الاسم الرسمي سيأتي قبل مسرح الظهور الأول.",
+    "debutJust": "لقد ظهرنا للتو — أغنيتنا الأولى «Say Hi» صدرت!",
+    "epKicker": "الحياة في المنزل",
+    "epTitle": "حلقات السكن المشترك — نعيش ونتدرب ونظهر معاً",
+    "epSub": "لحظات صغيرة من المنزل — الليالي، المطبخ، غرفة التدريب. ستصل حلقات جديدة هنا مع نمو القصة.",
+    "epFilterAll": "الكل",
+    "epAllTag": "الخمسة",
+    "epMoreNote": "المزيد من الحلقات قادمة — المنزل يواصل الحياة والقصة تواصل النمو."
   }
 };
 
@@ -1662,6 +1778,23 @@ const PHOTOS: { img: string; era: PhotoEra; who: string; cap: string; hand: stri
 ];
 
 const SUNO_SAY_HI = 'https://suno.com/song/3abdeff9-b70e-43b3-afc8-bc59cf8a8ef0';
+
+// Dorm episodes — the MUNTUZ Special gallery. To add an episode: drop
+// its photo into public/muntuz/, add one line here, and add its title
+// + text keys (epNTitle / epNText) to DICT in en and ko (other
+// languages fall back to English). `who` is the member the episode is
+// about, or 'All' for a whole-house moment.
+type Episode = { id: string; who: string; img: string; titleKey: string; textKey: string };
+const EPISODES: Episode[] = [
+  { id: 'ep1', who: 'All', img: '/muntuz/ep-livingroom-night.webp', titleKey: 'ep1Title', textKey: 'ep1Text' },
+  { id: 'ep2', who: 'Jiyoung', img: '/muntuz/jiyoung-kimbap.webp', titleKey: 'ep2Title', textKey: 'ep2Text' },
+  { id: 'ep3', who: 'Emily', img: '/muntuz/emily-latte.webp', titleKey: 'ep3Title', textKey: 'ep3Text' },
+  { id: 'ep4', who: 'Sofia', img: '/muntuz/sofia-pasta.webp', titleKey: 'ep4Title', textKey: 'ep4Text' },
+  { id: 'ep5', who: 'Chloe', img: '/muntuz/chloe-shoot.webp', titleKey: 'ep5Title', textKey: 'ep5Text' },
+  { id: 'ep6', who: 'Amara', img: '/muntuz/amara-sun.webp', titleKey: 'ep6Title', textKey: 'ep6Text' },
+  { id: 'ep7', who: 'All', img: '/muntuz/ep-plaza-stage.webp', titleKey: 'ep7Title', textKey: 'ep7Text' },
+  { id: 'ep8', who: 'All', img: '/muntuz/ep-kitchen-together.webp', titleKey: 'ep8Title', textKey: 'ep8Text' },
+];
 const STEPS_EN: { n: string; title: string; body: string }[] = [
   {
     n: '1',
@@ -1741,6 +1874,7 @@ export default function MuntuzLandingClient() {
   const [langOpen, setLangOpen] = useState(false);
   const [friendIdx, setFriendIdx] = useState(0);
   const [photoFilter, setPhotoFilter] = useState<'all' | PhotoEra>('all');
+  const [epFilter, setEpFilter] = useState('All');
   const [showMemory, setShowMemory] = useState(false);
   const [roomPlaying, setRoomPlaying] = useState(false);
   const [nightPlaying, setNightPlaying] = useState(false);
@@ -2273,7 +2407,10 @@ export default function MuntuzLandingClient() {
 
         {/* Debut — MUNTUZ first single "Say Hi" */}
         <section id="debut" className="mt-14 scroll-mt-20">
-          <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-violet-600">
+          <p className="mx-auto w-fit rounded-full bg-amber-400 px-4 py-1.5 text-xs font-extrabold text-slate-900">
+            🎉 {t('debutJust')}
+          </p>
+          <p className="mt-3 text-center text-xs font-bold uppercase tracking-[0.2em] text-violet-600">
             {t('debutKicker')}
           </p>
           <h2 className="mt-2 text-center text-2xl font-extrabold">
@@ -2286,7 +2423,13 @@ export default function MuntuzLandingClient() {
             {t('debutLearn')}
           </p>
           <div className="mt-6 rounded-3xl bg-white p-5 shadow-md ring-1 ring-slate-100">
-            <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
+            <img
+              src="/muntuz/ep-studio-stage.webp"
+              alt="MUNTUZ performing “Say Hi” on the debut stage"
+              className="h-auto w-full rounded-2xl object-cover"
+              loading="lazy"
+            />
+            <p className="mt-4 text-xs font-bold uppercase tracking-wider text-slate-400">
               {t('songLabel')}
             </p>
             <p className="mt-1 text-xl font-extrabold">“Say Hi”</p>
@@ -2323,6 +2466,42 @@ export default function MuntuzLandingClient() {
                 {t('fandomText')}
               </p>
             </div>
+          </div>
+
+          {/* Dorm episodes — the MUNTUZ Special: stories from living together. */}
+          <div className="mt-12">
+            <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-violet-600">
+              {t('epKicker')}
+            </p>
+            <h3 className="mt-2 text-center text-xl font-extrabold">{t('epTitle')}</h3>
+            <p className="mt-2 text-center text-sm leading-relaxed text-slate-600">{t('epSub')}</p>
+            <div className="mt-4 flex flex-wrap justify-center gap-1.5">
+              {['All', 'Jiyoung', 'Emily', 'Chloe', 'Sofia', 'Amara'].map((m) => (
+                <button
+                  key={m}
+                  onClick={() => setEpFilter(m)}
+                  aria-pressed={epFilter === m}
+                  className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${epFilter === m ? 'bg-violet-600 text-white shadow-sm' : 'bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50'}`}
+                >
+                  {m === 'All' ? t('epFilterAll') : m}
+                </button>
+              ))}
+            </div>
+            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+              {EPISODES.filter((e) => epFilter === 'All' || e.who === epFilter || e.who === 'All').map((ep) => (
+                <article key={ep.id} className="overflow-hidden rounded-3xl bg-white shadow-md ring-1 ring-slate-100">
+                  <img src={ep.img} alt={t(ep.titleKey)} className="h-52 w-full object-cover sm:h-56" loading="lazy" />
+                  <div className="p-4">
+                    <p className="text-xs font-bold uppercase tracking-wider text-violet-600">
+                      {ep.who === 'All' ? t('epAllTag') : ep.who}
+                    </p>
+                    <h4 className="mt-1 font-extrabold">{t(ep.titleKey)}</h4>
+                    <p className="mt-1 text-sm leading-relaxed text-slate-600">{t(ep.textKey)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <p className="mt-4 text-center text-xs text-slate-500">{t('epMoreNote')}</p>
           </div>
         </section>
 
