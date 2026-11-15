@@ -94,8 +94,10 @@ import {
  * turn it off. Console snippet for the two collections:
  * firestore-snippets/exchange-memory-review.rules.txt (repo
  * firestore.rules is intentionally NOT touched).
- * AI Review / Pro tabs are otherwise still demo data. The Profile tab is wired to
- * Firestore for signed-in users (collection `exchange_profiles`).
+ * AI Review's "This week" chart now shows real per-day counts
+ * (usage-week action); the Pro tab is otherwise still demo data. The
+ * Profile tab is wired to Firestore for signed-in users (collection
+ * `exchange_profiles`).
  * Header: the shared /logo.png M-ring badge with "Muntuz" (Jay
  * 2026-11-05 — same file the /muntuz landing uses, no new logo), plus a
  * Log in button for signed-out users (/login?next=/exchange; the /login
@@ -297,6 +299,8 @@ type Chat = {
   flag?: string;
   isAi: boolean;
   messages: Msg[];
+  /** A session review was already auto-saved for this chat (H-1). */
+  autoReviewed?: boolean;
 };
 
 const CONTACT_GUARD = /(\b\d{2,4}[- ]?\d{3,4}[- ]?\d{4}\b|https?:\/\/|www\.|[\w.+-]+@[\w-]+\.[\w.]+|kakao|t\.me|instagram\.com)/i;
@@ -310,6 +314,147 @@ const TABS: { id: Tab; label: string; icon: string }[] = [
 ];
 
 let msgSeq = 100;
+
+// Host check, same rule as src/middleware.ts (and the route-side
+// isMuntuzHost from the S-1 fix): the /exchange page is shared with
+// muntalk.com, so Muntuz-only behaviour in this file — chat persistence,
+// auto-review, voice dictation, localised greetings — is gated on the
+// Muntuz host. Only called from event handlers and effects (client-only),
+// so `window` is always defined here.
+function isMuntuzHost(): boolean {
+  if (typeof window === 'undefined') return false;
+  const host = window.location.hostname.toLowerCase();
+  return host === 'muntuz.com' || host.endsWith('.muntuz.com');
+}
+
+// ── S-2: chat threads persisted in this browser ────────────────────────
+// The pilot kept chats in memory only, so a refresh (or the sign-in
+// redirect) wiped them. Threads now survive in localStorage on the same
+// device; cross-device sync (a Firestore collection + rules) is a
+// follow-up, not this PR. Guest and signed-in threads share the key —
+// the trial modal's "picks up where it left off" promise is true on
+// this device because localStorage survives the login redirect.
+const CHATS_STORAGE_KEY = 'muntuz_exchange_chats_v1';
+const MAX_STORED_CHATS = 20;
+const MAX_STORED_MESSAGES = 100;
+
+type PersistedChats = {
+  v: 1;
+  savedAt: number;
+  activeChatId: string | null;
+  chats: Chat[];
+};
+
+function loadStoredChats(): PersistedChats | null {
+  try {
+    const raw = window.localStorage.getItem(CHATS_STORAGE_KEY);
+    if (!raw) return null;
+    const data = JSON.parse(raw) as Partial<PersistedChats>;
+    if (data?.v !== 1 || !Array.isArray(data.chats)) return null;
+    const chats: Chat[] = [];
+    for (const c of data.chats) {
+      if (!c || typeof c.id !== 'string' || typeof c.partnerId !== 'string' || !Array.isArray(c.messages)) continue;
+      const messages: Msg[] = [];
+      for (const m of c.messages) {
+        if (!m || typeof m.text !== 'string' || (m.from !== 'me' && m.from !== 'partner')) continue;
+        messages.push({
+          id: typeof m.id === 'number' ? m.id : 0,
+          from: m.from,
+          text: m.text,
+          ai: m.ai === true,
+          at: typeof m.at === 'number' ? m.at : undefined,
+          photo: typeof m.photo === 'string' ? m.photo : undefined,
+          correction: typeof m.correction === 'string' ? m.correction : undefined,
+        });
+      }
+      chats.push({
+        id: c.id,
+        partnerId: c.partnerId,
+        name: typeof c.name === 'string' ? c.name : '',
+        avatar: typeof c.avatar === 'string' ? c.avatar : '',
+        gallery: Array.isArray(c.gallery) ? c.gallery.filter((g): g is string => typeof g === 'string') : undefined,
+        flag: typeof c.flag === 'string' ? c.flag : undefined,
+        isAi: c.isAi === true,
+        messages,
+        autoReviewed: c.autoReviewed === true ? true : undefined,
+      });
+    }
+    return {
+      v: 1,
+      savedAt: typeof data.savedAt === 'number' ? data.savedAt : 0,
+      activeChatId: typeof data.activeChatId === 'string' ? data.activeChatId : null,
+      chats,
+    };
+  } catch {
+    return null;
+  }
+}
+
+// ── M-5: opening line in the learner's own target language ─────────────
+// The static per-partner greeting was partner-centric English ("Let's
+// practice English" from Jiyoung, a Korean native learning English) even
+// for a user learning Korean. The greeting is now built at chat-open
+// time from the user's profile target language; the static greeting
+// stays as the fallback for unknown languages and non-Muntuz hosts.
+const GREETING_BY_TARGET: Record<string, (name: string) => string> = {
+  English: (name) =>
+    `Hi! I'm ${name}, your AI practice partner. Let's practice English together — what did you do today?`,
+  Korean: (name) => `안녕하세요! 저는 ${name}, AI 연습 파트너예요. 같이 한국어 연습해요 — 오늘 뭐 했어요?`,
+  Spanish: (name) => `¡Hola! Soy ${name}, tu compañera de práctica con IA. Practiquemos español juntos — ¿qué hiciste hoy?`,
+  Japanese: (name) => `こんにちは！${name}です。AI練習パートナーです。一緒に日本語を練習しましょう — 今日は何をしましたか？`,
+  Portuguese: (name) => `Olá! Eu sou ${name}, sua parceira de prática com IA. Vamos praticar português juntos — o que você fez hoje?`,
+};
+
+function greetingForChat(p: AiPartner, target: string): string {
+  const build = GREETING_BY_TARGET[target];
+  return build ? build(p.name) : p.greeting;
+}
+
+// ── H-7: Web Speech API dictation ──────────────────────────────────────
+// Minimal local typing: the DOM lib in this repo has no
+// SpeechRecognition declarations. Dictation fills the text input; it is
+// never confused with VoiceCallSession (real-person WebRTC calls).
+type SpeechRecognitionResultLike = ArrayLike<{ transcript: string }> & { isFinal: boolean };
+type SpeechRecognitionEventLike = {
+  resultIndex: number;
+  results: ArrayLike<SpeechRecognitionResultLike>;
+};
+type SpeechRecognitionErrorLike = { error: string };
+type SpeechRecognitionInstance = {
+  lang: string;
+  interimResults: boolean;
+  continuous: boolean;
+  maxAlternatives: number;
+  onresult: ((e: SpeechRecognitionEventLike) => void) | null;
+  onerror: ((e: SpeechRecognitionErrorLike) => void) | null;
+  onend: (() => void) | null;
+  start: () => void;
+  stop: () => void;
+};
+type SpeechRecognitionCtor = new () => SpeechRecognitionInstance;
+
+function getSpeechRecognition(): SpeechRecognitionCtor | null {
+  if (typeof window === 'undefined') return null;
+  const w = window as unknown as {
+    SpeechRecognition?: SpeechRecognitionCtor;
+    webkitSpeechRecognition?: SpeechRecognitionCtor;
+  };
+  return w.SpeechRecognition ?? w.webkitSpeechRecognition ?? null;
+}
+
+// BCP-47 language for dictation, from the user's profile target
+// language (the five languages the profile form offers).
+const SPEECH_LANG: Record<string, string> = {
+  English: 'en-US',
+  Korean: 'ko-KR',
+  Spanish: 'es-ES',
+  Japanese: 'ja-JP',
+  Portuguese: 'pt-BR',
+};
+
+function speechLangFor(target: string): string {
+  return SPEECH_LANG[target] ?? 'en-US';
+}
 
 export default function ExchangePage() {
   // 뒤로가기 폴백 (Jay 2026-11-06): muntuz.com 호스트에서는 랜딩이
@@ -333,6 +478,17 @@ export default function ExchangePage() {
   const [waitlistReload, setWaitlistReload] = useState(0);
   const [activeChatId, setActiveChatId] = useState<string | null>(null);
   const [input, setInput] = useState('');
+  // S-2: restored chats load once after mount (see the effect below);
+  // the save effect waits for this flag so it never overwrites stored
+  // threads with the empty initial state.
+  const [chatsLoaded, setChatsLoaded] = useState(false);
+  // H-7: Web Speech API dictation. `speechSupported` starts false so
+  // the server render matches (no hydration mismatch); it flips after
+  // mount when the API exists.
+  const [listening, setListening] = useState(false);
+  const [speechSupported, setSpeechSupported] = useState(false);
+  const recognitionRef = useRef<SpeechRecognitionInstance | null>(null);
+  const dictationBaseRef = useRef('');
   const [toast, setToast] = useState('');
   const [pro, setPro] = useState(false);
   const [billing, setBilling] = useState<'monthly' | 'yearly'>('yearly');
@@ -415,6 +571,10 @@ export default function ExchangePage() {
   // when the tab opens; empty until the console rules are published.
   const [vocabItems, setVocabItems] = useState<ExchangeVocabItem[]>([]);
   const [reviewItems, setReviewItems] = useState<SessionReview[]>([]);
+  // H-1: real per-day AI-message counts for the "This week" chart
+  // (api_daily_usage via the usage-week action). null = not loaded yet.
+  const [weekCounts, setWeekCounts] = useState<{ day: string; count: number }[] | null>(null);
+  const [weekCountsLoading, setWeekCountsLoading] = useState(false);
   const [reviewDataLoaded, setReviewDataLoaded] = useState(false);
   const [reviewDataLoading, setReviewDataLoading] = useState(false);
   // "AI speaks first" toggle — pilot setting, browser-local (localStorage).
@@ -1172,7 +1332,10 @@ export default function ExchangePage() {
               gallery: p.gallery,
               flag: LANG_FLAG[p.native] || '🌐',
               isAi: true,
-              messages: [{ id: gid, from: 'partner', text: p.greeting, ai: true, at: Date.now() }],
+              // M-5: the opening line is built from the learner's target
+              // language on Muntuz hosts (greetingForChat); elsewhere the
+              // partner's static greeting stays.
+              messages: [{ id: gid, from: 'partner', text: isMuntuzHost() ? greetingForChat(p, targetLang) : p.greeting, ai: true, at: Date.now() }],
             },
           ]
     );
@@ -1204,6 +1367,71 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
   useEffect(() => {
     setGuestTrial(readGuestTrial());
   }, []);
+
+  // H-7: detect Web Speech API support after mount (server render has
+  // no window, so this must not run during render).
+  useEffect(() => {
+    setSpeechSupported(getSpeechRecognition() !== null);
+    return () => {
+      recognitionRef.current?.stop();
+      recognitionRef.current = null;
+    };
+  }, []);
+
+  // S-2: restore chat threads saved in this browser (Muntuz host only).
+  // Runs once after mount; the save effect below waits for chatsLoaded,
+  // so a refresh never clobbers stored threads with the empty initial
+  // state. Restored replies are marked seen (no phantom unread badges),
+  // msgSeq is bumped past every restored message id (it restarts at 100
+  // on every load — without this, new messages could reuse an id), and
+  // an open chat is restored together with the Chats tab.
+  useEffect(() => {
+    if (!isMuntuzHost()) {
+      setChatsLoaded(true);
+      return;
+    }
+    const stored = loadStoredChats();
+    if (stored && stored.chats.length > 0) {
+      let maxId = 100;
+      for (const c of stored.chats) {
+        for (const m of c.messages) if (typeof m.id === 'number' && m.id >= maxId) maxId = m.id + 1;
+      }
+      msgSeq = Math.max(msgSeq, maxId);
+      setChats(stored.chats);
+      setSeenMsgId((s) => {
+        const next = { ...s };
+        for (const c of stored.chats) {
+          const last = c.messages[c.messages.length - 1];
+          if (last) next[c.id] = Math.max(next[c.id] ?? 0, last.id);
+        }
+        return next;
+      });
+      if (stored.activeChatId && stored.chats.some((c) => c.id === stored.activeChatId)) {
+        setActiveChatId(stored.activeChatId);
+        setTab('chats');
+      }
+    }
+    setChatsLoaded(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps — load once on mount only.
+  }, []);
+
+  // S-2: persist threads on every change (Muntuz host only). Capped so
+  // one heavy chat cannot blow the localStorage quota; a full or
+  // unavailable store fails silent — chats still work in memory.
+  useEffect(() => {
+    if (!chatsLoaded || !isMuntuzHost()) return;
+    try {
+      const payload: PersistedChats = {
+        v: 1,
+        savedAt: Date.now(),
+        activeChatId,
+        chats: chats.slice(-MAX_STORED_CHATS).map((c) => ({ ...c, messages: c.messages.slice(-MAX_STORED_MESSAGES) })),
+      };
+      window.localStorage.setItem(CHATS_STORAGE_KEY, JSON.stringify(payload));
+    } catch {
+      /* storage full or unavailable: in-memory chats still work */
+    }
+  }, [chats, activeChatId, chatsLoaded]);
 
   // Guest trial countdown: ticks once a second while a guest trial is
   // active. At zero the sign-up prompt opens if an AI chat is on
@@ -1308,8 +1536,9 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
       if (m.from === 'me') turnsSincePhoto++;
     }
     const id = msgSeq++;
+    const userMsg: Msg = { id, from: 'me' as const, text, at: Date.now() };
     setChats((cs) =>
-      cs.map((c) => (c.id === activeChat.id ? { ...c, messages: [...c.messages, { id, from: 'me' as const, text, at: Date.now() }] } : c))
+      cs.map((c) => (c.id === activeChat.id ? { ...c, messages: [...c.messages, userMsg] } : c))
     );
     setInput('');
     setAiSending(true);
@@ -1341,11 +1570,14 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
         typeof data.correction === 'string' && data.correction.trim()
           ? data.correction.trim().slice(0, 200)
           : undefined;
+      const replyMsg: Msg = { id: rid, from: 'partner' as const, text: reply, ai: true, at: Date.now(), photo, correction };
       setChats((cs) =>
-        cs.map((c) =>
-          c.id === activeChat.id ? { ...c, messages: [...c.messages, { id: rid, from: 'partner' as const, text: reply, ai: true, at: Date.now(), photo, correction }] } : c
-        )
+        cs.map((c) => (c.id === activeChat.id ? { ...c, messages: [...c.messages, replyMsg] } : c))
       );
+      // H-1: once the 4th learner turn has its reply, auto-save the
+      // session review (same action as the manual button). The snapshot
+      // carries both new messages so the review sees the full exchange.
+      void maybeAutoReview({ ...activeChat, messages: [...activeChat.messages, userMsg, replyMsg] });
     } catch (err) {
       showToast(err instanceof Error ? err.message : 'AI reply failed. Please try again.');
     } finally {
@@ -1385,12 +1617,31 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
   };
 
   const leaveAiChat = () => {
+    stopDictation();
     const chat = activeChat;
     // Replies read while the chat was open must not show as unread later.
     if (chat) markChatSeen(chat);
     setReview(null);
     setActiveChatId(null);
-    if (chat) void saveMemoryForChat(chat);
+    if (chat) {
+      void saveMemoryForChat(chat);
+      // H-1: leaving a chat with enough turns auto-saves its review.
+      void maybeAutoReview(chat);
+    }
+  };
+
+  // H-1: auto-save a session review once a chat has at least 4 learner
+  // turns — on leave, or mid-chat right after the 4th reply lands.
+  // Reuses requestSessionReview (same server action, no new endpoint).
+  // Muntuz-only: the shared page also serves muntalk.com, where the
+  // manual "Finish & review" button stays the only review path. The
+  // per-chat flag stops repeat saves; a failed save simply retries on
+  // the next trigger.
+  const maybeAutoReview = (chat: Chat) => {
+    if (!isMuntuzHost() || !chat.isAi || !user) return;
+    const userTurns = chat.messages.filter((m) => m.from === 'me').length;
+    if (userTurns < 4 || chat.autoReviewed) return;
+    void requestSessionReview(chat, { auto: true });
   };
 
   // ── Memory + review pilot ────────────────────────────────────────────
@@ -1455,13 +1706,17 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
   // Finish a chat with a review: one short Gemini call (server-side)
   // that returns top mistakes + new words + one-line summary and saves
   // them. The review card renders inline from the response, so it works
-  // even before the console rules are published.
-  const requestSessionReview = async () => {
-    const chat = activeChat;
+  // even before the console rules are published. Called with an explicit
+  // chat by the H-1 auto-save (leave / 4th reply); the manual button
+  // passes nothing and reviews the open chat. `auto` skips the inline
+  // card (the user may already have left) and the "not enough yet"
+  // toast — the auto trigger already checked the 4-turn bar.
+  const requestSessionReview = async (chatArg?: Chat, opts?: { auto?: boolean }) => {
+    const chat = chatArg ?? activeChat;
     if (!chat?.isAi || !user || reviewLoading) return;
     const userTurns = chat.messages.filter((m) => m.from === 'me').length;
     if (userTurns < 4) {
-      showToast('Chat a little more first — a review needs at least 4 messages from you.');
+      if (!opts?.auto) showToast('Chat a little more first — a review needs at least 4 messages from you.');
       return;
     }
     // Pair each 💡 correction with the learner message it corrects.
@@ -1499,17 +1754,55 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
       if (!res.ok) throw new Error(typeof data.error === 'string' ? data.error : 'Review failed');
       if (data.reviewed && data.review) {
         const r = data.review as SessionReview;
-        setReview(r);
+        if (!opts?.auto) setReview(r);
         setReviewItems((prev) => [r, ...prev].slice(0, 10));
+        // Mark the chat so the auto-save never fires twice for it; the
+        // manual button stays available for an on-demand re-review.
+        setChats((cs) => cs.map((c) => (c.id === chat.id ? { ...c, autoReviewed: true } : c)));
         void loadReviewData();
-        showToast('Review ready — your top corrections and new words are below.');
+        showToast(opts?.auto ? 'Review saved — see AI Review.' : 'Review ready — your top corrections and new words are below.');
       } else {
-        showToast('Not enough to review yet — chat a little more and try again.');
+        if (!opts?.auto) showToast('Not enough to review yet — chat a little more and try again.');
       }
     } catch (err) {
       showToast(err instanceof Error ? err.message : 'Review failed. Please try again.');
     } finally {
       setReviewLoading(false);
+    }
+  };
+
+  // H-1: real per-day AI-message counts for the "This week" chart.
+  // Reads the same api_daily_usage store the daily caps increment
+  // (usage-week action, same route — no new endpoint, no new
+  // collection). Muntuz host + signed-in only; guests keep the
+  // sign-in prompt. A failed load leaves weekCounts null and the
+  // chart shows its empty state — never the old hardcoded demo bars.
+  const loadWeekCounts = async () => {
+    if (!user || weekCountsLoading) return;
+    setWeekCountsLoading(true);
+    try {
+      const res = await apiFetch('/api/exchange-ai-chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'usage-week' }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && Array.isArray(data.days)) {
+        const days = (data.days as unknown[])
+          .filter(
+            (d): d is { day: string; count: number } =>
+              !!d &&
+              typeof d === 'object' &&
+              typeof (d as { day?: unknown }).day === 'string' &&
+              typeof (d as { count?: unknown }).count === 'number'
+          )
+          .slice(-7);
+        if (days.length > 0) setWeekCounts(days);
+      }
+    } catch {
+      /* chart stays in its empty state */
+    } finally {
+      setWeekCountsLoading(false);
     }
   };
 
@@ -1581,6 +1874,9 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
   // AI Review tab data: load once when the tab opens (signed-in only).
   useEffect(() => {
     if (tab === 'review' && user && !reviewDataLoaded) void loadReviewData();
+    // H-1: the weekly chart reloads on every open so it reflects the
+    // chats just finished (cheap read, server rate-limited).
+    if (tab === 'review' && user && isMuntuzHost()) void loadWeekCounts();
     // eslint-disable-next-line react-hooks/exhaustive-deps — run on tab switch only.
   }, [tab, user]);
 
@@ -1601,7 +1897,62 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
     setInput('');
   };
 
+  // H-7: Web Speech API dictation for the AI chat input. Recognised
+  // text fills the input (interim results show live); the user still
+  // sends with Send/Enter. The button only renders where the API exists
+  // (speechSupported, set after mount). Stops on send, on leaving the
+  // chat, and on unmount (effect cleanup above). Never confused with
+  // VoiceCallSession (real-person WebRTC calls).
+  const stopDictation = () => {
+    recognitionRef.current?.stop();
+  };
+
+  const toggleDictation = () => {
+    const Ctor = getSpeechRecognition();
+    if (!Ctor) return;
+    if (listening) {
+      stopDictation();
+      return;
+    }
+    const rec = new Ctor();
+    recognitionRef.current = rec;
+    rec.lang = speechLangFor(targetLang);
+    rec.interimResults = true;
+    rec.continuous = false;
+    rec.maxAlternatives = 1;
+    dictationBaseRef.current = input;
+    let finalText = '';
+    rec.onresult = (e) => {
+      let interim = '';
+      for (let i = e.resultIndex; i < e.results.length; i++) {
+        const r = e.results[i];
+        const alt = r[0];
+        if (!alt) continue;
+        if (r.isFinal) finalText += alt.transcript;
+        else interim += alt.transcript;
+      }
+      setInput(dictationBaseRef.current + finalText + interim);
+    };
+    rec.onerror = (e) => {
+      if (e.error === 'not-allowed' || e.error === 'service-not-allowed') {
+        showToast('Microphone blocked — allow the mic in your browser to dictate.');
+      }
+    };
+    rec.onend = () => {
+      recognitionRef.current = null;
+      setListening(false);
+    };
+    try {
+      rec.start();
+      setListening(true);
+    } catch {
+      recognitionRef.current = null;
+      setListening(false);
+    }
+  };
+
   const sendCurrentMessage = () => {
+    stopDictation();
     if (activeChat?.isAi) void sendAiMessage();
     else sendMessage();
   };
@@ -1647,7 +1998,13 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
   const tabButton = (t: { id: Tab; label: string; icon: string }, vertical: boolean) => (
     <button
       key={t.id}
-      onClick={() => setTab(t.id)}
+      // M-6 residual: entering Discover from the sidebar must reset the
+      // inner room to AI Rooms, or the last-used room (e.g. People
+      // Rooms) sticks. The logo/back button already does this.
+      onClick={() => {
+        if (t.id === 'discover') setRoom('ai');
+        setTab(t.id);
+      }}
       aria-current={tab === t.id ? 'page' : undefined}
       className={`flex ${vertical ? 'w-full items-center gap-3 rounded-xl px-4 py-3 text-left' : 'min-h-[56px] flex-1 flex-col items-center justify-center gap-0.5 py-2 text-[11px]'} font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-violet-500 ${
         tab === t.id
@@ -2227,7 +2584,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                     </span>
                     {activeChat.isAi && user && activeChat.messages.filter((m) => m.from === 'me').length >= 4 && (
                       <button
-                        onClick={requestSessionReview}
+                        onClick={() => void requestSessionReview()}
                         disabled={reviewLoading}
                         className="ml-auto min-h-[36px] rounded-full bg-violet-600 px-3 py-1 text-xs font-bold text-white hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 disabled:opacity-60"
                       >
@@ -2351,6 +2708,24 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                       maxLength={500}
                       className="min-w-0 flex-1 rounded-xl border border-slate-200 px-3.5 py-2 text-sm outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
                     />
+                    {/* H-7: dictate into the AI chat (Web Speech API).
+                        Muntuz host + supported browser only; elsewhere
+                        the input stays plain text. */}
+                    {speechSupported && activeChat?.isAi && isMuntuzHost() && (
+                      <button
+                        type="button"
+                        onClick={toggleDictation}
+                        disabled={aiSending}
+                        aria-label={listening ? 'Stop dictation' : 'Dictate a message'}
+                        aria-pressed={listening}
+                        title={listening ? 'Stop dictation' : 'Dictate (speech to text)'}
+                        className={`min-h-[44px] w-[44px] shrink-0 rounded-xl border px-2 text-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${
+                          listening ? 'border-red-300 bg-red-50 text-red-600' : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-50'
+                        }`}
+                      >
+                        {listening ? '⏹️' : '🎙️'}
+                      </button>
+                    )}
                     <button onClick={sendCurrentMessage} disabled={aiSending} className="min-h-[44px] rounded-xl bg-violet-600 px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98] disabled:opacity-60">
                       {aiSending ? 'Sending…' : 'Send'}
                     </button>
@@ -2361,8 +2736,9 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
           )}
 
           {/* Guest trial ended: sign up to keep chatting (free). The
-              conversation stays in browser state, so it picks up
-              where it left off after sign-in. */}
+              conversation is saved in this browser (localStorage, S-2),
+              so it picks up where it left off after sign-in on this
+              device. */}
           {showTrialExpired && (
             <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 p-4 sm:items-center" role="dialog" aria-modal="true" aria-label="Free trial ended">
               <div className="w-full max-w-sm rounded-3xl bg-white p-5 shadow-xl">
@@ -2477,15 +2853,48 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                 </div>
                 <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
                   <h3 className="font-bold">This week</h3>
-                  <div className="mt-3 flex items-end gap-2">
-                    {[3, 5, 2, 6, 4, 7, 1].map((h, i) => (
-                      <div key={i} className="flex flex-1 flex-col items-center gap-1">
-                        <div className="w-full rounded-t bg-violet-500" style={{ height: `${h * 10}px` }} />
-                        <span className="text-[10px] text-slate-400">{['M', 'T', 'W', 'T', 'F', 'S', 'S'][i]}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <p className="mt-2 text-xs text-slate-500">Messages exchanged per day (demo data).</p>
+                  {/* H-1: real per-day counts from api_daily_usage. The
+                      old hardcoded demo bars are gone — with no data the
+                      card says so instead of inventing a week. */}
+                  {!user ? (
+                    <p className="mt-2 text-sm text-slate-500">Sign in to see your weekly activity.</p>
+                  ) : weekCounts === null ? (
+                    <p className="mt-2 text-sm text-slate-500">
+                      {weekCountsLoading ? 'Loading your week…' : 'No activity yet — chat with an AI partner and your daily counts will appear here.'}
+                    </p>
+                  ) : (
+                    (() => {
+                      const max = Math.max(1, ...weekCounts.map((w) => w.count));
+                      const total = weekCounts.reduce((s, w) => s + w.count, 0);
+                      if (total === 0) {
+                        return (
+                          <p className="mt-2 text-sm text-slate-500">
+                            No activity yet — chat with an AI partner and your daily counts will appear here.
+                          </p>
+                        );
+                      }
+                      return (
+                        <>
+                          <div className="mt-3 flex items-end gap-2">
+                            {weekCounts.map((d) => {
+                              const wd = new Date(`${d.day}T00:00:00Z`).getUTCDay();
+                              return (
+                                <div
+                                  key={d.day}
+                                  className="flex flex-1 flex-col items-center gap-1"
+                                  title={`${d.day}: ${d.count} message${d.count === 1 ? '' : 's'}`}
+                                >
+                                  <div className="w-full rounded-t bg-violet-500" style={{ height: `${Math.max(4, Math.round((d.count / max) * 70))}px` }} />
+                                  <span className="text-[10px] text-slate-400">{['S', 'M', 'T', 'W', 'T', 'F', 'S'][wd]}</span>
+                                </div>
+                              );
+                            })}
+                          </div>
+                          <p className="mt-2 text-xs text-slate-500">AI messages you sent per day.</p>
+                        </>
+                      );
+                    })()
+                  )}
                 </div>
                 <div className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
                   <h3 className="font-bold">Weekly report</h3>

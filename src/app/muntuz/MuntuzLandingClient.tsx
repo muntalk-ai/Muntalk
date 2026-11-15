@@ -6887,7 +6887,7 @@ export default function MuntuzLandingClient() {
 
       {/* Top bar */}
       <div className="sticky top-0 z-50 border-b border-[#E7DCC8] bg-[#FBF5EA]/90 backdrop-blur">
-        <div className="mx-auto flex h-16 max-w-[1180px] items-center gap-[18px] px-5">
+        <div className="mx-auto flex h-16 max-w-[1180px] items-center gap-2 px-3 sm:gap-[18px] sm:px-5">
           <a href="#top" className="text-2xl font-extrabold tracking-[0.04em]" style={{ fontFamily: DISPLAY_FONT }}>
             MUNTUZ<span className="text-[#0E7C66]">.</span>
           </a>
@@ -6913,7 +6913,7 @@ export default function MuntuzLandingClient() {
               <button
                 type="button"
                 onClick={() => setLangOpen((v) => !v)}
-                className="flex items-center gap-2 rounded-full bg-white px-3.5 py-2 text-sm font-extrabold ring-1 ring-[#E7DCC8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E7C66]"
+                className="flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full bg-white px-2.5 py-2 text-sm font-extrabold ring-1 ring-[#E7DCC8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E7C66] sm:px-3.5"
                 aria-haspopup="listbox"
                 aria-expanded={langOpen}
               >
@@ -6950,23 +6950,23 @@ export default function MuntuzLandingClient() {
             {!authLoading && !user && (
               <a
                 href="/login?next=/exchange"
-                className="inline-flex items-center rounded-full bg-[#1E2A25] px-5 py-2.5 text-[15px] font-extrabold text-[#FBF5EA] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E7C66]"
+                className="inline-flex shrink-0 items-center whitespace-nowrap rounded-full bg-[#1E2A25] px-3.5 py-2.5 text-[15px] font-extrabold text-[#FBF5EA] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E7C66] sm:px-5"
               >
                 {t('loginBtn')}
               </a>
             )}
             {!authLoading && user && (
-              <span className="flex items-center gap-2">
-                <span className="flex items-center gap-1.5 text-sm font-bold text-[#1E2A25]">
+              <span className="flex min-w-0 shrink-0 items-center gap-2">
+                <span className="flex min-w-0 items-center gap-1.5 text-sm font-bold text-[#1E2A25]">
                   <span className="inline-block h-2 w-2 rounded-full bg-green-500" aria-hidden="true" />
-                  <span className="max-w-[90px] truncate">
+                  <span className="max-w-[64px] truncate sm:max-w-[90px]">
                     {user.displayName || user.email?.split('@')[0] || 'Learner'}
                   </span>
                 </span>
                 <button
                   type="button"
                   onClick={handleSignOut}
-                  className="rounded-full bg-white px-3 py-2 text-sm font-bold text-[#5D6C63] ring-1 ring-[#E7DCC8] hover:bg-[#FFF9EF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E7C66]"
+                  className="shrink-0 whitespace-nowrap rounded-full bg-white px-2.5 py-2 text-sm font-bold text-[#5D6C63] ring-1 ring-[#E7DCC8] hover:bg-[#FFF9EF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E7C66] sm:px-3"
                 >
                   {t('logoutBtn')}
                 </button>
