@@ -1722,7 +1722,7 @@ Pilot — AI rooms are the main experience; People room is a waitlist
                         </div>
                         <p className="mt-3">
                           <span className="inline-block rounded-full bg-violet-600 px-3.5 py-1.5 text-base font-extrabold text-white">
-                            {p.native} → {p.learning}
+                            Multilingual · speaks every language
                           </span>
                         </p>
                         <p className="mt-2 text-xs font-semibold text-violet-700">
