@@ -15,6 +15,7 @@ const SUNO_SAY_HI = 'https://suno.com/song/3abdeff9-b70e-43b3-afc8-bc59cf8a8ef0'
 export default function MuntuzGroupClient() {
   const [lang, setLang] = useState<Lang>('en');
   const [epFilter, setEpFilter] = useState('All');
+  const [showMv, setShowMv] = useState(false);
 
   const t = (key: string) => GROUP_DICT[lang][key] ?? GROUP_DICT.en[key] ?? key;
 
@@ -82,13 +83,20 @@ export default function MuntuzGroupClient() {
             </p>
             <p className="mt-1 text-xl font-extrabold">“Say Hi”</p>
             <p className="mt-1 text-sm text-slate-600">{t('songMeta')}</p>
+            <button
+              type="button"
+              onClick={() => setShowMv(true)}
+              className="mt-3 inline-block rounded-full bg-amber-400 px-5 py-2.5 text-sm font-bold text-slate-900 hover:bg-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
+            >
+              {t('watchMvBtn')}
+            </button>
             <a
               href={SUNO_SAY_HI}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 inline-block rounded-full bg-amber-400 px-5 py-2.5 text-sm font-bold text-slate-900 hover:bg-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
+              className="ml-3 mt-3 inline-block text-sm font-bold text-violet-700 hover:text-violet-900"
             >
-              {t('listenBtn')}
+              {t('sunoLink')}
             </a>
             <div className="mt-5 rounded-2xl bg-violet-50 p-4 ring-1 ring-violet-100">
               <p className="text-xs font-bold uppercase tracking-wider text-violet-600">
@@ -167,6 +175,42 @@ export default function MuntuzGroupClient() {
             </a>
           </p>
         </section>
+
+        {/* MV player — the produced “Say Hi” video plays right here; Suno stays as a second link. */}
+        {showMv && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+            onClick={() => setShowMv(false)}
+            role="dialog"
+            aria-modal="true"
+            aria-label="MUNTUZ — Say Hi music video"
+          >
+            <div
+              className="w-full max-w-2xl overflow-hidden rounded-2xl bg-black shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between px-4 py-2">
+                <p className="text-sm font-bold text-white">MUNTUZ — “Say Hi”</p>
+                <button
+                  type="button"
+                  onClick={() => setShowMv(false)}
+                  aria-label="Close"
+                  className="rounded-full bg-white/10 px-3 py-1 text-sm font-bold text-white hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                >
+                  ✕
+                </button>
+              </div>
+              <video
+                src="/muntuz/say-hi-mv.mp4"
+                poster="/muntuz/ep-studio-stage.webp"
+                controls
+                autoPlay
+                playsInline
+                className="aspect-[3/2] w-full bg-black"
+              />
+            </div>
+          </div>
+        )}
 
         <footer className="mt-12 border-t border-slate-200 pt-6 text-center">
           <p className="text-xs text-slate-500">{t('groupAiNote')}</p>

@@ -49,7 +49,9 @@ export const GROUP_DICT: Record<Lang, Record<string, string>> = {
     "ep8Text": "Sofia took over the kitchen, Amara chopped, Chloe taste-tested, Emily set the table, Jiyoung supervised. Dinner was late. Nobody minded.",
     "groupBack": "← Back to Muntuz",
     "groupCta": "Start talking — free",
-    "groupAiNote": "MUNTUZ are AI characters, not real people."
+    "groupAiNote": "MUNTUZ are AI characters, not real people.",
+    "watchMvBtn": "▶ Watch the “Say Hi” MV",
+    "sunoLink": "Listen on Suno ↗"
   },
   "ko": {
     "debutKicker": "데뷔 · MUNTUZ",
@@ -91,7 +93,9 @@ export const GROUP_DICT: Record<Lang, Record<string, string>> = {
     "ep8Text": "Sofia가 부엌을 접수하고, Amara가 썰고, Chloe가 간을 보고, Emily가 상을 차리고, 지영이 감독했어요. 저녁은 늦어졌지만 아무도 신경 쓰지 않았어요.",
     "groupBack": "← Muntuz로 돌아가기",
     "groupCta": "무료로 대화 시작하기",
-    "groupAiNote": "MUNTUZ는 AI 캐릭터이며 실제 사람이 아닙니다."
+    "groupAiNote": "MUNTUZ는 AI 캐릭터이며 실제 사람이 아닙니다.",
+    "watchMvBtn": "▶ “Say Hi” 뮤직비디오 보기",
+    "sunoLink": "Suno에서 듣기 ↗"
   },
   "ja": {
     "debutKicker": "デビュー · MUNTUZ",
@@ -117,7 +121,9 @@ export const GROUP_DICT: Record<Lang, Record<string, string>> = {
     "epMoreNote": "さらにエピソードが続きます — ハウスの生活は続き、物語は育ちます。",
     "groupBack": "← Muntuzに戻る",
     "groupCta": "無料で話し始める",
-    "groupAiNote": "MUNTUZはAIキャラクターであり、実在の人物ではありません。"
+    "groupAiNote": "MUNTUZはAIキャラクターであり、実在の人物ではありません。",
+    "watchMvBtn": "▶ 「Say Hi」MVを見る",
+    "sunoLink": "Sunoで聴く ↗"
   },
   "es": {
     "debutKicker": "El debut · MUNTUZ",
@@ -143,7 +149,9 @@ export const GROUP_DICT: Record<Lang, Record<string, string>> = {
     "epMoreNote": "Más episodios están en camino: la casa sigue viviendo y la historia sigue creciendo.",
     "groupBack": "← Volver a Muntuz",
     "groupCta": "Empieza a hablar — gratis",
-    "groupAiNote": "MUNTUZ son personajes de IA, no personas reales."
+    "groupAiNote": "MUNTUZ son personajes de IA, no personas reales.",
+    "watchMvBtn": "▶ Ver el MV de “Say Hi”",
+    "sunoLink": "Escuchar en Suno ↗"
   },
   "fr": {
     "debutKicker": "Les débuts · MUNTUZ",
@@ -169,7 +177,9 @@ export const GROUP_DICT: Record<Lang, Record<string, string>> = {
     "epMoreNote": "D'autres épisodes arrivent — la maison continue de vivre et l'histoire de grandir.",
     "groupBack": "← Retour à Muntuz",
     "groupCta": "Commencer à parler — gratuit",
-    "groupAiNote": "MUNTUZ sont des personnages IA, pas de vraies personnes."
+    "groupAiNote": "MUNTUZ sont des personnages IA, pas de vraies personnes.",
+    "watchMvBtn": "▶ Regarder le clip « Say Hi »",
+    "sunoLink": "Écouter sur Suno ↗"
   },
   "de": {
     "debutKicker": "Das Debüt · MUNTUZ",
@@ -195,7 +205,9 @@ export const GROUP_DICT: Record<Lang, Record<string, string>> = {
     "epMoreNote": "Weitere Episoden folgen — das Haus lebt weiter und die Geschichte wächst.",
     "groupBack": "← Zurück zu Muntuz",
     "groupCta": "Kostenlos lossprechen",
-    "groupAiNote": "MUNTUZ sind KI-Charaktere, keine echten Menschen."
+    "groupAiNote": "MUNTUZ sind KI-Charaktere, keine echten Menschen.",
+    "watchMvBtn": "▶ „Say Hi“-MV ansehen",
+    "sunoLink": "Auf Suno hören ↗"
   },
   "pt": {
     "debutKicker": "A estreia · MUNTUZ",
@@ -221,7 +233,9 @@ export const GROUP_DICT: Record<Lang, Record<string, string>> = {
     "epMoreNote": "Mais episódios estão a caminho — a casa continua vivendo e a história crescendo.",
     "groupBack": "← Voltar para Muntuz",
     "groupCta": "Comece a conversar — grátis",
-    "groupAiNote": "MUNTUZ são personagens de IA, não pessoas reais."
+    "groupAiNote": "MUNTUZ são personagens de IA, não pessoas reais.",
+    "watchMvBtn": "▶ Assistir ao MV de “Say Hi”",
+    "sunoLink": "Ouvir no Suno ↗"
   },
   "zh": {
     "debutKicker": "出道 · MUNTUZ",
@@ -247,7 +261,9 @@ export const GROUP_DICT: Record<Lang, Record<string, string>> = {
     "epMoreNote": "更多剧集正在路上——小屋的生活还在继续，故事还在生长。",
     "groupBack": "← 返回 Muntuz",
     "groupCta": "免费开始聊天",
-    "groupAiNote": "MUNTUZ 是 AI 角色，不是真人。"
+    "groupAiNote": "MUNTUZ 是 AI 角色，不是真人。",
+    "watchMvBtn": "▶ 观看《Say Hi》MV",
+    "sunoLink": "在 Suno 上收听 ↗"
   },
   "it": {
     "debutKicker": "Il debutto · MUNTUZ",
@@ -273,7 +289,9 @@ export const GROUP_DICT: Record<Lang, Record<string, string>> = {
     "epMoreNote": "Altri episodi in arrivo — la casa continua a vivere e la storia a crescere.",
     "groupBack": "← Torna a Muntuz",
     "groupCta": "Inizia a parlare — gratis",
-    "groupAiNote": "I MUNTUZ sono personaggi IA, non persone reali."
+    "groupAiNote": "I MUNTUZ sono personaggi IA, non persone reali.",
+    "watchMvBtn": "▶ Guarda il MV di “Say Hi”",
+    "sunoLink": "Ascolta su Suno ↗"
   },
   "vi": {
     "debutKicker": "Màn ra mắt · MUNTUZ",
@@ -299,7 +317,9 @@ export const GROUP_DICT: Record<Lang, Record<string, string>> = {
     "epMoreNote": "Sẽ còn nhiều tập nữa — ngôi nhà vẫn sống và câu chuyện vẫn tiếp tục.",
     "groupBack": "← Quay lại Muntuz",
     "groupCta": "Bắt đầu trò chuyện — miễn phí",
-    "groupAiNote": "MUNTUZ là nhân vật AI, không phải người thật."
+    "groupAiNote": "MUNTUZ là nhân vật AI, không phải người thật.",
+    "watchMvBtn": "▶ Xem MV “Say Hi”",
+    "sunoLink": "Nghe trên Suno ↗"
   },
   "hi": {
     "debutKicker": "डेब्यू · MUNTUZ",
@@ -325,7 +345,9 @@ export const GROUP_DICT: Record<Lang, Record<string, string>> = {
     "epMoreNote": "और एपिसोड आ रहे हैं — घर जीता रहेगा और कहानी बढ़ती रहेगी।",
     "groupBack": "← Muntuz पर वापस जाएं",
     "groupCta": "बात शुरू करें — मुफ़्त",
-    "groupAiNote": "MUNTUZ AI किरदार हैं, असली लोग नहीं।"
+    "groupAiNote": "MUNTUZ AI किरदार हैं, असली लोग नहीं।",
+    "watchMvBtn": "▶ “Say Hi” MV देखें",
+    "sunoLink": "Suno पर सुनें ↗"
   },
   "ar": {
     "debutKicker": "الظهور الأول · MUNTUZ",
@@ -351,7 +373,9 @@ export const GROUP_DICT: Record<Lang, Record<string, string>> = {
     "epMoreNote": "المزيد من الحلقات قادمة — المنزل يواصل الحياة والقصة تواصل النمو.",
     "groupBack": "← العودة إلى Muntuz",
     "groupCta": "ابدأ التحدث — مجاناً",
-    "groupAiNote": "MUNTUZ شخصيات ذكاء اصطناعي وليست أشخاصاً حقيقيين."
+    "groupAiNote": "MUNTUZ شخصيات ذكاء اصطناعي وليست أشخاصاً حقيقيين.",
+    "watchMvBtn": "▶ شاهد فيديو «Say Hi»",
+    "sunoLink": "استمع على Suno ↗"
   }
 };
 
