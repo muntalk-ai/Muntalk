@@ -109,7 +109,7 @@ export function apiSafeError(logPrefix: string, e: unknown, status = 500) {
 /** 특권 엔드포인트용 어드민 이메일 화이트리스트 (send-email). */
 export function isAdminEmail(email?: string): boolean {
   if (!email) return false;
-  const list = (process.env.ADMIN_EMAILS || 'muntalkofficial@gmail.com')
+  const list = (process.env.ADMIN_EMAILS || 'muntuz.official@gmail.com')
     .split(',')
     .map((s) => s.trim().toLowerCase())
     .filter(Boolean);
