@@ -36,6 +36,32 @@ export default function LessonPage({
   const [showTestimonial, setShowTestimonial] = useState(false);
   // PR-H: 어뷰징 탐지용 레슨 세션 시작 시각
   const lessonStartRef = useRef<number>(Date.now());
+  // QA S-6: 서버 XP 지급 실패를 화면에 보여주고 재시도하기 위한 상태.
+  // 게스트는 award 대상이 아니라서(awardXp가 {ok:false, reason:'guest'} 반환)
+  // 이 배너를 띄우지 않는다 — 로그인 유저의 실패에만 표시한다.
+  const [xpAwardError, setXpAwardError] = useState<string | null>(null);
+  const [xpAwardRetrying, setXpAwardRetrying] = useState(false);
+  // 같은 레슨의 완료 콜백이 두 번(완료 버튼 더블클릭 등) 실행돼 XP가
+  // 이중 지급되는 것을 막는다. 마운트당 레슨 1회만 지급한다.
+  const completedRef = useRef<string | null>(null);
+  const lastXpEarnedRef = useRef(0);
+
+  // QA S-6: awardXp 결과를 확인한다. 서버가 지급을 거절한 경우(401/422/429/500)는
+  // 서버에 지급이 기록되지 않은 것이 확실하므로 2초 뒤 1회 자동 재시도한다.
+  // 네트워크 오류(reason 'network')는 요청이 서버에 도달했는지 알 수 없어
+  // 자동 재시도하지 않고(중복 지급 위험) 사용자가 직접 재시도 버튼을 누르게 한다.
+  const awardLessonXp = async (xpEarned: number): Promise<boolean> => {
+    const sessionSec = Math.max(1, Math.round((Date.now() - lessonStartRef.current) / 1000));
+    const result = await awardXp({ source: 'lesson', xp: xpEarned, sessionSec, meta: { lessonId: lesson } });
+    if (result.ok) return true;
+    console.warn('[lesson] XP award failed:', result.reason);
+    if (result.reason === 'network') return false;
+    await new Promise(r => setTimeout(r, 2000));
+    const retrySec = Math.max(1, Math.round((Date.now() - lessonStartRef.current) / 1000));
+    const retry = await awardXp({ source: 'lesson', xp: xpEarned, sessionSec: retrySec, meta: { lessonId: lesson } });
+    if (!retry.ok) console.warn('[lesson] XP award retry failed:', retry.reason);
+    return retry.ok;
+  };
 
   // 비로그인 게스트 접근 제한 — a1-1-1 외 모든 레슨 차단
   useEffect(() => {
@@ -64,6 +90,10 @@ export default function LessonPage({
   }, []);
 
   const handleComplete = async (xpEarned: number) => {
+    // QA S-6: 같은 레슨 완료가 두 번 실행되면(더블클릭 등) 여기서 차단한다.
+    if (completedRef.current === lesson) return;
+    completedRef.current = lesson;
+    lastXpEarnedRef.current = xpEarned;
     try {
       // localStorage 업데이트
       const prev = parseInt(localStorage.getItem('mt_xp') || '0', 10);
@@ -95,8 +125,14 @@ export default function LessonPage({
           await updateUserProfile(user.uid, {
             completedLessons: doneParsed,
           });
-          const sessionSec = Math.max(1, Math.round((Date.now() - lessonStartRef.current) / 1000));
-          await awardXp({ source: 'lesson', xp: xpEarned, sessionSec, meta: { lessonId: lesson } });
+          // QA S-6: awardXp 결과를 확인하고, 실패하면 화면에 알린다.
+          // 이전에는 결과를 확인하지 않아 서버 거절 시 XP가 조용히 사라졌다.
+          const awarded = await awardLessonXp(xpEarned);
+          if (!awarded) {
+            setXpAwardError(`XP 지급에 실패했어요. +${xpEarned} XP가 서버에 저장되지 않았습니다. 아래 버튼으로 다시 시도해 주세요.`);
+          } else {
+            setXpAwardError(null);
+          }
           console.log('[lesson] Firestore saved — lessons:', doneParsed.length);
 
           // 추천 리워드 확인 (PR #114) — N개 레슨 완료 시 추천인에게 XP.
@@ -143,10 +179,39 @@ export default function LessonPage({
     }
   };
 
+  // QA S-6: XP 지급 실패 후 사용자가 직접 다시 시도한다.
+  const retryXpAward = async () => {
+    if (!user || xpAwardRetrying || !lastXpEarnedRef.current) return;
+    setXpAwardRetrying(true);
+    try {
+      const ok = await awardLessonXp(lastXpEarnedRef.current);
+      if (ok) {
+        setXpAwardError(null);
+        try { await refreshProfile(); } catch { /* ignore */ }
+      } else {
+        setXpAwardError(`XP 지급에 다시 실패했어요. +${lastXpEarnedRef.current} XP가 아직 서버에 저장되지 않았습니다. 잠시 뒤 다시 시도해 주세요.`);
+      }
+    } finally {
+      setXpAwardRetrying(false);
+    }
+  };
+
   if (!loaded) return null;
 
   return (
     <RtlDir lang={langId}>
+      {xpAwardError && (
+        <div style={{ background: '#FEF3C7', borderBottom: '1px solid #F59E0B', padding: '10px 16px', display: 'flex', gap: 12, alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <span style={{ fontSize: 14, color: '#92400E' }}>⚠️ {xpAwardError}</span>
+          <button
+            onClick={retryXpAward}
+            disabled={xpAwardRetrying}
+            style={{ padding: '6px 14px', borderRadius: 8, border: 'none', background: '#F59E0B', color: '#fff', fontWeight: 700, fontSize: 13, cursor: xpAwardRetrying ? 'not-allowed' : 'pointer' }}
+          >
+            {xpAwardRetrying ? '다시 시도 중…' : 'XP 다시 지급받기'}
+          </button>
+        </div>
+      )}
       <LessonPlayer
         levelId={level}
         stepId={step}

@@ -5,6 +5,7 @@ import { signOut } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
 import { updateUserProfile, detectBrowserNativeLang, resolveNativeLang } from '@/lib/userProfile';
+import { isLangPromptSnoozed, markLangChosen } from '@/lib/langPrompt';
 import { db } from '@/lib/firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import PushPrimeCard from './PushPrimeCard';
@@ -272,12 +273,8 @@ export default function LevelHub() {
       const lsPlaced = localStorage.getItem('mt_placement_done');
       setPlacementDone(lsPlaced === 'true');
       if (!lsPlaced) {
-        // 한 번도 테스트 안 함 → 언어 미선택이면 언어 모달만 (placement 팝업 없음)
-        const lang = localStorage.getItem('mt_learn_lang') || '';
-        if (!lang || lang === 'en-US') {
-          setShowLangModal(true);
-          setLangStep('learn');
-        }
+        // QA S-5/H-2: 언어 모달 자동 노출 제거 — LangSetupPrompt가 유일한 자동
+        // 프롬프트다. 기본값 'en-US'를 "미선택"으로 취급하던 재등장 루프도 제거.
         // placement는 히어로 CTA에서 유도
       }
       return;
@@ -297,15 +294,9 @@ export default function LevelHub() {
     }
     setPlacementDone(false);
 
-    const lang = profile.learnLang || localStorage.getItem('mt_learn_lang') || '';
-    if (!lang || lang === 'en-US') {
-      // 언어 미선택 → 언어 선택 모달 (온보딩 진행 단계이므로 세션 가드 없이 표시)
-      setShowLangModal(true);
-      setLangStep('learn');
-      return;
-    }
-
-    // placement 미완료라도 모달 팝업 없음 — 상시 배너 + 잠긴 카드에서 유도
+    // QA S-5/H-2: 로그인 유저에게도 언어 모달을 자동 노출하지 않는다.
+    // 미확정 유저에게는 전역 LangSetupPrompt가 뜬다. placement 미완료라도
+    // 모달 팝업 없음 — 상시 배너 + 잠긴 카드에서 유도
 
   }, [user, authLoading, profile]);
 
@@ -314,7 +305,11 @@ export default function LevelHub() {
   //    덮어쓰지 않음 — 라오어 선택 후 뒤로가기 시 스페인어로 되돌아가는 버그 방지
   useEffect(() => {
     if (profile) {
-      setXp(profile.xp || 0);
+      // QA S-6: 서버 XP와 로컬 mt_xp 중 큰 값을 보여준다. 서버 지급이
+      // 실패해 profile.xp가 0이어도 로컬에 쌓인 XP가 사라져 보이지 않는다.
+      let localXp = 0;
+      try { localXp = parseInt(localStorage.getItem('mt_xp') || '0', 10) || 0; } catch { /* ignore */ }
+      setXp(Math.max(profile.xp || 0, localXp));
       setStreak(profile.streak || 0);
       setFreezes(profile.streakFreezes ?? 1);
       const lsLearn = (() => { try { return localStorage.getItem('mt_learn_lang'); } catch { return null; } })();
@@ -394,15 +389,38 @@ export default function LevelHub() {
   // localStorage의 새 값을 덮어쓰는 버그 방지용 플래그
   const pendingLangSyncRef = useRef<string | null>(null);
 
+  // QA S-5: 언어 모달 Escape 키 닫기 (오버레이 클릭 닫기는 이미 있음).
+  useEffect(() => {
+    if (!showLangModal) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setShowLangModal(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [showLangModal]);
+
+  // QA S-5: 언어 모달 수동 오픈 전용. 미확정 유저에게는 전역 LangSetupPrompt가
+  // 이미 떠 있으므로, 그 위에 두 번째 모달을 겹쳐 띄우지 않는다. (LangSetupPrompt가
+  // 스누즈된 뒤에는 이 모달을 수동으로 열 수 있다.)
+  const openLangModal = () => {
+    if (user && profile?.langsConfirmed === false && !isLangPromptSnoozed()) return;
+    setLangStep('learn');
+    setShowLangModal(true);
+  };
+
   const saveLangPrefs = async (learn: string, native: string) => {
     try {
       localStorage.setItem('mt_learn_lang', learn);
       localStorage.setItem('mt_native_lang', native);
     } catch { /* ignore */ }
+    // QA H-2: 명시적 선택 기록 — LangSetupPrompt 프리필/스누즈 판단용
+    markLangChosen();
     if (!user) return;
     pendingLangSyncRef.current = learn; // Firestore/메모리 반영 대기 표시
     try {
-      await updateUserProfile(user.uid, { learnLang: learn, nativeLang: native });
+      // QA H-2: LevelHub에서 언어를 확정해도 langsConfirmed를 true로 저장한다.
+      // 안 그러면 LangSetupPrompt가 계속 뜬다.
+      await updateUserProfile(user.uid, { learnLang: learn, nativeLang: native, langsConfirmed: true });
       await refreshProfile(); // 메모리상 profile도 최신화 (stale 값으로 덮어쓰기 방지)
       // refreshProfile 후 [profile] effect가 실행되면서 값이 일치 → 플래그는 effect에서 해제
     } catch {
@@ -473,8 +491,7 @@ export default function LevelHub() {
       router.push(`/lingua/learn/${levelId}?lang=${savedLearn}&subLang=${savedNative}&tutor=${savedTutor}`);
     } else {
       setPendingLevelId(levelId);
-      setLangStep('learn');
-      setShowLangModal(true);
+      openLangModal();
     }
   };
 
@@ -769,7 +786,7 @@ export default function LevelHub() {
         </button>
         <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
           {/* 현재 언어 표시 + 변경 버튼 */}
-          <button style={styles.langPill} onClick={() => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); }}>
+          <button style={styles.langPill} onClick={() => { setPendingLevelId(null); openLangModal(); }}>
             <span>{learnLang ? <FlagImg code={learnLang} size={20} /> : '🌐'}</span>
             <span style={{ fontWeight: 800, fontSize: 12, color: '#2563EB' }}>{learnLangInfo?.label ?? 'English'}</span>
             <span style={{ fontSize: 10, color: '#9CA3AF' }}>▾</span>
@@ -866,7 +883,7 @@ export default function LevelHub() {
           {/* 언어 + 스트릭 + XP 요약 */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 20px',
             borderBottom: '1px solid #F8FAFC', marginBottom: 4 }}>
-            <button style={styles.langPill} onClick={() => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); setShowMobileMenu(false); }}>
+            <button style={styles.langPill} onClick={() => { setPendingLevelId(null); openLangModal(); setShowMobileMenu(false); }}>
               <span>{learnLang ? <FlagImg code={learnLang} size={18} /> : '🌐'}</span>
               <span style={{ fontWeight: 800, fontSize: 12, color: '#2563EB' }}>{learnLangInfo?.label ?? 'English'}</span>
               <span style={{ fontSize: 10, color: '#9CA3AF' }}>▾</span>
@@ -901,7 +918,7 @@ export default function LevelHub() {
             { emoji: '📚', label: 'Word Bank',      action: () => router.push('/lingua/words') },
             { emoji: '👩‍🏫', label: 'Tutors',       action: () => router.push('/lingua/tutors') },
             { emoji: '👋', label: 'Our Story',    action: () => router.push('/about') },
-            { emoji: '🌐', label: 'Languages',      action: () => { setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); setShowMobileMenu(false); } },
+            { emoji: '🌐', label: 'Languages',      action: () => { setPendingLevelId(null); openLangModal(); setShowMobileMenu(false); } },
           ]) as Array<{ header?: string; emoji?: string; label?: string; action?: () => void }>).map((item, idx) => (
             item.header ? (
               <div key={`mh-${idx}`} style={{ padding: '10px 24px 2px', fontSize: 11, fontWeight: 800, color: '#94A3B8', letterSpacing: 1.5 }}>
@@ -1046,7 +1063,7 @@ export default function LevelHub() {
                     <button style={styles.heroBtn2} onClick={() => { logReelCta('signup'); router.push('/signup'); }}>
                       🚀 Start Learning Free
                     </button>
-                    <button style={styles.heroBtn2} onClick={() => { logReelCta('placement'); setPendingLevelId(null); setLangStep('learn'); setShowLangModal(true); }}>
+                    <button style={styles.heroBtn2} onClick={() => { logReelCta('placement'); setPendingLevelId(null); openLangModal(); }}>
                       🎯 Free Placement Test
                     </button>
                   </>

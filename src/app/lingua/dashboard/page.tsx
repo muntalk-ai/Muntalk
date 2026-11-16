@@ -43,7 +43,9 @@ export default function DashboardPage() {
   // Leaderboard hidden — no longer fetching other users' data
 
   // profile 또는 localStorage에서 값 읽기 (SSR 안전)
-  const xp             = profile?.xp             ?? localXp;
+  // QA S-6: 서버 XP와 로컬 mt_xp 중 큰 값을 쓴다. 서버 지급이 실패해
+  // profile.xp가 0이어도 로컬에 쌓인 XP가 0으로 보이지 않는다.
+  const xp             = Math.max(profile?.xp ?? 0, localXp);
   const streak         = profile?.streak          ?? localStreak;
   const learnLang      = profile?.learnLang       ?? localLang;
   const completedCount = profile?.completedLessons?.length ?? 0;
