@@ -1022,14 +1022,14 @@ export default function LevelHub() {
             /* 비로그인 — 마케팅 히어로 (H1 체험 버튼 + 포지셔닝) */
             <>
               <div style={styles.heroBadgeRow}>
-                <div style={styles.heroBadge52}>🌐 90+ Languages</div>
+                <div style={styles.heroBadge52}>🌐 94 Languages</div>
                 <div style={{ ...styles.heroBadgeTutors, cursor: 'pointer' }} onClick={() => setShowPlacementModal(true)}>
                   <span style={{ fontSize: 15 }}>🎯</span>
                   <span>Take <strong>Placement</strong> Test</span>
                   <span style={styles.newTag}>FREE</span>
                 </div>
               </div>
-              <h1 style={styles.heroTitle}>{reelHero ? reelHero.headline : (<>Speak 90+ languages<br />with 150+ AI tutors</>)}</h1>
+              <h1 style={styles.heroTitle}>{reelHero ? reelHero.headline : (<>Speak 94 languages<br />with 50 AI tutors</>)}</h1>
               <p style={styles.heroDesc}>{reelHero ? reelHero.desc : (<>Stop matching words. Start real conversations.<br />Our AI tutors get total beginners talking in under 10 minutes.</>)}</p>
               <div style={styles.heroBtnRow}>
                 {/* E-2: 1분 무료 대화 체험 CTA 최상단 — /lingua/microtalk */}
@@ -1258,8 +1258,8 @@ export default function LevelHub() {
       {/* -- Stats -- */}
       <div style={styles.statsWrap}>
         {([
-          ['150+','AI Tutors','🤖','#EFF6FF','#2563EB'],
-          ['90+','Languages','🌍','#F0FDF4','#16A34A'],
+          ['50','AI Tutors','🤖','#EFF6FF','#2563EB'],
+          ['94','Languages','🌍','#F0FDF4','#16A34A'],
           [String(totalLessonsCount),'Lessons','📚','#FFF7ED','#EA580C'],
           ['A1→C2','CEFR Levels','🎓','#FAF5FF','#7C3AED'],
         ] as [string,string,string,string,string][]).map(([v,l,e,bg,ac]) => (
@@ -1538,7 +1538,7 @@ export default function LevelHub() {
       )}
 
       <footer style={styles.footer}>
-        <div style={{ marginBottom: 12 }}>🌐 MunTalk · {totalLessonsCount} lessons · A1 to C2 · 150+ AI Tutors</div>
+        <div style={{ marginBottom: 12 }}>🌐 MunTalk · {totalLessonsCount} lessons · A1 to C2 · 50 AI Tutors</div>
         <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 10 }}>
           <a href="/about" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>👋 Our Story</a>
           <a href="/faq" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>💬 Help & FAQ</a>

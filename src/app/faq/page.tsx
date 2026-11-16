@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { brandifyText } from '@/lib/brand';
+import { useBrand } from '@/lib/useBrand';
 
 interface FaqItem {
   q: string;
@@ -81,7 +83,7 @@ If you signed up with Google, you don't have a password — just click "Continue
   },
   {
     q: 'Can I change my learning language after signing up?',
-    a: `Yes! Go to the main Lingua page and tap on your current language flag at the top. You can switch to any of the 90+ available languages at any time. Your progress for each language is saved separately, so switching won't erase your existing progress.`,
+    a: `Yes! Go to the main Lingua page and tap on your current language flag at the top. You can switch to any of the 94 available languages at any time. Your progress for each language is saved separately, so switching won't erase your existing progress.`,
     tags: ['account', 'lesson'],
   },
   {
@@ -122,7 +124,7 @@ Sign up for a free account to ensure your progress is always saved to the cloud.
               ['Placement test',       '❌',               '✅',                  '✅'],
               ['Word Bank + SRS',      '❌',               '❌',                  '✅'],
               ['League system',        '❌',               '✅',                  '✅'],
-              ['All 90+ languages',     '❌',               '❌',                  '✅'],
+              ['All 94 languages',     '❌',               '❌',                  '✅'],
             ].map(([f, g, fr, p], i) => (
               <tr key={i} style={{ borderBottom: '1px solid #F1F5F9', background: i % 2 === 0 ? '#FAFAFA' : '#fff' }}>
                 <td style={{ padding: '8px 4px', fontWeight: 700, color: '#374151' }}>{f}</td>
@@ -267,7 +269,7 @@ We recommend Chrome for the best experience. Internet Explorer is not supported.
   },
   {
     q: 'How many languages can I learn at the same time?',
-    a: `Free plan members can study up to 2 languages simultaneously. Premium members can study all 90+ languages with no limits. You can switch between languages anytime from the home screen.`,
+    a: `Free plan members can study up to 2 languages simultaneously. Premium members can study all 94 languages with no limits. You can switch between languages anytime from the home screen.`,
     tags: ['trial', 'lesson'],
   },
   {
@@ -279,6 +281,7 @@ We recommend Chrome for the best experience. Internet Explorer is not supported.
 
 export default function FaqPage() {
   const router = useRouter();
+  const brand = useBrand();
   const [activeCategory, setActiveCategory] = useState('all');
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [search, setSearch] = useState('');
@@ -414,7 +417,7 @@ export default function FaqPage() {
                       <div style={{ paddingTop: 16 }}>
                         {typeof faq.a === 'string' ? (
                           <div style={{ fontSize: 14, fontWeight: 600, color: '#475569', lineHeight: 1.8, whiteSpace: 'pre-line' }}>
-                            {faq.a}
+                            {brandifyText(faq.a, brand)}
                           </div>
                         ) : (
                           <div style={{ fontSize: 14, fontWeight: 600, color: '#475569', lineHeight: 1.8 }}>
@@ -449,9 +452,9 @@ export default function FaqPage() {
           <div style={{ fontSize: 14, color: '#6366F1', fontWeight: 700, marginBottom: 16 }}>
             We usually respond within 24 hours
           </div>
-          <a href="mailto:muntalkofficial@gmail.com"
+          <a href={`mailto:${brand.email}`}
             style={{ display: 'inline-block', padding: '12px 28px', borderRadius: 14, background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 900, fontSize: 15, textDecoration: 'none', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", boxShadow: '0 4px 16px rgba(99,102,241,0.3)' }}>
-            ✉️ muntalkofficial@gmail.com
+            ✉️ {brand.email}
           </a>
         </div>
       </div>

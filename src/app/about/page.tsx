@@ -1,6 +1,8 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import { brandifyText } from '@/lib/brand';
+import { useBrand } from '@/lib/useBrand';
 
 // Founder info
 const FOUNDER = {
@@ -36,6 +38,7 @@ const SECTIONS = [
 
 export default function AboutPage() {
   const router = useRouter();
+  const brand = useBrand();
   return (
     <div style={{ minHeight: '100vh', background: '#F8F9FA', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", color: '#0F172A' }}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
@@ -46,7 +49,7 @@ export default function AboutPage() {
       <div style={{ background: '#fff', borderBottom: '1px solid #F1F5F9', height: 62, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 24px', position: 'sticky', top: 0, zIndex: 200 }}>
         <div onClick={() => router.push('/')} style={{ display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer' }}>
           <div style={{ width: 36, height: 36, background: 'linear-gradient(135deg,#38BDF8,#818CF8)', borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20 }}>🌐</div>
-          <span style={{ fontWeight: 900, fontSize: 19, letterSpacing: '-0.5px' }}>MunTalk</span>
+          <span style={{ fontWeight: 900, fontSize: 19, letterSpacing: '-0.5px' }}>{brand.name}</span>
           <span style={{ background: '#EFF6FF', color: '#0284C7', fontSize: 10, fontWeight: 800, padding: '2px 8px', borderRadius: 20 }}>BETA</span>
         </div>
         <button onClick={() => router.push('/signup')}
@@ -64,7 +67,7 @@ export default function AboutPage() {
           Built by one person who<br />couldn&apos;t learn to <span style={{ background: 'linear-gradient(95deg,#6366F1,#8B5CF6,#C084FC)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>speak</span>.
         </h1>
         <p style={{ fontSize: 16, color: '#64748B', lineHeight: 1.8, fontWeight: 600, maxWidth: 560, margin: '0 auto' }}>
-          MunTalk is an independent, solo-built AI language tutor — made by a developer,
+          {brand.name} is an independent, solo-built AI language tutor — made by a developer,
           not a corporation. This is why it exists.
         </p>
       </div>
@@ -93,8 +96,8 @@ export default function AboutPage() {
         {SECTIONS.map((s, i) => (
           <div key={i} style={{ background: '#fff', borderRadius: 20, padding: '26px 28px', border: '1.5px solid #F1F5F9', boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}>
             <div style={{ fontSize: 32, marginBottom: 12 }}>{s.emoji}</div>
-            <h2 style={{ fontSize: 20, fontWeight: 900, margin: '0 0 10px', letterSpacing: -0.3 }}>{s.title}</h2>
-            <p style={{ fontSize: 15, color: '#475569', lineHeight: 1.85, margin: 0, fontWeight: 600 }}>{s.body}</p>
+            <h2 style={{ fontSize: 20, fontWeight: 900, margin: '0 0 10px', letterSpacing: -0.3 }}>{brandifyText(s.title, brand)}</h2>
+            <p style={{ fontSize: 15, color: '#475569', lineHeight: 1.85, margin: 0, fontWeight: 600 }}>{brandifyText(s.body, brand)}</p>
           </div>
         ))}
       </div>
@@ -112,7 +115,7 @@ export default function AboutPage() {
               <div style={{ fontSize: 26, flexShrink: 0 }}>{e}</div>
               <div>
                 <div style={{ fontSize: 15, fontWeight: 900, marginBottom: 4 }}>{t}</div>
-                <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, fontWeight: 600 }}>{d}</div>
+                <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, fontWeight: 600 }}>{brandifyText(d, brand)}</div>
               </div>
             </div>
           ))}
@@ -147,7 +150,7 @@ export default function AboutPage() {
           <a href="/terms" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>Terms of Service</a>
         </div>
         <div style={{ fontSize: 11, color: '#CBD5E1' }}>
-          &copy; {new Date().getFullYear()} MunTalk. All rights reserved.
+          &copy; {new Date().getFullYear()} {brand.name}. All rights reserved.
         </div>
       </footer>
     </div>
