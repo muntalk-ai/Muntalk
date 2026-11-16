@@ -3,6 +3,7 @@
 import { useRef, useState, useCallback } from 'react';
 import { apiFetch } from '@/lib/apiClient';
 import { speakWithDeviceTts } from '@/lib/deviceTts';
+import { createUnlockedAudio, resumeDeviceSpeech } from '@/lib/audioUnlock';
 import { LEARN_LANGUAGES } from '@/data/languages';
 
 // ── Session-level audio cache: identical (lang, text) taps (e.g. alphabet
@@ -29,6 +30,8 @@ function audioCacheSet(key: string, url: string) {
 export function useTtsSpeak(langId: string) {
   const [speaking, setSpeaking] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  // QA M-11: 오래된 speak() 호출의 뒤늦은 fetch가 새 재생을 덮지 않게 세대 가드.
+  const speakSeqRef = useRef(0);
 
   const stop = useCallback(() => {
     try { audioRef.current?.pause(); } catch { /* ignore */ }
@@ -41,11 +44,19 @@ export function useTtsSpeak(langId: string) {
     const clean = text.replace(/[\u{2600}-\u{27BF}\u{FE00}-\u{FEFF}\u{1F900}-\u{1F9FF}]/gu, '').replace(/\s{2,}/g, ' ').trim();
     if (!clean) return;
     const supported = LEARN_LANGUAGES.find(l => l.code === langId)?.tts ?? false;
+    // QA M-11: 제스처 안에서 동기적으로 — 첫 await 전에 오디오 엘리먼트를
+    // 만들고 무음으로 play()해 언록한다. /api/tts fetch 뒤의 play()는 폰에서
+    // 제스처 만료로 NotAllowedError가 날 수 있다 (원인 미확정 — 폰 확인 필요).
+    const mySeq = ++speakSeqRef.current;
+    const isCurrent = () => speakSeqRef.current === mySeq;
     stop();
+    resumeDeviceSpeech();
+    const unlockedAudio = createUnlockedAudio();
+    audioRef.current = unlockedAudio;
     setSpeaking(true);
     if (!supported) {
-      const ok = await speakWithDeviceTts(clean, langId, () => setSpeaking(false));
-      if (!ok) { setSpeaking(false); onError?.(); }
+      const ok = await speakWithDeviceTts(clean, langId, () => { if (isCurrent()) setSpeaking(false); });
+      if (!ok && isCurrent()) { setSpeaking(false); onError?.(); }
       return;
     }
     try {
@@ -63,12 +74,20 @@ export function useTtsSpeak(langId: string) {
         dataUrl = `data:${data.mimeType || 'audio/mp3'};base64,${data.audioContent}`;
         audioCacheSet(key, dataUrl);
       }
-      const audio = new Audio(dataUrl);
-      audioRef.current = audio;
-      audio.onended = () => { setSpeaking(false); audioRef.current = null; };
-      audio.onerror = () => { setSpeaking(false); audioRef.current = null; onError?.(); };
-      await audio.play();
+      if (!isCurrent()) return; // 그 사이 새 speak()이 시작됨
+      // 언록해 둔 엘리먼트에 실제 오디오를 끼워 재생한다.
+      const audio = unlockedAudio;
+      audio.src = dataUrl;
+      audio.onended = () => { if (isCurrent()) setSpeaking(false); if (audioRef.current === audio) audioRef.current = null; };
+      audio.onerror = () => { if (isCurrent()) { setSpeaking(false); onError?.(); } if (audioRef.current === audio) audioRef.current = null; };
+      try {
+        await audio.play();
+      } catch (playErr) {
+        console.warn('[tts] play() failed:', (playErr as Error)?.name, (playErr as Error)?.message);
+        throw playErr;
+      }
     } catch {
+      if (!isCurrent()) return;
       setSpeaking(false);
       onError?.();
     }
