@@ -10,7 +10,7 @@ service cloud.firestore {
       return isSignedIn() && request.auth.uid == uid;
     }
     function isAdmin() {
-      return isSignedIn() && request.auth.token.email == 'muntalkofficial@gmail.com';
+      return isSignedIn() && request.auth.token.email == 'muntuz.official@gmail.com';
     }
     // 쓰기 요청에서 허용된 필드만 사용하는지 검사
     function onlyAllowedFields(allowed) {

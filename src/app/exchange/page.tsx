@@ -507,6 +507,20 @@ export default function ExchangePage() {
   const [guestTrial, setGuestTrial] = useState<GuestTrial | null>(null);
   const [trialLeftMs, setTrialLeftMs] = useState<number | null>(null);
   const [showTrialExpired, setShowTrialExpired] = useState(false);
+  // Trial-ended prompt, dismissed once per session: the 1 s countdown
+  // interval re-opens the prompt on every tick, so a plain "Later"
+  // never sticks. Once the user closes it, it stays closed for this
+  // session (a ref, not state — the interval closure reads it without
+  // re-subscribing). Sending again still stays blocked by the trial
+  // gate; the user just gets a toast instead of the prompt.
+  const trialExpiredDismissedRef = useRef(false);
+  const openTrialExpired = () => {
+    if (!trialExpiredDismissedRef.current) setShowTrialExpired(true);
+  };
+  const dismissTrialExpired = () => {
+    trialExpiredDismissedRef.current = true;
+    setShowTrialExpired(false);
+  };
 
   // Photo lightbox — tap a partner avatar or gallery photo to see the
   // original high-resolution file. `images` enables prev/next inside a
@@ -1347,8 +1361,13 @@ export default function ExchangePage() {
     const existing = guestTrial ?? readGuestTrial();
     if (existing && now - existing.startedAt < GUEST_TRIAL_MS) return true;
     if (existing) {
-      // Trial used up.
-      setShowTrialExpired(true);
+      // Trial used up. If the prompt was already dismissed this
+      // session, do not re-open it — a toast is the only feedback.
+      if (trialExpiredDismissedRef.current) {
+        showToast('Your 5-minute free trial ended — sign up to keep chatting.');
+      } else {
+        setShowTrialExpired(true);
+      }
       return false;
     }
     // First guest chat message: start the trial.
@@ -1541,13 +1560,23 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
     const tick = () => {
       const left = guestTrial.startedAt + GUEST_TRIAL_MS - Date.now();
       setTrialLeftMs(Math.max(0, left));
-      if (left <= 0 && activeChat?.isAi) setShowTrialExpired(true);
+      if (left <= 0 && activeChat?.isAi) openTrialExpired();
     };
     tick();
     const iv = window.setInterval(tick, 1000);
     return () => window.clearInterval(iv);
     // eslint-disable-next-line react-hooks/exhaustive-deps — tick on trial/user/chat change only.
   }, [user, guestTrial, activeChatId]);
+
+  // Escape closes the trial-ended prompt (same as "Later").
+  useEffect(() => {
+    if (!showTrialExpired) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') dismissTrialExpired();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [showTrialExpired]);
 
   // ── Chats list: search + filter chips (HelloTalk list layout, MunTalk style)
   const [chatQuery, setChatQuery] = useState('');
@@ -1654,7 +1683,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
         // Server-side trial expiry (e.g. localStorage was cleared): open
         // the sign-up prompt instead of a generic error toast.
         if (data.error === 'trial_expired') {
-          setShowTrialExpired(true);
+          openTrialExpired();
           return;
         }
         // Q7: 서버의 새 채팅 한도에 걸리면, 채팅은 그대로 두고
@@ -2871,7 +2900,15 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
               so it picks up where it left off after sign-in on this
               device. */}
           {showTrialExpired && (
-            <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 p-4 sm:items-center" role="dialog" aria-modal="true" aria-label="Free trial ended">
+            <div
+              className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 p-4 sm:items-center"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Free trial ended"
+              onClick={(e) => {
+                if (e.target === e.currentTarget) dismissTrialExpired();
+              }}
+            >
               <div className="w-full max-w-sm rounded-3xl bg-white p-5 shadow-xl">
                 <h3 className="text-lg font-extrabold">Your 5-minute free trial ended</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -2884,7 +2921,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                   Sign up and keep chatting
                 </button>
                 <button
-                  onClick={() => setShowTrialExpired(false)}
+                  onClick={() => dismissTrialExpired()}
                   className="mt-2 w-full rounded-xl border border-slate-200 py-3 font-bold text-slate-600 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
                 >
                   Later
