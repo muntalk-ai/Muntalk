@@ -97,10 +97,28 @@ export default function GrammarPage() {
     setTutorId(ti); setNativeLang(nl); setLearnLang(ll);
     const done = JSON.parse(localStorage.getItem('mt_grammar_done') || '[]') as string[];
     setCompletedIds(new Set(done));
-    // Load the grammar pack for the learning language
-    // (Firestore cache → pre-generated static pack, via API).
+    // Load the grammar pack for the learning language.
+    // QA S-6: 예전에는 서버리스 API(/api/grammar/chapters)만 기다렸다 —
+    // 콜드 스타트 + firebase-admin 초기화가 붙으면 스켈레톤이 20초 이상
+    // 떴다. 정적 팩(public/grammar/{base}.json)은 CDN에서 바로 오므로
+    // 먼저 그걸로 화면을 그리고, API는 백그라운드에서 Firestore 교정본이
+    // 있는지 확인해 다를 때만 교체한다. 정적 팩이 없어도 API 경로가 그대로
+    // 동작하므로 미지원 언어는 예전과 동일하다.
     (async () => {
       setLoading(true); setLoadError(false);
+      let haveChapters = false;
+      const base = ll.split('-')[0].toLowerCase();
+      try {
+        const r = await fetch(`/grammar/${base}.json`);
+        if (r.ok) {
+          const ch = await r.json();
+          if (Array.isArray(ch) && ch.length > 0) {
+            setChapters(ch);
+            haveChapters = true;
+            setLoading(false);
+          }
+        }
+      } catch { /* ignore — API fallback below */ }
       try {
         const res = await apiFetch(
           `/api/grammar/chapters?lang=${encodeURIComponent(ll)}`,
@@ -108,12 +126,14 @@ export default function GrammarPage() {
         );
         const data = await res.json();
         if (Array.isArray(data.chapters) && data.chapters.length > 0) {
-          setChapters(data.chapters);
-        } else {
+          // Firestore 교정본이 정적 팩과 다를 때만 교체 (같으면 리렌더 방지)
+          setChapters(prev => (JSON.stringify(prev) === JSON.stringify(data.chapters) ? prev : data.chapters));
+          haveChapters = true;
+        } else if (!haveChapters) {
           setLoadError(true);
         }
       } catch {
-        setLoadError(true);
+        if (!haveChapters) setLoadError(true);
       }
       setLoading(false);
     })();

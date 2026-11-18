@@ -174,11 +174,15 @@ function DiscoverContent() {
         if (p?.planId) setProfilePlanId(p.planId);
         if (isLearningPurpose(p?.purpose)) setPurpose(p!.purpose); // B-11
       });
-      // Check plan
-      getSubscription(user.uid).then(sub => {
-        setPlanId(sub.planId);
-        setSubChecked(true);
-      });
+      // Check plan — QA S-6: 구독 조회가 첫 화면의 게이트라서, Firestore가
+      // 에러/오프라인으로 멈추면 스켈레톤이 영원히 떴다. 8초 안에 답이 없으면
+      // 게이트를 먼저 열고, 늦게 도착한 구독 정보는 도착하는 대로 바로잡는다.
+      let gateReleased = false;
+      const releaseGate = () => { if (!gateReleased) { gateReleased = true; setSubChecked(true); } };
+      getSubscription(user.uid)
+        .then(sub => { setPlanId(sub.planId); releaseGate(); })
+        .catch(releaseGate);
+      setTimeout(releaseGate, 8000);
       setIsAdmin(isAdminEmail(user.email));
     } else if (!authLoading) {
       setSubChecked(true);
