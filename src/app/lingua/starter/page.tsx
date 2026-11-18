@@ -348,6 +348,12 @@ function StarterContent() {
   }, [user]);
 
   // ── Translate unit words into target language on unit change ────────────────
+  // Bulk translation is cached in localStorage per (unit, target, native):
+  // the units are static, so a cached translation stays valid — repeat visits
+  // load instantly instead of paying another ~15s Gemini round-trip.
+  const STARTER_TX_CACHE_VERSION = 1;
+  const starterTxCacheKey = (unitId: number, t: string, n: string) =>
+    `mt_starter_tx_v${STARTER_TX_CACHE_VERSION}:${unitId}:${t}:${n}`;
   useEffect(() => {
     // English stays as-is
     if (langId === 'en-US' || langId === 'en-GB' || langId === 'en-AU' || langId === 'en-CA') {
@@ -360,6 +366,19 @@ function StarterContent() {
     const targetLang = LANG_DISPLAY_NAMES[langId] || langId;
     const nativeLang = LANG_DISPLAY_NAMES[subLang] || 'English';
     const currentUnit = UNITS[unitIdx];
+    const cacheKey = starterTxCacheKey(currentUnit.id, langId, subLang);
+    try {
+      const hit = localStorage.getItem(cacheKey);
+      if (hit) {
+        const parsed = JSON.parse(hit);
+        if (Array.isArray(parsed) && parsed.length === currentUnit.words.length) {
+          setTranslatedWords(parsed);
+          setIsTranslating(false);
+          return;
+        }
+        localStorage.removeItem(cacheKey);
+      }
+    } catch { /* ignore — fall through to Gemini */ }
     const wordList = currentUnit.words.map(w => w.word).join(', ');
     const exampleList = currentUnit.words.map(w => w.example).join(' || ');
 
@@ -404,6 +423,7 @@ Rules:
           exampleMeaning: item.exampleMeaning || currentUnit.words[i].example,
         }));
         setTranslatedWords(merged);
+        try { localStorage.setItem(cacheKey, JSON.stringify(merged)); } catch { /* ignore */ }
       }
     }).catch(() => {
       // Translation failed — keep English
@@ -496,8 +516,19 @@ Rules:
   const startMatchPhase = useCallback(async () => {
     const sample = words; // 유닛 단어 전부 (5개) — 회상 연습에서 제외되는 단어 없음
     const translations: Record<string,string> = {};
+    // 벌크 번역이 이미 각 단어의 모국어 뜻(`meaning`)을 갖고 있다 — 매치에는
+    // 그걸 그대로 쓴다. 단어마다 Gemini를 따로 부르던 기존 방식은 5회 연속
+    // 왕복(약 15초)이 걸렸다. meaning이 없는 단어(영어 원문 모드 등)만
+    // Gemini로 번역하고, 그 경우에도 병렬로 한 번에 보낸다.
+    const missing: typeof sample = [];
     for (const w of sample) {
-      translations[w.word] = await translateWord(w.word);
+      const m = (w as unknown as { meaning?: string }).meaning;
+      if (m && m !== w.word) translations[w.word] = m;
+      else missing.push(w);
+    }
+    if (missing.length > 0) {
+      const results = await Promise.all(missing.map(w => translateWord(w.word)));
+      missing.forEach((w, i) => { translations[w.word] = results[i]; });
     }
     setMatchTranslations(translations);
     setMatchLeft(sample.map(w => w.word));
