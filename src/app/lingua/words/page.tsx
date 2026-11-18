@@ -104,7 +104,7 @@ function WordsContent() {
           Word Bank is Premium
         </h1>
         <p style={{ fontSize:14, color:'#64748B', lineHeight:1.7, marginBottom:8, fontWeight:600 }}>
-          Unlock <strong>18,000+ essential words</strong> — verbs, adjectives, adverbs, and phrases — organized into bite-sized lessons.
+          Unlock <strong>1,700 essential words</strong> — verbs, adjectives, adverbs, and phrases — organized into bite-sized lessons.
         </p>
         <p style={{ fontSize:13, color:'#94A3B8', marginBottom:32, fontWeight:600 }}>
           10 words per lesson · 5 sentences each · AI-powered practice
@@ -143,7 +143,7 @@ function WordsContent() {
           Parts of Speech
         </h1>
         <p style={{ color:'#64748B', fontSize:14, margin:'0 0 40px', fontWeight:700 }}>
-          18,000+ words · 10 per lesson · 5 example sentences each
+          1,700 words · 10 per lesson · 5 example sentences each
         </p>
 
         {/* POS Cards */}

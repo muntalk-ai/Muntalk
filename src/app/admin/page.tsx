@@ -582,11 +582,11 @@ export default function AdminPage() {
               <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
                 {[
                   {label:'🎁 Free → Premium Offer', subject:'Upgrade to Premium — Special Offer Inside',
-                   body:`Hi there!\n\nWe've loved having you on MunTalk. As a token of our appreciation, we'd like to offer you an exclusive discount on our Premium plan.\n\nWith Premium you get:\n• All 6 levels (A1→C2)\n• Unlimited AI tutor sessions\n• 18,000+ Word Bank\n• Full League system\n\nUse code SPECIAL30 for 30% off your first month.\n\nHappy learning!\nThe MunTalk Team`},
+                   body:`Hi there!\n\nWe've loved having you on MunTalk. As a token of our appreciation, we'd like to offer you an exclusive discount on our Premium plan.\n\nWith Premium you get:\n• All 6 levels (A1→C2)\n• Unlimited AI tutor sessions\n• 1,700 Word Bank\n• Full League system\n\nUse code SPECIAL30 for 30% off your first month.\n\nHappy learning!\nThe MunTalk Team`},
                   {label:'📅 Renewal Reminder', subject:'Your MunTalk Premium is expiring soon',
                    body:`Hi there!\n\nJust a friendly reminder that your MunTalk Premium subscription is expiring soon.\n\nDon't lose your streak and progress — renew now to keep going!\n\nSee you in the app,\nThe MunTalk Team`},
                   {label:'🎉 Welcome Premium', subject:'Welcome to MunTalk Premium! 🎉',
-                   body:`Welcome to MunTalk Premium!\n\nYou now have access to:\n✅ All 6 levels (A1 → C2)\n✅ Unlimited AI tutor sessions\n✅ 18,000+ Word Bank (verbs, adjectives, adverbs, phrases)\n✅ League system & weekly rankings\n✅ Unlimited hearts\n\nJump back in and start learning!\n\nThe MunTalk Team`},
+                   body:`Welcome to MunTalk Premium!\n\nYou now have access to:\n✅ All 6 levels (A1 → C2)\n✅ Unlimited AI tutor sessions\n✅ 1,700 Word Bank (verbs, adjectives, adverbs, phrases)\n✅ League system & weekly rankings\n✅ Unlimited hearts\n\nJump back in and start learning!\n\nThe MunTalk Team`},
                 ].map(t=>(
                   <button key={t.label} onClick={()=>{setEmailSubject(t.subject);setEmailBody(t.body);}}
                     style={{...BTN_GHOST,background:'#F8FAFC',fontSize:11,padding:'8px 14px'}}>

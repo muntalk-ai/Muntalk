@@ -562,6 +562,9 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
 
   const stopAll = useCallback(() => {
     if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; }
+    // QA S-1: 기기 내장 음성(speechSynthesis)도 함께 취소한다. 이전에는
+    // HTMLAudio만 멈춰서, 기기 TTS 경로로 나간 묵은 발화가 계속 재생됐다.
+    try { window.speechSynthesis?.cancel(); } catch { /* ignore */ }
     setIsSpeaking(false);
     if (recognitionRef.current) recognitionRef.current.stop();
     setIsListening(false);
