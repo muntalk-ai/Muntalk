@@ -5,6 +5,7 @@ import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import RtlDir from '@/components/RtlDir';
+import ChatMarkdown from '@/components/ChatMarkdown';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { getUserProfile, resolveNativeLang } from '@/lib/userProfile';
@@ -501,9 +502,10 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
               ...S.bubble,
               ...(msg.role === 'user' ? S.userBubble : S.coachBubble),
             }}>
-              {msg.text.split('\n').map((line, j) => (
+              {/* QA M-12: coach replies may contain **bold** etc. — render markdown; user text stays verbatim */}
+              {msg.role === 'user' ? msg.text.split('\n').map((line, j) => (
                 <span key={j}>{line}{j < msg.text.split('\n').length - 1 && <br/>}</span>
-              ))}
+              )) : <ChatMarkdown text={msg.text} />}
             </div>
           </div>
         ))}

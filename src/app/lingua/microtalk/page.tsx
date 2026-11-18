@@ -5,6 +5,7 @@ import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import RtlDir from '@/components/RtlDir';
+import ChatMarkdown from '@/components/ChatMarkdown';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { getLangLabel, hasStt } from '@/data/languages';
@@ -405,7 +406,8 @@ export default function MicroTalkPage() {
           <div style={S.msgs}>
             {messages.map((m, i) => (
               <div key={i} style={m.role === 'user' ? S.uMsg : S.aMsg}>
-                <div>{m.text}</div>
+                {/* QA M-12: tutor replies may contain **bold** etc. — render markdown; user text stays verbatim */}
+                {m.role === 'user' ? <div>{m.text}</div> : <div><ChatMarkdown text={m.text} /></div>}
                 {m.role === 'ai' && showTranslation && (
                   translations[i]
                     ? <div style={S.trText}>{translations[i]}</div>
