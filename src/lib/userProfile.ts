@@ -68,6 +68,11 @@ export interface UserProfile {
   placementDone?:  boolean;
   placementLevel?: string;
   placementTrack?: string;
+  // 구독 캐시 (Stripe 웹훅·관리자 Grant가 users 문서에도 함께 씀 —
+  // /profile이 이 값을 보여준다. QA S-3: subscriptions 문서와 달라질
+  // 수 있어 게이팅은 양쪽을 함께 본다)
+  planId?:       string;   // 'free' | 'monthly' | 'biannual' | 'annual'
+  planStatus?:   string;   // 'active' | 'canceled' etc
   // 학습 목적 (B-11) — optional: 기존 유저 문서에 변경 불필요
   purpose?:        LearningPurpose | null; // B-11: null = 미설정(초기화)
   purposeSetAt?:   string;   // ISO 날짜 (YYYY-MM-DD)

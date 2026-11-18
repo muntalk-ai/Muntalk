@@ -14,7 +14,7 @@ import type { LearningPurpose } from '@/lib/purpose';
 import { CURRICULUM, getCurrentLevel } from '@/data/curriculum';
 import { LEARN_LANGUAGES, UI_LANGUAGES } from '@/data/languages';
 import { isNonLatinLang } from '@/data/alphabets/types';
-import { getSubscription, getHearts, getLocalHearts, isLevelLocked, isAdminEmail, PlanId, Hearts } from '@/lib/subscription';
+import { getSubscription, getHearts, getLocalHearts, isLevelLocked, isAdminEmail, effectivePlanId, PlanId, Hearts } from '@/lib/subscription';
 import PaywallModal from '@/components/PaywallModal';
 import WowFirstPhrase from '@/components/WowFirstPhrase';
 import TrialBanner from '@/components/TrialBanner';
@@ -99,8 +99,12 @@ export default function LevelHub() {
   const [isAdmin, setIsAdmin] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [planId, setPlanId] = useState<PlanId>('free');
+  // QA S-3/H-12: subscriptions 문서와 AuthContext 프로필(users 문서)의
+  // planId가 달라질 수 있어, 어느 한쪽이라도 유료면 유료로 본다.
+  // 아래 게이팅은 전부 이 값을 쓴다 (setPlanId는 그대로 subscriptions 값).
+  const effPlanId = effectivePlanId(planId, profile?.planId);
   // 무료 사용자: 히어로 paywall 배너 대신 학습 CTA 노출
-  const isFreeUser = !isAdmin && planId === 'free';
+  const isFreeUser = !isAdmin && effPlanId === 'free';
   const [hearts, setHearts] = useState<Hearts>({ count: 5 });
   const [showPaywall, setShowPaywall] = useState(false);
   const [paywallReason, setPaywallReason] = useState<'level_locked'|'no_hearts'|'chat_limit'|'general'>('general');
@@ -471,15 +475,15 @@ export default function LevelHub() {
   const handleLevelClick = (levelId: string, unlocked: boolean) => {
     if (!unlocked) return;
     // 구독 레벨 잠금 체크
-    if (!isAdmin && isLevelLocked(levelId, planId, false, placementLevel)) {
+    if (!isAdmin && isLevelLocked(levelId, effPlanId, false, placementLevel)) {
       // Free + 테스트 미완료 → 테스트 유도 모달 (선택 보상형). 테스트 후에도 잠김이면 paywall.
-      if (planId === 'free' && !placementDone) { setShowPlacementModal(true); return; }
+      if (effPlanId === 'free' && !placementDone) { setShowPlacementModal(true); return; }
       setPaywallReason('level_locked');
       setShowPaywall(true);
       return;
     }
     // 하트 체크 (Free 유저)
-    if (!isAdmin && planId === 'free' && hearts.count === 0) {
+    if (!isAdmin && effPlanId === 'free' && hearts.count === 0) {
       setPaywallReason('no_hearts');
       setShowPaywall(true);
       return;
@@ -502,7 +506,7 @@ export default function LevelHub() {
       const alreadyAdded = trialData.languages.includes(learn);
       if (!alreadyAdded && trialData.languages.length >= TRIAL_MAX_LANGUAGES) {
         // planId가 premium이면 통과
-        if (!isAdmin && planId === 'free') {
+        if (!isAdmin && effPlanId === 'free') {
           setShowLangModal(false);
           setLangBlockedModal(true);
           return;
@@ -553,7 +557,7 @@ export default function LevelHub() {
       `}</style>
 
       {/* -- Trial: 만료 모달 -- */}
-      {trialExpired && planId === 'free' && !isAdmin && (
+      {trialExpired && effPlanId === 'free' && !isAdmin && (
         <TrialExpiredModal
           reason="expired"
           onClose={() => router.push('/pricing')}
@@ -569,7 +573,7 @@ export default function LevelHub() {
       )}
 
       {/* -- Trial: 상단 배너 -- */}
-      {!trialExpired && trialData && planId === 'free' && !isAdmin && !trialBannerDismissed && (
+      {!trialExpired && trialData && effPlanId === 'free' && !isAdmin && !trialBannerDismissed && (
         <TrialBanner
           daysLeft={trialDaysLeft}
           onDismiss={() => setTrialBannerDismissed(true)}
@@ -795,7 +799,7 @@ export default function LevelHub() {
           <div className="mt-nav-streak-xp" style={{...styles.navStreak, background:'#EFF6FF'}} title="Streak Freeze — protects your streak when you miss a day. +1 every 7-day streak (max 5)"><span>🧊</span><span style={{ fontWeight: 800, color: '#2563EB', fontSize: 13 }}>{freezes}</span></div>
           <div className="mt-nav-streak-xp" style={styles.navXp}><span>⭐</span><span style={{ fontWeight: 800, color: '#2563EB', fontSize: 13 }}>{xp} XP</span></div>
           {/* 하트바 + Upgrade — auth 로딩 완료 후에만 표시 */}
-          {!authLoading && planId === 'free' && !isAdmin && user && (
+          {!authLoading && effPlanId === 'free' && !isAdmin && user && (
             <button onClick={() => router.push('/pricing')}
               style={{ padding:'6px 14px', borderRadius:20, border:'none', background:'linear-gradient(135deg,#F59E0B,#F97316)', color:'#fff', fontSize:11, fontWeight:900, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", letterSpacing:0.3 }}>
               ⭐ Upgrade
@@ -841,8 +845,12 @@ export default function LevelHub() {
               )}
             </div>
           ) : authLoading ? (
-            // auth 로딩 중 — 빈 자리표시 (깜빡임 방지)
-            <div style={{ width: 72, height: 28 }} />
+            // auth 로딩 중 — 빈 박스 대신 아바타 자리표시 (H-12: 빈 자리로
+            // 보이면 프로필 버튼이 사라진 것처럼 보인다)
+            <div style={{ width: 72, height: 28, borderRadius: 20, background: '#F1F5F9', display: 'flex', alignItems: 'center', gap: 6, padding: '0 10px 0 5px' }}>
+              <div style={{ width: 22, height: 22, borderRadius: '50%', background: '#E2E8F0' }} />
+              <div style={{ width: 26, height: 8, borderRadius: 4, background: '#E2E8F0' }} />
+            </div>
           ) : (
             <button onClick={() => router.push('/login')}
               style={{ padding: '7px 16px', borderRadius: 20, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 12, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
@@ -939,7 +947,7 @@ export default function LevelHub() {
           ))}
 
           {/* 프리미엄 업그레이드 */}
-          {!authLoading && planId === 'free' && !isAdmin && user && (
+          {!authLoading && effPlanId === 'free' && !isAdmin && user && (
             <div style={{ padding: '12px 20px' }}>
               <button onClick={() => { router.push('/pricing'); setShowMobileMenu(false); }}
                 style={{ width: '100%', padding: '13px', borderRadius: 14, border: 'none',
@@ -1426,7 +1434,7 @@ export default function LevelHub() {
 
         {CURRICULUM.map((level) => {
           const unlocked    = isLevelUnlocked(level.id);
-          const subLocked   = !isAdmin && isLevelLocked(level.id, planId, false, placementLevel); // 구독 잠금
+          const subLocked   = !isAdmin && isLevelLocked(level.id, effPlanId, false, placementLevel); // 구독 잠금
           const completed   = isLevelCompleted(level.id);
           const active      = level.id === currentLevel.id;
           const progress    = getLevelProgress(level.id);
@@ -1455,7 +1463,7 @@ export default function LevelHub() {
               {/* 구독 잠금 */}
               {unlocked && subLocked && (
                 <div style={{ ...styles.lockOverlay, background: 'linear-gradient(135deg,rgba(99,102,241,0.92),rgba(139,92,246,0.92))' }}>
-                  {planId === 'free' && !placementDone ? (
+                  {effPlanId === 'free' && !placementDone ? (
                     <>
                       <span style={{ fontSize: 28 }}>📊</span>
                       <span style={{ ...styles.lockText, color: '#fff' }}>Test to unlock</span>
@@ -1508,7 +1516,7 @@ export default function LevelHub() {
                 </button>
               )}
               {subLocked && (
-                planId === 'free' && !placementDone ? (
+                effPlanId === 'free' && !placementDone ? (
                   <button style={{ ...styles.cardBtn, background: 'linear-gradient(135deg,#6366F1,#8B5CF6)' }}
                     onClick={e => { e.stopPropagation(); setShowPlacementModal(true); }}>
                     📊 Unlock with placement test
