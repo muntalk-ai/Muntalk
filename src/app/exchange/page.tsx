@@ -319,9 +319,12 @@ let msgSeq = 100;
 // Host check, same rule as src/middleware.ts (and the route-side
 // isMuntuzHost from the S-1 fix): the /exchange page is shared with
 // muntalk.com, so Muntuz-only behaviour in this file — chat persistence,
-// auto-review, voice dictation, localised greetings — is gated on the
-// Muntuz host. Only called from event handlers and effects (client-only),
-// so `window` is always defined here.
+// auto-review, voice dictation — is gated on the Muntuz host.
+// Localised greetings (M-5/M-13) and the daily new-chat counter
+// (M-4/M-13) run on both hosts: the greeting table and the counter are
+// local to this page, and the sidebar already advertises the 20/50
+// limit on muntalk.com too. Only called from event handlers and
+// effects (client-only), so `window` is always defined here.
 function isMuntuzHost(): boolean {
   if (typeof window === 'undefined') return false;
   const host = window.location.hostname.toLowerCase();
@@ -391,12 +394,14 @@ function loadStoredChats(): PersistedChats | null {
   }
 }
 
-// ── M-5: opening line in the learner's own target language ─────────────
+// ── M-5 / M-13: opening line in the learner's own target language ──
 // The static per-partner greeting was partner-centric English ("Let's
 // practice English" from Jiyoung, a Korean native learning English) even
-// for a user learning Korean. The greeting is now built at chat-open
-// time from the user's profile target language; the static greeting
-// stays as the fallback for unknown languages and non-Muntuz hosts.
+// for a user learning Korean — and on muntalk.com every static greeting
+// is Korean ("Let's practice Korean…"), so a Spanish learner was
+// greeted in Korean (M-13). The greeting is now built at chat-open
+// time from the user's profile target language on both hosts; the static
+// greeting stays as the fallback for unknown languages only.
 const GREETING_BY_TARGET: Record<string, (name: string) => string> = {
   English: (name) =>
     `Hi! I'm ${name}, your AI practice partner. Let's practice English together — what did you do today?`,
@@ -1391,12 +1396,13 @@ export default function ExchangePage() {
   };
 
   const startAiChat = (p: AiPartner) => {
-    // Q7 / M-4 (Muntuz host only): 이미 열린 채팅을 다시 여는 것은
-    // 세지 않는다. 새로 만드는 채팅만 오늘 한도에 들어간다 — 한도에
-    // 도달했으면 만들지 않고 Pro 탭으로 안내한다. (연속 탭 시 chats
-    // 스냅샷이 한 렌더 뒤처질 수 있어, 서버가 첫 메시지에서 한 번
-    // 더 강제한다.)
-    if (isMuntuzHost() && !chats.some((c) => c.id === p.id)) {
+    // Q7 / M-4 / M-13: 이미 열린 채팅을 다시 여는 것은 세지 않는다.
+    // 새로 만드는 채팅만 오늘 한도에 들어간다 — 한도에 도달했으면
+    // 만들지 않고 Pro 탭으로 안내한다. (연속 탭 시 chats 스냅샷이 한
+    // 렌더 뒤처질 수 있어, 서버가 첫 메시지에서 한 번 더 강제한다 —
+    // 서버 강제는 Muntuz host only, muntalk.com에서는 이 클라이언트
+    // 게이트만 동작한다.)
+    if (!chats.some((c) => c.id === p.id)) {
       const limit = realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS;
       if (newChatsToday >= limit) {
         showToast(
@@ -1422,10 +1428,11 @@ export default function ExchangePage() {
               gallery: p.gallery,
               flag: LANG_FLAG[p.native] || '🌐',
               isAi: true,
-              // M-5: the opening line is built from the learner's target
-              // language on Muntuz hosts (greetingForChat); elsewhere the
-              // partner's static greeting stays.
-              messages: [{ id: gid, from: 'partner', text: isMuntuzHost() ? greetingForChat(p, targetLang) : p.greeting, ai: true, at: Date.now() }],
+              // M-5 / M-13: the opening line is built from the
+              // learner's target language (greetingForChat) on both
+              // hosts; the partner's static greeting is only the
+              // fallback for unknown target languages.
+              messages: [{ id: gid, from: 'partner', text: greetingForChat(p, targetLang), ai: true, at: Date.now() }],
             },
           ]
     );
@@ -1458,15 +1465,11 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
     setGuestTrial(readGuestTrial());
   }, []);
 
-  // Q7 / M-4: 오늘 새 채팅 수와 실제 Pro 여부를 읽는다 (Muntuz host
-  // only). 로그인 상태가 바뀌면 해당 계정의 카운터로 다시 읽는다.
+  // Q7 / M-4 / M-13: 오늘 새 채팅 수와 실제 Pro 여부를 읽는다 (양쪽
+  // host 공통 — 카운터는 localStorage 기준이라 서버 호스트 정책과
+  // 무관하다). 로그인 상태가 바뀌면 해당 계정의 카운터로 다시 읽는다.
   // realPro는 카운터 분모(20/50) 표시용으로만 쓴다.
   useEffect(() => {
-    if (!isMuntuzHost()) {
-      setNewChatsToday(0);
-      setRealPro(false);
-      return;
-    }
     setNewChatsToday(readNewChatCount());
     if (!user) {
       setRealPro(false);
@@ -2230,11 +2233,9 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
             <p className="text-sm font-bold text-slate-700">Daily new chats</p>
             <p className="mt-1">Free: 20 / day · Pro: 50 / day</p>
             <p>Ongoing chats are unlimited.</p>
-            {isMuntuzHost() && (
-              <p className="mt-1 font-bold text-violet-700">
-                Today: {newChatsToday}/{realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS} new chats
-              </p>
-            )}
+            <p className="mt-1 font-bold text-violet-700">
+              Today: {newChatsToday}/{realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS} new chats
+            </p>
           </div>
         </aside>
 
@@ -2268,12 +2269,10 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                   Online now: {AI_PARTNERS.length} AI partners ready to practice
                 </span>
               </div>
-              {/* Q7 / M-4 (Muntuz host only): 오늘 새로 시작한 채팅 수. */}
-              {isMuntuzHost() && (
-                <p className="mt-2 text-xs font-semibold text-slate-500">
-                  New chats today: {newChatsToday}/{realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS} ({realPro ? 'Pro: 50' : 'Free: 20'} / day) — ongoing chats are unlimited.
-                </p>
-              )}
+              {/* Q7 / M-4 / M-13: 오늘 새로 시작한 채팅 수. */}
+              <p className="mt-2 text-xs font-semibold text-slate-500">
+                New chats today: {newChatsToday}/{realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS} ({realPro ? 'Pro: 50' : 'Free: 20'} / day) — ongoing chats are unlimited.
+              </p>
               {/* Mobile-only entry points: the sidebar tab switcher is
                   desktop-only (hidden md:block), so on phones AI Review
                   and Profile had no in-page path. */}
@@ -2625,12 +2624,10 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
               <p className="mt-1 text-sm text-slate-500">
                 AI chats are marked AI throughout. Phone numbers, links and contact IDs are blocked before sending.
               </p>
-              {/* Q7 / M-4 (Muntuz host only): 오늘 새로 시작한 채팅 수. */}
-              {isMuntuzHost() && (
-                <p className="mt-1 text-xs font-semibold text-violet-700">
-                  New chats today: {newChatsToday}/{realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS} ({realPro ? 'Pro: 50' : 'Free: 20'} / day) — ongoing chats are unlimited.
-                </p>
-              )}
+              {/* Q7 / M-4 / M-13: 오늘 새로 시작한 채팅 수. */}
+              <p className="mt-1 text-xs font-semibold text-violet-700">
+                New chats today: {newChatsToday}/{realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS} ({realPro ? 'Pro: 50' : 'Free: 20'} / day) — ongoing chats are unlimited.
+              </p>
               {!activeChat ? (
                 <div className="mt-4">
                   <div className="relative">
@@ -2736,12 +2733,10 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                       {activeChat.name}{' '}
                       {activeChat.isAi && <span className="rounded-full bg-violet-600 px-2 py-0.5 text-[11px] font-extrabold text-white">AI</span>}
                     </span>
-                    {/* Q7 / M-4 (Muntuz host only): 오늘 새로 시작한 채팅 수. */}
-                    {isMuntuzHost() && (
-                      <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-bold text-slate-600" title="New AI chats started today">
-                        {newChatsToday}/{realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS} today
-                      </span>
-                    )}
+                    {/* Q7 / M-4 / M-13: 오늘 새로 시작한 채팅 수. */}
+                    <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-bold text-slate-600" title="New AI chats started today">
+                      {newChatsToday}/{realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS} today
+                    </span>
                     {activeChat.isAi && user && activeChat.messages.filter((m) => m.from === 'me').length >= 4 && (
                       <button
                         onClick={() => void requestSessionReview()}
