@@ -10,6 +10,7 @@ import { POS_META, PartOfSpeech, getSetKey, getSetTitle } from '@/data/wordSets'
 import { getTutorById } from '@/data/tutors';
 import { hasTts, getLangLabel } from '@/data/languages';
 import { speakWithDeviceTts, deviceTtsAvailable } from '@/lib/deviceTts';
+import { createUnlockedAudio, resumeDeviceSpeech } from '@/lib/audioUnlock';
 import { resolveNativeLang } from '@/lib/userProfile';
 
 interface WordData {
@@ -65,6 +66,10 @@ function WordLessonContent() {
   const [isListening, setIsListening]   = useState(false);
   const [micGuide, setMicGuide] = useState<MicGuideReason | null>(null); // UX-infra: STT 안내
   const audioRef                        = useRef<HTMLAudioElement | null>(null);
+  // QA S-1: PR #208이 LessonPlayer/useTtsSpeak에만 넣은 세대 가드를 Word Bank
+  // 레슨에도 적용한다. 이전에는 fetch가 늦게 도착한 오래된 호출이 새 오디오를
+  // 덮어쓰고( audioRef 교체로 이전 Audio가 계속 재생됨) 묵은 음성이 줄줄이 나왔다.
+  const speakSeqRef                     = useRef(0);
   const recognitionRef                  = useRef<any>(null);
 
   // Quiz
@@ -104,15 +109,25 @@ function WordLessonContent() {
   // -- TTS --------------------------------------------------------------------
   const stopAudio = () => {
     if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; }
+    // QA S-1: 기기 내장 음성도 함께 취소 — 이전에는 HTMLAudio만 멈췄다.
+    try { window.speechSynthesis?.cancel(); } catch { /* ignore */ }
     setIsSpeaking(false);
   };
 
   const speakText = async (text: string, onEnd?: () => void) => {
+    // QA S-1 / Muntuz M-11: PR #208 패턴과 동일 — 제스처 안에서 동기적으로
+    // 오디오 엘리먼트를 언록하고, 세대 가드로 오래된 fetch가 새 재생을 덮지 못하게 한다.
+    const mySeq = ++speakSeqRef.current;
+    const isCurrent = () => speakSeqRef.current === mySeq;
     stopAudio();
+    resumeDeviceSpeech();
+    const unlockedAudio = createUnlockedAudio();
+    audioRef.current = unlockedAudio;
     setIsSpeaking(true);
     // 서버 음성 미지원 언어(예: 버마어)는 기기 내장 음성으로 폴백
     if (!hasTts(lang)) {
-      await speakWithDeviceTts(text, lang, () => { setIsSpeaking(false); onEnd?.(); });
+      const ok = await speakWithDeviceTts(text, lang, () => { if (isCurrent()) { setIsSpeaking(false); onEnd?.(); } });
+      if (!ok && isCurrent()) setIsSpeaking(false);
       return;
     }
     try {
@@ -120,14 +135,22 @@ function WordLessonContent() {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text, lang, gender: tutor.gender, level: 'a1' }),
       });
+      if (!isCurrent()) return; // 그 사이 새 speakText()가 시작됨 — 이 호출은 버린다.
       const data = await res.json();
+      if (!isCurrent()) return;
       if (!data.audioContent) { setIsSpeaking(false); onEnd?.(); return; }
-      const audio = new Audio(`data:${data.mimeType || 'audio/mp3'};base64,${data.audioContent}`);
-      audioRef.current = audio;
-      audio.onended = () => { setIsSpeaking(false); audioRef.current = null; onEnd?.(); };
-      audio.onerror = () => { setIsSpeaking(false); audioRef.current = null; onEnd?.(); };
-      await audio.play();
-    } catch { setIsSpeaking(false); onEnd?.(); }
+      // 언록해 둔 엘리먼트에 실제 오디오를 끼워 재생한다.
+      const audio = unlockedAudio;
+      audio.src = `data:${data.mimeType || 'audio/mp3'};base64,${data.audioContent}`;
+      audio.onended = () => { if (audioRef.current === audio) audioRef.current = null; if (isCurrent()) { setIsSpeaking(false); onEnd?.(); } };
+      audio.onerror = () => { if (audioRef.current === audio) audioRef.current = null; if (isCurrent()) { setIsSpeaking(false); onEnd?.(); } };
+      try {
+        await audio.play();
+      } catch {
+        if (!isCurrent()) return;
+        setIsSpeaking(false); onEnd?.();
+      }
+    } catch { if (!isCurrent()) return; setIsSpeaking(false); onEnd?.(); }
   };
 
   const startListening = () => {
@@ -243,9 +266,13 @@ Respond ONLY in JSON (no markdown):
   const initChat = async () => {
     setChatLoading(true);
     try {
+      // QA M-11: 학습 언어로 답하게 명시한다. 이전에는 언어 지정이 없어
+      // Gemini가 영어로 답하고, 그 영어 답을 학습 언어 음성으로 읽어
+      // 알아들을 수 없는 오디오가 됐다.
+      const langName = getLangLabel(lang);
       const intro = await callGemini(
         `You are a friendly vocabulary tutor. Student just learned these ${pos.replace(/\d/g,'')}s: ${words.join(', ')}.
-Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sentences.`, 0.8);
+Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sentences. Reply in ${langName}.`, 0.8);
       setChatMessages([{ role: 'tutor', text: intro }]);
     } catch {
       setChatMessages([{ role: 'tutor', text: `Great work! Try using one of these words: ${words.slice(0,3).join(', ')}.` }]);
@@ -260,8 +287,9 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
     setChatLoading(true);
     try {
       const history = updated.map(m => `${m.role === 'user' ? 'Student' : 'Tutor'}: ${m.text}`).join('\n');
+      const langName = getLangLabel(lang);
       const reply = await callGemini(
-        `Vocab tutor. Student learned: ${words.join(', ')}. Encourage word usage. 2-3 sentences.\n\n${history}\nTutor:`, 0.8);
+        `Vocab tutor. Student learned: ${words.join(', ')}. Encourage word usage. 2-3 sentences. Reply in ${langName}.\n\n${history}\nTutor:`, 0.8);
       const replyMsg: ChatMessage = { role: 'tutor', text: reply };
       setChatMessages(prev => [...prev, replyMsg]);
       speakText(reply);

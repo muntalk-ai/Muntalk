@@ -272,7 +272,7 @@ function PricingContent() {
                     <div style={{ display:'flex', gap:9, alignItems:'flex-start' }}>
                       <span style={{ color: isFeatured ? '#818CF8' : isAnnual ? '#FCD34D' : plan.color, fontSize:12, flexShrink:0, marginTop:2 }}>✓</span>
                       <span style={{ fontSize:12, color:(isFeatured||isAnnual)?'rgba(255,255,255,0.6)':'#374151', lineHeight:1.45, fontWeight:700 }}>
-                        18,000+ words — verbs, adjectives, adverbs & phrases
+                        1,700 words — verbs, adjectives, adverbs & phrases
                       </span>
                     </div>
                   )}
@@ -310,7 +310,7 @@ function PricingContent() {
         <div style={{ background:'linear-gradient(135deg,#EEF2FF,#F5F3FF)', border:'1.5px solid #C7D2FE', borderRadius:20, padding:'28px 32px', marginBottom:56, display:'flex', alignItems:'center', gap:24, flexWrap:'wrap' }}>
           <div style={{ fontSize:40, flexShrink:0 }}>📚</div>
           <div style={{ flex:1, minWidth:220 }}>
-            <div style={{ fontSize:16, fontWeight:900, color:'#3730A3', marginBottom:6 }}>18,000+ Word Bank — Premium Exclusive</div>
+            <div style={{ fontSize:16, fontWeight:900, color:'#3730A3', marginBottom:6 }}>1,700 Word Bank — Premium Exclusive</div>
             <div style={{ fontSize:13, color:'#4338CA', lineHeight:1.6, fontWeight:700 }}>
               Master essential <strong>verbs, adjectives, adverbs, and phrases</strong> with AI-powered sentence practice. Organized into 50-word sets with 5 example sentences each — the fastest way to build real vocabulary.
             </div>
@@ -332,7 +332,7 @@ function PricingContent() {
               { icon:'🔁', title:'Spaced Repetition', desc:'SM-2 algorithm for perfect recall' },
               { icon:'🏆', title:'League System', desc:'Compete with learners worldwide' },
               { icon:'❤️', title:'Unlimited Hearts', desc:'No waiting, keep going' },
-              { icon:'📖', title:'18,000+ Word Bank', desc:'Verbs, adjectives, adverbs, phrases' },
+              { icon:'📖', title:'1,700 Word Bank', desc:'Verbs, adjectives, adverbs, phrases' },
               { icon:'📊', title:'Progress Dashboard', desc:'Track streaks, XP & mastery' },
               { icon:'📧', title:'Smart Reminders', desc:'Email + Telegram + push notifications' },
             ].map(f => (

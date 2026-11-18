@@ -217,6 +217,9 @@ function StarterContent() {
 
   const audioRef   = useRef<HTMLAudioElement|null>(null);
   const speakSeq   = useRef(0); // latest speak() call id — stale fetches never play (no overlap)
+  // QA M-3: 같은 듣기 문항의 답을 두 번 처리하지 않음 — 더블탭 시 900ms
+  // 예약이 두 개 쌓여 다음 문항이 두 번 예약·재생되고 XP도 중복 지급됐다.
+  const listenLockRef = useRef(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
   const recRef     = useRef<any>(null);
   const [isListening, setIsListening] = useState(false);
@@ -425,18 +428,29 @@ Rules:
   }, [wordIdx, words, speak]);
 
   // ── LISTEN phase ─────────────────────────────────────────────────────────────
+  // QA M-3: 듣기 퀴즈는 문항당 타깃 1회만 재생한다. 이전에는 startListenPhase와
+  // nextListenWord가 각각 setTimeout으로 speak()을 예약해서, 더블탭·번역 도착·
+  // 리렌더 시 예약이 쌓여 문항마다 0~3회 불규칙하게 재생됐다.
+  // 이제 문항 전환(listenIdx)마다 아래 effect가 1회만 예약하고, 클린업에서
+  // 대기 중인 예약을 취소한다. 다시 듣기는 🔊 버튼으로.
+  useEffect(() => {
+    if (phase !== 'listen' || !listenWord) return;
+    const t = setTimeout(() => speak(listenWord.word), 400);
+    return () => clearTimeout(t);
+  }, [phase, listenIdx, listenWord, speak]);
+
   const startListenPhase = useCallback(() => {
     const idx = 0;
     setListenIdx(idx);
     setListenResult(null);
+    listenLockRef.current = false;
     const correct = words[idx];
     const wrong = words.find(w => w.word !== correct.word) || words[(idx + 1) % words.length];
     const choices = Math.random() > 0.5 ? [correct, wrong] : [wrong, correct];
     setListenWord(correct);
     setListenChoice(choices);
     setPhase('listen');
-    setTimeout(() => speak(correct.word), 400);
-  }, [words, speak]);
+  }, [words]);
 
   const nextListenWord = useCallback((nextIdx: number) => {
     if (nextIdx >= words.length) {
@@ -445,6 +459,7 @@ Rules:
     }
     setListenIdx(nextIdx);
     setListenResult(null);
+    listenLockRef.current = false;
     const correct = words[nextIdx];
     const otherIdx = (nextIdx + 1) % words.length;
     const wrong = words[otherIdx].word === correct.word
@@ -453,11 +468,11 @@ Rules:
     const choices = Math.random() > 0.5 ? [correct, wrong] : [wrong, correct];
     setListenWord(correct);
     setListenChoice(choices);
-    setTimeout(() => speak(correct.word), 400);
-  }, [words, speak]);
+  }, [words]);
 
   const handleListenChoice = useCallback((chosen: Word) => {
-    if (listenResult) return;
+    if (listenResult || listenLockRef.current) return;
+    listenLockRef.current = true;
     const correct = chosen.word === listenWord?.word;
     setListenResult(correct ? 'correct' : 'wrong');
     if (correct) { setXp(x => x + 10); setXpPop(true); setTimeout(() => setXpPop(false), 1000); }
