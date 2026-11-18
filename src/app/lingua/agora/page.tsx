@@ -150,6 +150,54 @@ export default function AgoraPage() {
     } catch {}
   }, [profile, lsLearn, lsNative]);
 
+  // L-8: 토론 주제 카드(제목·부제·소주제)를 학습 언어로 런타임 번역.
+  // TOPICS 데이터는 영어만 존재하므로 정적 번역을 만들지 않고, 토론 오프닝과
+  // 같은 /api/gemini 런타임 번역 메커니즘을 쓴다 (1회 벌크 호출).
+  // 실패하거나 로딩 중에는 영어 원문을 그대로 표시한다.
+  const [topicTr, setTopicTr] = useState<Record<string, { title: string; subtitle: string; subs: string[] }>>({});
+  useEffect(() => {
+    if (learnLang === 'en-US') { setTopicTr({}); return; }
+    let cancelled = false;
+    (async () => {
+      try {
+        const strings: string[] = [];
+        TOPICS.forEach(t => { strings.push(t.titleEn, t.subtitleEn, ...t.subtopics.map(s => s.en)); });
+        const numbered = strings.map((s, i) => `${i + 1}. ${s}`).join('\n');
+        const res = await apiFetch('/api/gemini', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            uid: user?.uid ?? null, temperature: 0.1,
+            prompt: `Translate each numbered English UI string below to ${promptLangName(learnLang)}. Return ONLY a JSON array of translated strings in the same order, no numbering, no extra text.\n\n${numbered}`,
+          }),
+          timeoutMs: AI_TIMEOUT_MS,
+        });
+        const data = await res.json();
+        const text: string = data.text?.trim() || '';
+        const m = text.match(/\[[\s\S]*\]/);
+        if (!m) return;
+        const arr = JSON.parse(m[0]);
+        if (!Array.isArray(arr) || arr.length !== strings.length) return;
+        if (cancelled) return;
+        const map: Record<string, { title: string; subtitle: string; subs: string[] }> = {};
+        TOPICS.forEach((t, ti) => {
+          const base = ti * 6;
+          const title = typeof arr[base] === 'string' && arr[base].trim() ? arr[base].trim() : t.titleEn;
+          const subtitle = typeof arr[base + 1] === 'string' && arr[base + 1].trim() ? arr[base + 1].trim() : t.subtitleEn;
+          const subs = t.subtopics.map((s, si) =>
+            typeof arr[base + 2 + si] === 'string' && arr[base + 2 + si].trim() ? arr[base + 2 + si].trim() : s.en);
+          map[t.id] = { title, subtitle, subs };
+        });
+        setTopicTr(map);
+      } catch { /* silent: fall back to English */ }
+    })();
+    return () => { cancelled = true; };
+  }, [learnLang, user?.uid]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // 번역이 없으면 영어 원문 (로딩 중/실패 시 폴백)
+  const trTopic = (t: DebateTopic) => topicTr[t.id] ?? {
+    title: t.titleEn, subtitle: t.subtitleEn, subs: t.subtopics.map(s => s.en),
+  };
+
   // PR-127: 이어듣기 큐 — startListening보다 먼저 선언 (사용 순서상 필요)
   const speechQueueRef = useRef<string[]>([]);
   const [speechProgress, setSpeechProgress] = useState<{ done: number; total: number; msgId: number } | null>(null);
@@ -438,14 +486,14 @@ assistant:`,
             onMouseEnter={()=>setHoveredTopic(t.id)}
             onMouseLeave={()=>{setHoveredTopic(null);setHoveredSub(null);}}>
             <div style={S.cardEmoji}>{t.emoji}</div>
-            <div style={{...S.cardTitle,color:t.accentFor}}>{t.titleEn}</div>
-            <div style={S.cardSub}>{t.subtitleEn}</div>
+            <div style={{...S.cardTitle,color:t.accentFor}}>{trTopic(t).title}</div>
+            <div style={S.cardSub}>{trTopic(t).subtitle}</div>
             <div style={S.sideRow}>
               <span style={{...S.sideTag,background:`${t.accentFor}18`,color:t.accentFor,border:`1px solid ${t.accentFor}40`}}>🔵 For</span>
               <span style={{...S.sideTag,background:`${t.accentAgainst}18`,color:t.accentAgainst,border:`1px solid ${t.accentAgainst}40`}}>🔴 Against</span>
             </div>
             <div style={S.subList}>
-              {t.subtopics.map((sub,si)=>(
+              {trTopic(t).subs.map((sub,si)=>(
                 <button key={si} className="sub-btn"
                   style={{...S.subBtn,
                     background: hoveredSub===si&&hoveredTopic===t.id ? `${t.accentFor}12` : '#fff',
@@ -453,8 +501,8 @@ assistant:`,
                     color: hoveredSub===si&&hoveredTopic===t.id ? t.accentFor : '#475569',
                   }}
                   onMouseEnter={()=>setHoveredSub(si)} onMouseLeave={()=>setHoveredSub(null)}
-                  onClick={()=>startDebate(t,sub.en)}>
-                  <span style={{opacity:.4,marginRight:6,fontSize:10}}>▶</span>{sub.en}
+                  onClick={()=>startDebate(t,sub)}>
+                  <span style={{opacity:.4,marginRight:6,fontSize:10}}>▶</span>{sub}
                 </button>
               ))}
             </div>
@@ -474,7 +522,7 @@ assistant:`,
       <nav style={{...S.nav,borderBottom:'1px solid #E2E8F0'}}>
         <button onClick={()=>{stopSpeech(); setView('lobby');}} style={S.navBack}>← Topics</button>
         <div style={{textAlign:'center',flex:1}}>
-          <div style={{fontSize:13,fontWeight:900,color:'#0F172A'}}>{topic.emoji} {topic.titleEn}</div>
+          <div style={{fontSize:13,fontWeight:900,color:'#0F172A'}}>{topic.emoji} {trTopic(topic).title}</div>
           <div style={{fontSize:10,color:'#94A3B8',fontWeight:700,marginTop:1}}>{subtopic}</div>
         </div>
         <div style={{width:80}}/>

@@ -3,10 +3,14 @@
 // new language version = one videoId line. No video files in the repo —
 // every video is a YouTube upload, embedded via youtube-nocookie.
 //
-// Release schedule: 63 episodes, 2026-11-05 → 2026-12-07, two a day
-// (09:00 + 15:00 Vancouver wall time) from the muntalk-63ep-release-*
-// crons. Stored cron times read 1h early (PCT scheduler quirk) — the
-// releaseAt below is the real wall-clock time, converted to UTC.
+// Release schedule: 63 episodes. Original plan 2026-11-05 → 2026-12-07, two
+// a day (09:00 + 15:00 Vancouver wall time) from the muntalk-63ep-release-*
+// crons — superseded 2026-11-11 by Jay's reschedule: one episode per
+// language every 3 days, remaining 51 episodes 11/12 → 11/22. releaseAt
+// below follows the reschedule for ep02–ep05 (time-of-day preserved per
+// entry; per-episode slot times are the file's original values, not
+// re-verified). Stored cron times read 1h early (PCT scheduler quirk) —
+// the releaseAt below is the real wall-clock time, converted to UTC.
 // Vancouver stays on UTC-7 year-round (no DST since 2026-11-01), so
 // 09:00 wall = 16:00 UTC and 15:00 wall = 22:00 UTC for the whole run.
 //
@@ -21,9 +25,13 @@
 // `ytTitle` is that YouTube title verbatim.
 //
 // Video IDs (only episodes already published on YouTube get one):
-//   vi03 5XYSOaI81tg · th03 VgOtnyFqCII (2026-11-05, @Muntalk_official,
-//   verified in ~/memory/2026-11-05.md). Everything else uploads at its
-//   release time — add the videoId line when the release cron publishes it.
+//   41 of 51 ep02–ep05 entries have official-channel IDs (2026-11-17
+//   backfill from release records in ~/memory/2026-11-*.md — every ID
+//   traced to a published @Muntalk_official upload; language-channel
+//   copies are NOT used here). Still missing: id04/hi04/ar04/mn04/fa04/
+//   lo04/pt04/pl04/fr04/de04 + id05/hi05/ar05/mn05/fa05/lo05/pt05/pl05/
+//   fr05/de05 + ja05/zh05 (not released yet — add the videoId line when
+//   the release cron publishes each one).
 //   NOTE (workflow change, Jay 2026-11-06): for the gated early-access
 //   section to have anything to show, upload the next episode as
 //   Unlisted 1–2 days BEFORE its release time and flip it to Public at
@@ -79,368 +87,368 @@ export const KONGLISH_EPISODES: KonglishEpisode[] = [
   {
     lang: 'my', ep: 3, slug: 'my03',
     topic: 'I am agree with you',
-    ytTitle: 'Burglish အရေးပေါ်ခန်း EP.03: I am agree with you?! ❌ #Shorts',
+    ytTitle: 'Burglish အရေးပေါ်ခန်း EP.03: I am agree with you?! ❌ #Shorts', videoId: '8adsB_iSWZI',
     releaseAt: '2026-11-06T16:00:00Z',
   },
   {
     lang: 'es', ep: 3, slug: 'es03',
     topic: 'I am agree',
-    ytTitle: 'Urgencias de Spanglish EP.03: I am agree?! ❌ #Shorts',
+    ytTitle: 'Urgencias de Spanglish EP.03: I am agree?! ❌ #Shorts', videoId: 'KYsYTbdNgVs',
     releaseAt: '2026-11-06T22:00:00Z',
   },
   {
     lang: 'ru', ep: 3, slug: 'ru03',
     topic: 'I go to school by foot',
-    ytTitle: 'Скорая помощь «Рунглиш» EP.03: I go to school by foot?! ❌ #Shorts',
+    ytTitle: 'Скорая помощь «Рунглиш» EP.03: I go to school by foot?! ❌ #Shorts', videoId: 'TANMkr8nf9I',
     releaseAt: '2026-11-07T16:00:00Z',
   },
   {
     lang: 'ja', ep: 2, slug: 'ja02',
     topic: 'He is smart',
-    ytTitle: 'ジャパングリッシュ救急室 EP.02: He is smart?! ❌ #Shorts',
-    releaseAt: '2026-11-07T22:00:00Z',
+    ytTitle: 'ジャパングリッシュ救急室 EP.02: He is smart?! ❌ #Shorts', videoId: 'xsKZlhC2Mgw',
+    releaseAt: '2026-11-09T22:00:00Z',
   },
   {
     lang: 'zh', ep: 2, slug: 'zh02',
     topic: 'I very like it',
-    ytTitle: '中式英语急诊室 EP.02: I very like it?! ❌ #Shorts',
+    ytTitle: '中式英语急诊室 EP.02: I very like it?! ❌ #Shorts', videoId: 'gxfQ0WJrX0Q',
     releaseAt: '2026-11-08T16:00:00Z',
   },
   {
     lang: 'vi', ep: 4, slug: 'vi04',
     topic: 'I am student',
-    ytTitle: 'Phòng cấp cứu Vietlish EP.04: I am student?! ❌ #Shorts',
+    ytTitle: 'Phòng cấp cứu Vietlish EP.04: I am student?! ❌ #Shorts', videoId: 'aP3c5LpJp0Q',
     releaseAt: '2026-11-08T22:00:00Z',
   },
   {
     lang: 'th', ep: 4, slug: 'th04',
     topic: 'I go to home',
-    ytTitle: 'ห้องฉุกเฉิน Tinglish EP.04: I go to home?! ❌ #Shorts',
+    ytTitle: 'ห้องฉุกเฉิน Tinglish EP.04: I go to home?! ❌ #Shorts', videoId: 'qA-w2fnwNGE',
     releaseAt: '2026-11-09T16:00:00Z',
   },
   {
     lang: 'my', ep: 4, slug: 'my04',
     topic: 'He is teacher',
-    ytTitle: 'Burglish အရေးပေါ်ခန်း EP.04: He is teacher?! ❌ #Shorts',
+    ytTitle: 'Burglish အရေးပေါ်ခန်း EP.04: He is teacher?! ❌ #Shorts', videoId: '710HsL1xCpA',
     releaseAt: '2026-11-09T22:00:00Z',
   },
   {
     lang: 'es', ep: 4, slug: 'es04',
     topic: 'I am married with Ana',
-    ytTitle: 'Urgencias de Spanglish EP.04: I am married with Ana?! ❌ #Shorts',
+    ytTitle: 'Urgencias de Spanglish EP.04: I am married with Ana?! ❌ #Shorts', videoId: 'RtgFiwLSINU',
     releaseAt: '2026-11-11T16:00:00Z',
   },
   {
     lang: 'ru', ep: 4, slug: 'ru04',
     topic: 'How do you call this',
-    ytTitle: 'Скорая помощь «Рунглиш» EP.04: How do you call this?! ❌ #Shorts',
+    ytTitle: 'Скорая помощь «Рунглиш» EP.04: How do you call this?! ❌ #Shorts', videoId: 'cZA3qu_iAHw',
     releaseAt: '2026-11-11T22:00:00Z',
   },
   {
     lang: 'ja', ep: 3, slug: 'ja03',
     topic: 'I am agree',
-    ytTitle: 'ジャパングリッシュ救急室 EP.03: I am agree?! ❌ #Shorts',
-    releaseAt: '2026-11-12T16:00:00Z',
+    ytTitle: 'ジャパングリッシュ救急室 EP.03: I am agree?! ❌ #Shorts', videoId: 'zh9G6Q295ik',
+    releaseAt: '2026-11-14T16:00:00Z',
   },
   {
     lang: 'zh', ep: 3, slug: 'zh03',
     topic: 'play the phone',
-    ytTitle: '中式英语急诊室 EP.03: play the phone?! ❌ #Shorts',
-    releaseAt: '2026-11-12T22:00:00Z',
+    ytTitle: '中式英语急诊室 EP.03: play the phone?! ❌ #Shorts', videoId: 'tYcR9pht6UA',
+    releaseAt: '2026-11-14T22:00:00Z',
   },
   {
     lang: 'vi', ep: 5, slug: 'vi05',
     topic: 'Open the light',
-    ytTitle: 'Phòng cấp cứu Vietlish EP.05: Open the light?! ❌ #Shorts',
+    ytTitle: 'Phòng cấp cứu Vietlish EP.05: Open the light?! ❌ #Shorts', videoId: 'C0-vAjVgufU',
     releaseAt: '2026-11-13T16:00:00Z',
   },
   {
     lang: 'th', ep: 5, slug: 'th05',
     topic: 'Open the light, please',
-    ytTitle: 'ห้องฉุกเฉิน Tinglish EP.05: Open the light, please?! ❌ #Shorts',
+    ytTitle: 'ห้องฉุกเฉิน Tinglish EP.05: Open the light, please?! ❌ #Shorts', videoId: 'uXfy3CbjwB4',
     releaseAt: '2026-11-13T22:00:00Z',
   },
   {
     lang: 'my', ep: 5, slug: 'my05',
     topic: 'She can sings well',
-    ytTitle: 'Burglish အရေးပေါ်ခန်း EP.05: She can sings well?! ❌ #Shorts',
+    ytTitle: 'Burglish အရေးပေါ်ခန်း EP.05: She can sings well?! ❌ #Shorts', videoId: 'ljKpqbYLO-8',
     releaseAt: '2026-11-14T16:00:00Z',
   },
   {
     lang: 'es', ep: 5, slug: 'es05',
     topic: 'I assist to class',
-    ytTitle: 'Urgencias de Spanglish EP.05: I assist to class?! ❌ #Shorts',
+    ytTitle: 'Urgencias de Spanglish EP.05: I assist to class?! ❌ #Shorts', videoId: 'BFQtRcbR6MA',
     releaseAt: '2026-11-14T22:00:00Z',
   },
   {
     lang: 'ru', ep: 5, slug: 'ru05',
     topic: 'It depends from the weather',
-    ytTitle: 'Скорая помощь «Рунглиш» EP.05: It depends from the weather?! ❌ #Shorts',
-    releaseAt: '2026-11-15T16:00:00Z',
+    ytTitle: 'Скорая помощь «Рунглиш» EP.05: It depends from the weather?! ❌ #Shorts', videoId: 'Xz0EXenNB1I',
+    releaseAt: '2026-11-14T16:00:00Z',
   },
   {
     lang: 'ja', ep: 4, slug: 'ja04',
     topic: 'I am boring',
-    ytTitle: 'ジャパングリッシュ救急室 EP.04: I am boring?! ❌ #Shorts',
-    releaseAt: '2026-11-15T22:00:00Z',
+    ytTitle: 'ジャパングリッシュ救急室 EP.04: I am boring?! ❌ #Shorts', videoId: 'oKjw0wLwWN8',
+    releaseAt: '2026-11-17T22:00:00Z',
   },
   {
     lang: 'zh', ep: 4, slug: 'zh04',
     topic: 'Add oil',
-    ytTitle: '中式英语急诊室 EP.04: Add oil?! ❌ #Shorts',
-    releaseAt: '2026-11-16T16:00:00Z',
+    ytTitle: '中式英语急诊室 EP.04: Add oil?! ❌ #Shorts', videoId: 'LFgBLkQwjPk',
+    releaseAt: '2026-11-17T16:00:00Z',
   },
   {
     lang: 'ja', ep: 5, slug: 'ja05',
     topic: 'I know him for 3 years',
     ytTitle: 'ジャパングリッシュ救急室 EP.05: I know him for 3 years?! ❌ #Shorts',
-    releaseAt: '2026-11-16T22:00:00Z',
+    releaseAt: '2026-11-20T22:00:00Z',
   },
   {
     lang: 'zh', ep: 5, slug: 'zh05',
     topic: 'many homeworks',
     ytTitle: '中式英语急诊室 EP.05: many homeworks?! ❌ #Shorts',
-    releaseAt: '2026-11-17T16:00:00Z',
+    releaseAt: '2026-11-20T16:00:00Z',
   },
   {
     lang: 'id', ep: 2, slug: 'id02',
     topic: 'I am boring',
-    ytTitle: 'UGD Bahasa Inggris · Episode 2: I am boring?! ❌ #Shorts',
-    releaseAt: '2026-11-17T22:00:00Z',
+    ytTitle: 'UGD Bahasa Inggris · Episode 2: I am boring?! ❌ #Shorts', videoId: 'UsRCtVHRLNQ',
+    releaseAt: '2026-11-12T22:00:00Z',
   },
   {
     lang: 'hi', ep: 2, slug: 'hi02',
     topic: 'I am knowing the answer',
-    ytTitle: 'अंग्रेज़ी इमरजेंसी · Episode 2: I am knowing the answer?! ❌ #Shorts',
-    releaseAt: '2026-11-18T16:00:00Z',
+    ytTitle: 'अंग्रेज़ी इमरजेंसी · Episode 2: I am knowing the answer?! ❌ #Shorts', videoId: 'jEAyz7adEmM',
+    releaseAt: '2026-11-12T16:00:00Z',
   },
   {
     lang: 'ar', ep: 2, slug: 'ar02',
     topic: 'I have seen him yesterday',
-    ytTitle: 'طوارئ الإنجليزية · Episode 2: I have seen him yesterday?! ❌ #Shorts',
-    releaseAt: '2026-11-18T22:00:00Z',
+    ytTitle: 'طوارئ الإنجليزية · Episode 2: I have seen him yesterday?! ❌ #Shorts', videoId: '7txaSy7iDwY',
+    releaseAt: '2026-11-12T22:00:00Z',
   },
   {
     lang: 'mn', ep: 2, slug: 'mn02',
     topic: 'I bought book yesterday',
-    ytTitle: 'Англи хэлний яаралтай тусламж · Episode 2: I bought book yesterday?! ❌ #Shorts',
-    releaseAt: '2026-11-19T16:00:00Z',
+    ytTitle: 'Англи хэлний яаралтай тусламж · Episode 2: I bought book yesterday?! ❌ #Shorts', videoId: 'L656wEi3Uhw',
+    releaseAt: '2026-11-12T16:00:00Z',
   },
   {
     lang: 'fa', ep: 2, slug: 'fa02',
     topic: 'I have 25 years old." (من ۲۵ سال دارم를 단어 그대로 옮긴 오류)',
-    ytTitle: 'اورژانس انگلیسی · Episode 2: I have 25 years old." (من ۲۵ سال دارم를 단어 그대로 옮긴 오류)?! ❌ #Shorts',
-    releaseAt: '2026-11-19T22:00:00Z',
+    ytTitle: 'اورژانس انگلیسی · Episode 2: I have 25 years old." (من ۲۵ سال دارم를 단어 그대로 옮긴 오류)?! ❌ #Shorts', videoId: 'z3NSN2avfAk',
+    releaseAt: '2026-11-12T22:00:00Z',
   },
   {
     lang: 'lo', ep: 2, slug: 'lo02',
     topic: 'I very like it." (ຂ້ອຍມັກມັນຫຼາຍ를 단어 그대로 옮긴 오류)',
-    ytTitle: 'ຫ້ອງສຸກເສີນພາສາອັງກິດ · Episode 2: I very like it." (ຂ້ອຍມັກມັນຫຼາຍ를 단어 그대로 옮긴 오류)?! ❌ #Shorts',
-    releaseAt: '2026-11-20T16:00:00Z',
+    ytTitle: 'ຫ້ອງສຸກເສີນພາສາອັງກິດ · Episode 2: I very like it." (ຂ້ອຍມັກມັນຫຼາຍ를 단어 그대로 옮긴 오류)?! ❌ #Shorts', videoId: 'yCBPcd6iBBA',
+    releaseAt: '2026-11-12T16:00:00Z',
   },
   {
     lang: 'pt', ep: 2, slug: 'pt02',
     topic: 'I have 30 years',
-    ytTitle: 'Pronto-Socorro do Inglês · Episode 2: I have 30 years?! ❌ #Shorts',
-    releaseAt: '2026-11-20T22:00:00Z',
+    ytTitle: 'Pronto-Socorro do Inglês · Episode 2: I have 30 years?! ❌ #Shorts', videoId: 'AUmq4VsZiOY',
+    releaseAt: '2026-11-13T22:00:00Z',
   },
   {
     lang: 'pl', ep: 2, slug: 'pl02',
     topic: 'I am teacher',
-    ytTitle: 'Pogotowie Językowe · Episode 2: I am teacher?! ❌ #Shorts',
-    releaseAt: '2026-11-21T16:00:00Z',
+    ytTitle: 'Pogotowie Językowe · Episode 2: I am teacher?! ❌ #Shorts', videoId: 'drsCtjNUooU',
+    releaseAt: '2026-11-13T16:00:00Z',
   },
   {
     lang: 'fr', ep: 2, slug: 'fr02',
     topic: 'I have 30 years',
-    ytTitle: 'Urgences de l\'anglais · Episode 2: I have 30 years?! ❌ #Shorts',
-    releaseAt: '2026-11-21T22:00:00Z',
+    ytTitle: 'Urgences de l\'anglais · Episode 2: I have 30 years?! ❌ #Shorts', videoId: 'E9N5Li259gU',
+    releaseAt: '2026-11-13T22:00:00Z',
   },
   {
     lang: 'de', ep: 2, slug: 'de02',
     topic: 'I learn English since 3 years',
-    ytTitle: 'Englisch-Notaufnahme · Episode 2: I learn English since 3 years?! ❌ #Shorts',
-    releaseAt: '2026-11-22T16:00:00Z',
+    ytTitle: 'Englisch-Notaufnahme · Episode 2: I learn English since 3 years?! ❌ #Shorts', videoId: '-9uukE3qS8A',
+    releaseAt: '2026-11-13T16:00:00Z',
   },
   {
     lang: 'id', ep: 3, slug: 'id03',
     topic: 'Please open the light',
-    ytTitle: 'UGD Bahasa Inggris · Episode 3: Please open the light?! ❌ #Shorts',
-    releaseAt: '2026-11-22T22:00:00Z',
+    ytTitle: 'UGD Bahasa Inggris · Episode 3: Please open the light?! ❌ #Shorts', videoId: 'xPat-xv6EQ0',
+    releaseAt: '2026-11-15T22:00:00Z',
   },
   {
     lang: 'hi', ep: 3, slug: 'hi03',
     topic: 'I did not went yesterday',
-    ytTitle: 'अंग्रेज़ी इमरजेंसी · Episode 3: I did not went yesterday?! ❌ #Shorts',
-    releaseAt: '2026-11-23T16:00:00Z',
+    ytTitle: 'अंग्रेज़ी इमरजेंसी · Episode 3: I did not went yesterday?! ❌ #Shorts', videoId: '20jfqBMSBcY',
+    releaseAt: '2026-11-15T16:00:00Z',
   },
   {
     lang: 'ar', ep: 3, slug: 'ar03',
     topic: 'He is teacher',
-    ytTitle: 'طوارئ الإنجليزية · Episode 3: He is teacher?! ❌ #Shorts',
-    releaseAt: '2026-11-23T22:00:00Z',
+    ytTitle: 'طوارئ الإنجليزية · Episode 3: He is teacher?! ❌ #Shorts', videoId: 'DemB_8tZVw0',
+    releaseAt: '2026-11-15T22:00:00Z',
   },
   {
     lang: 'mn', ep: 3, slug: 'mn03',
     topic: 'I to school yesterday went',
-    ytTitle: 'Англи хэлний яаралтай тусламж · Episode 3: I to school yesterday went?! ❌ #Shorts',
-    releaseAt: '2026-11-24T16:00:00Z',
+    ytTitle: 'Англи хэлний яаралтай тусламж · Episode 3: I to school yesterday went?! ❌ #Shorts', videoId: 'lzgCBYaZEoI',
+    releaseAt: '2026-11-15T16:00:00Z',
   },
   {
     lang: 'fa', ep: 3, slug: 'fa03',
     topic: 'He is married with Sara." (او با سارا ازدواج کرده است를 단어 그대로 옮긴 오류)',
-    ytTitle: 'اورژانس انگلیسی · Episode 3: He is married with Sara." (او با سارا ازدواج کرده است를 단어 그대로 옮긴 오류)?! ❌ #Shorts',
-    releaseAt: '2026-11-24T22:00:00Z',
+    ytTitle: 'اورژانس انگلیسی · Episode 3: He is married with Sara." (او با سارا ازدواج کرده است를 단어 그대로 옮긴 오류)?! ❌ #Shorts', videoId: 'os-m1y1y7IQ',
+    releaseAt: '2026-11-15T22:00:00Z',
   },
   {
     lang: 'lo', ep: 3, slug: 'lo03',
     topic: 'My mother she is a teacher." (ແມ່ຂ້ອຍ ລາວເປັນຄູ를 단어 그대로 옮긴 오류)',
-    ytTitle: 'ຫ້ອງສຸກເສີນພາສາອັງກິດ · Episode 3: My mother she is a teacher." (ແມ່ຂ້ອຍ ລາວເປັນຄູ를 단어 그대로 옮긴 오류)?! ❌ #Shorts',
-    releaseAt: '2026-11-25T16:00:00Z',
+    ytTitle: 'ຫ້ອງສຸກເສີນພາສາອັງກິດ · Episode 3: My mother she is a teacher." (ແມ່ຂ້ອຍ ລາວເປັນຄູ를 단어 그대로 옮긴 오류)?! ❌ #Shorts', videoId: 'yJ9ZpoXq8aw',
+    releaseAt: '2026-11-15T16:00:00Z',
   },
   {
     lang: 'pt', ep: 3, slug: 'pt03',
     topic: 'I am with hunger',
-    ytTitle: 'Pronto-Socorro do Inglês · Episode 3: I am with hunger?! ❌ #Shorts',
-    releaseAt: '2026-11-25T22:00:00Z',
+    ytTitle: 'Pronto-Socorro do Inglês · Episode 3: I am with hunger?! ❌ #Shorts', videoId: 'pEQnfazxAno',
+    releaseAt: '2026-11-16T22:00:00Z',
   },
   {
     lang: 'pl', ep: 3, slug: 'pl03',
     topic: 'I will call you in Monday',
-    ytTitle: 'Pogotowie Językowe · Episode 3: I will call you in Monday?! ❌ #Shorts',
-    releaseAt: '2026-11-26T16:00:00Z',
+    ytTitle: 'Pogotowie Językowe · Episode 3: I will call you in Monday?! ❌ #Shorts', videoId: 'GBJtv5COenA',
+    releaseAt: '2026-11-16T16:00:00Z',
   },
   {
     lang: 'fr', ep: 3, slug: 'fr03',
     topic: 'I have hot',
-    ytTitle: 'Urgences de l\'anglais · Episode 3: I have hot?! ❌ #Shorts',
-    releaseAt: '2026-11-26T22:00:00Z',
+    ytTitle: 'Urgences de l\'anglais · Episode 3: I have hot?! ❌ #Shorts', videoId: 'jlp2HRjFMSY',
+    releaseAt: '2026-11-16T22:00:00Z',
   },
   {
     lang: 'de', ep: 3, slug: 'de03',
     topic: 'I am good in English',
-    ytTitle: 'Englisch-Notaufnahme · Episode 3: I am good in English?! ❌ #Shorts',
-    releaseAt: '2026-11-27T16:00:00Z',
+    ytTitle: 'Englisch-Notaufnahme · Episode 3: I am good in English?! ❌ #Shorts', videoId: 'ILu6Y40lcik',
+    releaseAt: '2026-11-16T16:00:00Z',
   },
   {
     lang: 'id', ep: 4, slug: 'id04',
     topic: 'Can you borrow me your pen',
     ytTitle: 'UGD Bahasa Inggris · Episode 4: Can you borrow me your pen?! ❌ #Shorts',
-    releaseAt: '2026-11-27T22:00:00Z',
+    releaseAt: '2026-11-18T22:00:00Z',
   },
   {
     lang: 'hi', ep: 4, slug: 'hi04',
     topic: 'He is my cousin brother',
     ytTitle: 'अंग्रेज़ी इमरजेंसी · Episode 4: He is my cousin brother?! ❌ #Shorts',
-    releaseAt: '2026-11-28T16:00:00Z',
+    releaseAt: '2026-11-18T16:00:00Z',
   },
   {
     lang: 'ar', ep: 4, slug: 'ar04',
     topic: 'I bought a car red',
     ytTitle: 'طوارئ الإنجليزية · Episode 4: I bought a car red?! ❌ #Shorts',
-    releaseAt: '2026-11-28T22:00:00Z',
+    releaseAt: '2026-11-18T22:00:00Z',
   },
   {
     lang: 'mn', ep: 4, slug: 'mn04',
     topic: 'He is my sister',
     ytTitle: 'Англи хэлний яаралтай тусламж · Episode 4: He is my sister?! ❌ #Shorts',
-    releaseAt: '2026-11-29T16:00:00Z',
+    releaseAt: '2026-11-18T16:00:00Z',
   },
   {
     lang: 'fa', ep: 4, slug: 'fa04',
     topic: 'I went to home yesterday." (دیروز به خانه رفتم를 단어 그대로 옮긴 오류)',
     ytTitle: 'اورژانس انگلیسی · Episode 4: I went to home yesterday." (دیروز به خانه رفتم를 단어 그대로 옮긴 오류)?! ❌ #Shorts',
-    releaseAt: '2026-11-29T22:00:00Z',
+    releaseAt: '2026-11-18T22:00:00Z',
   },
   {
     lang: 'lo', ep: 4, slug: 'lo04',
     topic: 'Please wait me." (ກະລຸນາຖ້າຂ້ອຍ를 단어 그대로 옮긴 오류)',
     ytTitle: 'ຫ້ອງສຸກເສີນພາສາອັງກິດ · Episode 4: Please wait me." (ກະລຸນາຖ້າຂ້ອຍ를 단어 그대로 옮긴 오류)?! ❌ #Shorts',
-    releaseAt: '2026-11-30T16:00:00Z',
+    releaseAt: '2026-11-18T16:00:00Z',
   },
   {
     lang: 'pt', ep: 4, slug: 'pt04',
     topic: 'I assist TV every night',
     ytTitle: 'Pronto-Socorro do Inglês · Episode 4: I assist TV every night?! ❌ #Shorts',
-    releaseAt: '2026-11-30T22:00:00Z',
+    releaseAt: '2026-11-19T22:00:00Z',
   },
   {
     lang: 'pl', ep: 4, slug: 'pl04',
     topic: 'I learn English since two years',
     ytTitle: 'Pogotowie Językowe · Episode 4: I learn English since two years?! ❌ #Shorts',
-    releaseAt: '2026-12-01T16:00:00Z',
+    releaseAt: '2026-11-19T16:00:00Z',
   },
   {
     lang: 'fr', ep: 4, slug: 'fr04',
     topic: 'I am boring." (Je m\'ennuie의 의미)',
     ytTitle: 'Urgences de l\'anglais · Episode 4: I am boring." (Je m\'ennuie의 의미)?! ❌ #Shorts',
-    releaseAt: '2026-12-01T22:00:00Z',
+    releaseAt: '2026-11-19T22:00:00Z',
   },
   {
     lang: 'de', ep: 4, slug: 'de04',
     topic: 'I have hunger',
     ytTitle: 'Englisch-Notaufnahme · Episode 4: I have hunger?! ❌ #Shorts',
-    releaseAt: '2026-12-02T16:00:00Z',
+    releaseAt: '2026-11-19T16:00:00Z',
   },
   {
     lang: 'id', ep: 5, slug: 'id05',
     topic: 'Let\'s discuss about the plan',
     ytTitle: 'UGD Bahasa Inggris · Episode 5: Let\'s discuss about the plan?! ❌ #Shorts',
-    releaseAt: '2026-12-02T22:00:00Z',
+    releaseAt: '2026-11-21T22:00:00Z',
   },
   {
     lang: 'hi', ep: 5, slug: 'hi05',
     topic: 'I passed out in 2020',
     ytTitle: 'अंग्रेज़ी इमरजेंसी · Episode 5: I passed out in 2020?! ❌ #Shorts',
-    releaseAt: '2026-12-03T16:00:00Z',
+    releaseAt: '2026-11-21T16:00:00Z',
   },
   {
     lang: 'ar', ep: 5, slug: 'ar05',
     topic: 'I need some informations',
     ytTitle: 'طوارئ الإنجليزية · Episode 5: I need some informations?! ❌ #Shorts',
-    releaseAt: '2026-12-03T22:00:00Z',
+    releaseAt: '2026-11-21T22:00:00Z',
   },
   {
     lang: 'mn', ep: 5, slug: 'mn05',
     topic: 'He go to work every day',
     ytTitle: 'Англи хэлний яаралтай тусламж · Episode 5: He go to work every day?! ❌ #Shorts',
-    releaseAt: '2026-12-04T16:00:00Z',
+    releaseAt: '2026-11-21T16:00:00Z',
   },
   {
     lang: 'fa', ep: 5, slug: 'fa05',
     topic: 'I know him since 5 years." (من او را از ۵ سال پیش می‌شناسم를 단어 그대로 옮긴 오류)',
     ytTitle: 'اورژانس انگلیسی · Episode 5: I know him since 5 years." (من او را از ۵ سال پیش می‌شناسم를 단어 그대로 옮긴 오류)?! ❌ #Shorts',
-    releaseAt: '2026-12-04T22:00:00Z',
+    releaseAt: '2026-11-21T22:00:00Z',
   },
   {
     lang: 'lo', ep: 5, slug: 'lo05',
     topic: 'Please open the light." (ກະລຸນາເປີດໄຟ를 단어 그대로 옮긴 오류)',
     ytTitle: 'ຫ້ອງສຸກເສີນພາສາອັງກິດ · Episode 5: Please open the light." (ກະລຸນາເປີດໄຟ를 단어 그대로 옮긴 오류)?! ❌ #Shorts',
-    releaseAt: '2026-12-05T16:00:00Z',
+    releaseAt: '2026-11-21T16:00:00Z',
   },
   {
     lang: 'pt', ep: 5, slug: 'pt05',
     topic: 'I pretend to travel next year',
     ytTitle: 'Pronto-Socorro do Inglês · Episode 5: I pretend to travel next year?! ❌ #Shorts',
-    releaseAt: '2026-12-05T22:00:00Z',
+    releaseAt: '2026-11-22T22:00:00Z',
   },
   {
     lang: 'pl', ep: 5, slug: 'pl05',
     topic: 'I speak English very good',
     ytTitle: 'Pogotowie Językowe · Episode 5: I speak English very good?! ❌ #Shorts',
-    releaseAt: '2026-12-06T16:00:00Z',
+    releaseAt: '2026-11-22T16:00:00Z',
   },
   {
     lang: 'fr', ep: 5, slug: 'fr05',
     topic: 'I have seen a good movie yesterday',
     ytTitle: 'Urgences de l\'anglais · Episode 5: I have seen a good movie yesterday?! ❌ #Shorts',
-    releaseAt: '2026-12-06T22:00:00Z',
+    releaseAt: '2026-11-22T22:00:00Z',
   },
   {
     lang: 'de', ep: 5, slug: 'de05',
     topic: 'I make my homework',
     ytTitle: 'Englisch-Notaufnahme · Episode 5: I make my homework?! ❌ #Shorts',
-    releaseAt: '2026-12-07T16:00:00Z',
+    releaseAt: '2026-11-22T16:00:00Z',
   },
 ];
 

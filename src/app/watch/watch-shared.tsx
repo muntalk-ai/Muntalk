@@ -5,6 +5,7 @@
 // konglish-client.tsx; the hub renders them once here instead.
 
 import { useEffect, useState, type ReactNode } from 'react';
+import { useAuth } from '@/context/AuthContext';
 
 export const FONT =
   "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif";
@@ -20,6 +21,9 @@ export function useNow(intervalMs = 60_000): number {
 }
 
 export function WatchHeader({ active }: { active?: 'watch' | 'konglish' }) {
+  // H-6: auth-aware — signed-in users see My Learning, not a logged-out CTA.
+  // While auth is loading the slot stays empty (no wrong "Start Free" flash).
+  const { user, loading: authLoading } = useAuth();
   return (
     <div
       style={{
@@ -58,9 +62,15 @@ export function WatchHeader({ active }: { active?: 'watch' | 'konglish' }) {
         <a href="/learn" style={{ color: '#0F172A', fontWeight: 800, fontSize: 13, textDecoration: 'none' }}>
           📚 Learn
         </a>
-        <a href="/signup" style={{ color: '#6366F1', fontWeight: 800, fontSize: 13, textDecoration: 'none' }}>
-          Start Free
-        </a>
+        {!authLoading && (user ? (
+          <a href="/lingua" style={{ color: '#6366F1', fontWeight: 800, fontSize: 13, textDecoration: 'none' }}>
+            📚 My Learning
+          </a>
+        ) : (
+          <a href="/signup" style={{ color: '#6366F1', fontWeight: 800, fontSize: 13, textDecoration: 'none' }}>
+            Start Free
+          </a>
+        ))}
       </div>
     </div>
   );

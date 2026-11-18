@@ -5,6 +5,9 @@ import { awardXp } from '@/lib/xpClient';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { CURRICULUM } from '@/data/curriculum';
+import { promptLangName } from '@/data/languages';
+import { detectBrowserNativeLang } from '@/lib/userProfile';
+import { getCachedLessonTranslation, translateLessonBulk } from '@/lib/lessonBulkTranslate';
 import { pickDistractorMeanings } from '@/lib/vocabDistractors';
 import WrongAnswerModal, { type WrongAnswerInfo } from '@/components/WrongAnswerModal';
 import RtlDir from '@/components/RtlDir';
@@ -43,6 +46,67 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
+// ── Learning-language word pool (QA M-14) ─────────────────────────────────────
+// English learners keep the synchronous CURRICULUM path (zero behavior change).
+// For other learning languages the pool comes from the lesson-translation
+// cache — the same source LessonPlayer uses (word in target language, meaning
+// in the native language). Cached lessons return instantly; missing lessons
+// are translated on demand (only the lessons needed for `count` words, max 4)
+// and cached for lessons too. If too few translated words are available the
+// deck falls back to English (fail-open, same philosophy as LessonPlayer).
+async function loadLevelWords(
+  level: Difficulty, count: number,
+  learnLang: string, nativeLang: string, uid: string | null,
+): Promise<WordCard[]> {
+  const englishPool = () => getVocabByLevel(level, count);
+  if (!learnLang || learnLang.startsWith('en')) return englishPool();
+  try {
+    const lvl = CURRICULUM.find(l => l.id === level);
+    if (!lvl) return englishPool();
+    const lessons = shuffle(lvl.steps.flatMap(s => s.lessons));
+    const targetLang = promptLangName(learnLang);
+    const nativeLangName = promptLangName(nativeLang) || 'English';
+    // 1) Cache-first: parallel GETs (cheap, no Gemini)
+    const cached = await Promise.all(
+      lessons.map(l => getCachedLessonTranslation(l.id, learnLang, nativeLang)),
+    );
+    const words: WordCard[] = [];
+    const missing: typeof lessons = [];
+    cached.forEach((c, i) => {
+      if (c) words.push(...c.vocab.map(v => ({ word: v.word, meaning: v.meaning, example: v.example, level })));
+      else missing.push(lessons[i]);
+    });
+    // 2) Translate only the missing lessons needed to reach `count` words
+    const need = count - words.length;
+    if (need > 0 && missing.length > 0) {
+      const toTranslate = missing.slice(0, Math.ceil(need / 5));
+      const results = await Promise.allSettled(
+        toTranslate.map(l => translateLessonBulk({
+          lesson: l, targetLang, nativeLang: nativeLangName,
+          langId: learnLang, subLang: nativeLang, uid,
+        })),
+      );
+      for (const r of results) {
+        if (r.status === 'fulfilled') {
+          words.push(...r.value.vocab.map(v => ({ word: v.word, meaning: v.meaning, example: v.example, level })));
+        }
+      }
+    }
+    // Dedupe by word (same word can appear in several lessons once translated)
+    const seen = new Set<string>();
+    const unique = words.filter(w => {
+      const key = w.word.toLowerCase().trim();
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+    if (unique.length < 6) return englishPool();
+    return shuffle(unique).slice(0, count);
+  } catch {
+    return englishPool();
+  }
+}
+
 // ── Game definitions ──────────────────────────────────────────────────────────
 
 const GAMES = [
@@ -70,6 +134,10 @@ export default function WordGamesPage() {
   const [difficulty, setDifficulty] = useState<Difficulty>('a1');
   const [playing,    setPlaying]    = useState(false);
   const [xpGained,   setXpGained]   = useState(0);
+  // M-14: learning-language word pool, loaded on Start (cached per level+langs)
+  const [pool, setPool] = useState<WordCard[] | null>(null);
+  const [poolKey, setPoolKey] = useState('');
+  const [wordsLoading, setWordsLoading] = useState(false);
   // PR-I: RTL 판정용 학습 언어
   const [rtlLang, setRtlLang] = useState('en-US');
   useEffect(() => {
@@ -100,10 +168,33 @@ export default function WordGamesPage() {
   // 컴포넌트 unmount 시 남은 증가분 flush
   useEffect(() => () => { void flushGameXp(); }, [flushGameXp]);
 
-  // 게임 시작 시 세션 증거 초기화
-  const startGame = () => {
+  // 게임 시작 시 세션 증거 초기화 + 학습 언어 단어셋 로드 (M-14)
+  const startGame = async () => {
     sessionStartRef.current = Date.now();
     answersRef.current = 0;
+    // 기기 로컬 선택 우선 (Agora PR-126 패턴) — stale 프로필이 덮어쓰지 않음
+    let learnLang = 'en-US';
+    let nativeLang = 'en-US';
+    try {
+      learnLang = localStorage.getItem('mt_learn_lang') || profile?.learnLang || 'en-US';
+      nativeLang = localStorage.getItem('mt_native_lang') || profile?.nativeLang || detectBrowserNativeLang();
+    } catch { /* ignore — defaults above */ }
+    const key = `${difficulty}:${learnLang}:${nativeLang}`;
+    if (poolKey !== key || !pool) {
+      if (learnLang.startsWith('en')) {
+        setPool(getVocabByLevel(difficulty, 20));
+        setPoolKey(key);
+      } else {
+        setWordsLoading(true);
+        try {
+          const words = await loadLevelWords(difficulty, 20, learnLang, nativeLang, user?.uid ?? null);
+          setPool(words);
+          setPoolKey(key);
+        } finally {
+          setWordsLoading(false);
+        }
+      }
+    }
     setPlaying(true);
   };
 
@@ -157,7 +248,7 @@ export default function WordGamesPage() {
           {/* How to play */}
           <div style={S.howTo}>
             <div style={{ fontSize:11, fontWeight:800, color:'#94A3B8', letterSpacing:1, marginBottom:8 }}>HOW TO PLAY</div>
-            {activeGame==='snap' && <HowTo items={['A word and its meaning are shown','✅ if you know it, ❌ if you don\'t','Unknown words are saved for review']}/>}
+            {activeGame==='snap' && <HowTo items={['A word and its meaning are shown','✅ if you know it, ❌ if you don\'t','You have 10 seconds per card — time out counts as "Don\'t know"','Unknown words are saved for review']}/>}
             {activeGame==='match' && <HowTo items={['Word and meaning cards are shuffled','Click to match each pair','Find all pairs to finish!']}/>}
             {activeGame==='vanish' && <HowTo items={['A timer counts down','Click the correct meaning from 4 choices','Faster answers = bonus XP!']}/>}
             {activeGame==='blitz' && <HowTo items={['A word and meaning are shown','Correct = ✅ True, Wrong = ❌ False','Answer as many as possible in 10 seconds!']}/>}
@@ -179,10 +270,10 @@ export default function WordGamesPage() {
             </div>
           </div>
 
-          <button onClick={startGame}
+          <button onClick={startGame} disabled={wordsLoading}
             style={{ ...S.startBtn, background:`linear-gradient(135deg,${game.color},${game.color}cc)`,
-              boxShadow:`0 8px 24px ${game.color}40` }}>
-            {game.emoji} Start — {lvl.label}
+              boxShadow:`0 8px 24px ${game.color}40`, opacity: wordsLoading ? .6 : 1 }}>
+            {wordsLoading ? '⏳ Preparing your words…' : `${game.emoji} Start — ${lvl.label}`}
           </button>
         </div>
 
@@ -197,7 +288,21 @@ export default function WordGamesPage() {
 
   // ── GAME SCREEN ───────────────────────────────────────────────────────────
 
-  const commonProps = { difficulty, onBack:()=>{ void flushGameXp(); setPlaying(false); }, addXP, gameColor:game.color };
+  // Pool is loaded in startGame before setPlaying(true); guard anyway so a game
+  // never mounts with an empty deck.
+  if (!pool) return (
+    <RtlDir lang={rtlLang}>
+    <div style={{ minHeight:'100dvh', background:'#F8FAFC', display:'flex',
+      alignItems:'center', justifyContent:'center', flexDirection:'column', gap:12 }}>
+      <div style={{ width:36, height:36, border:'4px solid #E2E8F0',
+        borderTopColor:game.color, borderRadius:'50%', animation:'spin .8s linear infinite' }}/>
+      <div style={{ fontSize:13, fontWeight:700, color:'#64748B' }}>Preparing your words…</div>
+      <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
+    </div>
+    </RtlDir>
+  );
+
+  const commonProps = { difficulty, words: pool, onBack:()=>{ void flushGameXp(); setPlaying(false); }, addXP, gameColor:game.color };
 
   return (
     <RtlDir lang={rtlLang}>
@@ -231,17 +336,25 @@ function HowTo({ items }: { items: string[] }) {
 // GAME 1: Meaning Snap — Know it ✅ or not ❌
 // ════════════════════════════════════════════════════════════════════════════
 
-function SnapGame({ difficulty, onBack, addXP, gameColor }:
-  { difficulty:Difficulty; onBack:()=>void; addXP:(n:number)=>void; gameColor:string }) {
+function SnapGame({ difficulty, words, onBack, addXP, gameColor }:
+  { difficulty:Difficulty; words:WordCard[]; onBack:()=>void; addXP:(n:number)=>void; gameColor:string }) {
 
-  const [cards]       = useState(() => getVocabByLevel(difficulty, 16));
+  const [cards]       = useState(() => shuffle(words).slice(0, 16));
   const [idx,setIdx]  = useState(0);
   const [known,setKnown] = useState(0);
   const [unknown,setUnknown] = useState(0);
   const [done,setDone]= useState(false);
   const [anim,setAnim]= useState<'right'|'left'|null>(null);
+  // M-14: 10s per card — timeout counts as "Don't know" (Vanish timer pattern).
+  // answeredRef guards the click-vs-timeout race (incl. StrictMode double-updater).
+  const [timer,setTimer] = useState(10);
+  const timerRef = useRef<NodeJS.Timeout|null>(null);
+  const answeredRef = useRef(false);
 
   const answer = (knows: boolean) => {
+    if (answeredRef.current) return;
+    answeredRef.current = true;
+    clearInterval(timerRef.current!);
     setAnim(knows ? 'right' : 'left');
     if (knows) { setKnown(k=>k+1); addXP(5); }
     else setUnknown(u=>u+1);
@@ -252,10 +365,28 @@ function SnapGame({ difficulty, onBack, addXP, gameColor }:
     }, 300);
   };
 
+  useEffect(() => {
+    if (done) return;
+    answeredRef.current = false;
+    setTimer(10);
+    timerRef.current = setInterval(() => {
+      setTimer(t => {
+        if (t <= 1) {
+          clearInterval(timerRef.current!);
+          answer(false);
+          return 0;
+        }
+        return t-1;
+      });
+    }, 1000);
+    return () => clearInterval(timerRef.current!);
+  }, [idx, done]); // eslint-disable-line
+
   if (done) return <GameResult score={known} total={cards.length} xp={known*5} color={gameColor} onBack={onBack} onRetry={()=>{ setIdx(0);setKnown(0);setUnknown(0);setDone(false); }}/>;
 
   const card = cards[idx];
   const progress = ((idx)/cards.length)*100;
+  const timerColor = timer>6?'#10B981':timer>3?'#F59E0B':'#EF4444';
 
   return (
     <div style={{ height:'100dvh', display:'flex', flexDirection:'column', background:'#F8FAFC' }}>
@@ -268,6 +399,9 @@ function SnapGame({ difficulty, onBack, addXP, gameColor }:
         justifyContent:'center', padding:'24px 20px', gap:24 }}>
         <div style={{ fontSize:12, fontWeight:800, color:'#94A3B8', letterSpacing:1 }}>
           ✅ {known} Known  ·  ❌ {unknown} Still learning
+        </div>
+        <div style={{ fontSize:28, fontWeight:900, color:timerColor, fontVariantNumeric:'tabular-nums' }}>
+          ⏱ {timer}s
         </div>
         <div className={`snap-card ${anim==='right'?'snap-right':anim==='left'?'snap-left':''}`}
           style={{ ...S.snapCard, borderTop:`4px solid ${gameColor}` }}>
@@ -303,10 +437,10 @@ function SnapGame({ difficulty, onBack, addXP, gameColor }:
 // GAME 2: Word Match — Find matching pairs
 // ════════════════════════════════════════════════════════════════════════════
 
-function MatchGame({ difficulty, onBack, addXP, gameColor }:
-  { difficulty:Difficulty; onBack:()=>void; addXP:(n:number)=>void; gameColor:string }) {
+function MatchGame({ difficulty, words, onBack, addXP, gameColor }:
+  { difficulty:Difficulty; words:WordCard[]; onBack:()=>void; addXP:(n:number)=>void; gameColor:string }) {
 
-  const [pairs] = useState(() => getVocabByLevel(difficulty, 6));
+  const [pairs] = useState(() => shuffle(words).slice(0, 6));
   const [cards, setCards] = useState<{ id:string; text:string; type:'word'|'meaning'; matched:boolean; pairIdx:number }[]>([]);
   const [selected, setSelected] = useState<string|null>(null);
   const [wrong, setWrong] = useState<string[]>([]);
@@ -405,10 +539,10 @@ function MatchGame({ difficulty, onBack, addXP, gameColor }:
 // GAME 3: Vanishing Words — Timer + 4 choices
 // ════════════════════════════════════════════════════════════════════════════
 
-function VanishGame({ difficulty, onBack, addXP, gameColor }:
-  { difficulty:Difficulty; onBack:()=>void; addXP:(n:number)=>void; gameColor:string }) {
+function VanishGame({ difficulty, words, onBack, addXP, gameColor }:
+  { difficulty:Difficulty; words:WordCard[]; onBack:()=>void; addXP:(n:number)=>void; gameColor:string }) {
 
-  const [vocab]      = useState(() => getVocabByLevel(difficulty, 12));
+  const [vocab]      = useState(() => shuffle(words).slice(0, 12));
   const [idx,setIdx] = useState(0);
   const [timer,setTimer]   = useState(10);
   const [selected, setSelected] = useState<number|null>(null);
@@ -544,10 +678,10 @@ function VanishGame({ difficulty, onBack, addXP, gameColor }:
 // GAME 4: True/False Blitz — 10s time attack
 // ════════════════════════════════════════════════════════════════════════════
 
-function BlitzGame({ difficulty, onBack, addXP, gameColor }:
-  { difficulty:Difficulty; onBack:()=>void; addXP:(n:number)=>void; gameColor:string }) {
+function BlitzGame({ difficulty, words, onBack, addXP, gameColor }:
+  { difficulty:Difficulty; words:WordCard[]; onBack:()=>void; addXP:(n:number)=>void; gameColor:string }) {
 
-  const [vocab]      = useState(() => getVocabByLevel(difficulty, 20));
+  const [vocab]      = useState(() => shuffle(words).slice(0, 20));
   const [idx,setIdx] = useState(0);
   const [timer,setTimer]   = useState(10);
   const [score,setScore]   = useState(0);

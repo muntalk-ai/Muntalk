@@ -11,7 +11,10 @@
 // 올린다. 문서 ID에 버전이 포함되므로 구버전 문서는 자연히 조회되지 않는다
 // (구 문서는 남지만 무해 — 필요 시 콘솔에서 컬렉션째 삭제).
 
-export const LESSON_TRANSLATION_CACHE_VERSION = 1;
+// v2 (2026-11-17, QA M-1/M-2/M-5/M-6/M-4): prompt/validation rules changed
+// (vocab/option uniqueness, quiz-frame language, contrast order, Hangul phonetic)
+// — v1 docs predate these rules and are invalidated by the version in the doc ID.
+export const LESSON_TRANSLATION_CACHE_VERSION = 2;
 
 export const LESSON_TRANSLATIONS_COLLECTION = 'lesson_translations';
 

@@ -22,7 +22,7 @@
 // its release time and flip it to Public at release. Until that workflow
 // runs, early episodes show a "video is being prepared" card.
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
 import { fmtRelease } from '@/lib/early-access';
 import {
@@ -37,8 +37,31 @@ import {
 import { FONT, LockCard, useNow } from '../watch/watch-shared';
 
 export default function KonglishClient() {
-  const { user, loading: authLoading } = useAuth();
-  const [lang, setLang] = useState<KonglishLang>('vi');
+  const { user, profile, loading: authLoading } = useAuth();
+  // L-3: default language — the user's learning language when it is one of
+  // the 17 Konglish languages, else their native language if it is, else
+  // the previous 'vi' default. Device choice (localStorage) first, profile
+  // once it loads; a manual pick is never overridden.
+  const [lang, setLang] = useState<KonglishLang>(() => {
+    if (typeof window === 'undefined') return 'vi';
+    try {
+      const ls = localStorage.getItem('mt_learn_lang');
+      if (ls && KONGLISH_LANGS.some((l) => l.code === ls)) return ls as KonglishLang;
+    } catch { /* ignore */ }
+    return 'vi';
+  });
+  const [picked, setPicked] = useState(false);
+  useEffect(() => {
+    if (picked) return;
+    let next: string | null = null;
+    try { next = localStorage.getItem('mt_learn_lang'); } catch { /* ignore */ }
+    if (!next) next = profile?.learnLang ?? null;
+    if (!next || !KONGLISH_LANGS.some((l) => l.code === next)) {
+      try { next = localStorage.getItem('mt_native_lang'); } catch { /* ignore */ }
+      if (!next || !KONGLISH_LANGS.some((l) => l.code === next)) next = profile?.nativeLang ?? null;
+    }
+    if (next && KONGLISH_LANGS.some((l) => l.code === next)) setLang(next as KonglishLang);
+  }, [profile, picked]);
   const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
   // Re-check the clock every minute so episodes flip free on their own.
   const now = useNow();
@@ -51,6 +74,7 @@ export default function KonglishClient() {
   const langMeta = KONGLISH_LANGS.find((l) => l.code === lang);
 
   function pickLanguage(next: KonglishLang) {
+    setPicked(true);
     setLang(next);
     setSelectedSlug(null);
   }

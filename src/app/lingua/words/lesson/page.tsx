@@ -12,6 +12,8 @@ import { hasTts, getLangLabel } from '@/data/languages';
 import { speakWithDeviceTts, deviceTtsAvailable } from '@/lib/deviceTts';
 import { createUnlockedAudio, resumeDeviceSpeech } from '@/lib/audioUnlock';
 import { resolveNativeLang } from '@/lib/userProfile';
+import { useAuth } from '@/context/AuthContext';
+import { addCardToSRS } from '@/lib/spacedRepetition';
 
 interface WordData {
   word: string;
@@ -38,6 +40,7 @@ async function callGemini(prompt: string, temperature = 0.7): Promise<string> {
 function WordLessonContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const { user } = useAuth();
 
   const pos     = (searchParams.get('pos')    || 'Verbs') as PartOfSpeech;
   const setIdx  = parseInt(searchParams.get('set')    || '1');
@@ -85,6 +88,11 @@ function WordLessonContent() {
   const [chatInput, setChatInput]       = useState('');
   const [chatLoading, setChatLoading]   = useState(false);
   const chatEndRef                      = useRef<HTMLDivElement>(null);
+
+  // Save to Review (L-6) — same SRS deck as LessonPlayer
+  const [savedWords, setSavedWords]     = useState<Record<string, boolean>>({});
+  const [savingWord, setSavingWord]     = useState(false);
+  const [saveError, setSaveError]       = useState<string | null>(null);
 
   // -- STT setup --------------------------------------------------------------
   useEffect(() => {
@@ -310,6 +318,23 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
   const currentWord = words[currentWordIdx] || '';
   const currentData = wordDataMap[currentWord];
 
+  // Save current word to the SRS Review deck (LessonPlayer's mechanism)
+  const handleSaveToReview = async () => {
+    if (!currentWord || savingWord || savedWords[currentWord]) return;
+    if (!user) { setSaveError('Log in to save words to Review.'); return; }
+    setSavingWord(true);
+    setSaveError(null);
+    try {
+      await addCardToSRS(user.uid, currentWord, currentData?.translation || '', lang);
+      setSavedWords(s => ({ ...s, [currentWord]: true }));
+    } catch (e) {
+      console.warn('[words] save to SRS failed:', e);
+      setSaveError('Could not save this word. Please try again.');
+    } finally {
+      setSavingWord(false);
+    }
+  };
+
   // accent colour from POS meta
   const accent = meta?.accent || '#2563EB';
 
@@ -436,6 +461,25 @@ Greet them warmly and ask them to use one word in a sentence. Keep it to 2 sente
                       {currentData?.loading ? '...' : currentData?.translation || ''}
                     </span>
                   </div>
+                </div>
+
+                {/* Save to Review (L-6) */}
+                <div style={{ marginBottom: 24 }}>
+                  <button onClick={handleSaveToReview}
+                    disabled={savingWord || !!savedWords[currentWord] || !currentWord}
+                    style={{ padding: '9px 18px', borderRadius: 12,
+                      border: `1.5px solid ${savedWords[currentWord] ? '#A7F3D0' : accent + '50'}`,
+                      background: savedWords[currentWord] ? '#ECFDF5' : '#fff',
+                      color: savedWords[currentWord] ? '#059669' : accent,
+                      fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif",
+                      fontWeight: 800, fontSize: 13,
+                      cursor: (savingWord || savedWords[currentWord]) ? 'default' : 'pointer' }}
+                  >
+                    {savedWords[currentWord] ? '✅ Saved to Review' : savingWord ? '⏳ Saving...' : '🔖 Save to Review'}
+                  </button>
+                  {saveError && (
+                    <div style={{ fontSize: 12, color: '#DC2626', fontWeight: 700, marginTop: 8 }}>{saveError}</div>
+                  )}
                 </div>
 
                 {/* Example sentences */}
