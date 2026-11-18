@@ -9,6 +9,7 @@ import { getTutorById, getTutorForLang } from '@/data/tutors';
 import { LEARN_LANGUAGES, promptLangName } from '@/data/languages';
 import { speakWithDeviceTts, deviceTtsAvailable } from '@/lib/deviceTts';
 import { createUnlockedAudio, resumeDeviceSpeech } from '@/lib/audioUnlock';
+import { awardXp } from '@/lib/xpClient';
 import TrialExpiredModal from '@/components/TrialExpiredModal';
 import { getTrialData, initTrial, isTrialExpired, isPremium, TRIAL_MAX_UNITS } from '@/lib/trialPolicy';
 import { isAdminEmail } from '@/lib/subscription';
@@ -119,7 +120,7 @@ export default function LessonPlayer({
   onComplete,
 }: LessonPlayerProps) {
   const router = useRouter();
-  const { user, loading: authLoading } = useAuth();
+  const { user, loading: authLoading, refreshProfile } = useAuth();
 
   // -- Data --------------------------------------------------------------------
   const level = CURRICULUM.find(l => l.id === levelId);
@@ -154,6 +155,13 @@ export default function LessonPlayer({
   const [chatInput, setChatInput] = useState('');
   const [msgTranslateErrors, setMsgTranslateErrors] = useState<Record<number,string>>({});
   const [xpEarned, setXpEarned] = useState(0);
+  // QA S-2/S-6 (Muntuz): 퀴즈 정답 시 "+15 XP"를 띄우면서도 실제 지급은 레슨
+  // 완료 때까지 미뤘던 탓에, 도중에 나가면 XP가 사라졌다. 정답 즉시 서버에
+  // 지급하고, 완료 시에는 이미 지급한 분을 빼고 나머지(레슨 기본 XP + 채팅
+  // XP)만 지급한다. awardedXpRef는 새로고침 후 이어하기 때도 이중 지급을
+  // 막기 위해 진행 스냅샷에 함께 저장한다.
+  const awardedXpRef = useRef(0);
+  const lessonStartRef = useRef<number>(Date.now());
   const [audioToast, setAudioToast] = useState(false); // PR-I #5: TTS 실패 피드백
   const audioToastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const showAudioToast = useCallback(() => {
@@ -163,7 +171,7 @@ export default function LessonPlayer({
   }, []);
   const [showXPPop, setShowXPPop] = useState(false);
   const [xpPopVal, setXpPopVal] = useState(0);
-  const [resumeOffer, setResumeOffer] = useState<null | { phase: Phase; vocabIdx: number; quizIdx: number; xpEarned: number }>(null);
+  const [resumeOffer, setResumeOffer] = useState<null | { phase: Phase; vocabIdx: number; quizIdx: number; xpEarned: number; awardedXp?: number }>(null);
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loadingTx, setLoadingTx] = useState<Record<string, boolean>>({});
   const [translatedLesson, setTranslatedLesson] = useState<typeof lesson | null>(null);
@@ -289,7 +297,7 @@ export default function LessonPlayer({
         return;
       }
       localStorage.setItem(PROGRESS_KEY, JSON.stringify({
-        lessonId, phase, vocabIdx, quizIdx, xpEarned, savedAt: Date.now(),
+        lessonId, phase, vocabIdx, quizIdx, xpEarned, awardedXp: awardedXpRef.current, savedAt: Date.now(),
       }));
     } catch { /* ignore */ }
   }, [lessonId, phase, vocabIdx, quizIdx, xpEarned, resumeOffer]);
@@ -830,6 +838,27 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
       setQuizScore(s => s + 1);
       popXP(15);
       setXpEarned(x => x + 15);
+      // QA S-6 (Muntuz): "+15 XP" 표시는 즉시 지급일 때만 정직하다 — 정답
+      // 즉시 서버에 지급한다. 실패하면 xpEarned에만 남겨두고 완료 시
+      // 합산 지급한다 (레슨 페이지의 재시도 배너가 실패를 보여준다).
+      // 게스트는 지급 대상이 아니라 조용히 건너뛴다.
+      if (user) {
+        const sessionSec = Math.max(1, Math.round((Date.now() - lessonStartRef.current) / 1000));
+        void awardXp({ source: 'lesson', xp: 15, sessionSec, meta: { lessonId, quiz: quizIdx } }).then(res => {
+          if (res.ok) {
+            awardedXpRef.current += 15;
+            // 로컬 mt_xp도 같이 올려 서버와 같은 값을 보게 한다 (완료 시에는
+            // 나머지분만 mt_xp에 더하므로 이중 합산되지 않는다).
+            try {
+              const prev = parseInt(localStorage.getItem('mt_xp') || '0', 10) || 0;
+              localStorage.setItem('mt_xp', String(prev + 15));
+            } catch { /* ignore */ }
+            refreshProfile().catch(() => {});
+          } else {
+            console.warn('[lesson] quiz XP award failed (will be included at completion):', res.reason);
+          }
+        });
+      }
     }
   };
 
@@ -1061,7 +1090,9 @@ RULES:
 
   const handleFinishLesson = () => {
     if (!lesson || !activeLesson) return;
-    const totalXP = lesson.xp + xpEarned;
+    // 이미 퀴즈 정답 시점에 지급한 XP는 빼고 나머지(레슨 기본 XP + 채팅 XP)만
+    // 완료 시 지급한다 — 안 그러면 퀴즈 XP가 이중 지급된다.
+    const totalXP = lesson.xp + xpEarned - awardedXpRef.current;
     popXP(lesson.xp);
     setXpEarned(totalXP);
     setPhase('complete');
@@ -1124,6 +1155,7 @@ RULES:
                   setVocabIdx(resumeOffer.vocabIdx || 0);
                   setQuizIdx(resumeOffer.quizIdx || 0);
                   setXpEarned(resumeOffer.xpEarned || 0);
+                  awardedXpRef.current = resumeOffer.awardedXp || 0;
                   setResumeOffer(null);
                 }}
                 style={{ flex:1, padding:'12px 0', borderRadius:12, border:'none',

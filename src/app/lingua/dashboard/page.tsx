@@ -34,10 +34,12 @@ export default function DashboardPage() {
   const [localXp,     setLocalXp]     = useState(0);
   const [localStreak, setLocalStreak] = useState(0);
   const [localLang,   setLocalLang]   = useState('en-US');
+  const [localDone,   setLocalDone]   = useState<string[]>([]);
   useEffect(() => {
     setLocalXp(parseInt(localStorage.getItem('mt_xp') || '0'));
     setLocalStreak(parseInt(localStorage.getItem('mt_streak') || '0'));
     setLocalLang(localStorage.getItem('mt_learn_lang') || 'en-US');
+    try { setLocalDone(JSON.parse(localStorage.getItem('mt_done') || '[]') as string[]); } catch { /* ignore */ }
   }, []);
 
   // Leaderboard hidden — no longer fetching other users' data
@@ -48,7 +50,11 @@ export default function DashboardPage() {
   const xp             = Math.max(profile?.xp ?? 0, localXp);
   const streak         = profile?.streak          ?? localStreak;
   const learnLang      = profile?.learnLang       ?? localLang;
-  const completedCount = profile?.completedLessons?.length ?? 0;
+  // QA S-2/H-11: 완료 레슨 수도 XP와 같은 규칙 — 서버 목록과 로컬 목록의
+  // 합집합. 서버만 보면 게스트/실패분이 빠져 "2 Lessons Done"처럼 보이고,
+  // 로컬만 보면 기기가 바뀌면 날아간다. 다음 로그인 때 따라잡기가 서버로
+  // 합쳐지므로 합집합은 시간이 갈수록 서버 값에 수렴한다.
+  const completedCount = new Set([...(profile?.completedLessons ?? []), ...localDone]).size;
   const activityDates  = profile?.activityDates   ?? [];
 
   if (loading) return (

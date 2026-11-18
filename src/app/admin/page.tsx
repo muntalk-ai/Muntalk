@@ -364,9 +364,15 @@ export default function AdminPage() {
           const lessonDone = users.filter(u=>u.lessonsDone>0).length;
           const steps = [
             {label:'Signed up', value:total, pct:null as number|null},
+            // QA H-8: 각 단계의 %는 퍼널의 분모인 전체 가입자 기준이다. 이전에는
+            // "Finished lesson"의 분모가 "Earned XP" 단계(10명)라서 17/10=170%가
+            // 떴다. 단계별 전환이 아니라 코호트 기준 점유율을 보여주므로 100%를
+            // 넘을 수 없다. (참고: 완료자(17) > XP 보유자(10)라는 역전 자체는
+            // S-2 XP 미지급 증상이며, 이번 배치의 지급 경로 수정으로 신규
+            // 발생은 막힌다.)
             {label:'Returned', value:returned, pct:total?pct(returned,total):null},
-            {label:'Earned XP', value:engaged, pct:returned?pct(engaged,returned):null},
-            {label:'Finished lesson', value:lessonDone, pct:engaged?pct(lessonDone,engaged):null},
+            {label:'Earned XP', value:engaged, pct:total?pct(engaged,total):null},
+            {label:'Finished lesson', value:lessonDone, pct:total?pct(lessonDone,total):null},
           ];
           function pct(a:number,b:number){ return Math.round(a/b*100); }
           return (

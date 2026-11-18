@@ -19,7 +19,7 @@ import { truncateHistory } from '@/lib/history';
 import { speakWithDeviceTts } from '@/lib/deviceTts';
 import { purposePromptBlock, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
-import { awardXp } from '@/lib/xpClient';
+import { awardXpWithRetry } from '@/lib/xpClient';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -53,7 +53,7 @@ const stripEmoji = (t: string) =>
 function SessionContent() {
   const sp     = useSearchParams();
   const router = useRouter();
-  const { user } = useAuth();
+  const { user, refreshProfile } = useAuth();
 
   const type       = sp.get('type') || 'everyday';
   const scenarioId = sp.get('scenarioId') || '';
@@ -225,12 +225,24 @@ function SessionContent() {
     xpSavedRef.current = true;
     const earned = sessionXpRef.current;
     if (earned <= 0) return;
+    // QA S-2: 롤플레이는 지금까지 서버 지급만 하고 로컬 mt_xp를 안 올려서,
+    // 지급이 실패하면 복구할 기록이 아예 없었다. 다른 경로와 같이 로컬에
+    // 먼저 낙관적으로 기록해 두면 실패분은 다음 로그인 때 따라잡기가 이관한다.
+    try {
+      const prev = parseInt(localStorage.getItem('mt_xp') || '0', 10) || 0;
+      localStorage.setItem('mt_xp', String(prev + earned));
+    } catch { /* ignore */ }
     try {
       // PR-H: XP는 서버 엔드포인트로 지급 — Firestore 직접 쓰기 금지
       const sessionSec = Math.max(1, Math.round((Date.now() - sessionStartRef.current) / 1000));
       const scenario = sp.get('scenario') || sp.get('s') || 'unknown';
-      await awardXp({ source: 'roleplay', xp: earned, sessionSec, meta: { scenario } });
-      console.log('[roleplay] XP awarded:', earned);
+      const res = await awardXpWithRetry({ source: 'roleplay', xp: earned, sessionSec, meta: { scenario } });
+      if (res.ok) {
+        console.log('[roleplay] XP awarded:', earned);
+        try { await refreshProfile(); } catch { /* ignore */ }
+      } else {
+        console.warn('[roleplay] XP award failed:', res.reason, '— local XP kept; will retry on next login');
+      }
     } catch (e) {
       console.warn('[roleplay] XP award FAILED:', e);
     }
@@ -240,7 +252,7 @@ function SessionContent() {
     } catch (e) {
       console.warn('[roleplay] recordActivity failed:', e);
     }
-  }, [user, sp]);
+  }, [user, sp, refreshProfile]);
 
   const addMsg = (m: Omit<Message,'id'|'ts'>): Message => {
     const full: Message = {...m, id:++msgId.current, ts:Date.now()};

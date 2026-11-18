@@ -334,7 +334,12 @@ export default function LevelHub() {
         } catch { /* ignore */ }
       }
       setPlacementLevel((profile as any).placementLevel || localStorage.getItem('mt_placement_level') || '');
-      setCompletedLessons(new Set(profile.completedLessons || []));
+      // QA S-2: 완료 레슨은 서버 목록과 로컬 mt_done의 합집합으로 본다.
+      // 서버만 보면 프로필 로드 전(로컬 기준 42%)과 후(서버 기준 22%)로
+      // 카드 %가 로드마다 바뀌던 갈림이 생긴다.
+      let localDone: string[] = [];
+      try { localDone = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[]; } catch { /* ignore */ }
+      setCompletedLessons(new Set([...(profile.completedLessons || []), ...localDone]));
       // tutorId: localStorage에 이미 값이 있고 profile이 default 't01'이면 localStorage 우선
       const storedTutor = localStorage.getItem('mt_tutor_id');
       if (profile.tutorId && profile.tutorId !== 't01') {

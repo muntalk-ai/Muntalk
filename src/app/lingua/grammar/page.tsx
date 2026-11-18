@@ -12,6 +12,8 @@ import {
   getChaptersByLevel, type GrammarLevel, type GrammarChapter,
 } from '@/data/grammar';
 import { LEARN_LANGUAGES } from '@/data/languages';
+import { awardXpWithRetry } from '@/lib/xpClient';
+import { updateUserProfile } from '@/lib/userProfile';
 
 // ── Language label map (all 93 learning languages) ──────────────────────────
 
@@ -58,7 +60,7 @@ interface QuizState {
 
 export default function GrammarPage() {
   const router  = useRouter();
-  const { user } = useAuth();
+  const { user, profile, refreshProfile } = useAuth();
 
   const [selLevel,    setSelLevel]    = useState<GrammarLevel>('a1');
   const [selCategory, setSelCategory] = useState<string|null>(null);
@@ -77,6 +79,8 @@ export default function GrammarPage() {
   const [aiLoading,   setAiLoading]   = useState(false);
   const [showAI,      setShowAI]      = useState(false);
   const [completedIds,setCompletedIds]= useState<Set<string>>(new Set());
+  // QA M-10: 챕터 열람 시작 시각 — 퀴즈 완료 XP의 sessionSec 근거.
+  const chapterOpenRef = useRef<number>(Date.now());
   // Native-language explanation
   const [nlExp,       setNlExp]       = useState<NlExplanation|null>(null);
   const [nlLoading,   setNlLoading]   = useState(false);
@@ -116,6 +120,20 @@ export default function GrammarPage() {
   useEffect(() => {
     chatRef.current?.scrollTo({ top: chatRef.current.scrollHeight, behavior:'smooth' });
   }, [aiChat]);
+
+  // QA M-10: 서버에 저장된 완료 챕터도 합집합으로 반영한다 (기기 간 유지).
+  // 로컬 mt_grammar_done이 기준이고, 프로필이 늦게 도착해도 합집합이라
+  // 덮어쓰지 않는다.
+  useEffect(() => {
+    const serverDone = profile?.completedGrammar;
+    if (!serverDone || serverDone.length === 0) return;
+    setCompletedIds(prev => {
+      const next = new Set([...prev, ...serverDone]);
+      if (next.size === prev.size) return prev;
+      try { localStorage.setItem('mt_grammar_done', JSON.stringify([...next])); } catch { /* ignore */ }
+      return next;
+    });
+  }, [profile?.completedGrammar]);
 
   const tutor = getTutorById(tutorId);
   const nativeLangName = LANG_LABEL[nativeLang] || 'English';
@@ -157,6 +175,7 @@ export default function GrammarPage() {
   const openChapter = (ch: GrammarChapter) => {
     setSelChapter(ch);
     setView('chapter');
+    chapterOpenRef.current = Date.now();
     setExampleIdx(0);
     setQuiz({ current:0, selected:null, answered:false, score:0, done:false });
     setAiChat([]);
@@ -168,10 +187,39 @@ export default function GrammarPage() {
     }
   };
 
+  // QA M-10: 완료는 로컬(localStorage) + 서버(프로필 completedGrammar) 둘 다에
+  // 저장한다. 이전에는 로컬에만 있어 기기가 바뀌면 0/6으로 돌아갔다.
+  // 서버 저장은 best-effort — 실패해도 로컬 완료 표시는 유지된다.
   const markComplete = (id: string) => {
-    const next = new Set([...completedIds, id]);
-    setCompletedIds(next);
-    localStorage.setItem('mt_grammar_done', JSON.stringify([...next]));
+    let done: string[] = [];
+    try { done = JSON.parse(localStorage.getItem('mt_grammar_done') || '[]') as string[]; } catch { /* ignore */ }
+    if (!done.includes(id)) done.push(id);
+    setCompletedIds(new Set(done));
+    try { localStorage.setItem('mt_grammar_done', JSON.stringify(done)); } catch { /* ignore */ }
+    if (user) {
+      updateUserProfile(user.uid, { completedGrammar: done }).catch(e =>
+        console.warn('[grammar] completedGrammar save failed:', e));
+    }
+  };
+
+  // QA M-10: 퀴즈 완료 시 정답 1개당 10 XP를 서버에 지급한다. 이전에는
+  // 퀴즈를 다 풀어도 XP 지급 경로 자체가 없었다. 로컬 mt_xp에도 먼저
+  // 더해두면 지급 실패분은 다음 로그인 때 따라잡기가 이관한다.
+  const awardGrammarXp = async (ch: GrammarChapter, score: number) => {
+    if (score <= 0) return;
+    const xp = score * 10;
+    try {
+      const prev = parseInt(localStorage.getItem('mt_xp') || '0', 10) || 0;
+      localStorage.setItem('mt_xp', String(prev + xp));
+    } catch { /* ignore */ }
+    if (!user) return;
+    const sessionSec = Math.max(1, Math.round((Date.now() - chapterOpenRef.current) / 1000));
+    const res = await awardXpWithRetry({ source: 'grammar', xp, sessionSec, meta: { chapterId: ch.id } });
+    if (!res.ok) {
+      console.warn('[grammar] XP award failed:', res.reason, '— local XP kept; will retry on next login');
+    } else {
+      try { await refreshProfile(); } catch { /* ignore */ }
+    }
   };
 
   const handleQuizAnswer = (idx: number) => {
@@ -183,7 +231,11 @@ export default function GrammarPage() {
   const nextQuiz = () => {
     if (!selChapter) return;
     if (quiz.current + 1 >= selChapter.quiz.length) {
+      // 이미 완료한 챕터의 재도전은 XP를 다시 지급하지 않는다.
+      let alreadyDone = false;
+      try { alreadyDone = (JSON.parse(localStorage.getItem('mt_grammar_done') || '[]') as string[]).includes(selChapter.id); } catch { /* ignore */ }
       setQuiz(prev => ({ ...prev, done: true }));
+      if (!alreadyDone) void awardGrammarXp(selChapter, quiz.score);
       markComplete(selChapter.id);
     } else {
       setQuiz(prev => ({ ...prev, current: prev.current + 1, selected: null, answered: false }));
@@ -426,6 +478,11 @@ ${tutor.name}:`;
                 <div style={{ fontSize:20, fontWeight:900, color:'#0F172A', marginBottom:4 }}>
                   {quiz.score} / {ch.quiz.length} correct
                 </div>
+                {quiz.score > 0 && (
+                  <div style={{ fontSize:15, fontWeight:800, color:'#F59E0B', marginBottom:4 }}>
+                    ⭐ +{quiz.score * 10} XP earned
+                  </div>
+                )}
                 <div style={{ fontSize:13, color:'#64748B', fontWeight:600, marginBottom:16 }}>
                   {quiz.score === ch.quiz.length ? 'Perfect score! Ready for the next chapter?' :
                    quiz.score >= ch.quiz.length/2 ? 'Great job! Review the ones you missed.' :
