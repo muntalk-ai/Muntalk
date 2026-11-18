@@ -34,6 +34,17 @@ function report(kind: 'error' | 'unhandledrejection', message: string, stack?: s
 export function useErrorTracking() {
   useEffect(() => {
     const onError = (e: ErrorEvent) => {
+      // QA H-9: a bare cross-origin "Script error" carries no message detail,
+      // stack or filename (the browser redacts it) — it is unactionable noise,
+      // not a diagnosable failure. Skip it; real errors always carry a stack
+      // or a filename. (Standard practice — Sentry ignores it the same way.)
+      if (
+        (e.message === 'Script error' || e.message === 'Script error.') &&
+        !e.error?.stack &&
+        !e.filename
+      ) {
+        return;
+      }
       report('error', e.message || 'unknown error', e.error?.stack);
     };
     const onRejection = (e: PromiseRejectionEvent) => {

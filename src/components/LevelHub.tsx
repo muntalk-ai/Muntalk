@@ -129,7 +129,10 @@ export default function LevelHub() {
     setTrialHighlight(true);
     setTimeout(() => setTrialHighlight(false), 2600);
   };
-  // -- PR #110: 히어로 CTA 클릭 측정 (기존 /api/client-log 에러 수집 인프라 재사용, 실패 시 조용히 무시) --
+  // -- PR #110: 히어로 CTA 클릭 측정 (기존 /api/client-log 인프라 재사용, 실패 시 조용히 무시) --
+  // QA H-9: 클릭 이벤트는 에러가 아니다. kind:'event'로 보내면 서버가 별도
+  // client_events 컬렉션에 기록하고 에러 로그(admin_logs)에는 넣지 않는다.
+  // 이전에는 kind:'error'로 보내 2026-11-15 QA 에러 로그 54건 중 28건을 오염시켰다.
   const logReelCta = (ctaId: string) => {
     try {
       const rLog = reelHero && reelTag ? reelTag : 'none';
@@ -137,7 +140,7 @@ export default function LevelHub() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          kind: 'error',
+          kind: 'event',
           message: `[reel_cta_click] r=${rLog} cta=${ctaId}`,
           url: typeof window !== 'undefined' ? window.location.href.slice(0, 200) : '/',
         }),

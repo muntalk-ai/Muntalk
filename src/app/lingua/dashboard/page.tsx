@@ -64,7 +64,14 @@ export default function DashboardPage() {
   );
 
   const langInfo        = LEARN_LANGUAGES.find(l => l.code === learnLang);
-  const currentLevel    = LEVELS.findLast(l => xp >= (LEVELS[LEVELS.indexOf(l) - 1]?.xpNeeded || 0)) || LEVELS[0];
+  // QA H-9: Array.prototype.findLast is ES2023 — 구형 브라우저에서는
+  // "u.findLast is not a function"으로 터진다 (2026-11-15 QA 대시보드 2건).
+  // 역순 루프로 같은 의미(조건을 만족하는 마지막 레벨)를 구한다.
+  let currentLevel = LEVELS[0];
+  for (let i = LEVELS.length - 1; i >= 0; i--) {
+    const prevXpNeeded = i > 0 ? LEVELS[i - 1].xpNeeded : 0;
+    if (xp >= prevXpNeeded) { currentLevel = LEVELS[i]; break; }
+  }
   const nextLevel       = LEVELS[LEVELS.indexOf(currentLevel) + 1];
   const prevXp          = LEVELS[LEVELS.indexOf(currentLevel) - 1]?.xpNeeded || 0;
   const progressPct     = nextLevel ? Math.min(100, ((xp - prevXp) / (nextLevel.xpNeeded - prevXp)) * 100) : 100;

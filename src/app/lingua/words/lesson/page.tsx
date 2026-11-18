@@ -133,10 +133,17 @@ function WordLessonContent() {
     audioRef.current = unlockedAudio;
     setIsSpeaking(true);
     // 서버 음성 미지원 언어(예: 버마어)는 기기 내장 음성으로 폴백
+    // QA H-9: 기기에 음성이 없어도 서버 TTS(/api/tts, Gemini 경유)로 폴백한다.
+    // onNoVoice가 onEnd보다 먼저 실행되므로 플래그로 onEnd 조기 호출을 막고,
+    // 서버 재생이 끝나야 onEnd가 나간다.
+    let deviceNoVoice = false;
     if (!hasTts(lang)) {
-      const ok = await speakWithDeviceTts(text, lang, () => { if (isCurrent()) { setIsSpeaking(false); onEnd?.(); } });
-      if (!ok && isCurrent()) setIsSpeaking(false);
-      return;
+      const ok = await speakWithDeviceTts(text, lang,
+        () => { if (isCurrent() && !deviceNoVoice) { setIsSpeaking(false); onEnd?.(); } },
+        () => { deviceNoVoice = true; });
+      if (ok) return;
+      if (!isCurrent()) return;
+      // fall through to server TTS below
     }
     try {
       const res = await apiFetch('/api/tts', {

@@ -3,6 +3,7 @@
 
 import { doc, getDoc, setDoc, updateDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from './firebase';
+import { withFirestoreRetry } from './firestoreRetry';
 import { awardXp } from './xpClient';
 import type { LearningPurpose } from './purpose';
 import { isLearningPurpose } from './purpose';
@@ -151,7 +152,10 @@ const DEFAULT_PROFILE: Omit<UserProfile, 'uid' | 'email' | 'displayName' | 'phot
 /** 유저 프로필 불러오기 — 없으면 null */
 export async function getUserProfile(uid: string): Promise<UserProfile | null> {
   const ref = doc(db, 'users', uid);
-  const snap = await getDoc(ref);
+  // QA H-9: 프로필 로드는 AuthContext에서 await되지만 호출부에 try/catch가
+  // 없어, 오프라인 순간(`unavailable`)에 실패하면 unhandled rejection으로
+  // 에러 로그에 남았다. 일시적 장애만 최대 3회 재시도한다.
+  const snap = await withFirestoreRetry(() => getDoc(ref));
   return snap.exists() ? { ...DEFAULT_PROFILE, ...snap.data() } as UserProfile : null;
 }
 

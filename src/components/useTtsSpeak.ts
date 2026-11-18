@@ -56,8 +56,12 @@ export function useTtsSpeak(langId: string) {
     setSpeaking(true);
     if (!supported) {
       const ok = await speakWithDeviceTts(clean, langId, () => { if (isCurrent()) setSpeaking(false); });
-      if (!ok && isCurrent()) { setSpeaking(false); onError?.(); }
-      return;
+      if (ok) return;
+      if (!isCurrent()) return;
+      // QA H-9: 기기에 해당 언어 음성이 없어도(데스크톱의 버마어 등) 서버 TTS로
+      // 폴백한다 — /api/tts가 Gemini 경유로 모든 언어를 제공한다. 기기 음성이
+      // 있으면 위에서 끝나고, 없으면 아래 서버 분기로 이어진다.
+      setSpeaking(true);
     }
     try {
       const key = `${langId}:${clean}`;
