@@ -80,6 +80,9 @@ export default function AdminPage() {
   );
   const [users, setUsers] = useState<UserRow[]>([]);
   const [logs, setLogs] = useState<LogEntry[]>([]);
+  // M-19: Logs tab needs its own loading flag — without it the tab flashes
+  // "No logs yet" while the 65+ rows are still being fetched.
+  const [logsLoading, setLogsLoading] = useState(false);
   const [fetching, setFetching] = useState(true);
   const [search, setSearch] = useState('');
   const [saving, setSaving] = useState<string | null>(null);
@@ -104,6 +107,21 @@ export default function AdminPage() {
   const [modalMode, setModalMode] = useState<'grant'|'extend'>('grant');
   const [selPlan, setSelPlan] = useState<PlanId>('monthly');
   const [selExpiry, setSelExpiry] = useState('');
+
+  // M-18: user detail view — clicking a Users row opens per-user progress.
+  const [detail, setDetail] = useState<UserRow | null>(null);
+  const [detailLessons, setDetailLessons] = useState<string[] | null>(null);
+  const openDetail = (u: UserRow) => {
+    setDetail(u); setDetailLessons(null);
+    // Completed lesson ids live on the user doc (not in the table row).
+    getDoc(doc(db,'users',u.uid)).then(snap => {
+      const ids = snap.exists() && Array.isArray(snap.data().completedLessons)
+        ? snap.data().completedLessons as string[] : [];
+      setDetailLessons(ids);
+    }).catch(()=>setDetailLessons([]));
+  };
+  const isAdminRow = (email: string) =>
+    ADMIN_EMAILS.some(a => a.toLowerCase() === email.toLowerCase());
 
   // Email composer
   const [emailTarget, setEmailTarget] = useState<'all'|'premium'|'free'|'single'>('single');
@@ -161,9 +179,10 @@ export default function AdminPage() {
           });
         }
         rows.sort((a,b)=>(a.planId==='free'?1:-1)-(b.planId==='free'?1:-1)||b.xp-a.xp);
-        // 운영자 본인 계정은 학습자 통계에서 제외 (사이트 점검용으로 수시 접속)
-        const visible = rows.filter(r => r.email.toLowerCase() !== 'muntuz.official@gmail.com');
-        setUsers(visible);
+        // QA S-8: the admin's own account must appear in the Users table.
+        // (Previously the admin email was filtered out here, so searching
+        // for it returned "No users found" even though grant records exist.)
+        setUsers(rows);
       } catch(e) { console.error(e); }
       setFetching(false);
     })();
@@ -171,6 +190,7 @@ export default function AdminPage() {
 
   // Fetch logs
   const fetchLogs = useCallback(async () => {
+    setLogsLoading(true);
     try {
       const q = query(collection(db,'admin_logs'), orderBy('timestamp','desc'), limit(100));
       const snap = await getDocs(q);
@@ -183,6 +203,7 @@ export default function AdminPage() {
         ts:d.data().timestamp?.toDate?.()?.toISOString?.()?.slice(0,16)?.replace('T',' ')||'',
       })));
     } catch(e) { console.error(e); }
+    setLogsLoading(false);
   }, []);
 
   useEffect(() => { if (tab==='logs') fetchLogs(); }, [tab]);
@@ -481,8 +502,9 @@ export default function AdminPage() {
                       <tr><td colSpan={11} style={{padding:48,textAlign:'center',color:'#94A3B8',fontWeight:700,fontSize:13}}>No users found</td></tr>
                     )}
                     {sorted.map((u,i)=>(
-                      <tr key={u.uid} className="urow" style={{background:i%2?'#FAFBFD':'#fff'}}>
-                        <td style={{...TD,fontWeight:700,color:'#0F172A',maxWidth:220,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}} title={u.email}>{u.email}</td>
+                      <tr key={u.uid} className="urow" style={{background:i%2?'#FAFBFD':'#fff',cursor:'pointer'}}
+                        onClick={()=>openDetail(u)} title="Click for user detail">
+                        <td style={{...TD,fontWeight:700,color:'#0F172A',maxWidth:220,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}} title={u.email}>{u.email}{isAdminRow(u.email)&&<span style={{marginLeft:6,padding:'2px 7px',borderRadius:6,background:'#EEF2FF',color:'#6366F1',fontSize:9,fontWeight:900}}>ADMIN</span>}</td>
                         <td style={{...TD,color:'#475569',fontWeight:700,maxWidth:140,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}} title={u.displayName}>{u.displayName}</td>
                         <td style={TD}>
                           <span style={{padding:'4px 10px',borderRadius:8,background:PLAN_COLORS[u.planId]+'1A',color:PLAN_COLORS[u.planId],fontSize:10,fontWeight:900,whiteSpace:'nowrap'}}>{PLAN_LABELS[u.planId]}</span>
@@ -495,7 +517,7 @@ export default function AdminPage() {
                         <td style={{...TD_NUM,color:'#475569',fontWeight:700,whiteSpace:'nowrap'}}>{u.visitDays}</td>
                         <td style={{...TD_NUM,color:'#475569',fontWeight:700,whiteSpace:'nowrap'}}>{u.lessonsDone}</td>
                         <td style={{...TD,whiteSpace:'nowrap'}}>
-                          <div style={{display:'flex',gap:6}}>
+                          <div style={{display:'flex',gap:6}} onClick={e=>e.stopPropagation()}>
                             <button onClick={()=>openGrant(u)} disabled={saving===u.uid}
                               style={{...BTN_SM,background:'#EEF2FF',color:'#6366F1',opacity:saving===u.uid?0.5:1}}>
                               ⭐ Grant
@@ -626,9 +648,14 @@ export default function AdminPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    {logs.length===0&&(
+                    {logsLoading?(
+                      <tr><td colSpan={5} style={{padding:48,textAlign:'center',color:'#64748B',fontWeight:700,fontSize:13}}>
+                        <span style={{display:'inline-block',width:18,height:18,border:'3px solid #E5E7EB',borderTopColor:'#6366F1',borderRadius:'50%',animation:'spin .8s linear infinite',verticalAlign:'middle',marginRight:10}}/>
+                        Loading logs…
+                      </td></tr>
+                    ):logs.length===0?(
                       <tr><td colSpan={5} style={{padding:48,textAlign:'center',color:'#94A3B8',fontWeight:700,fontSize:13}}>No logs yet</td></tr>
-                    )}
+                    ):null}
                     {logs.map((l,i)=>(
                       <tr key={l.id} className="urow" style={{background:i%2?'#FAFBFD':'#fff'}}>
                         <td style={TD}>
@@ -707,6 +734,53 @@ export default function AdminPage() {
           </div>
         )}
       </div>
+
+      {/* User Detail Modal (M-18) */}
+      {detail&&(
+        <div style={{position:'fixed',inset:0,background:'rgba(0,0,0,0.5)',display:'flex',alignItems:'center',justifyContent:'center',zIndex:1000,padding:20}}
+          onClick={e=>{if(e.target===e.currentTarget)setDetail(null);}}>
+          <div style={{background:'#fff',borderRadius:20,padding:'28px',maxWidth:460,width:'100%',maxHeight:'85vh',overflowY:'auto'}}>
+            <div style={{fontSize:16,fontWeight:900,color:'#0F172A',marginBottom:2}}>{detail.displayName}</div>
+            <div style={{fontSize:12,color:'#64748B',fontWeight:700,marginBottom:4}}>{detail.email}{isAdminRow(detail.email)&&<span style={{marginLeft:6,padding:'2px 7px',borderRadius:6,background:'#EEF2FF',color:'#6366F1',fontSize:9,fontWeight:900}}>ADMIN</span>}</div>
+            <div style={{fontSize:12,color:'#94A3B8',fontWeight:700,marginBottom:18}}>Joined {detail.createdAt||'—'}{detail.lastActive?` · Last active ${detail.lastActive}`:''}</div>
+            <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:10,marginBottom:18}}>
+              {([
+                ['Plan', PLAN_LABELS[detail.planId]],
+                ['Plan expiry', detail.expiry||'—'],
+                ['Total XP', detail.xp.toLocaleString()],
+                ['Day streak', `${detail.streak}🔥`],
+                ['Lessons done', String(detail.lessonsDone)],
+                ['Visit days', String(detail.visitDays)],
+                ['Learning', langLabel(detail.learnLang)],
+                ['Native', langLabel(detail.nativeLang)],
+              ] as [string,string][]).map(([k,v])=>(
+                <div key={k} style={{background:'#F8FAFC',borderRadius:12,padding:'12px 14px'}}>
+                  <div style={{fontSize:10,fontWeight:900,color:'#94A3B8',letterSpacing:1,textTransform:'uppercase'}}>{k}</div>
+                  <div style={{fontSize:14,fontWeight:900,color:'#0F172A',marginTop:4}}>{v}</div>
+                </div>
+              ))}
+            </div>
+            <div style={{...FIELD_LABEL,marginBottom:8}}>Completed lessons ({detailLessons===null?'…':detailLessons.length})</div>
+            <div style={{fontSize:12,color:'#475569',fontWeight:600,lineHeight:1.8,background:'#F8FAFC',borderRadius:12,padding:'12px 14px',marginBottom:8,wordBreak:'break-all',maxHeight:120,overflowY:'auto'}}>
+              {detailLessons===null?'Loading…':detailLessons.length===0?'No lessons completed yet':detailLessons.join(', ')}
+            </div>
+            <div style={{...FIELD_LABEL,marginBottom:8}}>Active days ({detail.activityDates.length})</div>
+            <div style={{fontSize:12,color:'#475569',fontWeight:600,lineHeight:1.8,background:'#F8FAFC',borderRadius:12,padding:'12px 14px',marginBottom:22,wordBreak:'break-all',maxHeight:120,overflowY:'auto'}}>
+              {detail.activityDates.length===0?'No activity recorded':[...detail.activityDates].sort().join(', ')}
+            </div>
+            <div style={{display:'flex',gap:10}}>
+              <button onClick={()=>setDetail(null)}
+                style={{flex:1,padding:'11px',borderRadius:11,border:'1.5px solid #E5E7EB',background:'#fff',color:'#374151',fontWeight:700,fontSize:13,cursor:'pointer',fontFamily:FONT}}>
+                Close
+              </button>
+              <button onClick={()=>{setDetail(null); openGrant(detail);}}
+                style={{flex:1,padding:'11px',borderRadius:11,border:'none',background:'linear-gradient(135deg,#6366F1,#8B5CF6)',color:'#fff',fontWeight:900,fontSize:13,cursor:'pointer',fontFamily:FONT}}>
+                ⭐ Grant Premium
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Grant / Extend Modal */}
       {modal&&(
