@@ -53,7 +53,7 @@ export const REFERRAL_COPY = {
   inviteTitle: (name: string) => `${name} invited you to Muntalk!`,
   /** /r/{code} 랜딩 — 코드가 유효하지 않거나 이름 확인 실패 시 */
   inviteTitleGeneric: `You've been invited to Muntalk!`,
-  inviteSubtitle: `Learn 90+ languages with AI tutors. Sign up with this invite and get ${REFERRAL_REWARDS.WELCOME_XP} XP free.`,
+  inviteSubtitle: `Learn 94 languages with AI tutors. Sign up with this invite and get ${REFERRAL_REWARDS.WELCOME_XP} XP free.`,
   inviteCta: `Claim invite →`,
   /** 프로필 Refer 탭 */
   referHeadline: `🎁 Invite friends, earn XP`,
@@ -61,7 +61,7 @@ export const REFERRAL_COPY = {
   referCta: `📤 Share invite link`,
   copied: `Link copied!`,
   /** 체험 완료 후 공유 (게스트 — 추천 코드 없음) */
-  trialShareTitle: `Muntalk — Speak 90+ languages with AI tutors`,
+  trialShareTitle: `Muntalk — Speak 94 languages with AI tutors`,
   trialShareText: `I just tried speaking a new language with an AI tutor on Muntalk — free, no sign-up. Try it!`,
   trialShareCta: `📤 Share Muntalk`,
   /** 추천 링크 공유 (로그인 유저) */

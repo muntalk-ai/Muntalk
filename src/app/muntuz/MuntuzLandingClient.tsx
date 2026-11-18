@@ -6888,7 +6888,7 @@ export default function MuntuzLandingClient() {
       {/* Top bar */}
       <div className="sticky top-0 z-50 border-b border-[#E7DCC8] bg-[#FBF5EA]/90 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-[1180px] items-center gap-2 px-3 sm:gap-[18px] sm:px-5">
-          <a href="#top" className="text-2xl font-extrabold tracking-[0.04em]" style={{ fontFamily: DISPLAY_FONT }}>
+          <a href="#top" className="text-xl font-extrabold tracking-[0.04em] sm:text-2xl" style={{ fontFamily: DISPLAY_FONT }}>
             MUNTUZ<span className="text-[#0E7C66]">.</span>
           </a>
           <nav className="ms-2 hidden gap-1 min-[860px]:flex" aria-label="Main">
@@ -6918,11 +6918,11 @@ export default function MuntuzLandingClient() {
                 aria-expanded={langOpen}
               >
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
-                <span>{PRACTICE_LANGS.find((l) => l.code === lang)?.name ?? 'English'}</span>
+                <span className="hidden min-[480px]:inline">{PRACTICE_LANGS.find((l) => l.code === lang)?.name ?? 'English'}</span>
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
               </button>
               {langOpen && (
-                <div className="absolute end-0 top-[calc(100%+8px)] grid max-h-[70vh] w-[320px] max-w-[calc(100vw-32px)] grid-cols-2 overflow-y-auto rounded-2xl bg-white p-1.5 shadow-xl ring-1 ring-[#E7DCC8]" role="listbox" aria-label="Language">
+                <div className="fixed end-3 top-[72px] grid max-h-[70vh] w-[320px] max-w-[calc(100vw-24px)] grid-cols-2 overflow-y-auto rounded-2xl bg-white p-1.5 shadow-xl ring-1 ring-[#E7DCC8] sm:absolute sm:end-0 sm:top-[calc(100%+8px)] sm:max-w-[calc(100vw-32px)]" role="listbox" aria-label="Language">
                   <p className="col-span-2 border-b border-slate-100 px-3 py-2 text-xs font-bold text-slate-500">
                     {t('native')}
                   </p>
@@ -6957,7 +6957,7 @@ export default function MuntuzLandingClient() {
             )}
             {!authLoading && user && (
               <span className="flex min-w-0 shrink-0 items-center gap-2">
-                <span className="flex min-w-0 items-center gap-1.5 text-sm font-bold text-[#1E2A25]">
+                <span className="hidden min-w-0 items-center gap-1.5 text-sm font-bold text-[#1E2A25] sm:flex">
                   <span className="inline-block h-2 w-2 rounded-full bg-green-500" aria-hidden="true" />
                   <span className="max-w-[64px] truncate sm:max-w-[90px]">
                     {user.displayName || user.email?.split('@')[0] || 'Learner'}
@@ -6966,7 +6966,7 @@ export default function MuntuzLandingClient() {
                 <button
                   type="button"
                   onClick={handleSignOut}
-                  className="shrink-0 whitespace-nowrap rounded-full bg-white px-2.5 py-2 text-sm font-bold text-[#5D6C63] ring-1 ring-[#E7DCC8] hover:bg-[#FFF9EF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E7C66] sm:px-3"
+                  className="shrink-0 whitespace-nowrap rounded-full bg-white px-2 py-2 text-sm font-bold text-[#5D6C63] ring-1 ring-[#E7DCC8] hover:bg-[#FFF9EF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E7C66] sm:px-3"
                 >
                   {t('logoutBtn')}
                 </button>
