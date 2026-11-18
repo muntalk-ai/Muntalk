@@ -38,6 +38,9 @@ interface LearnerSnapshot {
   weakAreas: string[];
   tutorId: string;
   purpose?: LearningPurpose; // B-11: 학습 목적 (미설정 시 프롬프트 주입 생략)
+  // QA S-7: 실제 커리큘럼 기반 추천 — 다음 레슨 + 전체 레슨 목록(환각 방지)
+  nextLesson: { id: string; title: string; url: string } | null;
+  catalog: string;
 }
 
 // ── Language label map ────────────────────────────────────────────────────────
@@ -232,6 +235,21 @@ export default function CoachPage() {
       const allLessons = CURRICULUM.flatMap(l => l.steps.flatMap(s => s.lessons));
       const totalLessons = allLessons.length;
 
+      // QA S-7: 실제 커리큘럼 기반 추천. 레벨/스텝 맥락을 유지한 레슨 목록과
+      // 다음(미완료) 레슨을 계산한다 — 코치가 목록에 없는 레슨명을 지어내는
+      // 환각을 막기 위해 시스템 프롬프트에 그대로 주입한다.
+      const lessonsWithCtx = CURRICULUM.flatMap(l =>
+        l.steps.flatMap(s => s.lessons.map(les => ({ levelId: l.id, stepId: s.id, lesson: les }))));
+      const catalog = CURRICULUM.map(l =>
+        `${l.id.toUpperCase()}: ${l.steps.flatMap(s => s.lessons)
+          .map(les => `${les.id} ${les.title}`).join(' · ')}`).join('\n');
+      const nextEntry = lessonsWithCtx.find(x => !completedLessons.includes(x.lesson.id));
+      const nextLesson = nextEntry ? {
+        id: nextEntry.lesson.id,
+        title: nextEntry.lesson.title,
+        url: `/lingua/learn/${nextEntry.levelId}/${nextEntry.stepId}/${nextEntry.lesson.id}?lang=${learnLang}&subLang=${nativeLang}`,
+      } : null;
+
       // Recent completed lessons (last 5)
       const recentLessons = completedLessons.slice(-5).map(id => {
         const lesson = allLessons.find(l => l.id === id);
@@ -267,6 +285,8 @@ export default function CoachPage() {
         weakAreas,
         tutorId,
         purpose,
+        nextLesson,
+        catalog,
       };
 
       setSnapshot(snap);
@@ -347,9 +367,15 @@ export default function CoachPage() {
 - 최근 학습: ${snap.recentLessons.map(r => `${r.level} ${r.title}`).join(', ') || '없음'}
 - 취약 영역: ${snap.weakAreas.join(', ') || '분석 중'}
 ${purposePromptBlock(snap.purpose) ? `- 학습 목적 적응: ${purposePromptBlock(snap.purpose)}` : ''}
+- 다음 추천 레슨: ${snap.nextLesson ? `${snap.nextLesson.title} (${snap.nextLesson.id})` : '없음 — 전 과정 완료'}
+
+실제 레슨 목록 (추천은 이 목록에 있는 레슨만 — 없는 이름은 절대 지어내지 말 것):
+${snap.catalog}
 
 규칙:
-- 반드시 ${snap.nativeLangLabel}로만 대화
+- 답변 언어: 학습자의 가장 최근 질문과 같은 언어로 답할 것 (스페인어 질문에는 스페인어로, 한국어 질문에는 한국어로). 첫 브리핑만 ${snap.nativeLangLabel}로 하고, 이후 답변은 질문 언어를 따른다. 질문 언어가 모호할 때만 ${snap.nativeLangLabel} 사용
+- 레슨 추천은 위 '실제 레슨 목록'에 있는 것만 할 것. 목록에 없는 레슨 이름은 절대 만들지 말 것
+- 학습자가 마쳤다고 말할 수 있는 레슨은 위 '최근 학습' 목록에 있는 것만. 목록에 없는 레슨을 마쳤다고 전제하지 말 것
 - 따뜻하고 동기부여가 되는 코치 말투
 - 구체적인 학습 데이터를 활용한 맞춤 조언
 - 학습자의 질문에 실질적으로 도움되는 답변
@@ -538,11 +564,11 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
         </div>
       )}
 
-      {/* CTA — 학습 시작 버튼 */}
+      {/* CTA — 학습 시작 버튼 (QA S-7: 실제 다음 레슨 URL로 이동, 홈이 아님) */}
       {messages.length >= 2 && (
         <div style={S.ctaWrap}>
-          <button onClick={() => router.push('/lingua')} style={S.ctaBtn}>
-            📚 Start learning <span className="mt-flip-rtl">→</span>
+          <button onClick={() => router.push(snapshot?.nextLesson?.url || '/lingua')} style={S.ctaBtn}>
+            📚 Start learning{snapshot?.nextLesson ? `: ${snapshot.nextLesson.title}` : ''} <span className="mt-flip-rtl">→</span>
           </button>
           <button onClick={() => router.push('/lingua/roleplay')} style={S.ctaBtn2}>
             🎭 Practice roleplay
@@ -572,7 +598,7 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
           onChange={e => setInput(e.target.value)}
           onKeyDown={e => { if (e.key === 'Enter') handleSend(); }}
           disabled={loading || briefing}
-          placeholder={snapshot ? `Ask in ${snapshot.nativeLangLabel}...` : 'Type your question...'}
+          placeholder={snapshot ? `Ask in ${snapshot.learnLangLabel} or ${snapshot.nativeLangLabel}...` : 'Type your question...'}
           style={{ ...S.input, opacity: loading || briefing ? 0.5 : 1 }}
         />
         <button
