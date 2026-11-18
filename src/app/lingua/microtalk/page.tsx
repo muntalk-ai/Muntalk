@@ -19,7 +19,7 @@ import {
   parseReportJson, resolveTopic, getGuestUsage, consumeGuestSession,
   type MicroTalkReport,
 } from '@/lib/microtalk';
-import { detectBrowserNativeLang, resolveNativeLang } from '@/lib/userProfile';
+import { resolveLearnLang, resolveNativeLang, resolvePurpose } from '@/lib/userProfile';
 
 interface ChatMsg { role: 'user' | 'ai'; text: string }
 
@@ -90,15 +90,15 @@ export default function MicroTalkPage() {
   useEffect(() => {
     if (authLoading) return;
     if (profile) {
-      setLearnLang(profile.learnLang || 'en-US');
-      setNativeLang(profile.nativeLang || detectBrowserNativeLang());
-      setPurpose(profile.purpose ?? null);
+      // QA S-5: 프로필 우선 — 목적도 프로필 → localStorage 순으로 해석
+      setLearnLang(resolveLearnLang(profile.learnLang));
+      setNativeLang(resolveNativeLang(profile.nativeLang));
+      setPurpose(resolvePurpose(profile.purpose) ?? null);
     } else {
       try {
-        setLearnLang(localStorage.getItem('mt_learn_lang') || 'en-US');
+        setLearnLang(resolveLearnLang());
         setNativeLang(resolveNativeLang());
-        const gp = localStorage.getItem('mt_purpose');
-        setPurpose(gp === 'business' || gp === 'travel' || gp === 'daily' || gp === 'exam' || gp === 'hobby' ? gp : null);
+        setPurpose(resolvePurpose() ?? null);
       } catch { /* ignore */ }
     }
     // ?topic= 프리셋

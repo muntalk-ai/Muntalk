@@ -5,7 +5,7 @@ import LessonPlayer from '@/components/LessonPlayer';
 import CertificateModal from '@/components/CertificateModal';
 import TestimonialPrompt from '@/components/TestimonialPrompt';
 import { useAuth } from '@/context/AuthContext';
-import { updateUserProfile, getUserProfile, recordActivity, resolveNativeLang } from '@/lib/userProfile';
+import { updateUserProfile, getUserProfile, recordActivity, resolveNativeLang, resolveLearnLang } from '@/lib/userProfile';
 import { addCardToSRS } from '@/lib/spacedRepetition';
 import { checkAndAwardCertificate, Certificate } from '@/lib/certificates';
 import { awardXp } from '@/lib/xpClient';
@@ -24,7 +24,7 @@ export default function LessonPage({
   const { level, step, lesson } = params;
   const searchParams = useSearchParams();
   const router = useRouter();
-  const { user, loading: authLoading, refreshProfile } = useAuth();
+  const { user, profile, loading: authLoading, refreshProfile } = useAuth();
 
   const [langId,  setLangId]  = useState(searchParams.get('lang')    || 'en-US');
   const [subLang, setSubLang] = useState(searchParams.get('subLang') || 'en-US');
@@ -77,17 +77,16 @@ export default function LessonPage({
       setXp(saved);
       const urlTutor = searchParams.get('tutor');
       setTutorId(urlTutor || localStorage.getItem('mt_tutor_id') || 't01');
-      // URL에 lang 없으면 localStorage fallback (게스트 포함)
+      // URL에 lang 없으면 프로필(Firestore) → localStorage 순 (게스트 포함, QA S-5)
       if (!searchParams.get('lang')) {
-        const lsLang = localStorage.getItem('mt_learn_lang');
-        if (lsLang) setLangId(lsLang);
+        setLangId(resolveLearnLang(profile?.learnLang));
       }
       if (!searchParams.get('subLang')) {
-        setSubLang(resolveNativeLang());
+        setSubLang(resolveNativeLang(profile?.nativeLang));
       }
     } catch { /* ignore */ }
     setLoaded(true);
-  }, []);
+  }, [profile]);
 
   const handleComplete = async (xpEarned: number) => {
     // QA S-6: 같은 레슨 완료가 두 번 실행되면(더블클릭 등) 여기서 차단한다.

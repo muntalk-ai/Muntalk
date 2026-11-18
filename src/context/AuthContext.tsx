@@ -85,6 +85,27 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             p = (await getUserProfile(u.uid)) || p;
             if (needsEmailSync) console.log('[auth] synced email for existing user:', u.email);
           }
+          // QA L-5/S-5: 표시 이름 수렴 — Auth 이름과 Firestore 이름 중 비어 있지
+          // 않은 쪽으로 맞춘다. 위 동기화는 이메일·패치 조건 때만 실행돼서,
+          // 프로필 displayName이 ''/'Learner'인 채로 남으면 헤더가 계속
+          // 'Learner'를 보여줬다. 이름은 발명하지 않고 양쪽에 이미 있는 값만 쓴다.
+          try {
+            const authName = (u.displayName || '').trim();
+            const profName = (p?.displayName || '').trim();
+            // Firestore 이름이 비어 있거나 플레이스홀더('Learner')일 때만 Auth
+            // 이름으로 채운다. 둘 다 실제 이름인데 다르면 사용자가 앱 안에서
+            // 바꾼 이름일 수 있으므로 건드리지 않는다.
+            if (authName && (!profName || profName === 'Learner')) {
+              const { updateUserProfile } = await import('@/lib/userProfile');
+              await updateUserProfile(u.uid, { displayName: authName });
+              p = (await getUserProfile(u.uid)) || p;
+            } else if (!authName && profName && profName !== 'Learner') {
+              // Auth 이름이 비어 있고 Firestore에 이름이 있으면 Auth 쪽을 채운다
+              // (프로필 페이지에서 빈 이름으로 저장해 Auth 이름이 지워진 경우 복구).
+              const { updateProfile } = await import('firebase/auth');
+              await updateProfile(u, { displayName: profName });
+            }
+          } catch { /* ignore — 이름 수렴 실패가 로그인을 막지 않는다 */ }
         }
         // ※ 활동(스트릭) 기록은 레슨/세션 완료 시점에만 수행 — 로그인/화면 방문만으로는 기록하지 않음
         // QA S-2 동기화 지점: 기존 유저도 로그인 시 로컬 XP/진도를 서버와

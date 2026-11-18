@@ -8,7 +8,7 @@ import { useAuth } from '@/context/AuthContext';
 import { TUTORS, getTutorById, getTutorForLang } from '@/data/tutors';
 import { hasTts } from '@/data/languages';
 import { speakWithDeviceTts, deviceHasVoiceFor } from '@/lib/deviceTts';
-import { updateUserProfile, getUserProfile, recordActivity } from '@/lib/userProfile';
+import { updateUserProfile, getUserProfile, recordActivity, resolveLearnLang, resolveNativeLang } from '@/lib/userProfile';
 import { awardXpWithRetry } from '@/lib/xpClient';
 import { PURPOSE_OPTIONS, purposePromptBlock, mapTrackToPurpose, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
@@ -239,8 +239,10 @@ function StarterContent() {
   const [isListening, setIsListening] = useState(false);
   const [micGuide, setMicGuide] = useState<MicGuideReason | null>(null); // UX-infra: STT 안내
 
-  const langId  = params.get('lang')    || (typeof window !== 'undefined' ? localStorage.getItem('mt_learn_lang') : null) || 'en-US';
-  const subLang = params.get('subLang') || (typeof window !== 'undefined' ? localStorage.getItem('mt_native_lang') : null) || 'en-US';
+  // QA S-5: 프로필(Firestore) 우선 — URL → 프로필 → localStorage → 기본값 순.
+  // localStorage만 보면 새 기기/빈 캐시에서 학습 언어가 'en-US'로 떨어진다.
+  const langId  = params.get('lang')    || resolveLearnLang(profile?.learnLang);
+  const subLang = params.get('subLang') || resolveNativeLang(profile?.nativeLang);
 
   // Tutor: learner's selected tutor first (?tutor= URL param → saved choice),
   // language default as fallback (e.g. first visit before choosing a tutor)
