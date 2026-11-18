@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { awardXp } from '@/lib/xpClient';
+import { awardXpWithRetry } from '@/lib/xpClient';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { CURRICULUM } from '@/data/curriculum';
@@ -89,12 +89,20 @@ export default function WordGamesPage() {
     if (!user || delta <= 0) return;
     // PR-H: XP 지급은 서버 엔드포인트로 — Firestore 직접 쓰기 금지
     const sessionSec = Math.max(1, Math.round((Date.now() - sessionStartRef.current) / 1000));
-    await awardXp({
+    // QA S-2: 지급 결과를 확인한다. 확실한 서버 거절이면 다음 flush에서
+    // 다시 시도하도록 큐에 되돌리고, 네트워크 오류(도달 여부 불명)이면
+    // 중복 지급을 피하려고 되돌리지 않는다 — 로컬 mt_xp 증가분은 다음
+    // 로그인 때 따라잡기가 이관한다.
+    const res = await awardXpWithRetry({
       source: 'games',
       xp: delta,
       sessionSec,
       meta: { gameId: activeGame, answers: answersRef.current },
     });
+    if (!res.ok) {
+      console.warn('[games] XP award failed:', res.reason, '— local XP kept; will retry on next login');
+      if (res.reason !== 'network' && res.reason !== 'guest') pendingXpRef.current += delta;
+    }
   }, [user, activeGame]);
 
   // 컴포넌트 unmount 시 남은 증가분 flush

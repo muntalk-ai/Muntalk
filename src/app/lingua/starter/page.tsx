@@ -8,7 +8,8 @@ import { useAuth } from '@/context/AuthContext';
 import { TUTORS, getTutorById, getTutorForLang } from '@/data/tutors';
 import { hasTts } from '@/data/languages';
 import { speakWithDeviceTts, deviceHasVoiceFor } from '@/lib/deviceTts';
-import { updateUserProfile } from '@/lib/userProfile';
+import { updateUserProfile, getUserProfile, recordActivity } from '@/lib/userProfile';
+import { awardXpWithRetry } from '@/lib/xpClient';
 import { PURPOSE_OPTIONS, purposePromptBlock, mapTrackToPurpose, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
@@ -177,6 +178,15 @@ function StarterContent() {
   // XP
   const [xp, setXp]       = useState(0);
   const [xpPop, setXpPop] = useState(false);
+  // QA S-2: Starter 완료 XP는 지금까지 로컬 state에만 남아 사라졌다.
+  // 유닛 완료 시 레슨 페이지와 같은 방식으로 서버에 지급 + 완료를 기록한다.
+  // xp state는 세션 내 누적값이라, 이미 지급한 분은 awardedStarterXpRef로
+  // 빼고 차분만 지급한다 (재시작 시 state가 초기화돼도 완료 목록 가드가
+  // 재지급을 막는다). 완료 화면에는 이번 유닛분을 표시한다.
+  const starterSessionStartRef = useRef<number>(Date.now());
+  const awardedStarterXpRef = useRef(0);
+  const starterXpSavedUnitRef = useRef(0);
+  const [unitXpEarned, setUnitXpEarned] = useState(0);
 
   // ── B-11 학습 목적 (Goal) ──────────────────────────────────────────────────
   // profile.purpose (Firestore) > localStorage 'mt_purpose' 순으로 확인.
@@ -772,6 +782,57 @@ LANGUAGE RULES:
       }
     })();
   }, [phase, reviewSaved, user, words, langId]);
+
+  // ── 유닛 완료 시 XP 지급 + 완료 기록 (QA S-2) ─────────────────────────────
+  // 지금까지 Starter는 완료 화면에 "+180 XP"를 띄우고 어디에도 저장하지
+  // 않았다 (mt_xp·서버·완료 목록 전부 미기록) — 대시보드 335 XP vs 홈 175 XP
+  // 갈림의 한 축이다. 레슨 페이지(handleComplete)와 같은 순서로 처리한다:
+  // 로컬 낙관적 기록 → 서버 완료 목록 → 서버 XP 지급(재시도 1회) → 활동 기록.
+  useEffect(() => {
+    if (phase !== 'complete') return;
+    const unitId = `starter-${unit.id}`;
+    if (starterXpSavedUnitRef.current === unit.id) return;
+    starterXpSavedUnitRef.current = unit.id;
+    const delta = Math.max(0, xp - awardedStarterXpRef.current);
+    setUnitXpEarned(delta);
+    // 로컬 낙관적 기록 — 서버 지급이 실패해도 표시는 갈리지 않고,
+    // 증가분은 다음 로그인 때 따라잡기(migrateExistingUserGuestData)가 이관한다.
+    try {
+      const prev = parseInt(localStorage.getItem('mt_xp') || '0', 10) || 0;
+      localStorage.setItem('mt_xp', String(prev + delta));
+      const done = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
+      if (!done.includes(unitId)) {
+        done.push(unitId);
+        localStorage.setItem('mt_done', JSON.stringify(done));
+      }
+    } catch { /* ignore */ }
+    if (!user) return;
+    (async () => {
+      try {
+        const done = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
+        await updateUserProfile(user.uid, { completedLessons: done });
+      } catch (e) {
+        console.warn('[starter] completedLessons save failed:', e);
+      }
+      if (delta > 0) {
+        const sessionSec = Math.max(1, Math.round((Date.now() - starterSessionStartRef.current) / 1000));
+        const res = await awardXpWithRetry({ source: 'lesson', xp: delta, sessionSec, meta: { lessonId: unitId } });
+        if (res.ok) {
+          awardedStarterXpRef.current += (res.awarded || delta);
+          try { await refreshProfile(); } catch { /* ignore */ }
+        } else {
+          console.warn('[starter] XP award failed:', res.reason, '— local XP kept; will retry on next login');
+        }
+      }
+      try {
+        const fresh = await getUserProfile(user.uid);
+        if (fresh) await recordActivity(user.uid, fresh);
+      } catch (e) {
+        console.warn('[starter] recordActivity failed:', e);
+      }
+    })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, unit.id]);
 
   // ── Styles ──────────────────────────────────────────────────────────────────
   const ACCENT = '#6366F1';
@@ -1662,7 +1723,7 @@ LANGUAGE RULES:
       <div style={{ fontSize: 18, color: '#6366F1', fontWeight: 800,
         marginBottom: 4 }}>{unit.emoji} {unit.title}</div>
       <div style={{ fontSize: 28, fontWeight: 900, color: '#F59E0B',
-        marginBottom: 32 }}>+{xp} ⭐ XP earned</div>
+        marginBottom: 32 }}>+{unitXpEarned || xp} ⭐ XP earned</div>
 
       {/* Words learned */}
       <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap',

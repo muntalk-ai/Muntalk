@@ -17,6 +17,24 @@ export interface AwardXpResult {
 }
 
 /**
+ * awardXp + 1회 재시도 (QA XP-sync: 레슨 완료 외의 지급 경로도 실패를 조용히
+ * 삼키지 않게 한다). 서버가 확실히 거절한 경우(422/429/500)에만 2초 뒤 재시도.
+ * 네트워크 오류는 요청이 서버에 도달했는지 알 수 없어 자동 재시도하지 않는다
+ * (중복 지급 위험) — 이 경우 로컬 mt_xp에 남겨둔 증가분은 다음 로그인 때
+ * migrateExistingUserGuestData가 따라잡는다.
+ */
+export async function awardXpWithRetry(input: AwardXpInput): Promise<AwardXpResult> {
+  const first = await awardXp(input);
+  if (first.ok || first.reason === 'network' || first.reason === 'guest') return first;
+  await new Promise((r) => setTimeout(r, 2000));
+  const retry = await awardXp(input);
+  if (!retry.ok) {
+    console.warn('[xp] award failed (after 1 retry):', retry.reason);
+  }
+  return retry;
+}
+
+/**
  * 서버에 XP 지급 요청. 실패해도 예외를 던지지 않고 {ok:false} 반환
  * (게임 플레이 흐름이 깨지지 않도록).
  */

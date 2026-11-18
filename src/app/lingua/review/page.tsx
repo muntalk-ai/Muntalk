@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { getDueCards, reviewCard, getSRSStats, SRSCard, ReviewQuality } from '@/lib/spacedRepetition';
-import { awardXp } from '@/lib/xpClient';
+import { awardXpWithRetry } from '@/lib/xpClient';
 import RtlDir from '@/components/RtlDir';
 import EmptyState from '@/components/EmptyState';
 import { CardSkeleton } from '@/components/Skeleton';
@@ -90,7 +90,11 @@ export default function ReviewPage() {
       const storedXp = parseInt(localStorage.getItem('mt_xp') || '0') + xpForCard;
       localStorage.setItem('mt_xp', String(storedXp));
       const sessionSec = Math.max(1, Math.round((Date.now() - sessionStartRef.current) / 1000));
-      await awardXp({ source: 'review', xp: xpForCard, sessionSec, meta: { quality } });
+      // QA S-2: 지급 결과를 확인한다. 이전에는 실패해도 조용히 넘어가 로컬
+      // mt_xp만 오르고 서버(리그·대시보드)에는 안 남아 갈림이 생겼다.
+      // 실패분은 로컬에 남겨두고 다음 로그인 때 따라잡기가 이관한다.
+      const res = await awardXpWithRetry({ source: 'review', xp: xpForCard, sessionSec, meta: { quality } });
+      if (!res.ok) console.warn('[review] XP award failed:', res.reason, '— local XP kept; will retry on next login');
 
       setResults(r => ({
         correct:   r.correct   + (quality >= 3 ? 1 : 0),

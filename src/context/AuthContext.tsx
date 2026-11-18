@@ -8,6 +8,7 @@ import { auth } from '@/lib/firebase';
 import {
   getUserProfile,
   ensureFirstLoginSetup,
+  migrateExistingUserGuestData,
   UserProfile,
 } from '@/lib/userProfile';
 import LangSetupPrompt from '@/components/LangSetupPrompt';
@@ -86,6 +87,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           }
         }
         // ※ 활동(스트릭) 기록은 레슨/세션 완료 시점에만 수행 — 로그인/화면 방문만으로는 기록하지 않음
+        // QA S-2 동기화 지점: 기존 유저도 로그인 시 로컬 XP/진도를 서버와
+        // 따라잡는다 (게스트 플레이분 + 지급 실패분). 차분 공식이 멱등이라
+        // 재실행해도 이중 지급되지 않고, 실패하면 다음 로그인에 다시 시도한다.
+        if (p) await migrateExistingUserGuestData(u.uid, p).catch(() => {});
         p = (await getUserProfile(u.uid)) || p;
         setProfile(p);
       } else {

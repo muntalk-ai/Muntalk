@@ -60,6 +60,9 @@ export interface UserProfile {
   lastActive:   string;   // YYYY-MM-DD
   activityDates: string[]; // 출석 날짜 배열
   completedLessons: string[];
+  // 문법 허브 완료 챕터 (QA M-10) — 서버에 저장해 기기 간에도 유지.
+  // 로컬 mt_grammar_done과 합집합으로 병합한다.
+  completedGrammar?: string[];
   // 유지율 엔진 (Phase 3)
   streakFreezes: number;      // 보유 스트릭 프리즈 수
   lastFreezeUsedAt?: string;  // 마지막 프리즈 사용일 (YYYY-MM-DD)
@@ -270,37 +273,48 @@ export async function migrateFromLocalStorage(uid: string) {
   }
 }
 
-/** 기존 유저의 게스트 데이터 따라잡기 (QA S-6)
+/** 기존 유저의 게스트 데이터 따라잡기 (QA S-2 동기화 지점)
  *
  *  기존 문제: migrateFromLocalStorage는 프로필이 없던 첫 로그인 때만 실행돼,
  *  이미 계정이 있는 유저가 게스트로 플레이한 뒤 로그인하면 게스트 XP/진도가
- *  서버에 절대 이관되지 않았다.
+ *  서버에 절대 이관되지 않았다. (PR #208이 이 함수를 추가했지만, 호출 지점이
+ *  ensureFirstLoginSetup의 첫-로그인 분기 안에만 있어 기존 유저에게는
+ *  사실상 실행되지 않았다 — AuthContext에서 직접 호출하게 고친다.)
  *
- *  이중 지급 방지 설계:
- *  - XP는 `mt_migrated_xp` 마커 기준 차분(delta)만 지급한다. 지급 성공 시에만
- *    마커를 전진(마커 += 서버가 실제 지급한 awarded)시키고, 실패 시에는
- *    마커를 그대로 두어 다음 로그인에 다시 시도한다. 1회 지급 상한 1000 XP는
- *    기존 첫 로그인 이관과 동일하다 (차분이 크면 로그인할 때마다 최대 1000씩
- *    나눠 이관된다). ensureFirstLoginSetup의 in-flight dedup(Map) 덕분에
- *    동시 로그인 시도에서도 이관은 한 번만 실행된다.
+ *  이중 지급 방지 설계 (PR #208의 마커 방식에서 수정):
+ *  - PR #208의 `mt_migrated_xp` 마커는 로그인 상태에서 번 XP도 마커에
+ *    반영하지 않으므로, 차분(localXp - 마커)은 이미 서버에 지급된 XP까지
+ *    포함해 이중 지급할 수 있었다. 대신 서버 XP 자체를 기준으로 삼는다:
+ *    delta = max(0, localXp - serverXp). 로그인 상태에서 번 XP는 이미
+ *    서버에 있으므로 차분에 들어가지 않고, 게스트 XP·지급 실패분만
+ *    따라잡는다. (드문 예외: 다른 기기에서 번 서버 XP가 로컬보다 크면
+ *    해당 기기의 게스트 XP 일부가 이관되지 않을 수 있다 — 이중 지급보다
+ *    안전한 방향으로 택한다.)
+ *  - 1회 지급 상한 1000 XP (차분이 크면 로그인할 때마다 최대 1000씩 나눠
+ *    이관된다). 세션 내 동시 실행은 in-flight 가드로 막는다 — 차분 공식이
+ *    멱등이라 순차 재실행은 안전하지만, 동시에 같은 차분을 읽으면
+ *    이중 지급이 될 수 있다.
  *  - 완료 레슨/활동 날짜는 합집합(union)으로 병합한다 — 로컬 목록으로 서버
  *    목록을 덮어쓰면 기존 진도가 날아가므로 절대 덮어쓰지 않는다.
  *  - 언어/튜터/placement는 건드리지 않는다 — 기존 유저의 프로필 값이 우선이고
  *    로컬 기본값('en-US' 등)으로 덮어쓰면 선택한 언어가 날아간다.
  */
+const catchUpInFlight = new Set<string>();
+
 export async function migrateExistingUserGuestData(uid: string, profile: UserProfile) {
+  if (catchUpInFlight.has(uid)) return;
+  catchUpInFlight.add(uid);
   try {
     const localXp = parseInt(localStorage.getItem('mt_xp') || '0', 10) || 0;
     const done = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
     const dates = JSON.parse(localStorage.getItem('mt_activity_dates') || '[]') as string[];
-    const migratedXp = parseInt(localStorage.getItem('mt_migrated_xp') || '0', 10) || 0;
+    const serverXp = profile.xp || 0;
 
-    const delta = localXp - migratedXp;
+    // 서버에 없는 로컬 증가분만 지급한다 (위 설계 노트 참조).
+    const delta = Math.max(0, localXp - serverXp);
     if (delta > 0) {
       const res = await awardXp({ source: 'guest_migration', xp: Math.min(delta, 1000) });
-      if (res.ok) {
-        try { localStorage.setItem('mt_migrated_xp', String(migratedXp + (res.awarded || 0))); } catch { /* ignore */ }
-      } else {
+      if (!res.ok) {
         console.warn('[profile] guest XP catch-up failed:', res.reason);
       }
     }
@@ -313,6 +327,8 @@ export async function migrateExistingUserGuestData(uid: string, profile: UserPro
     }
   } catch (e) {
     console.warn('[profile] guest catch-up migration failed:', e);
+  } finally {
+    catchUpInFlight.delete(uid);
   }
 }
 
