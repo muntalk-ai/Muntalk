@@ -25,6 +25,22 @@ export type ReviewQuality = 0 | 1 | 2 | 3 | 4 | 5;
 // 0-1: 완전 틀림, 2: 힌트 후 맞음, 3: 어렵게 맞음, 4: 정상, 5: 완벽
 
 /**
+ * 언어 코드의 주 언어(primary subtag) — 'es-ES'와 'es'를 같은 언어로 취급.
+ * 카드 생성 시점의 langId 형식('es' vs 'es-ES')이 달라져도 덱 필터가
+ * 새지 않게 하기 위함. 지역 변형(es-ES/es-MX)은 같은 학습 언어로 본다.
+ */
+export function primaryLang(code?: string | null): string {
+  return (code || '').split('-')[0].trim().toLowerCase();
+}
+
+/** 카드의 언어와 필터 언어가 같은 학습 언어인지 (필터 없으면 전체 허용) */
+function matchesLang(cardLangId: string | undefined, filterLangId?: string): boolean {
+  if (!filterLangId) return true;
+  if (!cardLangId) return false;
+  return primaryLang(cardLangId) === primaryLang(filterLangId);
+}
+
+/**
  * SM-2 알고리즘으로 다음 복습 일정 계산
  */
 export function calculateNextReview(card: SRSCard, quality: ReviewQuality): SRSCard {
@@ -76,14 +92,16 @@ export function createCard(id: string, word: string, translation: string, langId
   };
 }
 
-/** Firestore에서 오늘 복습할 카드 가져오기 */
+/** Firestore에서 오늘 복습할 카드 가져오기
+ *  langId가 주어지면 해당 학습 언어 카드만 반환한다 (QA S-4: 덱 언어 오염 방지).
+ *  langId 없으면 전체 반환 (기존 동작 유지 — getDueCount 호환). */
 export async function getDueCards(uid: string, langId?: string): Promise<SRSCard[]> {
   const today = new Date().toISOString().slice(0, 10);
   const ref = collection(db, 'users', uid, 'srs_cards');
   const snap = await getDocs(ref);
   return snap.docs
     .map(d => d.data() as SRSCard)
-    .filter(c => c.nextReview <= today && (!langId || c.langId === langId))
+    .filter(c => c.nextReview <= today && matchesLang(c.langId, langId))
     .sort((a, b) => a.nextReview.localeCompare(b.nextReview));
 }
 
@@ -111,11 +129,15 @@ export async function getDueCount(uid: string): Promise<number> {
   return cards.length;
 }
 
-/** SRS 전체 통계 */
-export async function getSRSStats(uid: string) {
+/** SRS 전체 통계 — langId가 주어지면 해당 학습 언어 카드만 집계한다
+ *  (덱과 같은 범위여야 완료 화면의 Vocabulary Bank가 덱과 일치한다).
+ *  langId 없으면 전체 집계 (기존 동작 유지). */
+export async function getSRSStats(uid: string, langId?: string) {
   const ref = collection(db, 'users', uid, 'srs_cards');
   const snap = await getDocs(ref);
-  const cards = snap.docs.map(d => d.data() as SRSCard);
+  const cards = snap.docs
+    .map(d => d.data() as SRSCard)
+    .filter(c => matchesLang(c.langId, langId));
   const today = new Date().toISOString().slice(0, 10);
   return {
     total:    cards.length,
