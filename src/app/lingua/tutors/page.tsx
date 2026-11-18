@@ -112,7 +112,7 @@ export default function TutorsPage() {
 
         {/* Grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(175px, 1fr))', gap: 12 }}>
-          {filtered.map(tutor => {
+          {filtered.map((tutor, idx) => {
             const isCurrent  = tutor.id === currentId;
             const isPending  = tutor.id === pendingTutor?.id;
             const isHighlight = isPending || (!pendingTutor && isCurrent);
@@ -139,7 +139,11 @@ export default function TutorsPage() {
                   </div>
                 )}
                 <div style={{ width: 72, height: 72, borderRadius: '50%', margin: '0 auto 10px', overflow: 'hidden', background: tutor.gender === 'female' ? 'linear-gradient(135deg,#F9A8D4,#C084FC)' : 'linear-gradient(135deg,#93C5FD,#6EE7B7)' }}>
-                  <img loading="lazy" src={tutor.thumbnail} alt={tutor.name}
+                  {/* QA H-7: all 152 thumbnails exist and the live URLs serve fine —
+                     the empty gradient circles are the lazy-load placeholder for
+                     below-the-fold cards. Load the first screenful eagerly so
+                     the first screen never shows empty circles. */}
+                  <img loading={idx < 12 ? 'eager' : 'lazy'} src={tutor.thumbnail} alt={tutor.name}
                     style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 10%', display: 'block' }}
                     onError={e => { const el = e.currentTarget; el.style.display = 'none'; (el.parentElement as HTMLDivElement).innerHTML = `<span style="font-size:28px;display:flex;align-items:center;justify-content:center;width:100%;height:100%">${tutor.gender === 'female' ? '👩' : '👨'}</span>`; }}
                   />
