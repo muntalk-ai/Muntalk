@@ -162,8 +162,14 @@ function DiscoverContent() {
     setLangId(ll); setSubLang(sl); setTutorId(ti);
     if (user) {
       getUserProfile(user.uid).then(p => {
-        if (p?.learnLang) { setLangId(p.learnLang); try { localStorage.setItem('mt_learn_lang', p.learnLang); } catch {} }
-        if (p?.nativeLang) { setSubLang(p.nativeLang); try { localStorage.setItem('mt_native_lang', p.nativeLang); } catch {} }
+        // L-7: 기기 로컬 선택이 우선 — stale 프로필(기본값 en-US)이 로컬에서
+        // 고른 학습 언어(예: 스페인어)를 덮어써 Discover 대화가 영어로
+        // 돌아가던 버그 수정 (Agora PR-126과 동일 패턴). 프로필은 로컬에
+        // 값이 없을 때만 폴백으로 쓰고, 그때만 localStorage에 동기화한다.
+        const lsLearn = localStorage.getItem('mt_learn_lang');
+        const lsNative = localStorage.getItem('mt_native_lang');
+        if (p?.learnLang && !lsLearn) { setLangId(p.learnLang); try { localStorage.setItem('mt_learn_lang', p.learnLang); } catch {} }
+        if (p?.nativeLang && !lsNative) { setSubLang(p.nativeLang); try { localStorage.setItem('mt_native_lang', p.nativeLang); } catch {} }
         if (p?.tutorId) setTutorId(p.tutorId);
         if (p?.planId) setProfilePlanId(p.planId);
         if (isLearningPurpose(p?.purpose)) setPurpose(p!.purpose); // B-11

@@ -15,6 +15,7 @@ import { getTrialData, initTrial, isTrialExpired, isPremium, TRIAL_MAX_UNITS } f
 import { isAdminEmail } from '@/lib/subscription';
 import { addCardToSRS } from '@/lib/spacedRepetition';
 import { LESSON_TRANSLATION_CACHE_VERSION } from '@/lib/lessonTranslationCache';
+import { translateLessonBulk } from '@/lib/lessonBulkTranslate';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 
 const hasStt = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.stt ?? false;
@@ -44,7 +45,6 @@ function reportPronEvent(event: string, detail?: Record<string, unknown>) {
 
 // -- Bulk translation validation (Option A hardening) --------------------------
 // Returns an error description string, or null when the payload is acceptable.
-const HANGUL_RE = /[\uAC00-\uD7A3\u3131-\u318E]/;
 // Pre-generated curriculum JSON (public/curriculum/{lang}.json) — shape check.
 // The files carry English glosses / English-framed quiz questions, so they are
 // only usable when the learner's native language is English (checked by the
@@ -66,56 +66,6 @@ function isUsablePregeneratedLesson(pre: any): boolean {
   return true;
 }
 
-function validateBulkTranslation(parsed: any, lsn: { vocab?: any[]; quiz?: any[] } | undefined | null, targetLang?: string, nativeLang?: string): string | null {
-  if (!parsed || typeof parsed !== 'object') return 'empty payload';
-  const baseVocab = lsn?.vocab || [];
-  const baseQuiz = lsn?.quiz || [];
-  if (!Array.isArray(parsed.vocab) || parsed.vocab.length !== baseVocab.length) {
-    return `vocab length mismatch (got ${Array.isArray(parsed.vocab) ? parsed.vocab.length : 'n/a'}, expected ${baseVocab.length})`;
-  }
-  for (let i = 0; i < parsed.vocab.length; i++) {
-    const v = parsed.vocab[i];
-    if (!v || !v.word || !v.meaning || !v.example) return `vocab[${i}] missing word/meaning/example`;
-    if (!v.exampleKo) return `vocab[${i}] missing exampleKo`;
-    if (!v.phonetic) return `vocab[${i}] missing phonetic`;
-  }
-  if (!Array.isArray(parsed.quiz) || parsed.quiz.length !== baseQuiz.length) {
-    return `quiz length mismatch (got ${Array.isArray(parsed.quiz) ? parsed.quiz.length : 'n/a'}, expected ${baseQuiz.length})`;
-  }
-  for (let i = 0; i < parsed.quiz.length; i++) {
-    const q = parsed.quiz[i];
-    if (!q || !q.q || !Array.isArray(q.options) || q.options.length < 2) return `quiz[${i}] missing q/options`;
-    if (!Number.isInteger(q.answer) || q.answer < 0 || q.answer >= q.options.length) {
-      return `quiz[${i}] answer index out of range (${q.answer})`;
-    }
-    // answerText must equal the correct option — catches silent option reordering
-    if (!q.answerText || q.options[q.answer] !== q.answerText) {
-      return `quiz[${i}] answer/answerText mismatch`;
-    }
-  }
-  // Language-leakage scan: a Korean speaker learning a non-Korean language must
-  // never see Hangul inside TARGET_* fields. Catches subword-level mixing
-  // (e.g. "занад토") that prompt rules alone cannot block. phonetic is
-  // intentionally excluded (Hangul-style pronunciation guide by design).
-  if (nativeLang === 'Korean' && targetLang && targetLang !== 'Korean') {
-    const targets: Array<[string, any]> = [];
-    for (let i = 0; i < parsed.vocab.length; i++) {
-      targets.push([`vocab[${i}].word`, parsed.vocab[i].word]);
-      targets.push([`vocab[${i}].example`, parsed.vocab[i].example]);
-    }
-    for (let i = 0; i < parsed.quiz.length; i++) {
-      const q = parsed.quiz[i];
-      (q.options || []).forEach((o: any, j: number) => targets.push([`quiz[${i}].options[${j}]`, o]));
-      targets.push([`quiz[${i}].answerText`, q.answerText]);
-    }
-    for (const [label, text] of targets) {
-      if (typeof text === 'string' && HANGUL_RE.test(text)) {
-        return `${label} contains Korean (target-language leakage)`;
-      }
-    }
-  }
-  return null;
-}
 
 type Phase = 'vocab' | 'quiz' | 'chat' | 'complete';
 
@@ -444,16 +394,16 @@ export default function LessonPlayer({
               return;
             }
             console.log(`[lesson] 🤖 Gemini API: translating to ${targetLang}...`);
-            callGeminiFallback(lsn, targetLang, nativeLang);
+            runTranslate();
           })
           .catch(() => {
             if (cacheStale) return;
             console.log(`[lesson] 🤖 Gemini API: translating to ${targetLang}...`);
-            callGeminiFallback(lsn, targetLang, nativeLang);
+            runTranslate();
           });
       } else {
         console.log(`[lesson] 🤖 Gemini API: translating to ${targetLang}...`);
-        callGeminiFallback(lsn, targetLang, nativeLang);
+        runTranslate();
       }
     };
 
@@ -486,141 +436,26 @@ export default function LessonPlayer({
 
     loadViaCacheOrGemini();
 
-    // 벌크 레슨 번역은 응답이 커서(실측 ~21s) 전역 AI_TIMEOUT_MS(35s)로는 여유가 부족함 — 이 호출 전용 90s 제한시간
-    const LESSON_TRANSLATE_TIMEOUT_MS = 90_000;
-
-    function callGeminiFallback(lsn: typeof lesson, targetLang: string, nativeLang: string, attempt = 0) {
-      // Slim payload — exclude tutorPrompt to reduce token count ~40%
-      // NOTE: example is included so the model TRANSLATES it (never invents a new one)
-      // topic is included so discourse markers/connectors can be disambiguated by context
-      const vocabOnly = (lsn!.vocab || []).map((v: any) => ({ word: v.word, meaning: v.meaning, example: v.example }));
-      const quizOnly  = (lsn!.quiz  || []).map((q: any) => ({ q: q.q, options: q.options, answer: q.answer }));
-      const lessonPayload = { topic: (lsn as any)?.title || '', vocab: vocabOnly, quiz: quizOnly };
-      const prompt = `Translate this lesson to ${targetLang}. Student speaks ${nativeLang}.
-
-Input: ${JSON.stringify(lessonPayload)}
-
-Return ONLY valid JSON, no markdown, no explanation:
-{"vocab":[{"word":"TARGET_WORD","phonetic":"PRONUNCIATION","meaning":"NATIVE_GLOSS","example":"TARGET_SENTENCE","exampleKo":"NATIVE_TRANSLATION"}],"quiz":[{"q":"NATIVE_QUESTION","options":["TARGET_OPTION"],"answer":INDEX,"answerText":"TARGET_CORRECT_OPTION_TEXT"}]}
-
-Rules:
-- LANGUAGE PURITY (zero tolerance): every field whose schema label is TARGET_* (word, example, options, answerText) MUST be written 100% in ${targetLang}. Never output ${nativeLang}, English, or any other language in these fields — no code-switching, no parenthetical glosses, no mixed-language sentences, no exceptions. The ONLY fields allowed in ${nativeLang} are the NATIVE_* fields (meaning, exampleKo, q). (phonetic is intentionally a ${nativeLang}-readable pronunciation guide, not a translation.)
-- vocab[i].word: the word/expression translated into ${targetLang}
-- vocab[i].phonetic: pronunciation guide a ${nativeLang} speaker can read aloud. If ${nativeLang} is Korean, use Hangul-style notation (e.g. "봉주르"); otherwise simple romanization.
-- vocab[i].meaning: 1-3 word gloss of the TARGET expression itself in ${nativeLang}. Do NOT translate the usage note from the input — give what the expression actually means (e.g. Korean "~인 것 같다" for "Il semblerait que"). When the expression carries register or pragmatic nuance, append a tag in ${nativeLang} (e.g. Korean "[격식]", "[비격식]", "[문어체]", "[구어]", "[빈정]", "[반어]", "[완곡]").
-- Idioms: NEVER translate an idiom literally. If ${targetLang} has an equivalent idiom, use it; otherwise translate the actual meaning explanatorily (e.g. "kick the can down the road" must become "문제를 뒤로 미루다"-style meaning, never a literal kick/can rendering).
-- Discourse markers / connectors (e.g. "Nevertheless", "That said", "What is more", "Notwithstanding"): use the lesson topic to choose the nuance that fits the context — do not default to one generic translation for every lesson.
-- Grammar with no ${targetLang} equivalent (e.g. English inversion "Were it not for…", "Should you need…"): keep the original structure, translate the sentence naturally, and add a short grammar note in ${nativeLang} inside the meaning field (in parentheses) explaining the structure and the natural ${targetLang} equivalent.
-- vocab[i].example: translate the GIVEN example sentence into ${targetLang}, keeping the same meaning. Do NOT invent a new sentence. It MUST be written in ${targetLang} — never in ${nativeLang}.
-- vocab[i].exampleKo: translation of the example sentence into ${nativeLang}
-- quiz[i].q: question in ${nativeLang} — the question FRAME must always be ${nativeLang}, even when quoting a ${targetLang} idiom or expression inside it (quote the expression, ask the question in ${nativeLang})
-- quiz[i].options: answer choices in ${targetLang} — 100% ${targetLang} only, never ${nativeLang} or mixed
-- quiz[i].answer: integer index (0-based) of the correct option
-- quiz[i].answerText: the EXACT text of the correct option (must be identical to options[answer]) — this guards against option reordering
-IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
-
-      apiFetch('/api/gemini', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ uid: user?.uid ?? null, prompt, temperature: 0.3 }),
-        timeoutMs: LESSON_TRANSLATE_TIMEOUT_MS,
+    // Bulk translate via shared lib (prompt + validation + retry + cache PUT
+    // live in src/lib/lessonBulkTranslate.ts — also used by Word Games).
+    function runTranslate() {
+      translateLessonBulk({
+        lesson: lsn!, targetLang, nativeLang,
+        langId, subLang, uid: user?.uid ?? null,
       })
-        .then(async r => {
-          const data = await r.json();
-          if (data.error) throw new Error(data.error);
-          const raw = data.text?.trim() ?? '';
-
-          // Step 1: strip markdown fences
-          let clean = raw
-            .replace(/^```json\s*/i, '')
-            .replace(/^```\s*/i, '')
-            .replace(/```[\s\S]*$/i, '')
-            .trim();
-
-          // Step 2: extract JSON object if embedded in text
-          const jsonMatch = clean.match(/\{[\s\S]*\}/);
-          if (jsonMatch) clean = jsonMatch[0];
-
-          // Step 3: parse with truncation recovery
-          let parsed: any = null;
-          try {
-            parsed = JSON.parse(clean);
-          } catch (e1) {
-            // Try to fix truncated JSON — add closing brackets
-            console.warn('[lesson] JSON truncated, attempting repair...');
-            let fixed = clean;
-            // Count open/close braces and brackets
-            const openBraces   = (fixed.match(/\{/g) || []).length;
-            const closeBraces  = (fixed.match(/\}/g) || []).length;
-            const openBrackets = (fixed.match(/\[/g) || []).length;
-            const closeBrackets= (fixed.match(/\]/g) || []).length;
-            // Remove trailing comma if any
-            fixed = fixed.replace(/,\s*$/, '');
-            // Close incomplete string
-            const lastQuote = fixed.lastIndexOf('"');
-            const secondLast = fixed.lastIndexOf('"', lastQuote - 1);
-            if (lastQuote > secondLast && (fixed.length - lastQuote) > 30) {
-              fixed = fixed.slice(0, lastQuote) + '"'; // truncate dangling string
-            }
-            // Append missing closing brackets/braces
-            for (let i = 0; i < openBrackets - closeBrackets; i++) fixed += ']';
-            for (let i = 0; i < openBraces - closeBraces; i++) fixed += '}';
-            try {
-              parsed = JSON.parse(fixed);
-              console.log('[lesson] ✅ JSON repaired successfully');
-            } catch (e2) {
-              console.error('[lesson] JSON repair failed:', e2);
-              throw new Error('Invalid JSON from Gemini: ' + String(e1));
-            }
-          }
-
-          if (!parsed?.vocab && !parsed?.quiz) throw new Error('Empty lesson data');
-
-          // Option A: validate bulk translation before accepting it
-          const validationError = validateBulkTranslation(parsed, lsn, targetLang, nativeLang);
-          if (validationError) {
-            if (attempt < 1) {
-              console.warn(`[lesson] validation failed (${validationError}) — retrying once...`);
-              callGeminiFallback(lsn, targetLang, nativeLang, attempt + 1);
-              return;
-            }
-            throw new Error('Translation validation failed: ' + validationError);
-          }
-
+        .then(parsed => {
+          if (cacheStale) return;
           setTranslatedLesson({ ...lsn!, ...parsed });
           setIsTranslating(false);
-
-          // 검증 통과한 번역만 캐시에 저장 — fire-and-forget (UI 블로킹 금지, 실패 무시)
-          if (lessonId && subLang && Array.isArray(parsed.vocab) && Array.isArray(parsed.quiz)) {
-            apiFetch('/api/lesson-translation', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                action: 'put',
-                lessonId,
-                targetLang: langId,
-                nativeLang: subLang,
-                version: LESSON_TRANSLATION_CACHE_VERSION,
-                data: { vocab: parsed.vocab, quiz: parsed.quiz },
-              }),
-              timeoutMs: 5000,
-            }).catch(() => { /* 캐시 저장 실패는 무시 — 다음 진입 때 재생성됨 */ });
-          }
         })
         .catch(e => {
-          // 타임아웃/네트워크 실패 시 1회 재시도 (검증 실패 재시도와 attempt 카운터 공유 — 총 최대 2회 시도)
-          if (attempt < 1) {
-            console.warn('[lesson] Gemini API error — retrying once...', e?.message || e);
-            callGeminiFallback(lsn, targetLang, nativeLang, attempt + 1);
-            return;
-          }
+          if (cacheStale) return;
           // API 모드: JSON fallback 없음 — 에러 표시
           console.error('[lesson] Gemini API error:', e.message || e);
           setTxError(e?.message || 'Translation failed. Please try again.');
           setIsTranslating(false);
         });
     }
-
     // 캐시 조회가 늦게 끝나 이전 레슨의 결과를 덮어쓰지 않도록 무효화
     return cleanup;
   // eslint-disable-next-line react-hooks/exhaustive-deps
