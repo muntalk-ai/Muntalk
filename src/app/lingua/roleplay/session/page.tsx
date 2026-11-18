@@ -4,6 +4,7 @@ import { AI_TIMEOUT_MS } from '@/lib/aiRetry';
 
 import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
 import RtlDir from '@/components/RtlDir';
+import ChatMarkdown from '@/components/ChatMarkdown';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
@@ -753,7 +754,8 @@ Reply as ${npc.name} in ${targetLang}:`;
                 border:isUser?'none':'1.5px solid #F1F5F9',
                 boxShadow:isUser?'none':'0 2px 6px rgba(0,0,0,0.05)',
                 color:isUser?(isLightAccent?'#0F172A':'#fff'):'#0F172A',fontSize:15,fontWeight:600,lineHeight:1.65}}>
-                {msg.text}
+                {/* QA M-12: NPC replies may contain **bold** etc. — render markdown; user text stays verbatim */}
+                {isUser ? msg.text : <ChatMarkdown text={msg.text} />}
               </div>
 
               {/* Native subtitle */}

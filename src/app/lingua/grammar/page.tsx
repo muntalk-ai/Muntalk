@@ -5,6 +5,7 @@ import { runWithAiRetry, AI_TIMEOUT_MS } from '@/lib/aiRetry';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
+import ChatMarkdown from '@/components/ChatMarkdown';
 import { getTutorById } from '@/data/tutors';
 import {
   GRAMMAR_CATEGORIES, LEVEL_ORDER, getLevelInfo,
@@ -529,7 +530,8 @@ ${tutor.name}:`;
                       color: msg.role==='user' ? '#fff' : '#0F172A',
                       border: msg.role==='user' ? 'none' : '1.5px solid #E2E8F0',
                     }}>
-                      {msg.text}
+                      {/* QA M-12: AI replies may contain **bold** etc. — render markdown; user text stays verbatim */}
+                      {msg.role === 'user' ? msg.text : <ChatMarkdown text={msg.text} />}
                     </div>
                   </div>
                 ))}

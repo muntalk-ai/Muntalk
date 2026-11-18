@@ -5,6 +5,7 @@ import { runWithAiRetry, AI_TIMEOUT_MS } from '@/lib/aiRetry';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
+import ChatMarkdown from '@/components/ChatMarkdown';
 import { getLangLabel, promptLangName, hasTts } from '@/data/languages';
 import { detectBrowserNativeLang } from '@/lib/userProfile';
 import { speakWithDeviceTts } from '@/lib/deviceTts';
@@ -515,7 +516,8 @@ assistant:`,
               border:msg.role==='user'?`1.5px solid ${activeSide==='for'?topic.accentFor+'40':topic.accentAgainst+'40'}`:'1.5px solid #E2E8F0',
               color:'#0F172A',fontSize:14,fontWeight:600,lineHeight:1.75,whiteSpace:'pre-wrap',
               boxShadow:msg.role==='ai'?'0 2px 8px rgba(0,0,0,0.06)':'none'}}>
-              {msg.text}
+              {/* QA M-12: AI replies may contain **bold** etc. — render markdown; user text stays verbatim */}
+              {msg.role === 'user' ? msg.text : <ChatMarkdown text={msg.text} />}
             </div>
             {/* Translation + tap-to-listen buttons — AI only */}
             {msg.role==='ai'&&(
