@@ -30,10 +30,17 @@ function WordsContent() {
   useEffect(() => {
     if (authLoading) return;
     if (!user) { setSubChecked(true); return; }
-    getSubscription(user.uid).then(sub => {
-      setIsPremium(sub.planId !== 'free');
-      setSubChecked(true);
-    });
+    // QA S-6: 구독 조회가 첫 화면의 게이트다. 예전에는 .catch도 타임아웃도
+    // 없어서 Firestore가 에러/오프라인으로 멈추면 스켈레톤이 영원히(실측
+    // 20~60초) 떴다. 8초 안에 답이 없으면 게이트를 먼저 열고, 늦게 도착한
+    // 구독 정보는 도착하는 대로 프리미엄 상태를 바로잡는다.
+    let gateReleased = false;
+    const releaseGate = () => { if (!gateReleased) { gateReleased = true; setSubChecked(true); } };
+    getSubscription(user.uid)
+      .then(sub => { setIsPremium(sub.planId !== 'free'); releaseGate(); })
+      .catch(releaseGate);
+    const gateTimer = setTimeout(releaseGate, 8000);
+    return () => clearTimeout(gateTimer);
   }, [user, authLoading]);
 
   const handleLesson = (pos: PartOfSpeech, setIdx: number, lessonIdx: number) => {

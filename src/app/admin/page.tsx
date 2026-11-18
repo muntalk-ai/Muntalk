@@ -138,8 +138,9 @@ export default function AdminPage() {
       setFetching(true);
       try {
         const snap = await getDocs(collection(db, 'users'));
-        const rows: UserRow[] = [];
-        for (const d of snap.docs) {
+        // QA S-6: 구독 조회를 사용자마다 순차 await하면 45명 × 왕복 시간만큼
+        // 첫 화면이 늦어진다(느린 연결에서 20초+). 병렬로 한 번에 조회한다.
+        const rows: UserRow[] = (await Promise.all(snap.docs.map(async (d) => {
           const u = d.data();
           let planId: PlanId='free', planStatus='active', expiry='';
           try {
@@ -150,7 +151,7 @@ export default function AdminPage() {
               expiry=sub.data().currentPeriodEnd||'';
             }
           } catch {}
-          rows.push({
+          return {
             uid:d.id, email:u.email||'', displayName:u.displayName||u.name||'—',
             planId, planStatus, expiry, xp:u.xp||0, streak:u.streak||0,
             createdAt:u.createdAt?.toDate?.()?.toISOString?.()?.slice(0,10)||u.createdAt?.slice?.(0,10)||'',
@@ -158,8 +159,8 @@ export default function AdminPage() {
             lastActive:u.lastActive||'', lessonsDone:Array.isArray(u.completedLessons)?u.completedLessons.length:0,
             activityDates:Array.isArray(u.activityDates)?u.activityDates:[],
             visitDays:Array.isArray(u.activityDates)?u.activityDates.length:0,
-          });
-        }
+          };
+        })));
         rows.sort((a,b)=>(a.planId==='free'?1:-1)-(b.planId==='free'?1:-1)||b.xp-a.xp);
         // 운영자 본인 계정은 학습자 통계에서 제외 (사이트 점검용으로 수시 접속)
         const visible = rows.filter(r => r.email.toLowerCase() !== 'muntuz.official@gmail.com');
