@@ -208,7 +208,16 @@ function StarterContent() {
     if (profPurpose && !purpose) setPurpose(profPurpose);
     const stored = typeof window !== 'undefined' ? localStorage.getItem('mt_purpose') : null;
     const hasPurpose = profPurpose || isLearningPurpose(stored);
-    if (!hasPurpose) setPhase('goal');
+    // QA M-16: 건너뛰기를 존중한다 — localStorage 또는 프로필에 스킵 기록이
+    // 있으면 게이트를 다시 띄우지 않는다. 목적은 /profile에서도 정할 수 있다.
+    const skipped = (() => {
+      try { if (localStorage.getItem('mt_purpose_skipped')) return true; } catch {}
+      return !!profile?.purposeSkippedAt;
+    })();
+    // 레슨 도중에는 게이트로 되돌리지 않는다 — 초기 로비에서만 표시한다.
+    // (프로필이 늦게 도착해 effect가 뒤늦게 실행되는 경우, 사용자가 이미
+    // 레슨에 들어간 뒤 goal phase로 끌려가던 버그 방지)
+    if (!hasPurpose && !skipped) setPhase(prev => (prev === 'lobby' ? 'goal' : prev));
   }, [authLoading, profile]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Placement 이수자: placementTrack → 목적 자동 매핑 제안 (강제 저장 아님)
@@ -219,9 +228,20 @@ function StarterContent() {
     if (p) {
       setPurpose(p);
       try { localStorage.setItem('mt_purpose', p); } catch {}
+      try { localStorage.removeItem('mt_purpose_skipped'); } catch {}
       try {
         if (user?.uid) {
           await updateUserProfile(user.uid, { purpose: p, purposeSetAt: today });
+          await refreshProfile();
+        }
+      } catch {}
+    } else {
+      // QA M-16: 'Skip for now'를 저장한다 — 다음 방문 때 게이트를 다시
+      // 띄우지 않는다. 게스트는 localStorage만, 로그인 유저는 프로필에도 저장.
+      try { localStorage.setItem('mt_purpose_skipped', today); } catch {}
+      try {
+        if (user?.uid) {
+          await updateUserProfile(user.uid, { purposeSkippedAt: today });
           await refreshProfile();
         }
       } catch {}

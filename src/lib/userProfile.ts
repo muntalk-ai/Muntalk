@@ -119,6 +119,7 @@ export interface UserProfile {
   // 학습 목적 (B-11) — optional: 기존 유저 문서에 변경 불필요
   purpose?:        LearningPurpose | null; // B-11: null = 미설정(초기화)
   purposeSetAt?:   string;   // ISO 날짜 (YYYY-MM-DD)
+  purposeSkippedAt?: string; // QA M-16: 목적 게이트 'Skip for now' 날짜 (YYYY-MM-DD) — 있으면 게이트를 다시 띄우지 않음
   emailNotifications?: boolean;
   pushNotifications?:  boolean;
   timezone?: string;   // IANA 타임존 (저녁 푸시 리마인드용, 로그인 시 갱신)
