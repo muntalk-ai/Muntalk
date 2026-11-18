@@ -77,7 +77,7 @@ export default function KoreanLanding() {
                 borderRadius: 20, padding: '6px 16px', fontSize: 13, fontWeight: 800, letterSpacing: 0.5,
               }}
             >
-              🌐 100개 언어 · 150명+ AI 튜터
+              🌐 94개 언어 · 50명 AI 튜터
             </span>
             <span
               style={{
@@ -142,8 +142,8 @@ export default function KoreanLanding() {
       >
         {(
           [
-            ['150+', 'AI 튜터', '🤖', '#EFF6FF', '#2563EB'],
-            ['100', '학습 언어', '🌍', '#F0FDF4', '#16A34A'],
+            ['50', 'AI 튜터', '🤖', '#EFF6FF', '#2563EB'],
+            ['94', '학습 언어', '🌍', '#F0FDF4', '#16A34A'],
             [String(totalLessons), '레슨', '📚', '#FFF7ED', '#EA580C'],
             ['A1→C2', '레벨 체계', '🎓', '#FAF5FF', '#7C3AED'],
           ] as [string, string, string, string, string][]
@@ -204,7 +204,7 @@ export default function KoreanLanding() {
           {(
             [
               ['1', '레벨 테스트', '5분이면 내 스피킹 레벨을 알 수 있어요.'],
-              ['2', '튜터와 대화', '150명+ AI 튜터 중 마음에 드는 튜터를 골라 대화를 시작하세요.'],
+              ['2', '튜터와 대화', '50명 AI 튜터 중 마음에 드는 튜터를 골라 대화를 시작하세요.'],
               ['3', '피드백으로 성장', '발음 교정과 리포트로 부족한 부분을 채워가세요.'],
             ] as [string, string, string][]
           ).map(([n, title, desc]) => (

@@ -552,6 +552,12 @@ export default function LevelHub() {
           .mt-hamburger{display:flex !important;}
           .mt-nav-streak-xp{display:none !important;}
         }
+        @media(max-width:640px){
+          .mt-lingua-nav{padding:0 12px !important;}
+          .mt-nav-logo-text,.mt-nav-beta{display:none !important;}
+          .mt-nav-upgrade{display:none !important;}
+          .mt-stats-wrap{grid-template-columns:repeat(2,minmax(0,1fr)) !important;padding:24px 16px 0 !important;gap:12px !important;}
+        }
         @media(min-width:1025px){
           .mt-hamburger{display:none !important;}
           .mt-mobile-menu{display:none !important;}
@@ -725,11 +731,11 @@ export default function LevelHub() {
       )}
 
       {/* -- NAV -- */}
-      <nav style={styles.nav}>
+      <nav className="mt-lingua-nav" style={styles.nav}>
         <div style={styles.navLogo} onClick={() => router.push('/')}>
           <div style={styles.navLogoIcon}><img src="/logo.png" alt="MunTalk" style={{ width: 36, height: 36, borderRadius: 12 }} /></div>
-          <span style={styles.navLogoText}>MunTalk</span>
-          <span style={styles.navBeta}>BETA</span>
+          <span className="mt-nav-logo-text" style={styles.navLogoText}>MunTalk</span>
+          <span className="mt-nav-beta" style={styles.navBeta}>BETA</span>
         </div>
         {/* Desktop tabs — 학습 코어 4개 + 더보기 드롭다운 */}
         <div className="mt-desktop-tabs" style={{ display: 'flex', gap: 2, alignItems: 'center' }}>
@@ -805,7 +811,7 @@ export default function LevelHub() {
           <div className="mt-nav-streak-xp" style={styles.navXp}><span>⭐</span><span style={{ fontWeight: 800, color: '#2563EB', fontSize: 13 }}>{xp} XP</span></div>
           {/* 하트바 + Upgrade — auth 로딩 완료 후에만 표시 */}
           {!authLoading && effPlanId === 'free' && !isAdmin && user && (
-            <button onClick={() => router.push('/pricing')}
+            <button className="mt-nav-upgrade" onClick={() => router.push('/pricing')}
               style={{ padding:'6px 14px', borderRadius:20, border:'none', background:'linear-gradient(135deg,#F59E0B,#F97316)', color:'#fff', fontSize:11, fontWeight:900, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", letterSpacing:0.3 }}>
               ⭐ Upgrade
             </button>
@@ -1286,7 +1292,7 @@ export default function LevelHub() {
       )}
 
       {/* -- Stats -- */}
-      <div style={styles.statsWrap}>
+      <div className="mt-stats-wrap" style={styles.statsWrap}>
         {([
           ['150+','AI Tutors','🤖','#EFF6FF','#2563EB'],
           ['90+','Languages','🌍','#F0FDF4','#16A34A'],
@@ -1637,7 +1643,7 @@ const styles: Record<string, React.CSSProperties> = {
   mtGuest: { marginTop: 12, fontSize: 12, fontWeight: 700, color: 'rgba(255,255,255,0.6)' },
 
   // Stats
-  statsWrap: { display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16, padding: '24px 32px 0', maxWidth: 1200, margin: '0 auto' },
+  statsWrap: { display: 'grid', gridTemplateColumns: 'repeat(4,minmax(0,1fr))', gap: 16, padding: '24px 32px 0', maxWidth: 1200, margin: '0 auto' },
   statBox: { borderRadius: 18, padding: '18px 16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3, boxShadow: '0 1px 6px rgba(0,0,0,0.05)', border: '1px solid #E9ECEF' },
   statEmoji: { fontSize: 24, marginBottom: 2 },
   statValue: { fontSize: 20, fontWeight: 900 },

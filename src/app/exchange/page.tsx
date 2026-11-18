@@ -1114,8 +1114,8 @@ export default function ExchangePage() {
         setWaitlistCount(null);
         setWaitlistError(
           (err as { code?: string }).code === 'permission-denied'
-            ? 'Waiting count is not available yet: waitlist read permissions are not published yet.'
-            : 'Waiting count could not be loaded.'
+            ? "The waiting count isn't available right now — please check back soon."
+            : "The waiting count couldn't be loaded."
         );
       })
       .finally(() => {
@@ -2322,9 +2322,9 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                       No sign-in needed to try — chat free for 5 minutes, then sign up to keep going free.
                     </p>
                   )}
-                  <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                  <div className="mt-4 grid grid-cols-[minmax(0,1fr)] gap-4 sm:grid-cols-2">
                     {AI_PARTNERS.map((p) => (
-                      <article key={p.id} className="rounded-2xl border border-amber-100 bg-white p-4 shadow-sm transition-shadow hover:shadow-md sm:p-5">
+                      <article key={p.id} className="min-w-0 rounded-2xl border border-amber-100 bg-white p-4 shadow-sm transition-shadow hover:shadow-md sm:p-5">
                         <div className="flex items-start gap-3">
                           <button
                             type="button"
@@ -2553,11 +2553,11 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                       No partners match these filters yet. Try clearing a filter.
                     </p>
                   )}
-                  <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                  <div className="mt-4 grid grid-cols-[minmax(0,1fr)] gap-4 sm:grid-cols-2">
                     {visiblePartners.map((p) => {
                       const status = statuses[p.uid] || 'idle';
                       return (
-                        <article key={p.uid} className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm transition-shadow hover:shadow-md sm:p-5">
+                        <article key={p.uid} className="min-w-0 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm transition-shadow hover:shadow-md sm:p-5">
                           <div className="flex items-start justify-between gap-2">
                             <div className="flex items-center gap-3">
                               <span className="text-3xl">{p.flag}</span>

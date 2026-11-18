@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import { useAuth } from '@/context/AuthContext';
 
 // Founder info
 const FOUNDER = {
@@ -36,6 +37,9 @@ const SECTIONS = [
 
 export default function AboutPage() {
   const router = useRouter();
+  // M-3: a signed-in visitor is not a sign-up prospect — the header CTA
+  // becomes a way back into the app instead of "Start Free".
+  const { user, loading: authLoading } = useAuth();
   return (
     <div style={{ minHeight: '100vh', background: '#F8F9FA', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", color: '#0F172A' }}>
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
@@ -49,10 +53,17 @@ export default function AboutPage() {
           <span style={{ fontWeight: 900, fontSize: 19, letterSpacing: '-0.5px' }}>MunTalk</span>
           <span style={{ background: '#EFF6FF', color: '#0284C7', fontSize: 10, fontWeight: 800, padding: '2px 8px', borderRadius: 20 }}>BETA</span>
         </div>
-        <button onClick={() => router.push('/signup')}
-          style={{ padding: '10px 20px', borderRadius: 12, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 800, fontSize: 13, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
-          Start Free
-        </button>
+        {!authLoading && user ? (
+          <button onClick={() => router.push('/lingua')}
+            style={{ padding: '10px 20px', borderRadius: 12, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 800, fontSize: 13, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+            Continue →
+          </button>
+        ) : (
+          <button onClick={() => router.push('/signup')}
+            style={{ padding: '10px 20px', borderRadius: 12, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 800, fontSize: 13, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+            Start Free
+          </button>
+        )}
       </div>
 
       {/* Hero */}
@@ -126,10 +137,17 @@ export default function AboutPage() {
           Free forever tier · No credit card · Find your level in 4 minutes
         </p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <button onClick={() => router.push('/signup')}
-            style={{ padding: '14px 32px', borderRadius: 14, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 900, fontSize: 15, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", boxShadow: '0 8px 24px rgba(99,102,241,0.35)' }}>
-            Start Learning Free 🚀
-          </button>
+          {!authLoading && user ? (
+            <button onClick={() => router.push('/lingua')}
+              style={{ padding: '14px 32px', borderRadius: 14, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 900, fontSize: 15, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", boxShadow: '0 8px 24px rgba(99,102,241,0.35)' }}>
+              Continue learning →
+            </button>
+          ) : (
+            <button onClick={() => router.push('/signup')}
+              style={{ padding: '14px 32px', borderRadius: 14, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontWeight: 900, fontSize: 15, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", boxShadow: '0 8px 24px rgba(99,102,241,0.35)' }}>
+              Start Learning Free 🚀
+            </button>
+          )}
           <button onClick={() => router.push('/lingua/placement')}
             style={{ padding: '14px 32px', borderRadius: 14, border: '2px solid #E2E8F0', background: '#fff', color: '#0F172A', fontWeight: 800, fontSize: 15, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
             🎯 Take the Placement Test
