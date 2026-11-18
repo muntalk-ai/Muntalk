@@ -48,6 +48,18 @@ const hasTts = (c: string) => LEARN_LANGUAGES.find(l=>l.code===c)?.tts ?? false;
 const stripEmoji = (t: string) =>
   t.replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27BF}]/gu,'').replace(/\s{2,}/g,' ').trim();
 
+// QA H-5: the AI sometimes "corrects" its own words, not the learner's.
+// A fix is only valid if its "wrong" phrase actually appears in the
+// learner's latest message (≥60% of its words present there).
+const fixMatchesLearner = (wrong: string, learnerText: string): boolean => {
+  const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9\s']/g, ' ').split(/\s+/).filter(Boolean);
+  const wrongTokens = norm(wrong);
+  if (wrongTokens.length === 0) return false;
+  const learnerTokens = new Set(norm(learnerText));
+  const hits = wrongTokens.filter(t => learnerTokens.has(t)).length;
+  return hits / wrongTokens.length >= 0.6;
+};
+
 // ── Component ─────────────────────────────────────────────────────────────────
 
 function SessionContent() {
@@ -86,7 +98,12 @@ function SessionContent() {
   const npcs: NpcCharacter[] = world
     ? world.npcs
     : everyday
-      ? [{ id:'clerk', name:'Alex', role:'Staff / other person',
+      ? [{ id:'clerk',
+           // QA H-5: the lobby card shows this scenario's tutor (photo + name),
+           // so the session partner must be that tutor — NOT a hardcoded
+           // 'Alex' wearing e.g. Brianna's photo.
+           name: getTutorById(everyday.tutorId).name,
+           role:'Staff / other person',
            personality:'Friendly, professional, stays in character', tutorId:everyday.tutorId,
            voiceGender:everyday.voiceGender }]
       : [];
@@ -120,6 +137,10 @@ function SessionContent() {
   const [speakingId,   setSpeakingId]   = useState<string|null>(null);
   const [turnCount,    setTurnCount]    = useState(0);
   const [sessionXP,    setSessionXP]    = useState(0);
+  // QA L-4: completion bonus kept separate so the result screen can show
+  // "chat XP + bonus = total" instead of a total that disagrees with the
+  // in-chat counter.
+  const [completionBonus, setCompletionBonus] = useState(0);
   const [xpPop,        setXpPop]        = useState<string|null>(null);
   const [result,       setResult]       = useState<any>(null);
   const [activeChoice, setActiveChoice] = useState<ActiveChoice|null>(null);
@@ -137,6 +158,9 @@ function SessionContent() {
     }).catch(() => {});
   }, [user]); // eslint-disable-line
   const lastUserTextRef = useRef('');
+  // QA H-5: id of the user message the current turn's feedback belongs to —
+  // attach score/tip/fix to THIS message, never to "the last unscored one".
+  const lastUserMsgIdRef = useRef<number | null>(null);
 
   const chatRef    = useRef<HTMLDivElement>(null);
   const audioRef   = useRef<HTMLAudioElement|null>(null);
@@ -272,6 +296,9 @@ ${replyingToOthers?'You can react to what other characters said, not just the le
 CONVERSATION SO FAR:
 ${history}
 
+LEARNER'S LATEST MESSAGE — the score/tip/fix below must evaluate ONLY this message. Never correct your own earlier words, and never correct an older learner message:
+"${lastUserTextRef.current}"
+
 CRITICAL RULES:
 - Speak ONLY in ${targetLang}. Never use another language.
 - Match ${difficulty} level vocabulary.
@@ -282,7 +309,7 @@ CRITICAL RULES:
 
 After your reply, on a NEW LINE add:
 |||FB|||{"score":<0-100>,"tip":"<one helpful tip in ${nativeLang}, max 12 words>","fix":{"wrong":"<learner's mistaken phrase, in ${targetLang}>","right":"<corrected phrase>"}}}|||END|||
-Omit the "fix" object entirely if the learner made no notable mistake. Keep "wrong"/"right" short (max 8 words each).
+Omit the "fix" object entirely if the learner made no notable mistake in their LATEST message above. Keep "wrong"/"right" short (max 8 words each) and quote the learner's own words for "wrong" — never quote your own reply.
 
 Reply as ${npc.name} in ${targetLang}:`;
   }, [world, everyday, targetLang, difficulty, nativeLang, choiceSteer, npcs, purpose]); // eslint-disable-line
@@ -335,11 +362,14 @@ Reply as ${npc.name} in ${targetLang}:`;
     lastUserTextRef.current = text;
 
     let newTurn: number;
+    let userMsgId: number | null = lastUserMsgIdRef.current; // retry: same message as before
     if (!isRetry) {
       // a fresh message clears any previous error notice
       setMessages(prev => prev.filter(m => m.from !== 'error'));
       setInput('');
-      addMsg({ from:'user', text });
+      const userMsg = addMsg({ from:'user', text });
+      userMsgId = userMsg.id;
+      lastUserMsgIdRef.current = userMsg.id;
       historyRef.current = [...historyRef.current, { role:'user', npcId:'user', content:text }];
       newTurn = turnCount + 1;
       setTurnCount(newTurn);
@@ -392,6 +422,9 @@ Reply as ${npc.name} in ${targetLang}:`;
             // sanitize fix: must be short strings or drop it
             if (fb.fix && (typeof fb.fix.wrong!=='string' || typeof fb.fix.right!=='string'
                 || fb.fix.wrong.length>60 || fb.fix.right.length>60)) delete fb.fix;
+            // QA H-5: drop fixes that quote the AI's own words (or an older
+            // message) instead of the learner's latest message.
+            if (fb.fix && !fixMatchesLearner(fb.fix.wrong, lastUserTextRef.current)) delete fb.fix;
           } catch {}
         }
         return { npcText, fb };
@@ -401,18 +434,16 @@ Reply as ${npc.name} in ${targetLang}:`;
       if (!primaryText) throw new Error('Empty AI response');
       pendingRef.current = { text:primaryText, gender:primaryNpc.voiceGender, npcId:primaryNpc.tutorId };
 
-      // Update user message with feedback score + gentle correction
+      // Update the user message this turn's feedback belongs to (by id —
+      // QA H-5: the old "last unscored user message" lookup attached
+      // message N's correction under message N+1 whenever a turn's FB
+      // block was missing or late).
       if (primaryFb.score !== undefined) {
-        setMessages(prev => {
-          const copy = [...prev];
-          for (let i=copy.length-1;i>=0;i--) {
-            if (copy[i].from==='user' && copy[i].score===undefined) {
-              copy[i] = {...copy[i], score:primaryFb.score, tip:primaryFb.tip,
-                ...(primaryFb.fix ? { fix:primaryFb.fix } : {})}; break;
-            }
-          }
-          return copy;
-        });
+        setMessages(prev => prev.map(m =>
+          m.id === userMsgId
+            ? { ...m, score: primaryFb.score, tip: primaryFb.tip,
+                ...(primaryFb.fix ? { fix: primaryFb.fix } : {}) }
+            : m));
         if ((primaryFb.score||0)>=80) popXP(5);
       }
 
@@ -473,12 +504,20 @@ Reply as ${npc.name} in ${targetLang}:`;
       });
       const data = await res.json();
       const parsed = JSON.parse(data.text?.replace(/```json\s*/gi,'').replace(/```\s*/g,'').trim()||'{}');
+      // QA L-4: completion bonus is a separate, labelled part of the total —
+      // the result screen shows chat XP + bonus = total, so it can no longer
+      // disagree with the in-chat counter.
+      const bonus = avg>=80?80:avg>=60?50:30;
+      setCompletionBonus(bonus);
       setResult({ avgScore: avg||70, turns: turnCount, ...parsed });
-      popXP(avg>=80?80:avg>=60?50:30);
+      popXP(bonus);
     } catch {
+      const bonus = avg>=80?80:avg>=60?50:30;
+      setCompletionBonus(bonus);
       setResult({ avgScore: avg||70, turns: turnCount,
         strongPoints:['Scene completed!'], improvements:['Keep practising!'],
         overallFeedback:'Great effort! Consistent practice builds real fluency.' });
+      popXP(bonus);
     }
 
     // 누적 XP를 프로필·리그에 실제 저장 (P1-7)
@@ -540,7 +579,7 @@ Reply as ${npc.name} in ${targetLang}:`;
                   <div style={{fontSize:52,marginBottom:8}}>{result.avgScore>=80?'🏆':result.avgScore>=65?'🎯':'💪'}</div>
                   <div style={{fontSize:24,fontWeight:900,color:'#0F172A',marginBottom:4}}>Scene Complete!</div>
                   <div style={{fontSize:48,fontWeight:900,color:accentDark}}>{result.avgScore}</div>
-                  <div style={{fontSize:12,color:'#94A3B8',fontWeight:700}}>{result.turns} turns · +{sessionXP} XP</div>
+                  <div style={{fontSize:12,color:'#94A3B8',fontWeight:700}}>{result.turns} turns · Chat +{sessionXP - completionBonus} XP · Bonus +{completionBonus} XP = +{sessionXP} XP</div>
                 </>
               )}
             </div>
@@ -576,7 +615,11 @@ Reply as ${npc.name} in ${targetLang}:`;
               <div style={{fontSize:13,color:'#3730A3',lineHeight:1.7,fontWeight:600}}>{result.overallFeedback}</div>
             </div>
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:10}}>
-              <button onClick={()=>{setPhase('playing');setMessages([]);setTurnCount(0);historyRef.current=[];startedRef.current=false;setOpeningDone(false);setActiveChoice(null);setChoiceSteer('');}}
+              <button onClick={()=>{setPhase('playing');setMessages([]);setTurnCount(0);historyRef.current=[];startedRef.current=false;setOpeningDone(false);setActiveChoice(null);setChoiceSteer('');
+                // QA L-4: replay starts a fresh session — reset XP too, or the
+                // new session inherits the old total and its XP is never saved
+                // (xpSavedRef stays true).
+                setSessionXP(0); sessionXpRef.current=0; xpSavedRef.current=false; setCompletionBonus(0); lastUserMsgIdRef.current=null;}}
                 style={{padding:'13px',borderRadius:13,border:'1.5px solid #E5E7EB',background:'#fff',
                   color:'#475569',fontWeight:700,fontSize:14,cursor:'pointer',fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif"}}>
                 Replay
