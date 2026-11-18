@@ -17,11 +17,12 @@ import {
   MICROTALK_SECONDS, GUEST_DAILY_LIMIT,
   buildMicroTalkPrompt, buildOpeningPrompt, buildReportPrompt,
   parseReportJson, resolveTopic, getGuestUsage, consumeGuestSession,
+  splitCorrection,
   type MicroTalkReport,
 } from '@/lib/microtalk';
 import { detectBrowserNativeLang, resolveNativeLang } from '@/lib/userProfile';
 
-interface ChatMsg { role: 'user' | 'ai'; text: string }
+interface ChatMsg { role: 'user' | 'ai'; text: string; correction?: string | null }
 
 type Phase = 'topic' | 'chat' | 'report';
 
@@ -185,13 +186,16 @@ export default function MicroTalkPage() {
   }, [nativeLang]);
 
   const pushAiMsg = (text: string) => {
-    pushMsg({ role: 'ai', text });
+    // QA M-8: 답신 끝의 "✏️ Correction:" 줄을 분리해 교정 칩으로 저장한다.
+    // 번역·음성은 본문만 대상으로 한다.
+    const { reply, correction } = splitCorrection(text);
+    pushMsg({ role: 'ai', text: reply, correction });
     if (showTranslation) {
       const idx = messagesRef.current.length - 1;
-      translateAi(idx, text);
+      translateAi(idx, reply);
     }
     // 튜터 음성 자동 재생 (스피커 탭 없이)
-    if (voiceOnRef.current) speak(text);
+    if (voiceOnRef.current) speak(reply);
   };
 
   const handleSend = useCallback(async (text?: string) => {
@@ -408,6 +412,21 @@ export default function MicroTalkPage() {
               <div key={i} style={m.role === 'user' ? S.uMsg : S.aMsg}>
                 {/* QA M-12: tutor replies may contain **bold** etc. — render markdown; user text stays verbatim */}
                 {m.role === 'user' ? <div>{m.text}</div> : <div><ChatMarkdown text={m.text} /></div>}
+                {/* QA M-8: 메시지별 교정 칩 — 해당 메시지에 귀속된 교정만 표시 */}
+                {m.role === 'ai' && m.correction && (
+                  <div style={S.corrChip}>
+                    <span>✏️</span>
+                    {m.correction.includes(' → ') ? (
+                      <>
+                        <span style={{ textDecoration: 'line-through', opacity: 0.75 }}>{m.correction.split(' → ')[0]}</span>
+                        <span> → </span>
+                        <span style={{ fontWeight: 800, color: '#93C5FD' }}>{m.correction.split(' → ').slice(1).join(' → ')}</span>
+                      </>
+                    ) : (
+                      <span>{m.correction}</span>
+                    )}
+                  </div>
+                )}
                 {m.role === 'ai' && showTranslation && (
                   translations[i]
                     ? <div style={S.trText}>{translations[i]}</div>
@@ -526,6 +545,7 @@ const S: Record<string, React.CSSProperties> = {
   uMsg: { alignSelf: 'flex-end', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', borderRadius: '18px 18px 4px 18px', padding: '11px 16px', maxWidth: '82%', fontSize: 15, lineHeight: 1.5 },
   aMsg: { alignSelf: 'flex-start', background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.1)', color: '#F1F5F9', borderRadius: '18px 18px 18px 4px', padding: '11px 16px', maxWidth: '86%', fontSize: 15, lineHeight: 1.55, position: 'relative' },
   trText: { fontSize: 12.5, color: '#94A3B8', marginTop: 7, lineHeight: 1.5, fontStyle: 'italic' },
+  corrChip: { display: 'flex', alignItems: 'center', gap: 6, marginTop: 8, background: 'rgba(59,130,246,0.14)', border: '1px solid rgba(147,197,253,0.35)', borderRadius: 10, padding: '7px 10px', fontSize: 12.5, color: '#DBEAFE', lineHeight: 1.5 },
   trLoading: { fontSize: 11, color: '#64748B', marginTop: 6 },
   speakBtn: { background: 'none', border: 'none', fontSize: 13, cursor: 'pointer', opacity: 0.6, marginTop: 6, padding: 0 },
   typing: { letterSpacing: 4, color: '#94A3B8' },
