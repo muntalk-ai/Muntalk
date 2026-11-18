@@ -44,6 +44,27 @@ function reportPronEvent(event: string, detail?: Record<string, unknown>) {
 // -- Bulk translation validation (Option A hardening) --------------------------
 // Returns an error description string, or null when the payload is acceptable.
 const HANGUL_RE = /[\uAC00-\uD7A3\u3131-\u318E]/;
+// Pre-generated curriculum JSON (public/curriculum/{lang}.json) — shape check.
+// The files carry English glosses / English-framed quiz questions, so they are
+// only usable when the learner's native language is English (checked by the
+// caller). Rejects the known-bad case: ko-KR.json has 15 of 16 lessons with
+// empty vocab/quiz — serving one would render an empty lesson.
+function isUsablePregeneratedLesson(pre: any): boolean {
+  if (!pre || typeof pre !== 'object') return false;
+  const vocab = pre.vocab;
+  const quiz = pre.quiz;
+  if (!Array.isArray(vocab) || vocab.length === 0) return false;
+  if (!Array.isArray(quiz) || quiz.length === 0) return false;
+  for (const v of vocab) {
+    if (!v || typeof v.word !== 'string' || !v.word || typeof v.meaning !== 'string' || !v.meaning || typeof v.example !== 'string' || !v.example) return false;
+  }
+  for (const q of quiz) {
+    if (!q || typeof q.q !== 'string' || !q.q || !Array.isArray(q.options) || q.options.length < 2) return false;
+    if (!Number.isInteger(q.answer) || q.answer < 0 || q.answer >= q.options.length) return false;
+  }
+  return true;
+}
+
 function validateBulkTranslation(parsed: any, lsn: { vocab?: any[]; quiz?: any[] } | undefined | null, targetLang?: string, nativeLang?: string): string | null {
   if (!parsed || typeof parsed !== 'object') return 'empty payload';
   const baseVocab = lsn?.vocab || [];
@@ -165,6 +186,10 @@ export default function LessonPlayer({
   const [loadingTx, setLoadingTx] = useState<Record<string, boolean>>({});
   const [translatedLesson, setTranslatedLesson] = useState<typeof lesson | null>(null);
   const [isTranslating, setIsTranslating] = useState(false);
+  // Pre-generated JSON (public/curriculum/{lang}.json) supplied this lesson.
+  // Its glosses are already in the learner's native language (English), so the
+  // per-item meaning translation below is skipped for these lessons.
+  const [jsonTranslated, setJsonTranslated] = useState(false);
 
   // -- Trial timer -------------------------------------------------------------
   const [trialExpired, setTrialExpired]   = useState(false);
@@ -312,20 +337,35 @@ export default function LessonPlayer({
     const lsn = stp?.lessons.find(l => l.id === lessonId);
 
     if (!lsn) { console.warn('[lesson] lesson not found'); return; }
+
+    // Non-English lessons need translation: raise the loading state BEFORE the
+    // auth gate so the English lesson is never flashed as the lesson while
+    // auth resolves (authLoading is a dep, so this re-runs when it settles).
+    // Guests (user stays null) previously never re-ran this effect at all.
+    const needsTranslation = langId !== 'en-US' && langId !== 'en-GB';
+    if (needsTranslation) setIsTranslating(true);
     if (authLoading) return;
 
     // 영어는 번역 불필요
-    if (langId === 'en-US' || langId === 'en-GB') {
+    if (!needsTranslation) {
       setTranslatedLesson(null);
+      setJsonTranslated(false);
+      setIsTranslating(false);
       return;
     }
 
     setIsTranslating(true);
     setTxError(null);
     setTranslatedLesson(null);
+    setJsonTranslated(false);
 
     const targetLang = promptLangName(langId);
     const nativeLang = promptLangName(subLang) || 'English';
+
+    // 캐시 조회가 늦게 끝나 이전 레슨의 결과를 덮어쓰지 않도록 무효화.
+    // (admin JSON 분기와 pre-generated JSON 분기도 같은 가드를 쓴다.)
+    let cacheStale = false;
+    const cleanup = () => { cacheStale = true; };
 
     // 관리자 설정: localStorage의 curriculum_mode 확인
     // 'api' = Gemini 우선 (기본), 'json' = JSON 우선
@@ -342,60 +382,93 @@ export default function LessonPlayer({
           if (!r.ok) throw new Error(`JSON file missing: ${r.status}`);
           const data = await r.json();
           const pre = data.lessons?.find((l: { id: string }) => l.id === lessonId);
-          if (!pre) throw new Error(`Lesson ${lessonId} not in JSON`);
+          if (!isUsablePregeneratedLesson(pre)) throw new Error(`Lesson ${lessonId} not usable in JSON (empty or malformed)`);
+          if (cacheStale) return;
           console.log('[lesson] ✅ JSON loaded (Admin mode)');
           setTranslatedLesson({ ...lsn, ...pre });
+          setJsonTranslated(true);
           setIsTranslating(false);
         })
         .catch(e => {
+          if (cacheStale) return;
           // JSON 모드 실패 → Gemini로 자동 전환하지 않음. Admin이 파일을 고쳐야 함
           console.error('[lesson] Admin JSON mode failed:', e.message);
           setTxError(`JSON unavailable for ${targetLang}. Fix in Admin panel or switch to API mode.`);
           setIsTranslating(false);
         });
-      return;
+      return cleanup;
     }
 
     // API 모드 (기본값) — 학습창은 항상 이 경로로 실행됨
     // 1차: Firestore 번역 캐시 조회 — 검증 통과한 번역이 저장돼 있으면 Gemini 생략.
     // 미스/실패/타임아웃 시 기존 Gemini 생성 흐름으로 fail-open (JSON fallback은 없음).
-    let cacheStale = false;
-    if (lessonId && langId && subLang) {
-      apiFetch('/api/lesson-translation', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          action: 'get',
-          lessonId,
-          targetLang: langId,
-          nativeLang: subLang,
-          version: LESSON_TRANSLATION_CACHE_VERSION,
-        }),
-        timeoutMs: 3500,
-      })
+    const loadViaCacheOrGemini = () => {
+      if (lessonId && langId && subLang) {
+        apiFetch('/api/lesson-translation', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            action: 'get',
+            lessonId,
+            targetLang: langId,
+            nativeLang: subLang,
+            version: LESSON_TRANSLATION_CACHE_VERSION,
+          }),
+          timeoutMs: 3500,
+        })
+          .then(async r => {
+            if (!r.ok) throw new Error(`lesson-translation ${r.status}`);
+            const res = await r.json();
+            if (cacheStale) return;
+            const cached = res?.hit ? res.data : null;
+            if (cached && Array.isArray(cached.vocab) && Array.isArray(cached.quiz)) {
+              console.log('[lesson] ⚡ Translation cache hit — Gemini skipped');
+              setTranslatedLesson({ ...lsn, ...cached });
+              setIsTranslating(false);
+              return;
+            }
+            console.log(`[lesson] 🤖 Gemini API: translating to ${targetLang}...`);
+            callGeminiFallback(lsn, targetLang, nativeLang);
+          })
+          .catch(() => {
+            if (cacheStale) return;
+            console.log(`[lesson] 🤖 Gemini API: translating to ${targetLang}...`);
+            callGeminiFallback(lsn, targetLang, nativeLang);
+          });
+      } else {
+        console.log(`[lesson] 🤖 Gemini API: translating to ${targetLang}...`);
+        callGeminiFallback(lsn, targetLang, nativeLang);
+      }
+    };
+
+    // Pre-generated JSON 우선 (모국어가 영어인 학습자만).
+    // public/curriculum/{lang}.json은 정적 파일이라 CDN에서 즉시 로드되고 Gemini를
+    // 부르지 않는다 ($0, 첫 방문부터 즉시 표시). 단, 파일의 gloss/퀴즈 문항은
+    // 영어 기준으로 만들어졌고 exampleKo가 없어서, 모국어가 영어가 아닌 학습자에게는
+    // 쓰면 안 된다 — 그 경우는 아래 캐시 → Gemini 흐름을 그대로 탄다.
+    // 커버 범위: 16개 레슨(A1 전체 + A2-1 + b1-1-2) × 55개 언어. 그 밖의 레슨은
+    // 검증 실패로 떨어져서 기존 흐름으로 간다.
+    if (subLang === 'en-US' || subLang === 'en-GB') {
+      fetch(`/curriculum/${langId}.json`)
         .then(async r => {
-          if (!r.ok) throw new Error(`lesson-translation ${r.status}`);
-          const res = await r.json();
+          if (!r.ok) throw new Error(`curriculum JSON ${r.status}`);
+          const data = await r.json();
+          const pre = data.lessons?.find((l: { id: string }) => l.id === lessonId);
+          if (!isUsablePregeneratedLesson(pre)) throw new Error(`Lesson ${lessonId} not in pre-generated JSON`);
           if (cacheStale) return;
-          const cached = res?.hit ? res.data : null;
-          if (cached && Array.isArray(cached.vocab) && Array.isArray(cached.quiz)) {
-            console.log('[lesson] ⚡ Translation cache hit — Gemini skipped');
-            setTranslatedLesson({ ...lsn, ...cached });
-            setIsTranslating(false);
-            return;
-          }
-          console.log(`[lesson] 🤖 Gemini API: translating to ${targetLang}...`);
-          callGeminiFallback(lsn, targetLang, nativeLang);
+          console.log('[lesson] 📦 Pre-generated JSON — Gemini skipped');
+          setTranslatedLesson({ ...lsn, ...pre });
+          setJsonTranslated(true);
+          setIsTranslating(false);
         })
         .catch(() => {
           if (cacheStale) return;
-          console.log(`[lesson] 🤖 Gemini API: translating to ${targetLang}...`);
-          callGeminiFallback(lsn, targetLang, nativeLang);
+          loadViaCacheOrGemini();
         });
-    } else {
-      console.log(`[lesson] 🤖 Gemini API: translating to ${targetLang}...`);
-      callGeminiFallback(lsn, targetLang, nativeLang);
+      return cleanup;
     }
+
+    loadViaCacheOrGemini();
 
     // 벌크 레슨 번역은 응답이 커서(실측 ~21s) 전역 AI_TIMEOUT_MS(35s)로는 여유가 부족함 — 이 호출 전용 90s 제한시간
     const LESSON_TRANSLATE_TIMEOUT_MS = 90_000;
@@ -533,9 +606,9 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
     }
 
     // 캐시 조회가 늦게 끝나 이전 레슨의 결과를 덮어쓰지 않도록 무효화
-    return () => { cacheStale = true; };
+    return cleanup;
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lessonId, langId, subLang, user?.uid, txAttempt]);
+  }, [lessonId, langId, subLang, user?.uid, txAttempt, authLoading]);
 
   // -- Auto-scroll chat --------------------------------------------------------
   useEffect(() => {
@@ -741,10 +814,11 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
   useEffect(() => {
     if (vocabItem && subLang && subLang !== langId && !bulkNative) {
       translateText(vocabItem.example, vocabExKey);
-      translateText(vocabItem.meaning, vocabMeanKey);
+      // Pre-generated JSON의 meaning은 이미 모국어(영어) gloss라서 재번역하지 않음
+      if (!jsonTranslated) translateText(vocabItem.meaning, vocabMeanKey);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [vocabIdx, phase, langId, lessonId, translatedLesson]);
+  }, [vocabIdx, phase, langId, lessonId, translatedLesson, jsonTranslated]);
 
   const handleSpeakVocab = async () => {
     if (!vocabItem) return;
@@ -758,14 +832,17 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
   // - 퀴즈/채팅 페이즈는 건드리지 않음
   useEffect(() => {
     if (phase !== 'vocab' || !vocabItem) return;
-    const key = `${lessonId}:${vocabIdx}`;
+    // 번역이 끝나기 전에는 영어 예문을 자동재생하지 않음 — 번역된 예문이
+    // 도착하면 아래 translatedLesson 의존성으로 다시 실행되어 그때 재생한다.
+    if (isTranslating) return;
+    const key = `${lessonId}:${vocabIdx}:${translatedLesson ? 'tx' : 'en'}`;
     if (lastAutoPlayKey.current === key) return;
     lastAutoPlayKey.current = key;
     const text = vocabItem.example || vocabItem.word;
     if (!text) return;
     speakText(text, undefined, true).catch(() => { /* 자동재생 실패 무시 */ });
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase, vocabIdx, lessonId]);
+  }, [phase, vocabIdx, lessonId, isTranslating, translatedLesson]);
   // 서버 TTS 또는 기기 내장 음성 중 하나라도 있으면 발음 듣기 가능
   const canHear = hasTts(langId) || deviceTtsAvailable();
 
@@ -1129,8 +1206,8 @@ RULES:
       {isTranslating && (
         <div style={{ position: 'fixed', inset: 0, background: 'rgba(255,255,255,0.92)', zIndex: 9999, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16 }}>
           <div style={{ fontSize: 48 }}>🌐</div>
-          <div style={{ fontSize: 18, fontWeight: 800, color: '#0F172A' }}>Preparing lesson...</div>
-          <div style={{ fontSize: 14, color: '#6B7280' }}>Preparing lesson content in your language</div>
+          <div style={{ fontSize: 18, fontWeight: 800, color: '#0F172A' }}>Translating lesson to {promptLangName(langId)}…</div>
+          <div style={{ fontSize: 14, color: '#6B7280', textAlign: 'center', padding: '0 24px' }}>First visit takes about 20 seconds — after that it loads instantly.</div>
           <div style={{ width: 200, height: 4, background: '#E9ECEF', borderRadius: 99, overflow: 'hidden' }}>
             <div style={{ height: '100%', background: '#38BDF8', borderRadius: 99, animation: 'progressSlide 1.5s ease-in-out infinite' }} />
           </div>
@@ -1254,7 +1331,7 @@ RULES:
                     : translations[vocabExKey] || ''}
                 </div>
               )}
-              {subLang && subLang !== langId && vocabItem.meaning && !bulkNative && (
+              {subLang && subLang !== langId && vocabItem.meaning && !bulkNative && !jsonTranslated && (
                 <div style={styles.txMeaning}>
                   {loadingTx[vocabMeanKey] ? '⏳ Translating...' : translations[vocabMeanKey] || ''}
                 </div>
