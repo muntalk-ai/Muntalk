@@ -11,9 +11,28 @@ import { CardSkeleton } from '@/components/Skeleton';
 
 type CardState = 'question' | 'answer' | 'done';
 
+/** 복습 덱의 기준 학습 언어 — 카드 생성 시점의 세션 언어와 일치시켜야 한다.
+ *  우선순위: localStorage 세션 언어('mt_learn_lang') → 프로필 저장값 → 'en-US'.
+ *  프로필만 쓰면 안 된다: AuthContext가 loading을 풀 때 프로필이 아직 null인
+ *  경우가 있고(QA S-4의 덱 오염 원인), 프로필 저장값이 세션 언어와 다를
+ *  수도 있다(QA S-5). 다른 페이지들도 세션 언어를 같은 순서로 해석한다. */
+function resolveReviewLang(profileLearnLang?: string | null): string {
+  try {
+    if (typeof window !== 'undefined') {
+      const ls = localStorage.getItem('mt_learn_lang');
+      if (ls) return ls;
+    }
+  } catch { /* ignore */ }
+  return profileLearnLang || 'en-US';
+}
+
 export default function ReviewPage() {
   const router = useRouter();
   const { user, profile, loading: authLoading, refreshProfile } = useAuth();
+  // QA S-4: 현재 덱을 로드한 기준 언어 + 세션 시작 여부.
+  // 프로필이 늦게 도착해도 세션 중에는 덱을 갈아끼우지 않는다.
+  const deckLangRef = useRef<string | null>(null);
+  const reviewedRef = useRef(false);
   const [cards,      setCards]      = useState<SRSCard[]>([]);
   const [current,    setCurrent]    = useState(0);
   const [cardState,  setCardState]  = useState<CardState>('question');
@@ -24,15 +43,24 @@ export default function ReviewPage() {
   // PR-H: 어뷰징 탐지용 리뷰 세션 시작 시각
   const sessionStartRef = useRef<number>(Date.now());
 
+  // QA S-4: 덱은 기준 학습 언어(세션 언어 우선)로 필터링한다.
+  // AuthContext는 loading을 푼 뒤에야 프로필을 비동기로 채우므로, profile에만
+  // 의존하면 프로필이 null인 채로 로드돼 필터가 꺼진다(혼합 언어 덱의 원인).
+  // profile을 deps에 넣어 늦게 도착한 프로필로 언어가 바뀌면 세션 시작
+  // 전에는 덱을 다시 로드하고, 세션 중에는 건드리지 않는다.
   useEffect(() => {
     if (authLoading) return;
     if (!user) { setLoading(false); return; }
+    const lang = resolveReviewLang(profile?.learnLang);
+    if (deckLangRef.current === lang) return;
+    if (deckLangRef.current !== null && reviewedRef.current) return;
+    deckLangRef.current = lang;
     const load = async () => {
       setLoading(true);
       try {
         const [due, s] = await Promise.all([
-          getDueCards(user.uid, profile?.learnLang),
-          getSRSStats(user.uid),
+          getDueCards(user.uid, lang),
+          getSRSStats(user.uid, lang),
         ]);
         setCards(due.slice(0, 20)); // 최대 20장
         setStats(s);
@@ -40,7 +68,7 @@ export default function ReviewPage() {
       finally { setLoading(false); }
     };
     load();
-  }, [user, authLoading]);
+  }, [user, authLoading, profile]);
 
   const card = cards[current];
   const progress = cards.length > 0 ? (current / cards.length) * 100 : 0;
@@ -52,6 +80,7 @@ export default function ReviewPage() {
 
   const handleQuality = async (quality: ReviewQuality) => {
     if (!user || !card) return;
+    reviewedRef.current = true;
     const xpForCard = quality >= 4 ? 15 : quality >= 3 ? 10 : 5;
 
     try {
@@ -72,6 +101,15 @@ export default function ReviewPage() {
 
     // Next card
     if (current + 1 >= cards.length) {
+      // QA S-4: 완료 화면의 Vocabulary Bank가 마운트 시점 스냅샷에
+      // 머물러 있던 문제 — 방금 저장된 복습 결과를 다시 읽어온다.
+      // (reviewCard 자체는 이미 Firestore에 저장한다. Mastered는
+      // repetitions >= 5 기준이라 1회 세션으로는 New → Learning 전이가
+      // 정상 기대값이다.)
+      try {
+        const s = await getSRSStats(user.uid, deckLangRef.current || undefined);
+        setStats(s);
+      } catch { /* 통계 갱신 실패해도 완료 화면은 표시 */ }
       setCardState('done');
       await refreshProfile();
     } else {
