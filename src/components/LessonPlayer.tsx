@@ -150,6 +150,9 @@ export default function LessonPlayer({
   const [chatLevel,    setChatLevel]    = useState<'easy'|'normal'|'advanced'>('normal');
   const [msgTranslations, setMsgTranslations] = useState<Record<number,string>>({});
   const [translatingIdx,  setTranslatingIdx]  = useState<number|null>(null);
+  // QA H-3: 텍스트 입력은 항상 제공 — STT 지원 언어라도 마이크 차단 시 타이핑으로 진행
+  const [chatInput, setChatInput] = useState('');
+  const [msgTranslateErrors, setMsgTranslateErrors] = useState<Record<number,string>>({});
   const [xpEarned, setXpEarned] = useState(0);
   const [audioToast, setAudioToast] = useState(false); // PR-I #5: TTS 실패 피드백
   const audioToastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -188,6 +191,8 @@ export default function LessonPlayer({
     rec.onresult = (e: any) => {
       setIsListening(false);
       const transcript = e.results[0][0].transcript;
+      // QA H-3: 빈 인식 결과도 무음 실패로 두지 않고 안내를 띄운다.
+      if (!transcript?.trim()) { setMicGuide('no-speech'); return; }
       handleUserMessage(transcript);
     };
     rec.onerror = (e: any) => {
@@ -195,6 +200,9 @@ export default function LessonPlayer({
       const code = e?.error;
       if (code === 'not-allowed' || code === 'service-not-allowed') setMicGuide('denied');
       else if (code === 'audio-capture') setMicGuide('no-mic');
+      else if (code === 'no-speech') setMicGuide('no-speech');
+      // QA H-3: 그 외 오류(network 등)도 무음 실패로 두지 않고 안내를 띄운다.
+      else setMicGuide('unsupported');
     };
     rec.onend   = () => setIsListening(false);
     recognitionRef.current = rec;
@@ -660,6 +668,7 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
   const translateMsgAtIdx = async (idx: number, text: string) => {
     if (msgTranslations[idx]) return; // already translated
     setTranslatingIdx(idx);
+    setMsgTranslateErrors(prev => { const n = { ...prev }; delete n[idx]; return n; });
     try {
       const res = await apiFetch('/api/gemini', {
         method:'POST', headers:{'Content-Type':'application/json'},
@@ -669,10 +678,16 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
         timeoutMs: AI_TIMEOUT_MS,
       });
       const data = await res.json();
-      if (data.text) {
+      if (res.ok && data.text) {
         setMsgTranslations(prev => ({...prev, [idx]: data.text.trim().replace(/^"|"$/g,'')}));
+      } else {
+        // QA H-3: 번역 실패(429 한도·타임아웃 등)를 삼키지 않고 화면에 표시한다.
+        // 버튼은 '🌐 Translate' 상태로 남아 재시도할 수 있다.
+        setMsgTranslateErrors(prev => ({ ...prev, [idx]: 'Translation failed — tap Translate to try again.' }));
       }
-    } catch {}
+    } catch {
+      setMsgTranslateErrors(prev => ({ ...prev, [idx]: 'Translation failed — tap Translate to try again.' }));
+    }
     setTranslatingIdx(null);
   };
 
@@ -703,8 +718,22 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
     if (!recognitionRef.current) { setMicGuide('unsupported'); return; }
     if (isListening) return;
     stopAll();
-    recognitionRef.current.start();
+    try {
+      recognitionRef.current.start();
+    } catch {
+      // QA H-3: start() 동기 throw(차단된 권한 등)도 무음 실패로 두지 않는다.
+      setMicGuide('unsupported');
+      return;
+    }
     setIsListening(true);
+  };
+
+  // QA H-3: 텍스트 입력 전송 — STT 언어에서도 항상 사용 가능 (마이크 차단 시 대안)
+  const sendChatInput = () => {
+    const text = chatInput.trim();
+    if (!text || isSpeaking || isChatThinking) return;
+    setChatInput('');
+    handleUserMessage(text);
   };
 
   // -- XP pop ------------------------------------------------------------------
@@ -1448,44 +1477,39 @@ RULES:
                 <div style={{ fontSize: 14, fontWeight: 900, color: level.accent }}>{tutor.name}</div>
                 <div style={{ fontSize: 11, color: '#9CA3AF' }}>AI Tutor · {lesson.icon} {lesson.title}</div>
               </div>
-              {/* 버튼 바 */}
+              {/* 버튼 바 — QA H-3: 텍스트 입력은 STT 언어에서도 항상 표시 (마이크 차단 시 대안) */}
               {micGuide && <div style={{ padding: '0 16px 8px' }}><MicGuide reason={micGuide} onDismiss={() => setMicGuide(null)} /></div>}
-              <div style={{ padding: '0 16px 10px', display: 'flex', gap: 8 }}>
-                {hasStt(langId) ? (
-                  <button
-                    style={{ ...styles.micBtn, flex: 1, padding: '11px', fontSize: 14, background: isListening ? '#E11D48' : level.accent }}
-                    onClick={isListening ? stopAll : startListening}
+              <div style={{ padding: '0 16px 10px', display: 'flex', flexDirection: 'column', gap: 8 }}>
+                <div style={{ display: 'flex', gap: 8 }}>
+                  <input
+                    type="text"
+                    value={chatInput}
+                    onChange={e => setChatInput(e.target.value)}
+                    placeholder="Type your answer..."
+                    style={{ flex: 1, padding: '10px 14px', borderRadius: 12, border: '2px solid #E2E8F0', fontSize: 14, outline: 'none', fontFamily: 'inherit' }}
+                    onKeyDown={e => { if (e.key === 'Enter') sendChatInput(); }}
                     disabled={isSpeaking || isChatThinking}
-                  >
-                    {isListening ? '⏹ Stop' : '🎤 Speak'}
-                  </button>
-                ) : (
-                  <>
-                    <input
-                      type="text"
-                      placeholder="Type your answer..."
-                      style={{ flex: 1, padding: '10px 14px', borderRadius: 12, border: '2px solid #E2E8F0', fontSize: 14, outline: 'none', fontFamily: 'inherit' }}
-                      onKeyDown={e => {
-                        if (e.key === 'Enter' && e.currentTarget.value.trim()) {
-                          handleUserMessage(e.currentTarget.value.trim());
-                          e.currentTarget.value = '';
-                        }
-                      }}
-                      disabled={isSpeaking || isChatThinking}
-                    />
+                  />
+                  <button
+                    style={{ ...styles.micBtn, padding: '10px 14px', background: level.accent, width: 'auto', flexShrink: 0 }}
+                    onClick={sendChatInput}
+                    disabled={isSpeaking || isChatThinking || !chatInput.trim()}
+                  >➤</button>
+                </div>
+                <div style={{ display: 'flex', gap: 8 }}>
+                  {hasStt(langId) && (
                     <button
-                      style={{ ...styles.micBtn, padding: '10px 14px', background: level.accent }}
-                      onClick={e => {
-                        const input = (e.currentTarget.previousSibling as HTMLInputElement);
-                        if (input?.value.trim()) { handleUserMessage(input.value.trim()); input.value = ''; }
-                      }}
+                      style={{ ...styles.micBtn, flex: 1, padding: '11px', fontSize: 14, background: isListening ? '#E11D48' : level.accent }}
+                      onClick={isListening ? stopAll : startListening}
                       disabled={isSpeaking || isChatThinking}
-                    >➤</button>
-                  </>
-                )}
-                <button style={{ ...styles.doneBtn, flexShrink: 0, padding: '10px 14px' }} onClick={handleFinishLesson}>
-                  Done ✓
-                </button>
+                    >
+                      {isListening ? '⏹ Stop' : '🎤 Speak'}
+                    </button>
+                  )}
+                  <button style={{ ...styles.doneBtn, flex: hasStt(langId) ? undefined : 1, flexShrink: 0, padding: '10px 14px' }} onClick={handleFinishLesson}>
+                    Done ✓
+                  </button>
+                </div>
               </div>
             </div>
           ) : (
@@ -1512,8 +1536,10 @@ RULES:
               </div>
               <div style={{ ...styles.tutorLabel, color: level.accent }}>{tutor.name}</div>
               <div style={styles.tutorSubLabel}>AI Tutor · {lesson.icon} {lesson.title}</div>
+              {/* QA H-3: 데스크톱에서도 마이크 안내를 표시 (기존에는 모바일에만 렌더링됨) */}
+              {micGuide && <MicGuide reason={micGuide} onDismiss={() => setMicGuide(null)} />}
               <div style={styles.controls}>
-                {hasStt(langId) ? (
+                {hasStt(langId) && (
                   <button
                     style={{ ...styles.micBtn, background: isListening ? '#E11D48' : level.accent }}
                     onClick={isListening ? stopAll : startListening}
@@ -1521,32 +1547,26 @@ RULES:
                   >
                     {isListening ? '⏹ Stop' : '🎤 Speak'}
                   </button>
-                ) : (
-                  <div style={{ display: 'flex', gap: 8, flex: 1 }}>
-                    <input
-                      type="text"
-                      placeholder="Type your answer..."
-                      style={{ flex: 1, padding: '10px 14px', borderRadius: 12, border: '2px solid #E2E8F0', fontSize: 15, outline: 'none', fontFamily: 'inherit' }}
-                      onKeyDown={e => {
-                        if (e.key === 'Enter' && e.currentTarget.value.trim()) {
-                          handleUserMessage(e.currentTarget.value.trim());
-                          e.currentTarget.value = '';
-                        }
-                      }}
-                      disabled={isSpeaking || isChatThinking}
-                    />
-                    <button
-                      style={{ ...styles.micBtn, background: level.accent }}
-                      onClick={e => {
-                        const input = (e.currentTarget.previousSibling as HTMLInputElement);
-                        if (input?.value.trim()) { handleUserMessage(input.value.trim()); input.value = ''; }
-                      }}
-                      disabled={isSpeaking || isChatThinking}
-                    >
-                      Send ➤
-                    </button>
-                  </div>
                 )}
+                {/* QA H-3: 텍스트 입력은 STT 언어에서도 항상 표시 (마이크 차단 시 대안) */}
+                <div style={{ display: 'flex', gap: 8, flex: 1 }}>
+                  <input
+                    type="text"
+                    value={chatInput}
+                    onChange={e => setChatInput(e.target.value)}
+                    placeholder="Type your answer..."
+                    style={{ flex: 1, padding: '10px 14px', borderRadius: 12, border: '2px solid #E2E8F0', fontSize: 15, outline: 'none', fontFamily: 'inherit' }}
+                    onKeyDown={e => { if (e.key === 'Enter') sendChatInput(); }}
+                    disabled={isSpeaking || isChatThinking}
+                  />
+                  <button
+                    style={{ ...styles.micBtn, background: level.accent, width: 'auto', flexShrink: 0 }}
+                    onClick={sendChatInput}
+                    disabled={isSpeaking || isChatThinking || !chatInput.trim()}
+                  >
+                    Send ➤
+                  </button>
+                </div>
                 <button style={styles.doneBtn} onClick={handleFinishLesson}>
                   Finish Lesson ✓
                 </button>
@@ -1568,6 +1588,14 @@ RULES:
                     <div style={{ marginTop:6, paddingTop:6, borderTop:`1px solid ${level.accent}30`,
                       fontSize:12, color:'#374151', lineHeight:1.5 }}>
                       {msgTranslations[i]}
+                    </div>
+                  )}
+                  {/* QA H-3: 번역 실패 시에도 화면에 표시 (무음 실패 방지) */}
+                  {msg.role === 'tutor' && msgTranslateErrors[i] && (
+                    <div style={{ marginTop:6, padding:'6px 10px', borderRadius:8,
+                      background:'#FEF2F2', border:'1px solid #FECACA',
+                      fontSize:12, color:'#B91C1C', lineHeight:1.5 }}>
+                      {msgTranslateErrors[i]}
                     </div>
                   )}
                   {/* Translate button */}
