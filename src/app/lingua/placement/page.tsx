@@ -173,6 +173,9 @@ function PlacementInner() {
   const [loadErr, setLoadErr]       = useState('');
   const [saving, setSaving]         = useState(false);
   const [applyErr, setApplyErr]     = useState('');
+  // QA H-4: 판정이 기존 진도와 크게 어긋날 때 확인 다이얼로그를 띄우기 위한 상태.
+  // (예: A1 진도 계정이 10/10을 맞혀 C2 판정을 받으면, 적용 시 A1→C2로 점프한다.)
+  const [showJumpConfirm, setShowJumpConfirm] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout>|null>(null);
 
   // -- Conversation style card (Phase 2-1 Track 2-A) -----------------------------
@@ -385,6 +388,7 @@ function PlacementInner() {
     setCefrSelected(null); setCefrRevealed(false);
     setLoadErr('');
     setStyleData(null); setShareNote('');
+    setShowJumpConfirm(false);
   };
 
   // -- Back navigation ------------------------------------------------------
@@ -499,10 +503,37 @@ function PlacementInner() {
   const retakeWaitText = (() => {
     if (canRetake) return '';
     const ms = Math.max(0, lastPlacementAt + RETAKE_COOLDOWN_MS - Date.now());
-    const h = Math.floor(ms / 3600000);
-    const m = Math.ceil((ms % 3600000) / 60000);
+    // QA M-15: Math.ceil((ms % 3600000) / 60000)은 나머지가 59.x분일 때 60을
+    // 만들어 '23h 60m'이 됐다. 총합을 분으로 올림한 뒤 시/분으로 나누면
+    // 분 자리에 60이 나올 수 없다.
+    const totalM = Math.ceil(ms / 60000);
+    const h = Math.floor(totalM / 60);
+    const m = totalM % 60;
     return h > 0 ? `${h}h ${m}m` : `${m}m`;
   })();
+
+  // QA H-4: 기존 진도와 판정 레벨의 차이 — 2단계 이상 벌어지고 실제 진도
+  // (완료한 레슨 1개 이상)가 있으면 적용 전에 확인 다이얼로그를 띄운다.
+  // 진도가 전혀 없는 신규 계정은 테스트 결과를 그대로 믿는다.
+  const LEVEL_ORDER = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'];
+  const currentLevelIdx = (() => {
+    let idx = 0;
+    for (let i = 0; i < LEVEL_ORDER.length; i++) {
+      if (currentXp >= (LEVEL_XP[LEVEL_ORDER[i]] || 0)) idx = i;
+    }
+    return idx;
+  })();
+  const verdictIdx = Math.max(0, LEVEL_ORDER.indexOf(cefrLevel.toLowerCase()));
+  const jumpGap = verdictIdx - currentLevelIdx;
+  const hasProgress = (() => {
+    if ((profile?.completedLessons?.length || 0) > 0) return true;
+    try {
+      const done = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
+      return done.length > 0;
+    } catch { return false; }
+  })();
+  const needsJumpConfirm = jumpGap >= 2 && hasProgress;
+  const currentLevelLabel = LEVEL_ORDER[currentLevelIdx].toUpperCase();
 
   // ════════════════════════════════════════════════════════════════════════════
   // ERROR
@@ -913,7 +944,34 @@ function PlacementInner() {
           </div>
         )}
 
-        <button onClick={handleApply} disabled={saving}
+        {/* QA H-4: 기존 진도와 판정이 크게 어긋날 때 확인 다이얼로그.
+            판정을 그대로 적용하면 현재 레벨에서 판정 레벨로 점프한다. */}
+        {showJumpConfirm && needsJumpConfirm && (
+          <div style={{ background:'#451A03', border:'2px solid #F59E0B', borderRadius:14, padding:'16px 18px', marginBottom:12 }}>
+            <div style={{ fontSize:15, fontWeight:900, color:'#FDE68A', marginBottom:6 }}>
+              ⚠️ Jump from {currentLevelLabel} to {cefrLevel.toUpperCase()}?
+            </div>
+            <div style={{ fontSize:13, color:'#FDE68A', fontWeight:600, lineHeight:1.6, marginBottom:12 }}>
+              You have progress at {currentLevelLabel} ({currentXp.toLocaleString()} XP). This test places you at {cefrLevel.toUpperCase()} · {levelInfo.label.split('·')[1]?.trim() || levelInfo.label}, and applying it would set your starting XP to {displayXp.toLocaleString()} — skipping everything in between. If the test felt too easy, go ahead; otherwise keep your current progress and continue from {currentLevelLabel}.
+            </div>
+            <div style={{ display:'flex', gap:8 }}>
+              <button
+                onClick={() => setShowJumpConfirm(false)}
+                style={{ flex:1, padding:'11px', borderRadius:10, border:'1px solid #F59E0B', background:'transparent', color:'#FDE68A', fontSize:14, fontWeight:800, cursor:'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}
+              >
+                Keep my {currentLevelLabel} progress
+              </button>
+              <button
+                onClick={handleApply} disabled={saving}
+                style={{ flex:1, padding:'11px', borderRadius:10, border:'none', background:saving?'#334155':'#F59E0B', color:'#451A03', fontSize:14, fontWeight:900, cursor:saving?'default':'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}
+              >
+                {saving ? 'Saving...' : `Jump to ${cefrLevel.toUpperCase()} anyway`}
+              </button>
+            </div>
+          </div>
+        )}
+
+        <button onClick={() => { if (needsJumpConfirm && !showJumpConfirm) { setShowJumpConfirm(true); return; } handleApply(); }} disabled={saving}
           style={{ width:'100%', padding:'14px', borderRadius:14, border:'none', background:saving?'#334155':`linear-gradient(135deg,${levelInfo.color},${levelInfo.color}bb)`, color:'#fff', fontSize:16, fontWeight:900, cursor:saving?'default':'pointer', fontFamily:"'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", boxShadow:saving?'none':`0 8px 22px ${levelInfo.color}44`, marginBottom:10 }}>
           {saving ? 'Saving...' : `Start ${trackInfo.emoji} ${trackInfo.label} at ${cefrLevel.toUpperCase()} →`}
         </button>
