@@ -163,6 +163,10 @@ function StarterContent() {
   const [sayError, setSayError]         = useState<string | null>(null);
   const [sayResult, setSayResult]       = useState<{ heard: string; score: number; feedback: string } | null>(null);
   const [sayUnsupported, setSayUnsupported] = useState(false); // STT 불가 → "I said it!" 폴백
+  // QA H-3: 마이크 차단 시 타이핑 대안 — MicGuide가 "or just type instead"라 안내하지만
+  // 입력창이 없었음. 차단 시에만 입력창을 표시하고, 맞게 타이핑하면 다음 단어로 진행.
+  const [typedSay, setTypedSay] = useState('');
+  const [typedSayState, setTypedSayState] = useState<'idle' | 'wrong' | 'right'>('idle');
 
   // Chat phase
   const [chatMsgs, setChatMsgs]     = useState<{role:'tutor'|'user';text:string}[]>([]);
@@ -266,6 +270,9 @@ function StarterContent() {
       const code = e?.error;
       if (code === 'not-allowed' || code === 'service-not-allowed') setMicGuide('denied');
       else if (code === 'audio-capture') setMicGuide('no-mic');
+      else if (code === 'no-speech') setMicGuide('no-speech');
+      // QA H-3: 그 외 오류(network 등)도 무음 실패로 두지 않고 안내를 띄운다.
+      else setMicGuide('unsupported');
     };
     recRef.current = rec;
   }, [langId]);
@@ -273,6 +280,12 @@ function StarterContent() {
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [chatMsgs]);
+
+  // QA H-3: 단어 이동 시 타이핑 대안 상태 초기화
+  useEffect(() => {
+    setTypedSay('');
+    setTypedSayState('idle');
+  }, [speakIdx]);
 
   // ── TTS ────────────────────────────────────────────────────────────────────
   const speak = useCallback(async (text: string) => {
@@ -593,6 +606,18 @@ Rules:
       setSayError('Speech recognition ran into a problem. Please try again.');
     }
   }, [sayListening, sayLoading, words, speakIdx, langId, subLang, callGemini]);
+
+  // QA H-3: SAY IT 타이핑 대안 — 마이크 차단 시 단어를 직접 타이핑해 확인
+  const checkTypedSay = useCallback(() => {
+    const w = words[speakIdx];
+    if (!w) return;
+    const norm = (s: string) => s.trim().toLocaleLowerCase().replace(/[.,!?¡¿'"]/g, '');
+    if (typedSay.trim() && norm(typedSay) === norm(w.word)) {
+      setTypedSayState('right');
+    } else {
+      setTypedSayState('wrong');
+    }
+  }, [typedSay, words, speakIdx]);
 
   // ── CHAT phase ─────────────────────────────────────────────────────────────
   const startChatPhase = useCallback(async () => {
@@ -1340,6 +1365,46 @@ LANGUAGE RULES:
           </div>
         )}
 
+        {/* QA H-3: 마이크 차단 시 타이핑 대안 — MicGuide의 "or just type instead"를 실제로 제공 */}
+        {micGuide && (
+          <div style={{ marginTop: 12, maxWidth: 420, width: '100%' }}>
+            <div style={{ display: 'flex', gap: 8 }}>
+              <input
+                value={typedSay}
+                onChange={e => { setTypedSay(e.target.value); setTypedSayState('idle'); }}
+                onKeyDown={e => { if (e.key === 'Enter') checkTypedSay(); }}
+                placeholder={`Type "${w.word}" instead`}
+                disabled={typedSayState === 'right'}
+                style={{ flex: 1, padding: '14px 16px', borderRadius: 14, border: '2px solid #E2E8F0', fontSize: 16, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 700, outline: 'none', background: '#F8FAFC' }}
+              />
+              {typedSayState === 'right' ? (
+                <button onClick={() => { setTypedSay(''); setTypedSayState('idle'); handleSpeakDone(); }}
+                  className="tth-btn"
+                  style={{ ...btnBase, padding: '14px 20px', fontSize: 15, background: 'linear-gradient(135deg, #10B981, #059669)', color: 'white' }}>
+                  Next →
+                </button>
+              ) : (
+                <button onClick={checkTypedSay}
+                  className="tth-btn"
+                  disabled={!typedSay.trim()}
+                  style={{ ...btnBase, padding: '14px 20px', fontSize: 15, background: typedSay.trim() ? ACCENT : '#E2E8F0', color: typedSay.trim() ? 'white' : '#94A3B8' }}>
+                  Check
+                </button>
+              )}
+            </div>
+            {typedSayState === 'wrong' && (
+              <div style={{ marginTop: 8, fontSize: 13, fontWeight: 700, color: '#B91C1C' }}>
+                Not quite — try typing the word shown above.
+              </div>
+            )}
+            {typedSayState === 'right' && (
+              <div style={{ marginTop: 8, fontSize: 13, fontWeight: 700, color: '#059669' }}>
+                ✓ That&apos;s right — you typed it correctly.
+              </div>
+            )}
+          </div>
+        )}
+
         {sayResult && sayResult.feedback ? (
           <div style={{ marginTop: 20, padding: '16px 20px', borderRadius: 16,
             maxWidth: 420, width: '100%', textAlign: 'left',
@@ -1494,7 +1559,8 @@ LANGUAGE RULES:
           onMouseDown={() => {
             if (!recRef.current) { setMicGuide('unsupported'); return; }
             if (isListening || chatLoading || !chatStarted) return;
-            try { recRef.current.start(); setIsListening(true); } catch {}
+            // QA H-3: start() throw도 무음 실패로 두지 않고 안내를 띄운다.
+            try { recRef.current.start(); setIsListening(true); } catch { setMicGuide('unsupported'); }
           }}
           disabled={chatLoading || !chatStarted}
           style={{ ...btnBase, padding: '14px 16px', fontSize: 18,
