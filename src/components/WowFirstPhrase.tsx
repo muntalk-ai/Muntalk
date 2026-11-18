@@ -143,6 +143,8 @@ export default function WowFirstPhrase() {
       || 'en-US';
   }, []);
   const isEnglishNative = nativeLang.toLowerCase().startsWith('en');
+  // QA M-4: 모국어가 한국어면 한글 발음 가이드(romanizedKo)를 우선 표시한다.
+  const isKoreanNative = nativeLang.toLowerCase().startsWith('ko');
 
   // 폭죽 조각 (마운트 시 1회 생성)
   const confetti = useMemo(
@@ -586,7 +588,7 @@ export default function WowFirstPhrase() {
                 <div dir="auto" style={{ fontSize: 30, fontWeight: 900, color: '#0F172A',
                   marginBottom: 4, lineHeight: 1.3 }}>{item.text}</div>
                 <div style={{ fontSize: 14, color: '#94A3B8', fontWeight: 700,
-                  fontStyle: 'italic', marginBottom: 2 }}>{item.romanized}</div>
+                  fontStyle: 'italic', marginBottom: 2 }}>{isKoreanNative && item.romanizedKo ? item.romanizedKo : item.romanized}</div>
                 <TranslatedMeaning text={item.meaning}
                   cacheKey={`mt_wow_meaning_${fp.code}_${itemIdx}_${nativeLang}`}
                   nativeLang={nativeLang} isEnglishNative={isEnglishNative}
