@@ -8,8 +8,8 @@ import RtlDir from '@/components/RtlDir';
 import ChatMarkdown from '@/components/ChatMarkdown';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
-import { getUserProfile, resolveNativeLang } from '@/lib/userProfile';
-import { purposePromptBlock, isLearningPurpose } from '@/lib/purpose';
+import { getUserProfile, resolveLearnLang, resolveNativeLang, resolvePurpose } from '@/lib/userProfile';
+import { purposePromptBlock } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
 import { getTutorById } from '@/data/tutors';
 import { CURRICULUM } from '@/data/curriculum';
@@ -189,7 +189,7 @@ export default function CoachPage() {
 
   // PR-I: RTL 판정용 학습 언어 (클라이언트에서만 읽기)
   useEffect(() => {
-    try { setRtlLang(localStorage.getItem('mt_learn_lang') || 'en-US'); } catch { /* ignore */ }
+    try { setRtlLang(resolveLearnLang()); } catch { /* ignore */ }
   }, []);
 
   // ── Build learner snapshot ────────────────────────────────────────────────
@@ -197,27 +197,30 @@ export default function CoachPage() {
   useEffect(() => {
     if (authLoading) return;
     const build = async () => {
-      const learnLang  = localStorage.getItem('mt_learn_lang')  || 'en-US';
-      const nativeLang = resolveNativeLang();
+      // QA S-5: 프로필(Firestore) 우선 — localStorage만 보면 세션 언어와
+      // 프로필 언어가 갈린다 (코치가 한국어로 답하던 원인 중 하나).
+      let learnLang  = resolveLearnLang();
+      let nativeLang = resolveNativeLang();
       const xp         = parseInt(localStorage.getItem('mt_xp') || '0', 10);
       const streak     = parseInt(localStorage.getItem('mt_streak') || '0', 10);
       const doneParsed = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
       const tutorId    = localStorage.getItem('mt_tutor_id') || 't01';
 
-      let name = 'Learner';
+      let name = user?.displayName || 'Learner';
       let firestoreDone: string[] = [];
       let purpose: LearningPurpose | undefined;
-      const storedPurpose = localStorage.getItem('mt_purpose');
-      if (isLearningPurpose(storedPurpose)) purpose = storedPurpose;
 
       if (user) {
         try {
           const p = await getUserProfile(user.uid);
+          if (p?.learnLang) learnLang = resolveLearnLang(p.learnLang);
+          if (p?.nativeLang) nativeLang = resolveNativeLang(p.nativeLang);
           if (p?.displayName) name = p.displayName;
           if (p?.completedLessons) firestoreDone = p.completedLessons;
-          if (isLearningPurpose(p?.purpose)) purpose = p!.purpose; // Firestore 우선
+          purpose = resolvePurpose(p?.purpose);
         } catch {}
       }
+      if (!purpose) purpose = resolvePurpose();
 
       const completedLessons = [...new Set([...doneParsed, ...firestoreDone])];
 

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
-import { getUserProfile } from '@/lib/userProfile';
+import { resolveLearnLang, resolveNativeLang } from '@/lib/userProfile';
 import { getTutorById } from '@/data/tutors';
 import {
   EVERYDAY_SCENARIOS, WORLD_SCENARIOS, WORLD_META,
@@ -47,7 +47,7 @@ const WORLD_ORDER: WorldId[] = ['romance','mystery','adventure','workplace','hea
 
 export default function RoleplayLobby() {
   const router   = useRouter();
-  const { user } = useAuth();
+  const { user, profile } = useAuth();
 
   const [tab,      setTab]      = useState<RpTab>('everyday');
   const [langId,   setLangId]   = useState('en-US');
@@ -62,17 +62,12 @@ export default function RoleplayLobby() {
   const diffNative = diffNativeKey ? DIFF_NATIVE[diffNativeKey] : {};
 
   useEffect(() => {
-    const ll = localStorage.getItem('mt_learn_lang') || 'en-US';
-    const sl = localStorage.getItem('mt_native_lang') || 'en-US';
-    setLangId(ll); setSubLang(sl);
-    if (user) getUserProfile(user.uid).then(p => {
-      if (p?.learnLang) setLangId(p.learnLang);
-      if (p?.nativeLang) {
-        setSubLang(p.nativeLang);
-        try { localStorage.setItem('mt_native_lang', p.nativeLang); } catch { /* noop */ }
-      }
-    });
-  }, [user]);
+    // QA S-5: 프로필(Firestore) 우선 — AuthContext 프로필로 바로 읽는다.
+    // (예전에는 localStorage를 먼저 쓰고 Firestore를 나중에 덮어써서, 그 사이
+    // 세션에 잘못된 언어가 들어갔다.)
+    setLangId(resolveLearnLang(profile?.learnLang));
+    setSubLang(resolveNativeLang(profile?.nativeLang));
+  }, [profile]);
 
   const go = (s: EverydayScenario | WorldScenario, type: 'everyday'|'world') => {
     if (!user) { router.push('/signup?next=/lingua/roleplay'); return; }

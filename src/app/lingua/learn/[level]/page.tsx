@@ -1,20 +1,26 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import StepMap from '@/components/StepMap';
 import { useAuth } from '@/context/AuthContext';
 import { isAdminEmail } from '@/lib/subscription';
-import { resolveNativeLang } from '@/lib/userProfile';
+import { resolveNativeLang, resolveLearnLang } from '@/lib/userProfile';
 
 export default function LevelPage({ params }: { params: { level: string } }) {
   const { level } = params;
   const searchParams = useSearchParams();
-  // URL param 우선, 없으면 localStorage(프로필에서 저장된 학습 언어) 폴백 — lesson 페이지와 동일 패턴.
+  const router = useRouter();
+  // QA L-10: Pre-A1(Starter)은 별도 경로(/lingua/starter)에 산다 — CURRICULUM에
+  // 'pre-a1'이 없어 StepMap이 'Level not found'를 뱉었다. Starter로 보낸다.
+  useEffect(() => {
+    if (level === 'pre-a1') router.replace('/lingua/starter');
+  }, [level, router]);
+  // URL param 우선, 없으면 프로필(Firestore) → localStorage 순 — lesson 페이지와 동일 패턴.
   // (Back 버튼 등이 ?lang= 없이 들어와도 학습 언어가 en-US로 리셋되지 않도록)
   const [langId, setLangId]   = useState(searchParams.get('lang')    || 'en-US');
   const [subLang, setSubLang] = useState(searchParams.get('subLang') || 'en-US');
 
-  const { user, loading: authLoading } = useAuth();
+  const { user, profile, loading: authLoading } = useAuth();
 
   const [xp, setXp] = useState(0);
   const [completedLessons, setCompletedLessons] = useState<Set<string>>(new Set());
@@ -30,17 +36,19 @@ export default function LevelPage({ params }: { params: { level: string } }) {
       setCompletedLessons(new Set(savedDone));
       setTutorId(savedTutor);
       if (!searchParams.get('lang')) {
-        const lsLang = localStorage.getItem('mt_learn_lang');
-        if (lsLang) setLangId(lsLang);
+        // QA S-5: 프로필 우선 — 새 기기(빈 localStorage)에서도 저장된 학습 언어 유지
+        setLangId(resolveLearnLang(profile?.learnLang));
       }
       if (!searchParams.get('subLang')) {
-        setSubLang(resolveNativeLang());
+        setSubLang(resolveNativeLang(profile?.nativeLang));
       }
     } catch { /* ignore */ }
     setLocalLoaded(true);
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [profile]);
 
   // auth 로딩 완료 + localStorage 로딩 완료 둘 다 기다림
+  if (level === 'pre-a1') return null; // Starter로 리다이렉트 중
   if (!localLoaded || authLoading) return null;
 
   const isAdmin = isAdminEmail(user?.email);

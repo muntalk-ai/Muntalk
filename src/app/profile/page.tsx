@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { updateProfile, updateEmail, updatePassword, EmailAuthProvider, reauthenticateWithCredential, deleteUser } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
 
-import { updateUserProfile } from '@/lib/userProfile';
+import { updateUserProfile, resolveLearnLang } from '@/lib/userProfile';
+import { markLangChosen } from '@/lib/langPrompt';
 import { requestPushPermission } from '@/lib/notifications';
 import { apiFetch } from '@/lib/apiClient';
 import { LEARN_LANGUAGES, UI_LANGUAGES, getLangLabel } from '@/data/languages';
@@ -22,8 +23,12 @@ export default function ProfilePage() {
   const router = useRouter();
   const { user, profile, loading, refreshProfile } = useAuth();
 
-  const [displayName, setDisplayName] = useState(user?.displayName || '');
-  const [learnLang,   setLearnLang]   = useState(profile?.learnLang || 'en-US');
+  // QA S-5/L-5: 폼 초기값은 프로필(Firestore) 우선 — AuthContext가 loading을
+  // 프로필 도착 전에 풀기 때문에, 첫 렌더에서 profile이 null이면 시드 기본값
+  // (빈 이름·English(US)·Not set)이 들어가고, 저장하면 그 기본값이 실제
+  // 세션 값을 덮어썼다. 아래 동기화 effect가 프로필 도착 시 다시 채운다.
+  const [displayName, setDisplayName] = useState(profile?.displayName || user?.displayName || '');
+  const [learnLang,   setLearnLang]   = useState(() => resolveLearnLang(profile?.learnLang));
   // 모국어 스마트 기본값: 저장된 프로필 → localStorage → 브라우저 언어 → en-US
   const [nativeLang,  setNativeLang]  = useState<string>(() => {
     if (profile?.nativeLang) return profile.nativeLang;
@@ -67,6 +72,22 @@ export default function ProfilePage() {
 
   const isGoogle = user?.providerData?.[0]?.providerId === 'google.com';
 
+  // QA S-5: 프로필 도착 시 폼 동기화 — 초기 렌더에서 profile이 아직 null이면
+  // 폼이 기본값으로 채워진 채로 남는다. 프로필이 도착하면 아직 사용자가
+  // 건드리지 않은 필드만 저장된 값으로 다시 채운다 (편집 중 덮어쓰기 방지).
+  const formEditedRef = useRef(false);
+  const formSyncedRef = useRef(false);
+  useEffect(() => {
+    if (!profile || formSyncedRef.current) return;
+    formSyncedRef.current = true;
+    if (formEditedRef.current) return;
+    setDisplayName(profile.displayName || user?.displayName || '');
+    setLearnLang(resolveLearnLang(profile.learnLang));
+    if (profile.nativeLang) setNativeLang(profile.nativeLang);
+    if (isLearningPurpose(profile.purpose)) setPurpose(profile.purpose);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [profile]);
+
   // 구독 상태
   const planId   = (profile as any)?.planId   || 'free';
   const planName = planId === 'free' ? 'Free' : planId === 'monthly' ? 'Monthly' : planId === 'biannual' ? '6 Months' : 'Annual';
@@ -106,10 +127,17 @@ export default function ProfilePage() {
     if (!user) return;
     setSaving(true); setError('');
     try {
-      await updateProfile(user, { displayName });
-      await updateUserProfile(user.uid, { learnLang, nativeLang, displayName, purpose: purpose || null, langsConfirmed: true });
+      // QA L-5: 빈 이름으로 저장하면 Auth 이름까지 지워져 헤더가 'Learner'로
+      // 떨어진다. 이름이 비어 있으면 이름 저장을 건너뛰고 기존 값을 유지한다.
+      const trimmedName = displayName.trim();
+      const nameToSave = trimmedName || profile?.displayName || user?.displayName || '';
+      if (trimmedName) {
+        await updateProfile(user, { displayName: trimmedName });
+      }
+      await updateUserProfile(user.uid, { learnLang, nativeLang, ...(nameToSave ? { displayName: nameToSave } : {}), purpose: purpose || null, langsConfirmed: true });
       localStorage.setItem('mt_learn_lang', learnLang);
       localStorage.setItem('mt_native_lang', nativeLang);
+      markLangChosen();
       if (purpose) localStorage.setItem('mt_purpose', purpose);
       else localStorage.removeItem('mt_purpose');
       await refreshProfile();
@@ -233,13 +261,13 @@ export default function ProfilePage() {
           <div style={{ background: '#fff', borderRadius: 20, border: '1.5px solid #F1F5F9', padding: '28px' }}>
             <div style={fld}>
               <label style={lbl}>Display Name</label>
-              <input className="p-input" value={displayName} onChange={e => setDisplayName(e.target.value)} placeholder="Your name" />
+              <input className="p-input" value={displayName} onChange={e => { formEditedRef.current = true; setDisplayName(e.target.value); }} placeholder="Your name" />
             </div>
 
             {/* 학습 언어: 주요 선택 — 강조 카드 */}
             <div style={{ ...fld, background: '#F0F7FF', border: '1.5px solid #BFDBFE', borderRadius: 14, padding: '14px 16px' }}>
               <label style={lbl}>🌐 I'm learning <span style={{ fontWeight: 600, color: '#64748B' }}>— the language you want to speak</span></label>
-              <select className="p-select" value={learnLang} onChange={e => setLearnLang(e.target.value)}>
+              <select className="p-select" value={learnLang} onChange={e => { formEditedRef.current = true; setLearnLang(e.target.value); }}>
                 {LEARN_LANGUAGES.map(l => <option key={l.code} value={l.code}>{l.flag} {l.label}</option>)}
               </select>
             </div>
@@ -247,7 +275,7 @@ export default function ProfilePage() {
             {/* 모국어: 보조 선택 */}
             <div style={fld}>
               <label style={lbl}>🏠 My native language <span style={{ fontWeight: 600, color: '#64748B' }}>— used for translations & explanations</span></label>
-              <select className="p-select" value={nativeLang} onChange={e => setNativeLang(e.target.value)}>
+              <select className="p-select" value={nativeLang} onChange={e => { formEditedRef.current = true; setNativeLang(e.target.value); }}>
                 {UI_LANGUAGES.map(l => <option key={l.code} value={l.code}>{l.flag} {l.label}</option>)}
               </select>
             </div>
@@ -264,7 +292,7 @@ export default function ProfilePage() {
 
             <div style={fld}>
               <label style={lbl}>My learning goal</label>
-              <select className="p-select" value={purpose || ''} onChange={e => setPurpose(e.target.value ? (e.target.value as LearningPurpose) : undefined)}>
+              <select className="p-select" value={purpose || ''} onChange={e => { formEditedRef.current = true; setPurpose(e.target.value ? (e.target.value as LearningPurpose) : undefined); }}>
                 <option value="">Not set</option>
                 {PURPOSE_OPTIONS.map(o => <option key={o.id} value={o.id}>{o.emoji} {o.label} — {o.desc}</option>)}
               </select>

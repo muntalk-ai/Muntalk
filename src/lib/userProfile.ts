@@ -5,6 +5,7 @@ import { doc, getDoc, setDoc, updateDoc, serverTimestamp } from 'firebase/firest
 import { db } from './firebase';
 import { awardXp } from './xpClient';
 import type { LearningPurpose } from './purpose';
+import { isLearningPurpose } from './purpose';
 import { UI_LANGUAGES } from '@/data/languages';
 
 /** 브라우저 로케일에서 모국어 코드 감지 (신규 가입 기본값용)
@@ -25,6 +26,45 @@ export function detectBrowserNativeLang(): string {
     if (prefix) return prefix;
   } catch { /* ignore */ }
   return FALLBACK;
+}
+
+/** 학습 언어 해석 체인 (resolveNativeLang과 동일 패턴)
+ *  프로필(Firestore, 단일 진실 공급원) → localStorage('mt_learn_lang', 읽기 캐시) → 'en-US'.
+ *  단, PR-126 회귀 방지: 프로필이 아직 시드 기본값('en-US')인데 캐시에 기본값이
+ *  아닌 값이 있으면 캐시가 이긴다. 시드 프로필은 '선택한 적 없음'을 뜻하고,
+ *  캐시의 값은 사용자가 어딘가에서 고른 선택이기 때문이다 (게스트 선택 후
+ *  로그인 시 이관 누락, 저장 실패 등으로 프로필이 기본값에 머무는 경우).
+ *  프로필이 기본값이 아닌 값이면 의도적 선택으로 간주해 프로필이 이긴다.
+ *  레슨·게임·코치 등 모든 기능이 이 함수로 학습 언어를 읽는다 — 어느 한 곳이
+ *  localStorage만 보거나 'en-US'으로 직행하면 안 된다 (QA S-5). */
+export function resolveLearnLang(profileLearn?: string | null): string {
+  try {
+    if (typeof window !== 'undefined') {
+      const ls = localStorage.getItem('mt_learn_lang');
+      if (ls && ls !== 'en-US' && (!profileLearn || profileLearn === 'en-US')) return ls;
+    }
+  } catch { /* ignore */ }
+  if (profileLearn) return profileLearn;
+  try {
+    if (typeof window !== 'undefined') {
+      const ls = localStorage.getItem('mt_learn_lang');
+      if (ls) return ls;
+    }
+  } catch { /* ignore */ }
+  return 'en-US';
+}
+
+/** 학습 목적 해석 체인 — 프로필 → localStorage('mt_purpose') → 미설정.
+ *  Starter의 목적 게이트와 프로필 페이지가 같은 값을 봐야 한다 (QA S-5). */
+export function resolvePurpose(profilePurpose?: LearningPurpose | null): LearningPurpose | undefined {
+  if (isLearningPurpose(profilePurpose)) return profilePurpose;
+  try {
+    if (typeof window !== 'undefined') {
+      const s = localStorage.getItem('mt_purpose');
+      if (isLearningPurpose(s)) return s;
+    }
+  } catch { /* ignore */ }
+  return undefined;
 }
 
 /** 모국어 해석 체인 (배치 테스트 페이지와 동일 패턴)
@@ -250,7 +290,11 @@ export async function migrateFromLocalStorage(uid: string) {
   const placementTrack = localStorage.getItem('mt_track');
   const placementDone  = localStorage.getItem('mt_placement_done') === 'true';
 
-  if (xp || done.length || dates.length || placementLevel || placementTrack || placementDone) {
+  // QA S-5: 게스트가 언어만 고르고 XP/레슨이 없으면 위 조건이 전부 false라
+  // 언어 선택이 Firestore로 이관되지 않고 프로필은 시드 기본값('en-US')인 채로
+  // 남았다. 언어 선택 자체도 이관 조건에 포함한다.
+  const hasLangChoice = !!localStorage.getItem('mt_learn_lang') || !!localStorage.getItem('mt_native_lang');
+  if (xp || done.length || dates.length || placementLevel || placementTrack || placementDone || hasLangChoice) {
     // PR-H: XP는 서버 엔드포인트로만 지급 — updateUserProfile로 xp 직접 쓰기 금지.
     // (기존 코드는 게스트 localStorage 값을 그대로 덮어써 조작 벡터였음)
     if (xp > 0) {
@@ -296,8 +340,10 @@ export async function migrateFromLocalStorage(uid: string) {
  *    이중 지급이 될 수 있다.
  *  - 완료 레슨/활동 날짜는 합집합(union)으로 병합한다 — 로컬 목록으로 서버
  *    목록을 덮어쓰면 기존 진도가 날아가므로 절대 덮어쓰지 않는다.
- *  - 언어/튜터/placement는 건드리지 않는다 — 기존 유저의 프로필 값이 우선이고
+ *  - 언어는 기본적으로 건드리지 않는다 — 기존 유저의 프로필 값이 우선이고
  *    로컬 기본값('en-US' 등)으로 덮어쓰면 선택한 언어가 날아간다.
+ *    단, QA S-5 예외: 프로필 학습 언어가 시드 기본값('en-US')인 채로 명시적
+ *    로컬 선택이 있으면 그 선택을 프로필로 올린다 (게스트 선택 유실 복구).
  */
 const catchUpInFlight = new Set<string>();
 
@@ -325,6 +371,25 @@ export async function migrateExistingUserGuestData(uid: string, profile: UserPro
         mergedDates.length !== (profile.activityDates || []).length) {
       await updateUserProfile(uid, { completedLessons: mergedDone, activityDates: mergedDates });
     }
+
+    // QA S-5: 게스트로 언어를 고른 뒤 로그인한 기존 유저 — 프로필 학습 언어가
+    // 아직 시드 기본값('en-US')이면, 명시적 로컬 선택(mt_lang_chosen)을 프로필로
+    // 올린다. 프로필이 기본값이 아니면 의도적 선택으로 간주해 건드리지 않는다.
+    // (모국어도 함께 올린다 — 둘 다 '언어 설정이 한 번도 확정되지 않은' 상태의
+    // 일부이기 때문. LevelHub 효과는 이후 프로필 값을 로컬 캐시에 다시 쓴다.)
+    try {
+      const { hasExplicitLangChoice } = await import('./langPrompt');
+      if (hasExplicitLangChoice() && profile.learnLang === 'en-US') {
+        const localLearn = localStorage.getItem('mt_learn_lang');
+        const localNative = localStorage.getItem('mt_native_lang');
+        if (localLearn && localLearn !== 'en-US') {
+          await updateUserProfile(uid, {
+            learnLang: localLearn,
+            ...(localNative && localNative !== profile.nativeLang ? { nativeLang: localNative } : {}),
+          });
+        }
+      }
+    } catch { /* ignore — 언어 이관 실패가 로그인 흐름을 막지 않는다 */ }
   } catch (e) {
     console.warn('[profile] guest catch-up migration failed:', e);
   } finally {

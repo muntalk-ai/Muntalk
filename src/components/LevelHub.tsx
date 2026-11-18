@@ -821,17 +821,17 @@ export default function LevelHub() {
                 {user.photoURL
                   ? <img loading="lazy" src={user.photoURL} alt="" style={{ width: 28, height: 28, borderRadius: '50%', objectFit: 'cover' }} />
                   : <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 800, color: '#fff' }}>
-                      {(user.displayName || user.email || 'U')[0].toUpperCase()}
+                      {(profile?.displayName || user.displayName || user.email || 'U')[0].toUpperCase()}
                     </div>
                 }
                 <span style={{ fontSize: 12, fontWeight: 700, color: '#374151', maxWidth: 80, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                  {user.displayName || user.email?.split('@')[0]}
+                  {profile?.displayName || user.displayName || user.email?.split('@')[0]}
                 </span>
               </button>
               {showUserMenu && (
                 <div style={{ position: 'absolute', right: 0, top: 40, background: '#fff', borderRadius: 14, boxShadow: '0 8px 32px rgba(0,0,0,0.12)', border: '1px solid #F1F5F9', minWidth: 160, zIndex: 300, overflow: 'hidden' }}>
                   <div style={{ padding: '12px 16px', borderBottom: '1px solid #F1F5F9' }}>
-                    <div style={{ fontSize: 12, fontWeight: 800, color: '#0F172A' }}>{user.displayName || 'Learner'}</div>
+                    <div style={{ fontSize: 12, fontWeight: 800, color: '#0F172A' }}>{profile?.displayName || user.displayName || 'Learner'}</div>
                     <div style={{ fontSize: 11, color: '#94A3B8' }}>{user.email}</div>
                   </div>
                   <button onClick={() => { router.push('/lingua/dashboard'); setShowUserMenu(false); }}

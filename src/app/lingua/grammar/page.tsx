@@ -6,6 +6,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import ChatMarkdown from '@/components/ChatMarkdown';
+import { resolveLearnLang, resolveNativeLang } from '@/lib/userProfile';
 import { getTutorById } from '@/data/tutors';
 import {
   GRAMMAR_CATEGORIES, LEVEL_ORDER, getLevelInfo,
@@ -90,8 +91,9 @@ export default function GrammarPage() {
 
   useEffect(() => {
     const ti = localStorage.getItem('mt_tutor_id') || 't01';
-    const nl = localStorage.getItem('mt_native_lang') || 'en-US';
-    const ll = localStorage.getItem('mt_learn_lang')  || 'en-US';
+    // QA S-5: 프로필(Firestore) 우선 — 새 기기에서 문법 팩이 'en-US'로 떨어지지 않게
+    const nl = resolveNativeLang(profile?.nativeLang);
+    const ll = resolveLearnLang(profile?.learnLang);
     setTutorId(ti); setNativeLang(nl); setLearnLang(ll);
     const done = JSON.parse(localStorage.getItem('mt_grammar_done') || '[]') as string[];
     setCompletedIds(new Set(done));
@@ -115,7 +117,9 @@ export default function GrammarPage() {
       }
       setLoading(false);
     })();
-  }, []);
+    // 프로필 언어가 도착하면 해당 언어 팩으로 다시 로드한다.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [profile?.learnLang, profile?.nativeLang]);
 
   useEffect(() => {
     chatRef.current?.scrollTo({ top: chatRef.current.scrollHeight, behavior:'smooth' });

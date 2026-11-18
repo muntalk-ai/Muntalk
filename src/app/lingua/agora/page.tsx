@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import ChatMarkdown from '@/components/ChatMarkdown';
 import { getLangLabel, promptLangName, hasTts } from '@/data/languages';
-import { detectBrowserNativeLang } from '@/lib/userProfile';
+import { resolveLearnLang, resolveNativeLang } from '@/lib/userProfile';
 import { speakWithDeviceTts } from '@/lib/deviceTts';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 import RtlDir from '@/components/RtlDir';
@@ -134,21 +134,22 @@ export default function AgoraPage() {
   // 브라우저 자동재생 차단 시 마지막 AI 메시지에 "🔊 듣기" 버튼 표시
   const [speakBlocked, setSpeakBlocked] = useState(false);
 
-  // 학습/모국어 결정: localStorage(기기 명시 선택) → Firestore 프로필 → 기본값.
-  // PR-126에서 프로필 우선으로 바꿨다가 stale profile(en-US)이 로컬 선택을 덮어써
-  // 회귀 발생 ("argue against"가 영어로). LevelHub의 stale-profile 보호 패턴과
-  // 동일하게 로컬 우선으로 복원. 프로필 fallback 시에는 localStorage에 동기화.
-  const lsNative = typeof window !== 'undefined' ? localStorage.getItem('mt_native_lang') : null;
-  const lsLearn = typeof window !== 'undefined' ? localStorage.getItem('mt_learn_lang') : null;
-  const nativeLang = lsNative || profile?.nativeLang || detectBrowserNativeLang();
-  const learnLang = lsLearn || profile?.learnLang || 'en-US';
+  // 학습/모국어 결정: Firestore 프로필이 단일 진실 공급원 (QA S-5).
+  // PR-126에서 프로필 우선으로 바꿨다가 stale profile(en-US)이 로컬 선택을
+  // 덮어써 회귀가 난 적 있다 — resolveLearnLang은 그 경우를 처리한다
+  // (프로필이 시드 기본값이고 캐시에 실제 선택이 있으면 캐시가 이긴다).
+  // 프로필 값을 localStorage 캐시에도 동기화한다.
+  const nativeLang = resolveNativeLang(profile?.nativeLang);
+  const learnLang = resolveLearnLang(profile?.learnLang);
 
   useEffect(() => {
+    // 캐시가 비어 있을 때만 프로필 값으로 채운다 — 시드 기본값 프로필이
+    // 사용자의 새 선택을 덮어쓰지 않게 (PR-126 회귀 방지).
     try {
-      if (!lsLearn && profile?.learnLang) localStorage.setItem('mt_learn_lang', profile.learnLang);
-      if (!lsNative && profile?.nativeLang) localStorage.setItem('mt_native_lang', profile.nativeLang);
+      if (!localStorage.getItem('mt_learn_lang') && profile?.learnLang) localStorage.setItem('mt_learn_lang', profile.learnLang);
+      if (!localStorage.getItem('mt_native_lang') && profile?.nativeLang) localStorage.setItem('mt_native_lang', profile.nativeLang);
     } catch {}
-  }, [profile, lsLearn, lsNative]);
+  }, [profile]);
 
   // L-8: 토론 주제 카드(제목·부제·소주제)를 학습 언어로 런타임 번역.
   // TOPICS 데이터는 영어만 존재하므로 정적 번역을 만들지 않고, 토론 오프닝과

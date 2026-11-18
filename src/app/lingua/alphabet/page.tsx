@@ -8,6 +8,7 @@ import { useAuth } from '@/context/AuthContext';
 import { apiFetch } from '@/lib/apiClient';
 import { AI_TIMEOUT_MS } from '@/lib/aiRetry';
 import { LEARN_LANGUAGES, promptLangName } from '@/data/languages';
+import { resolveLearnLang } from '@/lib/userProfile';
 import {
   LANG_TO_ALPHABET,
   ALPHABET_FONT_STACKS,
@@ -46,12 +47,14 @@ function AlphabetContent() {
   const [quizOrder, setQuizOrder] = useState<AlphabetLetter[]>([]);
 
   useEffect(() => {
-    const l = searchParams.get('lang') || localStorage.getItem('mt_learn_lang') || 'en-US';
+    // QA S-5: 프로필(Firestore) 우선 — URL param이 없을 때만 프로필 → 캐시 순
+    const l = searchParams.get('lang') || resolveLearnLang(profile?.learnLang);
     setLang(l);
     setSystemId(LANG_TO_ALPHABET[l] || null);
     setMode('learn');
     setSelected(null);
-  }, [searchParams]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams, profile?.learnLang]);
 
   const system: AlphabetSystem | null = useMemo(
     () => (systemId ? getAlphabetSystem(systemId) : null),

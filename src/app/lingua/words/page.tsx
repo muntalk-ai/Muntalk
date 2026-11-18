@@ -8,13 +8,13 @@ import { POS_META, POS_SET_COUNT, PartOfSpeech, getSetTitle } from '@/data/wordS
 import { useAuth } from '@/context/AuthContext';
 import { isAdminEmail } from '@/lib/subscription';
 import { getSubscription } from '@/lib/subscription';
-import { resolveNativeLang } from '@/lib/userProfile';
+import { resolveLearnLang, resolveNativeLang } from '@/lib/userProfile';
 
 const POS_LIST: PartOfSpeech[] = ['Verbs', 'Adjectives', 'Adverbs', 'Phrases'];
 
 function WordsContent() {
   const router = useRouter();
-  const { user, loading: authLoading } = useAuth();
+  const { user, profile, loading: authLoading } = useAuth();
 
   const [lang,        setLang]        = useState('en-US');
   const [subLang,     setSubLang]     = useState('en-US');
@@ -23,9 +23,10 @@ function WordsContent() {
   const [subChecked,  setSubChecked]  = useState(false);
 
   useEffect(() => {
-    setLang(localStorage.getItem('mt_learn_lang') || 'en-US');
-    setSubLang(resolveNativeLang());
-  }, []);
+    // QA S-5: 프로필(Firestore) 우선 — 새 기기에서도 저장된 학습 언어 유지
+    setLang(resolveLearnLang(profile?.learnLang));
+    setSubLang(resolveNativeLang(profile?.nativeLang));
+  }, [profile]);
 
   useEffect(() => {
     if (authLoading) return;
