@@ -40,10 +40,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // authStateReady()는 초기 상태가 확정될 때까지 기다리므로,
     // 그 뒤에 구독하면 첫 콜백부터 복원된 유저가 들어 있다.
     const handleAuthChange = async (u: User | null) => {
-      // Firestore auth token이 준비될 때까지 대기 (권한 에러 방지)
-      if (u) await u.getIdToken().catch(() => {});
+      // QA H-12: 헤더 아바타는 user만으로 그려지는데, 예전 코드는 토큰
+      // 갱신 await 뒤에 setUser를 둬서 느린 네트워크에서 헤더 프로필
+      // 버튼이 한동안 빈 자리로 보였다. getIdToken 실패 시에도 catch로
+      // 그냥 진행하던 코드라 순서를 바꿔도 결과는 같고 표시만 빨라진다.
+      // 토큰 대기는 프로필 로드 직전에만 유지한다 (Firestore 읽기 전).
       setUser(u);
       setLoading(false); // 초기 상태 확정 후에만 해제 — "Log in" 버튼 깜빡임 방지
+      if (u) await u.getIdToken().catch(() => {});
       if (u) {
         // 프로필 로드는 백그라운드에서 비동기 처리
         let p = await getUserProfile(u.uid);

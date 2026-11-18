@@ -101,6 +101,28 @@ export async function isPremium(uid: string, email?: string | null): Promise<boo
   return sub.planId !== 'free' && sub.status === 'active';
 }
 
+// --- 유효 플랜 판정 (QA S-3 / H-12) ------------------------------------------
+// Premium은 두 곳에 저장된다: subscriptions/{uid}.planId(정본 — Stripe
+// 웹훅·관리자 Grant가 씀)와 users/{uid}.planId(캐시 — 같은 두 경로가 함께
+// 쓰고 /profile이 이 값을 보여준다). 이중 쓰기라 한쪽만 달라질 수 있고
+// (부분 실패·과거 경로), getSubscription은 읽기 실패 시 조용히 'free'를
+// 돌려준다. 그래서 /profile은 Annual을 보여주는데 Discover·Dream·
+// LevelHub는 subscriptions만 보고 유료 사용자를 막는 일이 생긴다.
+// 어느 한쪽이라도 유료면 유료로 본다 (Discover/Dream은 기존대로
+// status를 보지 않는다 — planId만으로 판정).
+export function isPaidPlanId(planId: string | null | undefined): boolean {
+  return !!planId && planId !== 'free';
+}
+
+export function effectivePlanId(
+  subPlanId: string | null | undefined,
+  profilePlanId: string | null | undefined,
+): PlanId {
+  if (isPaidPlanId(subPlanId)) return subPlanId as PlanId;
+  if (isPaidPlanId(profilePlanId)) return profilePlanId as PlanId;
+  return 'free';
+}
+
 // --- 레벨 잠금 --------------------------------------------------------------
 // Free: A1만 해금, Premium: 전체 해금
 export function isLevelLocked(levelId: string, planId: PlanId, isAdmin = false, placementLevel?: string): boolean {

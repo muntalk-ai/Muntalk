@@ -11,7 +11,7 @@ import { getUserProfile, resolveNativeLang } from '@/lib/userProfile';
 import { getTutorById } from '@/data/tutors';
 import { hasTts } from '@/data/languages';
 import { speakWithDeviceTts } from '@/lib/deviceTts';
-import { getSubscription, isAdminEmail } from '@/lib/subscription';
+import { getSubscription, isAdminEmail, effectivePlanId } from '@/lib/subscription';
 import PaywallModal from '@/components/PaywallModal';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 import RtlDir from '@/components/RtlDir';
@@ -80,6 +80,10 @@ function DreamStudioContent() {
   const [saving,     setSaving]     = useState(false);
   const [toast,      setToast]      = useState('');
   const [planId,     setPlanId]     = useState<string>('free');
+  // QA S-3: /profile이 보여주는 users 문서의 planId 캐시. subscriptions
+  // 문서와 달라질 수 있어, 어느 한쪽이라도 유료면 유료로 본다
+  // (effectivePlanId — src/lib/subscription.ts 참조).
+  const [profilePlanId, setProfilePlanId] = useState<string>('free');
   const [isAdmin,    setIsAdmin]    = useState(false);
   const [showPaywall,setShowPaywall]= useState(false);
   const [subChecked, setSubChecked] = useState(false);
@@ -99,7 +103,7 @@ function DreamStudioContent() {
   const targetLang = getLangLabel(langId);
   const nativeLang = getLangLabel(subLang);
   const sameLanguage = langId === subLang || (langId.startsWith('en') && subLang.startsWith('en'));
-  const isPremiumUser = isAdmin || planId !== 'free';
+  const isPremiumUser = isAdmin || effectivePlanId(planId, profilePlanId) !== 'free';
   const tutor = getTutorById(tutorId);
 
   // ── Menu translations: English → learner's native language, shown under English ──
@@ -166,6 +170,7 @@ function DreamStudioContent() {
         if (p?.nativeLang) { setSubLang(p.nativeLang); try { localStorage.setItem('mt_native_lang', p.nativeLang); } catch {} }
         if (p?.tutorId) setTutorId(p.tutorId);
         if (p?.displayName) setUserName(p.displayName);
+        if (p?.planId) setProfilePlanId(p.planId);
         if (isLearningPurpose(p?.purpose)) setPurpose(p!.purpose); // B-11
       });
       getSubscription(user.uid).then(sub => {

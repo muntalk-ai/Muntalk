@@ -10,7 +10,7 @@ import { getUserProfile, resolveNativeLang } from '@/lib/userProfile';
 import { getTutorById } from '@/data/tutors';
 import { hasTts } from '@/data/languages';
 import { speakWithDeviceTts } from '@/lib/deviceTts';
-import { getSubscription, isAdminEmail } from '@/lib/subscription';
+import { getSubscription, isAdminEmail, effectivePlanId } from '@/lib/subscription';
 import { truncateHistory } from '@/lib/history';
 import PaywallModal from '@/components/PaywallModal';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
@@ -126,6 +126,10 @@ function DiscoverContent() {
   const [subLang,    setSubLang]    = useState('en-US'); // 첫 페인트 기본값은 영어 — useEffect에서 저장값/프로필/브라우저 언어로 해석
   const [tutorId,    setTutorId]    = useState('t01');
   const [planId,     setPlanId]     = useState<string>('free');
+  // QA S-3: /profile이 보여주는 users 문서의 planId 캐시. subscriptions
+  // 문서와 달라질 수 있어, 어느 한쪽이라도 유료면 유료로 본다
+  // (effectivePlanId — src/lib/subscription.ts 참조).
+  const [profilePlanId, setProfilePlanId] = useState<string>('free');
   const [isAdmin,    setIsAdmin]    = useState(false);
   const [chatMode,   setChatMode]   = useState<ChatMode>('target');
   const [showPaywall,setShowPaywall]= useState(false);
@@ -161,6 +165,7 @@ function DiscoverContent() {
         if (p?.learnLang) { setLangId(p.learnLang); try { localStorage.setItem('mt_learn_lang', p.learnLang); } catch {} }
         if (p?.nativeLang) { setSubLang(p.nativeLang); try { localStorage.setItem('mt_native_lang', p.nativeLang); } catch {} }
         if (p?.tutorId) setTutorId(p.tutorId);
+        if (p?.planId) setProfilePlanId(p.planId);
         if (isLearningPurpose(p?.purpose)) setPurpose(p!.purpose); // B-11
       });
       // Check plan
@@ -419,7 +424,7 @@ function DiscoverContent() {
   };
 
   const tutor = getTutorById(tutorId);
-  const isPremiumUser = isAdmin || planId !== 'free';
+  const isPremiumUser = isAdmin || effectivePlanId(planId, profilePlanId) !== 'free';
   const targetLangName = getLangLabel(langId);
   const nativeLangName = getLangLabel(subLang);
   const chatLang = chatMode === 'native' ? nativeLangName : targetLangName;
