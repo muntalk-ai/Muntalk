@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { addDoc, collection, doc, getDoc, getDocs, limit, query, serverTimestamp, setDoc, updateDoc, where } from 'firebase/firestore';
+import { addDoc, collection, doc, getDoc, getDocs, limit, onSnapshot, orderBy, query, serverTimestamp, setDoc, updateDoc, where } from 'firebase/firestore';
 import { signOut } from 'firebase/auth';
 import { auth, db } from '@/lib/firebase';
 import { apiFetch } from '@/lib/apiClient';
@@ -56,6 +56,14 @@ import {
   VoiceCallSession,
   type ConnectionState,
 } from '@/lib/exchangeCall';
+import {
+  otherParticipant,
+  sendServerTextMessage,
+  serverChatIdFor,
+  subscribeChatMessages,
+  subscribeMyChatRooms,
+  type ServerChatMessage,
+} from '@/lib/exchangeChat';
 
 /*
 /*
@@ -289,6 +297,12 @@ type Msg = {
   at?: number;
   /** Gallery photo shared with this AI reply (public/exchange-ai-avatars/...). */
   photo?: string;
+  /** Firestore document id of this message (people chats synced to the
+      server, Phase 1) — used to dedupe realtime snapshot echoes. */
+  serverId?: string;
+  /** Storage path of a people-chat photo (chat-photos/..., Phase 2),
+      kept so deleting the chat can delete the file too. */
+  photoPath?: string;
   /** Natural rephrasing of the learner's previous message, when it could be improved. */
   correction?: string;
 };
@@ -370,6 +384,8 @@ function loadStoredChats(): PersistedChats | null {
           ai: m.ai === true,
           at: typeof m.at === 'number' ? m.at : undefined,
           photo: typeof m.photo === 'string' ? m.photo : undefined,
+          serverId: typeof m.serverId === 'string' ? m.serverId : undefined,
+          photoPath: typeof m.photoPath === 'string' ? m.photoPath : undefined,
           correction: typeof m.correction === 'string' ? m.correction : undefined,
         });
       }
@@ -623,6 +639,13 @@ export default function ExchangePage() {
   const [newChatsToday, setNewChatsToday] = useState(0);
   const [realPro, setRealPro] = useState(false);
   const newChatPendingRef = useRef<Set<string>>(new Set());
+  // Phase 1: live server feeds for people chats — one Firestore
+  // subscription per thread, kept in a ref so a chat-list change only
+  // adds/removes the feeds that actually changed (no resubscribe churn).
+  // serverSubsUidRef tracks whose feeds these are: a different user
+  // signing in on this device restarts them.
+  const serverMsgUnsubsRef = useRef<Map<string, () => void>>(new Map());
+  const serverSubsUidRef = useRef<string | null>(null);
   // Guest trial (5 minutes, no sign-in — see requireChatAccess).
   const [guestTrial, setGuestTrial] = useState<GuestTrial | null>(null);
   const [trialLeftMs, setTrialLeftMs] = useState<number | null>(null);
@@ -1797,6 +1820,86 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
     }
   }, [chats, activeChatId, chatsLoaded]);
 
+  // ── Phase 1: people-chat server sync (signed-in, Muntuz host) ──────
+  // (a) Room discovery: a partner who messaged first still gets a local
+  // thread here, so their messages have somewhere to land. The name
+  // comes from their public profile; a missing profile keeps a
+  // placeholder instead of blocking the thread.
+  useEffect(() => {
+    if (!user || !chatsLoaded || !isMuntuzHost()) return;
+    const unsub = subscribeMyChatRooms(db, user.uid, (rooms) => {
+      for (const room of rooms) {
+        const otherUid = otherParticipant(room.chatId, user.uid);
+        if (!otherUid) continue;
+        void (async () => {
+          let name = 'Chat partner';
+          let flag: string | undefined;
+          try {
+            const snap = await getDoc(doc(db, 'exchange_profiles', otherUid));
+            const data = snap.data();
+            if (data && typeof data.nickname === 'string' && data.nickname) name = data.nickname;
+            if (data && typeof data.nativeLang === 'string') flag = LANG_FLAG[data.nativeLang] || '🌐';
+          } catch {
+            /* profile unreadable: placeholder name */
+          }
+          setChats((cs) =>
+            cs.some((c) => c.id === otherUid && !c.isAi)
+              ? cs
+              : [...cs, { id: otherUid, partnerId: otherUid, name, avatar: '', flag, isAi: false, messages: [] }]
+          );
+        })();
+      }
+    });
+    return () => unsub();
+    // eslint-disable-next-line react-hooks/exhaustive-deps — user/chatsLoaded only.
+  }, [user, chatsLoaded]);
+
+  // (b) Message feeds: one live subscription per signed-in people chat.
+  // The ref map survives re-renders, so a chat-list change only adds
+  // or removes the feeds that actually changed. Guests and AI chats
+  // never subscribe. A sign-out (or a different user) tears all feeds
+  // down; the unmount effect below is the last cleanup.
+  useEffect(() => {
+    const subs = serverMsgUnsubsRef.current;
+    if (!user || !chatsLoaded || !isMuntuzHost()) {
+      for (const unsub of subs.values()) unsub();
+      subs.clear();
+      serverSubsUidRef.current = null;
+      return;
+    }
+    if (serverSubsUidRef.current !== null && serverSubsUidRef.current !== user.uid) {
+      for (const unsub of subs.values()) unsub();
+      subs.clear();
+    }
+    serverSubsUidRef.current = user.uid;
+    const wanted = new Set(chats.filter((c) => !c.isAi).map((c) => c.id));
+    for (const [localId, unsub] of [...subs]) {
+      if (!wanted.has(localId)) {
+        unsub();
+        subs.delete(localId);
+      }
+    }
+    for (const localId of wanted) {
+      if (subs.has(localId)) continue;
+      const chatId = serverChatIdFor(user.uid, localId);
+      subs.set(
+        localId,
+        subscribeChatMessages(db, chatId, (incoming) => mergeServerMessages(chatId, incoming))
+      );
+    }
+    // No cleanup return: pruning above already removes dead feeds, and
+    // unsubscribing on every chats change would churn the feeds.
+    // eslint-disable-next-line react-hooks/exhaustive-deps — user/chats/chatsLoaded only.
+  }, [user, chatsLoaded, chats]);
+
+  useEffect(
+    () => () => {
+      for (const unsub of serverMsgUnsubsRef.current.values()) unsub();
+      serverMsgUnsubsRef.current.clear();
+    },
+    []
+  );
+
   // Persist the block list on every change (Muntuz host only, same rule
   // as the chat threads above).
   useEffect(() => {
@@ -2279,6 +2382,41 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
 
 // Real (human) chats: messages stay in browser state only for this
   // pilot. No auto-reply — the partner is a real person, never a fake.
+  // ── Phase 1: merge server messages into a local people thread ──────
+  // `serverChatId` is the Firestore room id; the local thread id is the
+  // partner uid. The snapshot echo of a just-sent message is deduped by
+  // serverId inside the updater, so the order in which the local echo
+  // and the snapshot arrive never duplicates a message. Messages are
+  // kept sorted by time — server and device clocks can skew slightly.
+  const mergeServerMessages = (serverChatId: string, incoming: ServerChatMessage[]) => {
+    if (!user || incoming.length === 0) return;
+    const localId = otherParticipant(serverChatId, user.uid);
+    if (!localId) return;
+    setChats((cs) => {
+      const idx = cs.findIndex((c) => c.id === localId && !c.isAi);
+      if (idx < 0) return cs;
+      const c = cs[idx]!;
+      const existing = new Set(
+        c.messages.map((m) => m.serverId).filter((s): s is string => typeof s === 'string')
+      );
+      const fresh = incoming.filter((m) => !existing.has(m.id));
+      if (fresh.length === 0) return cs;
+      const mapped: Msg[] = fresh.map((m) => ({
+        id: msgSeq++,
+        from: m.from === user.uid ? ('me' as const) : ('partner' as const),
+        text: m.text ?? '',
+        at: m.atMs,
+        photo: m.photoUrl,
+        serverId: m.id,
+        photoPath: m.photoPath,
+      }));
+      const messages = [...c.messages, ...mapped].sort((a, b) => (a.at ?? 0) - (b.at ?? 0) || a.id - b.id);
+      const next = [...cs];
+      next[idx] = { ...c, messages };
+      return next;
+    });
+  };
+
   const sendMessage = () => {
     const text = input.trim();
     if (!text || !activeChat || activeChat.isAi) return;
@@ -2287,11 +2425,32 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
       showToast('Held back: phone numbers, links and contact IDs cannot be sent here.');
       return;
     }
-    const id = msgSeq++;
-    setChats((cs) =>
-      cs.map((c) => (c.id === activeChat.id ? { ...c, messages: [...c.messages, { id, from: 'me' as const, text, at: Date.now() }] } : c))
-    );
+    const chat = activeChat;
     setInput('');
+    // People chats sync to Firestore when signed in (Phase 1). Guests
+    // stay local-only, and a server write that fails — e.g. the
+    // exchange_chats rules are not published yet — still keeps the
+    // message on this device instead of losing it.
+    if (!user || !isMuntuzHost()) {
+      const id = msgSeq++;
+      setChats((cs) =>
+        cs.map((c) => (c.id === chat.id ? { ...c, messages: [...c.messages, { id, from: 'me' as const, text, at: Date.now() }] } : c))
+      );
+      return;
+    }
+    const chatId = serverChatIdFor(user.uid, chat.partnerId);
+    void (async () => {
+      try {
+        const serverId = await sendServerTextMessage(db, chatId, user.uid, text);
+        mergeServerMessages(chatId, [{ id: serverId, from: user.uid, type: 'text', text, atMs: Date.now() }]);
+      } catch {
+        const id = msgSeq++;
+        setChats((cs) =>
+          cs.map((c) => (c.id === chat.id ? { ...c, messages: [...c.messages, { id, from: 'me' as const, text, at: Date.now() }] } : c))
+        );
+        showToast('Saved on this device only — the server copy could not be sent yet.');
+      }
+    })();
   };
 
   // H-7: Web Speech API dictation for the AI chat input. Recognised
