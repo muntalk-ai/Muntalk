@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { collection, doc, getDoc, getDocs, limit, query, serverTimestamp, setDoc, updateDoc, where } from 'firebase/firestore';
+import { addDoc, collection, doc, getDoc, getDocs, limit, query, serverTimestamp, setDoc, updateDoc, where } from 'firebase/firestore';
 import { signOut } from 'firebase/auth';
 import { auth, db } from '@/lib/firebase';
 import { apiFetch } from '@/lib/apiClient';
@@ -396,6 +396,26 @@ function loadStoredChats(): PersistedChats | null {
   }
 }
 
+// ── Report & block: blocked partner UIDs persisted in this browser ─────
+// Chats are localStorage-only on this device (S-2), so the block list
+// lives there too: a blocked user never reappears in Discover and a new
+// chat with them cannot be opened. The server-side record of the report
+// itself is the exchange_reports document (admin queue); cross-device
+// block sync is a follow-up when chats move to Firestore.
+const BLOCKED_STORAGE_KEY = 'muntuz_exchange_blocked_v1';
+
+function loadBlockedUids(): string[] {
+  try {
+    const raw = window.localStorage.getItem(BLOCKED_STORAGE_KEY);
+    if (!raw) return [];
+    const data = JSON.parse(raw) as unknown;
+    if (!Array.isArray(data)) return [];
+    return data.filter((x): x is string => typeof x === 'string');
+  } catch {
+    return [];
+  }
+}
+
 // ── M-5 / M-13: opening line in the learner's own target language ──
 // The static per-partner greeting was partner-centric English ("Let's
 // practice English" from Jiyoung, a Korean native learning English) even
@@ -506,6 +526,12 @@ export default function ExchangePage() {
   const [tab, setTab] = useState<Tab>('discover');
   const [room, setRoom] = useState<Room>('ai');
   const [chats, setChats] = useState<Chat[]>([]);
+  // Report & block: the chat being reported (modal open) + chosen reason,
+  // and the persisted list of blocked partner UIDs.
+  const [reportChat, setReportChat] = useState<Chat | null>(null);
+  const [reportReason, setReportReason] = useState('');
+  const [reportBusy, setReportBusy] = useState(false);
+  const [blockedUids, setBlockedUids] = useState<string[]>(() => loadBlockedUids());
   const [aiSending, setAiSending] = useState(false);
   const [waitlistCount, setWaitlistCount] = useState<number | null>(null);
   const [waitlistJoined, setWaitlistJoined] = useState(false);
@@ -867,6 +893,8 @@ export default function ExchangePage() {
   };
 
   const visiblePartners = (realPartners || []).filter((p) => {
+    // Blocked users never reappear in Discover.
+    if (blockedUids.includes(p.uid)) return false;
     if (fSpeaks !== 'All' && p.native !== fSpeaks && !p.fluent.includes(fSpeaks)) return false;
     if (fLearning !== 'All' && p.learning !== fLearning) return false;
     if (fLevel !== 'All' && p.level !== fLevel) return false;
@@ -1597,6 +1625,12 @@ export default function ExchangePage() {
   };
 
 const doSayHello = (p: { id: string; name: string; flag: string }) => {
+    // A blocked user cannot be re-matched even if a chat is somehow
+    // re-opened (Discover already filters them out).
+    if (blockedUids.includes(p.id)) {
+      showToast(`${p.name} is blocked.`);
+      return;
+    }
     setStatuses((s) => ({ ...s, [p.id]: 'pending' }));
     window.setTimeout(() => {
       setStatuses((s) => ({ ...s, [p.id]: 'matched' }));
@@ -1614,6 +1648,51 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
   const sayHello = (p: { id: string; name: string; flag: string }) => {
     if (!requireBirthdateForMatching({ kind: 'hello', partner: p })) return;
     doSayHello(p);
+  };
+
+  // ── Report & block (safety MVP, spec §5.5) ───────────────────────────
+  // The Report button lives in the chat header (human chats only).
+  // Step 1 picks a reason, step 2 confirms. On confirm the report is
+  // written to exchange_reports — the admin queue reads exactly these
+  // fields — the chat is removed, and the partner is blocked locally so
+  // the two users are not matched again. The reported user is never
+  // notified. If the Firestore write fails (e.g. the console rules for
+  // exchange_reports are not published yet), the local block still
+  // applies — the user is protected immediately — and the toast says the
+  // report itself could not be sent.
+  const reportAndBlock = async () => {
+    if (!reportChat || !reportReason || reportBusy) return;
+    const targetUid = reportChat.partnerId;
+    const targetName = reportChat.name;
+    const chatId = reportChat.id;
+    const reason = reportReason;
+    setReportBusy(true);
+    let reportSent = false;
+    if (user) {
+      try {
+        await addDoc(collection(db, 'exchange_reports'), {
+          reporterUid: user.uid,
+          reportedUid: targetUid,
+          reportedName: targetName,
+          reason,
+          matchId: chatId,
+          status: 'open',
+          createdAt: serverTimestamp(),
+        });
+        reportSent = true;
+      } catch {
+        reportSent = false;
+      }
+    }
+    setBlockedUids((prev) => (prev.includes(targetUid) ? prev : [...prev, targetUid]));
+    setChats((cs) => cs.filter((c) => c.id !== chatId));
+    if (activeChatId === chatId) setActiveChatId(null);
+    setReportChat(null);
+    setReportReason('');
+    setReportBusy(false);
+    showToast(
+      reportSent ? `${targetName} reported (${reason}) and blocked.` : `${targetName} blocked. The report could not be sent yet.`
+    );
   };
 
   const activeChat = chats.find((c) => c.id === activeChatId) || null;
@@ -1717,6 +1796,17 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
       /* storage full or unavailable: in-memory chats still work */
     }
   }, [chats, activeChatId, chatsLoaded]);
+
+  // Persist the block list on every change (Muntuz host only, same rule
+  // as the chat threads above).
+  useEffect(() => {
+    if (!isMuntuzHost()) return;
+    try {
+      window.localStorage.setItem(BLOCKED_STORAGE_KEY, JSON.stringify(blockedUids));
+    } catch {
+      /* storage full or unavailable: blocks still work in memory */
+    }
+  }, [blockedUids]);
 
   // Guest trial countdown: ticks once a second while a guest trial is
   // active. At zero the sign-up prompt opens if an AI chat is on
@@ -2963,6 +3053,17 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                     <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-bold text-slate-600" title="New AI chats started today">
                       {newChatsToday}/{realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS} today
                     </span>
+                    {!activeChat.isAi && (
+                      <button
+                        onClick={() => {
+                          setReportChat(activeChat);
+                          setReportReason('');
+                        }}
+                        className="ml-auto min-h-[36px] rounded-full border border-red-200 bg-red-50 px-3 py-1 text-xs font-bold text-red-700 hover:bg-red-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
+                      >
+                        Report
+                      </button>
+                    )}
                     {activeChat.isAi && user && activeChat.messages.filter((m) => m.from === 'me').length >= 4 && (
                       <button
                         onClick={() => void requestSessionReview()}
@@ -3743,6 +3844,56 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                 받기
               </button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Report modal */}
+      {reportChat && (
+        <div
+          className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 p-4 backdrop-blur-[2px] sm:items-center"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Report user"
+        >
+          <div className="w-full max-w-sm rounded-3xl bg-white p-5 shadow-xl">
+            {!reportReason ? (
+              <>
+                <h3 className="font-extrabold">Report {reportChat.name}?</h3>
+                <p className="mt-1 text-sm text-slate-500">Step 1 of 2 — pick a reason.</p>
+                <div className="mt-3 grid gap-2">
+                  {['Spam', 'Inappropriate content', 'Asking for money', 'Other'].map((r) => (
+                    <button
+                      key={r}
+                      onClick={() => setReportReason(r)}
+                      className="rounded-xl border border-slate-200 px-3 py-3 text-left text-sm font-semibold transition hover:border-red-300 hover:bg-red-50/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
+                    >
+                      {r}
+                    </button>
+                  ))}
+                </div>
+                <button onClick={() => setReportChat(null)} className="mt-3 min-h-[44px] w-full py-2 text-sm font-bold text-slate-500 hover:text-slate-700">
+                  Cancel
+                </button>
+              </>
+            ) : (
+              <>
+                <h3 className="font-extrabold">Report &amp; block?</h3>
+                <p className="mt-1 text-sm text-slate-500">
+                  Step 2 of 2 — {reportChat.name} will be blocked, this chat will be removed, and you will not be notified of each other again.
+                </p>
+                <button
+                  onClick={() => void reportAndBlock()}
+                  disabled={reportBusy}
+                  className="mt-4 min-h-[48px] w-full rounded-xl bg-red-600 py-3 font-bold text-white shadow-sm hover:bg-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 active:scale-[0.98] disabled:opacity-60"
+                >
+                  {reportBusy ? 'Reporting…' : 'Report & block'}
+                </button>
+                <button onClick={() => setReportReason('')} className="mt-2 min-h-[44px] w-full py-2 text-sm font-bold text-slate-500 hover:text-slate-700">
+                  Back
+                </button>
+              </>
+            )}
           </div>
         </div>
       )}
