@@ -28,7 +28,7 @@ import {
   type SessionReview,
 } from '@/lib/exchangeMemoryReview';
 import { useAuth } from '@/context/AuthContext';
-import { isPremium } from '@/lib/subscription';
+import { getSubscription, isPremium, PLANS, type Subscription } from '@/lib/subscription';
 import BackButton from '@/components/BackButton';
 import {
   AGE_BANDS,
@@ -97,9 +97,10 @@ import {
  * firestore-snippets/exchange-memory-review.rules.txt (repo
  * firestore.rules is intentionally NOT touched).
  * AI Review's "This week" chart now shows real per-day counts
- * (usage-week action); the Pro tab is otherwise still demo data. The
- * Profile tab is wired to Firestore for signed-in users (collection
- * `exchange_profiles`).
+ * (usage-week action); the Pro tab is wired to the real subscription
+ * (QA decision 8A — getSubscription + isPremium, Stripe portal for
+ * management). The Profile tab is wired to Firestore for signed-in
+ * users (collection `exchange_profiles`).
  * Header: the shared /logo.png M-ring badge with "Muntuz" (Jay
  * 2026-11-05 — same file the /muntuz landing uses, no new logo), plus a
  * Log in button for signed-out users (/login?next=/exchange; the /login
@@ -552,15 +553,18 @@ export default function ExchangePage() {
   const recognitionRef = useRef<SpeechRecognitionInstance | null>(null);
   const dictationBaseRef = useRef('');
   const [toast, setToast] = useState('');
-  // H-6 / Q9: 가짜 7일 체험 버튼이 없어져 이 값은 더 이상 켜지지
-  // 않는다 (항상 false). 헤더 PRO 배지와 주간 리포트 게이트가 아직
-  // 이 값을 보므로, 실제 구독(getSubscription)으로 바꾸는 전체
-  // 배선은 별도 작업으로 남아 있다. 카운터 분모용 실제 Pro 여부는
-  // 아래 realPro state를 쓴다.
-  const [pro] = useState(false);
+  // QA decision 8A: Pro tab wired to the real subscription. The old
+  // dead `pro` state (always false) is gone. `subscription` holds the
+  // subscriptions/{uid} doc (getSubscription) — plan + renewal date
+  // for the Pro tab. `realPro` (isPremium) is the boolean the header
+  // PRO badge, the weekly-report gate, the Pro tab and the chat
+  // counters all read.
+  const [subscription, setSubscription] = useState<Subscription | null>(null);
+  const [portalLoading, setPortalLoading] = useState(false);
   const [billing, setBilling] = useState<'monthly' | 'biannual' | 'yearly'>('yearly');
   // Q7 / M-4: 오늘 새로 시작한 AI 채팅 수 (표시용 카운터) + 실제
-  // Pro 여부 (카운터 분모 20/50용으로만 읽는다).
+  // Pro 여부. realPro는 카운터 분모(20/50)뿐 아니라 헤더 PRO 배지,
+  // 주간 리포트 게이트, Pro 탭 상태 표시도 함께 본다 (QA decision 8A).
   const [newChatsToday, setNewChatsToday] = useState(0);
   const [realPro, setRealPro] = useState(false);
   const newChatPendingRef = useRef<Set<string>>(new Set());
@@ -1290,6 +1294,28 @@ export default function ExchangePage() {
     window.setTimeout(() => setToast(''), 4000);
   };
 
+  // QA decision 8A: open the Stripe billing portal — same flow as
+  // /profile (POST /api/stripe/portal, uid resolved server-side from
+  // the ID token). Pro users manage / cancel from here.
+  const handleManageSubscription = async () => {
+    if (!user) return;
+    setPortalLoading(true);
+    try {
+      const res = await apiFetch('/api/stripe/portal', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({}),
+      });
+      const { url } = await res.json();
+      if (url) window.location.href = url;
+      else showToast('Could not open billing portal.');
+    } catch {
+      showToast('Could not open billing portal.');
+    } finally {
+      setPortalLoading(false);
+    }
+  };
+
   // Tap a message bubble to copy the whole sentence. Mobile long-press
   // selection picks characters one by one, so whole-message copy is a
   // dedicated action. Only the message text is copied — shared photos
@@ -1552,17 +1578,24 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
   // Q7 / M-4 / M-13: 오늘 새 채팅 수와 실제 Pro 여부를 읽는다 (양쪽
   // host 공통 — 카운터는 localStorage 기준이라 서버 호스트 정책과
   // 무관하다). 로그인 상태가 바뀌면 해당 계정의 카운터로 다시 읽는다.
-  // realPro는 카운터 분모(20/50) 표시용으로만 쓴다.
+  // QA decision 8A: 구독 문서(getSubscription)도 함께 읽어 Pro 탭에
+  // 플랜명 + 갱신일을 표시한다.
   useEffect(() => {
     setNewChatsToday(readNewChatCount());
     if (!user) {
       setRealPro(false);
+      setSubscription(null);
       return;
     }
     let cancelled = false;
     void isPremium(user.uid, user.email)
       .then((v) => {
         if (!cancelled) setRealPro(v);
+      })
+      .catch(() => {});
+    void getSubscription(user.uid)
+      .then((s) => {
+        if (!cancelled) setSubscription(s);
       })
       .catch(() => {});
     return () => {
@@ -2274,7 +2307,7 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
               <span className="hidden text-xs text-slate-500 sm:block">Talk with people. Review with AI.</span>
             </span>
           </button>
-          {pro && <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-800">PRO</span>}
+          {realPro && <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-800">PRO</span>}
           {/* Log in — signed-out users only. The existing /login page
               already honours ?next=, so signing in returns here; the
               global login flow is untouched. */}
@@ -3205,7 +3238,7 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                 </div>
                 <div className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
                   <h3 className="font-bold">Weekly report</h3>
-                  {!pro ? (
+                  {!realPro ? (
                     <div className="mt-2">
                       <p className="text-sm text-slate-500">Your full weekly report, progress trends and weak-area summary.</p>
                       <div className="mt-3 rounded-xl bg-slate-100 p-4 text-center">
@@ -3216,9 +3249,19 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                       </div>
                     </div>
                   ) : (
-                    <p className="mt-2 text-sm text-slate-600">
-                      Unlocked with Pro: speaking confidence up, grammar slips down 30% this week. Keep the streak going!
-                    </p>
+                    // QA decision 8A: gate on the real subscription. The
+                    // old hardcoded "grammar slips down 30%" line was
+                    // invented — show the real week total instead.
+                    (() => {
+                      const total = (weekCounts ?? []).reduce((s, w) => s + w.count, 0);
+                      return (
+                        <p className="mt-2 text-sm text-slate-600">
+                          {total > 0
+                            ? `Unlocked with Pro: ${total} AI message${total === 1 ? '' : 's'} sent this week. Keep the streak going!`
+                            : 'Unlocked with Pro — chat with an AI partner and your weekly trends will appear here.'}
+                        </p>
+                      );
+                    })()
                   )}
                 </div>
                 <div className="rounded-2xl border border-violet-200 bg-violet-50 p-4 shadow-sm">
@@ -3237,6 +3280,43 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
             <section>
               <h2 className="text-xl font-extrabold">MunTalk Exchange Pro</h2>
               <p className="mt-1 text-sm text-slate-500">People talk. AI reviews. Pro removes the limits.</p>
+              {/* QA decision 8A: subscription status from the real
+                  subscriptions/{uid} doc (getSubscription) + isPremium.
+                  No fake trial, no invented dates — the renews date
+                  only shows when the subscription doc actually has one. */}
+              {!user ? (
+                <p className="mt-3 rounded-xl bg-slate-50 px-3 py-2 text-sm text-slate-500">Sign in to see your subscription status.</p>
+              ) : realPro ? (
+                (() => {
+                  const planName = subscription && subscription.planId !== 'free'
+                    ? (PLANS[subscription.planId]?.name ?? 'Pro')
+                    : null;
+                  const endDate = subscription?.currentPeriodEnd
+                    ? new Date(subscription.currentPeriodEnd)
+                    : null;
+                  const endLabel = endDate && !Number.isNaN(endDate.getTime())
+                    ? endDate.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })
+                    : null;
+                  return (
+                    <div className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 shadow-sm sm:p-5">
+                      <p className="font-bold text-amber-900">
+                        ⭐ You&apos;re Pro{planName ? ` — ${planName}` : ''}
+                        {endLabel ? ` · ${subscription?.cancelAtPeriodEnd ? 'Ends' : 'Renews'} ${endLabel}` : ''}
+                      </p>
+                      <button
+                        onClick={handleManageSubscription}
+                        disabled={portalLoading}
+                        className="mt-3 min-h-[44px] rounded-xl bg-white px-4 py-2.5 text-sm font-bold text-amber-900 shadow-sm ring-1 ring-amber-200 transition hover:bg-amber-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 disabled:opacity-50"
+                      >
+                        {portalLoading ? 'Opening…' : 'Manage subscription'}
+                      </button>
+                      <p className="mt-2 text-xs text-amber-800/70">Change plan, update payment method, or cancel — you keep Pro until your billing period ends.</p>
+                    </div>
+                  );
+                })()
+              ) : (
+                <p className="mt-3 rounded-xl bg-slate-50 px-3 py-2 text-sm text-slate-500">You&apos;re on the Free plan — 20 new chats a day, ongoing chats unlimited.</p>
+              )}
               {/* Q6: /pricing 가격과 통일 (월 $9.99, 6개월 $39.99, 1년
                   $59.99). 예전 Pro 탭의 월/연 표기는 삭제. 할인율은
                   /pricing 기준 — 6개월 33%, 1년 50%. */}
