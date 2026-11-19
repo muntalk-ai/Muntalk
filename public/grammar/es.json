@@ -3382,5 +3382,1526 @@
    }
   ],
   "tip": "Think of it as 'The object broke itself onto me' — the item is the grammatical subject, and you are just the innocent bystander!"
+ },
+ {
+  "id": "es-c1-advanced-concessive-clauses",
+  "level": "c1",
+  "category": "clauses",
+  "categoryColor": "#065F46",
+  "emoji": "🔗",
+  "title": "Advanced Concessive Clauses",
+  "subtitle": "Por más que, aun cuando, pese a que — conceding with style",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use por más que / por mucho que + subjunctive to concede against all odds, and aun cuando / pese a que for formal, emphatic concessions.",
+  "structure": {
+   "headers": [
+    "Connector",
+    "Meaning",
+    "Mood",
+    "Spanish Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "por más que + subj.",
+      "no matter how much",
+      "Subjunctive",
+      "Por más que estudie, no aprueba."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "por mucho que + subj.",
+      "however much",
+      "Subjunctive",
+      "Por mucho que lo intentes, no cambiará."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "aun cuando + subj.",
+      "even when / even if",
+      "Subjunctive",
+      "Aun cuando lloviera, saldríamos."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "pese a que + subj./ind.",
+      "despite the fact that",
+      "Both (nuance)",
+      "Pese a que es caro, lo compraremos."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Conceding against the odds",
+    "example": "Por más que practiques, el acento no se pierde en un día.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Formal written concession",
+    "example": "Pese a que la propuesta era sólida, el comité la rechazó.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Hypothetical concession",
+    "example": "Aun cuando tuviera el dinero, no compraría ese coche.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Por más que le expliques la teoría, no la entiende.",
+    "ko": "",
+    "highlight": "Por más que... + subjunctive"
+   },
+   {
+    "en": "Por mucho que corra, nunca llega a tiempo.",
+    "ko": "",
+    "highlight": "Por mucho que corra"
+   },
+   {
+    "en": "Aun cuando me lo pidiera de rodillas, no aceptaría.",
+    "ko": "",
+    "highlight": "Aun cuando... pidiera"
+   },
+   {
+    "en": "Pese a que llueva mañana, la excursión sigue en pie.",
+    "ko": "",
+    "highlight": "Pese a que llueva"
+   },
+   {
+    "en": "Si bien es cierto que cuesta mucho, merece la pena.",
+    "ko": "",
+    "highlight": "Si bien es cierto que"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Por más que estudias, no lo entiendes.",
+    "right": "Por más que estudies, no lo entiendes.",
+    "note": "Por más que always triggers the subjunctive, even for real habits."
+   },
+   {
+    "wrong": "Aun cuando llueve, nos quedamos en casa.",
+    "right": "Aun cuando llueva, nos quedamos en casa.",
+    "note": "With aun cuando + subjunctive the concession is hypothetical; use the indicative only when stating a known fact (aunque llueve = although it is raining)."
+   },
+   {
+    "wrong": "Por mucho que lo intento, no funciona.",
+    "right": "Por mucho que lo intente, no funciona.",
+    "note": "Por mucho que requires the subjunctive; the indicative turns it into a plain statement, not a concession."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Por más que ___ , no consigo recordar su nombre.",
+    "options": [
+     "lo intento",
+     "lo intente",
+     "lo intenté",
+     "lo intentaba"
+    ],
+    "answer": 1,
+    "explanation": "Por más que always takes the subjunctive: intente."
+   },
+   {
+    "question": "Choose the connector meaning 'no matter how much': ___ que lo intentes, no lo lograrás.",
+    "options": [
+     "Por más",
+     "Por lo",
+     "A pesar de",
+     "Si bien"
+    ],
+    "answer": 0,
+    "explanation": "Por más que + subjunctive = no matter how much."
+   },
+   {
+    "question": "Pese a que ___ mucho dinero, decidió no comprar la casa.",
+    "options": [
+     "tiene",
+     "tenía",
+     "tuviera",
+     "tenga"
+    ],
+    "answer": 1,
+    "explanation": "Pese a que + indicative states an admitted fact; the money was real, so use tenía."
+   },
+   {
+    "question": "What does 'Aun cuando me lo pidiera de rodillas, no aceptaría' express?",
+    "options": [
+     "A real past event",
+     "A hypothetical concession",
+     "A direct order",
+     "A future plan"
+    ],
+    "answer": 1,
+    "explanation": "Aun cuando + imperfect subjunctive sets up a hypothetical concession that does not change the outcome."
+   }
+  ],
+  "tip": "Por más que + subjunctive always takes the subjunctive — the concession is the point, not the fact."
+ },
+ {
+  "id": "es-c1-reported-speech-nuances",
+  "level": "c1",
+  "category": "clauses",
+  "categoryColor": "#065F46",
+  "emoji": "💬",
+  "title": "Reported Speech Nuances",
+  "subtitle": "Backshifting, influence verbs, and the conditional of rumour",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "When reporting speech, shift tenses back one step and use the subjunctive after past verbs of influence, request, or advice.",
+  "structure": {
+   "headers": [
+    "Direct speech",
+    "Reported form",
+    "Rule",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "«Ven mañana.»",
+      "Me dijo que viniera al día siguiente.",
+      "Imperative → imperfect subjunctive",
+      "Me dijo que viniera."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "«Estoy cansado.»",
+      "Dijo que estaba cansado.",
+      "Present → imperfect",
+      "Dijo que estaba cansado."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "«Lo haré.»",
+      "Dijo que lo haría.",
+      "Future → conditional",
+      "Dijo que lo haría."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "«He terminado.»",
+      "Dijo que había terminado.",
+      "Present perfect → pluperfect",
+      "Dijo que había terminado."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Reporting a request",
+    "example": "Me pidió que le dejara las llaves en recepción.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Reporting a past promise",
+    "example": "Prometió que nos llamaría en cuanto llegara.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "The conditional of rumour",
+    "example": "Según la prensa, el ministro dimitiría esta semana.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Me dijo que no podía venir porque estaba enfermo.",
+    "ko": "",
+    "highlight": "dijo que no podía"
+   },
+   {
+    "en": "Le pedí que me esperara cinco minutos más.",
+    "ko": "",
+    "highlight": "pedí que me esperara"
+   },
+   {
+    "en": "Nos advirtió de que no saliéramos después de las diez.",
+    "ko": "",
+    "highlight": "advirtió de que no saliéramos"
+   },
+   {
+    "en": "Aseguró que nunca había visto nada parecido.",
+    "ko": "",
+    "highlight": "había visto"
+   },
+   {
+    "en": "El periódico afirma que el equipo ganaría el torneo.",
+    "ko": "",
+    "highlight": "ganaría (conditional of rumour)"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Me dijo que venga mañana.",
+    "right": "Me dijo que viniera mañana.",
+    "note": "After a past reporting verb, the subordinate verb backshifts: venga → viniera."
+   },
+   {
+    "wrong": "Dijo que está cansado.",
+    "right": "Dijo que estaba cansado.",
+    "note": "Present indicative backshifts to the imperfect in reported speech."
+   },
+   {
+    "wrong": "Me pidió que le dejas las llaves.",
+    "right": "Me pidió que le dejara las llaves.",
+    "note": "Verbs of influence in the past take the imperfect subjunctive, not the present indicative."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Direct: «No puedo ayudarte.» Reported: Dijo que no ___ ayudarme.",
+    "options": [
+     "puede",
+     "podía",
+     "pueda",
+     "podrá"
+    ],
+    "answer": 1,
+    "explanation": "Present indicative backshifts to the imperfect: podía."
+   },
+   {
+    "question": "Me pidió que ___ la puerta al salir.",
+    "options": [
+     "cierro",
+     "cierre",
+     "cerrara",
+     "cerré"
+    ],
+    "answer": 2,
+    "explanation": "A past verb of influence (pidió) takes the imperfect subjunctive: cerrara."
+   },
+   {
+    "question": "«Lo terminaré hoy.» → Dijo que lo ___ hoy.",
+    "options": [
+     "termina",
+     "terminaría",
+     "termine",
+     "terminara"
+    ],
+    "answer": 1,
+    "explanation": "Future backshifts to the conditional: terminaría."
+   },
+   {
+    "question": "What does 'Según los rumores, el actor se casaría en junio' imply?",
+    "options": [
+     "The wedding is confirmed",
+     "It is unconfirmed rumour",
+     "He already married",
+     "The actor denied it"
+    ],
+    "answer": 1,
+    "explanation": "The conditional of rumour marks unconfirmed information."
+   }
+  ],
+  "tip": "Backshift one step: present → imperfect, future → conditional, imperative → imperfect subjunctive."
+ },
+ {
+  "id": "es-c1-periphrastic-passive",
+  "level": "c1",
+  "category": "passive",
+  "categoryColor": "#BE185D",
+  "emoji": "🔄",
+  "title": "The Periphrastic Passive",
+  "subtitle": "Ser + participle: the formal passive, with its agent",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Form the passive with ser + past participle, agreeing in gender and number with the subject, and name the agent with por.",
+  "structure": {
+   "headers": [
+    "Element",
+    "Pattern",
+    "Agreement",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Auxiliary",
+      "ser (any tense)",
+      "Conjugated normally",
+      "fue / será / es"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Participle",
+      "past participle",
+      "Agrees with the subject",
+      "escrita / escritos"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Agent",
+      "por + person / thing",
+      "Optional",
+      "por el comité"
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Contrast",
+      "vs. se-passive",
+      "se-passive hides the agent",
+      "Se aprobó la ley."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Formal announcements",
+    "example": "La ley fue aprobada por el Parlamento en 2023.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Emphasising the patient",
+    "example": "El edificio será restaurado el próximo año.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Passive with a modal",
+    "example": "El informe debe ser revisado antes del viernes.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "La novela fue escrita por una autora desconocida.",
+    "ko": "",
+    "highlight": "fue escrita por"
+   },
+   {
+    "en": "Los documentos serán firmados por el director mañana.",
+    "ko": "",
+    "highlight": "serán firmados por"
+   },
+   {
+    "en": "El puente fue construido en menos de dos años.",
+    "ko": "",
+    "highlight": "fue construido"
+   },
+   {
+    "en": "La decisión ha sido tomada por unanimidad.",
+    "ko": "",
+    "highlight": "ha sido tomada"
+   },
+   {
+    "en": "Estas casas fueron diseñadas para resistir terremotos.",
+    "ko": "",
+    "highlight": "fueron diseñadas"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "La carta fue escrito por María.",
+    "right": "La carta fue escrita por María.",
+    "note": "The participle agrees with the subject: la carta is feminine, so escrita."
+   },
+   {
+    "wrong": "Los libros son vendido en esa tienda.",
+    "right": "Los libros son vendidos en esa tienda.",
+    "note": "A plural subject needs a plural participle: vendidos."
+   },
+   {
+    "wrong": "La obra fue pintada de Picasso.",
+    "right": "La obra fue pintada por Picasso.",
+    "note": "The agent of a passive is introduced by por, not de."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "La casa ___ por un arquitecto famoso.",
+    "options": [
+     "fue diseñado",
+     "fue diseñada",
+     "fue diseñar",
+     "fue diseñados"
+    ],
+    "answer": 1,
+    "explanation": "La casa is feminine singular, so the participle is diseñada."
+   },
+   {
+    "question": "Los exámenes ___ corregidos por dos profesores.",
+    "options": [
+     "fueron",
+     "fue",
+     "serán ser",
+     "son sido"
+    ],
+    "answer": 0,
+    "explanation": "Plural subject + past passive: fueron corregidos."
+   },
+   {
+    "question": "Choose the correct agent phrase: La sinfonía fue compuesta ___ Beethoven.",
+    "options": [
+     "de",
+     "por",
+     "con",
+     "a"
+    ],
+    "answer": 1,
+    "explanation": "The agent of a periphrastic passive is introduced by por."
+   },
+   {
+    "question": "Which sentence is a periphrastic passive?",
+    "options": [
+     "Se venden pisos aquí.",
+     "El museo fue inaugurado por la reina.",
+     "Me levanto temprano.",
+     "La puerta se abrió sola."
+    ],
+    "answer": 1,
+    "explanation": "Ser + participle (fue inaugurado) with the agent por la reina."
+   }
+  ],
+  "tip": "If you can name the agent with por, use ser + participle; if the agent is unknown or irrelevant, prefer se."
+ },
+ {
+  "id": "es-c1-advanced-connectors",
+  "level": "c1",
+  "category": "advanced",
+  "categoryColor": "#1D4ED8",
+  "emoji": "🧩",
+  "title": "Advanced Discourse Connectors",
+  "subtitle": "No obstante, en cambio, por consiguiente — arguing like a native",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Link ideas precisely: no obstante and sin embargo concede, en cambio contrasts, por consiguiente concludes, and en vista de que justifies.",
+  "structure": {
+   "headers": [
+    "Connector",
+    "Function",
+    "Register",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "no obstante",
+      "concession (however)",
+      "Formal",
+      "No obstante, seguimos adelante."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "en cambio",
+      "contrast (on the other hand)",
+      "Neutral",
+      "En cambio, ella prefirió quedarse."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "por consiguiente",
+      "consequence (therefore)",
+      "Formal",
+      "Por consiguiente, se suspendió el acto."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "en vista de que",
+      "justification (given that)",
+      "Formal",
+      "En vista de que llueve, saldremos mañana."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Conceding in an essay",
+    "example": "El plan es costoso; no obstante, es necesario.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Contrasting two options",
+    "example": "Madrid es vibrante; en cambio, Sevilla es más tranquila.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Drawing a conclusion",
+    "example": "Las ventas cayeron un 20 %; por consiguiente, habrá recortes.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "No obstante lo anterior, el tribunal desestimó el recurso.",
+    "ko": "",
+    "highlight": "No obstante lo anterior"
+   },
+   {
+    "en": "Sin embargo, los datos más recientes apuntan en otra dirección.",
+    "ko": "",
+    "highlight": "Sin embargo"
+   },
+   {
+    "en": "En cambio, su hermano optó por estudiar en el extranjero.",
+    "ko": "",
+    "highlight": "En cambio"
+   },
+   {
+    "en": "Dicho esto, no podemos ignorar los riesgos.",
+    "ko": "",
+    "highlight": "Dicho esto"
+   },
+   {
+    "en": "A pesar de todo, el equipo logró clasificarse.",
+    "ko": "",
+    "highlight": "A pesar de todo"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "En cambio de eso, prefiero quedarme.",
+    "right": "En cambio, prefiero quedarme.",
+    "note": "En cambio stands alone; do not add de eso."
+   },
+   {
+    "wrong": "Por consiguiente de las lluvias, se canceló el partido.",
+    "right": "Como consecuencia de las lluvias, se canceló el partido.",
+    "note": "Por consiguiente never takes de; use como consecuencia de + noun."
+   },
+   {
+    "wrong": "No obstante, pero seguimos.",
+    "right": "No obstante, seguimos.",
+    "note": "No obstante already means 'however' — never pair it with pero."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "El informe es largo; ___ , merece la pena leerlo.",
+    "options": [
+     "no obstante",
+     "en cambio",
+     "por consiguiente",
+     "en vista de que"
+    ],
+    "answer": 0,
+    "explanation": "No obstante concedes: long, but worth reading."
+   },
+   {
+    "question": "Which connector draws a conclusion?",
+    "options": [
+     "En cambio",
+     "Sin embargo",
+     "Por consiguiente",
+     "A pesar de todo"
+    ],
+    "answer": 2,
+    "explanation": "Por consiguiente = therefore; it concludes."
+   },
+   {
+    "question": "Las carreteras están cortadas; ___ , el concierto se aplaza.",
+    "options": [
+     "en cambio",
+     "por consiguiente",
+     "no obstante",
+     "dicho esto"
+    ],
+    "answer": 1,
+    "explanation": "Closed roads → postponement is a consequence: por consiguiente."
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "No obstante, pero lo intentaremos.",
+     "En cambio de eso, me quedo.",
+     "En vista de que nieva, saldremos mañana.",
+     "Por consiguiente de la lluvia, nos vamos."
+    ],
+    "answer": 2,
+    "explanation": "En vista de que + clause justifies a decision; the others misuse the connector."
+   }
+  ],
+  "tip": "Never stack two contrast markers: no obstante already carries the 'but' — drop the pero."
+ },
+ {
+  "id": "es-c1-indefinite-relatives",
+  "level": "c1",
+  "category": "clauses",
+  "categoryColor": "#065F46",
+  "emoji": "🔍",
+  "title": "Indefinite Relatives: quienquiera, cualquiera, lo que",
+  "subtitle": "Whoever, whatever, whichever — relatives without a fixed referent",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Use quienquiera que / cualquiera que + subjunctive for an unspecified person or thing, and lo que for 'that which / what' as a noun clause.",
+  "structure": {
+   "headers": [
+    "Form",
+    "Meaning",
+    "Mood",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "quienquiera que",
+      "whoever",
+      "Subjunctive",
+      "Quienquiera que llame, dile que no estoy."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "cualquiera que",
+      "whichever / any",
+      "Subjunctive",
+      "Cualquiera que sea tu decisión, la respeto."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "lo que",
+      "what / that which",
+      "Indicative",
+      "Lo que dices es verdad."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "sea quien sea",
+      "whoever it may be",
+      "Subjunctive",
+      "Sea quien sea, no abras la puerta."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "Leaving the door open to anyone",
+    "example": "Quienquiera que venga, será bien recibido.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Accepting any outcome",
+    "example": "Cualquiera que sea el resultado, lo aceptaremos.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Emphatic 'what'",
+    "example": "Lo que más me molesta es la falta de respeto.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Quienquiera que lo haya hecho, tendrá que responder.",
+    "ko": "",
+    "highlight": "Quienquiera que lo haya hecho"
+   },
+   {
+    "en": "Cualquiera que sea el motivo, no hay excusa.",
+    "ko": "",
+    "highlight": "Cualquiera que sea"
+   },
+   {
+    "en": "Lo que no entiendo es por qué no avisó.",
+    "ko": "",
+    "highlight": "Lo que no entiendo"
+   },
+   {
+    "en": "El que llegue primero, que encienda las luces.",
+    "ko": "",
+    "highlight": "El que llegue primero"
+   },
+   {
+    "en": "Sea como sea, terminaremos antes del viernes.",
+    "ko": "",
+    "highlight": "Sea como sea"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Quienquiera que llama, dile que no estoy.",
+    "right": "Quienquiera que llame, dile que no estoy.",
+    "note": "Indefinite relatives with -quiera always take the subjunctive."
+   },
+   {
+    "wrong": "Cualquiera que es tu decisión, la respeto.",
+    "right": "Cualquiera que sea tu decisión, la respeto.",
+    "note": "Cualquiera que requires the subjunctive: sea, not es."
+   },
+   {
+    "wrong": "Lo que más me molesta son la falta de respeto.",
+    "right": "Lo que más me molesta es la falta de respeto.",
+    "note": "Lo que is singular, so the verb stays singular: es."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "___ que llame a esta hora, no contestes.",
+    "options": [
+     "Quien",
+     "Quienquiera",
+     "El que",
+     "Lo que"
+    ],
+    "answer": 1,
+    "explanation": "An unspecified caller: quienquiera que + subjunctive."
+   },
+   {
+    "question": "Cualquiera que ___ tu excusa, no te creo.",
+    "options": [
+     "es",
+     "sea",
+     "son",
+     "era"
+    ],
+    "answer": 1,
+    "explanation": "Cualquiera que takes the subjunctive: sea."
+   },
+   {
+    "question": "___ más me sorprende es su calma.",
+    "options": [
+     "El que",
+     "Quien",
+     "Lo que",
+     "Cualquiera"
+    ],
+    "answer": 2,
+    "explanation": "Lo que = 'what / that which' as a noun clause."
+   },
+   {
+    "question": "What does 'Sea quien sea, no abras' mean?",
+    "options": [
+     "Open only for friends",
+     "Whoever it is, don't open",
+     "If you know them, open",
+     "Open when it rings"
+    ],
+    "answer": 1,
+    "explanation": "Sea quien sea = whoever it may be."
+   }
+  ],
+  "tip": "Quienquiera, cualquiera and sea...sea always take the subjunctive; lo que takes the indicative."
+ },
+ {
+  "id": "es-c1-sequence-of-tenses-subjunctive",
+  "level": "c1",
+  "category": "tenses",
+  "categoryColor": "#2563EB",
+  "emoji": "⏳",
+  "title": "Sequence of Tenses with the Subjunctive",
+  "subtitle": "Matching the subjunctive tense to the main clause",
+  "color": "#1D4ED8",
+  "bg": "#EFF6FF",
+  "keyPoint": "Present main verb → present subjunctive; past main verb → imperfect subjunctive; past main verb + earlier action → pluperfect subjunctive.",
+  "structure": {
+   "headers": [
+    "Main clause",
+    "Subordinate action",
+    "Subjunctive tense",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Present (quiero)",
+      "Same time / future",
+      "Present subjunctive",
+      "Quiero que vengas."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past (quería)",
+      "Same time / future",
+      "Imperfect subjunctive",
+      "Quería que vinieras."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Past (quería)",
+      "Before the main verb",
+      "Pluperfect subjunctive",
+      "Quería que hubieras venido."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Present perfect",
+      "Same time / future",
+      "Present subjunctive",
+      "He pedido que vengas."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#1D4ED8",
+    "label": "A present wish",
+    "example": "Espero que apruebes el examen.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "A past wish about the future",
+    "example": "Esperaba que aprobaras el examen.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "A past wish about a missed chance",
+    "example": "Esperaba que hubieras aprobado el examen.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "Me alegro de que estés aquí.",
+    "ko": "",
+    "highlight": "Me alegro de que estés"
+   },
+   {
+    "en": "Me alegré de que estuvieras aquí.",
+    "ko": "",
+    "highlight": "Me alegré de que estuvieras"
+   },
+   {
+    "en": "Ojalá hubieras venido ayer; te habría encantado.",
+    "ko": "",
+    "highlight": "Ojalá hubieras venido"
+   },
+   {
+    "en": "Dudaba de que fuera verdad, pero lo era.",
+    "ko": "",
+    "highlight": "Dudaba de que fuera"
+   },
+   {
+    "en": "No creo que haya llegado todavía.",
+    "ko": "",
+    "highlight": "No creo que haya llegado"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Quería que vengas mañana.",
+    "right": "Quería que vinieras mañana.",
+    "note": "A past main verb (quería) requires the imperfect subjunctive, not the present."
+   },
+   {
+    "wrong": "Esperaba que hubieras venido mañana.",
+    "right": "Esperaba que vinieras mañana.",
+    "note": "The pluperfect subjunctive is for actions before the main verb; a future action takes the imperfect subjunctive."
+   },
+   {
+    "wrong": "Espero que vinieras mañana.",
+    "right": "Espero que vengas mañana.",
+    "note": "A present main verb (espero) takes the present subjunctive for a future action."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Quiero que ___ a la reunión.",
+    "options": [
+     "vinieras",
+     "vengas",
+     "hubieras venido",
+     "venías"
+    ],
+    "answer": 1,
+    "explanation": "Present main verb → present subjunctive: vengas."
+   },
+   {
+    "question": "Quería que ___ a la reunión.",
+    "options": [
+     "vengas",
+     "vinieras",
+     "hubieras venido",
+     "vienes"
+    ],
+    "answer": 1,
+    "explanation": "Past main verb → imperfect subjunctive: vinieras."
+   },
+   {
+    "question": "Lamentaba que no ___ la semana pasada.",
+    "options": [
+     "llegaras",
+     "llegues",
+     "hayas llegado",
+     "hubieras llegado"
+    ],
+    "answer": 3,
+    "explanation": "Last week is before the past main verb, so the pluperfect subjunctive: hubieras llegado."
+   },
+   {
+    "question": "Which pair follows the sequence of tenses?",
+    "options": [
+     "Espero que viniera.",
+     "Quería que vengas.",
+     "Me alegraba de que estuvieras.",
+     "Dudo que fuera."
+    ],
+    "answer": 2,
+    "explanation": "Past main verb + imperfect subjunctive. 'Dudo que fuera' mismatches present + imperfect."
+   }
+  ],
+  "tip": "Anchor the subjunctive tense to the main verb: present → present, past → imperfect, earlier past → pluperfect."
+ },
+ {
+  "id": "es-c2-literary-tenses",
+  "level": "c2",
+  "category": "tenses",
+  "categoryColor": "#2563EB",
+  "emoji": "📜",
+  "title": "Literary Tenses: Future Subjunctive & Pretérito Anterior",
+  "subtitle": "Cantare, hubiere cantado, hube cantado — the tenses of law and literature",
+  "color": "#0F172A",
+  "bg": "#F8FAFC",
+  "keyPoint": "The future subjunctive (cantare) survives in legal and literary Spanish, and the pretérito anterior (hube cantado) marks an action completed immediately before another past action.",
+  "structure": {
+   "headers": [
+    "Tense",
+    "Form",
+    "Where it lives",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Future subjunctive",
+      "cantare / hubiere cantado",
+      "Legal texts, proverbs",
+      "Si hubiere lugar..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "Pretérito anterior",
+      "hube + participle",
+      "Literary narrative",
+      "Apenas hubo llegado..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "-ra as conditional",
+      "Si lo supiera, te lo diría",
+      "Literary / formal",
+      "Si yo fuera rico..."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "Future perfect subjunctive",
+      "hubiere + participle",
+      "Legal conditions",
+      "Quien hubiere cometido..."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0F172A",
+    "label": "A legal condition",
+    "example": "Quien hubiere cometido el delito será sancionado.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Literary sequence",
+    "example": "Apenas hubo salido el sol, partieron hacia el norte.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "A literary conditional",
+    "example": "Si el destino lo quisiera, nos volveríamos a ver.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "El que fuere hallado culpable pagará la multa.",
+    "ko": "",
+    "highlight": "fuere hallado"
+   },
+   {
+    "en": "Apenas hubo terminado la cena, se marchó sin despedirse.",
+    "ko": "",
+    "highlight": "Apenas hubo terminado"
+   },
+   {
+    "en": "De haberlo sabido, habría actuado de otro modo.",
+    "ko": "",
+    "highlight": "De haberlo sabido"
+   },
+   {
+    "en": "Venga lo que viniere, estaremos preparados.",
+    "ko": "",
+    "highlight": "viniere"
+   },
+   {
+    "en": "Quien hubiere leído el pliego, conocerá las condiciones.",
+    "ko": "",
+    "highlight": "hubiere leído"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Quien fuera hallado culpable pagará la multa.",
+    "right": "Quien fuere hallado culpable pagará la multa.",
+    "note": "Legal Spanish keeps the future subjunctive fuere; fuera is the imperfect subjunctive and changes the meaning here."
+   },
+   {
+    "wrong": "Si lo supiera, te lo diré.",
+    "right": "Si lo supiera, te lo diría.",
+    "note": "The -ra imperfect subjunctive in the if-clause pairs with the conditional in the result clause, not the future."
+   },
+   {
+    "wrong": "Hube llegado a casa cuando llamó.",
+    "right": "Había llegado a casa cuando llamó.",
+    "note": "The pretérito anterior (hube llegado) is literary and needs an immediate-sequence marker like apenas; in everyday speech use the pluperfect había llegado."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which sentence uses the future subjunctive?",
+    "options": [
+     "Si llueve, nos quedamos.",
+     "Quien fuere elegido, tomará posesión.",
+     "Si fuera rico, viajaría.",
+     "Cuando llegues, llama."
+    ],
+    "answer": 1,
+    "explanation": "Fuere is the future subjunctive, used in legal Spanish."
+   },
+   {
+    "question": "In literary narrative, 'apenas' pairs with the pretérito anterior: Apenas ___ amanecido, partieron.",
+    "options": [
+     "hubo",
+     "había",
+     "ha",
+     "haya"
+    ],
+    "answer": 0,
+    "explanation": "Literary sequence uses hube + participle: hubo amanecido."
+   },
+   {
+    "question": "What does 'Venga lo que viniere' mean?",
+    "options": [
+     "Come when you can",
+     "Come what may",
+     "Go wherever you like",
+     "Whatever comes, eat"
+    ],
+    "answer": 1,
+    "explanation": "Venga lo que viniere = come what may, with the future subjunctive viniere."
+   },
+   {
+    "question": "The pretérito anterior is used mainly in...",
+    "options": [
+     "everyday conversation",
+     "legal and literary writing",
+     "text messages",
+     "children's speech"
+    ],
+    "answer": 1,
+    "explanation": "Hube cantado is a literary tense; everyday speech uses the pluperfect."
+   }
+  ],
+  "tip": "The future subjunctive and pretérito anterior are recognition skills: you will read them far more than you will write them."
+ },
+ {
+  "id": "es-c2-formal-register-and-style",
+  "level": "c2",
+  "category": "advanced",
+  "categoryColor": "#1D4ED8",
+  "emoji": "🎩",
+  "title": "Formal Register & Style",
+  "subtitle": "Cuyo, cabe, se ruega — writing and speaking at the highest register",
+  "color": "#0F172A",
+  "bg": "#F8FAFC",
+  "keyPoint": "Formal Spanish prefers cuyo for possession, cabe + infinitive for possibility, nominalisations over long verb chains, and impersonal se for public notices.",
+  "structure": {
+   "headers": [
+    "Formal form",
+    "Plain equivalent",
+    "Use",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "cuyo / cuya",
+      "de + person (que su)",
+      "Relative possession",
+      "El autor, cuya obra..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "cabe + infinitive",
+      "es posible + infinitive",
+      "Formal possibility",
+      "Cabe destacar que..."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "se ruega / se hace saber",
+      "por favor / aviso",
+      "Public notices",
+      "Se ruega silencio."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "en virtud de / a tenor de",
+      "según",
+      "Legal justification",
+      "En virtud del artículo 5..."
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0F172A",
+    "label": "Academic writing",
+    "example": "Cabe señalar que los datos no son concluyentes.",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "A formal notice",
+    "example": "Se hace saber a los vecinos que las obras comenzarán el lunes.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Legal reference",
+    "example": "A tenor de lo dispuesto en la ley, se procede a la sanción.",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "La profesora, cuya investigación es pionera, dará la conferencia inaugural.",
+    "ko": "",
+    "highlight": "cuya investigación"
+   },
+   {
+    "en": "Cabe esperar que la situación mejore en los próximos meses.",
+    "ko": "",
+    "highlight": "Cabe esperar que"
+   },
+   {
+    "en": "Se ruega a los asistentes que apaguen los teléfonos móviles.",
+    "ko": "",
+    "highlight": "Se ruega a los asistentes que"
+   },
+   {
+    "en": "En virtud de lo anterior, se acuerda suspender la sesión.",
+    "ko": "",
+    "highlight": "En virtud de lo anterior"
+   },
+   {
+    "en": "No es de extrañar que el proyecto haya generado debate.",
+    "ko": "",
+    "highlight": "No es de extrañar que"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "El autor que su obra ganó el premio...",
+    "right": "El autor, cuya obra ganó el premio,...",
+    "note": "For formal relative possession use cuyo, not que su."
+   },
+   {
+    "wrong": "Cabe que destaquemos que los datos son claros.",
+    "right": "Cabe destacar que los datos son claros.",
+    "note": "Cabe takes an infinitive directly (cabe destacar), never cabe que + subjunctive."
+   },
+   {
+    "wrong": "Se ruega silencio, por favor.",
+    "right": "Se ruega silencio.",
+    "note": "Se ruega is already a formal request; adding por favor is redundant and lowers the register."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the formal relative: El juez, ___ sentencia se publicó ayer, ...",
+    "options": [
+     "que su",
+     "cuya",
+     "de quien su",
+     "el cual su"
+    ],
+    "answer": 1,
+    "explanation": "Formal relative possession uses cuya."
+   },
+   {
+    "question": "___ destacar que el informe llega con retraso.",
+    "options": [
+     "Cabe",
+     "Puede",
+     "Es posible a",
+     "Cabe que"
+    ],
+    "answer": 0,
+    "explanation": "Cabe + infinitive: cabe destacar."
+   },
+   {
+    "question": "Which is a formal public notice?",
+    "options": [
+     "Por favor, callaos.",
+     "Se ruega silencio.",
+     "¡Silencio, por favor!",
+     "Callad, porfa."
+    ],
+    "answer": 1,
+    "explanation": "Se ruega silencio is the standard formal notice."
+   },
+   {
+    "question": "What does 'a tenor de lo dispuesto' mean?",
+    "options": [
+     "Against the rules",
+     "According to what is set out",
+     "Despite the law",
+     "In defiance of"
+    ],
+    "answer": 1,
+    "explanation": "A tenor de = according to / in accordance with."
+   }
+  ],
+  "tip": "Cuyo, cabe and se ruega are the fastest upgrade from correct Spanish to formal Spanish."
+ },
+ {
+  "id": "es-c2-idiomatic-subjunctive",
+  "level": "c2",
+  "category": "advanced",
+  "categoryColor": "#1D4ED8",
+  "emoji": "🎭",
+  "title": "The Idiomatic Subjunctive",
+  "subtitle": "¡Ojalá!, sea como sea, ni que — subjunctive in fixed expressions",
+  "color": "#0F172A",
+  "bg": "#F8FAFC",
+  "keyPoint": "Many set expressions freeze the subjunctive: ojalá + subjunctive for wishes, sea/pase/digas lo que... for 'whatever', and ni que + subjunctive for ironic denial.",
+  "structure": {
+   "headers": [
+    "Expression",
+    "Meaning",
+    "Pattern",
+    "Example"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "¡Ojalá (que)!",
+      "I hope / If only",
+      "Ojalá + subjunctive",
+      "¡Ojalá llueva!"
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "sea / pase lo que...",
+      "whatever happens",
+      "Sea lo que sea",
+      "Sea lo que sea, seguiré."
+     ],
+     "highlight": true
+    },
+    {
+     "cells": [
+      "digas lo que digas",
+      "whatever you say",
+      "Digas lo que digas",
+      "Digas lo que digas, no cambio de opinión."
+     ],
+     "highlight": false
+    },
+    {
+     "cells": [
+      "ni que + subj.",
+      "as if (ironic denial)",
+      "Ni que fuera...",
+      "¡Ni que fuera yo rico!"
+     ],
+     "highlight": false
+    }
+   ]
+  },
+  "useCases": [
+   {
+    "color": "#0F172A",
+    "label": "Wishing hard",
+    "example": "¡Ojalá que apruebe el examen de una vez!",
+    "translation": ""
+   },
+   {
+    "color": "#DC2626",
+    "label": "Shrugging off the outcome",
+    "example": "Pase lo que pase, mañana estaré allí.",
+    "translation": ""
+   },
+   {
+    "color": "#059669",
+    "label": "Ironic pushback",
+    "example": "¡Ni que tuvieras ochenta años, abuelo!",
+    "translation": ""
+   }
+  ],
+  "examples": [
+   {
+    "en": "¡Ojalá hubiéramos salido antes; nos habríamos ahorrado el atasco!",
+    "ko": "",
+    "highlight": "¡Ojalá hubiéramos salido!"
+   },
+   {
+    "en": "Sea como sea, hay que entregar el informe el lunes.",
+    "ko": "",
+    "highlight": "Sea como sea"
+   },
+   {
+    "en": "Vayas donde vayas, llévate el paraguas.",
+    "ko": "",
+    "highlight": "Vayas donde vayas"
+   },
+   {
+    "en": "¡Ni que fuera el fin del mundo! Solo es un examen.",
+    "ko": "",
+    "highlight": "¡Ni que fuera!"
+   },
+   {
+    "en": "No sea que llueva, mejor coge el chubasquero.",
+    "ko": "",
+    "highlight": "No sea que llueva"
+   }
+  ],
+  "mistakes": [
+   {
+    "wrong": "Ojalá que apruebas el examen.",
+    "right": "Ojalá que apruebes el examen.",
+    "note": "Ojalá always takes the subjunctive, even for likely wishes."
+   },
+   {
+    "wrong": "Digas lo que dices, no te escucho.",
+    "right": "Digas lo que digas, no te escucho.",
+    "note": "The fixed pattern repeats the subjunctive: digas lo que digas, not digas lo que dices."
+   },
+   {
+    "wrong": "Ni que fuera rico, me compraría un yate.",
+    "right": "Si fuera rico, me compraría un yate.",
+    "note": "Ni que + subjunctive is an ironic retort ('as if I were rich!'), not a conditional — use si + imperfect subjunctive for hypotheticals."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "¡Ojalá que ___ buen tiempo mañana!",
+    "options": [
+     "hace",
+     "haga",
+     "hará",
+     "hizo"
+    ],
+    "answer": 1,
+    "explanation": "Ojalá always takes the subjunctive: haga."
+   },
+   {
+    "question": "___ lo que ___, no pienso disculparme.",
+    "options": [
+     "Dices / dices",
+     "Digas / digas",
+     "Dices / digas",
+     "Digas / dices"
+    ],
+    "answer": 1,
+    "explanation": "The fixed pattern repeats the subjunctive: digas lo que digas."
+   },
+   {
+    "question": "What does '¡Ni que fuera el fin del mundo!' express?",
+    "options": [
+     "Fear of the apocalypse",
+     "Ironic dismissal — it's not that serious",
+     "A prediction",
+     "A wish"
+    ],
+    "answer": 1,
+    "explanation": "Ni que + subjunctive is an ironic retort: as if it were the end of the world!"
+   },
+   {
+    "question": "Choose the correct fixed expression for 'whatever happens'.",
+    "options": [
+     "Pase lo que pasa",
+     "Pase lo que pase",
+     "Pasa lo que pase",
+     "Pase lo que pasará"
+    ],
+    "answer": 1,
+    "explanation": "The frozen form is pase lo que pase, subjunctive in both halves."
+   }
+  ],
+  "tip": "Learn these expressions whole — the subjunctive inside them is frozen, not a rule to derive."
  }
 ]
