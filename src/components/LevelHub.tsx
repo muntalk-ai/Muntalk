@@ -854,9 +854,13 @@ export default function LevelHub() {
             <span style={{ fontWeight: 800, fontSize: 12, color: '#2563EB' }}>{learnLangInfo?.label ?? 'English'}</span>
             <span style={{ fontSize: 10, color: '#9CA3AF' }}>▾</span>
           </button>
+          {/* D18 (11-16 guest QA): streak/XP pills are account progress — hide
+              them for guests instead of showing 0-day streak / 0 XP. */}
+          {user && (<>
           <div className="mt-nav-streak-xp" style={styles.navStreak}><span>🔥</span><span style={{ fontWeight: 800, color: '#EA580C', fontSize: 13 }}>{streak} {streak === 1 ? 'day' : 'days'}</span></div>
           <div className="mt-nav-streak-xp" style={{...styles.navStreak, background:'#EFF6FF'}} title="Streak Freeze — protects your streak when you miss a day. +1 every 7-day streak (max 5)"><span>🧊</span><span style={{ fontWeight: 800, color: '#2563EB', fontSize: 13 }}>{freezes}</span></div>
           <div className="mt-nav-streak-xp" style={styles.navXp}><span>⭐</span><span style={{ fontWeight: 800, color: '#2563EB', fontSize: 13 }}>{xp} XP</span></div>
+          </>)}
           {/* 하트바 + Upgrade — auth 로딩 완료 후에만 표시 */}
           {!authLoading && effPlanId === 'free' && !isAdmin && user && (
             <button className="mt-nav-upgrade" onClick={() => router.push('/pricing')}
@@ -955,6 +959,8 @@ export default function LevelHub() {
               <span style={{ fontWeight: 800, fontSize: 12, color: '#2563EB' }}>{learnLangInfo?.label ?? 'English'}</span>
               <span style={{ fontSize: 10, color: '#9CA3AF' }}>▾</span>
             </button>
+            {/* D18: guest mobile menu — hide the 0 streak / 0 XP pills. */}
+            {user && (<>
             <div style={{ display: 'flex', alignItems: 'center', gap: 4, background: '#FFF7ED',
               padding: '5px 10px', borderRadius: 16, fontSize: 13, fontWeight: 800, color: '#EA580C' }}>
               🔥 {streak}
@@ -963,6 +969,7 @@ export default function LevelHub() {
               padding: '5px 10px', borderRadius: 16, fontSize: 13, fontWeight: 800, color: '#2563EB' }}>
               ⭐ {xp}
             </div>
+            </>)}
           </div>
 
           {/* 학습 코어 4개는 메인 화면 탭에 이미 있어 햄버거에서 제거 (2026-09-26) */}
@@ -1356,7 +1363,10 @@ export default function LevelHub() {
       </div>
 
       {/* -- Free users: 학습 CTA (paywall 배너 대신) -- */}
-      {isFreeUser && (
+      {/* D18 (11-16 guest QA): guests saw "Continue learning" / "Today's review"
+          with nothing to continue or review. Logged-in free users keep this CTA;
+          guests get the welcome variant below instead. */}
+      {isFreeUser && user && (
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px 8px' }}>
           <div style={{ borderRadius: 20, background: 'linear-gradient(135deg, #EFF6FF, #F0FDF4)', border: '2px solid #BFDBFE', padding: '20px 24px', display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
             <div style={{ fontSize: 40, flexShrink: 0 }}>🚀</div>
@@ -1376,6 +1386,34 @@ export default function LevelHub() {
               <button onClick={() => router.push('/lingua/review')}
                 style={{ padding: '10px 20px', borderRadius: 12, background: '#fff', color: '#0F172A', fontSize: 13, fontWeight: 800, border: '1.5px solid #E2E8F0', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
                 🔁 Today&apos;s review
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* -- Guests: welcome/onboarding variant (D18) — "Start your first lesson"
+          instead of account-style "Continue learning" / "Today's review". -- */}
+      {!authLoading && !user && (
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px 8px' }}>
+          <div style={{ borderRadius: 20, background: 'linear-gradient(135deg, #EEF2FF, #F0FDF4)', border: '2px solid #C7D2FE', padding: '20px 24px', display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
+            <div style={{ fontSize: 40, flexShrink: 0 }}>🌱</div>
+            <div style={{ flex: 1, minWidth: 200 }}>
+              <div style={{ fontSize: 16, fontWeight: 900, color: '#0F172A', marginBottom: 3, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+                New here? Start your first lesson
+              </div>
+              <div style={{ fontSize: 12, color: '#64748B', fontWeight: 600, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+                No sign-up needed to try — your progress is saved on this device. Create a free account to keep it forever.
+              </div>
+            </div>
+            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+              <button onClick={() => router.push(`/lingua/starter?lang=${learnLang}&subLang=${nativeLang}`)}
+                style={{ padding: '10px 20px', borderRadius: 12, background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 13, fontWeight: 800, border: 'none', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+                🌱 Start your first lesson
+              </button>
+              <button onClick={() => setShowPlacementModal(true)}
+                style={{ padding: '10px 20px', borderRadius: 12, background: '#fff', color: '#0F172A', fontSize: 13, fontWeight: 800, border: '1.5px solid #E2E8F0', cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+                🎯 Free Placement Test
               </button>
             </div>
           </div>
@@ -1447,20 +1485,37 @@ export default function LevelHub() {
       </div>
       </>)}
       {/* -- Current Level -- */}
-      <section style={styles.currentSection}>
-        <p style={styles.currentSub}>YOUR LEARNING PATH</p>
-        <h2 style={styles.currentTitle}>
-          You&apos;re at{' '}
-          <span style={{ color: currentLevel.accent }}>{currentLevel.badge} {currentLevel.label}</span>
-        </h2>
-        <p style={styles.currentDesc}>{currentLevel.desc}</p>
-        <div style={styles.xpBarWrap}>
-          <div style={styles.xpBar}>
-            <div style={{ ...styles.xpBarFill, width: `${Math.min(100,(xp/9999)*100)}%`, background: currentLevel.accent }} />
+      {/* D18 (11-16 guest QA): guests saw account-style progress filled with
+          zeros ("You're at 🌱 A1", "0 / 9,999 XP"). Guests get a welcome /
+          onboarding variant instead; the XP bar stays for signed-in users. */}
+      {!authLoading && !user ? (
+        <section style={styles.currentSection}>
+          <p style={styles.currentSub}>YOUR LEARNING PATH</p>
+          <h2 style={styles.currentTitle}>
+            Start your first lesson 🌱
+          </h2>
+          <p style={styles.currentDesc}>Pick a level below, or take the free placement test to find yours. No sign-up needed to try — your progress is saved on this device.</p>
+          <button onClick={() => router.push(`/lingua/starter?lang=${learnLang}&subLang=${nativeLang}`)}
+            style={{ padding: '13px 26px', borderRadius: 14, background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 14, fontWeight: 900, border: 'none', cursor: 'pointer', boxShadow: '0 4px 14px rgba(99,102,241,0.35)', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+            🌱 Start your first lesson
+          </button>
+        </section>
+      ) : (
+        <section style={styles.currentSection}>
+          <p style={styles.currentSub}>YOUR LEARNING PATH</p>
+          <h2 style={styles.currentTitle}>
+            You&apos;re at{' '}
+            <span style={{ color: currentLevel.accent }}>{currentLevel.badge} {currentLevel.label}</span>
+          </h2>
+          <p style={styles.currentDesc}>{currentLevel.desc}</p>
+          <div style={styles.xpBarWrap}>
+            <div style={styles.xpBar}>
+              <div style={{ ...styles.xpBarFill, width: `${Math.min(100,(xp/9999)*100)}%`, background: currentLevel.accent }} />
+            </div>
+            <span style={styles.xpLabel}>{xp} / 9,999 XP</span>
           </div>
-          <span style={styles.xpLabel}>{xp} / 9,999 XP</span>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* -- Level Grid -- */}
       <section style={styles.grid}>
