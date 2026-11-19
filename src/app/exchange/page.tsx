@@ -413,9 +413,38 @@ const GREETING_BY_TARGET: Record<string, (name: string) => string> = {
   Portuguese: (name) => `Olá! Eu sou ${name}, sua parceira de prática com IA. Vamos praticar português juntos — o que você fez hoje?`,
 };
 
-function greetingForChat(p: AiPartner, target: string): string {
+// ── Bilingual opening (Jay 2026-11-18): the first message opens in the
+// learner's native language, then the target-language greeting, then asks
+// (in the native language) which language to continue in. The partner
+// already replies in the language the learner writes in (exchange-ai-chat
+// SYSTEM_PROMPT), so the learner's answer steers the rest of the chat.
+// Native and target are both picked from the same 5-language list in the
+// profile setup; anything else falls back to the target-only greeting.
+// The native hello lines are the first sentences of the approved
+// GREETING_BY_TARGET copy, so no new copy was invented here.
+const NATIVE_HELLO: Record<string, (name: string) => string> = {
+  English: (name) => `Hi! I'm ${name}, your AI practice partner.`,
+  Korean: (name) => `안녕하세요! 저는 ${name}, AI 연습 파트너예요.`,
+  Spanish: (name) => `¡Hola! Soy ${name}, tu compañera de práctica con IA.`,
+  Japanese: (name) => `こんにちは！${name}です。AI練習パートナーです。`,
+  Portuguese: (name) => `Olá! Eu sou ${name}, sua parceira de prática com IA.`,
+};
+
+const ASK_LANGUAGE: Record<string, string> = {
+  English: 'Which language would you like to continue in?',
+  Korean: '무슨 언어로 소통하고싶어세요?',
+  Spanish: '¿En qué idioma te gustaría continuar?',
+  Japanese: 'どの言語で続けたいですか？',
+  Portuguese: 'Em que idioma você gostaria de continuar?',
+};
+
+function greetingForChat(p: AiPartner, target: string, native?: string): string {
   const build = GREETING_BY_TARGET[target];
-  return build ? build(p.name) : p.greeting;
+  const targetGreeting = build ? build(p.name) : p.greeting;
+  const hello = native ? NATIVE_HELLO[native] : undefined;
+  const ask = native ? ASK_LANGUAGE[native] : undefined;
+  if (!hello || !ask || native === target) return targetGreeting;
+  return `${hello(p.name)}\n${targetGreeting}\n${ask}`;
 }
 
 // ── H-7: Web Speech API dictation ──────────────────────────────────────
@@ -1551,8 +1580,11 @@ export default function ExchangePage() {
               // M-5 / M-13: the opening line is built from the
               // learner's target language (greetingForChat) on both
               // hosts; the partner's static greeting is only the
-              // fallback for unknown target languages.
-              messages: [{ id: gid, from: 'partner', text: greetingForChat(p, targetLang), ai: true, at: Date.now() }],
+              // fallback for unknown target languages. Jay 2026-11-18:
+              // bilingual — a native-language hello line first, then
+              // the target greeting, then the native-language "which
+              // language?" question (native === target → target only).
+              messages: [{ id: gid, from: 'partner', text: greetingForChat(p, targetLang, nativeLang), ai: true, at: Date.now() }],
             },
           ]
     );
