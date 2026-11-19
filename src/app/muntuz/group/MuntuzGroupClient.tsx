@@ -17,6 +17,17 @@ export default function MuntuzGroupClient() {
   const [epFilter, setEpFilter] = useState('All');
   const [showMv, setShowMv] = useState(false);
   const mvRef = useRef<HTMLVideoElement>(null);
+  const mvDialogRef = useRef<HTMLDivElement>(null);
+  const [mvExpanded, setMvExpanded] = useState(false);
+  const [mvFullscreen, setMvFullscreen] = useState(false);
+
+  // Keep the fullscreen toggle label in sync even when the user exits
+  // native fullscreen via Esc instead of the button.
+  useEffect(() => {
+    const onChange = () => setMvFullscreen(!!document.fullscreenElement);
+    document.addEventListener('fullscreenchange', onChange);
+    return () => document.removeEventListener('fullscreenchange', onChange);
+  }, []);
 
   // QA 11-16 Muntuz D12: the landing "Watch the 'Say Hi' MV" button links
   // here with ?mv=1 — open the MV dialog (autoPlay) on arrival instead of
@@ -30,13 +41,54 @@ export default function MuntuzGroupClient() {
   // Explicit fullscreen button: the native controls' fullscreen button can
   // be missing/disabled when the page sits in an iframe without
   // allowfullscreen or on iOS quirks, so offer one directly.
-  const enterMvFullscreen = () => {
+  //
+  // D26 (11-16 guest QA — contradicts #203's "already fixed"): the old
+  // version called video.requestFullscreen() and silently swallowed the
+  // rejection. When the page sits in an iframe without allowfullscreen
+  // (or the browser denies fullscreen for any other reason) the promise
+  // rejects and the button visibly does nothing — the exact reported
+  // symptom. Fix: try the real Fullscreen API first (video, then iOS
+  // webkitEnterFullscreen, then the dialog container), and fall back to
+  // expanding the dialog to fill the viewport via CSS, so the button
+  // ALWAYS visibly does something. The button toggles back off.
+  const enterMvFullscreen = async () => {
+    // Toggle off: already in native fullscreen, or in the CSS-expanded fallback.
+    if (document.fullscreenElement) {
+      try { await document.exitFullscreen(); } catch { /* noop */ }
+      setMvExpanded(false);
+      return;
+    }
+    if (mvExpanded) { setMvExpanded(false); return; }
     const video = mvRef.current;
-    if (!video) return;
-    const req = video.requestFullscreen();
-    // requestFullscreen() returns a promise in modern browsers; fullscreen
-    // can be denied (e.g. user gesture rules), so swallow the rejection.
-    if (req && typeof req.catch === 'function') req.catch(() => {});
+    if (video) {
+      const v = video as HTMLVideoElement & { webkitEnterFullscreen?: () => void };
+      try {
+        if (typeof video.requestFullscreen === 'function') {
+          await video.requestFullscreen();
+          return;
+        }
+        // iOS Safari: no requestFullscreen on video — use the video-only API.
+        if (typeof v.webkitEnterFullscreen === 'function') {
+          v.webkitEnterFullscreen();
+          return;
+        }
+      } catch { /* denied (e.g. iframe without allowfullscreen) — fall through */ }
+    }
+    // Fallback 1: fullscreen the dialog container instead of the video.
+    const dialog = mvDialogRef.current;
+    if (dialog && typeof dialog.requestFullscreen === 'function') {
+      try {
+        await dialog.requestFullscreen();
+        return;
+      } catch { /* denied — fall through to the CSS fallback */ }
+    }
+    // Fallback 2 (always works): expand the dialog to fill the viewport.
+    setMvExpanded(true);
+  };
+
+  const closeMv = () => {
+    setMvExpanded(false);
+    setShowMv(false);
   };
 
   const t = (key: string) => GROUP_DICT[lang][key] ?? GROUP_DICT.en[key] ?? key;
@@ -201,14 +253,15 @@ export default function MuntuzGroupClient() {
         {/* MV player — the produced “Say Hi” video plays right here; Suno stays as a second link. */}
         {showMv && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
-            onClick={() => setShowMv(false)}
+            className={mvExpanded ? 'fixed inset-0 z-50 flex items-center justify-center bg-black' : 'fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4'}
+            onClick={closeMv}
             role="dialog"
             aria-modal="true"
             aria-label="MUNTUZ — Say Hi music video"
           >
             <div
-              className="w-full max-w-2xl overflow-hidden rounded-2xl bg-black shadow-2xl"
+              ref={mvDialogRef}
+              className={mvExpanded ? 'h-full w-full overflow-hidden bg-black' : 'w-full max-w-2xl overflow-hidden rounded-2xl bg-black shadow-2xl'}
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between px-4 py-2">
@@ -220,14 +273,15 @@ export default function MuntuzGroupClient() {
                       e.stopPropagation();
                       enterMvFullscreen();
                     }}
-                    aria-label="Fullscreen"
+                    aria-label={mvFullscreen || mvExpanded ? 'Exit fullscreen' : 'Fullscreen'}
+                    title={mvFullscreen || mvExpanded ? 'Exit fullscreen' : 'Fullscreen'}
                     className="rounded-full bg-white/10 px-3 py-1 text-sm font-bold text-white hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   >
-                    ⛶
+                    {mvFullscreen || mvExpanded ? '⛶ Exit' : '⛶'}
                   </button>
                   <button
                     type="button"
-                    onClick={() => setShowMv(false)}
+                    onClick={closeMv}
                     aria-label="Close"
                     className="rounded-full bg-white/10 px-3 py-1 text-sm font-bold text-white hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   >
@@ -242,7 +296,7 @@ export default function MuntuzGroupClient() {
                 controls
                 autoPlay
                 playsInline
-                className="aspect-[3/2] w-full bg-black"
+                className={mvExpanded ? 'h-[calc(100dvh-41px)] w-full bg-black object-contain' : 'aspect-[3/2] w-full bg-black'}
               />
             </div>
           </div>
