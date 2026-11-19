@@ -11,5 +11,18 @@
         "22:2F:1A:FA:BC:16:DB:CE:61:E7:3E:7D:1F:66:F6:DB:3D:B2:94:42:7E:FC:C2:2A:10:2C:4D:C7:64:E0:73:7D"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.muntuz.app",
+      "sha256_cert_fingerprints": [
+        "49:00:82:16:4B:C3:70:AB:06:36:A8:8A:0C:1E:2C:C3:7D:7D:5C:39:93:9A:98:5C:0D:79:4F:07:7E:FF:06:DA",
+        "86:DA:7D:92:90:28:6F:F1:33:72:4D:23:B4:56:DE:D2:58:9C:73:A1:BF:31:33:48:62:1A:AD:BC:C1:19:02:95"
+      ]
+    }
   }
 ]
