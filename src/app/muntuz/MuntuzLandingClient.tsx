@@ -7126,8 +7126,10 @@ export default function MuntuzLandingClient() {
                 {t('groupCta')}
                 <span aria-hidden="true">→</span>
               </a>
+              {/* QA 11-16 Muntuz D12: ?mv=1 opens the MV dialog (autoPlay)
+                  directly on /muntuz/group instead of just landing there. */}
               <a
-                href="/muntuz/group"
+                href="/muntuz/group?mv=1"
                 className="inline-flex items-center gap-2 rounded-full border-[1.5px] border-[#71827A] bg-transparent px-7 py-[14px] text-[16.5px] font-extrabold text-[#F3EDDC] hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 {t('groupWatch')}

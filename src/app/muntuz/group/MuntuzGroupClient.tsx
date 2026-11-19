@@ -18,6 +18,15 @@ export default function MuntuzGroupClient() {
   const [showMv, setShowMv] = useState(false);
   const mvRef = useRef<HTMLVideoElement>(null);
 
+  // QA 11-16 Muntuz D12: the landing "Watch the 'Say Hi' MV" button links
+  // here with ?mv=1 — open the MV dialog (autoPlay) on arrival instead of
+  // landing on the group page and making the guest find the button.
+  useEffect(() => {
+    try {
+      if (new URLSearchParams(window.location.search).get('mv') === '1') setShowMv(true);
+    } catch {}
+  }, []);
+
   // Explicit fullscreen button: the native controls' fullscreen button can
   // be missing/disabled when the page sits in an iframe without
   // allowfullscreen or on iOS quirks, so offer one directly.
