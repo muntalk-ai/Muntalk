@@ -138,6 +138,9 @@ const DICT: Record<Lang, Record<string, string>> = {
     "navRooms": "People Rooms",
     "navPricing": "Pricing",
     "loginBtn": "Log in",
+    // QA 11-16 Muntuz D11: header Sign up — other languages fall back to
+    // this English string via t() (DICT[lang][key] ?? DICT.en[key]).
+    "signupBtn": "Sign up",
     "logoutBtn": "Log out",
     "native": "Native language",
     "badge": "AI language exchange",
@@ -6955,6 +6958,16 @@ export default function MuntuzLandingClient() {
                 {t('loginBtn')}
               </a>
             )}
+            {/* QA 11-16 Muntuz D11: header Sign up — guests previously only
+                reached signup via "Create one free" inside /login. */}
+            {!authLoading && !user && (
+              <a
+                href="/signup?next=/exchange"
+                className="inline-flex shrink-0 items-center whitespace-nowrap rounded-full bg-[#0E7C66] px-3.5 py-2.5 text-[15px] font-extrabold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E7C66] sm:px-5"
+              >
+                {t('signupBtn')}
+              </a>
+            )}
             {!authLoading && user && (
               <span className="flex min-w-0 shrink-0 items-center gap-2">
                 <span className="hidden min-w-0 items-center gap-1.5 text-sm font-bold text-[#1E2A25] sm:flex">
@@ -7428,13 +7441,13 @@ export default function MuntuzLandingClient() {
           <p className="mt-4 text-center text-xs leading-relaxed text-[#5D6C63]">
             {t('aiDisclaimer')}
           </p>
-          <div className="mt-7 flex flex-wrap justify-between gap-[18px] text-sm text-[#5D6C63]">
-            <span>{t('rights')}</span>
+          {/* QA 11-16 Muntuz D8: 저작권 1줄로 통일 — 위쪽 "© 2026 Muntuz"
+              중복 줄을 없애고 아래 한 줄만 남긴다. 태그라인은 가운데 정렬. */}
+          <div className="mt-7 flex flex-wrap justify-center gap-[18px] text-sm text-[#5D6C63]">
             <span>{t('multi')}</span>
           </div>
           <p className="mt-3 text-center text-[11px] leading-relaxed text-[#5D6C63]">
-            &copy; {new Date().getFullYear()} Muntuz. {t('allRightsReserved')} |
-            British Columbia, Canada |{' '}
+            &copy;{' '}{new Date().getFullYear()}{' '}Muntuz. {t('allRightsReserved')}{' '}| British Columbia, Canada |{' '}
             <a
               href="mailto:muntuz.official@gmail.com"
               className="text-[#5D6C63] no-underline hover:underline"
