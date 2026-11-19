@@ -325,6 +325,36 @@ export default function CoachPage() {
   const startBriefing = async (snap: LearnerSnapshot) => {
     setBriefing(true);
 
+    // QA 11-16 D3: AI 브리핑 생성(약 ~10초)을 기다리는 동안 "Analyzing…"만
+    // 보이는 문제를 고친다 — 스냅샷 데이터만으로 기본 인사를 즉시 표시하고,
+    // AI 브리핑이 도착하면 교체한다. 당일 캐시가 있으면 캐시된 브리핑을
+    // 먼저 보여준다 (#224의 카탈로그 근거 로직은 건드리지 않음).
+    const today = new Date().toISOString().slice(0, 10);
+    const cacheKey = `mt_coach_briefing_${user?.uid || 'guest'}`;
+    let cached: string | null = null;
+    try {
+      const raw = localStorage.getItem(cacheKey);
+      if (raw) {
+        const parsed = JSON.parse(raw) as { text: string; day: string };
+        if (parsed.day === today && parsed.text) cached = parsed.text;
+      }
+    } catch {}
+    if (cached) {
+      setMessages([{ role: 'coach', text: cached, ts: Date.now() }]);
+    } else {
+      const HELLO: Record<string, string> = {
+        ko: '안녕하세요', ja: 'こんにちは', zh: '你好', es: '¡Hola!', fr: 'Bonjour !',
+        de: 'Hallo!', pt: 'Olá!', vi: 'Xin chào!', th: 'สวัสดี', id: 'Halo!',
+        hi: 'नमस्ते', ar: 'مرحباً', ru: 'Привет!', tr: 'Merhaba!', fa: 'سلام!',
+      };
+      const hello = HELLO[snap.nativeLang] || 'Hello';
+      setMessages([{
+        role: 'coach',
+        text: `${hello} ${snap.name}! 👋 You're at ${LEVEL_LABELS[snap.currentLevel]} with ${snap.xp} XP and a ${snap.streak}-day streak — ${snap.completedCount} lessons done so far. Pulling up your full briefing now…`,
+        ts: Date.now(),
+      }]);
+    }
+
     const systemPrompt = buildSystemPrompt(snap);
     const openingPrompt = `
 지금 학습자와 첫 코칭 세션을 시작합니다.
@@ -348,8 +378,11 @@ export default function CoachPage() {
       const data = await res.json();
       const text = data.text?.trim() || "Hello! I'm your learning coach.";
       setMessages([{ role: 'coach', text, ts: Date.now() }]);
+      // QA 11-16 D3: 당일 캐시 — 다음 방문 시 브리핑 대기 없이 즉시 표시.
+      try { localStorage.setItem(cacheKey, JSON.stringify({ text, day: today })); } catch {}
     } catch {
-      setMessages([{ role: 'coach', text: "Hello! Let's start today's coaching session.", ts: Date.now() }]);
+      // QA 11-16 D3: API 실패 시 위에서 이미 표시한 즉시 인사/캐시를 유지한다
+      // (이전처럼 빈 화면 + "Analyzing…"으로 돌아가지 않음).
     } finally {
       setBriefing(false);
     }
