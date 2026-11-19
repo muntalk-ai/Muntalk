@@ -8,6 +8,7 @@ import { useAuth } from '@/context/AuthContext';
 import { PLANS, PlanId, getSubscription } from '@/lib/subscription';
 import { apiFetch } from '@/lib/apiClient';
 import { useBrand } from '@/lib/useBrand';
+import RouteSkeleton from '@/components/RouteSkeleton';
 
 function PricingContent() {
   const router = useRouter();
@@ -386,5 +387,7 @@ function PricingContent() {
 }
 
 export default function PricingPage() {
-  return <Suspense><PricingContent /></Suspense>;
+  // QA 11-16 D1: fallback이 없어 프리렌더 HTML이 비어 JS 로드까지 백지가
+  // 보였다 — 스켈레톤을 즉시 그리고 실제 콘텐츠가 준비되면 교체한다.
+  return <Suspense fallback={<RouteSkeleton variant="pricing" />}><PricingContent /></Suspense>;
 }
