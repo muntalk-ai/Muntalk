@@ -260,17 +260,12 @@ export default function CoachPage() {
         return { title: lesson?.title || id, level };
       }).reverse();
 
-      // Weak areas — lessons done only once (low confidence proxy)
-      const weakAreas: string[] = [];
-      if (completedLessons.length > 0) {
-        const levelCounts: Record<string, number> = {};
-        completedLessons.forEach(id => {
-          const lvl = id.split('-')[0];
-          levelCounts[lvl] = (levelCounts[lvl] || 0) + 1;
-        });
-        if ((levelCounts['a1'] || 0) < 6) weakAreas.push('Basic expressions');
-        if (completedLessons.filter(id => id.startsWith('b')).length < 3) weakAreas.push('Intermediate grammar');
-      }
+  // QA 11-16 D23: 완료 레슨 수만으로 약점을 단정하지 않는다. 이전에는
+  // a1 완료 6개 미만이면 무조건 'Basic expressions'를 약점으로 프롬프트에
+  // 넣어, 퀴즈 만점 게스트에게도 약점이 있다고 날조했다. 완료 수는
+  // 성적이 아니며, 스냅샷에는 성적 근거가 없으므로 약점 목록을 만들지
+  // 않는다 (프롬프트에서 '확인된 약점 없음'을 명시한다).
+  const weakAreas: string[] = [];
 
       const snap: LearnerSnapshot = {
         name,
@@ -401,7 +396,7 @@ export default function CoachPage() {
 - 완료 레슨: ${snap.completedCount}/${snap.totalLessons}개
 - 연속 학습: ${snap.streak}일
 - 최근 학습: ${snap.recentLessons.map(r => `${r.level} ${r.title}`).join(', ') || '없음'}
-- 취약 영역: ${snap.weakAreas.join(', ') || '분석 중'}
+- 취약 영역: ${snap.completedCount >= snap.totalLessons ? '없음 — 전 과정 완료, 약점이 없는 상태이므로 약점을 지어내지 말 것' : '확인된 약점 없음 — 완료 레슨 수만으로는 약점을 판단할 수 없으므로 근거 없이 약점을 단정하지 말고, 학습자 답변에서 실제 오류가 보일 때만 짚을 것'}
 ${purposePromptBlock(snap.purpose) ? `- 학습 목적 적응: ${purposePromptBlock(snap.purpose)}` : ''}
 - 다음 추천 레슨: ${snap.nextLesson ? `${snap.nextLesson.title} (${snap.nextLesson.id})` : '없음 — 전 과정 완료'}
 
@@ -414,6 +409,7 @@ ${snap.catalog}
 - 학습자가 마쳤다고 말할 수 있는 레슨은 위 '최근 학습' 목록에 있는 것만. 목록에 없는 레슨을 마쳤다고 전제하지 말 것
 - 따뜻하고 동기부여가 되는 코치 말투
 - 구체적인 학습 데이터를 활용한 맞춤 조언
+- 약점 언급 금지: 학습자 답변에서 실제 오류가 확인되지 않으면 약점을 언급하지 말 것. 퀴즈 만점·전 과정 완료 시에는 약점이 없다고 명시할 것
 - 학습자의 질문에 실질적으로 도움되는 답변
 - 필요시 학습 링크나 다음 레슨을 추천
 - 2-3문단 이내로 간결하게
