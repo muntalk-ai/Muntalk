@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import {
   signInWithEmailAndPassword,
   signInWithRedirect,
@@ -251,7 +252,9 @@ export default function LoginPage() {
 
         <p style={{ textAlign: 'center', marginTop: 20, fontSize: 14, color: '#64748B', fontWeight: 600 }}>
           Don't have an account?{' '}
-          <button className="auth-link" style={{ fontSize: 14 }} onClick={() => router.push('/signup')}>Create one free</button>
+          {/* D20: router.push 버튼은 /signup 청크 로딩까지 클릭이 무반응처럼
+              보였음. prefetch되는 Link로 바꿔 즉시 이동한다. */}
+          <Link href="/signup" prefetch className="auth-link" style={{ fontSize: 14 }}>Create one free</Link>
         </p>
         <p style={{ textAlign: 'center', marginTop: 8 }}>
           <button className="auth-link" style={{ fontSize: 13, color: '#94A3B8' }} onClick={() => router.push('/lingua')}>Continue as guest →</button>
