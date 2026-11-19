@@ -92,6 +92,9 @@ export default function LoginPage() {
 
   // 리디렉션 복귀 시 결과 처리
   useEffect(() => {
+    // D17: getRedirectResult()가 늦게 끝나거나 안 끝나면 상태 문구가 계속
+    // 남으므로 5초 타임아웃으로 반드시 해제한다.
+    const t = setTimeout(() => setRedirectChecking(false), 5000);
     getRedirectResult(auth)
       .then(result => {
         if (result?.user) {
@@ -108,6 +111,7 @@ export default function LoginPage() {
         }
       })
       .finally(() => setRedirectChecking(false));
+    return () => clearTimeout(t);
   }, []);
 
   const handleEmail = async () => {
@@ -215,8 +219,8 @@ export default function LoginPage() {
           )}
         </button>
 
-        {/* Redirect 확인 중 안내 */}
-        {redirectChecking && (
+        {/* Redirect 확인 중 안내 — 인증 확인이 끝나면 문구 제거 (D17) */}
+        {redirectChecking && authLoading && (
           <div style={{ textAlign: 'center', fontSize: 12, color: '#94A3B8', marginTop: 8 }}>
             Checking sign-in status…
           </div>

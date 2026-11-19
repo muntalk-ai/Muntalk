@@ -3,4 +3,4 @@
 Resumability log: one line per item, with the commit that landed it.
 If interrupted, resume from the last commit listed here.
 
-- [x] Item 4 — MunTalk D19 / Muntuz D14 (⚠️ spacing): audited all 22 `⚠️` sites in src; every error render already carried a literal space, so the QA-observed missing space was hardened with an explicit `{'⚠️ '}` expression (cannot collapse in JSX) on the auth-form error banners: `src/app/login/page.tsx`, `src/app/signup/page.tsx`, `src/app/profile/page.tsx`. Lesson/placement renders already spaced, left untouched. Commit: `QA 11-16 B1: harden warning-emoji spacing on auth error banners (D19/D14)`.
+- [x] Item 3 — MunTalk D17 (/login "Checking sign-in status..." lingers): `getRedirectResult()` effect now has a 5s timeout fallback that always clears `redirectChecking`, and the status line only renders while `authLoading` is still true, so it disappears once the auth check completes. File: `src/app/login/page.tsx` (redirect effect + status render). Commit: `QA 11-16 B1: stop login status text lingering (D17)`.
