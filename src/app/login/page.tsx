@@ -252,7 +252,7 @@ export default function LoginPage() {
           </div>
         </div>
 
-        {error    && <div style={styles.error}>⚠️ {error}</div>}
+        {error    && <div style={styles.error}>{'⚠️ '}{error}</div>}
         {resetSent && <div style={styles.success}>✅ Password reset email sent!</div>}
 
         <button className="auth-btn-primary" onClick={handleEmail} disabled={emailLoading} style={{ marginTop: 8 }}>

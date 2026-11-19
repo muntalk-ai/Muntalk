@@ -254,7 +254,7 @@ export default function ProfilePage() {
 
         {/* Success / Error */}
         {success && <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: '12px 16px', fontSize: 13, color: '#16A34A', fontWeight: 700, marginBottom: 16 }}>✅ {success}</div>}
-        {error   && <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 12, padding: '12px 16px', fontSize: 13, color: '#DC2626', fontWeight: 700, marginBottom: 16 }}>⚠️ {error}</div>}
+        {error   && <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 12, padding: '12px 16px', fontSize: 13, color: '#DC2626', fontWeight: 700, marginBottom: 16 }}>{'⚠️ '}{error}</div>}
 
         {/* ── PROFILE TAB ── */}
         {tab === 'profile' && (

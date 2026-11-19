@@ -205,7 +205,7 @@ export default function SignupPage() {
           )}
         </div>
 
-        {error && <div style={styles.error}>⚠️ {error}</div>}
+        {error && <div style={styles.error}>{'⚠️ '}{error}</div>}
 
         <button className="auth-btn-primary" onClick={handleSignup} disabled={emailLoading || !agreed}>
           {emailLoading ? 'Creating account…' : 'Create Account 🚀'}
