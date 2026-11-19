@@ -194,6 +194,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "ctaTitle": "Your first conversation is one tap away.",
     "ctaSub": "Pick a language, pick a friend, say hi.",
     "footerTag": "Practice any language with AI friends who feel real.",
+    "footerLine": "🌐 Muntuz · 50 AI partners · Voice & chat · Any language",
     "rights": "© 2026 Muntuz",
     "pickTitle": "Choose your AI partner",
     "pickSub": "Tap a friend to start chatting — free, no sign-up needed.",
@@ -272,6 +273,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "ctaTitle": "첫 대화는 한 번의 탭이면 돼요.",
     "ctaSub": "언어를 고르고, 친구를 고르고, 인사해 보세요.",
     "footerTag": "진짜 친구 같은 AI 친구와, 어떤 언어든 연습하세요.",
+    "footerLine": "🌐 Muntuz · 50명의 AI 파트너 · 음성 & 채팅 · 모든 언어",
     "rights": "© 2026 Muntuz",
     "pickTitle": "AI 파트너 선택하기",
     "pickSub": "친구를 고르면 바로 채팅을 시작할 수 있어요 — 무료, 가입 없이.",
@@ -350,6 +352,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "ctaTitle": "最初の会話はワンタップ。",
     "ctaSub": "言語を選んで、友達を選んで、挨拶しよう。",
     "footerTag": "本物の友達みたいなAIフレンドと、どの言語でも練習しよう。",
+    "footerLine": "🌐 Muntuz · 50人のAIパートナー · 音声＆チャット · あらゆる言語",
     "rights": "© 2026 Muntuz",
     "pickTitle": "AIパートナーを選ぶ",
     "pickSub": "友達を選ぶとすぐチャットを始められます — 無料、登録不要。",
@@ -418,6 +421,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "ctaTitle": "Tu primera conversación está a un toque.",
     "ctaSub": "Elige un idioma, elige un amigo, di hola.",
     "footerTag": "Practica cualquier idioma con amigos de IA que se sienten reales.",
+    "footerLine": "🌐 Muntuz · 50 compañeros de IA · Voz y chat · Cualquier idioma",
     "rights": "© 2026 Muntuz",
     "pickTitle": "Elige tu compañero de IA",
     "pickSub": "Toca un amigo para empezar a chatear — gratis, sin registro.",
@@ -486,6 +490,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "ctaTitle": "Votre première conversation est à un toucher.",
     "ctaSub": "Choisissez une langue, un ami, dites bonjour.",
     "footerTag": "Pratiquez n'importe quelle langue avec des amis IA qui semblent réels.",
+    "footerLine": "🌐 Muntuz · 50 partenaires IA · Voix et chat · Toutes les langues",
     "rights": "© 2026 Muntuz",
     "pickTitle": "Choisissez votre partenaire IA",
     "pickSub": "Touchez un ami pour commencer à discuter — gratuit, sans inscription.",
@@ -554,6 +559,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "ctaTitle": "Dein erstes Gespräch ist einen Tipp entfernt.",
     "ctaSub": "Sprache wählen, Freund wählen, Hallo sagen.",
     "footerTag": "Übe jede Sprache mit KI-Freunden, die sich echt anfühlen.",
+    "footerLine": "🌐 Muntuz · 50 KI-Partner · Sprache & Chat · Jede Sprache",
     "rights": "© 2026 Muntuz",
     "pickTitle": "Wähle deinen KI-Partner",
     "pickSub": "Tippe auf einen Freund, um sofort zu chatten — kostenlos, ohne Anmeldung.",
@@ -622,6 +628,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "ctaTitle": "Sua primeira conversa está a um toque.",
     "ctaSub": "Escolha um idioma, escolha um amigo, diga olá.",
     "footerTag": "Pratique qualquer idioma com amigos de IA que parecem reais.",
+    "footerLine": "🌐 Muntuz · 50 parceiros de IA · Voz e chat · Qualquer idioma",
     "rights": "© 2026 Muntuz",
     "pickTitle": "Escolha seu parceiro de IA",
     "pickSub": "Toque em um amigo para começar a conversar — grátis, sem cadastro.",
@@ -690,6 +697,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "ctaTitle": "第一次对话只需轻点一下。",
     "ctaSub": "选一种语言，选一位朋友，打个招呼。",
     "footerTag": "和像真人一样的 AI 朋友练习任何语言。",
+    "footerLine": "🌐 Muntuz · 50 位 AI 伙伴 · 语音与聊天 · 任何语言",
     "rights": "© 2026 Muntuz",
     "pickTitle": "选择你的 AI 伙伴",
     "pickSub": "点选一位朋友即可开始聊天——免费，无需注册。",
@@ -826,6 +834,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "ctaTitle": "Cuộc trò chuyện đầu tiên chỉ cách một chạm.",
     "ctaSub": "Chọn một ngôn ngữ, chọn một người bạn, nói xin chào.",
     "footerTag": "Luyện bất kỳ ngôn ngữ nào với những người bạn AI như thật.",
+    "footerLine": "🌐 Muntuz · 50 bạn AI · Thoại & trò chuyện · Mọi ngôn ngữ",
     "rights": "© 2026 Muntuz",
     "pickTitle": "Chọn đối tác AI của bạn",
     "pickSub": "Chạm vào một người bạn để bắt đầu trò chuyện — miễn phí, không cần đăng ký.",
@@ -894,6 +903,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "ctaTitle": "आपकी पहली बातचीत बस एक टैप दूर है।",
     "ctaSub": "एक भाषा चुनें, एक दोस्त चुनें, नमस्ते कहें।",
     "footerTag": "किसी भी भाषा का अभ्यास करें, ऐसे AI दोस्तों के साथ जो असली लगते हैं।",
+    "footerLine": "🌐 Muntuz · 50 AI साथी · आवाज़ और चैट · कोई भी भाषा",
     "rights": "© 2026 Muntuz",
     "pickTitle": "अपना AI साथी चुनें",
     "pickSub": "चैट शुरू करने के लिए किसी दोस्त पर टैप करें — मुफ़्त, बिना साइन-अप।",
@@ -2458,6 +2468,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "ctaTitle": "Percakapan pertamamu hanya sekali ketuk.",
     "ctaSub": "Pilih bahasa, pilih teman, katakan hai.",
     "footerTag": "Latih bahasa apa pun dengan teman AI yang terasa nyata.",
+    "footerLine": "🌐 Muntuz · 50 teman AI · Suara & chat · Bahasa apa pun",
     "rights": "© 2026 Muntuz",
     "pickTitle": "Pilih partner AI-mu",
     "pickSub": "Ketuk teman untuk mulai chat — gratis, tanpa perlu daftar.",
@@ -2594,6 +2605,7 @@ const DICT: Record<Lang, Record<string, string>> = {
     "ctaTitle": "บทสนทนาแรกของคุณอยู่แค่แตะเดียว",
     "ctaSub": "เลือกภาษา เลือกเพื่อน แล้วทักทาย",
     "footerTag": "ฝึกภาษาใดก็ได้กับเพื่อน AI ที่รู้สึกเหมือนจริง",
+    "footerLine": "🌐 Muntuz · เพื่อน AI 50 คน · เสียง & แชท · ทุกภาษา",
     "rights": "© 2026 Muntuz",
     "pickTitle": "เลือกพาร์ตเนอร์ AI ของคุณ",
     "pickSub": "แตะเพื่อนเพื่อเริ่มแชท — ฟรี ไม่ต้องสมัคร",
@@ -6731,7 +6743,22 @@ const BODY_FONT = "'Nunito Sans','Nunito',system-ui,-apple-system,'Segoe UI',san
 
 export default function MuntuzLandingClient() {
   const { user, loading: authLoading } = useAuth();
-  const [lang, setLang] = useState<Lang>('en');
+  // QA 11-16 Muntuz D18: UI 언어 선택을 localStorage + 쿠키에 저장하고
+  // 마운트 시 복원한다 — 이전에는 state만이라 페이지를 벗어나면 영어로
+  // 돌아갔다. (서버 렌더 시 localStorage 접근은 throw → catch로 'en'.)
+  const [lang, setLang] = useState<Lang>(() => {
+    try {
+      const s = localStorage.getItem('mt_ui_lang');
+      return (s && (DICT as Record<string, unknown>)[s] ? s : 'en') as Lang;
+    } catch { return 'en'; }
+  });
+  const applyLang = (code: Lang) => {
+    setLang(code);
+    try {
+      localStorage.setItem('mt_ui_lang', code);
+      document.cookie = `mt_ui_lang=${code}; path=/; max-age=31536000; SameSite=Lax`;
+    } catch {}
+  };
   const [langOpen, setLangOpen] = useState(false);
   const [practice, setPractice] = useState('en');
   const [langsOpen, setLangsOpen] = useState(false);
@@ -6936,7 +6963,7 @@ export default function MuntuzLandingClient() {
                       role="option"
                       aria-selected={l.code === lang}
                       onClick={() => {
-                        setLang(l.code);
+                        applyLang(l.code);
                         setLangOpen(false);
                       }}
                       className={`flex w-full items-center justify-between gap-2 rounded-[10px] px-3 py-2 text-left text-[15px] font-bold hover:bg-[#FFF9EF] ${
@@ -7011,7 +7038,7 @@ export default function MuntuzLandingClient() {
                 key={l.code}
                 type="button"
                 aria-pressed={practice === l.code}
-                onClick={() => { setPractice(l.code); setLang(l.code); }}
+                onClick={() => { setPractice(l.code); applyLang(l.code); }}
                 className={`min-h-[2.5rem] rounded-full border-[1.5px] px-4 py-2 text-[15px] font-bold ${
                   practice === l.code
                     ? 'border-[#0E7C66] bg-[#0E7C66] text-white'
@@ -7415,9 +7442,10 @@ export default function MuntuzLandingClient() {
                 MUNTUZ<span className="text-[#0E7C66]">.</span>
               </a>
               <p className="mt-2 max-w-[340px] text-[15px] text-[#5D6C63]">{t('footerTag')}</p>
+              {/* QA 11-16 Muntuz D18: was hardcoded English — now a dict key
+                  (EN + 11 languages, t() falls back to English). */}
               <p className="mt-3 text-sm font-bold text-[#1E2A25]">
-                🌐 Muntuz &middot; 50 AI partners &middot; Voice &amp; chat
-                &middot; Any language
+                {t('footerLine')}
               </p>
             </div>
             <nav className="flex flex-wrap gap-[22px]" aria-label="Footer">

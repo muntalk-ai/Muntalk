@@ -672,7 +672,15 @@ export default function ExchangePage() {
   const [aiOpeners, setAiOpeners] = useState<boolean>(() => loadOpenerEnabled());
 
   // Profile (demo, browser state only)
-  const [nativeLang, setNativeLang] = useState('English');
+  // QA 11-16 Muntuz D18: 게스트 기본 모국어를 홈페이지 UI 언어 선택
+  // (mt_ui_lang)에서 가져온다 — 이전에는 항상 'English'였다. 로그인
+  // 유저는 아래 Firestore 프로필 로드가 이 값을 덮어쓴다.
+  const [nativeLang, setNativeLang] = useState(() => {
+    try {
+      const map: Record<string, string> = { en: 'English', ko: 'Korean', es: 'Spanish', ja: 'Japanese', pt: 'Portuguese' };
+      return map[localStorage.getItem('mt_ui_lang') || ''] || 'English';
+    } catch { return 'English'; }
+  });
   const [targetLang, setTargetLang] = useState('Korean');
   const [fluentLangs, setFluentLangs] = useState<string[]>([]);
   const [level, setLevel] = useState('Intermediate');
