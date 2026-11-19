@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { addDoc, collection, doc, getDoc, getDocs, limit, onSnapshot, orderBy, query, serverTimestamp, setDoc, updateDoc, where } from 'firebase/firestore';
 import { signOut } from 'firebase/auth';
-import { auth, db } from '@/lib/firebase';
+import { auth, db, storage } from '@/lib/firebase';
 import { apiFetch } from '@/lib/apiClient';
 import { AI_PARTNERS, AI_DISCLOSURE, type AiPartner } from '@/lib/exchangeAiPartners';
 import {
@@ -57,7 +57,14 @@ import {
   type ConnectionState,
 } from '@/lib/exchangeCall';
 import {
+  deleteChatPhotos,
+  hasPartnerReply,
+  MAX_PHOTOS_PER_DAY,
+  MAX_PHOTO_ORIGINAL_BYTES,
   otherParticipant,
+  photoUploadsToday,
+  recordPhotoUpload,
+  sendServerPhoto,
   sendServerTextMessage,
   serverChatIdFor,
   subscribeChatMessages,
@@ -612,6 +619,10 @@ export default function ExchangePage() {
   };
   const [activeChatId, setActiveChatId] = useState<string | null>(null);
   const [input, setInput] = useState('');
+  // Phase 2: photo upload in progress (button disabled while true) and
+  // the hidden file picker it opens.
+  const [uploadingPhoto, setUploadingPhoto] = useState(false);
+  const photoInputRef = useRef<HTMLInputElement | null>(null);
   // S-2: restored chats load once after mount (see the effect below);
   // the save effect waits for this flag so it never overwrites stored
   // threads with the empty initial state.
@@ -683,9 +694,13 @@ export default function ExchangePage() {
   const lightboxAlt =
     lightbox && lightbox.images && lightbox.images.length > 1
       ? `Lifestyle photo ${(lightbox.index ?? 0) + 1} of AI partner ${lightbox.name}`
-      : lightbox
-        ? `${lightbox.name} AI partner photo`
-        : '';
+      : lightbox && lightbox.images && lightbox.images.length === 1
+        ? // Phase 2: a single-image lightbox is a people-chat photo —
+          // AI galleries always pass 5 images, avatars pass none.
+          `Photo shared with ${lightbox.name}`
+        : lightbox
+          ? `${lightbox.name} AI partner photo`
+          : '';
 
   // Lightbox image load state — the original file is large, so show a
   // spinner while it loads and a message if it fails, instead of a blank
@@ -1709,6 +1724,14 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
     }
     setBlockedUids((prev) => (prev.includes(targetUid) ? prev : [...prev, targetUid]));
     setChats((cs) => cs.filter((c) => c.id !== chatId));
+    // Phase 2: deleting the chat also deletes its stored photos
+    // (best-effort — a failed delete never blocks the report/block).
+    // The room document itself stays: the admin queue may need the
+    // thread for the report, and cross-device block sync is a follow-up.
+    const photoPaths = reportChat.messages
+      .map((m) => m.photoPath)
+      .filter((p): p is string => typeof p === 'string' && p.length > 0);
+    if (photoPaths.length > 0) void deleteChatPhotos(storage, photoPaths);
     if (activeChatId === chatId) setActiveChatId(null);
     setReportChat(null);
     setReportReason('');
@@ -1830,7 +1853,11 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
     const unsub = subscribeMyChatRooms(db, user.uid, (rooms) => {
       for (const room of rooms) {
         const otherUid = otherParticipant(room.chatId, user.uid);
-        if (!otherUid) continue;
+        // A blocked partner must never come back through discovery:
+        // without this, the room still exists on the server, so the
+        // next reload would resurrect the thread that report/block
+        // just removed.
+        if (!otherUid || blockedUids.includes(otherUid)) continue;
         void (async () => {
           let name = 'Chat partner';
           let flag: string | undefined;
@@ -1851,8 +1878,8 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
       }
     });
     return () => unsub();
-    // eslint-disable-next-line react-hooks/exhaustive-deps — user/chatsLoaded only.
-  }, [user, chatsLoaded]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps — user/chatsLoaded/blockedUids only.
+  }, [user, chatsLoaded, blockedUids]);
 
   // (b) Message feeds: one live subscription per signed-in people chat.
   // The ref map survives re-renders, so a chat-list change only adds
@@ -2449,6 +2476,63 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
           cs.map((c) => (c.id === chat.id ? { ...c, messages: [...c.messages, { id, from: 'me' as const, text, at: Date.now() }] } : c))
         );
         showToast('Saved on this device only — the server copy could not be sent yet.');
+      }
+    })();
+  };
+
+  // ── Phase 2: send a photo in a people chat ──────────────────────────
+  // Gates, in order: signed-in people chat only, image files only,
+  // original ≤ 10 MB, first message must be text (photos only after the
+  // partner replies — Jay decision ②), 20 photos per person per day
+  // (Jay decision ③). The file is compressed and uploaded by
+  // sendServerPhoto; the daily counter records only a successful send.
+  const handlePhotoFile = (file: File | undefined) => {
+    if (!file || !activeChat || activeChat.isAi || !user || uploadingPhoto) return;
+    if (!file.type.startsWith('image/')) {
+      showToast('Only photos can be sent here.');
+      return;
+    }
+    if (file.size > MAX_PHOTO_ORIGINAL_BYTES) {
+      showToast('That photo is over 10 MB — pick a smaller one.');
+      return;
+    }
+    if (!hasPartnerReply(activeChat.messages)) {
+      showToast('Photos can be sent after your partner replies. Send a text first.');
+      return;
+    }
+    if (photoUploadsToday() >= MAX_PHOTOS_PER_DAY) {
+      showToast(`You have sent ${MAX_PHOTOS_PER_DAY} photos today — try again tomorrow.`);
+      return;
+    }
+    const chat = activeChat;
+    const chatId = serverChatIdFor(user.uid, chat.partnerId);
+    setUploadingPhoto(true);
+    void (async () => {
+      try {
+        const sent = await sendServerPhoto(db, storage, chatId, user.uid, file);
+        recordPhotoUpload();
+        mergeServerMessages(chatId, [
+          {
+            id: sent.serverId,
+            from: user.uid,
+            type: 'photo',
+            text: '',
+            photoUrl: sent.photoUrl,
+            photoPath: sent.photoPath,
+            width: sent.width,
+            height: sent.height,
+            size: sent.size,
+            atMs: Date.now(),
+          },
+        ]);
+      } catch (e) {
+        showToast(
+          e instanceof Error && e.message === 'unsupported-image'
+            ? 'That photo format is not supported — try a JPG or PNG.'
+            : 'Could not send that photo. Please try again.'
+        );
+      } finally {
+        setUploadingPhoto(false);
       }
     })();
   };
@@ -3279,7 +3363,27 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                           {m.ai && (
                             <span className="mb-1 block text-[11px] font-extrabold tracking-wide text-violet-700">AI</span>
                           )}
-                          {m.photo && (
+                          {m.photo && !m.ai ? (
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                openLightbox(m.photo!, activeChat.name, [m.photo!]);
+                              }}
+                              onKeyDown={(e) => {
+                                if (e.key === 'Enter' || e.key === ' ') e.stopPropagation();
+                              }}
+                              className="mb-2 block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+                              aria-label="Open shared photo full size"
+                            >
+                              <img
+                                src={m.photo}
+                                alt="Photo shared in this chat"
+                                loading="lazy"
+                                className="h-auto max-h-56 w-auto max-w-full rounded-xl object-cover"
+                              />
+                            </button>
+                          ) : m.photo ? (
                             <a href={m.photo} target="_blank" rel="noreferrer" className="mb-2 block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500" aria-label="Open shared gallery photo full size">
                               <Image
                                 src={m.photo}
@@ -3289,7 +3393,7 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                                 className="h-auto max-h-56 w-auto max-w-full rounded-xl object-cover"
                               />
                             </a>
-                          )}
+                          ) : null}
                           <span>{m.text}</span>
                         </div>
                       </div>
@@ -3349,6 +3453,37 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                       maxLength={500}
                       className="min-w-0 flex-1 rounded-xl border border-slate-200 px-3.5 py-2 text-sm outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
                     />
+                    {/* Phase 2: photo picker for people chats (signed in,
+                        Muntuz host). Hidden file input; the button opens
+                        the picker. First-message and daily-cap gates live
+                        in handlePhotoFile. */}
+                    {!activeChat.isAi && user && isMuntuzHost() && (
+                      <>
+                        <input
+                          ref={photoInputRef}
+                          type="file"
+                          accept="image/*"
+                          className="hidden"
+                          aria-hidden="true"
+                          tabIndex={-1}
+                          onChange={(e) => {
+                            const f = e.target.files?.[0];
+                            e.target.value = '';
+                            if (f) handlePhotoFile(f);
+                          }}
+                        />
+                        <button
+                          type="button"
+                          onClick={() => photoInputRef.current?.click()}
+                          disabled={uploadingPhoto}
+                          aria-label={uploadingPhoto ? 'Uploading photo…' : 'Send a photo'}
+                          title={uploadingPhoto ? 'Uploading photo…' : 'Send a photo'}
+                          className="min-h-[44px] w-[44px] shrink-0 rounded-xl border border-slate-200 bg-white px-2 text-lg text-slate-600 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 disabled:opacity-60"
+                        >
+                          {uploadingPhoto ? '⏳' : '📷'}
+                        </button>
+                      </>
+                    )}
                     {/* H-7: dictate into the AI chat (Web Speech API).
                         Muntuz host + supported browser only; elsewhere
                         the input stays plain text. */}
