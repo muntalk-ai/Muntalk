@@ -6,7 +6,10 @@
 // shared module src/lib/exchangeProfile.ts so they cannot drift apart:
 //  - only the derived age band is stored in the public doc; the exact
 //    birthdate goes to the owner-only `private/identity` subcollection.
-//  - 18+ gate: a missing/invalid/under-18 birthdate refuses the save.
+//  - QA decision 9A (Jay, 2026-11-18): the birthdate is optional here
+//    now — the profile saves without one, and it is collected at the
+//    first People Rooms contact / waitlist join instead. A birthdate
+//    that IS entered is still validated (18+ only).
 //  - no real name, email, contact details or exact birthdate is ever
 //    shown to anyone but the owner themself.
 // On a successful save the user goes to /exchange (Discover). The global
@@ -150,7 +153,9 @@ export default function ExchangeSetupPage() {
     // Birthdate storage can lag behind the public save until its console
     // rule is published — the age band is saved either way, so the user
     // can continue; the Profile tab says the same thing.
-    if (result.birthdateSaved === false && result.birthdateError === 'permission-denied') {
+    // QA decision 9A: a deferred birthdate (no date entered) also just
+    // continues — it is collected at the first People Rooms contact.
+    if (result.birthdateSaved === false && !('birthdateDeferred' in result) && result.birthdateError === 'permission-denied') {
       // Continue to Exchange: the profile itself is saved.
     }
     // Back to where the user was headed (stashed by the post-login setup
@@ -333,7 +338,7 @@ export default function ExchangeSetupPage() {
               <h2 className="font-bold">Age &amp; gender</h2>
               <div className="mt-3 grid gap-3 sm:grid-cols-2">
                 <label className="block text-sm font-semibold">
-                  Date of birth (18+ only)
+                  Date of birth (18+ only — optional for now)
                   <input
                     type="date"
                     value={form.birthdate}
@@ -353,7 +358,11 @@ export default function ExchangeSetupPage() {
               </div>
               <p className="mt-2 text-xs text-slate-500">
                 {`Your exact birthdate is never shown to anyone — only your age band${birthdateBand ? ` (${birthdateBand})` : savedAgeBand ? ` (${savedAgeBand})` : ''} is shown on your card.`}
-                {birthdateAge !== null && birthdateAge < 18 ? ' You must be 18 or older to save.' : ''}
+                {birthdateAge !== null && birthdateAge < 18
+                  ? ' You must be 18 or older to contact people in People Rooms.'
+                  : !form.birthdate
+                    ? " Optional for now — we'll ask for it before your first People Rooms contact."
+                    : ''}
               </p>
             </div>
 

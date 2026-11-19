@@ -41,6 +41,7 @@ import {
   TIME_SLOTS,
   ageBandForAge,
   calcAge,
+  saveBirthdate,
   saveExchangeProfile,
   utcLabel,
   type AgeBand,
@@ -482,6 +483,61 @@ export default function ExchangePage() {
   const [waitlistJoining, setWaitlistJoining] = useState(false);
   const [waitlistError, setWaitlistError] = useState('');
   const [waitlistReload, setWaitlistReload] = useState(0);
+  // QA decision 9A — birthdate deferred to the first human match.
+  // Every People Rooms entry point (waitlist join, Say hello, voice
+  // call) goes through requireBirthdateForMatching first: users who
+  // already have a valid birthdate pass straight through, everyone
+  // else gets the prompt below and the action runs only after the
+  // birthdate is saved via saveBirthdate (same field, same
+  // validateBirthdate 18+ check, same private/identity subcollection).
+  // AI chat never touches this gate.
+  type PendingMatchAction =
+    | { kind: 'waitlist' }
+    | { kind: 'hello'; partner: { id: string; name: string; flag: string } }
+    | { kind: 'call'; partner: RealPartner };
+  const [birthdatePrompt, setBirthdatePrompt] = useState<PendingMatchAction | null>(null);
+  const [birthdatePromptValue, setBirthdatePromptValue] = useState('');
+  const [birthdatePromptError, setBirthdatePromptError] = useState('');
+  const [birthdatePromptSaving, setBirthdatePromptSaving] = useState(false);
+  const hasValidBirthdate = () => {
+    const age = birthdate ? calcAge(birthdate) : null;
+    return age !== null && age >= 18;
+  };
+  const requireBirthdateForMatching = (action: PendingMatchAction): boolean => {
+    if (hasValidBirthdate()) return true;
+    setBirthdatePromptValue('');
+    setBirthdatePromptError('');
+    setBirthdatePrompt(action);
+    return false;
+  };
+  const submitBirthdatePrompt = async () => {
+    if (!user || !birthdatePrompt || birthdatePromptSaving) return;
+    setBirthdatePromptError('');
+    setBirthdatePromptSaving(true);
+    const result = await saveBirthdate(user.uid, birthdatePromptValue);
+    setBirthdatePromptSaving(false);
+    if (result.ok === false) {
+      if (result.error === 'validation') {
+        setBirthdatePromptError(result.message || 'Could not save your date of birth.');
+      } else if (result.error === 'permission-denied') {
+        setBirthdatePromptError(
+          'Your date of birth could not be stored yet (age-check rule not published). Please try again later.'
+        );
+      } else {
+        setBirthdatePromptError('Could not save your date of birth. Please try again.');
+      }
+      return;
+    }
+    const pending = birthdatePrompt;
+    setBirthdate(birthdatePromptValue);
+    setAgeBand(result.band);
+    setBirthdatePrompt(null);
+    setBirthdatePromptValue('');
+    showToast('Date of birth saved — you can now contact people in People Rooms.');
+    if (pending.kind === 'waitlist') void joinWaitlistNow();
+    else if (pending.kind === 'hello') doSayHello(pending.partner);
+    else void startVoiceCallNow(pending.partner);
+  };
   const [activeChatId, setActiveChatId] = useState<string | null>(null);
   const [input, setInput] = useState('');
   // S-2: restored chats load once after mount (see the effect below);
@@ -866,7 +922,16 @@ export default function ExchangePage() {
     []
   );
 
-  const startVoiceCall = async (partner: RealPartner) => {
+  // QA decision 9A: starting a voice call with a real person is a
+  // human match, so it is gated on the birthdate like Say hello.
+  // Answering an incoming call is not gated — the caller was already
+  // gated when they started it.
+  const startVoiceCall = (partner: RealPartner) => {
+    if (!requireBirthdateForMatching({ kind: 'call', partner })) return;
+    void startVoiceCallNow(partner);
+  };
+
+  const startVoiceCallNow = async (partner: RealPartner) => {
     if (!user) {
       showToast('Sign in to start a voice call.');
       return;
@@ -1129,7 +1194,15 @@ export default function ExchangePage() {
   // One waitlist entry per user: doc id is the uid. Only uid and
   // createdAt are stored — the user's languages already live in their
   // Exchange profile, so no pair is recorded.
-  const joinWaitlist = async () => {
+  // QA decision 9A: joining the waitlist is a human match, so it is
+  // gated on the birthdate (see requireBirthdateForMatching above) —
+  // the actual write lives in joinWaitlistNow so the prompt can run
+  // it after the birthdate is saved.
+  const joinWaitlist = () => {
+    if (!requireBirthdateForMatching({ kind: 'waitlist' })) return;
+    void joinWaitlistNow();
+  };
+  const joinWaitlistNow = async () => {
     if (!user || waitlistJoining) return;
     setWaitlistJoining(true);
     try {
@@ -1194,13 +1267,17 @@ export default function ExchangePage() {
       );
       return;
     }
-    setAgeBand(result.band);
+    // Deferred (QA decision 9A): no birthdate was given, so no band
+    // was computed — keep the band already on the profile, if any.
+    if (result.band) setAgeBand(result.band);
     setTimezone(result.timezone);
     setUtcOffsetMin(result.utcOffsetMin);
     setProfileLoaded(true);
     setProfileExists(true);
     if (result.birthdateSaved === true) {
       showToast('Profile saved to your Exchange account.');
+    } else if ('birthdateDeferred' in result) {
+      showToast("Profile saved. We'll ask for your date of birth (18+) when you first contact someone in People Rooms.");
     } else if (result.birthdateError === 'permission-denied') {
       showToast('Profile saved, but your date of birth could not be stored yet (age-check rule not published). Your age band was saved.');
     } else {
@@ -1444,7 +1521,7 @@ export default function ExchangePage() {
     void loadMemoryForPartner(p.id);
   };
 
-const sayHello = (p: { id: string; name: string; flag: string }) => {
+const doSayHello = (p: { id: string; name: string; flag: string }) => {
     setStatuses((s) => ({ ...s, [p.id]: 'pending' }));
     window.setTimeout(() => {
       setStatuses((s) => ({ ...s, [p.id]: 'matched' }));
@@ -1455,6 +1532,13 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
       );
       showToast(`${p.name} accepted your hello! A chat was created.`);
     }, 2500);
+  };
+
+  // QA decision 9A: Say hello is a human match, so it is gated on the
+  // birthdate — the chat only opens after the birthdate is saved.
+  const sayHello = (p: { id: string; name: string; flag: string }) => {
+    if (!requireBirthdateForMatching({ kind: 'hello', partner: p })) return;
+    doSayHello(p);
   };
 
   const activeChat = chats.find((c) => c.id === activeChatId) || null;
@@ -2403,7 +2487,8 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                 <>
                   <p className="mt-4 text-sm text-slate-500">
                     People rooms open when people gather. Join the waitlist — the waiting number below is the real count of waitlist entries, never a
-                    made-up number. Matching uses your profile languages (native / fluent / learning), not a fixed pair.
+                    made-up number. Matching uses your profile languages (native / fluent / learning), not a fixed pair. Your first contact or
+                    waitlist join will ask for your date of birth (18+ only) — not before.
                   </p>
                   <div className="mt-4 rounded-2xl border border-amber-100 bg-white p-4 shadow-sm sm:p-5">
                     <div className="rounded-xl bg-violet-50 px-4 py-3">
@@ -2614,6 +2699,65 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                     })}
                   </div>
                 </>
+              )}
+              {/* QA decision 9A — first-human-match birthdate prompt.
+                  Opens when a People Rooms action (waitlist join, Say
+                  hello, voice call) is tapped without a valid birthdate
+                  on file. Same date field + validateBirthdate 18+ check
+                  as the profile form; the exact date goes to the same
+                  owner-only private/identity subcollection and only
+                  the age band ever reaches the public profile. */}
+              {birthdatePrompt && (
+                <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 p-4 sm:items-center" role="dialog" aria-modal="true" aria-label="Add your date of birth">
+                  <div className="w-full max-w-md rounded-2xl bg-white p-5 shadow-xl">
+                    <h3 className="text-lg font-extrabold">Before your first People Rooms contact</h3>
+                    <p className="mt-1 text-sm text-slate-500">
+                      People Rooms are 18+ only. Add your date of birth to continue
+                      {birthdatePrompt.kind === 'waitlist'
+                        ? ' joining the waitlist.'
+                        : birthdatePrompt.kind === 'hello'
+                          ? ` saying hello to ${birthdatePrompt.partner.name}.`
+                          : ` calling ${birthdatePrompt.partner.name}.`}
+                      {' '}Your exact birthdate is never shown to anyone — only your age band is shown on your card.
+                    </p>
+                    <label className="mt-4 block text-sm font-semibold">
+                      Date of birth
+                      <input
+                        type="date"
+                        value={birthdatePromptValue}
+                        max={maxBirthdate}
+                        onChange={(e) => setBirthdatePromptValue(e.target.value)}
+                        className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
+                      />
+                    </label>
+                    {birthdatePromptValue && calcAge(birthdatePromptValue) !== null && (
+                      <p className="mt-2 text-xs text-slate-500">
+                        {calcAge(birthdatePromptValue)! < 18
+                          ? 'You must be 18 or older to contact people in People Rooms.'
+                          : `Your age band (${ageBandForAge(calcAge(birthdatePromptValue)!)}) will be shown on your card — never your exact birthdate.`}
+                      </p>
+                    )}
+                    {birthdatePromptError && (
+                      <p className="mt-3 rounded-xl bg-red-50 px-3 py-2 text-sm font-semibold text-red-800">{birthdatePromptError}</p>
+                    )}
+                    <div className="mt-4 flex gap-2">
+                      <button
+                        onClick={() => setBirthdatePrompt(null)}
+                        disabled={birthdatePromptSaving}
+                        className="min-h-[44px] flex-1 rounded-xl border border-slate-200 bg-white py-2.5 font-bold text-slate-600 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 disabled:opacity-60"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        onClick={() => void submitBirthdatePrompt()}
+                        disabled={birthdatePromptSaving || !birthdatePromptValue}
+                        className="min-h-[44px] flex-1 rounded-xl bg-violet-600 py-2.5 font-bold text-white shadow-sm hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98] disabled:opacity-60"
+                      >
+                        {birthdatePromptSaving ? 'Saving…' : 'Save & continue'}
+                      </button>
+                    </div>
+                  </div>
+                </div>
               )}
             </section>
           )}
@@ -3268,7 +3412,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                   <h3 className="font-bold">Age &amp; gender</h3>
                   <div className="mt-3 grid gap-3 sm:grid-cols-2">
                     <label className="block text-sm font-semibold">
-                      Date of birth (18+ only)
+                      Date of birth (18+ only — optional for now)
                       <input
                         type="date"
                         value={birthdate}
@@ -3288,7 +3432,11 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                   </div>
                   <p className="mt-2 text-xs text-slate-500">
                     {`Your exact birthdate is never shown to anyone — only your age band${birthdateBand ? ` (${birthdateBand})` : ageBand ? ` (${ageBand})` : ''} is shown on your card.`}
-                    {birthdateAge !== null && birthdateAge < 18 ? ' You must be 18 or older to save.' : ''}
+                    {birthdateAge !== null && birthdateAge < 18
+                      ? ' You must be 18 or older to contact people in People Rooms.'
+                      : !birthdate
+                        ? " Optional for now — we'll ask for it before your first People Rooms contact."
+                        : ''}
                   </p>
                 </div>
                 <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">

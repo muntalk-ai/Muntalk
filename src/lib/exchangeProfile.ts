@@ -10,8 +10,13 @@
 //  - the exact birthdate lives in the owner-only private subcollection
 //    `exchange_profiles/{uid}/private/identity` — never in the public doc
 //    and never shown to anyone except the owner themself.
-//  - Exchange is 18+ only: a missing/invalid/under-18 birthdate refuses
-//    the save with an inline error.
+//  - Exchange is 18+ only. QA decision 9A (Jay, 2026-11-18): the
+//    birthdate is NO LONGER required to save a profile — it is
+//    collected at the first human match instead (People Rooms contact
+//    or waitlist join, via saveBirthdate below), and matching stays
+//    blocked until one is provided. A birthdate that IS entered is
+//    still validated (missing/invalid/under-18 refuses that save).
+//    AI chat is never gated on birthdate.
 //
 // No new Firestore rules are needed for this module: it writes the same
 // collections the Profile tab already writes. (The private-identity rule
@@ -135,9 +140,11 @@ export function defaultExchangeProfileForm(): ExchangeProfileForm {
   };
 }
 
-// 18+ gate, shared by every save path. The error strings are the ones the
-// Profile tab has shown since PR #169 — keep them identical so users see
-// one consistent message wherever they save.
+// 18+ gate, shared by the profile save (only when a birthdate is
+// entered) and by the first-human-match gate (saveBirthdate). The
+// error strings are the ones the Profile tab has shown since PR #169
+// — keep them identical so users see one consistent message wherever
+// a birthdate is asked for.
 export function validateBirthdate(
   birthdate: string
 ): { ok: true; age: number; band: AgeBand } | { ok: false; error: string } {
@@ -145,7 +152,7 @@ export function validateBirthdate(
     return {
       ok: false,
       error:
-        'Add your date of birth to save your profile. Exchange is 18+ only — your exact birthdate is never shown to anyone.',
+        'Add your date of birth to continue. Exchange is 18+ only — your exact birthdate is never shown to anyone.',
     };
   }
   const age = calcAge(birthdate);
@@ -168,53 +175,70 @@ export type SaveExchangeProfileResult =
       birthdateSaved: false;
       birthdateError: 'permission-denied' | 'other';
     }
+  // QA decision 9A: saved without a birthdate — no age band was
+  // (re)computed, so any band already on the public doc is left
+  // untouched. The birthdate is collected at the first human match.
+  | { ok: true; band: ''; timezone: string; utcOffsetMin: number; birthdateSaved: false; birthdateDeferred: true }
   | { ok: false; error: 'permission-denied' | 'other' | 'validation'; message?: string };
 
 // Save the public profile doc (age band only — never the exact birthdate)
-// and the owner-only private identity doc. Callers validate through this
-// function so the 18+ gate cannot be skipped by any form.
+// and, when a birthdate was entered, the owner-only private identity doc.
+// Callers validate through this function so a bad birthdate cannot be
+// saved by any form — but since QA decision 9A an EMPTY birthdate is
+// allowed: the profile saves and the 18+ check moves to the first
+// human match (saveBirthdate).
 export async function saveExchangeProfile(
   uid: string,
   form: ExchangeProfileForm
 ): Promise<SaveExchangeProfileResult> {
-  const check = validateBirthdate(form.birthdate);
-  if (check.ok === false) {
+  // A birthdate that IS entered is still fully validated — an invalid
+  // or under-18 date refuses the save, exactly as before 9A.
+  const hasBirthdate = form.birthdate.trim().length > 0;
+  const check = hasBirthdate ? validateBirthdate(form.birthdate) : null;
+  if (check && check.ok === false) {
     return { ok: false, error: 'validation', message: check.error };
   }
-  const band = check.band;
   // Re-detect the timezone at save time (the user may have travelled).
   const { timezone, utcOffsetMin } = detectTimezone();
+  // Build the public payload without ageBand when no birthdate was
+  // given: with { merge: true } an omitted field leaves any band
+  // already on the doc untouched, so existing profiles keep theirs.
+  const publicDoc: Record<string, unknown> = {
+    nickname: form.nickname.trim(),
+    nativeLang: form.nativeLang,
+    targetLang: form.targetLang,
+    fluentLangs: form.fluentLangs.filter((l) => (LANGUAGES as readonly string[]).includes(l)),
+    level: form.level,
+    interests: form.interests,
+    bio: form.bio.trim(),
+    learningGoal: form.learningGoal,
+    country: form.country,
+    gender: form.gender,
+    timezone,
+    utcOffsetMin,
+    availability: { days: form.availDays, slots: form.availSlots, perWeek: form.availPerWeek },
+    commMode: form.commMode,
+    correctionPref: form.correctionPref,
+    sameGenderOnly: form.sameGenderOnly,
+    updatedAt: serverTimestamp(),
+  };
+  if (check && check.ok) publicDoc.ageBand = check.band;
   try {
-    await setDoc(
-      doc(db, 'exchange_profiles', uid),
-      {
-        nickname: form.nickname.trim(),
-        nativeLang: form.nativeLang,
-        targetLang: form.targetLang,
-        fluentLangs: form.fluentLangs.filter((l) => (LANGUAGES as readonly string[]).includes(l)),
-        level: form.level,
-        interests: form.interests,
-        bio: form.bio.trim(),
-        learningGoal: form.learningGoal,
-        country: form.country,
-        gender: form.gender,
-        ageBand: band,
-        timezone,
-        utcOffsetMin,
-        availability: { days: form.availDays, slots: form.availSlots, perWeek: form.availPerWeek },
-        commMode: form.commMode,
-        correctionPref: form.correctionPref,
-        sameGenderOnly: form.sameGenderOnly,
-        updatedAt: serverTimestamp(),
-      },
-      { merge: true }
-    );
+    await setDoc(doc(db, 'exchange_profiles', uid), publicDoc, { merge: true });
   } catch (err) {
     return {
       ok: false,
       error: (err as { code?: string }).code === 'permission-denied' ? 'permission-denied' : 'other',
     };
   }
+  // No birthdate yet (QA decision 9A): nothing more to store — the
+  // 18+ check happens at the first People Rooms contact / waitlist join.
+  if (!check) {
+    return { ok: true, band: '', timezone, utcOffsetMin, birthdateSaved: false, birthdateDeferred: true };
+  }
+  // From here the birthdate was entered and validated.
+  if (check.ok === false) return { ok: false, error: 'validation', message: check.error };
+  const band = check.band;
   // The exact birthdate goes to the owner-only private subcollection,
   // never to the public doc (any signed-in user can read public docs).
   // Until the console rule for it is published this write fails with
@@ -237,6 +261,44 @@ export async function saveExchangeProfile(
       birthdateError: (e as { code?: string }).code === 'permission-denied' ? 'permission-denied' : 'other',
     };
   }
+}
+
+export type SaveBirthdateResult =
+  | { ok: true; band: AgeBand }
+  | { ok: false; error: 'permission-denied' | 'other' | 'validation'; message?: string };
+
+// First-human-match gate (QA decision 9A): collect the birthdate when
+// the user first contacts someone in People Rooms or joins the
+// waitlist. Same field, same validateBirthdate 18+ check, same
+// private/identity subcollection as a profile save with a birthdate —
+// and the public doc's age band is (re)computed from it, so existing
+// profiles that already have a birthdate are untouched and a profile
+// saved without one gains its band here. AI chat never calls this.
+export async function saveBirthdate(uid: string, birthdate: string): Promise<SaveBirthdateResult> {
+  const check = validateBirthdate(birthdate);
+  if (check.ok === false) {
+    return { ok: false, error: 'validation', message: check.error };
+  }
+  const band = check.band;
+  try {
+    await setDoc(
+      doc(db, 'exchange_profiles', uid, 'private', 'identity'),
+      { birthdate, ageBand: band, updatedAt: serverTimestamp() },
+      { merge: true }
+    );
+  } catch (e) {
+    return {
+      ok: false,
+      error: (e as { code?: string }).code === 'permission-denied' ? 'permission-denied' : 'other',
+    };
+  }
+  try {
+    await setDoc(doc(db, 'exchange_profiles', uid), { ageBand: band, updatedAt: serverTimestamp() }, { merge: true });
+  } catch {
+    // The birthdate itself is stored; a public-doc band write failing
+    // (e.g. rules) must not undo the 18+ check that just passed.
+  }
+  return { ok: true, band };
 }
 
 export type LoadedExchangeProfile = {
@@ -315,20 +377,16 @@ export async function loadExchangeProfile(uid: string): Promise<LoadedExchangePr
 // Firestore rule is not published yet, so that read would fail). A failed
 // read counts as incomplete: the setup page prefills from the public doc,
 // so the user just saves again instead of hitting a dead end.
+// QA decision 9A: the age band is NOT required here — a profile saved
+// without a birthdate is complete, and the birthdate is collected at
+// the first human match instead.
 export async function isExchangeProfileComplete(uid: string): Promise<boolean> {
   try {
     const snap = await getDoc(doc(db, 'exchange_profiles', uid));
     if (!snap.exists()) return false;
     const d = snap.data();
     const nonEmpty = (v: unknown): boolean => typeof v === 'string' && v.trim().length > 0;
-    return (
-      nonEmpty(d.nickname) &&
-      nonEmpty(d.nativeLang) &&
-      nonEmpty(d.targetLang) &&
-      nonEmpty(d.country) &&
-      typeof d.ageBand === 'string' &&
-      (AGE_BANDS as readonly string[]).includes(d.ageBand)
-    );
+    return nonEmpty(d.nickname) && nonEmpty(d.nativeLang) && nonEmpty(d.targetLang) && nonEmpty(d.country);
   } catch {
     return false;
   }
