@@ -143,15 +143,19 @@ export default function AdminPage() {
     } catch {}
   }, [user]);
 
-  // Access guard
+  // Access guard (D4/D10): 게스트/비관리자는 조용히 튕기지 않고
+  // "관리자 전용" 메시지를 보여준 뒤 2.5초 후 이동한다.
+  const denied = !loading && (!user || !ADMIN_EMAILS.includes(user.email || ''));
   useEffect(() => {
-    if (!loading && (!user || !ADMIN_EMAILS.includes(user.email||'')))
-      router.replace('/lingua');
-  }, [user, loading]);
+    if (denied) {
+      const t = setTimeout(() => router.replace('/lingua'), 2500);
+      return () => clearTimeout(t);
+    }
+  }, [denied]);
 
   // Fetch users
   useEffect(() => {
-    if (!user || !ADMIN_EMAILS.includes(user.email||'')) return;
+    if (!user || !ADMIN_EMAILS.includes(user.email||'')) { setFetching(false); return; }
     (async () => {
       setFetching(true);
       try {
@@ -331,7 +335,42 @@ export default function AdminPage() {
     grant:'#059669', extend:'#6366F1', revoke:'#E11D48', email:'#F59E0B',
   };
 
-  if (loading||fetching) return (
+  if (loading) return (
+    <div style={{minHeight:'100vh',background:'#F8FAFC',display:'flex',alignItems:'center',justifyContent:'center',fontFamily:FONT}}>
+      <div style={{textAlign:'center'}}>
+        <div style={{width:40,height:40,border:'4px solid #E5E7EB',borderTopColor:'#6366F1',borderRadius:'50%',animation:'spin .8s linear infinite',margin:'0 auto 14px'}}/>
+        <div style={{color:'#94A3B8',fontWeight:700,fontSize:14}}>Loading admin panel...</div>
+      </div>
+      <style suppressHydrationWarning dangerouslySetInnerHTML={{__html:`@keyframes spin{to{transform:rotate(360deg)}}`}}/>
+    </div>
+  );
+
+  // D4/D10: 게스트/비관리자 — 스피너만 보여주고 조용히 튕기지 않고,
+  // 접근 거부 메시지와 함께 2.5초 후 이동한다.
+  if (denied) return (
+    <div style={{minHeight:'100vh',background:'#F8FAFC',display:'flex',alignItems:'center',justifyContent:'center',fontFamily:FONT,padding:20}}>
+      <div style={{background:'#fff',borderRadius:20,border:'1px solid #E9EDF3',padding:'36px 32px',maxWidth:420,width:'100%',textAlign:'center'}}>
+        <div style={{fontSize:40,marginBottom:12}}>🔒</div>
+        <div style={{fontSize:18,fontWeight:900,color:'#0F172A'}}>Admin access required</div>
+        <div style={{fontSize:13,color:'#64748B',fontWeight:600,lineHeight:1.7,marginTop:8}}>
+          This page is for admins only. Please sign in with an admin account.
+          Redirecting you to the home page…
+        </div>
+        <div style={{display:'flex',gap:10,marginTop:24}}>
+          <button onClick={() => router.push('/login')}
+            style={{flex:1,padding:'12px',borderRadius:12,border:'none',background:'linear-gradient(135deg,#6366F1,#8B5CF6)',color:'#fff',fontWeight:900,fontSize:13,cursor:'pointer',fontFamily:FONT}}>
+            Sign in
+          </button>
+          <button onClick={() => router.push('/lingua')}
+            style={{flex:1,padding:'12px',borderRadius:12,border:'1.5px solid #E5E7EB',background:'#fff',color:'#374151',fontWeight:700,fontSize:13,cursor:'pointer',fontFamily:FONT}}>
+            Go to home
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
+  if (fetching) return (
     <div style={{minHeight:'100vh',background:'#F8FAFC',display:'flex',alignItems:'center',justifyContent:'center',fontFamily:FONT}}>
       <div style={{textAlign:'center'}}>
         <div style={{width:40,height:40,border:'4px solid #E5E7EB',borderTopColor:'#6366F1',borderRadius:'50%',animation:'spin .8s linear infinite',margin:'0 auto 14px'}}/>
