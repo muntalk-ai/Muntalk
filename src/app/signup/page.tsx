@@ -56,11 +56,19 @@ export default function SignupPage() {
       });
   }, []);
 
+  // D15: 빈 제출 시에도 피드백이 나도록, 비활성화 버튼 대신 제출 시
+  // 누락 항목을 전부 모아 인라인으로 알린다 (버튼은 항상 활성화).
   const validate = () => {
-    if (!name.trim())        { setError('Please enter your name.'); return false; }
+    const missing: string[] = [];
+    if (!name.trim()) missing.push('name');
+    if (!email.trim()) missing.push('email');
+    if (!password) missing.push('password');
+    if (!confirm) missing.push('password confirmation');
+    if (missing.length > 0) { setError(`Please fill in: ${missing.join(', ')}.`); return false; }
     if (!email.includes('@'))  { setError('Please enter a valid email.'); return false; }
     if (password.length < 6)   { setError('Password must be at least 6 characters.'); return false; }
     if (password !== confirm)  { setError('Passwords do not match.'); return false; }
+    if (!agreed) { setError('Please agree to the Terms of Service, Privacy Policy and Refund Policy to continue.'); return false; }
     return true;
   };
 
@@ -205,9 +213,9 @@ export default function SignupPage() {
           )}
         </div>
 
-        {error && <div style={styles.error}>⚠️ {error}</div>}
+        {error && <div style={styles.error}>{'⚠️ '}{error}</div>}
 
-        <button className="auth-btn-primary" onClick={handleSignup} disabled={emailLoading || !agreed}>
+        <button className="auth-btn-primary" onClick={handleSignup} disabled={emailLoading}>
           {emailLoading ? 'Creating account…' : 'Create Account 🚀'}
         </button>
 

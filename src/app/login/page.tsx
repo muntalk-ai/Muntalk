@@ -2,12 +2,12 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import {
   signInWithEmailAndPassword,
   signInWithRedirect,
   signInWithPopup,
   getRedirectResult,
-  sendPasswordResetEmail,
   fetchSignInMethodsForEmail,
 } from 'firebase/auth';
 import { auth, googleProvider } from '@/lib/firebase';
@@ -59,7 +59,6 @@ export default function LoginPage() {
       void routeAfterSignIn(user);
     }
   }, [user, authLoading]);
-  const [resetSent,  setResetSent]  = useState(false);
   const [showPw,     setShowPw]     = useState(false);
 
   const friendlyError = (code: string) => {
@@ -92,6 +91,9 @@ export default function LoginPage() {
 
   // 리디렉션 복귀 시 결과 처리
   useEffect(() => {
+    // D17: getRedirectResult()가 늦게 끝나거나 안 끝나면 상태 문구가 계속
+    // 남으므로 5초 타임아웃으로 반드시 해제한다.
+    const t = setTimeout(() => setRedirectChecking(false), 5000);
     getRedirectResult(auth)
       .then(result => {
         if (result?.user) {
@@ -108,6 +110,7 @@ export default function LoginPage() {
         }
       })
       .finally(() => setRedirectChecking(false));
+    return () => clearTimeout(t);
   }, []);
 
   const handleEmail = async () => {
@@ -148,17 +151,6 @@ export default function LoginPage() {
         setGoogleLoading(false);
       }
     }
-  };
-
-  const handleReset = async () => {
-    if (!email) { setError('Enter your email above first.'); return; }
-    setEmailLoading(true); setError('');
-    try {
-      await sendPasswordResetEmail(auth, email);
-      setResetSent(true);
-    } catch (e: any) {
-      setError(friendlyError(e.code) || 'Failed to send reset email.');
-    } finally { setEmailLoading(false); }
   };
 
   return (
@@ -215,8 +207,8 @@ export default function LoginPage() {
           )}
         </button>
 
-        {/* Redirect 확인 중 안내 */}
-        {redirectChecking && (
+        {/* Redirect 확인 중 안내 — 인증 확인이 끝나면 문구 제거 (D17) */}
+        {redirectChecking && authLoading && (
           <div style={{ textAlign: 'center', fontSize: 12, color: '#94A3B8', marginTop: 8 }}>
             Checking sign-in status…
           </div>
@@ -248,12 +240,11 @@ export default function LoginPage() {
             </button>
           </div>
           <div style={{ textAlign: 'right', marginTop: 6 }}>
-            <button className="auth-link" onClick={handleReset}>Forgot password?</button>
+            <button className="auth-link" onClick={() => router.push('/forgot-password')}>Forgot password?</button>
           </div>
         </div>
 
-        {error    && <div style={styles.error}>⚠️ {error}</div>}
-        {resetSent && <div style={styles.success}>✅ Password reset email sent!</div>}
+        {error    && <div style={styles.error}>{'⚠️ '}{error}</div>}
 
         <button className="auth-btn-primary" onClick={handleEmail} disabled={emailLoading} style={{ marginTop: 8 }}>
           {emailLoading ? 'Signing in…' : 'Sign In →'}
@@ -261,7 +252,9 @@ export default function LoginPage() {
 
         <p style={{ textAlign: 'center', marginTop: 20, fontSize: 14, color: '#64748B', fontWeight: 600 }}>
           Don't have an account?{' '}
-          <button className="auth-link" style={{ fontSize: 14 }} onClick={() => router.push('/signup')}>Create one free</button>
+          {/* D20: router.push 버튼은 /signup 청크 로딩까지 클릭이 무반응처럼
+              보였음. prefetch되는 Link로 바꿔 즉시 이동한다. */}
+          <Link href="/signup" prefetch className="auth-link" style={{ fontSize: 14 }}>Create one free</Link>
         </p>
         <p style={{ textAlign: 'center', marginTop: 8 }}>
           <button className="auth-link" style={{ fontSize: 13, color: '#94A3B8' }} onClick={() => router.push('/lingua')}>Continue as guest →</button>
