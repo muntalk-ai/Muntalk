@@ -681,7 +681,16 @@ export default function ExchangePage() {
       return map[localStorage.getItem('mt_ui_lang') || ''] || 'English';
     } catch { return 'English'; }
   });
-  const [targetLang, setTargetLang] = useState('Korean');
+  // QA 11-16 Muntuz D19: 게스트 첫 인사는 홈페이지 연습 언어 선택
+  // (mt_practice_lang)을 따른다 — 이전에는 항상 'Korean' 기본값이라
+  // English를 골라도 지영이 한국어로 인사했다. 선택이 없으면 영어
+  // (홈페이지 연습 언어 기본값). 로그인 유저는 아래 프로필 로드가 덮어쓴다.
+  const [targetLang, setTargetLang] = useState(() => {
+    try {
+      const map: Record<string, string> = { en: 'English', ko: 'Korean', es: 'Spanish', ja: 'Japanese', pt: 'Portuguese' };
+      return map[localStorage.getItem('mt_practice_lang') || ''] || 'English';
+    } catch { return 'English'; }
+  });
   const [fluentLangs, setFluentLangs] = useState<string[]>([]);
   const [level, setLevel] = useState('Intermediate');
   const [interestSel, setInterestSel] = useState<string[]>(['Travel', 'Cooking']);

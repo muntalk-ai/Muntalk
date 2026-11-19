@@ -6760,7 +6760,19 @@ export default function MuntuzLandingClient() {
     } catch {}
   };
   const [langOpen, setLangOpen] = useState(false);
-  const [practice, setPractice] = useState('en');
+  // QA 11-16 Muntuz D19: 홈페이지 연습 언어 선택을 저장한다 — 이전에는
+  // state만이라 채팅으로 넘어가면 사라졌고, /exchange는 'Korean'
+  // 기본값으로 인사했다. (서버 렌더 시 throw → catch로 'en'.)
+  const [practice, setPractice] = useState(() => {
+    try {
+      const s = localStorage.getItem('mt_practice_lang');
+      return (s && (DICT as Record<string, unknown>)[s] ? s : 'en');
+    } catch { return 'en'; }
+  });
+  const pickPractice = (code: string) => {
+    setPractice(code);
+    try { localStorage.setItem('mt_practice_lang', code); } catch {}
+  };
   const [langsOpen, setLangsOpen] = useState(false);
   const [friendIdx, setFriendIdx] = useState(0);
   const [voicePlaying, setVoicePlaying] = useState(false);
@@ -7038,7 +7050,7 @@ export default function MuntuzLandingClient() {
                 key={l.code}
                 type="button"
                 aria-pressed={practice === l.code}
-                onClick={() => { setPractice(l.code); applyLang(l.code); }}
+                onClick={() => { pickPractice(l.code); applyLang(l.code); }}
                 className={`min-h-[2.5rem] rounded-full border-[1.5px] px-4 py-2 text-[15px] font-bold ${
                   practice === l.code
                     ? 'border-[#0E7C66] bg-[#0E7C66] text-white'
