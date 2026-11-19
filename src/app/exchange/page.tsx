@@ -407,7 +407,7 @@ function loadStoredChats(): PersistedChats | null {
 const GREETING_BY_TARGET: Record<string, (name: string) => string> = {
   English: (name) =>
     `Hi! I'm ${name}, your AI practice partner. Let's practice English together — what did you do today?`,
-  Korean: (name) => `안녕하세요! 저는 ${name}, AI 연습 파트너예요. 같이 한국어 연습해요 — 오늘 뭐 했어요?`,
+  Korean: (name) => `안녕하세요! 저는 ${name}, AI 연습 파트너예요. 외국어 연습해요. 무슨 언어로 소통하고싶어세요? 원하시면 모국어로 고민상담도 해드릴수있어요.`,
   Spanish: (name) => `¡Hola! Soy ${name}, tu compañera de práctica con IA. Practiquemos español juntos — ¿qué hiciste hoy?`,
   Japanese: (name) => `こんにちは！${name}です。AI練習パートナーです。一緒に日本語を練習しましょう — 今日は何をしましたか？`,
   Portuguese: (name) => `Olá! Eu sou ${name}, sua parceira de prática com IA. Vamos praticar português juntos — o que você fez hoje?`,
