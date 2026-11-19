@@ -3398,7 +3398,7 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                 <li>50 new chats per day (free: 20)</li>
                 <li>Unlimited AI reviews + weekly report</li>
                 <li>Unlimited translations</li>
-                <li>Safety tools (report, block, contact guard) are free for everyone</li>
+                <li>Safety tools (contact guard) are free for everyone</li>
               </ul>
               {/* Q9: 가짜 7일 무료 체험 버튼을 없애고 /pricing으로
                   연결한다. 무료 체험 결제는 만들지 않는다 — 무료
