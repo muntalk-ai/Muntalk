@@ -7,11 +7,14 @@ import { auth } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
 import { PLANS, PlanId, getSubscription } from '@/lib/subscription';
 import { apiFetch } from '@/lib/apiClient';
+import { useBrand } from '@/lib/useBrand';
 
 function PricingContent() {
   const router = useRouter();
   const { user } = useAuth();
   const searchParams = useSearchParams();
+  // QA 7A: brand follows the request host — Muntuz on muntuz.com, MunTalk elsewhere.
+  const brand = useBrand();
 
   const [selected,    setSelected]    = useState<PlanId>((searchParams.get('plan') as PlanId) || 'biannual');
   const [showUserMenu, setShowUserMenu] = useState(false);
@@ -47,7 +50,7 @@ function PricingContent() {
   };
 
   const faqs = [
-    { q: 'How much is free?', a: 'A1 level (12 lessons) + 3 AI tutor chats per day are free forever. Hearts refill 1 every 4 hours.' },
+    { q: 'How much is free?', a: 'A1 level (12 lessons) + 3 AI tutor chats (MunTalk lessons) per day are free forever. New Exchange AI chats: 20/day free · 50/day on Pro. Hearts refill 1 every 4 hours.' },
     { q: 'Can I cancel anytime?', a: 'Yes — cancel from Profile → Subscription at any time. You keep Premium access until your billing period ends.' },
     { q: 'What payment methods are accepted?', a: 'All major credit and debit cards via Stripe. Safe, encrypted, PCI-compliant.' },
     { q: 'Can I switch plans?', a: 'Yes! Upgrade or downgrade anytime. The price difference is prorated automatically.' },
@@ -78,7 +81,7 @@ function PricingContent() {
           ← Back
         </button>
         <div style={{ position:'absolute', left:'50%', transform:'translateX(-50%)', fontSize:16, fontWeight:900, color:'#0F172A' }}>
-          🗣️ MunTalk
+          🗣️ {brand.name}
         </div>
         {user && (
           <div style={{ marginLeft:'auto', position:'relative' }}>
@@ -144,28 +147,29 @@ function PricingContent() {
               Other AI tutors charge up to <span style={{ color:'#F87171' }}>$30/mo</span> for AI conversation
             </div>
             <div style={{ fontSize:13, color:'rgba(255,255,255,0.65)', fontWeight:700, lineHeight:1.6 }}>
-              MunTalk Premium gives you unlimited AI tutor sessions, real-time pronunciation scoring and CEFR certificates for <span style={{ color:'#A5B4FC', fontWeight:900 }}>$9.99/mo</span> — and the free tier is <span style={{ color:'#A5B4FC', fontWeight:900 }}>$0 forever</span>.
+              {brand.name} Premium gives you unlimited AI tutor sessions, real-time pronunciation scoring and CEFR certificates for <span style={{ color:'#A5B4FC', fontWeight:900 }}>$9.99/mo</span> — and the free tier is <span style={{ color:'#A5B4FC', fontWeight:900 }}>$0 forever</span>.
             </div>
           </div>
         </div>
 
         {/* Comparison table */}
         <div style={{ marginBottom:64, animation:'fadeUp .5s ease .15s both' }}>
-          <h2 style={{ fontSize:20, fontWeight:900, color:'#0F172A', textAlign:'center', marginBottom:8, letterSpacing:-0.4 }}>MunTalk vs Other AI Tutors</h2>
+          <h2 style={{ fontSize:20, fontWeight:900, color:'#0F172A', textAlign:'center', marginBottom:8, letterSpacing:-0.4 }}>{brand.name} vs Other AI Tutors</h2>
                     <div style={{ overflowX:'auto', borderRadius:18, border:'1.5px solid #F1F5F9' }}>
             <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13, minWidth:520 }}>
               <thead>
                 <tr style={{ background:'#F8FAFC' }}>
                   <th style={{ textAlign:'left', padding:'14px 18px', fontWeight:800, color:'#64748B' }}></th>
-                  <th style={{ padding:'14px 18px', fontWeight:900, color:'#0F172A' }}>MunTalk<br /><span style={{ fontSize:11, color:'#16A34A', fontWeight:800 }}>Free</span></th>
-                  <th style={{ padding:'14px 18px', fontWeight:900, color:'#fff', background:'linear-gradient(135deg,#6366F1,#8B5CF6)' }}>MunTalk<br /><span style={{ fontSize:11, fontWeight:800, opacity:0.85 }}>Premium</span></th>
+                  <th style={{ padding:'14px 18px', fontWeight:900, color:'#0F172A' }}>{brand.name}<br /><span style={{ fontSize:11, color:'#16A34A', fontWeight:800 }}>Free</span></th>
+                  <th style={{ padding:'14px 18px', fontWeight:900, color:'#fff', background:'linear-gradient(135deg,#6366F1,#8B5CF6)' }}>{brand.name}<br /><span style={{ fontSize:11, fontWeight:800, opacity:0.85 }}>Premium</span></th>
                   <th style={{ padding:'14px 18px', fontWeight:900, color:'#0F172A' }}>Others</th>
                 </tr>
               </thead>
               <tbody>
                 {([
                   ['Monthly price', '$0 forever', '$9.99', 'Up to $30'],
-                  ['AI conversation practice', '3 chats / day', 'Unlimited', 'Included'],
+                  ['AI 튜터 채팅 (MunTalk 레슨): 3회/일', '3회/일', '무제한', '—'],
+                  ['Exchange 신규 AI 채팅: 무료 20회/일 · Pro 50회/일', '무료 20회/일', 'Pro 50회/일', '—'],
                   ['Real-time pronunciation scoring', '✓', '✓', '—'],
                   ['CEFR completion certificates', '✓', '✓', '—'],
                   ['Languages', '90+', '90+', 'Fewer'],
@@ -328,7 +332,7 @@ function PricingContent() {
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(195px,1fr))', gap:10 }}>
             {[
               { icon:'📚', title:'72 Lessons', desc:'Full A1 → C2 curriculum' },
-              { icon:'🤖', title:'Unlimited AI Tutor', desc:'Chat 24/7 in your target language' },
+              { icon:'🤖', title:'Unlimited AI Tutor', desc:'— roleplay, lessons, and Micro-Talk in your target language' },
               { icon:'🔁', title:'Spaced Repetition', desc:'SM-2 algorithm for perfect recall' },
               { icon:'🏆', title:'League System', desc:'Compete with learners worldwide' },
               { icon:'❤️', title:'Unlimited Hearts', desc:'No waiting, keep going' },

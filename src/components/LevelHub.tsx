@@ -21,6 +21,7 @@ import TrialBanner from '@/components/TrialBanner';
 import TrialExpiredModal from '@/components/TrialExpiredModal';
 import { getTrialData, isTrialExpired, trialDaysRemaining, addTrialLanguage, TRIAL_MAX_LANGUAGES, TrialData } from '@/lib/trialPolicy';
 import { getTestimonials, Testimonial, MIN_TESTIMONIALS } from '@/lib/testimonials';
+import { useBrand } from '@/lib/useBrand';
 
 // 언어코드 → 국가코드 매핑 (flagcdn.com 사용)
 const LANG_TO_COUNTRY: Record<string, string> = {
@@ -83,6 +84,10 @@ const REEL_HERO: Record<string, { headline: string; desc: string; cta: string }>
 
 export default function LevelHub() {
   const router = useRouter();
+  // QA 7A: brand follows the host — Muntuz on muntuz.com, MunTalk elsewhere.
+  // (Hero copy is intentionally untouched; only the nav logo, footer and the
+  // positioning line below are brand-swapped.)
+  const brand = useBrand();
   const searchParams = useSearchParams();
   // PR #110: 릴스 유입 파라미터 — ?trial=1 (체험 직행), ?r=1|2|3 (릴스별 히어로 매치)
   const trialFirst = searchParams.get('trial') === '1';
@@ -733,8 +738,8 @@ export default function LevelHub() {
       {/* -- NAV -- */}
       <nav className="mt-lingua-nav" style={styles.nav}>
         <div style={styles.navLogo} onClick={() => router.push('/')}>
-          <div style={styles.navLogoIcon}><img src="/logo.png" alt="MunTalk" style={{ width: 36, height: 36, borderRadius: 12 }} /></div>
-          <span className="mt-nav-logo-text" style={styles.navLogoText}>MunTalk</span>
+          <div style={styles.navLogoIcon}><img src="/logo.png" alt={brand.name} style={{ width: 36, height: 36, borderRadius: 12 }} /></div>
+          <span className="mt-nav-logo-text" style={styles.navLogoText}>{brand.name}</span>
           <span className="mt-nav-beta" style={styles.navBeta}>BETA</span>
         </div>
         {/* Desktop tabs — 학습 코어 4개 + 더보기 드롭다운 */}
@@ -1091,7 +1096,7 @@ export default function LevelHub() {
               {/* Positioning: competing AI tutors 대비 */}
               <div style={{ marginTop: 20, display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.16)', border: '1px solid rgba(255,255,255,0.35)', borderRadius: 99, padding: '8px 18px', fontSize: 12.5, fontWeight: 700, color: '#fff', backdropFilter: 'blur(6px)' }}>
                 <span>💬</span>
-                <span>Other AI tutors charge up to <strong>&nbsp;$30/mo</strong> for AI conversation — MunTalk starts at <strong>&nbsp;$0</strong></span>
+                <span>Other AI tutors charge up to <strong>&nbsp;$30/mo</strong> for AI conversation — {brand.name} starts at <strong>&nbsp;$0</strong></span>
               </div>
             </>
           )}
@@ -1574,7 +1579,7 @@ export default function LevelHub() {
       )}
 
       <footer style={styles.footer}>
-        <div style={{ marginBottom: 12 }}>🌐 MunTalk · {totalLessonsCount} lessons · A1 to C2 · 150+ AI Tutors</div>
+        <div style={{ marginBottom: 12 }}>🌐 {brand.name} · {totalLessonsCount} lessons · A1 to C2 · 150+ AI Tutors</div>
         <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 10 }}>
           <a href="/about" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>👋 Our Story</a>
           <a href="/faq" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>💬 Help & FAQ</a>
@@ -1584,8 +1589,8 @@ export default function LevelHub() {
           <a href="/cookies" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>Cookie Policy</a>
         </div>
         <div style={{ fontSize: 11, color: '#CBD5E1' }}>
-          &copy; {new Date().getFullYear()} MunTalk. All rights reserved. | British Columbia, Canada |{' '}
-          <a href="mailto:muntalkofficial@gmail.com" style={{ color: '#94A3B8', textDecoration: 'none' }}>muntalkofficial@gmail.com</a>
+          &copy; {new Date().getFullYear()} {brand.name}. All rights reserved. | British Columbia, Canada |{' '}
+          <a href={`mailto:${brand.email}`} style={{ color: '#94A3B8', textDecoration: 'none' }}>{brand.email}</a>
         </div>
       </footer>
     </div>

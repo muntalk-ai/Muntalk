@@ -91,7 +91,7 @@ export default function TutorsPage() {
           Pick Your Tutor
         </h1>
         <p style={{ color: '#64748B', fontSize: 14, margin: '0 0 24px', fontWeight: 700 }}>
-          152 AI tutors — any language, any level
+          152 AI tutors — roleplay, lessons, and Micro-Talk in any language, at any level
         </p>
 
         {/* Filters */}

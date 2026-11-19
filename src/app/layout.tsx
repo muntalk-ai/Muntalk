@@ -1,37 +1,49 @@
 ﻿import type { Metadata, Viewport } from 'next';
+import { headers } from 'next/headers';
 import './globals.css';
 import { AuthProvider } from '@/context/AuthContext';
 import GlobalOverlays from '@/components/GlobalOverlays';
 import InAppNavTracker from '@/components/InAppNavTracker';
+import { brandForHost } from '@/lib/brand';
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://www.muntalk.com'),
-  title: 'MunTalk — Learn Languages with AI',
-  description: 'Master any language with AI-powered lessons, spaced repetition, and live tutors.',
-  openGraph: {
-    type: 'website',
-    siteName: 'MunTalk',
-    title: 'MunTalk — Learn Languages with AI',
-    description: 'Master any language with AI-powered lessons, spaced repetition, and live tutors.',
-    images: ['/logo.png'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'MunTalk — Learn Languages with AI',
-    description: 'Master any language with AI-powered lessons, spaced repetition, and live tutors.',
-    images: ['/logo.png'],
-  },
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
-  },
-  manifest: '/manifest.webmanifest',
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'black-translucent',
-    title: 'MunTalk',
-  },
-};
+// Root title follows the request host: Muntuz on muntuz.com, MunTalk elsewhere (QA 7A).
+// NOTE: reading headers() here opts the root layout into dynamic rendering, so
+// pages no longer prerender statically. The app is auth-gated and client-heavy,
+// and host-correct branding needs the request host at render time.
+export function generateMetadata(): Metadata {
+  const h = headers();
+  const brand = brandForHost(h.get('x-forwarded-host') ?? h.get('host'));
+  const title = `${brand.name} — Learn Languages with AI`;
+  const description = `Master any language with ${brand.name} AI-powered lessons, spaced repetition, and live tutors.`;
+  return {
+    metadataBase: new URL('https://www.muntalk.com'),
+    title,
+    description,
+    openGraph: {
+      type: 'website',
+      siteName: brand.name,
+      title,
+      description,
+      images: ['/logo.png'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['/logo.png'],
+    },
+    icons: {
+      icon: '/favicon.ico',
+      apple: '/apple-touch-icon.png',
+    },
+    manifest: '/manifest.webmanifest',
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: 'black-translucent',
+      title: brand.name,
+    },
+  };
+}
 
 export const viewport: Viewport = {
   width: 'device-width',

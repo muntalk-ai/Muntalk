@@ -716,6 +716,11 @@ export default function AdminPage() {
                 </button>
               </div>
 
+              {/* QA H-10 (decision 2B): this switch is per-device only. */}
+              <div style={{marginTop:18,fontSize:12,color:'#64748B',lineHeight:1.7,fontWeight:600}}>
+                Tip: English-native learners already load pre-generated JSON first regardless of this setting (fast path); this switch mainly affects other native languages.
+              </div>
+
               <div style={{marginTop:18,padding:'14px 18px',borderRadius:12,
                 background:curriculumMode==='api'?'#EEF2FF':'#ECFDF5',
                 border:'1.5px solid '+(curriculumMode==='api'?'#C7D2FE':'#A7F3D0')}}>
@@ -725,7 +730,7 @@ export default function AdminPage() {
                     : '📦 Active: JSON Mode — Pre-generated files load first, Gemini is fallback'}
                 </div>
                 <div style={{fontSize:11,color:'#64748B',fontWeight:600}}>
-                  Stored in browser localStorage. Applies immediately to all new lesson sessions on this device.
+                  📍 Device-only setting — stored in this browser only. Changing it here does not affect other devices, browsers, or learners. To change it elsewhere, repeat this step in that browser.
                 </div>
               </div>
             </div>
