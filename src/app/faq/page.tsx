@@ -260,11 +260,10 @@ We recommend Chrome for the best experience. Internet Explorer is not supported.
   },
 
   // ── 트라이얼/플랜 ───────────────────────────────────────────
-  {
-    q: 'What happens after my 7-day free trial ends?',
-    a: `After 7 days, your account automatically switches to the Free plan. You keep access to all A1 lessons and 3 AI chats per day — forever, for free. To continue learning beyond A1 and access all features, you can upgrade to a Premium plan at any time from the Pricing page.`,
-    tags: ['trial'],
-  },
+  // QA 11-16 Muntuz D7: "7-day free trial" FAQ는 요금 페이지에 언급이 없는
+  // 체험 설명으로, 홈("Free to start")·/exchange("5-minute free trial")와
+  // 서로 달라 게스트를 혼란스럽게 했다. #209가 Exchange 가짜 체험을 제거한
+  // 뒤 남은 stale 문구라 이 항목을 삭제한다 (7일 환불 보증 Q&A는 별개로 유지).
   {
     q: 'How many languages can I learn at the same time?',
     a: `Free plan members can study up to 2 languages simultaneously. Premium members can study all 90+ languages with no limits. You can switch between languages anytime from the home screen.`,

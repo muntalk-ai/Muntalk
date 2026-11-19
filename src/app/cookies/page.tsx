@@ -12,7 +12,7 @@ export default function CookiesPage() {
       </nav>
       <div style={s.container}>
         <h1 style={s.h1}>Cookie Policy</h1>
-        <p style={s.meta}>Effective Date: March 1, 2025 &middot; Last Updated: March 12, 2026</p>
+        <p style={s.meta}>Effective Date: March 1, 2025 &middot; Last Updated: November 18, 2026</p>
 
         <p style={s.lead}>
           This Cookie Policy explains how MunTalk uses cookies and similar tracking technologies
@@ -84,7 +84,7 @@ export default function CookiesPage() {
         <a href="/privacy" style={s.footLink}>Privacy Policy</a>
         <a href="/terms" style={s.footLink}>Terms of Service</a>
         <a href="/refund" style={s.footLink}>Refund Policy</a>
-        <span style={{ color: '#CBD5E1' }}>&copy; 2025 MunTalk. All rights reserved.</span>
+        <span style={{ color: '#CBD5E1' }}>&copy; 2026 MunTalk. All rights reserved.</span>
       </footer>
     </div>
   );

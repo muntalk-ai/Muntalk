@@ -285,8 +285,8 @@ export default function EpisodePageClient({
           )}
           <p style={{ fontSize: 12, color: '#94A3B8', fontWeight: 600, margin: '16px 0 0' }}>
             Join the vote in the comments too:{' '}
-            <a href="https://www.tiktok.com/@muntakasia" target="_blank" rel="noreferrer" style={{ color: '#6366F1', fontWeight: 800 }}>
-              TikTok @muntakasia
+            <a href="https://www.tiktok.com/@muntalk.asia" target="_blank" rel="noreferrer" style={{ color: '#6366F1', fontWeight: 800 }}>
+              TikTok @muntalk.asia
             </a>
             {' · '}
             <a href="https://www.instagram.com/muntalk.global/" target="_blank" rel="noreferrer" style={{ color: '#6366F1', fontWeight: 800 }}>

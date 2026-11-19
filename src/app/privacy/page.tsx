@@ -12,12 +12,12 @@ export default function PrivacyPage() {
       </nav>
       <div style={s.container}>
         <h1 style={s.h1}>Privacy Policy</h1>
-        <p style={s.meta}>Effective Date: March 1, 2025 &middot; Last Updated: March 12, 2026</p>
+        <p style={s.meta}>Effective Date: March 1, 2025 &middot; Last Updated: November 18, 2026</p>
 
         <p style={s.lead}>
           MunTalk ("we", "us", or "our") is operated by an individual based in British Columbia, Canada.
           This Privacy Policy explains how we collect, use, disclose, and protect your personal information
-          in compliance with Canada&apos;s <strong>Personal Information Protection and Electronic Documents Act (PIPEDA)</strong>
+          in compliance with Canada&apos;s <strong>Personal Information Protection and Electronic Documents Act (PIPEDA)</strong>{' '}
           and British Columbia&apos;s <strong>Personal Information Protection Act (PIPA)</strong>.
         </p>
 
@@ -86,7 +86,7 @@ export default function PrivacyPage() {
         <a href="/terms" style={s.footLink}>Terms of Service</a>
         <a href="/refund" style={s.footLink}>Refund Policy</a>
         <a href="/cookies" style={s.footLink}>Cookie Policy</a>
-        <span style={{ color: '#CBD5E1' }}>&copy; 2025 MunTalk. All rights reserved.</span>
+        <span style={{ color: '#CBD5E1' }}>&copy; 2026 MunTalk. All rights reserved.</span>
       </footer>
     </div>
   );
