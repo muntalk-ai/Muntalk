@@ -3965,9 +3965,6 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                 </div>
                 <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
                   <h3 className="font-bold">Availability</h3>
-                  <p className="mt-1 text-sm text-slate-600">
-                    Timezone: {timezone ? `${timezone} (${utcLabel(utcOffsetMin)})` : 'detecting…'} — detected from your device.
-                  </p>
                   <p className="mt-4 text-sm font-semibold">Days</p>
                   <div className="mt-2 flex flex-wrap gap-1.5">
                     {DAYS.map((d) => (

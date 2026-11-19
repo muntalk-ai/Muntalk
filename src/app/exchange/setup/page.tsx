@@ -37,10 +37,8 @@ import {
   ageBandForAge,
   calcAge,
   defaultExchangeProfileForm,
-  detectTimezone,
   loadExchangeProfile,
   saveExchangeProfile,
-  utcLabel,
   type ExchangeProfileForm,
   type Gender,
   type LearningGoal,
@@ -53,6 +51,16 @@ const chipCls = (on: boolean) =>
     on ? 'bg-violet-600 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
   }`;
 
+// About me examples: short, warm intros a new user can tap to use as-is
+// (and then edit). They are shown to partners, so no real name, contact
+// details or exact birthdate — and every one fits the 200-char limit.
+const BIO_EXAMPLES = [
+  "Hi! I love talking about travel and food. Let's practice together!",
+  'I enjoy cooking, movies, and everyday conversation — happy to help with my language too.',
+  "Let's learn together! I like music, hiking, and chatting about daily life.",
+  "I'm here to practice speaking and make new friends around the world.",
+];
+
 export default function ExchangeSetupPage() {
   const router = useRouter();
   const { user, loading: authLoading } = useAuth();
@@ -63,13 +71,6 @@ export default function ExchangeSetupPage() {
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState('');
   const [saveFailed, setSaveFailed] = useState('');
-  const [timezone, setTimezone] = useState('');
-
-  // Timezone is detected from the device, not typed in.
-  useEffect(() => {
-    const { timezone: tz, utcOffsetMin: off } = detectTimezone();
-    setTimezone(`${tz} (${utcLabel(off)})`);
-  }, []);
 
   // Prefill from a saved profile (e.g. a returning user who never
   // finished setup, or someone editing via this page instead of the
@@ -368,7 +369,6 @@ export default function ExchangeSetupPage() {
 
             <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
               <h2 className="font-bold">Availability</h2>
-              <p className="mt-1 text-sm text-slate-600">Timezone: {timezone ? `${timezone}` : 'detecting…'} — detected from your device.</p>
               <p className="mt-4 text-sm font-semibold">Days</p>
               <div className="mt-2 flex flex-wrap gap-1.5">
                 {DAYS.map((d) => (
@@ -409,6 +409,19 @@ export default function ExchangeSetupPage() {
                   className={inputCls}
                 />
               </label>
+              <p className="mt-2 text-xs text-slate-500">Need ideas? Tap one to use it — you can edit it after.</p>
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {BIO_EXAMPLES.map((ex) => (
+                  <button
+                    key={ex}
+                    type="button"
+                    onClick={() => setForm((cur) => ({ ...cur, bio: ex }))}
+                    className="rounded-full bg-violet-50 px-3 py-1.5 text-left text-xs font-semibold text-violet-700 transition hover:bg-violet-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+                  >
+                    {ex}
+                  </button>
+                ))}
+              </div>
             </div>
 
             <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
