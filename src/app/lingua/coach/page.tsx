@@ -513,7 +513,7 @@ ${history.map(h => `${h.role === 'user' ? '학습자' : '코치'}: ${h.content}`
             { label: 'Current level', value: snapshot.currentLevel.toUpperCase(), icon: '📊' },
             { label: 'Total XP', value: `${snapshot.xp.toLocaleString()}`, icon: '⭐' },
             { label: 'Lessons done', value: `${snapshot.completedCount}`, icon: '✅' },
-            { label: 'Day streak', value: `${snapshot.streak} days`, icon: '🔥' },
+            { label: 'Day streak', value: `${snapshot.streak} day${snapshot.streak === 1 ? '' : 's'}`, icon: '🔥' },
           ].map(s => (
             <div key={s.label} style={S.statItem}>
               <span style={S.statIcon}>{s.icon}</span>

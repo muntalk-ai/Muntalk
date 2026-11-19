@@ -148,7 +148,7 @@ function PricingContent() {
               Other AI tutors charge up to <span style={{ color:'#F87171' }}>$30/mo</span> for AI conversation
             </div>
             <div style={{ fontSize:13, color:'rgba(255,255,255,0.65)', fontWeight:700, lineHeight:1.6 }}>
-              {brand.name} Premium gives you unlimited AI tutor sessions, real-time pronunciation scoring and CEFR certificates for <span style={{ color:'#A5B4FC', fontWeight:900 }}>$9.99/mo</span> — and the free tier is <span style={{ color:'#A5B4FC', fontWeight:900 }}>$0 forever</span>.
+              {brand.name} Premium gives you unlimited AI tutor sessions and more Exchange chats a day for <span style={{ color:'#A5B4FC', fontWeight:900 }}>$9.99/mo</span> — and the free tier is <span style={{ color:'#A5B4FC', fontWeight:900 }}>$0 forever</span>, with real-time pronunciation scoring and CEFR certificates included.
             </div>
           </div>
         </div>
@@ -174,7 +174,7 @@ function PricingContent() {
                   ['Real-time pronunciation scoring', '✓', '✓', '—'],
                   ['CEFR completion certificates', '✓', '✓', '—'],
                   ['Languages', '90+', '90+', 'Fewer'],
-                  ['Streak Freeze & leagues', '✓', '✓', '✓'],
+                  ['Streak Freeze & leagues', '✓', '✓', '—'],
                 ] as string[][]).map((row, i) => (
                   <tr key={row[0]} style={{ background: i % 2 ? '#fff' : '#F8FAFC' }}>
                     <td style={{ padding:'12px 18px', fontWeight:800, color:'#334155' }}>{row[0]}</td>
