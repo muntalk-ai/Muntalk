@@ -70,15 +70,31 @@ export default function LeaguePage() {
     </div>
   );
 
+  // QA 11-16 D5: 게스트 게이트도 discover/dream/words 패턴과 동일하게 —
+  // Sign In + Create Account + Go Back을 모두 제공한다. (기존에는 Sign In만
+  // 있어 내비게이션 없이 갇혔다.) 로그인 후 복귀 경로도 ?next=로 전달.
   if (!user) return (
-    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
-      <div style={{ textAlign: 'center' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", padding: 24 }}>
+      <div style={{ textAlign: 'center', maxWidth: 440 }}>
         <div style={{ fontSize: 48, marginBottom: 16 }}>🏆</div>
         <div style={{ fontSize: 18, fontWeight: 800, color: '#0F172A', marginBottom: 8 }}>Sign in to join the league!</div>
-        <button onClick={() => router.push('/login')}
-          style={{ padding: '12px 28px', borderRadius: 16, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
-          Sign In
-        </button>
+        <p style={{ fontSize: 13, color: '#64748B', lineHeight: 1.7, marginBottom: 28, fontWeight: 600 }}>
+          Compete with learners every week — your XP and rank are saved to your account.
+        </p>
+        <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <button onClick={() => router.push('/login?next=/lingua/league')}
+            style={{ padding: '13px 28px', borderRadius: 14, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 14, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+            Sign In
+          </button>
+          <button onClick={() => router.push('/signup?next=/lingua/league')}
+            style={{ padding: '13px 20px', borderRadius: 14, border: '1.5px solid #E2E8F0', background: 'transparent', color: '#64748B', fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+            Create Account
+          </button>
+          <button onClick={() => router.push('/lingua')}
+            style={{ padding: '13px 20px', borderRadius: 14, border: '1.5px solid #E2E8F0', background: 'transparent', color: '#64748B', fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+            ← Go Back
+          </button>
+        </div>
       </div>
     </div>
   );

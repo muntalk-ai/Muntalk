@@ -13,6 +13,7 @@ import {
 import { auth, googleProvider } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
 import { getNextPath, stashNextPath } from '@/lib/returnUrl';
+import { PLANS, type PlanId } from '@/lib/subscription';
 import { isExchangeProfileComplete } from '@/lib/exchangeProfile';
 import BackButton from '@/components/BackButton';
 
@@ -27,6 +28,25 @@ export default function LoginPage() {
     if (typeof window === 'undefined') return '/exchange';
     const next = new URLSearchParams(window.location.search).get('next');
     return next && next.startsWith('/') && !next.startsWith('//') ? next : '/exchange';
+  })();
+  // QA 11-16 D29: 가입 링크용 원본 ?next= 값 (없으면 null). backFallback은
+  // 기본값이 /exchange이라 "없음"과 구분이 안 돼 별도로 읽는다.
+  const nextParam = (() => {
+    if (typeof window === 'undefined') return null;
+    const n = new URLSearchParams(window.location.search).get('next');
+    return n && n.startsWith('/') && !n.startsWith('//') ? n : null;
+  })();
+  // QA 11-16 D29: /pricing에서 온 경우 결제 맥락 + 플랜 요약을 보여준다.
+  // (기존 ?redirect= 파라미터는 로그인 페이지가 읽지 않아 복귀 경로가
+  // 소실됐음 — pricing은 이제 ?next=/pricing&plan=…을 보낸다.)
+  const pricingContext = (() => {
+    if (typeof window === 'undefined') return null;
+    const q = new URLSearchParams(window.location.search);
+    const next = q.get('next');
+    if (!next || !next.startsWith('/pricing')) return null;
+    const planId = q.get('plan') as PlanId | null;
+    const plan = planId && planId !== 'free' ? PLANS[planId] : null;
+    return { plan };
   })();
   const [email,      setEmail]      = useState('');
   const [password,   setPassword]   = useState('');
@@ -187,6 +207,23 @@ export default function LoginPage() {
           <p style={{ fontSize: 14, color: '#94A3B8', margin: '6px 0 0', fontWeight: 600 }}>Continue your language journey</p>
         </div>
 
+        {/* QA 11-16 D29: /pricing에서 온 결제 맥락 + 플랜 요약 */}
+        {pricingContext && (
+          <div style={{ background: '#EEF2FF', border: '1.5px solid #C7D2FE', borderRadius: 14, padding: '14px 16px', marginBottom: 24, textAlign: 'center' }}>
+            <div style={{ fontSize: 13, fontWeight: 800, color: '#3730A3', lineHeight: 1.6 }}>
+              You&apos;re coming from Pricing — sign in to continue to checkout
+            </div>
+            {pricingContext.plan && (
+              <div style={{ fontSize: 13, color: '#475569', fontWeight: 700, marginTop: 4 }}>
+                {pricingContext.plan.name} — ${pricingContext.plan.price.toFixed(2)} / {pricingContext.plan.period}
+                {pricingContext.plan.monthlyPrice !== pricingContext.plan.price && (
+                  <> (${pricingContext.plan.monthlyPrice.toFixed(2)}/mo)</>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+
         {/* -- Google -- */}
         <button className="auth-btn-google" onClick={handleGoogle} disabled={googleLoading}>
           {googleLoading ? (
@@ -252,9 +289,10 @@ export default function LoginPage() {
 
         <p style={{ textAlign: 'center', marginTop: 20, fontSize: 14, color: '#64748B', fontWeight: 600 }}>
           Don't have an account?{' '}
-          {/* D20: router.push 버튼은 /signup 청크 로딩까지 클릭이 무반응처럼
-              보였음. prefetch되는 Link로 바꿔 즉시 이동한다. */}
-          <Link href="/signup" prefetch className="auth-link" style={{ fontSize: 14 }}>Create one free</Link>
+          {/* QA 11-16 D29: 가입으로 갈 때도 복귀 경로(?next=)를 유지한다 —
+              안 그러면 /pricing에서 온 게스트가 가입 후 엉뚱한 곳으로 간다.
+              D20(11-16 B1): prefetch되는 Link로 즉시 이동. */}
+          <Link href={nextParam ? `/signup?next=${encodeURIComponent(nextParam)}` : '/signup'} prefetch className="auth-link" style={{ fontSize: 14 }}>Create one free</Link>
         </p>
         <p style={{ textAlign: 'center', marginTop: 8 }}>
           <button className="auth-link" style={{ fontSize: 13, color: '#94A3B8' }} onClick={() => router.push('/lingua')}>Continue as guest →</button>

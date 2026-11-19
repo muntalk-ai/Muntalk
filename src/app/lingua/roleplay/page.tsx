@@ -55,6 +55,10 @@ export default function RoleplayLobby() {
   const [selDiff,  setSelDiff]  = useState<RpDifficulty|'all'>('all');
   const [selWorld, setSelWorld] = useState<WorldId|'all'>('all');
   const [hovered,  setHovered]  = useState<string|null>(null);
+  // QA 11-16 D28: 게스트가 시나리오를 탭하면 가입 폼으로 바로 보내지 않고
+  // 먼저 가입 필요 이유를 설명하는 게이트 모달을 띄운다.
+  const [showGuestGate, setShowGuestGate] = useState(false);
+  const [pendingRp, setPendingRp] = useState<{ s: EverydayScenario | WorldScenario; type: 'everyday' | 'world' } | null>(null);
 
   const langLabel  = LANG_LABEL[langId]  || 'English';
   const showNative = subLang !== 'en-US' && subLang !== 'en-GB';
@@ -70,7 +74,9 @@ export default function RoleplayLobby() {
   }, [profile]);
 
   const go = (s: EverydayScenario | WorldScenario, type: 'everyday'|'world') => {
-    if (!user) { router.push('/signup?next=/lingua/roleplay'); return; }
+    // QA 11-16 D28: 게스트는 설명 없이 가입 폼으로 보내지 않고, 먼저 가입이
+    // 왜 필요한지 + 가입하면 무엇을 얻는지 안내하는 모달을 띄운다.
+    if (!user) { setPendingRp({ s, type }); setShowGuestGate(true); return; }
     const diff = selDiff === 'all' ? s.difficulty : selDiff;
     router.push(`/lingua/roleplay/session?${new URLSearchParams({ type, scenarioId:s.id, lang:langId, subLang, difficulty:diff })}`);
   };
@@ -329,6 +335,40 @@ export default function RoleplayLobby() {
                 })}
               </div>
             )}
+        </div>
+      )}
+
+      {/* QA 11-16 D28: 게스트용 롤플레이 가입 안내 모달 */}
+      {showGuestGate && pendingRp && (
+        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(6px)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 20px' }}
+          onClick={() => setShowGuestGate(false)}>
+          <div style={{ background: '#fff', borderRadius: 28, padding: '40px 32px', maxWidth: 460, width: '100%', textAlign: 'center', boxShadow: '0 24px 60px rgba(0,0,0,0.2)', position: 'relative' }}
+            onClick={e => e.stopPropagation()}>
+            <button onClick={() => setShowGuestGate(false)}
+              style={{ position: 'absolute', top: 16, right: 16, background: '#F3F4F6', border: 'none', borderRadius: 99, width: 32, height: 32, cursor: 'pointer', fontSize: 16, color: '#6B7280', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+              ✕
+            </button>
+            <div style={{ fontSize: 56, marginBottom: 16 }}>🎭</div>
+            <div style={{ fontSize: 22, fontWeight: 900, color: '#0F172A', marginBottom: 10 }}>
+              Sign up free to start roleplay
+            </div>
+            <div style={{ fontSize: 14, color: '#64748B', lineHeight: 1.7, marginBottom: 8, fontWeight: 600 }}>
+              {pendingRp.s.emoji} “{pendingRp.s.title}” — roleplay with an AI tutor in {langLabel}.
+            </div>
+            <div style={{ fontSize: 13, color: '#94A3B8', lineHeight: 1.7, marginBottom: 28, fontWeight: 600 }}>
+              A free account saves your progress and chat history. No card required.
+            </div>
+            <button
+              onClick={() => router.push('/signup?next=/lingua/roleplay')}
+              style={{ width: '100%', padding: '15px', borderRadius: 16, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 16, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", marginBottom: 10 }}>
+              Create free account →
+            </button>
+            <button
+              onClick={() => setShowGuestGate(false)}
+              style={{ width: '100%', padding: '12px', borderRadius: 16, border: 'none', background: 'transparent', color: '#94A3B8', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+              ← Go back to scenarios
+            </button>
+          </div>
         </div>
       )}
     </div>

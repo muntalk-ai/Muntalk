@@ -185,6 +185,8 @@ export default function LevelHub() {
   const [pendingLevelId, setPendingLevelId] = useState<string | null>(null);
   const [langStep, setLangStep]             = useState<'learn' | 'native'>('learn');
   const [showPlacementModal, setShowPlacementModal] = useState(false);
+  // QA 11-16 D25: 진도 잠금 레벨 클릭 시 보여줄 해제 안내 모달의 대상 레벨
+  const [lockedLevelId, setLockedLevelId] = useState<string | null>(null);
   // placement 완료 여부 (게스트: localStorage / 로그인: Firestore+localStorage)
   const [placementDone, setPlacementDone] = useState(false);
   // 상시 유도 배너 닫기 (세션당 1회)
@@ -483,7 +485,9 @@ export default function LevelHub() {
 
   // 레벨 클릭 → 언어가 이미 설정돼 있으면 바로 이동, 없으면 모달
   const handleLevelClick = (levelId: string, unlocked: boolean) => {
-    if (!unlocked) return;
+    // QA 11-16 D25: 진도 잠금 레벨 클릭 시 조용히 무시하지 말고 해제 방법을
+    // 안내 모달로 보여준다 (이전 레벨 완료 또는 무료 배치 테스트로 건너뛰기).
+    if (!unlocked) { setLockedLevelId(levelId); return; }
     // 구독 레벨 잠금 체크
     if (!isAdmin && isLevelLocked(levelId, effPlanId, false, placementLevel)) {
       // Free + 테스트 미완료 → 테스트 유도 모달 (선택 보상형). 테스트 후에도 잠김이면 paywall.
@@ -643,6 +647,45 @@ export default function LevelHub() {
           </div>
         </div>
       )}
+
+      {/* -- QA 11-16 D25: 잠긴 레벨 해제 안내 모달 -- */}
+      {lockedLevelId && (() => {
+        const lv = CURRICULUM.find(l => l.id === lockedLevelId);
+        if (!lv) return null;
+        const needXp = XP_BOUNDS[lockedLevelId]?.[0] ?? 0;
+        const idx = CURRICULUM.findIndex(l => l.id === lockedLevelId);
+        const prev = idx > 0 ? CURRICULUM[idx - 1] : null;
+        return (
+          <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(6px)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 20px' }}
+            onClick={() => setLockedLevelId(null)}>
+            <div style={{ background: '#fff', borderRadius: 28, padding: '40px 32px', maxWidth: 460, width: '100%', textAlign: 'center', boxShadow: '0 24px 60px rgba(0,0,0,0.2)', position: 'relative' }}
+              onClick={e => e.stopPropagation()}>
+              <button onClick={() => setLockedLevelId(null)}
+                style={{ position: 'absolute', top: 16, right: 16, background: '#F3F4F6', border: 'none', borderRadius: 99, width: 32, height: 32, cursor: 'pointer', fontSize: 16, color: '#6B7280', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+                ✕
+              </button>
+              <div style={{ fontSize: 56, marginBottom: 16 }}>🔒</div>
+              <div style={{ fontSize: 22, fontWeight: 900, color: '#0F172A', marginBottom: 10, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+                {lv.label} is locked
+              </div>
+              <div style={{ fontSize: 14, color: '#64748B', lineHeight: 1.7, marginBottom: 28, fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 600 }}>
+                You need {needXp} XP to unlock {lv.label}
+                {prev ? ` — complete ${prev.label} first` : ''}, or take the free 5-minute placement test to skip ahead.
+              </div>
+              <button
+                onClick={() => { setLockedLevelId(null); setShowPlacementModal(true); }}
+                style={{ width: '100%', padding: '15px', borderRadius: 16, border: 'none', background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', fontSize: 16, fontWeight: 900, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", marginBottom: 10 }}>
+                🎯 Take placement test (free)
+              </button>
+              <button
+                onClick={() => { setLockedLevelId(null); handleLevelClick(currentLevel.id, true); }}
+                style={{ width: '100%', padding: '12px', borderRadius: 16, border: 'none', background: 'transparent', color: '#6366F1', fontSize: 13, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
+                Continue {currentLevel.label} →
+              </button>
+            </div>
+          </div>
+        );
+      })()}
 
       {/* -- 언어 선택 모달 -- */}
       {showLangModal && (
@@ -1667,7 +1710,11 @@ const styles: Record<string, React.CSSProperties> = {
   // Grid
   grid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 20, padding: '20px 32px 60px', maxWidth: 1200, margin: '0 auto' },
   card: { borderRadius: 20, padding: 24, position: 'relative', transition: 'transform 0.18s, box-shadow 0.18s', overflow: 'hidden' },
-  lockOverlay: { position: 'absolute', inset: 0, background: 'rgba(255,255,255,0.75)', backdropFilter: 'blur(3px)', borderRadius: 18, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 8, zIndex: 2 },
+  // QA 11-16 D23: 잠금 오버레이가 카드 전체를 덮어(zIndex 2) "📊 Unlock with
+  // placement test" 버튼 클릭을 가로채고, 클릭이 카드로 떨어져도 D25의 조용한
+  // return에 삼켜져 버튼이 무반응으로 보였다. 오버레이는 표시 전용으로 두고
+  // 클릭은 아래 카드/버튼에 전달한다.
+  lockOverlay: { position: 'absolute', inset: 0, background: 'rgba(255,255,255,0.75)', backdropFilter: 'blur(3px)', borderRadius: 18, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 8, zIndex: 2, pointerEvents: 'none' },
   lockText: { fontSize: 11, color: '#9CA3AF', fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase' },
   cardTop: { display: 'flex', alignItems: 'center', gap: 12, marginBottom: 10 },
   activePill: { marginLeft: 'auto', fontSize: 11, fontWeight: 800, padding: '4px 12px', borderRadius: 99, color: '#fff', letterSpacing: 0.5 },

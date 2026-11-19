@@ -34,7 +34,7 @@ function PricingContent() {
 
   const handleCheckout = async (planId: PlanId) => {
     if (planId === 'free') return;
-    if (!user) { router.push('/login?redirect=/pricing'); return; }
+    if (!user) { router.push(`/login?next=/pricing&plan=${planId}`); return; }
     setLoading(true);
     try {
       const res = await apiFetch('/api/stripe/checkout', {
