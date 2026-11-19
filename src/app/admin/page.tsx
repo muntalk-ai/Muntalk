@@ -12,7 +12,7 @@ import {
   serverTimestamp, query, orderBy, limit, where,
 } from 'firebase/firestore';
 
-const ADMIN_EMAILS = ['muntuz.official@gmail.com'];
+const ADMIN_EMAILS = ['muntalkofficial@gmail.com', 'muntuz.official@gmail.com'];
 type PlanId = 'free' | 'monthly' | 'biannual' | 'annual';
 type Tab = 'users' | 'email' | 'logs' | 'settings';
 
