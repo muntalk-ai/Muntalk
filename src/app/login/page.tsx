@@ -7,7 +7,6 @@ import {
   signInWithRedirect,
   signInWithPopup,
   getRedirectResult,
-  sendPasswordResetEmail,
   fetchSignInMethodsForEmail,
 } from 'firebase/auth';
 import { auth, googleProvider } from '@/lib/firebase';
@@ -59,7 +58,6 @@ export default function LoginPage() {
       void routeAfterSignIn(user);
     }
   }, [user, authLoading]);
-  const [resetSent,  setResetSent]  = useState(false);
   const [showPw,     setShowPw]     = useState(false);
 
   const friendlyError = (code: string) => {
@@ -154,17 +152,6 @@ export default function LoginPage() {
     }
   };
 
-  const handleReset = async () => {
-    if (!email) { setError('Enter your email above first.'); return; }
-    setEmailLoading(true); setError('');
-    try {
-      await sendPasswordResetEmail(auth, email);
-      setResetSent(true);
-    } catch (e: any) {
-      setError(friendlyError(e.code) || 'Failed to send reset email.');
-    } finally { setEmailLoading(false); }
-  };
-
   return (
     <div style={styles.page}>
       {/* Back — top-left. The login page has no header row, so the
@@ -252,12 +239,11 @@ export default function LoginPage() {
             </button>
           </div>
           <div style={{ textAlign: 'right', marginTop: 6 }}>
-            <button className="auth-link" onClick={handleReset}>Forgot password?</button>
+            <button className="auth-link" onClick={() => router.push('/forgot-password')}>Forgot password?</button>
           </div>
         </div>
 
         {error    && <div style={styles.error}>{'⚠️ '}{error}</div>}
-        {resetSent && <div style={styles.success}>✅ Password reset email sent!</div>}
 
         <button className="auth-btn-primary" onClick={handleEmail} disabled={emailLoading} style={{ marginTop: 8 }}>
           {emailLoading ? 'Signing in…' : 'Sign In →'}
