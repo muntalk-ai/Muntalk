@@ -567,7 +567,9 @@ export default function LevelHub() {
           .mt-nav-upgrade{display:none !important;}
           .mt-stats-wrap{grid-template-columns:repeat(2,minmax(0,1fr)) !important;padding:24px 16px 0 !important;gap:12px !important;}
         }
+        .mt-hero-visual{display:none !important;}
         @media(min-width:1025px){
+          .mt-hero-visual{display:flex !important;}
           .mt-hamburger{display:none !important;}
           .mt-mobile-menu{display:none !important;}
           .mt-mobile-menu::-webkit-scrollbar{width:4px;}
@@ -1150,6 +1152,26 @@ export default function LevelHub() {
               </div>
             </>
           )}
+        </div>
+        {/* D8 (11-16 guest QA): hero right side was 55–60% empty — fill it with
+            existing tutor thumbnails (no new art). Desktop only (.mt-hero-visual). */}
+        <div className="mt-hero-visual" style={{ position: 'absolute', right: 44, top: '50%', transform: 'translateY(-50%)', zIndex: 1, flexDirection: 'column', alignItems: 'center', gap: 12 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 132px)', gap: 12 }}>
+            {([
+              ['/images/t01.jpg', 'Alexis'],
+              ['/images/t02.jpg', 'Myra'],
+              ['/images/t03.jpg', 'Alyssa'],
+              ['/images/t04.jpg', 'Aubrey'],
+            ] as [string, string][]).map(([src, name]) => (
+              <div key={src} style={{ position: 'relative' }}>
+                <img src={src} alt={`AI tutor ${name}`} style={{ width: 132, height: 132, objectFit: 'cover', borderRadius: 20, border: '3px solid rgba(255,255,255,0.85)', boxShadow: '0 8px 24px rgba(0,0,0,0.25)', display: 'block' }} />
+                <span style={{ position: 'absolute', left: 8, bottom: 8, background: 'rgba(15,23,42,0.75)', color: '#fff', fontSize: 11, fontWeight: 800, padding: '3px 10px', borderRadius: 99 }}>{name}</span>
+              </div>
+            ))}
+          </div>
+          <div style={{ background: 'rgba(255,255,255,0.18)', border: '1px solid rgba(255,255,255,0.35)', borderRadius: 99, padding: '7px 16px', fontSize: 12, fontWeight: 800, color: '#fff', backdropFilter: 'blur(6px)' }}>
+            👩‍🏫 Meet your AI tutors
+          </div>
         </div>
       </div>
 
