@@ -53,6 +53,14 @@ export function middleware(request: NextRequest) {
     return NextResponse.rewrite(new URL('/muntuz', request.url));
   }
 
+  // ── Muntuz manifest (TWA): the Muntuz Android app (com.muntuz.app)
+  // points its webManifestUrl at /manifest.webmanifest on the muntuz host.
+  // Serve the Muntuz-branded manifest there; every other host keeps the
+  // MunTalk manifest (the plain public/ file, no rewrite).
+  if (isMuntuz && pathname === '/manifest.webmanifest') {
+    return NextResponse.rewrite(new URL('/manifest-muntuz.webmanifest', request.url));
+  }
+
   // 공개 경로 → 통과
   if (PUBLIC_PATHS.some(p => pathname === p || pathname.startsWith(p + '?'))) {
     return NextResponse.next();
@@ -72,8 +80,8 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Root only: the only path this middleware ever rewrites is '/'
-  // (Muntuz host → /muntuz). Every other branch above returns
-  // NextResponse.next(), so no other path needs to invoke it.
-  matcher: ['/'],
+  // '/' (Muntuz host → /muntuz) and '/manifest.webmanifest'
+  // (Muntuz host → /manifest-muntuz.webmanifest). Every other branch
+  // above returns NextResponse.next(), so no other path needs to invoke it.
+  matcher: ['/', '/manifest.webmanifest'],
 };
