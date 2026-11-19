@@ -381,7 +381,7 @@ export const KONGLISH_EPISODES: KonglishEpisode[] = [
   {
     lang: 'fr', ep: 4, slug: 'fr04',
     topic: 'I am boring." (Je m\'ennuie의 의미)',
-    ytTitle: 'Urgences de l\'anglais · Episode 4: I am boring." (Je m\'ennuie의 의미)?! ❌ #Shorts',
+    ytTitle: 'Urgences de l\'anglais · Episode 4: I am boring." (Je m\'ennuie의 의미)?! ❌ #Shorts', videoId: 'rUDU54aRZfA',
     releaseAt: '2026-11-19T22:00:00Z',
   },
   {
