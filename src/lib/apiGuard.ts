@@ -140,10 +140,10 @@ export const DAILY_CAP_EXCHANGE_CHAT_USER = numEnv('DAILY_CAP_EXCHANGE_CHAT_USER
 export const DAILY_CAP_EXCHANGE_CHAT_GUEST = numEnv('DAILY_CAP_EXCHANGE_CHAT_GUEST', 60);
 /** Exchange AI 채팅 시간당 100회 */
 export const HOURLY_CAP_EXCHANGE_CHAT = numEnv('HOURLY_CAP_EXCHANGE_CHAT', 100);
-/** Exchange AI 채팅: 하루 새로 시작하는 채팅 — 무료 20, Pro 50 (Q7).
+/** Exchange AI 채팅: 하루 새로 시작하는 채팅 — 무료 3, Pro 50 (Q7).
  *  메시지 수 상한(DAILY_CAP_EXCHANGE_CHAT_USER 200/일)과는 별개로,
  *  새 채팅 시작 횟수만 센다. 이미 시작한 대화는 무제한. */
-export const DAILY_CAP_EXCHANGE_NEW_CHAT_FREE = numEnv('DAILY_CAP_EXCHANGE_NEW_CHAT_FREE', 20);
+export const DAILY_CAP_EXCHANGE_NEW_CHAT_FREE = numEnv('DAILY_CAP_EXCHANGE_NEW_CHAT_FREE', 3);
 export const DAILY_CAP_EXCHANGE_NEW_CHAT_PRO = numEnv('DAILY_CAP_EXCHANGE_NEW_CHAT_PRO', 50);
 
 export const DAILY_USAGE_COLLECTION = 'api_daily_usage';

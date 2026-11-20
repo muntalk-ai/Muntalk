@@ -341,11 +341,13 @@ export async function deleteChatPhotos(storage: FirebaseStorage, paths: string[]
 }
 
 // ── Daily upload cap (client-side counter, design §7) ──────────────────
-// 20 photos per person per day. This is the v1 enforcement; a server
-// rule is a follow-up when abuse shows up (the Storage rule cannot
-// count per-user daily uploads on its own).
+// 20 photos per person per day for Pro, 1 per day for Free (Jay
+// 2026-11-20: free photo sending is 1/day). This is the v1 enforcement;
+// a server rule is a follow-up when abuse shows up (the Storage rule
+// cannot count per-user daily uploads on its own).
 const PHOTO_UPLOAD_COUNT_KEY = 'muntuz_exchange_photo_uploads_v1';
 export const MAX_PHOTOS_PER_DAY = 20;
+export const MAX_PHOTOS_PER_DAY_FREE = 1;
 
 function utcToday(): string {
   return new Date().toISOString().slice(0, 10);
@@ -368,9 +370,9 @@ export function photoUploadsToday(): number {
 }
 
 /** Record one successful upload. Returns false when the daily cap is hit. */
-export function recordPhotoUpload(): boolean {
+export function recordPhotoUpload(limit: number = MAX_PHOTOS_PER_DAY): boolean {
   const rec = readUploadCount();
-  if (rec.count >= MAX_PHOTOS_PER_DAY) return false;
+  if (rec.count >= limit) return false;
   try {
     window.localStorage.setItem(PHOTO_UPLOAD_COUNT_KEY, JSON.stringify({ date: rec.date, count: rec.count + 1 }));
   } catch {

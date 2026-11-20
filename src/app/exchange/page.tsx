@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { addDoc, collection, doc, getDoc, getDocs, limit, onSnapshot, orderBy, query, serverTimestamp, setDoc, updateDoc, where } from 'firebase/firestore';
@@ -35,15 +35,12 @@ import {
   COMM_MODES,
   CORRECTION_PREFS,
   COUNTRIES,
-  DAYS,
   GENDERS,
   GOALS,
-  TIME_SLOTS,
   ageBandForAge,
   calcAge,
   saveBirthdate,
   saveExchangeProfile,
-  utcLabel,
   type AgeBand,
   type Gender,
   type LearningGoal,
@@ -60,6 +57,7 @@ import {
   deleteChatPhotos,
   hasPartnerReply,
   MAX_PHOTOS_PER_DAY,
+  MAX_PHOTOS_PER_DAY_FREE,
   MAX_PHOTO_ORIGINAL_BYTES,
   otherParticipant,
   photoUploadsToday,
@@ -481,13 +479,55 @@ const ASK_LANGUAGE: Record<string, string> = {
   Portuguese: 'Em que idioma você gostaria de continuar?',
 };
 
+// Profiles may store a language as a locale code ('ko', 'es', 'ko-KR')
+// instead of the display name ('Korean', 'Spanish') — and a missing
+// profile leaves the localStorage default. The greeting maps below key
+// by display name, so normalize codes (case-insensitive) before lookup;
+// unknown values pass through unchanged.
+function normalizeLangName(value: string | undefined): string | undefined {
+  if (!value) return undefined;
+  const key = value.trim().toLowerCase();
+  const map: Record<string, string> = {
+    en: 'English', 'en-us': 'English', 'en-gb': 'English',
+    ko: 'Korean', 'ko-kr': 'Korean', 'ko-kp': 'Korean',
+    es: 'Spanish', 'es-es': 'Spanish', 'es-mx': 'Spanish', 'es-419': 'Spanish',
+    ja: 'Japanese', 'ja-jp': 'Japanese',
+    pt: 'Portuguese', 'pt-br': 'Portuguese', 'pt-pt': 'Portuguese',
+  };
+  return map[key] ?? value;
+}
+
 function greetingForChat(p: AiPartner, target: string, native?: string): string {
-  const build = GREETING_BY_TARGET[target];
+  const targetName = normalizeLangName(target) ?? target;
+  const nativeName = normalizeLangName(native);
+  const build = GREETING_BY_TARGET[targetName];
   const targetGreeting = build ? build(p.name) : p.greeting;
-  const hello = native ? NATIVE_HELLO[native] : undefined;
-  const ask = native ? ASK_LANGUAGE[native] : undefined;
-  if (!hello || !ask || native === target) return targetGreeting;
+  const hello = nativeName ? NATIVE_HELLO[nativeName] : undefined;
+  const ask = nativeName ? ASK_LANGUAGE[nativeName] : undefined;
+  if (!hello || !ask || nativeName === targetName) return targetGreeting;
   return `${hello(p.name)}\n${targetGreeting}\n${ask}`;
+}
+
+// Chat-room message timestamps + date dividers (Jay 2026-11-20): the
+// time is HH:MM 24h in the device's local timezone; the divider is
+// "Today" / "Yesterday" / "Month D, YYYY" for the message's local day.
+function formatMsgTime(atMs: number): string {
+  const d = new Date(atMs);
+  return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+}
+
+function msgDayKey(atMs: number): string {
+  const d = new Date(atMs);
+  return `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+}
+
+function dayDividerLabel(atMs: number): string {
+  const d = new Date(atMs);
+  const startOfDay = (x: Date) => new Date(x.getFullYear(), x.getMonth(), x.getDate()).getTime();
+  const diffDays = Math.round((startOfDay(new Date()) - startOfDay(d)) / 86400000);
+  if (diffDays === 0) return 'Today';
+  if (diffDays === 1) return 'Yesterday';
+  return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 }
 
 // ── H-7: Web Speech API dictation ──────────────────────────────────────
@@ -1216,8 +1256,8 @@ export default function ExchangePage() {
         setProfileExists(snap.exists());
         if (snap.exists()) {
           const d = snap.data();
-          if (typeof d.nativeLang === 'string') setNativeLang(d.nativeLang);
-          if (typeof d.targetLang === 'string') setTargetLang(d.targetLang);
+          if (typeof d.nativeLang === 'string') setNativeLang(normalizeLangName(d.nativeLang) ?? d.nativeLang);
+          if (typeof d.targetLang === 'string') setTargetLang(normalizeLangName(d.targetLang) ?? d.targetLang);
           if (typeof d.level === 'string') setLevel(d.level);
           if (!fluentEditedRef.current && Array.isArray(d.fluentLangs)) setFluentLangs(d.fluentLangs.filter((l): l is string => typeof l === 'string'));
           if (!interestEditedRef.current && Array.isArray(d.interests)) setInterestSel(d.interests.filter((i): i is string => typeof i === 'string'));
@@ -1528,14 +1568,14 @@ export default function ExchangePage() {
   }
 
   // Q7 / M-4: 하루 새로 시작하는 AI 채팅 수 카운터 (Muntuz host only).
-  // "무료 20회" = 하루에 새로 시작하는 채팅 20개(파트너 20명), 이미
-  // 시작한 대화는 무제한. 이 값은 화면 표시 + 새 채팅 시작 전 1차
+  // "무료 3회" = 하루에 새로 시작하는 채팅 3개, 이미
+  // 시작한 대화는 무제한. 이 값은 새 채팅 시작 전 1차
   // 게이트용이다. 실제 강제(서버)는 새 채팅의 첫 메시지에 붙는
   // newChat 플래그로 api_daily_usage에 세어 한다. 날짜는 서버와
   // 같은 UTC 기준. 로그인 계정별로 따로 세고, 게스트는 이 기기
-  // 기준 20회로 표시한다.
+  // 기준 3회로 표시한다.
   const NEW_CHATS_KEY = 'muntuz_exchange_new_chats_v1';
-  const FREE_DAILY_NEW_CHATS = 20;
+  const FREE_DAILY_NEW_CHATS = 3;
   const PRO_DAILY_NEW_CHATS = 50;
 
   function utcToday(): string {
@@ -1983,7 +2023,7 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
 
   // ── Chats list: search + filter chips (HelloTalk list layout, MunTalk style)
   const [chatQuery, setChatQuery] = useState('');
-  type ChatFilter = 'all' | 'online' | 'unread' | 'myturn' | 'proximity';
+  type ChatFilter = 'all' | 'online' | 'unread' | 'myturn';
   const [chatFilter, setChatFilter] = useState<ChatFilter>('all');
   // Last message id the user has seen per chat (in-memory only) — drives
   // the Unread filter and the unread dot. Marked when a chat is opened
@@ -2009,14 +2049,6 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
   // AI partners are always online. Real-person presence is not tracked
   // yet (no heartbeat), so Online currently lists AI chats only.
   const chatIsOnline = (c: Chat) => c.isAi;
-  // Timezone distance in minutes from me; AI has no timezone and is
-  // always available, so it sorts first under Timezone proximity.
-  const chatTzDistance = (c: Chat): number => {
-    if (c.isAi) return 0;
-    const p = (realPartners || []).find((rp) => rp.uid === c.partnerId);
-    if (!p || !p.timezone) return Number.POSITIVE_INFINITY;
-    return Math.abs(p.utcOffsetMin - utcOffsetMin);
-  };
   const visibleChats = chats.filter((c) => {
     if (chatQuery) {
       const q = chatQuery.trim().toLowerCase();
@@ -2029,9 +2061,7 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
     if (chatFilter === 'myturn' && !chatIsMyTurn(c)) return false;
     return true;
   });
-  // "Timezone proximity" is a sort, not a filter: closest timezone first.
-  const sortedChats =
-    chatFilter === 'proximity' ? [...visibleChats].sort((a, b) => chatTzDistance(a) - chatTzDistance(b)) : visibleChats;
+  const sortedChats = visibleChats;
 
   // ── AI Review tab: derived real data ────────────────────────────────
   // Due words: saved, not marked known, and past their review time.
@@ -2504,8 +2534,9 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
   // Gates, in order: signed-in people chat only, image files only,
   // original ≤ 10 MB, first message must be text (photos only after the
   // partner replies — Jay decision ②), 20 photos per person per day
-  // (Jay decision ③). The file is compressed and uploaded by
-  // sendServerPhoto; the daily counter records only a successful send.
+  // for Pro and 1 per day for Free (Jay decision ③, 2026-11-20). The
+  // file is compressed and uploaded by sendServerPhoto; the daily
+  // counter records only a successful send.
   const handlePhotoFile = (file: File | undefined) => {
     if (!file || !activeChat || activeChat.isAi || !user || uploadingPhoto) return;
     if (!file.type.startsWith('image/')) {
@@ -2520,8 +2551,9 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
       showToast('Photos can be sent after your partner replies. Send a text first.');
       return;
     }
-    if (photoUploadsToday() >= MAX_PHOTOS_PER_DAY) {
-      showToast(`You have sent ${MAX_PHOTOS_PER_DAY} photos today — try again tomorrow.`);
+    const photoLimit = realPro ? MAX_PHOTOS_PER_DAY : MAX_PHOTOS_PER_DAY_FREE;
+    if (photoUploadsToday() >= photoLimit) {
+      showToast(`You have sent ${photoLimit} ${photoLimit === 1 ? 'photo' : 'photos'} today — try again tomorrow.`);
       return;
     }
     const chat = activeChat;
@@ -2530,7 +2562,7 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
     void (async () => {
       try {
         const sent = await sendServerPhoto(db, storage, chatId, user.uid, file);
-        recordPhotoUpload();
+        recordPhotoUpload(photoLimit);
         mergeServerMessages(chatId, [
           {
             id: sent.serverId,
@@ -2638,13 +2670,6 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
     setFluentLangs((cur) => (cur.includes(lang) ? cur.filter((l) => l !== lang) : [...cur, lang]));
   };
 
-  // Availability chips save with the profile (Save button), unlike
-  // interests which save on tap.
-  const toggleAvailDay = (d: string) =>
-    setAvailDays((cur) => (cur.includes(d) ? cur.filter((x) => x !== d) : [...cur, d]));
-  const toggleAvailSlot = (s: string) =>
-    setAvailSlots((cur) => (cur.includes(s) ? cur.filter((x) => x !== s) : [...cur, s]));
-
   // Live preview for the birthdate field: only the band is ever shown,
   // never the exact age. Used for the inline hint under the date input.
   const birthdateAge = birthdate ? calcAge(birthdate) : null;
@@ -2748,14 +2773,6 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
           <nav className="sticky top-20 flex flex-col gap-1 rounded-2xl border border-slate-200/80 bg-white p-2 shadow-sm">
             {TABS.map((t) => tabButton(t, true))}
           </nav>
-          <div className="mt-4 rounded-2xl border border-slate-200/80 bg-white p-4 text-xs leading-relaxed text-slate-500 shadow-sm">
-            <p className="text-sm font-bold text-slate-700">Daily new chats</p>
-            <p className="mt-1">Free: 20 / day · Pro: 50 / day</p>
-            <p>Ongoing chats are unlimited.</p>
-            <p className="mt-1 font-bold text-violet-700">
-              Today: {newChatsToday}/{realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS} new chats
-            </p>
-          </div>
         </aside>
 
         {/* Main */}
@@ -2788,10 +2805,6 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                   Online now: {AI_PARTNERS.length} AI partners ready to practice
                 </span>
               </div>
-              {/* Q7 / M-4 / M-13: 오늘 새로 시작한 채팅 수. */}
-              <p className="mt-2 text-xs font-semibold text-slate-500">
-                New chats today: {newChatsToday}/{realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS} ({realPro ? 'Pro: 50' : 'Free: 20'} / day) — ongoing chats are unlimited.
-              </p>
               {/* Mobile-only entry points: the sidebar tab switcher is
                   desktop-only (hidden md:block), so on phones AI Review
                   and Profile had no in-page path. */}
@@ -3039,10 +3052,6 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                           </select>
                         </label>
                       </div>
-                      <label className="mt-3 flex items-center gap-2 text-sm font-semibold">
-                        <input type="checkbox" checked={fOverlap} onChange={(e) => setFOverlap(e.target.checked)} className="h-5 w-5 accent-violet-600" />
-                        Overlapping hours with me (uses my Profile availability + timezone)
-                      </label>
                       <p className="mt-2 text-xs text-slate-500">
                         Showing {visiblePartners.length} of {realPartners.length} {realPartners.length === 1 ? 'person' : 'people'}.
                       </p>
@@ -3090,16 +3099,6 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                                 <p className="text-xs text-slate-500">
                                   Learning: {p.learning} · {p.level}
                                 </p>
-                                {(p.country || p.ageBand || p.goal || p.timezone) && (
-                                  <p className="mt-0.5 text-xs text-slate-500">
-                                    {[p.country, p.gender !== 'Prefer not to say' ? p.gender : '', p.ageBand, p.goal, p.timezone ? utcLabel(p.utcOffsetMin) : ''].filter(Boolean).join(' · ')}
-                                  </p>
-                                )}
-                                {p.availability.slots.length > 0 && (
-                                  <p className="mt-0.5 text-xs text-slate-500">
-                                    Available {p.availability.days.length > 0 ? `${p.availability.days.join(', ')} · ` : ''}{p.availability.slots.join(', ')}
-                                  </p>
-                                )}
                               </div>
                             </div>
                           </div>
@@ -3200,13 +3199,6 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
           {tab === 'chats' && (
             <section>
               <h2 className="text-xl font-extrabold">Chats</h2>
-              <p className="mt-1 text-sm text-slate-500">
-                AI chats are marked AI throughout. Phone numbers, links and contact IDs are blocked before sending.
-              </p>
-              {/* Q7 / M-4 / M-13: 오늘 새로 시작한 채팅 수. */}
-              <p className="mt-1 text-xs font-semibold text-violet-700">
-                New chats today: {newChatsToday}/{realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS} ({realPro ? 'Pro: 50' : 'Free: 20'} / day) — ongoing chats are unlimited.
-              </p>
               {!activeChat ? (
                 <div className="mt-4">
                   <div className="relative">
@@ -3235,7 +3227,6 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                         ['online', 'Online'],
                         ['unread', 'Unread'],
                         ['myturn', 'My turn'],
-                        ['proximity', 'Timezone proximity'],
                       ] as const
                     ).map(([id, label]) => (
                       <button
@@ -3312,10 +3303,6 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                       {activeChat.name}{' '}
                       {activeChat.isAi && <span className="rounded-full bg-violet-600 px-2 py-0.5 text-[11px] font-extrabold text-white">AI</span>}
                     </span>
-                    {/* Q7 / M-4 / M-13: 오늘 새로 시작한 채팅 수. */}
-                    <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-bold text-slate-600" title="New AI chats started today">
-                      {newChatsToday}/{realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS} today
-                    </span>
                     {!activeChat.isAi && (
                       <button
                         onClick={() => {
@@ -3350,8 +3337,21 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                     </div>
                   )}
                   <div className="flex flex-col gap-2 p-3">
-                    {activeChat.messages.map((m) => (
-                      <div key={m.id} className={`flex items-start gap-2 ${m.from === 'me' ? 'justify-end' : 'justify-start'}`}>
+                    {activeChat.messages.map((m, i) => {
+                      const prev = i > 0 ? activeChat.messages[i - 1] : undefined;
+                      const dayKey = m.at ? msgDayKey(m.at) : undefined;
+                      const prevDayKey = prev?.at ? msgDayKey(prev.at) : undefined;
+                      const dividerLabel = dayKey && dayKey !== prevDayKey && m.at ? dayDividerLabel(m.at) : undefined;
+                      return (
+                      <Fragment key={m.id}>
+                        {dividerLabel && (
+                          <div className="my-1 flex justify-center">
+                            <span className="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-bold text-slate-500">
+                              {dividerLabel}
+                            </span>
+                          </div>
+                        )}
+                      <div className={`flex items-start gap-2 ${m.from === 'me' ? 'justify-end' : 'justify-start'}`}>
                         {m.from !== 'me' && activeChat.avatar ? (
                           <Image src={activeChat.avatar} alt="" width={64} height={64} className="mt-0.5 h-8 w-8 shrink-0 rounded-full object-cover ring-2 ring-violet-200" />
                         ) : null}
@@ -3417,7 +3417,14 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                           <span>{m.text}</span>
                         </div>
                       </div>
-                    ))}
+                        {m.at ? (
+                          <p className={`-mt-1 px-1 text-[11px] text-slate-400 ${m.from === 'me' ? 'text-right' : 'pl-10 text-left'}`}>
+                            {formatMsgTime(m.at)}
+                          </p>
+                        ) : null}
+                      </Fragment>
+                      );
+                    })}
                     {aiSending && <p className="text-xs font-semibold text-slate-400">AI is generating a reply…</p>}
                   </div>
                   {review && review.partnerId === activeChat.partnerId && (
@@ -3778,9 +3785,7 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                     </div>
                   );
                 })()
-              ) : (
-                <p className="mt-3 rounded-xl bg-slate-50 px-3 py-2 text-sm text-slate-500">You&apos;re on the Free plan — 20 new chats a day, ongoing chats unlimited.</p>
-              )}
+              ) : null}
               {/* Q6: /pricing 가격과 통일 (월 $9.99, 6개월 $39.99, 1년
                   $59.99). 예전 Pro 탭의 월/연 표기는 삭제. 할인율은
                   /pricing 기준 — 6개월 33%, 1년 50%. */}
@@ -3810,28 +3815,26 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                 </button>
               </div>
               <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-slate-600">
-                <li>50 new chats per day (free: 20)</li>
                 <li>Unlimited AI reviews + weekly report</li>
                 <li>Unlimited translations</li>
                 <li>Safety tools (contact guard) are free for everyone</li>
               </ul>
               {/* Q9: 가짜 7일 무료 체험 버튼을 없애고 /pricing으로
                   연결한다. 무료 체험 결제는 만들지 않는다 — 무료
-                  20회/일이 이미 충분하다는 사용자 결정. */}
+                  3회/일이 이미 충분하다는 사용자 결정. */}
               <a
                 href="/pricing"
                 className="mt-4 block w-full rounded-xl bg-violet-600 py-3 text-center font-bold text-white shadow-sm transition hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98]"
               >
                 See plans &amp; pricing
               </a>
-              <p className="mt-2 text-center text-xs text-slate-400">Free plan includes 20 new chats a day — ongoing chats are unlimited.</p>
             </section>
           )}
 
           {tab === 'profile' && (
             <section>
               <h2 className="text-xl font-extrabold">My Exchange profile</h2>
-              <p className="mt-1 text-sm text-slate-500">Partners see your nickname, languages, level, interests, goal, age band, country, timezone and availability. Your exact date of birth is never shown to anyone.</p>
+              <p className="mt-1 text-sm text-slate-500">Partners see your nickname, languages, level, interests, goal, age band and country. Your exact date of birth is never shown to anyone.</p>
               {authLoading ? (
                 <p className="mt-2 text-sm text-slate-500">Checking sign-in…</p>
               ) : user ? (
@@ -3982,41 +3985,6 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                         ? " Optional for now — we'll ask for it before your first People Rooms contact."
                         : ''}
                   </p>
-                </div>
-                <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
-                  <h3 className="font-bold">Availability</h3>
-                  <p className="mt-4 text-sm font-semibold">Days</p>
-                  <div className="mt-2 flex flex-wrap gap-1.5">
-                    {DAYS.map((d) => (
-                      <button
-                        key={d}
-                        onClick={() => toggleAvailDay(d)}
-                        className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${availDays.includes(d) ? 'bg-violet-600 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
-                      >
-                        {d}
-                      </button>
-                    ))}
-                  </div>
-                  <p className="mt-4 text-sm font-semibold">Times of day</p>
-                  <div className="mt-2 flex flex-wrap gap-1.5">
-                    {TIME_SLOTS.map((s) => (
-                      <button
-                        key={s}
-                        onClick={() => toggleAvailSlot(s)}
-                        className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${availSlots.includes(s) ? 'bg-violet-600 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
-                      >
-                        {s}
-                      </button>
-                    ))}
-                  </div>
-                  <label className="mt-4 block text-sm font-semibold">
-                    Sessions per week
-                    <select value={availPerWeek} onChange={(e) => setAvailPerWeek(Number(e.target.value))} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100 sm:w-48">
-                      {[1, 2, 3, 4, 5].map((n) => (
-                        <option key={n} value={n}>{n === 5 ? '5+' : n}</option>
-                      ))}
-                    </select>
-                  </label>
                 </div>
                 <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
                   <label className="block text-sm font-semibold">
