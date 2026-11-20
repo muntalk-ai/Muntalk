@@ -1941,7 +1941,14 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
   // Guest trial countdown: ticks once a second while a guest trial is
   // active. At zero the sign-up prompt opens if an AI chat is on
   // screen; otherwise it opens on the next send attempt.
+  //
+  // Auth gate: the countdown must not run before the login state is
+  // settled. On mount `user` is still null while Firebase restores
+  // the session (authLoading), and a stale expired trial in this
+  // device's localStorage would otherwise open the prompt for a
+  // signed-in user the moment they enter a chat.
   useEffect(() => {
+    if (authLoading) return;
     if (user || !guestTrial) {
       setTrialLeftMs(null);
       return;
@@ -1954,8 +1961,15 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
     tick();
     const iv = window.setInterval(tick, 1000);
     return () => window.clearInterval(iv);
-    // eslint-disable-next-line react-hooks/exhaustive-deps — tick on trial/user/chat change only.
-  }, [user, guestTrial, activeChatId]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps — tick on trial/user/chat/auth change only.
+  }, [user, guestTrial, activeChatId, authLoading]);
+
+  // Signed-in users never see the trial-ended prompt: close one that
+  // opened before auth resolved (e.g. a stale expired guest trial on
+  // this device, or a send tapped during the auth-loading window).
+  useEffect(() => {
+    if (user && showTrialExpired) setShowTrialExpired(false);
+  }, [user, showTrialExpired]);
 
   // Escape closes the trial-ended prompt (same as "Later").
   useEffect(() => {
