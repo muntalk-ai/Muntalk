@@ -2062,17 +2062,23 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
     // (이미 시작한 대화는 무제한).
     const isNewChatStart = newChatPendingRef.current.has(activeChat.id);
     try {
-      const res = await fetch('/api/exchange-ai-chat', {
+      const res = await apiFetch('/api/exchange-ai-chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ partnerId: activeChat.partnerId, message: text, history, sentPhotos, turnsSincePhoto, memory: memoryRef.current[activeChat.partnerId] || undefined, deviceId: getDeviceId() || undefined, ...(isNewChatStart ? { newChat: true } : {}) }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) {
-        // Server-side trial expiry (e.g. localStorage was cleared): open
-        // the sign-up prompt instead of a generic error toast.
+        // Server-side trial expiry: guests get the sign-up prompt.
+        // Signed-in users send an ID token (apiFetch above), so
+        // trial_expired for them can only mean the token failed to
+        // issue — a retryable error, never a sign-up gate.
         if (data.error === 'trial_expired') {
-          openTrialExpired();
+          if (user) {
+            showToast('AI reply failed — please try again.');
+          } else {
+            openTrialExpired();
+          }
           return;
         }
         // Q7: 서버의 새 채팅 한도에 걸리면, 채팅은 그대로 두고
