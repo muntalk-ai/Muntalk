@@ -170,7 +170,7 @@ function PricingContent() {
                 {([
                   ['Monthly price', '$0 forever', '$9.99', 'Up to $30'],
                   ['AI 튜터 채팅 (MunTalk 레슨): 3회/일', '3회/일', '무제한', '—'],
-                  ['Exchange 신규 AI 채팅: 무료 20회/일 · Pro 50회/일', '무료 20회/일', 'Pro 50회/일', '—'],
+                  ['Exchange 신규 AI 채팅: 무료 3회/일 · Pro 50회/일', '무료 3회/일', 'Pro 50회/일', '—'],
                   ['Real-time pronunciation scoring', '✓', '✓', '—'],
                   ['CEFR completion certificates', '✓', '✓', '—'],
                   ['Languages', '90+', '90+', 'Fewer'],
