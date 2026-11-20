@@ -27,13 +27,11 @@ import {
   COMM_MODES,
   CORRECTION_PREFS,
   COUNTRIES,
-  DAYS,
   GENDERS,
   GOALS,
   INTERESTS,
   LANGUAGES,
   LEVELS,
-  TIME_SLOTS,
   ageBandForAge,
   calcAge,
   defaultExchangeProfileForm,
@@ -123,17 +121,6 @@ export default function ExchangeSetupPage() {
         ? cur.fluentLangs.filter((l) => l !== lang)
         : [...cur.fluentLangs, lang],
     }));
-  const toggleDay = (d: string) =>
-    setForm((cur) => ({
-      ...cur,
-      availDays: cur.availDays.includes(d) ? cur.availDays.filter((x) => x !== d) : [...cur.availDays, d],
-    }));
-  const toggleSlot = (s: string) =>
-    setForm((cur) => ({
-      ...cur,
-      availSlots: cur.availSlots.includes(s) ? cur.availSlots.filter((x) => x !== s) : [...cur.availSlots, s],
-    }));
-
   const save = async () => {
     if (!user || saving) return;
     setSaveError('');
@@ -193,7 +180,7 @@ export default function ExchangeSetupPage() {
       <main className="mx-auto max-w-2xl px-4 py-6 pb-16">
         <h1 className="text-xl font-extrabold">Set up your Exchange profile</h1>
         <p className="mt-1 text-sm text-slate-500">
-          Partners see your nickname, languages, level, interests, goal, age band, country, timezone and availability. Your exact date of
+          Partners see your nickname, languages, level, interests, goal, age band and country. Your exact date of
           birth is never shown to anyone.
         </p>
 
@@ -365,36 +352,6 @@ export default function ExchangeSetupPage() {
                     ? " Optional for now — we'll ask for it before your first People Rooms contact."
                     : ''}
               </p>
-            </div>
-
-            <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
-              <h2 className="font-bold">Availability</h2>
-              <p className="mt-4 text-sm font-semibold">Days</p>
-              <div className="mt-2 flex flex-wrap gap-1.5">
-                {DAYS.map((d) => (
-                  <button key={d} type="button" onClick={() => toggleDay(d)} className={chipCls(form.availDays.includes(d))}>
-                    {d}
-                  </button>
-                ))}
-              </div>
-              <p className="mt-4 text-sm font-semibold">Times of day</p>
-              <div className="mt-2 flex flex-wrap gap-1.5">
-                {TIME_SLOTS.map((s) => (
-                  <button key={s} type="button" onClick={() => toggleSlot(s)} className={chipCls(form.availSlots.includes(s))}>
-                    {s}
-                  </button>
-                ))}
-              </div>
-              <label className="mt-4 block text-sm font-semibold">
-                Sessions per week
-                <select value={form.availPerWeek} onChange={(e) => setForm((cur) => ({ ...cur, availPerWeek: Number(e.target.value) }))} className={`${inputCls} sm:w-48`}>
-                  {[1, 2, 3, 4, 5].map((n) => (
-                    <option key={n} value={n}>
-                      {n === 5 ? '5+' : n}
-                    </option>
-                  ))}
-                </select>
-              </label>
             </div>
 
             <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
