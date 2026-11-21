@@ -4,10 +4,29 @@ const BASE = 'https://www.muntalk.com';
 
 // Public, indexable pages. App pages behind auth (/lingua/*, /profile)
 // and internal routes are intentionally excluded.
+// hreflang alternates for the localized landing set (homepage + /ko + pilot 5).
+const LOCALE_PATHS = new Set(['', '/ko', '/vi', '/th', '/my', '/es', '/ja']);
+const LANG_URLS: Record<string, string> = {
+  en: BASE,
+  ko: `${BASE}/ko`,
+  vi: `${BASE}/vi`,
+  th: `${BASE}/th`,
+  my: `${BASE}/my`,
+  es: `${BASE}/es`,
+  ja: `${BASE}/ja`,
+  'x-default': BASE,
+};
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages: { path: string; priority: number; changeFrequency: 'weekly' | 'monthly' }[] = [
     { path: '', priority: 1.0, changeFrequency: 'weekly' },
     { path: '/ko', priority: 0.9, changeFrequency: 'weekly' },
+    // Localized landing pilot (2026-11-14): /vi /th /my /es /ja mirror /ko.
+    { path: '/vi', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/th', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/my', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/es', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/ja', priority: 0.8, changeFrequency: 'weekly' },
     { path: '/lingua/microtalk', priority: 0.9, changeFrequency: 'weekly' },
     { path: '/about', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/pricing', priority: 0.8, changeFrequency: 'monthly' },
@@ -47,5 +66,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: p.changeFrequency,
     priority: p.priority,
+    ...(LOCALE_PATHS.has(p.path) ? { alternates: { languages: LANG_URLS } } : {}),
   }));
 }
