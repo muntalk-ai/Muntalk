@@ -26,6 +26,7 @@
 // public profile is still saved, exactly as the Profile tab behaves.)
 import { doc, getDoc, serverTimestamp, setDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
+import { LEARN_LANGUAGES } from '@/data/languages';
 
 export const GOALS = ['Conversation', 'Exam', 'Travel', 'Work', 'Friends'] as const;
 export type LearningGoal = (typeof GOALS)[number];
@@ -37,7 +38,19 @@ export const COMM_MODES = ['Text', 'Voice', 'Both'] as const;
 export const CORRECTION_PREFS = ['Often', 'Sometimes', 'Never'] as const;
 export const TIME_SLOTS = ['Morning', 'Afternoon', 'Evening', 'Night'] as const;
 export const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] as const;
-export const LANGUAGES = ['English', 'Korean', 'Spanish', 'Japanese', 'Portuguese'] as const;
+// Language picker options for the Exchange profile forms (the setup page
+// and the Profile tab share this module so the two forms cannot drift
+// apart). Derived from the canonical lesson/TTS list LEARN_LANGUAGES
+// (src/data/languages.ts, 100 entries): regional variants collapse to one
+// base language — 'English (US)' / 'English (UK)' → 'English',
+// 'Chinese (CN)' / 'Chinese (TW)' → 'Chinese' — giving the 93 supported
+// languages. Values stay plain display names: the greeting copy
+// (GREETING_BY_TARGET), partner flags (LANG_FLAG) and dictation
+// (SPEECH_LANG) all key by display name, so BCP-47 codes must not be
+// stored here.
+export const LANGUAGES: readonly string[] = [
+  ...new Set(LEARN_LANGUAGES.map((l) => l.label.replace(/ \([^)]*\)$/, ''))),
+];
 export const LEVELS = ['Beginner', 'Intermediate', 'Advanced'] as const;
 export const INTERESTS = ['Travel', 'Cooking', 'Football', 'Music', 'Movies', 'Reading', 'Hiking'] as const;
 export const COUNTRIES = [
