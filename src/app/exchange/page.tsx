@@ -37,6 +37,7 @@ import {
   COUNTRIES,
   GENDERS,
   GOALS,
+  LANGUAGES,
   ageBandForAge,
   calcAge,
   saveBirthdate,
@@ -3867,7 +3868,7 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                     <label className="block text-sm font-semibold">
                       Native language
                       <select value={nativeLang} onChange={(e) => setNativeLang(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
-                        {['English', 'Korean', 'Spanish', 'Japanese', 'Portuguese'].map((l) => (
+                        {LANGUAGES.map((l) => (
                           <option key={l}>{l}</option>
                         ))}
                       </select>
@@ -3875,7 +3876,7 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                     <label className="block text-sm font-semibold">
                       Learning
                       <select value={targetLang} onChange={(e) => setTargetLang(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
-                        {['English', 'Korean', 'Spanish', 'Japanese', 'Portuguese'].map((l) => (
+                        {LANGUAGES.map((l) => (
                           <option key={l}>{l}</option>
                         ))}
                       </select>
@@ -3891,7 +3892,7 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                   </div>
                   <p className="mt-4 text-sm font-semibold">Fluent languages (besides your native language)</p>
                   <div className="mt-2 flex flex-wrap gap-1.5">
-                    {['English', 'Korean', 'Spanish', 'Japanese', 'Portuguese']
+                    {LANGUAGES
                       .filter((l) => l !== nativeLang)
                       .map((l) => (
                         <button
