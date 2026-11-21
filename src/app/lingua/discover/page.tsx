@@ -18,6 +18,7 @@ import RtlDir from '@/components/RtlDir';
 import { getLangLabel } from '@/data/languages';
 import { purposePromptBlock, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
+import { lpGet, lpSet } from '@/lib/localProgress';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -156,9 +157,9 @@ function DiscoverContent() {
   const msgId    = useRef(0);
 
   useEffect(() => {
-    const ll = localStorage.getItem('mt_learn_lang') || 'en-US';
+    const ll = lpGet('mt_learn_lang') || 'en-US';
     const sl = resolveNativeLang();
-    const ti = localStorage.getItem('mt_tutor_id') || 't01';
+    const ti = lpGet('mt_tutor_id') || 't01';
     setLangId(ll); setSubLang(sl); setTutorId(ti);
     if (user) {
       getUserProfile(user.uid).then(p => {
@@ -166,10 +167,10 @@ function DiscoverContent() {
         // 고른 학습 언어(예: 스페인어)를 덮어써 Discover 대화가 영어로
         // 돌아가던 버그 수정 (Agora PR-126과 동일 패턴). 프로필은 로컬에
         // 값이 없을 때만 폴백으로 쓰고, 그때만 localStorage에 동기화한다.
-        const lsLearn = localStorage.getItem('mt_learn_lang');
-        const lsNative = localStorage.getItem('mt_native_lang');
-        if (p?.learnLang && !lsLearn) { setLangId(p.learnLang); try { localStorage.setItem('mt_learn_lang', p.learnLang); } catch {} }
-        if (p?.nativeLang && !lsNative) { setSubLang(p.nativeLang); try { localStorage.setItem('mt_native_lang', p.nativeLang); } catch {} }
+        const lsLearn = lpGet('mt_learn_lang');
+        const lsNative = lpGet('mt_native_lang');
+        if (p?.learnLang && !lsLearn) { setLangId(p.learnLang); try { lpSet('mt_learn_lang', p.learnLang); } catch {} }
+        if (p?.nativeLang && !lsNative) { setSubLang(p.nativeLang); try { lpSet('mt_native_lang', p.nativeLang); } catch {} }
         if (p?.tutorId) setTutorId(p.tutorId);
         if (p?.planId) setProfilePlanId(p.planId);
         if (isLearningPurpose(p?.purpose)) setPurpose(p!.purpose); // B-11

@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { TUTORS, Tutor } from '@/data/tutors';
 import { useAuth } from '@/context/AuthContext';
 import { updateUserProfile } from '@/lib/userProfile';
+import { lpGet, lpSet } from '@/lib/localProgress';
 
 type GenderFilter = 'all' | 'female' | 'male';
 
@@ -21,9 +22,9 @@ export default function TutorsPage() {
 
   // 현재 저장된 튜터 ID 불러오기
   useEffect(() => {
-    const id = localStorage.getItem('mt_tutor_id') || 't01';
+    const id = lpGet('mt_tutor_id') || 't01';
     setCurrentId(id);
-  }, []);
+  }, [user?.uid]);
 
   const filtered = TUTORS.filter(t => {
     const matchGender = gender === 'all' || t.gender === gender;
@@ -35,7 +36,7 @@ export default function TutorsPage() {
     if (!pendingTutor || saving) return;
     setSaving(true);
     try {
-      localStorage.setItem('mt_tutor_id', pendingTutor.id);
+      lpSet('mt_tutor_id', pendingTutor.id);
       setCurrentId(pendingTutor.id);
       if (user) {
         await updateUserProfile(user.uid, { tutorId: pendingTutor.id });

@@ -20,6 +20,7 @@ import { speakWithDeviceTts } from '@/lib/deviceTts';
 import { purposePromptBlock, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
 import { awardXpWithRetry } from '@/lib/xpClient';
+import { lpGetInt, lpSet } from '@/lib/localProgress';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -253,8 +254,8 @@ function SessionContent() {
     // 지급이 실패하면 복구할 기록이 아예 없었다. 다른 경로와 같이 로컬에
     // 먼저 낙관적으로 기록해 두면 실패분은 다음 로그인 때 따라잡기가 이관한다.
     try {
-      const prev = parseInt(localStorage.getItem('mt_xp') || '0', 10) || 0;
-      localStorage.setItem('mt_xp', String(prev + earned));
+      const prev = lpGetInt('mt_xp') || 0;
+      lpSet('mt_xp', String(prev + earned));
     } catch { /* ignore */ }
     try {
       // PR-H: XP는 서버 엔드포인트로 지급 — Firestore 직접 쓰기 금지

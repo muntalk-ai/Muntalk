@@ -19,6 +19,7 @@ import {
   clearLangPromptSnooze,
   markLangChosen,
 } from '@/lib/langPrompt';
+import { lpGet, lpSet } from '@/lib/localProgress';
 
 export default function LangSetupPrompt() {
   const { user, profile, refreshProfile } = useAuth();
@@ -40,13 +41,13 @@ export default function LangSetupPrompt() {
     if (editedRef.current) return;
     if (nativeLang === null) {
       let saved: string | null = null;
-      try { saved = localStorage.getItem('mt_native_lang'); } catch { /* ignore */ }
+      try { saved = lpGet('mt_native_lang'); } catch { /* ignore */ }
       const next = saved || profile?.nativeLang || null;
       if (next) setNativeLang(next);
     }
     if (learnLang === null) {
       let saved: string | null = null;
-      try { saved = localStorage.getItem('mt_learn_lang'); } catch { /* ignore */ }
+      try { saved = lpGet('mt_learn_lang'); } catch { /* ignore */ }
       const next = saved || profile?.learnLang || null;
       if (next) setLearnLang(next);
     }
@@ -86,8 +87,8 @@ export default function LangSetupPrompt() {
         langsConfirmed: true,
       });
       try {
-        localStorage.setItem('mt_native_lang', curNative);
-        localStorage.setItem('mt_learn_lang', curLearn);
+        lpSet('mt_native_lang', curNative);
+        lpSet('mt_learn_lang', curLearn);
       } catch { /* noop */ }
       markLangChosen();
       clearLangPromptSnooze();

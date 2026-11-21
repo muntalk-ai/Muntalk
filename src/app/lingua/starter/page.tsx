@@ -15,6 +15,7 @@ import type { LearningPurpose } from '@/lib/purpose';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 import RtlDir from '@/components/RtlDir';
 import { addCardToSRS } from '@/lib/spacedRepetition';
+import { lpGet, lpGetInt, lpGetJson, lpSet } from '@/lib/localProgress';
 
 // ─── Unit Data ───────────────────────────────────────────────────────────────
 const UNITS = [
@@ -268,7 +269,7 @@ function StarterContent() {
   // language default as fallback (e.g. first visit before choosing a tutor)
   const savedTutorId =
     params.get('tutor') ||
-    (typeof window !== 'undefined' ? localStorage.getItem('mt_tutor_id') : null);
+    (lpGet('mt_tutor_id'));
   const tutor =
     savedTutorId && TUTORS.some(t => t.id === savedTutorId)
       ? getTutorById(savedTutorId)
@@ -820,18 +821,18 @@ LANGUAGE RULES:
     // 로컬 낙관적 기록 — 서버 지급이 실패해도 표시는 갈리지 않고,
     // 증가분은 다음 로그인 때 따라잡기(migrateExistingUserGuestData)가 이관한다.
     try {
-      const prev = parseInt(localStorage.getItem('mt_xp') || '0', 10) || 0;
-      localStorage.setItem('mt_xp', String(prev + delta));
-      const done = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
+      const prev = lpGetInt('mt_xp') || 0;
+      lpSet('mt_xp', String(prev + delta));
+      const done = lpGetJson<string[]>('mt_done', []);
       if (!done.includes(unitId)) {
         done.push(unitId);
-        localStorage.setItem('mt_done', JSON.stringify(done));
+        lpSet('mt_done', JSON.stringify(done));
       }
     } catch { /* ignore */ }
     if (!user) return;
     (async () => {
       try {
-        const done = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
+        const done = lpGetJson<string[]>('mt_done', []);
         await updateUserProfile(user.uid, { completedLessons: done });
       } catch (e) {
         console.warn('[starter] completedLessons save failed:', e);

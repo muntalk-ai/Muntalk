@@ -2,6 +2,11 @@
 // QA S-5/H-2: "Later"를 세션 메모리가 아니라 localStorage에 타임스탬프와 함께
 // 저장하고, 명시적 언어 선택 여부를 별도로 추적한다. LevelHub의 수동 언어
 // 모달과 LangSetupPrompt(유일한 자동 노출 프롬프트)가 같은 키를 본다.
+//
+// 계정 분리: 명시적 선택 기록(mt_lang_chosen)은 계정별 키로 저장한다.
+// 스누즈(mt_lang_prompt_snoozed)는 기기 단위 프롬프트 상태라 공용 키로 둔다.
+
+import { lpGet, lpGetAs, lpSet } from './localProgress';
 
 /** "Later" 스누즈 저장 키 — 값은 Date.now() (ms) */
 export const LANG_PROMPT_SNOOZE_KEY = 'mt_lang_prompt_snoozed';
@@ -57,10 +62,10 @@ export function clearLangPromptSnooze(): void {
 
 /** 사용자가 언어를 직접 선택해 저장했음을 기록한다. */
 export function markLangChosen(): void {
-  write(LANG_CHOSEN_KEY, '1');
+  lpSet(LANG_CHOSEN_KEY, '1');
 }
 
-/** 명시적 선택 기록이 있으면 true. */
-export function hasExplicitLangChoice(): boolean {
-  return read(LANG_CHOSEN_KEY) === '1';
+/** 명시적 선택 기록이 있으면 true. uid를 주면 그 계정의 키를 본다. */
+export function hasExplicitLangChoice(uid?: string): boolean {
+  return (uid ? lpGetAs(LANG_CHOSEN_KEY, uid) : lpGet(LANG_CHOSEN_KEY)) === '1';
 }

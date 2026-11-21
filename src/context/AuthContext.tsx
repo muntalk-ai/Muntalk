@@ -11,6 +11,7 @@ import {
   migrateExistingUserGuestData,
   UserProfile,
 } from '@/lib/userProfile';
+import { claimLocalProgress, releaseLocalProgress, lpGetInt, lpGetJson } from '@/lib/localProgress';
 import LangSetupPrompt from '@/components/LangSetupPrompt';
 
 interface AuthCtx {
@@ -41,6 +42,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // authStateReady()는 초기 상태가 확정될 때까지 기다리므로,
     // 그 뒤에 구독하면 첫 콜백부터 복원된 유저가 들어 있다.
     const handleAuthChange = async (u: User | null) => {
+      // 계정 분리: 로컬 진도 네임스페이스를 인증 상태보다 먼저 확정한다.
+      // claim은 동기라 setUser 전에 공용 키 → uid 키 이어받기가 끝나고,
+      // 이후 렌더·이펙트는 올바른 계정의 키만 본다. 로그아웃이면 게스트
+      // (공용 키) 기준으로 되돌린다.
+      if (u) claimLocalProgress(u.uid);
+      else releaseLocalProgress();
       // QA H-12: 헤더 아바타는 user만으로 그려지는데, 예전 코드는 토큰
       // 갱신 await 뒤에 setUser를 둬서 느린 네트워크에서 헤더 프로필
       // 버튼이 한동안 빈 자리로 보였다. getIdToken 실패 시에도 catch로
@@ -67,8 +74,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           const needsEmailSync = !p.email || p.email !== (u.email || '');
           const needsPatch     = p.xp === undefined || p.completedLessons === undefined;
           if (needsEmailSync || needsPatch) {
-            const lsXp   = parseInt(localStorage.getItem('mt_xp') || '0', 10);
-            const lsDone = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
+            // 계정별 로컬 키 — 전 계정의 기기 값이 이 프로필에 들어가지 않는다.
+            const lsXp   = lpGetInt('mt_xp');
+            const lsDone = lpGetJson<string[]>('mt_done', []);
             await import('@/lib/userProfile').then(({ updateUserProfile }) =>
               updateUserProfile(u.uid, {
                 // 항상 최신 Auth 값으로 덮어씀

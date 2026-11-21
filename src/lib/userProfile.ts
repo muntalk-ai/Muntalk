@@ -4,6 +4,7 @@
 import { doc, getDoc, setDoc, updateDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from './firebase';
 import { awardXp } from './xpClient';
+import { lpGet, lpGetAs, lpGetIntAs, lpGetJsonAs, lpSetAs, claimLocalProgress, isLocalProgressOwner } from './localProgress';
 import type { LearningPurpose } from './purpose';
 import { isLearningPurpose } from './purpose';
 import { UI_LANGUAGES } from '@/data/languages';
@@ -40,14 +41,15 @@ export function detectBrowserNativeLang(): string {
 export function resolveLearnLang(profileLearn?: string | null): string {
   try {
     if (typeof window !== 'undefined') {
-      const ls = localStorage.getItem('mt_learn_lang');
+      // 계정별 로컬 캐시 — 현재 세션 uid 기준 (게스트는 공용 키).
+      const ls = lpGet('mt_learn_lang');
       if (ls && ls !== 'en-US' && (!profileLearn || profileLearn === 'en-US')) return ls;
     }
   } catch { /* ignore */ }
   if (profileLearn) return profileLearn;
   try {
     if (typeof window !== 'undefined') {
-      const ls = localStorage.getItem('mt_learn_lang');
+      const ls = lpGet('mt_learn_lang');
       if (ls) return ls;
     }
   } catch { /* ignore */ }
@@ -74,7 +76,7 @@ export function resolveNativeLang(profileNative?: string | null): string {
   if (profileNative) return profileNative;
   try {
     if (typeof window !== 'undefined') {
-      const ls = localStorage.getItem('mt_native_lang');
+      const ls = lpGet('mt_native_lang');
       if (ls) return ls;
     }
   } catch { /* ignore */ }
@@ -278,23 +280,30 @@ export async function recordActivity(uid: string, profile: UserProfile): Promise
   return { streak, freezeUsed, freezeEarned };
 }
 
-/** localStorage → Firestore 마이그레이션 (첫 로그인 시) */
+/** localStorage → Firestore 마이그레이션 (첫 로그인 시)
+ *
+ *  계정 분리: 이 함수는 이 uid의 로컬 키(`mt_xp_<uid>` 등)만 읽는다.
+ *  claimLocalProgress가 먼저 공용 키 데이터를 이 uid 키로 이어받고
+ *  마커를 설정한다. 다른 계정이 이미 이어받은 기기에서는
+ *  isLocalProgressOwner가 false라 아무것도 이관하지 않는다 — 전
+ *  계정의 진도가 새 계정 프로필로 복사되는 유출을 막는다. */
 export async function migrateFromLocalStorage(uid: string) {
-  const xp      = parseInt(localStorage.getItem('mt_xp') || '0', 10);
-  const done    = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
-  const dates   = JSON.parse(localStorage.getItem('mt_activity_dates') || '[]') as string[];
-  const learn   = localStorage.getItem('mt_learn_lang') || 'en-US';
-  const native  = localStorage.getItem('mt_native_lang') || detectBrowserNativeLang();
-  const tutorId = localStorage.getItem('mt_tutor_id') || 't01';
+  if (!claimLocalProgress(uid) || !isLocalProgressOwner(uid)) return;
+  const xp      = lpGetIntAs('mt_xp', uid);
+  const done    = lpGetJsonAs<string[]>('mt_done', uid, []);
+  const dates   = lpGetJsonAs<string[]>('mt_activity_dates', uid, []);
+  const learn   = lpGetAs('mt_learn_lang', uid) || 'en-US';
+  const native  = lpGetAs('mt_native_lang', uid) || detectBrowserNativeLang();
+  const tutorId = lpGetAs('mt_tutor_id', uid) || 't01';
   // UX-infra #6: placement 결과도 이관 (기기 변경 시 소실 방지)
-  const placementLevel = localStorage.getItem('mt_placement_level');
-  const placementTrack = localStorage.getItem('mt_track');
-  const placementDone  = localStorage.getItem('mt_placement_done') === 'true';
+  const placementLevel = lpGetAs('mt_placement_level', uid);
+  const placementTrack = lpGetAs('mt_track', uid);
+  const placementDone  = lpGetAs('mt_placement_done', uid) === 'true';
 
   // QA S-5: 게스트가 언어만 고르고 XP/레슨이 없으면 위 조건이 전부 false라
   // 언어 선택이 Firestore로 이관되지 않고 프로필은 시드 기본값('en-US')인 채로
   // 남았다. 언어 선택 자체도 이관 조건에 포함한다.
-  const hasLangChoice = !!localStorage.getItem('mt_learn_lang') || !!localStorage.getItem('mt_native_lang');
+  const hasLangChoice = !!lpGetAs('mt_learn_lang', uid) || !!lpGetAs('mt_native_lang', uid);
   if (xp || done.length || dates.length || placementLevel || placementTrack || placementDone || hasLangChoice) {
     // PR-H: XP는 서버 엔드포인트로만 지급 — updateUserProfile로 xp 직접 쓰기 금지.
     // (기존 코드는 게스트 localStorage 값을 그대로 덮어써 조작 벡터였음)
@@ -303,7 +312,7 @@ export async function migrateFromLocalStorage(uid: string) {
       // 실패하면 마커를 전진시키지 않으므로 다음 로그인에 다시 시도한다.
       const res = await awardXp({ source: 'guest_migration', xp: Math.min(xp, 1000) });
       if (res.ok) {
-        try { localStorage.setItem('mt_migrated_xp', String(res.awarded || 0)); } catch { /* ignore */ }
+        try { lpSetAs('mt_migrated_xp', uid, String(res.awarded || 0)); } catch { /* ignore */ }
       } else {
         console.warn('[profile] guest XP migration failed:', res.reason);
       }
@@ -352,9 +361,14 @@ export async function migrateExistingUserGuestData(uid: string, profile: UserPro
   if (catchUpInFlight.has(uid)) return;
   catchUpInFlight.add(uid);
   try {
-    const localXp = parseInt(localStorage.getItem('mt_xp') || '0', 10) || 0;
-    const done = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
-    const dates = JSON.parse(localStorage.getItem('mt_activity_dates') || '[]') as string[];
+    // 계정 분리: 다른 계정이 공용 키 데이터를 이미 이어받은 기기에서는
+    // 따라잡기를 하지 않는다 — 전 계정의 로컬 진도가 이 계정 프로필에
+    // 합쳐지는 유출을 막는다. claim이 공용 값을 이 uid 키로 옮긴 뒤에야
+    // 아래 읽기가 이 계정 자신의 값을 본다.
+    if (!claimLocalProgress(uid) || !isLocalProgressOwner(uid)) return;
+    const localXp = lpGetIntAs('mt_xp', uid);
+    const done = lpGetJsonAs<string[]>('mt_done', uid, []);
+    const dates = lpGetJsonAs<string[]>('mt_activity_dates', uid, []);
     const serverXp = profile.xp || 0;
 
     // 서버에 없는 로컬 증가분만 지급한다 (위 설계 노트 참조).
@@ -380,9 +394,9 @@ export async function migrateExistingUserGuestData(uid: string, profile: UserPro
     // 일부이기 때문. LevelHub 효과는 이후 프로필 값을 로컬 캐시에 다시 쓴다.)
     try {
       const { hasExplicitLangChoice } = await import('./langPrompt');
-      if (hasExplicitLangChoice() && profile.learnLang === 'en-US') {
-        const localLearn = localStorage.getItem('mt_learn_lang');
-        const localNative = localStorage.getItem('mt_native_lang');
+      if (hasExplicitLangChoice(uid) && profile.learnLang === 'en-US') {
+        const localLearn = lpGetAs('mt_learn_lang', uid);
+        const localNative = lpGetAs('mt_native_lang', uid);
         if (localLearn && localLearn !== 'en-US') {
           await updateUserProfile(uid, {
             learnLang: localLearn,

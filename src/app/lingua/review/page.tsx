@@ -8,6 +8,7 @@ import { awardXpWithRetry } from '@/lib/xpClient';
 import RtlDir from '@/components/RtlDir';
 import EmptyState from '@/components/EmptyState';
 import { CardSkeleton } from '@/components/Skeleton';
+import { lpGet, lpGetInt, lpSet } from '@/lib/localProgress';
 
 type CardState = 'question' | 'answer' | 'done';
 
@@ -19,7 +20,7 @@ type CardState = 'question' | 'answer' | 'done';
 function resolveReviewLang(profileLearnLang?: string | null): string {
   try {
     if (typeof window !== 'undefined') {
-      const ls = localStorage.getItem('mt_learn_lang');
+      const ls = lpGet('mt_learn_lang');
       if (ls) return ls;
     }
   } catch { /* ignore */ }
@@ -87,8 +88,8 @@ export default function ReviewPage() {
       await reviewCard(user.uid, card, quality);
 
       // PR-H: XP는 서버 엔드포인트로 지급 — Firestore 직접 쓰기 금지
-      const storedXp = parseInt(localStorage.getItem('mt_xp') || '0') + xpForCard;
-      localStorage.setItem('mt_xp', String(storedXp));
+      const storedXp = lpGetInt('mt_xp') + xpForCard;
+      lpSet('mt_xp', String(storedXp));
       const sessionSec = Math.max(1, Math.round((Date.now() - sessionStartRef.current) / 1000));
       // QA S-2: 지급 결과를 확인한다. 이전에는 실패해도 조용히 넘어가 로컬
       // mt_xp만 오르고 서버(리그·대시보드)에는 안 남아 갈림이 생겼다.

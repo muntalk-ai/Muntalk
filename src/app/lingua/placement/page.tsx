@@ -8,6 +8,7 @@ import { useAuth } from '@/context/AuthContext';
 import { updateUserProfile } from '@/lib/userProfile';
 import { LEARN_LANGUAGES } from '@/data/languages';
 import RtlDir from '@/components/RtlDir';
+import { lpGet, lpGetInt, lpGetJson, lpSet } from '@/lib/localProgress';
 
 // -- Constants -----------------------------------------------------------------
 const LEVEL_XP: Record<string, number> = {
@@ -144,12 +145,12 @@ function PlacementInner() {
   const searchParams = useSearchParams();
   const { user, profile, refreshProfile } = useAuth();
 
-  const learnLang  = profile?.learnLang  || (typeof window !== 'undefined' ? localStorage.getItem('mt_learn_lang') : null)  || searchParams.get('lang')  || 'en-US';
+  const learnLang  = profile?.learnLang  || (lpGet('mt_learn_lang'))  || searchParams.get('lang')  || 'en-US';
   // 모국어 폴백: 프로필 → localStorage → 브라우저 언어 → 영어 (ko-KR 하드코딩 제거)
   const navLang = typeof window !== 'undefined' ? (navigator.language || 'en-US') : 'en-US';
   const navBase = navLang.split('-')[0].toLowerCase();
   const nativeLang = profile?.nativeLang
-    || (typeof window !== 'undefined' ? localStorage.getItem('mt_native_lang') : null)
+    || (lpGet('mt_native_lang'))
     || LEARN_LANGUAGES.find(l => l.code.toLowerCase() === navLang.toLowerCase())?.code
     || LEARN_LANGUAGES.find(l => l.code.toLowerCase().startsWith(navBase))?.code
     || 'en-US';
@@ -253,8 +254,8 @@ function PlacementInner() {
   // -- CEFR: answer handler -------------------------------------------------
   // -- Skip 공통 핸들러 ----------------------------------------------------
   const handleSkip = () => {
-    localStorage.setItem('mt_placement_done', 'true');
-    localStorage.setItem('mt_placement_level', 'a1');
+    lpSet('mt_placement_done', 'true');
+    lpSet('mt_placement_level', 'a1');
     // Firestore는 백그라운드 (await 없이)
     if (user) {
       updateUserProfile(user.uid, {
@@ -353,7 +354,7 @@ function PlacementInner() {
     const levelXp = LEVEL_XP[cefrLevel] || 0;
     const currentXp = Math.max(
       profile?.xp ?? 0,
-      typeof window !== 'undefined' ? parseInt(localStorage.getItem('mt_xp') || '0', 10) : 0,
+      lpGetInt('mt_xp'),
     );
     const xp = Math.max(currentXp, levelXp);
     try {
@@ -366,10 +367,10 @@ function PlacementInner() {
         } as any);
         await refreshProfile();
       }
-      localStorage.setItem('mt_xp', String(xp));
-      localStorage.setItem('mt_placement_done',  'true');
-      localStorage.setItem('mt_placement_level', cefrLevel);
-      localStorage.setItem('mt_track',           trackResult.track);
+      lpSet('mt_xp', String(xp));
+      lpSet('mt_placement_done',  'true');
+      lpSet('mt_placement_level', cefrLevel);
+      lpSet('mt_track',           trackResult.track);
       localStorage.setItem('mt_placement_last',  String(Date.now()));
       setSaving(false);
       router.push(`/lingua/learn/${cefrLevel}?lang=${learnLang}&subLang=${nativeLang}`);
@@ -495,7 +496,7 @@ function PlacementInner() {
   const totalTrackScore = trackResult ? Object.values(trackResult.scores).reduce((a,b)=>a+b,0) : 1;
   const cefrCorrect = cefrAnswers.filter((a,i) => questions[i] && a === questions[i].answer).length;
   // 적용될 XP (기존 XP와 레벨 기준 XP 중 큰 값 — 깎이지 않음)
-  const currentXp = Math.max(profile?.xp ?? 0, typeof window !== 'undefined' ? parseInt(localStorage.getItem('mt_xp') || '0', 10) : 0);
+  const currentXp = Math.max(profile?.xp ?? 0, lpGetInt('mt_xp'));
   const displayXp = Math.max(currentXp, LEVEL_XP[cefrLevel] || 0);
   // 재응시 쿨다운 상태 (24시간)
   const lastPlacementAt = typeof window !== 'undefined' ? parseInt(localStorage.getItem('mt_placement_last') || '0', 10) : 0;
@@ -528,7 +529,7 @@ function PlacementInner() {
   const hasProgress = (() => {
     if ((profile?.completedLessons?.length || 0) > 0) return true;
     try {
-      const done = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
+      const done = lpGetJson<string[]>('mt_done', []);
       return done.length > 0;
     } catch { return false; }
   })();

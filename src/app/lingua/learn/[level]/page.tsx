@@ -5,6 +5,7 @@ import StepMap from '@/components/StepMap';
 import { useAuth } from '@/context/AuthContext';
 import { isAdminEmail } from '@/lib/subscription';
 import { resolveNativeLang, resolveLearnLang } from '@/lib/userProfile';
+import { lpGet, lpGetInt, lpGetJson } from '@/lib/localProgress';
 
 export default function LevelPage({ params }: { params: { level: string } }) {
   const { level } = params;
@@ -29,9 +30,9 @@ export default function LevelPage({ params }: { params: { level: string } }) {
 
   useEffect(() => {
     try {
-      const savedXp = parseInt(localStorage.getItem('mt_xp') || '0', 10);
-      const savedDone = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
-      const savedTutor = searchParams.get('tutor') || localStorage.getItem('mt_tutor_id') || 't01';
+      const savedXp = lpGetInt('mt_xp');
+      const savedDone = lpGetJson<string[]>('mt_done', []);
+      const savedTutor = searchParams.get('tutor') || lpGet('mt_tutor_id') || 't01';
       setXp(savedXp);
       setCompletedLessons(new Set(savedDone));
       setTutorId(savedTutor);
