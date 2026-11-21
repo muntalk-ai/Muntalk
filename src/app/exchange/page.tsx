@@ -357,10 +357,27 @@ function isMuntuzHost(): boolean {
 // The pilot kept chats in memory only, so a refresh (or the sign-in
 // redirect) wiped them. Threads now survive in localStorage on the same
 // device; cross-device sync (a Firestore collection + rules) is a
-// follow-up, not this PR. Guest and signed-in threads share the key —
-// the trial modal's "picks up where it left off" promise is true on
-// this device because localStorage survives the login redirect.
+// follow-up, not this PR.
+//
+// Privacy: threads are stored PER ACCOUNT, not per device. A signed-in
+// user reads and writes only their own uid-scoped key, so a second
+// account on the same phone — or the next user of a shared computer —
+// never sees the previous user's conversations. Guests keep the legacy
+// shared key, so the trial modal's "picks up where it left off"
+// promise is true on this device because localStorage survives the
+// login redirect.
+//
+// One-time legacy adoption: the old shared key has no owner field, so
+// the first signed-in user after this change adopts whatever it holds
+// (normally the guest threads of the person signing in), the adoption
+// is recorded, and the shared key is deleted — a later different user
+// on the same device then finds nothing to adopt and starts empty. If
+// an adoption marker already names a different uid, no adoption
+// happens. Claiming the slot when there is nothing to adopt (marker
+// set, nothing copied) likewise stops a later different user from
+// adopting guest threads created after this sign-in.
 const CHATS_STORAGE_KEY = 'muntuz_exchange_chats_v1';
+const CHATS_ADOPTED_KEY = 'muntuz_exchange_chats_adopted_v1';
 const MAX_STORED_CHATS = 20;
 const MAX_STORED_MESSAGES = 100;
 
@@ -371,9 +388,40 @@ type PersistedChats = {
   chats: Chat[];
 };
 
-function loadStoredChats(): PersistedChats | null {
+/** Storage key for one account's threads: uid-scoped when signed in, shared when guest. */
+function chatsStorageKey(uid: string | null): string {
+  return uid ? `${CHATS_STORAGE_KEY}_uid:${uid}` : CHATS_STORAGE_KEY;
+}
+
+/**
+ * One-time legacy adoption (signed-in only). Copies the old shared
+ * store into this uid's key the first time it is needed, records the
+ * adopting uid, and deletes the shared key. No-op when this uid
+ * already has its own store, or when another uid already adopted.
+ */
+function adoptLegacyChatsIfNeeded(uid: string): void {
   try {
-    const raw = window.localStorage.getItem(CHATS_STORAGE_KEY);
+    if (window.localStorage.getItem(chatsStorageKey(uid)) !== null) return;
+    const marker = window.localStorage.getItem(CHATS_ADOPTED_KEY);
+    if (marker !== null && marker !== uid) return;
+    const legacy = window.localStorage.getItem(CHATS_STORAGE_KEY);
+    if (legacy === null) {
+      // Nothing to adopt yet — claim the slot so a later different
+      // user cannot adopt guest threads created after this sign-in.
+      window.localStorage.setItem(CHATS_ADOPTED_KEY, uid);
+      return;
+    }
+    window.localStorage.setItem(chatsStorageKey(uid), legacy);
+    window.localStorage.setItem(CHATS_ADOPTED_KEY, uid);
+    window.localStorage.removeItem(CHATS_STORAGE_KEY);
+  } catch {
+    // Private mode: adoption is skipped; threads live in memory only.
+  }
+}
+
+function loadStoredChats(uid: string | null): PersistedChats | null {
+  try {
+    const raw = window.localStorage.getItem(chatsStorageKey(uid));
     if (!raw) return null;
     const data = JSON.parse(raw) as Partial<PersistedChats>;
     if (data?.v !== 1 || !Array.isArray(data.chats)) return null;
@@ -426,9 +474,14 @@ function loadStoredChats(): PersistedChats | null {
 // block sync is a follow-up when chats move to Firestore.
 const BLOCKED_STORAGE_KEY = 'muntuz_exchange_blocked_v1';
 
-function loadBlockedUids(): string[] {
+/** Storage key for one account's block list: uid-scoped when signed in, shared when guest. */
+function blockedStorageKey(uid: string | null): string {
+  return uid ? `${BLOCKED_STORAGE_KEY}_uid:${uid}` : BLOCKED_STORAGE_KEY;
+}
+
+function loadBlockedUids(uid: string | null): string[] {
   try {
-    const raw = window.localStorage.getItem(BLOCKED_STORAGE_KEY);
+    const raw = window.localStorage.getItem(blockedStorageKey(uid));
     if (!raw) return [];
     const data = JSON.parse(raw) as unknown;
     if (!Array.isArray(data)) return [];
@@ -595,7 +648,7 @@ export default function ExchangePage() {
   const [reportChat, setReportChat] = useState<Chat | null>(null);
   const [reportReason, setReportReason] = useState('');
   const [reportBusy, setReportBusy] = useState(false);
-  const [blockedUids, setBlockedUids] = useState<string[]>(() => loadBlockedUids());
+  const [blockedUids, setBlockedUids] = useState<string[]>(() => loadBlockedUids(null));
   const [aiSending, setAiSending] = useState(false);
   const [waitlistCount, setWaitlistCount] = useState<number | null>(null);
   const [waitlistJoined, setWaitlistJoined] = useState(false);
@@ -1583,6 +1636,14 @@ export default function ExchangePage() {
     return new Date().toISOString().slice(0, 10);
   }
 
+  // Daily new-chat counter, stored per account (fresh per uid, no
+  // adoption): a second account on the same device must not inherit
+  // — or wipe — the first account's used-up free chats. Guests keep
+  // the shared key.
+  function newChatsStorageKey(uid: string | null): string {
+    return uid ? `${NEW_CHATS_KEY}_uid:${uid}` : NEW_CHATS_KEY;
+  }
+
   function newChatCountKey(): string {
     return user ? `uid:${user.uid}` : 'guest';
   }
@@ -1590,7 +1651,7 @@ export default function ExchangePage() {
   function readNewChatCount(): number {
     if (typeof window === 'undefined') return 0;
     try {
-      const raw = window.localStorage.getItem(NEW_CHATS_KEY);
+      const raw = window.localStorage.getItem(newChatsStorageKey(user?.uid ?? null));
       if (!raw) return 0;
       const rec = JSON.parse(raw) as { date?: string; key?: string; count?: number };
       if (rec.date !== utcToday() || rec.key !== newChatCountKey() || typeof rec.count !== 'number') return 0;
@@ -1604,7 +1665,7 @@ export default function ExchangePage() {
     const key = newChatCountKey();
     const next = readNewChatCount() + 1;
     try {
-      window.localStorage.setItem(NEW_CHATS_KEY, JSON.stringify({ date: utcToday(), key, count: next }));
+      window.localStorage.setItem(newChatsStorageKey(user?.uid ?? null), JSON.stringify({ date: utcToday(), key, count: next }));
     } catch {
       // Private mode: the count lives in memory only for this session.
     }
@@ -1830,45 +1891,67 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
   }, []);
 
   // S-2: restore chat threads saved in this browser (Muntuz host only).
-  // Runs once after mount; the save effect below waits for chatsLoaded,
-  // so a refresh never clobbers stored threads with the empty initial
-  // state. Restored replies are marked seen (no phantom unread badges),
-  // msgSeq is bumped past every restored message id (it restarts at 100
-  // on every load — without this, new messages could reuse an id), and
-  // an open chat is restored together with the Chats tab.
+  // Runs after auth settles and again whenever the signed-in account
+  // changes, so switching accounts (or logging out) without a page
+  // reload swaps the in-memory threads for the new account's own
+  // store — the previous account's chats never stay on screen. The
+  // save effect below waits for chatsLoaded, so a refresh never
+  // clobbers stored threads with the empty initial state. Restored
+  // replies are marked seen (no phantom unread badges), msgSeq is
+  // bumped past every restored message id (it restarts at 100 on every
+  // load — without this, new messages could reuse an id), and an open
+  // chat is restored together with the Chats tab. The seen map is
+  // rebuilt from the loaded threads only, so no other account's
+  // read state survives a switch.
   useEffect(() => {
     if (!isMuntuzHost()) {
       setChatsLoaded(true);
       return;
     }
-    const stored = loadStoredChats();
-    if (stored && stored.chats.length > 0) {
+    // Wait for Firebase auth to settle: on mount `user` is still null
+    // while the session restores, and loading the shared (guest) key
+    // first would flash the wrong account's threads.
+    if (authLoading) return;
+    const uid = user?.uid ?? null;
+    if (uid) adoptLegacyChatsIfNeeded(uid);
+    const stored = loadStoredChats(uid);
+    const loadedChats = stored?.chats ?? [];
+    if (loadedChats.length > 0) {
       let maxId = 100;
-      for (const c of stored.chats) {
+      for (const c of loadedChats) {
         for (const m of c.messages) if (typeof m.id === 'number' && m.id >= maxId) maxId = m.id + 1;
       }
       msgSeq = Math.max(msgSeq, maxId);
-      setChats(stored.chats);
-      setSeenMsgId((s) => {
-        const next = { ...s };
-        for (const c of stored.chats) {
-          const last = c.messages[c.messages.length - 1];
-          if (last) next[c.id] = Math.max(next[c.id] ?? 0, last.id);
-        }
-        return next;
-      });
-      if (stored.activeChatId && stored.chats.some((c) => c.id === stored.activeChatId)) {
-        setActiveChatId(stored.activeChatId);
-        setTab('chats');
+    }
+    setChats(loadedChats);
+    setSeenMsgId(() => {
+      const next: Record<string, number> = {};
+      for (const c of loadedChats) {
+        const last = c.messages[c.messages.length - 1];
+        if (last) next[c.id] = Math.max(next[c.id] ?? 0, last.id);
       }
+      return next;
+    });
+    if (stored?.activeChatId && loadedChats.some((c) => c.id === stored.activeChatId)) {
+      setActiveChatId(stored.activeChatId);
+      setTab('chats');
+    } else {
+      setActiveChatId(null);
     }
     setChatsLoaded(true);
-    // eslint-disable-next-line react-hooks/exhaustive-deps — load once on mount only.
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps — authLoading / user uid only.
+  }, [authLoading, user?.uid]);
 
   // S-2: persist threads on every change (Muntuz host only). Capped so
   // one heavy chat cannot blow the localStorage quota; a full or
   // unavailable store fails silent — chats still work in memory.
+  // NOTE: `user` is deliberately NOT in the deps below. On an account
+  // switch the load effect above replaces `chats` first, so this effect
+  // only re-runs once the new account's threads are in state — its
+  // closure then holds the new user and the write lands in the new
+  // account's key. Adding uid to the deps would make it re-run in the
+  // same commit with the previous account's threads still in state
+  // and write them into the new account's key.
   useEffect(() => {
     if (!chatsLoaded || !isMuntuzHost()) return;
     try {
@@ -1878,7 +1961,7 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
         activeChatId,
         chats: chats.slice(-MAX_STORED_CHATS).map((c) => ({ ...c, messages: c.messages.slice(-MAX_STORED_MESSAGES) })),
       };
-      window.localStorage.setItem(CHATS_STORAGE_KEY, JSON.stringify(payload));
+      window.localStorage.setItem(chatsStorageKey(user?.uid ?? null), JSON.stringify(payload));
     } catch {
       /* storage full or unavailable: in-memory chats still work */
     }
@@ -1968,12 +2051,24 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
     []
   );
 
+  // Per-account block list: reload when auth settles or the signed-in
+  // account changes, so one account's blocks never leak into another
+  // account's Discover list on a shared device. Guests keep the
+  // shared key. (Same stale-write reasoning as the chat save effect:
+  // this effect only replaces the list, and the save below re-runs
+  // after that with the new user's closure.)
+  useEffect(() => {
+    if (authLoading || !isMuntuzHost()) return;
+    setBlockedUids(loadBlockedUids(user?.uid ?? null));
+    // eslint-disable-next-line react-hooks/exhaustive-deps — authLoading / user uid only.
+  }, [authLoading, user?.uid]);
+
   // Persist the block list on every change (Muntuz host only, same rule
   // as the chat threads above).
   useEffect(() => {
     if (!isMuntuzHost()) return;
     try {
-      window.localStorage.setItem(BLOCKED_STORAGE_KEY, JSON.stringify(blockedUids));
+      window.localStorage.setItem(blockedStorageKey(user?.uid ?? null), JSON.stringify(blockedUids));
     } catch {
       /* storage full or unavailable: blocks still work in memory */
     }
