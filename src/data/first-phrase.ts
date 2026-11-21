@@ -10,6 +10,10 @@ export type WowItem = {
   text: string;
   /** 로마자 발음 가이드 */
   romanized: string;
+  /** 한국어식 발음 가이드 (한글) — 모국어가 한국어인 게스트에게 romanized 대신 표시.
+   *  QA M-4: 영어식 표기("OH-lah")보다 한글 표기("올라")가 직관적이다.
+   *  현재 es-ES 6개에만 채워져 있다; 다른 9개 언어 54개는 미기재(영어식 표기 유지). */
+  romanizedKo?: string;
   /** 영어 뜻 */
   meaning: string;
 };
@@ -29,12 +33,12 @@ export const FIRST_PHRASES: FirstPhrase[] = [
   {
     code: 'es-ES', sttLang: 'es-ES', label: 'Spanish', flag: '🇪🇸',
     items: [
-      { kind: 'phrase', tier: 'intermediate', text: 'Hola, ¿cómo estás?', romanized: 'OH-lah, KOH-moh ehs-TAHS', meaning: 'Hello, how are you?' },
-      { kind: 'phrase', tier: 'advanced', text: '¿Dónde está el baño?', romanized: 'DOHN-deh ehs-TAH ehl BAH-nyoh', meaning: 'Where is the bathroom?' },
-      { kind: 'phrase', tier: 'advanced', text: 'Una cerveza, por favor.', romanized: 'OO-nah thair-VEH-sah, pohr fah-VOHR', meaning: 'One beer, please.' },
-      { kind: 'word', tier: 'beginner', text: 'Gracias', romanized: 'GRAH-syahs', meaning: 'Thank you' },
-      { kind: 'word', tier: 'beginner', text: 'Por favor', romanized: 'pohr fah-VOHR', meaning: 'Please' },
-      { kind: 'word', tier: 'beginner', text: 'Adiós', romanized: 'ah-DYOHS', meaning: 'Goodbye' },
+      { kind: 'phrase', tier: 'intermediate', text: 'Hola, ¿cómo estás?', romanized: 'OH-lah, KOH-moh ehs-TAHS', romanizedKo: '올라, 꼬모 에스따스', meaning: 'Hello, how are you?' },
+      { kind: 'phrase', tier: 'advanced', text: '¿Dónde está el baño?', romanized: 'DOHN-deh ehs-TAH ehl BAH-nyoh', romanizedKo: '돈데 에스따 엘 바뇨', meaning: 'Where is the bathroom?' },
+      { kind: 'phrase', tier: 'advanced', text: 'Una cerveza, por favor.', romanized: 'OO-nah thair-VEH-sah, pohr fah-VOHR', romanizedKo: '우나 쎄르베사, 뽀르 파보르', meaning: 'One beer, please.' },
+      { kind: 'word', tier: 'beginner', text: 'Gracias', romanized: 'GRAH-syahs', romanizedKo: '그라시아스', meaning: 'Thank you' },
+      { kind: 'word', tier: 'beginner', text: 'Por favor', romanized: 'pohr fah-VOHR', romanizedKo: '뽀르 파보르', meaning: 'Please' },
+      { kind: 'word', tier: 'beginner', text: 'Adiós', romanized: 'ah-DYOHS', romanizedKo: '아디오스', meaning: 'Goodbye' },
     ],
   },
   {
