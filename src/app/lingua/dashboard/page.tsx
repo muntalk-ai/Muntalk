@@ -9,6 +9,7 @@ import { LEARN_LANGUAGES } from '@/data/languages';
 import { DashboardSkeleton } from '@/components/Skeleton';
 import { CURRICULUM } from '@/data/curriculum';
 import { localDateKey } from '@/lib/userProfile';
+import { lpGet, lpGetInt, lpGetJson } from '@/lib/localProgress';
 
 const LEVELS = [
   { id: 'a1', label: 'A1', emoji: '🌱', color: '#10B981', xpNeeded: 800 },
@@ -36,11 +37,11 @@ export default function DashboardPage() {
   const [localLang,   setLocalLang]   = useState('en-US');
   const [localDone,   setLocalDone]   = useState<string[]>([]);
   useEffect(() => {
-    setLocalXp(parseInt(localStorage.getItem('mt_xp') || '0'));
-    setLocalStreak(parseInt(localStorage.getItem('mt_streak') || '0'));
-    setLocalLang(localStorage.getItem('mt_learn_lang') || 'en-US');
-    try { setLocalDone(JSON.parse(localStorage.getItem('mt_done') || '[]') as string[]); } catch { /* ignore */ }
-  }, []);
+    setLocalXp(lpGetInt('mt_xp'));
+    setLocalStreak(lpGetInt('mt_streak'));
+    setLocalLang(lpGet('mt_learn_lang') || 'en-US');
+    try { setLocalDone(lpGetJson<string[]>('mt_done', [])); } catch { /* ignore */ }
+  }, [user?.uid]);
 
   // Leaderboard hidden — no longer fetching other users' data
 

@@ -22,6 +22,7 @@ import TrialExpiredModal from '@/components/TrialExpiredModal';
 import { getTrialData, isTrialExpired, trialDaysRemaining, addTrialLanguage, TRIAL_MAX_LANGUAGES, TrialData } from '@/lib/trialPolicy';
 import { getTestimonials, Testimonial, MIN_TESTIMONIALS } from '@/lib/testimonials';
 import { useBrand } from '@/lib/useBrand';
+import { lpGet, lpGetInt, lpGetJson, lpSet } from '@/lib/localProgress';
 
 // 언어코드 → 국가코드 매핑 (flagcdn.com 사용)
 const LANG_TO_COUNTRY: Record<string, string> = {
@@ -254,7 +255,7 @@ export default function LevelHub() {
       // UTC 기준 오늘 날짜 — recordActivity(Firestore)와 동일한 기준으로 타임존 무관하게 비교
       const today = new Date().toISOString().slice(0, 10);
 
-      const raw = localStorage.getItem('mt_activity_dates');
+      const raw = lpGet('mt_activity_dates');
       const dates: string[] = raw ? JSON.parse(raw) : [];
       // ※ 방문 시점에는 날짜를 기록하지 않음 — 레슨 완료 등 실제 학습 활동 시점에만 기록됨
 
@@ -268,7 +269,7 @@ export default function LevelHub() {
         else break;
       }
       setStreak(count);
-      localStorage.setItem('mt_streak', String(count));
+      lpSet('mt_streak', String(count));
     } catch { setStreak(0); }
   };
 
@@ -281,7 +282,7 @@ export default function LevelHub() {
     if (!user) {
       // -- 비로그인 게스트 --------------------------------------------------
       // localStorage 기준으로 판단 (계정 무관)
-      const lsPlaced = localStorage.getItem('mt_placement_done');
+      const lsPlaced = lpGet('mt_placement_done');
       setPlacementDone(lsPlaced === 'true');
       if (!lsPlaced) {
         // QA S-5/H-2: 언어 모달 자동 노출 제거 — LangSetupPrompt가 유일한 자동
@@ -295,11 +296,11 @@ export default function LevelHub() {
     if (!profile) return; // profile 아직 로딩 중 → 대기
 
     const firestoreDone = (profile as any).placementDone === true;
-    const localDone     = localStorage.getItem('mt_placement_done') === 'true';
+    const localDone     = lpGet('mt_placement_done') === 'true';
 
     // Firestore 또는 localStorage 둘 중 하나라도 완료면 통과
     if (firestoreDone || localDone) {
-      localStorage.setItem('mt_placement_done', 'true');
+      lpSet('mt_placement_done', 'true');
       setPlacementDone(true);
       return;
     }
@@ -319,12 +320,12 @@ export default function LevelHub() {
       // QA S-6: 서버 XP와 로컬 mt_xp 중 큰 값을 보여준다. 서버 지급이
       // 실패해 profile.xp가 0이어도 로컬에 쌓인 XP가 사라져 보이지 않는다.
       let localXp = 0;
-      try { localXp = parseInt(localStorage.getItem('mt_xp') || '0', 10) || 0; } catch { /* ignore */ }
+      try { localXp = lpGetInt('mt_xp') || 0; } catch { /* ignore */ }
       setXp(Math.max(profile.xp || 0, localXp));
       setStreak(profile.streak || 0);
       setFreezes(profile.streakFreezes ?? 1);
-      const lsLearn = (() => { try { return localStorage.getItem('mt_learn_lang'); } catch { return null; } })();
-      const lsNative = (() => { try { return localStorage.getItem('mt_native_lang'); } catch { return null; } })();
+      const lsLearn = (() => { try { return lpGet('mt_learn_lang'); } catch { return null; } })();
+      const lsNative = (() => { try { return lpGet('mt_native_lang'); } catch { return null; } })();
       const profileLearn = profile.learnLang || 'en-US';
       const profileNative = profile.nativeLang || detectBrowserNativeLang();
       if (pendingLangSyncRef.current && lsLearn === pendingLangSyncRef.current && lsLearn !== profileLearn) {
@@ -336,32 +337,32 @@ export default function LevelHub() {
         setLearnLang(profileLearn);
         setNativeLang(profileNative);
         try {
-          localStorage.setItem('mt_learn_lang', profileLearn);
-          localStorage.setItem('mt_native_lang', profileNative);
+          lpSet('mt_learn_lang', profileLearn);
+          lpSet('mt_native_lang', profileNative);
         } catch { /* ignore */ }
       }
-      setPlacementLevel((profile as any).placementLevel || localStorage.getItem('mt_placement_level') || '');
+      setPlacementLevel((profile as any).placementLevel || lpGet('mt_placement_level') || '');
       // QA S-2: 완료 레슨은 서버 목록과 로컬 mt_done의 합집합으로 본다.
       // 서버만 보면 프로필 로드 전(로컬 기준 42%)과 후(서버 기준 22%)로
       // 카드 %가 로드마다 바뀌던 갈림이 생긴다.
       let localDone: string[] = [];
-      try { localDone = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[]; } catch { /* ignore */ }
+      try { localDone = lpGetJson<string[]>('mt_done', []); } catch { /* ignore */ }
       setCompletedLessons(new Set([...(profile.completedLessons || []), ...localDone]));
       // tutorId: localStorage에 이미 값이 있고 profile이 default 't01'이면 localStorage 우선
-      const storedTutor = localStorage.getItem('mt_tutor_id');
+      const storedTutor = lpGet('mt_tutor_id');
       if (profile.tutorId && profile.tutorId !== 't01') {
         // Firestore에 실제 저장된 값 우선
-        localStorage.setItem('mt_tutor_id', profile.tutorId);
+        lpSet('mt_tutor_id', profile.tutorId);
       } else if (!storedTutor) {
         // localStorage도 없을 때만 default 세팅
-        localStorage.setItem('mt_tutor_id', 't01');
+        lpSet('mt_tutor_id', 't01');
       }
       // storedTutor가 있고 profile이 't01'이면 → localStorage 값 유지 (덮어쓰지 않음)
     } else {
       try {
-        const savedXp     = parseInt(localStorage.getItem('mt_xp') || '0', 10);
-        const savedDone   = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
-        const savedLearn  = localStorage.getItem('mt_learn_lang') || 'en-US';
+        const savedXp     = lpGetInt('mt_xp');
+        const savedDone   = lpGetJson<string[]>('mt_done', []);
+        const savedLearn  = lpGet('mt_learn_lang') || 'en-US';
         const savedNative = resolveNativeLang();
         setXp(savedXp);
         setCompletedLessons(new Set(savedDone));
@@ -426,8 +427,8 @@ export default function LevelHub() {
 
   const saveLangPrefs = async (learn: string, native: string) => {
     try {
-      localStorage.setItem('mt_learn_lang', learn);
-      localStorage.setItem('mt_native_lang', native);
+      lpSet('mt_learn_lang', learn);
+      lpSet('mt_native_lang', native);
     } catch { /* ignore */ }
     // QA H-2: 명시적 선택 기록 — LangSetupPrompt 프리필/스누즈 판단용
     markLangChosen();
@@ -502,9 +503,9 @@ export default function LevelHub() {
       setShowPaywall(true);
       return;
     }
-    const savedLearn  = localStorage.getItem('mt_learn_lang');
-    const savedNative = localStorage.getItem('mt_native_lang');
-    const savedTutor  = localStorage.getItem('mt_tutor_id') || 't01';
+    const savedLearn  = lpGet('mt_learn_lang');
+    const savedNative = lpGet('mt_native_lang');
+    const savedTutor  = lpGet('mt_tutor_id') || 't01';
     if (savedLearn && savedNative) {
       router.push(`/lingua/learn/${levelId}?lang=${savedLearn}&subLang=${savedNative}&tutor=${savedTutor}`);
     } else {
@@ -537,7 +538,7 @@ export default function LevelHub() {
     setLearnLang(learn);
     setNativeLang(native);
     setShowLangModal(false);
-    const savedTutor = localStorage.getItem('mt_tutor_id') || 't01';
+    const savedTutor = lpGet('mt_tutor_id') || 't01';
 
     if (pendingLevelId) {
       router.push(`/lingua/learn/${pendingLevelId}?lang=${learn}&subLang=${native}&tutor=${savedTutor}`);
@@ -642,7 +643,7 @@ export default function LevelHub() {
               Start Placement Test 🚀
             </button>
             <button
-              onClick={() => { setShowPlacementModal(false); localStorage.setItem('mt_placement_done', 'skip'); }}
+              onClick={() => { setShowPlacementModal(false); lpSet('mt_placement_done', 'skip'); }}
               style={{ width: '100%', padding: '12px', borderRadius: 16, border: 'none', background: 'transparent', color: '#94A3B8', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif" }}>
               Skip for now, start from A1
             </button>

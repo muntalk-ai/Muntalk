@@ -10,6 +10,7 @@ import { getTutorForLang, getTutorById } from '@/data/tutors';
 import { LEARN_LANGUAGES, promptLangName } from '@/data/languages';
 import ShareSheet from './ShareSheet';
 import { REFERRAL_COPY } from '@/lib/referral';
+import { lpGet } from '@/lib/localProgress';
 
 type Step = 'pick' | 'tier' | 'try' | 'listening' | 'analyzing' | 'feedback' | 'done';
 
@@ -133,7 +134,7 @@ export default function WowFirstPhrase() {
   const nativeLang = useMemo(() => {
     if (typeof window === 'undefined') return 'en-US';
     try {
-      const stored = localStorage.getItem('mt_native_lang');
+      const stored = lpGet('mt_native_lang');
       if (stored) return stored;
     } catch { /* noop */ }
     const nav = (navigator.language || 'en-US');

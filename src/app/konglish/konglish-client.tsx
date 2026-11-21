@@ -35,6 +35,7 @@ import {
   type KonglishLang,
 } from '@/data/konglish-episodes';
 import { FONT, LockCard, useNow } from '../watch/watch-shared';
+import { lpGet } from '@/lib/localProgress';
 
 export default function KonglishClient() {
   const { user, profile, loading: authLoading } = useAuth();
@@ -45,7 +46,7 @@ export default function KonglishClient() {
   const [lang, setLang] = useState<KonglishLang>(() => {
     if (typeof window === 'undefined') return 'vi';
     try {
-      const ls = localStorage.getItem('mt_learn_lang');
+      const ls = lpGet('mt_learn_lang');
       if (ls && KONGLISH_LANGS.some((l) => l.code === ls)) return ls as KonglishLang;
     } catch { /* ignore */ }
     return 'vi';
@@ -54,10 +55,10 @@ export default function KonglishClient() {
   useEffect(() => {
     if (picked) return;
     let next: string | null = null;
-    try { next = localStorage.getItem('mt_learn_lang'); } catch { /* ignore */ }
+    try { next = lpGet('mt_learn_lang'); } catch { /* ignore */ }
     if (!next) next = profile?.learnLang ?? null;
     if (!next || !KONGLISH_LANGS.some((l) => l.code === next)) {
-      try { next = localStorage.getItem('mt_native_lang'); } catch { /* ignore */ }
+      try { next = lpGet('mt_native_lang'); } catch { /* ignore */ }
       if (!next || !KONGLISH_LANGS.some((l) => l.code === next)) next = profile?.nativeLang ?? null;
     }
     if (next && KONGLISH_LANGS.some((l) => l.code === next)) setLang(next as KonglishLang);

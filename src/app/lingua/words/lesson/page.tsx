@@ -14,6 +14,7 @@ import { createUnlockedAudio, resumeDeviceSpeech } from '@/lib/audioUnlock';
 import { resolveNativeLang } from '@/lib/userProfile';
 import { useAuth } from '@/context/AuthContext';
 import { addCardToSRS } from '@/lib/spacedRepetition';
+import { lpGet } from '@/lib/localProgress';
 
 interface WordData {
   word: string;
@@ -53,8 +54,8 @@ function WordLessonContent() {
   // tutor
   const [tutorId, setTutorId] = useState('t01');
   useEffect(() => {
-    setTutorId(localStorage.getItem('mt_tutor_id') || 't01');
-  }, []);
+    setTutorId(lpGet('mt_tutor_id') || 't01');
+  }, [user?.uid]);
   const tutor = getTutorById(tutorId);
   const ttsAvailable = hasTts(lang) || deviceTtsAvailable();
 

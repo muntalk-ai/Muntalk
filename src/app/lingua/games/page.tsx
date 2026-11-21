@@ -11,6 +11,7 @@ import { getCachedLessonTranslation, translateLessonBulk } from '@/lib/lessonBul
 import { pickDistractorMeanings } from '@/lib/vocabDistractors';
 import WrongAnswerModal, { type WrongAnswerInfo } from '@/components/WrongAnswerModal';
 import RtlDir from '@/components/RtlDir';
+import { lpGet, lpGetInt, lpSet } from '@/lib/localProgress';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -141,7 +142,7 @@ export default function WordGamesPage() {
   // PR-I: RTL 판정용 학습 언어
   const [rtlLang, setRtlLang] = useState('en-US');
   useEffect(() => {
-    try { setRtlLang(profile?.learnLang || localStorage.getItem('mt_learn_lang') || 'en-US'); }
+    try { setRtlLang(profile?.learnLang || lpGet('mt_learn_lang') || 'en-US'); }
     catch { /* ignore */ }
   }, [profile?.learnLang]);
 
@@ -184,8 +185,8 @@ export default function WordGamesPage() {
     let learnLang = 'en-US';
     let nativeLang = 'en-US';
     try {
-      learnLang = localStorage.getItem('mt_learn_lang') || profile?.learnLang || 'en-US';
-      nativeLang = localStorage.getItem('mt_native_lang') || profile?.nativeLang || detectBrowserNativeLang();
+      learnLang = lpGet('mt_learn_lang') || profile?.learnLang || 'en-US';
+      nativeLang = lpGet('mt_native_lang') || profile?.nativeLang || detectBrowserNativeLang();
     } catch { /* ignore — defaults above */ }
     const key = `${difficulty}:${learnLang}:${nativeLang}`;
     if (poolKey !== key || !pool) {
@@ -210,8 +211,8 @@ export default function WordGamesPage() {
     setXpGained(prev => prev + pts);
     pendingXpRef.current += pts;
     answersRef.current += 1;
-    const stored = parseInt(localStorage.getItem('mt_xp') || '0', 10);
-    localStorage.setItem('mt_xp', String(stored + pts));
+    const stored = lpGetInt('mt_xp');
+    lpSet('mt_xp', String(stored + pts));
   };
 
   const game = GAMES.find(g => g.id === activeGame)!;

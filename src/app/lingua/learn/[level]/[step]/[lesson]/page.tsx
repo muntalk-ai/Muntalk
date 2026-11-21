@@ -12,6 +12,7 @@ import { awardXp } from '@/lib/xpClient';
 import { apiFetch } from '@/lib/apiClient';
 import { REFERRAL_REWARDS } from '@/lib/referral';
 import RtlDir from '@/components/RtlDir';
+import { lpGet, lpGetInt, lpGetJson, lpSet } from '@/lib/localProgress';
 
 // 비로그인 허용 레슨 (A1 첫 레슨만)
 const GUEST_ALLOWED_LESSON = 'a1-1-1';
@@ -73,10 +74,10 @@ export default function LessonPage({
 
   useEffect(() => {
     try {
-      const saved = parseInt(localStorage.getItem('mt_xp') || '0', 10);
+      const saved = lpGetInt('mt_xp');
       setXp(saved);
       const urlTutor = searchParams.get('tutor');
-      setTutorId(urlTutor || localStorage.getItem('mt_tutor_id') || 't01');
+      setTutorId(urlTutor || lpGet('mt_tutor_id') || 't01');
       // URL에 lang 없으면 프로필(Firestore) → localStorage 순 (게스트 포함, QA S-5)
       if (!searchParams.get('lang')) {
         setLangId(resolveLearnLang(profile?.learnLang));
@@ -95,24 +96,24 @@ export default function LessonPage({
     lastXpEarnedRef.current = xpEarned;
     try {
       // localStorage 업데이트
-      const prev = parseInt(localStorage.getItem('mt_xp') || '0', 10);
+      const prev = lpGetInt('mt_xp');
       const next = prev + xpEarned;
-      localStorage.setItem('mt_xp', String(next));
+      lpSet('mt_xp', String(next));
       setXp(next);
 
-      const doneParsed = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
+      const doneParsed = lpGetJson<string[]>('mt_done', []);
       if (!doneParsed.includes(lesson)) {
         doneParsed.push(lesson);
-        localStorage.setItem('mt_done', JSON.stringify(doneParsed));
+        lpSet('mt_done', JSON.stringify(doneParsed));
       }
 
       // 게스트용 활동 날짜 기록 — 레슨 완료 시점에만 (UTC 기준, 화면 방문 시에는 기록하지 않음)
       try {
         const todayUtc = new Date().toISOString().slice(0, 10);
-        const datesParsed = JSON.parse(localStorage.getItem('mt_activity_dates') || '[]') as string[];
+        const datesParsed = lpGetJson<string[]>('mt_activity_dates', []);
         if (!datesParsed.includes(todayUtc)) {
           datesParsed.push(todayUtc);
-          localStorage.setItem('mt_activity_dates', JSON.stringify(datesParsed));
+          lpSet('mt_activity_dates', JSON.stringify(datesParsed));
         }
       } catch { /* ignore */ }
 

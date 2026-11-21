@@ -11,6 +11,7 @@ import { resolveLearnLang, resolveNativeLang } from '@/lib/userProfile';
 import { speakWithDeviceTts } from '@/lib/deviceTts';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 import RtlDir from '@/components/RtlDir';
+import { lpGet, lpSet } from '@/lib/localProgress';
 
 type Side = 'for' | 'against';
 
@@ -146,8 +147,8 @@ export default function AgoraPage() {
     // 캐시가 비어 있을 때만 프로필 값으로 채운다 — 시드 기본값 프로필이
     // 사용자의 새 선택을 덮어쓰지 않게 (PR-126 회귀 방지).
     try {
-      if (!localStorage.getItem('mt_learn_lang') && profile?.learnLang) localStorage.setItem('mt_learn_lang', profile.learnLang);
-      if (!localStorage.getItem('mt_native_lang') && profile?.nativeLang) localStorage.setItem('mt_native_lang', profile.nativeLang);
+      if (!lpGet('mt_learn_lang') && profile?.learnLang) lpSet('mt_learn_lang', profile.learnLang);
+      if (!lpGet('mt_native_lang') && profile?.nativeLang) lpSet('mt_native_lang', profile.nativeLang);
     } catch {}
   }, [profile]);
 

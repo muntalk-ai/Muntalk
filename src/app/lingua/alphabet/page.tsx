@@ -16,6 +16,7 @@ import {
   type AlphabetLetter,
 } from '@/data/alphabets/types';
 import { getAlphabetSystem, getSiblingSystems } from '@/data/alphabets';
+import { lpGet } from '@/lib/localProgress';
 
 const FONT = "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC','Noto Sans Bengali','Noto Sans Tamil','Noto Sans Telugu','Noto Sans Kannada','Noto Sans Malayalam','Noto Sans Gujarati','Noto Sans Gurmukhi','Noto Sans Sinhala','Noto Sans Myanmar','Noto Sans Lao','Noto Sans Khmer','Noto Sans Armenian','Noto Sans Ethiopic','Noto Serif Georgian',sans-serif";
 
@@ -29,7 +30,7 @@ function AlphabetContent() {
   const navLang = typeof window !== 'undefined' ? (navigator.language || 'en-US') : 'en-US';
   const navBase = navLang.split('-')[0].toLowerCase();
   const nativeLang = profile?.nativeLang
-    || (typeof window !== 'undefined' ? localStorage.getItem('mt_native_lang') : null)
+    || (lpGet('mt_native_lang'))
     || LEARN_LANGUAGES.find(l => l.code.toLowerCase() === navLang.toLowerCase())?.code
     || LEARN_LANGUAGES.find(l => l.code.toLowerCase().startsWith(navBase))?.code
     || 'en-US';

@@ -24,6 +24,7 @@ import {
 import { getLangLabel } from '@/data/languages';
 import { purposePromptBlock, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
+import { lpGet, lpSet } from '@/lib/localProgress';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -160,14 +161,14 @@ function DreamStudioContent() {
   };
 
   useEffect(() => {
-    const ll = localStorage.getItem('mt_learn_lang') || 'en-US';
+    const ll = lpGet('mt_learn_lang') || 'en-US';
     const sl = resolveNativeLang();
-    const ti = localStorage.getItem('mt_tutor_id') || 't01';
+    const ti = lpGet('mt_tutor_id') || 't01';
     setLangId(ll); setSubLang(sl); setTutorId(ti);
     if (user) {
       getUserProfile(user.uid).then(p => {
-        if (p?.learnLang) { setLangId(p.learnLang); try { localStorage.setItem('mt_learn_lang', p.learnLang); } catch {} }
-        if (p?.nativeLang) { setSubLang(p.nativeLang); try { localStorage.setItem('mt_native_lang', p.nativeLang); } catch {} }
+        if (p?.learnLang) { setLangId(p.learnLang); try { lpSet('mt_learn_lang', p.learnLang); } catch {} }
+        if (p?.nativeLang) { setSubLang(p.nativeLang); try { lpSet('mt_native_lang', p.nativeLang); } catch {} }
         if (p?.tutorId) setTutorId(p.tutorId);
         if (p?.displayName) setUserName(p.displayName);
         if (p?.planId) setProfilePlanId(p.planId);

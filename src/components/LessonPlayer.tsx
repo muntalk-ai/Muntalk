@@ -17,6 +17,7 @@ import { addCardToSRS } from '@/lib/spacedRepetition';
 import { LESSON_TRANSLATION_CACHE_VERSION } from '@/lib/lessonTranslationCache';
 import { translateLessonBulk } from '@/lib/lessonBulkTranslate';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
+import { lpGet, lpGetInt, lpRemove, lpSet } from '@/lib/localProgress';
 
 const hasStt = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.stt ?? false;
 const hasTts = (langId: string) => LEARN_LANGUAGES.find(l => l.code === langId)?.tts ?? false;
@@ -246,13 +247,11 @@ export default function LessonPlayer({
   useEffect(() => {
     checkTrial();
   }, [checkTrial]);
-  // -- P1-6: 레슨 진행 상황 저장/복원 -----------------------------------------
-  const PROGRESS_KEY = 'mt_lesson_progress';
-
+  // -- P1-6: 레슨 진행 상황 저장/복원 (계정별 키) ---------------------------
   // 마운트 시 저장된 진행 확인 → 이어하기 제안
   useEffect(() => {
     try {
-      const raw = localStorage.getItem(PROGRESS_KEY);
+      const raw = lpGet('mt_lesson_progress');
       if (!raw) return;
       const saved = JSON.parse(raw);
       if (saved.lessonId !== lessonId || saved.phase === 'complete') return;
@@ -261,17 +260,17 @@ export default function LessonPlayer({
       if (hasProgress) setResumeOffer(saved);
     } catch { /* ignore */ }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [user?.uid]);
 
   // 진행 변경 시 저장 / 완료 시 삭제
   useEffect(() => {
     if (resumeOffer) return; // 이어하기 선택 전에는 덮어쓰지 않음
     try {
       if (phase === 'complete') {
-        localStorage.removeItem(PROGRESS_KEY);
+        lpRemove('mt_lesson_progress');
         return;
       }
-      localStorage.setItem(PROGRESS_KEY, JSON.stringify({
+      lpSet('mt_lesson_progress', JSON.stringify({
         lessonId, phase, vocabIdx, quizIdx, xpEarned, awardedXp: awardedXpRef.current, savedAt: Date.now(),
       }));
     } catch { /* ignore */ }
@@ -762,8 +761,8 @@ export default function LessonPlayer({
             // 로컬 mt_xp도 같이 올려 서버와 같은 값을 보게 한다 (완료 시에는
             // 나머지분만 mt_xp에 더하므로 이중 합산되지 않는다).
             try {
-              const prev = parseInt(localStorage.getItem('mt_xp') || '0', 10) || 0;
-              localStorage.setItem('mt_xp', String(prev + 15));
+              const prev = lpGetInt('mt_xp') || 0;
+              lpSet('mt_xp', String(prev + 15));
             } catch { /* ignore */ }
             refreshProfile().catch(() => {});
           } else {
@@ -1075,7 +1074,7 @@ RULES:
                 ▶ Resume
               </button>
               <button onClick={() => {
-                  try { localStorage.removeItem('mt_lesson_progress'); } catch { /* ignore */ }
+                  try { lpRemove('mt_lesson_progress'); } catch { /* ignore */ }
                   setResumeOffer(null);
                 }}
                 style={{ flex:1, padding:'12px 0', borderRadius:12, border:'1px solid #E2E8F0',

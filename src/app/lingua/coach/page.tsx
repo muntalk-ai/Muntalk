@@ -13,6 +13,7 @@ import { purposePromptBlock } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
 import { getTutorById } from '@/data/tutors';
 import { CURRICULUM } from '@/data/curriculum';
+import { lpGet, lpGetInt, lpGetJson } from '@/lib/localProgress';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -201,10 +202,10 @@ export default function CoachPage() {
       // 프로필 언어가 갈린다 (코치가 한국어로 답하던 원인 중 하나).
       let learnLang  = resolveLearnLang();
       let nativeLang = resolveNativeLang();
-      const xp         = parseInt(localStorage.getItem('mt_xp') || '0', 10);
-      const streak     = parseInt(localStorage.getItem('mt_streak') || '0', 10);
-      const doneParsed = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
-      const tutorId    = localStorage.getItem('mt_tutor_id') || 't01';
+      const xp         = lpGetInt('mt_xp');
+      const streak     = lpGetInt('mt_streak');
+      const doneParsed = lpGetJson<string[]>('mt_done', []);
+      const tutorId    = lpGet('mt_tutor_id') || 't01';
 
       let name = user?.displayName || 'Learner';
       let firestoreDone: string[] = [];

@@ -15,6 +15,7 @@ import {
 import { LEARN_LANGUAGES } from '@/data/languages';
 import { awardXpWithRetry } from '@/lib/xpClient';
 import { updateUserProfile } from '@/lib/userProfile';
+import { lpGet, lpGetInt, lpSet } from '@/lib/localProgress';
 
 // ── Language label map (all 93 learning languages) ──────────────────────────
 
@@ -90,7 +91,7 @@ export default function GrammarPage() {
   const chatRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const ti = localStorage.getItem('mt_tutor_id') || 't01';
+    const ti = lpGet('mt_tutor_id') || 't01';
     // QA S-5: 프로필(Firestore) 우선 — 새 기기에서 문법 팩이 'en-US'로 떨어지지 않게
     const nl = resolveNativeLang(profile?.nativeLang);
     const ll = resolveLearnLang(profile?.learnLang);
@@ -233,8 +234,8 @@ export default function GrammarPage() {
     if (score <= 0) return;
     const xp = score * 10;
     try {
-      const prev = parseInt(localStorage.getItem('mt_xp') || '0', 10) || 0;
-      localStorage.setItem('mt_xp', String(prev + xp));
+      const prev = lpGetInt('mt_xp') || 0;
+      lpSet('mt_xp', String(prev + xp));
     } catch { /* ignore */ }
     if (!user) return;
     const sessionSec = Math.max(1, Math.round((Date.now() - chapterOpenRef.current) / 1000));

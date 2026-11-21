@@ -14,6 +14,7 @@ import { LEARN_LANGUAGES, UI_LANGUAGES, getLangLabel } from '@/data/languages';
 import { PURPOSE_OPTIONS, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
 import ReferTab from '@/components/ReferTab';
+import { lpGet, lpSet } from '@/lib/localProgress';
 
 // 선택된 언어 코드 → 국기 이모지 (요약 줄 표시용)
 const flagOf = (code: string) =>
@@ -33,7 +34,7 @@ export default function ProfilePage() {
   const [nativeLang,  setNativeLang]  = useState<string>(() => {
     if (profile?.nativeLang) return profile.nativeLang;
     if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('mt_native_lang');
+      const stored = lpGet('mt_native_lang');
       if (stored && UI_LANGUAGES.some(l => l.code === stored)) return stored;
       const nav = (navigator.language || '').toLowerCase();
       const exact = UI_LANGUAGES.find(l => l.code.toLowerCase() === nav);
@@ -135,8 +136,8 @@ export default function ProfilePage() {
         await updateProfile(user, { displayName: trimmedName });
       }
       await updateUserProfile(user.uid, { learnLang, nativeLang, ...(nameToSave ? { displayName: nameToSave } : {}), purpose: purpose || null, langsConfirmed: true });
-      localStorage.setItem('mt_learn_lang', learnLang);
-      localStorage.setItem('mt_native_lang', nativeLang);
+      lpSet('mt_learn_lang', learnLang);
+      lpSet('mt_native_lang', nativeLang);
       markLangChosen();
       if (purpose) localStorage.setItem('mt_purpose', purpose);
       else localStorage.removeItem('mt_purpose');
