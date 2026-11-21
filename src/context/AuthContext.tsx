@@ -12,6 +12,7 @@ import {
   UserProfile,
 } from '@/lib/userProfile';
 import LangSetupPrompt from '@/components/LangSetupPrompt';
+import { safeGetItem } from '@/lib/safeStorage';
 
 interface AuthCtx {
   user:     User | null;
@@ -67,8 +68,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           const needsEmailSync = !p.email || p.email !== (u.email || '');
           const needsPatch     = p.xp === undefined || p.completedLessons === undefined;
           if (needsEmailSync || needsPatch) {
-            const lsXp   = parseInt(localStorage.getItem('mt_xp') || '0', 10);
-            const lsDone = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
+            // QA H-9: localStorage가 차단된 환경에서 getItem이 던지면
+            // handleAuthChange가 unhandled rejection으로 터진다. 차단 시
+            // 저장된 로컬 진도가 없는 것으로 취급한다.
+            const lsXp   = parseInt(safeGetItem('mt_xp') || '0', 10);
+            let lsDone: string[] = [];
+            try { lsDone = JSON.parse(safeGetItem('mt_done') || '[]') as string[]; } catch { lsDone = []; }
             await import('@/lib/userProfile').then(({ updateUserProfile }) =>
               updateUserProfile(u.uid, {
                 // 항상 최신 Auth 값으로 덮어씀

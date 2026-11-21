@@ -1,6 +1,7 @@
 'use client';
 import { apiFetch } from '@/lib/apiClient';
-import { AI_TIMEOUT_MS } from '@/lib/aiRetry';
+import { AI_TIMEOUT_MS, isRetryableError } from '@/lib/aiRetry';
+import { safeGetItem } from '@/lib/safeStorage';
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
@@ -335,8 +336,9 @@ export default function LessonPlayer({
 
     // 관리자 설정: localStorage의 curriculum_mode 확인
     // 'api' = Gemini 우선 (기본), 'json' = JSON 우선
+    // QA H-9: 차단된 스토리지에서는 getItem이 던진다 — safeGetItem으로 기본값 api.
     const curriculumMode = typeof window !== 'undefined'
-      ? (localStorage.getItem('mt_curriculum_mode') || 'api')
+      ? (safeGetItem('mt_curriculum_mode') || 'api')
       : 'api';
 
     if (curriculumMode === 'json' && PREGENERATED_LANGS.has(langId)) {
@@ -518,23 +520,28 @@ export default function LessonPlayer({
     resumeDeviceSpeech();
     const unlockedAudio = createUnlockedAudio();
     audioRef.current = unlockedAudio;
-    // 서버 TTS 미지원 언어(예: 버마어 — Google에 음성 없음)는 기기 내장 음성으로 폴백
+    // 서버 TTS 미지원 언어(예: 버마어 — Google에 음성 없음)는 기기 내장 음성으로 폴백.
+    // QA H-9: 기기에 해당 언어 음성이 없어도(데스크톱 Chrome에는 버마어 음성이
+    // 없음) 여기서 끝나지 않는다 — /api/tts가 Gemini TTS 경유로 모든 언어를
+    // 제공하므로(2026-09-27 실측) 서버로 폴백한다. onNoVoice가 먼저 실행돼
+    // deviceNoVoice를 채우므로, 기기 무음 시 onEnd가 먼저 나가는 것을 막고
+    // 서버 재생이 끝나야 onEnd가 나간다. 'device-tts-no-voice'는 서버 폴백까지
+    // 실패했을 때만(사용자가 진짜 무음을 들었을 때만) 원격 로그로 남긴다.
+    let deviceNoVoice = '';
     if (!hasTts(langId)) {
       setIsSpeaking(true);
       const ok = await speakWithDeviceTts(
         cleanText, langId,
-        () => { finishCurrent(); },
-        (availableLangs) => {
-          // 기기에 해당 언어 음성이 없음 — 원인 확정을 위해 원격 로그
-          reportPronEvent('device-tts-no-voice', { lang: langId, voices: availableLangs.join(',') });
-        },
+        () => { if (!deviceNoVoice) finishCurrent(); },
+        (availableLangs) => { deviceNoVoice = availableLangs.join(','); },
       );
-      // 기기 음성도 없으면 무음이 아닌 토스트로 알림 (silent failure 방지)
-      // (speakWithDeviceTts가 이미 onEnd를 호출했으므로 여기서는 토스트만)
-      // quiet 모드(자동재생)에서는 토스트를 띄우지 않음
-      if (!ok && isCurrent()) notifyFail();
-      return;
+      if (ok) return;
+      if (!isCurrent()) return;
+      // 기기 음성 없음 — 아래 서버 TTS 분기로 폴백한다.
     }
+    const reportDeviceNoVoice = () => {
+      if (deviceNoVoice) reportPronEvent('device-tts-no-voice', { lang: langId, voices: deviceNoVoice });
+    };
     setIsSpeaking(true);
     try {
       const res = await apiFetch('/api/tts', {
@@ -543,10 +550,10 @@ export default function LessonPlayer({
         body: JSON.stringify({ text: cleanText, lang: langId, gender: tutor?.gender || 'female', level: levelId }),
       });
       if (!isCurrent()) return; // 그 사이 새 재생이 시작됨 — 이 호출은 버린다.
-      if (!res.ok) { setIsSpeaking(false); notifyFail(); onEnd?.(); return; }
+      if (!res.ok) { reportDeviceNoVoice(); setIsSpeaking(false); notifyFail(); onEnd?.(); return; }
       const data = await res.json();
       if (!isCurrent()) return;
-      if (!data.audioContent) { setIsSpeaking(false); notifyFail(); onEnd?.(); return; }
+      if (!data.audioContent) { reportDeviceNoVoice(); setIsSpeaking(false); notifyFail(); onEnd?.(); return; }
       // 언록해 둔 엘리먼트에 실제 오디오를 끼워 재생한다.
       const audio = unlockedAudio;
       audio.src = `data:${data.mimeType || 'audio/mp3'};base64,${data.audioContent}`;
@@ -563,6 +570,7 @@ export default function LessonPlayer({
       }
     } catch (e) {
       if (!isCurrent()) return;
+      reportDeviceNoVoice();
       console.warn('[tts] speakText failed:', (e as Error)?.name || 'error', (e as Error)?.message);
       setIsSpeaking(false);
       notifyFail();
@@ -837,17 +845,28 @@ export default function LessonPlayer({
       }
       setPronLoading(true);
       try {
-        const res = await apiFetch('/api/gemini', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            uid: user?.uid,
-            temperature: 0.3,
-            prompt: `You are a pronunciation coach for ${promptLangName(langId)} learners.\nThe student tried to say: "${pronTarget}" (pronunciation guide: ${vocabItem.phonetic || 'n/a'}, meaning: ${vocabItem.meaning}).\nSpeech recognition heard them say: "${transcript}".\nCompare what they said vs the target. Reply in ${promptLangName(subLang) || 'Korean'} with ONLY JSON, no markdown:\n{"score":<0-100>,"heard":"<what you think they actually said>","feedback":"<1-2 sentences: which exact sound was off and how to fix it (e.g. tongue position, sound length). If great, praise briefly and specifically>"}`,
-          }),
-        timeoutMs: AI_TIMEOUT_MS,
-      });
-        const data = await res.json();
+        // QA H-9: 피드백 Gemini 호출이 타임아웃·네트워크 오류로 실패하면
+        // 1회 재시도한 뒤에만 pron_api_error로 로그한다. 일시적 장애로
+        // "Could not analyze"가 뜨는 경우를 줄인다.
+        let res: Response | null = null;
+        for (let attempt = 0; attempt < 2; attempt++) {
+          try {
+            res = await apiFetch('/api/gemini', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                uid: user?.uid,
+                temperature: 0.3,
+                prompt: `You are a pronunciation coach for ${promptLangName(langId)} learners.\nThe student tried to say: "${pronTarget}" (pronunciation guide: ${vocabItem.phonetic || 'n/a'}, meaning: ${vocabItem.meaning}).\nSpeech recognition heard them say: "${transcript}".\nCompare what they said vs the target. Reply in ${promptLangName(subLang) || 'Korean'} with ONLY JSON, no markdown:\n{"score":<0-100>,"heard":"<what you think they actually said>","feedback":"<1-2 sentences: which exact sound was off and how to fix it (e.g. tongue position, sound length). If great, praise briefly and specifically>"}`,
+              }),
+            timeoutMs: AI_TIMEOUT_MS,
+            });
+            break;
+          } catch (e) {
+            if (!isRetryableError(e) || attempt === 1) throw e;
+          }
+        }
+        const data = await (res as Response).json();
         const parsed = JSON.parse((data.text || '').replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim());
         if (!parsed.feedback) {
           reportPronEvent('pron_empty_feedback', { vocabIdx, word: vocabItem.word });
@@ -874,6 +893,11 @@ export default function LessonPlayer({
       const code = e?.error;
       if (code === 'not-allowed' || code === 'service-not-allowed') { setMicGuide('denied'); setPronError(null); }
       else if (code === 'audio-capture') { setMicGuide('no-mic'); setPronError(null); }
+      // QA H-9: 'no-speech'(사용자가 말하지 않음)와 'aborted'(인식 중단 —
+      // stopAll/이동으로 우리 쪽에서 끊긴 경우 포함)는 제품 결함이 아니라
+      // 사용자·환경 조건이다. 다시 시도 안내만 보여주고 에러 로그에는 남기지
+      // 않는다. 그 외 코드(network 등)는 기존대로 로그한다.
+      else if (code === 'no-speech' || code === 'aborted') { setPronError('Didn\'t catch that. Please try again.'); }
       else {
         reportPronEvent('pron_stt_error', { code, vocabIdx, word: vocabItem.word });
         setPronError('Speech recognition ran into a problem. Please try again.');

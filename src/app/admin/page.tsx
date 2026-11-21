@@ -7,6 +7,8 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { db } from '@/lib/firebase';
 import { getLangLabel } from '@/data/languages';
+import { safeGetItem, safeSetItem } from '@/lib/safeStorage';
+import { withFirestoreRetry } from '@/lib/firestoreRetry';
 import {
   collection, getDocs, doc, setDoc, getDoc, addDoc,
   serverTimestamp, query, orderBy, limit, where,
@@ -75,8 +77,10 @@ export default function AdminPage() {
   const router = useRouter();
 
   const [tab, setTab] = useState<Tab>('users');
+  // QA H-9: localStorage가 차단된 브라우저에서는 getItem이 렌더 중에 던진다.
+  // safeGetItem으로 막아두면 차단 환경에서도 어드민이 열린다 (기본값 api).
   const [curriculumMode, setCurriculumMode] = useState<'api'|'json'>(
-    typeof window !== 'undefined' ? ((localStorage.getItem('mt_curriculum_mode') || 'api') as 'api'|'json') : 'api'
+    typeof window !== 'undefined' ? ((safeGetItem('mt_curriculum_mode') || 'api') as 'api'|'json') : 'api'
   );
   const [users, setUsers] = useState<UserRow[]>([]);
   const [logs, setLogs] = useState<LogEntry[]>([]);
@@ -114,7 +118,8 @@ export default function AdminPage() {
   const openDetail = (u: UserRow) => {
     setDetail(u); setDetailLessons(null);
     // Completed lesson ids live on the user doc (not in the table row).
-    getDoc(doc(db,'users',u.uid)).then(snap => {
+    // QA H-9: 일시적 오프라인이면 재시도한다.
+    withFirestoreRetry(() => getDoc(doc(db,'users',u.uid))).then(snap => {
       const ids = snap.exists() && Array.isArray(snap.data().completedLessons)
         ? snap.data().completedLessons as string[] : [];
       setDetailLessons(ids);
@@ -159,7 +164,8 @@ export default function AdminPage() {
     (async () => {
       setFetching(true);
       try {
-        const snap = await getDocs(collection(db, 'users'));
+        // QA H-9: 일시적 오프라인(`unavailable`)이면 최대 3회 재시도한다.
+        const snap = await withFirestoreRetry(() => getDocs(collection(db, 'users')));
         // QA S-6: 구독 조회를 사용자마다 순차 await하면 45명 × 왕복 시간만큼
         // 첫 화면이 늦어진다(느린 연결에서 20초+). 병렬로 한 번에 조회한다.
         const rows: UserRow[] = (await Promise.all(snap.docs.map(async (d) => {
@@ -198,7 +204,8 @@ export default function AdminPage() {
     setLogsLoading(true);
     try {
       const q = query(collection(db,'admin_logs'), orderBy('timestamp','desc'), limit(100));
-      const snap = await getDocs(q);
+      // QA H-9: 일시적 오프라인이면 최대 3회 재시도한다.
+      const snap = await withFirestoreRetry(() => getDocs(q));
       setLogs(snap.docs.map(d => ({
         id:d.id,
         action:d.data().action||'',
@@ -736,7 +743,7 @@ export default function AdminPage() {
               </div>
               <div style={{display:'flex',gap:12,flexWrap:'wrap'}}>
                 <button
-                  onClick={()=>{ setCurriculumMode('api'); localStorage.setItem('mt_curriculum_mode','api'); }}
+                  onClick={()=>{ setCurriculumMode('api'); safeSetItem('mt_curriculum_mode','api'); }}
                   style={{padding:'13px 28px',borderRadius:12,border:'none',cursor:'pointer',fontFamily:FONT,fontWeight:900,fontSize:14,
                     background:curriculumMode==='api'?'linear-gradient(135deg,#6366F1,#8B5CF6)':'#F1F5F9',
                     color:curriculumMode==='api'?'#fff':'#64748B',
@@ -745,7 +752,7 @@ export default function AdminPage() {
                   🤖 API Mode (Gemini First)
                 </button>
                 <button
-                  onClick={()=>{ setCurriculumMode('json'); localStorage.setItem('mt_curriculum_mode','json'); }}
+                  onClick={()=>{ setCurriculumMode('json'); safeSetItem('mt_curriculum_mode','json'); }}
                   style={{padding:'13px 28px',borderRadius:12,border:'none',cursor:'pointer',fontFamily:FONT,fontWeight:900,fontSize:14,
                     background:curriculumMode==='json'?'linear-gradient(135deg,#10B981,#059669)':'#F1F5F9',
                     color:curriculumMode==='json'?'#fff':'#64748B',

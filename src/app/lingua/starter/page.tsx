@@ -331,10 +331,18 @@ function StarterContent() {
     audioRef.current = null;
     setIsSpeaking(false);
     // 서버 음성 미지원 언어(예: 버마어)는 기기 내장 음성으로 폴백
+    // QA H-9: 기기에 음성이 없어도(데스크톱의 버마어 등) 서버 TTS(/api/tts,
+    // Gemini 경유)로 폴백한다. onNoVoice가 끝 콜백보다 먼저 실행되므로
+    // 플래그로 기기 무음 시의 조기 종료를 막는다.
     if (!hasTts(langId)) {
       setIsSpeaking(true);
-      await speakWithDeviceTts(text, langId, () => setIsSpeaking(false));
-      return;
+      let deviceNoVoice = false;
+      const ok = await speakWithDeviceTts(text, langId,
+        () => { if (!deviceNoVoice) setIsSpeaking(false); },
+        () => { deviceNoVoice = true; });
+      if (ok) return;
+      if (speakSeq.current !== mySeq) return; // 그 사이 새 탭이 시작됨
+      // fall through to server TTS below
     }
     try {
       const res = await apiFetch('/api/tts', {
