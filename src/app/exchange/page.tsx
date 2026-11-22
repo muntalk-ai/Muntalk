@@ -28,6 +28,7 @@ import {
   type SessionReview,
 } from '@/lib/exchangeMemoryReview';
 import { useAuth } from '@/context/AuthContext';
+import { isPremium } from '@/lib/subscription';
 import BackButton from '@/components/BackButton';
 import {
   AGE_BANDS,
@@ -490,12 +491,36 @@ export default function ExchangePage() {
   const recognitionRef = useRef<SpeechRecognitionInstance | null>(null);
   const dictationBaseRef = useRef('');
   const [toast, setToast] = useState('');
-  const [pro, setPro] = useState(false);
-  const [billing, setBilling] = useState<'monthly' | 'yearly'>('yearly');
+  // H-6 / Q9: 가짜 7일 체험 버튼이 없어져 이 값은 더 이상 켜지지
+  // 않는다 (항상 false). 헤더 PRO 배지와 주간 리포트 게이트가 아직
+  // 이 값을 보므로, 실제 구독(getSubscription)으로 바꾸는 전체
+  // 배선은 별도 작업으로 남아 있다. 카운터 분모용 실제 Pro 여부는
+  // 아래 realPro state를 쓴다.
+  const [pro] = useState(false);
+  const [billing, setBilling] = useState<'monthly' | 'biannual' | 'yearly'>('yearly');
+  // Q7 / M-4: 오늘 새로 시작한 AI 채팅 수 (표시용 카운터) + 실제
+  // Pro 여부 (카운터 분모 20/50용으로만 읽는다).
+  const [newChatsToday, setNewChatsToday] = useState(0);
+  const [realPro, setRealPro] = useState(false);
+  const newChatPendingRef = useRef<Set<string>>(new Set());
   // Guest trial (5 minutes, no sign-in — see requireChatAccess).
   const [guestTrial, setGuestTrial] = useState<GuestTrial | null>(null);
   const [trialLeftMs, setTrialLeftMs] = useState<number | null>(null);
   const [showTrialExpired, setShowTrialExpired] = useState(false);
+  // Trial-ended prompt, dismissed once per session: the 1 s countdown
+  // interval re-opens the prompt on every tick, so a plain "Later"
+  // never sticks. Once the user closes it, it stays closed for this
+  // session (a ref, not state — the interval closure reads it without
+  // re-subscribing). Sending again still stays blocked by the trial
+  // gate; the user just gets a toast instead of the prompt.
+  const trialExpiredDismissedRef = useRef(false);
+  const openTrialExpired = () => {
+    if (!trialExpiredDismissedRef.current) setShowTrialExpired(true);
+  };
+  const dismissTrialExpired = () => {
+    trialExpiredDismissedRef.current = true;
+    setShowTrialExpired(false);
+  };
 
   // Photo lightbox — tap a partner avatar or gallery photo to see the
   // original high-resolution file. `images` enables prev/next inside a
@@ -1281,6 +1306,49 @@ export default function ExchangePage() {
     }
   }
 
+  // Q7 / M-4: 하루 새로 시작하는 AI 채팅 수 카운터 (Muntuz host only).
+  // "무료 20회" = 하루에 새로 시작하는 채팅 20개(파트너 20명), 이미
+  // 시작한 대화는 무제한. 이 값은 화면 표시 + 새 채팅 시작 전 1차
+  // 게이트용이다. 실제 강제(서버)는 새 채팅의 첫 메시지에 붙는
+  // newChat 플래그로 api_daily_usage에 세어 한다. 날짜는 서버와
+  // 같은 UTC 기준. 로그인 계정별로 따로 세고, 게스트는 이 기기
+  // 기준 20회로 표시한다.
+  const NEW_CHATS_KEY = 'muntuz_exchange_new_chats_v1';
+  const FREE_DAILY_NEW_CHATS = 20;
+  const PRO_DAILY_NEW_CHATS = 50;
+
+  function utcToday(): string {
+    return new Date().toISOString().slice(0, 10);
+  }
+
+  function newChatCountKey(): string {
+    return user ? `uid:${user.uid}` : 'guest';
+  }
+
+  function readNewChatCount(): number {
+    if (typeof window === 'undefined') return 0;
+    try {
+      const raw = window.localStorage.getItem(NEW_CHATS_KEY);
+      if (!raw) return 0;
+      const rec = JSON.parse(raw) as { date?: string; key?: string; count?: number };
+      if (rec.date !== utcToday() || rec.key !== newChatCountKey() || typeof rec.count !== 'number') return 0;
+      return Math.max(0, Math.floor(rec.count));
+    } catch {
+      return 0;
+    }
+  }
+
+  function recordNewChatStarted(): number {
+    const key = newChatCountKey();
+    const next = readNewChatCount() + 1;
+    try {
+      window.localStorage.setItem(NEW_CHATS_KEY, JSON.stringify({ date: utcToday(), key, count: next }));
+    } catch {
+      // Private mode: the count lives in memory only for this session.
+    }
+    return next;
+  }
+
   // Chat access: signed-in users always pass. Guests get one 5-minute
   // trial from their first guest message; after it expires they are
   // sent to sign-up (the free tier continues after sign-up). Returns
@@ -1292,8 +1360,13 @@ export default function ExchangePage() {
     const existing = guestTrial ?? readGuestTrial();
     if (existing && now - existing.startedAt < GUEST_TRIAL_MS) return true;
     if (existing) {
-      // Trial used up.
-      setShowTrialExpired(true);
+      // Trial used up. If the prompt was already dismissed this
+      // session, do not re-open it — a toast is the only feedback.
+      if (trialExpiredDismissedRef.current) {
+        showToast('Your 5-minute free trial ended — sign up to keep chatting.');
+      } else {
+        setShowTrialExpired(true);
+      }
       return false;
     }
     // First guest chat message: start the trial.
@@ -1317,6 +1390,23 @@ export default function ExchangePage() {
   };
 
   const startAiChat = (p: AiPartner) => {
+    // Q7 / M-4 (Muntuz host only): 이미 열린 채팅을 다시 여는 것은
+    // 세지 않는다. 새로 만드는 채팅만 오늘 한도에 들어간다 — 한도에
+    // 도달했으면 만들지 않고 Pro 탭으로 안내한다. (연속 탭 시 chats
+    // 스냅샷이 한 렌더 뒤처질 수 있어, 서버가 첫 메시지에서 한 번
+    // 더 강제한다.)
+    if (isMuntuzHost() && !chats.some((c) => c.id === p.id)) {
+      const limit = realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS;
+      if (newChatsToday >= limit) {
+        showToast(
+          `You've started ${limit} new chats today (${realPro ? 'Pro' : 'free'} plan). Ongoing chats are unlimited — Pro allows 50 new chats a day.`
+        );
+        setTab('pro');
+        return;
+      }
+      setNewChatsToday(recordNewChatStarted());
+      newChatPendingRef.current.add(p.id);
+    }
     const gid = msgSeq++;
     setChats((cs) =>
       cs.some((c) => c.id === p.id)
@@ -1366,6 +1456,32 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
   useEffect(() => {
     setGuestTrial(readGuestTrial());
   }, []);
+
+  // Q7 / M-4: 오늘 새 채팅 수와 실제 Pro 여부를 읽는다 (Muntuz host
+  // only). 로그인 상태가 바뀌면 해당 계정의 카운터로 다시 읽는다.
+  // realPro는 카운터 분모(20/50) 표시용으로만 쓴다.
+  useEffect(() => {
+    if (!isMuntuzHost()) {
+      setNewChatsToday(0);
+      setRealPro(false);
+      return;
+    }
+    setNewChatsToday(readNewChatCount());
+    if (!user) {
+      setRealPro(false);
+      return;
+    }
+    let cancelled = false;
+    void isPremium(user.uid, user.email)
+      .then((v) => {
+        if (!cancelled) setRealPro(v);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps — user change only.
+  }, [user]);
 
   // H-7: detect Web Speech API support after mount (server render has
   // no window, so this must not run during render).
@@ -1443,13 +1559,23 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
     const tick = () => {
       const left = guestTrial.startedAt + GUEST_TRIAL_MS - Date.now();
       setTrialLeftMs(Math.max(0, left));
-      if (left <= 0 && activeChat?.isAi) setShowTrialExpired(true);
+      if (left <= 0 && activeChat?.isAi) openTrialExpired();
     };
     tick();
     const iv = window.setInterval(tick, 1000);
     return () => window.clearInterval(iv);
     // eslint-disable-next-line react-hooks/exhaustive-deps — tick on trial/user/chat change only.
   }, [user, guestTrial, activeChatId]);
+
+  // Escape closes the trial-ended prompt (same as "Later").
+  useEffect(() => {
+    if (!showTrialExpired) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') dismissTrialExpired();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [showTrialExpired]);
 
   // ── Chats list: search + filter chips (HelloTalk list layout, MunTalk style)
   const [chatQuery, setChatQuery] = useState('');
@@ -1541,22 +1667,34 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
     );
     setInput('');
     setAiSending(true);
+    // Q7 / M-4: 이 채팅의 첫 메시지일 때만 서버에 newChat을 알려
+    // 서버가 오늘 새 채팅 수를 센다. 이후 메시지는 세지 않는다
+    // (이미 시작한 대화는 무제한).
+    const isNewChatStart = newChatPendingRef.current.has(activeChat.id);
     try {
       const res = await fetch('/api/exchange-ai-chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ partnerId: activeChat.partnerId, message: text, history, sentPhotos, turnsSincePhoto, memory: memoryRef.current[activeChat.partnerId] || undefined, deviceId: getDeviceId() || undefined }),
+        body: JSON.stringify({ partnerId: activeChat.partnerId, message: text, history, sentPhotos, turnsSincePhoto, memory: memoryRef.current[activeChat.partnerId] || undefined, deviceId: getDeviceId() || undefined, ...(isNewChatStart ? { newChat: true } : {}) }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) {
         // Server-side trial expiry (e.g. localStorage was cleared): open
         // the sign-up prompt instead of a generic error toast.
         if (data.error === 'trial_expired') {
-          setShowTrialExpired(true);
+          openTrialExpired();
+          return;
+        }
+        // Q7: 서버의 새 채팅 한도에 걸리면, 채팅은 그대로 두고
+        // (이미 시작한 대화는 계속 가능) 한도 안내만 보여준다.
+        // 플래그는 지우지 않아 재시도 때도 서버가 다시 검사한다.
+        if (data.code === 'new_chat_limit_reached') {
+          showToast(typeof data.error === 'string' ? data.error : 'Daily new-chat limit reached — ongoing chats are unlimited.');
           return;
         }
         throw new Error(typeof data.error === 'string' ? data.error : 'AI reply failed');
       }
+      newChatPendingRef.current.delete(activeChat.id);
       const rid = msgSeq++;
       const reply = typeof data.text === 'string' && data.text ? data.text : 'Sorry, I could not reply just now.';
       // Only accept a photo that is actually in this partner's gallery —
@@ -2091,7 +2229,11 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
             <p className="text-sm font-bold text-slate-700">Daily new chats</p>
             <p className="mt-1">Free: 20 / day · Pro: 50 / day</p>
             <p>Ongoing chats are unlimited.</p>
-            <p className="mt-2">New accounts (first 7 days): 5 / day.</p>
+            {isMuntuzHost() && (
+              <p className="mt-1 font-bold text-violet-700">
+                Today: {newChatsToday}/{realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS} new chats
+              </p>
+            )}
           </div>
         </aside>
 
@@ -2125,6 +2267,12 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                   Online now: {AI_PARTNERS.length} AI partners ready to practice
                 </span>
               </div>
+              {/* Q7 / M-4 (Muntuz host only): 오늘 새로 시작한 채팅 수. */}
+              {isMuntuzHost() && (
+                <p className="mt-2 text-xs font-semibold text-slate-500">
+                  New chats today: {newChatsToday}/{realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS} ({realPro ? 'Pro: 50' : 'Free: 20'} / day) — ongoing chats are unlimited.
+                </p>
+              )}
               {/* Mobile-only entry points: the sidebar tab switcher is
                   desktop-only (hidden md:block), so on phones AI Review
                   and Profile had no in-page path. */}
@@ -2476,6 +2624,12 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
               <p className="mt-1 text-sm text-slate-500">
                 AI chats are marked AI throughout. Phone numbers, links and contact IDs are blocked before sending.
               </p>
+              {/* Q7 / M-4 (Muntuz host only): 오늘 새로 시작한 채팅 수. */}
+              {isMuntuzHost() && (
+                <p className="mt-1 text-xs font-semibold text-violet-700">
+                  New chats today: {newChatsToday}/{realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS} ({realPro ? 'Pro: 50' : 'Free: 20'} / day) — ongoing chats are unlimited.
+                </p>
+              )}
               {!activeChat ? (
                 <div className="mt-4">
                   <div className="relative">
@@ -2581,6 +2735,12 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                       {activeChat.name}{' '}
                       {activeChat.isAi && <span className="rounded-full bg-violet-600 px-2 py-0.5 text-[11px] font-extrabold text-white">AI</span>}
                     </span>
+                    {/* Q7 / M-4 (Muntuz host only): 오늘 새로 시작한 채팅 수. */}
+                    {isMuntuzHost() && (
+                      <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-bold text-slate-600" title="New AI chats started today">
+                        {newChatsToday}/{realPro ? PRO_DAILY_NEW_CHATS : FREE_DAILY_NEW_CHATS} today
+                      </span>
+                    )}
                     {activeChat.isAi && user && activeChat.messages.filter((m) => m.from === 'me').length >= 4 && (
                       <button
                         onClick={() => void requestSessionReview()}
@@ -2739,7 +2899,15 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
               so it picks up where it left off after sign-in on this
               device. */}
           {showTrialExpired && (
-            <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 p-4 sm:items-center" role="dialog" aria-modal="true" aria-label="Free trial ended">
+            <div
+              className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 p-4 sm:items-center"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Free trial ended"
+              onClick={(e) => {
+                if (e.target === e.currentTarget) dismissTrialExpired();
+              }}
+            >
               <div className="w-full max-w-sm rounded-3xl bg-white p-5 shadow-xl">
                 <h3 className="text-lg font-extrabold">Your 5-minute free trial ended</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -2752,7 +2920,7 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                   Sign up and keep chatting
                 </button>
                 <button
-                  onClick={() => setShowTrialExpired(false)}
+                  onClick={() => dismissTrialExpired()}
                   className="mt-2 w-full rounded-xl border border-slate-200 py-3 font-bold text-slate-600 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
                 >
                   Later
@@ -2929,21 +3097,32 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
             <section>
               <h2 className="text-xl font-extrabold">MunTalk Exchange Pro</h2>
               <p className="mt-1 text-sm text-slate-500">People talk. AI reviews. Pro removes the limits.</p>
-              <div className="mt-4 flex gap-3">
+              {/* Q6: /pricing 가격과 통일 (월 $9.99, 6개월 $39.99, 1년
+                  $59.99). 예전 Pro 탭의 월/연 표기는 삭제. 할인율은
+                  /pricing 기준 — 6개월 33%, 1년 50%. */}
+              <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-3">
                 <button
                   onClick={() => setBilling('monthly')}
-                  className={`flex-1 rounded-2xl border p-4 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 sm:p-5 ${billing === 'monthly' ? 'border-violet-600 bg-violet-50 shadow-sm ring-1 ring-violet-600' : 'border-slate-200/80 bg-white hover:border-violet-300'}`}
+                  className={`rounded-2xl border p-3 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 sm:p-5 ${billing === 'monthly' ? 'border-violet-600 bg-violet-50 shadow-sm ring-1 ring-violet-600' : 'border-slate-200/80 bg-white hover:border-violet-300'}`}
                 >
                   <p className="font-bold">Monthly</p>
-                  <p className="text-2xl font-extrabold">$8<span className="text-sm font-normal text-slate-500">/mo</span></p>
+                  <p className="text-2xl font-extrabold">$9.99<span className="text-sm font-normal text-slate-500">/mo</span></p>
+                </button>
+                <button
+                  onClick={() => setBilling('biannual')}
+                  className={`rounded-2xl border p-3 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 sm:p-5 ${billing === 'biannual' ? 'border-violet-600 bg-violet-50 shadow-sm ring-1 ring-violet-600' : 'border-slate-200/80 bg-white hover:border-violet-300'}`}
+                >
+                  <p className="font-bold">6 Months <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-xs text-emerald-700">Save 33%</span></p>
+                  <p className="text-2xl font-extrabold">$39.99<span className="text-sm font-normal text-slate-500">/6mo</span></p>
+                  <p className="text-xs text-slate-500">≈ $6.67 / month</p>
                 </button>
                 <button
                   onClick={() => setBilling('yearly')}
-                  className={`flex-1 rounded-2xl border p-4 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 sm:p-5 ${billing === 'yearly' ? 'border-violet-600 bg-violet-50 shadow-sm ring-1 ring-violet-600' : 'border-slate-200/80 bg-white hover:border-violet-300'}`}
+                  className={`rounded-2xl border p-3 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 sm:p-5 ${billing === 'yearly' ? 'border-violet-600 bg-violet-50 shadow-sm ring-1 ring-violet-600' : 'border-slate-200/80 bg-white hover:border-violet-300'}`}
                 >
-                  <p className="font-bold">Yearly <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-xs text-emerald-700">Save 33%</span></p>
-                  <p className="text-2xl font-extrabold">$64<span className="text-sm font-normal text-slate-500">/yr</span></p>
-                  <p className="text-xs text-slate-500">≈ $5.33 / month</p>
+                  <p className="font-bold">Yearly <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-xs text-emerald-700">Save 50%</span></p>
+                  <p className="text-2xl font-extrabold">$59.99<span className="text-sm font-normal text-slate-500">/yr</span></p>
+                  <p className="text-xs text-slate-500">≈ $5.00 / month</p>
                 </button>
               </div>
               <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-slate-600">
@@ -2952,17 +3131,16 @@ const sayHello = (p: { id: string; name: string; flag: string }) => {
                 <li>Unlimited translations</li>
                 <li>Safety tools (report, block, contact guard) are free for everyone</li>
               </ul>
-              <button
-                onClick={() => {
-                  setPro(true);
-                  showToast('7-day trial started (demo). PRO badge is now active.');
-                }}
-                disabled={pro}
-                className={`mt-4 w-full rounded-xl py-3 font-bold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98] disabled:cursor-default ${pro ? 'bg-emerald-100 text-emerald-700' : 'bg-violet-600 text-white shadow-sm hover:bg-violet-700'}`}
+              {/* Q9: 가짜 7일 무료 체험 버튼을 없애고 /pricing으로
+                  연결한다. 무료 체험 결제는 만들지 않는다 — 무료
+                  20회/일이 이미 충분하다는 사용자 결정. */}
+              <a
+                href="/pricing"
+                className="mt-4 block w-full rounded-xl bg-violet-600 py-3 text-center font-bold text-white shadow-sm transition hover:bg-violet-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 active:scale-[0.98]"
               >
-                {pro ? '✓ Trial active — you are PRO (demo)' : 'Start 7-day free trial'}
-              </button>
-              <p className="mt-2 text-center text-xs text-slate-400">Demo only — no payment is taken on this page.</p>
+                See plans &amp; pricing
+              </a>
+              <p className="mt-2 text-center text-xs text-slate-400">Free plan includes 20 new chats a day — ongoing chats are unlimited.</p>
             </section>
           )}
 

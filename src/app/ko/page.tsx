@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { CURRICULUM } from '@/data/curriculum';
+import BrandEmailLink from '@/components/BrandEmailLink';
 
 export const metadata: Metadata = {
   title: 'MunTalk — AI 영어 회화 | 무료 스피킹 연습',
@@ -287,7 +288,7 @@ export default function KoreanLanding() {
         </div>
         <div style={{ fontSize: 11, color: '#CBD5E1' }}>
           &copy; {new Date().getFullYear()} MunTalk. All rights reserved. |{' '}
-          <a href="mailto:muntalkofficial@gmail.com" style={{ color: '#94A3B8', textDecoration: 'none' }}>muntalkofficial@gmail.com</a>
+          <BrandEmailLink style={{ color: '#94A3B8', textDecoration: 'none' }} />
         </div>
       </footer>
     </div>

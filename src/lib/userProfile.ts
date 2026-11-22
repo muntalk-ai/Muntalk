@@ -246,7 +246,14 @@ export async function migrateFromLocalStorage(uid: string) {
     // PR-H: XP는 서버 엔드포인트로만 지급 — updateUserProfile로 xp 직접 쓰기 금지.
     // (기존 코드는 게스트 localStorage 값을 그대로 덮어써 조작 벡터였음)
     if (xp > 0) {
-      await awardXp({ source: 'guest_migration', xp: Math.min(xp, 1000) });
+      // QA S-6: 지급에 성공한 XP만 마커(mt_migrated_xp)에 기록한다.
+      // 실패하면 마커를 전진시키지 않으므로 다음 로그인에 다시 시도한다.
+      const res = await awardXp({ source: 'guest_migration', xp: Math.min(xp, 1000) });
+      if (res.ok) {
+        try { localStorage.setItem('mt_migrated_xp', String(res.awarded || 0)); } catch { /* ignore */ }
+      } else {
+        console.warn('[profile] guest XP migration failed:', res.reason);
+      }
     }
     await updateUserProfile(uid, {
       completedLessons: done, activityDates: dates,
@@ -255,6 +262,52 @@ export async function migrateFromLocalStorage(uid: string) {
       ...(placementTrack ? { placementTrack } : {}),
       ...(placementDone  ? { placementDone: true } : {}),
     });
+  }
+}
+
+/** 기존 유저의 게스트 데이터 따라잡기 (QA S-6)
+ *
+ *  기존 문제: migrateFromLocalStorage는 프로필이 없던 첫 로그인 때만 실행돼,
+ *  이미 계정이 있는 유저가 게스트로 플레이한 뒤 로그인하면 게스트 XP/진도가
+ *  서버에 절대 이관되지 않았다.
+ *
+ *  이중 지급 방지 설계:
+ *  - XP는 `mt_migrated_xp` 마커 기준 차분(delta)만 지급한다. 지급 성공 시에만
+ *    마커를 전진(마커 += 서버가 실제 지급한 awarded)시키고, 실패 시에는
+ *    마커를 그대로 두어 다음 로그인에 다시 시도한다. 1회 지급 상한 1000 XP는
+ *    기존 첫 로그인 이관과 동일하다 (차분이 크면 로그인할 때마다 최대 1000씩
+ *    나눠 이관된다). ensureFirstLoginSetup의 in-flight dedup(Map) 덕분에
+ *    동시 로그인 시도에서도 이관은 한 번만 실행된다.
+ *  - 완료 레슨/활동 날짜는 합집합(union)으로 병합한다 — 로컬 목록으로 서버
+ *    목록을 덮어쓰면 기존 진도가 날아가므로 절대 덮어쓰지 않는다.
+ *  - 언어/튜터/placement는 건드리지 않는다 — 기존 유저의 프로필 값이 우선이고
+ *    로컬 기본값('en-US' 등)으로 덮어쓰면 선택한 언어가 날아간다.
+ */
+export async function migrateExistingUserGuestData(uid: string, profile: UserProfile) {
+  try {
+    const localXp = parseInt(localStorage.getItem('mt_xp') || '0', 10) || 0;
+    const done = JSON.parse(localStorage.getItem('mt_done') || '[]') as string[];
+    const dates = JSON.parse(localStorage.getItem('mt_activity_dates') || '[]') as string[];
+    const migratedXp = parseInt(localStorage.getItem('mt_migrated_xp') || '0', 10) || 0;
+
+    const delta = localXp - migratedXp;
+    if (delta > 0) {
+      const res = await awardXp({ source: 'guest_migration', xp: Math.min(delta, 1000) });
+      if (res.ok) {
+        try { localStorage.setItem('mt_migrated_xp', String(migratedXp + (res.awarded || 0))); } catch { /* ignore */ }
+      } else {
+        console.warn('[profile] guest XP catch-up failed:', res.reason);
+      }
+    }
+
+    const mergedDone = [...new Set([...(profile.completedLessons || []), ...done])];
+    const mergedDates = [...new Set([...(profile.activityDates || []), ...dates])];
+    if (mergedDone.length !== (profile.completedLessons || []).length ||
+        mergedDates.length !== (profile.activityDates || []).length) {
+      await updateUserProfile(uid, { completedLessons: mergedDone, activityDates: mergedDates });
+    }
+  } catch (e) {
+    console.warn('[profile] guest catch-up migration failed:', e);
   }
 }
 
@@ -302,9 +355,13 @@ export async function ensureFirstLoginSetup(
     }
     // trial 보장 (이미 있으면 no-op)
     await import('./trialPolicy').then(({ initTrial }) => initTrial(uid)).catch(() => {});
-    // 게스트 데이터 이관은 첫 로그인 시에만 1회
+    // 게스트 데이터 이관 — 첫 로그인이면 전체, 기존 유저면 따라잡기(차분+합집합).
+    // QA S-6: 기존 유저가 게스트로 플레이한 뒤 로그인해도 이관이 안 되던 누락 수정.
+    // 실패해도 가입/로그인 흐름은 계속 (다음 로그인에 다시 시도).
     if (isFirstLogin) {
-      await migrateFromLocalStorage(uid);
+      await migrateFromLocalStorage(uid).catch(() => {});
+    } else if (existing) {
+      await migrateExistingUserGuestData(uid, existing);
     }
     // 타임존 저장/갱신 (저녁 푸시 리마인드용 — 이동 시 자동 갱신)
     try {

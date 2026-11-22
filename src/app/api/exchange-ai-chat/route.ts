@@ -11,6 +11,8 @@ import {
   getIdentity,
   DAILY_CAP_EXCHANGE_CHAT_USER,
   DAILY_CAP_EXCHANGE_CHAT_GUEST,
+  DAILY_CAP_EXCHANGE_NEW_CHAT_FREE,
+  DAILY_CAP_EXCHANGE_NEW_CHAT_PRO,
   HOURLY_CAP_EXCHANGE_CHAT,
   DAILY_USAGE_COLLECTION,
 } from '@/lib/apiGuard';
@@ -720,6 +722,23 @@ function buildChatReply(text: string, photoUrl: string | null, truncated: boolea
   return reply;
 }
 
+// Q7: 새 채팅 시작 상한 — 무료 20/일, Pro 50/일. 구독 상태는 Admin
+// SDK로 subscriptions/{uid}를 직접 읽는다. 읽기가 실패하면 무료
+// 상한으로 닫는다 (fail-closed). 관리자는 기존 일일 메시지 상한과
+// 마찬가지로 제외한다 (호출부에서 처리).
+async function getNewChatDailyMax(uid: string): Promise<number> {
+  try {
+    const snap = await getAdminDb().collection('subscriptions').doc(uid).get();
+    const data = snap.data() as { planId?: string; status?: string } | undefined;
+    const isPro =
+      !!data && data.planId !== 'free' && (data.status === 'active' || data.status === 'trialing');
+    return isPro ? DAILY_CAP_EXCHANGE_NEW_CHAT_PRO : DAILY_CAP_EXCHANGE_NEW_CHAT_FREE;
+  } catch (e) {
+    console.error('[exchange-ai-chat] subscription read failed (fail-closed to free cap):', e);
+    return DAILY_CAP_EXCHANGE_NEW_CHAT_FREE;
+  }
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -774,6 +793,23 @@ export async function POST(req: NextRequest) {
       const dailyMax = id ? DAILY_CAP_EXCHANGE_CHAT_USER : DAILY_CAP_EXCHANGE_CHAT_GUEST;
       const dl = await checkDailyLimit('exchange-chat', identityKey, dailyMax);
       if (!dl.ok) return apiError(`Daily AI chat limit reached (${dailyMax}/day) — please try again tomorrow`, 429, { retryAfterSec: dl.retryAfterSec });
+    }
+
+    // Q7 / M-4 (Muntuz host only): 하루 새로 시작하는 채팅 수 상한.
+    // 클라이언트는 새 채팅의 첫 메시지에만 newChat: true를 보낸다.
+    // 이미 시작한 대화의 메시지는 세지 않는다 (ongoing chats are
+    // unlimited). 게스트는 5분 체험이 게이트이므로 적용하지 않는다.
+    // 200회/일 메시지 상한은 비용 가드로 그대로 유지된다.
+    if (body.newChat === true && id && isMuntuzHost(req) && !isAdminEmail(id.email)) {
+      const newChatMax = await getNewChatDailyMax(id.uid);
+      const ncl = await checkDailyLimit('exchange-new-chat', `uid:${id.uid}`, newChatMax);
+      if (!ncl.ok) {
+        return apiError(
+          `Daily new-chat limit reached (${newChatMax}/day) — ongoing chats are unlimited. See Pro for 50 new chats a day.`,
+          429,
+          { code: 'new_chat_limit_reached', limit: newChatMax, retryAfterSec: ncl.retryAfterSec },
+        );
+      }
     }
 
     // Guest trial: signed-in users skip this. A guest's first chat call

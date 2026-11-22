@@ -7,7 +7,7 @@ import { db } from './firebase';
 // --- 플랜 정의 -------------------------------------------------------------
 
 // --- 관리자 설정 -----------------------------------------------------------
-export const ADMIN_EMAIL = 'muntalkofficial@gmail.com';
+export const ADMIN_EMAIL = 'muntuz.official@gmail.com';
 
 /** 관리자 이메일 여부 확인 */
 export function isAdminEmail(email: string | null | undefined): boolean {

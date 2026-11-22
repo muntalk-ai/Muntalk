@@ -36,7 +36,7 @@ export default function TermsPage() {
         </ul>
 
         <h2 style={s.h2}>4. Subscriptions &amp; Payments</h2>
-        <p style={s.p}>{brand.name} offers free and paid subscription plans. Paid plans are billed in advance on a monthly or annual basis via <strong>Stripe</strong>. All prices are in Canadian Dollars (CAD) unless otherwise stated.</p>
+        <p style={s.p}>{brand.name} offers free and paid subscription plans. Paid plans are billed in advance on a monthly or annual basis via <strong>Stripe</strong>. All prices are in US Dollars (USD) unless otherwise stated.</p>
         <ul style={s.ul}>
           <li style={s.li}>Subscriptions auto-renew unless cancelled before the renewal date.</li>
           <li style={s.li}>You may cancel your subscription at any time through your account settings or by contacting us.</li>

@@ -8,6 +8,7 @@ import { CURRICULUM } from '@/data/curriculum';
 import { getTutorById, getTutorForLang } from '@/data/tutors';
 import { LEARN_LANGUAGES, promptLangName } from '@/data/languages';
 import { speakWithDeviceTts, deviceTtsAvailable } from '@/lib/deviceTts';
+import { createUnlockedAudio, resumeDeviceSpeech } from '@/lib/audioUnlock';
 import TrialExpiredModal from '@/components/TrialExpiredModal';
 import { getTrialData, initTrial, isTrialExpired, isPremium, TRIAL_MAX_UNITS } from '@/lib/trialPolicy';
 import { isAdminEmail } from '@/lib/subscription';
@@ -545,6 +546,9 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
 
   // -- Stop all audio ----------------------------------------------------------
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  // QA M-11: 오래된 speakText 호출이 뒤늦게 도착해 새 오디오를 덮어쓰지 않게
+  // 세대 카운터로 가려낸다. fetch가 끝나면 내 세대인지 확인하고, 아니면 버린다.
+  const speakSeqRef = useRef(0);
   // PR-112: vocab 자동재생 중복 방지 — 마지막으로 재생한 카드 키
   const lastAutoPlayKey = useRef<string>('');
 
@@ -572,13 +576,27 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
     const cleanText = stripForTts(text);
     if (!cleanText) { onEnd?.(); return; }
     const notifyFail = () => { if (!quiet) showAudioToast(); };
+    // QA M-11: 제스처 안에서 동기적으로 실행되는 부분 — 첫 await 전에 끝낸다.
+    // 1) 세대 카운터: 오래된 호출의 뒤늦은 fetch/onEnd가 새 재생을 덮지 못하게 한다.
+    // 2) 이전 오디오·음성 취소 + 기기 음성 재개.
+    // 3) 무음 오디오를 만들어 play()해 엘리먼트를 "언록"한다. 폰 브라우저는
+    //    탭 제스처가 끝난 뒤의 play()를 NotAllowedError로 막는데, speakText는
+    //    /api/tts fetch를 기다린 뒤에야 재생하므로 제스처가 만료돼 있었다.
+    //    같은 엘리먼트에 나중에 실제 src를 끼우면 언록된 채로 재생된다.
+    //    (원인 미확정 — 폰 라이브 확인 필요. 아래 catch에서 실패 원인을 로그한다.)
+    const mySeq = ++speakSeqRef.current;
+    const isCurrent = () => speakSeqRef.current === mySeq;
+    const finishCurrent = () => { if (isCurrent()) { setIsSpeaking(false); onEnd?.(); } };
+    stopAll();
+    resumeDeviceSpeech();
+    const unlockedAudio = createUnlockedAudio();
+    audioRef.current = unlockedAudio;
     // 서버 TTS 미지원 언어(예: 버마어 — Google에 음성 없음)는 기기 내장 음성으로 폴백
     if (!hasTts(langId)) {
-      stopAll();
       setIsSpeaking(true);
       const ok = await speakWithDeviceTts(
         cleanText, langId,
-        () => { setIsSpeaking(false); onEnd?.(); },
+        () => { finishCurrent(); },
         (availableLangs) => {
           // 기기에 해당 언어 음성이 없음 — 원인 확정을 위해 원격 로그
           reportPronEvent('device-tts-no-voice', { lang: langId, voices: availableLangs.join(',') });
@@ -587,10 +605,9 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
       // 기기 음성도 없으면 무음이 아닌 토스트로 알림 (silent failure 방지)
       // (speakWithDeviceTts가 이미 onEnd를 호출했으므로 여기서는 토스트만)
       // quiet 모드(자동재생)에서는 토스트를 띄우지 않음
-      if (!ok) notifyFail();
+      if (!ok && isCurrent()) notifyFail();
       return;
     }
-    stopAll();
     setIsSpeaking(true);
     try {
       const res = await apiFetch('/api/tts', {
@@ -598,15 +615,28 @@ IMPORTANT: Output must be complete valid JSON. Do not truncate.`;
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: cleanText, lang: langId, gender: tutor?.gender || 'female', level: levelId }),
       });
+      if (!isCurrent()) return; // 그 사이 새 재생이 시작됨 — 이 호출은 버린다.
       if (!res.ok) { setIsSpeaking(false); notifyFail(); onEnd?.(); return; }
       const data = await res.json();
+      if (!isCurrent()) return;
       if (!data.audioContent) { setIsSpeaking(false); notifyFail(); onEnd?.(); return; }
-      const audio = new Audio(`data:${data.mimeType || 'audio/mp3'};base64,${data.audioContent}`);
-      audioRef.current = audio;
-      audio.onended = () => { setIsSpeaking(false); audioRef.current = null; onEnd?.(); };
-      audio.onerror = () => { setIsSpeaking(false); audioRef.current = null; notifyFail(); onEnd?.(); };
-      await audio.play();
-    } catch {
+      // 언록해 둔 엘리먼트에 실제 오디오를 끼워 재생한다.
+      const audio = unlockedAudio;
+      audio.src = `data:${data.mimeType || 'audio/mp3'};base64,${data.audioContent}`;
+      audio.onended = () => { if (audioRef.current === audio) audioRef.current = null; finishCurrent(); };
+      audio.onerror = () => { if (audioRef.current === audio) audioRef.current = null; if (isCurrent()) notifyFail(); finishCurrent(); };
+      try {
+        await audio.play();
+      } catch (playErr) {
+        // 실패 원인 기록 — NotAllowedError면 제스처 만료 가설이 맞다.
+        const name = (playErr as Error)?.name || 'play_error';
+        console.warn('[tts] play() failed:', name, (playErr as Error)?.message);
+        reportPronEvent('tts-play-failed', { reason: name, lang: langId });
+        throw playErr;
+      }
+    } catch (e) {
+      if (!isCurrent()) return;
+      console.warn('[tts] speakText failed:', (e as Error)?.name || 'error', (e as Error)?.message);
       setIsSpeaking(false);
       notifyFail();
       onEnd?.();
