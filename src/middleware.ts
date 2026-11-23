@@ -61,6 +61,25 @@ export function middleware(request: NextRequest) {
     return NextResponse.rewrite(new URL('/manifest-muntuz.webmanifest', request.url));
   }
 
+  // ── Muntuz logo (2026-11-23, new Muntuz badge): the shared logo files
+  // (/logo.png, /apple-touch-icon.png, /icon-maskable.png) also serve
+  // muntalk.com, so they must NOT be overwritten. On the Muntuz host they
+  // rewrite to the Muntuz-only copies instead — this covers every consumer
+  // of the shared paths at once (Exchange header, setup header, LevelHub
+  // nav, OG/Twitter images, TWA iconUrl/maskableIconUrl, both manifests).
+  // muntalk.com and every other host keep the shared files unchanged.
+  // NOTE: /icon-192x192.png (FCM push icon) and /favicon.ico stay shared
+  // on purpose — no host branching exists for them yet.
+  if (isMuntuz && pathname === '/logo.png') {
+    return NextResponse.rewrite(new URL('/logo-muntuz.png', request.url));
+  }
+  if (isMuntuz && pathname === '/apple-touch-icon.png') {
+    return NextResponse.rewrite(new URL('/apple-touch-icon-muntuz.png', request.url));
+  }
+  if (isMuntuz && pathname === '/icon-maskable.png') {
+    return NextResponse.rewrite(new URL('/icon-maskable-muntuz.png', request.url));
+  }
+
   // 공개 경로 → 통과
   if (PUBLIC_PATHS.some(p => pathname === p || pathname.startsWith(p + '?'))) {
     return NextResponse.next();
@@ -80,8 +99,10 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // '/' (Muntuz host → /muntuz) and '/manifest.webmanifest'
-  // (Muntuz host → /manifest-muntuz.webmanifest). Every other branch
-  // above returns NextResponse.next(), so no other path needs to invoke it.
-  matcher: ['/', '/manifest.webmanifest'],
+  // '/' (Muntuz host → /muntuz), '/manifest.webmanifest'
+  // (Muntuz host → /manifest-muntuz.webmanifest), and the three shared
+  // logo paths (Muntuz host → Muntuz-only copies, see above).
+  // Every other branch above returns NextResponse.next(), so no other
+  // path needs to invoke it.
+  matcher: ['/', '/manifest.webmanifest', '/logo.png', '/apple-touch-icon.png', '/icon-maskable.png'],
 };
