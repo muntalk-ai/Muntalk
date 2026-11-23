@@ -15,6 +15,13 @@ export function generateMetadata(): Metadata {
   const brand = brandForHost(h.get('x-forwarded-host') ?? h.get('host'));
   const title = `${brand.name} — Learn Languages with AI`;
   const description = `Master any language with ${brand.name} AI-powered lessons, spaced repetition, and live tutors.`;
+  // OG/Twitter images must be absolute URLs: metadataBase is fixed to
+  // www.muntalk.com, so a relative '/logo.png' would resolve to the
+  // MunTalk host and show the old badge when a muntuz.com page is shared.
+  // Use the brand's own domain instead — on muntuz.com the middleware
+  // rewrite serves the new Muntuz logo at /logo.png; everywhere else the
+  // shared (old) badge stays.
+  const ogImage = `https://${brand.domain}/logo.png`;
   return {
     metadataBase: new URL('https://www.muntalk.com'),
     title,
@@ -24,13 +31,13 @@ export function generateMetadata(): Metadata {
       siteName: brand.name,
       title,
       description,
-      images: ['/logo.png'],
+      images: [ogImage],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: ['/logo.png'],
+      images: [ogImage],
     },
     icons: {
       icon: '/favicon.ico',
