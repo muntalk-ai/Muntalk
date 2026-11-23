@@ -68,8 +68,12 @@ export function middleware(request: NextRequest) {
   // of the shared paths at once (Exchange header, setup header, LevelHub
   // nav, OG/Twitter images, TWA iconUrl/maskableIconUrl, both manifests).
   // muntalk.com and every other host keep the shared files unchanged.
-  // NOTE: /icon-192x192.png (FCM push icon) and /favicon.ico stay shared
-  // on purpose — no host branching exists for them yet.
+  // Since 2026-11-23 (favicon/OG follow-up) the favicon and the FCM push
+  // icon also rewrite on the Muntuz host: /favicon.ico and /icon-192x192.png
+  // serve /logo-muntuz.png (no dedicated Muntuz copies exist for them).
+  // A PNG served at the .ico path is fine — browsers use a PNG favicon
+  // based on content-type. The shared files themselves are never touched,
+  // so muntalk.com keeps the old badge everywhere.
   if (isMuntuz && pathname === '/logo.png') {
     return NextResponse.rewrite(new URL('/logo-muntuz.png', request.url));
   }
@@ -78,6 +82,12 @@ export function middleware(request: NextRequest) {
   }
   if (isMuntuz && pathname === '/icon-maskable.png') {
     return NextResponse.rewrite(new URL('/icon-maskable-muntuz.png', request.url));
+  }
+  if (isMuntuz && pathname === '/favicon.ico') {
+    return NextResponse.rewrite(new URL('/logo-muntuz.png', request.url));
+  }
+  if (isMuntuz && pathname === '/icon-192x192.png') {
+    return NextResponse.rewrite(new URL('/logo-muntuz.png', request.url));
   }
 
   // 공개 경로 → 통과
@@ -100,9 +110,10 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   // '/' (Muntuz host → /muntuz), '/manifest.webmanifest'
-  // (Muntuz host → /manifest-muntuz.webmanifest), and the three shared
-  // logo paths (Muntuz host → Muntuz-only copies, see above).
+  // (Muntuz host → /manifest-muntuz.webmanifest), and the shared logo
+  // paths (Muntuz host → Muntuz-only copies, see above), plus
+  // '/favicon.ico' and '/icon-192x192.png' (Muntuz host → /logo-muntuz.png).
   // Every other branch above returns NextResponse.next(), so no other
   // path needs to invoke it.
-  matcher: ['/', '/manifest.webmanifest', '/logo.png', '/apple-touch-icon.png', '/icon-maskable.png'],
+  matcher: ['/', '/manifest.webmanifest', '/logo.png', '/apple-touch-icon.png', '/icon-maskable.png', '/favicon.ico', '/icon-192x192.png'],
 };
