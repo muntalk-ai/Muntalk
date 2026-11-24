@@ -51,7 +51,12 @@ export const GROUP_DICT: Record<Lang, Record<string, string>> = {
     "groupCta": "Start talking — free",
     "groupAiNote": "MUNTUZ are AI characters, not real people.",
     "watchMvBtn": "▶ Watch the “Say Hi” MV",
-    "sunoLink": "Listen on Suno ↗"
+    "sunoLink": "Listen on Suno ↗",
+    "newSongLabel": "New single",
+    "newSongMeta": "Five voices, one dream, in every language — a bright white studio and a bold street night in one video.",
+    "watchHelloBtn": "▶ Watch the “Hello, Dream!” MV",
+    "youtubeLink": "Watch on YouTube ↗",
+    "newSongBadge": "New single — “Hello, Dream!” is out!"
   },
   "ko": {
     "debutKicker": "데뷔 · MUNTUZ",
@@ -95,7 +100,12 @@ export const GROUP_DICT: Record<Lang, Record<string, string>> = {
     "groupCta": "무료로 대화 시작하기",
     "groupAiNote": "MUNTUZ는 AI 캐릭터이며 실제 사람이 아닙니다.",
     "watchMvBtn": "▶ “Say Hi” 뮤직비디오 보기",
-    "sunoLink": "Suno에서 듣기 ↗"
+    "sunoLink": "Suno에서 듣기 ↗",
+    "newSongLabel": "새 싱글",
+    "newSongMeta": "다섯 목소리, 하나의 꿈, 모든 언어로 — 밝은 화이트 스튜디오와 과감한 스트리트 나이트, 하나의 영상에.",
+    "watchHelloBtn": "▶ “Hello, Dream!” 뮤직비디오 보기",
+    "youtubeLink": "YouTube에서 보기 ↗",
+    "newSongBadge": "새 싱글 — “Hello, Dream!”이 나왔어요!"
   },
   "ja": {
     "debutKicker": "デビュー · MUNTUZ",

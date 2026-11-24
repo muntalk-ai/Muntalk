@@ -1,8 +1,9 @@
 'use client';
 
 // MUNTUZ group page (client part) — /muntuz/group.
-// The debut single "Say Hi" + the dorm-episodes gallery live here, on their
-// own page, so the main page stays a simple language-exchange landing.
+// The debut single "Say Hi", the new single "Hello, Dream!" (YouTube MV
+// + Suno) and the dorm-episodes gallery live here, on their own page, so
+// the main page stays a simple language-exchange landing.
 // Photos use the locked official faces; the debut-stage photo is a still
 // from the "Say Hi" MV, the episode photos are the house photos + MV stills.
 
@@ -11,11 +12,19 @@ import { EPISODES, GROUP_DICT, LANGS } from './groupData';
 import type { Lang } from './groupData';
 
 const SUNO_SAY_HI = 'https://suno.com/song/3abdeff9-b70e-43b3-afc8-bc59cf8a8ef0';
+// "Hello, Dream!" — third single. The MV lives on YouTube (no MP3 on the
+// site for this one); the thumbnail below is YouTube's own poster frame.
+const YT_HELLO_DREAM = 'https://www.youtube.com/watch?v=IgO1mEgwPJs';
+const YT_HELLO_DREAM_EMBED = 'https://www.youtube-nocookie.com/embed/IgO1mEgwPJs';
+const YT_HELLO_DREAM_THUMB = 'https://i.ytimg.com/vi/IgO1mEgwPJs/maxresdefault.jpg';
+const YT_HELLO_DREAM_THUMB_FALLBACK = 'https://i.ytimg.com/vi/IgO1mEgwPJs/hqdefault.jpg';
+const SUNO_HELLO_DREAM = 'https://suno.com/song/56b90a18-e982-45d5-ae4b-ed831ebe0969';
 
 export default function MuntuzGroupClient() {
   const [lang, setLang] = useState<Lang>('en');
   const [epFilter, setEpFilter] = useState('All');
   const [showMv, setShowMv] = useState(false);
+  const [showHelloMv, setShowHelloMv] = useState(false);
   const mvRef = useRef<HTMLVideoElement>(null);
   const mvDialogRef = useRef<HTMLDivElement>(null);
   const [mvExpanded, setMvExpanded] = useState(false);
@@ -197,6 +206,60 @@ export default function MuntuzGroupClient() {
               </p>
             </div>
           </div>
+
+          {/* New single — “Hello, Dream!” (YouTube MV + Suno). */}
+          <div className="mt-6 rounded-3xl bg-white p-5 shadow-md ring-1 ring-slate-100">
+            <p className="w-fit rounded-full bg-violet-600 px-3 py-1 text-xs font-extrabold text-white">
+              ✨ {t('newSongBadge')}
+            </p>
+            <a
+              href={YT_HELLO_DREAM}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 block"
+            >
+              <img
+                src={YT_HELLO_DREAM_THUMB}
+                onError={(e) => {
+                  const img = e.currentTarget;
+                  if (img.src !== YT_HELLO_DREAM_THUMB_FALLBACK) {
+                    img.src = YT_HELLO_DREAM_THUMB_FALLBACK;
+                  }
+                }}
+                alt="MUNTUZ — “Hello, Dream!” music video"
+                loading="lazy"
+                className="h-auto w-full rounded-2xl object-cover"
+              />
+            </a>
+            <p className="mt-4 text-xs font-bold uppercase tracking-wider text-slate-400">
+              {t('newSongLabel')}
+            </p>
+            <p className="mt-1 text-xl font-extrabold">“Hello, Dream!”</p>
+            <p className="mt-1 text-sm text-slate-600">{t('newSongMeta')}</p>
+            <button
+              type="button"
+              onClick={() => setShowHelloMv(true)}
+              className="mt-3 inline-block rounded-full bg-amber-400 px-5 py-2.5 text-sm font-bold text-slate-900 hover:bg-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
+            >
+              {t('watchHelloBtn')}
+            </button>
+            <a
+              href={YT_HELLO_DREAM}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-3 mt-3 inline-block text-sm font-bold text-violet-700 hover:text-violet-900"
+            >
+              {t('youtubeLink')}
+            </a>
+            <a
+              href={SUNO_HELLO_DREAM}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-3 mt-3 inline-block text-sm font-bold text-violet-700 hover:text-violet-900"
+            >
+              {t('sunoLink')}
+            </a>
+          </div>
         </section>
 
         {/* Dorm episodes — stories from living together. */}
@@ -297,6 +360,42 @@ export default function MuntuzGroupClient() {
                 autoPlay
                 playsInline
                 className={mvExpanded ? 'h-[calc(100dvh-41px)] w-full bg-black object-contain' : 'aspect-[3/2] w-full bg-black'}
+              />
+            </div>
+          </div>
+        )}
+
+        {/* “Hello, Dream!” MV — plays the YouTube embed in the same modal
+            pattern; YouTube's own player supplies fullscreen. */}
+        {showHelloMv && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+            onClick={() => setShowHelloMv(false)}
+            role="dialog"
+            aria-modal="true"
+            aria-label="MUNTUZ — Hello, Dream! music video"
+          >
+            <div
+              className="w-full max-w-2xl overflow-hidden rounded-2xl bg-black shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between px-4 py-2">
+                <p className="text-sm font-bold text-white">MUNTUZ — “Hello, Dream!”</p>
+                <button
+                  type="button"
+                  onClick={() => setShowHelloMv(false)}
+                  aria-label="Close"
+                  className="rounded-full bg-white/10 px-3 py-1 text-sm font-bold text-white hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                >
+                  ✕
+                </button>
+              </div>
+              <iframe
+                src={YT_HELLO_DREAM_EMBED}
+                title="MUNTUZ — Hello, Dream! (Official Music Video)"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="aspect-video w-full bg-black"
               />
             </div>
           </div>
