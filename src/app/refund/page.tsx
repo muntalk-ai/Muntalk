@@ -1,21 +1,23 @@
 'use client';
 import { useRouter } from 'next/navigation';
+import { useBrand } from '@/lib/useBrand';
 
 export default function RefundPage() {
   const router = useRouter();
+  const brand = useBrand();
   const s = styles;
   return (
     <div style={s.page}>
       <nav style={s.nav}>
         <button onClick={() => router.back()} style={s.back}>← Back</button>
-        <span style={s.navTitle}>MunTalk</span>
+        <span style={s.navTitle}>{brand.name}</span>
       </nav>
       <div style={s.container}>
         <h1 style={s.h1}>Refund Policy</h1>
         <p style={s.meta}>Effective Date: March 1, 2025 &middot; Last Updated: November 18, 2026</p>
 
         <p style={s.lead}>
-          We want you to be completely satisfied with MunTalk. If you are not happy with your purchase,
+          We want you to be completely satisfied with {brand.name}. If you are not happy with your purchase,
           please review our refund policy below. This policy complies with the <strong>Canadian Consumer
           Protection Act</strong> and British Columbia consumer protection regulations.
         </p>
@@ -29,7 +31,7 @@ export default function RefundPage() {
         </ul>
 
         <h2 style={s.h2}>2. How to Request a Refund</h2>
-        <p style={s.p}>To request a refund, please email us at <a href="mailto:muntalkofficial@gmail.com" style={s.link}>muntalkofficial@gmail.com</a> with:</p>
+        <p style={s.p}>To request a refund, please email us at <a href={`mailto:${brand.email}`} style={s.link}>{brand.email}</a> with:</p>
         <ul style={s.ul}>
           <li style={s.li}>Your account email address</li>
           <li style={s.li}>Date of purchase</li>
@@ -53,16 +55,16 @@ export default function RefundPage() {
         <p style={s.p}>For annual subscriptions, the 7-day money-back guarantee applies. After 7 days, no partial refunds are available for the remaining months of an annual plan.</p>
 
         <h2 style={s.h2}>6. Technical Issues</h2>
-        <p style={s.p}>If you experience a technical issue that prevents you from using the service, please contact us at <a href="mailto:muntalkofficial@gmail.com" style={s.link}>muntalkofficial@gmail.com</a>. We will investigate and may issue a refund or service credit at our discretion.</p>
+        <p style={s.p}>If you experience a technical issue that prevents you from using the service, please contact us at <a href={`mailto:${brand.email}`} style={s.link}>{brand.email}</a>. We will investigate and may issue a refund or service credit at our discretion.</p>
 
         <h2 style={s.h2}>7. Chargebacks</h2>
         <p style={s.p}>If you initiate a chargeback with your bank without first contacting us, we reserve the right to suspend your account pending resolution. We encourage you to contact us directly as we are committed to resolving issues fairly and promptly.</p>
 
         <h2 style={s.h2}>8. Contact Us</h2>
         <p style={s.p}>For refund requests or billing questions:<br />
-          <strong>MunTalk</strong><br />
+          <strong>{brand.name}</strong><br />
           British Columbia, Canada<br />
-          Email: <a href="mailto:muntalkofficial@gmail.com" style={s.link}>muntalkofficial@gmail.com</a><br />
+          Email: <a href={`mailto:${brand.email}`} style={s.link}>{brand.email}</a><br />
           Response time: within 2 business days
         </p>
       </div>
@@ -70,7 +72,7 @@ export default function RefundPage() {
         <a href="/privacy" style={s.footLink}>Privacy Policy</a>
         <a href="/terms" style={s.footLink}>Terms of Service</a>
         <a href="/cookies" style={s.footLink}>Cookie Policy</a>
-        <span style={{ color: '#CBD5E1' }}>&copy; 2026 MunTalk. All rights reserved.</span>
+        <span style={{ color: '#CBD5E1' }}>&copy; 2026 {brand.name}. All rights reserved.</span>
       </footer>
     </div>
   );

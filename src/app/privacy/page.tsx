@@ -1,24 +1,25 @@
 'use client';
 import { useRouter } from 'next/navigation';
+import { useBrand } from '@/lib/useBrand';
 
 export default function PrivacyPage() {
   const router = useRouter();
+  const brand = useBrand();
   const s = styles;
   return (
     <div style={s.page}>
       <nav style={s.nav}>
         <button onClick={() => router.back()} style={s.back}>← Back</button>
-        <span style={s.navTitle}>MunTalk</span>
+        <span style={s.navTitle}>{brand.name}</span>
       </nav>
       <div style={s.container}>
         <h1 style={s.h1}>Privacy Policy</h1>
         <p style={s.meta}>Effective Date: March 1, 2025 &middot; Last Updated: November 18, 2026</p>
 
         <p style={s.lead}>
-          MunTalk ("we", "us", or "our") is operated by an individual based in British Columbia, Canada.
+          {brand.name} ("we", "us", or "our") is operated by an individual based in British Columbia, Canada.
           This Privacy Policy explains how we collect, use, disclose, and protect your personal information
-          in compliance with Canada&apos;s <strong>Personal Information Protection and Electronic Documents Act (PIPEDA)</strong>{' '}
-          and British Columbia&apos;s <strong>Personal Information Protection Act (PIPA)</strong>.
+          in compliance with Canada&apos;s <strong>Personal Information Protection and Electronic Documents Act (PIPEDA)</strong> and British Columbia&apos;s <strong>Personal Information Protection Act (PIPA)</strong>.
         </p>
 
         <h2 style={s.h2}>1. Information We Collect</h2>
@@ -33,7 +34,7 @@ export default function PrivacyPage() {
 
         <h2 style={s.h2}>2. How We Use Your Information</h2>
         <ul style={s.ul}>
-          <li style={s.li}>To provide and personalize the MunTalk language learning service</li>
+          <li style={s.li}>To provide and personalize the {brand.name} language learning service</li>
           <li style={s.li}>To process payments and manage your subscription</li>
           <li style={s.li}>To send service-related emails (account, billing, updates)</li>
           <li style={s.li}>To improve our AI tutoring content and features</li>
@@ -61,10 +62,10 @@ export default function PrivacyPage() {
           <li style={s.li}>Withdraw consent and request deletion of your data</li>
           <li style={s.li}>File a complaint with the <strong>Office of the Privacy Commissioner of Canada</strong></li>
         </ul>
-        <p style={s.p}>To exercise your rights, contact us at <strong>muntalkofficial@gmail.com</strong>.</p>
+        <p style={s.p}>To exercise your rights, contact us at <strong>{brand.email}</strong>.</p>
 
         <h2 style={s.h2}>6. Children&apos;s Privacy</h2>
-        <p style={s.p}>MunTalk is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us immediately.</p>
+        <p style={s.p}>{brand.name} is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us immediately.</p>
 
         <h2 style={s.h2}>7. Security</h2>
         <p style={s.p}>We implement industry-standard security measures including encryption, secure HTTPS connections, and Firebase security rules to protect your data. However, no method of transmission over the Internet is 100% secure.</p>
@@ -77,16 +78,16 @@ export default function PrivacyPage() {
 
         <h2 style={s.h2}>10. Contact Us</h2>
         <p style={s.p}>For privacy-related inquiries:<br />
-          <strong>MunTalk</strong><br />
+          <strong>{brand.name}</strong><br />
           British Columbia, Canada<br />
-          Email: <a href="mailto:muntalkofficial@gmail.com" style={s.link}>muntalkofficial@gmail.com</a>
+          Email: <a href={`mailto:${brand.email}`} style={s.link}>{brand.email}</a>
         </p>
       </div>
       <footer style={s.footer}>
         <a href="/terms" style={s.footLink}>Terms of Service</a>
         <a href="/refund" style={s.footLink}>Refund Policy</a>
         <a href="/cookies" style={s.footLink}>Cookie Policy</a>
-        <span style={{ color: '#CBD5E1' }}>&copy; 2026 MunTalk. All rights reserved.</span>
+        <span style={{ color: '#CBD5E1' }}>&copy; 2026 {brand.name}. All rights reserved.</span>
       </footer>
     </div>
   );

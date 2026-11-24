@@ -4,6 +4,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { signOut } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
+import { useBrand } from '@/lib/useBrand';
 import { updateUserProfile, detectBrowserNativeLang, resolveNativeLang } from '@/lib/userProfile';
 import { isLangPromptSnoozed, markLangChosen } from '@/lib/langPrompt';
 import { db } from '@/lib/firebase';
@@ -21,7 +22,6 @@ import TrialBanner from '@/components/TrialBanner';
 import TrialExpiredModal from '@/components/TrialExpiredModal';
 import { getTrialData, isTrialExpired, trialDaysRemaining, addTrialLanguage, TRIAL_MAX_LANGUAGES, TrialData } from '@/lib/trialPolicy';
 import { getTestimonials, Testimonial, MIN_TESTIMONIALS } from '@/lib/testimonials';
-import { useBrand } from '@/lib/useBrand';
 import { lpGet, lpGetInt, lpGetJson, lpSet } from '@/lib/localProgress';
 
 // 언어코드 → 국가코드 매핑 (flagcdn.com 사용)
@@ -84,11 +84,11 @@ const REEL_HERO: Record<string, { headline: string; desc: string; cta: string }>
 };
 
 export default function LevelHub() {
+  const brand = useBrand();
   const router = useRouter();
   // QA 7A: brand follows the host — Muntuz on muntuz.com, MunTalk elsewhere.
   // (Hero copy is intentionally untouched; only the nav logo, footer and the
   // positioning line below are brand-swapped.)
-  const brand = useBrand();
   const searchParams = useSearchParams();
   // PR #110: 릴스 유입 파라미터 — ?trial=1 (체험 직행), ?r=1|2|3 (릴스별 히어로 매치)
   const trialFirst = searchParams.get('trial') === '1';
@@ -1116,14 +1116,14 @@ export default function LevelHub() {
             /* 비로그인 — 마케팅 히어로 (H1 체험 버튼 + 포지셔닝) */
             <>
               <div style={styles.heroBadgeRow}>
-                <div style={styles.heroBadge52}>🌐 90+ Languages</div>
+                <div style={styles.heroBadge52}>🌐 94 Languages</div>
                 <div style={{ ...styles.heroBadgeTutors, cursor: 'pointer' }} onClick={() => setShowPlacementModal(true)}>
                   <span style={{ fontSize: 15 }}>🎯</span>
                   <span>Take <strong>Placement</strong> Test</span>
                   <span style={styles.newTag}>FREE</span>
                 </div>
               </div>
-              <h1 style={styles.heroTitle}>{reelHero ? reelHero.headline : (<>Speak 90+ languages<br />with 150+ AI tutors</>)}</h1>
+              <h1 style={styles.heroTitle}>{reelHero ? reelHero.headline : (<>Speak 94 languages<br />with 50 AI tutors</>)}</h1>
               <p style={styles.heroDesc}>{reelHero ? reelHero.desc : (<>Stop matching words. Start real conversations.<br />Our AI tutors get total beginners talking in under 10 minutes.</>)}</p>
               <div style={styles.heroBtnRow}>
                 {/* E-2: 1분 무료 대화 체험 CTA 최상단 — /lingua/microtalk */}
@@ -1372,8 +1372,8 @@ export default function LevelHub() {
       {/* -- Stats -- */}
       <div className="mt-stats-wrap" style={styles.statsWrap}>
         {([
-          ['150+','AI Tutors','🤖','#EFF6FF','#2563EB'],
-          ['90+','Languages','🌍','#F0FDF4','#16A34A'],
+          ['50','AI Tutors','🤖','#EFF6FF','#2563EB'],
+          ['94','Languages','🌍','#F0FDF4','#16A34A'],
           [String(totalLessonsCount),'Lessons','📚','#FFF7ED','#EA580C'],
           ['A1→C2','CEFR Levels','🎓','#FAF5FF','#7C3AED'],
         ] as [string,string,string,string,string][]).map(([v,l,e,bg,ac]) => (
@@ -1700,7 +1700,7 @@ export default function LevelHub() {
       )}
 
       <footer style={styles.footer}>
-        <div style={{ marginBottom: 12 }}>🌐 {brand.name} · {totalLessonsCount} lessons · A1 to C2 · 150+ AI Tutors</div>
+        <div style={{ marginBottom: 12 }}>🌐 {brand.name} · {totalLessonsCount} lessons · A1 to C2 · 50 AI Tutors</div>
         <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 10 }}>
           <a href="/about" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>👋 Our Story</a>
           <a href="/faq" style={{ color: '#6366F1', fontWeight: 700, fontSize: 12, textDecoration: 'none' }}>💬 Help & FAQ</a>
