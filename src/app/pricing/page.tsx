@@ -128,7 +128,7 @@ function PricingContent() {
             </span>
           </h1>
           <p style={{ fontSize:15, color:'#64748B', maxWidth:460, margin:'0 auto 30px', lineHeight:1.75, fontWeight:700 }}>
-            72 lessons · 90+ languages · AI tutor · No ads · Cancel anytime
+            72 lessons · 94 languages · AI tutor · No ads · Cancel anytime
           </p>
           <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:14, flexWrap:'wrap' }}>
             <div style={{ display:'flex' }}>
@@ -173,7 +173,7 @@ function PricingContent() {
                   ['Exchange 신규 AI 채팅: 무료 3회/일 · Pro 50회/일', '무료 3회/일', 'Pro 50회/일', '—'],
                   ['Real-time pronunciation scoring', '✓', '✓', '—'],
                   ['CEFR completion certificates', '✓', '✓', '—'],
-                  ['Languages', '90+', '90+', 'Fewer'],
+                  ['Languages', '94', '94', 'Fewer'],
                   ['Streak Freeze & leagues', '✓', '✓', '—'],
                 ] as string[][]).map((row, i) => (
                   <tr key={row[0]} style={{ background: i % 2 ? '#fff' : '#F8FAFC' }}>

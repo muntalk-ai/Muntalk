@@ -891,7 +891,6 @@ export default function ExchangePage() {
   const [nickname, setNickname] = useState('');
   const [bio, setBio] = useState('');
   const [hideOnline, setHideOnline] = useState(false);
-  const [verifiedOnly, setVerifiedOnly] = useState(true);
   const [allowVoice, setAllowVoice] = useState(true);
 
   // Phase 1 human-profile fields.
@@ -4098,19 +4097,13 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                 <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
                   <h3 className="font-bold">Verification</h3>
                   <ul className="mt-2 space-y-1 text-sm text-slate-600">
-                    <li>✓ Phone verified</li>
                     <li>{ageBand ? '✓ 18+ confirmed' : '◷ 18+ check — add your date of birth above'}</li>
-                    <li>◷ Profile photo review pending</li>
                   </ul>
                   <h3 className="mt-4 font-bold">Safety settings</h3>
                   <div className="mt-2 space-y-2 text-sm">
                     <label className="flex items-center justify-between gap-3">
                       Hide my online status
                       <input type="checkbox" checked={hideOnline} onChange={(e) => setHideOnline(e.target.checked)} className="h-5 w-5 accent-violet-600" />
-                    </label>
-                    <label className="flex items-center justify-between gap-3">
-                      Only verified partners can message me
-                      <input type="checkbox" checked={verifiedOnly} onChange={(e) => setVerifiedOnly(e.target.checked)} className="h-5 w-5 accent-violet-600" />
                     </label>
                     <label className="flex items-center justify-between gap-3">
                       Allow voice messages

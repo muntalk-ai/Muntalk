@@ -1,29 +1,31 @@
 'use client';
 import { useRouter } from 'next/navigation';
+import { useBrand } from '@/lib/useBrand';
 
 export default function TermsPage() {
   const router = useRouter();
+  const brand = useBrand();
   const s = styles;
   return (
     <div style={s.page}>
       <nav style={s.nav}>
         <button onClick={() => router.back()} style={s.back}>← Back</button>
-        <span style={s.navTitle}>MunTalk</span>
+        <span style={s.navTitle}>{brand.name}</span>
       </nav>
       <div style={s.container}>
         <h1 style={s.h1}>Terms of Service</h1>
         <p style={s.meta}>Effective Date: March 1, 2025 &middot; Last Updated: November 18, 2026</p>
 
         <p style={s.lead}>
-          Please read these Terms of Service carefully before using MunTalk. By accessing or using our service,
+          Please read these Terms of Service carefully before using {brand.name}. By accessing or using our service,
           you agree to be bound by these terms. If you do not agree, please do not use the service.
         </p>
 
-        <h2 style={s.h2}>1. About MunTalk</h2>
-        <p style={s.p}>MunTalk is an AI-powered language learning platform operated by an individual based in British Columbia, Canada. The service is accessible at <strong>www.muntalk.com</strong>.</p>
+        <h2 style={s.h2}>1. About {brand.name}</h2>
+        <p style={s.p}>{brand.name} is an AI-powered language learning platform operated by an individual based in British Columbia, Canada. The service is accessible at <strong>{brand.domain}</strong>.</p>
 
         <h2 style={s.h2}>2. Eligibility</h2>
-        <p style={s.p}>You must be at least 13 years of age to use MunTalk. By using the service, you represent that you meet this requirement. Users between 13 and 18 must have parental or guardian consent.</p>
+        <p style={s.p}>You must be at least 13 years of age to use {brand.name}. By using the service, you represent that you meet this requirement. Users between 13 and 18 must have parental or guardian consent.</p>
 
         <h2 style={s.h2}>3. Account Registration</h2>
         <ul style={s.ul}>
@@ -34,7 +36,7 @@ export default function TermsPage() {
         </ul>
 
         <h2 style={s.h2}>4. Subscriptions &amp; Payments</h2>
-        <p style={s.p}>MunTalk offers free and paid subscription plans. Paid plans are billed in advance on a monthly or annual basis via <strong>Stripe</strong>. All prices are in US Dollars (USD) unless otherwise stated.</p>
+        <p style={s.p}>{brand.name} offers free and paid subscription plans. Paid plans are billed in advance on a monthly or annual basis via <strong>Stripe</strong>. All prices are in US Dollars (USD) unless otherwise stated.</p>
         <ul style={s.ul}>
           <li style={s.li}>Subscriptions auto-renew unless cancelled before the renewal date.</li>
           <li style={s.li}>You may cancel your subscription at any time through your account settings or by contacting us.</li>
@@ -49,7 +51,7 @@ export default function TermsPage() {
         </ul>
 
         <h2 style={s.h2}>6. AI-Generated Content</h2>
-        <p style={s.p}>MunTalk uses Google Gemini AI to generate language learning content. While we strive for accuracy, AI-generated content may occasionally contain errors. MunTalk is not liable for inaccuracies in AI-generated lessons, translations, or tutoring responses. Always verify critical language information with qualified sources.</p>
+        <p style={s.p}>{brand.name} uses Google Gemini AI to generate language learning content. While we strive for accuracy, AI-generated content may occasionally contain errors. {brand.name} is not liable for inaccuracies in AI-generated lessons, translations, or tutoring responses. Always verify critical language information with qualified sources.</p>
 
         <h2 style={s.h2}>7. Acceptable Use</h2>
         <p style={s.p}>You agree not to:</p>
@@ -62,13 +64,13 @@ export default function TermsPage() {
         </ul>
 
         <h2 style={s.h2}>8. Intellectual Property</h2>
-        <p style={s.p}>All content on MunTalk, including curriculum, design, and software, is the property of MunTalk and protected by applicable copyright and intellectual property laws. You may not copy, reproduce, or distribute any content without prior written permission.</p>
+        <p style={s.p}>All content on {brand.name}, including curriculum, design, and software, is the property of {brand.name} and protected by applicable copyright and intellectual property laws. You may not copy, reproduce, or distribute any content without prior written permission.</p>
 
         <h2 style={s.h2}>9. Service Availability</h2>
         <p style={s.p}>We strive to provide uninterrupted service but do not guarantee 100% uptime. We reserve the right to modify, suspend, or discontinue the service at any time with reasonable notice.</p>
 
         <h2 style={s.h2}>10. Limitation of Liability</h2>
-        <p style={s.p}>To the maximum extent permitted by Canadian law, MunTalk shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the service. Our total liability shall not exceed the amount you paid in the 12 months preceding the claim.</p>
+        <p style={s.p}>To the maximum extent permitted by Canadian law, {brand.name} shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the service. Our total liability shall not exceed the amount you paid in the 12 months preceding the claim.</p>
 
         <h2 style={s.h2}>11. Governing Law</h2>
         <p style={s.p}>These Terms are governed by the laws of the Province of British Columbia and the federal laws of Canada applicable therein. Any disputes shall be resolved in the courts of British Columbia.</p>
@@ -78,16 +80,16 @@ export default function TermsPage() {
 
         <h2 style={s.h2}>13. Contact Us</h2>
         <p style={s.p}>For questions about these Terms:<br />
-          <strong>MunTalk</strong><br />
+          <strong>{brand.name}</strong><br />
           British Columbia, Canada<br />
-          Email: <a href="mailto:muntalkofficial@gmail.com" style={s.link}>muntalkofficial@gmail.com</a>
+          Email: <a href={`mailto:${brand.email}`} style={s.link}>{brand.email}</a>
         </p>
       </div>
       <footer style={s.footer}>
         <a href="/privacy" style={s.footLink}>Privacy Policy</a>
         <a href="/refund" style={s.footLink}>Refund Policy</a>
         <a href="/cookies" style={s.footLink}>Cookie Policy</a>
-        <span style={{ color: '#CBD5E1' }}>&copy; 2026 MunTalk. All rights reserved.</span>
+        <span style={{ color: '#CBD5E1' }}>&copy; 2026 {brand.name}. All rights reserved.</span>
       </footer>
     </div>
   );

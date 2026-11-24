@@ -16,8 +16,10 @@ import { getNextPath, stashNextPath } from '@/lib/returnUrl';
 import { PLANS, type PlanId } from '@/lib/subscription';
 import { isExchangeProfileComplete } from '@/lib/exchangeProfile';
 import BackButton from '@/components/BackButton';
+import { useBrand } from '@/lib/useBrand';
 
 export default function LoginPage() {
+  const brand = useBrand();
   const router = useRouter();
   const { user, loading: authLoading } = useAuth();
   // 뒤로가기 폴백: ?next= 목적지 (없으면 Exchange). getNextPath()는
@@ -299,8 +301,8 @@ export default function LoginPage() {
         </p>
         <p style={{ textAlign: 'center', marginTop: 20, fontSize: 12, color: '#CBD5E1', lineHeight: 1.6, borderTop: '1px solid #F1F5F9', paddingTop: 16 }}>
           Can&apos;t access your account?{' '}
-          <a href="mailto:muntalkofficial@gmail.com" style={{ color: '#6366F1', fontWeight: 700, textDecoration: 'none' }}>
-            muntalkofficial@gmail.com
+          <a href={`mailto:${brand.email}`} style={{ color: '#6366F1', fontWeight: 700, textDecoration: 'none' }}>
+            {brand.email}
           </a>
         </p>
       </div>

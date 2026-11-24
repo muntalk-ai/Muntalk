@@ -1,22 +1,24 @@
 'use client';
 import { useRouter } from 'next/navigation';
+import { useBrand } from '@/lib/useBrand';
 
 export default function CookiesPage() {
   const router = useRouter();
+  const brand = useBrand();
   const s = styles;
   return (
     <div style={s.page}>
       <nav style={s.nav}>
         <button onClick={() => router.back()} style={s.back}>← Back</button>
-        <span style={s.navTitle}>MunTalk</span>
+        <span style={s.navTitle}>{brand.name}</span>
       </nav>
       <div style={s.container}>
         <h1 style={s.h1}>Cookie Policy</h1>
         <p style={s.meta}>Effective Date: March 1, 2025 &middot; Last Updated: November 18, 2026</p>
 
         <p style={s.lead}>
-          This Cookie Policy explains how MunTalk uses cookies and similar tracking technologies
-          when you visit our website at <strong>www.muntalk.com</strong>.
+          This Cookie Policy explains how {brand.name} uses cookies and similar tracking technologies
+          when you visit our website at <strong>{brand.domain}</strong>.
         </p>
 
         <h2 style={s.h2}>1. What Are Cookies?</h2>
@@ -61,7 +63,7 @@ export default function CookiesPage() {
         <p style={s.p}>Functional cookies remember your preferences (language choice, tutor selection, progress) to personalize your experience. These are stored in your browser&apos;s local storage.</p>
 
         <h2 style={s.h2}>5. Analytics</h2>
-        <p style={s.p}>We use Firebase Analytics to understand how users interact with MunTalk. This data is aggregated and anonymous. You can opt out of Firebase Analytics by enabling &quot;Do Not Track&quot; in your browser settings.</p>
+        <p style={s.p}>We use Firebase Analytics to understand how users interact with {brand.name}. This data is aggregated and anonymous. You can opt out of Firebase Analytics by enabling &quot;Do Not Track&quot; in your browser settings.</p>
 
         <h2 style={s.h2}>6. Third-Party Cookies</h2>
         <p style={s.p}>Our third-party services may set their own cookies:</p>
@@ -71,20 +73,20 @@ export default function CookiesPage() {
         </ul>
 
         <h2 style={s.h2}>7. Managing Cookies</h2>
-        <p style={s.p}>You can control cookies through your browser settings. Note that disabling cookies may affect the functionality of MunTalk, including your ability to stay logged in. To clear MunTalk local storage data, you can use your browser&apos;s developer tools or clear your browsing data.</p>
+        <p style={s.p}>You can control cookies through your browser settings. Note that disabling cookies may affect the functionality of {brand.name}, including your ability to stay logged in. To clear {brand.name} local storage data, you can use your browser&apos;s developer tools or clear your browsing data.</p>
 
         <h2 style={s.h2}>8. Contact Us</h2>
         <p style={s.p}>For questions about our use of cookies:<br />
-          <strong>MunTalk</strong><br />
+          <strong>{brand.name}</strong><br />
           British Columbia, Canada<br />
-          Email: <a href="mailto:muntalkofficial@gmail.com" style={s.link}>muntalkofficial@gmail.com</a>
+          Email: <a href={`mailto:${brand.email}`} style={s.link}>{brand.email}</a>
         </p>
       </div>
       <footer style={s.footer}>
         <a href="/privacy" style={s.footLink}>Privacy Policy</a>
         <a href="/terms" style={s.footLink}>Terms of Service</a>
         <a href="/refund" style={s.footLink}>Refund Policy</a>
-        <span style={{ color: '#CBD5E1' }}>&copy; 2026 MunTalk. All rights reserved.</span>
+        <span style={{ color: '#CBD5E1' }}>&copy; 2026 {brand.name}. All rights reserved.</span>
       </footer>
     </div>
   );

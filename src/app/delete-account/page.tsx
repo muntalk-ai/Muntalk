@@ -1,7 +1,9 @@
 'use client';
 import { useRouter } from 'next/navigation';
+import { useBrand } from '@/lib/useBrand';
 
 export default function DeleteAccountPage() {
+  const brand = useBrand();
   const router = useRouter();
   const s = styles;
   return (
@@ -34,7 +36,7 @@ export default function DeleteAccountPage() {
         <h2 style={s.h2}>Request deletion by email</h2>
         <p style={s.p}>
           If you cannot access your account, email us at{' '}
-          <a href="mailto:muntalkofficial@gmail.com" style={s.link}>muntalkofficial@gmail.com</a>{' '}
+          <a href={`mailto:${brand.email}`} style={s.link}>{brand.email}</a>{' '}
           from the email address linked to your account with the subject
           &quot;Delete my account&quot;. We will verify your identity and process your
           request within 30 days, as described in our{' '}
