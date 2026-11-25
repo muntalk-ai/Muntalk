@@ -51,7 +51,7 @@ function PricingContent() {
   };
 
   const faqs = [
-    { q: 'How much is free?', a: 'A1 level (12 lessons) + 3 AI tutor chats (MunTalk lessons) per day are free forever. New Exchange AI chats: 3/day free · 50/day on Pro. Hearts refill 1 every 4 hours.' },
+    { q: 'How much is free?', a: 'A1 level (12 lessons) + 3 AI tutor chats per day are free forever. New Exchange AI chats: 3/day free · 50/day on Pro. Hearts refill 1 every 4 hours.' },
     { q: 'Can I cancel anytime?', a: 'Yes — cancel from Profile → Subscription at any time. You keep Premium access until your billing period ends.' },
     { q: 'What payment methods are accepted?', a: 'All major credit and debit cards via Stripe. Safe, encrypted, PCI-compliant.' },
     { q: 'Can I switch plans?', a: 'Yes! Upgrade or downgrade anytime. The price difference is prorated automatically.' },
@@ -169,7 +169,7 @@ function PricingContent() {
               <tbody>
                 {([
                   ['Monthly price', '$0 forever', '$9.99', 'Up to $30'],
-                  ['AI 튜터 채팅 (MunTalk 레슨): 3회/일', '3회/일', '무제한', '—'],
+                  ['AI 튜터 채팅: 3회/일', '3회/일', '무제한', '—'],
                   ['Exchange 신규 AI 채팅: 무료 3회/일 · Pro 50회/일', '무료 3회/일', 'Pro 50회/일', '—'],
                   ['Real-time pronunciation scoring', '✓', '✓', '—'],
                   ['CEFR completion certificates', '✓', '✓', '—'],

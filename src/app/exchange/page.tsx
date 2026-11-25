@@ -344,7 +344,7 @@ let msgSeq = 100;
 // auto-review, voice dictation — is gated on the Muntuz host.
 // Localised greetings (M-5/M-13) and the daily new-chat counter
 // (M-4/M-13) run on both hosts: the greeting table and the counter are
-// local to this page, and the sidebar already advertises the 20/50
+// local to this page, and the sidebar already advertises the 3/50
 // limit on muntalk.com too. Only called from event handlers and
 // effects (client-only), so `window` is always defined here.
 function isMuntuzHost(): boolean {
@@ -739,7 +739,7 @@ export default function ExchangePage() {
   const [portalLoading, setPortalLoading] = useState(false);
   const [billing, setBilling] = useState<'monthly' | 'biannual' | 'yearly'>('yearly');
   // Q7 / M-4: 오늘 새로 시작한 AI 채팅 수 (표시용 카운터) + 실제
-  // Pro 여부. realPro는 카운터 분모(20/50)뿐 아니라 헤더 PRO 배지,
+  // Pro 여부. realPro는 카운터 분모(3/50)뿐 아니라 헤더 PRO 배지,
   // 주간 리포트 게이트, Pro 탭 상태 표시도 함께 본다 (QA decision 8A).
   const [newChatsToday, setNewChatsToday] = useState(0);
   const [realPro, setRealPro] = useState(false);
@@ -755,18 +755,28 @@ export default function ExchangePage() {
   const [guestTrial, setGuestTrial] = useState<GuestTrial | null>(null);
   const [trialLeftMs, setTrialLeftMs] = useState<number | null>(null);
   const [showTrialExpired, setShowTrialExpired] = useState(false);
-  // Trial-ended prompt, dismissed once per session: the 1 s countdown
-  // interval re-opens the prompt on every tick, so a plain "Later"
-  // never sticks. Once the user closes it, it stays closed for this
-  // session (a ref, not state — the interval closure reads it without
-  // re-subscribing). Sending again still stays blocked by the trial
-  // gate; the user just gets a toast instead of the prompt.
+  // Trial-ended prompt, dismissed once per expired trial: the 1 s
+  // countdown interval re-opens the prompt on every tick, so a plain
+  // "Later" never sticks. Once the user closes it, it stays closed —
+  // the dismissal is saved in this browser, keyed to this trial's
+  // start time, so it survives a reload. (The ref is still kept so
+  // the interval closure reads it without re-subscribing.) Sending
+  // again still stays blocked by the trial gate; the user just gets
+  // a toast instead of the prompt.
   const trialExpiredDismissedRef = useRef(false);
+  const trialExpiredDismissed = () => {
+    if (trialExpiredDismissedRef.current) return true;
+    const t = guestTrial ?? readGuestTrial();
+    const saved = readTrialExpiredDismissed();
+    return !!t && saved !== null && saved === t.startedAt;
+  };
   const openTrialExpired = () => {
-    if (!trialExpiredDismissedRef.current) setShowTrialExpired(true);
+    if (!trialExpiredDismissed()) setShowTrialExpired(true);
   };
   const dismissTrialExpired = () => {
     trialExpiredDismissedRef.current = true;
+    const t = guestTrial ?? readGuestTrial();
+    if (t) writeTrialExpiredDismissed(t.startedAt);
     setShowTrialExpired(false);
   };
 
@@ -1579,6 +1589,7 @@ export default function ExchangePage() {
   // and mobile IPs rotate.
   const GUEST_TRIAL_MS = 5 * 60 * 1000;
   const GUEST_TRIAL_KEY = 'muntuz_guest_trial';
+  const TRIAL_EXPIRED_DISMISSED_KEY = 'muntuz_trial_expired_dismissed_v1';
   const DEVICE_ID_KEY = 'muntuz_device_id';
 
   type GuestTrial = { deviceId: string; startedAt: number };
@@ -1617,6 +1628,29 @@ export default function ExchangePage() {
       window.localStorage.setItem(GUEST_TRIAL_KEY, JSON.stringify(t));
     } catch {
       // Private mode: the trial lives in memory only for this session.
+    }
+  }
+
+  // Trial-ended dismissal, saved per trial (keyed to the trial's
+  // start time): closing the prompt keeps it closed across reloads.
+  // A new trial gets a new start time, so its prompt can show again.
+  function readTrialExpiredDismissed(): number | null {
+    if (typeof window === 'undefined') return null;
+    try {
+      const raw = window.localStorage.getItem(TRIAL_EXPIRED_DISMISSED_KEY);
+      if (!raw) return null;
+      const n = Number(raw);
+      return Number.isFinite(n) ? n : null;
+    } catch {
+      return null;
+    }
+  }
+
+  function writeTrialExpiredDismissed(startedAt: number) {
+    try {
+      window.localStorage.setItem(TRIAL_EXPIRED_DISMISSED_KEY, String(startedAt));
+    } catch {
+      // Private mode: the dismissal lives in memory only for this session.
     }
   }
 
@@ -1682,9 +1716,9 @@ export default function ExchangePage() {
     const existing = guestTrial ?? readGuestTrial();
     if (existing && now - existing.startedAt < GUEST_TRIAL_MS) return true;
     if (existing) {
-      // Trial used up. If the prompt was already dismissed this
-      // session, do not re-open it — a toast is the only feedback.
-      if (trialExpiredDismissedRef.current) {
+      // Trial used up. If the prompt was already dismissed for this
+      // trial, do not re-open it — a toast is the only feedback.
+      if (trialExpiredDismissed()) {
         showToast('Your 5-minute free trial ended — sign up to keep chatting.');
       } else {
         setShowTrialExpired(true);
