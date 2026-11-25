@@ -7497,9 +7497,6 @@ export default function MuntuzLandingClient() {
               muntuz.official@gmail.com
             </a>
           </p>
-          <p className="mt-1 text-center text-[11px] text-[#5D6C63]">
-            {t('muntalkProject')}
-          </p>
         </div>
       </footer>
 
