@@ -5,6 +5,7 @@ import { signOut } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
 import { useBrand } from '@/lib/useBrand';
+import { isMuntuzHost } from '@/lib/brand';
 import { updateUserProfile, detectBrowserNativeLang, resolveNativeLang } from '@/lib/userProfile';
 import { isLangPromptSnoozed, markLangChosen } from '@/lib/langPrompt';
 import { db } from '@/lib/firebase';
@@ -23,6 +24,8 @@ import TrialExpiredModal from '@/components/TrialExpiredModal';
 import { getTrialData, isTrialExpired, trialDaysRemaining, addTrialLanguage, TRIAL_MAX_LANGUAGES, TrialData } from '@/lib/trialPolicy';
 import { getTestimonials, Testimonial, MIN_TESTIMONIALS } from '@/lib/testimonials';
 import { lpGet, lpGetInt, lpGetJson, lpSet } from '@/lib/localProgress';
+
+const MUNTUZ_CARD_URL = 'https://www.muntuz.com/exchange?utm_source=muntalk&utm_medium=dashboard_card';
 
 // 언어코드 → 국가코드 매핑 (flagcdn.com 사용)
 const LANG_TO_COUNTRY: Record<string, string> = {
@@ -85,6 +88,9 @@ const REEL_HERO: Record<string, { headline: string; desc: string; cta: string }>
 
 export default function LevelHub() {
   const brand = useBrand();
+  // Decided after mount so the card never flashes on the muntuz.com host.
+  const [onMuntalkHost, setOnMuntalkHost] = useState(false);
+  useEffect(() => { setOnMuntalkHost(!isMuntuzHost(window.location.hostname)); }, []);
   const router = useRouter();
   // QA 7A: brand follows the host — Muntuz on muntuz.com, MunTalk elsewhere.
   // (Hero copy is intentionally untouched; only the nav logo, footer and the
@@ -1304,6 +1310,23 @@ export default function LevelHub() {
             {!user && (
               <div style={styles.mtGuest}>🎁 {mtGuestLeft} free talk{mtGuestLeft === 1 ? '' : 's'} left today · no sign-up needed</div>
             )}
+          </div>
+        </div>
+      )}
+
+      {/* -- Muntuz cross-promo (2026-11-25, Jay): logged-in MunTalk users only, never on the muntuz.com host -- */}
+      {!authLoading && user && onMuntalkHost && (
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '16px 24px 0', width: '100%' }}>
+          <div style={{ ...styles.mtCard, background: 'linear-gradient(135deg,#0C4A6E 0%,#1D4ED8 60%,#2563EB 100%)' }}>
+            <div style={{ ...styles.mtHead, marginBottom: 0 }}>
+              <div>
+                <div style={styles.mtTitle}>Chat with AI friends</div>
+                <div style={styles.mtDesc}>Practice any language with 50 AI partners on Muntuz — free, same login.</div>
+              </div>
+              <a href={MUNTUZ_CARD_URL} style={{ ...styles.mtStart, textDecoration: 'none', display: 'inline-block' }}>
+                Open Muntuz
+              </a>
+            </div>
           </div>
         </div>
       )}
