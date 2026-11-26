@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { updateUserProfile } from '@/lib/userProfile';
+import { markFunnelStep } from '@/lib/visitTracking';
 import { LEARN_LANGUAGES } from '@/data/languages';
 import RtlDir from '@/components/RtlDir';
 import { lpGet, lpGetInt, lpGetJson, lpSet } from '@/lib/localProgress';
@@ -196,6 +197,14 @@ function PlacementInner() {
     } catch { /* ignore */ }
   }, [authLoading, user]);
 
+  // 온보딩 퍼널 측정 (2026-11-26): 레벨 테스트 도착·시작·완료를 사용자별 첫 1회만 기록.
+  useEffect(() => {
+    if (!user) return;
+    if (phase === 'intro')  void markFunnelStep(user.uid, 'placementViewedAt');
+    if (phase === 'track')  void markFunnelStep(user.uid, 'placementStartedAt');
+    if (phase === 'result') void markFunnelStep(user.uid, 'placementCompletedAt');
+  }, [phase, user]);
+
   // -- TRACK: answer handler ------------------------------------------------
   const handleTrackAnswer = (optIdx: number) => {
     const newAnswers = [...trackAnswers, optIdx];
@@ -269,6 +278,7 @@ function PlacementInner() {
       updateUserProfile(user.uid, {
         placementDone: true, placementLevel: 'a1', placementTrack: 'travel',
       }).catch(() => {});
+      void markFunnelStep(user.uid, 'placementSkippedAt');
     }
     router.push('/lingua');
   };
