@@ -5,7 +5,7 @@ const BASE = 'https://www.muntalk.com';
 // Public, indexable pages. App pages behind auth (/lingua/*, /profile)
 // and internal routes are intentionally excluded.
 // hreflang alternates for the localized landing set (homepage + /ko + pilot 5).
-const LOCALE_PATHS = new Set(['', '/ko', '/vi', '/th', '/my', '/es', '/ja']);
+const LOCALE_PATHS = new Set(['', '/ko', '/vi', '/th', '/my', '/es', '/ja', '/id', '/hi', '/ar', '/fa', '/tr', '/zh', '/pt', '/ru', '/ms', '/mn']);
 const LANG_URLS: Record<string, string> = {
   en: BASE,
   ko: `${BASE}/ko`,
@@ -14,6 +14,16 @@ const LANG_URLS: Record<string, string> = {
   my: `${BASE}/my`,
   es: `${BASE}/es`,
   ja: `${BASE}/ja`,
+  id: `${BASE}/id`,
+  hi: `${BASE}/hi`,
+  ar: `${BASE}/ar`,
+  fa: `${BASE}/fa`,
+  tr: `${BASE}/tr`,
+  zh: `${BASE}/zh`,
+  pt: `${BASE}/pt`,
+  ru: `${BASE}/ru`,
+  ms: `${BASE}/ms`,
+  mn: `${BASE}/mn`,
   'x-default': BASE,
 };
 
@@ -27,6 +37,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/my', priority: 0.8, changeFrequency: 'weekly' },
     { path: '/es', priority: 0.8, changeFrequency: 'weekly' },
     { path: '/ja', priority: 0.8, changeFrequency: 'weekly' },
+    // Localized landing batch 2 (2026-11-25): HOLD until 12/09 judgment.
+    { path: '/id', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/hi', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/ar', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/fa', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/tr', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/zh', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/pt', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/ru', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/ms', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/mn', priority: 0.8, changeFrequency: 'weekly' },
     { path: '/lingua/microtalk', priority: 0.9, changeFrequency: 'weekly' },
     { path: '/about', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/pricing', priority: 0.8, changeFrequency: 'monthly' },
