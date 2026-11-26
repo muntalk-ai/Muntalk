@@ -6,7 +6,9 @@ import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { TUTORS, getTutorById, getTutorForLang } from '@/data/tutors';
-import { hasTts } from '@/data/languages';
+import { hasTts, LEARN_LANGUAGES, UI_LANGUAGES } from '@/data/languages';
+import { markLangChosen, hasExplicitLangChoice } from '@/lib/langPrompt';
+import { requestPushPermission } from '@/lib/notifications';
 import { speakWithDeviceTts, deviceHasVoiceFor } from '@/lib/deviceTts';
 import { updateUserProfile, getUserProfile, recordActivity, resolveLearnLang, resolveNativeLang, localDateKey } from '@/lib/userProfile';
 import { awardXpWithRetry } from '@/lib/xpClient';
@@ -99,7 +101,7 @@ const UNITS = [
   ]},
 ];
 
-type Phase = 'goal' | 'lobby' | 'learn' | 'listen' | 'match' | 'speak' | 'chat' | 'complete';
+type Phase = 'pickLang' | 'pickGoal' | 'pickLevel' | 'goal' | 'lobby' | 'learn' | 'listen' | 'match' | 'speak' | 'chat' | 'complete';
 type Word = { word: string; emoji: string; phonetic: string; example?: string; exampleMeaning?: string };
 type TranslatedUnit = { word: string; emoji: string; phonetic: string; original: string; meaning?: string; example?: string }[];
 
@@ -206,9 +208,20 @@ function StarterContent() {
   });
   const goalInit = useRef(false);
 
-  // 첫 진입 시: 목적 미설정이면 'goal' phase 먼저 표시
+  // ── 레슨 전 온보딩 (2026-11-26 듀오링고식) ────────────────────────────────
+  // ?onboarding=1 진입(메인 'Start Learning Free'·가입 직후·Micro-Talk·웰컴 메일)
+  // 에서만: ① 배울 언어 ② 하루 목표 ③ 실력 → (목적) → 로비. 이미 답한 단계는 건너뛴다.
+  const onboardingQueueRef = useRef<Phase[]>([]);
+  const advanceOnboarding = useCallback(() => {
+    const next = onboardingQueueRef.current.shift();
+    setPhase(next ?? 'lobby');
+  }, []);
+
+  // 첫 진입 시: 온보딩 단계 + 목적 미설정이면 'goal' phase 먼저 표시
   useEffect(() => {
-    if (goalInit.current || authLoading) return;
+    // 로그인 유저는 프로필이 도착한 뒤에 판단한다 (기존 유저에게 언어 질문이
+    // 잘못 뜨지 않게). 게스트는 바로 판단.
+    if (goalInit.current || authLoading || (user && !profile)) return;
     goalInit.current = true;
     const profPurpose = isLearningPurpose(profile?.purpose) ? profile!.purpose : undefined;
     if (profPurpose && !purpose) setPurpose(profPurpose);
@@ -223,8 +236,24 @@ function StarterContent() {
     // 레슨 도중에는 게이트로 되돌리지 않는다 — 초기 로비에서만 표시한다.
     // (프로필이 늦게 도착해 effect가 뒤늦게 실행되는 경우, 사용자가 이미
     // 레슨에 들어간 뒤 goal phase로 끌려가던 버그 방지)
-    if (!hasPurpose && !skipped) setPhase(prev => (prev === 'lobby' ? 'goal' : prev));
-  }, [authLoading, profile]); // eslint-disable-line react-hooks/exhaustive-deps
+    const queue: Phase[] = [];
+    if (params.get('onboarding') === '1') {
+      const isNewLearner = !user || (((profile?.xp || 0) === 0) && ((profile?.completedLessons || []).length === 0));
+      const langsOpen = !params.get('lang') && (user
+        ? profile?.langsConfirmed === false && !hasExplicitLangChoice(user.uid)
+        : !hasExplicitLangChoice());
+      if (langsOpen) queue.push('pickLang');
+      const hasGoal = !!lpGet('mt_daily_goal_min') || !!profile?.dailyGoalMin;
+      if (isNewLearner && !hasGoal) queue.push('pickGoal');
+      if (!(profile?.placementLevel || lpGet('mt_placement_level'))) queue.push('pickLevel');
+    }
+    if (!hasPurpose && !skipped) queue.push('goal');
+    if (queue.length) {
+      const first = queue.shift()!;
+      onboardingQueueRef.current = queue;
+      setPhase(prev => (prev === 'lobby' ? first : prev));
+    }
+  }, [authLoading, profile, user]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Placement 이수자: placementTrack → 목적 자동 매핑 제안 (강제 저장 아님)
   const suggestedPurpose = mapTrackToPurpose(profile?.placementTrack);
@@ -264,13 +293,20 @@ function StarterContent() {
     setPhase('lobby');
   }, [user, refreshProfile]);
 
+  // QA S-5: 프로필(Firestore) 우선 — URL → 프로필 → localStorage → 기본값 순.
+  // localStorage만 보면 새 기기/빈 캐시에서 학습 언어가 'en-US'로 떨어진다.
+  const langId  = params.get('lang')    || resolveLearnLang(profile?.learnLang);
+  const subLang = params.get('subLang') || resolveNativeLang(profile?.nativeLang);
+  // 온보딩 문구용 학습 언어 이름 ('English (US)' → 'English')
+  const learnLangName = (LEARN_LANGUAGES.find(l => l.code === langId)?.label || 'English').replace(/\s*\(.*\)$/, '');
+
   // ── 자기 레벨 선택 (2026-11-26, 신규·게스트용) ──────────────────────────
   // 레벨 테스트 대신 한 번의 탭으로 시작 레벨을 정한다. "Not sure"는 A2
   // (Free 기본값과 같음). placementDone은 일부러 남기지 않는다 — 레벨
   // 테스트 권유(배너·잠긴 카드)가 계속 보이고, 테스트가 나중에 더 높은
   // 레벨로 올려줄 수 있게 한다. placementSource로 테스트 배정과 구분한다.
   const SELF_LEVELS: { label: string; level: string }[] = [
-    { label: "I'm new to English", level: 'a1' },
+    { label: `I'm new to ${learnLangName}`, level: 'a1' },
     { label: 'I know some words', level: 'a1' },
     { label: 'I can have a basic conversation', level: 'a2' },
     { label: 'I can have everyday conversations', level: 'b1' },
@@ -286,8 +322,73 @@ function StarterContent() {
         await updateUserProfile(user.uid, { placementLevel: level, placementSource: 'self' });
         await refreshProfile();
       }
-    } catch { /* ignore — 저장이 실패해도 완료 화면은 그대로 */ }
+    } catch { /* ignore — 저장이 실패해도 다음 단계로 넘어간다 */ }
+    advanceOnboarding();
   };
+
+  // ── ① 배울 언어 선택 (모국어는 자동 감지 + 'I speak' 셀렉트로 변경) ─────────
+  const [showMoreLangs, setShowMoreLangs] = useState(false);
+  const [speakLang, setSpeakLang] = useState<string>('');
+  const chooseLearnLang = async (learn: string) => {
+    const native = speakLang || subLang;
+    try {
+      lpSet('mt_learn_lang', learn);
+      lpSet('mt_native_lang', native);
+      markLangChosen();
+      if (!user) {
+        try { if (!localStorage.getItem('mt_guest_lang_chosen_at')) localStorage.setItem('mt_guest_lang_chosen_at', new Date().toISOString()); } catch { /* ignore */ }
+      }
+      if (user?.uid) {
+        await updateUserProfile(user.uid, { learnLang: learn, nativeLang: native, langsConfirmed: true });
+        await refreshProfile();
+      }
+    } catch { /* ignore — 로컬 선택은 남는다 */ }
+    // 레슨이 고른 언어로 진행되도록 URL에 고정한다 (onboarding=1 유지 — 완료 화면 카드용)
+    router.replace(`/lingua/starter?onboarding=1&lang=${encodeURIComponent(learn)}&subLang=${encodeURIComponent(native)}`, { scroll: false });
+    advanceOnboarding();
+  };
+
+  // ── ② 하루 목표 (5/10/15분, 건너뛰면 10분) ───────────────────────────────
+  const chooseDailyGoal = async (min: number) => {
+    try {
+      lpSet('mt_daily_goal_min', String(min));
+      if (!user) {
+        try { if (!localStorage.getItem('mt_guest_goal_set_at')) localStorage.setItem('mt_guest_goal_set_at', new Date().toISOString()); } catch { /* ignore */ }
+      }
+      if (user?.uid) {
+        await updateUserProfile(user.uid, { dailyGoalMin: min });
+        await refreshProfile();
+      }
+    } catch { /* ignore */ }
+    advanceOnboarding();
+  };
+  const dailyGoalMin = (() => {
+    const v = parseInt(lpGet('mt_daily_goal_min') || '', 10);
+    if (Number.isFinite(v) && v > 0) return v;
+    return profile?.dailyGoalMin || 0;
+  })();
+
+  // ── 내일 알림 의사 (첫 레슨 완료 화면) ───────────────────────────────────
+  // 게스트: 의사만 저장 → 가입 후 홈의 알림 카드에서 탭 한 번으로 권한 요청.
+  // 로그인: [Remind me] 탭 = 사용자 제스처 → 바로 브라우저 권한 요청 + FCM 토큰 등록.
+  const [reminderState, setReminderState] = useState<'' | 'saved' | 'on' | 'denied' | 'no' | 'busy'>('');
+  const chooseReminder = async (yes: boolean) => {
+    try { if (!localStorage.getItem('mt_reminder_opt_in_at') && yes) localStorage.setItem('mt_reminder_opt_in_at', new Date().toISOString()); } catch { /* ignore */ }
+    if (!yes) { try { lpSet('mt_reminder_opt_in', '0'); } catch { /* ignore */ } setReminderState('no'); return; }
+    if (!user) { try { lpSet('mt_reminder_opt_in', '1'); } catch { /* ignore */ } setReminderState('saved'); return; }
+    setReminderState('busy');
+    try {
+      const token = await requestPushPermission(user.uid);
+      if (token) {
+        await updateUserProfile(user.uid, { pushNotifications: true }).catch(() => {});
+        try { lpSet('mt_reminder_opt_in', 'on'); } catch { /* ignore */ }
+        setReminderState('on');
+      } else {
+        setReminderState('denied');
+      }
+    } catch { setReminderState('denied'); }
+  };
+  const reminderAsked = (() => { try { return !!lpGet('mt_reminder_opt_in'); } catch { return false; } })();
 
   const audioRef   = useRef<HTMLAudioElement|null>(null);
   const speakSeq   = useRef(0); // latest speak() call id — stale fetches never play (no overlap)
@@ -299,10 +400,6 @@ function StarterContent() {
   const [isListening, setIsListening] = useState(false);
   const [micGuide, setMicGuide] = useState<MicGuideReason | null>(null); // UX-infra: STT 안내
 
-  // QA S-5: 프로필(Firestore) 우선 — URL → 프로필 → localStorage → 기본값 순.
-  // localStorage만 보면 새 기기/빈 캐시에서 학습 언어가 'en-US'로 떨어진다.
-  const langId  = params.get('lang')    || resolveLearnLang(profile?.learnLang);
-  const subLang = params.get('subLang') || resolveNativeLang(profile?.nativeLang);
 
   // Tutor: learner's selected tutor first (?tutor= URL param → saved choice),
   // language default as fallback (e.g. first visit before choosing a tutor)
@@ -919,11 +1016,133 @@ LANGUAGE RULES:
   const ACCENT = '#6366F1';
   const BG     = '#F0F4FF';
 
+  const FONT_STACK = "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif";
   const btnBase: React.CSSProperties = {
     border: 'none', cursor: 'pointer',
     fontFamily: "'Nunito','Noto Sans Arabic','Noto Sans Hebrew','Noto Sans Thai','Noto Sans Devanagari','Noto Sans KR','Noto Sans SC',sans-serif", fontWeight: 900,
     borderRadius: 18, transition: 'all .15s',
   };
+
+  // ── 온보딩 공통 래퍼 (2026-11-26 듀오링고식, 레슨 전) ─────────────────────
+  const onboardingShell = (step: number, children: React.ReactNode) => (
+    <div style={{ minHeight: '100vh', background: BG, fontFamily: FONT_STACK,
+      display: 'flex', flexDirection: 'column', alignItems: 'center',
+      justifyContent: 'center', padding: 24, boxSizing: 'border-box' }}>
+      <style dangerouslySetInnerHTML={{ __html: `
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
+      `}} />
+      <div style={{ display: 'flex', gap: 6, marginBottom: 20 }}>
+        {[1, 2, 3].map(n => (
+          <span key={n} style={{ width: 28, height: 6, borderRadius: 99,
+            background: n <= step ? ACCENT : '#CBD5E1' }} />
+        ))}
+      </div>
+      <div style={{ width: '100%', maxWidth: 380 }}>{children}</div>
+    </div>
+  );
+
+  // ── ① 배울 언어 ────────────────────────────────────────────────────────────
+  if (phase === 'pickLang') {
+    const nativeCode = speakLang || subLang;
+    const others = LEARN_LANGUAGES.filter(l => !l.code.startsWith('en-'));
+    return onboardingShell(1, (
+      <>
+        <h1 style={{ fontSize: 28, fontWeight: 900, color: '#1E293B', margin: '0 0 8px', textAlign: 'center' }}>
+          What do you want to learn?
+        </h1>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 6,
+          margin: '0 0 22px', fontSize: 13, color: '#64748B', fontWeight: 700 }}>
+          <label htmlFor="mt-i-speak">I speak:</label>
+          <select id="mt-i-speak" value={nativeCode} onChange={e => setSpeakLang(e.target.value)}
+            style={{ fontSize: 13, fontWeight: 800, color: '#334155', border: '1.5px solid #E2E8F0',
+              borderRadius: 10, padding: '4px 8px', background: 'white', maxWidth: 200 }}>
+            {!UI_LANGUAGES.some(l => l.code === nativeCode) && <option value={nativeCode}>{nativeCode}</option>}
+            {UI_LANGUAGES.map(l => <option key={l.code} value={l.code}>{l.label}</option>)}
+          </select>
+        </div>
+        <button onClick={() => chooseLearnLang('en-US')}
+          style={{ ...btnBase, width: '100%', padding: '22px 18px', fontSize: 22,
+            background: 'white', color: '#1E293B', border: `2px solid ${ACCENT}`,
+            boxShadow: '0 4px 16px rgba(0,0,0,0.08)', display: 'flex', alignItems: 'center',
+            justifyContent: 'center', gap: 12 }}>
+          <span style={{ fontSize: 34 }}>🇺🇸</span> English
+        </button>
+        {!showMoreLangs ? (
+          <button onClick={() => setShowMoreLangs(true)}
+            style={{ ...btnBase, width: '100%', marginTop: 14, padding: '14px', fontSize: 15,
+              background: 'transparent', color: ACCENT, border: '1.5px dashed #A5B4FC' }}>
+            More languages ▾
+          </button>
+        ) : (
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, marginTop: 14,
+            maxHeight: '45vh', overflowY: 'auto', paddingRight: 2 }}>
+            {others.map(l => (
+              <button key={l.code} onClick={() => chooseLearnLang(l.code)}
+                style={{ ...btnBase, padding: '10px 8px', fontSize: 13, background: 'white',
+                  color: '#1E293B', border: '1.5px solid #E2E8F0', display: 'flex',
+                  alignItems: 'center', gap: 6, textAlign: 'left', minWidth: 0 }}>
+                <span style={{ fontSize: 18, flexShrink: 0 }}>{l.flag}</span>
+                <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{l.label}</span>
+              </button>
+            ))}
+          </div>
+        )}
+      </>
+    ));
+  }
+
+  // ── ② 하루 목표 ────────────────────────────────────────────────────────────
+  if (phase === 'pickGoal') return onboardingShell(2, (
+    <>
+      <h1 style={{ fontSize: 28, fontWeight: 900, color: '#1E293B', margin: '0 0 8px', textAlign: 'center' }}>
+        How much time per day?
+      </h1>
+      <p style={{ fontSize: 14, color: '#64748B', fontWeight: 600, margin: '0 0 22px', textAlign: 'center' }}>
+        You can change this later.
+      </p>
+      {[
+        { min: 5, label: '5 min — Casual' },
+        { min: 10, label: '10 min — Regular' },
+        { min: 15, label: '15 min — Serious' },
+      ].map(o => (
+        <button key={o.min} onClick={() => chooseDailyGoal(o.min)}
+          style={{ ...btnBase, width: '100%', padding: '16px', fontSize: 16, marginBottom: 10,
+            background: 'white', color: '#1E293B',
+            border: o.min === 10 ? `2px solid ${ACCENT}` : '2px solid #E2E8F0' }}>
+          {o.label}
+        </button>
+      ))}
+      <button onClick={() => chooseDailyGoal(10)}
+        style={{ ...btnBase, width: '100%', marginTop: 8, padding: '10px', fontSize: 14,
+          background: 'transparent', color: '#94A3B8' }}>
+        Skip for now
+      </button>
+    </>
+  ));
+
+  // ── ③ 실력 (자기 레벨 선택) ────────────────────────────────────────────────
+  if (phase === 'pickLevel') return onboardingShell(3, (
+    <>
+      <h1 style={{ fontSize: 26, fontWeight: 900, color: '#1E293B', margin: '0 0 8px', textAlign: 'center' }}>
+        How much {learnLangName} do you know?
+      </h1>
+      <p style={{ fontSize: 14, color: '#64748B', fontWeight: 600, margin: '0 0 20px', textAlign: 'center', lineHeight: 1.5 }}>
+        Pick the one that sounds most like you. You can change it later with the level test.
+      </p>
+      {SELF_LEVELS.map(o => (
+        <button key={o.label} onClick={() => chooseSelfLevel(o.level)}
+          style={{ ...btnBase, width: '100%', padding: '13px', fontSize: 15, marginBottom: 8,
+            background: 'white', color: '#0F172A', border: '1.5px solid #E2E8F0', textAlign: 'left' }}>
+          {o.label}
+        </button>
+      ))}
+      <button onClick={() => { setSelfPlaceDismissed(true); advanceOnboarding(); }}
+        style={{ ...btnBase, width: '100%', marginTop: 6, padding: '10px', fontSize: 14,
+          background: 'transparent', color: '#94A3B8' }}>
+        Not now
+      </button>
+    </>
+  ));
 
   // ── GOAL (B-11: 학습 목적 선택) ─────────────────────────────────────────────
   if (phase === 'goal') return (
@@ -1833,35 +2052,55 @@ LANGUAGE RULES:
         </div>
       )}
 
-      {/* 자기 레벨 선택 (2026-11-26): 신규·게스트, 레벨 미배정일 때만 */}
-      {params.get('onboarding') === '1' && !selfPlacedLevel && !selfPlaceDismissed && !(profile?.placementLevel || lpGet('mt_placement_level')) && (
-        <div style={{ background: 'white', border: '2px solid #6366F140',
-          borderRadius: 18, padding: '20px', marginBottom: 16, maxWidth: 360 }}>
-          <div style={{ fontSize: 15, fontWeight: 900, color: '#0F172A',
-            marginBottom: 6 }}>How much English do you know?</div>
-          <div style={{ fontSize: 13, color: '#475569', lineHeight: 1.6,
-            marginBottom: 16 }}>
-            Pick the one that sounds most like you. You can change it later with the level test.
-          </div>
-          {SELF_LEVELS.map(o => (
-            <button key={o.label} onClick={() => chooseSelfLevel(o.level)}
-              style={{ ...btnBase, width: '100%', padding: '12px', fontSize: 14,
-                background: 'white', color: '#0F172A',
-                border: '1.5px solid #E2E8F0', marginBottom: 8, textAlign: 'left' }}>
-              {o.label}
-            </button>
-          ))}
-          <button onClick={() => setSelfPlaceDismissed(true)}
-            style={{ background: 'none', border: 'none', color: '#94A3B8',
-              fontSize: 12, fontWeight: 700, cursor: 'pointer', marginTop: 4 }}>
-            Not now
-          </button>
-        </div>
-      )}
       {selfPlacedLevel && (
         <div style={{ fontSize: 13, fontWeight: 700, color: '#10B981',
           marginBottom: 16 }}>
           ✓ You&apos;re set to {selfPlacedLevel.toUpperCase()}! Take the test to unlock higher levels.
+        </div>
+      )}
+
+      {/* 하루 목표 진행 (가볍게 표시) */}
+      {dailyGoalMin > 0 && (
+        <div style={{ fontSize: 14, fontWeight: 800, color: '#475569', marginBottom: 16 }}>
+          🎯 Today: {Math.min(dailyGoalMin, Math.max(1, Math.round((Date.now() - starterSessionStartRef.current) / 60000)))} / {dailyGoalMin} min
+        </div>
+      )}
+
+      {/* 내일 알림 의사 (2026-11-26) — 브라우저 권한은 [Remind me] 탭 시에만 */}
+      {params.get('onboarding') === '1' && !profile?.pushNotifications && (!reminderAsked || reminderState) && (
+        <div style={{ background: 'white', border: '2px solid #6366F140', borderRadius: 18,
+          padding: '18px 20px', marginBottom: 16, maxWidth: 360, width: '100%', boxSizing: 'border-box' }}>
+          {reminderState === '' || reminderState === 'busy' ? (
+            <>
+              <div style={{ fontSize: 15, fontWeight: 900, color: '#0F172A', marginBottom: 6 }}>
+                🔔 Want a reminder tomorrow?
+              </div>
+              <div style={{ fontSize: 13, color: '#475569', lineHeight: 1.6, marginBottom: 14 }}>
+                One short nudge so you keep your streak.
+              </div>
+              <div style={{ display: 'flex', gap: 10 }}>
+                <button onClick={() => chooseReminder(true)} disabled={reminderState === 'busy'}
+                  style={{ ...btnBase, flex: 1, padding: '11px', fontSize: 14,
+                    background: 'linear-gradient(135deg, #6366F1, #8B5CF6)', color: 'white',
+                    opacity: reminderState === 'busy' ? 0.6 : 1 }}>
+                  Remind me
+                </button>
+                <button onClick={() => chooseReminder(false)}
+                  style={{ ...btnBase, flex: 1, padding: '11px', fontSize: 14,
+                    background: 'white', color: '#6366F1', border: '2px solid #6366F1' }}>
+                  No thanks
+                </button>
+              </div>
+            </>
+          ) : (
+            <div style={{ fontSize: 13, fontWeight: 700, lineHeight: 1.6,
+              color: reminderState === 'denied' ? '#B45309' : '#10B981' }}>
+              {reminderState === 'saved' && '✓ Got it! Create a free account below so we can remind you.'}
+              {reminderState === 'on' && '✓ Reminder on! See you tomorrow.'}
+              {reminderState === 'denied' && 'Notifications are blocked in your browser. You can allow them from the 🔒 icon next to the address bar.'}
+              {reminderState === 'no' && 'No problem. See you tomorrow!'}
+            </div>
+          )}
         </div>
       )}
 

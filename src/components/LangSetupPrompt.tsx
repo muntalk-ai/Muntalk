@@ -10,6 +10,7 @@
 // - Escape 키 + 오버레이 클릭으로 닫을 수 있다 (닫기 = "Later"와 동일하게 스누즈).
 
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { updateUserProfile } from '@/lib/userProfile';
 import { LEARN_LANGUAGES, UI_LANGUAGES } from '@/data/languages';
@@ -18,6 +19,7 @@ import {
   snoozeLangPrompt,
   clearLangPromptSnooze,
   markLangChosen,
+  hasExplicitLangChoice,
 } from '@/lib/langPrompt';
 import { lpGet, lpSet } from '@/lib/localProgress';
 
@@ -33,7 +35,13 @@ export default function LangSetupPrompt() {
   const editedRef = useRef(false);
 
   // 표시 조건: 로그인 + 프로필 로드 + 미확정 + 이번 세션에서 닫지 않음 + 스누즈 아님
-  const visible = !!user && !!profile && profile.langsConfirmed === false && !dismissed && !snoozed;
+  // 2026-11-26 듀오링고식 온보딩: /lingua/starter는 레슨 전에 자체 언어 선택
+  // 화면을 띄우므로 여기서는 겹쳐 띄우지 않는다. 이 기기에서 이 계정이 이미
+  // 언어를 직접 골랐으면(가입 전 게스트 선택 이관 포함) 같은 질문을 다시 하지 않는다.
+  const pathname = usePathname();
+  const onStarter = pathname === '/lingua/starter';
+  const alreadyChose = !!user && hasExplicitLangChoice(user.uid);
+  const visible = !!user && !!profile && profile.langsConfirmed === false && !dismissed && !snoozed && !onStarter && !alreadyChose;
 
   // 프리필: profile/localStorage에 저장된 값으로 셀렉트를 미리 채운다.
   // profile은 로그인 직후 비동기로 도착하므로 effect에서 채운다.

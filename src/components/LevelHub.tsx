@@ -179,10 +179,15 @@ export default function LevelHub() {
   const [showPushPrime, setShowPushPrime] = useState(false);
 
   // 푸시 옵트인 카드: 첫 레슨 완료 + 토큰 없음 + 미거부 시 1회 노출
+  // 2026-11-26: 가입 전 첫 레슨 뒤 [Remind me]를 누른 게스트(mt_reminder_opt_in='1',
+  // 가입 시 이 계정으로 이관됨)는 레슨 수와 무관하게 바로 카드를 보여준다.
+  // 브라우저 권한 요청은 여전히 카드 버튼을 탭해야만 뜬다 (사용자 제스처 필요).
   useEffect(() => {
-    if (authLoading || !user || completedLessons.size < 1) return;
+    if (authLoading || !user) return;
+    const optedIn = lpGet('mt_reminder_opt_in') === '1';
+    if (!optedIn && completedLessons.size < 1) return;
     try {
-      if (localStorage.getItem('mt_push_prime_dismissed')) return;
+      if (!optedIn && localStorage.getItem('mt_push_prime_dismissed')) return;
     } catch { /* ignore */ }
     (async () => {
       try {

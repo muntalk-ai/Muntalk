@@ -33,6 +33,9 @@ export const SCOPED_PROGRESS_KEYS = new Set([
   'mt_placement_source',
   'mt_migrated_xp',
   'mt_lang_chosen',
+  // 2026-11-26 듀오링고식 온보딩: 하루 목표(분) + 내일 알림 의사 ('1'/'0')
+  'mt_daily_goal_min',
+  'mt_reminder_opt_in',
 ]);
 
 /** 공용 키 데이터를 이어받은 계정 uid — 한 번만 설정된다. */
