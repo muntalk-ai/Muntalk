@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { db } from '@/lib/firebase';
 import { getLangLabel } from '@/data/languages';
+import type { FunnelStep } from '@/lib/visitTracking';
 import {
   collection, getDocs, doc, setDoc, getDoc, addDoc,
   serverTimestamp, query, orderBy, limit, where,
@@ -23,7 +24,13 @@ interface UserRow {
   learnLang: string; nativeLang: string;
   lastActive: string; lessonsDone: number;
   visitDays: number; activityDates: string[];
+  // 2026-11-26 방문 측정: 실제 접속일 (lib/visitTracking.ts). 배포 시점부터 기록.
+  realVisitDates: string[]; lastSeen: string; muntuzVisitDays: number;
+  funnel: Partial<Record<FunnelStep, string>>;
 }
+
+// visitDates/funnel 기록 시작일 — 이 날짜 이전 가입자는 퍼널·진짜 재방문 집계에서 제외.
+const VISIT_TRACKING_START = '2026-11-26';
 interface LogEntry {
   id: string; action: string; targetEmail: string;
   adminEmail: string; detail: string; ts: string;
@@ -89,13 +96,13 @@ export default function AdminPage() {
   const [toast, setToast] = useState('');
 
   // Users table sorting (null = default fetch order: premium first, then XP desc)
-  type SortKey = 'email'|'name'|'plan'|'joined'|'learning'|'native'|'xp'|'lastActive'|'visits'|'lessons';
+  type SortKey = 'email'|'name'|'plan'|'joined'|'learning'|'native'|'xp'|'lastSeen'|'realVisits'|'lastActive'|'visits'|'lessons';
   const [sortKey, setSortKey] = useState<SortKey | null>(null);
   const [sortDir, setSortDir] = useState<'asc'|'desc'>('asc');
   // All columns: 1st click = ascending, 2nd click = descending, 3rd = ascending again
   const SORT_DEFAULT_DIR: Record<SortKey,'asc'|'desc'> = {
     email:'asc', name:'asc', plan:'asc', joined:'asc', learning:'asc',
-    native:'asc', xp:'asc', lastActive:'asc', visits:'asc', lessons:'asc',
+    native:'asc', xp:'asc', lastSeen:'asc', realVisits:'asc', lastActive:'asc', visits:'asc', lessons:'asc',
   };
   const toggleSort = (key: SortKey) => {
     if (sortKey === key) setSortDir(d => d==='asc'?'desc':'asc');
@@ -181,6 +188,10 @@ export default function AdminPage() {
             lastActive:u.lastActive||'', lessonsDone:Array.isArray(u.completedLessons)?u.completedLessons.length:0,
             activityDates:Array.isArray(u.activityDates)?u.activityDates:[],
             visitDays:Array.isArray(u.activityDates)?u.activityDates.length:0,
+            realVisitDates:Array.isArray(u.visitDates)?[...u.visitDates].sort():[],
+            lastSeen:u.lastSeen||'',
+            muntuzVisitDays:Array.isArray(u.muntuzVisitDates)?u.muntuzVisitDates.length:0,
+            funnel:(u.funnel&&typeof u.funnel==='object')?u.funnel:{},
           };
         })));
         rows.sort((a,b)=>(a.planId==='free'?1:-1)-(b.planId==='free'?1:-1)||b.xp-a.xp);
@@ -306,6 +317,8 @@ export default function AdminPage() {
       case 'learning': return langLabel(u.learnLang).toLowerCase();
       case 'native': return langLabel(u.nativeLang).toLowerCase();
       case 'xp': return u.xp;
+      case 'lastSeen': return u.lastSeen || '';
+      case 'realVisits': return u.realVisitDates.length;
       case 'lastActive': return u.lastActive || '';
       case 'visits': return u.visitDays;
       case 'lessons': return u.lessonsDone;
@@ -417,6 +430,89 @@ export default function AdminPage() {
           ))}
         </div>
 
+        {/* 2026-11-26: 온보딩 퍼널 + 진짜 재방문 (visitDates/funnel 기준, 배포 후 가입자만) */}
+        {(()=>{
+          const addDays = (ymd:string,n:number):string => {
+            const [y,m,d] = ymd.split('-').map(Number);
+            return new Date(Date.UTC(y,m-1,d+n)).toISOString().slice(0,10);
+          };
+          const todayStr = new Date().toISOString().slice(0,10);
+          const tracked = users.filter(u=>u.createdAt && u.createdAt>=VISIT_TRACKING_START);
+          const cohortFor = (days:number) => tracked.filter(u=>u.createdAt>=addDays(todayStr,-days));
+          const pctOf = (a:number,b:number)=>b?Math.round(a/b*100):null as number|null;
+          const STEPS: {label:string; test:(u:UserRow)=>boolean}[] = [
+            {label:'Signed up',          test:()=>true},
+            {label:'Saw level test',     test:u=>!!u.funnel.placementViewedAt},
+            {label:'Started level test', test:u=>!!u.funnel.placementStartedAt},
+            {label:'Finished level test',test:u=>!!u.funnel.placementCompletedAt},
+            {label:'Started a lesson',   test:u=>!!u.funnel.firstLessonStartedAt},
+            {label:'Finished a lesson',  test:u=>!!u.funnel.firstLessonCompletedAt},
+            {label:'Came back (2+ days)',test:u=>u.realVisitDates.length>=2},
+          ];
+          // 진짜 D1/D7: 첫 방문일(가입 직후 첫 접속)을 기준으로 N일 뒤에 접속했는지.
+          // createdAt(UTC)이 아니라 첫 visitDate(기기 로컬)를 기준으로 해 타임존 어긋남을 피한다.
+          const realRet = (n:number) => {
+            const cohort = tracked.filter(u=>u.realVisitDates.length>0 && u.realVisitDates[0]<=addDays(todayStr,-n));
+            const kept = cohort.filter(u=>u.realVisitDates.includes(addDays(u.realVisitDates[0],n)));
+            return {cohort:cohort.length, kept:kept.length};
+          };
+          const d1 = realRet(1), d7 = realRet(7);
+          const skipped = tracked.filter(u=>!!u.funnel.placementSkippedAt).length;
+          const muntuzVisitors = users.filter(u=>u.muntuzVisitDays>0).length;
+          return (
+            <div style={{...CARD,padding:'18px 20px',marginBottom:24}}>
+              <div style={{fontSize:14,fontWeight:900,color:'#0F172A',marginBottom:4}}>🧭 Onboarding funnel &amp; real return</div>
+              <div style={{fontSize:11,color:'#94A3B8',fontWeight:700,marginBottom:14}}>
+                Counts real visits (any page while signed in), not just lessons. Tracking started {VISIT_TRACKING_START} — only users who joined on or after that date are counted. No history before that.
+              </div>
+              {[14,30].map(days=>{
+                const cohort = cohortFor(days);
+                return (
+                  <div key={days} style={{marginBottom:14}}>
+                    <div style={{fontSize:11,fontWeight:900,color:'#64748B',letterSpacing:1,textTransform:'uppercase',marginBottom:8}}>Joined in last {days} days · {cohort.length} users</div>
+                    <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
+                      {STEPS.map(st=>{
+                        const n = cohort.filter(st.test).length;
+                        const p = pctOf(n,cohort.length);
+                        return (
+                          <div key={st.label} style={{flex:'1 1 120px',background:'#F8FAFC',borderRadius:12,padding:'10px 12px'}}>
+                            <div style={{fontSize:20,fontWeight:900,color:'#0F172A'}}>{n}</div>
+                            <div style={{fontSize:11,color:'#64748B',fontWeight:700,marginTop:2}}>{st.label}</div>
+                            <div style={{fontSize:11,fontWeight:900,color:p!==null&&p>=50?'#10B981':'#F59E0B',marginTop:2}}>{p===null?'—':`${p}%`}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              })}
+              <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
+                {([
+                  ['Real D1 return', d1.kept, d1.cohort],
+                  ['Real D7 return', d7.kept, d7.cohort],
+                ] as [string,number,number][]).map(([label,k,c])=>{
+                  const p = pctOf(k,c);
+                  return (
+                    <div key={label} style={{flex:'1 1 160px',background:'#EEF2FF',borderRadius:12,padding:'10px 12px'}}>
+                      <div style={{fontSize:20,fontWeight:900,color:'#4338CA'}}>{p===null?'—':`${p}%`}</div>
+                      <div style={{fontSize:11,color:'#4338CA',fontWeight:700,marginTop:2}}>{label}</div>
+                      <div style={{fontSize:11,color:'#6366F1',fontWeight:900,marginTop:2}}>{c?`${k}/${c}`:'not enough data yet'}</div>
+                    </div>
+                  );
+                })}
+                <div style={{flex:'1 1 160px',background:'#F8FAFC',borderRadius:12,padding:'10px 12px'}}>
+                  <div style={{fontSize:20,fontWeight:900,color:'#0F172A'}}>{skipped}</div>
+                  <div style={{fontSize:11,color:'#64748B',fontWeight:700,marginTop:2}}>Skipped level test</div>
+                </div>
+                <div style={{flex:'1 1 160px',background:'#F8FAFC',borderRadius:12,padding:'10px 12px'}}>
+                  <div style={{fontSize:20,fontWeight:900,color:'#0F172A'}}>{muntuzVisitors}</div>
+                  <div style={{fontSize:11,color:'#64748B',fontWeight:700,marginTop:2}}>Users who visited muntuz.com (not counted above)</div>
+                </div>
+              </div>
+            </div>
+          );
+        })()}
+
         {/* Activation funnel: signup → return → XP → first lesson */}
         {(()=>{
           const total = users.length;
@@ -431,14 +527,14 @@ export default function AdminPage() {
             // 넘을 수 없다. (참고: 완료자(17) > XP 보유자(10)라는 역전 자체는
             // S-2 XP 미지급 증상이며, 이번 배치의 지급 경로 수정으로 신규
             // 발생은 막힌다.)
-            {label:'Returned', value:returned, pct:total?pct(returned,total):null},
+            {label:'Did a lesson (any day)', value:returned, pct:total?pct(returned,total):null},
             {label:'Earned XP', value:engaged, pct:total?pct(engaged,total):null},
             {label:'Finished lesson', value:lessonDone, pct:total?pct(lessonDone,total):null},
           ];
           function pct(a:number,b:number){ return Math.round(a/b*100); }
           return (
             <div style={{...CARD,padding:'18px 20px',marginBottom:24}}>
-              <div style={{fontSize:14,fontWeight:900,color:'#0F172A',marginBottom:12}}>📊 Activation Funnel</div>
+              <div style={{fontSize:14,fontWeight:900,color:'#0F172A',marginBottom:12}}>📊 Activation Funnel <span style={{fontSize:11,color:'#94A3B8',fontWeight:700}}>(all users · lesson-based)</span></div>
               <div style={{display:'flex',alignItems:'stretch',gap:0}}>
                 {steps.map((s,i)=>(
                   <div key={s.label} style={{flex:1,display:'flex',alignItems:'center'}}>
@@ -475,12 +571,12 @@ export default function AdminPage() {
             {label:'D1 retention', ...r1},
             {label:'D7 retention', ...r7},
             {label:'D30 retention', ...r30},
-            {label:'Revisit rate (≥2 visits)', cohort:total, retained:revisit},
+            {label:'Lesson on ≥2 days', cohort:total, retained:revisit},
           ];
           const pctOf = (a:number,b:number)=>b?Math.round(a/b*100):null as number|null;
           return (
             <div style={{...CARD,padding:'18px 20px',marginBottom:24}}>
-              <div style={{fontSize:14,fontWeight:900,color:'#0F172A',marginBottom:12}}>🔁 Retention</div>
+              <div style={{fontSize:14,fontWeight:900,color:'#0F172A',marginBottom:12}}>🔁 Retention <span style={{fontSize:11,color:'#94A3B8',fontWeight:700}}>(lesson-based — counts only days with a finished lesson)</span></div>
               <div style={{display:'flex',alignItems:'stretch',gap:0}}>
                 {cells.map((c,i)=>{
                   const p = pctOf(c.retained,c.cohort);
@@ -527,7 +623,7 @@ export default function AdminPage() {
             />
             <div style={{...CARD,overflow:'hidden'}}>
               <div style={{overflowX:'auto',maxHeight:'70vh',overflowY:'auto'}}>
-                <table className="admin-table" style={{minWidth:1040}}>
+                <table className="admin-table" style={{minWidth:1240}}>
                   <thead>
                     <tr>
                       <SortTH k="email" label="Email" />
@@ -537,15 +633,17 @@ export default function AdminPage() {
                       <SortTH k="learning" label="Learning" />
                       <SortTH k="native" label="Native" />
                       <SortTH k="xp" label="XP" numeric />
-                      <SortTH k="lastActive" label="Last active" />
-                      <SortTH k="visits" label="Visits" numeric />
+                      <SortTH k="lastSeen" label="Last seen" />
+                      <SortTH k="realVisits" label="Visit days" numeric />
+                      <SortTH k="lastActive" label="Last lesson" />
+                      <SortTH k="visits" label="Lesson days" numeric />
                       <SortTH k="lessons" label="Lessons" numeric />
                       <th style={TH}>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     {filtered.length===0&&(
-                      <tr><td colSpan={11} style={{padding:48,textAlign:'center',color:'#94A3B8',fontWeight:700,fontSize:13}}>No users found</td></tr>
+                      <tr><td colSpan={13} style={{padding:48,textAlign:'center',color:'#94A3B8',fontWeight:700,fontSize:13}}>No users found</td></tr>
                     )}
                     {sorted.map((u,i)=>(
                       <tr key={u.uid} className="urow" style={{background:i%2?'#FAFBFD':'#fff',cursor:'pointer'}}
@@ -559,6 +657,8 @@ export default function AdminPage() {
                         <td style={{...TD,color:'#475569',fontWeight:700,whiteSpace:'nowrap'}} title={u.learnLang}>{langLabel(u.learnLang)}</td>
                         <td style={{...TD,color:'#475569',fontWeight:700,whiteSpace:'nowrap'}} title={u.nativeLang}>{langLabel(u.nativeLang)}</td>
                         <td style={{...TD_NUM,fontWeight:900,color:'#6366F1',whiteSpace:'nowrap'}}>{u.xp.toLocaleString()}</td>
+                        <td style={{...TD,color:'#0F172A',fontWeight:700,whiteSpace:'nowrap'}}>{u.lastSeen||'—'}</td>
+                        <td style={{...TD_NUM,color:'#0F172A',fontWeight:900,whiteSpace:'nowrap'}}>{u.realVisitDates.length}</td>
                         <td style={{...TD,color:'#64748B',fontWeight:700,whiteSpace:'nowrap'}}>{u.lastActive||'—'}</td>
                         <td style={{...TD_NUM,color:'#475569',fontWeight:700,whiteSpace:'nowrap'}}>{u.visitDays}</td>
                         <td style={{...TD_NUM,color:'#475569',fontWeight:700,whiteSpace:'nowrap'}}>{u.lessonsDone}</td>
@@ -793,7 +893,7 @@ export default function AdminPage() {
           <div style={{background:'#fff',borderRadius:20,padding:'28px',maxWidth:460,width:'100%',maxHeight:'85vh',overflowY:'auto'}}>
             <div style={{fontSize:16,fontWeight:900,color:'#0F172A',marginBottom:2}}>{detail.displayName}</div>
             <div style={{fontSize:12,color:'#64748B',fontWeight:700,marginBottom:4}}>{detail.email}{isAdminRow(detail.email)&&<span style={{marginLeft:6,padding:'2px 7px',borderRadius:6,background:'#EEF2FF',color:'#6366F1',fontSize:9,fontWeight:900}}>ADMIN</span>}</div>
-            <div style={{fontSize:12,color:'#94A3B8',fontWeight:700,marginBottom:18}}>Joined {detail.createdAt||'—'}{detail.lastActive?` · Last active ${detail.lastActive}`:''}</div>
+            <div style={{fontSize:12,color:'#94A3B8',fontWeight:700,marginBottom:18}}>Joined {detail.createdAt||'—'}{detail.lastSeen?` · Last seen ${detail.lastSeen}`:''}{detail.lastActive?` · Last lesson ${detail.lastActive}`:''}</div>
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:10,marginBottom:18}}>
               {([
                 ['Plan', PLAN_LABELS[detail.planId]],
@@ -801,7 +901,9 @@ export default function AdminPage() {
                 ['Total XP', detail.xp.toLocaleString()],
                 ['Day streak', `${detail.streak}🔥`],
                 ['Lessons done', String(detail.lessonsDone)],
-                ['Visit days', String(detail.visitDays)],
+                ['Lesson days', String(detail.visitDays)],
+                ['Visit days', String(detail.realVisitDates.length)],
+                ['Last seen', detail.lastSeen||'—'],
                 ['Learning', langLabel(detail.learnLang)],
                 ['Native', langLabel(detail.nativeLang)],
               ] as [string,string][]).map(([k,v])=>(
@@ -815,7 +917,24 @@ export default function AdminPage() {
             <div style={{fontSize:12,color:'#475569',fontWeight:600,lineHeight:1.8,background:'#F8FAFC',borderRadius:12,padding:'12px 14px',marginBottom:8,wordBreak:'break-all',maxHeight:120,overflowY:'auto'}}>
               {detailLessons===null?'Loading…':detailLessons.length===0?'No lessons completed yet':detailLessons.join(', ')}
             </div>
-            <div style={{...FIELD_LABEL,marginBottom:8}}>Active days ({detail.activityDates.length})</div>
+            <div style={{...FIELD_LABEL,marginBottom:8}}>Visit days ({detail.realVisitDates.length})</div>
+            <div style={{fontSize:12,color:'#475569',fontWeight:600,lineHeight:1.8,background:'#F8FAFC',borderRadius:12,padding:'12px 14px',marginBottom:8,wordBreak:'break-all',maxHeight:120,overflowY:'auto'}}>
+              {detail.realVisitDates.length===0?`No visits recorded (tracking started ${VISIT_TRACKING_START})`:detail.realVisitDates.join(', ')}
+            </div>
+            <div style={{...FIELD_LABEL,marginBottom:8}}>Onboarding steps</div>
+            <div style={{fontSize:12,color:'#475569',fontWeight:600,lineHeight:1.8,background:'#F8FAFC',borderRadius:12,padding:'12px 14px',marginBottom:8}}>
+              {([
+                ['Saw level test','placementViewedAt'],
+                ['Started level test','placementStartedAt'],
+                ['Finished level test','placementCompletedAt'],
+                ['Skipped level test','placementSkippedAt'],
+                ['Started a lesson','firstLessonStartedAt'],
+                ['Finished a lesson','firstLessonCompletedAt'],
+              ] as [string,FunnelStep][]).map(([label,key])=>(
+                <div key={key}>{label}: {detail.funnel[key]?detail.funnel[key]!.slice(0,16).replace('T',' '):'—'}</div>
+              ))}
+            </div>
+            <div style={{...FIELD_LABEL,marginBottom:8}}>Lesson days ({detail.activityDates.length})</div>
             <div style={{fontSize:12,color:'#475569',fontWeight:600,lineHeight:1.8,background:'#F8FAFC',borderRadius:12,padding:'12px 14px',marginBottom:22,wordBreak:'break-all',maxHeight:120,overflowY:'auto'}}>
               {detail.activityDates.length===0?'No activity recorded':[...detail.activityDates].sort().join(', ')}
             </div>

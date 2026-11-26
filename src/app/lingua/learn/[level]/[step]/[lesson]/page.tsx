@@ -13,6 +13,7 @@ import { apiFetch } from '@/lib/apiClient';
 import { REFERRAL_REWARDS } from '@/lib/referral';
 import RtlDir from '@/components/RtlDir';
 import { lpGet, lpGetInt, lpGetJson, lpSet } from '@/lib/localProgress';
+import { markFunnelStep } from '@/lib/visitTracking';
 
 // 비로그인 허용 레슨 (A1 첫 레슨만)
 const GUEST_ALLOWED_LESSON = 'a1-1-1';
@@ -63,6 +64,11 @@ export default function LessonPage({
     if (!retry.ok) console.warn('[lesson] XP award retry failed:', retry.reason);
     return retry.ok;
   };
+
+  // 온보딩 퍼널 측정 (2026-11-26): 첫 레슨 시작 — 사용자별 첫 1회만 기록.
+  useEffect(() => {
+    if (user) void markFunnelStep(user.uid, 'firstLessonStartedAt');
+  }, [user]);
 
   // 비로그인 게스트 접근 제한 — a1-1-1 외 모든 레슨 차단
   useEffect(() => {
@@ -119,6 +125,7 @@ export default function LessonPage({
 
       // Firestore 저장 (로그인 시)
       if (user) {
+        void markFunnelStep(user.uid, 'firstLessonCompletedAt');
         try {
           // PR-H: XP는 서버 엔드포인트로 지급 — 클라이언트에서 xp 직접 쓰기 금지.
           // 완료 레슨 목록만 저장 (xp 필드 건드리지 않음).
