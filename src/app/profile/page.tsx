@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { updateProfile, updateEmail, updatePassword, EmailAuthProvider, reauthenticateWithCredential, deleteUser } from 'firebase/auth';
+import { updateProfile, updateEmail, updatePassword, EmailAuthProvider, reauthenticateWithCredential } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
 
@@ -10,6 +10,7 @@ import { updateUserProfile, resolveLearnLang } from '@/lib/userProfile';
 import { markLangChosen } from '@/lib/langPrompt';
 import { requestPushPermission } from '@/lib/notifications';
 import { apiFetch } from '@/lib/apiClient';
+import { clearLocalAccountData } from '@/lib/clearLocalAccountData';
 import { LEARN_LANGUAGES, UI_LANGUAGES, getLangLabel } from '@/data/languages';
 import { PURPOSE_OPTIONS, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
@@ -170,7 +171,23 @@ export default function ProfilePage() {
     try {
       const cred = EmailAuthProvider.credential(user.email, deletePw);
       await reauthenticateWithCredential(user, cred);
-      await deleteUser(user);
+      // Server deletes all account data (Firestore, Storage photos) and then
+      // the Auth user. A fresh token carries the just-renewed auth_time.
+      await user.getIdToken(true);
+      const res = await apiFetch('/api/account/delete', { method: 'POST' });
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({} as { error?: string }));
+        if (body.error === 'active_subscription') {
+          showError('Please cancel your subscription first (Manage subscription), then delete your account.');
+        } else if (body.error === 'requires_recent_login') {
+          showError('Please enter your password again and retry.');
+        } else {
+          showError('Could not delete your account right now. Please try again.');
+        }
+        return;
+      }
+      clearLocalAccountData(user.uid);
+      await auth.signOut().catch(() => {});
       router.push('/login');
     } catch (e: any) {
       if (e.code === 'auth/wrong-password' || e.code === 'auth/invalid-credential') showError('Incorrect password.');
