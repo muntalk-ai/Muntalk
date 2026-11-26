@@ -19,13 +19,26 @@
 //   funnel:            map of first-time ISO timestamps, set once each:
 //     placementViewedAt, placementStartedAt, placementCompletedAt,
 //     placementSkippedAt, firstLessonStartedAt, firstLessonCompletedAt
+//     guestStarterStartedAt, guestStarterCompletedAt, guestMicrotalkCompletedAt
+//       — guest milestones, written to uid-free localStorage by Starter /
+//       Micro-Talk and attached to the profile once at signup (see
+//       attachGuestFunnel); signupPromptShownAt / signupPromptAcceptedAt
+//       record the SaveProgressCard being shown / tapped.
+//   entrySource:       string — first-touch entry: 'starter' | 'microtalk' |
+//                                'placement' | 'reel' (set once, guest only)
 //
+// Guest milestones are NOT uid-scoped in localStorage (guests have no uid).
+// attachGuestFunnel runs only when this device's progress belongs to the
+// signing-in account (isLocalProgressOwner, same trade-off as PR #258):
+// on a shared device the first account to sign up inherits them.
+
 // History starts at deploy — nothing is backfilled.
 // Everything here is best-effort: a failed write never blocks the app.
 
 import { doc, getDoc, updateDoc, arrayUnion } from 'firebase/firestore';
 import { db } from './firebase';
 import { isMuntuzHost } from './brand';
+import { isLocalProgressOwner } from './localProgress';
 
 const MAX_VISIT_DAYS = 365;
 
@@ -35,7 +48,12 @@ export type FunnelStep =
   | 'placementCompletedAt'
   | 'placementSkippedAt'
   | 'firstLessonStartedAt'
-  | 'firstLessonCompletedAt';
+  | 'firstLessonCompletedAt'
+  | 'guestStarterStartedAt'
+  | 'guestStarterCompletedAt'
+  | 'guestMicrotalkCompletedAt'
+  | 'signupPromptShownAt'
+  | 'signupPromptAcceptedAt';
 
 function localDay(d: Date = new Date()): string {
   const y = d.getFullYear();
@@ -107,5 +125,47 @@ export async function markFunnelStep(uid: string | null | undefined, step: Funne
     lsSet(guardKey, '1');
   } catch (e) {
     console.warn('[funnel] mark failed:', step, e);
+  }
+}
+
+// Guest milestones live in uid-free localStorage (written by Starter /
+// Micro-Talk / SaveProgressCard — same strings on both branches, no cross
+// import so merge order doesn't matter). At signup, attach them once to
+// the profile so the admin funnel can show guest lesson -> signup
+// conversion. Only for the account that owns this device's progress
+// (first account to sign up here); never overwrites existing values.
+const GUEST_FUNNEL_KEYS: [string, FunnelStep][] = [
+  ['mt_guest_starter_started_at', 'guestStarterStartedAt'],
+  ['mt_guest_starter_completed_at', 'guestStarterCompletedAt'],
+  ['mt_guest_microtalk_completed_at', 'guestMicrotalkCompletedAt'],
+  ['mt_signup_prompt_shown_at', 'signupPromptShownAt'],
+  ['mt_signup_prompt_accepted_at', 'signupPromptAcceptedAt'],
+];
+const ENTRY_SOURCE_KEY = 'mt_entry_source';
+
+export async function attachGuestFunnel(uid: string): Promise<void> {
+  if (!uid || typeof window === 'undefined') return;
+  if (!isLocalProgressOwner(uid)) return;
+  const guardKey = `mt_guest_funnel_attached_${uid}`;
+  if (lsGet(guardKey)) return;
+  try {
+    const ref = doc(db, 'users', uid);
+    const snap = await getDoc(ref);
+    if (!snap.exists()) return;
+    const data = snap.data();
+    const funnel = data.funnel || {};
+    const patch: Record<string, unknown> = {};
+    for (const [localKey, funnelKey] of GUEST_FUNNEL_KEYS) {
+      const v = lsGet(localKey);
+      if (v && !funnel[funnelKey]) patch[`funnel.${funnelKey}`] = v;
+    }
+    const entrySource = lsGet(ENTRY_SOURCE_KEY);
+    if (entrySource && !data.entrySource) patch.entrySource = entrySource;
+    if (Object.keys(patch).length > 0) {
+      await updateDoc(ref, patch);
+    }
+    lsSet(guardKey, '1');
+  } catch (e) {
+    console.warn('[funnel] attach guest failed:', e);
   }
 }

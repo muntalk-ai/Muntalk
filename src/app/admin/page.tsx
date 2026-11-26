@@ -27,6 +27,8 @@ interface UserRow {
   // 2026-11-26 방문 측정: 실제 접속일 (lib/visitTracking.ts). 배포 시점부터 기록.
   realVisitDates: string[]; lastSeen: string; muntuzVisitDays: number;
   funnel: Partial<Record<FunnelStep, string>>;
+  // 2026-11-26: 첫 진입 경로 (게스트 시절 first-touch, 가입 시 프로필에 붙음)
+  entrySource: string;
 }
 
 // visitDates/funnel 기록 시작일 — 이 날짜 이전 가입자는 퍼널·진짜 재방문 집계에서 제외.
@@ -192,6 +194,7 @@ export default function AdminPage() {
             lastSeen:u.lastSeen||'',
             muntuzVisitDays:Array.isArray(u.muntuzVisitDates)?u.muntuzVisitDates.length:0,
             funnel:(u.funnel&&typeof u.funnel==='object')?u.funnel:{},
+            entrySource:u.entrySource||'',
           };
         })));
         rows.sort((a,b)=>(a.planId==='free'?1:-1)-(b.planId==='free'?1:-1)||b.xp-a.xp);
@@ -486,6 +489,53 @@ export default function AdminPage() {
                   </div>
                 );
               })}
+              {(()=>{ // 게스트 레슨 → 가입 + 진입 경로 (2026-11-26, 30일 코호트)
+                const cohort30 = cohortFor(30);
+                const g = (k:FunnelStep) => cohort30.filter(u=>!!u.funnel[k]).length;
+                const guestStarted = g('guestStarterStartedAt');
+                const guestStarterDone = g('guestStarterCompletedAt');
+                const guestMicrotalkDone = g('guestMicrotalkCompletedAt');
+                const promptShown = g('signupPromptShownAt');
+                const promptAccepted = g('signupPromptAcceptedAt');
+                const ENTRY_LABELS: [string,string][] = [
+                  ['starter','Starter'], ['microtalk','Micro-Talk'],
+                  ['placement','Level test'], ['reel','Reel'], ['','No data'],
+                ];
+                return (
+                  <div style={{marginBottom:14}}>
+                    <div style={{fontSize:11,fontWeight:900,color:'#64748B',letterSpacing:1,textTransform:'uppercase',marginBottom:4}}>Guest lesson → signup · joined in last 30 days</div>
+                    <div style={{fontSize:11,color:'#94A3B8',fontWeight:700,marginBottom:8}}>Only signed-up users are visible here — guests who never signed up aren&apos;t counted.</div>
+                    <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
+                      {([
+                        ['Started Starter as guest', guestStarted],
+                        ['Finished Starter as guest', guestStarterDone],
+                        ['Finished Micro-Talk as guest', guestMicrotalkDone],
+                        ['Saw save-progress card', promptShown],
+                        ['Tapped Create account', promptAccepted],
+                      ] as [string,number][]).map(([label,n])=>(
+                        <div key={label} style={{flex:'1 1 120px',background:'#F8FAFC',borderRadius:12,padding:'10px 12px'}}>
+                          <div style={{fontSize:20,fontWeight:900,color:'#0F172A'}}>{n}</div>
+                          <div style={{fontSize:11,color:'#64748B',fontWeight:700,marginTop:2}}>{label}</div>
+                        </div>
+                      ))}
+                    </div>
+                    <div style={{fontSize:11,fontWeight:900,color:'#64748B',letterSpacing:1,textTransform:'uppercase',margin:'12px 0 8px'}}>Entry source (first touch) · joined in last 30 days</div>
+                    <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
+                      {ENTRY_LABELS.map(([key,label])=>{
+                        const group = cohort30.filter(u=>(u.entrySource||'')===key);
+                        const guestDone = group.filter(u=>!!u.funnel.guestStarterCompletedAt || !!u.funnel.guestMicrotalkCompletedAt).length;
+                        return (
+                          <div key={key||'none'} style={{flex:'1 1 120px',background:'#F8FAFC',borderRadius:12,padding:'10px 12px'}}>
+                            <div style={{fontSize:20,fontWeight:900,color:'#0F172A'}}>{group.length}</div>
+                            <div style={{fontSize:11,color:'#64748B',fontWeight:700,marginTop:2}}>{label}</div>
+                            <div style={{fontSize:11,fontWeight:900,color:'#6366F1',marginTop:2}}>{guestDone} finished a guest lesson first</div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              })()}
               <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
                 {([
                   ['Real D1 return', d1.kept, d1.cohort],

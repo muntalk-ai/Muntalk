@@ -13,7 +13,7 @@ import {
 } from '@/lib/userProfile';
 import { claimLocalProgress, releaseLocalProgress, lpGetInt, lpGetJson } from '@/lib/localProgress';
 import LangSetupPrompt from '@/components/LangSetupPrompt';
-import { recordVisit } from '@/lib/visitTracking';
+import { recordVisit, attachGuestFunnel } from '@/lib/visitTracking';
 
 interface AuthCtx {
   user:     User | null;
@@ -126,6 +126,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         // 방문 측정 (2026-11-26): 레슨 완료와 별개로 "들어온 날"을 기록한다.
         // 스트릭·activityDates는 건드리지 않는다. 프로필이 생긴 뒤에만 실행.
         if (p) void recordVisit(u.uid);
+        // 게스트 퍼널 연결 (2026-11-26): 게스트로 Starter/Micro-Talk를 한 뒤
+        // 가입한 경우, 기기에 남은 게스트 마일스톤·진입 경로를 프로필에 한 번
+        // 붙인다. 이 기기의 진도를 이어받은 계정에만 적용된다 (공유 기기 주의).
+        if (p) void attachGuestFunnel(u.uid);
       } else {
         setProfile(null);
       }
