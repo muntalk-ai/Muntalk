@@ -568,9 +568,9 @@ export default function AdminPage() {
           const r1 = retention(1), r7 = retention(7), r30 = retention(30);
           const revisit = users.filter(u=>u.visitDays>=2).length;
           const cells = [
-            {label:'D1 retention', ...r1},
-            {label:'D7 retention', ...r7},
-            {label:'D30 retention', ...r30},
+            {label:'D1 · lesson done', ...r1},
+            {label:'D7 · lesson done', ...r7},
+            {label:'D30 · lesson done', ...r30},
             {label:'Lesson on ≥2 days', cohort:total, retained:revisit},
           ];
           const pctOf = (a:number,b:number)=>b?Math.round(a/b*100):null as number|null;
