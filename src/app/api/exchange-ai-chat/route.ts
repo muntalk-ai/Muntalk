@@ -33,6 +33,7 @@ import {
   vocabDocId,
   type SessionReview,
 } from '@/lib/exchangeMemoryReview';
+import { recordAiChatStat } from '@/lib/exchangeAiStats';
 
 // MunTalk Exchange AI chat (pilot).
 // One Gemini call per user message. Chat history lives in the browser
@@ -897,6 +898,16 @@ export async function POST(req: NextRequest) {
     // retried once with a larger budget instead of being served as a
     // complete reply. Other hosts keep the old 600-token behaviour.
     const isMuntuz = isMuntuzHost(req);
+    // Admin metrics (exchange_ai_stats): counted only for a successful
+    // reply, never blocks or breaks it. No message text is stored.
+    const guestDeviceId = typeof body.deviceId === 'string' ? body.deviceId.trim().slice(0, 128) : '';
+    const countReply = () =>
+      recordAiChatStat({
+        uid: id ? id.uid : null,
+        guestKey: guestDeviceId ? `d:${guestDeviceId}` : `ip:${clientIp(req)}`,
+        newChat: body.newChat === true,
+        isMuntuz,
+      });
     const chatMaxTokens = isMuntuz ? CHAT_MAX_OUTPUT_TOKENS : 600;
     for (const model of MODELS) {
       try {
@@ -921,6 +932,7 @@ export async function POST(req: NextRequest) {
               if (retry.ok === true) {
                 logChatUsage(model, retry, 'attempt=2');
                 if (retry.text) {
+                  await countReply();
                   return NextResponse.json(
                     buildChatReply(retry.text, photoPick ? photoPick.url : null, retry.finishReason === 'MAX_TOKENS')
                   );
@@ -934,8 +946,10 @@ export async function POST(req: NextRequest) {
             // Retry failed, empty, or still cut: return the first reply
             // but flag it, so the client never mistakes a cut reply
             // for a complete one.
+            await countReply();
             return NextResponse.json(buildChatReply(result.text, photoPick ? photoPick.url : null, true));
           }
+          await countReply();
           return NextResponse.json(buildChatReply(result.text, photoPick ? photoPick.url : null, false));
         }
         return NextResponse.json({ error: 'Empty AI reply — please try again' }, { status: 502 });
