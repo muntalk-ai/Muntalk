@@ -53,6 +53,13 @@ export function middleware(request: NextRequest) {
     return NextResponse.rewrite(new URL('/muntuz', request.url));
   }
 
+  // ── Muntuz admin (2026-11-26, Jay): /admin on the Muntuz host is the shared
+  // MunTalk+Muntuz user panel, which confused the Muntuz numbers. Send it to the
+  // Muntuz-only Exchange admin. The shared panel stays at muntalk.com/admin.
+  if (isMuntuz && (pathname === '/admin' || pathname === '/admin/')) {
+    return NextResponse.redirect(new URL('/exchange/admin', request.url), 307);
+  }
+
   // ── Muntuz manifest (TWA): the Muntuz Android app (com.muntuz.app)
   // points its webManifestUrl at /manifest.webmanifest on the muntuz host.
   // Serve the Muntuz-branded manifest there; every other host keeps the
@@ -109,11 +116,12 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // '/' (Muntuz host → /muntuz), '/manifest.webmanifest'
+  // '/' (Muntuz host → /muntuz), '/admin' (Muntuz host → /exchange/admin),
+  // '/manifest.webmanifest'
   // (Muntuz host → /manifest-muntuz.webmanifest), and the shared logo
   // paths (Muntuz host → Muntuz-only copies, see above), plus
   // '/favicon.ico' and '/icon-192x192.png' (Muntuz host → /logo-muntuz.png).
   // Every other branch above returns NextResponse.next(), so no other
   // path needs to invoke it.
-  matcher: ['/', '/manifest.webmanifest', '/logo.png', '/apple-touch-icon.png', '/icon-maskable.png', '/favicon.ico', '/icon-192x192.png'],
+  matcher: ['/', '/admin', '/manifest.webmanifest', '/logo.png', '/apple-touch-icon.png', '/icon-maskable.png', '/favicon.ico', '/icon-192x192.png'],
 };
