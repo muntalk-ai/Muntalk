@@ -57,6 +57,7 @@ export async function GET(req: NextRequest) {
         visitDates: Array.isArray(u.visitDates) ? u.visitDates : [],
         lastSeen: u.lastSeen || '',
         muntuzVisitDays: Array.isArray(u.muntuzVisitDates) ? u.muntuzVisitDates.length : 0,
+        signupSite: u.signupSite === 'muntuz' || u.signupSite === 'muntalk' ? u.signupSite : '',
         funnel: u.funnel && typeof u.funnel === 'object' ? u.funnel : {},
         entrySource: u.entrySource || '',
         planId: (s?.planId as string) || 'free',

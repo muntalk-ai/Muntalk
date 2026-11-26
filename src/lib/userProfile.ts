@@ -88,6 +88,8 @@ export interface UserProfile {
   email:        string;
   displayName:  string;
   photoURL:     string;
+  // 2026-11-26: 가입한 사이트 (프로필 최초 생성 시 1회만 기록, 이전 계정엔 없음)
+  signupSite?:  'muntuz' | 'muntalk';
   // 학습 설정
   learnLang:    string;   // 학습 언어 코드 (e.g. 'en-US')
   nativeLang:   string;   // 모국어 코드
@@ -162,6 +164,15 @@ export async function getUserProfile(uid: string): Promise<UserProfile | null> {
   return snap.exists() ? { ...DEFAULT_PROFILE, ...snap.data() } as UserProfile : null;
 }
 
+/** 현재 접속 사이트 — muntuz.com / www.muntuz.com 이면 'muntuz', 그 외 'muntalk' */
+export function detectSignupSite(): 'muntuz' | 'muntalk' {
+  try {
+    if (typeof window === 'undefined') return 'muntalk';
+    const h = window.location.hostname.toLowerCase();
+    return h === 'muntuz.com' || h === 'www.muntuz.com' ? 'muntuz' : 'muntalk';
+  } catch { return 'muntalk'; }
+}
+
 /** 신규 유저 프로필 생성 */
 export async function createUserProfile(
   uid: string,
@@ -174,6 +185,9 @@ export async function createUserProfile(
     ...DEFAULT_PROFILE,
     nativeLang: detectBrowserNativeLang(),
     langsConfirmed: false, // 신규 가입 — LangSetupPrompt에서 직접 선택할 때까지 미확정
+    // 최초 생성 때만 기록 — createUserProfile은 프로필이 없을 때만 호출됨
+    // (ensureFirstLoginSetup), 그래서 기존 값을 덮어쓰지 않는다.
+    signupSite: detectSignupSite(),
     createdAt: serverTimestamp(),
     updatedAt: serverTimestamp(),
   };
