@@ -10,7 +10,7 @@ const HOUSE_FRIENDS = [
   {
     id: 'emily',
     name: 'Emily',
-    avatar: '/muntuz-avatars/emily.jpg',
+    avatar: '/muntuz-avatars/emily-face-v2.webp',
     pers: 'Warm, curious, first to laugh',
     hobby: 'Alley-café hunting, journaling, late-night tea',
     places: 'That tiny alley café · her sunny balcony',
@@ -18,7 +18,7 @@ const HOUSE_FRIENDS = [
   {
     id: 'jiyoung',
     name: 'Jiyoung',
-    avatar: '/muntuz-avatars/jiyoung.jpg',
+    avatar: '/muntuz-avatars/jiyoung-face-v2.webp',
     pers: 'Bright, encouraging, a little mischievous',
     hobby: 'Kimbap experiments, K-dramas, weekend markets',
     places: 'Her kitchen · the market by the river',
@@ -26,7 +26,7 @@ const HOUSE_FRIENDS = [
   {
     id: 'chloe',
     name: 'Chloe',
-    avatar: '/muntuz-avatars/chloe.jpg',
+    avatar: '/muntuz-avatars/chloe-face-v2.webp',
     pers: 'Witty, thoughtful, quietly poetic',
     hobby: 'Songwriting, French films, slow coffee',
     places: 'The corner café · old bookshops',
@@ -34,7 +34,7 @@ const HOUSE_FRIENDS = [
   {
     id: 'sofia',
     name: 'Sofia',
-    avatar: '/muntuz-avatars/sofia.jpg',
+    avatar: '/muntuz-avatars/sofia-face-v2.webp',
     pers: 'Sunny, expressive, feeds everyone',
     hobby: 'Pasta from scratch, salsa nights, farmers’ markets',
     places: 'Her kitchen · the dance studio',
@@ -42,7 +42,7 @@ const HOUSE_FRIENDS = [
   {
     id: 'amara',
     name: 'Amara',
-    avatar: '/muntuz-avatars/amara.jpg',
+    avatar: '/muntuz-avatars/amara-face-v2.webp',
     pers: 'Calm, steady, dry sense of humor',
     hobby: 'Sunrise runs, sketching, stargazing',
     places: 'The river path · the hill at dawn',

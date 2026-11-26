@@ -335,7 +335,7 @@ export const AI_PARTNERS: AiPartner[] = [
     personality: 'Warm and lively; loves Latin music, family recipes, and beach trips.',
     greeting:
       "Hi! I'm Sofia, an AI practice partner. Let's practice Spanish — shall we start with food words?",
-    avatar: '/muntuz-avatars/sofia.jpg',
+    avatar: '/muntuz-avatars/sofia-face-v2.webp',
     gallery: ['/muntuz-avatars/sofia.jpg', '/muntuz/sofia-pasta.webp', '/muntuz/ep-livingroom-night.webp', '/muntuz/ep-plaza-stage.webp', '/muntuz/ep-kitchen-together.webp', '/muntuz/ep-studio-stage.webp'],
     heightCm: 172,
     weightKg: 54,
@@ -365,7 +365,7 @@ export const AI_PARTNERS: AiPartner[] = [
     personality: 'Bright and confident; loves Afrobeats, morning runs, and city photography.',
     greeting:
       "Hi! I'm Amara, an AI practice partner. Let's practice Chinese — what's your favorite song lately?",
-    avatar: '/muntuz-avatars/amara.jpg',
+    avatar: '/muntuz-avatars/amara-face-v2.webp',
     gallery: ['/muntuz-avatars/amara.jpg', '/muntuz/amara-sun.webp', '/muntuz/ep-livingroom-night.webp', '/muntuz/ep-plaza-stage.webp', '/muntuz/ep-kitchen-together.webp', '/muntuz/ep-studio-stage.webp'],
     heightCm: 173,
     weightKg: 55,
@@ -1267,7 +1267,7 @@ export const AI_PARTNERS: AiPartner[] = [
     personality: 'Steady and caring; leads with patient guidance, home cooking, and travel stories.',
     greeting:
       "Hi! I'm Jiyoung, an AI practice partner. Let's practice English together — what did you cook recently?",
-    avatar: '/muntuz-avatars/jiyoung.jpg',
+    avatar: '/muntuz-avatars/jiyoung-face-v2.webp',
     gallery: ['/muntuz-avatars/jiyoung.jpg', '/muntuz/jiyoung-kimbap.webp', '/muntuz/ep-livingroom-night.webp', '/muntuz/ep-plaza-stage.webp', '/muntuz/ep-kitchen-together.webp', '/muntuz/ep-studio-stage.webp'],
     heightCm: 172,
     weightKg: 54,
@@ -1500,7 +1500,7 @@ export const AI_PARTNERS: AiPartner[] = [
     personality: 'Bright and expressive; turns trail walks and snapshots into songs and stories.',
     greeting:
       "Hello! I'm Emily, an AI practice partner. Let's practice Korean — do you like hiking?",
-    avatar: '/muntuz-avatars/emily.jpg',
+    avatar: '/muntuz-avatars/emily-face-v2.webp',
     gallery: ['/muntuz-avatars/emily.jpg', '/muntuz/emily-latte.webp', '/muntuz/emily-night.webp', '/muntuz/ep-livingroom-night.webp', '/muntuz/ep-plaza-stage.webp', '/muntuz/ep-kitchen-together.webp', '/muntuz/ep-studio-stage.webp'],
     heightCm: 173,
     weightKg: 55,
@@ -1530,7 +1530,7 @@ export const AI_PARTNERS: AiPartner[] = [
     personality: 'Friendly and curious; a Slavic girl who loves swapping recipes and travel stories.',
     greeting:
       "Hi! I'm Chloe, an AI practice partner. Let's practice French — what food do you like to cook?",
-    avatar: '/muntuz-avatars/chloe.jpg',
+    avatar: '/muntuz-avatars/chloe-face-v2.webp',
     gallery: ['/muntuz-avatars/chloe.jpg', '/muntuz/chloe-shoot.webp', '/muntuz/ep-livingroom-night.webp', '/muntuz/ep-plaza-stage.webp', '/muntuz/ep-kitchen-together.webp', '/muntuz/ep-studio-stage.webp'],
     heightCm: 171,
     weightKg: 53,
